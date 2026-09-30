@@ -73,3 +73,24 @@
 - Interpretation: PASS_NORMALIZED_VECTOR_REFERENCE_IDENTITIES_ONLY is a reference
   diagnostic, not Core F5 admission or a physical J04/J05 gate. F2/F3/F4/F7/F8 stay
   blocked; there is no observable, SI, chaos, performance or external-data result.
+## Conditional variational-origin audit
+
+- Command: python docs/topics/0.10_Fluid_Dynamics_Chaos/Code/03_Research/Research_Fluid_Vector_Variational_Origin.py
+- Contract: Data/03_Research/fluid_vector_variational_origin_contract.json
+- Artifact: Result/artifacts/fluid_vector_variational_origin_audit.json
+- Source: canonical scalar AST algebra plus declared action and independent
+  displacement/internal variations. Controls locked before the numerical run.
+- N=16/32/64 in time and two periodic spatial dimensions; xi/chi zero at endpoints.
+- Identity tolerance 1e-9; action/fibre central-derivative tolerance 1e-7;
+  steps 1e-3/1e-4/1e-5; negative-control floor 1e-8.
+- Checks: first variation versus direct action finite difference and integration
+  by parts; C tangent constraint and Q chain; canonical fibre momenta; Hamiltonian
+  inverse and sampled positive rate Hessian. Manufactured paths are not stationary.
+- Negative controls: omitted Phi transport alters action derivative; omitted Q
+  transport breaks local chain despite zero integrated work; rho0 u alone fails
+  the canonical velocity derivative.
+- Three regression tests rerun the audit, verify source freshness/claim boundary
+  and guard the hidden local-transport/canonical-momentum errors.
+- PASS_CONDITIONAL_VARIATIONAL_REFERENCE_ONLY does not admit a physical UET
+  operator, full reduced Poisson structure, dissipative closure, SI/He-II mode,
+  PDE trajectory/convergence, formal kernel proof or global regularity.

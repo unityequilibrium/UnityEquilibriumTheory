@@ -46,3 +46,17 @@ The initial cancelling-work control is reproducible with --initial-control-diagn
 and intentionally exits 1. Version 2 follows that preview and is not blind
 preregistration; tolerances are unchanged. --output supports isolated test outputs.
 No physical J04 or Topic 13 mode is implemented.
+## Conservative variational reference
+
+Use VECTOR_VARIATIONAL_ORIGIN.md and
+Data/03_Research/fluid_vector_variational_origin_contract.json for the separate
+action/configuration assumptions. The reversible C field is materially advected;
+Phi has independent internal evolution. The displacement/internal variations
+give a conditional conservative vector equation and material oscillator from
+one reference action. Action finite differences perturb the admissible tangent
+and recompute Q from the perturbed Phi and u; the path is not an EOM solution.
+Independent fibre derivatives hold Eulerian Pi fixed to distinguish canonical
+m=rho0 u+h Q grad Phi from mechanical rho0 u. The Legendre test is before full
+incompressible Poisson reduction. A local Q-chain test is required because an
+omitted Q transport term is invisible in integrated kinetic work. No trajectory,
+physical action assignment, dissipative closure or operator admission occurs.

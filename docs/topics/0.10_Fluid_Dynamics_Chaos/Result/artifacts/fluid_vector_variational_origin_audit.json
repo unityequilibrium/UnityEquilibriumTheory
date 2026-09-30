@@ -1,0 +1,656 @@
+{
+  "schema_version": "t10-vector-variational-origin-audit-v1",
+  "status": "PASS_CONDITIONAL_VARIATIONAL_REFERENCE_ONLY",
+  "controlling_blocker": "vector_momentum_constitutive_origin_and_material_frame_admission_open",
+  "claim_promotion": false,
+  "dependency_unlock": false,
+  "physical_uet_operator_admitted": false,
+  "scope": "Spacetime first-variation/fibre audit of a declared action; not an EOM trajectory or formal proof.",
+  "origin": {
+    "scalar_functional": "Canonical normalized matter-space polynomial; 2D gradient continuation is assumed",
+    "action": "constitutive reference ansatz",
+    "variations": "continuum displacement plus independent material internal variation; directly derived scalar specialization",
+    "equations": "derived conditionally from the declared reference action",
+    "dissipation": "not derived in this wave",
+    "physical_material_assignment": "BLOCKED"
+  },
+  "admission_gates": {
+    "F0": "SOURCE_STATE_AND_REFERENCE_SCOPE_RECORDED",
+    "F1": "CANDIDATE_ONTOLOGY_ONLY",
+    "F2": "BLOCKED_PHYSICAL_CORRESPONDENCE",
+    "F3": "NORMALIZED_DIMENSIONS_ONLY_SI_BLOCKED",
+    "F4": "CONDITIONAL_REFERENCE_DERIVATION_PHYSICAL_ORIGIN_BLOCKED",
+    "F5": "REFERENCE_AUDIT_ONLY",
+    "F6": "NO_UPSTREAM_UNLOCK",
+    "F7": "BLOCKED_PHYSICAL_OBSERVABLE",
+    "F8": "BLOCKED_PHYSICAL_PROMOTION"
+  },
+  "reference_check_count": 72,
+  "thresholds": {
+    "grids": [
+      16,
+      32,
+      64
+    ],
+    "identity_tolerance": 1e-09,
+    "directional_derivative_tolerance": 1e-07,
+    "negative_control_floor": 1e-08,
+    "steps": [
+      0.001,
+      0.0001,
+      1e-05
+    ],
+    "control_version": 1,
+    "threshold_policy": "Locked in the pre-implementation contract; preserve any failed initial diagnostic before amendment.",
+    "fields": {
+      "C": "0.7+0.17*cos(y)+0.08*sin(y)",
+      "u_x": "0.22+0.1*cos(t)+0.3*sin(y)*(1+0.15*sin(t))",
+      "u_y": "0",
+      "Phi": "0.13*sin(x)+0.09*cos(x+y)+0.11*sin(t)*cos(x-y)",
+      "xi_stream": "sin(t)*(0.12*cos(x+y+0.3)+0.17*sin(x)*sin(y))",
+      "chi": "0.14*sin(t)*cos(x-y+0.4)",
+      "velocity_fibre_direction": [
+        0.27,
+        -0.19
+      ],
+      "rate_fibre_direction": "0.11+0.09*cos(x-y+0.23)"
+    },
+    "scope": "Spacetime first-variation and fibre derivative controls, not EOM trajectories, kernel proof or material validation"
+  },
+  "grids": [
+    {
+      "grid": 16,
+      "temporal_grid": 16,
+      "checks": {
+        "velocity_divergence": {
+          "metric": 0.0,
+          "threshold": 1e-09,
+          "pass": true
+        },
+        "displacement_divergence": {
+          "metric": 6.048238754531263e-17,
+          "threshold": 1e-09,
+          "pass": true
+        },
+        "reversible_C_path_constraint": {
+          "metric": 0.0,
+          "threshold": 1e-09,
+          "pass": true
+        },
+        "linearized_C_constraint": {
+          "metric": 4.639492795724136e-18,
+          "threshold": 1e-09,
+          "pass": true
+        },
+        "variation_endpoints": {
+          "metric": 0.0,
+          "threshold": 1e-09,
+          "pass": true
+        },
+        "material_Q_variation_chain_rule": {
+          "metric": 6.495250926845076e-17,
+          "threshold": 1e-09,
+          "pass": true
+        },
+        "Eulerian_material_coordinate": {
+          "metric": 0.0,
+          "threshold": 1e-09,
+          "pass": true
+        },
+        "integrated_by_parts_first_variation": {
+          "metric": 0.0,
+          "threshold": 1e-09,
+          "pass": true
+        },
+        "nonstationary_path_is_informative": {
+          "metric": 1.7077304430989153,
+          "minimum": 1e-08,
+          "pass": true
+        },
+        "action_finite_difference_finest": {
+          "metric": 2.093987492891652e-10,
+          "threshold": 1e-07,
+          "pass": true
+        },
+        "action_finite_difference_improves": {
+          "metric": 0.0,
+          "threshold": 1e-09,
+          "pass": true
+        },
+        "omitted_material_Q_transport_breaks_local_chain": {
+          "metric": 0.0025668390429854243,
+          "minimum": 1e-08,
+          "pass": true
+        },
+        "Q_transport_work_is_periodic_gauge": {
+          "metric": 8.207293099967699e-20,
+          "threshold": 1e-09,
+          "pass": true
+        },
+        "omitted_Phi_transport_changes_action_variation": {
+          "metric": 0.0001269072863694376,
+          "minimum": 1e-08,
+          "pass": true
+        },
+        "canonical_velocity_derivative": {
+          "metric": 6.967316389128405e-12,
+          "threshold": 1e-07,
+          "pass": true
+        },
+        "canonical_scalar_rate_derivative": {
+          "metric": 7.007061597619213e-12,
+          "threshold": 1e-07,
+          "pass": true
+        },
+        "naive_mechanical_canonical_identification_fails": {
+          "metric": 0.15650340649064454,
+          "minimum": 1e-08,
+          "pass": true
+        },
+        "Legendre_velocity_inverse": {
+          "metric": 4.110956584977604e-18,
+          "threshold": 1e-09,
+          "pass": true
+        },
+        "Legendre_Eulerian_rate_inverse": {
+          "metric": 2.9593456168129927e-18,
+          "threshold": 1e-09,
+          "pass": true
+        },
+        "Hamiltonian_Legendre_definition": {
+          "metric": 2.263049665310627e-17,
+          "threshold": 1e-09,
+          "pass": true
+        },
+        "Hamiltonian_reference_energy_alignment": {
+          "metric": 2.8189256484623115e-18,
+          "threshold": 1e-09,
+          "pass": true
+        },
+        "rate_Hessian_determinant": {
+          "metric": 1.270026113284412e-16,
+          "threshold": 1e-09,
+          "pass": true
+        },
+        "rate_Hessian_positive": {
+          "metric": 0.7195580387416015,
+          "minimum": 0,
+          "pass": true
+        },
+        "canonical_field_correction_nonzero": {
+          "metric": 0.0063327474399492364,
+          "minimum": 1e-08,
+          "pass": true
+        }
+      },
+      "details": {
+        "action": 50.61201053878251,
+        "direct_first_variation": -1.7077304430989153,
+        "ibp_first_variation": -1.7077304430989153,
+        "action_finite_differences": [
+          {
+            "step": 0.001,
+            "derivative": -1.707730452441325,
+            "normalized_error": 5.470658277105876e-09
+          },
+          {
+            "step": 0.0001,
+            "derivative": -1.7077304432078222,
+            "normalized_error": 6.377287700441929e-11
+          },
+          {
+            "step": 1e-05,
+            "derivative": -1.707730443456512,
+            "normalized_error": 2.093987492891652e-10
+          }
+        ],
+        "omitted_Phi_transport_variation_defect": -0.0001269072863694376,
+        "omitted_Q_transport_local_defect": 0.0025668390429854243,
+        "canonical_velocity_pairing": 14.89068608486537,
+        "mechanical_only_pairing": 14.734182678478474,
+        "canonical_momentum_defect": 0.15650340638689642,
+        "velocity_finite_differences": [
+          {
+            "step": 0.001,
+            "derivative": 14.89068608486502,
+            "normalized_error": 2.350075042663914e-14
+          },
+          {
+            "step": 0.0001,
+            "derivative": 14.89068608486579,
+            "normalized_error": 2.8153183252216653e-14
+          },
+          {
+            "step": 1e-05,
+            "derivative": 14.890686084969118,
+            "normalized_error": 6.967316389128405e-12
+          }
+        ],
+        "rate_finite_differences": [
+          {
+            "step": 0.001,
+            "derivative": 0.04962251388478098,
+            "normalized_error": 2.768618667658984e-15
+          },
+          {
+            "step": 0.0001,
+            "derivative": 0.04962251388452317,
+            "normalized_error": 2.6057628277342815e-13
+          },
+          {
+            "step": 1e-05,
+            "derivative": 0.04962251389179081,
+            "normalized_error": 7.007061597619213e-12
+          }
+        ],
+        "rate_Hessian_minimum_eigenvalue": 0.7195580387416015,
+        "rate_Hessian_sample_count": 512
+      },
+      "pass": true
+    },
+    {
+      "grid": 32,
+      "temporal_grid": 32,
+      "checks": {
+        "velocity_divergence": {
+          "metric": 0.0,
+          "threshold": 1e-09,
+          "pass": true
+        },
+        "displacement_divergence": {
+          "metric": 1.2745287468706894e-16,
+          "threshold": 1e-09,
+          "pass": true
+        },
+        "reversible_C_path_constraint": {
+          "metric": 0.0,
+          "threshold": 1e-09,
+          "pass": true
+        },
+        "linearized_C_constraint": {
+          "metric": 1.2666533033516611e-17,
+          "threshold": 1e-09,
+          "pass": true
+        },
+        "variation_endpoints": {
+          "metric": 0.0,
+          "threshold": 1e-09,
+          "pass": true
+        },
+        "material_Q_variation_chain_rule": {
+          "metric": 1.6043526227634022e-16,
+          "threshold": 1e-09,
+          "pass": true
+        },
+        "Eulerian_material_coordinate": {
+          "metric": 0.0,
+          "threshold": 1e-09,
+          "pass": true
+        },
+        "integrated_by_parts_first_variation": {
+          "metric": 0.0,
+          "threshold": 1e-09,
+          "pass": true
+        },
+        "nonstationary_path_is_informative": {
+          "metric": 1.7077304430989153,
+          "minimum": 1e-08,
+          "pass": true
+        },
+        "action_finite_difference_finest": {
+          "metric": 2.0667554308911023e-10,
+          "threshold": 1e-07,
+          "pass": true
+        },
+        "action_finite_difference_improves": {
+          "metric": 0.0,
+          "threshold": 1e-09,
+          "pass": true
+        },
+        "omitted_material_Q_transport_breaks_local_chain": {
+          "metric": 0.002566839042985424,
+          "minimum": 1e-08,
+          "pass": true
+        },
+        "Q_transport_work_is_periodic_gauge": {
+          "metric": 1.0012897581960593e-19,
+          "threshold": 1e-09,
+          "pass": true
+        },
+        "omitted_Phi_transport_changes_action_variation": {
+          "metric": 0.0001269072863694376,
+          "minimum": 1e-08,
+          "pass": true
+        },
+        "canonical_velocity_derivative": {
+          "metric": 6.997616849068928e-12,
+          "threshold": 1e-07,
+          "pass": true
+        },
+        "canonical_scalar_rate_derivative": {
+          "metric": 1.35514516275137e-12,
+          "threshold": 1e-07,
+          "pass": true
+        },
+        "naive_mechanical_canonical_identification_fails": {
+          "metric": 0.15650340649109573,
+          "minimum": 1e-08,
+          "pass": true
+        },
+        "Legendre_velocity_inverse": {
+          "metric": 3.322802191815246e-18,
+          "threshold": 1e-09,
+          "pass": true
+        },
+        "Legendre_Eulerian_rate_inverse": {
+          "metric": 2.962756483626174e-18,
+          "threshold": 1e-09,
+          "pass": true
+        },
+        "Hamiltonian_Legendre_definition": {
+          "metric": 2.237291968204436e-17,
+          "threshold": 1e-09,
+          "pass": true
+        },
+        "Hamiltonian_reference_energy_alignment": {
+          "metric": 2.218975430690222e-18,
+          "threshold": 1e-09,
+          "pass": true
+        },
+        "rate_Hessian_determinant": {
+          "metric": 1.1559039315265975e-16,
+          "threshold": 1e-09,
+          "pass": true
+        },
+        "rate_Hessian_positive": {
+          "metric": 0.7195580387416011,
+          "minimum": 0,
+          "pass": true
+        },
+        "canonical_field_correction_nonzero": {
+          "metric": 0.006332747439949236,
+          "minimum": 1e-08,
+          "pass": true
+        }
+      },
+      "details": {
+        "action": 50.61201053878251,
+        "direct_first_variation": -1.7077304430989153,
+        "ibp_first_variation": -1.7077304430989153,
+        "action_finite_differences": [
+          {
+            "step": 0.001,
+            "derivative": -1.7077304524448778,
+            "normalized_error": 5.47273864854522e-09
+          },
+          {
+            "step": 0.0001,
+            "derivative": -1.707730443172295,
+            "normalized_error": 4.296916238553376e-11
+          },
+          {
+            "step": 1e-05,
+            "derivative": -1.7077304427459692,
+            "normalized_error": 2.0667554308911023e-10
+          }
+        ],
+        "omitted_Phi_transport_variation_defect": -0.0001269072863694376,
+        "omitted_Q_transport_local_defect": 0.002566839042985424,
+        "canonical_velocity_pairing": 14.89068608486537,
+        "mechanical_only_pairing": 14.734182678478474,
+        "canonical_momentum_defect": 0.15650340638689642,
+        "velocity_finite_differences": [
+          {
+            "step": 0.001,
+            "derivative": 14.890686084864925,
+            "normalized_error": 2.9942580492824486e-14
+          },
+          {
+            "step": 0.0001,
+            "derivative": 14.890686084865008,
+            "normalized_error": 2.4335802472255758e-14
+          },
+          {
+            "step": 1e-05,
+            "derivative": 14.89068608496957,
+            "normalized_error": 6.997616849068928e-12
+          }
+        ],
+        "rate_finite_differences": [
+          {
+            "step": 0.001,
+            "derivative": 0.049622513884805285,
+            "normalized_error": 2.1566082253343666e-14
+          },
+          {
+            "step": 0.0001,
+            "derivative": 0.049622513884742515,
+            "normalized_error": 4.120315200140112e-14
+          },
+          {
+            "step": 1e-05,
+            "derivative": 0.04962251388342857,
+            "normalized_error": 1.35514516275137e-12
+          }
+        ],
+        "rate_Hessian_minimum_eigenvalue": 0.7195580387416011,
+        "rate_Hessian_sample_count": 512
+      },
+      "pass": true
+    },
+    {
+      "grid": 64,
+      "temporal_grid": 64,
+      "checks": {
+        "velocity_divergence": {
+          "metric": 0.0,
+          "threshold": 1e-09,
+          "pass": true
+        },
+        "displacement_divergence": {
+          "metric": 4.027037387415505e-16,
+          "threshold": 1e-09,
+          "pass": true
+        },
+        "reversible_C_path_constraint": {
+          "metric": 0.0,
+          "threshold": 1e-09,
+          "pass": true
+        },
+        "linearized_C_constraint": {
+          "metric": 2.529878957399486e-17,
+          "threshold": 1e-09,
+          "pass": true
+        },
+        "variation_endpoints": {
+          "metric": 0.0,
+          "threshold": 1e-09,
+          "pass": true
+        },
+        "material_Q_variation_chain_rule": {
+          "metric": 4.961759327788618e-16,
+          "threshold": 1e-09,
+          "pass": true
+        },
+        "Eulerian_material_coordinate": {
+          "metric": 0.0,
+          "threshold": 1e-09,
+          "pass": true
+        },
+        "integrated_by_parts_first_variation": {
+          "metric": 0.0,
+          "threshold": 1e-09,
+          "pass": true
+        },
+        "nonstationary_path_is_informative": {
+          "metric": 1.7077304430989153,
+          "minimum": 1e-08,
+          "pass": true
+        },
+        "action_finite_difference_finest": {
+          "metric": 2.0667554308911023e-10,
+          "threshold": 1e-07,
+          "pass": true
+        },
+        "action_finite_difference_improves": {
+          "metric": 0.0,
+          "threshold": 1e-09,
+          "pass": true
+        },
+        "omitted_material_Q_transport_breaks_local_chain": {
+          "metric": 0.0025668390429854247,
+          "minimum": 1e-08,
+          "pass": true
+        },
+        "Q_transport_work_is_periodic_gauge": {
+          "metric": 2.3801149989906326e-20,
+          "threshold": 1e-09,
+          "pass": true
+        },
+        "omitted_Phi_transport_changes_action_variation": {
+          "metric": 0.00012690728636965964,
+          "minimum": 1e-08,
+          "pass": true
+        },
+        "canonical_velocity_derivative": {
+          "metric": 7.319231179776096e-12,
+          "threshold": 1e-07,
+          "pass": true
+        },
+        "canonical_scalar_rate_derivative": {
+          "metric": 4.372613382486179e-13,
+          "threshold": 1e-07,
+          "pass": true
+        },
+        "naive_mechanical_canonical_identification_fails": {
+          "metric": 0.15650340649588834,
+          "minimum": 1e-08,
+          "pass": true
+        },
+        "Legendre_velocity_inverse": {
+          "metric": 3.011666148669432e-18,
+          "threshold": 1e-09,
+          "pass": true
+        },
+        "Legendre_Eulerian_rate_inverse": {
+          "metric": 2.997301425864342e-18,
+          "threshold": 1e-09,
+          "pass": true
+        },
+        "Hamiltonian_Legendre_definition": {
+          "metric": 2.2655557415958115e-17,
+          "threshold": 1e-09,
+          "pass": true
+        },
+        "Hamiltonian_reference_energy_alignment": {
+          "metric": 2.0069640907324414e-18,
+          "threshold": 1e-09,
+          "pass": true
+        },
+        "rate_Hessian_determinant": {
+          "metric": 1.1475428530014783e-16,
+          "threshold": 1e-09,
+          "pass": true
+        },
+        "rate_Hessian_positive": {
+          "metric": 0.7195580387416023,
+          "minimum": 0,
+          "pass": true
+        },
+        "canonical_field_correction_nonzero": {
+          "metric": 0.0063327474399492364,
+          "minimum": 1e-08,
+          "pass": true
+        }
+      },
+      "details": {
+        "action": 50.61201053878251,
+        "direct_first_variation": -1.7077304430989153,
+        "ibp_first_variation": -1.7077304430989153,
+        "action_finite_differences": [
+          {
+            "step": 0.001,
+            "derivative": -1.7077304524448778,
+            "normalized_error": 5.47273864854522e-09
+          },
+          {
+            "step": 0.0001,
+            "derivative": -1.7077304432078222,
+            "normalized_error": 6.377287700441929e-11
+          },
+          {
+            "step": 1e-05,
+            "derivative": -1.7077304427459692,
+            "normalized_error": 2.0667554308911023e-10
+          }
+        ],
+        "omitted_Phi_transport_variation_defect": -0.00012690728636965964,
+        "omitted_Q_transport_local_defect": 0.0025668390429854247,
+        "canonical_velocity_pairing": 14.890686084865372,
+        "mechanical_only_pairing": 14.734182678478472,
+        "canonical_momentum_defect": 0.15650340638689997,
+        "velocity_finite_differences": [
+          {
+            "step": 0.001,
+            "derivative": 14.890686084864964,
+            "normalized_error": 2.7437424355974627e-14
+          },
+          {
+            "step": 0.0001,
+            "derivative": 14.89068608486502,
+            "normalized_error": 2.362004357601294e-14
+          },
+          {
+            "step": 1e-05,
+            "derivative": 14.89068608497436,
+            "normalized_error": 7.319231179776096e-12
+          }
+        ],
+        "rate_finite_differences": [
+          {
+            "step": 0.001,
+            "derivative": 0.04962251388478762,
+            "normalized_error": 3.899658373995862e-15
+          },
+          {
+            "step": 0.0001,
+            "derivative": 0.04962251388487591,
+            "normalized_error": 9.219014440731144e-14
+          },
+          {
+            "step": 1e-05,
+            "derivative": 0.04962251388434646,
+            "normalized_error": 4.372613382486179e-13
+          }
+        ],
+        "rate_Hessian_minimum_eigenvalue": 0.7195580387416023,
+        "rate_Hessian_sample_count": 512
+      },
+      "pass": true
+    }
+  ],
+  "canonical_source_expressions": {
+    "local_density": "0.5 * config.a_matter * C ** 2 + 0.25 * config.b_matter * C ** 4 + 0.5 * config.a_space * Phi ** 2 + 0.25 * config.b_space * Phi ** 4 - 0.5 * config.coupling_g * C ** 2 * Phi",
+    "mu_C": "config.a_matter * C + config.b_matter * C ** 3 - config.kappa_matter * lap_C - config.coupling_g * C * Phi",
+    "mu_Phi": "config.a_space * Phi + config.b_space * Phi ** 3 - config.kappa_space * lap_Phi - 0.5 * config.coupling_g * C ** 2"
+  },
+  "input_hashes": {
+    "docs/topics/0.10_Fluid_Dynamics_Chaos/Code/03_Research/Research_Fluid_Vector_Variational_Origin.py": "b2948465cc4893467d9169f7d3174ff0402ac2452f667600a68bf2daf03d716c",
+    "docs/topics/0.10_Fluid_Dynamics_Chaos/Data/03_Research/fluid_vector_variational_origin_contract.json": "e0c895c808a7418ccccd9756d78c35943a6b2dffe360d9bac47e13576d5ed879",
+    "docs/topics/0.10_Fluid_Dynamics_Chaos/Data/03_Research/fluid_vector_state_research_contract.json": "ce7fee2d3a093e983316d9a867a1a2bbd16ab36efb77b5c97f5380bba2017f70",
+    "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry_topic10_variational_addendum.json": "b992901cb24368abd1bfa9f2ffb1a7106711879a75b9d9b3bd6034ceb2d363ed",
+    "docs/topics/0.10_Fluid_Dynamics_Chaos/VECTOR_VARIATIONAL_ORIGIN.md": "490de441df9349727266b9186fb990379c3115f3d8ad85bac3ae843afa5fd7a3",
+    "docs/core/02_equations/matter_space/uet_matter_space.py": "488db6aa26b99856e2eb82a2f46a9857f623f418ef8e537498fa71d5e4f633aa",
+    "docs/topics/0.10_Fluid_Dynamics_Chaos/Code/03_Research/Research_Fluid_Vector_State_Contract.py": "3b81d328a8a7c073ed3804cf3815b09ca7b50b3d25a8547b7a18d84f6e8bfe0f"
+  },
+  "physical_controller_unchanged": true,
+  "excluded": [
+    "SI calibration",
+    "physical material state",
+    "dissipative closure",
+    "trajectory/time convergence",
+    "Core admission",
+    "He-II response",
+    "global regularity"
+  ]
+}

@@ -138,3 +138,31 @@ CLAIM_BOUNDARY: Internal numerical-method validation only; not evidence that UET
 - Next: conservative origin/material-frame admission before physical J04/J05;
   scoped reference lemma work may proceed with explicit independent labels.
 - Claim impact: none; no Core/Topic 13 promotion or dependency unlock.
+## 2026-09-30 Conditional vector/material action origin
+
+- Wave: research-core; conditional formula/origin and reference-artifact pass.
+- Before code: recorded action/configuration/ontology/unit/variation assumptions
+  and independent candidate registry, with locked controls and tolerances.
+- Changed: VECTOR_VARIATIONAL_ORIGIN.md, action contract/registry, source-linked
+  verifier and 72-check artifact, three regression tests, topic docs/joint manifest.
+- Ran: spacetime grids 16/32/64, direct action central differences versus direct
+  and integration-by-parts variation; C constraint and Q chain; canonical rate
+  derivatives; Hamiltonian inverse/energy alignment and sampled rate Hessian.
+- Result: 72/72 reference checks pass. First variation is -1.7077304431 normalized
+  action units, as expected for a nonstationary path. Finest action derivative
+  relative errors are below 2.1e-10; direct and IBP results agree to arithmetic
+  precision. No EOM trajectory is claimed.
+- Controls: omitted Phi transport changes variation by about -0.0001269073;
+  omitted Q transport gives local RMS 0.002566839 despite integrated work below
+  1.1e-19; naive canonical m=rho0 u misses a 0.1565034 action derivative pairing.
+  Q's local test was chosen analytically before the run because its global work
+  is a periodic divergence. No tolerances or controls were amended after preview.
+- Origin narrowed: reversible equations derive from the declared reference
+  action; physical action/material assignment is not established. Canonical m
+  is an unprojected representative before full constraint/Poisson reduction.
+- Controller remains:
+  vector_momentum_constitutive_origin_and_material_frame_admission_open.
+  Next assess physical configuration/inertia origins and SI observable mapping;
+  dissipative/thermal closure and He-II source-independence remain open.
+- Claim impact: none; no Core admission, J04/J05 execution, SI/CFD/He-II result,
+  formal kernel proof, global regularity or dependency unlock.

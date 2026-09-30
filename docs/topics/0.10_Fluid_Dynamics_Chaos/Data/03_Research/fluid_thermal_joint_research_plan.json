@@ -12,7 +12,7 @@
   "source_policy": "Original evidence_snapshot hashes retain the published-base comparison. current_execution_snapshot records the current branch-local candidate inputs; execution_history retains as-executed historical identities. Original dirty workspace differences do not authorize importing unpublished results.",
   "controlling_blocker": "vector_momentum_constitutive_origin_and_material_frame_admission_open",
   "blocker_role": "proposed_physics_program_controller_not_replacement_of_legacy_speed_gate",
-  "next_controller": "Review/admit or reject independent vector momentum and the material-rate Q/Eulerian Pi transform through Core F0-F8. The reference ledger is conditional, not physical J04/J05 admission; Topic 13 source work remains parallel.",
+  "next_controller": "Justify/admit or reject the material configuration, fluid/rate inertia origin and SI observable mapping; dissipative/thermal closures stay separate.",
   "first_scientific_wave": "J01",
   "work_packages": [
     {
@@ -66,7 +66,35 @@
         "claim_promotion": false,
         "dependency_unlock": false,
         "core_admission": "BLOCKED",
-        "next_action": "Review/admit or reject independent vector momentum and the material-rate Q/Eulerian Pi transform through Core F0-F8. The reference ledger is conditional, not physical J04/J05 admission; Topic 13 source work remains parallel."
+        "next_action": "Justify/admit or reject the material configuration, fluid/rate inertia origin and SI observable mapping; dissipative/thermal closures stay separate.",
+        "variational_origin_followup": {
+          "date": "2026-09-30",
+          "status": "PASS_CONDITIONAL_VARIATIONAL_REFERENCE_ONLY",
+          "scope": "Conditional conservative origin from a declared reference action; spacetime tangent/fibre controls only",
+          "contract": "docs/topics/0.10_Fluid_Dynamics_Chaos/Data/03_Research/fluid_vector_variational_origin_contract.json",
+          "derivation_card": "docs/topics/0.10_Fluid_Dynamics_Chaos/VECTOR_VARIATIONAL_ORIGIN.md",
+          "registry_draft": "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry_topic10_variational_addendum.json",
+          "verifier": "docs/topics/0.10_Fluid_Dynamics_Chaos/Code/03_Research/Research_Fluid_Vector_Variational_Origin.py",
+          "result_artifact": "docs/topics/0.10_Fluid_Dynamics_Chaos/Result/artifacts/fluid_vector_variational_origin_audit.json",
+          "result_artifact_sha256": "d7137911eb2e80a168d58d90cba0215dadd32fd49f69c0efa67d3cea8faca0f1",
+          "reference_check_count": 72,
+          "reference_controller": "declared_conservative_action_consistency_resolved_conditionally",
+          "physical_controller": "vector_momentum_constitutive_origin_and_material_frame_admission_open",
+          "physical_action_origin_admitted": false,
+          "material_attachment_admitted": false,
+          "claim_promotion": false,
+          "dependency_unlock": false,
+          "evidence_hashes": {
+            "docs/topics/0.10_Fluid_Dynamics_Chaos/Code/03_Research/Research_Fluid_Vector_Variational_Origin.py": "b2948465cc4893467d9169f7d3174ff0402ac2452f667600a68bf2daf03d716c",
+            "docs/topics/0.10_Fluid_Dynamics_Chaos/Data/03_Research/fluid_vector_variational_origin_contract.json": "e0c895c808a7418ccccd9756d78c35943a6b2dffe360d9bac47e13576d5ed879",
+            "docs/topics/0.10_Fluid_Dynamics_Chaos/Data/03_Research/fluid_vector_state_research_contract.json": "ce7fee2d3a093e983316d9a867a1a2bbd16ab36efb77b5c97f5380bba2017f70",
+            "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry_topic10_variational_addendum.json": "b992901cb24368abd1bfa9f2ffb1a7106711879a75b9d9b3bd6034ceb2d363ed",
+            "docs/topics/0.10_Fluid_Dynamics_Chaos/VECTOR_VARIATIONAL_ORIGIN.md": "490de441df9349727266b9186fb990379c3115f3d8ad85bac3ae843afa5fd7a3",
+            "docs/core/02_equations/matter_space/uet_matter_space.py": "488db6aa26b99856e2eb82a2f46a9857f623f418ef8e537498fa71d5e4f633aa",
+            "docs/topics/0.10_Fluid_Dynamics_Chaos/Code/03_Research/Research_Fluid_Vector_State_Contract.py": "3b81d328a8a7c073ed3804cf3815b09ca7b50b3d25a8547b7a18d84f6e8bfe0f"
+          },
+          "next_action": "Justify/admit or reject the material configuration, fluid/rate inertia origin and SI observable mapping; dissipative/thermal closures stay separate."
+        }
       }
     },
     {
@@ -471,7 +499,64 @@
       "dependency_unlock": false,
       "latest_executed_package": "J02",
       "snapshot_role": "historical_as_executed_not_current_input_hash_gate"
+    },
+    {
+      "date": "2026-09-30",
+      "status": "PASS_CONDITIONAL_VARIATIONAL_REFERENCE_ONLY",
+      "scope": "Conditional conservative origin from a declared reference action; spacetime tangent/fibre controls only",
+      "contract": "docs/topics/0.10_Fluid_Dynamics_Chaos/Data/03_Research/fluid_vector_variational_origin_contract.json",
+      "derivation_card": "docs/topics/0.10_Fluid_Dynamics_Chaos/VECTOR_VARIATIONAL_ORIGIN.md",
+      "registry_draft": "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry_topic10_variational_addendum.json",
+      "verifier": "docs/topics/0.10_Fluid_Dynamics_Chaos/Code/03_Research/Research_Fluid_Vector_Variational_Origin.py",
+      "result_artifact": "docs/topics/0.10_Fluid_Dynamics_Chaos/Result/artifacts/fluid_vector_variational_origin_audit.json",
+      "result_artifact_sha256": "d7137911eb2e80a168d58d90cba0215dadd32fd49f69c0efa67d3cea8faca0f1",
+      "reference_check_count": 72,
+      "reference_controller": "declared_conservative_action_consistency_resolved_conditionally",
+      "physical_controller": "vector_momentum_constitutive_origin_and_material_frame_admission_open",
+      "physical_action_origin_admitted": false,
+      "material_attachment_admitted": false,
+      "claim_promotion": false,
+      "dependency_unlock": false,
+      "evidence_hashes": {
+        "docs/topics/0.10_Fluid_Dynamics_Chaos/Code/03_Research/Research_Fluid_Vector_Variational_Origin.py": "b2948465cc4893467d9169f7d3174ff0402ac2452f667600a68bf2daf03d716c",
+        "docs/topics/0.10_Fluid_Dynamics_Chaos/Data/03_Research/fluid_vector_variational_origin_contract.json": "e0c895c808a7418ccccd9756d78c35943a6b2dffe360d9bac47e13576d5ed879",
+        "docs/topics/0.10_Fluid_Dynamics_Chaos/Data/03_Research/fluid_vector_state_research_contract.json": "ce7fee2d3a093e983316d9a867a1a2bbd16ab36efb77b5c97f5380bba2017f70",
+        "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry_topic10_variational_addendum.json": "b992901cb24368abd1bfa9f2ffb1a7106711879a75b9d9b3bd6034ceb2d363ed",
+        "docs/topics/0.10_Fluid_Dynamics_Chaos/VECTOR_VARIATIONAL_ORIGIN.md": "490de441df9349727266b9186fb990379c3115f3d8ad85bac3ae843afa5fd7a3",
+        "docs/core/02_equations/matter_space/uet_matter_space.py": "488db6aa26b99856e2eb82a2f46a9857f623f418ef8e537498fa71d5e4f633aa",
+        "docs/topics/0.10_Fluid_Dynamics_Chaos/Code/03_Research/Research_Fluid_Vector_State_Contract.py": "3b81d328a8a7c073ed3804cf3815b09ca7b50b3d25a8547b7a18d84f6e8bfe0f"
+      },
+      "next_action": "Justify/admit or reject the material configuration, fluid/rate inertia origin and SI observable mapping; dissipative/thermal closures stay separate.",
+      "package_role": "J01 candidate-reference follow-up, not physical J04/J05"
     }
   ],
-  "last_updated": "2026-09-30"
+  "last_updated": "2026-09-30",
+  "current_variational_reference_snapshot": {
+    "date": "2026-09-30",
+    "status": "PASS_CONDITIONAL_VARIATIONAL_REFERENCE_ONLY",
+    "scope": "Conditional conservative origin from a declared reference action; spacetime tangent/fibre controls only",
+    "contract": "docs/topics/0.10_Fluid_Dynamics_Chaos/Data/03_Research/fluid_vector_variational_origin_contract.json",
+    "derivation_card": "docs/topics/0.10_Fluid_Dynamics_Chaos/VECTOR_VARIATIONAL_ORIGIN.md",
+    "registry_draft": "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry_topic10_variational_addendum.json",
+    "verifier": "docs/topics/0.10_Fluid_Dynamics_Chaos/Code/03_Research/Research_Fluid_Vector_Variational_Origin.py",
+    "result_artifact": "docs/topics/0.10_Fluid_Dynamics_Chaos/Result/artifacts/fluid_vector_variational_origin_audit.json",
+    "result_artifact_sha256": "d7137911eb2e80a168d58d90cba0215dadd32fd49f69c0efa67d3cea8faca0f1",
+    "reference_check_count": 72,
+    "reference_controller": "declared_conservative_action_consistency_resolved_conditionally",
+    "physical_controller": "vector_momentum_constitutive_origin_and_material_frame_admission_open",
+    "physical_action_origin_admitted": false,
+    "material_attachment_admitted": false,
+    "claim_promotion": false,
+    "dependency_unlock": false,
+    "evidence_hashes": {
+      "docs/topics/0.10_Fluid_Dynamics_Chaos/Code/03_Research/Research_Fluid_Vector_Variational_Origin.py": "b2948465cc4893467d9169f7d3174ff0402ac2452f667600a68bf2daf03d716c",
+      "docs/topics/0.10_Fluid_Dynamics_Chaos/Data/03_Research/fluid_vector_variational_origin_contract.json": "e0c895c808a7418ccccd9756d78c35943a6b2dffe360d9bac47e13576d5ed879",
+      "docs/topics/0.10_Fluid_Dynamics_Chaos/Data/03_Research/fluid_vector_state_research_contract.json": "ce7fee2d3a093e983316d9a867a1a2bbd16ab36efb77b5c97f5380bba2017f70",
+      "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry_topic10_variational_addendum.json": "b992901cb24368abd1bfa9f2ffb1a7106711879a75b9d9b3bd6034ceb2d363ed",
+      "docs/topics/0.10_Fluid_Dynamics_Chaos/VECTOR_VARIATIONAL_ORIGIN.md": "490de441df9349727266b9186fb990379c3115f3d8ad85bac3ae843afa5fd7a3",
+      "docs/core/02_equations/matter_space/uet_matter_space.py": "488db6aa26b99856e2eb82a2f46a9857f623f418ef8e537498fa71d5e4f633aa",
+      "docs/topics/0.10_Fluid_Dynamics_Chaos/Code/03_Research/Research_Fluid_Vector_State_Contract.py": "3b81d328a8a7c073ed3804cf3815b09ca7b50b3d25a8547b7a18d84f6e8bfe0f"
+    },
+    "next_action": "Justify/admit or reject the material configuration, fluid/rate inertia origin and SI observable mapping; dissipative/thermal closures stay separate."
+  }
 }

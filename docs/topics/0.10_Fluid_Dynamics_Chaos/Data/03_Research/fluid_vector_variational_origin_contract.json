@@ -1,0 +1,118 @@
+{
+  "schema_version": "t10-vector-variational-origin-v1",
+  "date": "2026-09-30",
+  "status": "CANDIDATE_NORMALIZED_VARIATIONAL_REFERENCE_ONLY",
+  "controlling_blocker": "vector_momentum_constitutive_origin_and_material_frame_admission_open",
+  "reference_question": "Conditional conservative generator for vector/material-rate proposal",
+  "claim_promotion": false,
+  "dependency_unlock": false,
+  "physical_uet_operator_admitted": false,
+  "parent_contract": "docs/topics/0.10_Fluid_Dynamics_Chaos/Data/03_Research/fluid_vector_state_research_contract.json",
+  "derivation_card": "docs/topics/0.10_Fluid_Dynamics_Chaos/VECTOR_VARIATIONAL_ORIGIN.md",
+  "unit_lane": "normalized",
+  "dimension": 2,
+  "domain": "space and time controls [0,2*pi); zero endpoint xi/chi; space periodic",
+  "state": [
+    "C",
+    "Phi",
+    "Q",
+    "u"
+  ],
+  "constraints": [
+    "div u=0",
+    "rho0>0 constant",
+    "h=tau_Phi/M_Phi>0 constant",
+    "D_t C=0 reversible only",
+    "Q=D_t Phi",
+    "Pi=partial_t Phi=Q-u.dot(grad Phi)"
+  ],
+  "ontology": {
+    "C": "structural scalar, not rho",
+    "Phi": "effective response, not entropy/temperature",
+    "Q": "material internal rate",
+    "Pi": "Eulerian Core rate",
+    "u": "independent fluid velocity",
+    "rho0": "separate reference inertia coefficient",
+    "m": "canonical velocity-rate derivative, not identified as measured total physical momentum",
+    "p_Phi": "canonical scalar-rate derivative",
+    "traces": "R_gen/R_obs derived only with no feedback"
+  },
+  "equations": {
+    "action": "integral dt dx[rho0*u^2/2+h*(partial_t Phi+u.grad Phi)^2/2-f]",
+    "delta_u": "partial_t xi+u.grad xi-xi.grad u",
+    "delta_C": "-xi.grad C",
+    "delta_Phi": "chi-xi.grad Phi",
+    "delta_Q": "D_t chi-xi.grad Q",
+    "A_xi": "-rho0*D_t u+mu_C*grad C+mu_Phi*grad Phi-grad(rho0*u^2/2+h*Q^2/2)",
+    "A_chi": "-(h*D_t Q+mu_Phi)",
+    "conservative_u": "rho0*D_t u=-grad p+mu_C*grad C+mu_Phi*grad Phi",
+    "conservative_Q": "h*D_t Q=-mu_Phi",
+    "p_Phi": "h*Q",
+    "m": "rho0*u+h*Q*grad Phi",
+    "H": "|m-p_Phi*grad Phi|^2/(2*rho0)+p_Phi^2/(2*h)+f",
+    "hessian_determinant": "h*rho0^dimension"
+  },
+  "origin": {
+    "scalar_functional": "Canonical normalized matter-space polynomial; 2D gradient continuation is assumed",
+    "action": "constitutive reference ansatz",
+    "variations": "continuum displacement plus independent material internal variation; directly derived scalar specialization",
+    "equations": "derived conditionally from the declared reference action",
+    "dissipation": "not derived in this wave",
+    "physical_material_assignment": "BLOCKED"
+  },
+  "admission_gates": {
+    "F0": "SOURCE_STATE_AND_REFERENCE_SCOPE_RECORDED",
+    "F1": "CANDIDATE_ONTOLOGY_ONLY",
+    "F2": "BLOCKED_PHYSICAL_CORRESPONDENCE",
+    "F3": "NORMALIZED_DIMENSIONS_ONLY_SI_BLOCKED",
+    "F4": "CONDITIONAL_REFERENCE_DERIVATION_PHYSICAL_ORIGIN_BLOCKED",
+    "F5": "REFERENCE_AUDIT_ONLY",
+    "F6": "NO_UPSTREAM_UNLOCK",
+    "F7": "BLOCKED_PHYSICAL_OBSERVABLE",
+    "F8": "BLOCKED_PHYSICAL_PROMOTION"
+  },
+  "verification": {
+    "grids": [
+      16,
+      32,
+      64
+    ],
+    "identity_tolerance": 1e-9,
+    "directional_derivative_tolerance": 1e-7,
+    "negative_control_floor": 1e-8,
+    "steps": [
+      0.001,
+      0.0001,
+      0.00001
+    ],
+    "control_version": 1,
+    "threshold_policy": "Locked in the pre-implementation contract; preserve any failed initial diagnostic before amendment.",
+    "fields": {
+      "C": "0.7+0.17*cos(y)+0.08*sin(y)",
+      "u_x": "0.22+0.1*cos(t)+0.3*sin(y)*(1+0.15*sin(t))",
+      "u_y": "0",
+      "Phi": "0.13*sin(x)+0.09*cos(x+y)+0.11*sin(t)*cos(x-y)",
+      "xi_stream": "sin(t)*(0.12*cos(x+y+0.3)+0.17*sin(x)*sin(y))",
+      "chi": "0.14*sin(t)*cos(x-y+0.4)",
+      "velocity_fibre_direction": [
+        0.27,
+        -0.19
+      ],
+      "rate_fibre_direction": "0.11+0.09*cos(x-y+0.23)"
+    },
+    "scope": "Spacetime first-variation and fibre derivative controls, not EOM trajectories, kernel proof or material validation"
+  },
+  "sources": [
+    {
+      "url": "https://arxiv.org/abs/chao-dyn/9801015",
+      "version": "v1",
+      "scope": "Section 6 / Theorem 6.1 kinematic variation method"
+    },
+    {
+      "url": "https://arxiv.org/abs/0806.0870",
+      "version": "v1",
+      "scope": "Sections 3-4 internal variation method; image-matching boundary not transferred"
+    }
+  ],
+  "next_physical_requirement": "Material/configuration justification and constitutive/SI observable correspondence through Core; no J04/J05/He-II unlock"
+}

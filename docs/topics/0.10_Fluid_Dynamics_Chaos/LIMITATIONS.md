@@ -45,3 +45,15 @@ free-energy loss is not heat/entropy or a complete isolated energy model.
 Topic 13 still needs independent relative-fluid/entropy/temperature dynamics and
 source-independent measurements; its current J02 rows have unresolved calibration
 ancestry overlap. All required physical admission gates remain blocked.
+## Variational-origin boundary
+
+The conditional conservative action is an additional constitutive ansatz with a
+volume-preserving flow and material internal scalar. Its first-variation
+consistency does not show that Phi is physically attached to a fluid parcel or
+that a microscopic UET reduction supplies this action. Diffusion, viscosity,
+damping, heat/entropy/FDT and sources remain independently unclosed constitutive
+questions. Canonical m is an unprojected rate derivative, not a new measured mass
+or automatically the total physical momentum. The positive rate Hessian and
+invertible fibre Legendre map do not prove equilibrium/PDE stability. The
+manufactured spacetime path obeys kinematics but is not an EOM trajectory; 72
+checks are reference identities only. Physical F2/F3/F4/F7/F8 remain blocked.

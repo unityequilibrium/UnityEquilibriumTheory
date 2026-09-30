@@ -241,3 +241,21 @@ state-matched transport and a primary measurement protocol. The current
 also records calibration/response source ancestry overlap: the recommended rows
 are neither blind nor established as independent. J02/J03 source work can continue
 in parallel, with no He-4-to-graphite parameter transfer.
+## Conditional conservative-origin follow-up (2026-09-30)
+
+The [variational derivation](VECTOR_VARIATIONAL_ORIGIN.md) and its
+[72-check audit](Result/artifacts/fluid_vector_variational_origin_audit.json)
+show that the reversible subset of the vector/material-rate reference follows
+from one declared volume-preserving action with an independent internal scalar.
+This narrows the conditional reference-origin question only. The action choice
+and material attachment are not a microscopic UET derivation; the overall
+vector_momentum_constitutive_origin_and_material_frame_admission_open controller
+remains. Next assess the physical configuration/material assignment, coefficient
+origins and SI observable map. Physical J04/J05, two-fluid J02/J06, graphite and
+all blocked upstream gates remain blocked.
+
+Canonical m=rho0 u+h Q grad Phi is a rate derivative, not a new mass or an automatic
+measurement of total mechanical momentum. Local Q transport needs a separate
+test because its work integrates to zero. The full dissipative/thermal closure
+and Topic 13's calibration/response ancestry overlap are unaffected. Reference
+mathematics can continue under explicit labels without unlocking physical lanes.

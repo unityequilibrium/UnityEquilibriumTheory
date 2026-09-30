@@ -42,3 +42,13 @@ Priority remediation:
   SHA-256 identities. The initial insufficient-sensitivity FAIL remains separate.
 - Controls were amended after preview without tolerance changes; this is not a
   blind holdout or preregistered physical comparison.
+## Variational reference inputs
+
+No external material data are added. Synthetic periodic spacetime controls,
+thresholds and source roles are in
+Data/03_Research/fluid_vector_variational_origin_contract.json. The action audit
+hashes its script, helper, contract, parent contract, candidate registry/card and
+canonical scalar source. Holm-Marsden-Ratiu and Holm-Trouve-Younes are primary
+kinematic-method references; their external physical/image boundary conditions
+are not imported. Coefficients use parent normalized controls only; no He-4
+calibration, material transport, blind holdout or thermal-response input is used.

@@ -83,3 +83,16 @@ partial_t u=0; nonuniform scalar force can invalidate that frozen-flow assumptio
 The source-linked scalar formulas, synthetic inertia/viscosity and all exclusions
 are hashed in the reference audit. Bounded polynomial energy is not global
 regularity. Next controller: vector momentum origin and material-frame admission.
+## Conditional vector action and canonical rate audit
+
+Candidate registry: ../../core/07_artifacts/correspondence/uet_equation_correspondence_registry_topic10_variational_addendum.json;
+derivation: VECTOR_VARIATIONAL_ORIGIN.md. The scalar density is source-linked,
+while rho0 fluid inertia, material h Q^2/2 and volume preservation are declared
+reference assumptions. The conservative equations follow conditionally from
+these choices. They are not derived from a microscopic UET action.
+Q=D_t Phi and Pi=partial_t Phi remain distinct. At fixed Pi, partial L/partial u
+is rho0 u+h Q grad Phi, and partial L/partial Pi=h Q. The inverse fibre map and
+Hamiltonian agree with the existing normalized energy reference. The formal
+SI dimensions are targets with no measured scale. Dissipative/thermal terms
+and material observable mapping remain blocked. The registry is a separate
+candidate addendum and has not been merged into the central admitted inventory.

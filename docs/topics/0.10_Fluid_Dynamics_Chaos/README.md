@@ -160,3 +160,17 @@ proposes scoped P0-P5 work within the existing joint plan. These are design inpu
 not executed theorem, trajectory, physical or performance results. The
 vector_momentum_constitutive_origin_and_material_frame_admission_open controller
 and all Core/Topic 13 admission boundaries remain unchanged.
+## Conditional conservative-action reference (2026-09-30)
+
+A [separate derivation card](VECTOR_VARIATIONAL_ORIGIN.md) and
+[action audit](Result/artifacts/fluid_vector_variational_origin_audit.json)
+give a conditional first-variation origin for the reversible vector/material-rate
+equations from one declared action. All 72 spacetime/fibre checks pass, including
+finite differences, transport chain rules, rate momenta and Hamiltonian inversion.
+This is a constitutive action choice, not a microscopic UET derivation or physical
+admission. The canonical velocity derivative includes h Q grad Phi; its use does
+not redefine physical mass or mechanically measured momentum. Local transport
+errors can be invisible in integrated work. The physical controller is unchanged;
+material/configuration and SI observable correspondence remain the next admission
+requirements. Diffusion, viscosity, damping, entropy/FDT and He-II response are
+not derived or validated by this conservative reference.
