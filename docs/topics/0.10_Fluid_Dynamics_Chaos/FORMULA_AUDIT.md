@@ -46,3 +46,17 @@ Chaos diagnostic formulas remain separate from the speed gate and constitutive-t
 | `FD-CHAOS-TANGENT` | `delta_x[n+1] = D F(x[n]) delta_x[n]` | `docs/core/uet_dynamical_stability.py` | tangent state in the declared normalized lane | analytic Jacobian of the declared evolution | checked against central finite difference | primary Benettin/QR estimator | numerical instability or an undeclared source JVP is treated as physical sensitivity | admit state-dependent sources only with an explicit JVP |
 | `FD-CHAOS-SPECTRUM` | `lambda_i = lim_T log(s_i)/T` | same module and `Research_Chaos_Method_Validation.py` | inverse normalized time; logistic exponent per iteration | standard dynamical-systems diagnostic | validated on linear, logistic, and Lorenz controls | diagnostic method gate | Lyapunov exponent is confused with the free-energy Lyapunov function | retain the terminology and evidence-class separation |
 | `FD-CHAOS-RESOLUTION` | `lambda_res = max(delta_dt, delta_dx, 2 SE_block, delta_method)` | same module | same inverse-time lane as `lambda` | preregistered diagnostic gate | checked implementation contract | sign-resolution gate | arbitrary epsilon or one unconverged run controls the classification | add topic-specific spatial/statistical budgets |
+
+## J01 representability addendum
+
+For the current constant scalar mobility map u=-M d_x(C), v=-M d_y(C), the continuum
+curl vanishes for every smooth C. On a periodic domain, requiring incompressibility also
+imposes Laplacian(C)=0; integration by parts then gives grad(C)=0, so the only represented
+incompressible velocity is zero. This is a mathematical consequence of the declared map,
+not a no-go for all UET models. The finite-difference control, source identity, units
+limitation, and exact scope are recorded in
+Result/artifacts/fluid_state_velocity_representability_audit.json.
+
+The source audit also records that the computed mobility is reset to 0.5 in the 2D
+constructor, the bridge constant is an unverified placeholder, and velocity units are not
+closed. The formula remains a heuristic gradient bridge, not an admitted momentum law.
