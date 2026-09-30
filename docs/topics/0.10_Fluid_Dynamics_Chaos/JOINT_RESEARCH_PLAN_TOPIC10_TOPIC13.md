@@ -357,3 +357,18 @@ coefficient from this identity. Source entropy-reference transfer/covariance and
 independent response protocol remain separate required work; their current
 snapshots are retained. Overall material/frame/SI admission and physical package
 states are unchanged; the normal-only heat balance cannot cover condensed He-II.
+
+## Fixed-Phi flow-Hessian candidate handoff (2026-09-30)
+
+The [new independent phase-flow reference](CORE_O2_FLOW_HESSIAN_DERIVATION.md)
+derives thermal stiffness from a tree-reduced Gaussian action rather than
+forcing the common-flow identity. Implicit and finite-flow curvatures agree,
+and the separate scalar target passes at all three prior condensed controls.
+The previous tree-only shortcut FAIL remains as historical/current comparison.
+
+The machine plan now records a separate flow-Hessian snapshot/history item.
+Next derive complete current/stress/entrainment and longitudinal two-fluid
+modes at the same ensemble. Material/SI, independent EOS/entropy/protocol,
+Core admission and physical J04/J05/J06 remain separate prerequisites.
+This narrows J01/J02 preparation only; no work-package status or dependency
+is promoted. Original null material inputs and Topic 13 constants are unchanged.

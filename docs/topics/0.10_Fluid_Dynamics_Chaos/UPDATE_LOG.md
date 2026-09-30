@@ -344,3 +344,42 @@ CLAIM_BOUNDARY: Internal numerical-method validation only; not evidence that UET
   remain unchanged; ten-package DAG, unexecuted physical gates, 16-file scope,
   JSON/links and UTF-8 prior-prefix preservation pass. Physical target FAIL stays
   separate from diagnostic execution PASS.
+
+## 2026-09-30 Independent thermal phase-flow Hessian
+
+- Area/wave: research-core; derived-reference/current-and-frame artifact pass
+  for J01/J02 preparation, not physical package execution.
+- Before code: recorded phase versus Phi ontology, fixed normal-rest ensemble,
+  canonical units/kernel/implicit derivation and unmerged registry; locked states,
+  independent radial/cutoff/angular/step refinements and numerical tolerances.
+- Changed: flow-Hessian card/contract, topic-local quartic/implicit verifier,
+  98-check artifact/four regression tests, snapshots and matching topic docs.
+  Actual Core/Topic 13 sources and all previous packages remain unchanged.
+- Actually ran: both positive Gaussian modes; implicit phase curvature integral
+  versus independent finite-flow quartic-root pressure Hessian. The correction
+  does not read enthalpy/static proxy. Whole Core runtime is not executed.
+- Result: 98/98 controls pass. Independent curvature relative differences below
+  2.7e-7; scalar common-flow residuals below 8e-12 at all three previous condensed
+  controls, against unchanged 1e-5 target. Thermal corrections approximately
+  -4.4394e-5/-4.3219e-4/-3.1355e-3 natural E^2. No fitting to the target.
+- First execution: 96 controls passed; exact output/source archived. Added
+  fail-closed empty-state and source-archive guards only; numerical thresholds,
+  states, controls and physics formulas unchanged.
+- Retained: earlier 69-check diagnostic's tree-only composition target FAIL.
+  Pure-Doppler/occupation-omission controls detect missing terms.
+- Narrowed candidate:
+  fixed_Phi_flow_scalar_correspondence_passed_but_two_fluid_current_stress_entrainment_modes_and_material_mapping_open.
+- Overall controller stays:
+  vector_momentum_constitutive_origin_and_material_frame_admission_open.
+- Next: independently derive full fixed-ensemble current/stress/entrainment and
+  longitudinal two-fluid modes, then nonrelativistic/material/SI/source admission.
+- Claim boundary: tree-reduced Gaussian scalar reference only; no full Ward
+  proof, interacting thermal completion, live Phi, material rho_n/rho_s,
+  He-II response, Kubo/transport, physical J04/J05/J06 or dependency unlock.
+
+- Final local review: all 27 scoped tests pass with warnings as errors. Eight
+  current audits/input hashes are fresh; the new artifact reproduces identical
+  bytes locally. All 96 initial controls and numerical state/target values are
+  retained exactly; the archived source matches its original hash. Prior
+  snapshots/history, ten-package DAG, physical statuses, Core/Topic 13 sources,
+  18-file scope, JSON/links and UTF-8 prior-prefix preservation pass.

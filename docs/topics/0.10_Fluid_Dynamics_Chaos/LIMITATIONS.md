@@ -154,3 +154,24 @@ A consistent finite-T phase/current/stress and normal response is required.
 Even a scalar target PASS would not admit the two acoustic modes, physical
 Kubo/transport, material state/SI map or independent response protocol.
 Prior physical/Core/Topic 13 gates and single-velocity exclusion remain unchanged.
+
+## Phase-flow curvature narrows only a scalar correspondence gap
+
+[The independent Hessian artifact](Result/artifacts/fluid_core_o2_flow_hessian_audit.json)
+shows that a thermal phase correction from the new tree-reduced Gaussian-flow
+kernel removes the prior shortcut's common-flow scalar defect at the three
+declared controls. It does not show that all possible UET operators, all
+temperatures or an interacting liquid material satisfy this relation.
+
+The tree amplitude follows each phase invariant; no thermal gap equation,
+self-energy, renormalized vacuum completion or uncertainty estimate for those
+omissions is supplied. lambda=1 remains a computational control, not an
+established weak-coupling physical regime. Two numerical curvature methods and
+refinement evidence are internal checks, not external replication or formal proof.
+
+Full stress/current/entrainment and longitudinal hydrodynamic modes from the same
+ensemble, live Phi, nonrelativistic mass/charge matching, He-II SI state, Kubo
+transport and an independent response protocol remain unadmitted. The earlier
+tree-only FAIL is retained; no coefficient is fitted to enthalpy.
+The overall material/frame controller remains unchanged; only the next candidate
+task narrows to complete two-fluid current/stress/entrainment/mode correspondence.

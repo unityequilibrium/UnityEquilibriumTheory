@@ -175,3 +175,18 @@ Goldstone/EOS controls pass. No finite-T stiffness is fitted or emitted from
 the identity. A consistent common flow-dependent effective action/current/stress
 and entrainment derivation remains required, followed by nonrelativistic,
 material/SI and physical-response correspondence. No C/Phi/Q/R relabeling.
+
+## Fixed-Phi phase-flow Hessian correspondence
+
+[Derivation card](CORE_O2_FLOW_HESSIAN_DERIVATION.md) and the separate
+[unmerged registry addendum](../../core/07_artifacts/correspondence/uet_equation_correspondence_registry_topic10_o2_flow_hessian_addendum.json)
+record phase ontology, canonical normalization, metric/frame conventions and
+units before computation. psi is the matter phase; Phi is fixed response,
+and phase-gradient sigma is distinct from entropy-density sigma.
+
+The action-derived quartic kernel yields implicit E_h/E_hh and an independent
+thermal correction to -P_hh, with E^2 stiffness units. Multiplying by mu^2
+gives E^4 inertia units. Neither enthalpy nor the proxy defines that correction.
+The current scalar test passes, but no full tensor Ward identity, stress or
+entrainment audit, material mass density, Kubo coefficient or physical second
+sound derivation is claimed. The overall physical controller is unchanged.

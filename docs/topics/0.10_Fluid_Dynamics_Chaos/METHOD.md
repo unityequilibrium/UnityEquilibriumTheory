@@ -153,3 +153,22 @@ At the declared condensed points, formal Doppler proxy plus tree stiffness
 fails the common-flow target. Do not force f_s=(w-chi)/mu^2 and call it derived.
 The next action is a common finite-T flow effective-action/current/stress
 derivation, not fitting a stiffness or importing He-II sound speeds.
+
+## Independent phase-flow pressure curvature
+
+[The flow Hessian derivation](CORE_O2_FLOW_HESSIAN_DERIVATION.md) declares the
+normal-rest ensemble, canonical field normalization and phase-source units
+before execution. Expand the O(2) quadratic action with r=mu^2-h^2-m_eff^2/Z
+and mixing mu*E+h*k_z. At h=0 the quartic roots must match current Core sources.
+
+Compute f_s=-P_hh from implicit mode derivatives, including both the mode
+curvature and occupation curvature terms. Separately integrate both positive
+finite-flow quartic roots and use a five-point second pressure derivative.
+Differentiate only thermal pressure and add tree curvature analytically.
+Do not use enthalpy or the static proxy in the phase-curvature calculation.
+
+Then independently compare mu^2*f_s+chi_perp_qp with T*p_T+mu*p_mu. Keep the
+earlier tree-only mismatch as a negative control; detect pure-Doppler and
+omitted-occupation-curvature errors. Orders/cutoffs, angles and source steps
+are locked and swept separately. A scalar target PASS does not derive all
+Ward identities, stress/entrainment or physical two-fluid dynamics.

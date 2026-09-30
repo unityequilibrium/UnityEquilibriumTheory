@@ -204,3 +204,27 @@ diagnostic PASS. No post-preview threshold/control amendment occurred.
 adds four fresh-output/source-hash/boundary regressions, including false-admission
 rejection and numerical-stability separation. No physical coefficient is repaired
 to force common-flow closure.
+
+## Independent fixed-Phi flow Hessian (2026-09-30)
+
+[Contract](Data/03_Research/fluid_core_o2_flow_hessian_contract.json) locks three
+previous condensed states, radial orders128/256/384, cutoffs45/70/100, angular
+orders12/24/36 and phase-source steps |h|/mu=1e-3/3e-4/1e-4.
+Composition tolerance1e-5; implicit component refinement1e-6; independent
+thermal correction agreement and step refinement1e-5; root/determinant/parity
+tolerances1e-9/1e-10/1e-9. No numerical thresholds changed after preview.
+
+[Research_Fluid_Core_O2_Flow_Hessian.py](Code/03_Research/Research_Fluid_Core_O2_Flow_Hessian.py)
+passes 98 controls and a separate scalar target at all three points.
+Implicit and finite-flow thermal corrections agree within 2.7e-7 relative;
+common-flow residuals are below 8e-12. Current zero-flow Core sources are
+source-verbatim AST references; the finite-flow kernel is new topic-local code.
+
+The [first 96-check output](Result/previews/fluid_core_o2_flow_hessian_first_execution.json)
+and [exact executed source archive](Result/previews/core_o2_flow_hessian_first_execution_verifier.py.txt)
+are immutable historical records, not current source-fresh audits. Subsequent
+changes add empty-state rejection and archive-integrity guards only.
+[test_fluid_core_o2_flow_hessian.py](Code/03_Research/test_fluid_core_o2_flow_hessian.py)
+checks fresh input identities, target independence, two curvature methods,
+unchanged prior FAIL, term omission sensitivity and false-admission/empty-state
+failure. No full Ward, physical dynamics, He-II state or Core/Topic 13 gate is admitted.

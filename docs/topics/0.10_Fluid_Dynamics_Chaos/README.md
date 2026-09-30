@@ -286,3 +286,25 @@ finite_temperature_phase_stiffness_and_normal_momentum_common_action_match_missi
 Derive finite-T flow/current/stress/phase stiffness from one consistent effective
 action before material/SI/second-sound admission. Physical gates, original null
 material inputs and frozen Topic 13 constants remain unchanged.
+
+## Independent finite-T phase-flow Hessian (2026-09-30)
+
+[Derivation card](CORE_O2_FLOW_HESSIAN_DERIVATION.md) extends the tree-stationary
+quadratic action to a small condensate phase gradient in the normal-bath rest
+frame. A phase-pressure Hessian is calculated independently of enthalpy and the
+formal momentum proxy. Its implicit-root integral agrees with a separate
+finite-flow quartic-root pressure derivative at all three prior condensed points.
+
+[The 98-check reference](Result/artifacts/fluid_core_o2_flow_hessian_audit.json)
+passes controls, and the separately evaluated common-flow scalar target now
+passes: relative defects below 8e-12 against the locked 1e-5 target. Derived
+thermal phase corrections are approximately -4.44e-5, -4.32e-4 and -3.14e-3
+in natural E^2 units. No stiffness was solved from the target identity.
+The previous tree-only FAIL artifact remains unchanged.
+
+This is a new topic-local Gaussian-flow reference, not a whole Core runtime
+rerun or an admitted He-II operator. Full current/stress/entrainment and
+longitudinal-mode consistency remain open, followed by material/SI mapping.
+Physical J04/J05/J06, frozen Topic 13 constants and original null material
+requirements remain unchanged. The new narrower candidate controller is
+fixed_Phi_flow_scalar_correspondence_passed_but_two_fluid_current_stress_entrainment_modes_and_material_mapping_open.

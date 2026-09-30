@@ -147,3 +147,18 @@ sound target, coefficient fit or SI mass conversion is ingested. Lambda=1 and
 the five T/mu points are declared computational controls only. Previous TN1334,
 entropy-source and Topic 13 packages remain byte-unchanged. The new candidate
 composition failure is source-function evidence, not external validation.
+
+## Gaussian phase-flow reference input package
+
+[Flow contract](Data/03_Research/fluid_core_o2_flow_hessian_contract.json),
+[derivation](CORE_O2_FLOW_HESSIAN_DERIVATION.md) and
+[98-check artifact](Result/artifacts/fluid_core_o2_flow_hessian_audit.json)
+identify current Core/Topic 13 inputs, previous source adapter and tree-only
+FAIL artifact by hashes. Core and Topic 13 source files are unchanged.
+The new finite-flow kernel is a topic-local derived reference, not source data.
+
+The first output and exact verifier source are archived under Result/previews/.
+The current artifact maps the original verifier hash to that archive explicitly;
+its historical original-path hashes are not asserted to match today's verifier.
+No new physical material values, fitting, SI assignment, source dataset or
+independent measurement is introduced.

@@ -12,7 +12,7 @@
   "source_policy": "Original evidence_snapshot hashes retain the published-base comparison. current_execution_snapshot records the current branch-local candidate inputs; execution_history retains as-executed historical identities. Original dirty workspace differences do not authorize importing unpublished results.",
   "controlling_blocker": "vector_momentum_constitutive_origin_and_material_frame_admission_open",
   "blocker_role": "proposed_physics_program_controller_not_replacement_of_legacy_speed_gate",
-  "next_controller": "Derive fixed-ensemble flow-dependent finite-T phase stiffness/current/stress from one common effective action with Ward/entrainment consistency; do not identify the formal Doppler proxy plus tree stiffness as physical two-fluid inertia or force a coefficient by the target identity. Material/SI and independent EOS/protocol remain separate.",
+  "next_controller": "Derive and independently audit complete fixed-ensemble current/stress/entrainment and longitudinal two-fluid modes from the same tree-reduced thermal action; a phase-source Hessian and one scalar common-flow identity are not full Ward or material admission. Then establish nonrelativistic mass/charge/SI and independent EOS/response protocol mapping.",
   "first_scientific_wave": "J01",
   "work_packages": [
     {
@@ -227,6 +227,16 @@
         "physical_package_executed": false,
         "operator_admitted": false,
         "next_action": "Derive fixed-ensemble flow-dependent finite-T phase stiffness/current/stress from one common effective action with Ward/entrainment consistency; do not identify the formal Doppler proxy plus tree stiffness as physical two-fluid inertia or force a coefficient by the target identity. Material/SI and independent EOS/protocol remain separate."
+      },
+      "core_o2_flow_hessian": {
+        "status": "PASS_APPROXIMATE_PHASE_CURVATURE_AND_SCALAR_CORRESPONDENCE_ONLY",
+        "candidate_controller": "fixed_Phi_flow_scalar_correspondence_passed_but_two_fluid_current_stress_entrainment_modes_and_material_mapping_open",
+        "contract": "docs/topics/0.10_Fluid_Dynamics_Chaos/Data/03_Research/fluid_core_o2_flow_hessian_contract.json",
+        "result_artifact": "docs/topics/0.10_Fluid_Dynamics_Chaos/Result/artifacts/fluid_core_o2_flow_hessian_audit.json",
+        "full_current_stress_entrainment_derived": false,
+        "physical_package_executed": false,
+        "operator_admitted": false,
+        "next_action": "Derive and independently audit complete fixed-ensemble current/stress/entrainment and longitudinal two-fluid modes from the same tree-reduced thermal action; a phase-source Hessian and one scalar common-flow identity are not full Ward or material admission. Then establish nonrelativistic mass/charge/SI and independent EOS/response protocol mapping."
       }
     },
     {
@@ -887,6 +897,69 @@
       "thresholds_relaxed": false,
       "next_action": "Derive fixed-ensemble flow-dependent finite-T phase stiffness/current/stress from one common effective action with Ward/entrainment consistency; do not identify the formal Doppler proxy plus tree stiffness as physical two-fluid inertia or force a coefficient by the target identity. Material/SI and independent EOS/protocol remain separate.",
       "package_role": "source-function shortcut rejection and reference controls; not physical J04/J05/J06"
+    },
+    {
+      "date": "2026-09-30",
+      "latest_executed_package": "J01_J02_FIXED_PHI_GAUSSIAN_FLOW_HESSIAN_REFERENCE_ONLY",
+      "status": "PASS_APPROXIMATE_FLOW_HESSIAN_REFERENCE_ONLY",
+      "scope": "Independent implicit action-root and finite-flow quartic-pressure phase curvature at three prior condensed controls",
+      "contract": "docs/topics/0.10_Fluid_Dynamics_Chaos/Data/03_Research/fluid_core_o2_flow_hessian_contract.json",
+      "derivation_card": "docs/topics/0.10_Fluid_Dynamics_Chaos/CORE_O2_FLOW_HESSIAN_DERIVATION.md",
+      "verifier": "docs/topics/0.10_Fluid_Dynamics_Chaos/Code/03_Research/Research_Fluid_Core_O2_Flow_Hessian.py",
+      "result_artifact": "docs/topics/0.10_Fluid_Dynamics_Chaos/Result/artifacts/fluid_core_o2_flow_hessian_audit.json",
+      "result_artifact_sha256": "6477296e19d63eb62843c61941a64b0b16f364af28dd54ea121dd0c7c908bdf9",
+      "reference_check_count": 98,
+      "evidence_hashes": {
+        "docs/topics/0.10_Fluid_Dynamics_Chaos/Data/03_Research/fluid_core_o2_flow_hessian_contract.json": "06dd62d5be82f115ef444360e58c2b2c19a993193db6a99736e5e65075174210",
+        "docs/topics/0.10_Fluid_Dynamics_Chaos/CORE_O2_FLOW_HESSIAN_DERIVATION.md": "d9b91304fcbf4af95adfaddd05f0fb39b107df93727f1385174ba2f2ee14ba60",
+        "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry_topic10_o2_flow_hessian_addendum.json": "0703fb4f244e4b2362d28245cfe2852de7240716cd490422c84d18f7851c4023",
+        "docs/topics/0.10_Fluid_Dynamics_Chaos/Code/03_Research/Research_Fluid_Core_O2_Flow_Hessian.py": "d8ecff1e604f545d68ec03b5abf4a6cc53e3ea377cafee0c75762dd1c2ccbc62",
+        "docs/topics/0.10_Fluid_Dynamics_Chaos/Result/previews/fluid_core_o2_flow_hessian_first_execution.json": "5f6d0ab5173e7adb47b21db9f48b60d62431aae7b1de569f0c9893953f32e7ad",
+        "docs/topics/0.10_Fluid_Dynamics_Chaos/Result/previews/core_o2_flow_hessian_first_execution_verifier.py.txt": "822aecceccd7e1e7bbc198b8b95b58e2768ec86b832d16fb7ceb6874b4b9286c",
+        "docs/topics/0.10_Fluid_Dynamics_Chaos/Code/03_Research/Research_Fluid_Core_O2_Common_Flow.py": "b083323ad31df5527a94a888e8eae43984eb77698bda1c6c3d080e2ea940f5e2",
+        "docs/topics/0.10_Fluid_Dynamics_Chaos/Data/03_Research/fluid_core_o2_common_flow_contract.json": "c9a190c89d682080a9a90254cfd205e606cd9063f9d34c68b00eeeef8634c75c",
+        "docs/core/02_equations/covariant/uet_covariant_response.py": "7fb4b7228afb8ede0ac4f1664d634346ef46cc7678c94ed7b55d73645590c0c2",
+        "docs/core/02_equations/o2/uet_o2_finite_density_eos.py": "ea744a8645f993600300fa9fd99a764e1f07b30fb272b47399c34aa114152c6d",
+        "docs/core/02_equations/o2/uet_o2_finite_temperature_quasiparticle_eos.py": "ba814f3aa02b5e31112a6595dac7727b7025b08e08f0631f50567f270cebbb7f",
+        "docs/core/02_equations/o2/uet_o2_formal_transverse_response.py": "a8ee43c6fb6edb227476412cde6cc9b2d4a643fc42cca0fd2d438b343efad1ba",
+        "docs/core/02_equations/covariant/uet_covariant_matter.py": "8a57d95e898a8ac962bbd749670ad0695b597281937da36496d2ec7e074f9c53",
+        "docs/core/02_equations/o2/uet_o2_finite_temperature_two_fluid_response.py": "d8a32af7f257986e4e84581cd4af325fb9c09ee2b3c00fa96c77cca130b28ccf",
+        "docs/core/07_artifacts/topic13/t13_uet_o2_finite_temperature_two_fluid_response_audit.json": "c642e7b3e87539008d5005ca403ff6104736bd477b51791f74954bd8eef9ad0f",
+        "docs/topics/0.10_Fluid_Dynamics_Chaos/Data/03_Research/fluid_two_fluid_eos_reference_contract.json": "0554b385b88b442eeb99b4fbf49f45d34735904f6f24892472db9f48319de9ea",
+        "docs/topics/0.13_Thermodynamic_Bridge/HE4_SECOND_SOUND_PROTOCOL_CARD.md": "3e63ee75d51935420e9d4cb5e2141cf5cdb52c7596a6ea31a78e621ae1313449",
+        "docs/topics/0.10_Fluid_Dynamics_Chaos/Result/artifacts/fluid_core_o2_common_flow_composition_audit.json": "8667c87e7073a43a8255c3ad15980fa95c39890f2d4ca9ffbb75e9a0e4dbdae3"
+      },
+      "scalar_correspondence_gate": {
+        "status": "PASS_CURRENT_SOURCE_SCALAR_TARGET_ONLY",
+        "target_pass": true,
+        "threshold": 1e-05,
+        "full_current_stress_entrainment_admitted": false,
+        "physical_material_mapping_admitted": false
+      },
+      "initial_execution_record": {
+        "artifact": "docs/topics/0.10_Fluid_Dynamics_Chaos/Result/previews/fluid_core_o2_flow_hessian_first_execution.json",
+        "verifier_source_archive": "docs/topics/0.10_Fluid_Dynamics_Chaos/Result/previews/core_o2_flow_hessian_first_execution_verifier.py.txt",
+        "original_verifier_sha256": "822aecceccd7e1e7bbc198b8b95b58e2768ec86b832d16fb7ceb6874b4b9286c",
+        "status": "PASS_APPROXIMATE_FLOW_HESSIAN_REFERENCE_ONLY",
+        "check_count": 96,
+        "role": "immutable historical preview; earlier verifier before empty-state fail-closed guard, not a current source-fresh audit"
+      },
+      "candidate_controller": "fixed_Phi_flow_scalar_correspondence_passed_but_two_fluid_current_stress_entrainment_modes_and_material_mapping_open",
+      "physical_controller": "vector_momentum_constitutive_origin_and_material_frame_admission_open",
+      "phase_curvature_derived_independently": true,
+      "phase_stiffness_fitted_to_enthalpy": false,
+      "whole_Core_runtime_executed": false,
+      "full_two_fluid_stress_entrainment_derived": false,
+      "physical_UET_operator_admitted": false,
+      "physical_prediction_executed": false,
+      "physical_J04_executed": false,
+      "physical_J05_executed": false,
+      "physical_J06_executed": false,
+      "claim_promotion": false,
+      "dependency_unlock": false,
+      "thresholds_relaxed": false,
+      "next_action": "Derive and independently audit complete fixed-ensemble current/stress/entrainment and longitudinal two-fluid modes from the same tree-reduced thermal action; a phase-source Hessian and one scalar common-flow identity are not full Ward or material admission. Then establish nonrelativistic mass/charge/SI and independent EOS/response protocol mapping.",
+      "package_role": "approximate phase-current scalar correspondence preparation; not physical packages"
     }
   ],
   "last_updated": "2026-09-30",
@@ -995,20 +1068,24 @@
   },
   "latest_executed_reference_snapshot": {
     "date": "2026-09-30",
-    "latest_executed_package": "J01_J02_CORE_SOURCE_COMMON_FLOW_COMPOSITION_DIAGNOSTIC_ONLY",
-    "status": "PASS_SOURCE_COMPOSITION_DIAGNOSTIC_ONLY",
-    "scope": "Current fixed-Phi Core source functions, ideal common-boost scalar target, normal/tree controls and numerical component refinement",
-    "contract": "docs/topics/0.10_Fluid_Dynamics_Chaos/Data/03_Research/fluid_core_o2_common_flow_contract.json",
-    "derivation_card": "docs/topics/0.10_Fluid_Dynamics_Chaos/CORE_O2_COMMON_FLOW_COMPOSITION_CONTRACT.md",
-    "verifier": "docs/topics/0.10_Fluid_Dynamics_Chaos/Code/03_Research/Research_Fluid_Core_O2_Common_Flow.py",
-    "result_artifact": "docs/topics/0.10_Fluid_Dynamics_Chaos/Result/artifacts/fluid_core_o2_common_flow_composition_audit.json",
-    "result_artifact_sha256": "8667c87e7073a43a8255c3ad15980fa95c39890f2d4ca9ffbb75e9a0e4dbdae3",
-    "reference_check_count": 69,
+    "latest_executed_package": "J01_J02_FIXED_PHI_GAUSSIAN_FLOW_HESSIAN_REFERENCE_ONLY",
+    "status": "PASS_APPROXIMATE_FLOW_HESSIAN_REFERENCE_ONLY",
+    "scope": "Independent implicit action-root and finite-flow quartic-pressure phase curvature at three prior condensed controls",
+    "contract": "docs/topics/0.10_Fluid_Dynamics_Chaos/Data/03_Research/fluid_core_o2_flow_hessian_contract.json",
+    "derivation_card": "docs/topics/0.10_Fluid_Dynamics_Chaos/CORE_O2_FLOW_HESSIAN_DERIVATION.md",
+    "verifier": "docs/topics/0.10_Fluid_Dynamics_Chaos/Code/03_Research/Research_Fluid_Core_O2_Flow_Hessian.py",
+    "result_artifact": "docs/topics/0.10_Fluid_Dynamics_Chaos/Result/artifacts/fluid_core_o2_flow_hessian_audit.json",
+    "result_artifact_sha256": "6477296e19d63eb62843c61941a64b0b16f364af28dd54ea121dd0c7c908bdf9",
+    "reference_check_count": 98,
     "evidence_hashes": {
-      "docs/topics/0.10_Fluid_Dynamics_Chaos/Data/03_Research/fluid_core_o2_common_flow_contract.json": "c9a190c89d682080a9a90254cfd205e606cd9063f9d34c68b00eeeef8634c75c",
-      "docs/topics/0.10_Fluid_Dynamics_Chaos/CORE_O2_COMMON_FLOW_COMPOSITION_CONTRACT.md": "c88c8643e4cec213f2906443b021a215e916afeeed4b24258dd21d547d41e2b8",
-      "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry_topic10_o2_common_flow_addendum.json": "1d4b17a42b2b93c280752ff1c5e62b0628f6bd82d0fb66ca21dd1b1588e4d9d3",
+      "docs/topics/0.10_Fluid_Dynamics_Chaos/Data/03_Research/fluid_core_o2_flow_hessian_contract.json": "06dd62d5be82f115ef444360e58c2b2c19a993193db6a99736e5e65075174210",
+      "docs/topics/0.10_Fluid_Dynamics_Chaos/CORE_O2_FLOW_HESSIAN_DERIVATION.md": "d9b91304fcbf4af95adfaddd05f0fb39b107df93727f1385174ba2f2ee14ba60",
+      "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry_topic10_o2_flow_hessian_addendum.json": "0703fb4f244e4b2362d28245cfe2852de7240716cd490422c84d18f7851c4023",
+      "docs/topics/0.10_Fluid_Dynamics_Chaos/Code/03_Research/Research_Fluid_Core_O2_Flow_Hessian.py": "d8ecff1e604f545d68ec03b5abf4a6cc53e3ea377cafee0c75762dd1c2ccbc62",
+      "docs/topics/0.10_Fluid_Dynamics_Chaos/Result/previews/fluid_core_o2_flow_hessian_first_execution.json": "5f6d0ab5173e7adb47b21db9f48b60d62431aae7b1de569f0c9893953f32e7ad",
+      "docs/topics/0.10_Fluid_Dynamics_Chaos/Result/previews/core_o2_flow_hessian_first_execution_verifier.py.txt": "822aecceccd7e1e7bbc198b8b95b58e2768ec86b832d16fb7ceb6874b4b9286c",
       "docs/topics/0.10_Fluid_Dynamics_Chaos/Code/03_Research/Research_Fluid_Core_O2_Common_Flow.py": "b083323ad31df5527a94a888e8eae43984eb77698bda1c6c3d080e2ea940f5e2",
+      "docs/topics/0.10_Fluid_Dynamics_Chaos/Data/03_Research/fluid_core_o2_common_flow_contract.json": "c9a190c89d682080a9a90254cfd205e606cd9063f9d34c68b00eeeef8634c75c",
       "docs/core/02_equations/covariant/uet_covariant_response.py": "7fb4b7228afb8ede0ac4f1664d634346ef46cc7678c94ed7b55d73645590c0c2",
       "docs/core/02_equations/o2/uet_o2_finite_density_eos.py": "ea744a8645f993600300fa9fd99a764e1f07b30fb272b47399c34aa114152c6d",
       "docs/core/02_equations/o2/uet_o2_finite_temperature_quasiparticle_eos.py": "ba814f3aa02b5e31112a6595dac7727b7025b08e08f0631f50567f270cebbb7f",
@@ -1017,34 +1094,30 @@
       "docs/core/02_equations/o2/uet_o2_finite_temperature_two_fluid_response.py": "d8a32af7f257986e4e84581cd4af325fb9c09ee2b3c00fa96c77cca130b28ccf",
       "docs/core/07_artifacts/topic13/t13_uet_o2_finite_temperature_two_fluid_response_audit.json": "c642e7b3e87539008d5005ca403ff6104736bd477b51791f74954bd8eef9ad0f",
       "docs/topics/0.10_Fluid_Dynamics_Chaos/Data/03_Research/fluid_two_fluid_eos_reference_contract.json": "0554b385b88b442eeb99b4fbf49f45d34735904f6f24892472db9f48319de9ea",
-      "docs/topics/0.13_Thermodynamic_Bridge/HE4_SECOND_SOUND_PROTOCOL_CARD.md": "3e63ee75d51935420e9d4cb5e2141cf5cdb52c7596a6ea31a78e621ae1313449"
+      "docs/topics/0.13_Thermodynamic_Bridge/HE4_SECOND_SOUND_PROTOCOL_CARD.md": "3e63ee75d51935420e9d4cb5e2141cf5cdb52c7596a6ea31a78e621ae1313449",
+      "docs/topics/0.10_Fluid_Dynamics_Chaos/Result/artifacts/fluid_core_o2_common_flow_composition_audit.json": "8667c87e7073a43a8255c3ad15980fa95c39890f2d4ca9ffbb75e9a0e4dbdae3"
     },
-    "composition_gate": {
-      "status": "FAIL_REQUIRED_COMMON_FLOW_IDENTITY",
-      "target_pass": false,
-      "failed_points": [
-        {
-          "branch": "condensed",
-          "T": 0.04,
-          "mu": 1.28
-        },
-        {
-          "branch": "condensed",
-          "T": 0.08,
-          "mu": 1.28
-        },
-        {
-          "branch": "condensed",
-          "T": 0.16,
-          "mu": 1.28
-        }
-      ],
-      "operator_admitted": false,
+    "scalar_correspondence_gate": {
+      "status": "PASS_CURRENT_SOURCE_SCALAR_TARGET_ONLY",
+      "target_pass": true,
+      "threshold": 1e-05,
+      "full_current_stress_entrainment_admitted": false,
       "physical_material_mapping_admitted": false
     },
-    "candidate_controller": "finite_temperature_phase_stiffness_and_normal_momentum_common_action_match_missing",
+    "initial_execution_record": {
+      "artifact": "docs/topics/0.10_Fluid_Dynamics_Chaos/Result/previews/fluid_core_o2_flow_hessian_first_execution.json",
+      "verifier_source_archive": "docs/topics/0.10_Fluid_Dynamics_Chaos/Result/previews/core_o2_flow_hessian_first_execution_verifier.py.txt",
+      "original_verifier_sha256": "822aecceccd7e1e7bbc198b8b95b58e2768ec86b832d16fb7ceb6874b4b9286c",
+      "status": "PASS_APPROXIMATE_FLOW_HESSIAN_REFERENCE_ONLY",
+      "check_count": 96,
+      "role": "immutable historical preview; earlier verifier before empty-state fail-closed guard, not a current source-fresh audit"
+    },
+    "candidate_controller": "fixed_Phi_flow_scalar_correspondence_passed_but_two_fluid_current_stress_entrainment_modes_and_material_mapping_open",
     "physical_controller": "vector_momentum_constitutive_origin_and_material_frame_admission_open",
+    "phase_curvature_derived_independently": true,
+    "phase_stiffness_fitted_to_enthalpy": false,
     "whole_Core_runtime_executed": false,
+    "full_two_fluid_stress_entrainment_derived": false,
     "physical_UET_operator_admitted": false,
     "physical_prediction_executed": false,
     "physical_J04_executed": false,
@@ -1053,8 +1126,8 @@
     "claim_promotion": false,
     "dependency_unlock": false,
     "thresholds_relaxed": false,
-    "next_action": "Derive fixed-ensemble flow-dependent finite-T phase stiffness/current/stress from one common effective action with Ward/entrainment consistency; do not identify the formal Doppler proxy plus tree stiffness as physical two-fluid inertia or force a coefficient by the target identity. Material/SI and independent EOS/protocol remain separate.",
-    "package_role": "source-function shortcut rejection and reference controls; not physical J04/J05/J06"
+    "next_action": "Derive and independently audit complete fixed-ensemble current/stress/entrainment and longitudinal two-fluid modes from the same tree-reduced thermal action; a phase-source Hessian and one scalar common-flow identity are not full Ward or material admission. Then establish nonrelativistic mass/charge/SI and independent EOS/response protocol mapping.",
+    "package_role": "approximate phase-current scalar correspondence preparation; not physical packages"
   },
   "current_he4_EOS_source_acquisition_snapshot": {
     "date": "2026-09-30",
@@ -1200,5 +1273,68 @@
     "thresholds_relaxed": false,
     "next_action": "Derive fixed-ensemble flow-dependent finite-T phase stiffness/current/stress from one common effective action with Ward/entrainment consistency; do not identify the formal Doppler proxy plus tree stiffness as physical two-fluid inertia or force a coefficient by the target identity. Material/SI and independent EOS/protocol remain separate.",
     "package_role": "source-function shortcut rejection and reference controls; not physical J04/J05/J06"
+  },
+  "current_core_o2_flow_hessian_snapshot": {
+    "date": "2026-09-30",
+    "latest_executed_package": "J01_J02_FIXED_PHI_GAUSSIAN_FLOW_HESSIAN_REFERENCE_ONLY",
+    "status": "PASS_APPROXIMATE_FLOW_HESSIAN_REFERENCE_ONLY",
+    "scope": "Independent implicit action-root and finite-flow quartic-pressure phase curvature at three prior condensed controls",
+    "contract": "docs/topics/0.10_Fluid_Dynamics_Chaos/Data/03_Research/fluid_core_o2_flow_hessian_contract.json",
+    "derivation_card": "docs/topics/0.10_Fluid_Dynamics_Chaos/CORE_O2_FLOW_HESSIAN_DERIVATION.md",
+    "verifier": "docs/topics/0.10_Fluid_Dynamics_Chaos/Code/03_Research/Research_Fluid_Core_O2_Flow_Hessian.py",
+    "result_artifact": "docs/topics/0.10_Fluid_Dynamics_Chaos/Result/artifacts/fluid_core_o2_flow_hessian_audit.json",
+    "result_artifact_sha256": "6477296e19d63eb62843c61941a64b0b16f364af28dd54ea121dd0c7c908bdf9",
+    "reference_check_count": 98,
+    "evidence_hashes": {
+      "docs/topics/0.10_Fluid_Dynamics_Chaos/Data/03_Research/fluid_core_o2_flow_hessian_contract.json": "06dd62d5be82f115ef444360e58c2b2c19a993193db6a99736e5e65075174210",
+      "docs/topics/0.10_Fluid_Dynamics_Chaos/CORE_O2_FLOW_HESSIAN_DERIVATION.md": "d9b91304fcbf4af95adfaddd05f0fb39b107df93727f1385174ba2f2ee14ba60",
+      "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry_topic10_o2_flow_hessian_addendum.json": "0703fb4f244e4b2362d28245cfe2852de7240716cd490422c84d18f7851c4023",
+      "docs/topics/0.10_Fluid_Dynamics_Chaos/Code/03_Research/Research_Fluid_Core_O2_Flow_Hessian.py": "d8ecff1e604f545d68ec03b5abf4a6cc53e3ea377cafee0c75762dd1c2ccbc62",
+      "docs/topics/0.10_Fluid_Dynamics_Chaos/Result/previews/fluid_core_o2_flow_hessian_first_execution.json": "5f6d0ab5173e7adb47b21db9f48b60d62431aae7b1de569f0c9893953f32e7ad",
+      "docs/topics/0.10_Fluid_Dynamics_Chaos/Result/previews/core_o2_flow_hessian_first_execution_verifier.py.txt": "822aecceccd7e1e7bbc198b8b95b58e2768ec86b832d16fb7ceb6874b4b9286c",
+      "docs/topics/0.10_Fluid_Dynamics_Chaos/Code/03_Research/Research_Fluid_Core_O2_Common_Flow.py": "b083323ad31df5527a94a888e8eae43984eb77698bda1c6c3d080e2ea940f5e2",
+      "docs/topics/0.10_Fluid_Dynamics_Chaos/Data/03_Research/fluid_core_o2_common_flow_contract.json": "c9a190c89d682080a9a90254cfd205e606cd9063f9d34c68b00eeeef8634c75c",
+      "docs/core/02_equations/covariant/uet_covariant_response.py": "7fb4b7228afb8ede0ac4f1664d634346ef46cc7678c94ed7b55d73645590c0c2",
+      "docs/core/02_equations/o2/uet_o2_finite_density_eos.py": "ea744a8645f993600300fa9fd99a764e1f07b30fb272b47399c34aa114152c6d",
+      "docs/core/02_equations/o2/uet_o2_finite_temperature_quasiparticle_eos.py": "ba814f3aa02b5e31112a6595dac7727b7025b08e08f0631f50567f270cebbb7f",
+      "docs/core/02_equations/o2/uet_o2_formal_transverse_response.py": "a8ee43c6fb6edb227476412cde6cc9b2d4a643fc42cca0fd2d438b343efad1ba",
+      "docs/core/02_equations/covariant/uet_covariant_matter.py": "8a57d95e898a8ac962bbd749670ad0695b597281937da36496d2ec7e074f9c53",
+      "docs/core/02_equations/o2/uet_o2_finite_temperature_two_fluid_response.py": "d8a32af7f257986e4e84581cd4af325fb9c09ee2b3c00fa96c77cca130b28ccf",
+      "docs/core/07_artifacts/topic13/t13_uet_o2_finite_temperature_two_fluid_response_audit.json": "c642e7b3e87539008d5005ca403ff6104736bd477b51791f74954bd8eef9ad0f",
+      "docs/topics/0.10_Fluid_Dynamics_Chaos/Data/03_Research/fluid_two_fluid_eos_reference_contract.json": "0554b385b88b442eeb99b4fbf49f45d34735904f6f24892472db9f48319de9ea",
+      "docs/topics/0.13_Thermodynamic_Bridge/HE4_SECOND_SOUND_PROTOCOL_CARD.md": "3e63ee75d51935420e9d4cb5e2141cf5cdb52c7596a6ea31a78e621ae1313449",
+      "docs/topics/0.10_Fluid_Dynamics_Chaos/Result/artifacts/fluid_core_o2_common_flow_composition_audit.json": "8667c87e7073a43a8255c3ad15980fa95c39890f2d4ca9ffbb75e9a0e4dbdae3"
+    },
+    "scalar_correspondence_gate": {
+      "status": "PASS_CURRENT_SOURCE_SCALAR_TARGET_ONLY",
+      "target_pass": true,
+      "threshold": 1e-05,
+      "full_current_stress_entrainment_admitted": false,
+      "physical_material_mapping_admitted": false
+    },
+    "initial_execution_record": {
+      "artifact": "docs/topics/0.10_Fluid_Dynamics_Chaos/Result/previews/fluid_core_o2_flow_hessian_first_execution.json",
+      "verifier_source_archive": "docs/topics/0.10_Fluid_Dynamics_Chaos/Result/previews/core_o2_flow_hessian_first_execution_verifier.py.txt",
+      "original_verifier_sha256": "822aecceccd7e1e7bbc198b8b95b58e2768ec86b832d16fb7ceb6874b4b9286c",
+      "status": "PASS_APPROXIMATE_FLOW_HESSIAN_REFERENCE_ONLY",
+      "check_count": 96,
+      "role": "immutable historical preview; earlier verifier before empty-state fail-closed guard, not a current source-fresh audit"
+    },
+    "candidate_controller": "fixed_Phi_flow_scalar_correspondence_passed_but_two_fluid_current_stress_entrainment_modes_and_material_mapping_open",
+    "physical_controller": "vector_momentum_constitutive_origin_and_material_frame_admission_open",
+    "phase_curvature_derived_independently": true,
+    "phase_stiffness_fitted_to_enthalpy": false,
+    "whole_Core_runtime_executed": false,
+    "full_two_fluid_stress_entrainment_derived": false,
+    "physical_UET_operator_admitted": false,
+    "physical_prediction_executed": false,
+    "physical_J04_executed": false,
+    "physical_J05_executed": false,
+    "physical_J06_executed": false,
+    "claim_promotion": false,
+    "dependency_unlock": false,
+    "thresholds_relaxed": false,
+    "next_action": "Derive and independently audit complete fixed-ensemble current/stress/entrainment and longitudinal two-fluid modes from the same tree-reduced thermal action; a phase-source Hessian and one scalar common-flow identity are not full Ward or material admission. Then establish nonrelativistic mass/charge/SI and independent EOS/response protocol mapping.",
+    "package_role": "approximate phase-current scalar correspondence preparation; not physical packages"
   }
 }
