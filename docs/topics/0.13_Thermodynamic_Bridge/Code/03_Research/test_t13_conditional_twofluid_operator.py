@@ -2,6 +2,7 @@
 
 import hashlib
 import json
+from math import isclose
 from pathlib import Path
 import runpy
 
@@ -14,6 +15,22 @@ causal_stiffness_interval = MODULE["causal_stiffness_interval"]
 coefficients, modes, pressure_jet = (MODULE[k] for k in ("coefficients", "modes", "pressure_jet"))
 COMPARATOR = runpy.run_path(str(Path(__file__).with_name("Research_T13_Funding_RestEOS_Dynamic_Degeneracy.py")))
 longitudinal_state = COMPARATOR["longitudinal_state"]
+
+
+def assert_numeric_reproduction(actual, saved):
+    if isinstance(saved, dict):
+        assert actual.keys() == saved.keys()
+        for key in saved:
+            assert_numeric_reproduction(actual[key], saved[key])
+    elif isinstance(saved, list):
+        assert len(actual) == len(saved)
+        for left, right in zip(actual, saved):
+            assert_numeric_reproduction(left, right)
+    elif isinstance(saved, float):
+        # Hessian cancellation varies slightly between Windows and Linux libm.
+        assert isclose(actual, saved, rel_tol=1e-6, abs_tol=1e-9)
+    else:
+        assert actual == saved
 
 
 def test_pressure_hessian_map_recovers_existing_analytic_eft():
@@ -76,7 +93,13 @@ def test_analytic_interval_agrees_with_direct_modes_without_selecting_stiffness(
 
 def test_recorded_domain_rejection_and_physical_boundaries_are_preserved():
     record = json.loads(OUTPUT.read_text(encoding="utf-8"))
-    assert MODULE["audit"]() == record
+    current = MODULE["audit"]()
+    assert {k: v for k, v in current.items() if k != "examples"} == {
+        k: v for k, v in record.items() if k != "examples"
+    }
+    assert_numeric_reproduction(current["examples"], record["examples"])
+    assert all(e["reference"]["modes"]["secular_relative_residual"] < 1e-12
+               for e in current["examples"])
     required = {"major_result_id", "topic", "closure_level", "what_is_closed",
                 "equation_or_mapping", "units", "derivation_class", "observable",
                 "data_role", "evidence_artifacts", "verification_status",
@@ -106,3 +129,11 @@ def test_recorded_domain_rejection_and_physical_boundaries_are_preserved():
 def test_nonpositive_thermal_curvature_is_rejected():
     with pytest.raises(ValueError):
         coefficients(.2, 1., {"s": 1., "n": 1., "a_p_TT": 0., "h_p_Tmu": 0., "c_p_mumu": 1.}, .1)
+
+
+def test_reproduction_comparison_rejects_meaningful_numeric_or_status_drift():
+    assert_numeric_reproduction({"root": 1.821912968}, {"root": 1.821912967})
+    with pytest.raises(AssertionError):
+        assert_numeric_reproduction({"root": 1.82}, {"root": 1.81})
+    with pytest.raises(AssertionError):
+        assert_numeric_reproduction({"subluminal": True}, {"subluminal": False})

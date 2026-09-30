@@ -6286,6 +6286,20 @@ NEXT_ACTION: Derive stationary finite-T relative-flow response and check the ana
 
 CLAIM_BOUNDARY: Conditional imported EFT domain decision, not a UET no-go, physical He-II prediction, nonlinear causal proof or Full Topic 13 closure.
 
+## 2026-10-01 - Cross-platform conditional-operator reproduction repair
+
+MAJOR_RESULT_CLOSURE: No scientific closure change; the conditional operator remains PARTIAL.
+WHAT_IS_ACTUALLY_CLOSED: Numeric reproduction is tested separately from exact source hashes, schema, classifications and acceptance thresholds.
+WHAT_REMAINS_OPEN: Finite-T current/normal-component matching and physical admissions.
+DEPENDENCY_UNLOCKED: None.
+STATUS: Local changed-test verification passes; remote CI must run on the repair commit.
+WHAT_CHANGED: Replaced bitwise nested float equality with a numeric comparison (relative 1e-6, absolute 1e-9); exact top-level records, hashes and booleans remain required. Added drift-rejection tests and a live secular residual bound of 1e-12.
+EQUATION_OR_MAPPING: Unchanged pressure-Hessian and stiffness bounds.
+VERIFICATION: Linux CI on commit 1bdbd90a8 failed exact equality: Hessian roundoff and derived refinement ratios differed, with example step-refinement changes differing by about 6.35e-10. This tolerance is confined to numerical reproduction, below the existing 1e-3 refinement gate; the c^2<1 condition is unchanged. No artifact regeneration or hash change.
+CONTROLLING_BLOCKER: finite_T_relative_flow_current_and_normal_component_UET_match_not_derived.
+NEXT_ACTION: Rerun remote CI and continue the action-derived gradient-curvature task.
+CLAIM_BOUNDARY: Cross-platform testing repair only; no change to scientific status, calibration or holdout policy.
+
 ## 2026-09-30 - PR #28 reproducibility and artifact-link repair
 
 WHAT_CHANGED: Kept the saved composition audit's historical comparison distinct from a CI checkout where its source commit is unavailable; compared formal-root floating outputs within `rel=1e-12, abs=1e-13`; verified the recovery record's older evidence hash against committed history; regenerated the He-II operator decision with LF bytes and refreshed the scheme decision's source hash through its generator.
