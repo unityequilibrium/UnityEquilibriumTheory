@@ -578,3 +578,30 @@ CLAIM_BOUNDARY: Internal numerical-method validation only; not evidence that UET
   identical bytes locally. First failed source identity, prior snapshots/history,
   ten-package DAG, unchanged physical/Core/Topic13 sources,20-file scope,
   UTF-8 prefixes, JSON and links pass. No continuum or physical gate promotion.
+
+## 2026-10-01 OpenAI direct-bridge and current-blocker source review
+
+- Area: research-core; source/design assessment only.
+- Changed: additional Thai applicability report and machine-readable source/design
+  record, README/joint-plan links and this log; previous reviews retained.
+- Actually inspected:10 pinned OpenAI source files including independent
+  definitions/submission/direct bridges; lexical comparison of selected
+  definition/helper blocks and placeholder-token diagnostics. Main SHA unchanged;
+  all 4 overlapping September30 source hashes match. No import-closure audit.
+- Narrowed: exact source-reading scope and viable small formal-pilot targets are
+  explicit; selected lexical equality is not a formal certificate or physics evidence.
+- Additional literature screen: analytic-force regularity paper abstract/introduction,
+  profile-only exposition and force-topology metadata; no full proof audit.
+- Current measured blocker unchanged:
+  infrared_collision_form_domain_continuum_current_and_physical_heat_current_admission_open.
+- Overall controller unchanged:
+  vector_momentum_constitutive_origin_and_material_frame_admission_open.
+- Next: selected continuum collision-domain/source-weighted bounds plus microscopic
+  heat-current/frame/material correspondence; optional formal pilot remains proposed.
+- No Lean/Comparator/nanoda, new trajectory/timing/data, threshold changes,
+  readiness promotion, physical J04/J05/J06 execution or dependency unlock.
+
+- Final local review:10 pinned source records, four historical source-hash
+  rechecks, eight local evidence hashes, thirteen unchanged current artifacts,
+  old document prefixes, report links/UTF-8/JSON and diff whitespace pass.
+  No evidence-producing code changed; no scientific verifier rerun required.

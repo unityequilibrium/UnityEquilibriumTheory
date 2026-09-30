@@ -403,3 +403,13 @@ keeps the collision measure/vertex/gain-loss AST, state and numerical targets.
 Matched old G/Q/source/R differ below1.3e-13; no event clipping or fitted rates.
 Finite trial agreement does not establish a continuum upper/error bound, collision
 domain, physical heat-current/frame or material response. These now control.
+
+## OpenAI method transfer follow-up (2026-10-01)
+
+The [additional source/design review](OPENAI_FORMAL_TRANSFER_REVIEW_2026-10-01.md)
+compares the pinned Lean reference definitions, submission and direct bridges.
+Selected definition blocks match after lexical normalization; this is not a
+Lean/Comparator or transitive proof audit. It maps formal-pilot obligations onto
+the current selected collision-domain/current-response and material/frame
+blockers. Proposed work remains unexecuted; physical J04/J05/J06, thresholds,
+readiness and Core/Topic13 dependency boundaries are unchanged.

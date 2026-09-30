@@ -449,3 +449,16 @@ Next: collision-form domain and continuum source-weighted upper/error bounds,
 then microscopic condensate/charge heat-current/frame and interacting thermal
 completion. Gram-norm approximation or discrete variational ordering alone
 cannot unlock physical J04/J05/J06, material/SI or independent-source admission.
+
+## OpenAI direct-bridge and current-blocker review (2026-10-01)
+
+The [additional review](OPENAI_FORMAL_TRANSFER_REVIEW_2026-10-01.md) and
+[source/design record](Data/03_Research/openai_topic10_formal_transfer_review_2026_10_01.json)
+add a scoped static comparison of pinned reference/submission definitions and
+direct theorem bridges. No formal checker was run. OA0 is completed source
+inspection; OA1-OA6 are proposed design tasks within J00-J09, not new gates or
+package promotions. Current finite enriched/smooth trial targets do not close
+continuum collision-domain/source-weighted upper bounds, physical heat current
+or two-fluid/material/SI correspondence. Analytic versus smooth forcing and
+regularity assumptions must remain explicit in any future adversarial source.
+Physical J04/J05/J06 remain NOT_STARTED and the machine-readable plan/DAG is unchanged.
