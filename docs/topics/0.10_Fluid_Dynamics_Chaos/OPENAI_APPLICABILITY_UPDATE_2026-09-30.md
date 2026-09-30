@@ -1,8 +1,8 @@
 # ประเมินเพิ่มเติม: งาน OpenAI ช่วย Topic 10 และงานคู่กับ Topic 13 อย่างไร
 
-วันที่ตรวจ: 2026-09-30  
-ประเภทงาน: primary-source applicability review และข้อเสนอออกแบบการวิจัย  
-สถานะ: literature/design only; ไม่ใช่ proof certificate, ผล solver หรือ gate admission  
+วันที่ตรวจ: 2026-09-30
+ประเภทงาน: primary-source applicability review และข้อเสนอออกแบบการวิจัย
+สถานะ: literature/design only; ไม่ใช่ proof certificate, ผล solver หรือ gate admission
 สถานะฐานของ Topic 10: `vector_momentum_constitutive_origin_and_material_frame_admission_open`
 
 ## ข้อสรุปสำหรับการตัดสินใจ
@@ -24,19 +24,19 @@
 
 ## สิ่งที่ตรวจเพิ่มจากแหล่งต้นฉบับ
 
-**Navier–Stokes:** Theorem 1.1 กล่าวถึง 3D incompressible forced flow เริ่มจากหยุดนิ่ง มี viscosity บวกและแรงเรียบที่สร้างขึ้นเฉพาะ คำตอบมี kinetic-energy norm จำกัดแต่ velocity supremum โตไม่จำกัดในเวลาจำกัด การสร้างแรงจาก momentum residual ต้องแสดงความเรียบผ่านเวลาที่เกิด singularity ด้วย ไม่ใช่เพียงนิยามแรงให้เท่ากับ residual แล้วนับว่าเป็นการทำนาย  
+**Navier–Stokes:** Theorem 1.1 กล่าวถึง 3D incompressible forced flow เริ่มจากหยุดนิ่ง มี viscosity บวกและแรงเรียบที่สร้างขึ้นเฉพาะ คำตอบมี kinetic-energy norm จำกัดแต่ velocity supremum โตไม่จำกัดในเวลาจำกัด การสร้างแรงจาก momentum residual ต้องแสดงความเรียบผ่านเวลาที่เกิด singularity ด้วย ไม่ใช่เพียงนิยามแรงให้เท่ากับ residual แล้วนับว่าเป็นการทำนาย
 แหล่ง: [paper, Theorem 1.1 และ Section 2](https://cdn.openai.com/pdf/32d9f210-8b73-45e0-91bc-82a30aef8a9a/navier-stokes.pdf)
 
-**Euler:** เป็นผลอีกโจทย์สำหรับ 3D incompressible unforced flow จากข้อมูลเริ่มต้นเรียบที่มี compact support โดยมีข้อสรุปเกี่ยวกับ gradient/vorticity norms ห้ามสลับกับ unforced Navier–Stokes หรือกับการทดสอบ chaos ของ UET  
+**Euler:** เป็นผลอีกโจทย์สำหรับ 3D incompressible unforced flow จากข้อมูลเริ่มต้นเรียบที่มี compact support โดยมีข้อสรุปเกี่ยวกับ gradient/vorticity norms ห้ามสลับกับ unforced Navier–Stokes หรือกับการทดสอบ chaos ของ UET
 แหล่ง: [paper, Theorem 1.1](https://cdn.openai.com/pdf/315b36cd-ec98-4023-8342-93345194ece1/euler.pdf)
 
-**Formalization:** ตรึง repository ที่ commit `f9e8bc5b38b6e212696e8a30e3e91517af887bbd` metadata รายงาน main results ไม่มี sorry และใช้สาม axioms ที่ระบุ แต่ review status เป็น `self-assessed` คำอ้างเหล่านี้เป็นข้อมูลที่เจ้าของโครงการประกาศ; รอบนี้ไม่ได้ build Lean, รัน Comparator/nanoda หรือตรวจ dependency graph ทั้งหมดเอง  
+**Formalization:** ตรึง repository ที่ commit `f9e8bc5b38b6e212696e8a30e3e91517af887bbd` metadata รายงาน main results ไม่มี sorry และใช้สาม axioms ที่ระบุ แต่ review status เป็น `self-assessed` คำอ้างเหล่านี้เป็นข้อมูลที่เจ้าของโครงการประกาศ; รอบนี้ไม่ได้ build Lean, รัน Comparator/nanoda หรือตรวจ dependency graph ทั้งหมดเอง
 แหล่ง: [formalization metadata](https://github.com/openai/NavierStokesAndEuler/blob/f9e8bc5b38b6e212696e8a30e3e91517af887bbd/formalization.yaml)
 
-Comparator แยก challenge กับ solution modules และอนุญาต axioms อย่างชัดเจน; solution adapter ระบุว่าไม่ import challenge module ซึ่งมี placeholder ของโจทย์ การพบคำว่า sorry ด้วย text search เพียงอย่างเดียวจึงตัดสิน validity ของ proof ไม่ได้ ต้องตรวจ closure ของ theorem ที่ส่งจริง แยกจาก placeholder และตรวจความหมายของ statement ด้วย  
+Comparator แยก challenge กับ solution modules และอนุญาต axioms อย่างชัดเจน; solution adapter ระบุว่าไม่ import challenge module ซึ่งมี placeholder ของโจทย์ การพบคำว่า sorry ด้วย text search เพียงอย่างเดียวจึงตัดสิน validity ของ proof ไม่ได้ ต้องตรวจ closure ของ theorem ที่ส่งจริง แยกจาก placeholder และตรวจความหมายของ statement ด้วย
 แหล่ง: [challenge config](https://github.com/openai/NavierStokesAndEuler/blob/f9e8bc5b38b6e212696e8a30e3e91517af887bbd/ComparatorChallenges/NavierStokes.json), [solution adapter](https://github.com/openai/NavierStokesAndEuler/blob/f9e8bc5b38b6e212696e8a30e3e91517af887bbd/NavierStokes/ComparatorSolution.lean), [reference statement](https://github.com/openai/NavierStokesAndEuler/blob/f9e8bc5b38b6e212696e8a30e3e91517af887bbd/ComparatorChallenges/NavierStokes.lean)
 
-**แหล่งใหม่หลังบันทึก 26 ก.ย.:** Zhen Lei และ Xiao Ren เผยแพร่ Part I วันที่ 28 ก.ย. และแก้ไข v2 วันที่ 29 ก.ย. เป็นบทความอธิบายส่วนสร้างโปรไฟล์ของงาน OpenAI โดยกัน oscillatory-pulse correction ไว้ใน Part II ผู้เขียนระบุว่าเป็น expository article และจะไม่ส่งวารสาร รอบนี้ตรวจ abstract/ขอบเขต/สารบัญเท่านั้น ไม่ได้ audit บทพิสูจน์ทุกส่วน จัดเป็น reading aid ไม่ใช่ independent full-proof replication  
+**แหล่งใหม่หลังบันทึก 26 ก.ย.:** Zhen Lei และ Xiao Ren เผยแพร่ Part I วันที่ 28 ก.ย. และแก้ไข v2 วันที่ 29 ก.ย. เป็นบทความอธิบายส่วนสร้างโปรไฟล์ของงาน OpenAI โดยกัน oscillatory-pulse correction ไว้ใน Part II ผู้เขียนระบุว่าเป็น expository article และจะไม่ส่งวารสาร รอบนี้ตรวจ abstract/ขอบเขต/สารบัญเท่านั้น ไม่ได้ audit บทพิสูจน์ทุกส่วน จัดเป็น reading aid ไม่ใช่ independent full-proof replication
 แหล่ง: [arXiv:2609.35406v2](https://arxiv.org/abs/2609.35406v2)
 
 พบ [arXiv:2609.10262v4](https://arxiv.org/abs/2609.10262v4) เกี่ยวกับ force topology ด้วย แต่รอบนี้อ่านเฉพาะ abstract และ version metadata จึงยังไม่รับผลทฤษฎีของบทความนั้นเข้า acceptance criteria ของ UET
@@ -78,6 +78,6 @@ P0 ควรคุมลำดับถัดไป เพราะเป็น 
 
 ตรวจเอกสารต้นฉบับส่วนที่ระบุข้างต้น ตรึง OpenAI repository commit และอ่าน main-result metadata, Comparator configs/adapters/reference boundary; เทียบกับ manifest/artifact ของ Topic 10 และ He-II protocol ใน worktree นี้ ไม่มีการรัน Lean, nanoda, solver, CFD, trajectory หรือทดสอบความเร็วใหม่ ไม่มีการแก้ operator หรือการยกระดับ Core/Topic 13
 
-source manifest ประกอบ: [openai_topic10_applicability_review_2026_09_30.json](Data/03_Research/openai_topic10_applicability_review_2026_09_30.json)  
-แผนหลักยังเป็น [joint Topic 10–13 plan](JOINT_RESEARCH_PLAN_TOPIC10_TOPIC13.md)  
+source manifest ประกอบ: [openai_topic10_applicability_review_2026_09_30.json](Data/03_Research/openai_topic10_applicability_review_2026_09_30.json)
+แผนหลักยังเป็น [joint Topic 10–13 plan](JOINT_RESEARCH_PLAN_TOPIC10_TOPIC13.md)
 ผลการประเมินนี้มีบทบาทเป็น source/design input; controller และ acceptance gates ของงานวิจัยเดิมยังคงเดิม
