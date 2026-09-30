@@ -418,3 +418,18 @@ Next: stable higher-order vector functions, low-energy-valid cutoff/soft-current
 convergence, then full kinetic-to-condensate/charge heat-current/frame and
 interacting thermal collision completion. Material/SI/He-II ancestry and
 nonlinear/live-response obligations remain. Physical J04/J05/J06 stay NOT_STARTED.
+
+## Stable-vector and low-momentum handoff (2026-10-01)
+
+[The vector refinement](CORE_O2_GOLDSTONE_VECTOR_REFINEMENT.md) resolves
+Gram-conditioning ambiguity under the same selected cubic process.541 structural
+controls pass, including shared off-grid recurrence, raw momentum, same-span
+old response and whole-action scaling. SOFT within-family refinement passes.
+
+Overall1% convergence still FAILS: EVEN basis/cutoff and cross-family response.
+Controller:
+stable_vector_basis_cross_family_or_cutoff_current_response_not_converged.
+Next: an independently soft-enriched family and infrared/continuum-current
+bounds while retaining the old failed targets, then physical heat-current/frame/
+interacting-state and material/SI/source admission. Earlier snapshots remain
+immutable and physical J04/J05/J06 stay NOT_STARTED; no dependency unlock.

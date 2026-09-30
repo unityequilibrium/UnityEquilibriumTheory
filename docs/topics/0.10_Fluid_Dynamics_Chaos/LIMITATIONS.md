@@ -229,3 +229,18 @@ Last basis response changes18-19%; cutoff changes5-6% exceed the locked1%
 acceptance targets. Neither value is an admitted transport coefficient,
 thermalization time, frequency window or collective sound damping.
 A nearly exact source expansion does not cure an unconverged collision solution.
+
+## Stable coordinates do not close soft-mode or continuum convergence
+
+[The vector refinement](Result/artifacts/fluid_core_o2_vector_refinement_audit.json)
+resolves the raw Gram-conditioning ambiguity by same-span correspondence and
+nearly unit Gram condition. SOFT within-family responses plateau, but EVEN
+basis/cutoff targets and20.4462%/19.5268% cross-family differences fail1%.
+These failures remain controlling despite all541 structural checks passing.
+
+A bounded angular trial at k->0 has finite Hilbert norm; this does not prove
+the collision solution's infrared domain, continuum finiteness or spectral gap.
+The scalar block is reused from earlier evidence, not rerun in this vector pass.
+Kinetic energy-current still lacks full condensate/charge heat-current/frame
+matching, self-consistent thermal-state/all-channel completion and material/SI/
+independent-source admission. No physical relaxation/damping time is assigned.

@@ -500,3 +500,35 @@ CLAIM_BOUNDARY: Internal numerical-method validation only; not evidence that UET
   prior snapshots/history, ten-package DAG, unchanged physical/Core/Topic13
   state, 18-file scope, UTF-8 prefixes, JSON and links pass.
   Structural PASS does not promote the failed1% cutoff/basis response gate.
+
+## 2026-10-01 Stable vector recurrences and soft variational refinement
+
+- Area/wave: research-core; selected vector numerical-method artifact pass.
+- Before execution: card/contract/topic-local unmerged registry locks the same
+  kernel, states, source frame,1% targets and energy validity bound.
+- Actually ran: orders96/144/192, cutoffs40/50/60, EVEN5/9/13/17 and
+  SOFT5/9/17/25/35 at naturalT .002/.004, lambda.01. Shared off-grid recurrences,
+  raw momentum/source constraints, Gram/PSD/rank, independent resolvents,
+  same-span raw G/Q/source/R, nested variational growth and scale2.
+- Result541/541 structural checks pass on the first execution without repair.
+  Gram condition approximately1; same-span response errors below4.2e-14.
+- Measured1% gate remains OPEN: EVEN cutoff3.2679%/2.7748%, basis9.4195%/
+  8.6995%, cross-family20.4462%/19.5268%. SOFT within-family targets pass.
+- Narrowed: numerical Gram conditioning is resolved. Remaining trial-space/
+  soft-current convergence is not hidden behind source-representation PASS.
+- Controlling measured blocker:
+  stable_vector_basis_cross_family_or_cutoff_current_response_not_converged.
+- Next: independently soft-enriched trial space plus infrared/domain/continuum
+  bounds under the unchanged kernel and acceptance targets. Then physical
+  condensate/charge heat-current/frame and full interacting thermal completion.
+- Overall controller unchanged:
+  vector_momentum_constitutive_origin_and_material_frame_admission_open.
+- Scalar conservation evidence reused, not rerun. No physical current/time,
+  spectral gap/frequency window/collective damping, live-response/material/SI,
+  gate promotion or J04/J05/J06 execution; prior hashes and sources unchanged.
+
+- Final local review: all43 scoped regressions pass with warnings as errors.
+  Twelve current artifacts/input hashes are fresh; the new vector diagnostic
+  reproduces identical bytes locally. Prior snapshots/history, ten-package DAG,
+  unchanged physical/Core/Topic13 sources,16-file scope, UTF-8 prefixes, JSON
+  and links pass. All old numerical failures remain; no physical gate promotion.

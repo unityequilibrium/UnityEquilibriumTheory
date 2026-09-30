@@ -237,3 +237,16 @@ it is not all-channel/self-consistent interacting thermal completion.
 E*v_g is a kinetic quasiparticle current, not automatically T^0i-mu*j^i.
 Constrained finite response/time has failed basis/cutoff acceptance and no
 continuum gap, physical frame/SI, two-fluid damping or dependency admission.
+
+## Stable radial Hilbert trial spaces and unchanged cubic collision form
+
+[Card](CORE_O2_GOLDSTONE_VECTOR_REFINEMENT.md) and
+[topic-local numerical registry](../../core/07_artifacts/correspondence/uet_equation_correspondence_registry_topic10_o2_vector_refinement_addendum.json)
+record radial amplitude unitsE, actual GramE5, collisionE6, responseE4 and
+basis-timeE-1. The same leading cubic event form is retained; momentum is the
+first invariant and only the source/state is reduced to its zero-momentum frame.
+
+Same-span coordinate correspondence isolates roundoff from trial enrichment.
+SOFT order35 includes EVEN order17's highest radial degree33; nested variational
+response checks pass. Finite Hilbert admissibility is not a continuum-domain or
+gap proof. The physical kinetic-to-material heat-current mapping stays open.

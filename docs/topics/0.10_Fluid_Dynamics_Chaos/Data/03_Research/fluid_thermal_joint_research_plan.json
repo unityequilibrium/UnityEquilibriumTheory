@@ -12,7 +12,7 @@
   "source_policy": "Original evidence_snapshot hashes retain the published-base comparison. current_execution_snapshot records the current branch-local candidate inputs; execution_history retains as-executed historical identities. Original dirty workspace differences do not authorize importing unpublished results.",
   "controlling_blocker": "vector_momentum_constitutive_origin_and_material_frame_admission_open",
   "blocker_role": "proposed_physics_program_controller_not_replacement_of_legacy_speed_gate",
-  "next_controller": "Resolve the measured finite-basis/cutoff current-response failures before any transport use: retain the current 1% targets, develop a numerically stable higher-order shared vector basis, test low-energy-valid cutoff and soft-current convergence, and separate source representation from collision-solution convergence. Then match the kinetic energy-current to condensate/charge heat-current/frame and complete interacting thermal state/additional channels. No continuum gap, physical relaxation time, frequency window, collective damping or material/SI admission follows yet.",
+  "next_controller": "Resolve stable-vector trial-space and infrared/cutoff convergence without relaxing the1% targets: compare an independently soft-enriched family against the SOFT response under the same cubic kernel/state, retain all EVEN/cross-family failures, and establish soft-mode/domain and continuum-current bounds. Then match the kinetic source to condensate/charge material heat-current/frame and complete interacting thermal state/additional channels. No physical transport/time, spectral gap, frequency window, damping or material/SI admission follows yet.",
   "first_scientific_wave": "J01",
   "work_packages": [
     {
@@ -271,6 +271,18 @@
         "operator_admitted": false,
         "thermalization_derived": false,
         "next_action": "Resolve the measured finite-basis/cutoff current-response failures before any transport use: retain the current 1% targets, develop a numerically stable higher-order shared vector basis, test low-energy-valid cutoff and soft-current convergence, and separate source representation from collision-solution convergence. Then match the kinetic energy-current to condensate/charge heat-current/frame and complete interacting thermal state/additional channels. No continuum gap, physical relaxation time, frequency window, collective damping or material/SI admission follows yet."
+      },
+      "core_o2_vector_refinement": {
+        "status": "PASS_STABLE_VECTOR_DIAGNOSTIC_ONLY",
+        "candidate_controller": "stable_Goldstone_vector_refinement_and_continuum_physical_heat_current_admission_open",
+        "controlling_measured_blocker": "stable_vector_basis_cross_family_or_cutoff_current_response_not_converged",
+        "contract": "docs/topics/0.10_Fluid_Dynamics_Chaos/Data/03_Research/fluid_core_o2_vector_refinement_contract.json",
+        "result_artifact": "docs/topics/0.10_Fluid_Dynamics_Chaos/Result/artifacts/fluid_core_o2_vector_refinement_audit.json",
+        "refinement_target_pass": false,
+        "physical_package_executed": false,
+        "operator_admitted": false,
+        "thermalization_derived": false,
+        "next_action": "Resolve stable-vector trial-space and infrared/cutoff convergence without relaxing the1% targets: compare an independently soft-enriched family against the SOFT response under the same cubic kernel/state, retain all EVEN/cross-family failures, and establish soft-mode/domain and continuum-current bounds. Then match the kinetic source to condensate/charge material heat-current/frame and complete interacting thermal state/additional channels. No physical transport/time, spectral gap, frequency window, damping or material/SI admission follows yet."
       }
     },
     {
@@ -1234,6 +1246,197 @@
       "parameters_fitted": false,
       "next_action": "Resolve the measured finite-basis/cutoff current-response failures before any transport use: retain the current 1% targets, develop a numerically stable higher-order shared vector basis, test low-energy-valid cutoff and soft-current convergence, and separate source representation from collision-solution convergence. Then match the kinetic energy-current to condensate/charge heat-current/frame and complete interacting thermal state/additional channels. No continuum gap, physical relaxation time, frequency window, collective damping or material/SI admission follows yet.",
       "package_role": "selected finite kinetic reference; measured refinement remains open"
+    },
+    {
+      "date": "2026-10-01",
+      "latest_executed_package": "J01_J02_STABLE_VECTOR_SOFT_VARIATIONAL_DIAGNOSTIC_ONLY",
+      "status": "PASS_STABLE_VECTOR_DIAGNOSTIC_ONLY",
+      "scope": "Stable shared off-grid vector recurrences, old same-span correspondence and soft trial-space refinement",
+      "contract": "docs/topics/0.10_Fluid_Dynamics_Chaos/Data/03_Research/fluid_core_o2_vector_refinement_contract.json",
+      "derivation_card": "docs/topics/0.10_Fluid_Dynamics_Chaos/CORE_O2_GOLDSTONE_VECTOR_REFINEMENT.md",
+      "verifier": "docs/topics/0.10_Fluid_Dynamics_Chaos/Code/03_Research/Research_Fluid_Core_O2_Vector_Refinement.py",
+      "result_artifact": "docs/topics/0.10_Fluid_Dynamics_Chaos/Result/artifacts/fluid_core_o2_vector_refinement_audit.json",
+      "result_artifact_sha256": "4990aba84fe30276d7441bdca9567729a63797d5df0a0263d667f6df491f37f5",
+      "reference_check_count": 541,
+      "evidence_hashes": {
+        "docs/topics/0.10_Fluid_Dynamics_Chaos/Data/03_Research/fluid_core_o2_vector_refinement_contract.json": "5216da4f2549980292cce50314361448456db01816e3a5dba8a3c00120c880f0",
+        "docs/topics/0.10_Fluid_Dynamics_Chaos/CORE_O2_GOLDSTONE_VECTOR_REFINEMENT.md": "5957e4f1373faea4e38036f040e4b84c611f11a52d8f5e3188b29e469ed2d4ef",
+        "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry_topic10_o2_vector_refinement_addendum.json": "9263469bc87c7bfaa47ce608adc1da710510885d003cf8a603e25605e06bfee1",
+        "docs/topics/0.10_Fluid_Dynamics_Chaos/Code/03_Research/Research_Fluid_Core_O2_Vector_Refinement.py": "f73896652c997abdb17bd6d9b155e52c40722e36af70f703976b3b18dbe1d827",
+        "docs/topics/0.10_Fluid_Dynamics_Chaos/Data/03_Research/fluid_core_o2_goldstone_galerkin_contract.json": "d36a29ef8524a9c839ba237ac7507ea6e8c217d777a8f9fcd87302e9b5b37fee",
+        "docs/topics/0.10_Fluid_Dynamics_Chaos/Code/03_Research/Research_Fluid_Core_O2_Goldstone_Galerkin.py": "f7caeae9655172514adc464723917a1a8e367a3a1832ada2938a2d44f1afdc74",
+        "docs/topics/0.10_Fluid_Dynamics_Chaos/Result/artifacts/fluid_core_o2_goldstone_galerkin_audit.json": "4b4c706aab168108e7d5829a6a0563eaf9f99c893afd2586020eb89b55e6d24b",
+        "docs/topics/0.10_Fluid_Dynamics_Chaos/CORE_O2_GOLDSTONE_GALERKIN_DERIVATION.md": "5cd09900d57ae2d61c2007f6a0b2f7d565903894721c81b8b81b29257bccac90",
+        "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry_topic10_o2_goldstone_galerkin_addendum.json": "73bb37bd79dfc2bfde8231998db142d539db83a9b1186e1e23c1dff8dadd6fb8",
+        "docs/topics/0.10_Fluid_Dynamics_Chaos/Code/03_Research/Research_Fluid_Core_O2_Common_Flow.py": "b083323ad31df5527a94a888e8eae43984eb77698bda1c6c3d080e2ea940f5e2",
+        "docs/topics/0.10_Fluid_Dynamics_Chaos/Data/03_Research/fluid_core_o2_common_flow_contract.json": "c9a190c89d682080a9a90254cfd205e606cd9063f9d34c68b00eeeef8634c75c",
+        "docs/topics/0.10_Fluid_Dynamics_Chaos/Data/03_Research/fluid_core_o2_goldstone_collision_contract.json": "331535ea4a63e47e0d100c317511013605ab5044f1bdbff835ba48fbd3e6b912",
+        "docs/topics/0.10_Fluid_Dynamics_Chaos/Code/03_Research/Research_Fluid_Core_O2_Goldstone_Collision.py": "1b8cc6ff1782da5c5f01dcf4d95052871a4ea2c7a5e1aa967478e9f800cd3fe8",
+        "docs/topics/0.10_Fluid_Dynamics_Chaos/Result/artifacts/fluid_core_o2_goldstone_collision_audit.json": "c130a512a015940ed5db9f2a181fa34731910fa17aa58c5c4e59e0cdb3dfe56b",
+        "docs/core/02_equations/covariant/uet_covariant_response.py": "7fb4b7228afb8ede0ac4f1664d634346ef46cc7678c94ed7b55d73645590c0c2",
+        "docs/core/02_equations/o2/uet_o2_finite_density_eos.py": "ea744a8645f993600300fa9fd99a764e1f07b30fb272b47399c34aa114152c6d",
+        "docs/core/02_equations/o2/uet_o2_finite_temperature_quasiparticle_eos.py": "ba814f3aa02b5e31112a6595dac7727b7025b08e08f0631f50567f270cebbb7f",
+        "docs/core/02_equations/o2/uet_o2_formal_transverse_response.py": "a8ee43c6fb6edb227476412cde6cc9b2d4a643fc42cca0fd2d438b343efad1ba",
+        "docs/core/02_equations/o2/uet_o2_invariant_galerkin_collision_operator.py": "278b168e5c3b444ac4df4b96b5a7d00410cd9485c511ab2a17aa4f11c6f6d94e",
+        "docs/core/07_artifacts/topic13/t13_invariant_galerkin_collision_operator_audit.json": "433427f32612e478d71a1a4ff64f96e3d22da7fc33d3de0c10f3a0a480234011",
+        "docs/core/07_artifacts/topic13/t13_collision_evidence_reconciliation.json": "cad197d2635b08d3454cc49734b292b32971c2f18e3d3f1d2b2c0b5ca77c9bf6",
+        "docs/topics/0.10_Fluid_Dynamics_Chaos/Result/artifacts/fluid_core_o2_ideal_modes_audit.json": "b2e5d7fb5fff8f1a48148e1661bbf640027174b58b9fe765f53cded351c512f6",
+        "docs/topics/0.10_Fluid_Dynamics_Chaos/Result/previews/fluid_core_o2_goldstone_galerkin_first_execution.json": "18e4854a368c5b0d6860da12435bd8dae00d8d77302d66036c40972404ae710a",
+        "docs/topics/0.10_Fluid_Dynamics_Chaos/Result/previews/core_o2_goldstone_galerkin_first_execution_verifier.py.txt": "0be34c2e579b4aaf44dae168c63a4b50276508759c6073751e9c2484c0439c81"
+      },
+      "candidate_controller": "stable_Goldstone_vector_refinement_and_continuum_physical_heat_current_admission_open",
+      "physical_controller": "vector_momentum_constitutive_origin_and_material_frame_admission_open",
+      "controlling_measured_blocker": "stable_vector_basis_cross_family_or_cutoff_current_response_not_converged",
+      "refinement_gate": {
+        "status": "MEASURED_REFINEMENT_TARGETS_OPEN",
+        "target_pass": false,
+        "state_targets": [
+          {
+            "T": 0.002,
+            "pass": false,
+            "targets": {
+              "EVEN/order": {
+                "relative_change": 5.065196790509356e-13,
+                "threshold": 0.01,
+                "pass": true
+              },
+              "EVEN/cutoff": {
+                "relative_change": 0.03267867705445973,
+                "threshold": 0.01,
+                "pass": false
+              },
+              "EVEN/basis": {
+                "relative_change": 0.0941954907028335,
+                "threshold": 0.01,
+                "pass": false
+              },
+              "EVEN/source": {
+                "relative_squared_error": 3.161633065784547e-16,
+                "threshold": 0.01,
+                "pass": true
+              },
+              "SOFT/order": {
+                "relative_change": 8.60636877569359e-15,
+                "threshold": 0.01,
+                "pass": true
+              },
+              "SOFT/cutoff": {
+                "relative_change": 2.901632433662801e-12,
+                "threshold": 0.01,
+                "pass": true
+              },
+              "SOFT/basis": {
+                "relative_change": 1.1686779265915597e-09,
+                "threshold": 0.01,
+                "pass": true
+              },
+              "SOFT/source": {
+                "relative_squared_error": 1.2646532263138188e-15,
+                "threshold": 0.01,
+                "pass": true
+              },
+              "cross_family": {
+                "relative_change": 0.2044616326309296,
+                "threshold": 0.01,
+                "pass": false
+              }
+            }
+          },
+          {
+            "T": 0.004,
+            "pass": false,
+            "targets": {
+              "EVEN/order": {
+                "relative_change": 1.7225958569707348e-13,
+                "threshold": 0.01,
+                "pass": true
+              },
+              "EVEN/cutoff": {
+                "relative_change": 0.027748057239607802,
+                "threshold": 0.01,
+                "pass": false
+              },
+              "EVEN/basis": {
+                "relative_change": 0.08699519890219166,
+                "threshold": 0.01,
+                "pass": false
+              },
+              "EVEN/source": {
+                "relative_squared_error": 3.2545942334970745e-16,
+                "threshold": 0.01,
+                "pass": true
+              },
+              "SOFT/order": {
+                "relative_change": 7.292525227493981e-15,
+                "threshold": 0.01,
+                "pass": true
+              },
+              "SOFT/cutoff": {
+                "relative_change": 1.5406346236238705e-12,
+                "threshold": 0.01,
+                "pass": true
+              },
+              "SOFT/basis": {
+                "relative_change": 7.959663048533637e-10,
+                "threshold": 0.01,
+                "pass": true
+              },
+              "SOFT/source": {
+                "relative_squared_error": 1.6272971167485372e-16,
+                "threshold": 0.01,
+                "pass": true
+              },
+              "cross_family": {
+                "relative_change": 0.195267984708844,
+                "threshold": 0.01,
+                "pass": false
+              }
+            }
+          }
+        ],
+        "failed_targets": [
+          {
+            "T": 0.002,
+            "target": "EVEN/cutoff"
+          },
+          {
+            "T": 0.002,
+            "target": "EVEN/basis"
+          },
+          {
+            "T": 0.002,
+            "target": "cross_family"
+          },
+          {
+            "T": 0.004,
+            "target": "EVEN/cutoff"
+          },
+          {
+            "T": 0.004,
+            "target": "EVEN/basis"
+          },
+          {
+            "T": 0.004,
+            "target": "cross_family"
+          }
+        ],
+        "physical_admission": false
+      },
+      "stable_shared_vector_basis_evaluated": true,
+      "physical_heat_current_matched": false,
+      "full_interacting_collision_completed": false,
+      "continuum_spectral_gap_established": false,
+      "thermalization_derived": false,
+      "physical_frequency_window_established": false,
+      "physical_J04_executed": false,
+      "physical_J05_executed": false,
+      "physical_J06_executed": false,
+      "claim_promotion": false,
+      "dependency_unlock": false,
+      "thresholds_relaxed": false,
+      "parameters_fitted": false,
+      "next_action": "Resolve stable-vector trial-space and infrared/cutoff convergence without relaxing the1% targets: compare an independently soft-enriched family against the SOFT response under the same cubic kernel/state, retain all EVEN/cross-family failures, and establish soft-mode/domain and continuum-current bounds. Then match the kinetic source to condensate/charge material heat-current/frame and complete interacting thermal state/additional channels. No physical transport/time, spectral gap, frequency window, damping or material/SI admission follows yet.",
+      "package_role": "selected vector numerical refinement; overall finite-current targets remain open"
     }
   ],
   "last_updated": "2026-09-30",
@@ -1342,20 +1545,25 @@
   },
   "latest_executed_reference_snapshot": {
     "date": "2026-10-01",
-    "latest_executed_package": "J01_J02_SHARED_GOLDSTONE_GALERKIN_CURRENT_DIAGNOSTIC_ONLY",
-    "status": "PASS_FINITE_GALERKIN_DIAGNOSTIC_ONLY",
-    "scope": "Shared scalar/vector cubic gain-loss form, raw invariants and constrained finite kinetic-current response",
-    "contract": "docs/topics/0.10_Fluid_Dynamics_Chaos/Data/03_Research/fluid_core_o2_goldstone_galerkin_contract.json",
-    "derivation_card": "docs/topics/0.10_Fluid_Dynamics_Chaos/CORE_O2_GOLDSTONE_GALERKIN_DERIVATION.md",
-    "verifier": "docs/topics/0.10_Fluid_Dynamics_Chaos/Code/03_Research/Research_Fluid_Core_O2_Goldstone_Galerkin.py",
-    "result_artifact": "docs/topics/0.10_Fluid_Dynamics_Chaos/Result/artifacts/fluid_core_o2_goldstone_galerkin_audit.json",
-    "result_artifact_sha256": "4b4c706aab168108e7d5829a6a0563eaf9f99c893afd2586020eb89b55e6d24b",
-    "reference_check_count": 454,
+    "latest_executed_package": "J01_J02_STABLE_VECTOR_SOFT_VARIATIONAL_DIAGNOSTIC_ONLY",
+    "status": "PASS_STABLE_VECTOR_DIAGNOSTIC_ONLY",
+    "scope": "Stable shared off-grid vector recurrences, old same-span correspondence and soft trial-space refinement",
+    "contract": "docs/topics/0.10_Fluid_Dynamics_Chaos/Data/03_Research/fluid_core_o2_vector_refinement_contract.json",
+    "derivation_card": "docs/topics/0.10_Fluid_Dynamics_Chaos/CORE_O2_GOLDSTONE_VECTOR_REFINEMENT.md",
+    "verifier": "docs/topics/0.10_Fluid_Dynamics_Chaos/Code/03_Research/Research_Fluid_Core_O2_Vector_Refinement.py",
+    "result_artifact": "docs/topics/0.10_Fluid_Dynamics_Chaos/Result/artifacts/fluid_core_o2_vector_refinement_audit.json",
+    "result_artifact_sha256": "4990aba84fe30276d7441bdca9567729a63797d5df0a0263d667f6df491f37f5",
+    "reference_check_count": 541,
     "evidence_hashes": {
+      "docs/topics/0.10_Fluid_Dynamics_Chaos/Data/03_Research/fluid_core_o2_vector_refinement_contract.json": "5216da4f2549980292cce50314361448456db01816e3a5dba8a3c00120c880f0",
+      "docs/topics/0.10_Fluid_Dynamics_Chaos/CORE_O2_GOLDSTONE_VECTOR_REFINEMENT.md": "5957e4f1373faea4e38036f040e4b84c611f11a52d8f5e3188b29e469ed2d4ef",
+      "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry_topic10_o2_vector_refinement_addendum.json": "9263469bc87c7bfaa47ce608adc1da710510885d003cf8a603e25605e06bfee1",
+      "docs/topics/0.10_Fluid_Dynamics_Chaos/Code/03_Research/Research_Fluid_Core_O2_Vector_Refinement.py": "f73896652c997abdb17bd6d9b155e52c40722e36af70f703976b3b18dbe1d827",
       "docs/topics/0.10_Fluid_Dynamics_Chaos/Data/03_Research/fluid_core_o2_goldstone_galerkin_contract.json": "d36a29ef8524a9c839ba237ac7507ea6e8c217d777a8f9fcd87302e9b5b37fee",
+      "docs/topics/0.10_Fluid_Dynamics_Chaos/Code/03_Research/Research_Fluid_Core_O2_Goldstone_Galerkin.py": "f7caeae9655172514adc464723917a1a8e367a3a1832ada2938a2d44f1afdc74",
+      "docs/topics/0.10_Fluid_Dynamics_Chaos/Result/artifacts/fluid_core_o2_goldstone_galerkin_audit.json": "4b4c706aab168108e7d5829a6a0563eaf9f99c893afd2586020eb89b55e6d24b",
       "docs/topics/0.10_Fluid_Dynamics_Chaos/CORE_O2_GOLDSTONE_GALERKIN_DERIVATION.md": "5cd09900d57ae2d61c2007f6a0b2f7d565903894721c81b8b81b29257bccac90",
       "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry_topic10_o2_goldstone_galerkin_addendum.json": "73bb37bd79dfc2bfde8231998db142d539db83a9b1186e1e23c1dff8dadd6fb8",
-      "docs/topics/0.10_Fluid_Dynamics_Chaos/Code/03_Research/Research_Fluid_Core_O2_Goldstone_Galerkin.py": "f7caeae9655172514adc464723917a1a8e367a3a1832ada2938a2d44f1afdc74",
       "docs/topics/0.10_Fluid_Dynamics_Chaos/Code/03_Research/Research_Fluid_Core_O2_Common_Flow.py": "b083323ad31df5527a94a888e8eae43984eb77698bda1c6c3d080e2ea940f5e2",
       "docs/topics/0.10_Fluid_Dynamics_Chaos/Data/03_Research/fluid_core_o2_common_flow_contract.json": "c9a190c89d682080a9a90254cfd205e606cd9063f9d34c68b00eeeef8634c75c",
       "docs/topics/0.10_Fluid_Dynamics_Chaos/Data/03_Research/fluid_core_o2_goldstone_collision_contract.json": "331535ea4a63e47e0d100c317511013605ab5044f1bdbff835ba48fbd3e6b912",
@@ -1372,6 +1580,9 @@
       "docs/topics/0.10_Fluid_Dynamics_Chaos/Result/previews/fluid_core_o2_goldstone_galerkin_first_execution.json": "18e4854a368c5b0d6860da12435bd8dae00d8d77302d66036c40972404ae710a",
       "docs/topics/0.10_Fluid_Dynamics_Chaos/Result/previews/core_o2_goldstone_galerkin_first_execution_verifier.py.txt": "0be34c2e579b4aaf44dae168c63a4b50276508759c6073751e9c2484c0439c81"
     },
+    "candidate_controller": "stable_Goldstone_vector_refinement_and_continuum_physical_heat_current_admission_open",
+    "physical_controller": "vector_momentum_constitutive_origin_and_material_frame_admission_open",
+    "controlling_measured_blocker": "stable_vector_basis_cross_family_or_cutoff_current_response_not_converged",
     "refinement_gate": {
       "status": "MEASURED_REFINEMENT_TARGETS_OPEN",
       "target_pass": false,
@@ -1380,25 +1591,50 @@
           "T": 0.002,
           "pass": false,
           "targets": {
-            "order": {
-              "relative_change": 4.194469874887878e-14,
+            "EVEN/order": {
+              "relative_change": 5.065196790509356e-13,
               "threshold": 0.01,
               "pass": true
             },
-            "cutoff": {
-              "relative_change": 0.06311632907676756,
+            "EVEN/cutoff": {
+              "relative_change": 0.03267867705445973,
               "threshold": 0.01,
               "pass": false
             },
-            "basis": {
-              "relative_change": 0.186583177918203,
+            "EVEN/basis": {
+              "relative_change": 0.0941954907028335,
               "threshold": 0.01,
               "pass": false
             },
-            "source_representation": {
-              "relative_squared_error": 1.5808165345367487e-15,
+            "EVEN/source": {
+              "relative_squared_error": 3.161633065784547e-16,
               "threshold": 0.01,
               "pass": true
+            },
+            "SOFT/order": {
+              "relative_change": 8.60636877569359e-15,
+              "threshold": 0.01,
+              "pass": true
+            },
+            "SOFT/cutoff": {
+              "relative_change": 2.901632433662801e-12,
+              "threshold": 0.01,
+              "pass": true
+            },
+            "SOFT/basis": {
+              "relative_change": 1.1686779265915597e-09,
+              "threshold": 0.01,
+              "pass": true
+            },
+            "SOFT/source": {
+              "relative_squared_error": 1.2646532263138188e-15,
+              "threshold": 0.01,
+              "pass": true
+            },
+            "cross_family": {
+              "relative_change": 0.2044616326309296,
+              "threshold": 0.01,
+              "pass": false
             }
           }
         },
@@ -1406,47 +1642,88 @@
           "T": 0.004,
           "pass": false,
           "targets": {
-            "order": {
-              "relative_change": 4.1696434622480434e-14,
+            "EVEN/order": {
+              "relative_change": 1.7225958569707348e-13,
               "threshold": 0.01,
               "pass": true
             },
-            "cutoff": {
-              "relative_change": 0.049384489584590734,
+            "EVEN/cutoff": {
+              "relative_change": 0.027748057239607802,
               "threshold": 0.01,
               "pass": false
             },
-            "basis": {
-              "relative_change": 0.18494194728805985,
+            "EVEN/basis": {
+              "relative_change": 0.08699519890219166,
               "threshold": 0.01,
               "pass": false
             },
-            "source_representation": {
-              "relative_squared_error": 3.254594234366193e-16,
+            "EVEN/source": {
+              "relative_squared_error": 3.2545942334970745e-16,
               "threshold": 0.01,
               "pass": true
+            },
+            "SOFT/order": {
+              "relative_change": 7.292525227493981e-15,
+              "threshold": 0.01,
+              "pass": true
+            },
+            "SOFT/cutoff": {
+              "relative_change": 1.5406346236238705e-12,
+              "threshold": 0.01,
+              "pass": true
+            },
+            "SOFT/basis": {
+              "relative_change": 7.959663048533637e-10,
+              "threshold": 0.01,
+              "pass": true
+            },
+            "SOFT/source": {
+              "relative_squared_error": 1.6272971167485372e-16,
+              "threshold": 0.01,
+              "pass": true
+            },
+            "cross_family": {
+              "relative_change": 0.195267984708844,
+              "threshold": 0.01,
+              "pass": false
             }
           }
         }
       ],
+      "failed_targets": [
+        {
+          "T": 0.002,
+          "target": "EVEN/cutoff"
+        },
+        {
+          "T": 0.002,
+          "target": "EVEN/basis"
+        },
+        {
+          "T": 0.002,
+          "target": "cross_family"
+        },
+        {
+          "T": 0.004,
+          "target": "EVEN/cutoff"
+        },
+        {
+          "T": 0.004,
+          "target": "EVEN/basis"
+        },
+        {
+          "T": 0.004,
+          "target": "cross_family"
+        }
+      ],
       "physical_admission": false
     },
-    "candidate_controller": "finite_Goldstone_Galerkin_current_response_basis_cutoff_and_interacting_heat_current_admission_open",
-    "physical_controller": "vector_momentum_constitutive_origin_and_material_frame_admission_open",
-    "controlling_measured_blocker": "finite_basis_and_cutoff_current_response_not_converged",
-    "first_execution_record": {
-      "artifact": "docs/topics/0.10_Fluid_Dynamics_Chaos/Result/previews/fluid_core_o2_goldstone_galerkin_first_execution.json",
-      "verifier_source_archive": "docs/topics/0.10_Fluid_Dynamics_Chaos/Result/previews/core_o2_goldstone_galerkin_first_execution_verifier.py.txt",
-      "role": "historical first diagnostic; linear-current zero was then encoded rather than executed",
-      "revision": "execute the linear-current source constraint; other numerical targets and rates unchanged"
-    },
+    "stable_shared_vector_basis_evaluated": true,
     "physical_heat_current_matched": false,
     "full_interacting_collision_completed": false,
     "continuum_spectral_gap_established": false,
     "thermalization_derived": false,
     "physical_frequency_window_established": false,
-    "collective_sound_damping_assigned": false,
-    "physical_UET_operator_admitted": false,
     "physical_J04_executed": false,
     "physical_J05_executed": false,
     "physical_J06_executed": false,
@@ -1454,8 +1731,8 @@
     "dependency_unlock": false,
     "thresholds_relaxed": false,
     "parameters_fitted": false,
-    "next_action": "Resolve the measured finite-basis/cutoff current-response failures before any transport use: retain the current 1% targets, develop a numerically stable higher-order shared vector basis, test low-energy-valid cutoff and soft-current convergence, and separate source representation from collision-solution convergence. Then match the kinetic energy-current to condensate/charge heat-current/frame and complete interacting thermal state/additional channels. No continuum gap, physical relaxation time, frequency window, collective damping or material/SI admission follows yet.",
-    "package_role": "selected finite kinetic reference; measured refinement remains open"
+    "next_action": "Resolve stable-vector trial-space and infrared/cutoff convergence without relaxing the1% targets: compare an independently soft-enriched family against the SOFT response under the same cubic kernel/state, retain all EVEN/cross-family failures, and establish soft-mode/domain and continuum-current bounds. Then match the kinetic source to condensate/charge material heat-current/frame and complete interacting thermal state/additional channels. No physical transport/time, spectral gap, frequency window, damping or material/SI admission follows yet.",
+    "package_role": "selected vector numerical refinement; overall finite-current targets remain open"
   },
   "current_he4_EOS_source_acquisition_snapshot": {
     "date": "2026-09-30",
@@ -1904,5 +2181,196 @@
     "parameters_fitted": false,
     "next_action": "Resolve the measured finite-basis/cutoff current-response failures before any transport use: retain the current 1% targets, develop a numerically stable higher-order shared vector basis, test low-energy-valid cutoff and soft-current convergence, and separate source representation from collision-solution convergence. Then match the kinetic energy-current to condensate/charge heat-current/frame and complete interacting thermal state/additional channels. No continuum gap, physical relaxation time, frequency window, collective damping or material/SI admission follows yet.",
     "package_role": "selected finite kinetic reference; measured refinement remains open"
+  },
+  "current_core_o2_vector_refinement_snapshot": {
+    "date": "2026-10-01",
+    "latest_executed_package": "J01_J02_STABLE_VECTOR_SOFT_VARIATIONAL_DIAGNOSTIC_ONLY",
+    "status": "PASS_STABLE_VECTOR_DIAGNOSTIC_ONLY",
+    "scope": "Stable shared off-grid vector recurrences, old same-span correspondence and soft trial-space refinement",
+    "contract": "docs/topics/0.10_Fluid_Dynamics_Chaos/Data/03_Research/fluid_core_o2_vector_refinement_contract.json",
+    "derivation_card": "docs/topics/0.10_Fluid_Dynamics_Chaos/CORE_O2_GOLDSTONE_VECTOR_REFINEMENT.md",
+    "verifier": "docs/topics/0.10_Fluid_Dynamics_Chaos/Code/03_Research/Research_Fluid_Core_O2_Vector_Refinement.py",
+    "result_artifact": "docs/topics/0.10_Fluid_Dynamics_Chaos/Result/artifacts/fluid_core_o2_vector_refinement_audit.json",
+    "result_artifact_sha256": "4990aba84fe30276d7441bdca9567729a63797d5df0a0263d667f6df491f37f5",
+    "reference_check_count": 541,
+    "evidence_hashes": {
+      "docs/topics/0.10_Fluid_Dynamics_Chaos/Data/03_Research/fluid_core_o2_vector_refinement_contract.json": "5216da4f2549980292cce50314361448456db01816e3a5dba8a3c00120c880f0",
+      "docs/topics/0.10_Fluid_Dynamics_Chaos/CORE_O2_GOLDSTONE_VECTOR_REFINEMENT.md": "5957e4f1373faea4e38036f040e4b84c611f11a52d8f5e3188b29e469ed2d4ef",
+      "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry_topic10_o2_vector_refinement_addendum.json": "9263469bc87c7bfaa47ce608adc1da710510885d003cf8a603e25605e06bfee1",
+      "docs/topics/0.10_Fluid_Dynamics_Chaos/Code/03_Research/Research_Fluid_Core_O2_Vector_Refinement.py": "f73896652c997abdb17bd6d9b155e52c40722e36af70f703976b3b18dbe1d827",
+      "docs/topics/0.10_Fluid_Dynamics_Chaos/Data/03_Research/fluid_core_o2_goldstone_galerkin_contract.json": "d36a29ef8524a9c839ba237ac7507ea6e8c217d777a8f9fcd87302e9b5b37fee",
+      "docs/topics/0.10_Fluid_Dynamics_Chaos/Code/03_Research/Research_Fluid_Core_O2_Goldstone_Galerkin.py": "f7caeae9655172514adc464723917a1a8e367a3a1832ada2938a2d44f1afdc74",
+      "docs/topics/0.10_Fluid_Dynamics_Chaos/Result/artifacts/fluid_core_o2_goldstone_galerkin_audit.json": "4b4c706aab168108e7d5829a6a0563eaf9f99c893afd2586020eb89b55e6d24b",
+      "docs/topics/0.10_Fluid_Dynamics_Chaos/CORE_O2_GOLDSTONE_GALERKIN_DERIVATION.md": "5cd09900d57ae2d61c2007f6a0b2f7d565903894721c81b8b81b29257bccac90",
+      "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry_topic10_o2_goldstone_galerkin_addendum.json": "73bb37bd79dfc2bfde8231998db142d539db83a9b1186e1e23c1dff8dadd6fb8",
+      "docs/topics/0.10_Fluid_Dynamics_Chaos/Code/03_Research/Research_Fluid_Core_O2_Common_Flow.py": "b083323ad31df5527a94a888e8eae43984eb77698bda1c6c3d080e2ea940f5e2",
+      "docs/topics/0.10_Fluid_Dynamics_Chaos/Data/03_Research/fluid_core_o2_common_flow_contract.json": "c9a190c89d682080a9a90254cfd205e606cd9063f9d34c68b00eeeef8634c75c",
+      "docs/topics/0.10_Fluid_Dynamics_Chaos/Data/03_Research/fluid_core_o2_goldstone_collision_contract.json": "331535ea4a63e47e0d100c317511013605ab5044f1bdbff835ba48fbd3e6b912",
+      "docs/topics/0.10_Fluid_Dynamics_Chaos/Code/03_Research/Research_Fluid_Core_O2_Goldstone_Collision.py": "1b8cc6ff1782da5c5f01dcf4d95052871a4ea2c7a5e1aa967478e9f800cd3fe8",
+      "docs/topics/0.10_Fluid_Dynamics_Chaos/Result/artifacts/fluid_core_o2_goldstone_collision_audit.json": "c130a512a015940ed5db9f2a181fa34731910fa17aa58c5c4e59e0cdb3dfe56b",
+      "docs/core/02_equations/covariant/uet_covariant_response.py": "7fb4b7228afb8ede0ac4f1664d634346ef46cc7678c94ed7b55d73645590c0c2",
+      "docs/core/02_equations/o2/uet_o2_finite_density_eos.py": "ea744a8645f993600300fa9fd99a764e1f07b30fb272b47399c34aa114152c6d",
+      "docs/core/02_equations/o2/uet_o2_finite_temperature_quasiparticle_eos.py": "ba814f3aa02b5e31112a6595dac7727b7025b08e08f0631f50567f270cebbb7f",
+      "docs/core/02_equations/o2/uet_o2_formal_transverse_response.py": "a8ee43c6fb6edb227476412cde6cc9b2d4a643fc42cca0fd2d438b343efad1ba",
+      "docs/core/02_equations/o2/uet_o2_invariant_galerkin_collision_operator.py": "278b168e5c3b444ac4df4b96b5a7d00410cd9485c511ab2a17aa4f11c6f6d94e",
+      "docs/core/07_artifacts/topic13/t13_invariant_galerkin_collision_operator_audit.json": "433427f32612e478d71a1a4ff64f96e3d22da7fc33d3de0c10f3a0a480234011",
+      "docs/core/07_artifacts/topic13/t13_collision_evidence_reconciliation.json": "cad197d2635b08d3454cc49734b292b32971c2f18e3d3f1d2b2c0b5ca77c9bf6",
+      "docs/topics/0.10_Fluid_Dynamics_Chaos/Result/artifacts/fluid_core_o2_ideal_modes_audit.json": "b2e5d7fb5fff8f1a48148e1661bbf640027174b58b9fe765f53cded351c512f6",
+      "docs/topics/0.10_Fluid_Dynamics_Chaos/Result/previews/fluid_core_o2_goldstone_galerkin_first_execution.json": "18e4854a368c5b0d6860da12435bd8dae00d8d77302d66036c40972404ae710a",
+      "docs/topics/0.10_Fluid_Dynamics_Chaos/Result/previews/core_o2_goldstone_galerkin_first_execution_verifier.py.txt": "0be34c2e579b4aaf44dae168c63a4b50276508759c6073751e9c2484c0439c81"
+    },
+    "candidate_controller": "stable_Goldstone_vector_refinement_and_continuum_physical_heat_current_admission_open",
+    "physical_controller": "vector_momentum_constitutive_origin_and_material_frame_admission_open",
+    "controlling_measured_blocker": "stable_vector_basis_cross_family_or_cutoff_current_response_not_converged",
+    "refinement_gate": {
+      "status": "MEASURED_REFINEMENT_TARGETS_OPEN",
+      "target_pass": false,
+      "state_targets": [
+        {
+          "T": 0.002,
+          "pass": false,
+          "targets": {
+            "EVEN/order": {
+              "relative_change": 5.065196790509356e-13,
+              "threshold": 0.01,
+              "pass": true
+            },
+            "EVEN/cutoff": {
+              "relative_change": 0.03267867705445973,
+              "threshold": 0.01,
+              "pass": false
+            },
+            "EVEN/basis": {
+              "relative_change": 0.0941954907028335,
+              "threshold": 0.01,
+              "pass": false
+            },
+            "EVEN/source": {
+              "relative_squared_error": 3.161633065784547e-16,
+              "threshold": 0.01,
+              "pass": true
+            },
+            "SOFT/order": {
+              "relative_change": 8.60636877569359e-15,
+              "threshold": 0.01,
+              "pass": true
+            },
+            "SOFT/cutoff": {
+              "relative_change": 2.901632433662801e-12,
+              "threshold": 0.01,
+              "pass": true
+            },
+            "SOFT/basis": {
+              "relative_change": 1.1686779265915597e-09,
+              "threshold": 0.01,
+              "pass": true
+            },
+            "SOFT/source": {
+              "relative_squared_error": 1.2646532263138188e-15,
+              "threshold": 0.01,
+              "pass": true
+            },
+            "cross_family": {
+              "relative_change": 0.2044616326309296,
+              "threshold": 0.01,
+              "pass": false
+            }
+          }
+        },
+        {
+          "T": 0.004,
+          "pass": false,
+          "targets": {
+            "EVEN/order": {
+              "relative_change": 1.7225958569707348e-13,
+              "threshold": 0.01,
+              "pass": true
+            },
+            "EVEN/cutoff": {
+              "relative_change": 0.027748057239607802,
+              "threshold": 0.01,
+              "pass": false
+            },
+            "EVEN/basis": {
+              "relative_change": 0.08699519890219166,
+              "threshold": 0.01,
+              "pass": false
+            },
+            "EVEN/source": {
+              "relative_squared_error": 3.2545942334970745e-16,
+              "threshold": 0.01,
+              "pass": true
+            },
+            "SOFT/order": {
+              "relative_change": 7.292525227493981e-15,
+              "threshold": 0.01,
+              "pass": true
+            },
+            "SOFT/cutoff": {
+              "relative_change": 1.5406346236238705e-12,
+              "threshold": 0.01,
+              "pass": true
+            },
+            "SOFT/basis": {
+              "relative_change": 7.959663048533637e-10,
+              "threshold": 0.01,
+              "pass": true
+            },
+            "SOFT/source": {
+              "relative_squared_error": 1.6272971167485372e-16,
+              "threshold": 0.01,
+              "pass": true
+            },
+            "cross_family": {
+              "relative_change": 0.195267984708844,
+              "threshold": 0.01,
+              "pass": false
+            }
+          }
+        }
+      ],
+      "failed_targets": [
+        {
+          "T": 0.002,
+          "target": "EVEN/cutoff"
+        },
+        {
+          "T": 0.002,
+          "target": "EVEN/basis"
+        },
+        {
+          "T": 0.002,
+          "target": "cross_family"
+        },
+        {
+          "T": 0.004,
+          "target": "EVEN/cutoff"
+        },
+        {
+          "T": 0.004,
+          "target": "EVEN/basis"
+        },
+        {
+          "T": 0.004,
+          "target": "cross_family"
+        }
+      ],
+      "physical_admission": false
+    },
+    "stable_shared_vector_basis_evaluated": true,
+    "physical_heat_current_matched": false,
+    "full_interacting_collision_completed": false,
+    "continuum_spectral_gap_established": false,
+    "thermalization_derived": false,
+    "physical_frequency_window_established": false,
+    "physical_J04_executed": false,
+    "physical_J05_executed": false,
+    "physical_J06_executed": false,
+    "claim_promotion": false,
+    "dependency_unlock": false,
+    "thresholds_relaxed": false,
+    "parameters_fitted": false,
+    "next_action": "Resolve stable-vector trial-space and infrared/cutoff convergence without relaxing the1% targets: compare an independently soft-enriched family against the SOFT response under the same cubic kernel/state, retain all EVEN/cross-family failures, and establish soft-mode/domain and continuum-current bounds. Then match the kinetic source to condensate/charge material heat-current/frame and complete interacting thermal state/additional channels. No physical transport/time, spectral gap, frequency window, damping or material/SI admission follows yet.",
+    "package_role": "selected vector numerical refinement; overall finite-current targets remain open"
   }
 }

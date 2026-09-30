@@ -205,3 +205,16 @@ arXiv1407.7431v2 equations10-23 supplies method/current-constraint correspondenc
 only; its downward-curving neutron/binary-collision rates are not transferred.
 First diagnostic/source archives are explicitly historical. No material lifetime,
 heat-current mapping, SI conductivity or independent response dataset is added.
+
+## Stable-vector refinement input identity
+
+[Contract](Data/03_Research/fluid_core_o2_vector_refinement_contract.json)
+and [artifact](Result/artifacts/fluid_core_o2_vector_refinement_audit.json)
+hash the prior Galerkin contract/verifier/artifact and propagate all its source
+input identities, alongside the pre-execution method card/registry/current code.
+No old hashed package is modified, and no historical proof is a current Core run.
+
+Larger cutoffs/bases use the same low-T/coupling reference and energy validity
+bound. Orthogonalization is a numerical coordinate change; SOFT is explicit
+trial enrichment, neither an interaction adjustment nor data fitting.
+No new He-II row, SI scale, material transport coefficient or blind source.

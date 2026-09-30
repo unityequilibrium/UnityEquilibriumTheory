@@ -226,3 +226,19 @@ Solve the finite reduced Q-i*omega*G system and its independent whitened
 spectral form. Execute the linear-dispersion zero-current limit and detect
 parent-loss-only invariant failure. Separate quadrature, cutoff, basis and
 source-representation targets; preserve failed refinement despite structural PASS.
+
+## Stable shared vector coordinates and soft variational refinement
+
+[The new card](CORE_O2_GOLDSTONE_VECTOR_REFINEMENT.md) keeps momentum first,
+records full two-pass weighted projection/beta coefficients and evaluates the
+same recurrence at off-grid parent/daughter momenta. Actual Gram is computed,
+not overwritten; no collision projector, interpolation or fitted width is added.
+Compare EVEN order5 against the immutable raw implementation through an
+independent polynomial coordinate transformation of G/Q/source and response.
+
+EVEN spans k*polynomial(k^2/K^2). SOFT adds constant radial amplitude and powers
+of k/K; the single-point angular nonsmoothness is Bose-Hilbert admissible.
+This is a trial enrichment, not an assumed solution asymptote or matter phase.
+Principal shared-bank subspaces check nested variational response growth.
+Source representation, kernel conditioning, within-family refinement and
+independent-family agreement remain separate acceptance obligations.

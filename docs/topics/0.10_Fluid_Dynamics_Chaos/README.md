@@ -370,3 +370,19 @@ representation pass. Source representation is not collision-solution convergence
 No finite response/time is accepted for physical transport or second-sound damping.
 Next: stable higher-order basis and low-energy-valid cutoff/soft-current
 convergence, then interacting physical heat-current/frame/material admission.
+
+## Stable vector refinement: independent-family targets still open (2026-10-01)
+
+[The stable-vector card](CORE_O2_GOLDSTONE_VECTOR_REFINEMENT.md) uses
+two-pass weighted orthogonal recurrences shared by quadrature and every event
+leg. The EVEN family retains the original polynomial space; SOFT enriches it
+with bounded low-momentum angular profiles. Kernel, states and1% targets stay
+unchanged. Same-span order5 matches the old independent G/Q/source/response.
+
+[The artifact](Result/artifacts/fluid_core_o2_vector_refinement_audit.json)
+passes541 structural controls with Gram condition approximately1. SOFT order,
+cutoff, basis and source targets pass within its family. EVEN cutoff changes
+3.2679%/2.7748% and basis changes9.4195%/8.6995%; cross-family response differs
+20.4462%/19.5268%. The overall refinement gate therefore remains OPEN.
+Next: independently soft-enriched trial space and infrared/continuum-current
+bounds, then interacting physical heat-current/frame/material admission.

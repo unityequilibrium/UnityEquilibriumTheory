@@ -295,3 +295,21 @@ and [exact source](Result/previews/core_o2_goldstone_galerkin_first_execution_ve
 are retained. First source encoded the linear-current zero; current source
 executes the current/momentum constraint numerically. R/time, locked rules and
 all measured refinement outcomes remain unchanged. No physical promotion.
+
+## Stable vector and soft trial-space refinement (2026-10-01)
+
+[Contract](Data/03_Research/fluid_core_o2_vector_refinement_contract.json):
+same mu1.28, exploratory lambda.01 and T=.002/.004; parent/daughter Gauss
+orders96/144/192, cutoffs40/50/60*T/c, EVEN orders5/9/13/17 and
+SOFT orders5/9/17/25/35. Energy cutoff/gap<=.1; scale2 dimensions.
+Event1e-9, algebra1e-8, relative spectral1e-9, same-span1e-8.
+All response/refinement/source targets remain1%, fixed before execution.
+
+[Verifier](Code/03_Research/Research_Fluid_Core_O2_Vector_Refinement.py)
+passes541 structural checks; measured refinement remains OPEN at both states.
+SOFT within-family targets pass; EVEN basis/cutoff and cross-family targets fail.
+[Four regressions](Code/03_Research/test_fluid_core_o2_vector_refinement.py)
+check source freshness/non-admission, shared invariants/same-span/nested response,
+honest failed targets and fail-closed admission/empty/relaxed-target mutations.
+First execution needed no repair. Older failed Galerkin results remain unchanged.
+A green diagnostic or regression is not a green physical convergence gate.
