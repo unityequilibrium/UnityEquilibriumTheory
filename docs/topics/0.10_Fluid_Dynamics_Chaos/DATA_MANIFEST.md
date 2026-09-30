@@ -19,3 +19,9 @@ Priority remediation:
   real fluid-observation or high-fidelity CFD benchmark data.
 - Current primary artifact now records the source-lock manifest hash, benchmark-script hash,
   and core master-equation hash.
+
+## J01 evidence package
+
+- Manufactured fields are generated analytically by Code/03_Research/Research_Fluid_State_Velocity_Representability.py; they are periodic internal controls, not an external dataset.
+- Topic 10 engine and Core source paths, roles, unit scope, and SHA-256 hashes are recorded in Result/artifacts/fluid_state_velocity_representability_audit.json.
+- The engine source is audited, but a trajectory was not executed in the current runtime.

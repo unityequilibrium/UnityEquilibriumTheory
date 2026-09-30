@@ -1,0 +1,57 @@
+{
+  "schema_version": "t13-he4-second-sound-protocol-audit-v1",
+  "artifact": "t13_he4_second_sound_response_protocol_audit",
+  "generated_on": "2026-09-26",
+  "status": "PASS_SOURCE_PROTOCOL_CANDIDATE_ONLY",
+  "topic": "0.13_Thermodynamic_Bridge",
+  "joint_work_package": "J02",
+  "closure_level": "PARTIAL",
+  "observable": "He-II second-sound phase velocity along the SVP reference path",
+  "data_role": "INDEPENDENT_RESPONSE_CANDIDATE_NOT_BLIND_HOLDOUT",
+  "controlling_blocker": "uet_two_fluid_second_sound_operator_not_admitted",
+  "constants_frozen": true,
+  "source_rows_used_for_fit_or_parameter_tuning": false,
+  "source_rows_are_blind_holdout": false,
+  "uet_dynamic_prediction_emitted": false,
+  "recorded_core_status_changed": false,
+  "dependency_unlocked": false,
+  "claim_promotion": false,
+  "derived_diagnostic": {
+    "u2_slope_m_s_per_K": -1.900000000000011,
+    "derived_from_rounded_recommended_rows": true
+  },
+  "checks": {
+    "source_package_schema_and_id_valid": true,
+    "human_protocol_card_matches_machine_source_scope": true,
+    "svP_t90_heii_state_explicit": true,
+    "recommended_second_sound_rows_match_table_4_3": true,
+    "local_slope_recomputes_from_rounded_rows": true,
+    "alpha_theta_and_z_frozen_to_existing_audit": true,
+    "e0_frozen_to_existing_si_audit": true,
+    "eta_retained_as_external_shear_input": true,
+    "independent_observable_not_used_for_matching": true,
+    "source_overlap_and_covariance_limits_are_explicit": true,
+    "row_uncertainty_and_frequency_gap_are_visible": true,
+    "prior_source_exposure_not_mislabeled_blind": true,
+    "no_uet_prediction_or_core_unlock_claimed": true,
+    "topic10_j01_scope_remains_a_scoped_no_go": true,
+    "matching_identity_audit_still_blocks_independent_validation": true
+  },
+  "evidence_hashes": {
+    "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/he4_svp_second_sound_response_source_package.json": "3a46c9a09cf987cd4ea1c1e29e33dd7f9407ae4caaea28ecc610275362df1443",
+    "docs/topics/0.13_Thermodynamic_Bridge/HE4_SECOND_SOUND_PROTOCOL_CARD.md": "a860aa849242290940da88a1f04c556da3547c9145a1b63bd019f63f3ab7317b",
+    "docs/scripts/audit/audit_topic10_t13_he4_second_sound_protocol.py": "f3bf22ff8cd539f451a4e006ae3143d89ed8cb6e243daa906ed972908a117d5a",
+    "docs/core/07_artifacts/topic13/t13_he4_o2_response_calibration_audit.json": "7886ffd3403f91d8951a9d33fb947468a99ebbc94d378cbdc7467e7efb5af27e",
+    "docs/core/07_artifacts/topic13/t13_he4_o2_si_beta_mapping_audit.json": "a09b39050aaea5ed49094f34d45719673eb275e7b94e88b88af71e4e47084325",
+    "docs/core/07_artifacts/topic13/t13_he4_normal_viscosity_kubo_audit.json": "42a03cc5181cc4848202be699ed35f929d972c66c4ef7420003c62c583c79758",
+    "docs/core/07_artifacts/topic13/t13_he4_matching_independence_audit.json": "45dd4be70d1a6c448dce0cd6b0a2da7037a98cdc908428805bd2cf445cf9cabd",
+    "docs/topics/0.10_Fluid_Dynamics_Chaos/Result/artifacts/fluid_state_velocity_representability_audit.json": "7e7b1e5889ea4d1e04abe3a2186ac67e378b7b8d1437375a1ee446c88ba3c1a4"
+  },
+  "open_blockers": [
+    "uet_two_fluid_second_sound_operator_not_admitted",
+    "primary_row_state_frequency_and_row_uncertainty_not_locked",
+    "response_source_was_seen_and_is_not_a_blind_holdout"
+  ],
+  "next_controller": "Lock a primary resonance row with matching T90/SVP state, frequency, mode geometry and uncertainty; then derive and admit the coupled two-fluid thermal eigenmode under Core F0-F8 before any UET comparison.",
+  "claim_boundary": "A source/protocol candidate is checked, not a UET prediction or independent action-to-material validation. The 1998 compilation and prior protocol exposure prevent a blind-holdout claim; no gate or dependency was promoted."
+}
