@@ -1,0 +1,40 @@
+{
+  "schema_version": "t13-funding-historical-snapshot-recovery-v1",
+  "major_result_id": "T13_FUNDING_HISTORICAL_SNAPSHOT_RECOVERY",
+  "topic": "0.13",
+  "closure_level": "PARTIAL",
+  "observation_date": "2026-09-27",
+  "source_branch": "codex/research/core-physical-migration",
+  "historical_plan_head": "a62efba425f1b219241cf149bc4bab50cce4c379",
+  "source_head_at_observation": "f6b9be8f21e86b7f377835f2b582c5647fe06226",
+  "source_worktree_role": "DIRTY_PRIMARY_WORKTREE_READ_ONLY",
+  "observation_method": "SHA-256 of source-worktree file bytes plus git status --porcelain=v1 for each plan path",
+  "what_is_closed": "All eight historical plan references still existed byte-for-byte in the source worktree at observation time; the original bytes are locatable rather than irretrievably missing",
+  "what_remains_open": "Owner handoff of four untracked and two modified records, content/source-chain admission in the clean checkout and clean Core revalidation",
+  "equation_or_mapping": "Historical file identity is path plus SHA-256; matching bytes in a dirty worktree do not establish physical equivalence or clean Core readiness",
+  "units": "not applicable to provenance identity",
+  "derivation_class": "read-only cross-worktree provenance observation",
+  "observable": "recoverability of the recorded funding baseline",
+  "data_role": "PROVENANCE_OBSERVATION_NOT_PHYSICAL_VALIDATION",
+  "admission": "NOT_IMPORTED_PENDING_OWNER_HANDOFF_AND_REVALIDATION",
+  "evidence_artifacts": [
+    {"path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/t13_funding_baseline_lineage_audit.json", "sha256": "6f9b1c31ff4e86157b3709c9bec678757a16697d2bcf47a1b4df3f6bcda73ee0", "role": "clean-checkout classification of the same eight historical paths"}
+  ],
+  "records": [
+    {"path": "docs/core/07_artifacts/topic13/t13_he4_core_thermodynamic_bridge_composition_audit.json", "expected_sha256": "13f444f3bf14edca27e8a7af8ff957d2447c5dc0d0dc24a4d8cb77e2cfa82418", "observed_sha256": "13f444f3bf14edca27e8a7af8ff957d2447c5dc0d0dc24a4d8cb77e2cfa82418", "git_worktree_state": "TRACKED_CLEAN"},
+    {"path": "docs/core/07_artifacts/topic13/t13_he4_matching_independence_audit.json", "expected_sha256": "f639bacd8447955b6799e08d2eaeda8575591b56d5dd7972b077c478e5a4ee5d", "observed_sha256": "f639bacd8447955b6799e08d2eaeda8575591b56d5dd7972b077c478e5a4ee5d", "git_worktree_state": "TRACKED_CLEAN"},
+    {"path": "docs/core/07_artifacts/topic13/t13_si_phi_normalization_jacobian_audit.json", "expected_sha256": "088c4294dfe8a487073ee84f1a28f48fc23c270f60c274d7f3beb5874e9cabf3", "observed_sha256": "088c4294dfe8a487073ee84f1a28f48fc23c270f60c274d7f3beb5874e9cabf3", "git_worktree_state": "UNTRACKED"},
+    {"path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/t13_normalized_dip_time_identifiability.json", "expected_sha256": "4791d35583f4cefeed5d6f3a07cec7fd6f11d783af7bc9462a49503ab0374704", "observed_sha256": "4791d35583f4cefeed5d6f3a07cec7fd6f11d783af7bc9462a49503ab0374704", "git_worktree_state": "UNTRACKED"},
+    {"path": "docs/core/07_artifacts/topic13/t13_csrc_source_route_priority_audit.json", "expected_sha256": "0562617fb4745e691543cbb6826cd83a1a82ed73056591c31b751497d70d804d", "observed_sha256": "0562617fb4745e691543cbb6826cd83a1a82ed73056591c31b751497d70d804d", "git_worktree_state": "MODIFIED"},
+    {"path": "docs/core/07_artifacts/gates/core_curved_3p1_parent_gate.json", "expected_sha256": "6b44047efba638a621d1a9c1daf5b107e0016f28ebec04b9838c9b3a19e7569e", "observed_sha256": "6b44047efba638a621d1a9c1daf5b107e0016f28ebec04b9838c9b3a19e7569e", "git_worktree_state": "MODIFIED"},
+    {"path": "docs/core/08_history/update_logs/T13_HOLDOUT_EXPOSURE_REVIEW_REQUIRED_2026-09-24.md", "expected_sha256": "0e88cc5371c2979b8988359daf617f521f737f936ad8ec6d1746d90aa46d7471", "observed_sha256": "0e88cc5371c2979b8988359daf617f521f737f936ad8ec6d1746d90aa46d7471", "git_worktree_state": "UNTRACKED"},
+    {"path": "docs/core/07_artifacts/topic13/t13_nims_mp990448_aa_stack_shear_instability.json", "expected_sha256": "6389321fdd634a6a9e36a228921be1fd4a790b462d143998403454422f65434b", "observed_sha256": "6389321fdd634a6a9e36a228921be1fd4a790b462d143998403454422f65434b", "git_worktree_state": "UNTRACKED"}
+  ],
+  "verification_status": "PASS_HISTORICAL_BYTE_RECOVERY_ONLY",
+  "controlling_blocker": "full_clean_core_baseline_not_revalidated",
+  "open_blockers": ["source_owner_handoff_not_completed", "nested_source_chain_and_clean_core_verifiers_not_revalidated"],
+  "dependency_unlocked": [],
+  "g0_ready": false,
+  "full_core_unlock": false,
+  "claim_boundary": "Read-only file recovery is not permission to copy unpublished owner work, not clean-baseline admission, not a Core verifier rerun, not independent physical evidence and not Full Topic 13 closure. No holdout content was read by this audit."
+}

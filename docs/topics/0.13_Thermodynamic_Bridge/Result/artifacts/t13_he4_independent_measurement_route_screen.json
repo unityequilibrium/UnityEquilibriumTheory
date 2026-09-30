@@ -1,0 +1,88 @@
+{
+  "schema_version": "t13-he4-independent-measurement-route-screen-v1",
+  "major_result_id": "T13_HE4_INDEPENDENT_MEASUREMENT_ROUTE_SCREEN",
+  "topic": "0.13",
+  "closure_level": "PARTIAL",
+  "what_is_closed": "A source-family triage distinguishes the existing sound-derived calibration and J02 comparator from two follow-up experimental routes; no new source is admitted as an independent validation set.",
+  "equation_or_mapping": "alpha_Phi_K uses d_T(rho_s/rho) near 1.7 K; a second-sound velocity comparison additionally requires an admitted two-fluid response operator, matched state and measurement protocol.",
+  "units": "calibration: K per normalized base Phi; response: m s^-1; source temperature: K",
+  "derivation_class": "manual primary-source and reference-table provenance screen",
+  "observable": "He-II superfluid fraction and second-sound phase velocity at saturated vapor pressure",
+  "data_role": "SOURCE_ROUTE_SCREEN_NOT_CALIBRATION_OR_VALIDATION",
+  "calibration_source_family": {
+    "source": "Donnelly and Barenghi (1998), Section 2, Table 2.1",
+    "locator": "https://srd.nist.gov/jpcrdreprint/1.556028.pdf",
+    "adopted_keys_in_calibration_window": [2, 3],
+    "underlying_studies": ["Maynard (1976), DOI 10.1103/PhysRevB.14.3868", "Tam and Ahlers (1987), J. Low Temp. Phys. 66, 173"],
+    "method": "superfluid density inferred from second- and fourth-sound measurements",
+    "calibration_temperatures_K": [1.6, 1.7, 1.8]
+  },
+  "routes": [
+    {
+      "route_id": "J02_RECOMMENDED_TABLE_4_3",
+      "decision": "COMPARATOR_ONLY_SOURCE_ANCESTRY_OVERLAP",
+      "locator": "Donnelly and Barenghi (1998), Section 4, Table 4.3",
+      "reason": "Recommended spline mixes input studies and was seen during protocol design; Section 2 calibration has sound-derived ancestry."
+    },
+    {
+      "route_id": "HEISERMAN_TABLE_4_1_KEY_1",
+      "decision": "NOT_INDEPENDENT_CALIBRATION_FAMILY_CANDIDATE",
+      "locator": "Donnelly and Barenghi (1998), Table 4.1 key 1; Heiserman, Hulin, Maynard and Rudnick, Phys. Rev. B 14, 3862 (1976), DOI 10.1103/PhysRevB.14.3862",
+      "reason": "The primary abstract reports simultaneous first-, second- and fourth-sound measurements; Maynard is a coauthor of the key-1 study and the author of the sound-derived thermodynamic study used by Section 2. Exact row reuse remains unverified."
+    },
+    {
+      "route_id": "TAM_AHLERS_TABLE_4_1_KEY_3",
+      "decision": "NOT_INDEPENDENT_CALIBRATION_FAMILY_CANDIDATE",
+      "locator": "Donnelly and Barenghi (1998), Section 2 key 3 and Section 4 Table 4.1 key 3",
+      "reason": "The same named study family contributes to calibration and second-sound compilation."
+    },
+    {
+      "route_id": "WANG_WAGNER_DONNELLY_TABLE_4_1_KEY_5",
+      "decision": "PRIORITY_PRIMARY_RESPONSE_SOURCE_CANDIDATE_NOT_ADMITTED",
+      "locator": "Donnelly and Barenghi (1998), Section 4 Table 4.1 key 5; Wang, Wagner and Donnelly, J. Low Temp. Phys. 68, 409-417 (1987), DOI 10.1007/BF00682305",
+      "method": "second-sound resonance",
+      "reported_study_level_uncertainty_percent": 0.07,
+      "uncertainty_semantics": "as printed in Table 4.1; not a row-level standard deviation or covariance",
+      "adopted_table_contains_key_5_rows_near_1p6_to_1p8_K": true,
+      "primary_abstract_verified": true,
+      "primary_abstract_locator": "https://link.springer.com/article/10.1007/BF00682305",
+      "primary_abstract_boundary": "Reports saturated-vapor-pressure acoustic-resonator measurements at 1.135-2.09 K with typical precision 0.07%; the paper's cubic spline pools its own and selected other-author data.",
+      "compilation_key_5_rows_visible_but_not_admitted": true,
+      "primary_full_text_or_raw_rows_verified": false,
+      "row_level_uncertainty_covariance_frequency_and_temperature_scale_verified": false,
+      "reason": "Key 5 is a separately named measurement study not listed among the Section 2 adopted superfluid-density studies. Only source-identified study rows, not the paper's mixed-author spline, could be considered later; this does not prove statistical independence or UET validation."
+    },
+    {
+      "route_id": "DASH_TAYLOR_OSCILLATING_DISK_NORMAL_DENSITY",
+      "decision": "PRIORITY_NONSOUND_CALIBRATION_SOURCE_CANDIDATE_NOT_ADMITTED",
+      "locator": "Dash and Taylor, Phys. Rev. 105, 7-24 (1957), DOI 10.1103/PhysRev.105.7",
+      "method": "Andronikashvili-type oscillating disks, normal-fluid density and viscosity",
+      "primary_abstract_temperature_range_K": "1.2 K to the contemporary lambda point",
+      "numeric_rows_protocol_uncertainty_and_modern_temperature_scale_verified": false,
+      "reason": "The primary abstract establishes a non-sound measurement method in the relevant temperature range, but not a usable numeric calibration package; scale conversion and instrument-model uncertainties remain open."
+    }
+  ],
+  "admission_requirements": [
+    "permitted_numeric_primary_or_traceable_reference_rows_with_exact_locator_and_row_ids",
+    "source_identity_and_preprocessing_hash",
+    "temperature_pressure_geometry_frequency_and_exposure_protocol_match",
+    "row_uncertainty_and_cross_source_covariance_or_conservative_bound",
+    "calibration_vs_comparison_role_frozen_before_score_or_fit",
+    "Wang_study_rows_separated_from_its_mixed_author_spline",
+    "admitted_UET_HeII_two_fluid_operator_and_detector_map"
+  ],
+  "numeric_response_rows_admitted": 0,
+  "independent_heii_validation_admitted": false,
+  "xie_2026_accessed": false,
+  "evidence_artifacts": [
+    {"path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/he4_o2_local_response_calibration_source_package.json", "sha256": "f10e9468c4417730dff0eed5c45d661fdf7aa1a96c7a3375792de98e4dbfac17"},
+    {"path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/he4_svp_second_sound_response_source_package.json", "sha256": "8a924ebb1e7e0342bc69a954bbc9b19255eafda47f0650c3f64e458878ca7a94"},
+    {"path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/t13_he4_j02_calibration_source_ancestry_audit.json", "sha256": "24ac43dfc406eeabe77d385839c29f68dbc8d15ea5e2a793232af634eef5314a"}
+  ],
+  "verification_status": "PASS_SOURCE_FAMILY_ROUTE_TRIAGE_ONLY",
+  "open_blockers": ["primary_Wang_protocol_row_uncertainty_and_ancestry_not_verified", "nonsound_Dash_calibration_numeric_package_not_admitted", "uet_two_fluid_response_operator_not_admitted", "g0_clean_core_baseline_not_revalidated"],
+  "controlling_blocker": "primary_Wang_protocol_row_uncertainty_and_ancestry_not_verified",
+  "dependency_unlocked": [],
+  "full_core_unlock": false,
+  "claim_boundary": "Separate study names and Table 4.1 keys are source-route evidence, not statistical independence, physical prediction, holdout integrity or Full Topic 13 closure. No experimental row is admitted or fitted."
+}

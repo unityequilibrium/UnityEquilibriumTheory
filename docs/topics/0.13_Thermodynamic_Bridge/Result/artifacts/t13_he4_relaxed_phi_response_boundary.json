@@ -1,0 +1,142 @@
+{
+  "schema_version": "t13-he4-relaxed-phi-response-boundary-v1",
+  "major_result_id": "T13_HE4_RELAXED_PHI_RESPONSE_NONIDENTIFIABILITY_BOUNDARY",
+  "topic": "0.13",
+  "closure_level": "CLOSED_FOR_LANE",
+  "what_is_closed": "The fixed-Phi EOS does not uniquely determine a relaxed-Phi susceptibility within a declared local stable response-completion family",
+  "equation_or_mapping": {
+    "local_completion": "Omega_K=-p_qp(T,mu,Phi)+U_K(Phi); delta=Phi-Phi0; U_K=p_Phi|0*delta+(p_PhiPhi|0+K)*delta^2/2+lambda*delta^4/4, K>0, lambda>0",
+    "stationarity_and_stability": "Omega_Phi|0=0; Omega_PhiPhi|0=K>0",
+    "relaxed_slope": "dPhi/dmu|T=p_muPhi/K",
+    "relaxed_charge_susceptibility": "chi_relaxed=p_mumu+p_muPhi^2/K",
+    "clamped_charge_susceptibility": "chi_clamped=p_mumu"
+  },
+  "units": {
+    "lane": "natural",
+    "Phi": "mass dimension 1",
+    "K": "mass dimension 2",
+    "quartic": "dimensionless",
+    "chi": "natural charge susceptibility",
+    "SI_compressibility": "not emitted"
+  },
+  "derivation_class": "local implicit-function/Schur-complement identity plus two synthetic positive-curvature completions",
+  "observable": "conditional relaxed versus clamped isothermal response at one natural O(2) condensed anchor",
+  "data_role": "SYNTHETIC_STRUCTURAL_WITNESS_NOT_HEII_DATA",
+  "assumption_boundary": "U_K is a hypothetical local conservative completion, not an admitted UET action or calibrated helium response law; the result is local, not a global continuum no-go",
+  "anchor": {
+    "T_natural": 0.22,
+    "mu_natural": 1.855688569255108,
+    "Phi_natural": 0.15,
+    "phase_from_prior_audit": "condensed"
+  },
+  "derivatives_step_1e_minus_3": {
+    "pressure": 1.5015734855701452,
+    "p_mu": 4.54545633702097,
+    "p_phi": 0.04897460306052537,
+    "p_mumu": 9.337194091907364,
+    "p_phiphi": 0.000800429056369012,
+    "p_muphi": 0.07425001402605602
+  },
+  "derivatives_step_5e_minus_4": {
+    "pressure": 1.5015734855701452,
+    "p_mu": 4.545454945421579,
+    "p_phi": 0.04897460306030332,
+    "p_mumu": 9.337193711544955,
+    "p_phiphi": 0.0008004272800121726,
+    "p_muphi": 0.07425001413707832
+  },
+  "derivative_refinement_spread": {
+    "p_muphi": 1.1102230246251565e-10,
+    "p_phiphi": 1.7763568394002505e-09,
+    "p_mumu": 3.8036240823657863e-07
+  },
+  "synthetic_local_completions": [
+    {
+      "K_natural": 1.0,
+      "quartic_natural": 1.0,
+      "U_at_anchor": 0.0,
+      "U_prime_at_anchor": 0.04897460306030332,
+      "U_second_at_anchor": 1.0008004272800122,
+      "Omega_Phi_at_anchor": 0.0,
+      "Omega_PhiPhi_at_anchor": 1.0,
+      "dPhi_dmu_at_anchor": 0.07425001413707832,
+      "chi_clamped_natural": 9.337193711544955,
+      "chi_relaxed_natural": 9.342706776144311
+    },
+    {
+      "K_natural": 2.0,
+      "quartic_natural": 1.0,
+      "U_at_anchor": 0.0,
+      "U_prime_at_anchor": 0.04897460306030332,
+      "U_second_at_anchor": 2.000800427280012,
+      "Omega_Phi_at_anchor": 0.0,
+      "Omega_PhiPhi_at_anchor": 2.0,
+      "dPhi_dmu_at_anchor": 0.03712500706853916,
+      "chi_clamped_natural": 9.337193711544955,
+      "chi_relaxed_natural": 9.339950243844633
+    }
+  ],
+  "declared_flat_partial_action_probe": {
+    "scope": "flat homogeneous partial action Omega=-p_qp+epsilon_nc*U(Phi); no curvature, vacuum counterterms, or microscopic thermal completion",
+    "epsilon_nc": 0.05,
+    "Phi_equilibrium_config": 0.0,
+    "weighted_U_prime": 0.007668749999999999,
+    "p_qp_Phi_at_anchor": 0.04897460306030332,
+    "Omega_Phi_at_anchor": -0.04130585306030332,
+    "weighted_U_second": 0.053375,
+    "Omega_PhiPhi_at_anchor": 0.052574572719987826,
+    "status": "NONSTATIONARY_AT_CONDITIONAL_ROOT_FOR_DECLARED_FLAT_PARTIAL_POTENTIAL"
+  },
+  "checks": {
+    "input_map_remains_unadmitted": true,
+    "same_condensed_anchor": true,
+    "pressure_derivatives_resolved": true,
+    "clamped_derivatives_match_prior_eos_state": true,
+    "both_local_completions_stable": true,
+    "same_clamped_eos_different_relaxed_response": true,
+    "stable_local_relaxation_raises_susceptibility": true,
+    "declared_flat_partial_potential_nonstationarity_resolved": true,
+    "no_external_row_or_holdout_used": true
+  },
+  "verification_status": "PASS_SCOPED_RELAXED_RESPONSE_NONIDENTIFIABILITY",
+  "evidence_artifacts": [
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/t13_he4_conditional_charge_map_circularity.json",
+      "sha256": "54afd50fb9ed5d2a34cb792b8feb8dc442021b0d92c0e9ad1763849b9eed22e7"
+    },
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/t13_he4_conditional_compressibility_design.json",
+      "sha256": "dee8a9fa124e7316fedeefed312fb31fa84fc82ed4da25ab40b671a7a13b4538"
+    },
+    {
+      "path": "docs/core/02_equations/o2/uet_o2_finite_temperature_quasiparticle_eos.py",
+      "sha256": "ba814f3aa02b5e31112a6595dac7727b7025b08e08f0631f50567f270cebbb7f"
+    },
+    {
+      "path": "docs/core/02_equations/o2/uet_o2_action_thermal_stiffness_beta.py",
+      "sha256": "c1c3278a79df611ddae2f67ff811022722ab0c56f68bf91cc5480f34db9a95e6"
+    },
+    {
+      "path": "docs/core/02_equations/covariant/uet_covariant_response.py",
+      "sha256": "7fb4b7228afb8ede0ac4f1664d634346ef46cc7678c94ed7b55d73645590c0c2"
+    },
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/Research_T13_He4_Relaxed_Phi_Response_Boundary.py",
+      "sha256": "f4d60ced84b48efdc48b2d271e173afe3ac82fdbafc81e255384ded0e7d75962"
+    },
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/test_t13_he4_relaxed_phi_response_boundary.py",
+      "sha256": "0fbba3b83124ee6f90dae4f009f8b2ab9d9e87d53fd4c6a7b2b3a894886ca6be"
+    }
+  ],
+  "open_blockers": [
+    "declared_flat_partial_action_not_stationary_at_conditional_root",
+    "physical_Phi_response_curvature_and_mixed_susceptibility_not_admitted",
+    "Noether_charge_to_helium_atom_identity_not_admitted",
+    "same_state_independent_isothermal_source_missing"
+  ],
+  "controlling_blocker": "declared_flat_partial_action_not_stationary_at_conditional_root",
+  "dependency_unlocked": [],
+  "full_core_unlock": false,
+  "claim_boundary": "This is a local conditional class witness plus a flat partial-action stationarity probe. The latter does not test the full curved, renormalized or microscopic UET action. No two physical UET completions, He-II compressibility, fitted K, TTG prediction, Xie 2026 access or Full Topic 13 closure follows."
+}

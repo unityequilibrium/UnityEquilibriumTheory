@@ -1,0 +1,98 @@
+{
+  "schema_version": "t13-thermal-pole-measurement-design-v1",
+  "major_result_id": "T13_CATTANEO_POLE_MEASUREMENT_DESIGN_CONTROL",
+  "topic": "0.13",
+  "closure_level": "CLOSED_FOR_LANE",
+  "what_is_closed": "Conditional identifiability and measurement design for a standard linear Cattaneo comparator",
+  "equation_or_mapping": {
+    "balance": "c*d_t(theta)+d_x(j)=0; tau*d_t(j)+j=-kappa*d_x(theta)",
+    "dispersion": "tau*s^2+s+(kappa/c)*q^2=0; s=-gamma+/-i*omega",
+    "inversion": "tau=1/(2*gamma); D=tau*(omega^2+gamma^2)/q^2; kappa=c*D",
+    "same_frequency_family": "for any tau>0 at fixed omega,q,c: gamma=1/(2*tau), kappa=c*tau*(omega^2+gamma^2)/q^2",
+    "quadratic_balance": "V=integral[c*theta^2/2+tau*j^2/(2*kappa)]dx; dV/dt=-integral[j^2/kappa]dx for periodic/no-flux boundaries; V is not physical SI energy"
+  },
+  "units": {
+    "theta": "K",
+    "j": "W/m^2",
+    "c": "J/(m^3 K)",
+    "kappa": "W/(m K)",
+    "tau": "s",
+    "q": "1/m",
+    "omega_gamma": "1/s",
+    "quadratic_functional_density": "J*K/m^3 (not SI energy density)"
+  },
+  "derivation_class": "analytic conditional comparator proof with synthetic numerical witnesses",
+  "observable": "mode oscillation frequency plus exponential decay rate at known wave number and independently measured volumetric heat capacity",
+  "data_role": "SYNTHETIC_COMPARATOR_NO_HELIUM_VALIDATION",
+  "witnesses": [
+    {
+      "relaxation_s": 0.01,
+      "diffusivity_m2_per_s": 0.000125,
+      "conductivity_W_per_m_K": 0.125,
+      "gamma_per_s": 50.0,
+      "omega_per_s": 100.0,
+      "pole_real_parts_per_s": [
+        -50.0,
+        -50.0
+      ],
+      "quadratic_balance_residual": -1.1102230246251565e-16
+    },
+    {
+      "relaxation_s": 0.04,
+      "diffusivity_m2_per_s": 0.00040625,
+      "conductivity_W_per_m_K": 0.40625,
+      "gamma_per_s": 12.5,
+      "omega_per_s": 99.99999999999999,
+      "pole_real_parts_per_s": [
+        -12.500000000000007,
+        -12.500000000000007
+      ],
+      "quadratic_balance_residual": -1.949829186997931e-15
+    }
+  ],
+  "synthetic_input_uncertainties": {
+    "sigma_omega_per_s": 5.0,
+    "sigma_gamma_per_s": 2.5,
+    "sigma_q_per_m": 10.0,
+    "sigma_c_J_per_m3_K": 50.0,
+    "assumed_independent": true
+  },
+  "synthetic_relative_sigma_conductivity": 0.10099504938362078,
+  "measurement_requirements": [
+    "same-state mode frequency and decay rate from the same identified pole pair",
+    "independently measured wave number/mode geometry and volumetric heat capacity",
+    "source and detector transfer functions separated from intrinsic pole estimates",
+    "row-level covariance for frequency, decay rate, geometry and heat capacity",
+    "a physically admitted two-fluid operator before applying this design to He-II"
+  ],
+  "evidence_artifacts": [
+    {
+      "path": "topics/0.13_Thermodynamic_Bridge/Code/03_Research/Research_T13_Thermal_Pole_Measurement_Design.py",
+      "sha256": "c962498f0b7de6de502687b3384890d99001d7743d324c2c0058ca5882de316d"
+    },
+    {
+      "path": "topics/0.13_Thermodynamic_Bridge/Code/03_Research/test_t13_thermal_pole_measurement_design.py",
+      "sha256": "fb8a6afb6fa08e09fca06fd15f25de7b7ad8380b992157b7529f9175e19de202"
+    },
+    {
+      "path": "core/03_lanes/thermal/uet_dynamic_thermoelastic_response.py",
+      "sha256": "ec02c5c96f30f8a6be38fd22d506c15ea6f2b8673ea76d1d25be00456a51d762"
+    }
+  ],
+  "checks": {
+    "same_oscillation_frequency": true,
+    "distinct_positive_transport_pairs": true,
+    "underdamped_stable_poles": true,
+    "mode_quadratic_balance": true
+  },
+  "verification_status": "ANALYTIC_AND_SYNTHETIC_CONTROL_PASS",
+  "open_blockers": [
+    "admitted_UET_HeII_two_fluid_response_operator",
+    "state_matched_independent_heat_capacity_and_mode_protocol",
+    "physical_dissipative_coefficients_and_covariance"
+  ],
+  "controlling_blocker": "admitted_UET_HeII_two_fluid_response_operator",
+  "dependency_unlocked": [],
+  "full_core_unlock": false,
+  "claim_boundary": "This proves nonidentifiability from frequency alone and local identifiability from frequency, decay and independent c only in the declared standard comparator. The quadratic stability functional is not physical SI energy. It is not UET second-sound prediction, experimental calibration, TTG validation or Full Topic 13 closure."
+}

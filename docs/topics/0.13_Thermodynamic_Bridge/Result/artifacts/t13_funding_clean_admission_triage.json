@@ -1,0 +1,39 @@
+{
+  "schema_version": "t13-funding-clean-admission-triage-v1",
+  "major_result_id": "T13_FUNDING_CLEAN_ADMISSION_TRIAGE",
+  "topic": "0.13",
+  "closure_level": "PARTIAL",
+  "observation_date": "2026-09-27",
+  "record_class": "CROSS_WORKTREE_FIELD_DIFF_NOT_SEMANTIC_EQUIVALENCE",
+  "what_is_closed": "The eight historical plan references are partitioned by parsed-JSON identity, substantive field difference, or absence at the recorded clean path",
+  "what_remains_open": "Nested provenance, owner admission of noncommitted source files, scoped Core reruns and the physical He-4 response operator",
+  "equation_or_mapping": "Historical source file bytes versus clean candidate at the same relative path; parsed-JSON equality is not nested evidence validity",
+  "units": "not applicable to provenance comparison",
+  "derivation_class": "read-only structural JSON comparison",
+  "observable": "clean-baseline admission workload for the funding portfolio",
+  "data_role": "PROVENANCE_TRIAGE_NOT_PHYSICAL_VALIDATION",
+  "source_branch": "codex/research/core-physical-migration",
+  "source_head_at_observation": "f6b9be8f21e86b7f377835f2b582c5647fe06226",
+  "clean_branch": "codex/research/t13-funding-evidence",
+  "clean_pre_triage_head": "59982ee33",
+  "records": [
+    {"path": "docs/core/07_artifacts/topic13/t13_he4_core_thermodynamic_bridge_composition_audit.json", "source_git_state": "TRACKED_CLEAN", "source_sha256": "13f444f3bf14edca27e8a7af8ff957d2447c5dc0d0dc24a4d8cb77e2cfa82418", "clean_sha256": "8cfb5389380b90315414fc80ee759de1de6577d417b5928852021ae5232875c9", "clean_state": "SERIALIZATION_ONLY_DIFFERENCE", "parsed_json_equal": true, "difference_counts": {"REFERENCE_TOKEN": 0, "CLAIM_OR_GATE": 0, "OTHER_CONTENT": 0}, "next_admission_step": "VERIFY_NESTED_REFERENCES_AND_RERUN_CORE"},
+    {"path": "docs/core/07_artifacts/topic13/t13_he4_matching_independence_audit.json", "source_git_state": "TRACKED_CLEAN", "source_sha256": "f639bacd8447955b6799e08d2eaeda8575591b56d5dd7972b077c478e5a4ee5d", "clean_sha256": "45dd4be70d1a6c448dce0cd6b0a2da7037a98cdc908428805bd2cf445cf9cabd", "clean_state": "SERIALIZATION_ONLY_DIFFERENCE", "parsed_json_equal": true, "difference_counts": {"REFERENCE_TOKEN": 0, "CLAIM_OR_GATE": 0, "OTHER_CONTENT": 0}, "next_admission_step": "VERIFY_NESTED_REFERENCES_AND_RERUN_CORE"},
+    {"path": "docs/core/07_artifacts/topic13/t13_si_phi_normalization_jacobian_audit.json", "source_git_state": "UNTRACKED", "source_sha256": "088c4294dfe8a487073ee84f1a28f48fc23c270f60c274d7f3beb5874e9cabf3", "clean_sha256": null, "clean_state": "MISSING_AT_RECORDED_PATH", "parsed_json_equal": null, "difference_counts": {"REFERENCE_TOKEN": 0, "CLAIM_OR_GATE": 0, "OTHER_CONTENT": 0}, "next_admission_step": "OWNER_HANDOFF_AND_REPRODUCE"},
+    {"path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/t13_normalized_dip_time_identifiability.json", "source_git_state": "UNTRACKED", "source_sha256": "4791d35583f4cefeed5d6f3a07cec7fd6f11d783af7bc9462a49503ab0374704", "clean_sha256": null, "clean_state": "MISSING_AT_RECORDED_PATH", "parsed_json_equal": null, "difference_counts": {"REFERENCE_TOKEN": 0, "CLAIM_OR_GATE": 0, "OTHER_CONTENT": 0}, "next_admission_step": "OWNER_HANDOFF_AND_REPRODUCE"},
+    {"path": "docs/core/07_artifacts/topic13/t13_csrc_source_route_priority_audit.json", "source_git_state": "MODIFIED", "source_sha256": "0562617fb4745e691543cbb6826cd83a1a82ed73056591c31b751497d70d804d", "clean_sha256": "41145237d4fceba16da744f9afcd0948d5f6a8662cc3b01494aa6fb6ccf10f6e", "clean_state": "JSON_FIELD_DIFFERENCE", "parsed_json_equal": false, "difference_counts": {"REFERENCE_TOKEN": 24, "CLAIM_OR_GATE": 12, "OTHER_CONTENT": 16}, "decision_delta": {"source_route_class": "INDEPENDENT_HARMONIC_CV_COMPARATOR", "source_acceptance": "COMPARATOR_REJECTED_AA_LIKE_STACK_AND_UNSTABLE_MODE_NOT_DING_PBTE", "source_raw_numeric_status": "PRESENT", "clean_route_class": "PUBLIC_SOURCE_BOUNDARY", "clean_acceptance": "CLOSED_PUBLIC_ROUTE_NO_MACHINE_READABLE_PAYLOAD", "clean_raw_numeric_status": "MISSING"}, "next_admission_step": "CORE_OWNER_REVIEW_SUBSTANTIVE_SOURCE_ROUTE_AND_REPRODUCE"},
+    {"path": "docs/core/07_artifacts/gates/core_curved_3p1_parent_gate.json", "source_git_state": "MODIFIED", "source_sha256": "6b44047efba638a621d1a9c1daf5b107e0016f28ebec04b9838c9b3a19e7569e", "clean_sha256": "55b6fccea24ab6843eaa3ab134eee47ba653e9ebf2b87ac4e1fcdd074f443643", "clean_state": "JSON_FIELD_DIFFERENCE", "parsed_json_equal": false, "difference_counts": {"REFERENCE_TOKEN": 20, "CLAIM_OR_GATE": 20, "OTHER_CONTENT": 17}, "decision_delta": {"source_status": "PARTIAL_CURVED_3P1_GH_PERIODIC_PRESCRIBED_MATTER_READY", "clean_status": "PARTIAL_CURVED_3P1_GH_PERIODIC_PRESCRIBED_MATTER_READY", "source_open_blockers": ["gh_full_u1_cpbc_slab", "gh_full_u1_slab_evolution", "gh_reduced_wave_boundary_comparator", "constraint_preserving_boundaries", "dimensional_observable_mapping"], "clean_open_blockers": ["constraint_preserving_boundaries", "dimensional_observable_mapping"], "source_dependency_unlocked_differs": true}, "next_admission_step": "CORE_OWNER_REVIEW_SUBSTANTIVE_GATE_AND_REPRODUCE"},
+    {"path": "docs/core/08_history/update_logs/T13_HOLDOUT_EXPOSURE_REVIEW_REQUIRED_2026-09-24.md", "source_git_state": "UNTRACKED", "source_sha256": "0e88cc5371c2979b8988359daf617f521f737f936ad8ec6d1746d90aa46d7471", "clean_sha256": null, "clean_state": "MISSING_AT_RECORDED_PATH", "parsed_json_equal": null, "difference_counts": {"REFERENCE_TOKEN": 0, "CLAIM_OR_GATE": 0, "OTHER_CONTENT": 0}, "next_admission_step": "CORE_OWNER_HANDOFF_HOLDOUT_INCIDENT_REVIEW"},
+    {"path": "docs/core/07_artifacts/topic13/t13_nims_mp990448_aa_stack_shear_instability.json", "source_git_state": "UNTRACKED", "source_sha256": "6389321fdd634a6a9e36a228921be1fd4a790b462d143998403454422f65434b", "clean_sha256": null, "clean_state": "MISSING_AT_RECORDED_PATH", "parsed_json_equal": null, "difference_counts": {"REFERENCE_TOKEN": 0, "CLAIM_OR_GATE": 0, "OTHER_CONTENT": 0}, "next_admission_step": "CORE_OWNER_HANDOFF_AND_REPRODUCE"}
+  ],
+  "counts": {"SERIALIZATION_ONLY_DIFFERENCE": 2, "JSON_FIELD_DIFFERENCE": 2, "MISSING_AT_RECORDED_PATH": 4, "BYTE_IDENTICAL": 0},
+  "evidence_artifacts": [
+    {"path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/t13_funding_historical_snapshot_recovery.json", "sha256": "7178f1349447df8e96763bdd295f54c6689184fd257a1571f74afb1fb5b398ca"}
+  ],
+  "verification_status": "PASS_FIELD_DIFF_TRIAGE_ONLY",
+  "controlling_blocker": "clean_core_source_chain_and_owner_admission_not_revalidated",
+  "dependency_unlocked": [],
+  "g0_ready": false,
+  "full_core_unlock": false,
+  "claim_boundary": "Parsed JSON equality of two outer artifacts does not validate nested hashes; source-route and curved gate differences are substantive and cannot be cherry-picked for Topic 13 readiness. No file was copied from the dirty worktree and Xie 2026 data were not used."
+}

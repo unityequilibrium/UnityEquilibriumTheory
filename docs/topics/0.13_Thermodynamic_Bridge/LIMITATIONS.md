@@ -1,5 +1,18 @@
 # Limitations
 
+## He-II Isothermal-Response Source Route (2026-09-27)
+
+The current He-4 SVP density/superfluid package does not provide an accepted
+same-state isothermal-compressibility row. Brooks-Donnelly 1977 reports an
+EOS-derived comparator; Elwell-Meyer 1967 is a primary pressure-volume route
+that still needs an absolute baseline, SVP pressure transfer, row uncertainty
+and covariance. None is ingested as a numeric UET comparison. Moreover the
+current action diagnostic differentiates at clamped `Phi`; ordinary material
+compressibility needs a physical clamp or a relaxed-`Phi` correction. The
+Noether-to-atom map remains unadmitted. See the
+[source-route screen](Data/03_Research/he4_isothermal_compressibility_source_route.json)
+and [conditional response design](Result/artifacts/T13_HE4_CONDITIONAL_COMPRESSIBILITY_DESIGN_2026-09-27.md).
+
 ## Finite-q Material Response Boundary (2026-09-07)
 
 Spatial compatibility is mechanically quasistatic, bulk, linear and locally
@@ -475,3 +488,49 @@ and are not mapped to Ding. Consequently no physical graphite tensor is
 assembled. The coupling tensor `G`, response residue `Z_Phi` and curvature
 `a_Phi` remain UET-side blockers, and the Schur inequality is only a necessary
 stability condition.
+
+## He-4 J02 source-ancestry boundary
+
+The local He-4 `alpha_Phi_K` calibration uses the adopted superfluid-density
+reference around 1.6-1.8 K. That reference partly derives from second- and
+fourth-sound measurements. The J02 recommended second-sound table was not
+directly fitted, but its measurement-family ancestry overlaps the calibration
+source. Exact row covariance is not known. J02 is therefore a disclosed
+source-overlap comparator, not independent or blind He-II validation. The
+numeric local alpha and its independence from graphite TTG/Xie fitting are
+unchanged. See the [ancestry audit](Result/artifacts/T13_HE4_J02_CALIBRATION_SOURCE_ANCESTRY_2026-09-28.md).
+
+An [independent-measurement route screen](Result/artifacts/T13_HE4_INDEPENDENT_MEASUREMENT_ROUTE_SCREEN_2026-09-28.md)
+names Wang-Wagner-Donnelly second-sound data and Dash-Taylor oscillating-disk
+normal-density data as follow-up routes. Distinct study names/methods do not
+yet establish statistical independence, permitted numeric access, matched
+temperature scales or a UET two-fluid prediction; neither source is admitted.
+
+The [funding operator-domain decision](Result/artifacts/T13_FUNDING_HEII_OPERATOR_DOMAIN_DECISION_2026-09-28.md)
+also prevents transferring the frozen normal-branch calibration directly to a
+condensed He-II second-sound claim. A local `Phi` response map does not define
+the longitudinal two-fluid source/detector operator. The available tree,
+Gaussian and formal condensed alternatives do not yet supply one physically
+admitted common model domain. This is not a no-go for future UET completions or
+a proved same-calibration/different-response theorem.
+
+The [finite-T scheme route decision](Result/artifacts/T13_FUNDING_CONDENSED_SCHEME_SELECTION_2026-09-28.md)
+does not admit any of the inspected methods as a physical UET He-II response.
+An equilibrium Ward/Goldstone condition is insufficient without a driven
+longitudinal operator; published symmetry-improved 2PI linear-response and
+solution-existence objections must be checked rather than ignored. A
+two-chemical-potential Bose-gas construction or standard Landau two-fluid
+calculation can serve as a comparator but cannot silently change the UET
+single-charge action or supply its material map. If the bounded UET derivation
+is not admitted by D5, G1/G2 remain unresolved and the portfolio must say so.
+
+The [rest-EOS dynamic witness](Result/artifacts/T13_FUNDING_REST_EOS_DYNAMIC_DEGENERACY_2026-09-28.md)
+shows, in a standard nondissipative two-fluid EFT class, that identical
+zero-relative-flow thermodynamics can coexist with different stable
+longitudinal speeds. It isolates relative-flow curvature as a missing input
+for a rest-EOS-only argument. Core does declare `f_s_tree=Z*q/lambda`; it can
+be identified with `-2F_X` only conditionally at tree level with matched
+phase normalization, branch and natural units. This does not establish a
+finite-T current or an He-II map, nor that either EFT
+completion is an admitted UET or He-II model. Its subluminal check is local
+to the linear longitudinal witness, not a proof for all UET branches.

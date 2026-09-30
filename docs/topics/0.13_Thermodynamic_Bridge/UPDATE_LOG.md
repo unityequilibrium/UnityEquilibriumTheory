@@ -5837,6 +5837,451 @@ EVIDENCE_PATHS:
 - `docs/core/07_artifacts/topic13/t13_anisotropic_thermoelastic_response_bridge_audit.json`
 - `docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry_topic13_anisotropic_thermoelastic_bridge_addendum.json`
 
+## 2026-09-27 - Conditional He-4 compressibility independence design
+
+MAJOR_RESULT_CLOSURE: `T13_HE4_CONDITIONAL_COMPRESSIBILITY_INDEPENDENCE_DESIGN` is `CLOSED_FOR_LANE` as a conditional analytic/numerical measurement design; Full Topic 13 remains open.
+
+WHAT_IS_ACTUALLY_CLOSED: The clamped-`Phi` chain rule identifies a response observable distinct from the density reused in `e0`. At the conditional root, the `(n_nat, chi_nat/n_nat)` Jacobian with respect to `(mu,Phi)` is locally nondegenerate, so density plus one response can select two free parameters rather than validate them.
+
+WHAT_REMAINS_OPEN: The Noether-to-atom/pressure/chemical-potential correspondence, physical `Phi` clamp or relaxation law, independent same-state response source, and full thermal/two-fluid closure.
+
+DEPENDENCY_UNLOCKED: Conditional measurement preregistration only; no Core or Full Topic 13 physical unlock.
+
+STATUS: `PASS_SCOPED_CONDITIONAL_COMPRESSIBILITY_DESIGN`; `full_core_unlock=false`.
+
+WHAT_CHANGED: Added an executable audit, three tests, hash-backed JSON and result note; the funding plan now names five bounded pre-sprint results. Reconciled four earlier result-note hashes with the clean publication checkout. No Core equation or source row changed.
+
+EQUATION_OR_MAPPING: `n_SI E_mu kappa_T|Phi=chi_nat|Phi/n_nat` under the three explicitly unadmitted map hypotheses. Ordinary relaxed response has an additional `(partial_Phi n_nat)(dPhi/dmu)|T` contribution.
+
+VERIFICATION: Focused suite `19 passed`; saved-artifact provenance test covers five JSONs and their input hashes. New artifact SHA-256 `dee8a9fa124e7316fedeefed312fb31fa84fc82ed4da25ab40b671a7a13b4538`. No measured compressibility, Xie 2026 holdout, or target fit was used.
+
+CONTROLLING_BLOCKER: `Noether_charge_to_helium_atom_identity_not_admitted`, followed by `Phi_clamp_or_relaxed_response_law_missing` for any actual compressibility comparison.
+
+NEXT_ACTION: Derive or source-lock the physical current/chemical-potential map and a `Phi` response protocol. If `Phi` is fixed independently, reserve a matched isothermal response as a test; if it is selected from the response, reserve a third non-reused observable.
+
+CLAIM_BOUNDARY: Conditional design and local rank witness only, not He-II agreement, second sound, external validation or Full Topic 13 closure.
+
+EVIDENCE_PATHS:
+- `docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/t13_he4_conditional_compressibility_design.json`
+- `docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/Research_T13_He4_Conditional_Compressibility_Design.py`
+- `docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/test_t13_he4_conditional_compressibility_design.py`
+- `docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/T13_HE4_CONDITIONAL_COMPRESSIBILITY_DESIGN_2026-09-27.md`
+
+## 2026-09-27 - He-II compressibility primary-source route screen
+
+MAJOR_RESULT_CLOSURE: `PARTIAL_SOURCE_ROUTE_NO_ACCEPTED_NUMERIC_ROW`; this is source screening, not an empirical closure.
+
+WHAT_IS_ACTUALLY_CLOSED: Donnelly-Barenghi 1998, Brooks-Donnelly 1977 and Elwell-Meyer 1967 are separated as existing SVP anchor, calculated EOS comparator and primary pressure-volume route respectively. The current local anchor has no absolute isothermal response row.
+
+WHAT_REMAINS_OPEN: Permitted primary numeric tables, absolute baseline, transfer to 1.7 K SVP, row uncertainty/covariance, physical `Phi` response and Noether-to-atom map.
+
+DEPENDENCY_UNLOCKED: Source-acquisition path only; no empirical comparison or Full Topic 13 unlock.
+
+STATUS: `PARTIAL_SOURCE_ROUTE_NO_ACCEPTED_NUMERIC_ROW`; `full_core_unlock=false`.
+
+WHAT_CHANGED: Added a source-route manifest with DOI/locators, zero accepted numeric rows and explicit role/independence checks; the funding plan points to it separately from five bounded pre-sprint results. Synced `LIMITATIONS.md` and a result note.
+
+EQUATION_OR_MAPPING: Target `kappa_T=-(1/V)(partial V/partial P)_T`; an SVP temperature-density path and a reported change in compressibility do not supply the absolute derivative at the target state.
+
+VERIFICATION: NIST reprints and APS primary abstract inspected online on 27 September 2026; focused local suite `20 passed` including route/hash/no-invented-row check. No primary PDF or numeric table was ingested.
+
+CONTROLLING_BLOCKER: `absolute_same_state_kappa_T_row_and_Phi_response_contract_missing` plus the prior `Noether_charge_to_helium_atom_identity_not_admitted`.
+
+NEXT_ACTION: Obtain permitted Elwell-Meyer numeric tables and an independent absolute baseline, then lock pressure transfer, uncertainty and covariance; separately derive the physical `Phi` protocol before testing any row.
+
+CLAIM_BOUNDARY: Source route only, not a measured UET response match, `alpha_Phi_K` calibration, TTG holdout access, or Full Topic 13 closure.
+
+EVIDENCE_PATHS:
+- `docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/he4_isothermal_compressibility_source_route.json`
+- `docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/T13_HE4_COMPRESSIBILITY_SOURCE_ROUTE_2026-09-27.md`
+- `docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/test_t13_funding_evidence_provenance.py`
+
+## 2026-09-27 - Funding baseline lineage screen
+
+MAJOR_RESULT_CLOSURE: `T13_FUNDING_CLEAN_BASELINE_LINEAGE_SCREEN` is `PARTIAL`; G0 and Full Topic 13 remain open.
+
+WHAT_IS_ACTUALLY_CLOSED: The eight historical dirty-branch baseline paths are classified against the clean checkout (`0 MATCH`, `4 DRIFT`, `4 MISSING`), while all five saved pre-sprint results and the separate source-route manifest hash-match the checkout.
+
+WHAT_REMAINS_OPEN: Select/reverify clean equivalents for each Core input, review the missing J02 protocol and rerun the relevant Core/source/holdout-exposure audits before G0 can be evaluated.
+
+DEPENDENCY_UNLOCKED: None; local subresult reproduction does not unlock G0.
+
+STATUS: `PASS_IDENTITY_SCREEN_WITH_OPEN_G0`; G0 = `BLOCKED_LINEAGE_RECONCILIATION`.
+
+WHAT_CHANGED: Added executable baseline-lineage verifier, three tests, JSON and result note; the 14-day plan links the screen. No Core file or physical gate changed.
+
+EQUATION_OR_MAPPING: Path plus SHA-256 identifies a saved input; historical hashes are audit evidence, not required values for selected clean equivalents.
+
+VERIFICATION: Focused suite `23 passed`; lineage artifact SHA-256 `6053a6e0dece7abca08cc0713db66de8914ea83f07bebbb8f89eb1006cc6c85c`. This identity screen cannot open G0 without a separate clean Core baseline verifier and J02 dependency review. No Xie 2026 data or target curve was read.
+
+CONTROLLING_BLOCKER: `full_clean_core_baseline_not_revalidated`, with historical-equivalent selection and J02 absence as named subblockers.
+
+NEXT_ACTION: Build the selected clean-baseline manifest, review J02's referenced commit and rerun source/observable/Core audits only after their dependencies are present.
+
+CLAIM_BOUNDARY: Reproducible pre-sprint artifacts are not G0 completion, Core readiness, external validation or Full Topic 13 closure.
+
+EVIDENCE_PATHS:
+- `docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/t13_funding_baseline_lineage_audit.json`
+- `docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/Research_T13_Funding_Baseline_Lineage.py`
+- `docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/test_t13_funding_baseline_lineage.py`
+- `docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/T13_FUNDING_BASELINE_LINEAGE_SCREEN_2026-09-27.md`
+
+## 2026-09-27 - He-4 Core composition reference lineage
+
+MAJOR_RESULT_CLOSURE: `T13_HE4_COMPOSITION_REFERENCE_LINEAGE_SCREEN` is `PARTIAL`; the recorded bounded Core composition claim is not promoted or revalidated by this pass.
+
+WHAT_IS_ACTUALLY_CLOSED: Each of the composition artifact's 12 cited references has one current same-basename candidate; all top-level status strings match. Nine candidate files match the recorded committed-tree bytes; the other three have explicit field deltas.
+
+WHAT_REMAINS_OPEN: The cited paths are absent and all 12 recorded composition hashes differ. One changed causal-branch summary adds `CLOSED_FOR_LANE`; the historical dirty-worktree contents are not reconstructed. Semantic equivalence, recursive source provenance, J02 review and clean G0 verification remain open.
+
+DEPENDENCY_UNLOCKED: None.
+
+STATUS: `REFERENCE_DRIFT_CLASSIFIED_NOT_REVALIDATED`; G0 remains blocked.
+
+WHAT_CHANGED: Added a read-only Topic 13 verifier, regression tests, JSON audit and explanatory result note; no Core file was changed.
+
+EQUATION_OR_MAPPING: Path/hash identity and recorded status are provenance checks, not an observable map or physical result.
+
+VERIFICATION: Four lineage tests and 14 related Core tests passed. Committed-tree comparison `9 BYTE_IDENTICAL / 3 CHANGED / 0 unavailable`. JSON SHA-256 `a23978b888dcbb49f9979a6b14d296bf9996965a2cbb10fd5b5e4adcd284fc95`. No Xie 2026 data was read.
+
+CONTROLLING_BLOCKER: `clean_equivalence_and_upstream_provenance_not_revalidated`.
+
+NEXT_ACTION: Compare each relocated payload and its producer/source chain, then ask the Core owner to reverify the selected clean baseline; review J02 before evaluating G0.
+
+CLAIM_BOUNDARY: Matching status strings and passing stored-status tests do not prove equivalence or independent He-4 prediction.
+
+## 2026-09-27 - Conditional relaxed-Phi response boundary
+
+MAJOR_RESULT_CLOSURE: `T13_HE4_RELAXED_PHI_RESPONSE_NONIDENTIFIABILITY_BOUNDARY` is `CLOSED_FOR_LANE` for an explicit local synthetic completion class only.
+
+WHAT_IS_ACTUALLY_CLOSED: Two stable local response potentials keep the same conditional anchor pressure/charge and clamped susceptibility while producing distinct relaxed susceptibilities; `chi_relaxed=chi_clamped+p_muPhi^2/K`. The declared flat partial potential is nonstationary at that conditional root.
+
+WHAT_REMAINS_OPEN: Full-action finite-temperature stationary background and effective curvature, admitted He-II charge and pressure map, measurement protocol and source row, dynamic transport, and Full Topic 13.
+
+DEPENDENCY_UNLOCKED: None.
+
+STATUS: `PASS_SCOPED_RELAXED_RESPONSE_NONIDENTIFIABILITY`; G0 and full Core unlock unchanged.
+
+WHAT_CHANGED: Added Topic 13 calculation, tests, JSON and explanatory note; no Core or external source file was changed.
+
+EQUATION_OR_MAPPING: `Omega_K=-p_qp+U_K`, `Omega_PhiPhi|0=K>0`, `dPhi/dmu=p_muPhi/K`, `chi_relaxed=p_mumu+p_muPhi^2/K` within the hypothetical local completion. The separate declared flat partial-action probe uses `Omega_Phi=epsilon_nc U'-p_Phi`.
+
+VERIFICATION: Three linked test modules gave eight passes; two derivative stencils and the prior clamped EOS state agree. Declared flat partial-action `Omega_Phi=-0.04130585`, local curvature positive `0.05257457`. Artifact SHA-256 `73d5cfc943187d345992b330514830a31529d2dd9af07d995d94a2f9d3d8fd09`. No Xie 2026 data read.
+
+CONTROLLING_BLOCKER: `declared_flat_partial_action_not_stationary_at_conditional_root`.
+
+NEXT_ACTION: Derive/register the physical finite-temperature stationary background or explain why the flat partial-action probe is inapplicable; then source-lock independent effective stiffness/relaxation input before using ordinary isothermal compressibility as a test.
+
+CLAIM_BOUNDARY: Conditional local class witness and flat partial-action probe only; no full-action no-go, physical He-II prediction or external validation.
+
+## 2026-09-27 - Conditional flat partial-action stationary root
+
+MAJOR_RESULT_CLOSURE: `T13_HE4_FLAT_PARTIAL_STATIONARY_ROOT_CONDITIONAL` is `CLOSED_FOR_LANE` for Phi-only stationarity of the declared flat partial approximation, not finite-T condensate-amplitude or physical He-II closure.
+
+WHAT_IS_ACTUALLY_CLOSED: Fixed-`mu` Phi stationarity moves `Phi` to about `0.677271`; joint Phi stationarity plus the recycled density condition has a tree-condensed (`q>0`), locally Phi-stable point at `mu=1.851515585`, `Phi=0.674642478`.
+
+WHAT_REMAINS_OPEN: Finite-temperature condensate-amplitude stationarity and Ward/renormalization completion, admitted atom/pressure/Phi map, independent source row and two-fluid dynamics. Density matching remains circular.
+
+DEPENDENCY_UNLOCKED: Conditional internal response design only; no physical or Core unlock.
+
+STATUS: `PASS_CONDITIONAL_FLAT_PARTIAL_STATIONARY_ROOT`; G0 and Full Topic 13 unchanged.
+
+WHAT_CHANGED: Added nested-bracket numerical audit, three tests, JSON and note; no Core or external source file changed.
+
+EQUATION_OR_MAPPING: `epsilon_nc U'(Phi)=partial_Phi p_qp`, `partial_mu p_qp=1/T_nat` only under the unadmitted density map, `K_eff=epsilon_nc U''-p_PhiPhi>0`.
+
+VERIFICATION: Three derivative/quadrature runs agree; 11 linked Topic 13 tests pass. Existing Gaussian/Ward boundary artifact hashes are linked in the JSON. JSON SHA-256 `007b0b0bf0036248b5fc1487131d4d0e4f23cb42e561d07905f4a94905792a99`. No Xie 2026 data read.
+
+CONTROLLING_BLOCKER: `finite_T_condensate_amplitude_and_Ward_stationarity_not_verified`.
+
+NEXT_ACTION: Test simultaneous Ward-consistent finite-temperature amplitude/Phi stationarity in one declared scheme; do not transplant this partial root into other branches. Source-lock an independent physical response protocol only after that mapping is justified.
+
+CLAIM_BOUNDARY: Synthetic Phi-only stationary point on a tree-condensed background and recycled density only; not full finite-T condensate stationarity, He-II prediction or external validation.
+
+## 2026-09-27 - Phi-only root amplitude compatibility
+
+MAJOR_RESULT_CLOSURE: `T13_HE4_PHI_ONLY_ROOT_THERMAL_GAUSSIAN_AMPLITUDE_NO_GO` is `CLOSED_AS_NO_GO` for simultaneous stationarity in the tree plus stable thermal-Gaussian class at the conditional Phi-only root.
+
+WHAT_IS_ACTUALLY_CLOSED: The root lies in the existing Core no-go domain; its tree-amplitude derivative is zero and stable thermal Gaussian amplitude derivative is positive, so Phi stationarity cannot close the condensate amplitude equation in that class.
+
+WHAT_REMAINS_OPEN: Named Ward-preserving interacting/renormalized completion, full amplitude/Phi stationarity, physical map and independent response data.
+
+DEPENDENCY_UNLOCKED: Research route narrowed; no physical/Core/Full Topic 13 unlock.
+
+STATUS: `PASS_SCOPED_PHI_ROOT_AMPLITUDE_NO_GO`.
+
+WHAT_CHANGED: Added a Topic 13 interface calculation, two tests, hash-backed JSON and note; no Core or source file changed.
+
+EQUATION_OR_MAPPING: At `T>0`, `q>0`, `x=q/lambda`, the existing scoped theorem gives `partial_x(Omega_tree+Omega_G)>0`; the separate `partial_Phi Omega=0` is insufficient.
+
+VERIFICATION: Positive mode/derivative margins at three representative momenta and positive one-sided amplitude secants at three steps and two quadrature orders; 23 Topic 13 He-4 tests and eight related Core tests pass. JSON SHA-256 `6bc82feda38344a3e9183b3c5d762952b7b0526e49368d486e3dfbe1ab13c716`. No Xie 2026 data read.
+
+CONTROLLING_BLOCKER: `ward_preserving_condensed_2PI_or_1N_microscopic_completion_missing`.
+
+NEXT_ACTION: Choose one declared Ward-preserving interacting/renormalized scheme and test simultaneous amplitude/Phi stationarity before any material-response comparison.
+
+CLAIM_BOUNDARY: Scoped no-go only, not a global UET failure or He-II prediction.
+
+## 2026-09-27 - Formal auxiliary Phi/condensate joint root
+
+MAJOR_RESULT_CLOSURE: `T13_FORMAL_AUXILIARY_PHI_CONDENSATE_JOINT_STATIONARITY` is `CLOSED_FOR_LANE` at Core's published formal auxiliary configuration (`Z=1.2`), not at the prior normalized `Z=1` root.
+
+WHAT_IS_ACTUALLY_CLOSED: A positive-condensate stationary point satisfies auxiliary, amplitude, Ward-gap and Phi equations within the fixed formal functional; analytic and numerical Phi envelope derivatives agree.
+
+WHAT_REMAINS_OPEN: Microscopic 2PI/1N or equivalent matching, physical renormalization, material/observable map, independent alpha and source data.
+
+DEPENDENCY_UNLOCKED: Formal feasibility only; no physical or Full Topic 13 unlock.
+
+STATUS: `PASS_FORMAL_AUXILIARY_PHI_JOINT_ROOT`; `full_core_unlock=false`.
+
+WHAT_CHANGED: Added a Topic 13 verifier, two tests, hash-backed JSON and result note. Core/source/holdout files were not changed.
+
+EQUATION_OR_MAPPING: `partial_Phi Omega_total=epsilon_nc*[U'(Phi)-h_coupling*(Z mu^2-m_eff^2(Phi))/(2 lambda)]=0` on the auxiliary stationary envelope; this equation is `T`-independent at fixed `mu` in the declared formal scheme.
+
+VERIFICATION: `Phi=0.268626816335582` at `mu=1.3,Z=1.2` across `T=0.20,0.25,0.28`; positive condensate and profiled Phi curvature, Ward/gap residuals, off-root finite-difference derivative and two-order quadrature check pass. Twenty-five Topic 13 He-4 and three Core auxiliary tests pass. JSON SHA-256 `eafd283cc7cde049c4217a3462ea1f13103bbcaeee5185240797f43527eaf662`. The original `Z=1` case is rejected by the function's domain; no Xie 2026 data read.
+
+CONTROLLING_BLOCKER: `microscopic_2pi_or_controlled_1N_matching_missing`.
+
+NEXT_ACTION: Choose a controlled condensed finite-temperature approximation and fixed renormalization prescription before any physical-response comparison; do not transfer this root to `Z=1`.
+
+CLAIM_BOUNDARY: Synthetic flat homogeneous formal lane only; not a full Hessian/curved stability result, He-II prediction, TTG calibration, microscopic closure or Full Topic 13.
+
+## 2026-09-27 - J02 source/protocol handoff into clean funding checkout
+
+MAJOR_RESULT_CLOSURE: `PARTIAL` for `T13_FUNDING_CLEAN_BASELINE_LINEAGE_SCREEN`; J02 source/protocol presence and consistency are closed as a source-candidate subresult, not as G0 or physical closure.
+
+WHAT_IS_ACTUALLY_CLOSED: The named J02 protocol and four recommended Table 4.3 rows are present in this checkout; frozen He-4 calibration, SI scale and external normal shear values match current Core artifacts. The rows were seen during protocol design and are not blind validation.
+
+WHAT_REMAINS_OPEN: Historical-to-clean equivalence and rerun of eight Core baseline references, primary frequency/geometry/row uncertainty, and admitted two-fluid UET operator.
+
+DEPENDENCY_UNLOCKED: Removes only `j02_protocol_not_present_in_clean_checkout`; no G0, Core, second-sound or Full Topic 13 unlock.
+
+STATUS: `PASS_IDENTITY_SCREEN_WITH_OPEN_G0`; G0=`BLOCKED_LINEAGE_RECONCILIATION`; J02 review=`PASS_SOURCE_PROTOCOL_CANDIDATE_ONLY`.
+
+WHAT_CHANGED: Reviewed and adapted Topic 13 J02 protocol/source files from commit `c42385d07`; extended lineage verifier, tests and note. No Topic 10 or Core file touched.
+
+EQUATION_OR_MAPPING: Candidate observable `u2=omega/k`; four recommended SVP/T90 rows remain a source-protocol input, not an output of a UET two-fluid eigenmode. The finite-difference slope `-1.9 m/s/K` has no row-level covariance and is diagnostic only.
+
+VERIFICATION: NIST Table 4.3 and Lane et al. abstract inspected online; local frozen constants match Core records and source rows have null uncertainty. Three lineage tests and eight related Core tests pass. Revised audit SHA-256 `6f9b1c31ff4e86157b3709c9bec678757a16697d2bcf47a1b4df3f6bcda73ee0`; source package SHA-256 `f32e6244fcc110de62bf99b9421ea24c9783ce2f448081aefc869dcccadade07`. Xie 2026 was not read.
+
+CONTROLLING_BLOCKER: `full_clean_core_baseline_not_revalidated`.
+
+NEXT_ACTION: Select and review clean equivalents for the eight historical Core references, then rerun scoped Core/source/holdout-exposure audits before reconsidering G0. Acquire a primary frequency-matched response protocol separately.
+
+CLAIM_BOUNDARY: This handoff is neither a UET second-sound prediction nor an independent blind test or Core/Full Topic 13 closure.
+
+## 2026-09-27 - Read-only recovery of historical funding baseline bytes
+
+MAJOR_RESULT_CLOSURE: `T13_FUNDING_HISTORICAL_SNAPSHOT_RECOVERY` is `PARTIAL` for provenance recovery only.
+
+WHAT_IS_ACTUALLY_CLOSED: All eight historical plan hashes match files currently present in the dirty primary worktree: two tracked-clean, two modified and four untracked. They are not missing from that worktree.
+
+WHAT_REMAINS_OPEN: Owner-authorized handoff of modified/untracked records, nested source-chain reconciliation and clean Core verifier rerun.
+
+DEPENDENCY_UNLOCKED: None; G0 and Full Topic 13 remain blocked.
+
+STATUS: `PASS_HISTORICAL_BYTE_RECOVERY_ONLY`; clean-checkout lineage still `0 MATCH / 4 DRIFT / 4 MISSING`.
+
+WHAT_CHANGED: Added a Topic 13-only recovery manifest, read-only verifier, tests and result note; linked the funding plan and lineage note. No Core or primary-worktree file edited.
+
+EQUATION_OR_MAPPING: Relative path plus SHA-256 establishes historical file identity, not a thermal observable or scientific equivalence.
+
+VERIFICATION: Eight saved hashes, eight live source hashes, source branch/HEAD and Git states matched the record. The verifier can rerun against a supplied worktree; clean-checkout tests validate the saved manifest without needing that worktree. No Xie 2026 experimental data read.
+
+CONTROLLING_BLOCKER: `full_clean_core_baseline_not_revalidated`, now narrowed from file discovery to owner handoff and upstream provenance admission.
+
+NEXT_ACTION: Coordinate the eight-item admission decision with the Core owner, then inspect nested source chains and rerun scoped Core checks before G0 review.
+
+CLAIM_BOUNDARY: Located bytes are not permission to publish/copy owner work, clean Core reproduction, physical validation or Full Topic 13 closure.
+
+## 2026-09-27 - Eight-item clean-baseline admission triage
+
+MAJOR_RESULT_CLOSURE: `T13_FUNDING_CLEAN_ADMISSION_TRIAGE` is `PARTIAL` for a cross-worktree decision inventory.
+
+WHAT_IS_ACTUALLY_CLOSED: Two recovered outer JSON records are parsed-JSON identical to clean candidates, two have substantive source/gate deltas, and four have no same-named clean file.
+
+WHAT_REMAINS_OPEN: Nested reference checks for the first pair; Core-owner disposition for the changed pair; owner handoff/reproduction for the missing four; clean Core rerun.
+
+DEPENDENCY_UNLOCKED: None; G0 and Full Topic 13 unchanged.
+
+STATUS: `PASS_FIELD_DIFF_TRIAGE_ONLY`.
+
+WHAT_CHANGED: Added read-only field comparer, eight-row machine table, tests, result note and plan pointer. No primary/Core file copied or edited.
+
+EQUATION_OR_MAPPING: Same-path file hash and recursive JSON-field difference; JSON equality does not establish validity of nested evidence or thermal mapping.
+
+VERIFICATION: Eight focused tests and the live-source comparison pass. Source-route dirty record contains a rejected harmonic comparator, not Ding acceptance; curved gate remains partial despite additional subresults. Xie 2026 data were not used.
+
+CONTROLLING_BLOCKER: `clean_core_source_chain_and_owner_admission_not_revalidated`.
+
+NEXT_ACTION: Audit nested composition/matching references, obtain two substantive Core decisions and four owner handoffs, then rerun a clean Core baseline gate.
+
+CLAIM_BOUNDARY: This is provenance triage, not physical validation, G0 completion, Gravity unlock or full thermal bridge closure.
+
+## 2026-09-27 - Nested composition-reference recovery
+
+MAJOR_RESULT_CLOSURE: `T13_FUNDING_NESTED_REFERENCE_RECOVERY` is `PARTIAL` for provenance chain recovery.
+
+WHAT_IS_ACTUALLY_CLOSED: Twelve unique relocated candidates identified; eight match historical nested hashes, four do not. Source and clean statuses match all 12 recorded statuses; nine source/clean JSONs are equal and three differ by fields.
+
+WHAT_REMAINS_OPEN: Four unrecovered historical byte identities, three field-delta reviews including one nested causal `closure_level`, upstream source validity and Core reruns.
+
+DEPENDENCY_UNLOCKED: None; G0 and Full Topic 13 remain blocked.
+
+STATUS: `PASS_NESTED_REFERENCE_RECOVERY_ONLY`.
+
+WHAT_CHANGED: Added Topic 13 read-only nested-reference verifier, 12-row JSON, tests and note; plan and prior triage now point to this result. No Core or primary worktree edit.
+
+EQUATION_OR_MAPPING: Old path/hash/status to relocated source and clean artifact; not a thermal observable map.
+
+VERIFICATION: Live-source record verification matched saved bytes and field deltas. All 12 recorded statuses match; the causal nested summary has `closure_level` absent in source and `CLOSED_FOR_LANE` in clean. Xie 2026 experimental data were not used.
+
+CONTROLLING_BLOCKER: `nested_core_reference_source_chain_not_revalidated` plus top-level owner admission.
+
+NEXT_ACTION: Obtain Core review of the three field-delta candidates and four historical-hash drifts, then rerun clean Core verifiers on accepted inputs.
+
+CLAIM_BOUNDARY: Provenance recovery only; no G0, Core or physical prediction claim is promoted.
+
+## 2026-09-28 - J02 calibration source-ancestry boundary
+
+MAJOR_RESULT_CLOSURE: `T13_HE4_J02_CALIBRATION_SOURCE_ANCESTRY_BOUNDARY` is `CLOSED_FOR_LANE` for data-role classification only.
+
+WHAT_IS_ACTUALLY_CLOSED: J02 Table 4.3 is now explicitly a source-overlap comparator, not an independent He-II validation set. Direct J02 rows were not fit, but the superfluid-density calibration source includes sound-derived measurements over the same temperature range.
+
+WHAT_REMAINS_OPEN: Exact cross-table covariance, independent response/calibration source, primary matched protocol, and UET two-fluid operator.
+
+DEPENDENCY_UNLOCKED: None; G0 and Full Topic 13 remain blocked.
+
+STATUS: `PASS_METHOD_LEVEL_OVERLAP_SCREEN_ROW_COVARIANCE_OPEN`; `full_core_unlock=false` for this audit.
+
+WHAT_CHANGED: Corrected J02 data role, protocol card, lineage verifier/artifact, funding plan/roadmap and limitations; added a hashed machine-readable ancestry audit and source note. No Core or numeric calibration record changed.
+
+EQUATION_OR_MAPPING: `alpha_Phi_K = (rho_s/rho)|T0 / d_T(rho_s/rho)|T0`; Section 2 sound-derived calibration ancestry may overlap Section 4 second-sound study families. Exact row reuse was not established.
+
+VERIFICATION: NIST Donnelly-Barenghi Sections 2/4 and Maynard measurement-method abstract inspected; local source hashes verified. Twelve focused Topic13/Core tests passed. Xie 2026 was not read. Ancestry audit SHA-256 `24ac43dfc406eeabe77d385839c29f68dbc8d15ea5e2a793232af634eef5314a`; regenerated lineage audit SHA-256 `91ca07ee8dbfa0edaf4ee1abce103499c6d5a1a69611973112cc2065a504ee86`.
+
+CONTROLLING_BLOCKER: `independent_non_sound_calibration_or_response_source_not_admitted` for independent He-II testing; G0 is separately controlled by `full_clean_core_baseline_not_revalidated`.
+
+NEXT_ACTION: Seek a permitted, genuinely independent response/calibration measurement with protocol and uncertainty, or keep J02 as a disclosed comparator in the two-week portfolio. Obtain Core-owner baseline admission separately.
+
+CLAIM_BOUNDARY: No change to local alpha, graphite-TTG independence, G0, two-fluid prediction or Full Topic 13 readiness. Method-level overlap does not prove exact row-level covariance.
+
+## 2026-09-28 - Independent He-4 measurement source-route triage
+
+MAJOR_RESULT_CLOSURE: `T13_HE4_INDEPENDENT_MEASUREMENT_ROUTE_SCREEN` is `PARTIAL` for source-family triage, not data admission.
+
+WHAT_IS_ACTUALLY_CLOSED: J02 recommended spline, Heiserman key 1 and Tam-Ahlers key 3 are not promoted as independent He-II tests; Wang-Wagner-Donnelly key 5 and Dash-Taylor oscillating disks are named follow-up routes with distinct acceptance tasks.
+
+WHAT_REMAINS_OPEN: Wang primary rows/protocol/covariance, Dash numeric normal-density rows/modern scale, source permission, two-fluid operator and G0 revalidation.
+
+DEPENDENCY_UNLOCKED: None; admitted response row count stays zero.
+
+STATUS: `PASS_SOURCE_FAMILY_ROUTE_TRIAGE_ONLY`; `full_core_unlock=false`.
+
+WHAT_CHANGED: Added literature/source-key route audit, two guard tests and a dated note; synced Topic 13 funding plan, 12-week roadmap and limitations. No Core source, numerical calibration or held-out data changed.
+
+EQUATION_OR_MAPPING: `alpha_Phi_K` uses a local superfluid-fraction temperature slope; second-sound velocity is a different response observable requiring an admitted two-fluid operator.
+
+VERIFICATION: NIST Sections 2/4 Tables 2.1/4.1 and the Heiserman, Maynard, Dash-Taylor and Wang primary abstracts inspected. Wang's abstract reports typical 0.07% precision and warns that its spline pools other-author data; this is not row-level sigma. Two focused guard tests passed. Machine screen SHA-256 `15c4d2813510b4e1b0438376037b82e64f9df088094bfd7802e97cedea7cdbc2`. Xie 2026 data were not read.
+
+CONTROLLING_BLOCKER: `primary_Wang_protocol_row_uncertainty_and_ancestry_not_verified`; the physical UET operator and clean Core baseline are separate blockers.
+
+NEXT_ACTION: Inspect permitted Wang study-only primary rows and measurement conditions, excluding its pooled spline; independently check Dash numeric calibration and scale conversion. Stop source search at the D3 decision ceiling if admission cannot be supported, and return to identifiability/measurement design.
+
+CLAIM_BOUNDARY: Study-key separation is a candidate source route, not demonstrated statistical independence, UET prediction, empirical validation or Full Topic 13 closure.
+
+## 2026-09-28 - Frozen He-II operator-domain decision
+
+MAJOR_RESULT_CLOSURE: `T13_FROZEN_HEII_OPERATOR_DOMAIN_BOUNDARY` is `CLOSED_FOR_LANE` for the frozen calibration bundle only; the funding predictive-content result remains open.
+
+WHAT_IS_ACTUALLY_CLOSED: The frozen state is normal (`q=-0.8715`), not an admitted condensed He-II linearization. Tree-condensed witnesses lack material admission; the thermal-only Gaussian Phi root has a scoped amplitude no-go; the formal auxiliary root uses a different `Z` prescription.
+
+WHAT_REMAINS_OPEN: A named physical condensed finite-T completion, absolute charge/stiffness material map, longitudinal source-to-detector operator, admitted independent data and G0 clean baseline.
+
+DEPENDENCY_UNLOCKED: None; G1 physical and G2 scientific result remain open.
+
+STATUS: `PASS_SCOPED_OPERATOR_DOMAIN_BOUNDARY`; G1=`BLOCKED_NO_ADMITTED_CONDENSED_STATE_AND_LONGITUDINAL_OPERATOR`; G2=`UNRESOLVED_OPERATOR_COMPLETION_BOUNDARY_NOT_NONIDENTIFIABILITY_PROOF`.
+
+WHAT_CHANGED: Added a deterministic cross-artifact decision script, generated JSON, two tests and result note; synced the 14-day plan and limitations. No Core, numeric calibration, source row, threshold or holdout changed.
+
+EQUATION_OR_MAPPING: `q=Z*mu^2-m_eff(Phi)^2=0.35^2-0.994=-0.8715` at the frozen point; local calibration `g` exists, but the physical second-sound map `h` is not admitted on this domain.
+
+VERIFICATION: Twelve linked Topic 13 tests pass; source artifacts are checked by SHA-256. Decision JSON SHA-256 `3e93e42c98af6944747d248b6f5f4f2a997fa538eeed3e1c62c48d22acc9ae01`. No Xie 2026 access.
+
+CONTROLLING_BLOCKER: `named_admissible_condensed_model_to_observable_operator_missing`.
+
+NEXT_ACTION: Freeze one Ward-consistent condensed model and an independent He-II state map, then derive `h` or a same-calibration/different-response proof inside that declared class. Do not score J02 or infer a nonidentifiability theorem from an undefined `h`.
+
+CLAIM_BOUNDARY: Frozen-bundle route exclusion only, not a global UET no-go, He-II prediction, Full Topic 13 closure or external validation.
+
+## 2026-09-28 - Finite-temperature condensed scheme route decision
+
+MAJOR_RESULT_CLOSURE: `T13_FINITE_T_CONDENSED_SCHEME_ROUTE_DECISION` is `CLOSED_FOR_LANE` for choosing the next derivation attempt only.
+
+WHAT_IS_ACTUALLY_CLOSED: Six Core/literature candidate routes have explicit roles and admission boundaries. None is inherited as a physical UET He-II response operator; the first bounded attempt is single-charge, fixed-prescription UET-action longitudinal response.
+
+WHAT_REMAINS_OPEN: Joint finite-T condensed state, Ward-consistent driven response, independent material map, permitted response rows and G0.
+
+DEPENDENCY_UNLOCKED: Bounded derivation task only; G1/G2 and Full Topic 13 remain open.
+
+STATUS: `PASS_ROUTE_SELECTION_ONLY`; all physical operator candidates `NOT_ADMITTED`.
+
+WHAT_CHANGED: Added a source-backed scheme decision JSON, explanatory note and claim-drift/hash guard tests; synced the 14-day plan and limitations. No Core equation or numeric calibration changed.
+
+EQUATION_OR_MAPPING: `h(p;protocol)=detector[longitudinal_response(source;stationary_condensed_UET_state(p))]` remains undefined until a single declared state/current/source prescription is derived.
+
+VERIFICATION: Primary method papers and four Core modules were inspected; the decision records exact local hashes. Four focused tests passed. Decision JSON SHA-256 `d21f740c4c89354479f73af508356dd3a759c13e10a88a376722a65852384a5d`. Xie 2026 was not read.
+
+CONTROLLING_BLOCKER: `single_charge_Ward_consistent_finite_T_condensed_source_coupled_response_not_derived`.
+
+NEXT_ACTION: Derive or refute one fixed-prescription single-charge UET condensed longitudinal response with Core-owner review. At D5, if not admitted, retain unresolved G1/G2 and submit a methods/measurement-feasibility claim only.
+
+CLAIM_BOUNDARY: Method selection is not a general no-go, physical second-sound prediction, external validation or Full Topic 13 closure.
+
+## 2026-09-28 - Rest-EOS dynamical-response boundary
+
+MAJOR_RESULT_CLOSURE: `T13_REST_EOS_DYNAMICAL_RESPONSE_NONIDENTIFIABILITY_BOUNDARY` is `CLOSED_FOR_LANE` in the declared standard two-fluid EFT class only.
+
+WHAT_IS_ACTUALLY_CLOSED: Two explicit positive-energy, subluminal linear longitudinal examples share the same rest thermodynamics for all positive `b,y`, yet have different low-mode speeds. The missing parameter for a rest-EOS-only argument is the relative-flow curvature.
+
+WHAT_REMAINS_OPEN: Finite-T lift of Core's formal tree stiffness into a stationary relative-flow current, physical material map, source/detector operator and G0/G1/G2.
+
+DEPENDENCY_UNLOCKED: Relative-flow stiffness derivation or independent measurement design only; no physical Core gate.
+
+STATUS: `PASS_SCOPED_STANDARD_EFT_CONSTRUCTIVE_WITNESS`; Full Topic 13 remains open.
+
+WHAT_CHANGED: Added analytic verifier, generated JSON, two tests and a result note; synced funding plan and limitations. No Core or numeric calibration edit.
+
+EQUATION_OR_MAPPING: `F_zeta=-3b^(4/3)/4+y^2-zeta(X+y^2)/2`; `F_zeta|X=-y^2` is identical across `zeta`, while `G_S=-2F_X y^2=zeta y^2` changes the longitudinal roots.
+
+VERIFICATION: Three focused tests passed, including three off-anchor thermodynamic identity checks, the `zeta -> 0` limit and conditional tree-stiffness values; source hashes are in the generated JSON. JSON SHA-256 `d483a7242be63e712f234ceed21aafef95605ad730705cc99159a015eb6e47ba`. No Xie 2026 access.
+
+CONTROLLING_BLOCKER: `formal_tree_stiffness_to_finite_T_relative_flow_current_and_source_operator_not_derived`.
+
+NEXT_ACTION: Use the conditional tree relation `-2F_X=f_s_tree=Z*q/lambda` only under matched phase normalization; derive the finite-T current/operator and independently selected material state. If this lift fails, identify independent measurement or prove a UET-class ambiguity; do not count this external EFT witness as G2.
+
+CLAIM_BOUNDARY: Rest-EOS-only theorem in a comparator class, not a UET no-go, He-II prediction, external validation or Full Topic 13 closure.
+
+## 2026-09-30 - PR #28 reproducibility and artifact-link repair
+
+WHAT_CHANGED: Kept the saved composition audit's historical comparison distinct from a CI checkout where its source commit is unavailable; compared formal-root floating outputs within `rel=1e-12, abs=1e-13`; verified the recovery record's older evidence hash against committed history; regenerated the He-II operator decision with LF bytes and refreshed the scheme decision's source hash through its generator.
+
+VERIFICATION: `git diff --check` passed; eight directly invoked tests passed across composition, historical recovery, He-II operator domain, and scheme selection. The formal-root test could not run in the bundled Python because it lacks SciPy; the full CI rerun remained required. First-pass He-II decision SHA-256 was `248fc600c23690902e5a8515e7f8695e91e120a4d6a242e96e7a70c1d3a27283`.
+
+CONTROLLING_BLOCKER: PR #28 must pass Linux CI before review or merge; the scientific G0 baseline remains blocked by clean Core lineage reconciliation.
+
+CLAIM_BOUNDARY: No physical operator, He-II prediction, external validation, or Full Topic 13 closure is promoted by this CI repair.
+
+## 2026-09-30 - PR #28 dependent artifact hash reconciliation
+
+WHAT_CHANGED: The first Linux CI rerun exposed two stale saved-artifact source hashes after verifier/test edits. Regenerated the formal auxiliary-root artifact, He-II operator decision, condensed-scheme selection, and rest-EOS dynamic-degeneracy artifact in dependency order using their canonical generators. Numerical conclusions and claim status did not change.
+
+VERIFICATION: `git diff --check` passed; 15 focused tests passed locally with system Python, SciPy, and pytest across six Topic 13 modules. The four regenerated JSON SHA-256 values are `7e7636c42bab5784dcdd578539e5511e2e95780b5a8d0b3cc0fc98fe8c12abda`, `2196eb4726c0ec4f74c4f12ea6ff6097776caab13a1a40f82b34982e1731b6d6`, `894ec7d73f6ce17264f6c90bb0f23a4c2cace5853c5140a708ab8b4e051a41ca`, and `72d4d3e49e652196d7e3b1205b01b9f6d4991fd8d40c42584dfa103368dd7cff`, respectively. Linux CI on the follow-up commit remains to be checked.
+
+CONTROLLING_BLOCKER: PR #28 needs passing Linux CI and review; the scientific G0 baseline remains blocked by clean Core lineage reconciliation.
+
+CLAIM_BOUNDARY: Artifact provenance repair is not physical validation, prediction, or Full Topic 13 closure.
+
 ## 2026-09-26 - Calibration audit reproducibility and holdout exposure
 
 MAJOR_RESULT_CLOSURE: `T13_ACTUATION_READOUT_CALIBRATION_DESIGN` remains `PARTIAL`; no physical subresult was promoted.

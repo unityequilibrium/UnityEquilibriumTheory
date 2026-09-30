@@ -1,0 +1,173 @@
+{
+  "schema_version": "t13-he4-phi-amplitude-compatibility-v1",
+  "major_result_id": "T13_HE4_PHI_ONLY_ROOT_THERMAL_GAUSSIAN_AMPLITUDE_NO_GO",
+  "topic": "0.13",
+  "closure_level": "CLOSED_AS_NO_GO",
+  "what_is_closed": "The new Phi-only root lies in the stable domain of the existing thermal-only Gaussian amplitude no-go, so it cannot be a simultaneous amplitude-stationary condensate in that same class",
+  "equation_or_mapping": {
+    "tree_condensate_boundary": "x0=A_tree^2=q/lambda, q=Z*mu^2-m_eff(Phi)^2>0",
+    "amplitude_domain": "x>=x0; partial_x Omega_tree=0.5*(-q+lambda*x)>=0",
+    "thermal_gaussian_no_go": "partial_x(Omega_tree+Omega_G)>0 for T>0 and stable modes",
+    "separate_Phi_equation": "epsilon_nc*U'(Phi)-partial_Phi p_qp=0 does not imply partial_x Omega=0"
+  },
+  "units": {
+    "lane": "natural",
+    "x": "natural amplitude squared",
+    "Omega_derivative_x": "natural thermodynamic density per amplitude squared"
+  },
+  "derivation_class": "application of existing scoped analytic no-go with independent parameter-domain and one-sided numerical witnesses",
+  "observable": "compatibility of a synthetic Phi-stationary point with thermal-only Gaussian condensate amplitude stationarity",
+  "data_role": "INTERNAL_STRUCTURAL_NO_GO_NO_HEII_RESPONSE_DATA",
+  "root_state": {
+    "T_natural": 0.22,
+    "mu_natural": 1.8515155851989542,
+    "Phi_natural": 0.6746424782036179,
+    "tree_condensate_control_q": 2.455095661362771,
+    "x_boundary": 2.455095661362771
+  },
+  "proof_assumptions": [
+    "T > 0",
+    "q > 0",
+    "lambda > 0",
+    "Z > 0",
+    "x >= q/lambda",
+    "both quadratic mode roots are positive for k>0"
+  ],
+  "representative_mode_witnesses": [
+    {
+      "k": 0.01,
+      "low_omega_sq": 2.6367087956558066e-05,
+      "high_omega_sq": 18.62280480457609,
+      "d_low_omega_sq_dx": 0.26368169877856595,
+      "d_high_omega_sq_dx": 3.7363183012214343,
+      "discriminant_margin": 341.67468901968095
+    },
+    {
+      "k": 0.1,
+      "low_omega_sq": 0.002639588811430116,
+      "high_omega_sq": 18.639991582852616,
+      "d_low_omega_sq_dx": 0.26503942024913973,
+      "d_high_omega_sq_dx": 3.7349605797508603,
+      "discriminant_margin": 343.84673949175294
+    },
+    {
+      "k": 1.0,
+      "low_omega_sq": 0.2906849775371114,
+      "high_omega_sq": 20.331946194126935,
+      "d_low_omega_sq_dx": 0.3865750428003947,
+      "d_high_omega_sq_dx": 3.613424957199605,
+      "discriminant_margin": 561.0517866989387
+    }
+  ],
+  "one_sided_amplitude_secants": [
+    {
+      "quadrature_order": 128,
+      "relative_x_step": 0.01,
+      "x_boundary": 2.455095661362771,
+      "x_shifted": 2.4796466179763987,
+      "total_Omega_secant": 0.009603311087856531,
+      "tree_derivative_at_boundary": 0.0,
+      "phase_curvature_at_boundary": 4.440892098500626e-16,
+      "phase_curvature_shifted": 0.02455095661362794
+    },
+    {
+      "quadrature_order": 128,
+      "relative_x_step": 0.005,
+      "x_boundary": 2.455095661362771,
+      "x_shifted": 2.4673711396695843,
+      "total_Omega_secant": 0.006743044677762789,
+      "tree_derivative_at_boundary": 0.0,
+      "phase_curvature_at_boundary": 4.440892098500626e-16,
+      "phase_curvature_shifted": 0.01227547830681397
+    },
+    {
+      "quadrature_order": 128,
+      "relative_x_step": 0.0025,
+      "x_boundary": 2.455095661362771,
+      "x_shifted": 2.4612334005161776,
+      "total_Omega_secant": 0.005364927076127748,
+      "tree_derivative_at_boundary": 0.0,
+      "phase_curvature_at_boundary": 4.440892098500626e-16,
+      "phase_curvature_shifted": 0.006137739153406763
+    },
+    {
+      "quadrature_order": 192,
+      "relative_x_step": 0.01,
+      "x_boundary": 2.455095661362771,
+      "x_shifted": 2.4796466179763987,
+      "total_Omega_secant": 0.00960338675467048,
+      "tree_derivative_at_boundary": 0.0,
+      "phase_curvature_at_boundary": 4.440892098500626e-16,
+      "phase_curvature_shifted": 0.02455095661362794
+    },
+    {
+      "quadrature_order": 192,
+      "relative_x_step": 0.005,
+      "x_boundary": 2.455095661362771,
+      "x_shifted": 2.4673711396695843,
+      "total_Omega_secant": 0.0067431565107514664,
+      "tree_derivative_at_boundary": 0.0,
+      "phase_curvature_at_boundary": 4.440892098500626e-16,
+      "phase_curvature_shifted": 0.01227547830681397
+    },
+    {
+      "quadrature_order": 192,
+      "relative_x_step": 0.0025,
+      "x_boundary": 2.455095661362771,
+      "x_shifted": 2.4612334005161776,
+      "total_Omega_secant": 0.0053651392162052105,
+      "tree_derivative_at_boundary": 0.0,
+      "phase_curvature_at_boundary": 4.440892098500626e-16,
+      "phase_curvature_shifted": 0.006137739153406763
+    }
+  ],
+  "checks": {
+    "input_is_conditional_Phi_only_root": true,
+    "analytic_no_go_is_scoped_and_recorded": true,
+    "proof_domain_contains_partial_root": true,
+    "stable_mode_derivatives_positive_at_representative_k": true,
+    "one_sided_amplitude_secants_positive": true,
+    "formal_Ward_lane_is_not_microscopic_completion": true,
+    "no_holdout_or_external_response_used": true
+  },
+  "verification_status": "PASS_SCOPED_PHI_ROOT_AMPLITUDE_NO_GO",
+  "evidence_artifacts": [
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/t13_he4_flat_partial_stationary_root.json",
+      "sha256": "007b0b0bf0036248b5fc1487131d4d0e4f23cb42e561d07905f4a94905792a99"
+    },
+    {
+      "path": "docs/core/07_artifacts/topic13/t13_uet_o2_gaussian_thermal_stationarity_no_go.json",
+      "sha256": "cacea415a8e2dc3ca0c5206f6b91561c545a29211c185f3074ec0a501462a9dc"
+    },
+    {
+      "path": "docs/core/07_artifacts/topic13/t13_uet_o2_ward_constrained_condensed_audit.json",
+      "sha256": "a082c4f028cbcf567feaa793ca797b3bac476150bd40566a5941c4429e83122b"
+    },
+    {
+      "path": "docs/core/02_equations/o2/uet_o2_gaussian_thermal_stationarity_no_go.py",
+      "sha256": "bb1ea760ab26f270e96791f6274597bebb6f1d0923789caf72432cdd004bb43c"
+    },
+    {
+      "path": "docs/core/02_equations/o2/uet_o2_gaussian_offshell_background.py",
+      "sha256": "a2e9162034b192af006134d98096f6f5588092e67f3047f991f91cc73d9fce09"
+    },
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/Research_T13_He4_Phi_Amplitude_Compatibility.py",
+      "sha256": "c51fca397e4ee7d1123d4c535358b0aa59286884a591da785cef3ecea02a8d8e"
+    },
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/test_t13_he4_phi_amplitude_compatibility.py",
+      "sha256": "4218a9be9d7534cbe3d186438af8ba8cd8f8005f4221e9c79bf6d805bcb92b7b"
+    }
+  ],
+  "open_blockers": [
+    "ward_preserving_condensed_2PI_or_1N_microscopic_completion_missing",
+    "physical_finite_temperature_renormalization_scheme_missing",
+    "material_map_and_independent_response_data_missing"
+  ],
+  "controlling_blocker": "ward_preserving_condensed_2PI_or_1N_microscopic_completion_missing",
+  "dependency_unlocked": [],
+  "full_core_unlock": false,
+  "claim_boundary": "No simultaneous stationary condensate is established in the tree plus stable thermal-Gaussian class at this Phi-only root. This is not a universal no-go: vacuum renormalization, interactions, symmetry-improved 2PI/1N or a different branch can change the conclusion. No He-II prediction, TTG validation, Xie 2026 access or Full Topic 13 closure follows."
+}

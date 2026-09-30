@@ -1,0 +1,193 @@
+{
+  "schema_version": "t13-funding-baseline-lineage-v1",
+  "major_result_id": "T13_FUNDING_CLEAN_BASELINE_LINEAGE_SCREEN",
+  "topic": "0.13",
+  "closure_level": "PARTIAL",
+  "what_is_closed": "Historical versus current-checkout identity is classified for each planned baseline input; saved pre-sprint evidence and the imported J02 source/protocol candidate are reviewed separately",
+  "equation_or_mapping": "source identity is path plus SHA-256; a passing local audit is not a physical mapping",
+  "units": "not applicable to source identity",
+  "derivation_class": "deterministic file-identity reconciliation",
+  "observable": "reproducibility of the proposed funding baseline in this checkout",
+  "data_role": "PROVENANCE_AUDIT_NOT_PHYSICAL_VALIDATION",
+  "historical_snapshot": {
+    "branch": "codex/research/core-physical-migration",
+    "head": "a62efba425f1b219241cf149bc4bab50cce4c379",
+    "dirty_worktree": true,
+    "evidence": [
+      {
+        "path": "docs/core/07_artifacts/topic13/t13_he4_core_thermodynamic_bridge_composition_audit.json",
+        "expected_sha256": "13f444f3bf14edca27e8a7af8ff957d2447c5dc0d0dc24a4d8cb77e2cfa82418",
+        "current_sha256": "8cfb5389380b90315414fc80ee759de1de6577d417b5928852021ae5232875c9",
+        "state": "DRIFT"
+      },
+      {
+        "path": "docs/core/07_artifacts/topic13/t13_he4_matching_independence_audit.json",
+        "expected_sha256": "f639bacd8447955b6799e08d2eaeda8575591b56d5dd7972b077c478e5a4ee5d",
+        "current_sha256": "45dd4be70d1a6c448dce0cd6b0a2da7037a98cdc908428805bd2cf445cf9cabd",
+        "state": "DRIFT"
+      },
+      {
+        "path": "docs/core/07_artifacts/topic13/t13_si_phi_normalization_jacobian_audit.json",
+        "expected_sha256": "088c4294dfe8a487073ee84f1a28f48fc23c270f60c274d7f3beb5874e9cabf3",
+        "current_sha256": null,
+        "state": "MISSING"
+      },
+      {
+        "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/t13_normalized_dip_time_identifiability.json",
+        "expected_sha256": "4791d35583f4cefeed5d6f3a07cec7fd6f11d783af7bc9462a49503ab0374704",
+        "current_sha256": null,
+        "state": "MISSING"
+      },
+      {
+        "path": "docs/core/07_artifacts/topic13/t13_csrc_source_route_priority_audit.json",
+        "expected_sha256": "0562617fb4745e691543cbb6826cd83a1a82ed73056591c31b751497d70d804d",
+        "current_sha256": "41145237d4fceba16da744f9afcd0948d5f6a8662cc3b01494aa6fb6ccf10f6e",
+        "state": "DRIFT"
+      },
+      {
+        "path": "docs/core/07_artifacts/gates/core_curved_3p1_parent_gate.json",
+        "expected_sha256": "6b44047efba638a621d1a9c1daf5b107e0016f28ebec04b9838c9b3a19e7569e",
+        "current_sha256": "55b6fccea24ab6843eaa3ab134eee47ba653e9ebf2b87ac4e1fcdd074f443643",
+        "state": "DRIFT"
+      },
+      {
+        "path": "docs/core/08_history/update_logs/T13_HOLDOUT_EXPOSURE_REVIEW_REQUIRED_2026-09-24.md",
+        "expected_sha256": "0e88cc5371c2979b8988359daf617f521f737f936ad8ec6d1746d90aa46d7471",
+        "current_sha256": null,
+        "state": "MISSING"
+      },
+      {
+        "path": "docs/core/07_artifacts/topic13/t13_nims_mp990448_aa_stack_shear_instability.json",
+        "expected_sha256": "6389321fdd634a6a9e36a228921be1fd4a790b462d143998403454422f65434b",
+        "current_sha256": null,
+        "state": "MISSING"
+      }
+    ],
+    "counts": {
+      "MATCH": 0,
+      "DRIFT": 4,
+      "MISSING": 4
+    },
+    "hashes_are_historical_not_required_to_equal_selected_clean_equivalents": true
+  },
+  "pre_sprint_saved_evidence": {
+    "records": [
+      {
+        "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/t13_thermal_pole_measurement_design_control.json",
+        "expected_sha256": "cbaaae67cf8c0ca12ced5ca44f2a4521cc3c6105e772133d19886311db1da369",
+        "current_sha256": "cbaaae67cf8c0ca12ced5ca44f2a4521cc3c6105e772133d19886311db1da369",
+        "state": "MATCH"
+      },
+      {
+        "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/t13_he4_frozen_branch_compatibility.json",
+        "expected_sha256": "1c00a986052fdac1fc9bad3b7007c0fb32dbf9472709ebac2a7e05f003e24bd3",
+        "current_sha256": "1c00a986052fdac1fc9bad3b7007c0fb32dbf9472709ebac2a7e05f003e24bd3",
+        "state": "MATCH"
+      },
+      {
+        "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/t13_he4_condensed_state_identifiability.json",
+        "expected_sha256": "7467dbd2e599140d2e9e5f0ecd836a83a287b8be62617deea8b87a31aa2fbfd9",
+        "current_sha256": "7467dbd2e599140d2e9e5f0ecd836a83a287b8be62617deea8b87a31aa2fbfd9",
+        "state": "MATCH"
+      },
+      {
+        "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/t13_he4_conditional_charge_map_circularity.json",
+        "expected_sha256": "54afd50fb9ed5d2a34cb792b8feb8dc442021b0d92c0e9ad1763849b9eed22e7",
+        "current_sha256": "54afd50fb9ed5d2a34cb792b8feb8dc442021b0d92c0e9ad1763849b9eed22e7",
+        "state": "MATCH"
+      },
+      {
+        "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/t13_he4_conditional_compressibility_design.json",
+        "expected_sha256": "dee8a9fa124e7316fedeefed312fb31fa84fc82ed4da25ab40b671a7a13b4538",
+        "current_sha256": "dee8a9fa124e7316fedeefed312fb31fa84fc82ed4da25ab40b671a7a13b4538",
+        "state": "MATCH"
+      }
+    ],
+    "all_match": true
+  },
+  "source_route_screen": {
+    "record": {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/he4_isothermal_compressibility_source_route.json",
+      "expected_sha256": "dcb87b80e965dfac4c35c13e1e0378c531e030f1e885ce9a82dc73dbcfab9833",
+      "current_sha256": "dcb87b80e965dfac4c35c13e1e0378c531e030f1e885ce9a82dc73dbcfab9833",
+      "state": "MATCH"
+    },
+    "numeric_rows_admitted": 0,
+    "current": true
+  },
+  "referenced_j02_protocol": {
+    "commit": "c42385d07e390b338096122275fe809737b8477a",
+    "path": "docs/topics/0.13_Thermodynamic_Bridge/HE4_SECOND_SOUND_PROTOCOL_CARD.md",
+    "present_in_this_checkout": true
+  },
+  "j02_dependency_review": {
+    "status": "PASS_SOURCE_PROTOCOL_CANDIDATE_ONLY",
+    "origin_commit": "c42385d07e390b338096122275fe809737b8477a",
+    "checks": {
+      "protocol_and_package_present": true,
+      "origin_commit_matches_plan": true,
+      "source_role_is_nonblind_candidate": true,
+      "rows_have_locator_units_and_no_imputed_uncertainty": true,
+      "finite_difference_is_only_protocol_diagnostic": true,
+      "he4_alpha_and_normalization_match_current_core": true,
+      "si_scale_and_external_shear_match_current_core": true,
+      "no_uet_two_fluid_operator_or_quantitative_threshold": true,
+      "locked_xie_holdout_not_used": true,
+      "j02_source_ancestry_overlap_disclosed": true
+    },
+    "response_row_count": 4,
+    "row_uncertainty_status": "NOT_REPORTED_PER_ROW",
+    "blind_holdout": false,
+    "uet_two_fluid_operator_admitted": false,
+    "evidence_artifacts": [
+      {
+        "path": "docs/topics/0.13_Thermodynamic_Bridge/HE4_SECOND_SOUND_PROTOCOL_CARD.md",
+        "sha256": "3e63ee75d51935420e9d4cb5e2141cf5cdb52c7596a6ea31a78e621ae1313449"
+      },
+      {
+        "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/he4_svp_second_sound_response_source_package.json",
+        "sha256": "8a924ebb1e7e0342bc69a954bbc9b19255eafda47f0650c3f64e458878ca7a94"
+      },
+      {
+        "path": "docs/core/07_artifacts/topic13/t13_he4_o2_response_calibration_audit.json",
+        "sha256": "7886ffd3403f91d8951a9d33fb947468a99ebbc94d378cbdc7467e7efb5af27e"
+      },
+      {
+        "path": "docs/core/07_artifacts/topic13/t13_he4_o2_si_beta_mapping_audit.json",
+        "sha256": "a09b39050aaea5ed49094f34d45719673eb275e7b94e88b88af71e4e47084325"
+      },
+      {
+        "path": "docs/core/07_artifacts/topic13/t13_he4_normal_viscosity_kubo_audit.json",
+        "sha256": "42a03cc5181cc4848202be699ed35f929d972c66c4ef7420003c62c583c79758"
+      }
+    ],
+    "claim_boundary": "Reviewed J02 source-overlap comparator in this checkout, not an independent/blind He-II test, UET second-sound prediction, primary frequency-matched response row or G0/Core validation."
+  },
+  "clean_core_baseline_revalidated": false,
+  "g0_evaluation_authority": "separate hash-backed clean Core baseline verifier; not this identity screen, J02 source review or a planning Boolean",
+  "g0_baseline_ready": false,
+  "g0_status": "BLOCKED_LINEAGE_RECONCILIATION",
+  "verification_status": "PASS_IDENTITY_SCREEN_WITH_OPEN_G0",
+  "evidence_artifacts": [
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/funding_portfolio_14d_plan.json",
+      "sha256": "dad587b85c275cfec8035b98b5cd156e9c9844c586b2a76c528fa05978b2a579"
+    },
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/Research_T13_Funding_Baseline_Lineage.py",
+      "sha256": "2c122758b065e6999bf8f0fe0e0000d354972b8ac69707a925bd1b8db7d7428a"
+    },
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/test_t13_funding_baseline_lineage.py",
+      "sha256": "60a25ecfb3735a724e6720518484ac53e3de86ca628cfa4d2b26fbd4b0f5e0a8"
+    }
+  ],
+  "open_blockers": [
+    "historical_dirty_branch_evidence_requires_clean_equivalent_selection",
+    "full_clean_core_baseline_not_revalidated"
+  ],
+  "controlling_blocker": "full_clean_core_baseline_not_revalidated",
+  "dependency_unlocked": [],
+  "full_core_unlock": false,
+  "claim_boundary": "Five pre-sprint saved artifacts and the reviewed J02 source/protocol candidate do not establish clean reproduction of the older Core baseline or an admitted two-fluid operator. G0 remains open; no Xie 2026 access, physical prediction, external validation or Full Topic 13 closure is asserted."
+}

@@ -1,0 +1,111 @@
+{
+  "major_result_id": "T13_FINITE_T_CONDENSED_SCHEME_ROUTE_DECISION",
+  "topic": "0.13_Thermodynamic_Bridge",
+  "closure_level": "CLOSED_FOR_LANE",
+  "status": "PASS_ROUTE_SELECTION_ONLY",
+  "decision_scope": "Literature- and Core-contract screen of candidate finite-temperature condensed response schemes; not admission of a physical He-II operator",
+  "what_is_closed": "No currently inspected scheme can be inherited as an admitted UET He-II second-sound operator. A single-charge UET-action derivation is the first bounded technical attempt; external two-fluid methods remain comparators.",
+  "equation_or_mapping": "h(p; protocol) = detector[longitudinal_response(source; stationary_condensed_UET_state(p))] is undefined until the state, currents and source/detector map are derived in one declared scheme",
+  "units": "UET O(2) calculations are natural-unit; the He-II response requires an independent material/SI map",
+  "derivation_class": "SOURCE_BACKED_SCHEME_TRIAGE_AND_INTERNAL_CORE_CONTRACT_AUDIT",
+  "observable": "He-II longitudinal thermal response or second-sound speed with matched excitation/readout protocol",
+  "data_role": "METHOD_SELECTION_NOT_EMPIRICAL_VALIDATION",
+  "verification_status": "PRIMARY_SOURCE_ABSTRACTS_AND_LOCAL_CONTRACTS_INSPECTED; NO_NEW_PHYSICAL_OPERATOR_DERIVED",
+  "open_blockers": [
+    "single_charge_Ward_consistent_finite_T_condensed_completion_not_derived",
+    "independent_charge_or_stiffness_to_HeII_map_not_admitted",
+    "longitudinal_source_to_detector_operator_not_derived",
+    "independent_response_rows_and_clean_Core_baseline_not_admitted"
+  ],
+  "dependency_unlocked": [
+    "bounded_scheme_examination_only"
+  ],
+  "full_core_unlock": false,
+  "g1_physical_unlock": false,
+  "g2_science_unlock": false,
+  "claim_boundary": "A route-selection decision, not an impossibility theorem, physical second-sound prediction, independent validation, or Full Topic 13 closure",
+  "xie_2026_accessed": false,
+  "source_hashes": {
+    "docs/core/02_equations/o2/uet_o2_auxiliary_field_condensed.py": "81d6786c88797b9c1efe37995813e44ca2c846a3ad4aaa74cb0d4db08e2935c2",
+    "docs/core/02_equations/o2/uet_o2_finite_temperature_two_fluid_response.py": "d8a32af7f257986e4e84581cd4af325fb9c09ee2b3c00fa96c77cca130b28ccf",
+    "docs/core/02_equations/o2/uet_o2_finite_temperature_stationarity_scheme.py": "cc7d69c74fbb1725ca5710b7a8b50d50e6739f977d92a044646fefb7fefa879f",
+    "docs/core/02_equations/o2/uet_o2_renormalized_vertex_scheme.py": "410f77c9418d0d946f0b27dbae31586a9436070771d0de13c7debc384dce71d6",
+    "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/t13_funding_heii_operator_domain_decision.json": "2196eb4726c0ec4f74c4f12ea6ff6097776caab13a1a40f82b34982e1731b6d6"
+  },
+  "primary_sources": [
+    {
+      "id": "Pilaftsis_Teresi_2013",
+      "url": "https://arxiv.org/abs/1305.3221",
+      "relevance": "Symmetry-improved O(2) CJT equilibrium Goldstone and phase-transition construction"
+    },
+    {
+      "id": "Brown_Whittingham_Kosov_2016",
+      "url": "https://doi.org/10.1103/PhysRevD.93.105018",
+      "relevance": "Linear-response pathologies reported for symmetry-improved 2PI"
+    },
+    {
+      "id": "Marko_Reinosa_Szep_2016",
+      "url": "https://doi.org/10.1016/j.nuclphysb.2016.09.022",
+      "relevance": "Semi-rigorous and numerical evidence for solution loss in a two-loop O(2) symmetry-improved scheme; not a universal no-go theorem"
+    },
+    {
+      "id": "Finite_temperature_interacting_Bose_gas_2022",
+      "url": "https://doi.org/10.1103/PhysRevD.106.045025",
+      "relevance": "Two-chemical-potential HFB EOS and two-fluid hydrodynamic mapping in a different model"
+    },
+    {
+      "id": "Second_sound_ultracold_atomic_gases_2015",
+      "url": "https://arxiv.org/abs/1510.01306",
+      "relevance": "Two-fluid sound depends on superfluid density, thermodynamics and probe coupling; model/medium differences matter"
+    }
+  ],
+  "candidate_routes": [
+    {
+      "id": "UET_formal_auxiliary_condensed",
+      "role": "INTERNAL_STATIONARY_WARD_WITNESS",
+      "physical_operator_admitted": false,
+      "reason": "Formal leading auxiliary-field/large-N-inspired lane, Z>1 domain, no controlled microscopic 2PI/1N, normal two-fluid response or SI material map; frozen Z=1 state cannot be reused"
+    },
+    {
+      "id": "UET_Gaussian_stationarity",
+      "role": "SCHEME_SENSITIVITY_CONTROL",
+      "physical_operator_admitted": false,
+      "reason": "Fixed reference conditions permit different finite local counterterms with different stationary-point behavior; physical prescription not selected"
+    },
+    {
+      "id": "UET_renormalized_vertex",
+      "role": "NORMAL_MU_ZERO_VERTEX_CONTROL",
+      "physical_operator_admitted": false,
+      "reason": "Declared implementation is restricted to mu=0 and is not a condensed finite-density longitudinal response"
+    },
+    {
+      "id": "symmetry_improved_2PI",
+      "role": "LITERATURE_METHOD_CANDIDATE_WITH_RESPONSE_RISK",
+      "physical_operator_admitted": false,
+      "reason": "Equilibrium Goldstone property does not settle reported linear-response overdetermination or scheme existence at the required finite-T and finite-density UET state"
+    },
+    {
+      "id": "two_chemical_potential_HFB",
+      "role": "EXTERNAL_THEORY_COMPARATOR",
+      "physical_operator_admitted": false,
+      "reason": "Introduces an additional chemical-potential prescription and model-specific Bose-gas EOS; charge/ensemble correspondence to declared single-charge UET action is unproved"
+    },
+    {
+      "id": "standard_Landau_two_fluid",
+      "role": "STANDARD_RESPONSE_COMPARATOR",
+      "physical_operator_admitted": false,
+      "reason": "Provides a reference longitudinal response when material inputs are supplied but cannot derive UET superfluid density, normal dynamics, transport or Phi response"
+    }
+  ],
+  "selected_next_question": "Can a single-charge, fixed-prescription finite-T condensed response be derived from the declared UET action with joint stationarity, Ward identity and nonzero longitudinal source coupling, without using target sound data?",
+  "admission_requirements": [
+    "Declare the UET action, single conserved charge and renormalization prescription once for all states",
+    "Solve joint Phi, condensate and gap stationarity on a stable bounded finite-temperature domain",
+    "Check the O(2) Ward identity and equilibrium thermodynamic derivative consistency",
+    "Derive charge, entropy and momentum currents and their linearized longitudinal conservation/balance equations",
+    "Specify excitation, detector, geometry, units and independent material state map before target comparison",
+    "Prove finite response and convergence, or record a scoped obstruction with an explicit assumption class"
+  ],
+  "stop_rule": "At the D5 science-route decision, if joint state and source-coupled longitudinal operator are not admitted, report G1/G2 UNRESOLVED and use a methods/measurement-feasibility portfolio; do not generate a second-sound score by importing comparator coefficients",
+  "next_action": "Derive or refute the single-charge source-coupled longitudinal response in one declared finite-T condensed UET scheme; seek Core-owner review before changing Core equations"
+}
