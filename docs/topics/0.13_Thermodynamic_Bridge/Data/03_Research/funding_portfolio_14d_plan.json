@@ -91,6 +91,20 @@
     "full_core_unlock": false,
     "milestone_completion_inferred_from_date": false
   },
+  "thermal_gradient_evidence_2026_10_01": {
+    "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/t13_moving_background_thermal_stiffness.json",
+    "sha256": "324b8f52002a981929e61c6fd838f4876a87d6655b814603ef182740b3648084",
+    "verification_status": "PASS_TREE_RELAXED_THERMAL_CURVATURE",
+    "closure_level": "CLOSED_FOR_LANE",
+    "scientific_contribution": "Action-spectrum thermal gradient curvature and independent direct pressure derivative; nonstationary amplitude path term quantified",
+    "controlling_blocker": "joint_finite_T_stationary_current_response_not_derived",
+    "next_action": "Derive a matched tadpole/Ward self-energy and driven current prescription before physical operator admission",
+    "prior_tree_only_failure_preserved": true,
+    "microscopic_Ward_loop_response_computed": false,
+    "g1_physical_unlock": false,
+    "g2_science_unlock": false,
+    "full_core_unlock": false
+  },
   "planned_output_directory": "docs/topics/0.13_Thermodynamic_Bridge/Result/funding_portfolio_2026-10-11",
   "baseline": {
     "branch": "codex/research/core-physical-migration",

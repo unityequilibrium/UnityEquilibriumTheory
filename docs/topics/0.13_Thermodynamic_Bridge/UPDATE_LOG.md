@@ -6300,6 +6300,20 @@ CONTROLLING_BLOCKER: finite_T_relative_flow_current_and_normal_component_UET_mat
 NEXT_ACTION: Rerun remote CI and continue the action-derived gradient-curvature task.
 CLAIM_BOUNDARY: Cross-platform testing repair only; no change to scientific status, calibration or holdout policy.
 
+## 2026-10-01 - Thermal phase-gradient curvature and amplitude-path decomposition
+
+MAJOR_RESULT_CLOSURE: `T13_TREE_RELAXED_THERMAL_PHASE_GRADIENT_CURVATURE` is CLOSED_FOR_LANE in the declared approximation; Full Topic13 stays open.
+WHAT_IS_ACTUALLY_CLOSED: Thermal gradient curvature is calculated from action-spectrum implicit derivatives and independent moving-pressure differences. The nonstationary amplitude-path term is independently reproduced from Core's off-shell Gaussian derivative.
+WHAT_REMAINS_OPEN: Joint finite-T amplitude/Phi stationarity, matched microscopic Ward/self-energy and driven current response, physical material/normal-component/source/uncertainty and clean Core admission.
+DEPENDENCY_UNLOCKED: Static relative-flow design only; G1/G2/full_core_unlock stay false.
+STATUS: PASS_TREE_RELAXED_THERMAL_CURVATURE; nine scoped checks pass. The original tree-only constitutive screen remains FAIL.
+WHAT_CHANGED: Added verifier, five tests, generated JSON and formula/derivation note; synchronized limitations, funding controller and plans. No Core or calibration changes.
+EQUATION_OR_MAPPING: `f_path=f_tree+integral[n_B*E_xixi-n_B*(1+n_B)*E_xi^2/T]`; `f_path=f_held-2Z*Omega_x/lambda`.
+VERIFICATION: 31 focused/related tests pass. Direct/implicit relative disagreements 1.54e-6 and 2.96e-7; path chain-rule residual <=6.94e-18. Source hashes match. Artifact SHA-256 `324b8f52002a981929e61c6fd838f4876a87d6655b814603ef182740b3648084`. All relevant PR30 checks passed on test-repair commit 005ae47b1; the new science commit will trigger a separate run. No fit, measured response payload or Xie 2026 input.
+CONTROLLING_BLOCKER: joint_finite_T_stationary_current_response_not_derived.
+NEXT_ACTION: Derive matched tadpole and Ward/self-energy response; do not claim exact stationary current from the tree-relaxed path. Keep D5 physical G1/G2 unresolved absent actual admission.
+CLAIM_BOUNDARY: Static thermal determinant and path-versus-partial-curvature result only. Linearized amplitude shifts require loop matching and are not new solved backgrounds, physical normal density or He-II predictions.
+
 ## 2026-09-30 - PR #28 reproducibility and artifact-link repair
 
 WHAT_CHANGED: Kept the saved composition audit's historical comparison distinct from a CI checkout where its source commit is unavailable; compared formal-root floating outputs within `rel=1e-12, abs=1e-13`; verified the recovery record's older evidence hash against committed history; regenerated the He-II operator decision with LF bytes and refreshed the scheme decision's source hash through its generator.

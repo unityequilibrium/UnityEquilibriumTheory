@@ -545,3 +545,16 @@ is a physical He-II state. A finite-T current and normal component must be
 derived consistently before this operator can support UET prediction. The
 analytic stiffness interval is a consistency bound, not an independently
 calibrated value or permission to tune stiffness to response data.
+
+The [moving-background thermal curvature](Result/artifacts/T13_THERMAL_GRADIENT_CURVATURE_STATIONARITY_2026-10-01.md)
+calculates the missing thermal phase-gradient term without fitting. It makes
+both fixed witnesses pass the conditional local mode screen, but the
+tree-relaxed pressure derivative includes a nonzero amplitude path term.
+The tree amplitude is not jointly stationary in the existing thermal-only
+Gaussian class. A held-amplitude partial derivative is different and cannot
+be mixed with tree-relaxed EOS derivatives as though the protocols matched.
+The inferred linearized tadpole shift requires a matched Ward/self-energy
+correction; that microscopic loop response has not been computed. Thus the
+new static curvature is not yet an admitted stationary current, controlled
+finite-T completion, physical normal density, Kubo coefficient or He-II
+prediction. A consistent perturbative completion remains a research route.

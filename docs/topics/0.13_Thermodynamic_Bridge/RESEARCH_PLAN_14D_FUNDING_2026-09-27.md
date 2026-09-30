@@ -249,6 +249,8 @@ Git: เก็บของเดิมใน dirty worktree; D1 สร้าง 
 
 ## 11. แหล่งอ้างอิงที่ใช้วางแผน
 
+อัปเดต D4 เพิ่มเติม 1 ต.ค.: [moving-background thermal curvature และ stationarity boundary](Result/artifacts/T13_THERMAL_GRADIENT_CURVATURE_STATIONARITY_2026-10-01.md) คำนวณเทอม thermal จากสเปกตรัมของ action ได้โดยไม่ fit และทำให้ผู้สมัครทั้งสองผ่าน local mode screen ใน approximation แต่แยกพบ amplitude-path term เพราะ background ยังไม่ stationary งานต่อที่ต้องตรวจจริงจึงเป็น matched tadpole/Ward/self-energy และ current prescription ไม่ใช้การผ่าน mode screen แทน physical G1/G2 มีค่าเทอมที่ต้องชดเชยและวิธีตรวจอิสระสำหรับงานต่อแล้ว; scientific disposition ของพอร์ตยังขึ้นกับ admission/derivation ที่เหลือ
+
 อัปเดต D4 วันที่ 1 ต.ค.: [conditional pressure-Hessian operator](Result/artifacts/T13_CONDITIONAL_TWOFLUID_OPERATOR_2026-10-01.md) ให้สมการเสียงสองโหมดจาก rest-pressure derivatives กับ relative-flow stiffness ใน imported EFT แล้ว แต่การแทน stiffness แบบ tree ตรง ๆ ไม่ผ่านที่ `mu=1.05` (โหมดเร็ว `c^2=1.8219`) และผ่านเฉพาะแบบมีเงื่อนไขที่ `mu=1.20` มีช่วง stiffness ที่ยอมรับได้จากสมการโดยไม่ fit ผู้สมัครเดิมทั้งสองไม่ใช่ He-II ที่รับเข้า ดังนั้น D5 ต้องตัดสินจาก finite-T current/normal-component derivation กับ material admission ที่มีจริง; หากยังขาด ให้ G1/G2 คงเปิด ผลนี้เป็น preliminary methods result สำหรับพอร์ตและกำหนดงาน derive relative-flow response ต่อใน W3–W4 ไม่ใช่ผลทำนาย He-II
 
 - [Donnelly–Barenghi 1998, NIST-hosted reference paper](https://srd.nist.gov/jpcrdreprint/1.556028.pdf), DOI 10.1063/1.556028: แหล่งข้อมูลสมบัติ He-4 ตาม SVP รวม second sound; ต้องย้อนจาก compilation ไป primary experiment สำหรับ protocol/uncertainty ที่ใช้ตัดสิน
