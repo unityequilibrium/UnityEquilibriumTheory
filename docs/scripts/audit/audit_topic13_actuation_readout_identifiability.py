@@ -19,7 +19,7 @@ def main():
     # Each measured transfer amplitude constrains log|alpha|+log|drive_gain|.
     A=np.ones((len(omega),2))
     files=["docs/scripts/audit/audit_topic13_actuation_readout_identifiability.py",
-           "docs/core/test/test_topic13_actuation_readout_identifiability.py",
+           "docs/core/05_tests/regression/root/test_topic13_actuation_readout_identifiability.py",
            "docs/topics/0.13_Thermodynamic_Bridge/BASE_PHI_INDEPENDENT_CALIBRATION_PROTOCOL.md"]
     r=dict(major_result_id="T13_ACTUATION_READOUT_CALIBRATION_DESIGN",topic="0.13",closure_level="PARTIAL",
         what_is_closed="Absolute input-output gain alone cannot separate Phi actuation and temperature readout gains in the declared linear control",
@@ -34,7 +34,8 @@ def main():
         dependency_unlocked=[],full_core_unlock=False,
         claim_boundary="Does not prove all nonlinear/source protocols unidentifiable. Applies when alpha and actuation enter only through their product; no numeric alpha or external source payload is inferred.",
         evidence_artifacts=[dict(path=p,sha256=sha256((ROOT/p).read_bytes()).hexdigest()) for p in files])
-    (ROOT/"docs/core/07_artifacts/topic13/t13_actuation_readout_identifiability_audit.json").write_text(json.dumps(r,indent=2,allow_nan=False)+"\n",encoding="utf-8")
+    output = ROOT / "docs/core/07_artifacts/topic13/t13_actuation_readout_identifiability_audit.json"
+    output.write_bytes((json.dumps(r, indent=2, allow_nan=False) + "\n").encode("utf-8"))
     print(json.dumps(dict(rows=rows,rank=r["gain_design_rank"],anchored_rank=r["rank_with_independent_actuation"])))
 
 

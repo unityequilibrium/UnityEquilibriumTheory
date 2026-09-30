@@ -36,10 +36,10 @@
   "evidence_artifacts": [
     {
       "path": "docs/scripts/audit/audit_topic13_actuation_readout_identifiability.py",
-      "sha256": "dd5506a3a1fe062e3bb5de5030831aa59ed8bd82773a22027cf9e7f49c0f5ff4"
+      "sha256": "d301931f51400a3e8e5bbbe292f6e56511d6651729135aafbd849d79ba1360d0"
     },
     {
-      "path": "docs/core/test/test_topic13_actuation_readout_identifiability.py",
+      "path": "docs/core/05_tests/regression/root/test_topic13_actuation_readout_identifiability.py",
       "sha256": "7f302ed42b2e2e4e692c2e4adcd855338777e48d2f866ff6fb71d60e4cbdea74"
     },
     {
