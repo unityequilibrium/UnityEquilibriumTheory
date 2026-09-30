@@ -112,3 +112,23 @@ Brooks-Donnelly ancestry, not a fresh independent validation source.
 No frozen Topic 13 matching constant, physical Core equation or original
 unassigned material requirement changed. Physical operator/SI/phase mapping,
 transport, prediction and J05/J06 remain blocked.
+
+## Entropy-reference transfer remains a material blocker
+
+[The latest source/reference audit](Result/artifacts/he4_entropy_source_reference_audit.json)
+establishes the Table 8.5 source integration convention and complete coordinate
+covariance only. It does not resolve TN1334's entropy anchor or assign a physical
+reference offset. Printed-temperature comparisons omit scale conversion and
+physical uncertainty propagation and have no physical acceptance threshold.
+
+Fountain-pressure measurements provide a distinct thermodynamic source family,
+but recommended spline values are not new raw data or an independently locked
+sound test. Calorimetric entropy shares the input heat-capacity ancestry; source
+precision/accuracy is not row covariance. Full experimental geometry/protocol
+and exact calibration/response split remain unresolved.
+
+The source controller is
+he4_entropy_integration_anchor_found_but_TN1334_reference_transfer_covariance_and_independence_open.
+A partial entropy-coordinate substitution can preserve positive work yet alter
+sound poles. Neither this diagnostic nor finding a zero-T integration convention
+admits a physical Core entropy/phase/mass/SI map. J04/J05/J06 remain unexecuted.

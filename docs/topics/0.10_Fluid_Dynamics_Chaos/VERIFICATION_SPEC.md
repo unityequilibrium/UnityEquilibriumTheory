@@ -156,3 +156,26 @@
   row uncertainty, independent experiments, material input admission or UET
   prediction. Raw PDF review is manual; the offline verifier hashes the curated
   transcription and does not rediscover it from the upstream PDF.
+
+## Entropy-source/reference-coordinate audit (2026-09-30)
+
+Source contract: [he4_entropy_source_and_reference_contract.json](Data/03_Research/he4_entropy_source_and_reference_contract.json).
+Before code it locks normalized base/offsets [-0.3,0,0.4,1.0], 1e-10 identity
+tolerance, 1e-8 negative-control floor and grid 32. First audit passes 116/116;
+no rule, token or tolerance was amended after execution.
+
+[Research_He4_Entropy_Source_Reference.py](Code/03_Research/Research_He4_Entropy_Source_Reference.py)
+checks source/branch/date/SI boundaries, independently assembled flux/force
+versus similarity, work congruence/positivity, Gibbs pressure/capacities, invariant
+roots and local periodic balances. Omitting entropy correction, phase correction
+or both is detected for each nonzero shift. Both-omitted positive-work PASS is
+deliberately recorded to prevent energy-only correspondence claims.
+[test_he4_entropy_source_reference.py](Code/03_Research/test_he4_entropy_source_reference.py)
+adds four fresh-output regressions, including corrupt units/anchor claims.
+
+Artifact: [he4_entropy_source_reference_audit.json](Result/artifacts/he4_entropy_source_reference_audit.json).
+Source hashes exclude temporary PDFs; full rendered-page review is manual and
+cannot be independently established by the offline audit. Six source tokens
+are candidates only. Central nominal differences have no acceptance threshold,
+temperature interpolation or reference conversion. Original material values
+stay null. No physical/Core/Topic 13 gate is promoted.

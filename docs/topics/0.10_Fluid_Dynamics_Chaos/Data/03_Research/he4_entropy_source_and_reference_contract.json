@@ -1,0 +1,207 @@
+{
+  "schema_version": "t010-he4-entropy-source-reference-v1",
+  "date": "2026-09-30",
+  "record_role": "SOURCE_CANDIDATE_AND_STANDARD_REFERENCE_ONLY",
+  "status": "ENTROPY_BRANCH_REFERENCE_FOUND_MATERIAL_ADMISSION_BLOCKED",
+  "source": {
+    "title": "The Observed Properties of Liquid Helium at the Saturated Vapor Pressure",
+    "authors": [
+      "Russell J. Donnelly",
+      "Carlo F. Barenghi"
+    ],
+    "year": 1998,
+    "doi": "10.1063/1.556028",
+    "official_url": "https://srd.nist.gov/jpcrdreprint/1.556028.pdf",
+    "downloaded_pdf_sha256": "c3e03d88b803d36628587638be98e0f3af1e6613b15f81e04eedcc17f3d5442e",
+    "pdf_page_count": 59,
+    "raw_pdf_publicly_committed": false,
+    "temporary_review_path": "tmp/pdfs/he4-entropy-source-review/donnelly-barenghi-1998.pdf",
+    "visual_review": {
+      "method": "full-page Poppler render inspected",
+      "pdf_pages_one_based": [
+        28,
+        29,
+        30
+      ],
+      "printed_pages": [
+        1243,
+        1244,
+        1245
+      ]
+    },
+    "table_temperature_scale": "ITS-90 (T90)",
+    "entropy_unit": "J/(g K)",
+    "SI_entropy_unit": "J/(kg K)",
+    "SI_multiplier": "1000",
+    "source_class": "recommended fitted/integrated reference values, not raw independent experiments",
+    "license_or_terms": "Small numerical facts, attribution and metadata only; copyrighted PDF not redistributed or required offline"
+  },
+  "branches": {
+    "fountain": {
+      "table": "8.3",
+      "printed_page": 1244,
+      "role": "recommended spline from adopted fountain-pressure database",
+      "adopted_ancestry": [
+        "Singsaas 1984 unpublished thesis tables",
+        "Van den Meijdenberg et al. 1961"
+      ],
+      "review_adjustment": "Section 8 note (6): spline adjusted toward Singsaas-Ahlers near lambda",
+      "zero_temperature_integration_anchor": "NOT_ESTABLISHED_BY_THIS_TABLE",
+      "per_row_uncertainty": null,
+      "covariance": null
+    },
+    "calorimetric": {
+      "table": "8.5",
+      "printed_page": 1245,
+      "role": "integral of recommended heat-capacity spline",
+      "reference_relation": "s(T)=integral_0^T C_sat(t)/t dt",
+      "anchor_status": "ZERO_TEMPERATURE_INTEGRATION_CONVENTION_EXPLICIT_FOR_TABLE_8_5",
+      "source_location": "Section 8 note (8), printed page 1243",
+      "independent_of_its_heat_capacity_input": false,
+      "per_row_uncertainty": null,
+      "covariance": null
+    }
+  },
+  "rows": [
+    {
+      "T90_raw": "1.65",
+      "fountain_entropy_raw": "3.357E-1",
+      "calorimetric_entropy_raw": "3.350E-1"
+    },
+    {
+      "T90_raw": "1.70",
+      "fountain_entropy_raw": "3.972E-1",
+      "calorimetric_entropy_raw": "3.950E-1"
+    },
+    {
+      "T90_raw": "1.75",
+      "fountain_entropy_raw": "4.662E-1",
+      "calorimetric_entropy_raw": "4.630E-1"
+    }
+  ],
+  "primary_fountain_source": {
+    "title": "Entropy of He II from 1.6 K to the lambda line",
+    "authors": [
+      "Alan Singsaas",
+      "Guenter Ahlers"
+    ],
+    "doi": "10.1103/PhysRevB.29.4951",
+    "official_url": "https://journals.aps.org/prb/abstract/10.1103/PhysRevB.29.4951",
+    "publication_date": "1984-05-01",
+    "received_date": "1983-11-18",
+    "review_bibliography_year": 1983,
+    "date_discrepancy_resolution": "official publisher publication date controls; review year retained as discrepancy",
+    "review_scope": "official abstract and metadata only; full experimental protocol and thesis tables not acquired",
+    "SVP_temperature_range_K": [
+      1.6,
+      "near lambda"
+    ],
+    "pressurized_range_K": [
+      1.7,
+      "near lambda"
+    ],
+    "maximum_pressure_bar": 29,
+    "source_precision_percent": 0.1,
+    "source_accuracy_percent": 0.5,
+    "row_standard_uncertainty": null,
+    "covariance": null,
+    "measurement_family": "fountain pressure",
+    "independence_warning": "entropy can feed sound-derived superfluid-density inference; distinct measurement family does not establish an independent eventual sound holdout"
+  },
+  "reference_state_screen": {
+    "url": "https://www.nist.gov/document/refprop9pdf",
+    "section": "7.2",
+    "role": "REFERENCE_CONVENTION_WARNING_ONLY",
+    "TN1334_reference_identity_established": false,
+    "physical_entropy_offset_assigned": null
+  },
+  "nominal_comparison": {
+    "prior_source": "docs/topics/0.10_Fluid_Dynamics_Chaos/Data/03_Research/he4_tn1334_fixed_constraint_eos_source_candidate.json",
+    "role": "DESCRIPTIVE_CENTRAL_DIFFERENCES_ONLY",
+    "same_physical_temperature_established": false,
+    "temperature_interpolation_performed": false,
+    "physical_acceptance_threshold": null,
+    "constant_offset_fitted": false,
+    "printing_intervals_are_physical_uncertainty": false
+  },
+  "reference_derivation": {
+    "classification": "standard_chain_rule_coordinate_transform_not_UET_equation",
+    "state": [
+      "delta_rho",
+      "delta_sigma",
+      "total_mass_current_j",
+      "delta_superfluid_velocity"
+    ],
+    "units": {
+      "a": "J/(kg K)",
+      "sigma": "J/(m^3 K)",
+      "mu_mass": "J/kg",
+      "T": "K"
+    },
+    "entropy_change": "sigma_star=sigma+a*rho",
+    "energy_change": "e_star(rho,sigma_star)=e(rho,sigma_star-a*rho)",
+    "conjugates": "T_star=T; mu_star=mu-a*T; p_star=p",
+    "Hessian": "A_star=A-2*a*B+a^2*D; B_star=B-a*D; D_star=D",
+    "operator": "M_star=L*M*L_inverse; H_star=L_inverse_transpose*H*L_inverse",
+    "entropy_flux": "sigma_star*v_n-a*rho_s*(v_n-v_s)",
+    "phase_force": "grad(delta_mu_star+a*delta_T)",
+    "physical_UET_mapping_admitted": false
+  },
+  "verification": {
+    "locked_before_first_execution": true,
+    "base": {
+      "rho": 1,
+      "rho_s": 0.6,
+      "sigma": 0.8,
+      "T": 1,
+      "A": 9,
+      "B": -0.2,
+      "D": 1.4
+    },
+    "offsets": [
+      -0.3,
+      0,
+      0.4,
+      1.0
+    ],
+    "identity_tolerance": 1e-10,
+    "negative_control_floor": 1e-08,
+    "periodic_grid": 32,
+    "negative_controls": [
+      "omit_entropy_flux_correction",
+      "omit_phase_force_correction",
+      "omit_both_corrections",
+      "J_per_g_as_J_per_kg"
+    ],
+    "threshold_policy": "preserve first failure before any amendment; no material fit or physical acceptance"
+  },
+  "source_acquisition_controller": "he4_entropy_integration_anchor_found_but_TN1334_reference_transfer_covariance_and_independence_open",
+  "parent_input_controller": "two_fluid_fixed_pressure_EOS_and_UET_state_mapping_missing",
+  "physical_controller": "vector_momentum_constitutive_origin_and_material_frame_admission_open",
+  "TN1334_entropy_anchor_resolved": false,
+  "admitted_material_values_assigned": false,
+  "independent_validation_admitted": false,
+  "physical_uet_operator_admitted": false,
+  "physical_prediction_executed": false,
+  "physical_J05_executed": false,
+  "physical_J06_executed": false,
+  "claim_promotion": false,
+  "dependency_unlock": false,
+  "remaining_blockers": [
+    "TN1334_selected_edition_entropy_reference_transfer_unresolved",
+    "per_row_EOS_uncertainty_covariance_missing",
+    "exact_calibration_response_ancestry_split_unresolved",
+    "primary_response_state_frequency_geometry_protocol_missing",
+    "physical_Core_to_material_Legendre_state_SI_mapping_missing",
+    "superfluid_phase_stiffness_and_response_density_mapping_missing",
+    "state_matched_dissipative_transport_missing"
+  ],
+  "reused_inputs": [
+    "docs/topics/0.10_Fluid_Dynamics_Chaos/Code/03_Research/Research_Fluid_Two_Fluid_EOS_Reference.py",
+    "docs/topics/0.10_Fluid_Dynamics_Chaos/Data/03_Research/fluid_two_fluid_eos_reference_contract.json",
+    "docs/topics/0.10_Fluid_Dynamics_Chaos/Data/03_Research/he4_tn1334_fixed_constraint_eos_source_candidate.json",
+    "docs/topics/0.10_Fluid_Dynamics_Chaos/Data/03_Research/he4_two_fluid_thermodynamic_input_requirements.json",
+    "docs/topics/0.13_Thermodynamic_Bridge/HE4_SECOND_SOUND_PROTOCOL_CARD.md",
+    "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/he4_svp_second_sound_response_source_package.json"
+  ]
+}

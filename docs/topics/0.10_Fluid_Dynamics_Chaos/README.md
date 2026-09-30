@@ -241,3 +241,26 @@ Per-row uncertainty/covariance, absolute entropy anchor and exact training/test
 ancestry, plus the physical Core state/SI/phase mapping remain required.
 Original admitted material requirements stay null. Overall physical admission
 and J04/J05/J06 remain unchanged.
+
+## He-II entropy source/reference checkpoint (2026-09-30)
+
+The [entropy source/coordinate contract](HE4_ENTROPY_SOURCE_AND_REFERENCE_CONTRACT.md)
+and [116-check audit](Result/artifacts/he4_entropy_source_reference_audit.json)
+package three recommended fountain-pressure and three heat-capacity-integrated
+entropy values from Donnelly-Barenghi Tables 8.3/8.5. The calorimetric table
+explicitly integrates from 0 K; this is its own reference convention, not closure
+of TN1334's selected-edition anchor. Primary Singsaas-Ahlers metadata resolves the
+review's publication-year discrepancy to 1984. Full primary protocol remains missing.
+
+A complete ideal two-fluid entropy-coordinate change preserves sound poles.
+An incomplete substitution can change them while passing its own positive-work
+check. This is a normalized standard reference; no physical entropy offset is
+fitted and no numerical He-II acoustic prediction is made. Four regression tests
+pass. Nominal entropy differences are descriptive; temperature scales and
+physical uncertainty/covariance are not reconciled.
+
+The source controller now distinguishes the found integration anchor from
+unresolved transfer:
+he4_entropy_integration_anchor_found_but_TN1334_reference_transfer_covariance_and_independence_open.
+The overall material/frame controller, frozen Topic 13 constants, null material
+requirements and physical J04/J05/J06 gates remain unchanged.

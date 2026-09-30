@@ -116,3 +116,21 @@ enclosures, not row uncertainties or a probabilistic covariance. Failures
 must be retained without relaxing the rule. Deliberately wrong unit, derivative,
 phase and blank-as-zero interpretations must be detected. No material
 two-fluid/UET mode prediction or EOS parameter fit occurs.
+
+## Entropy-source and reference-coordinate follow-up
+
+Use [HE4_ENTROPY_SOURCE_AND_REFERENCE_CONTRACT.md](HE4_ENTROPY_SOURCE_AND_REFERENCE_CONTRACT.md)
+before mixing thermodynamic source values. Its new package records separate
+fountain and calorimetric ancestry, source units, explicit Table 8.5 integration
+convention and the primary publication-date correction. Prior TN1334 rows and
+Topic 13 sources are read only. Compare only central values at nominal printed
+temperatures; no interpolation, reference-offset fit or physical source test.
+
+For the unchanged standard two-fluid base, declare sigma_star=sigma+a*rho.
+Transform the EOS conjugates/Hessian, entropy current AND superfluid force;
+independently assemble local flux rows and compare with matrix similarity.
+Work congruence, pressure, capacities and characteristic speeds must agree.
+The shifted-entropy unmodified operator is a different model: its own energy
+check can pass. Local entropy/phase defects and pole comparisons are required.
+The 116 checks and four tests are synthetic/reference/source checks, not an
+admitted UET action, physical trajectory, SI He-II response or full nonlinear closure.

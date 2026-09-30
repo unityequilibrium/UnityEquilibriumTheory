@@ -319,3 +319,22 @@ state/frequency/geometry/uncertainty response and independent experiment split.
 The physical Legendre/state/SI and superfluid-phase response correspondence,
 dissipative closure and earlier single-velocity exclusion remain controlling.
 All physical package states and Core/Topic 13 dependency gates are unchanged.
+
+## Entropy-source/reference transfer checkpoint (2026-09-30)
+
+J02 preparation now includes [six source entropy tokens and a coordinate contract](HE4_ENTROPY_SOURCE_AND_REFERENCE_CONTRACT.md),
+with a [116-check audit](Result/artifacts/he4_entropy_source_reference_audit.json).
+Table 8.5 states its own zero-T integration convention; Table 8.3 has a distinct
+fountain-pressure lineage. These narrow source identification, not physical
+J05/J06 or an independent response split. Original TN1334 and Topic 13 packages
+stay unchanged.
+
+The current acquisition controller is
+he4_entropy_integration_anchor_found_but_TN1334_reference_transfer_covariance_and_independence_open.
+Next resolve selected-edition reference conversion or replace that candidate,
+source derivative covariance and exact experimental ancestry, and lock a primary
+matched response protocol. The ideal two-fluid coordinate check demonstrates why
+both entropy current and chemical-potential force must accompany a reference
+change; positive work alone is insufficient. No material entropy offset or sound
+prediction is fitted. Physical Core state/SI/phase/transport admission, the earlier
+single-velocity mode exclusion and blocked J04/J05/J06 remain unchanged.

@@ -267,3 +267,39 @@ CLAIM_BOUNDARY: Internal numerical-method validation only; not evidence that UET
   source-fresh; new/current/historical snapshots, ten-package DAG, blocked physical
   package states, unchanged null material requirements, links/JSON and UTF-8
   source prefixes pass. New source artifact reproduces byte-for-byte locally.
+
+## 2026-09-30 He-II entropy source and reference-coordinate wave
+
+- Wave: research-core; J02 source preparation plus ideal standard-reference audit.
+- Before code: registered source branches, ontology/SI/chain-rule flux/force
+  contract and separate reference registry; locked offsets and tolerances.
+- Changed: entropy source/card/contract, offline verifier/116-check artifact,
+  four tests, topic docs and joint snapshots. All prior hashed artifacts/sources
+  and Topic 13 constants remain unchanged.
+- Actual source review: full rendered Donnelly-Barenghi pages 1243-1245,
+  six raw recommended entropy tokens; primary Singsaas-Ahlers abstract/metadata
+  and REFPROP reference-convention screen. Primary full protocol/thesis missing.
+- Narrowed: Table 8.5 explicitly integrates heat capacity from 0 K; Table 8.3
+  has a fountain-pressure lineage. Publisher resolves date to 1984; review's
+  1983 retained as discrepancy. TN1334 reference transfer remains unresolved.
+- Ran: first audit 116/116 with warnings as errors; four fresh-output tests pass.
+  Complete entropy-coordinate transform preserves poles/work/pressure/capacities.
+  Partial flux or force transformations fail local controls; both omitted can
+  pass positive work yet change synthetic poles. No post-run rule amendment.
+- Data boundary: nominal TN1334-minus-fountain differences 1.7/0.9/0.4 J/(kg K)
+  are descriptive only; physical temperature, covariance and entropy offset
+  conversion are not inferred. No physical He-II speed/parameter fit runs.
+- Source controller now:
+  he4_entropy_integration_anchor_found_but_TN1334_reference_transfer_covariance_and_independence_open.
+- Overall controller remains:
+  vector_momentum_constitutive_origin_and_material_frame_admission_open.
+- Next: selected-edition reference evidence or source replacement, derivative
+  covariance/ancestry and primary response protocol, plus physical Core
+  Legendre/state/SI/superfluid and transport mapping.
+- Claim impact: none; null admitted inputs, J04/J05/J06, Core/Topic 13 gates,
+  independent validation and publication boundaries unchanged.
+
+- Final local review: all 19 scoped tests pass; six current artifacts are
+  source-fresh; new artifact reproduces identical bytes within the local runtime.
+  Snapshot/history, ten-package DAG, unchanged physical package states,
+  source PDF identity, new links/JSON and UTF-8 prior-prefix preservation pass.

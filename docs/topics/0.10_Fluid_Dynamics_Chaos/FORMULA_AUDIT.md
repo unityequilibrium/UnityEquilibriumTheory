@@ -141,3 +141,20 @@ The source's phi is Gamma, not the UET Phi field. Source alpha*T and P*kappa are
 dimensionless products, not directly SI coefficients. Printing-interval
 compatibility is not physical uncertainty or a proof of the material EOS.
 No new central equation or UET scalar-to-material correspondence is promoted.
+
+## Standard entropy-coordinate covariance addendum
+
+[HE4_ENTROPY_SOURCE_AND_REFERENCE_CONTRACT.md](HE4_ENTROPY_SOURCE_AND_REFERENCE_CONTRACT.md)
+records F0-F4 before code: material sigma_star=sigma+a*rho, EOS/conjugate/Hessian
+chain rule, pressure invariance, transformed entropy current and superfluid force,
+and SI dimensions of a. Registry:
+[standard entropy-reference addendum](../../core/07_artifacts/correspondence/uet_equation_correspondence_registry_topic10_entropy_reference_addendum.json).
+This is a standard-reference coordinate relation, not a new UET core equation.
+
+The [116-check result](Result/artifacts/he4_entropy_source_reference_audit.json)
+checks explicit flux/force assembly against similarity and availability congruence.
+Wrong unmodified shifted-entropy dynamics can pass positive work but change poles.
+No physical a is fitted or assigned; s_star cannot be substituted into the
+unmodified entropy-speed expression as a physical absolute entropy. All C/Phi/Q/R
+ontology, SI admission, microscopic origin and physical phase/response restrictions
+remain unchanged.

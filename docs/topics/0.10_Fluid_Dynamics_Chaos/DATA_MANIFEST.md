@@ -112,3 +112,23 @@ stay null. These rows are now ingested only in the new source package. The
 previous two-fluid reference's statement of no numeric ingestion remains
 correct for that historical wave; its hashed inputs and unassigned requirements
 are unchanged. Topic 13 data/calibration/protocol are consumed read only.
+
+## He-II entropy branch candidate (2026-09-30)
+
+- Local numeric/source contract: [he4_entropy_source_and_reference_contract.json](Data/03_Research/he4_entropy_source_and_reference_contract.json).
+- Official source: [Donnelly-Barenghi 1998](https://srd.nist.gov/jpcrdreprint/1.556028.pdf),
+  DOI 10.1063/1.556028; SHA256 c3e03d88b803d36628587638be98e0f3af1e6613b15f81e04eedcc17f3d5442e.
+- Full PDF pages 28-30 (printed 1243-1245) visually inspected. Preserve raw
+  T90 and entropy tokens from Tables 8.3/8.5 at 1.65/1.70/1.75 K; convert
+  J/(g K) by 1000. Recommended spline/integral values, not raw independent trials.
+- Table 8.3 fountain-pressure ancestry differs from Table 8.5 calorimetry;
+  the latter's zero-T integration convention is explicit and not transferred
+  to TN1334. Row uncertainty/covariance and physical temperature-scale matching
+  remain unknown. Source precision/accuracy is not assigned as row errors.
+- Primary [Singsaas-Ahlers paper](https://journals.aps.org/prb/abstract/10.1103/PhysRevB.29.4951)
+  metadata gives 1984-05-01, despite review bibliography year 1983; abstract
+  only, no full protocol/thesis acquired. Exact independence from sound-derived
+  superfluid inputs remains unresolved.
+- Public package contains small numerical facts/attribution only; copyrighted
+  full PDF and render cache are ignored and not offline audit dependencies.
+  TN1334 package, null admitted inputs and Topic 13 matching constants unchanged.
