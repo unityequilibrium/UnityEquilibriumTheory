@@ -192,3 +192,20 @@ assumption. Independently assemble the generalized chemical/temperature/velocity
 operator. Check positive work Hessian, local real/complex energy cancellation,
 coordinate/pole agreement and both acoustic pairs. Detect wrong entropy velocity,
 missing T*s inertia and reversed phase-force sign. No speed is fitted.
+
+## Microscopic 1->2 channel before thermalization
+
+[The leading collision card](CORE_O2_GOLDSTONE_COLLISION_DERIVATION.md) reduces
+the tree radial field algebraically and normalizes the phase fluctuation.
+Polarization checks cubic permutation factors; current source-verbatim
+Goldstone dispersion supplies curvature, on-shell roots and group velocity.
+Integrate canonical two-body phase space with the identical-daughter factor
+at three orders/momenta and two explicitly exploratory weak couplings.
+
+Reconstruct triangles using factored area and direct soft-daughter placement,
+without angular clipping. Separate occupation decay from pole damping.
+Check the nonrelativistic coefficient, derivative soft limit, off-shell Bose
+balance failure, energy/momentum invariants, number nonconservation and a
+positive disconnected entropy form. Its extra null modes prohibit identifying
+a physical relaxation time. Existing Topic13 scalar/contact/Kubo lanes are
+reviewed as bounded prior evidence, not transferred to hydrodynamic velocities.

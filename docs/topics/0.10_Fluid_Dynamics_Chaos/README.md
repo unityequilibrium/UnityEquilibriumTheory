@@ -333,3 +333,22 @@ nonlinear/interacting/live-Phi operator. Physical J04/J05/J06, material inputs,
 Topic 13 constants and previous artifacts remain unchanged.
 Next: nonlinear/thermalization/live-response completion, then material/SI and
 independent EOS/entropy/measurement admission.
+
+## Leading Goldstone collision preparation (2026-10-01)
+
+[The collision derivation](CORE_O2_GOLDSTONE_COLLISION_DERIVATION.md) now
+connects the fixed-response Core tree pressure to a derivative cubic phonon
+vertex and a curved on-shell 1->2 decay channel.
+[159 controls pass](Result/artifacts/fluid_core_o2_goldstone_collision_audit.json):
+T=0 occupation decay approaches k^5, scales with the exploratory coupling and
+has the correct factor-two relation to pole damping and the nonrelativistic
+leading coefficient. This is natural-unit low-energy evidence, not He-II data.
+
+The first 153/159 diagnostic is retained with its exact source. Factored
+triangle geometry repairs numerical endpoint cancellation without relaxing a
+threshold; rate values are unchanged within floating-point precision.
+Balanced triads conserve energy/momentum and have positive entropy form, but
+retain eight null modes in a disconnected 12-node diagnostic. No transport
+time, finite-T rate, thermalization or collective sound damping is assigned.
+Next: connected collision/vector heat-current projection and interacting
+thermal-state convergence; nonlinear/live response and material admission remain.

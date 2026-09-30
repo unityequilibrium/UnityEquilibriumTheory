@@ -422,3 +422,39 @@ CLAIM_BOUNDARY: Internal numerical-method validation only; not evidence that UET
   Core/Topic 13 sources, 16-file scope, UTF-8 prefixes, new JSON and links pass.
   The ideal entropy assumption and all nonlinear/thermalization/material blockers
   remain explicit; no physical gate is promoted.
+
+## 2026-10-01 Leading Goldstone decay channel and collision handoff
+
+- Area/wave: research-core; microscopic source/action channel preparation.
+- Before code: tree P(X), canonical cubic/quartic vertices, dimensions, source
+  curvature, identical daughters, occupation/pole normalization and NR limit
+  recorded in card/contract/separate registry with locked thresholds.
+- Reviewed prior Topic13 collision reconciliation and condensed contact/Kubo
+  admission: no scalar/contact rate is transferred to hydrodynamic thermalization.
+- Actually ran: source-tree curved root/phase-space integration at orders48/96/
+  192, momenta .02/.01/.005 and exploratory lambda .01/.001; polarized cubic
+  vertex, k^5 coefficient, curvature/velocity, coupling scaling, NR pole limit,
+  Bose triad balance, energy/momentum and positive entropy form/null modes.
+- First result153/159 retained with exact source: six endpoint triangle errors.
+  Factored Heron area/direct soft daughter fixes cancellation under unchanged
+  1e-11 criterion. Rates change only at floating-point precision. A subsequent
+  temporary-contract path repair enables structured fail-closed regressions.
+- Current159/159 pass. At lambda=.01, occupation rates approximately4.47838e-14,
+  1.39979e-15,4.37457e-17 natural E for descending locked momenta. Pole damping
+  is half. No finite-T rate or physical lifetime conversion is emitted.
+- Narrowed: a leading Goldstone microscopic channel is available. Eight nulls
+  in the normalized disconnected 12-node diagnostic explicitly leave connected
+  collision/vector heat-current projection and interacting thermalization open.
+- Next controller:
+  leading_Goldstone_decay_channel_checked_but_connected_collision_heat_current_thermalization_and_material_admission_open.
+- Physical controller unchanged:
+  vector_momentum_constitutive_origin_and_material_frame_admission_open.
+- No collective sound damping, finite-T spectral gap/frequency window,
+  nonlinear/live-response/material/SI/Kubo admission, physical J04/J05/J06,
+  claim promotion or dependency unlock. Previous evidence/inputs preserved.
+
+- Final local review: all35 scoped regressions pass with warnings as errors.
+  Ten current artifacts/input hashes are fresh; new collision output reproduces
+  identical bytes locally. Historical preview/source identity, prior snapshots/
+  history, ten-package DAG, unchanged physical states/Core/Topic13 sources,
+  18-file scope, UTF-8 prefixes, JSON and new links pass. No physical promotion.

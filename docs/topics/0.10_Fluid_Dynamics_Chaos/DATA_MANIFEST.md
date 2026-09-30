@@ -176,3 +176,17 @@ No collision/relaxation dataset or physical hydrodynamic frequency window is
 provided. Local source/metric variations test a declared Taylor action.
 Natural current coefficients and two acoustic pairs have no material SI map,
 new calibration, fitted speed or independent He-II validation.
+
+## Leading Goldstone collision input identity
+
+[The contract](Data/03_Research/fluid_core_o2_goldstone_collision_contract.json)
+and [current artifact](Result/artifacts/fluid_core_o2_goldstone_collision_audit.json)
+hash the source-verbatim spectrum adapter, Core action, prior ideal artifact
+and historical Topic13 collision/reconciliation/Kubo records. Old path strings
+inside historical artifacts are evidence of their original layout, not current
+source-fresh reruns. Existing source files and prior result packages are unchanged.
+
+The first failed diagnostic and exact verifier are retained with explicit
+historical roles. New rates have natural energy units; no experimental lifetime,
+SI conversion, fitted material coupling or measured He-II source is supplied.
+Primary references are selected leading-action/FGR/NR correspondence only.

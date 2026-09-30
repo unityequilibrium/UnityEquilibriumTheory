@@ -250,3 +250,24 @@ thermalization, empty states and false physical operator admission fail closed.
 Earlier source/phase artifacts remain current and unchanged. A local ideal
 PASS is not full microscopic Ward completion, nonlinear dynamics, material
 He-II prediction, thermalization or physical package execution.
+
+## Leading cubic Goldstone channel (2026-10-01)
+
+[Contract](Data/03_Research/fluid_core_o2_goldstone_collision_contract.json):
+mu=1.28, fixed Phi=.15, source mass/Z unchanged; exploratory couplings .01/.001,
+momenta .02/.01/.005, orders48/96/192. Locked energy1e-11, algebra1e-10,
+order1e-7, leading coefficient/curvature1e-3, group-velocity1e-6 tolerances.
+[Verifier](Code/03_Research/Research_Fluid_Core_O2_Goldstone_Collision.py)
+passes159 controls, including source-root balance, polarized vertex, k^5,
+coupling scaling, pole factor two, NR limit and triad conservation/null modes.
+
+The [first diagnostic](Result/previews/fluid_core_o2_goldstone_collision_first_execution.json)
+retains153/159 with endpoint triangle defects up to7.84e-8 against1e-11.
+[Exact old source](Result/previews/core_o2_goldstone_collision_first_execution_verifier.py.txt)
+matches its original hash. Stable factored geometry repairs all six failures;
+thresholds/rates/action/state did not change. A later temporary-contract path
+handling repair allows unsupported-admission tests to emit a failing artifact.
+[Four regressions](Code/03_Research/test_fluid_core_o2_goldstone_collision.py)
+check fresh source hashes, rates/normalization, extra null modes, archived
+failure identity and fail-closed unsupported thermalization/operator/empty inputs.
+No physical transport or package gate is promoted.

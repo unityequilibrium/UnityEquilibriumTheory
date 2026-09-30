@@ -196,3 +196,20 @@ the signed thermal pressure-sector derivative and is not kg/m^3. The recorded
 natural speeds are not He-II velocities or a physical Topic 13 response test.
 Material/SI and independent thermodynamic/calibration/response ancestry remain
 separate; no physical package, dependency, claim tier or Core gate is promoted.
+
+## A phonon decay channel is not a two-fluid transport time
+
+[The collision artifact](Result/artifacts/fluid_core_o2_goldstone_collision_audit.json)
+uses a leading tree derivative vertex with the current curved tree spectrum;
+finite-k numbers are asymptotic diagnostics without matched higher-gradient
+vertices or a self-consistent interacting thermal state. Exploratory
+lambda=.01/.001 does not recalibrate the previous lambda=1 ideal controls.
+
+Only T=0 occupation/pole decay is emitted. Bose detailed balance at one
+reference bath temperature tests the triad structure, not a computed finite-T
+rate, full Landau/2<->2 kernel, or derived entropy conservation. Disconnected
+triads have extra null modes: no continuum spectral gap/vector heat-current
+projection/transport time or physical hydrodynamic frequency window is known.
+Upper/lower quasiparticle branches are not the two ideal collective sounds.
+No existing contact-channel Kubo value or archived sound-speed field is treated
+as current physical two-fluid admission. Physical/material/SI gates stay open.

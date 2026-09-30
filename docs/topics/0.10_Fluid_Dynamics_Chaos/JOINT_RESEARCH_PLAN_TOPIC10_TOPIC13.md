@@ -387,3 +387,18 @@ and a physical hydrodynamic window are explicit remaining blockers, followed by
 material/SI and independent source/protocol admission. J01/J02 preparation narrows;
 J04/J05/J06 remain NOT_STARTED and no package dependency is unlocked.
 The source acquisition and overall material/frame controller remain unchanged.
+
+## Connected collision handoff (2026-10-01)
+
+[The Goldstone channel](CORE_O2_GOLDSTONE_COLLISION_DERIVATION.md) adds
+action-derived microscopic preparation to the ideal two-current reference.
+It audits T=0 single-mode decay, Bose triad invariants and derivative soft
+behavior; the joint JSON retains previous snapshots and adds the current
+159-control package plus the first failed diagnostic.
+
+Existing Topic13 scalar/gain-loss/contact/Kubo evidence remains scoped. Next
+requires connected condensed collision/current matching, including vector
+heat-current projection, interacting thermal state and resolution/allowed-channel
+control. A single-mode width or positive disconnected graph cannot establish
+omega*tau <<1. Material/independent EOS/entropy/response sources and nonlinear/
+live-response work remain separate; J04/J05/J06 stay NOT_STARTED.

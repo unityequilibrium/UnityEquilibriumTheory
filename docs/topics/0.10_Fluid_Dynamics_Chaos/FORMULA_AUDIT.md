@@ -208,3 +208,17 @@ The signed thermal pressure derivative is not the normal charge coefficient.
 No phase meaning is assigned to Phi. Local ideal-mode eligibility is not
 thermalization, a complete nonlinear action, a physical material normal density,
 He-II speed or SI observable correspondence. Overall physical admission stays open.
+
+## Tree derivative phonon collision channel
+
+[Derivation](CORE_O2_GOLDSTONE_COLLISION_DERIVATION.md) and the
+[separate registry](../../core/07_artifacts/correspondence/uet_equation_correspondence_registry_topic10_o2_goldstone_collision_addendum.json)
+record matter-phase ontology, canonical normalization, dimensions and derivation
+class before execution. L3/L4 follow the tree P(X); curvature follows the current
+source spectrum. The canonical identical-daughter phase-space convention gives
+occupation Gamma and pole Gamma/2; the low-k/NR coefficients are cross-checked.
+
+This leading asymptotic channel is distinct from screened contact mode-space
+Kubo, ideal collective mode damping and heat-current relaxation. Bose triad
+entropy positivity does not prove connected thermalization. No live Phi,
+complete finite-T vertex, nonlinear operator, SI mapping or Core unlock.
