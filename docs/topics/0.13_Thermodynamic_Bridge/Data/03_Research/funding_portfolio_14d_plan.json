@@ -93,6 +93,23 @@
     "submission_buffers_days_before_actual_deadline": {"scientific_scope_freeze": 14, "institutional_documents": 7, "final_forms_and_attachments": 3},
     "long_term_benefit": "Independent response evidence and measurement constraints support bounded thermal/transport handoff; curved 3+1, Gravity and Galaxy retain their own dependencies"
   },
+  "thermal_oneloop_ward_current_evidence_2026_10_01": {
+    "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/t13_thermal_oneloop_ward_current.json",
+    "sha256": "cfd794f8d1f7ab1de4d3e3b9feb991957c76d57d40375ddd6bbab2a8a2a514aa",
+    "verification_status": "PASS_THERMAL_ONE_LOOP_WARD_CURRENT",
+    "closure_level": "CLOSED_FOR_LANE",
+    "scientific_contribution": "Computed thermal transverse tadpole and bubble; loop-order condensate Ward cancellation and static-current matching; bare amplitude-Hessian infrared boundary",
+    "controlling_blocker": "finite_momentum_retarded_Ward_current_and_IR_resummation_not_derived",
+    "D05_action": "Use this as a scoped derivation result, not physical sound admission; state the remaining structural proof and measurement-design obligations",
+    "W04_action": "Derive finite external momentum/frequency vertices in the same prescription and address infrared resummation before retarded operator admission",
+    "thermal_zero_momentum_loop_computed": true,
+    "exact_finite_T_background_derived": false,
+    "controlled_truncation_error_established": false,
+    "g1_physical_unlock": false,
+    "g2_science_unlock": false,
+    "full_core_unlock": false,
+    "core_composition_gate_overwritten": false
+  },
   "conditional_operator_evidence_2026_10_01": {
     "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/t13_conditional_twofluid_operator.json",
     "sha256": "8606303e4818030dd74061c14b243542c19c4cbb262dda29261951d4c87d6412",

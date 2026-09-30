@@ -14,6 +14,8 @@
 
 หลักฐาน 1 ตุลาคมแยกคำถามย่อยได้ชัด: [thermal phase-gradient curvature](Result/artifacts/T13_THERMAL_GRADIENT_CURVATURE_STATIONARITY_2026-10-01.md) คำนวณได้และตรวจสองวิธีแล้ว แต่ `f_path=f_held-2Z*Omega_x/lambda` มี nonstationary amplitude-path term ที่ยังต้องจัดการ จึงยังไม่เป็น physical current หรือ He-II mode prediction ผลนี้ไม่พิสูจน์ว่า consistent perturbative completion เป็นไปไม่ได้
 
+ผลต่อมาในวันเดียวกัน: [one-loop thermal Ward/current](Result/artifacts/T13_THERMAL_ONE_LOOP_WARD_CURRENT_2026-10-01.md) คำนวณ tadpole กับ bubble และปิด zero-momentum Ward/static-current matching ที่ fixed Phi ในลำดับ one-loop แล้ว แพ็ก A จึงไม่ต้องเริ่มจากการเดาค่า zero-momentum correction อีก แต่ต้อง derive finite-q/frequency kernel และแก้ infrared/nonuniform-expansion boundary ก่อนรับ stationary retarded operator ผลนี้ไม่ทำให้ W4 หรือ physical gate ผ่านโดยอัตโนมัติ
+
 ### ผลส่งมอบสองสัปดาห์ที่ต้องมี
 
 | วันที่ภายใน | ผลที่รับงาน | ไม่ให้นับเป็นความสำเร็จแทน |

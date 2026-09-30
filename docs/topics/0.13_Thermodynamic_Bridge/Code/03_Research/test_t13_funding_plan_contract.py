@@ -59,7 +59,8 @@ def test_planning_revision_cannot_complete_research_or_overwrite_core_scope():
 def test_plan_documents_and_latest_evidence_are_linked_without_holdout_reads():
     for field in ("plan_document", "goal_brief", "long_term_plan_document"):
         assert (ROOT / PLAN[field]).is_file()
-    for field in ("conditional_operator_evidence_2026_10_01", "thermal_gradient_evidence_2026_10_01"):
+    for field in ("conditional_operator_evidence_2026_10_01", "thermal_gradient_evidence_2026_10_01",
+                  "thermal_oneloop_ward_current_evidence_2026_10_01"):
         evidence = PLAN[field]
         path = ROOT / evidence["path"]
         assert hashlib.sha256(path.read_bytes()).hexdigest() == evidence["sha256"]

@@ -553,8 +553,19 @@ tree-relaxed pressure derivative includes a nonzero amplitude path term.
 The tree amplitude is not jointly stationary in the existing thermal-only
 Gaussian class. A held-amplitude partial derivative is different and cannot
 be mixed with tree-relaxed EOS derivatives as though the protocols matched.
-The inferred linearized tadpole shift requires a matched Ward/self-energy
-correction; that microscopic loop response has not been computed. Thus the
+At that wave the inferred linearized tadpole shift required a matched
+Ward/self-energy correction that had not yet been computed. Thus the
 new static curvature is not yet an admitted stationary current, controlled
 finite-T completion, physical normal density, Kubo coefficient or He-II
 prediction. A consistent perturbative completion remains a research route.
+
+The subsequent [thermal one-loop Ward/current calculation](Result/artifacts/T13_THERMAL_ONE_LOOP_WARD_CURRENT_2026-10-01.md)
+computes the transverse tadpole and bubble at zero external momentum and
+matches the static current to first loop order at fixed Phi. It does not
+impose a state-dependent counterterm to force the equality. This narrows the
+missing-loop obligation, but joint Phi stationarity, a stable resummed
+finite-T background, finite-momentum retarded response and material/transport
+admission remain open. The bare amplitude Hessian has an infrared k^-2
+radial-integrand term; a finite-grid derivative is not a controlled
+continuum uncertainty. This singular bare expansion does not imply that a
+physical second-sound observable must diverge or that all completions fail.

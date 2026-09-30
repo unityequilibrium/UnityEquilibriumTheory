@@ -1,5 +1,18 @@
 # Formula Audit: 0.13_Thermodynamic_Bridge
 
+## Thermal One-Loop Ward and Static Current (2026-10-01)
+
+| formula_id | relation | variables and units | constant_origin | proof_status | verification_role | failure_mode | next_hardening_step |
+| :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- |
+| t13.diagnostic.thermal_transverse_1pi_zero | `Sigma_pi,T(0)=lambda/Z^2*(I_sigma+3I_pi)-4lambda^2*x0/Z^3*B=2Omega_G,x/Z` | Sigma and Omega_x E^2; I E^2; B dimensionless | Cartesian derivatives of existing O(2) quartic Hessian; no selected counterterm | derived within thermal one-loop difference | independent matrix/Matsubara and pole-residue checks | zero-momentum equality is not a retarded pole or physical response | derive finite-q/frequency kernel and IR treatment |
+| t13.diagnostic.loop_order_condensate_current | `delta_x=-2Omega_G,x/lambda; f_1loop=f_held+Z*delta_x=f_path` | x and f E^2; Z and lambda dimensionless | formal loop-order stationarity and chain rule | derived at fixed Phi, not exact equilibrium | unit/coupling limits and current matching | bare shifted determinant is unstable; no uniform error bound | consistent resummed state and material/current map |
+| t13.diagnostic.gaussian_amplitude_hessian_IR | `radial_integrand(Omega_G,xx)~-g^2*T/(4pi^2*k^2)` | integrand E^-1; Hessian dimensionless | analytic gapless-mode derivative | derived asymptote with numerical refinement | exposes nonintegrable bare IR limit | finite-grid derivative misreported as continuum uncertainty | finite-momentum analysis, resummation or justified effective variables |
+
+Code: `Code/03_Research/Research_T13_Thermal_OneLoop_Ward_Current.py`.
+See [derivation and claim boundary](Result/artifacts/T13_THERMAL_ONE_LOOP_WARD_CURRENT_2026-10-01.md).
+These diagnostic IDs are not new admitted Core equations; no SI alpha,
+physical Kubo, source/detector response or Full Topic13 claim is promoted.
+
 ## Finite-q Spatial Compatibility (2026-09-07)
 
 | formula_id | relation | code surface | variables and units | constant_origin | proof_status | verification_role | failure_mode | next_hardening_step |

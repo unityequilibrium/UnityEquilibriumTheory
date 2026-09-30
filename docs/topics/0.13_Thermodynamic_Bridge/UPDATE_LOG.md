@@ -1,3 +1,27 @@
+## 2026-10-01 - Thermal one-loop Ward and static-current matching
+
+MAJOR_RESULT_CLOSURE: T13_THERMAL_ONE_LOOP_WARD_AND_STATIC_CURRENT_MATCH is CLOSED_FOR_LANE at formal thermal one-loop order, fixed Phi.
+
+WHAT_IS_ACTUALLY_CLOSED: Actual tadpole and bubble satisfy the transverse zero-momentum Ward relation and cancel the order-matched condensate shift. Static current equals the prior path curvature in this order.
+
+WHAT_REMAINS_OPEN: Finite-q/frequency retarded vertices, infrared resummation, joint Phi background, vacuum/material matching, error control and physical source/detector/normal-component admission.
+
+DEPENDENCY_UNLOCKED: Fixed-Phi one-loop static-current design only; no physical funding gate or Core-composition rewrite.
+
+STATUS: PASS_THERMAL_ONE_LOOP_WARD_CURRENT; original exact Gaussian no-go and failed tree lift preserved.
+
+WHAT_CHANGED: Added loop verifier/nine tests/artifact/derivation, formula-audit rows and synchronized limitations/funding plans. No Core equations, target rows, calibration or thresholds changed.
+
+EQUATION_OR_MAPPING: Sigma_pi,T(0)=2Omega_G,x/Z; delta_x=-2Omega_G,x/lambda; f_1loop=f_held+Z*delta_x=f_path. Bare amplitude-Hessian radial integrand tends to -g^2*T/(4pi^2*k^2).
+
+VERIFICATION: 44 focused/related tests pass, including nine new tests. Direct Matsubara/vacuum numerical subtraction agrees with residues to 6.29e-11 relative; algebra/current residuals are below 1.4e-17. IR test refined k instead of loosening its tolerance after an initial finite-step failure. Artifact SHA-256 cfd794f8d1f7ab1de4d3e3b9feb991957c76d57d40375ddd6bbab2a8a2a514aa. All relevant PR #30 checks passed on previous head 03739b3f9; new-head CI remains to be reviewed.
+
+CONTROLLING_BLOCKER: finite_momentum_retarded_Ward_current_and_IR_resummation_not_derived.
+
+NEXT_ACTION: Derive the finite external momentum/frequency loop kernel in the same prescription; classify the nonuniform IR limit before resummed-state or longitudinal response admission. Keep D5 physical G1/G2 unresolved unless their independent admissions exist.
+
+CLAIM_BOUNDARY: Thermal one-loop static/zero-momentum derivation at fixed Phi, not exact finite-T equilibrium, physical He-II prediction, Kubo coefficient, controlled remainder or global closure. No Xie access or fit.
+
 ## 2026-10-01 - Funding timeline and model-selection revision
 
 MAJOR_RESULT_CLOSURE: Planning contract revised; no scientific closure or Core status changed.
