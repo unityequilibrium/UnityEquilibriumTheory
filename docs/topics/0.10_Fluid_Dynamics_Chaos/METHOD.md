@@ -242,3 +242,22 @@ This is a trial enrichment, not an assumed solution asymptote or matter phase.
 Principal shared-bank subspaces check nested variational response growth.
 Source representation, kernel conditioning, within-family refinement and
 independent-family agreement remain separate acceptance obligations.
+
+## Independent enriched and smooth infrared trials
+
+[HYBRID](CORE_O2_GOLDSTONE_INFRARED_TRIALS.md) orthogonalizes seeds
+k,T,EVEN1..N-2 with a recorded seed transform and shared off-grid evaluation.
+HYBRID18 contains EVEN17 and is contained in SOFT35. Their discrete variational
+response ordering passes; it is not a continuum response upper bound.
+
+Replace only the soft seed by T*k/sqrt(k^2+epsilon^2) for epsilon>0, keeping
+event integration limits and interaction unchanged. The Cartesian feature is
+smooth at the origin; its epsilon->0 convergence in finite-cutoff Bose Gram
+norm follows by dominated convergence. The collision-form domain needs a
+separate argument. Epsilon and parent/daughter quadrature sweeps remain distinct.
+
+[Geometry repair](CORE_O2_GOLDSTONE_INFRARED_GEOMETRY_REPAIR.md) evaluates
+Heron factors using the positive on-shell excess and places the soft vector
+directly. Decimal60 repairs only gaps below128 machine-epsilon*k.
+The original floating q/energy/measure/occupations remain; raw geometry,
+source parameter consistency, invariants and old matrix correspondence pass.

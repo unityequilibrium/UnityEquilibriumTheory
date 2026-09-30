@@ -386,3 +386,20 @@ cutoff, basis and source targets pass within its family. EVEN cutoff changes
 20.4462%/19.5268%. The overall refinement gate therefore remains OPEN.
 Next: independently soft-enriched trial space and infrared/continuum-current
 bounds, then interacting physical heat-current/frame/material admission.
+
+## Independent soft enrichment and smooth trials (2026-10-01)
+
+[The independent trial card](CORE_O2_GOLDSTONE_INFRARED_TRIALS.md) adds a
+bounded radial seed to the old EVEN space, independently of SOFT's recurrence.
+HYBRID18/SOFT35 response differs0.04684%/0.04251%, below the unchanged1%
+targets. HYBRID basis/cutoff and smooth-origin epsilon/order controls pass.
+[The artifact](Result/artifacts/fluid_core_o2_infrared_trials_audit.json)
+passes664 structural checks. Old EVEN/cross-family failures remain immutable.
+
+First high-order execution stopped at rounded near-collinear geometry. The
+[first output/source](Result/previews/fluid_core_o2_infrared_trials_first_execution.json)
+are retained; [the precision repair](CORE_O2_GOLDSTONE_INFRARED_GEOMETRY_REPAIR.md)
+keeps the collision measure/vertex/gain-loss AST, state and numerical targets.
+Matched old G/Q/source/R differ below1.3e-13; no event clipping or fitted rates.
+Finite trial agreement does not establish a continuum upper/error bound, collision
+domain, physical heat-current/frame or material response. These now control.

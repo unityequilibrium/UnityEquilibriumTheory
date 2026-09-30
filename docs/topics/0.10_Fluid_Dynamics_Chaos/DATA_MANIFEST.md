@@ -218,3 +218,18 @@ Larger cutoffs/bases use the same low-T/coupling reference and energy validity
 bound. Orthogonalization is a numerical coordinate change; SOFT is explicit
 trial enrichment, neither an interaction adjustment nor data fitting.
 No new He-II row, SI scale, material transport coefficient or blind source.
+
+## Independent infrared trial source and repair identity
+
+[Contract](Data/03_Research/fluid_core_o2_infrared_trials_contract.json)
+and [artifact](Result/artifacts/fluid_core_o2_infrared_trials_audit.json)
+hash the immutable vector package and all its input ancestors, new trial card/
+registry and code, archived first source/output, plus the separate geometry
+repair card/registry. First contract/card/registry bytes remain unchanged.
+Historical source hashes are verified through the exact first-source archive.
+
+Same low-T/coupling/material boundaries remain. Smooth epsilon is a numerical
+trial parameter, not a scattering regulator or material length. Across30 banks,
+576 near-collinear events use gap-only high precision; source B/r/mu consistency
+is checked. The unchanged old matrix/response correspondence is below1.3e-13.
+No new physical input, material coefficient, SI mapping or blind source is added.

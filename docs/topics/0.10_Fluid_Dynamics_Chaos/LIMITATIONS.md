@@ -244,3 +244,18 @@ The scalar block is reused from earlier evidence, not rerun in this vector pass.
 Kinetic energy-current still lacks full condensate/charge heat-current/frame
 matching, self-consistent thermal-state/all-channel completion and material/SI/
 independent-source admission. No physical relaxation/damping time is assigned.
+
+## Enriched finite targets pass; continuum and material heat-current stay open
+
+[The new artifact](Result/artifacts/fluid_core_o2_infrared_trials_audit.json)
+passes the predeclared HYBRID/SOFT/smooth finite targets at both low-T controls.
+This narrows the old20% trial-space discrepancy through explicit soft enrichment;
+it does not relabel the old EVEN/basis/cutoff failures or make all continuum
+spaces equivalent. Finite polynomial nesting gives discrete variational ordering.
+
+Smooth-seed dominated convergence proves Gram-norm approximation only. No
+collision quadratic-form domain, continuum source-weighted upper/error bound
+or spectral gap is established. The selected leading cubic channel remains
+tree/kinetic, without full interacting thermal self-energy/additional channels.
+Its source is not admitted condensate/charge heat current or a physical frame.
+No material/SI coefficient, relaxation/damping time or two-fluid prediction.

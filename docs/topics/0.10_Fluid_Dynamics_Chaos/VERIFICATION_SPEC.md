@@ -313,3 +313,26 @@ check source freshness/non-admission, shared invariants/same-span/nested respons
 honest failed targets and fail-closed admission/empty/relaxed-target mutations.
 First execution needed no repair. Older failed Galerkin results remain unchanged.
 A green diagnostic or regression is not a green physical convergence gate.
+
+## Independent enriched/smooth trial acceptance (2026-10-01)
+
+[Contract](Data/03_Research/fluid_core_o2_infrared_trials_contract.json):
+same exploratory states/coupling; Gauss96/192/384, cutoffs40/50/60*T/c,
+HYBRID6/10/14/18, SOFT35 and EVEN17. Smooth HYBRID18 delta=.1/.03/.01/.003.
+All response/refinement/source targets remain1%; algebra1e-8, event1e-9,
+relative spectral1e-9, correspondence1e-8 and E_cut/gap<=.1.
+
+[Verifier](Code/03_Research/Research_Fluid_Core_O2_Infrared_Trials.py)
+passes664 structural checks and the declared finite enriched/smooth targets.
+Cross-family0.04684%/0.04251%; HYBRID last basis0.02286%/0.02409%, last
+cutoff0.01249%/0.01083%. Last smooth/HYBRID differences below6.3e-7 relative.
+[Four regressions](Code/03_Research/test_fluid_core_o2_infrared_trials.py)
+cover fresh hashes/archive/collision-tail, discrete bounds versus historical
+failure, smooth origin/rounded geometry and fail-closed physical/continuum claims.
+
+First execution124/126 stopped before any complete state on rounded geometry.
+[First source](Result/previews/core_o2_infrared_trials_first_execution_verifier.py.txt)
+and [output](Result/previews/fluid_core_o2_infrared_trials_first_execution.json)
+remain exact. The full function AST change is reported; physical collision-tail
+AST matches. Precision repair uses no clipping, floors or changed acceptance.
+664 includes30 source-relation guards. No continuum/physical gate promotion.

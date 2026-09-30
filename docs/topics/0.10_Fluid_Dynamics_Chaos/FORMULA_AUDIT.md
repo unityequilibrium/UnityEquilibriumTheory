@@ -250,3 +250,18 @@ Same-span coordinate correspondence isolates roundoff from trial enrichment.
 SOFT order35 includes EVEN order17's highest radial degree33; nested variational
 response checks pass. Finite Hilbert admissibility is not a continuum-domain or
 gap proof. The physical kinetic-to-material heat-current mapping stays open.
+
+## Enrichment, smooth Gram limit and near-collinear coordinate identity
+
+[Trial card](CORE_O2_GOLDSTONE_INFRARED_TRIALS.md),
+[trial registry](../../core/07_artifacts/correspondence/uet_equation_correspondence_registry_topic10_o2_infrared_trials_addendum.json),
+[geometry card](CORE_O2_GOLDSTONE_INFRARED_GEOMETRY_REPAIR.md) and
+[geometry registry](../../core/07_artifacts/correspondence/uet_equation_correspondence_registry_topic10_o2_infrared_geometry_addendum.json)
+record seed/epsilon momentum unitsE and unchanged G:E5,Q:E6,R:E4.
+Heron d-form/direct soft-vector placement is an algebraic event identity.
+Float/Decimal parameter consistency is bounded; no new interaction is introduced.
+
+The physical velocity/vertex/measure/Bose/gain-loss AST is unchanged even though
+the explicit geometry implementation's full AST differs. Smooth finite-cutoff
+Gram dominated convergence is a local mathematical lemma, not collision-form
+or continuum-current convergence. Physical heat-current/frame remains unadmitted.

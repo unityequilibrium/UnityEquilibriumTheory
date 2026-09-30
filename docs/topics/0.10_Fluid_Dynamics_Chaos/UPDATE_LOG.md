@@ -537,3 +537,44 @@ CLAIM_BOUNDARY: Internal numerical-method validation only; not evidence that UET
   in the new regression file. Removed that whitespace only; evidence-producing
   code, locked contract, all artifact bytes and numerical targets are unchanged.
   No scientific verifier rerun is needed; current-head CI will rerun after push.
+
+## 2026-10-01 Independent soft enrichment, smooth origin and infrared geometry
+
+- Area/wave: research-core; selected kinetic trial-space/numerical precision pass.
+- Before execution: independent HYBRID and smooth-origin trial card/contract/
+  registry locks unchanged states/kernel/source and1% targets. No fitting.
+- Actually ran: Gauss96/192/384, cutoffs40/50/60, HYBRID6/10/14/18,
+  SOFT35/EVEN17, smooth deltas.1/.03/.01/.003 at naturalT .002/.004,
+  lambda.01; immutable matrix correspondence, discrete bounds, source/momentum,
+  geometry/Bose, resolvents/rank and smooth-family scale2.
+- First124/126 stopped with rounded non-interior geometry before complete states.
+  Exact source/output retained. Separate pre-repair card/registry records Heron
+  d-form/direct soft-vector identity and gap-only Decimal60 below128epsilon*k.
+- Final664/664 passes, including30 B/r/mu source-consistency guards. Across30
+  banks576 events use high precision; no clipping, source, rate or target change.
+  Full AST difference is explicit; physical velocity/vertex/measure/gain-loss AST
+  matches and old G/Q/source/R correspondence is below1.3e-13.
+- Declared finite1% targets PASS: HYBRID/SOFT0.04684%/0.04251%, last
+  HYBRID basis0.02286%/0.02409%, cutoff0.01249%/0.01083%.
+  Last smooth/HYBRID difference below6.3e-7 relative; order/delta targets pass.
+- Narrowed: independent enrichment and smooth trials explain the old low-order
+  trial-space sensitivity. Old EVEN and cross-family FAILs remain unchanged.
+- Gram-norm dominated-convergence lemma and discrete variational nesting are
+  separate from unproved continuum collision-domain and current upper/error bounds.
+- Controlling measured blocker:
+  infrared_collision_form_domain_continuum_current_and_physical_heat_current_admission_open.
+- Overall controller unchanged:
+  vector_momentum_constitutive_origin_and_material_frame_admission_open.
+- Next: selected continuum collision-form/source-weighted bounds, then microscopic
+  condensate/charge heat-current/frame, interacting-state/additional channels and
+  nonlinear/live/material/SI/independent-source correspondence.
+- Scalar evidence reused, not rerun; no physical time/window/damping, gate promotion,
+  J04/J05/J06 execution or Core/Topic13 dependency unlock.
+
+- Final local review: all47 scoped regressions pass with warnings as errors;
+  four new tests pass again after making boundary-check serialization order
+  deterministic. Numerical targets are exactly unchanged by that repair.
+  Thirteen current artifacts/input hashes are fresh; the new output reproduces
+  identical bytes locally. First failed source identity, prior snapshots/history,
+  ten-package DAG, unchanged physical/Core/Topic13 sources,20-file scope,
+  UTF-8 prefixes, JSON and links pass. No continuum or physical gate promotion.

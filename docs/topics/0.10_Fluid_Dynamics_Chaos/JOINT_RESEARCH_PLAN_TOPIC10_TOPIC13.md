@@ -433,3 +433,19 @@ Next: an independently soft-enriched family and infrared/continuum-current
 bounds while retaining the old failed targets, then physical heat-current/frame/
 interacting-state and material/SI/source admission. Earlier snapshots remain
 immutable and physical J04/J05/J06 stay NOT_STARTED; no dependency unlock.
+
+## Enriched finite targets and continuum-domain handoff (2026-10-01)
+
+[The infrared trial package](CORE_O2_GOLDSTONE_INFRARED_TRIALS.md) tests
+independent soft enrichment of the old EVEN space and smooth-origin trials.
+664 structural controls and declared1% finite enriched/smooth targets pass.
+HYBRID/SOFT differences0.04684%/0.04251%; no prior FAIL is relabeled.
+
+First near-collinear rounding failure and source are retained; the separately
+registered numerical geometry repair changes no collision weights or thresholds.
+Controlling measured blocker:
+infrared_collision_form_domain_continuum_current_and_physical_heat_current_admission_open.
+Next: collision-form domain and continuum source-weighted upper/error bounds,
+then microscopic condensate/charge heat-current/frame and interacting thermal
+completion. Gram-norm approximation or discrete variational ordering alone
+cannot unlock physical J04/J05/J06, material/SI or independent-source admission.
