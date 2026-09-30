@@ -132,3 +132,25 @@ he4_entropy_integration_anchor_found_but_TN1334_reference_transfer_covariance_an
 A partial entropy-coordinate substitution can preserve positive work yet alter
 sound poles. Neither this diagnostic nor finding a zero-T integration convention
 admits a physical Core entropy/phase/mass/SI map. J04/J05/J06 remain unexecuted.
+
+## Core static pieces do not yet define one admitted two-fluid inertia
+
+The [current source diagnostic](Result/artifacts/fluid_core_o2_common_flow_composition_audit.json)
+rejects only the proposed identification chi_n=chi_perp_qp with unmodified
+f_s_tree at the three declared condensed points. The normal branch controls
+pass. A target FAIL is retained despite 69/69 execution/control checks passing.
+Observed refinement spread is numerical stability evidence, not a rigorous
+truncation/error bound or physical uncertainty. No full-temperature theorem.
+
+The configurations use lambda=1, a declared Core control rather than an
+established weak-coupling physical regime. No interacting/renormalized error
+estimate, live Phi, complete master function/entrainment or full Core runtime
+execution is supplied. Relativistic natural-unit enthalpy is not He-II SI mass
+density; pressure-sector labels are not measured normal/superfluid fractions.
+
+Candidate controller:
+finite_temperature_phase_stiffness_and_normal_momentum_common_action_match_missing.
+A consistent finite-T phase/current/stress and normal response is required.
+Even a scalar target PASS would not admit the two acoustic modes, physical
+Kubo/transport, material state/SI map or independent response protocol.
+Prior physical/Core/Topic 13 gates and single-velocity exclusion remain unchanged.

@@ -134,3 +134,22 @@ The shifted-entropy unmodified operator is a different model: its own energy
 check can pass. Local entropy/phase defects and pole comparisons are required.
 The 116 checks and four tests are synthetic/reference/source checks, not an
 admitted UET action, physical trajectory, SI He-II response or full nonlinear closure.
+
+## Current Core source-function common-flow probe
+
+[CORE_O2_COMMON_FLOW_COMPOSITION_CONTRACT.md](CORE_O2_COMMON_FLOW_COMPOSITION_CONTRACT.md)
+locks the conditional relativistic common-flow target w=mu^2*f_s+chi_n.
+Execute named source-verbatim AST definitions in isolated explicit-config
+namespaces: reciprocal response/mass, fixed-Phi quasiparticle pressure/spectrum
+and formal Doppler response. Source/function hashes identify what actually ran;
+historical static artifacts provide boundary context only, not a fresh native
+Core runtime or validation of their old source-path metadata.
+
+Compute fixed-Phi pressure derivatives with a separate five-point wrapper.
+Sweep quadrature order and cutoff separately, plus derivative steps; keep the
+composition target PASS/FAIL separate from successful diagnostic execution.
+Normal-gas enthalpy and tree phase/charge/Goldstone controls establish sensitivity.
+At the declared condensed points, formal Doppler proxy plus tree stiffness
+fails the common-flow target. Do not force f_s=(w-chi)/mu^2 and call it derived.
+The next action is a common finite-T flow effective-action/current/stress
+derivation, not fitting a stiffness or importing He-II sound speeds.

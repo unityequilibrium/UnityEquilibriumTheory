@@ -132,3 +132,18 @@ are unchanged. Topic 13 data/calibration/protocol are consumed read only.
 - Public package contains small numerical facts/attribution only; copyrighted
   full PDF and render cache are ignored and not offline audit dependencies.
   TN1334 package, null admitted inputs and Topic 13 matching constants unchanged.
+
+## Core common-flow source-function input package
+
+[fluid_core_o2_common_flow_contract.json](Data/03_Research/fluid_core_o2_common_flow_contract.json)
+lists canonical migrated Core paths, selected AST definitions, explicit fixed-Phi
+natural-unit controls and versioned primary method sources. The result records
+whole-file and extracted-definition hashes. Historical Core static artifact
+and Topic 13 protocol hashes are boundary-context identities; obsolete historical
+source paths are not asserted to be fresh runtime evidence.
+
+No additional material measurements, He-II density/stiffness, entropy offset,
+sound target, coefficient fit or SI mass conversion is ingested. Lambda=1 and
+the five T/mu points are declared computational controls only. Previous TN1334,
+entropy-source and Topic 13 packages remain byte-unchanged. The new candidate
+composition failure is source-function evidence, not external validation.

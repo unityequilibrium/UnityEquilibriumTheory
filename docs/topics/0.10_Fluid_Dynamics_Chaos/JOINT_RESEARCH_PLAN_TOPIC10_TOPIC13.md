@@ -338,3 +338,22 @@ both entropy current and chemical-potential force must accompany a reference
 change; positive work alone is insufficient. No material entropy offset or sound
 prediction is fitted. Physical Core state/SI/phase/transport admission, the earlier
 single-velocity mode exclusion and blocked J04/J05/J06 remain unchanged.
+
+## Current Core common-flow composition checkpoint (2026-09-30)
+
+J01/J02 preparation now includes a [Core source-function composition contract](CORE_O2_COMMON_FLOW_COMPOSITION_CONTRACT.md)
+and [69-check execution artifact](Result/artifacts/fluid_core_o2_common_flow_composition_audit.json).
+The ideal common-flow scalar target FAIL_REQUIRED_COMMON_FLOW_IDENTITY at all
+three declared condensed points rejects the shortcut of combining formal Doppler
+normal response with tree phase stiffness as one physical two-fluid inertia.
+Normal/tree controls and separate component refinements pass. This is not
+physical J04/J05/J06 execution or a complete failure of the existing O(2) lane.
+
+The narrower candidate controller is
+finite_temperature_phase_stiffness_and_normal_momentum_common_action_match_missing.
+Next derive flow-dependent finite-T phase stiffness/current/stress/normal response
+from one common effective action with Ward/entrainment consistency. Do not fit a
+coefficient from this identity. Source entropy-reference transfer/covariance and
+independent response protocol remain separate required work; their current
+snapshots are retained. Overall material/frame/SI admission and physical package
+states are unchanged; the normal-only heat balance cannot cover condensed He-II.

@@ -158,3 +158,20 @@ No physical a is fitted or assigned; s_star cannot be substituted into the
 unmodified entropy-speed expression as a physical absolute entropy. All C/Phi/Q/R
 ontology, SI admission, microscopic origin and physical phase/response restrictions
 remain unchanged.
+
+## Conditional Core common-flow composition correspondence
+
+[The new F0-F4 contract](CORE_O2_COMMON_FLOW_COMPOSITION_CONTRACT.md) records
+natural-unit charge/entropy density, phase stiffness E^2, momentum inertia E^4,
+fixed-Phi ensemble and a separate superfluid phase. It derives the conditional
+target w=T*s+mu*n=mu^2*f_s+chi_n from one ideal relativistic current/stress state.
+Paper phase-gradient sigma and prior entropy-density sigma are distinct.
+Registry: [O(2) common-flow addendum](../../core/07_artifacts/correspondence/uet_equation_correspondence_registry_topic10_o2_common_flow_addendum.json).
+
+Current source tree phase stiffness and formal Doppler response fail this
+composition target at the declared condensed points; the 69-check execution
+audit does not convert that FAIL into admission. Tree T=0 inertia and long-wave
+Goldstone/EOS controls pass. No finite-T stiffness is fitted or emitted from
+the identity. A consistent common flow-dependent effective action/current/stress
+and entrainment derivation remains required, followed by nonrelativistic,
+material/SI and physical-response correspondence. No C/Phi/Q/R relabeling.

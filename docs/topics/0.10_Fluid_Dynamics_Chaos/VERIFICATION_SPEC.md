@@ -179,3 +179,28 @@ cannot be independently established by the offline audit. Six source tokens
 are candidates only. Central nominal differences have no acceptance threshold,
 temperature interpolation or reference conversion. Original material values
 stay null. No physical/Core/Topic 13 gate is promoted.
+
+## Core common-flow composition probe (2026-09-30)
+
+[Contract](Data/03_Research/fluid_core_o2_common_flow_contract.json) locks five
+state points, quadrature orders 128/256/384 at fixed cutoff 70, cutoffs 45/70/100
+at fixed order 384, and five-point derivative steps 1e-3/3e-4/1e-4.
+Composition tolerance 1e-5, observed component-change budget 1e-6,
+tree/spectrum identity tolerance 1e-8 and sensitivity floor 1e-7 are unchanged
+after the first execution.
+
+[Research_Fluid_Core_O2_Common_Flow.py](Code/03_Research/Research_Fluid_Core_O2_Common_Flow.py)
+executes selected source definitions only, with exact quadrature memoization.
+The local full Core import was inspected and requires unavailable scipy;
+its facade/whole runtime is not executed. Native Core derivative/state functions
+are not replaced. New wrapper derivatives are explicitly identified.
+
+Artifact [fluid_core_o2_common_flow_composition_audit.json](Result/artifacts/fluid_core_o2_common_flow_composition_audit.json):
+69/69 execution/control checks pass, but the condensed composition gate
+FAIL_REQUIRED_COMMON_FLOW_IDENTITY remains at all three selected points.
+Normal controls and tree EOS/Goldstone match pass. No gate is promoted by the
+diagnostic PASS. No post-preview threshold/control amendment occurred.
+[test_fluid_core_o2_common_flow.py](Code/03_Research/test_fluid_core_o2_common_flow.py)
+adds four fresh-output/source-hash/boundary regressions, including false-admission
+rejection and numerical-stability separation. No physical coefficient is repaired
+to force common-flow closure.

@@ -303,3 +303,44 @@ CLAIM_BOUNDARY: Internal numerical-method validation only; not evidence that UET
   source-fresh; new artifact reproduces identical bytes within the local runtime.
   Snapshot/history, ten-package DAG, unchanged physical package states,
   source PDF identity, new links/JSON and UTF-8 prior-prefix preservation pass.
+
+## 2026-09-30 Current Core O(2) common-flow composition
+
+- Wave: research-core; source-function/current-and-frame correspondence diagnosis
+  for J01/J02 preparation, not physical package execution.
+- Before code: recorded ontology/units/frame, conditional common-boost scalar
+  target, canonical source/extraction scope and separate reference registry;
+  locked five points, quadrature/cutoff/derivative sweeps and tolerances.
+- Changed: Core composition card/contract, verifier/69-check artifact/four tests,
+  topic docs and joint snapshots. All actual Core/Topic 13 source files and prior
+  hashed reference/source packages remain unchanged.
+- Source review: Son v2 (20),(25),(31) with finite-T exclusion; Alford et al. v3
+  (49),(65)-(68), fixed-frame effective action/current context. Selected sources
+  only; no full paper replication, physical He-II coefficients or sound targets.
+- Actually ran: named source-verbatim AST functions because full local Core import
+  needs scipy. Five-point wrapper derivatives, normal-gas enthalpy, tree phase/
+  charge/Goldstone and separate quadrature/cutoff/derivative refinements.
+- Result: 69/69 diagnostic controls pass; condensed composition target FAIL at
+  T=0.04/0.08/0.16, mu=1.28, fixed Phi=0.15. Relative defects approximately
+  6.9535e-5/6.7648e-4/4.8815e-3 exceed locked 1e-5 target plus observed numerical
+  spread (below 2.4e-11). Normal points pass at residuals below 6e-13.
+- Retained failure: FAIL_REQUIRED_COMMON_FLOW_IDENTITY, separate from diagnostic
+  execution PASS. No post-preview rule change, fitted stiffness or forced closure.
+  Four new source-fresh/admission/regression tests pass.
+- Narrowed candidate:
+  finite_temperature_phase_stiffness_and_normal_momentum_common_action_match_missing.
+- Overall controller stays:
+  vector_momentum_constitutive_origin_and_material_frame_admission_open.
+- Next: derive finite-T flow-dependent phase stiffness/current/stress/normal
+  response from one effective action, with Ward/entrainment consistency and
+  subsequent nonrelativistic/material/SI/protocol admission.
+- Claim boundary: shortcut rejection on declared source controls only; not
+  all-O(2) no-go, complete two-fluid dynamics, physical rho_n/rho_s, He-II sound,
+  Core runtime rerun, Kubo/transport, physical J04/J05/J06 or dependency unlock.
+
+- Final local review: all 23 scoped tests pass with warnings as errors; seven
+  current artifacts are source-fresh. New output reproduces identical bytes
+  within the local runtime. Core/Topic 13 inputs and prior snapshots/history
+  remain unchanged; ten-package DAG, unexecuted physical gates, 16-file scope,
+  JSON/links and UTF-8 prior-prefix preservation pass. Physical target FAIL stays
+  separate from diagnostic execution PASS.

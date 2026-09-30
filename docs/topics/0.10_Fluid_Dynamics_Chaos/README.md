@@ -264,3 +264,25 @@ unresolved transfer:
 he4_entropy_integration_anchor_found_but_TN1334_reference_transfer_covariance_and_independence_open.
 The overall material/frame controller, frozen Topic 13 constants, null material
 requirements and physical J04/J05/J06 gates remain unchanged.
+
+## Core O(2) common-flow composition checkpoint (2026-09-30)
+
+[The current Core source contract](CORE_O2_COMMON_FLOW_COMPOSITION_CONTRACT.md)
+tests a proposed shortcut: identify the formal static Doppler response as normal
+inertia and combine it with tree phase stiffness. The [69-check diagnostic](Result/artifacts/fluid_core_o2_common_flow_composition_audit.json)
+passes execution/normal/tree/refinement controls, but the distinct condensed
+composition gate is FAIL_REQUIRED_COMMON_FLOW_IDENTITY at all three declared
+finite-T points. Relative defects are about 6.95e-5, 6.76e-4 and 4.88e-3, above
+the locked 1e-5 target and observed component-refinement changes.
+
+This rejects that shortcut only. Existing Core static lanes, the EOS and O(2)
+as a whole are not rejected or promoted. A source-function AST execution is
+used because the local full Core facade lacks scipy; five-point derivatives
+are an independent wrapper, not a native Core state rerun. Four new regression
+tests pass. No stiffness is fitted to force the target.
+
+The narrower candidate controller is
+finite_temperature_phase_stiffness_and_normal_momentum_common_action_match_missing.
+Derive finite-T flow/current/stress/phase stiffness from one consistent effective
+action before material/SI/second-sound admission. Physical gates, original null
+material inputs and frozen Topic 13 constants remain unchanged.
