@@ -534,3 +534,14 @@ phase normalization, branch and natural units. This does not establish a
 finite-T current or an He-II map, nor that either EFT
 completion is an admitted UET or He-II model. Its subluminal check is local
 to the linear longitudinal witness, not a proof for all UET branches.
+
+The [conditional pressure-Hessian operator](Result/artifacts/T13_CONDITIONAL_TWOFLUID_OPERATOR_2026-10-01.md)
+reduces the imported nondissipative two-fluid EFT to rest-pressure derivatives
+and a separately supplied relative-flow stiffness. Inserting Core tree
+stiffness directly yields a superluminal linear mode at the existing
+`mu=1.05` witness; refinement does not remove this failure. The `mu=1.20`
+witness passes only the local conditional linear-mode screen. Neither point
+is a physical He-II state. A finite-T current and normal component must be
+derived consistently before this operator can support UET prediction. The
+analytic stiffness interval is a consistency bound, not an independently
+calibrated value or permission to tune stiffness to response data.

@@ -1,0 +1,790 @@
+{
+  "major_result_id": "T13_CONDITIONAL_PRESSURE_HESSIAN_TWOFLUID_OPERATOR",
+  "topic": "0.13",
+  "closure_level": "PARTIAL",
+  "verification_status": "FAIL_CONDITIONAL_OPERATOR_SCREEN",
+  "derivation_class": "IMPORTED_EFT_CONSTITUTIVE_CLOSURE_WITH_UNPROVEN_UET_MATCH",
+  "primary_source": "https://arxiv.org/html/1108.2513",
+  "equation_or_mapping": "F=F0(b,y)-f_s(b,y)*(X+y^2)/2; F0=p-T*s; b=s=p_T; y=mu",
+  "units": {
+    "T_mu": "E",
+    "p": "E^4",
+    "s_n": "E^3",
+    "pressure_Hessian_f_s": "E^2",
+    "quadratic_coefficients": "E^4",
+    "speed_sq": "dimensionless natural c=1"
+  },
+  "state_variables": [
+    "normal_displacement_pi_L",
+    "phase_displacement_pi_0"
+  ],
+  "excluded_variables": [
+    "R_gen",
+    "R_obs"
+  ],
+  "observable": "conditional_longitudinal_eigenmode_speeds_not_detector_response",
+  "data_role": "DERIVED_CONDITIONAL_NUMERICAL_WITNESSES_NO_MEASURED_ROWS",
+  "assumptions": [
+    "single_charge_nondissipative_relativistic_EFT",
+    "Phi_fixed",
+    "local_entropy_Legendre_transform_p_TT_positive",
+    "-2F_X=f_s_tree_matching_postulated",
+    "normal_comoving_fields_imported_not_derived_from_UET_action",
+    "tree_background_not_joint_finite_T_stationary_solution"
+  ],
+  "refinement_tolerance": 0.001,
+  "domain_decision": "TREE_STIFFNESS_LIFT_REJECTED_AT_MU_1_05_ADMISSIBLE_AT_MU_1_20_CONDITIONALLY",
+  "what_is_closed": [
+    "local_pressure_Hessian_to_quadratic_operator_identity",
+    "conditional_causal_stiffness_interval",
+    "tree_stiffness_lift_not_admissible_on_all_declared_witnesses"
+  ],
+  "what_remains_open": [
+    "finite_T_UET_current_matching",
+    "physical_HeII_state_and_source_detector_map"
+  ],
+  "checks": {
+    "positive_quadratic_energy": true,
+    "subluminal_longitudinal_roots": false,
+    "step_refinement": true,
+    "quadrature_refinement": true,
+    "independent_eigensolver": true,
+    "analytic_causal_bounds_match_roots": true
+  },
+  "examples": [
+    {
+      "T": 0.22,
+      "mu": 1.05,
+      "Phi_fixed": 0.15,
+      "q": 0.10850000000000004,
+      "f_s_tree": 0.10850000000000004,
+      "pressure_branch": "TREE_CONDENSATE_PLUS_THERMAL_QUASIPARTICLES",
+      "physical_HeII_state_admitted": false,
+      "reference": {
+        "order": 256,
+        "step": 0.0001,
+        "pressure_jet": {
+          "p": 0.005214283596374138,
+          "s": 0.03107078346098295,
+          "n": 0.10917603708556281,
+          "a_p_TT": 0.28658296239575387,
+          "h_p_Tmu": -0.035233376134181926,
+          "c_p_mumu": 2.3636197422904903
+        },
+        "coefficients": {
+          "K_N": 0.00184916130125716,
+          "G_N": 0.003368635653734855,
+          "K_S": 2.601115069027354,
+          "G_S": 0.11962125000000005,
+          "M": 0.0009754781670151862
+        },
+        "modes": {
+          "positive_quadratic_energy": true,
+          "speed_sq": [
+            0.045983326878356,
+            1.821912967534086
+          ],
+          "subluminal": false,
+          "secular_relative_residual": 1.9870865293359597e-16
+        }
+      },
+      "refinement_runs": [
+        {
+          "order": 128,
+          "step": 0.0004,
+          "pressure_jet": {
+            "p": 0.005214283394683042,
+            "s": 0.03107081856702429,
+            "n": 0.10917616875407571,
+            "a_p_TT": 0.2865829953663419,
+            "h_p_Tmu": -0.03523348834097526,
+            "c_p_mumu": 2.363620243235262
+          },
+          "coefficients": {
+            "K_N": 0.0018493072765247837,
+            "G_N": 0.003368642878447363,
+            "K_S": 2.6011155914502826,
+            "G_S": 0.11962125000000005,
+            "M": 0.0009753230711549793
+          },
+          "modes": {
+            "positive_quadratic_energy": true,
+            "speed_sq": [
+              0.045983319273401956,
+              1.821772997185942
+            ],
+            "subluminal": false,
+            "secular_relative_residual": 9.936154298761781e-17
+          }
+        },
+        {
+          "order": 128,
+          "step": 0.0002,
+          "pressure_jet": {
+            "p": 0.005214283394683042,
+            "s": 0.03107078974877225,
+            "n": 0.10917606295833245,
+            "a_p_TT": 0.2865829690093871,
+            "h_p_Tmu": -0.03523340066425608,
+            "c_p_mumu": 2.3636198414082528
+          },
+          "coefficients": {
+            "K_N": 0.0018491898509789134,
+            "G_N": 0.003368636939415576,
+            "K_S": 2.6011151717650542,
+            "G_S": 0.11962125000000005,
+            "M": 0.0009754474889977432
+          },
+          "modes": {
+            "positive_quadratic_energy": true,
+            "speed_sq": [
+              0.04598332538447923,
+              1.821885521514007
+            ],
+            "subluminal": false,
+            "secular_relative_residual": 1.312177057690636e-16
+          }
+        },
+        {
+          "order": 128,
+          "step": 0.0001,
+          "pressure_jet": {
+            "p": 0.005214283394683042,
+            "s": 0.03107078254419894,
+            "n": 0.10917603650930068,
+            "a_p_TT": 0.28658296239575387,
+            "h_p_Tmu": -0.0352333787145831,
+            "c_p_mumu": 2.36361974116292
+          },
+          "coefficients": {
+            "K_N": 0.001849160494489424,
+            "G_N": 0.0033686354549428764,
+            "K_S": 2.6011150670846885,
+            "G_S": 0.11962125000000005,
+            "M": 0.0009754785966879149
+          },
+          "modes": {
+            "positive_quadratic_energy": true,
+            "speed_sq": [
+              0.04598332690793027,
+              1.8219136550870954
+            ],
+            "subluminal": false,
+            "secular_relative_residual": 4.636533804980484e-17
+          }
+        },
+        {
+          "order": 192,
+          "step": 0.0004,
+          "pressure_jet": {
+            "p": 0.00521428358148358,
+            "s": 0.03107081941611722,
+            "n": 0.10917616928779157,
+            "a_p_TT": 0.2865829953663419,
+            "h_p_Tmu": -0.035233485913717645,
+            "c_p_mumu": 2.3636202442652543
+          },
+          "coefficients": {
+            "K_N": 0.0018493080237268894,
+            "G_N": 0.003368643062561656,
+            "K_S": 2.6011155932438546,
+            "G_S": 0.11962125000000005,
+            "M": 0.0009753226774603337
+          },
+          "modes": {
+            "positive_quadratic_energy": true,
+            "speed_sq": [
+              0.04598331924606589,
+              1.821772360505589
+            ],
+            "subluminal": false,
+            "secular_relative_residual": 1.312172670333703e-16
+          }
+        },
+        {
+          "order": 192,
+          "step": 0.0002,
+          "pressure_jet": {
+            "p": 0.00521428358148358,
+            "s": 0.031070790597865182,
+            "n": 0.10917606349205047,
+            "a_p_TT": 0.28658296903107117,
+            "h_p_Tmu": -0.03523339824106422,
+            "c_p_mumu": 2.363619842449087
+          },
+          "coefficients": {
+            "K_N": 0.0018491905981832812,
+            "G_N": 0.0033686371232748303,
+            "K_S": 2.601115173569837,
+            "G_S": 0.11962125000000005,
+            "M": 0.0009754470951415122
+          },
+          "modes": {
+            "positive_quadratic_energy": true,
+            "speed_sq": [
+              0.045983325356946866,
+              1.8218848846075215
+            ],
+            "subluminal": false,
+            "secular_relative_residual": 8.610833719320741e-17
+          }
+        },
+        {
+          "order": 192,
+          "step": 0.0001,
+          "pressure_jet": {
+            "p": 0.00521428358148358,
+            "s": 0.031070783393298378,
+            "n": 0.10917603704301004,
+            "a_p_TT": 0.2865829623090177,
+            "h_p_Tmu": -0.03523337632933832,
+            "c_p_mumu": 2.3636197422904903
+          },
+          "coefficients": {
+            "K_N": 0.0018491612416861314,
+            "G_N": 0.003368635640077927,
+            "K_S": 2.601115068973004,
+            "G_S": 0.11962125000000005,
+            "M": 0.0009754781970026487
+          },
+          "modes": {
+            "positive_quadratic_energy": true,
+            "speed_sq": [
+              0.04598332687898472,
+              1.8219130188541706
+            ],
+            "subluminal": false,
+            "secular_relative_residual": 6.623621609411933e-18
+          }
+        },
+        {
+          "order": 256,
+          "step": 0.0004,
+          "pressure_jet": {
+            "p": 0.005214283596374138,
+            "s": 0.031070819483801793,
+            "n": 0.10917616933033675,
+            "a_p_TT": 0.2865829953663419,
+            "h_p_Tmu": -0.03523348572127176,
+            "c_p_mumu": 2.3636202443465693
+          },
+          "coefficients": {
+            "K_N": 0.0018493080832899383,
+            "G_N": 0.0033686430772381384,
+            "K_S": 2.6011155933856744,
+            "G_S": 0.11962125000000005,
+            "M": 0.0009753226459583348
+          },
+          "modes": {
+            "positive_quadratic_energy": true,
+            "speed_sq": [
+              0.04598331924390845,
+              1.82177230975265
+            ],
+            "subluminal": false,
+            "secular_relative_residual": 1.312172663718362e-16
+          }
+        },
+        {
+          "order": 256,
+          "step": 0.0002,
+          "pressure_jet": {
+            "p": 0.005214283596374138,
+            "s": 0.031070790665547587,
+            "n": 0.10917606353459457,
+            "a_p_TT": 0.2865829690093871,
+            "h_p_Tmu": -0.03523339804590783,
+            "c_p_mumu": 2.3636198425358232
+          },
+          "coefficients": {
+            "K_N": 0.0018491906577447065,
+            "G_N": 0.0033686371382057154,
+            "K_S": 2.6011151737180076,
+            "G_S": 0.11962125000000005,
+            "M": 0.0009754470636459977
+          },
+          "modes": {
+            "positive_quadratic_energy": true,
+            "speed_sq": [
+              0.04598332535467756,
+              1.8218848339869096
+            ],
+            "subluminal": false,
+            "secular_relative_residual": 4.636602876823206e-17
+          }
+        },
+        {
+          "order": 256,
+          "step": 0.0001,
+          "pressure_jet": {
+            "p": 0.005214283596374138,
+            "s": 0.03107078346098295,
+            "n": 0.10917603708556281,
+            "a_p_TT": 0.28658296239575387,
+            "h_p_Tmu": -0.035233376134181926,
+            "c_p_mumu": 2.3636197422904903
+          },
+          "coefficients": {
+            "K_N": 0.00184916130125716,
+            "G_N": 0.003368635653734855,
+            "K_S": 2.601115069027354,
+            "G_S": 0.11962125000000005,
+            "M": 0.0009754781670151862
+          },
+          "modes": {
+            "positive_quadratic_energy": true,
+            "speed_sq": [
+              0.045983326878356,
+              1.821912967534086
+            ],
+            "subluminal": false,
+            "secular_relative_residual": 1.9870865293359597e-16
+          }
+        }
+      ],
+      "step_last_relative_change": 3.188525406329891e-05,
+      "quadrature_last_relative_change": 3.221516080019374e-08,
+      "first_order_speed_sq": [
+        0.04598332687835599,
+        1.821912967534086
+      ],
+      "independent_eigensolver_agreement": true,
+      "causal_stiffness_interval": {
+        "exists": true,
+        "f_s_lower_exclusive": 0.0,
+        "f_s_upper_exclusive": 0.10712168382106962,
+        "affine_inequalities_in_x": {
+          "x_positive": [
+            0.0,
+            1.0
+          ],
+          "K_N_positive": [
+            0.12147041130125721,
+            -1.0
+          ],
+          "P_at_one_positive": [
+            0.2931194891418135,
+            -2.481925301008906
+          ],
+          "vertex_below_one": [
+            0.6090780064184642,
+            -5.086409005689996
+          ]
+        },
+        "role": "analytic_admissibility_bound_not_fitted_coefficient",
+        "tree_stiffness_within_interval": false,
+        "root_classification_agrees": true
+      }
+    },
+    {
+      "T": 0.22,
+      "mu": 1.2,
+      "Phi_fixed": 0.15,
+      "q": 0.44599999999999995,
+      "f_s_tree": 0.44599999999999995,
+      "pressure_branch": "TREE_CONDENSATE_PLUS_THERMAL_QUASIPARTICLES",
+      "physical_HeII_state_admitted": false,
+      "reference": {
+        "order": 256,
+        "step": 0.0001,
+        "pressure_jet": {
+          "p": 0.051585921548530776,
+          "s": 0.027786357169566622,
+          "n": 0.5335452212146957,
+          "a_p_TT": 0.28434763918450123,
+          "h_p_Tmu": -0.01387923109774647,
+          "c_p_mumu": 3.3346008537771255
+        },
+        "coefficients": {
+          "K_N": 0.004127264034939571,
+          "G_N": 0.002715273624106846,
+          "K_S": 4.800849692588321,
+          "G_S": 0.6422399999999999,
+          "M": 0.0003582059004800797
+        },
+        "modes": {
+          "positive_quadratic_energy": true,
+          "speed_sq": [
+            0.13377466615687467,
+            0.6578951939373222
+          ],
+          "subluminal": true,
+          "secular_relative_residual": 1.0333368563515815e-16
+        }
+      },
+      "refinement_runs": [
+        {
+          "order": 128,
+          "step": 0.0004,
+          "pressure_jet": {
+            "p": 0.051585921247464084,
+            "s": 0.02778639547064768,
+            "n": 0.5335453987588122,
+            "a_p_TT": 0.2843476664196598,
+            "h_p_Tmu": -0.013879224375693,
+            "c_p_mumu": 3.3346009385617355
+          },
+          "coefficients": {
+            "K_N": 0.004127485514117235,
+            "G_N": 0.0027152808495770654,
+            "K_S": 4.800849815716551,
+            "G_S": 0.6422399999999999,
+            "M": 0.0003579915482734286
+          },
+          "modes": {
+            "positive_quadratic_energy": true,
+            "speed_sq": [
+              0.1337746646864183,
+              0.6578616325063072
+            ],
+            "subluminal": true,
+            "secular_relative_residual": 1.260745956917744e-16
+          }
+        },
+        {
+          "order": 128,
+          "step": 0.0002,
+          "pressure_jet": {
+            "p": 0.051585921247464084,
+            "s": 0.02778636373499191,
+            "n": 0.5335452561213045,
+            "a_p_TT": 0.2843476442151993,
+            "h_p_Tmu": -0.01387923248552525,
+            "c_p_mumu": 3.334600869563109
+          },
+          "coefficients": {
+            "K_N": 0.004127307367263744,
+            "G_N": 0.002715274859210538,
+            "K_S": 4.80084971514231,
+            "G_S": 0.6422399999999999,
+            "M": 0.00035816349405157764
+          },
+          "modes": {
+            "positive_quadratic_energy": true,
+            "speed_sq": [
+              0.1337746659162567,
+              0.6578885840876666
+            ],
+            "subluminal": true,
+            "secular_relative_residual": 1.0333346323044886e-16
+          }
+        },
+        {
+          "order": 128,
+          "step": 0.0001,
+          "pressure_jet": {
+            "p": 0.051585921247464084,
+            "s": 0.027786355801077967,
+            "n": 0.5335452204620339,
+            "a_p_TT": 0.28434763918450123,
+            "h_p_Tmu": -0.013879234567193421,
+            "c_p_mumu": 3.3346008523893467
+          },
+          "coefficients": {
+            "K_N": 0.00412726283067788,
+            "G_N": 0.002715273356650336,
+            "K_S": 4.800849690102202,
+            "G_S": 0.6422399999999999,
+            "M": 0.0003582064769909188
+          },
+          "modes": {
+            "positive_quadratic_energy": true,
+            "speed_sq": [
+              0.1337746662207472,
+              0.6578953211227827
+            ],
+            "subluminal": true,
+            "secular_relative_residual": 1.033336991808796e-16
+          }
+        },
+        {
+          "order": 192,
+          "step": 0.0004,
+          "pressure_jet": {
+            "p": 0.05158592152630346,
+            "s": 0.027786396738097366,
+            "n": 0.5335453994559108,
+            "a_p_TT": 0.2843476664630279,
+            "h_p_Tmu": -0.013879221198980635,
+            "c_p_mumu": 3.334600939776042
+          },
+          "coefficients": {
+            "K_N": 0.004127486629474486,
+            "G_N": 0.0027152810968727875,
+            "K_S": 4.800849817911867,
+            "G_S": 0.6422399999999999,
+            "M": 0.00035799101027831346
+          },
+          "modes": {
+            "positive_quadratic_energy": true,
+            "speed_sq": [
+              0.133774664630284,
+              0.6578615146248298
+            ],
+            "subluminal": true,
+            "secular_relative_residual": 1.0333250753478957e-16
+          }
+        },
+        {
+          "order": 192,
+          "step": 0.0002,
+          "pressure_jet": {
+            "p": 0.05158592152630346,
+            "s": 0.02778636500245027,
+            "n": 0.5335452568184031,
+            "a_p_TT": 0.2843476442151993,
+            "h_p_Tmu": -0.013879229363022993,
+            "c_p_mumu": 3.3346008707774155
+          },
+          "coefficients": {
+            "K_N": 0.004127308482622882,
+            "G_N": 0.002715275106921821,
+            "K_S": 4.800849717329857,
+            "G_S": 0.6422399999999999,
+            "M": 0.0003581629494505467
+          },
+          "modes": {
+            "positive_quadratic_energy": true,
+            "speed_sq": [
+              0.13377466586040254,
+              0.6578884662938913
+            ],
+            "subluminal": true,
+            "secular_relative_residual": 1.0333345068435285e-16
+          }
+        },
+        {
+          "order": 192,
+          "step": 0.0001,
+          "pressure_jet": {
+            "p": 0.05158592152630346,
+            "s": 0.027786357068536327,
+            "n": 0.5335452211591498,
+            "a_p_TT": 0.28434763918450123,
+            "h_p_Tmu": -0.013879231444691165,
+            "c_p_mumu": 3.334600853083236
+          },
+          "coefficients": {
+            "K_N": 0.00412726394605778,
+            "G_N": 0.002715273604361552,
+            "K_S": 4.800849691540349,
+            "G_S": 0.6422399999999999,
+            "M": 0.000358205932368838
+          },
+          "modes": {
+            "positive_quadratic_energy": true,
+            "speed_sq": [
+              0.1337746661857754,
+              0.6578952033225882
+            ],
+            "subluminal": true,
+            "secular_relative_residual": 8.4046391371252e-17
+          }
+        },
+        {
+          "order": 256,
+          "step": 0.0004,
+          "pressure_jet": {
+            "p": 0.051585921548530776,
+            "s": 0.02778639683912766,
+            "n": 0.5335453995114827,
+            "a_p_TT": 0.2843476664630279,
+            "h_p_Tmu": -0.013879220949614135,
+            "c_p_mumu": 3.33460093981941
+          },
+          "coefficients": {
+            "K_N": 0.004127486718387363,
+            "G_N": 0.002715281116618108,
+            "K_S": 4.800849818009372,
+            "G_S": 0.6422399999999999,
+            "M": 0.00035799096691606634
+          },
+          "modes": {
+            "positive_quadratic_energy": true,
+            "speed_sq": [
+              0.13377466462797302,
+              0.6578615052353299
+            ],
+            "subluminal": true,
+            "secular_relative_residual": 1.0333250653443905e-16
+          }
+        },
+        {
+          "order": 256,
+          "step": 0.0002,
+          "pressure_jet": {
+            "p": 0.051585921548530776,
+            "s": 0.027786365103480565,
+            "n": 0.5335452568739664,
+            "a_p_TT": 0.2843476442151993,
+            "h_p_Tmu": -0.013879229059446385,
+            "c_p_mumu": 3.334600870950888
+          },
+          "coefficients": {
+            "K_N": 0.004127308571525434,
+            "G_N": 0.00271527512666712,
+            "K_S": 4.800849717622333,
+            "G_S": 0.6422399999999999,
+            "M": 0.000358162912455473
+          },
+          "modes": {
+            "positive_quadratic_energy": true,
+            "speed_sq": [
+              0.13377466585260028,
+              0.6578884569053338
+            ],
+            "subluminal": true,
+            "secular_relative_residual": 1.0333344968475282e-16
+          }
+        },
+        {
+          "order": 256,
+          "step": 0.0001,
+          "pressure_jet": {
+            "p": 0.051585921548530776,
+            "s": 0.027786357169566622,
+            "n": 0.5335452212146957,
+            "a_p_TT": 0.28434763918450123,
+            "h_p_Tmu": -0.01387923109774647,
+            "c_p_mumu": 3.3346008537771255
+          },
+          "coefficients": {
+            "K_N": 0.004127264034939571,
+            "G_N": 0.002715273624106846,
+            "K_S": 4.800849692588321,
+            "G_S": 0.6422399999999999,
+            "M": 0.0003582059004800797
+          },
+          "modes": {
+            "positive_quadratic_energy": true,
+            "speed_sq": [
+              0.13377466615687467,
+              0.6578951939373222
+            ],
+            "subluminal": true,
+            "secular_relative_residual": 1.0333368563515815e-16
+          }
+        }
+      ],
+      "step_last_relative_change": 0.00012000925877848267,
+      "quadrature_last_relative_change": 8.902354273629779e-08,
+      "first_order_speed_sq": [
+        0.1337746661568746,
+        0.6578951939373228
+      ],
+      "independent_eigensolver_agreement": true,
+      "causal_stiffness_interval": {
+        "exists": true,
+        "f_s_lower_exclusive": 0.0,
+        "f_s_upper_exclusive": 0.44698002588641284,
+        "affine_inequalities_in_x": {
+          "x_positive": [
+            0.0,
+            1.0
+          ],
+          "K_N_positive": [
+            0.6463672640349395,
+            -1.0
+          ],
+          "P_at_one_positive": [
+            2.6780642227012885,
+            -4.160738094800115
+          ],
+          "vertex_below_one": [
+            5.7811763035425825,
+            -8.964303061012542
+          ]
+        },
+        "role": "analytic_admissibility_bound_not_fitted_coefficient",
+        "tree_stiffness_within_interval": true,
+        "root_classification_agrees": true
+      }
+    }
+  ],
+  "evidence_artifacts": [
+    {
+      "path": "docs/core/02_equations/o2/uet_o2_finite_temperature_quasiparticle_eos.py",
+      "sha256": "ba814f3aa02b5e31112a6595dac7727b7025b08e08f0631f50567f270cebbb7f"
+    },
+    {
+      "path": "docs/core/02_equations/o2/uet_o2_action_thermal_observable_bridge.py",
+      "sha256": "1cf745562548bc9a61d9ebb86069b8aff73e2a776756aa9efe7ab1a45b669ebe"
+    },
+    {
+      "path": "docs/core/02_equations/o2/uet_o2_finite_density_eos.py",
+      "sha256": "ea744a8645f993600300fa9fd99a764e1f07b30fb272b47399c34aa114152c6d"
+    },
+    {
+      "path": "docs/core/02_equations/o2/uet_o2_action_thermal_stiffness_beta.py",
+      "sha256": "c1c3278a79df611ddae2f67ff811022722ab0c56f68bf91cc5480f34db9a95e6"
+    },
+    {
+      "path": "docs/core/02_equations/covariant/uet_covariant_matter.py",
+      "sha256": "8a57d95e898a8ac962bbd749670ad0695b597281937da36496d2ec7e074f9c53"
+    },
+    {
+      "path": "docs/core/02_equations/covariant/uet_covariant_response.py",
+      "sha256": "7fb4b7228afb8ede0ac4f1664d634346ef46cc7678c94ed7b55d73645590c0c2"
+    },
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/t13_he4_condensed_state_identifiability.json",
+      "sha256": "7467dbd2e599140d2e9e5f0ecd836a83a287b8be62617deea8b87a31aa2fbfd9"
+    },
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/Research_T13_Conditional_TwoFluid_Operator.py",
+      "sha256": "465506134b2dc3c55f4697c2d4f7152887523bbd80081718d281403e87b022e5"
+    }
+  ],
+  "evidence_hashes": [
+    {
+      "path": "docs/core/02_equations/o2/uet_o2_finite_temperature_quasiparticle_eos.py",
+      "sha256": "ba814f3aa02b5e31112a6595dac7727b7025b08e08f0631f50567f270cebbb7f"
+    },
+    {
+      "path": "docs/core/02_equations/o2/uet_o2_action_thermal_observable_bridge.py",
+      "sha256": "1cf745562548bc9a61d9ebb86069b8aff73e2a776756aa9efe7ab1a45b669ebe"
+    },
+    {
+      "path": "docs/core/02_equations/o2/uet_o2_finite_density_eos.py",
+      "sha256": "ea744a8645f993600300fa9fd99a764e1f07b30fb272b47399c34aa114152c6d"
+    },
+    {
+      "path": "docs/core/02_equations/o2/uet_o2_action_thermal_stiffness_beta.py",
+      "sha256": "c1c3278a79df611ddae2f67ff811022722ab0c56f68bf91cc5480f34db9a95e6"
+    },
+    {
+      "path": "docs/core/02_equations/covariant/uet_covariant_matter.py",
+      "sha256": "8a57d95e898a8ac962bbd749670ad0695b597281937da36496d2ec7e074f9c53"
+    },
+    {
+      "path": "docs/core/02_equations/covariant/uet_covariant_response.py",
+      "sha256": "7fb4b7228afb8ede0ac4f1664d634346ef46cc7678c94ed7b55d73645590c0c2"
+    },
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/t13_he4_condensed_state_identifiability.json",
+      "sha256": "7467dbd2e599140d2e9e5f0ecd836a83a287b8be62617deea8b87a31aa2fbfd9"
+    },
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/Research_T13_Conditional_TwoFluid_Operator.py",
+      "sha256": "465506134b2dc3c55f4697c2d4f7152887523bbd80081718d281403e87b022e5"
+    }
+  ],
+  "controlling_blocker": "finite_T_relative_flow_current_and_normal_component_UET_match_not_derived",
+  "open_blockers": [
+    "joint_finite_T_condensed_stationarity_and_Ward_response",
+    "independent_HeII_material_state_map",
+    "source_detector_and_dissipative_response",
+    "clean_Core_baseline_and_independent_response_source_admission"
+  ],
+  "dependency_unlocked": [
+    "conditional_operator_and_relative_flow_measurement_design_only"
+  ],
+  "g1_physical_unlock": false,
+  "g2_science_unlock": false,
+  "full_core_unlock": false,
+  "claim_promotion": false,
+  "xie_2026_accessed": false,
+  "parameter_fitting": false,
+  "finite_T_stiffness_numeric_value_emitted": false,
+  "claim_boundary": "Conditional imported nondissipative EFT operator; not an action-derived finite-T UET completion, physical He-II prediction, full thermodynamic closure or external validation."
+}

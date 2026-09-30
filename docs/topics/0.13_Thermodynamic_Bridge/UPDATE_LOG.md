@@ -6262,6 +6262,30 @@ NEXT_ACTION: Use the conditional tree relation `-2F_X=f_s_tree=Z*q/lambda` only 
 
 CLAIM_BOUNDARY: Rest-EOS-only theorem in a comparator class, not a UET no-go, He-II prediction, external validation or Full Topic 13 closure.
 
+## 2026-10-01 - Conditional pressure-Hessian operator domain decision
+
+MAJOR_RESULT_CLOSURE: `T13_CONDITIONAL_PRESSURE_HESSIAN_TWOFLUID_OPERATOR` is `PARTIAL`; the direct tree-stiffness constitutive lift is rejected at one fixed witness.
+
+WHAT_IS_ACTUALLY_CLOSED: Rest-pressure Hessian plus relative-flow stiffness reduces to a five-coefficient longitudinal operator. The analytic stiffness interval and independent eigensolver agree with direct roots. The existing `mu=1.05` tree lift produces `c_high^2=1.82191297`; its failure survives refinement.
+
+WHAT_REMAINS_OPEN: Joint finite-T condensate/current/normal-component completion, independent material state and units, source/detector/dissipative response, clean Core admission and independent data.
+
+DEPENDENCY_UNLOCKED: Conditional operator/measurement design only; physical G1/G2 and Full Topic 13 stay open.
+
+STATUS: `FAIL_CONDITIONAL_OPERATOR_SCREEN`; numeric-method checks pass. The `mu=1.20` witness has `c^2=0.13377467,0.65789519` and is conditionally admissible only.
+
+WHAT_CHANGED: Added verifier, generated JSON, action-expansion tests and derivation note; linked evidence/blocker in funding JSON, 14-day plan, 12-week roadmap and limitations. Core sources/calibration unchanged.
+
+EQUATION_OR_MAPPING: `F=F0(b,y)-f_s(X+y^2)/2`; `F0=p-T*s`; the finite-T identification `f_s=Z*q/lambda` is postulated and fails on part of the declared domain.
+
+VERIFICATION: Eight Topic13 tests and twelve directly related Core regressions pass. An initial direct-import collection error was repaired using explicit file loading. Last step refinements are 3.19e-5/1.20e-4; quadrature refinements are 3.22e-8/8.90e-8. Evidence SHA-256 `8606303e4818030dd74061c14b243542c19c4cbb262dda29261951d4c87d6412`. No measured rows, fit or Xie 2026 input.
+
+CONTROLLING_BLOCKER: `finite_T_relative_flow_current_and_normal_component_UET_match_not_derived`.
+
+NEXT_ACTION: Derive stationary finite-T relative-flow response and check the analytic interval; use D5 to choose the evidence-supported route without promoting unresolved physical G1/G2.
+
+CLAIM_BOUNDARY: Conditional imported EFT domain decision, not a UET no-go, physical He-II prediction, nonlinear causal proof or Full Topic 13 closure.
+
 ## 2026-09-30 - PR #28 reproducibility and artifact-link repair
 
 WHAT_CHANGED: Kept the saved composition audit's historical comparison distinct from a CI checkout where its source commit is unavailable; compared formal-root floating outputs within `rel=1e-12, abs=1e-13`; verified the recovery record's older evidence hash against committed history; regenerated the He-II operator decision with LF bytes and refreshed the scheme decision's source hash through its generator.

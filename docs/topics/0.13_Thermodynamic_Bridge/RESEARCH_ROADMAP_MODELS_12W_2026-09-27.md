@@ -86,6 +86,8 @@ Primary source หรือ experiment record ต้องให้ material/sta
 
 ## 5. ถ้าพลาดรอบทุนแรกต้องเปลี่ยนอะไร
 
+อัปเดต 1 ต.ค.: [conditional operator/domain decision](Result/artifacts/T13_CONDITIONAL_TWOFLUID_OPERATOR_2026-10-01.md) ทำให้โจทย์ W3–W4 ชัดขึ้น: derive finite-T relative-flow current และ normal component จาก prescription เดียวที่ jointly stationary แล้วตรวจ stiffness กับช่วงเชิงสมการ ก่อนเพิ่ม source/detector map การแทน tree stiffness กับ thermal EOS ตรง ๆ ถูกปฏิเสธที่หนึ่งในสองผู้สมัคร จึงไม่เลือกผู้สมัครที่ผ่านเพียงเพราะให้ความเร็วเหมาะสม ทั้งคู่ยังไม่มี material admission งานนี้นำไปใช้ต่อเป็น consistency test สำหรับ completion ใหม่และ measurement design; การทดลองอิสระยังเป็นงาน W5–W6 ตามสิทธิ์/protocol ที่ได้รับจริง
+
 ก่อนตัดสินใจเลื่อนให้แยกสาเหตุ: (A) พลาด deadline, (B) คุณสมบัติ/สังกัดไม่ตรง, (C) หลักฐาน preliminary ยังไม่พอ, (D) panel ไม่เห็น novelty/impact, (E) ขาด partner/budget support แต่ละสาเหตุใช้วิธีแก้ต่างกัน
 
 - D14 เก็บ portfolio v1 และ scientific decision เป็น snapshot แม้ไม่ได้ยื่น ไม่เขียนทับด้วยเวอร์ชันถัดไป

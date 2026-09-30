@@ -77,6 +77,20 @@
     "submission_buffers_days_before_actual_deadline": {"scientific_scope_freeze": 14, "institutional_documents": 7, "final_forms_and_attachments": 3},
     "long_term_benefit": "Independent response evidence and measurement constraints support bounded thermal/transport handoff; curved 3+1, Gravity and Galaxy retain their own dependencies"
   },
+  "conditional_operator_evidence_2026_10_01": {
+    "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/t13_conditional_twofluid_operator.json",
+    "sha256": "8606303e4818030dd74061c14b243542c19c4cbb262dda29261951d4c87d6412",
+    "verification_status": "FAIL_CONDITIONAL_OPERATOR_SCREEN",
+    "closure_level": "PARTIAL",
+    "scientific_contribution": "Derived conditional local operator and analytic stiffness interval; direct tree lift rejected at mu=1.05 and admissible locally at mu=1.20",
+    "controlling_blocker": "finite_T_relative_flow_current_and_normal_component_UET_match_not_derived",
+    "D05_action": "Review jointly stationary finite-T current and independent material admission; preserve unresolved physical G1/G2 when absent",
+    "W04_action": "Derive one fixed-prescription finite-T relative-flow response and check admissibility before source/detector prediction",
+    "g1_physical_unlock": false,
+    "g2_science_unlock": false,
+    "full_core_unlock": false,
+    "milestone_completion_inferred_from_date": false
+  },
   "planned_output_directory": "docs/topics/0.13_Thermodynamic_Bridge/Result/funding_portfolio_2026-10-11",
   "baseline": {
     "branch": "codex/research/core-physical-migration",
