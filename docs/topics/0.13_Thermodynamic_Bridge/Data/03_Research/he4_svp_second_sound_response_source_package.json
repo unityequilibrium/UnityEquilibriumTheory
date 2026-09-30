@@ -1,0 +1,98 @@
+{
+  "schema_version": "t13-he4-second-sound-response-source-v1",
+  "package_id": "T13_HE4_SVP_SECOND_SOUND_RESPONSE",
+  "topic": "0.13_Thermodynamic_Bridge",
+  "joint_work_package": "J02",
+  "status": "RESPONSE_SOURCE_CANDIDATE_PROTOCOL_OPEN",
+  "data_role": "INDEPENDENT_RESPONSE_CANDIDATE_NOT_BLIND_HOLDOUT",
+  "material_state": {
+    "material": "liquid helium-4",
+    "phase": "He II",
+    "pressure_path": "saturated vapour pressure",
+    "temperature_scale": "T90",
+    "reference_temperature_K": 1.7,
+    "source_range_K": [1.65, 1.8],
+    "source_equilibrium_path": "temperature rows follow the SVP curve; this is not a fixed-pressure or fixed-chemical-potential derivative",
+    "mean_flow_state": "not resolved by the compiled table; must be source-verified before a model comparison"
+  },
+  "observable_contract": {
+    "observable_name": "second_sound_phase_velocity_u2",
+    "measurement_operator": "u2 = omega/k for the resonant collective thermal/entropy-wave mode",
+    "units": "m s^-1",
+    "physical_scope": "full He-II two-fluid collective mode; not the normal-component shear channel and not ordinary first sound",
+    "measurement_family": "resonance measurement compiled from independent experimental studies",
+    "frequency_or_timescale": "not specified for the recommended Table 4.3 values; exact primary-record frequency and geometry remain open",
+    "measurement_amplitude": "not specified in the recommended table; linear-response applicability must be checked against the selected primary record"
+  },
+  "main_reference_source": {
+    "title": "The Observed Properties of Liquid Helium at the Saturated Vapor Pressure",
+    "authors": ["Russell J. Donnelly", "Carlo F. Barenghi"],
+    "publication": "Journal of Physical and Chemical Reference Data 27, 1217-1274 (1998)",
+    "doi": "10.1063/1.556028",
+    "official_pdf": "https://srd.nist.gov/jpcrdreprint/1.556028.pdf",
+    "table_locators": ["Table 4.1 adopted database for second-sound velocity", "Table 4.3 recommended values of second-sound velocity", "Section 4 chronological bibliography"],
+    "table_role": "compiled recommended values at saturated vapour pressure; not a raw single-experiment record",
+    "local_pdf_copy": false
+  },
+  "response_rows": [
+    {"row_id": "he4-svp-u2-1.650K", "temperature_T90_K": 1.65, "u2_m_s": 20.37, "table": "4.3", "row_uncertainty": null},
+    {"row_id": "he4-svp-u2-1.700K", "temperature_T90_K": 1.70, "u2_m_s": 20.33, "table": "4.3", "row_uncertainty": null},
+    {"row_id": "he4-svp-u2-1.750K", "temperature_T90_K": 1.75, "u2_m_s": 20.18, "table": "4.3", "row_uncertainty": null},
+    {"row_id": "he4-svp-u2-1.800K", "temperature_T90_K": 1.80, "u2_m_s": 19.90, "table": "4.3", "row_uncertainty": null}
+  ],
+  "derived_diagnostic": {
+    "quantity": "central slope of the recommended second-sound speed near 1.70 K",
+    "formula": "[u2(1.75 K)-u2(1.65 K)]/[1.75 K-1.65 K]",
+    "value_m_s_per_K": -1.9,
+    "derivation_class": "FINITE_DIFFERENCE_OF_ROUNDED_RECOMMENDED_SOURCE_ROWS",
+    "role": "candidate independent dynamic-response diagnostic only; not a UET prediction or a physical acceptance result",
+    "uncertainty": "not evaluated because the recommended-row covariance and row-level uncertainties are not supplied"
+  },
+  "independent_primary_crosscheck": {
+    "title": "Second Sound in Liquid Helium II",
+    "authors": ["C. T. Lane", "Henry A. Fairbank", "William M. Fairbank"],
+    "publication": "Physical Review 71, 600 (1947)",
+    "doi": "10.1103/PhysRev.71.600",
+    "official_abstract": "https://journals.aps.org/pr/abstract/10.1103/PhysRev.71.600",
+    "reported_result": {"temperature_K": 1.7, "maximum_velocity_m_s": 20.46, "accuracy_percent": 0.5},
+    "state_match": "pressure path and temperature-scale correspondence to the NIST T90 SVP rows are not established from the abstract",
+    "use_policy": "bibliographic/protocol cross-check only; do not combine with the recommended SVP rows or score a residual until the primary record is state-matched"
+  },
+  "uncertainty_contract": {
+    "recommended_row_uncertainty_status": "NOT_REPORTED_PER_ROW",
+    "compiled_source_context": "Table 4.1 lists source-level uncertainty statements for contributing resonance studies, but the Table 4.3 recommendation does not map a row-specific uncertainty/covariance to the adopted value.",
+    "source_level_uncertainty_percent_range_reported_in_table_4_1": [0.07, 0.75],
+    "do_not_treat_range_as": ["uncertainty of each recommended row", "standard deviation", "covariance model", "acceptance tolerance"],
+    "covariance": "unavailable",
+    "calibration_bounds": "alpha and Z retain their existing conservative source bounds; e0 retains its existing conservative SI-scale bound; no joint covariance is assumed",
+    "quantitative_pass_threshold": "not set until a primary source row, state, frequency and uncertainty budget are locked"
+  },
+  "frozen_matching_constants": {
+    "alpha_Phi_K": {"value": -1.02237987858849, "uncertainty_bound": 0.056753979576408715, "units": "K per normalized base Phi", "source_artifact": "docs/core/07_artifacts/topic13/t13_he4_o2_response_calibration_audit.json"},
+    "theta_T_K_per_natural_temperature": {"value": 7.727272727272727, "source_artifact": "docs/core/07_artifacts/topic13/t13_he4_o2_response_calibration_audit.json"},
+    "Z_Phi_normalized_per_natural_Phi": {"value": -0.017488421860832278, "uncertainty_bound": 0.0009712263618290997, "source_artifact": "docs/core/07_artifacts/topic13/t13_he4_o2_response_calibration_audit.json"},
+    "e0_J_m3": {"value": 512994.17164886114, "uncertainty_bound": 60.608920908635206, "source_artifact": "docs/core/07_artifacts/topic13/t13_he4_o2_si_beta_mapping_audit.json"},
+    "eta_normal_component_Pa_s": {"value": 1.29e-6, "uncertainty_bound": 5e-8, "data_role": "EXTERNAL_INPUT_NOT_UET_PREDICTION", "source_artifact": "docs/core/07_artifacts/topic13/t13_he4_normal_viscosity_kubo_audit.json"}
+  },
+  "independence_and_holdout_policy": {
+    "observable_used_to_construct_alpha_Z_theta_or_e0": false,
+    "no_rematching_on_response_rows": true,
+    "no_fit_or_tuning_performed": true,
+    "response_rows_examined_during_protocol_design": true,
+    "blind_holdout": false,
+    "independence_class": "different dynamic observable and measurement channel; the 1998 review compiles both equilibrium anchors and sound data, so statistical/source independence is not claimed",
+    "fresh_blind_source_required_for_future_blind_validation": true
+  },
+  "topic10_interface_requirements": {
+    "current_legacy_state_can_predict_second_sound": false,
+    "reason": "Topic 10 currently lacks an admitted coupled normal/superfluid velocity, entropy and thermal-wave eigenmode operator; the legacy scalar C/I plus scalar-gradient velocity map does not define this observable.",
+    "required_before_comparison": ["Core F0-F8 admission of state, ontology, units and equations", "state-matched two-fluid baseline", "source-specific perturbation constraints and frequency", "unforced linear response/eigenmode derivation", "measurement uncertainty and numerical error budget"],
+    "openai_navier_stokes_role": "methodological theorem-scope, norm and residual discipline for an incompressible normal-flow subproblem only; no direct model, parameter or evidence transfer to the coupled He-II second-sound mode"
+  },
+  "open_blockers": [
+    "uet_two_fluid_second_sound_operator_not_admitted",
+    "primary_row_state_frequency_and_row_uncertainty_not_locked",
+    "response_source_was_seen_and_is_not_a_blind_holdout"
+  ],
+  "claim_boundary": "This package identifies a state-bounded external second-sound response candidate and freezes existing He-4 matching constants. It does not provide a UET second-sound prediction, independent action-to-material validation, a blind holdout result, a full two-fluid transport tensor, or any Topic 10/Core dependency unlock."
+}

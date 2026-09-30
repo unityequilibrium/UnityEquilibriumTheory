@@ -57,8 +57,8 @@ def main() -> int:
         raise SystemExit("unexpected causal major_result_id")
     if causal_result["closure_level"] != "CLOSED_FOR_CORE":
         raise SystemExit("causal branch is not CLOSED_FOR_CORE")
-    if matrix["full_core_unlock"] is not False or counts.get("CLOSED_FOR_CORE", 0) != 0:
-        raise SystemExit("full-topic matrix boundary changed unexpectedly")
+    if matrix["full_topic_ready"] is not False or counts.get("CLOSED_FOR_CORE", 0) != 0:
+        raise SystemExit("aggregate Full Topic 13 boundary changed unexpectedly")
 
     roadmap = ROADMAP.read_text(encoding="utf-8")
     if OLD in roadmap:
@@ -98,7 +98,7 @@ EQUATION_OR_MAPPING:
 - Named normalized conserved flux-Phi telegraph branch; no dimensional Phi-to-temperature mapping is implied.
 
 VERIFICATION:
-- Causal artifact status=`{causal["status"]}`; closure=`{causal_result["closure_level"]}`; matrix full_core_unlock=`{matrix["full_core_unlock"]}`; generated_at=`{stamp}`.
+- Causal artifact status=`{causal["status"]}`; closure=`{causal_result["closure_level"]}`; bounded O(2)/He-4 track=`{matrix["bounded_core_track_status"]}`; full_topic_ready=`{matrix["full_topic_ready"]}`; generated_at=`{stamp}`.
 
 CONTROLLING_BLOCKER:
 - Full Topic 13 remains controlled by the seven blocker groups in the canonical gate, including missing independent `alpha_Phi_K`, dimensional SI map, accepted Ding-compatible `C_src`, and physical transport evidence.
@@ -140,6 +140,8 @@ EVIDENCE_HASHES:
         "causal_closure_level": causal_result["closure_level"],
         "full_topic_matrix_counts": counts,
         "full_core_unlock": matrix["full_core_unlock"],
+        "full_core_unlock_scope": matrix["full_core_unlock_scope"],
+        "full_topic_ready": matrix["full_topic_ready"],
     }, sort_keys=True))
     return 0
 

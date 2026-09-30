@@ -1,10 +1,34 @@
 {
   "schema_version": "t13-topic13-closure-matrix-v3",
   "artifact": "t13_topic13_closure_matrix",
-  "generated_at": "2026-09-20",
-  "status": "T13_FULL_THERMODYNAMIC_BRIDGE_CORE_READY",
+  "generated_at": "2026-09-26",
+  "status": "BLOCKED_OPEN_T13_FULL_BRIDGE",
+  "status_scope": "FULL_TOPIC_13_AGGREGATE",
+  "bounded_core_track_status": "CLOSED_FOR_CORE",
+  "bounded_core_track_result_status": "T13_FULL_THERMODYNAMIC_BRIDGE_CORE_READY",
+  "bounded_core_track_unlock": true,
   "claim_promotion": false,
   "full_core_unlock": true,
+  "full_core_unlock_scope": "BOUNDED_O2_HE4_CORE_TRACK",
+  "full_topic_status": "BLOCKED_OPEN_T13_FULL_BRIDGE",
+  "full_topic_ready": false,
+  "full_topic_readiness_checks": {
+    "canonical_aggregate_gate_ready": false,
+    "aggregate_gate_blockers_clear": false,
+    "all_required_major_results_closed": false,
+    "all_required_subresults_closed": false,
+    "all_required_input_packages_accepted": false,
+    "holdout_unconsumed": true
+  },
+  "full_topic_open_blockers": [
+    "ding_pbte_C_src_numeric_or_accepted_independent_reproduction_missing",
+    "alpha_Phi_K_independent_calibration_missing",
+    "normalized_beta_and_SI_scale_correspondence_missing",
+    "physical_Kubo_coefficient_record_missing",
+    "dimensional_phi_to_thermal_observable_map_missing",
+    "material_regime_mapping_to_TTG_not_closed",
+    "c_v_source_uncertainty_not_closed"
+  ],
   "requirements_scope": "LEGACY_GRAPHITE_TTG_EXTERNAL_VALIDATION_PROJECTION_RETAINED_FOR_BACKWARD_COMPATIBILITY",
   "core_ready_track": {
     "major_result_id": "T13_FULL_THERMODYNAMIC_BRIDGE_CORE_READY",
@@ -125,11 +149,12 @@
   "major_result": {
     "major_result_id": "T13_TOPIC13_CLOSURE_MATRIX",
     "topic": "0.13_Thermodynamic_Bridge",
-    "closure_level": "CLOSED_FOR_CORE",
+    "closure_level": "PARTIAL",
     "what_is_closed": [
       "The ten required Topic 13 result areas are reported separately by closure level.",
       "Each result area exposes evidence-producing subresults and an acceptance boundary.",
       "Lane-level formal results are not counted as Full Topic 13 Core-ready closure.",
+      "The bounded O(2)/He-4 Core-ready track is kept separate from the aggregate graphite/TTG result.",
       "The current full-gate blocker groups and dependency state are projected without changing them.",
       "The normalized measurement operator remains separate from the dimensional thermal operator."
     ],
@@ -157,8 +182,9 @@
         "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json",
         "sha256": "961aeac0383e25d1af64b3b161c67e2f57e76dfa26b0e94bfb9beeefd1bb9ec1",
         "summary": {
-          "role": "canonical full Topic 13 readiness gate",
-          "status": "T13_FULL_THERMODYNAMIC_BRIDGE_CORE_READY"
+          "role": "canonical Full Topic 13 aggregate gate",
+          "status": "BLOCKED_OPEN_T13_FULL_BRIDGE",
+          "bounded_core_track_status": "T13_FULL_THERMODYNAMIC_BRIDGE_CORE_READY"
         }
       },
       {
@@ -498,8 +524,19 @@
       }
     },
     "verification_status": "PASS_MACHINE_READABLE_FULL_TOPIC_CLOSURE_CONTRACT_WITH_GATE_BOUNDARY",
-    "open_blockers": [],
-    "dependency_unlocked": "Full thermal bridge only; Core curved 3+1 remains a separate dependency.",
+    "open_blockers": [
+      "ding_pbte_C_src_numeric_or_accepted_independent_reproduction_missing",
+      "alpha_Phi_K_independent_calibration_missing",
+      "normalized_beta_and_SI_scale_correspondence_missing",
+      "physical_Kubo_coefficient_record_missing",
+      "dimensional_phi_to_thermal_observable_map_missing",
+      "material_regime_mapping_to_TTG_not_closed",
+      "c_v_source_uncertainty_not_closed"
+    ],
+    "bounded_core_track_status": "CLOSED_FOR_CORE",
+    "bounded_core_track_result_status": "T13_FULL_THERMODYNAMIC_BRIDGE_CORE_READY",
+    "bounded_core_track_unlock": true,
+    "dependency_unlocked": "Bounded O(2)/He-4 Core handoff only; aggregate graphite/TTG Full Topic 13 remains blocked.",
     "claim_boundary": "This matrix reports progress and closure boundaries. It does not promote a lane-level PASS, comparator, no-go, or formal interface to Full Topic 13, Core, external validation, or a global UET claim.",
     "required_major_result_count": 10,
     "required_subresult_count": 37,
@@ -591,13 +628,28 @@
   "full_topic_closure_contract": {
     "major_result_id": "T13_FULL_THERMODYNAMIC_BRIDGE",
     "topic": "0.13_Thermodynamic_Bridge",
-    "closure_level": "CLOSED_FOR_CORE",
-    "full_topic_ready": true,
+    "closure_level": "PARTIAL",
+    "full_topic_ready": false,
     "requirements_scope": "LEGACY_GRAPHITE_TTG_EXTERNAL_VALIDATION_PROJECTION_RETAINED_FOR_BACKWARD_COMPATIBILITY",
+    "bounded_core_track": {
+      "scope": "O2_HE4_CORE_READY",
+      "status": "CLOSED_FOR_CORE",
+      "result_status": "T13_FULL_THERMODYNAMIC_BRIDGE_CORE_READY",
+      "full_core_unlock_legacy_alias": true,
+      "open_blockers": []
+    },
     "what_is_closed": [
       "T13_CAUSAL_THERMAL_BRANCH_CLOSURE"
     ],
-    "what_remains_open": [],
+    "what_remains_open": [
+      "ding_pbte_C_src_numeric_or_accepted_independent_reproduction_missing",
+      "alpha_Phi_K_independent_calibration_missing",
+      "normalized_beta_and_SI_scale_correspondence_missing",
+      "physical_Kubo_coefficient_record_missing",
+      "dimensional_phi_to_thermal_observable_map_missing",
+      "material_regime_mapping_to_TTG_not_closed",
+      "c_v_source_uncertainty_not_closed"
+    ],
     "equation_or_mapping": {
       "causal_structure": {
         "baseline": "conserved-C local-gradient finite-cone candidate",
@@ -737,8 +789,9 @@
         "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json",
         "sha256": "961aeac0383e25d1af64b3b161c67e2f57e76dfa26b0e94bfb9beeefd1bb9ec1",
         "summary": {
-          "role": "canonical full Topic 13 readiness gate",
-          "status": "T13_FULL_THERMODYNAMIC_BRIDGE_CORE_READY"
+          "role": "canonical Full Topic 13 aggregate gate",
+          "status": "BLOCKED_OPEN_T13_FULL_BRIDGE",
+          "bounded_core_track_status": "T13_FULL_THERMODYNAMIC_BRIDGE_CORE_READY"
         }
       },
       {
@@ -1079,7 +1132,17 @@
     },
     "verification_status": {
       "canonical_gate_status": "BLOCKED_OPEN_T13_FULL_BRIDGE",
-      "full_core_unlock": true,
+      "bounded_core_track_status": "CLOSED_FOR_CORE",
+      "bounded_core_track_unlock": true,
+      "full_topic_ready": false,
+      "full_topic_readiness_checks": {
+        "canonical_aggregate_gate_ready": false,
+        "aggregate_gate_blockers_clear": false,
+        "all_required_major_results_closed": false,
+        "all_required_subresults_closed": false,
+        "all_required_input_packages_accepted": false,
+        "holdout_unconsumed": true
+      },
       "holdout_consumed": false,
       "claim_promotion": false,
       "major_result_status_counts": {
@@ -1093,9 +1156,17 @@
         "OPEN": 10
       }
     },
-    "open_blockers": [],
-    "dependency_unlocked": "Topic 13 thermal bridge only; downstream gravity still requires Core curved 3+1.",
-    "claim_boundary": "CLOSED_FOR_CORE means the thermal bridge is internally integrated and ready for Core handoff. It is not external-ready and does not close global UET.",
+    "open_blockers": [
+      "ding_pbte_C_src_numeric_or_accepted_independent_reproduction_missing",
+      "alpha_Phi_K_independent_calibration_missing",
+      "normalized_beta_and_SI_scale_correspondence_missing",
+      "physical_Kubo_coefficient_record_missing",
+      "dimensional_phi_to_thermal_observable_map_missing",
+      "material_regime_mapping_to_TTG_not_closed",
+      "c_v_source_uncertainty_not_closed"
+    ],
+    "dependency_unlocked": "Bounded O(2)/He-4 Core handoff only; aggregate graphite/TTG Full Topic 13 remains blocked.",
+    "claim_boundary": "Only full_topic_ready=true means the aggregate bridge is internally integrated for Core handoff. The bounded O(2)/He-4 Core-ready track does not close graphite/TTG Full Topic 13, external validation, or global UET.",
     "required_major_result_count": 10,
     "required_subresult_count": 37,
     "current_major_result_counts": {
@@ -2993,6 +3064,7 @@
       "unclassified": []
     },
     "downstream_dependency_unlocked": false,
+    "bounded_core_track_unlock": true,
     "required_major_result_count": 10,
     "required_subresult_count": 37,
     "required_input_package_count": 3,
@@ -3006,12 +3078,13 @@
       "CLOSED_FOR_LANE": 21,
       "OPEN": 10
     },
-    "full_topic_ready": true
+    "full_topic_ready": false
   },
   "canonical_gate": {
     "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json",
     "sha256": "961aeac0383e25d1af64b3b161c67e2f57e76dfa26b0e94bfb9beeefd1bb9ec1",
-    "status": "T13_FULL_THERMODYNAMIC_BRIDGE_CORE_READY",
+    "status": "BLOCKED_OPEN_T13_FULL_BRIDGE",
+    "bounded_core_track_status": "T13_FULL_THERMODYNAMIC_BRIDGE_CORE_READY",
     "legacy_graphite_ttg_aggregate_status": "BLOCKED_OPEN_T13_FULL_BRIDGE",
     "controlling_blocker": "dimensional_phi_energy_anchor_or_independent_alpha_calibration_missing"
   },
@@ -3021,18 +3094,27 @@
     "calibration_path_may_read_holdout": false
   },
   "report": {
-    "MAJOR_RESULT_CLOSURE": "CLOSED_FOR_CORE",
+    "MAJOR_RESULT_CLOSURE": "PARTIAL",
     "WHAT_IS_ACTUALLY_CLOSED": [
       "The ten required Topic 13 result areas are reported separately by closure level.",
       "Each result area exposes evidence-producing subresults and an acceptance boundary.",
       "Lane-level formal results are not counted as Full Topic 13 Core-ready closure.",
+      "The bounded O(2)/He-4 Core-ready track is kept separate from the aggregate graphite/TTG result.",
       "The current full-gate blocker groups and dependency state are projected without changing them.",
       "The normalized measurement operator remains separate from the dimensional thermal operator."
     ],
-    "WHAT_REMAINS_OPEN": [],
-    "DEPENDENCY_UNLOCKED": "Full thermal bridge only; Core curved 3+1 remains a separate dependency.",
-    "STATUS": "T13_FULL_THERMODYNAMIC_BRIDGE_CORE_READY; full_core_unlock=True",
-    "WHAT_CHANGED": "Added a ten-result Topic 13 closure contract with 37 evidence-producing subresults and 3 grouped input packages; no equation, threshold, source role, fit path, or holdout policy changed.",
+    "WHAT_REMAINS_OPEN": [
+      "ding_pbte_C_src_numeric_or_accepted_independent_reproduction_missing",
+      "alpha_Phi_K_independent_calibration_missing",
+      "normalized_beta_and_SI_scale_correspondence_missing",
+      "physical_Kubo_coefficient_record_missing",
+      "dimensional_phi_to_thermal_observable_map_missing",
+      "material_regime_mapping_to_TTG_not_closed",
+      "c_v_source_uncertainty_not_closed"
+    ],
+    "DEPENDENCY_UNLOCKED": "Bounded O(2)/He-4 Core handoff only; aggregate graphite/TTG Full Topic 13 remains blocked.",
+    "STATUS": "full_topic=BLOCKED_OPEN_T13_FULL_BRIDGE; bounded_o2_he4_core_track=CLOSED_FOR_CORE",
+    "WHAT_CHANGED": "Separated the bounded O(2)/He-4 Core-ready track from the aggregate Full Topic 13 gate across ten result areas, 37 subresults, and 3 input packages; no equation, threshold, source role, fit path, or holdout policy changed.",
     "EQUATION_OR_MAPPING": {
       "standard": "y_TTG = Delta_Tq(t) / Delta_Tq(0)",
       "uet_normalized": "y_TTG^UET = Delta_Phi(t) / Delta_Phi(0)",

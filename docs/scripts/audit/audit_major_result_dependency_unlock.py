@@ -13,6 +13,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[3]
 REGISTER = ROOT / "docs/core/07_artifacts/gates/uet_major_result_closure_register.json"
 OUT = ROOT / "docs/core/07_artifacts/gates/uet_major_result_dependency_unlock_gate.json"
+T13_MATRIX = ROOT / "docs/core/07_artifacts/topic13/t13_topic13_closure_matrix.json"
 
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
@@ -236,10 +237,29 @@ def main() -> int:
     )
     if topic13_core_entry is not None:
         core_ready = artifact.setdefault("topic13_core_ready", {})
+        matrix = json.loads(T13_MATRIX.read_text(encoding="utf-8-sig")) if T13_MATRIX.is_file() else {}
+        full_contract = matrix.get("full_topic_closure_contract", {})
+        bounded_contract = full_contract.get("bounded_core_track", {})
         core_ready.update({
             "major_result_id": topic13_core_entry["major_result_id"],
             "closure_level": topic13_core_entry["closure_level"],
             "full_core_unlock": topic13_core_entry["closure_level"] == "CLOSED_FOR_CORE",
+            "full_core_unlock_scope": "BOUNDED_O2_HE4_CORE_TRACK",
+            "bounded_core_track_status": bounded_contract.get("status", "OPEN"),
+            "bounded_core_track_result_status": bounded_contract.get("result_status", "OPEN"),
+            "full_topic_status": matrix.get("status", "OPEN"),
+            "full_topic_ready": full_contract.get("full_topic_ready", False),
+            "register_sha256": artifact.get("register", {}).get("sha256"),
+            "closure_matrix": topic13_core_entry.get("closure_matrix", {}),
+            "full_topic_closure_contract": {
+                "required_major_result_count": full_contract.get("required_major_result_count"),
+                "required_subresult_count": full_contract.get("required_subresult_count"),
+                "current_major_result_counts": full_contract.get("current_major_result_counts", {}),
+                "current_subresult_counts": full_contract.get("current_subresult_counts", {}),
+                "full_topic_ready": full_contract.get("full_topic_ready", False),
+                "bounded_core_track_unlock": matrix.get("bounded_core_track_unlock", False),
+                "open_blockers": full_contract.get("open_blockers", []),
+            },
             "verification_status": topic13_core_entry.get("verification_status"),
             "evidence_artifacts": topic13_core_entry.get("evidence_artifacts", []),
             "claim_boundary": topic13_core_entry.get("claim_boundary"),
