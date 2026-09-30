@@ -259,3 +259,24 @@ measurement of total mechanical momentum. Local Q transport needs a separate
 test because its work integrates to zero. The full dissipative/thermal closure
 and Topic 13's calibration/response ancestry overlap are unaffected. Reference
 mathematics can continue under explicit labels without unlocking physical lanes.
+
+## Coupled mode-eligibility checkpoint (2026-09-30)
+
+The [139-check mode audit](SECOND_SOUND_MODE_ELIGIBILITY.md) narrows the J05
+candidate question: the current stable homogeneous single-velocity model has
+diffusive/gapped sectors but no hydrodynamic second-sound acoustic pair.
+This diagnostic is a J01/J05 candidate screening follow-up, not physical J05
+execution. Its coupled controller is
+isothermal_single_velocity_candidate_counterflow_acoustic_mode_missing.
+
+J02/J05/J06 must use a separately registered and materially justified
+entropy/temperature, normal-superfluid relative-motion and superfluid
+phase/chemical-potential operator. Do not fit the existing oscillator to the
+exposed recommended speed rows; calibration/response ancestry remains unresolved.
+The current candidate remains a bounded isothermal/scalar-fluid reference.
+
+A separate synthetic standard two-fluid operator validates acoustic/work
+sensitivity. The initial complex-metric preview is retained as invalid; the
+repaired controls pass with original tolerances and an explicit post-preview
+harness amendment. No physical/Core/Topic 13 dependency unlock occurs.
+The overall momentum/material-frame/SI admission controller remains unchanged.

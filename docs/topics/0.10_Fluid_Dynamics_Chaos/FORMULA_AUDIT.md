@@ -96,3 +96,20 @@ Hamiltonian agree with the existing normalized energy reference. The formal
 SI dimensions are targets with no measured scale. Dissipative/thermal terms
 and material observable mapping remain blocked. The registry is a separate
 candidate addendum and has not been merged into the central admitted inventory.
+
+## Second-sound mode-class addendum
+
+[Registry candidate](../../core/07_artifacts/correspondence/uet_equation_correspondence_registry_topic10_second_sound_mode_addendum.json)
+and [derivation](SECOND_SOUND_MODE_ELIGIBILITY.md) record F0-F4 before code.
+The current scalar characteristic polynomial has one simple zero root and a
+finite-gap pair at k=0; lambda_slow=-M_C(A-B^2/D)k^2+O(k^4).
+Linear scalar force is a pressure gradient; solenoidal shear modes decouple.
+This is an analytic reference branch exclusion with sampled numerical controls,
+not an all-UET theorem or formal kernel proof. Even-in-k matrix parity alone is
+insufficient; the out-of-contract massless undamped scalar provides a wave control.
+
+Separate standard reference: c2^2=(rho_s/rho_n)T s^2/c_p, with s,c_p specific per
+mass. Its reciprocal coefficients satisfy H_T a=H_w b=rho_s s.
+The positive perturbation availability is not full SI internal energy or entropy.
+No C=mass, Phi=T, Q=entropy flux assignment is made. Numerical coefficients are
+synthetic; EOS/transport and independent He-II measurement remain unadmitted.

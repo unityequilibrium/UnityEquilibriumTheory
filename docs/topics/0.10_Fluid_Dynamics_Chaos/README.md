@@ -174,3 +174,26 @@ errors can be invisible in integrated work. The physical controller is unchanged
 material/configuration and SI observable correspondence remain the next admission
 requirements. Diffusion, viscosity, damping, entropy/FDT and He-II response are
 not derived or validated by this conservative reference.
+
+## Second-sound structural checkpoint (2026-09-30)
+
+The [mode eligibility derivation](SECOND_SOUND_MODE_ELIGIBILITY.md) and
+[139-check artifact](Result/artifacts/fluid_second_sound_mode_eligibility_audit.json)
+exclude a hydrodynamic counterflow acoustic pair for the current stable,
+homogeneous, finite-coefficient isothermal single-velocity candidate.
+Its long-wave scalar mode is diffusive; its material oscillator stays gapped.
+This is a scoped linearized exclusion, not an all-UET or nonlinear no-go.
+
+A separate synthetic two-fluid positive control does have the acoustic pair.
+Massless-undamped scalar and bulk-advection controls prevent overbroad conclusions.
+The initial nominal PASS used an invalid complex norm and is retained as an
+unaccepted diagnostic; the repaired 139 checks use a complex magnitude norm and
+post-preview sign-error sensitivity controls without relaxing thresholds.
+
+The coupled blocker is
+isothermal_single_velocity_candidate_counterflow_acoustic_mode_missing.
+Register and justify independent entropy/temperature, relative motion and
+superfluid phase/chemical-potential dynamics before second-sound prediction.
+No table-speed fit, He-II validation, physical J04/J05 execution or Core unlock
+is implied. The overall physical controller remains
+vector_momentum_constitutive_origin_and_material_frame_admission_open.

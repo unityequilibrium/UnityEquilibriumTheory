@@ -94,3 +94,23 @@
 - PASS_CONDITIONAL_VARIATIONAL_REFERENCE_ONLY does not admit a physical UET
   operator, full reduced Poisson structure, dissipative closure, SI/He-II mode,
   PDE trajectory/convergence, formal kernel proof or global regularity.
+
+## Second-sound mode eligibility reference
+
+- Verifier: Code/03_Research/Research_Fluid_Second_Sound_Mode_Eligibility.py
+- Contract/card: Data/03_Research/fluid_second_sound_mode_eligibility_contract.json;
+  SECOND_SOUND_MODE_ELIGIBILITY.md.
+- Current artifact: Result/artifacts/fluid_second_sound_mode_eligibility_audit.json;
+  139 checks pass, source hashed, complex warnings treated as errors in regression.
+- Retained preview: Result/artifacts/fluid_second_sound_mode_initial_metric_diagnostic.json;
+  nominal 123-check PASS is INVALID_COMPLEX_METRIC_PREVIEW_NOT_ACCEPTED.
+- k=0.2 down to 0.003125 by halving; identity tolerance 1e-9;
+  Hessian directional derivative 1e-7; finest slow/sound slope tolerance 1e-3;
+  error-control floor 1e-8. Original controls/thresholds unchanged after preview.
+- Tests cover source freshness, bounded admission state, invalid-preview retention,
+  diffusion/gap versus acoustic/advection/massless classes and imaginary/sign errors.
+- Added imaginary-work and reversed-counterflow controls are post-preview harness
+  repair, not preregistration. Complex RMS is sqrt(mean(abs(a)^2)).
+- PASS_CURRENT_CANDIDATE_HYDRODYNAMIC_MODE_EXCLUSION_ONLY is a scoped rest-frame
+  reference result. Audit failure reports UNRESOLVED_AUDIT_FAILED. No physical
+  He-II prediction, PDE trajectory, formal checker or Core/Topic 13 unlock.

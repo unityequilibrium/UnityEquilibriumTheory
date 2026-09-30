@@ -166,3 +166,33 @@ CLAIM_BOUNDARY: Internal numerical-method validation only; not evidence that UET
   dissipative/thermal closure and He-II source-independence remain open.
 - Claim impact: none; no Core admission, J04/J05 execution, SI/CFD/He-II result,
   formal kernel proof, global regularity or dependency unlock.
+
+## 2026-09-30 Hydrodynamic second-sound candidate eligibility
+
+- Wave: research-core; conditional structural screening linking J01/J05 to J02/J06.
+- Before code: registered equilibrium/ontology/unit/source assumptions, candidate
+  polynomial, separate two-fluid reference and locked numerical controls.
+- Changed: SECOND_SOUND_MODE_ELIGIBILITY.md, mode contract and separate registry,
+  verifier/current artifact/retained invalid preview, three regression tests;
+  topic documents and joint manifest expose the coupled sub-blocker.
+- First preview: nominal 123-check PASS rejected because the imported real-only
+  norm emitted ComplexWarning on complex work matrices. Original payload/hash
+  retained as INVALID_COMPLEX_METRIC_PREVIEW_NOT_ACCEPTED, not accepted evidence.
+- Repair: local absolute-square norm and pure-imaginary/wrong-sign sensitivity
+  controls added after preview. No original threshold or numerical control changed;
+  this is a post-preview harness revision, not blind preregistration.
+- Ran: corrected audit with warnings as errors; 139/139 reference checks pass.
+  Canonical Hessian/characteristic roots, solenoidal projection, diffusive/gapped
+  sectors, standard synthetic acoustic/work/damping, Doppler removal and
+  out-of-contract massless-undamped wave checked. No trajectory or data fit.
+- Result: lambda_slow=-0.4244576512 k^2+O(k^4) predicted; finest coefficient
+  0.4244675851. Fast k=0 roots -0.5 +/-0.8724513359 i remain gapped.
+  Separate two-fluid reference has normalized c2=1.2247448714; no He-II SI values.
+- Narrowed: isothermal_single_velocity_candidate_counterflow_acoustic_mode_missing.
+  Overall controller stays vector_momentum_constitutive_origin_and_material_frame_admission_open.
+- Next: separately register/materially justify entropy/temperature, relative
+  velocity and superfluid phase/chemical potential; lock EOS/transport and primary
+  independent response protocol before second-sound prediction. Existing candidate
+  remains a bounded isothermal reference.
+- Claim boundary: current stable homogeneous branch only; not all-UET/nonlinear
+  no-go, SI/He-II validation, formal proof, physical J04/J05 or Core/Topic 13 unlock.

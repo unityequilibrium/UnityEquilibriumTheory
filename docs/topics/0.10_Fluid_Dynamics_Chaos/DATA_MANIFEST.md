@@ -52,3 +52,22 @@ canonical scalar source. Holm-Marsden-Ratiu and Holm-Trouve-Younes are primary
 kinematic-method references; their external physical/image boundary conditions
 are not imported. Coefficients use parent normalized controls only; no He-4
 calibration, material transport, blind holdout or thermal-response input is used.
+
+## Mode-eligibility source and diagnostic package
+
+Contract: Data/03_Research/fluid_second_sound_mode_eligibility_contract.json.
+Candidate coefficients come from the existing normalized vector contract and
+canonical Core scalar AST; the new derivative/card/registry/verifier plus the
+Topic 13 protocol/contact-response context are input hashed in the current artifact.
+No He-4 speed, matching constant or material transport value is a numerical input.
+
+Primary method source: [Nikuni and Griffin](https://arxiv.org/abs/cond-mat/0009333),
+Section IV (86)-(88), Appendix C (C1)-(C10), accessed 2026-09-30.
+General two-fluid sound/entropy structure is used; dilute-gas/trap coefficients
+are not transferred to liquid He-II. Existing NIST tables are observable context
+only, and J02 calibration/response source-overlap restrictions remain.
+
+The invalid complex-metric preview retains its original payload and SHA256 in
+Result/artifacts/fluid_second_sound_mode_initial_metric_diagnostic.json.
+The repaired artifact and three regression tests explicitly separate this
+unaccepted preview from reference evidence. No independent observation is added.

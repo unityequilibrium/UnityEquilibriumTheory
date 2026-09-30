@@ -60,3 +60,22 @@ m=rho0 u+h Q grad Phi from mechanical rho0 u. The Legendre test is before full
 incompressible Poisson reduction. A local Q-chain test is required because an
 omitted Q transport term is invisible in integrated kinetic work. No trajectory,
 physical action assignment, dissipative closure or operator admission occurs.
+
+## Long-wave second-sound eligibility
+
+Use SECOND_SOUND_MODE_ELIGIBILITY.md and
+Data/03_Research/fluid_second_sound_mode_eligibility_contract.json.
+Linearize the parent canonical chemical potentials at a synthetic stable uniform
+equilibrium. Compare the scalar matrix's characteristic polynomial, simple
+zero-root diffusive expansion and finite-gap sector, plus pressure-projected
+transverse velocity. Compare to an independently reduced standard two-fluid
+counterflow operator with positive quadratic wave availability.
+
+Halve continuum wavenumbers from 0.2 to 0.003125. These symbols are neither
+fixed-box eigenmode measurements nor time trajectories. Remove uniform Doppler
+advection; retain a massless undamped scalar wave outside the candidate assumptions.
+Use Hermitian magnitude norms for complex work matrices. The first preview's
+invalid real-only norm is retained; added post-preview sign-error controls detect
+both imaginary work defects and real unstable poles. All tolerances are unchanged.
+A failed verifier leaves exclusion unresolved. A passing reference exclusion
+requires separate two-fluid state admission before physical J02/J05/J06.

@@ -57,3 +57,20 @@ or automatically the total physical momentum. The positive rate Hessian and
 invertible fibre Legendre map do not prove equilibrium/PDE stability. The
 manufactured spacetime path obeys kinematics but is not an EOM trajectory; 72
 checks are reference identities only. Physical F2/F3/F4/F7/F8 remain blocked.
+
+## Hydrodynamic second-sound exclusion boundary
+
+The stable homogeneous, finite-gap, gamma>0 candidate cannot supply the rest-frame
+long-wave counterflow acoustic pair. Changing finite unit scales or reinterpreting
+the gapped oscillator's frequency does not repair that missing branch.
+This excludes only the declared linearized branch; massless/undamped or critical
+limits, nonlinear propagation, finite-frequency resonances and other UET states
+are outside the result. Numerical symbols do not prove global PDE behavior.
+
+The separate standard two-fluid controls are synthetic and use a low-expansion,
+constant-pressure, zero-mass-flow reduction. They are not an admitted UET/He-II
+model or full internal-energy/entropy/FDT closure. Real attenuation needs
+state-matched conductivity, shear/bulk transport, relaxation and, where relevant,
+mutual friction and boundary data; D_w is not measured normal viscosity.
+The 123-check preview is invalid evidence; the repaired 139 checks include
+post-preview harness controls and are not a blind preregistration.

@@ -12,7 +12,7 @@
   "source_policy": "Original evidence_snapshot hashes retain the published-base comparison. current_execution_snapshot records the current branch-local candidate inputs; execution_history retains as-executed historical identities. Original dirty workspace differences do not authorize importing unpublished results.",
   "controlling_blocker": "vector_momentum_constitutive_origin_and_material_frame_admission_open",
   "blocker_role": "proposed_physics_program_controller_not_replacement_of_legacy_speed_gate",
-  "next_controller": "Justify/admit or reject the material configuration, fluid/rate inertia origin and SI observable mapping; dissipative/thermal closures stay separate.",
+  "next_controller": "For He-II second sound, replace the ineligible single-velocity branch with a separately registered two-fluid state; retain overall physical momentum/material-frame/SI admission and source-independence obligations.",
   "first_scientific_wave": "J01",
   "work_packages": [
     {
@@ -94,6 +94,47 @@
             "docs/topics/0.10_Fluid_Dynamics_Chaos/Code/03_Research/Research_Fluid_Vector_State_Contract.py": "3b81d328a8a7c073ed3804cf3815b09ca7b50b3d25a8547b7a18d84f6e8bfe0f"
           },
           "next_action": "Justify/admit or reject the material configuration, fluid/rate inertia origin and SI observable mapping; dissipative/thermal closures stay separate."
+        },
+        "second_sound_eligibility_followup": {
+          "date": "2026-09-30",
+          "latest_executed_package": "J01_J05_REFERENCE_MODE_SCREEN",
+          "status": "PASS_CURRENT_CANDIDATE_HYDRODYNAMIC_MODE_EXCLUSION_ONLY",
+          "scope": "Stable homogeneous finite-gap single-velocity long-wave reference exclusion; separate synthetic standard two-fluid controls",
+          "derivation_card": "docs/topics/0.10_Fluid_Dynamics_Chaos/SECOND_SOUND_MODE_ELIGIBILITY.md",
+          "contract": "docs/topics/0.10_Fluid_Dynamics_Chaos/Data/03_Research/fluid_second_sound_mode_eligibility_contract.json",
+          "verifier": "docs/topics/0.10_Fluid_Dynamics_Chaos/Code/03_Research/Research_Fluid_Second_Sound_Mode_Eligibility.py",
+          "result_artifact": "docs/topics/0.10_Fluid_Dynamics_Chaos/Result/artifacts/fluid_second_sound_mode_eligibility_audit.json",
+          "result_artifact_sha256": "c9bdaff5bca7d39a7e1f0bb78e10322918453271a4ac293f841593c11d79be18",
+          "reference_check_count": 139,
+          "evidence_hashes": {
+            "docs/topics/0.10_Fluid_Dynamics_Chaos/Code/03_Research/Research_Fluid_Second_Sound_Mode_Eligibility.py": "753f95a5654f5a6f88c2c2d8a71f97da01cabd21ba1f0ced1af4537ec0aa37c2",
+            "docs/topics/0.10_Fluid_Dynamics_Chaos/Code/03_Research/Research_Fluid_Vector_State_Contract.py": "3b81d328a8a7c073ed3804cf3815b09ca7b50b3d25a8547b7a18d84f6e8bfe0f",
+            "docs/topics/0.10_Fluid_Dynamics_Chaos/Data/03_Research/fluid_second_sound_mode_eligibility_contract.json": "a1b44982d04efad610a9f06ba5f8d8d27f81e726f7548e2fbaec9b333bb31920",
+            "docs/topics/0.10_Fluid_Dynamics_Chaos/Data/03_Research/fluid_vector_state_research_contract.json": "ce7fee2d3a093e983316d9a867a1a2bbd16ab36efb77b5c97f5380bba2017f70",
+            "docs/topics/0.10_Fluid_Dynamics_Chaos/SECOND_SOUND_MODE_ELIGIBILITY.md": "1e5be4c149bb895ba73c127192f15779855063df59cd5b7ebf8195459e4934d5",
+            "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry_topic10_second_sound_mode_addendum.json": "7de79a67ee34fe87827c4bac64f29ddce1e224f0a2c222c00d8b8e8cba11f775",
+            "docs/core/02_equations/matter_space/uet_matter_space.py": "488db6aa26b99856e2eb82a2f46a9857f623f418ef8e537498fa71d5e4f633aa",
+            "docs/topics/0.13_Thermodynamic_Bridge/HE4_SECOND_SOUND_PROTOCOL_CARD.md": "3e63ee75d51935420e9d4cb5e2141cf5cdb52c7596a6ea31a78e621ae1313449",
+            "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry_topic13_continuum_relative_flow_addendum.json": "72beccc6257279e23400ceca47ac0615cfc5d1703aa628b47c6ee58ce26fb604"
+          },
+          "candidate_disposition": "NOT_ELIGIBLE_AS_HYDRODYNAMIC_SECOND_SOUND_OPERATOR_UNDER_DECLARED_ASSUMPTIONS",
+          "coupled_branch_blocker": "isothermal_single_velocity_candidate_counterflow_acoustic_mode_missing",
+          "physical_controller": "vector_momentum_constitutive_origin_and_material_frame_admission_open",
+          "physical_uet_operator_admitted": false,
+          "physical_prediction_executed": false,
+          "physical_J05_executed": false,
+          "claim_promotion": false,
+          "dependency_unlock": false,
+          "harness_revision": {
+            "status": "POST_PREVIEW_COMPLEX_METRIC_REPAIR",
+            "retained_diagnostic": "docs/topics/0.10_Fluid_Dynamics_Chaos/Result/artifacts/fluid_second_sound_mode_initial_metric_diagnostic.json",
+            "changed": "Local absolute-square norm replaces invalid real-only norm for complex matrices; imaginary-work and wrong-counterflow-sign sensitivity controls added after preview.",
+            "thresholds_relaxed": false,
+            "numerical_controls_changed": false,
+            "blind_preregistration": false,
+            "initial_nominal_pass_accepted": false
+          },
+          "next_action": "Register and materially justify separate entropy/temperature, relative-flow and superfluid phase/chemical-potential dynamics; independently lock EOS/transport and primary response protocol. Retain existing candidate as bounded isothermal reference."
         }
       }
     },
@@ -138,6 +179,14 @@
         "ancestry_review": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/T13_HE4_J02_CALIBRATION_SOURCE_ANCESTRY_2026-09-28.md",
         "meaning": "Current Topic 13 records identify partly sound-derived superfluid-density calibration and an overlapping second-sound study family. Recommended response rows are neither blind nor established as statistically independent of calibration.",
         "next_action": "Lock a primary frequency/mode/state/uncertainty record and an independent response design; do not score Table 4.3 as independent validation."
+      },
+      "second_sound_candidate_prerequisite": {
+        "status": "BLOCKED_CURRENT_SINGLE_VELOCITY_CANDIDATE",
+        "coupled_branch_blocker": "isothermal_single_velocity_candidate_counterflow_acoustic_mode_missing",
+        "reference_artifact": "docs/topics/0.10_Fluid_Dynamics_Chaos/Result/artifacts/fluid_second_sound_mode_eligibility_audit.json",
+        "disposition": "NOT_ELIGIBLE_AS_HYDRODYNAMIC_SECOND_SOUND_OPERATOR_UNDER_DECLARED_ASSUMPTIONS",
+        "physical_package_executed": false,
+        "next_action": "Register and materially justify separate entropy/temperature, relative-flow and superfluid phase/chemical-potential dynamics; independently lock EOS/transport and primary response protocol. Retain existing candidate as bounded isothermal reference."
       }
     },
     {
@@ -196,7 +245,15 @@
         "Derived history/observer traces do not become independent dynamical reservoirs",
         "Distinguish shear, bulk, heat conductivity, relaxation and mutual friction; missing required coefficient blocks that branch"
       ],
-      "failure_action": "Continue reference controls only; retain constitutive candidate BLOCKED"
+      "failure_action": "Continue reference controls only; retain constitutive candidate BLOCKED",
+      "second_sound_candidate_prerequisite": {
+        "status": "BLOCKED_CURRENT_SINGLE_VELOCITY_CANDIDATE",
+        "coupled_branch_blocker": "isothermal_single_velocity_candidate_counterflow_acoustic_mode_missing",
+        "reference_artifact": "docs/topics/0.10_Fluid_Dynamics_Chaos/Result/artifacts/fluid_second_sound_mode_eligibility_audit.json",
+        "disposition": "NOT_ELIGIBLE_AS_HYDRODYNAMIC_SECOND_SOUND_OPERATOR_UNDER_DECLARED_ASSUMPTIONS",
+        "physical_package_executed": false,
+        "next_action": "Register and materially justify separate entropy/temperature, relative-flow and superfluid phase/chemical-potential dynamics; independently lock EOS/transport and primary response protocol. Retain existing candidate as bounded isothermal reference."
+      }
     },
     {
       "id": "J06",
@@ -215,7 +272,15 @@
         "Thermal-pulse/counterflow extensions require their own complete transport inputs"
       ],
       "failure_action": "Publish bounded failure, no-go or source-blocked disposition without downgrading or upgrading unrelated He-4 composition",
-      "holdout_source_requirement": "The J02 second-sound rows are exposed during protocol design and cannot fulfill a blind-holdout claim. Select a fresh uninspected source or label any later comparison retrospective/out-of-calibration rather than blind."
+      "holdout_source_requirement": "The J02 second-sound rows are exposed during protocol design and cannot fulfill a blind-holdout claim. Select a fresh uninspected source or label any later comparison retrospective/out-of-calibration rather than blind.",
+      "second_sound_candidate_prerequisite": {
+        "status": "BLOCKED_CURRENT_SINGLE_VELOCITY_CANDIDATE",
+        "coupled_branch_blocker": "isothermal_single_velocity_candidate_counterflow_acoustic_mode_missing",
+        "reference_artifact": "docs/topics/0.10_Fluid_Dynamics_Chaos/Result/artifacts/fluid_second_sound_mode_eligibility_audit.json",
+        "disposition": "NOT_ELIGIBLE_AS_HYDRODYNAMIC_SECOND_SOUND_OPERATOR_UNDER_DECLARED_ASSUMPTIONS",
+        "physical_package_executed": false,
+        "next_action": "Register and materially justify separate entropy/temperature, relative-flow and superfluid phase/chemical-potential dynamics; independently lock EOS/transport and primary response protocol. Retain existing candidate as bounded isothermal reference."
+      }
     },
     {
       "id": "J07",
@@ -528,6 +593,48 @@
       },
       "next_action": "Justify/admit or reject the material configuration, fluid/rate inertia origin and SI observable mapping; dissipative/thermal closures stay separate.",
       "package_role": "J01 candidate-reference follow-up, not physical J04/J05"
+    },
+    {
+      "date": "2026-09-30",
+      "latest_executed_package": "J01_J05_REFERENCE_MODE_SCREEN",
+      "status": "PASS_CURRENT_CANDIDATE_HYDRODYNAMIC_MODE_EXCLUSION_ONLY",
+      "scope": "Stable homogeneous finite-gap single-velocity long-wave reference exclusion; separate synthetic standard two-fluid controls",
+      "derivation_card": "docs/topics/0.10_Fluid_Dynamics_Chaos/SECOND_SOUND_MODE_ELIGIBILITY.md",
+      "contract": "docs/topics/0.10_Fluid_Dynamics_Chaos/Data/03_Research/fluid_second_sound_mode_eligibility_contract.json",
+      "verifier": "docs/topics/0.10_Fluid_Dynamics_Chaos/Code/03_Research/Research_Fluid_Second_Sound_Mode_Eligibility.py",
+      "result_artifact": "docs/topics/0.10_Fluid_Dynamics_Chaos/Result/artifacts/fluid_second_sound_mode_eligibility_audit.json",
+      "result_artifact_sha256": "c9bdaff5bca7d39a7e1f0bb78e10322918453271a4ac293f841593c11d79be18",
+      "reference_check_count": 139,
+      "evidence_hashes": {
+        "docs/topics/0.10_Fluid_Dynamics_Chaos/Code/03_Research/Research_Fluid_Second_Sound_Mode_Eligibility.py": "753f95a5654f5a6f88c2c2d8a71f97da01cabd21ba1f0ced1af4537ec0aa37c2",
+        "docs/topics/0.10_Fluid_Dynamics_Chaos/Code/03_Research/Research_Fluid_Vector_State_Contract.py": "3b81d328a8a7c073ed3804cf3815b09ca7b50b3d25a8547b7a18d84f6e8bfe0f",
+        "docs/topics/0.10_Fluid_Dynamics_Chaos/Data/03_Research/fluid_second_sound_mode_eligibility_contract.json": "a1b44982d04efad610a9f06ba5f8d8d27f81e726f7548e2fbaec9b333bb31920",
+        "docs/topics/0.10_Fluid_Dynamics_Chaos/Data/03_Research/fluid_vector_state_research_contract.json": "ce7fee2d3a093e983316d9a867a1a2bbd16ab36efb77b5c97f5380bba2017f70",
+        "docs/topics/0.10_Fluid_Dynamics_Chaos/SECOND_SOUND_MODE_ELIGIBILITY.md": "1e5be4c149bb895ba73c127192f15779855063df59cd5b7ebf8195459e4934d5",
+        "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry_topic10_second_sound_mode_addendum.json": "7de79a67ee34fe87827c4bac64f29ddce1e224f0a2c222c00d8b8e8cba11f775",
+        "docs/core/02_equations/matter_space/uet_matter_space.py": "488db6aa26b99856e2eb82a2f46a9857f623f418ef8e537498fa71d5e4f633aa",
+        "docs/topics/0.13_Thermodynamic_Bridge/HE4_SECOND_SOUND_PROTOCOL_CARD.md": "3e63ee75d51935420e9d4cb5e2141cf5cdb52c7596a6ea31a78e621ae1313449",
+        "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry_topic13_continuum_relative_flow_addendum.json": "72beccc6257279e23400ceca47ac0615cfc5d1703aa628b47c6ee58ce26fb604"
+      },
+      "candidate_disposition": "NOT_ELIGIBLE_AS_HYDRODYNAMIC_SECOND_SOUND_OPERATOR_UNDER_DECLARED_ASSUMPTIONS",
+      "coupled_branch_blocker": "isothermal_single_velocity_candidate_counterflow_acoustic_mode_missing",
+      "physical_controller": "vector_momentum_constitutive_origin_and_material_frame_admission_open",
+      "physical_uet_operator_admitted": false,
+      "physical_prediction_executed": false,
+      "physical_J05_executed": false,
+      "claim_promotion": false,
+      "dependency_unlock": false,
+      "harness_revision": {
+        "status": "POST_PREVIEW_COMPLEX_METRIC_REPAIR",
+        "retained_diagnostic": "docs/topics/0.10_Fluid_Dynamics_Chaos/Result/artifacts/fluid_second_sound_mode_initial_metric_diagnostic.json",
+        "changed": "Local absolute-square norm replaces invalid real-only norm for complex matrices; imaginary-work and wrong-counterflow-sign sensitivity controls added after preview.",
+        "thresholds_relaxed": false,
+        "numerical_controls_changed": false,
+        "blind_preregistration": false,
+        "initial_nominal_pass_accepted": false
+      },
+      "next_action": "Register and materially justify separate entropy/temperature, relative-flow and superfluid phase/chemical-potential dynamics; independently lock EOS/transport and primary response protocol. Retain existing candidate as bounded isothermal reference.",
+      "package_role": "candidate screening; not physical J05"
     }
   ],
   "last_updated": "2026-09-30",
@@ -558,5 +665,46 @@
       "docs/topics/0.10_Fluid_Dynamics_Chaos/Code/03_Research/Research_Fluid_Vector_State_Contract.py": "3b81d328a8a7c073ed3804cf3815b09ca7b50b3d25a8547b7a18d84f6e8bfe0f"
     },
     "next_action": "Justify/admit or reject the material configuration, fluid/rate inertia origin and SI observable mapping; dissipative/thermal closures stay separate."
+  },
+  "current_mode_eligibility_snapshot": {
+    "date": "2026-09-30",
+    "latest_executed_package": "J01_J05_REFERENCE_MODE_SCREEN",
+    "status": "PASS_CURRENT_CANDIDATE_HYDRODYNAMIC_MODE_EXCLUSION_ONLY",
+    "scope": "Stable homogeneous finite-gap single-velocity long-wave reference exclusion; separate synthetic standard two-fluid controls",
+    "derivation_card": "docs/topics/0.10_Fluid_Dynamics_Chaos/SECOND_SOUND_MODE_ELIGIBILITY.md",
+    "contract": "docs/topics/0.10_Fluid_Dynamics_Chaos/Data/03_Research/fluid_second_sound_mode_eligibility_contract.json",
+    "verifier": "docs/topics/0.10_Fluid_Dynamics_Chaos/Code/03_Research/Research_Fluid_Second_Sound_Mode_Eligibility.py",
+    "result_artifact": "docs/topics/0.10_Fluid_Dynamics_Chaos/Result/artifacts/fluid_second_sound_mode_eligibility_audit.json",
+    "result_artifact_sha256": "c9bdaff5bca7d39a7e1f0bb78e10322918453271a4ac293f841593c11d79be18",
+    "reference_check_count": 139,
+    "evidence_hashes": {
+      "docs/topics/0.10_Fluid_Dynamics_Chaos/Code/03_Research/Research_Fluid_Second_Sound_Mode_Eligibility.py": "753f95a5654f5a6f88c2c2d8a71f97da01cabd21ba1f0ced1af4537ec0aa37c2",
+      "docs/topics/0.10_Fluid_Dynamics_Chaos/Code/03_Research/Research_Fluid_Vector_State_Contract.py": "3b81d328a8a7c073ed3804cf3815b09ca7b50b3d25a8547b7a18d84f6e8bfe0f",
+      "docs/topics/0.10_Fluid_Dynamics_Chaos/Data/03_Research/fluid_second_sound_mode_eligibility_contract.json": "a1b44982d04efad610a9f06ba5f8d8d27f81e726f7548e2fbaec9b333bb31920",
+      "docs/topics/0.10_Fluid_Dynamics_Chaos/Data/03_Research/fluid_vector_state_research_contract.json": "ce7fee2d3a093e983316d9a867a1a2bbd16ab36efb77b5c97f5380bba2017f70",
+      "docs/topics/0.10_Fluid_Dynamics_Chaos/SECOND_SOUND_MODE_ELIGIBILITY.md": "1e5be4c149bb895ba73c127192f15779855063df59cd5b7ebf8195459e4934d5",
+      "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry_topic10_second_sound_mode_addendum.json": "7de79a67ee34fe87827c4bac64f29ddce1e224f0a2c222c00d8b8e8cba11f775",
+      "docs/core/02_equations/matter_space/uet_matter_space.py": "488db6aa26b99856e2eb82a2f46a9857f623f418ef8e537498fa71d5e4f633aa",
+      "docs/topics/0.13_Thermodynamic_Bridge/HE4_SECOND_SOUND_PROTOCOL_CARD.md": "3e63ee75d51935420e9d4cb5e2141cf5cdb52c7596a6ea31a78e621ae1313449",
+      "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry_topic13_continuum_relative_flow_addendum.json": "72beccc6257279e23400ceca47ac0615cfc5d1703aa628b47c6ee58ce26fb604"
+    },
+    "candidate_disposition": "NOT_ELIGIBLE_AS_HYDRODYNAMIC_SECOND_SOUND_OPERATOR_UNDER_DECLARED_ASSUMPTIONS",
+    "coupled_branch_blocker": "isothermal_single_velocity_candidate_counterflow_acoustic_mode_missing",
+    "physical_controller": "vector_momentum_constitutive_origin_and_material_frame_admission_open",
+    "physical_uet_operator_admitted": false,
+    "physical_prediction_executed": false,
+    "physical_J05_executed": false,
+    "claim_promotion": false,
+    "dependency_unlock": false,
+    "harness_revision": {
+      "status": "POST_PREVIEW_COMPLEX_METRIC_REPAIR",
+      "retained_diagnostic": "docs/topics/0.10_Fluid_Dynamics_Chaos/Result/artifacts/fluid_second_sound_mode_initial_metric_diagnostic.json",
+      "changed": "Local absolute-square norm replaces invalid real-only norm for complex matrices; imaginary-work and wrong-counterflow-sign sensitivity controls added after preview.",
+      "thresholds_relaxed": false,
+      "numerical_controls_changed": false,
+      "blind_preregistration": false,
+      "initial_nominal_pass_accepted": false
+    },
+    "next_action": "Register and materially justify separate entropy/temperature, relative-flow and superfluid phase/chemical-potential dynamics; independently lock EOS/transport and primary response protocol. Retain existing candidate as bounded isothermal reference."
   }
 }
