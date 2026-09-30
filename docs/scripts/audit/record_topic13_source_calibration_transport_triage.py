@@ -65,8 +65,8 @@ def validate_current_state() -> tuple[dict[str, Any], dict[str, Any], dict[str, 
     }
     if matrix["status"] != "BLOCKED_OPEN_T13_FULL_BRIDGE":
         raise RuntimeError("unexpected Topic 13 matrix status")
-    if matrix["full_core_unlock"] is not False:
-        raise RuntimeError("Topic 13 core unlock must remain false")
+    if matrix["full_topic_ready"] is not False:
+        raise RuntimeError("aggregate Topic 13 must remain blocked until all input packages close")
     if counts != expected_counts:
         raise RuntimeError(f"unexpected Topic 13 subresult counts: {raw_counts}")
     if observed_blockers != EXPECTED_BLOCKERS:
@@ -96,7 +96,7 @@ MAJOR_RESULT_CLOSURE: `PARTIAL`; the canonical Full Topic 13 gate remains `BLOCK
 WHAT_IS_ACTUALLY_CLOSED: The current evidence routes were rechecked against the Core-level contracts. Lowitzer supplies a source-locked same-study `alpha_V`/`K_T` correction-input lane, BIPM supplies a source-locked volumetric `c_p` comparator, Kim 2018 supplies an external Green-Kubo comparator, and the existing Calorine full-LBTE run supplies a numerical-stability boundary. None of these routes supplies a Ding-equivalent `C_src`, a base-Phi/SI pair, or a physical UET Kubo record.
 WHAT_REMAINS_OPEN: The matrix remains 21 `CLOSED_FOR_LANE`, 5 `CLOSED_AS_NO_GO`, 0 `CLOSED_FOR_CORE`, and 10 `OPEN` subresults across 7 blocker groups. The remaining Core results are base-Phi SI anchor, independent `alpha_Phi_K`, normalized beta/SI map, source-backed EOS, physical UET Kubo, physical SK/KMS transport match, physical entropy-production mapping, accepted numeric `C_src`, material/uncertainty closure, and physical heat-flux/entropy mapping.
 DEPENDENCY_UNLOCKED: None. Comparator and numerical-boundary evidence remain lane-scoped; Gravity/GR, curved 3+1, and full constitutive transport stay locked.
-STATUS: `{matrix['status']}`; `full_core_unlock={matrix['full_core_unlock']}`; `claim_promotion={matrix['claim_promotion']}`; `holdout_accessed={input_audit['holdout_policy']['xie_2026_accessed']}`.
+STATUS: `{matrix['status']}`; bounded O(2)/He-4 Core track=`{matrix['bounded_core_track_status']}`; `full_topic_ready={matrix['full_topic_ready']}`; `claim_promotion={matrix['claim_promotion']}`; `holdout_accessed={input_audit['holdout_policy']['xie_2026_accessed']}`.
 WHAT_CHANGED: Audited the source/package contracts and regenerated the closure-record audit, three-package input audit, canonical Full Topic 13 gate, and closure matrix. No new numeric package was accepted and no source, threshold, fit, or holdout policy was changed.
 EQUATION_OR_MAPPING: `y_TTG=Delta_Tq(t)/Delta_Tq(0)`; `y_TTG^UET=Delta_Phi(t)/Delta_Phi(0)`; `Delta_Tq=alpha_Phi_K*Delta_Phi`; `C_src(T)=sum_mu c_mu(T)`; `Delta_Tq=Delta_u_ph/C_src(T)`. External `c_p`, `c_v`, and Green-Kubo values remain comparator inputs and are not relabeled as `Phi` or UET transport.
 VERIFICATION: Closure-record contract `PASS` with zero failed checks; input-package audit `PASS` with 3 packages and 0 accepted for Core; canonical gate reports {blocker_count} blockers; closure matrix reports 10 major results and 36 subresults; Xie 2026 remains unread and no alpha fit was performed.
