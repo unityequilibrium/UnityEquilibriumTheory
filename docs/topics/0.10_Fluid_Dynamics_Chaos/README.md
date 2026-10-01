@@ -450,3 +450,20 @@ The next selected controller is
 useful_certified_continuum_current_error_and_microscopic_heat_current_correspondence_open.
 Physical vector/material origin, Topic13 heat-current/EOS/frame/protocol and
 interacting/nonlinear/live/SI/source admission remain open; J04/J05/J06 unchanged.
+
+## Tree spatial current origin checkpoint (2026-10-01)
+
+[The microscopic current card](CORE_O2_MICROSCOPIC_CURRENT_WARD.md) and
+[303-check artifact](Result/artifacts/fluid_core_o2_current_ward_audit.json)
+connect the selected kinetic flux to source-verbatim Core Noether/stress currents
+at tree level and zero background flow. With action-normalized modes,
+J_E=k, J_G=E*v_g and J_E=J_G+mu*J_N. The old momentum-projected source is
+P_perp J_G, a rotating-generator H-mu Q flux. It is not admitted material heat flux.
+
+Both positive branches, phase/amplitude/order controls, finite-flow derivatives,
+index/charge/omitted-charge negative controls and scale diagnostics pass.
+No complete condensate-adjusted density, interacting current, physical frame,
+SI/He-II or J04/J05/J06 admission is made. The useful continuum error bracket
+also remains open. New selected controller:
+useful_certified_current_error_and_interacting_Noether_heat_frame_material_correspondence_open.
+Overall physical controller is unchanged.

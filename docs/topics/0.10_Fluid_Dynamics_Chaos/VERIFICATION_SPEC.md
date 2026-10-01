@@ -379,3 +379,24 @@ reproducible; published/fresh analytic values use locked relative tolerance.
 No full continuum inverse, formal/interval/external verification or physical
 transport execution. A conditional loose upper formula does not pass a useful
 relative-error or material admission gate.
+
+## Tree spatial current Ward diagnostics (2026-10-01)
+
+Command: python docs/topics/0.10_Fluid_Dynamics_Chaos/Code/03_Research/Research_Fluid_Core_O2_Current_Ward.py.
+[Contract](Data/03_Research/fluid_core_o2_current_ward_contract.json),
+[card](CORE_O2_MICROSCOPIC_CURRENT_WARD.md),
+[artifact](Result/artifacts/fluid_core_o2_current_ward_audit.json).
+
+Prelocked: unchanged low-T states/mu/coupling/cutoff; two positive branches,
+four parent momenta, phase orders8/16/32, amplitudes.001/.002/.004 and phases0/.37;
+five-point flow derivatives at three steps and three momenta; projection
+Gauss64/128/256. Algebra/source/phase/index/scale1e-8, derivative1e-5,
+last-order projection1%, negative-control floor.001 and energy scale2.
+First execution303/303 passes without scientific repair, fit or target change.
+
+Four regressions repeat fresh execution twice with same-runtime byte comparison,
+source/AST/card/registry identity, all288 field controls/36 derivative controls,
+charge/index/omission rejection, projected old-source correspondence, unit powers,
+density/frame boundaries and fail-closed stale inputs/false admissions/controls.
+Published/fresh nonzero mode/source values use the locked relative tolerance.
+No full density/interacting/formal/material or physical package execution.

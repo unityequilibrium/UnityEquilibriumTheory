@@ -500,3 +500,27 @@ executes or admits physical J04/J05/J06; those remain NOT_STARTED.
 Current selected controller:
 useful_certified_continuum_current_error_and_microscopic_heat_current_correspondence_open.
 Overall physical controller remains vector_momentum_constitutive_origin_and_material_frame_admission_open.
+
+## Tree spatial microscopic current checkpoint (2026-10-01)
+
+Existing J01/J02 preparation now has a [tree current origin card](CORE_O2_MICROSCOPIC_CURRENT_WARD.md)
+and [303-check artifact](Result/artifacts/fluid_core_o2_current_ward_audit.json).
+Direct Core source currents and independent flow-root derivatives identify the
+selected kinetic flux as H-mu Q flux, with J_E=k and J_G=E*v_g. Momentum
+projection recovers the previous selected current without changing the kernel
+or the old continuum/no-gap/current-bound results.
+
+This narrows spatial origin while exposing the remaining condensate-adjusted
+charge/energy densities, interacting Noether and material heat/enthalpy/frame
+obligations. Zero momentum does not impose zero mass/charge flow. Topic13
+fixed-pressure EOS/entropy reference/covariance, independent response protocol
+and Core SI/atom/state mapping remain necessary. A useful certified continuum
+error bracket remains a parallel mathematical obligation.
+
+The plan adds one snapshot/history/J02 subrecord and retains all previous
+snapshots/history, ten-package DAG and physical states. Selected controller:
+useful_certified_current_error_and_interacting_Noether_heat_frame_material_correspondence_open.
+Overall controller remains vector_momentum_constitutive_origin_and_material_frame_admission_open.
+Physical J04/J05/J06 remain NOT_STARTED; no dependency or claim promotion.
+OpenAI work remains a source-reviewed method/design transfer, not this field
+derivation's proof, material evidence or an executed formal verifier.

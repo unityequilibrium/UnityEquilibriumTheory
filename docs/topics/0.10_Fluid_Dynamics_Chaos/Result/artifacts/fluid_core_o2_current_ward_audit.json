@@ -1,0 +1,2523 @@
+{
+  "schema_version": "t010-current-ward-audit-v1",
+  "date": "2026-10-01",
+  "status": "PASS_TREE_SPATIAL_CURRENT_WARD_REFERENCE_ONLY",
+  "check_count": 303,
+  "passing_check_count": 303,
+  "checks": {
+    "scope": {
+      "pass": true
+    },
+    "locked_states": {
+      "pass": true
+    },
+    "locked_controls": {
+      "pass": true
+    },
+    "locked_configuration": {
+      "pass": true
+    },
+    "boundary_fields": {
+      "pass": true
+    },
+    "boundary/SI_charge_atom_mapping": {
+      "pass": true
+    },
+    "boundary/all_channel_collision": {
+      "pass": true
+    },
+    "boundary/claim_promotion": {
+      "pass": true
+    },
+    "boundary/dependency_unlock": {
+      "pass": true
+    },
+    "boundary/external_math_review": {
+      "pass": true
+    },
+    "boundary/formal_verification": {
+      "pass": true
+    },
+    "boundary/full_charge_density_backreaction": {
+      "pass": true
+    },
+    "boundary/interacting_Noether_current": {
+      "pass": true
+    },
+    "boundary/interval_certificate": {
+      "pass": true
+    },
+    "boundary/physical_HeII_state": {
+      "pass": true
+    },
+    "boundary/physical_J04_executed": {
+      "pass": true
+    },
+    "boundary/physical_J05_executed": {
+      "pass": true
+    },
+    "boundary/physical_J06_executed": {
+      "pass": true
+    },
+    "boundary/physical_UET_operator": {
+      "pass": true
+    },
+    "boundary/physical_frequency_window": {
+      "pass": true
+    },
+    "boundary/physical_heat_current": {
+      "pass": true
+    },
+    "boundary/physical_material_frame": {
+      "pass": true
+    },
+    "boundary/useful_relative_error_certificate": {
+      "pass": true
+    },
+    "prior_sources_fresh": {
+      "pass": true
+    },
+    "prior_conditional_bound_only": {
+      "pass": true
+    },
+    "preregistered_card": {
+      "pass": true
+    },
+    "preregistered_registry": {
+      "pass": true
+    },
+    "0.002/lower/0.1/field_charge": {
+      "metric": 9.090303238884355e-11,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.002/lower/0.1/field_energy": {
+      "metric": 8.075010414089749e-11,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.002/lower/0.1/field_momentum": {
+      "metric": 8.075010414089749e-11,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.002/lower/0.1/field_grand": {
+      "metric": 5.974964916381452e-10,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.002/lower/0.1/Ward": {
+      "metric": 2.189020056232849e-16,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.002/lower/0.1/phase_order": {
+      "metric": 2.943655230888557e-10,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.002/lower/0.1/group_flux": {
+      "metric": 3.356222202847033e-16,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.002/lower/0.1/phase_current": {
+      "metric": 1.6739163620113497e-16,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.002/lower/0.1/action_norm": {
+      "metric": 0.0006132831828316131,
+      "minimum": 0,
+      "pass": true
+    },
+    "0.002/lower/0.1/omitted_charge_negative_control": {
+      "metric": 0.8369431518605583,
+      "minimum": 0.001,
+      "pass": true
+    },
+    "0.002/lower/0.1/unraised_index_negative_control": {
+      "metric": 1.9999999999877196,
+      "minimum": 0.001,
+      "pass": true
+    },
+    "0.002/lower/0.1/charge_convention_negative_control": {
+      "metric": 1.9999999999759686,
+      "minimum": 0.001,
+      "pass": true
+    },
+    "0.002/lower/0.1/naive_charge_advection_negative_control": {
+      "metric": 1.2554147950823138,
+      "minimum": 0.001,
+      "pass": true
+    },
+    "0.002/lower/1.0/field_charge": {
+      "metric": 6.598746469864586e-12,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.002/lower/1.0/field_energy": {
+      "metric": 9.987885590858646e-12,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.002/lower/1.0/field_momentum": {
+      "metric": 9.987885590858646e-12,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.002/lower/1.0/field_grand": {
+      "metric": 4.786623954626811e-11,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.002/lower/1.0/Ward": {
+      "metric": 1.751216044983414e-16,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.002/lower/1.0/phase_order": {
+      "metric": 2.583228818571029e-11,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.002/lower/1.0/group_flux": {
+      "metric": 1.3424531085059964e-16,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.002/lower/1.0/phase_current": {
+      "metric": 0.0,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.002/lower/1.0/action_norm": {
+      "metric": 0.00613280689219951,
+      "minimum": 0,
+      "pass": true
+    },
+    "0.002/lower/1.0/omitted_charge_negative_control": {
+      "metric": 0.8369388068501296,
+      "minimum": 0.001,
+      "pass": true
+    },
+    "0.002/lower/1.0/unraised_index_negative_control": {
+      "metric": 1.9999999999980054,
+      "minimum": 0.001,
+      "pass": true
+    },
+    "0.002/lower/1.0/charge_convention_negative_control": {
+      "metric": 1.9999999999934013,
+      "minimum": 0.001,
+      "pass": true
+    },
+    "0.002/lower/1.0/finite_flow/0.001": {
+      "metric": 7.552749835676972e-13,
+      "threshold": 1e-05,
+      "pass": true
+    },
+    "0.002/lower/1.0/finite_flow/0.0003": {
+      "metric": 5.275274366582508e-12,
+      "threshold": 1e-05,
+      "pass": true
+    },
+    "0.002/lower/1.0/finite_flow/0.0001": {
+      "metric": 1.6463521587458786e-11,
+      "threshold": 1e-05,
+      "pass": true
+    },
+    "0.002/lower/10.0/field_charge": {
+      "metric": 5.288597017420061e-13,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.002/lower/10.0/field_energy": {
+      "metric": 1.1119521399115626e-12,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.002/lower/10.0/field_momentum": {
+      "metric": 1.1119521399115626e-12,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.002/lower/10.0/field_grand": {
+      "metric": 8.050895673326234e-12,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.002/lower/10.0/Ward": {
+      "metric": 1.400972835973515e-16,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.002/lower/10.0/phase_order": {
+      "metric": 7.403516429948771e-12,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.002/lower/10.0/group_flux": {
+      "metric": 2.1422211892199014e-16,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.002/lower/10.0/phase_current": {
+      "metric": 2.1437361238022134e-16,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.002/lower/10.0/action_norm": {
+      "metric": 0.06130317632761108,
+      "minimum": 0,
+      "pass": true
+    },
+    "0.002/lower/10.0/omitted_charge_negative_control": {
+      "metric": 0.8365046472531965,
+      "minimum": 0.001,
+      "pass": true
+    },
+    "0.002/lower/10.0/unraised_index_negative_control": {
+      "metric": 1.9999999999993374,
+      "minimum": 0.001,
+      "pass": true
+    },
+    "0.002/lower/10.0/charge_convention_negative_control": {
+      "metric": 1.9999999999995786,
+      "minimum": 0.001,
+      "pass": true
+    },
+    "0.002/lower/10.0/finite_flow/0.001": {
+      "metric": 8.50205746699958e-13,
+      "threshold": 1e-05,
+      "pass": true
+    },
+    "0.002/lower/10.0/finite_flow/0.0003": {
+      "metric": 2.139234277937653e-12,
+      "threshold": 1e-05,
+      "pass": true
+    },
+    "0.002/lower/10.0/finite_flow/0.0001": {
+      "metric": 9.54820069541506e-13,
+      "threshold": 1e-05,
+      "pass": true
+    },
+    "0.002/lower/60.0/field_charge": {
+      "metric": 2.002251730175906e-13,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.002/lower/60.0/field_energy": {
+      "metric": 1.2851590815321604e-13,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.002/lower/60.0/field_momentum": {
+      "metric": 1.2851590815321604e-13,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.002/lower/60.0/field_grand": {
+      "metric": 1.154500859453701e-12,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.002/lower/60.0/Ward": {
+      "metric": 1.867963781296892e-16,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.002/lower/60.0/phase_order": {
+      "metric": 3.4888906045184275e-13,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.002/lower/60.0/group_flux": {
+      "metric": 1.308661141980315e-16,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.002/lower/60.0/phase_current": {
+      "metric": 0.0,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.002/lower/60.0/action_norm": {
+      "metric": 0.3628514876859992,
+      "minimum": 0,
+      "pass": true
+    },
+    "0.002/lower/60.0/omitted_charge_negative_control": {
+      "metric": 0.8215768275133554,
+      "minimum": 0.001,
+      "pass": true
+    },
+    "0.002/lower/60.0/unraised_index_negative_control": {
+      "metric": 1.9999999999999678,
+      "minimum": 0.001,
+      "pass": true
+    },
+    "0.002/lower/60.0/charge_convention_negative_control": {
+      "metric": 1.9999999999999953,
+      "minimum": 0.001,
+      "pass": true
+    },
+    "0.002/lower/60.0/finite_flow/0.001": {
+      "metric": 5.626967616709141e-13,
+      "threshold": 1e-05,
+      "pass": true
+    },
+    "0.002/lower/60.0/finite_flow/0.0003": {
+      "metric": 1.1713754671452958e-13,
+      "threshold": 1e-05,
+      "pass": true
+    },
+    "0.002/lower/60.0/finite_flow/0.0001": {
+      "metric": 6.385087639544792e-13,
+      "threshold": 1e-05,
+      "pass": true
+    },
+    "0.002/upper/0.1/field_charge": {
+      "metric": 2.142612943374528e-14,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.002/upper/0.1/field_energy": {
+      "metric": 3.611883092742086e-14,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.002/upper/0.1/field_momentum": {
+      "metric": 3.611883092742086e-14,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.002/upper/0.1/field_grand": {
+      "metric": 2.1449962113320446e-14,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.002/upper/0.1/Ward": {
+      "metric": 2.1890200562074207e-16,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.002/upper/0.1/phase_order": {
+      "metric": 2.451702462952204e-14,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.002/upper/0.1/group_flux": {
+      "metric": 2.3833291237023227e-16,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.002/upper/0.1/phase_current": {
+      "metric": 0.0,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.002/upper/0.1/action_norm": {
+      "metric": 1.6717295408982664,
+      "minimum": 0,
+      "pass": true
+    },
+    "0.002/upper/0.1/omitted_charge_negative_control": {
+      "metric": 0.4556173396073013,
+      "minimum": 0.001,
+      "pass": true
+    },
+    "0.002/upper/0.1/unraised_index_negative_control": {
+      "metric": 1.9999999999999973,
+      "minimum": 0.001,
+      "pass": true
+    },
+    "0.002/upper/0.1/charge_convention_negative_control": {
+      "metric": 1.9999999999999982,
+      "minimum": 0.001,
+      "pass": true
+    },
+    "0.002/upper/1.0/field_charge": {
+      "metric": 2.7050628844091288e-14,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.002/upper/1.0/field_energy": {
+      "metric": 2.451702462952233e-14,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.002/upper/1.0/field_momentum": {
+      "metric": 2.434190302502574e-14,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.002/upper/1.0/field_grand": {
+      "metric": 1.0296006168034995e-14,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.002/upper/1.0/Ward": {
+      "metric": 3.502432089931886e-16,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.002/upper/1.0/phase_order": {
+      "metric": 9.281445038319251e-15,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.002/upper/1.0/group_flux": {
+      "metric": 3.813335617790777e-16,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.002/upper/1.0/phase_current": {
+      "metric": 1.3391400417866971e-16,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.002/upper/1.0/action_norm": {
+      "metric": 1.6717377970528913,
+      "minimum": 0,
+      "pass": true
+    },
+    "0.002/upper/1.0/omitted_charge_negative_control": {
+      "metric": 0.4556160519496351,
+      "minimum": 0.001,
+      "pass": true
+    },
+    "0.002/upper/1.0/unraised_index_negative_control": {
+      "metric": 1.9999999999999813,
+      "minimum": 0.001,
+      "pass": true
+    },
+    "0.002/upper/1.0/charge_convention_negative_control": {
+      "metric": 1.9999999999999751,
+      "minimum": 0.001,
+      "pass": true
+    },
+    "0.002/upper/1.0/finite_flow/0.001": {
+      "metric": 1.4011823999226749e-10,
+      "threshold": 1e-05,
+      "pass": true
+    },
+    "0.002/upper/1.0/finite_flow/0.0003": {
+      "metric": 2.740318424289247e-10,
+      "threshold": 1e-05,
+      "pass": true
+    },
+    "0.002/upper/1.0/finite_flow/0.0001": {
+      "metric": 1.0651077964813054e-09,
+      "threshold": 1e-05,
+      "pass": true
+    },
+    "0.002/upper/10.0/field_charge": {
+      "metric": 1.5220526478995724e-14,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.002/upper/10.0/field_energy": {
+      "metric": 6.318387490237052e-14,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.002/upper/10.0/field_momentum": {
+      "metric": 6.318387490237052e-14,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.002/upper/10.0/field_grand": {
+      "metric": 3.036132740263501e-14,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.002/upper/10.0/Ward": {
+      "metric": 2.801945671945654e-16,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.002/upper/10.0/phase_order": {
+      "metric": 1.2468658240157392e-14,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.002/upper/10.0/group_flux": {
+      "metric": 0.0,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.002/upper/10.0/phase_current": {
+      "metric": 2.143736123802214e-16,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.002/upper/10.0/action_norm": {
+      "metric": 1.6725631867190989,
+      "minimum": 0,
+      "pass": true
+    },
+    "0.002/upper/10.0/omitted_charge_negative_control": {
+      "metric": 0.4554873566502163,
+      "minimum": 0.001,
+      "pass": true
+    },
+    "0.002/upper/10.0/unraised_index_negative_control": {
+      "metric": 1.9999999999999987,
+      "minimum": 0.001,
+      "pass": true
+    },
+    "0.002/upper/10.0/charge_convention_negative_control": {
+      "metric": 1.9999999999999927,
+      "minimum": 0.001,
+      "pass": true
+    },
+    "0.002/upper/10.0/finite_flow/0.001": {
+      "metric": 8.630896008040094e-12,
+      "threshold": 1e-05,
+      "pass": true
+    },
+    "0.002/upper/10.0/finite_flow/0.0003": {
+      "metric": 1.7562986941474397e-11,
+      "threshold": 1e-05,
+      "pass": true
+    },
+    "0.002/upper/10.0/finite_flow/0.0001": {
+      "metric": 2.504038140974879e-10,
+      "threshold": 1e-05,
+      "pass": true
+    },
+    "0.002/upper/60.0/field_charge": {
+      "metric": 2.2990971901733752e-14,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.002/upper/60.0/field_energy": {
+      "metric": 2.37231400224717e-14,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.002/upper/60.0/field_momentum": {
+      "metric": 2.353634364434201e-14,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.002/upper/60.0/field_grand": {
+      "metric": 2.2355142982282865e-14,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.002/upper/60.0/Ward": {
+      "metric": 5.603891343890951e-16,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.002/upper/60.0/phase_order": {
+      "metric": 2.1855176241174723e-14,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.002/upper/60.0/group_flux": {
+      "metric": 0.0,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.002/upper/60.0/phase_current": {
+      "metric": 1.4551248039071994e-16,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.002/upper/60.0/action_norm": {
+      "metric": 1.7014617273783381,
+      "minimum": 0,
+      "pass": true
+    },
+    "0.002/upper/60.0/omitted_charge_negative_control": {
+      "metric": 0.4510250762439125,
+      "minimum": 0.001,
+      "pass": true
+    },
+    "0.002/upper/60.0/unraised_index_negative_control": {
+      "metric": 1.9999999999999967,
+      "minimum": 0.001,
+      "pass": true
+    },
+    "0.002/upper/60.0/charge_convention_negative_control": {
+      "metric": 1.9999999999999993,
+      "minimum": 0.001,
+      "pass": true
+    },
+    "0.002/upper/60.0/finite_flow/0.001": {
+      "metric": 1.000398302685199e-12,
+      "threshold": 1e-05,
+      "pass": true
+    },
+    "0.002/upper/60.0/finite_flow/0.0003": {
+      "metric": 7.790592687638756e-12,
+      "threshold": 1e-05,
+      "pass": true
+    },
+    "0.002/upper/60.0/finite_flow/0.0001": {
+      "metric": 7.366569319725933e-12,
+      "threshold": 1e-05,
+      "pass": true
+    },
+    "0.002/projection/64/old_source_correspondence_error": {
+      "metric": 3.5136502785387995e-13,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.002/projection/64/projected_charge_grand_identity_error": {
+      "metric": 1.1487180822465865e-12,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.002/projection/64/total_energy_projected_relative_norm": {
+      "metric": 2.3959875603224194e-17,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.002/projection/64/source_G": {
+      "metric": 1.9036146671616397e-20,
+      "minimum": 0,
+      "pass": true
+    },
+    "0.002/projection/64/total_energy_misidentification": {
+      "metric": 0.836819743444027,
+      "minimum": 0.001,
+      "pass": true
+    },
+    "0.002/projection/128/old_source_correspondence_error": {
+      "metric": 3.7699248331287557e-13,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.002/projection/128/projected_charge_grand_identity_error": {
+      "metric": 1.0226064091972081e-12,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.002/projection/128/total_energy_projected_relative_norm": {
+      "metric": 8.128373275788131e-17,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.002/projection/128/source_G": {
+      "metric": 1.9036146671612575e-20,
+      "minimum": 0,
+      "pass": true
+    },
+    "0.002/projection/128/total_energy_misidentification": {
+      "metric": 0.8368197434440269,
+      "minimum": 0.001,
+      "pass": true
+    },
+    "0.002/projection/256/old_source_correspondence_error": {
+      "metric": 2.6894957746857033e-13,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.002/projection/256/projected_charge_grand_identity_error": {
+      "metric": 1.5312699628056361e-12,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.002/projection/256/total_energy_projected_relative_norm": {
+      "metric": 9.028013560051266e-17,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.002/projection/256/source_G": {
+      "metric": 1.9036146671614104e-20,
+      "minimum": 0,
+      "pass": true
+    },
+    "0.002/projection/256/total_energy_misidentification": {
+      "metric": 0.836819743444027,
+      "minimum": 0.001,
+      "pass": true
+    },
+    "0.002/projection_refinement": {
+      "metric": 8.030547987092953e-14,
+      "threshold": 0.01,
+      "pass": true
+    },
+    "0.004/lower/0.1/field_charge": {
+      "metric": 5.5562816720298993e-11,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.004/lower/0.1/field_energy": {
+      "metric": 2.8652083514877767e-11,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.004/lower/0.1/field_momentum": {
+      "metric": 2.8652083514877767e-11,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.004/lower/0.1/field_grand": {
+      "metric": 2.4327271708323253e-10,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.004/lower/0.1/Ward": {
+      "metric": 2.1890200562343162e-16,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.004/lower/0.1/phase_order": {
+      "metric": 1.9245368059187497e-10,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.004/lower/0.1/group_flux": {
+      "metric": 0.0,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.004/lower/0.1/phase_current": {
+      "metric": 1.673916625352074e-16,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.004/lower/0.1/action_norm": {
+      "metric": 0.0012265662145327099,
+      "minimum": 0,
+      "pass": true
+    },
+    "0.004/lower/0.1/omitted_charge_negative_control": {
+      "metric": 0.8369430201925814,
+      "minimum": 0.001,
+      "pass": true
+    },
+    "0.004/lower/0.1/unraised_index_negative_control": {
+      "metric": 1.9999999999911595,
+      "minimum": 0.001,
+      "pass": true
+    },
+    "0.004/lower/0.1/charge_convention_negative_control": {
+      "metric": 1.9999999999795368,
+      "minimum": 0.001,
+      "pass": true
+    },
+    "0.004/lower/0.1/naive_charge_advection_negative_control": {
+      "metric": 1.2554147994545848,
+      "minimum": 0.001,
+      "pass": true
+    },
+    "0.004/lower/1.0/field_charge": {
+      "metric": 4.224383717600913e-12,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.004/lower/1.0/field_energy": {
+      "metric": 5.37325619074007e-12,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.004/lower/1.0/field_momentum": {
+      "metric": 5.37325619074007e-12,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.004/lower/1.0/field_grand": {
+      "metric": 3.538756272273341e-11,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.004/lower/1.0/Ward": {
+      "metric": 1.7512160449672225e-16,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.004/lower/1.0/phase_order": {
+      "metric": 1.9699714196517266e-11,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.004/lower/1.0/group_flux": {
+      "metric": 0.0,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.004/lower/1.0/phase_current": {
+      "metric": 2.678322217542405e-16,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.004/lower/1.0/action_norm": {
+      "metric": 0.012265462666962632,
+      "minimum": 0,
+      "pass": true
+    },
+    "0.004/lower/1.0/omitted_charge_negative_control": {
+      "metric": 0.836925640565087,
+      "minimum": 0.001,
+      "pass": true
+    },
+    "0.004/lower/1.0/unraised_index_negative_control": {
+      "metric": 1.9999999999967677,
+      "minimum": 0.001,
+      "pass": true
+    },
+    "0.004/lower/1.0/charge_convention_negative_control": {
+      "metric": 1.9999999999973452,
+      "minimum": 0.001,
+      "pass": true
+    },
+    "0.004/lower/1.0/finite_flow/0.001": {
+      "metric": 2.342192779240285e-13,
+      "threshold": 1e-05,
+      "pass": true
+    },
+    "0.004/lower/1.0/finite_flow/0.0003": {
+      "metric": 2.1059647596491583e-12,
+      "threshold": 1e-05,
+      "pass": true
+    },
+    "0.004/lower/1.0/finite_flow/0.0001": {
+      "metric": 1.0068616712305788e-11,
+      "threshold": 1e-05,
+      "pass": true
+    },
+    "0.004/lower/10.0/field_charge": {
+      "metric": 5.324814140842224e-13,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.004/lower/10.0/field_energy": {
+      "metric": 4.410262487642181e-13,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.004/lower/10.0/field_momentum": {
+      "metric": 4.410262487642181e-13,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.004/lower/10.0/field_grand": {
+      "metric": 3.9642987475027854e-12,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.004/lower/10.0/Ward": {
+      "metric": 1.4009728359733564e-16,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.004/lower/10.0/phase_order": {
+      "metric": 2.0416542332653845e-12,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.004/lower/10.0/group_flux": {
+      "metric": 2.1251735539309448e-16,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.004/lower/10.0/phase_current": {
+      "metric": 0.0,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.004/lower/10.0/action_norm": {
+      "metric": 0.1224565337096913,
+      "minimum": 0,
+      "pass": true
+    },
+    "0.004/lower/10.0/omitted_charge_negative_control": {
+      "metric": 0.8351931265353185,
+      "minimum": 0.001,
+      "pass": true
+    },
+    "0.004/lower/10.0/unraised_index_negative_control": {
+      "metric": 1.9999999999997178,
+      "minimum": 0.001,
+      "pass": true
+    },
+    "0.004/lower/10.0/charge_convention_negative_control": {
+      "metric": 1.999999999999726,
+      "minimum": 0.001,
+      "pass": true
+    },
+    "0.004/lower/10.0/finite_flow/0.001": {
+      "metric": 8.051634285552006e-13,
+      "threshold": 1e-05,
+      "pass": true
+    },
+    "0.004/lower/10.0/finite_flow/0.0003": {
+      "metric": 4.2984991572466974e-13,
+      "threshold": 1e-05,
+      "pass": true
+    },
+    "0.004/lower/10.0/finite_flow/0.0001": {
+      "metric": 1.899756270891435e-12,
+      "threshold": 1e-05,
+      "pass": true
+    },
+    "0.004/lower/60.0/field_charge": {
+      "metric": 8.489947944583053e-14,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.004/lower/60.0/field_energy": {
+      "metric": 9.620013473678547e-14,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.004/lower/60.0/field_momentum": {
+      "metric": 9.620013473678547e-14,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.004/lower/60.0/field_grand": {
+      "metric": 4.606308451079669e-13,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.004/lower/60.0/Ward": {
+      "metric": 1.8679637812970142e-16,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.004/lower/60.0/phase_order": {
+      "metric": 1.817888443579438e-13,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.004/lower/60.0/group_flux": {
+      "metric": 2.12370145277993e-16,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.004/lower/60.0/phase_current": {
+      "metric": 0.0,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.004/lower/60.0/action_norm": {
+      "metric": 0.7011773890672667,
+      "minimum": 0,
+      "pass": true
+    },
+    "0.004/lower/60.0/omitted_charge_negative_control": {
+      "metric": 0.7801051815861623,
+      "minimum": 0.001,
+      "pass": true
+    },
+    "0.004/lower/60.0/unraised_index_negative_control": {
+      "metric": 1.9999999999999605,
+      "minimum": 0.001,
+      "pass": true
+    },
+    "0.004/lower/60.0/charge_convention_negative_control": {
+      "metric": 1.999999999999979,
+      "minimum": 0.001,
+      "pass": true
+    },
+    "0.004/lower/60.0/finite_flow/0.001": {
+      "metric": 6.221875208485581e-13,
+      "threshold": 1e-05,
+      "pass": true
+    },
+    "0.004/lower/60.0/finite_flow/0.0003": {
+      "metric": 1.160701547512687e-12,
+      "threshold": 1e-05,
+      "pass": true
+    },
+    "0.004/lower/60.0/finite_flow/0.0001": {
+      "metric": 3.09653227740541e-12,
+      "threshold": 1e-05,
+      "pass": true
+    },
+    "0.004/upper/0.1/field_charge": {
+      "metric": 2.3267441092393833e-14,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.004/upper/0.1/field_energy": {
+      "metric": 3.042737878128199e-14,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.004/upper/0.1/field_momentum": {
+      "metric": 3.042737878128199e-14,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.004/upper/0.1/field_grand": {
+      "metric": 2.03774654682656e-14,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.004/upper/0.1/Ward": {
+      "metric": 4.378040112414859e-16,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.004/upper/0.1/phase_order": {
+      "metric": 2.232800457331529e-14,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.004/upper/0.1/group_flux": {
+      "metric": 0.0,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.004/upper/0.1/phase_current": {
+      "metric": 0.0,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.004/upper/0.1/action_norm": {
+      "metric": 1.6717297910854279,
+      "minimum": 0,
+      "pass": true
+    },
+    "0.004/upper/0.1/omitted_charge_negative_control": {
+      "metric": 0.4556173005871668,
+      "minimum": 0.001,
+      "pass": true
+    },
+    "0.004/upper/0.1/unraised_index_negative_control": {
+      "metric": 1.9999999999999896,
+      "minimum": 0.001,
+      "pass": true
+    },
+    "0.004/upper/0.1/charge_convention_negative_control": {
+      "metric": 1.999999999999977,
+      "minimum": 0.001,
+      "pass": true
+    },
+    "0.004/upper/1.0/field_charge": {
+      "metric": 1.9150003855427827e-14,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.004/upper/1.0/field_energy": {
+      "metric": 1.9963862912611525e-14,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.004/upper/1.0/field_momentum": {
+      "metric": 1.9963862912611525e-14,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.004/upper/1.0/field_grand": {
+      "metric": 8.580066637778917e-15,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.004/upper/1.0/Ward": {
+      "metric": 3.5024320899318675e-16,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.004/upper/1.0/phase_order": {
+      "metric": 1.3525527198588886e-14,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.004/upper/1.0/group_flux": {
+      "metric": 0.0,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.004/upper/1.0/phase_current": {
+      "metric": 2.678322217542405e-16,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.004/upper/1.0/action_norm": {
+      "metric": 1.6717628154300905,
+      "minimum": 0,
+      "pass": true
+    },
+    "0.004/upper/1.0/omitted_charge_negative_control": {
+      "metric": 0.4556121500419727,
+      "minimum": 0.001,
+      "pass": true
+    },
+    "0.004/upper/1.0/unraised_index_negative_control": {
+      "metric": 1.999999999999994,
+      "minimum": 0.001,
+      "pass": true
+    },
+    "0.004/upper/1.0/charge_convention_negative_control": {
+      "metric": 1.9999999999999944,
+      "minimum": 0.001,
+      "pass": true
+    },
+    "0.004/upper/1.0/finite_flow/0.001": {
+      "metric": 1.7080732110154938e-11,
+      "threshold": 1e-05,
+      "pass": true
+    },
+    "0.004/upper/1.0/finite_flow/0.0003": {
+      "metric": 3.0472075365645213e-11,
+      "threshold": 1e-05,
+      "pass": true
+    },
+    "0.004/upper/1.0/finite_flow/0.0001": {
+      "metric": 4.3222080974533867e-10,
+      "threshold": 1e-05,
+      "pass": true
+    },
+    "0.004/upper/10.0/field_charge": {
+      "metric": 2.3188706742389238e-14,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.004/upper/10.0/field_energy": {
+      "metric": 1.919332785282615e-14,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.004/upper/10.0/field_momentum": {
+      "metric": 1.919332785282615e-14,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.004/upper/10.0/field_grand": {
+      "metric": 2.122231403164084e-14,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.004/upper/10.0/Ward": {
+      "metric": 2.8019456719454945e-16,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.004/upper/10.0/phase_order": {
+      "metric": 1.2453194361653791e-14,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.004/upper/10.0/group_flux": {
+      "metric": 0.0,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.004/upper/10.0/phase_current": {
+      "metric": 0.0,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.004/upper/10.0/action_norm": {
+      "metric": 1.6750616430192273,
+      "minimum": 0,
+      "pass": true
+    },
+    "0.004/upper/10.0/omitted_charge_negative_control": {
+      "metric": 0.45509822070448186,
+      "minimum": 0.001,
+      "pass": true
+    },
+    "0.004/upper/10.0/unraised_index_negative_control": {
+      "metric": 1.9999999999999893,
+      "minimum": 0.001,
+      "pass": true
+    },
+    "0.004/upper/10.0/charge_convention_negative_control": {
+      "metric": 1.9999999999999858,
+      "minimum": 0.001,
+      "pass": true
+    },
+    "0.004/upper/10.0/finite_flow/0.001": {
+      "metric": 1.8185957972966798e-12,
+      "threshold": 1e-05,
+      "pass": true
+    },
+    "0.004/upper/10.0/finite_flow/0.0003": {
+      "metric": 2.692466505087866e-13,
+      "threshold": 1e-05,
+      "pass": true
+    },
+    "0.004/upper/10.0/finite_flow/0.0001": {
+      "metric": 2.859876085071999e-11,
+      "threshold": 1e-05,
+      "pass": true
+    },
+    "0.004/upper/60.0/field_charge": {
+      "metric": 3.4480835515006305e-14,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.004/upper/60.0/field_energy": {
+      "metric": 3.343655168521603e-14,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.004/upper/60.0/field_momentum": {
+      "metric": 3.343655168521603e-14,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.004/upper/60.0/field_grand": {
+      "metric": 1.3641626016291334e-14,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.004/upper/60.0/Ward": {
+      "metric": 3.735927562593969e-16,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.004/upper/60.0/phase_order": {
+      "metric": 6.164280478280105e-15,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.004/upper/60.0/group_flux": {
+      "metric": 4.1974233896281013e-16,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.004/upper/60.0/phase_current": {
+      "metric": 1.5324815784447245e-16,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.004/upper/60.0/action_norm": {
+      "metric": 1.7874210841225857,
+      "minimum": 0,
+      "pass": true
+    },
+    "0.004/upper/60.0/omitted_charge_negative_control": {
+      "metric": 0.4382354422961961,
+      "minimum": 0.001,
+      "pass": true
+    },
+    "0.004/upper/60.0/unraised_index_negative_control": {
+      "metric": 1.9999999999999847,
+      "minimum": 0.001,
+      "pass": true
+    },
+    "0.004/upper/60.0/charge_convention_negative_control": {
+      "metric": 1.999999999999988,
+      "minimum": 0.001,
+      "pass": true
+    },
+    "0.004/upper/60.0/finite_flow/0.001": {
+      "metric": 1.991766307500641e-12,
+      "threshold": 1e-05,
+      "pass": true
+    },
+    "0.004/upper/60.0/finite_flow/0.0003": {
+      "metric": 9.049303720716098e-12,
+      "threshold": 1e-05,
+      "pass": true
+    },
+    "0.004/upper/60.0/finite_flow/0.0001": {
+      "metric": 1.3565220435892997e-11,
+      "threshold": 1e-05,
+      "pass": true
+    },
+    "0.004/projection/64/old_source_correspondence_error": {
+      "metric": 5.3140595166477225e-14,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.004/projection/64/projected_charge_grand_identity_error": {
+      "metric": 3.1327754890067126e-13,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.004/projection/64/total_energy_projected_relative_norm": {
+      "metric": 4.320770037658101e-17,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.004/projection/64/source_G": {
+      "metric": 9.468117036846487e-18,
+      "minimum": 0,
+      "pass": true
+    },
+    "0.004/projection/64/total_energy_misidentification": {
+      "metric": 0.8364530318496628,
+      "minimum": 0.001,
+      "pass": true
+    },
+    "0.004/projection/128/old_source_correspondence_error": {
+      "metric": 7.596718660165921e-14,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.004/projection/128/projected_charge_grand_identity_error": {
+      "metric": 2.533708570920987e-13,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.004/projection/128/total_energy_projected_relative_norm": {
+      "metric": 5.593191707074516e-17,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.004/projection/128/source_G": {
+      "metric": 9.468117036846197e-18,
+      "minimum": 0,
+      "pass": true
+    },
+    "0.004/projection/128/total_energy_misidentification": {
+      "metric": 0.8364530318496629,
+      "minimum": 0.001,
+      "pass": true
+    },
+    "0.004/projection/256/old_source_correspondence_error": {
+      "metric": 6.945558712324107e-14,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.004/projection/256/projected_charge_grand_identity_error": {
+      "metric": 2.5233832518151925e-13,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.004/projection/256/total_energy_projected_relative_norm": {
+      "metric": 7.276537752652947e-17,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.004/projection/256/source_G": {
+      "metric": 9.468117036846617e-18,
+      "minimum": 0,
+      "pass": true
+    },
+    "0.004/projection/256/total_energy_misidentification": {
+      "metric": 0.8364530318496629,
+      "minimum": 0.001,
+      "pass": true
+    },
+    "0.004/projection_refinement": {
+      "metric": 4.4262481575559303e-14,
+      "threshold": 0.01,
+      "pass": true
+    },
+    "scale/lower/E": {
+      "metric": 0.0,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "scale/lower/charge_flux": {
+      "metric": 0.0,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "scale/lower/grand_flux": {
+      "metric": 0.0,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "scale/lower/physical_energy_flux": {
+      "metric": 0.0,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "scale/lower/action_per_amplitude_squared": {
+      "metric": 0.0,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "scale/lower/Nwave": {
+      "metric": 0.0,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "scale/upper/E": {
+      "metric": 0.0,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "scale/upper/charge_flux": {
+      "metric": 0.0,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "scale/upper/grand_flux": {
+      "metric": 0.0,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "scale/upper/physical_energy_flux": {
+      "metric": 0.0,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "scale/upper/action_per_amplitude_squared": {
+      "metric": 0.0,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "scale/upper/Nwave": {
+      "metric": 0.0,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "scale/source_G": {
+      "metric": 0.0,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "complete_states": {
+      "pass": true
+    }
+  },
+  "input_hashes": {
+    "docs/topics/0.10_Fluid_Dynamics_Chaos/Data/03_Research/fluid_core_o2_current_ward_contract.json": "1ece00c9a6cc45015a72c1de977f4474c877c7999a7ac44f24f45dd622b2bdd8",
+    "docs/topics/0.10_Fluid_Dynamics_Chaos/CORE_O2_MICROSCOPIC_CURRENT_WARD.md": "2679190ef730d41212c570a3b962c351bc45f9eb3c879cf3a35617617a3bbc8a",
+    "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry_topic10_o2_current_ward_addendum.json": "4c31a8065e9317f5a15daefafd9e0b4a3fb44367eb24808e9e7863d95e08d4f8",
+    "docs/topics/0.10_Fluid_Dynamics_Chaos/Code/03_Research/Research_Fluid_Core_O2_Current_Ward.py": "96f9fa56fe8e34483697b9b806b8a88eade492eced295dc6e92ebee439948722",
+    "docs/topics/0.10_Fluid_Dynamics_Chaos/Data/03_Research/fluid_core_o2_current_bound_contract.json": "dd7990f6da9b193d1fa087c26fd200ad5ee873f93f49ea5b70fd140edf77180e",
+    "docs/topics/0.10_Fluid_Dynamics_Chaos/Code/03_Research/Research_Fluid_Core_O2_Current_Bound.py": "a367217b1ff6a9fbfe2a714bb95776c3ca26633973a4f3cad0430411aac60e15",
+    "docs/topics/0.10_Fluid_Dynamics_Chaos/Result/artifacts/fluid_core_o2_current_bound_audit.json": "709bcdcc46f7291fcb028b93794ee533cbf271bfb1e98a2823192efe3c156d21",
+    "docs/topics/0.10_Fluid_Dynamics_Chaos/Code/03_Research/Research_Fluid_Core_O2_Flow_Hessian.py": "d8ecff1e604f545d68ec03b5abf4a6cc53e3ea377cafee0c75762dd1c2ccbc62",
+    "docs/topics/0.10_Fluid_Dynamics_Chaos/Code/03_Research/Research_Fluid_Core_O2_Common_Flow.py": "b083323ad31df5527a94a888e8eae43984eb77698bda1c6c3d080e2ea940f5e2",
+    "docs/core/02_equations/covariant/uet_covariant_matter.py": "8a57d95e898a8ac962bbd749670ad0695b597281937da36496d2ec7e074f9c53",
+    "docs/core/02_equations/covariant/uet_covariant_response.py": "7fb4b7228afb8ede0ac4f1664d634346ef46cc7678c94ed7b55d73645590c0c2",
+    "docs/topics/0.10_Fluid_Dynamics_Chaos/CORE_O2_GOLDSTONE_CURRENT_BOUND.md": "5fccaf6def52afaf8d4c2615f1fb255507d542bdeab50687a59956748f79db2f",
+    "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry_topic10_o2_current_bound_addendum.json": "e467f7e0a225429c1f833a42b81d67e1c0db9dc0f1347f556282fe9e5ddab5d8",
+    "docs/topics/0.10_Fluid_Dynamics_Chaos/Data/03_Research/fluid_core_o2_continuum_form_contract.json": "2132f2adbc09082a5d4f991ddfcbcbb5133fe147e3bd521cc4fca1a952960609",
+    "docs/topics/0.10_Fluid_Dynamics_Chaos/Code/03_Research/Research_Fluid_Core_O2_Continuum_Form.py": "0f9db4ad112f01da8a00e57dbd4d842f3c2947f814e1ccf68e6d42af796c7ef8",
+    "docs/topics/0.10_Fluid_Dynamics_Chaos/Result/artifacts/fluid_core_o2_continuum_form_audit.json": "22792c7ec7ab209ca5b23a870f2b72467feb482d4f89050925364c5ba40c932f",
+    "docs/topics/0.10_Fluid_Dynamics_Chaos/CORE_O2_GOLDSTONE_CONTINUUM_FORM.md": "269bd387dde1ea664b7ab7935b96a35d6b1fa6175879f32ba6d913f46a7d0de9",
+    "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry_topic10_o2_continuum_form_addendum.json": "1b1797573264b2210a0ce6bfaa1eec84d7827bc59c2677907c9af185e236ac13",
+    "docs/topics/0.10_Fluid_Dynamics_Chaos/Data/03_Research/fluid_core_o2_infrared_trials_contract.json": "55fb10489110d257a897e0c41b95743ae502cef0130e856508ab7786c075f85d",
+    "docs/topics/0.10_Fluid_Dynamics_Chaos/Code/03_Research/Research_Fluid_Core_O2_Infrared_Trials.py": "d62ccc1853c0e02829f0b0a79d71bd1b43488c7b2d93a15d6c8e26f19157bcdf",
+    "docs/topics/0.10_Fluid_Dynamics_Chaos/Result/artifacts/fluid_core_o2_infrared_trials_audit.json": "4b550b4f455c7b5e67dd64def2208c5729425d7c851050dcc65c31f0a1c048b2",
+    "docs/topics/0.10_Fluid_Dynamics_Chaos/CORE_O2_GOLDSTONE_INFRARED_TRIALS.md": "ad908db9afc36d14102bbf18bba321795ec9b99a43abd4c2819ca49e61dfd97c",
+    "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry_topic10_o2_infrared_trials_addendum.json": "1e3bf2adc560597f2acfac9cb511519f7b9d82e9ea882b8a5d5fd2cd2d555642",
+    "docs/topics/0.10_Fluid_Dynamics_Chaos/Data/03_Research/fluid_core_o2_vector_refinement_contract.json": "5216da4f2549980292cce50314361448456db01816e3a5dba8a3c00120c880f0",
+    "docs/topics/0.10_Fluid_Dynamics_Chaos/Code/03_Research/Research_Fluid_Core_O2_Vector_Refinement.py": "f73896652c997abdb17bd6d9b155e52c40722e36af70f703976b3b18dbe1d827",
+    "docs/topics/0.10_Fluid_Dynamics_Chaos/Result/artifacts/fluid_core_o2_vector_refinement_audit.json": "4990aba84fe30276d7441bdca9567729a63797d5df0a0263d667f6df491f37f5",
+    "docs/topics/0.10_Fluid_Dynamics_Chaos/CORE_O2_GOLDSTONE_VECTOR_REFINEMENT.md": "5957e4f1373faea4e38036f040e4b84c611f11a52d8f5e3188b29e469ed2d4ef",
+    "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry_topic10_o2_vector_refinement_addendum.json": "9263469bc87c7bfaa47ce608adc1da710510885d003cf8a603e25605e06bfee1",
+    "docs/topics/0.10_Fluid_Dynamics_Chaos/Data/03_Research/fluid_core_o2_goldstone_galerkin_contract.json": "d36a29ef8524a9c839ba237ac7507ea6e8c217d777a8f9fcd87302e9b5b37fee",
+    "docs/topics/0.10_Fluid_Dynamics_Chaos/Code/03_Research/Research_Fluid_Core_O2_Goldstone_Galerkin.py": "f7caeae9655172514adc464723917a1a8e367a3a1832ada2938a2d44f1afdc74",
+    "docs/topics/0.10_Fluid_Dynamics_Chaos/Result/artifacts/fluid_core_o2_goldstone_galerkin_audit.json": "4b4c706aab168108e7d5829a6a0563eaf9f99c893afd2586020eb89b55e6d24b",
+    "docs/topics/0.10_Fluid_Dynamics_Chaos/CORE_O2_GOLDSTONE_GALERKIN_DERIVATION.md": "5cd09900d57ae2d61c2007f6a0b2f7d565903894721c81b8b81b29257bccac90",
+    "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry_topic10_o2_goldstone_galerkin_addendum.json": "73bb37bd79dfc2bfde8231998db142d539db83a9b1186e1e23c1dff8dadd6fb8",
+    "docs/topics/0.10_Fluid_Dynamics_Chaos/Data/03_Research/fluid_core_o2_common_flow_contract.json": "c9a190c89d682080a9a90254cfd205e606cd9063f9d34c68b00eeeef8634c75c",
+    "docs/topics/0.10_Fluid_Dynamics_Chaos/Data/03_Research/fluid_core_o2_goldstone_collision_contract.json": "331535ea4a63e47e0d100c317511013605ab5044f1bdbff835ba48fbd3e6b912",
+    "docs/topics/0.10_Fluid_Dynamics_Chaos/Code/03_Research/Research_Fluid_Core_O2_Goldstone_Collision.py": "1b8cc6ff1782da5c5f01dcf4d95052871a4ea2c7a5e1aa967478e9f800cd3fe8",
+    "docs/topics/0.10_Fluid_Dynamics_Chaos/Result/artifacts/fluid_core_o2_goldstone_collision_audit.json": "c130a512a015940ed5db9f2a181fa34731910fa17aa58c5c4e59e0cdb3dfe56b",
+    "docs/core/02_equations/o2/uet_o2_finite_density_eos.py": "ea744a8645f993600300fa9fd99a764e1f07b30fb272b47399c34aa114152c6d",
+    "docs/core/02_equations/o2/uet_o2_finite_temperature_quasiparticle_eos.py": "ba814f3aa02b5e31112a6595dac7727b7025b08e08f0631f50567f270cebbb7f",
+    "docs/core/02_equations/o2/uet_o2_formal_transverse_response.py": "a8ee43c6fb6edb227476412cde6cc9b2d4a643fc42cca0fd2d438b343efad1ba",
+    "docs/core/02_equations/o2/uet_o2_invariant_galerkin_collision_operator.py": "278b168e5c3b444ac4df4b96b5a7d00410cd9485c511ab2a17aa4f11c6f6d94e",
+    "docs/core/07_artifacts/topic13/t13_invariant_galerkin_collision_operator_audit.json": "433427f32612e478d71a1a4ff64f96e3d22da7fc33d3de0c10f3a0a480234011",
+    "docs/core/07_artifacts/topic13/t13_collision_evidence_reconciliation.json": "cad197d2635b08d3454cc49734b292b32971c2f18e3d3f1d2b2c0b5ca77c9bf6",
+    "docs/topics/0.10_Fluid_Dynamics_Chaos/Result/artifacts/fluid_core_o2_ideal_modes_audit.json": "b2e5d7fb5fff8f1a48148e1661bbf640027174b58b9fe765f53cded351c512f6",
+    "docs/topics/0.10_Fluid_Dynamics_Chaos/Result/previews/fluid_core_o2_goldstone_galerkin_first_execution.json": "18e4854a368c5b0d6860da12435bd8dae00d8d77302d66036c40972404ae710a",
+    "docs/topics/0.10_Fluid_Dynamics_Chaos/Result/previews/core_o2_goldstone_galerkin_first_execution_verifier.py.txt": "0be34c2e579b4aaf44dae168c63a4b50276508759c6073751e9c2484c0439c81",
+    "docs/topics/0.10_Fluid_Dynamics_Chaos/Result/previews/fluid_core_o2_infrared_trials_first_execution.json": "ec07cc39289b88ab60fb5d8b7e6fd419015056e9b012d30720a15e90d98fcea8",
+    "docs/topics/0.10_Fluid_Dynamics_Chaos/Result/previews/core_o2_infrared_trials_first_execution_verifier.py.txt": "7525ab5686c248947ab87082e876e9ccb69471e30d38be6f6492429d8c972c74",
+    "docs/topics/0.10_Fluid_Dynamics_Chaos/CORE_O2_GOLDSTONE_INFRARED_GEOMETRY_REPAIR.md": "4143ea435c9ed16896775a4a23312325d0d48b59c6b248c31fefa1b25a485bbc",
+    "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry_topic10_o2_infrared_geometry_addendum.json": "0af8e9ccfcc6de538e17e96448c47935b37177c5fee37599bd3f66d789288f22"
+  },
+  "source_AST_definition_hashes": {
+    "response": {
+      "_finite_scalar": "611afaf642e9806923015be0db63b9842119fe6cfc28d7f893d9dd33ce03e23e",
+      "_finite_array": "ae09adae7d4f453866dce2131f35b22d2203e7b912fbe6e3cbe6af30091bdfd0",
+      "validate_lorentz_metric": "559d80dfc41d673e408703baf9c281d9439a7e31d142e82b049800a6cc128c18",
+      "response_displacement": "8b990dbbcabc8331c8bc3ca7392291a1658961280f97635541fc6b0f6a9cfbd1"
+    },
+    "matter": {
+      "_finite_scalar": "171028c1f34cb4018cbba2ac0d4680f7f51a22f2bd50e86fd80bea09309b8ef3",
+      "_doublet": "494852ca7c21d27d78eeca18d4bbd898a6047e6ca1780d8da65ac8fff4df8869",
+      "_doublet_gradients": "e684389987a23c5445e34dbf928d6b28719203fc450d73fe9af778282fba7c37",
+      "matter_amplitude_sq": "57823f0faa5fd54510c31c5cdab83237f5cfe61f58a9ad2b16ec3bb460c6776c",
+      "matter_potential": "59c53e90b9255021dc5cd66af5759599c402f32953514515cb3311e8ee561528",
+      "interaction_energy_density": "2660a461f52adade233124c8cdd7335b83c911cf2cef079edf70aa6819d3a4b5",
+      "matter_kinetic_scalar": "8a86b1d3473b18ac8628cca198bea1d90660aff60b8a9ab4d1b37efc9307d531",
+      "matter_noether_current": "e680a16b72d5500ddd9e6f6e6948f5da54ff386fb830b71286e297c74f4bce5a",
+      "coupled_matter_stress_tensor": "89e2df9114090efdcad6b8690c30626bba734a22835acb9b490237b1a4ce6d4c"
+    }
+  },
+  "locked_verification": {
+    "locked_before_first_execution": true,
+    "cutoff_factor": 60,
+    "parent_over_thermal_k": [
+      0.1,
+      1.0,
+      10.0,
+      60.0
+    ],
+    "branches": [
+      "lower",
+      "upper"
+    ],
+    "phase_orders": [
+      8,
+      16,
+      32
+    ],
+    "amplitude_over_rho": [
+      0.001,
+      0.002,
+      0.004
+    ],
+    "background_phases": [
+      0.0,
+      0.37
+    ],
+    "flow_parent_over_thermal_k": [
+      1.0,
+      10.0,
+      60.0
+    ],
+    "flow_relative_steps": [
+      0.001,
+      0.0003,
+      0.0001
+    ],
+    "current_orders": [
+      64,
+      128,
+      256
+    ],
+    "algebra_relative_tolerance": 1e-08,
+    "derivative_relative_tolerance": 1e-05,
+    "refinement_relative_tolerance": 0.01,
+    "negative_control_floor": 0.001,
+    "energy_scale": 2
+  },
+  "state_results": [
+    {
+      "T": 0.002,
+      "parameters": {
+        "T": 0.002,
+        "mu": 1.28,
+        "m2": 1.0,
+        "r": 0.6384000000000001,
+        "B": 3.9152000000000005,
+        "g3": 0.01652262482792171,
+        "c": 0.4038029274907528,
+        "K": 0.2971746657352999,
+        "lambda_c": 0.01,
+        "Z": 1.0,
+        "Phi": 0.15,
+        "k": 0.2971746657352999
+      },
+      "mode_points": [
+        {
+          "branch": "lower",
+          "parent_over_thermal_k": 0.1,
+          "k": 0.0004952911095588332,
+          "mode": {
+            "E": 0.00020000001345829737,
+            "polarization": 0.0004010024687673167,
+            "action_per_amplitude_squared": 0.0006132831828316131,
+            "group_velocity": 0.4038030090082461,
+            "E_h": -0.00032385195493959604,
+            "E_mu": 0.00020484389383590386,
+            "charge_flux": 0.0003238519549395961,
+            "grand_flux": 8.076060723615022e-05,
+            "physical_energy_flux": 0.0004952911095588332
+          },
+          "maximum_source_errors": {
+            "field_charge": 9.090303238884355e-11,
+            "field_energy": 8.075010414089749e-11,
+            "field_momentum": 8.075010414089749e-11,
+            "field_grand": 5.974964916381452e-10,
+            "Ward": 2.189020056232849e-16,
+            "phase_order": 2.943655230888557e-10
+          },
+          "source_control_count": 18,
+          "source_final": {
+            "charge_flux": 0.0003238519549318135,
+            "physical_energy_flux": 0.0004952911095649155,
+            "momentum_density_weight": 0.0004952911095649155,
+            "unraised_stress_weight": -0.0004952911095649155,
+            "grand_flux": 8.076060725219424e-05,
+            "wave_action_density": 3.915199839197018e-08
+          },
+          "flow_derivative_sweep": [],
+          "thermodynamic_mode_charge": -0.00020484389383590386,
+          "naive_advective_charge_flux": -8.271658070790369e-05,
+          "complete_density_backreaction": false
+        },
+        {
+          "branch": "lower",
+          "parent_over_thermal_k": 1.0,
+          "k": 0.0049529110955883315,
+          "mode": {
+            "E": 0.0020000134581826547,
+            "polarization": 0.004009987564843522,
+            "action_per_amplitude_squared": 0.00613280689219951,
+            "group_velocity": 0.4038110791243024,
+            "E_h": -0.0032385027365441138,
+            "E_mu": 0.002048388522554312,
+            "charge_flux": 0.0032385027365441138,
+            "grand_flux": 0.0008076275928118658,
+            "physical_energy_flux": 0.0049529110955883315
+          },
+          "maximum_source_errors": {
+            "field_charge": 6.598746469864586e-12,
+            "field_energy": 9.987885590858646e-12,
+            "field_momentum": 9.987885590858646e-12,
+            "field_grand": 4.786623954626811e-11,
+            "Ward": 1.751216044983414e-16,
+            "phase_order": 2.583228818571029e-11
+          },
+          "source_control_count": 18,
+          "source_final": {
+            "charge_flux": 0.003238502736565484,
+            "physical_energy_flux": 0.00495291109559821,
+            "momentum_density_weight": 0.00495291109559821,
+            "unraised_stress_weight": -0.00495291109559821,
+            "grand_flux": 0.0008076275927943906,
+            "wave_action_density": 3.915183919980167e-07
+          },
+          "flow_derivative_sweep": [
+            {
+              "h_over_mu": 0.001,
+              "E_h_finite": -0.003238502736541668,
+              "relative_error": 7.552749835676972e-13
+            },
+            {
+              "h_over_mu": 0.0003,
+              "E_h_finite": -0.0032385027365611978,
+              "relative_error": 5.275274366582508e-12
+            },
+            {
+              "h_over_mu": 0.0001,
+              "E_h_finite": -0.003238502736597431,
+              "relative_error": 1.6463521587458786e-11
+            }
+          ],
+          "thermodynamic_mode_charge": -0.002048388522554312,
+          "naive_advective_charge_flux": -0.0008271619797584922,
+          "complete_density_backreaction": false
+        },
+        {
+          "branch": "lower",
+          "parent_over_thermal_k": 10.0,
+          "k": 0.04952911095588331,
+          "mode": {
+            "E": 0.02001344672523407,
+            "polarization": 0.04006280616361626,
+            "action_per_amplitude_squared": 0.06130317632761108,
+            "group_velocity": 0.40461693471107996,
+            "E_h": -0.03236822772571531,
+            "E_mu": 0.02043355073067168,
+            "charge_flux": 0.032368227725715314,
+            "grand_flux": 0.008097779466967712,
+            "physical_energy_flux": 0.04952911095588331
+          },
+          "maximum_source_errors": {
+            "field_charge": 5.288597017420061e-13,
+            "field_energy": 1.1119521399115626e-12,
+            "field_momentum": 1.1119521399115626e-12,
+            "field_grand": 8.050895673326234e-12,
+            "Ward": 1.400972835973515e-16,
+            "phase_order": 7.403516429948771e-12
+          },
+          "source_control_count": 18,
+          "source_final": {
+            "charge_flux": 0.03236822772570167,
+            "physical_energy_flux": 0.04952911095585049,
+            "momentum_density_weight": 0.04952911095585049,
+            "unraised_stress_weight": -0.04952911095585049,
+            "grand_flux": 0.008097779466952351,
+            "wave_action_density": 3.913594776754691e-06
+          },
+          "flow_derivative_sweep": [
+            {
+              "h_over_mu": 0.001,
+              "E_h_finite": -0.03236822772568779,
+              "relative_error": 8.50205746699958e-13
+            },
+            {
+              "h_over_mu": 0.0003,
+              "E_h_finite": -0.03236822772578455,
+              "relative_error": 2.139234277937653e-12
+            },
+            {
+              "h_over_mu": 0.0001,
+              "E_h_finite": -0.0323682277256844,
+              "relative_error": 9.54820069541506e-13
+            }
+          ],
+          "thermodynamic_mode_charge": -0.02043355073067168,
+          "naive_advective_charge_flux": -0.008267760661907724,
+          "complete_density_backreaction": false
+        },
+        {
+          "branch": "lower",
+          "parent_over_thermal_k": 60.0,
+          "k": 0.2971746657352999,
+          "mode": {
+            "E": 0.12282023431199045,
+            "polarization": 0.23289872977465978,
+            "action_per_amplitude_squared": 0.3628514876859992,
+            "group_velocity": 0.4317110038111526,
+            "E_h": -0.19074360866574178,
+            "E_mu": 0.1125111851178958,
+            "charge_flux": 0.19074360866574178,
+            "grand_flux": 0.05302284664315037,
+            "physical_energy_flux": 0.2971746657352999
+          },
+          "maximum_source_errors": {
+            "field_charge": 2.002251730175906e-13,
+            "field_energy": 1.2851590815321604e-13,
+            "field_momentum": 1.2851590815321604e-13,
+            "field_grand": 1.154500859453701e-12,
+            "Ward": 1.867963781296892e-16,
+            "phase_order": 3.4888906045184275e-13
+          },
+          "source_control_count": 18,
+          "source_final": {
+            "charge_flux": 0.1907436086657427,
+            "physical_energy_flux": 0.2971746657353094,
+            "momentum_density_weight": 0.2971746657353094,
+            "unraised_stress_weight": -0.2971746657353094,
+            "grand_flux": 0.05302284664315871,
+            "wave_action_density": 2.3164438973874188e-05
+          },
+          "flow_derivative_sweep": [
+            {
+              "h_over_mu": 0.001,
+              "E_h_finite": -0.19074360866563445,
+              "relative_error": 5.626967616709141e-13
+            },
+            {
+              "h_over_mu": 0.0003,
+              "E_h_finite": -0.19074360866571943,
+              "relative_error": 1.1713754671452958e-13
+            },
+            {
+              "h_over_mu": 0.0001,
+              "E_h_finite": -0.19074360866561998,
+              "relative_error": 6.385087639544792e-13
+            }
+          ],
+          "thermodynamic_mode_charge": -0.1125111851178958,
+          "naive_advective_charge_flux": -0.048572316667229214,
+          "complete_density_backreaction": false
+        },
+        {
+          "branch": "upper",
+          "parent_over_thermal_k": 0.1,
+          "k": 0.0004952911095588332,
+          "mode": {
+            "E": 2.798285269701172,
+            "polarization": -1.0930801492326556,
+            "action_per_amplitude_squared": 1.6717295408982664,
+            "group_velocity": 0.00032513540407503753,
+            "E_h": 0.00032385195493959604,
+            "E_mu": 2.7445378933261377,
+            "charge_flux": -0.00032385195493959604,
+            "grand_flux": 0.0009098216118815162,
+            "physical_energy_flux": 0.0004952911095588332
+          },
+          "maximum_source_errors": {
+            "field_charge": 2.142612943374528e-14,
+            "field_energy": 3.611883092742086e-14,
+            "field_momentum": 3.611883092742086e-14,
+            "field_grand": 2.1449962113320446e-14,
+            "Ward": 2.1890200562074207e-16,
+            "phase_order": 2.451702462952204e-14
+          },
+          "source_control_count": 18,
+          "source_final": {
+            "charge_flux": -0.00032385195493959664,
+            "physical_energy_flux": 0.0004952911095588319,
+            "momentum_density_weight": 0.0004952911095588319,
+            "unraised_stress_weight": -0.0004952911095588319,
+            "grand_flux": 0.0009098216118815156,
+            "wave_action_density": 0.00010672321389094532
+          },
+          "flow_derivative_sweep": [],
+          "thermodynamic_mode_charge": -2.7445378933261377,
+          "naive_advective_charge_flux": -0.0008923464369458461,
+          "complete_density_backreaction": false
+        },
+        {
+          "branch": "upper",
+          "parent_over_thermal_k": 1.0,
+          "k": 0.0049529110955883315,
+          "mode": {
+            "E": 2.7982932409958057,
+            "polarization": -1.0930798728372737,
+            "action_per_amplitude_squared": 1.6717377970528913,
+            "group_velocity": 0.0032513370882913967,
+            "E_h": 0.0032385027365441138,
+            "E_mu": 2.7445286257641714,
+            "charge_flux": -0.0032385027365441133,
+            "grand_flux": 0.009098194598364796,
+            "physical_energy_flux": 0.004952911095588331
+          },
+          "maximum_source_errors": {
+            "field_charge": 2.7050628844091288e-14,
+            "field_energy": 2.451702462952233e-14,
+            "field_momentum": 2.434190302502574e-14,
+            "field_grand": 1.0296006168034995e-14,
+            "Ward": 3.502432089931886e-16,
+            "phase_order": 9.281445038319251e-15
+          },
+          "source_control_count": 18,
+          "source_final": {
+            "charge_flux": -0.003238502736544033,
+            "physical_energy_flux": 0.0049529110955884225,
+            "momentum_density_weight": 0.0049529110955884225,
+            "unraised_stress_weight": -0.0049529110955884225,
+            "grand_flux": 0.009098194598364785,
+            "wave_action_density": 0.00010672374096385657
+          },
+          "flow_derivative_sweep": [
+            {
+              "h_over_mu": 0.001,
+              "E_h_finite": 0.0032385027360903405,
+              "relative_error": 1.4011823999226749e-10
+            },
+            {
+              "h_over_mu": 0.0003,
+              "E_h_finite": 0.003238502735656661,
+              "relative_error": 2.740318424289247e-10
+            },
+            {
+              "h_over_mu": 0.0001,
+              "E_h_finite": 0.0032385027399934683,
+              "relative_error": 1.0651077964813054e-09
+            }
+          ],
+          "thermodynamic_mode_charge": -2.7445286257641714,
+          "naive_advective_charge_flux": -0.00892338771082447,
+          "complete_density_backreaction": false
+        },
+        {
+          "branch": "upper",
+          "parent_over_thermal_k": 10.0,
+          "k": 0.04952911095588331,
+          "mode": {
+            "E": 2.7990901606797767,
+            "polarization": -1.0930522488399543,
+            "action_per_amplitude_squared": 1.6725631867190989,
+            "group_velocity": 0.032496431777213126,
+            "E_h": 0.03236822772571531,
+            "E_mu": 2.743602604196217,
+            "charge_flux": -0.0323682277257153,
+            "grand_flux": 0.0909604424447989,
+            "physical_energy_flux": 0.04952911095588331
+          },
+          "maximum_source_errors": {
+            "field_charge": 1.5220526478995724e-14,
+            "field_energy": 6.318387490237052e-14,
+            "field_momentum": 6.318387490237052e-14,
+            "field_grand": 3.036132740263501e-14,
+            "Ward": 2.801945671945654e-16,
+            "phase_order": 1.2468658240157392e-14
+          },
+          "source_control_count": 18,
+          "source_final": {
+            "charge_flux": -0.03236822772571506,
+            "physical_energy_flux": 0.04952911095588324,
+            "momentum_density_weight": 0.04952911095588324,
+            "unraised_stress_weight": -0.04952911095588324,
+            "grand_flux": 0.09096044244479852,
+            "wave_action_density": 0.00010677643384014727
+          },
+          "flow_derivative_sweep": [
+            {
+              "h_over_mu": 0.001,
+              "E_h_finite": 0.03236822772543594,
+              "relative_error": 8.630896008040094e-12
+            },
+            {
+              "h_over_mu": 0.0003,
+              "E_h_finite": 0.032368227725146824,
+              "relative_error": 1.7562986941474397e-11
+            },
+            {
+              "h_over_mu": 0.0001,
+              "E_h_finite": 0.032368227733820434,
+              "relative_error": 2.504038140974879e-10
+            }
+          ],
+          "thermodynamic_mode_charge": -2.743602604196217,
+          "naive_advective_charge_flux": -0.08915729485104663,
+          "complete_density_backreaction": false
+        },
+        {
+          "branch": "upper",
+          "parent_over_thermal_k": 60.0,
+          "k": 0.2971746657352999,
+          "mode": {
+            "E": 2.8270020788731873,
+            "polarization": -1.0920949438397567,
+            "action_per_amplitude_squared": 1.7014617273783381,
+            "group_velocity": 0.19148428962005443,
+            "E_h": 0.19074360866574178,
+            "E_mu": 2.7117706800331596,
+            "charge_flux": -0.1907436086657418,
+            "grand_flux": 0.5413264848274494,
+            "physical_energy_flux": 0.29717466573529994
+          },
+          "maximum_source_errors": {
+            "field_charge": 2.2990971901733752e-14,
+            "field_energy": 2.37231400224717e-14,
+            "field_momentum": 2.353634364434201e-14,
+            "field_grand": 2.2355142982282865e-14,
+            "Ward": 5.603891343890951e-16,
+            "phase_order": 2.1855176241174723e-14
+          },
+          "source_control_count": 18,
+          "source_final": {
+            "charge_flux": -0.19074360866574172,
+            "physical_energy_flux": 0.2971746657353009,
+            "momentum_density_weight": 0.2971746657353009,
+            "unraised_stress_weight": -0.2971746657353009,
+            "grand_flux": 0.5413264848274503,
+            "wave_action_density": 0.0001086213166758331
+          },
+          "flow_derivative_sweep": [
+            {
+              "h_over_mu": 0.001,
+              "E_h_finite": 0.1907436086659326,
+              "relative_error": 1.000398302685199e-12
+            },
+            {
+              "h_over_mu": 0.0003,
+              "E_h_finite": 0.19074360866425577,
+              "relative_error": 7.790592687638756e-12
+            },
+            {
+              "h_over_mu": 0.0001,
+              "E_h_finite": 0.1907436086671469,
+              "relative_error": 7.366569319725933e-12
+            }
+          ],
+          "thermodynamic_mode_charge": -2.7117706800331596,
+          "naive_advective_charge_flux": -0.5192614822786414,
+          "complete_density_backreaction": false
+        }
+      ],
+      "projection_sweep": [
+        {
+          "order": 64,
+          "source_G": 1.9036146671616397e-20,
+          "old_source_G": 1.9036146671614748e-20,
+          "old_source_correspondence_error": 3.5136502785387995e-13,
+          "projected_charge_grand_identity_error": 1.1487180822465865e-12,
+          "total_energy_projected_relative_norm": 2.3959875603224194e-17,
+          "total_energy_misidentification_error": 0.836819743444027,
+          "momentum_Gram": 1.305702894642514e-12,
+          "dbar": 0.0001234610169662118
+        },
+        {
+          "order": 128,
+          "source_G": 1.9036146671612575e-20,
+          "old_source_G": 1.903614667161464e-20,
+          "old_source_correspondence_error": 3.7699248331287557e-13,
+          "projected_charge_grand_identity_error": 1.0226064091972081e-12,
+          "total_energy_projected_relative_norm": 8.128373275788131e-17,
+          "total_energy_misidentification_error": 0.8368197434440269,
+          "momentum_Gram": 1.305702894642503e-12,
+          "dbar": 0.00012346101696621161
+        },
+        {
+          "order": 256,
+          "source_G": 1.9036146671614104e-20,
+          "old_source_G": 1.903614667161471e-20,
+          "old_source_correspondence_error": 2.6894957746857033e-13,
+          "projected_charge_grand_identity_error": 1.5312699628056361e-12,
+          "total_energy_projected_relative_norm": 9.028013560051266e-17,
+          "total_energy_misidentification_error": 0.836819743444027,
+          "momentum_Gram": 1.3057028946425007e-12,
+          "dbar": 0.0001234610169662121
+        }
+      ]
+    },
+    {
+      "T": 0.004,
+      "parameters": {
+        "T": 0.004,
+        "mu": 1.28,
+        "m2": 1.0,
+        "r": 0.6384000000000001,
+        "B": 3.9152000000000005,
+        "g3": 0.01652262482792171,
+        "c": 0.4038029274907528,
+        "K": 0.5943493314705998,
+        "lambda_c": 0.01,
+        "Z": 1.0,
+        "Phi": 0.15,
+        "k": 0.5943493314705998
+      },
+      "mode_points": [
+        {
+          "branch": "lower",
+          "parent_over_thermal_k": 0.1,
+          "k": 0.0009905822191176663,
+          "mode": {
+            "E": 0.000400000107666351,
+            "polarization": 0.000802004712544678,
+            "action_per_amplitude_squared": 0.0012265662145327099,
+            "group_velocity": 0.40380325356058594,
+            "E_h": -0.0006477038079823507,
+            "E_mu": 0.0004096874821167373,
+            "charge_flux": 0.0006477038079823509,
+            "grand_flux": 0.0001615213449002572,
+            "physical_energy_flux": 0.0009905822191176663
+          },
+          "maximum_source_errors": {
+            "field_charge": 5.5562816720298993e-11,
+            "field_energy": 2.8652083514877767e-11,
+            "field_momentum": 2.8652083514877767e-11,
+            "field_grand": 2.4327271708323253e-10,
+            "Ward": 2.1890200562343162e-16,
+            "phase_order": 1.9245368059187497e-10
+          },
+          "source_control_count": 18,
+          "source_final": {
+            "charge_flux": 0.0006477038079690966,
+            "physical_energy_flux": 0.0009905822191089092,
+            "momentum_density_weight": 0.0009905822191089092,
+            "unraised_stress_weight": -0.0009905822191089092,
+            "grand_flux": 0.00016152134490846556,
+            "wave_action_density": 7.83039871357682e-08
+          },
+          "flow_derivative_sweep": [],
+          "thermodynamic_mode_charge": -0.0004096874821167373,
+          "naive_advective_charge_flux": -0.0001654331382217829,
+          "complete_density_backreaction": false
+        },
+        {
+          "branch": "lower",
+          "parent_over_thermal_k": 1.0,
+          "k": 0.009905822191176663,
+          "mode": {
+            "E": 0.004000107662680822,
+            "polarization": 0.008019750155761611,
+            "action_per_amplitude_squared": 0.012265462666962632,
+            "group_velocity": 0.40383553262155675,
+            "E_h": -0.00647690358021436,
+            "E_mu": 0.0040964715144714454,
+            "charge_flux": 0.006476903580214362,
+            "grand_flux": 0.00161538560850228,
+            "physical_energy_flux": 0.009905822191176663
+          },
+          "maximum_source_errors": {
+            "field_charge": 4.224383717600913e-12,
+            "field_energy": 5.37325619074007e-12,
+            "field_momentum": 5.37325619074007e-12,
+            "field_grand": 3.538756272273341e-11,
+            "Ward": 1.7512160449672225e-16,
+            "phase_order": 1.9699714196517266e-11
+          },
+          "source_control_count": 18,
+          "source_final": {
+            "charge_flux": 0.006476903580197166,
+            "physical_energy_flux": 0.009905822191208684,
+            "momentum_density_weight": 0.009905822191208684,
+            "unraised_stress_weight": -0.009905822191208684,
+            "grand_flux": 0.0016153856085563104,
+            "wave_action_density": 7.830271366588945e-07
+          },
+          "flow_derivative_sweep": [
+            {
+              "h_over_mu": 0.001,
+              "E_h_finite": -0.006476903580215877,
+              "relative_error": 2.342192779240285e-13
+            },
+            {
+              "h_over_mu": 0.0003,
+              "E_h_finite": -0.006476903580228,
+              "relative_error": 2.1059647596491583e-12
+            },
+            {
+              "h_over_mu": 0.0001,
+              "E_h_finite": -0.0064769035802795735,
+              "relative_error": 1.0068616712305788e-11
+            }
+          ],
+          "thermodynamic_mode_charge": -0.0040964715144714454,
+          "naive_advective_charge_flux": -0.0016543007559156114,
+          "complete_density_backreaction": false
+        },
+        {
+          "branch": "lower",
+          "parent_over_thermal_k": 10.0,
+          "k": 0.09905822191176662,
+          "mode": {
+            "E": 0.040107297228583104,
+            "polarization": 0.07990223066693336,
+            "action_per_amplitude_squared": 0.1224565337096913,
+            "group_velocity": 0.4070450260261928,
+            "E_h": -0.06463495786524825,
+            "E_mu": 0.04056399777815787,
+            "charge_flux": 0.06463495786524825,
+            "grand_flux": 0.016325475844248857,
+            "physical_energy_flux": 0.09905822191176662
+          },
+          "maximum_source_errors": {
+            "field_charge": 5.324814140842224e-13,
+            "field_energy": 4.410262487642181e-13,
+            "field_momentum": 4.410262487642181e-13,
+            "field_grand": 3.9642987475027854e-12,
+            "Ward": 1.4009728359733564e-16,
+            "phase_order": 2.0416542332653845e-12
+          },
+          "source_control_count": 18,
+          "source_final": {
+            "charge_flux": 0.06463495786523055,
+            "physical_energy_flux": 0.09905822191173867,
+            "momentum_density_weight": 0.09905822191173867,
+            "unraised_stress_weight": -0.09905822191173867,
+            "grand_flux": 0.01632547584424358,
+            "wave_action_density": 7.817625112026692e-06
+          },
+          "flow_derivative_sweep": [
+            {
+              "h_over_mu": 0.001,
+              "E_h_finite": -0.06463495786519621,
+              "relative_error": 8.051634285552006e-13
+            },
+            {
+              "h_over_mu": 0.0003,
+              "E_h_finite": -0.06463495786522047,
+              "relative_error": 4.2984991572466974e-13
+            },
+            {
+              "h_over_mu": 0.0001,
+              "E_h_finite": -0.06463495786537105,
+              "relative_error": 1.899756270891435e-12
+            }
+          ],
+          "thermodynamic_mode_charge": -0.04056399777815787,
+          "naive_advective_charge_flux": -0.016511373531336696,
+          "complete_density_backreaction": false
+        },
+        {
+          "branch": "lower",
+          "parent_over_thermal_k": 60.0,
+          "k": 0.5943493314705998,
+          "mode": {
+            "E": 0.2607525859995963,
+            "polarization": 0.42733758939252436,
+            "action_per_amplitude_squared": 0.7011773890672667,
+            "group_velocity": 0.5012197206677589,
+            "E_h": -0.36223046340037995,
+            "E_mu": 0.17445073382611961,
+            "charge_flux": 0.36223046340037995,
+            "grand_flux": 0.1306943383181134,
+            "physical_energy_flux": 0.5943493314705998
+          },
+          "maximum_source_errors": {
+            "field_charge": 8.489947944583053e-14,
+            "field_energy": 9.620013473678547e-14,
+            "field_momentum": 9.620013473678547e-14,
+            "field_grand": 4.606308451079669e-13,
+            "Ward": 1.8679637812970142e-16,
+            "phase_order": 1.817888443579438e-13
+          },
+          "source_control_count": 18,
+          "source_final": {
+            "charge_flux": 0.36223046340037224,
+            "physical_energy_flux": 0.5943493314706233,
+            "momentum_density_weight": 0.5943493314706233,
+            "unraised_stress_weight": -0.5943493314706233,
+            "grand_flux": 0.1306943383181469,
+            "wave_action_density": 4.47631645180543e-05
+          },
+          "flow_derivative_sweep": [
+            {
+              "h_over_mu": 0.001,
+              "E_h_finite": -0.3622304634001546,
+              "relative_error": 6.221875208485581e-13
+            },
+            {
+              "h_over_mu": 0.0003,
+              "E_h_finite": -0.3622304634008004,
+              "relative_error": 1.160701547512687e-12
+            },
+            {
+              "h_over_mu": 0.0001,
+              "E_h_finite": -0.3622304633992583,
+              "relative_error": 3.09653227740541e-12
+            }
+          ],
+          "thermodynamic_mode_charge": -0.17445073382611961,
+          "naive_advective_charge_flux": -0.08743814807861323,
+          "complete_density_backreaction": false
+        },
+        {
+          "branch": "upper",
+          "parent_over_thermal_k": 0.1,
+          "k": 0.0009905822191176663,
+          "mode": {
+            "E": 2.7982855112561658,
+            "polarization": -1.0930801408569928,
+            "action_per_amplitude_squared": 1.6717297910854279,
+            "group_velocity": 0.0006502707054071218,
+            "E_h": 0.0006477038079823507,
+            "E_mu": 2.7445376124887875,
+            "charge_flux": -0.0006477038079823507,
+            "grand_flux": 0.0018196430933350755,
+            "physical_energy_flux": 0.0009905822191176663
+          },
+          "maximum_source_errors": {
+            "field_charge": 2.3267441092393833e-14,
+            "field_energy": 3.042737878128199e-14,
+            "field_momentum": 3.042737878128199e-14,
+            "field_grand": 2.03774654682656e-14,
+            "Ward": 4.378040112414859e-16,
+            "phase_order": 2.232800457331529e-14
+          },
+          "source_control_count": 18,
+          "source_final": {
+            "charge_flux": -0.0006477038079823357,
+            "physical_energy_flux": 0.0009905822191176765,
+            "momentum_density_weight": 0.0009905822191176765,
+            "unraised_stress_weight": -0.0009905822191176765,
+            "grand_flux": 0.0018196430933350664,
+            "wave_action_density": 0.00010672322986289371
+          },
+          "flow_derivative_sweep": [],
+          "thermodynamic_mode_charge": -2.7445376124887875,
+          "naive_advective_charge_flux": -0.0017846924092894617,
+          "complete_density_backreaction": false
+        },
+        {
+          "branch": "upper",
+          "parent_over_thermal_k": 1.0,
+          "k": 0.009905822191176663,
+          "mode": {
+            "E": 2.798317396180293,
+            "polarization": -1.093079035294314,
+            "action_per_amplitude_squared": 1.6717628154300905,
+            "group_velocity": 0.006502571437639264,
+            "E_h": 0.00647690358021436,
+            "E_mu": 2.744500543132131,
+            "charge_flux": -0.006476903580214362,
+            "grand_flux": 0.01819625877385105,
+            "physical_energy_flux": 0.009905822191176663
+          },
+          "maximum_source_errors": {
+            "field_charge": 1.9150003855427827e-14,
+            "field_energy": 1.9963862912611525e-14,
+            "field_momentum": 1.9963862912611525e-14,
+            "field_grand": 8.580066637778917e-15,
+            "Ward": 3.5024320899318675e-16,
+            "phase_order": 1.3525527198588886e-14
+          },
+          "source_control_count": 18,
+          "source_final": {
+            "charge_flux": -0.006476903580214398,
+            "physical_energy_flux": 0.009905822191176722,
+            "momentum_density_weight": 0.009905822191176722,
+            "unraised_stress_weight": -0.009905822191176722,
+            "grand_flux": 0.018196258773851153,
+            "wave_action_density": 0.00010672533813705697
+          },
+          "flow_derivative_sweep": [
+            {
+              "h_over_mu": 0.001,
+              "E_h_finite": 0.00647690358010373,
+              "relative_error": 1.7080732110154938e-11
+            },
+            {
+              "h_over_mu": 0.0003,
+              "E_h_finite": 0.006476903580016995,
+              "relative_error": 3.0472075365645213e-11
+            },
+            {
+              "h_over_mu": 0.0001,
+              "E_h_finite": 0.0064769035774149076,
+              "relative_error": 4.3222080974533867e-10
+            }
+          ],
+          "thermodynamic_mode_charge": -2.744500543132131,
+          "naive_advective_charge_flux": -0.017846310842356442,
+          "complete_density_backreaction": false
+        },
+        {
+          "branch": "upper",
+          "parent_over_thermal_k": 10.0,
+          "k": 0.09905822191176662,
+          "mode": {
+            "E": 2.801502537454796,
+            "polarization": -1.0929687271661064,
+            "action_per_amplitude_squared": 1.6750616430192273,
+            "group_velocity": 0.06489052412011877,
+            "E_h": 0.06463495786524825,
+            "E_mu": 2.7408053303639837,
+            "charge_flux": -0.06463495786524825,
+            "grand_flux": 0.18179096797928437,
+            "physical_energy_flux": 0.09905822191176662
+          },
+          "maximum_source_errors": {
+            "field_charge": 2.3188706742389238e-14,
+            "field_energy": 1.919332785282615e-14,
+            "field_momentum": 1.919332785282615e-14,
+            "field_grand": 2.122231403164084e-14,
+            "Ward": 2.8019456719454945e-16,
+            "phase_order": 1.2453194361653791e-14
+          },
+          "source_control_count": 18,
+          "source_final": {
+            "charge_flux": -0.06463495786524734,
+            "physical_energy_flux": 0.09905822191176766,
+            "momentum_density_weight": 0.09905822191176766,
+            "unraised_stress_weight": -0.09905822191176766,
+            "grand_flux": 0.18179096797928426,
+            "wave_action_density": 0.00010693593529034747
+          },
+          "flow_derivative_sweep": [
+            {
+              "h_over_mu": 0.001,
+              "E_h_finite": 0.06463495786513071,
+              "relative_error": 1.8185957972966798e-12
+            },
+            {
+              "h_over_mu": 0.0003,
+              "E_h_finite": 0.06463495786526566,
+              "relative_error": 2.692466505087866e-13
+            },
+            {
+              "h_over_mu": 0.0001,
+              "E_h_finite": 0.06463495786709673,
+              "relative_error": 2.859876085071999e-11
+            }
+          ],
+          "thermodynamic_mode_charge": -2.7408053303639837,
+          "naive_advective_charge_flux": -0.17785229439853417,
+          "complete_density_backreaction": false
+        },
+        {
+          "branch": "upper",
+          "parent_over_thermal_k": 60.0,
+          "k": 0.5943493314705998,
+          "mode": {
+            "E": 2.9101392311251404,
+            "polarization": -1.0893566010940503,
+            "action_per_amplitude_squared": 1.7874210841225857,
+            "group_velocity": 0.36355797458324113,
+            "E_h": 0.36223046340037995,
+            "E_mu": 2.6234179582787878,
+            "charge_flux": -0.3622304634003799,
+            "grand_flux": 1.0580043246230861,
+            "physical_energy_flux": 0.5943493314705998
+          },
+          "maximum_source_errors": {
+            "field_charge": 3.4480835515006305e-14,
+            "field_energy": 3.343655168521603e-14,
+            "field_momentum": 3.343655168521603e-14,
+            "field_grand": 1.3641626016291334e-14,
+            "Ward": 3.735927562593969e-16,
+            "phase_order": 6.164280478280105e-15
+          },
+          "source_control_count": 18,
+          "source_final": {
+            "charge_flux": -0.36223046340038423,
+            "physical_energy_flux": 0.5943493314705908,
+            "momentum_density_weight": 0.5943493314705908,
+            "unraised_stress_weight": -0.5943493314705908,
+            "grand_flux": 1.0580043246230826,
+            "wave_action_density": 0.00011410896201038587
+          },
+          "flow_derivative_sweep": [
+            {
+              "h_over_mu": 0.001,
+              "E_h_finite": 0.36223046340110143,
+              "relative_error": 1.991766307500641e-12
+            },
+            {
+              "h_over_mu": 0.0003,
+              "E_h_finite": 0.362230463397102,
+              "relative_error": 9.049303720716098e-12
+            },
+            {
+              "h_over_mu": 0.0001,
+              "E_h_finite": 0.3622304634052937,
+              "relative_error": 1.3565220435892997e-11
+            }
+          ],
+          "thermodynamic_mode_charge": -2.6234179582787878,
+          "naive_advective_charge_flux": -0.9537645193971379,
+          "complete_density_backreaction": false
+        }
+      ],
+      "projection_sweep": [
+        {
+          "order": 64,
+          "source_G": 9.468117036846487e-18,
+          "old_source_G": 9.468117036846503e-18,
+          "old_source_correspondence_error": 5.3140595166477225e-14,
+          "projected_charge_grand_identity_error": 3.1327754890067126e-13,
+          "total_energy_projected_relative_norm": 4.320770037658101e-17,
+          "total_energy_misidentification_error": 0.8364530318496628,
+          "momentum_Gram": 4.161822615013628e-11,
+          "dbar": 0.0004902998907228018
+        },
+        {
+          "order": 128,
+          "source_G": 9.468117036846197e-18,
+          "old_source_G": 9.46811703684645e-18,
+          "old_source_correspondence_error": 7.596718660165921e-14,
+          "projected_charge_grand_identity_error": 2.533708570920987e-13,
+          "total_energy_projected_relative_norm": 5.593191707074516e-17,
+          "total_energy_misidentification_error": 0.8364530318496629,
+          "momentum_Gram": 4.161822615013592e-11,
+          "dbar": 0.0004902998907228011
+        },
+        {
+          "order": 256,
+          "source_G": 9.468117036846617e-18,
+          "old_source_G": 9.468117036846487e-18,
+          "old_source_correspondence_error": 6.945558712324107e-14,
+          "projected_charge_grand_identity_error": 2.5233832518151925e-13,
+          "total_energy_projected_relative_norm": 7.276537752652947e-17,
+          "total_energy_misidentification_error": 0.8364530318496629,
+          "momentum_Gram": 4.161822615013585e-11,
+          "dbar": 0.0004902998907228029
+        }
+      ]
+    }
+  ],
+  "execution_errors": [],
+  "selected_tree_grandcanonical_flux_correspondence_supported": true,
+  "selected_tree_spatial_Noether_Ward_supported": true,
+  "physical_heat_current_matched": false,
+  "physical_material_frame_admitted": false,
+  "charge_density_backreaction_completed": false,
+  "interacting_Noether_current_completed": false,
+  "useful_relative_error_certified": false,
+  "full_continuum_inverse_executed": false,
+  "formal_verification": false,
+  "external_math_review": false,
+  "interval_certified": false,
+  "whole_Core_runtime_executed": false,
+  "physical_UET_operator_admitted": false,
+  "physical_HeII_state_assigned": false,
+  "physical_frequency_window": null,
+  "physical_relaxation_time": null,
+  "live_Phi_executed": false,
+  "physical_J04_executed": false,
+  "physical_J05_executed": false,
+  "physical_J06_executed": false,
+  "claim_promotion": false,
+  "dependency_unlock": false,
+  "thresholds_relaxed": false,
+  "parameters_fitted": false,
+  "unit_powers": {
+    "Nwave": 3,
+    "j_N": 3,
+    "T_flux": 4,
+    "J_N": 0,
+    "J_E": 1,
+    "J_G": 1,
+    "source_G": 5
+  },
+  "physical_controller": "vector_momentum_constitutive_origin_and_material_frame_admission_open",
+  "controlling_measured_blocker": "useful_certified_current_error_and_interacting_Noether_heat_frame_material_correspondence_open",
+  "notes": [
+    "Core stress source with covariant gradients is raised in both indices before energy/momentum comparison.",
+    "Tree spatial mode flux is not a complete interacting charge/energy-density/tadpole or material heat-current derivation.",
+    "J_G is H-mu Q energy flux; omitting mu*J_N misidentifies it as total energy flux.",
+    "Momentum projection does not select zero material mass/charge flow or an experimental He-II frame."
+  ]
+}

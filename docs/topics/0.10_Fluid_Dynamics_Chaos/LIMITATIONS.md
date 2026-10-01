@@ -291,3 +291,20 @@ artifacts remain unchanged. No material heat-current/frame, all-channel
 interacting state, infinite-K, physical time/frequency window, nonlinear/live
 response, SI coefficient or He-II second-sound admission follows.
 Selected next controller: useful_certified_continuum_current_error_and_microscopic_heat_current_correspondence_open.
+
+## Tree spatial Ward identity is not full heat-current admission
+
+[Current tree correspondence](CORE_O2_MICROSCOPIC_CURRENT_WARD.md) resolves the
+selected spatial origin only. H-mu Q flux differs from total energy flux by
+mu times the charge flux; dropping that term fails. The direct field stress
+uses covariant gradient inputs, so unraised mixed-index signs also fail.
+
+The thermodynamic mode charge -partial_mu E cannot simply be advected as an
+elementary particle charge: that shortcut fails the selected spatial current.
+No complete tadpole/condensate-adjusted charge or energy density is established.
+Tree spatial Ward checks do not establish interacting Ward identities, material
+heat/enthalpy flux, zero net mass/charge frame, SI atom/state mapping or Topic13
+protocol/independence. The old conditional bound remains extremely loose and
+uncertified as a useful continuum error bracket. All old failures and physical
+J04/J05/J06 states stay unchanged; selected controller is
+useful_certified_current_error_and_interacting_Noether_heat_frame_material_correspondence_open.

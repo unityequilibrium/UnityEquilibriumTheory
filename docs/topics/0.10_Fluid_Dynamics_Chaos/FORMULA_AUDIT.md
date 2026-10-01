@@ -298,3 +298,21 @@ Wrong polynomial coefficient and unprojected-null source are negative controls.
 No fitted constant, primary Core equation, formal/interval/independent proof,
 strong continuum inverse or physical heat-current/material mapping is added.
 The explicit finite upper formula remains too loose for a useful error claim.
+
+## Action-normalized tree spatial currents and generator distinction
+
+[Card](CORE_O2_MICROSCOPIC_CURRENT_WARD.md),
+[unmerged registry](../../core/07_artifacts/correspondence/uet_equation_correspondence_registry_topic10_o2_current_ward_addendum.json)
+and [artifact](Result/artifacts/fluid_core_o2_current_ward_audit.json) record
+fields:E, amplitude:E, covariant gradients:E2, averaged quadratic action:E4,
+wave-action density:E3, charge current:E3, stress flux:E4, J_N:E0,
+J_E/J_G:E1 and projected source Gram:E5. Scale2 checks pass.
+
+Origin is the same selected tree action and Noether/stress/flow source. Raise
+both stress indices with the inverse metric and translate conjugate phase.
+J_E=J_G+mu*J_N=k and J_G=E*v_g hold for the two positive reference modes.
+P_perp J_G=-mu P_perp J_N recovers the old lower-branch projected source.
+Naive thermodynamic-charge advection, omitted charge and wrong index/conjugation
+are explicit negative controls. Spatial correspondence does not establish
+density backreaction, interacting Ward identities or physical heat/material frame.
+No primary Core equation, formal certificate or physical admission is promoted.

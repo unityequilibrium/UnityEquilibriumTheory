@@ -297,3 +297,21 @@ O(k); this weighted estimate is distinct from the Bose Gram norm and does
 not contradict the old no-uniform-gap result. Floating evaluations and
 finite Gauss projection remain diagnostics, not interval/exact integral
 certificates or a computed strong continuum inverse.
+
+## Direct tree spatial Noether and energy-current correspondence
+
+[The current card](CORE_O2_MICROSCOPIC_CURRENT_WARD.md) derives the quadratic
+wave-action norm from the selected action. Source-verbatim matter functions
+evaluate phase-averaged paired positive/negative wave amplitudes, using the
+Core -+++ and conjugate-phase convention. Covariant-input stress indices are
+raised before comparison. No whole Core runtime or source helper substitution
+is used; selected definition hashes are recorded.
+
+For both positive branches, independent flowing quartic-root differentiation
+matches J_N=-partial_h E; direct source currents give J_E=k and
+J_G=J_E-mu*J_N=E*v_g. Three phase orders, three amplitudes and two constant phases
+give288 controls at16 mode points;36 finite-flow derivative controls also pass.
+The lower-mode Bose momentum projection matches the unchanged old source at
+Gauss64/128/256. These diagnose tree spatial identities, not certified integrals
+or a material frame. Complete charge/energy-density condensate backreaction,
+interacting Noether currents and heat/enthalpy/frame correspondence remain next.

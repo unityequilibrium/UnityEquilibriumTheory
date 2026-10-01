@@ -257,3 +257,17 @@ material calibration, raw dataset, SI parameter or external payload is added.
 Patch grids and Gauss orders are diagnostic configurations; positive constants
 are derived formulas, not sampled minima. Exact frame is an integral definition,
 not the finite quadrature estimate or an admitted physical heat-current frame.
+
+## Microscopic spatial current source identity (2026-10-01)
+
+[Locked current Ward contract](Data/03_Research/fluid_core_o2_current_ward_contract.json)
+and [artifact](Result/artifacts/fluid_core_o2_current_ward_audit.json) preserve
+the previous289-check current-bound source chain and hash each consumed input.
+Selected original Core matter/response definitions are executed verbatim from
+their AST source, and definition hashes are recorded. The pre-execution card
+and unmerged registry hashes are locked. No original Core source is changed.
+
+Primary [Alford et al. v3](https://arxiv.org/html/1212.0670v3), equations5b/8/28/
+34-36/41, supplies selected action/current/flow correspondence; this is not a
+full one-loop paper replication. No external payload, new experimental row,
+material coefficient, blind source or SI calibration is added.
