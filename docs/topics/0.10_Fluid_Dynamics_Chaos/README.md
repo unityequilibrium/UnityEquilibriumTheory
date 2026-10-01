@@ -413,3 +413,21 @@ Lean/Comparator or transitive proof audit. It maps formal-pilot obligations onto
 the current selected collision-domain/current-response and material/frame
 blockers. Proposed work remains unexecuted; physical J04/J05/J06, thresholds,
 readiness and Core/Topic13 dependency boundaries are unchanged.
+
+## Selected continuum form and soft noncoercivity (2026-10-01)
+
+The [finite-cutoff derivation card](CORE_O2_GOLDSTONE_CONTINUUM_FORM.md) and
+[292-check diagnostic](Result/artifacts/fluid_core_o2_continuum_form_audit.json)
+support conditional internal statements for the same selected cubic kernel:
+bounded vector trials have finite collision norm, smooth soft seeds converge
+in both G/Q norms, the maximal radial domain is dense/closed, and momentum is
+the only radial-vector null while no uniform positive vector Rayleigh gap exists.
+Exact rational cubic algebra, original-source event inequalities and soft bump
+bounds pass; this is not Lean/interval/independent proof verification.
+
+The next selected controller is
+source_weighted_continuum_current_upper_bound_and_microscopic_heat_current_correspondence_open.
+No-uniform-gap does not imply divergent current response or exclude every
+source-specific hydrodynamic window. Material heat-current/frame, interacting
+channels/state, nonlinear/live response and SI/source admission stay open.
+All historical finite refinement results and physical J04/J05/J06 remain unchanged.

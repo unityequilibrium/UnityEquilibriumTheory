@@ -12,7 +12,7 @@
   "source_policy": "Original evidence_snapshot hashes retain the published-base comparison. current_execution_snapshot records the current branch-local candidate inputs; execution_history retains as-executed historical identities. Original dirty workspace differences do not authorize importing unpublished results.",
   "controlling_blocker": "vector_momentum_constitutive_origin_and_material_frame_admission_open",
   "blocker_role": "proposed_physics_program_controller_not_replacement_of_legacy_speed_gate",
-  "next_controller": "Establish the selected finite-T kinetic current's continuum collision-form domain and a source-weighted upper/error bound, beyond the finite-cutoff Gram-norm lemma or finite quadrature plateau. Retain all historical unenriched failures. Then match the kinetic current against microscopic condensate/charge stress-energy, heat-current/frame and interacting thermal-state/additional-channel correspondence before nonlinear/live-response, material/SI and independent-source admission. No physical time, hydrodynamic window or J04/J05/J06 follows from finite trial agreement.",
+  "next_controller": "Derive a source-weighted continuum current inverse upper/error bound under the selected finite-K collision form, without assuming a uniform positive vector gap. The bounded-trial domain/soft smoothing and no-uniform-gap results are conditional internal derivations, not formal/independent verification, all-channel or infinite-K results. Then match microscopic condensate/charge stress-energy and physical heat-current/frame, complete interacting-state/additional channels and nonlinear/live response, and admit material/SI/independent-source correspondence. No physical time/window, divergent-current conclusion or J04/J05/J06 follows.",
   "first_scientific_wave": "J01",
   "work_packages": [
     {
@@ -297,6 +297,20 @@
         "operator_admitted": false,
         "thermalization_derived": false,
         "next_action": "Establish the selected finite-T kinetic current's continuum collision-form domain and a source-weighted upper/error bound, beyond the finite-cutoff Gram-norm lemma or finite quadrature plateau. Retain all historical unenriched failures. Then match the kinetic current against microscopic condensate/charge stress-energy, heat-current/frame and interacting thermal-state/additional-channel correspondence before nonlinear/live-response, material/SI and independent-source admission. No physical time, hydrodynamic window or J04/J05/J06 follows from finite trial agreement."
+      },
+      "core_o2_continuum_form": {
+        "status": "PASS_CONDITIONAL_CONTINUUM_FORM_DIAGNOSTIC_ONLY",
+        "contract": "docs/topics/0.10_Fluid_Dynamics_Chaos/Data/03_Research/fluid_core_o2_continuum_form_contract.json",
+        "result_artifact": "docs/topics/0.10_Fluid_Dynamics_Chaos/Result/artifacts/fluid_core_o2_continuum_form_audit.json",
+        "controlling_measured_blocker": "source_weighted_continuum_current_upper_bound_and_microscopic_heat_current_correspondence_open",
+        "selected_finite_cutoff_domain_internal_derivation_supported": true,
+        "no_uniform_vector_gap_internal_derivation_supported": true,
+        "continuum_current_upper_bound_established": false,
+        "physical_package_executed": false,
+        "operator_admitted": false,
+        "formal_verification": false,
+        "external_math_review": false,
+        "next_action": "Derive a source-weighted continuum current inverse upper/error bound under the selected finite-K collision form, without assuming a uniform positive vector gap. The bounded-trial domain/soft smoothing and no-uniform-gap results are conditional internal derivations, not formal/independent verification, all-channel or infinite-K results. Then match microscopic condensate/charge stress-energy and physical heat-current/frame, complete interacting-state/additional channels and nonlinear/live response, and admit material/SI/independent-source correspondence. No physical time/window, divergent-current conclusion or J04/J05/J06 follows."
       }
     },
     {
@@ -1643,9 +1657,97 @@
       "parameters_fitted": false,
       "next_action": "Establish the selected finite-T kinetic current's continuum collision-form domain and a source-weighted upper/error bound, beyond the finite-cutoff Gram-norm lemma or finite quadrature plateau. Retain all historical unenriched failures. Then match the kinetic current against microscopic condensate/charge stress-energy, heat-current/frame and interacting thermal-state/additional-channel correspondence before nonlinear/live-response, material/SI and independent-source admission. No physical time, hydrodynamic window or J04/J05/J06 follows from finite trial agreement.",
       "package_role": "finite enriched/smooth trial targets only; continuum and physical transport open"
+    },
+    {
+      "date": "2026-10-01",
+      "latest_executed_package": "J01_J02_SELECTED_FINITE_CUTOFF_CONTINUUM_FORM_DIAGNOSTIC_ONLY",
+      "status": "PASS_CONDITIONAL_CONTINUUM_FORM_DIAGNOSTIC_ONLY",
+      "scope": "Conditional selected finite-K bounded-trial/closed-domain, joint G/Q smoothing and soft noncoercivity internal derivation",
+      "contract": "docs/topics/0.10_Fluid_Dynamics_Chaos/Data/03_Research/fluid_core_o2_continuum_form_contract.json",
+      "derivation_card": "docs/topics/0.10_Fluid_Dynamics_Chaos/CORE_O2_GOLDSTONE_CONTINUUM_FORM.md",
+      "verifier": "docs/topics/0.10_Fluid_Dynamics_Chaos/Code/03_Research/Research_Fluid_Core_O2_Continuum_Form.py",
+      "result_artifact": "docs/topics/0.10_Fluid_Dynamics_Chaos/Result/artifacts/fluid_core_o2_continuum_form_audit.json",
+      "result_artifact_sha256": "22792c7ec7ab209ca5b23a870f2b72467feb482d4f89050925364c5ba40c932f",
+      "reference_check_count": 292,
+      "evidence_hashes": {
+        "docs/topics/0.10_Fluid_Dynamics_Chaos/Data/03_Research/fluid_core_o2_continuum_form_contract.json": "2132f2adbc09082a5d4f991ddfcbcbb5133fe147e3bd521cc4fca1a952960609",
+        "docs/topics/0.10_Fluid_Dynamics_Chaos/CORE_O2_GOLDSTONE_CONTINUUM_FORM.md": "269bd387dde1ea664b7ab7935b96a35d6b1fa6175879f32ba6d913f46a7d0de9",
+        "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry_topic10_o2_continuum_form_addendum.json": "1b1797573264b2210a0ce6bfaa1eec84d7827bc59c2677907c9af185e236ac13",
+        "docs/topics/0.10_Fluid_Dynamics_Chaos/Code/03_Research/Research_Fluid_Core_O2_Continuum_Form.py": "0f9db4ad112f01da8a00e57dbd4d842f3c2947f814e1ccf68e6d42af796c7ef8",
+        "docs/topics/0.10_Fluid_Dynamics_Chaos/Data/03_Research/fluid_core_o2_infrared_trials_contract.json": "55fb10489110d257a897e0c41b95743ae502cef0130e856508ab7786c075f85d",
+        "docs/topics/0.10_Fluid_Dynamics_Chaos/Code/03_Research/Research_Fluid_Core_O2_Infrared_Trials.py": "d62ccc1853c0e02829f0b0a79d71bd1b43488c7b2d93a15d6c8e26f19157bcdf",
+        "docs/topics/0.10_Fluid_Dynamics_Chaos/Result/artifacts/fluid_core_o2_infrared_trials_audit.json": "4b550b4f455c7b5e67dd64def2208c5729425d7c851050dcc65c31f0a1c048b2",
+        "docs/topics/0.10_Fluid_Dynamics_Chaos/CORE_O2_GOLDSTONE_INFRARED_TRIALS.md": "ad908db9afc36d14102bbf18bba321795ec9b99a43abd4c2819ca49e61dfd97c",
+        "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry_topic10_o2_infrared_trials_addendum.json": "1e3bf2adc560597f2acfac9cb511519f7b9d82e9ea882b8a5d5fd2cd2d555642",
+        "docs/topics/0.10_Fluid_Dynamics_Chaos/Data/03_Research/fluid_core_o2_vector_refinement_contract.json": "5216da4f2549980292cce50314361448456db01816e3a5dba8a3c00120c880f0",
+        "docs/topics/0.10_Fluid_Dynamics_Chaos/Code/03_Research/Research_Fluid_Core_O2_Vector_Refinement.py": "f73896652c997abdb17bd6d9b155e52c40722e36af70f703976b3b18dbe1d827",
+        "docs/topics/0.10_Fluid_Dynamics_Chaos/Result/artifacts/fluid_core_o2_vector_refinement_audit.json": "4990aba84fe30276d7441bdca9567729a63797d5df0a0263d667f6df491f37f5",
+        "docs/topics/0.10_Fluid_Dynamics_Chaos/CORE_O2_GOLDSTONE_VECTOR_REFINEMENT.md": "5957e4f1373faea4e38036f040e4b84c611f11a52d8f5e3188b29e469ed2d4ef",
+        "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry_topic10_o2_vector_refinement_addendum.json": "9263469bc87c7bfaa47ce608adc1da710510885d003cf8a603e25605e06bfee1",
+        "docs/topics/0.10_Fluid_Dynamics_Chaos/Data/03_Research/fluid_core_o2_goldstone_galerkin_contract.json": "d36a29ef8524a9c839ba237ac7507ea6e8c217d777a8f9fcd87302e9b5b37fee",
+        "docs/topics/0.10_Fluid_Dynamics_Chaos/Code/03_Research/Research_Fluid_Core_O2_Goldstone_Galerkin.py": "f7caeae9655172514adc464723917a1a8e367a3a1832ada2938a2d44f1afdc74",
+        "docs/topics/0.10_Fluid_Dynamics_Chaos/Result/artifacts/fluid_core_o2_goldstone_galerkin_audit.json": "4b4c706aab168108e7d5829a6a0563eaf9f99c893afd2586020eb89b55e6d24b",
+        "docs/topics/0.10_Fluid_Dynamics_Chaos/CORE_O2_GOLDSTONE_GALERKIN_DERIVATION.md": "5cd09900d57ae2d61c2007f6a0b2f7d565903894721c81b8b81b29257bccac90",
+        "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry_topic10_o2_goldstone_galerkin_addendum.json": "73bb37bd79dfc2bfde8231998db142d539db83a9b1186e1e23c1dff8dadd6fb8",
+        "docs/topics/0.10_Fluid_Dynamics_Chaos/Code/03_Research/Research_Fluid_Core_O2_Common_Flow.py": "b083323ad31df5527a94a888e8eae43984eb77698bda1c6c3d080e2ea940f5e2",
+        "docs/topics/0.10_Fluid_Dynamics_Chaos/Data/03_Research/fluid_core_o2_common_flow_contract.json": "c9a190c89d682080a9a90254cfd205e606cd9063f9d34c68b00eeeef8634c75c",
+        "docs/topics/0.10_Fluid_Dynamics_Chaos/Data/03_Research/fluid_core_o2_goldstone_collision_contract.json": "331535ea4a63e47e0d100c317511013605ab5044f1bdbff835ba48fbd3e6b912",
+        "docs/topics/0.10_Fluid_Dynamics_Chaos/Code/03_Research/Research_Fluid_Core_O2_Goldstone_Collision.py": "1b8cc6ff1782da5c5f01dcf4d95052871a4ea2c7a5e1aa967478e9f800cd3fe8",
+        "docs/topics/0.10_Fluid_Dynamics_Chaos/Result/artifacts/fluid_core_o2_goldstone_collision_audit.json": "c130a512a015940ed5db9f2a181fa34731910fa17aa58c5c4e59e0cdb3dfe56b",
+        "docs/core/02_equations/covariant/uet_covariant_response.py": "7fb4b7228afb8ede0ac4f1664d634346ef46cc7678c94ed7b55d73645590c0c2",
+        "docs/core/02_equations/o2/uet_o2_finite_density_eos.py": "ea744a8645f993600300fa9fd99a764e1f07b30fb272b47399c34aa114152c6d",
+        "docs/core/02_equations/o2/uet_o2_finite_temperature_quasiparticle_eos.py": "ba814f3aa02b5e31112a6595dac7727b7025b08e08f0631f50567f270cebbb7f",
+        "docs/core/02_equations/o2/uet_o2_formal_transverse_response.py": "a8ee43c6fb6edb227476412cde6cc9b2d4a643fc42cca0fd2d438b343efad1ba",
+        "docs/core/02_equations/o2/uet_o2_invariant_galerkin_collision_operator.py": "278b168e5c3b444ac4df4b96b5a7d00410cd9485c511ab2a17aa4f11c6f6d94e",
+        "docs/core/07_artifacts/topic13/t13_invariant_galerkin_collision_operator_audit.json": "433427f32612e478d71a1a4ff64f96e3d22da7fc33d3de0c10f3a0a480234011",
+        "docs/core/07_artifacts/topic13/t13_collision_evidence_reconciliation.json": "cad197d2635b08d3454cc49734b292b32971c2f18e3d3f1d2b2c0b5ca77c9bf6",
+        "docs/topics/0.10_Fluid_Dynamics_Chaos/Result/artifacts/fluid_core_o2_ideal_modes_audit.json": "b2e5d7fb5fff8f1a48148e1661bbf640027174b58b9fe765f53cded351c512f6",
+        "docs/topics/0.10_Fluid_Dynamics_Chaos/Result/previews/fluid_core_o2_goldstone_galerkin_first_execution.json": "18e4854a368c5b0d6860da12435bd8dae00d8d77302d66036c40972404ae710a",
+        "docs/topics/0.10_Fluid_Dynamics_Chaos/Result/previews/core_o2_goldstone_galerkin_first_execution_verifier.py.txt": "0be34c2e579b4aaf44dae168c63a4b50276508759c6073751e9c2484c0439c81",
+        "docs/topics/0.10_Fluid_Dynamics_Chaos/Result/previews/fluid_core_o2_infrared_trials_first_execution.json": "ec07cc39289b88ab60fb5d8b7e6fd419015056e9b012d30720a15e90d98fcea8",
+        "docs/topics/0.10_Fluid_Dynamics_Chaos/Result/previews/core_o2_infrared_trials_first_execution_verifier.py.txt": "7525ab5686c248947ab87082e876e9ccb69471e30d38be6f6492429d8c972c74",
+        "docs/topics/0.10_Fluid_Dynamics_Chaos/CORE_O2_GOLDSTONE_INFRARED_GEOMETRY_REPAIR.md": "4143ea435c9ed16896775a4a23312325d0d48b59c6b248c31fefa1b25a485bbc",
+        "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry_topic10_o2_infrared_geometry_addendum.json": "0af8e9ccfcc6de538e17e96448c47935b37177c5fee37599bd3f66d789288f22"
+      },
+      "derivation_scope": {
+        "status": "CONDITIONAL_INTERNAL_DERIVATION_SUPPORTED",
+        "selected_finite_cutoff": true,
+        "bounded_trial_majorant": "Q<=9*M^2*I_total<infinity",
+        "closed_dense_domain": "maximal radial Delta-pullback domain; card a.e. subsequence argument",
+        "smooth_approximation": "explicit G and Q upper bounds with s=sqrt(epsilon*K)",
+        "radial_vector_nullspace": "momentum only via W>0 and noncollinear triangles",
+        "uniform_vector_gap": "inf on momentum-perp Q/G=0 by compact soft bumps; conditional internal",
+        "proof_policy": "Explicit conditional derivation plus exact algebra/source numerical diagnostics; no formal or interval-certified continuum inverse/gap computation",
+        "formal_verification": false,
+        "independent_math_review": false,
+        "interval_certified": false,
+        "full_continuum_inverse_executed": false
+      },
+      "candidate_controller": "source_weighted_continuum_current_upper_bound_and_microscopic_heat_current_correspondence_open",
+      "physical_controller": "vector_momentum_constitutive_origin_and_material_frame_admission_open",
+      "controlling_measured_blocker": "source_weighted_continuum_current_upper_bound_and_microscopic_heat_current_correspondence_open",
+      "selected_finite_cutoff_domain_internal_derivation_supported": true,
+      "no_uniform_vector_gap_internal_derivation_supported": true,
+      "continuum_current_upper_bound_established": false,
+      "current_response_divergence_established": false,
+      "formal_verification": false,
+      "external_math_review": false,
+      "physical_heat_current_matched": false,
+      "full_interacting_collision_completed": false,
+      "positive_uniform_vector_gap_admitted": false,
+      "physical_frequency_window": null,
+      "physical_J04_executed": false,
+      "physical_J05_executed": false,
+      "physical_J06_executed": false,
+      "claim_promotion": false,
+      "dependency_unlock": false,
+      "thresholds_relaxed": false,
+      "parameters_fitted": false,
+      "next_action": "Derive a source-weighted continuum current inverse upper/error bound under the selected finite-K collision form, without assuming a uniform positive vector gap. The bounded-trial domain/soft smoothing and no-uniform-gap results are conditional internal derivations, not formal/independent verification, all-channel or infinite-K results. Then match microscopic condensate/charge stress-energy and physical heat-current/frame, complete interacting-state/additional channels and nonlinear/live response, and admit material/SI/independent-source correspondence. No physical time/window, divergent-current conclusion or J04/J05/J06 follows.",
+      "package_role": "conditional internal mathematical preparation, not physical package execution"
     }
   ],
-  "last_updated": "2026-09-30",
+  "last_updated": "2026-10-01",
   "current_variational_reference_snapshot": {
     "date": "2026-09-30",
     "status": "PASS_CONDITIONAL_VARIATIONAL_REFERENCE_ONLY",
@@ -1751,21 +1853,25 @@
   },
   "latest_executed_reference_snapshot": {
     "date": "2026-10-01",
-    "latest_executed_package": "J01_J02_INDEPENDENT_ENRICHED_SMOOTH_TRIAL_DIAGNOSTIC_ONLY",
-    "status": "PASS_ENRICHED_SMOOTH_TRIAL_DIAGNOSTIC_ONLY",
-    "scope": "Independent HYBRID/SOFT agreement, smooth-origin vector trials and stable near-collinear geometry",
-    "contract": "docs/topics/0.10_Fluid_Dynamics_Chaos/Data/03_Research/fluid_core_o2_infrared_trials_contract.json",
-    "derivation_card": "docs/topics/0.10_Fluid_Dynamics_Chaos/CORE_O2_GOLDSTONE_INFRARED_TRIALS.md",
-    "geometry_repair_card": "docs/topics/0.10_Fluid_Dynamics_Chaos/CORE_O2_GOLDSTONE_INFRARED_GEOMETRY_REPAIR.md",
-    "verifier": "docs/topics/0.10_Fluid_Dynamics_Chaos/Code/03_Research/Research_Fluid_Core_O2_Infrared_Trials.py",
-    "result_artifact": "docs/topics/0.10_Fluid_Dynamics_Chaos/Result/artifacts/fluid_core_o2_infrared_trials_audit.json",
-    "result_artifact_sha256": "4b550b4f455c7b5e67dd64def2208c5729425d7c851050dcc65c31f0a1c048b2",
-    "reference_check_count": 664,
+    "latest_executed_package": "J01_J02_SELECTED_FINITE_CUTOFF_CONTINUUM_FORM_DIAGNOSTIC_ONLY",
+    "status": "PASS_CONDITIONAL_CONTINUUM_FORM_DIAGNOSTIC_ONLY",
+    "scope": "Conditional selected finite-K bounded-trial/closed-domain, joint G/Q smoothing and soft noncoercivity internal derivation",
+    "contract": "docs/topics/0.10_Fluid_Dynamics_Chaos/Data/03_Research/fluid_core_o2_continuum_form_contract.json",
+    "derivation_card": "docs/topics/0.10_Fluid_Dynamics_Chaos/CORE_O2_GOLDSTONE_CONTINUUM_FORM.md",
+    "verifier": "docs/topics/0.10_Fluid_Dynamics_Chaos/Code/03_Research/Research_Fluid_Core_O2_Continuum_Form.py",
+    "result_artifact": "docs/topics/0.10_Fluid_Dynamics_Chaos/Result/artifacts/fluid_core_o2_continuum_form_audit.json",
+    "result_artifact_sha256": "22792c7ec7ab209ca5b23a870f2b72467feb482d4f89050925364c5ba40c932f",
+    "reference_check_count": 292,
     "evidence_hashes": {
+      "docs/topics/0.10_Fluid_Dynamics_Chaos/Data/03_Research/fluid_core_o2_continuum_form_contract.json": "2132f2adbc09082a5d4f991ddfcbcbb5133fe147e3bd521cc4fca1a952960609",
+      "docs/topics/0.10_Fluid_Dynamics_Chaos/CORE_O2_GOLDSTONE_CONTINUUM_FORM.md": "269bd387dde1ea664b7ab7935b96a35d6b1fa6175879f32ba6d913f46a7d0de9",
+      "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry_topic10_o2_continuum_form_addendum.json": "1b1797573264b2210a0ce6bfaa1eec84d7827bc59c2677907c9af185e236ac13",
+      "docs/topics/0.10_Fluid_Dynamics_Chaos/Code/03_Research/Research_Fluid_Core_O2_Continuum_Form.py": "0f9db4ad112f01da8a00e57dbd4d842f3c2947f814e1ccf68e6d42af796c7ef8",
       "docs/topics/0.10_Fluid_Dynamics_Chaos/Data/03_Research/fluid_core_o2_infrared_trials_contract.json": "55fb10489110d257a897e0c41b95743ae502cef0130e856508ab7786c075f85d",
+      "docs/topics/0.10_Fluid_Dynamics_Chaos/Code/03_Research/Research_Fluid_Core_O2_Infrared_Trials.py": "d62ccc1853c0e02829f0b0a79d71bd1b43488c7b2d93a15d6c8e26f19157bcdf",
+      "docs/topics/0.10_Fluid_Dynamics_Chaos/Result/artifacts/fluid_core_o2_infrared_trials_audit.json": "4b550b4f455c7b5e67dd64def2208c5729425d7c851050dcc65c31f0a1c048b2",
       "docs/topics/0.10_Fluid_Dynamics_Chaos/CORE_O2_GOLDSTONE_INFRARED_TRIALS.md": "ad908db9afc36d14102bbf18bba321795ec9b99a43abd4c2819ca49e61dfd97c",
       "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry_topic10_o2_infrared_trials_addendum.json": "1e3bf2adc560597f2acfac9cb511519f7b9d82e9ea882b8a5d5fd2cd2d555642",
-      "docs/topics/0.10_Fluid_Dynamics_Chaos/Code/03_Research/Research_Fluid_Core_O2_Infrared_Trials.py": "d62ccc1853c0e02829f0b0a79d71bd1b43488c7b2d93a15d6c8e26f19157bcdf",
       "docs/topics/0.10_Fluid_Dynamics_Chaos/Data/03_Research/fluid_core_o2_vector_refinement_contract.json": "5216da4f2549980292cce50314361448456db01816e3a5dba8a3c00120c880f0",
       "docs/topics/0.10_Fluid_Dynamics_Chaos/Code/03_Research/Research_Fluid_Core_O2_Vector_Refinement.py": "f73896652c997abdb17bd6d9b155e52c40722e36af70f703976b3b18dbe1d827",
       "docs/topics/0.10_Fluid_Dynamics_Chaos/Result/artifacts/fluid_core_o2_vector_refinement_audit.json": "4990aba84fe30276d7441bdca9567729a63797d5df0a0263d667f6df491f37f5",
@@ -1796,141 +1902,33 @@
       "docs/topics/0.10_Fluid_Dynamics_Chaos/CORE_O2_GOLDSTONE_INFRARED_GEOMETRY_REPAIR.md": "4143ea435c9ed16896775a4a23312325d0d48b59c6b248c31fefa1b25a485bbc",
       "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry_topic10_o2_infrared_geometry_addendum.json": "0af8e9ccfcc6de538e17e96448c47935b37177c5fee37599bd3f66d789288f22"
     },
-    "refinement_gate": {
-      "status": "PASS_DECLARED_ENRICHED_SMOOTH_TARGETS_ONLY",
-      "target_pass": true,
-      "state_targets": [
-        {
-          "T": 0.002,
-          "pass": true,
-          "targets": {
-            "hybrid_order": {
-              "relative_change": 3.194583864212196e-14,
-              "threshold": 0.01,
-              "pass": true
-            },
-            "hybrid_cutoff": {
-              "relative_change": 0.00012490914430137267,
-              "threshold": 0.01,
-              "pass": true
-            },
-            "hybrid_basis": {
-              "relative_change": 0.0002285645961416278,
-              "threshold": 0.01,
-              "pass": true
-            },
-            "enriched_cross_family": {
-              "relative_change": 0.00046839228873144764,
-              "threshold": 0.01,
-              "pass": true
-            },
-            "hybrid_source": {
-              "relative_change": 9.484899197353381e-16,
-              "threshold": 0.01,
-              "pass": true
-            },
-            "smooth_order": {
-              "relative_change": 6.961108331418834e-07,
-              "threshold": 0.01,
-              "pass": true
-            },
-            "smooth_delta": {
-              "relative_change": 2.0584081565439646e-06,
-              "threshold": 0.01,
-              "pass": true
-            },
-            "smooth_to_hybrid": {
-              "relative_change": 6.261082563784162e-07,
-              "threshold": 0.01,
-              "pass": true
-            },
-            "smooth_source": {
-              "relative_change": 9.484899197353381e-16,
-              "threshold": 0.01,
-              "pass": true
-            }
-          }
-        },
-        {
-          "T": 0.004,
-          "pass": true,
-          "targets": {
-            "hybrid_order": {
-              "relative_change": 4.20127443645135e-14,
-              "threshold": 0.01,
-              "pass": true
-            },
-            "hybrid_cutoff": {
-              "relative_change": 0.00010827309247913553,
-              "threshold": 0.01,
-              "pass": true
-            },
-            "hybrid_basis": {
-              "relative_change": 0.00024094235143977665,
-              "threshold": 0.01,
-              "pass": true
-            },
-            "enriched_cross_family": {
-              "relative_change": 0.0004250545853590133,
-              "threshold": 0.01,
-              "pass": true
-            },
-            "hybrid_source": {
-              "relative_change": 1.1391079817239447e-15,
-              "threshold": 0.01,
-              "pass": true
-            },
-            "smooth_order": {
-              "relative_change": 6.9569652639568e-07,
-              "threshold": 0.01,
-              "pass": true
-            },
-            "smooth_delta": {
-              "relative_change": 1.5388247107304815e-06,
-              "threshold": 0.01,
-              "pass": true
-            },
-            "smooth_to_hybrid": {
-              "relative_change": 5.554650311753273e-07,
-              "threshold": 0.01,
-              "pass": true
-            },
-            "smooth_source": {
-              "relative_change": 4.881891350245478e-16,
-              "threshold": 0.01,
-              "pass": true
-            }
-          }
-        }
-      ],
-      "physical_admission": false,
-      "historical_unenriched_target_pass": false,
-      "continuum_current_closed": false
+    "derivation_scope": {
+      "status": "CONDITIONAL_INTERNAL_DERIVATION_SUPPORTED",
+      "selected_finite_cutoff": true,
+      "bounded_trial_majorant": "Q<=9*M^2*I_total<infinity",
+      "closed_dense_domain": "maximal radial Delta-pullback domain; card a.e. subsequence argument",
+      "smooth_approximation": "explicit G and Q upper bounds with s=sqrt(epsilon*K)",
+      "radial_vector_nullspace": "momentum only via W>0 and noncollinear triangles",
+      "uniform_vector_gap": "inf on momentum-perp Q/G=0 by compact soft bumps; conditional internal",
+      "proof_policy": "Explicit conditional derivation plus exact algebra/source numerical diagnostics; no formal or interval-certified continuum inverse/gap computation",
+      "formal_verification": false,
+      "independent_math_review": false,
+      "interval_certified": false,
+      "full_continuum_inverse_executed": false
     },
-    "candidate_controller": "independent_soft_trial_refinement_continuum_collision_domain_and_physical_heat_current_admission_open",
+    "candidate_controller": "source_weighted_continuum_current_upper_bound_and_microscopic_heat_current_correspondence_open",
     "physical_controller": "vector_momentum_constitutive_origin_and_material_frame_admission_open",
-    "controlling_measured_blocker": "infrared_collision_form_domain_continuum_current_and_physical_heat_current_admission_open",
-    "first_execution_record": {
-      "artifact": "docs/topics/0.10_Fluid_Dynamics_Chaos/Result/previews/fluid_core_o2_infrared_trials_first_execution.json",
-      "verifier_source_archive": "docs/topics/0.10_Fluid_Dynamics_Chaos/Result/previews/core_o2_infrared_trials_first_execution_verifier.py.txt",
-      "status": "ENRICHED_SMOOTH_TRIAL_DIAGNOSTIC_FAIL",
-      "passing_check_count": 124,
-      "check_count": 126,
-      "execution_errors": [
-        {
-          "type": "ValueError",
-          "message": "non-interior triangle; clipping prohibited"
-        }
-      ]
-    },
-    "Gram_norm_smooth_approximation_lemma": "finite_cutoff_dominated_convergence_only",
-    "continuum_collision_form_domain_established": false,
+    "controlling_measured_blocker": "source_weighted_continuum_current_upper_bound_and_microscopic_heat_current_correspondence_open",
+    "selected_finite_cutoff_domain_internal_derivation_supported": true,
+    "no_uniform_vector_gap_internal_derivation_supported": true,
     "continuum_current_upper_bound_established": false,
+    "current_response_divergence_established": false,
+    "formal_verification": false,
+    "external_math_review": false,
     "physical_heat_current_matched": false,
     "full_interacting_collision_completed": false,
-    "continuum_spectral_gap_established": false,
-    "thermalization_derived": false,
-    "physical_frequency_window_established": false,
+    "positive_uniform_vector_gap_admitted": false,
+    "physical_frequency_window": null,
     "physical_J04_executed": false,
     "physical_J05_executed": false,
     "physical_J06_executed": false,
@@ -1938,8 +1936,8 @@
     "dependency_unlock": false,
     "thresholds_relaxed": false,
     "parameters_fitted": false,
-    "next_action": "Establish the selected finite-T kinetic current's continuum collision-form domain and a source-weighted upper/error bound, beyond the finite-cutoff Gram-norm lemma or finite quadrature plateau. Retain all historical unenriched failures. Then match the kinetic current against microscopic condensate/charge stress-energy, heat-current/frame and interacting thermal-state/additional-channel correspondence before nonlinear/live-response, material/SI and independent-source admission. No physical time, hydrodynamic window or J04/J05/J06 follows from finite trial agreement.",
-    "package_role": "finite enriched/smooth trial targets only; continuum and physical transport open"
+    "next_action": "Derive a source-weighted continuum current inverse upper/error bound under the selected finite-K collision form, without assuming a uniform positive vector gap. The bounded-trial domain/soft smoothing and no-uniform-gap results are conditional internal derivations, not formal/independent verification, all-channel or infinite-K results. Then match microscopic condensate/charge stress-energy and physical heat-current/frame, complete interacting-state/additional channels and nonlinear/live response, and admit material/SI/independent-source correspondence. No physical time/window, divergent-current conclusion or J04/J05/J06 follows.",
+    "package_role": "conditional internal mathematical preparation, not physical package execution"
   },
   "current_he4_EOS_source_acquisition_snapshot": {
     "date": "2026-09-30",
@@ -2771,5 +2769,93 @@
     "parameters_fitted": false,
     "next_action": "Establish the selected finite-T kinetic current's continuum collision-form domain and a source-weighted upper/error bound, beyond the finite-cutoff Gram-norm lemma or finite quadrature plateau. Retain all historical unenriched failures. Then match the kinetic current against microscopic condensate/charge stress-energy, heat-current/frame and interacting thermal-state/additional-channel correspondence before nonlinear/live-response, material/SI and independent-source admission. No physical time, hydrodynamic window or J04/J05/J06 follows from finite trial agreement.",
     "package_role": "finite enriched/smooth trial targets only; continuum and physical transport open"
+  },
+  "current_core_o2_continuum_form_snapshot": {
+    "date": "2026-10-01",
+    "latest_executed_package": "J01_J02_SELECTED_FINITE_CUTOFF_CONTINUUM_FORM_DIAGNOSTIC_ONLY",
+    "status": "PASS_CONDITIONAL_CONTINUUM_FORM_DIAGNOSTIC_ONLY",
+    "scope": "Conditional selected finite-K bounded-trial/closed-domain, joint G/Q smoothing and soft noncoercivity internal derivation",
+    "contract": "docs/topics/0.10_Fluid_Dynamics_Chaos/Data/03_Research/fluid_core_o2_continuum_form_contract.json",
+    "derivation_card": "docs/topics/0.10_Fluid_Dynamics_Chaos/CORE_O2_GOLDSTONE_CONTINUUM_FORM.md",
+    "verifier": "docs/topics/0.10_Fluid_Dynamics_Chaos/Code/03_Research/Research_Fluid_Core_O2_Continuum_Form.py",
+    "result_artifact": "docs/topics/0.10_Fluid_Dynamics_Chaos/Result/artifacts/fluid_core_o2_continuum_form_audit.json",
+    "result_artifact_sha256": "22792c7ec7ab209ca5b23a870f2b72467feb482d4f89050925364c5ba40c932f",
+    "reference_check_count": 292,
+    "evidence_hashes": {
+      "docs/topics/0.10_Fluid_Dynamics_Chaos/Data/03_Research/fluid_core_o2_continuum_form_contract.json": "2132f2adbc09082a5d4f991ddfcbcbb5133fe147e3bd521cc4fca1a952960609",
+      "docs/topics/0.10_Fluid_Dynamics_Chaos/CORE_O2_GOLDSTONE_CONTINUUM_FORM.md": "269bd387dde1ea664b7ab7935b96a35d6b1fa6175879f32ba6d913f46a7d0de9",
+      "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry_topic10_o2_continuum_form_addendum.json": "1b1797573264b2210a0ce6bfaa1eec84d7827bc59c2677907c9af185e236ac13",
+      "docs/topics/0.10_Fluid_Dynamics_Chaos/Code/03_Research/Research_Fluid_Core_O2_Continuum_Form.py": "0f9db4ad112f01da8a00e57dbd4d842f3c2947f814e1ccf68e6d42af796c7ef8",
+      "docs/topics/0.10_Fluid_Dynamics_Chaos/Data/03_Research/fluid_core_o2_infrared_trials_contract.json": "55fb10489110d257a897e0c41b95743ae502cef0130e856508ab7786c075f85d",
+      "docs/topics/0.10_Fluid_Dynamics_Chaos/Code/03_Research/Research_Fluid_Core_O2_Infrared_Trials.py": "d62ccc1853c0e02829f0b0a79d71bd1b43488c7b2d93a15d6c8e26f19157bcdf",
+      "docs/topics/0.10_Fluid_Dynamics_Chaos/Result/artifacts/fluid_core_o2_infrared_trials_audit.json": "4b550b4f455c7b5e67dd64def2208c5729425d7c851050dcc65c31f0a1c048b2",
+      "docs/topics/0.10_Fluid_Dynamics_Chaos/CORE_O2_GOLDSTONE_INFRARED_TRIALS.md": "ad908db9afc36d14102bbf18bba321795ec9b99a43abd4c2819ca49e61dfd97c",
+      "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry_topic10_o2_infrared_trials_addendum.json": "1e3bf2adc560597f2acfac9cb511519f7b9d82e9ea882b8a5d5fd2cd2d555642",
+      "docs/topics/0.10_Fluid_Dynamics_Chaos/Data/03_Research/fluid_core_o2_vector_refinement_contract.json": "5216da4f2549980292cce50314361448456db01816e3a5dba8a3c00120c880f0",
+      "docs/topics/0.10_Fluid_Dynamics_Chaos/Code/03_Research/Research_Fluid_Core_O2_Vector_Refinement.py": "f73896652c997abdb17bd6d9b155e52c40722e36af70f703976b3b18dbe1d827",
+      "docs/topics/0.10_Fluid_Dynamics_Chaos/Result/artifacts/fluid_core_o2_vector_refinement_audit.json": "4990aba84fe30276d7441bdca9567729a63797d5df0a0263d667f6df491f37f5",
+      "docs/topics/0.10_Fluid_Dynamics_Chaos/CORE_O2_GOLDSTONE_VECTOR_REFINEMENT.md": "5957e4f1373faea4e38036f040e4b84c611f11a52d8f5e3188b29e469ed2d4ef",
+      "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry_topic10_o2_vector_refinement_addendum.json": "9263469bc87c7bfaa47ce608adc1da710510885d003cf8a603e25605e06bfee1",
+      "docs/topics/0.10_Fluid_Dynamics_Chaos/Data/03_Research/fluid_core_o2_goldstone_galerkin_contract.json": "d36a29ef8524a9c839ba237ac7507ea6e8c217d777a8f9fcd87302e9b5b37fee",
+      "docs/topics/0.10_Fluid_Dynamics_Chaos/Code/03_Research/Research_Fluid_Core_O2_Goldstone_Galerkin.py": "f7caeae9655172514adc464723917a1a8e367a3a1832ada2938a2d44f1afdc74",
+      "docs/topics/0.10_Fluid_Dynamics_Chaos/Result/artifacts/fluid_core_o2_goldstone_galerkin_audit.json": "4b4c706aab168108e7d5829a6a0563eaf9f99c893afd2586020eb89b55e6d24b",
+      "docs/topics/0.10_Fluid_Dynamics_Chaos/CORE_O2_GOLDSTONE_GALERKIN_DERIVATION.md": "5cd09900d57ae2d61c2007f6a0b2f7d565903894721c81b8b81b29257bccac90",
+      "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry_topic10_o2_goldstone_galerkin_addendum.json": "73bb37bd79dfc2bfde8231998db142d539db83a9b1186e1e23c1dff8dadd6fb8",
+      "docs/topics/0.10_Fluid_Dynamics_Chaos/Code/03_Research/Research_Fluid_Core_O2_Common_Flow.py": "b083323ad31df5527a94a888e8eae43984eb77698bda1c6c3d080e2ea940f5e2",
+      "docs/topics/0.10_Fluid_Dynamics_Chaos/Data/03_Research/fluid_core_o2_common_flow_contract.json": "c9a190c89d682080a9a90254cfd205e606cd9063f9d34c68b00eeeef8634c75c",
+      "docs/topics/0.10_Fluid_Dynamics_Chaos/Data/03_Research/fluid_core_o2_goldstone_collision_contract.json": "331535ea4a63e47e0d100c317511013605ab5044f1bdbff835ba48fbd3e6b912",
+      "docs/topics/0.10_Fluid_Dynamics_Chaos/Code/03_Research/Research_Fluid_Core_O2_Goldstone_Collision.py": "1b8cc6ff1782da5c5f01dcf4d95052871a4ea2c7a5e1aa967478e9f800cd3fe8",
+      "docs/topics/0.10_Fluid_Dynamics_Chaos/Result/artifacts/fluid_core_o2_goldstone_collision_audit.json": "c130a512a015940ed5db9f2a181fa34731910fa17aa58c5c4e59e0cdb3dfe56b",
+      "docs/core/02_equations/covariant/uet_covariant_response.py": "7fb4b7228afb8ede0ac4f1664d634346ef46cc7678c94ed7b55d73645590c0c2",
+      "docs/core/02_equations/o2/uet_o2_finite_density_eos.py": "ea744a8645f993600300fa9fd99a764e1f07b30fb272b47399c34aa114152c6d",
+      "docs/core/02_equations/o2/uet_o2_finite_temperature_quasiparticle_eos.py": "ba814f3aa02b5e31112a6595dac7727b7025b08e08f0631f50567f270cebbb7f",
+      "docs/core/02_equations/o2/uet_o2_formal_transverse_response.py": "a8ee43c6fb6edb227476412cde6cc9b2d4a643fc42cca0fd2d438b343efad1ba",
+      "docs/core/02_equations/o2/uet_o2_invariant_galerkin_collision_operator.py": "278b168e5c3b444ac4df4b96b5a7d00410cd9485c511ab2a17aa4f11c6f6d94e",
+      "docs/core/07_artifacts/topic13/t13_invariant_galerkin_collision_operator_audit.json": "433427f32612e478d71a1a4ff64f96e3d22da7fc33d3de0c10f3a0a480234011",
+      "docs/core/07_artifacts/topic13/t13_collision_evidence_reconciliation.json": "cad197d2635b08d3454cc49734b292b32971c2f18e3d3f1d2b2c0b5ca77c9bf6",
+      "docs/topics/0.10_Fluid_Dynamics_Chaos/Result/artifacts/fluid_core_o2_ideal_modes_audit.json": "b2e5d7fb5fff8f1a48148e1661bbf640027174b58b9fe765f53cded351c512f6",
+      "docs/topics/0.10_Fluid_Dynamics_Chaos/Result/previews/fluid_core_o2_goldstone_galerkin_first_execution.json": "18e4854a368c5b0d6860da12435bd8dae00d8d77302d66036c40972404ae710a",
+      "docs/topics/0.10_Fluid_Dynamics_Chaos/Result/previews/core_o2_goldstone_galerkin_first_execution_verifier.py.txt": "0be34c2e579b4aaf44dae168c63a4b50276508759c6073751e9c2484c0439c81",
+      "docs/topics/0.10_Fluid_Dynamics_Chaos/Result/previews/fluid_core_o2_infrared_trials_first_execution.json": "ec07cc39289b88ab60fb5d8b7e6fd419015056e9b012d30720a15e90d98fcea8",
+      "docs/topics/0.10_Fluid_Dynamics_Chaos/Result/previews/core_o2_infrared_trials_first_execution_verifier.py.txt": "7525ab5686c248947ab87082e876e9ccb69471e30d38be6f6492429d8c972c74",
+      "docs/topics/0.10_Fluid_Dynamics_Chaos/CORE_O2_GOLDSTONE_INFRARED_GEOMETRY_REPAIR.md": "4143ea435c9ed16896775a4a23312325d0d48b59c6b248c31fefa1b25a485bbc",
+      "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry_topic10_o2_infrared_geometry_addendum.json": "0af8e9ccfcc6de538e17e96448c47935b37177c5fee37599bd3f66d789288f22"
+    },
+    "derivation_scope": {
+      "status": "CONDITIONAL_INTERNAL_DERIVATION_SUPPORTED",
+      "selected_finite_cutoff": true,
+      "bounded_trial_majorant": "Q<=9*M^2*I_total<infinity",
+      "closed_dense_domain": "maximal radial Delta-pullback domain; card a.e. subsequence argument",
+      "smooth_approximation": "explicit G and Q upper bounds with s=sqrt(epsilon*K)",
+      "radial_vector_nullspace": "momentum only via W>0 and noncollinear triangles",
+      "uniform_vector_gap": "inf on momentum-perp Q/G=0 by compact soft bumps; conditional internal",
+      "proof_policy": "Explicit conditional derivation plus exact algebra/source numerical diagnostics; no formal or interval-certified continuum inverse/gap computation",
+      "formal_verification": false,
+      "independent_math_review": false,
+      "interval_certified": false,
+      "full_continuum_inverse_executed": false
+    },
+    "candidate_controller": "source_weighted_continuum_current_upper_bound_and_microscopic_heat_current_correspondence_open",
+    "physical_controller": "vector_momentum_constitutive_origin_and_material_frame_admission_open",
+    "controlling_measured_blocker": "source_weighted_continuum_current_upper_bound_and_microscopic_heat_current_correspondence_open",
+    "selected_finite_cutoff_domain_internal_derivation_supported": true,
+    "no_uniform_vector_gap_internal_derivation_supported": true,
+    "continuum_current_upper_bound_established": false,
+    "current_response_divergence_established": false,
+    "formal_verification": false,
+    "external_math_review": false,
+    "physical_heat_current_matched": false,
+    "full_interacting_collision_completed": false,
+    "positive_uniform_vector_gap_admitted": false,
+    "physical_frequency_window": null,
+    "physical_J04_executed": false,
+    "physical_J05_executed": false,
+    "physical_J06_executed": false,
+    "claim_promotion": false,
+    "dependency_unlock": false,
+    "thresholds_relaxed": false,
+    "parameters_fitted": false,
+    "next_action": "Derive a source-weighted continuum current inverse upper/error bound under the selected finite-K collision form, without assuming a uniform positive vector gap. The bounded-trial domain/soft smoothing and no-uniform-gap results are conditional internal derivations, not formal/independent verification, all-channel or infinite-K results. Then match microscopic condensate/charge stress-energy and physical heat-current/frame, complete interacting-state/additional channels and nonlinear/live response, and admit material/SI/independent-source correspondence. No physical time/window, divergent-current conclusion or J04/J05/J06 follows.",
+    "package_role": "conditional internal mathematical preparation, not physical package execution"
   }
 }

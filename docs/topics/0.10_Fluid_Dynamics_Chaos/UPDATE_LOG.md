@@ -605,3 +605,44 @@ CLAIM_BOUNDARY: Internal numerical-method validation only; not evidence that UET
   rechecks, eight local evidence hashes, thirteen unchanged current artifacts,
   old document prefixes, report links/UTF-8/JSON and diff whitespace pass.
   No evidence-producing code changed; no scientific verifier rerun required.
+
+## 2026-10-01 Selected continuum form and compact soft noncoercivity
+
+- Area: research-core; conditional selected finite-K mathematical preparation.
+- Before execution: card/contract/separate unmerged registry locks same positive
+  states/kernel/source, cutoff60, event grid, bump/smooth deltas and Gram64/128/256.
+- Changed: exact-algebra/measure-bound verifier,292-check artifact/four tests,
+  selected derivation records, plan snapshot/history and topic documentation.
+- Actually ran: exact Fraction cubic identity plus missing-pressure negative
+  control;12 parent grids/84 daughter events, source/geometry/vertex/majorants;
+  explicit G/Q smoothing and projected compact-bump bounds at both states,
+  Gram64/128/256 last-order1% targets and whole-action/event scale2.
+- First execution291/291 passes without repair or threshold/parameter change.
+  Max vertex identity3.25e-10, geometry1.40e-10; projected Gram lower bounds positive.
+- Derived internally under selected finite-K assumptions: integrable measure,
+  bounded-trial G/Q domain, dense/closed maximal radial form, momentum-only
+  vector nullspace and no positive uniform gap via Q=O(epsilon^2),G>=constant*epsilon.
+- Four new regressions pass, including false formal/physical/current unlock,
+  empty states and relaxed/changed-control rejection. No Lean/interval/external review.
+- Narrowed: bounded soft-trial collision-form admissibility and uniform-gap
+  question are explicit; neither is inferred from finite matrix eigenvalues.
+- Next selected controller:
+  source_weighted_continuum_current_upper_bound_and_microscopic_heat_current_correspondence_open.
+- Physical controller unchanged:
+  vector_momentum_constitutive_origin_and_material_frame_admission_open.
+- No current-divergence result, physical time/frequency window, additional-channel
+  or infinite-K admission; no live/nonlinear/material/SI/independent-source,
+  J04/J05/J06 execution, Core/Topic13 promotion or dependency unlock.
+
+- Source-freshness follow-up: added one explicit prior-input SHA-256 guard
+  and stale-source negative control. Current292/292 and the four new tests passed;
+  kernel, parameters, numerical bound values and targets remain unchanged.
+  Temporary rejection inputs use the workspace root, requiring no pre-existing
+  ignored tmp directory in a clean CI checkout.
+
+- Final local review: all51 scoped regressions pass after source-guard and
+  clean-checkout portability follow-up. Fourteen current artifacts/input hashes
+  are fresh; new artifact reproduces identical bytes in the fresh-run regression.
+  Thirteen old artifacts, prior snapshots/history, ten-package DAG, physical
+  Core/Topic13/J04/J05/J06 state,16-file scope, UTF-8 prefixes, JSON and links pass.
+  Conditional internal derivation does not promote a physical/formal/current gate.

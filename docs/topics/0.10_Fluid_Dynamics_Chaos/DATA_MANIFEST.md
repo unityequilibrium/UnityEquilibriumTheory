@@ -233,3 +233,15 @@ trial parameter, not a scattering regulator or material length. Across30 banks,
 576 near-collinear events use gap-only high precision; source B/r/mu consistency
 is checked. The unchanged old matrix/response correspondence is below1.3e-13.
 No new physical input, material coefficient, SI mapping or blind source is added.
+
+## Finite-cutoff continuum-form derivation inputs
+
+[Contract](Data/03_Research/fluid_core_o2_continuum_form_contract.json),
+[card](CORE_O2_GOLDSTONE_CONTINUUM_FORM.md) and
+[artifact](Result/artifacts/fluid_core_o2_continuum_form_audit.json) link the
+same source tree dispersion, cubic vertex/measure and prior immutable infrared
+package with current SHA-256 input identities. No new empirical source,
+material coefficient, source-dependent fit or scattering channel is added.
+Epsilon is a smooth trial support in natural momentum units, never a kernel
+cutoff/width. Exact rational algebra and evaluated integral upper formulas are
+internal mathematical evidence, not independent He-II data or SI transport.

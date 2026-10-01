@@ -261,3 +261,20 @@ Heron factors using the positive on-shell excess and places the soft vector
 directly. Decimal60 repairs only gaps below128 machine-epsilon*k.
 The original floating q/energy/measure/occupations remain; raw geometry,
 source parameter consistency, invariants and old matrix correspondence pass.
+
+## Conditional finite-K collision form and compact soft sequence
+
+The [card](CORE_O2_GOLDSTONE_CONTINUUM_FORM.md) derives a positive interior
+vertex using the exact on-shell cubic identity and increasing F(E)/E.
+An integrable measure majorant gives finite Q for bounded vector trials;
+explicit soft-set bounds prove smooth-seed approximation in both Gram and
+collision norms. Radial/event a.e. pullbacks give the maximal-domain closure
+argument; noncollinearity/positive event density identify the momentum null.
+
+Project a smooth compact soft bump off momentum. Q is unchanged; its upper
+bound is O(epsilon^2), while the projected Gram lower bound is O(epsilon).
+Thus the selected form has no uniform positive vector Rayleigh gap.
+Diagnostics evaluate the derived formulas, Gram quadrature64/128/256 and
+pointwise original-kernel inequalities; they do not invert the full continuum
+operator, certify intervals, or assign physical transport. Internal derivation
+and independent mathematical verification remain distinct.

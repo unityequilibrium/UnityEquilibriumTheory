@@ -336,3 +336,25 @@ and [output](Result/previews/fluid_core_o2_infrared_trials_first_execution.json)
 remain exact. The full function AST change is reported; physical collision-tail
 AST matches. Precision repair uses no clipping, floors or changed acceptance.
 664 includes30 source-relation guards. No continuum/physical gate promotion.
+
+## Selected finite-cutoff continuum-form diagnostics
+
+Command: python docs/topics/0.10_Fluid_Dynamics_Chaos/Code/03_Research/Research_Fluid_Core_O2_Continuum_Form.py.
+Contract: [locked controls](Data/03_Research/fluid_core_o2_continuum_form_contract.json).
+Artifact: [continuum-form audit](Result/artifacts/fluid_core_o2_continuum_form_audit.json).
+
+Before execution the card/contract/separate registry locks states, cutoff,
+point grids, smooth/bump deltas, Gram64/128/256 and unchanged tolerances.
+Exact Fraction polynomial subtraction vanishes; removing a pressure term is
+a nonzero negative control. Original source events check vertex/density
+majorants, positive noncollinear geometry and energy closure. Gram quadrature
+checks explicit bump/projection lower formulas,1% last-order targets and scale2
+checks w:E2,W:E2,prefactor:E-3,G:E5,Q:E6,Q/G:E1.
+
+First execution291/291 passes without a kernel/parameter/target repair.
+Current292/292 adds explicit prior-source hash freshness and its rejection
+control. Four regressions pass; guards reject stale input, false formal/physical/
+current admission, empty states and relaxed/changed controls.
+PASS supports only the explicit conditional internal derivation. It is not a
+formal or interval certificate, full continuum inverse, external math review,
+material current or physical hydrodynamic admission.

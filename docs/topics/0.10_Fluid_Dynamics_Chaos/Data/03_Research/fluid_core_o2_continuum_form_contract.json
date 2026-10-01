@@ -1,0 +1,79 @@
+{
+  "schema_version": "t010-core-o2-continuum-form-v1",
+  "date": "2026-10-01",
+  "record_role": "CONDITIONAL_FINITE_CUTOFF_FORM_DOMAIN_AND_NO_UNIFORM_VECTOR_GAP_INTERNAL",
+  "card": "docs/topics/0.10_Fluid_Dynamics_Chaos/CORE_O2_GOLDSTONE_CONTINUUM_FORM.md",
+  "infrared_contract": "docs/topics/0.10_Fluid_Dynamics_Chaos/Data/03_Research/fluid_core_o2_infrared_trials_contract.json",
+  "infrared_verifier": "docs/topics/0.10_Fluid_Dynamics_Chaos/Code/03_Research/Research_Fluid_Core_O2_Infrared_Trials.py",
+  "infrared_artifact": "docs/topics/0.10_Fluid_Dynamics_Chaos/Result/artifacts/fluid_core_o2_infrared_trials_audit.json",
+  "physical_controller": "vector_momentum_constitutive_origin_and_material_frame_admission_open",
+  "previous_measured_controller": "infrared_collision_form_domain_continuum_current_and_physical_heat_current_admission_open",
+  "candidate_controller": "source_weighted_continuum_current_upper_bound_and_microscopic_heat_current_correspondence_open",
+  "mu": 1.28,
+  "temperatures": [
+    0.002,
+    0.004
+  ],
+  "lambda_exploratory": 0.01,
+  "verification": {
+    "locked_before_first_execution": true,
+    "cutoff_factor": 60,
+    "bump_deltas": [
+      0.001,
+      0.0005,
+      0.00025,
+      0.000125
+    ],
+    "smooth_deltas": [
+      0.1,
+      0.03,
+      0.01,
+      0.003
+    ],
+    "Gram_orders": [
+      64,
+      128,
+      256
+    ],
+    "parent_over_thermal_k": [
+      0.0001,
+      0.01,
+      0.1,
+      1,
+      10,
+      60
+    ],
+    "daughter_fractions": [
+      0.000001,
+      0.01,
+      0.25,
+      0.5,
+      0.75,
+      0.99,
+      0.999999
+    ],
+    "algebra_relative_tolerance": 1e-8,
+    "event_relative_tolerance": 1e-9,
+    "refinement_relative_tolerance": 0.01,
+    "max_cutoff_energy_over_radial_gap": 0.1,
+    "energy_scale": 2,
+    "proof_policy": "Explicit conditional derivation plus exact algebra/source numerical diagnostics; no formal or interval-certified continuum inverse/gap computation"
+  },
+  "admission": {
+    "unbounded_momentum_domain": false,
+    "all_channel_interacting_domain": false,
+    "source_weighted_current_upper_bound": false,
+    "formal_verification": false,
+    "external_math_review": false,
+    "physical_heat_current": false,
+    "physical_relaxation_time": false,
+    "physical_frequency_window": false,
+    "physical_UET_operator": false,
+    "physical_HeII_state": false,
+    "physical_J04_executed": false,
+    "physical_J05_executed": false,
+    "physical_J06_executed": false,
+    "claim_promotion": false,
+    "dependency_unlock": false
+  }
+}

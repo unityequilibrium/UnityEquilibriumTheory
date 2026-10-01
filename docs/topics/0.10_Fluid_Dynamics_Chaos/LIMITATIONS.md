@@ -259,3 +259,19 @@ or spectral gap is established. The selected leading cubic channel remains
 tree/kinetic, without full interacting thermal self-energy/additional channels.
 Its source is not admitted condensate/charge heat current or a physical frame.
 No material/SI coefficient, relaxation/damping time or two-fluid prediction.
+
+## Selected continuum-domain and no-gap boundary
+
+[The new derivation](CORE_O2_GOLDSTONE_CONTINUUM_FORM.md) is conditional on
+finiteK, positive condensed parameters, the exact lower tree dispersion and
+one leading cubic1<->2 channel. It is not the unbounded-K/all-channel interacting
+operator or an externally/formally verified theorem of the complete UET model.
+The numbers are floating evaluations of analytic bounds, not interval certificates.
+
+Momentum-only radial-vector nullspace does not imply a uniform positive gap;
+soft compact trials give a zero infimum of Q/G after momentum subtraction.
+That result alone proves neither current-response divergence nor absence of
+every source-specific hydrodynamic window. Source-weighted upper/error bounds
+and microscopic heat-current/frame remain the selected next controller.
+No finite-matrix time, universal physical relaxation time, material/He-II/SI
+or physical J04/J05/J06 admission is promoted; prior hashes/failures remain.

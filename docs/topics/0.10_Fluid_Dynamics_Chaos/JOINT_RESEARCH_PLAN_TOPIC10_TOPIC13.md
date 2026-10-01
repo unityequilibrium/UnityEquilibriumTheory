@@ -462,3 +462,22 @@ continuum collision-domain/source-weighted upper bounds, physical heat current
 or two-fluid/material/SI correspondence. Analytic versus smooth forcing and
 regularity assumptions must remain explicit in any future adversarial source.
 Physical J04/J05/J06 remain NOT_STARTED and the machine-readable plan/DAG is unchanged.
+
+## Selected finite-cutoff form-domain and no-uniform-gap checkpoint (2026-10-01)
+
+J01/J02 preparation now has a [conditional internal continuum-form derivation](CORE_O2_GOLDSTONE_CONTINUUM_FORM.md)
+and [292-check source/unit/bound diagnostic](Result/artifacts/fluid_core_o2_continuum_form_audit.json).
+Bounded soft trials are admitted to the selected finite-K form and smooth
+approximation is controlled in both G/Q norms. The radial vector null is
+momentum only; compact projected soft bumps show no uniform positive vector
+gap. This is a scoped internal derivation with independent/formal review open.
+
+The machine-readable plan retains prior snapshots/history and physical states,
+and now exposes the selected next controller:
+source_weighted_continuum_current_upper_bound_and_microscopic_heat_current_correspondence_open.
+Derive a source-specific upper/error bound without an assumed uniform gap,
+then microscopic heat-current/frame/interacting-state, nonlinear/live and
+material/SI/independent-source admission. No-uniform-gap is not a divergent-current
+result or blanket denial of source-specific hydrodynamics. J04/J05/J06 remain
+NOT_STARTED; Topic13/Core admission and all old failed/enriched finite targets
+are unchanged. OpenAI source reviews remain dated historical design snapshots.

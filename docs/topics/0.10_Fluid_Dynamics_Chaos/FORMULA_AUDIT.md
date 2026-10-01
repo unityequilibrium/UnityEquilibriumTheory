@@ -265,3 +265,19 @@ The physical velocity/vertex/measure/Bose/gain-loss AST is unchanged even though
 the explicit geometry implementation's full AST differs. Smooth finite-cutoff
 Gram dominated convergence is a local mathematical lemma, not collision-form
 or continuum-current convergence. Physical heat-current/frame remains unadmitted.
+
+## Selected continuum measure/domain and compact soft noncoercivity
+
+[Card](CORE_O2_GOLDSTONE_CONTINUUM_FORM.md) and
+[unmerged correspondence addendum](../../core/07_artifacts/correspondence/uet_equation_correspondence_registry_topic10_o2_continuum_form_addendum.json)
+record radial Gram density w:E2 and event density W:E2, distinct from quadrature
+weights; bounded amplitude/epsilon:E, g3:E-2, prefactor:E-3, integralW:E4,
+G:E5,Q:E6 and Rayleigh:E1. Whole-action scale2 diagnostics pass independently.
+
+The original cubic vertex equals -2g3 times the on-shell F(E) difference by
+exact rational polynomial algebra. Measure majorants and compact-bump/Gram
+projection inequalities derive conditional finite-K domain/no-uniform-gap
+statements. Their floating evaluation is not interval certification, Lean
+verification or independent math review. No new primary Core equation or
+physical parameter is added. Source-weighted current bounds and microscopic
+heat-current/frame/material correspondence stay open.
