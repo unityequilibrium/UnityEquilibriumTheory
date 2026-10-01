@@ -1,3 +1,27 @@
+## 2026-10-01 - Actual three-channel Hartree external field response
+
+MAJOR_RESULT_CLOSURE: T13_FIXED_PHI_HARTREE_EXTERNAL_FIELD_RESPONSE is CLOSED_FOR_LANE in the declared fixed-Phi zero-momentum-subtracted candidate; the full Goal remains active.
+
+WHAT_IS_ACTUALLY_CLOSED: Computed full vacuum/thermal covariance bubbles and the source-responsive Bethe-Salpeter field operator at finite momentum and upper-half-plane frequency. Absolute subtraction independently recovers the prior tadpole derivatives. Static radial potential and transverse Ward limits are recovered without forcing the internal phase mass to zero. Actual bubbles now satisfy the same counterterm source equation.
+
+WHAT_REMAINS_OPEN: Gauge-current contact/vertex completion, real-axis spectrum and controlled IR/truncation matching, full covariant regulator/RG/action input, joint Phi/global state, independent material/source/detector mapping and normal-component/SK/KMS/transport.
+
+DEPENDENCY_UNLOCKED: Same-candidate gauge-current and spectral work only. Physical funding G1/G2, new full_core_unlock and global claims remain false; recorded Core composition and failed baselines are unchanged.
+
+STATUS: PASS_SUBTRACTED_HARTREE_EXTERNAL_FIELD_RESPONSE.
+
+WHAT_CHANGED: Added external-field verifier, eighteen tests, artifact/derivation and local formula IDs; synchronized topic method/spec/limitations/README and funding evidence/controller/Goal/roadmap. Previous planning wave is committed/pushed and its relevant CI checks all passed on e924e97a1.
+
+EQUATION_OR_MAPPING: J_F(Q)=J_F(0)+integral[J_raw(Q)-J_raw(0)]; deltaM=(I-KJ_F)^-1*L*deltavarphi; Gamma_ext=G_int^-1+L^T*J_F*(I-KJ_F)^-1*L/2. varphi is an existing O2 field, not UET Phi or a new state.
+
+VERIFICATION: 140 linked Topic13/Core/planning tests passed, including eighteen new tests. Independent matrix sums, absolute/difference subtraction, four-dimensional vacuum reference, source derivatives, static potential/Ward, routing, quadrature, retarded reality/parity, unit scaling, counterterm replay, invalid-domain controls and evidence/read allowlists passed. Maximum direct-subtraction disagreement 4.29e-10, Ward residual 3.65e-13; neither is physical uncertainty. Artifact SHA-256 5078cc2b3c8a8d679542046aa41992f0263b93665297111d4a7864baa96eae36.
+
+CONTROLLING_BLOCKER: gauge_current_real_axis_and_regulator_material_matching_not_closed.
+
+NEXT_ACTION: Derive same-action gauge/current source vertices and contacts, then real-axis/error and regulator/RG/joint-Phi/material admission. Do not regenerate the field bubble without a new question. Original portfolio dates and scientific acceptance remain unchanged.
+
+CLAIM_BOUNDARY: Fixed-Phi candidate field response only, not temperature/current measurement, full covariant/RG, microscopic KMS/Kubo, physical helium/TTG prediction, finite-cone repair or global closure. New verifier reads no numeric experimental or holdout source; prior Xie context-exposure review stays open. No fits, clipping, IR mass/filter, threshold change or Core-owner edit.
+
 ## 2026-10-01 - Result-level roadmap and next-round submission buffer
 
 MAJOR_RESULT_CLOSURE: Planning handoff clarified; no new scientific result closed.

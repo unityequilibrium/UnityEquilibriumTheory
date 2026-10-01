@@ -18,6 +18,8 @@
 
 ### ผลส่งมอบสองสัปดาห์ที่ต้องมี
 
+ผลถัดมา 1 ต.ค.: [external field response ที่คำนวณจริง](Result/artifacts/T13_HARTREE_EXTERNAL_RESPONSE_2026-10-01.md) ปิด vacuum/thermal bubble สามช่องและ covariance/source response ใน named subtraction แล้ว ใช้ต่อ R1 ด้วย gauge-current contacts, real-axis/error และ full regulator/RG/action match ไม่ต้องวนรัน field bubble เดิมเพื่อเพิ่ม log ผลนี้ยังไม่รับ R1 ครบทุกข้อและไม่เปลี่ยน physical/material gate, วันพอร์ตหรือการเลือกโมเดล
+
 ผลถัดมา 1 ต.ค.: [fixed-Phi Hartree candidate](Result/artifacts/T13_RENORMALIZED_HARTREE_BACKGROUND_2026-10-01.md) มี local stationary background ใน finite prescription แล้ว และ [counterterm/potential match](Result/artifacts/T13_HARTREE_COUNTERTERM_MATCHING_2026-10-01.md) ปิด invariant countercouplings, field quartic และ on-gap normalization โดยไม่ retune ผู้สมัครเดิม แพ็ก A จึงมี background/matching ให้ต่อยอด ไม่ต้องวนหารากหรือบังคับ phase mass เป็นศูนย์ งาน W3–W4 ที่ยังตัดสิน physical admission คือ regulator/RG/source input กับ external frequency/current vertices และ joint Phi/material map; conditional matrix identity ไม่ใช่ frequency bubble ที่คำนวณจริง Normalization อาจขึ้นกับ m(Phi) และยังไม่ให้ละทิ้งใน joint dynamics วันพอร์ตและโมเดล Astra/Sol/Luna เดิมไม่เปลี่ยน
 
 ผลต่อมา 1 ต.ค.: [conditional dynamic composite](Result/artifacts/T13_POLAR_DYNAMIC_COMPOSITE_2026-10-01.md) ให้ spectrum แยก pair/scattering, time kernel และ Gaussian current-contact matching พร้อมคืน static coefficient เดิมแล้ว ไม่ต้องเริ่มแพ็ก A ด้วยการเดา relaxation pole อีก งานต่อคือ renormalized background และ full-action dynamic matching/error; การขยาย linear phase ไปทุก thermal momentum ยังไม่ admitted โดยเฉพาะ witness แรก จึงห้ามใช้ convergence ภายใน approximation นี้ปิด physical response หรือย้าย deadline เดิม

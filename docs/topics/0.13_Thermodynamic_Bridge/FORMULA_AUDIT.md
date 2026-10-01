@@ -1,5 +1,16 @@
 # Formula Audit: 0.13_Thermodynamic_Bridge
 
+## Computed Hartree External Field Response (2026-10-01)
+
+| formula_id | relation | variables and units | constant_origin | proof_status | verification_role | failure_mode | next_hardening_step |
+| :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- |
+| t13.diagnostic.hartree_covariance_bubble | `J_F(Q)=J_F(0)+integral[J_raw(Q)-J_raw(0)]` | J dimensionless; q,z,T,mu E; masses E^2 | same finite tadpole subtraction, not fitted counterterm | computed full vacuum/thermal three-channel rest-frame prescription | absolute subtraction, 4D vacuum, direct Matsubara and routing | thermal-only loop used with vacuum stationary state; arbitrary probes called calculation | full regulator/RG, gauge sources and real axis |
+| t13.diagnostic.hartree_external_BSE | `deltaM=(I-KJ)^-1*L*deltavarphi; Gamma_ext=G_int^-1+L^T*J*(I-KJ)^-1*L/2` | Gamma E^2; L E; K dimensionless; varphi existing O2 field E | invariant Hartree gap and field derivatives | candidate source response; static Ward/Hessian recovered | independent tree-source derivative, potential curvature and counterterm source equation | internal b called physical Goldstone mass; field response called current/temperature | gauge contacts, spectral/IR error and joint Phi/material |
+
+See [actual bubble/source derivation](Result/artifacts/T13_HARTREE_EXTERNAL_RESPONSE_2026-10-01.md).
+Local diagnostic IDs only, not new admitted Core equations. This uses canonical
+O(2) varphi at fixed UET Phi, not a new state or a C/charge/mass identity.
+
 ## Finite Hartree Background and Homogeneous Counterterms (2026-10-01)
 
 | formula_id | relation | variables and units | constant_origin | proof_status | verification_role | failure_mode | next_hardening_step |

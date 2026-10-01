@@ -1,5 +1,16 @@
 ﻿# Method
 
+## Source-Responsive Hartree Field Operator (2026-10-01)
+
+Use all three symmetric covariance channels. Compute vacuum plus thermal
+Matsubara bubbles, not the thermal difference alone, and match J_F(0) to the
+same finite tadpoles. Verify with absolute reference subtraction, direct matrix
+frequency sums and equal-mass four-dimensional vacuum integration. Solve
+deltaM=(I-KJ)^-1*L*deltavarphi and differentiate the field equation; never use
+the fixed internal inverse as the external response. See the
+[derivation](Result/artifacts/T13_HARTREE_EXTERNAL_RESPONSE_2026-10-01.md).
+Gauge/current contacts and real-axis/error admission require separate work.
+
 ## Named Finite Hartree and Homogeneous Matching (2026-10-01)
 
 Use `t13.candidate.fixed_phi_hartree_ms_finite_potential_v1` separately from

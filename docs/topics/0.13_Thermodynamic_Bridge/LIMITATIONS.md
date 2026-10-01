@@ -1,5 +1,17 @@
 # Limitations
 
+## Computed External Field Response Boundary (2026-10-01)
+
+The [external field result](Result/artifacts/T13_HARTREE_EXTERNAL_RESPONSE_2026-10-01.md)
+adds finite-q upper-half-plane covariance/source response, matched to the
+previous finite tadpoles with an explicit vacuum subtraction. It does not yet
+compute gauge-current contacts or the real-axis spectrum. Grid convergence and
+routing agreement are not a global analyticity/stability proof, a truncation
+bound, a full covariant regulator/RG construction or physical uncertainty.
+Generated internal gaps do not establish disappearance of the earlier physical
+IR continuum. Joint Phi, independent material/source/detector and microscopic
+SK/KMS/transport remain open; no physical or Core gate changes.
+
 ## Finite Hartree and Counterterm Scope (2026-10-01)
 
 The [stationary candidate](Result/artifacts/T13_RENORMALIZED_HARTREE_BACKGROUND_2026-10-01.md)
@@ -10,8 +22,9 @@ or joint Phi dynamics. Fixed-Phi normalization can depend on m(Phi); dropping it
 in a joint-Phi equation needs a separate contract.
 
 The internal gap cannot replace physical source response or the preceding
-composite to remove its IR continuum. Only external static curvatures are
-matched. A conditional vertex identity assumes its vacuum-divergence form;
+composite to remove its IR continuum. That predecessor matched static curvatures;
+its successor above adds a computed subtracted external field response. The
+original conditional vertex identity assumes its vacuum-divergence form;
 complex probes are not frequency loops/KMS transport. Formal divergence values
 are not a UV regulator/continuum limit. Thermodynamic energy/entropy identities
 are not a dynamical ledger or entropy production. No physical/Core gate or new

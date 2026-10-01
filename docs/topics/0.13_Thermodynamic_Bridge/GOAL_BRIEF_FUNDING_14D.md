@@ -25,11 +25,19 @@
 
 ## Constraints
 
+Latest computed response: `Result/artifacts/T13_HARTREE_EXTERNAL_RESPONSE_2026-10-01.md`
+now supplies the actual vacuum/thermal three-channel covariance bubble and
+external field BSE in a declared zero-momentum subtraction. Absolute subtraction
+recovers the previous finite tadpoles and static potential/Ward. Do not repeat
+field-loop generation without a new question. Next derive gauge-current contacts,
+real-axis/error and regulator/RG/joint-Phi/material matching. This does not
+complete all R1 acceptance, physical G1/G2 or the full research Goal.
+
 Latest fixed-Phi evidence: `Result/artifacts/T13_RENORMALIZED_HARTREE_BACKGROUND_2026-10-01.md`
 and `T13_HARTREE_COUNTERTERM_MATCHING_2026-10-01.md` close a finite stationary
 candidate and homogeneous counterterm/on-gap potential identities. Do not
-repeat root finding without a new question. Next derive actual external
-finite-q/frequency/current vertices and regulator/RG/source matching, then
+repeat root finding without a new question. The successor above computes the
+external field bubble; current and regulator/RG/source matching still precede
 joint Phi/material admission. Trial renormalized coefficients are not admitted
 bare/material inputs; internal gap is not external Goldstone response.
 Conditional vertex algebra is not a computed frequency loop. Fixed-action

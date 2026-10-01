@@ -1,5 +1,20 @@
 # Verification Spec
 
+## Actual External Field Response (2026-10-01)
+
+Run `Research_T13_Hartree_External_Response.py` and
+`test_t13_hartree_external_response.py` under `Code/03_Research/` after the
+background and counterterm evidence. Require full vacuum/thermal three-channel
+frequency sums, direct-subtraction/tadpole agreement, independent 4D vacuum
+reference, static source Hessian/Ward, momentum routing, grid refinement,
+retarded reality/parity and actual-bubble source counterterm checks.
+Point-frequency tolerance is absolute 1e-7; quadrature/routing 1e-5; static
+radial relative 2e-5; Ward/source algebra absolute 1e-9. Original causal 1e-6
+and predecessor thresholds are unchanged. Refuse real nonzero frequency,
+negative/zero trial masses and undeclared filtering; no fitted width is added.
+Check read allowlists and evidence/protected hashes. Full physical/Core unlock,
+gauge-current, real-axis, RG, joint-Phi and Kubo flags remain false.
+
 ## Finite Hartree and Homogeneous Counterterms (2026-10-01)
 
 Run `Research_T13_Renormalized_Hartree_Background.py` then
