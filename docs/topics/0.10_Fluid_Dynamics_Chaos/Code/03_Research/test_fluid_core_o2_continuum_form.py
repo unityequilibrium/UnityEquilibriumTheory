@@ -2,6 +2,7 @@
 import hashlib
 import importlib.util
 import json
+import math
 from pathlib import Path
 import subprocess
 import sys
@@ -27,13 +28,53 @@ class ContinuumFormTests(unittest.TestCase):
                 raise AssertionError(run.stdout + run.stderr)
             cls.fresh = json.loads(output.read_text(encoding="utf-8"))
             cls.fresh_bytes = output.read_bytes()
+            repeat = subprocess.run([sys.executable, "-W", "error", str(SCRIPT), "--output", str(output)],
+                                    cwd=ROOT, capture_output=True, text=True)
+            if repeat.returncode:
+                raise AssertionError(repeat.stdout + repeat.stderr)
+            cls.repeat_bytes = output.read_bytes()
         spec = importlib.util.spec_from_file_location("continuum_form_test", SCRIPT)
         cls.driver = importlib.util.module_from_spec(spec)
         spec.loader.exec_module(cls.driver)
 
     def test_exact_vertex_negative_control_fresh_sources_and_no_formal_or_physical_unlock(self):
         a = self.fresh
-        self.assertEqual(self.fresh_bytes, ARTIFACT.read_bytes())
+        # Deterministic serialization is a same-runtime obligation. Across OSs,
+        # compare scientific values at the existing locked algebra tolerance;
+        # near-zero residuals must pass their original checks independently.
+        self.assertEqual(self.fresh_bytes, self.repeat_bytes)
+        self.assertEqual(a["input_hashes"], self.published["input_hashes"])
+        for key in ("locked_verification", "exact_cubic_polynomial_identity", "derivation_scope",
+                    "unit_powers", "previous_package", "check_count", "passing_check_count"):
+            self.assertEqual(a[key], self.published[key], key)
+        self.assertEqual(list(a["checks"]), list(self.published["checks"]))
+        self.assertTrue(all(v["pass"] for v in self.published["checks"].values()))
+        tolerance = json.loads(CONTRACT.read_text(encoding="utf-8"))["verification"]["algebra_relative_tolerance"]
+
+        def compare_values(fresh, published, path):
+            if isinstance(fresh, dict):
+                self.assertEqual(set(fresh), set(published), path)
+                for key in fresh:
+                    compare_values(fresh[key], published[key], path + "." + key)
+            elif isinstance(fresh, list):
+                self.assertEqual(len(fresh), len(published), path)
+                for index, (left, right) in enumerate(zip(fresh, published)):
+                    compare_values(left, right, path + "." + str(index))
+            elif isinstance(fresh, float):
+                self.assertTrue(math.isclose(fresh, published, rel_tol=tolerance, abs_tol=0), path)
+            else:
+                self.assertEqual(fresh, published, path)
+
+        compare_values(a["state_results"], self.published["state_results"], "state_results")
+        self.assertEqual(len(a["pointwise_event_diagnostics"]), len(self.published["pointwise_event_diagnostics"]))
+        for index, (fresh, published) in enumerate(zip(a["pointwise_event_diagnostics"],
+                                                     self.published["pointwise_event_diagnostics"])):
+            # Roundoff residuals need not reproduce their last digit or relative
+            # size; all other event quantities retain quantitative comparison.
+            residuals = {"source_B_r_mu_relative_error", "energy_error", "geometry_error", "vertex_identity_error"}
+            self.assertEqual(set(fresh), set(published))
+            compare_values({k: v for k, v in fresh.items() if k not in residuals},
+                           {k: v for k, v in published.items() if k not in residuals}, "event." + str(index))
         self.assertEqual(a["status"], "PASS_CONDITIONAL_CONTINUUM_FORM_DIAGNOSTIC_ONLY")
         self.assertTrue(all(v["pass"] for v in a["checks"].values()))
         for path, value in self.published["input_hashes"].items():
