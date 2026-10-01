@@ -117,8 +117,11 @@ def test_execution_review_is_not_a_model_trial_or_physical_closure():
     review = PLAN["execution_review_2026_10_01"]
     assert review["record_class"] == "PLANNING_NOT_SCIENTIFIC_CLOSURE"
     assert review["scientific_deliverable_is_not_full_topic_closure"] is True
-    assert PLAN[review["current_scientific_evidence_field"]]["gauge_current_vertex_computed"] is True
-    current = PLAN[review["current_scientific_evidence_field"]]
+    successor = PLAN[review["current_scientific_evidence_field"]]
+    current = PLAN[successor["inherited_fixed_Phi_finite_q_poles_evidence_field"]]
+    assert current["gauge_current_vertex_computed"] is True
+    assert successor["inherited_fixed_Phi_response_is_not_joint_response"] is True
+    assert successor["joint_finite_q_complex_pole_computed"] is False
     assert current["real_axis_limit_admitted"] is True
     assert current["real_axis_admission_scope"] == "two_fixed_Phi_witnesses_and_ten_positive_frequency_q_points_not_global"
     assert current["global_real_axis_stability_proved"] is False
@@ -209,7 +212,8 @@ def test_follow_on_aims_are_result_linked_not_promises_of_inputs_or_funding():
 def test_local_pole_successor_changes_next_question_not_full_acceptance():
     field = "hartree_soft_poles_evidence_2026_10_01"
     current = PLAN[PLAN["execution_review_2026_10_01"]["current_scientific_evidence_field"]]
-    assert current["inherited_soft_poles_evidence_field"] == field
+    predecessor = PLAN[current["inherited_fixed_Phi_finite_q_poles_evidence_field"]]
+    assert predecessor["inherited_soft_poles_evidence_field"] == field
     assert field in PLAN["portfolio_strategy_2026_10_01"]["accepted_preliminary_evidence_fields"]
     evidence = PLAN[field]
     result = json.loads((ROOT/evidence["path"]).read_text(encoding="utf-8"))
@@ -226,7 +230,8 @@ def test_local_pole_successor_changes_next_question_not_full_acceptance():
 def test_finite_q_discontinuity_is_not_finite_q_pole_or_funding_acceptance():
     field = "hartree_finite_q_discontinuity_evidence_2026_10_02"
     current = PLAN[PLAN["execution_review_2026_10_01"]["current_scientific_evidence_field"]]
-    assert current["inherited_finite_q_density_evidence_field"] == field
+    predecessor = PLAN[current["inherited_fixed_Phi_finite_q_poles_evidence_field"]]
+    assert predecessor["inherited_finite_q_density_evidence_field"] == field
     assert field in PLAN["portfolio_strategy_2026_10_01"]["accepted_preliminary_evidence_fields"]
     evidence = PLAN[field]
     path = ROOT/evidence["path"]
@@ -245,7 +250,8 @@ def test_finite_q_discontinuity_is_not_finite_q_pole_or_funding_acceptance():
 def test_actual_finite_q_pole_successor_preserves_physical_and_prior_boundaries():
     field = "hartree_finite_q_poles_evidence_2026_10_02"
     review = PLAN["execution_review_2026_10_01"]
-    assert review["current_scientific_evidence_field"] == field
+    successor = PLAN[review["current_scientific_evidence_field"]]
+    assert successor["inherited_fixed_Phi_finite_q_poles_evidence_field"] == field
     assert field in PLAN["portfolio_strategy_2026_10_01"]["accepted_preliminary_evidence_fields"]
     evidence = PLAN[field]
     path = ROOT/evidence["path"]
@@ -272,9 +278,32 @@ def test_d05_portfolio_route_is_not_scientific_or_submission_acceptance():
     assert decision["status"] == strategy["status"] == "METHODS_ROUTE_SELECTED_FOR_PREPARATION"
     assert decision["decision_date"] == strategy["decision_dates"]["route_selection"]
     assert decision["selected_route"] == strategy["primary_portfolio_route"]
-    assert decision["current_evidence_field"] == PLAN["execution_review_2026_10_01"]["current_scientific_evidence_field"]
+    # Preserve the historical decision basis rather than rewriting it with a later branch.
+    assert decision["current_evidence_field"] == "hartree_finite_q_poles_evidence_2026_10_02"
+    assert decision["current_evidence_field"] in strategy["accepted_preliminary_evidence_fields"]
     for flag in ("prediction_route_admitted", "novelty_established", "measurement_design_completed", "D05_scientific_milestone_accepted", "full_goal_accepted", "scientific_goal_completion_rule_changed", "physical_gate_changed", "core_composition_gate_overwritten", "submission_ready"):
         assert decision[flag] is False
     assert all(card["status"] == "PLANNED_NOT_ACCEPTED" for card in PLAN["result_level_execution_2026_10_01"]["result_cards"])
     assert {row["id"]: row for row in PLAN["milestones"]}["D05"]["status"] == "NOT_STARTED"
     assert PLAN["funder"] is PLAN["submission_deadline"] is PLAN["budget_amount"] is None
+
+
+def test_joint_Phi_static_successor_cannot_inherit_fixed_Phi_dynamic_or_full_acceptance():
+    field = "hartree_joint_phi_static_evidence_2026_10_02"
+    assert PLAN["execution_review_2026_10_01"]["current_scientific_evidence_field"] == field
+    assert field in PLAN["portfolio_strategy_2026_10_01"]["accepted_preliminary_evidence_fields"]
+    evidence = PLAN[field]
+    path = ROOT/evidence["path"]
+    result = json.loads(path.read_text(encoding="utf-8"))
+    assert hashlib.sha256(path.read_bytes()).hexdigest() == evidence["sha256"]
+    assert evidence["verification_status"] == result["verification_status"] == "PASS_SCOPED_JOINT_PHI_STATIC"
+    assert evidence["controlling_blocker"] == result["controlling_blocker"]
+    assert evidence["branch_id"] == result["branch_id"] != evidence["parent_branch_id"]
+    assert evidence["homogeneous_classical_Phi_stationarity_derived"] is result["homogeneous_classical_Phi_stationarity_derived"] is True
+    for flag in ("joint_finite_q_complex_pole_computed", "prior_fixed_Phi_poles_reused_as_joint",
+                 "full_quantum_joint_Phi_stationarity_derived", "physical_Kubo_emitted",
+                 "independent_alpha_Phi_K_admitted", "controlled_truncation_error_established",
+                 "g1_physical_unlock", "g2_science_unlock", "full_core_unlock", "core_composition_gate_overwritten"):
+        assert evidence[flag] is result[flag] is False
+    assert all(result["checks"].values())
+    assert all(card["status"] == "PLANNED_NOT_ACCEPTED" for card in PLAN["result_level_execution_2026_10_01"]["result_cards"])

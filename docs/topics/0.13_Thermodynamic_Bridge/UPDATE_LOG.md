@@ -1,3 +1,27 @@
+## 2026-10-02 - Joint classical-Phi static candidate and next-round roadmap
+
+MAJOR_RESULT_CLOSURE: T13_HOMOGENEOUS_CLASSICAL_PHI_HARTREE_STATIONARITY, CLOSED_FOR_LANE. Full active Goal/R1 and physical acceptance remain open.
+
+WHAT_IS_ACTUALLY_CLOSED: Derived mass-dependent normalization Phi force/curvature counterterms, actual homogeneous matter/Phi stationary states with original trial action inputs, and mixed static response independently checked by covariance derivatives, actual source bubbles, reoptimized potential and relaxed-force derivatives. Local amplitude/Phi static positivity holds at the two declared states.
+
+WHAT_REMAINS_OPEN: Joint finite-q retarded response, quantum Phi/kinetic counterterms, global validity, regulator/RG and controlled Hartree remainder; independent material/state/source/detector/thermal mapping and physical heat/collision/Kubo/KMS/entropy transport. Measurement design, novelty, Full Topic13 and full Goal acceptance remain open.
+
+DEPENDENCY_UNLOCKED: Named homogeneous classical-Phi candidate research only. Old fixed-Phi poles are separate predecessor evidence, not new-branch dynamics. Core-owner composition and physical unlocks unchanged.
+
+STATUS: PASS_SCOPED_JOINT_PHI_STATIC. Portfolio route remains METHODS_ROUTE_SELECTED_FOR_PREPARATION, not D05 scientific acceptance or submission readiness.
+
+WHAT_CHANGED: Separate joint-Phi verifier, eighteen tests, artifact/derivation; local formula/method/spec/limits/README, funding evidence/hash/controller and a planning regression; Goal/14-day/12-week handoffs. Explicit E^2/E^3 root scales at Q=1 E preserve numeric controls. The roadmap now states what extra 2-3 months must add and distinguishes missed deadline/eligibility/evidence/novelty. No Core-owner or predecessor edit.
+
+EQUATION_OR_MAPPING: m2(Phi)=m0^2-gamma*(Phi-Phi_*); V_b=V_R-N(m2); N_Phi=-gamma*d/(1+4uD), N_PhiPhi=gamma^2*D/(1+4uD); V_R'-gamma*(s+I_s+I_p)/2=0 jointly with matter. Same-action mass-source vertex and reoptimized covariance determine mixed static Hessian; relaxed Phi curvature is its radial Schur complement.
+
+VERIFICATION: Fourteen artifact checks, eighteen focused scientific tests and the integrated funding contract pass. The linked suite passes 259 tests in 408.69 seconds; fourteen separate neighboring action/stationarity/stiffness regressions pass in 2.85 seconds. Final funding wording recheck passes fifteen tests in 1.71 seconds. Max state refinement 9.454e-9, seed difference 9.357e-14, source-Hessian difference 4.202e-9, potential-Hessian difference 2.167e-6 and relaxed-force curvature difference 1.25e-8. Artifact SHA-256 e73c0ea5f41fd38053a46db2b61c894a44bba38566d884d1e94b9eab4b3a10ba; source/protected hash, rational algebra, units/read/domain/negative controls pass. Prior exact head 668ba50926bb9f2e3895fe8cb1110fe8026b3034 has both relevant CI workflows successful. Official OpenAI model-selection page rechecked; recommendation unchanged, model trial NOT_RUN/configuration unchanged.
+
+CONTROLLING_BLOCKER: joint_dynamic_validity_regulator_remainder_material_transport_not_closed.
+
+NEXT_ACTION: Construct the same-action joint retarded response and validity/approximation contract while developing one independently justified source/readout measurement card. No reuse of old fixed-Phi poles or unchanged-grid reruns. Preserve 7 October freeze, 11 October portfolio review and 25 Oct/8 Nov/22 Nov/6 Dec/20 Dec result reviews. Commit/push this packet to existing draft PR #30 and inspect exact new-head checks; full Goal stays active.
+
+CLAIM_BOUNDARY: Homogeneous classical-Phi Hartree candidate only, not quantum joint Phi, joint dynamics/global proof, controlled Hartree error, independent SI alpha, physical material/transport or Full Topic13/UET. No fit, clipping/filter/padding, mass repair, threshold change, numeric holdout access or Core-owner edit. Xie prior exposure remains REVIEW_REQUIRED. Models are workflow recommendations, not measured repo performance; document readiness does not establish novelty, call eligibility or scientific completion.
+
 ## 2026-10-02 - Actual finite-q phase poles and portfolio route
 
 MAJOR_RESULT_CLOSURE: T13_FIXED_PHI_HARTREE_FINITE_Q_LANDAU_POLES is CLOSED_FOR_LANE on six declared fixed-Phi/q points. Full active Goal/R1 and physical acceptance remain open.

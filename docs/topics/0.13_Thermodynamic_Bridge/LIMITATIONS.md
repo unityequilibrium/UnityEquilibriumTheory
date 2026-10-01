@@ -1,5 +1,17 @@
 # Limitations
 
+## Joint Classical-Phi Static Boundary (2026-10-02)
+
+[Joint-Phi evidence](Result/artifacts/t13_hartree_joint_phi_static.json)
+is homogeneous classical background stationarity with Hartree matter loops.
+Positive amplitude/Phi curvature is local static evidence, not a global
+phase minimum, joint finite-q stability, quantum Phi fluctuations, covariant
+kinetic renormalization or controlled Hartree error. Formal D/D2 and unit
+rescaling are not physical regulator/RG proof. The old fixed-Phi poles are
+not reused as new-branch poles. No material source/thermal scale or physical
+heat/collision/Kubo/KMS/entropy contract is admitted. Full scientific Goal
+and physical gates remain open; prior Xie exposure stays REVIEW_REQUIRED.
+
 ## Actual Finite-q Pole Scope (2026-10-02)
 
 The [new pole artifact](Result/artifacts/t13_hartree_finite_q_poles.json)

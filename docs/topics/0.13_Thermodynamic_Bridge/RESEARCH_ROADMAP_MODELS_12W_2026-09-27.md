@@ -6,6 +6,52 @@
 
 ## ผลหลักสำหรับพอร์ตและทุนรอบถัดไป
 
+### อัปเดต 2 ตุลาคม: เวลาเพิ่มต้องซื้อผลวิจัย ไม่ใช่รอบรัน
+
+[ผล joint classical-Phi](Result/artifacts/T13_HARTREE_JOINT_PHI_STATIC_2026-10-02.md)
+ปิดคำถามย่อยว่า matter และ Phi หาจุด stationary ร่วมกันใน candidate เดิมได้หรือไม่
+โดยไม่เปลี่ยน trial action inputs และตรวจ mixed static response ได้หลายวิธี
+คำตอบคือได้ในสอง homogeneous states ที่ประกาศไว้ ไม่ใช่ full quantum Phi
+หรือ joint finite-q dynamics ผล fixed-Phi poles เดิมจึงยังเป็นหลักฐานคนละ branch
+ไม่ใช่คำตอบ dynamics ของ branch ใหม่
+
+**ผลที่ตั้งใจส่งรอบแรก:** bounded response-methods result + measurement design
+ที่บอกว่าต้องวัดอะไรอิสระเพื่อทดสอบ thermal bridge ไม่ใช่ปิด Full Topic 13
+หรืออ้างทำนายวัสดุจริง เป้าหมายเดิมยังต้องผ่าน acceptance ทางวิทยาศาสตร์
+แยกจากความพร้อมของเอกสาร; พอร์ตวางแผนไว้วันที่ 11 ต.ค. ไม่ใช่วันทุนที่ยืนยันแล้ว
+
+| ช่วงเดิม | ผลที่ต้องเพิ่มจากหลักฐานปัจจุบัน | ถ้ายังทำไม่ได้ |
+| --- | --- | --- |
+| 2–7 ต.ค. | หนึ่ง result statement ที่มี derivation/independent check, validity/approximation obligations และ measurement card พร้อม identifiability/uncertainty | ล็อก preliminary result และข้อค้างจริง ไม่แต่ง no-go ไม่เลื่อน full acceptance |
+| 8–11 ต.ค. | พอร์ต v1: report, evidence/hash map, reproducibility, related-work gap, aims และรายการทุน/PI/งบที่ยังขาด | ส่งให้ตรวจพอร์ตได้ แต่ห้ามเรียก submission-ready |
+| 12–25 ต.ค. | คำตอบ joint retarded-response/validity ของ named candidate พร้อม approximation boundary ที่ตรวจได้; independent reproduction | บันทึกผลขัดแย้งหรือ proof obligation ชัด ๆ ไม่เพิ่มสมการเพื่อกลบปัญหา |
+| 26 ต.ค.–8 พ.ย. | material/state/source/detector/temperature map และ permitted independent numeric input หรือ feasibility package ที่แยกประเภท | รักษา input gate และยื่นเป้าหมายสร้างข้อมูล ไม่สร้างข้อมูลทดลองแทน |
+| 9–22 พ.ย. | หนึ่ง preregistered comparison เมื่อ prerequisites ผ่าน หรือ verified scoped structural result + measurement design | ปิด disposition ของคำถามเป็น unresolved พร้อมสิ่งที่จะเปลี่ยนคำตอบ; ไม่ถือว่าปิด Goal |
+| 23 พ.ย.–6 ธ.ค. | ทำซ้ำอิสระหรือ protocol ที่สองโดยไม่ rematch เมื่อผลแรกพร้อม | แก้ความทนทานของผลแรกก่อนขยาย scope |
+| 7–20 ธ.ค. | พอร์ต v3/research release และ review trail; call-specific proposal เมื่อรู้ทุนจริง | คงความพร้อมวิจัยแยกจาก eligibility/เอกสารหน่วยงาน |
+
+**ระยะยาวช่วยอะไร:** ผล static ร่วมเป็นฐานทดสอบ response จากสมการชุดเดียวกัน;
+response ที่มี units/uncertainty และข้อมูลอิสระจึงค่อยส่งให้ Core/Topic 10
+พัฒนา thermal/constitutive interface ได้ ผลที่ไม่ผ่านก็ระบุ assumption
+ที่ต้องแก้และการวัดที่แยกทางเลือกได้ ไม่มีผลใดปลดล็อก Gravity/Galaxy อัตโนมัติ
+
+**โมเดล:** Astra/high เป็นผู้นำ derivation และตัดสิน blocker; xhigh เฉพาะ
+คำถามพิสูจน์ยากที่มี input และปลายทางชัด Sol 6.1/high ทำ implementation,
+regression และ artifact packaging; Luna ใช้ inventory/ตรวจลิงก์ที่มี checklist
+ถ้าต้องใช้ตัวเดียวและโควตาจำกัดให้เริ่ม Sol 6.1/high และส่งเฉพาะคำถามยากให้ Astra
+คำแนะนำนี้สอดคล้องแนวแบ่งงานใน [OpenAI Docs](https://developers.openai.com/api/docs/guides/model-selection)
+แต่ยังไม่ใช่ผล benchmark ใน repo: ทดลอง 90 นาทีจาก input/acceptance เดียวกัน
+วัด accepted result, critical errors=0 และเวลารวมแก้ข้อผิดพลาด
+model trial ยัง NOT_RUN และยังไม่ได้เปลี่ยน configuration
+
+**ถ้าพลาดรอบแรก:** เก็บ v1 เป็น snapshot และวิเคราะห์เหตุจริงก่อนเปลี่ยนแผน
+ถ้า deadline/eligibility ไม่ตรงให้แก้ call/PI/partner; ถ้าหลักฐานไม่พอให้ทำ
+result ข้างต้นต่อ; ถ้า novelty ไม่ชัดให้เทียบ related work ไม่เพิ่มหัวข้อ
+11 ธ.ค.–11 ม.ค. เป็นเพียงกรณีรอบถัดไป 2–3 เดือน ไม่ใช่ปฏิทินทุนที่ยืนยัน
+review ทุกสองสัปดาห์ต้องตอบว่าอะไรปิดจริง หลักฐานใหม่ใด และอะไรเปลี่ยนคำตอบได้
+ไม่ rerun ชุดเดิมถ้าไม่มี input/สมการ/คำถามเปลี่ยน และไม่รับประกัน Full Topic 13
+ว่าจะปิดในสามเดือนจากการเลือกโมเดลหรือยืดเวลาเพียงอย่างเดียว
+
 ### Current decision 2 October: finite-q result and methods preparation
 
 [Actual finite-q poles](Result/artifacts/T13_HARTREE_FINITE_Q_POLES_2026-10-02.md)

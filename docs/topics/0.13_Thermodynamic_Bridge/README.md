@@ -6,6 +6,19 @@ description: "Research module for Thermodynamic Bridge within the Unity Equilibr
 
 # 0.13 Thermodynamic Bridge
 
+## Joint Classical-Phi Static Candidate (2026-10-02)
+
+The [joint stationary successor](Result/artifacts/T13_HARTREE_JOINT_PHI_STATIC_2026-10-02.md)
+derives mass-normalization Phi counterterms and solves homogeneous matter/Phi
+states with unchanged trial action coefficients. Covariance, actual source
+loop, reoptimized potential and relaxed-force checks agree; the amplitude/
+Phi static block is locally positive. This closes a classical static lane,
+not quantum Phi, joint finite-q dynamics, global stability or material
+thermal transport. Old fixed-Phi poles below are not joint-Phi poles. Next:
+joint retarded response and validity/remainder, alongside independent-input
+measurement design. Full Goal/R1, Core composition and 7/11 October dates
+remain unchanged; methods preparation is not submission readiness.
+
 ## Actual Finite-q Phase Poles (2026-10-02)
 
 The [finite-q pole successor](Result/artifacts/T13_HARTREE_FINITE_Q_POLES_2026-10-02.md)

@@ -1,0 +1,2518 @@
+{
+  "schema_version": "t13-hartree-joint-phi-static-v1",
+  "generated_at": "2026-10-01T21:20:28.363341+00:00",
+  "major_result_id": "T13_HOMOGENEOUS_CLASSICAL_PHI_HARTREE_STATIONARITY",
+  "topic": "0.13",
+  "branch_id": "t13.candidate.classical_phi_hartree_ms_homogeneous_v1",
+  "parent_branch_id": "t13.candidate.fixed_phi_hartree_ms_finite_potential_v1",
+  "closure_level": "CLOSED_FOR_LANE",
+  "verification_status": "PASS_SCOPED_JOINT_PHI_STATIC",
+  "what_is_closed": [
+    "mass_dependent_normalization_force_and_curvature_counterterm",
+    "homogeneous_classical_Phi_and_matter_stationary_candidate_at_two_states",
+    "mixed_source_Hessian_reciprocity_and_local_static_stability"
+  ],
+  "equation_or_mapping": "m2(Phi)=m0^2/Z-gamma*(Phi-Phi_*); U_b=U_R-N(m2); Gamma_Phi=epsilon*U'(Phi)-gamma*(s+I_s+I_p)/2; Gamma_Phi=0 jointly with matter gaps/field; Gamma_joint=Gamma_tree+L_joint^T*J*(I-KJ)^-1*L_joint/2",
+  "units": {
+    "Phi_T_mu_gamma": "E",
+    "m2_s_a_b_D2_response_mass_sq": "E^2",
+    "epsilon_u_Z_D_response_quartic": "dimensionless",
+    "potential_N": "E^4",
+    "Phi_force": "E^3",
+    "static_joint_curvature": "E^2"
+  },
+  "derivation_class": "HOMOGENEOUS_CLASSICAL_RESPONSE_BACKGROUND_AND_HARTREE_SOURCE_DERIVATION_NOT_FULL_QUANTUM_JOINT_ACTION",
+  "observable": "joint_stationary_state_and_conditional_static_response_not_material_temperature_or_dynamic_sound",
+  "data_role": "DERIVED_FORMAL_PROBES_NO_EMPIRICAL_ROWS",
+  "equation_registry_ids": [
+    "t13.diagnostic.hartree_Phi_normalization_jet",
+    "t13.diagnostic.classical_Phi_hartree_joint_static"
+  ],
+  "action_controls": {
+    "Z": 1.0,
+    "m0_sq": 1.0,
+    "u": 1.0,
+    "gamma": 0.04000000000000001,
+    "epsilon": 0.05,
+    "Phi_reference": 0.0,
+    "response_mass_sq": 1.0,
+    "response_quartic": 1.0
+  },
+  "examples": [
+    {
+      "T": 0.22,
+      "mu": 1.05,
+      "prior_fixed_Phi": 0.15,
+      "prior_fixed_Phi_joint_force": 0.0053679770083253555,
+      "joint_state": {
+        "s": 0.11229001517414451,
+        "a": 0.22458003034828905,
+        "b": 0.009544230989818285,
+        "Phi": 0.04417963162121553,
+        "residual": [
+          -4.5102810375396984e-17,
+          5.898059818321144e-17,
+          5.377642775528102e-17,
+          -4.7704895589362195e-18
+        ],
+        "residual_scales": [
+          0.10850000000000004,
+          0.10850000000000004,
+          0.10850000000000004,
+          0.05
+        ],
+        "residual_scale_units": [
+          "E^2",
+          "E^2",
+          "E^2",
+          "E^3"
+        ],
+        "scaled_residual_max": 5.435999832554048e-16,
+        "potential": -0.011048592961733768,
+        "mass_sq": 0.9982328147351514,
+        "loops": {
+          "sigma": -0.003198736351051252,
+          "phase": 0.0015733791438578846,
+          "loop_free_energy": -0.008388602383548563,
+          "quasiparticle_entropy": 0.030671431578215308,
+          "thermal": [
+            0.0035592992313298903,
+            0.006899768804120227,
+            -0.002222304288931949,
+            0.030671431578215308
+          ],
+          "vacuum": [
+            -0.006758035582381142,
+            -0.005326389660262342,
+            -0.006166298094616614
+          ]
+        }
+      },
+      "quadrature_runs": [
+        {
+          "s": 0.11229001294716412,
+          "a": 0.22458002589432827,
+          "b": 0.009544238206518181,
+          "Phi": 0.04417963189808321,
+          "residual": [
+            -5.551115123125783e-17,
+            5.551115123125783e-17,
+            6.288372600415926e-17,
+            -3.469446951953614e-18
+          ],
+          "residual_scales": [
+            0.10850000000000004,
+            0.10850000000000004,
+            0.10850000000000004,
+            0.05
+          ],
+          "residual_scale_units": [
+            "E^2",
+            "E^2",
+            "E^2",
+            "E^3"
+          ],
+          "scaled_residual_max": 5.795735115590713e-16,
+          "potential": -0.011048592963809062,
+          "mass_sq": 0.9982328147240767,
+          "loops": {
+            "sigma": -0.00319873669362497,
+            "phase": 0.0015733824096341139,
+            "loop_free_energy": -0.008388602372823024,
+            "quasiparticle_entropy": 0.030671431455462195,
+            "thermal": [
+              0.0035592992484799785,
+              0.006899768293325121,
+              -0.0022223042719616637,
+              0.030671431455462195
+            ],
+            "vacuum": [
+              -0.006758035942104949,
+              -0.005326385883691007,
+              -0.00616629810086136
+            ]
+          }
+        },
+        {
+          "s": 0.11229001505465093,
+          "a": 0.2245800301093019,
+          "b": 0.009544231376245403,
+          "Phi": 0.04417963163599134,
+          "residual": [
+            3.642919299551295e-17,
+            -2.2551405187698492e-17,
+            -1.214306433183765e-17,
+            1.3010426069826053e-18
+          ],
+          "residual_scales": [
+            0.10850000000000004,
+            0.10850000000000004,
+            0.10850000000000004,
+            0.05
+          ],
+          "residual_scale_units": [
+            "E^2",
+            "E^2",
+            "E^2",
+            "E^3"
+          ],
+          "scaled_residual_max": 3.357529308342206e-16,
+          "potential": -0.011048592961840943,
+          "mass_sq": 0.9982328147345604,
+          "loops": {
+            "sigma": -0.003198736369333483,
+            "phase": 0.00157337931878921,
+            "loop_free_energy": -0.008388602382969516,
+            "quasiparticle_entropy": 0.03067143157165033,
+            "thermal": [
+              0.003559299232251894,
+              0.006899768776770114,
+              -0.0022223042880241293,
+              0.03067143157165033
+            ],
+            "vacuum": [
+              -0.006758035601585377,
+              -0.005326389457980904,
+              -0.006166298094945387
+            ]
+          }
+        },
+        {
+          "s": 0.11229001517414451,
+          "a": 0.22458003034828905,
+          "b": 0.009544230989818285,
+          "Phi": 0.04417963162121553,
+          "residual": [
+            -4.5102810375396984e-17,
+            5.898059818321144e-17,
+            5.377642775528102e-17,
+            -4.7704895589362195e-18
+          ],
+          "residual_scales": [
+            0.10850000000000004,
+            0.10850000000000004,
+            0.10850000000000004,
+            0.05
+          ],
+          "residual_scale_units": [
+            "E^2",
+            "E^2",
+            "E^2",
+            "E^3"
+          ],
+          "scaled_residual_max": 5.435999832554048e-16,
+          "potential": -0.011048592961733768,
+          "mass_sq": 0.9982328147351514,
+          "loops": {
+            "sigma": -0.003198736351051252,
+            "phase": 0.0015733791438578846,
+            "loop_free_energy": -0.008388602383548563,
+            "quasiparticle_entropy": 0.030671431578215308,
+            "thermal": [
+              0.0035592992313298903,
+              0.006899768804120227,
+              -0.002222304288931949,
+              0.030671431578215308
+            ],
+            "vacuum": [
+              -0.006758035582381142,
+              -0.005326389660262342,
+              -0.006166298094616614
+            ]
+          }
+        }
+      ],
+      "maximum_last_state_refinement": 3.8642711773506644e-10,
+      "maximum_seed_disagreement": 1.1102230246251565e-16,
+      "static_covariance_hessian": {
+        "matrix": [
+          [
+            0.19640898347535773,
+            -0.012315675840328678
+          ],
+          [
+            -0.012315675840304614,
+            0.05023768193892877
+          ]
+        ],
+        "reciprocity_residual": 2.4064084058750268e-14,
+        "covariance_min_singular_value": 1.0165344175399345,
+        "eigenvalues": [
+          0.04920728707856918,
+          0.1974393783357173
+        ],
+        "radial_relaxed_Phi_curvature": 0.04946543685767062
+      },
+      "independent_source_loop_hessian": [
+        {
+          "matrix": {
+            "real": [
+              [
+                0.19640898330767628,
+                -0.012315675834546324
+              ],
+              [
+                -0.012315675834546324,
+                0.05023768193881074
+              ]
+            ],
+            "imaginary": [
+              [
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0
+              ]
+            ]
+          },
+          "bubble": {
+            "real": [
+              [
+                -0.042280757845779116,
+                0.035781880819360554,
+                0.0
+              ],
+              [
+                0.03578188081936056,
+                -0.045603116792749705,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                -0.02219219064107448
+              ]
+            ],
+            "imaginary": [
+              [
+                0.0,
+                0.0,
+                4.0448211430402373e-20
+              ],
+              [
+                0.0,
+                0.0,
+                9.25045720796106e-19
+              ],
+              [
+                -3.727444976700274e-20,
+                -9.186954200942086e-19,
+                0.0
+              ]
+            ]
+          },
+          "covariance_min_singular_value": 1.0165344175725404,
+          "phase_Ward_inverse": 7.830473075509659e-11,
+          "imaginary_residual": 0.0,
+          "radial_order": 96,
+          "maximum_hessian_disagreement": 1.676814520568115e-10
+        },
+        {
+          "matrix": {
+            "real": [
+              [
+                0.1964089833076763,
+                -0.012315675834546326
+              ],
+              [
+                -0.012315675834546326,
+                0.05023768193881074
+              ]
+            ],
+            "imaginary": [
+              [
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0
+              ]
+            ]
+          },
+          "bubble": {
+            "real": [
+              [
+                -0.04228075784577913,
+                0.03578188081936061,
+                0.0
+              ],
+              [
+                0.03578188081936061,
+                -0.045603116792749726,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                -0.022192190641074486
+              ]
+            ],
+            "imaginary": [
+              [
+                0.0,
+                0.0,
+                4.981536183807521e-20
+              ],
+              [
+                0.0,
+                0.0,
+                -1.3473191383151323e-20
+              ],
+              [
+                -5.0346816731785244e-20,
+                3.386739319230333e-20,
+                0.0
+              ]
+            ]
+          },
+          "covariance_min_singular_value": 1.0165344175725404,
+          "phase_Ward_inverse": 7.830472902037311e-11,
+          "imaginary_residual": 0.0,
+          "radial_order": 144,
+          "maximum_hessian_disagreement": 1.676814243012359e-10
+        },
+        {
+          "matrix": {
+            "real": [
+              [
+                0.19640898330767675,
+                -0.01231567583454634
+              ],
+              [
+                -0.01231567583454634,
+                0.05023768193881074
+              ]
+            ],
+            "imaginary": [
+              [
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0
+              ]
+            ]
+          },
+          "bubble": {
+            "real": [
+              [
+                -0.04228075784577849,
+                0.035781880819360096,
+                0.0
+              ],
+              [
+                0.035781880819360096,
+                -0.04560311679274908,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                -0.02219219064107416
+              ]
+            ],
+            "imaginary": [
+              [
+                0.0,
+                0.0,
+                -2.595643886290455e-20
+              ],
+              [
+                0.0,
+                0.0,
+                4.568977996118435e-21
+              ],
+              [
+                1.0944061854637904e-20,
+                -2.9011896356513104e-20,
+                0.0
+              ]
+            ]
+          },
+          "covariance_min_singular_value": 1.01653441757254,
+          "phase_Ward_inverse": 7.830486259408076e-11,
+          "imaginary_residual": 0.0,
+          "radial_order": 192,
+          "maximum_hessian_disagreement": 1.6768098021202604e-10
+        }
+      ],
+      "reoptimized_potential_Hessian": [
+        {
+          "relative_field_step": 0.002,
+          "Phi_step": 0.002,
+          "matrix": [
+            [
+              0.19640857957524316,
+              -0.012315580118206397
+            ],
+            [
+              -0.012315580118206397,
+              0.05023778184599925
+            ]
+          ],
+          "maximum_absolute_disagreement": 4.0390011457613895e-07
+        },
+        {
+          "relative_field_step": 0.001,
+          "Phi_step": 0.001,
+          "matrix": [
+            [
+              0.19640888280807908,
+              -0.0123156519405247
+            ],
+            [
+              -0.0123156519405247,
+              0.050237706918088154
+            ]
+          ],
+          "maximum_absolute_disagreement": 1.0066727865187808e-07
+        },
+        {
+          "relative_field_step": 0.0005,
+          "Phi_step": 0.0005,
+          "matrix": [
+            [
+              0.19640895776468403,
+              -0.012315669910421307
+            ],
+            [
+              -0.012315669910421307,
+              0.05023768821776908
+            ]
+          ],
+          "maximum_absolute_disagreement": 2.5710673701162534e-08
+        }
+      ],
+      "radial_relaxed_Phi_force_derivative": [
+        {
+          "Phi_step": 0.002,
+          "force_derivative": 0.04946563685248671,
+          "expected_curvature": 0.04946543685767062,
+          "absolute_disagreement": 1.999948160899545e-07
+        },
+        {
+          "Phi_step": 0.001,
+          "force_derivative": 0.04946548685637341,
+          "expected_curvature": 0.04946543685767062,
+          "absolute_disagreement": 4.999870279603913e-08
+        },
+        {
+          "Phi_step": 0.0005,
+          "force_derivative": 0.04946544935734284,
+          "expected_curvature": 0.04946543685767062,
+          "absolute_disagreement": 1.2499672220889213e-08
+        }
+      ],
+      "formal_counterterm_replay_at_joint_state": [
+        {
+          "finite_force": -4.7704895589362195e-18,
+          "matched_bare_force": -4.119968255444917e-18,
+          "force_match_residual": 6.505213034913027e-19,
+          "uncorrected_force_difference": 0.0041093308928713025,
+          "normalization_force": 0.004109330892871302,
+          "normalization_curvature": -0.00018823529411764715,
+          "potential_match_residual": 0.0
+        },
+        {
+          "finite_force": -4.7704895589362195e-18,
+          "matched_bare_force": -3.469446951953614e-18,
+          "force_match_residual": 1.3010426069826053e-18,
+          "uncorrected_force_difference": -0.006478904401246349,
+          "normalization_force": -0.006478904401246349,
+          "normalization_curvature": -0.00018823529411764715,
+          "potential_match_residual": 8.326672684688674e-17
+        },
+        {
+          "finite_force": -4.7704895589362195e-18,
+          "matched_bare_force": -5.041540102057596e-18,
+          "force_match_residual": -2.710505431213761e-19,
+          "uncorrected_force_difference": 0.0025018934127837666,
+          "normalization_force": 0.002501893412783767,
+          "normalization_curvature": 4.285714285714287e-05,
+          "potential_match_residual": 0.0
+        },
+        {
+          "finite_force": -4.7704895589362195e-18,
+          "matched_bare_force": -4.336808689942018e-18,
+          "force_match_residual": 4.336808689942018e-19,
+          "uncorrected_force_difference": -0.003926678015787662,
+          "normalization_force": -0.003926678015787663,
+          "normalization_curvature": 4.285714285714287e-05,
+          "potential_match_residual": -8.326672684688674e-17
+        },
+        {
+          "finite_force": -4.7704895589362195e-18,
+          "matched_bare_force": -5.095750210681871e-18,
+          "force_match_residual": -3.2526065174565133e-19,
+          "uncorrected_force_difference": 0.0015634097122882162,
+          "normalization_force": 0.0015634097122882165,
+          "normalization_curvature": 0.00017777777777777787,
+          "potential_match_residual": -2.7755575615628914e-17
+        },
+        {
+          "finite_force": -4.7704895589362195e-18,
+          "matched_bare_force": -5.204170427930421e-18,
+          "force_match_residual": -4.336808689942018e-19,
+          "uncorrected_force_difference": -0.002436590287711785,
+          "normalization_force": -0.0024365902877117843,
+          "normalization_curvature": 0.00017777777777777787,
+          "potential_match_residual": -8.326672684688674e-17
+        }
+      ]
+    },
+    {
+      "T": 0.22,
+      "mu": 1.2,
+      "prior_fixed_Phi": 0.15,
+      "prior_fixed_Phi_joint_force": -0.0013527722273222109,
+      "joint_state": {
+        "s": 0.45091491482759705,
+        "a": 0.901829829655194,
+        "b": 0.012467242444794052,
+        "Phi": 0.1754338445966963,
+        "residual": [
+          7.112366251504909e-17,
+          -7.112366251504909e-17,
+          -1.1622647289044608e-16,
+          -2.6020852139652106e-17
+        ],
+        "residual_scales": [
+          0.44599999999999995,
+          0.44599999999999995,
+          0.44599999999999995,
+          0.05
+        ],
+        "residual_scale_units": [
+          "E^2",
+          "E^2",
+          "E^2",
+          "E^3"
+        ],
+        "scaled_residual_max": 5.204170427930421e-16,
+        "potential": -0.06092392198599985,
+        "mass_sq": 0.9929826462161322,
+        "loops": {
+          "sigma": -0.002532795566531564,
+          "phase": 0.003700825655865471,
+          "loop_free_energy": -0.011742460598400058,
+          "quasiparticle_entropy": 0.0273435193030423,
+          "thermal": [
+            0.0016287726824911238,
+            0.006183704687598002,
+            -0.0018069956529802378,
+            0.0273435193030423
+          ],
+          "vacuum": [
+            -0.004161568249022688,
+            -0.002482879031732531,
+            -0.00993546494541982
+          ]
+        }
+      },
+      "quadrature_runs": [
+        {
+          "s": 0.450914826611139,
+          "a": 0.9018296532222778,
+          "b": 0.012467239215380375,
+          "Phi": 0.1754338280277414,
+          "residual": [
+            1.227316859253591e-16,
+            -3.447762908503904e-16,
+            -6.245004513516506e-17,
+            -2.6020852139652106e-17
+          ],
+          "residual_scales": [
+            0.44599999999999995,
+            0.44599999999999995,
+            0.44599999999999995,
+            0.05
+          ],
+          "residual_scale_units": [
+            "E^2",
+            "E^2",
+            "E^2",
+            "E^3"
+          ],
+          "scaled_residual_max": 7.730410108753149e-16,
+          "potential": -0.06092391661025301,
+          "mass_sq": 0.9929826468788904,
+          "loops": {
+            "sigma": -0.0025327732744298732,
+            "phase": 0.0037008463332602964,
+            "loop_free_energy": -0.011742455005195702,
+            "quasiparticle_entropy": 0.027343521033264234,
+            "thermal": [
+              0.0016287729709878332,
+              0.006183705089898349,
+              -0.0018069958066497024,
+              0.027343521033264234
+            ],
+            "vacuum": [
+              -0.0041615462454177065,
+              -0.0024828587566380522,
+              -0.009935459198546
+            ]
+          }
+        },
+        {
+          "s": 0.45091491010097773,
+          "a": 0.9018298202019556,
+          "b": 0.01246724227135576,
+          "Phi": 0.1754338437088976,
+          "residual": [
+            4.5536491244391186e-17,
+            6.548581121812447e-17,
+            -4.5102810375396984e-17,
+            -2.7755575615628914e-17
+          ],
+          "residual_scales": [
+            0.44599999999999995,
+            0.44599999999999995,
+            0.44599999999999995,
+            0.05
+          ],
+          "residual_scale_units": [
+            "E^2",
+            "E^2",
+            "E^2",
+            "E^3"
+          ],
+          "scaled_residual_max": 5.551115123125783e-16,
+          "potential": -0.06092392169798351,
+          "mass_sq": 0.9929826462516441,
+          "loops": {
+            "sigma": -0.002532794372074934,
+            "phase": 0.003700826763602947,
+            "loop_free_energy": -0.011742460298733104,
+            "quasiparticle_entropy": 0.027343519395758062,
+            "thermal": [
+              0.0016287726979491834,
+              0.006183704709177088,
+              -0.001806995661215119,
+              0.027343519395758062
+            ],
+            "vacuum": [
+              -0.004161567070024117,
+              -0.0024828779455741408,
+              -0.009935464637517984
+            ]
+          }
+        },
+        {
+          "s": 0.45091491482759705,
+          "a": 0.901829829655194,
+          "b": 0.012467242444794052,
+          "Phi": 0.1754338445966963,
+          "residual": [
+            7.112366251504909e-17,
+            -7.112366251504909e-17,
+            -1.1622647289044608e-16,
+            -2.6020852139652106e-17
+          ],
+          "residual_scales": [
+            0.44599999999999995,
+            0.44599999999999995,
+            0.44599999999999995,
+            0.05
+          ],
+          "residual_scale_units": [
+            "E^2",
+            "E^2",
+            "E^2",
+            "E^3"
+          ],
+          "scaled_residual_max": 5.204170427930421e-16,
+          "potential": -0.06092392198599985,
+          "mass_sq": 0.9929826462161322,
+          "loops": {
+            "sigma": -0.002532795566531564,
+            "phase": 0.003700825655865471,
+            "loop_free_energy": -0.011742460598400058,
+            "quasiparticle_entropy": 0.0273435193030423,
+            "thermal": [
+              0.0016287726824911238,
+              0.006183704687598002,
+              -0.0018069956529802378,
+              0.0273435193030423
+            ],
+            "vacuum": [
+              -0.004161568249022688,
+              -0.002482879031732531,
+              -0.00993546494541982
+            ]
+          }
+        }
+      ],
+      "maximum_last_state_refinement": 9.453238414280918e-09,
+      "maximum_seed_disagreement": 9.356404540028507e-14,
+      "static_covariance_hessian": {
+        "matrix": [
+          [
+            0.8791913751750771,
+            -0.025687398272705567
+          ],
+          [
+            -0.025687398272799672,
+            0.05457535775295843
+          ]
+        ],
+        "reciprocity_residual": 9.410527912478983e-14,
+        "covariance_min_singular_value": 0.9874126639868938,
+        "eigenvalues": [
+          0.0537759512832873,
+          0.8799907816447482
+        ],
+        "radial_relaxed_Phi_curvature": 0.053824847171696624
+      },
+      "independent_source_loop_hessian": [
+        {
+          "matrix": {
+            "real": [
+              [
+                0.8791913709734611,
+                -0.025687398222595324
+              ],
+              [
+                -0.025687398222595328,
+                0.05457535775237775
+              ]
+            ],
+            "imaginary": [
+              [
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0
+              ]
+            ]
+          },
+          "bubble": {
+            "real": [
+              [
+                -0.031042787659362355,
+                0.03534646597826644,
+                0.0
+              ],
+              [
+                0.03534646597826643,
+                -0.034361287474621506,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                -0.00700908867938591
+              ]
+            ],
+            "imaginary": [
+              [
+                0.0,
+                0.0,
+                1.6370215551588265e-21
+              ],
+              [
+                0.0,
+                0.0,
+                -2.121565642697753e-19
+              ],
+              [
+                1.934122559117981e-20,
+                2.0815126220422795e-19,
+                0.0
+              ]
+            ]
+          },
+          "covariance_min_singular_value": 0.9874126651675249,
+          "phase_Ward_inverse": -3.843866717978539e-11,
+          "imaginary_residual": 0.0,
+          "radial_order": 96,
+          "maximum_hessian_disagreement": 4.201615944054993e-09
+        },
+        {
+          "matrix": {
+            "real": [
+              [
+                0.8791913709734617,
+                -0.02568739822259533
+              ],
+              [
+                -0.02568739822259533,
+                0.05457535775237775
+              ]
+            ],
+            "imaginary": [
+              [
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0
+              ]
+            ]
+          },
+          "bubble": {
+            "real": [
+              [
+                -0.03104278765936231,
+                0.035346465978266475,
+                0.0
+              ],
+              [
+                0.035346465978266475,
+                -0.03436128747462154,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                -0.007009088679385913
+              ]
+            ],
+            "imaginary": [
+              [
+                0.0,
+                0.0,
+                4.165454149636697e-20
+              ],
+              [
+                0.0,
+                0.0,
+                8.619375998014028e-19
+              ],
+              [
+                -2.1682326885451775e-20,
+                -8.69030643555324e-19,
+                0.0
+              ]
+            ]
+          },
+          "covariance_min_singular_value": 0.9874126651675247,
+          "phase_Ward_inverse": -3.8438674118679295e-11,
+          "imaginary_residual": 0.0,
+          "radial_order": 144,
+          "maximum_hessian_disagreement": 4.20161538894348e-09
+        },
+        {
+          "matrix": {
+            "real": [
+              [
+                0.8791913709734616,
+                -0.02568739822259534
+              ],
+              [
+                -0.02568739822259534,
+                0.05457535775237775
+              ]
+            ],
+            "imaginary": [
+              [
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0
+              ]
+            ]
+          },
+          "bubble": {
+            "real": [
+              [
+                -0.031042787659361897,
+                0.03534646597826595,
+                0.0
+              ],
+              [
+                0.03534646597826596,
+                -0.03436128747462105,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                -0.007009088679385792
+              ]
+            ],
+            "imaginary": [
+              [
+                0.0,
+                0.0,
+                3.012547055917432e-20
+              ],
+              [
+                0.0,
+                0.0,
+                1.6586900242592036e-19
+              ],
+              [
+                -4.7442819314767924e-20,
+                -1.9132801608938053e-19,
+                0.0
+              ]
+            ]
+          },
+          "covariance_min_singular_value": 0.987412665167525,
+          "phase_Ward_inverse": -3.843846074769175e-11,
+          "imaginary_residual": 0.0,
+          "radial_order": 192,
+          "maximum_hessian_disagreement": 4.201615499965783e-09
+        }
+      ],
+      "reoptimized_potential_Hessian": [
+        {
+          "relative_field_step": 0.002,
+          "Phi_step": 0.002,
+          "matrix": [
+            [
+              0.8791566269830294,
+              -0.02568519893832986
+            ],
+            [
+              -0.02568519893832986,
+              0.054575457666961036
+            ]
+          ],
+          "maximum_absolute_disagreement": 3.474819204762891e-05
+        },
+        {
+          "relative_field_step": 0.001,
+          "Phi_step": 0.001,
+          "matrix": [
+            [
+              0.8791827071126512,
+              -0.025686850169968637
+            ],
+            [
+              -0.025686850169968637,
+              0.05457538268527351
+            ]
+          ],
+          "maximum_absolute_disagreement": 8.668062425831735e-06
+        },
+        {
+          "relative_field_step": 0.0005,
+          "Phi_step": 0.0005,
+          "matrix": [
+            [
+              0.879189208805839,
+              -0.025687261405426542
+            ],
+            [
+              -0.025687261405426542,
+              0.054575363783726516
+            ]
+          ],
+          "maximum_absolute_disagreement": 2.1663692381101995e-06
+        }
+      ],
+      "radial_relaxed_Phi_force_derivative": [
+        {
+          "Phi_step": 0.002,
+          "force_derivative": 0.053825047171578676,
+          "expected_curvature": 0.053824847171696624,
+          "absolute_disagreement": 1.9999988205149366e-07
+        },
+        {
+          "Phi_step": 0.001,
+          "force_derivative": 0.05382489717166948,
+          "expected_curvature": 0.053824847171696624,
+          "absolute_disagreement": 4.999997285648483e-08
+        },
+        {
+          "Phi_step": 0.0005,
+          "force_derivative": 0.0538248596716924,
+          "expected_curvature": 0.053824847171696624,
+          "absolute_disagreement": 1.2499995774573058e-08
+        }
+      ],
+      "formal_counterterm_replay_at_joint_state": [
+        {
+          "finite_force": -2.6020852139652106e-17,
+          "matched_bare_force": -2.688821387764051e-17,
+          "force_match_residual": -8.673617379884035e-19,
+          "uncorrected_force_difference": 0.004084624217487682,
+          "normalization_force": 0.004084624217487683,
+          "normalization_curvature": -0.00018823529411764715,
+          "potential_match_residual": 2.7755575615628914e-17
+        },
+        {
+          "finite_force": -2.6020852139652106e-17,
+          "matched_bare_force": -2.6020852139652106e-17,
+          "force_match_residual": 0.0,
+          "uncorrected_force_difference": -0.006503611076629969,
+          "normalization_force": -0.006503611076629968,
+          "normalization_curvature": -0.00018823529411764715,
+          "potential_match_residual": 5.551115123125783e-17
+        },
+        {
+          "finite_force": -2.6020852139652106e-17,
+          "matched_bare_force": -2.42861286636753e-17,
+          "force_match_residual": 1.734723475976807e-18,
+          "uncorrected_force_difference": 0.00250751859333986,
+          "normalization_force": 0.002507518593339859,
+          "normalization_curvature": 4.285714285714287e-05,
+          "potential_match_residual": 2.7755575615628914e-17
+        },
+        {
+          "finite_force": -2.6020852139652106e-17,
+          "matched_bare_force": -2.6020852139652106e-17,
+          "force_match_residual": 0.0,
+          "uncorrected_force_difference": -0.003921052835231569,
+          "normalization_force": -0.00392105283523157,
+          "normalization_curvature": 4.285714285714287e-05,
+          "potential_match_residual": 2.7755575615628914e-17
+        },
+        {
+          "finite_force": -2.6020852139652106e-17,
+          "matched_bare_force": -2.5153490401663703e-17,
+          "force_match_residual": 8.673617379884035e-19,
+          "uncorrected_force_difference": 0.0015867437945949695,
+          "normalization_force": 0.0015867437945949684,
+          "normalization_curvature": 0.00017777777777777787,
+          "potential_match_residual": 2.7755575615628914e-17
+        },
+        {
+          "finite_force": -2.6020852139652106e-17,
+          "matched_bare_force": -2.6020852139652106e-17,
+          "force_match_residual": 0.0,
+          "uncorrected_force_difference": -0.0024132562054050323,
+          "normalization_force": -0.0024132562054050323,
+          "normalization_curvature": 0.00017777777777777787,
+          "potential_match_residual": -5.551115123125783e-17
+        }
+      ]
+    }
+  ],
+  "formal_counterterm_probes": [
+    {
+      "finite_force": -0.005050000000000001,
+      "matched_bare_force": -0.00505,
+      "force_match_residual": 8.673617379884035e-19,
+      "uncorrected_force_difference": 0.004136470588235296,
+      "normalization_force": 0.004136470588235295,
+      "normalization_curvature": -0.00018823529411764715,
+      "potential_match_residual": 5.551115123125783e-17,
+      "Phi": -0.1,
+      "s": 0.0,
+      "finite_tadpoles": [
+        0.0,
+        0.0
+      ],
+      "D": -0.08,
+      "D2": -0.07
+    },
+    {
+      "finite_force": -0.005050000000000001,
+      "matched_bare_force": -0.005050000000000001,
+      "force_match_residual": 0.0,
+      "uncorrected_force_difference": -0.006451764705882355,
+      "normalization_force": -0.006451764705882355,
+      "normalization_curvature": -0.00018823529411764715,
+      "potential_match_residual": -5.551115123125783e-17,
+      "Phi": -0.1,
+      "s": 0.0,
+      "finite_tadpoles": [
+        0.0,
+        0.0
+      ],
+      "D": -0.08,
+      "D2": 0.11
+    },
+    {
+      "finite_force": -0.005050000000000001,
+      "matched_bare_force": -0.005050000000000001,
+      "force_match_residual": 0.0,
+      "uncorrected_force_difference": 0.0024957142857142864,
+      "normalization_force": 0.0024957142857142864,
+      "normalization_curvature": 4.285714285714287e-05,
+      "potential_match_residual": 0.0,
+      "Phi": -0.1,
+      "s": 0.0,
+      "finite_tadpoles": [
+        0.0,
+        0.0
+      ],
+      "D": 0.03,
+      "D2": -0.07
+    },
+    {
+      "finite_force": -0.005050000000000001,
+      "matched_bare_force": -0.0050500000000000015,
+      "force_match_residual": -8.673617379884035e-19,
+      "uncorrected_force_difference": -0.0039328571428571425,
+      "normalization_force": -0.0039328571428571425,
+      "normalization_curvature": 4.285714285714287e-05,
+      "potential_match_residual": 0.0,
+      "Phi": -0.1,
+      "s": 0.0,
+      "finite_tadpoles": [
+        0.0,
+        0.0
+      ],
+      "D": 0.03,
+      "D2": 0.11
+    },
+    {
+      "finite_force": -0.005050000000000001,
+      "matched_bare_force": -0.005050000000000001,
+      "force_match_residual": 0.0,
+      "uncorrected_force_difference": 0.0015377777777777785,
+      "normalization_force": 0.0015377777777777783,
+      "normalization_curvature": 0.00017777777777777787,
+      "potential_match_residual": 0.0,
+      "Phi": -0.1,
+      "s": 0.0,
+      "finite_tadpoles": [
+        0.0,
+        0.0
+      ],
+      "D": 0.2,
+      "D2": -0.07
+    },
+    {
+      "finite_force": -0.005050000000000001,
+      "matched_bare_force": -0.005050000000000001,
+      "force_match_residual": 0.0,
+      "uncorrected_force_difference": -0.0024622222222222224,
+      "normalization_force": -0.002462222222222223,
+      "normalization_curvature": 0.00017777777777777787,
+      "potential_match_residual": 5.551115123125783e-17,
+      "Phi": -0.1,
+      "s": 0.0,
+      "finite_tadpoles": [
+        0.0,
+        0.0
+      ],
+      "D": 0.2,
+      "D2": 0.11
+    },
+    {
+      "finite_force": -0.011250000000000003,
+      "matched_bare_force": -0.011250000000000003,
+      "force_match_residual": 0.0,
+      "uncorrected_force_difference": 0.004136470588235295,
+      "normalization_force": 0.004136470588235295,
+      "normalization_curvature": -0.00018823529411764715,
+      "potential_match_residual": 2.7755575615628914e-17,
+      "Phi": -0.1,
+      "s": 0.27,
+      "finite_tadpoles": [
+        0.06,
+        -0.02
+      ],
+      "D": -0.08,
+      "D2": -0.07
+    },
+    {
+      "finite_force": -0.011250000000000003,
+      "matched_bare_force": -0.011250000000000003,
+      "force_match_residual": 0.0,
+      "uncorrected_force_difference": -0.006451764705882355,
+      "normalization_force": -0.006451764705882355,
+      "normalization_curvature": -0.00018823529411764715,
+      "potential_match_residual": 8.326672684688674e-17,
+      "Phi": -0.1,
+      "s": 0.27,
+      "finite_tadpoles": [
+        0.06,
+        -0.02
+      ],
+      "D": -0.08,
+      "D2": 0.11
+    },
+    {
+      "finite_force": -0.011250000000000003,
+      "matched_bare_force": -0.011250000000000003,
+      "force_match_residual": 0.0,
+      "uncorrected_force_difference": 0.002495714285714287,
+      "normalization_force": 0.0024957142857142864,
+      "normalization_curvature": 4.285714285714287e-05,
+      "potential_match_residual": 2.7755575615628914e-17,
+      "Phi": -0.1,
+      "s": 0.27,
+      "finite_tadpoles": [
+        0.06,
+        -0.02
+      ],
+      "D": 0.03,
+      "D2": -0.07
+    },
+    {
+      "finite_force": -0.011250000000000003,
+      "matched_bare_force": -0.011250000000000001,
+      "force_match_residual": 1.734723475976807e-18,
+      "uncorrected_force_difference": -0.003932857142857141,
+      "normalization_force": -0.0039328571428571425,
+      "normalization_curvature": 4.285714285714287e-05,
+      "potential_match_residual": 8.326672684688674e-17,
+      "Phi": -0.1,
+      "s": 0.27,
+      "finite_tadpoles": [
+        0.06,
+        -0.02
+      ],
+      "D": 0.03,
+      "D2": 0.11
+    },
+    {
+      "finite_force": -0.011250000000000003,
+      "matched_bare_force": -0.011250000000000003,
+      "force_match_residual": 0.0,
+      "uncorrected_force_difference": 0.0015377777777777803,
+      "normalization_force": 0.0015377777777777783,
+      "normalization_curvature": 0.00017777777777777787,
+      "potential_match_residual": 8.326672684688674e-17,
+      "Phi": -0.1,
+      "s": 0.27,
+      "finite_tadpoles": [
+        0.06,
+        -0.02
+      ],
+      "D": 0.2,
+      "D2": -0.07
+    },
+    {
+      "finite_force": -0.011250000000000003,
+      "matched_bare_force": -0.011250000000000001,
+      "force_match_residual": 1.734723475976807e-18,
+      "uncorrected_force_difference": -0.0024622222222222215,
+      "normalization_force": -0.002462222222222223,
+      "normalization_curvature": 0.00017777777777777787,
+      "potential_match_residual": 2.7755575615628914e-17,
+      "Phi": -0.1,
+      "s": 0.27,
+      "finite_tadpoles": [
+        0.06,
+        -0.02
+      ],
+      "D": 0.2,
+      "D2": 0.11
+    },
+    {
+      "finite_force": -0.017050000000000003,
+      "matched_bare_force": -0.017050000000000003,
+      "force_match_residual": 0.0,
+      "uncorrected_force_difference": 0.0041364705882352935,
+      "normalization_force": 0.004136470588235295,
+      "normalization_curvature": -0.00018823529411764715,
+      "potential_match_residual": 5.551115123125783e-17,
+      "Phi": -0.1,
+      "s": 0.4,
+      "finite_tadpoles": [
+        0.03,
+        0.17
+      ],
+      "D": -0.08,
+      "D2": -0.07
+    },
+    {
+      "finite_force": -0.017050000000000003,
+      "matched_bare_force": -0.017050000000000003,
+      "force_match_residual": 0.0,
+      "uncorrected_force_difference": -0.006451764705882358,
+      "normalization_force": -0.006451764705882355,
+      "normalization_curvature": -0.00018823529411764715,
+      "potential_match_residual": 1.1102230246251565e-16,
+      "Phi": -0.1,
+      "s": 0.4,
+      "finite_tadpoles": [
+        0.03,
+        0.17
+      ],
+      "D": -0.08,
+      "D2": 0.11
+    },
+    {
+      "finite_force": -0.017050000000000003,
+      "matched_bare_force": -0.017050000000000003,
+      "force_match_residual": 0.0,
+      "uncorrected_force_difference": 0.002495714285714285,
+      "normalization_force": 0.0024957142857142864,
+      "normalization_curvature": 4.285714285714287e-05,
+      "potential_match_residual": 5.551115123125783e-17,
+      "Phi": -0.1,
+      "s": 0.4,
+      "finite_tadpoles": [
+        0.03,
+        0.17
+      ],
+      "D": 0.03,
+      "D2": -0.07
+    },
+    {
+      "finite_force": -0.017050000000000003,
+      "matched_bare_force": -0.017050000000000006,
+      "force_match_residual": -3.469446951953614e-18,
+      "uncorrected_force_difference": -0.003932857142857148,
+      "normalization_force": -0.0039328571428571425,
+      "normalization_curvature": 4.285714285714287e-05,
+      "potential_match_residual": 5.551115123125783e-17,
+      "Phi": -0.1,
+      "s": 0.4,
+      "finite_tadpoles": [
+        0.03,
+        0.17
+      ],
+      "D": 0.03,
+      "D2": 0.11
+    },
+    {
+      "finite_force": -0.017050000000000003,
+      "matched_bare_force": -0.017050000000000003,
+      "force_match_residual": 0.0,
+      "uncorrected_force_difference": 0.0015377777777777768,
+      "normalization_force": 0.0015377777777777783,
+      "normalization_curvature": 0.00017777777777777787,
+      "potential_match_residual": 1.6653345369377348e-16,
+      "Phi": -0.1,
+      "s": 0.4,
+      "finite_tadpoles": [
+        0.03,
+        0.17
+      ],
+      "D": 0.2,
+      "D2": -0.07
+    },
+    {
+      "finite_force": -0.017050000000000003,
+      "matched_bare_force": -0.017050000000000003,
+      "force_match_residual": 0.0,
+      "uncorrected_force_difference": -0.0024622222222222233,
+      "normalization_force": -0.002462222222222223,
+      "normalization_curvature": 0.00017777777777777787,
+      "potential_match_residual": 1.1102230246251565e-16,
+      "Phi": -0.1,
+      "s": 0.4,
+      "finite_tadpoles": [
+        0.03,
+        0.17
+      ],
+      "D": 0.2,
+      "D2": 0.11
+    },
+    {
+      "finite_force": -0.017050000000000003,
+      "matched_bare_force": -0.017050000000000003,
+      "force_match_residual": 0.0,
+      "uncorrected_force_difference": 0.004136470588235295,
+      "normalization_force": 0.004136470588235295,
+      "normalization_curvature": -0.00018823529411764715,
+      "potential_match_residual": -5.551115123125783e-17,
+      "Phi": -0.1,
+      "s": 0.2,
+      "finite_tadpoles": [
+        -0.1,
+        0.5
+      ],
+      "D": -0.08,
+      "D2": -0.07
+    },
+    {
+      "finite_force": -0.017050000000000003,
+      "matched_bare_force": -0.017050000000000003,
+      "force_match_residual": 0.0,
+      "uncorrected_force_difference": -0.006451764705882358,
+      "normalization_force": -0.006451764705882355,
+      "normalization_curvature": -0.00018823529411764715,
+      "potential_match_residual": 0.0,
+      "Phi": -0.1,
+      "s": 0.2,
+      "finite_tadpoles": [
+        -0.1,
+        0.5
+      ],
+      "D": -0.08,
+      "D2": 0.11
+    },
+    {
+      "finite_force": -0.017050000000000003,
+      "matched_bare_force": -0.017050000000000003,
+      "force_match_residual": 0.0,
+      "uncorrected_force_difference": 0.002495714285714285,
+      "normalization_force": 0.0024957142857142864,
+      "normalization_curvature": 4.285714285714287e-05,
+      "potential_match_residual": 0.0,
+      "Phi": -0.1,
+      "s": 0.2,
+      "finite_tadpoles": [
+        -0.1,
+        0.5
+      ],
+      "D": 0.03,
+      "D2": -0.07
+    },
+    {
+      "finite_force": -0.017050000000000003,
+      "matched_bare_force": -0.017050000000000006,
+      "force_match_residual": -3.469446951953614e-18,
+      "uncorrected_force_difference": -0.003932857142857148,
+      "normalization_force": -0.0039328571428571425,
+      "normalization_curvature": 4.285714285714287e-05,
+      "potential_match_residual": -5.551115123125783e-17,
+      "Phi": -0.1,
+      "s": 0.2,
+      "finite_tadpoles": [
+        -0.1,
+        0.5
+      ],
+      "D": 0.03,
+      "D2": 0.11
+    },
+    {
+      "finite_force": -0.017050000000000003,
+      "matched_bare_force": -0.017050000000000003,
+      "force_match_residual": 0.0,
+      "uncorrected_force_difference": 0.0015377777777777785,
+      "normalization_force": 0.0015377777777777783,
+      "normalization_curvature": 0.00017777777777777787,
+      "potential_match_residual": 0.0,
+      "Phi": -0.1,
+      "s": 0.2,
+      "finite_tadpoles": [
+        -0.1,
+        0.5
+      ],
+      "D": 0.2,
+      "D2": -0.07
+    },
+    {
+      "finite_force": -0.017050000000000003,
+      "matched_bare_force": -0.017050000000000003,
+      "force_match_residual": 0.0,
+      "uncorrected_force_difference": -0.0024622222222222233,
+      "normalization_force": -0.002462222222222223,
+      "normalization_curvature": 0.00017777777777777787,
+      "potential_match_residual": -5.551115123125783e-17,
+      "Phi": -0.1,
+      "s": 0.2,
+      "finite_tadpoles": [
+        -0.1,
+        0.5
+      ],
+      "D": 0.2,
+      "D2": 0.11
+    },
+    {
+      "finite_force": 0.007668749999999999,
+      "matched_bare_force": 0.007668749999999999,
+      "force_match_residual": 0.0,
+      "uncorrected_force_difference": 0.004089411764705886,
+      "normalization_force": 0.004089411764705885,
+      "normalization_curvature": -0.00018823529411764715,
+      "potential_match_residual": 0.0,
+      "Phi": 0.15,
+      "s": 0.0,
+      "finite_tadpoles": [
+        0.0,
+        0.0
+      ],
+      "D": -0.08,
+      "D2": -0.07
+    },
+    {
+      "finite_force": 0.007668749999999999,
+      "matched_bare_force": 0.0076687499999999985,
+      "force_match_residual": -8.673617379884035e-19,
+      "uncorrected_force_difference": -0.006498823529411767,
+      "normalization_force": -0.006498823529411766,
+      "normalization_curvature": -0.00018823529411764715,
+      "potential_match_residual": -2.7755575615628914e-17,
+      "Phi": 0.15,
+      "s": 0.0,
+      "finite_tadpoles": [
+        0.0,
+        0.0
+      ],
+      "D": -0.08,
+      "D2": 0.11
+    },
+    {
+      "finite_force": 0.007668749999999999,
+      "matched_bare_force": 0.00766875,
+      "force_match_residual": 8.673617379884035e-19,
+      "uncorrected_force_difference": 0.0025064285714285718,
+      "normalization_force": 0.0025064285714285718,
+      "normalization_curvature": 4.285714285714287e-05,
+      "potential_match_residual": 0.0,
+      "Phi": 0.15,
+      "s": 0.0,
+      "finite_tadpoles": [
+        0.0,
+        0.0
+      ],
+      "D": 0.03,
+      "D2": -0.07
+    },
+    {
+      "finite_force": 0.007668749999999999,
+      "matched_bare_force": 0.007668749999999999,
+      "force_match_residual": 0.0,
+      "uncorrected_force_difference": -0.0039221428571428575,
+      "normalization_force": -0.0039221428571428575,
+      "normalization_curvature": 4.285714285714287e-05,
+      "potential_match_residual": 2.7755575615628914e-17,
+      "Phi": 0.15,
+      "s": 0.0,
+      "finite_tadpoles": [
+        0.0,
+        0.0
+      ],
+      "D": 0.03,
+      "D2": 0.11
+    },
+    {
+      "finite_force": 0.007668749999999999,
+      "matched_bare_force": 0.007668749999999999,
+      "force_match_residual": 0.0,
+      "uncorrected_force_difference": 0.0015822222222222236,
+      "normalization_force": 0.0015822222222222227,
+      "normalization_curvature": 0.00017777777777777787,
+      "potential_match_residual": -2.7755575615628914e-17,
+      "Phi": 0.15,
+      "s": 0.0,
+      "finite_tadpoles": [
+        0.0,
+        0.0
+      ],
+      "D": 0.2,
+      "D2": -0.07
+    },
+    {
+      "finite_force": 0.007668749999999999,
+      "matched_bare_force": 0.007668749999999999,
+      "force_match_residual": 0.0,
+      "uncorrected_force_difference": -0.0024177777777777782,
+      "normalization_force": -0.0024177777777777782,
+      "normalization_curvature": 0.00017777777777777787,
+      "potential_match_residual": -2.7755575615628914e-17,
+      "Phi": 0.15,
+      "s": 0.0,
+      "finite_tadpoles": [
+        0.0,
+        0.0
+      ],
+      "D": 0.2,
+      "D2": 0.11
+    },
+    {
+      "finite_force": 0.0014687499999999978,
+      "matched_bare_force": 0.0014687499999999965,
+      "force_match_residual": -1.3010426069826053e-18,
+      "uncorrected_force_difference": 0.004089411764705883,
+      "normalization_force": 0.004089411764705885,
+      "normalization_curvature": -0.00018823529411764715,
+      "potential_match_residual": 1.1102230246251565e-16,
+      "Phi": 0.15,
+      "s": 0.27,
+      "finite_tadpoles": [
+        0.06,
+        -0.02
+      ],
+      "D": -0.08,
+      "D2": -0.07
+    },
+    {
+      "finite_force": 0.0014687499999999978,
+      "matched_bare_force": 0.001468749999999996,
+      "force_match_residual": -1.734723475976807e-18,
+      "uncorrected_force_difference": -0.006498823529411768,
+      "normalization_force": -0.006498823529411766,
+      "normalization_curvature": -0.00018823529411764715,
+      "potential_match_residual": -2.7755575615628914e-17,
+      "Phi": 0.15,
+      "s": 0.27,
+      "finite_tadpoles": [
+        0.06,
+        -0.02
+      ],
+      "D": -0.08,
+      "D2": 0.11
+    },
+    {
+      "finite_force": 0.0014687499999999978,
+      "matched_bare_force": 0.0014687499999999987,
+      "force_match_residual": 8.673617379884035e-19,
+      "uncorrected_force_difference": 0.0025064285714285726,
+      "normalization_force": 0.0025064285714285718,
+      "normalization_curvature": 4.285714285714287e-05,
+      "potential_match_residual": 0.0,
+      "Phi": 0.15,
+      "s": 0.27,
+      "finite_tadpoles": [
+        0.06,
+        -0.02
+      ],
+      "D": 0.03,
+      "D2": -0.07
+    },
+    {
+      "finite_force": 0.0014687499999999978,
+      "matched_bare_force": 0.0014687499999999978,
+      "force_match_residual": 0.0,
+      "uncorrected_force_difference": -0.0039221428571428575,
+      "normalization_force": -0.0039221428571428575,
+      "normalization_curvature": 4.285714285714287e-05,
+      "potential_match_residual": -2.7755575615628914e-17,
+      "Phi": 0.15,
+      "s": 0.27,
+      "finite_tadpoles": [
+        0.06,
+        -0.02
+      ],
+      "D": 0.03,
+      "D2": 0.11
+    },
+    {
+      "finite_force": 0.0014687499999999978,
+      "matched_bare_force": 0.0014687499999999987,
+      "force_match_residual": 8.673617379884035e-19,
+      "uncorrected_force_difference": 0.0015822222222222236,
+      "normalization_force": 0.0015822222222222227,
+      "normalization_curvature": 0.00017777777777777787,
+      "potential_match_residual": 2.7755575615628914e-17,
+      "Phi": 0.15,
+      "s": 0.27,
+      "finite_tadpoles": [
+        0.06,
+        -0.02
+      ],
+      "D": 0.2,
+      "D2": -0.07
+    },
+    {
+      "finite_force": 0.0014687499999999978,
+      "matched_bare_force": 0.0014687499999999978,
+      "force_match_residual": 0.0,
+      "uncorrected_force_difference": -0.0024177777777777782,
+      "normalization_force": -0.0024177777777777782,
+      "normalization_curvature": 0.00017777777777777787,
+      "potential_match_residual": -2.7755575615628914e-17,
+      "Phi": 0.15,
+      "s": 0.27,
+      "finite_tadpoles": [
+        0.06,
+        -0.02
+      ],
+      "D": 0.2,
+      "D2": 0.11
+    },
+    {
+      "finite_force": -0.004331250000000004,
+      "matched_bare_force": -0.004331250000000006,
+      "force_match_residual": -1.734723475976807e-18,
+      "uncorrected_force_difference": 0.004089411764705883,
+      "normalization_force": 0.004089411764705885,
+      "normalization_curvature": -0.00018823529411764715,
+      "potential_match_residual": 1.6653345369377348e-16,
+      "Phi": 0.15,
+      "s": 0.4,
+      "finite_tadpoles": [
+        0.03,
+        0.17
+      ],
+      "D": -0.08,
+      "D2": -0.07
+    },
+    {
+      "finite_force": -0.004331250000000004,
+      "matched_bare_force": -0.004331250000000007,
+      "force_match_residual": -2.6020852139652106e-18,
+      "uncorrected_force_difference": -0.0064988235294117696,
+      "normalization_force": -0.006498823529411766,
+      "normalization_curvature": -0.00018823529411764715,
+      "potential_match_residual": 2.7755575615628914e-17,
+      "Phi": 0.15,
+      "s": 0.4,
+      "finite_tadpoles": [
+        0.03,
+        0.17
+      ],
+      "D": -0.08,
+      "D2": 0.11
+    },
+    {
+      "finite_force": -0.004331250000000004,
+      "matched_bare_force": -0.004331250000000002,
+      "force_match_residual": 2.6020852139652106e-18,
+      "uncorrected_force_difference": 0.0025064285714285744,
+      "normalization_force": 0.0025064285714285718,
+      "normalization_curvature": 4.285714285714287e-05,
+      "potential_match_residual": 1.1102230246251565e-16,
+      "Phi": 0.15,
+      "s": 0.4,
+      "finite_tadpoles": [
+        0.03,
+        0.17
+      ],
+      "D": 0.03,
+      "D2": -0.07
+    },
+    {
+      "finite_force": -0.004331250000000004,
+      "matched_bare_force": -0.0043312500000000035,
+      "force_match_residual": 8.673617379884035e-19,
+      "uncorrected_force_difference": -0.0039221428571428575,
+      "normalization_force": -0.0039221428571428575,
+      "normalization_curvature": 4.285714285714287e-05,
+      "potential_match_residual": 1.3877787807814457e-16,
+      "Phi": 0.15,
+      "s": 0.4,
+      "finite_tadpoles": [
+        0.03,
+        0.17
+      ],
+      "D": 0.03,
+      "D2": 0.11
+    },
+    {
+      "finite_force": -0.004331250000000004,
+      "matched_bare_force": -0.004331250000000003,
+      "force_match_residual": 1.734723475976807e-18,
+      "uncorrected_force_difference": 0.0015822222222222244,
+      "normalization_force": 0.0015822222222222227,
+      "normalization_curvature": 0.00017777777777777787,
+      "potential_match_residual": 8.326672684688674e-17,
+      "Phi": 0.15,
+      "s": 0.4,
+      "finite_tadpoles": [
+        0.03,
+        0.17
+      ],
+      "D": 0.2,
+      "D2": -0.07
+    },
+    {
+      "finite_force": -0.004331250000000004,
+      "matched_bare_force": -0.0043312500000000035,
+      "force_match_residual": 8.673617379884035e-19,
+      "uncorrected_force_difference": -0.0024177777777777774,
+      "normalization_force": -0.0024177777777777782,
+      "normalization_curvature": 0.00017777777777777787,
+      "potential_match_residual": -2.7755575615628914e-17,
+      "Phi": 0.15,
+      "s": 0.4,
+      "finite_tadpoles": [
+        0.03,
+        0.17
+      ],
+      "D": 0.2,
+      "D2": 0.11
+    },
+    {
+      "finite_force": -0.004331250000000004,
+      "matched_bare_force": -0.004331250000000004,
+      "force_match_residual": 0.0,
+      "uncorrected_force_difference": 0.004089411764705885,
+      "normalization_force": 0.004089411764705885,
+      "normalization_curvature": -0.00018823529411764715,
+      "potential_match_residual": 0.0,
+      "Phi": 0.15,
+      "s": 0.2,
+      "finite_tadpoles": [
+        -0.1,
+        0.5
+      ],
+      "D": -0.08,
+      "D2": -0.07
+    },
+    {
+      "finite_force": -0.004331250000000004,
+      "matched_bare_force": -0.0043312500000000035,
+      "force_match_residual": 8.673617379884035e-19,
+      "uncorrected_force_difference": -0.006498823529411766,
+      "normalization_force": -0.006498823529411766,
+      "normalization_curvature": -0.00018823529411764715,
+      "potential_match_residual": -1.3877787807814457e-16,
+      "Phi": 0.15,
+      "s": 0.2,
+      "finite_tadpoles": [
+        -0.1,
+        0.5
+      ],
+      "D": -0.08,
+      "D2": 0.11
+    },
+    {
+      "finite_force": -0.004331250000000004,
+      "matched_bare_force": -0.00433125,
+      "force_match_residual": 4.336808689942018e-18,
+      "uncorrected_force_difference": 0.002506428571428576,
+      "normalization_force": 0.0025064285714285718,
+      "normalization_curvature": 4.285714285714287e-05,
+      "potential_match_residual": 5.551115123125783e-17,
+      "Phi": 0.15,
+      "s": 0.2,
+      "finite_tadpoles": [
+        -0.1,
+        0.5
+      ],
+      "D": 0.03,
+      "D2": -0.07
+    },
+    {
+      "finite_force": -0.004331250000000004,
+      "matched_bare_force": -0.0043312500000000035,
+      "force_match_residual": 8.673617379884035e-19,
+      "uncorrected_force_difference": -0.0039221428571428575,
+      "normalization_force": -0.0039221428571428575,
+      "normalization_curvature": 4.285714285714287e-05,
+      "potential_match_residual": 1.3877787807814457e-16,
+      "Phi": 0.15,
+      "s": 0.2,
+      "finite_tadpoles": [
+        -0.1,
+        0.5
+      ],
+      "D": 0.03,
+      "D2": 0.11
+    },
+    {
+      "finite_force": -0.004331250000000004,
+      "matched_bare_force": -0.004331250000000003,
+      "force_match_residual": 1.734723475976807e-18,
+      "uncorrected_force_difference": 0.0015822222222222244,
+      "normalization_force": 0.0015822222222222227,
+      "normalization_curvature": 0.00017777777777777787,
+      "potential_match_residual": 0.0,
+      "Phi": 0.15,
+      "s": 0.2,
+      "finite_tadpoles": [
+        -0.1,
+        0.5
+      ],
+      "D": 0.2,
+      "D2": -0.07
+    },
+    {
+      "finite_force": -0.004331250000000004,
+      "matched_bare_force": -0.004331250000000002,
+      "force_match_residual": 2.6020852139652106e-18,
+      "uncorrected_force_difference": -0.0024177777777777756,
+      "normalization_force": -0.0024177777777777782,
+      "normalization_curvature": 0.00017777777777777787,
+      "potential_match_residual": -2.7755575615628914e-17,
+      "Phi": 0.15,
+      "s": 0.2,
+      "finite_tadpoles": [
+        -0.1,
+        0.5
+      ],
+      "D": 0.2,
+      "D2": 0.11
+    },
+    {
+      "finite_force": 0.01635,
+      "matched_bare_force": 0.01635,
+      "force_match_residual": 0.0,
+      "uncorrected_force_difference": 0.004061176470588238,
+      "normalization_force": 0.0040611764705882365,
+      "normalization_curvature": -0.00018823529411764715,
+      "potential_match_residual": -2.7755575615628914e-17,
+      "Phi": 0.3,
+      "s": 0.0,
+      "finite_tadpoles": [
+        0.0,
+        0.0
+      ],
+      "D": -0.08,
+      "D2": -0.07
+    },
+    {
+      "finite_force": 0.01635,
+      "matched_bare_force": 0.01635,
+      "force_match_residual": 0.0,
+      "uncorrected_force_difference": -0.006527058823529414,
+      "normalization_force": -0.0065270588235294144,
+      "normalization_curvature": -0.00018823529411764715,
+      "potential_match_residual": 0.0,
+      "Phi": 0.3,
+      "s": 0.0,
+      "finite_tadpoles": [
+        0.0,
+        0.0
+      ],
+      "D": -0.08,
+      "D2": 0.11
+    },
+    {
+      "finite_force": 0.01635,
+      "matched_bare_force": 0.01635,
+      "force_match_residual": 0.0,
+      "uncorrected_force_difference": 0.002512857142857143,
+      "normalization_force": 0.0025128571428571435,
+      "normalization_curvature": 4.285714285714287e-05,
+      "potential_match_residual": 0.0,
+      "Phi": 0.3,
+      "s": 0.0,
+      "finite_tadpoles": [
+        0.0,
+        0.0
+      ],
+      "D": 0.03,
+      "D2": -0.07
+    },
+    {
+      "finite_force": 0.01635,
+      "matched_bare_force": 0.01635,
+      "force_match_residual": 0.0,
+      "uncorrected_force_difference": -0.003915714285714286,
+      "normalization_force": -0.003915714285714286,
+      "normalization_curvature": 4.285714285714287e-05,
+      "potential_match_residual": 0.0,
+      "Phi": 0.3,
+      "s": 0.0,
+      "finite_tadpoles": [
+        0.0,
+        0.0
+      ],
+      "D": 0.03,
+      "D2": 0.11
+    },
+    {
+      "finite_force": 0.01635,
+      "matched_bare_force": 0.01635,
+      "force_match_residual": 0.0,
+      "uncorrected_force_difference": 0.0016088888888888889,
+      "normalization_force": 0.0016088888888888893,
+      "normalization_curvature": 0.00017777777777777787,
+      "potential_match_residual": 0.0,
+      "Phi": 0.3,
+      "s": 0.0,
+      "finite_tadpoles": [
+        0.0,
+        0.0
+      ],
+      "D": 0.2,
+      "D2": -0.07
+    },
+    {
+      "finite_force": 0.01635,
+      "matched_bare_force": 0.01635,
+      "force_match_residual": 0.0,
+      "uncorrected_force_difference": -0.002391111111111111,
+      "normalization_force": -0.002391111111111111,
+      "normalization_curvature": 0.00017777777777777787,
+      "potential_match_residual": 0.0,
+      "Phi": 0.3,
+      "s": 0.0,
+      "finite_tadpoles": [
+        0.0,
+        0.0
+      ],
+      "D": 0.2,
+      "D2": 0.11
+    },
+    {
+      "finite_force": 0.01015,
+      "matched_bare_force": 0.010149999999999998,
+      "force_match_residual": -1.734723475976807e-18,
+      "uncorrected_force_difference": 0.004061176470588235,
+      "normalization_force": 0.0040611764705882365,
+      "normalization_curvature": -0.00018823529411764715,
+      "potential_match_residual": -5.551115123125783e-17,
+      "Phi": 0.3,
+      "s": 0.27,
+      "finite_tadpoles": [
+        0.06,
+        -0.02
+      ],
+      "D": -0.08,
+      "D2": -0.07
+    },
+    {
+      "finite_force": 0.01015,
+      "matched_bare_force": 0.010149999999999998,
+      "force_match_residual": -1.734723475976807e-18,
+      "uncorrected_force_difference": -0.006527058823529415,
+      "normalization_force": -0.0065270588235294144,
+      "normalization_curvature": -0.00018823529411764715,
+      "potential_match_residual": 8.326672684688674e-17,
+      "Phi": 0.3,
+      "s": 0.27,
+      "finite_tadpoles": [
+        0.06,
+        -0.02
+      ],
+      "D": -0.08,
+      "D2": 0.11
+    },
+    {
+      "finite_force": 0.01015,
+      "matched_bare_force": 0.01015,
+      "force_match_residual": 0.0,
+      "uncorrected_force_difference": 0.002512857142857143,
+      "normalization_force": 0.0025128571428571435,
+      "normalization_curvature": 4.285714285714287e-05,
+      "potential_match_residual": 8.326672684688674e-17,
+      "Phi": 0.3,
+      "s": 0.27,
+      "finite_tadpoles": [
+        0.06,
+        -0.02
+      ],
+      "D": 0.03,
+      "D2": -0.07
+    },
+    {
+      "finite_force": 0.01015,
+      "matched_bare_force": 0.01015,
+      "force_match_residual": 0.0,
+      "uncorrected_force_difference": -0.003915714285714286,
+      "normalization_force": -0.003915714285714286,
+      "normalization_curvature": 4.285714285714287e-05,
+      "potential_match_residual": 8.326672684688674e-17,
+      "Phi": 0.3,
+      "s": 0.27,
+      "finite_tadpoles": [
+        0.06,
+        -0.02
+      ],
+      "D": 0.03,
+      "D2": 0.11
+    },
+    {
+      "finite_force": 0.01015,
+      "matched_bare_force": 0.01015,
+      "force_match_residual": 0.0,
+      "uncorrected_force_difference": 0.0016088888888888889,
+      "normalization_force": 0.0016088888888888893,
+      "normalization_curvature": 0.00017777777777777787,
+      "potential_match_residual": 2.7755575615628914e-17,
+      "Phi": 0.3,
+      "s": 0.27,
+      "finite_tadpoles": [
+        0.06,
+        -0.02
+      ],
+      "D": 0.2,
+      "D2": -0.07
+    },
+    {
+      "finite_force": 0.01015,
+      "matched_bare_force": 0.010149999999999998,
+      "force_match_residual": -1.734723475976807e-18,
+      "uncorrected_force_difference": -0.002391111111111113,
+      "normalization_force": -0.002391111111111111,
+      "normalization_curvature": 0.00017777777777777787,
+      "potential_match_residual": 2.7755575615628914e-17,
+      "Phi": 0.3,
+      "s": 0.27,
+      "finite_tadpoles": [
+        0.06,
+        -0.02
+      ],
+      "D": 0.2,
+      "D2": 0.11
+    },
+    {
+      "finite_force": 0.004349999999999996,
+      "matched_bare_force": 0.004349999999999996,
+      "force_match_residual": 0.0,
+      "uncorrected_force_difference": 0.0040611764705882365,
+      "normalization_force": 0.0040611764705882365,
+      "normalization_curvature": -0.00018823529411764715,
+      "potential_match_residual": -2.7755575615628914e-17,
+      "Phi": 0.3,
+      "s": 0.4,
+      "finite_tadpoles": [
+        0.03,
+        0.17
+      ],
+      "D": -0.08,
+      "D2": -0.07
+    },
+    {
+      "finite_force": 0.004349999999999996,
+      "matched_bare_force": 0.004349999999999993,
+      "force_match_residual": -3.469446951953614e-18,
+      "uncorrected_force_difference": -0.006527058823529417,
+      "normalization_force": -0.0065270588235294144,
+      "normalization_curvature": -0.00018823529411764715,
+      "potential_match_residual": 5.551115123125783e-17,
+      "Phi": 0.3,
+      "s": 0.4,
+      "finite_tadpoles": [
+        0.03,
+        0.17
+      ],
+      "D": -0.08,
+      "D2": 0.11
+    },
+    {
+      "finite_force": 0.004349999999999996,
+      "matched_bare_force": 0.00435,
+      "force_match_residual": 3.469446951953614e-18,
+      "uncorrected_force_difference": 0.0025128571428571465,
+      "normalization_force": 0.0025128571428571435,
+      "normalization_curvature": 4.285714285714287e-05,
+      "potential_match_residual": 0.0,
+      "Phi": 0.3,
+      "s": 0.4,
+      "finite_tadpoles": [
+        0.03,
+        0.17
+      ],
+      "D": 0.03,
+      "D2": -0.07
+    },
+    {
+      "finite_force": 0.004349999999999996,
+      "matched_bare_force": 0.004349999999999996,
+      "force_match_residual": 0.0,
+      "uncorrected_force_difference": -0.003915714285714286,
+      "normalization_force": -0.003915714285714286,
+      "normalization_curvature": 4.285714285714287e-05,
+      "potential_match_residual": 1.1102230246251565e-16,
+      "Phi": 0.3,
+      "s": 0.4,
+      "finite_tadpoles": [
+        0.03,
+        0.17
+      ],
+      "D": 0.03,
+      "D2": 0.11
+    },
+    {
+      "finite_force": 0.004349999999999996,
+      "matched_bare_force": 0.004349999999999998,
+      "force_match_residual": 1.734723475976807e-18,
+      "uncorrected_force_difference": 0.0016088888888888906,
+      "normalization_force": 0.0016088888888888893,
+      "normalization_curvature": 0.00017777777777777787,
+      "potential_match_residual": 5.551115123125783e-17,
+      "Phi": 0.3,
+      "s": 0.4,
+      "finite_tadpoles": [
+        0.03,
+        0.17
+      ],
+      "D": 0.2,
+      "D2": -0.07
+    },
+    {
+      "finite_force": 0.004349999999999996,
+      "matched_bare_force": 0.004349999999999996,
+      "force_match_residual": 0.0,
+      "uncorrected_force_difference": -0.002391111111111111,
+      "normalization_force": -0.002391111111111111,
+      "normalization_curvature": 0.00017777777777777787,
+      "potential_match_residual": 5.551115123125783e-17,
+      "Phi": 0.3,
+      "s": 0.4,
+      "finite_tadpoles": [
+        0.03,
+        0.17
+      ],
+      "D": 0.2,
+      "D2": 0.11
+    },
+    {
+      "finite_force": 0.004349999999999996,
+      "matched_bare_force": 0.004349999999999996,
+      "force_match_residual": 0.0,
+      "uncorrected_force_difference": 0.0040611764705882365,
+      "normalization_force": 0.0040611764705882365,
+      "normalization_curvature": -0.00018823529411764715,
+      "potential_match_residual": -8.326672684688674e-17,
+      "Phi": 0.3,
+      "s": 0.2,
+      "finite_tadpoles": [
+        -0.1,
+        0.5
+      ],
+      "D": -0.08,
+      "D2": -0.07
+    },
+    {
+      "finite_force": 0.004349999999999996,
+      "matched_bare_force": 0.004349999999999993,
+      "force_match_residual": -3.469446951953614e-18,
+      "uncorrected_force_difference": -0.006527058823529417,
+      "normalization_force": -0.0065270588235294144,
+      "normalization_curvature": -0.00018823529411764715,
+      "potential_match_residual": 2.7755575615628914e-17,
+      "Phi": 0.3,
+      "s": 0.2,
+      "finite_tadpoles": [
+        -0.1,
+        0.5
+      ],
+      "D": -0.08,
+      "D2": 0.11
+    },
+    {
+      "finite_force": 0.004349999999999996,
+      "matched_bare_force": 0.00435,
+      "force_match_residual": 3.469446951953614e-18,
+      "uncorrected_force_difference": 0.0025128571428571465,
+      "normalization_force": 0.0025128571428571435,
+      "normalization_curvature": 4.285714285714287e-05,
+      "potential_match_residual": -5.551115123125783e-17,
+      "Phi": 0.3,
+      "s": 0.2,
+      "finite_tadpoles": [
+        -0.1,
+        0.5
+      ],
+      "D": 0.03,
+      "D2": -0.07
+    },
+    {
+      "finite_force": 0.004349999999999996,
+      "matched_bare_force": 0.004349999999999996,
+      "force_match_residual": 0.0,
+      "uncorrected_force_difference": -0.003915714285714286,
+      "normalization_force": -0.003915714285714286,
+      "normalization_curvature": 4.285714285714287e-05,
+      "potential_match_residual": 5.551115123125783e-17,
+      "Phi": 0.3,
+      "s": 0.2,
+      "finite_tadpoles": [
+        -0.1,
+        0.5
+      ],
+      "D": 0.03,
+      "D2": 0.11
+    },
+    {
+      "finite_force": 0.004349999999999996,
+      "matched_bare_force": 0.004349999999999998,
+      "force_match_residual": 1.734723475976807e-18,
+      "uncorrected_force_difference": 0.0016088888888888906,
+      "normalization_force": 0.0016088888888888893,
+      "normalization_curvature": 0.00017777777777777787,
+      "potential_match_residual": -5.551115123125783e-17,
+      "Phi": 0.3,
+      "s": 0.2,
+      "finite_tadpoles": [
+        -0.1,
+        0.5
+      ],
+      "D": 0.2,
+      "D2": -0.07
+    },
+    {
+      "finite_force": 0.004349999999999996,
+      "matched_bare_force": 0.004349999999999998,
+      "force_match_residual": 1.734723475976807e-18,
+      "uncorrected_force_difference": -0.0023911111111111095,
+      "normalization_force": -0.002391111111111111,
+      "normalization_curvature": 0.00017777777777777787,
+      "potential_match_residual": -5.551115123125783e-17,
+      "Phi": 0.3,
+      "s": 0.2,
+      "finite_tadpoles": [
+        -0.1,
+        0.5
+      ],
+      "D": 0.2,
+      "D2": 0.11
+    }
+  ],
+  "checks": {
+    "accepted_predecessors_preserved": true,
+    "same_declared_action_trial_inputs": true,
+    "arbitrary_state_counterterm_force_and_potential_match": true,
+    "dropping_mass_normalization_is_detected": true,
+    "actual_joint_stationarity_without_mass_or_Phi_fit": true,
+    "fixed_Phi_is_not_joint_stationarity": true,
+    "joint_state_refinement_and_seed_agreement": true,
+    "mixed_static_reciprocity_and_covariance_nonsingularity": true,
+    "independent_actual_source_loop_Hessian_and_static_Ward": true,
+    "reoptimized_potential_Hessian_agreement": true,
+    "radial_relaxed_Phi_force_curvature_agreement": true,
+    "local_static_positive_amplitude_Phi_block": true,
+    "joint_state_counterterm_replay": true,
+    "protected_Core_and_failed_baseline_hashes_unchanged": true
+  },
+  "config": {
+    "orders_and_vacuum_splits": [
+      [
+        128,
+        20.0
+      ],
+      [
+        192,
+        40.0
+      ],
+      [
+        256,
+        64.0
+      ]
+    ],
+    "potential_difference_steps_in_MS_units": [
+      0.002,
+      0.001,
+      0.0005
+    ],
+    "source_loop_orders": [
+      96,
+      144,
+      192
+    ],
+    "MS_scale": 1.0,
+    "MS_scale_units": "E",
+    "force_residual_scale": "epsilon*MS_scale^3 (E^3)",
+    "numerical_seed_factors": [
+      0.8,
+      1.2
+    ]
+  },
+  "thresholds": {
+    "algebraic_identity": 1e-10,
+    "scaled_root": 1e-08,
+    "state_refinement": 1e-05,
+    "static_Hessian_absolute": 2e-05,
+    "causal_leakage_unchanged": 1e-06
+  },
+  "evidence_artifacts": [
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/t13_renormalized_hartree_background.json",
+      "sha256": "c88b6bbb4b8b99667d9562dcfe10930f5c5405053126e5fa729f9016a2652669"
+    },
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/t13_hartree_counterterm_matching.json",
+      "sha256": "8daacda13e1e740a9821ea171a7d93fefcbf3392cac5bc28ce75c129f55b4d11"
+    },
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/t13_hartree_finite_q_poles.json",
+      "sha256": "7a16d7203b2347984d3a6f5dd8e4025730b049bce3e474b52ff103a8cfbb380a"
+    },
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/Research_T13_Hartree_External_Response.py",
+      "sha256": "42597223c59c36f2ba3c7fbc2b93bb450bab306159e92d529350fa367649087b"
+    },
+    {
+      "path": "docs/core/02_equations/o2/uet_o2_action_thermal_observable_bridge.py",
+      "sha256": "1cf745562548bc9a61d9ebb86069b8aff73e2a776756aa9efe7ab1a45b669ebe"
+    },
+    {
+      "path": "docs/core/02_equations/o2/uet_o2_action_thermal_stiffness_beta.py",
+      "sha256": "c1c3278a79df611ddae2f67ff811022722ab0c56f68bf91cc5480f34db9a95e6"
+    },
+    {
+      "path": "docs/core/02_equations/o2/uet_o2_finite_density_eos.py",
+      "sha256": "ea744a8645f993600300fa9fd99a764e1f07b30fb272b47399c34aa114152c6d"
+    },
+    {
+      "path": "docs/core/02_equations/covariant/uet_covariant_matter.py",
+      "sha256": "8a57d95e898a8ac962bbd749670ad0695b597281937da36496d2ec7e074f9c53"
+    },
+    {
+      "path": "docs/core/02_equations/covariant/uet_covariant_response.py",
+      "sha256": "7fb4b7228afb8ede0ac4f1664d634346ef46cc7678c94ed7b55d73645590c0c2"
+    },
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/Research_T13_Hartree_Joint_Phi_Static.py",
+      "sha256": "c34555163ab7776e998bd42a105d2151f239d7ad4b7494c129d40f875bf816de"
+    }
+  ],
+  "protected_evidence_hashes": [
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/t13_conditional_twofluid_operator.json",
+      "sha256": "8606303e4818030dd74061c14b243542c19c4cbb262dda29261951d4c87d6412"
+    },
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/t13_polar_dynamic_composite.json",
+      "sha256": "2f07a63af3ce9945bf254d5da238bdefbd53597dae105ee7e50bbcbe8bc61f7d"
+    },
+    {
+      "path": "docs/core/07_artifacts/topic13/t13_topic13_closure_matrix.json",
+      "sha256": "e6e84772a400273c438e0b8ca3c7b5b14c9d720da0420fb4021b1c0e7a54fe66"
+    },
+    {
+      "path": "docs/core/07_artifacts/gates/uet_major_result_dependency_unlock_gate.json",
+      "sha256": "ecbefdf12ee1eb6661ae8096e3f62bf1ffa7992c96ca94f1149fdbc25a8bbe6e"
+    }
+  ],
+  "open_blockers": [
+    "joint_finite_q_retarded_response_and_validity_domain",
+    "regulator_RG_and_controlled_Hartree_action_remainder",
+    "response_field_quantum_fluctuation_and_kinetic_counterterm_if_required",
+    "independent_material_state_source_detector_thermal_input_and_physical_transport"
+  ],
+  "controlling_blocker": "joint_dynamic_validity_regulator_remainder_material_transport_not_closed",
+  "dependency_unlocked": [
+    "named_homogeneous_classical_Phi_candidate_joint_dynamic_research_only"
+  ],
+  "homogeneous_classical_Phi_stationarity_derived": true,
+  "full_quantum_joint_Phi_stationarity_derived": false,
+  "joint_finite_q_complex_pole_computed": false,
+  "prior_fixed_Phi_poles_reused_as_joint": false,
+  "physical_Kubo_emitted": false,
+  "independent_alpha_Phi_K_admitted": false,
+  "controlled_truncation_error_established": false,
+  "global_phase_minimum_proved": false,
+  "full_covariant_counterterm_match": false,
+  "RG_invariance_established": false,
+  "g1_physical_unlock": false,
+  "g2_science_unlock": false,
+  "full_core_unlock": false,
+  "core_composition_gate_overwritten": false,
+  "claim_promotion": false,
+  "parameter_fitting": false,
+  "target_source_accessed": false,
+  "xie_2026_accessed": false,
+  "prior_Xie_context_exposure_review": "REVIEW_REQUIRED",
+  "clipping": false,
+  "IR_filter": false,
+  "mass_repair": false,
+  "C_relabelled_as_charge_or_mass": false,
+  "R_gen_added_as_state": false,
+  "state_variables": [
+    "same_O2_amplitude_and_covariance",
+    "existing_classical_UET_Phi_response_background"
+  ],
+  "excluded_variables": [
+    "R_gen",
+    "R_obs",
+    "nondynamical_A"
+  ],
+  "claim_boundary": "Homogeneous classical-Phi extension of one named trial-input Hartree prescription. Local static stationarity and mixed susceptibility only, not quantum Phi loops, finite-q joint dynamics, global stability, controlled Hartree remainder, material calibration/prediction, physical heat/Kubo/SK-KMS/entropy or Full Topic13/UET.",
+  "report": {
+    "MAJOR_RESULT_CLOSURE": "T13_HOMOGENEOUS_CLASSICAL_PHI_HARTREE_STATIONARITY: CLOSED_FOR_LANE",
+    "WHAT_IS_ACTUALLY_CLOSED": [
+      "mass_dependent_normalization_force_and_curvature_counterterm",
+      "homogeneous_classical_Phi_and_matter_stationary_candidate_at_two_states",
+      "mixed_source_Hessian_reciprocity_and_local_static_stability"
+    ],
+    "WHAT_REMAINS_OPEN": [
+      "joint_finite_q_retarded_response_and_validity_domain",
+      "regulator_RG_and_controlled_Hartree_action_remainder",
+      "response_field_quantum_fluctuation_and_kinetic_counterterm_if_required",
+      "independent_material_state_source_detector_thermal_input_and_physical_transport"
+    ],
+    "DEPENDENCY_UNLOCKED": [
+      "named_homogeneous_classical_Phi_candidate_joint_dynamic_research_only"
+    ],
+    "STATUS": "PASS_SCOPED_JOINT_PHI_STATIC",
+    "WHAT_CHANGED": "Derived mass-source/response counterterms, actual homogeneous joint states and independently checked mixed static response without retuning.",
+    "EQUATION_OR_MAPPING": "m2(Phi)=m0^2/Z-gamma*(Phi-Phi_*); U_b=U_R-N(m2); Gamma_Phi=epsilon*U'(Phi)-gamma*(s+I_s+I_p)/2; Gamma_Phi=0 jointly with matter gaps/field; Gamma_joint=Gamma_tree+L_joint^T*J*(I-KJ)^-1*L_joint/2",
+    "VERIFICATION": {
+      "accepted_predecessors_preserved": true,
+      "same_declared_action_trial_inputs": true,
+      "arbitrary_state_counterterm_force_and_potential_match": true,
+      "dropping_mass_normalization_is_detected": true,
+      "actual_joint_stationarity_without_mass_or_Phi_fit": true,
+      "fixed_Phi_is_not_joint_stationarity": true,
+      "joint_state_refinement_and_seed_agreement": true,
+      "mixed_static_reciprocity_and_covariance_nonsingularity": true,
+      "independent_actual_source_loop_Hessian_and_static_Ward": true,
+      "reoptimized_potential_Hessian_agreement": true,
+      "radial_relaxed_Phi_force_curvature_agreement": true,
+      "local_static_positive_amplitude_Phi_block": true,
+      "joint_state_counterterm_replay": true,
+      "protected_Core_and_failed_baseline_hashes_unchanged": true
+    },
+    "CONTROLLING_BLOCKER": "joint_dynamic_validity_regulator_remainder_material_transport_not_closed",
+    "NEXT_ACTION": "Construct same-action joint finite-q response and validity/approximation contract before independent material/thermal and physical transport admission; do not reuse old fixed-Phi poles.",
+    "CLAIM_BOUNDARY": "Homogeneous classical-Phi extension of one named trial-input Hartree prescription. Local static stationarity and mixed susceptibility only, not quantum Phi loops, finite-q joint dynamics, global stability, controlled Hartree remainder, material calibration/prediction, physical heat/Kubo/SK-KMS/entropy or Full Topic13/UET."
+  }
+}

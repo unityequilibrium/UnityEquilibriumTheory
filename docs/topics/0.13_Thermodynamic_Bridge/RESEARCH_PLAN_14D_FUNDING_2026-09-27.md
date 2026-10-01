@@ -10,6 +10,17 @@
 
 ## 1. ผลลัพธ์หลักที่จะปิดก่อน
 
+### ล่าสุด: joint Phi static ไม่ใช่ joint dynamics
+
+[ผล joint classical-Phi](Result/artifacts/T13_HARTREE_JOINT_PHI_STATIC_2026-10-02.md)
+derive normalization force/curvature counterterms และคำนวณ stationary
+matter–Phi ด้วย trial action inputs เดิม พร้อม mixed static response
+ที่ตรวจอิสระแล้ว ปิดเฉพาะ homogeneous classical lane; ไม่ใช้ fixed-Phi
+poles เดิมแทน dynamics ของ branch ใหม่ งานถัดไปคือ joint retarded response,
+validity/approximation obligations และ independent-input measurement card
+วัน freeze 7 ต.ค./พอร์ต 11 ต.ค. และ Full Goal/R1 acceptance ไม่เปลี่ยน
+แผน 12 สัปดาห์ระบุผลที่เวลาเพิ่มต้องให้ ไม่ใช่สัญญาปิด Full Topic 13
+
 ### จุดตัดสินใจ 2 ตุลาคม: เลือกแนวทางเตรียมพอร์ต ไม่ใช่รับผลวิจัยครบ
 
 [ผล finite-q ล่าสุด](Result/artifacts/T13_HARTREE_FINITE_Q_POLES_2026-10-02.md)

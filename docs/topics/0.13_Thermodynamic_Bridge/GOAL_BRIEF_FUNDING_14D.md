@@ -25,6 +25,18 @@
 
 ## Constraints
 
+Latest successor: `Result/artifacts/T13_HARTREE_JOINT_PHI_STATIC_2026-10-02.md`
+closes mass-dependent Phi normalization counterterms, actual homogeneous
+classical matter/Phi stationary states and independently checked mixed
+static response in a named successor with unchanged trial action inputs.
+It does not inherit the old fixed-Phi finite-q poles as joint-Phi dynamics.
+Next derive the same-action joint retarded response and validity/remainder
+contract while preparing the independent-input measurement card. Quantum
+Phi/regulator/RG, material/thermal and physical transport remain open.
+Full Goal/R1, original 7/11 October dates and model policy/NOT_RUN trial
+remain unchanged. The 12-week roadmap now links extra time to explicit
+results and a next-round contingency, not repeated unchanged runs.
+
 Current successor: `Result/artifacts/T13_HARTREE_FINITE_Q_POLES_2026-10-02.md`
 closes actual fixed-grid finite-q principal loops and six local complex
 phase poles, independently checked with moments/source reciprocity, vacuum,

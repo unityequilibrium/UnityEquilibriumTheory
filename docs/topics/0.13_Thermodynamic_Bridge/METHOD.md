@@ -1,5 +1,16 @@
 ﻿# Method
 
+## Homogeneous Classical-Phi Stationarity (2026-10-02)
+
+Use the [joint static derivation](Result/artifacts/T13_HARTREE_JOINT_PHI_STATIC_2026-10-02.md).
+Retain N(m2(Phi)): V_b=V_R-N, dm_b^2/dPhi=-gamma/(1+4uD).
+Solve all three matter equations and V_R'-gamma*(s+I_s+I_p)/2=0 together;
+Phi is a classical state, not a fitted coefficient. Explicit residual scales
+are E^2/E^3 at Q=1 E. Check exact counterterm algebra, multiple orders/seeds,
+the actual mass-source bubble, independently reoptimized potential and the
+radially relaxed Phi curvature. Keep the old fixed-Phi background/poles as
+predecessors; they do not supply new-branch dynamics or material admission.
+
 ## Actual Finite-q Principal Kernel and Pole (2026-10-02)
 
 Use the [separate pole verifier and derivation](Result/artifacts/T13_HARTREE_FINITE_Q_POLES_2026-10-02.md).

@@ -1,5 +1,19 @@
 # Verification Spec
 
+## Joint Classical-Phi Static Verification (2026-10-02)
+
+Separate Research_T13_Hartree_Joint_Phi_Static.py and eighteen tests.
+Orders/splits 128/20,192/40,256/64; unchanged action inputs, seeds .8/1.2;
+static source-loop orders 96/144/192; difference steps .002/.001/.0005 Q.
+Require algebra <=1e-10, scaled roots <=1e-8, state refinement <=1e-5 and
+static Hessian/relaxed-force agreement <=2e-5. Check rational normalization
+derivatives, arbitrary signed tadpoles, decoupling/invalid domains, actual
+four-equation states, source-loop Ward/reciprocity, reoptimized potential,
+Schur curvature, units, source/protected hashes and read/claim boundaries.
+Dropping N and reusing fixed-Phi stationarity are negative controls. Local
+static positivity does not unlock dynamics or physical/Core/Goal gates.
+Causal threshold remains 1e-6; no new holdout read. See the [result note](Result/artifacts/T13_HARTREE_JOINT_PHI_STATIC_2026-10-02.md).
+
 ## Actual Finite-q Pole Verification (2026-10-02)
 
 Separate verifier `Research_T13_Hartree_Finite_Q_Poles.py` and 22 tests.

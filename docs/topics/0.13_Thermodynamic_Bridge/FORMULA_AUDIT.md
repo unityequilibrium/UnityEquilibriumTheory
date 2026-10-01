@@ -1,5 +1,18 @@
 # Formula Audit: 0.13_Thermodynamic_Bridge
 
+## Homogeneous Classical-Phi Hartree Extension (2026-10-02)
+
+| Diagnostic ID | Equation | Units | Origin | Verified scope | Remaining obligation |
+| --- | --- | --- | --- | --- | --- |
+| t13.diagnostic.hartree_Phi_normalization_jet | V_b=V_R-N(m2); N_Phi=-gamma*d/(1+4uD); N_PhiPhi=gamma^2*D/(1+4uD) | N E^4; force E^3; curvature E^2 | derivative of predecessor affine normalization with same declared action | rational algebra and arbitrary signed-tadpole on-gap replay | full regulator/covariant kinetic and off-gap/quantum matching |
+| t13.diagnostic.classical_Phi_hartree_joint_static | V_R'-gamma*(s+I_s+I_p)/2=0; Gamma_joint=Gamma_tree+L_joint^T*J*(I-KJ)^-1*L_joint/2 | Phi/gamma E; s/a/b E^2; Hessian E^2 | original reciprocal mass slope and actual static source bubble | two homogeneous classical states, mixed reciprocity and local static amplitude/Phi positivity | joint finite-q dynamics, quantum Phi, approximation control and material/thermal input |
+
+See [derivation and scope](Result/artifacts/T13_HARTREE_JOINT_PHI_STATIC_2026-10-02.md).
+These are topic-local diagnostic IDs, not promoted Core equations. The
+canonical O(2) amplitude is not collective C; no R_gen/R_obs state is added.
+No old fixed-Phi pole, static positivity or convergence substitutes for
+new-branch dynamics, physical transport or a Hartree error bound.
+
 ## Actual Finite-q Principal Kernel and Pole (2026-10-02)
 
 | Diagnostic ID | Equation | Units | Origin | Closure scope | Verification | Forbidden substitution | Remaining obligation |
