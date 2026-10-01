@@ -25,6 +25,16 @@
 
 ## Constraints
 
+Latest pole evidence: `Result/artifacts/T13_HARTREE_SOFT_POLES_2026-10-01.md`
+derives local Landau-sheet continuation and simple complex soft poles at
+both unchanged fixed-Phi witnesses, with independent cuts/upper reference,
+seeds/grids/tails, derivatives and elimination-denominator checks. Bounded
+sampled windings are not certified zero counts or global stability. Next
+control complex-domain/finite-q and approximation/action obligations,
+then joint Phi/material/heat-current input. No physical sound, collision
+or Kubo coefficient is admitted. Full Goal/R1 and all original dates and
+model policy remain unchanged. Predecessor notes below retain their scope.
+
 Latest collective evidence: `Result/artifacts/T13_HARTREE_SOFT_COLLECTIVE_2026-10-01.md`
 derives the collisionless z=v*q infrared kernel and checks it against the
 unchanged finite-q response. Its thermal ray dependence cannot be replaced

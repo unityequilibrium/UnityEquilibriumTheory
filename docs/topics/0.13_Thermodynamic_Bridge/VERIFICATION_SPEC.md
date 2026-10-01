@@ -2,6 +2,22 @@
 
 ## Collisionless Soft Collective Verification (2026-10-01)
 
+For separate `Research_T13_Hartree_Soft_Poles.py`, preregister orders
+64/96/128, seeds .2-.01i/.4-.005i, two velocity split grids and horizontal/
+return-to-real tails. Compare density with original cuts at .2/.3/.4;
+check original upper integral at .3+.02i with orders 128/256/512, absolute
+1e-9 unchanged. Refine the reference rather than relax its tolerance.
+Require root absolute 1e-8, local/refinement absolute 2e-5 and cut 1e-10;
+these do not change predecessor physical thresholds. Check both-sided
+boundary approach, nonzero derivative/residue, Cauchy-Riemann, principal-
+lower negative control and nonzero radial/covariance elimination factors.
+Nested 64/128/256/512 counterclockwise samples cover upper bounds
+(-1.5,1.5,.002,.5) and local lower (.12,.58,-.02,-.0005); require winding
+integer distance 1e-6 and finest phase increment below pi/2. Label sampled
+windings, never certified counts/global stability. Check hash/read/unit
+contracts, no fitted width and no Core/holdout promotion. Original causal
+leakage threshold remains 1e-6.
+
 Run `Research_T13_Hartree_Soft_Collective.py` and its seventeen tests.
 Require independent original Cauchy angular integrals, signed velocity,
 forward-dispersion derivatives, exact static/cold limits and Landau-cut

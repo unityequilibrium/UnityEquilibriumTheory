@@ -2,6 +2,14 @@
 
 ## Collisionless Soft Phase Kernel (2026-10-01)
 
+The [local Landau continuation](Result/artifacts/T13_HARTREE_SOFT_POLES_2026-10-01.md)
+derives D(v) from the angular discontinuity and same-dispersion complex
+velocity thresholds: `B_L=B_principal_lower-2*pi*i*D_analytic`. Solve the
+full complex phase inverse, not only its real part. Keep radial/covariance
+factors in the bounded winding diagnostic. This is a conditional fixed-
+Phi collisionless soft pole, not a physical sound/transport coefficient,
+finite-q uniform remainder, global stability proof or material validation.
+
 Take z=v*q with the same internal poles and static source anchor. Only
 equal-branch thermal divided differences change at leading q: integrate
 N'(p)*w*c/(v-w*c+i0) with exact angular moments, retaining the analytic

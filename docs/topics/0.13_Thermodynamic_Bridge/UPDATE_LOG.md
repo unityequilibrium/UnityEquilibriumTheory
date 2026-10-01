@@ -1,3 +1,27 @@
+## 2026-10-01 - Local Landau-sheet pole of the fixed-Phi candidate
+
+MAJOR_RESULT_CLOSURE: T13_FIXED_PHI_HARTREE_LOCAL_LANDAU_POLE is CLOSED_FOR_LANE. Full active Goal and thermal/physical acceptance remain open.
+
+WHAT_IS_ACTUALLY_CLOSED: Same-cut local spectral-density continuation and simple complex soft phase poles at both unchanged witnesses, independent original-cut/upper-integral, seeds/orders/grids/tail paths and derivative/residue checks. Elimination factors remain nonzero. Bounded winding is recorded, not a certified zero count.
+
+WHAT_REMAINS_OPEN: Certified complex domain/uniform finite-q pole control, Hartree truncation/full regulator/action, joint Phi/material/source/detector and physical normal/heat/collision/KMS/entropy transport; independent input and novelty review.
+
+DEPENDENCY_UNLOCKED: Same-candidate validity/joint-Phi research only. R1-R5, physical funding gates and recorded Core composition are unchanged.
+
+STATUS: PASS_SCOPED_LOCAL_LANDAU_POLE.
+
+WHAT_CHANGED: Separate pole verifier, nineteen tests, JSON/derivation, local formula/method/spec/limits/README, funding hash/controller and Goal/14-day/12-week handoffs/planning regression. No predecessor code/artifact or Core-owner file changed. Prior exact head 376909cc8911c6b9992cc177507a54f2c9a2f381 has all relevant CI passing.
+
+EQUATION_OR_MAPPING: B_L=B_principal_lower-2*pi*i*D_analytic; D follows the original angular cut and same-dispersion complex thresholds. K_phase(v_pole)=0; retain det(I-K_cov*J)*Gamma_radial*K_phase to expose Schur denominators. O2 phase is not clamped UET Phi.
+
+VERIFICATION: Fifteen audit checks and 215 linked Topic13/Core/planning tests pass in 319.54 seconds. Poles v=.218903931302-.006968573129i and .374230491486-.003436526694i; last refinement <=4.04e-15, alternative grid/path/seed <2e-15 and Cauchy-Riemann <=3.62e-9. Original cut <=1.81e-15; refined upper reference <=7.68e-16. First 128-point unsplit-reference test failed; 256/512 resolves it without relaxing 1e-9, then full audit rerun. Nested contours are bounded numerical diagnostics, not global stability. Hash/read/unit/negative controls passed. Artifact SHA-256 20f1f5ec4d44e8778d541e57f8e38573edf661c3f30d0ee45eed8559155c238d.
+
+CONTROLLING_BLOCKER: global_domain_truncation_joint_Phi_material_transport_not_closed.
+
+NEXT_ACTION: Derive actual finite-q spectral continuation and check approach to the soft pole at q=.04,.02,.01; declare validity/approximation/action obligations before joint Phi/material/heat-current admission. Do not substitute q*v_pole as a computed result or repeat unchanged roots. Portfolio dates/model policy unchanged.
+
+CLAIM_BOUNDARY: Internally reproduced local collisionless soft pole, not certified stability, material sound, physical collision/Kubo/SK-KMS/heat/entropy, SI scale, holdout validation or full Topic13/UET. No fit/width, filter/clipping, physical threshold change, numeric holdout read or Core-owner edit. Xie prior exposure REVIEW_REQUIRED.
+
 ## 2026-10-01 - Collisionless soft phase kernel and absorptive reactive zero
 
 MAJOR_RESULT_CLOSURE: T13_FIXED_PHI_HARTREE_COLLISIONLESS_SOFT_PHASE_RESPONSE is CLOSED_FOR_LANE. This closes a same-candidate infrared response question, not the full active Goal or Full Topic13.

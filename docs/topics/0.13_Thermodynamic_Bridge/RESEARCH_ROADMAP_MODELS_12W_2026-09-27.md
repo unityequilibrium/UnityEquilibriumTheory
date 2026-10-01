@@ -6,6 +6,16 @@
 
 ## ผลหลักสำหรับพอร์ตและทุนรอบถัดไป
 
+Latest successor (1 October): [local Landau-sheet pole](Result/artifacts/T13_HARTREE_SOFT_POLES_2026-10-01.md)
+closes the candidate's local complex soft-pole calculation, not just its
+reactive zero. Same-cut continuation agrees under independent references,
+seeds/grids/tails and denominator controls. Bounded sampled winding does
+not prove global stability or finite-q pole control. The next result must
+close candidate complex-domain/approximation/action obligations and admit
+joint Phi/material/heat-current input, not repeat the same roots or assign
+a collision time. Full R1/physical acceptance, Goal, dates and model policy
+remain unchanged; earlier evidence below retains its own admission scope.
+
 อัปเดตผลล่าสุด: [collisionless soft response](Result/artifacts/T13_HARTREE_SOFT_COLLECTIVE_2026-10-01.md) derive kernel ในลิมิต z=v*q และตรวจกับ full finite-q response แล้ว เทอม thermal ขึ้นกับ z/q และทั้งสองผู้สมัครมี absorption ที่ reactive zero จึงห้ามแทน dynamic response ด้วยอัตราส่วน stiffness/susceptibility หรือเรียก reactive zero ว่าโหมดไม่ลดทอน งานถัดไปคือ collective complex pole และ validity domain จาก kernel นี้ ตามด้วย approximation/regulator/action และ joint-Phi/material/heat-current admission ไม่เปลี่ยนวันพอร์ต โมเดล หรือรับ R1/Full Topic13 ครบจากผลย่อยนี้
 
 **ข้อเสนอเลือกงาน:** พอร์ตรอบแรกเน้นหนึ่งผลด้าน **stationary/source-complete thermal-response methods พร้อมแผนการวัด** ไม่ตั้งเงื่อนไขว่าต้องปิด Full Topic 13 หรือทำนาย He-II/graphite สำเร็จก่อนมีพอร์ต ผลปิดที่มีหลักฐานแล้วคือ stationary candidate, homogeneous counterterm match, external field response และ rest-frame current consistency ที่ fixed Phi ใน prescription ระบุชัด ตอนนี้ [real-axis successor](Result/artifacts/T13_HARTREE_REAL_AXIS_2026-10-01.md) ผ่าน independent on-shell/PV, vacuum และ Ward พร้อม artifact/hash แล้ว รับได้เฉพาะสิบจุดที่ประกาศ ไม่ใช่ global stability หรือ approximation/physical admission

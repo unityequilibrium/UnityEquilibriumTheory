@@ -8,6 +8,15 @@ description: "Research module for Thermodynamic Bridge within the Unity Equilibr
 
 ## Collisionless Soft Collective Response (2026-10-01)
 
+The [local Landau-sheet successor](Result/artifacts/T13_HARTREE_SOFT_POLES_2026-10-01.md)
+computes simple complex soft poles from the derived thermal cut, not an
+assigned width. Original-cut, alternative grid/tail/seed and denominator
+checks agree at both fixed-Phi witnesses. Bounded winding is a numerical
+diagnostic, not certified global stability. Next: complex-domain/finite-q
+and approximation/action control, then joint Phi/material/heat admission.
+Original/Core and full funding gates remain unchanged; the predecessor
+below retains its original scope.
+
 The [soft-ray successor](Result/artifacts/T13_HARTREE_SOFT_COLLECTIVE_2026-10-01.md)
 derives the thermal z=v*q, q->0 phase/source kernel and verifies it against
 the unchanged full finite-q response. The static susceptibility/stiffness

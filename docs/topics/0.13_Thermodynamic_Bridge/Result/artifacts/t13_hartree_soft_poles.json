@@ -1,0 +1,1479 @@
+{
+  "schema_version": "t13-hartree-local-soft-poles-v1",
+  "generated_at": "2026-10-01T16:26:49.528508+00:00",
+  "major_result_id": "T13_FIXED_PHI_HARTREE_LOCAL_LANDAU_POLE",
+  "topic": "0.13",
+  "branch_id": "t13.candidate.fixed_phi_hartree_ms_finite_potential_v1",
+  "closure_level": "CLOSED_FOR_LANE",
+  "verification_status": "PASS_SCOPED_LOCAL_LANDAU_POLE",
+  "what_is_closed": [
+    "analytic_spectral_density_continuation_of_same_candidate_positive_cut",
+    "simple_collisionless_phase_pole_at_both_fixed_Phi_witnesses",
+    "same_pole_with_independent_seeds_quadrature_grid_and_complex_tail_contour",
+    "sampled_upper_and_local_lower_determinant_winding_diagnostic"
+  ],
+  "equation_or_mapping": "D_ab(v)=sum_j int_{|w_j|>|v|} W_ab,j(k)*v^(n+1)/(2*|w_j|*w_j^n) dk; B_L=B_principal_lower-2*pi*i*D_analytic; K_phase(v_pole)=0; D_full=det(I-K_cov*J)*Gamma_radial*K_phase",
+  "units": {
+    "v_w_pole_inverse_residue": "dimensionless",
+    "k_omega_T_mu": "E",
+    "bubble_density": "dimensionless",
+    "mixed_density": "E",
+    "current_density": "E^2",
+    "uneliminated_soft_determinant": "E^2"
+  },
+  "derivation_class": "LOCAL_CAUCHY_SPECTRAL_CONTINUATION_WITH_COMPLEX_THRESHOLD_QUADRATURE_AND_NUMERICAL_ROOT",
+  "observable": "conditional_phase_resolvent_pole_not_material_sound_or_heat_transport",
+  "data_role": "DERIVED_NO_EMPIRICAL_ROWS",
+  "equation_registry_ids": [
+    "t13.diagnostic.hartree_local_Landau_continuation",
+    "t13.diagnostic.hartree_soft_uneliminated_determinant"
+  ],
+  "examples": [
+    {
+      "T": 0.22,
+      "mu": 1.05,
+      "Phi_fixed": 0.15,
+      "a": 0.23346308945060604,
+      "b": 0.009691508884317981,
+      "s": 0.11673154472530303,
+      "u_canonical": 1.0,
+      "pole_runs": [
+        {
+          "order": 64,
+          "velocity_pole": {
+            "real": 0.21890393130178074,
+            "imaginary": -0.006968573129460295
+          },
+          "inverse_residual": 9.7318525805613e-16,
+          "radial_inverse": {
+            "real": 0.21990256252667817,
+            "imaginary": -0.02054240396321624
+          },
+          "covariance_determinant": {
+            "real": 1.1689156210767875,
+            "imaginary": 0.10615029171523374
+          },
+          "covariance_min_singular_value": 1.0118110804441174,
+          "uneliminated_determinant_residual": 2.52277829067425e-16,
+          "zero_order_phase_Ward_residual": 4.515485208726989e-15
+        },
+        {
+          "order": 96,
+          "velocity_pole": {
+            "real": 0.21890393130179708,
+            "imaginary": -0.006968573129433687
+          },
+          "inverse_residual": 7.202600206656894e-16,
+          "radial_inverse": {
+            "real": 0.21990256252678764,
+            "imaginary": -0.02054240396301968
+          },
+          "covariance_determinant": {
+            "real": 1.1689156210763294,
+            "imaginary": 0.10615029171330966
+          },
+          "covariance_min_singular_value": 1.0118110804441192,
+          "uneliminated_determinant_residual": 1.8671227587285922e-16,
+          "zero_order_phase_Ward_residual": 4.515485226521613e-15
+        },
+        {
+          "order": 128,
+          "velocity_pole": {
+            "real": 0.21890393130179722,
+            "imaginary": -0.006968573129433673
+          },
+          "inverse_residual": 5.350014950999286e-16,
+          "radial_inverse": {
+            "real": 0.21990256252678755,
+            "imaginary": -0.020542403963020338
+          },
+          "covariance_determinant": {
+            "real": 1.1689156210763305,
+            "imaginary": 0.10615029171331557
+          },
+          "covariance_min_singular_value": 1.0118110804441185,
+          "uneliminated_determinant_residual": 1.3868789587011516e-16,
+          "zero_order_phase_Ward_residual": 4.5154852170680095e-15
+        }
+      ],
+      "pole_refinements": [
+        3.1228942712234173e-14,
+        1.3955901575677741e-16
+      ],
+      "second_seed_disagreement": 2.513149765336985e-16,
+      "alternate_grid_disagreement": 1.474514954580286e-17,
+      "alternate_contour_disagreement": 2.2551405187698492e-17,
+      "principal_lower_negative_control_residual": 0.12388304063225525,
+      "spectral_jump_checks": [
+        {
+          "velocity_ray": 0.2,
+          "independent_original_angular_cut_errors": {
+            "bubble": 4.198030811863873e-16,
+            "mixed": 1.2490009027033011e-15,
+            "reverse": 1.2490009027033011e-15,
+            "loop_current": 1.8041124150158794e-15
+          },
+          "threshold_checks": [
+            {
+              "positive_branch": 2,
+              "threshold_k": [
+                0.12777072601418707,
+                0.0
+              ],
+              "velocity_root_residual": 2.7755575615628914e-17,
+              "minimum_energy_real": 0.037264924931826884,
+              "minimum_Bose_denominator": 0.15581703306892578
+            },
+            {
+              "positive_branch": 3,
+              "threshold_k": [
+                0.22603031921856379,
+                0.0
+              ],
+              "velocity_root_residual": 0.0,
+              "minimum_energy_real": 2.17985649525874,
+              "minimum_Bose_denominator": 0.9999502469412985
+            }
+          ]
+        },
+        {
+          "velocity_ray": 0.3,
+          "independent_original_angular_cut_errors": {
+            "bubble": 2.2898349882893854e-16,
+            "mixed": 6.730727086790012e-16,
+            "reverse": 6.730727086790012e-16,
+            "loop_current": 1.1518563880486e-15
+          },
+          "threshold_checks": [
+            {
+              "positive_branch": 2,
+              "threshold_k": [
+                0.2803341757681581,
+                0.0
+              ],
+              "velocity_root_residual": 3.3306690738754696e-16,
+              "minimum_energy_real": 0.07574783221850391,
+              "minimum_Bose_denominator": 0.2912896210833712
+            },
+            {
+              "positive_branch": 3,
+              "threshold_k": [
+                0.34823256272588066,
+                0.0
+              ],
+              "velocity_root_residual": 0.0,
+              "minimum_energy_real": 2.2104979268389044,
+              "minimum_Bose_denominator": 0.9999567155820049
+            }
+          ]
+        },
+        {
+          "velocity_ray": 0.4,
+          "independent_original_angular_cut_errors": {
+            "bubble": 1.2836953722228372e-16,
+            "mixed": 4.0939474033052647e-16,
+            "reverse": 4.0939474033052647e-16,
+            "loop_current": 7.355227538141662e-16
+          },
+          "threshold_checks": [
+            {
+              "positive_branch": 2,
+              "threshold_k": [
+                0.4427205784537475,
+                0.0
+              ],
+              "velocity_root_residual": 0.0,
+              "minimum_energy_real": 0.13259103204075834,
+              "minimum_Bose_denominator": 0.4526607727516296
+            },
+            {
+              "positive_branch": 3,
+              "threshold_k": [
+                0.48326334827535805,
+                0.0
+              ],
+              "velocity_root_residual": 0.0,
+              "minimum_energy_real": 2.257902941861485,
+              "minimum_Bose_denominator": 0.9999651059834942
+            }
+          ]
+        }
+      ],
+      "local_tail_checks_at_pole": [
+        {
+          "positive_branch": 2,
+          "threshold_k": [
+            0.1522520202102174,
+            -0.009715013792061552
+          ],
+          "velocity_root_residual": 1.942890293094024e-16,
+          "minimum_energy_real": 0.042363825036877016,
+          "minimum_Bose_denominator": 0.17537732946768567
+        },
+        {
+          "positive_branch": 3,
+          "threshold_k": [
+            0.2484010852712319,
+            -0.008305860748186449
+          ],
+          "velocity_root_residual": 2.7755575615628914e-17,
+          "minimum_energy_real": 2.184515144169722,
+          "minimum_Bose_denominator": 0.9999512910840285
+        }
+      ],
+      "analytic_derivative": {
+        "step": 1e-05,
+        "derivative": {
+          "real": -8.875097325651854,
+          "imaginary": -0.47757751793714326
+        },
+        "Cauchy_Riemann_disagreement": 3.614237182097951e-09,
+        "derivative_refinement": 1.2336167859291248e-09,
+        "nonzero_derivative_modulus": 8.887937489959732,
+        "local_inverse_residue_in_v": {
+          "real": -0.11234949930921344,
+          "imaginary": 0.006045634549436794
+        },
+        "linearization_errors": [
+          1.694856839328736e-09,
+          1.6948812543541162e-09,
+          3.3897491704290578e-09
+        ]
+      },
+      "independent_upper_reference": {
+        "velocity_ray": {
+          "real": 0.3,
+          "imaginary": 0.02
+        },
+        "runs": [
+          {
+            "original_unsplit_order": 128,
+            "loop_disagreements": {
+              "bubble": 1.1467161834040413e-07,
+              "mixed": 3.6057105081152093e-07,
+              "reverse": 3.605710508006617e-07,
+              "loop_current": 5.666131530245313e-07
+            }
+          },
+          {
+            "original_unsplit_order": 256,
+            "loop_disagreements": {
+              "bubble": 1.2945469212135064e-11,
+              "mixed": 4.0518944982794745e-11,
+              "reverse": 4.0518944982794745e-11,
+              "loop_current": 6.399070824665308e-11
+            }
+          },
+          {
+            "original_unsplit_order": 512,
+            "loop_disagreements": {
+              "bubble": 6.59423134456307e-17,
+              "mixed": 6.658807862121803e-16,
+              "reverse": 6.504819819040922e-16,
+              "loop_current": 7.676812899781356e-16
+            }
+          }
+        ]
+      },
+      "continuation_boundaries": [
+        {
+          "velocity_ray": 0.2,
+          "real_axis_inverse": {
+            "real": 0.16543536058728747,
+            "imaginary": -0.04874518508644562
+          },
+          "runs": [
+            {
+              "eta_verification_only": 0.002,
+              "above_error_from_real_axis": 0.016453417128494727,
+              "below_error_from_real_axis": 0.01645697608881005,
+              "upper_lower_difference": 0.03291008693621131
+            },
+            {
+              "eta_verification_only": 0.001,
+              "above_error_from_real_axis": 0.008227061958161443,
+              "below_error_from_real_axis": 0.008227951428530916,
+              "upper_lower_difference": 0.01645497510051383
+            },
+            {
+              "eta_verification_only": 0.0005,
+              "above_error_from_real_axis": 0.004113630716057493,
+              "below_error_from_real_axis": 0.00411385307573892,
+              "upper_lower_difference": 0.008227479006051423
+            }
+          ]
+        },
+        {
+          "velocity_ray": 0.3,
+          "real_axis_inverse": {
+            "real": -0.8286618231067661,
+            "imaginary": -0.12060543085444665
+          },
+          "runs": [
+            {
+              "eta_verification_only": 0.002,
+              "above_error_from_real_axis": 0.023458634528165438,
+              "below_error_from_real_axis": 0.023442485422927848,
+              "upper_lower_difference": 0.046900899699301515
+            },
+            {
+              "eta_verification_only": 0.001,
+              "above_error_from_real_axis": 0.01172726778548172,
+              "below_error_from_real_axis": 0.011723230609608384,
+              "upper_lower_difference": 0.023450470864510714
+            },
+            {
+              "eta_verification_only": 0.0005,
+              "above_error_from_real_axis": 0.005863125384953133,
+              "below_error_from_real_axis": 0.0058621161151597625,
+              "upper_lower_difference": 0.011725238059217062
+            }
+          ]
+        },
+        {
+          "velocity_ray": 0.4,
+          "real_axis_inverse": {
+            "real": -2.182997020186539,
+            "imaginary": -0.1760376575106109
+          },
+          "runs": [
+            {
+              "eta_verification_only": 0.002,
+              "above_error_from_real_axis": 0.030843467186427435,
+              "below_error_from_real_axis": 0.030825422408481636,
+              "upper_lower_difference": 0.061668703427278586
+            },
+            {
+              "eta_verification_only": 0.001,
+              "above_error_from_real_axis": 0.01541945253432461,
+              "below_error_from_real_axis": 0.015414941341463113,
+              "upper_lower_difference": 0.030834370606744547
+            },
+            {
+              "eta_verification_only": 0.0005,
+              "above_error_from_real_axis": 0.007709159195185225,
+              "below_error_from_real_axis": 0.007708031377494313,
+              "upper_lower_difference": 0.015417187665017328
+            }
+          ]
+        }
+      ],
+      "upper_contour": [
+        {
+          "bounds": [
+            -1.5,
+            1.5,
+            0.002,
+            0.5
+          ],
+          "steps_per_edge": 64,
+          "phase": {
+            "sampled_winding": -1.4135798584282297e-16,
+            "maximum_phase_increment": 2.33755810639489,
+            "minimum_boundary_modulus": 0.16368750763415224,
+            "certified_zero_count": false
+          },
+          "uneliminated": {
+            "sampled_winding": 1.4135798584282297e-16,
+            "maximum_phase_increment": 2.3516385682566496,
+            "minimum_boundary_modulus": 0.04258560046783998,
+            "certified_zero_count": false
+          },
+          "covariance": {
+            "sampled_winding": 1.483982761533542e-18,
+            "maximum_phase_increment": 0.03532905079864141,
+            "minimum_boundary_modulus": 1.1393383334372278,
+            "certified_zero_count": false
+          },
+          "radial": {
+            "sampled_winding": 1.311426626471502e-18,
+            "maximum_phase_increment": 0.025841040999573447,
+            "minimum_boundary_modulus": 0.2052175662830303,
+            "certified_zero_count": false
+          },
+          "minimum_covariance_singular_value": 0.9923694476215585,
+          "classification": "SAMPLED_ARGUMENT_PRINCIPLE_NOT_CERTIFIED"
+        },
+        {
+          "bounds": [
+            -1.5,
+            1.5,
+            0.002,
+            0.5
+          ],
+          "steps_per_edge": 128,
+          "phase": {
+            "sampled_winding": -1.4135798584282297e-16,
+            "maximum_phase_increment": 1.772362146459643,
+            "minimum_boundary_modulus": 0.10496118293338381,
+            "certified_zero_count": false
+          },
+          "uneliminated": {
+            "sampled_winding": 0.0,
+            "maximum_phase_increment": 1.7794368949312762,
+            "minimum_boundary_modulus": 0.027293919924913947,
+            "certified_zero_count": false
+          },
+          "covariance": {
+            "sampled_winding": -4.38292583057581e-18,
+            "maximum_phase_increment": 0.017920215023500764,
+            "minimum_boundary_modulus": 1.1393383334372278,
+            "certified_zero_count": false
+          },
+          "radial": {
+            "sampled_winding": -6.90224540248159e-20,
+            "maximum_phase_increment": 0.012986820475283083,
+            "minimum_boundary_modulus": 0.2052175662830303,
+            "certified_zero_count": false
+          },
+          "minimum_covariance_singular_value": 0.9923694476215585,
+          "classification": "SAMPLED_ARGUMENT_PRINCIPLE_NOT_CERTIFIED"
+        },
+        {
+          "bounds": [
+            -1.5,
+            1.5,
+            0.002,
+            0.5
+          ],
+          "steps_per_edge": 256,
+          "phase": {
+            "sampled_winding": -4.240739575284689e-16,
+            "maximum_phase_increment": 1.1226466697644648,
+            "minimum_boundary_modulus": 0.0870313859238637,
+            "certified_zero_count": false
+          },
+          "uneliminated": {
+            "sampled_winding": 0.0,
+            "maximum_phase_increment": 1.1262692878104825,
+            "minimum_boundary_modulus": 0.02262949887491628,
+            "certified_zero_count": false
+          },
+          "covariance": {
+            "sampled_winding": 4.279392149538586e-18,
+            "maximum_phase_increment": 0.008991627827210092,
+            "minimum_boundary_modulus": 1.1393383334372278,
+            "certified_zero_count": false
+          },
+          "radial": {
+            "sampled_winding": -1.0353368103722386e-18,
+            "maximum_phase_increment": 0.006501409193534783,
+            "minimum_boundary_modulus": 0.2052175662830303,
+            "certified_zero_count": false
+          },
+          "minimum_covariance_singular_value": 0.9923694476215585,
+          "classification": "SAMPLED_ARGUMENT_PRINCIPLE_NOT_CERTIFIED"
+        },
+        {
+          "bounds": [
+            -1.5,
+            1.5,
+            0.002,
+            0.5
+          ],
+          "steps_per_edge": 512,
+          "phase": {
+            "sampled_winding": 1.4135798584282297e-16,
+            "maximum_phase_increment": 0.6271138568206776,
+            "minimum_boundary_modulus": 0.08154345930801087,
+            "certified_zero_count": false
+          },
+          "uneliminated": {
+            "sampled_winding": 1.4135798584282297e-16,
+            "maximum_phase_increment": 0.6289148095620162,
+            "minimum_boundary_modulus": 0.02120163292897862,
+            "certified_zero_count": false
+          },
+          "covariance": {
+            "sampled_winding": -9.663143563474227e-19,
+            "maximum_phase_increment": 0.0044997402313144245,
+            "minimum_boundary_modulus": 1.1393383334372278,
+            "certified_zero_count": false
+          },
+          "radial": {
+            "sampled_winding": 6.902245402481591e-19,
+            "maximum_phase_increment": 0.0032516956005992363,
+            "minimum_boundary_modulus": 0.2052175662830303,
+            "certified_zero_count": false
+          },
+          "minimum_covariance_singular_value": 0.9923671562477187,
+          "classification": "SAMPLED_ARGUMENT_PRINCIPLE_NOT_CERTIFIED"
+        }
+      ],
+      "local_lower_contour": [
+        {
+          "bounds": [
+            0.12,
+            0.58,
+            -0.02,
+            -0.0005
+          ],
+          "steps_per_edge": 64,
+          "phase": {
+            "sampled_winding": 1.0,
+            "maximum_phase_increment": 0.9616120647983762,
+            "minimum_boundary_modulus": 0.05968833829592724,
+            "certified_zero_count": false
+          },
+          "uneliminated": {
+            "sampled_winding": 1.0000000000000002,
+            "maximum_phase_increment": 0.963926566115713,
+            "minimum_boundary_modulus": 0.015507182445131518,
+            "certified_zero_count": false
+          },
+          "covariance": {
+            "sampled_winding": 1.766974823035287e-17,
+            "maximum_phase_increment": 0.004015065942434004,
+            "minimum_boundary_modulus": 1.1363790614352447,
+            "certified_zero_count": false
+          },
+          "radial": {
+            "sampled_winding": 1.1043592643970545e-18,
+            "maximum_phase_increment": 0.0038130529078811066,
+            "minimum_boundary_modulus": 0.20759787905875474,
+            "certified_zero_count": false
+          },
+          "minimum_covariance_singular_value": 0.9912809748801619,
+          "classification": "SAMPLED_ARGUMENT_PRINCIPLE_NOT_CERTIFIED"
+        },
+        {
+          "bounds": [
+            0.12,
+            0.58,
+            -0.02,
+            -0.0005
+          ],
+          "steps_per_edge": 128,
+          "phase": {
+            "sampled_winding": 1.0,
+            "maximum_phase_increment": 0.5418654498476119,
+            "minimum_boundary_modulus": 0.059631666412099445,
+            "certified_zero_count": false
+          },
+          "uneliminated": {
+            "sampled_winding": 1.0,
+            "maximum_phase_increment": 0.5430101354506368,
+            "minimum_boundary_modulus": 0.01549213476988251,
+            "certified_zero_count": false
+          },
+          "covariance": {
+            "sampled_winding": 1.766974823035287e-17,
+            "maximum_phase_increment": 0.002007681476071915,
+            "minimum_boundary_modulus": 1.1363790614352447,
+            "certified_zero_count": false
+          },
+          "radial": {
+            "sampled_winding": 3.3130777931911632e-18,
+            "maximum_phase_increment": 0.0019220986659546097,
+            "minimum_boundary_modulus": 0.20759787905875474,
+            "certified_zero_count": false
+          },
+          "minimum_covariance_singular_value": 0.9912809748801619,
+          "classification": "SAMPLED_ARGUMENT_PRINCIPLE_NOT_CERTIFIED"
+        },
+        {
+          "bounds": [
+            0.12,
+            0.58,
+            -0.02,
+            -0.0005
+          ],
+          "steps_per_edge": 256,
+          "phase": {
+            "sampled_winding": 1.0,
+            "maximum_phase_increment": 0.27171518159955244,
+            "minimum_boundary_modulus": 0.057482029668878463,
+            "certified_zero_count": false
+          },
+          "uneliminated": {
+            "sampled_winding": 1.0,
+            "maximum_phase_increment": 0.27228133402132365,
+            "minimum_boundary_modulus": 0.014933820531159355,
+            "certified_zero_count": false
+          },
+          "covariance": {
+            "sampled_winding": 5.0800526162264503e-17,
+            "maximum_phase_increment": 0.0010047735669250386,
+            "minimum_boundary_modulus": 1.13637872135666,
+            "certified_zero_count": false
+          },
+          "radial": {
+            "sampled_winding": -1.8774107494749925e-17,
+            "maximum_phase_increment": 0.0009647803326460212,
+            "minimum_boundary_modulus": 0.20759787905875474,
+            "certified_zero_count": false
+          },
+          "minimum_covariance_singular_value": 0.9912809748801619,
+          "classification": "SAMPLED_ARGUMENT_PRINCIPLE_NOT_CERTIFIED"
+        },
+        {
+          "bounds": [
+            0.12,
+            0.58,
+            -0.02,
+            -0.0005
+          ],
+          "steps_per_edge": 512,
+          "phase": {
+            "sampled_winding": 1.0,
+            "maximum_phase_increment": 0.1382204260507839,
+            "minimum_boundary_modulus": 0.057482029668878463,
+            "certified_zero_count": false
+          },
+          "uneliminated": {
+            "sampled_winding": 1.0,
+            "maximum_phase_increment": 0.13850199372561697,
+            "minimum_boundary_modulus": 0.014933820531159355,
+            "certified_zero_count": false
+          },
+          "covariance": {
+            "sampled_winding": 8.834874115176436e-18,
+            "maximum_phase_increment": 0.0005025039199218789,
+            "minimum_boundary_modulus": 1.13637872135666,
+            "certified_zero_count": false
+          },
+          "radial": {
+            "sampled_winding": -9.93923337957349e-18,
+            "maximum_phase_increment": 0.00048330336058009413,
+            "minimum_boundary_modulus": 0.20759787905875474,
+            "certified_zero_count": false
+          },
+          "minimum_covariance_singular_value": 0.9912809748801619,
+          "classification": "SAMPLED_ARGUMENT_PRINCIPLE_NOT_CERTIFIED"
+        }
+      ],
+      "pole_in_v_not_physical_mode_speed": true
+    },
+    {
+      "T": 0.22,
+      "mu": 1.2,
+      "Phi_fixed": 0.15,
+      "a": 0.8998337744103163,
+      "b": 0.012470671054547374,
+      "s": 0.449916887205158,
+      "u_canonical": 1.0,
+      "pole_runs": [
+        {
+          "order": 64,
+          "velocity_pole": {
+            "real": 0.37423049148624254,
+            "imaginary": -0.0034365266937660607
+          },
+          "inverse_residual": 3.3831023666420523e-15,
+          "radial_inverse": {
+            "real": 0.9319599462260627,
+            "imaginary": -0.03754233122092096
+          },
+          "covariance_determinant": {
+            "real": 1.061531684504499,
+            "imaginary": 0.05584205540814738
+          },
+          "covariance_min_singular_value": 0.9845362828618445,
+          "uneliminated_determinant_residual": 3.354266136482367e-15,
+          "zero_order_phase_Ward_residual": 3.641704993118614e-13
+        },
+        {
+          "order": 96,
+          "velocity_pole": {
+            "real": 0.3742304914863976,
+            "imaginary": -0.0034365266936732756
+          },
+          "inverse_residual": 2.686837029741276e-15,
+          "radial_inverse": {
+            "real": 0.931959946226972,
+            "imaginary": -0.037542331220392466
+          },
+          "covariance_determinant": {
+            "real": 1.0615316845040672,
+            "imaginary": 0.05584205540776348
+          },
+          "covariance_min_singular_value": 0.9845362828615619,
+          "uneliminated_determinant_residual": 2.6639354906834017e-15,
+          "zero_order_phase_Ward_residual": 3.641704993119817e-13
+        },
+        {
+          "order": 128,
+          "velocity_pole": {
+            "real": 0.3742304914863954,
+            "imaginary": -0.003436526693676681
+          },
+          "inverse_residual": 3.7981482738643345e-15,
+          "radial_inverse": {
+            "real": 0.9319599462269563,
+            "imaginary": -0.037542331220413276
+          },
+          "covariance_determinant": {
+            "real": 1.0615316845040743,
+            "imaginary": 0.055842055407778216
+          },
+          "covariance_min_singular_value": 0.984536282861567,
+          "uneliminated_determinant_residual": 3.7657743561020194e-15,
+          "zero_order_phase_Ward_residual": 3.6417049931185504e-13
+        }
+      ],
+      "pole_refinements": [
+        1.8068565741594634e-13,
+        4.035189419341193e-15
+      ],
+      "second_seed_disagreement": 7.28550816809042e-16,
+      "alternate_grid_disagreement": 1.7601488241710149e-15,
+      "alternate_contour_disagreement": 1.1104347626709818e-16,
+      "principal_lower_negative_control_residual": 0.036415493711889985,
+      "spectral_jump_checks": [
+        {
+          "velocity_ray": 0.2,
+          "independent_original_angular_cut_errors": {
+            "bubble": 2.8102520310824275e-16,
+            "mixed": 9.853229343548264e-16,
+            "reverse": 9.853229343548264e-16,
+            "loop_current": 1.6237011735142914e-15
+          },
+          "threshold_checks": [
+            {
+              "positive_branch": 2,
+              "threshold_k": [
+                0.07084019615372594,
+                0.0
+              ],
+              "velocity_root_residual": 1.3877787807814457e-16,
+              "minimum_energy_real": 0.048693567751312006,
+              "minimum_Bose_denominator": 0.1985513680414059
+            },
+            {
+              "positive_branch": 3,
+              "threshold_k": [
+                0.28286502153397985,
+                0.0
+              ],
+              "velocity_root_residual": 0.0,
+              "minimum_energy_real": 2.6113502804858526,
+              "minimum_Bose_denominator": 0.9999930012150476
+            }
+          ]
+        },
+        {
+          "velocity_ray": 0.3,
+          "independent_original_angular_cut_errors": {
+            "bubble": 2.949029909160572e-16,
+            "mixed": 9.922618282587337e-16,
+            "reverse": 9.992007221626409e-16,
+            "loop_current": 1.762479051592436e-15
+          },
+          "threshold_checks": [
+            {
+              "positive_branch": 2,
+              "threshold_k": [
+                0.14334796374493797,
+                0.0
+              ],
+              "velocity_root_residual": 1.1102230246251565e-16,
+              "minimum_energy_real": 0.06733591949677534,
+              "minimum_Bose_denominator": 0.26366666454517934
+            },
+            {
+              "positive_branch": 3,
+              "threshold_k": [
+                0.4357703063321787,
+                0.0
+              ],
+              "velocity_root_residual": 0.0,
+              "minimum_energy_real": 2.6496891004550056,
+              "minimum_Bose_denominator": 0.999994120514887
+            }
+          ]
+        },
+        {
+          "velocity_ray": 0.4,
+          "independent_original_angular_cut_errors": {
+            "bubble": 1.3704315460216776e-16,
+            "mixed": 4.649058915617843e-16,
+            "reverse": 4.718447854656915e-16,
+            "loop_current": 9.159339953157541e-16
+          },
+          "threshold_checks": [
+            {
+              "positive_branch": 2,
+              "threshold_k": [
+                0.3444053070488792,
+                0.0
+              ],
+              "velocity_root_residual": 5.551115123125783e-17,
+              "minimum_energy_real": 0.13923991574800415,
+              "minimum_Bose_denominator": 0.4689551021609764
+            },
+            {
+              "positive_branch": 3,
+              "threshold_k": [
+                0.6046935501850176,
+                0.0
+              ],
+              "velocity_root_residual": 0.0,
+              "minimum_energy_real": 2.7089913524867852,
+              "minimum_Bose_denominator": 0.9999955097270021
+            }
+          ]
+        }
+      ],
+      "local_tail_checks_at_pole": [
+        {
+          "positive_branch": 2,
+          "threshold_k": [
+            0.27567420687598676,
+            -0.008625074645595072
+          ],
+          "velocity_root_residual": 5.552639573108236e-17,
+          "minimum_energy_real": 0.11260217806863188,
+          "minimum_Bose_denominator": 0.4007621928083236
+        },
+        {
+          "positive_branch": 3,
+          "threshold_k": [
+            0.5591382404873724,
+            -0.005968744984326095
+          ],
+          "velocity_root_residual": 1.1102569054260746e-16,
+          "minimum_energy_real": 2.691339970321984,
+          "minimum_Bose_denominator": 0.9999951348599757
+        }
+      ],
+      "analytic_derivative": {
+        "step": 1e-05,
+        "derivative": {
+          "real": -5.295502958437808,
+          "imaginary": -0.06527012691079839
+        },
+        "Cauchy_Riemann_disagreement": 7.404614779098226e-10,
+        "derivative_refinement": 3.6226449369941856e-10,
+        "nonzero_derivative_modulus": 5.295905189133443,
+        "local_inverse_residue_in_v": {
+          "real": -0.18881079117263125,
+          "imaginary": 0.0023272018538540162
+        },
+        "linearization_errors": [
+          6.583308298247975e-10,
+          6.583258830087435e-10,
+          1.3166592368024608e-09
+        ]
+      },
+      "independent_upper_reference": {
+        "velocity_ray": {
+          "real": 0.3,
+          "imaginary": 0.02
+        },
+        "runs": [
+          {
+            "original_unsplit_order": 128,
+            "loop_disagreements": {
+              "bubble": 2.645089371269031e-08,
+              "mixed": 9.144249529920851e-08,
+              "reverse": 9.144249530817187e-08,
+              "loop_current": 1.5801887574431263e-07
+            }
+          },
+          {
+            "original_unsplit_order": 256,
+            "loop_disagreements": {
+              "bubble": 8.852147287916076e-13,
+              "mixed": 3.073049081629935e-12,
+              "reverse": 3.073034989599638e-12,
+              "loop_current": 5.2851359356251934e-12
+            }
+          },
+          {
+            "original_unsplit_order": 512,
+            "loop_disagreements": {
+              "bubble": 8.306771863290152e-17,
+              "mixed": 3.003026301015899e-16,
+              "reverse": 2.8313748239171495e-16,
+              "loop_current": 5.275385075650456e-16
+            }
+          }
+        ]
+      },
+      "continuation_boundaries": [
+        {
+          "velocity_ray": 0.2,
+          "real_axis_inverse": {
+            "real": 0.7181446803259839,
+            "imaginary": -0.0029478203474941557
+          },
+          "runs": [
+            {
+              "eta_verification_only": 0.002,
+              "above_error_from_real_axis": 0.0058040996421375,
+              "below_error_from_real_axis": 0.005805012860496536,
+              "upper_lower_difference": 0.011608970973574781
+            },
+            {
+              "eta_verification_only": 0.001,
+              "above_error_from_real_axis": 0.002902135784830737,
+              "below_error_from_real_axis": 0.002902364085456062,
+              "upper_lower_difference": 0.0058044821790860165
+            },
+            {
+              "eta_verification_only": 0.0005,
+              "above_error_from_real_axis": 0.001451092906228277,
+              "below_error_from_real_axis": 0.0014511499812428048,
+              "upper_lower_difference": 0.0029022406760691438
+            }
+          ]
+        },
+        {
+          "velocity_ray": 0.3,
+          "real_axis_inverse": {
+            "real": 0.3570879713759948,
+            "imaginary": -0.009959611014739404
+          },
+          "runs": [
+            {
+              "eta_verification_only": 0.002,
+              "above_error_from_real_axis": 0.008619425031156328,
+              "below_error_from_real_axis": 0.008620410673955277,
+              "upper_lower_difference": 0.017239748706540617
+            },
+            {
+              "eta_verification_only": 0.001,
+              "above_error_from_real_axis": 0.004309813835973451,
+              "below_error_from_real_axis": 0.004310060202429887,
+              "upper_lower_difference": 0.008619863163600854
+            },
+            {
+              "eta_verification_only": 0.0005,
+              "above_error_from_real_axis": 0.002154934976176421,
+              "below_error_from_real_axis": 0.0021549965663042766,
+              "upper_lower_difference": 0.004309930183134574
+            }
+          ]
+        },
+        {
+          "velocity_ray": 0.4,
+          "real_axis_inverse": {
+            "real": -0.14062448114614418,
+            "imaginary": -0.020855555412967765
+          },
+          "runs": [
+            {
+              "eta_verification_only": 0.002,
+              "above_error_from_real_axis": 0.01128692079535987,
+              "below_error_from_real_axis": 0.011282980249140392,
+              "upper_lower_difference": 0.02256983627109262
+            },
+            {
+              "eta_verification_only": 0.001,
+              "above_error_from_real_axis": 0.005642961902601062,
+              "below_error_from_real_axis": 0.005641976858186015,
+              "upper_lower_difference": 0.01128493066421646
+            },
+            {
+              "eta_verification_only": 0.0005,
+              "above_error_from_real_axis": 0.0028213570809198806,
+              "below_error_from_real_axis": 0.0028211108290869796,
+              "upper_lower_difference": 0.0056424668979753075
+            }
+          ]
+        }
+      ],
+      "upper_contour": [
+        {
+          "bounds": [
+            -1.5,
+            1.5,
+            0.002,
+            0.5
+          ],
+          "steps_per_edge": 64,
+          "phase": {
+            "sampled_winding": -1.4135798584282297e-16,
+            "maximum_phase_increment": 1.596042567288006,
+            "minimum_boundary_modulus": 0.02911651351704514,
+            "certified_zero_count": false
+          },
+          "uneliminated": {
+            "sampled_winding": 0.0,
+            "maximum_phase_increment": 1.6098393658605563,
+            "minimum_boundary_modulus": 0.028914155351583308,
+            "certified_zero_count": false
+          },
+          "covariance": {
+            "sampled_winding": 2.139696074769293e-18,
+            "maximum_phase_increment": 0.020602296457402188,
+            "minimum_boundary_modulus": 1.0649556375339053,
+            "certified_zero_count": false
+          },
+          "radial": {
+            "sampled_winding": -2.139696074769293e-18,
+            "maximum_phase_increment": 0.009658935173489237,
+            "minimum_boundary_modulus": 0.8775189076187302,
+            "certified_zero_count": false
+          },
+          "minimum_covariance_singular_value": 0.982010126510656,
+          "classification": "SAMPLED_ARGUMENT_PRINCIPLE_NOT_CERTIFIED"
+        },
+        {
+          "bounds": [
+            -1.5,
+            1.5,
+            0.002,
+            0.5
+          ],
+          "steps_per_edge": 128,
+          "phase": {
+            "sampled_winding": -1.4135798584282297e-16,
+            "maximum_phase_increment": 1.477338955625211,
+            "minimum_boundary_modulus": 0.02911651351704514,
+            "certified_zero_count": false
+          },
+          "uneliminated": {
+            "sampled_winding": -1.4135798584282297e-16,
+            "maximum_phase_increment": 1.4842301765465014,
+            "minimum_boundary_modulus": 0.028914155351583308,
+            "certified_zero_count": false
+          },
+          "covariance": {
+            "sampled_winding": 6.488110678332695e-18,
+            "maximum_phase_increment": 0.010785926026780763,
+            "minimum_boundary_modulus": 1.0641882787096262,
+            "certified_zero_count": false
+          },
+          "radial": {
+            "sampled_winding": 8.627806753101987e-19,
+            "maximum_phase_increment": 0.00484116119507377,
+            "minimum_boundary_modulus": 0.8775189076187302,
+            "certified_zero_count": false
+          },
+          "minimum_covariance_singular_value": 0.982010126510656,
+          "classification": "SAMPLED_ARGUMENT_PRINCIPLE_NOT_CERTIFIED"
+        },
+        {
+          "bounds": [
+            -1.5,
+            1.5,
+            0.002,
+            0.5
+          ],
+          "steps_per_edge": 256,
+          "phase": {
+            "sampled_winding": 0.0,
+            "maximum_phase_increment": 1.2512804669439688,
+            "minimum_boundary_modulus": 0.02911651351704514,
+            "certified_zero_count": false
+          },
+          "uneliminated": {
+            "sampled_winding": -2.8271597168564594e-16,
+            "maximum_phase_increment": 1.2546334052818435,
+            "minimum_boundary_modulus": 0.028914155351583308,
+            "certified_zero_count": false
+          },
+          "covariance": {
+            "sampled_winding": -2.174207301781701e-18,
+            "maximum_phase_increment": 0.00539664863675878,
+            "minimum_boundary_modulus": 1.0641882787096262,
+            "certified_zero_count": false
+          },
+          "radial": {
+            "sampled_winding": -2.86443184202986e-18,
+            "maximum_phase_increment": 0.0024220230276089465,
+            "minimum_boundary_modulus": 0.8775189076187302,
+            "certified_zero_count": false
+          },
+          "minimum_covariance_singular_value": 0.982010126510656,
+          "classification": "SAMPLED_ARGUMENT_PRINCIPLE_NOT_CERTIFIED"
+        },
+        {
+          "bounds": [
+            -1.5,
+            1.5,
+            0.002,
+            0.5
+          ],
+          "steps_per_edge": 512,
+          "phase": {
+            "sampled_winding": -1.4135798584282297e-16,
+            "maximum_phase_increment": 0.893472129276733,
+            "minimum_boundary_modulus": 0.02911651351704514,
+            "certified_zero_count": false
+          },
+          "uneliminated": {
+            "sampled_winding": 1.4135798584282297e-16,
+            "maximum_phase_increment": 0.8951149665571663,
+            "minimum_boundary_modulus": 0.028914155351583308,
+            "certified_zero_count": false
+          },
+          "covariance": {
+            "sampled_winding": 1.43221592101493e-17,
+            "maximum_phase_increment": 0.0027149954390585135,
+            "minimum_boundary_modulus": 1.0641882787096262,
+            "certified_zero_count": false
+          },
+          "radial": {
+            "sampled_winding": 5.866908592109352e-18,
+            "maximum_phase_increment": 0.0012111912163396703,
+            "minimum_boundary_modulus": 0.8775189076187302,
+            "certified_zero_count": false
+          },
+          "minimum_covariance_singular_value": 0.982010126510656,
+          "classification": "SAMPLED_ARGUMENT_PRINCIPLE_NOT_CERTIFIED"
+        }
+      ],
+      "local_lower_contour": [
+        {
+          "bounds": [
+            0.12,
+            0.58,
+            -0.02,
+            -0.0005
+          ],
+          "steps_per_edge": 64,
+          "phase": {
+            "sampled_winding": 1.0,
+            "maximum_phase_increment": 1.7325954334735905,
+            "minimum_boundary_modulus": 0.02094592223322803,
+            "certified_zero_count": false
+          },
+          "uneliminated": {
+            "sampled_winding": 1.0,
+            "maximum_phase_increment": 1.7346268582700142,
+            "minimum_boundary_modulus": 0.020783040790066373,
+            "certified_zero_count": false
+          },
+          "covariance": {
+            "sampled_winding": -1.4356670437161707e-17,
+            "maximum_phase_increment": 0.004949458703492274,
+            "minimum_boundary_modulus": 1.052962887739624,
+            "certified_zero_count": false
+          },
+          "radial": {
+            "sampled_winding": -2.208718528794109e-18,
+            "maximum_phase_increment": 0.0018982139754785052,
+            "minimum_boundary_modulus": 0.8789661178023928,
+            "certified_zero_count": false
+          },
+          "minimum_covariance_singular_value": 0.9815796860336585,
+          "classification": "SAMPLED_ARGUMENT_PRINCIPLE_NOT_CERTIFIED"
+        },
+        {
+          "bounds": [
+            0.12,
+            0.58,
+            -0.02,
+            -0.0005
+          ],
+          "steps_per_edge": 128,
+          "phase": {
+            "sampled_winding": 1.0000000000000002,
+            "maximum_phase_increment": 1.043145316979687,
+            "minimum_boundary_modulus": 0.016327925594119264,
+            "certified_zero_count": false
+          },
+          "uneliminated": {
+            "sampled_winding": 1.0,
+            "maximum_phase_increment": 1.044178462174054,
+            "minimum_boundary_modulus": 0.01620328584379752,
+            "certified_zero_count": false
+          },
+          "covariance": {
+            "sampled_winding": 5.5217963219852725e-18,
+            "maximum_phase_increment": 0.0024754070596269256,
+            "minimum_boundary_modulus": 1.052962887739624,
+            "certified_zero_count": false
+          },
+          "radial": {
+            "sampled_winding": -5.245706505886008e-18,
+            "maximum_phase_increment": 0.0009505257932722563,
+            "minimum_boundary_modulus": 0.8789661178023928,
+            "certified_zero_count": false
+          },
+          "minimum_covariance_singular_value": 0.9815796860336585,
+          "classification": "SAMPLED_ARGUMENT_PRINCIPLE_NOT_CERTIFIED"
+        },
+        {
+          "bounds": [
+            0.12,
+            0.58,
+            -0.02,
+            -0.0005
+          ],
+          "steps_per_edge": 256,
+          "phase": {
+            "sampled_winding": 1.0,
+            "maximum_phase_increment": 0.593890504858225,
+            "minimum_boundary_modulus": 0.016206875452434162,
+            "certified_zero_count": false
+          },
+          "uneliminated": {
+            "sampled_winding": 1.0,
+            "maximum_phase_increment": 0.5944029313600907,
+            "minimum_boundary_modulus": 0.016081895877117246,
+            "certified_zero_count": false
+          },
+          "covariance": {
+            "sampled_winding": -1.2147951908367599e-17,
+            "maximum_phase_increment": 0.0012389747223023888,
+            "minimum_boundary_modulus": 1.052962887739624,
+            "certified_zero_count": false
+          },
+          "radial": {
+            "sampled_winding": -1.6565388965955816e-18,
+            "maximum_phase_increment": 0.0004753867041204578,
+            "minimum_boundary_modulus": 0.8789661178023928,
+            "certified_zero_count": false
+          },
+          "minimum_covariance_singular_value": 0.9815796860336585,
+          "classification": "SAMPLED_ARGUMENT_PRINCIPLE_NOT_CERTIFIED"
+        },
+        {
+          "bounds": [
+            0.12,
+            0.58,
+            -0.02,
+            -0.0005
+          ],
+          "steps_per_edge": 512,
+          "phase": {
+            "sampled_winding": 1.0,
+            "maximum_phase_increment": 0.29774112645916173,
+            "minimum_boundary_modulus": 0.015555687702135163,
+            "certified_zero_count": false
+          },
+          "uneliminated": {
+            "sampled_winding": 1.0,
+            "maximum_phase_increment": 0.2979984104254112,
+            "minimum_boundary_modulus": 0.015436311502356505,
+            "certified_zero_count": false
+          },
+          "covariance": {
+            "sampled_winding": -4.969616689786745e-17,
+            "maximum_phase_increment": 0.0006196250627400292,
+            "minimum_boundary_modulus": 1.052960363782555,
+            "certified_zero_count": false
+          },
+          "radial": {
+            "sampled_winding": -1.3804490804963181e-18,
+            "maximum_phase_increment": 0.00023772483552831575,
+            "minimum_boundary_modulus": 0.8789661178023928,
+            "certified_zero_count": false
+          },
+          "minimum_covariance_singular_value": 0.9815796860336585,
+          "classification": "SAMPLED_ARGUMENT_PRINCIPLE_NOT_CERTIFIED"
+        }
+      ],
+      "pole_in_v_not_physical_mode_speed": true
+    }
+  ],
+  "checks": {
+    "accepted_predecessor_and_hash_lineage": true,
+    "independent_original_cut_matches_continued_density": true,
+    "independent_upper_integral_refines_to_same_kernel": true,
+    "same_branch_local_thresholds_and_Bose_domain": true,
+    "pole_without_assigned_width": true,
+    "pole_refinement_and_independent_seeds": true,
+    "principal_lower_is_not_retarded_Landau_sheet": true,
+    "simple_pole_and_local_analyticity": true,
+    "radial_covariance_elimination_not_false_pole": true,
+    "continuation_matches_retarded_real_axis_boundary": true,
+    "sampled_upper_and_local_lower_windings_converge": true,
+    "elimination_denominator_windings_are_zero": true,
+    "finest_contour_phase_steps_resolved_not_certified": true,
+    "zero_order_phase_Ward_without_projection": true,
+    "protected_evidence_hashes_unchanged": true
+  },
+  "config": {
+    "orders": [
+      64,
+      96,
+      128
+    ],
+    "split_velocities": [
+      0.1,
+      0.2,
+      0.3,
+      0.4,
+      0.5,
+      0.6,
+      0.8
+    ],
+    "alternate_split_velocities": [
+      0.15,
+      0.25,
+      0.35,
+      0.45,
+      0.55,
+      0.75
+    ],
+    "seeds": [
+      [
+        0.2,
+        -0.01
+      ],
+      [
+        0.4,
+        -0.005
+      ]
+    ],
+    "spectral_jump_rays": [
+      0.2,
+      0.3,
+      0.4
+    ],
+    "continuity_eta_verification_only": [
+      0.002,
+      0.001,
+      0.0005
+    ],
+    "lower_continuation_domain": {
+      "Re_v": [
+        0.1,
+        0.6
+      ],
+      "Im_v": [
+        -0.025,
+        0
+      ]
+    },
+    "upper_contour": [
+      -1.5,
+      1.5,
+      0.002,
+      0.5
+    ],
+    "local_lower_contour": [
+      0.12,
+      0.58,
+      -0.02,
+      -0.0005
+    ],
+    "nested_contour_steps": [
+      64,
+      128,
+      256,
+      512
+    ],
+    "tail_contours": [
+      "horizontal",
+      "return_to_real"
+    ],
+    "radial_domain": "0<=k<infinity",
+    "assigned_output_width": null
+  },
+  "thresholds": {
+    "root_absolute": 1e-08,
+    "numerical_refinement_absolute": 2e-05,
+    "original_cut_absolute": 1e-10,
+    "sampled_winding_integer_distance": 1e-06,
+    "finest_phase_increment": 1.5707963267948966,
+    "causal_leakage_unchanged": 1e-06
+  },
+  "evidence_artifacts": [
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/t13_hartree_soft_collective.json",
+      "sha256": "a7e58a3f9dcdefd032d12e8e6d11d626655d0b2614c367374b90bef3cb620fb4"
+    },
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/Research_T13_Hartree_Soft_Collective.py",
+      "sha256": "998bdd2202ae6ee6a369e8309fb47c6572a5da72256feedab677525f6d74eb7b"
+    },
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/Research_T13_Hartree_Soft_Poles.py",
+      "sha256": "7e374be619795be7393d2f133f18e6daa84796364a68a8de0dcfc7fc29564502"
+    }
+  ],
+  "protected_evidence_hashes": [
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/t13_conditional_twofluid_operator.json",
+      "sha256": "8606303e4818030dd74061c14b243542c19c4cbb262dda29261951d4c87d6412"
+    },
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/t13_polar_dynamic_composite.json",
+      "sha256": "2f07a63af3ce9945bf254d5da238bdefbd53597dae105ee7e50bbcbe8bc61f7d"
+    },
+    {
+      "path": "docs/core/07_artifacts/topic13/t13_topic13_closure_matrix.json",
+      "sha256": "e6e84772a400273c438e0b8ca3c7b5b14c9d720da0420fb4021b1c0e7a54fe66"
+    },
+    {
+      "path": "docs/core/07_artifacts/gates/uet_major_result_dependency_unlock_gate.json",
+      "sha256": "ecbefdf12ee1eb6661ae8096e3f62bf1ffa7992c96ca94f1149fdbc25a8bbe6e"
+    }
+  ],
+  "open_blockers": [
+    "certified_global_complex_domain_and_finite_q_pole_control",
+    "Hartree_truncation_and_regulator_RG_full_action",
+    "joint_Phi_stationarity_and_material_source_detector",
+    "physical_normal_heat_collision_KMS_entropy_transport",
+    "independent_measurement_input"
+  ],
+  "controlling_blocker": "global_domain_truncation_joint_Phi_material_transport_not_closed",
+  "dependency_unlocked": [
+    "same_candidate_validity_and_joint_Phi_research_only"
+  ],
+  "conditional_collisionless_soft_pole_computed": true,
+  "certified_zero_count": false,
+  "global_stability_proved": false,
+  "finite_q_complex_pole_computed": false,
+  "physical_mode_speed_emitted": false,
+  "collision_rate_emitted": false,
+  "controlled_truncation_error_established": false,
+  "joint_Phi_stationarity_derived": false,
+  "g1_physical_unlock": false,
+  "g2_science_unlock": false,
+  "full_core_unlock": false,
+  "claim_promotion": false,
+  "parameter_fitting": false,
+  "artificial_width": false,
+  "clipping": false,
+  "IR_filter": false,
+  "imposed_Ward_projection": false,
+  "xie_2026_accessed": false,
+  "prior_Xie_context_exposure_review": "REVIEW_REQUIRED",
+  "core_composition_gate_overwritten": false,
+  "C_relabelled_as_charge_or_mass": false,
+  "R_gen_added_as_state": false,
+  "excluded_variables": [
+    "R_gen",
+    "R_obs",
+    "nondynamical_A"
+  ],
+  "claim_boundary": "Local analytically continued collisionless soft phase pole of the unchanged fixed-Phi Hartree candidate. Numerical contour winding is not a certified zero count or global stability theorem. Not finite-q pole, hydrodynamic/material sound, physical collision/Kubo/SK-KMS/heat/entropy, controlled Hartree remainder, empirical validation or Full Topic13.",
+  "report": {
+    "MAJOR_RESULT_CLOSURE": "T13_FIXED_PHI_HARTREE_LOCAL_LANDAU_POLE: CLOSED_FOR_LANE",
+    "WHAT_IS_ACTUALLY_CLOSED": [
+      "analytic_spectral_density_continuation_of_same_candidate_positive_cut",
+      "simple_collisionless_phase_pole_at_both_fixed_Phi_witnesses",
+      "same_pole_with_independent_seeds_quadrature_grid_and_complex_tail_contour",
+      "sampled_upper_and_local_lower_determinant_winding_diagnostic"
+    ],
+    "WHAT_REMAINS_OPEN": [
+      "certified_global_complex_domain_and_finite_q_pole_control",
+      "Hartree_truncation_and_regulator_RG_full_action",
+      "joint_Phi_stationarity_and_material_source_detector",
+      "physical_normal_heat_collision_KMS_entropy_transport",
+      "independent_measurement_input"
+    ],
+    "DEPENDENCY_UNLOCKED": [
+      "same_candidate_validity_and_joint_Phi_research_only"
+    ],
+    "STATUS": "PASS_SCOPED_LOCAL_LANDAU_POLE",
+    "WHAT_CHANGED": "Derived spectral-tail Landau continuation and complex soft poles; tested original cuts, local analyticity, denominator controls and nested determinant contours.",
+    "EQUATION_OR_MAPPING": "D_ab(v)=sum_j int_{|w_j|>|v|} W_ab,j(k)*v^(n+1)/(2*|w_j|*w_j^n) dk; B_L=B_principal_lower-2*pi*i*D_analytic; K_phase(v_pole)=0; D_full=det(I-K_cov*J)*Gamma_radial*K_phase",
+    "VERIFICATION": {
+      "accepted_predecessor_and_hash_lineage": true,
+      "independent_original_cut_matches_continued_density": true,
+      "independent_upper_integral_refines_to_same_kernel": true,
+      "same_branch_local_thresholds_and_Bose_domain": true,
+      "pole_without_assigned_width": true,
+      "pole_refinement_and_independent_seeds": true,
+      "principal_lower_is_not_retarded_Landau_sheet": true,
+      "simple_pole_and_local_analyticity": true,
+      "radial_covariance_elimination_not_false_pole": true,
+      "continuation_matches_retarded_real_axis_boundary": true,
+      "sampled_upper_and_local_lower_windings_converge": true,
+      "elimination_denominator_windings_are_zero": true,
+      "finest_contour_phase_steps_resolved_not_certified": true,
+      "zero_order_phase_Ward_without_projection": true,
+      "protected_evidence_hashes_unchanged": true
+    },
+    "CONTROLLING_BLOCKER": "global_domain_truncation_joint_Phi_material_transport_not_closed",
+    "NEXT_ACTION": "Control candidate complex-domain and approximation/action obligations, then joint-Phi/material input; do not call a local pole a thermal transport law.",
+    "CLAIM_BOUNDARY": "Local analytically continued collisionless soft phase pole of the unchanged fixed-Phi Hartree candidate. Numerical contour winding is not a certified zero count or global stability theorem. Not finite-q pole, hydrodynamic/material sound, physical collision/Kubo/SK-KMS/heat/entropy, controlled Hartree remainder, empirical validation or Full Topic13."
+  }
+}

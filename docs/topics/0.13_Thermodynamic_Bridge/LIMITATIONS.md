@@ -2,6 +2,16 @@
 
 ## Collisionless Soft Collective Boundary (2026-10-01)
 
+The [local complex-pole successor](Result/artifacts/T13_HARTREE_SOFT_POLES_2026-10-01.md)
+is admitted only in its positive-cut fixed-Phi continuation domain. A
+simple v=z/q pole is not a measured mode, collision coefficient or uniform
+finite-q expansion. Sampled winding cannot exclude upper poles outside
+the rectangle, in the excluded near-real strip or between samples.
+Complex-tail agreement and sampled Bose checks are not certified global
+holomorphy. Hartree remainder/full action, joint Phi/material and physical
+normal/heat/KMS/entropy remain open. The older artifact below does not
+acquire complex-pole scope retroactively.
+
 The [soft response](Result/artifacts/T13_HARTREE_SOFT_COLLECTIVE_2026-10-01.md)
 is derived in the unchanged gapped internal Hartree prescription at fixed
 Phi. Its thermal ray dependence rules out replacing the computed dynamical

@@ -204,3 +204,19 @@ def test_follow_on_aims_are_result_linked_not_promises_of_inputs_or_funding():
     for flag in ("model_configuration_changed", "lab_access_confirmed",
                  "purchase_or_external_contact_authorized"):
         assert policy[flag] is False
+
+
+def test_local_pole_successor_changes_next_question_not_full_acceptance():
+    field = "hartree_soft_poles_evidence_2026_10_01"
+    assert PLAN["execution_review_2026_10_01"]["current_scientific_evidence_field"] == field
+    assert field in PLAN["portfolio_strategy_2026_10_01"]["accepted_preliminary_evidence_fields"]
+    evidence = PLAN[field]
+    result = json.loads((ROOT/evidence["path"]).read_text(encoding="utf-8"))
+    assert evidence["conditional_collisionless_soft_pole_computed"] is True
+    assert result["conditional_collisionless_soft_pole_computed"] is True
+    assert evidence["controlling_blocker"] == result["controlling_blocker"]
+    assert evidence["soft_kernel_scope_is_inherited_from_predecessor"] is True
+    for flag in ("certified_zero_count", "finite_q_complex_pole_computed", "controlled_truncation_error_established", "g1_physical_unlock", "g2_science_unlock", "full_core_unlock", "core_composition_gate_overwritten"):
+        assert evidence[flag] is False
+        assert result[flag] is False
+    assert all(card["status"] == "PLANNED_NOT_ACCEPTED" for card in PLAN["result_level_execution_2026_10_01"]["result_cards"])

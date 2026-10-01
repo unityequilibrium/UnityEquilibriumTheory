@@ -4,6 +4,14 @@
 
 | formula_id | relation | variables and units | constant_origin | proof_status | verification_role | failure_mode | next_hardening_step |
 | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- |
+| t13.diagnostic.hartree_local_Landau_continuation | `D_ab=int W_ab*v^(n+1)/(2*abs(w)*w^n); B_L=B_principal_lower-2*pi*i*D_analytic; K_phase(v_pole)=0` | v,w dimensionless; k E; bubble/mixed/current D dimensionless/E/E^2 | original Cauchy cut and same internal dispersion, no assigned width | derived local continuation with numerical pole/analyticity checks | original cut, upper reference, two seeds/grids/tails, derivative/residue | principal lower mistaken for retarded; collisionless pole called material sound | certified complex-domain/finite-q and approximation/action |
+| t13.diagnostic.hartree_soft_uneliminated_determinant | `D_full=det(I-K_cov*J)*Gamma_radial*K_phase` | cov determinant/phase coefficient dimensionless; radial/full leading determinant E^2 | block source-equation Schur identity | derived factorization and sampled winding, not certified count | denominator checks and nested upper/local-lower rectangles | elimination pole hidden or sampled count called global proof | global validity, joint Phi/material/heat input |
+
+See [local pole derivation](Result/artifacts/T13_HARTREE_SOFT_POLES_2026-10-01.md).
+These local diagnostic IDs add no admitted Core equation or ontology.
+
+| formula_id | relation | variables and units | constant_origin | proof_status | verification_role | failure_mode | next_hardening_step |
+| :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- |
 | t13.diagnostic.hartree_soft_ray | `A_n=1/2 int c^n*w*c/(v-w*c+i0); delta B=-N'(p)*Tr(Va Rp Vb Rp)*(A_n(v,w)-A_n(0,w))/2` inside full radial integral | v,w,A_n dimensionless; p,T E; N' E^-1; R E^-1; bubble dimensionless, mixed E, current E^2 | expansion of unchanged equal-branch thermal divided difference | derived fixed-Phi collisionless limit, numerical radial/domain verification | independent Cauchy integral and unchanged full finite-q PV response | static thermodynamic derivative used as dynamical susceptibility; imaginary cut replaced by width | complex collective poles and candidate validity domain |
 | t13.diagnostic.hartree_radial_source_phase_Ward | `Gamma_phase/q^2 -> -l^T*Gamma_AA_radial*l/s`, l=(v,i,0,0) | phase inverse E^2; s E^2; source Hessian E^2; final coefficient dimensionless | same-action source Ward after radial-only elimination | derived identity and scoped finite-q check | independent phase Schur/current contraction, reactive-zero absorption and units | fully on-shell Pi contracted instead; Re inverse zero called undamped pole | approximation/regulator/action, joint Phi and material/heat admission |
 

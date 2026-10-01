@@ -10,6 +10,15 @@
 
 ## 1. ผลลัพธ์หลักที่จะปิดก่อน
 
+Latest successor (1 October): [local Landau-sheet pole](Result/artifacts/T13_HARTREE_SOFT_POLES_2026-10-01.md)
+now solves the complex collisionless soft inverse at both unchanged
+fixed-Phi witnesses. Original cut/upper reference and alternative
+seed/grid/tail/derivative/denominator checks agree. The sampled winding
+diagnostic is bounded, not certified global stability. Next: global
+complex-domain/finite-q and approximation/action obligations, then joint
+Phi/material/heat-current admission. R1-R5, physical G1/G2, full Goal and
+the existing dates/model trial remain unaccepted or unchanged as applicable.
+
 ผลล่าสุด: [collisionless soft collective kernel](Result/artifacts/T13_HARTREE_SOFT_COLLECTIVE_2026-10-01.md) derive thermal ray limit และตรวจกับ full finite-q response แล้ว ทั้งสองผู้สมัครมี absorption ที่ reactive zero จึงไม่ใช้ static susceptibility/stiffness ratio เป็น sound prediction หรือเรียกส่วน real เป็นศูนย์ว่า undamped pole งานต่อคือ controlled complex-pole และ validity-domain analysis จาก kernel ที่คำนวณนี้ แล้วปิด approximation/regulator/action และ joint-Phi/material/heat-current งานพอร์ตใช้ผล methods ที่ตรวจได้ แต่ R1–R5, G1/G2, Full Topic13 และวันเดิมยังไม่เปลี่ยน
 
 ผลถัดมา 1 ต.ค.: [actual Hartree external field response](Result/artifacts/T13_HARTREE_EXTERNAL_RESPONSE_2026-10-01.md) คำนวณ vacuum/thermal bubble สามช่องและ source-responsive covariance ที่ q/frequency ไม่เป็นศูนย์แล้ว คืน static potential/Ward โดยไม่แก้ internal mass และตรงกับ direct subtraction/4D vacuum reference งานต่อจึงไม่ต้องสร้าง field bubble เดิมซ้ำ แต่ต้อง derive gauge-current contacts, real-axis/error และ regulator/RG/joint-Phi/material match ผลนี้ปิดเฉพาะ named candidate prescription; R1–R5, physical G1/G2 และวัน D5/D10/D14 ยังไม่รับงานจาก field response อย่างเดียว
