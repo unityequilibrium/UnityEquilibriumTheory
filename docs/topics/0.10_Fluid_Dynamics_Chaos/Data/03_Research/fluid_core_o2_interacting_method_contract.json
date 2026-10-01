@@ -1,0 +1,155 @@
+{
+  "schema_version": "t010-interacting-method-admission-v1",
+  "date": "2026-10-02",
+  "record_role": "INTERACTING_METHOD_SOURCE_BRANCH_ALGEBRA_AUDIT_ONLY",
+  "card": "docs/topics/0.10_Fluid_Dynamics_Chaos/CORE_O2_INTERACTING_METHOD_ADMISSION.md",
+  "prior_density_artifact": "docs/topics/0.10_Fluid_Dynamics_Chaos/Result/artifacts/fluid_core_o2_density_backreaction_audit.json",
+  "source_adapter": "docs/topics/0.10_Fluid_Dynamics_Chaos/Code/03_Research/Research_Fluid_Core_O2_Common_Flow.py",
+  "core_sources": {
+    "response": "docs/core/02_equations/covariant/uet_covariant_response.py",
+    "finite_density": "docs/core/02_equations/o2/uet_o2_finite_density_eos.py",
+    "self_energy": "docs/core/02_equations/o2/uet_o2_finite_temperature_self_energy.py",
+    "thermo": "docs/core/02_equations/o2/uet_o2_finite_temperature_hartree_thermodynamics.py",
+    "vacuum": "docs/core/02_equations/o2/uet_o2_renormalized_normal_branch.py",
+    "renormalized": "docs/core/02_equations/o2/uet_o2_finite_temperature_renormalized_hartree.py"
+  },
+  "AST_selected_definitions": {
+    "response": [
+      "_finite_scalar",
+      "response_displacement"
+    ],
+    "finite_density": [
+      "_finite_scalar",
+      "effective_mass_sq"
+    ],
+    "self_energy": [
+      "UETO2FiniteTemperatureSelfEnergyState",
+      "_finite",
+      "_positive",
+      "_bose",
+      "_quadrature",
+      "_cutoff",
+      "_thermal_tadpole_and_derivative",
+      "_gap_residual",
+      "uet_o2_finite_temperature_self_energy_state"
+    ],
+    "thermo": [
+      "UETO2HartreeThermodynamicState",
+      "_positive",
+      "_finite",
+      "_bose",
+      "_bose_log",
+      "_thermal_one_loop_state",
+      "uet_o2_hartree_thermodynamic_state"
+    ],
+    "vacuum": [
+      "_positive",
+      "_finite",
+      "_quadrature",
+      "_vacuum_terms"
+    ],
+    "renormalized": [
+      "UETO2RenormalizedHartreeNormalState",
+      "_finite",
+      "_positive",
+      "_cutoff",
+      "_one_loop_terms",
+      "_gap_terms",
+      "uet_o2_renormalized_hartree_normal_state"
+    ]
+  },
+  "configuration": {
+    "Z": 1.0,
+    "mass_squared": 1.0,
+    "lambda": 0.01,
+    "response_coupling": 0.0,
+    "epsilon_nc": 0.0,
+    "Phi_fixed": 0.15,
+    "phi_equilibrium": 0.0
+  },
+  "selected_states": [
+    {
+      "T": 0.002,
+      "mu": 1.28
+    },
+    {
+      "T": 0.004,
+      "mu": 1.28
+    }
+  ],
+  "normal_control": {
+    "T": 0.2,
+    "mu": 0.3,
+    "role": "independent_synthetic_normal_branch_control_not_selected_condensate_or_material"
+  },
+  "verification": {
+    "locked_before_first_execution": true,
+    "orders": [
+      64,
+      128,
+      256
+    ],
+    "cutoff_factor": 60,
+    "gap_absolute_tolerance": 1e-08,
+    "Legendre_relative_tolerance": 1e-08,
+    "refinement_relative_tolerance": 0.01,
+    "energy_scale": 2,
+    "rational_witness": {
+      "mu": "128/100",
+      "mass_squared": "1",
+      "lambda": "1/100",
+      "I_plus": "1/20",
+      "I_minus": [
+        "-1/100",
+        "0",
+        "1/100"
+      ]
+    }
+  },
+  "method_gate": {
+    "condensed_action_and_state": "NOT_STARTED",
+    "full_matrix_Dyson": "NOT_STARTED",
+    "Goldstone_source_Ward": "NOT_STARTED",
+    "renormalization_scheme": "NOT_STARTED",
+    "pressure_implicit_thermodynamics": "NOT_STARTED",
+    "dynamic_source_vertices_causal_response": "NOT_STARTED",
+    "collision_dissipation_correspondence": "NOT_STARTED",
+    "approximation_sunset_control": "NOT_STARTED",
+    "heat_frame_SI_mapping": "NOT_STARTED",
+    "Topic13_EOS_independent_protocol": "NOT_STARTED"
+  },
+  "admission": {
+    "condensed_interacting_state": false,
+    "full_Noether_Ward": false,
+    "formal_verification": false,
+    "external_math_review": false,
+    "physical_heat_current": false,
+    "physical_material_frame": false,
+    "physical_UET_operator": false,
+    "physical_HeII_state": false,
+    "physical_J04": false,
+    "physical_J05": false,
+    "physical_J06": false,
+    "useful_continuum_error": false,
+    "claim_promotion": false,
+    "dependency_unlock": false
+  },
+  "physical_controller": "vector_momentum_constitutive_origin_and_material_frame_admission_open",
+  "candidate_controller": "useful_certified_current_error_and_interacting_Noether_heat_frame_material_correspondence_open",
+  "method_controller": "condensed_twoPI_stationarity_Goldstone_and_source_response_contract_not_admitted",
+  "primary_sources": [
+    {
+      "url": "https://arxiv.org/html/1310.5953v2",
+      "reviewed": "selected action/stationarity/Goldstone/pressure sections and equations;not full replication"
+    },
+    {
+      "url": "https://arxiv.org/html/1305.3221v2",
+      "reviewed": "selected sections3/6 Ward constraint and thermodynamic consistency;not finite-density implementation"
+    },
+    {
+      "url": "https://researchonline.jcu.edu.au/44119/",
+      "reviewed": "author repository abstract/metadata only;full arXiv1603.03425v2 unavailable",
+      "not_universal_no_go": true
+    }
+  ]
+}

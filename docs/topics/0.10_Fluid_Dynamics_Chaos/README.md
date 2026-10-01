@@ -484,3 +484,20 @@ The primary paper's T^2>>lambda*mu^2 accuracy regime is not met by these selecte
 states. Source errors report cancellation conditioning explicitly. Physical heat/
 material frame, useful certified current error, Topic13 EOS/protocol/SI and
 physical J04/J05/J06 remain open. The selected and overall controllers are unchanged.
+
+## Condensed interacting method admission (2026-10-02)
+
+The [method card](CORE_O2_INTERACTING_METHOD_ADMISSION.md) and
+[source/branch/algebra artifact](Result/artifacts/fluid_core_o2_interacting_method_audit.json)
+pass156/156 prelocked internal diagnostics. Current original normal Hartree and
+renormalized Hartree definitions reject both selected condensate points at all
+three orders (12 exact branch rejections), while a separate T=.2,mu=.3 normal
+control returns six normal-only states. A branch rejection does not rule out
+condensed solutions.
+
+Exact conditional source residual algebra distinguishes original Hartree
+stationarity from its Goldstone replacement. Synthetic rational tadpoles are
+not a solved interacting thermal state. Ten independent condensed-method
+obligations remain NOT_STARTED; no conserved/gapless method or material heat
+frame is admitted. This narrows method selection before implementing a solver.
+Overall/selected physical controllers and J04/J05/J06 remain unchanged.

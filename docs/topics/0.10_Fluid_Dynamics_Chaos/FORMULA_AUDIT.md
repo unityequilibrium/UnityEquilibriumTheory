@@ -333,3 +333,18 @@ Fixed-domain lower Gaussian pressure derivatives are conditional bookkeeping,
 not self-consistent interacting accuracy. Raw-scale conditioning and actual
 charge cancellation errors remain explicit. No primary Core equation, material/
 heat/frame/SI, formal/interval/independent or physical package is promoted.
+
+## Conditional Hartree constraint residual reference
+
+[Unmerged candidate registry](../../core/07_artifacts/correspondence/uet_equation_correspondence_registry_topic10_o2_interacting_method_addendum.json)
+records ontology, natural E2 residuals/E4 determinant, source-transcribed
+equations, conditional proof class, assumptions and absent observable mapping.
+It is not a promoted Core equation. The independent identity
+R_G=R_rho-2R_D-2lambda*I_minus separates original stationarity
+(R_G=-2lambda*I_minus) from the inspected gapless replacement
+(R_D=-lambda*I_minus). Exact Fraction witnesses and off-shell controls pass,
+but are not self-consistent thermal inputs or a full-paper proof audit.
+
+No full matrix/Goldstone/source Ward, pressure derivative, interaction/current,
+microscopic scheme, sunset accuracy, material heat/frame or SI mapping is
+derived by this audit. See [method card](CORE_O2_INTERACTING_METHOD_ADMISSION.md).

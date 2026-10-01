@@ -328,3 +328,21 @@ The prelocked1e-8 source tolerance is conditioned on the larger raw/corrected
 coefficient, not1e-8 relative corrected-charge accuracy or interval certification.
 Independent analytic/root identities and fixed-domain pressure derivatives have
 their own prelocked checks. No physical heat/frame/SI/He-II/J04/J05/J06 admission.
+
+## Normal-source reuse is not condensed interacting admission
+
+156/156 checks support only current normal-branch source probes and conditional
+source residual algebra. The12 normal rejections are not a condensed-state
+no-go; the6 synthetic normal control returns are not selected condensate or
+material evidence. Three Fraction tadpole witnesses are not computed thermal
+integrals.
+
+Imposing the inspected Goldstone replacement changes the original Hartree
+residual/pressure obligations. No universal no-go is claimed. Separate evidence
+is still required for condensed action/state, matrix Dyson/Goldstone/source
+Ward, renormalization, implicit thermodynamics, causal source response,
+collision/dissipation, sunset/approximation accuracy, material heat/frame/SI
+and Topic13 EOS/protocol. All ten method gates remain NOT_STARTED.
+The mean-density Gaussian and continuum bounds remain at their prior scope.
+No full Noether Ward, physical J04/J05/J06, formal/independent validation,
+material state or dependency promotion follows.

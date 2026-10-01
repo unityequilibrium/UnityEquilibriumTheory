@@ -285,3 +285,19 @@ failure records are guarded. The original first contract is archived as well.
 and III.1, supplies source/approximation context only; no full paper replication
 or transfer of its unmet T^2>>lambda*mu^2 accuracy condition. No new external
 payload, empirical row, material coefficient, SI parameter or blind source.
+
+## Condensed method/source identity (2026-10-02)
+
+[Method contract](Data/03_Research/fluid_core_o2_interacting_method_contract.json)
+and [artifact](Result/artifacts/fluid_core_o2_interacting_method_audit.json)
+guard the prior398-check density source chain, six current original Core
+module/selected-definition identities and prelocked card/registry. No primary
+Core definition is edited. Normal-source execution uses a distinct synthetic
+normal control; rational tadpole witnesses are algebra inputs, not empirical
+data or solved thermal EOS.
+
+Primary method records: [Alford v2](https://arxiv.org/html/1310.5953v2),
+[Pilaftsis/Teresi v2](https://arxiv.org/html/1305.3221v2) selected sections only;
+[Brown author repository](https://researchonline.jcu.edu.au/44119/) abstract/
+metadata only (full arXiv1603.03425v2 unavailable). No raw external payload,
+new material/experimental row, SI scale or independent protocol is admitted.

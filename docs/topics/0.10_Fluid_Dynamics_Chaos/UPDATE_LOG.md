@@ -781,3 +781,44 @@ CLAIM_BOUNDARY: Internal numerical-method validation only; not evidence that UET
   first contract and repair records. UTF-8/JSON/links/append-only prefixes,
   prelocked derivation/registry/control identity and whitespace checks pass.
   No interacting/paper-accuracy/formal/material/physical promotion follows.
+
+## 2026-10-02 Condensed interacting method/source branch admission audit
+
+- Area: research-core; source/branch/conditional-algebra preparation in J01/J02.
+- Changed: prelocked method card/contract/unmerged registry, original-source
+  verifier/156-check artifact/four tests, snapshot/history/J02 matrix and seven docs.
+- Actually ran:12 selected normal-branch probes,6 separate normal controls,
+  Gauss64/128/256 gap/functional/Legendre/refinement controls;3 exact rational
+  stationary/gapless witnesses, off-shell wrong-coefficient/unit controls;
+  two fresh deterministic runs and false/stale-scope rejection.
+- First execution156/156 passes without repair, fit or threshold relaxation;
+  four focused tests pass. No primary Core source or previous artifact is edited.
+- Narrowed: normal-source closure cannot be imported into selected condensate;
+  original Hartree stationarity and inspected gapless replacement are separate
+  obligations. No condensed-state or universal-method no-go is asserted.
+- Current narrower method controller:
+  condensed_twoPI_stationarity_Goldstone_and_source_response_contract_not_admitted.
+  Ten method gates remain NOT_STARTED. Next compare candidate conserving/
+  gapless methods across all ten obligations before admitting a solver.
+- Selected controller unchanged:
+  useful_certified_current_error_and_interacting_Noether_heat_frame_material_correspondence_open.
+  Overall controller unchanged:
+  vector_momentum_constitutive_origin_and_material_frame_admission_open.
+- Public safety: safe; reviewed source summaries only, no raw/private/material
+  payload. No formal/independent/interacting/heat/frame/SI/physical promotion.
+  All prior outputs/snapshots/history/J02 states/DAG and J04/J05/J06 preserved.
+- Next checkpoint:67 scoped tests and source/hash/history/DAG/JSON/link review,
+  scoped commit/push and draftPR29 current-head CI; no merge.
+
+- Final local review: all67 scoped regressions pass with warnings as errors
+  (130.145s). Eighteen current source-linked artifact/input identities are fresh;
+  seventeen prior outputs and all old snapshots/history/J02 fields/DAG/physical
+  states remain unchanged. Sixteen-file scope, append-only UTF-8 docs, JSON,
+  local links, prelocked card/registry/control identities and whitespace pass.
+  No raw/private payload is included. Safe section is ready for scoped commit,
+  branch push and draftPR29 current-head CI; no merge/main publication.
+
+- Final whitespace-only cleanup removed extra EOF blank lines in the two new
+  Python files. No scientific behavior/control changed;156/156 diagnostic and
+  four focused regressions pass again(3.112s). Current artifact/source hashes
+  were refreshed without changing any prior snapshot/history entry.

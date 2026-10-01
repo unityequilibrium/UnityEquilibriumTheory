@@ -545,3 +545,28 @@ the ten-package DAG and physical statuses stay. Selected controller remains
 useful_certified_current_error_and_interacting_Noether_heat_frame_material_correspondence_open.
 Overall controller remains vector_momentum_constitutive_origin_and_material_frame_admission_open.
 Physical J04/J05/J06 remain NOT_STARTED; no claim or dependency promotion.
+
+## Condensed interacting method selection before numerical implementation
+
+The2026-10-02 [method card](CORE_O2_INTERACTING_METHOD_ADMISSION.md),
+[locked contract](Data/03_Research/fluid_core_o2_interacting_method_contract.json)
+and [156-check artifact](Result/artifacts/fluid_core_o2_interacting_method_audit.json)
+reuse six current Core modules without editing primary definitions. Both
+normal Hartree solvers reject the selected condensate states at all orders;
+six independent normal-control returns preserve their normal/Kubo/SI boundary.
+
+Exact conditional source algebra confirms that the inspected gapless
+replacement changes original stationarity. It cannot inherit stationary
+pressure/dynamic-source properties merely from a zero Goldstone inverse
+propagator. Ten action/Dyson/Goldstone/renormalization/pressure/dynamic-source/
+collision/accuracy/material/Topic13 obligations remain NOT_STARTED.
+Method controller:
+condensed_twoPI_stationarity_Goldstone_and_source_response_contract_not_admitted.
+
+Next compare candidate methods on this obligation matrix, then prelock an
+admitted condensed action/state/source contract before a numerical solver.
+The useful continuum-current error, interacting Noether heat/frame, Topic13
+fixed-pressure EOS/entropy reference/covariance, independent dynamic protocol
+and Core SI state/atom map remain open. J04/J05/J06/DAG/claims do not advance.
+OpenAI theorem/checker practice supplies methodological discipline; it
+does not supply this condensate interaction or material correspondence.

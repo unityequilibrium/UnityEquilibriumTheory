@@ -331,3 +331,24 @@ test corrected charge independently. Lower-mode Gauss64/128/256 thermal subset
 uses the same central physical K during every mu/T derivative; a moving thermal
 cutoff is not silently differentiated. Complete interacting state/source Ward,
 material heat/enthalpy/frame and useful certified error remain next.
+
+## Interacting method/source branch audit
+
+Reuse original Core normal self-energy/thermal functional/vacuum-subtraction/
+renormalized functional definitions through verbatim AST extraction, retaining
+the exact prelocked source identities. Pure coordinate/weight memoization is
+value-preserving; no solver equation or quadrature is replaced. Probe the same
+selected condensate points and a separate synthetic normal control at orders
+64/128/256 with each solver's own cutoff.
+
+Use independent residual inputs and exact Fraction arithmetic for the
+source-transcribed R_rho,R_Y,R_D,R_G identity, synthetic stationary/gapless
+witnesses, off-shell wrong-coefficient negatives and E2/E4 scaling. No thermal
+tadpole integral is inferred from these witnesses. See
+[method card](CORE_O2_INTERACTING_METHOD_ADMISSION.md).
+
+Selected Alford sections distinguish original stationarity, gapless constraint
+and appropriate pressure; Pilaftsis/Teresi supplies a different constrained
+method. Brown et al. was accessible only as author abstract/metadata and
+motivates a separate dynamic-source gate. Neither a full-paper reproduction
+nor a finite-density symmetry-improved implementation is reported.

@@ -426,3 +426,21 @@ diagnostic398/398 passes. Four regressions cover source/archive identity,
 fixed-domain thermal/Legendre/unit controls and false/stale-scope rejection.
 Same-runtime fresh outputs are byte deterministic; cross-runtime nonzero
 quantities use the locked1e-8 relative tolerance. No full interacting/formal/material result.
+
+## Interacting method/source branch and conditional algebra diagnostics
+
+Command: python docs/topics/0.10_Fluid_Dynamics_Chaos/Code/03_Research/Research_Fluid_Core_O2_Interacting_Method.py.
+[Contract](Data/03_Research/fluid_core_o2_interacting_method_contract.json),
+[card](CORE_O2_INTERACTING_METHOD_ADMISSION.md),
+[artifact](Result/artifacts/fluid_core_o2_interacting_method_audit.json).
+
+Prelocked before first execution: unchanged selected .002/.004,mu1.28 and
+separate .2,mu.3 normal control, source definitions, Gauss64/128/256, cutoff60,
+gap/functional1e-8, Legendre relative1e-8, last-order mass/pressure1%, three
+rational I_minus witnesses, off-shell coefficient negatives and scale2 E2/E4.
+First execution156/156 passes without repair, refit or target relaxation.
+Four tests cover twice-fresh same-runtime bytes, source/preregistry hashes,
+exact branch messages, independent normal controls, exact residual tradeoff,
+alternate scale3, and false gates/admissions/changed states/thresholds/stale
+prior source rejection before computation. Cross-runtime nonzero normal
+quantities use relative1e-8. No condensed state or dynamic Ward is executed.
