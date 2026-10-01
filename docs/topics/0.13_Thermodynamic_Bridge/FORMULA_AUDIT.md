@@ -1,5 +1,19 @@
 # Formula Audit: 0.13_Thermodynamic_Bridge
 
+## Same-Action Classical-Phi Joint Response (2026-10-02)
+
+| Diagnostic ID | Equation | Units | Origin | Verified scope | Remaining obligation |
+| --- | --- | --- | --- | --- | --- |
+| t13.diagnostic.classical_Phi_hartree_joint_retarded | Gamma=Gamma_tree+L^T*J*(I-KJ)^-1*L/2; Phi tree=epsilon*Z_Phi*(q^2-z^2)+V_R'' | fields/source E; Gamma/current E^2; z/q dimensionless | original conservative kinetic and reciprocal mass-source, actual matter bubble | two joint states, six local phase roots and independent upper/static checks | full-frequency/global/causal validity, approximation and material/thermal map |
+| t13.diagnostic.joint_Phi_quadratic_counterterm | K_b=(I+DK)^-1*K; L_b=(I+DK)^-1*L; Gamma_tree_b=Gamma_tree-D*L^T*(I+DK)^-1*L/2 | K/J/D dimensionless, L E, contact E^2 | separate original mass slope, matter quartic and N_PhiPhi derivative | arbitrary noncommuting complex-matrix identity and actual-loop replay | physical regulator/RG and controlled Hartree remainder |
+| t13.diagnostic.joint_Phi_charge_envelope | chi_joint=Gamma_A0A0-Gamma_A0E*Gamma_EE^-1*Gamma_EA0=-d_mu^2 Omega_joint, E=(radial,Phi) | natural E^2 | same stationary potential and source response | two reoptimized charge-envelope checks, not clamped Phi | material/state/observable input and energy/heat transport |
+
+See [same-action derivation](Result/artifacts/T13_HARTREE_JOINT_PHI_RESPONSE_2026-10-02.md).
+Local diagnostic IDs only, not promoted Core equations. Z_Phi=1 is an
+original trial action input, not inferred from EOS or measured transport.
+No full-frequency spectrum, physical alpha, original causal repair or
+global UET claim follows; C/Phi/R_gen/R_obs retain their meanings.
+
 ## Homogeneous Classical-Phi Hartree Extension (2026-10-02)
 
 | Diagnostic ID | Equation | Units | Origin | Verified scope | Remaining obligation |

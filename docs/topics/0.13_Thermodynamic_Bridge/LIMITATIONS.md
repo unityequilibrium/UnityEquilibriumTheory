@@ -1,5 +1,19 @@
 # Limitations
 
+## Joint Classical-Phi Dynamic Boundary (2026-10-02)
+
+[Joint retarded evidence](Result/artifacts/t13_hartree_joint_phi_response.json)
+closes a computed classical-Phi candidate response and six local phase
+poles, not the full-frequency/gapped-Phi spectrum, global/causal domain,
+regulator/RG or Hartree error. Static charge consistency is not a physical
+heat/entropy/dissipative balance. No independently admitted material/thermal
+or source/readout map follows, nor a SI alpha or Kubo/collision coefficient.
+The same candidate still needs low-temperature EOS/external-mode consistency
+review; no outcome of that future review is assumed. Do not repair an
+internal Goldstone mass or add collective phonon free energy by hand.
+All physical/Full Topic13 gates, the original conserved-C failure and
+Core-owner composition remain unchanged. Xie exposure stays REVIEW_REQUIRED.
+
 ## Joint Classical-Phi Static Boundary (2026-10-02)
 
 [Joint-Phi evidence](Result/artifacts/t13_hartree_joint_phi_static.json)

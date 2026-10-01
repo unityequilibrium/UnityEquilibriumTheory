@@ -10,6 +10,18 @@
 
 ## 1. ผลลัพธ์หลักที่จะปิดก่อน
 
+### ล่าสุด: คำนวณ joint classical-Phi response แล้วในขอบเขต candidate
+
+[ผล response ร่วม](Result/artifacts/T13_HARTREE_JOINT_PHI_RESPONSE_2026-10-02.md)
+รวม kinetic จาก action เดิม, source counterterms, pole ใหม่หกจุด และ
+charge susceptibility ที่ตรงกับ potential หลังปรับ matter–Phi ร่วมกัน
+ไม่ใช้คำตอบ clamped Phi แทนกัน จึงไม่ต้องรัน local roots ชุดเดิมอีก
+งานก่อน freeze เปลี่ยนเป็นตรวจ validity/approximation โดยเริ่มที่
+low-temperature EOS กับ external-mode consistency และ independent-input
+measurement card ห้าม repair internal Goldstone mass หรือเติม phonon
+free energy ด้วยมือ ผลใหม่นี้ไม่รับ Full R1/Goal, transport, SI alpha
+หรือการทำนายวัสดุจริง และไม่เปลี่ยนวัน 7/11 ต.ค. หรือเกณฑ์จบวิจัย
+
 ### ล่าสุด: joint Phi static ไม่ใช่ joint dynamics
 
 [ผล joint classical-Phi](Result/artifacts/T13_HARTREE_JOINT_PHI_STATIC_2026-10-02.md)

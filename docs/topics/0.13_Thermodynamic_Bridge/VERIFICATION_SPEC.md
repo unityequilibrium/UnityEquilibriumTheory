@@ -1,5 +1,21 @@
 # Verification Spec
 
+## Joint Classical-Phi Retarded Verification (2026-10-02)
+
+Research_T13_Hartree_Joint_Phi_Response.py and 21 focused tests. Freeze
+q=.04/.02/.01, orders 64/24,96/32,128/40, seeds .2-.01i/.4-.005i and the
+inherited local continuation strip. Actual joint stationary inputs and
+original response kinetic remain fixed. Root and full determinant <=1e-8;
+refinement/independent upper loop/static envelope agreement <=2e-5;
+phase-current Ward <=1e-3; counterterm identity <=1e-10, nonzero even/
+covariance singular values >.01. Check independent parent kinetic signs,
+arbitrary noncommuting complex counterterms, units, static Hessian/charge
+envelope and actual new roots/grids/tails/derivatives. Clamped answer,
+frozen Phi counterterms and principal sheet are negative controls. Preserve
+old validators/hashes and causal threshold 1e-6; no old failure is repaired.
+Listed hash/read/holdout and physical/Core/Goal boundaries must match the
+[artifact/derivation](Result/artifacts/T13_HARTREE_JOINT_PHI_RESPONSE_2026-10-02.md).
+
 ## Joint Classical-Phi Static Verification (2026-10-02)
 
 Separate Research_T13_Hartree_Joint_Phi_Static.py and eighteen tests.

@@ -6,6 +6,20 @@ description: "Research module for Thermodynamic Bridge within the Unity Equilibr
 
 # 0.13 Thermodynamic Bridge
 
+## Joint Classical-Phi Retarded Response (2026-10-02)
+
+The [joint dynamic successor](Result/artifacts/T13_HARTREE_JOINT_PHI_RESPONSE_2026-10-02.md)
+computes same-action classical-Phi/matter response, six new local phase
+poles and the fully relaxed charge susceptibility. Its quadratic source
+counterterms, static limits, independent upper loops, grids/seeds/tails
+and Ward/determinant checks agree. Clamped Phi is not an equivalent answer.
+This closes a named candidate-response lane, not full R1/Topic13, physical
+thermal transport or approximation control. Next test low-temperature EOS/
+external-mode consistency and validity, then independently admit material/
+source/readout/thermal input. No mass repair or added phonon free energy.
+Old static/fixed-Phi artifacts, Core composition, physical gates and
+7/11 October dates retain their scope.
+
 ## Joint Classical-Phi Static Candidate (2026-10-02)
 
 The [joint stationary successor](Result/artifacts/T13_HARTREE_JOINT_PHI_STATIC_2026-10-02.md)

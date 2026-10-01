@@ -1,3 +1,27 @@
+## 2026-10-02 - Joint classical-Phi retarded response and charge susceptibility
+
+MAJOR_RESULT_CLOSURE: T13_CLASSICAL_PHI_HARTREE_JOINT_RETARDED_RESPONSE, CLOSED_FOR_LANE. Full active Goal/R1 and physical acceptance remain open.
+
+WHAT_IS_ACTUALLY_CLOSED: Same-action matter/classical-Phi retarded Hessian, independently constructed quadratic counterterm cancellation, six newly computed local phase poles and relaxed equilibrium charge susceptibility checked against the potential with both matter and Phi reoptimized. Freezing Phi is not the same response calculation.
+
+WHAT_REMAINS_OPEN: Full-frequency/global spectrum and causal domain, regulator/RG and controlled Hartree remainder; independent material/state/source/detector/temperature inputs and physical heat/collision/Kubo/SK-KMS/entropy transport. Quantum Phi is a later-lane obligation only if that lane requires it. Full Topic13, measurement design, novelty and full Goal acceptance remain open.
+
+DEPENDENCY_UNLOCKED: Same named classical-Phi candidate validity and independent-input research only. No physical/Core unlock. Prior static and fixed-Phi artifacts retain their original scope and flags; Core-owner composition unchanged.
+
+STATUS: PASS_SCOPED_JOINT_PHI_RESPONSE. Portfolio route remains METHODS_ROUTE_SELECTED_FOR_PREPARATION, not D05 scientific acceptance or submission readiness.
+
+WHAT_CHANGED: Separate joint response verifier, 21 tests, artifact/derivation; local formula/method/spec/limits/README, funding evidence/hash/controller and planning regression, Goal/14-day/12-week handoffs. Original action Z_Phi=1 used as a trial input, not fitted transport. New polynomial-tree validation permits finite lower-sheet z without changing inherited loop-domain validators. No Core-owner or predecessor edit.
+
+EQUATION_OR_MAPPING: Gamma_joint=Gamma_tree+L^T*J*(I-KJ)^-1*L/2 with L=(K*W,L_Phi); Gamma_phase eliminates both radial and Phi directions. The independently constructed bare tree cancels the affine loop contact. chi_joint=-d^2 Omega_joint/dmu^2 at fixed T with all matter/Phi stationary coordinates reoptimized; natural E^2, not SI calibration.
+
+VERIFICATION: Fourteen artifact checks and 281 linked Topic13/Core/planning tests passed in 466.26 seconds; fourteen distinct adjacent action/stationarity/stiffness regressions passed in 3.33 seconds. Focused 21 tests and 37 response/funding tests are subsets, not extra counts. Maximum final pole refinement 3.098e-7, alternate-grid difference 1.343e-8, independent upper bubble difference 1.472e-8, joint field difference 2.529e-8, finest Ward disagreement 1.289e-6 and independent static envelope disagreement 8.957e-9. Source/protected hashes, units/read/domain/negative controls and whitespace review pass. Artifact SHA-256 a50b95ce5b326e41220187322f7c0f015b7b45489b57b49d0f9c720850c7dd42. Both relevant prior exact-head CI workflows at 54fc336e9e17729214418864186ac511b03bb2c0 succeeded; new-head CI must be inspected separately. Model recommendation unchanged, trial NOT_RUN/configuration unchanged.
+
+CONTROLLING_BLOCKER: joint_global_validity_Hartree_remainder_material_thermal_transport_not_closed.
+
+NEXT_ACTION: Test low-temperature EOS/external-mode consistency and the same prescription's validity without mass repair or manually appended phonon free energy; develop independently justified material/source/readout inputs. Preserve 7 October science freeze, 11 October portfolio review and 25 Oct/8 Nov/22 Nov/6 Dec/20 Dec result reviews. Commit/push to existing draft PR #30 and inspect exact new-head checks; full Goal stays active.
+
+CLAIM_BOUNDARY: Local classical-Phi collisionless response and equilibrium charge consistency only, not full spectrum/global/causal proof, controlled Hartree error, measured thermal mapping or physical transport. No fit/assigned width, clipping/filter/padding, mass repair, threshold change, new numeric holdout access or Core-owner edit. Original conserved-C causal failure remains BLOCKED with unchanged 1e-6 gate. Xie prior exposure REVIEW_REQUIRED. No claim promotion, deadline reset or R1-R5 scientific acceptance.
+
 ## 2026-10-02 - Joint classical-Phi static candidate and next-round roadmap
 
 MAJOR_RESULT_CLOSURE: T13_HOMOGENEOUS_CLASSICAL_PHI_HARTREE_STATIONARITY, CLOSED_FOR_LANE. Full active Goal/R1 and physical acceptance remain open.

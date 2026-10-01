@@ -25,6 +25,18 @@
 
 ## Constraints
 
+Latest response successor: `Result/artifacts/T13_HARTREE_JOINT_PHI_RESPONSE_2026-10-02.md`
+computes the original classical-Phi kinetic/source response, quadratic
+counterterm cancellation, six new local phase poles and the fully relaxed
+static charge envelope at the unchanged jointly stationary states. It does
+not substitute fixed-Phi answers or close global/causal/approximation and
+material/thermal transport. Next test same-candidate low-temperature EOS/
+external-mode consistency and validity without mass repair or added phonon
+free energy, then independently identify material/source/readout inputs.
+This changes the next calculation, not Full Goal/R1 acceptance, original
+7/11 October dates, Core composition or model policy/NOT_RUN trial.
+Earlier notes below retain their predecessor scope.
+
 Latest successor: `Result/artifacts/T13_HARTREE_JOINT_PHI_STATIC_2026-10-02.md`
 closes mass-dependent Phi normalization counterterms, actual homogeneous
 classical matter/Phi stationary states and independently checked mixed

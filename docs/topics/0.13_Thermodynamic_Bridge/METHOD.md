@@ -1,5 +1,17 @@
 ﻿# Method
 
+## Joint Classical-Phi Source Response (2026-10-02)
+
+Use the [joint retarded derivation](Result/artifacts/T13_HARTREE_JOINT_PHI_RESPONSE_2026-10-02.md).
+Keep epsilon*Z_Phi*(q^2-z^2) from the original action and the mass-source
+vertex (-sqrt(2)*gamma,0,0). Build the actual 3-field external response and
+gauge source Hessians from the covariance bubble at the joint a/b states.
+Eliminate radial and Phi together, retaining their block and covariance
+determinants. Solve new local phase roots, not old fixed-Phi answers.
+Check dynamic counterterms with the independently derived mass slope and
+normalization curvature, upper absolute loops and reoptimized static charge
+potential. No phenomenological damping or quantum Phi loop is added.
+
 ## Homogeneous Classical-Phi Stationarity (2026-10-02)
 
 Use the [joint static derivation](Result/artifacts/T13_HARTREE_JOINT_PHI_STATIC_2026-10-02.md).

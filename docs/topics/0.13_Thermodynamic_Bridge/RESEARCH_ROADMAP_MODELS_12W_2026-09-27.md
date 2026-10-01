@@ -6,6 +6,26 @@
 
 ## ผลหลักสำหรับพอร์ตและทุนรอบถัดไป
 
+### Latest joint response: close a calculation, then test its physics domain
+
+[Joint classical-Phi response](Result/artifacts/T13_HARTREE_JOINT_PHI_RESPONSE_2026-10-02.md)
+now supplies same-action kinetic/source response, quadratic counterterm
+cancellation, six newly computed local phase poles and independently
+reoptimized charge-envelope agreement. Static positivity alone is no
+longer the evidence; clamped Phi is demonstrably a different calculation.
+This is candidate methods evidence, not full-frequency/global/causal or
+Hartree approximation/material/transport admission, nor full R1/Goal.
+
+The next bounded physics question is low-temperature EOS/external-mode
+consistency of the same prescription, without mass repair or phonon free
+energy added by hand. Its result is not assumed. By the existing 25 October
+review, account for that validity question and approximation obligations,
+then proceed to independent state/source/readout/thermal input under the
+original 8 November gate. Do not spend the extra months rerunning unchanged
+local roots. Original 7/11 October freeze/review, later result dates,
+uncertain-call scenarios, model recommendation and NOT_RUN trial remain.
+Earlier notes below describe the scope at their own completed wave.
+
 ### อัปเดต 2 ตุลาคม: เวลาเพิ่มต้องซื้อผลวิจัย ไม่ใช่รอบรัน
 
 [ผล joint classical-Phi](Result/artifacts/T13_HARTREE_JOINT_PHI_STATIC_2026-10-02.md)
@@ -24,7 +44,7 @@
 | --- | --- | --- |
 | 2–7 ต.ค. | หนึ่ง result statement ที่มี derivation/independent check, validity/approximation obligations และ measurement card พร้อม identifiability/uncertainty | ล็อก preliminary result และข้อค้างจริง ไม่แต่ง no-go ไม่เลื่อน full acceptance |
 | 8–11 ต.ค. | พอร์ต v1: report, evidence/hash map, reproducibility, related-work gap, aims และรายการทุน/PI/งบที่ยังขาด | ส่งให้ตรวจพอร์ตได้ แต่ห้ามเรียก submission-ready |
-| 12–25 ต.ค. | คำตอบ joint retarded-response/validity ของ named candidate พร้อม approximation boundary ที่ตรวจได้; independent reproduction | บันทึกผลขัดแย้งหรือ proof obligation ชัด ๆ ไม่เพิ่มสมการเพื่อกลบปัญหา |
+| 12–25 ต.ค. | ตรวจ validity/approximation และ low-temperature EOS ของ joint response ที่คำนวณแล้ว; independent reproduction | บันทึกผลขัดแย้งหรือ proof obligation ชัด ๆ ไม่เพิ่มสมการเพื่อกลบปัญหา |
 | 26 ต.ค.–8 พ.ย. | material/state/source/detector/temperature map และ permitted independent numeric input หรือ feasibility package ที่แยกประเภท | รักษา input gate และยื่นเป้าหมายสร้างข้อมูล ไม่สร้างข้อมูลทดลองแทน |
 | 9–22 พ.ย. | หนึ่ง preregistered comparison เมื่อ prerequisites ผ่าน หรือ verified scoped structural result + measurement design | ปิด disposition ของคำถามเป็น unresolved พร้อมสิ่งที่จะเปลี่ยนคำตอบ; ไม่ถือว่าปิด Goal |
 | 23 พ.ย.–6 ธ.ค. | ทำซ้ำอิสระหรือ protocol ที่สองโดยไม่ rematch เมื่อผลแรกพร้อม | แก้ความทนทานของผลแรกก่อนขยาย scope |
