@@ -25,6 +25,15 @@
 
 ## Constraints
 
+Latest real-axis evidence: `Result/artifacts/T13_HARTREE_REAL_AXIS_2026-10-01.md`
+closes exact angular PV and pair/scattering cuts with independent forward-shell
+delta roots, radial phase space and same-current Ward/vacuum/reality checks on
+ten declared grid points. No output width is assigned. Next close global
+collective/IR and approximation/regulator/action limits before joint Phi,
+material/source/detector and heat-current admission. Do not call numerical
+convergence a Hartree truncation bound, collision damping or material prediction.
+R1 acceptance, the full Goal and original dates are unchanged.
+
 Latest current evidence: `Result/artifacts/T13_HARTREE_GAUGE_CURRENT_2026-10-01.md`
 computes source/current loops with reoptimized covariance and mean field,
 seagulls and an analytically derived UV surface, not an imposed Ward projector.
@@ -90,8 +99,8 @@ Use `portfolio_strategy_2026_10_01` for the recommended first-portfolio scope:
 one verified fixed-Phi source-response methods result plus measurement design,
 not a promise of full Topic13 or material prediction. D5 accepts the route;
 the recommendation alone does not accept R1-R5 or complete this scientific Goal.
-New real-axis exploration is not accepted evidence until independently audited
-and hashed. Preserve the established current/background evidence and keep the
+The newly audited real-axis successor is accepted only on its declared grid;
+global spectral/truncation and physical admission remain open. Preserve the established current/background evidence and keep the
 Core owner's bounded composition separate from this new predictive question.
 Prepare the three aims with a decisive calculation/input, named owner role,
 acceptance and failure/unresolved alternative. A hypothetical 11 December call

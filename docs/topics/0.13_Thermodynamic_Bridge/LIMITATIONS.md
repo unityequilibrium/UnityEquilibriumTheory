@@ -1,5 +1,18 @@
 # Limitations
 
+## Scoped Real-Axis Boundary (2026-10-01)
+
+The [real-axis successor](Result/artifacts/T13_HARTREE_REAL_AXIS_2026-10-01.md)
+admits ten fixed-Phi q>0 grid calculations, not arbitrary parameters,
+asymptotic thresholds, collective poles or the uniform Goldstone/DC limit.
+Endpoint-scan agreement and numerical differences are not certified error or
+Hartree truncation bounds. Internal Hartree gaps do not erase the preceding
+massless/composite IR continuum. Pair/scattering absorption is not a measured
+collision width, physical Kubo, normal component, heat/entropy transport or
+microscopic SK/KMS closure. All regulator/action, joint Phi, material/input
+and physical admission requirements remain. The predecessor retains its
+static/upper-half-plane-only scope; it was not silently broadened.
+
 ## Computed External Field Response Boundary (2026-10-01)
 
 The [rest-frame current successor](Result/artifacts/T13_HARTREE_GAUGE_CURRENT_2026-10-01.md)

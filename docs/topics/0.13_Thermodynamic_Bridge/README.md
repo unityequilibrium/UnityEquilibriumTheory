@@ -6,6 +6,18 @@ description: "Research module for Thermodynamic Bridge within the Unity Equilibr
 
 # 0.13 Thermodynamic Bridge
 
+## Real-Axis Hartree Response (2026-10-01)
+
+The [real-axis successor](Result/artifacts/T13_HARTREE_REAL_AXIS_2026-10-01.md)
+computes exact angular principal values and pair/scattering cuts without an
+assigned damping width. Independent forward-shell delta roots and radial
+phase-space integration agree; source/current Ward, vacuum, refinement,
+reality and units pass on ten declared points at the same fixed-Phi witnesses.
+This closes the named-grid real-axis calculation, not global collective
+stability, a Hartree truncation bound or material heat transport. Next:
+global spectral/IR and approximation/regulator/action limits, joint Phi and
+independent material/source/detector inputs. Core/funding gates remain separate.
+
 ## Source-Complete Hartree Current (2026-10-01)
 
 The successor [source-complete rest-frame current](Result/artifacts/T13_HARTREE_GAUGE_CURRENT_2026-10-01.md)
@@ -13,8 +25,8 @@ now computes mixed/current loops, covariance and mean-field response, seagulls
 and a derived UV surface contact. Actual Ward transversality and an independent
 stationary-potential density derivative agree without projecting the tensor.
 This closes a fixed-Phi candidate current question, not physical heat transport.
-Latest controller: real-axis/error, full regulator/RG/action and joint-Phi/material
-admission. The finite vacuum source contact is a declared convention, not a
+Its real-axis successor is linked above; global spectral/error, full
+regulator/RG/action and joint-Phi/material admission remain. The finite vacuum source contact is a declared convention, not a
 microscopic input. Physical funding/Core gates and original failures are unchanged.
 
 ## Computed Hartree External Field Response (2026-10-01)

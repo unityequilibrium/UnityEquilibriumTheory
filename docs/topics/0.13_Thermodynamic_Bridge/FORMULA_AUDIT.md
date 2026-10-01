@@ -1,5 +1,15 @@
 # Formula Audit: 0.13_Thermodynamic_Bridge
 
+## Scoped Hartree Real-Axis Response (2026-10-01)
+
+| formula_id | relation | variables and units | constant_origin | proof_status | verification_role | failure_mode | next_hardening_step |
+| :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- |
+| t13.diagnostic.hartree_real_axis_Cauchy | `int g/(ell_star-ell+i0)=int (g-g_star)/(ell_star-ell)+g_star logabs-i*pi*g_star` | ell,p,q,omega E; mass g E^-3, mixed E^-2, current E^-1; radial measure E^3 | exact outgoing-pole coordinate of the existing kinetic/source action | angular identity; full-domain radial numerical admission on declared grid | independent upper-half-plane method, vacuum PV, refinement and Ward | assigned width called collision damping; clipping/log endpoints or q=0 pseudoinverse | global poles/IR and approximation/regulator/action control |
+| t13.diagnostic.hartree_on_shell_source_cut | `rho_joint=(B_R-S B_R^dagger S)/(2i); cut=-pi*int g*delta(omega+p-ell)` | bubble cut dimensionless; mixed E; current E^2; S=time anti-Hermitian source signature | forward energy conservation, original residues and derivative vertices | independently checked delta roots and radial phase space | separate pair/scattering, T=0, signed frequency, loss and energy units | elementwise imaginary mixed matrix used as spectral density; branch absorption called physical Kubo | joint Phi/material/heat-current and microscopic transport matching |
+
+See [derivation](Result/artifacts/T13_HARTREE_REAL_AXIS_2026-10-01.md).
+Local diagnostic IDs only; no new admitted Core equation or ontology.
+
 ## Computed Hartree External Field Response (2026-10-01)
 
 | formula_id | relation | units | constant_origin | proof_status | verification_role | failure_mode | next_hardening_step |

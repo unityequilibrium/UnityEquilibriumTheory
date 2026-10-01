@@ -1,5 +1,18 @@
 ﻿# Method
 
+## Scoped Real-Axis Source Response (2026-10-01)
+
+Use `Research_T13_Hartree_Real_Axis.py` with the unchanged stationary masses
+and source convention. Invert each outgoing pole energy to perform an exact
+angular Cauchy subtraction; retain its analytic -pi*g on-shell jump and the
+surviving time-source polynomial contact. Independently solve the forward
+angular energy equation and delta Jacobian, then integrate the cut with a
+different radial map. Full-domain radial quadrature, log1p and algebraic
+residues control UV cancellation without clipping or a cutoff. Reoptimize
+covariance and mean field exactly as in the current predecessor; no Ward
+projector, assigned width or new state. See [derivation and domain](Result/artifacts/T13_HARTREE_REAL_AXIS_2026-10-01.md).
+Grid convergence is not a global pole/truncation proof or microscopic transport.
+
 ## Source-Responsive Hartree Field Operator (2026-10-01)
 
 The [current successor](Result/artifacts/T13_HARTREE_GAUGE_CURRENT_2026-10-01.md)

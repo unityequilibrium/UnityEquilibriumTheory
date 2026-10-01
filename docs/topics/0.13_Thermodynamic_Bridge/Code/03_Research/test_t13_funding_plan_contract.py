@@ -63,7 +63,8 @@ def test_plan_documents_and_latest_evidence_are_linked_without_holdout_reads():
                   "thermal_oneloop_ward_current_evidence_2026_10_01", "finite_momentum_thermal_1pi_evidence_2026_10_01",
                   "polar_static_ir_observable_evidence_2026_10_01", "polar_dynamic_composite_evidence_2026_10_01",
                   "renormalized_hartree_background_evidence_2026_10_01", "hartree_counterterm_matching_evidence_2026_10_01",
-                  "hartree_external_response_evidence_2026_10_01", "hartree_gauge_current_evidence_2026_10_01"):
+                  "hartree_external_response_evidence_2026_10_01", "hartree_gauge_current_evidence_2026_10_01",
+                  "hartree_real_axis_evidence_2026_10_01"):
         evidence = PLAN[field]
         path = ROOT / evidence["path"]
         assert hashlib.sha256(path.read_bytes()).hexdigest() == evidence["sha256"]
@@ -117,7 +118,12 @@ def test_execution_review_is_not_a_model_trial_or_physical_closure():
     assert review["record_class"] == "PLANNING_NOT_SCIENTIFIC_CLOSURE"
     assert review["scientific_deliverable_is_not_full_topic_closure"] is True
     assert PLAN[review["current_scientific_evidence_field"]]["gauge_current_vertex_computed"] is True
-    assert PLAN[review["current_scientific_evidence_field"]]["real_axis_limit_admitted"] is False
+    current = PLAN[review["current_scientific_evidence_field"]]
+    assert current["real_axis_limit_admitted"] is True
+    assert current["real_axis_admission_scope"] == "two_fixed_Phi_witnesses_and_ten_positive_frequency_q_points_not_global"
+    assert current["global_real_axis_stability_proved"] is False
+    assert current["controlled_truncation_error_established"] is False
+    assert PLAN["hartree_gauge_current_evidence_2026_10_01"]["real_axis_limit_admitted"] is False
     trial = review["model_trial"]
     assert trial["status"] == "NOT_RUN"
     assert trial["configuration_changed"] is False
@@ -156,8 +162,9 @@ def test_portfolio_strategy_preserves_scientific_acceptance_and_existing_dates()
         "scientific_freeze": "2026-10-07",
         "portfolio_review": PLAN["delivery_date"],
     }
-    for flag in ("new_real_axis_exploration_is_accepted_evidence",
-                 "novelty_established_by_planning", "scientific_goal_completion_rule_changed",
+    assert strategy["new_real_axis_exploration_is_accepted_evidence"] is True
+    assert "hartree_real_axis_evidence_2026_10_01" in strategy["accepted_preliminary_evidence_fields"]
+    for flag in ("novelty_established_by_planning", "scientific_goal_completion_rule_changed",
                  "core_composition_gate_overwritten", "physical_gate_changed", "claim_promotion"):
         assert strategy[flag] is False
     assert strategy["review_readiness_not_submission_readiness"] is True

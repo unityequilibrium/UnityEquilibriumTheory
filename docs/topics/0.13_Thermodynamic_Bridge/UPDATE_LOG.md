@@ -1,3 +1,27 @@
+## 2026-10-01 - Scoped real-axis Hartree source response without assigned width
+
+MAJOR_RESULT_CLOSURE: T13_FIXED_PHI_HARTREE_REAL_AXIS_RESPONSE is CLOSED_FOR_LANE on ten declared points at the same two fixed-Phi witnesses. The full active Goal remains open.
+
+WHAT_IS_ACTUALLY_CLOSED: Exact angular PV and pair/scattering cuts; independent forward-shell angular delta roots/Jacobian and differently mapped radial phase space; full-domain vacuum-subtracted loops and same-current reoptimization on real frequencies. Ward/contact, vacuum, signed-frequency and unit checks pass without assigned output width.
+
+WHAT_REMAINS_OPEN: Global collective/IR and Hartree approximation control; full covariant nonuniform regulator/RG/action; joint Phi/global state and independent material/source/detector map; normal/heat current, microscopic SK/KMS/collision/entropy transport and source uncertainty.
+
+DEPENDENCY_UNLOCKED: Same-candidate global spectral and joint-state matching only. R1 full acceptance, physical funding G1/G2, Full Topic13 and recorded Core composition are unchanged.
+
+STATUS: PASS_SCOPED_HARTREE_REAL_AXIS_RESPONSE.
+
+WHAT_CHANGED: Added real-axis verifier, seventeen tests, artifact/derivation and local formula/method/spec/limits/README integration; updated funding evidence/hash/controller and Goal/14-day/12-week handoffs. Old validators and artifacts remain restricted and unchanged. Previous planning head 681741eea has all relevant remote CI checks passing.
+
+EQUATION_OR_MAPPING: Exact Cauchy subtraction gives PV plus -pi*g_star spectral density for an on-shell point inside the angular energy interval; outside it the cut is zero. The unchanged source/covariance and mean-field equations give Pi=Gamma_AA-Gamma_Aphi*Gamma_field^-1*Gamma_phiA. A is nondynamical O2 source, not UET C/Phi or a state.
+
+VERIFICATION: 178 linked Topic13/Core/planning tests passed. Point-cut error <=4.55e-13, independent integrated-cut disagreement <=6.94e-17, last refinement <=3.63e-6, Ward <=1.72e-7 and 4D vacuum-current error <=7.05e-8 in canonical units, not physical uncertainty. Initial UV cancellation drift was repaired with exact log1p/residue/full-domain coordinate identities; spectral-density and reality test conventions were corrected against the predecessor, with no threshold change. Declared predecessor lineage, protected hashes, omitted-cut/contact controls and audit text-read allowlist checked. Artifact SHA-256 a392cd0e1e45fd0b4e2b0db28136664b27e00b4338a083c7f0f9602c9fe5e148.
+
+CONTROLLING_BLOCKER: global_spectral_truncation_regulator_joint_Phi_material_and_transport_matching_not_closed.
+
+NEXT_ACTION: Analyze collective spectral/IR and approximation/regulator/action limits in a declared candidate validity domain, then joint Phi/material/source/detector and heat-current admission. Do not repeat the same ten-point calculation. Portfolio dates and model policy remain unchanged.
+
+CLAIM_BOUNDARY: Fixed-Phi Hartree real-axis current/field response only, not global spectral stability, a truncation proof, physical damping/Kubo/SK-KMS/heat, material He-II/TTG prediction, causal-branch repair or global UET closure. No fit, projector, artificial width/mass/filter, clipping, threshold change, numeric holdout read or Core-owner edit. Prior Xie exposure remains REVIEW_REQUIRED.
+
 ## 2026-10-01 - Portfolio-first research aims and next-round model/resource strategy
 
 MAJOR_RESULT_CLOSURE: Planning scope clarified; no new scientific result accepted and the full active Goal remains open.

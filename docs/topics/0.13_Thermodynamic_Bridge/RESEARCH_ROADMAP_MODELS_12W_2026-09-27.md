@@ -6,7 +6,7 @@
 
 ## ผลหลักสำหรับพอร์ตและทุนรอบถัดไป
 
-**ข้อเสนอเลือกงาน:** พอร์ตรอบแรกเน้นหนึ่งผลด้าน **stationary/source-complete thermal-response methods พร้อมแผนการวัด** ไม่ตั้งเงื่อนไขว่าต้องปิด Full Topic 13 หรือทำนาย He-II/graphite สำเร็จก่อนมีพอร์ต ผลปิดที่มีหลักฐานแล้วคือ stationary candidate, homogeneous counterterm match, external field response และ rest-frame current consistency ที่ fixed Phi ใน prescription ระบุชัด ส่วน real-axis exploration ที่กำลังตรวจยังไม่ใช่ accepted evidence จนกว่าจะมี verifier, independent check และ artifact/hash ของตนเอง
+**ข้อเสนอเลือกงาน:** พอร์ตรอบแรกเน้นหนึ่งผลด้าน **stationary/source-complete thermal-response methods พร้อมแผนการวัด** ไม่ตั้งเงื่อนไขว่าต้องปิด Full Topic 13 หรือทำนาย He-II/graphite สำเร็จก่อนมีพอร์ต ผลปิดที่มีหลักฐานแล้วคือ stationary candidate, homogeneous counterterm match, external field response และ rest-frame current consistency ที่ fixed Phi ใน prescription ระบุชัด ตอนนี้ [real-axis successor](Result/artifacts/T13_HARTREE_REAL_AXIS_2026-10-01.md) ผ่าน independent on-shell/PV, vacuum และ Ward พร้อม artifact/hash แล้ว รับได้เฉพาะสิบจุดที่ประกาศ ไม่ใช่ global stability หรือ approximation/physical admission
 
 คำถามสำหรับหัวเรื่องงานที่เสนอ: **“แบบจำลอง finite-temperature ที่ stationary และรักษา source/current consistency กำหนด response ได้อะไรเอง และต้องวัด input ใดเพิ่มก่อนทำนายความร้อนของวัสดุ?”** เป็น research framing ที่เสนอ ไม่ใช่การรับรอง novelty; related-work review ต้องแยกวิธี Hartree/two-fluid ที่นำเข้าจาก contribution ที่พิสูจน์ได้ของงานนี้ ไม่ใช้การทำวิธีมาตรฐานซ้ำหรือชื่อ UET แทนความใหม่
 
@@ -58,6 +58,8 @@
 ผลต่อมาในวันเดียวกัน: [one-loop thermal Ward/current](Result/artifacts/T13_THERMAL_ONE_LOOP_WARD_CURRENT_2026-10-01.md) คำนวณ tadpole กับ bubble และปิด zero-momentum Ward/static-current matching ที่ fixed Phi ในลำดับ one-loop แล้ว แพ็ก A จึงไม่ต้องเริ่มจากการเดาค่า zero-momentum correction อีก แต่ต้อง derive finite-q/frequency kernel และแก้ infrared/nonuniform-expansion boundary ก่อนรับ stationary retarded operator ผลนี้ไม่ทำให้ W4 หรือ physical gate ผ่านโดยอัตโนมัติ
 
 ### ผลส่งมอบสองสัปดาห์ที่ต้องมี
+
+ผลล่าสุด 1 ต.ค.: [real-axis response](Result/artifacts/T13_HARTREE_REAL_AXIS_2026-10-01.md) ให้ principal value และ pair/scattering spectrum โดยไม่กำหนด width ตรวจด้วย forward on-shell roots และ radial phase space อีกวิธี พร้อม vacuum, Ward, refinement, reality และ units ที่สอง fixed-Phi witnesses แล้ว งานต่อไม่ใช่คำนวณสิบจุดเดิมซ้ำ แต่คือ global collective/IR และ approximation/regulator/action control ก่อน joint Phi/material/heat-current admission ผลนี้ไม่รับ R1 ครบและไม่ยกระดับ physical G1/G2 หรือ Full Topic13 วันพอร์ตและ model policy เดิมคงอยู่
 
 ผลล่าสุด 1 ต.ค.: [source-complete Hartree current](Result/artifacts/T13_HARTREE_GAUGE_CURRENT_2026-10-01.md) คำนวณ mixed/current loops, source และ mean-field reoptimization, seagull และ UV surface ที่ derive จาก mass trace แล้ว Ward ผ่านโดยไม่ project tensor และ density response ตรงกับ stationary potential อีกวิธี จึงปิดคำถาม current consistency ที่ fixed Phi ใน named convention ได้จริง ไม่ต้องวนคำนวณ current เดิมเพื่อเพิ่ม log งานต่อคือ real-axis/error, full regulator/RG/action และ joint-Phi/material/heat-current admission; source contact แบบ finite ยังเป็น convention ไม่ใช่ microscopic input ผลนี้ไม่เปิด physical G1/G2 หรือ Full Topic13
 
@@ -168,7 +170,7 @@ R1–R5 ไม่ใช่ห้าช่องที่ติ๊กแล้ว
 
 ### บัตรตัดสินใจสำหรับใช้เวลาระยะยาวให้คุ้ม
 
-ใช้ `execution_review_2026_10_01` ใน planning JSON เป็นบัตรรับงาน ไม่ใช่ gate ฟิสิกส์ใหม่ คำถาม source/contact current consistency ได้รับคำตอบแบบ fixed-Phi/rest-frame ตามผลล่าสุดแล้ว คำถามถัดไปคือ **response ที่คำนวณนี้มี real-axis spectrum และ error control อย่างไร และจะรับ regulator/action, joint-Phi และ material mapping ได้หรือไม่** ห้ามใช้ width ที่เลือกเองหรือ fit target เพื่อปิดส่วนที่ขาด; ยังต้องแยก source normalization convention จาก microscopic input
+ใช้ `execution_review_2026_10_01` ใน planning JSON เป็นบัตรรับงาน ไม่ใช่ gate ฟิสิกส์ใหม่ คำถาม source/contact current consistency และ real-axis calculation บน declared grid ได้รับคำตอบแบบ fixed-Phi/rest-frame แล้ว คำถามถัดไปคือ **global collective/IR และ approximation/regulator/action control เป็นอย่างไร และจะรับ joint-Phi และ material mapping ได้หรือไม่** numerical refinement ไม่เป็น truncation bound ห้ามใช้ width ที่เลือกเองหรือ fit target เพื่อปิดส่วนที่ขาด; ยังต้องแยก source normalization convention จาก microscopic input
 
 ในรอบสองสัปดาห์ เป้าหมายคือหนึ่งผลวิจัยที่พิสูจน์/ตรวจซ้ำได้และบอกว่าการวัดอะไรเพิ่มจะตัดความกำกวม ไม่สัญญาว่า full Topic 13 หรือการทำนายวัสดุจะปิดทัน หาก prerequisites ของ prediction ไม่ครบในวันที่ 2 ตุลาคม ให้เลือก structural/methods question ที่มีหลักฐานจริง; หาก proof ยังไม่เสร็จวันที่ 7 ตุลาคม ให้ตรึง preliminary results กับ missing calculation ตามจริงสำหรับพอร์ต 11 ตุลาคม ไม่เปลี่ยน unresolved เป็น no-go
 

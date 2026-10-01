@@ -22,9 +22,11 @@
       "renormalized_hartree_background_evidence_2026_10_01",
       "hartree_counterterm_matching_evidence_2026_10_01",
       "hartree_external_response_evidence_2026_10_01",
-      "hartree_gauge_current_evidence_2026_10_01"
+      "hartree_gauge_current_evidence_2026_10_01",
+      "hartree_real_axis_evidence_2026_10_01"
     ],
-    "new_real_axis_exploration_is_accepted_evidence": false,
+    "new_real_axis_exploration_is_accepted_evidence": true,
+    "real_axis_acceptance_boundary": "Audited ten-point fixed-Phi grid only; no global stability, truncation or physical prediction acceptance",
     "minimum_portfolio_bundle": [
       "One bounded result statement with derivation, assumptions and an independent numerical or analytic check",
       "Claim-to-evidence manifest with hashes and failed baselines retained",
@@ -94,8 +96,8 @@
   },
   "execution_review_2026_10_01": {
     "record_class": "PLANNING_NOT_SCIENTIFIC_CLOSURE",
-    "current_scientific_evidence_field": "hartree_gauge_current_evidence_2026_10_01",
-    "current_question": "Can the computed source/current response support a controlled real-axis spectral limit and full regulator/action, joint-Phi and material admission without an imposed width or target fitting?",
+    "current_scientific_evidence_field": "hartree_real_axis_evidence_2026_10_01",
+    "current_question": "Does the now-computed real-axis candidate response admit global collective spectral/IR and controlled approximation/regulator/action limits, followed by joint-Phi/material/heat-current matching without target fitting?",
     "scientific_deliverable_is_not_full_topic_closure": true,
     "model_trial": {
       "status": "NOT_RUN",
@@ -139,6 +141,27 @@
   "owner_topic": "0.13_Thermodynamic_Bridge",
   "research_goal_id": "T13_HE4_PREDICTIVE_CONTENT_AND_MEASUREMENT_DESIGN",
   "research_goal_status": "PARTIAL_PRE_SPRINT_EVIDENCE_NOT_SCIENTIFIC_CLOSURE",
+  "hartree_real_axis_evidence_2026_10_01": {
+    "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/t13_hartree_real_axis.json",
+    "sha256": "a392cd0e1e45fd0b4e2b0db28136664b27e00b4338a083c7f0f9602c9fe5e148",
+    "verification_status": "PASS_SCOPED_HARTREE_REAL_AXIS_RESPONSE",
+    "closure_level": "CLOSED_FOR_LANE",
+    "branch_id": "t13.candidate.fixed_phi_hartree_ms_finite_potential_v1",
+    "scientific_contribution": "Exact angular PV and pair/scattering cuts; independent forward-shell delta roots and radial phase space; same reoptimized real-axis current/Ward on ten declared points without assigned width",
+    "controlling_blocker": "global_spectral_truncation_regulator_joint_Phi_material_and_transport_matching_not_closed",
+    "D05_action": "Use scoped real-axis methods evidence for the route decision, not a physical He-II/TTG prediction",
+    "W04_action": "Close global spectral/IR and approximation/regulator/action limits before joint-Phi/material/heat-current admission",
+    "gauge_current_vertex_computed": true,
+    "real_axis_limit_admitted": true,
+    "real_axis_admission_scope": "two_fixed_Phi_witnesses_and_ten_positive_frequency_q_points_not_global",
+    "global_real_axis_stability_proved": false,
+    "controlled_truncation_error_established": false,
+    "full_covariant_counterterm_match": false,
+    "g1_physical_unlock": false,
+    "g2_science_unlock": false,
+    "full_core_unlock": false,
+    "core_composition_gate_overwritten": false
+  },
   "hartree_gauge_current_evidence_2026_10_01": {
     "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/t13_hartree_gauge_current.json",
     "sha256": "b74428070c559faa3c7caa7ab8efd0258f9f692073b7e736c62a8d44bc8ac971",
@@ -270,7 +293,7 @@
     "scenario_dates_if_counted_after_D14": ["2026-12-11", "2027-01-11"],
     "readiness_dimensions": ["research_result_ready", "portfolio_review_ready", "submission_ready"],
     "core_status_scope": "Recorded bounded O2/He4 composition is separate from new independent dynamic-response admission and graphite validation; diagnostic flags do not overwrite Core gates",
-    "critical_path": ["real-axis spectral/error and full regulator/RG/action, joint-Phi material matching after the computed rest-frame source/current response", "independent material source and detector observable mapping", "matched permitted input or measurement feasibility", "independent verification and comparison or scoped identifiability proof", "claim review and portfolio"],
+    "critical_path": ["global collective spectral/IR and approximation/regulator/action, joint-Phi material matching after the scoped real-axis source/current calculation", "independent material source and detector observable mapping", "matched permitted input or measurement feasibility", "independent verification and comparison or scoped identifiability proof", "claim review and portfolio"],
     "two_wave_no_new_evidence_policy": "Decision record choosing a justified measurement request, scoped model revision or branch disposition; no automatic Goal completion or pause",
     "initial_effort_fraction": {"derivation_identifiability": 0.6, "verification": 0.2, "source_portfolio_call_fit": 0.2},
     "goal_reconfigured": false,

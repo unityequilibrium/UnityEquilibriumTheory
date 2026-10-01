@@ -1,5 +1,20 @@
 # Verification Spec
 
+## Scoped Real-Axis Verification (2026-10-01)
+
+Run `Research_T13_Hartree_Real_Axis.py` and `test_t13_hartree_real_axis.py`.
+Require independent forward angular delta roots/Jacobian and tangent-mapped
+radial cut integration, agreement with committed upper-half-plane loops and
+4D vacuum below/above threshold, signed-frequency reality, source/current
+Ward, cold scattering absence, reference/order/endpoint refinement and units.
+Use the inherited absolute point/vacuum 1e-7, radial/Ward 2e-5 and derivative
+relative 1e-6 tolerances. Require no output width, cutoff, clipped endpoints,
+Ward projection or uniform pseudoinverse; the eta sequence is verification only.
+Check omitted-cut/contact negative controls and predecessor/protected hashes;
+audit text reads must be only the current predecessor artifact. Physical/Core,
+global-pole and truncation flags remain false; real-axis admission is scoped
+to the recorded grid. Original causal threshold 1e-6 is unchanged.
+
 ## Actual External Field Response (2026-10-01)
 
 Run the subsequent `Research_T13_Hartree_Gauge_Current.py` and
