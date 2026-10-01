@@ -6,6 +6,20 @@ description: "Research module for Thermodynamic Bridge within the Unity Equilibr
 
 # 0.13 Thermodynamic Bridge
 
+## Low-Temperature Admission Boundary (2026-10-02)
+
+The [same-prescription low-T audit](Result/artifacts/T13_HARTREE_LOW_T_VALIDITY_2026-10-02.md)
+finds positive internal zero-T gaps while external phase derivative response
+is gapless. Stationary entropy is consistent but exponentially suppressed,
+not the T^3 law required if that external mode is a physical equilibrium
+bosonic excitation. This conditionally excludes asymptotically complete
+low-T EOS admission for this prescription at two witnesses, not global UET
+no-go or a retraction of the response result. Next derive a consistent
+thermal approximation or justified restricted validity without mass/phonon
+repair. Independent material/source/thermal input, full Goal/Topic13,
+Core composition and 7/11 October dates remain unchanged. Earlier entries
+retain their scope at their own wave.
+
 ## Joint Classical-Phi Retarded Response (2026-10-02)
 
 The [joint dynamic successor](Result/artifacts/T13_HARTREE_JOINT_PHI_RESPONSE_2026-10-02.md)

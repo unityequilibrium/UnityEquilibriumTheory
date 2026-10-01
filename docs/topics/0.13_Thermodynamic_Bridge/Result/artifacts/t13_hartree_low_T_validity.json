@@ -1,0 +1,1888 @@
+{
+  "schema_version": "t13-joint-hartree-low-T-validity-v1",
+  "generated_at": "2026-10-01T22:56:44.729841+00:00",
+  "major_result_id": "T13_JOINT_HARTREE_LOW_T_THERMODYNAMIC_COMPATIBILITY_BOUNDARY",
+  "topic": "0.13",
+  "branch_id": "t13.candidate.classical_phi_hartree_ms_homogeneous_v1",
+  "closure_level": "CLOSED_FOR_LANE",
+  "verification_status": "PASS_SCOPED_LOW_T_EXCLUSION",
+  "what_is_closed": [
+    "zero_T_joint_stationarity_and_positive_internal_gap_at_two_witnesses",
+    "entropy_envelope_without_added_external_mode",
+    "conditional_low_T_EOS_external_gapless_mode_compatibility_exclusion"
+  ],
+  "equation_or_mapping": "Delta^2=2ab/(a+b+4mu^2+sqrt((a+b+4mu^2)^2-4ab)); s_H=-partial_T Omega_joint=s_internal; s_H/T^3->0 for nondegenerate positive-gap zero-T branch; conditional one physical linear bosonic mode gives s_ph/T^3=2pi^2/(45c^3)>0, c^2=rho/chi",
+  "units": {
+    "T_mu_Phi_gap_effective_mass": "E",
+    "s_a_b_Hessian_chi_rho": "E^2",
+    "entropy": "E^3",
+    "potential": "E^4",
+    "speed_entropy_over_T_cubed": "dimensionless"
+  },
+  "derivation_class": "CONDITIONAL_ASYMPTOTIC_COMPATIBILITY_BOUNDARY_PLUS_INTERNAL_NUMERICAL_WITNESSES_NOT_GLOBAL_UET_NO_GO",
+  "observable": "candidate_equilibrium_entropy_and_external_phase_derivative_coefficients_not_material_heat_or_temperature",
+  "data_role": "DERIVED_NO_EMPIRICAL_ROWS",
+  "equation_registry_ids": [
+    "t13.diagnostic.joint_hartree_entropy_envelope",
+    "t13.diagnostic.joint_hartree_low_T_compatibility_boundary"
+  ],
+  "action_controls": {
+    "Z": 1.0,
+    "m0_sq": 1.0,
+    "u": 1.0,
+    "gamma": 0.04000000000000001,
+    "epsilon": 0.05,
+    "Phi_reference": 0.0,
+    "response_mass_sq": 1.0,
+    "response_quartic": 1.0,
+    "response_kinetic": 1.0
+  },
+  "examples": [
+    {
+      "mu": 1.05,
+      "zero_T_state": {
+        "s": 0.1299141544146922,
+        "a": 0.2598283088293845,
+        "b": 0.003322480631523608,
+        "Phi": 0.04708737483462616,
+        "residual": [
+          1.5265566588595902e-16,
+          -1.3877787807814457e-17,
+          5.127842594987442e-15,
+          -1.734723475976807e-18
+        ],
+        "residual_scales": [
+          0.10426718526484868,
+          0.10426718526484868,
+          0.10426718526484868,
+          0.05
+        ],
+        "residual_scale_units": [
+          "E^2",
+          "E^2",
+          "E^2",
+          "E^3"
+        ],
+        "scaled_residual_max": 4.9179831429823565e-14,
+        "potential": -0.008846938363669876,
+        "mass_sq": 0.998116505006615,
+        "loops": {
+          "sigma": -0.006797974934266538,
+          "phase": -0.005136734618507372,
+          "loop_free_energy": -0.0062694968962070385,
+          "quasiparticle_entropy": 0.0,
+          "thermal": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "vacuum": [
+            -0.006797974934266538,
+            -0.005136734618507372,
+            -0.0062694968962070385
+          ]
+        }
+      },
+      "zero_T_gap_jet": {
+        "gap": 0.013591836738859555,
+        "low_energy_k_squared_coefficient": 2.06876365414901,
+        "effective_quadratic_mass": 0.2416902476980513,
+        "energy_squared_k_squared_coefficient": 0.05623659567695971
+      },
+      "zero_T_state_refinements": [
+        {
+          "s": 0.12991415124741212,
+          "a": 0.2598283024948243,
+          "b": 0.00332249019045958,
+          "Phi": 0.04708737515749907,
+          "residual": [
+            1.5612511283791264e-16,
+            -1.0061396160665481e-16,
+            5.096617572419859e-15,
+            -2.168404344971009e-18
+          ],
+          "residual_scales": [
+            0.10426718526484868,
+            0.10426718526484868,
+            0.10426718526484868,
+            0.05
+          ],
+          "residual_scale_units": [
+            "E^2",
+            "E^2",
+            "E^2",
+            "E^3"
+          ],
+          "scaled_residual_max": 4.888036019648905e-14,
+          "potential": -0.00884693838611036,
+          "mass_sq": 0.9981165049937001,
+          "loops": {
+            "sigma": -0.006797975334084793,
+            "phase": -0.005136730238857633,
+            "loop_free_energy": -0.006269496921667281,
+            "quasiparticle_entropy": 0.0,
+            "thermal": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "vacuum": [
+              -0.006797975334084793,
+              -0.005136730238857633,
+              -0.006269496921667281
+            ]
+          }
+        },
+        {
+          "s": 0.129914154244787,
+          "a": 0.2598283084895741,
+          "b": 0.003322481143446622,
+          "Phi": 0.047087374851860674,
+          "residual": [
+            1.5612511283791264e-16,
+            -1.734723475976807e-17,
+            5.051514762044462e-15,
+            -2.6020852139652106e-18
+          ],
+          "residual_scales": [
+            0.10426718526484868,
+            0.10426718526484868,
+            0.10426718526484868,
+            0.05
+          ],
+          "residual_scale_units": [
+            "E^2",
+            "E^2",
+            "E^2",
+            "E^3"
+          ],
+          "scaled_residual_max": 4.8447790637228086e-14,
+          "potential": -0.008846938364866668,
+          "mass_sq": 0.9981165050059255,
+          "loops": {
+            "sigma": -0.006797974955608259,
+            "phase": -0.005136734383887554,
+            "loop_free_energy": -0.006269496897563622,
+            "quasiparticle_entropy": 0.0,
+            "thermal": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "vacuum": [
+              -0.006797974955608259,
+              -0.005136734383887554,
+              -0.006269496897563622
+            ]
+          }
+        },
+        {
+          "s": 0.1299141544146922,
+          "a": 0.2598283088293845,
+          "b": 0.003322480631523608,
+          "Phi": 0.04708737483462616,
+          "residual": [
+            1.5265566588595902e-16,
+            -1.3877787807814457e-17,
+            5.127842594987442e-15,
+            -1.734723475976807e-18
+          ],
+          "residual_scales": [
+            0.10426718526484868,
+            0.10426718526484868,
+            0.10426718526484868,
+            0.05
+          ],
+          "residual_scale_units": [
+            "E^2",
+            "E^2",
+            "E^2",
+            "E^3"
+          ],
+          "scaled_residual_max": 4.9179831429823565e-14,
+          "potential": -0.008846938363669876,
+          "mass_sq": 0.998116505006615,
+          "loops": {
+            "sigma": -0.006797974934266538,
+            "phase": -0.005136734618507372,
+            "loop_free_energy": -0.0062694968962070385,
+            "quasiparticle_entropy": 0.0,
+            "thermal": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "vacuum": [
+              -0.006797974934266538,
+              -0.005136734618507372,
+              -0.0062694968962070385
+            ]
+          }
+        }
+      ],
+      "last_state_refinement": 5.119230139620512e-10,
+      "seed_disagreement": 5.140419340188274e-15,
+      "local_static_Hessian": {
+        "matrix": [
+          [
+            0.2627714639028966,
+            -0.014491143241780321
+          ],
+          [
+            -0.014491143241964528,
+            0.050330989640246
+          ]
+        ],
+        "reciprocity_residual": 1.842068164670252e-13,
+        "covariance_min_singular_value": 0.9954113002427933,
+        "eigenvalues": [
+          0.04934706636399145,
+          0.26375538717915115
+        ],
+        "radial_relaxed_Phi_curvature": 0.049531841858605354
+      },
+      "zero_T_residual_Jacobian": {
+        "matrix_in_MS_unit_coordinates": [
+          [
+            9.590745136741567,
+            0.029495468351012796,
+            0.01963770392601853,
+            -0.383629805469824
+          ],
+          [
+            -28.772235410224702,
+            9.56124966839055,
+            -0.01963770392601853,
+            0.383629805469824
+          ],
+          [
+            -9.590745136741567,
+            -0.10875828638068778,
+            9.82861141529179,
+            0.383629805469824
+          ],
+          [
+            -0.3999999999999648,
+            -0.001441532985817117,
+            0.00227540790025792,
+            1.0066516726064694
+          ]
+        ],
+        "minimum_singular_value": 0.9839903179637853,
+        "coordinate_contract": "s,a,b measured in MS^2 and Phi in MS; MS=1 E; residual E^2/E^3 scales retained, not an SI norm"
+      },
+      "zero_T_external_response": {
+        "source_runs": [
+          {
+            "order": 96,
+            "charge_susceptibility": 2.351958659235805,
+            "spatial_stiffness": 0.13026634601256998,
+            "external_phase_zero_inverse": 9.397430490026837e-11,
+            "even_min_singular_value": 0.04934706636369473,
+            "covariance_min_singular_value": 0.9954113006784814,
+            "current_imaginary_residual": 7.96832506731242e-49
+          },
+          {
+            "order": 144,
+            "charge_susceptibility": 2.3519586570762425,
+            "spatial_stiffness": 0.1302663453706322,
+            "external_phase_zero_inverse": 9.397430533394924e-11,
+            "even_min_singular_value": 0.04934706636369473,
+            "covariance_min_singular_value": 0.9954113006784814,
+            "current_imaginary_residual": 2.499657161237095e-49
+          },
+          {
+            "order": 192,
+            "charge_susceptibility": 2.3519586321696844,
+            "spatial_stiffness": 0.13026635168510112,
+            "external_phase_zero_inverse": 9.397435694197265e-11,
+            "even_min_singular_value": 0.04934706636369473,
+            "covariance_min_singular_value": 0.9954113006784816,
+            "current_imaginary_residual": 5.169878828456423e-26
+          }
+        ],
+        "finite_q_upper_plane_checks": [
+          {
+            "q": 0.008,
+            "imaginary_velocity": 0.2,
+            "phase_coefficient_real": 1.726693338814084,
+            "phase_coefficient_imaginary": -4.0573643346084933e-17,
+            "expected_quadratic_coefficient": 1.7268687771754994,
+            "relative_expansion_disagreement": 0.00010159333687320693,
+            "phase_current_Ward_disagreement": 1.4151315816004027e-06
+          },
+          {
+            "q": 0.004,
+            "imaginary_velocity": 0.2,
+            "phase_coefficient_real": 1.72683038539934,
+            "phase_coefficient_imaginary": -2.771199938290265e-17,
+            "expected_quadratic_coefficient": 1.7268687771754994,
+            "relative_expansion_disagreement": 2.223201708595468e-05,
+            "phase_current_Ward_disagreement": 5.788264020648089e-06
+          },
+          {
+            "q": 0.002,
+            "imaginary_velocity": 0.2,
+            "phase_coefficient_real": 1.726881174015534,
+            "phase_coefficient_imaginary": -7.214934482669626e-17,
+            "expected_quadratic_coefficient": 1.7268687771754994,
+            "relative_expansion_disagreement": 7.178796790130448e-06,
+            "phase_current_Ward_disagreement": 2.3446560870412304e-05
+          },
+          {
+            "q": 0.008,
+            "imaginary_velocity": 0.4,
+            "phase_coefficient_real": 3.8985541140688844,
+            "phase_coefficient_imaginary": -7.554176389468047e-17,
+            "expected_quadratic_coefficient": 3.899342108753015,
+            "relative_expansion_disagreement": 0.00020208400857202324,
+            "phase_current_Ward_disagreement": 1.4063296695975215e-06
+          },
+          {
+            "q": 0.004,
+            "imaginary_velocity": 0.4,
+            "phase_coefficient_real": 3.8991505631868413,
+            "phase_coefficient_imaginary": -4.00158447659491e-17,
+            "expected_quadratic_coefficient": 3.899342108753015,
+            "relative_expansion_disagreement": 4.912253422018065e-05,
+            "phase_current_Ward_disagreement": 5.776991008061854e-06
+          },
+          {
+            "q": 0.002,
+            "imaginary_velocity": 0.4,
+            "phase_coefficient_real": 3.8993162344768537,
+            "phase_coefficient_imaginary": -1.3893451975613353e-16,
+            "expected_quadratic_coefficient": 3.899342108753015,
+            "relative_expansion_disagreement": 6.635549136158048e-06,
+            "phase_current_Ward_disagreement": 2.3423711900980717e-05
+          }
+        ],
+        "external_derivative_expansion_speed": 0.23534300024105592,
+        "conditional_one_gapless_mode_entropy_T_cubed_coefficient": 33.652192936458846,
+        "coefficient_protocol": "joint source-relaxed T=0 derivative expansion; conditional bosonic mode counting, not inserted in Omega and not measured sound"
+      },
+      "low_T_runs": [
+        {
+          "T": 0.006795918369429777,
+          "gap_over_T": 2.0,
+          "joint_state": {
+            "s": 0.1299110958165498,
+            "a": 0.2598221916330996,
+            "b": 0.0033275711583579917,
+            "Phi": 0.047087272029063584,
+            "residual": [
+              -3.469446951953614e-18,
+              3.469446951953614e-18,
+              -6.938893903907228e-17,
+              -8.673617379884035e-19
+            ],
+            "residual_scales": [
+              0.10438349499338506,
+              0.10438349499338506,
+              0.10438349499338506,
+              0.05
+            ],
+            "residual_scale_units": [
+              "E^2",
+              "E^2",
+              "E^2",
+              "E^3"
+            ],
+            "scaled_residual_max": 6.647501029110931e-16,
+            "potential": -0.00884694603460701,
+            "mass_sq": 0.9981165091188374,
+            "loops": {
+              "sigma": -0.006797847628641558,
+              "phase": -0.0051340620494625235,
+              "loop_free_energy": -0.006269496846006864,
+              "quasiparticle_entropy": 5.658564258928765e-06,
+              "thermal": [
+                1.05998876962002e-07,
+                2.744872183987901e-06,
+                -7.667606020997472e-09,
+                5.658564258928765e-06
+              ],
+              "vacuum": [
+                -0.0067979536275185205,
+                -0.0051368069216465116,
+                -0.006269489178400843
+              ]
+            }
+          },
+          "independent_entropy": {
+            "entropy": 5.658564258928902e-06,
+            "adaptive_absolute_error_estimate": 2.1121023569119252e-15,
+            "momentum_scale": 0.05733681583224246,
+            "Boltzmann_entropy_scale": 1.290407775238951e-06,
+            "quadrature_relative_tolerance": 1e-09
+          },
+          "refined_independent_entropy": {
+            "entropy": 5.658564258928902e-06,
+            "adaptive_absolute_error_estimate": 4.3045104084528956e-19,
+            "momentum_scale": 0.05733681583224246,
+            "Boltzmann_entropy_scale": 1.290407775238951e-06,
+            "quadrature_relative_tolerance": 1e-11
+          },
+          "entropy_over_T_cubed": 18.028591204808283,
+          "conditional_gapless_entropy_ratio": 0.5357330275280835,
+          "legacy_trace_log_entropy": 5.658564258928765e-06,
+          "legacy_relative_difference": 2.4202861936828413e-14,
+          "zero_state_entropy": 5.662134117036388e-06,
+          "zero_state_Boltzmann_asymptotic_entropy": 2.574036305065102e-06,
+          "Boltzmann_asymptotic_relative_difference": 1.1997102783261573,
+          "state_movement_from_zero": 6.117196284904924e-06
+        },
+        {
+          "T": 0.0033979591847148887,
+          "gap_over_T": 4.0,
+          "joint_state": {
+            "s": 0.12991402569504434,
+            "a": 0.2598280513900888,
+            "b": 0.00332270750903336,
+            "Phi": 0.04708737177432184,
+            "residual": [
+              5.204170427930421e-17,
+              5.898059818321144e-17,
+              -5.48172618408671e-16,
+              0.0
+            ],
+            "residual_scales": [
+              0.10438349499338506,
+              0.10438349499338506,
+              0.10438349499338506,
+              0.05
+            ],
+            "residual_scale_units": [
+              "E^2",
+              "E^2",
+              "E^2",
+              "E^3"
+            ],
+            "scaled_residual_max": 5.251525812997635e-15,
+            "potential": -0.008846938500398862,
+            "mass_sq": 0.9981165051290272,
+            "loops": {
+              "sigma": -0.0067979711446470885,
+              "phase": -0.005136617390130157,
+              "loop_free_energy": -0.006269496740601459,
+              "quasiparticle_entropy": 2.750107096017634e-07,
+              "thermal": [
+                2.8440286337260777e-09,
+                1.2039232044302143e-07,
+                -1.367223393297379e-10,
+                2.750107096017634e-07
+              ],
+              "vacuum": [
+                -0.006797973988675723,
+                -0.0051367377824506,
+                -0.00626949660387912
+              ]
+            }
+          },
+          "independent_entropy": {
+            "entropy": 2.7501070960176625e-07,
+            "adaptive_absolute_error_estimate": 4.28082906937118e-17,
+            "momentum_scale": 0.040528542950284005,
+            "Boltzmann_entropy_scale": 6.176135915116604e-08,
+            "quadrature_relative_tolerance": 1e-09
+          },
+          "refined_independent_entropy": {
+            "entropy": 2.7501070960176614e-07,
+            "adaptive_absolute_error_estimate": 4.701488419961498e-19,
+            "momentum_scale": 0.040528542950284005,
+            "Boltzmann_entropy_scale": 6.176135915116604e-08,
+            "quadrature_relative_tolerance": 1e-11
+          },
+          "entropy_over_T_cubed": 7.009630617916479,
+          "conditional_gapless_entropy_ratio": 0.20829639932089636,
+          "legacy_trace_log_entropy": 2.750107096017634e-07,
+          "legacy_relative_difference": 1.0436096431476471e-14,
+          "zero_state_entropy": 2.750324765985297e-07,
+          "zero_state_Boltzmann_asymptotic_entropy": 1.7790229620607418e-07,
+          "Boltzmann_asymptotic_relative_difference": 0.5459748550965537,
+          "state_movement_from_zero": 2.5743929571442337e-07
+        },
+        {
+          "T": 0.0016989795923574443,
+          "gap_over_T": 8.0,
+          "joint_state": {
+            "s": 0.12991415362544004,
+            "a": 0.2598283072508801,
+            "b": 0.003322482057730159,
+            "Phi": 0.04708737481937635,
+            "residual": [
+              1.3877787807814457e-17,
+              -4.163336342344337e-17,
+              -2.0816681711721685e-17,
+              -4.336808689942018e-19
+            ],
+            "residual_scales": [
+              0.10438349499338506,
+              0.10438349499338506,
+              0.10438349499338506,
+              0.05
+            ],
+            "residual_scale_units": [
+              "E^2",
+              "E^2",
+              "E^2",
+              "E^3"
+            ],
+            "scaled_residual_max": 3.9885006174665583e-16,
+            "potential": -0.008846938364040212,
+            "mass_sq": 0.9981165050072249,
+            "loops": {
+              "sigma": -0.006797974915382501,
+              "phase": -0.005136733886517418,
+              "loop_free_energy": -0.006269496894875078,
+              "quasiparticle_entropy": 2.3303532353053487e-09,
+              "thermal": [
+                1.2950353296357185e-11,
+                7.517253070039034e-10,
+                -3.7033412486086e-13,
+                2.3303532353053487e-09
+              ],
+              "vacuum": [
+                -0.006797974928332854,
+                -0.005136734638242725,
+                -0.006269496894504744
+              ]
+            }
+          },
+          "independent_entropy": {
+            "entropy": 2.3303532353050087e-09,
+            "adaptive_absolute_error_estimate": 2.1007039307142997e-19,
+            "momentum_scale": 0.028657525568742202,
+            "Boltzmann_entropy_scale": 3.9997213311283837e-10,
+            "quadrature_relative_tolerance": 1e-09
+          },
+          "refined_independent_entropy": {
+            "entropy": 2.3303532353050087e-09,
+            "adaptive_absolute_error_estimate": 1.470440757594643e-21,
+            "momentum_scale": 0.028657525568742202,
+            "Boltzmann_entropy_scale": 3.9997213311283837e-10,
+            "quadrature_relative_tolerance": 1e-11
+          },
+          "entropy_over_T_cubed": 0.4751790332066342,
+          "conditional_gapless_entropy_ratio": 0.014120299206172221,
+          "legacy_trace_log_entropy": 2.3303532353053487e-09,
+          "legacy_relative_difference": 1.4588330543574557e-13,
+          "zero_state_entropy": 2.330356184122886e-09,
+          "zero_state_Boltzmann_asymptotic_entropy": 1.8609494440828525e-09,
+          "Boltzmann_asymptotic_relative_difference": 0.25224045797298644,
+          "state_movement_from_zero": 1.5785044382710112e-09
+        },
+        {
+          "T": 0.0008494897961787222,
+          "gap_over_T": 16.0,
+          "joint_state": {
+            "s": 0.1299141544146008,
+            "a": 0.2598283088292016,
+            "b": 0.0033224806316851496,
+            "Phi": 0.04708737483462457,
+            "residual": [
+              -7.28583859910259e-17,
+              7.28583859910259e-17,
+              5.551115123125783e-17,
+              4.336808689942018e-19
+            ],
+            "residual_scales": [
+              0.10438349499338506,
+              0.10438349499338506,
+              0.10438349499338506,
+              0.05
+            ],
+            "residual_scale_units": [
+              "E^2",
+              "E^2",
+              "E^2",
+              "E^3"
+            ],
+            "scaled_residual_max": 6.979876080566476e-16,
+            "potential": -0.008846938363669902,
+            "mass_sq": 0.998116505006615,
+            "loops": {
+              "sigma": -0.0067979749342646,
+              "phase": -0.005136734618422015,
+              "loop_free_energy": -0.006269496896206852,
+              "quasiparticle_entropy": 4.3548204397885655e-13,
+              "thermal": [
+                1.2685190059532374e-15,
+                8.760432815332513e-14,
+                -1.9885548676869246e-17,
+                4.3548204397885655e-13
+              ],
+              "vacuum": [
+                -0.006797974934265869,
+                -0.00513673461850962,
+                -0.006269496896206832
+              ]
+            }
+          },
+          "independent_entropy": {
+            "entropy": 4.354820440980163e-13,
+            "adaptive_absolute_error_estimate": 9.789391175260232e-23,
+            "momentum_scale": 0.020263928506602608,
+            "Boltzmann_entropy_scale": 4.7438339838508106e-14,
+            "quadrature_relative_tolerance": 1e-09
+          },
+          "refined_independent_entropy": {
+            "entropy": 4.354820440980162e-13,
+            "adaptive_absolute_error_estimate": 5.9952845666331055e-25,
+            "momentum_scale": 0.020263928506602608,
+            "Boltzmann_entropy_scale": 4.7438339838508106e-14,
+            "quadrature_relative_tolerance": 1e-11
+          },
+          "entropy_over_T_cubed": 0.0007103882228953497,
+          "conditional_gapless_entropy_ratio": 2.1109715620515e-05,
+          "legacy_trace_log_entropy": 4.3548204397885655e-13,
+          "legacy_relative_difference": 2.73627231983653e-10,
+          "zero_state_entropy": 4.354820442415191e-13,
+          "zero_state_Boltzmann_asymptotic_entropy": 3.888804902239247e-13,
+          "Boltzmann_asymptotic_relative_difference": 0.11983515550178492,
+          "state_movement_from_zero": 1.8290924330699454e-13
+        },
+        {
+          "T": 0.0004247448980893611,
+          "gap_over_T": 32.0,
+          "joint_state": {
+            "s": 0.1299141544146921,
+            "a": 0.2598283088293841,
+            "b": 0.0033224806315184617,
+            "Phi": 0.04708737483462615,
+            "residual": [
+              2.7755575615628914e-17,
+              -5.551115123125783e-17,
+              -4.163336342344337e-17,
+              -8.673617379884035e-19
+            ],
+            "residual_scales": [
+              0.10438349499338506,
+              0.10438349499338506,
+              0.10438349499338506,
+              0.05
+            ],
+            "residual_scale_units": [
+              "E^2",
+              "E^2",
+              "E^2",
+              "E^3"
+            ],
+            "scaled_residual_max": 5.318000823288744e-16,
+            "potential": -0.008846938363669876,
+            "mass_sq": 0.998116505006615,
+            "loops": {
+              "sigma": -0.006797974934266561,
+              "phase": -0.0051367346185073205,
+              "loop_free_energy": -0.006269496896207025,
+              "quasiparticle_entropy": 3.051315459830207e-20,
+              "thermal": [
+                4.5706791759867296e-23,
+                3.452970951477249e-21,
+                -3.6833206937299643e-25,
+                3.051315459830207e-20
+              ],
+              "vacuum": [
+                -0.006797974934266561,
+                -0.0051367346185073205,
+                -0.006269496896207025
+              ]
+            }
+          },
+          "independent_entropy": {
+            "entropy": 3.052950591729652e-20,
+            "adaptive_absolute_error_estimate": 8.2553132721188e-32,
+            "momentum_scale": 0.014328761260319997,
+            "Boltzmann_entropy_scale": 1.8874383636725682e-21,
+            "quadrature_relative_tolerance": 1e-09
+          },
+          "refined_independent_entropy": {
+            "entropy": 3.052950591729652e-20,
+            "adaptive_absolute_error_estimate": 8.2553132721188e-32,
+            "momentum_scale": 0.014328761260319997,
+            "Boltzmann_entropy_scale": 1.8874383636725682e-21,
+            "quadrature_relative_tolerance": 1e-11
+          },
+          "entropy_over_T_cubed": 3.9841461660044834e-10,
+          "conditional_gapless_entropy_ratio": 1.1839187340709832e-11,
+          "legacy_trace_log_entropy": 3.051315459830207e-20,
+          "legacy_relative_difference": 0.0005355906852454462,
+          "zero_state_entropy": 3.05295059165948e-20,
+          "zero_state_Boltzmann_asymptotic_entropy": 2.885405254014744e-20,
+          "Boltzmann_asymptotic_relative_difference": 0.058066483871412666,
+          "state_movement_from_zero": 5.1464908723541924e-15
+        },
+        {
+          "T": 0.00021237244904468054,
+          "gap_over_T": 64.0,
+          "joint_state": {
+            "s": 0.1299141544146921,
+            "a": 0.2598283088293841,
+            "b": 0.0033224806315184617,
+            "Phi": 0.04708737483462615,
+            "residual": [
+              2.7755575615628914e-17,
+              -5.551115123125783e-17,
+              -4.163336342344337e-17,
+              -8.673617379884035e-19
+            ],
+            "residual_scales": [
+              0.10438349499338506,
+              0.10438349499338506,
+              0.10438349499338506,
+              0.05
+            ],
+            "residual_scale_units": [
+              "E^2",
+              "E^2",
+              "E^2",
+              "E^3"
+            ],
+            "scaled_residual_max": 5.318000823288744e-16,
+            "potential": -0.008846938363669876,
+            "mass_sq": 0.998116505006615,
+            "loops": {
+              "sigma": -0.006797974934266561,
+              "phase": -0.0051367346185073205,
+              "loop_free_energy": -0.006269496896207025,
+              "quasiparticle_entropy": 2.522780706719394e-34,
+              "thermal": [
+                1.9461610058154096e-37,
+                1.5385455192348633e-35,
+                0.0,
+                2.522780706719394e-34
+              ],
+              "vacuum": [
+                -0.006797974934266561,
+                -0.0051367346185073205,
+                -0.006269496896207025
+              ]
+            }
+          },
+          "independent_entropy": {
+            "entropy": 2.5612803131948484e-34,
+            "adaptive_absolute_error_estimate": 4.605114132790794e-45,
+            "momentum_scale": 0.010131964253175372,
+            "Boltzmann_entropy_scale": 8.450927263681307e-36,
+            "quadrature_relative_tolerance": 1e-09
+          },
+          "refined_independent_entropy": {
+            "entropy": 2.5612803131948484e-34,
+            "adaptive_absolute_error_estimate": 1.6597024954191953e-45,
+            "momentum_scale": 0.010131964253175372,
+            "Boltzmann_entropy_scale": 8.450927263681307e-36,
+            "quadrature_relative_tolerance": 1e-11
+          },
+          "entropy_over_T_cubed": 2.674007281355088e-23,
+          "conditional_gapless_entropy_ratio": 7.946011977299892e-25,
+          "legacy_trace_log_entropy": 2.522780706719394e-34,
+          "legacy_relative_difference": 0.015031391244885395,
+          "zero_state_entropy": 2.5612803130726124e-34,
+          "zero_state_Boltzmann_asymptotic_entropy": 2.490238562513335e-34,
+          "Boltzmann_asymptotic_relative_difference": 0.02852809029170955,
+          "state_movement_from_zero": 5.1464908723541924e-15
+        }
+      ],
+      "entropy_envelope_checks": [
+        {
+          "T": 0.02,
+          "expected_quasiparticle_entropy": 0.00015505158746211193,
+          "runs": [
+            {
+              "relative_T_step": 0.02,
+              "joint_pressure_entropy": 0.00015508945257159887,
+              "fixed_variational_entropy": 0.00015508906252986732,
+              "joint_relative_disagreement": 0.00024420975048822235,
+              "fixed_relative_disagreement": 0.00024169418945518828
+            },
+            {
+              "relative_T_step": 0.01,
+              "joint_pressure_entropy": 0.00015506105379738122,
+              "fixed_variational_entropy": 0.00015506095629291144,
+              "joint_relative_disagreement": 6.105281103030435e-05,
+              "fixed_relative_disagreement": 6.0423959231004076e-05
+            },
+            {
+              "relative_T_step": 0.005,
+              "joint_pressure_entropy": 0.00015505395408593747,
+              "fixed_variational_entropy": 0.00015505392967837817,
+              "joint_relative_disagreement": 1.52634607892832e-05,
+              "fixed_relative_disagreement": 1.5106045056167972e-05
+            }
+          ],
+          "protocol": "mu and original action fixed; matter and Phi reoptimized; no additional phonon free energy"
+        },
+        {
+          "T": 0.01,
+          "expected_quasiparticle_entropy": 2.1070409691911316e-05,
+          "runs": [
+            {
+              "relative_T_step": 0.02,
+              "joint_pressure_entropy": 2.107868263614976e-05,
+              "fixed_variational_entropy": 2.107865528823416e-05,
+              "joint_relative_disagreement": 0.00039263328807592757,
+              "fixed_relative_disagreement": 0.0003913353581355139
+            },
+            {
+              "relative_T_step": 0.01,
+              "joint_pressure_entropy": 2.1072477955283442e-05,
+              "fixed_variational_entropy": 2.1072471103125712e-05,
+              "joint_relative_disagreement": 9.815961826875608e-05,
+              "fixed_relative_disagreement": 9.783441539745752e-05
+            },
+            {
+              "relative_T_step": 0.005,
+              "joint_pressure_entropy": 2.1070926687488667e-05,
+              "fixed_variational_entropy": 2.1070925039501365e-05,
+              "joint_relative_disagreement": 2.4536569763533578e-05,
+              "fixed_relative_disagreement": 2.4458356414625015e-05
+            }
+          ],
+          "protocol": "mu and original action fixed; matter and Phi reoptimized; no additional phonon free energy"
+        }
+      ],
+      "asymptotic_compatibility_disposition": "UNAMENDED_HARTREE_EOS_NOT_ADMITTED_AS_ASYMPTOTIC_THERMODYNAMICS_OF_ITS_EXTERNAL_GAPLESS_MODE"
+    },
+    {
+      "mu": 1.2,
+      "zero_T_state": {
+        "s": 0.461675943266765,
+        "a": 0.92335188653353,
+        "b": 0.003532277092825613,
+        "Phi": 0.17659400610161144,
+        "residual": [
+          3.8163916471489756e-17,
+          -3.8163916471489756e-17,
+          4.544975507059235e-16,
+          -1.734723475976807e-18
+        ],
+        "residual_scales": [
+          0.44701735378386775,
+          0.44701735378386775,
+          0.44701735378386775,
+          0.05
+        ],
+        "residual_scale_units": [
+          "E^2",
+          "E^2",
+          "E^2",
+          "E^3"
+        ],
+        "scaled_residual_max": 1.0167335716583217e-15,
+        "potential": -0.05911186872472573,
+        "mass_sq": 0.9929362397559356,
+        "loops": {
+          "sigma": -0.004094580392278285,
+          "phase": -0.002328441845865727,
+          "loop_free_energy": -0.009969131571287478,
+          "quasiparticle_entropy": 0.0,
+          "thermal": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "vacuum": [
+            -0.004094580392278285,
+            -0.002328441845865727,
+            -0.009969131571287478
+          ]
+        }
+      },
+      "zero_T_gap_jet": {
+        "gap": 0.022085891974120933,
+        "low_energy_k_squared_coefficient": 3.1351818730800183,
+        "effective_quadratic_mass": 0.15948038112021792,
+        "energy_squared_k_squared_coefficient": 0.13848657633613481
+      },
+      "zero_T_state_refinements": [
+        {
+          "s": 0.4616758538785583,
+          "a": 0.9233517077571166,
+          "b": 0.0035322730414567454,
+          "Phi": 0.1765939892597601,
+          "residual": [
+            3.2959746043559335e-17,
+            -8.847089727481716e-17,
+            4.649058915617843e-16,
+            0.0
+          ],
+          "residual_scales": [
+            0.44701735378386775,
+            0.44701735378386775,
+            0.44701735378386775,
+            0.05
+          ],
+          "residual_scale_units": [
+            "E^2",
+            "E^2",
+            "E^2",
+            "E^3"
+          ],
+          "scaled_residual_max": 1.0400175465817948e-15,
+          "potential": -0.05911186319375195,
+          "mass_sq": 0.9929362404296096,
+          "loops": {
+            "sigma": -0.004094557707224013,
+            "phase": -0.002328421186495883,
+            "loop_free_energy": -0.009969125669590852,
+            "quasiparticle_entropy": 0.0,
+            "thermal": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "vacuum": [
+              -0.004094557707224013,
+              -0.002328421186495883,
+              -0.009969125669590852
+            ]
+          }
+        },
+        {
+          "s": 0.46167593847728583,
+          "a": 0.9233518769545719,
+          "b": 0.0035322768754668323,
+          "Phi": 0.17659400519918786,
+          "residual": [
+            1.3877787807814457e-17,
+            9.71445146547012e-17,
+            4.0939474033052647e-16,
+            1.734723475976807e-18
+          ],
+          "residual_scales": [
+            0.44701735378386775,
+            0.44701735378386775,
+            0.44701735378386775,
+            0.05
+          ],
+          "residual_scale_units": [
+            "E^2",
+            "E^2",
+            "E^2",
+            "E^3"
+          ],
+          "scaled_residual_max": 9.158363469899387e-16,
+          "potential": -0.05911186842839098,
+          "mass_sq": 0.9929362397920325,
+          "loops": {
+            "sigma": -0.004094579176762889,
+            "phase": -0.0023284407390296953,
+            "loop_free_energy": -0.009969131255088772,
+            "quasiparticle_entropy": 0.0,
+            "thermal": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "vacuum": [
+              -0.004094579176762889,
+              -0.0023284407390296953,
+              -0.009969131255088772
+            ]
+          }
+        },
+        {
+          "s": 0.461675943266765,
+          "a": 0.92335188653353,
+          "b": 0.003532277092825613,
+          "Phi": 0.17659400610161144,
+          "residual": [
+            3.8163916471489756e-17,
+            -3.8163916471489756e-17,
+            4.544975507059235e-16,
+            -1.734723475976807e-18
+          ],
+          "residual_scales": [
+            0.44701735378386775,
+            0.44701735378386775,
+            0.44701735378386775,
+            0.05
+          ],
+          "residual_scale_units": [
+            "E^2",
+            "E^2",
+            "E^2",
+            "E^3"
+          ],
+          "scaled_residual_max": 1.0167335716583217e-15,
+          "potential": -0.05911186872472573,
+          "mass_sq": 0.9929362397559356,
+          "loops": {
+            "sigma": -0.004094580392278285,
+            "phase": -0.002328441845865727,
+            "loop_free_energy": -0.009969131571287478,
+            "quasiparticle_entropy": 0.0,
+            "thermal": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "vacuum": [
+              -0.004094580392278285,
+              -0.002328441845865727,
+              -0.009969131571287478
+            ]
+          }
+        }
+      ],
+      "last_state_refinement": 9.578958071188026e-09,
+      "seed_disagreement": 1.6963097593247767e-12,
+      "local_static_Hessian": {
+        "matrix": [
+          [
+            0.9647583406880642,
+            -0.027520459924065998
+          ],
+          [
+            -0.02752045992432837,
+            0.05467631898794086
+          ]
+        ],
+        "reciprocity_residual": 2.623734562945401e-13,
+        "covariance_min_singular_value": 0.9836745382859208,
+        "eigenvalues": [
+          0.0538448725981595,
+          0.9655897870778456
+        ],
+        "radial_relaxed_Phi_curvature": 0.05389127709454901
+      },
+      "zero_T_residual_Jacobian": {
+        "matrix_in_MS_unit_coordinates": [
+          [
+            2.23704961683362,
+            0.03562222958914006,
+            -0.00810248415422173,
+            -0.08948198467341817
+          ],
+          [
+            -6.71114885050355,
+            2.2014273872471697,
+            0.00810248415422173,
+            0.08948198467093454
+          ],
+          [
+            -2.23704961683362,
+            -0.029040237466662688,
+            2.3128555522572065,
+            0.08948198467341817
+          ],
+          [
+            -0.4000000000000721,
+            -0.0028905244912909938,
+            0.0037508519399814277,
+            1.0935563389729077
+          ]
+        ],
+        "minimum_singular_value": 0.653338690009862,
+        "coordinate_contract": "s,a,b measured in MS^2 and Phi in MS; MS=1 E; residual E^2/E^3 scales retained, not an SI norm"
+      },
+      "zero_T_external_response": {
+        "source_runs": [
+          {
+            "order": 96,
+            "charge_susceptibility": 3.2600315296803175,
+            "spatial_stiffness": 0.4634505720764161,
+            "external_phase_zero_inverse": 4.514008654712964e-11,
+            "even_min_singular_value": 0.053844872596639004,
+            "covariance_min_singular_value": 0.9836745399115283,
+            "current_imaginary_residual": 1.6155871338926322e-27
+          },
+          {
+            "order": 144,
+            "charge_susceptibility": 3.260031509875812,
+            "spatial_stiffness": 0.4634505750750675,
+            "external_phase_zero_inverse": 4.5140111266939176e-11,
+            "even_min_singular_value": 0.053844872596639004,
+            "covariance_min_singular_value": 0.9836745399115285,
+            "current_imaginary_residual": 3.2311742677852644e-27
+          },
+          {
+            "order": 192,
+            "charge_susceptibility": 3.2600316001882135,
+            "spatial_stiffness": 0.46345056931589584,
+            "external_phase_zero_inverse": 4.5139999377274975e-11,
+            "even_min_singular_value": 0.053844872596639004,
+            "covariance_min_singular_value": 0.9836745399115285,
+            "current_imaginary_residual": 8.275628919701359e-49
+          }
+        ],
+        "finite_q_upper_plane_checks": [
+          {
+            "q": 0.008,
+            "imaginary_velocity": 0.2,
+            "phase_coefficient_real": 1.28627790937683,
+            "phase_coefficient_imaginary": 8.660800546301354e-18,
+            "expected_quadratic_coefficient": 1.2862958141621985,
+            "relative_expansion_disagreement": 1.3919648319982159e-05,
+            "phase_current_Ward_disagreement": 6.850378826167837e-07
+          },
+          {
+            "q": 0.004,
+            "imaginary_velocity": 0.2,
+            "phase_coefficient_real": 1.2862886940714064,
+            "phase_coefficient_imaginary": -9.40020962892138e-18,
+            "expected_quadratic_coefficient": 1.2862958141621985,
+            "relative_expansion_disagreement": 5.53534475788986e-06,
+            "phase_current_Ward_disagreement": 2.8046123962631874e-06
+          },
+          {
+            "q": 0.002,
+            "imaginary_velocity": 0.2,
+            "phase_coefficient_real": 1.2862834556939293,
+            "phase_coefficient_imaginary": 3.1538576752292323e-17,
+            "expected_quadratic_coefficient": 1.2862958141621985,
+            "relative_expansion_disagreement": 9.607796381816414e-06,
+            "phase_current_Ward_disagreement": 1.1265886163271535e-05
+          },
+          {
+            "q": 0.008,
+            "imaginary_velocity": 0.4,
+            "phase_coefficient_real": 2.133574353568862,
+            "phase_coefficient_imaginary": 2.815431521922126e-17,
+            "expected_quadratic_coefficient": 2.133651622338976,
+            "relative_expansion_disagreement": 3.6214332885808886e-05,
+            "phase_current_Ward_disagreement": 6.801597662029307e-07
+          },
+          {
+            "q": 0.004,
+            "imaginary_velocity": 0.4,
+            "phase_coefficient_real": 2.133629646910863,
+            "phase_coefficient_imaginary": 1.541182975074936e-18,
+            "expected_quadratic_coefficient": 2.133651622338976,
+            "relative_expansion_disagreement": 1.0299445271533259e-05,
+            "phase_current_Ward_disagreement": 2.8105398878636216e-06
+          },
+          {
+            "q": 0.002,
+            "imaginary_velocity": 0.4,
+            "phase_coefficient_real": 2.1336355365488506,
+            "phase_coefficient_imaginary": 4.05920075507147e-17,
+            "expected_quadratic_coefficient": 2.133651622338976,
+            "relative_expansion_disagreement": 7.539089304398061e-06,
+            "phase_current_Ward_disagreement": 1.1266692700836404e-05
+          }
+        ],
+        "external_derivative_expansion_speed": 0.37704293297943803,
+        "conditional_one_gapless_mode_entropy_T_cubed_coefficient": 8.183607882420986,
+        "coefficient_protocol": "joint source-relaxed T=0 derivative expansion; conditional bosonic mode counting, not inserted in Omega and not measured sound"
+      },
+      "low_T_runs": [
+        {
+          "T": 0.011042945987060467,
+          "gap_over_T": 2.0,
+          "joint_state": {
+            "s": 0.4616711778745898,
+            "a": 0.9233423557491798,
+            "b": 0.0035414839642165844,
+            "Phi": 0.17659397626318166,
+            "residual": [
+              5.724587470723463e-17,
+              1.6479873021779667e-16,
+              -1.8561541192951836e-16,
+              0.0
+            ],
+            "residual_scales": [
+              0.44706376024406436,
+              0.44706376024406436,
+              0.44706376024406436,
+              0.05
+            ],
+            "residual_scale_units": [
+              "E^2",
+              "E^2",
+              "E^2",
+              "E^3"
+            ],
+            "scaled_residual_max": 4.1518778401583213e-16,
+            "potential": -0.05911188344494915,
+            "mass_sq": 0.9929362409494727,
+            "loops": {
+              "sigma": -0.004094540201542722,
+              "phase": -0.0023237982194343546,
+              "loop_free_energy": -0.009969137487469281,
+              "quasiparticle_entropy": 6.791005901569816e-06,
+              "thermal": [
+                5.514382967445758e-08,
+                4.783850645808125e-06,
+                -1.470934371316814e-08,
+                6.791005901569816e-06
+              ],
+              "vacuum": [
+                -0.004094595345372397,
+                -0.0023285820700801626,
+                -0.009969122778125568
+              ]
+            }
+          },
+          "independent_entropy": {
+            "entropy": 6.791005901569801e-06,
+            "adaptive_absolute_error_estimate": 3.878834114467769e-15,
+            "momentum_scale": 0.05938725001112025,
+            "Boltzmann_entropy_scale": 1.4323002751597414e-06,
+            "quadrature_relative_tolerance": 1e-09
+          },
+          "refined_independent_entropy": {
+            "entropy": 6.791005901569799e-06,
+            "adaptive_absolute_error_estimate": 3.3378379892661855e-17,
+            "momentum_scale": 0.05938725001112025,
+            "Boltzmann_entropy_scale": 1.4323002751597414e-06,
+            "quadrature_relative_tolerance": 1e-11
+          },
+          "entropy_over_T_cubed": 5.0428873170866035,
+          "conditional_gapless_entropy_ratio": 0.6162181020328589,
+          "legacy_trace_log_entropy": 6.791005901569816e-06,
+          "legacy_relative_difference": 2.220446049250313e-15,
+          "zero_state_entropy": 6.798303545963235e-06,
+          "zero_state_Boltzmann_asymptotic_entropy": 2.8578673488618153e-06,
+          "Boltzmann_asymptotic_relative_difference": 1.3788030430001421,
+          "state_movement_from_zero": 9.530784350175736e-06
+        },
+        {
+          "T": 0.005521472993530233,
+          "gap_over_T": 4.0,
+          "joint_state": {
+            "s": 0.4616757402119328,
+            "a": 0.9233514804238655,
+            "b": 0.0035326770743054634,
+            "Phi": 0.17659400553709156,
+            "residual": [
+              -1.249000902703301e-16,
+              -9.71445146547012e-17,
+              -2.1788126858268697e-15,
+              0.0
+            ],
+            "residual_scales": [
+              0.44706376024406436,
+              0.44706376024406436,
+              0.44706376024406436,
+              0.05
+            ],
+            "residual_scale_units": [
+              "E^2",
+              "E^2",
+              "E^2",
+              "E^3"
+            ],
+            "scaled_residual_max": 4.873606137606403e-15,
+            "potential": -0.0591118689775102,
+            "mass_sq": 0.9929362397785163,
+            "loops": {
+              "sigma": -0.0040945796319007965,
+              "phase": -0.0023282410947468996,
+              "loop_free_energy": -0.009969131458294414,
+              "quasiparticle_entropy": 3.1438012900933497e-07,
+              "thermal": [
+                1.3754528940463112e-09,
+                2.0682134154538076e-07,
+                -2.5276392051191303e-10,
+                3.1438012900933497e-07
+              ],
+              "vacuum": [
+                -0.0040945810073536905,
+                -0.002328447916088445,
+                -0.009969131205530493
+              ]
+            }
+          },
+          "independent_entropy": {
+            "entropy": 3.143801290093641e-07,
+            "adaptive_absolute_error_estimate": 7.436420402125887e-17,
+            "momentum_scale": 0.04196704367702057,
+            "Boltzmann_entropy_scale": 6.856768440751135e-08,
+            "quadrature_relative_tolerance": 1e-09
+          },
+          "refined_independent_entropy": {
+            "entropy": 3.1438012900936414e-07,
+            "adaptive_absolute_error_estimate": 2.406810620215962e-19,
+            "momentum_scale": 0.04196704367702057,
+            "Boltzmann_entropy_scale": 6.856768440751135e-08,
+            "quadrature_relative_tolerance": 1e-11
+          },
+          "entropy_over_T_cubed": 1.8676273745648162,
+          "conditional_gapless_entropy_ratio": 0.22821564784117065,
+          "legacy_trace_log_entropy": 3.1438012900933497e-07,
+          "legacy_relative_difference": 9.259260025373806e-14,
+          "zero_state_entropy": 3.1442173104829015e-07,
+          "zero_state_Boltzmann_asymptotic_entropy": 1.9751903367269088e-07,
+          "Boltzmann_asymptotic_relative_difference": 0.5918553528837069,
+          "state_movement_from_zero": 4.061096644525364e-07
+        },
+        {
+          "T": 0.0027607364967651166,
+          "gap_over_T": 8.0,
+          "joint_state": {
+            "s": 0.4616759420144005,
+            "a": 0.923351884028801,
+            "b": 0.0035322795785379304,
+            "Phi": 0.17659400609985973,
+            "residual": [
+              1.9081958235744878e-17,
+              3.642919299551295e-17,
+              1.3877787807814457e-17,
+              0.0
+            ],
+            "residual_scales": [
+              0.44706376024406436,
+              0.44706376024406436,
+              0.44706376024406436,
+              0.05
+            ],
+            "residual_scale_units": [
+              "E^2",
+              "E^2",
+              "E^2",
+              "E^3"
+            ],
+            "scaled_residual_max": 8.148545293768668e-17,
+            "potential": -0.05911186872540062,
+            "mass_sq": 0.9929362397560056,
+            "loops": {
+              "sigma": -0.0040945803899187765,
+              "phase": -0.002328440600649837,
+              "loop_free_energy": -0.009969131569728383,
+              "quasiparticle_entropy": 2.616575030786346e-09,
+              "thermal": [
+                6.0990132750308845e-12,
+                1.2828851774048792e-09,
+                -6.749004917129431e-13,
+                2.616575030786346e-09
+              ],
+              "vacuum": [
+                -0.00409458039601779,
+                -0.0023284418835350144,
+                -0.009969131569053482
+              ]
+            }
+          },
+          "independent_entropy": {
+            "entropy": 2.616575030788819e-09,
+            "adaptive_absolute_error_estimate": 2.5927541177087567e-18,
+            "momentum_scale": 0.02967434795563297,
+            "Boltzmann_entropy_scale": 4.440754252578708e-10,
+            "quadrature_relative_tolerance": 1e-09
+          },
+          "refined_independent_entropy": {
+            "entropy": 2.6165750307888185e-09,
+            "adaptive_absolute_error_estimate": 1.3543501143086328e-21,
+            "momentum_scale": 0.02967434795563297,
+            "Boltzmann_entropy_scale": 4.440754252578708e-10,
+            "quadrature_relative_tolerance": 1e-11
+          },
+          "entropy_over_T_cubed": 0.12435358864448885,
+          "conditional_gapless_entropy_ratio": 0.015195448075122202,
+          "legacy_trace_log_entropy": 2.616575030786346e-09,
+          "legacy_relative_difference": 9.450218385609332e-13,
+          "zero_state_entropy": 2.6165805133701022e-09,
+          "zero_state_Boltzmann_asymptotic_entropy": 2.066150599221024e-09,
+          "Boltzmann_asymptotic_relative_difference": 0.26640357888558586,
+          "state_movement_from_zero": 2.5047289797797134e-09
+        },
+        {
+          "T": 0.0013803682483825583,
+          "gap_over_T": 16.0,
+          "joint_state": {
+            "s": 0.46167594326661976,
+            "a": 0.9233518865332395,
+            "b": 0.0035322770931142003,
+            "Phi": 0.17659400610161133,
+            "residual": [
+              0.0,
+              0.0,
+              2.6020852139652106e-17,
+              -1.734723475976807e-18
+            ],
+            "residual_scales": [
+              0.44706376024406436,
+              0.44706376024406436,
+              0.44706376024406436,
+              0.05
+            ],
+            "residual_scale_units": [
+              "E^2",
+              "E^2",
+              "E^2",
+              "E^3"
+            ],
+            "scaled_residual_max": 5.820389495549049e-17,
+            "potential": -0.05911186872472576,
+            "mass_sq": 0.9929362397559356,
+            "loops": {
+              "sigma": -0.004094580392278124,
+              "phase": -0.0023284418457210315,
+              "loop_free_energy": -0.009969131571287253,
+              "quasiparticle_entropy": 4.857989574177479e-13,
+              "thermal": [
+                5.917862977335312e-16,
+                1.490716650987756e-13,
+                -3.603652288719783e-17,
+                4.857989574177479e-13
+              ],
+              "vacuum": [
+                -0.004094580392278715,
+                -0.0023284418458701032,
+                -0.009969131571287216
+              ]
+            }
+          },
+          "independent_entropy": {
+            "entropy": 4.857989571258499e-13,
+            "adaptive_absolute_error_estimate": 1.6035094648092223e-22,
+            "momentum_scale": 0.02098292898273611,
+            "Boltzmann_entropy_scale": 5.266921923711736e-14,
+            "quadrature_relative_tolerance": 1e-09
+          },
+          "refined_independent_entropy": {
+            "entropy": 4.857989571258497e-13,
+            "adaptive_absolute_error_estimate": 6.3102699320437935e-25,
+            "momentum_scale": 0.02098292898273611,
+            "Boltzmann_entropy_scale": 5.266921923711736e-14,
+            "quadrature_relative_tolerance": 1e-11
+          },
+          "entropy_over_T_cubed": 0.0001847020413097424,
+          "conditional_gapless_entropy_ratio": 2.2569757002470322e-05,
+          "legacy_trace_log_entropy": 4.857989574177479e-13,
+          "legacy_relative_difference": 6.008618047559366e-10,
+          "zero_state_entropy": 4.85798957397776e-13,
+          "zero_state_Boltzmann_asymptotic_entropy": 4.317611423869263e-13,
+          "Boltzmann_asymptotic_relative_difference": 0.12515673530070326,
+          "state_movement_from_zero": 2.9043434324194095e-13
+        },
+        {
+          "T": 0.0006901841241912792,
+          "gap_over_T": 32.0,
+          "joint_state": {
+            "s": 0.4616759432667649,
+            "a": 0.9233518865335298,
+            "b": 0.0035322770928251364,
+            "Phi": 0.17659400610161147,
+            "residual": [
+              -1.9081958235744878e-17,
+              -3.642919299551295e-17,
+              -1.214306433183765e-17,
+              1.734723475976807e-18
+            ],
+            "residual_scales": [
+              0.44706376024406436,
+              0.44706376024406436,
+              0.44706376024406436,
+              0.05
+            ],
+            "residual_scale_units": [
+              "E^2",
+              "E^2",
+              "E^2",
+              "E^3"
+            ],
+            "scaled_residual_max": 8.148545293768668e-17,
+            "potential": -0.05911186872472572,
+            "mass_sq": 0.9929362397559356,
+            "loops": {
+              "sigma": -0.004094580392278288,
+              "phase": -0.0023284418458657183,
+              "loop_free_energy": -0.009969131571287477,
+              "quasiparticle_entropy": 3.3960149625695913e-20,
+              "thermal": [
+                2.1243645702158876e-23,
+                5.868002106840081e-21,
+                -6.723300137343818e-25,
+                3.3960149625695913e-20
+              ],
+              "vacuum": [
+                -0.004094580392278288,
+                -0.0023284418458657183,
+                -0.009969131571287477
+              ]
+            }
+          },
+          "independent_entropy": {
+            "entropy": 3.396903139189582e-20,
+            "adaptive_absolute_error_estimate": 9.454442031262235e-32,
+            "momentum_scale": 0.014837171372545484,
+            "Boltzmann_entropy_scale": 2.095560370224105e-21,
+            "quadrature_relative_tolerance": 1e-09
+          },
+          "refined_independent_entropy": {
+            "entropy": 3.396903139189582e-20,
+            "adaptive_absolute_error_estimate": 9.454442031262235e-32,
+            "momentum_scale": 0.014837171372545484,
+            "Boltzmann_entropy_scale": 2.095560370224105e-21,
+            "quadrature_relative_tolerance": 1e-11
+          },
+          "entropy_over_T_cubed": 1.0332092067908678e-10,
+          "conditional_gapless_entropy_ratio": 1.2625350843242135e-11,
+          "legacy_trace_log_entropy": 3.3960149625695913e-20,
+          "legacy_relative_difference": 0.00026146657222680947,
+          "zero_state_entropy": 3.3969031391827856e-20,
+          "zero_state_Boltzmann_asymptotic_entropy": 3.2035699914009216e-20,
+          "Boltzmann_asymptotic_relative_difference": 0.06034928167663334,
+          "state_movement_from_zero": 4.766152750246277e-16
+        },
+        {
+          "T": 0.0003450920620956396,
+          "gap_over_T": 64.0,
+          "joint_state": {
+            "s": 0.4616759432667649,
+            "a": 0.9233518865335298,
+            "b": 0.0035322770928251364,
+            "Phi": 0.17659400610161147,
+            "residual": [
+              -1.9081958235744878e-17,
+              -3.642919299551295e-17,
+              -1.214306433183765e-17,
+              1.734723475976807e-18
+            ],
+            "residual_scales": [
+              0.44706376024406436,
+              0.44706376024406436,
+              0.44706376024406436,
+              0.05
+            ],
+            "residual_scale_units": [
+              "E^2",
+              "E^2",
+              "E^2",
+              "E^3"
+            ],
+            "scaled_residual_max": 8.148545293768668e-17,
+            "potential": -0.05911186872472572,
+            "mass_sq": 0.9929362397559356,
+            "loops": {
+              "sigma": -0.004094580392278288,
+              "phase": -0.0023284418458657183,
+              "loop_free_energy": -0.009969131571287477,
+              "quasiparticle_entropy": 2.8038335664767345e-34,
+              "thermal": [
+                9.030698882231046e-38,
+                2.612983990973875e-35,
+                0.0,
+                2.8038335664767345e-34
+              ],
+              "vacuum": [
+                -0.004094580392278288,
+                -0.0023284418458657183,
+                -0.009969131571287477
+              ]
+            }
+          },
+          "independent_entropy": {
+            "entropy": 2.846621576930547e-34,
+            "adaptive_absolute_error_estimate": 1.9650600294888864e-44,
+            "momentum_scale": 0.010491464491153827,
+            "Boltzmann_entropy_scale": 9.3827849459186e-36,
+            "quadrature_relative_tolerance": 1e-09
+          },
+          "refined_independent_entropy": {
+            "entropy": 2.8466215769305474e-34,
+            "adaptive_absolute_error_estimate": 1.7954805696778867e-45,
+            "momentum_scale": 0.010491464491153827,
+            "Boltzmann_entropy_scale": 9.3827849459186e-36,
+            "quadrature_relative_tolerance": 1e-11
+          },
+          "entropy_over_T_cubed": 6.926675271019634e-24,
+          "conditional_gapless_entropy_ratio": 8.464084998376645e-25,
+          "legacy_trace_log_entropy": 2.8038335664767345e-34,
+          "legacy_relative_difference": 0.015031155107012806,
+          "zero_state_entropy": 2.8466215769187086e-34,
+          "zero_state_Boltzmann_asymptotic_entropy": 2.7648294877113037e-34,
+          "Boltzmann_asymptotic_relative_difference": 0.029583050083537454,
+          "state_movement_from_zero": 4.766152750246277e-16
+        }
+      ],
+      "entropy_envelope_checks": [
+        {
+          "T": 0.02,
+          "expected_quasiparticle_entropy": 5.23087365837533e-05,
+          "runs": [
+            {
+              "relative_T_step": 0.02,
+              "joint_pressure_entropy": 5.23302695620842e-05,
+              "fixed_variational_entropy": 5.2330171446124396e-05,
+              "joint_relative_disagreement": 0.00041165166159995437,
+              "fixed_relative_disagreement": 0.0004097759527563749
+            },
+            {
+              "relative_T_step": 0.01,
+              "joint_pressure_entropy": 5.231411989367607e-05,
+              "fixed_variational_entropy": 5.231409536468612e-05,
+              "joint_relative_disagreement": 0.00010291416452301583,
+              "fixed_relative_disagreement": 0.00010244523731217647
+            },
+            {
+              "relative_T_step": 0.005,
+              "joint_pressure_entropy": 5.231008241152191e-05,
+              "fixed_variational_entropy": 5.23100762706008e-05,
+              "joint_relative_disagreement": 2.5728546634740113e-05,
+              "fixed_relative_disagreement": 2.5611149016224743e-05
+            }
+          ],
+          "protocol": "mu and original action fixed; matter and Phi reoptimized; no additional phonon free energy"
+        },
+        {
+          "T": 0.01,
+          "expected_quasiparticle_entropy": 4.639804174876179e-06,
+          "runs": [
+            {
+              "relative_T_step": 0.02,
+              "joint_pressure_entropy": 4.642844806529434e-06,
+              "fixed_variational_entropy": 4.642840313595631e-06,
+              "joint_relative_disagreement": 0.0006553362035663923,
+              "fixed_relative_disagreement": 0.0006543678579997714
+            },
+            {
+              "relative_T_step": 0.01,
+              "joint_pressure_entropy": 4.64056432170068e-06,
+              "fixed_variational_entropy": 4.640563211477655e-06,
+              "joint_relative_disagreement": 0.0001638316609604562,
+              "fixed_relative_disagreement": 0.0001635923786582616
+            },
+            {
+              "relative_T_step": 0.005,
+              "joint_pressure_entropy": 4.639994360955413e-06,
+              "fixed_variational_entropy": 4.639993944621779e-06,
+              "joint_relative_disagreement": 4.0990109079208636e-05,
+              "fixed_relative_disagreement": 4.090037821580239e-05
+            }
+          ],
+          "protocol": "mu and original action fixed; matter and Phi reoptimized; no additional phonon free energy"
+        }
+      ],
+      "asymptotic_compatibility_disposition": "UNAMENDED_HARTREE_EOS_NOT_ADMITTED_AS_ASYMPTOTIC_THERMODYNAMICS_OF_ITS_EXTERNAL_GAPLESS_MODE"
+    }
+  ],
+  "checks": {
+    "joint_response_predecessor_preserved": true,
+    "unmodified_joint_zero_T_stationary_states": true,
+    "zero_T_refinement_and_seed_agreement": true,
+    "positive_internal_gap_and_quadratic_minimum": true,
+    "local_static_positive_and_implicit_nondegeneracy": true,
+    "external_static_phase_zero_and_positive_source_coefficients": true,
+    "zero_T_source_coefficient_refinement": true,
+    "upper_plane_quadratic_phase_and_source_Ward": true,
+    "independent_entropy_quadrature_refinement": true,
+    "legacy_entropy_matches_resolved_temperature_window": true,
+    "joint_and_frozen_entropy_envelope": true,
+    "Boltzmann_asymptotic_approach": true,
+    "entropy_over_T_cubed_decreases_in_deep_gapped_window": true,
+    "protected_Core_and_baseline_hashes_unchanged": true
+  },
+  "config": {
+    "zero_T_state_orders": [
+      [
+        128,
+        20.0
+      ],
+      [
+        192,
+        40.0
+      ],
+      [
+        256,
+        64.0
+      ]
+    ],
+    "source_orders": [
+      96,
+      144,
+      192
+    ],
+    "T_equals_zero_T_gap_divided_by": [
+      2.0,
+      4.0,
+      8.0,
+      16.0,
+      32.0,
+      64.0
+    ],
+    "envelope_T": [
+      0.02,
+      0.01
+    ],
+    "envelope_steps": [
+      0.02,
+      0.01,
+      0.005
+    ],
+    "upper_q_grid": [
+      0.008,
+      0.004,
+      0.002
+    ],
+    "upper_imaginary_velocities": [
+      0.2,
+      0.4
+    ],
+    "design_note": "Grid and gates locked in verifier after exploratory zero-T/entropy trend; not preregistered against external data"
+  },
+  "thresholds": {
+    "scaled_root": 1e-08,
+    "state_refinement_and_resolved_entropy": 2e-05,
+    "entropy_envelope": 0.001,
+    "phase_Ward": 0.001,
+    "upper_quadratic_expansion": 0.0005,
+    "Boltzmann_finite_T_diagnostic": 0.1,
+    "causal_leakage_unchanged": 1e-06
+  },
+  "evidence_artifacts": [
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/t13_hartree_joint_phi_response.json",
+      "sha256": "a50b95ce5b326e41220187322f7c0f015b7b45489b57b49d0f9c720850c7dd42"
+    },
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/Research_T13_Hartree_Joint_Phi_Response.py",
+      "sha256": "8c5f2a8ee4a7f5b2fba2ba9c63cf16d82a2190ec0fcaaa1928c71a638fb3c509"
+    },
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/Research_T13_Hartree_Joint_Phi_Static.py",
+      "sha256": "c34555163ab7776e998bd42a105d2151f239d7ad4b7494c129d40f875bf816de"
+    },
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/Research_T13_Renormalized_Hartree_Background.py",
+      "sha256": "bf72364e42b28cb5e05c8a1518f4c979032be7e738bd3f0bc7a545817e386da5"
+    },
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/Research_T13_Hartree_External_Response.py",
+      "sha256": "42597223c59c36f2ba3c7fbc2b93bb450bab306159e92d529350fa367649087b"
+    },
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/Research_T13_Hartree_Gauge_Current.py",
+      "sha256": "1ca6a51f5c0bb95c565d536af428c901e93e94b726079a08e64b4a71b4d95943"
+    },
+    {
+      "path": "docs/core/02_equations/o2/uet_o2_action_thermal_observable_bridge.py",
+      "sha256": "1cf745562548bc9a61d9ebb86069b8aff73e2a776756aa9efe7ab1a45b669ebe"
+    },
+    {
+      "path": "docs/core/02_equations/o2/uet_o2_action_thermal_stiffness_beta.py",
+      "sha256": "c1c3278a79df611ddae2f67ff811022722ab0c56f68bf91cc5480f34db9a95e6"
+    },
+    {
+      "path": "docs/core/02_equations/o2/uet_o2_finite_density_eos.py",
+      "sha256": "ea744a8645f993600300fa9fd99a764e1f07b30fb272b47399c34aa114152c6d"
+    },
+    {
+      "path": "docs/core/02_equations/covariant/uet_covariant_matter.py",
+      "sha256": "8a57d95e898a8ac962bbd749670ad0695b597281937da36496d2ec7e074f9c53"
+    },
+    {
+      "path": "docs/core/02_equations/covariant/uet_covariant_response.py",
+      "sha256": "7fb4b7228afb8ede0ac4f1664d634346ef46cc7678c94ed7b55d73645590c0c2"
+    },
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/Research_T13_Hartree_Low_T_Validity.py",
+      "sha256": "19d6c795bc8dedde192b077069750137db318dfe320acfe9ba8fba4b3c6c0d3a"
+    }
+  ],
+  "protected_evidence_hashes": [
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/t13_conditional_twofluid_operator.json",
+      "sha256": "8606303e4818030dd74061c14b243542c19c4cbb262dda29261951d4c87d6412"
+    },
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/t13_polar_dynamic_composite.json",
+      "sha256": "2f07a63af3ce9945bf254d5da238bdefbd53597dae105ee7e50bbcbe8bc61f7d"
+    },
+    {
+      "path": "docs/core/07_artifacts/topic13/t13_topic13_closure_matrix.json",
+      "sha256": "e6e84772a400273c438e0b8ca3c7b5b14c9d720da0420fb4021b1c0e7a54fe66"
+    },
+    {
+      "path": "docs/core/07_artifacts/gates/uet_major_result_dependency_unlock_gate.json",
+      "sha256": "ecbefdf12ee1eb6661ae8096e3f62bf1ffa7992c96ca94f1149fdbc25a8bbe6e"
+    }
+  ],
+  "compatibility_assumptions": [
+    "smooth_noncritical_joint_zero_T_stationary_branch_with_positive_internal_gaps",
+    "nonsingular_local_stationary_Jacobian",
+    "external_derivative_expansion_admitted_as_one_physical_equilibrium_bosonic_mode",
+    "unamended_internal_Hartree_trace_log_is_claimed_as_asymptotically_complete_thermal_EOS"
+  ],
+  "physical_low_T_EOS_admission": "BLOCKED_ASYMPTOTIC_SPECTRUM_THERMODYNAMICS_MISMATCH",
+  "open_blockers": [
+    "consistent_gapless_thermal_approximation_or_explicit_restricted_validity_not_yet_derived",
+    "global_regulator_RG_controlled_Hartree_remainder",
+    "independent_material_source_readout_temperature_mapping",
+    "physical_heat_collision_Kubo_SK_KMS_entropy_transport"
+  ],
+  "controlling_blocker": "gapless_equilibrium_thermal_prescription_not_derived",
+  "dependency_unlocked": [
+    "research_on_consistent_thermal_approximation_and_independent_input_only"
+  ],
+  "conditional_asymptotic_exclusion_established": true,
+  "global_UET_no_go": false,
+  "source_response_predecessor_invalidated": false,
+  "phonon_free_energy_added": false,
+  "mass_repair": false,
+  "physical_Kubo_emitted": false,
+  "independent_alpha_Phi_K_admitted": false,
+  "controlled_truncation_error_established": false,
+  "g1_physical_unlock": false,
+  "g2_science_unlock": false,
+  "full_core_unlock": false,
+  "core_composition_gate_overwritten": false,
+  "claim_promotion": false,
+  "parameter_fitting": false,
+  "clipping": false,
+  "IR_filter": false,
+  "target_source_accessed": false,
+  "xie_2026_accessed": false,
+  "prior_Xie_context_exposure_review": "REVIEW_REQUIRED",
+  "C_relabelled_as_charge_or_mass": false,
+  "R_gen_added_as_state": false,
+  "state_variables": [
+    "same_O2_mean_field_and_covariance",
+    "existing_classical_UET_Phi"
+  ],
+  "excluded_variables": [
+    "R_gen",
+    "R_obs",
+    "nondynamical_A"
+  ],
+  "claim_boundary": "Conditional local low-T admission exclusion of one unmodified Hartree prescription at two trial-input witnesses; not global UET no-go, new approximation, physical material transport, SI calibration, external validation or Full Topic13/Core closure.",
+  "report": {
+    "MAJOR_RESULT_CLOSURE": "T13_JOINT_HARTREE_LOW_T_THERMODYNAMIC_COMPATIBILITY_BOUNDARY: CLOSED_FOR_LANE",
+    "WHAT_IS_ACTUALLY_CLOSED": [
+      "zero_T_joint_stationarity_and_positive_internal_gap_at_two_witnesses",
+      "entropy_envelope_without_added_external_mode",
+      "conditional_low_T_EOS_external_gapless_mode_compatibility_exclusion"
+    ],
+    "WHAT_REMAINS_OPEN": [
+      "consistent_gapless_thermal_approximation_or_explicit_restricted_validity_not_yet_derived",
+      "global_regulator_RG_controlled_Hartree_remainder",
+      "independent_material_source_readout_temperature_mapping",
+      "physical_heat_collision_Kubo_SK_KMS_entropy_transport"
+    ],
+    "DEPENDENCY_UNLOCKED": [
+      "research_on_consistent_thermal_approximation_and_independent_input_only"
+    ],
+    "STATUS": "PASS_SCOPED_LOW_T_EXCLUSION",
+    "WHAT_CHANGED": "Checked unmodified joint zero-T state, entropy envelope and conditional external-mode thermodynamic boundary, without a mass/phonon repair.",
+    "EQUATION_OR_MAPPING": "Delta^2=2ab/(a+b+4mu^2+sqrt((a+b+4mu^2)^2-4ab)); s_H=-partial_T Omega_joint=s_internal; s_H/T^3->0 for nondegenerate positive-gap zero-T branch; conditional one physical linear bosonic mode gives s_ph/T^3=2pi^2/(45c^3)>0, c^2=rho/chi",
+    "VERIFICATION": {
+      "joint_response_predecessor_preserved": true,
+      "unmodified_joint_zero_T_stationary_states": true,
+      "zero_T_refinement_and_seed_agreement": true,
+      "positive_internal_gap_and_quadratic_minimum": true,
+      "local_static_positive_and_implicit_nondegeneracy": true,
+      "external_static_phase_zero_and_positive_source_coefficients": true,
+      "zero_T_source_coefficient_refinement": true,
+      "upper_plane_quadratic_phase_and_source_Ward": true,
+      "independent_entropy_quadrature_refinement": true,
+      "legacy_entropy_matches_resolved_temperature_window": true,
+      "joint_and_frozen_entropy_envelope": true,
+      "Boltzmann_asymptotic_approach": true,
+      "entropy_over_T_cubed_decreases_in_deep_gapped_window": true,
+      "protected_Core_and_baseline_hashes_unchanged": true
+    },
+    "CONTROLLING_BLOCKER": "gapless_equilibrium_thermal_prescription_not_derived",
+    "NEXT_ACTION": "Derive a consistent gapless thermal prescription or a justified restricted validity lane; do not rematch masses or append phonon free energy by hand. Retain independent-input and full Goal obligations.",
+    "CLAIM_BOUNDARY": "Conditional local low-T admission exclusion of one unmodified Hartree prescription at two trial-input witnesses; not global UET no-go, new approximation, physical material transport, SI calibration, external validation or Full Topic13/Core closure."
+  }
+}

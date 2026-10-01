@@ -1,5 +1,18 @@
 ﻿# Method
 
+## Joint Hartree Low-Temperature Validity (2026-10-02)
+
+Use the [conditional compatibility derivation](Result/artifacts/T13_HARTREE_LOW_T_VALIDITY_2026-10-02.md).
+Solve unchanged joint zero-T states, retaining internal gaps, local static
+block and scaled stationary Jacobian. Differentiate insertion/double-bubble
+terms: off-shell entropy includes mass residuals; on shell it is internal
+Bose entropy. Check reoptimized envelopes and independently scaled adaptive
+integration. Compare the positive-gap asymptotic with conditional entropy
+of one external linear bosonic mode; source coefficients and upper-plane
+expansion are independent controls. Never insert that comparator into the
+potential or repair the old internal mass. This is an approximation-admission
+boundary, not global physical proof.
+
 ## Joint Classical-Phi Source Response (2026-10-02)
 
 Use the [joint retarded derivation](Result/artifacts/T13_HARTREE_JOINT_PHI_RESPONSE_2026-10-02.md).

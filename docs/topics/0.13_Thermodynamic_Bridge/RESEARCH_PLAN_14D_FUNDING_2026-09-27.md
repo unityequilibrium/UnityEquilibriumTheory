@@ -10,6 +10,21 @@
 
 ## 1. ผลลัพธ์หลักที่จะปิดก่อน
 
+### Latest validity decision: conditional low-T admission exclusion
+
+[Low-temperature evidence](Result/artifacts/T13_HARTREE_LOW_T_VALIDITY_2026-10-02.md)
+now answers the pending EOS/external-mode question conditionally: internal
+positive-gap entropy cannot be asymptotically complete thermodynamics of
+the external gapless bosonic mode at these two witnesses. The source and
+stationary entropy envelopes remain consistent; this is an approximation
+boundary, not global UET no-go or missing-source no-go. Before the existing
+7 October freeze, record this bounded negative-admission result and pursue
+one consistent thermal prescription or justified restricted validity,
+alongside the independent-input measurement card. Do not repair old masses
+or append phonon free energy by hand. Full R1/Goal, physical/material
+acceptance and 11 October portfolio review are not promoted or restarted.
+Earlier notes below retain their historical wave scope.
+
 ### ล่าสุด: คำนวณ joint classical-Phi response แล้วในขอบเขต candidate
 
 [ผล response ร่วม](Result/artifacts/T13_HARTREE_JOINT_PHI_RESPONSE_2026-10-02.md)

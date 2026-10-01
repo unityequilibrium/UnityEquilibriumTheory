@@ -1,3 +1,27 @@
+## 2026-10-02 - Conditional joint Hartree low-temperature admission boundary
+
+MAJOR_RESULT_CLOSURE: T13_JOINT_HARTREE_LOW_T_THERMODYNAMIC_COMPATIBILITY_BOUNDARY, CLOSED_FOR_LANE. Full active Goal/R1 and physical acceptance remain open.
+
+WHAT_IS_ACTUALLY_CLOSED: Same-action joint zero-T states and positive internal gaps, independent entropy integration/envelope, and conditional asymptotic exclusion of treating the unamended internal EOS as complete thermodynamics of its external gapless equilibrium bosonic mode. The entropy derivative itself is consistent; earlier source response is not retracted.
+
+WHAT_REMAINS_OPEN: Consistent gapless thermal approximation or justified restricted validity, global spectrum/regulator/RG/Hartree remainder, independent material/source/readout/temperature mapping and physical heat/collision/Kubo/SK-KMS/entropy transport. Full Topic13/R1/Goal, novelty and measurement design remain unaccepted.
+
+DEPENDENCY_UNLOCKED: Thermal-approximation/validity and independent-input research only. No physical/Core/Gravity unlock or Core-owner composition change.
+
+STATUS: PASS_SCOPED_LOW_T_EXCLUSION; physical low-T EOS admission BLOCKED_ASYMPTOTIC_SPECTRUM_THERMODYNAMICS_MISMATCH. Methods portfolio preparation is not scientific/submission acceptance.
+
+WHAT_CHANGED: Separate verifier/sixteen tests/artifact/derivation; local formula/method/spec/limits/README, funding evidence/hash/controller/planning regression, Goal/14-day/12-week handoffs. Source and entropy controls retain original action inputs. Exact unmixed equal-mass limit fixed after an independent control exposed d=0; provenance path typo corrected before final generation. An old latest-evidence planning assertion now follows the response predecessor, not the new EOS artifact. No science threshold, original Core-owner or predecessor edit.
+
+EQUATION_OR_MAPPING: Delta^2=2ab/(A+sqrt(A^2-4ab)), A=a+b+4mu^2; -d_T Omega_joint=s_internal at joint stationarity. On a smooth noncritical positive-gap branch, s_H/T^3->0; if external phase is one physical equilibrium linear bosonic mode, s_ph/T^3=2pi^2/(45c^3)>0, c^2=rho/chi. Conditional comparator not added to Omega; natural E units, not SI alpha.
+
+VERIFICATION: Fourteen artifact checks and sixteen focused scientific tests passed. Linked run: 297 passed and one outdated planning-pointer assertion failed in 391.90 seconds; after correcting only that assertion, all 33 low-T/funding tests passed in 2.46 seconds (sixteen scientific plus seventeen planning). Fourteen distinct adjacent action/stationarity/stiffness tests passed in 2.84 seconds. No full linked replay after the planning-only fix; overlapping focused counts are not extra results. Max state refinement 9.579e-9, finest upper quadratic disagreement 9.608e-6, final entropy-envelope disagreement 4.100e-5; deep-T Boltzmann diagnostic improves to <.03. Legacy deep-T entropy rounding loss ~1.5% disclosed, with independent stable integration controlling the conclusion. Source/protected hash, units/read/domain/negative and claim reviews pass. Artifact SHA-256 6b6d5db3086439ce68703accacc04733dee8efb5535e85067b5c9941628c7f39. Both relevant CI workflows at previous exact head 7451d138ecb91836c05078778f337fe0b915a58f succeeded; new-head checks must be inspected separately. Model trial NOT_RUN/configuration unchanged.
+
+CONTROLLING_BLOCKER: gapless_equilibrium_thermal_prescription_not_derived.
+
+NEXT_ACTION: Investigate an order-consistent same-action low-T Goldstone EFT or justified restricted validity. New stationarity/loop bookkeeping, control at trial coupling and no double counting must be shown; no b=0 repair or manually appended phonon gas. Constrained resummation remains an alternative with independent linear-response obligations, not a ready-made repair. Independent source/readout/thermal and measurement-design work remains. Keep 7/11 October and long-term dates. Commit/push to existing draft PR #30, inspect exact head CI and leave full Goal active.
+
+CLAIM_BOUNDARY: Conditional local approximation-admission exclusion with numerical witnesses, not global UET no-go, a certified continuum/global proof, new consistent thermal model, physical material/transport, SI calibration or Full Topic13/Core. No fit, mass/phonon repair, clipping/filter/padding, threshold adjustment, new numeric Xie read or Core-owner modification. Conserved-C causal failure BLOCKED at unchanged 1e-6; prior Xie exposure REVIEW_REQUIRED. Reproducing a known Hartree issue does not establish novelty or funding readiness.
+
 ## 2026-10-02 - Joint classical-Phi retarded response and charge susceptibility
 
 MAJOR_RESULT_CLOSURE: T13_CLASSICAL_PHI_HARTREE_JOINT_RETARDED_RESPONSE, CLOSED_FOR_LANE. Full active Goal/R1 and physical acceptance remain open.

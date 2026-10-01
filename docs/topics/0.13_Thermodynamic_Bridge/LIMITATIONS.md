@@ -1,5 +1,18 @@
 # Limitations
 
+## Conditional Low-T EOS Exclusion (2026-10-02)
+
+[Low-T evidence](Result/artifacts/t13_hartree_low_T_validity.json) blocks
+asymptotically complete EOS admission of this unchanged joint Hartree
+prescription, conditional on a physical equilibrium bosonic interpretation
+of its external phase mode. Its internal positive gap produces exponential
+entropy despite consistent stationarity/envelope/current checks. Not global
+UET no-go, missing-data no-go, a new approximation or a finite-T validity
+interval. Deep-T legacy logarithmic precision loss is disclosed; independent
+stable quadrature controls the asymptotic evidence. Old response intact.
+Next: consistent thermal approximation/restricted validity and independent
+inputs. No mass/phonon repair, Core-owner edit or full Goal acceptance.
+
 ## Joint Classical-Phi Dynamic Boundary (2026-10-02)
 
 [Joint retarded evidence](Result/artifacts/t13_hartree_joint_phi_response.json)
@@ -8,8 +21,8 @@ poles, not the full-frequency/gapped-Phi spectrum, global/causal domain,
 regulator/RG or Hartree error. Static charge consistency is not a physical
 heat/entropy/dissipative balance. No independently admitted material/thermal
 or source/readout map follows, nor a SI alpha or Kubo/collision coefficient.
-The same candidate still needs low-temperature EOS/external-mode consistency
-review; no outcome of that future review is assumed. Do not repair an
+That wave left low-temperature EOS/external-mode consistency open; the
+new conditional admission disposition above now controls it. Do not repair an
 internal Goldstone mass or add collective phonon free energy by hand.
 All physical/Full Topic13 gates, the original conserved-C failure and
 Core-owner composition remain unchanged. Xie exposure stays REVIEW_REQUIRED.

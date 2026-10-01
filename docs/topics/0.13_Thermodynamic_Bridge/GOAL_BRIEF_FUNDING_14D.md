@@ -25,7 +25,20 @@
 
 ## Constraints
 
-Latest response successor: `Result/artifacts/T13_HARTREE_JOINT_PHI_RESPONSE_2026-10-02.md`
+Latest validity result: `Result/artifacts/T13_HARTREE_LOW_T_VALIDITY_2026-10-02.md`
+and `t13_hartree_low_T_validity.json` conditionally exclude treating the
+unmodified joint Hartree internal EOS as asymptotically complete thermal
+thermodynamics of its external gapless bosonic mode at two witnesses.
+The entropy envelope is consistent; positive internal gaps cause the
+asymptotic mismatch. This is not global UET no-go or a retraction of source
+response. Next derive a consistent thermal approximation or justified
+restricted validity, not mass repair/manual phonon free-energy addition.
+A loop-ordered same-action Goldstone EFT is a proposed route requiring
+separate stationarity, approximation control and no double counting;
+not an already accepted new branch. Material/thermal inputs, physical
+transport, R1-R5/full Goal and 7/11 October dates remain open/unchanged.
+
+Prior response successor: `Result/artifacts/T13_HARTREE_JOINT_PHI_RESPONSE_2026-10-02.md`
 computes the original classical-Phi kinetic/source response, quadratic
 counterterm cancellation, six new local phase poles and the fully relaxed
 static charge envelope at the unchanged jointly stationary states. It does

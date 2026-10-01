@@ -1,5 +1,21 @@
 # Verification Spec
 
+## Low-T Compatibility Verification (2026-10-02)
+
+Research_T13_Hartree_Low_T_Validity.py and sixteen tests. Original controls;
+zero-T orders/splits 128/20,192/40,256/64, seeds .8/1.2; source orders
+96/144/192; T=Delta0/(2,4,8,16,32,64). Envelope T=.02/.01 E, relative
+steps .02/.01/.005; upper q=.008/.004/.002 E, z=i*(.2 or .4)*q.
+Gates: scaled roots <=1e-8, state/source refinement <=2e-5, entropy envelope
+<=1e-3, Ward <=1e-3, finest quadratic expansion <=5e-4, improving Boltzmann
+finite-T diagnostic <=.1. Conditional analytical asymptotics, not that
+tolerance, controls exclusion. Verify original dispersion, equal-mass/
+gapless Bose controls, units, off-shell entropy residuals, full reoptimization,
+local nondegeneracy, stable adaptive refinement and source/protected hashes.
+Legacy deep-T rounding is disclosed; resolved entropy <=2e-5 at Delta/T<=16.
+No mass/phonon repair, holdout read or physical/global unlock. See the
+[result note](Result/artifacts/T13_HARTREE_LOW_T_VALIDITY_2026-10-02.md).
+
 ## Joint Classical-Phi Retarded Verification (2026-10-02)
 
 Research_T13_Hartree_Joint_Phi_Response.py and 21 focused tests. Freeze

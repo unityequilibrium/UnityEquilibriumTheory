@@ -6,6 +6,24 @@
 
 ## ผลหลักสำหรับพอร์ตและทุนรอบถัดไป
 
+### Latest validity boundary: why another unchanged Hartree run will not close EOS
+
+[Same-prescription low-T investigation](Result/artifacts/T13_HARTREE_LOW_T_VALIDITY_2026-10-02.md)
+finds an explicit conditional admission mismatch, not a missing derivative:
+the joint entropy envelope agrees, but positive internal zero-T gaps yield
+exponential entropy instead of the external gapless-mode T^3 requirement.
+This changes the 25 October validity question to deriving a consistent
+thermal approximation or demonstrating restricted validity. A proposed
+loop-ordered same-action Goldstone EFT must keep separate stationary/loop
+orders, justify control at the trial coupling and prevent double counting;
+it is not obtained by setting old b=0 or adding phonon gas to old Hartree.
+No new branch or full physics acceptance is claimed here. The verified
+boundary can enter the preliminary methods portfolio with its assumptions,
+while independent measurement/source/readout input remains under the
+8 November target. Keep 7/11 October and later dates, model/trial policy
+and uncertain call scenarios unchanged. No promise of full closure in
+three months follows. Prior response evidence is not retracted.
+
 ### Latest joint response: close a calculation, then test its physics domain
 
 [Joint classical-Phi response](Result/artifacts/T13_HARTREE_JOINT_PHI_RESPONSE_2026-10-02.md)
@@ -44,7 +62,7 @@ Earlier notes below describe the scope at their own completed wave.
 | --- | --- | --- |
 | 2–7 ต.ค. | หนึ่ง result statement ที่มี derivation/independent check, validity/approximation obligations และ measurement card พร้อม identifiability/uncertainty | ล็อก preliminary result และข้อค้างจริง ไม่แต่ง no-go ไม่เลื่อน full acceptance |
 | 8–11 ต.ค. | พอร์ต v1: report, evidence/hash map, reproducibility, related-work gap, aims และรายการทุน/PI/งบที่ยังขาด | ส่งให้ตรวจพอร์ตได้ แต่ห้ามเรียก submission-ready |
-| 12–25 ต.ค. | ตรวจ validity/approximation และ low-temperature EOS ของ joint response ที่คำนวณแล้ว; independent reproduction | บันทึกผลขัดแย้งหรือ proof obligation ชัด ๆ ไม่เพิ่มสมการเพื่อกลบปัญหา |
+| 12–25 ต.ค. | หลัง conditional low-T exclusion: derive thermal approximation ที่สอดคล้องหรือ restricted validity และตรวจซ้ำอิสระ | ห้าม repair mass หรือเติม phonon gas เข้าสูตรเดิมเพื่อกลบข้อจำกัด |
 | 26 ต.ค.–8 พ.ย. | material/state/source/detector/temperature map และ permitted independent numeric input หรือ feasibility package ที่แยกประเภท | รักษา input gate และยื่นเป้าหมายสร้างข้อมูล ไม่สร้างข้อมูลทดลองแทน |
 | 9–22 พ.ย. | หนึ่ง preregistered comparison เมื่อ prerequisites ผ่าน หรือ verified scoped structural result + measurement design | ปิด disposition ของคำถามเป็น unresolved พร้อมสิ่งที่จะเปลี่ยนคำตอบ; ไม่ถือว่าปิด Goal |
 | 23 พ.ย.–6 ธ.ค. | ทำซ้ำอิสระหรือ protocol ที่สองโดยไม่ rematch เมื่อผลแรกพร้อม | แก้ความทนทานของผลแรกก่อนขยาย scope |

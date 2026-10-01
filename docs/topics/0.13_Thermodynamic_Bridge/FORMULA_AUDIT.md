@@ -1,5 +1,18 @@
 # Formula Audit: 0.13_Thermodynamic_Bridge
 
+## Joint Low-T Compatibility Boundary (2026-10-02)
+
+| Diagnostic ID | Equation | Units | Origin | Verified scope | Remaining obligation |
+| --- | --- | --- | --- | --- | --- |
+| t13.diagnostic.joint_hartree_entropy_envelope | -partial_T Omega=s_internal+(R_a*d_T I_s+R_b*d_T I_p)/2; stationary R_a=R_b=0 | potential E^4, entropy E^3, residuals/tadpoles E^2 | trace-log/insertion/double-bubble derivatives; no classical Phi thermal trace-log | independent joint/frozen envelopes and off-shell control | new thermal prescription and physical heat/entropy transport |
+| t13.diagnostic.joint_hartree_low_T_compatibility_boundary | Delta^2=2ab/(A+sqrt(A^2-4ab)); s_H/T^3->0 versus conditional 2pi^2/(45c^3), c^2=rho/chi | gap/T/Phi E, a/b/chi/rho E^2; entropy E^3; c and s/T^3 dimensionless | original internal spectrum, joint source derivative expansion and one-boson integral | conditional noncritical positive-gap branch at two numerical zero-T witnesses, not global proof | consistent gapless prescription/restricted validity; independent thermal scale |
+
+See [derivation and assumptions](Result/artifacts/T13_HARTREE_LOW_T_VALIDITY_2026-10-02.md).
+Constants are topic-derived relations/numerical controls, not fitted
+material coefficients. Mode counting is a comparator, not added potential.
+Natural energy units remain separate from normalized TTG/SI alpha. Local
+diagnostic IDs only, no promoted Core equation or ontology/owner edit.
+
 ## Same-Action Classical-Phi Joint Response (2026-10-02)
 
 | Diagnostic ID | Equation | Units | Origin | Verified scope | Remaining obligation |
