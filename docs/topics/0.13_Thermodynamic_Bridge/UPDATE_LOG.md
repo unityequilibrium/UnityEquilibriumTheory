@@ -1,3 +1,27 @@
+## 2026-10-01 - Polar source-complete static IR observable
+
+MAJOR_RESULT_CLOSURE: T13_POLAR_STATIC_IR_OBSERVABLE_MATCH is CLOSED_FOR_LANE for same-action/source/measure identities and conditional leading static IR matching.
+
+WHAT_IS_ACTUALLY_CLOSED: The polar map preserves chemical and Cartesian source terms. Its Jacobian and offshell Hessian gradient term are required. A source-complete Gaussian determinant with the measure correction equals the Cartesian determinant. The nonlinear Cartesian longitudinal observable reproduces the previous 1/q loop coefficient and has a positive conditional susceptibility.
+
+WHAT_REMAINS_OPEN: Source-complete renormalized/interacting amplitude and joint Phi state, vacuum counterterms, dynamic composite/current response, real-axis limit, controlled remainder and independent material input. The original positive thermal tadpole remains.
+
+DEPENDENCY_UNLOCKED: Same-lane static IR/observable matching design only; no physical/Core/funding gate promotion.
+
+STATUS: PASS_CONDITIONAL_POLAR_STATIC_IR_OBSERVABLE, not microscopic resummation or exact finite-T equilibrium.
+
+WHAT_CHANGED: Added polar verifier/thirteen tests/artifact/derivation; synchronized formula audit, limitations, README, planning JSON, 14-day/12-week plans and Goal brief. Core-owner work is untouched.
+
+EQUATION_OR_MAPPING: varphi_l=A+h-A*theta^2/2; chi_l=1/[Z(q^2+2r)]+x*T/(16*rho_s^2*q). Its inverse expansion reproduces -lambda*r*T/(4Z^2*q). J_l=U'_rho and the -log(rho) measure recover the original Cartesian Gaussian and Omega_x=lambda*(3I_sigma+I_pi)/(2Z)>0.
+
+VERIFICATION: 68 focused/related tests pass, including thirteen new checks of full action, source/torque/current, Jacobian, offshell Gaussian/logdet derivative, dimensionless energy-reference logs, tree Schur/spectrum, independent source-generating function versus Wick (5.6e-8 relative), IR coefficient, whole-action units/T0 and protected hashes. Artifact SHA-256 4b3021ff3b74f180c683e161ad6e43b4ef959df37464882c6abd04b4a6cceabd. All relevant remote CI checks passed on previous scientific head 75bc42368; new-head CI remains to be checked after push.
+
+CONTROLLING_BLOCKER: microscopic_polar_background_and_dynamical_observable_matching_not_closed.
+
+NEXT_ACTION: Choose and derive a source-complete renormalized/interacting prescription preserving the Gaussian coordinate identity; match order parameter and finite-frequency composite/current response, then the material/protocol input. Do not repeat a coordinate-only stationarity repair. Funding D5/D10/D14 dates and completion criteria are unchanged.
+
+CLAIM_BOUNDARY: Existing O(2) coordinates with fixed Phi, no C-as-mass/charge, R_gen state, artificial phase mass, filter, clipping, arbitrary Pade, fit or numeric holdout read. Conditional static source susceptibility is not temperature, physical instability, Kubo, independent He-II/graphite validation or global closure. Prior Xie exposure review remains open.
+
 ## 2026-10-01 - Finite-momentum thermal 1PI and infrared boundary
 
 MAJOR_RESULT_CLOSURE: T13_FINITE_MOMENTUM_THERMAL_1PI_AND_INFRARED_BOUNDARY is CLOSED_FOR_LANE for fixed-Phi formal thermal one-loop response.

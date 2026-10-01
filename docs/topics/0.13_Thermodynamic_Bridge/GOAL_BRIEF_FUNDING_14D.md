@@ -25,6 +25,13 @@
 
 ## Constraints
 
+The subsequent `Result/artifacts/T13_POLAR_STATIC_IR_OBSERVABLE_2026-10-01.md`
+closes same-field/source/measure identities and conditional leading static IR
+matching. Its source-complete offshell Gaussian recovers the original tadpole;
+do not call a zero polar angle mass a stationary state or a completed
+microscopic resummation. Continue interacting/background and dynamic observable
+matching before physical predictive admission.
+
 Latest response evidence: `Result/artifacts/T13_FINITE_MOMENTUM_THERMAL_1PI_2026-10-01.md`
 and its JSON compute the finite-q thermal one-loop matrix and static-current
 limit. Do not repeat kernel generation without a new question. Next derive

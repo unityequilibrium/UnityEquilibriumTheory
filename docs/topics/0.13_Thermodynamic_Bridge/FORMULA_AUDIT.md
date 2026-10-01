@@ -1,5 +1,17 @@
 # Formula Audit: 0.13_Thermodynamic_Bridge
 
+## Polar Source and Static IR Observable (2026-10-01)
+
+| formula_id | relation | variables and units | constant_origin | proof_status | verification_role | failure_mode | next_hardening_step |
+| :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- |
+| t13.diagnostic.polar_source_measure | `varphi=rho*(cos theta,sin theta); J_l=U'_rho; (1/2)logdet H_polar-log rho=(1/2)logdet H_cart` | rho E; theta dimensionless; J E^3; Jacobian E | exact same-field coordinate/source identity with common Gaussian regulator | derived including offshell source | full action, Jacobian integral and determinant/derivative checks | dropping source/measure fakes thermal stationarity | interacting/vacuum background matching, not another coordinate-only repair |
+| t13.diagnostic.polar_static_composite | `chi_l=1/[Z(q^2+2r)]+x*T/(16rho_s^2*q); Gamma_l/Z=1/(Z*chi_l)` | susceptibility E^-2; inverse/stiffness E^2; x E^2 | Cartesian longitudinal observable and connected Gaussian phase contraction | conditional leading static IR, exact leading one-loop coefficient match | independent source/logdet vs Wick; prior finite-q coefficient; positive IR witness | modulus response substituted for Cartesian/temperature observable; template called exact resummation | renormalized order parameter, stiffness and dynamical composite current |
+| t13.diagnostic.polar_offshell_boundary | `H_theta_theta=rho^2*H_cart,tt-rho*U'_rho=0` at J=0 | angular Hessian E^4; U'_rho E^3 | full Hessian chain rule | identity even at nonstationary rho | explicit nonzero tadpole witness | massless polar angle mistaken for valid equilibrium | require source-complete stationarity and matching before physical claims |
+
+See [derivation and source-complete boundary](Result/artifacts/T13_POLAR_STATIC_IR_OBSERVABLE_2026-10-01.md)
+and `Code/03_Research/Research_T13_Polar_Static_IR_Observable.py`.
+No new admitted Core equation, physical alpha, Kubo coefficient or gate unlock.
+
 ## Finite-Momentum Thermal 1PI (2026-10-01)
 
 | formula_id | relation | variables and units | constant_origin | proof_status | verification_role | failure_mode | next_hardening_step |

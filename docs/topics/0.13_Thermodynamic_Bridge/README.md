@@ -6,6 +6,17 @@ description: "Research module for Thermodynamic Bridge within the Unity Equilibr
 
 # 0.13 Thermodynamic Bridge
 
+## Polar IR Research Update (2026-10-01)
+
+The [source-complete polar result](Result/artifacts/T13_POLAR_STATIC_IR_OBSERVABLE_2026-10-01.md)
+derives a conditional static longitudinal susceptibility matching the earlier
+1/q loop coefficient without a negative reconstructed inverse. The same-field
+action, source and Jacobian are checked; the original Gaussian tadpole remains
+when the offshell Cartesian source is restored. This identifies a consistent
+leading static observable route, not an exact finite-T equilibrium or a new
+thermal measurement map. Next: source-complete interacting background and
+finite-frequency composite/current matching. Core/funding gates stay separate.
+
 ## Thermal Response Research Update (2026-10-01)
 
 The [finite-momentum one-loop result](Result/artifacts/T13_FINITE_MOMENTUM_THERMAL_1PI_2026-10-01.md)

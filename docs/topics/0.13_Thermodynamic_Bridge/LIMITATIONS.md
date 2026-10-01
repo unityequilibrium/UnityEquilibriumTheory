@@ -1,5 +1,24 @@
 # Limitations
 
+## Polar Static IR and Source-Complete Boundary (2026-10-01)
+
+The [same-action polar result](Result/artifacts/T13_POLAR_STATIC_IR_OBSERVABLE_2026-10-01.md)
+reconstructs a conditional positive Cartesian longitudinal susceptibility
+with the same 1/q coefficient as the earlier microscopic bubble. It does not
+remove that divergence; the susceptibility diverges positively and its inverse
+approaches zero. The radial modulus, Cartesian longitudinal field and thermal
+observable are different and cannot be substituted for one another.
+
+An offshell polar phase Hessian can vanish while the radial tadpole is nonzero.
+With the proper Cartesian Legendre source and polar Jacobian, the Gaussian
+kernel/logdet and original positive thermal derivative are recovered. Thus
+the Gaussian stationarity no-go is preserved, not repaired by coordinates.
+Common-regulator Gaussian measure matching is closed; vacuum/interacting
+counterterms, renormalized order parameter, joint Phi equilibrium, dynamic
+composite/current response and physical input remain open. Using the prior
+one-loop current as a stiffness is a conditional template, not a microscopic
+resummation. No physical prediction, target fit or new blinding eligibility.
+
 ## Finite-Momentum Thermal Loop Boundary (2026-10-01)
 
 The [finite-q thermal calculation](Result/artifacts/T13_FINITE_MOMENTUM_THERMAL_1PI_2026-10-01.md)

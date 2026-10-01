@@ -1,0 +1,368 @@
+{
+  "major_result_id": "T13_POLAR_STATIC_IR_OBSERVABLE_MATCH",
+  "topic": "0.13",
+  "closure_level": "CLOSED_FOR_LANE",
+  "verification_status": "PASS_CONDITIONAL_POLAR_STATIC_IR_OBSERVABLE",
+  "what_is_closed": [
+    "same_field_polar_action_and_source_map",
+    "measure_Jacobian_and_offshell_hessian_chain_rule",
+    "source_completed_offshell_Gaussian_measure_equivalence",
+    "static_Cartesian_longitudinal_Goldstone_composite_IR_coefficient",
+    "conditional_positive_static_susceptibility_without_bare_inverse_instability"
+  ],
+  "equation_or_mapping": "phi_l=A+h-A*theta^2/2; chi_l=1/[Z(q^2+2r)]+x*T/(16*rho_s^2*q); Gamma_l/Z=1/(Z*chi_l); rho_s_tree=Z*x",
+  "units": {
+    "rho_h_A_q_T_mu": "E",
+    "theta": "dimensionless",
+    "x_r_stiffness_inverse": "E^2",
+    "chi": "E^-2",
+    "source_J": "E^3",
+    "phase_temporal_coefficient": "E^2",
+    "Cartesian_polar_Jacobian": "E",
+    "Gaussian_logs": "dimensionless H/E_ref metric and rho/E_ref; E_ref=1 is a natural-unit convention, not SI calibration"
+  },
+  "derivation_class": "SAME_ACTION_COORDINATE_IDENTITY_AND_LEADING_STATIC_GOLDSTONE_OBSERVABLE_MATCH",
+  "observable": "Cartesian_longitudinal_source_susceptibility_distinct_from_radial_modulus_or_temperature",
+  "data_role": "DERIVED_NATURAL_UNIT_NO_MEASURED_ROWS",
+  "method_reference": {
+    "url": "https://arxiv.org/html/1011.3324v2",
+    "locator": "II.2 equations 30-39",
+    "role": "standard_amplitude_direction_method_adapted_to_declared_Z_T_normalization_not_material_validation"
+  },
+  "assumptions": [
+    "three_spatial_dimensions",
+    "ordered_long_wavelength_phase_with_positive_stiffness",
+    "fixed_Phi",
+    "tree_parameter_matching_for_one_loop_IR_coefficient",
+    "Gaussian_leading_phase_correlations",
+    "q_much_less_than_sqrt_2r",
+    "T_positive_for_thermal_IR_asymptote"
+  ],
+  "Q_refinement": [
+    0.005,
+    0.0025,
+    0.00125
+  ],
+  "checks": {
+    "full_source_action_coordinate_identity": true,
+    "coordinate_Jacobian_and_source_torque": true,
+    "source_completed_offshell_Gaussian_measure_identity": true,
+    "original_thermal_stationarity_blocker_preserved": true,
+    "tree_polar_action_kernel_pullback": true,
+    "tree_phase_Schur_and_spectrum": true,
+    "same_radial_one_loop_IR_coefficient": true,
+    "positive_static_composite_susceptibility_and_inverse": true,
+    "IR_inverse_tends_linearly_to_zero": true,
+    "offshell_polar_zero_is_not_stationarity": true,
+    "independent_quadratic_source_generating_function": true,
+    "finite_dimensional_measure_Jacobian": true,
+    "omitting_measure_changes_the_integral": true
+  },
+  "examples": [
+    {
+      "T": 0.22,
+      "mu": 1.05,
+      "r": 0.10850000000000004,
+      "Z": 1.0,
+      "lambda": 1.0,
+      "Phi_fixed": 0.15,
+      "tree_stiffness": 0.10850000000000004,
+      "formal_matched_current_stiffness": 0.09157371942316885,
+      "tree_IR_coefficient": -0.005967500000000003,
+      "previous_full_loop_IR_coefficient": -0.005967500000000002,
+      "susceptibility_refinement": [
+        {
+          "q": 0.005,
+          "x_tree": 0.10850000000000004,
+          "stiffness": 0.10850000000000004,
+          "radial_modulus_susceptibility": 4.607764082478975,
+          "cartesian_longitudinal_composite_susceptibility": 25.345622119815655,
+          "cartesian_longitudinal_susceptibility": 29.95338620229463,
+          "normalized_longitudinal_inverse": 0.03338520704291501,
+          "inverse_expansion_parameter": 5.500633640552995,
+          "small_correction_inverse_term": -1.193775015841014,
+          "leading_inverse_per_q": 7.890909090909093,
+          "small_q_over_radial_scale": 0.010733469768527295
+        },
+        {
+          "q": 0.0025,
+          "x_tree": 0.10850000000000004,
+          "stiffness": 0.10850000000000004,
+          "radial_modulus_susceptibility": 4.608162207309696,
+          "cartesian_longitudinal_composite_susceptibility": 50.69124423963131,
+          "cartesian_longitudinal_susceptibility": 55.299406446941006,
+          "normalized_longitudinal_inverse": 0.018083376734965243,
+          "inverse_expansion_parameter": 11.000316820276495,
+          "small_correction_inverse_term": -2.3871375019801273,
+          "leading_inverse_per_q": 7.890909090909093,
+          "small_q_over_radial_scale": 0.005366734884263647
+        },
+        {
+          "q": 0.00125,
+          "x_tree": 0.10850000000000004,
+          "stiffness": 0.10850000000000004,
+          "radial_modulus_susceptibility": 4.608261749267356,
+          "cartesian_longitudinal_composite_susceptibility": 101.38248847926262,
+          "cartesian_longitudinal_susceptibility": 105.99075022852998,
+          "normalized_longitudinal_inverse": 0.009434785562361514,
+          "inverse_expansion_parameter": 22.000158410138248,
+          "small_correction_inverse_term": -4.774068750247517,
+          "leading_inverse_per_q": 7.890909090909093,
+          "small_q_over_radial_scale": 0.0026833674421318236
+        }
+      ],
+      "matched_current_conditional_template": {
+        "x_tree": 0.10850000000000004,
+        "stiffness": 0.09157371942316885,
+        "radial_modulus_susceptibility": 4.608162207309696,
+        "cartesian_longitudinal_composite_susceptibility": 71.16242176510293,
+        "cartesian_longitudinal_susceptibility": 75.77058397241262,
+        "normalized_longitudinal_inverse": 0.013197733837765997,
+        "inverse_expansion_parameter": 15.442690288163375,
+        "small_correction_inverse_term": -3.351160309345755,
+        "leading_inverse_per_q": 5.6209441736025125,
+        "small_q_over_radial_scale": 0.005366734884263647
+      },
+      "matched_template_is_not_a_new_loop_resummation": true,
+      "radial_amplitude_stationarity_or_UV_measure_not_closed": true,
+      "offshell_coordinate_trap": {
+        "radial_tadpole": 0.008255751025747155,
+        "cartesian_transverse_hessian": 0.022785000000000027,
+        "linear_pullback": 0.002991328725000005,
+        "gradient_chain_term": -0.0029913287250000055,
+        "polar_angular_hessian": -4.336808689942018e-19
+      },
+      "action_coordinate_check": {
+        "full_source_action_residual": 6.938893903907228e-18,
+        "Jacobian_determinant_residual": 0.0,
+        "source_phase_torque": 0.012545181409290444,
+        "source_torque_difference_residual": 2.732068044020153e-13
+      },
+      "source_completed_Gaussian": {
+        "classical_Cartesian_source": 0.008255751025747155,
+        "kernel_pullback_residual": 1.734723475976807e-18,
+        "measure_corrected_logdet_residual": 2.220446049250313e-16,
+        "original_thermal_Omega_x": 0.00968350002182343,
+        "naive_source_free_polar_Omega_x": 0.0054595569942377745,
+        "missing_source_derivative_phase_term": 0.004223943027585655,
+        "thermal_derivative_reconstruction_residual": 0.0
+      },
+      "tree_polar_kernel_pullback_residual": 5.551115123125783e-17,
+      "tree_Schur_residual": 1.3877787807814457e-17,
+      "tree_low_mode_speed_squared": 0.04689863842662634,
+      "exact_tree_spectrum_low_k_speed_squared": 0.04689864038989022,
+      "static_spatial_source_current": "j_i=rho_s*(partial_i theta-a_i); div(j)=0 at J=0; div(j)=rho*(J_l sin(theta)-J_t cos(theta)) with Cartesian sources"
+    },
+    {
+      "T": 0.22,
+      "mu": 1.2,
+      "r": 0.44599999999999995,
+      "Z": 1.0,
+      "lambda": 1.0,
+      "Phi_fixed": 0.15,
+      "tree_stiffness": 0.44599999999999995,
+      "formal_matched_current_stiffness": 0.43717875492820396,
+      "tree_IR_coefficient": -0.024529999999999996,
+      "previous_full_loop_IR_coefficient": -0.024529999999999996,
+      "susceptibility_refinement": [
+        {
+          "q": 0.005,
+          "x_tree": 0.44599999999999995,
+          "stiffness": 0.44599999999999995,
+          "radial_modulus_susceptibility": 1.1210448137664304,
+          "cartesian_longitudinal_composite_susceptibility": 6.165919282511211,
+          "cartesian_longitudinal_susceptibility": 7.286964096277641,
+          "normalized_longitudinal_inverse": 0.1372313609327133,
+          "inverse_expansion_parameter": 5.500154147982062,
+          "small_correction_inverse_term": -4.906275003853699,
+          "leading_inverse_per_q": 32.43636363636363,
+          "small_q_over_radial_scale": 0.005294044373595335
+        },
+        {
+          "q": 0.0025,
+          "x_tree": 0.44599999999999995,
+          "stiffness": 0.44599999999999995,
+          "radial_modulus_susceptibility": 1.1210683781643909,
+          "cartesian_longitudinal_composite_susceptibility": 12.331838565022421,
+          "cartesian_longitudinal_susceptibility": 13.452906943186813,
+          "normalized_longitudinal_inverse": 0.07433337673583235,
+          "inverse_expansion_parameter": 11.00007707399103,
+          "small_correction_inverse_term": -9.81213750048171,
+          "leading_inverse_per_q": 32.43636363636363,
+          "small_q_over_radial_scale": 0.0026470221867976674
+        },
+        {
+          "q": 0.00125,
+          "x_tree": 0.44599999999999995,
+          "stiffness": 0.44599999999999995,
+          "radial_modulus_susceptibility": 1.1210742694186704,
+          "cartesian_longitudinal_composite_susceptibility": 24.663677130044842,
+          "cartesian_longitudinal_susceptibility": 25.784751399463513,
+          "normalized_longitudinal_inverse": 0.03878261164933343,
+          "inverse_expansion_parameter": 22.000038536995515,
+          "small_correction_inverse_term": -19.62406875006021,
+          "leading_inverse_per_q": 32.43636363636363,
+          "small_q_over_radial_scale": 0.0013235110933988337
+        }
+      ],
+      "matched_current_conditional_template": {
+        "x_tree": 0.44599999999999995,
+        "stiffness": 0.43717875492820396,
+        "radial_modulus_susceptibility": 1.1210683781643909,
+        "cartesian_longitudinal_composite_susceptibility": 12.834514661928251,
+        "cartesian_longitudinal_susceptibility": 13.955583040092643,
+        "normalized_longitudinal_inverse": 0.0716559098338726,
+        "inverse_expansion_parameter": 11.448467294156636,
+        "small_correction_inverse_term": -10.212104379308306,
+        "leading_inverse_per_q": 31.165962292796518,
+        "small_q_over_radial_scale": 0.0026470221867976674
+      },
+      "matched_template_is_not_a_new_loop_resummation": true,
+      "radial_amplitude_stationarity_or_UV_measure_not_closed": true,
+      "offshell_coordinate_trap": {
+        "radial_tadpole": 0.06880409201127509,
+        "cartesian_transverse_hessian": 0.09366000000000008,
+        "linear_pullback": 0.05054455560000004,
+        "gradient_chain_term": -0.05054455560000005,
+        "polar_angular_hessian": -6.938893903907228e-18
+      },
+      "action_coordinate_check": {
+        "full_source_action_residual": 1.962615573354719e-17,
+        "Jacobian_determinant_residual": 0.0,
+        "source_phase_torque": 0.02543486905189326,
+        "source_torque_difference_residual": 6.825338905169787e-13
+      },
+      "source_completed_Gaussian": {
+        "classical_Cartesian_source": 0.06880409201127509,
+        "kernel_pullback_residual": 2.7755575615628914e-17,
+        "measure_corrected_logdet_residual": 1.1102230246251565e-16,
+        "original_thermal_Omega_x": 0.00642958967851173,
+        "naive_source_free_polar_Omega_x": 0.0024902693698109586,
+        "missing_source_derivative_phase_term": 0.003939320308700771,
+        "thermal_derivative_reconstruction_residual": 0.0
+      },
+      "tree_polar_kernel_pullback_residual": 3.469446951953614e-18,
+      "tree_Schur_residual": 0.0,
+      "tree_low_mode_speed_squared": 0.13409500901984367,
+      "exact_tree_spectrum_low_k_speed_squared": 0.13409501014701056,
+      "static_spatial_source_current": "j_i=rho_s*(partial_i theta-a_i); div(j)=0 at J=0; div(j)=rho*(J_l sin(theta)-J_t cos(theta)) with Cartesian sources"
+    }
+  ],
+  "Gaussian_source_check": {
+    "source_difference": 0.024274932064471955,
+    "connected_Wick_susceptibility": 0.024274933431952667,
+    "relative_disagreement": 5.633303656882305e-08
+  },
+  "finite_dimensional_measure_checks": [
+    {
+      "cartesian_integral": 2.243994752564138,
+      "polar_with_jacobian": 2.243994752564138,
+      "polar_without_jacobian": 4.706096098246236,
+      "relative_disagreement": 0.0
+    },
+    {
+      "cartesian_integral": 2.2803503143293997,
+      "polar_with_jacobian": 2.2803503143294,
+      "polar_without_jacobian": 4.744141876966607,
+      "relative_disagreement": 2.220446049250313e-16
+    },
+    {
+      "cartesian_integral": 2.6827142927667653,
+      "polar_with_jacobian": 2.6827142927667658,
+      "polar_without_jacobian": 5.155872814638414,
+      "relative_disagreement": 2.220446049250313e-16
+    }
+  ],
+  "evidence_artifacts": [
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/t13_finite_momentum_thermal_1pi.json",
+      "sha256": "6cd8271ee3083f8c0f68b4a37b63c52586ab8b1ddf1b432e26dbe41a0d1d1cd8"
+    },
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/Research_T13_Finite_Momentum_Thermal_1PI.py",
+      "sha256": "7e5281896b8641054257006e8be16e48f6c72f15835ececc5a9aee7be4234167"
+    },
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/t13_thermal_oneloop_ward_current.json",
+      "sha256": "cfd794f8d1f7ab1de4d3e3b9feb991957c76d57d40375ddd6bbab2a8a2a514aa"
+    },
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/Research_T13_Polar_Static_IR_Observable.py",
+      "sha256": "cef1a1c53efc1ef3f3c5ea69974cb7542acc59bf90ccb3cb4df9bef515077970"
+    }
+  ],
+  "protected_evidence_hashes": [
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/t13_conditional_twofluid_operator.json",
+      "sha256": "8606303e4818030dd74061c14b243542c19c4cbb262dda29261951d4c87d6412"
+    },
+    {
+      "path": "docs/core/07_artifacts/topic13/t13_topic13_closure_matrix.json",
+      "sha256": "e6e84772a400273c438e0b8ca3c7b5b14c9d720da0420fb4021b1c0e7a54fe66"
+    },
+    {
+      "path": "docs/core/07_artifacts/gates/uet_major_result_dependency_unlock_gate.json",
+      "sha256": "ecbefdf12ee1eb6661ae8096e3f62bf1ffa7992c96ca94f1149fdbc25a8bbe6e"
+    }
+  ],
+  "open_blockers": [
+    "renormalized_order_parameter_and_Phi_stationarity_with_UV_measure_matching",
+    "finite_frequency_composite_current_and_real_axis_response",
+    "controlled_IR_matching_remainder",
+    "physical_material_normal_component_and_independent_measurements"
+  ],
+  "controlling_blocker": "microscopic_polar_background_and_dynamical_observable_matching_not_closed",
+  "dependency_unlocked": [
+    "same_action_static_IR_completion_design_only"
+  ],
+  "static_IR_observable_match_derived": true,
+  "source_completed_Gaussian_coordinate_measure_matched": true,
+  "microscopic_IR_resummation_derived": false,
+  "continuum_measure_counterterms_matched": false,
+  "vacuum_renormalization_matched": false,
+  "joint_Phi_stationarity_derived": false,
+  "renormalized_order_parameter_matched": false,
+  "real_axis_response_derived": false,
+  "controlled_truncation_error_established": false,
+  "physical_Kubo_emitted": false,
+  "g1_physical_unlock": false,
+  "g2_science_unlock": false,
+  "full_core_unlock": false,
+  "core_composition_gate_overwritten": false,
+  "claim_promotion": false,
+  "parameter_fitting": false,
+  "xie_2026_accessed": false,
+  "phase_mass_added": false,
+  "IR_filter": false,
+  "clipping": false,
+  "arbitrary_Pade_prescription": false,
+  "C_relabelled_as_charge_or_mass": false,
+  "R_gen_added_as_state": false,
+  "claim_boundary": "Conditional leading static composite susceptibility in the existing O2 coordinates, not a microscopic finite-T resummation, exact background, temperature response, real-axis transport, independent material prediction or global closure. A vanishing offshell polar phase Hessian does not establish stationarity.",
+  "report": {
+    "MAJOR_RESULT_CLOSURE": "T13_POLAR_STATIC_IR_OBSERVABLE_MATCH: CLOSED_FOR_LANE",
+    "WHAT_IS_ACTUALLY_CLOSED": [
+      "same_field_polar_action_and_source_map",
+      "measure_Jacobian_and_offshell_hessian_chain_rule",
+      "source_completed_offshell_Gaussian_measure_equivalence",
+      "static_Cartesian_longitudinal_Goldstone_composite_IR_coefficient",
+      "conditional_positive_static_susceptibility_without_bare_inverse_instability"
+    ],
+    "WHAT_REMAINS_OPEN": [
+      "renormalized_order_parameter_and_Phi_stationarity_with_UV_measure_matching",
+      "finite_frequency_composite_current_and_real_axis_response",
+      "controlled_IR_matching_remainder",
+      "physical_material_normal_component_and_independent_measurements"
+    ],
+    "DEPENDENCY_UNLOCKED": [
+      "same_action_static_IR_completion_design_only"
+    ],
+    "STATUS": "PASS_CONDITIONAL_POLAR_STATIC_IR_OBSERVABLE",
+    "WHAT_CHANGED": "Derived the same-field polar map, Jacobian and Cartesian static composite susceptibility; preserved the nonstationary-background blocker.",
+    "EQUATION_OR_MAPPING": "phi_l=A+h-A*theta^2/2; chi_l=1/[Z(q^2+2r)]+x*T/(16*rho_s^2*q); Gamma_l/Z=1/(Z*chi_l); rho_s_tree=Z*x",
+    "VERIFICATION": "Independent Gaussian source/logdet vs Wick calculation, measure integral, prior finite-q IR coefficient, tree kernel/Schur and spectrum.",
+    "CONTROLLING_BLOCKER": "microscopic_polar_background_and_dynamical_observable_matching_not_closed",
+    "NEXT_ACTION": "Match renormalized order parameter and continuum measure/current prescription, then the finite-frequency observable before physical admission.",
+    "CLAIM_BOUNDARY": "Conditional leading static composite susceptibility in the existing O2 coordinates, not a microscopic finite-T resummation, exact background, temperature response, real-axis transport, independent material prediction or global closure. A vanishing offshell polar phase Hessian does not establish stationarity."
+  }
+}
