@@ -123,6 +123,20 @@ R1–R5 ไม่ใช่ห้าช่องที่ติ๊กแล้ว
 
 ## 3. เส้นทางหลัง D14 ตามผลจริง
 
+### บัตรตัดสินใจสำหรับใช้เวลาระยะยาวให้คุ้ม
+
+ใช้ `execution_review_2026_10_01` ใน planning JSON เป็นบัตรรับงาน ไม่ใช่ gate ฟิสิกส์ใหม่ คำถามถัดไปจากหลักฐานปัจจุบันคือ **stationary Hartree prescription เดียวกันให้ response ของกระแสครบ source/contact terms ได้หรือไม่** ต้องคำนวณจริงและตรวจ Ward identity; ห้ามสร้างคำตอบด้วยการ project ให้ identity ผ่าน หรือใช้ field bubble ที่ทำแล้วแทน current tensor
+
+ในรอบสองสัปดาห์ เป้าหมายคือหนึ่งผลวิจัยที่พิสูจน์/ตรวจซ้ำได้และบอกว่าการวัดอะไรเพิ่มจะตัดความกำกวม ไม่สัญญาว่า full Topic 13 หรือการทำนายวัสดุจะปิดทัน หาก prerequisites ของ prediction ไม่ครบในวันที่ 2 ตุลาคม ให้เลือก structural/methods question ที่มีหลักฐานจริง; หาก proof ยังไม่เสร็จวันที่ 7 ตุลาคม ให้ตรึง preliminary results กับ missing calculation ตามจริงสำหรับพอร์ต 11 ตุลาคม ไม่เปลี่ยน unresolved เป็น no-go
+
+ทุกสัปดาห์รับรายงานหนึ่งบัตร: คำถามที่ตอบแล้ว, หลักฐานใหม่และ hash, สิ่งที่ปิดจริง, สิ่งที่ยังเปิด, การคำนวณ/ข้อมูลถัดไปที่จะเปลี่ยนข้อสรุป, เหตุผลทำต่อหรือเปลี่ยนทาง และทรัพยากรที่ใช้จริง รายงานนี้ใช้ประกอบ 11 หัวข้อเดิม ไม่แทน artifact หรือเพิ่ม checkpoint เพื่อสร้างเปอร์เซ็นต์ความสำเร็จ
+
+การเลือกโมเดลยังเป็น **recommendation; model trial = NOT_RUN** ให้บันทึก model/effort, input-packet hash, ผลที่รับงานได้, critical errors, independent check, เวลาแก้หลัง review, wall time และ usage/cost เฉพาะที่ทราบ ค่าที่ไม่ทราบต้องเป็น null ไม่ใช่ศูนย์ เปรียบเทียบ input และ acceptance เดียวกันในเพดาน 90 นาที เลือก configuration ที่เบาที่สุดซึ่งผ่านทั้งหมด ไม่เลือกจากคะแนนที่โมเดลให้ตัวเอง ไม่ตีความการเปลี่ยนโมเดลว่าเป็นหลักฐานทางฟิสิกส์อิสระ
+
+เวลาสองถึงสามเดือนที่เพิ่มต้องซื้อผล R1–R5 ตามวันที่ 25 ต.ค., 8 พ.ย., 22 พ.ย., 6 ธ.ค. และ 20 ธ.ค. ตามลำดับ ถ้า prerequisite ยังไม่ผ่าน ให้ส่ง precise unresolved obligation หรือผล structural ที่พิสูจน์ได้ ไม่เลื่อนสถานะจากเวลาที่หมดไป งาน source/permission ทำคู่ขนานได้ แต่ empirical comparison ต้องรอทั้ง operator, material mapping และ numeric-input admission
+
+ประโยชน์ระยะยาวคือได้ response/observable contract ที่ผู้ร่วมวิจัยตรวจและนำไปใช้ต่อได้ หรือได้ขอบเขตของตัวแบบพร้อมแผนวัดที่แก้ ambiguity อย่างมีเหตุผล ทั้งสองใช้เป็น preliminary research สำหรับขอทุนได้เมื่อ novelty/call-fit ผ่านการทบทวน แต่ไม่รับประกันทุนหรือ external validation
+
 | ผลวันที่ 11 ต.ค. | งานหลักรอบต่อไป | เงื่อนไขจบที่ตรวจได้ |
 | --- | --- | --- |
 | มี prediction operator ที่กำหนดครบ | ทดสอบกับ primary response ที่ matched protocol และไม่ได้ใช้ matching; ตรวจ failure modes | comparison + uncertainty + competitor ที่ reproducible; ขัดข้อมูลต้องรายงาน |

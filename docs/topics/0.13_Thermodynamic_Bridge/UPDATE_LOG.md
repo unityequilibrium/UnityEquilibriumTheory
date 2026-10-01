@@ -1,3 +1,27 @@
+## 2026-10-01 - Model evaluation and next-round execution decision cards
+
+MAJOR_RESULT_CLOSURE: Planning acceptance clarified; no new scientific result closed.
+
+WHAT_IS_ACTUALLY_CLOSED: Canonical roadmap, Goal handoff and planning JSON now agree on the next current-response question, model trial record and five dated result reviews.
+
+WHAT_REMAINS_OPEN: Source-complete current/contact response, real-axis/error and regulator/material matching; independent source/measurement; actual model trial, funder/PI/eligibility/budget and deadline.
+
+DEPENDENCY_UNLOCKED: None. Existing Core-owner composition, scientific gates, failed branches and active Goal remain unchanged.
+
+STATUS: PLANNING_REVISION_NOT_SCIENTIFIC_CLOSURE; MODEL_TRIAL_NOT_RUN.
+
+WHAT_CHANGED: Added execution_review_2026_10_01, model evaluation fields including correction time and missing-usage handling, two contract regressions and matching roadmap/Goal instructions. Kept 2 October decision, 7 October freeze and 11 October portfolio target plus W4/W6/W8/W10/W12 dates.
+
+EQUATION_OR_MAPPING: No equation changed. The next scientific question is same-prescription gauge/current response including contacts, not replacing it with the computed field bubble or an imposed Ward projection.
+
+VERIFICATION: Eight planning tests passed; linked scientific evidence hashes, dates, model recommendation consistency and non-promotion boundaries checked. Whitespace check passed. Official OpenAI model-selection page retrieved on 1 October; no comparative model trial or new physical calculation run.
+
+CONTROLLING_BLOCKER: gauge_current_real_axis_and_regulator_material_matching_not_closed. Call/PI/budget independently controls submission readiness.
+
+NEXT_ACTION: Work the declared current-response question; acquire independent source/protocol inputs in parallel. Accept empirical scoring only after operator, material mapping and numeric-input admission. Review actual results at the dated cards; do not restart the sprint or complete unresolved science.
+
+CLAIM_BOUNDARY: Planning only, not full Topic13 closure, external validation, measured model superiority or funding guarantee. No model/configuration change, new Goal/thread, numeric holdout read, external contact, purchases or Core-owner edits.
+
 ## 2026-10-01 - Actual three-channel Hartree external field response
 
 MAJOR_RESULT_CLOSURE: T13_FIXED_PHI_HARTREE_EXTERNAL_FIELD_RESPONSE is CLOSED_FOR_LANE in the declared fixed-Phi zero-momentum-subtracted candidate; the full Goal remains active.

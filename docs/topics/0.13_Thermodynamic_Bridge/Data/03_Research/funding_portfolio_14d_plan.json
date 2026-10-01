@@ -13,6 +13,48 @@
   "submission_deadline": null,
   "budget_amount": null,
   "goal_started": false,
+  "execution_review_2026_10_01": {
+    "record_class": "PLANNING_NOT_SCIENTIFIC_CLOSURE",
+    "current_scientific_evidence_field": "hartree_external_response_evidence_2026_10_01",
+    "current_question": "Can the same stationary Hartree prescription supply source-complete gauge/current response including contact terms, without imposed Ward projection?",
+    "scientific_deliverable_is_not_full_topic_closure": true,
+    "model_trial": {
+      "status": "NOT_RUN",
+      "recommended_owner": "gpt-6-astra",
+      "recommended_owner_effort": "high",
+      "execution_alternative": "gpt-6.1-sol",
+      "execution_alternative_effort": "high",
+      "inventory_optional": "gpt-6-luna",
+      "same_input_packet_required": true,
+      "same_acceptance_required": true,
+      "pilot_minutes_cap": 90,
+      "critical_errors_allowed": 0,
+      "record_fields": ["model_id", "reasoning_effort", "input_packet_sha256", "task_id", "accepted_result", "critical_errors", "independent_check", "reviewer_correction_minutes", "wall_minutes", "usage_if_available", "cost_if_available"],
+      "missing_usage_or_cost_is_null_not_zero": true,
+      "selection_basis": "Lightest configuration meeting all acceptance requirements; compare total time including correction, not self-rating or tokens alone",
+      "different_model_is_not_independent_physical_evidence": true,
+      "configuration_changed": false
+    },
+    "two_week_decision": {
+      "route_decision_date": "2026-10-02",
+      "scientific_freeze_date": "2026-10-07",
+      "portfolio_date": "2026-10-11",
+      "prediction_route_requires": ["admitted response operator", "independent material/state map", "admitted non-target inputs", "locked comparison protocol"],
+      "structural_route_requires": ["declared model class", "analytic or constructive result", "independent verification", "explicit measurement design"],
+      "unresolved_route": "Preserve verified preliminary evidence and exact remaining calculation; not no-go, scientific completion or submission-ready"
+    },
+    "next_round_review_cards": [
+      {"review_date": "2026-10-25", "result_ids": ["R1"], "decision": "Accept source-complete candidate response or record the precise unresolved/current/renormalization obligation; do not substitute the computed field bubble for the current tensor"},
+      {"review_date": "2026-11-08", "result_ids": ["R2", "R3"], "decision": "Accept independent state/observable mapping and numeric input, or explicitly non-empirical measurement feasibility; source acquisition can run alongside R1"},
+      {"review_date": "2026-11-22", "result_ids": ["R4"], "decision": "Release one locked comparison if its prerequisites pass, otherwise verified scoped structural evidence plus design; disclose unresolved work"},
+      {"review_date": "2026-12-06", "result_ids": ["R4"], "decision": "Test a second protocol only after the first result and preregistration; otherwise strengthen the first result, not scope"},
+      {"review_date": "2026-12-20", "result_ids": ["R5"], "decision": "Freeze reproducible research release with claim/uncertainty map and actual review status; submission readiness separately requires call, PI and budget"}
+    ],
+    "weekly_review_fields": ["question_answered", "new_evidence_hashes", "what_is_closed", "what_remains_open", "next_decisive_calculation_or_input", "stop_or_continue_reason", "resources_used_if_available"],
+    "scope_and_date_alone_accept_results": false,
+    "physical_gate_changed": false,
+    "goal_reconfigured": false
+  },
   "claim_promotion": false,
   "dependency_unlock_performed": false,
   "owner_topic": "0.13_Thermodynamic_Bridge",

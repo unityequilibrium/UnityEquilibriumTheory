@@ -76,6 +76,14 @@ upper-half-plane inverse is not a resummed state or a physical prediction.
 
 ## Result-level handoffs after the first portfolio
 
+Read `execution_review_2026_10_01` for the current decisive question, date-bound
+acceptance alternatives and model trial record. Model evaluation is NOT_RUN;
+recommendations do not authorize a configuration change. Record accepted work
+and correction time on identical inputs before claiming one model is better
+for this research. Weekly decision cards supplement, not replace, the eleven
+report fields and evidence artifacts. A calendar milestone accepts no result
+by itself; unresolved work remains unresolved.
+
 Use `result_level_execution_2026_10_01` in the existing planning JSON and the
 R1-R5 ladder in the roadmap. These are planned acceptance cards, not scientific
 gates already passed. Review actual external response at W4, independent

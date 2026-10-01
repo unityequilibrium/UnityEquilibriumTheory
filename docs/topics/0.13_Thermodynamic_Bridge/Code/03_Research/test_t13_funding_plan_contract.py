@@ -110,3 +110,37 @@ def test_submission_scenarios_respect_buffers_not_internal_week_dates():
             }.get(field, field)
             assert date.fromisoformat(example[key]) == deadline - timedelta(days=days)
     assert PLAN["submission_deadline"] is None
+
+
+def test_execution_review_is_not_a_model_trial_or_physical_closure():
+    review = PLAN["execution_review_2026_10_01"]
+    assert review["record_class"] == "PLANNING_NOT_SCIENTIFIC_CLOSURE"
+    assert review["scientific_deliverable_is_not_full_topic_closure"] is True
+    assert PLAN[review["current_scientific_evidence_field"]]["gauge_current_vertex_computed"] is False
+    trial = review["model_trial"]
+    assert trial["status"] == "NOT_RUN"
+    assert trial["configuration_changed"] is False
+    assert trial["recommended_owner"] == PLAN["model_policy"]["goal_owner"]["model"]
+    assert trial["execution_alternative"] == PLAN["model_policy"]["implementation"]["model"]
+    assert trial["same_input_packet_required"] and trial["same_acceptance_required"]
+    assert trial["critical_errors_allowed"] == 0
+    assert trial["missing_usage_or_cost_is_null_not_zero"] is True
+    assert trial["different_model_is_not_independent_physical_evidence"] is True
+    assert "independent_check" in trial["record_fields"]
+    assert "reviewer_correction_minutes" in trial["record_fields"]
+    for flag in ("scope_and_date_alone_accept_results", "physical_gate_changed", "goal_reconfigured"):
+        assert review[flag] is False
+
+
+def test_execution_review_dates_match_existing_milestones():
+    review = PLAN["execution_review_2026_10_01"]
+    first = review["two_week_decision"]
+    assert first["route_decision_date"] == "2026-10-02"
+    assert first["scientific_freeze_date"] == "2026-10-07"
+    assert first["portfolio_date"] == PLAN["delivery_date"]
+    cards = review["next_round_review_cards"]
+    checkpoints = PLAN["long_term_roadmap"]["checkpoints"]
+    assert [card["review_date"] for card in cards] == [card["end_date"] for card in checkpoints]
+    result_ids = {card["id"] for card in PLAN["result_level_execution_2026_10_01"]["result_cards"]}
+    assert all(set(card["result_ids"]) <= result_ids for card in cards)
+    assert "new_evidence_hashes" in review["weekly_review_fields"]
