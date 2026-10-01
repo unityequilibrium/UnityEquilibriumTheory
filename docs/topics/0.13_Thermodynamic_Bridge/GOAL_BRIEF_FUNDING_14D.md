@@ -25,6 +25,12 @@
 
 ## Constraints
 
+Latest response evidence: `Result/artifacts/T13_FINITE_MOMENTUM_THERMAL_1PI_2026-10-01.md`
+and its JSON compute the finite-q thermal one-loop matrix and static-current
+limit. Do not repeat kernel generation without a new question. Next derive
+the amplitude-direction IR/current matching and real-axis limit; the computed
+upper-half-plane inverse is not a resummed state or a physical prediction.
+
 - C เป็น collective coordinate, Phi เป็น effective response, R_gen เป็น derived trace และ R_obs แยกจาก physical dynamics; อ้าง ontology/F0–F8 ก่อนเพิ่มสมการที่ใช้ตีความทางฟิสิกส์
 - He-4 recorded Core-ready กับ graphite aggregate เป็นคนละขอบเขต ใช้ evidence ที่ตรวจจริงโดยไม่เลื่อนทั้ง Core หรือแก้ status เดิมจากการทำ planning milestone สำเร็จ
 - Xie 2026 อยู่ review-required หลัง context exposure; ไม่เปิด ไม่ใช้ fit/tuning/comparison และไม่อ้าง blind eligibility ใหม่ ไม่มีการส่งข้อความหาผู้เขียนหรือหน่วยงานทุนจาก prompt นี้

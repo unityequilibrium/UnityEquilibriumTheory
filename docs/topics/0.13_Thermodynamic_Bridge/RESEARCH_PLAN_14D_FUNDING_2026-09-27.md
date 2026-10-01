@@ -10,6 +10,8 @@
 
 ## 1. ผลลัพธ์หลักที่จะปิดก่อน
 
+หลักฐานต่อเนื่อง 1 ต.ค.: [finite-momentum thermal 1PI](Result/artifacts/T13_FINITE_MOMENTUM_THERMAL_1PI_2026-10-01.md) ปิด kernel แบบ fixed-Phi thermal one-loop และตรวจ static current เพิ่มจาก zero-momentum result แต่ bare radial expansion ไม่ uniform เมื่อ q ต่ำ จึงยังไม่ผ่าน physical G1/G2 หรือผลหลักของพอร์ต ต้องตัดสิน D5 จาก scope ที่ตรวจจริงและ obligations เรื่อง IR/current/material/measurement ที่ยังเหลือ ไม่เรียก divergence นี้ว่า no-go ของ UET ทุก completion
+
 ชื่อผลงานเสนอ: **ขอบเขตการทำนายและการออกแบบการวัดเพื่อทดสอบสะพานความร้อนที่ปรับเทียบแล้ว: กรณี He-4/O(2)**
 
 คำถามหลัก: เมื่อแช่แข็ง calibration, สเกล และสมการที่มีอยู่ แบบจำลองกำหนดการตอบสนองความร้อนที่ยังไม่ได้ใช้ปรับเทียบได้เป็นเอกลักษณ์หรือไม่? หากยังไม่ได้ ต้องเพิ่มการวัดชนิดใดจึงระบุพารามิเตอร์หรือแยกแบบจำลองคู่แข่งได้?

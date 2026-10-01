@@ -1,5 +1,19 @@
 # Formula Audit: 0.13_Thermodynamic_Bridge
 
+## Finite-Momentum Thermal 1PI (2026-10-01)
+
+| formula_id | relation | variables and units | constant_origin | proof_status | verification_role | failure_mode | next_hardening_step |
+| :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- |
+| t13.diagnostic.thermal_1pi_finite_q | `B_ab=-Delta_T int Tr[G V_a G_shift V_b]/(2Z)` | bubble E^2; vertices E; residues E^-1; T,q,complex frequency E | existing quartic Cartesian Hessian and thermal pole residues | derived at fixed Phi, formal thermal one-loop | full-matrix frequency sum and upper-half-plane refinement | complex-frequency evaluation mistaken for real-axis damping or a stable resummed state | real-axis/current vertices and infrared completion |
+| t13.diagnostic.static_radial_goldstone_IR | `J_00=1/(8q); B_sigma~-lambda*r*T/(4Z^2*q); q_IR=lambda*T/(8Z^2)` | J E^-1; bubble E^2; r E^2; q_IR E | exact zero-Matsubara convolution of tree Goldstone propagators | analytic leading boundary, full-bubble refinement checked | identifies nonuniform bare expansion; zero mode retained | clipping the divergence or calling q_IR a physical causal cutoff | amplitude-direction observable and matching of the same IR coefficient |
+| t13.diagnostic.finite_q_current_match | `delta_Z_pi=[B_pi(q)-B_pi(0)]/q^2; f=Z*(x+delta_x)+Z*x*delta_Z_pi` | delta_Z dimensionless; x,f E^2 | prior Ward shift plus actual finite-q bubble | matches static current in fixed-Phi one-loop order | separate gradient convergence and previous-current check | finite phase response used to infer physical sound or finite-T normal transport | matched current and material/source/detector admission |
+
+See [derivation and infrared boundary](Result/artifacts/T13_FINITE_MOMENTUM_THERMAL_1PI_2026-10-01.md)
+and `Code/03_Research/Research_T13_Finite_Momentum_Thermal_1PI.py`.
+These are local diagnostic IDs, not new admitted Core equations. Initial dynamic
+quadrature failure was repaired with integration coordinates, not changed
+parameters or thresholds. No SI map, physical Kubo or Core unlock is supplied.
+
 ## Thermal One-Loop Ward and Static Current (2026-10-01)
 
 | formula_id | relation | variables and units | constant_origin | proof_status | verification_role | failure_mode | next_hardening_step |

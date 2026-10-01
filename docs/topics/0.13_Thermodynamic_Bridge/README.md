@@ -6,6 +6,18 @@ description: "Research module for Thermodynamic Bridge within the Unity Equilibr
 
 # 0.13 Thermodynamic Bridge
 
+## Thermal Response Research Update (2026-10-01)
+
+The [finite-momentum one-loop result](Result/artifacts/T13_FINITE_MOMENTUM_THERMAL_1PI_2026-10-01.md)
+extends the zero-momentum Ward/current calculation to a two-by-two thermal
+kernel at nonzero momentum and complex frequency. Its static phase limit
+matches the earlier current, while the radial `1/q` term explicitly shows
+why the bare expansion cannot be used uniformly at long wavelength.
+This closes a fixed-Phi response diagnostic, not a stable infrared completion,
+physical damping or an independent He-II/graphite prediction. Next: match
+an amplitude-direction infrared treatment and real-axis/current response.
+Core composition and physical funding gates remain separate and unchanged.
+
 ## Finite-q Material Compatibility (2026-09-07)
 
 The [spatial compatibility result](../../core/artifacts/t13_thermoelastic_spatial_compatibility_audit.json)

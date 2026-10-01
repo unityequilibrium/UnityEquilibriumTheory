@@ -1,3 +1,27 @@
+## 2026-10-01 - Finite-momentum thermal 1PI and infrared boundary
+
+MAJOR_RESULT_CLOSURE: T13_FINITE_MOMENTUM_THERMAL_1PI_AND_INFRARED_BOUNDARY is CLOSED_FOR_LANE for fixed-Phi formal thermal one-loop response.
+
+WHAT_IS_ACTUALLY_CLOSED: Computed the full two-by-two finite-q thermal bubble, its order-matched inverse and upper-half-plane continuation. Independent external-frequency matrix sums agree. Static phase curvature reproduces the prior one-loop current, and the full radial bubble reproduces the derived 1/q infrared coefficient.
+
+WHAT_REMAINS_OPEN: IR/current-preserving completion, real-axis limit, jointly stationary Phi/material response, independent inputs, normal component and controlled remainder. No physical sound, Kubo or full Topic13 closure follows.
+
+DEPENDENCY_UNLOCKED: Same-lane infrared/response completion design only; no Core or physical funding gate change.
+
+STATUS: PASS_SCOPED_FINITE_MOMENTUM_THERMAL_1PI. Original failed tree lift and Gaussian stationarity no-go are preserved by hash.
+
+WHAT_CHANGED: Added finite-q verifier, eleven tests, artifact/derivation; synchronized formula audit, limitations, README, funding controller/plans/Goal brief. No Core edits or target/calibration inputs.
+
+EQUATION_OR_MAPPING: B_sigma(0,q)~-lambda*r*T/(4Z^2*q); q_IR=lambda*T/(8Z^2)=0.0275 at the fixed witnesses. delta_Z_pi=[B_pi(q)-B_pi(0)]/q^2, with f=Z*(x+delta_x)+Z*x*delta_Z_pi. The finite-q inverse is not used as a Dyson-resummed propagator.
+
+VERIFICATION: 55 focused/related tests pass, including eleven new tests and the funding-plan hash/date contract. Static/complex-frequency refinements, full IR limit, separate phase-gradient convergence, independent matrix sums, unit/coupling/T0 limits, retarded reality and protected hashes checked. Initial linear-cosine dynamic quadrature failed absolute 1e-6; an exact log-ell coordinate repaired it without changing tolerance or parameters. Artifact SHA-256 6cd8271ee3083f8c0f68b4a37b63c52586ab8b1ddf1b432e26dbe41a0d1d1cd8. New-head remote CI is not yet checked.
+
+CONTROLLING_BLOCKER: nonuniform_IR_loop_expansion_and_real_axis_response_not_closed.
+
+NEXT_ACTION: Match an amplitude-direction/hydrodynamic treatment to the same 1/q coefficient and static current, including observable Jacobian/Ward conditions; then close the real-axis and physical material/protocol admission. D5 scientific decision and 11 October portfolio target remain unchanged.
+
+CLAIM_BOUNDARY: Derived thermal response/IR boundary in one fixed-Phi natural-unit lane; not exact equilibrium, physical instability, independent He-II/graphite prediction, external validation or global closure. No clipping/filter/cutoff/fit/holdout read in this wave; prior Xie context-exposure review remains open.
+
 ## 2026-10-01 - Thermal one-loop Ward and static-current matching
 
 MAJOR_RESULT_CLOSURE: T13_THERMAL_ONE_LOOP_WARD_AND_STATIC_CURRENT_MATCH is CLOSED_FOR_LANE at formal thermal one-loop order, fixed Phi.

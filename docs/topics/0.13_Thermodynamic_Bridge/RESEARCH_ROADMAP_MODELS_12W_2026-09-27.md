@@ -18,6 +18,8 @@
 
 ### ผลส่งมอบสองสัปดาห์ที่ต้องมี
 
+อัปเดตผลถัดมา 1 ต.ค.: [finite-q thermal 1PI และ infrared boundary](Result/artifacts/T13_FINITE_MOMENTUM_THERMAL_1PI_2026-10-01.md) คำนวณ bubble/kernel ที่ขึ้นกับ momentum และความถี่เชิงซ้อน พร้อมตรวจ static-current matching แล้ว เทอม radial โตแบบ `1/q` และมีสเกล diagnostic `q_IR=0.0275` ในผู้สมัครเดิม จึงไม่ต้องเริ่มแพ็ก A ด้วยการสร้าง kernel ใหม่ แต่ต้องเชื่อม amplitude-direction/IR treatment, current vertices และ real-axis limit อย่างสอดคล้องก่อน physical admission ผลนี้ไม่ใช่ damping หรือการปิด full Topic13; ตัวเลือก D5 และวันพอร์ตเดิมไม่เปลี่ยน
+
 | วันที่ภายใน | ผลที่รับงาน | ไม่ให้นับเป็นความสำเร็จแทน |
 | --- | --- | --- |
 | 2 ต.ค. / D5 | decision card เลือก predictive, structural หรือ unresolved; มีสมการ/สมมติฐาน/หลักฐานที่ใช้ตัดสิน | เรียก missing operator ว่า no-go หรือเลือกผู้สมัครเพราะความเร็วดูดี |

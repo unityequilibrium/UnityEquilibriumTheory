@@ -1,5 +1,24 @@
 # Limitations
 
+## Finite-Momentum Thermal Loop Boundary (2026-10-01)
+
+The [finite-q thermal calculation](Result/artifacts/T13_FINITE_MOMENTUM_THERMAL_1PI_2026-10-01.md)
+now computes the Cartesian two-by-two bubble and order-matched inverse at
+fixed Phi, including upper-half-plane frequency continuation. Static phase
+curvature agrees with the prior one-loop current. This supersedes the statement
+that the finite-q thermal bubble has not been calculated, not the remaining
+need for physical current vertices or a jointly stationary background.
+
+The full radial bubble has a `-lambda*r*T/(4Z^2*q)` infrared term. At the fixed
+natural-unit witnesses its leading correction exceeds the tree radial mass
+for q below 0.0275. Negative bare inverse values are an uncontrolled-expansion
+diagnostic, not admitted material instability. This is neither a resummation
+nor a proof of global no-go. No physical real-axis damping, Kubo coefficient,
+independent He-II/graphite prediction or truncation-error bound is emitted.
+The zero Matsubara mode is integrated exactly and added back; no filter,
+clipping, momentum cutoff, fit or holdout read is used in this wave. Prior
+Xie context exposure remains review-required; no pristine blinding is claimed.
+
 ## He-II Isothermal-Response Source Route (2026-09-27)
 
 The current He-4 SVP density/superfluid package does not provide an accepted
