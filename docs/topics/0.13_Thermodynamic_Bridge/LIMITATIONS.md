@@ -1,5 +1,20 @@
 # Limitations
 
+## Actual Finite-q Pole Scope (2026-10-02)
+
+The [new pole artifact](Result/artifacts/t13_hartree_finite_q_poles.json)
+computes six actual poles, not just the soft approximation. Its lower-sheet
+strip, fixed grids and vacuum series are local; numerical convergence and
+an angular-series bound are not a Hartree remainder or global stability.
+Pole approach does not prove a uniform q^2 expansion. Source-block unit
+rescaling is not full-loop RG invariance. Windows longdouble is 64-bit in
+this run; extended precision is not assumed. Collective Landau absorption
+is not a particle collision lifetime or physical Kubo coefficient. Joint
+Phi/action normalization, material/thermal input and physical transport
+remain open. R1/full Goal and physical gates are unchanged; older results
+retain their own scopes/failures. No new numeric Xie read; prior exposure
+remains review-required.
+
 ## Finite-q Density-Only Boundary (2026-10-02)
 
 The [finite-q successor](Result/artifacts/T13_HARTREE_FINITE_Q_DISCONTINUITY_2026-10-02.md)

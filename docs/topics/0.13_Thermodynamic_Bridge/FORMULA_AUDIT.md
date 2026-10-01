@@ -1,5 +1,17 @@
 # Formula Audit: 0.13_Thermodynamic_Bridge
 
+## Actual Finite-q Principal Kernel and Pole (2026-10-02)
+
+| Diagnostic ID | Equation | Units | Origin | Closure scope | Verification | Forbidden substitution | Remaining obligation |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| t13.diagnostic.hartree_finite_q_principal_kernel | complex Cauchy subtraction; B_L(q,z)=B_lower(q,z)-2*pi*i*D(q,z/q) | q,z,k E; B/Y/Pi units 1, E, E^2 | unchanged source polynomial and spectral cut; fixed grid | local strip in named fixed-Phi candidate | independent unsplit moments, lower source signature, direct lower/original upper loops and analytic vacuum | plain source conjugation, assigned width or moving trial grid | global analytic domain and regulator/action/remainder |
+| t13.diagnostic.hartree_finite_q_phase_pole | Gamma_pp-Gamma_pr*Gamma_rp/Gamma_rr=0; det_full=det(I-Kcov*J)*det(Gamma_field) | phase inverse E^2; v=z/q dimensionless; det_full E^4 | same covariance and field-source reoptimization | six actual finite-q roots, CLOSED_FOR_LANE | orders, seeds, grids/tails, derivative, Ward and nonzero factors | q*v_soft called finite-q root; absorption called material collision rate | joint Phi/full action/material/thermal and physical transport |
+
+See [derivation and evidence](Result/artifacts/T13_HARTREE_FINITE_Q_POLES_2026-10-02.md).
+These diagnostic IDs do not add or promote a Core equation. The angular
+vacuum-series bound is not Hartree truncation control; block-rescaling is
+not full-loop RG. Old density and soft artifacts retain their own scope.
+
 ## Finite-q Local Discontinuity (2026-10-02)
 
 | formula_id | relation | variables and units | constant_origin | proof_status | verification_role | failure_mode | next_hardening_step |

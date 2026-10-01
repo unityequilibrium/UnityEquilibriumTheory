@@ -1,0 +1,2157 @@
+{
+  "schema_version": "t13-hartree-finite-q-poles-v1",
+  "generated_at": "2026-10-01T18:17:38.362701+00:00",
+  "major_result_id": "T13_FIXED_PHI_HARTREE_FINITE_Q_LANDAU_POLES",
+  "topic": "0.13",
+  "branch_id": "t13.candidate.fixed_phi_hartree_ms_finite_potential_v1",
+  "closure_level": "CLOSED_FOR_LANE",
+  "verification_status": "PASS_SCOPED_FINITE_Q_POLES",
+  "what_is_closed": [
+    "fixed_grid_principal_kernel_with_complex_Cauchy_subtraction",
+    "independent_lower_source_signature_reciprocity_and_exact_vacuum_reference",
+    "actual_finite_q_complex_phase_poles_at_six_declared_points",
+    "finite_q_to_soft_pole_approach_with_denominator_Ward_and_local_analyticity_checks"
+  ],
+  "equation_or_mapping": "B_L(q,z)=B_principal_lower(q,z)-2*pi*i*D(q,z/q); Gamma_phase=Gamma_pp-Gamma_pr*Gamma_rp/Gamma_rr; Gamma_phase(q,z_pole)=0; det_full=det(I-K_cov*J)*det(Gamma_field)",
+  "units": {
+    "q_z_T_mu": "E",
+    "v": "dimensionless",
+    "field_inverse": "E^2",
+    "bubble": "dimensionless",
+    "mixed": "E",
+    "current": "E^2",
+    "full_determinant": "E^4",
+    "scaled_determinant": "E^2"
+  },
+  "derivation_class": "SAME_ACTION_FINITE_Q_LOCAL_CAUCHY_CONTINUATION_AND_NUMERICAL_POLE",
+  "observable": "conditional_phase_resolvent_pole_not_material_sound_or_heat_transport",
+  "data_role": "DERIVED_NO_EMPIRICAL_ROWS",
+  "equation_registry_ids": [
+    "t13.diagnostic.hartree_finite_q_principal_kernel",
+    "t13.diagnostic.hartree_finite_q_phase_pole"
+  ],
+  "examples": [
+    {
+      "T": 0.22,
+      "mu": 1.05,
+      "Phi_fixed": 0.15,
+      "a": 0.23346308945060604,
+      "b": 0.009691508884317981,
+      "s": 0.11673154472530303,
+      "u_canonical": 1.0,
+      "soft_pole_reference": {
+        "real": 0.21890393130179722,
+        "imaginary": -0.006968573129433673
+      },
+      "finite_q_runs": [
+        {
+          "q": 0.04,
+          "pole_runs": [
+            {
+              "radial_order": 64,
+              "angular_order": 24,
+              "velocity_pole": {
+                "real": 0.2196360932423133,
+                "imaginary": -0.006925355255200733
+              },
+              "frequency_pole": {
+                "real": 0.008785443729692533,
+                "imaginary": -0.00027701421020802933
+              },
+              "inverse_residual": 1.500398861155353e-14,
+              "phase_current_Ward_disagreement": 9.592910146558505e-07,
+              "radial_inverse": {
+                "real": 0.22150748512168933,
+                "imaginary": -0.020484971594955933
+              },
+              "covariance_determinant": {
+                "real": 1.1686096852617118,
+                "imaginary": 0.10552084182400148
+              },
+              "covariance_min_singular_value": 1.0117667822713665,
+              "uneliminated_scaled_determinant_residual": 3.935499942790681e-15,
+              "fixed_radial_splits": [
+                0.0,
+                0.03669724770642201,
+                0.08429205291334547,
+                0.09343762279129061,
+                0.11515894752882408,
+                0.12370122288745569,
+                0.1561708855559077,
+                0.16405646613894348,
+                0.18245168814663287,
+                0.18985588460598277,
+                0.19867308149789387,
+                0.22241035812948454,
+                0.23818326194654127,
+                0.25966884908814064,
+                0.28704373294005275,
+                0.3058957695530051,
+                0.30616566392964234,
+                0.32403268611759517,
+                0.3251898401493656,
+                0.33880669629557997,
+                0.34210244785705984,
+                0.3550518542092374,
+                1.0
+              ]
+            },
+            {
+              "radial_order": 96,
+              "angular_order": 32,
+              "velocity_pole": {
+                "real": 0.21963617391330706,
+                "imaginary": -0.006925359490814873
+              },
+              "frequency_pole": {
+                "real": 0.008785446956532283,
+                "imaginary": -0.0002770143796325949
+              },
+              "inverse_residual": 1.684850373817129e-14,
+              "phase_current_Ward_disagreement": 2.5020657085217736e-07,
+              "radial_inverse": {
+                "real": 0.22150749365022107,
+                "imaginary": -0.020484972347856165
+              },
+              "covariance_determinant": {
+                "real": 1.1686096261431511,
+                "imaginary": 0.10552080315382881
+              },
+              "covariance_min_singular_value": 1.01176677744192,
+              "uneliminated_scaled_determinant_residual": 4.378933387263699e-15,
+              "fixed_radial_splits": [
+                0.0,
+                0.03669724770642201,
+                0.08429205291334547,
+                0.09343762279129061,
+                0.11515894752882408,
+                0.12370122288745569,
+                0.1561708855559077,
+                0.16405646613894348,
+                0.18245168814663287,
+                0.18985588460598277,
+                0.19867308149789387,
+                0.22241035812948454,
+                0.23818326194654127,
+                0.25966884908814064,
+                0.28704373294005275,
+                0.3058957695530051,
+                0.30616566392964234,
+                0.32403268611759517,
+                0.3251898401493656,
+                0.33880669629557997,
+                0.34210244785705984,
+                0.3550518542092374,
+                1.0
+              ]
+            },
+            {
+              "radial_order": 128,
+              "angular_order": 40,
+              "velocity_pole": {
+                "real": 0.2196361937093543,
+                "imaginary": -0.006925360530202967
+              },
+              "frequency_pole": {
+                "real": 0.008785447748374172,
+                "imaginary": -0.0002770144212081187
+              },
+              "inverse_residual": 1.877831255074339e-14,
+              "phase_current_Ward_disagreement": 7.571755032481283e-08,
+              "radial_inverse": {
+                "real": 0.221507495743152,
+                "imaginary": -0.02048497253262335
+              },
+              "covariance_determinant": {
+                "real": 1.168609611635648,
+                "imaginary": 0.10552079366446206
+              },
+              "covariance_min_singular_value": 1.0117667762567113,
+              "uneliminated_scaled_determinant_residual": 4.881457393057857e-15,
+              "fixed_radial_splits": [
+                0.0,
+                0.03669724770642201,
+                0.08429205291334547,
+                0.09343762279129061,
+                0.11515894752882408,
+                0.12370122288745569,
+                0.1561708855559077,
+                0.16405646613894348,
+                0.18245168814663287,
+                0.18985588460598277,
+                0.19867308149789387,
+                0.22241035812948454,
+                0.23818326194654127,
+                0.25966884908814064,
+                0.28704373294005275,
+                0.3058957695530051,
+                0.30616566392964234,
+                0.32403268611759517,
+                0.3251898401493656,
+                0.33880669629557997,
+                0.34210244785705984,
+                0.3550518542092374,
+                1.0
+              ]
+            }
+          ],
+          "pole_refinements": [
+            8.078211224733473e-08,
+            1.9823314913785178e-08
+          ],
+          "second_seed_disagreements": [
+            8.07432557806983e-15,
+            8.739294301826065e-13
+          ],
+          "direct_lower_reciprocity_disagreement": {
+            "bubble": 3.909146525865939e-19,
+            "mixed": 1.8041124150158794e-16,
+            "reverse": 1.8041124150158794e-16,
+            "loop_current": 4.8155923693116165e-15
+          },
+          "original_upper_reference": [
+            {
+              "original_radial_order": 64,
+              "loop_disagreements": {
+                "bubble": 2.2530537604306157e-08,
+                "mixed": 1.492174976909523e-07,
+                "reverse": 1.4921749768610945e-07,
+                "loop_current": 5.481734528728964e-07
+              }
+            },
+            {
+              "original_radial_order": 96,
+              "loop_disagreements": {
+                "bubble": 2.1569487043943006e-08,
+                "mixed": 1.5291636826969873e-07,
+                "reverse": 1.5291636824879438e-07,
+                "loop_current": 5.609631802158833e-07
+              }
+            },
+            {
+              "original_radial_order": 128,
+              "loop_disagreements": {
+                "bubble": 2.143932607902715e-08,
+                "mixed": 1.5287395181618912e-07,
+                "reverse": 1.5287395184783816e-07,
+                "loop_current": 5.607459966566755e-07
+              }
+            }
+          ],
+          "alternate_tail_inverse_residual": 1.859867402033042e-14,
+          "local_density_domain_checks_at_actual_pole": [
+            {
+              "signed_mode": 0,
+              "threshold_k": [
+                0.2693129739188337,
+                -0.008259693171269367
+              ],
+              "shell_root_residual": 1.960238202481687e-16,
+              "minimum_outgoing_energy_real": 2.1804920160163204,
+              "minimum_Bose_denominator": 0.9999503918961009,
+              "minimum_shell_momentum_real": 0.05256536679740975,
+              "threshold_above_q_half": true
+            },
+            {
+              "signed_mode": 1,
+              "threshold_k": [
+                0.17356661349575234,
+                -0.009642578994400842
+              ],
+              "shell_root_residual": 5.794398794988276e-18,
+              "minimum_outgoing_energy_real": 0.03840401064771961,
+              "minimum_Bose_denominator": 0.16038776295464993,
+              "minimum_shell_momentum_real": 0.01777507230915583,
+              "threshold_above_q_half": true
+            },
+            {
+              "signed_mode": 2,
+              "threshold_k": [
+                0.13356661349575247,
+                -0.009642578994400786
+              ],
+              "shell_root_residual": 1.7757431109484237e-18,
+              "minimum_outgoing_energy_real": 0.04718682624287922,
+              "minimum_Bose_denominator": 0.19326244926913191,
+              "minimum_shell_momentum_real": 0.030060393497362378,
+              "threshold_above_q_half": true
+            },
+            {
+              "signed_mode": 3,
+              "threshold_k": [
+                0.22931297391882519,
+                -0.008259693171269337
+              ],
+              "shell_root_residual": 1.9602376028124584e-16,
+              "minimum_outgoing_energy_real": 2.1892743801671477,
+              "minimum_Bose_denominator": 0.9999523337317071,
+              "minimum_shell_momentum_real": 0.07250375801280917,
+              "threshold_above_q_half": true
+            }
+          ],
+          "principal_lower_negative_control_residual": 0.12278422259006803,
+          "simple_pole_derivative": {
+            "runs": [
+              {
+                "step": 0.0001,
+                "real_direction_derivative": {
+                  "real": -8.851527899173309,
+                  "imaginary": -0.47214783385218045
+                },
+                "imag_direction_derivative": {
+                  "real": -8.851527965727662,
+                  "imaginary": -0.4721481852196067
+                },
+                "Cauchy_Riemann_disagreement": 3.576150865978367e-07
+              },
+              {
+                "step": 5e-05,
+                "real_direction_derivative": {
+                  "real": -8.851527931821346,
+                  "imaginary": -0.472147966940905
+                },
+                "imag_direction_derivative": {
+                  "real": -8.851527941285369,
+                  "imaginary": -0.47214804400024085
+                },
+                "Cauchy_Riemann_disagreement": 7.76383214895127e-08
+              }
+            ],
+            "derivative_modulus": 8.864111372861913,
+            "derivative_refinement": 1.3703467783929364e-07,
+            "local_inverse_residue_in_v": {
+              "real": -0.11265431624236419,
+              "imaginary": 0.006009076262385517
+            }
+          },
+          "difference_from_soft_pole": 0.000733536340104271
+        },
+        {
+          "q": 0.02,
+          "pole_runs": [
+            {
+              "radial_order": 64,
+              "angular_order": 24,
+              "velocity_pole": {
+                "real": 0.21908690343307724,
+                "imaginary": -0.006957686902223921
+              },
+              "frequency_pole": {
+                "real": 0.004381738068661545,
+                "imaginary": -0.0001391537380444784
+              },
+              "inverse_residual": 1.8185326973131557e-13,
+              "phase_current_Ward_disagreement": 3.977107137060796e-06,
+              "radial_inverse": {
+                "real": 0.22030392793093242,
+                "imaginary": -0.02052795909203228
+              },
+              "covariance_determinant": {
+                "real": 1.168838697083959,
+                "imaginary": 0.10599198164005673
+              },
+              "covariance_min_singular_value": 1.0118000509405216,
+              "uneliminated_scaled_determinant_residual": 4.722271871661225e-14,
+              "fixed_radial_splits": [
+                0.0,
+                0.018691588785046728,
+                0.09189783916812011,
+                0.10093769984579502,
+                0.10733837161811283,
+                0.11607491358589882,
+                0.16288136924709867,
+                0.17064177073817233,
+                0.17601982929037724,
+                0.18353963966597214,
+                0.20474561621701248,
+                0.21661214246289298,
+                0.24364961817832007,
+                0.2543913587591225,
+                0.29184474802036026,
+                0.3012696915939799,
+                0.3106979215080719,
+                0.3196308711209917,
+                0.3294859039292864,
+                0.3379415143493252,
+                0.3429218509897734,
+                0.3510440373277393,
+                1.0
+              ]
+            },
+            {
+              "radial_order": 96,
+              "angular_order": 32,
+              "velocity_pole": {
+                "real": 0.2190872339308667,
+                "imaginary": -0.006957704578865591
+              },
+              "frequency_pole": {
+                "real": 0.004381744678617334,
+                "imaginary": -0.00013915409157731182
+              },
+              "inverse_residual": 3.667267793764898e-14,
+              "phase_current_Ward_disagreement": 1.0463471375175766e-06,
+              "radial_inverse": {
+                "real": 0.2203039690097826,
+                "imaginary": -0.020527963251866038
+              },
+              "covariance_determinant": {
+                "real": 1.1688384719551126,
+                "imaginary": 0.1059918241453809
+              },
+              "covariance_min_singular_value": 1.0118000275027783,
+              "uneliminated_scaled_determinant_residual": 9.553350787549033e-15,
+              "fixed_radial_splits": [
+                0.0,
+                0.018691588785046728,
+                0.09189783916812011,
+                0.10093769984579502,
+                0.10733837161811283,
+                0.11607491358589882,
+                0.16288136924709867,
+                0.17064177073817233,
+                0.17601982929037724,
+                0.18353963966597214,
+                0.20474561621701248,
+                0.21661214246289298,
+                0.24364961817832007,
+                0.2543913587591225,
+                0.29184474802036026,
+                0.3012696915939799,
+                0.3106979215080719,
+                0.3196308711209917,
+                0.3294859039292864,
+                0.3379415143493252,
+                0.3429218509897734,
+                0.3510440373277393,
+                1.0
+              ]
+            },
+            {
+              "radial_order": 128,
+              "angular_order": 40,
+              "velocity_pole": {
+                "real": 0.21908731503236417,
+                "imaginary": -0.006957708916569762
+              },
+              "frequency_pole": {
+                "real": 0.004381746300647284,
+                "imaginary": -0.00013915417833139525
+              },
+              "inverse_residual": 4.6069490862327215e-14,
+              "phase_current_Ward_disagreement": 3.275355245492466e-07,
+              "radial_inverse": {
+                "real": 0.22030397909028462,
+                "imaginary": -0.020527964272644438
+              },
+              "covariance_determinant": {
+                "real": 1.1688384167102277,
+                "imaginary": 0.10599178549737451
+              },
+              "covariance_min_singular_value": 1.011800021751236,
+              "uneliminated_scaled_determinant_residual": 1.1932002415638153e-14,
+              "fixed_radial_splits": [
+                0.0,
+                0.018691588785046728,
+                0.09189783916812011,
+                0.10093769984579502,
+                0.10733837161811283,
+                0.11607491358589882,
+                0.16288136924709867,
+                0.17064177073817233,
+                0.17601982929037724,
+                0.18353963966597214,
+                0.20474561621701248,
+                0.21661214246289298,
+                0.24364961817832007,
+                0.2543913587591225,
+                0.29184474802036026,
+                0.3012696915939799,
+                0.3106979215080719,
+                0.3196308711209917,
+                0.3294859039292864,
+                0.3379415143493252,
+                0.3429218509897734,
+                0.3510440373277393,
+                1.0
+              ]
+            }
+          ],
+          "pole_refinements": [
+            3.309701686024466e-07,
+            8.121741542357315e-08
+          ],
+          "second_seed_disagreements": [
+            7.576385716227019e-15,
+            9.42296597373983e-13
+          ],
+          "direct_lower_reciprocity_disagreement": {
+            "bubble": 3.469446951953614e-18,
+            "mixed": 1.8041124150158794e-16,
+            "reverse": 1.8041124150158794e-16,
+            "loop_current": 7.363901155521546e-15
+          },
+          "original_upper_reference": [
+            {
+              "original_radial_order": 64,
+              "loop_disagreements": {
+                "bubble": 2.3863923246744982e-08,
+                "mixed": 1.5488628241014684e-07,
+                "reverse": 1.5488628242494276e-07,
+                "loop_current": 5.555646250507893e-07
+              }
+            },
+            {
+              "original_radial_order": 96,
+              "loop_disagreements": {
+                "bubble": 2.120014619522682e-08,
+                "mixed": 1.507013516928357e-07,
+                "reverse": 1.5070135171034853e-07,
+                "loop_current": 5.542359013410737e-07
+              }
+            },
+            {
+              "original_radial_order": 128,
+              "loop_disagreements": {
+                "bubble": 2.107418386790317e-08,
+                "mixed": 1.5070045905526516e-07,
+                "reverse": 1.507004590678446e-07,
+                "loop_current": 5.541988443302011e-07
+              }
+            }
+          ],
+          "alternate_tail_inverse_residual": 4.6086327605370137e-14,
+          "local_density_domain_checks_at_actual_pole": [
+            {
+              "signed_mode": 0,
+              "threshold_k": [
+                0.2586293731781139,
+                -0.00829425262021272
+              ],
+              "shell_root_residual": 1.8735057656796912e-16,
+              "minimum_outgoing_energy_real": 2.182417078745229,
+              "minimum_Bose_denominator": 0.9999508242133854,
+              "minimum_shell_momentum_real": 0.056922566237197714,
+              "threshold_above_q_half": true
+            },
+            {
+              "signed_mode": 1,
+              "threshold_k": [
+                0.16258161145051006,
+                -0.009696756819889971
+              ],
+              "shell_root_residual": 6.96684264422712e-18,
+              "minimum_outgoing_energy_real": 0.04028165710254391,
+              "minimum_Bose_denominator": 0.16753047809855878,
+              "minimum_shell_momentum_real": 0.020263490798504577,
+              "threshold_above_q_half": true
+            },
+            {
+              "signed_mode": 2,
+              "threshold_k": [
+                0.1425816114505105,
+                -0.009696756819889987
+              ],
+              "shell_root_residual": 2.439454888092385e-19,
+              "minimum_outgoing_energy_real": 0.044662088634412955,
+              "minimum_Bose_denominator": 0.18395004224809605,
+              "minimum_shell_momentum_real": 0.02636676270122773,
+              "threshold_above_q_half": true
+            },
+            {
+              "signed_mode": 3,
+              "threshold_k": [
+                0.23862937317809127,
+                -0.008294252620212626
+              ],
+              "shell_root_residual": 1.8735057656796912e-16,
+              "minimum_outgoing_energy_real": 2.1867972824987953,
+              "minimum_Bose_denominator": 0.9999517938735861,
+              "minimum_shell_momentum_real": 0.06686441611974381,
+              "threshold_above_q_half": true
+            }
+          ],
+          "principal_lower_negative_control_residual": 0.12360649356262403,
+          "simple_pole_derivative": {
+            "runs": [
+              {
+                "step": 0.0001,
+                "real_direction_derivative": {
+                  "real": -8.869179125405912,
+                  "imaginary": -0.47621097329491274
+                },
+                "imag_direction_derivative": {
+                  "real": -8.869179170001942,
+                  "imaginary": -0.4762113351636026
+                },
+                "Cauchy_Riemann_disagreement": 3.6460630079750064e-07
+              },
+              {
+                "step": 5e-05,
+                "real_direction_derivative": {
+                  "real": -8.869179067852397,
+                  "imaginary": -0.4762111078394782
+                },
+                "imag_direction_derivative": {
+                  "real": -8.869179144874483,
+                  "imaginary": -0.4762112032195864
+                },
+                "Cauchy_Riemann_disagreement": 1.225959495540634e-07
+              }
+            ],
+            "derivative_modulus": 8.881954422133724,
+            "derivative_refinement": 1.4633744312590027e-07,
+            "local_inverse_residue_in_v": {
+              "real": -0.11242589221793013,
+              "imaginary": 0.006036461579290923
+            }
+          },
+          "difference_from_soft_pole": 0.00018370526328280272
+        },
+        {
+          "q": 0.01,
+          "pole_runs": [
+            {
+              "radial_order": 64,
+              "angular_order": 24,
+              "velocity_pole": {
+                "real": 0.21894799411949678,
+                "imaginary": -0.0069657563330224525
+              },
+              "frequency_pole": {
+                "real": 0.0021894799411949677,
+                "imaginary": -6.965756333022452e-05
+              },
+              "inverse_residual": 4.3043223334198434e-13,
+              "phase_current_Ward_disagreement": 1.6130929836495184e-05,
+              "radial_inverse": {
+                "real": 0.22000269562820862,
+                "imaginary": -0.020538764695939696
+              },
+              "covariance_determinant": {
+                "real": 1.1688974810418127,
+                "imaginary": 0.10611145159735934
+              },
+              "covariance_min_singular_value": 1.011808449749374,
+              "uneliminated_scaled_determinant_residual": 1.1162865466202637e-13,
+              "fixed_radial_splits": [
+                0.0,
+                0.009433962264150943,
+                0.09573051546733548,
+                0.1034516706637826,
+                0.10470585741080474,
+                0.1122751418463822,
+                0.16620092703297468,
+                0.17276991444689888,
+                0.17389997922410153,
+                0.18034868369486848,
+                0.20774669089450865,
+                0.21367968963634865,
+                0.2463587242892445,
+                0.25172946297591764,
+                0.29422291430908487,
+                0.29893525178409847,
+                0.312947497909831,
+                0.3174139025398083,
+                0.331616738431415,
+                0.33584445698407545,
+                0.34496583842296613,
+                0.34902688252032166,
+                1.0
+              ]
+            },
+            {
+              "radial_order": 96,
+              "angular_order": 32,
+              "velocity_pole": {
+                "real": 0.21894933025978153,
+                "imaginary": -0.006965828123350067
+              },
+              "frequency_pole": {
+                "real": 0.002189493302597815,
+                "imaginary": -6.965828123350067e-05
+              },
+              "inverse_residual": 2.8406529955225243e-13,
+              "phase_current_Ward_disagreement": 4.243387564460559e-06,
+              "radial_inverse": {
+                "real": 0.22000286786528353,
+                "imaginary": -0.020538782597220976
+              },
+              "covariance_determinant": {
+                "real": 1.168896587995673,
+                "imaginary": 0.10611081578480579
+              },
+              "covariance_min_singular_value": 1.0118083513640748,
+              "uneliminated_scaled_determinant_residual": 7.370489663956e-14,
+              "fixed_radial_splits": [
+                0.0,
+                0.009433962264150943,
+                0.09573051546733548,
+                0.1034516706637826,
+                0.10470585741080474,
+                0.1122751418463822,
+                0.16620092703297468,
+                0.17276991444689888,
+                0.17389997922410153,
+                0.18034868369486848,
+                0.20774669089450865,
+                0.21367968963634865,
+                0.2463587242892445,
+                0.25172946297591764,
+                0.29422291430908487,
+                0.29893525178409847,
+                0.312947497909831,
+                0.3174139025398083,
+                0.331616738431415,
+                0.33584445698407545,
+                0.34496583842296613,
+                0.34902688252032166,
+                1.0
+              ]
+            },
+            {
+              "radial_order": 128,
+              "angular_order": 40,
+              "velocity_pole": {
+                "real": 0.2189496581410602,
+                "imaginary": -0.006965845740257696
+              },
+              "frequency_pole": {
+                "real": 0.0021894965814106024,
+                "imaginary": -6.965845740257696e-05
+              },
+              "inverse_residual": 7.171544017923142e-14,
+              "phase_current_Ward_disagreement": 1.3300895803262058e-06,
+              "radial_inverse": {
+                "real": 0.22000291013134543,
+                "imaginary": -0.020538786989732757
+              },
+              "covariance_determinant": {
+                "real": 1.1688963688498106,
+                "imaginary": 0.10611065975864188
+              },
+              "covariance_min_singular_value": 1.0118083272204195,
+              "uneliminated_scaled_determinant_residual": 1.8633994044560685e-14,
+              "fixed_radial_splits": [
+                0.0,
+                0.009433962264150943,
+                0.09573051546733548,
+                0.1034516706637826,
+                0.10470585741080474,
+                0.1122751418463822,
+                0.16620092703297468,
+                0.17276991444689888,
+                0.17389997922410153,
+                0.18034868369486848,
+                0.20774669089450865,
+                0.21367968963634865,
+                0.2463587242892445,
+                0.25172946297591764,
+                0.29422291430908487,
+                0.29893525178409847,
+                0.312947497909831,
+                0.3174139025398083,
+                0.331616738431415,
+                0.33584445698407545,
+                0.34496583842296613,
+                0.34902688252032166,
+                1.0
+              ]
+            }
+          ],
+          "pole_refinements": [
+            1.3380675288123375e-06,
+            3.2835421170657967e-07
+          ],
+          "second_seed_disagreements": [
+            1.3239450946700287e-13,
+            8.138672257422781e-13
+          ],
+          "direct_lower_reciprocity_disagreement": {
+            "bubble": 3.297472175031376e-19,
+            "mixed": 1.7781761815201088e-16,
+            "reverse": 1.7781761815201088e-16,
+            "loop_current": 5.486930354514641e-15
+          },
+          "original_upper_reference": [
+            {
+              "original_radial_order": 64,
+              "loop_disagreements": {
+                "bubble": 2.243752682352067e-08,
+                "mixed": 1.5191994528386833e-07,
+                "reverse": 1.5191994530531468e-07,
+                "loop_current": 5.536529038870462e-07
+              }
+            },
+            {
+              "original_radial_order": 96,
+              "loop_disagreements": {
+                "bubble": 2.111460377902119e-08,
+                "mixed": 1.5016440992968308e-07,
+                "reverse": 1.5016440992900194e-07,
+                "loop_current": 5.526715444377366e-07
+              }
+            },
+            {
+              "original_radial_order": 128,
+              "loop_disagreements": {
+                "bubble": 2.0984461084744097e-08,
+                "mixed": 1.5016436494836897e-07,
+                "reverse": 1.501643649572113e-07,
+                "loop_current": 5.526496858043332e-07
+              }
+            }
+          ],
+          "alternate_tail_inverse_residual": 7.185603705378606e-14,
+          "local_density_domain_checks_at_actual_pole": [
+            {
+              "signed_mode": 0,
+              "threshold_k": [
+                0.25345801137116125,
+                -0.008302944820985987
+              ],
+              "shell_root_residual": 5.247729093782271e-17,
+              "minimum_outgoing_energy_real": 2.1834437558929785,
+              "minimum_Bose_denominator": 0.9999510532316827,
+              "minimum_shell_momentum_real": 0.05924938993229567,
+              "threshold_above_q_half": true
+            },
+            {
+              "signed_mode": 1,
+              "threshold_k": [
+                0.1573342837042704,
+                -0.009710421393928234
+              ],
+              "shell_root_residual": 3.06853277986057e-18,
+              "minimum_outgoing_energy_real": 0.04129638445730252,
+              "minimum_Bose_denominator": 0.1713641928044565,
+              "minimum_shell_momentum_real": 0.021641101519888517,
+              "threshold_above_q_half": true
+            },
+            {
+              "signed_mode": 2,
+              "threshold_k": [
+                0.14733428370426951,
+                -0.009710421393928205
+              ],
+              "shell_root_residual": 3.0646995830035926e-18,
+              "minimum_outgoing_energy_real": 0.043485223820244126,
+              "minimum_Bose_denominator": 0.17957173681967772,
+              "minimum_shell_momentum_real": 0.024687792357553334,
+              "threshold_above_q_half": true
+            },
+            {
+              "signed_mode": 3,
+              "threshold_k": [
+                0.24345801137115078,
+                -0.008302944820985904
+              ],
+              "shell_root_residual": 5.247577891213744e-17,
+              "minimum_outgoing_energy_real": 2.185632481107152,
+              "minimum_Bose_denominator": 0.9999515379034343,
+              "minimum_shell_momentum_real": 0.06421688742507836,
+              "threshold_above_q_half": true
+            }
+          ],
+          "principal_lower_negative_control_residual": 0.12381358788107717,
+          "simple_pole_derivative": {
+            "runs": [
+              {
+                "step": 0.0001,
+                "real_direction_derivative": {
+                  "real": -8.873611401317223,
+                  "imaginary": -0.47723511535561397
+                },
+                "imag_direction_derivative": {
+                  "real": -8.87361148224071,
+                  "imaginary": -0.4772354948967246
+                },
+                "Cauchy_Riemann_disagreement": 3.880722424423856e-07
+              },
+              {
+                "step": 5e-05,
+                "real_direction_derivative": {
+                  "real": -8.873611630598877,
+                  "imaginary": -0.4772352499750978
+                },
+                "imag_direction_derivative": {
+                  "real": -8.873611457033673,
+                  "imaginary": -0.4772353836413187
+                },
+                "Cauchy_Riemann_disagreement": 2.190697111155463e-07
+              }
+            ],
+            "derivative_modulus": 8.886435553950664,
+            "derivative_refinement": 2.658805783273231e-07,
+            "local_inverse_residue_in_v": {
+              "real": -0.11236866618427042,
+              "imaginary": 0.00604334410026455
+            }
+          },
+          "difference_from_soft_pole": 4.580810496735711e-05
+        }
+      ],
+      "alternate_fixed_grid_q": 0.04,
+      "alternate_fixed_grid_pole_disagreement": 8.52614707595245e-10,
+      "independent_angular_moment_checks": [
+        {
+          "k": 0.09,
+          "q": 0.04,
+          "half_plane": "upper",
+          "independent_moment_errors": {
+            "bubble": 2.873967505387993e-13,
+            "mixed": 5.826450433232822e-13,
+            "reverse": 8.038873388460929e-13,
+            "loop_current": 6.87429441225494e-13
+          }
+        },
+        {
+          "k": 0.09,
+          "q": 0.04,
+          "half_plane": "lower",
+          "independent_moment_errors": {
+            "bubble": 2.873967505387993e-13,
+            "mixed": 5.826450433232822e-13,
+            "reverse": 8.038873388460929e-13,
+            "loop_current": 6.87429441225494e-13
+          }
+        },
+        {
+          "k": 0.09,
+          "source_signature_reciprocity_errors": {
+            "bubble": 1.5888218580782548e-14,
+            "mixed": 2.2737367544323206e-13,
+            "reverse": 2.2737367544323206e-13,
+            "loop_current": 3.552713678800501e-15
+          }
+        },
+        {
+          "k": 0.3,
+          "q": 0.04,
+          "half_plane": "upper",
+          "independent_moment_errors": {
+            "bubble": 2.2332875034934145e-14,
+            "mixed": 8.188600426433446e-14,
+            "reverse": 8.506134388009115e-14,
+            "loop_current": 1.0247593068766007e-13
+          }
+        },
+        {
+          "k": 0.3,
+          "q": 0.04,
+          "half_plane": "lower",
+          "independent_moment_errors": {
+            "bubble": 2.2332875034934145e-14,
+            "mixed": 8.188600426433446e-14,
+            "reverse": 8.506134388009115e-14,
+            "loop_current": 1.0247593068766007e-13
+          }
+        },
+        {
+          "k": 0.3,
+          "source_signature_reciprocity_errors": {
+            "bubble": 5.551115123125783e-17,
+            "mixed": 3.552713678800501e-15,
+            "reverse": 3.552713678800501e-15,
+            "loop_current": 1.9860273225978185e-15
+          }
+        },
+        {
+          "k": 1.2,
+          "q": 0.04,
+          "half_plane": "upper",
+          "independent_moment_errors": {
+            "bubble": 2.7408735995205344e-16,
+            "mixed": 1.6107801901806727e-15,
+            "reverse": 1.4998287152352736e-15,
+            "loop_current": 6.217496750601531e-15
+          }
+        },
+        {
+          "k": 1.2,
+          "q": 0.04,
+          "half_plane": "lower",
+          "independent_moment_errors": {
+            "bubble": 2.7408735995205344e-16,
+            "mixed": 1.6107801901806727e-15,
+            "reverse": 1.4998287152352736e-15,
+            "loop_current": 6.217496750601531e-15
+          }
+        },
+        {
+          "k": 1.2,
+          "source_signature_reciprocity_errors": {
+            "bubble": 3.0357660829594124e-18,
+            "mixed": 5.551115123125783e-17,
+            "reverse": 5.551115123125783e-17,
+            "loop_current": 1.3877787807814457e-17
+          }
+        }
+      ]
+    },
+    {
+      "T": 0.22,
+      "mu": 1.2,
+      "Phi_fixed": 0.15,
+      "a": 0.8998337744103163,
+      "b": 0.012470671054547374,
+      "s": 0.449916887205158,
+      "u_canonical": 1.0,
+      "soft_pole_reference": {
+        "real": 0.3742304914863954,
+        "imaginary": -0.003436526693676681
+      },
+      "finite_q_runs": [
+        {
+          "q": 0.04,
+          "pole_runs": [
+            {
+              "radial_order": 64,
+              "angular_order": 24,
+              "velocity_pole": {
+                "real": 0.3744672486975366,
+                "imaginary": -0.0034283216833746553
+              },
+              "frequency_pole": {
+                "real": 0.014978689947901466,
+                "imaginary": -0.0001371328673349862
+              },
+              "inverse_residual": 3.473418700026971e-14,
+              "phase_current_Ward_disagreement": 3.708204135509874e-07,
+              "radial_inverse": {
+                "real": 0.933361701136353,
+                "imaginary": -0.03747919868434836
+              },
+              "covariance_determinant": {
+                "real": 1.0615526817333096,
+                "imaginary": 0.055722582641701865
+              },
+              "covariance_min_singular_value": 0.9845320353952605,
+              "uneliminated_scaled_determinant_residual": 3.4490381336328917e-14,
+              "fixed_radial_splits": [
+                0.0,
+                0.03225806451612903,
+                0.03755141156369292,
+                0.041222670087838816,
+                0.06746853141727847,
+                0.07091550835979905,
+                0.0936753905493583,
+                0.12025326119818393,
+                0.17138845272099054,
+                0.17970774077656185,
+                0.19365987727837788,
+                0.20154009021965866,
+                0.2128315894102592,
+                0.23295796473541844,
+                0.25733912562597977,
+                0.27527983598218264,
+                0.27939766522532916,
+                0.29630058005831617,
+                0.3276355565319607,
+                0.34237435978507724,
+                0.3610853385966742,
+                0.37440865468239015,
+                1.0
+              ]
+            },
+            {
+              "radial_order": 96,
+              "angular_order": 32,
+              "velocity_pole": {
+                "real": 0.37446729171919596,
+                "imaginary": -0.0034283222473012118
+              },
+              "frequency_pole": {
+                "real": 0.014978691668767839,
+                "imaginary": -0.00013713288989204847
+              },
+              "inverse_residual": 8.0366817492911e-14,
+              "phase_current_Ward_disagreement": 1.2690856997672914e-07,
+              "radial_inverse": {
+                "real": 0.9333616725029248,
+                "imaginary": -0.03747918966293597
+              },
+              "covariance_determinant": {
+                "real": 1.06155269049976,
+                "imaginary": 0.055722560266621715
+              },
+              "covariance_min_singular_value": 0.9845320462961049,
+              "uneliminated_scaled_determinant_residual": 7.96677709741728e-14,
+              "fixed_radial_splits": [
+                0.0,
+                0.03225806451612903,
+                0.03755141156369292,
+                0.041222670087838816,
+                0.06746853141727847,
+                0.07091550835979905,
+                0.0936753905493583,
+                0.12025326119818393,
+                0.17138845272099054,
+                0.17970774077656185,
+                0.19365987727837788,
+                0.20154009021965866,
+                0.2128315894102592,
+                0.23295796473541844,
+                0.25733912562597977,
+                0.27527983598218264,
+                0.27939766522532916,
+                0.29630058005831617,
+                0.3276355565319607,
+                0.34237435978507724,
+                0.3610853385966742,
+                0.37440865468239015,
+                1.0
+              ]
+            },
+            {
+              "radial_order": 128,
+              "angular_order": 40,
+              "velocity_pole": {
+                "real": 0.3744673022848205,
+                "imaginary": -0.00342832238578826
+              },
+              "frequency_pole": {
+                "real": 0.01497869209139282,
+                "imaginary": -0.0001371328954315304
+              },
+              "inverse_residual": 8.649816526805973e-14,
+              "phase_current_Ward_disagreement": 6.777518194931912e-08,
+              "radial_inverse": {
+                "real": 0.9333616654794947,
+                "imaginary": -0.03747918744776587
+              },
+              "covariance_determinant": {
+                "real": 1.0615526926491383,
+                "imaginary": 0.055722554771487846
+              },
+              "covariance_min_singular_value": 0.9845320489703401,
+              "uneliminated_scaled_determinant_residual": 8.562155547538028e-14,
+              "fixed_radial_splits": [
+                0.0,
+                0.03225806451612903,
+                0.03755141156369292,
+                0.041222670087838816,
+                0.06746853141727847,
+                0.07091550835979905,
+                0.0936753905493583,
+                0.12025326119818393,
+                0.17138845272099054,
+                0.17970774077656185,
+                0.19365987727837788,
+                0.20154009021965866,
+                0.2128315894102592,
+                0.23295796473541844,
+                0.25733912562597977,
+                0.27527983598218264,
+                0.27939766522532916,
+                0.29630058005831617,
+                0.3276355565319607,
+                0.34237435978507724,
+                0.3610853385966742,
+                0.37440865468239015,
+                1.0
+              ]
+            }
+          ],
+          "pole_refinements": [
+            4.302535515313994e-08,
+            1.0566532100158813e-08
+          ],
+          "second_seed_disagreements": [
+            1.824840049813929e-14,
+            2.019546687545299e-14
+          ],
+          "direct_lower_reciprocity_disagreement": {
+            "bubble": 1.734723475976807e-18,
+            "mixed": 6.210310043996969e-16,
+            "reverse": 6.210310043996969e-16,
+            "loop_current": 1.0642528525117712e-14
+          },
+          "original_upper_reference": [
+            {
+              "original_radial_order": 64,
+              "loop_disagreements": {
+                "bubble": 1.1661999036430771e-08,
+                "mixed": 4.06068883481543e-08,
+                "reverse": 4.0606888496430656e-08,
+                "loop_current": 1.6915624974923795e-07
+              }
+            },
+            {
+              "original_radial_order": 96,
+              "loop_disagreements": {
+                "bubble": 6.5272102560647116e-09,
+                "mixed": 4.069990562617817e-08,
+                "reverse": 4.069990570854134e-08,
+                "loop_current": 1.7032662483300177e-07
+              }
+            },
+            {
+              "original_radial_order": 128,
+              "loop_disagreements": {
+                "bubble": 5.294013585230995e-09,
+                "mixed": 4.069917789893916e-08,
+                "reverse": 4.069917792129669e-08,
+                "loop_current": 1.705572054071766e-07
+              }
+            }
+          ],
+          "alternate_tail_inverse_residual": 8.649326286921624e-14,
+          "local_density_domain_checks_at_actual_pole": [
+            {
+              "signed_mode": 0,
+              "threshold_k": [
+                0.5795996866097521,
+                -0.005956717336527772
+              ],
+              "shell_root_residual": 2.2554597624380937e-17,
+              "minimum_outgoing_energy_real": 2.684139752229099,
+              "minimum_Bose_denominator": 0.9999949729816678,
+              "minimum_shell_momentum_real": 0.2912529426169401,
+              "threshold_above_q_half": true
+            },
+            {
+              "signed_mode": 1,
+              "threshold_k": [
+                0.2964334701342118,
+                -0.008595292412836464
+              ],
+              "shell_root_residual": 5.377741139744952e-18,
+              "minimum_outgoing_energy_real": 0.10547760471660184,
+              "minimum_Bose_denominator": 0.38103874960802697,
+              "minimum_shell_momentum_real": 0.06574049315159186,
+              "threshold_above_q_half": true
+            },
+            {
+              "signed_mode": 2,
+              "threshold_k": [
+                0.25643347013421347,
+                -0.008595292412836441
+              ],
+              "shell_root_residual": 3.296335688096658e-17,
+              "minimum_outgoing_energy_real": 0.12045462243101071,
+              "minimum_Bose_denominator": 0.4217711795136254,
+              "minimum_shell_momentum_real": 0.08785863175392222,
+              "threshold_above_q_half": true
+            },
+            {
+              "signed_mode": 3,
+              "threshold_k": [
+                0.5395996866097689,
+                -0.005956717336527856
+              ],
+              "shell_root_residual": 2.2551470343984925e-17,
+              "minimum_outgoing_energy_real": 2.6991160253814455,
+              "minimum_Bose_denominator": 0.9999953038325408,
+              "minimum_shell_momentum_real": 0.33601486364629896,
+              "threshold_above_q_half": true
+            }
+          ],
+          "principal_lower_negative_control_residual": 0.0363144684357092,
+          "simple_pole_derivative": {
+            "runs": [
+              {
+                "step": 0.0001,
+                "real_direction_derivative": {
+                  "real": -5.293464189758698,
+                  "imaginary": -0.06511441998524509
+                },
+                "imag_direction_derivative": {
+                  "real": -5.29346413294495,
+                  "imaginary": -0.06511444971402233
+                },
+                "Cauchy_Riemann_disagreement": 6.412177555032958e-08
+              },
+              {
+                "step": 5e-05,
+                "real_direction_derivative": {
+                  "real": -5.293464147123803,
+                  "imaginary": -0.06511444332680627
+                },
+                "imag_direction_derivative": {
+                  "real": -5.293464146792608,
+                  "imaginary": -0.06511446597705492
+                },
+                "Cauchy_Riemann_disagreement": 2.2652669916062918e-08
+              }
+            ],
+            "derivative_modulus": 5.293864615535128,
+            "derivative_refinement": 4.8606200497255836e-08,
+            "local_inverse_residue_in_v": {
+              "real": -0.18888362755194962,
+              "imaginary": 0.0023234411190402944
+            }
+          },
+          "difference_from_soft_pole": 0.00023695287489003354
+        },
+        {
+          "q": 0.02,
+          "pole_runs": [
+            {
+              "radial_order": 64,
+              "angular_order": 24,
+              "velocity_pole": {
+                "real": 0.37428943790392427,
+                "imaginary": -0.003434468508607682
+              },
+              "frequency_pole": {
+                "real": 0.007485788758078486,
+                "imaginary": -6.868937017215364e-05
+              },
+              "inverse_residual": 1.681922542048077e-13,
+              "phase_current_Ward_disagreement": 1.5650139450931032e-06,
+              "radial_inverse": {
+                "real": 0.9323104416757954,
+                "imaginary": -0.03752656968438742
+              },
+              "covariance_determinant": {
+                "real": 1.0615369021076384,
+                "imaginary": 0.055812273043647206
+              },
+              "covariance_min_singular_value": 0.9845352173720298,
+              "uneliminated_scaled_determinant_residual": 1.6695615579424181e-13,
+              "fixed_radial_splits": [
+                0.0,
+                0.01639344262295082,
+                0.04479148368800562,
+                0.04839660566671019,
+                0.05976023421559275,
+                0.06325345880390179,
+                0.10012501906074668,
+                0.11342184407997354,
+                0.1770594887122883,
+                0.1852652926035356,
+                0.1881939567177037,
+                0.19618028954680303,
+                0.21794390014066542,
+                0.22800627352143055,
+                0.26189303058016783,
+                0.270862719058936,
+                0.2837016538981306,
+                0.2921521578748938,
+                0.3313670903477934,
+                0.3387361366972379,
+                0.3644544693108407,
+                0.371115877533452,
+                1.0
+              ]
+            },
+            {
+              "radial_order": 96,
+              "angular_order": 32,
+              "velocity_pole": {
+                "real": 0.3742896297024006,
+                "imaginary": -0.0034344709070812294
+              },
+              "frequency_pole": {
+                "real": 0.007485792594048012,
+                "imaginary": -6.868941814162459e-05
+              },
+              "inverse_residual": 6.342806632768828e-14,
+              "phase_current_Ward_disagreement": 5.333997346593595e-07,
+              "radial_inverse": {
+                "real": 0.9323104375006153,
+                "imaginary": -0.0375265347689208
+              },
+              "covariance_determinant": {
+                "real": 1.061536895493165,
+                "imaginary": 0.05581217202108735
+              },
+              "covariance_min_singular_value": 0.9845352244559519,
+              "uneliminated_scaled_determinant_residual": 6.277679123303966e-14,
+              "fixed_radial_splits": [
+                0.0,
+                0.01639344262295082,
+                0.04479148368800562,
+                0.04839660566671019,
+                0.05976023421559275,
+                0.06325345880390179,
+                0.10012501906074668,
+                0.11342184407997354,
+                0.1770594887122883,
+                0.1852652926035356,
+                0.1881939567177037,
+                0.19618028954680303,
+                0.21794390014066542,
+                0.22800627352143055,
+                0.26189303058016783,
+                0.270862719058936,
+                0.2837016538981306,
+                0.2921521578748938,
+                0.3313670903477934,
+                0.3387361366972379,
+                0.3644544693108407,
+                0.371115877533452,
+                1.0
+              ]
+            },
+            {
+              "radial_order": 128,
+              "angular_order": 40,
+              "velocity_pole": {
+                "real": 0.3742896767725501,
+                "imaginary": -0.0034344714956961583
+              },
+              "frequency_pole": {
+                "real": 0.007485793535451002,
+                "imaginary": -6.868942991392317e-05
+              },
+              "inverse_residual": 2.520229164899942e-12,
+              "phase_current_Ward_disagreement": 2.7747310414562015e-07,
+              "radial_inverse": {
+                "real": 0.9323104364781067,
+                "imaginary": -0.03752652620025583
+              },
+              "covariance_determinant": {
+                "real": 1.061536893868887,
+                "imaginary": 0.05581214722867471
+              },
+              "covariance_min_singular_value": 0.9845352261937416,
+              "uneliminated_scaled_determinant_residual": 2.499558336981506e-12,
+              "fixed_radial_splits": [
+                0.0,
+                0.01639344262295082,
+                0.04479148368800562,
+                0.04839660566671019,
+                0.05976023421559275,
+                0.06325345880390179,
+                0.10012501906074668,
+                0.11342184407997354,
+                0.1770594887122883,
+                0.1852652926035356,
+                0.1881939567177037,
+                0.19618028954680303,
+                0.21794390014066542,
+                0.22800627352143055,
+                0.26189303058016783,
+                0.270862719058936,
+                0.2837016538981306,
+                0.2921521578748938,
+                0.3313670903477934,
+                0.3387361366972379,
+                0.3644544693108407,
+                0.371115877533452,
+                1.0
+              ]
+            }
+          ],
+          "pole_refinements": [
+            1.9181347240303616e-07,
+            4.707382968825483e-08
+          ],
+          "second_seed_disagreements": [
+            5.940399432021042e-13,
+            5.863172482178571e-13
+          ],
+          "direct_lower_reciprocity_disagreement": {
+            "bubble": 2.1852793414608445e-19,
+            "mixed": 3.5041414214731503e-16,
+            "reverse": 3.5041414214731503e-16,
+            "loop_current": 1.5269903397285844e-14
+          },
+          "original_upper_reference": [
+            {
+              "original_radial_order": 64,
+              "loop_disagreements": {
+                "bubble": 1.1725445289976208e-08,
+                "mixed": 4.024966817530213e-08,
+                "reverse": 4.0249668304049676e-08,
+                "loop_current": 1.671668193253358e-07
+              }
+            },
+            {
+              "original_radial_order": 96,
+              "loop_disagreements": {
+                "bubble": 6.4872153384723246e-09,
+                "mixed": 4.019023623030332e-08,
+                "reverse": 4.019023648638091e-08,
+                "loop_current": 1.6793109699972506e-07
+              }
+            },
+            {
+              "original_radial_order": 128,
+              "loop_disagreements": {
+                "bubble": 5.228280769783277e-09,
+                "mixed": 4.018823068895726e-08,
+                "reverse": 4.018823079445065e-08,
+                "loop_current": 1.6776916398874038e-07
+              }
+            }
+          ],
+          "alternate_tail_inverse_residual": 2.520228679882888e-12,
+          "local_density_domain_checks_at_actual_pole": [
+            {
+              "signed_mode": 0,
+              "threshold_k": [
+                0.5692535553511413,
+                -0.005965731607779418
+              ],
+              "shell_root_residual": 8.847098135525359e-17,
+              "minimum_outgoing_energy_real": 2.6876696369162687,
+              "minimum_Bose_denominator": 0.9999950530043978,
+              "minimum_shell_momentum_real": 0.3017629228169305,
+              "threshold_above_q_half": true
+            },
+            {
+              "signed_mode": 1,
+              "threshold_k": [
+                0.28586409023570536,
+                -0.008617601959235164
+              ],
+              "shell_root_residual": 5.205599599788971e-18,
+              "minimum_outgoing_energy_real": 0.10895069318628398,
+              "minimum_Bose_denominator": 0.39073363398927713,
+              "minimum_shell_momentum_real": 0.07066653700827052,
+              "threshold_above_q_half": true
+            },
+            {
+              "signed_mode": 2,
+              "threshold_k": [
+                0.2658640902357027,
+                -0.008617601959234965
+              ],
+              "shell_root_residual": 8.822278808494607e-18,
+              "minimum_outgoing_energy_real": 0.11643565020464457,
+              "minimum_Bose_denominator": 0.41111245699921634,
+              "minimum_shell_momentum_real": 0.08170283563983566,
+              "threshold_above_q_half": true
+            },
+            {
+              "signed_mode": 3,
+              "threshold_k": [
+                0.5492535553511324,
+                -0.005965731607779393
+              ],
+              "shell_root_residual": 3.5561874667936597e-16,
+              "minimum_outgoing_energy_real": 2.695154220643617,
+              "minimum_Bose_denominator": 0.999995218489798,
+              "minimum_shell_momentum_real": 0.32413003710033017,
+              "threshold_above_q_half": true
+            }
+          ],
+          "principal_lower_negative_control_residual": 0.03639017868375615,
+          "simple_pole_derivative": {
+            "runs": [
+              {
+                "step": 0.0001,
+                "real_direction_derivative": {
+                  "real": -5.294992081165978,
+                  "imaginary": -0.06523118029179639
+                },
+                "imag_direction_derivative": {
+                  "real": -5.294991980373301,
+                  "imaginary": -0.0652312311520578
+                },
+                "Cauchy_Riemann_disagreement": 1.1289787337058411e-07
+              },
+              {
+                "step": 5e-05,
+                "real_direction_derivative": {
+                  "real": -5.294992004701942,
+                  "imaginary": -0.0652312032613513
+                },
+                "imag_direction_derivative": {
+                  "real": -5.294991994149476,
+                  "imaginary": -0.06523118476717835
+                },
+                "Cauchy_Riemann_disagreement": 2.129293222941344e-08
+              }
+            ],
+            "derivative_modulus": 5.295393794585669,
+            "derivative_refinement": 7.983952187333075e-08,
+            "local_inverse_residue_in_v": {
+              "real": -0.1888290396207058,
+              "imaginary": 0.0023262632793790935
+            }
+          },
+          "difference_from_soft_pole": 5.922095858688571e-05
+        },
+        {
+          "q": 0.01,
+          "pole_runs": [
+            {
+              "radial_order": 64,
+              "angular_order": 24,
+              "velocity_pole": {
+                "real": 0.37424410335082875,
+                "imaginary": -0.003435998002011505
+              },
+              "frequency_pole": {
+                "real": 0.0037424410335082877,
+                "imaginary": -3.435998002011505e-05
+              },
+              "inverse_residual": 1.6832238768498012e-12,
+              "phase_current_Ward_disagreement": 6.3658013232145805e-06,
+              "radial_inverse": {
+                "real": 0.9320474206907847,
+                "imaginary": -0.0375385865598779
+              },
+              "covariance_determinant": {
+                "real": 1.0615330909098697,
+                "imaginary": 0.05583520145595392
+              },
+              "covariance_min_singular_value": 0.9845360348004086,
+              "uneliminated_scaled_determinant_residual": 1.66903449894202e-12,
+              "fixed_radial_splits": [
+                0.0,
+                0.008264462809917356,
+                0.048473875951375416,
+                0.05204853202402799,
+                0.05595953565127879,
+                0.059478273286609804,
+                0.10340078224732123,
+                0.11005018481510186,
+                0.17986881923385406,
+                0.18543589772564034,
+                0.1880188309174039,
+                0.19347618218803495,
+                0.22047964748887314,
+                0.22551073204862132,
+                0.2641525912080552,
+                0.26863735211918555,
+                0.2858337863630887,
+                0.29005891914325616,
+                0.3332210372272921,
+                0.33690551599617574,
+                0.36612938069049267,
+                0.36946005357662093,
+                1.0
+              ]
+            },
+            {
+              "radial_order": 96,
+              "angular_order": 32,
+              "velocity_pole": {
+                "real": 0.37424489373843695,
+                "imaginary": -0.0034360077788705393
+              },
+              "frequency_pole": {
+                "real": 0.0037424489373843696,
+                "imaginary": -3.436007778870539e-05
+              },
+              "inverse_residual": 1.3254942065110714e-13,
+              "phase_current_Ward_disagreement": 2.1625976653775854e-06,
+              "radial_inverse": {
+                "real": 0.9320475169527002,
+                "imaginary": -0.037538447545869984
+              },
+              "covariance_determinant": {
+                "real": 1.061533021626163,
+                "imaginary": 0.05583478394458436
+              },
+              "covariance_min_singular_value": 0.9845360258601067,
+              "uneliminated_scaled_determinant_residual": 1.314320316317459e-13,
+              "fixed_radial_splits": [
+                0.0,
+                0.008264462809917356,
+                0.048473875951375416,
+                0.05204853202402799,
+                0.05595953565127879,
+                0.059478273286609804,
+                0.10340078224732123,
+                0.11005018481510186,
+                0.17986881923385406,
+                0.18543589772564034,
+                0.1880188309174039,
+                0.19347618218803495,
+                0.22047964748887314,
+                0.22551073204862132,
+                0.2641525912080552,
+                0.26863735211918555,
+                0.2858337863630887,
+                0.29005891914325616,
+                0.3332210372272921,
+                0.33690551599617574,
+                0.36612938069049267,
+                0.36946005357662093,
+                1.0
+              ]
+            },
+            {
+              "radial_order": 128,
+              "angular_order": 40,
+              "velocity_pole": {
+                "real": 0.3742450877980379,
+                "imaginary": -0.0034360101793141093
+              },
+              "frequency_pole": {
+                "real": 0.003742450877980379,
+                "imaginary": -3.436010179314109e-05
+              },
+              "inverse_residual": 6.7640891989068825e-15,
+              "phase_current_Ward_disagreement": 1.1314473760546586e-06,
+              "radial_inverse": {
+                "real": 0.9320475405935565,
+                "imaginary": -0.0375384134147367
+              },
+              "covariance_determinant": {
+                "real": 1.0615330046132843,
+                "imaginary": 0.05583468143549584
+              },
+              "covariance_min_singular_value": 0.984536023662889,
+              "uneliminated_scaled_determinant_residual": 6.488713713901385e-15,
+              "fixed_radial_splits": [
+                0.0,
+                0.008264462809917356,
+                0.048473875951375416,
+                0.05204853202402799,
+                0.05595953565127879,
+                0.059478273286609804,
+                0.10340078224732123,
+                0.11005018481510186,
+                0.17986881923385406,
+                0.18543589772564034,
+                0.1880188309174039,
+                0.19347618218803495,
+                0.22047964748887314,
+                0.22551073204862132,
+                0.2641525912080552,
+                0.26863735211918555,
+                0.2858337863630887,
+                0.29005891914325616,
+                0.3332210372272921,
+                0.33690551599617574,
+                0.36612938069049267,
+                0.36946005357662093,
+                1.0
+              ]
+            }
+          ],
+          "pole_refinements": [
+            7.904480742986542e-07,
+            1.9407444666405215e-07
+          ],
+          "second_seed_disagreements": [
+            5.302962296608141e-13,
+            3.9527767530595563e-13
+          ],
+          "direct_lower_reciprocity_disagreement": {
+            "bubble": 2.462871194609113e-19,
+            "mixed": 1.0512424264419451e-15,
+            "reverse": 1.0512424264419451e-15,
+            "loop_current": 1.900172759171695e-14
+          },
+          "original_upper_reference": [
+            {
+              "original_radial_order": 64,
+              "loop_disagreements": {
+                "bubble": 1.1798108160734878e-08,
+                "mixed": 4.0413046771201496e-08,
+                "reverse": 4.0413047739179016e-08,
+                "loop_current": 1.6837632840100567e-07
+              }
+            },
+            {
+              "original_radial_order": 96,
+              "loop_disagreements": {
+                "bubble": 6.485211916677249e-09,
+                "mixed": 4.0058536185478926e-08,
+                "reverse": 4.005853734153208e-08,
+                "loop_current": 1.682833041443386e-07
+              }
+            },
+            {
+              "original_radial_order": 128,
+              "loop_disagreements": {
+                "bubble": 5.2139696266245085e-09,
+                "mixed": 4.005665789593595e-08,
+                "reverse": 4.005665905357696e-08,
+                "loop_current": 1.6801870588961518e-07
+              }
+            }
+          ],
+          "alternate_tail_inverse_residual": 7.117840756150732e-15,
+          "local_density_domain_checks_at_actual_pole": [
+            {
+              "signed_mode": 0,
+              "threshold_k": [
+                0.5641667208094658,
+                -0.005967985421893219
+              ],
+              "shell_root_residual": 1.8214601048037065e-16,
+              "minimum_outgoing_energy_real": 2.689486906355638,
+              "minimum_Bose_denominator": 0.9999950937038186,
+              "minimum_shell_momentum_real": 0.3071834139162739,
+              "threshold_above_q_half": true
+            },
+            {
+              "signed_mode": 1,
+              "threshold_k": [
+                0.28072118254235884,
+                -0.00862318791436885
+              ],
+              "shell_root_residual": 1.56130421409015e-17,
+              "minimum_outgoing_energy_real": 0.11075372387681993,
+              "minimum_Bose_denominator": 0.3957064103401229,
+              "minimum_shell_momentum_real": 0.07327311201391751,
+              "threshold_above_q_half": true
+            },
+            {
+              "signed_mode": 2,
+              "threshold_k": [
+                0.270721182542358,
+                -0.008623187914368663
+              ],
+              "shell_root_residual": 1.5615488850060683e-17,
+              "minimum_outgoing_energy_real": 0.11449575658015404,
+              "minimum_Bose_denominator": 0.40589740259942925,
+              "minimum_shell_momentum_real": 0.07878840374334062,
+              "threshold_above_q_half": true
+            },
+            {
+              "signed_mode": 3,
+              "threshold_k": [
+                0.5541667208095031,
+                -0.005967985421893306
+              ],
+              "shell_root_residual": 1.8214601048037065e-16,
+              "minimum_outgoing_energy_real": 2.6932287522871174,
+              "minimum_Bose_denominator": 0.9999951764540171,
+              "minimum_shell_momentum_real": 0.31836523424402596,
+              "threshold_above_q_half": true
+            }
+          ],
+          "principal_lower_negative_control_residual": 0.036409117319933425,
+          "simple_pole_derivative": {
+            "runs": [
+              {
+                "step": 0.0001,
+                "real_direction_derivative": {
+                  "real": -5.295372257775165,
+                  "imaginary": -0.06526049940890293
+                },
+                "imag_direction_derivative": {
+                  "real": -5.295372523905616,
+                  "imaginary": -0.06526061245427212
+                },
+                "Cauchy_Riemann_disagreement": 2.8914472578648983e-07
+              },
+              {
+                "step": 5e-05,
+                "real_direction_derivative": {
+                  "real": -5.2953708633041465,
+                  "imaginary": -0.06526052228244268
+                },
+                "imag_direction_derivative": {
+                  "real": -5.2953725377118035,
+                  "imaginary": -0.06526055421838531
+                },
+                "Cauchy_Riemann_disagreement": 1.674712186064784e-06
+              }
+            ],
+            "derivative_modulus": 5.295772985664989,
+            "derivative_refinement": 1.3946586036351943e-06,
+            "local_inverse_residue_in_v": {
+              "real": -0.18881550814262593,
+              "imaginary": 0.002326975578198485
+            }
+          },
+          "difference_from_soft_pole": 1.460544763609706e-05
+        }
+      ],
+      "alternate_fixed_grid_q": 0.04,
+      "alternate_fixed_grid_pole_disagreement": 4.849496475949367e-10,
+      "independent_angular_moment_checks": [
+        {
+          "k": 0.09,
+          "q": 0.04,
+          "half_plane": "upper",
+          "independent_moment_errors": {
+            "bubble": 1.2710574864626038e-13,
+            "mixed": 3.2155493553843715e-13,
+            "reverse": 3.2155493553843715e-13,
+            "loop_current": 5.084229945850415e-13
+          }
+        },
+        {
+          "k": 0.09,
+          "q": 0.04,
+          "half_plane": "lower",
+          "independent_moment_errors": {
+            "bubble": 1.2710574864626038e-13,
+            "mixed": 3.2155493553843715e-13,
+            "reverse": 3.2155493553843715e-13,
+            "loop_current": 5.084229945850415e-13
+          }
+        },
+        {
+          "k": 0.09,
+          "source_signature_reciprocity_errors": {
+            "bubble": 3.580361673049448e-15,
+            "mixed": 1.1718571004216928e-13,
+            "reverse": 1.1718571004216928e-13,
+            "loop_current": 1.7763568394002505e-15
+          }
+        },
+        {
+          "k": 0.3,
+          "q": 0.04,
+          "half_plane": "upper",
+          "independent_moment_errors": {
+            "bubble": 2.1610313646285627e-14,
+            "mixed": 8.644125458514251e-14,
+            "reverse": 8.592868015318674e-14,
+            "loop_current": 1.034565839472708e-13
+          }
+        },
+        {
+          "k": 0.3,
+          "q": 0.04,
+          "half_plane": "lower",
+          "independent_moment_errors": {
+            "bubble": 2.1610313646285627e-14,
+            "mixed": 8.644125458514251e-14,
+            "reverse": 8.592868015318674e-14,
+            "loop_current": 1.034565839472708e-13
+          }
+        },
+        {
+          "k": 0.3,
+          "source_signature_reciprocity_errors": {
+            "bubble": 8.881784197001252e-16,
+            "mixed": 4.996003610813204e-16,
+            "reverse": 4.996003610813204e-16,
+            "loop_current": 1.3322676295501878e-15
+          }
+        },
+        {
+          "k": 1.2,
+          "q": 0.04,
+          "half_plane": "upper",
+          "independent_moment_errors": {
+            "bubble": 4.441368528977106e-16,
+            "mixed": 8.042661116846733e-16,
+            "reverse": 7.938586351967248e-16,
+            "loop_current": 6.1874393578044245e-15
+          }
+        },
+        {
+          "k": 1.2,
+          "q": 0.04,
+          "half_plane": "lower",
+          "independent_moment_errors": {
+            "bubble": 4.441368528977106e-16,
+            "mixed": 8.042661116846733e-16,
+            "reverse": 7.938586351967248e-16,
+            "loop_current": 6.1874393578044245e-15
+          }
+        },
+        {
+          "k": 1.2,
+          "source_signature_reciprocity_errors": {
+            "bubble": 1.734723475976807e-18,
+            "mixed": 2.7755575615628914e-17,
+            "reverse": 2.7755575615628914e-17,
+            "loop_current": 5.003707553108402e-17
+          }
+        }
+      ]
+    }
+  ],
+  "checks": {
+    "accepted_predecessor_and_protected_lineage": true,
+    "independent_upper_and_lower_frequency_moment_identity": true,
+    "source_signature_point_and_integrated_reciprocity": true,
+    "analytic_vacuum_reference_matches_original": true,
+    "original_upper_reference_agreement": true,
+    "actual_finite_q_simple_pole_without_assigned_width": true,
+    "orders_seeds_and_alternate_fixed_grid_agree": true,
+    "phase_current_Ward_without_projection": true,
+    "elimination_denominators_not_false_pole": true,
+    "simple_derivative_and_local_Cauchy_Riemann": true,
+    "two_complex_tail_paths_agree_at_actual_pole": true,
+    "principal_lower_is_not_retarded_pole": true,
+    "finite_q_pole_approaches_soft_without_being_substituted": true,
+    "actual_pole_sampled_density_domain": true,
+    "protected_evidence_hashes_unchanged": true
+  },
+  "vacuum_reference_check": {
+    "joint": 3.5260687712544746e-13,
+    "transverse": 3.747002708109927e-15
+  },
+  "runtime_arithmetic": {
+    "longdouble_bits": 64,
+    "clongdouble_itemsize": 16,
+    "extended_precision_not_assumed": true
+  },
+  "config": {
+    "q_grid": [
+      0.04,
+      0.02,
+      0.01
+    ],
+    "orders": [
+      [
+        64,
+        24
+      ],
+      [
+        96,
+        32
+      ],
+      [
+        128,
+        40
+      ]
+    ],
+    "split_rays": [
+      0.19,
+      0.2,
+      0.3,
+      0.4,
+      0.45
+    ],
+    "alternate_split_rays": [
+      0.21,
+      0.25,
+      0.35,
+      0.43
+    ],
+    "initial_seed": "accepted prior soft pole, not a substituted finite-q answer",
+    "second_seeds": [
+      [
+        0.2,
+        -0.01
+      ],
+      [
+        0.4,
+        -0.005
+      ]
+    ],
+    "upper_reference_velocity": {
+      "real": 0.3,
+      "imaginary": 0.02
+    },
+    "lower_domain": {
+      "Re_v": [
+        0.19,
+        0.45
+      ],
+      "Im_v": [
+        -0.015,
+        0.0
+      ]
+    },
+    "radial_domain": "0<=k<infinity",
+    "assigned_output_width": null,
+    "vacuum_centered_series_terms": 16,
+    "vacuum_max_ratio_required": 0.05
+  },
+  "thresholds": {
+    "root_absolute": 1e-08,
+    "refinement_absolute": 2e-05,
+    "phase_current_Ward_absolute": 0.001,
+    "causal_leakage_unchanged": 1e-06
+  },
+  "evidence_artifacts": [
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/t13_hartree_finite_q_discontinuity.json",
+      "sha256": "829138c4e2b5387fda30f911e45fc6aa1b8c9db668fb36f012cfae82f864639a"
+    },
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/Research_T13_Hartree_Finite_Q_Discontinuity.py",
+      "sha256": "0141480e263984ffa2f75d1768ed593538274ad92d1f2eb396e1395b0e2d6550"
+    },
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/Research_T13_Hartree_Finite_Q_Poles.py",
+      "sha256": "7296a7406b81984e2eef538d780284b2edc666d8cd741e2ee5549a9a3a5425b9"
+    }
+  ],
+  "protected_evidence_hashes": [
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/t13_conditional_twofluid_operator.json",
+      "sha256": "8606303e4818030dd74061c14b243542c19c4cbb262dda29261951d4c87d6412"
+    },
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/t13_polar_dynamic_composite.json",
+      "sha256": "2f07a63af3ce9945bf254d5da238bdefbd53597dae105ee7e50bbcbe8bc61f7d"
+    },
+    {
+      "path": "docs/core/07_artifacts/topic13/t13_topic13_closure_matrix.json",
+      "sha256": "e6e84772a400273c438e0b8ca3c7b5b14c9d720da0420fb4021b1c0e7a54fe66"
+    },
+    {
+      "path": "docs/core/07_artifacts/gates/uet_major_result_dependency_unlock_gate.json",
+      "sha256": "ecbefdf12ee1eb6661ae8096e3f62bf1ffa7992c96ca94f1149fdbc25a8bbe6e"
+    }
+  ],
+  "open_blockers": [
+    "certified_global_complex_domain_and_stability",
+    "controlled_Hartree_truncation_and_regulator_RG_full_action",
+    "joint_Phi_stationarity_and_material_source_detector",
+    "independent_thermal_scale_and_physical_heat_collision_KMS_entropy_transport"
+  ],
+  "controlling_blocker": "global_domain_Hartree_remainder_joint_Phi_material_transport_not_closed",
+  "dependency_unlocked": [
+    "same_candidate_global_domain_approximation_action_and_joint_Phi_research_only"
+  ],
+  "finite_q_complex_pole_computed": true,
+  "conditional_collisionless_soft_pole_inherited": true,
+  "certified_global_stability": false,
+  "certified_global_contour_homotopy": false,
+  "physical_mode_speed_emitted": false,
+  "collision_rate_emitted": false,
+  "controlled_truncation_error_established": false,
+  "joint_Phi_stationarity_derived": false,
+  "g1_physical_unlock": false,
+  "g2_science_unlock": false,
+  "full_core_unlock": false,
+  "claim_promotion": false,
+  "parameter_fitting": false,
+  "artificial_width": false,
+  "clipping": false,
+  "IR_filter": false,
+  "imposed_Ward_projection": false,
+  "xie_2026_accessed": false,
+  "prior_Xie_context_exposure_review": "REVIEW_REQUIRED",
+  "core_composition_gate_overwritten": false,
+  "C_relabelled_as_charge_or_mass": false,
+  "R_gen_added_as_state": false,
+  "excluded_variables": [
+    "R_gen",
+    "R_obs",
+    "nondynamical_A"
+  ],
+  "claim_boundary": "Actual local finite-q collisionless phase poles at two unchanged fixed-Phi witnesses and q=.04/.02/.01, with independent algebra/cuts/source reciprocity and numerical convergence. Not global stability, a controlled Hartree remainder, joint-Phi/material sound, physical collision/Kubo/SK-KMS/heat/entropy, SI normalization, empirical validation or Full Topic13.",
+  "report": {
+    "MAJOR_RESULT_CLOSURE": "T13_FIXED_PHI_HARTREE_FINITE_Q_LANDAU_POLES: CLOSED_FOR_LANE",
+    "WHAT_IS_ACTUALLY_CLOSED": [
+      "fixed_grid_principal_kernel_with_complex_Cauchy_subtraction",
+      "independent_lower_source_signature_reciprocity_and_exact_vacuum_reference",
+      "actual_finite_q_complex_phase_poles_at_six_declared_points",
+      "finite_q_to_soft_pole_approach_with_denominator_Ward_and_local_analyticity_checks"
+    ],
+    "WHAT_REMAINS_OPEN": [
+      "certified_global_complex_domain_and_stability",
+      "controlled_Hartree_truncation_and_regulator_RG_full_action",
+      "joint_Phi_stationarity_and_material_source_detector",
+      "independent_thermal_scale_and_physical_heat_collision_KMS_entropy_transport"
+    ],
+    "DEPENDENCY_UNLOCKED": [
+      "same_candidate_global_domain_approximation_action_and_joint_Phi_research_only"
+    ],
+    "STATUS": "PASS_SCOPED_FINITE_Q_POLES",
+    "WHAT_CHANGED": "Computed actual fixed-grid finite-q retarded-sheet phase poles; independently checked moment/source algebra, reference and denominator/refinement controls.",
+    "EQUATION_OR_MAPPING": "B_L(q,z)=B_principal_lower(q,z)-2*pi*i*D(q,z/q); Gamma_phase=Gamma_pp-Gamma_pr*Gamma_rp/Gamma_rr; Gamma_phase(q,z_pole)=0; det_full=det(I-K_cov*J)*det(Gamma_field)",
+    "VERIFICATION": {
+      "accepted_predecessor_and_protected_lineage": true,
+      "independent_upper_and_lower_frequency_moment_identity": true,
+      "source_signature_point_and_integrated_reciprocity": true,
+      "analytic_vacuum_reference_matches_original": true,
+      "original_upper_reference_agreement": true,
+      "actual_finite_q_simple_pole_without_assigned_width": true,
+      "orders_seeds_and_alternate_fixed_grid_agree": true,
+      "phase_current_Ward_without_projection": true,
+      "elimination_denominators_not_false_pole": true,
+      "simple_derivative_and_local_Cauchy_Riemann": true,
+      "two_complex_tail_paths_agree_at_actual_pole": true,
+      "principal_lower_is_not_retarded_pole": true,
+      "finite_q_pole_approaches_soft_without_being_substituted": true,
+      "actual_pole_sampled_density_domain": true,
+      "protected_evidence_hashes_unchanged": true
+    },
+    "CONTROLLING_BLOCKER": "global_domain_Hartree_remainder_joint_Phi_material_transport_not_closed",
+    "NEXT_ACTION": "Control global domain and Hartree/action approximation obligations before joint-Phi/material/thermal-input and heat-current admission; do not repeat unchanged pole roots.",
+    "CLAIM_BOUNDARY": "Actual local finite-q collisionless phase poles at two unchanged fixed-Phi witnesses and q=.04/.02/.01, with independent algebra/cuts/source reciprocity and numerical convergence. Not global stability, a controlled Hartree remainder, joint-Phi/material sound, physical collision/Kubo/SK-KMS/heat/entropy, SI normalization, empirical validation or Full Topic13."
+  }
+}

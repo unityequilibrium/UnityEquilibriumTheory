@@ -10,6 +10,34 @@
 
 ## 1. ผลลัพธ์หลักที่จะปิดก่อน
 
+### จุดตัดสินใจ 2 ตุลาคม: เลือกแนวทางเตรียมพอร์ต ไม่ใช่รับผลวิจัยครบ
+
+[ผล finite-q ล่าสุด](Result/artifacts/T13_HARTREE_FINITE_Q_POLES_2026-10-02.md)
+คำนวณ principal kernel และ complex phase poles จริงในสอง fixed-Phi witnesses
+ที่ q=.04/.02/.01 แล้ว ผลลัพธ์เข้าใกล้ soft limit โดยไม่ได้ใช้คำตอบ soft
+มาแทน root และผ่าน independent moment/source, vacuum, refinement, Ward
+และ denominator checks ผลหลักย่อยนี้ปิด `CLOSED_FOR_LANE` เท่านั้น
+
+จึงเลือก **scoped response methods + measurement design** เป็นแนวทางเตรียมพอร์ต
+ตาม `route_selection_2026_10_02` ไม่เลือก material-prediction route ที่ยังขาด
+independent inputs และไม่ถือว่าปิด D05 scientific delivery, R1–R5 หรือ Full Goal
+การออกแบบการวัดและ novelty comparison ยังต้องทำจริงก่อนรับงาน ห้ามนับการเลือก
+แนวทางหรือวันครบกำหนดเป็น scientific closure
+
+| ก่อนวันเดิม | งานที่เปลี่ยนคำตอบได้ | หลักฐานที่ต้องส่ง |
+| --- | --- | --- |
+| 3–4 ต.ค. | ระบุ validity domain, regulator/action normalization และ approximation obligations ของ candidate เดิม; แยก numerical error จาก Hartree remainder | สมการ/สมมติฐานและ proof-obligation map พร้อม independent check; หากยังไม่พิสูจน์ให้คง open ไม่อ้าง global stability |
+| 5–6 ต.ค. | หนึ่ง measurement card: material/state, source/readout, units, input ที่ต้องวัดอิสระและ uncertainty; ตรวจข้อมูล/permission โดยไม่ใช้ Xie | identifiable combinations หรือ rank-gain derivation ที่ตรวจซ้ำได้; ไม่มีข้อมูลให้ระบุ measurement feasibility ไม่แทน empirical input |
+| 7 ต.ค. | ตรึง bounded result, claim/evidence/hash, approximation limits และ disposition จริง | scientific decision; preliminary/unresolved ยังไม่ใช่ full Goal completion |
+| 8–11 ต.ค. | report, reproducibility, related-work/novelty review, pitch/aims และ call-fit gaps | reviewable portfolio; submission readiness ยังขึ้นกับทุน/PI/งบจริง |
+
+เวลาที่เหลือไม่ใช้รัน pole grid เดิมซ้ำโดยไม่มีคำถามใหม่ การขยาย joint Phi ต้อง
+รักษา normalization ที่อาจขึ้นกับ m(Phi) ไม่ทิ้งเป็นค่าคงที่ การดูดกลืนแบบ
+collisionless ยังไม่ใช่ physical heat/collision/Kubo/SK-KMS coefficient
+โมเดลคง Astra/high สำหรับ lead และ Sol 6.1/high สำหรับ implementation ตาม
+roadmap; trial ยัง `NOT_RUN` และไม่มีการเปลี่ยน config หรือเริ่ม Goal พอร์ตแยก
+อัตโนมัติ ข้อความ predecessor ด้านล่างเป็นประวัติขอบเขตของผลก่อนหน้า
+
 Latest successor (2 October): [finite-q local density](Result/artifacts/T13_HARTREE_FINITE_Q_DISCONTINUITY_2026-10-02.md)
 closes exact signed shell thresholds and the analytic discontinuity needed
 by a later finite-q pole calculation. It agrees with original full cuts and

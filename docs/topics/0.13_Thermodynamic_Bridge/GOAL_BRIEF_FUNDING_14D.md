@@ -25,6 +25,19 @@
 
 ## Constraints
 
+Current successor: `Result/artifacts/T13_HARTREE_FINITE_Q_POLES_2026-10-02.md`
+closes actual fixed-grid finite-q principal loops and six local complex
+phase poles, independently checked with moments/source reciprocity, vacuum,
+orders/seeds/grids/tails, Ward and nonzero elimination factors. No soft
+answer substitution. Next control candidate validity-domain, Hartree
+approximation/regulator/RG/full action and joint-Phi normalization before
+independent material/state/source/detector/thermal and physical transport
+admission. Do not repeat unchanged roots. The 2 October planning decision
+selects methods/measurement-design portfolio preparation; it does not accept
+D05 scientific delivery, R1-R5 or the full Goal. The Goal completion rule,
+7 October science freeze, 11 October portfolio review, model recommendation
+and NOT_RUN trial are unchanged. Predecessors below retain their own scope.
+
 Latest density-only successor: `Result/artifacts/T13_HARTREE_FINITE_Q_DISCONTINUITY_2026-10-02.md`
 derives exact finite-q signed thresholds and analytic joint density; original
 all-channel cuts, forward angular roots, two paths and the approach to soft

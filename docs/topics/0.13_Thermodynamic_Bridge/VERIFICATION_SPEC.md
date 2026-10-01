@@ -1,5 +1,22 @@
 # Verification Spec
 
+## Actual Finite-q Pole Verification (2026-10-02)
+
+Separate verifier `Research_T13_Hartree_Finite_Q_Poles.py` and 22 tests.
+Freeze q=.04/.02/.01, orders (64,24)/(96,32)/(128,40), rays
+(.19,.2,.3,.4,.45), alternate rays (.21,.25,.35,.43) and inherited two
+independent seeds before running. Verify frequency polynomials, upper/lower
+unsplit Matsubara moments, time-source signature, direct lower integration,
+analytic vacuum reference and original integrated upper response. Require
+phase and uneliminated determinant residual <=1e-8, refinement/seed/grid/tail
+agreement <=2e-5, nonzero radial/covariance factors, simple local derivatives
+and inherited phase-current Ward tolerance 1e-3 without projection. Wrong
+principal-lower sheet and substituted soft answer are negative controls.
+Only the new artifact sets finite_q_complex_pole_computed=true. Preserve
+old flags, protected hashes, natural units, leakage 1e-6, holdout boundary
+and physical/full-Goal gates. No global stability or Hartree remainder
+follows. See [result](Result/artifacts/T13_HARTREE_FINITE_Q_POLES_2026-10-02.md).
+
 ## Finite-q Local Discontinuity Verification (2026-10-02)
 
 Separate verifier `Research_T13_Hartree_Finite_Q_Discontinuity.py`: preregister

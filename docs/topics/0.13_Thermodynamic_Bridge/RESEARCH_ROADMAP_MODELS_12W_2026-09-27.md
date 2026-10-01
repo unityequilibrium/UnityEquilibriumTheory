@@ -6,6 +6,35 @@
 
 ## ผลหลักสำหรับพอร์ตและทุนรอบถัดไป
 
+### Current decision 2 October: finite-q result and methods preparation
+
+[Actual finite-q poles](Result/artifacts/T13_HARTREE_FINITE_Q_POLES_2026-10-02.md)
+now survive the full local principal-kernel calculation at both unchanged
+witnesses and three q values. The soft result is not merely substituted;
+orders/seeds/grids/tails, source/current identities and denominators agree.
+This closes a bounded response-methods question. It does not close global
+stability, Hartree approximation control, joint Phi or material transport.
+`route_selection_2026_10_02` selects methods/measurement-design portfolio
+preparation, not physical prediction, novelty or full research acceptance.
+
+| Existing review date | What the extra time must establish | Not sufficient |
+| --- | --- | --- |
+| 25 October / R1 | Candidate validity-domain and full regulator/action/approximation obligations accounted for; source response independently reproduced | Six roots or numerical convergence alone; an angular-series bound called a Hartree remainder |
+| 8 November / R2–R3 | Independent state/source/detector/temperature map and permitted numeric input, or a separately labelled feasibility package | Invented alpha, target rematching or feasibility relabelled external validation |
+| 22 November / R4 | One preregistered independent comparison if prerequisites pass, or a verified scoped structural result with measurement design | Missing data called no-go; collisionless cut called microscopic heat transport |
+| 6 December / R4 | Strengthen first result or admit a second protocol only after first-result/preregistration review | New topic count or repeated unchanged pole grids |
+| 20 December / R5 | Reproducible release and claim/uncertainty/reviewer record; actual call-fit separately | Document completion called scientific Goal or submission readiness |
+
+These are targets, not guaranteed scientific outcomes. The benefit to Core
+is an auditable candidate response and an explicit statement of what
+independent input is needed; transport can reuse that interface only after
+its own admission gates. No new physical/Core unlock or overwrite of the
+Core-owner composition. Original 7/11 October dates, December/January
+unconfirmed-call scenarios and full scientific completion rule remain.
+Model policy remains Astra/high lead (xhigh only for a bounded hard proof),
+Sol 6.1/high implementation, Luna optional inventory; trial NOT_RUN,
+configuration unchanged. Earlier notes below retain predecessor scope.
+
 Latest successor (2 October): [finite-q discontinuity](Result/artifacts/T13_HARTREE_FINITE_Q_DISCONTINUITY_2026-10-02.md)
 derives exact finite-q thresholds and analytic thermal density, independently
 checked against original all-channel cuts and forward shells. The density

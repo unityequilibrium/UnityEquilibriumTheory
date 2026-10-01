@@ -1,5 +1,19 @@
 ﻿# Method
 
+## Actual Finite-q Principal Kernel and Pole (2026-10-02)
+
+Use the [separate pole verifier and derivation](Result/artifacts/T13_HARTREE_FINITE_Q_POLES_2026-10-02.md).
+Freeze radial nodes before searching frequency; retain complex Cauchy
+subtraction, original source-frequency polynomials and all contacts. Compute
+the equal-mass vacuum angular reference in centered shell coordinates with
+a bounded parity series. Independently check lower source-signature
+reciprocity with unsplit Matsubara moments and direct lower integration.
+Continue each loop using the accepted finite-q discontinuity and solve
+Gamma_phase(q,z)=0, retaining radial/covariance factors and the uneliminated
+determinant. Refine orders, seeds, fixed grids, tail paths and derivatives.
+No width or q*v_soft answer is assigned. This is a local fixed-Phi
+collisionless result; older density/soft verifiers retain their own scope.
+
 ## Finite-q Local Discontinuity (2026-10-02)
 
 Use exact signed collinear endpoints, not a shifted soft endpoint. Continue

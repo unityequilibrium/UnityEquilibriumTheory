@@ -1,3 +1,27 @@
+## 2026-10-02 - Actual finite-q phase poles and portfolio route
+
+MAJOR_RESULT_CLOSURE: T13_FIXED_PHI_HARTREE_FINITE_Q_LANDAU_POLES is CLOSED_FOR_LANE on six declared fixed-Phi/q points. Full active Goal/R1 and physical acceptance remain open.
+
+WHAT_IS_ACTUALLY_CLOSED: Fixed-grid principal loops with complex Cauchy subtraction, independent lower source-signature reciprocity and analytic vacuum reference, actual nonzero-q complex phase poles and their approach to the prior soft poles. Seeds/grids/orders/tails, Ward, simple derivatives and nonzero elimination factors agree; the soft answer is not substituted.
+
+WHAT_REMAINS_OPEN: Certified global complex domain, Hartree remainder/regulator/RG/full action, joint Phi normalization/stationarity, material/state/source/detector and independent thermal scale, physical heat/collision/KMS/entropy transport. Measurement design, novelty and full research acceptance remain open.
+
+DEPENDENCY_UNLOCKED: Same-candidate validity-domain/approximation/joint-Phi research only. Methods/measurement-design portfolio preparation is selected, not D05 scientific delivery or a physical/Core unlock; original Core-owner composition unchanged.
+
+STATUS: PASS_SCOPED_FINITE_Q_POLES; planning route METHODS_ROUTE_SELECTED_FOR_PREPARATION.
+
+WHAT_CHANGED: Separate pole verifier, 22 tests, JSON/derivation; formula/method/spec/limits/README, funding evidence/hash/controller, two planning regressions, Goal/14-day/12-week handoffs. No predecessor or Core-owner edit. The earlier approval-usage failure performed no patch; normal approval subsequently succeeded after the reported reset time.
+
+EQUATION_OR_MAPPING: B_L(q,z)=B_principal_lower(q,z)-2*pi*i*D(q,z/q); Gamma_phase=Gamma_pp-Gamma_pr*Gamma_rp/Gamma_rr; Gamma_phase(q,z_pole)=0. Retain det(I-K_cov*J)*det(Gamma_field) and the source time signature S=diag(-1,1,1,1). No width/soft-answer substitution.
+
+VERIFICATION: Fifteen artifact checks and 256 linked Topic13/Core/planning tests passed in 342.61 seconds. Maximum final pole refinement 3.284e-7, seed disagreement 9.423e-13, alternate-grid difference 8.527e-10, root residual 2.521e-12, scaled Ward discrepancy 1.614e-5 and Cauchy-Riemann discrepancy 1.675e-6; denominator, units, read/hash and negative controls pass. Artifact SHA-256 7a16d7203b2347984d3a6f5dd8e4025730b049bce3e474b52ff103a8cfbb380a. Whitespace review passes. Prior exact head 2d48d5d98a8ebde36387967bfcae14b5e5eb97f8 has both relevant remote CI workflows successful. Windows longdouble=64 bits; extended precision not assumed. Model-selection official documentation rechecked; recommendation unchanged, model trial NOT_RUN.
+
+CONTROLLING_BLOCKER: global_domain_Hartree_remainder_joint_Phi_material_transport_not_closed.
+
+NEXT_ACTION: Specify validity-domain and regulator/action/approximation obligations, retaining m(Phi)-dependent normalization before joint-Phi/material admission; develop the independent-input measurement card. Do not rerun unchanged pole grids. Scientific freeze 7 October, portfolio review 11 October and longer-term result reviews remain unchanged. Commit/push this coherent packet to existing draft PR #30 and inspect exact new-head checks; full Goal remains active.
+
+CLAIM_BOUNDARY: Local fixed-Phi collisionless phase poles, not global stability, uniform q^2/Hartree remainder, particle collision lifetime, material sound/heat/Kubo/SK-KMS, SI alpha, novelty certification, external validation or Full Topic13/UET. No fit/width/mass repair, clipping/filter/padding/threshold change, numeric Xie read or Core-owner edit. Prior Xie exposure REVIEW_REQUIRED. Planning route selection does not accept R1-R5 or change scientific completion rules.
+
 ## 2026-10-02 - Exact finite-q local thermal discontinuity
 
 MAJOR_RESULT_CLOSURE: T13_FIXED_PHI_HARTREE_FINITE_Q_LANDAU_DISCONTINUITY is CLOSED_FOR_LANE on the declared fixed-Phi grid. Full active Goal/R1 and physical gates remain open.

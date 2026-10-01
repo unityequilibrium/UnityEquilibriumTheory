@@ -6,6 +6,20 @@ description: "Research module for Thermodynamic Bridge within the Unity Equilibr
 
 # 0.13 Thermodynamic Bridge
 
+## Actual Finite-q Phase Poles (2026-10-02)
+
+The [finite-q pole successor](Result/artifacts/T13_HARTREE_FINITE_Q_POLES_2026-10-02.md)
+computes the fixed-grid principal kernel and actual complex phase poles at
+both unchanged fixed-Phi witnesses and q=.04/.02/.01. Independent frequency
+moments/source reciprocity, vacuum reference, grids/seeds/tails, Ward and
+denominator checks agree. Poles approach the accepted soft limit without
+substituting it. This closes one bounded calculation, not global stability,
+Hartree approximation error or material heat/sound prediction. Next:
+validity-domain/full-action remainder, joint Phi and independent material/
+thermal input. Full Goal/R1 and physical gates remain open. D5 selects
+methods/measurement-design portfolio preparation, not scientific acceptance;
+dates and model policy remain unchanged. Older notes retain their own scope.
+
 ## Finite-q Local Spectral Discontinuity (2026-10-02)
 
 The [finite-q density successor](Result/artifacts/T13_HARTREE_FINITE_Q_DISCONTINUITY_2026-10-02.md)

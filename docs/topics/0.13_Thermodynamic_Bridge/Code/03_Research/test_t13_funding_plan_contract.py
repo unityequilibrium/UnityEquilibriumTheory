@@ -161,7 +161,7 @@ def test_execution_review_dates_match_existing_milestones():
 def test_portfolio_strategy_preserves_scientific_acceptance_and_existing_dates():
     strategy = PLAN["portfolio_strategy_2026_10_01"]
     assert strategy["record_class"] == "PLANNING_NOT_SCIENTIFIC_CLOSURE"
-    assert strategy["status"] == "RECOMMENDED_PENDING_D05_DECISION"
+    assert strategy["status"] == "METHODS_ROUTE_SELECTED_FOR_PREPARATION"
     assert strategy["decision_dates"] == {
         "route_selection": "2026-10-02",
         "scientific_freeze": "2026-10-07",
@@ -225,7 +225,8 @@ def test_local_pole_successor_changes_next_question_not_full_acceptance():
 
 def test_finite_q_discontinuity_is_not_finite_q_pole_or_funding_acceptance():
     field = "hartree_finite_q_discontinuity_evidence_2026_10_02"
-    assert PLAN["execution_review_2026_10_01"]["current_scientific_evidence_field"] == field
+    current = PLAN[PLAN["execution_review_2026_10_01"]["current_scientific_evidence_field"]]
+    assert current["inherited_finite_q_density_evidence_field"] == field
     assert field in PLAN["portfolio_strategy_2026_10_01"]["accepted_preliminary_evidence_fields"]
     evidence = PLAN[field]
     path = ROOT/evidence["path"]
@@ -239,3 +240,41 @@ def test_finite_q_discontinuity_is_not_finite_q_pole_or_funding_acceptance():
         assert evidence[flag] is False
         assert result[flag] is False
     assert all(card["status"] == "PLANNED_NOT_ACCEPTED" for card in PLAN["result_level_execution_2026_10_01"]["result_cards"])
+
+
+def test_actual_finite_q_pole_successor_preserves_physical_and_prior_boundaries():
+    field = "hartree_finite_q_poles_evidence_2026_10_02"
+    review = PLAN["execution_review_2026_10_01"]
+    assert review["current_scientific_evidence_field"] == field
+    assert field in PLAN["portfolio_strategy_2026_10_01"]["accepted_preliminary_evidence_fields"]
+    evidence = PLAN[field]
+    path = ROOT/evidence["path"]
+    result = json.loads(path.read_text(encoding="utf-8"))
+    assert hashlib.sha256(path.read_bytes()).hexdigest() == evidence["sha256"]
+    assert evidence["verification_status"] == result["verification_status"] == "PASS_SCOPED_FINITE_Q_POLES"
+    assert evidence["closure_level"] == result["closure_level"] == "CLOSED_FOR_LANE"
+    assert evidence["finite_q_complex_pole_computed"] is result["finite_q_complex_pole_computed"] is True
+    assert evidence["controlling_blocker"] == result["controlling_blocker"]
+    assert len(result["examples"]) == 2
+    assert all(len(example["finite_q_runs"]) == 3 for example in result["examples"])
+    assert all(result["checks"].values())
+    for flag in ("controlled_truncation_error_established", "g1_physical_unlock", "g2_science_unlock", "full_core_unlock", "core_composition_gate_overwritten"):
+        assert evidence[flag] is False
+        assert result[flag] is False
+    assert PLAN[evidence["inherited_finite_q_density_evidence_field"]]["finite_q_complex_pole_computed"] is False
+    assert PLAN[evidence["inherited_soft_poles_evidence_field"]]["finite_q_complex_pole_computed"] is False
+
+
+def test_d05_portfolio_route_is_not_scientific_or_submission_acceptance():
+    decision = PLAN["route_selection_2026_10_02"]
+    strategy = PLAN["portfolio_strategy_2026_10_01"]
+    assert decision["record_class"] == "PLANNING_NOT_SCIENTIFIC_CLOSURE"
+    assert decision["status"] == strategy["status"] == "METHODS_ROUTE_SELECTED_FOR_PREPARATION"
+    assert decision["decision_date"] == strategy["decision_dates"]["route_selection"]
+    assert decision["selected_route"] == strategy["primary_portfolio_route"]
+    assert decision["current_evidence_field"] == PLAN["execution_review_2026_10_01"]["current_scientific_evidence_field"]
+    for flag in ("prediction_route_admitted", "novelty_established", "measurement_design_completed", "D05_scientific_milestone_accepted", "full_goal_accepted", "scientific_goal_completion_rule_changed", "physical_gate_changed", "core_composition_gate_overwritten", "submission_ready"):
+        assert decision[flag] is False
+    assert all(card["status"] == "PLANNED_NOT_ACCEPTED" for card in PLAN["result_level_execution_2026_10_01"]["result_cards"])
+    assert {row["id"]: row for row in PLAN["milestones"]}["D05"]["status"] == "NOT_STARTED"
+    assert PLAN["funder"] is PLAN["submission_deadline"] is PLAN["budget_amount"] is None
