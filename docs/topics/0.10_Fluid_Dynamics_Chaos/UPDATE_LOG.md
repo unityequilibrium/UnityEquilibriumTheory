@@ -662,3 +662,20 @@ CLAIM_BOUNDARY: Internal numerical-method validation only; not evidence that UET
   no target relaxation, refit, current/formal/physical admission or dependency unlock.
 - Next controller remains source_weighted_continuum_current_upper_bound_and_microscopic_heat_current_correspondence_open.
 - Public safety: safe. Next: scoped commit/push and draftPR29 current-head CI; no merge.
+
+## 2026-10-01 OpenAI applicability source/version follow-up
+
+- Area: research-core; Topic10/Core/Topic13 source/design review only.
+- Changed: appended current-blocker/source-version addendum to the Thai report,
+  separate four-source follow-up JSON, local log and daily ledger. Old snapshots retained.
+- Actually checked: unchanged OpenAI main via API, official account/repository
+  statement, Comparator documentation, CIV v2 revision metadata/abstract and
+  current292-check continuum artifact/input hashes. Full v2 HTML unavailable;
+  no full v2 proof audit, formal build/kernel replay, new physics or acceleration metric.
+- Public safety: safe; public metadata and scoped review only, no raw payload.
+- Narrowed: potential method transfer is separated from direct physical evidence;
+  absent uniform gap is not a current-divergence claim. No admission/gate promotion.
+- Remaining: source-weighted continuum current upper/error bound and microscopic
+  physical heat-current/frame/material mapping.
+- Next checkpoint: JSON/link/hash/preserved-prefix/scope review, scoped commit/push
+  and draftPR29 current-head CI. No merge or public main publication.

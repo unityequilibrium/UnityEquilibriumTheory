@@ -98,3 +98,43 @@ J04/J05/J06 ยัง `NOT_STARTED`; speed FAIL 1.914× และ chaos-method P
 
 บันทึกตรวจประกอบ: [source/design manifest](Data/03_Research/openai_topic10_formal_transfer_review_2026_10_01.json)
 รายงานก่อนหน้า: [30 ก.ย.](OPENAI_APPLICABILITY_UPDATE_2026-09-30.md)
+
+## ตรวจซ้ำหลังผล continuum: ประโยชน์ต่อโจทย์ปัจจุบัน
+
+ฐานรอบนี้คือ UET `e17cab50d` วันที่ 1 ตุลาคม 2026 รายงานและ manifest ด้านบน
+เป็นภาพ ณ เวลาที่ตรวจเดิม จึงเก็บสถานะและ source hashes เดิมไว้ ไม่เขียนทับย้อนหลัง
+
+ตรวจ GitHub API แล้ว OpenAI main ยังเป็น `f9e8bc5b38b6e212696e8a30e3e91517af887bbd`
+อ่านคำอธิบายต้นทางและ Comparator documentation ซ้ำ ไม่ได้ build หรือ replay certificate
+ข้อประโยชน์ที่ประเมินว่าสูงคือการล็อกนิยาม/สมมติฐาน แยกโจทย์ออกจากคำตอบ
+และตรวจ statement กับ allowed axioms วิธีนี้สอดคล้องกับข้อพิสูจน์ย่อยของเรา
+แต่ยังไม่มีการวัดว่าช่วยลดเวลาหรือปิดหัวข้อได้กี่เปอร์เซ็นต์
+
+พบ [Constantin–Ignatova–Vicol v2](https://arxiv.org/abs/2609.20803v2)
+แก้ไขวันที่ 29 กันยายน เพิ่มบันทึก version ปัจจุบันแยกจาก v1 ที่อ่านก่อนหน้า
+รอบนี้อ่าน metadata/abstract เท่านั้น; HTML v2 ดึงไม่ได้และยังไม่ได้ audit proof v2
+ผลที่ abstract ระบุเป็น regularity เมื่อใช้ real-analytic force พร้อมเงื่อนไข
+anisotropic Type II และ exact axisymmetric core ที่กำหนด ไม่ใช่ข้อสรุปว่า
+OpenAI ผิด หรือว่า unforced/analytic-forced Navier–Stokes ทุกกรณี regular
+บทเรียนสำหรับเรา: ห้ามเปลี่ยน forcing class หรือ regularity โดยไม่เปลี่ยน theorem card
+
+งาน selected finite-K continuum ของเราได้ผลภายในแบบมีเงื่อนไขแล้ว:
+โดเมนของรูปแบบการชนสำหรับ bounded trials และโครงสร้าง dense/closed ที่ระบุ
+พร้อมลำดับ soft modes ที่ขัดกับการมี positive uniform vector gap
+[artifact ปัจจุบัน](Result/artifacts/fluid_core_o2_continuum_form_audit.json)
+ผ่าน 292/292 checks โดยไม่มี formal/interval/independent certificate
+ผลนี้ไม่ได้มาจากการถ่ายโอน proof Navier–Stokes และไม่ได้บอกว่า current response diverges
+
+ดังนั้นประโยชน์ของ OpenAI ต่อ blocker ถัดไปคือช่วยจัดและตรวจข้อพิสูจน์ว่า
+source ที่เลือกมีขอบเขต inverse response ได้หรือไม่ แม้ไม่มี uniform gap
+จากนั้นต้องแยกการจับคู่ microscopic current กับ physical heat current/frame
+และ EOS/second-sound protocol ของ Topic13 เป็นอีกชุดหลักฐาน
+OpenAI ยังไม่มีหลักฐานตรงให้ค่าสัมประสิทธิ์วัสดุ หน่วย SI หรือความเร็ว solver UET
+
+ตัวควบคุม measured ปัจจุบันคือ
+`source_weighted_continuum_current_upper_bound_and_microscopic_heat_current_correspondence_open`
+physical controller ยังคง
+`vector_momentum_constitutive_origin_and_material_frame_admission_open`
+J04/J05/J06 ยังไม่เริ่ม ไม่มี Core/Topic13 promotion หรือ dependency unlock
+
+บันทึกแยก: [follow-up source/design record](Data/03_Research/openai_topic10_applicability_followup_2026_10_01.json)
