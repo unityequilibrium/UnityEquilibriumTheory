@@ -18,6 +18,8 @@
 
 ### ผลส่งมอบสองสัปดาห์ที่ต้องมี
 
+ผลล่าสุด 1 ต.ค.: [source-complete Hartree current](Result/artifacts/T13_HARTREE_GAUGE_CURRENT_2026-10-01.md) คำนวณ mixed/current loops, source และ mean-field reoptimization, seagull และ UV surface ที่ derive จาก mass trace แล้ว Ward ผ่านโดยไม่ project tensor และ density response ตรงกับ stationary potential อีกวิธี จึงปิดคำถาม current consistency ที่ fixed Phi ใน named convention ได้จริง ไม่ต้องวนคำนวณ current เดิมเพื่อเพิ่ม log งานต่อคือ real-axis/error, full regulator/RG/action และ joint-Phi/material/heat-current admission; source contact แบบ finite ยังเป็น convention ไม่ใช่ microscopic input ผลนี้ไม่เปิด physical G1/G2 หรือ Full Topic13
+
 ผลถัดมา 1 ต.ค.: [external field response ที่คำนวณจริง](Result/artifacts/T13_HARTREE_EXTERNAL_RESPONSE_2026-10-01.md) ปิด vacuum/thermal bubble สามช่องและ covariance/source response ใน named subtraction แล้ว ใช้ต่อ R1 ด้วย gauge-current contacts, real-axis/error และ full regulator/RG/action match ไม่ต้องวนรัน field bubble เดิมเพื่อเพิ่ม log ผลนี้ยังไม่รับ R1 ครบทุกข้อและไม่เปลี่ยน physical/material gate, วันพอร์ตหรือการเลือกโมเดล
 
 ผลถัดมา 1 ต.ค.: [fixed-Phi Hartree candidate](Result/artifacts/T13_RENORMALIZED_HARTREE_BACKGROUND_2026-10-01.md) มี local stationary background ใน finite prescription แล้ว และ [counterterm/potential match](Result/artifacts/T13_HARTREE_COUNTERTERM_MATCHING_2026-10-01.md) ปิด invariant countercouplings, field quartic และ on-gap normalization โดยไม่ retune ผู้สมัครเดิม แพ็ก A จึงมี background/matching ให้ต่อยอด ไม่ต้องวนหารากหรือบังคับ phase mass เป็นศูนย์ งาน W3–W4 ที่ยังตัดสิน physical admission คือ regulator/RG/source input กับ external frequency/current vertices และ joint Phi/material map; conditional matrix identity ไม่ใช่ frequency bubble ที่คำนวณจริง Normalization อาจขึ้นกับ m(Phi) และยังไม่ให้ละทิ้งใน joint dynamics วันพอร์ตและโมเดล Astra/Sol/Luna เดิมไม่เปลี่ยน
@@ -125,7 +127,7 @@ R1–R5 ไม่ใช่ห้าช่องที่ติ๊กแล้ว
 
 ### บัตรตัดสินใจสำหรับใช้เวลาระยะยาวให้คุ้ม
 
-ใช้ `execution_review_2026_10_01` ใน planning JSON เป็นบัตรรับงาน ไม่ใช่ gate ฟิสิกส์ใหม่ คำถามถัดไปจากหลักฐานปัจจุบันคือ **stationary Hartree prescription เดียวกันให้ response ของกระแสครบ source/contact terms ได้หรือไม่** ต้องคำนวณจริงและตรวจ Ward identity; ห้ามสร้างคำตอบด้วยการ project ให้ identity ผ่าน หรือใช้ field bubble ที่ทำแล้วแทน current tensor
+ใช้ `execution_review_2026_10_01` ใน planning JSON เป็นบัตรรับงาน ไม่ใช่ gate ฟิสิกส์ใหม่ คำถาม source/contact current consistency ได้รับคำตอบแบบ fixed-Phi/rest-frame ตามผลล่าสุดแล้ว คำถามถัดไปคือ **response ที่คำนวณนี้มี real-axis spectrum และ error control อย่างไร และจะรับ regulator/action, joint-Phi และ material mapping ได้หรือไม่** ห้ามใช้ width ที่เลือกเองหรือ fit target เพื่อปิดส่วนที่ขาด; ยังต้องแยก source normalization convention จาก microscopic input
 
 ในรอบสองสัปดาห์ เป้าหมายคือหนึ่งผลวิจัยที่พิสูจน์/ตรวจซ้ำได้และบอกว่าการวัดอะไรเพิ่มจะตัดความกำกวม ไม่สัญญาว่า full Topic 13 หรือการทำนายวัสดุจะปิดทัน หาก prerequisites ของ prediction ไม่ครบในวันที่ 2 ตุลาคม ให้เลือก structural/methods question ที่มีหลักฐานจริง; หาก proof ยังไม่เสร็จวันที่ 7 ตุลาคม ให้ตรึง preliminary results กับ missing calculation ตามจริงสำหรับพอร์ต 11 ตุลาคม ไม่เปลี่ยน unresolved เป็น no-go
 

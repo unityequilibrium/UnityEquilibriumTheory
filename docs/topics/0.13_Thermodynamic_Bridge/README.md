@@ -6,6 +6,17 @@ description: "Research module for Thermodynamic Bridge within the Unity Equilibr
 
 # 0.13 Thermodynamic Bridge
 
+## Source-Complete Hartree Current (2026-10-01)
+
+The successor [source-complete rest-frame current](Result/artifacts/T13_HARTREE_GAUGE_CURRENT_2026-10-01.md)
+now computes mixed/current loops, covariance and mean-field response, seagulls
+and a derived UV surface contact. Actual Ward transversality and an independent
+stationary-potential density derivative agree without projecting the tensor.
+This closes a fixed-Phi candidate current question, not physical heat transport.
+Latest controller: real-axis/error, full regulator/RG/action and joint-Phi/material
+admission. The finite vacuum source contact is a declared convention, not a
+microscopic input. Physical funding/Core gates and original failures are unchanged.
+
 ## Computed Hartree External Field Response (2026-10-01)
 
 The [external response](Result/artifacts/T13_HARTREE_EXTERNAL_RESPONSE_2026-10-01.md)
@@ -16,8 +27,8 @@ sums and a four-dimensional vacuum reference agree. The static potential/Ward
 limits are recovered without forcing the internal phase mass to zero.
 
 This is CLOSED_FOR_LANE, not a material prediction or complete current vertex.
-Next controller: gauge-current contacts, real-axis/error and regulator/RG/material
-matching. Original failures, recorded Core composition and funding gates remain.
+Its gauge-current successor is linked above; real-axis/error and regulator/RG/material
+matching remain open. Original failures, recorded Core composition and funding gates remain.
 
 ## Fixed-Phi Hartree Candidate and Counterterm Match (2026-10-01)
 
@@ -36,8 +47,8 @@ identity was algebraic in that predecessor; the subsequent external-response
 artifact above computes its actual field bubble in a declared subtraction.
 
 Both results are CLOSED_FOR_LANE, not a repaired original Gaussian branch or
-physical He-II/graphite prediction. Latest controller: external vertex,
-regulator/RG and material matching. Joint Phi/global phase, response remainder
+physical He-II/graphite prediction. Their field/current successors are above;
+full regulator/RG and material matching, joint Phi/global phase, response remainder
 and transport remain open. Recorded Core composition, original failures, the
 11 October portfolio target and model policy are unchanged.
 

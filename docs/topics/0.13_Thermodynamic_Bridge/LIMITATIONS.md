@@ -2,6 +2,18 @@
 
 ## Computed External Field Response Boundary (2026-10-01)
 
+The [rest-frame current successor](Result/artifacts/T13_HARTREE_GAUGE_CURRENT_2026-10-01.md)
+closes actual source/current loops and contact Ward at fixed Phi, not the full
+thermal bridge. Its finite F_A^2 source normalization is a convention, not an
+admitted microscopic input. The frequency-first UV surface is removed using
+analytic asymptotics and checked independently, not tuned to a Ward residual.
+Only homogeneous isotropic rest-frame and static/upper-half-plane responses
+are admitted here; neither collision damping nor heat current is calculated.
+Full nonuniform covariant regulator/RG, real-axis IR/truncation control, joint
+Phi/global state, material/normal-component/SK-KMS and source uncertainty remain.
+Positive candidate stiffness and numerical precision do not establish material
+stability, physical transport, uncertainty or a physical Core unlock.
+
 The [external field result](Result/artifacts/T13_HARTREE_EXTERNAL_RESPONSE_2026-10-01.md)
 adds finite-q upper-half-plane covariance/source response, matched to the
 previous finite tadpoles with an explicit vacuum subtraction. It does not yet

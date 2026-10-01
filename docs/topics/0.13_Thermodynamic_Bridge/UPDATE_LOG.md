@@ -1,3 +1,27 @@
+## 2026-10-01 - Source-complete rest-frame Hartree current response
+
+MAJOR_RESULT_CLOSURE: T13_FIXED_PHI_HARTREE_SOURCE_COMPLETE_CURRENT is CLOSED_FOR_LANE in the unchanged named fixed-Phi candidate. The full active research Goal remains open.
+
+WHAT_IS_ACTUALLY_CLOSED: Actual mixed/current loops, four-component isotropic rest-frame source Hessian, covariance and mean-field reoptimization, kinetic seagulls and analytically derived UV surface contact. Ward is verified without projection; uniform density agrees with an independent stationary-potential derivative and stiffness is positive at both witnesses.
+
+WHAT_REMAINS_OPEN: Real-axis spectrum, global collective stability and controlled IR/truncation error, full nonuniform covariant regulator/RG/action, joint Phi/global state, material/source/detector and normal/heat-current/SK-KMS/collision transport.
+
+DEPENDENCY_UNLOCKED: Same-candidate spectral/joint-state work only. Physical funding G1/G2, new full_core_unlock and global claims remain false; recorded Core composition and original failed branches are untouched.
+
+STATUS: PASS_REST_FRAME_HARTREE_SOURCE_CURRENT.
+
+WHAT_CHANGED: Added verifier, seventeen tests, artifact and explicit derivation; synchronized local formula/method/spec/limitations/README and funding evidence/controller/Goal/roadmap. Finite F_A^2 source normalization is declared as a subtraction convention, not admitted microscopic input. The previous planning head 4b052e049 passed all relevant remote checks.
+
+EQUATION_OR_MAPPING: deltaI=(I-J_F*K_H)^-1*(J_F*L*deltavarphi+Y*deltaA); Gamma_AA=s*I+loop_AA+Ybar*[K_H^-1-J_F]^-1*Y/2; Pi=Gamma_AA-Gamma_Aphi*Gamma_phiphi^-1*Gamma_phiA. The spatial UV surface is [Tr(M)-2*M0^2]/(24*pi^2); A is a nondynamical O2 source, not UET C/Phi or a new state.
+
+VERIFICATION: 159 linked Topic13/Core/planning tests passed, including seventeen current tests. Independent matrix sums, action/source differences, 4D vacuum contact, boundary/reference/routing/grid/reality, counterterms, density envelope, units, omitted-contact/surface controls and read/protected-hash checks passed. Coarse tadpole finite difference initially failed its fixed tolerance; step refinement restored agreement without changing threshold or physical parameters. Maximum Ward residual 2.17e-9; density-envelope relative disagreement <=1.95e-8, neither is physical uncertainty. Artifact SHA-256 b74428070c559faa3c7caa7ab8efd0258f9f692073b7e736c62a8d44bc8ac971.
+
+CONTROLLING_BLOCKER: real_axis_regulator_joint_Phi_material_and_transport_matching_not_closed.
+
+NEXT_ACTION: Derive controlled real-axis/spectral response, then full regulator/action and joint-Phi/material/heat-current admission. Do not rerun the same current merely to accumulate artifacts. Portfolio dates, scientific acceptance and model policy are unchanged.
+
+CLAIM_BOUNDARY: Rest-frame fixed-Phi candidate current under an explicit vacuum contact convention, not physical heat/Kubo, complete covariant/RG/SK-KMS, He-II/TTG prediction, causal-branch repair or global closure. No fit, imposed Ward projector, clipping, artificial mass/filter, threshold change, new numeric holdout read or Core-owner edit. Prior Xie exposure remains REVIEW_REQUIRED.
+
 ## 2026-10-01 - Model evaluation and next-round execution decision cards
 
 MAJOR_RESULT_CLOSURE: Planning acceptance clarified; no new scientific result closed.

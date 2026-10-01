@@ -63,7 +63,7 @@ def test_plan_documents_and_latest_evidence_are_linked_without_holdout_reads():
                   "thermal_oneloop_ward_current_evidence_2026_10_01", "finite_momentum_thermal_1pi_evidence_2026_10_01",
                   "polar_static_ir_observable_evidence_2026_10_01", "polar_dynamic_composite_evidence_2026_10_01",
                   "renormalized_hartree_background_evidence_2026_10_01", "hartree_counterterm_matching_evidence_2026_10_01",
-                  "hartree_external_response_evidence_2026_10_01"):
+                  "hartree_external_response_evidence_2026_10_01", "hartree_gauge_current_evidence_2026_10_01"):
         evidence = PLAN[field]
         path = ROOT / evidence["path"]
         assert hashlib.sha256(path.read_bytes()).hexdigest() == evidence["sha256"]
@@ -116,7 +116,8 @@ def test_execution_review_is_not_a_model_trial_or_physical_closure():
     review = PLAN["execution_review_2026_10_01"]
     assert review["record_class"] == "PLANNING_NOT_SCIENTIFIC_CLOSURE"
     assert review["scientific_deliverable_is_not_full_topic_closure"] is True
-    assert PLAN[review["current_scientific_evidence_field"]]["gauge_current_vertex_computed"] is False
+    assert PLAN[review["current_scientific_evidence_field"]]["gauge_current_vertex_computed"] is True
+    assert PLAN[review["current_scientific_evidence_field"]]["real_axis_limit_admitted"] is False
     trial = review["model_trial"]
     assert trial["status"] == "NOT_RUN"
     assert trial["configuration_changed"] is False

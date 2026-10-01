@@ -25,12 +25,22 @@
 
 ## Constraints
 
+Latest current evidence: `Result/artifacts/T13_HARTREE_GAUGE_CURRENT_2026-10-01.md`
+computes source/current loops with reoptimized covariance and mean field,
+seagulls and an analytically derived UV surface, not an imposed Ward projector.
+It matches independent 4D vacuum and uniform-density potential derivatives.
+The finite vacuum source contact is a convention, not admitted microscopic
+input. Next close real-axis/error and full regulator/RG/action, joint Phi and
+material/heat-current admission. Current stiffness is conditional fixed-Phi
+equilibrium response, not a complete normal/transport coefficient. Preserve
+all physical gates, original failures, dates and the full active Goal.
+
 Latest computed response: `Result/artifacts/T13_HARTREE_EXTERNAL_RESPONSE_2026-10-01.md`
 now supplies the actual vacuum/thermal three-channel covariance bubble and
 external field BSE in a declared zero-momentum subtraction. Absolute subtraction
 recovers the previous finite tadpoles and static potential/Ward. Do not repeat
-field-loop generation without a new question. Next derive gauge-current contacts,
-real-axis/error and regulator/RG/joint-Phi/material matching. This does not
+field-loop generation without a new question. The successor above computes
+rest-frame gauge-current contacts; real-axis/error and regulator/RG/joint-Phi/material matching remain. This does not
 complete all R1 acceptance, physical G1/G2 or the full research Goal.
 
 Latest fixed-Phi evidence: `Result/artifacts/T13_RENORMALIZED_HARTREE_BACKGROUND_2026-10-01.md`

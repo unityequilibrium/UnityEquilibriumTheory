@@ -2,6 +2,19 @@
 
 ## Actual External Field Response (2026-10-01)
 
+Run the subsequent `Research_T13_Hartree_Gauge_Current.py` and
+`test_t13_hartree_gauge_current.py`. Require derivative kinetic/source seagulls,
+actual mixed and current Matsubara moments, independent 4D vacuum contact,
+analytic UV boundary, auxiliary/routing/grid/reality, source counterterm replay,
+reoptimized Ward and independent stationary-potential density/stiffness checks.
+Negative controls must fail when the classical seagull or derived UV surface
+is omitted; never impose a Ward projector. New current-only tolerances are
+absolute 1e-7 for point/reference and 2e-5 for grid/Ward; predecessor and causal
+thresholds are unchanged. Reject real-axis evaluation and uniform-Goldstone
+pseudoinversion. Verify units, code/predecessor/protected hashes and read allowlist.
+The successor current flag may pass within its lane; physical Kubo, material,
+real-axis/full-regulator/RG, joint-Phi and Core unlock remain false.
+
 Run `Research_T13_Hartree_External_Response.py` and
 `test_t13_hartree_external_response.py` under `Code/03_Research/` after the
 background and counterterm evidence. Require full vacuum/thermal three-channel

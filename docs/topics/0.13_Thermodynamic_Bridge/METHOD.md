@@ -2,6 +2,16 @@
 
 ## Source-Responsive Hartree Field Operator (2026-10-01)
 
+The [current successor](Result/artifacts/T13_HARTREE_GAUGE_CURRENT_2026-10-01.md)
+couples the same kinetic operator to a nondynamical O2 source, computes actual
+derivative-vertex moments and seagulls, and reoptimizes covariance and mean field.
+Subtract the full vacuum current/contact reference and its analytically derived
+frequency-first spatial UV boundary; do not project the output to enforce Ward.
+Check independent matrix sums, 4D vacuum, source counterterms, units and fixed
+physical-mass thermodynamic derivatives. The source F_A^2 finite convention
+must stay explicit; real-axis, full regulator/RG, material and heat-current
+matching remain separate. Neither the source nor canonical charge is UET C/Phi.
+
 Use all three symmetric covariance channels. Compute vacuum plus thermal
 Matsubara bubbles, not the thermal difference alone, and match J_F(0) to the
 same finite tadpoles. Verify with absolute reference subtraction, direct matrix
@@ -9,7 +19,8 @@ frequency sums and equal-mass four-dimensional vacuum integration. Solve
 deltaM=(I-KJ)^-1*L*deltavarphi and differentiate the field equation; never use
 the fixed internal inverse as the external response. See the
 [derivation](Result/artifacts/T13_HARTREE_EXTERNAL_RESPONSE_2026-10-01.md).
-Gauge/current contacts and real-axis/error admission require separate work.
+Gauge/current contacts are computed by the successor; real-axis/error and
+physical input admission still require separate work.
 
 ## Named Finite Hartree and Homogeneous Matching (2026-10-01)
 

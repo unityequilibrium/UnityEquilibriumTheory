@@ -2,6 +2,14 @@
 
 ## Computed Hartree External Field Response (2026-10-01)
 
+| formula_id | relation | units | constant_origin | proof_status | verification_role | failure_mode | next_hardening_step |
+| :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- |
+| t13.diagnostic.hartree_gauge_source_current | `deltaI=(I-J_F*K_H)^-1*(J_F*L*deltavarphi+Y*deltaA); Pi=Gamma_AA-Gamma_Aphi*Gamma_phiphi^-1*Gamma_phiA` | Y,L E; Pi E^2; Noether density E^3; A E | same source-coupled kinetic action and stationary Hartree derivatives | computed rest-frame vacuum/thermal current, Ward and density envelope | independent frequency sums, source derivatives, omitted contacts, units and counterterm replay | projection called a calculated current; charge relabelled C; response called heat/Kubo | real-axis/error, joint Phi and material/heat current |
+| t13.diagnostic.hartree_vacuum_source_contact | `surface_spatial=[Tr(M)-2M0^2]/(24pi^2); Pi_ref=(Q_E^2*I-Q_E*Q_E^T)*c_ref` | surface/current E^2; c_ref dimensionless | UV total-derivative boundary and 4D Feynman reference; finite F_A^2=0 at Qren=1 is a convention | rest-frame subtracted source Hessian, not full arbitrary-flow regulator/RG | analytic boundary, 4D vacuum, auxiliary/routing and scale-change test | surface tuned to Ward; source normalization called microscopic input | full nonuniform regulator/action and finite input match |
+
+See [source-current derivation](Result/artifacts/T13_HARTREE_GAUGE_CURRENT_2026-10-01.md).
+These remain local diagnostic IDs, not admitted Core equations or new ontology.
+
 | formula_id | relation | variables and units | constant_origin | proof_status | verification_role | failure_mode | next_hardening_step |
 | :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- |
 | t13.diagnostic.hartree_covariance_bubble | `J_F(Q)=J_F(0)+integral[J_raw(Q)-J_raw(0)]` | J dimensionless; q,z,T,mu E; masses E^2 | same finite tadpole subtraction, not fitted counterterm | computed full vacuum/thermal three-channel rest-frame prescription | absolute subtraction, 4D vacuum, direct Matsubara and routing | thermal-only loop used with vacuum stationary state; arbitrary probes called calculation | full regulator/RG, gauge sources and real axis |
