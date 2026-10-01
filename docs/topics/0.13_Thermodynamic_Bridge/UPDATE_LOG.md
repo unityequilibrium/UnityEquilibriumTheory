@@ -1,3 +1,27 @@
+## 2026-10-01 - Collisionless soft phase kernel and absorptive reactive zero
+
+MAJOR_RESULT_CLOSURE: T13_FIXED_PHI_HARTREE_COLLISIONLESS_SOFT_PHASE_RESPONSE is CLOSED_FOR_LANE. This closes a same-candidate infrared response question, not the full active Goal or Full Topic13.
+
+WHAT_IS_ACTUALLY_CLOSED: Equal-branch thermal z=v*q ray moments, full-domain radial source correction and phase inverse through radial-only source Ward. Independent unchanged finite-q phase/current kernels approach the derived limit. Static stiffness/susceptibility alone does not determine this response; both reactive zeros have nonzero absorption and are not undamped real-axis poles.
+
+WHAT_REMAINS_OPEN: Controlled complex collective poles and validity domain; approximation/truncation and covariant regulator/RG/action; joint Phi/global state and independent material/source/detector inputs; physical normal/heat-current, collision/SK-KMS/entropy transport and measurement uncertainty.
+
+DEPENDENCY_UNLOCKED: Same-candidate collective-pole research only. R1 full acceptance, physical G1/G2, Full Topic13 and the Core owner's bounded composition gate remain unchanged.
+
+STATUS: PASS_SCOPED_COLLISIONLESS_SOFT_RESPONSE.
+
+WHAT_CHANGED: Added separate soft verifier, seventeen tests, artifact/derivation and diagnostic formula/method/spec/limits/README. Linked exact evidence hash/controller in funding planning and Goal/14-day/12-week handoffs; no predecessor code, artifact, physical parameters or original threshold changed.
+
+EQUATION_OR_MAPPING: A_n=1/2 int c^n*w*c/(v-w*c+i0); delta joint loop uses -N'(p)*Tr(Va Rp Vb Rp)*(A_n(v,w)-A_n(0,w))/2 in the full radial measure. Source Ward gives Gamma_phase/q^2=-l^T*Gamma_AA_radial*l/s with l=(v,i,0,0), not the fully on-shell transverse current.
+
+VERIFICATION: 195 linked Topic13/Core/planning tests passed in 319.54 seconds. Fourteen new artifact checks pass; angular disagreement <6e-15, last soft-loop refinement <=1.29e-9, scaled field/current Ward <=5.89e-5 and finite-q quadrature phase refinement <=3.22e-5. Remaining finite-q corrections at q=.01 are 1.10e-5 to 6.01e-3, separately recorded and not physical uncertainty. Reactive rays 0.21937248/0.37428752 have Im inverse -0.06212778/-0.01820733; no sound speed or collision rate emitted. First audit's final hash-path indexing error was repaired and the entire audit rerun, without threshold changes. Declared predecessor/protected hashes and sole derived-predecessor text-read path checked. Artifact SHA-256 a7e58a3f9dcdefd032d12e8e6d11d626655d0b2614c367374b90bef3cb620fb4; prior head 349dcb21f has all relevant remote checks passing.
+
+CONTROLLING_BLOCKER: collective_pole_domain_truncation_joint_Phi_material_transport_not_closed.
+
+NEXT_ACTION: Analyze controlled complex continuation and stability within an explicit candidate validity domain using this kernel; close approximation/regulator/action and joint-Phi/material/heat-current admission separately. Do not replace it by the equilibrium ratio or rerun the old grid. Portfolio date/model policy remain unchanged.
+
+CLAIM_BOUNDARY: Conditional fixed-Phi collisionless soft phase/source response only, not hydrodynamic sound, measured damping, Kubo/SK-KMS/heat/entropy, material He-II/TTG validation, causal repair, global stability or UET closure. No fit, assigned width, filter, clipping, projection, holdout numeric read or Core-owner edit. Prior Xie exposure remains REVIEW_REQUIRED.
+
 ## 2026-10-01 - Scoped real-axis Hartree source response without assigned width
 
 MAJOR_RESULT_CLOSURE: T13_FIXED_PHI_HARTREE_REAL_AXIS_RESPONSE is CLOSED_FOR_LANE on ten declared points at the same two fixed-Phi witnesses. The full active Goal remains open.

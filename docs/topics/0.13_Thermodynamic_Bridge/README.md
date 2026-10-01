@@ -6,6 +6,18 @@ description: "Research module for Thermodynamic Bridge within the Unity Equilibr
 
 # 0.13 Thermodynamic Bridge
 
+## Collisionless Soft Collective Response (2026-10-01)
+
+The [soft-ray successor](Result/artifacts/T13_HARTREE_SOFT_COLLECTIVE_2026-10-01.md)
+derives the thermal z=v*q, q->0 phase/source kernel and verifies it against
+the unchanged full finite-q response. The static susceptibility/stiffness
+ratio cannot replace this nonlocal kernel; both witnesses have absorption
+at their reactive zero, not an undamped real-frequency pole. This closes
+a same-candidate infrared response question, not a physical sound speed,
+complex-pole/global stability proof or Full Topic13. Next: collective pole
+and validity-domain analysis, approximation/regulator/action control and
+joint-Phi/material/heat-current admission. Original and Core gates remain.
+
 ## Real-Axis Hartree Response (2026-10-01)
 
 The [real-axis successor](Result/artifacts/T13_HARTREE_REAL_AXIS_2026-10-01.md)

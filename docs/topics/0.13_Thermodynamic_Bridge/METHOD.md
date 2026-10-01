@@ -1,5 +1,19 @@
 ﻿# Method
 
+## Collisionless Soft Phase Kernel (2026-10-01)
+
+Take z=v*q with the same internal poles and static source anchor. Only
+equal-branch thermal divided differences change at leading q: integrate
+N'(p)*w*c/(v-w*c+i0) with exact angular moments, retaining the analytic
+Landau cut and full radial domain. Reoptimize covariance and eliminate
+the radial mean field only. Source Ward gives
+`Gamma_phase/q^2 -> -l^T*Gamma_AA_radial*l/s`, l=(v,i,0,0).
+Verify against both the full finite-q phase inverse and radial-current
+contraction, not a static susceptibility ratio or on-shell transverse Pi.
+See [derivation and actual numerical domain](Result/artifacts/T13_HARTREE_SOFT_COLLECTIVE_2026-10-01.md).
+Nonzero absorption at Re inverse=0 is not a real-frequency pole or a
+derived collision rate; controlled complex continuation remains open.
+
 ## Scoped Real-Axis Source Response (2026-10-01)
 
 Use `Research_T13_Hartree_Real_Axis.py` with the unchanged stationary masses

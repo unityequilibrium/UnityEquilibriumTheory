@@ -1,0 +1,1256 @@
+{
+  "schema_version": "t13-hartree-soft-collective-v1",
+  "generated_at": "2026-10-01T15:17:12.074602+00:00",
+  "major_result_id": "T13_FIXED_PHI_HARTREE_COLLISIONLESS_SOFT_PHASE_RESPONSE",
+  "topic": "0.13",
+  "branch_id": "t13.candidate.fixed_phi_hartree_ms_finite_potential_v1",
+  "closure_level": "CLOSED_FOR_LANE",
+  "verification_status": "PASS_SCOPED_COLLISIONLESS_SOFT_RESPONSE",
+  "what_is_closed": [
+    "derived_equal_branch_thermal_ray_limit",
+    "phase_collective_kernel_from_radial_source_Ward",
+    "thermodynamic_static_ratio_not_same_as_collisionless_mode_equation",
+    "reactive_zero_absorption_distinguished_from_a_real_axis_pole"
+  ],
+  "equation_or_mapping": "A_n(v,w)=1/2 int c^n*w*c/(v-w*c+i0) dc; delta B=-N'(p)*Tr(Va Rp Vb Rp)*(A_n(v,w)-A_n(0,w))/2; lim Gamma_phase/q^2=-l*Gamma_AA_radial*l/s, l=(v,i,0,0)",
+  "units": {
+    "v_and_w": "dimensionless",
+    "q_omega_T_mu_A": "E",
+    "a_b_s": "E^2",
+    "source_Hessian": "E^2",
+    "phase_over_q_squared": "dimensionless",
+    "covariance_bubble": "dimensionless"
+  },
+  "derivation_class": "ANALYTIC_COLLISIONLESS_RAY_LIMIT_OF_DECLARED_HARTREE_LOOPS_WITH_NUMERICAL_RADIAL_INTEGRATION",
+  "observable": "conditional_phase_and_O2_source_response_not_material_sound_or_temperature",
+  "data_role": "DERIVED_NO_EMPIRICAL_ROWS",
+  "equation_registry_ids": [
+    "t13.diagnostic.hartree_soft_ray",
+    "t13.diagnostic.hartree_radial_source_phase_Ward"
+  ],
+  "examples": [
+    {
+      "T": 0.22,
+      "mu": 1.05,
+      "Phi_fixed": 0.15,
+      "a": 0.23346308945060604,
+      "b": 0.009691508884317981,
+      "s": 0.11673154472530303,
+      "u_canonical": 1.0,
+      "static_source_susceptibility": 2.371440901176657,
+      "static_spatial_stiffness": 0.11823722725603052,
+      "thermodynamic_ratio_not_admitted_mode_speed": 0.22329086972820353,
+      "rays": [
+        {
+          "velocity_ray": 0.1,
+          "phase_coefficient": {
+            "real": 0.7963840925910228,
+            "imaginary": -0.006438893173701068
+          },
+          "radial_source": {
+            "real": [
+              [
+                2.3695635607224643,
+                0.0016550438150446118,
+                0.0,
+                0.0
+              ],
+              [
+                0.0016550438151146452,
+                0.11740406526120188,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.11909571520802206,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                0.11909571520802206
+              ]
+            ],
+            "imaginary": [
+              [
+                0.008777032240609571,
+                -0.0037264216557780176,
+                0.0,
+                0.0
+              ],
+              [
+                -0.0037264216559056047,
+                -0.0003328428610653132,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                -0.0032678688592156883,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                -0.0032678688592156883
+              ]
+            ]
+          },
+          "static_polynomial_coefficient": 0.8097452875030354,
+          "difference_from_static_polynomial": 0.014831752249114922,
+          "soft_quadrature_refinements": [
+            1.3147105140665155e-09,
+            2.2352484446853154e-10
+          ],
+          "velocity_endpoints": [
+            0.046265101465187156,
+            0.11129014701945193
+          ],
+          "zero_order_phase_Ward_residual": 4.515485208188429e-15,
+          "radial_inverse": {
+            "real": 0.20788136799028528,
+            "imaginary": -0.011276740047717235
+          },
+          "covariance_min_singular_value": 1.0151920693812757,
+          "finite_q_phase_refinement": 2.1789669021770218e-05,
+          "finite_q_runs": [
+            {
+              "q": 0.04,
+              "omega": 0.004,
+              "phase_over_q_squared": {
+                "real": 0.797890818097373,
+                "imaginary": -0.0063086683689787875
+              },
+              "radial_current_Ward_estimate": {
+                "real": 0.7978934604314577,
+                "imaginary": -0.006308669580254438
+              },
+              "phase_vs_current_Ward_disagreement": 2.642334362388176e-06,
+              "loop_max_disagreement_from_soft": 0.0022936763212978275,
+              "phase_error_from_soft": 0.0015123426368554734
+            },
+            {
+              "q": 0.02,
+              "omega": 0.002,
+              "phase_over_q_squared": {
+                "real": 0.7967527630893577,
+                "imaginary": -0.006405962969267277
+              },
+              "radial_current_Ward_estimate": {
+                "real": 0.7967635917927439,
+                "imaginary": -0.006405963280230497
+              },
+              "phase_vs_current_Ward_disagreement": 1.0828703390665798e-05,
+              "loop_max_disagreement_from_soft": 0.001162657514649231,
+              "phase_error_from_soft": 0.00037013826431017157
+            },
+            {
+              "q": 0.01,
+              "omega": 0.001,
+              "phase_over_q_squared": {
+                "real": 0.7964350551405286,
+                "imaginary": -0.006430635777874994
+              },
+              "radial_current_Ward_estimate": {
+                "real": 0.7964790556804708,
+                "imaginary": -0.006430635809259347
+              },
+              "phase_vs_current_Ward_disagreement": 4.400053994225726e-05,
+              "loop_max_disagreement_from_soft": 0.0005833409984786071,
+              "phase_error_from_soft": 5.162718313016598e-05
+            }
+          ]
+        },
+        {
+          "velocity_ray": 0.3,
+          "phase_coefficient": {
+            "real": -0.8286618231067661,
+            "imaginary": -0.12060543085444665
+          },
+          "radial_source": {
+            "real": [
+              [
+                2.352611794263806,
+                0.01011562067879387,
+                0.0,
+                0.0
+              ],
+              [
+                0.010115620679086064,
+                0.11607664583200168,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.12425160723036265,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                0.12425160723036265
+              ]
+            ],
+            "imaginary": [
+              [
+                0.01726557912819597,
+                -0.0017875983573296776,
+                0.0,
+                0.0
+              ],
+              [
+                -0.0017875983573295423,
+                -0.006455183716998663,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                -0.006343639810654803,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                -0.006343639810654803
+              ]
+            ]
+          },
+          "static_polynomial_coefficient": -0.8154818311869255,
+          "difference_from_static_polynomial": 0.12132346079218881,
+          "soft_quadrature_refinements": [
+            5.1546453494477675e-09,
+            8.763832159979283e-10
+          ],
+          "velocity_endpoints": [
+            0.2803341757681581,
+            0.34823256272588066
+          ],
+          "zero_order_phase_Ward_residual": 4.515485208112779e-15,
+          "radial_inverse": {
+            "real": 0.2278735778026222,
+            "imaginary": -0.01799780256304834
+          },
+          "covariance_min_singular_value": 1.0045051797950557,
+          "finite_q_phase_refinement": 1.765299703431526e-05,
+          "finite_q_runs": [
+            {
+              "q": 0.04,
+              "omega": 0.012,
+              "phase_over_q_squared": {
+                "real": -0.8179732148278602,
+                "imaginary": -0.1189472779876614
+              },
+              "radial_current_Ward_estimate": {
+                "real": -0.8179717490073141,
+                "imaginary": -0.11894727577896422
+              },
+              "phase_vs_current_Ward_disagreement": 1.46582221019544e-06,
+              "loop_max_disagreement_from_soft": 0.002996176655038185,
+              "phase_error_from_soft": 0.01081646050561469
+            },
+            {
+              "q": 0.02,
+              "omega": 0.006,
+              "phase_over_q_squared": {
+                "real": -0.8259937374205611,
+                "imaginary": -0.12018810437252103
+              },
+              "radial_current_Ward_estimate": {
+                "real": -0.8259876037315329,
+                "imaginary": -0.12018810369027842
+              },
+              "phase_vs_current_Ward_disagreement": 6.133689066185127e-06,
+              "loop_max_disagreement_from_soft": 0.0014904139541188717,
+              "phase_error_from_soft": 0.002700526360072783
+            },
+            {
+              "q": 0.01,
+              "omega": 0.003,
+              "phase_over_q_squared": {
+                "real": -0.8280282240625693,
+                "imaginary": -0.12050116374317772
+              },
+              "radial_current_Ward_estimate": {
+                "real": -0.8280033070493924,
+                "imaginary": -0.12050116344635664
+              },
+              "phase_vs_current_Ward_disagreement": 2.4917013178629604e-05,
+              "loop_max_disagreement_from_soft": 0.0007442593041729275,
+              "phase_error_from_soft": 0.0006421210005127249
+            }
+          ]
+        },
+        {
+          "velocity_ray": 0.6,
+          "phase_coefficient": {
+            "real": -6.054300660157077,
+            "imaginary": -0.17504173116081917
+          },
+          "radial_source": {
+            "real": [
+              [
+                2.34416697643458,
+                0.005609900724126333,
+                0.0,
+                0.0
+              ],
+              [
+                0.005609900724299056,
+                0.1274672702168333,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.12916569243875675,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                0.12916569243875675
+              ]
+            ],
+            "imaginary": [
+              [
+                0.0033407275119032506,
+                0.008087477506614718,
+                0.0,
+                0.0
+              ],
+              [
+                0.008087477506814909,
+                -0.012498348896453229,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                -0.002735770214824002,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                -0.002735770214824002
+              ]
+            ]
+          },
+          "static_polynomial_coefficient": -6.300623356765544,
+          "difference_from_static_polynomial": 0.30218285608591927,
+          "soft_quadrature_refinements": [
+            5.151450793716705e-09,
+            8.758398173381468e-10
+          ],
+          "velocity_endpoints": [
+            0.8132949837676978,
+            0.8304359323018989
+          ],
+          "zero_order_phase_Ward_residual": 4.515485208050405e-15,
+          "radial_inverse": {
+            "real": 0.23700490078629383,
+            "imaginary": -0.006118991855828557
+          },
+          "covariance_min_singular_value": 0.9922863665470312,
+          "finite_q_phase_refinement": 3.213052353775566e-05,
+          "finite_q_runs": [
+            {
+              "q": 0.04,
+              "omega": 0.024,
+              "phase_over_q_squared": {
+                "real": -6.026818854098389,
+                "imaginary": -0.17364382985075383
+              },
+              "radial_current_Ward_estimate": {
+                "real": -6.026818342626804,
+                "imaginary": -0.173643830903837
+              },
+              "phase_vs_current_Ward_disagreement": 5.114726691952113e-07,
+              "loop_max_disagreement_from_soft": 0.008120378030388843,
+              "phase_error_from_soft": 0.027517336214103807
+            },
+            {
+              "q": 0.02,
+              "omega": 0.012,
+              "phase_over_q_squared": {
+                "real": -6.047459813660274,
+                "imaginary": -0.17469119589960555
+              },
+              "radial_current_Ward_estimate": {
+                "real": -6.047457414523772,
+                "imaginary": -0.17469119617351817
+              },
+              "phase_vs_current_Ward_disagreement": 2.3991365175436353e-06,
+              "loop_max_disagreement_from_soft": 0.003768731804203914,
+              "phase_error_from_soft": 0.006849821586156364
+            },
+            {
+              "q": 0.01,
+              "omega": 0.006,
+              "phase_over_q_squared": {
+                "real": -6.052654408704886,
+                "imaginary": -0.1749552321539716
+              },
+              "radial_current_Ward_estimate": {
+                "real": -6.052644616028233,
+                "imaginary": -0.17495523223016576
+              },
+              "phase_vs_current_Ward_disagreement": 9.792676653871395e-06,
+              "loop_max_disagreement_from_soft": 0.0018527580819610574,
+              "phase_error_from_soft": 0.0016485223450185553
+            }
+          ]
+        },
+        {
+          "velocity_ray": 1.2,
+          "phase_coefficient": {
+            "real": -27.829235301008268,
+            "imaginary": 0.0
+          },
+          "radial_source": {
+            "real": [
+              [
+                2.349663543264547,
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.12835478769765338,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.12700362362699602,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                0.12700362362699602
+              ]
+            ],
+            "imaginary": [
+              [
+                0.0,
+                0.002754620580233085,
+                0.0,
+                0.0
+              ],
+              [
+                0.002754620580321665,
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ]
+            ]
+          },
+          "static_polynomial_coefficient": -28.241189459080015,
+          "difference_from_static_polynomial": 0.4119541580717474,
+          "soft_quadrature_refinements": [
+            3.3306690738754696e-16,
+            1.7208456881689926e-15
+          ],
+          "velocity_endpoints": [],
+          "zero_order_phase_Ward_residual": 4.515485207967629e-15,
+          "radial_inverse": {
+            "real": 0.23169635529871643,
+            "imaginary": 0.0
+          },
+          "covariance_min_singular_value": 0.9991941073787827,
+          "finite_q_phase_refinement": 2.8484080520030375e-05,
+          "finite_q_runs": [
+            {
+              "q": 0.04,
+              "omega": 0.048,
+              "phase_over_q_squared": {
+                "real": -27.927954861496442,
+                "imaginary": -0.0006621472046059823
+              },
+              "radial_current_Ward_estimate": {
+                "real": -27.92795060559695,
+                "imaginary": -0.0006621682206931126
+              },
+              "phase_vs_current_Ward_disagreement": 4.2559513801289945e-06,
+              "loop_max_disagreement_from_soft": 0.07874255898210517,
+              "phase_error_from_soft": 0.09872178109160526
+            },
+            {
+              "q": 0.02,
+              "omega": 0.024,
+              "phase_over_q_squared": {
+                "real": -27.853139134978605,
+                "imaginary": 0.0
+              },
+              "radial_current_Ward_estimate": {
+                "real": -27.853124905453335,
+                "imaginary": 0.0
+              },
+              "phase_vs_current_Ward_disagreement": 1.4229525270081922e-05,
+              "loop_max_disagreement_from_soft": 0.008736896838102356,
+              "phase_error_from_soft": 0.02390383397033702
+            },
+            {
+              "q": 0.01,
+              "omega": 0.012,
+              "phase_over_q_squared": {
+                "real": -27.835238101598026,
+                "imaginary": 0.0
+              },
+              "radial_current_Ward_estimate": {
+                "real": -27.83517925150069,
+                "imaginary": 0.0
+              },
+              "phase_vs_current_Ward_disagreement": 5.885009733574975e-05,
+              "loop_max_disagreement_from_soft": 0.0040047182678928,
+              "phase_error_from_soft": 0.00600280058975855
+            }
+          ]
+        }
+      ],
+      "reactive_zero": {
+        "bracket": [
+          0.1,
+          0.6
+        ],
+        "velocity_ray_at_Re_inverse_zero": 0.21937248422202862,
+        "phase_inverse_at_reactive_zero": {
+          "real": 5.314243823524091e-11,
+          "imaginary": -0.06212778407547459
+        },
+        "is_a_real_frequency_pole": false,
+        "interpretation": "absorptive collective response; complex pole continuation is not computed",
+        "quadrature_ray_difference": 1.7005480357212832e-11,
+        "finite_q_independent_inverse": {
+          "real": 0.0003858430941986119,
+          "imaginary": -0.0620602436146706
+        },
+        "finite_q_disagreement": 0.0003917097984185376
+      }
+    },
+    {
+      "T": 0.22,
+      "mu": 1.2,
+      "Phi_fixed": 0.15,
+      "a": 0.8998337744103163,
+      "b": 0.012470671054547374,
+      "s": 0.449916887205158,
+      "u_canonical": 1.0,
+      "static_source_susceptibility": 3.227372098375788,
+      "static_spatial_stiffness": 0.4540429747279238,
+      "thermodynamic_ratio_not_admitted_mode_speed": 0.37508004560539654,
+      "rays": [
+        {
+          "velocity_ray": 0.1,
+          "phase_coefficient": {
+            "real": 0.9362676892948527,
+            "imaginary": -0.00036669000910470275
+          },
+          "radial_source": {
+            "real": [
+              [
+                3.2272939114527643,
+                0.00023348535480507905,
+                0.0,
+                0.0
+              ],
+              [
+                0.00023348535477271649,
+                0.4536587299518019,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.4544387584831876,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                0.4544387584831876
+              ]
+            ],
+            "imaginary": [
+              [
+                0.0005965605616780889,
+                -0.0007157323948850953,
+                0.0,
+                0.0
+              ],
+              [
+                -0.0007157323947958637,
+                -0.00011231735089105845,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                -0.0017695946751170618,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                -0.0017695946751170618
+              ]
+            ]
+          },
+          "static_polynomial_coefficient": 0.9374381485526304,
+          "difference_from_static_polynomial": 0.0012265547019577776,
+          "soft_quadrature_refinements": [
+            6.745013991782573e-10,
+            1.14677399522494e-10
+          ],
+          "velocity_endpoints": [
+            0.03120878025414784,
+            0.13927819603370692
+          ],
+          "zero_order_phase_Ward_residual": 3.641704993118483e-13,
+          "radial_inverse": {
+            "real": 0.8806839835023919,
+            "imaginary": -0.018079489766515636
+          },
+          "covariance_min_singular_value": 0.9873706964684292,
+          "finite_q_phase_refinement": 8.267945530414472e-06,
+          "finite_q_runs": [
+            {
+              "q": 0.04,
+              "omega": 0.004,
+              "phase_over_q_squared": {
+                "real": 0.9363691086633812,
+                "imaginary": -0.0003646575383527621
+              },
+              "radial_current_Ward_estimate": {
+                "real": 0.9363701193453857,
+                "imaginary": -0.0003646576584953518
+              },
+              "phase_vs_current_Ward_disagreement": 1.0106820116727578e-06,
+              "loop_max_disagreement_from_soft": 0.0020731335773141765,
+              "phase_error_from_soft": 0.00010143973210765358
+            },
+            {
+              "q": 0.02,
+              "omega": 0.002,
+              "phase_over_q_squared": {
+                "real": 0.9362890388970903,
+                "imaginary": -0.0003661801368014038
+              },
+              "radial_current_Ward_estimate": {
+                "real": 0.9362932938870736,
+                "imaginary": -0.0003661801719398365
+              },
+              "phase_vs_current_Ward_disagreement": 4.254989983499475e-06,
+              "loop_max_disagreement_from_soft": 0.0005245779103543295,
+              "phase_error_from_soft": 2.1355689767996407e-05
+            },
+            {
+              "q": 0.01,
+              "omega": 0.001,
+              "phase_over_q_squared": {
+                "real": 0.9362566915030277,
+                "imaginary": -0.0003665623814060837
+              },
+              "radial_current_Ward_estimate": {
+                "real": 0.936274053863815,
+                "imaginary": -0.0003665623900459988
+              },
+              "phase_vs_current_Ward_disagreement": 1.7362360787311834e-05,
+              "loop_max_disagreement_from_soft": 0.0002476791595231547,
+              "phase_error_from_soft": 1.099853235007501e-05
+            }
+          ]
+        },
+        {
+          "velocity_ray": 0.3,
+          "phase_coefficient": {
+            "real": 0.3570879713759948,
+            "imaginary": -0.009959611014739404
+          },
+          "radial_source": {
+            "real": [
+              [
+                3.226488993663789,
+                0.0021166117847339905,
+                0.0,
+                0.0
+              ],
+              [
+                0.0021166117844591513,
+                0.45177853566913745,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.4572224698746413,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                0.4572224698746413
+              ]
+            ],
+            "imaginary": [
+              [
+                0.0018028010861545485,
+                -0.0012243628325607839,
+                0.0,
+                0.0
+              ],
+              [
+                -0.0012243628324537965,
+                -0.0030487780170139053,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                -0.003939002820333654,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                -0.003939002820333654
+              ]
+            ]
+          },
+          "static_polynomial_coefficient": 0.3635771195214377,
+          "difference_from_static_polynomial": 0.011887089434273775,
+          "soft_quadrature_refinements": [
+            7.548392216838453e-09,
+            1.2833635820724082e-09
+          ],
+          "velocity_endpoints": [
+            0.14334796374493752,
+            0.4357703063321786
+          ],
+          "zero_order_phase_Ward_residual": 3.6417049931189517e-13,
+          "radial_inverse": {
+            "real": 0.9138020256166378,
+            "imaginary": -0.04357887033382786
+          },
+          "covariance_min_singular_value": 0.9862596562170701,
+          "finite_q_phase_refinement": 4.56358768854457e-06,
+          "finite_q_runs": [
+            {
+              "q": 0.04,
+              "omega": 0.012,
+              "phase_over_q_squared": {
+                "real": 0.35796085450142967,
+                "imaginary": -0.009908813607120117
+              },
+              "radial_current_Ward_estimate": {
+                "real": 0.3579613909066432,
+                "imaginary": -0.009908811876231612
+              },
+              "phase_vs_current_Ward_disagreement": 5.364080061591484e-07,
+              "loop_max_disagreement_from_soft": 0.00173699320044611,
+              "phase_error_from_soft": 0.0008743599529311695
+            },
+            {
+              "q": 0.02,
+              "omega": 0.006,
+              "phase_over_q_squared": {
+                "real": 0.3573041377581507,
+                "imaginary": -0.00994685857193452
+              },
+              "radial_current_Ward_estimate": {
+                "real": 0.35730651643188005,
+                "imaginary": -0.009946858103291092
+              },
+              "phase_vs_current_Ward_disagreement": 2.37867377554095e-06,
+              "loop_max_disagreement_from_soft": 0.0008709196988661327,
+              "phase_error_from_soft": 0.000216542211986148
+            },
+            {
+              "q": 0.01,
+              "omega": 0.003,
+              "phase_over_q_squared": {
+                "real": 0.3571328374494169,
+                "imaginary": -0.009956402490462733
+              },
+              "radial_current_Ward_estimate": {
+                "real": 0.35714255711725534,
+                "imaginary": -0.009956402363636844
+              },
+              "phase_vs_current_Ward_disagreement": 9.719667839297772e-06,
+              "loop_max_disagreement_from_soft": 0.00043576370231182044,
+              "phase_error_from_soft": 4.498065331172203e-05
+            }
+          ]
+        },
+        {
+          "velocity_ray": 0.6,
+          "phase_coefficient": {
+            "real": -1.5504800688239118,
+            "imaginary": -0.0229859607681486
+          },
+          "radial_source": {
+            "real": [
+              [
+                3.22452283395264,
+                0.0014430757444848334,
+                0.0,
+                0.0
+              ],
+              [
+                0.001443075744327697,
+                0.4601583351159812,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.46059541876208265,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                0.46059541876208265
+              ]
+            ],
+            "imaginary": [
+              [
+                0.0004899353334757474,
+                0.0025689323901691152,
+                0.0,
+                0.0
+              ],
+              [
+                0.0025689323899572188,
+                -0.008433704304886514,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                -0.0015799357141939132,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                -0.0015799357141939132
+              ]
+            ]
+          },
+          "static_polynomial_coefficient": -1.5732038534588377,
+          "difference_from_static_polynomial": 0.03232220259464637,
+          "soft_quadrature_refinements": [
+            4.107845841261337e-09,
+            6.984086087236617e-10
+          ],
+          "velocity_endpoints": [
+            0.9157368615968665,
+            1.038793790893194
+          ],
+          "zero_order_phase_Ward_residual": 3.641704993118595e-13,
+          "radial_inverse": {
+            "real": 0.9390329321270263,
+            "imaginary": -0.010578186254199118
+          },
+          "covariance_min_singular_value": 0.9819750554527259,
+          "finite_q_phase_refinement": 5.564658156719939e-06,
+          "finite_q_runs": [
+            {
+              "q": 0.04,
+              "omega": 0.024,
+              "phase_over_q_squared": {
+                "real": -1.5481608090426409,
+                "imaginary": -0.022938702043881636
+              },
+              "radial_current_Ward_estimate": {
+                "real": -1.548160579678874,
+                "imaginary": -0.02293870205568466
+              },
+              "phase_vs_current_Ward_disagreement": 2.293637671719089e-07,
+              "loop_max_disagreement_from_soft": 0.002690766460200701,
+              "phase_error_from_soft": 0.002319741218334511
+            },
+            {
+              "q": 0.02,
+              "omega": 0.012,
+              "phase_over_q_squared": {
+                "real": -1.5499086530634723,
+                "imaginary": -0.0229741715324316
+              },
+              "radial_current_Ward_estimate": {
+                "real": -1.5499076625389558,
+                "imaginary": -0.022974171534803214
+              },
+              "phase_vs_current_Ward_disagreement": 9.905245164116363e-07,
+              "loop_max_disagreement_from_soft": 0.0013293331491497312,
+              "phase_error_from_soft": 0.000571537363045893
+            },
+            {
+              "q": 0.01,
+              "omega": 0.006,
+              "phase_over_q_squared": {
+                "real": -1.550348941303044,
+                "imaginary": -0.022983055493707986
+              },
+              "radial_current_Ward_estimate": {
+                "real": -1.5503449111222942,
+                "imaginary": -0.022983055493599795
+              },
+              "phase_vs_current_Ward_disagreement": 4.030180749792224e-06,
+              "loop_max_disagreement_from_soft": 0.0006627114659132598,
+              "phase_error_from_soft": 0.00013115970169414297
+            }
+          ]
+        },
+        {
+          "velocity_ray": 1.2,
+          "phase_coefficient": {
+            "real": -9.29740003345551,
+            "imaginary": 0.0
+          },
+          "radial_source": {
+            "real": [
+              [
+                3.225340930874563,
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.4599145651848211,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.4591150002733724,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                0.4591150002733724
+              ]
+            ],
+            "imaginary": [
+              [
+                0.0,
+                0.0006329554671703338,
+                0.0,
+                0.0
+              ],
+              [
+                0.000632955467091704,
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ]
+            ]
+          },
+          "static_polynomial_coefficient": -9.32032774537994,
+          "difference_from_static_polynomial": 0.022927711924429772,
+          "soft_quadrature_refinements": [
+            2.498001805406602e-16,
+            1.304512053934559e-15
+          ],
+          "velocity_endpoints": [],
+          "zero_order_phase_Ward_residual": 3.641704993118111e-13,
+          "radial_inverse": {
+            "real": 0.9267900361577057,
+            "imaginary": 0.0
+          },
+          "covariance_min_singular_value": 0.9842847022575785,
+          "finite_q_phase_refinement": 1.0499794912632865e-05,
+          "finite_q_runs": [
+            {
+              "q": 0.04,
+              "omega": 0.048,
+              "phase_over_q_squared": {
+                "real": -9.304297409540618,
+                "imaginary": 0.0
+              },
+              "radial_current_Ward_estimate": {
+                "real": -9.30429610905621,
+                "imaginary": 0.0
+              },
+              "phase_vs_current_Ward_disagreement": 1.3004844081621059e-06,
+              "loop_max_disagreement_from_soft": 0.009153503186615966,
+              "phase_error_from_soft": 0.00689737608510832
+            },
+            {
+              "q": 0.02,
+              "omega": 0.024,
+              "phase_over_q_squared": {
+                "real": -9.299125844071144,
+                "imaginary": 0.0
+              },
+              "radial_current_Ward_estimate": {
+                "real": -9.299120136336327,
+                "imaginary": 0.0
+              },
+              "phase_vs_current_Ward_disagreement": 5.7077348163403485e-06,
+              "loop_max_disagreement_from_soft": 0.003132189909585519,
+              "phase_error_from_soft": 0.001725810615633705
+            },
+            {
+              "q": 0.01,
+              "omega": 0.012,
+              "phase_over_q_squared": {
+                "real": -9.2978523928318,
+                "imaginary": 0.0
+              },
+              "radial_current_Ward_estimate": {
+                "real": -9.297828744241668,
+                "imaginary": 0.0
+              },
+              "phase_vs_current_Ward_disagreement": 2.3648590131486458e-05,
+              "loop_max_disagreement_from_soft": 0.0015373816866078175,
+              "phase_error_from_soft": 0.0004523593762897349
+            }
+          ]
+        }
+      ],
+      "reactive_zero": {
+        "bracket": [
+          0.1,
+          0.6
+        ],
+        "velocity_ray_at_Re_inverse_zero": 0.3742875209900472,
+        "phase_inverse_at_reactive_zero": {
+          "real": 2.2007451435368003e-11,
+          "imaginary": -0.018207330334943032
+        },
+        "is_a_real_frequency_pole": false,
+        "interpretation": "absorptive collective response; complex pole continuation is not computed",
+        "quadrature_ray_difference": 9.866607530994997e-12,
+        "finite_q_independent_inverse": {
+          "real": 7.329645980978274e-05,
+          "imaginary": -0.01820246523083323
+        },
+        "finite_q_disagreement": 7.345772275608775e-05
+      }
+    }
+  ],
+  "checks": {
+    "accepted_predecessor": true,
+    "predecessor_hash_lineage": true,
+    "angular_original_integral_independent_check": true,
+    "soft_radial_refinement": true,
+    "finite_q_approaches_derived_soft_limit": true,
+    "finite_q_loop_approaches_soft_limit": true,
+    "finite_q_independent_field_current_Ward": true,
+    "finite_q_phase_numerical_refinement": true,
+    "zero_order_phase_Ward_without_imposed_mass": true,
+    "thermal_ray_not_static_polynomial": true,
+    "reactive_zero_is_absorptive_not_an_undamped_pole": true,
+    "reactive_zero_quadrature_refinement": true,
+    "cold_equal_branch_correction_absent": true,
+    "protected_hashes_unchanged": true
+  },
+  "config": {
+    "rays": [
+      0.1,
+      0.3,
+      0.6,
+      1.2
+    ],
+    "finite_q_grid": [
+      0.04,
+      0.02,
+      0.01
+    ],
+    "soft_orders": [
+      64,
+      96,
+      128
+    ],
+    "finite_q_orders": [
+      64,
+      80
+    ],
+    "output_width": 0.0,
+    "radial_domain": "0<=k<infinity"
+  },
+  "thresholds": {
+    "soft_loop_absolute": 2e-05,
+    "phase_current_Ward_scaled_absolute": 0.001,
+    "phase_refinement_scaled_absolute": 0.001,
+    "static_phase_Ward_absolute": 2e-05
+  },
+  "evidence_artifacts": [
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/t13_hartree_real_axis.json",
+      "sha256": "a392cd0e1e45fd0b4e2b0db28136664b27e00b4338a083c7f0f9602c9fe5e148"
+    },
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/Research_T13_Hartree_Real_Axis.py",
+      "sha256": "3066bb4c1a33978e719c722bc8d97271ddc20bcd4e4e2dc09c09ec0f06204362"
+    },
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/t13_hartree_gauge_current.json",
+      "sha256": "b74428070c559faa3c7caa7ab8efd0258f9f692073b7e736c62a8d44bc8ac971"
+    },
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/Research_T13_Hartree_Gauge_Current.py",
+      "sha256": "1ca6a51f5c0bb95c565d536af428c901e93e94b726079a08e64b4a71b4d95943"
+    },
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/Research_T13_Hartree_Soft_Collective.py",
+      "sha256": "998bdd2202ae6ee6a369e8309fb47c6572a5da72256feedab677525f6d74eb7b"
+    }
+  ],
+  "protected_evidence_hashes": [
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/t13_conditional_twofluid_operator.json",
+      "sha256": "8606303e4818030dd74061c14b243542c19c4cbb262dda29261951d4c87d6412"
+    },
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/t13_polar_dynamic_composite.json",
+      "sha256": "2f07a63af3ce9945bf254d5da238bdefbd53597dae105ee7e50bbcbe8bc61f7d"
+    },
+    {
+      "path": "docs/core/07_artifacts/topic13/t13_topic13_closure_matrix.json",
+      "sha256": "e6e84772a400273c438e0b8ca3c7b5b14c9d720da0420fb4021b1c0e7a54fe66"
+    },
+    {
+      "path": "docs/core/07_artifacts/gates/uet_major_result_dependency_unlock_gate.json",
+      "sha256": "ecbefdf12ee1eb6661ae8096e3f62bf1ffa7992c96ca94f1149fdbc25a8bbe6e"
+    }
+  ],
+  "open_blockers": [
+    "collective_complex_poles_and_global_validity_domain",
+    "controlled_truncation_error_and_regulator_RG_action",
+    "joint_Phi_and_material_source_detector_admission",
+    "normal_heat_collision_KMS_entropy_transport",
+    "independent_measurement_input"
+  ],
+  "controlling_blocker": "collective_pole_domain_truncation_joint_Phi_material_transport_not_closed",
+  "dependency_unlocked": [
+    "same_candidate_collective_pole_research_only"
+  ],
+  "global_real_axis_stability_proved": false,
+  "collective_mode_speed_emitted": false,
+  "collision_rate_emitted": false,
+  "controlled_truncation_error_established": false,
+  "joint_Phi_stationarity_derived": false,
+  "g1_physical_unlock": false,
+  "g2_science_unlock": false,
+  "full_core_unlock": false,
+  "claim_promotion": false,
+  "parameter_fitting": false,
+  "artificial_width": false,
+  "clipping": false,
+  "IR_filter": false,
+  "imposed_Ward_projection": false,
+  "xie_2026_accessed": false,
+  "prior_Xie_context_exposure_review": "REVIEW_REQUIRED",
+  "core_composition_gate_overwritten": false,
+  "C_relabelled_as_charge_or_mass": false,
+  "R_gen_added_as_state": false,
+  "excluded_variables": [
+    "R_gen",
+    "R_obs",
+    "nondynamical_A"
+  ],
+  "claim_boundary": "Same fixed-Phi Hartree collisionless soft phase/source limit on declared rays. Not a physical sound speed, collision width, hydrodynamic heat/Kubo/KMS law, global pole proof, controlled approximation remainder, material TTG/He-II validation or Full Topic13 closure.",
+  "report": {
+    "MAJOR_RESULT_CLOSURE": "T13_FIXED_PHI_HARTREE_COLLISIONLESS_SOFT_PHASE_RESPONSE: CLOSED_FOR_LANE",
+    "WHAT_IS_ACTUALLY_CLOSED": [
+      "derived_equal_branch_thermal_ray_limit",
+      "phase_collective_kernel_from_radial_source_Ward",
+      "thermodynamic_static_ratio_not_same_as_collisionless_mode_equation",
+      "reactive_zero_absorption_distinguished_from_a_real_axis_pole"
+    ],
+    "WHAT_REMAINS_OPEN": [
+      "collective_complex_poles_and_global_validity_domain",
+      "controlled_truncation_error_and_regulator_RG_action",
+      "joint_Phi_and_material_source_detector_admission",
+      "normal_heat_collision_KMS_entropy_transport",
+      "independent_measurement_input"
+    ],
+    "DEPENDENCY_UNLOCKED": [
+      "same_candidate_collective_pole_research_only"
+    ],
+    "STATUS": "PASS_SCOPED_COLLISIONLESS_SOFT_RESPONSE",
+    "WHAT_CHANGED": "Derived thermal collisionless ray moments and phase Ward kernel; checked against unchanged full finite-q PV response.",
+    "EQUATION_OR_MAPPING": "A_n(v,w)=1/2 int c^n*w*c/(v-w*c+i0) dc; delta B=-N'(p)*Tr(Va Rp Vb Rp)*(A_n(v,w)-A_n(0,w))/2; lim Gamma_phase/q^2=-l*Gamma_AA_radial*l/s, l=(v,i,0,0)",
+    "VERIFICATION": {
+      "accepted_predecessor": true,
+      "predecessor_hash_lineage": true,
+      "angular_original_integral_independent_check": true,
+      "soft_radial_refinement": true,
+      "finite_q_approaches_derived_soft_limit": true,
+      "finite_q_loop_approaches_soft_limit": true,
+      "finite_q_independent_field_current_Ward": true,
+      "finite_q_phase_numerical_refinement": true,
+      "zero_order_phase_Ward_without_imposed_mass": true,
+      "thermal_ray_not_static_polynomial": true,
+      "reactive_zero_is_absorptive_not_an_undamped_pole": true,
+      "reactive_zero_quadrature_refinement": true,
+      "cold_equal_branch_correction_absent": true,
+      "protected_hashes_unchanged": true
+    },
+    "CONTROLLING_BLOCKER": "collective_pole_domain_truncation_joint_Phi_material_transport_not_closed",
+    "NEXT_ACTION": "Use the derived nonlocal soft kernel for collective pole/domain analysis; do not replace it by the equilibrium susceptibility ratio.",
+    "CLAIM_BOUNDARY": "Same fixed-Phi Hartree collisionless soft phase/source limit on declared rays. Not a physical sound speed, collision width, hydrodynamic heat/Kubo/KMS law, global pole proof, controlled approximation remainder, material TTG/He-II validation or Full Topic13 closure."
+  }
+}

@@ -1,5 +1,23 @@
 # Verification Spec
 
+## Collisionless Soft Collective Verification (2026-10-01)
+
+Run `Research_T13_Hartree_Soft_Collective.py` and its seventeen tests.
+Require independent original Cauchy angular integrals, signed velocity,
+forward-dispersion derivatives, exact static/cold limits and Landau-cut
+checks. Preregister rays .1,.3,.6,1.2 and q=.04,.02,.01 at the unchanged
+two witnesses. Require decreasing full-response/soft-limit disagreement,
+independent field/current phase Ward and finite-q quadrature refinement;
+record residual finite-q corrections separately from numerical error.
+New scaled phase metrics use absolute 1e-3, soft-loop refinement inherits
+2e-5 and static phase Ward inherits 2e-5. No predecessor or causal
+threshold is changed; the original leakage threshold is still 1e-6.
+Require nonzero absorption at the computed reactive zero and refuse to
+call it an undamped pole. Check code/evidence/protected hashes, the sole
+derived-predecessor text-read path, natural units and negative controls
+against the static-polynomial shortcut. Full physical/global/truncation
+flags remain false. No fitted width, filter or phase pseudoinverse.
+
 ## Scoped Real-Axis Verification (2026-10-01)
 
 Run `Research_T13_Hartree_Real_Axis.py` and `test_t13_hartree_real_axis.py`.

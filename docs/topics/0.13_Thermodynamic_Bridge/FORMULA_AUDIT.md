@@ -1,5 +1,15 @@
 # Formula Audit: 0.13_Thermodynamic_Bridge
 
+## Collisionless Soft Collective Kernel (2026-10-01)
+
+| formula_id | relation | variables and units | constant_origin | proof_status | verification_role | failure_mode | next_hardening_step |
+| :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- |
+| t13.diagnostic.hartree_soft_ray | `A_n=1/2 int c^n*w*c/(v-w*c+i0); delta B=-N'(p)*Tr(Va Rp Vb Rp)*(A_n(v,w)-A_n(0,w))/2` inside full radial integral | v,w,A_n dimensionless; p,T E; N' E^-1; R E^-1; bubble dimensionless, mixed E, current E^2 | expansion of unchanged equal-branch thermal divided difference | derived fixed-Phi collisionless limit, numerical radial/domain verification | independent Cauchy integral and unchanged full finite-q PV response | static thermodynamic derivative used as dynamical susceptibility; imaginary cut replaced by width | complex collective poles and candidate validity domain |
+| t13.diagnostic.hartree_radial_source_phase_Ward | `Gamma_phase/q^2 -> -l^T*Gamma_AA_radial*l/s`, l=(v,i,0,0) | phase inverse E^2; s E^2; source Hessian E^2; final coefficient dimensionless | same-action source Ward after radial-only elimination | derived identity and scoped finite-q check | independent phase Schur/current contraction, reactive-zero absorption and units | fully on-shell Pi contracted instead; Re inverse zero called undamped pole | approximation/regulator/action, joint Phi and material/heat admission |
+
+See [derivation](Result/artifacts/T13_HARTREE_SOFT_COLLECTIVE_2026-10-01.md).
+Local diagnostic IDs only; no admitted Core equation or ontology change.
+
 ## Scoped Hartree Real-Axis Response (2026-10-01)
 
 | formula_id | relation | variables and units | constant_origin | proof_status | verification_role | failure_mode | next_hardening_step |

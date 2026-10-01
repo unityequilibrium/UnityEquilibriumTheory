@@ -6,6 +6,8 @@
 
 ## ผลหลักสำหรับพอร์ตและทุนรอบถัดไป
 
+อัปเดตผลล่าสุด: [collisionless soft response](Result/artifacts/T13_HARTREE_SOFT_COLLECTIVE_2026-10-01.md) derive kernel ในลิมิต z=v*q และตรวจกับ full finite-q response แล้ว เทอม thermal ขึ้นกับ z/q และทั้งสองผู้สมัครมี absorption ที่ reactive zero จึงห้ามแทน dynamic response ด้วยอัตราส่วน stiffness/susceptibility หรือเรียก reactive zero ว่าโหมดไม่ลดทอน งานถัดไปคือ collective complex pole และ validity domain จาก kernel นี้ ตามด้วย approximation/regulator/action และ joint-Phi/material/heat-current admission ไม่เปลี่ยนวันพอร์ต โมเดล หรือรับ R1/Full Topic13 ครบจากผลย่อยนี้
+
 **ข้อเสนอเลือกงาน:** พอร์ตรอบแรกเน้นหนึ่งผลด้าน **stationary/source-complete thermal-response methods พร้อมแผนการวัด** ไม่ตั้งเงื่อนไขว่าต้องปิด Full Topic 13 หรือทำนาย He-II/graphite สำเร็จก่อนมีพอร์ต ผลปิดที่มีหลักฐานแล้วคือ stationary candidate, homogeneous counterterm match, external field response และ rest-frame current consistency ที่ fixed Phi ใน prescription ระบุชัด ตอนนี้ [real-axis successor](Result/artifacts/T13_HARTREE_REAL_AXIS_2026-10-01.md) ผ่าน independent on-shell/PV, vacuum และ Ward พร้อม artifact/hash แล้ว รับได้เฉพาะสิบจุดที่ประกาศ ไม่ใช่ global stability หรือ approximation/physical admission
 
 คำถามสำหรับหัวเรื่องงานที่เสนอ: **“แบบจำลอง finite-temperature ที่ stationary และรักษา source/current consistency กำหนด response ได้อะไรเอง และต้องวัด input ใดเพิ่มก่อนทำนายความร้อนของวัสดุ?”** เป็น research framing ที่เสนอ ไม่ใช่การรับรอง novelty; related-work review ต้องแยกวิธี Hartree/two-fluid ที่นำเข้าจาก contribution ที่พิสูจน์ได้ของงานนี้ ไม่ใช้การทำวิธีมาตรฐานซ้ำหรือชื่อ UET แทนความใหม่

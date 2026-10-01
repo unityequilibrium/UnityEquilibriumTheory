@@ -23,7 +23,8 @@
       "hartree_counterterm_matching_evidence_2026_10_01",
       "hartree_external_response_evidence_2026_10_01",
       "hartree_gauge_current_evidence_2026_10_01",
-      "hartree_real_axis_evidence_2026_10_01"
+      "hartree_real_axis_evidence_2026_10_01",
+      "hartree_soft_collective_evidence_2026_10_01"
     ],
     "new_real_axis_exploration_is_accepted_evidence": true,
     "real_axis_acceptance_boundary": "Audited ten-point fixed-Phi grid only; no global stability, truncation or physical prediction acceptance",
@@ -96,8 +97,8 @@
   },
   "execution_review_2026_10_01": {
     "record_class": "PLANNING_NOT_SCIENTIFIC_CLOSURE",
-    "current_scientific_evidence_field": "hartree_real_axis_evidence_2026_10_01",
-    "current_question": "Does the now-computed real-axis candidate response admit global collective spectral/IR and controlled approximation/regulator/action limits, followed by joint-Phi/material/heat-current matching without target fitting?",
+    "current_scientific_evidence_field": "hartree_soft_collective_evidence_2026_10_01",
+    "current_question": "What collective complex poles and stability domain follow from the derived nonlocal collisionless soft kernel, with controlled approximation/regulator/action and subsequent joint-Phi/material/heat-current matching? A static susceptibility ratio or reactive zero is not a mode prediction.",
     "scientific_deliverable_is_not_full_topic_closure": true,
     "model_trial": {
       "status": "NOT_RUN",
@@ -141,6 +142,32 @@
   "owner_topic": "0.13_Thermodynamic_Bridge",
   "research_goal_id": "T13_HE4_PREDICTIVE_CONTENT_AND_MEASUREMENT_DESIGN",
   "research_goal_status": "PARTIAL_PRE_SPRINT_EVIDENCE_NOT_SCIENTIFIC_CLOSURE",
+  "hartree_soft_collective_evidence_2026_10_01": {
+    "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/t13_hartree_soft_collective.json",
+    "sha256": "a7e58a3f9dcdefd032d12e8e6d11d626655d0b2614c367374b90bef3cb620fb4",
+    "verification_status": "PASS_SCOPED_COLLISIONLESS_SOFT_RESPONSE",
+    "closure_level": "CLOSED_FOR_LANE",
+    "branch_id": "t13.candidate.fixed_phi_hartree_ms_finite_potential_v1",
+    "scientific_contribution": "Derived equal-branch thermal ray kernel and radial-source phase Ward map; independent full finite-q response approaches the limit; both reactive zeros remain absorptive rather than undamped poles",
+    "controlling_blocker": "collective_pole_domain_truncation_joint_Phi_material_transport_not_closed",
+    "D05_action": "Use the verified static-versus-dynamical response distinction as preliminary methods evidence, not material sound or a full closure claim",
+    "W04_action": "Determine collective complex poles and validity domain from the nonlocal kernel, then approximation/regulator/action and joint-Phi/material admission",
+    "collisionless_soft_phase_kernel_derived": true,
+    "soft_kernel_scope": "two_fixed_Phi_witnesses_four_velocity_rays_and_three_finite_q_cross_checks_not_global",
+    "gauge_current_vertex_computed": true,
+    "real_axis_limit_admitted": true,
+    "real_axis_scope_is_inherited_from_predecessor": true,
+    "real_axis_admission_scope": "two_fixed_Phi_witnesses_and_ten_positive_frequency_q_points_not_global",
+    "collective_mode_speed_emitted": false,
+    "collision_rate_emitted": false,
+    "global_real_axis_stability_proved": false,
+    "controlled_truncation_error_established": false,
+    "full_covariant_counterterm_match": false,
+    "g1_physical_unlock": false,
+    "g2_science_unlock": false,
+    "full_core_unlock": false,
+    "core_composition_gate_overwritten": false
+  },
   "hartree_real_axis_evidence_2026_10_01": {
     "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/t13_hartree_real_axis.json",
     "sha256": "a392cd0e1e45fd0b4e2b0db28136664b27e00b4338a083c7f0f9602c9fe5e148",

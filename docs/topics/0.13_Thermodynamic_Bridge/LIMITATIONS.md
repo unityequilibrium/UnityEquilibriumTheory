@@ -1,5 +1,19 @@
 # Limitations
 
+## Collisionless Soft Collective Boundary (2026-10-01)
+
+The [soft response](Result/artifacts/T13_HARTREE_SOFT_COLLECTIVE_2026-10-01.md)
+is derived in the unchanged gapped internal Hartree prescription at fixed
+Phi. Its thermal ray dependence rules out replacing the computed dynamical
+kernel by the static susceptibility/stiffness polynomial on these witnesses.
+Absorption at the reactive zero does not determine a complex pole, collision
+width, first/second sound speed, Kubo transport or material attenuation.
+Finite-q corrections and quadrature differences remain separate; neither
+is a Hartree remainder bound. There is no global stability, joint-Phi or
+material/normal/heat-current/KMS/entropy admission. The earlier massless
+composite IR results and physical/Core gates are preserved, not repaired by
+the internal gap. Prior Xie exposure remains REVIEW_REQUIRED.
+
 ## Scoped Real-Axis Boundary (2026-10-01)
 
 The [real-axis successor](Result/artifacts/T13_HARTREE_REAL_AXIS_2026-10-01.md)

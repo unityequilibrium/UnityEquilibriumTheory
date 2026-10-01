@@ -25,6 +25,15 @@
 
 ## Constraints
 
+Latest collective evidence: `Result/artifacts/T13_HARTREE_SOFT_COLLECTIVE_2026-10-01.md`
+derives the collisionless z=v*q infrared kernel and checks it against the
+unchanged finite-q response. Its thermal ray dependence cannot be replaced
+by the equilibrium stiffness/susceptibility polynomial; both reactive zeros
+are absorptive, not undamped poles or material sound predictions. Next
+analyze controlled complex poles and candidate validity domain, then
+approximation/regulator/action, joint-Phi/material and heat-current input.
+Full Goal, R1 acceptance and all portfolio/model dates remain unchanged.
+
 Latest real-axis evidence: `Result/artifacts/T13_HARTREE_REAL_AXIS_2026-10-01.md`
 closes exact angular PV and pair/scattering cuts with independent forward-shell
 delta roots, radial phase space and same-current Ward/vacuum/reality checks on

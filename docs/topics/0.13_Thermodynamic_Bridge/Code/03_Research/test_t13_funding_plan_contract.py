@@ -123,6 +123,11 @@ def test_execution_review_is_not_a_model_trial_or_physical_closure():
     assert current["real_axis_admission_scope"] == "two_fixed_Phi_witnesses_and_ten_positive_frequency_q_points_not_global"
     assert current["global_real_axis_stability_proved"] is False
     assert current["controlled_truncation_error_established"] is False
+    assert current["collisionless_soft_phase_kernel_derived"] is True
+    assert current["soft_kernel_scope"] == "two_fixed_Phi_witnesses_four_velocity_rays_and_three_finite_q_cross_checks_not_global"
+    assert current["real_axis_scope_is_inherited_from_predecessor"] is True
+    assert current["collective_mode_speed_emitted"] is False
+    assert current["collision_rate_emitted"] is False
     assert PLAN["hartree_gauge_current_evidence_2026_10_01"]["real_axis_limit_admitted"] is False
     trial = review["model_trial"]
     assert trial["status"] == "NOT_RUN"
@@ -164,6 +169,7 @@ def test_portfolio_strategy_preserves_scientific_acceptance_and_existing_dates()
     }
     assert strategy["new_real_axis_exploration_is_accepted_evidence"] is True
     assert "hartree_real_axis_evidence_2026_10_01" in strategy["accepted_preliminary_evidence_fields"]
+    assert "hartree_soft_collective_evidence_2026_10_01" in strategy["accepted_preliminary_evidence_fields"]
     for flag in ("novelty_established_by_planning", "scientific_goal_completion_rule_changed",
                  "core_composition_gate_overwritten", "physical_gate_changed", "claim_promotion"):
         assert strategy[flag] is False
