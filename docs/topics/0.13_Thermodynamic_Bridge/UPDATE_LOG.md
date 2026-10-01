@@ -1,3 +1,27 @@
+## 2026-10-02 - Funding decision companion and model/next-round plan
+
+MAJOR_RESULT_CLOSURE: Planning clarification only; no scientific closure or Goal acceptance.
+
+WHAT_IS_ACTUALLY_CLOSED: One readable decision companion maps existing 7/11 October freeze/review to pre-freeze work, R1-R5 reviews and missed-round scenarios. Model roles have current official sources; trial remains NOT_RUN.
+
+WHAT_REMAINS_OPEN: gapless equilibrium thermal prescription, independent source/scale/material/readout, physical transport, scientific G0-G5/R1-R5, novelty/measurement design and actual call/PI/budget. Planning is not evidence that the new EFT works.
+
+DEPENDENCY_UNLOCKED: None. No physical/Core/Gravity gate or owner composition changed.
+
+STATUS: PLAN_REVIEW_READY_NOT_SCIENTIFIC_ACCEPTANCE; public safety safe.
+
+WHAT_CHANGED: FUNDING_DECISION_ROADMAP_2026-10-02.md, machine-readable companion and nine planning tests; links from 14-day/12-week/Goal docs. Corrected stale 14-day introduction that still described only five pre-sprint results; retained canonical acceptance states and dates. No scientific code/artifact or Core-owner edit.
+
+EQUATION_OR_MAPPING: Proposed same-action low-T prescription -> independent source/dimensional/readout map -> locked comparison or verified scoped structural result. No EOS, alpha or transport coefficient derived in this planning pass.
+
+VERIFICATION: Nine new companion tests plus seventeen existing funding-contract tests passed together: 26 passed in 6.38 seconds. Tests check existing evidence SHA-256, preserved dates/R1-R5, hypothetical-call buffers, model trial NOT_RUN, physical/holdout boundaries, local links and eleven report fields. Whitespace check passed. Scientific verifiers, model trial and external replication were not rerun; no new numeric holdout access.
+
+CONTROLLING_BLOCKER: gapless_equilibrium_thermal_prescription_not_derived; empirical/source and funding eligibility remain separate open obligations.
+
+NEXT_ACTION: Scoped commit/push to existing draft PR #30 and inspect exact-head checks; then separate named-branch derivation with independent controls plus measurement card before 7 October. Portfolio review 11 October, R1 review 25 October; dates do not accept work. Existing active Goal unchanged.
+
+CLAIM_BOUNDARY: Plan only, not consistent thermal model, physical/calibration/source validation, Full Topic13/Core, funding eligibility or submission readiness. No fitting, threshold/ontology change, pristine-blind claim, model configuration change, external contact/purchase/submission or new Goal/automation. Conserved-C failure at 1e-6 and prior Xie REVIEW_REQUIRED retained.
+
 ## 2026-10-02 - Conditional joint Hartree low-temperature admission boundary
 
 MAJOR_RESULT_CLOSURE: T13_JOINT_HARTREE_LOW_T_THERMODYNAMIC_COMPATIBILITY_BOUNDARY, CLOSED_FOR_LANE. Full active Goal/R1 and physical acceptance remain open.
