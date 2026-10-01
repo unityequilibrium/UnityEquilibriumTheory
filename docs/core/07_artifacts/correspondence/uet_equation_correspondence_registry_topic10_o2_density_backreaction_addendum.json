@@ -1,0 +1,62 @@
+{
+  "schema_version": "uet-equation-registry-addendum-v1",
+  "status": "LEADING_MEAN_DENSITY_REFERENCE_NOT_CORE_OR_MATERIAL_PROMOTION",
+  "extends": "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry_topic10_o2_current_ward_addendum.json",
+  "equation_entries": [
+    {
+      "equation_id": "candidate.topic10_13.o2_mean_tree_density_response",
+      "classification": "tree_wave_order_A_squared_derivation",
+      "relation_or_code_path": {
+        "mean_shift": "delta_rho/A0^2=-(3a^2+1)/(4rho)",
+        "corrected_charge": "q/Nwave=a*(E-mu*a)/n=-d_mu E",
+        "corrected_energy": "e/Nwave=E+mu*q/Nwave",
+        "grand_energy": "(e-mu*q)/Nwave=E",
+        "thermal_subset": "fixed-K lower-mode Gaussian pressure derivatives"
+      },
+      "variables": {
+        "rho,A0,E,k,mu": "natural energy dimensionE",
+        "a": "dimensionless polarization",
+        "n": "action norm per amplitude squared,E",
+        "Nwave": "wave action density,E3",
+        "delta_rho": "mean condensate radial shift,E",
+        "q": "charge density,E3",
+        "e": "energy density,E4"
+      },
+      "mathematical_role": "leading homogeneous mean response closes tree order-A^2 density bookkeeping,not full nonlinear/interacting Ward identities",
+      "standard_physics_counterpart": "O(2) radial tadpole stationarity,Noether density and stress/Legendre correspondence",
+      "observable_mapping": {
+        "status": "NOT_ADMITTED",
+        "reason": "no interacting state,material heat frame,SI atom mapping or Topic13 independent protocol"
+      },
+      "unit_lane": "natural_selected_tree_wave",
+      "parameter_dimensions": "same prior selected positive source/coupling; amplitude polynomial extraction is diagnostic",
+      "source_or_origin": "docs/topics/0.10_Fluid_Dynamics_Chaos/CORE_O2_DENSITY_BACKREACTION.md",
+      "primary_reference": "https://arxiv.org/html/1212.0670v3",
+      "assumptions": [
+        "order-A^2 mean radial response at fixed mu",
+        "tree modes and zero superflow,closed fixed response",
+        "no full nonlinear wave or vacuum renormalization",
+        "thermal integrals are lower-mode finite-domain Gaussian subset only",
+        "paper T^2>>lambda*mu^2 accuracy condition is not met by selected states"
+      ],
+      "symmetry_and_conservation": "E_G=E_E-mu Q=E*Nwave; prior spatial J_E=J_G+mu J_N remains unchanged",
+      "limiting_cases": [
+        "soft lower-mode charge need not be positive",
+        "raw density lacks condensate response"
+      ],
+      "implementation_paths": [
+        "docs/topics/0.10_Fluid_Dynamics_Chaos/Code/03_Research/Research_Fluid_Core_O2_Density_Backreaction.py"
+      ],
+      "verifier_paths": [
+        "docs/topics/0.10_Fluid_Dynamics_Chaos/Code/03_Research/Research_Fluid_Core_O2_Density_Backreaction.py"
+      ],
+      "evidence_class": "INTERNAL_LEADING_MEAN_DENSITY_SOURCE_CORRESPONDENCE",
+      "proof_status": "explicit leading-order derivation;source/root/thermal diagnostics pending,not formal or material",
+      "blockers": [
+        "useful_certified_current_error_and_interacting_Noether_heat_frame_material_correspondence_open",
+        "vector_momentum_constitutive_origin_and_material_frame_admission_open"
+      ],
+      "claim_boundary": "Leading mean density identity does not complete interacting EOS/Ward/state or heat/material/SI admission"
+    }
+  ]
+}

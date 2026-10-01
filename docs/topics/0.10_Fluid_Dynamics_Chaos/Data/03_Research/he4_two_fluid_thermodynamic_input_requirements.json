@@ -1,0 +1,123 @@
+{
+  "schema_version": "he4-two-fluid-thermodynamic-input-requirements-v1",
+  "date": "2026-09-30",
+  "status": "MATERIAL_INPUTS_UNASSIGNED_NOT_A_DATASET",
+  "controlling_blocker": "two_fluid_fixed_pressure_EOS_and_UET_state_mapping_missing",
+  "claim_promotion": false,
+  "dependency_unlock": false,
+  "physical_uet_operator_admitted": false,
+  "material_state": "He-II at matched T90/SVP equilibrium; local perturbation derivatives at their specified thermodynamic constraints",
+  "numerical_material_data_ingested": false,
+  "required_inputs": [
+    {
+      "id": "rho",
+      "units": "kg m^-3",
+      "role": "mass density, independent of structural C",
+      "source_candidate": "Donnelly-Barenghi Table 1.2, derived from dielectric measurements",
+      "value": null,
+      "uncertainty": null
+    },
+    {
+      "id": "rho_s_and_rho_n",
+      "units": "kg m^-3",
+      "role": "superfluid response density, not automatically condensate density",
+      "source_candidate": "Existing Section 2 calibration is partly sound-derived; independent response ancestry remains unresolved",
+      "value": null,
+      "uncertainty": null
+    },
+    {
+      "id": "specific_entropy",
+      "units": "J kg^-1 K^-1",
+      "role": "thermodynamic entropy per mass",
+      "source_candidate": "Table 8.3 fountain-pressure versus Table 8.5 calorimetry-integrated entropy; select one and preserve lineage/covariance",
+      "value": null,
+      "uncertainty": null
+    },
+    {
+      "id": "fixed_pressure_heat_capacity",
+      "units": "J kg^-1 K^-1",
+      "role": "c_p=T*(partial s/partial T)_p, not an unidentified C_sat column",
+      "source_candidate": "Section 7 saturation-path calorimetry requires explicit path correction and protocol",
+      "value": null,
+      "uncertainty": null
+    },
+    {
+      "id": "isothermal_compressibility",
+      "units": "Pa^-1",
+      "role": "kappa_T=(partial rho/partial p)_T/rho",
+      "source_candidate": "Independent pressure-resolved EOS or admitted source record, not SVP tangent alone",
+      "value": null,
+      "uncertainty": null
+    },
+    {
+      "id": "fixed_pressure_expansion",
+      "units": "K^-1",
+      "role": "alpha_p=-(partial rho/partial T)_p/rho",
+      "source_candidate": "Section 1 SVP derivative needs kappa_T and p_path_prime before this conversion",
+      "value": null,
+      "uncertainty": null
+    },
+    {
+      "id": "svp_pressure_slope",
+      "units": "Pa K^-1",
+      "role": "d p_SVP/dT with matching scale/state/uncertainty",
+      "source_candidate": "Independent source still to lock; not supplied numerically here",
+      "value": null,
+      "uncertainty": null
+    },
+    {
+      "id": "phase_and_UET_correspondence",
+      "units": "separate dimensionless superfluid phase and mu_mass in J kg^-1",
+      "role": "materially justified Josephson/relative-motion and entropy mapping, not Phi relabeling",
+      "source_candidate": "Core F0-F8 admission remains required",
+      "value": null,
+      "uncertainty": null
+    },
+    {
+      "id": "response_protocol_and_covariance",
+      "units": "source-specific",
+      "role": "frequency/mode geometry/amplitude, hydrodynamic regime, uncertainty/covariance or labeled bounds",
+      "source_candidate": "J02 compiled speed rows cannot identify these",
+      "value": null,
+      "uncertainty": null
+    },
+    {
+      "id": "dissipative_tensor",
+      "units": "source-specific",
+      "role": "conductivity, shear, second/bulk viscosities and applicable mutual friction; not normal eta alone",
+      "source_candidate": "Not part of this ideal reference or a physical attenuation calculation",
+      "value": null,
+      "uncertainty": null
+    }
+  ],
+  "sources": [
+    {
+      "url": "https://srd.nist.gov/jpcrdreprint/1.556028.pdf",
+      "read_scope": "Section 1 equations 1.2-1.6; Section 7 notes 9,11,13; Section 8 notes 6-9",
+      "role": "path definition, unit and provenance constraints; no extracted material rows"
+    },
+    {
+      "url": "https://arxiv.org/abs/cond-mat/0009333",
+      "read_scope": "Section IV 86-88 and Appendix C C1-C10",
+      "role": "standard hydrodynamic/thermodynamic mode structure; not dilute-gas coefficients"
+    }
+  ],
+  "covariance_policy": "Do not assume independently sampled entropy and heat capacity when entropy is integrated from calorimetry. Sound-derived superfluid density cannot silently make a second-sound test independent.",
+  "svp_path_derivative_policy": "c_sat, alpha_path and p_path_prime do not identify kappa_T or the full local fixed-pressure EOS.",
+  "unit_conversions": {
+    "density_g_cm3_to_kg_m3": 1000,
+    "entropy_J_gK_to_J_kgK": 1000,
+    "review_heat_capacity_J_molK_to_J_kgK": 249.837
+  },
+  "physical_admission": "BLOCKED",
+  "blind_holdout": false,
+  "core_to_material_mapping_obligations": [
+    "Physical Helmholtz f_H(rho,T) or equivalent EOS with independent source and uncertainty",
+    "Explicit Core-to-material state Jacobian/SI scales; no C=rho or Phi=T substitution",
+    "sigma=-partial f_H/partial T at fixed rho and e=f_H+T*sigma with invertible thermal Legendre map",
+    "Thermodynamic Hessian and Maxwell consistency at the matched equilibrium",
+    "Independent superfluid phase/stiffness and rho_s response correspondence, not condensate-fraction substitution",
+    "Derived R/history traces have no independent entropy-reservoir feedback",
+    "Freeze existing Topic 13 matching constants without response rematching; retain ancestry-overlap classification"
+  ]
+}

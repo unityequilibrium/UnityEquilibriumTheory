@@ -1,0 +1,363 @@
+{
+  "schema_version": "t10-openai-formal-transfer-review-v1",
+  "date": "2026-10-01",
+  "area": "research-core",
+  "record_role": "SOURCE_STATIC_INSPECTION_AND_DESIGN_ONLY",
+  "status": "COMPLETED_SCOPED_SOURCE_REVIEW_NOT_FORMAL_PROOF",
+  "uet_base_commit": "d88ee7987f32fe7584c94ae3c5f27d7e133aa33f",
+  "report_path": "docs/topics/0.10_Fluid_Dynamics_Chaos/OPENAI_FORMAL_TRANSFER_REVIEW_2026-10-01.md",
+  "physical_controller": "vector_momentum_constitutive_origin_and_material_frame_admission_open",
+  "measured_controller": "infrared_collision_form_domain_continuum_current_and_physical_heat_current_admission_open",
+  "external_repository": {
+    "url": "https://github.com/openai/NavierStokesAndEuler",
+    "commit": "f9e8bc5b38b6e212696e8a30e3e91517af887bbd",
+    "current_main_checked": true,
+    "build_executed": false,
+    "comparator_executed": false,
+    "nanoda_executed": false,
+    "transitive_import_closure_checked": false,
+    "payloads_vendored": false
+  },
+  "external_source_records": [
+    {
+      "path": "formalization.yaml",
+      "git_blob_sha": "6ec2d2dce2c8f634220c7d3709430e8c7bfc6a0c",
+      "sha256": "d9866d5c1fdc16832f098e5f2affa96baf0b156a5f34b9be015d793e1abe2fdd",
+      "bytes": 4555,
+      "url": "https://github.com/openai/NavierStokesAndEuler/blob/f9e8bc5b38b6e212696e8a30e3e91517af887bbd/formalization.yaml",
+      "payload_vendored": false
+    },
+    {
+      "path": "ComparatorChallenges/NavierStokes.json",
+      "git_blob_sha": "b5fd32b1211faf7d282dac09d70be5527da9f486",
+      "sha256": "7610ecead7b390d80ff7f4229a3ff8f18d630e046f7ad1de4f92c7e8e76845b8",
+      "bytes": 375,
+      "url": "https://github.com/openai/NavierStokesAndEuler/blob/f9e8bc5b38b6e212696e8a30e3e91517af887bbd/ComparatorChallenges/NavierStokes.json",
+      "payload_vendored": false
+    },
+    {
+      "path": "ComparatorChallenges/NavierStokes.lean",
+      "git_blob_sha": "673fb19e26e60818d446363afd953f618719f99b",
+      "sha256": "0cd193b8d5cbd0266e6e2f72e68dd5abcdcf2430ebd435dd9289737e9aa7da61",
+      "bytes": 13031,
+      "url": "https://github.com/openai/NavierStokesAndEuler/blob/f9e8bc5b38b6e212696e8a30e3e91517af887bbd/ComparatorChallenges/NavierStokes.lean",
+      "payload_vendored": false
+    },
+    {
+      "path": "NavierStokes/ComparatorDefinitions.lean",
+      "git_blob_sha": "d92c81ac99c1139e54c181c97d9021e975e23b7a",
+      "sha256": "8d90e0f9eee14f8b01773852083a02fd58bda59d4de2abb60d1787bbc9f6ebf4",
+      "bytes": 10979,
+      "url": "https://github.com/openai/NavierStokesAndEuler/blob/f9e8bc5b38b6e212696e8a30e3e91517af887bbd/NavierStokes/ComparatorDefinitions.lean",
+      "payload_vendored": false
+    },
+    {
+      "path": "NavierStokes/ComparatorSolution.lean",
+      "git_blob_sha": "cc232068cd384dbbddce2753b1fc4a4017c0f2d7",
+      "sha256": "52950d5d618a8d34c9bfbdb16641c81c276e97b6d7fd2a76c08577353f0b0227",
+      "bytes": 1359,
+      "url": "https://github.com/openai/NavierStokesAndEuler/blob/f9e8bc5b38b6e212696e8a30e3e91517af887bbd/NavierStokes/ComparatorSolution.lean",
+      "payload_vendored": false
+    },
+    {
+      "path": "NavierStokes/ComparatorR3Theorem.lean",
+      "git_blob_sha": "3d651180befa2348b02d4507a7892940eeb89abd",
+      "sha256": "d05cd1c55e78709dabe1996546eb6ddaaa46e602d2ef1b05c6e2085320781207",
+      "bytes": 2098,
+      "url": "https://github.com/openai/NavierStokesAndEuler/blob/f9e8bc5b38b6e212696e8a30e3e91517af887bbd/NavierStokes/ComparatorR3Theorem.lean",
+      "payload_vendored": false
+    },
+    {
+      "path": "NavierStokes/ComparatorTheorem.lean",
+      "git_blob_sha": "b92d0efd0a59660d9fd484a35fc2c45c4829b65f",
+      "sha256": "629c992327e531611c20165eb14db24edcabcf8f646a1d2689be9ac6fe2a9c68",
+      "bytes": 2711,
+      "url": "https://github.com/openai/NavierStokesAndEuler/blob/f9e8bc5b38b6e212696e8a30e3e91517af887bbd/NavierStokes/ComparatorTheorem.lean",
+      "payload_vendored": false
+    },
+    {
+      "path": "lakefile.toml",
+      "git_blob_sha": "9ebc030daf98b40aeb90636ef2016d791ad5dd3a",
+      "sha256": "97b2804da5b9a2cd0aaf44ce42b7c39e9947beff9d2ac01a11e0d3d867af1c09",
+      "bytes": 662,
+      "url": "https://github.com/openai/NavierStokesAndEuler/blob/f9e8bc5b38b6e212696e8a30e3e91517af887bbd/lakefile.toml",
+      "payload_vendored": false
+    },
+    {
+      "path": "lean-toolchain",
+      "git_blob_sha": "b814d987e0c93cb99938be934d9b277778495ba1",
+      "sha256": "8190e75a201741065fe508b28955dd64dd72d090babe5f70ce6848879d68ae88",
+      "bytes": 29,
+      "url": "https://github.com/openai/NavierStokesAndEuler/blob/f9e8bc5b38b6e212696e8a30e3e91517af887bbd/lean-toolchain",
+      "payload_vendored": false
+    },
+    {
+      "path": "lake-manifest.json",
+      "git_blob_sha": "f07a8454cb6200d90bcc4371bc9965e9f8f46c7d",
+      "sha256": "5ec1dc8e009008d0efb9601cd38f6ba54e753fd538b0e5f8c3e6c5ec72ee1e09",
+      "bytes": 3810,
+      "url": "https://github.com/openai/NavierStokesAndEuler/blob/f9e8bc5b38b6e212696e8a30e3e91517af887bbd/lake-manifest.json",
+      "payload_vendored": false
+    }
+  ],
+  "unchanged_previous_source_records_rechecked": [
+    "formalization.yaml",
+    "ComparatorChallenges/NavierStokes.json",
+    "ComparatorChallenges/NavierStokes.lean",
+    "NavierStokes/ComparatorSolution.lean"
+  ],
+  "static_source_diagnostics": {
+    "definition_block_equal_after_simple_comment_and_whitespace_normalization": true,
+    "normalization_scope": "Source lexical comparison only; no Lean elaboration, type equivalence or import-closure audit.",
+    "challenge_placeholder_tokens": 2,
+    "selected_nonchallenge_file_placeholder_tokens": {
+      "NavierStokes/ComparatorDefinitions.lean": 0,
+      "NavierStokes/ComparatorSolution.lean": 0,
+      "NavierStokes/ComparatorR3Theorem.lean": 0,
+      "NavierStokes/ComparatorTheorem.lean": 0
+    },
+    "config": {
+      "challenge_module": "ComparatorChallenges.NavierStokes",
+      "solution_module": "NavierStokes.ComparatorSolution",
+      "enable_nanoda": true,
+      "theorem_names": [
+        "NavierStokes.Comparator.navier_stokes_breakdown_R3",
+        "NavierStokes.Comparator.navier_stokes_breakdown_periodic"
+      ],
+      "permitted_axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ]
+    },
+    "direct_submission_imports": [
+      "NavierStokes.ComparatorR3Theorem",
+      "NavierStokes.ComparatorTheorem"
+    ],
+    "definition_names_read": [
+      "InitialVelocityCondition",
+      "ForceCondition",
+      "NavierStokesExistenceAndSmoothness",
+      "NavierStokesExistenceAndSmoothnessRn",
+      "NavierStokesExistenceAndSmoothnessPeriodic"
+    ],
+    "toolchain": "leanprover/lean4:v4.34.0-rc2",
+    "main_sha_unchanged_since_previous_review": true
+  },
+  "normalization_recipe": {
+    "block_comment_pattern": "/-.*?-/",
+    "block_comment_flags": "DOTALL (non-nested, sufficient only for the selected files)",
+    "line_comment_pattern": "--[^\\n]*",
+    "scope_start": "namespace NavierStokes.Comparator",
+    "scope_end": "first theorem navier_stokes_breakdown_R3 or end NavierStokes.Comparator",
+    "whitespace_pattern": "\\s+",
+    "comparison": "exact normalized string equality",
+    "token_pattern": "\\b(sorry|axiom)\\b",
+    "limits": "Lexical source reading, not a Lean parser, type checker, theorem dependency or axiom closure audit."
+  },
+  "literature_followup": [
+    {
+      "id": "constantin_ignatova_vicol_analytic_force",
+      "url": "https://arxiv.org/html/2609.20803v1",
+      "version": "v1",
+      "date": "2026-09-17",
+      "read_scope": "Abstract and introduction only, including explicitly stated limitations",
+      "full_proof_audited": false,
+      "role": "forcing regularity and additional-hypothesis scope warning; no acceptance transfer"
+    },
+    {
+      "id": "lei_ren_part_i",
+      "url": "https://arxiv.org/abs/2609.35406v2",
+      "version": "v2",
+      "read_scope": "Abstract and current version metadata recheck",
+      "full_proof_audited": false,
+      "role": "profile-only reading aid, not complete external verification"
+    },
+    {
+      "id": "cao_chi_nie",
+      "url": "https://arxiv.org/abs/2609.10262v4",
+      "version": "v4",
+      "read_scope": "Abstract and current version metadata recheck",
+      "full_proof_audited": false,
+      "role": "topology-specific result screened only"
+    },
+    {
+      "id": "comparator_documentation",
+      "url": "https://github.com/leanprover/comparator/blob/v4.34.0-rc2/README.md",
+      "read_scope": "Guarantees, trust assumptions, external kernels, definition holes and internals",
+      "execution_performed": false
+    }
+  ],
+  "applicability": [
+    {
+      "area": "statement_and_assumption_alignment",
+      "value": "HIGH_METHOD_VALUE",
+      "assessment_kind": "qualitative_inference",
+      "measured_speedup": null
+    },
+    {
+      "area": "finite_collision_to_continuum_current",
+      "value": "HIGH_METHOD_VALUE_NO_DIRECT_KINETIC_THEOREM_TRANSFER",
+      "assessment_kind": "qualitative_inference",
+      "continuum_gate_closed": false
+    },
+    {
+      "area": "3d_adversarial_source",
+      "value": "CONDITIONAL_FUTURE",
+      "requires": [
+        "physical_operator_admission",
+        "source_force_reconstruction"
+      ]
+    },
+    {
+      "area": "SI_material_and_second_sound",
+      "value": "NO_DIRECT_EVIDENCE",
+      "material_admitted": false
+    },
+    {
+      "area": "runtime_or_UET_prediction_improvement",
+      "value": "UNMEASURED",
+      "measured_speedup": null
+    }
+  ],
+  "proposed_work": [
+    {
+      "id": "OA0",
+      "parent": "J00/source review",
+      "status": "COMPLETED_SCOPED",
+      "task": "Pinned direct source/statement/bridge inspection, not proof checking"
+    },
+    {
+      "id": "OA1",
+      "parent": "J01/reference mathematics",
+      "status": "PROPOSED_NOT_EXECUTED",
+      "task": "Locked scalar-gradient/curl statement and small reciprocal-work formal pilot",
+      "requires": [
+        "complete regularity/domain/coefficient card",
+        "independent challenge",
+        "checker and theorem-axiom logs",
+        "statement-mismatch negative control"
+      ]
+    },
+    {
+      "id": "OA2",
+      "parent": "J01/J02 selected kinetic preparation",
+      "status": "PROPOSED_NOT_EXECUTED",
+      "task": "Selected collision positivity/momentum identities formal pilot; no implicit positive gap"
+    },
+    {
+      "id": "OA3",
+      "parent": "J01/J02 selected kinetic preparation",
+      "status": "PROPOSED_NOT_EXECUTED",
+      "task": "Continuum collision-form domain, endpoint bounds and source-weighted inverse/error control; gap separated from nullspace"
+    },
+    {
+      "id": "OA4",
+      "parent": "Core and J02/J05/J06",
+      "status": "PROPOSED_NOT_EXECUTED",
+      "task": "Microscopic material heat current/frame/two-fluid state plus SI/source/independence"
+    },
+    {
+      "id": "OA5",
+      "parent": "J04/J07/J08",
+      "status": "PROPOSED_NOT_EXECUTED",
+      "task": "Admitted physical candidate controls, norms, residuals, convergence and work-precision",
+      "requires": [
+        "physical_operator_admission"
+      ]
+    },
+    {
+      "id": "OA6",
+      "parent": "optional 3D source",
+      "status": "PROPOSED_NOT_EXECUTED",
+      "task": "Pinned finite-window NS/Euler source/forcing reconstruction",
+      "requires": [
+        "physical_operator_admission",
+        "reproducible source package"
+      ]
+    }
+  ],
+  "negative_inference_rules": [
+    "Source lexical equality is not Lean type equality or kernel/Comparator PASS.",
+    "Challenge sorry placeholders do not imply submission theorem depends on them; selected clean tokens do not prove a clean transitive closure.",
+    "Smooth forcing is not analytic forcing; extra symmetry/bounds cannot be silently dropped.",
+    "Finite matrix nullspace is not a uniform continuum gap or source-specific current upper bound.",
+    "No uniform gap, if established separately, would not alone imply divergent current response.",
+    "A derivative definition's default value does not establish differentiability.",
+    "Paper forcing reconstructed after seeing a desired field is not an independent UET prediction.",
+    "Formal mathematics is not material/SI/independent-data admission.",
+    "Qualitative method value is not measured research acceleration."
+  ],
+  "local_evidence_records": [
+    {
+      "path": "docs/topics/0.10_Fluid_Dynamics_Chaos/Data/03_Research/openai_topic10_applicability_review_2026_09_30.json",
+      "sha256": "52cad9b80c677946c43cb85debc10c6a7c50eb725df13c593f33f90c8d2e68fb",
+      "role": "as-reviewed committed snapshot, not replacement live gate"
+    },
+    {
+      "path": "docs/topics/0.10_Fluid_Dynamics_Chaos/Data/03_Research/fluid_thermal_joint_research_plan.json",
+      "sha256": "482ca964a8a85ae2c846cdd616e693da05bb07f4eddbd723c993b70c1a126c91",
+      "role": "as-reviewed committed snapshot, not replacement live gate"
+    },
+    {
+      "path": "docs/topics/0.10_Fluid_Dynamics_Chaos/Result/artifacts/fluid_state_velocity_representability_audit.json",
+      "sha256": "7e7b1e5889ea4d1e04abe3a2186ac67e378b7b8d1437375a1ee446c88ba3c1a4",
+      "role": "as-reviewed committed snapshot, not replacement live gate"
+    },
+    {
+      "path": "docs/topics/0.10_Fluid_Dynamics_Chaos/Result/artifacts/fluid_vector_state_contract_audit.json",
+      "sha256": "166495ecfdffe5a1eb15daa51233488e72499f2bd74dfc785c4efae1225f5e6d",
+      "role": "as-reviewed committed snapshot, not replacement live gate"
+    },
+    {
+      "path": "docs/topics/0.10_Fluid_Dynamics_Chaos/Result/artifacts/fluid_second_sound_mode_eligibility_audit.json",
+      "sha256": "c9bdaff5bca7d39a7e1f0bb78e10322918453271a4ac293f841593c11d79be18",
+      "role": "as-reviewed committed snapshot, not replacement live gate"
+    },
+    {
+      "path": "docs/topics/0.10_Fluid_Dynamics_Chaos/Result/artifacts/fluid_core_o2_infrared_trials_audit.json",
+      "sha256": "4b550b4f455c7b5e67dd64def2208c5729425d7c851050dcc65c31f0a1c048b2",
+      "role": "as-reviewed committed snapshot, not replacement live gate"
+    },
+    {
+      "path": "docs/topics/0.10_Fluid_Dynamics_Chaos/CORE_O2_GOLDSTONE_INFRARED_TRIALS.md",
+      "sha256": "ad908db9afc36d14102bbf18bba321795ec9b99a43abd4c2819ca49e61dfd97c",
+      "role": "as-reviewed committed snapshot, not replacement live gate"
+    },
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/HE4_SECOND_SOUND_PROTOCOL_CARD.md",
+      "sha256": "3e63ee75d51935420e9d4cb5e2141cf5cdb52c7596a6ea31a78e621ae1313449",
+      "role": "as-reviewed committed snapshot, not replacement live gate"
+    }
+  ],
+  "report_sha256": "8df667479ce6f9ee706b57bf9bf950b9fe9a3cbf9dcde62ddff4979fc11ce49c",
+  "boundary": {
+    "claim_promotion": false,
+    "dependency_unlock": false,
+    "physical_UET_operator_admitted": false,
+    "physical_HeII_state_assigned": false,
+    "physical_J04_executed": false,
+    "physical_J05_executed": false,
+    "physical_J06_executed": false,
+    "continuum_collision_domain_established_by_this_review": false,
+    "continuum_current_upper_bound_established_by_this_review": false,
+    "new_solver_trajectory_executed": false,
+    "new_timing_executed": false,
+    "independent_data_acquired": false,
+    "formal_proof_executed": false
+  },
+  "method_benefit_evaluation_plan": {
+    "status": "PROPOSED_NOT_MEASURED",
+    "metrics": [
+      "time for independent reviewer to reproduce same class of result",
+      "assumption/unit errors caught before simulation",
+      "lemmas with locked statement and actual checker output",
+      "blockers closed against unchanged criteria"
+    ],
+    "controls": [
+      "record actual resource/time",
+      "separate easier tasks and new-data acquisitions",
+      "do not count agent/message volume as physics progress"
+    ]
+  }
+}

@@ -1,0 +1,720 @@
+{
+  "checks": {
+    "positive_quadratic_availability": {
+      "metric": 0.41886116991581035,
+      "minimum": 0.0,
+      "pass": true
+    },
+    "reciprocal_flux_symmetry": {
+      "metric": 1.2585248453105973e-15,
+      "threshold": 1e-09,
+      "pass": true
+    },
+    "four_real_characteristic_speeds": {
+      "metric": 0.0,
+      "threshold": 1e-09,
+      "pass": true
+    },
+    "two_acoustic_pairs_from_quartic": {
+      "metric": 5.71133035914557e-16,
+      "threshold": 1e-09,
+      "pass": true
+    },
+    "quartic_thermodynamic_sum": {
+      "metric": 0.0,
+      "threshold": 1e-09,
+      "pass": true
+    },
+    "quartic_thermodynamic_product": {
+      "metric": 0.0,
+      "threshold": 1e-09,
+      "pass": true
+    },
+    "distinct_positive_sound_branches": {
+      "metric": 1.9937875983796705,
+      "minimum": 0.0,
+      "pass": true
+    },
+    "EOS_potentials_and_Gibbs_pressure_derivatives": {
+      "metric": 1.0803719181957567e-12,
+      "threshold": 1e-07,
+      "pass": true
+    },
+    "constant_pressure_specific_heat_derivative": {
+      "metric": 6.507905325747743e-12,
+      "threshold": 1e-07,
+      "pass": true
+    },
+    "local_quadratic_work_flux_balance": {
+      "metric": 1.5865845778353197e-16,
+      "threshold": 1e-09,
+      "pass": true
+    },
+    "global_periodic_quadratic_work_balance": {
+      "metric": 1.3877787807814457e-17,
+      "threshold": 1e-09,
+      "pass": true
+    },
+    "periodic_mass_entropy_momentum_mean_balance": {
+      "metric": 1.5897524506249135e-18,
+      "threshold": 1e-09,
+      "pass": true
+    },
+    "normal_velocity_entropy_transport": {
+      "metric": 2.5223454990308e-16,
+      "threshold": 1e-09,
+      "pass": true
+    },
+    "common_relative_kinetic_decomposition": {
+      "metric": 5.0659629306112765e-18,
+      "threshold": 1e-09,
+      "pass": true
+    },
+    "common_velocity_entropy_error_work_detected": {
+      "metric": 0.8485281374238568,
+      "minimum": 1e-08,
+      "pass": true
+    },
+    "common_velocity_entropy_error_local_flux_detected": {
+      "metric": 0.028129836544139378,
+      "minimum": 1e-08,
+      "pass": true
+    },
+    "superfluid_sign_error_work_detected": {
+      "metric": 13.503332921912278,
+      "minimum": 1e-08,
+      "pass": true
+    },
+    "superfluid_sign_error_instability_detected": {
+      "metric": 0.0032013329386641615,
+      "minimum": 1e-08,
+      "pass": true
+    },
+    "finite_expansion_clamped_mass_current_local_defect": {
+      "metric": 0.9199999999999999,
+      "minimum": 1e-08,
+      "pass": true
+    },
+    "finite_expansion_reduced_speed_is_not_exact": {
+      "metric": 0.012697442184280039,
+      "minimum": 1e-08,
+      "pass": true
+    },
+    "zero_expansion_counterflow_subspace_invariant": {
+      "metric": 0.0,
+      "threshold": 1e-09,
+      "pass": true
+    },
+    "zero_expansion_heat_capacities_equal": {
+      "metric": 1.1102230246251565e-16,
+      "threshold": 1e-09,
+      "pass": true
+    },
+    "zero_expansion_exact_counterflow_branch": {
+      "metric": 1.6521175961683873e-16,
+      "threshold": 1e-09,
+      "pass": true
+    },
+    "zero_expansion_reciprocal_work": {
+      "metric": 4.509747244882934e-16,
+      "threshold": 1e-09,
+      "pass": true
+    },
+    "0.2/complex_work_conservation": {
+      "metric": 7.911556306605241e-17,
+      "threshold": 1e-09,
+      "pass": true
+    },
+    "0.2/acoustic_dispersion": {
+      "metric": 1.944128986425528e-16,
+      "threshold": 1e-09,
+      "pass": true
+    },
+    "0.1/complex_work_conservation": {
+      "metric": 3.9557781533026204e-17,
+      "threshold": 1e-09,
+      "pass": true
+    },
+    "0.1/acoustic_dispersion": {
+      "metric": 2.830524433501838e-16,
+      "threshold": 1e-09,
+      "pass": true
+    },
+    "0.05/complex_work_conservation": {
+      "metric": 1.9778890766513102e-17,
+      "threshold": 1e-09,
+      "pass": true
+    },
+    "0.05/acoustic_dispersion": {
+      "metric": 4.86032246606382e-17,
+      "threshold": 1e-09,
+      "pass": true
+    },
+    "0.025/complex_work_conservation": {
+      "metric": 9.889445383256551e-18,
+      "threshold": 1e-09,
+      "pass": true
+    },
+    "0.025/acoustic_dispersion": {
+      "metric": 7.076311083754595e-17,
+      "threshold": 1e-09,
+      "pass": true
+    },
+    "0.0125/complex_work_conservation": {
+      "metric": 4.9447226916282755e-18,
+      "threshold": 1e-09,
+      "pass": true
+    },
+    "0.0125/acoustic_dispersion": {
+      "metric": 1.215080616515955e-17,
+      "threshold": 1e-09,
+      "pass": true
+    },
+    "0.00625/complex_work_conservation": {
+      "metric": 2.4723613458141377e-18,
+      "threshold": 1e-09,
+      "pass": true
+    },
+    "0.00625/acoustic_dispersion": {
+      "metric": 1.7690777709386487e-17,
+      "threshold": 1e-09,
+      "pass": true
+    },
+    "0.003125/complex_work_conservation": {
+      "metric": 1.2361806729070689e-18,
+      "threshold": 1e-09,
+      "pass": true
+    },
+    "0.003125/acoustic_dispersion": {
+      "metric": 3.0377015412898873e-18,
+      "threshold": 1e-09,
+      "pass": true
+    },
+    "0.1/same_path_temperature_tangent": {
+      "metric": 0.0,
+      "threshold": 1e-09,
+      "pass": true
+    },
+    "0.1/same_path_pressure_tangent": {
+      "metric": 2.220446049250313e-16,
+      "threshold": 1e-09,
+      "pass": true
+    },
+    "0.1/path_heat_to_fixed_pressure_heat": {
+      "metric": 1.4598593354702912e-16,
+      "threshold": 1e-09,
+      "pass": true
+    },
+    "0.1/positive_EOS_and_inertia": {
+      "metric": 0.41886116991581035,
+      "minimum": 0.0,
+      "pass": true
+    },
+    "0.1/omitted_saturation_heat_correction_detected": {
+      "metric": 0.01447277739490005,
+      "minimum": 1e-08,
+      "pass": true
+    },
+    "0.2/same_path_temperature_tangent": {
+      "metric": 0.0,
+      "threshold": 1e-09,
+      "pass": true
+    },
+    "0.2/same_path_pressure_tangent": {
+      "metric": 0.0,
+      "threshold": 1e-09,
+      "pass": true
+    },
+    "0.2/path_heat_to_fixed_pressure_heat": {
+      "metric": 1.4512719276145837e-16,
+      "threshold": 1e-09,
+      "pass": true
+    },
+    "0.2/positive_EOS_and_inertia": {
+      "metric": 0.41886116991581035,
+      "minimum": 0.0,
+      "pass": true
+    },
+    "0.2/omitted_saturation_heat_correction_detected": {
+      "metric": 0.020689655172413834,
+      "minimum": 1e-08,
+      "pass": true
+    },
+    "same_path_distinct_isothermal_compressibility_speed": {
+      "metric": 5.0,
+      "minimum": 1e-08,
+      "pass": true
+    },
+    "same_path_distinct_second_sound_pole": {
+      "metric": 0.005262225383507402,
+      "minimum": 1e-08,
+      "pass": true
+    },
+    "nonpositive_entropy/input_rejected": {
+      "metric": 0.0,
+      "threshold": 1e-09,
+      "pass": true
+    },
+    "zero_normal_component/input_rejected": {
+      "metric": 0.0,
+      "threshold": 1e-09,
+      "pass": true
+    },
+    "indefinite_EOS/input_rejected": {
+      "metric": 0.0,
+      "threshold": 1e-09,
+      "pass": true
+    },
+    "SI/density_sound_stiffness": {
+      "metric": 0.0,
+      "threshold": 0.0,
+      "pass": true
+    },
+    "SI/entropy_sound_stiffness": {
+      "metric": 0.0,
+      "threshold": 0.0,
+      "pass": true
+    },
+    "SI/entropy_curvature_sound_stiffness": {
+      "metric": 0.0,
+      "threshold": 0.0,
+      "pass": true
+    },
+    "SI/c_v": {
+      "metric": 0.0,
+      "threshold": 0.0,
+      "pass": true
+    },
+    "SI/path_heat_correction": {
+      "metric": 0.0,
+      "threshold": 0.0,
+      "pass": true
+    },
+    "SI/heat_capacity_difference": {
+      "metric": 0.0,
+      "threshold": 0.0,
+      "pass": true
+    }
+  },
+  "reference_check_count": 59,
+  "thermodynamics": {
+    "c_T_squared": 8.971428571428572,
+    "c_S_squared": 9.576,
+    "c_v": 0.7142857142857143,
+    "c_p": 0.7624203821656051,
+    "v_entropy_squared": 1.344,
+    "speed_squared": [
+      1.2464504274899055,
+      9.673549572510094
+    ],
+    "slow_reduced_estimate_squared": 1.2591478696741856,
+    "pressure_entropy_derivative": 0.9199999999999999
+  },
+  "EOS_derivative_controls": [
+    {
+      "step": 0.001,
+      "EOS_derivative_error": 5.127150393610554e-14,
+      "c_p_derivative_error": 4.0906854570366136e-09
+    },
+    {
+      "step": 0.0001,
+      "EOS_derivative_error": 1.0195812972016688e-13,
+      "c_p_derivative_error": 4.092493011143006e-11
+    },
+    {
+      "step": 1e-05,
+      "EOS_derivative_error": 1.0803719181957567e-12,
+      "c_p_derivative_error": 6.507905325747743e-12
+    }
+  ],
+  "mode_records": [
+    {
+      "k": 0.2,
+      "modes": [
+        {
+          "real": 0.0,
+          "imag": 0.6220466083023072
+        },
+        {
+          "real": -1.5959455978986625e-16,
+          "imag": -0.622046608302307
+        },
+        {
+          "real": 5.210418377332551e-17,
+          "imag": 0.22328908862637284
+        },
+        {
+          "real": -5.640308487167707e-17,
+          "imag": -0.22328908862637295
+        }
+      ]
+    },
+    {
+      "k": 0.1,
+      "modes": [
+        {
+          "real": -5.551115123125783e-17,
+          "imag": 0.3110233041511538
+        },
+        {
+          "real": -2.42861286636753e-17,
+          "imag": -0.3110233041511534
+        },
+        {
+          "real": 5.818039906040586e-20,
+          "imag": 0.11164454431318646
+        },
+        {
+          "real": -6.277007364149554e-18,
+          "imag": -0.11164454431318648
+        }
+      ]
+    },
+    {
+      "k": 0.05,
+      "modes": [
+        {
+          "real": 0.0,
+          "imag": 0.1555116520755768
+        },
+        {
+          "real": -3.9898639947466563e-17,
+          "imag": -0.15551165207557674
+        },
+        {
+          "real": 1.3026045943331378e-17,
+          "imag": 0.05582227215659321
+        },
+        {
+          "real": -1.4100771217919268e-17,
+          "imag": -0.05582227215659324
+        }
+      ]
+    },
+    {
+      "k": 0.025,
+      "modes": [
+        {
+          "real": -1.3877787807814457e-17,
+          "imag": 0.07775582603778845
+        },
+        {
+          "real": -6.071532165918825e-18,
+          "imag": -0.07775582603778836
+        },
+        {
+          "real": 1.4545099765101466e-20,
+          "imag": 0.027911136078296615
+        },
+        {
+          "real": -1.5692518410373885e-18,
+          "imag": -0.02791113607829662
+        }
+      ]
+    },
+    {
+      "k": 0.0125,
+      "modes": [
+        {
+          "real": 0.0,
+          "imag": 0.0388779130188942
+        },
+        {
+          "real": -9.974659986866641e-18,
+          "imag": -0.038877913018894185
+        },
+        {
+          "real": 3.2565114858328444e-18,
+          "imag": 0.013955568039148302
+        },
+        {
+          "real": -3.525192804479817e-18,
+          "imag": -0.01395556803914831
+        }
+      ]
+    },
+    {
+      "k": 0.00625,
+      "modes": [
+        {
+          "real": -3.469446951953614e-18,
+          "imag": 0.019438956509447113
+        },
+        {
+          "real": -1.5178830414797062e-18,
+          "imag": -0.01943895650944709
+        },
+        {
+          "real": 3.6362749412753664e-21,
+          "imag": 0.006977784019574154
+        },
+        {
+          "real": -3.9231296025934712e-19,
+          "imag": -0.006977784019574155
+        }
+      ]
+    },
+    {
+      "k": 0.003125,
+      "modes": [
+        {
+          "real": 0.0,
+          "imag": 0.00971947825472355
+        },
+        {
+          "real": -2.4936649967166602e-18,
+          "imag": -0.009719478254723546
+        },
+        {
+          "real": 8.141278714582111e-19,
+          "imag": 0.0034888920097870756
+        },
+        {
+          "real": -8.812982011199542e-19,
+          "imag": -0.0034888920097870773
+        }
+      ]
+    }
+  ],
+  "finite_expansion_clamped_momentum_coefficient": 0.9199999999999999,
+  "zero_expansion_control": {
+    "EOS": {
+      "rho": 1,
+      "rho_s": 0.6,
+      "sigma": 0.8,
+      "T": 1,
+      "A": 9,
+      "B": -1.1199999999999999,
+      "D": 1.4
+    },
+    "thermodynamics": {
+      "c_T_squared": 8.104,
+      "c_S_squared": 8.104000000000001,
+      "c_v": 0.7142857142857143,
+      "c_p": 0.7142857142857144,
+      "v_entropy_squared": 1.344,
+      "speed_squared": [
+        1.3440000000000003,
+        8.104
+      ],
+      "slow_reduced_estimate_squared": 1.3439999999999999,
+      "pressure_entropy_derivative": 0.0
+    }
+  },
+  "path_EOS_witnesses": [
+    {
+      "EOS": {
+        "rho": 1,
+        "rho_s": 0.6,
+        "sigma": 0.8,
+        "T": 1,
+        "A": 10.00679347826087,
+        "B": -0.06793478260869563,
+        "D": 0.6793478260869565
+      },
+      "properties": {
+        "kappa_T": 0.1,
+        "alpha_p": 0.07,
+        "c_p": 1.521,
+        "c_v": 1.472
+      },
+      "thermodynamics": {
+        "c_T_squared": 10.0,
+        "c_S_squared": 10.33288043478261,
+        "c_v": 1.472,
+        "c_p": 1.5210000000000001,
+        "v_entropy_squared": 0.6521739130434783,
+        "speed_squared": [
+          0.6297999940541507,
+          10.355254353771937
+        ],
+        "slow_reduced_estimate_squared": 0.631163708086785,
+        "pressure_entropy_derivative": 0.4755434782608697
+      },
+      "common_path": {
+        "rho_prime": -0.04,
+        "s_prime": 1.5,
+        "T_prime": 1.0,
+        "p_prime": 0.3000000000000002
+      },
+      "omitted_heat_correction_temperature_tangent": 1.0144727773949
+    },
+    {
+      "EOS": {
+        "rho": 1,
+        "rho_s": 0.6,
+        "sigma": 0.8,
+        "T": 1,
+        "A": 5.0608108108108105,
+        "B": -0.20270270270270271,
+        "D": 0.6756756756756757
+      },
+      "properties": {
+        "kappa_T": 0.2,
+        "alpha_p": 0.1,
+        "c_p": 1.53,
+        "c_v": 1.48
+      },
+      "thermodynamics": {
+        "c_T_squared": 5.0,
+        "c_S_squared": 5.168918918918918,
+        "c_v": 1.48,
+        "c_p": 1.5299999999999998,
+        "v_entropy_squared": 0.6486486486486487,
+        "speed_squared": [
+          0.6245377686706433,
+          5.193029798896923
+        ],
+        "slow_reduced_estimate_squared": 0.627450980392157,
+        "pressure_entropy_derivative": 0.33783783783783783
+      },
+      "common_path": {
+        "rho_prime": -0.04,
+        "s_prime": 1.5,
+        "T_prime": 1.0,
+        "p_prime": 0.3
+      },
+      "omitted_heat_correction_temperature_tangent": 1.0206896551724138
+    }
+  ],
+  "operator": [
+    [
+      0.0,
+      0.0,
+      1.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      2.0,
+      -1.2
+    ],
+    [
+      8.84,
+      0.9199999999999999,
+      0.0,
+      0.0
+    ],
+    [
+      9.0,
+      -0.2,
+      0.0,
+      0.0
+    ]
+  ],
+  "availability_weight": [
+    [
+      9.0,
+      -0.2,
+      0.0,
+      0.0
+    ],
+    [
+      -0.2,
+      1.4,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      2.5,
+      -1.4999999999999998
+    ],
+    [
+      0.0,
+      0.0,
+      -1.4999999999999998,
+      1.4999999999999998
+    ]
+  ],
+  "schema_version": "t10-two-fluid-EOS-reference-audit-v1",
+  "status": "PASS_STANDARD_TWO_FLUID_AND_PATH_UNDERDETERMINATION_REFERENCE_ONLY",
+  "controlling_blocker": "vector_momentum_constitutive_origin_and_material_frame_admission_open",
+  "coupled_input_blocker": "two_fluid_fixed_pressure_EOS_and_UET_state_mapping_missing",
+  "reference_disposition": "REFERENCE_STATE_AND_FIXED_PRESSURE_INPUT_OBLIGATIONS_IDENTIFIED",
+  "claim_promotion": false,
+  "dependency_unlock": false,
+  "physical_uet_operator_admitted": false,
+  "physical_prediction_executed": false,
+  "numerical_HeII_data_ingested": false,
+  "thresholds": {
+    "identity_tolerance": 1e-09,
+    "derivative_tolerance": 1e-07,
+    "negative_control_floor": 1e-08,
+    "steps": [
+      0.001,
+      0.0001,
+      1e-05
+    ],
+    "wavenumbers": [
+      0.2,
+      0.1,
+      0.05,
+      0.025,
+      0.0125,
+      0.00625,
+      0.003125
+    ],
+    "periodic_grid": 32,
+    "base": {
+      "rho": 1,
+      "rho_s": 0.6,
+      "sigma": 0.8,
+      "T": 1,
+      "A": 9,
+      "B": -0.2,
+      "D": 1.4
+    },
+    "path_witness": {
+      "rho": 1,
+      "rho_s": 0.6,
+      "s": 0.8,
+      "T": 1,
+      "c_sat": 1.5,
+      "alpha_path": 0.04,
+      "p_path_prime": 0.3,
+      "kappa_T": [
+        0.1,
+        0.2
+      ]
+    },
+    "threshold_policy": "All synthetic controls, error controls and tolerances declared before first audit; preserve a failure before any amendment; no material fit.",
+    "periodic_fields": [
+      "0.1 sin x+0.04 cos 2x",
+      "0.08 cos x+0.03 sin 3x",
+      "0.12 sin 2x+0.07 cos x",
+      "0.09 cos 2x+0.05 sin 3x"
+    ],
+    "thermodynamic_gauge": "Local Taylor energy and mass-chemical-potential offsets zero; temperature reference T retained; no absolute material energy inference."
+  },
+  "scope": [
+    "uniform rest state; both components and entropy positive",
+    "vortex-free ideal longitudinal linear response",
+    "positive internal-energy Hessian; no dissipative transport or mean counterflow",
+    "rho_s frozen at rest equilibrium at linear order; no general entrainment model",
+    "normalized controls only, with separate SI target dimensions"
+  ],
+  "input_hashes": {
+    "docs/topics/0.10_Fluid_Dynamics_Chaos/Code/03_Research/Research_Fluid_Two_Fluid_EOS_Reference.py": "3d0837db500366dee21f49bc957705e45d76ab899698b8b3fcd889124519b312",
+    "docs/topics/0.10_Fluid_Dynamics_Chaos/Data/03_Research/fluid_two_fluid_eos_reference_contract.json": "0554b385b88b442eeb99b4fbf49f45d34735904f6f24892472db9f48319de9ea",
+    "docs/topics/0.10_Fluid_Dynamics_Chaos/Data/03_Research/he4_two_fluid_thermodynamic_input_requirements.json": "e0b77fa97a24233ee7e2ec6b8327a2ca8092ee2a8c2d1ca49700906bf6cf373f",
+    "docs/topics/0.10_Fluid_Dynamics_Chaos/TWO_FLUID_STATE_EOS_REFERENCE.md": "76023afd4038b26607cbf9b59e0c9ceb5d84af596a4a9c3296aa959baffda3e2",
+    "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry_topic10_two_fluid_eos_reference.json": "2221d8d2a6a5866c5f036b9e244c71f53468f0169aa255be550710ffa7ac26e8",
+    "docs/topics/0.10_Fluid_Dynamics_Chaos/Data/03_Research/fluid_second_sound_mode_eligibility_contract.json": "a1b44982d04efad610a9f06ba5f8d8d27f81e726f7548e2fbaec9b333bb31920",
+    "docs/topics/0.10_Fluid_Dynamics_Chaos/Result/artifacts/fluid_second_sound_mode_eligibility_audit.json": "c9bdaff5bca7d39a7e1f0bb78e10322918453271a4ac293f841593c11d79be18",
+    "docs/topics/0.13_Thermodynamic_Bridge/HE4_SECOND_SOUND_PROTOCOL_CARD.md": "3e63ee75d51935420e9d4cb5e2141cf5cdb52c7596a6ea31a78e621ae1313449"
+  },
+  "excludes": [
+    "UET state derivation/admission",
+    "material EOS/He-II prediction",
+    "nonlinear entropy/FDT closure",
+    "attenuation/transport tensor",
+    "source independence",
+    "PDE trajectory",
+    "formal proof",
+    "Core unlock"
+  ],
+  "pass": true
+}

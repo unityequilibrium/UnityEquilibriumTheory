@@ -1,0 +1,685 @@
+{
+  "schema_version": "t010-he4-entropy-source-reference-audit-v1",
+  "date": "2026-09-30",
+  "status": "PASS_SOURCE_AND_REFERENCE_COORDINATE_CHECKS_ONLY",
+  "scope": "source branch/units/nominal differences and normalized ideal two-fluid coordinate covariance",
+  "check_count": 116,
+  "passing_check_count": 116,
+  "checks": {
+    "candidate_and_reference_role": {
+      "pass": true
+    },
+    "review_pdf_identity": {
+      "pass": true
+    },
+    "two_distinct_source_branches": {
+      "pass": true
+    },
+    "calorimetric_branch_anchor_explicit": {
+      "pass": true
+    },
+    "calorimetric_input_not_independent": {
+      "pass": true
+    },
+    "fountain_primary_date_corrected": {
+      "pass": true
+    },
+    "precision_not_row_uncertainty": {
+      "pass": true
+    },
+    "branch_covariance_unknown": {
+      "pass": true
+    },
+    "SI_multiplier_J_g_to_J_kg": {
+      "pass": true
+    },
+    "nominal_comparison_only": {
+      "pass": true
+    },
+    "industrial_reference_not_transferred": {
+      "pass": true
+    },
+    "locked_contract": {
+      "pass": true
+    },
+    "boundary_TN1334_entropy_anchor_resolved": {
+      "pass": true
+    },
+    "boundary_admitted_material_values_assigned": {
+      "pass": true
+    },
+    "boundary_independent_validation_admitted": {
+      "pass": true
+    },
+    "boundary_physical_uet_operator_admitted": {
+      "pass": true
+    },
+    "boundary_physical_prediction_executed": {
+      "pass": true
+    },
+    "boundary_physical_J05_executed": {
+      "pass": true
+    },
+    "boundary_physical_J06_executed": {
+      "pass": true
+    },
+    "boundary_claim_promotion": {
+      "pass": true
+    },
+    "boundary_dependency_unlock": {
+      "pass": true
+    },
+    "source_rows_three_by_two": {
+      "pass": true
+    },
+    "1.65/source_positive": {
+      "pass": true
+    },
+    "1.70/source_positive": {
+      "pass": true
+    },
+    "1.75/source_positive": {
+      "pass": true
+    },
+    "J_per_g_as_J_per_kg_error_detected": {
+      "metric": 396.8028,
+      "minimum": 1e-08,
+      "pass": true
+    },
+    "unchanged_standard_normalized_base": {
+      "pass": true
+    },
+    "-0.3/explicit_flux_force_equals_similarity": {
+      "metric": 1.7068165645042854e-17,
+      "threshold": 1e-10,
+      "pass": true
+    },
+    "-0.3/Hessian_equals_congruence": {
+      "metric": 4.002737303793175e-18,
+      "threshold": 1e-10,
+      "pass": true
+    },
+    "-0.3/positive_quadratic_availability": {
+      "metric": 0.41886116991581035,
+      "minimum": 0.0,
+      "pass": true
+    },
+    "-0.3/reciprocal_work": {
+      "metric": 6.626552854390357e-16,
+      "threshold": 1e-10,
+      "pass": true
+    },
+    "-0.3/characteristic_speeds_invariant": {
+      "metric": 7.139162948931962e-16,
+      "threshold": 1e-10,
+      "pass": true
+    },
+    "-0.3/c_T_squared_invariant": {
+      "metric": 0.0,
+      "threshold": 1e-10,
+      "pass": true
+    },
+    "-0.3/c_S_squared_invariant": {
+      "metric": 0.0,
+      "threshold": 1e-10,
+      "pass": true
+    },
+    "-0.3/c_v_invariant": {
+      "metric": 0.0,
+      "threshold": 1e-10,
+      "pass": true
+    },
+    "-0.3/c_p_invariant": {
+      "metric": 0.0,
+      "threshold": 1e-10,
+      "pass": true
+    },
+    "-0.3/physical_entropy_speed_term_recovered": {
+      "metric": 0.0,
+      "threshold": 1e-10,
+      "pass": true
+    },
+    "-0.3/Gibbs_pressure_invariant": {
+      "metric": 0.0,
+      "threshold": 1e-10,
+      "pass": true
+    },
+    "-0.3/chemical_potential_force_recovered": {
+      "metric": 0.0,
+      "threshold": 1e-10,
+      "pass": true
+    },
+    "-0.3/local_transformed_entropy_current": {
+      "metric": 3.3571665068974968e-16,
+      "threshold": 1e-10,
+      "pass": true
+    },
+    "-0.3/local_transformed_phase_force": {
+      "metric": 7.428488703688032e-16,
+      "threshold": 1e-10,
+      "pass": true
+    },
+    "-0.3/quadratic_availability_invariant": {
+      "metric": 1.1701349579590384e-17,
+      "threshold": 1e-10,
+      "pass": true
+    },
+    "-0.3/local_quadratic_work_balance": {
+      "metric": 1.5202849721488363e-16,
+      "threshold": 1e-10,
+      "pass": true
+    },
+    "-0.3/omit_entropy_flux_correction_detected": {
+      "metric": 0.10902637295627146,
+      "minimum": 1e-08,
+      "pass": true
+    },
+    "-0.3/omit_phase_force_correction_detected": {
+      "metric": 0.036172088687273674,
+      "minimum": 1e-08,
+      "pass": true
+    },
+    "-0.3/omit_both_characteristic_speeds_error_detected": {
+      "metric": 0.13387989530132213,
+      "minimum": 1e-08,
+      "pass": true
+    },
+    "-0.3/omit_both_operator_correspondence_error_detected": {
+      "metric": 0.058830832828693606,
+      "minimum": 1e-08,
+      "pass": true
+    },
+    "-0.3/wrong_model_positive_availability": {
+      "metric": 0.41886116991581035,
+      "minimum": 0.0,
+      "pass": true
+    },
+    "-0.3/wrong_model_own_reciprocal_work_passes": {
+      "metric": 2.2052149803540178e-16,
+      "threshold": 1e-10,
+      "pass": true
+    },
+    "0/explicit_flux_force_equals_similarity": {
+      "metric": 0.0,
+      "threshold": 1e-10,
+      "pass": true
+    },
+    "0/Hessian_equals_congruence": {
+      "metric": 0.0,
+      "threshold": 1e-10,
+      "pass": true
+    },
+    "0/positive_quadratic_availability": {
+      "metric": 0.41886116991581035,
+      "minimum": 0.0,
+      "pass": true
+    },
+    "0/reciprocal_work": {
+      "metric": 1.2585248453105973e-15,
+      "threshold": 1e-10,
+      "pass": true
+    },
+    "0/characteristic_speeds_invariant": {
+      "metric": 0.0,
+      "threshold": 1e-10,
+      "pass": true
+    },
+    "0/c_T_squared_invariant": {
+      "metric": 0.0,
+      "threshold": 1e-10,
+      "pass": true
+    },
+    "0/c_S_squared_invariant": {
+      "metric": 0.0,
+      "threshold": 1e-10,
+      "pass": true
+    },
+    "0/c_v_invariant": {
+      "metric": 0.0,
+      "threshold": 1e-10,
+      "pass": true
+    },
+    "0/c_p_invariant": {
+      "metric": 0.0,
+      "threshold": 1e-10,
+      "pass": true
+    },
+    "0/physical_entropy_speed_term_recovered": {
+      "metric": 0.0,
+      "threshold": 1e-10,
+      "pass": true
+    },
+    "0/Gibbs_pressure_invariant": {
+      "metric": 0.0,
+      "threshold": 1e-10,
+      "pass": true
+    },
+    "0/chemical_potential_force_recovered": {
+      "metric": 0.0,
+      "threshold": 1e-10,
+      "pass": true
+    },
+    "0/local_transformed_entropy_current": {
+      "metric": 3.1227010208303403e-16,
+      "threshold": 1e-10,
+      "pass": true
+    },
+    "0/local_transformed_phase_force": {
+      "metric": 7.567682700888514e-16,
+      "threshold": 1e-10,
+      "pass": true
+    },
+    "0/quadratic_availability_invariant": {
+      "metric": 0.0,
+      "threshold": 1e-10,
+      "pass": true
+    },
+    "0/local_quadratic_work_balance": {
+      "metric": 1.5865845778353197e-16,
+      "threshold": 1e-10,
+      "pass": true
+    },
+    "0/zero_offset_returns_original": {
+      "metric": 0.0,
+      "threshold": 1e-10,
+      "pass": true
+    },
+    "0.4/explicit_flux_force_equals_similarity": {
+      "metric": 4.2782181353852297e-17,
+      "threshold": 1e-10,
+      "pass": true
+    },
+    "0.4/Hessian_equals_congruence": {
+      "metric": 0.0,
+      "threshold": 1e-10,
+      "pass": true
+    },
+    "0.4/positive_quadratic_availability": {
+      "metric": 0.41886116991581035,
+      "minimum": 0.0,
+      "pass": true
+    },
+    "0.4/reciprocal_work": {
+      "metric": 8.005932084973442e-16,
+      "threshold": 1e-10,
+      "pass": true
+    },
+    "0.4/characteristic_speeds_invariant": {
+      "metric": 1.8561823667223106e-15,
+      "threshold": 1e-10,
+      "pass": true
+    },
+    "0.4/c_T_squared_invariant": {
+      "metric": 0.0,
+      "threshold": 1e-10,
+      "pass": true
+    },
+    "0.4/c_S_squared_invariant": {
+      "metric": 0.0,
+      "threshold": 1e-10,
+      "pass": true
+    },
+    "0.4/c_v_invariant": {
+      "metric": 0.0,
+      "threshold": 1e-10,
+      "pass": true
+    },
+    "0.4/c_p_invariant": {
+      "metric": 0.0,
+      "threshold": 1e-10,
+      "pass": true
+    },
+    "0.4/physical_entropy_speed_term_recovered": {
+      "metric": 1.6521175961683873e-16,
+      "threshold": 1e-10,
+      "pass": true
+    },
+    "0.4/Gibbs_pressure_invariant": {
+      "metric": 1.1102230246251565e-16,
+      "threshold": 1e-10,
+      "pass": true
+    },
+    "0.4/chemical_potential_force_recovered": {
+      "metric": 0.0,
+      "threshold": 1e-10,
+      "pass": true
+    },
+    "0.4/local_transformed_entropy_current": {
+      "metric": 4.562899847159758e-16,
+      "threshold": 1e-10,
+      "pass": true
+    },
+    "0.4/local_transformed_phase_force": {
+      "metric": 8.07025448296016e-16,
+      "threshold": 1e-10,
+      "pass": true
+    },
+    "0.4/quadratic_availability_invariant": {
+      "metric": 1.356249814807993e-17,
+      "threshold": 1e-10,
+      "pass": true
+    },
+    "0.4/local_quadratic_work_balance": {
+      "metric": 1.2330577493076224e-16,
+      "threshold": 1e-10,
+      "pass": true
+    },
+    "0.4/omit_entropy_flux_correction_detected": {
+      "metric": 0.1453684972750286,
+      "minimum": 1e-08,
+      "pass": true
+    },
+    "0.4/omit_phase_force_correction_detected": {
+      "metric": 0.04822945158303176,
+      "minimum": 1e-08,
+      "pass": true
+    },
+    "0.4/omit_both_characteristic_speeds_error_detected": {
+      "metric": 0.17327519420677576,
+      "minimum": 1e-08,
+      "pass": true
+    },
+    "0.4/omit_both_operator_correspondence_error_detected": {
+      "metric": 0.08032981287827555,
+      "minimum": 1e-08,
+      "pass": true
+    },
+    "0.4/wrong_model_positive_availability": {
+      "metric": 0.41886116991581035,
+      "minimum": 0.0,
+      "pass": true
+    },
+    "0.4/wrong_model_own_reciprocal_work_passes": {
+      "metric": 7.195067539997724e-16,
+      "threshold": 1e-10,
+      "pass": true
+    },
+    "1.0/explicit_flux_force_equals_similarity": {
+      "metric": 1.6205656486895913e-16,
+      "threshold": 1e-10,
+      "pass": true
+    },
+    "1.0/Hessian_equals_congruence": {
+      "metric": 1.5191973270425752e-16,
+      "threshold": 1e-10,
+      "pass": true
+    },
+    "1.0/positive_quadratic_availability": {
+      "metric": 0.41886116991581035,
+      "minimum": 0.0,
+      "pass": true
+    },
+    "1.0/reciprocal_work": {
+      "metric": 2.3551386880256624e-16,
+      "threshold": 1e-10,
+      "pass": true
+    },
+    "1.0/characteristic_speeds_invariant": {
+      "metric": 2.8556651795727847e-16,
+      "threshold": 1e-10,
+      "pass": true
+    },
+    "1.0/c_T_squared_invariant": {
+      "metric": 0.0,
+      "threshold": 1e-10,
+      "pass": true
+    },
+    "1.0/c_S_squared_invariant": {
+      "metric": 0.0,
+      "threshold": 1e-10,
+      "pass": true
+    },
+    "1.0/c_v_invariant": {
+      "metric": 0.0,
+      "threshold": 1e-10,
+      "pass": true
+    },
+    "1.0/c_p_invariant": {
+      "metric": 0.0,
+      "threshold": 1e-10,
+      "pass": true
+    },
+    "1.0/physical_entropy_speed_term_recovered": {
+      "metric": 0.0,
+      "threshold": 1e-10,
+      "pass": true
+    },
+    "1.0/Gibbs_pressure_invariant": {
+      "metric": 0.0,
+      "threshold": 1e-10,
+      "pass": true
+    },
+    "1.0/chemical_potential_force_recovered": {
+      "metric": 0.0,
+      "threshold": 1e-10,
+      "pass": true
+    },
+    "1.0/local_transformed_entropy_current": {
+      "metric": 5.846661522061165e-16,
+      "threshold": 1e-10,
+      "pass": true
+    },
+    "1.0/local_transformed_phase_force": {
+      "metric": 9.663875366799437e-16,
+      "threshold": 1e-10,
+      "pass": true
+    },
+    "1.0/quadratic_availability_invariant": {
+      "metric": 1.3068122255605888e-17,
+      "threshold": 1e-10,
+      "pass": true
+    },
+    "1.0/local_quadratic_work_balance": {
+      "metric": 1.4849501469294201e-16,
+      "threshold": 1e-10,
+      "pass": true
+    },
+    "1.0/omit_entropy_flux_correction_detected": {
+      "metric": 0.3634212431875716,
+      "minimum": 1e-08,
+      "pass": true
+    },
+    "1.0/omit_phase_force_correction_detected": {
+      "metric": 0.12057362895757932,
+      "minimum": 1e-08,
+      "pass": true
+    },
+    "1.0/omit_both_characteristic_speeds_error_detected": {
+      "metric": 0.39168299609172585,
+      "minimum": 1e-08,
+      "pass": true
+    },
+    "1.0/omit_both_operator_correspondence_error_detected": {
+      "metric": 0.2066047806245994,
+      "minimum": 1e-08,
+      "pass": true
+    },
+    "1.0/wrong_model_positive_availability": {
+      "metric": 0.41886116991581035,
+      "minimum": 0.0,
+      "pass": true
+    },
+    "1.0/wrong_model_own_reciprocal_work_passes": {
+      "metric": 3.8459253727671276e-16,
+      "threshold": 1e-10,
+      "pass": true
+    },
+    "SI_dimension/a_rho_is_sigma": {
+      "pass": true
+    },
+    "SI_dimension/a_T_is_mu": {
+      "pass": true
+    },
+    "SI_dimension/a_B_is_A": {
+      "pass": true
+    },
+    "SI_dimension/a_a_D_is_A": {
+      "pass": true
+    },
+    "SI_dimension/a_D_is_B": {
+      "pass": true
+    },
+    "original_material_requirements_stay_null": {
+      "pass": true
+    }
+  },
+  "input_hashes": {
+    "docs/topics/0.10_Fluid_Dynamics_Chaos/Data/03_Research/he4_entropy_source_and_reference_contract.json": "f40973c16e9a29cbaa81309a553905ed933c6358f0b3aacce5c20f8123bc3704",
+    "docs/topics/0.10_Fluid_Dynamics_Chaos/HE4_ENTROPY_SOURCE_AND_REFERENCE_CONTRACT.md": "d3db091c68f05275561e8f339941422e855b1eea743b7567e45c91434206d437",
+    "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry_topic10_entropy_reference_addendum.json": "32ca08dffd23888d3dfee876cacecb26dda2d89a95cc2c93a909846c265659d5",
+    "docs/topics/0.10_Fluid_Dynamics_Chaos/Code/03_Research/Research_He4_Entropy_Source_Reference.py": "407dd9ddd5b1890f327a3b8c53da48886141c5a1d89af15d42a1517db4e509b5",
+    "docs/topics/0.10_Fluid_Dynamics_Chaos/Code/03_Research/Research_Fluid_Two_Fluid_EOS_Reference.py": "3d0837db500366dee21f49bc957705e45d76ab899698b8b3fcd889124519b312",
+    "docs/topics/0.10_Fluid_Dynamics_Chaos/Data/03_Research/fluid_two_fluid_eos_reference_contract.json": "0554b385b88b442eeb99b4fbf49f45d34735904f6f24892472db9f48319de9ea",
+    "docs/topics/0.10_Fluid_Dynamics_Chaos/Data/03_Research/he4_tn1334_fixed_constraint_eos_source_candidate.json": "bec6724cfb14b154c03703d7813e6ae53d5fd5178237f60e805098e32552b41d",
+    "docs/topics/0.10_Fluid_Dynamics_Chaos/Data/03_Research/he4_two_fluid_thermodynamic_input_requirements.json": "e0b77fa97a24233ee7e2ec6b8327a2ca8092ee2a8c2d1ca49700906bf6cf373f",
+    "docs/topics/0.13_Thermodynamic_Bridge/HE4_SECOND_SOUND_PROTOCOL_CARD.md": "3e63ee75d51935420e9d4cb5e2141cf5cdb52c7596a6ea31a78e621ae1313449",
+    "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/he4_svp_second_sound_response_source_package.json": "8a924ebb1e7e0342bc69a954bbc9b19255eafda47f0650c3f64e458878ca7a94"
+  },
+  "source_rows": [
+    {
+      "nominal_T90_K": 1.65,
+      "fountain_s_J_kgK": 335.7,
+      "calorimetric_s_J_kgK": 335.0,
+      "TN1334_nominal_s_J_kgK": 337.4,
+      "TN_minus_fountain_J_kgK": 1.7,
+      "TN_minus_calorimetric_J_kgK": 2.4,
+      "role": "descriptive central differences; temperature/reference/physical covariance not reconciled"
+    },
+    {
+      "nominal_T90_K": 1.7,
+      "fountain_s_J_kgK": 397.2,
+      "calorimetric_s_J_kgK": 395.0,
+      "TN1334_nominal_s_J_kgK": 398.1,
+      "TN_minus_fountain_J_kgK": 0.9,
+      "TN_minus_calorimetric_J_kgK": 3.1,
+      "role": "descriptive central differences; temperature/reference/physical covariance not reconciled"
+    },
+    {
+      "nominal_T90_K": 1.75,
+      "fountain_s_J_kgK": 466.2,
+      "calorimetric_s_J_kgK": 463.0,
+      "TN1334_nominal_s_J_kgK": 466.6,
+      "TN_minus_fountain_J_kgK": 0.4,
+      "TN_minus_calorimetric_J_kgK": 3.6,
+      "role": "descriptive central differences; temperature/reference/physical covariance not reconciled"
+    }
+  ],
+  "normalized_offset_controls": [
+    {
+      "offset": -0.3,
+      "correct_characteristic_speeds": [
+        -3.1102330415115356,
+        -1.1164454431318636,
+        1.1164454431318644,
+        3.1102330415115373
+      ],
+      "correct_reciprocal_work_defect": 6.626552854390357e-16,
+      "negative_controls": {
+        "omit_entropy_flux_local_defect": 0.10902637295627146,
+        "omit_phase_force_local_defect": 0.036172088687273674,
+        "omit_both_normalized_speed_error": 0.13387989530132213,
+        "naive_characteristic_speeds": [
+          -3.1001504997141485,
+          -0.7000477691715873,
+          0.7000477691715875,
+          3.100150499714148
+        ],
+        "naive_own_work_defect": 2.2052149803540178e-16,
+        "role": "different synthetic model can pass positive-work audit; not He-II prediction"
+      }
+    },
+    {
+      "offset": 0,
+      "correct_characteristic_speeds": [
+        -3.1102330415115333,
+        -1.1164454431318644,
+        1.1164454431318644,
+        3.1102330415115365
+      ],
+      "correct_reciprocal_work_defect": 1.2585248453105973e-15
+    },
+    {
+      "offset": 0.4,
+      "correct_characteristic_speeds": [
+        -3.110233041511532,
+        -1.1164454431318647,
+        1.1164454431318651,
+        3.1102330415115307
+      ],
+      "correct_reciprocal_work_defect": 8.005932084973442e-16,
+      "negative_controls": {
+        "omit_entropy_flux_local_defect": 0.1453684972750286,
+        "omit_phase_force_local_defect": 0.04822945158303176,
+        "omit_both_normalized_speed_error": 0.17327519420677576,
+        "naive_characteristic_speeds": [
+          -3.137525372351493,
+          -1.6601007613547558,
+          1.660100761354753,
+          3.1375253723514915
+        ],
+        "naive_own_work_defect": 7.195067539997724e-16,
+        "role": "different synthetic model can pass positive-work audit; not He-II prediction"
+      }
+    },
+    {
+      "offset": 1.0,
+      "correct_characteristic_speeds": [
+        -3.110233041511534,
+        -1.1164454431318651,
+        1.1164454431318647,
+        3.1102330415115373
+      ],
+      "correct_reciprocal_work_defect": 2.3551386880256624e-16,
+      "negative_controls": {
+        "omit_entropy_flux_local_defect": 0.3634212431875716,
+        "omit_phase_force_local_defect": 0.12057362895757932,
+        "omit_both_normalized_speed_error": 0.39168299609172585,
+        "naive_characteristic_speeds": [
+          -3.2629008461049063,
+          -2.3944682224844622,
+          2.3944682224844605,
+          3.2629008461049085
+        ],
+        "naive_own_work_defect": 3.8459253727671276e-16,
+        "role": "different synthetic model can pass positive-work audit; not He-II prediction"
+      }
+    }
+  ],
+  "locked_tolerances": {
+    "identity_tolerance": 1e-10,
+    "negative_control_floor": 1e-08
+  },
+  "source_acquisition_controller": "he4_entropy_integration_anchor_found_but_TN1334_reference_transfer_covariance_and_independence_open",
+  "parent_input_controller": "two_fluid_fixed_pressure_EOS_and_UET_state_mapping_missing",
+  "physical_controller": "vector_momentum_constitutive_origin_and_material_frame_admission_open",
+  "remaining_blockers": [
+    "TN1334_selected_edition_entropy_reference_transfer_unresolved",
+    "per_row_EOS_uncertainty_covariance_missing",
+    "exact_calibration_response_ancestry_split_unresolved",
+    "primary_response_state_frequency_geometry_protocol_missing",
+    "physical_Core_to_material_Legendre_state_SI_mapping_missing",
+    "superfluid_phase_stiffness_and_response_density_mapping_missing",
+    "state_matched_dissipative_transport_missing"
+  ],
+  "calorimetric_branch_reference_known": true,
+  "TN1334_entropy_anchor_resolved": false,
+  "admitted_material_values_assigned": false,
+  "independent_validation_admitted": false,
+  "physical_uet_operator_admitted": false,
+  "physical_prediction_executed": false,
+  "physical_J05_executed": false,
+  "physical_J06_executed": false,
+  "claim_promotion": false,
+  "dependency_unlock": false,
+  "thresholds_relaxed": false,
+  "physical_acceptance_threshold": null,
+  "entropy_offset_fitted": false,
+  "notes": [
+    "Offline checks do not independently re-read the source PDF; manual rendered-page review is separately documented.",
+    "Table 8.5 zero-temperature integration anchor is not TN1334 edition closure.",
+    "Nominal temperature differences are descriptive, without scale interpolation or uncertainty propagation.",
+    "Correct complete coordinate change preserves poles; partial constitutive replacement changes the synthetic model.",
+    "Positive reciprocal quadratic work alone cannot certify entropy-reference correspondence.",
+    "No physical He-II eigenvalues, UET parameter fit, trajectory, dissipative closure or external validation."
+  ]
+}

@@ -1,0 +1,260 @@
+{
+  "schema_version": "t10-openai-applicability-review-v1",
+  "date": "2026-09-30",
+  "status": "LITERATURE_AND_DESIGN_REVIEW_ONLY",
+  "controlling_blocker": "vector_momentum_constitutive_origin_and_material_frame_admission_open",
+  "claim_promotion": false,
+  "dependency_unlock": false,
+  "physical_uet_operator_admitted": false,
+  "external_repository": {
+    "url": "https://github.com/openai/NavierStokesAndEuler",
+    "commit": "f9e8bc5b38b6e212696e8a30e3e91517af887bbd",
+    "payloads_vendored": false,
+    "build_executed": false,
+    "comparator_executed": false,
+    "nanoda_executed": false,
+    "metadata_review_status": "self-assessed",
+    "declared_main_result_sorry_count": 0,
+    "declared_permitted_axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+    ],
+    "declaration_scope": "Publisher metadata read; not independently recomputed theorem dependencies or axioms."
+  },
+  "literature": [
+    {
+      "id": "openai_navier_stokes",
+      "url": "https://cdn.openai.com/pdf/32d9f210-8b73-45e0-91bc-82a30aef8a9a/navier-stokes.pdf",
+      "read_scope": "Theorem 1.1, Section 2 and construction outline; not complete proof audit",
+      "role": "theorem_scope_energy_regularity_and_residual_reference",
+      "payload_sha256": null,
+      "payload_hash_reason": "Web inspection only; PDF not vendored or source-locked as numerical input."
+    },
+    {
+      "id": "openai_euler",
+      "url": "https://cdn.openai.com/pdf/315b36cd-ec98-4023-8342-93345194ece1/euler.pdf",
+      "read_scope": "Theorem 1.1 and introduction; not complete proof audit",
+      "role": "3D_inviscid_vorticity_scope_reference",
+      "payload_sha256": null
+    },
+    {
+      "id": "openai_announcement",
+      "url": "https://openai.com/index/navier-stokes-solution/",
+      "published_date": "2026-09-08",
+      "role": "publisher_account_of_workflow_only",
+      "read_scope": "Announcement and workflow/result sections"
+    },
+    {
+      "id": "lei_ren_part_i",
+      "url": "https://arxiv.org/abs/2609.35406v2",
+      "version": "v2",
+      "version_date": "2026-09-29",
+      "read_scope": "Abstract, scope metadata and PDF table of contents",
+      "role": "reading_aid_candidate_not_full_proof_replication",
+      "full_proof_reviewed": false
+    },
+    {
+      "id": "cao_chi_nie_force_topology",
+      "url": "https://arxiv.org/abs/2609.10262v4",
+      "version": "v4",
+      "version_date": "2026-09-22",
+      "read_scope": "Abstract and version metadata only",
+      "role": "screened_followup_not_admitted_to_acceptance_criteria",
+      "full_proof_reviewed": false
+    }
+  ],
+  "applicability": [
+    {
+      "area": "proof_scope_and_obligations",
+      "value": "HIGH_METHOD_VALUE",
+      "direct_uet_evidence": false
+    },
+    {
+      "area": "energy_vs_regularity_and_vorticity",
+      "value": "HIGH_METHOD_VALUE",
+      "direct_uet_evidence": false
+    },
+    {
+      "area": "formal_statement_alignment",
+      "value": "HIGH_CONDITIONAL_VALUE",
+      "condition": "Complete theorem cards, assumptions and independent target/checker outputs"
+    },
+    {
+      "area": "3d_adversarial_flow",
+      "value": "CONDITIONAL_FUTURE",
+      "condition": "Admitted 3D vector operator and source-locked forcing with verified reconstruction"
+    },
+    {
+      "area": "speedup",
+      "value": "NO_DIRECT_EVIDENCE",
+      "measured_improvement": null
+    },
+    {
+      "area": "heii_second_sound_or_graphite",
+      "value": "NO_DIRECT_EVIDENCE",
+      "condition": "Separate admitted material state, SI map, primary protocol and independent data required"
+    },
+    {
+      "area": "agent_scale",
+      "value": "UNMEASURED",
+      "local_multiagent_experiment": false
+    }
+  ],
+  "proposed_work": [
+    {
+      "id": "P0",
+      "parent_lane": "Core/J01->J04",
+      "status": "PROPOSED_NOT_EXECUTED",
+      "task": "Conservative origin, ontology and units of vector momentum/material response; admit or reject"
+    },
+    {
+      "id": "P1",
+      "parent_lane": "reference_mathematics",
+      "status": "PROPOSED_NOT_EXECUTED",
+      "task": "Scoped theorem cards and proofs for reciprocal work, Eulerian/material rate and frozen-flow limit",
+      "physical_dependency_unlock": false
+    },
+    {
+      "id": "P2",
+      "parent_lane": "J04/J05",
+      "status": "PROPOSED_NOT_EXECUTED",
+      "requires": "physical_operator_admission",
+      "task": "Manufactured trajectory, momentum/divergence residuals and grid/time convergence"
+    },
+    {
+      "id": "P3",
+      "parent_lane": "J04/J08",
+      "status": "PROPOSED_NOT_EXECUTED",
+      "requires": "P2",
+      "task": "Energy, velocity, gradient/vorticity, spectra, clipping and 3D stretching diagnostics"
+    },
+    {
+      "id": "P4",
+      "parent_lane": "optional_3d_adversarial_source",
+      "status": "PROPOSED_NOT_EXECUTED",
+      "requires": "P2 plus source/force reconstruction",
+      "task": "Paper-derived finite-time resolved source reconstruction; no numerical singularity proof"
+    },
+    {
+      "id": "P5",
+      "parent_lane": "J02/J06",
+      "status": "PROPOSED_NOT_EXECUTED",
+      "requires": "admitted two-fluid state and independent primary protocol",
+      "task": "He-II response comparison with source ancestry and uncertainty"
+    }
+  ],
+  "negative_inference_rules": [
+    "Energy identity is not global regularity.",
+    "Finite grid growth is not a singularity theorem; finite grid boundedness is not prevention of continuum blowup.",
+    "Residual-defined force is not an independent UET prediction.",
+    "Publisher sorry counts and declared axioms are not a locally executed kernel/Comparator audit.",
+    "Challenge placeholders are not automatically proof dependencies; inspect submitted theorem closure.",
+    "Reference 2D identities do not establish 3D dynamics.",
+    "Normalized energy loss is not SI heat or entropy.",
+    "OpenAI classical fluid results do not unlock He-II second sound or graphite thermal bridge."
+  ],
+  "local_evidence_paths": [
+    "docs/topics/0.10_Fluid_Dynamics_Chaos/Data/03_Research/fluid_vector_state_research_contract.json",
+    "docs/topics/0.10_Fluid_Dynamics_Chaos/Result/artifacts/fluid_vector_state_contract_audit.json",
+    "docs/topics/0.10_Fluid_Dynamics_Chaos/Result/artifacts/fluid_state_velocity_representability_audit.json",
+    "docs/topics/0.10_Fluid_Dynamics_Chaos/Data/03_Research/fluid_thermal_joint_research_plan.json",
+    "docs/topics/0.13_Thermodynamic_Bridge/HE4_SECOND_SOUND_PROTOCOL_CARD.md"
+  ],
+  "local_snapshot_role": "As-reviewed source hashes; historical provenance, not a replacement live acceptance gate.",
+  "report_path": "docs/topics/0.10_Fluid_Dynamics_Chaos/OPENAI_APPLICABILITY_UPDATE_2026-09-30.md",
+  "verification": {
+    "new_physics_or_performance_executed": false,
+    "source_metadata_retrieval": true,
+    "json_link_hash_and_diff_validation": "PASS_STRUCTURE_LOCAL_HASHES_AND_RELATIVE_LINKS; git diff check recorded in ledger"
+  },
+  "external_source_records": [
+    {
+      "path": "formalization.yaml",
+      "git_blob_sha": "6ec2d2dce2c8f634220c7d3709430e8c7bfc6a0c",
+      "sha256": "d9866d5c1fdc16832f098e5f2affa96baf0b156a5f34b9be015d793e1abe2fdd",
+      "bytes": 4555,
+      "url": "https://github.com/openai/NavierStokesAndEuler/blob/f9e8bc5b38b6e212696e8a30e3e91517af887bbd/formalization.yaml",
+      "retrieval": "GitHub contents API, decoded source bytes",
+      "role": "metadata/config/adapter reading only; no build or dependency traversal",
+      "payload_vendored": false
+    },
+    {
+      "path": "ComparatorChallenges/NavierStokes.json",
+      "git_blob_sha": "b5fd32b1211faf7d282dac09d70be5527da9f486",
+      "sha256": "7610ecead7b390d80ff7f4229a3ff8f18d630e046f7ad1de4f92c7e8e76845b8",
+      "bytes": 375,
+      "url": "https://github.com/openai/NavierStokesAndEuler/blob/f9e8bc5b38b6e212696e8a30e3e91517af887bbd/ComparatorChallenges/NavierStokes.json",
+      "retrieval": "GitHub contents API, decoded source bytes",
+      "role": "metadata/config/adapter reading only; no build or dependency traversal",
+      "payload_vendored": false
+    },
+    {
+      "path": "ComparatorChallenges/Euler.json",
+      "git_blob_sha": "7ec008190e0301512deffe70ea493e57a0a4b01e",
+      "sha256": "56bc185a931f68d9a0f0265a3c00cb12771dccc85384eaf6546b37844b8adc84",
+      "bytes": 314,
+      "url": "https://github.com/openai/NavierStokesAndEuler/blob/f9e8bc5b38b6e212696e8a30e3e91517af887bbd/ComparatorChallenges/Euler.json",
+      "retrieval": "GitHub contents API, decoded source bytes",
+      "role": "metadata/config/adapter reading only; no build or dependency traversal",
+      "payload_vendored": false
+    },
+    {
+      "path": "ComparatorChallenges/README.md",
+      "git_blob_sha": "bbe080b9fa8fd091617914290eb815e831cf16b2",
+      "sha256": "f28c5f581d7bbc9504db467b88686a89ad5a94e4fd38b48a1866ae6224b5a1d8",
+      "bytes": 665,
+      "url": "https://github.com/openai/NavierStokesAndEuler/blob/f9e8bc5b38b6e212696e8a30e3e91517af887bbd/ComparatorChallenges/README.md",
+      "retrieval": "GitHub contents API, decoded source bytes",
+      "role": "metadata/config/adapter reading only; no build or dependency traversal",
+      "payload_vendored": false
+    },
+    {
+      "path": "ComparatorChallenges/NavierStokes.lean",
+      "git_blob_sha": "673fb19e26e60818d446363afd953f618719f99b",
+      "sha256": "0cd193b8d5cbd0266e6e2f72e68dd5abcdcf2430ebd435dd9289737e9aa7da61",
+      "bytes": 13031,
+      "url": "https://github.com/openai/NavierStokesAndEuler/blob/f9e8bc5b38b6e212696e8a30e3e91517af887bbd/ComparatorChallenges/NavierStokes.lean",
+      "retrieval": "GitHub contents API, decoded source bytes",
+      "role": "metadata/config/adapter reading only; no build or dependency traversal",
+      "payload_vendored": false
+    },
+    {
+      "path": "NavierStokes/ComparatorSolution.lean",
+      "git_blob_sha": "cc232068cd384dbbddce2753b1fc4a4017c0f2d7",
+      "sha256": "52950d5d618a8d34c9bfbdb16641c81c276e97b6d7fd2a76c08577353f0b0227",
+      "bytes": 1359,
+      "url": "https://github.com/openai/NavierStokesAndEuler/blob/f9e8bc5b38b6e212696e8a30e3e91517af887bbd/NavierStokes/ComparatorSolution.lean",
+      "retrieval": "GitHub contents API, decoded source bytes",
+      "role": "metadata/config/adapter reading only; no build or dependency traversal",
+      "payload_vendored": false
+    }
+  ],
+  "local_evidence_records": [
+    {
+      "path": "docs/topics/0.10_Fluid_Dynamics_Chaos/Data/03_Research/fluid_vector_state_research_contract.json",
+      "sha256": "ce7fee2d3a093e983316d9a867a1a2bbd16ab36efb77b5c97f5380bba2017f70",
+      "role": "as-reviewed snapshot"
+    },
+    {
+      "path": "docs/topics/0.10_Fluid_Dynamics_Chaos/Result/artifacts/fluid_vector_state_contract_audit.json",
+      "sha256": "166495ecfdffe5a1eb15daa51233488e72499f2bd74dfc785c4efae1225f5e6d",
+      "role": "as-reviewed snapshot"
+    },
+    {
+      "path": "docs/topics/0.10_Fluid_Dynamics_Chaos/Result/artifacts/fluid_state_velocity_representability_audit.json",
+      "sha256": "7e7b1e5889ea4d1e04abe3a2186ac67e378b7b8d1437375a1ee446c88ba3c1a4",
+      "role": "as-reviewed snapshot"
+    },
+    {
+      "path": "docs/topics/0.10_Fluid_Dynamics_Chaos/Data/03_Research/fluid_thermal_joint_research_plan.json",
+      "sha256": "7f7109cae1cd6b638ff60d090ae927d32805a188ffa33a7bb588f73231d19240",
+      "role": "as-reviewed snapshot"
+    },
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/HE4_SECOND_SOUND_PROTOCOL_CARD.md",
+      "sha256": "3e63ee75d51935420e9d4cb5e2141cf5cdb52c7596a6ea31a78e621ae1313449",
+      "role": "as-reviewed snapshot"
+    }
+  ]
+}

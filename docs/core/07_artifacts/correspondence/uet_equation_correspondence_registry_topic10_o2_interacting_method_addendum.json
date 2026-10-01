@@ -1,0 +1,45 @@
+{
+  "schema_version": "uet-equation-registry-addendum-v1",
+  "status": "SOURCE_RESIDUAL_REFERENCE_NOT_CORE_PROMOTION",
+  "extends": "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry_topic10_o2_density_backreaction_addendum.json",
+  "equation_entries": [
+    {
+      "equation_id": "candidate.topic10_13.condensed_Hartree_constraint_residual_reference",
+      "classification": "source_transcribed_conditional_residual_identity",
+      "relation": "R_G=R_rho-2R_D-2lambda*I_minus; original stationary R_G=-2lambda*I_minus;gapless replacement R_D=-lambda*I_minus",
+      "variables": {
+        "rho_squared,M_squared,delta_M_squared,I_plus,I_minus,mu_squared": "natural energy squared",
+        "lambda": "dimensionless"
+      },
+      "mathematical_role": "separate stationarity,Goldstone and constrained-method obligations",
+      "standard_physics_counterpart": "selected O(2) finite-density 2PI/Hartree gap/constraint equations",
+      "unit_lane": "natural_source_algebra",
+      "units": {
+        "residuals": 2,
+        "zero_energy_determinant": 4
+      },
+      "source_or_origin": "docs/topics/0.10_Fluid_Dynamics_Chaos/CORE_O2_INTERACTING_METHOD_ADMISSION.md",
+      "primary_reference": "https://arxiv.org/html/1310.5953v2",
+      "proof_status": "exact conditional algebra;no solved integral/state,formal or independent review",
+      "assumptions": [
+        "source-transcribed Hartree equations",
+        "nonzero condensate",
+        "synthetic rational tadpoles are not physical inputs"
+      ],
+      "observable_mapping": {
+        "status": "NOT_ADMITTED",
+        "reason": "no condensed interacting state,source response,material/SI or experiment"
+      },
+      "implementation_paths": [
+        "docs/topics/0.10_Fluid_Dynamics_Chaos/Code/03_Research/Research_Fluid_Core_O2_Interacting_Method.py"
+      ],
+      "evidence_class": "INTERNAL_SOURCE_BRANCH_ALGEBRA_AUDIT_ONLY",
+      "blockers": [
+        "condensed_twoPI_stationarity_Goldstone_and_source_response_contract_not_admitted",
+        "useful_certified_current_error_and_interacting_Noether_heat_frame_material_correspondence_open",
+        "vector_momentum_constitutive_origin_and_material_frame_admission_open"
+      ],
+      "claim_boundary": "Normal/source-algebra checks do not admit a condensed conserving/gapless thermodynamic or dynamic method"
+    }
+  ]
+}

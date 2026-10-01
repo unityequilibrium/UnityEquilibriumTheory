@@ -1,0 +1,668 @@
+{
+  "schema_version": "t010-he4-fixed-constraint-source-audit-v1",
+  "date": "2026-09-30",
+  "status": "PASS_SOURCE_CANDIDATE_PRINTING_COMPATIBILITY_ONLY",
+  "scope": "offline transcription metadata, SI conversion, branch selection and assumed printing compatibility",
+  "input_hashes": {
+    "docs/topics/0.10_Fluid_Dynamics_Chaos/Data/03_Research/he4_tn1334_fixed_constraint_eos_source_candidate.json": "bec6724cfb14b154c03703d7813e6ae53d5fd5178237f60e805098e32552b41d",
+    "docs/topics/0.10_Fluid_Dynamics_Chaos/HE4_FIXED_CONSTRAINT_EOS_SOURCE_CARD.md": "579c9c31c5b894285a4a4e982bfb83191c1837115b7fc6db9125b687896f8da6",
+    "docs/topics/0.10_Fluid_Dynamics_Chaos/Code/03_Research/Research_He4_Fixed_Constraint_EOS_Source.py": "e8a4f8b1be31b97c9b24fcf1e643c4797f45c56490019c381c36d7bc9aeab6c2",
+    "docs/topics/0.10_Fluid_Dynamics_Chaos/Data/03_Research/he4_two_fluid_thermodynamic_input_requirements.json": "e0b77fa97a24233ee7e2ec6b8327a2ca8092ee2a8c2d1ca49700906bf6cf373f",
+    "docs/topics/0.10_Fluid_Dynamics_Chaos/Result/artifacts/fluid_two_fluid_eos_reference_audit.json": "64b57395685be2031c8399bf6488ae96ed4f31e74db960d18010093cf7b33370",
+    "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/he4_svp_second_sound_response_source_package.json": "8a924ebb1e7e0342bc69a954bbc9b19255eafda47f0650c3f64e458878ca7a94",
+    "docs/topics/0.13_Thermodynamic_Bridge/HE4_SECOND_SOUND_PROTOCOL_CARD.md": "3e63ee75d51935420e9d4cb5e2141cf5cdb52c7596a6ea31a78e621ae1313449"
+  },
+  "checks": {
+    "candidate_role": {
+      "pass": true
+    },
+    "source_edition": {
+      "pass": true
+    },
+    "original_pdf_identity": {
+      "pass": true
+    },
+    "fixed_constraint_not_path_replacement": {
+      "pass": true
+    },
+    "source_phi_not_uet_Phi": {
+      "pass": true
+    },
+    "no_physical_printing_uncertainty": {
+      "pass": true
+    },
+    "locked_half_display_rule": {
+      "pass": true
+    },
+    "no_physical_acceptance_threshold": {
+      "pass": true
+    },
+    "independence_not_admitted": {
+      "pass": true
+    },
+    "entropy_anchor_open": {
+      "pass": true
+    },
+    "covariance_unassigned": {
+      "pass": true
+    },
+    "modern_normal_EOS_excluded": {
+      "pass": true
+    },
+    "boundary_admitted_material_values_assigned": {
+      "pass": true
+    },
+    "boundary_physical_uet_operator_admitted": {
+      "pass": true
+    },
+    "boundary_physical_prediction_executed": {
+      "pass": true
+    },
+    "boundary_physical_J05_executed": {
+      "pass": true
+    },
+    "boundary_physical_J06_executed": {
+      "pass": true
+    },
+    "boundary_claim_promotion": {
+      "pass": true
+    },
+    "boundary_dependency_unlock": {
+      "pass": true
+    },
+    "source_rows_not_empty": {
+      "pass": true
+    },
+    "tn1334-liquid-1.650K_liquid_phase": {
+      "pass": true
+    },
+    "tn1334-liquid-1.650K_SVP_equilibrium": {
+      "pass": true
+    },
+    "tn1334-liquid-1.650K_positive_state": {
+      "pass": true
+    },
+    "tn1334-liquid-1.650K_negative_expansivity": {
+      "pass": true
+    },
+    "tn1334-liquid-1.650K_HeII_EOS_branch": {
+      "pass": true,
+      "T_A_at_printed_density_K": 2.50032
+    },
+    "tn1334-liquid-1.650K_transport_unknown_not_zero": {
+      "pass": true
+    },
+    "tn1334-liquid-1.650K_physical_uncertainty_unknown": {
+      "pass": true
+    },
+    "tn1334-liquid-1.650K_cp_minus_cv_printing_compatibility": {
+      "pass": true
+    },
+    "tn1334-liquid-1.650K_adiabatic_sound_squared_printing_compatibility": {
+      "pass": true
+    },
+    "tn1334-liquid-1.650K_gruneisen_printing_compatibility": {
+      "pass": true
+    },
+    "tn1334-liquid-1.700K_liquid_phase": {
+      "pass": true
+    },
+    "tn1334-liquid-1.700K_SVP_equilibrium": {
+      "pass": true
+    },
+    "tn1334-liquid-1.700K_positive_state": {
+      "pass": true
+    },
+    "tn1334-liquid-1.700K_negative_expansivity": {
+      "pass": true
+    },
+    "tn1334-liquid-1.700K_HeII_EOS_branch": {
+      "pass": true,
+      "T_A_at_printed_density_K": 2.50032
+    },
+    "tn1334-liquid-1.700K_transport_unknown_not_zero": {
+      "pass": true
+    },
+    "tn1334-liquid-1.700K_physical_uncertainty_unknown": {
+      "pass": true
+    },
+    "tn1334-liquid-1.700K_cp_minus_cv_printing_compatibility": {
+      "pass": true
+    },
+    "tn1334-liquid-1.700K_adiabatic_sound_squared_printing_compatibility": {
+      "pass": true
+    },
+    "tn1334-liquid-1.700K_gruneisen_printing_compatibility": {
+      "pass": true
+    },
+    "tn1334-liquid-1.750K_liquid_phase": {
+      "pass": true
+    },
+    "tn1334-liquid-1.750K_SVP_equilibrium": {
+      "pass": true
+    },
+    "tn1334-liquid-1.750K_positive_state": {
+      "pass": true
+    },
+    "tn1334-liquid-1.750K_negative_expansivity": {
+      "pass": true
+    },
+    "tn1334-liquid-1.750K_HeII_EOS_branch": {
+      "pass": true,
+      "T_A_at_printed_density_K": 2.49976
+    },
+    "tn1334-liquid-1.750K_transport_unknown_not_zero": {
+      "pass": true
+    },
+    "tn1334-liquid-1.750K_physical_uncertainty_unknown": {
+      "pass": true
+    },
+    "tn1334-liquid-1.750K_cp_minus_cv_printing_compatibility": {
+      "pass": true
+    },
+    "tn1334-liquid-1.750K_adiabatic_sound_squared_printing_compatibility": {
+      "pass": true
+    },
+    "tn1334-liquid-1.750K_gruneisen_printing_compatibility": {
+      "pass": true
+    },
+    "MPa_as_Pa_error_detected": {
+      "pass": true
+    },
+    "alpha_times_T_as_alpha_error_detected": {
+      "pass": true
+    },
+    "P_kappa_as_kappa_error_detected": {
+      "pass": true
+    },
+    "vapor_density_error_detected": {
+      "pass": true
+    },
+    "blank_transport_as_zero_detected": {
+      "pass": true
+    },
+    "original_admitted_inputs_remain_unassigned": {
+      "pass": true
+    }
+  },
+  "check_count": 56,
+  "passing_check_count": 56,
+  "rows": [
+    {
+      "row_id": "tn1334-liquid-1.650K",
+      "SI_central_values": {
+        "T_K": 1.65,
+        "rho_kg_m3": 145.3,
+        "P_Pa": 922.4,
+        "s_J_kgK": 337.4,
+        "cv_J_kgK": 1879.0,
+        "cp_J_kgK": 1881.0,
+        "adiabatic_sound_m_s": 233.8,
+        "gruneisen": -0.1059,
+        "alpha_p_per_K": -0.0036442424242424244,
+        "kappa_T_per_Pa": 1.2597571552471813e-07
+      },
+      "SI_printing_intervals": {
+        "T_K": {
+          "lo": "1.6495",
+          "hi": "1.6505"
+        },
+        "rho_kg_m3": {
+          "lo": "145.25",
+          "hi": "145.35"
+        },
+        "P_Pa": {
+          "lo": "922.35000000",
+          "hi": "922.45000000"
+        },
+        "s_J_kgK": {
+          "lo": "337.35000",
+          "hi": "337.45000"
+        },
+        "cv_J_kgK": {
+          "lo": "1878.5000",
+          "hi": "1879.5000"
+        },
+        "cp_J_kgK": {
+          "lo": "1880.5000",
+          "hi": "1881.5000"
+        },
+        "adiabatic_sound_m_s": {
+          "lo": "233.75",
+          "hi": "233.85"
+        },
+        "gruneisen": {
+          "lo": "-0.10595",
+          "hi": "-0.10585"
+        },
+        "alpha_p_per_K": {
+          "lo": "-0.00364565019702940284934828735980600181873294937859957562897848",
+          "hi": "-0.00364283550439260830051499545592244774310814904574371402605271"
+        },
+        "kappa_T_per_Pa": {
+          "lo": "1.25914683722694997018808607512602309068242181148029703506965E-7",
+          "hi": "1.26036753943730687916734428362335339079525126036753943730688E-7"
+        }
+      },
+      "printing_diagnostics": {
+        "cp_minus_cv": {
+          "printed": {
+            "lo": "1.0000",
+            "hi": "3.0000"
+          },
+          "derived": {
+            "lo": "1.19486597887296372459922899408828217752319265670371384580840",
+            "hi": "1.19942473149706320225835450320824028424907570572310637655351"
+          },
+          "printing_intervals_overlap": true
+        },
+        "adiabatic_sound_squared": {
+          "printed": {
+            "lo": "54639.0625",
+            "hi": "54685.8225"
+          },
+          "derived": {
+            "lo": "54615.8581825064559520939411439303479093093376647661105798488",
+            "hi": "54764.6735567330596195510306954766547879842979547312506686881"
+          },
+          "printing_intervals_overlap": true
+        },
+        "gruneisen": {
+          "printed": {
+            "lo": "-0.10595",
+            "hi": "-0.10585"
+          },
+          "derived": {
+            "lo": "-0.106113655563303112901741014486064996243409775726102064411294",
+            "hi": "-0.105799833709176319443606381354994942611952496313761564236000"
+          },
+          "printing_intervals_overlap": true
+        }
+      },
+      "role": "fitted EOS source candidate; not admitted UET input or physical uncertainty"
+    },
+    {
+      "row_id": "tn1334-liquid-1.700K",
+      "SI_central_values": {
+        "T_K": 1.7,
+        "rho_kg_m3": 145.3,
+        "P_Pa": 1128.0,
+        "s_J_kgK": 398.1,
+        "cv_J_kgK": 2191.0,
+        "cp_J_kgK": 2193.0,
+        "adiabatic_sound_m_s": 233.1,
+        "gruneisen": -0.1021,
+        "alpha_p_per_K": -0.004119411764705883,
+        "kappa_T_per_Pa": 1.2668439716312055e-07
+      },
+      "SI_printing_intervals": {
+        "T_K": {
+          "lo": "1.6995",
+          "hi": "1.7005"
+        },
+        "rho_kg_m3": {
+          "lo": "145.25",
+          "hi": "145.35"
+        },
+        "P_Pa": {
+          "lo": "1127.5000000",
+          "hi": "1128.5000000"
+        },
+        "s_J_kgK": {
+          "lo": "398.05000",
+          "hi": "398.15000"
+        },
+        "cv_J_kgK": {
+          "lo": "2190.5000",
+          "hi": "2191.5000"
+        },
+        "cp_J_kgK": {
+          "lo": "2192.5000",
+          "hi": "2193.5000"
+        },
+        "adiabatic_sound_m_s": {
+          "lo": "233.05",
+          "hi": "233.15"
+        },
+        "gruneisen": {
+          "lo": "-0.10215",
+          "hi": "-0.10205"
+        },
+        "alpha_p_per_K": {
+          "lo": "-0.00412091791703442188879082082965578111209179170344218887908208",
+          "hi": "-0.00411790649808879741252572772713907674213466627462511026168774"
+        },
+        "kappa_T_per_Pa": {
+          "lo": "1.26583961010190518387239698715108551174124944616747895436420E-7",
+          "hi": "1.26784922394678492239467849223946784922394678492239467849224E-7"
+        }
+      },
+      "printing_diagnostics": {
+        "cp_minus_cv": {
+          "printed": {
+            "lo": "1.0000",
+            "hi": "3.0000"
+          },
+          "derived": {
+            "lo": "1.56383700686320239830499390312498870086973969454362349599511",
+            "hi": "1.57061500439218109942721715506904700150355168819853448474338"
+          },
+          "printing_intervals_overlap": true
+        },
+        "adiabatic_sound_squared": {
+          "printed": {
+            "lo": "54312.3025",
+            "hi": "54358.9225"
+          },
+          "derived": {
+            "lo": "54289.4549884593591272816706353163208725301556051686563157797",
+            "hi": "54462.7490434042139483047723089877855726333699551297902167504"
+          },
+          "printing_intervals_overlap": true
+        },
+        "gruneisen": {
+          "printed": {
+            "lo": "-0.10215",
+            "hi": "-0.10205"
+          },
+          "derived": {
+            "lo": "-0.102318905103220308467601956398363040781698637541794727510535",
+            "hi": "-0.101965290524367650211884129223191793656475016134886483746312"
+          },
+          "printing_intervals_overlap": true
+        }
+      },
+      "role": "fitted EOS source candidate; not admitted UET input or physical uncertainty"
+    },
+    {
+      "row_id": "tn1334-liquid-1.750K",
+      "SI_central_values": {
+        "T_K": 1.75,
+        "rho_kg_m3": 145.4,
+        "P_Pa": 1366.0,
+        "s_J_kgK": 466.6,
+        "cv_J_kgK": 2541.0,
+        "cp_J_kgK": 2543.0,
+        "adiabatic_sound_m_s": 232.4,
+        "gruneisen": -0.09887,
+        "alpha_p_per_K": -0.004656571428571428,
+        "kappa_T_per_Pa": 1.2745241581259152e-07
+      },
+      "SI_printing_intervals": {
+        "T_K": {
+          "lo": "1.7495",
+          "hi": "1.7505"
+        },
+        "rho_kg_m3": {
+          "lo": "145.35",
+          "hi": "145.45"
+        },
+        "P_Pa": {
+          "lo": "1365.5000000",
+          "hi": "1366.5000000"
+        },
+        "s_J_kgK": {
+          "lo": "466.55000",
+          "hi": "466.65000"
+        },
+        "cv_J_kgK": {
+          "lo": "2540.5000",
+          "hi": "2541.5000"
+        },
+        "cp_J_kgK": {
+          "lo": "2542.5000",
+          "hi": "2543.5000"
+        },
+        "adiabatic_sound_m_s": {
+          "lo": "232.35",
+          "hi": "232.45"
+        },
+        "gruneisen": {
+          "lo": "-0.098875",
+          "hi": "-0.098865"
+        },
+        "alpha_p_per_K": {
+          "lo": "-0.00465818805372963703915404401257502143469562732209202629322664",
+          "hi": "-0.00465495572693516138246215367037989145958297629248786061125392"
+        },
+        "kappa_T_per_Pa": {
+          "lo": "1.27369191364800585437248444932308818148554701792901573362605E-7",
+          "hi": "1.27535701208348590259978030025631636763090443061149761991944E-7"
+        }
+      },
+      "printing_diagnostics": {
+        "cp_minus_cv": {
+          "printed": {
+            "lo": "1.0000",
+            "hi": "3.0000"
+          },
+          "derived": {
+            "lo": "2.04361723406676522330376135374690522960438845757697414353189",
+            "hi": "2.05171352778952333313025186650002735286369627421354142578632"
+          },
+          "printing_intervals_overlap": true
+        },
+        "adiabatic_sound_squared": {
+          "printed": {
+            "lo": "53986.5225",
+            "hi": "54033.0025"
+          },
+          "derived": {
+            "lo": "53929.3700920727691680786076447310039471583016815177175300545",
+            "hi": "54079.5557120331633872923504868027205303465240237542701858842"
+          },
+          "printing_intervals_overlap": true
+        },
+        "gruneisen": {
+          "printed": {
+            "lo": "-0.098875",
+            "hi": "-0.098865"
+          },
+          "derived": {
+            "lo": "-0.0990417693606444808095051247571363776911202627932922113509842",
+            "hi": "-0.0987370030128220052461119628173303114493584883884777679856377"
+          },
+          "printing_intervals_overlap": true
+        }
+      },
+      "role": "fitted EOS source candidate; not admitted UET input or physical uncertainty"
+    }
+  ],
+  "negative_controls": {
+    "MPa_as_Pa": {
+      "detected": true,
+      "diagnostics": {
+        "cp_minus_cv": {
+          "printed": {
+            "lo": "1.0000",
+            "hi": "3.0000"
+          },
+          "derived": {
+            "lo": "0.00000156383700686320239830499390312498870086973969454362349599511",
+            "hi": "0.00000157061500439218109942721715506904700150355168819853448474338"
+          },
+          "printing_intervals_overlap": false
+        },
+        "adiabatic_sound_squared": {
+          "printed": {
+            "lo": "54312.3025",
+            "hi": "54358.9225"
+          },
+          "derived": {
+            "lo": "0.0542894549884593591272816706353163208725301556051686563157797",
+            "hi": "0.0544627490434042139483047723089877855726333699551297902167504"
+          },
+          "printing_intervals_overlap": false
+        },
+        "gruneisen": {
+          "printed": {
+            "lo": "-0.10215",
+            "hi": "-0.10205"
+          },
+          "derived": {
+            "lo": "-1.02318905103220308467601956398363040781698637541794727510535E-7",
+            "hi": "-1.01965290524367650211884129223191793656475016134886483746312E-7"
+          },
+          "printing_intervals_overlap": false
+        }
+      }
+    },
+    "alpha_times_T_as_alpha": {
+      "detected": true,
+      "diagnostics": {
+        "cp_minus_cv": {
+          "printed": {
+            "lo": "1.0000",
+            "hi": "3.0000"
+          },
+          "derived": {
+            "lo": "4.52214786370557409097915044591500560755220149214671969927493",
+            "hi": "4.53640770983968776752090616579021722170445871691174920191793"
+          },
+          "printing_intervals_overlap": false
+        },
+        "adiabatic_sound_squared": {
+          "printed": {
+            "lo": "54312.3025",
+            "hi": "54358.9225"
+          },
+          "derived": {
+            "lo": "54289.4549884593591272816706353163208725301556051686563157797",
+            "hi": "54462.7490434042139483047723089877855726333699551297902167504"
+          },
+          "printing_intervals_overlap": true
+        },
+        "gruneisen": {
+          "printed": {
+            "lo": "-0.10215",
+            "hi": "-0.10205"
+          },
+          "derived": {
+            "lo": "-0.173890979222922914240689524899017987808496834502280139404154",
+            "hi": "-0.173391976536687189185308961744037645112835764937374465610603"
+          },
+          "printing_intervals_overlap": false
+        }
+      }
+    },
+    "P_kappa_as_kappa": {
+      "detected": true,
+      "diagnostics": {
+        "cp_minus_cv": {
+          "printed": {
+            "lo": "1.0000",
+            "hi": "3.0000"
+          },
+          "derived": {
+            "lo": "0.00138699512803831698297560434866961303846540105946219378802227",
+            "hi": "0.00139177226795939840445477816133721488835051102188616259170879"
+          },
+          "printing_intervals_overlap": false
+        },
+        "adiabatic_sound_squared": {
+          "printed": {
+            "lo": "54312.3025",
+            "hi": "54358.9225"
+          },
+          "derived": {
+            "lo": "48.1502926726912276073451624260011715055699827983757483953700",
+            "hi": "48.2611865692549525461274012485492118499188036819936111801067"
+          },
+          "printing_intervals_overlap": false
+        },
+        "gruneisen": {
+          "printed": {
+            "lo": "-0.10215",
+            "hi": "-0.10205"
+          },
+          "derived": {
+            "lo": "-0.0000906680594623130779509100189617749586014166039360165950469957",
+            "hi": "-0.0000904348474717229713630901367833186639968736285010079678459527"
+          },
+          "printing_intervals_overlap": false
+        }
+      }
+    },
+    "vapor_density": {
+      "detected": true,
+      "diagnostics": {
+        "cp_minus_cv": {
+          "printed": {
+            "lo": "1.0000",
+            "hi": "3.0000"
+          },
+          "derived": {
+            "lo": "690.368136515008256928263823292990456101493286566182764291233",
+            "hi": "693.093815549033281761516912574142722067114940637512179580663"
+          },
+          "printing_intervals_overlap": false
+        },
+        "adiabatic_sound_squared": {
+          "printed": {
+            "lo": "54312.3025",
+            "hi": "54358.9225"
+          },
+          "derived": {
+            "lo": "23966506.5529918537559617033465246081665064787159036118314307",
+            "hi": "24033766.6673384842047433333674023267641652650341260884975939"
+          },
+          "printing_intervals_overlap": false
+        },
+        "gruneisen": {
+          "printed": {
+            "lo": "-0.10215",
+            "hi": "-0.10205"
+          },
+          "derived": {
+            "lo": "-45.1521220302073516783204744549969061933517457175928426884557",
+            "hi": "-45.0133788237413453554969117162974250811500185123940787016747"
+          },
+          "printing_intervals_overlap": false
+        }
+      },
+      "source_vapor_density_kg_m3": 0.3292
+    },
+    "blank_transport_as_zero": {
+      "detected": true,
+      "corrupted_values": {
+        "ordinary_conductivity_W_mK": 0,
+        "ordinary_viscosity_Pa_s": 0,
+        "thermal_diffusivity_m2_s": 0,
+        "Prandtl": 0
+      }
+    }
+  },
+  "printing_rule": "symmetric half of the last displayed decimal unit for every raw token, including T; assumption for diagnostic compatibility only; source rounding mode not asserted",
+  "printing_intervals_are_physical_uncertainty": false,
+  "physical_acceptance_threshold": null,
+  "source_acquisition_controller": "he4_fixed_constraint_EOS_source_found_but_covariance_entropy_anchor_and_independence_open",
+  "parent_input_controller": "two_fluid_fixed_pressure_EOS_and_UET_state_mapping_missing",
+  "physical_controller": "vector_momentum_constitutive_origin_and_material_frame_admission_open",
+  "remaining_blockers": [
+    "per_row_EOS_uncertainty_covariance_missing",
+    "absolute_entropy_anchor_for_selected_edition_unresolved",
+    "EOS_and_response_exact_experimental_ancestry_split_unresolved",
+    "primary_response_state_frequency_geometry_protocol_missing",
+    "physical_Core_to_material_Legendre_state_SI_mapping_missing",
+    "superfluid_phase_stiffness_and_response_density_mapping_missing",
+    "state_matched_dissipative_transport_missing"
+  ],
+  "numerical_HeII_source_rows_ingested": true,
+  "admitted_material_values_assigned": false,
+  "independent_validation_admitted": false,
+  "physical_uet_operator_admitted": false,
+  "physical_prediction_executed": false,
+  "physical_J05_executed": false,
+  "physical_J06_executed": false,
+  "claim_promotion": false,
+  "dependency_unlock": false,
+  "thresholds_relaxed": false,
+  "notes": [
+    "Rendered source pages were inspected manually; offline audit cannot recheck upstream PDF transcription.",
+    "Each thermodynamic derivative has its own fixed-variable constraint at an SVP equilibrium state.",
+    "Interval enclosures may overestimate due to shared input dependence; they are not probabilistic covariance.",
+    "The source adiabatic speed is not identified with the full two-fluid fast mode.",
+    "No rho_s, sound eigenvalue, attenuation, UET field mapping or new parameter fit is calculated.",
+    "Unresolved physical uncertainty, entropy anchor, experimental ancestry and state/protocol prevent material admission."
+  ]
+}

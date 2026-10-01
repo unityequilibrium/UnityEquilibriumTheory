@@ -1,0 +1,77 @@
+{
+  "schema_version": "t010-core-o2-goldstone-vector-refinement-v1",
+  "date": "2026-10-01",
+  "record_role": "STABLE_VECTOR_AND_SOFT_VARIATIONAL_REFINEMENT_NOT_TRANSPORT",
+  "card": "docs/topics/0.10_Fluid_Dynamics_Chaos/CORE_O2_GOLDSTONE_VECTOR_REFINEMENT.md",
+  "galerkin_contract": "docs/topics/0.10_Fluid_Dynamics_Chaos/Data/03_Research/fluid_core_o2_goldstone_galerkin_contract.json",
+  "galerkin_verifier": "docs/topics/0.10_Fluid_Dynamics_Chaos/Code/03_Research/Research_Fluid_Core_O2_Goldstone_Galerkin.py",
+  "galerkin_artifact": "docs/topics/0.10_Fluid_Dynamics_Chaos/Result/artifacts/fluid_core_o2_goldstone_galerkin_audit.json",
+  "physical_controller": "vector_momentum_constitutive_origin_and_material_frame_admission_open",
+  "previous_measured_controller": "finite_basis_and_cutoff_current_response_not_converged",
+  "candidate_controller": "stable_Goldstone_vector_refinement_and_continuum_physical_heat_current_admission_open",
+  "mu": 1.28,
+  "temperatures": [
+    0.002,
+    0.004
+  ],
+  "lambda_exploratory": 0.01,
+  "verification": {
+    "locked_before_first_execution": true,
+    "orders": [
+      96,
+      144,
+      192
+    ],
+    "cutoff_factors": [
+      40,
+      50,
+      60
+    ],
+    "even_feature_orders": [
+      5,
+      9,
+      13,
+      17
+    ],
+    "soft_feature_orders": [
+      5,
+      9,
+      17,
+      25,
+      35
+    ],
+    "default_order": 192,
+    "default_cutoff_factor": 60,
+    "algebra_relative_tolerance": 1e-8,
+    "event_relative_tolerance": 1e-9,
+    "relative_eigenvalue_tolerance": 1e-9,
+    "same_span_relative_tolerance": 1e-8,
+    "refinement_relative_tolerance": 0.01,
+    "source_representation_relative_tolerance": 0.01,
+    "max_cutoff_energy_over_radial_gap": 0.1,
+    "energy_scale": 2,
+    "frequency_over_min_basis_rate": [
+      0,
+      0.5,
+      1,
+      2
+    ],
+    "threshold_policy": "Same prior1% numerical targets; larger predeclared trial spaces/cutoffs; no fitting or post-preview relaxation"
+  },
+  "admission": {
+    "physical_heat_current": false,
+    "full_interacting_transport": false,
+    "continuum_spectral_gap": false,
+    "thermalization": false,
+    "physical_frequency_window": false,
+    "collective_sound_damping": false,
+    "live_Phi": false,
+    "physical_UET_operator": false,
+    "physical_HeII_state": false,
+    "physical_J04_executed": false,
+    "physical_J05_executed": false,
+    "physical_J06_executed": false,
+    "claim_promotion": false,
+    "dependency_unlock": false
+  }
+}

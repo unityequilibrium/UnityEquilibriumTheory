@@ -1,0 +1,174 @@
+{
+  "schema_version": "t010-core-o2-common-flow-composition-v1",
+  "date": "2026-09-30",
+  "record_role": "CURRENT_CORE_SOURCE_COMPOSITION_DIAGNOSTIC_NOT_ADMISSION",
+  "physical_controller": "vector_momentum_constitutive_origin_and_material_frame_admission_open",
+  "candidate_controller": "finite_temperature_phase_stiffness_and_normal_momentum_common_action_match_missing",
+  "card": "docs/topics/0.10_Fluid_Dynamics_Chaos/CORE_O2_COMMON_FLOW_COMPOSITION_CONTRACT.md",
+  "core_sources": {
+    "response": "docs/core/02_equations/covariant/uet_covariant_response.py",
+    "finite_density": "docs/core/02_equations/o2/uet_o2_finite_density_eos.py",
+    "EOS": "docs/core/02_equations/o2/uet_o2_finite_temperature_quasiparticle_eos.py",
+    "transverse": "docs/core/02_equations/o2/uet_o2_formal_transverse_response.py"
+  },
+  "AST_selected_definitions": {
+    "response": [
+      "_finite_scalar",
+      "response_displacement"
+    ],
+    "finite_density": [
+      "_finite_scalar",
+      "effective_mass_sq",
+      "condensate_control"
+    ],
+    "EOS": [
+      "_finite",
+      "_positive",
+      "_quadrature",
+      "_thermal_log",
+      "_effective_chemical_potential",
+      "_condensed_amplitude_sq",
+      "condensed_quasiparticle_energies",
+      "_thermal_pressure_normal",
+      "_thermal_pressure_condensed",
+      "quasiparticle_pressure"
+    ],
+    "transverse": [
+      "FormalTransverseResponse",
+      "_positive",
+      "_quadrature",
+      "_minus_bose_derivative",
+      "_branch_energies",
+      "formal_transverse_quasiparticle_response"
+    ]
+  },
+  "AST_boundary": "source-verbatim selected definitions only; no whole Core runtime import or dependency promotion",
+  "configuration": {
+    "Z": 1.0,
+    "mass_squared": 1.0,
+    "lambda": 1.0,
+    "response_coupling": 0.0,
+    "epsilon_nc": 0.0,
+    "phi_equilibrium": 0.0,
+    "phase_tolerance": 1e-10,
+    "Phi_fixed": 0.15
+  },
+  "states": [
+    {
+      "branch": "normal",
+      "T": 0.12,
+      "mu": 0.35
+    },
+    {
+      "branch": "normal",
+      "T": 0.22,
+      "mu": 0.35
+    },
+    {
+      "branch": "condensed",
+      "T": 0.04,
+      "mu": 1.28
+    },
+    {
+      "branch": "condensed",
+      "T": 0.08,
+      "mu": 1.28
+    },
+    {
+      "branch": "condensed",
+      "T": 0.16,
+      "mu": 1.28
+    }
+  ],
+  "derivation": {
+    "common_flow_target": "w=T*p_T+mu*p_mu=mu^2*f_s+chi_n",
+    "proposed_shortcut": "chi_n=chi_perp_qp, f_s=f_s_tree",
+    "test_residual": "Delta=mu^2*f_s_tree+chi_perp_qp-w",
+    "tree": "q=Z*mu^2-m_eff^2; p0=q^2/(4*lambda); n0=Z*mu*q/lambda; f_s_tree=Z*q/lambda",
+    "tree_sound": "c_Goldstone^2=n0/(mu*partial_mu n0)",
+    "no_identity_repair": "Do not replace phase stiffness by (w-chi_perp_qp)/mu^2 to force target closure"
+  },
+  "primary_sources": [
+    {
+      "title": "Low-Energy Quantum Effective Action for Relativistic Superfluids",
+      "author": "D. T. Son",
+      "version": "hep-ph/0204199v2",
+      "url": "https://arxiv.org/html/hep-ph/0204199v2",
+      "equations": [
+        "20",
+        "25",
+        "31"
+      ],
+      "review_scope": "selected zero-temperature action/current/sound correspondence and explicit finite-T exclusion"
+    },
+    {
+      "title": "From a complex scalar field to the two-fluid picture of superfluidity",
+      "authors": [
+        "Alford",
+        "Mallavarapu",
+        "Schmitt",
+        "Stetina"
+      ],
+      "version": "1212.0670v3",
+      "doi": "10.1103/PhysRevD.87.065001",
+      "url": "https://arxiv.org/html/1212.0670v3",
+      "equations": [
+        "49",
+        "65",
+        "66",
+        "67",
+        "68"
+      ],
+      "review_scope": "selected ideal relativistic current/stress, density/frame and effective-action correspondence; not full paper replication"
+    }
+  ],
+  "verification": {
+    "locked_before_first_execution": true,
+    "orders": [
+      128,
+      256,
+      384
+    ],
+    "order_sweep_cutoff": 70,
+    "cutoffs": [
+      45,
+      70,
+      100
+    ],
+    "cutoff_sweep_order": 384,
+    "derivative_relative_steps": [
+      0.001,
+      0.0003,
+      0.0001
+    ],
+    "composition_relative_tolerance": 1e-05,
+    "refinement_relative_tolerance": 1e-06,
+    "identity_tolerance": 1e-08,
+    "negative_control_floor": 1e-07,
+    "spectrum_momenta": [
+      0.001,
+      0.0001,
+      1e-05
+    ],
+    "relative_metric": "abs(a-b)/max(abs(a),abs(b),1e-30)",
+    "threshold_policy": "retain failed diagnostic/target; no post-preview adjustment"
+  },
+  "admission": {
+    "complete_flow_master_function": false,
+    "physical_UET_operator": false,
+    "physical_HeII_state": false,
+    "physical_J04_executed": false,
+    "physical_J05_executed": false,
+    "physical_J06_executed": false,
+    "material_values_assigned": false,
+    "claim_promotion": false,
+    "dependency_unlock": false
+  },
+  "reused_inputs": [
+    "docs/core/02_equations/covariant/uet_covariant_matter.py",
+    "docs/core/02_equations/o2/uet_o2_finite_temperature_two_fluid_response.py",
+    "docs/core/07_artifacts/topic13/t13_uet_o2_finite_temperature_two_fluid_response_audit.json",
+    "docs/topics/0.10_Fluid_Dynamics_Chaos/Data/03_Research/fluid_two_fluid_eos_reference_contract.json",
+    "docs/topics/0.13_Thermodynamic_Bridge/HE4_SECOND_SOUND_PROTOCOL_CARD.md"
+  ]
+}
