@@ -86,6 +86,18 @@ upper-half-plane inverse is not a resummed state or a physical prediction.
 
 ## Result-level handoffs after the first portfolio
 
+Use `portfolio_strategy_2026_10_01` for the recommended first-portfolio scope:
+one verified fixed-Phi source-response methods result plus measurement design,
+not a promise of full Topic13 or material prediction. D5 accepts the route;
+the recommendation alone does not accept R1-R5 or complete this scientific Goal.
+New real-axis exploration is not accepted evidence until independently audited
+and hashed. Preserve the established current/background evidence and keep the
+Core owner's bounded composition separate from this new predictive question.
+Prepare the three aims with a decisive calculation/input, named owner role,
+acceptance and failure/unresolved alternative. A hypothetical 11 December call
+requires 27 November scientific freeze; do not wait for 20 December W12.
+No new call, model trial, lab access, cash budget or external contact is implied.
+
 Read `execution_review_2026_10_01` for the current decisive question, date-bound
 acceptance alternatives and model trial record. Model evaluation is NOT_RUN;
 recommendations do not authorize a configuration change. Record accepted work

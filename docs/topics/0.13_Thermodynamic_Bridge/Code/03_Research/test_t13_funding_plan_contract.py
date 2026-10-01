@@ -145,3 +145,49 @@ def test_execution_review_dates_match_existing_milestones():
     result_ids = {card["id"] for card in PLAN["result_level_execution_2026_10_01"]["result_cards"]}
     assert all(set(card["result_ids"]) <= result_ids for card in cards)
     assert "new_evidence_hashes" in review["weekly_review_fields"]
+
+
+def test_portfolio_strategy_preserves_scientific_acceptance_and_existing_dates():
+    strategy = PLAN["portfolio_strategy_2026_10_01"]
+    assert strategy["record_class"] == "PLANNING_NOT_SCIENTIFIC_CLOSURE"
+    assert strategy["status"] == "RECOMMENDED_PENDING_D05_DECISION"
+    assert strategy["decision_dates"] == {
+        "route_selection": "2026-10-02",
+        "scientific_freeze": "2026-10-07",
+        "portfolio_review": PLAN["delivery_date"],
+    }
+    for flag in ("new_real_axis_exploration_is_accepted_evidence",
+                 "novelty_established_by_planning", "scientific_goal_completion_rule_changed",
+                 "core_composition_gate_overwritten", "physical_gate_changed", "claim_promotion"):
+        assert strategy[flag] is False
+    assert strategy["review_readiness_not_submission_readiness"] is True
+    for field in strategy["accepted_preliminary_evidence_fields"]:
+        evidence = PLAN[field]
+        assert evidence["closure_level"] == "CLOSED_FOR_LANE"
+        assert hashlib.sha256((ROOT / evidence["path"]).read_bytes()).hexdigest() == evidence["sha256"]
+
+
+def test_follow_on_aims_are_result_linked_not_promises_of_inputs_or_funding():
+    strategy = PLAN["portfolio_strategy_2026_10_01"]
+    result_ids = {card["id"] for card in PLAN["result_level_execution_2026_10_01"]["result_cards"]}
+    assert [aim["id"] for aim in strategy["aims"]] == ["AIM1", "AIM2", "AIM3"]
+    assert [aim["review_date"] for aim in strategy["aims"]] == [
+        "2026-10-25", "2026-11-08", "2026-11-22"
+    ]
+    for aim in strategy["aims"]:
+        assert set(aim["result_ids"]) <= result_ids
+        for field in ("question", "acceptance", "failure_or_unresolved", "owner_role"):
+            assert aim[field]
+    scenario = strategy["next_round_scenario"]
+    assert scenario["status"] == "SCENARIO_NOT_CONFIRMED_CALL"
+    assert scenario["two_months_after_portfolio"] == "2026-12-11"
+    assert scenario["three_months_after_portfolio"] == "2027-01-11"
+    assert scenario["confirmed_call"] is None
+    assert scenario["actual_call_deadline_overrides_week12"] is True
+    assert scenario["portfolio_documents_alone_are_not_scientific_completion"] is True
+    policy = strategy["resource_policy"]
+    assert policy["model_trial_status"] == "NOT_RUN"
+    assert policy["cash_budget"] is None
+    for flag in ("model_configuration_changed", "lab_access_confirmed",
+                 "purchase_or_external_contact_authorized"):
+        assert policy[flag] is False

@@ -4,6 +4,47 @@
 
 เอกสารนี้เพิ่มภาพระยะยาวและแผนรองรับรอบทุนถัดไปตามคำขอผู้ใช้ โดยคงผลงาน 14 วันเป็น milestone แรก ข้อมูลวันเปิด/ปิดรับทุนจริงยังไม่ทราบ ช่วงสัปดาห์ 8 และ 12 เป็นวันเตรียมพอร์ตที่เสนอ ไม่ใช่การยืนยันว่าหน่วยงานจะเปิดรอบในวันนั้น
 
+## ผลหลักสำหรับพอร์ตและทุนรอบถัดไป
+
+**ข้อเสนอเลือกงาน:** พอร์ตรอบแรกเน้นหนึ่งผลด้าน **stationary/source-complete thermal-response methods พร้อมแผนการวัด** ไม่ตั้งเงื่อนไขว่าต้องปิด Full Topic 13 หรือทำนาย He-II/graphite สำเร็จก่อนมีพอร์ต ผลปิดที่มีหลักฐานแล้วคือ stationary candidate, homogeneous counterterm match, external field response และ rest-frame current consistency ที่ fixed Phi ใน prescription ระบุชัด ส่วน real-axis exploration ที่กำลังตรวจยังไม่ใช่ accepted evidence จนกว่าจะมี verifier, independent check และ artifact/hash ของตนเอง
+
+คำถามสำหรับหัวเรื่องงานที่เสนอ: **“แบบจำลอง finite-temperature ที่ stationary และรักษา source/current consistency กำหนด response ได้อะไรเอง และต้องวัด input ใดเพิ่มก่อนทำนายความร้อนของวัสดุ?”** เป็น research framing ที่เสนอ ไม่ใช่การรับรอง novelty; related-work review ต้องแยกวิธี Hartree/two-fluid ที่นำเข้าจาก contribution ที่พิสูจน์ได้ของงานนี้ ไม่ใช้การทำวิธีมาตรฐานซ้ำหรือชื่อ UET แทนความใหม่
+
+### สิ่งที่ต้องเสร็จก่อนพอร์ต 11 ตุลาคม
+
+| วันตัดสิน | สิ่งที่ต้องส่งมอบ | ถ้ายังไม่สำเร็จ |
+| --- | --- | --- |
+| 2 ต.ค. | เลือกผลหลักหนึ่งผล ระบุชื่อ branch, สมการ, สมมติฐาน, สิ่งที่ปิดจริง และหลักฐานที่รองรับ; prediction route ต้องมี operator/material/non-target inputs ครบ | เลือก methods/structural route ตามหลักฐาน หรือระบุ unresolved; ห้ามเรียกขาดข้อมูลว่า no-go |
+| 3–6 ต.ค. | ปิด calculation ที่เปลี่ยนข้อสรุปของผลหลัก ตรวจอีกวิธี และเขียนหนึ่ง measurement card: material/state, source/readout, parameter ที่วัดได้, units และ uncertainty ที่ต้องหา | ใช้ผลที่ตรวจแล้วเป็น preliminary result; อย่านำผลทดลองใหม่หรือค่าความแม่นยำที่ไม่มีที่มามาเติม |
+| 7 ต.ค. | scientific freeze: bounded result statement, derivation, claim map, evidence hashes, ขอบเขต approximation และ missing obligations | ตรึงผลที่มีจริงกับ exact blocker; ห้ามเปลี่ยน unresolved เป็น scientific completion |
+| 8–11 ต.ค. | report + reproducibility bundle + related-work/novelty comparison + short pitch + 3 aims ด้านล่าง + resource/call-fit checklist | ส่งพอร์ตสำหรับ review ได้ตามเนื้อหาที่มี; submission-ready ยังขึ้นกับ call/PI/งบ/ผู้อนุมัติจริง |
+
+พอร์ตต้องทำให้ผู้ประเมินอ่านแล้วตอบได้สามอย่าง: **เราทำอะไรได้แล้ว, ข้อใดยังทดสอบไม่ได้, และทุนจะซื้อการคำนวณ/การวัดอะไรที่เปลี่ยนข้อสรุปได้** จำนวน tests หรือ artifacts ไม่ใช่ผลงานหลัก และ portfolio review-ready ไม่เปลี่ยน completion rule ของ scientific Goal
+
+### สาม Aims ที่เวลาอีก 2–3 เดือนต้องซื้อให้ได้
+
+| Aim / วัน review ภายใน | ผลวิจัยและเจ้าของ | เงื่อนไขตัดสิน ไม่ใช่สัญญาว่าปิดทัน |
+| --- | --- | --- |
+| Aim 1 / 25 ต.ค. / R1 | Topic 13 derivation lead กับ numerical verifier: response จาก stationary prescription เดียว มี real-axis/spectral calculation และ numerical/approximation boundaries ที่ระบุ | ต้องคืน static Hessian, Ward/contact, units และ independent check พร้อม regulator/action obligations; numerical convergence ไม่แทน truncation proof หากยังขาดให้รายงาน exact obligation |
+| Aim 2 / 8 พ.ย. / R2–R3 | material/source owner: เลือกวัสดุและ protocol เดียว ปิด source-to-state/detector map, independent normalization และ uncertainty; Core ตรวจ admission ไม่ทำ fit แทน topic | empirical input ต้องผ่าน provenance, permission, ancestry/overlap และ uncertainty; ถ้าไม่ได้ให้ส่ง measurement feasibility ที่มีการวัดเป้าหมายชัด ไม่เรียกแทนข้อมูลทดลอง |
+| Aim 3 / 22 พ.ย. / R4–R5 | research lead และ reviewer: comparison ที่ preregister และไม่ rematch หรือ scoped structural result พร้อม measurement design ที่ตรวจอิสระ | comparison เริ่มได้เมื่อ R1/R2/R3 พร้อมเท่านั้น ผลขัดกับข้อมูลก็เป็นคำตอบ; ถ้า proof ยังไม่เสร็จให้คง unresolved ไม่อ้าง nonidentifiability จากการไม่มี operator |
+
+6 ธ.ค. ใช้ทดสอบ protocol/state ที่สองได้เฉพาะเมื่อผลแรกและ preregistration พร้อม; 20 ธ.ค. เป็นเป้า reproducible release/review ภายใน ไม่ใช่วันยื่นทุนที่ยืนยันแล้ว ทุก aim ส่ง result card ตาม 11 fields เดิม และอ้าง artifact/hash จริงก่อนรับงาน
+
+### ถ้ารอรอบถัดไปอีกสองหรือสามเดือน
+
+นับจากพอร์ต 11 ตุลาคม ช่วงสองเดือนคือ **11 ธันวาคม** และสามเดือนคือ **11 มกราคม** เป็น scenario เท่านั้น หากพบ call ที่ปิด 11 ธ.ค. ให้ใช้ผลงานที่รับได้ก่อน scientific freeze **27 พ.ย.**, เอกสารหน่วยงาน **4 ธ.ค.**, forms/attachments **8 ธ.ค.** ไม่รอ W12 หาก deadline เป็น 11 ม.ค. ให้ใช้ **28 ธ.ค., 4 ม.ค., 8 ม.ค.** ตามลำดับ ปฏิทินต้องปรับตามประกาศจริงโดยไม่เปลี่ยน scientific threshold
+
+ถ้าไม่ได้ยื่นรอบแรก ให้เก็บ portfolio v1 ไม่ลบทิ้ง แล้วเติมหลักฐานตาม Aims: เดือนแรกเพิ่มความสมบูรณ์ของ response และ material map; เดือนที่สองเพิ่ม input อิสระหรือ measurement feasibility พร้อมผลเปรียบเทียบ/structural ที่ตรวจได้; เดือนที่สามใช้ reviewer feedback, independent reproduction และ proposal ที่ตรง call ไม่ขยาย Gravity/Galaxy/chaos เพื่อให้พอร์ตดูใหญ่ขึ้น การติดต่อ PI/แล็บ/ผู้ให้ข้อมูลและการซื้อทรัพยากรต้องมี authorization แยก
+
+### โมเดลและทรัพยากรสำหรับแผนนี้
+
+ให้ **Astra / high** เป็น lead เมื่อเลือกตัวเดียว; ใช้ **xhigh** กับ derivation หรือ counterexample ที่ระบุคำถามและ acceptance ชัด หากโควตาจำกัด ใช้ **Sol 6.1 / high** เป็น execution หลัก และ Astra ที่จุดตัดสิน/ตรวจ claim; Luna เป็นทางเลือกเฉพาะงาน inventory ที่ schema ชัด ไม่จำเป็นต้องเปิดสามโมเดลพร้อมกัน รายละเอียดและ official sources อยู่หัวข้อ 2 ด้านล่าง
+
+ยังไม่มี model trial ที่วัดผลใน repo จึงไม่อ้างว่า Astra ทำงานนี้เร็วกว่า/ถูกต้องกว่าเป็นตัวเลข และไม่มีการเปลี่ยน config จากแผนนี้ เปรียบเทียบด้วย same input/acceptance และรวมเวลาแก้หลัง review ตาม trial card เดิม งบเงินและ lab access ยังไม่ยืนยัน: ประเมิน compute จาก smoke run และขอ quotation/availability จริงก่อนระบุราคา/วันทดลอง; ถ้าทุนมาทีหลัง งาน derivation, reproducibility และ request packet เดินต่อได้ ไม่สร้างข้อมูลแทน
+
+ระยะยาว ผลนี้จะให้ Core รับ **สมการตอบสนอง + units + uncertainty + เงื่อนไข input ที่ต้องวัด** ที่ตรวจย้อนกลับได้ ใช้ต่อ thermal constitutive/entropy/transport ได้เมื่อ gate ของส่วนนั้นผ่าน แต่ไม่ใช้ current-consistency result ปลดล็อก physical Kubo, curved 3+1, Gravity หรือ global UET เอง อ่าน machine-readable `portfolio_strategy_2026_10_01` ควบคู่ R1–R5 และรักษา recorded Core composition แยกจาก material prediction
+
 ## 0. Revision 1 ตุลาคม: ผลที่ต้องซื้อด้วยเวลาที่เพิ่ม
 
 คงวันส่งมอบพอร์ตภายใน 11 ตุลาคมตามแผนเดิม ไม่เริ่มนับ 14 วันใหม่จาก revision นี้ วันดังกล่าวยังเป็น planning target ไม่ใช่ deadline ของทุนที่ยืนยันแล้ว หากผู้ยื่นต้องการเปลี่ยนวัน ให้บันทึก calendar revision แยกจากการเปลี่ยน scientific acceptance

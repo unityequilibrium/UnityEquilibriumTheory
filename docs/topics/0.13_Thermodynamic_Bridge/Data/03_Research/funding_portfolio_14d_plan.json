@@ -13,6 +13,85 @@
   "submission_deadline": null,
   "budget_amount": null,
   "goal_started": false,
+  "portfolio_strategy_2026_10_01": {
+    "record_class": "PLANNING_NOT_SCIENTIFIC_CLOSURE",
+    "status": "RECOMMENDED_PENDING_D05_DECISION",
+    "primary_portfolio_route": "SCOPED_RESPONSE_METHODS_AND_MEASUREMENT_DESIGN",
+    "research_question": "Which finite-temperature source response is fixed by the named stationary candidate, and which independent state/source/thermal inputs are still required for a material prediction?",
+    "accepted_preliminary_evidence_fields": [
+      "renormalized_hartree_background_evidence_2026_10_01",
+      "hartree_counterterm_matching_evidence_2026_10_01",
+      "hartree_external_response_evidence_2026_10_01",
+      "hartree_gauge_current_evidence_2026_10_01"
+    ],
+    "new_real_axis_exploration_is_accepted_evidence": false,
+    "minimum_portfolio_bundle": [
+      "One bounded result statement with derivation, assumptions and an independent numerical or analytic check",
+      "Claim-to-evidence manifest with hashes and failed baselines retained",
+      "Related-work comparison separating imported Hartree/two-fluid methods from a demonstrable research contribution",
+      "One material/source/detector measurement card and an explicit independent-input gap list",
+      "Reviewable research report, reproducibility instructions and a short pitch",
+      "Three follow-on aims with success, failure and unresolved outcomes; resource costs only when documented"
+    ],
+    "decision_dates": {
+      "route_selection": "2026-10-02",
+      "scientific_freeze": "2026-10-07",
+      "portfolio_review": "2026-10-11"
+    },
+    "aims": [
+      {
+        "id": "AIM1",
+        "result_ids": ["R1"],
+        "review_date": "2026-10-25",
+        "question": "Does one declared stationary prescription produce a source-complete retarded response with controlled numerical and approximation boundaries?",
+        "acceptance": "Static Hessian and Ward/contact limits, independent retarded/spectral calculation, fixed-threshold convergence, units and regulator/action obligations are accounted for; missing approximation control remains explicit",
+        "failure_or_unresolved": "Publish a verified inconsistency in the tested class or identify the missing calculation; no global no-go or physical prediction",
+        "owner_role": "Topic13 derivation lead with numerical verifier"
+      },
+      {
+        "id": "AIM2",
+        "result_ids": ["R2", "R3"],
+        "review_date": "2026-11-08",
+        "question": "Can one selected material and protocol supply an independent state/source/temperature normalization and uncertainty chain?",
+        "acceptance": "Matched state and detector map, coefficient origins, calibration/comparison ancestry and numeric source permission/uncertainty pass; otherwise accept a separately labelled non-empirical measurement-feasibility package",
+        "failure_or_unresolved": "State exactly which measurement is missing, what it identifies and the required protocol; feasibility is not empirical admission",
+        "owner_role": "Topic13 material/source owner; Core owner reviews integration only"
+      },
+      {
+        "id": "AIM3",
+        "result_ids": ["R4", "R5"],
+        "review_date": "2026-11-22",
+        "question": "Does the locked response predict an independent observable without rematching, or is its identifiable content only structural?",
+        "acceptance": "Empirical comparison requires admitted R1/R2/R3 and preregistered competitor/uncertainty; structural alternative requires a constructive or analytic result and an independently checked measurement design",
+        "failure_or_unresolved": "Report mismatch or a precise open proof obligation, not a fit promoted to prediction",
+        "owner_role": "Research lead and independent human reviewer when available"
+      }
+    ],
+    "next_round_scenario": {
+      "status": "SCENARIO_NOT_CONFIRMED_CALL",
+      "two_months_after_portfolio": "2026-12-11",
+      "three_months_after_portfolio": "2027-01-11",
+      "confirmed_call": null,
+      "actual_call_deadline_overrides_week12": true,
+      "extra_time_must_add": ["stronger response derivation", "independent input or measurement feasibility", "locked comparison or scoped structural proof", "independent reproduction/review"],
+      "portfolio_documents_alone_are_not_scientific_completion": true
+    },
+    "resource_policy": {
+      "model_trial_status": "NOT_RUN",
+      "model_configuration_changed": false,
+      "cash_budget": null,
+      "lab_access_confirmed": false,
+      "purchase_or_external_contact_authorized": false,
+      "estimate_compute_from_smoke_run_before_large_queue": true,
+      "do_not_allocate_compute_to_unchanged_reruns": true
+    },
+    "review_readiness_not_submission_readiness": true,
+    "novelty_established_by_planning": false,
+    "scientific_goal_completion_rule_changed": false,
+    "core_composition_gate_overwritten": false,
+    "physical_gate_changed": false,
+    "claim_promotion": false
+  },
   "execution_review_2026_10_01": {
     "record_class": "PLANNING_NOT_SCIENTIFIC_CLOSURE",
     "current_scientific_evidence_field": "hartree_gauge_current_evidence_2026_10_01",

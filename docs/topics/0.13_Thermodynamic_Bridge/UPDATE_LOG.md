@@ -1,3 +1,27 @@
+## 2026-10-01 - Portfolio-first research aims and next-round model/resource strategy
+
+MAJOR_RESULT_CLOSURE: Planning scope clarified; no new scientific result accepted and the full active Goal remains open.
+
+WHAT_IS_ACTUALLY_CLOSED: Roadmap, Goal handoff and planning JSON agree on a recommended first-portfolio methods/measurement-design result, three result-linked follow-on aims, actual-deadline overrides and resource/model uncertainty.
+
+WHAT_REMAINS_OPEN: Scientific D5 route acceptance, controlled real-axis/approximation and regulator/action matching, joint Phi/material/source/detector and independent measurement; actual funder/PI/deadline/budget, model trial, novelty and human review.
+
+DEPENDENCY_UNLOCKED: None. Existing Core-owner bounded composition and physical funding/science gates are unchanged.
+
+STATUS: RECOMMENDED_PENDING_D05_DECISION; MODEL_TRIAL_NOT_RUN.
+
+WHAT_CHANGED: Added portfolio_strategy_2026_10_01, a reader-first roadmap section, three dated aims with acceptance and failure/unresolved alternatives, Goal handoff and two plan-contract regressions. Original 2/7/11 October and W4-W12 dates preserved. December/January are scenarios, not verified calls.
+
+EQUATION_OR_MAPPING: No equation or observable changed. The first portfolio proposes source-response methods evidence plus measurement design; a physical material prediction requires separately admitted state/source/detector inputs.
+
+VERIFICATION: Ten planning tests passed; dates, evidence SHA-256 linkage, result-card references, non-promotion and unconfirmed resources checked. git diff --check passed. Current official OpenAI model selection and Astra/Sol model pages retrieved. No comparative model trial or new accepted physical calculation in this planning wave. Separate real-axis exploratory code is not accepted or included in this commit.
+
+CONTROLLING_BLOCKER: real_axis_regulator_joint_Phi_material_and_transport_matching_not_closed; call/PI/budget independently controls submission readiness.
+
+NEXT_ACTION: Select the D5 result scope on actual evidence, complete one decisive calculation or proof by D10 if feasible and package its verified boundaries for D14. Follow Aims 1-3 toward response, independent inputs/feasibility and locked comparison/structural proof. Do not rerun unchanged evidence to fill the timeline.
+
+CLAIM_BOUNDARY: Planning only, not Full Topic13 closure, physical prediction, proof of novelty, external replication or funding guarantee. No model/configuration change, new Goal/thread, numeric holdout read, external contact, purchases or Core-owner edit. Prior Xie exposure remains REVIEW_REQUIRED.
+
 ## 2026-10-01 - Source-complete rest-frame Hartree current response
 
 MAJOR_RESULT_CLOSURE: T13_FIXED_PHI_HARTREE_SOURCE_COMPLETE_CURRENT is CLOSED_FOR_LANE in the unchanged named fixed-Phi candidate. The full active research Goal remains open.
