@@ -467,3 +467,20 @@ SI/He-II or J04/J05/J06 admission is made. The useful continuum error bracket
 also remains open. New selected controller:
 useful_certified_current_error_and_interacting_Noether_heat_frame_material_correspondence_open.
 Overall physical controller is unchanged.
+
+## Leading mean density response checkpoint (2026-10-01)
+
+[The density card](CORE_O2_DENSITY_BACKREACTION.md) and
+[398-check artifact](Result/artifacts/fluid_core_o2_density_backreaction_audit.json)
+include the homogeneous order-A0^2 radial condensate response. Raw wave charge
+alone disagrees with the thermodynamic mode charge. Adding the mean contribution
+gives q/Nwave=-d_mu E and e/Nwave=E+mu*q/Nwave; rotating-generator density is E.
+Original Core action/EOM/Noether/stress source and independent root derivatives
+support these selected identities. Fixed-K lower-mode Gaussian pressure
+derivatives provide separate bookkeeping controls.
+
+This does not solve a full nonlinear wave or self-consistent interacting EOS.
+The primary paper's T^2>>lambda*mu^2 accuracy regime is not met by these selected
+states. Source errors report cancellation conditioning explicitly. Physical heat/
+material frame, useful certified current error, Topic13 EOS/protocol/SI and
+physical J04/J05/J06 remain open. The selected and overall controllers are unchanged.

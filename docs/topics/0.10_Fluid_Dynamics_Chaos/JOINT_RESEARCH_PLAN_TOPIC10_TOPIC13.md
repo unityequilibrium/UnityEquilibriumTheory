@@ -524,3 +524,24 @@ Overall controller remains vector_momentum_constitutive_origin_and_material_fram
 Physical J04/J05/J06 remain NOT_STARTED; no dependency or claim promotion.
 OpenAI work remains a source-reviewed method/design transfer, not this field
 derivation's proof, material evidence or an executed formal verifier.
+
+## Leading mean density response checkpoint (2026-10-01)
+
+Existing J01/J02 preparation adds [mean density response](CORE_O2_DENSITY_BACKREACTION.md)
+and [398-check artifact](Result/artifacts/fluid_core_o2_density_backreaction_audit.json).
+Condensate mean response explains why raw wave charge alone does not match
+-d_mu E. The corrected charge/energy and fixed-K Gaussian Legendre checks pass,
+with conditioning and two archived caller-wiring failures visible.
+
+This narrows leading density origin while leaving self-consistent interacting
+action/gap/source Ward, material heat/enthalpy/mass-charge frame and useful
+certified continuum error open. The selected states do not satisfy the primary
+paper's thermal approximation regime, so that accuracy is not admitted.
+Topic13 fixed-pressure EOS, entropy transfer/covariance, independent protocol
+and Core SI atom/state mapping still control physical use.
+
+One snapshot/history/J02 subrecord is added; all old snapshots/results/history,
+the ten-package DAG and physical statuses stay. Selected controller remains
+useful_certified_current_error_and_interacting_Noether_heat_frame_material_correspondence_open.
+Overall controller remains vector_momentum_constitutive_origin_and_material_frame_admission_open.
+Physical J04/J05/J06 remain NOT_STARTED; no claim or dependency promotion.

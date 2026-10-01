@@ -1,0 +1,15 @@
+{
+  "record_role": "HISTORICAL_OBSERVED_DERIVATIVE_WIRING_FAILURE_NOT_GENERATED_PHYSICS_ARTIFACT",
+  "status": "UNCENTERED_SOURCE_VARIATION_FAILURE",
+  "date": "2026-10-01",
+  "process_exit_code": 1,
+  "observed_exception": {
+    "type": "RuntimeWarning",
+    "message": "invalid value encountered in sqrt"
+  },
+  "cause": "Offset derivative helper was passed an absolute-mu function;first offset probes uncondensed near-zero mu instead of the locked positive central mu.",
+  "completed_scientific_states": 0,
+  "artifact_produced": false,
+  "historical_verifier_sha256": "a641ae467b13c7d40c0a091cdfeddf3f8ab4bae536e1242955bec2b72fec2cc7",
+  "parameters_or_thresholds_changed": false
+}

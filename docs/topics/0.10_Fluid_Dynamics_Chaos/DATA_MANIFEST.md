@@ -271,3 +271,17 @@ Primary [Alford et al. v3](https://arxiv.org/html/1212.0670v3), equations5b/8/28
 34-36/41, supplies selected action/current/flow correspondence; this is not a
 full one-loop paper replication. No external payload, new experimental row,
 material coefficient, blind source or SI calibration is added.
+
+## Mean density source and preserved failed callers
+
+[Density contract](Data/03_Research/fluid_core_o2_density_backreaction_contract.json)
+and [artifact](Result/artifacts/fluid_core_o2_density_backreaction_audit.json)
+hash the old303-check spatial/current-bound source tree, unchanged selected
+Core action/EOM/Noether/stress definitions and new prelocked card/registry.
+Binding/centering repair cards and both exact failed caller sources/observed
+failure records are guarded. The original first contract is archived as well.
+
+[Alford et al. v3](https://arxiv.org/html/1212.0670v3), equations1-5b/11/27-28/41
+and III.1, supplies source/approximation context only; no full paper replication
+or transfer of its unmet T^2>>lambda*mu^2 accuracy condition. No new external
+payload, empirical row, material coefficient, SI parameter or blind source.

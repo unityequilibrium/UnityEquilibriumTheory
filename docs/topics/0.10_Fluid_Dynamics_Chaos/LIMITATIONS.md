@@ -308,3 +308,23 @@ protocol/independence. The old conditional bound remains extremely loose and
 uncertified as a useful continuum error bracket. All old failures and physical
 J04/J05/J06 states stay unchanged; selected controller is
 useful_certified_current_error_and_interacting_Noether_heat_frame_material_correspondence_open.
+
+## Leading density identity, conditioning and approximation regime
+
+[The new density result](CORE_O2_DENSITY_BACKREACTION.md) includes only the
+homogeneous mean radial response to order A0^2. It does not solve second
+harmonics/full nonlinear waves, interacting Ward identities, thermal gap/melting
+or vacuum renormalization. Finite-K lower-mode Gaussian integrals are conditional
+bookkeeping, not a complete interacting EOS or material state.
+
+Primary Alford et al. v3 III.1 additionally requires T^2>>lambda*mu^2 for its
+retained thermal accuracy. Our locked ratios0.000244/0.000977 fail that regime;
+the paper's approximation accuracy is not transferred to these reference states.
+Earlier tree/selected-kernel artifacts stay scoped and unchanged.
+
+Soft corrected charge subtracts large contributions. Maximum source charge
+condition is about5.09e6; actual corrected-charge relative error reaches5.43e-5.
+The prelocked1e-8 source tolerance is conditioned on the larger raw/corrected
+coefficient, not1e-8 relative corrected-charge accuracy or interval certification.
+Independent analytic/root identities and fixed-domain pressure derivatives have
+their own prelocked checks. No physical heat/frame/SI/He-II/J04/J05/J06 admission.

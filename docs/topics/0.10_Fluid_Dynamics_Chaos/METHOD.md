@@ -315,3 +315,19 @@ The lower-mode Bose momentum projection matches the unchanged old source at
 Gauss64/128/256. These diagnose tree spatial identities, not certified integrals
 or a material frame. Complete charge/energy-density condensate backreaction,
 interacting Noether currents and heat/enthalpy/frame correspondence remain next.
+
+## Leading mean density and condensate response
+
+[Density derivation](CORE_O2_DENSITY_BACKREACTION.md) keeps rho independent
+before varying the quadratic action. Its mean radial force and classical
+curvature give delta_rho/A0^2=-(3a^2+1)/(4rho). Direct original Core action,
+independently differentiated box/EOM, charge and stress are evaluated for raw
+waves and shifted mean backgrounds. Polynomial extraction in A0^2 removes
+higher amplitude terms; it does not solve the nonlinear travelling wave.
+
+Both branches at16 points use192 source coefficient sets (four amplitudes each),
+phase orders8/16/32 and phases0/.37. Forty-eight centered mu root derivatives
+test corrected charge independently. Lower-mode Gauss64/128/256 thermal subset
+uses the same central physical K during every mu/T derivative; a moving thermal
+cutoff is not silently differentiated. Complete interacting state/source Ward,
+material heat/enthalpy/frame and useful certified error remain next.

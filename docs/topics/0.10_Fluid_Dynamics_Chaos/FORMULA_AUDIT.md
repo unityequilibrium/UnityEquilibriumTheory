@@ -316,3 +316,20 @@ Naive thermodynamic-charge advection, omitted charge and wrong index/conjugation
 are explicit negative controls. Spatial correspondence does not establish
 density backreaction, interacting Ward identities or physical heat/material frame.
 No primary Core equation, formal certificate or physical admission is promoted.
+
+## Leading homogeneous mean response and density/Legendre identity
+
+[Card](CORE_O2_DENSITY_BACKREACTION.md),
+[unmerged registry](../../core/07_artifacts/correspondence/uet_equation_correspondence_registry_topic10_o2_density_backreaction_addendum.json)
+and [artifact](Result/artifacts/fluid_core_o2_density_backreaction_audit.json)
+record rho/A0/E/k/mu:E,delta_rho:E,delta_rho/A0^2:E-1,quadratic action:E4,
+radial force:E3,charge:E3,stress energy:E4,Nwave:E3,q/Nwave:1,e/Nwave:E.
+The old tree action's off-stationary rho derivative and curvature give the
+mean shift; adding its background charge/energy contributions yields
+q/Nwave=-d_mu E and e/Nwave=E+mu*q/Nwave. Scale2 diagnostics pass.
+
+Original field/source and centered root checks are independent controls.
+Fixed-domain lower Gaussian pressure derivatives are conditional bookkeeping,
+not self-consistent interacting accuracy. Raw-scale conditioning and actual
+charge cancellation errors remain explicit. No primary Core equation, material/
+heat/frame/SI, formal/interval/independent or physical package is promoted.

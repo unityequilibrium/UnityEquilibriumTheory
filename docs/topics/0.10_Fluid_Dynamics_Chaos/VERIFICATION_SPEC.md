@@ -400,3 +400,29 @@ charge/index/omission rejection, projected old-source correspondence, unit power
 density/frame boundaries and fail-closed stale inputs/false admissions/controls.
 Published/fresh nonzero mode/source values use the locked relative tolerance.
 No full density/interacting/formal/material or physical package execution.
+
+## Leading mean density/source and fixed-domain Gaussian diagnostics
+
+Command: python docs/topics/0.10_Fluid_Dynamics_Chaos/Code/03_Research/Research_Fluid_Core_O2_Density_Backreaction.py.
+[Contract](Data/03_Research/fluid_core_o2_density_backreaction_contract.json),
+[card](CORE_O2_DENSITY_BACKREACTION.md),
+[artifact](Result/artifacts/fluid_core_o2_density_backreaction_audit.json).
+
+Prelocked states/source/coupling, two branches/four momenta, phase orders8/16/32,
+phases0/.37 and coefficient amplitudes.01/.02/.04/.08. Exact rational
+interpolation weights extract the source quadratic coefficient. Conditioned
+source/algebra/phase/unit1e-8, centered five-point derivative1e-5 at three
+relative steps, thermal Gauss64/128/256 last-order1%, energy scale2.
+Actual post-cancellation charge errors and condition numbers are reported.
+
+First process stopped before a state on an incorrect Core function name;
+the next stopped on an offset/absolute-mu derivative caller mismatch.
+[Binding repair](CORE_O2_DENSITY_SOURCE_BINDING_REPAIR.md) and
+[derivative-center repair](CORE_O2_DENSITY_DERIVATIVE_CENTER_REPAIR.md) preserve
+both source/failure records and the first contract. Only caller wiring changed;
+no scientific formula, state, steps or threshold changed. First complete
+diagnostic398/398 passes. Four regressions cover source/archive identity,
+192 coefficient sets,48 root variations, conditioned/raw/mean source and
+fixed-domain thermal/Legendre/unit controls and false/stale-scope rejection.
+Same-runtime fresh outputs are byte deterministic; cross-runtime nonzero
+quantities use the locked1e-8 relative tolerance. No full interacting/formal/material result.
