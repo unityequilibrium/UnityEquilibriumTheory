@@ -10,6 +10,14 @@
 
 ## 1. ผลลัพธ์หลักที่จะปิดก่อน
 
+Latest successor (2 October): [finite-q local density](Result/artifacts/T13_HARTREE_FINITE_Q_DISCONTINUITY_2026-10-02.md)
+closes exact signed shell thresholds and the analytic discontinuity needed
+by a later finite-q pole calculation. It agrees with original full cuts and
+forward angular roots and approaches the accepted soft density. No finite-q
+principal kernel/pole has been computed. Next compute those actual objects,
+then global/approximation/action and joint-Phi/material/heat obligations.
+Full Goal/R1 and physical gates remain open; original dates/models are unchanged.
+
 Latest successor (1 October): [local Landau-sheet pole](Result/artifacts/T13_HARTREE_SOFT_POLES_2026-10-01.md)
 now solves the complex collisionless soft inverse at both unchanged
 fixed-Phi witnesses. Original cut/upper reference and alternative

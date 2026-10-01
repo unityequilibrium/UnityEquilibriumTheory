@@ -208,7 +208,8 @@ def test_follow_on_aims_are_result_linked_not_promises_of_inputs_or_funding():
 
 def test_local_pole_successor_changes_next_question_not_full_acceptance():
     field = "hartree_soft_poles_evidence_2026_10_01"
-    assert PLAN["execution_review_2026_10_01"]["current_scientific_evidence_field"] == field
+    current = PLAN[PLAN["execution_review_2026_10_01"]["current_scientific_evidence_field"]]
+    assert current["inherited_soft_poles_evidence_field"] == field
     assert field in PLAN["portfolio_strategy_2026_10_01"]["accepted_preliminary_evidence_fields"]
     evidence = PLAN[field]
     result = json.loads((ROOT/evidence["path"]).read_text(encoding="utf-8"))
@@ -217,6 +218,24 @@ def test_local_pole_successor_changes_next_question_not_full_acceptance():
     assert evidence["controlling_blocker"] == result["controlling_blocker"]
     assert evidence["soft_kernel_scope_is_inherited_from_predecessor"] is True
     for flag in ("certified_zero_count", "finite_q_complex_pole_computed", "controlled_truncation_error_established", "g1_physical_unlock", "g2_science_unlock", "full_core_unlock", "core_composition_gate_overwritten"):
+        assert evidence[flag] is False
+        assert result[flag] is False
+    assert all(card["status"] == "PLANNED_NOT_ACCEPTED" for card in PLAN["result_level_execution_2026_10_01"]["result_cards"])
+
+
+def test_finite_q_discontinuity_is_not_finite_q_pole_or_funding_acceptance():
+    field = "hartree_finite_q_discontinuity_evidence_2026_10_02"
+    assert PLAN["execution_review_2026_10_01"]["current_scientific_evidence_field"] == field
+    assert field in PLAN["portfolio_strategy_2026_10_01"]["accepted_preliminary_evidence_fields"]
+    evidence = PLAN[field]
+    path = ROOT/evidence["path"]
+    result = json.loads(path.read_text(encoding="utf-8"))
+    assert hashlib.sha256(path.read_bytes()).hexdigest() == evidence["sha256"]
+    assert evidence["verification_status"] == result["verification_status"]
+    assert evidence["finite_q_discontinuity_computed"] is result["finite_q_discontinuity_computed"] is True
+    assert evidence["controlling_blocker"] == result["controlling_blocker"]
+    assert evidence["soft_pole_scope_is_inherited_from_predecessor"] is True
+    for flag in ("finite_q_complex_pole_computed", "controlled_truncation_error_established", "g1_physical_unlock", "g2_science_unlock", "full_core_unlock", "core_composition_gate_overwritten"):
         assert evidence[flag] is False
         assert result[flag] is False
     assert all(card["status"] == "PLANNED_NOT_ACCEPTED" for card in PLAN["result_level_execution_2026_10_01"]["result_cards"])

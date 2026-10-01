@@ -1,3 +1,27 @@
+## 2026-10-02 - Exact finite-q local thermal discontinuity
+
+MAJOR_RESULT_CLOSURE: T13_FIXED_PHI_HARTREE_FINITE_Q_LANDAU_DISCONTINUITY is CLOSED_FOR_LANE on the declared fixed-Phi grid. Full active Goal/R1 and physical gates remain open.
+
+WHAT_IS_ACTUALLY_CLOSED: Exact signed-mode finite-q shell endpoints and analytic joint thermal density, agreeing with original all-channel radial cuts and independent forward angular delta roots. Two local complex tail paths agree and density approaches the accepted soft result as q decreases.
+
+WHAT_REMAINS_OPEN: Actual finite-q principal kernel and pole root, certified global domain/contour, Hartree approximation/full action/RG, joint Phi/material/source/detector, independent thermal scale/input and physical heat/collision/KMS/entropy transport. Original causal branch remains unchanged.
+
+DEPENDENCY_UNLOCKED: Same-candidate finite-q kernel/pole research only; no full funding/Core unlock or change to the recorded Core-owner composition.
+
+STATUS: PASS_SCOPED_FINITE_Q_DISCONTINUITY.
+
+WHAT_CHANGED: Separate density verifier, sixteen tests, artifact/derivation, local formula/method/spec/limits/README and planning/Goal/14-day/12-week/log integration with one added planning regression. No predecessor or Core-owner edit. Previous exact head 9b2e45b6be7f66916390db2c9d81d9cf56233892 has all relevant remote checks successful.
+
+EQUATION_OR_MAPPING: ell=p_j+q*v; sign_j*[E_j(k+sign_j*q)-E_j(k)]=q*v; continue the original inverse shell and sign_j*d(r^2)/dell/(2*k*q), retaining joint derivative-source numerators and the full tail. Real cut=-pi*D(q,v); later B_L=B_principal_lower-2*pi*i*D_analytic. No q*v_soft pole substitution.
+
+VERIFICATION: Ten artifact checks and 232 linked Topic13/Core/planning tests passed in 312.19 seconds. Eighteen real q/v witness points; maximum original integrated-cut error 5.92e-14, final complex-density refinement <=5.42e-16, two-path difference <=5.58e-17 and endpoint residual <=3.73e-16. Natural-unit, domain, signed-Bose, forward-root, hash/read and negative controls passed. Artifact SHA-256 829138c4e2b5387fda30f911e45fc6aa1b8c9db668fb36f012cfae82f864639a. Numerical differences are not physical uncertainty or a uniform Hartree remainder.
+
+CONTROLLING_BLOCKER: finite_q_principal_kernel_and_actual_pole_not_computed.
+
+NEXT_ACTION: Derive a fixed-grid finite-q principal kernel and independently verify lower-sheet source-signature reciprocity; solve actual poles with radial/covariance factors, Ward, seeds and convergence controls. Keep global/approximation/action and joint-Phi/material obligations. Original scientific freeze 7 October, portfolio 11 October and model policy remain unchanged; model trial NOT_RUN.
+
+CLAIM_BOUNDARY: Local fixed-Phi density continuation, not finite-q pole, global cut/homotopy proof, physical sound/collision/Kubo/SK-KMS/heat/entropy, SI alpha, external validation, novelty certification or Full Topic13/UET. No fit/width, clipping/filter/padding, threshold change, numeric holdout read or Core-owner edit. Xie prior exposure REVIEW_REQUIRED.
+
 ## 2026-10-01 - Local Landau-sheet pole of the fixed-Phi candidate
 
 MAJOR_RESULT_CLOSURE: T13_FIXED_PHI_HARTREE_LOCAL_LANDAU_POLE is CLOSED_FOR_LANE. Full active Goal and thermal/physical acceptance remain open.

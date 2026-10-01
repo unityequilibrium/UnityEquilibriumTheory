@@ -1,5 +1,20 @@
 # Verification Spec
 
+## Finite-q Local Discontinuity Verification (2026-10-02)
+
+Separate verifier `Research_T13_Hartree_Finite_Q_Discontinuity.py`: preregister
+q=.04/.02/.01, real v=.2/.3/.4, complex references equal to the unchanged
+prior soft poles, orders 64/96/128, original full radial orders 48/80 and
+horizontal/return-to-real tails. Require original all-channel cut agreement
+absolute 1e-8, final tail refinement/path agreement 1e-9 and exact endpoint
+residual 1e-11. Check forward angular roots and active-channel counts at five
+radial samples per witness, exact positive/negative threshold shift, signed
+Bose continuation, natural-unit scaling and decreasing finite-q/soft density
+difference. Refuse declared-domain/pair-threshold violations. Label complex
+domain/path checks sampled, never global proof; finite_q_complex_pole_computed
+must remain false. Preserve original real/upper-only validators, hashes,
+Core/funding gates, Xie exposure review and causal threshold 1e-6.
+
 ## Collisionless Soft Collective Verification (2026-10-01)
 
 For separate `Research_T13_Hartree_Soft_Poles.py`, preregister orders

@@ -25,6 +25,15 @@
 
 ## Constraints
 
+Latest density-only successor: `Result/artifacts/T13_HARTREE_FINITE_Q_DISCONTINUITY_2026-10-02.md`
+derives exact finite-q signed thresholds and analytic joint density; original
+all-channel cuts, forward angular roots, two paths and the approach to soft
+density agree at the same witnesses. This does not compute finite-q poles.
+Next derive the fixed-grid principal kernel and solve actual poles with
+denominator/convergence controls. No q*v_soft shortcut, physical transport,
+global theorem or full Goal/R1 acceptance. Dates/model policy unchanged;
+earlier results below retain their own scope and are not rerun by this audit.
+
 Latest pole evidence: `Result/artifacts/T13_HARTREE_SOFT_POLES_2026-10-01.md`
 derives local Landau-sheet continuation and simple complex soft poles at
 both unchanged fixed-Phi witnesses, with independent cuts/upper reference,

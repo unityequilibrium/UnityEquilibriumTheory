@@ -1,5 +1,14 @@
 # Formula Audit: 0.13_Thermodynamic_Bridge
 
+## Finite-q Local Discontinuity (2026-10-02)
+
+| formula_id | relation | variables and units | constant_origin | proof_status | verification_role | failure_mode | next_hardening_step |
+| :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- |
+| t13.diagnostic.hartree_finite_q_local_discontinuity | `sign*(E(k+sign*q)-E(k))=q*v; D=int k^2*g*sign*d(r^2)/dell/(8*pi^2*k*q)` | q,k,ell,T,mu E; v dimensionless; bubble/mixed/current density dimensionless/E/E^2 | exact same-candidate dispersion and Cauchy cut; no assigned width | local finite-q shell derivation, sampled complex-tail and real-grid checks; not global contour proof | independent all-channel original cuts, forward angular roots, two paths, orders and soft-density limit | soft pole times q called finite-q pole; abs(complex energy) breaks analyticity; omitted cuts hidden | actual principal kernel/pole, global domain, approximation/action and joint-Phi/material |
+
+See [finite-q density derivation](Result/artifacts/T13_HARTREE_FINITE_Q_DISCONTINUITY_2026-10-02.md).
+This is a local diagnostic ID, not an admitted Core equation or physical unlock.
+
 ## Collisionless Soft Collective Kernel (2026-10-01)
 
 | formula_id | relation | variables and units | constant_origin | proof_status | verification_role | failure_mode | next_hardening_step |

@@ -6,6 +6,14 @@
 
 ## ผลหลักสำหรับพอร์ตและทุนรอบถัดไป
 
+Latest successor (2 October): [finite-q discontinuity](Result/artifacts/T13_HARTREE_FINITE_Q_DISCONTINUITY_2026-10-02.md)
+derives exact finite-q thresholds and analytic thermal density, independently
+checked against original all-channel cuts and forward shells. The density
+approaches the accepted soft result, but actual finite-q poles remain to be
+computed from the full principal kernel. This is methods evidence only;
+global/approximation/action, joint Phi/material/heat input, full R1/Goal and
+physical gates remain open. Model trial NOT_RUN and all original dates remain.
+
 Latest successor (1 October): [local Landau-sheet pole](Result/artifacts/T13_HARTREE_SOFT_POLES_2026-10-01.md)
 closes the candidate's local complex soft-pole calculation, not just its
 reactive zero. Same-cut continuation agrees under independent references,

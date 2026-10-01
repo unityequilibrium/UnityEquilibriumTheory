@@ -1,5 +1,16 @@
 ﻿# Method
 
+## Finite-q Local Discontinuity (2026-10-02)
+
+Use exact signed collinear endpoints, not a shifted soft endpoint. Continue
+ell=p_j+q*v, the inverse shell, residues, derivative vertices and Bose difference
+analytically; do not take abs(complex energy/derivative). Integrate each full
+complex endpoint-to-infinity tail. Check the real boundary with all-channel
+original cuts and independent forward angular delta roots; refine both tail
+order and a return-to-real path. See [scope and derivation](Result/artifacts/T13_HARTREE_FINITE_Q_DISCONTINUITY_2026-10-02.md).
+This supplies D(q,v) for a later B_lower-2*pi*i*D continuation. No principal
+kernel or finite-q pole is computed by this density-only verifier.
+
 ## Collisionless Soft Phase Kernel (2026-10-01)
 
 The [local Landau continuation](Result/artifacts/T13_HARTREE_SOFT_POLES_2026-10-01.md)

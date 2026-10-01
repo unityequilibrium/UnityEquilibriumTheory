@@ -1,5 +1,17 @@
 # Limitations
 
+## Finite-q Density-Only Boundary (2026-10-02)
+
+The [finite-q successor](Result/artifacts/T13_HARTREE_FINITE_Q_DISCONTINUITY_2026-10-02.md)
+computes local spectral discontinuity, not the finite-q principal kernel or
+pole. Its complex evaluations use prior soft poles as reference points only.
+Agreement with original all-channel cuts is restricted to the declared real
+grid; sampled Bose-domain checks and two tail paths are not certified global
+cut exclusion or contour homotopy. Finite-q differences are not Hartree
+truncation bounds or physical uncertainty. Approximation/action, joint Phi,
+material/temperature/heat-current input and all physical/Core gates remain.
+Original conserved-C leakage and independent alpha/source blockers are unchanged.
+
 ## Collisionless Soft Collective Boundary (2026-10-01)
 
 The [local complex-pole successor](Result/artifacts/T13_HARTREE_SOFT_POLES_2026-10-01.md)

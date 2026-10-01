@@ -6,6 +6,17 @@ description: "Research module for Thermodynamic Bridge within the Unity Equilibr
 
 # 0.13 Thermodynamic Bridge
 
+## Finite-q Local Spectral Discontinuity (2026-10-02)
+
+The [finite-q density successor](Result/artifacts/T13_HARTREE_FINITE_Q_DISCONTINUITY_2026-10-02.md)
+derives exact signed shell endpoints and the analytic joint thermal density
+needed for a later finite-q pole calculation. Original full cuts and forward
+angular roots agree on the declared grid; two complex tail paths and the
+approach to the accepted soft density agree. This is not a computed finite-q
+pole, global contour theorem or physical thermal normalization. Next: fixed-
+grid principal kernel and actual pole, then approximation/action and joint
+Phi/material/heat input. Full funding/Core gates and original dates remain.
+
 ## Collisionless Soft Collective Response (2026-10-01)
 
 The [local Landau-sheet successor](Result/artifacts/T13_HARTREE_SOFT_POLES_2026-10-01.md)
