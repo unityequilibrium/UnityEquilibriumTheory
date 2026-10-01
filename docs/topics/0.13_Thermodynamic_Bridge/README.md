@@ -6,6 +6,19 @@ description: "Research module for Thermodynamic Bridge within the Unity Equilibr
 
 # 0.13 Thermodynamic Bridge
 
+## Conditional Dynamic IR Research Update (2026-10-01)
+
+The [dynamic composite/source result](Result/artifacts/T13_POLAR_DYNAMIC_COMPOSITE_2026-10-01.md)
+derives pair and thermal-scattering continua for the same Cartesian
+longitudinal observable, a retarded oscillatory time kernel, and a
+contact-completed Gaussian current Ward identity. Independent calculations
+return the earlier static IR coefficient. These are leading conditional
+phase-lane results, not microscopic damping, Kubo transport or a physical
+temperature response. Renormalized amplitude/Phi equilibrium, full-action
+matching remainder and independent material/source/detector inputs remain
+controlling. The linear phase extension is not valid across all thermal
+momenta in the first witness; neither witness is promoted to material physics.
+
 ## Polar IR Research Update (2026-10-01)
 
 The [source-complete polar result](Result/artifacts/T13_POLAR_STATIC_IR_OBSERVABLE_2026-10-01.md)

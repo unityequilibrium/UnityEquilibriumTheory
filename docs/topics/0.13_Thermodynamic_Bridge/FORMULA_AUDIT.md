@@ -1,5 +1,17 @@
 # Formula Audit: 0.13_Thermodynamic_Bridge
 
+## Conditional Dynamic Composite and Current (2026-10-01)
+
+| formula_id | relation | variables and units | constant_origin | proof_status | verification_role | failure_mode | next_hardening_step |
+| :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- |
+| t13.diagnostic.polar_dynamic_composite | `chi_cl^R=i*x*T/(16pi*rho_s^2*q)*log[(z+cq)/(z-cq)]` | chi E^-2; x,rho_s E^2; T,q,z E; c dimensionless | same Cartesian source, leading Gaussian phase action with tree matching | conditional classical IR derivation | independent pair/scattering integral, time transform and previous static coefficient | branch continuum replaced by fitted single-pole relaxation; leading phase approximation called microscopic response | renormalized state and full-action dynamic remainder |
+| t13.diagnostic.polar_pair_scattering_spectrum | `Im chi=x/(16pi*rho_s^2*q)*[cq/2*Theta(omega-cq)+T*log((1-exp(-(omega+cq)/(2T)))/(1-exp(-abs(omega-cq)/(2T))))]` | susceptibility E^-2; all exponential/log arguments dimensionless | Gaussian on-shell triangle and Bose occupations | derived in explicit linear continuum extension | direct Matsubara sums, independent Bose phase-space integration, thermal dispersion/refinement | threshold clipped; vacuum static UV divergence hidden; continuum absorption called Kubo damping | microscopic high-momentum and interacting matching; no arbitrary width |
+| t13.diagnostic.polar_current_contact | `Pi=W-(WQ)(WQ)^T/(Q^T W Q); Q^T Pi=0` | W,Pi E^2; Q,gauge source E | conditional phase action source Hessian including contact | Gaussian source/Ward identity | independent source-action Hessian and full Gaussian detailed balance | dropped contact violates Ward; Gaussian FDT called complete microscopic SK/KMS | normal-component and full finite-T current prescription |
+
+See [conditional dynamical derivation](Result/artifacts/T13_POLAR_DYNAMIC_COMPOSITE_2026-10-01.md).
+These are local diagnostic IDs only, not new admitted Core equations. C, Phi,
+R_gen and physical closure gates are unchanged.
+
 ## Polar Source and Static IR Observable (2026-10-01)
 
 | formula_id | relation | variables and units | constant_origin | proof_status | verification_role | failure_mode | next_hardening_step |

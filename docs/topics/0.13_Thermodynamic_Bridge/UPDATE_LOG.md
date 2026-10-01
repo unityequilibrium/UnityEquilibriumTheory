@@ -1,3 +1,27 @@
+## 2026-10-01 - Conditional dynamical composite and current contact
+
+MAJOR_RESULT_CLOSURE: T13_CONDITIONAL_DYNAMIC_COMPOSITE_AND_CURRENT_MATCH is CLOSED_FOR_LANE for a conditional leading Gaussian phase source response, not microscopic thermal closure.
+
+WHAT_IS_ACTUALLY_CLOSED: Same Cartesian source gives pair and thermal-scattering continua, an analytic upper-half-plane response and retarded oscillatory time kernel. Independent momentum/time/spectral/Matsubara calculations recover the prior static IR coefficient. The Gaussian current-source Hessian requires its local contact term to obey the Ward identity.
+
+WHAT_REMAINS_OPEN: Renormalized/interacting amplitude, joint Phi stationarity, microscopic dynamic-current vertices and error bound, vacuum/material/source/detector inputs and finite-T normal-component/SK/KMS/transport. First witness has T/(c*sqrt(2r))=2.18, preventing all-momentum phase-extension admission.
+
+DEPENDENCY_UNLOCKED: Conditional frequency/source-protocol design only; no Core composition, physical funding or full Topic13 gate change.
+
+STATUS: PASS_CONDITIONAL_PHASE_DYNAMIC_RESPONSE; no physical response or damping claim.
+
+WHAT_CHANGED: Added dynamic verifier, sixteen tests, artifact/derivation, formula audit, limitations/README and funding-plan/Goal/roadmap/hash integration. Previous baseline artifacts and Core-owner files are untouched.
+
+EQUATION_OR_MAPPING: chi_cl^R=i*x*T/(16pi*rho_s^2*q)*log[(z+cq)/(z-cq)]; chi_cl^R(t)=Theta(t)*x*T*sin(cqt)/(8pi*rho_s^2*q*t). The static limit is x*T/(16rho_s^2*q). Pi=W-(WQ)(WQ)^T/(Q^T W Q) includes the current contact.
+
+VERIFICATION: 84 focused/related tests pass, including sixteen dynamic checks, full-Gaussian detailed balance/FDT, dimensions/T0/threshold refusal and declared artifact/code audit reads. Artifact SHA-256 2f07a63af3ce9945bf254d5da238bdefbd53597dae105ee7e50bbcbe8bc61f7d. Classical loop/time checks agree below 1e-7; refined static/dynamic linear-extension differences are below 1%. Relevant CI passed on preceding head 8ed55cc0d; new-head CI to review after push.
+
+CONTROLLING_BLOCKER: renormalized_stationary_background_and_dynamic_matching_remainder_not_closed.
+
+NEXT_ACTION: Match a source-complete renormalized/interacting background and full-action dynamic current/remainder before material/source/detector prediction. Do not use a fitted single-pole model or a change of coordinates as closure. Preserve D5/D10/D14 and the full active Goal.
+
+CLAIM_BOUNDARY: Conditional Gaussian phase/composite result, not collision damping, viscosity, conductivity, microscopic SK/KMS, independent He-II/graphite validation, finite-cone repair or global UET closure. No fits, artificial phase mass, IR filter, threshold broadening or numeric holdout read; prior Xie exposure review stays open.
+
 ## 2026-10-01 - Polar source-complete static IR observable
 
 MAJOR_RESULT_CLOSURE: T13_POLAR_STATIC_IR_OBSERVABLE_MATCH is CLOSED_FOR_LANE for same-action/source/measure identities and conditional leading static IR matching.

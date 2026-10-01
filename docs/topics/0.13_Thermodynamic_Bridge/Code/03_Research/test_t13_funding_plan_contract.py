@@ -61,7 +61,7 @@ def test_plan_documents_and_latest_evidence_are_linked_without_holdout_reads():
         assert (ROOT / PLAN[field]).is_file()
     for field in ("conditional_operator_evidence_2026_10_01", "thermal_gradient_evidence_2026_10_01",
                   "thermal_oneloop_ward_current_evidence_2026_10_01", "finite_momentum_thermal_1pi_evidence_2026_10_01",
-                  "polar_static_ir_observable_evidence_2026_10_01"):
+                  "polar_static_ir_observable_evidence_2026_10_01", "polar_dynamic_composite_evidence_2026_10_01"):
         evidence = PLAN[field]
         path = ROOT / evidence["path"]
         assert hashlib.sha256(path.read_bytes()).hexdigest() == evidence["sha256"]

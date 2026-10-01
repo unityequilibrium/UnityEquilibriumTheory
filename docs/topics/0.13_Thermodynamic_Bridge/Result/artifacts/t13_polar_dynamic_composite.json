@@ -1,0 +1,564 @@
+{
+  "major_result_id": "T13_CONDITIONAL_DYNAMIC_COMPOSITE_AND_CURRENT_MATCH",
+  "topic": "0.13",
+  "closure_level": "CLOSED_FOR_LANE",
+  "verification_status": "PASS_CONDITIONAL_PHASE_DYNAMIC_RESPONSE",
+  "what_is_closed": [
+    "same_Cartesian_composite_source_dynamic_IR_response",
+    "pair_creation_and_thermal_scattering_spectrum",
+    "causal_time_kernel_and_static_IR_limit",
+    "contact_completed_Gaussian_current_Ward_identity",
+    "conditional_Gaussian_detailed_balance_not_microscopic_SK_matching"
+  ],
+  "equation_or_mapping": "chi_cl^R=i*x*T/(16*pi*rho_s^2*q)*log[(z+cq)/(z-cq)]; chi_cl^R(t)=Theta(t)*x*T/(8*pi*rho_s^2*q)*sin(cqt)/t",
+  "units": {
+    "T_q_z_mu": "E",
+    "x_rho_s": "E^2",
+    "c_theta": "dimensionless",
+    "chi_frequency": "E^-2",
+    "chi_time": "E^-1",
+    "time": "E^-1",
+    "gauge_source_a": "E",
+    "current_source_Hessian": "E^2",
+    "Cartesian_source_J": "E^3"
+  },
+  "derivation_class": "CONDITIONAL_LEADING_GAUSSIAN_PHASE_SOURCE_RESPONSE_WITH_LINEAR_DISPERSION",
+  "observable": "Cartesian_longitudinal_source_composite_not_temperature_heat_flux_or_Kubo",
+  "data_role": "DERIVED_NATURAL_UNIT_NO_MEASURED_ROWS",
+  "assumptions": [
+    "fixed_Phi",
+    "three_spatial_dimensions",
+    "existing_tree_x_stiffness_speed_for_prior_IR_match",
+    "ordered_positive_stiffness_phase",
+    "classical_IR_external_frequencies_and_cq_much_less_than_T",
+    "linear_Gaussian_continuum_extension_only_for_quantum_thermal_crosscheck",
+    "microscopic_high_momentum_and_vacuum_matching_open"
+  ],
+  "method_references": [
+    {
+      "url": "https://arxiv.org/html/1011.3324v2",
+      "locator": "II.2 and introduction; model classes differ",
+      "role": "amplitude_direction_method_context_not_finiteT_UET_validation"
+    },
+    {
+      "url": "https://arxiv.org/abs/1108.5207",
+      "locator": "abstract; longitudinal_vs_scalar_observable distinction",
+      "role": "observable_choice_context_not_imported_thermal_data"
+    }
+  ],
+  "thresholds": {
+    "algebra": 1e-10,
+    "independent_integrals": 1e-07,
+    "thermal_to_classical_IR_relative": 0.01
+  },
+  "Q_refinement": [
+    0.005,
+    0.0025,
+    0.00125
+  ],
+  "frequency_ratios": [
+    [
+      0.3,
+      0.4
+    ],
+    [
+      1.4,
+      0.6
+    ],
+    [
+      0.0,
+      0.8
+    ]
+  ],
+  "checks": {
+    "independent_pair_scattering_integral": true,
+    "independent_retarded_time_transform": true,
+    "point_Matsubara_vs_thermal_spectral_sum": true,
+    "on_shell_phase_space_vs_logarithmic_spectrum": true,
+    "thermal_static_returns_previous_IR_coefficient": true,
+    "static_and_dynamic_classical_refinement_improves": true,
+    "dynamic_classical_IR_limit": true,
+    "current_source_Hessian_and_contact_Ward_identity": true,
+    "conditional_Gaussian_detailed_balance_and_FDT": true,
+    "retarded_time_support_and_nonexponential_tail": true
+  },
+  "examples": [
+    {
+      "T": 0.22,
+      "mu": 1.05,
+      "r": 0.10850000000000004,
+      "Z": 1.0,
+      "lambda": 1.0,
+      "Phi_fixed": 0.15,
+      "x_tree": 0.10850000000000004,
+      "rho_s_tree": 0.10850000000000004,
+      "c_tree": 0.21656093467342244,
+      "T_over_linear_phase_energy_domain": 2.1807842237446753,
+      "all_momentum_linear_extension_is_not_microscopic_admission": true,
+      "dynamic": [
+        {
+          "frequency_over_cq": [
+            0.3,
+            0.4
+          ],
+          "classical_response": [
+            37.49811282831692,
+            8.438625459152714
+          ],
+          "pair_scattering_integral_relative_residual": 8.927445218519142e-16,
+          "time_transform": {
+            "integrated": [
+              37.49811282831796,
+              8.438625459151568
+            ],
+            "closed": [
+              37.49811282831692,
+              8.438625459152714
+            ],
+            "relative_disagreement": 4.018383510585771e-14
+          }
+        },
+        {
+          "frequency_over_cq": [
+            1.4,
+            0.6
+          ],
+          "classical_response": [
+            11.90503274621175,
+            19.8909751748735
+          ],
+          "pair_scattering_integral_relative_residual": 2.5806342415740497e-16,
+          "time_transform": {
+            "integrated": [
+              11.905032746211752,
+              19.890975174873525
+            ],
+            "closed": [
+              11.90503274621175,
+              19.8909751748735
+            ],
+            "relative_disagreement": 1.2018458666668082e-15
+          }
+        },
+        {
+          "frequency_over_cq": [
+            0.0,
+            0.8
+          ],
+          "classical_response": [
+            28.916646656682477,
+            -6.71776142398208e-16
+          ],
+          "pair_scattering_integral_relative_residual": 1.9985364729652116e-15,
+          "time_transform": {
+            "integrated": [
+              28.916646656682463,
+              0.0
+            ],
+            "closed": [
+              28.916646656682477,
+              -6.71776142398208e-16
+            ],
+            "relative_disagreement": 4.446964441010387e-16
+          }
+        }
+      ],
+      "thermal_to_classical_refinement": [
+        {
+          "q": 0.005,
+          "thermal_static_dispersion": 25.24112004831058,
+          "previous_classical_static": 25.345622119815655,
+          "static_relative_difference": 0.004123081730291078,
+          "quantum_thermal_response": [
+            18.65200003418208,
+            4.214836750984467
+          ],
+          "dynamic_classical_relative_difference": 0.005055665155689624,
+          "cq_over_T": 0.0049218394243959645,
+          "q_over_amplitude_scale": 0.010733469768527295
+        },
+        {
+          "q": 0.0025,
+          "thermal_static_dispersion": 50.57798111965476,
+          "previous_classical_static": 50.69124423963131,
+          "static_relative_difference": 0.0022343724577192914,
+          "quantum_thermal_response": [
+            37.39229702839249,
+            8.434148259346497
+          ],
+          "dynamic_classical_relative_difference": 0.0027555087610400112,
+          "cq_over_T": 0.0024609197121979822,
+          "q_over_amplitude_scale": 0.005366734884263647
+        },
+        {
+          "q": 0.00125,
+          "thermal_static_dispersion": 101.26046431043031,
+          "previous_classical_static": 101.38248847926262,
+          "static_relative_difference": 0.0012036020289368787,
+          "quantum_thermal_response": [
+            74.88164962209339,
+            16.872773107793677
+          ],
+          "dynamic_classical_relative_difference": 0.001491619597240522,
+          "cq_over_T": 0.0012304598560989911,
+          "q_over_amplitude_scale": 0.0026833674421318236
+        }
+      ],
+      "spectral_phase_space": [
+        {
+          "omega_over_cq": 0.4,
+          "channel": "THERMAL_SCATTERING",
+          "direct_phase_space": 13.663655100434633,
+          "closed_logarithm": 13.663655100434628,
+          "relative_disagreement": 4.440892098500626e-16
+        },
+        {
+          "omega_over_cq": 1.6,
+          "channel": "PAIR_CREATION",
+          "direct_phase_space": 23.660123750628877,
+          "closed_logarithm": 23.660123750628888,
+          "relative_disagreement": 4.440892098500626e-16
+        }
+      ],
+      "current_source_check": {
+        "source_Hessian_residual": 2.3592239273284576e-16,
+        "Ward_residual": 3.2959746043559335e-17,
+        "without_contact_Ward_residual": 0.300755
+      },
+      "negative_time_response": 0.0,
+      "future_time_values": [
+        0.017442516182025292,
+        0.007943450006218345,
+        -0.003305641591358142
+      ]
+    },
+    {
+      "T": 0.22,
+      "mu": 1.2,
+      "r": 0.44599999999999995,
+      "Z": 1.0,
+      "lambda": 1.0,
+      "Phi_fixed": 0.15,
+      "x_tree": 0.44599999999999995,
+      "rho_s_tree": 0.44599999999999995,
+      "c_tree": 0.3661898537915048,
+      "T_over_linear_phase_energy_domain": 0.6361125247637831,
+      "all_momentum_linear_extension_is_not_microscopic_admission": true,
+      "dynamic": [
+        {
+          "frequency_over_cq": [
+            0.3,
+            0.4
+          ],
+          "classical_response": [
+            9.122298748592797,
+            2.0528943101302017
+          ],
+          "pair_scattering_integral_relative_residual": 6.6774336738021045e-16,
+          "time_transform": {
+            "integrated": [
+              9.12229874859305,
+              2.0528943101299233
+            ],
+            "closed": [
+              9.122298748592797,
+              2.0528943101302017
+            ],
+            "relative_disagreement": 4.017895041923301e-14
+          }
+        },
+        {
+          "frequency_over_cq": [
+            1.4,
+            0.6
+          ],
+          "classical_response": [
+            2.896179490950617,
+            4.838947996577971
+          ],
+          "pair_scattering_integral_relative_residual": 1.1102230246251565e-15,
+          "time_transform": {
+            "integrated": [
+              2.896179490950616,
+              4.838947996577978
+            ],
+            "closed": [
+              2.896179490950617,
+              4.838947996577971
+            ],
+            "relative_disagreement": 1.1159846759150932e-15
+          }
+        },
+        {
+          "frequency_over_cq": [
+            0.0,
+            0.8
+          ],
+          "classical_response": [
+            7.034655072309529,
+            -8.171268099798834e-17
+          ],
+          "pair_scattering_integral_relative_residual": 1.9984352023405928e-15,
+          "time_transform": {
+            "integrated": [
+              7.034655072309526,
+              0.0
+            ],
+            "closed": [
+              7.034655072309529,
+              -8.171268099798834e-17
+            ],
+            "relative_disagreement": 3.332693956387514e-16
+          }
+        }
+      ],
+      "thermal_to_classical_refinement": [
+        {
+          "q": 0.005,
+          "thermal_static_dispersion": 6.125662538935406,
+          "previous_classical_static": 6.165919282511211,
+          "static_relative_difference": 0.00652891186720328,
+          "quantum_thermal_response": [
+            4.523954557739093,
+            1.0246066146518138
+          ],
+          "dynamic_classical_relative_difference": 0.007965471389555605,
+          "cq_over_T": 0.008322496677079655,
+          "q_over_amplitude_scale": 0.005294044373595335
+        },
+        {
+          "q": 0.0025,
+          "thermal_static_dispersion": 12.287977885209179,
+          "previous_classical_static": 12.331838565022421,
+          "static_relative_difference": 0.0035567023994010905,
+          "quantum_thermal_response": [
+            9.081501128507597,
+            2.051052920525928
+          ],
+          "dynamic_classical_relative_difference": 0.00436761891628478,
+          "cq_over_T": 0.0041612483385398275,
+          "q_over_amplitude_scale": 0.0026470221867976674
+        },
+        {
+          "q": 0.00125,
+          "thermal_static_dispersion": 24.616212513480175,
+          "previous_classical_static": 24.663677130044842,
+          "static_relative_difference": 0.0019244744534401281,
+          "quantum_thermal_response": [
+            18.200196506739978,
+            4.1039468059051405
+          ],
+          "dynamic_classical_relative_difference": 0.002376314872685094,
+          "cq_over_T": 0.0020806241692699137,
+          "q_over_amplitude_scale": 0.0013235110933988337
+        }
+      ],
+      "spectral_phase_space": [
+        {
+          "omega_over_cq": 0.4,
+          "channel": "THERMAL_SCATTERING",
+          "direct_phase_space": 3.3226716421284035,
+          "closed_logarithm": 3.322671642128404,
+          "relative_disagreement": 1.1102230246251565e-16
+        },
+        {
+          "omega_over_cq": 1.6,
+          "channel": "PAIR_CREATION",
+          "direct_phase_space": 5.755885069780445,
+          "closed_logarithm": 5.755885069780448,
+          "relative_disagreement": 6.661338147750939e-16
+        }
+      ],
+      "current_source_check": {
+        "source_Hessian_residual": 1.6653345369377348e-16,
+        "Ward_residual": 6.938893903907228e-18,
+        "without_contact_Ward_residual": 0.4323799999999999
+      },
+      "negative_time_response": 0.0,
+      "future_time_values": [
+        0.007175137099042169,
+        0.0032676101451887046,
+        -0.001359805624989628
+      ]
+    }
+  ],
+  "point_Matsubara_checks": [
+    {
+      "terms": 128,
+      "harmonic": 0,
+      "e": 0.029,
+      "f": 0.041,
+      "direct_thermal_sum": 149610.3736377642,
+      "spectral_thermal_sum": 149610.3736377642,
+      "relative_disagreement": 0.0
+    },
+    {
+      "terms": 256,
+      "harmonic": 0,
+      "e": 0.029,
+      "f": 0.041,
+      "direct_thermal_sum": 149610.37363776413,
+      "spectral_thermal_sum": 149610.3736377642,
+      "relative_disagreement": 3.8906166396188193e-16
+    },
+    {
+      "terms": 128,
+      "harmonic": 1,
+      "e": 0.029,
+      "f": 0.041,
+      "direct_thermal_sum": 189.91745268414056,
+      "spectral_thermal_sum": 189.91745268414263,
+      "relative_disagreement": 1.0924666264717276e-14
+    },
+    {
+      "terms": 256,
+      "harmonic": 1,
+      "e": 0.029,
+      "f": 0.041,
+      "direct_thermal_sum": 189.91745268414257,
+      "spectral_thermal_sum": 189.91745268414263,
+      "relative_disagreement": 2.993059250607473e-16
+    },
+    {
+      "terms": 128,
+      "harmonic": 0,
+      "e": 0.07,
+      "f": 0.07,
+      "direct_thermal_sum": 8434.115649383675,
+      "spectral_thermal_sum": 8434.115649383677,
+      "relative_disagreement": 2.1567043649428486e-16
+    },
+    {
+      "terms": 256,
+      "harmonic": 0,
+      "e": 0.07,
+      "f": 0.07,
+      "direct_thermal_sum": 8434.115649383679,
+      "spectral_thermal_sum": 8434.115649383677,
+      "relative_disagreement": 2.1567043649428486e-16
+    },
+    {
+      "terms": 128,
+      "harmonic": 1,
+      "e": 0.07,
+      "f": 0.07,
+      "direct_thermal_sum": 39.50904800116186,
+      "spectral_thermal_sum": 39.50904800116392,
+      "relative_disagreement": 5.21544820225379e-14
+    },
+    {
+      "terms": 256,
+      "harmonic": 1,
+      "e": 0.07,
+      "f": 0.07,
+      "direct_thermal_sum": 39.509048001163855,
+      "spectral_thermal_sum": 39.50904800116392,
+      "relative_disagreement": 1.6185873731132451e-15
+    }
+  ],
+  "detailed_balance_checks": [
+    {
+      "channel": "PAIR",
+      "omega": 0.2,
+      "detailed_balance_residual": 5.551115123125783e-17,
+      "FDT_relative_residual": 0.0,
+      "positive_commutator": true
+    },
+    {
+      "channel": "SCATTERING",
+      "omega": 0.06,
+      "detailed_balance_residual": 2.220446049250313e-16,
+      "FDT_relative_residual": 6.661338147750939e-16,
+      "positive_commutator": true
+    }
+  ],
+  "evidence_artifacts": [
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/Research_T13_Polar_Static_IR_Observable.py",
+      "sha256": "cef1a1c53efc1ef3f3c5ea69974cb7542acc59bf90ccb3cb4df9bef515077970"
+    },
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/t13_polar_static_ir_observable.json",
+      "sha256": "4b3021ff3b74f180c683e161ad6e43b4ef959df37464882c6abd04b4a6cceabd"
+    },
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/Research_T13_Polar_Dynamic_Composite.py",
+      "sha256": "a1a0b42df943d76ff3cb41949f72b7b47de6913281c4045a8814425b9afc8601"
+    }
+  ],
+  "protected_evidence_hashes": [
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/t13_conditional_twofluid_operator.json",
+      "sha256": "8606303e4818030dd74061c14b243542c19c4cbb262dda29261951d4c87d6412"
+    },
+    {
+      "path": "docs/core/07_artifacts/topic13/t13_topic13_closure_matrix.json",
+      "sha256": "e6e84772a400273c438e0b8ca3c7b5b14c9d720da0420fb4021b1c0e7a54fe66"
+    },
+    {
+      "path": "docs/core/07_artifacts/gates/uet_major_result_dependency_unlock_gate.json",
+      "sha256": "ecbefdf12ee1eb6661ae8096e3f62bf1ffa7992c96ca94f1149fdbc25a8bbe6e"
+    }
+  ],
+  "open_blockers": [
+    "source_complete_renormalized_interacting_background_and_joint_Phi_stationarity",
+    "dynamic_current_vertices_beyond_leading_phase_lane_and_controlled_remainder",
+    "material_source_detector_and_independent_parameter_inputs",
+    "finiteT_normal_component_transport_and_microscopic_SK_KMS_matching"
+  ],
+  "controlling_blocker": "renormalized_stationary_background_and_dynamic_matching_remainder_not_closed",
+  "dependency_unlocked": [
+    "same_lane_dynamic_source_and_measurement_design_only"
+  ],
+  "conditional_real_axis_composite_spectrum_derived": true,
+  "conditional_time_response_derived": true,
+  "full_Cartesian_response_assembled": false,
+  "amplitude_phase_hybrid_response_included": false,
+  "microscopic_real_axis_response_admitted": false,
+  "joint_Phi_stationarity_derived": false,
+  "renormalized_order_parameter_matched": false,
+  "microscopic_IR_resummation_derived": false,
+  "controlled_truncation_error_established": false,
+  "microscopic_SK_KMS_matched": false,
+  "physical_Kubo_emitted": false,
+  "g1_physical_unlock": false,
+  "g2_science_unlock": false,
+  "full_core_unlock": false,
+  "core_composition_gate_overwritten": false,
+  "claim_promotion": false,
+  "parameter_fitting": false,
+  "xie_2026_accessed": false,
+  "phase_mass_added": false,
+  "IR_filter": false,
+  "clipping": false,
+  "threshold_broadening": false,
+  "C_relabelled_as_charge_or_mass": false,
+  "R_gen_added_as_state": false,
+  "claim_boundary": "Conditional leading phase/composite contribution, not the full Cartesian susceptibility with amplitude/phase hybrid modes. Continuum absorption and a retarded tail are not collision damping, viscosity, thermal conductivity, complete SK/KMS, independent material prediction, microscopic stationarity or global UET closure. The q-dependent composite frequency protocol must not be replaced by a single fitted relaxation pole.",
+  "report": {
+    "MAJOR_RESULT_CLOSURE": "T13_CONDITIONAL_DYNAMIC_COMPOSITE_AND_CURRENT_MATCH: CLOSED_FOR_LANE",
+    "WHAT_IS_ACTUALLY_CLOSED": [
+      "same_Cartesian_composite_source_dynamic_IR_response",
+      "pair_creation_and_thermal_scattering_spectrum",
+      "causal_time_kernel_and_static_IR_limit",
+      "contact_completed_Gaussian_current_Ward_identity",
+      "conditional_Gaussian_detailed_balance_not_microscopic_SK_matching"
+    ],
+    "WHAT_REMAINS_OPEN": [
+      "source_complete_renormalized_interacting_background_and_joint_Phi_stationarity",
+      "dynamic_current_vertices_beyond_leading_phase_lane_and_controlled_remainder",
+      "material_source_detector_and_independent_parameter_inputs",
+      "finiteT_normal_component_transport_and_microscopic_SK_KMS_matching"
+    ],
+    "DEPENDENCY_UNLOCKED": [
+      "same_lane_dynamic_source_and_measurement_design_only"
+    ],
+    "STATUS": "PASS_CONDITIONAL_PHASE_DYNAMIC_RESPONSE",
+    "WHAT_CHANGED": "Derived conditional composite pair/scattering spectrum and time kernel with current contact/source checks; preserved microscopic background failures.",
+    "EQUATION_OR_MAPPING": "chi_cl^R=i*x*T/(16*pi*rho_s^2*q)*log[(z+cq)/(z-cq)]; chi_cl^R(t)=Theta(t)*x*T/(8*pi*rho_s^2*q)*sin(cqt)/t",
+    "VERIFICATION": "Independent Matsubara, phase-space, classical loop, time-transform, spectral-static refinement and source-current Hessian checks.",
+    "CONTROLLING_BLOCKER": "renormalized_stationary_background_and_dynamic_matching_remainder_not_closed",
+    "NEXT_ACTION": "Close source-complete renormalized/interacting background and dynamic remainder before admitting physical response or source/detector comparison.",
+    "CLAIM_BOUNDARY": "Conditional leading phase/composite contribution, not the full Cartesian susceptibility with amplitude/phase hybrid modes. Continuum absorption and a retarded tail are not collision damping, viscosity, thermal conductivity, complete SK/KMS, independent material prediction, microscopic stationarity or global UET closure. The q-dependent composite frequency protocol must not be replaced by a single fitted relaxation pole."
+  }
+}

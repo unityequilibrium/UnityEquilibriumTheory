@@ -25,6 +25,14 @@
 
 ## Constraints
 
+The latest `Result/artifacts/T13_POLAR_DYNAMIC_COMPOSITE_2026-10-01.md`
+derives conditional pair/scattering spectra, the retarded time kernel and
+Gaussian current-contact matching. Do not replace this continuum with a fitted
+single relaxation time, call absorption collision damping, or promote Gaussian
+FDT to microscopic SK/KMS. Next close renormalized background and full-action
+dynamic matching/remainder; the all-momentum linear phase extension is not
+material-admitted and does not repair the original conserved-C leakage gate.
+
 The subsequent `Result/artifacts/T13_POLAR_STATIC_IR_OBSERVABLE_2026-10-01.md`
 closes same-field/source/measure identities and conditional leading static IR
 matching. Its source-complete offshell Gaussian recovers the original tadpole;
@@ -32,7 +40,7 @@ do not call a zero polar angle mass a stationary state or a completed
 microscopic resummation. Continue interacting/background and dynamic observable
 matching before physical predictive admission.
 
-Latest response evidence: `Result/artifacts/T13_FINITE_MOMENTUM_THERMAL_1PI_2026-10-01.md`
+Earlier full-action response evidence: `Result/artifacts/T13_FINITE_MOMENTUM_THERMAL_1PI_2026-10-01.md`
 and its JSON compute the finite-q thermal one-loop matrix and static-current
 limit. Do not repeat kernel generation without a new question. Next derive
 the amplitude-direction IR/current matching and real-axis limit; the computed

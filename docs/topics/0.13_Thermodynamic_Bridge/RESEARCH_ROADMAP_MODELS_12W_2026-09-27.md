@@ -18,6 +18,8 @@
 
 ### ผลส่งมอบสองสัปดาห์ที่ต้องมี
 
+ผลต่อมา 1 ต.ค.: [conditional dynamic composite](Result/artifacts/T13_POLAR_DYNAMIC_COMPOSITE_2026-10-01.md) ให้ spectrum แยก pair/scattering, time kernel และ Gaussian current-contact matching พร้อมคืน static coefficient เดิมแล้ว ไม่ต้องเริ่มแพ็ก A ด้วยการเดา relaxation pole อีก งานต่อคือ renormalized background และ full-action dynamic matching/error; การขยาย linear phase ไปทุก thermal momentum ยังไม่ admitted โดยเฉพาะ witness แรก จึงห้ามใช้ convergence ภายใน approximation นี้ปิด physical response หรือย้าย deadline เดิม
+
 ผลต่อมา 1 ต.ค.: [polar static IR และ source-complete matching](Result/artifacts/T13_POLAR_STATIC_IR_OBSERVABLE_2026-10-01.md) ให้ susceptibility ของ observable Cartesian เดิมที่เป็นบวกและคืนสัมประสิทธิ์ `1/q` เดิมได้ แต่การใส่ offshell source/Jacobian ที่ถูกต้องคืน Gaussian tadpole เดิมด้วย แพ็ก A จึงมี static IR route แบบมีเงื่อนไขแล้ว งานต่อคือ renormalized/interacting background และ dynamic composite/current ไม่ใช่ใช้ phase mass ศูนย์ในพิกัดใหม่ปิด equilibrium หรือใช้ template นี้เป็น physical prediction วัน D5/D10/D14 และ physical gate เดิมไม่เปลี่ยน
 
 อัปเดตผลถัดมา 1 ต.ค.: [finite-q thermal 1PI และ infrared boundary](Result/artifacts/T13_FINITE_MOMENTUM_THERMAL_1PI_2026-10-01.md) คำนวณ bubble/kernel ที่ขึ้นกับ momentum และความถี่เชิงซ้อน พร้อมตรวจ static-current matching แล้ว เทอม radial โตแบบ `1/q` และมีสเกล diagnostic `q_IR=0.0275` ในผู้สมัครเดิม จึงไม่ต้องเริ่มแพ็ก A ด้วยการสร้าง kernel ใหม่ แต่ต้องเชื่อม amplitude-direction/IR treatment, current vertices และ real-axis limit อย่างสอดคล้องก่อน physical admission ผลนี้ไม่ใช่ damping หรือการปิด full Topic13; ตัวเลือก D5 และวันพอร์ตเดิมไม่เปลี่ยน

@@ -1,5 +1,24 @@
 # Limitations
 
+## Conditional Dynamic Composite Boundary (2026-10-01)
+
+The [dynamic phase result](Result/artifacts/T13_POLAR_DYNAMIC_COMPOSITE_2026-10-01.md)
+closes a leading conditional source continuum, time response and Gaussian
+current-contact identity, not a complete stationary microscopic response.
+An oscillatory 1/t tail and continuum absorption do not establish collision
+damping, transport coefficients, normal component or entropy production.
+Detailed balance/FDT is checked for the full Gaussian correlator, not used to
+declare microscopic SK/KMS matching or applied to the thermal difference alone.
+
+The exact ideal threshold is logarithmically singular and is not broadened or
+clipped. The vacuum static susceptibility still needs UV matching. The
+all-momentum linear Gaussian thermal extension is only a cross-check:
+T/[c*sqrt(2r)] is 2.18/0.636 in the fixed witnesses, not a controlled microscopic
+thermal regime. IR convergence inside that extension does not supply the
+missing full-action error bound or renormalized amplitude/Phi equilibrium.
+Retarded phase-time support does not repair the original conserved-C leakage
+gate. No physical/funding/Core promotion or new holdout eligibility follows.
+
 ## Polar Static IR and Source-Complete Boundary (2026-10-01)
 
 The [same-action polar result](Result/artifacts/T13_POLAR_STATIC_IR_OBSERVABLE_2026-10-01.md)

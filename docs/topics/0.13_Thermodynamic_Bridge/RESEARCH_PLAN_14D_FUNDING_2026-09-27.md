@@ -10,6 +10,8 @@
 
 ## 1. ผลลัพธ์หลักที่จะปิดก่อน
 
+ผลล่าสุดถัดมา 1 ต.ค.: [conditional dynamic composite/current](Result/artifacts/T13_POLAR_DYNAMIC_COMPOSITE_2026-10-01.md) ปิด leading phase-lane spectrum, time kernel และ current-contact identity พร้อมคืน static IR coefficient เดิมแล้ว แต่ยังไม่เป็น physical response หรือ microscopic equilibrium ต้องใช้ผลนี้ออกแบบ frequency/source protocol โดยไม่ fit relaxation pole เดียว และทำ renormalized background/full-action remainder ต่อ G1/G2 และวัน D5/D10/D14 ไม่เปลี่ยน
+
 ผลล่าสุด 1 ต.ค.: [polar static observable/source matching](Result/artifacts/T13_POLAR_STATIC_IR_OBSERVABLE_2026-10-01.md) ปิดพิกัด/source/measure และ static IR coefficient แบบมีเงื่อนไข แต่ Gaussian stationarity obstruction ยังอยู่เมื่อคืน source ให้ครบ งานวิจัยหลักต้องแยกผลนี้จาก microscopic resummation, independent predictive content และการทำนายวัสดุ G1/G2 ยังไม่เปิดจากการเพิ่ม artifact นี้
 
 หลักฐานต่อเนื่อง 1 ต.ค.: [finite-momentum thermal 1PI](Result/artifacts/T13_FINITE_MOMENTUM_THERMAL_1PI_2026-10-01.md) ปิด kernel แบบ fixed-Phi thermal one-loop และตรวจ static current เพิ่มจาก zero-momentum result แต่ bare radial expansion ไม่ uniform เมื่อ q ต่ำ จึงยังไม่ผ่าน physical G1/G2 หรือผลหลักของพอร์ต ต้องตัดสิน D5 จาก scope ที่ตรวจจริงและ obligations เรื่อง IR/current/material/measurement ที่ยังเหลือ ไม่เรียก divergence นี้ว่า no-go ของ UET ทุก completion
