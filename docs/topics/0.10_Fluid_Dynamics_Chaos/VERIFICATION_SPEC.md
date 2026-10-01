@@ -358,3 +358,24 @@ current admission, empty states and relaxed/changed controls.
 PASS supports only the explicit conditional internal derivation. It is not a
 formal or interval certificate, full continuum inverse, external math review,
 material current or physical hydrodynamic admission.
+
+## Selected current-bound diagnostics (2026-10-01)
+
+Command: python docs/topics/0.10_Fluid_Dynamics_Chaos/Code/03_Research/Research_Fluid_Core_O2_Current_Bound.py.
+[Contract](Data/03_Research/fluid_core_o2_current_bound_contract.json),
+[card](CORE_O2_GOLDSTONE_CURRENT_BOUND.md),
+[artifact](Result/artifacts/fluid_core_o2_current_bound_audit.json).
+
+Before execution: same states/coupling/cutoff60, two patch grids, current
+Gauss64/128/256 and existing algebra1e-8/event1e-9/refinement1%/scale2 locks.
+Pre-execution dimensional review defines the response as sup b^2/Q, unitsE4.
+First execution267/267 passes without parameter/threshold repair. Current289/289
+adds explicit raw momentum-null and soft dual O(k) diagnostics.
+Four regressions check immutable inputs, analytic-not-sampled constants, exact
+polynomial identity/wrong-factor control, source-frame null obstruction,
+quadrature/soft/unit limits, and fail-closed physical/formal/useful-error/strong
+inverse claims, stale sources and altered controls. Same-runtime bytes are
+reproducible; published/fresh analytic values use locked relative tolerance.
+No full continuum inverse, formal/interval/external verification or physical
+transport execution. A conditional loose upper formula does not pass a useful
+relative-error or material admission gate.

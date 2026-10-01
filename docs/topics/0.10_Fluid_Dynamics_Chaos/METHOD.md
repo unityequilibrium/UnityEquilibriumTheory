@@ -278,3 +278,22 @@ Diagnostics evaluate the derived formulas, Gram quadrature64/128/256 and
 pointwise original-kernel inequalities; they do not invert the full continuum
 operator, certify intervals, or assign physical transport. Internal derivation
 and independent mathematical verification remain distinct.
+
+## Selected current dual bound without a uniform vector gap
+
+[The card](CORE_O2_GOLDSTONE_CURRENT_BOUND.md) keeps the exact current
+J=k*(d-dbar), where d=E*v/k-c^2 and dbar is the integral-defined momentum
+projection. No material frame or fitted scattering width is inferred.
+A lower phase-velocity derivative gives strict angle separation on two
+disjoint-p patches. A lower derivative of F(E)/E gives a vertex lower bound;
+Bose inequalities then give W*sin^2(Gamma)/p>=alpha>0 analytically.
+A Jensen graph argument controls integral k^3|h-a_I|^2 by Q for h=A/k.
+The finite source dual norm yields |b|^2<=R_upper Q and sup b^2/Q<=R_upper.
+The ratio preservesE4 units; b:E5 and Q:E6 are not subtracted.
+
+Unprojected current has a nonzero momentum overlap while Q[momentum]=0,
+so exact source-frame annihilation is essential. The soft dual integrand is
+O(k); this weighted estimate is distinct from the Bose Gram norm and does
+not contradict the old no-uniform-gap result. Floating evaluations and
+finite Gauss projection remain diagnostics, not interval/exact integral
+certificates or a computed strong continuum inverse.

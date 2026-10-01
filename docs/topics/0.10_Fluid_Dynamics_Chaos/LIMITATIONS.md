@@ -275,3 +275,19 @@ every source-specific hydrodynamic window. Source-weighted upper/error bounds
 and microscopic heat-current/frame remain the selected next controller.
 No finite-matrix time, universal physical relaxation time, material/He-II/SI
 or physical J04/J05/J06 admission is promoted; prior hashes/failures remain.
+
+## Conservative current bound versus useful error and material response
+
+[The selected current result](CORE_O2_GOLDSTONE_CURRENT_BOUND.md) establishes
+only conditional internal finiteness under the old positive finite-K cubic
+model and an exact integral-defined kinetic frame. The exponential patch
+lower formula makes the upper constant extremely loose; no1% continuum
+upper-lower/error bracket, strong Hilbert inverse, interval certificate or
+independent/formal review is supplied. A finite quadrature Galerkin response
+is not automatically a certified continuum lower bound.
+
+The old no-uniform-vector-gap result and all earlier failed/finite-target
+artifacts remain unchanged. No material heat-current/frame, all-channel
+interacting state, infinite-K, physical time/frequency window, nonlinear/live
+response, SI coefficient or He-II second-sound admission follows.
+Selected next controller: useful_certified_continuum_current_error_and_microscopic_heat_current_correspondence_open.

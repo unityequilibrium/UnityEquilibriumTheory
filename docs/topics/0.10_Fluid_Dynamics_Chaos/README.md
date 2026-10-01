@@ -431,3 +431,22 @@ No-uniform-gap does not imply divergent current response or exclude every
 source-specific hydrodynamic window. Material heat-current/frame, interacting
 channels/state, nonlinear/live response and SI/source admission stay open.
 All historical finite refinement results and physical J04/J05/J06 remain unchanged.
+
+## Conditional source-specific current finiteness (2026-10-01)
+
+The [current-bound card](CORE_O2_GOLDSTONE_CURRENT_BOUND.md) and
+[289-check artifact](Result/artifacts/fluid_core_o2_current_bound_audit.json)
+derive an explicit positive event lower formula on two patches, a weighted
+graph estimate and a finite dual norm for the exact momentum-orthogonal
+kinetic source. The selected continuum ratio sup b^2/Q has an explicit finite
+upper formula despite the unchanged absence of a uniform positive Q/G gap.
+This supports conditional internal finiteness, not a strong Hilbert inverse.
+
+The conservative bound is extremely loose: approximately2.89e70 and3.54e71
+in naturalE4 at the two selected states. It does not provide a useful1%
+response/error bracket or a material conductivity. Numerical patch checks are
+not sampled-minimum certificates; no Lean/interval/independent proof ran.
+The next selected controller is
+useful_certified_continuum_current_error_and_microscopic_heat_current_correspondence_open.
+Physical vector/material origin, Topic13 heat-current/EOS/frame/protocol and
+interacting/nonlinear/live/SI/source admission remain open; J04/J05/J06 unchanged.

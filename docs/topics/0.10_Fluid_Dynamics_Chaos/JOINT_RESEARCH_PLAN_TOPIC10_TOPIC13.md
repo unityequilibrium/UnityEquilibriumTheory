@@ -481,3 +481,22 @@ material/SI/independent-source admission. No-uniform-gap is not a divergent-curr
 result or blanket denial of source-specific hydrodynamics. J04/J05/J06 remain
 NOT_STARTED; Topic13/Core admission and all old failed/enriched finite targets
 are unchanged. OpenAI source reviews remain dated historical design snapshots.
+
+## Current selected response-bound wave (2026-10-01)
+
+[The selected current card](CORE_O2_GOLDSTONE_CURRENT_BOUND.md) narrows the
+mathematical controller within existing J01/J02: exact momentum-orthogonal
+kinetic current has a conditionally derived finite continuum ratio bound
+without a uniform positive vector gap. The same289-check source/unit/patch
+diagnostic passes; all earlier history and the ten-package dependency DAG stay.
+
+The upper constant is extremely loose, so the next mathematical obligation
+is a useful/certified continuum upper-lower/error bracket and independent/formal
+review. The physical obligation remains microscopic condensate/charge heat
+current and material frame, interacting thermal state/channels, then Topic13
+fixed-pressure EOS/entropy reference/covariance/independent protocol and SI
+observable correspondence. Neither finiteness nor absence of uniform gap
+executes or admits physical J04/J05/J06; those remain NOT_STARTED.
+Current selected controller:
+useful_certified_continuum_current_error_and_microscopic_heat_current_correspondence_open.
+Overall physical controller remains vector_momentum_constitutive_origin_and_material_frame_admission_open.

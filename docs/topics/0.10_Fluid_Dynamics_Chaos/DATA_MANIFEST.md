@@ -245,3 +245,15 @@ material coefficient, source-dependent fit or scattering channel is added.
 Epsilon is a smooth trial support in natural momentum units, never a kernel
 cutoff/width. Exact rational algebra and evaluated integral upper formulas are
 internal mathematical evidence, not independent He-II data or SI transport.
+
+## Selected current-bound source package (2026-10-01)
+
+[Locked current contract](Data/03_Research/fluid_core_o2_current_bound_contract.json)
+consumes the unchanged continuum, infrared and original Goldstone/Core source
+chain. [Current artifact](Result/artifacts/fluid_core_o2_current_bound_audit.json)
+records every consumed input SHA-256 and guards prior-source freshness.
+The card/registry hashes were locked before execution. No new experiment,
+material calibration, raw dataset, SI parameter or external payload is added.
+Patch grids and Gauss orders are diagnostic configurations; positive constants
+are derived formulas, not sampled minima. Exact frame is an integral definition,
+not the finite quadrature estimate or an admitted physical heat-current frame.

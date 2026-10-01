@@ -281,3 +281,20 @@ statements. Their floating evaluation is not interval certification, Lean
 verification or independent math review. No new primary Core equation or
 physical parameter is added. Source-weighted current bounds and microscopic
 heat-current/frame/material correspondence stay open.
+
+## Selected kinetic-current weighted response upper formula
+
+[Card](CORE_O2_GOLDSTONE_CURRENT_BOUND.md),
+[unmerged registry](../../core/07_artifacts/correspondence/uet_equation_correspondence_registry_topic10_o2_current_bound_addendum.json)
+and [artifact](Result/artifacts/fluid_core_o2_current_bound_audit.json)
+record topic-derived analytic constants eta:E-2,sigma:1,nu:E-2,beta/alpha:E1,
+C_P:E-1,D:E-2,wmax:E2,B_upper/B_J:E6,b:E5,Q:E6 and R_upper:E4.
+The response is sup b^2/Q; pre-execution unit review excludes dimensionally
+incompatible subtraction of b and Q. Whole-action energy scale2 checks pass.
+
+Origin: conditional variational derivation from the same selected curved
+source/cubic measure, two-patch Jensen estimate and exact momentum frame.
+Wrong polynomial coefficient and unprojected-null source are negative controls.
+No fitted constant, primary Core equation, formal/interval/independent proof,
+strong continuum inverse or physical heat-current/material mapping is added.
+The explicit finite upper formula remains too loose for a useful error claim.
