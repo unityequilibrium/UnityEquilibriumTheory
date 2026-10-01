@@ -71,3 +71,41 @@ def test_plan_documents_and_latest_evidence_are_linked_without_holdout_reads():
         for flag in ("g1_physical_unlock", "g2_science_unlock", "full_core_unlock"):
             assert evidence[flag] is False
             assert record[flag] is False
+
+
+def test_result_ladder_is_planned_and_cannot_substitute_for_physics():
+    execution = PLAN["result_level_execution_2026_10_01"]
+    assert execution["record_class"] == "PLANNING_NOT_SCIENTIFIC_CLOSURE"
+    cards = {card["id"]: card for card in execution["result_cards"]}
+    assert set(cards) == {"R1", "R2", "R3", "R4", "R5"}
+    assert all(card["status"] == "PLANNED_NOT_ACCEPTED" for card in cards.values())
+    for field in execution["evidence_baseline_fields"]:
+        assert PLAN[field]["closure_level"] == "CLOSED_FOR_LANE"
+    assert "internal propagator" in cards["R1"]["not_sufficient"]
+    assert cards["R3"]["source_acquisition_parallel_to_R1"] is True
+    assert cards["R3"]["feasibility_counts_as_empirical_input"] is False
+    assert "R3 numeric-input admission" in cards["R4"]["empirical_requires"]
+    assert cards["R4"]["missing_source_counts_as_no_go"] is False
+    assert cards["R5"]["portfolio_completion_unlocks_physics"] is False
+    for field in ("physical_gate_changed", "core_composition_gate_overwritten", "goal_reconfigured"):
+        assert execution[field] is False
+    assert len(execution["full_thermal_acceptance_still_requires"]) == 7
+
+
+def test_submission_scenarios_respect_buffers_not_internal_week_dates():
+    buffer = PLAN["result_level_execution_2026_10_01"]["submission_review_buffer"]
+    assert buffer["status"] == "SCENARIO_NOT_CONFIRMED_CALL"
+    assert date.fromisoformat(buffer["start_date"]) == date(2026, 12, 21)
+    assert date.fromisoformat(buffer["end_date"]) == date(2027, 1, 11)
+    assert buffer["actual_deadline_overrides_internal_calendar"] is True
+    assert buffer["new_theory_expansion_allowed"] is False
+    offsets = PLAN["long_term_roadmap"]["submission_buffers_days_before_actual_deadline"]
+    for example in buffer["examples_not_confirmed_deadlines"]:
+        deadline = date.fromisoformat(example["deadline"])
+        for field, days in offsets.items():
+            key = {
+                "scientific_scope_freeze": "scientific_freeze",
+                "final_forms_and_attachments": "forms_and_attachments",
+            }.get(field, field)
+            assert date.fromisoformat(example[key]) == deadline - timedelta(days=days)
+    assert PLAN["submission_deadline"] is None

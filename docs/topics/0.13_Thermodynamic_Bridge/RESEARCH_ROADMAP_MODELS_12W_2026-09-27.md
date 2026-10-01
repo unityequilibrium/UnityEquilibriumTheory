@@ -54,6 +54,30 @@
 
 ความใหม่ยังต้องมี related-work/claim comparison ที่แยก imported two-fluid EFT ออกจาก contribution ของ UET; การคำนวณ method มาตรฐานซ้ำไม่รับประกัน novelty และโมเดล AI สองตัวเห็นตรงกันไม่แทนผู้เชี่ยวชาญหรือ external replication
 
+### บันไดผลหลัก: เวลาเพิ่มต้องปิดอะไร ไม่ใช่เพิ่มจำนวนการรัน
+
+ผลที่มีจริง ณ 1 ตุลาคมคือ **local stationary candidate ที่ fixed Phi** และ **homogeneous counterterm/on-gap potential matching** ใน natural-unit lane เดียว ไม่ใช่ equilibrium ของวัสดุจริงหรือ full finite-frequency response หลักฐานสองชุดมี hash ใน planning JSON แล้ว บันไดด้านล่างเป็น **งานที่เสนอและยังไม่รับงาน** ไม่ใช่ scientific gate ใหม่ และไม่แก้สถานะ Core ที่อีกห้องดูแล
+
+| ผลหลัก / ช่วงตั้งเป้า | สิ่งที่ต้องตอบให้จบ | เกณฑ์รับและสิ่งที่จะทำต่อได้ |
+| --- | --- | --- |
+| R1 — response ของ named candidate / D5 เลือกขอบเขต, W4 รับผล | เมื่อ source เปลี่ยนที่ q และ frequency ไม่เป็นศูนย์ สมการเดียวกับ stationary potential ให้ external response อะไร? | คำนวณ bubble จริงรวม vacuum/thermal, source/current vertices และ subtraction ที่สอดคล้อง; คืน static source Hessian, Ward/contact และ analytic/reality limits; ตรวจอีกวิธีพร้อม numerical error และขอบเขต approximation. Internal propagator หรือ conditional matrix identity แทนไม่ได้. ปลดทางไป state/observable admission เฉพาะเมื่อหลักฐานครบ |
+| R2 — สะพาน candidate ไปสู่สิ่งที่วัด / W4–W6 | หน่วย field, state, normal component และ source/detector หมายถึงอะไรในวัสดุที่เลือก? | มี mapping และ coefficient origin อิสระจาก target ทุกตัว พร้อม normalization/uncertainty; กำหนด joint-Phi response หรือพิสูจน์ขอบเขต clamped-Phi ที่เลือก. ถ้ายัง fixed Phi ให้รายงาน conditional ไม่ใช้ปิด full bridge. จึงเขียน prediction ที่ตรง protocol ได้ |
+| R3 — input อิสระหรือแผนสร้าง input / W6 | มีการวัดใดเพิ่มข้อมูลที่ calibration เดิมไม่มี? | แยกสองทาง: permitted numeric rows ที่ผ่าน state/protocol/provenance/uncertainty/covariance gate หรือ feasibility specification ที่ระบุ observable, geometry, precision, readout และทรัพยากรที่ต้องขอ. ทาง feasibility ไม่ใช่ empirical input. ค้น source/เตรียม request packet คู่ขนาน R1 ได้ แต่ไม่อ้าง lab access ก่อนยืนยัน |
+| R4 — ข้อทำนายหรือขอบเขตที่หักล้างได้ / W8, ขยาย W10 เมื่อพร้อม | เมื่อไม่ rematch แล้ว ตัวแบบตอบการวัดได้หรือมี ambiguity ที่พิสูจน์ได้อะไร? | Empirical comparison ต้องมี R1/R2 และ numeric-input admission, baseline/metric/uncertainty ที่ล็อกก่อนดู residual. หากไม่มี input ให้รับเพียง scoped proof + measurement design; missing source ไม่ใช่ no-go. State/protocol ที่สองเริ่มหลังผลแรกพร้อมเท่านั้น |
+| R5 — ชุดวิจัยพร้อมส่งต่อ / W12 | ผู้อื่นทำซ้ำและตัดสินข้ออ้างจากหลักฐานชุดเดียวกันได้ไหม? | Release มี source/code/artifact hashes, clean rerun, claim/novelty map, error/uncertainty และ reviewer-response matrix ที่อ้าง feedback จริง. เสนอ Core handoff แบบจำกัดขอบเขต; ไม่ปลด Gravity/transport/galaxy จากการจัดพอร์ตเสร็จ |
+
+R1–R5 ไม่ใช่ห้าช่องที่ติ๊กแล้วปิด Full Topic 13 โดยอัตโนมัติ: acceptance ของ full thermal lane ยังต้องมี EOS/normal component, physical transport, SK/KMS, entropy current/positivity, dissipative balance, heat-flux mapping และ source/uncertainty **ใน state และ prescription เดียวกัน** แต่ละรายการต้องชี้ artifact ของตน ไม่เอาผลจากคนละ lane มาประกอบโดยไม่มี mapping งานพอร์ตเลือกคำถามย่อยหนึ่งเรื่องที่ตอบได้ พร้อมบอกช่องที่เหลืออย่างตรงไปตรงมา
+
+**Scientific freeze 7 ตุลาคม:** หาก R1/physical admission ยังไม่เสร็จ ใช้ผล stationary/counterterm ที่ตรวจแล้วเป็น preliminary methods evidence และส่ง decision dossier ระบุ proof obligation ที่ยังเปิด การปิด dossier/พอร์ตเป็นผลจัดงาน ไม่ทำให้ scientific Goal สำเร็จ ต้องมี scoped proof ใหม่หรือ prediction ตาม G2–G4 จริงจึงรับ scientific closure
+
+ทุก wave ต้องส่ง result card ที่บอก input ใหม่ซึ่งเปลี่ยนข้อสรุป, สิ่งที่ปิดจริง, artifact/hash, blocker และการตัดสินถัดไป หากสอง wave ไม่มี proof/operator/source/independent check ใหม่ ให้เลือกคำถามแคบที่ตัดสินได้หรือ measurement request ไม่วนรัน baseline เดิม และไม่สรุปว่าทฤษฎีเป็นไปไม่ได้จากเวลาที่หมด
+
+### ช่วงสำรองหลัง W12 หากเป้าหมายยื่นอยู่เดือนมกราคม
+
+21 ธันวาคม–11 มกราคมเป็น **submission/review buffer ที่เสนอ** ไม่ใช่รอบทุนที่ยืนยันและไม่ใช่สัปดาห์วิจัยบังคับเพิ่ม ถ้า deadline จริงเป็น 11 ธันวาคม ต้องใช้กติกา freeze ก่อน 14 วันในเดือนพฤศจิกายน ไม่รอ W12 ถ้า deadline จริงเป็น 11 มกราคม ให้ scientific freeze ภายใน 28 ธันวาคม, เอกสารสังกัดภายใน 4 มกราคม และ forms/attachments ภายใน 8 มกราคม ทั้งสองเป็นเพียงตัวอย่างคำนวณจากกติกาเดิม
+
+ใน buffer รับเฉพาะ reviewer corrections, release rerun, call-specific aims/budget และเอกสาร PI/partner; ไม่เปิดทฤษฎีใหม่เพื่อทำให้พอร์ตดูใหญ่ขึ้น หากยังไม่มี call ให้เก็บพอร์ตที่ review ได้และวางคำถามวิจัยถัดไปแยก โดยไม่เรียกว่า submission-ready หรือรับประกันว่าจะมีทุนเปิดทุก 2–3 เดือน
+
 ## 1. สิ่งที่งานสองสัปดาห์จะซื้อให้ระยะยาว
 
 เป้าหมายระยะยาวคือทำให้สะพานความร้อนของ UET มีสมการและ observable ที่เชื่อมกับการวัดในสภาวะระบุชัด โดยรู้ว่าความสามารถทำนายใดมาจาก derivation และค่าใดต้องอาศัยการวัดภายนอก งานสองสัปดาห์แรกตัดสินว่าทุนควรซื้อการวัดอะไรหรือควรแก้ model class ตรงไหน

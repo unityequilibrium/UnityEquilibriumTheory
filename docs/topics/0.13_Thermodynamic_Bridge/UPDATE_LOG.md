@@ -1,3 +1,27 @@
+## 2026-10-01 - Result-level roadmap and next-round submission buffer
+
+MAJOR_RESULT_CLOSURE: Planning handoff clarified; no new scientific result closed.
+
+WHAT_IS_ACTUALLY_CLOSED: The roadmap and machine-readable plan specify R1-R5 acceptance, empirical versus feasibility routes, and date-derived December/January submission buffers.
+
+WHAT_REMAINS_OPEN: Actual external vertices/regulator/RG and joint-Phi/material response, independent input, controlled error/transport, novelty review, funder/PI eligibility and resources.
+
+DEPENDENCY_UNLOCKED: None. Planned result cards do not overwrite recorded bounded Core composition or unlock physical dependencies.
+
+STATUS: PLANNING_REVISION_NOT_SCIENTIFIC_CLOSURE.
+
+WHAT_CHANGED: Expanded the canonical roadmap, planning JSON and Goal brief; added two planning regressions. Preserved original 11 October portfolio target, model policy, scientific completion rules and all scientific artifact bytes.
+
+EQUATION_OR_MAPPING: No equation changed. R1 requires actual external response in the stationary/counterterm prescription; R2 requires independent dimensional state/source/detector admission.
+
+VERIFICATION: 42 planning/background/counterterm tests passed, including six planning tests, seventeen background tests and nineteen counterterm tests; linked evidence hashes and whitespace checks passed. Official OpenAI model-selection, latest-model and Sol 6.1 pages retrieved on 1 October. No empirical comparison or numeric holdout read was performed.
+
+CONTROLLING_BLOCKER: external_vertex_and_regulator_RG_material_matching_not_closed; actual call/PI information separately controls submission readiness.
+
+NEXT_ACTION: D5 scope decision on 2 October, scientific freeze on 7 October and portfolio v1 on 11 October remain internal targets. Execute one evidence-producing question at a time; W4/W6/W8/W10/W12 accept results, not elapsed time. Verify a real call before using hypothetical submission dates.
+
+CLAIM_BOUNDARY: Planning only, not new physical evidence, full Topic13 closure, external validation or a guarantee of funding. No model/configuration change, new Goal, external contact, purchase or Core-owner edit.
+
 ## 2026-10-01 - Fixed-Phi stationary Hartree and counterterm potential match
 
 MAJOR_RESULT_CLOSURE: T13_FIXED_PHI_FINITE_HARTREE_BACKGROUND_AND_SOURCE_BOUNDARY and T13_FIXED_PHI_HARTREE_COUNTERTERM_AND_ON_GAP_POTENTIAL_MATCH are CLOSED_FOR_LANE in the named finite-potential candidate, not physical/Core promotion.

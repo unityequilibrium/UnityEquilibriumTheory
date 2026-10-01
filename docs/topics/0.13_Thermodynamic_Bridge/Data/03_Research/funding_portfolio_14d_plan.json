@@ -132,6 +132,34 @@
     "submission_buffers_days_before_actual_deadline": {"scientific_scope_freeze": 14, "institutional_documents": 7, "final_forms_and_attachments": 3},
     "long_term_benefit": "Independent response evidence and measurement constraints support bounded thermal/transport handoff; curved 3+1, Gravity and Galaxy retain their own dependencies"
   },
+  "result_level_execution_2026_10_01": {
+    "record_class": "PLANNING_NOT_SCIENTIFIC_CLOSURE",
+    "evidence_baseline_fields": ["renormalized_hartree_background_evidence_2026_10_01", "hartree_counterterm_matching_evidence_2026_10_01"],
+    "result_cards": [
+      {"id": "R1", "target_review": "W04", "status": "PLANNED_NOT_ACCEPTED", "result": "SOURCE_COMPLETE_EXTERNAL_CANDIDATE_RESPONSE", "requires": ["actual vacuum-plus-thermal finite-q/frequency bubble", "same-prescription source/current vertices and subtraction", "static source Hessian and Ward/contact recovery", "independent calculation, numerical error and approximation boundary"], "not_sufficient": ["internal propagator", "conditional matrix subtraction identity", "homogeneous counterterm match alone"]},
+      {"id": "R2", "target_review": "W06", "status": "PLANNED_NOT_ACCEPTED", "result": "STATE_AND_DIMENSIONAL_OBSERVABLE_ADMISSION", "requires": ["material/state and normal-component mapping", "independent coefficient and normalization origins", "source/detector response and uncertainty", "joint-Phi response or justified clamped-Phi scope"], "not_sufficient": ["fixed-Phi formal result as full thermal closure", "target-derived parameter origins"]},
+      {"id": "R3", "target_review": "W06", "status": "PLANNED_NOT_ACCEPTED", "result": "INDEPENDENT_INPUT_OR_MEASUREMENT_DESIGN", "requires": ["numeric source admission OR explicitly non-empirical feasibility specification", "state/protocol/permission/uncertainty/covariance", "independent information gain and required precision"], "source_acquisition_parallel_to_R1": true, "feasibility_counts_as_empirical_input": false},
+      {"id": "R4", "target_review": "W08", "status": "PLANNED_NOT_ACCEPTED", "result": "LOCKED_COMPARISON_OR_SCOPED_STRUCTURAL_RESULT", "empirical_requires": ["R1", "R2", "R3 numeric-input admission", "preregistered baseline, metrics and uncertainty"], "structural_requires": ["declared model class", "analytic or constructive proof", "independent verification", "measurement design"], "missing_source_counts_as_no_go": false, "second_protocol_review": "W10"},
+      {"id": "R5", "target_review": "W12", "status": "PLANNED_NOT_ACCEPTED", "result": "REPRODUCIBLE_RELEASE_AND_BOUNDED_HANDOFF", "requires": ["source/code/artifact hashes and clean rerun", "claim/novelty and uncertainty maps", "actual reviewer feedback or disclosed reviewer absence", "call-specific aims, resources and eligibility when known"], "portfolio_completion_unlocks_physics": false}
+    ],
+    "D10_unresolved_policy": "Freeze verified preliminary methods evidence and exact proof obligations; a dossier or portfolio is not scientific Goal completion",
+    "full_thermal_acceptance_still_requires": ["same-state EOS and normal component", "physical transport", "SK/KMS", "entropy current and positivity", "dissipative balance", "heat-flux observable mapping", "independent source and uncertainty"],
+    "submission_review_buffer": {
+      "start_date": "2026-12-21",
+      "end_date": "2027-01-11",
+      "status": "SCENARIO_NOT_CONFIRMED_CALL",
+      "actual_deadline_overrides_internal_calendar": true,
+      "allowed_work": ["reviewer corrections", "frozen release rerun", "call-specific aims and budget", "PI/partner institutional documents"],
+      "new_theory_expansion_allowed": false,
+      "examples_not_confirmed_deadlines": [
+        {"deadline": "2026-12-11", "scientific_freeze": "2026-11-27", "institutional_documents": "2026-12-04", "forms_and_attachments": "2026-12-08"},
+        {"deadline": "2027-01-11", "scientific_freeze": "2026-12-28", "institutional_documents": "2027-01-04", "forms_and_attachments": "2027-01-08"}
+      ]
+    },
+    "physical_gate_changed": false,
+    "core_composition_gate_overwritten": false,
+    "goal_reconfigured": false
+  },
   "polar_dynamic_composite_evidence_2026_10_01": {
     "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/t13_polar_dynamic_composite.json",
     "sha256": "2f07a63af3ce9945bf254d5da238bdefbd53597dae105ee7e50bbcbe8bc61f7d",

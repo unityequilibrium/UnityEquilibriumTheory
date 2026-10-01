@@ -66,6 +66,24 @@ upper-half-plane inverse is not a resummed state or a physical prediction.
 - หากสองรอบไม่เกิดหลักฐานใหม่ ให้ตัดสินแผนวิจัยด้วยเหตุผลก่อนรันต่อ ไม่เพิ่มหัวข้อเพราะหัวข้อเดิมยาก
 - การเผยแพร่ ส่งทุน การติดต่อภายนอก และซื้อทรัพยากรต้องมี authorization ของ action นั้น เตรียมชิ้นงานให้ review ได้ก่อน ขอข้อมูลชื่อทุน/PI เมื่อจำเป็นโดยทำวิจัยที่ไม่ขึ้นต่อคำตอบต่อไปได้
 
+## Result-level handoffs after the first portfolio
+
+Use `result_level_execution_2026_10_01` in the existing planning JSON and the
+R1-R5 ladder in the roadmap. These are planned acceptance cards, not scientific
+gates already passed. Review actual external response at W4, independent
+state/observable inputs or explicitly non-empirical measurement feasibility at
+W6, a locked comparison or verified scoped structural result at W8, then a
+reproducible bounded handoff at W12. Source acquisition may proceed alongside
+response derivation; empirical scoring cannot proceed without both admissions.
+
+If the 7 October scientific freeze arrives unresolved, package the verified
+stationary/counterterm methods results and exact missing proof obligations;
+do not mark the scientific Goal complete. Preserve the 11 October portfolio
+target. A hypothetical December deadline overrides W12; the 21 December to
+11 January buffer is only a submission/review scenario until a call is verified.
+Do not open a new theoretical branch during that buffer or start future Goals
+from this planning instruction alone.
+
 ## Completion
 
 Goal complete ได้เมื่อ G0–G5 ผ่านตามความหมายจริง และ SCIENTIFIC_DECISION เป็น `PREDICTIVE_CONTENT_ESTABLISHED` หรือ `SCOPED_NONIDENTIFIABILITY_ESTABLISHED` พร้อม evidence manifest และ reviewable portfolio
