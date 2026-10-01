@@ -1,5 +1,22 @@
 ﻿# Method
 
+## Named Finite Hartree and Homogeneous Matching (2026-10-01)
+
+Use `t13.candidate.fixed_phi_hartree_ms_finite_potential_v1` separately from
+the original Gaussian/tree branches. Prior witness values are explicitly trial
+renormalized coefficients at Q=1, not admitted bare/material identity. Include
+vacuum and thermal loops with reference, quadrature, source-Hessian and
+thermodynamic-envelope checks. Reoptimize internal masses for external source
+derivatives; never manually set the internal phase mass to zero.
+
+Derive invariant gap countercouplings and the field quartic by matching arbitrary
+tadpole/amplitude coefficients. Verify on-gap potential normalization, exact
+rational identities, symmetric tensor channels and predecessor identity. Do not
+promote conditional vertex algebra to a computed frequency response. See the
+[proof](Result/artifacts/T13_HARTREE_COUNTERTERM_MATCHING_2026-10-01.md) and
+local verifiers/tests. C is neither the Wick matrix nor canonical charge;
+R_gen is not an independent state. Physical/Core admission stays separate.
+
 ## Finite-q Thermoelastic Compatibility (2026-09-07)
 
 For a nonzero bulk grating wavevector use `eps=B(n)*v`, not independently

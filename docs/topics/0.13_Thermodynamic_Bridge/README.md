@@ -6,6 +6,27 @@ description: "Research module for Thermodynamic Bridge within the Unity Equilibr
 
 # 0.13 Thermodynamic Bridge
 
+## Fixed-Phi Hartree Candidate and Counterterm Match (2026-10-01)
+
+The [finite Hartree background](Result/artifacts/T13_RENORMALIZED_HARTREE_BACKGROUND_2026-10-01.md)
+now has nonzero stationary amplitudes at the two preserved witnesses, using
+vacuum plus thermal loops. Source-reoptimized external static angular curvature
+is zero although its internal propagator is gapped; these are different response
+objects. Entropy and canonical-charge derivatives agree with this finite
+potential, without a new material calibration.
+
+The subsequent [counterterm/potential match](Result/artifacts/T13_HARTREE_COUNTERTERM_MATCHING_2026-10-01.md)
+derives two invariant gap countercouplings and a distinct field quartic.
+Coefficient and on-gap potential cancellation hold for arbitrary finite probes
+and reproduce the prior witnesses without retuning. A conditional external-vertex
+identity is available; its actual finite-frequency bubble is not computed here.
+
+Both results are CLOSED_FOR_LANE, not a repaired original Gaussian branch or
+physical He-II/graphite prediction. Latest controller: external vertex,
+regulator/RG and material matching. Joint Phi/global phase, response remainder
+and transport remain open. Recorded Core composition, original failures, the
+11 October portfolio target and model policy are unchanged.
+
 ## Conditional Dynamic IR Research Update (2026-10-01)
 
 The [dynamic composite/source result](Result/artifacts/T13_POLAR_DYNAMIC_COMPOSITE_2026-10-01.md)

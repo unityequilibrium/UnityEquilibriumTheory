@@ -10,6 +10,8 @@
 
 ## 1. ผลลัพธ์หลักที่จะปิดก่อน
 
+ผลถัดมา 1 ต.ค.: [finite Hartree background](Result/artifacts/T13_RENORMALIZED_HARTREE_BACKGROUND_2026-10-01.md) พบ stationary candidate ที่ fixed Phi โดยรวม vacuum/thermal ใน potential เดียว และ [counterterm/potential matching](Result/artifacts/T13_HARTREE_COUNTERTERM_MATCHING_2026-10-01.md) ปิด homogeneous invariant-channel cancellation กับ potential บน gap equations ที่ต่างเพียง normalization คงที่ใน lane นี้แล้ว ไม่ต้องเดา stationary shift หรือใช้ countercoupling เดียวต่อ งานถัดไปคือ regulator/RG input และ actual external finite-q/frequency vertices รวม joint Phi/material mapping; conditional vertex algebra ไม่ใช่ physical response และ normalization ที่ขึ้นกับ m(Phi) ห้ามทิ้งเมื่อขยาย joint Phi ค่า trial renormalized inputs ยังไม่ใช่ original calibration ที่รับวัสดุแล้ว G1/G2 และวัน D5/D10/D14 ไม่เปลี่ยน
+
 ผลล่าสุดถัดมา 1 ต.ค.: [conditional dynamic composite/current](Result/artifacts/T13_POLAR_DYNAMIC_COMPOSITE_2026-10-01.md) ปิด leading phase-lane spectrum, time kernel และ current-contact identity พร้อมคืน static IR coefficient เดิมแล้ว แต่ยังไม่เป็น physical response หรือ microscopic equilibrium ต้องใช้ผลนี้ออกแบบ frequency/source protocol โดยไม่ fit relaxation pole เดียว และทำ renormalized background/full-action remainder ต่อ G1/G2 และวัน D5/D10/D14 ไม่เปลี่ยน
 
 ผลล่าสุด 1 ต.ค.: [polar static observable/source matching](Result/artifacts/T13_POLAR_STATIC_IR_OBSERVABLE_2026-10-01.md) ปิดพิกัด/source/measure และ static IR coefficient แบบมีเงื่อนไข แต่ Gaussian stationarity obstruction ยังอยู่เมื่อคืน source ให้ครบ งานวิจัยหลักต้องแยกผลนี้จาก microscopic resummation, independent predictive content และการทำนายวัสดุ G1/G2 ยังไม่เปิดจากการเพิ่ม artifact นี้

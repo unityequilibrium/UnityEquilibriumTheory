@@ -25,6 +25,17 @@
 
 ## Constraints
 
+Latest fixed-Phi evidence: `Result/artifacts/T13_RENORMALIZED_HARTREE_BACKGROUND_2026-10-01.md`
+and `T13_HARTREE_COUNTERTERM_MATCHING_2026-10-01.md` close a finite stationary
+candidate and homogeneous counterterm/on-gap potential identities. Do not
+repeat root finding without a new question. Next derive actual external
+finite-q/frequency/current vertices and regulator/RG/source matching, then
+joint Phi/material admission. Trial renormalized coefficients are not admitted
+bare/material inputs; internal gap is not external Goldstone response.
+Conditional vertex algebra is not a computed frequency loop. Fixed-action
+normalization can depend on m(Phi) and needs joint-Phi counterterm treatment.
+Keep original Gaussian failures and physical G1/G2/Full Topic13 gates.
+
 The latest `Result/artifacts/T13_POLAR_DYNAMIC_COMPOSITE_2026-10-01.md`
 derives conditional pair/scattering spectra, the retarded time kernel and
 Gaussian current-contact matching. Do not replace this continuum with a fitted

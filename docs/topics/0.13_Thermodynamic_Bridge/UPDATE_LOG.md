@@ -1,3 +1,27 @@
+## 2026-10-01 - Fixed-Phi stationary Hartree and counterterm potential match
+
+MAJOR_RESULT_CLOSURE: T13_FIXED_PHI_FINITE_HARTREE_BACKGROUND_AND_SOURCE_BOUNDARY and T13_FIXED_PHI_HARTREE_COUNTERTERM_AND_ON_GAP_POTENTIAL_MATCH are CLOSED_FOR_LANE in the named finite-potential candidate, not physical/Core promotion.
+
+WHAT_IS_ACTUALLY_CLOSED: Vacuum-plus-thermal potential has local nonzero stationary candidates at both prior witnesses, external static angular/radial source checks and entropy/charge envelope. Independent invariant countercouplings and field quartic cancel homogeneous gap coefficients; the on-gap potential matches up to a fixed-action constant. Arbitrary coefficient/probe and prior witness checks require no retuning. Conditional symmetric external-vertex subtraction is algebraically matched only.
+
+WHAT_REMAINS_OPEN: Actual regulator tensor/translation construction, RG/action/material inputs, finite-q/frequency external bubbles and vertices, joint Phi/global phase, controlled dynamic remainder, normal-component/SK/KMS/transport and independent measurement. Fixed-action normalization may depend on m(Phi).
+
+DEPENDENCY_UNLOCKED: External-vertex work with a declared stationary/counterterm contract only. Original failing branches and recorded Core composition remain unchanged; physical funding G1/G2 and new full_core_unlock stay false.
+
+STATUS: PASS_FIXED_PHI_HARTREE_SOURCE_BACKGROUND and PASS_HOMOGENEOUS_HARTREE_COUNTERTERM_MATCH.
+
+WHAT_CHANGED: Added two verifier/test/artifact/derivation packages, local formula entries and synchronized method/spec/limitations/README/funding evidence/Goal/roadmap. Fixed root/source checks by quadrature and field-step refinement, not physical parameter changes; a float exact-equality replay test was corrected to roundoff comparison.
+
+EQUATION_OR_MAPPING: Finite Hartree F and stationary a=2us,b=2u(I_p-I_s); external Gamma_pi(0)=0 is not internal b. K_b(I+D*K)=K; B=u/(1+2uD), A=u/[(1+2uD)(1+4uD)], u4=A+2B-2u; V_b_on_gap=V_F_on_gap+N at fixed action inputs.
+
+VERIFICATION: 120 focused/related Topic13/Core/planning tests passed, including seventeen candidate and nineteen matching tests. Exact-rational cancellation, independent tensor/matrix/source Hessian, entropy/charge protocol, unit/reference/order/seed checks, negative controls, failed-predecessor rejection and runner read allowlists passed. Background hash c88b6bbb4b8b99667d9562dcfe10930f5c5405053126e5fa729f9016a2652669; matching hash 8daacda13e1e740a9821ea171a7d93fefcbf3392cac5bc28ce75c129f55b4d11. Formal cancellation residual 1.78e-15 is not physical uncertainty. Prior head 71b38b586 has all relevant CI passing; new-head CI must be reviewed after push.
+
+CONTROLLING_BLOCKER: external_vertex_and_regulator_RG_material_matching_not_closed.
+
+NEXT_ACTION: Derive actual external finite-q/frequency bubble/source/current equations and their regulator/RG subtraction; keep joint Phi/material and independent observable gates. No further root-only reruns. Portfolio target 11 October and model recommendations unchanged; full active Goal remains open.
+
+CLAIM_BOUNDARY: Fixed-Phi finite candidate, homogeneous counterterm/on-gap potential and conditional vertex algebra only. Not full covariant matching, physical internal Goldstone mass, finite-frequency material prediction, Kubo transport, graphite validation or global UET closure. No numeric holdout read, fits, clipping, new IR mass or causal-threshold change. Prior Xie exposure review remains required.
+
 ## 2026-10-01 - Conditional dynamical composite and current contact
 
 MAJOR_RESULT_CLOSURE: T13_CONDITIONAL_DYNAMIC_COMPOSITE_AND_CURRENT_MATCH is CLOSED_FOR_LANE for a conditional leading Gaussian phase source response, not microscopic thermal closure.

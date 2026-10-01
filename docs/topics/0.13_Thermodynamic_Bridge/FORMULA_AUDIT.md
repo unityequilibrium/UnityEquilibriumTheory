@@ -1,5 +1,22 @@
 # Formula Audit: 0.13_Thermodynamic_Bridge
 
+## Finite Hartree Background and Homogeneous Counterterms (2026-10-01)
+
+| formula_id | relation | variables and units | constant_origin | proof_status | verification_role | failure_mode | next_hardening_step |
+| :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- |
+| t13.diagnostic.hartree_finite_vacuum | `partial_a Omega_F=I_s/2; partial_b Omega_F=I_p/2` | Omega E^4; a,b,I E^2; Q E | declared finite subtraction, Q=1 convention; trial action inputs not material matched | finite prescription | covariance, auxiliary and quadrature checks | shifted a,b called physical masses; Q variation called RG invariance | regulator/action running and source matching |
+| t13.diagnostic.hartree_stationary_candidate | `F=U+Omega_F+[(a0-a)I_s+(b0-b)I_p]/2+D_H; a=2us; b=2u(I_p-I_s)` | F E^4; s,a,b,I E^2; u dimensionless | variational Hartree and Wick coefficients | local fixed-Phi candidate | field/gap and entropy/charge envelope | forcing b=0; energy identity called dynamical ledger | joint Phi and external response |
+| t13.diagnostic.hartree_external_source | `Gamma_ext,pi(0)=B_field; Gamma_ext,rad=B_field+2s*dB_field/ds` | curvature E^2; field E | reoptimized internal masses | static candidate source identity | implicit versus potential differences | internal inverse substituted for source response | renormalized frequency/current vertices |
+| t13.diagnostic.hartree_counterterm_projection | `K_b*(I+D*K)=K; B=u/(1+2uD); A=u/[(1+2uD)(1+4uD)]; u4=A+2B-2u` | K,A,B,u4,D dimensionless; D2,m2 E^2 | invariant coefficient cancellation | homogeneous algebra; scoped single-coupling obstruction | tensor/matrix/eigenvalue and negative controls | one countercoupling for all channels; probes called UV regulator | actual vacuum tensor/translation/source decomposition |
+| t13.diagnostic.hartree_potential_match | `V_b_on_gap=V_F_on_gap+N(D,D2,m2,M02)` | potentials/N E^4; tadpoles/s E^2 | polynomial cancellation on gap equations | fixed-action on-gap identity | exact rational, arbitrary probes and predecessor | dropping m(Phi)-dependent N in joint Phi dynamics | source-dependent 2PI and joint Phi match |
+| t13.diagnostic.hartree_conditional_vertex_subtraction | `[K_b^-1-J_F-D*I]^-1=[K^-1-J_F]^-1` | three-channel vertex/bubble dimensionless | assumed J_b=J_F+D*I plus inverse identity | conditional, not frequency bubble computation | noncommuting complex matrix probes | algebra called spectrum/transport | actual bubble and external source equations |
+
+See [background](Result/artifacts/T13_RENORMALIZED_HARTREE_BACKGROUND_2026-10-01.md)
+and [counterterm proof](Result/artifacts/T13_HARTREE_COUNTERTERM_MATCHING_2026-10-01.md).
+Local diagnostic IDs only, not new admitted Core equations. Canonical natural
+units have no new SI conversion. C is not a Wick matrix or canonical charge;
+Phi and R_gen ontology and physical admission gates are unchanged.
+
 ## Conditional Dynamic Composite and Current (2026-10-01)
 
 | formula_id | relation | variables and units | constant_origin | proof_status | verification_role | failure_mode | next_hardening_step |

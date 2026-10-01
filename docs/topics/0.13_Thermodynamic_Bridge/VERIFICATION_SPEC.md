@@ -1,5 +1,23 @@
 # Verification Spec
 
+## Finite Hartree and Homogeneous Counterterms (2026-10-01)
+
+Run `Research_T13_Renormalized_Hartree_Background.py` then
+`Research_T13_Hartree_Counterterm_Matching.py` under `Code/03_Research/`, and
+their test modules. Candidate thresholds stay identity 1e-7, refinement 1e-5,
+derivative 2e-5. Counterterm algebra uses 1e-10; it does not replace the original
+thermal causal threshold 1e-6.
+
+Require vacuum/chemical-shift checks, source reoptimization, entropy/charge
+protocol, reference/order/seed refinement and internal/external distinction.
+Counterterms must cover arbitrary signed finite tadpoles/amplitude, independent
+tensor/matrix inversion, exact-rational potential cancellation, negative
+single-coupling controls, action scaling, predecessor hashes and pole refusal.
+Complex vertex probes check a declared conditional identity, not physical loops.
+Runner read allowlists exclude Data/numeric holdout paths; this is not pristine
+repository-wide blinding. Physical/Core flags remain false, original failures
+and Core-composition hashes unchanged; prior Xie exposure review stays open.
+
 ## Finite-q Spatial Compatibility (2026-09-07)
 
 Run `docs.scripts.audit.audit_topic13_thermoelastic_spatial_compatibility` and

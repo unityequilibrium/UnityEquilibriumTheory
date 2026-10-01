@@ -1,5 +1,22 @@
 # Limitations
 
+## Finite Hartree and Counterterm Scope (2026-10-01)
+
+The [stationary candidate](Result/artifacts/T13_RENORMALIZED_HARTREE_BACKGROUND_2026-10-01.md)
+and [counterterm match](Result/artifacts/T13_HARTREE_COUNTERTERM_MATCHING_2026-10-01.md)
+close a fixed-Phi finite prescription and homogeneous on-gap algebra, not trial
+action-input/material identity, RG invariance, global minimum, finite-q stability
+or joint Phi dynamics. Fixed-Phi normalization can depend on m(Phi); dropping it
+in a joint-Phi equation needs a separate contract.
+
+The internal gap cannot replace physical source response or the preceding
+composite to remove its IR continuum. Only external static curvatures are
+matched. A conditional vertex identity assumes its vacuum-divergence form;
+complex probes are not frequency loops/KMS transport. Formal divergence values
+are not a UV regulator/continuum limit. Thermodynamic energy/entropy identities
+are not a dynamical ledger or entropy production. No physical/Core gate or new
+holdout eligibility follows; original Gaussian/tree failures remain.
+
 ## Conditional Dynamic Composite Boundary (2026-10-01)
 
 The [dynamic phase result](Result/artifacts/T13_POLAR_DYNAMIC_COMPOSITE_2026-10-01.md)
