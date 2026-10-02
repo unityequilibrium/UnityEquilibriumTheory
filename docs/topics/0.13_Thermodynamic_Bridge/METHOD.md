@@ -1,5 +1,19 @@
 ﻿# Method
 
+## Tree-Matched Phase Thermal EFT (2026-10-02)
+
+Use the [new-branch derivation](Result/artifacts/T13_LOW_T_PHASE_EFT_2026-10-02.md).
+Jointly eliminate radial/classical Phi at tree order with external h E3;
+derive P0(X,h), chi/rho and parent phase dispersion from the unchanged
+action trial inputs. Quantize the low-energy phase only; compute the finite
+thermal determinant, T4/T6 coefficients and source/entropy derivatives in
+that order. Full quantum vacuum/Wilson matching is not included. Cross-check
+Schur versus polynomial/first-order energy parent, actual Bose pressure and
+entropy, moving angular partition and implicit source derivatives. Separate
+physical kinetic ambiguity from Phi-coordinate rescaling. Do not import
+old Hartree masses/poles or append a phase gas to its potential. Conditional
+measurement inversion is not SI calibration or actual detector feasibility.
+
 ## Joint Hartree Low-Temperature Validity (2026-10-02)
 
 Use the [conditional compatibility derivation](Result/artifacts/T13_HARTREE_LOW_T_VALIDITY_2026-10-02.md).

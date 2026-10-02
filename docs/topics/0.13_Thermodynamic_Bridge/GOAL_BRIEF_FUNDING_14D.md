@@ -27,6 +27,16 @@
 
 ## Constraints
 
+Latest scientific branch: [Tree-matched low-T phase EFT](Result/artifacts/T13_LOW_T_PHASE_EFT_2026-10-02.md)
+and [conditional measurement card](Result/artifacts/T13_LOW_T_PHASE_EFT_MEASUREMENT_CARD_2026-10-02.md)
+now define joint tree P(X,h), phase one-loop thermal differences and source
+response. They do not compute vacuum Wilson matching/full quantum EOS,
+finite-T normal dynamics or physical heat transport. Next control the
+interaction/remainder and independent material/scale/readout requirements;
+do not redo unchanged Hartree. Old low-T exclusion below remains in force
+for its own branch. Scientific G0-G5/R1-R5/full Goal and 7/11 October remain
+unaccepted/unchanged. Model trial NOT_RUN/configuration unchanged.
+
 Latest validity result: `Result/artifacts/T13_HARTREE_LOW_T_VALIDITY_2026-10-02.md`
 and `t13_hartree_low_T_validity.json` conditionally exclude treating the
 unmodified joint Hartree internal EOS as asymptotically complete thermal

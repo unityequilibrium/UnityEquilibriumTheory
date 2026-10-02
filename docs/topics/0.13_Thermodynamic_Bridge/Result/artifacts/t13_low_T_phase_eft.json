@@ -1,0 +1,1057 @@
+{
+  "schema_version": "t13-low-T-phase-EFT-v1",
+  "generated_at": "2026-10-02T00:02:41.795565+00:00",
+  "major_result_id": "T13_TREE_MATCHED_LOW_T_PHASE_THERMODYNAMIC_PRESCRIPTION",
+  "topic": "0.13",
+  "branch_id": "t13.candidate.tree_matched_classical_phi_low_T_phase_EFT_v1",
+  "closure_level": "CLOSED_FOR_LANE",
+  "verification_status": "PASS_SCOPED_TREE_MATCHED_LOW_T_EFT",
+  "what_is_closed": [
+    "joint_tree_P_X_h_matching",
+    "gapless_parent_and_tree_T6_dispersion",
+    "phase_only_one_loop_T4_T6_thermal_pressure",
+    "leading_relative_flow_and_source_Phi_thermal_response",
+    "conditional_kinetic_input_nonidentifiability_and_dispersion_measurement"
+  ],
+  "equation_or_mapping": "P0=r^2/(4u)-V(Phi)+h*Phi; Delta_T P=A4*T^4+B6*T^6 at phase one-loop and relative rest; Delta_T<Phi>=partial_h A4*T^4+...; s_th=partial_T Delta_T P",
+  "units": {
+    "mu_xi_T_Phi_gamma": "E",
+    "X_s_Hessian_chi_rho_A_B_D_pressure_X": "E^2",
+    "source_h_entropy_charge": "E^3",
+    "pressure": "E^4",
+    "eta_B6": "E^-2",
+    "A4_U_u_pressure_XX": "dimensionless",
+    "A4_h": "E^-3",
+    "A4_mu": "E^-1"
+  },
+  "derivation_class": "TREE_MATCHED_LOW_ENERGY_EFT_PLUS_PHASE_ONE_LOOP_THERMAL_DETERMINANT_NOT_FULL_QUANTUM_COMPLETION",
+  "observable": "natural_equilibrium_pressure_entropy_charge_and_Phi_source_response_not_TTG_or_material_transport",
+  "data_role": "DERIVED_TRIAL_INPUT_NO_EMPIRICAL_ROWS",
+  "ontology": {
+    "C": "Collective lane coordinate, not this O2 amplitude or charge",
+    "Phi": "Existing effective response, classical at tree matching, not a metric or 2PI functional",
+    "s": "Canonical O2 radial amplitude squared, not collective C",
+    "R_gen": "Derived history trace, no state or feedback",
+    "R_obs": "Observer information, excluded from dynamics",
+    "h": "External nondynamical source conjugate to existing Phi, E^3"
+  },
+  "standard_physics_correspondence": "Classical O2-plus-response action -> tree P(X,h) -> phase-only Bose thermal determinant; not full two-fluid or dissipative constitutive transport",
+  "equation_registry_ids": [
+    "t13.diagnostic.joint_tree_P_X_h",
+    "t13.diagnostic.tree_matched_acoustic_T6",
+    "t13.diagnostic.phase_EFT_thermal_source_response",
+    "t13.diagnostic.phase_EFT_kinetic_identifiability"
+  ],
+  "action_controls": {
+    "Z": 1.0,
+    "m0_sq": 1.0,
+    "u": 1.0,
+    "gamma": 0.04000000000000001,
+    "epsilon": 0.05,
+    "Phi_reference": 0.0,
+    "response_mass_sq": 1.0,
+    "response_quartic": 1.0,
+    "response_kinetic": 1.0
+  },
+  "examples": [
+    {
+      "state_tree_not_Hartree": {
+        "mu": 1.05,
+        "xi": 0.0,
+        "h": 0.0,
+        "X": 1.1025,
+        "s": 0.10416374155459096,
+        "Phi": 0.04159353886477326,
+        "V_curvature": 0.05025950337129431,
+        "U": 0.9840826123153275,
+        "pressure_tree": 0.0026692332895584567,
+        "A": 2.344829283659969,
+        "B": 0.0,
+        "D": 0.10416374155459096,
+        "rho": 0.10416374155459096,
+        "c2_rest_at_X": 0.044422739975340596,
+        "A4_flow": 11.712489720818924,
+        "stationary_residual": 0.0,
+        "heavy_hessian": [
+          [
+            0.20832748310918192,
+            -0.012909763223519848
+          ],
+          [
+            -0.012909763223519848,
+            0.05025950337129431
+          ]
+        ]
+      },
+      "rest_coefficients": {
+        "c": 0.21076702772336237,
+        "A0": 0.205011453795161,
+        "eta": 0.4709301566824913,
+        "A4": 11.712489720818924,
+        "B6": -33224.57300920962,
+        "A4_h": -131.7097685476614,
+        "A4_mu": -312.0154226343426,
+        "Phi_h_tree": 20.218561284228095,
+        "Phi_mu_tree": 0.84917957393758,
+        "dispersion_scale": 0.4520369052194675
+      },
+      "source_derivative_checks": [
+        {
+          "step": 0.0004,
+          "charge_relative_error": 1.5590252187003273e-06,
+          "chi_relative_error": 3.357190592190307e-08,
+          "Phi_source_relative_error": 6.610829471109803e-05,
+          "A4_h_relative_error": 5.285498680951406e-07,
+          "A4_mu_relative_error": 9.036817012741949e-05
+        },
+        {
+          "step": 0.0002,
+          "charge_relative_error": 3.8975629257365085e-07,
+          "chi_relative_error": 8.498194370432088e-09,
+          "Phi_source_relative_error": 1.6529493467087875e-05,
+          "A4_h_relative_error": 1.3213709049164635e-07,
+          "A4_mu_relative_error": 2.259071311438987e-05
+        },
+        {
+          "step": 0.0001,
+          "charge_relative_error": 9.743876239198812e-08,
+          "chi_relative_error": 2.3994020104112224e-09,
+          "Phi_source_relative_error": 4.132524654809622e-06,
+          "A4_h_relative_error": 3.3034654678409936e-08,
+          "A4_mu_relative_error": 5.647594912838727e-06
+        }
+      ],
+      "parent_dispersion_checks": [
+        {
+          "q": 0.008,
+          "energy": 0.001686377314331268,
+          "eta_estimate": 0.47088387572068874,
+          "eta_relative_error": 9.82756384271255e-05,
+          "uneliminated_scaled_determinant": 3.039920900486214e-18,
+          "phase_inverse_scaled": 4.2351647362715017e-16,
+          "independent_first_order_parent": {
+            "energy_conservation_residual": 6.938893903907228e-18,
+            "potential_min_eigenvalue": 6.400000000000156e-05,
+            "kinetic_min_eigenvalue": 0.05,
+            "mode_real_growth_max": 5.551115123125783e-17,
+            "positive_mode_frequencies": [
+              0.0016863773143312901,
+              1.0021635800657547,
+              2.149273101645391
+            ]
+          },
+          "first_order_frequency_relative_error": 1.3100631690576847e-14
+        },
+        {
+          "q": 0.004,
+          "energy": 0.0008430982496829039,
+          "eta_estimate": 0.470918585225924,
+          "eta_relative_error": 2.4571491978320203e-05,
+          "uneliminated_scaled_determinant": 1.6711964121927242e-16,
+          "phase_inverse_scaled": 1.630538423464528e-14,
+          "independent_first_order_parent": {
+            "energy_conservation_residual": 1.734723475976807e-18,
+            "potential_min_eigenvalue": 1.6000000000002124e-05,
+            "kinetic_min_eigenvalue": 0.05,
+            "mode_real_growth_max": 1.6479873021779667e-16,
+            "positive_mode_frequencies": [
+              0.0008430982496828706,
+              1.0021396047650184,
+              2.1492512771385837
+            ]
+          },
+          "first_order_frequency_relative_error": 3.952393967665557e-14
+        },
+        {
+          "q": 0.002,
+          "energy": 0.00042153782286483436,
+          "eta_estimate": 0.4709272637057338,
+          "eta_relative_error": 6.143112129097794e-06,
+          "uneliminated_scaled_determinant": 3.097593339105281e-19,
+          "phase_inverse_scaled": 0.0,
+          "independent_first_order_parent": {
+            "energy_conservation_residual": 1.734723475976807e-18,
+            "potential_min_eigenvalue": 3.9999999999970615e-06,
+            "kinetic_min_eigenvalue": 0.05,
+            "mode_real_growth_max": 1.43982048506075e-16,
+            "positive_mode_frequencies": [
+              0.00042153782286487773,
+              1.0021336108497205,
+              2.1492458209442273
+            ]
+          },
+          "first_order_frequency_relative_error": 1.028066520802895e-13
+        }
+      ],
+      "thermal_runs": [
+        {
+          "T": 0.002977327341699201,
+          "temperature_divisor": 32,
+          "integral_runs": [
+            {
+              "pressure": 8.989375546278123e-10,
+              "quadrature_error_estimate": 6.758214848928455e-18
+            },
+            {
+              "pressure": 8.98937554628492e-10,
+              "quadrature_error_estimate": 5.209517720498008e-20
+            }
+          ],
+          "P_T4": 9.203554015743698e-10,
+          "P_T6_correction": -2.3142960943787346e-11,
+          "T4_relative_error": 0.02382573387395004,
+          "T4_T6_relative_error": 0.0019190587700194106,
+          "dispersion_correction_fraction": 0.02514567840227672,
+          "Phi_thermal_shift_order_one_loop_T4": -1.034961821204268e-08,
+          "charge_thermal_shift_order_one_loop_T4": -2.4517851152141617e-08,
+          "entropy_T4": 1.2364853386246882e-06,
+          "entropy_T4_T6": 1.1898469446134082e-06,
+          "independent_entropy_integral": {
+            "entropy": 1.1943313966580772e-06,
+            "quadrature_error_estimate": 7.187285265142945e-17
+          },
+          "entropy_T4_T6_relative_error": 0.003754780337532071,
+          "fixed_charge_heat_capacity_leading": 3.7094560158740648e-06
+        },
+        {
+          "T": 0.0014886636708496006,
+          "temperature_divisor": 64,
+          "integral_runs": [
+            {
+              "pressure": 5.716811205176351e-11,
+              "quadrature_error_estimate": 3.6440655773644285e-19
+            },
+            {
+              "pressure": 5.716811205177102e-11,
+              "quadrature_error_estimate": 2.2182401026885046e-21
+            }
+          ],
+          "P_T4": 5.752221259839811e-11,
+          "P_T6_correction": -3.616087647466773e-13,
+          "T4_relative_error": 0.006194022050376891,
+          "T4_T6_relative_error": 0.00013133577181612122,
+          "dispersion_correction_fraction": 0.00628641960056918,
+          "Phi_thermal_shift_order_one_loop_T4": -6.468511382526675e-10,
+          "charge_thermal_shift_order_one_loop_T4": -1.532365697008851e-09,
+          "entropy_T4": 1.5456066732808602e-07,
+          "entropy_T4_T6": 1.5310321751523353e-07,
+          "independent_entropy_integral": {
+            "entropy": 1.531431599640545e-07,
+            "quadrature_error_estimate": 7.255549458473133e-18
+          },
+          "entropy_T4_T6_relative_error": 0.0002608177135063894,
+          "fixed_charge_heat_capacity_leading": 4.636820019842581e-07
+        },
+        {
+          "T": 0.0007443318354248003,
+          "temperature_divisor": 128,
+          "integral_runs": [
+            {
+              "pressure": 3.5895184105935116e-12,
+              "quadrature_error_estimate": 2.6327840832596e-20
+            },
+            {
+              "pressure": 3.589518410596168e-12,
+              "quadrature_error_estimate": 1.3209798864088376e-22
+            }
+          ],
+          "P_T4": 3.595138287399882e-12,
+          "P_T6_correction": -5.6501369491668324e-15,
+          "T4_relative_error": 0.0015656353195248052,
+          "T4_T6_relative_error": 8.430140757575977e-06,
+          "dispersion_correction_fraction": 0.001571604900142295,
+          "Phi_thermal_shift_order_one_loop_T4": -4.042819614079172e-11,
+          "charge_thermal_shift_order_one_loop_T4": -9.577285606305319e-11,
+          "entropy_T4": 1.9320083416010753e-08,
+          "entropy_T4_T6": 1.927453810935911e-08,
+          "independent_entropy_integral": {
+            "entropy": 1.9274862464775883e-08,
+            "quadrature_error_estimate": 8.037834740459837e-19
+          },
+          "entropy_T4_T6_relative_error": 1.682789785739658e-05,
+          "fixed_charge_heat_capacity_leading": 5.796025024803226e-08
+        }
+      ],
+      "relative_flow_checks": [
+        {
+          "xi": 0.0,
+          "A4_closed": 11.712489720818924,
+          "A4_angular": 11.712489720818924,
+          "relative_disagreement": 0.0,
+          "quadrature_error_estimate": 1.300347576373864e-13,
+          "positive_energy_margin_D": 0.10416374155459096
+        },
+        {
+          "xi": 0.02,
+          "A4_closed": 11.958866493146491,
+          "A4_angular": 11.958866493146491,
+          "relative_disagreement": 0.0,
+          "quadrature_error_estimate": 1.3277008929109536e-13,
+          "positive_energy_margin_D": 0.1029443310768669
+        },
+        {
+          "xi": 0.04,
+          "A4_closed": 12.750712630171023,
+          "A4_angular": 12.750712630171021,
+          "relative_disagreement": 1.1102230246251565e-16,
+          "quadrature_error_estimate": 1.4156134742394657e-13,
+          "positive_energy_margin_D": 0.09928609179272274
+        }
+      ],
+      "kinetic_nonidentifiability_witnesses": [
+        {
+          "response_kinetic": 0.5,
+          "pressure_tree": 0.0026692332895584567,
+          "c": 0.21076702772336237,
+          "A4": 11.712489720818924,
+          "eta": 0.4701559332001228,
+          "B6": -33169.95080196639,
+          "parent_energy_checks": [
+            {
+              "energy_conservation_residual": 6.938893903907228e-18,
+              "potential_min_eigenvalue": 6.400000000000156e-05,
+              "kinetic_min_eigenvalue": 0.025,
+              "mode_real_growth_max": 3.3306690738754696e-16,
+              "positive_mode_frequencies": [
+                0.001686376918042614,
+                1.417000548973837,
+                2.149652580837585
+              ]
+            },
+            {
+              "energy_conservation_residual": 6.938893903907228e-18,
+              "potential_min_eigenvalue": 1.6000000000002124e-05,
+              "kinetic_min_eigenvalue": 0.025,
+              "mode_real_growth_max": 3.0531133177191805e-16,
+              "positive_mode_frequencies": [
+                0.000843098200136213,
+                1.4169835753337907,
+                2.1496307716397838
+              ]
+            },
+            {
+              "energy_conservation_residual": 1.734723475976807e-18,
+              "potential_min_eigenvalue": 3.9999999999970615e-06,
+              "kinetic_min_eigenvalue": 0.025,
+              "mode_real_growth_max": 3.3306690738754696e-16,
+              "positive_mode_frequencies": [
+                0.00042153781667112497,
+                1.4169793318915527,
+                2.149625319272869
+              ]
+            }
+          ]
+        },
+        {
+          "response_kinetic": 1.0,
+          "pressure_tree": 0.0026692332895584567,
+          "c": 0.21076702772336237,
+          "A4": 11.712489720818924,
+          "eta": 0.4709301566824913,
+          "B6": -33224.57300920962,
+          "parent_energy_checks": [
+            {
+              "energy_conservation_residual": 6.938893903907228e-18,
+              "potential_min_eigenvalue": 6.400000000000156e-05,
+              "kinetic_min_eigenvalue": 0.05,
+              "mode_real_growth_max": 5.551115123125783e-17,
+              "positive_mode_frequencies": [
+                0.0016863773143312901,
+                1.0021635800657547,
+                2.149273101645391
+              ]
+            },
+            {
+              "energy_conservation_residual": 1.734723475976807e-18,
+              "potential_min_eigenvalue": 1.6000000000002124e-05,
+              "kinetic_min_eigenvalue": 0.05,
+              "mode_real_growth_max": 1.6479873021779667e-16,
+              "positive_mode_frequencies": [
+                0.0008430982496828706,
+                1.0021396047650184,
+                2.1492512771385837
+              ]
+            },
+            {
+              "energy_conservation_residual": 1.734723475976807e-18,
+              "potential_min_eigenvalue": 3.9999999999970615e-06,
+              "kinetic_min_eigenvalue": 0.05,
+              "mode_real_growth_max": 1.43982048506075e-16,
+              "positive_mode_frequencies": [
+                0.00042153782286487773,
+                1.0021336108497205,
+                2.1492458209442273
+              ]
+            }
+          ]
+        },
+        {
+          "response_kinetic": 2.0,
+          "pressure_tree": 0.0026692332895584567,
+          "c": 0.21076702772336237,
+          "A4": 11.712489720818924,
+          "eta": 0.47247860364722827,
+          "B6": -33333.81742369608,
+          "parent_energy_checks": [
+            {
+              "energy_conservation_residual": 1.734723475976807e-18,
+              "potential_min_eigenvalue": 6.400000000000156e-05,
+              "kinetic_min_eigenvalue": 0.1,
+              "mode_real_growth_max": 8.760353553682876e-17,
+              "positive_mode_frequencies": [
+                0.0016863781068357036,
+                0.7086989417182442,
+                2.149152736070298
+              ]
+            },
+            {
+              "energy_conservation_residual": 6.938893903907228e-18,
+              "potential_min_eigenvalue": 1.6000000000002124e-05,
+              "kinetic_min_eigenvalue": 0.1,
+              "mode_real_growth_max": 2.7755575615628914e-17,
+              "positive_mode_frequencies": [
+                0.0008430983487741027,
+                0.708665046788662,
+                2.149130907475701
+              ]
+            },
+            {
+              "energy_conservation_residual": 6.938893903907228e-18,
+              "potential_min_eigenvalue": 3.9999999999970615e-06,
+              "kinetic_min_eigenvalue": 0.1,
+              "mode_real_growth_max": 6.938893903907228e-17,
+              "positive_mode_frequencies": [
+                0.0004215378352521811,
+                0.7086565728020181,
+                2.149125450259354
+              ]
+            }
+          ]
+        }
+      ],
+      "eta_response_kinetic_slope": 0.0015484469647369418,
+      "Phi_coordinate_redundancy_controls": [
+        {
+          "Phi_coordinate_scale": 0.5,
+          "Phi_scaling_error": 4.9960036108132044e-14,
+          "pressure_relative_error": 0.0,
+          "eta_relative_error": 3.3306690738754696e-16,
+          "A4_relative_error": 1.1102230246251565e-15
+        },
+        {
+          "Phi_coordinate_scale": 2.0,
+          "Phi_scaling_error": 2.220446049250313e-16,
+          "pressure_relative_error": 0.0,
+          "eta_relative_error": 0.0,
+          "A4_relative_error": 0.0
+        }
+      ],
+      "measurement_scope": "Tree rest EOS and leading T4 coefficient do not identify q-cubed dispersion; natural-unit conditional design, not physical TTG/He-II admission"
+    },
+    {
+      "state_tree_not_Hartree": {
+        "mu": 1.2,
+        "xi": 0.0,
+        "h": 0.0,
+        "X": 1.44,
+        "s": 0.4469419829846801,
+        "Phi": 0.17354957461700313,
+        "V_curvature": 0.054517918227461416,
+        "U": 0.9853259253836103,
+        "pressure_tree": 0.04917495789782038,
+        "A": 3.369832699453699,
+        "B": 0.0,
+        "D": 0.4469419829846801,
+        "rho": 0.4469419829846801,
+        "c2_rest_at_X": 0.1326303181333412,
+        "A4_flow": 2.2703510726888294,
+        "stationary_residual": 3.469446951953614e-18,
+        "heavy_hessian": [
+          [
+            0.8938839659693602,
+            -0.02674148785642804
+          ],
+          [
+            -0.02674148785642804,
+            0.054517918227461416
+          ]
+        ]
+      },
+      "rest_coefficients": {
+        "c": 0.3641844561940298,
+        "A0": 0.8807670459543314,
+        "eta": 0.15740994933839672,
+        "A4": 2.27035107268883,
+        "B6": -417.27529971978163,
+        "A4_h": -5.703351337277938,
+        "A4_mu": -11.21233553014485,
+        "Phi_h_tree": 18.61576235634509,
+        "Phi_mu_tree": 0.8935565931045645,
+        "dispersion_scale": 0.9328973365101231
+      },
+      "source_derivative_checks": [
+        {
+          "step": 0.0004,
+          "charge_relative_error": 3.614726260536827e-07,
+          "chi_relative_error": 2.288777234404904e-08,
+          "Phi_source_relative_error": 5.160386048252974e-05,
+          "A4_h_relative_error": 7.026191813919169e-07,
+          "A4_mu_relative_error": 5.280579799205043e-06
+        },
+        {
+          "step": 0.0002,
+          "charge_relative_error": 9.03680899000392e-08,
+          "chi_relative_error": 5.269416902820012e-09,
+          "Phi_source_relative_error": 1.2902085172683542e-05,
+          "A4_h_relative_error": 1.756558546395226e-07,
+          "A4_mu_relative_error": 1.3201401725115858e-06
+        },
+        {
+          "step": 0.0001,
+          "charge_relative_error": 2.2592113513297818e-08,
+          "chi_relative_error": 2.7604785124424325e-10,
+          "Phi_source_relative_error": 3.225591587496801e-06,
+          "A4_h_relative_error": 4.390893970640519e-08,
+          "A4_mu_relative_error": 3.300348452306423e-07
+        }
+      ],
+      "parent_dispersion_checks": [
+        {
+          "q": 0.008,
+          "energy": 0.002913556240919272,
+          "eta_estimate": 0.1574050137375868,
+          "eta_relative_error": 3.135507527107784e-05,
+          "uneliminated_scaled_determinant": 1.0160549098454475e-15,
+          "phase_inverse_scaled": 2.106994456295072e-14,
+          "independent_first_order_parent": {
+            "energy_conservation_residual": 3.469446951953614e-18,
+            "potential_min_eigenvalue": 6.400000000000156e-05,
+            "kinetic_min_eigenvalue": 0.05,
+            "mode_real_growth_max": 1.942890293094024e-16,
+            "positive_mode_frequencies": [
+              0.0029135562409193616,
+              1.0430019222229472,
+              2.580033494346123
+            ]
+          },
+          "first_order_frequency_relative_error": 3.086420008457935e-14
+        },
+        {
+          "q": 0.004,
+          "energy": 0.0014567478989339058,
+          "eta_estimate": 0.1574087154163073,
+          "eta_relative_error": 7.83890786193453e-06,
+          "uneliminated_scaled_determinant": 4.197177947010536e-18,
+          "phase_inverse_scaled": 1.0587911840678754e-16,
+          "independent_first_order_parent": {
+            "energy_conservation_residual": 3.469446951953614e-18,
+            "potential_min_eigenvalue": 1.6000000000002124e-05,
+            "kinetic_min_eigenvalue": 0.05,
+            "mode_real_growth_max": 1.7520707107365752e-16,
+            "positive_mode_frequencies": [
+              0.0014567478989338275,
+              1.0429788552464305,
+              2.5800161464442435
+            ]
+          },
+          "first_order_frequency_relative_error": 5.3734794391857577e-14
+        },
+        {
+          "q": 0.002,
+          "energy": 0.0007283701716651864,
+          "eta_estimate": 0.15740964084964837,
+          "eta_relative_error": 1.959779223903446e-06,
+          "uneliminated_scaled_determinant": 1.4254492679412076e-18,
+          "phase_inverse_scaled": 0.0,
+          "independent_first_order_parent": {
+            "energy_conservation_residual": 6.938893903907228e-18,
+            "potential_min_eigenvalue": 3.9999999999970615e-06,
+            "kinetic_min_eigenvalue": 0.05,
+            "mode_real_growth_max": 1.1102230246251565e-16,
+            "positive_mode_frequencies": [
+              0.0007283701716652613,
+              1.0429730884217865,
+              2.580011809434874
+            ]
+          },
+          "first_order_frequency_relative_error": 1.028066520802895e-13
+        }
+      ],
+      "thermal_runs": [
+        {
+          "T": 0.010617084661931188,
+          "temperature_divisor": 32,
+          "integral_runs": [
+            {
+              "pressure": 2.829092150021086e-08,
+              "quadrature_error_estimate": 2.1166203207137189e-16
+            },
+            {
+              "pressure": 2.8290921500232178e-08,
+              "quadrature_error_estimate": 1.4634612398447773e-18
+            }
+          ],
+          "P_T4": 2.8847895812927643e-08,
+          "P_T6_correction": -5.976602342269284e-10,
+          "T4_relative_error": 0.01968738673609116,
+          "T4_T6_relative_error": 0.0014381264156110296,
+          "dispersion_correction_fraction": 0.02071763701944244,
+          "Phi_thermal_shift_order_one_loop_T4": -7.246882966318471e-08,
+          "charge_thermal_shift_order_one_loop_T4": -1.424679606093402e-07,
+          "entropy_T4": 1.086848103090491e-05,
+          "entropy_T4_T6": 1.0530727163478434e-05,
+          "independent_entropy_integral": {
+            "entropy": 1.0560457411069137e-05,
+            "quadrature_error_estimate": 5.628024409991176e-16
+          },
+          "entropy_T4_T6_relative_error": 0.0028152424117103836,
+          "fixed_charge_heat_capacity_leading": 3.2605443092714724e-05
+        },
+        {
+          "T": 0.005308542330965594,
+          "temperature_divisor": 64,
+          "integral_runs": [
+            {
+              "pressure": 1.793830652170744e-09,
+              "quadrature_error_estimate": 1.3207270607440874e-17
+            },
+            {
+              "pressure": 1.7938306521720756e-09,
+              "quadrature_error_estimate": 6.987219963237227e-20
+            }
+          ],
+          "P_T4": 1.8029934883079777e-09,
+          "P_T6_correction": -9.338441159795756e-12,
+          "T4_relative_error": 0.005107971660985422,
+          "T4_T6_relative_error": 9.789386956959856e-05,
+          "dispersion_correction_fraction": 0.00517940925486061,
+          "Phi_thermal_shift_order_one_loop_T4": -4.5293018539490444e-09,
+          "charge_thermal_shift_order_one_loop_T4": -8.904247538083762e-09,
+          "entropy_T4": 1.3585601288631137e-06,
+          "entropy_T4_T6": 1.3480053205060362e-06,
+          "independent_entropy_integral": {
+            "entropy": 1.3482675170426042e-06,
+            "quadrature_error_estimate": 7.101140147278458e-17
+          },
+          "entropy_T4_T6_relative_error": 0.0001944692230982925,
+          "fixed_charge_heat_capacity_leading": 4.0756803865893405e-06
+        },
+        {
+          "T": 0.002654271165482797,
+          "temperature_divisor": 128,
+          "integral_runs": [
+            {
+              "pressure": 1.1254188570285578e-10,
+              "quadrature_error_estimate": 8.251879034336488e-19
+            },
+            {
+              "pressure": 1.1254188570293908e-10,
+              "quadrature_error_estimate": 4.100694688435184e-21
+            }
+          ],
+          "P_T4": 1.126870930192486e-10,
+          "P_T6_correction": -1.4591314312180868e-13,
+          "T4_relative_error": 0.0012902513175654384,
+          "T4_T6_relative_error": 6.271681053493516e-06,
+          "dispersion_correction_fraction": 0.0012948523137151526,
+          "Phi_thermal_shift_order_one_loop_T4": -2.830813658718153e-10,
+          "charge_thermal_shift_order_one_loop_T4": -5.565154711302351e-10,
+          "entropy_T4": 1.698200161078892e-07,
+          "entropy_T4_T6": 1.6949017834673053e-07,
+          "independent_entropy_integral": {
+            "entropy": 1.6949230048715006e-07,
+            "quadrature_error_estimate": 6.818810697951977e-18
+          },
+          "entropy_T4_T6_relative_error": 1.2520571220253629e-05,
+          "fixed_charge_heat_capacity_leading": 5.094600483236676e-07
+        }
+      ],
+      "relative_flow_checks": [
+        {
+          "xi": 0.0,
+          "A4_closed": 2.2703510726888294,
+          "A4_angular": 2.2703510726888294,
+          "relative_disagreement": 0.0,
+          "quadrature_error_estimate": 2.5205960348815608e-14,
+          "positive_energy_margin_D": 0.4469419829846801
+        },
+        {
+          "xi": 0.02,
+          "A4_closed": 2.280507293210159,
+          "A4_angular": 2.2805072932101584,
+          "relative_disagreement": 2.220446049250313e-16,
+          "quadrature_error_estimate": 2.5318717047475107e-14,
+          "positive_energy_margin_D": 0.4457241097035972
+        },
+        {
+          "xi": 0.04,
+          "A4_closed": 2.311448979585037,
+          "A4_angular": 2.311448979585037,
+          "relative_disagreement": 0.0,
+          "quadrature_error_estimate": 2.5662238773816314e-14,
+          "positive_energy_margin_D": 0.44207046409023915
+        }
+      ],
+      "kinetic_nonidentifiability_witnesses": [
+        {
+          "response_kinetic": 0.5,
+          "pressure_tree": 0.04917495789782038,
+          "c": 0.3641844561940298,
+          "A4": 2.27035107268883,
+          "eta": 0.1564743897731198,
+          "B6": -414.7952411234384,
+          "parent_energy_checks": [
+            {
+              "energy_conservation_residual": 6.938893903907228e-18,
+              "potential_min_eigenvalue": 6.400000000000156e-05,
+              "kinetic_min_eigenvalue": 0.025,
+              "mode_real_growth_max": 9.71445146547012e-17,
+              "positive_mode_frequencies": [
+                0.002913555761978774,
+                1.4745831436319883,
+                2.580772899496782
+              ]
+            },
+            {
+              "energy_conservation_residual": 6.938893903907228e-18,
+              "potential_min_eigenvalue": 1.6000000000002124e-05,
+              "kinetic_min_eigenvalue": 0.025,
+              "mode_real_growth_max": 1.9949319973733282e-16,
+              "positive_mode_frequencies": [
+                0.0014567478390600007,
+                1.474566806384529,
+                2.5807555689104893
+              ]
+            },
+            {
+              "energy_conservation_residual": 3.469446951953614e-18,
+              "potential_min_eigenvalue": 3.9999999999970615e-06,
+              "kinetic_min_eigenvalue": 0.025,
+              "mode_real_growth_max": 3.885780586188048e-16,
+              "positive_mode_frequencies": [
+                0.000728370164180869,
+                1.474562722043838,
+                2.5807512362301384
+              ]
+            }
+          ]
+        },
+        {
+          "response_kinetic": 1.0,
+          "pressure_tree": 0.04917495789782038,
+          "c": 0.3641844561940298,
+          "A4": 2.27035107268883,
+          "eta": 0.15740994933839672,
+          "B6": -417.27529971978163,
+          "parent_energy_checks": [
+            {
+              "energy_conservation_residual": 3.469446951953614e-18,
+              "potential_min_eigenvalue": 6.400000000000156e-05,
+              "kinetic_min_eigenvalue": 0.05,
+              "mode_real_growth_max": 1.942890293094024e-16,
+              "positive_mode_frequencies": [
+                0.0029135562409193616,
+                1.0430019222229472,
+                2.580033494346123
+              ]
+            },
+            {
+              "energy_conservation_residual": 3.469446951953614e-18,
+              "potential_min_eigenvalue": 1.6000000000002124e-05,
+              "kinetic_min_eigenvalue": 0.05,
+              "mode_real_growth_max": 1.7520707107365752e-16,
+              "positive_mode_frequencies": [
+                0.0014567478989338275,
+                1.0429788552464305,
+                2.5800161464442435
+              ]
+            },
+            {
+              "energy_conservation_residual": 6.938893903907228e-18,
+              "potential_min_eigenvalue": 3.9999999999970615e-06,
+              "kinetic_min_eigenvalue": 0.05,
+              "mode_real_growth_max": 1.1102230246251565e-16,
+              "positive_mode_frequencies": [
+                0.0007283701716652613,
+                1.0429730884217865,
+                2.580011809434874
+              ]
+            }
+          ]
+        },
+        {
+          "response_kinetic": 2.0,
+          "pressure_tree": 0.04917495789782038,
+          "c": 0.3641844561940298,
+          "A4": 2.27035107268883,
+          "eta": 0.15928106846895052,
+          "B6": -422.2354169124679,
+          "parent_energy_checks": [
+            {
+              "energy_conservation_residual": 3.469446951953614e-18,
+              "potential_min_eigenvalue": 6.400000000000156e-05,
+              "kinetic_min_eigenvalue": 0.1,
+              "mode_real_growth_max": 1.3877787807814457e-16,
+              "positive_mode_frequencies": [
+                0.002913557198726899,
+                0.7376129743742429,
+                2.5797623455394496
+              ]
+            },
+            {
+              "energy_conservation_residual": 6.938893903907228e-18,
+              "potential_min_eigenvalue": 1.6000000000002124e-05,
+              "kinetic_min_eigenvalue": 0.1,
+              "mode_real_growth_max": 1.457167719820518e-16,
+              "positive_mode_frequencies": [
+                0.001456748018679138,
+                0.7375803702926432,
+                2.5797449919494264
+              ]
+            },
+            {
+              "energy_conservation_residual": 6.938893903907228e-18,
+              "potential_min_eigenvalue": 3.9999999999970615e-06,
+              "kinetic_min_eigenvalue": 0.1,
+              "mode_real_growth_max": 7.806255641895632e-17,
+              "positive_mode_frequencies": [
+                0.0007283701866340604,
+                0.7375722190453301,
+                2.579740653517984
+              ]
+            }
+          ]
+        }
+      ],
+      "eta_response_kinetic_slope": 0.0018711191305537955,
+      "Phi_coordinate_redundancy_controls": [
+        {
+          "Phi_coordinate_scale": 0.5,
+          "Phi_scaling_error": 2.220446049250313e-16,
+          "pressure_relative_error": 0.0,
+          "eta_relative_error": 0.0,
+          "A4_relative_error": 0.0
+        },
+        {
+          "Phi_coordinate_scale": 2.0,
+          "Phi_scaling_error": 2.220446049250313e-16,
+          "pressure_relative_error": 0.0,
+          "eta_relative_error": 0.0,
+          "A4_relative_error": 0.0
+        }
+      ],
+      "measurement_scope": "Tree rest EOS and leading T4 coefficient do not identify q-cubed dispersion; natural-unit conditional design, not physical TTG/He-II admission"
+    }
+  ],
+  "checks": {
+    "same_action_trial_inputs_not_reoptimized_or_fitted": true,
+    "joint_tree_stationarity_and_heavy_positivity": true,
+    "pressure_source_charge_chi_and_Phi": true,
+    "thermal_source_current_derivatives": true,
+    "parent_gapless_root_and_T6_dispersion": true,
+    "T6_pressure_matches_independent_parent_mode_integral": true,
+    "low_T_dispersion_remainder_decreases": true,
+    "independent_quadrature_refinement": true,
+    "relative_flow_angular_determinant_agreement": true,
+    "positive_thermal_entropy_and_leading_fixed_charge_heat_capacity": true,
+    "independent_entropy_matches_same_T6_pressure_prescription": true,
+    "tree_static_and_T4_inputs_do_not_identify_kinetic_dispersion": true,
+    "independent_parent_energy_and_all_six_modes": true,
+    "physical_kinetic_ambiguity_not_Phi_coordinate_redundancy": true,
+    "protected_Core_and_old_failed_branches_unchanged": true
+  },
+  "loop_ordering": {
+    "zero_T_coefficients": "TREE_MATCHED_WILSON_INPUTS_NOT_VACUUM_LOOP_MATCHED",
+    "thermal_difference": "PHASE_ONE_LOOP_T4_AND_TREE_DISPERSION_T6",
+    "classical_heavy_shift_changes_stationary_pressure": "Second loop order after consistent tree elimination; source derivatives include tree elimination chain",
+    "full_one_loop_quantum_pressure_computed": false,
+    "normal_component_finite_T_dynamic_response_computed": false
+  },
+  "config": {
+    "mu_grid": [
+      1.05,
+      1.2
+    ],
+    "q_grid": [
+      0.008,
+      0.004,
+      0.002
+    ],
+    "T_equals_c_dispersion_scale_divided_by": [
+      32,
+      64,
+      128
+    ],
+    "finite_difference_steps": [
+      0.0004,
+      0.0002,
+      0.0001
+    ],
+    "flow_grid": [
+      0.0,
+      0.02,
+      0.04
+    ],
+    "quadrature_tolerances": [
+      1e-08,
+      1e-10
+    ],
+    "design_note": "Declared before first audit; trial inputs and gates are internal, not an external preregistration"
+  },
+  "thresholds": {
+    "identity": 1e-09,
+    "derivative": 2e-05,
+    "finest_eta_expansion": 0.0005,
+    "finest_T6_pressure": 5e-05,
+    "original_causal_leakage": 1e-06
+  },
+  "evidence_artifacts": [
+    {
+      "path": "docs/core/02_equations/o2/uet_o2_action_thermal_observable_bridge.py",
+      "sha256": "1cf745562548bc9a61d9ebb86069b8aff73e2a776756aa9efe7ab1a45b669ebe"
+    },
+    {
+      "path": "docs/core/02_equations/o2/uet_o2_action_thermal_stiffness_beta.py",
+      "sha256": "c1c3278a79df611ddae2f67ff811022722ab0c56f68bf91cc5480f34db9a95e6"
+    },
+    {
+      "path": "docs/core/02_equations/covariant/uet_covariant_matter.py",
+      "sha256": "8a57d95e898a8ac962bbd749670ad0695b597281937da36496d2ec7e074f9c53"
+    },
+    {
+      "path": "docs/core/02_equations/covariant/uet_covariant_response.py",
+      "sha256": "7fb4b7228afb8ede0ac4f1664d634346ef46cc7678c94ed7b55d73645590c0c2"
+    },
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/t13_hartree_low_T_validity.json",
+      "sha256": "6b6d5db3086439ce68703accacc04733dee8efb5535e85067b5c9941628c7f39"
+    },
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/Research_T13_Low_T_Phase_EFT.py",
+      "sha256": "70306bac6b4f907c6ca0b41cce2164c977a571e93f2d9a32eb6d708f8a6531dc"
+    }
+  ],
+  "protected_evidence_hashes": [
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/t13_conditional_twofluid_operator.json",
+      "sha256": "8606303e4818030dd74061c14b243542c19c4cbb262dda29261951d4c87d6412"
+    },
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/t13_polar_dynamic_composite.json",
+      "sha256": "2f07a63af3ce9945bf254d5da238bdefbd53597dae105ee7e50bbcbe8bc61f7d"
+    },
+    {
+      "path": "docs/core/07_artifacts/topic13/t13_topic13_closure_matrix.json",
+      "sha256": "e6e84772a400273c438e0b8ca3c7b5b14c9d720da0420fb4021b1c0e7a54fe66"
+    },
+    {
+      "path": "docs/core/07_artifacts/gates/uet_major_result_dependency_unlock_gate.json",
+      "sha256": "ecbefdf12ee1eb6661ae8096e3f62bf1ffa7992c96ca94f1149fdbc25a8bbe6e"
+    }
+  ],
+  "open_blockers": [
+    "vacuum_Wilson_matching_and_phonon_interaction_remainder",
+    "finite_T_normal_component_dynamic_and_heat_collision_Kubo_SK_KMS_entropy_transport",
+    "independent_material_source_readout_and_temperature_scale",
+    "full_original_causal_branch_and_Core_admission"
+  ],
+  "controlling_blocker": "low_T_EFT_vacuum_Wilson_and_interaction_remainder_not_matched",
+  "dependency_unlocked": [
+    "research_on_new_EFT_remainder_and_independent_measurement_only"
+  ],
+  "measurement_design": {
+    "scope": "CONDITIONAL_NATURAL_UNIT_SINGLE_UNKNOWN_INVARIANT_KINETIC_COMBINATION",
+    "unidentified_input": "I_kinetic=gamma^2*epsilon*Z_Phi/V_curvature^2; Z_Phi alone only after independent field normalization",
+    "static_and_leading_T4_derivative_wrt_input": 0,
+    "additional_observable": "eta=lim_q_to_0(omega(q)/q-c)/q^2=eta_base*(1+s*I_kinetic)",
+    "local_information_rank_before": 0,
+    "local_information_rank_after": 1,
+    "requires": [
+      "independently fixed other action parameters and field normalization",
+      "admitted physical source/detector/state mapping",
+      "controlled q^5 and Wilson/interaction remainder",
+      "measured frequency and wavevector covariance"
+    ],
+    "precision_relation": "sigma_eta <= abs(partial_Z_Phi eta)*requested_sigma_Z_Phi only in the independently normalized single-unknown lane, with full covariance/remainder budget",
+    "physical_precision_or_lab_feasibility_established": false,
+    "minimal_for_full_UET": false
+  },
+  "thermal_prescription_declared_in_new_lane": true,
+  "old_Hartree_branch_repaired": false,
+  "Hartree_internal_mass_reused": false,
+  "phonon_pressure_appended_to_old_Hartree": false,
+  "Phi_quantum_loops_included": false,
+  "phase_boson_quantization_is_declared_prescription": true,
+  "external_h_is_state": false,
+  "controlled_full_action_truncation_error_established": false,
+  "independent_alpha_Phi_K_admitted": false,
+  "physical_Kubo_emitted": false,
+  "g1_physical_unlock": false,
+  "g2_science_unlock": false,
+  "full_core_unlock": false,
+  "core_composition_gate_overwritten": false,
+  "claim_promotion": false,
+  "parameter_fitting": false,
+  "clipping": false,
+  "IR_filter": false,
+  "cone_padding": false,
+  "target_source_accessed": false,
+  "xie_2026_accessed": false,
+  "prior_Xie_context_exposure_review": "REVIEW_REQUIRED",
+  "C_relabelled_as_charge_or_mass": false,
+  "R_gen_added_as_state": false,
+  "state_variables": [
+    "existing_O2_phase_low_energy_degree",
+    "classical_Phi_and_radial_amplitude_eliminated_at_tree_matching"
+  ],
+  "excluded_variables": [
+    "collective_C_not_O2_amplitude",
+    "R_gen",
+    "R_obs",
+    "external_h",
+    "external_A"
+  ],
+  "claim_boundary": "New tree-matched phase-only low-T EFT prescription and internal checks at two trial inputs, not a repair of Hartree, full quantum/finite-T transport, controlled physical EOS, material/SI calibration, external validation or Full Topic13/Core.",
+  "report": {
+    "MAJOR_RESULT_CLOSURE": "T13_TREE_MATCHED_LOW_T_PHASE_THERMODYNAMIC_PRESCRIPTION: CLOSED_FOR_LANE",
+    "WHAT_IS_ACTUALLY_CLOSED": [
+      "joint_tree_P_X_h_matching",
+      "gapless_parent_and_tree_T6_dispersion",
+      "phase_only_one_loop_T4_T6_thermal_pressure",
+      "leading_relative_flow_and_source_Phi_thermal_response",
+      "conditional_kinetic_input_nonidentifiability_and_dispersion_measurement"
+    ],
+    "WHAT_REMAINS_OPEN": [
+      "vacuum_Wilson_matching_and_phonon_interaction_remainder",
+      "finite_T_normal_component_dynamic_and_heat_collision_Kubo_SK_KMS_entropy_transport",
+      "independent_material_source_readout_and_temperature_scale",
+      "full_original_causal_branch_and_Core_admission"
+    ],
+    "DEPENDENCY_UNLOCKED": [
+      "research_on_new_EFT_remainder_and_independent_measurement_only"
+    ],
+    "STATUS": "PASS_SCOPED_TREE_MATCHED_LOW_T_EFT",
+    "WHAT_CHANGED": "Derived new joint tree matching, phase thermal determinant and source response without changing old Hartree.",
+    "EQUATION_OR_MAPPING": "P0=r^2/(4u)-V(Phi)+h*Phi; Delta_T P=A4*T^4+B6*T^6 at phase one-loop and relative rest; Delta_T<Phi>=partial_h A4*T^4+...; s_th=partial_T Delta_T P",
+    "VERIFICATION": {
+      "same_action_trial_inputs_not_reoptimized_or_fitted": true,
+      "joint_tree_stationarity_and_heavy_positivity": true,
+      "pressure_source_charge_chi_and_Phi": true,
+      "thermal_source_current_derivatives": true,
+      "parent_gapless_root_and_T6_dispersion": true,
+      "T6_pressure_matches_independent_parent_mode_integral": true,
+      "low_T_dispersion_remainder_decreases": true,
+      "independent_quadrature_refinement": true,
+      "relative_flow_angular_determinant_agreement": true,
+      "positive_thermal_entropy_and_leading_fixed_charge_heat_capacity": true,
+      "independent_entropy_matches_same_T6_pressure_prescription": true,
+      "tree_static_and_T4_inputs_do_not_identify_kinetic_dispersion": true,
+      "independent_parent_energy_and_all_six_modes": true,
+      "physical_kinetic_ambiguity_not_Phi_coordinate_redundancy": true,
+      "protected_Core_and_old_failed_branches_unchanged": true
+    },
+    "CONTROLLING_BLOCKER": "low_T_EFT_vacuum_Wilson_and_interaction_remainder_not_matched",
+    "NEXT_ACTION": "Control vacuum Wilson/interaction remainder and develop independent input measurement card; full thermal/physical acceptance remains open.",
+    "CLAIM_BOUNDARY": "New tree-matched phase-only low-T EFT prescription and internal checks at two trial inputs, not a repair of Hartree, full quantum/finite-T transport, controlled physical EOS, material/SI calibration, external validation or Full Topic13/Core."
+  }
+}

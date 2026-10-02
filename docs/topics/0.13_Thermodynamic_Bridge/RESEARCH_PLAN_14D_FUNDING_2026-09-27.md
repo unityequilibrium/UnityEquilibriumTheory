@@ -12,6 +12,18 @@
 
 ## 1. ผลลัพธ์หลักที่จะปิดก่อน
 
+### Current science: separately derived low-T phase prescription
+
+[New branch](Result/artifacts/T13_LOW_T_PHASE_EFT_2026-10-02.md) supplies
+tree joint P(X,h), a gapless conservative parent, phase-only T4/T6 thermal
+differences and source/Phi/entropy checks. [Measurement design](Result/artifacts/T13_LOW_T_PHASE_EFT_MEASUREMENT_CARD_2026-10-02.md)
+identifies which extra dispersive information breaks a restricted kinetic
+ambiguity while respecting coordinate redundancy. It is conditional,
+not physical source or instrument admission. Next control vacuum Wilson/
+interaction remainder and independent material/scale/readout. Scientific
+G0-G5/R1-R5/Full Topic13 remain open; preserve 7/11 October and the methods
+route. Historical Hartree boundary below remains valid, not repaired.
+
 ### Latest validity decision: conditional low-T admission exclusion
 
 [Low-temperature evidence](Result/artifacts/T13_HARTREE_LOW_T_VALIDITY_2026-10-02.md)

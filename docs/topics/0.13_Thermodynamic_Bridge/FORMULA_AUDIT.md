@@ -1,5 +1,20 @@
 # Formula Audit: 0.13_Thermodynamic_Bridge
 
+## Tree-Matched Low-T Phase EFT (2026-10-02)
+
+| Local registry ID | Ontology / equation | Units | Derivation class / observable / data role | Verification / controlling blocker / claim boundary |
+| --- | --- | --- | --- | --- |
+| t13.diagnostic.joint_tree_P_X_h | s is O2 amplitude squared, not C; existing Phi; external h not state. P0=r2/(4u)-V+h*Phi; P_X=s/2, P_XX=1/(2U) | X/s/chi/rho E2, Phi E, h E3, P E4, U dimensionless | joint classical stationary elimination; natural equilibrium source response; DERIVED with imported trial action inputs | stationary/Hessian/source checks; vacuum/physical map open; tree lane only |
+| t13.diagnostic.tree_matched_acoustic_T6 | eta=H*(1-c2)^2/[2c*(2sU+4mu2)], H=1+gamma2*s*epsilon*Z_Phi/(V'')2 | eta E^-2; c/H dimensionless | tree conservative Schur/parent derivative expansion; acoustic dispersion; DERIVED | polynomial and six-state energy checks; higher derivative/Wilson control open; not original conserved-C repair |
+| t13.diagnostic.phase_EFT_thermal_source_response | Delta_T P=A4*T4+B6*T6; A4=pi2/(90c3), B6=-4pi4*eta/(63c6); Delta_T Phi=partial_h A4*T4+... | P E4, entropy E3, A4 dimensionless, B6 E^-2, A4_h E^-3 | declared phase one-loop finite thermal difference, not full vacuum loop matching; natural pressure/entropy/Phi; DERIVED | independent Bose/source/flow checks; interaction/material/thermal map open; not physical alpha/Kubo |
+| t13.diagnostic.phase_EFT_kinetic_identifiability | eta=eta_base*(1+s*I), I=gamma2*epsilon*Z_Phi/(V'')2 invariant under Phi rescaling | I/eta E^-2, Z_Phi dimensionless | constructive single-unknown family plus analytic inverse; conditional dispersion calibration design; DERIVED not measured | positive parent and coordinate/decoupled controls; source/readout/error feasibility open; not global minimum measurement proof |
+
+See [derivation](Result/artifacts/T13_LOW_T_PHASE_EFT_2026-10-02.md) and
+[measurement card](Result/artifacts/T13_LOW_T_PHASE_EFT_MEASUREMENT_CARD_2026-10-02.md).
+Constants/units derive from declared action or standard Bose integral,
+not fitted target data. R_gen/R_obs remain excluded; no Core equation is
+promoted. Thermal differences are not full quantum pressure or He-II/TTG.
+
 ## Joint Low-T Compatibility Boundary (2026-10-02)
 
 | Diagnostic ID | Equation | Units | Origin | Verified scope | Remaining obligation |

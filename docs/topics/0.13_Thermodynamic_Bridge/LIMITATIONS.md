@@ -1,5 +1,19 @@
 # Limitations
 
+## New Phase-EFT Thermal Difference Boundary (2026-10-02)
+
+[New EFT evidence](Result/artifacts/t13_low_T_phase_eft.json) closes a
+tree-matched phase-only thermal prescription, not a controlled full quantum
+EOS or full finite-T normal/dissipative response. Vacuum Wilson matching,
+phonon interactions, other modes and physical input/scale/readout remain
+open; good T6 convergence bounds only the compared tree acoustic dispersion
+approximation. The source-derived Phi shift is natural/state dependent,
+not alpha_Phi_K. Dispersion identifies an invariant kinetic combination,
+not Z_Phi separately without normalization. Its small trial sensitivity
+does not establish practical measurement precision. Old Hartree no-go and
+conserved-C failure are not repaired, owner composition is not changed,
+and Full Topic13/Core/funding acceptance is not promoted.
+
 ## Conditional Low-T EOS Exclusion (2026-10-02)
 
 [Low-T evidence](Result/artifacts/t13_hartree_low_T_validity.json) blocks

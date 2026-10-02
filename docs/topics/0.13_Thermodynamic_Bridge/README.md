@@ -6,6 +6,21 @@ description: "Research module for Thermodynamic Bridge within the Unity Equilibr
 
 # 0.13 Thermodynamic Bridge
 
+## New Tree-Matched Low-T Phase Prescription (2026-10-02)
+
+The [separate EFT derivation](Result/artifacts/T13_LOW_T_PHASE_EFT_2026-10-02.md)
+matches joint tree P(X,h) from the same action, a gapless conservative
+parent and one-loop phase thermal **differences** through T4/T6. Independent
+parent/entropy/source/relative-flow checks agree. This is a new prescription,
+not an old Hartree mass repair or full vacuum-matched quantum EOS.
+The [measurement card](Result/artifacts/T13_LOW_T_PHASE_EFT_MEASUREMENT_CARD_2026-10-02.md)
+shows static/leading-T4 input leaves an invariant kinetic combination open,
+while subleading dispersion supplies conditional information. Its small
+signal and unknown physical detector/scale preclude a lab-feasibility claim.
+Next control Wilson/interaction remainder and independent inputs. Full
+Topic13/R1-R5 and original causal/Core gates remain open; 7/11 October and
+the owner composition are unchanged. Earlier results retain their branches.
+
 ## Low-Temperature Admission Boundary (2026-10-02)
 
 The [same-prescription low-T audit](Result/artifacts/T13_HARTREE_LOW_T_VALIDITY_2026-10-02.md)

@@ -120,11 +120,13 @@ def test_execution_review_is_not_a_model_trial_or_physical_closure():
     successor = PLAN[review["current_scientific_evidence_field"]]
     current = PLAN[successor["inherited_fixed_Phi_finite_q_poles_evidence_field"]]
     assert current["gauge_current_vertex_computed"] is True
-    assert successor["inherited_fixed_Phi_response_is_not_joint_response"] is True
+    hartree_boundary = PLAN[successor["predecessor_validity_evidence_field"]]
+    assert hartree_boundary["inherited_fixed_Phi_response_is_not_joint_response"] is True
+    assert successor["prior_Hartree_results_are_not_new_EFT_dynamics"] is True
     assert PLAN[successor["inherited_joint_Phi_static_evidence_field"]]["joint_finite_q_complex_pole_computed"] is False
     response = PLAN[successor["inherited_joint_Phi_response_evidence_field"]]
     assert response["joint_finite_q_complex_pole_computed"] is True
-    assert successor["source_response_predecessor_invalidated"] is False
+    assert hartree_boundary["source_response_predecessor_invalidated"] is False
     assert current["real_axis_limit_admitted"] is True
     assert current["real_axis_admission_scope"] == "two_fixed_Phi_witnesses_and_ten_positive_frequency_q_points_not_global"
     assert current["global_real_axis_stability_proved"] is False
@@ -338,7 +340,8 @@ def test_joint_classical_Phi_response_is_computed_not_full_material_acceptance()
 
 def test_low_T_boundary_blocks_admission_without_retracting_response_or_accepting_goal():
     field = "hartree_low_T_validity_evidence_2026_10_02"
-    assert PLAN["execution_review_2026_10_01"]["current_scientific_evidence_field"] == field
+    successor = PLAN[PLAN["execution_review_2026_10_01"]["current_scientific_evidence_field"]]
+    assert successor["predecessor_validity_evidence_field"] == field
     assert field in PLAN["portfolio_strategy_2026_10_01"]["accepted_preliminary_evidence_fields"]
     evidence = PLAN[field]
     path = ROOT/evidence["path"]
@@ -354,4 +357,24 @@ def test_low_T_boundary_blocks_admission_without_retracting_response_or_acceptin
         assert evidence[flag] is result[flag] is False
     assert PLAN[evidence["inherited_joint_Phi_response_evidence_field"]]["joint_finite_q_complex_pole_computed"] is True
     assert all(result["checks"].values())
+    assert all(card["status"] == "PLANNED_NOT_ACCEPTED" for card in PLAN["result_level_execution_2026_10_01"]["result_cards"])
+
+
+def test_new_phase_eft_thermal_lane_is_not_Hartree_repair_or_full_acceptance():
+    field = "low_T_phase_eft_evidence_2026_10_02"
+    assert PLAN["execution_review_2026_10_01"]["current_scientific_evidence_field"] == field
+    evidence = PLAN[field]
+    path = ROOT/evidence["path"]
+    result = json.loads(path.read_text(encoding="utf-8"))
+    assert hashlib.sha256(path.read_bytes()).hexdigest() == evidence["sha256"]
+    assert evidence["verification_status"] == result["verification_status"] == "PASS_SCOPED_TREE_MATCHED_LOW_T_EFT"
+    assert evidence["branch_id"] == result["branch_id"] != PLAN[evidence["predecessor_validity_evidence_field"]]["branch_id"]
+    assert evidence["controlling_blocker"] == result["controlling_blocker"]
+    assert all(result["checks"].values())
+    assert (ROOT/evidence["measurement_card"]).is_file()
+    assert not result["measurement_design"]["physical_precision_or_lab_feasibility_established"]
+    for key in ("old_Hartree_branch_repaired", "controlled_full_action_truncation_error_established",
+                "independent_alpha_Phi_K_admitted", "physical_Kubo_emitted", "g1_physical_unlock",
+                "g2_science_unlock", "full_core_unlock", "core_composition_gate_overwritten"):
+        assert evidence[key] is result[key] is False
     assert all(card["status"] == "PLANNED_NOT_ACCEPTED" for card in PLAN["result_level_execution_2026_10_01"]["result_cards"])

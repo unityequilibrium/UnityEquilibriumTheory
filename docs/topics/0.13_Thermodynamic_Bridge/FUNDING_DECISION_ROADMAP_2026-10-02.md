@@ -2,6 +2,8 @@
 
 วันที่ทบทวน: 2 ตุลาคม 2026 (Asia/Bangkok)
 
+Science successor: [Low-T phase EFT](Result/artifacts/T13_LOW_T_PHASE_EFT_2026-10-02.md) และ [conditional measurement card](Result/artifacts/T13_LOW_T_PHASE_EFT_MEASUREMENT_CARD_2026-10-02.md) ทำแพ็ก A บางส่วนได้จริงแล้วใน branch ใหม่: tree/phase thermal difference และ source/entropy สอดคล้องกัน แต่ vacuum/interaction control และ physical readout ยังเปิด companion JSON ด้านล่างเป็น historical planning snapshot ไม่ใช่ current scientific artifact; current evidence อยู่ใน canonical funding contract วันและเกณฑ์รับผลเดิมไม่เปลี่ยน.
+
 เอกสารนี้เป็นฉบับอ่านเพื่อเลือกงาน ไม่ใช่การเพิ่มเกณฑ์ปิดทฤษฎีหรือเริ่มนับเวลาใหม่ อ่านคู่กับ [แผน 14 วัน](RESEARCH_PLAN_14D_FUNDING_2026-09-27.md), [แผน 12 สัปดาห์](RESEARCH_ROADMAP_MODELS_12W_2026-09-27.md) และ [contract เดิม](Data/03_Research/funding_portfolio_14d_plan.json) ซึ่งยังควบคุม G0–G5 และการรับผลหลัก เอกสารตัดสินใจที่เครื่องอ่านได้อยู่ที่ [funding_decision_roadmap_2026_10_02.json](Data/03_Research/funding_decision_roadmap_2026_10_02.json)
 
 ## 1. ข้อเสนอที่เลือก

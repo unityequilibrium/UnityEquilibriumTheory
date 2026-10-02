@@ -1,5 +1,22 @@
 # Verification Spec
 
+## Tree-Matched Phase-EFT Verification (2026-10-02)
+
+Research_T13_Low_T_Phase_EFT.py; named branch independent of Hartree.
+mu=1.05/1.2, q=.008/.004/.002, T=c*dispersion_scale/(32,64,128),
+source steps .0004/.0002/.0001, xi=0/.02/.04, adaptive tolerances
+1e-8/1e-10; diagnostic Z_Phi=.5/1/2 and coordinate scales .5/2.
+Gates fixed before first audit: identity <=1e-9, derivative <=2e-5,
+finest eta expansion <=5e-4, finest T6 pressure <=5e-5 and entropy <=1e-4.
+Check actual implicit source derivatives, polynomial/first-order parent,
+positive/conserved quadratic energy, Bose pressure/entropy/moment,
+relative-flow angular determinant and normalization/decoupling negatives.
+Reject noncondensed/nontimelike/nonmonotone/nonpositive-energy inputs.
+Numerical checks are not vacuum/interaction or physical precision bounds.
+Source/protected hashes and claim flags must pass; original 1e-6 threshold,
+failed Hartree/conserved-C, prior Xie REVIEW_REQUIRED and physical gates
+unchanged. See [scope note](Result/artifacts/T13_LOW_T_PHASE_EFT_2026-10-02.md).
+
 ## Low-T Compatibility Verification (2026-10-02)
 
 Research_T13_Hartree_Low_T_Validity.py and sixteen tests. Original controls;

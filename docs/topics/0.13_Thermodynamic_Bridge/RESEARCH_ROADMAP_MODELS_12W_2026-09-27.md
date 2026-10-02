@@ -8,6 +8,20 @@
 
 ## ผลหลักสำหรับพอร์ตและทุนรอบถัดไป
 
+### Current science: new thermal prescription, then quantify its control
+
+[Tree-matched phase EFT](Result/artifacts/T13_LOW_T_PHASE_EFT_2026-10-02.md)
+now closes a separate low-T thermal-difference calculation, with independent
+source/entropy/relative-flow/parent energy checks. The conditional
+[dispersion measurement card](Result/artifacts/T13_LOW_T_PHASE_EFT_MEASUREMENT_CARD_2026-10-02.md)
+shows what new invariant kinetic information is missing from tree EOS/T4.
+This changes the next research calculation to vacuum Wilson/interaction
+control and independent material/source/readout/scale, not repeated Hartree
+runs. Numerical T6 convergence is not physical approximation control or
+practical precision. R1-R5, five review dates, 7/11 October, existing Core
+composition and model policy/NOT_RUN trial remain unchanged. Earlier
+Hartree notes retain their own branch and admission boundary.
+
 ### Latest validity boundary: why another unchanged Hartree run will not close EOS
 
 [Same-prescription low-T investigation](Result/artifacts/T13_HARTREE_LOW_T_VALIDITY_2026-10-02.md)

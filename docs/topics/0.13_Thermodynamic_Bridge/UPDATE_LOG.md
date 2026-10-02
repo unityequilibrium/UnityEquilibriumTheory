@@ -1,3 +1,27 @@
+## 2026-10-02 - New tree-matched low-T phase thermal prescription
+
+MAJOR_RESULT_CLOSURE: T13_TREE_MATCHED_LOW_T_PHASE_THERMODYNAMIC_PRESCRIPTION, CLOSED_FOR_LANE. Full Topic13/R1-R5/Goal and physical acceptance remain open.
+
+WHAT_IS_ACTUALLY_CLOSED: Joint classical tree P(X,h), gapless conservative parent and phase one-loop T4/T6 thermal differences with independent source/current/Phi/entropy/flow checks. Tree EOS/T4 do not identify subleading invariant kinetic response; conditional dispersion information adds rank after coordinate redundancy is separated.
+
+WHAT_REMAINS_OPEN: Vacuum Wilson/interaction remainder, full finite-T normal dynamics and physical heat/collision/Kubo/SK-KMS/entropy transport, independent material/source/readout/temperature and original causal/Core admission. Measurement feasibility, novelty and full scientific funding acceptance remain open.
+
+DEPENDENCY_UNLOCKED: New-EFT remainder and independent-input research only. No physical/Core/Gravity unlock or owner composition change; old Hartree exclusion remains intact.
+
+STATUS: PASS_SCOPED_TREE_MATCHED_LOW_T_EFT; conditional measurement design is not instrument feasibility.
+
+WHAT_CHANGED: Separate verifier/24 focused tests/JSON/derivation/measurement card; local README/method/limits/formula/spec, funding evidence/controller/predecessor regression, Goal/14-day/12-week/decision handoffs. Trial action unchanged, no old masses/poles imported. Before final artifact generation a dimensional label was corrected and coordinate controls added; scientific gates unchanged. Historical planning snapshot remains historical, not silently upgraded.
+
+EQUATION_OR_MAPPING: P0=r^2/(4u)-V+h*Phi; Delta_T P=A4*T4+B6*T6 at phase one-loop, A4=pi2/(90c3), B6=-4pi4*eta/(63c6), Delta_T Phi=partial_h A4*T4+...; eta=eta_base*(1+s*I_kinetic), I_kinetic=gamma2*epsilon*Z_Phi/(V'')2. Natural E lane only, not normalized TTG or Kelvin alpha. Full vacuum quantum pressure not computed.
+
+VERIFICATION: Fourteen artifact checks pass. Final single linked run of eleven test files: 136 passed in 9.97 seconds, including 24 new focused tests and preserved Hartree/action/observable/two-fluid/planning checks. Earlier linked run 83 passed/one stale Hartree-only planning assertion failed; fixed to follow the historical boundary and reran the entire final selection. Separate 84/50 and focused counts are subsets, not added. Worst finest pressure/entropy disagreements 8.430e-6/1.683e-5, source derivative 5.648e-6, parent frequency 1.028e-13 and quadratic energy residual 6.939e-18. Source/protected hashes, note links/11 fields, units, decoupling/coordinate/invalid-input controls and whitespace review pass. Artifact 050aceb4f94f3534929d8c59c75da4dda8efe16ce7aec250a34f6f8b5868dcb7. Both relevant CI workflows at preceding head f3a1e5af56b4b235e8b8857679c97d110d842e51 succeeded; new-head checks require separate observation. No external-data/model trial.
+
+CONTROLLING_BLOCKER: low_T_EFT_vacuum_Wilson_and_interaction_remainder_not_matched. Old gapless_equilibrium_thermal_prescription_not_derived still applies to old Hartree, not erased by new-lane success.
+
+NEXT_ACTION: Quantify derivative/interaction and vacuum Wilson obligations in the new branch, then independently admit material/state/source/readout/scale for the conditional dispersion card. Commit/push this coherent packet to existing draft PR #30 and inspect exact-head CI. Preserve 7/11 October and five long-term reviews; full Goal remains active.
+
+CLAIM_BOUNDARY: Tree-matched phase-only thermal differences and conditional information design, not controlled full quantum/material EOS, physical normal/heat transport, SI alpha, practical precision, external validation, global UET no-go or Full Topic13/Core. No fit, old-mass/phonon repair, clipping/filter/padding/threshold change, new numeric Xie access or owner edit. Conserved-C failure at 1e-6, prior Xie REVIEW_REQUIRED and all physical/full-core claim flags retained. Model trial NOT_RUN/configuration unchanged.
+
 ## 2026-10-02 - Funding decision companion and model/next-round plan
 
 MAJOR_RESULT_CLOSURE: Planning clarification only; no scientific closure or Goal acceptance.
