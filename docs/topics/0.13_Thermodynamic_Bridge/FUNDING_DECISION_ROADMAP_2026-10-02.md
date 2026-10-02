@@ -20,6 +20,25 @@ current evidence อยู่ใน `vacuum_cut_log_evidence_2026_10_03` ขอ�
 
 ## ข้อสรุปสำหรับเลือกโมเดลและวางแผนสองรอบ
 
+### สรุปตัดสินใจล่าสุด 3 ตุลาคม: เลือกผลหลักก่อนเลือกปริมาณรัน
+
+**คำถามที่ต้องปิดสำหรับพอร์ต:** ใน candidate low-T ที่ประกาศ สมการกำหนดส่วนใดของ response ได้เอง และส่วนใดยังต้อง matching หรือการวัดอิสระ? ผล cut/log วันที่ 3 ต.ค. เป็นคำตอบที่ตรวจแล้วส่วนหนึ่ง: spectral cut กำหนด nonlocal logarithm แต่ไม่กำหนด finite local real response ทั้งหมด จึงห้ามใช้ cut อย่างเดียวอ้างว่าทำนาย response วัสดุครบแล้ว
+
+**ยังไม่เพิ่มเป้าหมายให้ทันเวลา:** ผลหลักสำหรับพอร์ตยังต้องมีสามส่วนที่เชื่อมกันตาม contract เดิม คือผลสมการพร้อม independent check, ขอบเขตข้อมูล/การวัดที่จำเป็น และ evidence/reproduction/related-work package ไม่ลดเกณฑ์ให้เหลือเพียงเอกสารครบหรือ script PASS และไม่ใช้การไม่มีข้อมูลเป็น no-go
+
+| งานก่อน freeze | คำถามและผลส่งมอบ | ผู้รับผิดชอบและจุดตัดสิน |
+| --- | --- | --- |
+| สมการ: งานคำนวณตัดสินหนึ่งเรื่อง | ประเมิน finite-T pair/Landau cuts โดยใช้ internal tree dispersion ของ branch เดียวกัน; ตรวจ static thermal bubble/tadpole กับอนุพันธ์ pressure อีกวิธี งานนี้ยังเป็นแผน ไม่ใช่หลักฐานใหม่ และไม่แทน full real matching หรือ thermal sunset pressure | Topic13 derivation lead; 5 ต.ค. รับเฉพาะผลที่ตรวจจริงหรือระบุเหตุที่ยังไม่รับ |
+| ความหมายและข้อมูล: เดินคู่ขนานได้ | ผูกผล matching ที่ยังไม่เอกลักษณ์กับ measurement card; แยก convention-dependent terms, invariant response, nuisance inputs, readout และ uncertainty ไม่มีการเลือก alpha จาก target | Topic13 source/measurement owner; 7 ต.ค. ต้องมีรายการ input กับเหตุผลว่าการวัดนั้นช่วยแยกคำตอบอย่างไร |
+| ตรวจและสรุป | แยกความผิดพลาดเชิงตัวเลขจาก truncation/physical uncertainty; ตรวจ related work ว่าส่วนใดเป็นวิธีนำเข้าและส่วนใดเป็น contribution ของงานนี้ | Numerical verifier และผู้ทบทวนมนุษย์เมื่อมี; 7 ต.ค. scientific freeze ตามเกณฑ์เดิม |
+| พอร์ต | Report, reproducible evidence, claim map, pitch และสาม aims พร้อมความเสี่ยง/ทรัพยากร/คุณสมบัติทุนที่ยังไม่ทราบ | Research lead; 11 ต.ค. พร้อมทบทวน ไม่รับรองพร้อมยื่นทุน |
+
+**ถ้า finite-T calculation ยังไม่จบ 5 ต.ค.:** ไม่เลื่อนวัน freeze และไม่แทนผลด้วยกราฟ synthetic ให้ใช้เฉพาะ cut/log กับผลเดิมที่ตรวจแล้วเป็น preliminary evidence ระบุ proof/matching obligation ที่เปิดอยู่ แล้วตัดสินความครบของแพ็กตามเกณฑ์เดิม ผลที่ยังไม่รับจะกลับเข้า R1 หลัง freeze ไม่ถูกนับเป็นผลปิดแล้ว
+
+**ถ้ารอบนี้ยังยื่นไม่ได้:** เก็บพอร์ต v1 และระบุว่าเกิดจาก deadline, eligibility, evidence/novelty หรือ partner/resources แล้วเลือกแก้เหตุที่ควบคุมจริง ไม่กระจายงานไปทุกหัวข้อพร้อมกัน วันที่ 25 ต.ค., 8 พ.ย., 22 พ.ย., 6 ธ.ค. และ 20 ธ.ค. ด้านล่างยังเป็นวันทบทวนผลเดิม ไม่ใช่วันรับประกันผ่าน สองเดือนเพิ่มต้องให้ independent input หรือ measurement-feasibility กับผลทดสอบที่เพิ่มข้อมูล; เดือนที่สามเน้น reproduction/robustness และ proposal ตามทุนจริง ไม่ใช่เพิ่มจำนวน logs
+
+**โมเดลเป็นเครื่องมือ ไม่ใช่ผลวิจัย:** ใช้ Astra / high กับ derivation และ route decision; Sol 6.1 / high กับ implementation/reproduction; xhigh เฉพาะ proof obligation ที่มีเงื่อนไขจบ จำกัด trial เดิม 90 นาทีต่อ configuration และเลือกจากเวลารวมแก้ข้อผิดพลาดกับคุณภาพจริง ไม่ใช้สองโมเดลเห็นตรงกันแทน independent evidence คำแนะนำยังเป็น recommendation, trial ยัง NOT_RUN และไม่ได้เปลี่ยนโมเดลของ Goal ที่ active อยู่
+
 ผู้ใช้ยืนยันว่ายังไม่เลือกทุนหรือหน่วยงาน จึงตั้งเป้า **พอร์ตพร้อมทบทวน 11 ต.ค.** ไม่ใช่พร้อมยื่นตามข้อกำหนดทุนที่ยังไม่ทราบ เราไม่ทราบว่าจะพลาดรอบแรกหรือไม่ และไม่ยืนยันว่ารอบถัดไปเปิดในอีกสองหรือสามเดือน
 
 **เลือกโมเดล:** ถ้าใช้ตัวเดียวและโควตาไม่ใช่ข้อจำกัด เลือก **GPT-6 Astra / high** สำหรับ Goal วิจัยนี้ ถ้าต้องคุมโควตาให้ใช้ **GPT-6.1 Sol / high** เป็นตัวทำงานหลัก แล้วใช้ Astra ตรวจเฉพาะจุดอนุมานสำคัญ ไม่จำเป็นต้องเปิดสามโมเดลพร้อมกัน Astra / xhigh ใช้เฉพาะโจทย์พิสูจน์ที่มี inputs และเงื่อนไขจบชัด ส่วน Luna / medium เหมาะกับรายการแหล่งข้อมูล/ลิงก์ที่มี checklist ไม่รับรองฟิสิกส์แทน lead คำแนะนำเป็นการจัดบทบาทตาม [OpenAI Docs](https://developers.openai.com/api/docs/guides/model-selection) ไม่ใช่ผลทดลองว่าโมเดลใดปิด UET ได้เร็วกว่า
@@ -34,7 +53,7 @@ current evidence อยู่ใน `vacuum_cut_log_evidence_2026_10_03` ขอ�
 2. **ผลเรื่องข้อมูลที่จำเป็น:** [measurement card](Result/artifacts/T13_LOW_T_PHASE_EFT_MEASUREMENT_CARD_2026-10-02.md) แสดงว่า static/leading thermal input ยังไม่กำหนด invariant kinetic response แต่ dispersion เพิ่มข้อมูลได้ในชั้นแบบจำลองจำกัด งานต่อคือ nuisance inputs, uncertainty และ readout ไม่ใช่สรุปว่าทดลองได้จริงแล้ว
 3. **แพ็กที่คนอื่นตรวจได้:** derivation, artifact/hash, failed baseline, reproduction และ related-work map ต้องแยกวิธีมาตรฐานที่นำเข้ากับสิ่งที่คำนวณเพิ่มสำหรับ candidate นี้ การประยุกต์ Beliaev/EFT ไม่ใช่หลักฐานว่าค้นพบกลไกใหม่
 
-แพ็กนี้รับได้ตาม evidence/measurement/claim acceptance เดิมเท่านั้น หากยังไม่ครบให้ส่ง preliminary portfolio พร้อมข้อค้าง ไม่ mark scientific Goal สำเร็จเพราะเอกสารครบ ส่วนไฟล์ vacuum-cut exploration ที่ยังไม่ commit และไม่ครบ focused review ยังไม่ถูกนับเป็นผลสำเร็จรอบนี้
+แพ็กนี้รับได้ตาม evidence/measurement/claim acceptance เดิมเท่านั้น หากยังไม่ครบให้ส่ง preliminary portfolio พร้อมข้อค้าง ไม่ mark scientific Goal สำเร็จเพราะเอกสารครบ สถานะ vacuum-cut exploration ที่ยังไม่รับใน snapshot วันที่ 2 ต.ค. ถูกสืบต่อด้วยผล scoped cut/log ที่ commit และตรวจแล้ววันที่ 3 ต.ค. ตามหัวข้ออัปเดตด้านบน ไม่ได้ทำให้แพ็กทั้งหมดหรือ Full Topic13 ผ่านโดยอัตโนมัติ
 
 | ส่งมอบภายใน | ผลที่ต้องได้ ไม่ใช่จำนวนรัน | หากยังปิดไม่ได้ |
 | --- | --- | --- |

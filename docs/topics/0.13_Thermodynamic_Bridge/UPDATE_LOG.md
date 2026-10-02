@@ -1,3 +1,27 @@
+## 2026-10-03 - Current portfolio decision and finite-T research handoff
+
+MAJOR_RESULT_CLOSURE: Planning update only; no new scientific closure or Goal/R1-R5 acceptance.
+
+WHAT_IS_ACTUALLY_CLOSED: Readable decision plan now reflects the committed 3 October cut/log result, one proposed decisive finite-T calculation, parallel measurement-input work and the unchanged freeze/delivery contingency.
+
+WHAT_REMAINS_OPEN: Real Wilson/source/internal-curvature matching, full thermal sunset/source/entropy and physical inputs/transport; novelty, human review, actual funder/PI/budget and complete portfolio acceptance.
+
+DEPENDENCY_UNLOCKED: None. Core-owner composition and current scientific controller unchanged.
+
+STATUS: PLAN_UPDATED_NOT_SCIENTIFIC_ACCEPTANCE; public safety safe.
+
+WHAT_CHANGED: Executive decision section in FUNDING_DECISION_ROADMAP_2026-10-02.md and one stale uncommitted-exploration sentence; historical JSON snapshots, canonical acceptance contract and all science files unchanged.
+
+EQUATION_OR_MAPPING: Proposed finite-T pair/Landau cuts and static thermal bubble/tadpole versus pressure derivative, not yet implemented or accepted by this planning update.
+
+VERIFICATION: Three-file planning selection 38 passed in 1.85 seconds. It checks existing evidence hashes, dates, model/trial policy, holdout and acceptance boundaries. No physics rerun, new artifact, model trial or call-eligibility verification.
+
+CONTROLLING_BLOCKER: state_dependent_local_Wilson_and_thermal_sunset_matching_open; physical inputs and unknown funding eligibility remain separate.
+
+NEXT_ACTION: Commit/push this scoped planning update to existing draft PR30. Continue one declared decisive calculation; keep 7 October science freeze and 11 October review. If calculation is unresolved, freeze only verified preliminary evidence and keep full acceptance open.
+
+CLAIM_BOUNDARY: Current plan is not evidence of completed finite-T cuts, full response, practical measurement feasibility or external validation. No deadline reset, new Goal, model switch, numeric holdout access, Core-owner edit, fitting or threshold change. Extra months must add knowledge, not unchanged reruns.
+
 ## 2026-10-03 - Vacuum phase cut/log and local matching information
 
 MAJOR_RESULT_CLOSURE: T13_VACUUM_PHASE_CUT_LOG_AND_LOCAL_MATCHING_BOUNDARY, CLOSED_FOR_LANE. Goal/Full Topic13/R1-R5 still open.
