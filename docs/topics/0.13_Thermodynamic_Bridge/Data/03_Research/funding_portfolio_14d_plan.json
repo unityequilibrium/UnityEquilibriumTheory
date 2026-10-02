@@ -125,6 +125,121 @@
     "core_composition_gate_overwritten": false,
     "submission_ready": false
   },
+  "delivery_and_model_addendum_2026_10_02": {
+    "record_class": "PLANNING_NOT_SCIENTIFIC_CLOSURE",
+    "user_confirmed_funder_status": "NOT_YET_SELECTED",
+    "document": "docs/topics/0.13_Thermodynamic_Bridge/FUNDING_DECISION_ROADMAP_2026-10-02.md",
+    "scientific_baseline_evidence_field": "low_T_interaction_evidence_2026_10_02",
+    "uncommitted_vacuum_cut_exploration_accepted": false,
+    "core_owner_observation": {
+      "role": "READ_ONLY_PRIMARY_CHECKOUT_SNAPSHOT_NOT_REVALIDATION",
+      "observed_on": "2026-10-02",
+      "matrix_path": "docs/core/07_artifacts/topic13/t13_topic13_closure_matrix.json",
+      "matrix_sha256": "969351376d918204c00c7d71e213a0e56f00d7fc04390b9c3a054faa5f5e7abb",
+      "recorded_scope": "bounded O(2)/He-4 Core composition, not graphite TTG or new predictive response",
+      "recorded_closure": "CLOSED_FOR_CORE",
+      "reverified_by_this_plan": false,
+      "owner_files_changed": false,
+      "holdout_incident_path": "docs/core/08_history/update_logs/T13_HOLDOUT_EXPOSURE_REVIEW_REQUIRED_2026-09-24.md",
+      "holdout_incident_sha256": "0e88cc5371c2979b8988359daf617f521f737f936ad8ec6d1746d90aa46d7471",
+      "holdout_eligibility": "REVIEW_REQUIRED",
+      "older_PASS_is_pristine_blinding_certificate": false
+    },
+    "minimum_major_result_package": {
+      "target": "bounded low-T response content and independent measurement design",
+      "components": [
+        "one precise derived or scoped structural result, with declared model class and independent check",
+        "one linked information-gap/measurement card identifying the unknown invariant and nuisance inputs",
+        "one reproducible evidence and claim package separating imported methods from candidate contribution"
+      ],
+      "existing_evidence_is_preliminary_not_complete_package": true,
+      "missing_source_implies_no_go": false,
+      "all_components_required_for_package_acceptance": true,
+      "acceptance_changes_G0_G5_or_R1_R5": false
+    },
+    "pre_freeze_packets": [
+      {
+        "id": "PF1", "due": "2026-10-03", "status": "PLANNED_NOT_ACCEPTED",
+        "owner": "Topic13 derivation lead",
+        "output": "Frozen branch/action/coefficient/source-role and accepted-evidence map; one decisive next calculation",
+        "acceptance": "Admissibility, units and approximation orders explicit; no uncommitted exploration counted as completed evidence"
+      },
+      {
+        "id": "PF2", "due": "2026-10-05", "status": "PLANNED_NOT_ACCEPTED",
+        "owner": "Topic13 derivation lead and independent numerical verifier",
+        "output": "Cut/real-response and matching-obligation analysis, with one independently checked bounded result or an exact unresolved obligation",
+        "acceptance": "Distinguish finite cut from real local Wilson matching and thermal remainder; error bars must not bound uncomputed terms",
+        "fallback": "Preserve verified interaction result; do not manufacture a full self-energy or no-go"
+      },
+      {
+        "id": "PF3", "due": "2026-10-07", "status": "PLANNED_NOT_ACCEPTED",
+        "owner": "Source/measurement owner and claim reviewer",
+        "output": "Single-protocol measurement card and scientific freeze with claim/novelty map",
+        "acceptance": "Unknown invariant, nuisance covariance, theory remainder, units, readout and precision requirements identified; unknown lab feasibility disclosed",
+        "fallback": "Freeze preliminary conditional result and unresolved inputs; no empirical or Goal completion"
+      },
+      {
+        "id": "PF4", "due": "2026-10-11", "status": "PLANNED_NOT_ACCEPTED",
+        "owner": "Portfolio editor and reproduction verifier",
+        "output": "Reviewable report, short pitch, figures, exact-hash reproduction bundle, aims, risk/resource and call-fit checklist",
+        "acceptance": "Science, portfolio review and actual funding eligibility reported separately; funder/PI/budget stay unknown until documented"
+      }
+    ],
+    "model_use_policy": {
+      "source": "https://developers.openai.com/api/docs/guides/model-selection",
+      "source_checked_on": "2026-10-02",
+      "lead": {"model": "gpt-6-astra", "effort": "high"},
+      "bounded_proof_review": {"model": "gpt-6-astra", "effort": "xhigh"},
+      "implementation": {"model": "gpt-6.1-sol", "effort": "high"},
+      "optional_inventory": {"model": "gpt-6-luna", "effort": "medium"},
+      "single_model_with_usage_constraints": "gpt-6.1-sol",
+      "trial_status": "NOT_RUN",
+      "trial_minutes_cap_per_configuration": 90,
+      "critical_errors_allowed": 0,
+      "trial_selection_rule": "Same frozen task/input/acceptance; choose lightest configuration passing independent checks, compare time including corrections and measured usage when available",
+      "missing_cost_is_null": true,
+      "measured_cost": null,
+      "model_configuration_changed": false,
+      "model_agreement_is_external_replication": false
+    },
+    "operating_limits": {
+      "decisive_calculations_in_flight_max": 1,
+      "parallel_source_inventory_allowed": true,
+      "before_freeze_effort_percent": {"derivation": 60, "verification": 20, "source_and_portfolio": 20},
+      "after_freeze_effort_percent": {"portfolio_and_call_fit": 80, "reproduction_and_claim_check": 20},
+      "percentages_are_planning_allocations_not_measured_usage": true,
+      "no_new_evidence_waves_before_explicit_route_review": 2,
+      "unchanged_reruns_count_as_scientific_progress": false,
+      "large_compute_queue_requires_smoke_estimate": true,
+      "purchase_contact_submission_authorized": false
+    },
+    "long_term_progress_units": [
+      {"review": "2026-10-25", "results": ["R1"], "minimum_new_information": "A source/response and approximation-domain decision, including missing local matching conditions; not more unchanged pole samples"},
+      {"review": "2026-11-08", "results": ["R2", "R3"], "minimum_new_information": "One admitted material/state/readout/independent-input chain OR clearly non-empirical feasibility and data-acquisition specification"},
+      {"review": "2026-11-22", "results": ["R4"], "minimum_new_information": "One preregistered comparison when inputs pass, OR independently verified scoped structural result; absence of data is not proof"},
+      {"review": "2026-12-06", "results": ["R4"], "minimum_new_information": "Second-state/protocol robustness only after the first result; otherwise strengthen first-result uncertainty"},
+      {"review": "2026-12-20", "results": ["R5"], "minimum_new_information": "Clean reproduction and actual reviewer disposition, with call-specific package only if a call is selected"}
+    ],
+    "missed_round_policy": {
+      "first_round_eligibility_known": false,
+      "first_round_missed_is_assumed": false,
+      "next_call_date_known": false,
+      "preserve_portfolio_v1": true,
+      "classify_before_replanning": ["deadline", "eligibility", "evidence", "novelty", "partner_or_resources"],
+      "two_month_scenario": "2026-12-11",
+      "three_month_scenario": "2027-01-11",
+      "scientific_freeze_buffer_days": 14,
+      "institutional_documents_buffer_days": 7,
+      "attachment_review_buffer_days": 3,
+      "actual_call_overrides_internal_release": true,
+      "full_topic_closure_guaranteed_within_three_months": false
+    },
+    "goal_completion_rule_changed": false,
+    "goal_or_automation_created": false,
+    "physical_gate_changed": false,
+    "claim_promotion": false,
+    "dependency_unlock": false
+  },
   "execution_review_2026_10_01": {
     "record_class": "PLANNING_NOT_SCIENTIFIC_CLOSURE",
     "current_scientific_evidence_field": "low_T_interaction_evidence_2026_10_02",

@@ -6,6 +6,53 @@ Science successor: [Low-T phase EFT](Result/artifacts/T13_LOW_T_PHASE_EFT_2026-1
 
 เอกสารนี้เป็นฉบับอ่านเพื่อเลือกงาน ไม่ใช่การเพิ่มเกณฑ์ปิดทฤษฎีหรือเริ่มนับเวลาใหม่ อ่านคู่กับ [แผน 14 วัน](RESEARCH_PLAN_14D_FUNDING_2026-09-27.md), [แผน 12 สัปดาห์](RESEARCH_ROADMAP_MODELS_12W_2026-09-27.md) และ [contract เดิม](Data/03_Research/funding_portfolio_14d_plan.json) ซึ่งยังควบคุม G0–G5 และการรับผลหลัก เอกสารตัดสินใจที่เครื่องอ่านได้อยู่ที่ [funding_decision_roadmap_2026_10_02.json](Data/03_Research/funding_decision_roadmap_2026_10_02.json)
 
+## ข้อสรุปสำหรับเลือกโมเดลและวางแผนสองรอบ
+
+ผู้ใช้ยืนยันว่ายังไม่เลือกทุนหรือหน่วยงาน จึงตั้งเป้า **พอร์ตพร้อมทบทวน 11 ต.ค.** ไม่ใช่พร้อมยื่นตามข้อกำหนดทุนที่ยังไม่ทราบ เราไม่ทราบว่าจะพลาดรอบแรกหรือไม่ และไม่ยืนยันว่ารอบถัดไปเปิดในอีกสองหรือสามเดือน
+
+**เลือกโมเดล:** ถ้าใช้ตัวเดียวและโควตาไม่ใช่ข้อจำกัด เลือก **GPT-6 Astra / high** สำหรับ Goal วิจัยนี้ ถ้าต้องคุมโควตาให้ใช้ **GPT-6.1 Sol / high** เป็นตัวทำงานหลัก แล้วใช้ Astra ตรวจเฉพาะจุดอนุมานสำคัญ ไม่จำเป็นต้องเปิดสามโมเดลพร้อมกัน Astra / xhigh ใช้เฉพาะโจทย์พิสูจน์ที่มี inputs และเงื่อนไขจบชัด ส่วน Luna / medium เหมาะกับรายการแหล่งข้อมูล/ลิงก์ที่มี checklist ไม่รับรองฟิสิกส์แทน lead คำแนะนำเป็นการจัดบทบาทตาม [OpenAI Docs](https://developers.openai.com/api/docs/guides/model-selection) ไม่ใช่ผลทดลองว่าโมเดลใดปิด UET ได้เร็วกว่า
+
+**สถานะต้องแยก lane:** Core-owner checkout ที่อ่านวันที่ 2 ต.ค. บันทึก O(2)/He-4 composition เป็น `CLOSED_FOR_CORE` ใน `docs/core/07_artifacts/topic13/t13_topic13_closure_matrix.json` แต่ไม่ครอบคลุม graphite TTG และ predictive-response branch ใหม่ การอ่านบันทึกนี้ไม่ใช่ rerun หรือการรับรอง Core ใหม่ โดย incident `docs/core/08_history/update_logs/T13_HOLDOUT_EXPOSURE_REVIEW_REQUIRED_2026-09-24.md` ยังบังคับ `REVIEW_REQUIRED`; ห้ามใช้ PASS เก่าอ้างว่าไม่เคยเห็น Xie ทั้งสองรายการเป็น read-only snapshot จาก checkout เจ้าของ Core มี hash ใน addendum ไม่ใช่ไฟล์ที่รับเข้า release ของแผนนี้ โดยเฉพาะ incident ยังไม่อยู่ใน execution checkout งานวางแผนไม่แก้ gate ของเจ้าของ Core และไม่ใช้ผลใหม่ล้าง FAIL ของ conserved-C เดิม
+
+### ผลที่จะปิดก่อนสำหรับพอร์ต
+
+เลือกแพ็กผลหลักหนึ่งเรื่อง: **แบบจำลอง low-T บอก response อะไรได้ และต้องวัดอะไรอิสระเพิ่มจึงทดสอบได้** ประกอบด้วยสามชิ้นที่ต้องเชื่อมกัน ไม่ใช่สามจำนวน PASS:
+
+1. **ผลทางสมการที่มีขอบเขต:** มีแล้วคือ tree-matched thermal differences และ derived leading zero-T decay ใน candidate lane; ต้องระบุส่วนที่ยังต้อง matching และตรวจอีกวิธี ไม่เรียก full quantum EOS
+2. **ผลเรื่องข้อมูลที่จำเป็น:** [measurement card](Result/artifacts/T13_LOW_T_PHASE_EFT_MEASUREMENT_CARD_2026-10-02.md) แสดงว่า static/leading thermal input ยังไม่กำหนด invariant kinetic response แต่ dispersion เพิ่มข้อมูลได้ในชั้นแบบจำลองจำกัด งานต่อคือ nuisance inputs, uncertainty และ readout ไม่ใช่สรุปว่าทดลองได้จริงแล้ว
+3. **แพ็กที่คนอื่นตรวจได้:** derivation, artifact/hash, failed baseline, reproduction และ related-work map ต้องแยกวิธีมาตรฐานที่นำเข้ากับสิ่งที่คำนวณเพิ่มสำหรับ candidate นี้ การประยุกต์ Beliaev/EFT ไม่ใช่หลักฐานว่าค้นพบกลไกใหม่
+
+แพ็กนี้รับได้ตาม evidence/measurement/claim acceptance เดิมเท่านั้น หากยังไม่ครบให้ส่ง preliminary portfolio พร้อมข้อค้าง ไม่ mark scientific Goal สำเร็จเพราะเอกสารครบ ส่วนไฟล์ vacuum-cut exploration ที่ยังไม่ commit และไม่ครบ focused review ยังไม่ถูกนับเป็นผลสำเร็จรอบนี้
+
+| ส่งมอบภายใน | ผลที่ต้องได้ ไม่ใช่จำนวนรัน | หากยังปิดไม่ได้ |
+| --- | --- | --- |
+| 3 ต.ค. | ล็อก action/branch/coefficient origins และเลือกหนึ่งคำถามคำนวณที่เปลี่ยนข้อสรุป | บอก missing input หรือสมมติฐาน ไม่กระจายไปหัวข้อใหม่ |
+| 5 ต.ค. | ตรวจ cut/real response และ local matching obligation อีกวิธี; ระบุส่วนของ thermal remainder ที่ยังไม่คำนวณ | ใช้ผล interactions ที่ตรวจแล้ว ไม่กำหนด width หรือค่าชดเชยให้ผ่านเอง |
+| 7 ต.ค. | scientific freeze: bounded result + measurement card + novelty/claim/evidence map | ตรึงผลเบื้องต้นและ exact unresolved obligation ไม่เปลี่ยน uncertainty เป็นศูนย์ |
+| 8–11 ต.ค. | report, figures, short pitch, reproduction bundle, three aims, resource/risk และ call-fit checklist | พร้อมให้คนอ่านได้ตามจริง แต่ eligibility/PI/งบยังไม่ทราบ |
+
+### เวลาเพิ่มอีกสองหรือสามเดือนต้องช่วยอะไร
+
+| รอบทบทวน | ต้องได้ความรู้เพิ่มอะไร | ช่วยระยะยาวอย่างไร |
+| --- | --- | --- |
+| 25 ต.ค. / R1 | ตัดสิน source/response prescription และ validity domain รวม vacuum/Wilson กับ interaction obligations | รู้ว่าสมการส่วนใดส่งเป็น response interface ได้ และส่วนใดห้ามใช้เป็น prediction |
+| 8 พ.ย. / R2–R3 | เลือกหนึ่ง material/state/protocol; มี input/normalization/readout อิสระ หรือ feasibility ที่ระบุการวัดจริงที่ยังต้องหา | เปลี่ยนคำว่า “ขาดข้อมูล” เป็นคำขอข้อมูล/การวัดที่หาทุนรองรับได้ |
+| 22 พ.ย. / R4 | เปรียบเทียบหนึ่ง observable เมื่อ prerequisites ผ่าน หรือปิดผล structural ที่พิสูจน์และตรวจอิสระได้ | ได้คำตัดสินที่อาจสนับสนุนหรือขัดกับ candidate ไม่ใช่แค่กราฟ fit |
+| 6 ธ.ค. / extension | ตรวจ state/protocol ที่สองเมื่อผลแรกพร้อม หรือแก้ uncertainty ของผลแรก | แยกผลเฉพาะจุดจากผลที่ทนต่อการเปลี่ยนเงื่อนไข |
+| 20 ธ.ค. / R5 | clean reproduction, reviewer disposition และพอร์ตฉบับปรับตามทุนที่เลือกเมื่อทราบ | ทำให้ทุนสนับสนุนงานถัดไปจากหลักฐานที่ตรวจได้ ไม่ใช่ความมั่นใจของ AI |
+
+แต่ละวันเป็น **วันตัดสินผล ไม่ใช่วันรับประกันผ่าน** R1–R5 ยังไม่ถูก accept จากการปรับแผน หาก 8 พ.ย. ยังไม่มี numeric input ให้เลือก theory/methods + measurement-design route และเปิด empirical gate ไว้ ไม่รอ source เดิมแบบไม่จำกัดเวลา ไม่สร้างข้อมูลแทน และไม่เรียกการหาไม่พบว่า no-go
+
+ถ้าต้องรอทุนอีกสองเดือนนับจาก 11 ต.ค. ให้ใช้ **11 ธ.ค. เป็น scenario** และ freeze ผล 27 พ.ย.; อีกสามเดือนใช้ **11 ม.ค. 2027 เป็น scenario** และ freeze 28 ธ.ค. เผื่อเอกสารสถาบันอย่างน้อย 7 วันและ attachments 3 วันก่อน deadline จริง ปรับเพิ่มตามข้อกำหนดหน่วยงาน ไม่รอ release 20 ธ.ค. ถ้าทุนปิดก่อน เก็บ v1 แล้ววิเคราะห์เหตุที่ไม่ยื่น: deadline, eligibility, evidence, novelty หรือ partner/resources ก่อนเลือกงานต่อ
+
+### คุมเวลาและตรวจว่าโมเดลไหนคุ้มจริง
+
+ก่อน freeze ใช้สัดส่วนตั้งต้น 60% derivation, 20% independent verification, 20% source/portfolio; หลัง freeze ใช้ 80% packaging/call-fit และ 20% reproduction/claim check เป็นการจัดเวลา ไม่ใช่ usage ที่วัดแล้ว จำกัด decisive calculation หนึ่งเรื่อง พร้อม source inventory คู่ขนานได้ หากสอง wave ไม่มีหลักฐานใหม่ให้ตัดสิน route ก่อนรันต่อ แยก numerical convergence จาก physical approximation error เสมอ
+
+ทดลอง Astra กับ Sol ด้วย frozen input เดียวกันและ acceptance เดียวกัน จำกัด **90 นาทีต่อ configuration** ตรวจ derivation/units, independent control และ claim/source leakage ต้องไม่มี critical error วัดเวลารวมแก้ข้อผิดพลาดและ usage/cost เมื่อมีข้อมูล เลือกค่าที่เบาสุดที่ผ่านจริง Trial ยัง `NOT_RUN` จึงไม่มีการรับรองเวลาหรือค่าใช้จ่าย และการเห็นตรงกันของสองโมเดลไม่ใช่ external replication
+
+**ปลายทางระยะยาว:** ส่ง response ที่รู้ units/domain/uncertainty และ independent-input contract กลับ Core เพื่อรองรับ thermal/constitutive research ตาม dependency จริง ไม่ปลด Gravity/Galaxy อัตโนมัติ งาน finite-T normal component, heat/Kubo, SK/KMS และ entropy transport ยังต้องปิดเฉพาะ scope ของมันเอง ไม่รับประกัน Full Topic13 ในสามเดือน
+
 ## Current Interaction Result (2026-10-02)
 
 [The interaction successor](Result/artifacts/T13_LOW_T_INTERACTIONS_2026-10-02.md)
@@ -29,7 +76,7 @@ scientific status. Dates/models/Goal acceptance are unchanged.
 
 ## 2. สิ่งที่มีแล้วและสิ่งที่ยังขาด
 
-หลักฐานตั้งต้นคือ [ผลล่าสุด](Result/artifacts/T13_HARTREE_LOW_T_VALIDITY_2026-10-02.md) และ artifact `t13_hartree_low_T_validity.json` SHA-256 `6b6d5db3086439ce68703accacc04733dee8efb5535e85067b5c9941628c7f39` ตรวจที่ published Topic13 head `eee23b669a6f51e13e7466d32d767efceb8009b8` ไม่เอาผลจาก worktree อื่นมารวมเป็นการผ่านโดยไม่รับเข้า
+หลักฐานปัจจุบันคือ [interaction result](Result/artifacts/T13_LOW_T_INTERACTIONS_2026-10-02.md) และ artifact `t13_low_T_interactions.json` SHA-256 `f1679543e0a644c5104d001ea7ed84adbaf1298f8d8315c9c5108cdcfb53fd0c` ที่ published Topic13 head `17a0e603a702c43a2abcd9489d21864e600192a0` ส่วน [Hartree low-T boundary](Result/artifacts/T13_HARTREE_LOW_T_VALIDITY_2026-10-02.md) เป็นหลักฐาน predecessor ใน branch ของมัน ไม่ใช่ current EFT controller companion JSON ของ decision roadmap คงเป็น historical snapshot; canonical funding contract และ addendum เป็นตัวชี้สถานะล่าสุด
 
 | สิ่งที่มีหลักฐานแล้ว | สิ่งที่ผลนั้นยังไม่ให้ |
 | --- | --- |
@@ -38,7 +85,7 @@ scientific status. Dates/models/Goal acceptance are unchanged.
 | Source/calibration limitations และ provenance chain ที่บันทึกไว้ | ไม่ได้ให้ independent `alpha_Phi_K`, permissioned TTG rows หรือ physical Kubo coefficient |
 | Core มีผลย่อยใน curved 3+1 แต่ parent ยัง PARTIAL ใน checkout ของเจ้าของ Core ที่อ่าน | ไม่ปลดล็อก Gravity และไม่เป็นงานที่ Topic13 ต้องแก้แทนเพื่อทำพอร์ต |
 
-**ตัวตัดสินงานต่อ:** `gapless_equilibrium_thermal_prescription_not_derived` การรัน Hartree เดิมซ้ำไม่แก้โครงสร้างนี้ ความสอดคล้องเชิงสมการ, physical input และการยื่นทุนเป็นคนละปัญหา ต้องส่งมอบแยกกัน
+**ตัวตัดสินงานต่อใน EFT:** `renormalized_cubic_sunset_and_vacuum_Wilson_matching_open` ส่วน `gapless_equilibrium_thermal_prescription_not_derived` ยังคุม Hartree predecessor ไม่ได้ถูกซ่อมด้วย branch ใหม่ ความสอดคล้องเชิงสมการ, physical input และการยื่นทุนเป็นคนละปัญหา ต้องส่งมอบแยกกัน
 
 ## 3. งานก่อน freeze: หนึ่งโจทย์หลักและหนึ่งสายข้อมูล
 
@@ -131,19 +178,19 @@ MAJOR_RESULT_CLOSURE: Planning/decision clarification only; no new scientific cl
 
 WHAT_IS_ACTUALLY_CLOSED: แยกเป้าพอร์ตสองสัปดาห์, ผลวิทยาศาสตร์, submission readiness และผลที่จะซื้อด้วยเวลาอีก 2–3 เดือน; model recommendation มี official sources แต่ trial ยัง NOT_RUN.
 
-WHAT_REMAINS_OPEN: Same-action consistent thermal prescription, independent source/scale/material/readout, physical transport, measurement design/novelty, G0–G5/R1–R5/Full Topic13 และชื่อทุน/PI/งบ.
+WHAT_REMAINS_OPEN: Matched vacuum/Wilson and thermal interaction remainder, independent source/scale/material/readout, physical transport, instrument feasibility/novelty, G0–G5/R1–R5 and broader Topic13 acceptance; owner Core composition is separately recorded, not reverified here. ผู้ใช้ยังไม่เลือกทุน/PI/งบ.
 
 DEPENDENCY_UNLOCKED: None; งานวางแผนไม่ปลด physical/Core/Gravity gate.
 
 STATUS: PLAN_REVIEW_READY_NOT_SCIENTIFIC_ACCEPTANCE.
 
-WHAT_CHANGED: เพิ่ม decision companion และ machine-readable schedule เชื่อมแผนเดิม ไม่เริ่ม sprint ใหม่หรือเปลี่ยน completion rule.
+WHAT_CHANGED: เพิ่ม executive model/delivery/next-round detail และ backward-compatible canonical planning addendum; แก้ current evidence/controller ให้แยกจาก historical snapshot ไม่เริ่ม sprint ใหม่หรือเปลี่ยน completion rule.
 
 EQUATION_OR_MAPPING: Proposed research path only: same-action stationary response -> declared low-T thermal prescription -> independent dimensional/source/readout map -> locked comparison or scoped structural proof. Natural-unit Phi ไม่ใช่ Kelvin alpha โดยอัตโนมัติ.
 
 VERIFICATION: อ่าน latest Topic13 artifact/notes, แผนและ Core owner README; ตรวจ machine-readable companion/links/hashes/date invariants และ planning regressions แยกจาก scientific revalidation โดยบันทึกผลจริงใน UPDATE_LOG.
 
-CONTROLLING_BLOCKER: gapless_equilibrium_thermal_prescription_not_derived; empirical calibration/source/material และ actual funding call ยังเปิดแยก.
+CONTROLLING_BLOCKER: renormalized_cubic_sunset_and_vacuum_Wilson_matching_open in the new EFT; empirical calibration/source/material และ actual funding call ยังเปิดแยก. Hartree predecessor retains its own low-T blocker.
 
 NEXT_ACTION: ทำแพ็ก A ใหม่ที่มี independent controls และแพ็ก B measurement card ก่อน 7 ต.ค.; เตรียม portfolio review 11 ต.ค.; 25 ต.ค. review R1 ตามหลักฐาน ไม่ใช่วันผ่านอัตโนมัติ.
 

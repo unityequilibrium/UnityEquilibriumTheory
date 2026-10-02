@@ -1,3 +1,27 @@
+## 2026-10-02 - Delivery, model selection and next-round decisions
+
+MAJOR_RESULT_CLOSURE: Planning refinement only, not a new scientific result or acceptance of R1-R5.
+
+WHAT_IS_ACTUALLY_CLOSED: Current-evidence executive plan now connects one bounded result, one measurement-information card and one reproducible portfolio, with concrete 3/5/7/11 October outputs, model roles and next-round decisions.
+
+WHAT_REMAINS_OPEN: Vacuum/Wilson and thermal remainder, independent material/source/readout/scale, finite-T normal/heat/Kubo/KMS/entropy transport, instrument feasibility, novelty, scientific Goal and actual call/PI/budget. User confirmed funder is not selected.
+
+DEPENDENCY_UNLOCKED: None. The read-only Core-owner matrix records bounded O(2)/He-4 CLOSED_FOR_CORE separately; this plan neither revalidates nor alters it.
+
+STATUS: PLAN_REVIEW_READY_NOT_SCIENTIFIC_ACCEPTANCE; public safety safe.
+
+WHAT_CHANGED: Executive section and stale current-controller wording in FUNDING_DECISION_ROADMAP_2026-10-02.md; backward-compatible delivery_and_model_addendum_2026_10_02 in canonical funding contract; nine focused planning tests. No Core-owner/scientific source/artifact change or acceptance of uncommitted vacuum-cut exploration. Historical decision companion remains historical.
+
+EQUATION_OR_MAPPING: Planning sequence only: bounded low-T response/matching decision -> independent material/state/source/readout map -> preregistered comparison or verified scoped structural result -> reproduction/review. No new equation, imported coefficient or Kelvin calibration.
+
+VERIFICATION: Final single planning run: 37 passed in 1.32 seconds across new addendum, existing funding contract and decision roadmap tests. Initial run 36 passed/one link failed because primary-only holdout incident is absent in execution checkout; repaired the snapshot citation without copying owner files, then reran all three files. These runs are not additive. Evidence hash, unchanged acceptance/calendar/model/holdout flags and local links checked; whitespace review passed. No scientific rerun, model trial or call eligibility audit claimed.
+
+CONTROLLING_BLOCKER: renormalized_cubic_sunset_and_vacuum_Wilson_matching_open in current candidate EFT; physical input/measurement and actual funding eligibility remain separate. Older Hartree controller retains its own branch.
+
+NEXT_ACTION: Commit/push only this planning unit to existing draft PR30 and check its exact-head CI. Then execute one decisive matching calculation with parallel source/measurement work; preserve 7/11 October and five later reviews. No new Goal, automation, thread or model configuration.
+
+CLAIM_BOUNDARY: Dates are internal result reviews, not confirmed funding calls or guarantees. Portfolio readiness is not science/Goal/submission acceptance; no full physical/Core/global promotion. Xie REVIEW_REQUIRED/no new numeric access, original failed conserved-C/1e-6, ontology and owner composition preserved. No private/raw source, external contact, purchase or submission authorized; three unrelated vacuum-exploration files remain uncommitted and excluded.
+
 ## 2026-10-02 - Derived phase interactions and leading phonon attenuation
 
 MAJOR_RESULT_CLOSURE: T13_LOW_T_PHASE_INTERACTION_AND_DECAY_KERNEL, CLOSED_FOR_LANE. Full Topic13/R1-R5/Goal and physical funding acceptance remain open.
