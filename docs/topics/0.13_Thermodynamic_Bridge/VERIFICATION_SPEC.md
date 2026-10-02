@@ -1,5 +1,18 @@
 # Verification Spec
 
+## Vacuum Cut/Log And Matching Boundary (2026-10-03)
+
+Research_T13_Vacuum_Cut_Log.py and test_t13_vacuum_cut_log.py verify the
+[new result](Result/artifacts/T13_VACUUM_CUT_LOG_2026-10-03.md). Use the
+declared mu/q/frequency/threshold/quadrature/scale/local grids and matching
+ratios, original gates including causal 1e-6. Require direct original-vertex
+phase space, expanded cut polynomial, upper-half-frequency/reality,
+four-subtracted Cauchy and scale running, prior optical-theorem/Bose limit,
+free/spacelike/coordinate/invalid-input controls, fixed-convention rank and
+on-shell null directions, protected hashes and runtime source allowlist.
+Threshold is explicitly rejected without curvature prescription, not padded.
+No passing diagnostic accepts microscopic/physical/full-Topic13 closure.
+
 ## Low-T Interactions and Derived Decay (2026-10-02)
 
 Use Research_T13_Low_T_Interactions.py and test_t13_low_T_interactions.py.

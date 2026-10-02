@@ -1,5 +1,17 @@
 # Formula Audit: 0.13_Thermodynamic_Bridge
 
+## Vacuum Cut/Log And Restricted Matching Contract (2026-10-03)
+
+The [local registry](Data/03_Research/t13_vacuum_cut_log_registry.json)
+records four cut/log/local-ambiguity/matching interfaces with ontology,
+units, derivation, role and boundary. Sigma is not Phi; acoustic z/K2 have
+E2, Sigma E2, cubic g E^-2 and degree-six local coefficients E^-4.
+The [derivation](Result/artifacts/T13_VACUUM_CUT_LOG_2026-10-03.md) checks
+phase space and subtracted Cauchy independently, with explicit scale running.
+No local coefficient is calibrated. Four fixed-convention coefficients
+are not four physical parameters; source/contact redundancy remains.
+Original action, predecessor artifacts and owner Core registry unchanged.
+
 ## Low-T Interaction and Cut Contract (2026-10-02)
 
 The [local machine-readable registry](Data/03_Research/t13_low_T_interaction_registry.json)

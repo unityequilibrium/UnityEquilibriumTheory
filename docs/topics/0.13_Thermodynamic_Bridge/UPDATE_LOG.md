@@ -1,3 +1,27 @@
+## 2026-10-03 - Vacuum phase cut/log and local matching information
+
+MAJOR_RESULT_CLOSURE: T13_VACUUM_PHASE_CUT_LOG_AND_LOCAL_MATCHING_BOUNDARY, CLOSED_FOR_LANE. Goal/Full Topic13/R1-R5 still open.
+
+WHAT_IS_ACTUALLY_CLOSED: Formal LO linear-phase vacuum cut/log equivalence class, independent four-subtracted Cauchy reconstruction, optical-theorem relation to prior decay, constructive equal-cut/different-real local family and restricted matching interface. Leading on-shell matching rank is one, fixed-convention off-shell rank four; not four physical parameters or laboratory measurements.
+
+WHAT_REMAINS_OPEN: State-dependent local Wilson/source/contact and internal-curvature near-shell matching, thermal sunset/mixed pressure with source/entropy consistency, independent material/source/readout/scale, finite-T normal/heat/Kubo/SK-KMS/entropy transport and instrument feasibility. Formal UV integration is not physical EFT validity or a total error bound.
+
+DEPENDENCY_UNLOCKED: Matching/thermal-sunset research only; no physical/Core/Gravity unlock, predecessor invalidation or owner gate change.
+
+STATUS: PASS_SCOPED_VACUUM_CUT_LOG; public safety safe.
+
+WHAT_CHANGED: Completed previously uncommitted verifier/registry/artifact, new 38 focused tests and derivation; current funding evidence/controller and predecessor regression, local README/method/limits/formula/spec plus portfolio/Goal handoffs. Added input rejection and coordinate controls before final artifact. A documentation multi-file patch failed atomically on a heading, then was corrected; no partial science edits. Historical planning snapshots retained.
+
+EQUATION_OR_MAPPING: Sigma_nonlocal=F(z,K2)*log((K2-z)/mu_R2)/(32pi2*c3), Im Sigma=-sign(omega)*F/(32pi*c3); degree-six local terms leave cut unchanged. Sigma E2, g E^-2, local coefficients E^-4. Sigma is not Phi, phase not UET Pi, acoustic invariant not radial amplitude/C; R_gen/R_obs excluded.
+
+VERIFICATION: Nine artifact checks. Final single linked fourteen-file run 219 passed in 8.03 seconds, including 38 new tests and preserved action/thermal/claim/planning checks. Earlier 36/38 focused tests are subsets, not added. Direct original-vertex phase space, independent Cauchy, expanded cut/upper-half-frequency/reality/scale/optical-theorem/Bose/free/coordinate/invalid-input/rank controls and runtime file allowlist pass. Largest Cauchy disagreement 4.016e-12; fixed-convention matrix determinant 6.75, condition 30.17, synthetic reconstruction error 2.776e-17, not measured calibration. Artifact 449b4df1741ebd0b4c3fa5f69cda1f97b6f014ebd5cfc603e97352bed2e41e17; predecessor/action hashes unchanged. Scoped links and whitespace pass. Prior planning-head 13a679c4c9fe70a3ee7815ab91b5ecb13d94ba3c Changed-Area CI confirmed success; new-head CI separate. No full repo/external validation/model trial.
+
+CONTROLLING_BLOCKER: state_dependent_local_Wilson_and_thermal_sunset_matching_open. Independent physical inputs/transport remain separate; old Hartree/conserved-C blockers unchanged.
+
+NEXT_ACTION: Commit/push coherent wave to existing draft PR30 and inspect exact-head CI. Next declare same-parent source/renormalization matching and compute internal-curvature real response plus thermal sunset/source/entropy consistency; independently screen measurement inputs. Original 7/11 October and five later reviews, model trial NOT_RUN/configuration unchanged and full active Goal preserved.
+
+CLAIM_BOUNDARY: Formal cut/log and restricted local information boundary only, not microscopic Wilson, full quantum EOS/remainder, physical Kubo/KMS/temperature scale, material prediction, external validation or Full Topic13/Core. No fit/assigned width/mass repair/clipping/filter/padding/threshold/ontology change, numeric Xie read, purchase/contact/submission or Core-owner edit. Prior exposure REVIEW_REQUIRED and original conserved-C failure at 1e-6 retained; physical/global flags false.
+
 ## 2026-10-02 - Delivery, model selection and next-round decisions
 
 MAJOR_RESULT_CLOSURE: Planning refinement only, not a new scientific result or acceptance of R1-R5.

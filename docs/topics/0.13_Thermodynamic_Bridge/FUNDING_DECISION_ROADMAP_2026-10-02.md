@@ -6,6 +6,18 @@ Science successor: [Low-T phase EFT](Result/artifacts/T13_LOW_T_PHASE_EFT_2026-1
 
 เอกสารนี้เป็นฉบับอ่านเพื่อเลือกงาน ไม่ใช่การเพิ่มเกณฑ์ปิดทฤษฎีหรือเริ่มนับเวลาใหม่ อ่านคู่กับ [แผน 14 วัน](RESEARCH_PLAN_14D_FUNDING_2026-09-27.md), [แผน 12 สัปดาห์](RESEARCH_ROADMAP_MODELS_12W_2026-09-27.md) และ [contract เดิม](Data/03_Research/funding_portfolio_14d_plan.json) ซึ่งยังควบคุม G0–G5 และการรับผลหลัก เอกสารตัดสินใจที่เครื่องอ่านได้อยู่ที่ [funding_decision_roadmap_2026_10_02.json](Data/03_Research/funding_decision_roadmap_2026_10_02.json)
 
+## ผลวิจัยที่รับเข้าเพิ่ม 3 ตุลาคม
+
+[Vacuum cut/log และ matching boundary](Result/artifacts/T13_VACUUM_CUT_LOG_2026-10-03.md)
+ตรวจได้จริงแล้วใน formal linear-phase lane: cut กำหนด logarithmic equivalence class
+แต่ไม่กำหนด finite local real terms ทั้งหมด ผลเดียวกันตรวจด้วย subtracted dispersion
+อีกวิธี และแยก matching convention ออกจาก observable จริงแล้ว ตัวควบคุมล่าสุดคือ
+`state_dependent_local_Wilson_and_thermal_sunset_matching_open` ไม่ใช่การรับ
+R1–R5/Full Topic13 หรือ material prediction ข้อความเรื่อง uncommitted exploration
+และ baseline/controller วันที่ 2 ต.ค. ด้านล่างเป็น snapshot ของรอบวางแผนนั้น;
+current evidence อยู่ใน `vacuum_cut_log_evidence_2026_10_03` ของ canonical contract
+กำหนดวัน โมเดล และ completion rule เดิมไม่เปลี่ยน
+
 ## ข้อสรุปสำหรับเลือกโมเดลและวางแผนสองรอบ
 
 ผู้ใช้ยืนยันว่ายังไม่เลือกทุนหรือหน่วยงาน จึงตั้งเป้า **พอร์ตพร้อมทบทวน 11 ต.ค.** ไม่ใช่พร้อมยื่นตามข้อกำหนดทุนที่ยังไม่ทราบ เราไม่ทราบว่าจะพลาดรอบแรกหรือไม่ และไม่ยืนยันว่ารอบถัดไปเปิดในอีกสองหรือสามเดือน

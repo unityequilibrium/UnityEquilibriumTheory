@@ -383,7 +383,8 @@ def test_new_phase_eft_thermal_lane_is_not_Hartree_repair_or_full_acceptance():
 
 def test_interaction_successor_narrows_controller_without_full_thermal_acceptance():
     field = "low_T_interaction_evidence_2026_10_02"
-    assert PLAN["execution_review_2026_10_01"]["current_scientific_evidence_field"] == field
+    latest = PLAN[PLAN["execution_review_2026_10_01"]["current_scientific_evidence_field"]]
+    assert latest["interaction_predecessor_evidence_field"] == field
     evidence = PLAN[field]
     path = ROOT/evidence["path"]
     r = json.loads(path.read_text())
@@ -401,4 +402,30 @@ def test_interaction_successor_narrows_controller_without_full_thermal_acceptanc
     content = note.read_text()
     assert evidence["sha256"] in content
     assert all(k+":" in content for k in r["report"])
+    assert all(card["status"] == "PLANNED_NOT_ACCEPTED" for card in PLAN["result_level_execution_2026_10_01"]["result_cards"])
+
+
+def test_vacuum_cut_log_successor_is_not_full_matching_or_physical_acceptance():
+    field = PLAN["execution_review_2026_10_01"]["current_scientific_evidence_field"]
+    assert field == "vacuum_cut_log_evidence_2026_10_03"
+    evidence = PLAN[field]
+    path = ROOT/evidence["path"]
+    r = json.loads(path.read_text())
+    assert hashlib.sha256(path.read_bytes()).hexdigest() == evidence["sha256"]
+    assert r["verification_status"] == evidence["verification_status"] == "PASS_SCOPED_VACUUM_CUT_LOG"
+    assert r["controlling_blocker"] == evidence["controlling_blocker"]
+    assert r["branch_id"] == evidence["branch_id"]
+    assert r["real_nonlocal_linear_loop_computed"] and r["four_subtracted_reconstruction_checked"]
+    assert r["local_matching_information"]["leading_on_shell_rank"] == 1
+    assert not r["local_matching_information"]["four_lab_measurements_required_claimed"]
+    note = ROOT/"docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/T13_VACUUM_CUT_LOG_2026-10-03.md"
+    content = note.read_text()
+    assert evidence["sha256"] in content
+    assert all(name+":" in content for name in r["report"])
+    for key in ("local_Wilson_matching_completed", "internal_curvature_real_self_energy_computed",
+                "full_real_self_energy_matched", "full_two_loop_pressure_computed", "finite_T_collision_computed",
+                "full_SK_KMS_matching_closed", "controlled_full_action_truncation_error_established",
+                "independent_alpha_Phi_K_admitted", "physical_Kubo_emitted", "g1_physical_unlock",
+                "g2_science_unlock", "full_core_unlock", "core_composition_gate_overwritten"):
+        assert evidence[key] is r[key] is False
     assert all(card["status"] == "PLANNED_NOT_ACCEPTED" for card in PLAN["result_level_execution_2026_10_01"]["result_cards"])

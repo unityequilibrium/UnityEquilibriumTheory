@@ -1,5 +1,17 @@
 ﻿# Method
 
+## Vacuum Cut and Subtracted Matching Method (2026-10-03)
+
+Use [the new derivation](Result/artifacts/T13_VACUUM_CUT_LOG_2026-10-03.md).
+Derive the cut from canonical cubic vertices and check the original spatial
+phase-space integral, retarded analytic continuation and independent
+four-subtracted Cauchy integral. Keep near-shell internal curvature and
+finite local Wilson/source conditions separate from the computed log.
+Construct equal-cut/different-real local examples and restricted matching
+rank; distinguish off-shell source conventions from physical observables.
+Formal UV integration is not EFT UV validity. No fitted width or external
+input, full thermal-sunset/KMS/normal/heat transport closure is implied.
+
 ## Phase Interaction and On-Shell Cut Method (2026-10-02)
 
 Use [the interaction derivation](Result/artifacts/T13_LOW_T_INTERACTIONS_2026-10-02.md).

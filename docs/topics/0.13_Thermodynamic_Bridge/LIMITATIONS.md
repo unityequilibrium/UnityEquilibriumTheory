@@ -1,5 +1,17 @@
 # Limitations
 
+## Cut And Log Do Not Determine Full Real Response (2026-10-03)
+
+The [vacuum successor](Result/artifacts/T13_VACUUM_CUT_LOG_2026-10-03.md)
+is a formal LO linear-phase loop modulo local matching, not a complete
+curvature-resummed near-shell response or microscopic Wilson match.
+On-shell data see one local combination in the restricted class; four
+off-shell canonical/source coefficients are not four independent physical
+parameters. Field redefinitions/contact and finite-T sunset/source/entropy
+remain open. Neither mathematical UV integration nor a finite cut bounds
+the unknown physical remainder. Physical inputs/normal/heat/KMS transport,
+Full Topic13/R1-R5/Goal and original causal admission remain unaccepted.
+
 ## Interaction Kernel Is Not Full Thermal Closure (2026-10-02)
 
 The [new calculation](Result/artifacts/T13_LOW_T_INTERACTIONS_2026-10-02.md)

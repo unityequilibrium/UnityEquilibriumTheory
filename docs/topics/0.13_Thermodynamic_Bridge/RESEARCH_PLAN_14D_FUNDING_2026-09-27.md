@@ -6,6 +6,13 @@
 
 ตัวควบคุมงาน: [funding_portfolio_14d_plan.json](Data/03_Research/funding_portfolio_14d_plan.json) | คำสั่งเริ่มงาน: [GOAL_BRIEF_FUNDING_14D.md](GOAL_BRIEF_FUNDING_14D.md)
 
+Latest science 3 October: [vacuum cut/log and matching boundary](Result/artifacts/T13_VACUUM_CUT_LOG_2026-10-03.md)
+closes the formal nonlocal loop equivalence class, not the local microscopic
+match or full thermal response. Next fix the source/Wilson prescription and
+internal curvature, then thermal sunset/mixed/source/entropy consistency.
+Independent input/measurement and G0-G5/R1-R5/7-11 October stay unchanged.
+The interaction handoff below remains its historical predecessor.
+
 Latest interaction handoff: [derived phase kernels](Result/artifacts/T13_LOW_T_INTERACTIONS_2026-10-02.md)
 now compute a leading T=0 attenuation mechanism, tree T8 dispersion and one
 quartic thermal-thermal term. These are candidate methods evidence, not a

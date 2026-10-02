@@ -1,0 +1,15 @@
+{
+  "schema_version": "uet-topic-local-equation-contract-v1",
+  "owner_topic": "0.13_Thermodynamic_Bridge",
+  "branch_id": "t13.candidate.tree_matched_classical_phi_low_T_phase_EFT_v1",
+  "status": "SCOPED_LOCAL_VERIFICATION_NOT_CORE_PROMOTION",
+  "ontology": "Sigma is a phase self-energy, not Phi; acoustic invariant s is not radial amplitude s; canonical phase is not UET Pi; C/R_gen/R_obs are excluded",
+  "entries": [
+    {"id": "t13.phase_eft.vacuum_two_phonon_cut", "equation": "Im Sigma_R=-sign(omega) F(omega^2,K^2)/(32pi c^3) theta(omega^2-K^2); K=cq", "units": "Sigma:E^2, omega/K:E, F:E^2 including cubic couplings E^-2", "derivation_class": "DERIVED_LO_CANONICAL_VERTEX_VACUUM_CUT", "observable": "formal linear-phase retarded spectral continuum", "data_role": "DERIVED", "verification_status": "PASS_SCOPED_VACUUM_CUT_LOG", "controlling_blocker": "curvature_resummed_real_matching_and_finite_T_sunset_open", "claim_boundary": "No full parent/material retarded operator"},
+    {"id": "t13.phase_eft.vacuum_log_dispersion", "equation": "Sigma_nonlocal=F(z,K^2) log((K^2-z)/mu_R^2)/(32pi^2 c^3), z=(omega+i0)^2; four-subtracted Cauchy reconstruction", "units": "Sigma:E^2, z:E^2, mu_R:E", "derivation_class": "DERIVED_CUT_DISPERSION_NONLOCAL_EQUIVALENCE_CLASS", "observable": "logarithmic real part modulo local subtraction terms", "data_role": "DERIVED", "verification_status": "PASS_SCOPED_VACUUM_CUT_LOG", "controlling_blocker": "state_dependent_local_Wilson_and_thermal_sunset_matching_open", "claim_boundary": "Formal linear-EFT loop only; no physical UV extension or complete on-shell real shift"},
+    {"id": "t13.phase_eft.local_matching_ambiguity", "equation": "Sigma_local=ell6 q^6 leaves spectral cut unchanged; homogeneous degree-six rotational local class", "units": "ell6:E^-4", "derivation_class": "CONSTRUCTIVE_MATCHING_INPUT_BOUNDARY", "observable": "conditional real pole correction ambiguity", "data_role": "DERIVED_DIAGNOSTIC_FAMILY_NOT_CALIBRATION", "verification_status": "PASS_SCOPED_VACUUM_CUT_LOG", "controlling_blocker": "independent_local_Wilson_matching_condition_missing", "claim_boundary": "Order-reduced low-q example, not microscopic UV stability or global no-go"},
+    {"id": "t13.phase_eft.local_matching_information", "equation": "Sigma6=a6 z^3+b6 z^2 K2+c6 z K2^2+d6 K2^3; fixed-convention off-shell rank four, leading on-shell rank one", "units": "a6/b6/c6/d6:E^-4", "derivation_class": "DERIVED_RESTRICTED_LOCAL_MATCHING_INTERFACE", "observable": "fixed-source canonical inverse-kernel matching, not four laboratory observables", "data_role": "DERIVED_ALGEBRA_NOT_MEASURED_CALIBRATION", "verification_status": "PASS_SCOPED_VACUUM_CUT_LOG", "controlling_blocker": "independent_local_Wilson_matching_condition_missing", "claim_boundary": "Field redefinitions and source contact matching must be treated together; not four independent physical parameters or a global minimum-data theorem"}
+  ],
+  "core_registry_modified": false,
+  "claim_promotion": false
+}

@@ -8,6 +8,13 @@
 
 ## ผลหลักสำหรับพอร์ตและทุนรอบถัดไป
 
+Science update 3 October: [vacuum cut/log](Result/artifacts/T13_VACUUM_CUT_LOG_2026-10-03.md)
+now closes a formal nonlocal equivalence class and explicit matching-input
+boundary, not complete real response. R1 next needs local Wilson/source and
+internal-curvature matching plus thermal sunset/source/entropy consistency.
+R2-R3 independent material/measurement input and all original review dates,
+model policy/NOT_RUN trial and acceptance rules remain unchanged.
+
 Current interaction successor: [derived phase kernels](Result/artifacts/T13_LOW_T_INTERACTIONS_2026-10-02.md)
 compute a leading T=0 decay rather than assign a width. Tree T8 dispersion
 and one quartic piece do not close the full quantum thermal remainder.

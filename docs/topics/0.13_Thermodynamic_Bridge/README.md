@@ -6,6 +6,18 @@ description: "Research module for Thermodynamic Bridge within the Unity Equilibr
 
 # 0.13 Thermodynamic Bridge
 
+## Vacuum Cut, Real Logarithm and Matching Boundary (2026-10-03)
+
+The [new vacuum result](Result/artifacts/T13_VACUUM_CUT_LOG_2026-10-03.md)
+closes the formal linear-phase cut/log equivalence class and independent
+subtracted dispersion reconstruction. Equal decay cuts do not fix local
+real matching terms. Fixed-convention off-shell rank four is not four
+physical parameters or four lab measurements; leading on-shell rank is one.
+Current controller: state-dependent local Wilson and thermal-sunset matching.
+Internal curvature, physical inputs and finite-T heat/KMS transport remain
+open. Full Topic13/R1-R5/Goal and owner Core gates are not promoted; original
+conserved-C failure, Xie REVIEW_REQUIRED and 7/11 October dates remain.
+
 ## Derived Phase Interactions and Attenuation (2026-10-02)
 
 The [interaction result](Result/artifacts/T13_LOW_T_INTERACTIONS_2026-10-02.md)
