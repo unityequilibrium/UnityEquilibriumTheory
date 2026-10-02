@@ -1,5 +1,18 @@
 # Formula Audit: 0.13_Thermodynamic_Bridge
 
+## Low-T Interaction and Cut Contract (2026-10-02)
+
+The [local machine-readable registry](Data/03_Research/t13_low_T_interaction_registry.json)
+records ontology, units, origin, observable, role, verification and boundaries
+before Core promotion. The [derivation](Result/artifacts/T13_LOW_T_INTERACTIONS_2026-10-02.md)
+supplies P3/P4 canonical cubic/quartic vertices (E^-2/E^-4), zeta and C8_disp
+(E^-4), and Gamma_occupation=3(g_t+g_s/c2)^2*c2*q5/(80pi) with E.
+gamma_pole=Gamma_occupation/2. This is a convex low-q cut, not physical Kubo.
+The separately subtracted Q8 quartic thermal-thermal term omits cubic-sunset,
+mixed vacuum terms and Wilson counterterms; it is not total interacting P.
+Canonical phase is not UET Pi; radial amplitude is not C; R_gen/R_obs are
+excluded. Prior action/thermal artifact unchanged; no Kelvin alpha derived.
+
 ## Tree-Matched Low-T Phase EFT (2026-10-02)
 
 | Local registry ID | Ontology / equation | Units | Derivation class / observable / data role | Verification / controlling blocker / claim boundary |

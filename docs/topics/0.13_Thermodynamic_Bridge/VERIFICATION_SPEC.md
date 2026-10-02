@@ -1,5 +1,20 @@
 # Verification Spec
 
+## Low-T Interactions and Derived Decay (2026-10-02)
+
+Use Research_T13_Low_T_Interactions.py and test_t13_low_T_interactions.py.
+The [result](Result/artifacts/T13_LOW_T_INTERACTIONS_2026-10-02.md) declares
+grids/gates before its new checks, preserving original causal 1e-6.
+Require direct stationary pressure/finite-difference P3/P4 agreement, parent
+q5/group-velocity convergence, actual angular support without clipping,
+phase-space versus analytic q5, quadrature refinement, energy/Bose identity,
+known dilute-Bose factor-two and free/decoupled controls. Check tree T8 by
+independent Bose moments/entropy integral, quartic by subtracted Wick tensor,
+coordinate invariance and evidence/protected hashes. Runtime file audit
+excludes holdout and external numeric source; prior Xie review stays open.
+No small calculated term or passed numerical gate accepts full two-loop
+pressure, real self-energy, finite-T transport, KMS or physical scale.
+
 ## Tree-Matched Phase-EFT Verification (2026-10-02)
 
 Research_T13_Low_T_Phase_EFT.py; named branch independent of Hartree.

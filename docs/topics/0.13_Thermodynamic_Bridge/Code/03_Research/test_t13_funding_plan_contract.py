@@ -362,7 +362,8 @@ def test_low_T_boundary_blocks_admission_without_retracting_response_or_acceptin
 
 def test_new_phase_eft_thermal_lane_is_not_Hartree_repair_or_full_acceptance():
     field = "low_T_phase_eft_evidence_2026_10_02"
-    assert PLAN["execution_review_2026_10_01"]["current_scientific_evidence_field"] == field
+    successor = PLAN[PLAN["execution_review_2026_10_01"]["current_scientific_evidence_field"]]
+    assert successor["phase_eft_predecessor_evidence_field"] == field
     evidence = PLAN[field]
     path = ROOT/evidence["path"]
     result = json.loads(path.read_text(encoding="utf-8"))
@@ -377,4 +378,27 @@ def test_new_phase_eft_thermal_lane_is_not_Hartree_repair_or_full_acceptance():
                 "independent_alpha_Phi_K_admitted", "physical_Kubo_emitted", "g1_physical_unlock",
                 "g2_science_unlock", "full_core_unlock", "core_composition_gate_overwritten"):
         assert evidence[key] is result[key] is False
+    assert all(card["status"] == "PLANNED_NOT_ACCEPTED" for card in PLAN["result_level_execution_2026_10_01"]["result_cards"])
+
+
+def test_interaction_successor_narrows_controller_without_full_thermal_acceptance():
+    field = "low_T_interaction_evidence_2026_10_02"
+    assert PLAN["execution_review_2026_10_01"]["current_scientific_evidence_field"] == field
+    evidence = PLAN[field]
+    path = ROOT/evidence["path"]
+    r = json.loads(path.read_text())
+    assert hashlib.sha256(path.read_bytes()).hexdigest() == evidence["sha256"]
+    assert evidence["verification_status"] == r["verification_status"] == "PASS_SCOPED_INTERACTION_KERNEL"
+    assert evidence["controlling_blocker"] == r["controlling_blocker"]
+    assert evidence["branch_id"] == r["branch_id"] == PLAN[evidence["phase_eft_predecessor_evidence_field"]]["branch_id"]
+    assert all(r["checks"].values())
+    for key in ("full_two_loop_pressure_computed", "quartic_TT_is_total_error_bound", "assigned_damping_width",
+                "finite_T_collision_computed", "full_SK_KMS_matching_closed", "controlled_full_action_truncation_error_established",
+                "independent_alpha_Phi_K_admitted", "physical_Kubo_emitted", "g1_physical_unlock", "g2_science_unlock",
+                "full_core_unlock", "core_composition_gate_overwritten"):
+        assert evidence[key] is r[key] is False
+    note = ROOT/"docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/T13_LOW_T_INTERACTIONS_2026-10-02.md"
+    content = note.read_text()
+    assert evidence["sha256"] in content
+    assert all(k+":" in content for k in r["report"])
     assert all(card["status"] == "PLANNED_NOT_ACCEPTED" for card in PLAN["result_level_execution_2026_10_01"]["result_cards"])

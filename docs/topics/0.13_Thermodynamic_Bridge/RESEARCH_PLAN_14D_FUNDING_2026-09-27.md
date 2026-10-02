@@ -6,6 +6,13 @@
 
 ตัวควบคุมงาน: [funding_portfolio_14d_plan.json](Data/03_Research/funding_portfolio_14d_plan.json) | คำสั่งเริ่มงาน: [GOAL_BRIEF_FUNDING_14D.md](GOAL_BRIEF_FUNDING_14D.md)
 
+Latest interaction handoff: [derived phase kernels](Result/artifacts/T13_LOW_T_INTERACTIONS_2026-10-02.md)
+now compute a leading T=0 attenuation mechanism, tree T8 dispersion and one
+quartic thermal-thermal term. These are candidate methods evidence, not a
+full remainder bound or scientific acceptance. Next calculate renormalized
+cubic-sunset/mixed terms and Wilson/source consistency; independent physical
+inputs remain open. Preserve 7/11 October and all G0-G5/R1-R5 rules.
+
 แผนต่อยอดและการเลือกโมเดล: [Roadmap 12 สัปดาห์](RESEARCH_ROADMAP_MODELS_12W_2026-09-27.md) ครอบคลุม Astra/Sol/Luna, portfolio v2–v3 และการเตรียมรอบทุนใหม่หากพลาดรอบแรก
 
 ฉบับตัดสินใจอ่านง่าย: [Funding decision roadmap 2 ต.ค.](FUNDING_DECISION_ROADMAP_2026-10-02.md) ระบุผลที่เวลาอีก 2–3 เดือนต้องซื้อ, งานก่อน freeze และเงื่อนไขไม่รันวน โดยไม่ลดเกณฑ์รับผลหลัก.

@@ -6,6 +6,17 @@ Science successor: [Low-T phase EFT](Result/artifacts/T13_LOW_T_PHASE_EFT_2026-1
 
 เอกสารนี้เป็นฉบับอ่านเพื่อเลือกงาน ไม่ใช่การเพิ่มเกณฑ์ปิดทฤษฎีหรือเริ่มนับเวลาใหม่ อ่านคู่กับ [แผน 14 วัน](RESEARCH_PLAN_14D_FUNDING_2026-09-27.md), [แผน 12 สัปดาห์](RESEARCH_ROADMAP_MODELS_12W_2026-09-27.md) และ [contract เดิม](Data/03_Research/funding_portfolio_14d_plan.json) ซึ่งยังควบคุม G0–G5 และการรับผลหลัก เอกสารตัดสินใจที่เครื่องอ่านได้อยู่ที่ [funding_decision_roadmap_2026_10_02.json](Data/03_Research/funding_decision_roadmap_2026_10_02.json)
 
+## Current Interaction Result (2026-10-02)
+
+[The interaction successor](Result/artifacts/T13_LOW_T_INTERACTIONS_2026-10-02.md)
+derives the first leading T=0 attenuation kernel from the same tree pressure,
+with actual phase-space/energy/Bose checks. The tree T8 pressure extension
+and one subtracted quartic term do not establish total approximation error.
+Current controller: renormalized cubic-sunset/vacuum Wilson matching, plus
+independent physical inputs and finite-T normal/heat transport. Earlier
+Hartree/controller snapshots below retain historical scope, not current
+scientific status. Dates/models/Goal acceptance are unchanged.
+
 ## 1. ข้อเสนอที่เลือก
 
 **รอบแรกให้ส่งผล methods/structural ที่มีหลักฐาน พร้อมการออกแบบการวัดหนึ่งชุด ไม่สัญญาปิด Full Topic 13 ในสองสัปดาห์** เป้าหมายพอร์ตยังเป็น 11 ตุลาคม; freeze วิทยาศาสตร์ 7 ตุลาคม ไม่ใช่สองสัปดาห์ใหม่จากวันนี้ หากทำผลหลักไม่ครบ ให้ส่ง preliminary portfolio ตามจริง ไม่เรียก Goal สำเร็จ

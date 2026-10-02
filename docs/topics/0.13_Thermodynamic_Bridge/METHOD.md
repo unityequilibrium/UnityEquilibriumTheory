@@ -1,5 +1,19 @@
 ﻿# Method
 
+## Phase Interaction and On-Shell Cut Method (2026-10-02)
+
+Use [the interaction derivation](Result/artifacts/T13_LOW_T_INTERACTIONS_2026-10-02.md).
+Differentiate the same tree P(X,h) through P4, canonicalize with chi, and
+check vertices against directly reoptimized pressure in time/space gradient
+directions. Derive the q5 parent coefficient and T8 Bose moment separately.
+For the convex low-q branch, integrate the actual energy-conserving angular
+root and LO cubic amplitude; distinguish occupation rate from pole width.
+Keep higher-derivative residues/vertices and real self-energy open. One
+explicitly subtracted quartic thermal-thermal Wick term is not the full
+two-loop pressure. Audit source access, energy/Bose identity, coordinate
+invariance and known-limit negative controls; do not assign damping or
+import nonrelativistic coefficients. No full KMS/transport admission follows.
+
 ## Tree-Matched Phase Thermal EFT (2026-10-02)
 
 Use the [new-branch derivation](Result/artifacts/T13_LOW_T_PHASE_EFT_2026-10-02.md).

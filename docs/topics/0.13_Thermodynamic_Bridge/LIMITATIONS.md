@@ -1,5 +1,17 @@
 # Limitations
 
+## Interaction Kernel Is Not Full Thermal Closure (2026-10-02)
+
+The [new calculation](Result/artifacts/T13_LOW_T_INTERACTIONS_2026-10-02.md)
+supplies leading zero-T Beliaev attenuation and tree-dispersion T8, not a
+complete finite-q or finite-T damping rate. Its small quartic thermal-thermal
+piece does not bound omitted cubic-sunset/mixed diagrams or unknown Wilson
+matching. Bose gain/loss identity is not SK/KMS/noise or entropy-transport
+closure. Next controller: renormalized cubic-sunset/vacuum Wilson matching.
+Full Topic13/R1-R5/Goal, material/readout/scale, finite-T normal/heat/Kubo
+transport and original causal admission remain open. No physical/global
+unlock, old Hartree repair, pristine-blind claim or new numeric Xie access.
+
 ## New Phase-EFT Thermal Difference Boundary (2026-10-02)
 
 [New EFT evidence](Result/artifacts/t13_low_T_phase_eft.json) closes a

@@ -1,3 +1,27 @@
+## 2026-10-02 - Derived phase interactions and leading phonon attenuation
+
+MAJOR_RESULT_CLOSURE: T13_LOW_T_PHASE_INTERACTION_AND_DECAY_KERNEL, CLOSED_FOR_LANE. Full Topic13/R1-R5/Goal and physical funding acceptance remain open.
+
+WHAT_IS_ACTUALLY_CLOSED: Same-tree-pressure canonical cubic/quartic vertices, tree q5/T8 dispersion, one explicitly subtracted quartic thermal-thermal pressure piece and a derived leading T=0 Beliaev cut. Direct stationary pressure and actual energy-conserving phase-space agree with analytic results; the known dilute-Bose limit verifies pole-width versus occupation-rate factor two. On-shell Bose detailed balance holds, not full KMS.
+
+WHAT_REMAINS_OPEN: Renormalized cubic-sunset/mixed vacuum thermal terms, real self-energy and Wilson input, complete finite-q residues/vertices, finite-T normal/heat/collision/Kubo/SK-KMS/entropy transport, independent physical source/material/readout/scale. Small calculated quartic contribution is not total truncation error or lab feasibility.
+
+DEPENDENCY_UNLOCKED: Two-loop matching and finite-T collision research only. No physical/Core/Gravity unlock; old Hartree and owner composition unchanged.
+
+STATUS: PASS_SCOPED_INTERACTION_KERNEL; source-free candidate calculation, public safety safe.
+
+WHAT_CHANGED: Separate verifier/29 focused tests/JSON/derivation/local equation registry, funding latest-evidence/controller/predecessor tests, local README/method/limits/formula/spec and Goal/14-day/12-week/decision handoffs. Registry initially declared before computation, then synced to scoped verification and artifact regenerated. One multi-file documentation patch failed atomically due a mismatched heading, corrected without partial edits or science changes.
+
+EQUATION_OR_MAPPING: Gamma_occupation=3(g_t+g_s/c2)^2*c2*q5/(80pi); gamma_pole=Gamma_occupation/2. C8_disp=4pi6*(4eta2-c*zeta)/(15c9); quartic Q8 is separately subtracted and excludes cubic/mixed terms. Natural E units, not Kelvin alpha; canonical phase is not UET Pi and radial amplitude is not C.
+
+VERIFICATION: Fourteen artifact checks pass. Final single linked run across twelve test files: 171 passed in 7.65 seconds, including 29 new focused tests. Earlier 52/53-test interaction+phase runs are subsets, not additional results. Selection covers new interactions/phase EFT, Hartree low-T/joint static/response, thermal Ward/finite-momentum 1PI/stiffness/conditional operator, funding contract/decision and pole measurement design. Independent direct pressure, Bose/Wick moments, exact-tree phase-space/group velocity, energy/Bose/coordinate/free/decoupled and known-limit controls, source/protected hashes, runtime audit file allowlist and whitespace pass. Finest decay coefficient errors 9.870e-5/2.507e-5, pressure T8 <9.264e-8 and entropy <2.310e-7. Artifact f1679543e0a644c5104d001ea7ed84adbaf1298f8d8315c9c5108cdcfb53fd0c; predecessor 050aceb4f94f3534929d8c59c75da4dda8efe16ce7aec250a34f6f8b5868dcb7 unchanged. Both prior-head 8f571843fbaecc88a073d027088fead8ee44521b workflows completed successfully; new-head CI must be checked separately. No full repo or external validation/model trial claimed.
+
+CONTROLLING_BLOCKER: renormalized_cubic_sunset_and_vacuum_Wilson_matching_open, plus independent physical inputs and finite-T normal/heat transport.
+
+NEXT_ACTION: Commit/push coherent packet to existing draft PR #30 and inspect exact-head checks. Then derive Ward-consistent subtraction/regulator and missing two-loop terms with source/entropy consistency before total remainder claims; use derived cut for finite-T collision research and independently review the measurement card. Preserve 7/11 October and five later reviews; Goal active, model trial NOT_RUN/configuration unchanged.
+
+CLAIM_BOUNDARY: Leading candidate interaction/cut kernels only, not controlled full quantum EOS, full finite-q/finite-T damping, physical heat/Kubo/KMS, independent alpha/source admission, external validation or Full Topic13/Core. No fit, assigned width, old mass repair, clipping/filter/padding/threshold change, numeric Xie read or Core-owner edit. Original conserved-C failure at 1e-6 and prior exposure REVIEW_REQUIRED retained; physical/full-Core/global promotion false.
+
 ## 2026-10-02 - New tree-matched low-T phase thermal prescription
 
 MAJOR_RESULT_CLOSURE: T13_TREE_MATCHED_LOW_T_PHASE_THERMODYNAMIC_PRESCRIPTION, CLOSED_FOR_LANE. Full Topic13/R1-R5/Goal and physical acceptance remain open.

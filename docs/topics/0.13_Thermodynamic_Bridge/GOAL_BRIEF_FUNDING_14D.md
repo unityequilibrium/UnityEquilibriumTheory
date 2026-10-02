@@ -8,6 +8,16 @@
 
 ปิดคำถามว่า He-4/O(2) bridge ที่แช่แข็ง calibration แล้วกำหนด independent dynamic response ได้หรือไม่ และต้องวัดอะไรเพิ่มจึงแยกคำตอบได้ ผลสำเร็จต้องมี predictive-content derivation หรือ scoped nonidentifiability proof ที่เพิ่มจาก matching identity เดิม พร้อม measurement design และชุดหลักฐาน ไม่ใช้จำนวน artifacts/PASS เป็นเกณฑ์สำเร็จ
 
+## Latest Interaction Handoff (2026-10-02)
+
+[Derived interaction/decay kernels](Result/artifacts/T13_LOW_T_INTERACTIONS_2026-10-02.md)
+close a leading T=0 mechanism, tree T8 dispersion and one quartic piece,
+not full thermal remainder or transport. Continue with matched cubic-sunset,
+mixed vacuum terms/Wilson input and source/entropy consistency, alongside
+independent material/readout/scale feasibility. Do not rerun unchanged tree
+integrals as full scientific progress. Preserve predecessor and 7/11 October,
+R1-R5, model trial NOT_RUN and full Goal/physical acceptance rules.
+
 ## Start and continue
 
 เอกสารเลือกงานฉบับอ่านง่าย: [Funding decision roadmap 2 ตุลาคม](FUNDING_DECISION_ROADMAP_2026-10-02.md) และ companion JSON ใช้กำหนดแพ็กก่อน freeze/รอบทุนถัดไป คง objective และ completion rule ของแผนเดิม; ตรวจ existing active Goal ก่อนสร้างเป้าหมาย และไม่ถือเอกสารวางแผนนี้เป็นการรับผลวิทยาศาสตร์.

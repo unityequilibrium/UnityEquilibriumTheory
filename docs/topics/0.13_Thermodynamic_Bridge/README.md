@@ -6,6 +6,19 @@ description: "Research module for Thermodynamic Bridge within the Unity Equilibr
 
 # 0.13 Thermodynamic Bridge
 
+## Derived Phase Interactions and Attenuation (2026-10-02)
+
+The [interaction result](Result/artifacts/T13_LOW_T_INTERACTIONS_2026-10-02.md)
+derives cubic/quartic vertices and a leading zero-T one-to-two phonon decay,
+not an assigned damping width. Exact-tree phase-space, energy/Bose balance,
+direct stationary pressure and a known-limit factor-two check agree.
+Tree-dispersion thermal pressure extends to T8; one quartic thermal-thermal
+term is computed separately, not relabelled a total error bound.
+The controller is now renormalized cubic-sunset/vacuum Wilson matching,
+with physical inputs and finite-T normal/heat transport still open.
+Full Topic13/R1-R5/Core unlock remains false; predecessor hashes, failed
+conserved-C branch, prior Xie review and 7/11 October dates are preserved.
+
 ## New Tree-Matched Low-T Phase Prescription (2026-10-02)
 
 The [separate EFT derivation](Result/artifacts/T13_LOW_T_PHASE_EFT_2026-10-02.md)

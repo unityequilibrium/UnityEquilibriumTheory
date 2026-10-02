@@ -8,6 +8,14 @@
 
 ## ผลหลักสำหรับพอร์ตและทุนรอบถัดไป
 
+Current interaction successor: [derived phase kernels](Result/artifacts/T13_LOW_T_INTERACTIONS_2026-10-02.md)
+compute a leading T=0 decay rather than assign a width. Tree T8 dispersion
+and one quartic piece do not close the full quantum thermal remainder.
+The next R1 calculation is matched cubic-sunset/mixed vacuum and Wilson
+control, followed by finite-T collision/normal response as justified.
+Independent material/source/readout/scale remains under R2-R3. No review
+date, R1-R5 acceptance, model/trial policy or uncertain call scenario changes.
+
 ### Current science: new thermal prescription, then quantify its control
 
 [Tree-matched phase EFT](Result/artifacts/T13_LOW_T_PHASE_EFT_2026-10-02.md)
