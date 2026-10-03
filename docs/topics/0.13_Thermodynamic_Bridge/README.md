@@ -6,6 +6,17 @@ description: "Research module for Thermodynamic Bridge within the Unity Equilibr
 
 # 0.13 Thermodynamic Bridge
 
+## Landau Source And Conditional Support Bounds (2026-10-03)
+
+[New result](Result/artifacts/T13_ACOUSTIC_SOURCE_LANDAU_2026-10-03.md)
+adds the declared off-shell acoustic Landau source response and conditional
+quadratic energy-flux/sound support bounds. Its optical projection matches
+prior damping and the stated pair/Landau window is now assembled. This is
+not full real/contact/thermal response or old conserved-C causal repair.
+Next local real/source contact and complete thermal matching; independent
+material/readout/scale and Full Topic13/Goal remain open. Earlier sections
+below retain their predecessor scope.
+
 ## Action Source And Off-Shell Pair Response (2026-10-03)
 
 [Pair-source result](Result/artifacts/T13_ACOUSTIC_SOURCE_PAIR_2026-10-03.md)

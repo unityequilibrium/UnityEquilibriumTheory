@@ -6,7 +6,15 @@
 
 ตัวควบคุมงาน: [funding_portfolio_14d_plan.json](Data/03_Research/funding_portfolio_14d_plan.json) | คำสั่งเริ่มงาน: [GOAL_BRIEF_FUNDING_14D.md](GOAL_BRIEF_FUNDING_14D.md)
 
-Latest science 3 October: [off-shell pair/source interface](Result/artifacts/T13_ACOUSTIC_SOURCE_PAIR_2026-10-03.md)
+Latest science 3 October: [Landau/source and support bounds](Result/artifacts/T13_ACOUSTIC_SOURCE_LANDAU_2026-10-03.md)
+adds declared off-shell acoustic Landau absorption and combines pair/Landau
+windows with conditional group/sound support bounds. Next local real and
+source-contact matching plus complete thermal consistency; original
+conserved-C, physical inputs and all full acceptance/7-11 October unchanged.
+Canonical field acoustic_source_Landau_evidence_2026_10_03. Earlier records
+retain predecessor/snapshot scope, including the compact planning brief.
+
+Prior science 3 October: [off-shell pair/source interface](Result/artifacts/T13_ACOUSTIC_SOURCE_PAIR_2026-10-03.md)
 supplies action-source susceptibility and positive pair spectral dressing,
 not full off-shell Landau/source/contact/local real or thermal matching.
 Canonical field acoustic_source_pair_evidence_2026_10_03; full acceptance,

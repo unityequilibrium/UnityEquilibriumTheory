@@ -10,7 +10,15 @@
 
 ## ผลหลักสำหรับพอร์ตและทุนรอบถัดไป
 
-Latest science 3 October: [pair-source interface](Result/artifacts/T13_ACOUSTIC_SOURCE_PAIR_2026-10-03.md)
+Latest science 3 October: [Landau/source and support bounds](Result/artifacts/T13_ACOUSTIC_SOURCE_LANDAU_2026-10-03.md)
+adds acoustic Landau absorption and the stated combined source windows,
+with conditional quadratic energy-flux/sound bounds. R1 still needs local
+real/source-contact and complete thermal consistency; group speed is not
+old conserved-C causal repair. R2-R3 physical inputs, all full acceptance,
+7/11 October, later dates/models/NOT_RUN trial unchanged. Canonical current
+field acoustic_source_Landau_evidence_2026_10_03; earlier rows are snapshots.
+
+Prior science 3 October: [pair-source interface](Result/artifacts/T13_ACOUSTIC_SOURCE_PAIR_2026-10-03.md)
 adds the declared h source and positive off-shell pair spectral response.
 R1 still needs Landau/contact/local real/thermal matching, R2-R3 physical
 inputs unchanged; no full acceptance or date/model change.

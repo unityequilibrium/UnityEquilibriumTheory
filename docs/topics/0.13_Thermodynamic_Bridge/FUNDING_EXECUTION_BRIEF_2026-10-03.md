@@ -2,6 +2,8 @@
 
 วันที่ทบทวน: 3 ตุลาคม 2026 | ฉบับสรุปเพื่อเลือกงาน ไม่ใช่ controller ใหม่
 
+Science handoff หลังรอบวางแผน: [Landau/source result](Result/artifacts/T13_ACOUSTIC_SOURCE_LANDAU_2026-10-03.md) รับ acoustic absorption/support window เข้า canonical evidence แล้วโดย science wave แยก. Current controller คือ `local_real_source_contact_and_complete_thermal_sunset_matching_open`; ไม่ใช่ full real/thermal/physical acceptance. Snapshot และข้อความ pending ด้านล่างคงสภาพของรอบ planning เดิม ไม่เขียนประวัติย้อนหลัง; วัน/เกณฑ์/โมเดลไม่เปลี่ยน.
+
 อ่านรายละเอียดจาก [แผน 14 วัน](RESEARCH_PLAN_14D_FUNDING_2026-09-27.md),
 [แผนระยะยาว](RESEARCH_ROADMAP_MODELS_12W_2026-09-27.md) และ
 [canonical contract](Data/03_Research/funding_portfolio_14d_plan.json).

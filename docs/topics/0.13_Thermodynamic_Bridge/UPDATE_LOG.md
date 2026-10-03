@@ -1,3 +1,27 @@
+## 2026-10-03 - Acoustic off-shell Landau source and quadratic support bounds
+
+MAJOR_RESULT_CLOSURE: T13_ACOUSTIC_OFF_SHELL_LANDAU_SOURCE_AND_FLUX_BOUND, CLOSED_FOR_LANE. Full Topic13/Goal/R1-R5 remain open.
+
+WHAT_IS_ACTUALLY_CLOSED: Conditional quadratic positive-energy group/sound bounds, declared acoustic off-shell Landau Gram/source kernel, independent on-shell modal optical projection and combined pair/Landau absorption on the stated windows.
+
+WHAT_REMAINS_OPEN: Principal-value/local real and complete source/contact matching, all-mode quantum/heavy, full thermal sunset/mixed pressure/source/entropy, normal/heat/Kubo/SK-KMS and independent material/readout/scale/uncertainty.
+
+DEPENDENCY_UNLOCKED: Dispersive/source matching research only. No original conserved-C repair, physical/Core/Gravity or owner-composition unlock.
+
+STATUS: PASS_SCOPED_LANDAU_SOURCE_INTERFACE; public safety safe.
+
+WHAT_CHANGED: New verifier/16 tests/three-entry registry/artifact/derivation; canonical source-Landau evidence and predecessor pointers with one regression; five research docs and five portfolio/Goal handoffs including compact brief. Earlier planning snapshots and predecessor/action files unchanged. One multi-file patch failed atomically on a BOM/heading mismatch; corrected with section anchors and no partial edits.
+
+EQUATION_OR_MAPPING: H-F=(E-p)^2 udagger K u+udagger V0 u>=0; acoustic Schur E>=cp; R_L=integral V_L V_Ldagger (np-nr)/(16pi q); Im delta_chi=d_hdagger R_L d_h. H/F normalized E2, R E2, chi E^-2 and h E3; not SI heat/Kelvin/detector mapping. Conditional mu>0 positive constant quadratic parent only; group speed alone is not full causal proof.
+
+VERIFICATION: Final single nineteen-file linked selection 293 passed in 58.94 seconds, including16 Landau,24 funding and5 reading-brief tests. Eight artifact checks on24 off-shell rows/eight on-shell controls; independent angular/root/optical/velocity-FD, positive Hermitian Gram, source covariance/free/zero-T/invalid-input/Bose/support/convergence, protected hashes and audit-time Path read allowlist pass. Max quadrature9.222e-13, tail1.436e-10, angular4.873e-12, Gram5.704e-14, modal1.121e-11, velocity-FD1.262e-10. Artifact SHA-256 1d9337b1f7074fb90a6034f082017b39e07d32defbfbcd6d26520f2a126adbd2. Acceptance/calendar/holdout/model/historical/predecessor values explicitly compared against HEAD unchanged; only current science pointer/question and preliminary list advanced with one evidence record. Note links and whitespace pass. Focused16-test run is a subset, not added. No full repo/external/model validation or total truncation/physical uncertainty bound.
+
+CONTROLLING_BLOCKER: local_real_source_contact_and_complete_thermal_sunset_matching_open; physical input/calibration/transport separate.
+
+NEXT_ACTION: Scoped local commit; upstream publication still denied pending user authorization, no retry/new-head CI claim. Derive same-prescription dispersive/local/source-contact and thermal consistency, with independent measurement-information work separately. Preserve original7/11 October and full Goal acceptance.
+
+CLAIM_BOUNDARY: Acoustic absorption windows and conditional quadratic support only; cq..Eq gap/full spectrum, real/contact, all-mode quantum/heavy and full thermodynamics/physical transport remain open. No fitted/assigned width, data/alpha fabrication, clipping/padding/filter, threshold/ontology/Core-owner change or Xie numeric read; prior context exposure REVIEW_REQUIRED, original conserved-C failure unchanged. No new Goal/automation/model configuration/contact/purchase/submission. Goal stays active because substantive response/measurement work remains.
+
 ## 2026-10-03 - Compact portfolio execution and model reading route
 
 MAJOR_RESULT_CLOSURE: PLANNING_ONLY; no scientific or Goal acceptance.

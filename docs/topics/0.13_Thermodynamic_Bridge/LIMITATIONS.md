@@ -1,5 +1,17 @@
 # Limitations
 
+## Landau Absorption Is Not Full Retarded Or Physical Closure (2026-10-03)
+
+[Latest result](Result/artifacts/T13_ACOUSTIC_SOURCE_LANDAU_2026-10-03.md)
+covers declared acoustic windows and positive constant-quadratic-parent
+group/sound support bounds only. Group speed alone is not a nonlinear
+domain-of-dependence proof or conserved-C repair. cq<=omega<=Eq, all-mode
+quantum/heavy loops, dispersive/contact/local real and complete thermal
+pressure are not closed. Finite-tail differences and small correction/tree
+ratios are not total approximation uncertainty. No detector/alpha/Kubo/KMS
+admission follows; prior exposure remains REVIEW_REQUIRED. Older sections
+describe predecessors, not a retraction of this limited successor.
+
 ## Pair Source Does Not Close The Full Retarded Operator (2026-10-03)
 
 [Source result](Result/artifacts/T13_ACOUSTIC_SOURCE_PAIR_2026-10-03.md)

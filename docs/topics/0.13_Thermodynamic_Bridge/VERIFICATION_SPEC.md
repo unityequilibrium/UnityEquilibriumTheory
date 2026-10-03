@@ -1,5 +1,17 @@
 # Verification Spec
 
+## Off-Shell Landau Source And Support Verification (2026-10-03)
+
+Run Research_T13_Acoustic_Source_Landau.py/test_t13_acoustic_source_Landau.py.
+Eight checks require energy-flux/implicit velocity and independent finite
+difference, on-shell modal projection, Hermitian positive Gram/source,
+Bose/strict shell, independent angular root, quadrature/tail and conditional
+support/window bounds. Require zero-T/free/coordinate/invalid-input and
+audit-time read allowlist/protected hash controls. Preserve grids and 1e-9
+identity/1e-6 quadrature/original1e-6 causal gates; no clipping/padding or
+source at the tree pole. Unresolved support is not absence; full response,
+physical uncertainty, historical blinding and Goal are not accepted here.
+
 ## Off-Shell Pair Source Verification (2026-10-03)
 
 Run Research_T13_Acoustic_Source_Pair.py and test_t13_acoustic_source_pair.py.

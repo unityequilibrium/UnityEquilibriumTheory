@@ -1,5 +1,16 @@
 ﻿# Method
 
+## Off-Shell Landau Source And Flux Bounds (2026-10-03)
+
+[Derivation](Result/artifacts/T13_ACOUSTIC_SOURCE_LANDAU_2026-10-03.md)
+uses the same parent/cubic tensor, negative-positive acoustic legs and Bose
+difference in a positive Gram kernel. Check on-shell optical projection,
+independent angular roots and source coordinate covariance. Derive group
+velocity by differentiating the gyroscopic kernel; positive K/V0 gives
+H-F>=0 and the acoustic Schur root gives E>=cp. Distinguish conditional
+support exclusion from unresolved finite domains; do not fill cq..Eq gap.
+Full local real/contact/thermal and material readout remain separate.
+
 ## Off-Shell Pair Source Interface (2026-10-03)
 
 [Derivation](Result/artifacts/T13_ACOUSTIC_SOURCE_PAIR_2026-10-03.md) uses

@@ -10,7 +10,18 @@
 
 ปิดคำถามว่า He-4/O(2) bridge ที่แช่แข็ง calibration แล้วกำหนด independent dynamic response ได้หรือไม่ และต้องวัดอะไรเพิ่มจึงแยกคำตอบได้ ผลสำเร็จต้องมี predictive-content derivation หรือ scoped nonidentifiability proof ที่เพิ่มจาก matching identity เดิม พร้อม measurement design และชุดหลักฐาน ไม่ใช้จำนวน artifacts/PASS เป็นเกณฑ์สำเร็จ
 
-## Latest Pair Source Handoff (2026-10-03)
+## Latest Landau Source Handoff (2026-10-03)
+
+[Landau/source and support result](Result/artifacts/T13_ACOUSTIC_SOURCE_LANDAU_2026-10-03.md)
+now closes the declared acoustic absorption windows and conditional
+quadratic-parent group/sound bounds. Next local real/source-contact and
+complete thermal consistency, not another unchanged pair/Landau cut run.
+No original conserved-C repair, physical input/transport or Full Goal/R1-R5
+acceptance. Canonical acoustic_source_Landau_evidence_2026_10_03; preserve
+7/11 October and owner/holdout/ontology boundaries. Planning snapshots
+below remain historical, not current evidence pointers.
+
+## Prior Pair Source Handoff (2026-10-03)
 
 [Pair/source interface](Result/artifacts/T13_ACOUSTIC_SOURCE_PAIR_2026-10-03.md)
 now derives the original h-source susceptibility and an off-shell pair

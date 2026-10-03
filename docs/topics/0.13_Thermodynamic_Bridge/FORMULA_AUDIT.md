@@ -1,5 +1,15 @@
 # Formula Audit: 0.13_Thermodynamic_Bridge
 
+## Landau Source And Quadratic Support Contract (2026-10-03)
+
+[Local registry](Data/03_Research/t13_acoustic_source_Landau_registry.json)
+records conditional energy-flux, off-shell Landau/source and acoustic
+spectral-window IDs. H/F are normalized E2 forms, v/c dimensionless, R_L E2,
+h E3 and chi E^-2, not SI heat or Kelvin mapping. Positive K/V0, continuous
+rest acoustic branch and stated support domain are explicit. Same action
+fixes cubic/source inputs; real/contact/thermal matching remains open.
+No C/phase/Pi or R_gen/R_obs relabel, Core registry/owner edit or claim unlock.
+
 ## Action-Source Pair Contract (2026-10-03)
 
 [Local registry](Data/03_Research/t13_acoustic_source_pair_registry.json)
