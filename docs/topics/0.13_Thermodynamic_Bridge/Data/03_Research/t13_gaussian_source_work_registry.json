@@ -1,0 +1,14 @@
+{
+  "schema_version": "uet-topic-local-equation-contract-v1",
+  "owner_topic": "0.13_Thermodynamic_Bridge",
+  "branch_id": "t13.candidate.acoustic_thermal_insertion_tree_virtual_response_v1",
+  "status": "LOCAL_SOURCE_WORK_ARTIFACT_CONTROLLED_NOT_CORE_PROMOTION",
+  "verification_artifact": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/t13_gaussian_source_work.json",
+  "numerical_protocol": {"locked_before_first_audit": true, "duration": 80.0, "carrier": 0.04, "amplitudes": [0.02, 0.01, 0.005], "pair_orientation_factor": 2, "pulse": "sin^8(pi*t/L)*cos(carrier*t), compact support with derivatives through seven vanishing", "original_causal_threshold": 1e-6, "thresholds_changed": false},
+  "entries": [
+    {"id": "t13.thermal_insertion.cyclic_source_work", "ontology": "external natural-action h source and acoustic-populated Gaussian covariance; no added C or R_gen state", "equation": "K bddot+G bdot+V_q b=e_Phi h; W=int h*dot_l_Phi=int dot_b*T:X=W_pair+W_number", "units": "h:E^3; b:E; loop l per internal pair:E^-2; W_pair:E", "derivation_class": "DERIVED_SOURCE_COMPATIBLE_REAL_PAIR_HAMILTONIAN_AND_MODAL_TRANSITIONS", "observable": "conditional leading cyclic source work per finite internal pair", "data_role": "DERIVED", "verification_status": "CONTROLLED_BY_LINKED_ARTIFACT", "controlling_blocker": "full_interacting_heat_readout_collision_and_entropy_mapping_open", "claim_boundary": "Both real pair orientations counted; no vacuum plus one, fitted rate, physical Kelvin/readout or full interacting transport"},
+    {"id": "t13.thermal_insertion.Hamiltonian_entropy_boundary", "ontology": "symplectic covariance flow, not a new entropy field or a complete quantum state", "equation": "Delta_E=int .5 Tr(dot_V C); S P S^T=P; det S=1; conditional full-rank Delta_s=log|det S|=0", "units": "pair Delta_E:E; conditional entropy difference:dimensionless fixed-coordinate diagnostic", "derivation_class": "DERIVED_FINITE_HAMILTONIAN_FLOW_WITH_CONDITIONAL_FULL_RANK_GAUSSIAN_IDENTITY", "observable": "energy transfer distinct from irreversible heat/entropy production", "data_role": "DERIVED_AND_DIAGNOSTIC_ONLY_FULL_RANK_CONTROL", "verification_status": "CONTROLLED_BY_LINKED_ARTIFACT", "controlling_blocker": "collision_operator_and_irreversible_entropy_contract", "claim_boundary": "Primary thermal insertion is rank deficient and has no full quantum/differential entropy; no thermodynamic entropy value or global no-go inferred"}
+  ],
+  "core_registry_modified": false,
+  "claim_promotion": false
+}

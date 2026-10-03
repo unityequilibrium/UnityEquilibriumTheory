@@ -1,6 +1,16 @@
 # Formula Audit: 0.13_Thermodynamic_Bridge
 
 
+## Cyclic Work And Conditional Gaussian Entropy (2026-10-03)
+
+[Registry](Data/03_Research/t13_gaussian_source_work_registry.json) records
+W2=int bdot*T:X=int h*dot_l_Phi and independent pair/number modal work;
+the real pair counts both orientations. h:E^3, b:E, loop mean per internal
+pair:E^-2 and pair W2:E; no SI momentum measure or Kelvin map admitted.
+S*P*S^T=P and conditional full-rank Delta_s=log|det S|=0 do not define
+entropy of the rank-deficient primary insertion. Aggregate artifact stays
+FAIL/PARTIAL despite the verified zero-amplitude identities.
+
 ## Exact Zero-Channel Soft Source (2026-10-03)
 
 [Registry](Data/03_Research/t13_collisionless_soft_source_registry.json)

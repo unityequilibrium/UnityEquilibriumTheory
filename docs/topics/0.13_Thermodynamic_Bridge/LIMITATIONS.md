@@ -1,6 +1,17 @@
 # Limitations
 
 
+## Source Work Does Not Supply Irreversible Heat (2026-10-03)
+
+[Cyclic-work aggregate](Result/artifacts/T13_GAUSSIAN_SOURCE_WORK_2026-10-03.md)
+remains PARTIAL: the locked amplitudes are higher-order dominated and
+tiny-work binary64 subtraction fails its original gates. Verified leading
+work does not repair that grid or close a controlled nonlinear remainder.
+Energy is rotating Gaussian Hamiltonian, not the full physical Noether
+ledger. Primary rank-four insertion has no complete-state entropy; the
+positive full-rank entropy control is diagnostic only, not added vacuum.
+Actual physical source/readout/scale, collisions and entropy remain open.
+
 ## Soft Streaming Is Not Hydrodynamic Transport (2026-10-03)
 
 [New result](Result/artifacts/T13_COLLISIONLESS_SOFT_SOURCE_2026-10-03.md)

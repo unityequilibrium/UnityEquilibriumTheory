@@ -1,7 +1,15 @@
 # Topic 13: ผลหลักสำหรับพอร์ตและแผนต่อยอด
 
 
-Latest science handoff: [collisionless soft source](Result/artifacts/T13_COLLISIONLESS_SOFT_SOURCE_2026-10-03.md)
+Latest science handoff: [cyclic source work](Result/artifacts/T13_GAUSSIAN_SOURCE_WORK_2026-10-03.md)
+is PARTIAL: the zero-amplitude work identity and conditional fine-grained
+entropy boundary are verified, not the frozen finite-amplitude/binary64
+audit or irreversible heat. Rank-deficient insertion entropy is undefined.
+Canonical gaussian_source_work_evidence_2026_10_03. Keep independent
+measurement/readout/scale and controlled remainder explicit; full Goal/
+R1-R5,7/11 October, owner/holdout/models/trial unchanged. Below is history.
+
+Prior science handoff: [collisionless soft source](Result/artifacts/T13_COLLISIONLESS_SOFT_SOURCE_2026-10-03.md)
 resolves six exact Gaussian streaming channels, fixed-centre convergence
 and the full-domain static endpoint. First FAIL and old truncated-tail
 failure remain. Canonical collisionless_soft_source_evidence_2026_10_03;

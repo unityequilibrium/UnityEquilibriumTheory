@@ -1,3 +1,27 @@
+## 2026-10-03 - Leading Gaussian source work and conditional entropy boundary
+
+MAJOR_RESULT_CLOSURE: T13_GAUSSIAN_CYCLIC_SOURCE_WORK_AND_ENTROPY_BOUNDARY, PARTIAL. T13_GAUSSIAN_ZERO_AMPLITUDE_CYCLIC_WORK_IDENTITY and T13_GAUSSIAN_CONDITIONAL_FINE_GRAINED_ENTROPY_BOUNDARY are CLOSED_FOR_LANE. Original finite-amplitude/binary64 audit stays FAIL; Full Goal/G2-G4/R1-R5 are unaccepted.
+
+WHAT_IS_ACTUALLY_CLOSED: Exact forced Liouvillian-tone work agrees with independent stimulated modal transitions at identical source parameters; source mean reciprocity follows by integration by parts. Finite Hamiltonian flow preserves Poisson/volume and conditional full-rank Gaussian entropy, while primary rank-four insertion entropy is undefined.
+
+WHAT_REMAINS_OPEN: The frozen amplitude grid does not reach leading work; binary64 work/energy cancellation, controlled nonlinear remainder, complete quantum/interacting/vacuum matching, physical source/readout/material scale and collision/KMS/entropy remain open.
+
+DEPENDENCY_UNLOCKED: No physical/Core/Gravity or owner composition unlock. New aggregate is observed partial evidence, not inserted into the existing CLOSED_FOR_LANE accepted portfolio list.
+
+STATUS: FAIL_SCOPED_GAUSSIAN_SOURCE_WORK; aggregate PARTIAL. Public safety safe. Prior turn changed the delivery plan; this turn produces new derived and verified scientific evidence.
+
+WHAT_CHANGED: Topic-local calculation/36 tests/registry/final and first-failure artifacts/derivation; canonical observed-partial evidence and current pointer with predecessor lineage, one funding test, five research docs and five portfolio/Goal handoffs. No primary/Core-owner, action or predecessor edit.
+
+EQUATION_OR_MAPPING: Phi-only compact source satisfies K bddot+G bdot+V_q b=e_Phi h. Real-pair W2=int bdot*T:X=int h*dot_l_Phi=W_pair+W_number, twice single orientation. Pair W2:E; rotating Gaussian Hamiltonian, not full physical E=Hrot+mu N/SI heat. S P S^T=P and conditional Delta_s=log|det S|=0 do not assign entropy to incomplete primary covariance.
+
+VERIFICATION: Final25-file linked suite477 passed in566.10 seconds, including36 new work and30 funding tests. Tests check record integrity, not promotion of the six failed original gates. Six cases; extended time/modal discrepancy at most1.407e-37;35/50 digits agree at stored binary64 precision only. Work coefficient6.823e-15 to4.441e-13; raw binary64 relative error reaches2.681e-3. Halving amplitude work ratios near1/16; zero-drive energy drift3.469e-18 not subtracted. First audit FAIL retained; exact factor-half test initially used an unresolved raw integral and was corrected to the accurate coefficient without changing physics gates. Planning test initially detected that PARTIAL cannot enter the old accepted list; added separate observed-partial list rather than weakening that rule. Final artifact959441d2940f0aa209d72b8f8671d440807dd14ae9a80aff4357606f3bce4c62; first failure0c8c828f512f0a70653d30c15c4b0f1e7d960fb878712c774ae298dd038f35f4. Audit-time read allowlist, current/protected/failure hashes, six note links and HEAD calendar/acceptance/holdout/model/history invariants checked. Focused runs are subsets, not added. No external, whole-repository or interacting continuum validation/model trial.
+
+CONTROLLING_BLOCKER: finite_amplitude_work_grid_outside_leading_limit_and_binary64_work_cancellation; independent physical material/source/readout/scale and interacting entropy remain separate.
+
+NEXT_ACTION: Use the verified leading coefficient/entropy boundary in one independent measurement design. Derive a controlled remainder before any finite-amplitude claim; do not tune a pulse/amplitude or rerun the same failed grid unchanged. Preserve7/11 October, later reviews and full scientific Goal acceptance. Commit coherent wave locally; prior push authorization denial remains, no retry/workaround or new-head CI/public-main synchronization claim.
+
+CLAIM_BOUNDARY: Conditional finite two-block Gaussian rotating-energy identities only. q0 is an orientation control, not new physical mode counting. No primary-state entropy/irreversible heat, full physical Noether ledger, Kubo, independent alpha, Full Topic13/Core/global promotion, fabricated data, fitting, assigned rate/width, clipping/padding/filter or threshold/ontology/owner change. No numeric Xie access; prior exposure REVIEW_REQUIRED and original conserved-C baseline unchanged. No new Goal/automation/configuration/contact/purchase/submission.
+
 ## 2026-10-03 - Bounded portfolio target and next-round research decisions
 
 MAJOR_RESULT_CLOSURE: PLANNING_ONLY. No scientific acceptance or Goal completion.

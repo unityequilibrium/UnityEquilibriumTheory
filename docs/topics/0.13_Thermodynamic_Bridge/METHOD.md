@@ -1,6 +1,16 @@
 ﻿# Method
 
 
+## Cyclic Source Work Without Assigned Dissipation (2026-10-03)
+
+[Work derivation](Result/artifacts/T13_GAUSSIAN_SOURCE_WORK_2026-10-03.md)
+constructs a compact Phi-only source through the unsourced radial/phase
+rows. Real-pair orientation is twice the single-oriented predecessor.
+Exact Liouvillian-tone integration and independent stimulated transition
+work resolve the zero-amplitude coefficient without an amplitude fit.
+Original finite-amplitude and binary64 controls remain FAIL; no parameter,
+pulse or gate is changed. Conditional entropy is not a thermal readout.
+
 ## Collisionless Streaming And Full Momentum Domain (2026-10-03)
 
 [Derivation](Result/artifacts/T13_COLLISIONLESS_SOFT_SOURCE_2026-10-03.md)

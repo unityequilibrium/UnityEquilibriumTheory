@@ -5,7 +5,16 @@
 สถานะ: เตรียมไว้สำหรับผู้ใช้เริ่ม Goal mode; การสร้างไฟล์นี้ยังไม่เริ่ม Goal หรือ automation
 
 
-## Latest Collisionless Source Handoff (2026-10-03)
+## Latest Cyclic Work Handoff (2026-10-03)
+
+[Cyclic-work evidence](Result/artifacts/T13_GAUSSIAN_SOURCE_WORK_2026-10-03.md)
+is PARTIAL. Leading time/modal work and conditional entropy identities
+close only their subresults; the frozen finite-amplitude/binary64 audit
+stays FAIL. Canonical gaussian_source_work_evidence_2026_10_03;
+no Full Goal/G2-G4/R1-R5 or physical/owner acceptance. Keep7/11 October,
+measurement design, unknown funding call and NOT_RUN model trial unchanged.
+
+## Prior Collisionless Source Handoff (2026-10-03)
 
 [Soft-ray evidence](Result/artifacts/T13_COLLISIONLESS_SOFT_SOURCE_2026-10-03.md)
 resolves Gaussian streaming channels and the full-domain static endpoint.

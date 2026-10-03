@@ -6,7 +6,15 @@
 
 ตัวควบคุมงาน: [funding_portfolio_14d_plan.json](Data/03_Research/funding_portfolio_14d_plan.json) | คำสั่งเริ่มงาน: [GOAL_BRIEF_FUNDING_14D.md](GOAL_BRIEF_FUNDING_14D.md)
 
-Latest science 3 October: [collisionless soft source](Result/artifacts/T13_COLLISIONLESS_SOFT_SOURCE_2026-10-03.md)
+Latest science 3 October: [cyclic source work](Result/artifacts/T13_GAUSSIAN_SOURCE_WORK_2026-10-03.md)
+is PARTIAL. Exact leading time/modal work and conditional Hamiltonian
+entropy boundary are verified, but the original finite-amplitude/binary64
+audit remains FAIL. It cannot accept G2-G4/full R1/Goal. Next controlled
+remainder and independent source/readout/material scale; original7/11
+October and later review dates, owner/holdout/model trial unchanged.
+Canonical gaussian_source_work_evidence_2026_10_03; older rows are history.
+
+Prior science 3 October: [collisionless soft source](Result/artifacts/T13_COLLISIONLESS_SOFT_SOURCE_2026-10-03.md)
 resolves six exact streaming channels, fixed-centre convergence and the
 static pressure endpoint in the full Bose momentum domain. Initial FAIL
 and raw truncated-tail boundary remain. Next source work/heat-readout,

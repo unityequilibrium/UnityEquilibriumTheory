@@ -6,6 +6,17 @@ description: "Research module for Thermodynamic Bridge within the Unity Equilibr
 
 # 0.13 Thermodynamic Bridge
 
+## Gaussian Cyclic Work And Entropy Boundary (2026-10-03)
+
+[Source-work record](Result/artifacts/T13_GAUSSIAN_SOURCE_WORK_2026-10-03.md)
+is PARTIAL: the leading coefficient is independently verified by exact
+time convolution and modal transitions; conditional Hamiltonian entropy
+invariance is checked. The frozen finite-amplitude/binary64 audit remains
+FAIL. Rank-deficient thermal insertion has no complete-state entropy;
+rotating Gaussian energy is not physical SI heat. Current canonical field
+gaussian_source_work_evidence_2026_10_03; no Full Goal/Core-owner promotion.
+Earlier sections retain predecessor scope.
+
 ## Gaussian Collisionless Source Ray (2026-10-03)
 
 [Soft-ray result](Result/artifacts/T13_COLLISIONLESS_SOFT_SOURCE_2026-10-03.md)

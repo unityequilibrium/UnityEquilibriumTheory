@@ -10,7 +10,14 @@ Science successor: [Low-T phase EFT](Result/artifacts/T13_LOW_T_PHASE_EFT_2026-1
 
 ### แผนลงมือและผลที่ต้องตัดสินจากสถานะ 3 ตุลาคม
 
-Latest science: [collisionless soft source](Result/artifacts/T13_COLLISIONLESS_SOFT_SOURCE_2026-10-03.md)
+Latest science: [cyclic source work](Result/artifacts/T13_GAUSSIAN_SOURCE_WORK_2026-10-03.md)
+is PARTIAL: leading time/modal coefficient and conditional entropy
+identities pass, not the frozen finite-amplitude/binary64 work audit.
+Canonical gaussian_source_work_evidence_2026_10_03; no G2-G4/full R1/Goal
+acceptance. Next controlled remainder and physical heat/readout/scale;
+7/11 October, later dates and existing owner/model/holdout unchanged.
+
+Prior science: [collisionless soft source](Result/artifacts/T13_COLLISIONLESS_SOFT_SOURCE_2026-10-03.md)
 resolves Gaussian streaming and static pressure matching. First FAIL and
 finite-cutoff errors remain, not hidden by full-domain integration.
 Canonical collisionless_soft_source_evidence_2026_10_03;

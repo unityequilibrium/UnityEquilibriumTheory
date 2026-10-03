@@ -1,6 +1,16 @@
 # Verification Spec
 
 
+## Cyclic Source-Work Failure And Verified Leading Identities (2026-10-03)
+
+[Work artifact](Result/artifacts/t13_gaussian_source_work.json) preserves
+all thirteen frozen gates and the first FAIL. Three additional extended
+checks test independent exact time convolution/modal work, real work and
+35/50-digit control at the same parameters. They do not replace the failed
+binary64/finite-amplitude checks. Tests verify the reported failure, input
+hashes, factor-two orientation, entropy/rank boundaries and audit-time
+read allowlist. Test PASS means record integrity, not physical acceptance.
+
 ## Collisionless Soft-Ray Verification (2026-10-03)
 
 Run Research_T13_Collisionless_Soft_Source.py/test_t13_collisionless_soft_source.py.

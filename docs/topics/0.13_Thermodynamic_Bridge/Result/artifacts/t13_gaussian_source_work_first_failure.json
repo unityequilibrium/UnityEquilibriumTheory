@@ -1,0 +1,1137 @@
+{
+  "major_result_id": "T13_GAUSSIAN_CYCLIC_SOURCE_WORK_AND_ENTROPY_BOUNDARY",
+  "topic": "0.13_Thermodynamic_Bridge",
+  "branch_id": "t13.candidate.acoustic_thermal_insertion_tree_virtual_response_v1",
+  "created_at": "2026-10-03T11:13:58.967735+00:00",
+  "closure_level": "PARTIAL",
+  "verification_status": "FAIL_SCOPED_GAUSSIAN_SOURCE_WORK",
+  "what_is_closed": "Conditional finite-pair leading cyclic source work and Hamiltonian entropy boundary, only when recorded checks pass",
+  "equation_or_mapping": "W_h_loop=int h*dot_l_Phi=int dot_b*T:X=W_modal; Delta_E_exact=int .5*Tr(dot_V*C); S P S^T=P",
+  "units": {
+    "b_Phi": "E",
+    "h": "E^3",
+    "loop_mean_per_internal_pair": "E^-2",
+    "cyclic_pair_work": "E",
+    "integrated_work_density_if_measure_admitted": "E^4",
+    "tree_work_density": "E^4",
+    "conditional_entropy_difference": "dimensionless fixed-coordinate diagnostic; not material entropy"
+  },
+  "derivation_class": "DERIVED_REAL_PAIR_HAMILTONIAN_AND_STIMULATED_MODAL_TRANSITIONS",
+  "observable": "conditional cyclic source energy transfer; no Kelvin/heat/readout admission",
+  "data_role": "DERIVED_NOT_CALIBRATION",
+  "declared_protocol": {
+    "mu": [
+      1.05,
+      1.2
+    ],
+    "momentum_triples": [
+      [
+        0.02,
+        0.031,
+        0.02
+      ],
+      [
+        0.04,
+        0.037,
+        0.02
+      ],
+      [
+        0.02,
+        0.02,
+        0.0
+      ]
+    ],
+    "T": 0.004,
+    "duration": 80.0,
+    "carrier": 0.04,
+    "amplitudes": [
+      0.02,
+      0.01,
+      0.005
+    ],
+    "solvers": [
+      {
+        "rtol": 1e-08,
+        "atol": 1e-11,
+        "max_step": 0.5
+      },
+      {
+        "rtol": 1e-10,
+        "atol": 1e-13,
+        "max_step": 0.25
+      }
+    ],
+    "fourier_quadrature_order": 512,
+    "locked_before_first_audit": true,
+    "pair_orientation_factor": 2
+  },
+  "action_controls": {
+    "Z": 1.0,
+    "m0_sq": 1.0,
+    "u": 1.0,
+    "gamma": 0.04000000000000001,
+    "epsilon": 0.05,
+    "Phi_reference": 0.0,
+    "response_mass_sq": 1.0,
+    "response_quartic": 1.0,
+    "response_kinetic": 1.0
+  },
+  "thresholds": {
+    "source_equation_relative": 1e-09,
+    "endpoint_absolute": 1e-10,
+    "work_method_relative": 2e-06,
+    "solver_work_relative": 1e-06,
+    "exact_energy_work_relative": 1e-05,
+    "exact_to_leading_relative": 0.01,
+    "symplectic_relative": 1e-08,
+    "volume_entropy_absolute": 1e-08,
+    "fourier_absolute_scaled": 1e-09,
+    "negative_control_minimum": 0.1,
+    "original_causal_leakage": 1e-06
+  },
+  "checks": {
+    "Phi_only_source_equations": true,
+    "compact_source_endpoints": true,
+    "independent_fourier_quadrature": true,
+    "time_covariance_and_modal_spectrum": false,
+    "mean_source_and_covariance_work": false,
+    "source_cycle_resolution": false,
+    "exact_cycle_energy_ledger": false,
+    "leading_amplitude_limit": false,
+    "Hamiltonian_symplectic_and_volume": true,
+    "conditional_entropy_control_and_primary_rank": true,
+    "conservative_contact_cycle": false,
+    "positive_stimulated_work_no_vacuum": true,
+    "wrong_orientation_detected": true
+  },
+  "examples": [
+    {
+      "mu": 1.05,
+      "T": 0.004,
+      "p": 0.02,
+      "r": 0.031,
+      "q": 0.02,
+      "linear": {
+        "covariance_work": 1.1310497885557519e-14,
+        "source_mean_work": 1.127896109557802e-14,
+        "contact_cycle_work": -2.8895010226743384e-17,
+        "tree_cycle_work_density": 5.84235540129805e-17,
+        "function_evaluations": 5762
+      },
+      "spectral": {
+        "work": 1.1280174468125896e-14,
+        "channels": [
+          {
+            "i": 0,
+            "j": 0,
+            "pair_frequency": 0.010766892364406224,
+            "number_frequency": 0.0023286809973662335,
+            "pair_work": 2.65307819175584e-15,
+            "number_work": 3.6900020036191006e-15
+          },
+          {
+            "i": 0,
+            "j": 1,
+            "pair_frequency": 1.0068306181421176,
+            "number_frequency": 0.9983924067750777,
+            "pair_work": 1.8499742252742305e-15,
+            "number_work": 1.110246399274399e-15
+          },
+          {
+            "i": 0,
+            "j": 2,
+            "pair_frequency": 2.1538999731869084,
+            "number_frequency": 2.145461761819868,
+            "pair_work": 2.73300814307304e-21,
+            "number_work": 1.3013407401410282e-20
+          },
+          {
+            "i": 1,
+            "j": 0,
+            "pair_frequency": 1.0088791777068165,
+            "number_frequency": -0.995783604345044,
+            "pair_work": 1.3800623421962447e-15,
+            "number_work": 5.967821548563559e-16
+          },
+          {
+            "i": 1,
+            "j": 1,
+            "pair_frequency": 2.004942903484528,
+            "number_frequency": 0.000280121432667535,
+            "pair_work": 0.0,
+            "number_work": 0.0
+          },
+          {
+            "i": 1,
+            "j": 2,
+            "pair_frequency": 3.1520122585293184,
+            "number_frequency": 1.147349476477458,
+            "pair_work": 0.0,
+            "number_work": 0.0
+          },
+          {
+            "i": 2,
+            "j": 0,
+            "pair_frequency": 2.1559736477531684,
+            "number_frequency": -2.142878074391396,
+            "pair_work": 8.07565221538166e-22,
+            "number_work": 1.2597168958655077e-20
+          },
+          {
+            "i": 2,
+            "j": 1,
+            "pair_frequency": 3.15203737353088,
+            "number_frequency": -1.1468143486136846,
+            "pair_work": 0.0,
+            "number_work": -0.0
+          },
+          {
+            "i": 2,
+            "j": 2,
+            "pair_frequency": 4.299106728575671,
+            "number_frequency": 0.0002550064311059863,
+            "pair_work": 0.0,
+            "number_work": 0.0
+          }
+        ],
+        "vacuum_plus_one_included": false
+      },
+      "cycles": [
+        {
+          "amplitude": 0.02,
+          "work": 5.195083353048034e-11,
+          "energy_change": 5.195083339210038e-11,
+          "work_ledger_relative": 2.663671522882302e-09,
+          "symplectic_relative": 6.608511782020943e-11,
+          "canonical_poisson_relative": 0.0,
+          "orientation_preserving": true,
+          "log_volume_change": -1.0409787602229381e-09,
+          "conditional_full_rank_entropy_change": -1.0409721973303476e-09,
+          "insertion_rank": 4,
+          "insertion_entropy": "UNDEFINED_FULL_COVARIANCE_RANK_DEFICIENT_NOT_QUANTUM_STATE",
+          "evolved_insertion_rank": 4,
+          "function_evaluations": 6878
+        },
+        {
+          "amplitude": 0.01,
+          "work": 3.246919984839926e-12,
+          "energy_change": 3.2469209612639993e-12,
+          "work_ledger_relative": 3.0072308036426097e-07,
+          "symplectic_relative": 6.700419011560348e-11,
+          "canonical_poisson_relative": 0.0,
+          "orientation_preserving": true,
+          "log_volume_change": -1.0554585009800443e-09,
+          "conditional_full_rank_entropy_change": -1.0554557228203976e-09,
+          "insertion_rank": 4,
+          "insertion_entropy": "UNDEFINED_FULL_COVARIANCE_RANK_DEFICIENT_NOT_QUANTUM_STATE",
+          "evolved_insertion_rank": 4,
+          "function_evaluations": 6902
+        },
+        {
+          "amplitude": 0.005,
+          "work": 2.0293258562717894e-13,
+          "energy_change": 2.0293185534758784e-13,
+          "work_ledger_relative": 3.598631480678346e-06,
+          "symplectic_relative": 6.842311166272789e-11,
+          "canonical_poisson_relative": 0.0,
+          "orientation_preserving": true,
+          "log_volume_change": -1.0778065835659323e-09,
+          "conditional_full_rank_entropy_change": -1.0778040682168921e-09,
+          "insertion_rank": 4,
+          "insertion_entropy": "UNDEFINED_FULL_COVARIANCE_RANK_DEFICIENT_NOT_QUANTUM_STATE",
+          "evolved_insertion_rank": 4,
+          "function_evaluations": 6854
+        }
+      ],
+      "work_methods_relative": 0.002680997577510997,
+      "mean_source_work_relative": 0.002788276015662317,
+      "linear_resolution_relative": 0.0045207297301971235,
+      "exact_resolution_relative": 2.356850327741979e-08,
+      "exact_to_leading_relative": [
+        0.9999999131473071,
+        0.9999996525884677,
+        0.9999986103544641
+      ],
+      "zero_temperature_work_absolute": 0.0,
+      "wrong_half_orientation_relative": 0.4986558976761704
+    },
+    {
+      "mu": 1.05,
+      "T": 0.004,
+      "p": 0.04,
+      "r": 0.037,
+      "q": 0.02,
+      "linear": {
+        "covariance_work": 6.826155079237918e-15,
+        "source_mean_work": 6.821681018176685e-15,
+        "contact_cycle_work": -2.9801622446240548e-18,
+        "tree_cycle_work_density": 1.9001418393608666e-16,
+        "function_evaluations": 5186
+      },
+      "spectral": {
+        "work": 6.822544754257795e-15,
+        "channels": [
+          {
+            "i": 0,
+            "j": 0,
+            "pair_frequency": 0.01628293091933718,
+            "number_frequency": -0.0006385627980677981,
+            "pair_work": 3.658799155332209e-15,
+            "number_work": 1.1061652717404179e-16
+          },
+          {
+            "i": 0,
+            "j": 1,
+            "pair_frequency": 1.0112759345807114,
+            "number_frequency": 0.9943544408633064,
+            "pair_work": 1.0667812369355918e-15,
+            "number_work": 3.6451942804071274e-16
+          },
+          {
+            "i": 0,
+            "j": 2,
+            "pair_frequency": 2.158327036478978,
+            "number_frequency": 2.1414055427615732,
+            "pair_work": 1.0410828191310904e-22,
+            "number_work": 1.0178828797816606e-20
+          },
+          {
+            "i": 1,
+            "j": 0,
+            "pair_frequency": 1.0107526694860056,
+            "number_frequency": -0.9951083013647362,
+            "pair_work": 1.1752718595529594e-15,
+            "number_work": 4.465356020271364e-16
+          },
+          {
+            "i": 1,
+            "j": 1,
+            "pair_frequency": 2.0057456731473797,
+            "number_frequency": -0.00011529770336204948,
+            "pair_work": 0.0,
+            "number_work": -0.0
+          },
+          {
+            "i": 1,
+            "j": 2,
+            "pair_frequency": 3.1527967750456467,
+            "number_frequency": 1.1469358041949047,
+            "pair_work": 0.0,
+            "number_work": 0.0
+          },
+          {
+            "i": 2,
+            "j": 0,
+            "pair_frequency": 2.1577934414736473,
+            "number_frequency": -2.142149073352378,
+            "pair_work": 2.0529490540276646e-22,
+            "number_work": 1.0456963159868645e-20
+          },
+          {
+            "i": 2,
+            "j": 1,
+            "pair_frequency": 3.152786445135021,
+            "number_frequency": -1.1471560696910037,
+            "pair_work": 0.0,
+            "number_work": -0.0
+          },
+          {
+            "i": 2,
+            "j": 2,
+            "pair_frequency": 4.299837547033288,
+            "number_frequency": -0.00010496779273694301,
+            "pair_work": 0.0,
+            "number_work": -0.0
+          }
+        ],
+        "vacuum_plus_one_included": false
+      },
+      "cycles": [
+        {
+          "amplitude": 0.02,
+          "work": 1.1833235390383175e-11,
+          "energy_change": 1.1833238815900371e-11,
+          "work_ledger_relative": 2.894826386199911e-07,
+          "symplectic_relative": 6.582561580830837e-11,
+          "canonical_poisson_relative": 0.0,
+          "orientation_preserving": true,
+          "log_volume_change": -1.0369487187314452e-09,
+          "conditional_full_rank_entropy_change": -1.0369456404646371e-09,
+          "insertion_rank": 4,
+          "insertion_entropy": "UNDEFINED_FULL_COVARIANCE_RANK_DEFICIENT_NOT_QUANTUM_STATE",
+          "evolved_insertion_rank": 4,
+          "function_evaluations": 6674
+        },
+        {
+          "amplitude": 0.01,
+          "work": 7.395759104085171e-13,
+          "energy_change": 7.39575501534917e-13,
+          "work_ledger_relative": 5.528487262614638e-07,
+          "symplectic_relative": 6.70950080756232e-11,
+          "canonical_poisson_relative": 0.0,
+          "orientation_preserving": true,
+          "log_volume_change": -1.0569472172483607e-09,
+          "conditional_full_rank_entropy_change": -1.0569487507439135e-09,
+          "insertion_rank": 4,
+          "insertion_entropy": "UNDEFINED_FULL_COVARIANCE_RANK_DEFICIENT_NOT_QUANTUM_STATE",
+          "evolved_insertion_rank": 4,
+          "function_evaluations": 6734
+        },
+        {
+          "amplitude": 0.005,
+          "work": 4.622359412392753e-14,
+          "energy_change": 4.622561014522297e-14,
+          "work_ledger_relative": 4.3612648683456765e-05,
+          "symplectic_relative": 6.81392505788423e-11,
+          "canonical_poisson_relative": 0.0,
+          "orientation_preserving": true,
+          "log_volume_change": -1.0733949363031514e-09,
+          "conditional_full_rank_entropy_change": -1.0734018118796484e-09,
+          "insertion_rank": 4,
+          "insertion_entropy": "UNDEFINED_FULL_COVARIANCE_RANK_DEFICIENT_NOT_QUANTUM_STATE",
+          "evolved_insertion_rank": 4,
+          "function_evaluations": 6722
+        }
+      ],
+      "work_methods_relative": 0.0005288958334837813,
+      "mean_source_work_relative": 0.0006554291558422488,
+      "linear_resolution_relative": 0.01601185635566326,
+      "exact_resolution_relative": 2.3545632121029096e-08,
+      "exact_to_leading_relative": [
+        0.9999997693768601,
+        0.9999990775058167,
+        0.9999963100312278
+      ],
+      "zero_temperature_work_absolute": 0.0,
+      "wrong_half_orientation_relative": 0.49973541214384337
+    },
+    {
+      "mu": 1.05,
+      "T": 0.004,
+      "p": 0.02,
+      "r": 0.02,
+      "q": 0.0,
+      "linear": {
+        "covariance_work": 7.094830817687108e-15,
+        "source_mean_work": 7.0970902013237254e-15,
+        "contact_cycle_work": 4.714629084720844e-18,
+        "tree_cycle_work_density": 7.920597736576915e-17,
+        "function_evaluations": 5942
+      },
+      "spectral": {
+        "work": 7.104668445041889e-15,
+        "channels": [
+          {
+            "i": 0,
+            "j": 0,
+            "pair_frequency": 0.008438211367039991,
+            "number_frequency": 0.0,
+            "pair_work": 1.280158722569662e-15,
+            "number_work": 0.0
+          },
+          {
+            "i": 0,
+            "j": 1,
+            "pair_frequency": 1.00655049670945,
+            "number_frequency": 0.9981122853424101,
+            "pair_work": 1.8294192370192636e-15,
+            "number_work": 1.0828190889030241e-15
+          },
+          {
+            "i": 0,
+            "j": 2,
+            "pair_frequency": 2.1536449667558024,
+            "number_frequency": 2.145206755388762,
+            "pair_work": 2.932974715270871e-21,
+            "number_work": 1.3602339111113178e-20
+          },
+          {
+            "i": 1,
+            "j": 0,
+            "pair_frequency": 1.00655049670945,
+            "number_frequency": -0.9981122853424101,
+            "pair_work": 1.8294192370192624e-15,
+            "number_work": 1.0828190889030245e-15
+          },
+          {
+            "i": 1,
+            "j": 1,
+            "pair_frequency": 2.0046627820518603,
+            "number_frequency": 0.0,
+            "pair_work": 0.0,
+            "number_work": 0.0
+          },
+          {
+            "i": 1,
+            "j": 2,
+            "pair_frequency": 3.1517572520982124,
+            "number_frequency": 1.1470944700463521,
+            "pair_work": 0.0,
+            "number_work": 0.0
+          },
+          {
+            "i": 2,
+            "j": 0,
+            "pair_frequency": 2.1536449667558024,
+            "number_frequency": -2.145206755388762,
+            "pair_work": 2.93297471527088e-21,
+            "number_work": 1.3602339111113166e-20
+          },
+          {
+            "i": 2,
+            "j": 1,
+            "pair_frequency": 3.1517572520982124,
+            "number_frequency": -1.1470944700463521,
+            "pair_work": 0.0,
+            "number_work": -0.0
+          },
+          {
+            "i": 2,
+            "j": 2,
+            "pair_frequency": 4.298851722144565,
+            "number_frequency": 0.0,
+            "pair_work": 0.0,
+            "number_work": 0.0
+          }
+        ],
+        "vacuum_plus_one_included": false
+      },
+      "cycles": [
+        {
+          "amplitude": 0.02,
+          "work": 8.069392675088578e-11,
+          "energy_change": 8.069392896936645e-11,
+          "work_ledger_relative": 2.7492535045914454e-08,
+          "symplectic_relative": 6.635570360854055e-11,
+          "canonical_poisson_relative": 0.0,
+          "orientation_preserving": true,
+          "log_volume_change": -1.0452257317040275e-09,
+          "conditional_full_rank_entropy_change": -1.045227460139131e-09,
+          "insertion_rank": 4,
+          "insertion_entropy": "UNDEFINED_FULL_COVARIANCE_RANK_DEFICIENT_NOT_QUANTUM_STATE",
+          "evolved_insertion_rank": 4,
+          "function_evaluations": 6890
+        },
+        {
+          "amplitude": 0.01,
+          "work": 5.043358551863294e-12,
+          "energy_change": 5.043363296430847e-12,
+          "work_ledger_relative": 9.407546659182168e-07,
+          "symplectic_relative": 6.794873726157981e-11,
+          "canonical_poisson_relative": 0.0,
+          "orientation_preserving": true,
+          "log_volume_change": -1.0703097449125953e-09,
+          "conditional_full_rank_entropy_change": -1.0703073982654132e-09,
+          "insertion_rank": 4,
+          "insertion_entropy": "UNDEFINED_FULL_COVARIANCE_RANK_DEFICIENT_NOT_QUANTUM_STATE",
+          "evolved_insertion_rank": 4,
+          "function_evaluations": 6890
+        },
+        {
+          "amplitude": 0.005,
+          "work": 3.1520985030976313e-13,
+          "energy_change": 3.152113986493177e-13,
+          "work_ledger_relative": 4.9120671434959444e-06,
+          "symplectic_relative": 6.905095972732522e-11,
+          "canonical_poisson_relative": 0.0,
+          "orientation_preserving": true,
+          "log_volume_change": -1.087682221416822e-09,
+          "conditional_full_rank_entropy_change": -1.0876806122439575e-09,
+          "insertion_rank": 4,
+          "insertion_entropy": "UNDEFINED_FULL_COVARIANCE_RANK_DEFICIENT_NOT_QUANTUM_STATE",
+          "evolved_insertion_rank": 4,
+          "function_evaluations": 6914
+        }
+      ],
+      "work_methods_relative": 0.0013846708584475216,
+      "mean_source_work_relative": 0.00031835351848791163,
+      "linear_resolution_relative": 0.02297953279184749,
+      "exact_resolution_relative": 1.544469379825681e-08,
+      "exact_to_leading_relative": [
+        0.9999999647821405,
+        0.9999998591282303,
+        0.9999994365128153
+      ],
+      "zero_temperature_work_absolute": 0.0,
+      "wrong_half_orientation_relative": 0.5006923354292238
+    },
+    {
+      "mu": 1.2,
+      "T": 0.004,
+      "p": 0.02,
+      "r": 0.031,
+      "q": 0.02,
+      "linear": {
+        "covariance_work": 5.5742240692674854e-14,
+        "source_mean_work": 5.5762136929817065e-14,
+        "contact_cycle_work": 2.5248855659691295e-17,
+        "tree_cycle_work_density": -6.175312021656235e-17,
+        "function_evaluations": 7382
+      },
+      "spectral": {
+        "work": 5.576196216417115e-14,
+        "channels": [
+          {
+            "i": 0,
+            "j": 0,
+            "pair_frequency": 0.01857935349201273,
+            "number_frequency": 0.004009457178510356,
+            "pair_work": 4.553426661089683e-14,
+            "number_work": 1.3749762579858602e-15
+          },
+          {
+            "i": 0,
+            "j": 1,
+            "pair_frequency": 1.0507178397532078,
+            "number_frequency": 1.0361479434397054,
+            "pair_work": 8.27695745020039e-16,
+            "number_work": 4.761113197140812e-15
+          },
+          {
+            "i": 0,
+            "j": 2,
+            "pair_frequency": 2.5876425915196593,
+            "number_frequency": 2.573072695206157,
+            "pair_work": 1.4238820377926878e-21,
+            "number_work": 7.832218824540141e-22
+          },
+          {
+            "i": 1,
+            "j": 0,
+            "pair_frequency": 1.0544577819679948,
+            "number_frequency": -1.0318689712974718,
+            "pair_work": 1.5726921237741973e-16,
+            "number_work": 3.1066379317054726e-15
+          },
+          {
+            "i": 1,
+            "j": 1,
+            "pair_frequency": 2.08659626822919,
+            "number_frequency": 0.0002695149637232941,
+            "pair_work": 0.0,
+            "number_work": 0.0
+          },
+          {
+            "i": 1,
+            "j": 2,
+            "pair_frequency": 3.6235210199956414,
+            "number_frequency": 1.5371942667301748,
+            "pair_work": 0.0,
+            "number_work": 0.0
+          },
+          {
+            "i": 2,
+            "j": 0,
+            "pair_frequency": 2.591449328920501,
+            "number_frequency": -2.5688605182499775,
+            "pair_work": 7.203373367821151e-22,
+            "number_work": 2.8160345375307298e-22
+          },
+          {
+            "i": 2,
+            "j": 1,
+            "pair_frequency": 3.623587815181696,
+            "number_frequency": -1.5367220319887827,
+            "pair_work": 0.0,
+            "number_work": -0.0
+          },
+          {
+            "i": 2,
+            "j": 2,
+            "pair_frequency": 5.160512566948148,
+            "number_frequency": 0.0002027197776688361,
+            "pair_work": 0.0,
+            "number_work": 0.0
+          }
+        ],
+        "vacuum_plus_one_included": false
+      },
+      "cycles": [
+        {
+          "amplitude": 0.02,
+          "work": 7.091462783353742e-11,
+          "energy_change": 7.091462660147041e-11,
+          "work_ledger_relative": 1.7373947405091668e-08,
+          "symplectic_relative": 8.878486121046213e-11,
+          "canonical_poisson_relative": 0.0,
+          "orientation_preserving": true,
+          "log_volume_change": -1.2919780280340465e-09,
+          "conditional_full_rank_entropy_change": -1.291942108849753e-09,
+          "insertion_rank": 4,
+          "insertion_entropy": "UNDEFINED_FULL_COVARIANCE_RANK_DEFICIENT_NOT_QUANTUM_STATE",
+          "evolved_insertion_rank": 4,
+          "function_evaluations": 8030
+        },
+        {
+          "amplitude": 0.01,
+          "work": 4.43209925918141e-12,
+          "energy_change": 4.432099218881769e-12,
+          "work_ledger_relative": 9.092675799816617e-09,
+          "symplectic_relative": 8.892166038361188e-11,
+          "canonical_poisson_relative": 0.0,
+          "orientation_preserving": true,
+          "log_volume_change": -1.2939754823193539e-09,
+          "conditional_full_rank_entropy_change": -1.2939516125243244e-09,
+          "insertion_rank": 4,
+          "insertion_entropy": "UNDEFINED_FULL_COVARIANCE_RANK_DEFICIENT_NOT_QUANTUM_STATE",
+          "evolved_insertion_rank": 4,
+          "function_evaluations": 8066
+        },
+        {
+          "amplitude": 0.005,
+          "work": 2.7700616849133936e-13,
+          "energy_change": 2.770036804100595e-13,
+          "work_ledger_relative": 8.982042867105063e-06,
+          "symplectic_relative": 8.919267401180916e-11,
+          "canonical_poisson_relative": 0.0,
+          "orientation_preserving": true,
+          "log_volume_change": -1.2979074585917072e-09,
+          "conditional_full_rank_entropy_change": -1.2979883834418615e-09,
+          "insertion_rank": 4,
+          "insertion_entropy": "UNDEFINED_FULL_COVARIANCE_RANK_DEFICIENT_NOT_QUANTUM_STATE",
+          "evolved_insertion_rank": 4,
+          "function_evaluations": 8066
+        }
+      ],
+      "work_methods_relative": 0.0003536724808613001,
+      "mean_source_work_relative": 0.0003568054998906063,
+      "linear_resolution_relative": 0.0005522717651656022,
+      "exact_resolution_relative": 3.0755686897840386e-09,
+      "exact_to_leading_relative": [
+        0.9999996854699017,
+        0.9999987418611609,
+        0.9999949674440043
+      ],
+      "zero_temperature_work_absolute": 0.0,
+      "wrong_half_orientation_relative": 0.5001768362404306
+    },
+    {
+      "mu": 1.2,
+      "T": 0.004,
+      "p": 0.04,
+      "r": 0.037,
+      "q": 0.02,
+      "linear": {
+        "covariance_work": 4.440856300586688e-13,
+        "source_mean_work": 4.440849608755673e-13,
+        "contact_cycle_work": -2.588182389597518e-19,
+        "tree_cycle_work_density": 7.551049811716734e-17,
+        "function_evaluations": 5738
+      },
+      "spectral": {
+        "work": 4.4408468633083174e-13,
+        "channels": [
+          {
+            "i": 0,
+            "j": 0,
+            "pair_frequency": 0.028060237417530113,
+            "number_frequency": -0.001094651773250497,
+            "pair_work": 4.3982465096774214e-13,
+            "number_work": 3.461554540305741e-17
+          },
+          {
+            "i": 0,
+            "j": 1,
+            "pair_frequency": 1.0582063029180522,
+            "number_frequency": 1.0290514137272715,
+            "pair_work": 1.2202792552913011e-17,
+            "number_work": 1.9310324709519335e-15
+          },
+          {
+            "i": 0,
+            "j": 2,
+            "pair_frequency": 2.595082501922827,
+            "number_frequency": 2.5659276127320463,
+            "pair_work": 3.9104577291067396e-22,
+            "number_work": 1.0769584495860879e-22
+          },
+          {
+            "i": 1,
+            "j": 0,
+            "pair_frequency": 1.0572225864171734,
+            "number_frequency": -1.030257000772894,
+            "pair_work": 3.062632050951857e-17,
+            "number_work": 2.251557094559983e-15
+          },
+          {
+            "i": 1,
+            "j": 1,
+            "pair_frequency": 2.0873686519176955,
+            "number_frequency": -0.00011093527237182599,
+            "pair_work": 0.0,
+            "number_work": -0.0
+          },
+          {
+            "i": 1,
+            "j": 2,
+            "pair_frequency": 3.6242448509224703,
+            "number_frequency": 1.536765263732403,
+            "pair_work": 0.0,
+            "number_work": 0.0
+          },
+          {
+            "i": 2,
+            "j": 0,
+            "pair_frequency": 2.5940713055249827,
+            "number_frequency": -2.5671057198807032,
+            "pair_work": 4.880242509854733e-22,
+            "number_work": 1.523463290300341e-22
+          },
+          {
+            "i": 2,
+            "j": 1,
+            "pair_frequency": 3.624217371025505,
+            "number_frequency": -1.5369596543801811,
+            "pair_work": 0.0,
+            "number_work": -0.0
+          },
+          {
+            "i": 2,
+            "j": 2,
+            "pair_frequency": 5.16109357003028,
+            "number_frequency": -8.345537540632719e-05,
+            "pair_work": 0.0,
+            "number_work": -0.0
+          }
+        ],
+        "vacuum_plus_one_included": false
+      },
+      "cycles": [
+        {
+          "amplitude": 0.02,
+          "work": 9.443393264097983e-12,
+          "energy_change": 9.443393766614405e-12,
+          "work_ledger_relative": 5.3213541134870196e-08,
+          "symplectic_relative": 9.082031132722356e-11,
+          "canonical_poisson_relative": 0.0,
+          "orientation_preserving": true,
+          "log_volume_change": -1.3216191266374189e-09,
+          "conditional_full_rank_entropy_change": -1.3216010508187992e-09,
+          "insertion_rank": 4,
+          "insertion_entropy": "UNDEFINED_FULL_COVARIANCE_RANK_DEFICIENT_NOT_QUANTUM_STATE",
+          "evolved_insertion_rank": 4,
+          "function_evaluations": 7802
+        },
+        {
+          "amplitude": 0.01,
+          "work": 5.902363754000712e-13,
+          "energy_change": 5.902345669508979e-13,
+          "work_ledger_relative": 3.0639405645942976e-06,
+          "symplectic_relative": 9.195458112887211e-11,
+          "canonical_poisson_relative": 0.0,
+          "orientation_preserving": true,
+          "log_volume_change": -1.3381381974708617e-09,
+          "conditional_full_rank_entropy_change": -1.3380887509129025e-09,
+          "insertion_rank": 4,
+          "insertion_entropy": "UNDEFINED_FULL_COVARIANCE_RANK_DEFICIENT_NOT_QUANTUM_STATE",
+          "evolved_insertion_rank": 4,
+          "function_evaluations": 7754
+        },
+        {
+          "amplitude": 0.005,
+          "work": 3.689795932347242e-14,
+          "energy_change": 3.689951989793716e-14,
+          "work_ledger_relative": 4.2292541178207615e-05,
+          "symplectic_relative": 9.222893711511768e-11,
+          "canonical_poisson_relative": 0.0,
+          "orientation_preserving": true,
+          "log_volume_change": -1.3421330852247948e-09,
+          "conditional_full_rank_entropy_change": -1.342168598483795e-09,
+          "insertion_rank": 4,
+          "insertion_entropy": "UNDEFINED_FULL_COVARIANCE_RANK_DEFICIENT_NOT_QUANTUM_STATE",
+          "evolved_insertion_rank": 4,
+          "function_evaluations": 7778
+        }
+      ],
+      "work_methods_relative": 2.1251032980678373e-06,
+      "mean_source_work_relative": 1.5068785301460884e-06,
+      "linear_resolution_relative": 9.281360526874694e-06,
+      "exact_resolution_relative": 1.8002933129510903e-09,
+      "exact_to_leading_relative": [
+        0.9999811896137792,
+        0.9999247615523476,
+        0.999699112976386
+      ],
+      "zero_temperature_work_absolute": 0.0,
+      "wrong_half_orientation_relative": 0.4999989374460929
+    },
+    {
+      "mu": 1.2,
+      "T": 0.004,
+      "p": 0.02,
+      "r": 0.02,
+      "q": 0.0,
+      "linear": {
+        "covariance_work": 2.6661418376185545e-14,
+        "source_mean_work": 2.6663385873113212e-14,
+        "contact_cycle_work": -4.799266306042564e-18,
+        "tree_cycle_work_density": 6.983055185488674e-17,
+        "function_evaluations": 7706
+      },
+      "spectral": {
+        "work": 2.6660181218669857e-14,
+        "channels": [
+          {
+            "i": 0,
+            "j": 0,
+            "pair_frequency": 0.014569896313502374,
+            "number_frequency": 0.0,
+            "pair_work": 1.521132656193855e-14,
+            "number_work": 0.0
+          },
+          {
+            "i": 0,
+            "j": 1,
+            "pair_frequency": 1.0504483247894845,
+            "number_frequency": 1.035878428475982,
+            "pair_work": 8.745407838760037e-16,
+            "number_work": 4.84988435443749e-15
+          },
+          {
+            "i": 0,
+            "j": 2,
+            "pair_frequency": 2.5874398717419904,
+            "number_frequency": 2.572869975428488,
+            "pair_work": 1.413442415474287e-21,
+            "number_work": 7.766097437019462e-22
+          },
+          {
+            "i": 1,
+            "j": 0,
+            "pair_frequency": 1.0504483247894845,
+            "number_frequency": -1.035878428475982,
+            "pair_work": 8.745407838760034e-16,
+            "number_work": 4.84988435443749e-15
+          },
+          {
+            "i": 1,
+            "j": 1,
+            "pair_frequency": 2.0863267532654666,
+            "number_frequency": 0.0,
+            "pair_work": 0.0,
+            "number_work": 0.0
+          },
+          {
+            "i": 1,
+            "j": 2,
+            "pair_frequency": 3.6233183002179725,
+            "number_frequency": 1.536991546952506,
+            "pair_work": 0.0,
+            "number_work": 0.0
+          },
+          {
+            "i": 2,
+            "j": 0,
+            "pair_frequency": 2.5874398717419904,
+            "number_frequency": -2.572869975428488,
+            "pair_work": 1.4134424154742856e-21,
+            "number_work": 7.766097437019467e-22
+          },
+          {
+            "i": 2,
+            "j": 1,
+            "pair_frequency": 3.6233183002179725,
+            "number_frequency": -1.536991546952506,
+            "pair_work": 0.0,
+            "number_work": -0.0
+          },
+          {
+            "i": 2,
+            "j": 2,
+            "pair_frequency": 5.1603098471704785,
+            "number_frequency": 0.0,
+            "pair_work": 0.0,
+            "number_work": 0.0
+          }
+        ],
+        "vacuum_plus_one_included": false
+      },
+      "cycles": [
+        {
+          "amplitude": 0.02,
+          "work": 1.1777884419164189e-10,
+          "energy_change": 1.1777884049990472e-10,
+          "work_ledger_relative": 3.134465436349499e-08,
+          "symplectic_relative": 8.891526810578498e-11,
+          "canonical_poisson_relative": 0.0,
+          "orientation_preserving": true,
+          "log_volume_change": -1.2938940474604976e-09,
+          "conditional_full_rank_entropy_change": -1.2939311844206713e-09,
+          "insertion_rank": 4,
+          "insertion_entropy": "UNDEFINED_FULL_COVARIANCE_RANK_DEFICIENT_NOT_QUANTUM_STATE",
+          "evolved_insertion_rank": 4,
+          "function_evaluations": 8150
+        },
+        {
+          "amplitude": 0.01,
+          "work": 7.361064613669342e-12,
+          "energy_change": 7.361060545829634e-12,
+          "work_ledger_relative": 5.526156774258097e-07,
+          "symplectic_relative": 8.98793551336036e-11,
+          "canonical_poisson_relative": 0.0,
+          "orientation_preserving": true,
+          "log_volume_change": -1.3079018840178591e-09,
+          "conditional_full_rank_entropy_change": -1.3079581862029954e-09,
+          "insertion_rank": 4,
+          "insertion_entropy": "UNDEFINED_FULL_COVARIANCE_RANK_DEFICIENT_NOT_QUANTUM_STATE",
+          "evolved_insertion_rank": 4,
+          "function_evaluations": 8078
+        },
+        {
+          "amplitude": 0.005,
+          "work": 4.600652393224783e-13,
+          "energy_change": 4.600712172342369e-13,
+          "work_ledger_relative": 1.2993448698244674e-05,
+          "symplectic_relative": 8.984041523011684e-11,
+          "canonical_poisson_relative": 0.0,
+          "orientation_preserving": true,
+          "log_volume_change": -1.3073309587663395e-09,
+          "conditional_full_rank_entropy_change": -1.3073360172199955e-09,
+          "insertion_rank": 4,
+          "insertion_entropy": "UNDEFINED_FULL_COVARIANCE_RANK_DEFICIENT_NOT_QUANTUM_STATE",
+          "evolved_insertion_rank": 4,
+          "function_evaluations": 8090
+        }
+      ],
+      "work_methods_relative": 4.640253936354829e-05,
+      "mean_source_work_relative": 7.379021317959355e-05,
+      "linear_resolution_relative": 0.002712066674669195,
+      "exact_resolution_relative": 1.2708364057734686e-09,
+      "exact_to_leading_relative": [
+        0.9999999094568081,
+        0.9999996378216656,
+        0.9999985512825714
+      ],
+      "zero_temperature_work_absolute": 0.0,
+      "wrong_half_orientation_relative": 0.4999767976536704
+    }
+  ],
+  "maximum_source_equation_relative": 3.120876849562603e-16,
+  "maximum_fourier_scaled_error": 8.666608576545088e-17,
+  "evidence_artifacts": [
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/Research_T13_Gaussian_Source_Work.py",
+      "sha256": "0885ef92ab24f1b6dcb4be245e0cb96c007e1ddec5c5d2c5578671ef35c33b9d"
+    },
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/t13_gaussian_source_work_registry.json",
+      "sha256": "e60f0c3b70a5c2c5a4cdcce7e18f0e92a3672e21edeeb06e3365d63ea1a456f1"
+    },
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/test_t13_gaussian_source_work.py",
+      "sha256": "2d4e27a5bb29cc20a0c6fa1d7d82f205893150ff62bd93ca92144445560fb412"
+    }
+  ],
+  "protected_evidence_hashes": [
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/t13_collisionless_soft_source.json",
+      "sha256": "be7cb2e3bb5ba749e91876e56005ea63269f5b93b0d317eedf7ee8adebfc65a3"
+    },
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/t13_thermal_noether_response.json",
+      "sha256": "2765fdd0b0fe83bbed54c4af2fa3fde32f40694d109ea37978b0f7b5ec268906"
+    },
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/t13_finite_q_thermal_source.json",
+      "sha256": "a1583b3ef2ec12929078800a6c1ee18f10d0fe4243957206febd4098363c0a57"
+    },
+    {
+      "path": "docs/core/02_equations/o2/uet_o2_action_thermal_observable_bridge.py",
+      "sha256": "1cf745562548bc9a61d9ebb86069b8aff73e2a776756aa9efe7ab1a45b669ebe"
+    },
+    {
+      "path": "docs/core/02_equations/o2/uet_o2_action_thermal_stiffness_beta.py",
+      "sha256": "c1c3278a79df611ddae2f67ff811022722ab0c56f68bf91cc5480f34db9a95e6"
+    },
+    {
+      "path": "docs/core/02_equations/covariant/uet_covariant_matter.py",
+      "sha256": "8a57d95e898a8ac962bbd749670ad0695b597281937da36496d2ec7e074f9c53"
+    },
+    {
+      "path": "docs/core/02_equations/covariant/uet_covariant_response.py",
+      "sha256": "7fb4b7228afb8ede0ac4f1664d634346ef46cc7678c94ed7b55d73645590c0c2"
+    }
+  ],
+  "equation_registry_ids": [
+    "t13.thermal_insertion.cyclic_source_work",
+    "t13.thermal_insertion.Hamiltonian_entropy_boundary"
+  ],
+  "controlling_blocker": "finite_pair_source_work_verification_open",
+  "open_blockers": [
+    "full_interacting_vacuum_thermal_and_approximation_control",
+    "collision_operator_and_irreversible_entropy_contract",
+    "actual_material_heat_source_readout_and_independent_scale"
+  ],
+  "dependency_unlocked": [],
+  "leading_finite_pair_source_work_closed": false,
+  "collisionless_absorption_entropy_boundary_recorded": false,
+  "full_energy_exchange_ledger_closed": false,
+  "full_collision_operator_computed": false,
+  "full_SK_KMS_matching_closed": false,
+  "physical_Kubo_emitted": false,
+  "independent_alpha_Phi_K_admitted": false,
+  "full_core_unlock": false,
+  "core_composition_gate_overwritten": false,
+  "full_off_shell_source_matching_closed": false,
+  "full_real_self_energy_matched": false,
+  "full_two_loop_pressure_computed": false,
+  "all_parent_modes_and_quantum_Phi_loops_included": false,
+  "controlled_full_action_truncation_error_established": false,
+  "state_variables": [
+    "radial_phase_Phi_fluctuations_velocities_and_covariance"
+  ],
+  "excluded_variables": [
+    "C",
+    "UET_Pi",
+    "R_gen",
+    "R_obs"
+  ],
+  "primary_covariance_entropy_defined": false,
+  "full_rank_entropy_control_is_diagnostic_only": true,
+  "quantum_vacuum_population_added": false,
+  "parameter_fitting": false,
+  "assigned_width": false,
+  "assigned_relaxation_time": false,
+  "clipping": false,
+  "cone_padding": false,
+  "claim_promotion": false,
+  "xie_2026_accessed": false,
+  "prior_Xie_context_exposure_review": "REVIEW_REQUIRED",
+  "primary_references": [
+    "https://arxiv.org/abs/1608.04977",
+    "https://arxiv.org/abs/quant-ph/0307073",
+    "https://www.jstage.jst.go.jp/article/jpsj1946/12/6/12_6_570/_article"
+  ],
+  "claim_boundary": "Finite real-pair Gaussian cyclic work and conditional fine-grained entropy boundary only. Stimulated acoustic populations, not complete quantum covariance or vacuum heating; no full interacting collision/heat/transport/KMS/entropy, SI material mapping, conserved-C repair or Full Topic13/Core/global closure.",
+  "report": {
+    "MAJOR_RESULT_CLOSURE": "PARTIAL",
+    "WHAT_IS_ACTUALLY_CLOSED": "Conditional finite-pair leading cyclic source work and Hamiltonian entropy boundary, only when recorded checks pass",
+    "WHAT_REMAINS_OPEN": [
+      "full_interacting_vacuum_thermal_and_approximation_control",
+      "collision_operator_and_irreversible_entropy_contract",
+      "actual_material_heat_source_readout_and_independent_scale"
+    ],
+    "DEPENDENCY_UNLOCKED": [],
+    "STATUS": "FAIL_SCOPED_GAUSSIAN_SOURCE_WORK",
+    "WHAT_CHANGED": "Derived source-compatible cyclic work and entropy boundary",
+    "EQUATION_OR_MAPPING": "W_h_loop=int h*dot_l_Phi=int dot_b*T:X=W_modal; Delta_E_exact=int .5*Tr(dot_V*C); S P S^T=P",
+    "VERIFICATION": {
+      "Phi_only_source_equations": true,
+      "compact_source_endpoints": true,
+      "independent_fourier_quadrature": true,
+      "time_covariance_and_modal_spectrum": false,
+      "mean_source_and_covariance_work": false,
+      "source_cycle_resolution": false,
+      "exact_cycle_energy_ledger": false,
+      "leading_amplitude_limit": false,
+      "Hamiltonian_symplectic_and_volume": true,
+      "conditional_entropy_control_and_primary_rank": true,
+      "conservative_contact_cycle": false,
+      "positive_stimulated_work_no_vacuum": true,
+      "wrong_orientation_detected": true
+    },
+    "CONTROLLING_BLOCKER": "finite_pair_source_work_verification_open",
+    "NEXT_ACTION": "Independent physical heat/readout mapping and interacting collision/entropy, not assigned rates",
+    "CLAIM_BOUNDARY": "Finite real-pair Gaussian cyclic work and conditional fine-grained entropy boundary only. Stimulated acoustic populations, not complete quantum covariance or vacuum heating; no full interacting collision/heat/transport/KMS/entropy, SI material mapping, conserved-C repair or Full Topic13/Core/global closure."
+  }
+}

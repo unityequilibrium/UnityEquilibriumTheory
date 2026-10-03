@@ -10,7 +10,15 @@
 
 ## ผลหลักสำหรับพอร์ตและทุนรอบถัดไป
 
-Latest science 3 October: [collisionless soft source](Result/artifacts/T13_COLLISIONLESS_SOFT_SOURCE_2026-10-03.md)
+Latest science 3 October: [cyclic source work](Result/artifacts/T13_GAUSSIAN_SOURCE_WORK_2026-10-03.md)
+adds leading-work and conditional entropy identities, not a passing
+finite-amplitude/physical heat audit. Aggregate stays PARTIAL; observed
+higher-order domination and numerical floor are retained. R1 still needs
+approximation/interacting control; independent readout/scale remains
+R2-R3. Current gaussian_source_work_evidence_2026_10_03;
+all full R1-R5/Goal, dates, owner, holdout and NOT_RUN trial unchanged.
+
+Prior science 3 October: [collisionless soft source](Result/artifacts/T13_COLLISIONLESS_SOFT_SOURCE_2026-10-03.md)
 resolves Gaussian streaming and the static pressure endpoint, with first
 FAIL and finite-cutoff limitations retained. Current evidence is
 collisionless_soft_source_evidence_2026_10_03. Next actual source work/
