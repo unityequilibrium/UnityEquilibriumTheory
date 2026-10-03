@@ -1,5 +1,16 @@
 # Limitations
 
+## Gaussian Noether Balance Is Not A Dissipative Ledger (2026-10-03)
+
+[New result](Result/artifacts/T13_THERMAL_NOETHER_RESPONSE_2026-10-03.md)
+closes pair-local charge/first-order natural-energy identities, not all
+interacting Ward or shifted finite-cutoff transport. Internal source heating
+about stationary h0=0 starts at second order, not computed here. Entropy,
+collision/heat/Kubo/SK-KMS, full vacuum/thermal/approximation and independent
+material/readout/scale/uncertainty remain open. No original conserved-C,
+Core-owner, alpha or heavy quantum admission changes. Earlier sections
+retain their own wave scope, not the current canonical controller.
+
 ## Static Population Recovery Does Not Derive Collision Physics (2026-10-03)
 
 [Finite-q result](Result/artifacts/T13_FINITE_Q_THERMAL_SOURCE_2026-10-03.md)

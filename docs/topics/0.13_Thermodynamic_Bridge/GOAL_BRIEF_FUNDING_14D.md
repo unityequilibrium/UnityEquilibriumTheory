@@ -10,7 +10,18 @@
 
 ปิดคำถามว่า He-4/O(2) bridge ที่แช่แข็ง calibration แล้วกำหนด independent dynamic response ได้หรือไม่ และต้องวัดอะไรเพิ่มจึงแยกคำตอบได้ ผลสำเร็จต้องมี predictive-content derivation หรือ scoped nonidentifiability proof ที่เพิ่มจาก matching identity เดิม พร้อม measurement design และชุดหลักฐาน ไม่ใช้จำนวน artifacts/PASS เป็นเกณฑ์สำเร็จ
 
-## Latest Finite-Q Source And Population Handoff (2026-10-03)
+## Latest Gaussian Noether Source Handoff (2026-10-03)
+
+[Noether completion](Result/artifacts/T13_THERMAL_NOETHER_RESPONSE_2026-10-03.md)
+derives pair-local conserving charge/first-order energy, with independent
+Euler/contact/negative controls. Full-domain translation is explicit;
+first-order energy is not dissipative heating. Next collisionless soft
+limits and actual heat-source/readout/material scale, alongside interacting/
+vacuum and second-order work/entropy/transport. Canonical
+thermal_noether_response_evidence_2026_10_03. Full Goal/R1-R5,7/11 October,
+owner/holdout/model rules unchanged; earlier handoffs keep historical scope.
+
+## Prior Finite-Q Source And Population Handoff (2026-10-03)
 
 [Finite-q extension](Result/artifacts/T13_FINITE_Q_THERMAL_SOURCE_2026-10-03.md)
 independently checks source response with cross-covariance and recovers

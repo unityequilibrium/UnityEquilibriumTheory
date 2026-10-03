@@ -1,3 +1,27 @@
+## 2026-10-03 - Conserving Gaussian source charge and linear energy
+
+MAJOR_RESULT_CLOSURE: T13_GAUSSIAN_THERMAL_SOURCE_NOETHER_BALANCE, CLOSED_FOR_LANE. Full Topic13/Goal/R1-R5 remain open; Core-owner bounded composition unchanged.
+
+WHAT_IS_ACTUALLY_CLOSED: Pair-local total charge/current and first-order rotating/physical Noether energy continuity for the named thermal insertion. Covariance response alone has a torque; action-derived stationary mean/contact supplies its conserving completion. Continuum interpretation requires explicit full-domain momentum translation.
+
+WHAT_REMAINS_OPEN: Collisionless soft limits, full interacting/vacuum/thermal matching and approximation control, second-order source work/entropy/dissipation, physical collision/heat/Kubo/SK-KMS and independent material/source/readout/scale/uncertainty. No shifted finite-cutoff integrated-current certificate.
+
+DEPENDENCY_UNLOCKED: Collisionless-limit and actual source-to-measurement research only. No physical/Core/Gravity or owner-composition admission; conserved-C baseline unchanged.
+
+STATUS: PASS_SCOPED_GAUSSIAN_NOETHER_RESPONSE; public safety safe.
+
+WHAT_CHANGED: Five new topic-local verifier/test/registry/artifact/derivation files; canonical Noether evidence and one funding regression; five research docs/five portfolio handoffs. Predecessors/actions/history retained. An integration patch failed atomically on a bad final document anchor; verified no partial edit and reapplied with actual anchors.
+
+EQUATION_OR_MAPPING: -iz(n_cov+n_mean)+iq(j_cov+j_mean)=0; delta_E=delta_H_rot+mu delta_n, delta_F=delta_F_rot+mu delta_j. M=S+T delta_x, V0 delta_x=-f, delta_d=D^-1[-delta_f-M d]. Integrated density/current per h E0 and energy/flux per h E; h E3, not Kelvin/SI heat. n is O(2) Noether charge, not signed C/mass; pi_phase is not UET Pi.
+
+VERIFICATION: Final single twenty-three-file linked selection391 passed in177.18 seconds, including36 Noether and28 funding tests; eight artifact checks on48 source rows. Max fluctuation torque2.261e-11, total charge1.433e-12, rotating energy6.379e-14 and physical energy1.433e-12. Independent spectral force5.965e-15/modal contact3.878e-16, phase-contact1.097e-16 and energy-contact1.822e-16. Omitted-background control reaches1983.96 relative to correct raw Ward-term scale. Direct arbitrary-covariance Euler, stationary-drive/contact, coordinate/zero-T/decoupled and invalid triangle/q0/real-z/moving/nonzero-h controls pass. First audit passed; final registry/domain/contact checks rerun with unchanged declared grids/gates. Zero-response energy scale uses absolute operator terms fixed before first audit, not a gate relaxation. Artifact SHA-2562765fdd0b0fe83bbed54c4af2fa3fde32f40694d109ea37978b0f7b5ec268906; ten current/protected hashes and note links match. Audit-time Path allowlist passes with no numeric holdout read; not a whole-program/pristine-blind certificate. All pre-existing acceptance/calendar/holdout/model/history/predecessor contract values compared against HEAD unchanged except accepted preliminary list/current handoff; one evidence field added. Whitespace review passes. Earlier34-test focused selection is not added to final count. No full repo/external/model/continuum-interacting validation or new-head CI.
+
+CONTROLLING_BLOCKER: collisionless_soft_limit_full_interacting_energy_and_physical_transport_open; independent physical input/calibration separate.
+
+NEXT_ACTION: Scoped local commit; publication still awaits authorization after prior denial, no retry/workaround. Derive collisionless soft-frequency/long-wavelength source behavior, then actual heat-source/readout and independent material scale. First-order energy conservation does not determine second-order heating, collision time, entropy or conductivity. Preserve7 October freeze/11 October portfolio review and full Goal/R1-R5 rules.
+
+CLAIM_BOUNDARY: Named acoustic-populated Gaussian pair-local first-order Noether result only; not all interacting Ward/energy, full quantum-heavy/vacuum/EOS/Kubo/KMS/entropy/physical mapping, original conserved-C repair or global UET closure. No fit, fabricated alpha/data, assigned width/rate, clipping/padding/filter, threshold/ontology/Core-owner change or Xie numeric read; prior exposure REVIEW_REQUIRED. No new Goal/automation/model configuration/contact/purchase/submission. Goal stays active because substantive science/measurement work remains.
+
 ## 2026-10-03 - Finite-q source and static thermal population
 
 MAJOR_RESULT_CLOSURE: T13_FINITE_Q_THERMAL_SOURCE_AND_STATIC_POPULATION_LIMIT, CLOSED_FOR_LANE. Full Topic13/Goal/R1-R5 remain open; the separate Core-owner bounded composition result is unchanged.

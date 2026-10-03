@@ -2,7 +2,9 @@
 
 วันที่ทบทวน: 3 ตุลาคม 2026 | ฉบับสรุปเพื่อเลือกงาน ไม่ใช่ controller ใหม่
 
-Science handoff ล่าสุด: [finite-q source/population](Result/artifacts/T13_FINITE_Q_THERMAL_SOURCE_2026-10-03.md) ตรวจ source response กับ cross-covariance อิสระ และเชื่อม static population กลับ pressure target โดยไม่ใส่ relaxation time. งานถัดไป loop-current/energy Ward และ collisionless soft-frequency limit แล้วเชื่อม actual heat-source/readout กับ independent material scale; full interacting/vacuum/physical transport ยังเปิด. Canonical `finite_q_thermal_source_evidence_2026_10_03`; วัน/เกณฑ์/full Goal/owner/holdout/โมเดลเดิม. ข้อความด้านล่างเป็น predecessor/planning history ไม่ใช้เป็น current pointer.
+Science handoff ล่าสุด: [Gaussian Noether completion](Result/artifacts/T13_THERMAL_NOETHER_RESPONSE_2026-10-03.md) ปิด pair-local charge และพลังงานอันดับแรกเมื่อรวม covariance กับ stationary mean/contact จาก action; ตัด background shift แล้ว Ward ไม่ผ่าน. Full-domain translation ต้องระบุ ไม่ใช้แทน finite-cutoff transport. งานถัดไป collisionless soft limit และ actual heat-source/readout/material scale; second-order work/entropy และ full interacting/vacuum/physical transport ยังเปิด. Canonical `thermal_noether_response_evidence_2026_10_03`; วัน/เกณฑ์/full Goal/owner/holdout/โมเดลเดิม. ข้อความด้านล่างเป็น predecessor/planning history ไม่ใช้เป็น current pointer.
+
+Science handoff ก่อนหน้า: [finite-q source/population](Result/artifacts/T13_FINITE_Q_THERMAL_SOURCE_2026-10-03.md) ตรวจ source response กับ cross-covariance และ static population/pressure โดยไม่ใส่ relaxation time. Field `finite_q_thermal_source_evidence_2026_10_03` เก็บหลักฐานและขอบเขตเดิมไว้.
 
 Science handoff ก่อนหน้า: [virtual/contact and covariance](Result/artifacts/T13_THERMAL_VIRTUAL_RESPONSE_2026-10-03.md) ปิดที่มาของ static gap ด้วยเทอมที่ derive โดยไม่ fit และตรวจ q0 source กับ covariance. Field `thermal_virtual_response_evidence_2026_10_03` เก็บตาม scope รอบนั้น; fixed-mu static และ fixed-charge dynamic ยังเป็นคนละลิมิต.
 

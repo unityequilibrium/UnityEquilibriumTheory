@@ -10,7 +10,15 @@
 
 ## ผลหลักสำหรับพอร์ตและทุนรอบถัดไป
 
-Latest science 3 October: [finite-q source/population](Result/artifacts/T13_FINITE_Q_THERMAL_SOURCE_2026-10-03.md)
+Latest science 3 October: [Gaussian Noether source completion](Result/artifacts/T13_THERMAL_NOETHER_RESPONSE_2026-10-03.md)
+adds pair-local charge/first-order energy, not second-order heating or full
+transport. R1 next needs collisionless soft limits and full interacting/
+vacuum/approximation matching; full-domain translation is explicit. Actual
+heat-source/readout/independent scale remain R2-R3; work/entropy/collision/
+KMS stay open. Canonical thermal_noether_response_evidence_2026_10_03;
+full Goal/R1-R5,7/11 October and later dates/owner/holdout/model/NOT_RUN unchanged.
+
+Prior science 3 October: [finite-q source/population](Result/artifacts/T13_FINITE_Q_THERMAL_SOURCE_2026-10-03.md)
 adds independently checked cross-covariance and static pressure-population
 recovery without relaxation input. R1 next requires loop-current/energy
 Ward, collisionless soft-frequency and full interacting/vacuum matching;

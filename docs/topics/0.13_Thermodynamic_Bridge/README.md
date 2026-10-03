@@ -6,6 +6,17 @@ description: "Research module for Thermodynamic Bridge within the Unity Equilibr
 
 # 0.13 Thermodynamic Bridge
 
+## Conserving Gaussian Charge And Linear Energy Response (2026-10-03)
+
+[Noether result](Result/artifacts/T13_THERMAL_NOETHER_RESPONSE_2026-10-03.md)
+derives total source charge/current and first-order natural-energy balance
+in the named thermal-insertion branch. Covariance alone is not conserved;
+stationary mean/seagull/background contact are required and independently
+checked. Pair-local identities require full-domain translation for integration,
+not a shifted finite-cutoff transport certificate. Next collisionless soft
+limits, actual heat-source/readout/material scale, full interacting/vacuum
+and second-order work/entropy/transport. Full Goal/R1-R5/Core-owner unchanged.
+
 ## Finite-Q Source And Static Population Bridge (2026-10-03)
 
 [New result](Result/artifacts/T13_FINITE_Q_THERMAL_SOURCE_2026-10-03.md)

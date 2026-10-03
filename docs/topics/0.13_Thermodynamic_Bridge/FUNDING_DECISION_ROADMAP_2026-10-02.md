@@ -10,7 +10,9 @@ Science successor: [Low-T phase EFT](Result/artifacts/T13_LOW_T_PHASE_EFT_2026-1
 
 ### แผนลงมือและผลที่ต้องตัดสินจากสถานะ 3 ตุลาคม
 
-ผลล่าสุด: [finite-q source/population](Result/artifacts/T13_FINITE_Q_THERMAL_SOURCE_2026-10-03.md) มี source response ที่ตรวจด้วย cross-covariance และ static population/pressure limit ที่ derive โดยไม่ใส่ relaxation time. Current field `finite_q_thermal_source_evidence_2026_10_03`; controller `collisionless_soft_limit_full_interacting_matching_and_physical_transport_open`. งานถัดไป loop-current/energy Ward, collisionless soft-frequency และ actual heat-source/readout/independent material scale; full interacting/vacuum/physical transport ยังเปิด ไม่เปลี่ยนวัน/โมเดล/full acceptance.
+ผลล่าสุด: [Gaussian Noether completion](Result/artifacts/T13_THERMAL_NOETHER_RESPONSE_2026-10-03.md) ปิด pair-local charge และพลังงานอันดับแรกใน named branch เมื่อรวม covariance กับ mean/contact; ไม่ใช่ second-order heat production หรือ full interacting Ward. Current field `thermal_noether_response_evidence_2026_10_03`; controller `collisionless_soft_limit_full_interacting_energy_and_physical_transport_open`. งานถัดไป collisionless soft limit, actual heat-source/readout/independent scale และ full interacting/vacuum/work/entropy/transport. Full-domain translation ระบุไว้ ไม่ใช้แทน finite-cutoff transport; วัน/โมเดล/full acceptance ไม่เปลี่ยน.
+
+ผลก่อนหน้า: [finite-q source/population](Result/artifacts/T13_FINITE_Q_THERMAL_SOURCE_2026-10-03.md) ตรวจ source กับ covariance และ static population/pressure โดยไม่ใส่ relaxation time. Field `finite_q_thermal_source_evidence_2026_10_03` คงหลักฐานและขอบเขต predecessor เดิม.
 
 ผลก่อนหน้า: [virtual/contact and covariance](Result/artifacts/T13_THERMAL_VIRTUAL_RESPONSE_2026-10-03.md) derive เทอมที่ปิด static gap โดยไม่ fit และตรวจ q0 source response กับ covariance. Field `thermal_virtual_response_evidence_2026_10_03` และ controller `finite_q_source_transport_and_complete_interacting_thermal_matching_open` เก็บเป็น predecessor ตาม scope เดิม ไม่ใช้เป็น current successor.
 

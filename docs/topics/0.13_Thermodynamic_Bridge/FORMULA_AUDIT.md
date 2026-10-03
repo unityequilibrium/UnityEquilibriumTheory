@@ -1,5 +1,16 @@
 # Formula Audit: 0.13_Thermodynamic_Bridge
 
+## Gaussian Noether Charge And Linear Energy Contract (2026-10-03)
+
+[Registry](Data/03_Research/t13_thermal_noether_response_registry.json)
+declares covariance-plus-mean charge/current and first-order energy in the
+existing branch. Integrated density/current per h E0; energy/flux per h E;
+h E3 in natural units, not SI heat/Kelvin. n is O(2) Noether charge, not
+signed C/mass; pi_phase is not UET Pi and R_gen/R_obs are excluded.
+T/Q/V0 derive stationary contact, not a fitted Ward repair. Full-domain
+translation is explicit; full interacting/dissipative/material and Core
+registry admission remain unchanged.
+
 ## Finite-Q Source And Bose Population Contract (2026-10-03)
 
 [Registry](Data/03_Research/t13_finite_q_thermal_source_registry.json)

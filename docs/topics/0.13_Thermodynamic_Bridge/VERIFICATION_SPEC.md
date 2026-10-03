@@ -1,5 +1,20 @@
 # Verification Spec
 
+## Gaussian Noether Source Verification (2026-10-03)
+
+Run Research_T13_Thermal_Noether_Response.py/test_t13_thermal_noether_response.py.
+Eight checks: covariance torque/total charge/rotating and physical energy,
+phase contact/stationary energy contact, independent spectral force/modal
+contact and omitted-background negative. mu1.05/1.2, T.002/.004, three
+physical triangles plus q0; z=.02i/.05i/.03+.02i preregistered. Ward1e-9,
+method1e-7, negative-control1e-3; original causal1e-6 unchanged/not passed.
+Zero-response energy uses absolute operator-term scale fixed before first
+audit, not its vanishing net value. Require arbitrary-covariance Euler,
+stationary drive, coordinate/zero-T/decoupled/invalid triangle/q0/real-z/
+moving/nonzero-h, protected hashes/registry and audit-time Path allowlist.
+No second-order work/entropy, full interacting/cutoff transport or physical
+mapping acceptance. Earlier verifiers keep their own scope.
+
 ## Finite-Q Cross-Covariance And Static Limit Verification (2026-10-03)
 
 Run Research_T13_Finite_Q_Thermal_Source.py/test_t13_finite_q_thermal_source.py.

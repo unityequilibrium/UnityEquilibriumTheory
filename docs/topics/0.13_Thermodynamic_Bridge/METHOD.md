@@ -1,5 +1,16 @@
 ﻿# Method
 
+## Noether Moments And Stationary Contact Completion (2026-10-03)
+
+[Derivation](Result/artifacts/T13_THERMAL_NOETHER_RESPONSE_2026-10-03.md)
+uses symmetrized density/current and quadratic energy/flux moments of the
+two-momentum covariance. Compute f/S from both initial covariances and the
+active stationary shift; delta_d=D^-1[-delta_f-M d]. Mean and covariance
+charge divergences cancel. Energy contacts and arbitrary-covariance Euler
+evolution are independent checks. Continuum contact averaging needs full
+momentum translation; finite cutoff effects are not hidden. h0=0 first-order
+energy is not second-order heating, entropy or physical transport/KMS.
+
 ## Two-Momentum Covariance And Equilibrium Bose Limit (2026-10-03)
 
 [Derivation](Result/artifacts/T13_FINITE_Q_THERMAL_SOURCE_2026-10-03.md)
