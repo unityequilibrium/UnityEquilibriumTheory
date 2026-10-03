@@ -1,5 +1,7 @@
 # คำสั่งสำหรับเริ่ม Goal: Topic 13 research portfolio
 
+ฉบับสรุปสำหรับเลือกงานและโมเดล: [ผลหลักสองสัปดาห์และแผนต่อยอด](FUNDING_EXECUTION_BRIEF_2026-10-03.md). อ่านกับ canonical contract เดิม; ไม่สร้าง Goal ซ้ำ ไม่รับงาน exploration หรือเปลี่ยนเกณฑ์จบจากการวางแผน.
+
 สถานะ: เตรียมไว้สำหรับผู้ใช้เริ่ม Goal mode; การสร้างไฟล์นี้ยังไม่เริ่ม Goal หรือ automation
 
 ## Objective

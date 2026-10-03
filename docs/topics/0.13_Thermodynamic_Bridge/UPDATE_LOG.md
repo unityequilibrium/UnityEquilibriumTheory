@@ -1,3 +1,27 @@
+## 2026-10-03 - Compact portfolio execution and model reading route
+
+MAJOR_RESULT_CLOSURE: PLANNING_ONLY; no scientific or Goal acceptance.
+
+WHAT_IS_ACTUALLY_CLOSED: One reader-facing brief connects the three required portfolio components, original freeze/review, long-term result targets and conditional model choices.
+
+WHAT_REMAINS_OPEN: Existing source/real/thermal matching and physical measurement inputs, novelty/reviewer, funder/PI/budget and scientific gates. Four untracked Landau science files remain outside this planning wave.
+
+DEPENDENCY_UNLOCKED: None; all existing controller/evidence/owner/physical fields unchanged.
+
+STATUS: PLAN_CLARIFIED_NOT_SCIENTIFIC_ACCEPTANCE; public safety safe.
+
+WHAT_CHANGED: FUNDING_EXECUTION_BRIEF_2026-10-03.md, one additive execution_reading_brief_2026_10_03 record, five planning regressions, Goal/12-week entry links and ledger. No science/action/artifact changes or competing controller.
+
+EQUATION_OR_MAPPING: Planned same-action source response and source-to-state-to-detector/thermal information card, not a new derivation or independent alpha.
+
+VERIFICATION: Four-file planning selection 46 passed in 1.43 seconds. All pre-existing top-level contract values compared against HEAD unchanged; exactly one planning field added. All local brief links resolve and git diff --check passes. Official model-selection/catalog pages opened; no model trial, scientific rerun, external review or call eligibility verification.
+
+CONTROLLING_BLOCKER: off_shell_Landau_local_real_source_contact_and_complete_thermal_sunset_open at the accepted pair snapshot; material/readout/scale separate. Pending exploration not admitted by planning.
+
+NEXT_ACTION: Scoped local planning commit; push remains denied pending authorization, no retry or new-head CI claim. Deliver the pending Landau science wave separately, then real/contact decision and measurement card under original 7/11 October dates.
+
+CLAIM_BOUNDARY: No scientific/physical/Core/global/Goal/G0-G5/R1-R5 promotion, funding-call assumption or three-month full-closure guarantee. Model roles are recommendations, trial NOT_RUN/configuration unchanged; locked holdout and prior-exposure REVIEW_REQUIRED retained. No new Goal/automation/contact/purchase/submission. Portfolio readiness is not scientific acceptance or submission eligibility.
+
 ## 2026-10-03 - Off-shell pair kernel and declared action-source response
 
 MAJOR_RESULT_CLOSURE: T13_ACOUSTIC_OFF_SHELL_PAIR_SOURCE_INTERFACE, CLOSED_FOR_LANE. Full Topic13/Goal/R1-R5 remain open.

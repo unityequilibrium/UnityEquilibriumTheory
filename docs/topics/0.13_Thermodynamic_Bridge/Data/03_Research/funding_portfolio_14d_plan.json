@@ -1106,5 +1106,28 @@
     "holdout_policy_changed": false,
     "claim_boundary": "Planning review only; no new scientific acceptance, model benchmark or funding eligibility. Unresolved remains unresolved under the existing completion rule."
   },
+  "execution_reading_brief_2026_10_03": {
+    "record_class": "PLANNING_NOT_SCIENTIFIC_CLOSURE",
+    "document": "docs/topics/0.13_Thermodynamic_Bridge/FUNDING_EXECUTION_BRIEF_2026-10-03.md",
+    "canonical_controller_is_this_plan": true,
+    "snapshot_evidence_field": "acoustic_source_pair_evidence_2026_10_03",
+    "pending_Landau_exploration_accepted_by_brief": false,
+    "funder_status": "NOT_YET_SELECTED",
+    "scientific_freeze": "2026-10-07",
+    "portfolio_review": "2026-10-11",
+    "review_dates": ["2026-10-25", "2026-11-08", "2026-11-22", "2026-12-06", "2026-12-20"],
+    "model_guidance_sources": ["https://developers.openai.com/api/docs/guides/model-selection", "https://developers.openai.com/api/docs/models"],
+    "model_trial_status": "NOT_RUN",
+    "model_configuration_changed": false,
+    "goal_reconfigured": false,
+    "scientific_gate_changed": false,
+    "completion_rule_changed": false,
+    "physical_dependency_unlocked": false,
+    "holdout_policy_changed": false,
+    "full_topic_closure_within_three_months_guaranteed": false,
+    "next_funding_call_confirmed": false,
+    "submission_ready": false,
+    "claim_promotion": false
+  },
   "claim_boundary": "Plan only. No scientific acceptance, new physical prediction, funding eligibility, external validation or global claim is established by this record. A completed portfolio and a completed scientific result are separate obligations."
 }
