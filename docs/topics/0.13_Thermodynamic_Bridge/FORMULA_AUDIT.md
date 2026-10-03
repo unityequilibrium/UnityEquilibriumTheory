@@ -1,5 +1,15 @@
 # Formula Audit: 0.13_Thermodynamic_Bridge
 
+
+## Exact Zero-Channel Soft Source (2026-10-03)
+
+[Registry](Data/03_Research/t13_collisionless_soft_source_registry.json)
+records phase-rotated covariance, six streaming denominators, logarithmic
+angular moments and same-action static pressure endpoint. Full-domain
+tail complement and fixed-centre repair are explicit; first failure retained.
+Natural susceptibility E^-2 is not independent SI calibration. C/R_gen
+ontology, physical gates, Core registry and prior equations are unchanged.
+
 ## Gaussian Noether Charge And Linear Energy Contract (2026-10-03)
 
 [Registry](Data/03_Research/t13_thermal_noether_response_registry.json)

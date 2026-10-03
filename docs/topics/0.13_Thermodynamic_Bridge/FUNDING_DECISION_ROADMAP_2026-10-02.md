@@ -10,6 +10,14 @@ Science successor: [Low-T phase EFT](Result/artifacts/T13_LOW_T_PHASE_EFT_2026-1
 
 ### แผนลงมือและผลที่ต้องตัดสินจากสถานะ 3 ตุลาคม
 
+Latest science: [collisionless soft source](Result/artifacts/T13_COLLISIONLESS_SOFT_SOURCE_2026-10-03.md)
+resolves Gaussian streaming and static pressure matching. First FAIL and
+finite-cutoff errors remain, not hidden by full-domain integration.
+Canonical collisionless_soft_source_evidence_2026_10_03;
+controller full_interacting_work_entropy_and_physical_heat_source_transport_open.
+Next actual source work/heat-readout and independent scale. Full Goal/R1-R5,
+7/11 October, models/owner/holdout unchanged. Older entries are predecessors.
+
 ผลล่าสุด: [Gaussian Noether completion](Result/artifacts/T13_THERMAL_NOETHER_RESPONSE_2026-10-03.md) ปิด pair-local charge และพลังงานอันดับแรกใน named branch เมื่อรวม covariance กับ mean/contact; ไม่ใช่ second-order heat production หรือ full interacting Ward. Current field `thermal_noether_response_evidence_2026_10_03`; controller `collisionless_soft_limit_full_interacting_energy_and_physical_transport_open`. งานถัดไป collisionless soft limit, actual heat-source/readout/independent scale และ full interacting/vacuum/work/entropy/transport. Full-domain translation ระบุไว้ ไม่ใช้แทน finite-cutoff transport; วัน/โมเดล/full acceptance ไม่เปลี่ยน.
 
 ผลก่อนหน้า: [finite-q source/population](Result/artifacts/T13_FINITE_Q_THERMAL_SOURCE_2026-10-03.md) ตรวจ source กับ covariance และ static population/pressure โดยไม่ใส่ relaxation time. Field `finite_q_thermal_source_evidence_2026_10_03` คงหลักฐานและขอบเขต predecessor เดิม.

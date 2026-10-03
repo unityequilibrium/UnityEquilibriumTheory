@@ -6,7 +6,15 @@
 
 ตัวควบคุมงาน: [funding_portfolio_14d_plan.json](Data/03_Research/funding_portfolio_14d_plan.json) | คำสั่งเริ่มงาน: [GOAL_BRIEF_FUNDING_14D.md](GOAL_BRIEF_FUNDING_14D.md)
 
-Latest science 3 October: [Gaussian Noether source completion](Result/artifacts/T13_THERMAL_NOETHER_RESPONSE_2026-10-03.md)
+Latest science 3 October: [collisionless soft source](Result/artifacts/T13_COLLISIONLESS_SOFT_SOURCE_2026-10-03.md)
+resolves six exact streaming channels, fixed-centre convergence and the
+static pressure endpoint in the full Bose momentum domain. Initial FAIL
+and raw truncated-tail boundary remain. Next source work/heat-readout,
+independent scale and full interacting/collision/entropy/physical transport.
+Canonical collisionless_soft_source_evidence_2026_10_03; Full Goal/R1-R5
+and7/11 October unchanged.
+
+Prior science 3 October: [Gaussian Noether source completion](Result/artifacts/T13_THERMAL_NOETHER_RESPONSE_2026-10-03.md)
 derives pair-local total charge and first-order energy with stationary
 mean/contact, independent Euler and negative controls. Full-domain
 translation is explicit; first-order energy is not heating. Next collisionless

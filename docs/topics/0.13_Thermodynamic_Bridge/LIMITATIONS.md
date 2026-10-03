@@ -1,5 +1,16 @@
 # Limitations
 
+
+## Soft Streaming Is Not Hydrodynamic Transport (2026-10-03)
+
+[New result](Result/artifacts/T13_COLLISIONLESS_SOFT_SOURCE_2026-10-03.md)
+checks Gaussian complex soft rays and a full-domain static endpoint, not
+real-axis global response, a collision operator, second-order heating or
+entropy production. The original finite-cutoff tail gate still fails near
+cancellation; the full-domain calculation does not erase that failure.
+No continuum-interacting error bound, physical material/readout/alpha/Kubo
+or original conserved-C repair. Full Goal and owner closure unchanged.
+
 ## Gaussian Noether Balance Is Not A Dissipative Ledger (2026-10-03)
 
 [New result](Result/artifacts/T13_THERMAL_NOETHER_RESPONSE_2026-10-03.md)

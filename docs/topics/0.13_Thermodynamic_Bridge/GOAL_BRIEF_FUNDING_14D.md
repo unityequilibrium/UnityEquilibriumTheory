@@ -4,6 +4,16 @@
 
 สถานะ: เตรียมไว้สำหรับผู้ใช้เริ่ม Goal mode; การสร้างไฟล์นี้ยังไม่เริ่ม Goal หรือ automation
 
+
+## Latest Collisionless Source Handoff (2026-10-03)
+
+[Soft-ray evidence](Result/artifacts/T13_COLLISIONLESS_SOFT_SOURCE_2026-10-03.md)
+resolves Gaussian streaming channels and the full-domain static endpoint.
+Canonical collisionless_soft_source_evidence_2026_10_03 replaces only the
+current evidence pointer. First FAIL and finite-cutoff boundary remain.
+Next source work/heat-readout, independent scale and interacting/collision/
+entropy matching. No Full Goal/R1-R5/owner promotion;7/11 October unchanged.
+
 ## Objective
 
 ดำเนินงานตาม `docs/topics/0.13_Thermodynamic_Bridge/RESEARCH_PLAN_14D_FUNDING_2026-09-27.md` และ planning contract `docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/funding_portfolio_14d_plan.json` ให้ได้ผลหลัก `T13_HE4_PREDICTIVE_CONTENT_AND_MEASUREMENT_DESIGN` พร้อมพอร์ตยื่นทุนที่ตรวจซ้ำได้ ภายใน 11 ตุลาคม 2026 ตามกรอบสองสัปดาห์ของผู้ใช้

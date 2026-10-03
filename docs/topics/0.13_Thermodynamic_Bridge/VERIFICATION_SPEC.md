@@ -1,5 +1,17 @@
 # Verification Spec
 
+
+## Collisionless Soft-Ray Verification (2026-10-03)
+
+Run Research_T13_Collisionless_Soft_Source.py/test_t13_collisionless_soft_source.py.
+Check momentum-jet FD, independent Cartesian projection, exact zero drives,
+fixed-centre refinements, angular quadrature, full-domain split/refinement,
+static pressure endpoint and 35/50-digit equivalence. Preserve first FAIL,
+raw moving-centre and truncated-tail errors; do not claim their old gates pass.
+Artifact/registry/source hashes and audit-time Path allowlist exclude numeric
+holdout reads, not certify pristine blindness or whole-program security.
+Original conserved-C threshold1e-6 is unchanged and not rerun here.
+
 ## Gaussian Noether Source Verification (2026-10-03)
 
 Run Research_T13_Thermal_Noether_Response.py/test_t13_thermal_noether_response.py.

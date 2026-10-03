@@ -1,5 +1,16 @@
 ﻿# Method
 
+
+## Collisionless Streaming And Full Momentum Domain (2026-10-03)
+
+[Derivation](Result/artifacts/T13_COLLISIONLESS_SOFT_SOURCE_2026-10-03.md)
+uses a phase-local covariance and first-order momentum perturbation to
+resolve six exact opposite-frequency channels without rates or filtering.
+Convergence holds vector centre fixed; analytic angular moments and
+full-domain Bose quadrature with explicit tail complement are independently
+checked. Raw finite-tail/moving-centre failures and 35/50-digit equivalence
+remain visible. Not physical thermalization, heat transport or Kelvin alpha.
+
 ## Noether Moments And Stationary Contact Completion (2026-10-03)
 
 [Derivation](Result/artifacts/T13_THERMAL_NOETHER_RESPONSE_2026-10-03.md)

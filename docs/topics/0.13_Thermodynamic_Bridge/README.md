@@ -6,6 +6,17 @@ description: "Research module for Thermodynamic Bridge within the Unity Equilibr
 
 # 0.13 Thermodynamic Bridge
 
+## Gaussian Collisionless Source Ray (2026-10-03)
+
+[Soft-ray result](Result/artifacts/T13_COLLISIONLESS_SOFT_SOURCE_2026-10-03.md)
+resolves six exact streaming channels and checks fixed-centre finite-q
+convergence plus the static pressure endpoint. First moving-centre and
+finite-tail failures remain; full Bose-domain integration is explicit,
+not cone padding or a finite-cutoff certificate. Next second-order source
+work/heat-readout, independent material scale and interacting/collision/
+entropy/physical transport. Full Goal/R1-R5 and Core-owner unchanged.
+Earlier sections retain predecessor scope, not the current controller.
+
 ## Conserving Gaussian Charge And Linear Energy Response (2026-10-03)
 
 [Noether result](Result/artifacts/T13_THERMAL_NOETHER_RESPONSE_2026-10-03.md)

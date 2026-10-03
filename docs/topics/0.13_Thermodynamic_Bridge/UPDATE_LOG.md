@@ -1,3 +1,27 @@
+## 2026-10-03 - Gaussian collisionless source ray and full-domain endpoint
+
+MAJOR_RESULT_CLOSURE: T13_GAUSSIAN_COLLISIONLESS_SOFT_RAY_SOURCE_RESPONSE, CLOSED_FOR_LANE. Full Topic13/Goal/R1-R5 remain unaccepted; Core-owner bounded composition unchanged.
+
+WHAT_IS_ACTUALLY_CLOSED: Six exact Gaussian streaming channels from singular momentum perturbation, phase-local covariance, fixed-vector-centre finite-q convergence, analytic angular moments and full-domain static pressure-Hessian endpoint. Static and fixed-charge tree limits remain distinct.
+
+WHAT_REMAINS_OPEN: Full interacting/vacuum/thermal matching and approximation control; actual heat-source/readout, independent material scale/uncertainty, second-order source work, entropy/dissipative balance, collisions, physical Kubo and SK/KMS. Original finite-cutoff tail certificate still fails.
+
+DEPENDENCY_UNLOCKED: Source-work and physical heat/readout research only. No physical/Core/Gravity or owner-composition promotion; conserved-C baseline unchanged.
+
+STATUS: PASS_SCOPED_COLLISIONLESS_SOFT_SOURCE; public safety safe. Previous Goal turn was planning-only, no scientific progress; this turn produces new derived and verified evidence.
+
+WHAT_CHANGED: Topic-local calculation, 48 tests, registry, final artifact, preserved first-failure artifact and derivation; canonical funding evidence with predecessor chain, one new funding test, five research docs and five portfolio/Goal handoffs. No primary/Core-owner edit or raw/private input.
+
+EQUATION_OR_MAPPING: z=w*q; six opposite-frequency covariance channels use (N0+t*N1+t2*N2)/(-iw-t*Hii), not assigned relaxation. Full Bose momentum domain is [0,infinity); 32/40 are numerical split positions with explicit tail complement, not a padded causal cone. Natural susceptibility E^-2 is not Kelvin alpha.
+
+VERIFICATION: Final 24-file linked run: 440 passed in 500.32 seconds, including 48 new soft-source and 29 funding-contract tests. Ten corrected artifact checks over54 point rays and16 thermal cases. Finest fixed-centre chi/covariance errors8.765e-5/1.637e-3; static pressure3.245e-13; full-domain split1.262e-14; raw truncated-tail4.262e-7 remains above1e-8. First completed audit FAIL preserved; precision alone reproduced its failures. Corrected audit attempt stopped before a new artifact because low-p curvature iteration was not a full-domain root algorithm; exact same characteristic polynomial then used. Final artifact be7cb2e3bb5ba749e91876e56005ea63269f5b93b0d317eedf7ee8adebfc65a3; first failure95890c85298ca95524abd13316d0f997c329015aae51f0af081920fad3d60bdb. Registry/artifact/hash and audit-time Path allowlist controls pass; old acceptance/calendar/holdout/model/history properties match HEAD outside the allowed current-evidence changes. Six local note links and whitespace checked. No whole-repository, external or continuum-interacting validation/model trial.
+
+CONTROLLING_BLOCKER: full_interacting_work_entropy_and_physical_heat_source_transport_open; independent material/source/readout scale separate.
+
+NEXT_ACTION: Derive actual second-order source work and distinguish collisionless absorption from local heating/entropy, then heat/readout and independent material mapping. Preserve7/11 October and full R1-R5 acceptance. Commit coherent wave locally; existing push authorization denial remains, no retry/workaround/new-head CI or public-main synchronization claim.
+
+CLAIM_BOUNDARY: No Full Goal/physical/Core/global promotion, fabricated data/alpha, fitting, assigned width/rate, clipping/padding/filter, threshold/ontology or owner change. No numeric Xie access; prior exposure REVIEW_REQUIRED and failed conserved-C baseline retained. No new Goal/automation/configuration/contact/purchase/submission. The original moving-centre/finite-tail FAIL is not relabelled PASS by corrected-domain evidence.
+
 ## 2026-10-03 - Conserving Gaussian source charge and linear energy
 
 MAJOR_RESULT_CLOSURE: T13_GAUSSIAN_THERMAL_SOURCE_NOETHER_BALANCE, CLOSED_FOR_LANE. Full Topic13/Goal/R1-R5 remain open; Core-owner bounded composition unchanged.

@@ -10,7 +10,14 @@
 
 ## ผลหลักสำหรับพอร์ตและทุนรอบถัดไป
 
-Latest science 3 October: [Gaussian Noether source completion](Result/artifacts/T13_THERMAL_NOETHER_RESPONSE_2026-10-03.md)
+Latest science 3 October: [collisionless soft source](Result/artifacts/T13_COLLISIONLESS_SOFT_SOURCE_2026-10-03.md)
+resolves Gaussian streaming and the static pressure endpoint, with first
+FAIL and finite-cutoff limitations retained. Current evidence is
+collisionless_soft_source_evidence_2026_10_03. Next actual source work/
+heat-readout and independent scale, plus interacting/collision/entropy
+completion. Model trial NOT_RUN, original dates and full R1-R5 unchanged.
+
+Prior science 3 October: [Gaussian Noether source completion](Result/artifacts/T13_THERMAL_NOETHER_RESPONSE_2026-10-03.md)
 adds pair-local charge/first-order energy, not second-order heating or full
 transport. R1 next needs collisionless soft limits and full interacting/
 vacuum/approximation matching; full-domain translation is explicit. Actual

@@ -1,5 +1,14 @@
 # Topic 13: ผลหลักสำหรับพอร์ตและแผนต่อยอด
 
+
+Latest science handoff: [collisionless soft source](Result/artifacts/T13_COLLISIONLESS_SOFT_SOURCE_2026-10-03.md)
+resolves six exact Gaussian streaming channels, fixed-centre convergence
+and the full-domain static endpoint. First FAIL and old truncated-tail
+failure remain. Canonical collisionless_soft_source_evidence_2026_10_03;
+next second-order source work/heat-readout, independent material scale
+and interacting/collision/entropy/physical transport. Full Goal/R1-R5,
+owner/holdout/model trial and original dates unchanged. Below is history.
+
 วันที่ทบทวน: 3 ตุลาคม 2026 | ฉบับสรุปเพื่อเลือกงาน ไม่ใช่ controller ใหม่
 
 Science handoff ล่าสุด: [Gaussian Noether completion](Result/artifacts/T13_THERMAL_NOETHER_RESPONSE_2026-10-03.md) ปิด pair-local charge และพลังงานอันดับแรกเมื่อรวม covariance กับ stationary mean/contact จาก action; ตัด background shift แล้ว Ward ไม่ผ่าน. Full-domain translation ต้องระบุ ไม่ใช้แทน finite-cutoff transport. งานถัดไป collisionless soft limit และ actual heat-source/readout/material scale; second-order work/entropy และ full interacting/vacuum/physical transport ยังเปิด. Canonical `thermal_noether_response_evidence_2026_10_03`; วัน/เกณฑ์/full Goal/owner/holdout/โมเดลเดิม. ข้อความด้านล่างเป็น predecessor/planning history ไม่ใช้เป็น current pointer.
