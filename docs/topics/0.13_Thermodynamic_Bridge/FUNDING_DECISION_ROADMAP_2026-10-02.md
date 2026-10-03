@@ -8,6 +8,54 @@ Science successor: [Low-T phase EFT](Result/artifacts/T13_LOW_T_PHASE_EFT_2026-1
 
 ## ผลวิจัยที่รับเข้าเพิ่ม 3 ตุลาคม
 
+### แผนลงมือและผลที่ต้องตัดสินจากสถานะ 3 ตุลาคม
+
+ผู้ใช้กำหนดกรอบสองสัปดาห์และยังไม่เลือกทุน จึงคงวันเดิม: **7 ต.ค. ตรึงผลวิทยาศาสตร์ / 11 ต.ค. พอร์ตพร้อมทบทวน** ไม่เริ่มนับใหม่จากวันนี้ ไม่รับรองว่าจะทันทุนจริง และไม่กำหนดว่าทุนรอบต่อไปเปิดอีกสองหรือสามเดือน
+
+**เป้าหมายเดียว:** `T13_HE4_PREDICTIVE_CONTENT_AND_MEASUREMENT_DESIGN` ตาม contract เดิม ตอบให้ได้ว่า calibration/equilibrium ที่ล็อกแล้วกำหนด dynamic response ใดได้เอง และข้อมูลอิสระใดต้องเพิ่มจึงทดสอบได้ ไม่ใช่เป้าหมายปิดทุก branch ของ Topic13 ภายในสองสัปดาห์
+
+สถานะที่อ่านจริงแยกสามชั้น:
+
+| ชั้น | หลักฐานที่อ่าน | ใช้วางแผนได้แค่ไหน |
+| --- | --- | --- |
+| Core-owner O(2)/He-4 | Closure matrix ใน checkout เจ้าของ Core: `CLOSED_FOR_CORE`; SHA-256 `969351376d918204c00c7d71e213a0e56f00d7fc04390b9c3a054faa5f5e7abb` | อ่านบันทึก ไม่ได้ rerun หรือรับรอง composition ใหม่; ไม่ครอบคลุม graphite TTG หรือ predictive-response รุ่นใหม่ |
+| หลักฐานที่ canonical funding contract รับเข้าแล้ว | [Finite-T cuts/static coherence](Result/artifacts/T13_THERMAL_CUT_STIFFNESS_2026-10-03.md); artifact SHA-256 `9d92eb55ab0eb4b0074d13272d71c5a32be2b6c1fcc7a1ff0f15b9383725d89d` | Scoped preliminary science ไม่ใช่ G0-G5/R1-R5 accepted หรือ material prediction |
+| งานใหม่ที่พบใน worktree | Acoustic modal matching: local note `Result/artifacts/T13_ACOUSTIC_MODAL_CUTS_2026-10-03.md`; artifact SHA-256 `6f44a1c7e28aaa3c925a9f9f452892529ba12c5378a0e6222aeab6e3662e7840` | ยังไม่ commit/รับเข้า canonical funding evidence ณ รอบวางแผนนี้; ห้ามใช้เป็น release evidence จนตรวจและส่งมอบ science wave แยก |
+
+ผลใหม่ที่ยังไม่รับเข้า derive tree residues/cubic projection สำหรับสาม acoustic legs ไม่ใช่ full off-shell/source/local real response หรือ complete thermal sunset มี next obligation ชัดเจนคือ `off_shell_source_real_matching_and_complete_thermal_sunset_open` ตัวควบคุม canonical ที่รับเข้าแล้วคง `matched_curvature_real_response_and_full_thermal_sunset_open` จน science wave ใหม่ส่งมอบ ไม่แก้สถานะ canonical ด้วย prose
+
+| ช่วง/เจ้าของงาน | งานที่เปลี่ยนคำตอบ | รับเมื่อ / หากยังไม่ได้ |
+| --- | --- | --- |
+| 3-4 ต.ค. / derivation lead + verifier | ตรวจส่งมอบ modal wave แยก; ระบุ off-shell source/operator/contact ที่ action กำหนดได้ กับ finite local terms ที่ยังต้อง matching; แยก coordinate redundancy จาก ambiguity จริง | รับแต่ละส่วนด้วยสมการ หน่วย admissibility และ independent calculation; ไม่ใช้ on-shell cut แทน real response ทั้งหมด |
+| ไม่เกิน 5 ต.ค. / lead | ตัดสิน route: predictive เฉพาะ operator/input/protocol พร้อม; structural เฉพาะมี same-calibration different-response family หรือ operator-completion proof ที่ตรวจได้ | ถ้าขาด proof/input ให้ `UNRESOLVED`; ไม่ใช้ missing source เป็น no-go และไม่ย้ายเส้นจบให้แค่ modal cut ผ่าน |
+| 3-6 ต.ค. / measurement owner ทำคู่ขนานได้ | เติม measurement card ที่มี material/state, source/readout operator, nuisance parameters, uncertainty/covariance และเหตุผลว่าการวัดใหม่แยกคำตอบอย่างไร | รับ rank gain ที่ derive/check ได้; หาก detector หรือ normalization ยังไม่พร้อมให้ติดป้าย conditional feasibility ไม่เรียก independent calibration |
+| 5-7 ต.ค. / verifier + lead | ตรวจ independent method, numerical vs truncation/physical uncertainty, related-work/novelty และ disposition ตาม G0-G4 เดิม | Unknown ต้องเป็น unknown; reviewer ที่ยังไม่มีเปิดเผยตรง ๆ ไม่ถือ AI agreement เป็น external review |
+| 8-11 ต.ค. / author + reproduction owner | รายงาน 8-12 หน้าเป็นขนาดเป้าหมาย, brief 2 หน้า, pitch 8-10 หน้าเป็นขนาดเป้าหมาย, evidence manifest/reproduction/claim map และ call-fit gaps | ขนาดเอกสารไม่ใช่ acceptance; ใช้ G5 และ completion rule เดิม รายงาน preliminary ได้โดยไม่ประกาศ Goal สำเร็จ |
+
+**แพ็กที่ต้องปิดร่วมกันมีสามส่วน:** (1) คำตอบทางสมการตาม predictive/structural disposition เดิม (2) การออกแบบข้อมูล/การวัดที่เพิ่มข้อมูลจริง (3) หลักฐานตรวจซ้ำและขอบเขตความใหม่ งานคำนวณย่อยสนับสนุนแพ็กนี้ ไม่ถูกนับเป็นการปิดแพ็กโดยอัตโนมัติ
+
+**จุดหยุดการวน:** จำกัดหนึ่งคำถามวิจัยหลัก ใช้สอง wave ที่ไม่เพิ่ม proof/operator/source/independent evidence เป็นจุดบังคับตัดสิน ไม่เพิ่ม effort หรือ resolution โดยไม่มีเหตุผลใหม่ งาน complete thermal sunset ที่ยังเปิดหลัง 5 ต.ค. ส่งต่อ R1 ไม่บังคับทำจนหมดก่อนพอร์ต; แต่ข้อที่ completion rule ต้องใช้ยังเปิดก็ต้องรายงานว่าแพ็กหลักยังไม่ accepted
+
+### เวลาเพิ่ม 2-3 เดือนต้องซื้อผลอะไร
+
+| วันทบทวนเดิม | ผลที่ต้องเพิ่ม | ทางเลือกเมื่อ input ยังไม่มี |
+| --- | --- | --- |
+| 25 ต.ค. / R1 | Source-complete response prescription และ matching/validity boundary ของ branch ที่เลือก รวม off-shell/local real กับ thermal consistency ที่เกี่ยวข้อง | ปิดได้เฉพาะข้อที่มี proof; ระบุ exact unresolved obligation ไม่อ้าง full EOS/transport จาก acoustic cuts |
+| 8 พ.ย. / R2-R3 | หนึ่ง material/state/protocol พร้อม independent normalization/input และ observable/readout/uncertainty | ส่ง measurement-feasibility package ที่ระบุสิ่งที่จะให้แล็บวัดจริง; ไม่สร้าง alpha หรือ numeric rows แทน |
+| 22 พ.ย. / R4 | หนึ่ง preregistered comparison เมื่อ prerequisites ผ่าน หรือ structural result ตามเกณฑ์เดิมพร้อม design | ผลไม่ตรงก็มีคุณค่าเมื่อไม่ retune; ยังขาดหลักฐานให้ unresolved ไม่ยืดเป็นรันซ้ำไม่จำกัด |
+| 6 ธ.ค. / extension | State/protocol ที่สอง หรือ uncertainty/robustness ของผลแรก | ทำหลังผลแรกพร้อม; หากทุนจริงปิดก่อน ให้ใช้ผลที่ freeze แล้ว ไม่รอ extension |
+| 20 ธ.ค. / R5 | Clean reproduction, reviewer disposition ที่เกิดจริง และพอร์ต v2 ที่ปรับตามทุนเมื่อเลือกแล้ว | ถ้ายังไม่มีผู้ทบทวน/สังกัด/ทุน ให้ระบุ gap ไม่เรียก submission-ready |
+
+ประโยชน์ระยะยาวคือส่ง response interface ที่รู้หน่วย สมมติฐาน input และ validity ให้ Core ลด circular fitting และระบุว่าทุนซื้อการวัดหรือการคำนวณอะไรที่เปลี่ยนข้อสรุปได้ ไม่ใช่รับประกัน full Topic13/global UET closure ในสามเดือน ยังไม่เปิด Gravity/Galaxy เพื่อทดแทนงานนี้
+
+### โมเดลและทรัพยากรสำหรับการลงมือ
+
+คำแนะนำตั้งต้นคือ **Astra/high เป็น lead**, **Sol 6.1/high สำหรับ implementation/reproduction**; xhigh เฉพาะ proof obligation ที่ bounded และ Luna เป็นทางเลือกสำหรับ inventory เท่านั้น ถ้าใช้ตัวเดียวเลือก Astra/high เมื่อโควตาพอ หรือ Sol 6.1/high แล้วให้ derivation/claim ถูกตรวจในจุดสำคัญ บทบาทนี้อาศัย [OpenAI model-selection guidance](https://developers.openai.com/api/docs/guides/model-selection) และ [model guide](https://developers.openai.com/api/docs/guides/latest-model) ที่ตรวจ 3 ต.ค.; ไม่ใช่ผล benchmark ว่าโมเดลใดปิด UET ได้
+
+คง trial `NOT_RUN`: ใช้ packet/acceptance เดียวกัน จำกัด 90 นาทีต่อ configuration เปรียบเทียบ critical errors, accepted result และเวลารวมแก้ไข เก็บ usage/cost เป็น unknown หากไม่ทราบ ไม่ใช้ max/ultra ต่อเนื่องแทนโจทย์ที่ชัด ไม่ได้เปลี่ยน configuration หรือเริ่ม Goal ใหม่จากแผนนี้
+
+วันรับทุนยัง unknown: เมื่อเลือกทุนให้ถอยจาก deadline จริงอย่างน้อย 14 วันสำหรับ scientific freeze, 7 วันสำหรับเอกสารสถาบัน และ 3 วันสำหรับตรวจ attachments หรือมากกว่านั้นตามหน่วยงาน รอบสมมติ 11 ธ.ค./11 ม.ค. ในส่วน 5 เป็น scenario เท่านั้น ไม่ใช่ประกาศทุน
+
 [Vacuum cut/log และ matching boundary](Result/artifacts/T13_VACUUM_CUT_LOG_2026-10-03.md)
 ตรวจได้จริงแล้วใน formal linear-phase lane: cut กำหนด logarithmic equivalence class
 แต่ไม่กำหนด finite local real terms ทั้งหมด ผลเดียวกันตรวจด้วย subtracted dispersion

@@ -1,3 +1,27 @@
+## 2026-10-03 - User timeline, model and next-round execution review
+
+MAJOR_RESULT_CLOSURE: Planning clarification only; no scientific-result or Goal acceptance.
+
+WHAT_IS_ACTUALLY_CLOSED: Explicit delivery questions, owners and decisions before the existing 7/11 October dates; three linked portfolio components and unchanged later review dates. Funder remains unspecified.
+
+WHAT_REMAINS_OPEN: Existing scientific acceptance, independent physical input/readout/uncertainty, complete response and thermal matching, novelty/reviewer and actual funding eligibility/PI/budget. Uncommitted modal science is observed, not admitted by this review.
+
+DEPENDENCY_UNLOCKED: None. Owner Core O(2)/He-4 composition remains a read-only snapshot, not reverified or changed.
+
+STATUS: PLAN_UPDATED_NOT_SCIENTIFIC_ACCEPTANCE; public safety safe.
+
+WHAT_CHANGED: Executive execution table in FUNDING_DECISION_ROADMAP_2026-10-02.md and backward-compatible user_timeline_review_2026_10_03 in the canonical funding contract. Science files, current-evidence pointer and all acceptance fields unchanged.
+
+EQUATION_OR_MAPPING: Plan for same-action response/source/local matching and independent measurement information, not a newly derived operator. No equation, physical coefficient or alpha admitted.
+
+VERIFICATION: Three-file planning selection 39 passed in 1.54 seconds. Explicit comparison against HEAD confirms unchanged acceptance_gates, completion_rule, holdout_policy, model_policy, start/delivery dates and current execution review. Observed modal artifact hash matches; Core-owner matrix hash read independently. No scientific rerun, model trial or funding-call verification.
+
+CONTROLLING_BLOCKER: Canonical matched_curvature_real_response_and_full_thermal_sunset_open remains unchanged; uncommitted successor has off_shell_source_real_matching_and_complete_thermal_sunset_open, not yet admitted.
+
+NEXT_ACTION: Commit/push only this planning section to existing draft PR30; leave modal science changes for their own verified wave. Decide the scientific route by 5 October, freeze 7 October, review portfolio 11 October. Longer-term reviews remain 25 October, 8/22 November and 6/20 December.
+
+CLAIM_BOUNDARY: No Full Topic13/global/Core/physical promotion, new Goal/model configuration, target/holdout use, threshold change, manufactured data or missing-source no-go. Model roles are recommendations based on official guidance, trial NOT_RUN. Unknown next-call date is not an assumed funding opportunity.
+
 ## 2026-10-03 - Finite-T pair/Landau cuts and static thermal coherence
 
 MAJOR_RESULT_CLOSURE: T13_FINITE_T_PHASE_CUT_AND_STATIC_THERMAL_COHERENCE, CLOSED_FOR_LANE. Full Goal/R1-R5 and physical/Core acceptance open.

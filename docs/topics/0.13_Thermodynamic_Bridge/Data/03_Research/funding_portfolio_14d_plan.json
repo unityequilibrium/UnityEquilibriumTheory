@@ -1005,5 +1005,44 @@
   "holdout_policy": {"xie_2026_use_allowed": false, "past_context_exposure": true, "blind_eligibility": "REVIEW_REQUIRED", "historical_no_access_fields_certify_current_blinding": false, "he4_second_sound_rows_previously_seen": true, "he4_second_sound_is_blind_holdout": false, "calibration_rematching_on_response": false},
   "report_fields": ["MAJOR_RESULT_CLOSURE", "WHAT_IS_ACTUALLY_CLOSED", "WHAT_REMAINS_OPEN", "DEPENDENCY_UNLOCKED", "STATUS", "WHAT_CHANGED", "EQUATION_OR_MAPPING", "VERIFICATION", "CONTROLLING_BLOCKER", "NEXT_ACTION", "CLAIM_BOUNDARY"],
   "external_references": ["https://srd.nist.gov/jpcrdreprint/1.556028.pdf", "https://journals.aps.org/pr/abstract/10.1103/PhysRev.71.600", "https://www.nsf.gov/funding/merit-review"],
+  "user_timeline_review_2026_10_03": {
+    "record_class": "PLANNING_NOT_SCIENTIFIC_CLOSURE",
+    "user_confirmed_duration_days": 14,
+    "funder_selected": false,
+    "submission_deadline": null,
+    "preserves_start_date": "2026-09-28",
+    "scientific_freeze_date": "2026-10-07",
+    "portfolio_review_date": "2026-10-11",
+    "research_goal_id_unchanged": true,
+    "acceptance_gates_changed": false,
+    "completion_rule_changed": false,
+    "core_owner_snapshot": {
+      "path": "docs/core/07_artifacts/topic13/t13_topic13_closure_matrix.json",
+      "sha256": "969351376d918204c00c7d71e213a0e56f00d7fc04390b9c3a054faa5f5e7abb",
+      "scope": "owner O(2)/He-4 Core composition, not graphite TTG or new predictive-response branch",
+      "read_only_not_rerun": true
+    },
+    "accepted_evidence_field_unchanged": "thermal_cut_stiffness_evidence_2026_10_03",
+    "uncommitted_science_observed_not_admitted": {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/t13_acoustic_modal_cuts.json",
+      "sha256": "6f44a1c7e28aaa3c925a9f9f452892529ba12c5378a0e6222aeab6e3662e7840",
+      "closure_scope": "tree three-acoustic-leg residues, cubic projection and cuts only",
+      "next_obligation": "off_shell_source_real_matching_and_complete_thermal_sunset_open",
+      "release_evidence_admitted_by_this_review": false
+    },
+    "delivery_components": [
+      "predictive-content result or scoped structural proof meeting existing G2/G3",
+      "additional-measurement information/readout/uncertainty design meeting existing G4",
+      "reproducible evidence, related-work/claim map and portfolio meeting existing G5"
+    ],
+    "review_dates_unchanged": ["2026-10-25", "2026-11-08", "2026-11-22", "2026-12-06", "2026-12-20"],
+    "next_funding_call_date_confirmed": false,
+    "goal_reconfigured": false,
+    "model_trial_status": "NOT_RUN",
+    "model_configuration_changed": false,
+    "physical_or_global_unlock_performed": false,
+    "holdout_policy_changed": false,
+    "claim_boundary": "Planning review only; no new scientific acceptance, model benchmark or funding eligibility. Unresolved remains unresolved under the existing completion rule."
+  },
   "claim_boundary": "Plan only. No scientific acceptance, new physical prediction, funding eligibility, external validation or global claim is established by this record. A completed portfolio and a completed scientific result are separate obligations."
 }
