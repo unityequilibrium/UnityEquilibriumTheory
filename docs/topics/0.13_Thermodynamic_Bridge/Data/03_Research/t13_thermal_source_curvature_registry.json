@@ -1,0 +1,12 @@
+{
+  "schema_version": "uet-topic-local-equation-contract-v1",
+  "owner_topic": "0.13_Thermodynamic_Bridge",
+  "branch_id": "t13.candidate.tree_matched_classical_phi_low_T_phase_EFT_v1",
+  "status": "LOCAL_SOURCE_CURVATURE_RESEARCH_NOT_CORE_PROMOTION",
+  "entries": [
+    {"id": "t13.phase_eft.stationary_source_energy_jets", "ontology": "h external action source, acoustic eigenmode not C/Pi; R_gen/R_obs excluded", "equation": "V0 x_h=ePhi; V0 x_hh=-T[x_h,x_h]; E_h=uDag D_h u/(2E)", "units": "x_h:E^-2; E_h:E^-2; E_hh:E^-5", "derivation_class": "DERIVED_TREE_STATIONARY_AND_GYROSCOPIC_EIGENVALUE_VARIATION", "observable": "conditional energy response to declared source", "data_role": "DERIVED", "verification_status": "PASS_SCOPED_THERMAL_SOURCE_CURVATURE", "controlling_blocker": "complete_dynamic_source_matching_open", "claim_boundary": "Tree acoustic source variation, not independent quantum-heavy or material mapping"},
+    {"id": "t13.phase_eft.thermal_static_source_curvature", "ontology": "one acoustic thermal determinant in original h convention, not physical heat or Kelvin", "equation": "chi_th=integral [n(1+n) E_h^2/T-n E_hh]", "units": "chi:E^-2; thermal pressure:E^4", "derivation_class": "DERIVED_ONE_ACOUSTIC_THERMAL_PRESSURE_HESSIAN", "observable": "conditional equilibrium static source susceptibility", "data_role": "DERIVED", "verification_status": "PASS_SCOPED_THERMAL_SOURCE_CURVATURE", "controlling_blocker": "dynamic_contact_virtual_mode_and_full_thermal_matching_open", "claim_boundary": "Static matching target is not fitted dynamic contact, complete real response or interacting EOS"}
+  ],
+  "core_registry_modified": false,
+  "claim_promotion": false
+}

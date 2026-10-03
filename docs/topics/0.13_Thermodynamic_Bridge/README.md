@@ -6,6 +6,17 @@ description: "Research module for Thermodynamic Bridge within the Unity Equilibr
 
 # 0.13 Thermodynamic Bridge
 
+## Thermal Source Curvature And Static Matching (2026-10-03)
+
+[New result](Result/artifacts/T13_THERMAL_SOURCE_CURVATURE_2026-10-03.md)
+derives the acoustic thermal pressure source Hessian, independently checked
+against recomputed stationary states. Energy curvature is essential; the
+acoustic cut-only static projections differ by about3.65%/66.4% at the two
+witnesses. This supplies a real static matching target and identifies
+background/kinematic/virtual contributions, not an assigned dynamic contact.
+Next actual dynamic source/virtual completion and full thermal matching;
+physical input/transport and Full Topic13/Goal remain open.
+
 ## Landau Source And Conditional Support Bounds (2026-10-03)
 
 [New result](Result/artifacts/T13_ACOUSTIC_SOURCE_LANDAU_2026-10-03.md)

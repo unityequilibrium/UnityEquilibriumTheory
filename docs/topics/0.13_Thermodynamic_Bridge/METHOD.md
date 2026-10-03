@@ -1,5 +1,16 @@
 ﻿# Method
 
+## Same-Action Thermal Source Hessian (2026-10-03)
+
+[Derivation](Result/artifacts/T13_THERMAL_SOURCE_CURVATURE_2026-10-03.md)
+differentiates the stationary source path and gyroscopic acoustic eigenmode,
+including background acceleration, quartic/seagull and virtual polarization.
+Differentiate thermal pressure on a fixed p domain, checking reoptimized
+tree states and energy/kernel derivatives independently. Keep the static
+population/pair matching residual as an obligation, not fitted contact.
+Exact stationary phase cancellation removes a known tiny-p numerical loss;
+raw errors and first-failure artifact remain visible. Full dynamics open.
+
 ## Off-Shell Landau Source And Flux Bounds (2026-10-03)
 
 [Derivation](Result/artifacts/T13_ACOUSTIC_SOURCE_LANDAU_2026-10-03.md)

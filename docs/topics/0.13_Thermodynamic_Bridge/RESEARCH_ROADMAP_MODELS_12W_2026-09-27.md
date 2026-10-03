@@ -10,7 +10,15 @@
 
 ## ผลหลักสำหรับพอร์ตและทุนรอบถัดไป
 
-Latest science 3 October: [Landau/source and support bounds](Result/artifacts/T13_ACOUSTIC_SOURCE_LANDAU_2026-10-03.md)
+Latest science 3 October: [thermal source curvature](Result/artifacts/T13_THERMAL_SOURCE_CURVATURE_2026-10-03.md)
+derives the acoustic thermal pressure/source Hessian with virtual and
+background contributions. R1 next requires actual dynamic source/contact
+completion returning the static target; cut-only mismatch is3.65%/66.4%,
+not a contact to assign or full no-go. R2-R3 physical inputs, all dates,
+acceptance/models/NOT_RUN trial remain unchanged. Canonical current field
+thermal_source_curvature_evidence_2026_10_03; previous records keep scope.
+
+Prior science 3 October: [Landau/source and support bounds](Result/artifacts/T13_ACOUSTIC_SOURCE_LANDAU_2026-10-03.md)
 adds acoustic Landau absorption and the stated combined source windows,
 with conditional quadratic energy-flux/sound bounds. R1 still needs local
 real/source-contact and complete thermal consistency; group speed is not

@@ -1,3 +1,27 @@
+## 2026-10-03 - Same-action thermal source curvature and static matching target
+
+MAJOR_RESULT_CLOSURE: T13_THERMAL_STATIC_SOURCE_CURVATURE_MATCHING_TARGET, CLOSED_FOR_LANE. Full Topic13/Goal/R1-R5 remain open.
+
+WHAT_IS_ACTUALLY_CLOSED: Stationary source jets, gyroscopic acoustic energy derivatives and thermal acoustic pressure Hessian, independently checked from recomputed h states. Source curvature resolves background/seagull, kinematic and virtual-polarization terms; the acoustic cut-only static matching obligation is quantified.
+
+WHAT_REMAINS_OPEN: Actual dynamic source/contact/virtual and local real matching, all-mode quantum/heavy admission, complete thermal sunset/mixed pressure/source/entropy, normal/heat/Kubo/SK-KMS and independent material/readout/scale/uncertainty. A static residual is not a contact coefficient to assign.
+
+DEPENDENCY_UNLOCKED: Source/contact/virtual-mode matching research only. No physical/Core/Gravity or owner-composition unlock; original conserved-C unchanged.
+
+STATUS: PASS_SCOPED_THERMAL_SOURCE_CURVATURE; public safety safe.
+
+WHAT_CHANGED: New verifier/17 tests/two-entry registry/final and historical-failure artifacts/derivation; canonical source-curvature evidence/predecessor pointers with one new regression; five research docs and five portfolio/Goal handoffs. Predecessors/action/planning snapshots unchanged. One integration patch failed atomically because ordered anchors were reversed; corrected without partial edits.
+
+EQUATION_OR_MAPPING: chi_th=integral [n(1+n) E_h2/T-n E_hh]; source-projected Landau vertex=2E E_h; static supplement obligation=chi_pair-chi_energy_curvature. E_h E^-2, E_hh E^-5, P E4, chi E^-2; h E3 is not detector/heat/Kelvin. D_hh includes stationary acceleration and E_hh includes tree virtual polarization, not new quantum-heavy loops.
+
+VERIFICATION: Final single twenty-file linked selection311 passed in63.01 seconds, including17 source-curvature and25 funding tests; six artifact checks. Independent stationary/energy/kernel/pressure FDs, exact source Ward, decomposition, free/zero-T/coordinate/invalid-domain, protected hashes and audit-time Path read allowlist pass. Pressure Hessian max first-step error2.612e-5, stable pointwise identities<1.4e-15, tail<4.336e-10 and quadrature<1.1e-15. Cut-only static mismatch3.653-3.658%/66.38-66.40% at two mu witnesses/T grids; dropping all energy curvature misses22.93%/73.11-73.13%. First audit failed tiny-p raw source cancellation up to7.551e-4; exact stationary phase cancellation repair preserves grids/steps/gates and exposes raw errors up to1.013e-3. Final artifact b5955d1e8425795da7658ab161dadb6c649e1e03be1ecb113a7b2e3e29bf061e; historical failure c5a15a30b3b9a2e14218d5b85fdb6e4266db3f7652bf72c7de5438aab9cfe585 is not a current rerun certificate. Acceptance/calendar/holdout/model/history/predecessor values compared against HEAD unchanged; only current handoff/preliminary list advanced with one evidence record. Note links/whitespace pass. Earlier focused16-test run preceded decomposition and is not added. No full repo/external/model validation or total physical/truncation uncertainty bound.
+
+CONTROLLING_BLOCKER: dynamic_source_contact_virtual_mode_and_full_thermal_matching_open; independent physical calibration/input/transport remains separate.
+
+NEXT_ACTION: Scoped local science commit; upstream publication denied pending authorization, no retry/workaround/new-head CI claim. Derive actual dynamic source/contact/virtual completion returning the independently computed pressure target, not an assigned residual; then complete real/thermal consistency and measurement-information chain. Preserve7/11 October and full Goal rules.
+
+CLAIM_BOUNDARY: One acoustic thermal determinant/static matching target only, not full retarded/source/contact, interacting EOS, all-mode quantum/heavy, physical KMS/Kubo/heat transport, alpha/material prediction or Full Topic13/UET/Core promotion. No fitting, fabricated input, assigned width, mass repair, clipping/filter/padding, threshold/ontology/owner edit or Xie numeric read; prior exposure REVIEW_REQUIRED. No new Goal/automation/model configuration/contact/purchase/submission. Goal stays active because substantive dynamic/physical/measurement work remains.
+
 ## 2026-10-03 - Acoustic off-shell Landau source and quadratic support bounds
 
 MAJOR_RESULT_CLOSURE: T13_ACOUSTIC_OFF_SHELL_LANDAU_SOURCE_AND_FLUX_BOUND, CLOSED_FOR_LANE. Full Topic13/Goal/R1-R5 remain open.

@@ -2,6 +2,8 @@
 
 วันที่ทบทวน: 3 ตุลาคม 2026 | ฉบับสรุปเพื่อเลือกงาน ไม่ใช่ controller ใหม่
 
+Science handoff ล่าสุด: [thermal source target](Result/artifacts/T13_THERMAL_SOURCE_CURVATURE_2026-10-03.md) ได้ same-action pressure Hessian และพบ cut-only matching gap3.65%/66.4% ในสอง witnesses. งานถัดไปคือ actual dynamic source/contact/virtual completion ไม่ fit residual. Canonical `thermal_source_curvature_evidence_2026_10_03`; วัน/เกณฑ์/full Goal ยังเดิม. Handoffs และ pending statements ด้านล่างเป็นประวัติรอบก่อน ไม่ใช้เป็น current pointer.
+
 Science handoff หลังรอบวางแผน: [Landau/source result](Result/artifacts/T13_ACOUSTIC_SOURCE_LANDAU_2026-10-03.md) รับ acoustic absorption/support window เข้า canonical evidence แล้วโดย science wave แยก. Current controller คือ `local_real_source_contact_and_complete_thermal_sunset_matching_open`; ไม่ใช่ full real/thermal/physical acceptance. Snapshot และข้อความ pending ด้านล่างคงสภาพของรอบ planning เดิม ไม่เขียนประวัติย้อนหลัง; วัน/เกณฑ์/โมเดลไม่เปลี่ยน.
 
 อ่านรายละเอียดจาก [แผน 14 วัน](RESEARCH_PLAN_14D_FUNDING_2026-09-27.md),

@@ -1,5 +1,17 @@
 # Limitations
 
+## Static Curvature Is Not An Assigned Dynamic Contact (2026-10-03)
+
+[Source Hessian](Result/artifacts/T13_THERMAL_SOURCE_CURVATURE_2026-10-03.md)
+is a one-acoustic thermal determinant, not complete interacting pressure.
+Its3.65%/66.4% cut-only mismatch identifies a matching obligation, not a
+global no-go or material error. Static information does not fix frequency
+dependence; do not assign its residual to close real/contact response.
+Virtual tree polarization is not new quantum-heavy admission. Finite grids,
+pressure FD agreement and stationary Ward repair do not establish total
+approximation/physical uncertainty, KMS/Kubo or Kelvin mapping. Full Goal,
+owner boundaries and prior exposure REVIEW_REQUIRED remain unchanged.
+
 ## Landau Absorption Is Not Full Retarded Or Physical Closure (2026-10-03)
 
 [Latest result](Result/artifacts/T13_ACOUSTIC_SOURCE_LANDAU_2026-10-03.md)

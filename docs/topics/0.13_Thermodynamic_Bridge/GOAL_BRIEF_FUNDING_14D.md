@@ -10,7 +10,18 @@
 
 ปิดคำถามว่า He-4/O(2) bridge ที่แช่แข็ง calibration แล้วกำหนด independent dynamic response ได้หรือไม่ และต้องวัดอะไรเพิ่มจึงแยกคำตอบได้ ผลสำเร็จต้องมี predictive-content derivation หรือ scoped nonidentifiability proof ที่เพิ่มจาก matching identity เดิม พร้อม measurement design และชุดหลักฐาน ไม่ใช้จำนวน artifacts/PASS เป็นเกณฑ์สำเร็จ
 
-## Latest Landau Source Handoff (2026-10-03)
+## Latest Thermal Source Curvature Handoff (2026-10-03)
+
+[Static source target](Result/artifacts/T13_THERMAL_SOURCE_CURVATURE_2026-10-03.md)
+now differentiates the same-action acoustic thermal pressure and tree
+polarization. Acoustic cuts alone differ by3.65%/66.4% in static projections;
+next derive actual dynamic source/contact/virtual completion, not assign
+the residual or rerun unchanged damping. Current canonical field is
+thermal_source_curvature_evidence_2026_10_03. Physical input/full Goal/R1-R5,
+7/11 October, owner/holdout and model rules remain unchanged. Earlier
+handoffs/planning snapshots retain their scope.
+
+## Prior Landau Source Handoff (2026-10-03)
 
 [Landau/source and support result](Result/artifacts/T13_ACOUSTIC_SOURCE_LANDAU_2026-10-03.md)
 now closes the declared acoustic absorption windows and conditional

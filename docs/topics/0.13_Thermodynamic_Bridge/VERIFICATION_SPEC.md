@@ -1,5 +1,17 @@
 # Verification Spec
 
+## Thermal Source Curvature Verification (2026-10-03)
+
+Run Research_T13_Thermal_Source_Curvature.py/test_t13_thermal_source_curvature.py.
+Six checks require stationary/eigenvalue/vertex and independent source-state
+FDs, fixed-domain pressure Hessian, decomposition, quadrature/tail and an
+explicit cut-only matching mismatch. Retain raw tiny-p cancellation and
+first-failure JSON. Exact phase derivative cancellation is analytic, not
+mass repair; all grids and1e-9 identity/1e-4 FD/1e-6 quadrature/1e-8 tail
+and original1e-6 causal gates stay fixed. Require coordinate/free/zero-T,
+invalid-domain, protected hashes and audit-time Path read controls. No
+dynamic contact assigned from residual or physical/full Goal admission.
+
 ## Off-Shell Landau Source And Support Verification (2026-10-03)
 
 Run Research_T13_Acoustic_Source_Landau.py/test_t13_acoustic_source_Landau.py.

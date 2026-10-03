@@ -501,7 +501,8 @@ def test_pair_source_interface_is_not_complete_retarded_or_physical_response():
 
 
 def test_Landau_source_and_support_bounds_are_not_complete_physical_response():
-    field = PLAN["execution_review_2026_10_01"]["current_scientific_evidence_field"]
+    latest = PLAN[PLAN["execution_review_2026_10_01"]["current_scientific_evidence_field"]]
+    field = latest["source_Landau_predecessor_evidence_field"]
     assert field == "acoustic_source_Landau_evidence_2026_10_03"
     assert field in PLAN["portfolio_strategy_2026_10_01"]["accepted_preliminary_evidence_fields"]
     evidence = PLAN[field]
@@ -519,4 +520,27 @@ def test_Landau_source_and_support_bounds_are_not_complete_physical_response():
     assert evidence["sha256"] in content and all(name+":" in content for name in result["report"])
     assert result["prior_Xie_context_exposure_review"] == "REVIEW_REQUIRED"
     assert not result["xie_2026_accessed"] and not result["claim_promotion"]
+    assert all(card["status"] == "PLANNED_NOT_ACCEPTED" for card in PLAN["result_level_execution_2026_10_01"]["result_cards"])
+
+
+def test_thermal_source_curvature_is_not_assigned_dynamic_contact_or_physics():
+    field = PLAN["execution_review_2026_10_01"]["current_scientific_evidence_field"]
+    assert field == "thermal_source_curvature_evidence_2026_10_03"
+    assert field in PLAN["portfolio_strategy_2026_10_01"]["accepted_preliminary_evidence_fields"]
+    evidence = PLAN[field]
+    path = ROOT/evidence["path"]
+    result = json.loads(path.read_text())
+    assert hashlib.sha256(path.read_bytes()).hexdigest() == evidence["sha256"]
+    assert evidence["verification_status"] == result["verification_status"] == "PASS_SCOPED_THERMAL_SOURCE_CURVATURE"
+    assert evidence["controlling_blocker"] == result["controlling_blocker"]
+    assert all(result["checks"].values()) and evidence["closure_level"] == result["closure_level"] == "CLOSED_FOR_LANE"
+    for key in ("full_off_shell_source_matching_closed", "full_real_self_energy_matched", "dynamic_contact_fixed_from_static_residual",
+                "full_two_loop_pressure_computed", "all_parent_modes_and_quantum_Phi_loops_included", "full_SK_KMS_matching_closed",
+                "physical_Kubo_emitted", "independent_alpha_Phi_K_admitted", "controlled_full_action_truncation_error_established",
+                "full_core_unlock", "core_composition_gate_overwritten"):
+        assert result[key] is evidence[key] is False
+    content = (ROOT/"docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/T13_THERMAL_SOURCE_CURVATURE_2026-10-03.md").read_text()
+    assert evidence["sha256"] in content and all(name+":" in content for name in result["report"])
+    assert result["prior_Xie_context_exposure_review"] == "REVIEW_REQUIRED" and not result["xie_2026_accessed"]
+    assert not result["claim_promotion"]
     assert all(card["status"] == "PLANNED_NOT_ACCEPTED" for card in PLAN["result_level_execution_2026_10_01"]["result_cards"])

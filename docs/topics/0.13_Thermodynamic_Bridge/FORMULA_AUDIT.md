@@ -1,5 +1,15 @@
 # Formula Audit: 0.13_Thermodynamic_Bridge
 
+## Stationary Source Jets And Thermal Hessian (2026-10-03)
+
+[Registry](Data/03_Research/t13_thermal_source_curvature_registry.json)
+declares stationary/eigenvalue source variation and thermal Hessian IDs.
+h E3, E_h E^-2, E_hh E^-5, P E4 and chi E^-2 in the same natural lane.
+T/Q are potential derivatives, not temperature or free matching parameters.
+D_hh retains stationary acceleration; E_hh retains virtual polarization.
+The independently checked static target is not an admitted dynamic contact
+or material alpha. No C/Pi/R_gen/R_obs relabel or Core registry edit.
+
 ## Landau Source And Quadratic Support Contract (2026-10-03)
 
 [Local registry](Data/03_Research/t13_acoustic_source_Landau_registry.json)
