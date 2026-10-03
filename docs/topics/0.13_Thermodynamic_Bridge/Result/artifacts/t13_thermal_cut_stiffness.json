@@ -1,0 +1,2365 @@
+{
+  "major_result_id": "T13_FINITE_T_PHASE_CUT_AND_STATIC_THERMAL_COHERENCE",
+  "topic": "0.13_Thermodynamic_Bridge",
+  "branch_id": "t13.candidate.tree_matched_classical_phi_low_T_phase_EFT_v1",
+  "closure_level": "CLOSED_FOR_LANE",
+  "verification_status": "PASS_SCOPED_THERMAL_CUT_STIFFNESS",
+  "created_at": "2026-10-03T00:06:39.063273+00:00",
+  "action_controls": {
+    "Z": 1.0,
+    "m0_sq": 1.0,
+    "u": 1.0,
+    "gamma": 0.04000000000000001,
+    "epsilon": 0.05,
+    "Phi_reference": 0.0,
+    "response_mass_sq": 1.0,
+    "response_quartic": 1.0,
+    "response_kinetic": 1.0
+  },
+  "numerical_repair_history": "First audit rejected a naive r/k pair root outside support. Same tree root rewritten as cq plus curvature and positive displacement, with unchanged grids/gates; no clipping or dispersion replacement.",
+  "what_is_closed": "Leading-vertex finite-T pair/Landau cuts with internal tree curvature and LO static thermal bubble/tadpole-pressure coherence",
+  "equation_or_mapping": "gamma_L/(q T4)->3pi3(gt+gs/c2)^2/(10c2); Sigma_static/(q2 T4)=-d_xi2 A4_flow/chi",
+  "units": {
+    "gamma_omega_q_T": "E",
+    "Sigma": "E^2",
+    "g_t_g_s": "E^-2",
+    "h_t_h_m_h_s": "E^-4",
+    "static_and_soft_coefficients": "E^-4",
+    "chi": "E^2"
+  },
+  "derivation_class": "DERIVED_LO_VERTICES_TREE_CURVATURE_CUT_AND_STATIC_ONE_PHASE_LOOP",
+  "observable": "Conditional phase attenuation and static inverse response, not a detector/material prediction",
+  "data_role": "DERIVED_NOT_CALIBRATION",
+  "checks": {
+    "pair_and_Landau_quadrature_refine": true,
+    "thermal_radial_tail_refines_not_physical_remainder": true,
+    "strict_energy_support_and_positive_rates": true,
+    "cut_Bose_detailed_balance_and_two_point_FDT_only": true,
+    "soft_Landau_limit_and_temperature_refinement": true,
+    "independent_Bose_moment_and_vacuum_limit": true,
+    "static_diagrams_match_reoptimized_flow_pressure": true,
+    "independent_static_loop_integration_and_missing_bubble_negative": true,
+    "parent_quadratic_ledger_preserved": true,
+    "cancellation_free_root_matches_original_parent": true
+  },
+  "thresholds": {
+    "identity_relative": 1e-09,
+    "quadrature_relative": 1e-06,
+    "tail_relative": 1e-08,
+    "soft_limit_relative": 0.005,
+    "static_derivative_relative": 2e-05,
+    "original_causal_leakage": 1e-06
+  },
+  "equation_registry_ids": [
+    "t13.phase_eft.finite_T_pair_Landau_cuts",
+    "t13.phase_eft.soft_Landau_Bose_limit",
+    "t13.phase_eft.static_thermal_pressure_coherence"
+  ],
+  "ontology": {
+    "Sigma_is_Phi": false,
+    "phase_is_UET_Pi": false,
+    "C_is_charge_or_radial_amplitude": false,
+    "excluded_state_variables": [
+      "C",
+      "R_gen",
+      "R_obs"
+    ]
+  },
+  "declared_grids": {
+    "mu": [
+      1.05,
+      1.2
+    ],
+    "temperature_divisors": [
+      128,
+      256,
+      512
+    ],
+    "cq_over_T": [
+      0.1,
+      0.05,
+      0.025
+    ],
+    "orders": [
+      24,
+      48,
+      96
+    ],
+    "thermal_tails": [
+      24.0,
+      32.0,
+      40.0
+    ],
+    "FD_steps": [
+      0.0004,
+      0.0002,
+      0.0001
+    ],
+    "locked_before_first_audit": true,
+    "external_data_preregistration": false
+  },
+  "examples": [
+    {
+      "mu": 1.05,
+      "state_tree": {
+        "mu": 1.05,
+        "xi": 0.0,
+        "h": 0.0,
+        "X": 1.1025,
+        "s": 0.10416374155459096,
+        "Phi": 0.04159353886477326,
+        "V_curvature": 0.05025950337129431,
+        "U": 0.9840826123153275,
+        "pressure_tree": 0.0026692332895584567,
+        "A": 2.344829283659969,
+        "B": 0.0,
+        "D": 0.10416374155459096,
+        "rho": 0.10416374155459096,
+        "c2_rest_at_X": 0.044422739975340596,
+        "A4_flow": 11.712489720818924,
+        "stationary_residual": 0.0,
+        "heavy_hessian": [
+          [
+            0.20832748310918192,
+            -0.012909763223519848
+          ],
+          [
+            -0.012909763223519848,
+            0.05025950337129431
+          ]
+        ]
+      },
+      "coefficients": {
+        "c": 0.21076702772336237,
+        "A0": 0.205011453795161,
+        "eta": 0.4709301566824913,
+        "A4": 11.712489720818924,
+        "B6": -33224.57300920962,
+        "A4_h": -131.7097685476614,
+        "A4_mu": -312.0154226343426,
+        "Phi_h_tree": 20.218561284228095,
+        "Phi_mu_tree": 0.84917957393758,
+        "dispersion_scale": 0.4520369052194675,
+        "zeta": -0.7232501197207042,
+        "C8_disp": 324701542.49041355
+      },
+      "vertices": {
+        "P1": 0.05208187077729548,
+        "P2": 0.5080874245136913,
+        "P3": -0.0008250644229372502,
+        "P4": -0.007768738585359656,
+        "g_t": -0.2968057018305193,
+        "g_s": 0.2971603744403023,
+        "h_t": 0.04472883034105836,
+        "h_m": -0.0920784826950042,
+        "h_s": 0.04620468267276571
+      },
+      "thermal_cut_runs": [
+        {
+          "temperature_divisor": 128,
+          "T": 0.0007443318354248003,
+          "q": 0.0003531538322027091,
+          "cq_over_T": 0.1,
+          "pair_runs": [
+            {
+              "gamma_pole": 2.9762491759434745e-18,
+              "Gamma_occupation": 5.952498351886949e-18,
+              "angular_support_margin_min": 4.8410164765755326e-12,
+              "energy_balance_relative_max": 2.5035499974450644e-16,
+              "Bose_identity_error_max": 5.324635543821354e-16
+            },
+            {
+              "gamma_pole": 2.9762491759434656e-18,
+              "Gamma_occupation": 5.952498351886931e-18,
+              "angular_support_margin_min": 3.15636405900932e-13,
+              "energy_balance_relative_max": 3.641527269011003e-16,
+              "Bose_identity_error_max": 5.324635543821354e-16
+            },
+            {
+              "gamma_pole": 2.976249175943487e-18,
+              "Gamma_occupation": 5.952498351886974e-18,
+              "angular_support_margin_min": 2.0095036745715333e-14,
+              "energy_balance_relative_max": 3.641527269011003e-16,
+              "Bose_identity_error_max": 5.324635543821354e-16
+            }
+          ],
+          "Landau_runs": [
+            {
+              "gamma_pole": 9.168444813598871e-13,
+              "Gamma_occupation": 1.8336889627197742e-12,
+              "angular_support_margin_min": 8.767116324026603e-07,
+              "group_velocity_min": 0.2107672125053158,
+              "energy_balance_relative_max": 9.322309808668168e-14,
+              "Bose_identity_error_max": 1.0507280806474137e-13,
+              "scaled_radial_tail": 40.0,
+              "radial_p_max_over_dispersion_scale": 0.3125,
+              "thermal_tail_is_total_EFT_error": false
+            },
+            {
+              "gamma_pole": 9.168444813598849e-13,
+              "Gamma_occupation": 1.8336889627197698e-12,
+              "angular_support_margin_min": 8.462989128377174e-07,
+              "group_velocity_min": 0.210767206095318,
+              "energy_balance_relative_max": 9.322309808668168e-14,
+              "Bose_identity_error_max": 1.0738015013373063e-13,
+              "scaled_radial_tail": 40.0,
+              "radial_p_max_over_dispersion_scale": 0.3125,
+              "thermal_tail_is_total_EFT_error": false
+            },
+            {
+              "gamma_pole": 9.168444813598843e-13,
+              "Gamma_occupation": 1.8336889627197686e-12,
+              "angular_support_margin_min": 8.385907822594518e-07,
+              "group_velocity_min": 0.21076720447070174,
+              "energy_balance_relative_max": 9.322309808668168e-14,
+              "Bose_identity_error_max": 1.0791261368811276e-13,
+              "scaled_radial_tail": 40.0,
+              "radial_p_max_over_dispersion_scale": 0.3125,
+              "thermal_tail_is_total_EFT_error": false
+            }
+          ],
+          "tail_runs": [
+            {
+              "gamma_pole": 9.168441944346892e-13,
+              "Gamma_occupation": 1.8336883888693784e-12,
+              "angular_support_margin_min": 8.385907822594518e-07,
+              "group_velocity_min": 0.21076720447070174,
+              "energy_balance_relative_max": 5.826443630417605e-14,
+              "Bose_identity_error_max": 7.22375555445097e-14,
+              "scaled_radial_tail": 24.0,
+              "radial_p_max_over_dispersion_scale": 0.18749999999999997,
+              "thermal_tail_is_total_EFT_error": false
+            },
+            {
+              "gamma_pole": 9.168444812071024e-13,
+              "Gamma_occupation": 1.833688962414205e-12,
+              "angular_support_margin_min": 8.385907822594518e-07,
+              "group_velocity_min": 0.21076720447070174,
+              "energy_balance_relative_max": 9.322309808668168e-14,
+              "Bose_identity_error_max": 7.312499480181325e-14,
+              "scaled_radial_tail": 32.0,
+              "radial_p_max_over_dispersion_scale": 0.25,
+              "thermal_tail_is_total_EFT_error": false
+            },
+            {
+              "gamma_pole": 9.168444813598843e-13,
+              "Gamma_occupation": 1.8336889627197686e-12,
+              "angular_support_margin_min": 8.385907822594518e-07,
+              "group_velocity_min": 0.21076720447070174,
+              "energy_balance_relative_max": 9.322309808668168e-14,
+              "Bose_identity_error_max": 1.0791261368811276e-13,
+              "scaled_radial_tail": 40.0,
+              "radial_p_max_over_dispersion_scale": 0.3125,
+              "thermal_tail_is_total_EFT_error": false
+            }
+          ],
+          "pair_quadrature_error": 7.247516623099644e-15,
+          "Landau_quadrature_error": 6.607938287539604e-16,
+          "thermal_tail_error": 1.6663876747056415e-10,
+          "Landau_over_qT4": 8457.95508328697,
+          "soft_coefficient_relative_error": 0.011563146971127515,
+          "pair_over_Landau": 3.246187588465437e-06,
+          "gamma_total_over_omega": 1.23177211894083e-08
+        },
+        {
+          "temperature_divisor": 128,
+          "T": 0.0007443318354248003,
+          "q": 0.00017657691610135454,
+          "cq_over_T": 0.05,
+          "pair_runs": [
+            {
+              "gamma_pole": 1.8599244301200555e-19,
+              "Gamma_occupation": 3.719848860240111e-19,
+              "angular_support_margin_min": 1.2102541191438831e-12,
+              "energy_balance_relative_max": 1.9345617659821806e-16,
+              "Bose_identity_error_max": 3.551973962456966e-16
+            },
+            {
+              "gamma_pole": 1.8599244301200485e-19,
+              "Gamma_occupation": 3.719848860240097e-19,
+              "angular_support_margin_min": 7.893685705084863e-14,
+              "energy_balance_relative_max": 1.8207640150420522e-16,
+              "Bose_identity_error_max": 3.551973962456966e-16
+            },
+            {
+              "gamma_pole": 1.8599244301200625e-19,
+              "Gamma_occupation": 3.719848860240125e-19,
+              "angular_support_margin_min": 4.9960036108132044e-15,
+              "energy_balance_relative_max": 1.8776628905121164e-16,
+              "Bose_identity_error_max": 3.551973962456966e-16
+            }
+          ],
+          "Landau_runs": [
+            {
+              "gamma_pole": 4.584225257887489e-13,
+              "Gamma_occupation": 9.168450515774979e-13,
+              "angular_support_margin_min": 2.295997176826603e-07,
+              "group_velocity_min": 0.2107670761154152,
+              "energy_balance_relative_max": 1.8644623514030615e-13,
+              "Bose_identity_error_max": 1.1757033815732557e-13,
+              "scaled_radial_tail": 40.0,
+              "radial_p_max_over_dispersion_scale": 0.3125,
+              "thermal_tail_is_total_EFT_error": false
+            },
+            {
+              "gamma_pole": 4.584225257887474e-13,
+              "Gamma_occupation": 9.168450515774949e-13,
+              "angular_support_margin_min": 2.141670710775756e-07,
+              "group_velocity_min": 0.2107670728627232,
+              "energy_balance_relative_max": 1.8644623514030615e-13,
+              "Bose_identity_error_max": 1.8523544214213077e-13,
+              "scaled_radial_tail": 40.0,
+              "radial_p_max_over_dispersion_scale": 0.3125,
+              "thermal_tail_is_total_EFT_error": false
+            },
+            {
+              "gamma_pole": 4.58422525788748e-13,
+              "Gamma_occupation": 9.16845051577496e-13,
+              "angular_support_margin_min": 2.1029825170160166e-07,
+              "group_velocity_min": 0.21076707204729975,
+              "energy_balance_relative_max": 1.8644623514030615e-13,
+              "Bose_identity_error_max": 1.6978435540544297e-13,
+              "scaled_radial_tail": 40.0,
+              "radial_p_max_over_dispersion_scale": 0.3125,
+              "thermal_tail_is_total_EFT_error": false
+            }
+          ],
+          "tail_runs": [
+            {
+              "gamma_pole": 4.584223792466591e-13,
+              "Gamma_occupation": 9.168447584933181e-13,
+              "angular_support_margin_min": 2.1029825170160166e-07,
+              "group_velocity_min": 0.21076707204729975,
+              "energy_balance_relative_max": 1.8644623514030615e-13,
+              "Bose_identity_error_max": 1.875442252177278e-13,
+              "scaled_radial_tail": 24.0,
+              "radial_p_max_over_dispersion_scale": 0.18749999999999997,
+              "thermal_tail_is_total_EFT_error": false
+            },
+            {
+              "gamma_pole": 4.584225257106334e-13,
+              "Gamma_occupation": 9.168450514212668e-13,
+              "angular_support_margin_min": 2.1029825170160166e-07,
+              "group_velocity_min": 0.21076707204729975,
+              "energy_balance_relative_max": 1.8644623514030615e-13,
+              "Bose_identity_error_max": 1.6978435540544297e-13,
+              "scaled_radial_tail": 32.0,
+              "radial_p_max_over_dispersion_scale": 0.25,
+              "thermal_tail_is_total_EFT_error": false
+            },
+            {
+              "gamma_pole": 4.58422525788748e-13,
+              "Gamma_occupation": 9.16845051577496e-13,
+              "angular_support_margin_min": 2.1029825170160166e-07,
+              "group_velocity_min": 0.21076707204729975,
+              "energy_balance_relative_max": 1.8644623514030615e-13,
+              "Bose_identity_error_max": 1.6978435540544297e-13,
+              "scaled_radial_tail": 40.0,
+              "radial_p_max_over_dispersion_scale": 0.3125,
+              "thermal_tail_is_total_EFT_error": false
+            }
+          ],
+          "pair_quadrature_error": 7.507290011727043e-15,
+          "Landau_quadrature_error": 1.3215868355669e-15,
+          "thermal_tail_error": 1.7039879864381824e-10,
+          "Landau_over_qT4": 8457.960343584704,
+          "soft_coefficient_relative_error": 0.011562532227718867,
+          "pair_over_Landau": 4.0572273950106016e-07,
+          "gamma_total_over_omega": 1.2317696436644565e-08
+        },
+        {
+          "temperature_divisor": 128,
+          "T": 0.0007443318354248003,
+          "q": 8.828845805067727e-05,
+          "cq_over_T": 0.025,
+          "pair_runs": [
+            {
+              "gamma_pole": 1.1624166254091056e-20,
+              "Gamma_occupation": 2.3248332508182113e-20,
+              "angular_support_margin_min": 3.0253577421035516e-13,
+              "energy_balance_relative_max": 2.0483596239482608e-16,
+              "Bose_identity_error_max": 5.328793072590161e-16
+            },
+            {
+              "gamma_pole": 1.1624166254091013e-20,
+              "Gamma_occupation": 2.3248332508182025e-20,
+              "angular_support_margin_min": 1.9761969838327786e-14,
+              "energy_balance_relative_max": 1.820764110176232e-16,
+              "Bose_identity_error_max": 7.105057430120215e-16
+            },
+            {
+              "gamma_pole": 1.1624166254091105e-20,
+              "Gamma_occupation": 2.324833250818221e-20,
+              "angular_support_margin_min": 1.2212453270876722e-15,
+              "energy_balance_relative_max": 1.820764110176232e-16,
+              "Bose_identity_error_max": 3.5525287150601074e-16
+            }
+          ],
+          "Landau_runs": [
+            {
+              "gamma_pole": 2.292113773125675e-13,
+              "Gamma_occupation": 4.58422754625135e-13,
+              "angular_support_margin_min": 6.279232689365699e-08,
+              "group_velocity_min": 0.21076704095791468,
+              "energy_balance_relative_max": 3.728924897640923e-13,
+              "Bose_identity_error_max": 3.3482583139441513e-13,
+              "scaled_radial_tail": 40.0,
+              "radial_p_max_over_dispersion_scale": 0.3125,
+              "thermal_tail_is_total_EFT_error": false
+            },
+            {
+              "gamma_pole": 2.29211377312566e-13,
+              "Gamma_occupation": 4.58422754625132e-13,
+              "angular_support_margin_min": 5.484973863989495e-08,
+              "group_velocity_min": 0.2107670392838788,
+              "energy_balance_relative_max": 3.728924897640923e-13,
+              "Bose_identity_error_max": 3.3518108426592117e-13,
+              "scaled_radial_tail": 40.0,
+              "radial_p_max_over_dispersion_scale": 0.3125,
+              "thermal_tail_is_total_EFT_error": false
+            },
+            {
+              "gamma_pole": 2.2921137731256705e-13,
+              "Gamma_occupation": 4.584227546251341e-13,
+              "angular_support_margin_min": 5.290054294615487e-08,
+              "group_velocity_min": 0.21076703887305265,
+              "energy_balance_relative_max": 3.728924897640923e-13,
+              "Bose_identity_error_max": 3.4086513021001734e-13,
+              "scaled_radial_tail": 40.0,
+              "radial_p_max_over_dispersion_scale": 0.3125,
+              "thermal_tail_is_total_EFT_error": false
+            }
+          ],
+          "tail_runs": [
+            {
+              "gamma_pole": 2.292113032537514e-13,
+              "Gamma_occupation": 4.584226065075028e-13,
+              "angular_support_margin_min": 5.290054294615487e-08,
+              "group_velocity_min": 0.21076703887305265,
+              "energy_balance_relative_max": 1.8644624488204615e-13,
+              "Bose_identity_error_max": 2.383746767805332e-13,
+              "scaled_radial_tail": 24.0,
+              "radial_p_max_over_dispersion_scale": 0.18749999999999997,
+              "thermal_tail_is_total_EFT_error": false
+            },
+            {
+              "gamma_pole": 2.2921137727306857e-13,
+              "Gamma_occupation": 4.584227545461371e-13,
+              "angular_support_margin_min": 5.290054294615487e-08,
+              "group_velocity_min": 0.21076703887305265,
+              "energy_balance_relative_max": 3.728924897640923e-13,
+              "Bose_identity_error_max": 3.337600727798971e-13,
+              "scaled_radial_tail": 32.0,
+              "radial_p_max_over_dispersion_scale": 0.25,
+              "thermal_tail_is_total_EFT_error": false
+            },
+            {
+              "gamma_pole": 2.2921137731256705e-13,
+              "Gamma_occupation": 4.584227546251341e-13,
+              "angular_support_margin_min": 5.290054294615487e-08,
+              "group_velocity_min": 0.21076703887305265,
+              "energy_balance_relative_max": 3.728924897640923e-13,
+              "Bose_identity_error_max": 3.4086513021001734e-13,
+              "scaled_radial_tail": 40.0,
+              "radial_p_max_over_dispersion_scale": 0.3125,
+              "thermal_tail_is_total_EFT_error": false
+            }
+          ],
+          "pair_quadrature_error": 7.895843616302502e-15,
+          "Landau_quadrature_error": 4.625551615490905e-15,
+          "thermal_tail_error": 1.7232338358457516e-10,
+          "Landau_over_qT4": 8457.964565648346,
+          "soft_coefficient_relative_error": 0.0115620388172835,
+          "pair_over_Landau": 5.071374026185297e-08,
+          "gamma_total_over_omega": 1.2317698856121165e-08
+        },
+        {
+          "temperature_divisor": 256,
+          "T": 0.00037216591771240014,
+          "q": 0.00017657691610135454,
+          "cq_over_T": 0.1,
+          "pair_runs": [
+            {
+              "gamma_pole": 9.300784468637234e-20,
+              "Gamma_occupation": 1.8601568937274468e-19,
+              "angular_support_margin_min": 1.2102541191438831e-12,
+              "energy_balance_relative_max": 1.9345617659821806e-16,
+              "Bose_identity_error_max": 1.8998040454267994e-16
+            },
+            {
+              "gamma_pole": 9.300784468637205e-20,
+              "Gamma_occupation": 1.860156893727441e-19,
+              "angular_support_margin_min": 7.893685705084863e-14,
+              "energy_balance_relative_max": 1.8207640150420522e-16,
+              "Bose_identity_error_max": 3.549756288556164e-16
+            },
+            {
+              "gamma_pole": 9.300784468637274e-20,
+              "Gamma_occupation": 1.8601568937274547e-19,
+              "angular_support_margin_min": 4.9960036108132044e-15,
+              "energy_balance_relative_max": 1.8776628905121164e-16,
+              "Bose_identity_error_max": 3.549756288556164e-16
+            }
+          ],
+          "Landau_runs": [
+            {
+              "gamma_pole": 2.890172461525165e-14,
+              "Gamma_occupation": 5.78034492305033e-14,
+              "angular_support_margin_min": 2.1917801196202902e-07,
+              "group_velocity_min": 0.21076707391886373,
+              "energy_balance_relative_max": 4.8250246398614384e-14,
+              "Bose_identity_error_max": 6.212073504973285e-14,
+              "scaled_radial_tail": 40.0,
+              "radial_p_max_over_dispersion_scale": 0.15625,
+              "thermal_tail_is_total_EFT_error": false
+            },
+            {
+              "gamma_pole": 2.890172461525162e-14,
+              "Gamma_occupation": 5.780344923050325e-14,
+              "angular_support_margin_min": 2.115748282127683e-07,
+              "group_velocity_min": 0.21076707231636238,
+              "energy_balance_relative_max": 9.322311757015308e-14,
+              "Bose_identity_error_max": 1.1660949407906994e-13,
+              "scaled_radial_tail": 40.0,
+              "radial_p_max_over_dispersion_scale": 0.15625,
+              "thermal_tail_is_total_EFT_error": false
+            },
+            {
+              "gamma_pole": 2.890172461525158e-14,
+              "Gamma_occupation": 5.780344923050316e-14,
+              "angular_support_margin_min": 2.0964778513210547e-07,
+              "group_velocity_min": 0.2107670719102079,
+              "energy_balance_relative_max": 6.99173381776148e-14,
+              "Bose_identity_error_max": 1.1501210374921966e-13,
+              "scaled_radial_tail": 40.0,
+              "radial_p_max_over_dispersion_scale": 0.15625,
+              "thermal_tail_is_total_EFT_error": false
+            }
+          ],
+          "tail_runs": [
+            {
+              "gamma_pole": 2.8901710844900344e-14,
+              "Gamma_occupation": 5.780342168980069e-14,
+              "angular_support_margin_min": 2.0964778513210547e-07,
+              "group_velocity_min": 0.2107670719102079,
+              "energy_balance_relative_max": 6.99173381776148e-14,
+              "Bose_identity_error_max": 8.093444337908051e-14,
+              "scaled_radial_tail": 24.0,
+              "radial_p_max_over_dispersion_scale": 0.09374999999999999,
+              "thermal_tail_is_total_EFT_error": false
+            },
+            {
+              "gamma_pole": 2.89017246034552e-14,
+              "Gamma_occupation": 5.78034492069104e-14,
+              "angular_support_margin_min": 2.0964778513210547e-07,
+              "group_velocity_min": 0.2107670719102079,
+              "energy_balance_relative_max": 6.99173381776148e-14,
+              "Bose_identity_error_max": 9.566593197658859e-14,
+              "scaled_radial_tail": 32.0,
+              "radial_p_max_over_dispersion_scale": 0.125,
+              "thermal_tail_is_total_EFT_error": false
+            },
+            {
+              "gamma_pole": 2.890172461525158e-14,
+              "Gamma_occupation": 5.780344923050316e-14,
+              "angular_support_margin_min": 2.0964778513210547e-07,
+              "group_velocity_min": 0.2107670719102079,
+              "energy_balance_relative_max": 6.99173381776148e-14,
+              "Bose_identity_error_max": 1.1501210374921966e-13,
+              "scaled_radial_tail": 40.0,
+              "radial_p_max_over_dispersion_scale": 0.15625,
+              "thermal_tail_is_total_EFT_error": false
+            }
+          ],
+          "pair_quadrature_error": 7.376931967422316e-15,
+          "Landau_quadrature_error": 1.5284973917807197e-15,
+          "thermal_tail_error": 4.0815487688397585e-10,
+          "Landau_over_qT4": 8531.854414838313,
+          "soft_coefficient_relative_error": 0.0029269196561013625,
+          "pair_over_Landau": 3.21807248268126e-06,
+          "gamma_total_over_omega": 7.765841586803568e-10
+        },
+        {
+          "temperature_divisor": 256,
+          "T": 0.00037216591771240014,
+          "q": 8.828845805067727e-05,
+          "cq_over_T": 0.05,
+          "pair_runs": [
+            {
+              "gamma_pole": 5.812264749379968e-21,
+              "Gamma_occupation": 1.1624529498759936e-20,
+              "angular_support_margin_min": 3.0253577421035516e-13,
+              "energy_balance_relative_max": 2.0483596239482608e-16,
+              "Bose_identity_error_max": 3.551973776945087e-16
+            },
+            {
+              "gamma_pole": 5.8122647493799505e-21,
+              "Gamma_occupation": 1.1624529498759901e-20,
+              "angular_support_margin_min": 1.9761969838327786e-14,
+              "energy_balance_relative_max": 1.820764110176232e-16,
+              "Bose_identity_error_max": 3.551973776945087e-16
+            },
+            {
+              "gamma_pole": 5.812264749379992e-21,
+              "Gamma_occupation": 1.1624529498759984e-20,
+              "angular_support_margin_min": 1.2212453270876722e-15,
+              "energy_balance_relative_max": 1.820764110176232e-16,
+              "Bose_identity_error_max": 3.551973776945087e-16
+            }
+          ],
+          "Landau_runs": [
+            {
+              "gamma_pole": 1.445083488271789e-14,
+              "Gamma_occupation": 2.890166976543578e-14,
+              "angular_support_margin_min": 5.7399935804447466e-08,
+              "group_velocity_min": 0.21076703982137654,
+              "energy_balance_relative_max": 9.322312244102308e-14,
+              "Bose_identity_error_max": 9.448250246673932e-14,
+              "scaled_radial_tail": 40.0,
+              "radial_p_max_over_dispersion_scale": 0.15625,
+              "thermal_tail_is_total_EFT_error": false
+            },
+            {
+              "gamma_pole": 1.4450834882717852e-14,
+              "Gamma_occupation": 2.8901669765435704e-14,
+              "angular_support_margin_min": 5.354177923244663e-08,
+              "group_velocity_min": 0.2107670390082033,
+              "energy_balance_relative_max": 1.8644624488204615e-13,
+              "Bose_identity_error_max": 2.3443026927837575e-13,
+              "scaled_radial_tail": 40.0,
+              "radial_p_max_over_dispersion_scale": 0.15625,
+              "thermal_tail_is_total_EFT_error": false
+            },
+            {
+              "gamma_pole": 1.445083488271789e-14,
+              "Gamma_occupation": 2.890166976543578e-14,
+              "angular_support_margin_min": 5.2574571918206914e-08,
+              "group_velocity_min": 0.21076703880434736,
+              "energy_balance_relative_max": 1.8644624488204615e-13,
+              "Bose_identity_error_max": 2.337198745229867e-13,
+              "scaled_radial_tail": 40.0,
+              "radial_p_max_over_dispersion_scale": 0.15625,
+              "thermal_tail_is_total_EFT_error": false
+            }
+          ],
+          "tail_runs": [
+            {
+              "gamma_pole": 1.4450827852399354e-14,
+              "Gamma_occupation": 2.890165570479871e-14,
+              "angular_support_margin_min": 5.2574571918206914e-08,
+              "group_velocity_min": 0.21076703880434736,
+              "energy_balance_relative_max": 1.8644624488204615e-13,
+              "Bose_identity_error_max": 1.6392358980601577e-13,
+              "scaled_radial_tail": 24.0,
+              "radial_p_max_over_dispersion_scale": 0.09374999999999999,
+              "thermal_tail_is_total_EFT_error": false
+            },
+            {
+              "gamma_pole": 1.4450834876689352e-14,
+              "Gamma_occupation": 2.8901669753378703e-14,
+              "angular_support_margin_min": 5.2574571918206914e-08,
+              "group_velocity_min": 0.21076703880434736,
+              "energy_balance_relative_max": 1.8644624488204615e-13,
+              "Bose_identity_error_max": 1.9233938002157647e-13,
+              "scaled_radial_tail": 32.0,
+              "radial_p_max_over_dispersion_scale": 0.125,
+              "thermal_tail_is_total_EFT_error": false
+            },
+            {
+              "gamma_pole": 1.445083488271789e-14,
+              "Gamma_occupation": 2.890166976543578e-14,
+              "angular_support_margin_min": 5.2574571918206914e-08,
+              "group_velocity_min": 0.21076703880434736,
+              "energy_balance_relative_max": 1.8644624488204615e-13,
+              "Bose_identity_error_max": 2.337198745229867e-13,
+              "scaled_radial_tail": 40.0,
+              "radial_p_max_over_dispersion_scale": 0.15625,
+              "thermal_tail_is_total_EFT_error": false
+            }
+          ],
+          "pair_quadrature_error": 4.137740114894452e-15,
+          "Landau_quadrature_error": 2.620286215842978e-15,
+          "thermal_tail_error": 4.1717576842436055e-10,
+          "Landau_over_qT4": 8531.838223048746,
+          "soft_coefficient_relative_error": 0.002928811905630644,
+          "pair_over_Landau": 4.0220961602232565e-07,
+          "gamma_total_over_omega": 7.765805387083474e-10
+        },
+        {
+          "temperature_divisor": 256,
+          "T": 0.00037216591771240014,
+          "q": 4.4144229025338634e-05,
+          "cq_over_T": 0.025,
+          "pair_runs": [
+            {
+              "gamma_pole": 3.632552095848398e-22,
+              "Gamma_occupation": 7.265104191696796e-22,
+              "angular_support_margin_min": 7.560618797697316e-14,
+              "energy_balance_relative_max": 1.8207641339597796e-16,
+              "Bose_identity_error_max": 3.552528668660394e-16
+            },
+            {
+              "gamma_pole": 3.632552095848385e-22,
+              "Gamma_occupation": 7.26510419169677e-22,
+              "angular_support_margin_min": 4.884981308350689e-15,
+              "energy_balance_relative_max": 1.8776630131460225e-16,
+              "Bose_identity_error_max": 3.552528668660394e-16
+            },
+            {
+              "gamma_pole": 3.632552095848411e-22,
+              "Gamma_occupation": 7.265104191696822e-22,
+              "angular_support_margin_min": 3.3306690738754696e-16,
+              "energy_balance_relative_max": 2.0483596507047518e-16,
+              "Bose_identity_error_max": 3.552528668660394e-16
+            }
+          ],
+          "Landau_runs": [
+            {
+              "gamma_pole": 7.225416475094976e-15,
+              "Gamma_occupation": 1.4450832950189952e-14,
+              "angular_support_margin_min": 1.5698081723414248e-08,
+              "group_velocity_min": 0.21076703103200048,
+              "energy_balance_relative_max": 1.8644624731748143e-13,
+              "Bose_identity_error_max": 3.044517069041957e-13,
+              "scaled_radial_tail": 40.0,
+              "radial_p_max_over_dispersion_scale": 0.15625,
+              "thermal_tail_is_total_EFT_error": false
+            },
+            {
+              "gamma_pole": 7.22541647509502e-15,
+              "Gamma_occupation": 1.445083295019004e-14,
+              "angular_support_margin_min": 1.3712433521995138e-08,
+              "group_velocity_min": 0.21076703061349153,
+              "energy_balance_relative_max": 3.7289249463496286e-13,
+              "Bose_identity_error_max": 3.0462933333762873e-13,
+              "scaled_radial_tail": 40.0,
+              "radial_p_max_over_dispersion_scale": 0.15625,
+              "thermal_tail_is_total_EFT_error": false
+            },
+            {
+              "gamma_pole": 7.225416475094982e-15,
+              "Gamma_occupation": 1.4450832950189965e-14,
+              "angular_support_margin_min": 1.3225144757100793e-08,
+              "group_velocity_min": 0.21076703051078496,
+              "energy_balance_relative_max": 1.8644624731748143e-13,
+              "Bose_identity_error_max": 3.0711610340569103e-13,
+              "scaled_radial_tail": 40.0,
+              "radial_p_max_over_dispersion_scale": 0.15625,
+              "thermal_tail_is_total_EFT_error": false
+            }
+          ],
+          "tail_runs": [
+            {
+              "gamma_pole": 7.225412922811636e-15,
+              "Gamma_occupation": 1.4450825845623272e-14,
+              "angular_support_margin_min": 1.3225144757100793e-08,
+              "group_velocity_min": 0.21076703051078496,
+              "energy_balance_relative_max": 1.8644624731748143e-13,
+              "Bose_identity_error_max": 2.80116885523872e-13,
+              "scaled_radial_tail": 24.0,
+              "radial_p_max_over_dispersion_scale": 0.09374999999999999,
+              "thermal_tail_is_total_EFT_error": false
+            },
+            {
+              "gamma_pole": 7.225416472047367e-15,
+              "Gamma_occupation": 1.4450832944094733e-14,
+              "angular_support_margin_min": 1.3225144757100793e-08,
+              "group_velocity_min": 0.21076703051078496,
+              "energy_balance_relative_max": 1.8644624731748143e-13,
+              "Bose_identity_error_max": 3.016096839692674e-13,
+              "scaled_radial_tail": 32.0,
+              "radial_p_max_over_dispersion_scale": 0.125,
+              "thermal_tail_is_total_EFT_error": false
+            },
+            {
+              "gamma_pole": 7.225416475094982e-15,
+              "Gamma_occupation": 1.4450832950189965e-14,
+              "angular_support_margin_min": 1.3225144757100793e-08,
+              "group_velocity_min": 0.21076703051078496,
+              "energy_balance_relative_max": 1.8644624731748143e-13,
+              "Bose_identity_error_max": 3.0711610340569103e-13,
+              "scaled_radial_tail": 40.0,
+              "radial_p_max_over_dispersion_scale": 0.15625,
+              "thermal_tail_is_total_EFT_error": false
+            }
+          ],
+          "pair_quadrature_error": 2.5860875718090325e-16,
+          "Landau_quadrature_error": 5.240573132514248e-15,
+          "thermal_tail_error": 4.217910222858309e-10,
+          "Landau_over_qT4": 8531.837082075526,
+          "soft_coefficient_relative_error": 0.0029289452451870175,
+          "pair_over_Landau": 5.027463964699223e-08,
+          "gamma_total_over_omega": 7.765801716935696e-10
+        },
+        {
+          "temperature_divisor": 512,
+          "T": 0.00018608295885620007,
+          "q": 8.828845805067727e-05,
+          "cq_over_T": 0.1,
+          "pair_runs": [
+            {
+              "gamma_pole": 2.906495599091092e-21,
+              "Gamma_occupation": 5.812991198182184e-21,
+              "angular_support_margin_min": 3.0253577421035516e-13,
+              "energy_balance_relative_max": 2.0483596239482608e-16,
+              "Bose_identity_error_max": 3.5497561033916123e-16
+            },
+            {
+              "gamma_pole": 2.9064955990910833e-21,
+              "Gamma_occupation": 5.8129911981821666e-21,
+              "angular_support_margin_min": 1.9761969838327786e-14,
+              "energy_balance_relative_max": 1.820764110176232e-16,
+              "Bose_identity_error_max": 3.5497561033916123e-16
+            },
+            {
+              "gamma_pole": 2.9064955990911047e-21,
+              "Gamma_occupation": 5.8129911981822095e-21,
+              "angular_support_margin_min": 1.2212453270876722e-15,
+              "energy_balance_relative_max": 1.820764110176232e-16,
+              "Bose_identity_error_max": 3.5497561033916123e-16
+            }
+          ],
+          "Landau_runs": [
+            {
+              "gamma_pole": 9.051672671292432e-16,
+              "Gamma_occupation": 1.8103345342584865e-15,
+              "angular_support_margin_min": 5.4794508930200436e-08,
+              "group_velocity_min": 0.2107670392722385,
+              "energy_balance_relative_max": 4.661156122051154e-14,
+              "Bose_identity_error_max": 5.21814147198567e-14,
+              "scaled_radial_tail": 40.0,
+              "radial_p_max_over_dispersion_scale": 0.078125,
+              "thermal_tail_is_total_EFT_error": false
+            },
+            {
+              "gamma_pole": 9.051672671292409e-16,
+              "Gamma_occupation": 1.8103345342584817e-15,
+              "angular_support_margin_min": 5.289370708094765e-08,
+              "group_velocity_min": 0.21076703887161308,
+              "energy_balance_relative_max": 9.322312244102308e-14,
+              "Bose_identity_error_max": 1.2140165873599315e-13,
+              "scaled_radial_tail": 40.0,
+              "radial_p_max_over_dispersion_scale": 0.078125,
+              "thermal_tail_is_total_EFT_error": false
+            },
+            {
+              "gamma_pole": 9.051672671292403e-16,
+              "Gamma_occupation": 1.8103345342584806e-15,
+              "angular_support_margin_min": 5.241198208771891e-08,
+              "group_velocity_min": 0.2107670387700744,
+              "energy_balance_relative_max": 9.322312244102308e-14,
+              "Bose_identity_error_max": 1.2193412215150188e-13,
+              "scaled_radial_tail": 40.0,
+              "radial_p_max_over_dispersion_scale": 0.078125,
+              "thermal_tail_is_total_EFT_error": false
+            }
+          ],
+          "tail_runs": [
+            {
+              "gamma_pole": 9.051667868753317e-16,
+              "Gamma_occupation": 1.8103335737506634e-15,
+              "angular_support_margin_min": 5.241198208771891e-08,
+              "group_velocity_min": 0.2107670387700744,
+              "energy_balance_relative_max": 4.733986686458203e-14,
+              "Bose_identity_error_max": 5.874846351113118e-14,
+              "scaled_radial_tail": 24.0,
+              "radial_p_max_over_dispersion_scale": 0.04687499999999999,
+              "thermal_tail_is_total_EFT_error": false
+            },
+            {
+              "gamma_pole": 9.051672666634824e-16,
+              "Gamma_occupation": 1.810334533326965e-15,
+              "angular_support_margin_min": 5.241198208771891e-08,
+              "group_velocity_min": 0.2107670387700744,
+              "energy_balance_relative_max": 4.733986686458203e-14,
+              "Bose_identity_error_max": 5.76835366801137e-14,
+              "scaled_radial_tail": 32.0,
+              "radial_p_max_over_dispersion_scale": 0.0625,
+              "thermal_tail_is_total_EFT_error": false
+            },
+            {
+              "gamma_pole": 9.051672671292403e-16,
+              "Gamma_occupation": 1.8103345342584806e-15,
+              "angular_support_margin_min": 5.241198208771891e-08,
+              "group_velocity_min": 0.2107670387700744,
+              "energy_balance_relative_max": 9.322312244102308e-14,
+              "Bose_identity_error_max": 1.2193412215150188e-13,
+              "scaled_radial_tail": 40.0,
+              "radial_p_max_over_dispersion_scale": 0.078125,
+              "thermal_tail_is_total_EFT_error": false
+            }
+          ],
+          "pair_quadrature_error": 2.1441016958998524e-15,
+          "Landau_quadrature_error": 6.536313236250548e-16,
+          "thermal_tail_error": 5.14554482986518e-10,
+          "Landau_over_qT4": 8550.637524403955,
+          "soft_coefficient_relative_error": 0.0007318361487597127,
+          "pair_over_Landau": 3.2110038714823675e-06,
+          "gamma_total_over_omega": 4.8643366562082943e-11
+        },
+        {
+          "temperature_divisor": 512,
+          "T": 0.00018608295885620007,
+          "q": 4.4144229025338634e-05,
+          "cq_over_T": 0.05,
+          "pair_runs": [
+            {
+              "gamma_pole": 1.8163328049042802e-22,
+              "Gamma_occupation": 3.6326656098085603e-22,
+              "angular_support_margin_min": 7.560618797697316e-14,
+              "energy_balance_relative_max": 1.8207641339597796e-16,
+              "Bose_identity_error_max": 5.327960595850673e-16
+            },
+            {
+              "gamma_pole": 1.8163328049042748e-22,
+              "Gamma_occupation": 3.6326656098085495e-22,
+              "angular_support_margin_min": 4.884981308350689e-15,
+              "energy_balance_relative_max": 1.8776630131460225e-16,
+              "Bose_identity_error_max": 2.036277521814832e-16
+            },
+            {
+              "gamma_pole": 1.816332804904287e-22,
+              "Gamma_occupation": 3.632665609808574e-22,
+              "angular_support_margin_min": 3.3306690738754696e-16,
+              "energy_balance_relative_max": 2.0483596507047518e-16,
+              "Bose_identity_error_max": 3.551973730567115e-16
+            }
+          ],
+          "Landau_runs": [
+            {
+              "gamma_pole": 4.525824864560818e-16,
+              "Gamma_occupation": 9.051649729121636e-16,
+              "angular_support_margin_min": 1.434998520011277e-08,
+              "group_velocity_min": 0.21076703074786599,
+              "energy_balance_relative_max": 1.8644624731748143e-13,
+              "Bose_identity_error_max": 1.2929184379264297e-13,
+              "scaled_radial_tail": 40.0,
+              "radial_p_max_over_dispersion_scale": 0.078125,
+              "thermal_tail_is_total_EFT_error": false
+            },
+            {
+              "gamma_pole": 4.525824864560811e-16,
+              "Gamma_occupation": 9.051649729121623e-16,
+              "angular_support_margin_min": 1.3385442532154457e-08,
+              "group_velocity_min": 0.21076703054457263,
+              "energy_balance_relative_max": 1.8644624731748143e-13,
+              "Bose_identity_error_max": 1.5983881787552015e-13,
+              "scaled_radial_tail": 40.0,
+              "radial_p_max_over_dispersion_scale": 0.078125,
+              "thermal_tail_is_total_EFT_error": false
+            },
+            {
+              "gamma_pole": 4.525824864560819e-16,
+              "Gamma_occupation": 9.051649729121638e-16,
+              "angular_support_margin_min": 1.3143625077205456e-08,
+              "group_velocity_min": 0.21076703049360862,
+              "energy_balance_relative_max": 1.8644624731748143e-13,
+              "Bose_identity_error_max": 1.5912842312940672e-13,
+              "scaled_radial_tail": 40.0,
+              "radial_p_max_over_dispersion_scale": 0.078125,
+              "thermal_tail_is_total_EFT_error": false
+            }
+          ],
+          "tail_runs": [
+            {
+              "gamma_pole": 4.52582241292934e-16,
+              "Gamma_occupation": 9.05164482585868e-16,
+              "angular_support_margin_min": 1.3143625077205456e-08,
+              "group_velocity_min": 0.21076703049360862,
+              "energy_balance_relative_max": 1.8644624731748143e-13,
+              "Bose_identity_error_max": 1.9944332497134345e-13,
+              "scaled_radial_tail": 24.0,
+              "radial_p_max_over_dispersion_scale": 0.04687499999999999,
+              "thermal_tail_is_total_EFT_error": false
+            },
+            {
+              "gamma_pole": 4.525824862180894e-16,
+              "Gamma_occupation": 9.051649724361788e-16,
+              "angular_support_margin_min": 1.3143625077205456e-08,
+              "group_velocity_min": 0.21076703049360862,
+              "energy_balance_relative_max": 1.8644624731748143e-13,
+              "Bose_identity_error_max": 1.5753003495065152e-13,
+              "scaled_radial_tail": 32.0,
+              "radial_p_max_over_dispersion_scale": 0.0625,
+              "thermal_tail_is_total_EFT_error": false
+            },
+            {
+              "gamma_pole": 4.525824864560819e-16,
+              "Gamma_occupation": 9.051649729121638e-16,
+              "angular_support_margin_min": 1.3143625077205456e-08,
+              "group_velocity_min": 0.21076703049360862,
+              "energy_balance_relative_max": 1.8644624731748143e-13,
+              "Bose_identity_error_max": 1.5912842312940672e-13,
+              "scaled_radial_tail": 40.0,
+              "radial_p_max_over_dispersion_scale": 0.078125,
+              "thermal_tail_is_total_EFT_error": false
+            }
+          ],
+          "pair_quadrature_error": 1.222514124855179e-16,
+          "Landau_quadrature_error": 1.7430212808236051e-15,
+          "thermal_tail_error": 5.258544868659345e-10,
+          "Landau_over_qT4": 8550.615852145871,
+          "soft_coefficient_relative_error": 0.0007343688719023715,
+          "pair_over_Landau": 4.0132635690942537e-07,
+          "gamma_total_over_omega": 4.8643107235682016e-11
+        },
+        {
+          "temperature_divisor": 512,
+          "T": 0.00018608295885620007,
+          "q": 2.2072114512669317e-05,
+          "cq_over_T": 0.025,
+          "pair_runs": [
+            {
+              "gamma_pole": 1.135172541003011e-23,
+              "Gamma_occupation": 2.270345082006022e-23,
+              "angular_support_margin_min": 1.887379141862766e-14,
+              "energy_balance_relative_max": 1.8207641399056666e-16,
+              "Bose_identity_error_max": 3.552528657060465e-16
+            },
+            {
+              "gamma_pole": 1.1351725410030072e-23,
+              "Gamma_occupation": 2.2703450820060143e-23,
+              "angular_support_margin_min": 1.2212453270876722e-15,
+              "energy_balance_relative_max": 2.2430605102451157e-16,
+              "Bose_identity_error_max": 5.328792985590697e-16
+            },
+            {
+              "gamma_pole": 1.1351725410030157e-23,
+              "Gamma_occupation": 2.2703450820060314e-23,
+              "angular_support_margin_min": 1.1102230246251565e-16,
+              "energy_balance_relative_max": 2.7311462098585e-16,
+              "Bose_identity_error_max": 5.328792985590697e-16
+            }
+          ],
+          "Landau_runs": [
+            {
+              "gamma_pole": 2.2629117677226453e-16,
+              "Gamma_occupation": 4.525823535445291e-16,
+              "angular_support_margin_min": 3.924520153297806e-09,
+              "group_velocity_min": 0.21076702855052185,
+              "energy_balance_relative_max": 1.8644624792634026e-13,
+              "Bose_identity_error_max": 3.261221307181507e-13,
+              "scaled_radial_tail": 40.0,
+              "radial_p_max_over_dispersion_scale": 0.078125,
+              "thermal_tail_is_total_EFT_error": false
+            },
+            {
+              "gamma_pole": 2.262911767722629e-16,
+              "Gamma_occupation": 4.525823535445258e-16,
+              "angular_support_margin_min": 3.4281106842115605e-09,
+              "group_velocity_min": 0.21076702844589465,
+              "energy_balance_relative_max": 1.8644624792634026e-13,
+              "Bose_identity_error_max": 3.2558925141959163e-13,
+              "scaled_radial_tail": 40.0,
+              "radial_p_max_over_dispersion_scale": 0.078125,
+              "thermal_tail_is_total_EFT_error": false
+            },
+            {
+              "gamma_pole": 2.2629117677226296e-16,
+              "Gamma_occupation": 4.525823535445259e-16,
+              "angular_support_margin_min": 3.3062771409575475e-09,
+              "group_velocity_min": 0.21076702842021805,
+              "energy_balance_relative_max": 1.8644624792634026e-13,
+              "Bose_identity_error_max": 3.2665501001670974e-13,
+              "scaled_radial_tail": 40.0,
+              "radial_p_max_over_dispersion_scale": 0.078125,
+              "thermal_tail_is_total_EFT_error": false
+            }
+          ],
+          "tail_runs": [
+            {
+              "gamma_pole": 2.262910529025975e-16,
+              "Gamma_occupation": 4.52582105805195e-16,
+              "angular_support_margin_min": 3.3062771409575475e-09,
+              "group_velocity_min": 0.21076702842021805,
+              "energy_balance_relative_max": 1.8644624792634026e-13,
+              "Bose_identity_error_max": 2.5205190821844e-13,
+              "scaled_radial_tail": 24.0,
+              "radial_p_max_over_dispersion_scale": 0.04687499999999999,
+              "thermal_tail_is_total_EFT_error": false
+            },
+            {
+              "gamma_pole": 2.2629117665195807e-16,
+              "Gamma_occupation": 4.525823533039161e-16,
+              "angular_support_margin_min": 3.3062771409575475e-09,
+              "group_velocity_min": 0.21076702842021805,
+              "energy_balance_relative_max": 1.8644624792634026e-13,
+              "Bose_identity_error_max": 2.4636786236714327e-13,
+              "scaled_radial_tail": 32.0,
+              "radial_p_max_over_dispersion_scale": 0.0625,
+              "thermal_tail_is_total_EFT_error": false
+            },
+            {
+              "gamma_pole": 2.2629117677226296e-16,
+              "Gamma_occupation": 4.525823535445259e-16,
+              "angular_support_margin_min": 3.3062771409575475e-09,
+              "group_velocity_min": 0.21076702842021805,
+              "energy_balance_relative_max": 1.8644624792634026e-13,
+              "Bose_identity_error_max": 3.2665501001670974e-13,
+              "scaled_radial_tail": 40.0,
+              "radial_p_max_over_dispersion_scale": 0.078125,
+              "thermal_tail_is_total_EFT_error": false
+            }
+          ],
+          "pair_quadrature_error": 8.522334043461584e-18,
+          "Landau_quadrature_error": 2.1787772408789966e-16,
+          "thermal_tail_error": 5.316375518483336e-10,
+          "Landau_over_qT4": 8550.613341055205,
+          "soft_coefficient_relative_error": 0.0007346623298991839,
+          "pair_over_Landau": 5.016424224729899e-08,
+          "gamma_total_over_omega": 4.864307602772688e-11
+        }
+      ],
+      "soft_Landau_coefficient": 8556.899772979135,
+      "Bose_moment_relative_error": 2.1257575194345937e-16,
+      "zero_T_pair_predecessor_error": 3.094451628352098e-14,
+      "static_diagrams_over_q2T4": {
+        "bubble": -279.3874671455663,
+        "tadpole": -237.17551701269812,
+        "total": -516.5629841582644
+      },
+      "static_pressure_checks": [
+        {
+          "step": 0.0004,
+          "pressure_coefficient": -516.5664501068104,
+          "angular_pressure_coefficient": -516.5664501068104,
+          "diagram_relative_error": 6.70963396974753e-06
+        },
+        {
+          "step": 0.0002,
+          "pressure_coefficient": -516.5638506227062,
+          "angular_pressure_coefficient": -516.5638505848282,
+          "diagram_relative_error": 1.6773645584919212e-06
+        },
+        {
+          "step": 0.0001,
+          "pressure_coefficient": -516.5632003681637,
+          "angular_pressure_coefficient": -516.5632002166511,
+          "diagram_relative_error": 4.185547667565911e-07
+        }
+      ],
+      "static_general_PX_identity_error": 2.2008320612997058e-16,
+      "static_integrated_relative_error": 0.0,
+      "tadpole_without_bubble_relative_mismatch": 0.5408584736299409,
+      "stable_tree_root_checks": [
+        {
+          "q": 1e-05,
+          "independent_parent_relative_error": 0.0,
+          "scaled_parent_inverse_residual": 1.2924697071141055e-16
+        },
+        {
+          "q": 0.005,
+          "independent_parent_relative_error": 2.7982224984784742e-14,
+          "scaled_parent_inverse_residual": 1.3552527156068805e-16
+        },
+        {
+          "q": 0.14013144061803492,
+          "independent_parent_relative_error": 5.633388437931328e-16,
+          "scaled_parent_inverse_residual": 0.0
+        }
+      ],
+      "parent_ledger": {
+        "energy_conservation_residual": 1.734723475976807e-18,
+        "potential_min_eigenvalue": 2.4999999999997247e-05,
+        "kinetic_min_eigenvalue": 0.05,
+        "mode_real_growth_max": 1.3877787807814457e-16,
+        "positive_mode_frequencies": [
+          0.0010538940026261878,
+          1.0021441001778362,
+          2.1492553692665877
+        ]
+      }
+    },
+    {
+      "mu": 1.2,
+      "state_tree": {
+        "mu": 1.2,
+        "xi": 0.0,
+        "h": 0.0,
+        "X": 1.44,
+        "s": 0.4469419829846801,
+        "Phi": 0.17354957461700313,
+        "V_curvature": 0.054517918227461416,
+        "U": 0.9853259253836103,
+        "pressure_tree": 0.04917495789782038,
+        "A": 3.369832699453699,
+        "B": 0.0,
+        "D": 0.4469419829846801,
+        "rho": 0.4469419829846801,
+        "c2_rest_at_X": 0.1326303181333412,
+        "A4_flow": 2.2703510726888294,
+        "stationary_residual": 3.469446951953614e-18,
+        "heavy_hessian": [
+          [
+            0.8938839659693602,
+            -0.02674148785642804
+          ],
+          [
+            -0.02674148785642804,
+            0.054517918227461416
+          ]
+        ]
+      },
+      "coefficients": {
+        "c": 0.3641844561940298,
+        "A0": 0.8807670459543314,
+        "eta": 0.15740994933839672,
+        "A4": 2.27035107268883,
+        "B6": -417.27529971978163,
+        "A4_h": -5.703351337277938,
+        "A4_mu": -11.21233553014485,
+        "Phi_h_tree": 18.61576235634509,
+        "Phi_mu_tree": 0.8935565931045645,
+        "dispersion_scale": 0.9328973365101231,
+        "zeta": -0.07712098174128762,
+        "C8_disp": 289371.012885538
+      },
+      "vertices": {
+        "P1": 0.22347099149234004,
+        "P2": 0.5074463049425381,
+        "P3": -0.0026870594426579076,
+        "P4": -0.0028555969930083337,
+        "g_t": -0.19587340898271838,
+        "g_s": 0.19687420884839743,
+        "h_t": 0.021313992125962272,
+        "h_m": -0.044004718936252386,
+        "h_s": 0.02234309944190608
+      },
+      "thermal_cut_runs": [
+        {
+          "temperature_divisor": 128,
+          "T": 0.002654271165482797,
+          "q": 0.0007288260441485337,
+          "cq_over_T": 0.1,
+          "pair_runs": [
+            {
+              "gamma_pole": 1.3515467127893964e-17,
+              "Gamma_occupation": 2.703093425578793e-17,
+              "angular_support_margin_min": 3.988476215965875e-12,
+              "energy_balance_relative_max": 4.0847443835424603e-16,
+              "Bose_identity_error_max": 7.099513710624157e-16
+            },
+            {
+              "gamma_pole": 1.3515467127893923e-17,
+              "Gamma_occupation": 2.7030934255787845e-17,
+              "angular_support_margin_min": 2.601252546696742e-13,
+              "energy_balance_relative_max": 3.0635582876568455e-16,
+              "Bose_identity_error_max": 7.099513710624157e-16
+            },
+            {
+              "gamma_pole": 1.3515467127894012e-17,
+              "Gamma_occupation": 2.7030934255788024e-17,
+              "angular_support_margin_min": 1.6653345369377348e-14,
+              "energy_balance_relative_max": 2.967822091167569e-16,
+              "Bose_identity_error_max": 5.324635282968118e-16
+            }
+          ],
+          "Landau_runs": [
+            {
+              "gamma_pole": 4.170099168962346e-12,
+              "Gamma_occupation": 8.340198337924692e-12,
+              "angular_support_margin_min": 7.223265916511679e-07,
+              "group_velocity_min": 0.3641847192542035,
+              "energy_balance_relative_max": 5.228472810934349e-14,
+              "Bose_identity_error_max": 1.015230460619254e-13,
+              "scaled_radial_tail": 40.0,
+              "radial_p_max_over_dispersion_scale": 0.3125,
+              "thermal_tail_is_total_EFT_error": false
+            },
+            {
+              "gamma_pole": 4.170099168962344e-12,
+              "Gamma_occupation": 8.340198337924688e-12,
+              "angular_support_margin_min": 6.972694291951242e-07,
+              "group_velocity_min": 0.3641847101287712,
+              "energy_balance_relative_max": 6.535591013667937e-14,
+              "Bose_identity_error_max": 1.009905825336286e-13,
+              "scaled_radial_tail": 40.0,
+              "radial_p_max_over_dispersion_scale": 0.3125,
+              "thermal_tail_is_total_EFT_error": false
+            },
+            {
+              "gamma_pole": 4.170099168962346e-12,
+              "Gamma_occupation": 8.340198337924692e-12,
+              "angular_support_margin_min": 6.909186992531957e-07,
+              "group_velocity_min": 0.3641847078159271,
+              "energy_balance_relative_max": 6.535591013667937e-14,
+              "Bose_identity_error_max": 1.015230460619254e-13,
+              "scaled_radial_tail": 40.0,
+              "radial_p_max_over_dispersion_scale": 0.3125,
+              "thermal_tail_is_total_EFT_error": false
+            }
+          ],
+          "tail_runs": [
+            {
+              "gamma_pole": 4.1700977394925065e-12,
+              "Gamma_occupation": 8.340195478985013e-12,
+              "angular_support_margin_min": 6.909186992531957e-07,
+              "group_velocity_min": 0.3641847078159271,
+              "energy_balance_relative_max": 6.535591013667937e-14,
+              "Bose_identity_error_max": 6.780035593646067e-14,
+              "scaled_radial_tail": 24.0,
+              "radial_p_max_over_dispersion_scale": 0.1875,
+              "thermal_tail_is_total_EFT_error": false
+            },
+            {
+              "gamma_pole": 4.170099168112522e-12,
+              "Gamma_occupation": 8.340198336225044e-12,
+              "angular_support_margin_min": 6.909186992531957e-07,
+              "group_velocity_min": 0.3641847078159271,
+              "energy_balance_relative_max": 6.535591013667937e-14,
+              "Bose_identity_error_max": 6.780035593646067e-14,
+              "scaled_radial_tail": 32.0,
+              "radial_p_max_over_dispersion_scale": 0.25,
+              "thermal_tail_is_total_EFT_error": false
+            },
+            {
+              "gamma_pole": 4.170099168962346e-12,
+              "Gamma_occupation": 8.340198337924692e-12,
+              "angular_support_margin_min": 6.909186992531957e-07,
+              "group_velocity_min": 0.3641847078159271,
+              "energy_balance_relative_max": 6.535591013667937e-14,
+              "Bose_identity_error_max": 1.015230460619254e-13,
+              "scaled_radial_tail": 40.0,
+              "radial_p_max_over_dispersion_scale": 0.3125,
+              "thermal_tail_is_total_EFT_error": false
+            }
+          ],
+          "pair_quadrature_error": 6.611917188946792e-15,
+          "Landau_quadrature_error": 3.874217538799304e-16,
+          "thermal_tail_error": 2.037898475780285e-10,
+          "Landau_over_qT4": 115.27664887036882,
+          "soft_coefficient_relative_error": 0.009993896489480977,
+          "pair_over_Landau": 3.2410421383952588e-06,
+          "gamma_total_over_omega": 1.5710948380976617e-08
+        },
+        {
+          "temperature_divisor": 128,
+          "T": 0.002654271165482797,
+          "q": 0.00036441302207426685,
+          "cq_over_T": 0.05,
+          "pair_runs": [
+            {
+              "gamma_pole": 8.446116467302554e-19,
+              "Gamma_occupation": 1.6892232934605107e-18,
+              "angular_support_margin_min": 9.97091298415853e-13,
+              "energy_balance_relative_max": 3.127382957168197e-16,
+              "Bose_identity_error_max": 5.327960878349821e-16
+            },
+            {
+              "gamma_pole": 8.4461164673025285e-19,
+              "Gamma_occupation": 1.6892232934605057e-18,
+              "angular_support_margin_min": 6.505906924303417e-14,
+              "energy_balance_relative_max": 3.0635588151851727e-16,
+              "Bose_identity_error_max": 5.327960878349821e-16
+            },
+            {
+              "gamma_pole": 8.446116467302594e-19,
+              "Gamma_occupation": 1.6892232934605188e-18,
+              "angular_support_margin_min": 4.107825191113079e-15,
+              "energy_balance_relative_max": 4.084745086913563e-16,
+              "Bose_identity_error_max": 5.327960878349821e-16
+            }
+          ],
+          "Landau_runs": [
+            {
+              "gamma_pole": 2.0850500227095743e-12,
+              "Gamma_occupation": 4.170100045419149e-12,
+              "angular_support_margin_min": 1.8916823041337238e-07,
+              "group_velocity_min": 0.3641845250861628,
+              "energy_balance_relative_max": 1.0456947422498722e-13,
+              "Bose_identity_error_max": 1.301798441276806e-13,
+              "scaled_radial_tail": 40.0,
+              "radial_p_max_over_dispersion_scale": 0.3125,
+              "thermal_tail_is_total_EFT_error": false
+            },
+            {
+              "gamma_pole": 2.0850500227095804e-12,
+              "Gamma_occupation": 4.170100045419161e-12,
+              "angular_support_margin_min": 1.764532084891357e-07,
+              "group_velocity_min": 0.3641845204555494,
+              "energy_balance_relative_max": 1.0456947422498722e-13,
+              "Bose_identity_error_max": 2.2306396210691243e-13,
+              "scaled_radial_tail": 40.0,
+              "radial_p_max_over_dispersion_scale": 0.3125,
+              "thermal_tail_is_total_EFT_error": false
+            },
+            {
+              "gamma_pole": 2.0850500227095735e-12,
+              "Gamma_occupation": 4.170100045419147e-12,
+              "angular_support_margin_min": 1.7326565326936105e-07,
+              "group_velocity_min": 0.3641845192946922,
+              "energy_balance_relative_max": 2.0913894844997443e-13,
+              "Bose_identity_error_max": 2.2324156080285743e-13,
+              "scaled_radial_tail": 40.0,
+              "radial_p_max_over_dispersion_scale": 0.3125,
+              "thermal_tail_is_total_EFT_error": false
+            }
+          ],
+          "tail_runs": [
+            {
+              "gamma_pole": 2.0850492926842227e-12,
+              "Gamma_occupation": 4.170098585368445e-12,
+              "angular_support_margin_min": 1.7326565326936105e-07,
+              "group_velocity_min": 0.3641845192946922,
+              "energy_balance_relative_max": 1.0456947422498722e-13,
+              "Bose_identity_error_max": 8.205059752658722e-14,
+              "scaled_radial_tail": 24.0,
+              "radial_p_max_over_dispersion_scale": 0.1875,
+              "thermal_tail_is_total_EFT_error": false
+            },
+            {
+              "gamma_pole": 2.0850500222751135e-12,
+              "Gamma_occupation": 4.170100044550227e-12,
+              "angular_support_margin_min": 1.7326565326936105e-07,
+              "group_velocity_min": 0.3641845192946922,
+              "energy_balance_relative_max": 2.0913894844997443e-13,
+              "Bose_identity_error_max": 1.4687412154651003e-13,
+              "scaled_radial_tail": 32.0,
+              "radial_p_max_over_dispersion_scale": 0.25,
+              "thermal_tail_is_total_EFT_error": false
+            },
+            {
+              "gamma_pole": 2.0850500227095735e-12,
+              "Gamma_occupation": 4.170100045419147e-12,
+              "angular_support_margin_min": 1.7326565326936105e-07,
+              "group_velocity_min": 0.3641845192946922,
+              "energy_balance_relative_max": 2.0913894844997443e-13,
+              "Bose_identity_error_max": 2.2324156080285743e-13,
+              "scaled_radial_tail": 40.0,
+              "radial_p_max_over_dispersion_scale": 0.3125,
+              "thermal_tail_is_total_EFT_error": false
+            }
+          ],
+          "pair_quadrature_error": 7.752867055843317e-15,
+          "Landau_quadrature_error": 3.2930842158505304e-15,
+          "thermal_tail_error": 2.083691289145974e-10,
+          "Landau_over_qT4": 115.27667309881012,
+          "soft_coefficient_relative_error": 0.009993688413474212,
+          "pair_over_Landau": 4.050798002594997e-07,
+          "gamma_total_over_omega": 1.5710909832859775e-08
+        },
+        {
+          "temperature_divisor": 128,
+          "T": 0.002654271165482797,
+          "q": 0.00018220651103713342,
+          "cq_over_T": 0.025,
+          "pair_runs": [
+            {
+              "gamma_pole": 5.2786586441215104e-20,
+              "Gamma_occupation": 1.0557317288243021e-19,
+              "angular_support_margin_min": 2.4924506902834764e-13,
+              "energy_balance_relative_max": 2.233845065569917e-16,
+              "Bose_identity_error_max": 3.5525287041657317e-16
+            },
+            {
+              "gamma_pole": 5.278658644121493e-20,
+              "Gamma_occupation": 1.0557317288242986e-19,
+              "angular_support_margin_min": 1.6209256159527285e-14,
+              "energy_balance_relative_max": 3.063558947067315e-16,
+              "Bose_identity_error_max": 5.328793056248598e-16
+            },
+            {
+              "gamma_pole": 5.2786586441215327e-20,
+              "Gamma_occupation": 1.0557317288243065e-19,
+              "angular_support_margin_min": 9.992007221626409e-16,
+              "energy_balance_relative_max": 3.191207236528453e-16,
+              "Bose_identity_error_max": 7.105057408331463e-16
+            }
+          ],
+          "Landau_runs": [
+            {
+              "gamma_pole": 1.0425254238794697e-12,
+              "Gamma_occupation": 2.0850508477589395e-12,
+              "angular_support_margin_min": 5.173487982457203e-08,
+              "group_velocity_min": 0.3641844750350689,
+              "energy_balance_relative_max": 2.091389574531287e-13,
+              "Bose_identity_error_max": 3.5134508884199084e-13,
+              "scaled_radial_tail": 40.0,
+              "radial_p_max_over_dispersion_scale": 0.3125,
+              "thermal_tail_is_total_EFT_error": false
+            },
+            {
+              "gamma_pole": 1.0425254238794681e-12,
+              "Gamma_occupation": 2.0850508477589363e-12,
+              "angular_support_margin_min": 4.519094476407304e-08,
+              "group_velocity_min": 0.36418447265186965,
+              "energy_balance_relative_max": 2.091389574531287e-13,
+              "Bose_identity_error_max": 3.438847785632428e-13,
+              "scaled_radial_tail": 40.0,
+              "radial_p_max_over_dispersion_scale": 0.3125,
+              "thermal_tail_is_total_EFT_error": false
+            },
+            {
+              "gamma_pole": 1.0425254238794667e-12,
+              "Gamma_occupation": 2.0850508477589334e-12,
+              "angular_support_margin_min": 4.358499827716855e-08,
+              "group_velocity_min": 0.3641844720670072,
+              "energy_balance_relative_max": 2.091389574531287e-13,
+              "Bose_identity_error_max": 3.490359451842831e-13,
+              "scaled_radial_tail": 40.0,
+              "radial_p_max_over_dispersion_scale": 0.3125,
+              "thermal_tail_is_total_EFT_error": false
+            }
+          ],
+          "tail_runs": [
+            {
+              "gamma_pole": 1.042525054955426e-12,
+              "Gamma_occupation": 2.085050109910852e-12,
+              "angular_support_margin_min": 4.358499827716855e-08,
+              "group_velocity_min": 0.3641844720670072,
+              "energy_balance_relative_max": 2.091389574531287e-13,
+              "Bose_identity_error_max": 2.2700658419619023e-13,
+              "scaled_radial_tail": 24.0,
+              "radial_p_max_over_dispersion_scale": 0.1875,
+              "thermal_tail_is_total_EFT_error": false
+            },
+            {
+              "gamma_pole": 1.0425254236597927e-12,
+              "Gamma_occupation": 2.0850508473195854e-12,
+              "angular_support_margin_min": 4.358499827716855e-08,
+              "group_velocity_min": 0.3641844720670072,
+              "energy_balance_relative_max": 2.091389574531287e-13,
+              "Bose_identity_error_max": 2.2842759567785654e-13,
+              "scaled_radial_tail": 32.0,
+              "radial_p_max_over_dispersion_scale": 0.25,
+              "thermal_tail_is_total_EFT_error": false
+            },
+            {
+              "gamma_pole": 1.0425254238794667e-12,
+              "Gamma_occupation": 2.0850508477589334e-12,
+              "angular_support_margin_min": 4.358499827716855e-08,
+              "group_velocity_min": 0.3641844720670072,
+              "energy_balance_relative_max": 2.091389574531287e-13,
+              "Bose_identity_error_max": 3.490359451842831e-13,
+              "scaled_radial_tail": 40.0,
+              "radial_p_max_over_dispersion_scale": 0.3125,
+              "thermal_tail_is_total_EFT_error": false
+            }
+          ],
+          "pair_quadrature_error": 7.525075550627364e-15,
+          "Landau_quadrature_error": 1.3559753170292883e-15,
+          "thermal_tail_error": 2.1071333407584289e-10,
+          "Landau_over_qT4": 115.27671871351687,
+          "soft_coefficient_relative_error": 0.00999329667031951,
+          "pair_over_Landau": 5.063338047410375e-08,
+          "gamma_total_over_omega": 1.571091115728778e-08
+        },
+        {
+          "temperature_divisor": 256,
+          "T": 0.0013271355827413984,
+          "q": 0.00036441302207426685,
+          "cq_over_T": 0.1,
+          "pair_runs": [
+            {
+              "gamma_pole": 4.2235860547332653e-19,
+              "Gamma_occupation": 8.447172109466531e-19,
+              "angular_support_margin_min": 9.97091298415853e-13,
+              "energy_balance_relative_max": 3.127382957168197e-16,
+              "Bose_identity_error_max": 5.324634367620942e-16
+            },
+            {
+              "gamma_pole": 4.223586054733251e-19,
+              "Gamma_occupation": 8.447172109466502e-19,
+              "angular_support_margin_min": 6.505906924303417e-14,
+              "energy_balance_relative_max": 3.0635588151851727e-16,
+              "Bose_identity_error_max": 5.324634367620942e-16
+            },
+            {
+              "gamma_pole": 4.2235860547332836e-19,
+              "Gamma_occupation": 8.447172109466567e-19,
+              "angular_support_margin_min": 4.107825191113079e-15,
+              "energy_balance_relative_max": 4.084745086913563e-16,
+              "Bose_identity_error_max": 5.324634367620942e-16
+            }
+          ],
+          "Landau_runs": [
+            {
+              "gamma_pole": 1.3129864648529123e-13,
+              "Gamma_occupation": 2.6259729297058247e-13,
+              "angular_support_margin_min": 1.8058174289237172e-07,
+              "group_velocity_min": 0.3641845219590973,
+              "energy_balance_relative_max": 5.228473711249361e-14,
+              "Bose_identity_error_max": 7.880458864078993e-14,
+              "scaled_radial_tail": 40.0,
+              "radial_p_max_over_dispersion_scale": 0.15625,
+              "thermal_tail_is_total_EFT_error": false
+            },
+            {
+              "gamma_pole": 1.3129864648529098e-13,
+              "Gamma_occupation": 2.6259729297058196e-13,
+              "angular_support_margin_min": 1.7431744814278005e-07,
+              "group_velocity_min": 0.3641845196777365,
+              "energy_balance_relative_max": 1.0456947422498722e-13,
+              "Bose_identity_error_max": 7.880458864078993e-14,
+              "scaled_radial_tail": 40.0,
+              "radial_p_max_over_dispersion_scale": 0.15625,
+              "thermal_tail_is_total_EFT_error": false
+            },
+            {
+              "gamma_pole": 1.3129864648529073e-13,
+              "Gamma_occupation": 2.6259729297058146e-13,
+              "angular_support_margin_min": 1.7272976438054144e-07,
+              "group_velocity_min": 0.3641845190995248,
+              "energy_balance_relative_max": 7.842710566874042e-14,
+              "Bose_identity_error_max": 7.898207645304395e-14,
+              "scaled_radial_tail": 40.0,
+              "radial_p_max_over_dispersion_scale": 0.15625,
+              "thermal_tail_is_total_EFT_error": false
+            }
+          ],
+          "tail_runs": [
+            {
+              "gamma_pole": 1.3129858247590001e-13,
+              "Gamma_occupation": 2.6259716495180003e-13,
+              "angular_support_margin_min": 1.7272976438054144e-07,
+              "group_velocity_min": 0.3641845190995248,
+              "energy_balance_relative_max": 1.0456947422498722e-13,
+              "Bose_identity_error_max": 8.075695457558428e-14,
+              "scaled_radial_tail": 24.0,
+              "radial_p_max_over_dispersion_scale": 0.09375,
+              "thermal_tail_is_total_EFT_error": false
+            },
+            {
+              "gamma_pole": 1.3129864642891954e-13,
+              "Gamma_occupation": 2.6259729285783907e-13,
+              "angular_support_margin_min": 1.7272976438054144e-07,
+              "group_velocity_min": 0.3641845190995248,
+              "energy_balance_relative_max": 1.0456947422498722e-13,
+              "Bose_identity_error_max": 8.09344423878383e-14,
+              "scaled_radial_tail": 32.0,
+              "radial_p_max_over_dispersion_scale": 0.125,
+              "thermal_tail_is_total_EFT_error": false
+            },
+            {
+              "gamma_pole": 1.3129864648529073e-13,
+              "Gamma_occupation": 2.6259729297058146e-13,
+              "angular_support_margin_min": 1.7272976438054144e-07,
+              "group_velocity_min": 0.3641845190995248,
+              "energy_balance_relative_max": 7.842710566874042e-14,
+              "Bose_identity_error_max": 7.898207645304395e-14,
+              "scaled_radial_tail": 40.0,
+              "radial_p_max_over_dispersion_scale": 0.15625,
+              "thermal_tail_is_total_EFT_error": false
+            }
+          ],
+          "pair_quadrature_error": 7.751898180905081e-15,
+          "Landau_quadrature_error": 1.9226054222806015e-15,
+          "thermal_tail_error": 4.293356710256855e-10,
+          "Landau_over_qT4": 116.1462486509128,
+          "soft_coefficient_relative_error": 0.0025256963050875316,
+          "pair_over_Landau": 3.2167780611557547e-06,
+          "gamma_total_over_omega": 9.893417297752212e-10
+        },
+        {
+          "temperature_divisor": 256,
+          "T": 0.0013271355827413984,
+          "q": 0.00018220651103713342,
+          "cq_over_T": 0.05,
+          "pair_runs": [
+            {
+              "gamma_pole": 2.6394117987114087e-20,
+              "Gamma_occupation": 5.2788235974228174e-20,
+              "angular_support_margin_min": 2.4924506902834764e-13,
+              "energy_balance_relative_max": 2.233845065569917e-16,
+              "Bose_identity_error_max": 3.5519737660558153e-16
+            },
+            {
+              "gamma_pole": 2.6394117987114018e-20,
+              "Gamma_occupation": 5.2788235974228036e-20,
+              "angular_support_margin_min": 1.6209256159527285e-14,
+              "energy_balance_relative_max": 3.063558947067315e-16,
+              "Bose_identity_error_max": 3.5519737660558153e-16
+            },
+            {
+              "gamma_pole": 2.6394117987114226e-20,
+              "Gamma_occupation": 5.278823597422845e-20,
+              "angular_support_margin_min": 9.992007221626409e-16,
+              "energy_balance_relative_max": 3.191207236528453e-16,
+              "Bose_identity_error_max": 5.327960649083723e-16
+            }
+          ],
+          "Landau_runs": [
+            {
+              "gamma_pole": 6.564919179852982e-14,
+              "Gamma_occupation": 1.3129838359705964e-13,
+              "angular_support_margin_min": 4.729206448672585e-08,
+              "group_velocity_min": 0.3641844734170647,
+              "energy_balance_relative_max": 1.0456947872656435e-13,
+              "Bose_identity_error_max": 1.358629965516349e-13,
+              "scaled_radial_tail": 40.0,
+              "radial_p_max_over_dispersion_scale": 0.15625,
+              "thermal_tail_is_total_EFT_error": false
+            },
+            {
+              "gamma_pole": 6.564919179852972e-14,
+              "Gamma_occupation": 1.3129838359705944e-13,
+              "angular_support_margin_min": 4.411330667419833e-08,
+              "group_velocity_min": 0.36418447225941103,
+              "energy_balance_relative_max": 1.0456947872656435e-13,
+              "Bose_identity_error_max": 2.205775708720661e-13,
+              "scaled_radial_tail": 40.0,
+              "radial_p_max_over_dispersion_scale": 0.15625,
+              "thermal_tail_is_total_EFT_error": false
+            },
+            {
+              "gamma_pole": 6.56491917985296e-14,
+              "Gamma_occupation": 1.312983835970592e-13,
+              "angular_support_margin_min": 4.3316431219686535e-08,
+              "group_velocity_min": 0.3641844719691967,
+              "energy_balance_relative_max": 2.091389574531287e-13,
+              "Bose_identity_error_max": 2.2270875513169958e-13,
+              "scaled_radial_tail": 40.0,
+              "radial_p_max_over_dispersion_scale": 0.15625,
+              "thermal_tail_is_total_EFT_error": false
+            }
+          ],
+          "tail_runs": [
+            {
+              "gamma_pole": 6.56491591198064e-14,
+              "Gamma_occupation": 1.312983182396128e-13,
+              "angular_support_margin_min": 4.3316431219686535e-08,
+              "group_velocity_min": 0.3641844719691967,
+              "energy_balance_relative_max": 1.0456947872656435e-13,
+              "Bose_identity_error_max": 1.4492052965507724e-13,
+              "scaled_radial_tail": 24.0,
+              "radial_p_max_over_dispersion_scale": 0.09375,
+              "thermal_tail_is_total_EFT_error": false
+            },
+            {
+              "gamma_pole": 6.564919176972192e-14,
+              "Gamma_occupation": 1.3129838353944384e-13,
+              "angular_support_margin_min": 4.3316431219686535e-08,
+              "group_velocity_min": 0.3641844719691967,
+              "energy_balance_relative_max": 1.0456947872656435e-13,
+              "Bose_identity_error_max": 2.0814566269087074e-13,
+              "scaled_radial_tail": 32.0,
+              "radial_p_max_over_dispersion_scale": 0.125,
+              "thermal_tail_is_total_EFT_error": false
+            },
+            {
+              "gamma_pole": 6.56491917985296e-14,
+              "Gamma_occupation": 1.312983835970592e-13,
+              "angular_support_margin_min": 4.3316431219686535e-08,
+              "group_velocity_min": 0.3641844719691967,
+              "energy_balance_relative_max": 2.091389574531287e-13,
+              "Bose_identity_error_max": 2.2270875513169958e-13,
+              "scaled_radial_tail": 40.0,
+              "radial_p_max_over_dispersion_scale": 0.15625,
+              "thermal_tail_is_total_EFT_error": false
+            }
+          ],
+          "pair_quadrature_error": 7.866878606461474e-15,
+          "Landau_quadrature_error": 1.7303483445834287e-15,
+          "thermal_tail_error": 4.38812494967814e-10,
+          "Landau_over_qT4": 116.14601610105244,
+          "soft_coefficient_relative_error": 0.002527693463951706,
+          "pair_over_Landau": 4.020478739192246e-07,
+          "gamma_total_over_omega": 9.893370067736703e-10
+        },
+        {
+          "temperature_divisor": 256,
+          "T": 0.0013271355827413984,
+          "q": 9.110325551856671e-05,
+          "cq_over_T": 0.025,
+          "pair_runs": [
+            {
+              "gamma_pole": 1.649580889205899e-21,
+              "Gamma_occupation": 3.299161778411798e-21,
+              "angular_support_margin_min": 6.228351168147128e-14,
+              "energy_balance_relative_max": 4.084745306717139e-16,
+              "Bose_identity_error_max": 3.5525286659367995e-16
+            },
+            {
+              "gamma_pole": 1.6495808892058934e-21,
+              "Gamma_occupation": 3.2991617784117867e-21,
+              "angular_support_margin_min": 4.107825191113079e-15,
+              "energy_balance_relative_max": 2.0423726533585695e-16,
+              "Bose_identity_error_max": 5.328792998905199e-16
+            },
+            {
+              "gamma_pole": 1.6495808892059062e-21,
+              "Gamma_occupation": 3.2991617784118123e-21,
+              "angular_support_margin_min": 2.220446049250313e-16,
+              "energy_balance_relative_max": 2.672636089355941e-16,
+              "Bose_identity_error_max": 3.5525286659367995e-16
+            }
+          ],
+          "Landau_runs": [
+            {
+              "gamma_pole": 3.2824590648272613e-14,
+              "Gamma_occupation": 6.564918129654523e-14,
+              "angular_support_margin_min": 1.2933719983898584e-08,
+              "group_velocity_min": 0.3641844609042897,
+              "energy_balance_relative_max": 4.1827791940783504e-13,
+              "Bose_identity_error_max": 3.424637633963075e-13,
+              "scaled_radial_tail": 40.0,
+              "radial_p_max_over_dispersion_scale": 0.15625,
+              "thermal_tail_is_total_EFT_error": false
+            },
+            {
+              "gamma_pole": 3.282459064827252e-14,
+              "Gamma_occupation": 6.564918129654504e-14,
+              "angular_support_margin_min": 1.1297737301241284e-08,
+              "group_velocity_min": 0.3641844603084899,
+              "energy_balance_relative_max": 4.1827791940783504e-13,
+              "Bose_identity_error_max": 3.644894411251157e-13,
+              "scaled_radial_tail": 40.0,
+              "radial_p_max_over_dispersion_scale": 0.15625,
+              "thermal_tail_is_total_EFT_error": false
+            },
+            {
+              "gamma_pole": 3.2824590648272437e-14,
+              "Gamma_occupation": 6.564918129654487e-14,
+              "angular_support_margin_min": 1.0896240576485638e-08,
+              "group_velocity_min": 0.36418446016227424,
+              "energy_balance_relative_max": 2.0913895970391752e-13,
+              "Bose_identity_error_max": 3.490359414282906e-13,
+              "scaled_radial_tail": 40.0,
+              "radial_p_max_over_dispersion_scale": 0.15625,
+              "thermal_tail_is_total_EFT_error": false
+            }
+          ],
+          "tail_runs": [
+            {
+              "gamma_pole": 3.2824574136511896e-14,
+              "Gamma_occupation": 6.564914827302379e-14,
+              "angular_support_margin_min": 1.0896240576485638e-08,
+              "group_velocity_min": 0.36418446016227424,
+              "energy_balance_relative_max": 2.0913895970391752e-13,
+              "Bose_identity_error_max": 2.0427039829136598e-13,
+              "scaled_radial_tail": 24.0,
+              "radial_p_max_over_dispersion_scale": 0.09375,
+              "thermal_tail_is_total_EFT_error": false
+            },
+            {
+              "gamma_pole": 3.28245906337094e-14,
+              "Gamma_occupation": 6.56491812674188e-14,
+              "angular_support_margin_min": 1.0896240576485638e-08,
+              "group_velocity_min": 0.36418446016227424,
+              "energy_balance_relative_max": 4.1827791940783504e-13,
+              "Bose_identity_error_max": 3.4566103919565064e-13,
+              "scaled_radial_tail": 32.0,
+              "radial_p_max_over_dispersion_scale": 0.125,
+              "thermal_tail_is_total_EFT_error": false
+            },
+            {
+              "gamma_pole": 3.2824590648272437e-14,
+              "Gamma_occupation": 6.564918129654487e-14,
+              "angular_support_margin_min": 1.0896240576485638e-08,
+              "group_velocity_min": 0.36418446016227424,
+              "energy_balance_relative_max": 2.0913895970391752e-13,
+              "Bose_identity_error_max": 3.490359414282906e-13,
+              "scaled_radial_tail": 40.0,
+              "radial_p_max_over_dispersion_scale": 0.15625,
+              "thermal_tail_is_total_EFT_error": false
+            }
+          ],
+          "pair_quadrature_error": 1.2789378536946488e-15,
+          "Landau_quadrature_error": 2.499392453118165e-15,
+          "thermal_tail_error": 4.4366234782905716e-10,
+          "Landau_over_qT4": 116.14599752102647,
+          "soft_coefficient_relative_error": 0.002527853030865645,
+          "pair_over_Landau": 5.025442379104654e-08,
+          "gamma_total_over_omega": 9.893365111134939e-10
+        },
+        {
+          "temperature_divisor": 512,
+          "T": 0.0006635677913706992,
+          "q": 0.00018220651103713342,
+          "cq_over_T": 0.1,
+          "pair_runs": [
+            {
+              "gamma_pole": 1.319870843453201e-20,
+              "Gamma_occupation": 2.639741686906402e-20,
+              "angular_support_margin_min": 2.4924506902834764e-13,
+              "energy_balance_relative_max": 2.233845065569917e-16,
+              "Bose_identity_error_max": 3.549756092522728e-16
+            },
+            {
+              "gamma_pole": 1.3198708434531965e-20,
+              "Gamma_occupation": 2.639741686906393e-20,
+              "angular_support_margin_min": 1.6209256159527285e-14,
+              "energy_balance_relative_max": 3.063558947067315e-16,
+              "Bose_identity_error_max": 3.549756092522728e-16
+            },
+            {
+              "gamma_pole": 1.3198708434532072e-20,
+              "Gamma_occupation": 2.6397416869064143e-20,
+              "angular_support_margin_min": 9.992007221626409e-16,
+              "energy_balance_relative_max": 3.191207236528453e-16,
+              "Bose_identity_error_max": 3.549756092522728e-16
+            }
+          ],
+          "Landau_runs": [
+            {
+              "gamma_pole": 4.110876667442439e-15,
+              "Gamma_occupation": 8.221753334884878e-15,
+              "angular_support_margin_min": 4.514544282852029e-08,
+              "group_velocity_min": 0.3641844726352982,
+              "energy_balance_relative_max": 5.2284739363282177e-14,
+              "Bose_identity_error_max": 6.407309747003523e-14,
+              "scaled_radial_tail": 40.0,
+              "radial_p_max_over_dispersion_scale": 0.078125,
+              "thermal_tail_is_total_EFT_error": false
+            },
+            {
+              "gamma_pole": 4.1108766674424475e-15,
+              "Gamma_occupation": 8.221753334884895e-15,
+              "angular_support_margin_min": 4.357936655985384e-08,
+              "group_velocity_min": 0.36418447206495774,
+              "energy_balance_relative_max": 1.0456947872656435e-13,
+              "Bose_identity_error_max": 1.3400329249273297e-13,
+              "scaled_radial_tail": 40.0,
+              "radial_p_max_over_dispersion_scale": 0.078125,
+              "thermal_tail_is_total_EFT_error": false
+            },
+            {
+              "gamma_pole": 4.1108766674424286e-15,
+              "Gamma_occupation": 8.221753334884857e-15,
+              "angular_support_margin_min": 4.318245894197048e-08,
+              "group_velocity_min": 0.3641844719204048,
+              "energy_balance_relative_max": 5.2284739363282177e-14,
+              "Bose_identity_error_max": 7.969202427713523e-14,
+              "scaled_radial_tail": 40.0,
+              "radial_p_max_over_dispersion_scale": 0.078125,
+              "thermal_tail_is_total_EFT_error": false
+            }
+          ],
+          "tail_runs": [
+            {
+              "gamma_pole": 4.11087447376757e-15,
+              "Gamma_occupation": 8.22174894753514e-15,
+              "angular_support_margin_min": 4.318245894197048e-08,
+              "group_velocity_min": 0.3641844719204048,
+              "energy_balance_relative_max": 5.2284739363282177e-14,
+              "Bose_identity_error_max": 6.300817064227841e-14,
+              "scaled_radial_tail": 24.0,
+              "radial_p_max_over_dispersion_scale": 0.046875,
+              "thermal_tail_is_total_EFT_error": false
+            },
+            {
+              "gamma_pole": 4.11087666530019e-15,
+              "Gamma_occupation": 8.22175333060038e-15,
+              "angular_support_margin_min": 4.318245894197048e-08,
+              "group_velocity_min": 0.3641844719204048,
+              "energy_balance_relative_max": 5.2284739363282177e-14,
+              "Bose_identity_error_max": 7.827212184012614e-14,
+              "scaled_radial_tail": 32.0,
+              "radial_p_max_over_dispersion_scale": 0.0625,
+              "thermal_tail_is_total_EFT_error": false
+            },
+            {
+              "gamma_pole": 4.1108766674424286e-15,
+              "Gamma_occupation": 8.221753334884857e-15,
+              "angular_support_margin_min": 4.318245894197048e-08,
+              "group_velocity_min": 0.3641844719204048,
+              "energy_balance_relative_max": 5.2284739363282177e-14,
+              "Bose_identity_error_max": 7.969202427713523e-14,
+              "scaled_radial_tail": 40.0,
+              "radial_p_max_over_dispersion_scale": 0.078125,
+              "thermal_tail_is_total_EFT_error": false
+            }
+          ],
+          "pair_quadrature_error": 8.093892454145787e-15,
+          "Landau_quadrature_error": 4.605504678660961e-15,
+          "thermal_tail_error": 5.211147733507704e-10,
+          "Landau_over_qT4": 116.36687295624027,
+          "soft_coefficient_relative_error": 0.0006309551671612618,
+          "pair_over_Landau": 3.210679741152053e-06,
+          "gamma_total_over_omega": 6.195131621246634e-11
+        },
+        {
+          "temperature_divisor": 512,
+          "T": 0.0006635677913706992,
+          "q": 9.110325551856671e-05,
+          "cq_over_T": 0.05,
+          "pair_runs": [
+            {
+              "gamma_pole": 8.248162185566452e-22,
+              "Gamma_occupation": 1.6496324371132904e-21,
+              "angular_support_margin_min": 6.228351168147128e-14,
+              "energy_balance_relative_max": 4.084745306717139e-16,
+              "Bose_identity_error_max": 3.5519737278447967e-16
+            },
+            {
+              "gamma_pole": 8.248162185566424e-22,
+              "Gamma_occupation": 1.6496324371132847e-21,
+              "angular_support_margin_min": 4.107825191113079e-15,
+              "energy_balance_relative_max": 2.0423726533585695e-16,
+              "Bose_identity_error_max": 3.5519737278447967e-16
+            },
+            {
+              "gamma_pole": 8.2481621855664905e-22,
+              "Gamma_occupation": 1.6496324371132981e-21,
+              "angular_support_margin_min": 2.220446049250313e-16,
+              "energy_balance_relative_max": 2.672636089355941e-16,
+              "Bose_identity_error_max": 5.327960591767194e-16
+            }
+          ],
+          "Landau_runs": [
+            {
+              "gamma_pole": 2.0554330702031315e-15,
+              "Gamma_occupation": 4.110866140406263e-15,
+              "angular_support_margin_min": 1.182301556656995e-08,
+              "group_velocity_min": 0.36418446049978864,
+              "energy_balance_relative_max": 1.0456947985195876e-13,
+              "Bose_identity_error_max": 2.0068651562323102e-13,
+              "scaled_radial_tail": 40.0,
+              "radial_p_max_over_dispersion_scale": 0.078125,
+              "thermal_tail_is_total_EFT_error": false
+            },
+            {
+              "gamma_pole": 2.0554330702031287e-15,
+              "Gamma_occupation": 4.1108661404062574e-15,
+              "angular_support_margin_min": 1.1028324364836806e-08,
+              "group_velocity_min": 0.3641844602103752,
+              "energy_balance_relative_max": 1.0456947985195876e-13,
+              "Bose_identity_error_max": 2.2590552909092907e-13,
+              "scaled_radial_tail": 40.0,
+              "radial_p_max_over_dispersion_scale": 0.078125,
+              "thermal_tail_is_total_EFT_error": false
+            },
+            {
+              "gamma_pole": 2.055433070203127e-15,
+              "Gamma_occupation": 4.110866140406254e-15,
+              "angular_support_margin_min": 1.082909883987071e-08,
+              "group_velocity_min": 0.36418446013782163,
+              "energy_balance_relative_max": 1.0456947985195876e-13,
+              "Bose_identity_error_max": 2.0086411430962325e-13,
+              "scaled_radial_tail": 40.0,
+              "radial_p_max_over_dispersion_scale": 0.078125,
+              "thermal_tail_is_total_EFT_error": false
+            }
+          ],
+          "tail_runs": [
+            {
+              "gamma_pole": 2.055431950367382e-15,
+              "Gamma_occupation": 4.110863900734764e-15,
+              "angular_support_margin_min": 1.082909883987071e-08,
+              "group_velocity_min": 0.36418446013782163,
+              "energy_balance_relative_max": 1.0456947985195876e-13,
+              "Bose_identity_error_max": 1.5433325847485642e-13,
+              "scaled_radial_tail": 24.0,
+              "radial_p_max_over_dispersion_scale": 0.046875,
+              "thermal_tail_is_total_EFT_error": false
+            },
+            {
+              "gamma_pole": 2.055433069108492e-15,
+              "Gamma_occupation": 4.110866138216984e-15,
+              "angular_support_margin_min": 1.082909883987071e-08,
+              "group_velocity_min": 0.36418446013782163,
+              "energy_balance_relative_max": 1.0456947985195876e-13,
+              "Bose_identity_error_max": 1.5433325847485642e-13,
+              "scaled_radial_tail": 32.0,
+              "radial_p_max_over_dispersion_scale": 0.0625,
+              "thermal_tail_is_total_EFT_error": false
+            },
+            {
+              "gamma_pole": 2.055433070203127e-15,
+              "Gamma_occupation": 4.110866140406254e-15,
+              "angular_support_margin_min": 1.082909883987071e-08,
+              "group_velocity_min": 0.36418446013782163,
+              "energy_balance_relative_max": 1.0456947985195876e-13,
+              "Bose_identity_error_max": 2.0086411430962325e-13,
+              "scaled_radial_tail": 40.0,
+              "radial_p_max_over_dispersion_scale": 0.078125,
+              "thermal_tail_is_total_EFT_error": false
+            }
+          ],
+          "pair_quadrature_error": 6.676807912670593e-16,
+          "Landau_quadrature_error": 7.675860787265167e-16,
+          "thermal_tail_error": 5.325569783160478e-10,
+          "Landau_over_qT4": 116.366574966692,
+          "soft_coefficient_relative_error": 0.0006335143278799585,
+          "pair_over_Landau": 4.012858557710843e-07,
+          "gamma_total_over_omega": 6.195098419107699e-11
+        },
+        {
+          "temperature_divisor": 512,
+          "T": 0.0006635677913706992,
+          "q": 4.5551627759283356e-05,
+          "cq_over_T": 0.025,
+          "pair_runs": [
+            {
+              "gamma_pole": 5.154940327923067e-23,
+              "Gamma_occupation": 1.0309880655846134e-22,
+              "angular_support_margin_min": 1.554312234475219e-14,
+              "energy_balance_relative_max": 2.217889059223896e-16,
+              "Bose_identity_error_max": 3.552528656379567e-16
+            },
+            {
+              "gamma_pole": 5.15494032792305e-23,
+              "Gamma_occupation": 1.03098806558461e-22,
+              "angular_support_margin_min": 9.992007221626409e-16,
+              "energy_balance_relative_max": 2.0423726588536597e-16,
+              "Bose_identity_error_max": 5.328792984569349e-16
+            },
+            {
+              "gamma_pole": 5.154940327923089e-23,
+              "Gamma_occupation": 1.0309880655846178e-22,
+              "angular_support_margin_min": 1.1102230246251565e-16,
+              "energy_balance_relative_max": 2.23384509562119e-16,
+              "Bose_identity_error_max": 3.552528656379567e-16
+            }
+          ],
+          "Landau_runs": [
+            {
+              "gamma_pole": 1.0277162265218574e-15,
+              "Gamma_occupation": 2.0554324530437148e-15,
+              "angular_support_margin_min": 3.2334299682190704e-09,
+              "group_velocity_min": 0.3641844573715947,
+              "energy_balance_relative_max": 2.0913896026661476e-13,
+              "Bose_identity_error_max": 3.717721238901216e-13,
+              "scaled_radial_tail": 40.0,
+              "radial_p_max_over_dispersion_scale": 0.078125,
+              "thermal_tail_is_total_EFT_error": false
+            },
+            {
+              "gamma_pole": 1.027716226521861e-15,
+              "Gamma_occupation": 2.055432453043722e-15,
+              "angular_support_margin_min": 2.8244343530658966e-09,
+              "group_velocity_min": 0.3641844572226448,
+              "energy_balance_relative_max": 2.0913896026661476e-13,
+              "Bose_identity_error_max": 2.3357875915695646e-13,
+              "scaled_radial_tail": 40.0,
+              "radial_p_max_over_dispersion_scale": 0.078125,
+              "thermal_tail_is_total_EFT_error": false
+            },
+            {
+              "gamma_pole": 1.0277162265218558e-15,
+              "Gamma_occupation": 2.0554324530437116e-15,
+              "angular_support_margin_min": 2.72405564771816e-09,
+              "group_velocity_min": 0.3641844571860908,
+              "energy_balance_relative_max": 4.182779205332295e-13,
+              "Bose_identity_error_max": 3.691077273978369e-13,
+              "scaled_radial_tail": 40.0,
+              "radial_p_max_over_dispersion_scale": 0.078125,
+              "thermal_tail_is_total_EFT_error": false
+            }
+          ],
+          "tail_runs": [
+            {
+              "gamma_pole": 1.0277156607217892e-15,
+              "Gamma_occupation": 2.0554313214435785e-15,
+              "angular_support_margin_min": 2.72405564771816e-09,
+              "group_velocity_min": 0.3641844571860908,
+              "energy_balance_relative_max": 2.0913896026661476e-13,
+              "Bose_identity_error_max": 2.2558556968010244e-13,
+              "scaled_radial_tail": 24.0,
+              "radial_p_max_over_dispersion_scale": 0.046875,
+              "thermal_tail_is_total_EFT_error": false
+            },
+            {
+              "gamma_pole": 1.0277162259685216e-15,
+              "Gamma_occupation": 2.055432451937043e-15,
+              "angular_support_margin_min": 2.72405564771816e-09,
+              "group_velocity_min": 0.3641844571860908,
+              "energy_balance_relative_max": 2.0913896026661476e-13,
+              "Bose_identity_error_max": 3.3447057299813615e-13,
+              "scaled_radial_tail": 32.0,
+              "radial_p_max_over_dispersion_scale": 0.0625,
+              "thermal_tail_is_total_EFT_error": false
+            },
+            {
+              "gamma_pole": 1.0277162265218558e-15,
+              "Gamma_occupation": 2.0554324530437116e-15,
+              "angular_support_margin_min": 2.72405564771816e-09,
+              "group_velocity_min": 0.3641844571860908,
+              "energy_balance_relative_max": 4.182779205332295e-13,
+              "Bose_identity_error_max": 3.691077273978369e-13,
+              "scaled_radial_tail": 40.0,
+              "radial_p_max_over_dispersion_scale": 0.078125,
+              "thermal_tail_is_total_EFT_error": false
+            }
+          ],
+          "pair_quadrature_error": 3.879131357713549e-17,
+          "Landau_quadrature_error": 4.989311009800945e-15,
+          "thermal_tail_error": 5.384115190006493e-10,
+          "Landau_over_qT4": 116.36654002674264,
+          "soft_coefficient_relative_error": 0.0006338143952696717,
+          "pair_over_Landau": 5.015918008192957e-08,
+          "gamma_total_over_omega": 6.195094400387648e-11
+        }
+      ],
+      "soft_Landau_coefficient": 116.44034159143341,
+      "Bose_moment_relative_error": 2.4408816602522757e-16,
+      "zero_T_pair_predecessor_error": 9.60421080501585e-16,
+      "static_diagrams_over_q2T4": {
+        "bubble": -7.961760428828803,
+        "tadpole": -7.04989698801808,
+        "total": -15.011657416846884
+      },
+      "static_pressure_checks": [
+        {
+          "step": 0.0004,
+          "pressure_coefficient": -15.01168040160105,
+          "angular_pressure_coefficient": -15.011680399953752,
+          "diagram_relative_error": 1.5311270119939465e-06
+        },
+        {
+          "step": 0.0002,
+          "pressure_coefficient": -15.011663162638483,
+          "angular_pressure_coefficient": -15.011663156049295,
+          "diagram_relative_error": 3.8275531071647447e-07
+        },
+        {
+          "step": 0.0001,
+          "pressure_coefficient": -15.011658846720477,
+          "angular_pressure_coefficient": -15.011658846720477,
+          "diagram_relative_error": 9.525088096837662e-08
+        }
+      ],
+      "static_general_PX_identity_error": 4.733273055929795e-16,
+      "static_integrated_relative_error": 5.916591319912243e-16,
+      "tadpole_without_bubble_relative_mismatch": 0.5303718442104661,
+      "stable_tree_root_checks": [
+        {
+          "q": 1e-05,
+          "independent_parent_relative_error": 1.1629174897656918e-16,
+          "scaled_parent_inverse_residual": 1.2924697071141055e-16
+        },
+        {
+          "q": 0.005,
+          "independent_parent_relative_error": 4.763258568825162e-16,
+          "scaled_parent_inverse_residual": 2.710505431213761e-16
+        },
+        {
+          "q": 0.28919817431813816,
+          "independent_parent_relative_error": 5.857722069596751e-15,
+          "scaled_parent_inverse_residual": 0.0
+        }
+      ],
+      "parent_ledger": {
+        "energy_conservation_residual": 3.469446951953614e-18,
+        "potential_min_eigenvalue": 2.4999999999997247e-05,
+        "kinetic_min_eigenvalue": 0.05,
+        "mode_real_growth_max": 1.1102230246251565e-16,
+        "positive_mode_frequencies": [
+          0.0018209419569726155,
+          1.04298318034378,
+          2.5800193991923717
+        ]
+      }
+    }
+  ],
+  "evidence_artifacts": [
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/Research_T13_Thermal_Cut_Stiffness.py",
+      "sha256": "1bf6bd2c0330284f6fe18819ceb9a9cedea6646d2312359aacc52aca975a8b3e"
+    },
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/t13_thermal_cut_stiffness_registry.json",
+      "sha256": "5b7bbd877ee0ea7c1b75b03f199565ad7851ce16ddbd4ce96b650caf1461b359"
+    },
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/test_t13_thermal_cut_stiffness.py",
+      "sha256": "622ecf797207bde3292f091d1728959d1985d193f70d24315a55f20507e92f2f"
+    },
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/Research_T13_Low_T_Interactions.py",
+      "sha256": "ead2b10e9022e9db849e10cc3dad0274416da2a238dadc1ae6b35938673b9097"
+    },
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/Research_T13_Low_T_Phase_EFT.py",
+      "sha256": "70306bac6b4f907c6ca0b41cce2164c977a571e93f2d9a32eb6d708f8a6531dc"
+    }
+  ],
+  "protected_evidence_hashes": [
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/t13_vacuum_cut_log.json",
+      "sha256": "449b4df1741ebd0b4c3fa5f69cda1f97b6f014ebd5cfc603e97352bed2e41e17"
+    },
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/t13_low_T_interactions.json",
+      "sha256": "f1679543e0a644c5104d001ea7ed84adbaf1298f8d8315c9c5108cdcfb53fd0c"
+    },
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/t13_low_T_phase_eft.json",
+      "sha256": "050aceb4f94f3534929d8c59c75da4dda8efe16ce7aec250a34f6f8b5868dcb7"
+    },
+    {
+      "path": "docs/core/02_equations/o2/uet_o2_action_thermal_observable_bridge.py",
+      "sha256": "1cf745562548bc9a61d9ebb86069b8aff73e2a776756aa9efe7ab1a45b669ebe"
+    },
+    {
+      "path": "docs/core/02_equations/o2/uet_o2_action_thermal_stiffness_beta.py",
+      "sha256": "c1c3278a79df611ddae2f67ff811022722ab0c56f68bf91cc5480f34db9a95e6"
+    },
+    {
+      "path": "docs/core/02_equations/covariant/uet_covariant_matter.py",
+      "sha256": "8a57d95e898a8ac962bbd749670ad0695b597281937da36496d2ec7e074f9c53"
+    },
+    {
+      "path": "docs/core/02_equations/covariant/uet_covariant_response.py",
+      "sha256": "7fb4b7228afb8ede0ac4f1664d634346ef46cc7678c94ed7b55d73645590c0c2"
+    }
+  ],
+  "controlling_blocker": "matched_curvature_real_response_and_full_thermal_sunset_open",
+  "open_blockers": [
+    "finite_local_Wilson_source_matching",
+    "full_curved_vertices_residues_and_real_response",
+    "complete_thermal_sunset_pressure_source_entropy",
+    "independent_material_readout_scale_and_physical_transport"
+  ],
+  "dependency_unlocked": [
+    "matched_real_response_and_thermal_sunset_research_only"
+  ],
+  "finite_T_pair_and_Landau_cuts_computed": true,
+  "static_LO_thermal_coherence_checked": true,
+  "full_finite_T_collision_operator_computed": false,
+  "higher_derivative_vertices_and_residues_matched": false,
+  "full_real_self_energy_matched": false,
+  "full_two_loop_pressure_computed": false,
+  "full_SK_KMS_matching_closed": false,
+  "controlled_full_action_truncation_error_established": false,
+  "independent_alpha_Phi_K_admitted": false,
+  "physical_Kubo_emitted": false,
+  "g1_physical_unlock": false,
+  "g2_science_unlock": false,
+  "full_core_unlock": false,
+  "core_composition_gate_overwritten": false,
+  "claim_promotion": false,
+  "parameter_fitting": false,
+  "assigned_damping_width": false,
+  "clipping": false,
+  "cone_padding": false,
+  "old_Hartree_branch_repaired": false,
+  "target_source_accessed": false,
+  "xie_2026_accessed": false,
+  "prior_Xie_context_exposure_review": "REVIEW_REQUIRED",
+  "primary_references": [
+    "https://arxiv.org/html/1004.2567v2"
+  ],
+  "claim_boundary": "LO cut diagnostic with tree internal curvature and static linear-loop consistency only; not full curved one-loop matching, thermal quantum EOS, kinetic/normal/heat/Kubo/SK-KMS/entropy closure, SI calibration, material prediction, global no-go or Full Topic13. Old conserved-C remains blocked at 1e-6; Core-owner unchanged.",
+  "report": {
+    "MAJOR_RESULT_CLOSURE": "CLOSED_FOR_LANE",
+    "WHAT_IS_ACTUALLY_CLOSED": "Leading-vertex finite-T pair/Landau cuts with internal tree curvature and LO static thermal bubble/tadpole-pressure coherence",
+    "WHAT_REMAINS_OPEN": [
+      "finite_local_Wilson_source_matching",
+      "full_curved_vertices_residues_and_real_response",
+      "complete_thermal_sunset_pressure_source_entropy",
+      "independent_material_readout_scale_and_physical_transport"
+    ],
+    "DEPENDENCY_UNLOCKED": [
+      "matched_real_response_and_thermal_sunset_research_only"
+    ],
+    "STATUS": "PASS_SCOPED_THERMAL_CUT_STIFFNESS",
+    "WHAT_CHANGED": "New thermal cut/static coherence wave, predecessors protected",
+    "EQUATION_OR_MAPPING": "gamma_L/(q T4)->3pi3(gt+gs/c2)^2/(10c2); Sigma_static/(q2 T4)=-d_xi2 A4_flow/chi",
+    "VERIFICATION": {
+      "pair_and_Landau_quadrature_refine": true,
+      "thermal_radial_tail_refines_not_physical_remainder": true,
+      "strict_energy_support_and_positive_rates": true,
+      "cut_Bose_detailed_balance_and_two_point_FDT_only": true,
+      "soft_Landau_limit_and_temperature_refinement": true,
+      "independent_Bose_moment_and_vacuum_limit": true,
+      "static_diagrams_match_reoptimized_flow_pressure": true,
+      "independent_static_loop_integration_and_missing_bubble_negative": true,
+      "parent_quadratic_ledger_preserved": true,
+      "cancellation_free_root_matches_original_parent": true
+    },
+    "CONTROLLING_BLOCKER": "matched_curvature_real_response_and_full_thermal_sunset_open",
+    "NEXT_ACTION": "Match full curved real operator and thermal sunset/source/entropy; assess independent material/readout input",
+    "CLAIM_BOUNDARY": "LO cut diagnostic with tree internal curvature and static linear-loop consistency only; not full curved one-loop matching, thermal quantum EOS, kinetic/normal/heat/Kubo/SK-KMS/entropy closure, SI calibration, material prediction, global no-go or Full Topic13. Old conserved-C remains blocked at 1e-6; Core-owner unchanged."
+  }
+}

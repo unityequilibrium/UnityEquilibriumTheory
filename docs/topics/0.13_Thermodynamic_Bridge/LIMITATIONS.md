@@ -1,5 +1,15 @@
 # Limitations
 
+## Thermal Cuts Do Not Close A Full Collision Operator (2026-10-03)
+
+The [thermal result](Result/artifacts/T13_THERMAL_CUT_STIFFNESS_2026-10-03.md)
+is LO vertices/canonical residues with tree curvature for support, not the
+full curved loop. Static linear-loop coherence does not close dynamics,
+two-loop pressure, normal/heat/Kubo/KMS/entropy or Kelvin/material mapping.
+Tiny sampled widths and numerical tails are not total physical remainder
+bounds. Full curved residues/vertices/source/local matching and thermal
+sunset remain controlling. No full Goal/R1-R5/physical unlock is admitted.
+
 ## Cut And Log Do Not Determine Full Real Response (2026-10-03)
 
 The [vacuum successor](Result/artifacts/T13_VACUUM_CUT_LOG_2026-10-03.md)

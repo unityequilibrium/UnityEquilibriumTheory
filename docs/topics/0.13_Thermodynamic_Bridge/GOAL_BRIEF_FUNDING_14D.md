@@ -8,7 +8,18 @@
 
 ปิดคำถามว่า He-4/O(2) bridge ที่แช่แข็ง calibration แล้วกำหนด independent dynamic response ได้หรือไม่ และต้องวัดอะไรเพิ่มจึงแยกคำตอบได้ ผลสำเร็จต้องมี predictive-content derivation หรือ scoped nonidentifiability proof ที่เพิ่มจาก matching identity เดิม พร้อม measurement design และชุดหลักฐาน ไม่ใช้จำนวน artifacts/PASS เป็นเกณฑ์สำเร็จ
 
-## Latest Vacuum Matching Handoff (2026-10-03)
+## Latest Thermal Cut And Static Handoff (2026-10-03)
+
+[The thermal successor](Result/artifacts/T13_THERMAL_CUT_STIFFNESS_2026-10-03.md)
+now computes leading pair/Landau cuts with internal tree curvature and
+checks static bubble/tadpole-pressure coherence, including a missing-bubble
+negative. This is progress in response physics, not full collision/real
+matching or thermal sunset closure. Next match the full curved operator
+and source/local terms, then complete thermal pressure/source/entropy.
+Independent material/readout/scale remains separate. Preserve full Goal,
+R1-R5, 7/11 October and Core-owner/failed-baseline admission boundaries.
+
+## Prior Vacuum Matching Handoff (2026-10-03)
 
 [Cut/log and matching information](Result/artifacts/T13_VACUUM_CUT_LOG_2026-10-03.md)
 is now verified: formal linear-phase spectral/nonlocal loop and restricted

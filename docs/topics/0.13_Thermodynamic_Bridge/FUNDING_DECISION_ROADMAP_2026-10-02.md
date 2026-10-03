@@ -20,6 +20,8 @@ current evidence อยู่ใน `vacuum_cut_log_evidence_2026_10_03` ขอ�
 
 ## ข้อสรุปสำหรับเลือกโมเดลและวางแผนสองรอบ
 
+ผลต่อเนื่องวันที่ 3 ต.ค.: [finite-T cuts และ static coherence](Result/artifacts/T13_THERMAL_CUT_STIFFNESS_2026-10-03.md) คำนวณ leading-vertex pair/Landau cuts ด้วย internal tree curvature แล้ว และปิด static bubble+tadpole/pressure identity ใน lane นี้ ตัวควบคุมล่าสุดคือ `matched_curvature_real_response_and_full_thermal_sunset_open` ไม่ใช่ full collision/real matching หรือ thermal sunset ที่เสร็จแล้ว Evidence field ล่าสุดคือ `thermal_cut_stiffness_evidence_2026_10_03`; วันที่ เกณฑ์รับผลหลัก โมเดล และ Core-owner ไม่เปลี่ยน
+
 ### สรุปตัดสินใจล่าสุด 3 ตุลาคม: เลือกผลหลักก่อนเลือกปริมาณรัน
 
 **คำถามที่ต้องปิดสำหรับพอร์ต:** ใน candidate low-T ที่ประกาศ สมการกำหนดส่วนใดของ response ได้เอง และส่วนใดยังต้อง matching หรือการวัดอิสระ? ผล cut/log วันที่ 3 ต.ค. เป็นคำตอบที่ตรวจแล้วส่วนหนึ่ง: spectral cut กำหนด nonlocal logarithm แต่ไม่กำหนด finite local real response ทั้งหมด จึงห้ามใช้ cut อย่างเดียวอ้างว่าทำนาย response วัสดุครบแล้ว
@@ -28,7 +30,7 @@ current evidence อยู่ใน `vacuum_cut_log_evidence_2026_10_03` ขอ�
 
 | งานก่อน freeze | คำถามและผลส่งมอบ | ผู้รับผิดชอบและจุดตัดสิน |
 | --- | --- | --- |
-| สมการ: งานคำนวณตัดสินหนึ่งเรื่อง | ประเมิน finite-T pair/Landau cuts โดยใช้ internal tree dispersion ของ branch เดียวกัน; ตรวจ static thermal bubble/tadpole กับอนุพันธ์ pressure อีกวิธี งานนี้ยังเป็นแผน ไม่ใช่หลักฐานใหม่ และไม่แทน full real matching หรือ thermal sunset pressure | Topic13 derivation lead; 5 ต.ค. รับเฉพาะผลที่ตรวจจริงหรือระบุเหตุที่ยังไม่รับ |
+| สมการ: งานคำนวณตัดสินหนึ่งเรื่อง | Leading finite-T pair/Landau cuts และ static bubble/tadpole-pressure coherence มีหลักฐาน scoped แล้วตามผลต่อเนื่องด้านบน; ยังต้อง full curved residues/vertices/source/local real matching และ thermal sunset pressure ไม่ใช้ cut อย่างเดียวปิดผลเหล่านั้น | Topic13 derivation lead; 5 ต.ค. รับเฉพาะผลที่ตรวจจริงหรือระบุเหตุที่ยังไม่รับ |
 | ความหมายและข้อมูล: เดินคู่ขนานได้ | ผูกผล matching ที่ยังไม่เอกลักษณ์กับ measurement card; แยก convention-dependent terms, invariant response, nuisance inputs, readout และ uncertainty ไม่มีการเลือก alpha จาก target | Topic13 source/measurement owner; 7 ต.ค. ต้องมีรายการ input กับเหตุผลว่าการวัดนั้นช่วยแยกคำตอบอย่างไร |
 | ตรวจและสรุป | แยกความผิดพลาดเชิงตัวเลขจาก truncation/physical uncertainty; ตรวจ related work ว่าส่วนใดเป็นวิธีนำเข้าและส่วนใดเป็น contribution ของงานนี้ | Numerical verifier และผู้ทบทวนมนุษย์เมื่อมี; 7 ต.ค. scientific freeze ตามเกณฑ์เดิม |
 | พอร์ต | Report, reproducible evidence, claim map, pitch และสาม aims พร้อมความเสี่ยง/ทรัพยากร/คุณสมบัติทุนที่ยังไม่ทราบ | Research lead; 11 ต.ค. พร้อมทบทวน ไม่รับรองพร้อมยื่นทุน |

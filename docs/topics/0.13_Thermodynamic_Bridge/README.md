@@ -6,6 +6,16 @@ description: "Research module for Thermodynamic Bridge within the Unity Equilibr
 
 # 0.13 Thermodynamic Bridge
 
+## Finite-T Cuts And Static Thermal Coherence (2026-10-03)
+
+The [thermal successor](Result/artifacts/T13_THERMAL_CUT_STIFFNESS_2026-10-03.md)
+computes leading-vertex pair/Landau cuts with internal tree curvature and
+closes LO static bubble/tadpole-pressure coherence. Landau dominates at the
+declared soft witnesses; dropping the bubble fails the static check. This
+is not full curved real matching, thermal sunset, normal/heat/Kubo/KMS or
+material prediction. Current controller is matched_curvature_real_response_and_full_thermal_sunset_open.
+Core-owner composition, failed baselines, dates and Goal acceptance unchanged.
+
 ## Vacuum Cut, Real Logarithm and Matching Boundary (2026-10-03)
 
 The [new vacuum result](Result/artifacts/T13_VACUUM_CUT_LOG_2026-10-03.md)

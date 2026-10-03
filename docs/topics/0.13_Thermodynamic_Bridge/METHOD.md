@@ -1,5 +1,16 @@
 ﻿# Method
 
+## Thermal Cuts And Independent Static Coherence (2026-10-03)
+
+Use [the thermal derivation](Result/artifacts/T13_THERMAL_CUT_STIFFNESS_2026-10-03.md).
+Separate pair and signed Landau phase space, exact-tree internal energy
+support and Bose factors. Rearrange the original parent root to retain its
+small curvature, rather than clip endpoints. Verify soft coefficient by a
+Bose moment and static linear-loop bubble+tadpole by analytic P(X,h), fully
+relaxed flow pressure and independent angular/radial integrals. Distinguish
+static LO and curvature-resolved leading-cut orders. Full residues/vertices,
+real matching, thermal sunset and source/entropy/transport remain open.
+
 ## Vacuum Cut and Subtracted Matching Method (2026-10-03)
 
 Use [the new derivation](Result/artifacts/T13_VACUUM_CUT_LOG_2026-10-03.md).

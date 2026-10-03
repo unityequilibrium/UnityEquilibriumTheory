@@ -1,5 +1,19 @@
 # Verification Spec
 
+## Finite-T Cuts And Static Thermal Coherence (2026-10-03)
+
+Research_T13_Thermal_Cut_Stiffness.py and test_t13_thermal_cut_stiffness.py
+use grids/gates declared before audit, original causal 1e-6 unchanged.
+Require pair/Landau order and thermal-tail refinement, strict support and
+energy/Bose identities, independent angular root and original-parent root,
+soft Bose/NR and vacuum controls, analytic/finite-difference/angular pressure
+and static loop agreement, missing-bubble/mismatched-energy negatives,
+free/coordinate/invalid-input controls and protected hashes/runtime allowlist.
+The first naive pair root failed support; cancellation-free same-parent
+rearrangement repaired precision, not the physics/grid/threshold. No full
+kinetic/real/KMS/thermal-pressure or material admission from this check.
+See [scope](Result/artifacts/T13_THERMAL_CUT_STIFFNESS_2026-10-03.md).
+
 ## Vacuum Cut/Log And Matching Boundary (2026-10-03)
 
 Research_T13_Vacuum_Cut_Log.py and test_t13_vacuum_cut_log.py verify the

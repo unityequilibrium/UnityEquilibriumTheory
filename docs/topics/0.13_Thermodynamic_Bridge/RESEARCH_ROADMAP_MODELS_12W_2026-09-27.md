@@ -8,7 +8,13 @@
 
 ## ผลหลักสำหรับพอร์ตและทุนรอบถัดไป
 
-Science update 3 October: [vacuum cut/log](Result/artifacts/T13_VACUUM_CUT_LOG_2026-10-03.md)
+Latest science 3 October: [thermal cuts/static coherence](Result/artifacts/T13_THERMAL_CUT_STIFFNESS_2026-10-03.md)
+closes leading thermal cut and static-loop calculations, not full collision
+or real/thermal-pressure matching. R1 next needs full curved operator and
+local/source input plus complete thermal sunset/source/entropy. R2-R3
+material/measurement input and all dates/models/acceptance remain unchanged.
+
+Prior science update 3 October: [vacuum cut/log](Result/artifacts/T13_VACUUM_CUT_LOG_2026-10-03.md)
 now closes a formal nonlocal equivalence class and explicit matching-input
 boundary, not complete real response. R1 next needs local Wilson/source and
 internal-curvature matching plus thermal sunset/source/entropy consistency.

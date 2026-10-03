@@ -406,7 +406,8 @@ def test_interaction_successor_narrows_controller_without_full_thermal_acceptanc
 
 
 def test_vacuum_cut_log_successor_is_not_full_matching_or_physical_acceptance():
-    field = PLAN["execution_review_2026_10_01"]["current_scientific_evidence_field"]
+    latest = PLAN[PLAN["execution_review_2026_10_01"]["current_scientific_evidence_field"]]
+    field = latest["vacuum_predecessor_evidence_field"]
     assert field == "vacuum_cut_log_evidence_2026_10_03"
     evidence = PLAN[field]
     path = ROOT/evidence["path"]
@@ -428,4 +429,25 @@ def test_vacuum_cut_log_successor_is_not_full_matching_or_physical_acceptance():
                 "independent_alpha_Phi_K_admitted", "physical_Kubo_emitted", "g1_physical_unlock",
                 "g2_science_unlock", "full_core_unlock", "core_composition_gate_overwritten"):
         assert evidence[key] is r[key] is False
+    assert all(card["status"] == "PLANNED_NOT_ACCEPTED" for card in PLAN["result_level_execution_2026_10_01"]["result_cards"])
+
+
+def test_thermal_cut_successor_does_not_accept_full_collision_matching_or_goal():
+    field = PLAN["execution_review_2026_10_01"]["current_scientific_evidence_field"]
+    assert field == "thermal_cut_stiffness_evidence_2026_10_03"
+    evidence = PLAN[field]
+    path = ROOT/evidence["path"]
+    r = json.loads(path.read_text())
+    assert hashlib.sha256(path.read_bytes()).hexdigest() == evidence["sha256"]
+    assert evidence["verification_status"] == r["verification_status"] == "PASS_SCOPED_THERMAL_CUT_STIFFNESS"
+    assert evidence["controlling_blocker"] == r["controlling_blocker"]
+    assert evidence["branch_id"] == r["branch_id"]
+    assert all(r["checks"].values())
+    assert evidence["finite_T_pair_and_Landau_cuts_computed"] is r["finite_T_pair_and_Landau_cuts_computed"] is True
+    assert evidence["static_LO_thermal_coherence_checked"] is r["static_LO_thermal_coherence_checked"] is True
+    for key in ("full_finite_T_collision_operator_computed", "higher_derivative_vertices_and_residues_matched", "full_real_self_energy_matched", "full_two_loop_pressure_computed", "full_SK_KMS_matching_closed", "controlled_full_action_truncation_error_established", "independent_alpha_Phi_K_admitted", "physical_Kubo_emitted", "g1_physical_unlock", "g2_science_unlock", "full_core_unlock", "core_composition_gate_overwritten"):
+        assert evidence[key] is r[key] is False
+    content = (ROOT/"docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/T13_THERMAL_CUT_STIFFNESS_2026-10-03.md").read_text()
+    assert evidence["sha256"] in content
+    assert all(name+":" in content for name in r["report"])
     assert all(card["status"] == "PLANNED_NOT_ACCEPTED" for card in PLAN["result_level_execution_2026_10_01"]["result_cards"])

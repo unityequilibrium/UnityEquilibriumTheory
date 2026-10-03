@@ -1,5 +1,15 @@
 # Formula Audit: 0.13_Thermodynamic_Bridge
 
+## Thermal Cut/Static Coherence Contract (2026-10-03)
+
+The [local registry](Data/03_Research/t13_thermal_cut_stiffness_registry.json)
+records pair/Landau, soft Bose limit and static P(X,h) coherence separately.
+Gamma occupation is twice pole width; Sigma E2 is not Phi, gamma/T/q E,
+g E^-2, h and static/soft coefficients E^-4. Phase is not UET Pi and traces
+are excluded. The [derivation](Result/artifacts/T13_THERMAL_CUT_STIFFNESS_2026-10-03.md)
+shows static thermal bubble necessity and internal-curvature support without
+claiming full curved residues/vertices or physical input. Core registry unchanged.
+
 ## Vacuum Cut/Log And Restricted Matching Contract (2026-10-03)
 
 The [local registry](Data/03_Research/t13_vacuum_cut_log_registry.json)

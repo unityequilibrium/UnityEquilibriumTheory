@@ -6,7 +6,14 @@
 
 ตัวควบคุมงาน: [funding_portfolio_14d_plan.json](Data/03_Research/funding_portfolio_14d_plan.json) | คำสั่งเริ่มงาน: [GOAL_BRIEF_FUNDING_14D.md](GOAL_BRIEF_FUNDING_14D.md)
 
-Latest science 3 October: [vacuum cut/log and matching boundary](Result/artifacts/T13_VACUUM_CUT_LOG_2026-10-03.md)
+Latest science 3 October: [finite-T cuts/static coherence](Result/artifacts/T13_THERMAL_CUT_STIFFNESS_2026-10-03.md)
+now supplies leading-vertex curved-support thermal cuts and an independent
+static pressure/loop identity. Full curved residues/vertices/real matching,
+thermal sunset/source/entropy and physical inputs remain open. Current
+evidence is thermal_cut_stiffness_evidence_2026_10_03; G0-G5/R1-R5 and
+7/11 October unchanged. Prior handoffs below retain their own scopes.
+
+Prior science 3 October: [vacuum cut/log and matching boundary](Result/artifacts/T13_VACUUM_CUT_LOG_2026-10-03.md)
 closes the formal nonlocal loop equivalence class, not the local microscopic
 match or full thermal response. Next fix the source/Wilson prescription and
 internal curvature, then thermal sunset/mixed/source/entropy consistency.

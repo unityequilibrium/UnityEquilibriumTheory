@@ -1,3 +1,27 @@
+## 2026-10-03 - Finite-T pair/Landau cuts and static thermal coherence
+
+MAJOR_RESULT_CLOSURE: T13_FINITE_T_PHASE_CUT_AND_STATIC_THERMAL_COHERENCE, CLOSED_FOR_LANE. Full Goal/R1-R5 and physical/Core acceptance open.
+
+WHAT_IS_ACTUALLY_CLOSED: Leading-vertex phase pair/Landau cuts with internal tree curvature, independently checked soft Bose/vacuum limits and static bubble+tadpole-pressure identity. Missing bubble causes 54.09%/53.04% mismatch at the two witnesses; general fixed-order P(X,h) identity and reoptimized pressure agree.
+
+WHAT_REMAINS_OPEN: Full curved vertices/residues/source and finite local real matching, complete thermal sunset/mixed pressure/source/entropy, normal/heat/Kubo/SK-KMS/entropy transport and independent material/readout/scale/feasibility. Numerical tails and small widths are not total EFT error bounds.
+
+DEPENDENCY_UNLOCKED: Full matching and thermal-sunset research only; no physical/Core/Gravity unlock or owner composition change.
+
+STATUS: PASS_SCOPED_THERMAL_CUT_STIFFNESS; public safety safe.
+
+WHAT_CHANGED: New verifier, 22 tests, local three-entry registry, artifact and derivation; canonical current-evidence field with predecessor pointers and one new funding regression; local research docs/Goal/14-day/12-week/decision handoffs. First naive pair r/k root failed support at an endpoint; exact same-parent cq-plus-curvature/displacement rearrangement repaired numerical cancellation without changing grid/threshold. A multi-file documentation patch failed atomically on an absent heading, then was corrected; no partial science change.
+
+EQUATION_OR_MAPPING: gamma_L/(q T4)->3pi3(gt+gs/c2)^2/(10c2); Sigma_static/(q2 T4)=-d_xi2 A4_flow/chi. Natural coefficient E^-4, phase self-energy not Phi, phase not UET Pi, C/R_gen/R_obs excluded.
+
+VERIFICATION: Ten artifact checks. Final single fifteen-file linked run 242 passed in 21.70 seconds, including 22 new tests and 21 funding tests; earlier focused 20-test run is a subset, not added. Independent angular/root-parent/Bose/NR/vacuum/factor-two/analytic-P(X,h)/flow-pressure/static-loop/negative/free/coordinate checks, protected hashes and runtime allowlist pass. Finest soft errors .00073466233/.00063381440; static pressure errors 4.186e-7/9.525e-8, tail max5.385e-10. Artifact 9d92eb55ab0eb4b0074d13272d71c5a32be2b6c1fcc7a1ff0f15b9383725d89d. Original action and prior vacuum/interaction/phase artifacts unchanged. Prior planning-head daa7bbea416280f186ab4666191c858a9c967bf6 both CI checks succeeded; new-head CI separate. No full repo/external validation/model trial.
+
+CONTROLLING_BLOCKER: matched_curvature_real_response_and_full_thermal_sunset_open; independent physical input/transport separate.
+
+NEXT_ACTION: Commit/push coherent wave to PR30 and inspect exact-head checks. Derive matched full curved real operator and local/source conditions, then complete thermal sunset/source/entropy. Independent material/readout feasibility in parallel; preserve 7/11 October, five later reviews and full active Goal.
+
+CLAIM_BOUNDARY: Leading cut diagnostic and static linear-loop identity only, not complete curved one-loop/self-energy, collision/kinetic operator, quantum EOS/remainder, physical Kubo/KMS/temperature scale or material prediction. No fitting/assigned width/mass repair/clipping/padding/filter, old threshold/ontology/Core-owner edits or Xie numeric access; prior exposure REVIEW_REQUIRED and old conserved-C blocked at1e-6. No contact/purchase/submission, new Goal/automation/model configuration or R1-R5/full Goal acceptance.
+
 ## 2026-10-03 - Current portfolio decision and finite-T research handoff
 
 MAJOR_RESULT_CLOSURE: Planning update only; no new scientific closure or Goal/R1-R5 acceptance.

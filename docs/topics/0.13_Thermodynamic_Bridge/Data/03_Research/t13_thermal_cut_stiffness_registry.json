@@ -1,0 +1,14 @@
+{
+  "schema_version": "uet-topic-local-equation-contract-v1",
+  "owner_topic": "0.13_Thermodynamic_Bridge",
+  "branch_id": "t13.candidate.tree_matched_classical_phi_low_T_phase_EFT_v1",
+  "status": "SCOPED_LOCAL_VERIFICATION_NOT_CORE_PROMOTION",
+  "ontology": "Phase is not UET Pi; Sigma is not Phi; C/R_gen/R_obs are excluded from phase fluctuations",
+  "entries": [
+    {"id": "t13.phase_eft.finite_T_pair_Landau_cuts", "equation": "gamma_pair=I_pair/(64pi E_q q); gamma_L=I_L/(32pi E_q q); Bose weights 1+n_p+n_r and n_p-n_r", "units": "gamma:E; LO cubic g:E^-2", "derivation_class": "DERIVED_LO_VERTEX_CUT_WITH_TREE_INTERNAL_CURVATURE", "observable": "conditional phase attenuation", "data_role": "DERIVED", "verification_status": "PASS_SCOPED_THERMAL_CUT_STIFFNESS", "controlling_blocker": "full_curved_vertices_residues_and_real_matching_open", "claim_boundary": "Partial leading-vertex cut; not full curved self-energy or collision operator"},
+    {"id": "t13.phase_eft.soft_Landau_Bose_limit", "equation": "gamma_L/(q T^4)->3pi^3 (g_t+g_s/c^2)^2/(10c^2), convex branch, cq/T->0 and T/(c scale)->0", "units": "coefficient:E^-4", "derivation_class": "DERIVED_SOFT_CUT_AND_INDEPENDENT_BOSE_MOMENT", "observable": "conditional low-T soft attenuation coefficient", "data_role": "DERIVED", "verification_status": "PASS_SCOPED_THERMAL_CUT_STIFFNESS", "controlling_blocker": "physical_input_and_full_operator_matching_open", "claim_boundary": "Not a coefficient imported from nonrelativistic He4 or a hydrodynamic Kubo coefficient"},
+    {"id": "t13.phase_eft.static_thermal_pressure_coherence", "equation": "Sigma_static/(q^2 T^4)=-2 h_m J4-(20h_s/3+4g_s^2)J4/c^2=-d_xi^2 A4_flow/chi; J4=pi^2/(30c^3)", "units": "Sigma:E^2, chi:E^2, coefficient:E^-4", "derivation_class": "DERIVED_STATIC_ONE_PHASE_LOOP_AND_FLOW_PRESSURE_CHECK", "observable": "LO static inverse-response thermal correction", "data_role": "DERIVED", "verification_status": "PASS_SCOPED_THERMAL_CUT_STIFFNESS", "controlling_blocker": "full_thermal_sunset_and_source_entropy_matching_open", "claim_boundary": "Static fixed-order coherence, not full dynamical EOS/KMS/current tensor"}
+  ],
+  "core_registry_modified": false,
+  "claim_promotion": false
+}
