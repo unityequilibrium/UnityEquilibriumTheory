@@ -10,7 +10,19 @@
 
 ## ผลหลักสำหรับพอร์ตและทุนรอบถัดไป
 
-## Latest Noether Density And Measurement-Input Handoff (2026-10-03)
+## Latest Q5 Information And Precision Handoff (2026-10-03)
+
+[Q5 derivation](Result/artifacts/T13_Q5_DISPERSION_INFORMATION_2026-10-03.md)
+and [measurement supplement](Result/artifacts/T13_Q5_MEASUREMENT_INFORMATION_CARD_2026-10-03.md)
+close a restricted unit-free kinetic inverse and rational tree envelope:
+independent U is not the only route if other native inputs are known.
+Conditioning26-246 and finite-q proxy bias remain, not physical calibration.
+Current q5_dispersion_information_evidence_2026_10_03; next explicit multi-q
+estimator/covariance, resolution/validity and material input. Gain/alpha/
+parent/heat/KMS, full design/G2-G4/R1-R5/Goal/owner acceptance, old FAILs,
+7/11 October/holdout REVIEW_REQUIRED and NOT_RUN model trial unchanged.
+
+## Prior Noether Density And Measurement-Input Handoff (2026-10-03)
 
 [Noether density derivation](Result/artifacts/T13_NOETHER_DENSITY_READOUT_2026-10-03.md)
 and [conditional measurement card](Result/artifacts/T13_DENSITY_SPECTROSCOPY_MEASUREMENT_CARD_2026-10-03.md)

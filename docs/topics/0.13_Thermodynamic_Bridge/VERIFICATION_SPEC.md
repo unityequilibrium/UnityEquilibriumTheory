@@ -1,6 +1,19 @@
 # Verification Spec
 
 
+## Q5 Information And Rational Tree Envelope Verification (2026-10-03)
+
+Run Research_T13_Q5_Dispersion_Information.py/test_t13_q5_dispersion_information.py.
+Eight checks: determinant/prior-q3, matrix/dual-precision roots, q5
+refinement, rational envelope, rank/inverse, old-family separation,
+coordinate invariance and gradient FD. Registry freezes two mu, three q,
+two unit/coordinate changes,50/80 digits,300 bisections and FD1e-8.
+Identity1e-9/matrix1e-8/precision1e-40/finest extraction1e-3,
+refinement3-5/gradient1e-5; original causal1e-6 unchanged/not rerun.
+Later finite-q bias diagnostic is non-gating, declared before its run.
+Reject unproved domains; exact fraction, not float display, controls the
+witness envelope. Scope, hashes and runtime Path read allowlist required.
+
 ## Noether Density And Calibration Verification (2026-10-03)
 
 Run Research_T13_Noether_Density_Readout.py/test_t13_noether_density_readout.py.

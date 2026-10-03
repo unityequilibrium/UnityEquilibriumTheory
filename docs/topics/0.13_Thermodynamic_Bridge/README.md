@@ -6,6 +6,18 @@ description: "Research module for Thermodynamic Bridge within the Unity Equilibr
 
 # 0.13 Thermodynamic Bridge
 
+## Q5 Information Removes The Restricted Q3 Unit Family (2026-10-03)
+
+[Q5 derivation](Result/artifacts/T13_Q5_DISPERSION_INFORMATION_2026-10-03.md)
+and [measurement supplement](Result/artifacts/T13_Q5_MEASUREMENT_INFORMATION_CARD_2026-10-03.md)
+close the strict positive-class unit-free inverse and an exact rational
+tree-coefficient expansion envelope. Independent U is not the only
+information route when other native inputs are known. This is not material
+calibration: relative conditioning26-246 and finite-q bias remain explicit.
+Canonical q5_dispersion_information_evidence_2026_10_03; next multi-q
+estimator/covariance and physical validity/resolution. Gain/alpha/parent/
+KMS, old failures, full Goal/owner/holdout/dates/models unchanged.
+
 ## Noether Density Readout And Independent Inputs (2026-10-03)
 
 [Derived readout](Result/artifacts/T13_NOETHER_DENSITY_READOUT_2026-10-03.md)

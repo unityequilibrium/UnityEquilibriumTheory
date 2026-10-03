@@ -1,6 +1,17 @@
 # Limitations
 
 
+## Q5 Rank Is Not Practical Or Physical Precision (2026-10-03)
+
+[Supplement](Result/artifacts/T13_Q5_MEASUREMENT_INFORMATION_CARD_2026-10-03.md)
+requires known native coefficients, gamma!=0 and I>0. Relative inverse
+conditioning26-246 makes finite-q extraction bias consequential: at q.005
+the first-state I proxy is biased1.477% even without experimental noise.
+The rational tree envelope excludes state/EOS/interaction/finite-T and
+material uncertainty. Gamma0 is unobservable; unknown gain and Phi/Kelvin
+remain. No global minimum measurements, physical calibration, full Goal/
+G2-G4/R1-R5 or Core-owner promotion; old q3 proof and FAILs unchanged.
+
 ## Tree Density Is Not Physical Detector Or Thermal Admission (2026-10-03)
 
 [Card](Result/artifacts/T13_DENSITY_SPECTROSCOPY_MEASUREMENT_CARD_2026-10-03.md)

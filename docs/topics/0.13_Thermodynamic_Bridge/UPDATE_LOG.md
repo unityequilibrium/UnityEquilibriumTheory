@@ -1,3 +1,29 @@
+## 2026-10-03 - Q5 unit-free information and exact tree-witness envelope
+
+MAJOR_RESULT_CLOSURE: T13_Q5_UNIT_FREE_KINETIC_IDENTIFIABILITY_AND_TREE_REMAINDER, CLOSED_FOR_LANE. Full Topic13/scientific Goal/G2-G4/R1-R5 remain unaccepted.
+
+WHAT_IS_ACTUALLY_CLOSED: Derived q5 from the unchanged three-mode action determinant. With other native inputs known and gamma!=0,I>0, the unit-free ratio A_Q*C_Q/B_Q^2 is strictly monotone and has an explicit unique inverse for kinetic I and energy/momentum scales; independent U is not the only possible information route. Exact rational residual/root-derivative bounds control tree-series error for declared coefficient witnesses and replay without the tree solver.
+
+WHAT_REMAINS_OPEN: Measured q5/resolution/full covariance and native state/current/material map; weak-coupling conditioning and physical inference window; interaction/finite-T/parent/heat/entropy/KMS. Gain and alpha_Phi_K are not identified by dispersion. Exact polynomial witness does not certify stationarity/EOS or physical approximation.
+
+DEPENDENCY_UNLOCKED: Conditional multi-q information/measurement design research only. No physical/Core/Gravity/owner/full-design or full Goal acceptance; original q3 ambiguity remains correct at its order.
+
+STATUS: PASS_SCOPED_Q5_INFORMATION. Previous goal turn PROGRESS (Noether readout); this wave adds a genuinely different information route, not another unchanged root rerun.
+
+WHAT_CHANGED: New calculation/41 tests/local registry/artifact/derivation/measurement supplement; canonical current record/lineage and one funding test, five research docs/five handoffs, this log and daily ledger. No primary/Core-owner/action/predecessor or old threshold edits.
+
+EQUATION_OR_MAPPING: E=cq+eta*q3+zeta*q5+...; eta=eta0*(1+sI), zeta=zeta0*(1+sI)^2-K*I^2. r=r0-D*(I/(1+sI))^2; tau=sqrt((r0-r)/D), I=tau/(1-s*tau). Positive-class Jacobian rank3. Native eta:E^-2,zeta:E^-4,I:E^-2; measured A_Q:Jm/B_Q:Jm3/C_Q:Jm5 are not acquired. Exact normalized tree envelope uses rational parameters/series and finite residual coefficients, no clipping.
+
+VERIFICATION: Final10-file linked run224 passed in17.49 seconds, including41 new and33 funding-contract tests; earlier39/40/96/223 runs are superseded subsets, not added. Eight preregistered scientific checks pass: determinant/prior q3, independent full matrix and50/80-digit roots, q5 refinement, exact witness envelope, rank/inverse, old-family separation, coordinate invariance and log-gradient FD. Matrix/root error<=1.776e-13; precision<=3.168e-50; q5 refinement3.996-4.000; reference inverse<=7.954e-14. Relative condition numbers246.476/26.218. Later separately declared non-gating finite-q bias diagnostic: first-state I bias27.06%/6.043%/1.477%, second0.6717%/0.1676%/0.04187%; illustrative1% is not a gate or physical precision. Exact rational envelope replay, rejected domains/zero-coupling/negative-input, runtime Path allowlist, source/protected/current hashes and local links checked. Artifactc4b23308c1ffdc45215cdba8d1fb0e3ba8b44c861d8c2c402bec22b3055a6485. HEAD calendar/all old evidence/acceptance/model/holdout/history unchanged, accepted list append-only; whitespace checked. Input-label/rejection/rational-replay hardening required hash regeneration, no failed gate relabel or physical threshold repair. No original causal, full-repository, external or model-trial validation.
+
+Final manual parse check: PowerShell's default case-insensitive JSON object rejected distinct rational keys s/S and emitted nonterminating errors; its printed PASS was not accepted. Repeated with -AsHashtable and stop-on-error: all current/source/protected hashes and note links passed. Python JSON tests already preserve case. No artifact/physics change for this parser correction.
+
+CONTROLLING_BLOCKER: physical_q5_resolution_native_input_covariance_material_map_and_interaction_error_open. Full thermal/parent obligations remain separate.
+
+NEXT_ACTION: Derive an explicit multi-q estimator/covariance and rational bias versus signal-resolution window, then identify independent physical input/validity. Do not use finite-q proxy as the asymptotic coefficient or assume source absence proves no-go. Preserve7/11 October/full Goal rules. Commit safe local wave; prior publication authorization denial remains, no push retry/workaround or new-head CI/public-main claim.
+
+CLAIM_BOUNDARY: Restricted tree positive-kinetic class only, not full UET minimum measurements, physical q5/He4 calibration, independent temperature, gain, Kubo/KMS or Full Topic13/Core/global closure. Witness state interpreted as declared rational coefficients, not exact physical EOS. No fit, assigned rate/width/vacuum fill, clipping/padding/filter, ontology/owner/holdout change; no numeric Xie read, prior exposure REVIEW_REQUIRED and original work/conserved-C FAIL retained. No new Goal/automation/model switch/contact/purchase/submission.
+
 ## 2026-10-03 - Noether density readout and conditional independent-input inverse
 
 MAJOR_RESULT_CLOSURE: T13_NOETHER_DENSITY_READOUT_AND_CALIBRATION_BOUNDARY, CLOSED_FOR_LANE. Full scientific Goal/G2-G4/R1-R5 and physical Topic13 remain unaccepted.

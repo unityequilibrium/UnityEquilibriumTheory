@@ -1,6 +1,17 @@
 # Formula Audit: 0.13_Thermodynamic_Bridge
 
 
+## Q5 Unit-Free Information And Exact Witness Bound (2026-10-03)
+
+[Registry](Data/03_Research/t13_q5_dispersion_information_registry.json)
+records full tree determinant, q5 inverse and rational envelope. c:1,
+eta:E^-2,zeta:E^-4,I:E^-2; A_Q:Jm,B_Q:Jm3,C_Q:Jm5 and r:1,D:E4.
+Parameters(log E_unit,log Q_unit,I) are not three log parameters.
+r=r0-D*(I/(1+sI))^2 is monotone only in the declared positive class.
+The exact witness envelope does not certify EOS/state or physical
+approximation. No field/charge ontology or Core registry change; no
+independent temperature scale or gain identification from pole positions.
+
 ## Noether Readout And Conditional Unit Inverse (2026-10-03)
 
 [Registry](Data/03_Research/t13_noether_density_readout_registry.json)

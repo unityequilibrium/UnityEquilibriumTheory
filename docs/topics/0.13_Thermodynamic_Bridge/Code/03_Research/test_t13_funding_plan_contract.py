@@ -705,7 +705,8 @@ def test_even_work_remainder_does_not_accept_parent_error_or_physical_input():
 
 
 def test_density_readout_closure_does_not_admit_physical_measurement_or_full_goal():
-    field = PLAN["execution_review_2026_10_01"]["current_scientific_evidence_field"]
+    latest = PLAN[PLAN["execution_review_2026_10_01"]["current_scientific_evidence_field"]]
+    field = latest["density_readout_predecessor_evidence_field"]
     assert field == "noether_density_readout_evidence_2026_10_03"
     assert field in PLAN["portfolio_strategy_2026_10_01"]["accepted_preliminary_evidence_fields"]
     evidence = PLAN[field]
@@ -731,4 +732,31 @@ def test_density_readout_closure_does_not_admit_physical_measurement_or_full_goa
     assert result["external_numeric_rows_admitted"] == 0
     assert not result["xie_2026_accessed"] and result["prior_Xie_context_exposure_review"] == "REVIEW_REQUIRED"
     assert not result["claim_promotion"] and not result["parameter_fitting"]
+    assert all(card["status"] == "PLANNED_NOT_ACCEPTED" for card in PLAN["result_level_execution_2026_10_01"]["result_cards"])
+
+
+def test_q5_information_does_not_admit_physical_precision_or_full_goal():
+    field = PLAN["execution_review_2026_10_01"]["current_scientific_evidence_field"]
+    assert field == "q5_dispersion_information_evidence_2026_10_03"
+    assert field in PLAN["portfolio_strategy_2026_10_01"]["accepted_preliminary_evidence_fields"]
+    evidence = PLAN[field]
+    path = ROOT/evidence["path"]
+    result = json.loads(path.read_text())
+    assert hashlib.sha256(path.read_bytes()).hexdigest() == evidence["sha256"]
+    for key in ("closure_level", "verification_status", "controlling_blocker", "branch_id"):
+        assert evidence[key] == result[key]
+    assert result["closure_level"] == "CLOSED_FOR_LANE" and all(result["checks"].values())
+    assert result["verification_status"] == "PASS_SCOPED_Q5_INFORMATION"
+    for key in ("q5_tree_coefficient_verified", "restricted_unit_free_inverse_verified", "exact_rational_tree_witness_envelope_verified"):
+        assert evidence[key] is result[key] is True
+    for key in ("physical_q5_measured", "physical_measurement_design_completed", "physical_material_map_admitted",
+                "independent_alpha_Phi_K_admitted", "full_SK_KMS_matching_closed", "physical_Kubo_emitted",
+                "nonlinear_parent_action_completed", "controlled_full_action_truncation_error_established",
+                "full_core_unlock", "core_composition_gate_overwritten", "old_source_work_audit_promoted"):
+        assert evidence[key] is result[key] is False
+    for note in ("T13_Q5_DISPERSION_INFORMATION_2026-10-03.md", "T13_Q5_MEASUREMENT_INFORMATION_CARD_2026-10-03.md"):
+        text = (ROOT/"docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts"/note).read_text()
+        assert evidence["sha256"] in text and all(name+":" in text for name in result["report"])
+    assert not result["xie_2026_accessed"] and result["prior_Xie_context_exposure_review"] == "REVIEW_REQUIRED"
+    assert result["external_numeric_rows_admitted"] == 0 and not result["claim_promotion"]
     assert all(card["status"] == "PLANNED_NOT_ACCEPTED" for card in PLAN["result_level_execution_2026_10_01"]["result_cards"])

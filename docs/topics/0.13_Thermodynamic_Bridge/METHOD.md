@@ -1,6 +1,18 @@
 ﻿# Method
 
 
+## Q5 Determinant Series And Conditional Inverse (2026-10-03)
+
+[Derivation](Result/artifacts/T13_Q5_DISPERSION_INFORMATION_2026-10-03.md)
+matches E^2 coefficients through q6 in the full three-mode determinant,
+without fitting. The unit-free ratio A_Q*C_Q/B_Q^2 is strictly monotone
+in positive kinetic I with other native inputs known. Full matrix roots
+and50/80-digit monotone polynomial roots independently check it. Exact
+rational residual cancellation and derivative bounds give a tree envelope;
+the rounded-state witness is not a certified physical EOS. A separately
+declared finite-q bias diagnostic and full-covariance gradient expose
+inference limitations. No experimental coefficient, rate or width input.
+
 ## Conserved Density Source And Restricted Information (2026-10-03)
 
 [Derivation](Result/artifacts/T13_NOETHER_DENSITY_READOUT_2026-10-03.md)
