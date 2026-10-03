@@ -1,3 +1,627 @@
+## 2026-10-03 - Finite-T pair/Landau cuts and static thermal coherence
+
+MAJOR_RESULT_CLOSURE: T13_FINITE_T_PHASE_CUT_AND_STATIC_THERMAL_COHERENCE, CLOSED_FOR_LANE. Full Goal/R1-R5 and physical/Core acceptance open.
+
+WHAT_IS_ACTUALLY_CLOSED: Leading-vertex phase pair/Landau cuts with internal tree curvature, independently checked soft Bose/vacuum limits and static bubble+tadpole-pressure identity. Missing bubble causes 54.09%/53.04% mismatch at the two witnesses; general fixed-order P(X,h) identity and reoptimized pressure agree.
+
+WHAT_REMAINS_OPEN: Full curved vertices/residues/source and finite local real matching, complete thermal sunset/mixed pressure/source/entropy, normal/heat/Kubo/SK-KMS/entropy transport and independent material/readout/scale/feasibility. Numerical tails and small widths are not total EFT error bounds.
+
+DEPENDENCY_UNLOCKED: Full matching and thermal-sunset research only; no physical/Core/Gravity unlock or owner composition change.
+
+STATUS: PASS_SCOPED_THERMAL_CUT_STIFFNESS; public safety safe.
+
+WHAT_CHANGED: New verifier, 22 tests, local three-entry registry, artifact and derivation; canonical current-evidence field with predecessor pointers and one new funding regression; local research docs/Goal/14-day/12-week/decision handoffs. First naive pair r/k root failed support at an endpoint; exact same-parent cq-plus-curvature/displacement rearrangement repaired numerical cancellation without changing grid/threshold. A multi-file documentation patch failed atomically on an absent heading, then was corrected; no partial science change.
+
+EQUATION_OR_MAPPING: gamma_L/(q T4)->3pi3(gt+gs/c2)^2/(10c2); Sigma_static/(q2 T4)=-d_xi2 A4_flow/chi. Natural coefficient E^-4, phase self-energy not Phi, phase not UET Pi, C/R_gen/R_obs excluded.
+
+VERIFICATION: Ten artifact checks. Final single fifteen-file linked run 242 passed in 21.70 seconds, including 22 new tests and 21 funding tests; earlier focused 20-test run is a subset, not added. Independent angular/root-parent/Bose/NR/vacuum/factor-two/analytic-P(X,h)/flow-pressure/static-loop/negative/free/coordinate checks, protected hashes and runtime allowlist pass. Finest soft errors .00073466233/.00063381440; static pressure errors 4.186e-7/9.525e-8, tail max5.385e-10. Artifact 9d92eb55ab0eb4b0074d13272d71c5a32be2b6c1fcc7a1ff0f15b9383725d89d. Original action and prior vacuum/interaction/phase artifacts unchanged. Prior planning-head daa7bbea416280f186ab4666191c858a9c967bf6 both CI checks succeeded; new-head CI separate. No full repo/external validation/model trial.
+
+CONTROLLING_BLOCKER: matched_curvature_real_response_and_full_thermal_sunset_open; independent physical input/transport separate.
+
+NEXT_ACTION: Commit/push coherent wave to PR30 and inspect exact-head checks. Derive matched full curved real operator and local/source conditions, then complete thermal sunset/source/entropy. Independent material/readout feasibility in parallel; preserve 7/11 October, five later reviews and full active Goal.
+
+CLAIM_BOUNDARY: Leading cut diagnostic and static linear-loop identity only, not complete curved one-loop/self-energy, collision/kinetic operator, quantum EOS/remainder, physical Kubo/KMS/temperature scale or material prediction. No fitting/assigned width/mass repair/clipping/padding/filter, old threshold/ontology/Core-owner edits or Xie numeric access; prior exposure REVIEW_REQUIRED and old conserved-C blocked at1e-6. No contact/purchase/submission, new Goal/automation/model configuration or R1-R5/full Goal acceptance.
+
+## 2026-10-03 - Current portfolio decision and finite-T research handoff
+
+MAJOR_RESULT_CLOSURE: Planning update only; no new scientific closure or Goal/R1-R5 acceptance.
+
+WHAT_IS_ACTUALLY_CLOSED: Readable decision plan now reflects the committed 3 October cut/log result, one proposed decisive finite-T calculation, parallel measurement-input work and the unchanged freeze/delivery contingency.
+
+WHAT_REMAINS_OPEN: Real Wilson/source/internal-curvature matching, full thermal sunset/source/entropy and physical inputs/transport; novelty, human review, actual funder/PI/budget and complete portfolio acceptance.
+
+DEPENDENCY_UNLOCKED: None. Core-owner composition and current scientific controller unchanged.
+
+STATUS: PLAN_UPDATED_NOT_SCIENTIFIC_ACCEPTANCE; public safety safe.
+
+WHAT_CHANGED: Executive decision section in FUNDING_DECISION_ROADMAP_2026-10-02.md and one stale uncommitted-exploration sentence; historical JSON snapshots, canonical acceptance contract and all science files unchanged.
+
+EQUATION_OR_MAPPING: Proposed finite-T pair/Landau cuts and static thermal bubble/tadpole versus pressure derivative, not yet implemented or accepted by this planning update.
+
+VERIFICATION: Three-file planning selection 38 passed in 1.85 seconds. It checks existing evidence hashes, dates, model/trial policy, holdout and acceptance boundaries. No physics rerun, new artifact, model trial or call-eligibility verification.
+
+CONTROLLING_BLOCKER: state_dependent_local_Wilson_and_thermal_sunset_matching_open; physical inputs and unknown funding eligibility remain separate.
+
+NEXT_ACTION: Commit/push this scoped planning update to existing draft PR30. Continue one declared decisive calculation; keep 7 October science freeze and 11 October review. If calculation is unresolved, freeze only verified preliminary evidence and keep full acceptance open.
+
+CLAIM_BOUNDARY: Current plan is not evidence of completed finite-T cuts, full response, practical measurement feasibility or external validation. No deadline reset, new Goal, model switch, numeric holdout access, Core-owner edit, fitting or threshold change. Extra months must add knowledge, not unchanged reruns.
+
+## 2026-10-03 - Vacuum phase cut/log and local matching information
+
+MAJOR_RESULT_CLOSURE: T13_VACUUM_PHASE_CUT_LOG_AND_LOCAL_MATCHING_BOUNDARY, CLOSED_FOR_LANE. Goal/Full Topic13/R1-R5 still open.
+
+WHAT_IS_ACTUALLY_CLOSED: Formal LO linear-phase vacuum cut/log equivalence class, independent four-subtracted Cauchy reconstruction, optical-theorem relation to prior decay, constructive equal-cut/different-real local family and restricted matching interface. Leading on-shell matching rank is one, fixed-convention off-shell rank four; not four physical parameters or laboratory measurements.
+
+WHAT_REMAINS_OPEN: State-dependent local Wilson/source/contact and internal-curvature near-shell matching, thermal sunset/mixed pressure with source/entropy consistency, independent material/source/readout/scale, finite-T normal/heat/Kubo/SK-KMS/entropy transport and instrument feasibility. Formal UV integration is not physical EFT validity or a total error bound.
+
+DEPENDENCY_UNLOCKED: Matching/thermal-sunset research only; no physical/Core/Gravity unlock, predecessor invalidation or owner gate change.
+
+STATUS: PASS_SCOPED_VACUUM_CUT_LOG; public safety safe.
+
+WHAT_CHANGED: Completed previously uncommitted verifier/registry/artifact, new 38 focused tests and derivation; current funding evidence/controller and predecessor regression, local README/method/limits/formula/spec plus portfolio/Goal handoffs. Added input rejection and coordinate controls before final artifact. A documentation multi-file patch failed atomically on a heading, then was corrected; no partial science edits. Historical planning snapshots retained.
+
+EQUATION_OR_MAPPING: Sigma_nonlocal=F(z,K2)*log((K2-z)/mu_R2)/(32pi2*c3), Im Sigma=-sign(omega)*F/(32pi*c3); degree-six local terms leave cut unchanged. Sigma E2, g E^-2, local coefficients E^-4. Sigma is not Phi, phase not UET Pi, acoustic invariant not radial amplitude/C; R_gen/R_obs excluded.
+
+VERIFICATION: Nine artifact checks. Final single linked fourteen-file run 219 passed in 8.03 seconds, including 38 new tests and preserved action/thermal/claim/planning checks. Earlier 36/38 focused tests are subsets, not added. Direct original-vertex phase space, independent Cauchy, expanded cut/upper-half-frequency/reality/scale/optical-theorem/Bose/free/coordinate/invalid-input/rank controls and runtime file allowlist pass. Largest Cauchy disagreement 4.016e-12; fixed-convention matrix determinant 6.75, condition 30.17, synthetic reconstruction error 2.776e-17, not measured calibration. Artifact 449b4df1741ebd0b4c3fa5f69cda1f97b6f014ebd5cfc603e97352bed2e41e17; predecessor/action hashes unchanged. Scoped links and whitespace pass. Prior planning-head 13a679c4c9fe70a3ee7815ab91b5ecb13d94ba3c Changed-Area CI confirmed success; new-head CI separate. No full repo/external validation/model trial.
+
+CONTROLLING_BLOCKER: state_dependent_local_Wilson_and_thermal_sunset_matching_open. Independent physical inputs/transport remain separate; old Hartree/conserved-C blockers unchanged.
+
+NEXT_ACTION: Commit/push coherent wave to existing draft PR30 and inspect exact-head CI. Next declare same-parent source/renormalization matching and compute internal-curvature real response plus thermal sunset/source/entropy consistency; independently screen measurement inputs. Original 7/11 October and five later reviews, model trial NOT_RUN/configuration unchanged and full active Goal preserved.
+
+CLAIM_BOUNDARY: Formal cut/log and restricted local information boundary only, not microscopic Wilson, full quantum EOS/remainder, physical Kubo/KMS/temperature scale, material prediction, external validation or Full Topic13/Core. No fit/assigned width/mass repair/clipping/filter/padding/threshold/ontology change, numeric Xie read, purchase/contact/submission or Core-owner edit. Prior exposure REVIEW_REQUIRED and original conserved-C failure at 1e-6 retained; physical/global flags false.
+
+## 2026-10-02 - Delivery, model selection and next-round decisions
+
+MAJOR_RESULT_CLOSURE: Planning refinement only, not a new scientific result or acceptance of R1-R5.
+
+WHAT_IS_ACTUALLY_CLOSED: Current-evidence executive plan now connects one bounded result, one measurement-information card and one reproducible portfolio, with concrete 3/5/7/11 October outputs, model roles and next-round decisions.
+
+WHAT_REMAINS_OPEN: Vacuum/Wilson and thermal remainder, independent material/source/readout/scale, finite-T normal/heat/Kubo/KMS/entropy transport, instrument feasibility, novelty, scientific Goal and actual call/PI/budget. User confirmed funder is not selected.
+
+DEPENDENCY_UNLOCKED: None. The read-only Core-owner matrix records bounded O(2)/He-4 CLOSED_FOR_CORE separately; this plan neither revalidates nor alters it.
+
+STATUS: PLAN_REVIEW_READY_NOT_SCIENTIFIC_ACCEPTANCE; public safety safe.
+
+WHAT_CHANGED: Executive section and stale current-controller wording in FUNDING_DECISION_ROADMAP_2026-10-02.md; backward-compatible delivery_and_model_addendum_2026_10_02 in canonical funding contract; nine focused planning tests. No Core-owner/scientific source/artifact change or acceptance of uncommitted vacuum-cut exploration. Historical decision companion remains historical.
+
+EQUATION_OR_MAPPING: Planning sequence only: bounded low-T response/matching decision -> independent material/state/source/readout map -> preregistered comparison or verified scoped structural result -> reproduction/review. No new equation, imported coefficient or Kelvin calibration.
+
+VERIFICATION: Final single planning run: 37 passed in 1.32 seconds across new addendum, existing funding contract and decision roadmap tests. Initial run 36 passed/one link failed because primary-only holdout incident is absent in execution checkout; repaired the snapshot citation without copying owner files, then reran all three files. These runs are not additive. Evidence hash, unchanged acceptance/calendar/model/holdout flags and local links checked; whitespace review passed. No scientific rerun, model trial or call eligibility audit claimed.
+
+CONTROLLING_BLOCKER: renormalized_cubic_sunset_and_vacuum_Wilson_matching_open in current candidate EFT; physical input/measurement and actual funding eligibility remain separate. Older Hartree controller retains its own branch.
+
+NEXT_ACTION: Commit/push only this planning unit to existing draft PR30 and check its exact-head CI. Then execute one decisive matching calculation with parallel source/measurement work; preserve 7/11 October and five later reviews. No new Goal, automation, thread or model configuration.
+
+CLAIM_BOUNDARY: Dates are internal result reviews, not confirmed funding calls or guarantees. Portfolio readiness is not science/Goal/submission acceptance; no full physical/Core/global promotion. Xie REVIEW_REQUIRED/no new numeric access, original failed conserved-C/1e-6, ontology and owner composition preserved. No private/raw source, external contact, purchase or submission authorized; three unrelated vacuum-exploration files remain uncommitted and excluded.
+
+## 2026-10-02 - Derived phase interactions and leading phonon attenuation
+
+MAJOR_RESULT_CLOSURE: T13_LOW_T_PHASE_INTERACTION_AND_DECAY_KERNEL, CLOSED_FOR_LANE. Full Topic13/R1-R5/Goal and physical funding acceptance remain open.
+
+WHAT_IS_ACTUALLY_CLOSED: Same-tree-pressure canonical cubic/quartic vertices, tree q5/T8 dispersion, one explicitly subtracted quartic thermal-thermal pressure piece and a derived leading T=0 Beliaev cut. Direct stationary pressure and actual energy-conserving phase-space agree with analytic results; the known dilute-Bose limit verifies pole-width versus occupation-rate factor two. On-shell Bose detailed balance holds, not full KMS.
+
+WHAT_REMAINS_OPEN: Renormalized cubic-sunset/mixed vacuum thermal terms, real self-energy and Wilson input, complete finite-q residues/vertices, finite-T normal/heat/collision/Kubo/SK-KMS/entropy transport, independent physical source/material/readout/scale. Small calculated quartic contribution is not total truncation error or lab feasibility.
+
+DEPENDENCY_UNLOCKED: Two-loop matching and finite-T collision research only. No physical/Core/Gravity unlock; old Hartree and owner composition unchanged.
+
+STATUS: PASS_SCOPED_INTERACTION_KERNEL; source-free candidate calculation, public safety safe.
+
+WHAT_CHANGED: Separate verifier/29 focused tests/JSON/derivation/local equation registry, funding latest-evidence/controller/predecessor tests, local README/method/limits/formula/spec and Goal/14-day/12-week/decision handoffs. Registry initially declared before computation, then synced to scoped verification and artifact regenerated. One multi-file documentation patch failed atomically due a mismatched heading, corrected without partial edits or science changes.
+
+EQUATION_OR_MAPPING: Gamma_occupation=3(g_t+g_s/c2)^2*c2*q5/(80pi); gamma_pole=Gamma_occupation/2. C8_disp=4pi6*(4eta2-c*zeta)/(15c9); quartic Q8 is separately subtracted and excludes cubic/mixed terms. Natural E units, not Kelvin alpha; canonical phase is not UET Pi and radial amplitude is not C.
+
+VERIFICATION: Fourteen artifact checks pass. Final single linked run across twelve test files: 171 passed in 7.65 seconds, including 29 new focused tests. Earlier 52/53-test interaction+phase runs are subsets, not additional results. Selection covers new interactions/phase EFT, Hartree low-T/joint static/response, thermal Ward/finite-momentum 1PI/stiffness/conditional operator, funding contract/decision and pole measurement design. Independent direct pressure, Bose/Wick moments, exact-tree phase-space/group velocity, energy/Bose/coordinate/free/decoupled and known-limit controls, source/protected hashes, runtime audit file allowlist and whitespace pass. Finest decay coefficient errors 9.870e-5/2.507e-5, pressure T8 <9.264e-8 and entropy <2.310e-7. Artifact f1679543e0a644c5104d001ea7ed84adbaf1298f8d8315c9c5108cdcfb53fd0c; predecessor 050aceb4f94f3534929d8c59c75da4dda8efe16ce7aec250a34f6f8b5868dcb7 unchanged. Both prior-head 8f571843fbaecc88a073d027088fead8ee44521b workflows completed successfully; new-head CI must be checked separately. No full repo or external validation/model trial claimed.
+
+CONTROLLING_BLOCKER: renormalized_cubic_sunset_and_vacuum_Wilson_matching_open, plus independent physical inputs and finite-T normal/heat transport.
+
+NEXT_ACTION: Commit/push coherent packet to existing draft PR #30 and inspect exact-head checks. Then derive Ward-consistent subtraction/regulator and missing two-loop terms with source/entropy consistency before total remainder claims; use derived cut for finite-T collision research and independently review the measurement card. Preserve 7/11 October and five later reviews; Goal active, model trial NOT_RUN/configuration unchanged.
+
+CLAIM_BOUNDARY: Leading candidate interaction/cut kernels only, not controlled full quantum EOS, full finite-q/finite-T damping, physical heat/Kubo/KMS, independent alpha/source admission, external validation or Full Topic13/Core. No fit, assigned width, old mass repair, clipping/filter/padding/threshold change, numeric Xie read or Core-owner edit. Original conserved-C failure at 1e-6 and prior exposure REVIEW_REQUIRED retained; physical/full-Core/global promotion false.
+
+## 2026-10-02 - New tree-matched low-T phase thermal prescription
+
+MAJOR_RESULT_CLOSURE: T13_TREE_MATCHED_LOW_T_PHASE_THERMODYNAMIC_PRESCRIPTION, CLOSED_FOR_LANE. Full Topic13/R1-R5/Goal and physical acceptance remain open.
+
+WHAT_IS_ACTUALLY_CLOSED: Joint classical tree P(X,h), gapless conservative parent and phase one-loop T4/T6 thermal differences with independent source/current/Phi/entropy/flow checks. Tree EOS/T4 do not identify subleading invariant kinetic response; conditional dispersion information adds rank after coordinate redundancy is separated.
+
+WHAT_REMAINS_OPEN: Vacuum Wilson/interaction remainder, full finite-T normal dynamics and physical heat/collision/Kubo/SK-KMS/entropy transport, independent material/source/readout/temperature and original causal/Core admission. Measurement feasibility, novelty and full scientific funding acceptance remain open.
+
+DEPENDENCY_UNLOCKED: New-EFT remainder and independent-input research only. No physical/Core/Gravity unlock or owner composition change; old Hartree exclusion remains intact.
+
+STATUS: PASS_SCOPED_TREE_MATCHED_LOW_T_EFT; conditional measurement design is not instrument feasibility.
+
+WHAT_CHANGED: Separate verifier/24 focused tests/JSON/derivation/measurement card; local README/method/limits/formula/spec, funding evidence/controller/predecessor regression, Goal/14-day/12-week/decision handoffs. Trial action unchanged, no old masses/poles imported. Before final artifact generation a dimensional label was corrected and coordinate controls added; scientific gates unchanged. Historical planning snapshot remains historical, not silently upgraded.
+
+EQUATION_OR_MAPPING: P0=r^2/(4u)-V+h*Phi; Delta_T P=A4*T4+B6*T6 at phase one-loop, A4=pi2/(90c3), B6=-4pi4*eta/(63c6), Delta_T Phi=partial_h A4*T4+...; eta=eta_base*(1+s*I_kinetic), I_kinetic=gamma2*epsilon*Z_Phi/(V'')2. Natural E lane only, not normalized TTG or Kelvin alpha. Full vacuum quantum pressure not computed.
+
+VERIFICATION: Fourteen artifact checks pass. Final single linked run of eleven test files: 136 passed in 9.97 seconds, including 24 new focused tests and preserved Hartree/action/observable/two-fluid/planning checks. Earlier linked run 83 passed/one stale Hartree-only planning assertion failed; fixed to follow the historical boundary and reran the entire final selection. Separate 84/50 and focused counts are subsets, not added. Worst finest pressure/entropy disagreements 8.430e-6/1.683e-5, source derivative 5.648e-6, parent frequency 1.028e-13 and quadratic energy residual 6.939e-18. Source/protected hashes, note links/11 fields, units, decoupling/coordinate/invalid-input controls and whitespace review pass. Artifact 050aceb4f94f3534929d8c59c75da4dda8efe16ce7aec250a34f6f8b5868dcb7. Both relevant CI workflows at preceding head f3a1e5af56b4b235e8b8857679c97d110d842e51 succeeded; new-head checks require separate observation. No external-data/model trial.
+
+CONTROLLING_BLOCKER: low_T_EFT_vacuum_Wilson_and_interaction_remainder_not_matched. Old gapless_equilibrium_thermal_prescription_not_derived still applies to old Hartree, not erased by new-lane success.
+
+NEXT_ACTION: Quantify derivative/interaction and vacuum Wilson obligations in the new branch, then independently admit material/state/source/readout/scale for the conditional dispersion card. Commit/push this coherent packet to existing draft PR #30 and inspect exact-head CI. Preserve 7/11 October and five long-term reviews; full Goal remains active.
+
+CLAIM_BOUNDARY: Tree-matched phase-only thermal differences and conditional information design, not controlled full quantum/material EOS, physical normal/heat transport, SI alpha, practical precision, external validation, global UET no-go or Full Topic13/Core. No fit, old-mass/phonon repair, clipping/filter/padding/threshold change, new numeric Xie access or owner edit. Conserved-C failure at 1e-6, prior Xie REVIEW_REQUIRED and all physical/full-core claim flags retained. Model trial NOT_RUN/configuration unchanged.
+
+## 2026-10-02 - Funding decision companion and model/next-round plan
+
+MAJOR_RESULT_CLOSURE: Planning clarification only; no scientific closure or Goal acceptance.
+
+WHAT_IS_ACTUALLY_CLOSED: One readable decision companion maps existing 7/11 October freeze/review to pre-freeze work, R1-R5 reviews and missed-round scenarios. Model roles have current official sources; trial remains NOT_RUN.
+
+WHAT_REMAINS_OPEN: gapless equilibrium thermal prescription, independent source/scale/material/readout, physical transport, scientific G0-G5/R1-R5, novelty/measurement design and actual call/PI/budget. Planning is not evidence that the new EFT works.
+
+DEPENDENCY_UNLOCKED: None. No physical/Core/Gravity gate or owner composition changed.
+
+STATUS: PLAN_REVIEW_READY_NOT_SCIENTIFIC_ACCEPTANCE; public safety safe.
+
+WHAT_CHANGED: FUNDING_DECISION_ROADMAP_2026-10-02.md, machine-readable companion and nine planning tests; links from 14-day/12-week/Goal docs. Corrected stale 14-day introduction that still described only five pre-sprint results; retained canonical acceptance states and dates. No scientific code/artifact or Core-owner edit.
+
+EQUATION_OR_MAPPING: Proposed same-action low-T prescription -> independent source/dimensional/readout map -> locked comparison or verified scoped structural result. No EOS, alpha or transport coefficient derived in this planning pass.
+
+VERIFICATION: Nine new companion tests plus seventeen existing funding-contract tests passed together: 26 passed in 6.38 seconds. Tests check existing evidence SHA-256, preserved dates/R1-R5, hypothetical-call buffers, model trial NOT_RUN, physical/holdout boundaries, local links and eleven report fields. Whitespace check passed. Scientific verifiers, model trial and external replication were not rerun; no new numeric holdout access.
+
+CONTROLLING_BLOCKER: gapless_equilibrium_thermal_prescription_not_derived; empirical/source and funding eligibility remain separate open obligations.
+
+NEXT_ACTION: Scoped commit/push to existing draft PR #30 and inspect exact-head checks; then separate named-branch derivation with independent controls plus measurement card before 7 October. Portfolio review 11 October, R1 review 25 October; dates do not accept work. Existing active Goal unchanged.
+
+CLAIM_BOUNDARY: Plan only, not consistent thermal model, physical/calibration/source validation, Full Topic13/Core, funding eligibility or submission readiness. No fitting, threshold/ontology change, pristine-blind claim, model configuration change, external contact/purchase/submission or new Goal/automation. Conserved-C failure at 1e-6 and prior Xie REVIEW_REQUIRED retained.
+
+## 2026-10-02 - Conditional joint Hartree low-temperature admission boundary
+
+MAJOR_RESULT_CLOSURE: T13_JOINT_HARTREE_LOW_T_THERMODYNAMIC_COMPATIBILITY_BOUNDARY, CLOSED_FOR_LANE. Full active Goal/R1 and physical acceptance remain open.
+
+WHAT_IS_ACTUALLY_CLOSED: Same-action joint zero-T states and positive internal gaps, independent entropy integration/envelope, and conditional asymptotic exclusion of treating the unamended internal EOS as complete thermodynamics of its external gapless equilibrium bosonic mode. The entropy derivative itself is consistent; earlier source response is not retracted.
+
+WHAT_REMAINS_OPEN: Consistent gapless thermal approximation or justified restricted validity, global spectrum/regulator/RG/Hartree remainder, independent material/source/readout/temperature mapping and physical heat/collision/Kubo/SK-KMS/entropy transport. Full Topic13/R1/Goal, novelty and measurement design remain unaccepted.
+
+DEPENDENCY_UNLOCKED: Thermal-approximation/validity and independent-input research only. No physical/Core/Gravity unlock or Core-owner composition change.
+
+STATUS: PASS_SCOPED_LOW_T_EXCLUSION; physical low-T EOS admission BLOCKED_ASYMPTOTIC_SPECTRUM_THERMODYNAMICS_MISMATCH. Methods portfolio preparation is not scientific/submission acceptance.
+
+WHAT_CHANGED: Separate verifier/sixteen tests/artifact/derivation; local formula/method/spec/limits/README, funding evidence/hash/controller/planning regression, Goal/14-day/12-week handoffs. Source and entropy controls retain original action inputs. Exact unmixed equal-mass limit fixed after an independent control exposed d=0; provenance path typo corrected before final generation. An old latest-evidence planning assertion now follows the response predecessor, not the new EOS artifact. No science threshold, original Core-owner or predecessor edit.
+
+EQUATION_OR_MAPPING: Delta^2=2ab/(A+sqrt(A^2-4ab)), A=a+b+4mu^2; -d_T Omega_joint=s_internal at joint stationarity. On a smooth noncritical positive-gap branch, s_H/T^3->0; if external phase is one physical equilibrium linear bosonic mode, s_ph/T^3=2pi^2/(45c^3)>0, c^2=rho/chi. Conditional comparator not added to Omega; natural E units, not SI alpha.
+
+VERIFICATION: Fourteen artifact checks and sixteen focused scientific tests passed. Linked run: 297 passed and one outdated planning-pointer assertion failed in 391.90 seconds; after correcting only that assertion, all 33 low-T/funding tests passed in 2.46 seconds (sixteen scientific plus seventeen planning). Fourteen distinct adjacent action/stationarity/stiffness tests passed in 2.84 seconds. No full linked replay after the planning-only fix; overlapping focused counts are not extra results. Max state refinement 9.579e-9, finest upper quadratic disagreement 9.608e-6, final entropy-envelope disagreement 4.100e-5; deep-T Boltzmann diagnostic improves to <.03. Legacy deep-T entropy rounding loss ~1.5% disclosed, with independent stable integration controlling the conclusion. Source/protected hash, units/read/domain/negative and claim reviews pass. Artifact SHA-256 6b6d5db3086439ce68703accacc04733dee8efb5535e85067b5c9941628c7f39. Both relevant CI workflows at previous exact head 7451d138ecb91836c05078778f337fe0b915a58f succeeded; new-head checks must be inspected separately. Model trial NOT_RUN/configuration unchanged.
+
+CONTROLLING_BLOCKER: gapless_equilibrium_thermal_prescription_not_derived.
+
+NEXT_ACTION: Investigate an order-consistent same-action low-T Goldstone EFT or justified restricted validity. New stationarity/loop bookkeeping, control at trial coupling and no double counting must be shown; no b=0 repair or manually appended phonon gas. Constrained resummation remains an alternative with independent linear-response obligations, not a ready-made repair. Independent source/readout/thermal and measurement-design work remains. Keep 7/11 October and long-term dates. Commit/push to existing draft PR #30, inspect exact head CI and leave full Goal active.
+
+CLAIM_BOUNDARY: Conditional local approximation-admission exclusion with numerical witnesses, not global UET no-go, a certified continuum/global proof, new consistent thermal model, physical material/transport, SI calibration or Full Topic13/Core. No fit, mass/phonon repair, clipping/filter/padding, threshold adjustment, new numeric Xie read or Core-owner modification. Conserved-C causal failure BLOCKED at unchanged 1e-6; prior Xie exposure REVIEW_REQUIRED. Reproducing a known Hartree issue does not establish novelty or funding readiness.
+
+## 2026-10-02 - Joint classical-Phi retarded response and charge susceptibility
+
+MAJOR_RESULT_CLOSURE: T13_CLASSICAL_PHI_HARTREE_JOINT_RETARDED_RESPONSE, CLOSED_FOR_LANE. Full active Goal/R1 and physical acceptance remain open.
+
+WHAT_IS_ACTUALLY_CLOSED: Same-action matter/classical-Phi retarded Hessian, independently constructed quadratic counterterm cancellation, six newly computed local phase poles and relaxed equilibrium charge susceptibility checked against the potential with both matter and Phi reoptimized. Freezing Phi is not the same response calculation.
+
+WHAT_REMAINS_OPEN: Full-frequency/global spectrum and causal domain, regulator/RG and controlled Hartree remainder; independent material/state/source/detector/temperature inputs and physical heat/collision/Kubo/SK-KMS/entropy transport. Quantum Phi is a later-lane obligation only if that lane requires it. Full Topic13, measurement design, novelty and full Goal acceptance remain open.
+
+DEPENDENCY_UNLOCKED: Same named classical-Phi candidate validity and independent-input research only. No physical/Core unlock. Prior static and fixed-Phi artifacts retain their original scope and flags; Core-owner composition unchanged.
+
+STATUS: PASS_SCOPED_JOINT_PHI_RESPONSE. Portfolio route remains METHODS_ROUTE_SELECTED_FOR_PREPARATION, not D05 scientific acceptance or submission readiness.
+
+WHAT_CHANGED: Separate joint response verifier, 21 tests, artifact/derivation; local formula/method/spec/limits/README, funding evidence/hash/controller and planning regression, Goal/14-day/12-week handoffs. Original action Z_Phi=1 used as a trial input, not fitted transport. New polynomial-tree validation permits finite lower-sheet z without changing inherited loop-domain validators. No Core-owner or predecessor edit.
+
+EQUATION_OR_MAPPING: Gamma_joint=Gamma_tree+L^T*J*(I-KJ)^-1*L/2 with L=(K*W,L_Phi); Gamma_phase eliminates both radial and Phi directions. The independently constructed bare tree cancels the affine loop contact. chi_joint=-d^2 Omega_joint/dmu^2 at fixed T with all matter/Phi stationary coordinates reoptimized; natural E^2, not SI calibration.
+
+VERIFICATION: Fourteen artifact checks and 281 linked Topic13/Core/planning tests passed in 466.26 seconds; fourteen distinct adjacent action/stationarity/stiffness regressions passed in 3.33 seconds. Focused 21 tests and 37 response/funding tests are subsets, not extra counts. Maximum final pole refinement 3.098e-7, alternate-grid difference 1.343e-8, independent upper bubble difference 1.472e-8, joint field difference 2.529e-8, finest Ward disagreement 1.289e-6 and independent static envelope disagreement 8.957e-9. Source/protected hashes, units/read/domain/negative controls and whitespace review pass. Artifact SHA-256 a50b95ce5b326e41220187322f7c0f015b7b45489b57b49d0f9c720850c7dd42. Both relevant prior exact-head CI workflows at 54fc336e9e17729214418864186ac511b03bb2c0 succeeded; new-head CI must be inspected separately. Model recommendation unchanged, trial NOT_RUN/configuration unchanged.
+
+CONTROLLING_BLOCKER: joint_global_validity_Hartree_remainder_material_thermal_transport_not_closed.
+
+NEXT_ACTION: Test low-temperature EOS/external-mode consistency and the same prescription's validity without mass repair or manually appended phonon free energy; develop independently justified material/source/readout inputs. Preserve 7 October science freeze, 11 October portfolio review and 25 Oct/8 Nov/22 Nov/6 Dec/20 Dec result reviews. Commit/push to existing draft PR #30 and inspect exact new-head checks; full Goal stays active.
+
+CLAIM_BOUNDARY: Local classical-Phi collisionless response and equilibrium charge consistency only, not full spectrum/global/causal proof, controlled Hartree error, measured thermal mapping or physical transport. No fit/assigned width, clipping/filter/padding, mass repair, threshold change, new numeric holdout access or Core-owner edit. Original conserved-C causal failure remains BLOCKED with unchanged 1e-6 gate. Xie prior exposure REVIEW_REQUIRED. No claim promotion, deadline reset or R1-R5 scientific acceptance.
+
+## 2026-10-02 - Joint classical-Phi static candidate and next-round roadmap
+
+MAJOR_RESULT_CLOSURE: T13_HOMOGENEOUS_CLASSICAL_PHI_HARTREE_STATIONARITY, CLOSED_FOR_LANE. Full active Goal/R1 and physical acceptance remain open.
+
+WHAT_IS_ACTUALLY_CLOSED: Derived mass-dependent normalization Phi force/curvature counterterms, actual homogeneous matter/Phi stationary states with original trial action inputs, and mixed static response independently checked by covariance derivatives, actual source bubbles, reoptimized potential and relaxed-force derivatives. Local amplitude/Phi static positivity holds at the two declared states.
+
+WHAT_REMAINS_OPEN: Joint finite-q retarded response, quantum Phi/kinetic counterterms, global validity, regulator/RG and controlled Hartree remainder; independent material/state/source/detector/thermal mapping and physical heat/collision/Kubo/KMS/entropy transport. Measurement design, novelty, Full Topic13 and full Goal acceptance remain open.
+
+DEPENDENCY_UNLOCKED: Named homogeneous classical-Phi candidate research only. Old fixed-Phi poles are separate predecessor evidence, not new-branch dynamics. Core-owner composition and physical unlocks unchanged.
+
+STATUS: PASS_SCOPED_JOINT_PHI_STATIC. Portfolio route remains METHODS_ROUTE_SELECTED_FOR_PREPARATION, not D05 scientific acceptance or submission readiness.
+
+WHAT_CHANGED: Separate joint-Phi verifier, eighteen tests, artifact/derivation; local formula/method/spec/limits/README, funding evidence/hash/controller and a planning regression; Goal/14-day/12-week handoffs. Explicit E^2/E^3 root scales at Q=1 E preserve numeric controls. The roadmap now states what extra 2-3 months must add and distinguishes missed deadline/eligibility/evidence/novelty. No Core-owner or predecessor edit.
+
+EQUATION_OR_MAPPING: m2(Phi)=m0^2-gamma*(Phi-Phi_*); V_b=V_R-N(m2); N_Phi=-gamma*d/(1+4uD), N_PhiPhi=gamma^2*D/(1+4uD); V_R'-gamma*(s+I_s+I_p)/2=0 jointly with matter. Same-action mass-source vertex and reoptimized covariance determine mixed static Hessian; relaxed Phi curvature is its radial Schur complement.
+
+VERIFICATION: Fourteen artifact checks, eighteen focused scientific tests and the integrated funding contract pass. The linked suite passes 259 tests in 408.69 seconds; fourteen separate neighboring action/stationarity/stiffness regressions pass in 2.85 seconds. Final funding wording recheck passes fifteen tests in 1.71 seconds. Max state refinement 9.454e-9, seed difference 9.357e-14, source-Hessian difference 4.202e-9, potential-Hessian difference 2.167e-6 and relaxed-force curvature difference 1.25e-8. Artifact SHA-256 e73c0ea5f41fd38053a46db2b61c894a44bba38566d884d1e94b9eab4b3a10ba; source/protected hash, rational algebra, units/read/domain/negative controls pass. Prior exact head 668ba50926bb9f2e3895fe8cb1110fe8026b3034 has both relevant CI workflows successful. Official OpenAI model-selection page rechecked; recommendation unchanged, model trial NOT_RUN/configuration unchanged.
+
+CONTROLLING_BLOCKER: joint_dynamic_validity_regulator_remainder_material_transport_not_closed.
+
+NEXT_ACTION: Construct the same-action joint retarded response and validity/approximation contract while developing one independently justified source/readout measurement card. No reuse of old fixed-Phi poles or unchanged-grid reruns. Preserve 7 October freeze, 11 October portfolio review and 25 Oct/8 Nov/22 Nov/6 Dec/20 Dec result reviews. Commit/push this packet to existing draft PR #30 and inspect exact new-head checks; full Goal stays active.
+
+CLAIM_BOUNDARY: Homogeneous classical-Phi Hartree candidate only, not quantum joint Phi, joint dynamics/global proof, controlled Hartree error, independent SI alpha, physical material/transport or Full Topic13/UET. No fit, clipping/filter/padding, mass repair, threshold change, numeric holdout access or Core-owner edit. Xie prior exposure remains REVIEW_REQUIRED. Models are workflow recommendations, not measured repo performance; document readiness does not establish novelty, call eligibility or scientific completion.
+
+## 2026-10-02 - Actual finite-q phase poles and portfolio route
+
+MAJOR_RESULT_CLOSURE: T13_FIXED_PHI_HARTREE_FINITE_Q_LANDAU_POLES is CLOSED_FOR_LANE on six declared fixed-Phi/q points. Full active Goal/R1 and physical acceptance remain open.
+
+WHAT_IS_ACTUALLY_CLOSED: Fixed-grid principal loops with complex Cauchy subtraction, independent lower source-signature reciprocity and analytic vacuum reference, actual nonzero-q complex phase poles and their approach to the prior soft poles. Seeds/grids/orders/tails, Ward, simple derivatives and nonzero elimination factors agree; the soft answer is not substituted.
+
+WHAT_REMAINS_OPEN: Certified global complex domain, Hartree remainder/regulator/RG/full action, joint Phi normalization/stationarity, material/state/source/detector and independent thermal scale, physical heat/collision/KMS/entropy transport. Measurement design, novelty and full research acceptance remain open.
+
+DEPENDENCY_UNLOCKED: Same-candidate validity-domain/approximation/joint-Phi research only. Methods/measurement-design portfolio preparation is selected, not D05 scientific delivery or a physical/Core unlock; original Core-owner composition unchanged.
+
+STATUS: PASS_SCOPED_FINITE_Q_POLES; planning route METHODS_ROUTE_SELECTED_FOR_PREPARATION.
+
+WHAT_CHANGED: Separate pole verifier, 22 tests, JSON/derivation; formula/method/spec/limits/README, funding evidence/hash/controller, two planning regressions, Goal/14-day/12-week handoffs. No predecessor or Core-owner edit. The earlier approval-usage failure performed no patch; normal approval subsequently succeeded after the reported reset time.
+
+EQUATION_OR_MAPPING: B_L(q,z)=B_principal_lower(q,z)-2*pi*i*D(q,z/q); Gamma_phase=Gamma_pp-Gamma_pr*Gamma_rp/Gamma_rr; Gamma_phase(q,z_pole)=0. Retain det(I-K_cov*J)*det(Gamma_field) and the source time signature S=diag(-1,1,1,1). No width/soft-answer substitution.
+
+VERIFICATION: Fifteen artifact checks and 256 linked Topic13/Core/planning tests passed in 342.61 seconds. Maximum final pole refinement 3.284e-7, seed disagreement 9.423e-13, alternate-grid difference 8.527e-10, root residual 2.521e-12, scaled Ward discrepancy 1.614e-5 and Cauchy-Riemann discrepancy 1.675e-6; denominator, units, read/hash and negative controls pass. Artifact SHA-256 7a16d7203b2347984d3a6f5dd8e4025730b049bce3e474b52ff103a8cfbb380a. Whitespace review passes. Prior exact head 2d48d5d98a8ebde36387967bfcae14b5e5eb97f8 has both relevant remote CI workflows successful. Windows longdouble=64 bits; extended precision not assumed. Model-selection official documentation rechecked; recommendation unchanged, model trial NOT_RUN.
+
+CONTROLLING_BLOCKER: global_domain_Hartree_remainder_joint_Phi_material_transport_not_closed.
+
+NEXT_ACTION: Specify validity-domain and regulator/action/approximation obligations, retaining m(Phi)-dependent normalization before joint-Phi/material admission; develop the independent-input measurement card. Do not rerun unchanged pole grids. Scientific freeze 7 October, portfolio review 11 October and longer-term result reviews remain unchanged. Commit/push this coherent packet to existing draft PR #30 and inspect exact new-head checks; full Goal remains active.
+
+CLAIM_BOUNDARY: Local fixed-Phi collisionless phase poles, not global stability, uniform q^2/Hartree remainder, particle collision lifetime, material sound/heat/Kubo/SK-KMS, SI alpha, novelty certification, external validation or Full Topic13/UET. No fit/width/mass repair, clipping/filter/padding/threshold change, numeric Xie read or Core-owner edit. Prior Xie exposure REVIEW_REQUIRED. Planning route selection does not accept R1-R5 or change scientific completion rules.
+
+## 2026-10-02 - Exact finite-q local thermal discontinuity
+
+MAJOR_RESULT_CLOSURE: T13_FIXED_PHI_HARTREE_FINITE_Q_LANDAU_DISCONTINUITY is CLOSED_FOR_LANE on the declared fixed-Phi grid. Full active Goal/R1 and physical gates remain open.
+
+WHAT_IS_ACTUALLY_CLOSED: Exact signed-mode finite-q shell endpoints and analytic joint thermal density, agreeing with original all-channel radial cuts and independent forward angular delta roots. Two local complex tail paths agree and density approaches the accepted soft result as q decreases.
+
+WHAT_REMAINS_OPEN: Actual finite-q principal kernel and pole root, certified global domain/contour, Hartree approximation/full action/RG, joint Phi/material/source/detector, independent thermal scale/input and physical heat/collision/KMS/entropy transport. Original causal branch remains unchanged.
+
+DEPENDENCY_UNLOCKED: Same-candidate finite-q kernel/pole research only; no full funding/Core unlock or change to the recorded Core-owner composition.
+
+STATUS: PASS_SCOPED_FINITE_Q_DISCONTINUITY.
+
+WHAT_CHANGED: Separate density verifier, sixteen tests, artifact/derivation, local formula/method/spec/limits/README and planning/Goal/14-day/12-week/log integration with one added planning regression. No predecessor or Core-owner edit. Previous exact head 9b2e45b6be7f66916390db2c9d81d9cf56233892 has all relevant remote checks successful.
+
+EQUATION_OR_MAPPING: ell=p_j+q*v; sign_j*[E_j(k+sign_j*q)-E_j(k)]=q*v; continue the original inverse shell and sign_j*d(r^2)/dell/(2*k*q), retaining joint derivative-source numerators and the full tail. Real cut=-pi*D(q,v); later B_L=B_principal_lower-2*pi*i*D_analytic. No q*v_soft pole substitution.
+
+VERIFICATION: Ten artifact checks and 232 linked Topic13/Core/planning tests passed in 312.19 seconds. Eighteen real q/v witness points; maximum original integrated-cut error 5.92e-14, final complex-density refinement <=5.42e-16, two-path difference <=5.58e-17 and endpoint residual <=3.73e-16. Natural-unit, domain, signed-Bose, forward-root, hash/read and negative controls passed. Artifact SHA-256 829138c4e2b5387fda30f911e45fc6aa1b8c9db668fb36f012cfae82f864639a. Numerical differences are not physical uncertainty or a uniform Hartree remainder.
+
+CONTROLLING_BLOCKER: finite_q_principal_kernel_and_actual_pole_not_computed.
+
+NEXT_ACTION: Derive a fixed-grid finite-q principal kernel and independently verify lower-sheet source-signature reciprocity; solve actual poles with radial/covariance factors, Ward, seeds and convergence controls. Keep global/approximation/action and joint-Phi/material obligations. Original scientific freeze 7 October, portfolio 11 October and model policy remain unchanged; model trial NOT_RUN.
+
+CLAIM_BOUNDARY: Local fixed-Phi density continuation, not finite-q pole, global cut/homotopy proof, physical sound/collision/Kubo/SK-KMS/heat/entropy, SI alpha, external validation, novelty certification or Full Topic13/UET. No fit/width, clipping/filter/padding, threshold change, numeric holdout read or Core-owner edit. Xie prior exposure REVIEW_REQUIRED.
+
+## 2026-10-01 - Local Landau-sheet pole of the fixed-Phi candidate
+
+MAJOR_RESULT_CLOSURE: T13_FIXED_PHI_HARTREE_LOCAL_LANDAU_POLE is CLOSED_FOR_LANE. Full active Goal and thermal/physical acceptance remain open.
+
+WHAT_IS_ACTUALLY_CLOSED: Same-cut local spectral-density continuation and simple complex soft phase poles at both unchanged witnesses, independent original-cut/upper-integral, seeds/orders/grids/tail paths and derivative/residue checks. Elimination factors remain nonzero. Bounded winding is recorded, not a certified zero count.
+
+WHAT_REMAINS_OPEN: Certified complex domain/uniform finite-q pole control, Hartree truncation/full regulator/action, joint Phi/material/source/detector and physical normal/heat/collision/KMS/entropy transport; independent input and novelty review.
+
+DEPENDENCY_UNLOCKED: Same-candidate validity/joint-Phi research only. R1-R5, physical funding gates and recorded Core composition are unchanged.
+
+STATUS: PASS_SCOPED_LOCAL_LANDAU_POLE.
+
+WHAT_CHANGED: Separate pole verifier, nineteen tests, JSON/derivation, local formula/method/spec/limits/README, funding hash/controller and Goal/14-day/12-week handoffs/planning regression. No predecessor code/artifact or Core-owner file changed. Prior exact head 376909cc8911c6b9992cc177507a54f2c9a2f381 has all relevant CI passing.
+
+EQUATION_OR_MAPPING: B_L=B_principal_lower-2*pi*i*D_analytic; D follows the original angular cut and same-dispersion complex thresholds. K_phase(v_pole)=0; retain det(I-K_cov*J)*Gamma_radial*K_phase to expose Schur denominators. O2 phase is not clamped UET Phi.
+
+VERIFICATION: Fifteen audit checks and 215 linked Topic13/Core/planning tests pass in 319.54 seconds. Poles v=.218903931302-.006968573129i and .374230491486-.003436526694i; last refinement <=4.04e-15, alternative grid/path/seed <2e-15 and Cauchy-Riemann <=3.62e-9. Original cut <=1.81e-15; refined upper reference <=7.68e-16. First 128-point unsplit-reference test failed; 256/512 resolves it without relaxing 1e-9, then full audit rerun. Nested contours are bounded numerical diagnostics, not global stability. Hash/read/unit/negative controls passed. Artifact SHA-256 20f1f5ec4d44e8778d541e57f8e38573edf661c3f30d0ee45eed8559155c238d.
+
+CONTROLLING_BLOCKER: global_domain_truncation_joint_Phi_material_transport_not_closed.
+
+NEXT_ACTION: Derive actual finite-q spectral continuation and check approach to the soft pole at q=.04,.02,.01; declare validity/approximation/action obligations before joint Phi/material/heat-current admission. Do not substitute q*v_pole as a computed result or repeat unchanged roots. Portfolio dates/model policy unchanged.
+
+CLAIM_BOUNDARY: Internally reproduced local collisionless soft pole, not certified stability, material sound, physical collision/Kubo/SK-KMS/heat/entropy, SI scale, holdout validation or full Topic13/UET. No fit/width, filter/clipping, physical threshold change, numeric holdout read or Core-owner edit. Xie prior exposure REVIEW_REQUIRED.
+
+## 2026-10-01 - Collisionless soft phase kernel and absorptive reactive zero
+
+MAJOR_RESULT_CLOSURE: T13_FIXED_PHI_HARTREE_COLLISIONLESS_SOFT_PHASE_RESPONSE is CLOSED_FOR_LANE. This closes a same-candidate infrared response question, not the full active Goal or Full Topic13.
+
+WHAT_IS_ACTUALLY_CLOSED: Equal-branch thermal z=v*q ray moments, full-domain radial source correction and phase inverse through radial-only source Ward. Independent unchanged finite-q phase/current kernels approach the derived limit. Static stiffness/susceptibility alone does not determine this response; both reactive zeros have nonzero absorption and are not undamped real-axis poles.
+
+WHAT_REMAINS_OPEN: Controlled complex collective poles and validity domain; approximation/truncation and covariant regulator/RG/action; joint Phi/global state and independent material/source/detector inputs; physical normal/heat-current, collision/SK-KMS/entropy transport and measurement uncertainty.
+
+DEPENDENCY_UNLOCKED: Same-candidate collective-pole research only. R1 full acceptance, physical G1/G2, Full Topic13 and the Core owner's bounded composition gate remain unchanged.
+
+STATUS: PASS_SCOPED_COLLISIONLESS_SOFT_RESPONSE.
+
+WHAT_CHANGED: Added separate soft verifier, seventeen tests, artifact/derivation and diagnostic formula/method/spec/limits/README. Linked exact evidence hash/controller in funding planning and Goal/14-day/12-week handoffs; no predecessor code, artifact, physical parameters or original threshold changed.
+
+EQUATION_OR_MAPPING: A_n=1/2 int c^n*w*c/(v-w*c+i0); delta joint loop uses -N'(p)*Tr(Va Rp Vb Rp)*(A_n(v,w)-A_n(0,w))/2 in the full radial measure. Source Ward gives Gamma_phase/q^2=-l^T*Gamma_AA_radial*l/s with l=(v,i,0,0), not the fully on-shell transverse current.
+
+VERIFICATION: 195 linked Topic13/Core/planning tests passed in 319.54 seconds. Fourteen new artifact checks pass; angular disagreement <6e-15, last soft-loop refinement <=1.29e-9, scaled field/current Ward <=5.89e-5 and finite-q quadrature phase refinement <=3.22e-5. Remaining finite-q corrections at q=.01 are 1.10e-5 to 6.01e-3, separately recorded and not physical uncertainty. Reactive rays 0.21937248/0.37428752 have Im inverse -0.06212778/-0.01820733; no sound speed or collision rate emitted. First audit's final hash-path indexing error was repaired and the entire audit rerun, without threshold changes. Declared predecessor/protected hashes and sole derived-predecessor text-read path checked. Artifact SHA-256 a7e58a3f9dcdefd032d12e8e6d11d626655d0b2614c367374b90bef3cb620fb4; prior head 349dcb21f has all relevant remote checks passing.
+
+CONTROLLING_BLOCKER: collective_pole_domain_truncation_joint_Phi_material_transport_not_closed.
+
+NEXT_ACTION: Analyze controlled complex continuation and stability within an explicit candidate validity domain using this kernel; close approximation/regulator/action and joint-Phi/material/heat-current admission separately. Do not replace it by the equilibrium ratio or rerun the old grid. Portfolio date/model policy remain unchanged.
+
+CLAIM_BOUNDARY: Conditional fixed-Phi collisionless soft phase/source response only, not hydrodynamic sound, measured damping, Kubo/SK-KMS/heat/entropy, material He-II/TTG validation, causal repair, global stability or UET closure. No fit, assigned width, filter, clipping, projection, holdout numeric read or Core-owner edit. Prior Xie exposure remains REVIEW_REQUIRED.
+
+## 2026-10-01 - Scoped real-axis Hartree source response without assigned width
+
+MAJOR_RESULT_CLOSURE: T13_FIXED_PHI_HARTREE_REAL_AXIS_RESPONSE is CLOSED_FOR_LANE on ten declared points at the same two fixed-Phi witnesses. The full active Goal remains open.
+
+WHAT_IS_ACTUALLY_CLOSED: Exact angular PV and pair/scattering cuts; independent forward-shell angular delta roots/Jacobian and differently mapped radial phase space; full-domain vacuum-subtracted loops and same-current reoptimization on real frequencies. Ward/contact, vacuum, signed-frequency and unit checks pass without assigned output width.
+
+WHAT_REMAINS_OPEN: Global collective/IR and Hartree approximation control; full covariant nonuniform regulator/RG/action; joint Phi/global state and independent material/source/detector map; normal/heat current, microscopic SK/KMS/collision/entropy transport and source uncertainty.
+
+DEPENDENCY_UNLOCKED: Same-candidate global spectral and joint-state matching only. R1 full acceptance, physical funding G1/G2, Full Topic13 and recorded Core composition are unchanged.
+
+STATUS: PASS_SCOPED_HARTREE_REAL_AXIS_RESPONSE.
+
+WHAT_CHANGED: Added real-axis verifier, seventeen tests, artifact/derivation and local formula/method/spec/limits/README integration; updated funding evidence/hash/controller and Goal/14-day/12-week handoffs. Old validators and artifacts remain restricted and unchanged. Previous planning head 681741eea has all relevant remote CI checks passing.
+
+EQUATION_OR_MAPPING: Exact Cauchy subtraction gives PV plus -pi*g_star spectral density for an on-shell point inside the angular energy interval; outside it the cut is zero. The unchanged source/covariance and mean-field equations give Pi=Gamma_AA-Gamma_Aphi*Gamma_field^-1*Gamma_phiA. A is nondynamical O2 source, not UET C/Phi or a state.
+
+VERIFICATION: 178 linked Topic13/Core/planning tests passed. Point-cut error <=4.55e-13, independent integrated-cut disagreement <=6.94e-17, last refinement <=3.63e-6, Ward <=1.72e-7 and 4D vacuum-current error <=7.05e-8 in canonical units, not physical uncertainty. Initial UV cancellation drift was repaired with exact log1p/residue/full-domain coordinate identities; spectral-density and reality test conventions were corrected against the predecessor, with no threshold change. Declared predecessor lineage, protected hashes, omitted-cut/contact controls and audit text-read allowlist checked. Artifact SHA-256 a392cd0e1e45fd0b4e2b0db28136664b27e00b4338a083c7f0f9602c9fe5e148.
+
+CONTROLLING_BLOCKER: global_spectral_truncation_regulator_joint_Phi_material_and_transport_matching_not_closed.
+
+NEXT_ACTION: Analyze collective spectral/IR and approximation/regulator/action limits in a declared candidate validity domain, then joint Phi/material/source/detector and heat-current admission. Do not repeat the same ten-point calculation. Portfolio dates and model policy remain unchanged.
+
+CLAIM_BOUNDARY: Fixed-Phi Hartree real-axis current/field response only, not global spectral stability, a truncation proof, physical damping/Kubo/SK-KMS/heat, material He-II/TTG prediction, causal-branch repair or global UET closure. No fit, projector, artificial width/mass/filter, clipping, threshold change, numeric holdout read or Core-owner edit. Prior Xie exposure remains REVIEW_REQUIRED.
+
+## 2026-10-01 - Portfolio-first research aims and next-round model/resource strategy
+
+MAJOR_RESULT_CLOSURE: Planning scope clarified; no new scientific result accepted and the full active Goal remains open.
+
+WHAT_IS_ACTUALLY_CLOSED: Roadmap, Goal handoff and planning JSON agree on a recommended first-portfolio methods/measurement-design result, three result-linked follow-on aims, actual-deadline overrides and resource/model uncertainty.
+
+WHAT_REMAINS_OPEN: Scientific D5 route acceptance, controlled real-axis/approximation and regulator/action matching, joint Phi/material/source/detector and independent measurement; actual funder/PI/deadline/budget, model trial, novelty and human review.
+
+DEPENDENCY_UNLOCKED: None. Existing Core-owner bounded composition and physical funding/science gates are unchanged.
+
+STATUS: RECOMMENDED_PENDING_D05_DECISION; MODEL_TRIAL_NOT_RUN.
+
+WHAT_CHANGED: Added portfolio_strategy_2026_10_01, a reader-first roadmap section, three dated aims with acceptance and failure/unresolved alternatives, Goal handoff and two plan-contract regressions. Original 2/7/11 October and W4-W12 dates preserved. December/January are scenarios, not verified calls.
+
+EQUATION_OR_MAPPING: No equation or observable changed. The first portfolio proposes source-response methods evidence plus measurement design; a physical material prediction requires separately admitted state/source/detector inputs.
+
+VERIFICATION: Ten planning tests passed; dates, evidence SHA-256 linkage, result-card references, non-promotion and unconfirmed resources checked. git diff --check passed. Current official OpenAI model selection and Astra/Sol model pages retrieved. No comparative model trial or new accepted physical calculation in this planning wave. Separate real-axis exploratory code is not accepted or included in this commit.
+
+CONTROLLING_BLOCKER: real_axis_regulator_joint_Phi_material_and_transport_matching_not_closed; call/PI/budget independently controls submission readiness.
+
+NEXT_ACTION: Select the D5 result scope on actual evidence, complete one decisive calculation or proof by D10 if feasible and package its verified boundaries for D14. Follow Aims 1-3 toward response, independent inputs/feasibility and locked comparison/structural proof. Do not rerun unchanged evidence to fill the timeline.
+
+CLAIM_BOUNDARY: Planning only, not Full Topic13 closure, physical prediction, proof of novelty, external replication or funding guarantee. No model/configuration change, new Goal/thread, numeric holdout read, external contact, purchases or Core-owner edit. Prior Xie exposure remains REVIEW_REQUIRED.
+
+## 2026-10-01 - Source-complete rest-frame Hartree current response
+
+MAJOR_RESULT_CLOSURE: T13_FIXED_PHI_HARTREE_SOURCE_COMPLETE_CURRENT is CLOSED_FOR_LANE in the unchanged named fixed-Phi candidate. The full active research Goal remains open.
+
+WHAT_IS_ACTUALLY_CLOSED: Actual mixed/current loops, four-component isotropic rest-frame source Hessian, covariance and mean-field reoptimization, kinetic seagulls and analytically derived UV surface contact. Ward is verified without projection; uniform density agrees with an independent stationary-potential derivative and stiffness is positive at both witnesses.
+
+WHAT_REMAINS_OPEN: Real-axis spectrum, global collective stability and controlled IR/truncation error, full nonuniform covariant regulator/RG/action, joint Phi/global state, material/source/detector and normal/heat-current/SK-KMS/collision transport.
+
+DEPENDENCY_UNLOCKED: Same-candidate spectral/joint-state work only. Physical funding G1/G2, new full_core_unlock and global claims remain false; recorded Core composition and original failed branches are untouched.
+
+STATUS: PASS_REST_FRAME_HARTREE_SOURCE_CURRENT.
+
+WHAT_CHANGED: Added verifier, seventeen tests, artifact and explicit derivation; synchronized local formula/method/spec/limitations/README and funding evidence/controller/Goal/roadmap. Finite F_A^2 source normalization is declared as a subtraction convention, not admitted microscopic input. The previous planning head 4b052e049 passed all relevant remote checks.
+
+EQUATION_OR_MAPPING: deltaI=(I-J_F*K_H)^-1*(J_F*L*deltavarphi+Y*deltaA); Gamma_AA=s*I+loop_AA+Ybar*[K_H^-1-J_F]^-1*Y/2; Pi=Gamma_AA-Gamma_Aphi*Gamma_phiphi^-1*Gamma_phiA. The spatial UV surface is [Tr(M)-2*M0^2]/(24*pi^2); A is a nondynamical O2 source, not UET C/Phi or a new state.
+
+VERIFICATION: 159 linked Topic13/Core/planning tests passed, including seventeen current tests. Independent matrix sums, action/source differences, 4D vacuum contact, boundary/reference/routing/grid/reality, counterterms, density envelope, units, omitted-contact/surface controls and read/protected-hash checks passed. Coarse tadpole finite difference initially failed its fixed tolerance; step refinement restored agreement without changing threshold or physical parameters. Maximum Ward residual 2.17e-9; density-envelope relative disagreement <=1.95e-8, neither is physical uncertainty. Artifact SHA-256 b74428070c559faa3c7caa7ab8efd0258f9f692073b7e736c62a8d44bc8ac971.
+
+CONTROLLING_BLOCKER: real_axis_regulator_joint_Phi_material_and_transport_matching_not_closed.
+
+NEXT_ACTION: Derive controlled real-axis/spectral response, then full regulator/action and joint-Phi/material/heat-current admission. Do not rerun the same current merely to accumulate artifacts. Portfolio dates, scientific acceptance and model policy are unchanged.
+
+CLAIM_BOUNDARY: Rest-frame fixed-Phi candidate current under an explicit vacuum contact convention, not physical heat/Kubo, complete covariant/RG/SK-KMS, He-II/TTG prediction, causal-branch repair or global closure. No fit, imposed Ward projector, clipping, artificial mass/filter, threshold change, new numeric holdout read or Core-owner edit. Prior Xie exposure remains REVIEW_REQUIRED.
+
+## 2026-10-01 - Model evaluation and next-round execution decision cards
+
+MAJOR_RESULT_CLOSURE: Planning acceptance clarified; no new scientific result closed.
+
+WHAT_IS_ACTUALLY_CLOSED: Canonical roadmap, Goal handoff and planning JSON now agree on the next current-response question, model trial record and five dated result reviews.
+
+WHAT_REMAINS_OPEN: Source-complete current/contact response, real-axis/error and regulator/material matching; independent source/measurement; actual model trial, funder/PI/eligibility/budget and deadline.
+
+DEPENDENCY_UNLOCKED: None. Existing Core-owner composition, scientific gates, failed branches and active Goal remain unchanged.
+
+STATUS: PLANNING_REVISION_NOT_SCIENTIFIC_CLOSURE; MODEL_TRIAL_NOT_RUN.
+
+WHAT_CHANGED: Added execution_review_2026_10_01, model evaluation fields including correction time and missing-usage handling, two contract regressions and matching roadmap/Goal instructions. Kept 2 October decision, 7 October freeze and 11 October portfolio target plus W4/W6/W8/W10/W12 dates.
+
+EQUATION_OR_MAPPING: No equation changed. The next scientific question is same-prescription gauge/current response including contacts, not replacing it with the computed field bubble or an imposed Ward projection.
+
+VERIFICATION: Eight planning tests passed; linked scientific evidence hashes, dates, model recommendation consistency and non-promotion boundaries checked. Whitespace check passed. Official OpenAI model-selection page retrieved on 1 October; no comparative model trial or new physical calculation run.
+
+CONTROLLING_BLOCKER: gauge_current_real_axis_and_regulator_material_matching_not_closed. Call/PI/budget independently controls submission readiness.
+
+NEXT_ACTION: Work the declared current-response question; acquire independent source/protocol inputs in parallel. Accept empirical scoring only after operator, material mapping and numeric-input admission. Review actual results at the dated cards; do not restart the sprint or complete unresolved science.
+
+CLAIM_BOUNDARY: Planning only, not full Topic13 closure, external validation, measured model superiority or funding guarantee. No model/configuration change, new Goal/thread, numeric holdout read, external contact, purchases or Core-owner edits.
+
+## 2026-10-01 - Actual three-channel Hartree external field response
+
+MAJOR_RESULT_CLOSURE: T13_FIXED_PHI_HARTREE_EXTERNAL_FIELD_RESPONSE is CLOSED_FOR_LANE in the declared fixed-Phi zero-momentum-subtracted candidate; the full Goal remains active.
+
+WHAT_IS_ACTUALLY_CLOSED: Computed full vacuum/thermal covariance bubbles and the source-responsive Bethe-Salpeter field operator at finite momentum and upper-half-plane frequency. Absolute subtraction independently recovers the prior tadpole derivatives. Static radial potential and transverse Ward limits are recovered without forcing the internal phase mass to zero. Actual bubbles now satisfy the same counterterm source equation.
+
+WHAT_REMAINS_OPEN: Gauge-current contact/vertex completion, real-axis spectrum and controlled IR/truncation matching, full covariant regulator/RG/action input, joint Phi/global state, independent material/source/detector mapping and normal-component/SK/KMS/transport.
+
+DEPENDENCY_UNLOCKED: Same-candidate gauge-current and spectral work only. Physical funding G1/G2, new full_core_unlock and global claims remain false; recorded Core composition and failed baselines are unchanged.
+
+STATUS: PASS_SUBTRACTED_HARTREE_EXTERNAL_FIELD_RESPONSE.
+
+WHAT_CHANGED: Added external-field verifier, eighteen tests, artifact/derivation and local formula IDs; synchronized topic method/spec/limitations/README and funding evidence/controller/Goal/roadmap. Previous planning wave is committed/pushed and its relevant CI checks all passed on e924e97a1.
+
+EQUATION_OR_MAPPING: J_F(Q)=J_F(0)+integral[J_raw(Q)-J_raw(0)]; deltaM=(I-KJ_F)^-1*L*deltavarphi; Gamma_ext=G_int^-1+L^T*J_F*(I-KJ_F)^-1*L/2. varphi is an existing O2 field, not UET Phi or a new state.
+
+VERIFICATION: 140 linked Topic13/Core/planning tests passed, including eighteen new tests. Independent matrix sums, absolute/difference subtraction, four-dimensional vacuum reference, source derivatives, static potential/Ward, routing, quadrature, retarded reality/parity, unit scaling, counterterm replay, invalid-domain controls and evidence/read allowlists passed. Maximum direct-subtraction disagreement 4.29e-10, Ward residual 3.65e-13; neither is physical uncertainty. Artifact SHA-256 5078cc2b3c8a8d679542046aa41992f0263b93665297111d4a7864baa96eae36.
+
+CONTROLLING_BLOCKER: gauge_current_real_axis_and_regulator_material_matching_not_closed.
+
+NEXT_ACTION: Derive same-action gauge/current source vertices and contacts, then real-axis/error and regulator/RG/joint-Phi/material admission. Do not regenerate the field bubble without a new question. Original portfolio dates and scientific acceptance remain unchanged.
+
+CLAIM_BOUNDARY: Fixed-Phi candidate field response only, not temperature/current measurement, full covariant/RG, microscopic KMS/Kubo, physical helium/TTG prediction, finite-cone repair or global closure. New verifier reads no numeric experimental or holdout source; prior Xie context-exposure review stays open. No fits, clipping, IR mass/filter, threshold change or Core-owner edit.
+
+## 2026-10-01 - Result-level roadmap and next-round submission buffer
+
+MAJOR_RESULT_CLOSURE: Planning handoff clarified; no new scientific result closed.
+
+WHAT_IS_ACTUALLY_CLOSED: The roadmap and machine-readable plan specify R1-R5 acceptance, empirical versus feasibility routes, and date-derived December/January submission buffers.
+
+WHAT_REMAINS_OPEN: Actual external vertices/regulator/RG and joint-Phi/material response, independent input, controlled error/transport, novelty review, funder/PI eligibility and resources.
+
+DEPENDENCY_UNLOCKED: None. Planned result cards do not overwrite recorded bounded Core composition or unlock physical dependencies.
+
+STATUS: PLANNING_REVISION_NOT_SCIENTIFIC_CLOSURE.
+
+WHAT_CHANGED: Expanded the canonical roadmap, planning JSON and Goal brief; added two planning regressions. Preserved original 11 October portfolio target, model policy, scientific completion rules and all scientific artifact bytes.
+
+EQUATION_OR_MAPPING: No equation changed. R1 requires actual external response in the stationary/counterterm prescription; R2 requires independent dimensional state/source/detector admission.
+
+VERIFICATION: 42 planning/background/counterterm tests passed, including six planning tests, seventeen background tests and nineteen counterterm tests; linked evidence hashes and whitespace checks passed. Official OpenAI model-selection, latest-model and Sol 6.1 pages retrieved on 1 October. No empirical comparison or numeric holdout read was performed.
+
+CONTROLLING_BLOCKER: external_vertex_and_regulator_RG_material_matching_not_closed; actual call/PI information separately controls submission readiness.
+
+NEXT_ACTION: D5 scope decision on 2 October, scientific freeze on 7 October and portfolio v1 on 11 October remain internal targets. Execute one evidence-producing question at a time; W4/W6/W8/W10/W12 accept results, not elapsed time. Verify a real call before using hypothetical submission dates.
+
+CLAIM_BOUNDARY: Planning only, not new physical evidence, full Topic13 closure, external validation or a guarantee of funding. No model/configuration change, new Goal, external contact, purchase or Core-owner edit.
+
+## 2026-10-01 - Fixed-Phi stationary Hartree and counterterm potential match
+
+MAJOR_RESULT_CLOSURE: T13_FIXED_PHI_FINITE_HARTREE_BACKGROUND_AND_SOURCE_BOUNDARY and T13_FIXED_PHI_HARTREE_COUNTERTERM_AND_ON_GAP_POTENTIAL_MATCH are CLOSED_FOR_LANE in the named finite-potential candidate, not physical/Core promotion.
+
+WHAT_IS_ACTUALLY_CLOSED: Vacuum-plus-thermal potential has local nonzero stationary candidates at both prior witnesses, external static angular/radial source checks and entropy/charge envelope. Independent invariant countercouplings and field quartic cancel homogeneous gap coefficients; the on-gap potential matches up to a fixed-action constant. Arbitrary coefficient/probe and prior witness checks require no retuning. Conditional symmetric external-vertex subtraction is algebraically matched only.
+
+WHAT_REMAINS_OPEN: Actual regulator tensor/translation construction, RG/action/material inputs, finite-q/frequency external bubbles and vertices, joint Phi/global phase, controlled dynamic remainder, normal-component/SK/KMS/transport and independent measurement. Fixed-action normalization may depend on m(Phi).
+
+DEPENDENCY_UNLOCKED: External-vertex work with a declared stationary/counterterm contract only. Original failing branches and recorded Core composition remain unchanged; physical funding G1/G2 and new full_core_unlock stay false.
+
+STATUS: PASS_FIXED_PHI_HARTREE_SOURCE_BACKGROUND and PASS_HOMOGENEOUS_HARTREE_COUNTERTERM_MATCH.
+
+WHAT_CHANGED: Added two verifier/test/artifact/derivation packages, local formula entries and synchronized method/spec/limitations/README/funding evidence/Goal/roadmap. Fixed root/source checks by quadrature and field-step refinement, not physical parameter changes; a float exact-equality replay test was corrected to roundoff comparison.
+
+EQUATION_OR_MAPPING: Finite Hartree F and stationary a=2us,b=2u(I_p-I_s); external Gamma_pi(0)=0 is not internal b. K_b(I+D*K)=K; B=u/(1+2uD), A=u/[(1+2uD)(1+4uD)], u4=A+2B-2u; V_b_on_gap=V_F_on_gap+N at fixed action inputs.
+
+VERIFICATION: 120 focused/related Topic13/Core/planning tests passed, including seventeen candidate and nineteen matching tests. Exact-rational cancellation, independent tensor/matrix/source Hessian, entropy/charge protocol, unit/reference/order/seed checks, negative controls, failed-predecessor rejection and runner read allowlists passed. Background hash c88b6bbb4b8b99667d9562dcfe10930f5c5405053126e5fa729f9016a2652669; matching hash 8daacda13e1e740a9821ea171a7d93fefcbf3392cac5bc28ce75c129f55b4d11. Formal cancellation residual 1.78e-15 is not physical uncertainty. Prior head 71b38b586 has all relevant CI passing; new-head CI must be reviewed after push.
+
+CONTROLLING_BLOCKER: external_vertex_and_regulator_RG_material_matching_not_closed.
+
+NEXT_ACTION: Derive actual external finite-q/frequency bubble/source/current equations and their regulator/RG subtraction; keep joint Phi/material and independent observable gates. No further root-only reruns. Portfolio target 11 October and model recommendations unchanged; full active Goal remains open.
+
+CLAIM_BOUNDARY: Fixed-Phi finite candidate, homogeneous counterterm/on-gap potential and conditional vertex algebra only. Not full covariant matching, physical internal Goldstone mass, finite-frequency material prediction, Kubo transport, graphite validation or global UET closure. No numeric holdout read, fits, clipping, new IR mass or causal-threshold change. Prior Xie exposure review remains required.
+
+## 2026-10-01 - Conditional dynamical composite and current contact
+
+MAJOR_RESULT_CLOSURE: T13_CONDITIONAL_DYNAMIC_COMPOSITE_AND_CURRENT_MATCH is CLOSED_FOR_LANE for a conditional leading Gaussian phase source response, not microscopic thermal closure.
+
+WHAT_IS_ACTUALLY_CLOSED: Same Cartesian source gives pair and thermal-scattering continua, an analytic upper-half-plane response and retarded oscillatory time kernel. Independent momentum/time/spectral/Matsubara calculations recover the prior static IR coefficient. The Gaussian current-source Hessian requires its local contact term to obey the Ward identity.
+
+WHAT_REMAINS_OPEN: Renormalized/interacting amplitude, joint Phi stationarity, microscopic dynamic-current vertices and error bound, vacuum/material/source/detector inputs and finite-T normal-component/SK/KMS/transport. First witness has T/(c*sqrt(2r))=2.18, preventing all-momentum phase-extension admission.
+
+DEPENDENCY_UNLOCKED: Conditional frequency/source-protocol design only; no Core composition, physical funding or full Topic13 gate change.
+
+STATUS: PASS_CONDITIONAL_PHASE_DYNAMIC_RESPONSE; no physical response or damping claim.
+
+WHAT_CHANGED: Added dynamic verifier, sixteen tests, artifact/derivation, formula audit, limitations/README and funding-plan/Goal/roadmap/hash integration. Previous baseline artifacts and Core-owner files are untouched.
+
+EQUATION_OR_MAPPING: chi_cl^R=i*x*T/(16pi*rho_s^2*q)*log[(z+cq)/(z-cq)]; chi_cl^R(t)=Theta(t)*x*T*sin(cqt)/(8pi*rho_s^2*q*t). The static limit is x*T/(16rho_s^2*q). Pi=W-(WQ)(WQ)^T/(Q^T W Q) includes the current contact.
+
+VERIFICATION: 84 focused/related tests pass, including sixteen dynamic checks, full-Gaussian detailed balance/FDT, dimensions/T0/threshold refusal and declared artifact/code audit reads. Artifact SHA-256 2f07a63af3ce9945bf254d5da238bdefbd53597dae105ee7e50bbcbe8bc61f7d. Classical loop/time checks agree below 1e-7; refined static/dynamic linear-extension differences are below 1%. Relevant CI passed on preceding head 8ed55cc0d; new-head CI to review after push.
+
+CONTROLLING_BLOCKER: renormalized_stationary_background_and_dynamic_matching_remainder_not_closed.
+
+NEXT_ACTION: Match a source-complete renormalized/interacting background and full-action dynamic current/remainder before material/source/detector prediction. Do not use a fitted single-pole model or a change of coordinates as closure. Preserve D5/D10/D14 and the full active Goal.
+
+CLAIM_BOUNDARY: Conditional Gaussian phase/composite result, not collision damping, viscosity, conductivity, microscopic SK/KMS, independent He-II/graphite validation, finite-cone repair or global UET closure. No fits, artificial phase mass, IR filter, threshold broadening or numeric holdout read; prior Xie exposure review stays open.
+
+## 2026-10-01 - Polar source-complete static IR observable
+
+MAJOR_RESULT_CLOSURE: T13_POLAR_STATIC_IR_OBSERVABLE_MATCH is CLOSED_FOR_LANE for same-action/source/measure identities and conditional leading static IR matching.
+
+WHAT_IS_ACTUALLY_CLOSED: The polar map preserves chemical and Cartesian source terms. Its Jacobian and offshell Hessian gradient term are required. A source-complete Gaussian determinant with the measure correction equals the Cartesian determinant. The nonlinear Cartesian longitudinal observable reproduces the previous 1/q loop coefficient and has a positive conditional susceptibility.
+
+WHAT_REMAINS_OPEN: Source-complete renormalized/interacting amplitude and joint Phi state, vacuum counterterms, dynamic composite/current response, real-axis limit, controlled remainder and independent material input. The original positive thermal tadpole remains.
+
+DEPENDENCY_UNLOCKED: Same-lane static IR/observable matching design only; no physical/Core/funding gate promotion.
+
+STATUS: PASS_CONDITIONAL_POLAR_STATIC_IR_OBSERVABLE, not microscopic resummation or exact finite-T equilibrium.
+
+WHAT_CHANGED: Added polar verifier/thirteen tests/artifact/derivation; synchronized formula audit, limitations, README, planning JSON, 14-day/12-week plans and Goal brief. Core-owner work is untouched.
+
+EQUATION_OR_MAPPING: varphi_l=A+h-A*theta^2/2; chi_l=1/[Z(q^2+2r)]+x*T/(16*rho_s^2*q). Its inverse expansion reproduces -lambda*r*T/(4Z^2*q). J_l=U'_rho and the -log(rho) measure recover the original Cartesian Gaussian and Omega_x=lambda*(3I_sigma+I_pi)/(2Z)>0.
+
+VERIFICATION: 68 focused/related tests pass, including thirteen new checks of full action, source/torque/current, Jacobian, offshell Gaussian/logdet derivative, dimensionless energy-reference logs, tree Schur/spectrum, independent source-generating function versus Wick (5.6e-8 relative), IR coefficient, whole-action units/T0 and protected hashes. Artifact SHA-256 4b3021ff3b74f180c683e161ad6e43b4ef959df37464882c6abd04b4a6cceabd. All relevant remote CI checks passed on previous scientific head 75bc42368; new-head CI remains to be checked after push.
+
+CONTROLLING_BLOCKER: microscopic_polar_background_and_dynamical_observable_matching_not_closed.
+
+NEXT_ACTION: Choose and derive a source-complete renormalized/interacting prescription preserving the Gaussian coordinate identity; match order parameter and finite-frequency composite/current response, then the material/protocol input. Do not repeat a coordinate-only stationarity repair. Funding D5/D10/D14 dates and completion criteria are unchanged.
+
+CLAIM_BOUNDARY: Existing O(2) coordinates with fixed Phi, no C-as-mass/charge, R_gen state, artificial phase mass, filter, clipping, arbitrary Pade, fit or numeric holdout read. Conditional static source susceptibility is not temperature, physical instability, Kubo, independent He-II/graphite validation or global closure. Prior Xie exposure review remains open.
+
+## 2026-10-01 - Finite-momentum thermal 1PI and infrared boundary
+
+MAJOR_RESULT_CLOSURE: T13_FINITE_MOMENTUM_THERMAL_1PI_AND_INFRARED_BOUNDARY is CLOSED_FOR_LANE for fixed-Phi formal thermal one-loop response.
+
+WHAT_IS_ACTUALLY_CLOSED: Computed the full two-by-two finite-q thermal bubble, its order-matched inverse and upper-half-plane continuation. Independent external-frequency matrix sums agree. Static phase curvature reproduces the prior one-loop current, and the full radial bubble reproduces the derived 1/q infrared coefficient.
+
+WHAT_REMAINS_OPEN: IR/current-preserving completion, real-axis limit, jointly stationary Phi/material response, independent inputs, normal component and controlled remainder. No physical sound, Kubo or full Topic13 closure follows.
+
+DEPENDENCY_UNLOCKED: Same-lane infrared/response completion design only; no Core or physical funding gate change.
+
+STATUS: PASS_SCOPED_FINITE_MOMENTUM_THERMAL_1PI. Original failed tree lift and Gaussian stationarity no-go are preserved by hash.
+
+WHAT_CHANGED: Added finite-q verifier, eleven tests, artifact/derivation; synchronized formula audit, limitations, README, funding controller/plans/Goal brief. No Core edits or target/calibration inputs.
+
+EQUATION_OR_MAPPING: B_sigma(0,q)~-lambda*r*T/(4Z^2*q); q_IR=lambda*T/(8Z^2)=0.0275 at the fixed witnesses. delta_Z_pi=[B_pi(q)-B_pi(0)]/q^2, with f=Z*(x+delta_x)+Z*x*delta_Z_pi. The finite-q inverse is not used as a Dyson-resummed propagator.
+
+VERIFICATION: 55 focused/related tests pass, including eleven new tests and the funding-plan hash/date contract. Static/complex-frequency refinements, full IR limit, separate phase-gradient convergence, independent matrix sums, unit/coupling/T0 limits, retarded reality and protected hashes checked. Initial linear-cosine dynamic quadrature failed absolute 1e-6; an exact log-ell coordinate repaired it without changing tolerance or parameters. Artifact SHA-256 6cd8271ee3083f8c0f68b4a37b63c52586ab8b1ddf1b432e26dbe41a0d1d1cd8. New-head remote CI is not yet checked.
+
+CONTROLLING_BLOCKER: nonuniform_IR_loop_expansion_and_real_axis_response_not_closed.
+
+NEXT_ACTION: Match an amplitude-direction/hydrodynamic treatment to the same 1/q coefficient and static current, including observable Jacobian/Ward conditions; then close the real-axis and physical material/protocol admission. D5 scientific decision and 11 October portfolio target remain unchanged.
+
+CLAIM_BOUNDARY: Derived thermal response/IR boundary in one fixed-Phi natural-unit lane; not exact equilibrium, physical instability, independent He-II/graphite prediction, external validation or global closure. No clipping/filter/cutoff/fit/holdout read in this wave; prior Xie context-exposure review remains open.
+
+## 2026-10-01 - Thermal one-loop Ward and static-current matching
+
+MAJOR_RESULT_CLOSURE: T13_THERMAL_ONE_LOOP_WARD_AND_STATIC_CURRENT_MATCH is CLOSED_FOR_LANE at formal thermal one-loop order, fixed Phi.
+
+WHAT_IS_ACTUALLY_CLOSED: Actual tadpole and bubble satisfy the transverse zero-momentum Ward relation and cancel the order-matched condensate shift. Static current equals the prior path curvature in this order.
+
+WHAT_REMAINS_OPEN: Finite-q/frequency retarded vertices, infrared resummation, joint Phi background, vacuum/material matching, error control and physical source/detector/normal-component admission.
+
+DEPENDENCY_UNLOCKED: Fixed-Phi one-loop static-current design only; no physical funding gate or Core-composition rewrite.
+
+STATUS: PASS_THERMAL_ONE_LOOP_WARD_CURRENT; original exact Gaussian no-go and failed tree lift preserved.
+
+WHAT_CHANGED: Added loop verifier/nine tests/artifact/derivation, formula-audit rows and synchronized limitations/funding plans. No Core equations, target rows, calibration or thresholds changed.
+
+EQUATION_OR_MAPPING: Sigma_pi,T(0)=2Omega_G,x/Z; delta_x=-2Omega_G,x/lambda; f_1loop=f_held+Z*delta_x=f_path. Bare amplitude-Hessian radial integrand tends to -g^2*T/(4pi^2*k^2).
+
+VERIFICATION: 44 focused/related tests pass, including nine new tests. Direct Matsubara/vacuum numerical subtraction agrees with residues to 6.29e-11 relative; algebra/current residuals are below 1.4e-17. IR test refined k instead of loosening its tolerance after an initial finite-step failure. Artifact SHA-256 cfd794f8d1f7ab1de4d3e3b9feb991957c76d57d40375ddd6bbab2a8a2a514aa. All relevant PR #30 checks passed on previous head 03739b3f9; new-head CI remains to be reviewed.
+
+CONTROLLING_BLOCKER: finite_momentum_retarded_Ward_current_and_IR_resummation_not_derived.
+
+NEXT_ACTION: Derive the finite external momentum/frequency loop kernel in the same prescription; classify the nonuniform IR limit before resummed-state or longitudinal response admission. Keep D5 physical G1/G2 unresolved unless their independent admissions exist.
+
+CLAIM_BOUNDARY: Thermal one-loop static/zero-momentum derivation at fixed Phi, not exact finite-T equilibrium, physical He-II prediction, Kubo coefficient, controlled remainder or global closure. No Xie access or fit.
+
+## 2026-10-01 - Funding timeline and model-selection revision
+
+MAJOR_RESULT_CLOSURE: Planning contract revised; no scientific closure or Core status changed.
+
+WHAT_IS_ACTUALLY_CLOSED: The existing 14-day/12-week plan now distinguishes research-result, portfolio-review and submission readiness, with explicit A-E work-package acceptance and a missed-round scenario.
+
+WHAT_REMAINS_OPEN: Matched stationary finite-T response, independent material/source/detector admission, physical comparison, novelty review, funder deadline, PI eligibility and resources.
+
+DEPENDENCY_UNLOCKED: None. Recorded bounded O(2)/He-4 composition is not overwritten by new diagnostic flags.
+
+STATUS: PLANNING_REVISION; scientific funding objective remains unresolved/partial, not completed by this document.
+
+WHAT_CHANGED: Updated the canonical roadmap, planning JSON and Goal brief; added planning-contract regression tests. Astra/high owns critical decisions, Sol 6.1/high is the proposed implementation model, not an automatic setting change.
+
+EQUATION_OR_MAPPING: No equation changed. The existing amplitude-path/tadpole boundary determines the next matched Ward/current research package.
+
+VERIFICATION: Official OpenAI model-selection/Astra/Sol 6.1 pages retrieved on 1 October. Four planning/date/link/hash tests plus eleven thermal/operator tests passed (15 total). Whitespace review passed. A separate full thermal run passed 31 tests; none of these checks establishes empirical validation.
+
+CONTROLLING_BLOCKER: joint_finite_T_stationary_current_response_not_derived; funder/PI information separately controls actual submission readiness.
+
+NEXT_ACTION: D5 route decision on 2 October; scientific freeze on 7 October; portfolio target remains 11 October. W4/W6/W8/W12 accept evidence, not elapsed time.
+
+CLAIM_BOUNDARY: Planning and model recommendations only. No guarantee of a funding round in two to three months, physical validation, Full Topic13 closure, Goal reconfiguration or model switching.
+
 ## 2026-09-07 - Finite-q thermoelastic compatibility
 
 MAJOR_RESULT_CLOSURE: T13_THERMOELASTIC_FINITE_Q_COMPATIBILITY is CLOSED_FOR_LANE under a conditional material ansatz; Full Topic 13 is not unlocked.
@@ -6261,6 +6885,58 @@ CONTROLLING_BLOCKER: `formal_tree_stiffness_to_finite_T_relative_flow_current_an
 NEXT_ACTION: Use the conditional tree relation `-2F_X=f_s_tree=Z*q/lambda` only under matched phase normalization; derive the finite-T current/operator and independently selected material state. If this lift fails, identify independent measurement or prove a UET-class ambiguity; do not count this external EFT witness as G2.
 
 CLAIM_BOUNDARY: Rest-EOS-only theorem in a comparator class, not a UET no-go, He-II prediction, external validation or Full Topic 13 closure.
+
+## 2026-10-01 - Conditional pressure-Hessian operator domain decision
+
+MAJOR_RESULT_CLOSURE: `T13_CONDITIONAL_PRESSURE_HESSIAN_TWOFLUID_OPERATOR` is `PARTIAL`; the direct tree-stiffness constitutive lift is rejected at one fixed witness.
+
+WHAT_IS_ACTUALLY_CLOSED: Rest-pressure Hessian plus relative-flow stiffness reduces to a five-coefficient longitudinal operator. The analytic stiffness interval and independent eigensolver agree with direct roots. The existing `mu=1.05` tree lift produces `c_high^2=1.82191297`; its failure survives refinement.
+
+WHAT_REMAINS_OPEN: Joint finite-T condensate/current/normal-component completion, independent material state and units, source/detector/dissipative response, clean Core admission and independent data.
+
+DEPENDENCY_UNLOCKED: Conditional operator/measurement design only; physical G1/G2 and Full Topic 13 stay open.
+
+STATUS: `FAIL_CONDITIONAL_OPERATOR_SCREEN`; numeric-method checks pass. The `mu=1.20` witness has `c^2=0.13377467,0.65789519` and is conditionally admissible only.
+
+WHAT_CHANGED: Added verifier, generated JSON, action-expansion tests and derivation note; linked evidence/blocker in funding JSON, 14-day plan, 12-week roadmap and limitations. Core sources/calibration unchanged.
+
+EQUATION_OR_MAPPING: `F=F0(b,y)-f_s(X+y^2)/2`; `F0=p-T*s`; the finite-T identification `f_s=Z*q/lambda` is postulated and fails on part of the declared domain.
+
+VERIFICATION: Eight Topic13 tests and twelve directly related Core regressions pass. An initial direct-import collection error was repaired using explicit file loading. Last step refinements are 3.19e-5/1.20e-4; quadrature refinements are 3.22e-8/8.90e-8. Evidence SHA-256 `8606303e4818030dd74061c14b243542c19c4cbb262dda29261951d4c87d6412`. No measured rows, fit or Xie 2026 input.
+
+CONTROLLING_BLOCKER: `finite_T_relative_flow_current_and_normal_component_UET_match_not_derived`.
+
+NEXT_ACTION: Derive stationary finite-T relative-flow response and check the analytic interval; use D5 to choose the evidence-supported route without promoting unresolved physical G1/G2.
+
+CLAIM_BOUNDARY: Conditional imported EFT domain decision, not a UET no-go, physical He-II prediction, nonlinear causal proof or Full Topic 13 closure.
+
+## 2026-10-01 - Cross-platform conditional-operator reproduction repair
+
+MAJOR_RESULT_CLOSURE: No scientific closure change; the conditional operator remains PARTIAL.
+WHAT_IS_ACTUALLY_CLOSED: Numeric reproduction is tested separately from exact source hashes, schema, classifications and acceptance thresholds.
+WHAT_REMAINS_OPEN: Finite-T current/normal-component matching and physical admissions.
+DEPENDENCY_UNLOCKED: None.
+STATUS: Local changed-test verification passes; remote CI must run on the repair commit.
+WHAT_CHANGED: Replaced bitwise nested float equality with a numeric comparison (relative 1e-6, absolute 1e-9); exact top-level records, hashes and booleans remain required. Added drift-rejection tests and a live secular residual bound of 1e-12.
+EQUATION_OR_MAPPING: Unchanged pressure-Hessian and stiffness bounds.
+VERIFICATION: Linux CI on commit 1bdbd90a8 failed exact equality: Hessian roundoff and derived refinement ratios differed, with example step-refinement changes differing by about 6.35e-10. This tolerance is confined to numerical reproduction, below the existing 1e-3 refinement gate; the c^2<1 condition is unchanged. No artifact regeneration or hash change.
+CONTROLLING_BLOCKER: finite_T_relative_flow_current_and_normal_component_UET_match_not_derived.
+NEXT_ACTION: Rerun remote CI and continue the action-derived gradient-curvature task.
+CLAIM_BOUNDARY: Cross-platform testing repair only; no change to scientific status, calibration or holdout policy.
+
+## 2026-10-01 - Thermal phase-gradient curvature and amplitude-path decomposition
+
+MAJOR_RESULT_CLOSURE: `T13_TREE_RELAXED_THERMAL_PHASE_GRADIENT_CURVATURE` is CLOSED_FOR_LANE in the declared approximation; Full Topic13 stays open.
+WHAT_IS_ACTUALLY_CLOSED: Thermal gradient curvature is calculated from action-spectrum implicit derivatives and independent moving-pressure differences. The nonstationary amplitude-path term is independently reproduced from Core's off-shell Gaussian derivative.
+WHAT_REMAINS_OPEN: Joint finite-T amplitude/Phi stationarity, matched microscopic Ward/self-energy and driven current response, physical material/normal-component/source/uncertainty and clean Core admission.
+DEPENDENCY_UNLOCKED: Static relative-flow design only; G1/G2/full_core_unlock stay false.
+STATUS: PASS_TREE_RELAXED_THERMAL_CURVATURE; nine scoped checks pass. The original tree-only constitutive screen remains FAIL.
+WHAT_CHANGED: Added verifier, five tests, generated JSON and formula/derivation note; synchronized limitations, funding controller and plans. No Core or calibration changes.
+EQUATION_OR_MAPPING: `f_path=f_tree+integral[n_B*E_xixi-n_B*(1+n_B)*E_xi^2/T]`; `f_path=f_held-2Z*Omega_x/lambda`.
+VERIFICATION: 31 focused/related tests pass. Direct/implicit relative disagreements 1.54e-6 and 2.96e-7; path chain-rule residual <=6.94e-18. Source hashes match. Artifact SHA-256 `324b8f52002a981929e61c6fd838f4876a87d6655b814603ef182740b3648084`. All relevant PR30 checks passed on test-repair commit 005ae47b1; the new science commit will trigger a separate run. No fit, measured response payload or Xie 2026 input.
+CONTROLLING_BLOCKER: joint_finite_T_stationary_current_response_not_derived.
+NEXT_ACTION: Derive matched tadpole and Ward/self-energy response; do not claim exact stationary current from the tree-relaxed path. Keep D5 physical G1/G2 unresolved absent actual admission.
+CLAIM_BOUNDARY: Static thermal determinant and path-versus-partial-curvature result only. Linearized amplitude shifts require loop matching and are not new solved backgrounds, physical normal density or He-II predictions.
 
 ## 2026-09-30 - PR #28 reproducibility and artifact-link repair
 

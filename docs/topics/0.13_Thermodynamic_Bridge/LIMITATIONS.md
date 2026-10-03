@@ -1,5 +1,255 @@
 # Limitations
 
+## Thermal Cuts Do Not Close A Full Collision Operator (2026-10-03)
+
+The [thermal result](Result/artifacts/T13_THERMAL_CUT_STIFFNESS_2026-10-03.md)
+is LO vertices/canonical residues with tree curvature for support, not the
+full curved loop. Static linear-loop coherence does not close dynamics,
+two-loop pressure, normal/heat/Kubo/KMS/entropy or Kelvin/material mapping.
+Tiny sampled widths and numerical tails are not total physical remainder
+bounds. Full curved residues/vertices/source/local matching and thermal
+sunset remain controlling. No full Goal/R1-R5/physical unlock is admitted.
+
+## Cut And Log Do Not Determine Full Real Response (2026-10-03)
+
+The [vacuum successor](Result/artifacts/T13_VACUUM_CUT_LOG_2026-10-03.md)
+is a formal LO linear-phase loop modulo local matching, not a complete
+curvature-resummed near-shell response or microscopic Wilson match.
+On-shell data see one local combination in the restricted class; four
+off-shell canonical/source coefficients are not four independent physical
+parameters. Field redefinitions/contact and finite-T sunset/source/entropy
+remain open. Neither mathematical UV integration nor a finite cut bounds
+the unknown physical remainder. Physical inputs/normal/heat/KMS transport,
+Full Topic13/R1-R5/Goal and original causal admission remain unaccepted.
+
+## Interaction Kernel Is Not Full Thermal Closure (2026-10-02)
+
+The [new calculation](Result/artifacts/T13_LOW_T_INTERACTIONS_2026-10-02.md)
+supplies leading zero-T Beliaev attenuation and tree-dispersion T8, not a
+complete finite-q or finite-T damping rate. Its small quartic thermal-thermal
+piece does not bound omitted cubic-sunset/mixed diagrams or unknown Wilson
+matching. Bose gain/loss identity is not SK/KMS/noise or entropy-transport
+closure. Next controller: renormalized cubic-sunset/vacuum Wilson matching.
+Full Topic13/R1-R5/Goal, material/readout/scale, finite-T normal/heat/Kubo
+transport and original causal admission remain open. No physical/global
+unlock, old Hartree repair, pristine-blind claim or new numeric Xie access.
+
+## New Phase-EFT Thermal Difference Boundary (2026-10-02)
+
+[New EFT evidence](Result/artifacts/t13_low_T_phase_eft.json) closes a
+tree-matched phase-only thermal prescription, not a controlled full quantum
+EOS or full finite-T normal/dissipative response. Vacuum Wilson matching,
+phonon interactions, other modes and physical input/scale/readout remain
+open; good T6 convergence bounds only the compared tree acoustic dispersion
+approximation. The source-derived Phi shift is natural/state dependent,
+not alpha_Phi_K. Dispersion identifies an invariant kinetic combination,
+not Z_Phi separately without normalization. Its small trial sensitivity
+does not establish practical measurement precision. Old Hartree no-go and
+conserved-C failure are not repaired, owner composition is not changed,
+and Full Topic13/Core/funding acceptance is not promoted.
+
+## Conditional Low-T EOS Exclusion (2026-10-02)
+
+[Low-T evidence](Result/artifacts/t13_hartree_low_T_validity.json) blocks
+asymptotically complete EOS admission of this unchanged joint Hartree
+prescription, conditional on a physical equilibrium bosonic interpretation
+of its external phase mode. Its internal positive gap produces exponential
+entropy despite consistent stationarity/envelope/current checks. Not global
+UET no-go, missing-data no-go, a new approximation or a finite-T validity
+interval. Deep-T legacy logarithmic precision loss is disclosed; independent
+stable quadrature controls the asymptotic evidence. Old response intact.
+Next: consistent thermal approximation/restricted validity and independent
+inputs. No mass/phonon repair, Core-owner edit or full Goal acceptance.
+
+## Joint Classical-Phi Dynamic Boundary (2026-10-02)
+
+[Joint retarded evidence](Result/artifacts/t13_hartree_joint_phi_response.json)
+closes a computed classical-Phi candidate response and six local phase
+poles, not the full-frequency/gapped-Phi spectrum, global/causal domain,
+regulator/RG or Hartree error. Static charge consistency is not a physical
+heat/entropy/dissipative balance. No independently admitted material/thermal
+or source/readout map follows, nor a SI alpha or Kubo/collision coefficient.
+That wave left low-temperature EOS/external-mode consistency open; the
+new conditional admission disposition above now controls it. Do not repair an
+internal Goldstone mass or add collective phonon free energy by hand.
+All physical/Full Topic13 gates, the original conserved-C failure and
+Core-owner composition remain unchanged. Xie exposure stays REVIEW_REQUIRED.
+
+## Joint Classical-Phi Static Boundary (2026-10-02)
+
+[Joint-Phi evidence](Result/artifacts/t13_hartree_joint_phi_static.json)
+is homogeneous classical background stationarity with Hartree matter loops.
+Positive amplitude/Phi curvature is local static evidence, not a global
+phase minimum, joint finite-q stability, quantum Phi fluctuations, covariant
+kinetic renormalization or controlled Hartree error. Formal D/D2 and unit
+rescaling are not physical regulator/RG proof. The old fixed-Phi poles are
+not reused as new-branch poles. No material source/thermal scale or physical
+heat/collision/Kubo/KMS/entropy contract is admitted. Full scientific Goal
+and physical gates remain open; prior Xie exposure stays REVIEW_REQUIRED.
+
+## Actual Finite-q Pole Scope (2026-10-02)
+
+The [new pole artifact](Result/artifacts/t13_hartree_finite_q_poles.json)
+computes six actual poles, not just the soft approximation. Its lower-sheet
+strip, fixed grids and vacuum series are local; numerical convergence and
+an angular-series bound are not a Hartree remainder or global stability.
+Pole approach does not prove a uniform q^2 expansion. Source-block unit
+rescaling is not full-loop RG invariance. Windows longdouble is 64-bit in
+this run; extended precision is not assumed. Collective Landau absorption
+is not a particle collision lifetime or physical Kubo coefficient. Joint
+Phi/action normalization, material/thermal input and physical transport
+remain open. R1/full Goal and physical gates are unchanged; older results
+retain their own scopes/failures. No new numeric Xie read; prior exposure
+remains review-required.
+
+## Finite-q Density-Only Boundary (2026-10-02)
+
+The [finite-q successor](Result/artifacts/T13_HARTREE_FINITE_Q_DISCONTINUITY_2026-10-02.md)
+computes local spectral discontinuity, not the finite-q principal kernel or
+pole. Its complex evaluations use prior soft poles as reference points only.
+Agreement with original all-channel cuts is restricted to the declared real
+grid; sampled Bose-domain checks and two tail paths are not certified global
+cut exclusion or contour homotopy. Finite-q differences are not Hartree
+truncation bounds or physical uncertainty. Approximation/action, joint Phi,
+material/temperature/heat-current input and all physical/Core gates remain.
+Original conserved-C leakage and independent alpha/source blockers are unchanged.
+
+## Collisionless Soft Collective Boundary (2026-10-01)
+
+The [local complex-pole successor](Result/artifacts/T13_HARTREE_SOFT_POLES_2026-10-01.md)
+is admitted only in its positive-cut fixed-Phi continuation domain. A
+simple v=z/q pole is not a measured mode, collision coefficient or uniform
+finite-q expansion. Sampled winding cannot exclude upper poles outside
+the rectangle, in the excluded near-real strip or between samples.
+Complex-tail agreement and sampled Bose checks are not certified global
+holomorphy. Hartree remainder/full action, joint Phi/material and physical
+normal/heat/KMS/entropy remain open. The older artifact below does not
+acquire complex-pole scope retroactively.
+
+The [soft response](Result/artifacts/T13_HARTREE_SOFT_COLLECTIVE_2026-10-01.md)
+is derived in the unchanged gapped internal Hartree prescription at fixed
+Phi. Its thermal ray dependence rules out replacing the computed dynamical
+kernel by the static susceptibility/stiffness polynomial on these witnesses.
+Absorption at the reactive zero does not determine a complex pole, collision
+width, first/second sound speed, Kubo transport or material attenuation.
+Finite-q corrections and quadrature differences remain separate; neither
+is a Hartree remainder bound. There is no global stability, joint-Phi or
+material/normal/heat-current/KMS/entropy admission. The earlier massless
+composite IR results and physical/Core gates are preserved, not repaired by
+the internal gap. Prior Xie exposure remains REVIEW_REQUIRED.
+
+## Scoped Real-Axis Boundary (2026-10-01)
+
+The [real-axis successor](Result/artifacts/T13_HARTREE_REAL_AXIS_2026-10-01.md)
+admits ten fixed-Phi q>0 grid calculations, not arbitrary parameters,
+asymptotic thresholds, collective poles or the uniform Goldstone/DC limit.
+Endpoint-scan agreement and numerical differences are not certified error or
+Hartree truncation bounds. Internal Hartree gaps do not erase the preceding
+massless/composite IR continuum. Pair/scattering absorption is not a measured
+collision width, physical Kubo, normal component, heat/entropy transport or
+microscopic SK/KMS closure. All regulator/action, joint Phi, material/input
+and physical admission requirements remain. The predecessor retains its
+static/upper-half-plane-only scope; it was not silently broadened.
+
+## Computed External Field Response Boundary (2026-10-01)
+
+The [rest-frame current successor](Result/artifacts/T13_HARTREE_GAUGE_CURRENT_2026-10-01.md)
+closes actual source/current loops and contact Ward at fixed Phi, not the full
+thermal bridge. Its finite F_A^2 source normalization is a convention, not an
+admitted microscopic input. The frequency-first UV surface is removed using
+analytic asymptotics and checked independently, not tuned to a Ward residual.
+Only homogeneous isotropic rest-frame and static/upper-half-plane responses
+are admitted here; neither collision damping nor heat current is calculated.
+Full nonuniform covariant regulator/RG, real-axis IR/truncation control, joint
+Phi/global state, material/normal-component/SK-KMS and source uncertainty remain.
+Positive candidate stiffness and numerical precision do not establish material
+stability, physical transport, uncertainty or a physical Core unlock.
+
+The [external field result](Result/artifacts/T13_HARTREE_EXTERNAL_RESPONSE_2026-10-01.md)
+adds finite-q upper-half-plane covariance/source response, matched to the
+previous finite tadpoles with an explicit vacuum subtraction. It does not yet
+compute gauge-current contacts or the real-axis spectrum. Grid convergence and
+routing agreement are not a global analyticity/stability proof, a truncation
+bound, a full covariant regulator/RG construction or physical uncertainty.
+Generated internal gaps do not establish disappearance of the earlier physical
+IR continuum. Joint Phi, independent material/source/detector and microscopic
+SK/KMS/transport remain open; no physical or Core gate changes.
+
+## Finite Hartree and Counterterm Scope (2026-10-01)
+
+The [stationary candidate](Result/artifacts/T13_RENORMALIZED_HARTREE_BACKGROUND_2026-10-01.md)
+and [counterterm match](Result/artifacts/T13_HARTREE_COUNTERTERM_MATCHING_2026-10-01.md)
+close a fixed-Phi finite prescription and homogeneous on-gap algebra, not trial
+action-input/material identity, RG invariance, global minimum, finite-q stability
+or joint Phi dynamics. Fixed-Phi normalization can depend on m(Phi); dropping it
+in a joint-Phi equation needs a separate contract.
+
+The internal gap cannot replace physical source response or the preceding
+composite to remove its IR continuum. That predecessor matched static curvatures;
+its successor above adds a computed subtracted external field response. The
+original conditional vertex identity assumes its vacuum-divergence form;
+complex probes are not frequency loops/KMS transport. Formal divergence values
+are not a UV regulator/continuum limit. Thermodynamic energy/entropy identities
+are not a dynamical ledger or entropy production. No physical/Core gate or new
+holdout eligibility follows; original Gaussian/tree failures remain.
+
+## Conditional Dynamic Composite Boundary (2026-10-01)
+
+The [dynamic phase result](Result/artifacts/T13_POLAR_DYNAMIC_COMPOSITE_2026-10-01.md)
+closes a leading conditional source continuum, time response and Gaussian
+current-contact identity, not a complete stationary microscopic response.
+An oscillatory 1/t tail and continuum absorption do not establish collision
+damping, transport coefficients, normal component or entropy production.
+Detailed balance/FDT is checked for the full Gaussian correlator, not used to
+declare microscopic SK/KMS matching or applied to the thermal difference alone.
+
+The exact ideal threshold is logarithmically singular and is not broadened or
+clipped. The vacuum static susceptibility still needs UV matching. The
+all-momentum linear Gaussian thermal extension is only a cross-check:
+T/[c*sqrt(2r)] is 2.18/0.636 in the fixed witnesses, not a controlled microscopic
+thermal regime. IR convergence inside that extension does not supply the
+missing full-action error bound or renormalized amplitude/Phi equilibrium.
+Retarded phase-time support does not repair the original conserved-C leakage
+gate. No physical/funding/Core promotion or new holdout eligibility follows.
+
+## Polar Static IR and Source-Complete Boundary (2026-10-01)
+
+The [same-action polar result](Result/artifacts/T13_POLAR_STATIC_IR_OBSERVABLE_2026-10-01.md)
+reconstructs a conditional positive Cartesian longitudinal susceptibility
+with the same 1/q coefficient as the earlier microscopic bubble. It does not
+remove that divergence; the susceptibility diverges positively and its inverse
+approaches zero. The radial modulus, Cartesian longitudinal field and thermal
+observable are different and cannot be substituted for one another.
+
+An offshell polar phase Hessian can vanish while the radial tadpole is nonzero.
+With the proper Cartesian Legendre source and polar Jacobian, the Gaussian
+kernel/logdet and original positive thermal derivative are recovered. Thus
+the Gaussian stationarity no-go is preserved, not repaired by coordinates.
+Common-regulator Gaussian measure matching is closed; vacuum/interacting
+counterterms, renormalized order parameter, joint Phi equilibrium, dynamic
+composite/current response and physical input remain open. Using the prior
+one-loop current as a stiffness is a conditional template, not a microscopic
+resummation. No physical prediction, target fit or new blinding eligibility.
+
+## Finite-Momentum Thermal Loop Boundary (2026-10-01)
+
+The [finite-q thermal calculation](Result/artifacts/T13_FINITE_MOMENTUM_THERMAL_1PI_2026-10-01.md)
+now computes the Cartesian two-by-two bubble and order-matched inverse at
+fixed Phi, including upper-half-plane frequency continuation. Static phase
+curvature agrees with the prior one-loop current. This supersedes the statement
+that the finite-q thermal bubble has not been calculated, not the remaining
+need for physical current vertices or a jointly stationary background.
+
+The full radial bubble has a `-lambda*r*T/(4Z^2*q)` infrared term. At the fixed
+natural-unit witnesses its leading correction exceeds the tree radial mass
+for q below 0.0275. Negative bare inverse values are an uncontrolled-expansion
+diagnostic, not admitted material instability. This is neither a resummation
+nor a proof of global no-go. No physical real-axis damping, Kubo coefficient,
+independent He-II/graphite prediction or truncation-error bound is emitted.
+The zero Matsubara mode is integrated exactly and added back; no filter,
+clipping, momentum cutoff, fit or holdout read is used in this wave. Prior
+Xie context exposure remains review-required; no pristine blinding is claimed.
+
 ## He-II Isothermal-Response Source Route (2026-09-27)
 
 The current He-4 SVP density/superfluid package does not provide an accepted
@@ -534,3 +784,38 @@ phase normalization, branch and natural units. This does not establish a
 finite-T current or an He-II map, nor that either EFT
 completion is an admitted UET or He-II model. Its subluminal check is local
 to the linear longitudinal witness, not a proof for all UET branches.
+
+The [conditional pressure-Hessian operator](Result/artifacts/T13_CONDITIONAL_TWOFLUID_OPERATOR_2026-10-01.md)
+reduces the imported nondissipative two-fluid EFT to rest-pressure derivatives
+and a separately supplied relative-flow stiffness. Inserting Core tree
+stiffness directly yields a superluminal linear mode at the existing
+`mu=1.05` witness; refinement does not remove this failure. The `mu=1.20`
+witness passes only the local conditional linear-mode screen. Neither point
+is a physical He-II state. A finite-T current and normal component must be
+derived consistently before this operator can support UET prediction. The
+analytic stiffness interval is a consistency bound, not an independently
+calibrated value or permission to tune stiffness to response data.
+
+The [moving-background thermal curvature](Result/artifacts/T13_THERMAL_GRADIENT_CURVATURE_STATIONARITY_2026-10-01.md)
+calculates the missing thermal phase-gradient term without fitting. It makes
+both fixed witnesses pass the conditional local mode screen, but the
+tree-relaxed pressure derivative includes a nonzero amplitude path term.
+The tree amplitude is not jointly stationary in the existing thermal-only
+Gaussian class. A held-amplitude partial derivative is different and cannot
+be mixed with tree-relaxed EOS derivatives as though the protocols matched.
+At that wave the inferred linearized tadpole shift required a matched
+Ward/self-energy correction that had not yet been computed. Thus the
+new static curvature is not yet an admitted stationary current, controlled
+finite-T completion, physical normal density, Kubo coefficient or He-II
+prediction. A consistent perturbative completion remains a research route.
+
+The subsequent [thermal one-loop Ward/current calculation](Result/artifacts/T13_THERMAL_ONE_LOOP_WARD_CURRENT_2026-10-01.md)
+computes the transverse tadpole and bubble at zero external momentum and
+matches the static current to first loop order at fixed Phi. It does not
+impose a state-dependent counterterm to force the equality. This narrows the
+missing-loop obligation, but joint Phi stationarity, a stable resummed
+finite-T background, finite-momentum retarded response and material/transport
+admission remain open. The bare amplitude Hessian has an infrared k^-2
+radial-integrand term; a finite-grid derivative is not a controlled
+continuum uncertainty. This singular bare expansion does not imply that a
+physical second-sound observable must diverge or that all completions fail.

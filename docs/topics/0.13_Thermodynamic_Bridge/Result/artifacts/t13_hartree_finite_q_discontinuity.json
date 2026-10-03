@@ -1,0 +1,1306 @@
+{
+  "schema_version": "t13-hartree-finite-q-discontinuity-v1",
+  "generated_at": "2026-10-01T17:12:25.168184+00:00",
+  "major_result_id": "T13_FIXED_PHI_HARTREE_FINITE_Q_LANDAU_DISCONTINUITY",
+  "topic": "0.13",
+  "branch_id": "t13.candidate.fixed_phi_hartree_ms_finite_potential_v1",
+  "closure_level": "CLOSED_FOR_LANE",
+  "verification_status": "PASS_SCOPED_FINITE_Q_DISCONTINUITY",
+  "what_is_closed": [
+    "finite_q_signed_mode_thresholds_and_analytic_shell_numerator",
+    "local_complex_thermal_discontinuity_agrees_with_original_real_cuts",
+    "two_tail_paths_and_soft_limit_density_diagnostic"
+  ],
+  "equation_or_mapping": "ell=p_j(k)+q*v; sign_j*(E_j(k+sign_j*q)-E_j(k))=q*v; D(q,v)=sum_j integral_{k_j(q,v)}^infinity k^2/(4*pi^2)*N_joint*sign_j*d(r^2)/dell/(2*k*q) dk; B_L=B_principal_lower-2*pi*i*D(q,v)",
+  "units": {
+    "q_k_ell_T_mu": "E",
+    "v": "dimensionless",
+    "bubble_density": "dimensionless",
+    "mixed_density": "E",
+    "current_density": "E^2"
+  },
+  "derivation_class": "LOCAL_FINITE_Q_ON_SHELL_DISCONTINUITY_WITH_COMPLEX_THRESHOLD_QUADRATURE",
+  "observable": "conditional_source_response_discontinuity_not_a_finite_q_pole_or_heat_transport",
+  "data_role": "DERIVED_NO_EMPIRICAL_ROWS",
+  "equation_registry_ids": [
+    "t13.diagnostic.hartree_finite_q_local_discontinuity"
+  ],
+  "examples": [
+    {
+      "T": 0.22,
+      "mu": 1.05,
+      "Phi_fixed": 0.15,
+      "a": 0.23346308945060604,
+      "b": 0.009691508884317981,
+      "s": 0.11673154472530303,
+      "u_canonical": 1.0,
+      "complex_density_runs": [
+        {
+          "q": 0.04,
+          "velocity_reference_is_prior_soft_pole_not_finite_q_pole": {
+            "real": 0.21890393130179722,
+            "imaginary": -0.006968573129433673
+          },
+          "order_refinements": [
+            {
+              "bubble": 2.9513321927081174e-17,
+              "mixed": 7.471907313109154e-17,
+              "reverse": 7.64066433232334e-17,
+              "loop_current": 1.250130239971014e-16
+            },
+            {
+              "bubble": 1.319503888090723e-16,
+              "mixed": 3.750413796310085e-16,
+              "reverse": 3.750413796310085e-16,
+              "loop_current": 5.417543016782575e-16
+            }
+          ],
+          "tail_path_disagreement": {
+            "bubble": 2.8623758707114874e-18,
+            "mixed": 1.4304896245381992e-17,
+            "reverse": 1.4318140714467223e-17,
+            "loop_current": 5.421010862427522e-18
+          },
+          "difference_from_soft_density": {
+            "bubble": 0.00016608823727671892,
+            "mixed": 0.0005191530447820957,
+            "reverse": 0.0005191530447820957,
+            "loop_current": 7.00289369510126e-05
+          },
+          "local_domain_checks": [
+            {
+              "signed_mode": 0,
+              "threshold_k": [
+                0.2684396533456188,
+                -0.008307026745242186
+              ],
+              "shell_root_residual": 9.54105458050931e-17,
+              "minimum_outgoing_energy_real": 2.1803148294993164,
+              "minimum_Bose_denominator": 0.9999503519319114,
+              "minimum_shell_momentum_real": 0.05216465970093509,
+              "threshold_above_q_half": true
+            },
+            {
+              "signed_mode": 1,
+              "threshold_k": [
+                0.1725452654493984,
+                -0.009658899613835875
+              ],
+              "shell_root_residual": 3.4494842464053384e-18,
+              "minimum_outgoing_energy_real": 0.03819495061664027,
+              "minimum_Bose_denominator": 0.1595896173864922,
+              "minimum_shell_momentum_real": 0.01750277938923242,
+              "threshold_above_q_half": true
+            },
+            {
+              "signed_mode": 2,
+              "threshold_k": [
+                0.1325452654493985,
+                -0.009658899613835778
+              ],
+              "shell_root_residual": 1.735570302229821e-18,
+              "minimum_outgoing_energy_real": 0.04694846394428848,
+              "minimum_Bose_denominator": 0.19238836239715065,
+              "minimum_shell_momentum_real": 0.029706384028667154,
+              "threshold_above_q_half": true
+            },
+            {
+              "signed_mode": 3,
+              "threshold_k": [
+                0.22843965334560767,
+                -0.00830702674524212
+              ],
+              "shell_root_residual": 9.54123938444635e-17,
+              "minimum_outgoing_energy_real": 2.1890679015909598,
+              "minimum_Bose_denominator": 0.999952288984038,
+              "minimum_shell_momentum_real": 0.07203318053985353,
+              "threshold_above_q_half": true
+            }
+          ]
+        },
+        {
+          "q": 0.02,
+          "velocity_reference_is_prior_soft_pole_not_finite_q_pole": {
+            "real": 0.21890393130179722,
+            "imaginary": -0.006968573129433673
+          },
+          "order_refinements": [
+            {
+              "bubble": 2.865008087297598e-17,
+              "mixed": 9.027654816460655e-17,
+              "reverse": 8.680993594481623e-17,
+              "loop_current": 1.111342661132997e-16
+            },
+            {
+              "bubble": 1.276279612141848e-16,
+              "mixed": 3.8546804757028335e-16,
+              "reverse": 3.8200423071548005e-16,
+              "loop_current": 5.140624523160961e-16
+            }
+          ],
+          "tail_path_disagreement": {
+            "bubble": 2.120613254665856e-18,
+            "mixed": 4.983793297567119e-18,
+            "reverse": 4.9065389333867974e-18,
+            "loop_current": 5.573474115381696e-17
+          },
+          "difference_from_soft_density": {
+            "bubble": 8.33366827865206e-05,
+            "mixed": 0.00026045512496477164,
+            "reverse": 0.00026045512496477186,
+            "loop_current": 1.7423328165793665e-05
+          },
+          "local_domain_checks": [
+            {
+              "signed_mode": 0,
+              "threshold_k": [
+                0.2584107278509612,
+                -0.008306152262618613
+              ],
+              "shell_root_residual": 4.7709708033824085e-17,
+              "minimum_outgoing_energy_real": 2.1823709341363693,
+              "minimum_Bose_denominator": 0.9999508138995037,
+              "minimum_shell_momentum_real": 0.056818026204704886,
+              "threshold_above_q_half": true
+            },
+            {
+              "signed_mode": 1,
+              "threshold_k": [
+                0.1623251452571541,
+                -0.009700933857881086
+              ],
+              "shell_root_residual": 8.878715554742118e-19,
+              "minimum_outgoing_energy_real": 0.04022730716126598,
+              "minimum_Bose_denominator": 0.16732485343172668,
+              "minimum_shell_momentum_real": 0.020190294079011475,
+              "threshold_above_q_half": true
+            },
+            {
+              "signed_mode": 2,
+              "threshold_k": [
+                0.14232514525715373,
+                -0.00970093385788107
+              ],
+              "shell_root_residual": 8.878715554742118e-19,
+              "minimum_outgoing_energy_real": 0.04460406955521529,
+              "minimum_Bose_denominator": 0.18373490652867583,
+              "minimum_shell_momentum_real": 0.02628330629941314,
+              "threshold_above_q_half": true
+            },
+            {
+              "signed_mode": 3,
+              "threshold_k": [
+                0.23841072785095407,
+                -0.008306152262618575
+              ],
+              "shell_root_residual": 4.770712092401999e-17,
+              "minimum_outgoing_energy_real": 2.186747470019794,
+              "minimum_Bose_denominator": 0.9999517829597458,
+              "minimum_shell_momentum_real": 0.06675112968243369,
+              "threshold_above_q_half": true
+            }
+          ]
+        },
+        {
+          "q": 0.01,
+          "velocity_reference_is_prior_soft_pole_not_finite_q_pole": {
+            "real": 0.21890393130179722,
+            "imaginary": -0.006968573129433673
+          },
+          "order_refinements": [
+            {
+              "bubble": 2.951440476575559e-17,
+              "mixed": 9.375634760324764e-17,
+              "reverse": 9.029477577744368e-17,
+              "loop_current": 9.730797549401432e-17
+            },
+            {
+              "bubble": 1.2936579118866443e-16,
+              "mixed": 3.716110023947679e-16,
+              "reverse": 3.6467934236561583e-16,
+              "loop_current": 5.279198594338166e-16
+            }
+          ],
+          "tail_path_disagreement": {
+            "bubble": 2.074909169069005e-18,
+            "mixed": 1.0418535551549423e-17,
+            "reverse": 9.98529746781315e-18,
+            "loop_current": 1.9097044858894127e-17
+          },
+          "difference_from_soft_density": {
+            "bubble": 4.170473609862703e-05,
+            "mixed": 0.00013033684023507606,
+            "reverse": 0.00013033684023507593,
+            "loop_current": 4.350557215339484e-06
+          },
+          "local_domain_checks": [
+            {
+              "signed_mode": 0,
+              "threshold_k": [
+                0.2534034959512698,
+                -0.008305933627743048
+              ],
+              "shell_root_residual": 1.9820767418504032e-16,
+              "minimum_outgoing_energy_real": 2.1834320248464185,
+              "minimum_Bose_denominator": 0.9999510506220988,
+              "minimum_shell_momentum_real": 0.0592227888447443,
+              "threshold_above_q_half": true
+            },
+            {
+              "signed_mode": 1,
+              "threshold_k": [
+                0.1572702897096082,
+                -0.009711490619902665
+              ],
+              "shell_root_residual": 3.1259367335572516e-18,
+              "minimum_outgoing_energy_real": 0.04128259317667599,
+              "minimum_Bose_denominator": 0.17131226508381894,
+              "minimum_shell_momentum_real": 0.021622216119857984,
+              "threshold_above_q_half": true
+            },
+            {
+              "signed_mode": 2,
+              "threshold_k": [
+                0.1472702897096079,
+                -0.009711490619902494
+              ],
+              "shell_root_residual": 3.051726997190589e-18,
+              "minimum_outgoing_energy_real": 0.043470975089135146,
+              "minimum_Bose_denominator": 0.17951862326931795,
+              "minimum_shell_momentum_real": 0.02466762695041154,
+              "threshold_above_q_half": true
+            },
+            {
+              "signed_mode": 3,
+              "threshold_k": [
+                0.24340349595125155,
+                -0.008305933627742672
+              ],
+              "shell_root_residual": 1.9819293604697295e-16,
+              "minimum_outgoing_energy_real": 2.1856202927678248,
+              "minimum_Bose_denominator": 0.9999515352190202,
+              "minimum_shell_momentum_real": 0.0641891959553682,
+              "threshold_above_q_half": true
+            }
+          ]
+        }
+      ],
+      "original_finite_q_cut_checks": [
+        {
+          "q": 0.04,
+          "velocity_ray": 0.2,
+          "runs": [
+            {
+              "original_full_radial_order": 48,
+              "finite_q_cut_errors": {
+                "bubble": 2.903927098785175e-15,
+                "mixed": 2.3217539002473586e-14,
+                "reverse": 2.3217539002473586e-14,
+                "loop_current": 4.334033132380455e-14
+              },
+              "original_all_pair_cut_max": 0.0
+            },
+            {
+              "original_full_radial_order": 80,
+              "finite_q_cut_errors": {
+                "bubble": 5.516420653606247e-16,
+                "mixed": 1.582067810090848e-15,
+                "reverse": 1.582067810090848e-15,
+                "loop_current": 8.631984016460592e-15
+              },
+              "original_all_pair_cut_max": 0.0
+            }
+          ]
+        },
+        {
+          "q": 0.04,
+          "velocity_ray": 0.3,
+          "runs": [
+            {
+              "original_full_radial_order": 48,
+              "finite_q_cut_errors": {
+                "bubble": 1.0842021724855044e-16,
+                "mixed": 6.418476861114186e-15,
+                "reverse": 6.418476861114186e-15,
+                "loop_current": 8.142098106844742e-14
+              },
+              "original_all_pair_cut_max": 0.0
+            },
+            {
+              "original_full_radial_order": 80,
+              "finite_q_cut_errors": {
+                "bubble": 9.71445146547012e-17,
+                "mixed": 5.273559366969494e-16,
+                "reverse": 5.273559366969494e-16,
+                "loop_current": 2.040034807748725e-15
+              },
+              "original_all_pair_cut_max": 0.0
+            }
+          ]
+        },
+        {
+          "q": 0.04,
+          "velocity_ray": 0.4,
+          "runs": [
+            {
+              "original_full_radial_order": 48,
+              "finite_q_cut_errors": {
+                "bubble": 3.209238430557093e-17,
+                "mixed": 1.0234868508263162e-16,
+                "reverse": 1.0061396160665481e-16,
+                "loop_current": 2.8171909249863347e-15
+              },
+              "original_all_pair_cut_max": 0.0
+            },
+            {
+              "original_full_radial_order": 80,
+              "finite_q_cut_errors": {
+                "bubble": 2.0383000842727483e-17,
+                "mixed": 1.3183898417423734e-16,
+                "reverse": 1.3183898417423734e-16,
+                "loop_current": 4.4825254619240695e-15
+              },
+              "original_all_pair_cut_max": 0.0
+            }
+          ]
+        },
+        {
+          "q": 0.02,
+          "velocity_ray": 0.2,
+          "runs": [
+            {
+              "original_full_radial_order": 48,
+              "finite_q_cut_errors": {
+                "bubble": 2.9733160378242474e-15,
+                "mixed": 2.1926904736346842e-14,
+                "reverse": 2.1926904736346842e-14,
+                "loop_current": 8.618106228652778e-14
+              },
+              "original_all_pair_cut_max": 0.0
+            },
+            {
+              "original_full_radial_order": 80,
+              "finite_q_cut_errors": {
+                "bubble": 2.2724877535296173e-16,
+                "mixed": 3.4555691641457997e-15,
+                "reverse": 3.4555691641457997e-15,
+                "loop_current": 3.279321258986556e-14
+              },
+              "original_all_pair_cut_max": 0.0
+            }
+          ]
+        },
+        {
+          "q": 0.02,
+          "velocity_ray": 0.3,
+          "runs": [
+            {
+              "original_full_radial_order": 48,
+              "finite_q_cut_errors": {
+                "bubble": 1.491862189340054e-16,
+                "mixed": 6.376843497690743e-15,
+                "reverse": 6.376843497690743e-15,
+                "loop_current": 8.117118088790676e-14
+              },
+              "original_all_pair_cut_max": 0.0
+            },
+            {
+              "original_full_radial_order": 80,
+              "finite_q_cut_errors": {
+                "bubble": 1.9081958235744878e-16,
+                "mixed": 1.0824674490095276e-15,
+                "reverse": 1.0824674490095276e-15,
+                "loop_current": 2.914335439641036e-15
+              },
+              "original_all_pair_cut_max": 0.0
+            }
+          ]
+        },
+        {
+          "q": 0.02,
+          "velocity_ray": 0.4,
+          "runs": [
+            {
+              "original_full_radial_order": 48,
+              "finite_q_cut_errors": {
+                "bubble": 1.6132928326584306e-16,
+                "mixed": 9.159339953157541e-16,
+                "reverse": 9.159339953157541e-16,
+                "loop_current": 1.7208456881689926e-14
+              },
+              "original_all_pair_cut_max": 0.0
+            },
+            {
+              "original_full_radial_order": 80,
+              "finite_q_cut_errors": {
+                "bubble": 6.201636426617085e-17,
+                "mixed": 2.671474153004283e-15,
+                "reverse": 2.67841304690819e-15,
+                "loop_current": 2.9656832545299494e-14
+              },
+              "original_all_pair_cut_max": 0.0
+            }
+          ]
+        },
+        {
+          "q": 0.01,
+          "velocity_ray": 0.2,
+          "runs": [
+            {
+              "original_full_radial_order": 48,
+              "finite_q_cut_errors": {
+                "bubble": 3.507610868425104e-15,
+                "mixed": 1.9220736113823023e-14,
+                "reverse": 1.9234613901630837e-14,
+                "loop_current": 1.2288781103819701e-13
+              },
+              "original_all_pair_cut_max": 0.0
+            },
+            {
+              "original_full_radial_order": 80,
+              "finite_q_cut_errors": {
+                "bubble": 6.279698983036042e-16,
+                "mixed": 3.0253577421035516e-15,
+                "reverse": 3.039235529911366e-15,
+                "loop_current": 1.4627188349436437e-14
+              },
+              "original_all_pair_cut_max": 0.0
+            }
+          ]
+        },
+        {
+          "q": 0.01,
+          "velocity_ray": 0.3,
+          "runs": [
+            {
+              "original_full_radial_order": 48,
+              "finite_q_cut_errors": {
+                "bubble": 5.009881398621019e-15,
+                "mixed": 9.141992718397773e-15,
+                "reverse": 9.14893161230168e-15,
+                "loop_current": 7.019385073192552e-14
+              },
+              "original_all_pair_cut_max": 0.0
+            },
+            {
+              "original_full_radial_order": 80,
+              "finite_q_cut_errors": {
+                "bubble": 5.002942504717112e-15,
+                "mixed": 1.3503087537003466e-14,
+                "reverse": 1.3503087537003466e-14,
+                "loop_current": 9.631184738623233e-15
+              },
+              "original_all_pair_cut_max": 0.0
+            }
+          ]
+        },
+        {
+          "q": 0.01,
+          "velocity_ray": 0.4,
+          "runs": [
+            {
+              "original_full_radial_order": 48,
+              "finite_q_cut_errors": {
+                "bubble": 1.0581813203458523e-16,
+                "mixed": 3.1433189384699745e-15,
+                "reverse": 3.1502578323738817e-15,
+                "loop_current": 3.2987501619174964e-14
+              },
+              "original_all_pair_cut_max": 0.0
+            },
+            {
+              "original_full_radial_order": 80,
+              "finite_q_cut_errors": {
+                "bubble": 1.457167719820518e-16,
+                "mixed": 7.008282842946301e-16,
+                "reverse": 6.938893903907228e-16,
+                "loop_current": 2.942091015256665e-15
+              },
+              "original_all_pair_cut_max": 0.0
+            }
+          ]
+        }
+      ],
+      "independent_forward_shell_checks": [
+        {
+          "k": 0.035,
+          "forward_shell_checks": {
+            "shell_residual": 0.0,
+            "relative_slope_FD_disagreement": 0.0,
+            "active_shell_count": 0
+          },
+          "same_signed_active_shell_count": 0,
+          "joint_cut_error": 0.0,
+          "transverse_cut_error": 0.0,
+          "pair_cut_max": 0.0
+        },
+        {
+          "k": 0.09,
+          "forward_shell_checks": {
+            "shell_residual": 0.0,
+            "relative_slope_FD_disagreement": 0.0,
+            "active_shell_count": 0
+          },
+          "same_signed_active_shell_count": 0,
+          "joint_cut_error": 0.0,
+          "transverse_cut_error": 0.0,
+          "pair_cut_max": 0.0
+        },
+        {
+          "k": 0.2,
+          "forward_shell_checks": {
+            "shell_residual": 0.0,
+            "relative_slope_FD_disagreement": 0.0,
+            "active_shell_count": 0
+          },
+          "same_signed_active_shell_count": 0,
+          "joint_cut_error": 0.0,
+          "transverse_cut_error": 0.0,
+          "pair_cut_max": 0.0
+        },
+        {
+          "k": 0.6,
+          "forward_shell_checks": {
+            "shell_residual": 4.440892098500626e-16,
+            "relative_slope_FD_disagreement": 9.100069586764903e-10,
+            "active_shell_count": 4
+          },
+          "same_signed_active_shell_count": 4,
+          "joint_cut_error": 2.3092638912203256e-14,
+          "transverse_cut_error": 1.2212453270876722e-15,
+          "pair_cut_max": 0.0
+        },
+        {
+          "k": 1.5,
+          "forward_shell_checks": {
+            "shell_residual": 4.440892098500626e-16,
+            "relative_slope_FD_disagreement": 2.5864466124403407e-10,
+            "active_shell_count": 4
+          },
+          "same_signed_active_shell_count": 4,
+          "joint_cut_error": 2.831068712794149e-15,
+          "transverse_cut_error": 8.187894806610529e-16,
+          "pair_cut_max": 0.0
+        }
+      ]
+    },
+    {
+      "T": 0.22,
+      "mu": 1.2,
+      "Phi_fixed": 0.15,
+      "a": 0.8998337744103163,
+      "b": 0.012470671054547374,
+      "s": 0.449916887205158,
+      "u_canonical": 1.0,
+      "complex_density_runs": [
+        {
+          "q": 0.04,
+          "velocity_reference_is_prior_soft_pole_not_finite_q_pole": {
+            "real": 0.3742304914863954,
+            "imaginary": -0.003436526693676681
+          },
+          "order_refinements": [
+            {
+              "bubble": 1.2156397780493742e-17,
+              "mixed": 4.1667266230535967e-17,
+              "reverse": 4.1667266230535967e-17,
+              "loop_current": 6.253469106457274e-17
+            },
+            {
+              "bubble": 5.557210413939996e-17,
+              "mixed": 1.841169387871068e-16,
+              "reverse": 1.841169387871068e-16,
+              "loop_current": 3.02191322174053e-16
+            }
+          ],
+          "tail_path_disagreement": {
+            "bubble": 9.522519042060275e-19,
+            "mixed": 3.78695538395053e-18,
+            "reverse": 3.78695538395053e-18,
+            "loop_current": 1.0783315871444213e-17
+          },
+          "difference_from_soft_density": {
+            "bubble": 6.542684211662534e-05,
+            "mixed": 0.00024612873400237415,
+            "reverse": 0.00024612873400237415,
+            "loop_current": 2.1404801334799783e-06
+          },
+          "local_domain_checks": [
+            {
+              "signed_mode": 0,
+              "threshold_k": [
+                0.5791882373022292,
+                -0.005969129958216967
+              ],
+              "shell_root_residual": 7.112515513671458e-17,
+              "minimum_outgoing_energy_real": 2.6839904194263466,
+              "minimum_Bose_denominator": 0.999994969568933,
+              "minimum_shell_momentum_real": 0.29080884307417687,
+              "threshold_above_q_half": true
+            },
+            {
+              "signed_mode": 1,
+              "threshold_k": [
+                0.29583936910211744,
+                -0.008603085919086663
+              ],
+              "shell_root_residual": 2.6020866256864063e-17,
+              "minimum_outgoing_energy_real": 0.10525996704111126,
+              "minimum_Bose_denominator": 0.380426474497066,
+              "minimum_shell_momentum_real": 0.06543589207516493,
+              "threshold_above_q_half": true
+            },
+            {
+              "signed_mode": 2,
+              "threshold_k": [
+                0.25583936910211696,
+                -0.008603085919086635
+              ],
+              "shell_root_residual": 3.9900711441660524e-17,
+              "minimum_outgoing_energy_real": 0.12022750985705663,
+              "minimum_Bose_denominator": 0.4211742618244847,
+              "minimum_shell_momentum_real": 0.08750650279061623,
+              "threshold_above_q_half": true
+            },
+            {
+              "signed_mode": 3,
+              "threshold_k": [
+                0.5391882373022355,
+                -0.005969129958216986
+              ],
+              "shell_root_residual": 3.7296554831993555e-16,
+              "minimum_outgoing_energy_real": 2.698957219400008,
+              "minimum_Bose_denominator": 0.9999953004421696,
+              "minimum_shell_momentum_real": 0.33553784518280594,
+              "threshold_above_q_half": true
+            }
+          ]
+        },
+        {
+          "q": 0.02,
+          "velocity_reference_is_prior_soft_pole_not_finite_q_pole": {
+            "real": 0.3742304914863954,
+            "imaginary": -0.003436526693676681
+          },
+          "order_refinements": [
+            {
+              "bubble": 1.3888371683765852e-17,
+              "mixed": 4.168700957393699e-17,
+              "reverse": 4.341958980212345e-17,
+              "loop_current": 6.252378757796587e-17
+            },
+            {
+              "bubble": 5.644626096243831e-17,
+              "mixed": 1.8586325296318546e-16,
+              "reverse": 1.8932541863351007e-16,
+              "loop_current": 2.8485439095889123e-16
+            }
+          ],
+          "tail_path_disagreement": {
+            "bubble": 1.78487348619467e-18,
+            "mixed": 3.855021054452332e-18,
+            "reverse": 5.339076512604072e-18,
+            "loop_current": 1.420594488758739e-17
+          },
+          "difference_from_soft_density": {
+            "bubble": 3.2720265988189e-05,
+            "mixed": 0.00012308385894077697,
+            "reverse": 0.000123083858940777,
+            "loop_current": 5.37533255442025e-07
+          },
+          "local_domain_checks": [
+            {
+              "signed_mode": 0,
+              "threshold_k": [
+                0.5691507401091069,
+                -0.005968841229783864
+              ],
+              "shell_root_residual": 3.556803110155524e-17,
+              "minimum_outgoing_energy_real": 2.6876317337529247,
+              "minimum_Bose_denominator": 0.9999950521521986,
+              "minimum_shell_momentum_real": 0.3016499315811698,
+              "threshold_above_q_half": true
+            },
+            {
+              "signed_mode": 1,
+              "threshold_k": [
+                0.2857154069379422,
+                -0.008619577887646633
+              ],
+              "shell_root_residual": 7.834450918805864e-18,
+              "minimum_outgoing_energy_real": 0.10889563080513458,
+              "minimum_Bose_denominator": 0.39058121100885645,
+              "minimum_shell_momentum_real": 0.07058743467715328,
+              "threshold_above_q_half": true
+            },
+            {
+              "signed_mode": 2,
+              "threshold_k": [
+                0.26571540693793994,
+                -0.008619577887646569
+              ],
+              "shell_root_residual": 7.809654797966855e-18,
+              "minimum_outgoing_energy_real": 0.11637940381156879,
+              "minimum_Bose_denominator": 0.4109619612405999,
+              "minimum_shell_momentum_real": 0.08161778600897562,
+              "threshold_above_q_half": true
+            },
+            {
+              "signed_mode": 3,
+              "threshold_k": [
+                0.5491507401091097,
+                -0.005968841229783842
+              ],
+              "shell_root_residual": 3.5562412296720266e-17,
+              "minimum_outgoing_energy_real": 2.695115133681242,
+              "minimum_Bose_denominator": 0.9999952176403873,
+              "minimum_shell_momentum_real": 0.32401293288305233,
+              "threshold_above_q_half": true
+            }
+          ]
+        },
+        {
+          "q": 0.01,
+          "velocity_reference_is_prior_soft_pole_not_finite_q_pole": {
+            "real": 0.3742304914863954,
+            "imaginary": -0.003436526693676681
+          },
+          "order_refinements": [
+            {
+              "bubble": 1.2155770740896312e-17,
+              "mixed": 4.3398569372791657e-17,
+              "reverse": 4.513212122256573e-17,
+              "loop_current": 5.90586728411661e-17
+            },
+            {
+              "bubble": 5.644692638289126e-17,
+              "mixed": 1.8407505171112253e-16,
+              "reverse": 1.8237622047019407e-16,
+              "loop_current": 2.813838861192547e-16
+            }
+          ],
+          "tail_path_disagreement": {
+            "bubble": 1.7728964130775964e-18,
+            "mixed": 1.4317242736657077e-17,
+            "reverse": 1.475073052334759e-17,
+            "loop_current": 3.036552814122763e-17
+          },
+          "difference_from_soft_density": {
+            "bubble": 1.6360974928206968e-05,
+            "mixed": 6.154431715976781e-05,
+            "reverse": 6.154431715976783e-05,
+            "loop_current": 1.3454462428616604e-07
+          },
+          "local_domain_checks": [
+            {
+              "signed_mode": 0,
+              "threshold_k": [
+                0.5641413654189209,
+                -0.005968769045814559
+              ],
+              "shell_root_residual": 1.778401555077762e-17,
+              "minimum_outgoing_energy_real": 2.6894774862624815,
+              "minimum_Bose_denominator": 0.999995093493779,
+              "minimum_shell_momentum_real": 0.30715529767243854,
+              "threshold_above_q_half": true
+            },
+            {
+              "signed_mode": 1,
+              "threshold_k": [
+                0.28068450122888866,
+                -0.008623700484887043
+              ],
+              "shell_root_residual": 1.7781206148360133e-17,
+              "minimum_outgoing_energy_real": 0.11074006634719384,
+              "minimum_Bose_denominator": 0.3956689166500067,
+              "minimum_shell_momentum_real": 0.07325323599025146,
+              "threshold_above_q_half": true
+            },
+            {
+              "signed_mode": 2,
+              "threshold_k": [
+                0.27068450122888915,
+                -0.008623700484886875
+              ],
+              "shell_root_residual": 3.939667429164276e-18,
+              "minimum_outgoing_energy_real": 0.11448195304971948,
+              "minimum_Bose_denominator": 0.4058601467993825,
+              "minimum_shell_momentum_real": 0.07876779409761747,
+              "threshold_above_q_half": true
+            },
+            {
+              "signed_mode": 3,
+              "threshold_k": [
+                0.5541413654189711,
+                -0.005968769045814715
+              ],
+              "shell_root_residual": 1.7781206148360133e-17,
+              "minimum_outgoing_energy_real": 2.6932191862193435,
+              "minimum_Bose_denominator": 0.9999951762443213,
+              "minimum_shell_momentum_real": 0.3183366108465444,
+              "threshold_above_q_half": true
+            }
+          ]
+        }
+      ],
+      "original_finite_q_cut_checks": [
+        {
+          "q": 0.04,
+          "velocity_ray": 0.2,
+          "runs": [
+            {
+              "original_full_radial_order": 48,
+              "finite_q_cut_errors": {
+                "bubble": 2.6575963651964685e-15,
+                "mixed": 8.944234242136417e-15,
+                "reverse": 8.93729534823251e-15,
+                "loop_current": 2.32314167902814e-14
+              },
+              "original_all_pair_cut_max": 0.0
+            },
+            {
+              "original_full_radial_order": 80,
+              "finite_q_cut_errors": {
+                "bubble": 2.7408630920433552e-15,
+                "mixed": 9.194034422677078e-15,
+                "reverse": 9.180156634869263e-15,
+                "loop_current": 1.50712775592865e-14
+              },
+              "original_all_pair_cut_max": 0.0
+            }
+          ]
+        },
+        {
+          "q": 0.04,
+          "velocity_ray": 0.3,
+          "runs": [
+            {
+              "original_full_radial_order": 48,
+              "finite_q_cut_errors": {
+                "bubble": 9.506284648352903e-15,
+                "mixed": 3.315403507286874e-14,
+                "reverse": 3.315403507286874e-14,
+                "loop_current": 5.67323965583455e-14
+              },
+              "original_all_pair_cut_max": 0.0
+            },
+            {
+              "original_full_radial_order": 80,
+              "finite_q_cut_errors": {
+                "bubble": 9.610368056911511e-15,
+                "mixed": 3.4139358007223564e-14,
+                "reverse": 3.4139358007223564e-14,
+                "loop_current": 5.914713163690521e-14
+              },
+              "original_all_pair_cut_max": 0.0
+            }
+          ]
+        },
+        {
+          "q": 0.04,
+          "velocity_ray": 0.4,
+          "runs": [
+            {
+              "original_full_radial_order": 48,
+              "finite_q_cut_errors": {
+                "bubble": 1.196959198423997e-16,
+                "mixed": 9.645062526431047e-16,
+                "reverse": 9.575673587391975e-16,
+                "loop_current": 3.382710778154774e-16
+              },
+              "original_all_pair_cut_max": 0.0
+            },
+            {
+              "original_full_radial_order": 80,
+              "finite_q_cut_errors": {
+                "bubble": 9.020562075079397e-17,
+                "mixed": 2.914335439641036e-16,
+                "reverse": 2.8796409701215e-16,
+                "loop_current": 1.4710455076283324e-15
+              },
+              "original_all_pair_cut_max": 0.0
+            }
+          ]
+        },
+        {
+          "q": 0.02,
+          "velocity_ray": 0.2,
+          "runs": [
+            {
+              "original_full_radial_order": 48,
+              "finite_q_cut_errors": {
+                "bubble": 6.626643678231403e-16,
+                "mixed": 1.3530843112619095e-15,
+                "reverse": 1.3530843112619095e-15,
+                "loop_current": 4.0217829067046296e-14
+              },
+              "original_all_pair_cut_max": 0.0
+            },
+            {
+              "original_full_radial_order": 80,
+              "finite_q_cut_errors": {
+                "bubble": 4.2327252813834093e-16,
+                "mixed": 1.4155343563970746e-15,
+                "reverse": 1.4155343563970746e-15,
+                "loop_current": 2.4841240175987878e-15
+              },
+              "original_all_pair_cut_max": 0.0
+            }
+          ]
+        },
+        {
+          "q": 0.02,
+          "velocity_ray": 0.3,
+          "runs": [
+            {
+              "original_full_radial_order": 48,
+              "finite_q_cut_errors": {
+                "bubble": 6.723788192886104e-15,
+                "mixed": 2.383510055992133e-14,
+                "reverse": 2.383510055992133e-14,
+                "loop_current": 5.0209836288672705e-14
+              },
+              "original_all_pair_cut_max": 0.0
+            },
+            {
+              "original_full_radial_order": 80,
+              "finite_q_cut_errors": {
+                "bubble": 6.564193633096238e-15,
+                "mixed": 2.238487173400472e-14,
+                "reverse": 2.238487173400472e-14,
+                "loop_current": 3.4083846855992306e-14
+              },
+              "original_all_pair_cut_max": 0.0
+            }
+          ]
+        },
+        {
+          "q": 0.02,
+          "velocity_ray": 0.4,
+          "runs": [
+            {
+              "original_full_radial_order": 48,
+              "finite_q_cut_errors": {
+                "bubble": 2.706168622523819e-16,
+                "mixed": 2.6575963651964685e-15,
+                "reverse": 2.6575963651964685e-15,
+                "loop_current": 2.466082893448629e-14
+              },
+              "original_all_pair_cut_max": 0.0
+            },
+            {
+              "original_full_radial_order": 80,
+              "finite_q_cut_errors": {
+                "bubble": 1.0495077029659683e-16,
+                "mixed": 3.365363543395006e-16,
+                "reverse": 3.400058012914542e-16,
+                "loop_current": 8.548717289613705e-15
+              },
+              "original_all_pair_cut_max": 0.0
+            }
+          ]
+        },
+        {
+          "q": 0.01,
+          "velocity_ray": 0.2,
+          "runs": [
+            {
+              "original_full_radial_order": 48,
+              "finite_q_cut_errors": {
+                "bubble": 3.469446951953614e-15,
+                "mixed": 1.1622647289044608e-14,
+                "reverse": 1.1622647289044608e-14,
+                "loop_current": 2.4716340085717547e-14
+              },
+              "original_all_pair_cut_max": 0.0
+            },
+            {
+              "original_full_radial_order": 80,
+              "finite_q_cut_errors": {
+                "bubble": 3.6186331708876196e-15,
+                "mixed": 1.1830814106161824e-14,
+                "reverse": 1.1823875212257917e-14,
+                "loop_current": 3.5083047578154947e-14
+              },
+              "original_all_pair_cut_max": 0.0
+            }
+          ]
+        },
+        {
+          "q": 0.01,
+          "velocity_ray": 0.3,
+          "runs": [
+            {
+              "original_full_radial_order": 48,
+              "finite_q_cut_errors": {
+                "bubble": 2.445960101127298e-16,
+                "mixed": 2.8380076066980564e-15,
+                "reverse": 2.8380076066980564e-15,
+                "loop_current": 3.7136960173711486e-14
+              },
+              "original_all_pair_cut_max": 0.0
+            },
+            {
+              "original_full_radial_order": 80,
+              "finite_q_cut_errors": {
+                "bubble": 1.960237527853792e-16,
+                "mixed": 4.003741782554471e-15,
+                "reverse": 3.9968028886505635e-15,
+                "loop_current": 2.1593837828959295e-14
+              },
+              "original_all_pair_cut_max": 0.0
+            }
+          ]
+        },
+        {
+          "q": 0.01,
+          "velocity_ray": 0.4,
+          "runs": [
+            {
+              "original_full_radial_order": 48,
+              "finite_q_cut_errors": {
+                "bubble": 1.457167719820518e-16,
+                "mixed": 4.440892098500626e-15,
+                "reverse": 4.447830992404533e-15,
+                "loop_current": 2.8907432003677513e-14
+              },
+              "original_all_pair_cut_max": 0.0
+            },
+            {
+              "original_full_radial_order": 80,
+              "finite_q_cut_errors": {
+                "bubble": 7.979727989493313e-17,
+                "mixed": 2.2273849431542203e-15,
+                "reverse": 2.2273849431542203e-15,
+                "loop_current": 3.899658373995862e-15
+              },
+              "original_all_pair_cut_max": 0.0
+            }
+          ]
+        }
+      ],
+      "independent_forward_shell_checks": [
+        {
+          "k": 0.035,
+          "forward_shell_checks": {
+            "shell_residual": 0.0,
+            "relative_slope_FD_disagreement": 0.0,
+            "active_shell_count": 0
+          },
+          "same_signed_active_shell_count": 0,
+          "joint_cut_error": 0.0,
+          "transverse_cut_error": 0.0,
+          "pair_cut_max": 0.0
+        },
+        {
+          "k": 0.09,
+          "forward_shell_checks": {
+            "shell_residual": 0.0,
+            "relative_slope_FD_disagreement": 0.0,
+            "active_shell_count": 0
+          },
+          "same_signed_active_shell_count": 0,
+          "joint_cut_error": 0.0,
+          "transverse_cut_error": 0.0,
+          "pair_cut_max": 0.0
+        },
+        {
+          "k": 0.2,
+          "forward_shell_checks": {
+            "shell_residual": 0.0,
+            "relative_slope_FD_disagreement": 3.9022118869525e-11,
+            "active_shell_count": 2
+          },
+          "same_signed_active_shell_count": 2,
+          "joint_cut_error": 9.094947017729282e-13,
+          "transverse_cut_error": 3.9968028886505635e-15,
+          "pair_cut_max": 0.0
+        },
+        {
+          "k": 0.6,
+          "forward_shell_checks": {
+            "shell_residual": 0.0,
+            "relative_slope_FD_disagreement": 8.213194568895688e-10,
+            "active_shell_count": 4
+          },
+          "same_signed_active_shell_count": 4,
+          "joint_cut_error": 1.7763568394002505e-14,
+          "transverse_cut_error": 2.220446049250313e-15,
+          "pair_cut_max": 0.0
+        },
+        {
+          "k": 1.5,
+          "forward_shell_checks": {
+            "shell_residual": 5.551115123125783e-16,
+            "relative_slope_FD_disagreement": 4.97131447119159e-10,
+            "active_shell_count": 4
+          },
+          "same_signed_active_shell_count": 4,
+          "joint_cut_error": 7.13318293321663e-15,
+          "transverse_cut_error": 1.2559397966072083e-15,
+          "pair_cut_max": 0.0
+        }
+      ]
+    }
+  ],
+  "checks": {
+    "accepted_predecessor_hash_lineage": true,
+    "original_all_channel_radial_cut_agreement": true,
+    "no_pair_cut_in_declared_grid": true,
+    "independent_forward_angular_shell_and_active_counts": true,
+    "complex_threshold_residual_and_sampled_Bose_domain": true,
+    "complex_density_quadrature_converges": true,
+    "two_local_tail_paths_agree": true,
+    "finite_q_density_approaches_original_soft_density": true,
+    "finite_q_density_is_not_soft_substitution": true,
+    "protected_evidence_hashes_unchanged": true
+  },
+  "config": {
+    "q_grid": [
+      0.04,
+      0.02,
+      0.01
+    ],
+    "real_velocity_rays": [
+      0.2,
+      0.3,
+      0.4
+    ],
+    "complex_reference": "prior soft poles; not solved finite-q poles",
+    "orders": [
+      64,
+      96,
+      128
+    ],
+    "original_full_radial_orders": [
+      48,
+      80
+    ],
+    "local_domain": {
+      "Re_v": [
+        0.19,
+        0.45
+      ],
+      "Im_v": [
+        -0.015,
+        0.0
+      ]
+    },
+    "tail_paths": [
+      "horizontal",
+      "return_to_real"
+    ],
+    "radial_domain": "0<=k<infinity",
+    "assigned_output_width": null
+  },
+  "thresholds": {
+    "original_cut_absolute": 1e-08,
+    "tail_refinement_absolute": 1e-09,
+    "causal_leakage_unchanged": 1e-06
+  },
+  "evidence_artifacts": [
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/t13_hartree_soft_poles.json",
+      "sha256": "20f1f5ec4d44e8778d541e57f8e38573edf661c3f30d0ee45eed8559155c238d"
+    },
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/Research_T13_Hartree_Soft_Poles.py",
+      "sha256": "7e374be619795be7393d2f133f18e6daa84796364a68a8de0dcfc7fc29564502"
+    },
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/Research_T13_Hartree_Finite_Q_Discontinuity.py",
+      "sha256": "0141480e263984ffa2f75d1768ed593538274ad92d1f2eb396e1395b0e2d6550"
+    }
+  ],
+  "protected_evidence_hashes": [
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/t13_conditional_twofluid_operator.json",
+      "sha256": "8606303e4818030dd74061c14b243542c19c4cbb262dda29261951d4c87d6412"
+    },
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/t13_polar_dynamic_composite.json",
+      "sha256": "2f07a63af3ce9945bf254d5da238bdefbd53597dae105ee7e50bbcbe8bc61f7d"
+    },
+    {
+      "path": "docs/core/07_artifacts/topic13/t13_topic13_closure_matrix.json",
+      "sha256": "e6e84772a400273c438e0b8ca3c7b5b14c9d720da0420fb4021b1c0e7a54fe66"
+    },
+    {
+      "path": "docs/core/07_artifacts/gates/uet_major_result_dependency_unlock_gate.json",
+      "sha256": "ecbefdf12ee1eb6661ae8096e3f62bf1ffa7992c96ca94f1149fdbc25a8bbe6e"
+    }
+  ],
+  "open_blockers": [
+    "actual_finite_q_principal_kernel_and_pole_root_not_computed",
+    "certified_global_complex_domain",
+    "Hartree_truncation_and_regulator_RG_full_action",
+    "joint_Phi_material_source_detector_and_heat_transport"
+  ],
+  "controlling_blocker": "finite_q_principal_kernel_and_actual_pole_not_computed",
+  "dependency_unlocked": [
+    "same_candidate_finite_q_principal_kernel_and_pole_research_only"
+  ],
+  "finite_q_discontinuity_computed": true,
+  "finite_q_complex_pole_computed": false,
+  "certified_global_cut_support": false,
+  "certified_global_contour_homotopy": false,
+  "physical_mode_speed_emitted": false,
+  "collision_rate_emitted": false,
+  "controlled_truncation_error_established": false,
+  "joint_Phi_stationarity_derived": false,
+  "g1_physical_unlock": false,
+  "g2_science_unlock": false,
+  "full_core_unlock": false,
+  "claim_promotion": false,
+  "parameter_fitting": false,
+  "artificial_width": false,
+  "clipping": false,
+  "IR_filter": false,
+  "imposed_Ward_projection": false,
+  "xie_2026_accessed": false,
+  "prior_Xie_context_exposure_review": "REVIEW_REQUIRED",
+  "core_composition_gate_overwritten": false,
+  "C_relabelled_as_charge_or_mass": false,
+  "R_gen_added_as_state": false,
+  "excluded_variables": [
+    "R_gen",
+    "R_obs",
+    "nondynamical_A"
+  ],
+  "claim_boundary": "Local finite-q discontinuity at unchanged fixed-Phi Hartree witnesses and declared q/v grid, independently checked against all-channel real cuts and forward angular shells. Sampled tail/domain agreement is not a global analytic proof. No finite-q pole, physical collision/Kubo/SK-KMS/heat/entropy, controlled Hartree remainder, empirical prediction or Full Topic13.",
+  "report": {
+    "MAJOR_RESULT_CLOSURE": "T13_FIXED_PHI_HARTREE_FINITE_Q_LANDAU_DISCONTINUITY: CLOSED_FOR_LANE",
+    "WHAT_IS_ACTUALLY_CLOSED": [
+      "finite_q_signed_mode_thresholds_and_analytic_shell_numerator",
+      "local_complex_thermal_discontinuity_agrees_with_original_real_cuts",
+      "two_tail_paths_and_soft_limit_density_diagnostic"
+    ],
+    "WHAT_REMAINS_OPEN": [
+      "actual_finite_q_principal_kernel_and_pole_root_not_computed",
+      "certified_global_complex_domain",
+      "Hartree_truncation_and_regulator_RG_full_action",
+      "joint_Phi_material_source_detector_and_heat_transport"
+    ],
+    "DEPENDENCY_UNLOCKED": [
+      "same_candidate_finite_q_principal_kernel_and_pole_research_only"
+    ],
+    "STATUS": "PASS_SCOPED_FINITE_Q_DISCONTINUITY",
+    "WHAT_CHANGED": "Derived exact finite-q collinear thresholds and analytic joint on-shell density; checked independent original cuts and two complex tail paths.",
+    "EQUATION_OR_MAPPING": "ell=p_j(k)+q*v; sign_j*(E_j(k+sign_j*q)-E_j(k))=q*v; D(q,v)=sum_j integral_{k_j(q,v)}^infinity k^2/(4*pi^2)*N_joint*sign_j*d(r^2)/dell/(2*k*q) dk; B_L=B_principal_lower-2*pi*i*D(q,v)",
+    "VERIFICATION": {
+      "accepted_predecessor_hash_lineage": true,
+      "original_all_channel_radial_cut_agreement": true,
+      "no_pair_cut_in_declared_grid": true,
+      "independent_forward_angular_shell_and_active_counts": true,
+      "complex_threshold_residual_and_sampled_Bose_domain": true,
+      "complex_density_quadrature_converges": true,
+      "two_local_tail_paths_agree": true,
+      "finite_q_density_approaches_original_soft_density": true,
+      "finite_q_density_is_not_soft_substitution": true,
+      "protected_evidence_hashes_unchanged": true
+    },
+    "CONTROLLING_BLOCKER": "finite_q_principal_kernel_and_actual_pole_not_computed",
+    "NEXT_ACTION": "Compute the fixed-grid finite-q principal kernel, independently verify lower-sheet reciprocity, then solve actual poles with all elimination-denominator and convergence controls.",
+    "CLAIM_BOUNDARY": "Local finite-q discontinuity at unchanged fixed-Phi Hartree witnesses and declared q/v grid, independently checked against all-channel real cuts and forward angular shells. Sampled tail/domain agreement is not a global analytic proof. No finite-q pole, physical collision/Kubo/SK-KMS/heat/entropy, controlled Hartree remainder, empirical prediction or Full Topic13."
+  }
+}

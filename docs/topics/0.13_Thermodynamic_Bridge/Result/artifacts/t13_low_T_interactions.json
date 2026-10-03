@@ -1,0 +1,878 @@
+{
+  "major_result_id": "T13_LOW_T_PHASE_INTERACTION_AND_DECAY_KERNEL",
+  "topic": "0.13_Thermodynamic_Bridge",
+  "branch_id": "t13.candidate.tree_matched_classical_phi_low_T_phase_EFT_v1",
+  "closure_level": "CLOSED_FOR_LANE",
+  "verification_status": "PASS_SCOPED_INTERACTION_KERNEL",
+  "created_at": "2026-10-02T02:05:38.267153+00:00",
+  "what_is_closed": "Tree P3/P4 canonical vertices, tree-dispersion one-phase-loop T8, one subtracted quartic thermal-thermal diagram and derived leading T=0 Beliaev cut with independent phase-space convergence",
+  "equation_or_mapping": "Gamma_occupation=3(g_t+g_s/c^2)^2 c^2 q^5/(80pi); gamma_pole=Gamma_occupation/2; C8_disp=4pi^6(4eta^2-c*zeta)/(15c^9)",
+  "equation_registry_ids": [
+    "t13.phase_eft.cubic_quartic_vertices",
+    "t13.phase_eft.rest_dispersion_T8",
+    "t13.phase_eft.Beliaev_T0_cut"
+  ],
+  "units": {
+    "canonical_phase": "E",
+    "cubic_vertices": "E^-2",
+    "quartic_vertices": "E^-4",
+    "zeta_C8_and_quartic_coefficient": "E^-4",
+    "rates": "E",
+    "rate_q5_coefficient": "E^-4"
+  },
+  "derivation_class": "TREE_MATCHED_PHASE_LOOP_AND_LEADING_ON_SHELL_CUT",
+  "observable": "Conditional acoustic thermal difference and T=0 attenuation, not TTG/He-II detector output",
+  "data_role": "DERIVED",
+  "action_controls": {
+    "Z": 1.0,
+    "m0_sq": 1.0,
+    "u": 1.0,
+    "gamma": 0.04000000000000001,
+    "epsilon": 0.05,
+    "Phi_reference": 0.0,
+    "response_mass_sq": 1.0,
+    "response_quartic": 1.0,
+    "response_kinetic": 1.0
+  },
+  "checks": {
+    "vertices_match_direct_reoptimized_pressure": true,
+    "tree_pressure_higher_derivatives": true,
+    "q5_dispersion_matches_parent_and_refines": true,
+    "group_velocity_independent_derivative": true,
+    "parent_quadratic_ledger_unchanged": true,
+    "decay_phase_space_matches_q5_and_refines": true,
+    "decay_quadrature_convergence": true,
+    "decay_no_angular_clipping_energy_balance": true,
+    "on_shell_Bose_detailed_balance_identity_only": true,
+    "T8_dispersion_pressure_refines_parent_integral": true,
+    "T8_entropy_independent_integral": true,
+    "T8_independent_Bose_moment": true,
+    "quartic_subtracted_Wick_and_moment": true,
+    "Phi_coordinate_invariance": true
+  },
+  "thresholds": {
+    "derivative_relative": 2e-05,
+    "direct_vertex_relative": 0.001,
+    "zeta_relative": 0.005,
+    "decay_relative": 0.002,
+    "quadrature_relative": 1e-08,
+    "group_velocity_relative": 1e-07,
+    "pressure_T8_relative": 1e-06,
+    "identity_relative": 1e-09,
+    "original_causal_leakage": 1e-06
+  },
+  "declared_grids": {
+    "mu": [
+      1.05,
+      1.2
+    ],
+    "dispersion_q": [
+      0.04,
+      0.02,
+      0.01
+    ],
+    "decay_q": [
+      0.02,
+      0.01,
+      0.005
+    ],
+    "quadrature_orders": [
+      24,
+      48,
+      96
+    ],
+    "FD_X_steps": [
+      0.0004,
+      0.0002,
+      0.0001
+    ],
+    "temperature_divisors": [
+      32,
+      64,
+      128
+    ],
+    "locked_before_first_audit": true,
+    "external_data_preregistration": false
+  },
+  "examples": [
+    {
+      "mu": 1.05,
+      "state_tree": {
+        "mu": 1.05,
+        "xi": 0.0,
+        "h": 0.0,
+        "X": 1.1025,
+        "s": 0.10416374155459096,
+        "Phi": 0.04159353886477326,
+        "V_curvature": 0.05025950337129431,
+        "U": 0.9840826123153275,
+        "pressure_tree": 0.0026692332895584567,
+        "A": 2.344829283659969,
+        "B": 0.0,
+        "D": 0.10416374155459096,
+        "rho": 0.10416374155459096,
+        "c2_rest_at_X": 0.044422739975340596,
+        "A4_flow": 11.712489720818924,
+        "stationary_residual": 0.0,
+        "heavy_hessian": [
+          [
+            0.20832748310918192,
+            -0.012909763223519848
+          ],
+          [
+            -0.012909763223519848,
+            0.05025950337129431
+          ]
+        ]
+      },
+      "coefficients": {
+        "c": 0.21076702772336237,
+        "A0": 0.205011453795161,
+        "eta": 0.4709301566824913,
+        "A4": 11.712489720818924,
+        "B6": -33224.57300920962,
+        "A4_h": -131.7097685476614,
+        "A4_mu": -312.0154226343426,
+        "Phi_h_tree": 20.218561284228095,
+        "Phi_mu_tree": 0.84917957393758,
+        "dispersion_scale": 0.4520369052194675,
+        "zeta": -0.7232501197207042,
+        "C8_disp": 324701542.49041355
+      },
+      "vertices": {
+        "P1": 0.05208187077729548,
+        "P2": 0.5080874245136913,
+        "P3": -0.0008250644229372502,
+        "P4": -0.007768738585359656,
+        "g_t": -0.2968057018305193,
+        "g_s": 0.2971603744403023,
+        "h_t": 0.04472883034105836,
+        "h_m": -0.0920784826950042,
+        "h_s": 0.04620468267276571
+      },
+      "direct_stationary_pressure_vertex_checks": [
+        {
+          "time_direction": 1.0,
+          "space_direction": 0.0,
+          "step": 0.01,
+          "cubic_relative_error": 4.0480353132615996e-07,
+          "quartic_relative_error": 1.1002523413111363e-06
+        },
+        {
+          "time_direction": 0.0,
+          "space_direction": 1.0,
+          "step": 0.01,
+          "cubic_relative_error": 0.0,
+          "quartic_relative_error": 3.7077324673114345e-08
+        },
+        {
+          "time_direction": 1.0,
+          "space_direction": 0.7,
+          "step": 0.01,
+          "cubic_relative_error": 2.827752247065295e-07,
+          "quartic_relative_error": 6.94428566576395e-06
+        }
+      ],
+      "pressure_derivative_checks": [
+        {
+          "X_step": 0.0004,
+          "P3_relative_error": 2.6026220702080386e-07,
+          "P4_relative_error": 2.433089108295505e-07
+        },
+        {
+          "X_step": 0.0002,
+          "P3_relative_error": 6.497913339713387e-08,
+          "P4_relative_error": 6.082756064080716e-08
+        },
+        {
+          "X_step": 0.0001,
+          "P3_relative_error": 1.5527605709486167e-08,
+          "P4_relative_error": 1.520705738053348e-08
+        }
+      ],
+      "dispersion_checks": [
+        {
+          "q": 0.04,
+          "zeta_estimate": -0.7205103500461469,
+          "zeta_relative_error": 0.003788135805100533,
+          "group_velocity_relative_error": 3.38153767142029e-11,
+          "parent_energy_check": {
+            "energy_conservation_residual": 6.938893903907228e-18,
+            "potential_min_eigenvalue": 0.0015999999999999973,
+            "kinetic_min_eigenvalue": 0.05,
+            "mode_real_growth_max": 1.6653345369377348e-16,
+            "positive_mode_frequencies": [
+              0.00846074685870225,
+              1.0029304854253696,
+              2.149971257413014
+            ]
+          }
+        },
+        {
+          "q": 0.02,
+          "zeta_estimate": -0.7225627223200393,
+          "zeta_relative_error": 0.0009504283261375398,
+          "group_velocity_relative_error": 8.529788745532258e-12,
+          "parent_energy_check": {
+            "energy_conservation_residual": 1.734723475976807e-18,
+            "potential_min_eigenvalue": 0.0003999999999999976,
+            "kinetic_min_eigenvalue": 0.05,
+            "mode_real_growth_max": 3.0227556568895864e-16,
+            "positive_mode_frequencies": [
+              0.004219105683520057,
+              1.0023313910259295,
+              2.1494258610722836
+            ]
+          }
+        },
+        {
+          "q": 0.01,
+          "zeta_estimate": -0.7230781202614801,
+          "zeta_relative_error": 0.000237814629454195,
+          "group_velocity_relative_error": 1.5481450328266547e-12,
+          "parent_energy_check": {
+            "energy_conservation_residual": 6.938893903907228e-18,
+            "potential_min_eigenvalue": 0.00010000000000000286,
+            "kinetic_min_eigenvalue": 0.05,
+            "mode_real_growth_max": 6.765421556309548e-17,
+            "positive_mode_frequencies": [
+              0.00210814113508244,
+              1.002181561162853,
+              2.1492894697413876
+            ]
+          }
+        }
+      ],
+      "Gamma_occupation_q5_coefficient": 0.021668939230542337,
+      "gamma_pole_q5_coefficient": 0.010834469615271168,
+      "decay_phase_space_checks": [
+        {
+          "q": 0.02,
+          "runs": [
+            {
+              "Gamma_occupation": 6.923115186129167e-11,
+              "gamma_pole": 3.4615575930645834e-11,
+              "quadrature_order": 24,
+              "q": 0.02,
+              "minimum_angular_support_margin": 1.553115358543522e-08,
+              "energy_balance_relative_max": 3.5976416694386706e-15,
+              "Bose_gain_loss_relative_max": 7.472317485632765e-15,
+              "gamma_pole_over_omega": 8.204481832691637e-09,
+              "coefficient_q5": 0.021634734956653644,
+              "scope": "LO canonical cubic vertex with exact tree dispersion; not full finite-q rate"
+            },
+            {
+              "Gamma_occupation": 6.923115186129141e-11,
+              "gamma_pole": 3.4615575930645705e-11,
+              "quadrature_order": 48,
+              "q": 0.02,
+              "minimum_angular_support_margin": 1.0127695349027022e-09,
+              "energy_balance_relative_max": 4.214380241342443e-15,
+              "Bose_gain_loss_relative_max": 8.480379601160364e-15,
+              "gamma_pole_over_omega": 8.204481832691605e-09,
+              "coefficient_q5": 0.02163473495665356,
+              "scope": "LO canonical cubic vertex with exact tree dispersion; not full finite-q rate"
+            },
+            {
+              "Gamma_occupation": 6.923115186129193e-11,
+              "gamma_pole": 3.4615575930645964e-11,
+              "quadrature_order": 96,
+              "q": 0.02,
+              "minimum_angular_support_margin": 6.464340174261451e-11,
+              "energy_balance_relative_max": 4.625539289278291e-15,
+              "Bose_gain_loss_relative_max": 9.366501561491724e-15,
+              "gamma_pole_over_omega": 8.204481832691667e-09,
+              "coefficient_q5": 0.021634734956653724,
+              "scope": "LO canonical cubic vertex with exact tree dispersion; not full finite-q rate"
+            }
+          ],
+          "coefficient_relative_error": 0.0015784932305501042,
+          "quadrature_relative_error": 7.467561479858856e-15
+        },
+        {
+          "q": 0.01,
+          "runs": [
+            {
+              "Gamma_occupation": 2.166038504379109e-12,
+              "gamma_pole": 1.0830192521895545e-12,
+              "quadrature_order": 24,
+              "q": 0.01,
+              "minimum_angular_support_margin": 3.881873489319787e-09,
+              "energy_balance_relative_max": 2.0571718931770252e-16,
+              "Bose_gain_loss_relative_max": 9.413935762852448e-16,
+              "gamma_pole_over_omega": 5.137318532267882e-10,
+              "coefficient_q5": 0.021660385043791086,
+              "scope": "LO canonical cubic vertex with exact tree dispersion; not full finite-q rate"
+            },
+            {
+              "Gamma_occupation": 2.166038504379101e-12,
+              "gamma_pole": 1.0830192521895504e-12,
+              "quadrature_order": 48,
+              "q": 0.01,
+              "minimum_angular_support_margin": 2.531326259713751e-10,
+              "energy_balance_relative_max": 3.085757839765538e-16,
+              "Bose_gain_loss_relative_max": 9.700815998470995e-16,
+              "gamma_pole_over_omega": 5.137318532267862e-10,
+              "coefficient_q5": 0.021660385043791006,
+              "scope": "LO canonical cubic vertex with exact tree dispersion; not full finite-q rate"
+            },
+            {
+              "Gamma_occupation": 2.166038504379119e-12,
+              "gamma_pole": 1.0830192521895595e-12,
+              "quadrature_order": 96,
+              "q": 0.01,
+              "minimum_angular_support_margin": 1.6157075677369903e-11,
+              "energy_balance_relative_max": 3.0857578397655378e-15,
+              "Bose_gain_loss_relative_max": 6.237567435996888e-15,
+              "gamma_pole_over_omega": 5.137318532267905e-10,
+              "coefficient_q5": 0.021660385043791187,
+              "scope": "LO canonical cubic vertex with exact tree dispersion; not full finite-q rate"
+            }
+          ],
+          "coefficient_relative_error": 0.0003947672131127235,
+          "quadrature_relative_error": 8.391058247370335e-15
+        },
+        {
+          "q": 0.005,
+          "runs": [
+            {
+              "Gamma_occupation": 6.770875153032487e-14,
+              "gamma_pole": 3.3854375765162435e-14,
+              "quadrature_order": 24,
+              "q": 0.005,
+              "minimum_angular_support_margin": 9.70411084821876e-10,
+              "energy_balance_relative_max": 2.057516542998878e-16,
+              "Bose_gain_loss_relative_max": 7.316827957234077e-16,
+              "gamma_pole_over_omega": 3.2123131624998335e-11,
+              "coefficient_q5": 0.021666800489703954,
+              "scope": "LO canonical cubic vertex with exact tree dispersion; not full finite-q rate"
+            },
+            {
+              "Gamma_occupation": 6.770875153032466e-14,
+              "gamma_pole": 3.385437576516233e-14,
+              "quadrature_order": 48,
+              "q": 0.005,
+              "minimum_angular_support_margin": 6.327949275686251e-11,
+              "energy_balance_relative_max": 3.086274814498317e-15,
+              "Bose_gain_loss_relative_max": 6.169631845908027e-15,
+              "gamma_pole_over_omega": 3.212313162499823e-11,
+              "coefficient_q5": 0.021666800489703885,
+              "scope": "LO canonical cubic vertex with exact tree dispersion; not full finite-q rate"
+            },
+            {
+              "Gamma_occupation": 6.770875153032512e-14,
+              "gamma_pole": 3.385437576516256e-14,
+              "quadrature_order": 96,
+              "q": 0.005,
+              "minimum_angular_support_margin": 4.0389913635863195e-12,
+              "energy_balance_relative_max": 2.0851443286104355e-15,
+              "Bose_gain_loss_relative_max": 4.233349043458116e-15,
+              "gamma_pole_over_omega": 3.212313162499846e-11,
+              "coefficient_q5": 0.021666800489704034,
+              "scope": "LO canonical cubic vertex with exact tree dispersion; not full finite-q rate"
+            }
+          ],
+          "coefficient_relative_error": 9.870076313140875e-05,
+          "quadrature_relative_error": 6.897271701748605e-15
+        }
+      ],
+      "thermal_runs": [
+        {
+          "T": 0.002977327341699201,
+          "divisor": 32,
+          "pressure_T6_relative_error": 0.0019190587700193688,
+          "pressure_T8_relative_error": 0.0003112629466304671,
+          "entropy_T8_relative_error": 0.0007558328925416233,
+          "quartic_TT_over_T4": 3.0718005320829483e-07,
+          "quartic_TT_is_total_error_bound": false
+        },
+        {
+          "T": 0.0014886636708496006,
+          "divisor": 64,
+          "pressure_T6_relative_error": 0.00013133577181611753,
+          "pressure_T8_relative_error": 5.658756665020019e-06,
+          "entropy_T8_relative_error": 1.4005152813264666e-05,
+          "quartic_TT_over_T4": 1.9198753325518427e-08,
+          "quartic_TT_is_total_error_bound": false
+        },
+        {
+          "T": 0.0007443318354248003,
+          "divisor": 128,
+          "pressure_T6_relative_error": 8.430140757539876e-06,
+          "pressure_T8_relative_error": 9.263224567051452e-08,
+          "entropy_T8_relative_error": 2.3093097317846293e-07,
+          "quartic_TT_over_T4": 1.1999220828449017e-09,
+          "quartic_TT_is_total_error_bound": false
+        }
+      ],
+      "quartic_TT_T8_coefficient": 45786.33602654947,
+      "quartic_Wick_relative_error": 1.1123777903903676e-15,
+      "T8_Bose_moment_relative_error": 1.835674826741865e-16,
+      "coordinate_controls": [
+        {
+          "scale": 0.5,
+          "vertex_relative_error": 4.8489619783009144e-14,
+          "zeta_relative_error": 9.210282813811815e-16,
+          "decay_coefficient_relative_error": 6.404461086057104e-16
+        },
+        {
+          "scale": 2.0,
+          "vertex_relative_error": 2.6281636738758344e-16,
+          "zeta_relative_error": 0.0,
+          "decay_coefficient_relative_error": 0.0
+        }
+      ]
+    },
+    {
+      "mu": 1.2,
+      "state_tree": {
+        "mu": 1.2,
+        "xi": 0.0,
+        "h": 0.0,
+        "X": 1.44,
+        "s": 0.4469419829846801,
+        "Phi": 0.17354957461700313,
+        "V_curvature": 0.054517918227461416,
+        "U": 0.9853259253836103,
+        "pressure_tree": 0.04917495789782038,
+        "A": 3.369832699453699,
+        "B": 0.0,
+        "D": 0.4469419829846801,
+        "rho": 0.4469419829846801,
+        "c2_rest_at_X": 0.1326303181333412,
+        "A4_flow": 2.2703510726888294,
+        "stationary_residual": 3.469446951953614e-18,
+        "heavy_hessian": [
+          [
+            0.8938839659693602,
+            -0.02674148785642804
+          ],
+          [
+            -0.02674148785642804,
+            0.054517918227461416
+          ]
+        ]
+      },
+      "coefficients": {
+        "c": 0.3641844561940298,
+        "A0": 0.8807670459543314,
+        "eta": 0.15740994933839672,
+        "A4": 2.27035107268883,
+        "B6": -417.27529971978163,
+        "A4_h": -5.703351337277938,
+        "A4_mu": -11.21233553014485,
+        "Phi_h_tree": 18.61576235634509,
+        "Phi_mu_tree": 0.8935565931045645,
+        "dispersion_scale": 0.9328973365101231,
+        "zeta": -0.07712098174128762,
+        "C8_disp": 289371.012885538
+      },
+      "vertices": {
+        "P1": 0.22347099149234004,
+        "P2": 0.5074463049425381,
+        "P3": -0.0026870594426579076,
+        "P4": -0.0028555969930083337,
+        "g_t": -0.19587340898271838,
+        "g_s": 0.19687420884839743,
+        "h_t": 0.021313992125962272,
+        "h_m": -0.044004718936252386,
+        "h_s": 0.02234309944190608
+      },
+      "direct_stationary_pressure_vertex_checks": [
+        {
+          "time_direction": 1.0,
+          "space_direction": 0.0,
+          "step": 0.01,
+          "cubic_relative_error": 1.2598919596144222e-08,
+          "quartic_relative_error": 1.2490681370832557e-06
+        },
+        {
+          "time_direction": 0.0,
+          "space_direction": 1.0,
+          "step": 0.01,
+          "cubic_relative_error": 0.0,
+          "quartic_relative_error": 1.3335702951513228e-08
+        },
+        {
+          "time_direction": 1.0,
+          "space_direction": 0.7,
+          "step": 0.01,
+          "cubic_relative_error": 2.95448396411762e-07,
+          "quartic_relative_error": 1.6054374569223778e-06
+        }
+      ],
+      "pressure_derivative_checks": [
+        {
+          "X_step": 0.0004,
+          "P3_relative_error": 1.5429374852070837e-07,
+          "P4_relative_error": 1.9549167414830477e-07
+        },
+        {
+          "X_step": 0.0002,
+          "P3_relative_error": 3.8605036183346044e-08,
+          "P4_relative_error": 4.8871931910541595e-08
+        },
+        {
+          "X_step": 0.0001,
+          "P3_relative_error": 9.476271112688746e-09,
+          "P4_relative_error": 1.2217233648716487e-08
+        }
+      ],
+      "dispersion_checks": [
+        {
+          "q": 0.04,
+          "zeta_estimate": -0.07704227095255343,
+          "zeta_relative_error": 0.0010206144548085552,
+          "group_velocity_relative_error": 5.340760584091964e-12,
+          "parent_energy_check": {
+            "energy_conservation_residual": 6.938893903907228e-18,
+            "potential_min_eigenvalue": 0.0015999999999999973,
+            "kinetic_min_eigenvalue": 0.05,
+            "mode_real_growth_max": 3.712308238590367e-16,
+            "positive_mode_frequencies": [
+              0.014577444595390511,
+              1.043739793595035,
+              2.580588512702841
+            ]
+          }
+        },
+        {
+          "q": 0.02,
+          "zeta_estimate": -0.07710128636216024,
+          "zeta_relative_error": 0.00025538288910083003,
+          "group_velocity_relative_error": 1.1090856437127308e-12,
+          "parent_energy_check": {
+            "energy_conservation_residual": 3.469446951953614e-18,
+            "potential_min_eigenvalue": 0.0003999999999999976,
+            "kinetic_min_eigenvalue": 0.05,
+            "mode_real_growth_max": 2.671474153004283e-16,
+            "positive_mode_frequencies": [
+              0.00728494815675124,
+              1.043163376632732,
+              2.580154923585237
+            ]
+          }
+        },
+        {
+          "q": 0.01,
+          "zeta_estimate": -0.07711605201557849,
+          "zeta_relative_error": 6.3921978141692e-05,
+          "group_velocity_relative_error": 2.8957170527747607e-14,
+          "parent_energy_check": {
+            "energy_conservation_residual": 3.469446951953614e-18,
+            "potential_min_eigenvalue": 0.00010000000000000286,
+            "kinetic_min_eigenvalue": 0.05,
+            "mode_real_growth_max": 7.546047120499111e-17,
+            "positive_mode_frequencies": [
+              0.003642001964177754,
+              1.0430192221171801,
+              2.580046505130159
+            ]
+          }
+        }
+      ],
+      "Gamma_occupation_q5_coefficient": 0.002628449368940798,
+      "gamma_pole_q5_coefficient": 0.001314224684470399,
+      "decay_phase_space_checks": [
+        {
+          "q": 0.02,
+          "runs": [
+            {
+              "Gamma_occupation": 8.407664873955421e-12,
+              "gamma_pole": 4.203832436977711e-12,
+              "quadrature_order": 24,
+              "q": 0.02,
+              "minimum_angular_support_margin": 3.003273407742313e-09,
+              "energy_balance_relative_max": 2.3812434057875694e-16,
+              "Bose_gain_loss_relative_max": 6.846459210709903e-16,
+              "gamma_pole_over_omega": 5.770572894306583e-10,
+              "coefficient_q5": 0.0026273952731110687,
+              "scope": "LO canonical cubic vertex with exact tree dispersion; not full finite-q rate"
+            },
+            {
+              "Gamma_occupation": 8.407664873955397e-12,
+              "gamma_pole": 4.2038324369776985e-12,
+              "quadrature_order": 48,
+              "q": 0.02,
+              "minimum_angular_support_margin": 1.958401218971062e-10,
+              "energy_balance_relative_max": 2.3812434057875694e-16,
+              "Bose_gain_loss_relative_max": 5.056814572905512e-16,
+              "gamma_pole_over_omega": 5.770572894306566e-10,
+              "coefficient_q5": 0.002627395273111061,
+              "scope": "LO canonical cubic vertex with exact tree dispersion; not full finite-q rate"
+            },
+            {
+              "Gamma_occupation": 8.407664873955468e-12,
+              "gamma_pole": 4.203832436977734e-12,
+              "quadrature_order": 96,
+              "q": 0.02,
+              "minimum_angular_support_margin": 1.2500223078859563e-11,
+              "energy_balance_relative_max": 4.524362470996381e-15,
+              "Bose_gain_loss_relative_max": 9.16189006670992e-15,
+              "gamma_pole_over_omega": 5.770572894306615e-10,
+              "coefficient_q5": 0.0026273952731110835,
+              "scope": "LO canonical cubic vertex with exact tree dispersion; not full finite-q rate"
+            }
+          ],
+          "coefficient_relative_error": 0.0004010333401017716,
+          "quadrature_relative_error": 8.454884317699117e-15
+        },
+        {
+          "q": 0.01,
+          "runs": [
+            {
+              "Gamma_occupation": 2.628185802455568e-13,
+              "gamma_pole": 1.314092901227784e-13,
+              "quadrature_order": 24,
+              "q": 0.01,
+              "minimum_angular_support_margin": 7.508562660518692e-10,
+              "energy_balance_relative_max": 1.1907760436699266e-16,
+              "Bose_gain_loss_relative_max": 3.859823902730962e-16,
+              "gamma_pole_over_omega": 3.608160880067959e-11,
+              "coefficient_q5": 0.0026281858024555676,
+              "scope": "LO canonical cubic vertex with exact tree dispersion; not full finite-q rate"
+            },
+            {
+              "Gamma_occupation": 2.6281858024555583e-13,
+              "gamma_pole": 1.3140929012277791e-13,
+              "quadrature_order": 48,
+              "q": 0.01,
+              "minimum_angular_support_margin": 4.8962611742808804e-11,
+              "energy_balance_relative_max": 4.286793757211736e-15,
+              "Bose_gain_loss_relative_max": 8.86895775409563e-15,
+              "gamma_pole_over_omega": 3.6081608800679456e-11,
+              "coefficient_q5": 0.002628185802455558,
+              "scope": "LO canonical cubic vertex with exact tree dispersion; not full finite-q rate"
+            },
+            {
+              "Gamma_occupation": 2.6281858024555795e-13,
+              "gamma_pole": 1.3140929012277897e-13,
+              "quadrature_order": 96,
+              "q": 0.01,
+              "minimum_angular_support_margin": 3.125166792017353e-12,
+              "energy_balance_relative_max": 2.6197072960738387e-15,
+              "Bose_gain_loss_relative_max": 4.874011919350394e-15,
+              "gamma_pole_over_omega": 3.6081608800679746e-11,
+              "coefficient_q5": 0.002628185802455579,
+              "scope": "LO canonical cubic vertex with exact tree dispersion; not full finite-q rate"
+            }
+          ],
+          "coefficient_relative_error": 0.00010027451482755165,
+          "quadrature_relative_error": 8.068143855175242e-15
+        },
+        {
+          "q": 0.005,
+          "runs": [
+            {
+              "Gamma_occupation": 8.213698358318291e-15,
+              "gamma_pole": 4.1068491791591455e-15,
+              "quadrature_order": 24,
+              "q": 0.005,
+              "minimum_angular_support_margin": 1.8771650900362147e-10,
+              "energy_balance_relative_max": 4.048769783501388e-15,
+              "Bose_gain_loss_relative_max": 8.09770046361768e-15,
+              "gamma_pole_over_omega": 2.2553432652990655e-12,
+              "coefficient_q5": 0.0026283834746618526,
+              "scope": "LO canonical cubic vertex with exact tree dispersion; not full finite-q rate"
+            },
+            {
+              "Gamma_occupation": 8.213698358318261e-15,
+              "gamma_pole": 4.1068491791591305e-15,
+              "quadrature_order": 48,
+              "q": 0.005,
+              "minimum_angular_support_margin": 1.2240874980307126e-11,
+              "energy_balance_relative_max": 2.619792212853839e-15,
+              "Bose_gain_loss_relative_max": 5.310512059845728e-15,
+              "gamma_pole_over_omega": 2.255343265299057e-12,
+              "coefficient_q5": 0.002628383474661843,
+              "scope": "LO canonical cubic vertex with exact tree dispersion; not full finite-q rate"
+            },
+            {
+              "Gamma_occupation": 8.213698358318327e-15,
+              "gamma_pole": 4.106849179159164e-15,
+              "quadrature_order": 96,
+              "q": 0.005,
+              "minimum_angular_support_margin": 7.812639424287227e-13,
+              "energy_balance_relative_max": 2.9770366055157263e-15,
+              "Bose_gain_loss_relative_max": 5.977704656518577e-15,
+              "gamma_pole_over_omega": 2.2553432652990752e-12,
+              "coefficient_q5": 0.0026283834746618643,
+              "scope": "LO canonical cubic vertex with exact tree dispersion; not full finite-q rate"
+            }
+          ],
+          "coefficient_relative_error": 2.5069639808391143e-05,
+          "quadrature_relative_error": 8.067537076213247e-15
+        }
+      ],
+      "thermal_runs": [
+        {
+          "T": 0.010617084661931188,
+          "divisor": 32,
+          "pressure_T6_relative_error": 0.0014381264156110565,
+          "pressure_T8_relative_error": 0.00021326557805445725,
+          "entropy_T8_relative_error": 0.0005182482696833418,
+          "quartic_TT_over_T4": 4.800805374985936e-07,
+          "quartic_TT_is_total_error_bound": false
+        },
+        {
+          "T": 0.005308542330965594,
+          "divisor": 64,
+          "pressure_T6_relative_error": 9.789386956954555e-05,
+          "pressure_T8_relative_error": 3.842412473904283e-06,
+          "entropy_T8_relative_error": 9.514697041782005e-06,
+          "quartic_TT_over_T4": 3.00050335936621e-08,
+          "quartic_TT_is_total_error_bound": false
+        },
+        {
+          "T": 0.002654271165482797,
+          "divisor": 128,
+          "pressure_T6_relative_error": 6.271681053465296e-06,
+          "pressure_T8_relative_error": 6.268489820416012e-08,
+          "entropy_T8_relative_error": 1.5629949594880452e-07,
+          "quartic_TT_over_T4": 1.8753145996038814e-09,
+          "quartic_TT_is_total_error_bound": false
+        }
+      ],
+      "quartic_TT_T8_coefficient": 85.77999112532407,
+      "quartic_Wick_relative_error": 1.6566631132474737e-16,
+      "T8_Bose_moment_relative_error": 4.023047114017029e-16,
+      "coordinate_controls": [
+        {
+          "scale": 0.5,
+          "vertex_relative_error": 6.074818961583577e-16,
+          "zeta_relative_error": 0.0,
+          "decay_coefficient_relative_error": 0.0
+        },
+        {
+          "scale": 2.0,
+          "vertex_relative_error": 6.074818961583577e-16,
+          "zeta_relative_error": 0.0,
+          "decay_coefficient_relative_error": 0.0
+        }
+      ]
+    }
+  ],
+  "evidence_artifacts": [
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/Research_T13_Low_T_Interactions.py",
+      "sha256": "ead2b10e9022e9db849e10cc3dad0274416da2a238dadc1ae6b35938673b9097"
+    },
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/test_t13_low_T_interactions.py",
+      "sha256": "5216f5877c2680e61d3164604fe19cc1c5995f7377cd376d4a71a05eb32f0a14"
+    },
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/Research_T13_Low_T_Phase_EFT.py",
+      "sha256": "70306bac6b4f907c6ca0b41cce2164c977a571e93f2d9a32eb6d708f8a6531dc"
+    },
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/t13_low_T_interaction_registry.json",
+      "sha256": "e991e93793a9a2d30ae9053ab72b92030492c8e05df37d7e9106b1c5c0797445"
+    }
+  ],
+  "protected_evidence_hashes": [
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/t13_low_T_phase_eft.json",
+      "sha256": "050aceb4f94f3534929d8c59c75da4dda8efe16ce7aec250a34f6f8b5868dcb7"
+    },
+    {
+      "path": "docs/core/02_equations/o2/uet_o2_action_thermal_observable_bridge.py",
+      "sha256": "1cf745562548bc9a61d9ebb86069b8aff73e2a776756aa9efe7ab1a45b669ebe"
+    },
+    {
+      "path": "docs/core/02_equations/o2/uet_o2_action_thermal_stiffness_beta.py",
+      "sha256": "c1c3278a79df611ddae2f67ff811022722ab0c56f68bf91cc5480f34db9a95e6"
+    },
+    {
+      "path": "docs/core/02_equations/covariant/uet_covariant_matter.py",
+      "sha256": "8a57d95e898a8ac962bbd749670ad0695b597281937da36496d2ec7e074f9c53"
+    },
+    {
+      "path": "docs/core/02_equations/covariant/uet_covariant_response.py",
+      "sha256": "7fb4b7228afb8ede0ac4f1664d634346ef46cc7678c94ed7b55d73645590c0c2"
+    }
+  ],
+  "controlling_blocker": "renormalized_cubic_sunset_and_vacuum_Wilson_matching_open",
+  "open_blockers": [
+    "full_T8_two_loop_pressure_not_computed",
+    "real_self_energy_Wilson_subtractions_not_matched",
+    "finite_T_collision_normal_component_Kubo_and_entropy_transport_open",
+    "independent_material_source_readout_and_temperature_scale_open"
+  ],
+  "dependency_unlocked": [
+    "renormalized_two_loop_and_finite_T_collision_research_only"
+  ],
+  "primary_references": [
+    "https://arxiv.org/html/1004.2567v2",
+    "https://www.fuw.edu.pl/~derezins/damping_publ.pdf"
+  ],
+  "standard_correspondence": "Nonrelativistic EFT and Bose-gas results are method/limiting controls, not coefficient imports to relativistic X=mu^2-xi^2",
+  "full_two_loop_pressure_computed": false,
+  "quartic_TT_is_total_error_bound": false,
+  "real_self_energy_computed": false,
+  "finite_q_complete_decay_computed": false,
+  "finite_T_collision_computed": false,
+  "assigned_damping_width": false,
+  "on_shell_Bose_detailed_balance_identity_checked": true,
+  "full_SK_KMS_matching_closed": false,
+  "controlled_full_action_truncation_error_established": false,
+  "independent_alpha_Phi_K_admitted": false,
+  "physical_Kubo_emitted": false,
+  "g1_physical_unlock": false,
+  "g2_science_unlock": false,
+  "full_core_unlock": false,
+  "core_composition_gate_overwritten": false,
+  "claim_promotion": false,
+  "old_Hartree_branch_repaired": false,
+  "parameter_fitting": false,
+  "clipping": false,
+  "cone_padding": false,
+  "target_source_accessed": false,
+  "xie_2026_accessed": false,
+  "prior_Xie_context_exposure_review": "REVIEW_REQUIRED",
+  "state_variables": [
+    "canonical_phase"
+  ],
+  "excluded_variables": [
+    "C",
+    "R_gen",
+    "R_obs",
+    "UET_Pi"
+  ],
+  "claim_boundary": "Scoped candidate tree/phase kernels, not a full quantum EOS/remainder bound, thermal transport, material calibration, external validation or Full Topic13/Core. The original conserved-C causal failure remains blocked at 1e-6.",
+  "report": {
+    "MAJOR_RESULT_CLOSURE": "T13_LOW_T_PHASE_INTERACTION_AND_DECAY_KERNEL: CLOSED_FOR_LANE",
+    "WHAT_IS_ACTUALLY_CLOSED": "Tree P3/P4 canonical vertices, tree-dispersion one-phase-loop T8, one subtracted quartic thermal-thermal diagram and derived leading T=0 Beliaev cut with independent phase-space convergence",
+    "WHAT_REMAINS_OPEN": [
+      "full_T8_two_loop_pressure_not_computed",
+      "real_self_energy_Wilson_subtractions_not_matched",
+      "finite_T_collision_normal_component_Kubo_and_entropy_transport_open",
+      "independent_material_source_readout_and_temperature_scale_open"
+    ],
+    "DEPENDENCY_UNLOCKED": [
+      "renormalized_two_loop_and_finite_T_collision_research_only"
+    ],
+    "STATUS": "PASS_SCOPED_INTERACTION_KERNEL",
+    "WHAT_CHANGED": "New topic-local interaction/cut audit; predecessor untouched",
+    "EQUATION_OR_MAPPING": "Gamma_occupation=3(g_t+g_s/c^2)^2 c^2 q^5/(80pi); gamma_pole=Gamma_occupation/2; C8_disp=4pi^6(4eta^2-c*zeta)/(15c^9)",
+    "VERIFICATION": {
+      "vertices_match_direct_reoptimized_pressure": true,
+      "tree_pressure_higher_derivatives": true,
+      "q5_dispersion_matches_parent_and_refines": true,
+      "group_velocity_independent_derivative": true,
+      "parent_quadratic_ledger_unchanged": true,
+      "decay_phase_space_matches_q5_and_refines": true,
+      "decay_quadrature_convergence": true,
+      "decay_no_angular_clipping_energy_balance": true,
+      "on_shell_Bose_detailed_balance_identity_only": true,
+      "T8_dispersion_pressure_refines_parent_integral": true,
+      "T8_entropy_independent_integral": true,
+      "T8_independent_Bose_moment": true,
+      "quartic_subtracted_Wick_and_moment": true,
+      "Phi_coordinate_invariance": true
+    },
+    "CONTROLLING_BLOCKER": "renormalized_cubic_sunset_and_vacuum_Wilson_matching_open",
+    "NEXT_ACTION": "Compute matched cubic-sunset/vacuum subtractions and finite-T collision obligations before full thermal admission",
+    "CLAIM_BOUNDARY": "Scoped candidate tree/phase kernels, not a full quantum EOS/remainder bound, thermal transport, material calibration, external validation or Full Topic13/Core. The original conserved-C causal failure remains blocked at 1e-6."
+  }
+}
