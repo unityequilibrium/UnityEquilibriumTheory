@@ -6,7 +6,15 @@
 
 ตัวควบคุมงาน: [funding_portfolio_14d_plan.json](Data/03_Research/funding_portfolio_14d_plan.json) | คำสั่งเริ่มงาน: [GOAL_BRIEF_FUNDING_14D.md](GOAL_BRIEF_FUNDING_14D.md)
 
-Latest science 3 October: [cyclic source work](Result/artifacts/T13_GAUSSIAN_SOURCE_WORK_2026-10-03.md)
+Latest science 3 October: [even work/remainder](Result/artifacts/T13_GAUSSIAN_WORK_REMAINDER_2026-10-03.md)
+derives W4/W6 and parity, explaining the old grid without fit. Formal tail
+is loose/non-interval, not useful original-grid or full-parent control.
+Old source-work FAIL remains. Next independent source/readout/scale and
+nonlinear parent completion; no G2-G4/full R1/Goal or owner acceptance.
+Canonical gaussian_work_remainder_evidence_2026_10_03;7/11 October and
+all existing holdout/model/acceptance boundaries unchanged.
+
+Prior science 3 October: [cyclic source work](Result/artifacts/T13_GAUSSIAN_SOURCE_WORK_2026-10-03.md)
 is PARTIAL. Exact leading time/modal work and conditional Hamiltonian
 entropy boundary are verified, but the original finite-amplitude/binary64
 audit remains FAIL. It cannot accept G2-G4/full R1/Goal. Next controlled

@@ -1,6 +1,16 @@
 ﻿# Method
 
 
+## Even Covariance Hierarchy Without Amplitude Fit (2026-10-03)
+
+[Derivation](Result/artifacts/T13_GAUSSIAN_WORK_REMAINDER_2026-10-03.md)
+evolves zero-amplitude covariance derivatives at orders2/4/6 and checks
+work coefficients against endpoint rotating energy plus the independent
+old finite flow. Positive-energy whitening, Peano-Baker majorization and
+block parity give a conditional even-tail formula. Analytic all-time tone
+triangle bounds, not sampled cone claims; no physical heat/readout map.
+The old pulse, amplitudes, thresholds and FAIL stay intact.
+
 ## Cyclic Source Work Without Assigned Dissipation (2026-10-03)
 
 [Work derivation](Result/artifacts/T13_GAUSSIAN_SOURCE_WORK_2026-10-03.md)

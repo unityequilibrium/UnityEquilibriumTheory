@@ -5,7 +5,17 @@
 สถานะ: เตรียมไว้สำหรับผู้ใช้เริ่ม Goal mode; การสร้างไฟล์นี้ยังไม่เริ่ม Goal หรือ automation
 
 
-## Latest Cyclic Work Handoff (2026-10-03)
+## Latest Even Work And Remainder Handoff (2026-10-03)
+
+[Derived parity/W4/W6 and tail](Result/artifacts/T13_GAUSSIAN_WORK_REMAINDER_2026-10-03.md)
+explain the unchanged amplitude grid without fitting. Original work FAIL
+remains; the formal bound is too loose/non-interval for useful old-grid or
+parent-action control. Canonical gaussian_work_remainder_evidence_2026_10_03;
+next independent source/readout scale and nonlinear parent completion.
+No full Goal/G2-G4/R1-R5/physical/Core-owner acceptance;7/11 October,
+holdout REVIEW_REQUIRED and NOT_RUN model trial/settings unchanged.
+
+## Prior Cyclic Work Handoff (2026-10-03)
 
 [Cyclic-work evidence](Result/artifacts/T13_GAUSSIAN_SOURCE_WORK_2026-10-03.md)
 is PARTIAL. Leading time/modal work and conditional entropy identities

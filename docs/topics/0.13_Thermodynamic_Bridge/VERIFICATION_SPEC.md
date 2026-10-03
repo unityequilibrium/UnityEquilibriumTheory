@@ -1,6 +1,17 @@
 # Verification Spec
 
 
+## Even Work Hierarchy And Bound Verification (2026-10-03)
+
+[Artifact](Result/artifacts/t13_gaussian_work_remainder.json) separately
+checks parity/positive energy, coefficient refinement, order4/6 energy
+ledger, independent old-grid prediction, sign reversal, tone implementation,
+known saturating tail and retained predecessor FAIL. New gates were fixed
+before its first audit; no original gate is replaced. Tests also check
+the factor-two negative, tiny positive tails without cosh subtraction,
+rejected inputs, scope/provenance and runtime evidence read allowlist.
+Order2 cancellation stays reported; no interval or parent-error acceptance.
+
 ## Cyclic Source-Work Failure And Verified Leading Identities (2026-10-03)
 
 [Work artifact](Result/artifacts/t13_gaussian_source_work.json) preserves

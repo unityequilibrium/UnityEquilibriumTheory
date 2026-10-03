@@ -654,7 +654,8 @@ def test_collisionless_soft_ray_does_not_accept_physical_transport_or_full_goal(
 
 
 def test_gaussian_work_identity_does_not_relabel_failed_grid_or_unlock_full_goal():
-    field = PLAN["execution_review_2026_10_01"]["current_scientific_evidence_field"]
+    latest = PLAN[PLAN["execution_review_2026_10_01"]["current_scientific_evidence_field"]]
+    field = latest["source_work_predecessor_evidence_field"]
     assert field == "gaussian_source_work_evidence_2026_10_03"
     assert field in PLAN["portfolio_strategy_2026_10_01"]["observed_partial_evidence_fields"]
     assert field not in PLAN["portfolio_strategy_2026_10_01"]["accepted_preliminary_evidence_fields"]
@@ -673,5 +674,30 @@ def test_gaussian_work_identity_does_not_relabel_failed_grid_or_unlock_full_goal
         assert evidence[key] is result[key] is False
     assert all(x["closure_level"] == "CLOSED_FOR_LANE" for x in result["subresults"])
     content = (ROOT/"docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/T13_GAUSSIAN_SOURCE_WORK_2026-10-03.md").read_text()
+    assert evidence["sha256"] in content and all(name+":" in content for name in result["report"])
+    assert all(card["status"] == "PLANNED_NOT_ACCEPTED" for card in PLAN["result_level_execution_2026_10_01"]["result_cards"])
+
+
+def test_even_work_remainder_does_not_accept_parent_error_or_physical_input():
+    field = PLAN["execution_review_2026_10_01"]["current_scientific_evidence_field"]
+    assert field == "gaussian_work_remainder_evidence_2026_10_03"
+    assert field in PLAN["portfolio_strategy_2026_10_01"]["accepted_preliminary_evidence_fields"]
+    evidence = PLAN[field]
+    path = ROOT/evidence["path"]
+    result = json.loads(path.read_text())
+    assert hashlib.sha256(path.read_bytes()).hexdigest() == evidence["sha256"]
+    assert result["closure_level"] == evidence["closure_level"] == "CLOSED_FOR_LANE"
+    assert result["verification_status"] == evidence["verification_status"] == "PASS_SCOPED_GAUSSIAN_WORK_REMAINDER"
+    assert all(result["checks"].values())
+    assert result["controlling_blocker"] == evidence["controlling_blocker"]
+    assert result["branch_id"] == evidence["branch_id"]
+    for key in ("finite_pair_even_work_hierarchy_verified", "formal_finite_pair_remainder_formula_derived"):
+        assert evidence[key] is result[key] is True
+    for key in ("old_source_work_audit_promoted", "useful_linear_certificate_on_original_grid", "numeric_bound_interval_certified",
+                "nonlinear_parent_action_completed", "full_energy_exchange_ledger_closed", "full_collision_operator_computed",
+                "full_SK_KMS_matching_closed", "physical_Kubo_emitted", "independent_alpha_Phi_K_admitted",
+                "controlled_full_action_truncation_error_established", "full_core_unlock", "core_composition_gate_overwritten"):
+        assert evidence[key] is result[key] is False
+    content = (ROOT/"docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/T13_GAUSSIAN_WORK_REMAINDER_2026-10-03.md").read_text()
     assert evidence["sha256"] in content and all(name+":" in content for name in result["report"])
     assert all(card["status"] == "PLANNED_NOT_ACCEPTED" for card in PLAN["result_level_execution_2026_10_01"]["result_cards"])

@@ -1,7 +1,15 @@
 # Topic 13: ผลหลักสำหรับพอร์ตและแผนต่อยอด
 
 
-Latest science handoff: [cyclic source work](Result/artifacts/T13_GAUSSIAN_SOURCE_WORK_2026-10-03.md)
+Latest science handoff: [even work/remainder](Result/artifacts/T13_GAUSSIAN_WORK_REMAINDER_2026-10-03.md)
+derives parity/W4/W6 and explains the old amplitude grid with independent
+finite-flow comparison. The old source-work FAIL stays; conservative
+bound remains too loose/non-interval for useful grid or parent-action
+error control. Next source/readout/independent scale and nonlinear parent
+terms. Canonical gaussian_work_remainder_evidence_2026_10_03; no Full Goal/
+R1-R5/physical/owner acceptance;7/11 October/holdout/models unchanged.
+
+Prior science handoff: [cyclic source work](Result/artifacts/T13_GAUSSIAN_SOURCE_WORK_2026-10-03.md)
 is PARTIAL: the zero-amplitude work identity and conditional fine-grained
 entropy boundary are verified, not the frozen finite-amplitude/binary64
 audit or irreversible heat. Rank-deficient insertion entropy is undefined.

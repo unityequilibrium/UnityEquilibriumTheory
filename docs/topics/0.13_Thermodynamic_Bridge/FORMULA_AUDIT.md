@@ -1,6 +1,17 @@
 # Formula Audit: 0.13_Thermodynamic_Bridge
 
 
+## Even Work Coefficients And Conditional Norm Tail (2026-10-03)
+
+[Registry](Data/03_Research/t13_gaussian_work_remainder_registry.json)
+records the block-parity covariance recurrence and energy-metric
+Peano-Baker bound. W2/W4/W6:E per internal pair, epsilon/eta dimensionless;
+rotating Gaussian energy is not full Noether/SI heat. Positive H0/PSD C0,
+free energy-skew generator and compact endpoints are assumptions. No
+factorial in coefficient recurrence, no fit; the bound has (2epsilon eta),
+not epsilon eta. Numeric values are not interval certificates and the
+loose tail does not bound uncomputed nonlinear parent terms.
+
 ## Cyclic Work And Conditional Gaussian Entropy (2026-10-03)
 
 [Registry](Data/03_Research/t13_gaussian_source_work_registry.json) records

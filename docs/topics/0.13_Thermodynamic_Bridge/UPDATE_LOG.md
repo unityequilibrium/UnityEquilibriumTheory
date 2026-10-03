@@ -1,3 +1,27 @@
+## 2026-10-03 - Even finite-pair work and conditional conservative remainder
+
+MAJOR_RESULT_CLOSURE: T13_FINITE_PAIR_CYCLIC_WORK_PARITY_AND_REMAINDER, CLOSED_FOR_LANE. This closes the declared finite-pair coefficient/parity/formal-bound question, not Full Goal/G2-G4/R1-R5 or physical Topic13 acceptance.
+
+WHAT_IS_ACTUALLY_CLOSED: Exact block parity removes odd cyclic work. Direct W4/W6 covariance-coefficient evolution explains quartic domination of the unchanged finite-flow grid, without fitting: quartic/leading work ratios3.323e3 to2.839e7. A positive-energy Peano-Baker argument derives a conservative even-tail formula, checked against a saturating known control.
+
+WHAT_REMAINS_OPEN: Loose original-grid bound and non-interval numeric evaluation; missing nonlinear parent terms, complete Noether energy/entropy/collision/KMS, independent physical source/readout/material scale. Original source-work binary64/leading-amplitude FAIL remains unchanged.
+
+DEPENDENCY_UNLOCKED: Source/readout identifiability and controlled parent-remainder research only. No physical/Core/Gravity or owner composition unlock; previous PARTIAL remains in observed-partial evidence, not relabelled in the accepted list.
+
+STATUS: PASS_SCOPED_GAUSSIAN_WORK_REMAINDER. Public safety safe; scientific progress, not another planning-only pass.
+
+WHAT_CHANGED: New calculation/44 tests/registry/artifact/derivation; canonical current pointer and accepted scoped record with predecessor lineage; funding-contract test, five research docs/five portfolio handoffs and this log. No predecessor/action/primary/Core-owner edit.
+
+EQUATION_OR_MAPPING: Cn'=A0 Cn+Cn A0^T+A1 C(n-1)+C(n-1) A1^T; W=sum W(2k)*epsilon^(2k); |R2N|<=E0 sum_(k>N)(2|epsilon|eta)^(2k)/(2k)!. Pair W:E in rotating Gaussian frame; not physical E=Hrot+mu N, SI heat or normalized Phi/Kelvin calibration.
+
+VERIFICATION: Final26-file linked run522 passed in596.26 seconds, including44 new and31 funding-contract tests; earlier focused44/54 runs are subsets. Eight new scientific checks pass. Refinement/ledger scaled errors at most6.591e-14/1.002e-14, independent original-flow prediction relative error at most4.302e-9; sign-reversal difference zero at recorded precision. eta247.686 to567.285; sufficient1%-linear amplitudes5.900e-13 to2.362e-11 are far below original. Order-six bound at .02 ranges20.27 to1.006e7 and is not a useful error bar. Audit-time read allowlist/current/protected hashes, five note links, whitespace and HEAD calendar/old-evidence/acceptance/holdout/model/history invariants checked. Artifact0bff6697f0c94f749cbaf2134c3e78ae36de40c66783a7303e8c5f5aadf307b1. Residual normalization corrected before first scientific audit; initial test collection needed repository-style local import path, followed by artifact hash regeneration, not a gate change. No failed scientific gate relabelled, external/whole-repository validation or model trial.
+
+CONTROLLING_BLOCKER: physical_source_readout_scale_and_parent_interaction_remainder_open. Useful/interval original-grid certification remains explicitly open; formal formula does not bound uncomputed parent physics.
+
+NEXT_ACTION: One independent source-to-state-to-detector/scale information card and missing nonlinear parent energy/source prescription, not another unchanged pulse-grid rerun. Preserve7/11 October and full Goal acceptance. Commit scoped safe local wave; prior push authorization denial remains, no retry/workaround or new-head CI/public-main claim.
+
+CLAIM_BOUNDARY: Fixed finite quadratic Gaussian control only; no full quantum/physical heat/entropy/Kubo/KMS/transport/SI/Topic13/Core/global promotion. No fit, rate/width, vacuum fill, clipping/padding/filter, threshold/ontology/owner change, numeric Xie read or pristine-blinding claim. Prior exposure REVIEW_REQUIRED and original conserved-C FAIL retained. No new Goal/automation/model switch/external contact/purchase/submission.
+
 ## 2026-10-03 - Leading Gaussian source work and conditional entropy boundary
 
 MAJOR_RESULT_CLOSURE: T13_GAUSSIAN_CYCLIC_SOURCE_WORK_AND_ENTROPY_BOUNDARY, PARTIAL. T13_GAUSSIAN_ZERO_AMPLITUDE_CYCLIC_WORK_IDENTITY and T13_GAUSSIAN_CONDITIONAL_FINE_GRAINED_ENTROPY_BOUNDARY are CLOSED_FOR_LANE. Original finite-amplitude/binary64 audit stays FAIL; Full Goal/G2-G4/R1-R5 are unaccepted.

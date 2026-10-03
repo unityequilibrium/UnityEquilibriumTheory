@@ -6,6 +6,18 @@ description: "Research module for Thermodynamic Bridge within the Unity Equilibr
 
 # 0.13 Thermodynamic Bridge
 
+## Even Gaussian Work And Conservative Remainder (2026-10-03)
+
+[New result](Result/artifacts/T13_GAUSSIAN_WORK_REMAINDER_2026-10-03.md)
+derives parity and W4/W6 rather than fitting the old amplitude grid.
+Through-six work agrees with independent original finite flow within
+4.302e-9 relative; quartic domination explains the leading-limit failure.
+The formal remainder bound is too loose for a useful old-grid certificate
+and is not interval evaluated. Original source-work FAIL and Core-owner
+scope remain unchanged. Canonical gaussian_work_remainder_evidence_2026_10_03;
+next physical source/readout scale and controlled nonlinear parent terms.
+No Full Goal/R1-R5 or physical heat/transport admission. Below is history.
+
 ## Gaussian Cyclic Work And Entropy Boundary (2026-10-03)
 
 [Source-work record](Result/artifacts/T13_GAUSSIAN_SOURCE_WORK_2026-10-03.md)

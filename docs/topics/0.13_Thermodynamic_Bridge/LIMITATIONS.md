@@ -1,6 +1,17 @@
 # Limitations
 
 
+## A Formal Tail Bound Is Not Useful Parent Error Control (2026-10-03)
+
+[Even-work result](Result/artifacts/T13_GAUSSIAN_WORK_REMAINDER_2026-10-03.md)
+applies only to the specified off-diagonal two-block quadratic control.
+Its parity and W4/W6 do not complete the nonlinear parent action or
+physical energy/entropy ledger. The derived tail is loose and its numeric
+evaluation is not interval certified; original amplitudes lie outside
+the sufficient linear domain. Excellent three-amplitude agreement is not
+a useful all-domain error bar. Old source-work FAIL, rank-deficient entropy,
+independent material/readout/scale and collision/KMS obligations remain.
+
 ## Source Work Does Not Supply Irreversible Heat (2026-10-03)
 
 [Cyclic-work aggregate](Result/artifacts/T13_GAUSSIAN_SOURCE_WORK_2026-10-03.md)

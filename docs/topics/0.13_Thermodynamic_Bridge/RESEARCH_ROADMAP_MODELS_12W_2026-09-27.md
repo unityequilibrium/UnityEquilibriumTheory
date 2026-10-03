@@ -10,7 +10,14 @@
 
 ## ผลหลักสำหรับพอร์ตและทุนรอบถัดไป
 
-Latest science 3 October: [cyclic source work](Result/artifacts/T13_GAUSSIAN_SOURCE_WORK_2026-10-03.md)
+Latest science 3 October: [even work/remainder](Result/artifacts/T13_GAUSSIAN_WORK_REMAINDER_2026-10-03.md)
+closes the conditional parity/coefficient formula, not original-grid or
+parent-error certification. Source/readout/material scale remains R2-R3;
+full interacting/approximation remains R1. Old source-work FAIL stays.
+Canonical gaussian_work_remainder_evidence_2026_10_03; Full R1-R5/Goal,
+7/11 October, owner/holdout/models and NOT_RUN trial remain unchanged.
+
+Prior science 3 October: [cyclic source work](Result/artifacts/T13_GAUSSIAN_SOURCE_WORK_2026-10-03.md)
 adds leading-work and conditional entropy identities, not a passing
 finite-amplitude/physical heat audit. Aggregate stays PARTIAL; observed
 higher-order domination and numerical floor are retained. R1 still needs

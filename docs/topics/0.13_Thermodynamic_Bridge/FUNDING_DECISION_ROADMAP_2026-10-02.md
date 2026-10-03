@@ -10,7 +10,14 @@ Science successor: [Low-T phase EFT](Result/artifacts/T13_LOW_T_PHASE_EFT_2026-1
 
 ### แผนลงมือและผลที่ต้องตัดสินจากสถานะ 3 ตุลาคม
 
-Latest science: [cyclic source work](Result/artifacts/T13_GAUSSIAN_SOURCE_WORK_2026-10-03.md)
+Latest science: [even work/remainder](Result/artifacts/T13_GAUSSIAN_WORK_REMAINDER_2026-10-03.md)
+derives W4/W6/parity and explains the retained old grid. The conservative
+tail is loose/non-interval and does not complete parent physics. Next
+independent source/readout/scale and nonlinear completion, not unchanged
+work reruns. Canonical gaussian_work_remainder_evidence_2026_10_03;
+no full Goal/R1-R5 or owner admission;7/11 October/holdout/models unchanged.
+
+Prior science: [cyclic source work](Result/artifacts/T13_GAUSSIAN_SOURCE_WORK_2026-10-03.md)
 is PARTIAL: leading time/modal coefficient and conditional entropy
 identities pass, not the frozen finite-amplitude/binary64 work audit.
 Canonical gaussian_source_work_evidence_2026_10_03; no G2-G4/full R1/Goal
