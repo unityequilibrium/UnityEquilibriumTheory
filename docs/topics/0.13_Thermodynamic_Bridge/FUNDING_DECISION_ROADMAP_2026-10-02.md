@@ -10,6 +10,8 @@ Science successor: [Low-T phase EFT](Result/artifacts/T13_LOW_T_PHASE_EFT_2026-1
 
 ### แผนลงมือและผลที่ต้องตัดสินจากสถานะ 3 ตุลาคม
 
+ผลต่อจาก modal wave: [action-source/pair interface](Result/artifacts/T13_ACOUSTIC_SOURCE_PAIR_2026-10-03.md) derive source susceptibility และ positive off-shell pair kernel แล้ว ตรวจ static/pole/optical projection ได้ ตัวควบคุมปัจจุบันคือ `off_shell_Landau_local_real_source_contact_and_complete_thermal_sunset_open`; evidence field `acoustic_source_pair_evidence_2026_10_03` ไม่ใช่ full retarded/source/transport/physical acceptance วันและเกณฑ์เดิมยังคงอยู่ ข้อความ modal และ snapshot ด้านล่างเป็น predecessor
+
 ผล science wave ต่อเนื่อง: [acoustic tree matching](Result/artifacts/T13_ACOUSTIC_MODAL_CUTS_2026-10-03.md) รับเข้า canonical field `acoustic_modal_cut_evidence_2026_10_03` หลังตรวจเชื่อมหลักฐานแล้ว ปิดเฉพาะ tree residue/cubic และ three-acoustic cuts; ตัวควบคุมเป็น `off_shell_source_real_matching_and_complete_thermal_sunset_open` ไม่ใช่ Full Topic13/R1/Goal acceptance ตารางที่บันทึก uncommitted และ canonical predecessor ด้านล่างเป็น snapshot ก่อนส่งมอบ wave นี้ เก็บเพื่อไม่เขียนประวัติย้อนหลัง วันและเกณฑ์เดิมไม่เปลี่ยน
 
 ผู้ใช้กำหนดกรอบสองสัปดาห์และยังไม่เลือกทุน จึงคงวันเดิม: **7 ต.ค. ตรึงผลวิทยาศาสตร์ / 11 ต.ค. พอร์ตพร้อมทบทวน** ไม่เริ่มนับใหม่จากวันนี้ ไม่รับรองว่าจะทันทุนจริง และไม่กำหนดว่าทุนรอบต่อไปเปิดอีกสองหรือสามเดือน

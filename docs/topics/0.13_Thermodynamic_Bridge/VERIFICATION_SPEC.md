@@ -1,5 +1,16 @@
 # Verification Spec
 
+## Off-Shell Pair Source Verification (2026-10-03)
+
+Run Research_T13_Acoustic_Source_Pair.py and test_t13_acoustic_source_pair.py.
+Six checks cover stationary source derivative, Schur/matrix inverse, source
+pole residue, modal optical projection, positive Hermitian pair matrix and
+source Gram/Bose/support/convergence. Complex-orientation, coordinate
+covariance, zero-coupling, invalid support and runtime read/hash controls
+are required. Preserve first-failure JSON and report rounded-matrix error;
+decimal contraction uses unchanged samples/grids/1e-9 identity threshold.
+No source/physical/full Goal unlock follows from these checks.
+
 ## Acoustic Parent Modal Verification (2026-10-03)
 
 Research_T13_Acoustic_Modal_Cuts.py/test_t13_acoustic_modal_cuts.py use

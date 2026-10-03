@@ -1,0 +1,12 @@
+{
+  "schema_version": "uet-topic-local-equation-contract-v1",
+  "owner_topic": "0.13_Thermodynamic_Bridge",
+  "branch_id": "t13.candidate.tree_matched_classical_phi_low_T_phase_EFT_v1",
+  "status": "SCOPED_LOCAL_VERIFICATION_NOT_CORE_PROMOTION",
+  "entries": [
+    {"id": "t13.phase_eft.tree_h_source_susceptibility", "ontology": "h is the original nondynamical action source; Phi is response, not temperature; C/R_gen/R_obs excluded", "equation": "chi_hh=1/W+gamma2 s ell/[W2(ell den-4mu2 omega2)]", "units": "chi:E^-2; h:E^3; Phi:E", "derivation_class": "DERIVED_TREE_SOURCE_SCHUR", "observable": "conditional h-to-Phi response", "data_role": "DERIVED", "verification_status": "PASS_SCOPED_PAIR_SOURCE_INTERFACE", "controlling_blocker": "source_contact_and_real_loop_matching_open", "claim_boundary": "Tree source response only, not detector/thermal mapping"},
+    {"id": "t13.phase_eft.off_shell_acoustic_pair_source_kernel", "ontology": "external source dressing does not quantize independent Phi; only internal acoustic modes used", "equation": "R_pair=integral V Vdagger; Im delta_chi_hh=d_hdagger R_pair d_h", "units": "R:E^2; delta_chi:E^-2", "derivation_class": "DERIVED_TWO_ACOUSTIC_PAIR_SPECTRAL_GRAM", "observable": "off-shell pair-source absorption diagnostic", "data_role": "DERIVED", "verification_status": "PASS_SCOPED_PAIR_SOURCE_INTERFACE", "controlling_blocker": "off_shell_Landau_contact_local_real_and_thermal_matching_open", "claim_boundary": "Declared pair grid only, not full real/source response or physical transport"}
+  ],
+  "core_registry_modified": false,
+  "claim_promotion": false
+}

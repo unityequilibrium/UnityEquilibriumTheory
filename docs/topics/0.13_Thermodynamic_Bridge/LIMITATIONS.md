@@ -1,5 +1,15 @@
 # Limitations
 
+## Pair Source Does Not Close The Full Retarded Operator (2026-10-03)
+
+[Source result](Result/artifacts/T13_ACOUSTIC_SOURCE_PAIR_2026-10-03.md)
+admits only the declared omega>E(q) pair grid and tree h source. It does
+not compute off-shell Landau, principal-value/local real/contact matching,
+all-mode quantum/heavy or complete thermal sunset. The initial numerical
+FAIL is retained; decimal Gram repair neither relaxes thresholds nor
+establishes full high-precision roots/truncation/physical uncertainty.
+Coordinate-dependent chi transforms as a^2; it is not an SI/Kelvin map.
+
 ## Modal Matching Is Restricted To Three Acoustic Legs (2026-10-03)
 
 The [modal result](Result/artifacts/T13_ACOUSTIC_MODAL_CUTS_2026-10-03.md)

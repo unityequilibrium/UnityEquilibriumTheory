@@ -1,5 +1,16 @@
 ﻿# Method
 
+## Off-Shell Pair Source Interface (2026-10-03)
+
+[Derivation](Result/artifacts/T13_ACOUSTIC_SOURCE_PAIR_2026-10-03.md) uses
+chi_hh=ePhi^T D^-1 ePhi with the original +h Phi action and the full tree
+Schur expression. Internal positive-frequency acoustic polarizations give
+R_pair=integral V Vdagger and Im delta_chi=d_hdagger R_pair d_h. Static
+source derivatives, independent matrix pole and modal optical projection
+check the interface. Gram accumulation/contraction uses 50 decimal digits
+of the same samples to avoid double-matrix cancellation, not new physics.
+Full Landau/contact/local real/thermal and detector/scale remain open.
+
 ## Tree Acoustic Mode Projection (2026-10-03)
 
 Use [the modal derivation](Result/artifacts/T13_ACOUSTIC_MODAL_CUTS_2026-10-03.md).

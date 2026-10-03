@@ -6,7 +6,13 @@
 
 ตัวควบคุมงาน: [funding_portfolio_14d_plan.json](Data/03_Research/funding_portfolio_14d_plan.json) | คำสั่งเริ่มงาน: [GOAL_BRIEF_FUNDING_14D.md](GOAL_BRIEF_FUNDING_14D.md)
 
-Latest science 3 October: [tree acoustic modal matching](Result/artifacts/T13_ACOUSTIC_MODAL_CUTS_2026-10-03.md)
+Latest science 3 October: [off-shell pair/source interface](Result/artifacts/T13_ACOUSTIC_SOURCE_PAIR_2026-10-03.md)
+supplies action-source susceptibility and positive pair spectral dressing,
+not full off-shell Landau/source/contact/local real or thermal matching.
+Canonical field acoustic_source_pair_evidence_2026_10_03; full acceptance,
+physical inputs and 7/11 October unchanged. Prior handoffs retain scope.
+
+Prior science 3 October: [tree acoustic modal matching](Result/artifacts/T13_ACOUSTIC_MODAL_CUTS_2026-10-03.md)
 supplies parent residues and cubic projection for the three-acoustic cut.
 Off-shell source/contact/local real matching and complete thermal sunset
 remain open, as do all-mode quantum/heavy channels and physical inputs.

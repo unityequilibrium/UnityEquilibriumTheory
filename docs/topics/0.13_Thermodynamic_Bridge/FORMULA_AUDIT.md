@@ -1,5 +1,15 @@
 # Formula Audit: 0.13_Thermodynamic_Bridge
 
+## Action-Source Pair Contract (2026-10-03)
+
+[Local registry](Data/03_Research/t13_acoustic_source_pair_registry.json)
+declares tree source Schur and off-shell acoustic pair-source kernel IDs.
+h is nondynamical (E^3), Phi response (E), chi E^-2, spectral inverse R E^2.
+All coefficients come from the declared parent, not target calibration.
+Derived relations are scoped to the stated acoustic/pair approximation;
+independent static/matrix/pole controls do not close full real/source or
+physical thermal mapping. C/R_gen/R_obs excluded; no Core registry edit.
+
 ## Acoustic Tree Modal Contract (2026-10-03)
 
 The [registry](Data/03_Research/t13_acoustic_modal_cut_registry.json) records

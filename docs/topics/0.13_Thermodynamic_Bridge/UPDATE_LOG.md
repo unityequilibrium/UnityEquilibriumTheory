@@ -1,3 +1,27 @@
+## 2026-10-03 - Off-shell pair kernel and declared action-source response
+
+MAJOR_RESULT_CLOSURE: T13_ACOUSTIC_OFF_SHELL_PAIR_SOURCE_INTERFACE, CLOSED_FOR_LANE. Full Topic13/Goal/R1-R5 remain open.
+
+WHAT_IS_ACTUALLY_CLOSED: Original h-to-Phi tree source susceptibility/static derivative and pole residue, positive off-shell acoustic pair spectral matrix/source dressing, and optical projection back to the previously derived modal attenuation.
+
+WHAT_REMAINS_OPEN: Off-shell Landau, complete source/contact and principal-value/local real matching, all-mode quantum/heavy channels, complete thermal sunset/mixed pressure/source/entropy and physical material/readout/scale/normal/transport/uncertainty.
+
+DEPENDENCY_UNLOCKED: Further source/real matching research only, not physical/Core/Gravity or owner composition.
+
+STATUS: PASS_SCOPED_PAIR_SOURCE_INTERFACE; public safety safe.
+
+WHAT_CHANGED: New verifier, 12 tests, two-entry registry, artifact/derivation and retained first-failure JSON; current funding source-pair evidence/predecessor pointers with one regression, five research docs and four portfolio/Goal handoffs. No predecessor/action edits.
+
+EQUATION_OR_MAPPING: chi_hh=1/W+gamma2 s ell/[W2(ell den-4mu2 omega2)]; R_pair=integral V Vdagger; Im delta_chi=d_hdagger R_pair d_h. Source h E3, Phi E, chi E^-2, R E2; not Kelvin/readout calibration. Coordinate Phi'=aPhi implies chi'=a2chi; C/R_gen/R_obs excluded.
+
+VERIFICATION: Final single seventeen-file linked selection 271 passed in 37.21 seconds, including 12 new source tests and 23 funding tests. Six artifact checks; independent full matrix/Schur, stationary source derivative, pole residue, optical projection, Gram positivity/hermiticity/complex orientation, source-coordinate covariance, decoupled/invalid-input, support/energy/Bose/order and protected hash/runtime allowlist controls. Max static derivative error4.003e-6, source pole1.505e-10, optical projection3.791e-13, quadrature1.015e-11. Initial audit failed rounded-matrix source agreement (up to1.80454e-8); unchanged binary64 samples accumulated/contracted with50-decimal-digit arithmetic agree to5.965e-14 without grid/threshold relaxation. Retained failure is historical, not current rerun certificate; runtime longdouble is binary64. Final artifact c151cc3d2b8342f3ab0b6569a68f40a58ce2d604d99a419e934556e605b4f025, failure6b53e39b96e500ef0ef63c7afc9b75e5e5928a6f2ced04a9c0c7959290ff1843. Focused12-test run is a subset, not added. No full repo/external/model validation.
+
+CONTROLLING_BLOCKER: off_shell_Landau_local_real_source_contact_and_complete_thermal_sunset_open; independent physical input/transport remains separate.
+
+NEXT_ACTION: Scoped local commit; publication denial remains pending user authorization, no retry/workaround. Compute off-shell Landau and complete source/contact plus dispersive/local matching under this prescription, then thermal pressure/source/entropy. Preserve 7/11 October, later reviews and full Goal acceptance.
+
+CLAIM_BOUNDARY: Declared omega>E(q) pair-source grid and tree h susceptibility only. Not a full retarded/source/real response, complete EOS/KMS/transport, all-mode quantum Phi/heavy, physical detector/alpha/calibration/material prediction or Full Topic13. No fitting/clipping/filter/padding/threshold/ontology/Core-owner change, Xie numeric read or pristine-blind claim; prior exposure REVIEW_REQUIRED and failed conserved-C unchanged. No new Goal/automation/model configuration/contact/purchase/submission. Goal active because physical/measurement and full matching work remains.
+
 ## 2026-10-03 - Acoustic tree residue, cubic projection and modal cuts
 
 MAJOR_RESULT_CLOSURE: T13_ACOUSTIC_TREE_MODAL_CUT_MATCHING, CLOSED_FOR_LANE. Full Topic13/Goal/R1-R5 remain open.

@@ -8,7 +8,12 @@
 
 ## ผลหลักสำหรับพอร์ตและทุนรอบถัดไป
 
-Latest science 3 October: [acoustic modal matching](Result/artifacts/T13_ACOUSTIC_MODAL_CUTS_2026-10-03.md)
+Latest science 3 October: [pair-source interface](Result/artifacts/T13_ACOUSTIC_SOURCE_PAIR_2026-10-03.md)
+adds the declared h source and positive off-shell pair spectral response.
+R1 still needs Landau/contact/local real/thermal matching, R2-R3 physical
+inputs unchanged; no full acceptance or date/model change.
+
+Prior science 3 October: [acoustic modal matching](Result/artifacts/T13_ACOUSTIC_MODAL_CUTS_2026-10-03.md)
 closes tree residues/cubic projection for three acoustic legs. R1 next
 needs off-shell/source/local real matching and complete thermal sunset,
 not the already matched tree on-shell vertex. All-mode quantum/heavy and

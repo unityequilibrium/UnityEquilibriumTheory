@@ -8,7 +8,16 @@
 
 ปิดคำถามว่า He-4/O(2) bridge ที่แช่แข็ง calibration แล้วกำหนด independent dynamic response ได้หรือไม่ และต้องวัดอะไรเพิ่มจึงแยกคำตอบได้ ผลสำเร็จต้องมี predictive-content derivation หรือ scoped nonidentifiability proof ที่เพิ่มจาก matching identity เดิม พร้อม measurement design และชุดหลักฐาน ไม่ใช้จำนวน artifacts/PASS เป็นเกณฑ์สำเร็จ
 
-## Latest Acoustic Modal Handoff (2026-10-03)
+## Latest Pair Source Handoff (2026-10-03)
+
+[Pair/source interface](Result/artifacts/T13_ACOUSTIC_SOURCE_PAIR_2026-10-03.md)
+now derives the original h-source susceptibility and an off-shell pair
+Gram kernel whose pole projection agrees with modal attenuation. Next
+off-shell Landau, complete source/contact/local real and thermal consistency,
+not a full response already closed. Physical inputs and all full Goal/R1-R5
+and 7/11 October requirements remain open/unchanged as applicable.
+
+## Prior Acoustic Modal Handoff (2026-10-03)
 
 [Acoustic modal matching](Result/artifacts/T13_ACOUSTIC_MODAL_CUTS_2026-10-03.md)
 now derives the tree pole residue and full parent cubic projection for

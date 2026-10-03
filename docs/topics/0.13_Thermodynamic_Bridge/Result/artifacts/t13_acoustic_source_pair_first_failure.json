@@ -1,0 +1,1100 @@
+{
+  "major_result_id": "T13_ACOUSTIC_OFF_SHELL_PAIR_SOURCE_INTERFACE",
+  "topic": "0.13_Thermodynamic_Bridge",
+  "branch_id": "t13.candidate.tree_matched_classical_phi_low_T_phase_EFT_v1",
+  "created_at": "2026-10-03T01:04:44.794426+00:00",
+  "closure_level": "PARTIAL",
+  "verification_status": "FAIL_SCOPED_PAIR_SOURCE_INTERFACE",
+  "what_is_closed": "Tree h-to-Phi Schur susceptibility and acoustic pair spectral Gram kernel/source dressing on the declared off-shell grid",
+  "equation_or_mapping": "chi_hh=1/W+gamma2 s ell/[W2(ell den-4mu2 omega2)]; R_pair=integral V Vdagger; Im delta_chi_hh=(D^-1 ePhi)dagger R_pair(D^-1 ePhi)",
+  "units": {
+    "source_h": "E^3",
+    "Phi": "E",
+    "chi_hh_source_spectral_response": "E^-2",
+    "R_pair": "E^2",
+    "q_omega_T": "E"
+  },
+  "derivation_class": "TREE_SOURCE_SCHUR_AND_ACOUSTIC_PAIR_CUT",
+  "observable": "Conditional response to declared action source h, not temperature/detector data",
+  "data_role": "DERIVED_NOT_CALIBRATION",
+  "action_controls": {
+    "Z": 1.0,
+    "m0_sq": 1.0,
+    "u": 1.0,
+    "gamma": 0.04000000000000001,
+    "epsilon": 0.05,
+    "Phi_reference": 0.0,
+    "response_mass_sq": 1.0,
+    "response_quartic": 1.0,
+    "response_kinetic": 1.0
+  },
+  "equation_registry_ids": [
+    "t13.phase_eft.tree_h_source_susceptibility",
+    "t13.phase_eft.off_shell_acoustic_pair_source_kernel"
+  ],
+  "checks": {
+    "static_source_matches_stationary_derivative": true,
+    "tree_source_schur_matches_matrix_inverse": true,
+    "source_pole_residue_matches_independent_matrix": true,
+    "pair_matrix_projects_to_modal_attenuation": true,
+    "positive_hermitian_pair_kernel_and_source": true,
+    "source_dressing_gram_support_and_quadrature": false
+  },
+  "examples": [
+    {
+      "mu": 1.05,
+      "static_source_derivative_errors": [
+        4.002433021297884e-06,
+        1.000616812096014e-06,
+        2.5015473579326057e-07
+      ],
+      "pole_checks": [
+        {
+          "q": 0.04,
+          "source_pole_residue": 2.177011244340143e-05,
+          "matrix_residue_errors": [
+            4.652396161450466e-07,
+            4.652519011330821e-09,
+            4.436048545277242e-11
+          ],
+          "optical_projection_error": 2.722133039855469e-14
+        },
+        {
+          "q": 0.02,
+          "source_pole_residue": 5.459020647266642e-06,
+          "matrix_residue_errors": [
+            1.1499030487630882e-07,
+            1.1497365133126786e-09,
+            1.1730718026012801e-11
+          ],
+          "optical_projection_error": 1.3900378946337715e-13
+        }
+      ],
+      "off_shell_pair_rows": [
+        {
+          "q": 0.04,
+          "omega": 0.00930682154457274,
+          "omega_over_Eq": 1.1,
+          "T": 0.0,
+          "tree_source_schur_error": 1.9273832114510273e-16,
+          "pair_spectral_matrix": {
+            "real": [
+              [
+                0.0008636595145359733,
+                0.0,
+                -5.369478544597102e-05
+              ],
+              [
+                0.0,
+                7.6128848051966135e-06,
+                0.0
+              ],
+              [
+                -5.369478544597102e-05,
+                0.0,
+                3.3382757188299954e-06
+              ]
+            ],
+            "imag": [
+              [
+                0.0,
+                8.108555944679355e-05,
+                0.0
+              ],
+              [
+                -8.108555944679355e-05,
+                0.0,
+                5.04120871610784e-06
+              ],
+              [
+                0.0,
+                -5.04120871610784e-06,
+                0.0
+              ]
+            ]
+          },
+          "scaled_min_eigenvalue": 4.322401110155989e-16,
+          "hermitian_error": 0.0,
+          "source_spectral_response": 1.9110710196395643e-06,
+          "source_gram_error": 5.395368335851423e-12,
+          "quadrature_error": 5.854991843965932e-13,
+          "support_margin": 1.484593001876977e-05,
+          "energy_residual": 7.008365034651832e-14,
+          "p_support": [
+            0.001995925695744963,
+            0.041995925695744965
+          ]
+        },
+        {
+          "q": 0.04,
+          "omega": 0.00930682154457274,
+          "omega_over_Eq": 1.1,
+          "T": 0.00037216591771240014,
+          "tree_source_schur_error": 1.9273832114510273e-16,
+          "pair_spectral_matrix": {
+            "real": [
+              [
+                0.0008933888261629708,
+                0.0,
+                -5.553949879691189e-05
+              ],
+              [
+                0.0,
+                7.871919468620294e-06,
+                0.0
+              ],
+              [
+                -5.553949879691189e-05,
+                0.0,
+                3.452740806891806e-06
+              ]
+            ],
+            "imag": [
+              [
+                0.0,
+                8.386060965054162e-05,
+                0.0
+              ],
+              [
+                -8.386060965054162e-05,
+                0.0,
+                5.21340161364569e-06
+              ],
+              [
+                0.0,
+                -5.21340161364569e-06,
+                0.0
+              ]
+            ]
+          },
+          "scaled_min_eigenvalue": 4.565609767162918e-16,
+          "hermitian_error": 0.0,
+          "source_spectral_response": 1.914734540287019e-06,
+          "source_gram_error": 1.853113808411471e-12,
+          "quadrature_error": 5.861484354607779e-13,
+          "support_margin": 1.484593001876977e-05,
+          "energy_residual": 7.008365034651832e-14,
+          "p_support": [
+            0.001995925695744963,
+            0.041995925695744965
+          ]
+        },
+        {
+          "q": 0.04,
+          "omega": 0.012691120288053734,
+          "omega_over_Eq": 1.5,
+          "T": 0.0,
+          "tree_source_schur_error": 0.0,
+          "pair_spectral_matrix": {
+            "real": [
+              [
+                0.0008528507859619392,
+                0.0,
+                -5.3228211879836355e-05
+              ],
+              [
+                0.0,
+                1.4086582513198637e-05,
+                0.0
+              ],
+              [
+                -5.3228211879836355e-05,
+                0.0,
+                3.3220889514329653e-06
+              ]
+            ],
+            "imag": [
+              [
+                0.0,
+                0.00010960665958609033,
+                0.0
+              ],
+              [
+                -0.00010960665958609033,
+                0.0,
+                6.840808017375524e-06
+              ],
+              [
+                0.0,
+                -6.840808017375524e-06,
+                0.0
+              ]
+            ]
+          },
+          "scaled_min_eigenvalue": 4.2170022309338925e-16,
+          "hermitian_error": 0.0,
+          "source_spectral_response": 7.163693503697402e-08,
+          "source_gram_error": 4.646081082893236e-12,
+          "quadrature_error": 9.422225832175722e-15,
+          "support_margin": 6.243740170830403e-05,
+          "energy_residual": 4.879760548063431e-14,
+          "p_support": [
+            0.009967040424664723,
+            0.049967040424664724
+          ]
+        },
+        {
+          "q": 0.04,
+          "omega": 0.012691120288053734,
+          "omega_over_Eq": 1.5,
+          "T": 0.00037216591771240014,
+          "tree_source_schur_error": 0.0,
+          "pair_spectral_matrix": {
+            "real": [
+              [
+                0.0008531164356527317,
+                0.0,
+                -5.324475983044035e-05
+              ],
+              [
+                0.0,
+                1.4090920888182918e-05,
+                0.0
+              ],
+              [
+                -5.324475983044035e-05,
+                0.0,
+                3.323119762916265e-06
+              ]
+            ],
+            "imag": [
+              [
+                0.0,
+                0.0001096406078548271,
+                0.0
+              ],
+              [
+                -0.0001096406078548271,
+                0.0,
+                6.842922737600472e-06
+              ],
+              [
+                0.0,
+                -6.842922737600472e-06,
+                0.0
+              ]
+            ]
+          },
+          "scaled_min_eigenvalue": 4.265602933893914e-16,
+          "hermitian_error": 0.0,
+          "source_spectral_response": 7.164054283667939e-08,
+          "source_gram_error": 2.4125040874454477e-11,
+          "quadrature_error": 9.421751331254381e-15,
+          "support_margin": 6.243740170830403e-05,
+          "energy_residual": 4.879760548063431e-14,
+          "p_support": [
+            0.009967040424664723,
+            0.049967040424664724
+          ]
+        },
+        {
+          "q": 0.02,
+          "omega": 0.004641016251871996,
+          "omega_over_Eq": 1.1,
+          "T": 0.0,
+          "tree_source_schur_error": 1.926302621183669e-16,
+          "pair_spectral_matrix": {
+            "real": [
+              [
+                0.0008710588803999713,
+                0.0,
+                -5.402223347638425e-05
+              ],
+              [
+                0.0,
+                1.907125899001456e-06,
+                0.0
+              ],
+              [
+                -5.402223347638425e-05,
+                0.0,
+                3.3504071878492726e-06
+              ]
+            ],
+            "imag": [
+              [
+                0.0,
+                4.075803978795925e-05,
+                0.0
+              ],
+              [
+                -4.075803978795925e-05,
+                0.0,
+                2.5277749841973875e-06
+              ],
+              [
+                0.0,
+                -2.5277749841973875e-06,
+                0.0
+              ]
+            ]
+          },
+          "scaled_min_eigenvalue": 2.89764179193939e-18,
+          "hermitian_error": 0.0,
+          "source_spectral_response": 1.215382322760845e-07,
+          "source_gram_error": 3.6812999187871406e-12,
+          "quadrature_error": 3.332182970918964e-14,
+          "support_margin": 1.4802305988381725e-05,
+          "energy_residual": 6.671990005140807e-14,
+          "p_support": [
+            0.0009994855894513465,
+            0.020999485589451347
+          ]
+        },
+        {
+          "q": 0.02,
+          "omega": 0.004641016251871996,
+          "omega_over_Eq": 1.1,
+          "T": 0.00037216591771240014,
+          "tree_source_schur_error": 1.926302621183669e-16,
+          "pair_spectral_matrix": {
+            "real": [
+              [
+                0.0010000413138136952,
+                0.0,
+                -6.20184284249072e-05
+              ],
+              [
+                0.0,
+                2.1888545610783642e-06,
+                0.0
+              ],
+              [
+                -6.20184284249072e-05,
+                0.0,
+                3.84612691229559e-06
+              ]
+            ],
+            "imag": [
+              [
+                0.0,
+                4.6786143524259225e-05,
+                0.0
+              ],
+              [
+                -4.6786143524259225e-05,
+                0.0,
+                2.901484003756704e-06
+              ],
+              [
+                0.0,
+                -2.901484003756704e-06,
+                0.0
+              ]
+            ]
+          },
+          "scaled_min_eigenvalue": -1.0682458521391882e-18,
+          "hermitian_error": 0.0,
+          "source_spectral_response": 1.2465749401504383e-07,
+          "source_gram_error": 1.1915780906355813e-10,
+          "quadrature_error": 3.1213988634970187e-14,
+          "support_margin": 1.4802305988381725e-05,
+          "energy_residual": 6.671990005140807e-14,
+          "p_support": [
+            0.0009994855894513465,
+            0.020999485589451347
+          ]
+        },
+        {
+          "q": 0.02,
+          "omega": 0.006328658525279994,
+          "omega_over_Eq": 1.5,
+          "T": 0.0,
+          "tree_source_schur_error": 0.0,
+          "pair_spectral_matrix": {
+            "real": [
+              [
+                0.000868317597915137,
+                0.0,
+                -5.390419820158615e-05
+              ],
+              [
+                0.0,
+                3.5419071611579555e-06,
+                0.0
+              ],
+              [
+                -5.390419820158615e-05,
+                0.0,
+                3.3463133942960593e-06
+              ]
+            ],
+            "imag": [
+              [
+                0.0,
+                5.545717445953354e-05,
+                0.0
+              ],
+              [
+                -5.545717445953354e-05,
+                0.0,
+                3.4427209824216765e-06
+              ],
+              [
+                0.0,
+                -3.4427209824216765e-06,
+                0.0
+              ]
+            ]
+          },
+          "scaled_min_eigenvalue": 1.317331091302002e-18,
+          "hermitian_error": 0.0,
+          "source_spectral_response": 4.578109644357544e-09,
+          "source_gram_error": 4.1257472659536346e-10,
+          "quadrature_error": 1.0138230614063046e-11,
+          "support_margin": 6.219007989272107e-05,
+          "energy_residual": 9.840406547264631e-14,
+          "p_support": [
+            0.004995828149218252,
+            0.024995828149218254
+          ]
+        },
+        {
+          "q": 0.02,
+          "omega": 0.006328658525279994,
+          "omega_over_Eq": 1.5,
+          "T": 0.00037216591771240014,
+          "tree_source_schur_error": 0.0,
+          "pair_spectral_matrix": {
+            "real": [
+              [
+                0.0008776396278833302,
+                0.0,
+                -5.44826944618501e-05
+              ],
+              [
+                0.0,
+                3.579851728766857e-06,
+                0.0
+              ],
+              [
+                -5.44826944618501e-05,
+                0.0,
+                3.3822130792772027e-06
+              ]
+            ],
+            "imag": [
+              [
+                0.0,
+                5.60519183073403e-05,
+                0.0
+              ],
+              [
+                -5.60519183073403e-05,
+                0.0,
+                3.479628945858782e-06
+              ],
+              [
+                0.0,
+                -3.479628945858782e-06,
+                0.0
+              ]
+            ]
+          },
+          "scaled_min_eigenvalue": 3.632060869320978e-18,
+          "hermitian_error": 0.0,
+          "source_spectral_response": 4.5898340827934076e-09,
+          "source_gram_error": 5.916195179787289e-11,
+          "quadrature_error": 1.0141348595602186e-11,
+          "support_margin": 6.219007989272107e-05,
+          "energy_residual": 9.840406547264631e-14,
+          "p_support": [
+            0.004995828149218252,
+            0.024995828149218254
+          ]
+        }
+      ]
+    },
+    {
+      "mu": 1.2,
+      "static_source_derivative_errors": [
+        1.5978972160678e-06,
+        3.9947156730849944e-07,
+        9.986768423614738e-08
+      ],
+      "pole_checks": [
+        {
+          "q": 0.04,
+          "source_pole_residue": 5.0120864139115985e-05,
+          "matrix_residue_errors": [
+            1.5182437332344986e-06,
+            1.518250339571982e-08,
+            1.5049183790045355e-10
+          ],
+          "optical_projection_error": 4.952380127795604e-14
+        },
+        {
+          "q": 0.02,
+          "source_pole_residue": 1.2560108336200027e-05,
+          "matrix_residue_errors": [
+            3.7859963532389885e-07,
+            3.785885632960503e-09,
+            3.677264710223554e-11
+          ],
+          "optical_projection_error": 3.79028551768542e-13
+        }
+      ],
+      "off_shell_pair_rows": [
+        {
+          "q": 0.04,
+          "omega": 0.016035189054929337,
+          "omega_over_Eq": 1.1,
+          "T": 0.0,
+          "tree_source_schur_error": 0.0,
+          "pair_spectral_matrix": {
+            "real": [
+              [
+                0.006460326678544868,
+                0.0,
+                -0.00019342011226932359
+              ],
+              [
+                0.0,
+                1.1978399689052948e-05,
+                0.0
+              ],
+              [
+                -0.00019342011226932359,
+                0.0,
+                5.79093664982784e-06
+              ]
+            ],
+            "imag": [
+              [
+                0.0,
+                0.0002781804037523834,
+                0.0
+              ],
+              [
+                -0.0002781804037523834,
+                0.0,
+                8.328633789262133e-06
+              ],
+              [
+                0.0,
+                -8.328633789262133e-06,
+                0.0
+              ]
+            ]
+          },
+          "scaled_min_eigenvalue": 6.421482366148022e-19,
+          "hermitian_error": 0.0,
+          "source_spectral_response": 9.319976126241737e-08,
+          "source_gram_error": 5.023022759870411e-11,
+          "quadrature_error": 2.3856944013859242e-14,
+          "support_margin": 1.479900322409744e-05,
+          "energy_residual": 3.991926508896796e-14,
+          "p_support": [
+            0.0019992040654885582,
+            0.04199920406548856
+          ]
+        },
+        {
+          "q": 0.04,
+          "omega": 0.016035189054929337,
+          "omega_over_Eq": 1.1,
+          "T": 0.0013271355827413984,
+          "tree_source_schur_error": 0.0,
+          "pair_spectral_matrix": {
+            "real": [
+              [
+                0.007475031985650097,
+                0.0,
+                -0.00022378851573983516
+              ],
+              [
+                0.0,
+                1.3856083000770633e-05,
+                0.0
+              ],
+              [
+                -0.00022378851573983516,
+                0.0,
+                6.699811335640034e-06
+              ]
+            ],
+            "imag": [
+              [
+                0.0,
+                0.00032183008518086876,
+                0.0
+              ],
+              [
+                -0.00032183008518086876,
+                0.0,
+                9.634994630845516e-06
+              ],
+              [
+                0.0,
+                -9.634994630845516e-06,
+                0.0
+              ]
+            ]
+          },
+          "scaled_min_eigenvalue": -5.4035114968158043e-20,
+          "hermitian_error": 0.0,
+          "source_spectral_response": 9.573469584143939e-08,
+          "source_gram_error": 2.3402776938212106e-10,
+          "quadrature_error": 2.4884187944759044e-14,
+          "support_margin": 1.479900322409744e-05,
+          "energy_residual": 3.991926508896796e-14,
+          "p_support": [
+            0.0019992040654885582,
+            0.04199920406548856
+          ]
+        },
+        {
+          "q": 0.04,
+          "omega": 0.02186616689308546,
+          "omega_over_Eq": 1.5,
+          "T": 0.0,
+          "tree_source_schur_error": 1.9551457188276864e-16,
+          "pair_spectral_matrix": {
+            "real": [
+              [
+                0.0064427625100301365,
+                0.0,
+                -0.00019307480724291967
+              ],
+              [
+                0.0,
+                2.2249252484929106e-05,
+                0.0
+              ],
+              [
+                -0.00019307480724291967,
+                0.0,
+                5.786009315170142e-06
+              ]
+            ],
+            "imag": [
+              [
+                0.0,
+                0.0003786113828712194,
+                0.0
+              ],
+              [
+                -0.0003786113828712194,
+                0.0,
+                1.1346116432524601e-05
+              ],
+              [
+                0.0,
+                -1.1346116432524601e-05,
+                0.0
+              ]
+            ]
+          },
+          "scaled_min_eigenvalue": -1.536032369600409e-19,
+          "hermitian_error": 0.0,
+          "source_spectral_response": 1.8257313226790218e-09,
+          "source_gram_error": 1.1600489162343154e-09,
+          "quadrature_error": 2.8371124115931653e-12,
+          "support_margin": 6.217125467955498e-05,
+          "energy_residual": 5.474023884828669e-14,
+          "p_support": [
+            0.009993544270111706,
+            0.049993544270111705
+          ]
+        },
+        {
+          "q": 0.04,
+          "omega": 0.02186616689308546,
+          "omega_over_Eq": 1.5,
+          "T": 0.0013271355827413984,
+          "tree_source_schur_error": 1.9551457188276864e-16,
+          "pair_spectral_matrix": {
+            "real": [
+              [
+                0.006520859102607036,
+                0.0,
+                -0.0001954143936212858
+              ],
+              [
+                0.0,
+                2.2518475602449202e-05,
+                0.0
+              ],
+              [
+                -0.0001954143936212858,
+                0.0,
+                5.856097708240016e-06
+              ]
+            ],
+            "imag": [
+              [
+                0.0,
+                0.000383196729253615,
+                0.0
+              ],
+              [
+                -0.000383196729253615,
+                0.0,
+                1.148348241597957e-05
+              ],
+              [
+                0.0,
+                -1.148348241597957e-05,
+                0.0
+              ]
+            ]
+          },
+          "scaled_min_eigenvalue": 2.85195872282787e-19,
+          "hermitian_error": 0.0,
+          "source_spectral_response": 1.842678502847963e-09,
+          "source_gram_error": 2.0999800685089464e-10,
+          "quadrature_error": 2.755916763432919e-12,
+          "support_margin": 6.217125467955498e-05,
+          "energy_residual": 5.474023884828669e-14,
+          "p_support": [
+            0.009993544270111706,
+            0.049993544270111705
+          ]
+        },
+        {
+          "q": 0.02,
+          "omega": 0.008013442972426307,
+          "omega_over_Eq": 1.1,
+          "T": 0.0,
+          "tree_source_schur_error": 0.0,
+          "pair_spectral_matrix": {
+            "real": [
+              [
+                0.00647236825037605,
+                0.0,
+                -0.00019366595495553125
+              ],
+              [
+                0.0,
+                2.996370416959789e-06,
+                0.0
+              ],
+              [
+                -0.00019366595495553125,
+                0.0,
+                5.794865314635268e-06
+              ]
+            ],
+            "imag": [
+              [
+                0.0,
+                0.00013926094986437,
+                0.0
+              ],
+              [
+                -0.00013926094986437,
+                0.0,
+                4.166960858433431e-06
+              ],
+              [
+                0.0,
+                -4.166960858433431e-06,
+                0.0
+              ]
+            ]
+          },
+          "scaled_min_eigenvalue": 3.381644988163104e-19,
+          "hermitian_error": 0.0,
+          "source_spectral_response": 5.8594148314550206e-09,
+          "source_gram_error": 1.2335072022731018e-09,
+          "quadrature_error": 8.851434127628717e-14,
+          "support_margin": 1.4790539850983997e-05,
+          "energy_residual": 6.959725045097303e-14,
+          "p_support": [
+            0.0009999002440980373,
+            0.02099990024409804
+          ]
+        },
+        {
+          "q": 0.02,
+          "omega": 0.008013442972426307,
+          "omega_over_Eq": 1.1,
+          "T": 0.0013271355827413984,
+          "tree_source_schur_error": 0.0,
+          "pair_spectral_matrix": {
+            "real": [
+              [
+                0.009831081326735974,
+                0.0,
+                -0.00029415813599541793
+              ],
+              [
+                0.0,
+                4.550705908742572e-06,
+                0.0
+              ],
+              [
+                -0.00029415813599541793,
+                0.0,
+                8.801575999532878e-06
+              ]
+            ],
+            "imag": [
+              [
+                0.0,
+                0.00021151443964732342,
+                0.0
+              ],
+              [
+                -0.00021151443964732342,
+                0.0,
+                6.32877423567335e-06
+              ],
+              [
+                0.0,
+                -6.32877423567335e-06,
+                0.0
+              ]
+            ]
+          },
+          "scaled_min_eigenvalue": -1.0775179933136754e-19,
+          "hermitian_error": 0.0,
+          "source_spectral_response": 6.968068957652605e-09,
+          "source_gram_error": 4.347714429331142e-09,
+          "quadrature_error": 6.86144751094305e-14,
+          "support_margin": 1.4790539850983997e-05,
+          "energy_residual": 6.959725045097303e-14,
+          "p_support": [
+            0.0009999002440980373,
+            0.02099990024409804
+          ]
+        },
+        {
+          "q": 0.02,
+          "omega": 0.01092742223512678,
+          "omega_over_Eq": 1.5,
+          "T": 0.0,
+          "tree_source_schur_error": 1.9536804065258187e-16,
+          "pair_spectral_matrix": {
+            "real": [
+              [
+                0.006467962964487792,
+                0.0,
+                -0.00019357941397892288
+              ],
+              [
+                0.0,
+                5.570219372389655e-06,
+                0.0
+              ],
+              [
+                -0.00019357941397892288,
+                0.0,
+                5.793630837258514e-06
+              ]
+            ],
+            "imag": [
+              [
+                0.0,
+                0.00018981035666491822,
+                0.0
+              ],
+              [
+                -0.00018981035666491822,
+                0.0,
+                5.680826907099389e-06
+              ],
+              [
+                0.0,
+                -5.680826907099389e-06,
+                0.0
+              ]
+            ]
+          },
+          "scaled_min_eigenvalue": 1.1042525693900193e-18,
+          "hermitian_error": 0.0,
+          "source_spectral_response": 1.1494220163031356e-10,
+          "source_gram_error": 1.804537030487456e-08,
+          "quadrature_error": 9.650045735271512e-13,
+          "support_margin": 6.212304529285007e-05,
+          "energy_residual": 2.099462936102707e-14,
+          "p_support": [
+            0.004999190443263786,
+            0.024999190443263784
+          ]
+        },
+        {
+          "q": 0.02,
+          "omega": 0.01092742223512678,
+          "omega_over_Eq": 1.5,
+          "T": 0.0013271355827413984,
+          "tree_source_schur_error": 1.9536804065258187e-16,
+          "pair_spectral_matrix": {
+            "real": [
+              [
+                0.007154841830461878,
+                0.0,
+                -0.00021413595508834083
+              ],
+              [
+                0.0,
+                6.161605688676514e-06,
+                0.0
+              ],
+              [
+                -0.00021413595508834083,
+                0.0,
+                6.408835941551029e-06
+              ]
+            ],
+            "imag": [
+              [
+                0.0,
+                0.0002099650273197178,
+                0.0
+              ],
+              [
+                -0.0002099650273197178,
+                0.0,
+                6.2840050531945e-06
+              ],
+              [
+                0.0,
+                -6.2840050531945e-06,
+                0.0
+              ]
+            ]
+          },
+          "scaled_min_eigenvalue": -4.483684100479493e-19,
+          "hermitian_error": 0.0,
+          "source_spectral_response": 1.2439134964881014e-10,
+          "source_gram_error": 1.4237288874843758e-08,
+          "quadrature_error": 1.1527054711767125e-12,
+          "support_margin": 6.212304529285007e-05,
+          "energy_residual": 2.099462936102707e-14,
+          "p_support": [
+            0.004999190443263786,
+            0.024999190443263784
+          ]
+        }
+      ]
+    }
+  ],
+  "thresholds": {
+    "identity_relative": 1e-09,
+    "static_derivative_relative": 1e-05,
+    "pole_residue_relative": 1e-06,
+    "modal_projection_relative": 1e-06,
+    "quadrature_relative": 1e-06,
+    "original_causal_leakage": 1e-06
+  },
+  "declared_grids": {
+    "mu": [
+      1.05,
+      1.2
+    ],
+    "q": [
+      0.04,
+      0.02
+    ],
+    "omega_over_Eq": [
+      1.1,
+      1.5
+    ],
+    "orders": [
+      24,
+      48,
+      96
+    ],
+    "T_divisor": 256,
+    "source_steps": [
+      0.0001,
+      5e-05,
+      2.5e-05
+    ],
+    "residue_offsets": [
+      0.01,
+      0.001,
+      0.0001
+    ],
+    "locked_before_first_audit": true
+  },
+  "evidence_artifacts": [
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/Research_T13_Acoustic_Source_Pair.py",
+      "sha256": "6a5a434960c7cf0ac4604650e643df6f9f4469dba0e234e9c5da397ed113de29"
+    },
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/t13_acoustic_source_pair_registry.json",
+      "sha256": "ca2fff29c511dacf2f04119bb229837b02660b922b76dce85990e6e3175cb663"
+    },
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/test_t13_acoustic_source_pair.py",
+      "sha256": "4e5362be5d2df6370d815d9d25061402b1cb06fbd53d3e4260085f9e12c90aaa"
+    }
+  ],
+  "protected_evidence_hashes": [
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/t13_acoustic_modal_cuts.json",
+      "sha256": "6f44a1c7e28aaa3c925a9f9f452892529ba12c5378a0e6222aeab6e3662e7840"
+    },
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/Research_T13_Acoustic_Modal_Cuts.py",
+      "sha256": "4c22641ab48a4dd4d7f24607d5cd1786004ed68910ed3257018fad4d6377f00c"
+    },
+    {
+      "path": "docs/core/02_equations/o2/uet_o2_action_thermal_observable_bridge.py",
+      "sha256": "1cf745562548bc9a61d9ebb86069b8aff73e2a776756aa9efe7ab1a45b669ebe"
+    },
+    {
+      "path": "docs/core/02_equations/o2/uet_o2_action_thermal_stiffness_beta.py",
+      "sha256": "c1c3278a79df611ddae2f67ff811022722ab0c56f68bf91cc5480f34db9a95e6"
+    },
+    {
+      "path": "docs/core/02_equations/covariant/uet_covariant_matter.py",
+      "sha256": "8a57d95e898a8ac962bbd749670ad0695b597281937da36496d2ec7e074f9c53"
+    },
+    {
+      "path": "docs/core/02_equations/covariant/uet_covariant_response.py",
+      "sha256": "7fb4b7228afb8ede0ac4f1664d634346ef46cc7678c94ed7b55d73645590c0c2"
+    }
+  ],
+  "controlling_blocker": "off_shell_Landau_local_real_source_contact_and_complete_thermal_sunset_open",
+  "open_blockers": [
+    "off_shell_Landau_and_complete_source_contact_matching",
+    "principal_value_and_finite_local_real_matching",
+    "all_mode_quantum_heavy_and_complete_thermal_sunset_pressure",
+    "physical_material_readout_scale_transport_uncertainty"
+  ],
+  "dependency_unlocked": [
+    "further_source_matching_research_only"
+  ],
+  "full_off_shell_source_matching_closed": false,
+  "full_real_self_energy_matched": false,
+  "full_two_loop_pressure_computed": false,
+  "all_parent_modes_and_quantum_Phi_loops_included": false,
+  "physical_Kubo_emitted": false,
+  "independent_alpha_Phi_K_admitted": false,
+  "full_core_unlock": false,
+  "claim_promotion": false,
+  "xie_2026_accessed": false,
+  "prior_Xie_context_exposure_review": "REVIEW_REQUIRED",
+  "claim_boundary": "Pair-source diagnostic only, not a full retarded response, Landau/contact/local real match, all-mode quantum Phi/heavy loop, interacting EOS, physical Kubo/Kelvin/detector map or Full Topic13/Core. C/R_gen/R_obs excluded; no fitting/clipping/threshold or owner change.",
+  "report": {
+    "MAJOR_RESULT_CLOSURE": "PARTIAL",
+    "WHAT_IS_ACTUALLY_CLOSED": "Tree h-to-Phi Schur susceptibility and acoustic pair spectral Gram kernel/source dressing on the declared off-shell grid",
+    "WHAT_REMAINS_OPEN": [
+      "off_shell_Landau_and_complete_source_contact_matching",
+      "principal_value_and_finite_local_real_matching",
+      "all_mode_quantum_heavy_and_complete_thermal_sunset_pressure",
+      "physical_material_readout_scale_transport_uncertainty"
+    ],
+    "DEPENDENCY_UNLOCKED": [
+      "further_source_matching_research_only"
+    ],
+    "STATUS": "FAIL_SCOPED_PAIR_SOURCE_INTERFACE",
+    "WHAT_CHANGED": "Derived pair/source interface from original parent",
+    "EQUATION_OR_MAPPING": "chi_hh=1/W+gamma2 s ell/[W2(ell den-4mu2 omega2)]; R_pair=integral V Vdagger; Im delta_chi_hh=(D^-1 ePhi)dagger R_pair(D^-1 ePhi)",
+    "VERIFICATION": {
+      "static_source_matches_stationary_derivative": true,
+      "tree_source_schur_matches_matrix_inverse": true,
+      "source_pole_residue_matches_independent_matrix": true,
+      "pair_matrix_projects_to_modal_attenuation": true,
+      "positive_hermitian_pair_kernel_and_source": true,
+      "source_dressing_gram_support_and_quadrature": false
+    },
+    "CONTROLLING_BLOCKER": "off_shell_Landau_local_real_source_contact_and_complete_thermal_sunset_open",
+    "NEXT_ACTION": "Complete off-shell Landau/source/contact/local real and thermal consistency",
+    "CLAIM_BOUNDARY": "Pair-source diagnostic only, not a full retarded response, Landau/contact/local real match, all-mode quantum Phi/heavy loop, interacting EOS, physical Kubo/Kelvin/detector map or Full Topic13/Core. C/R_gen/R_obs excluded; no fitting/clipping/threshold or owner change."
+  }
+}

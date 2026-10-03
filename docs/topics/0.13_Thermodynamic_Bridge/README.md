@@ -6,6 +6,15 @@ description: "Research module for Thermodynamic Bridge within the Unity Equilibr
 
 # 0.13 Thermodynamic Bridge
 
+## Action Source And Off-Shell Pair Response (2026-10-03)
+
+[Pair-source result](Result/artifacts/T13_ACOUSTIC_SOURCE_PAIR_2026-10-03.md)
+now derives the original h-to-Phi tree susceptibility and a positive pair
+spectral matrix whose acoustic-pole projection reproduces prior damping.
+This closes that source/cut interface, not a full retarded/temperature
+observable. Next off-shell Landau/contact/local real and complete thermal
+matching; physical source/scale/readout and Full Topic13/Goal remain open.
+
 ## Acoustic Parent Residue And Cubic Matching (2026-10-03)
 
 The [modal successor](Result/artifacts/T13_ACOUSTIC_MODAL_CUTS_2026-10-03.md)
