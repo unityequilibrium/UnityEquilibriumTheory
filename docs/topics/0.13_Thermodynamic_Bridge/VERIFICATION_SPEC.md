@@ -1,5 +1,16 @@
 # Verification Spec
 
+## Acoustic Parent Modal Verification (2026-10-03)
+
+Research_T13_Acoustic_Modal_Cuts.py/test_t13_acoustic_modal_cuts.py use
+declared parent-mode q, residue-offset, potential-step and predecessor
+thermal grids/gates. Require independent matrix residue, symplectic norm,
+kernel/energy ledger, shifted-potential cubic, raw/stable contraction,
+low-q EFT/vacuum/soft Bose, quadrature/tail/support/energy/Bose, permutation,
+reality/coordinate/decoupled/invalid-input and runtime/hash checks. Causal
+1e-6 unchanged. No all-mode quantum or off-shell/physical unlock from these
+tests; [derivation](Result/artifacts/T13_ACOUSTIC_MODAL_CUTS_2026-10-03.md).
+
 ## Finite-T Cuts And Static Thermal Coherence (2026-10-03)
 
 Research_T13_Thermal_Cut_Stiffness.py and test_t13_thermal_cut_stiffness.py

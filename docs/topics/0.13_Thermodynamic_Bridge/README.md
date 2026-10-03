@@ -6,6 +6,16 @@ description: "Research module for Thermodynamic Bridge within the Unity Equilibr
 
 # 0.13 Thermodynamic Bridge
 
+## Acoustic Parent Residue And Cubic Matching (2026-10-03)
+
+The [modal successor](Result/artifacts/T13_ACOUSTIC_MODAL_CUTS_2026-10-03.md)
+derives the acoustic tree residue and full parent cubic projection before
+recomputing the three-acoustic pair/Landau cuts. Independent matrix/potential
+and low-q EFT checks agree; finite modal corrections are quantified, not a
+total error bound. Off-shell source/local real matching, thermal sunset,
+all-mode quantum/transport and physical input remain open. Owner Core and
+full Goal/R1-R5 admission unchanged.
+
 ## Finite-T Cuts And Static Thermal Coherence (2026-10-03)
 
 The [thermal successor](Result/artifacts/T13_THERMAL_CUT_STIFFNESS_2026-10-03.md)

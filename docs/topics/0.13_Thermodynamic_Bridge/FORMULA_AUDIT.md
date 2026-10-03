@@ -1,5 +1,16 @@
 # Formula Audit: 0.13_Thermodynamic_Bridge
 
+## Acoustic Tree Modal Contract (2026-10-03)
+
+The [registry](Data/03_Research/t13_acoustic_modal_cut_registry.json) records
+pole residue, parent cubic projection and restricted acoustic cuts. Kernel
+E2, cubic tensor/amplitude E, residue/polarization dimensionless, rate E.
+Chemical mixing enters normalization; no Euclidean-vector norm shortcut.
+Cartesian phase is not UET Pi; radial amplitude is not C, heavy Phi component
+remains tree-slaved, R_gen/R_obs excluded. Independent potential/matrix/soft
+checks and [boundaries](Result/artifacts/T13_ACOUSTIC_MODAL_CUTS_2026-10-03.md)
+do not change Core registry or imply full off-shell/all-mode matching.
+
 ## Thermal Cut/Static Coherence Contract (2026-10-03)
 
 The [local registry](Data/03_Research/t13_thermal_cut_stiffness_registry.json)

@@ -1,5 +1,14 @@
 # Limitations
 
+## Modal Matching Is Restricted To Three Acoustic Legs (2026-10-03)
+
+The [modal result](Result/artifacts/T13_ACOUSTIC_MODAL_CUTS_2026-10-03.md)
+closes tree residue/cubic ingredients of the acoustic cut, not all massive
+channels, new quantum Phi loops, off-shell source/contact/local real response
+or complete thermal pressure/transport. Small modal/LO rate differences
+bound only that computed replacement, not full approximation or material
+uncertainty. R1-R5/full Goal/physical gates and old branch failures unchanged.
+
 ## Thermal Cuts Do Not Close A Full Collision Operator (2026-10-03)
 
 The [thermal result](Result/artifacts/T13_THERMAL_CUT_STIFFNESS_2026-10-03.md)

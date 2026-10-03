@@ -433,7 +433,8 @@ def test_vacuum_cut_log_successor_is_not_full_matching_or_physical_acceptance():
 
 
 def test_thermal_cut_successor_does_not_accept_full_collision_matching_or_goal():
-    field = PLAN["execution_review_2026_10_01"]["current_scientific_evidence_field"]
+    latest = PLAN[PLAN["execution_review_2026_10_01"]["current_scientific_evidence_field"]]
+    field = latest["thermal_predecessor_evidence_field"]
     assert field == "thermal_cut_stiffness_evidence_2026_10_03"
     evidence = PLAN[field]
     path = ROOT/evidence["path"]
@@ -450,4 +451,28 @@ def test_thermal_cut_successor_does_not_accept_full_collision_matching_or_goal()
     content = (ROOT/"docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/T13_THERMAL_CUT_STIFFNESS_2026-10-03.md").read_text()
     assert evidence["sha256"] in content
     assert all(name+":" in content for name in r["report"])
+    assert all(card["status"] == "PLANNED_NOT_ACCEPTED" for card in PLAN["result_level_execution_2026_10_01"]["result_cards"])
+
+
+def test_acoustic_modal_matching_is_three_legs_not_full_response_or_goal():
+    field = PLAN["execution_review_2026_10_01"]["current_scientific_evidence_field"]
+    assert field == "acoustic_modal_cut_evidence_2026_10_03"
+    assert field in PLAN["portfolio_strategy_2026_10_01"]["accepted_preliminary_evidence_fields"]
+    evidence = PLAN[field]
+    path = ROOT/evidence["path"]
+    result = json.loads(path.read_text())
+    assert hashlib.sha256(path.read_bytes()).hexdigest() == evidence["sha256"]
+    assert result["verification_status"] == evidence["verification_status"] == "PASS_SCOPED_ACOUSTIC_MODAL_CUT"
+    assert result["controlling_blocker"] == evidence["controlling_blocker"]
+    assert result["branch_id"] == evidence["branch_id"]
+    assert result["acoustic_tree_residues_and_cubic_vertex_matched"] is evidence["acoustic_tree_residues_and_cubic_vertex_matched"] is True
+    assert all(result["checks"].values())
+    for key in ("all_parent_modes_and_quantum_Phi_loops_included", "full_off_shell_source_matching_closed",
+                "full_real_self_energy_matched", "full_two_loop_pressure_computed", "full_finite_T_collision_operator_computed",
+                "full_SK_KMS_matching_closed", "controlled_full_action_truncation_error_established",
+                "independent_alpha_Phi_K_admitted", "physical_Kubo_emitted", "g1_physical_unlock",
+                "g2_science_unlock", "full_core_unlock", "core_composition_gate_overwritten"):
+        assert result[key] is evidence[key] is False
+    content = (ROOT/"docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/T13_ACOUSTIC_MODAL_CUTS_2026-10-03.md").read_text()
+    assert evidence["sha256"] in content and all(name+":" in content for name in result["report"])
     assert all(card["status"] == "PLANNED_NOT_ACCEPTED" for card in PLAN["result_level_execution_2026_10_01"]["result_cards"])

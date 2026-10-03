@@ -1,5 +1,15 @@
 ﻿# Method
 
+## Tree Acoustic Mode Projection (2026-10-03)
+
+Use [the modal derivation](Result/artifacts/T13_ACOUSTIC_MODAL_CUTS_2026-10-03.md).
+Derive symplectic residue from the same parent kernel, verify by inverted
+matrix pole, derive all cubic tensor entries from shifted potential and
+project on signed acoustic polarizations. Cancel exact on-shell linear
+frequency sums analytically, rejecting unsupported/unbalanced legs. Replace
+LO cut amplitude without double-counting residues; recover soft EFT/known
+limits and retain all off-shell/all-mode/real-pressure/input obligations.
+
 ## Thermal Cuts And Independent Static Coherence (2026-10-03)
 
 Use [the thermal derivation](Result/artifacts/T13_THERMAL_CUT_STIFFNESS_2026-10-03.md).

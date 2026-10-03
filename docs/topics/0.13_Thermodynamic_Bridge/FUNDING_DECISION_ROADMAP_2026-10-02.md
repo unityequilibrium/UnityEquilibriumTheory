@@ -10,6 +10,8 @@ Science successor: [Low-T phase EFT](Result/artifacts/T13_LOW_T_PHASE_EFT_2026-1
 
 ### แผนลงมือและผลที่ต้องตัดสินจากสถานะ 3 ตุลาคม
 
+ผล science wave ต่อเนื่อง: [acoustic tree matching](Result/artifacts/T13_ACOUSTIC_MODAL_CUTS_2026-10-03.md) รับเข้า canonical field `acoustic_modal_cut_evidence_2026_10_03` หลังตรวจเชื่อมหลักฐานแล้ว ปิดเฉพาะ tree residue/cubic และ three-acoustic cuts; ตัวควบคุมเป็น `off_shell_source_real_matching_and_complete_thermal_sunset_open` ไม่ใช่ Full Topic13/R1/Goal acceptance ตารางที่บันทึก uncommitted และ canonical predecessor ด้านล่างเป็น snapshot ก่อนส่งมอบ wave นี้ เก็บเพื่อไม่เขียนประวัติย้อนหลัง วันและเกณฑ์เดิมไม่เปลี่ยน
+
 ผู้ใช้กำหนดกรอบสองสัปดาห์และยังไม่เลือกทุน จึงคงวันเดิม: **7 ต.ค. ตรึงผลวิทยาศาสตร์ / 11 ต.ค. พอร์ตพร้อมทบทวน** ไม่เริ่มนับใหม่จากวันนี้ ไม่รับรองว่าจะทันทุนจริง และไม่กำหนดว่าทุนรอบต่อไปเปิดอีกสองหรือสามเดือน
 
 **เป้าหมายเดียว:** `T13_HE4_PREDICTIVE_CONTENT_AND_MEASUREMENT_DESIGN` ตาม contract เดิม ตอบให้ได้ว่า calibration/equilibrium ที่ล็อกแล้วกำหนด dynamic response ใดได้เอง และข้อมูลอิสระใดต้องเพิ่มจึงทดสอบได้ ไม่ใช่เป้าหมายปิดทุก branch ของ Topic13 ภายในสองสัปดาห์

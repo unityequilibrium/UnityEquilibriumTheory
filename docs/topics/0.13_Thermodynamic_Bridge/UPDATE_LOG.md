@@ -1,3 +1,27 @@
+## 2026-10-03 - Acoustic tree residue, cubic projection and modal cuts
+
+MAJOR_RESULT_CLOSURE: T13_ACOUSTIC_TREE_MODAL_CUT_MATCHING, CLOSED_FOR_LANE. Full Topic13/Goal/R1-R5 remain open.
+
+WHAT_IS_ACTUALLY_CLOSED: Tree acoustic pole residue with chemical/symplectic normalization, cubic tensor from the shifted parent and its three-acoustic-leg projection, and vacuum/finite-T pair/Landau cuts. This replaces the predecessor LO vertex/residue for that channel only.
+
+WHAT_REMAINS_OPEN: Off-shell source/contact and local real matching, all-mode quantum/heavy channels, complete thermal sunset/mixed pressure/source/entropy, finite-T normal/heat/Kubo/SK-KMS/entropy transport, independent material/readout/scale and total approximation uncertainty.
+
+DEPENDENCY_UNLOCKED: Off-shell matching/thermal-sunset research only. No Core-owner/physical/Gravity gate or original conserved-C change.
+
+STATUS: PASS_SCOPED_ACOUSTIC_MODAL_CUT; public safety safe.
+
+WHAT_CHANGED: New local verifier, 15 tests, three-entry registry, artifact and derivation; canonical modal evidence/predecessor pointers and one funding regression; five research docs and four portfolio/Goal handoffs. Historical planning observation of uncommitted work retained. One multi-file documentation patch failed atomically on a missing heading and was corrected without partial science changes.
+
+EQUATION_OR_MAPPING: Z_pi=[1+4mu2/den+A2+epsilon ZPhi B2]^-1; M_aaa=T_ijk u_i u_j u_k; pair/Landau cuts use |M_aaa|2. Natural E lane, cubic tensor/amplitude and gamma in E; phase is not UET Pi, radial amplitude is not C, R_gen/R_obs excluded.
+
+VERIFICATION: Final single sixteen-file linked selection 258 passed in 35.83 seconds, including 15 modal and 22 funding tests. Nine artifact checks, independent matrix-pole/potential derivatives/symplectic norm, raw/stable projection, permutation/reality/coordinate/decoupled/invalid input, parent energy ledger, Bose/support/convergence/tail/low-q controls, evidence/protected hashes and runtime read allowlist pass. Max finest pole error 2.164e-12, potential tensor error 7.599e-11; finest modal/LO Landau ratios .999981960392/.999950904124 at two declared witnesses. These corrections are not total error bounds. Artifact SHA-256 6f44a1c7e28aaa3c925a9f9f452892529ba12c5378a0e6222aeab6e3662e7840. Predecessors and Core action unchanged; no full repo/external validation/model trial.
+
+CONTROLLING_BLOCKER: off_shell_source_real_matching_and_complete_thermal_sunset_open. Independent physical source/scale/transport separate.
+
+NEXT_ACTION: Scoped local commit; upstream publication remains denied pending user authorization, do not retry. Derive off-shell source/contact spectral and local real matching for the same declared acoustic prescription, then complete thermal sunset/source/entropy; independent measurement feasibility in parallel. Preserve 7/11 October, later reviews and full Goal requirements.
+
+CLAIM_BOUNDARY: Three-acoustic tree matching only, not all-mode quantum Phi/heavy loops, full real/source operator, interacting pressure, physical transport/KMS/Kelvin calibration/material prediction or Full Topic13. No fit/assigned width/clipping/filter/padding/threshold/ontology/Core-owner change or Xie numeric read; prior exposure REVIEW_REQUIRED, original conserved-C blocked at1e-6. No new Goal/automation/model configuration/contact/purchase/submission. Goal remains active because required physics and measurement work is incomplete.
+
 ## 2026-10-03 - User timeline, model and next-round execution review
 
 MAJOR_RESULT_CLOSURE: Planning clarification only; no scientific-result or Goal acceptance.

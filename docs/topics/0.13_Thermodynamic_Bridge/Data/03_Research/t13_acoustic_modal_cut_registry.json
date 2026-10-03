@@ -1,0 +1,13 @@
+{
+  "schema_version": "uet-topic-local-equation-contract-v1",
+  "owner_topic": "0.13_Thermodynamic_Bridge",
+  "branch_id": "t13.candidate.tree_matched_classical_phi_low_T_phase_EFT_v1",
+  "status": "SCOPED_LOCAL_VERIFICATION_NOT_CORE_PROMOTION",
+  "entries": [
+    {"id": "t13.phase_eft.acoustic_tree_pole_residue", "ontology": "sigma/pi are O2 fluctuations, not C; Phi component is tree slaved, not a new quantum Phi prescription", "equation": "Z_pi=[1+4mu^2/den+A^2+epsilon Z_Phi B^2]^-1; u=sqrt(Z_pi)(-iA,1,-iB)", "units": "Z/u:1; A/B:1; inverse kernel:E^2", "derivation_class": "DERIVED_TREE_POLE_SYMPLECTIC_NORMALIZATION", "observable": "acoustic phase pole spectral residue", "data_role": "DERIVED", "verification_status": "PASS_SCOPED_ACOUSTIC_MODAL_CUT", "controlling_blocker": "full_source_off_shell_real_matching_open", "claim_boundary": "Acoustic tree pole only, not all parent loops"},
+    {"id": "t13.phase_eft.acoustic_parent_cubic_projection", "ontology": "parent fluctuation coordinates are not collective C or UET Pi; R_gen/R_obs excluded", "equation": "M_aaa=T_ijk u_i u_j u_k; T is third derivative of shifted parent potential", "units": "T/M:E", "derivation_class": "DERIVED_TREE_ACOUSTIC_CUBIC_MATCHING", "observable": "on-shell three-acoustic-leg matrix element", "data_role": "DERIVED", "verification_status": "PASS_SCOPED_ACOUSTIC_MODAL_CUT", "controlling_blocker": "off_shell_source_contact_matching_open", "claim_boundary": "Includes tree curvature/polarization, not complete quantum Phi/heavy modes"},
+    {"id": "t13.phase_eft.acoustic_modal_pair_Landau_cut", "ontology": "mode attenuation is not physical Kubo or Kelvin mapping", "equation": "gamma_pair/Landau use matched |M_aaa|^2 and same-parent support/Bose factors", "units": "gamma:E", "derivation_class": "DERIVED_ACOUSTIC_MODE_CUT_OF_TREE_PARENT", "observable": "conditional three-acoustic-channel attenuation", "data_role": "DERIVED", "verification_status": "PASS_SCOPED_ACOUSTIC_MODAL_CUT", "controlling_blocker": "complete_thermal_sunset_and_off_shell_real_matching_open", "claim_boundary": "Restricted acoustic intermediate states; no full kinetic/transport operator"}
+  ],
+  "core_registry_modified": false,
+  "claim_promotion": false
+}

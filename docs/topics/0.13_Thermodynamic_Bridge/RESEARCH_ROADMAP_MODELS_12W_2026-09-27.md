@@ -8,7 +8,13 @@
 
 ## ผลหลักสำหรับพอร์ตและทุนรอบถัดไป
 
-Latest science 3 October: [thermal cuts/static coherence](Result/artifacts/T13_THERMAL_CUT_STIFFNESS_2026-10-03.md)
+Latest science 3 October: [acoustic modal matching](Result/artifacts/T13_ACOUSTIC_MODAL_CUTS_2026-10-03.md)
+closes tree residues/cubic projection for three acoustic legs. R1 next
+needs off-shell/source/local real matching and complete thermal sunset,
+not the already matched tree on-shell vertex. All-mode quantum/heavy and
+R2-R3 physical inputs remain open; all dates/models/acceptance unchanged.
+
+Prior science 3 October: [thermal cuts/static coherence](Result/artifacts/T13_THERMAL_CUT_STIFFNESS_2026-10-03.md)
 closes leading thermal cut and static-loop calculations, not full collision
 or real/thermal-pressure matching. R1 next needs full curved operator and
 local/source input plus complete thermal sunset/source/entropy. R2-R3

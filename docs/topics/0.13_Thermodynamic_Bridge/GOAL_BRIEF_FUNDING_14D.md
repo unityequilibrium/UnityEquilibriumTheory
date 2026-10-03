@@ -8,7 +8,20 @@
 
 ปิดคำถามว่า He-4/O(2) bridge ที่แช่แข็ง calibration แล้วกำหนด independent dynamic response ได้หรือไม่ และต้องวัดอะไรเพิ่มจึงแยกคำตอบได้ ผลสำเร็จต้องมี predictive-content derivation หรือ scoped nonidentifiability proof ที่เพิ่มจาก matching identity เดิม พร้อม measurement design และชุดหลักฐาน ไม่ใช้จำนวน artifacts/PASS เป็นเกณฑ์สำเร็จ
 
-## Latest Thermal Cut And Static Handoff (2026-10-03)
+## Latest Acoustic Modal Handoff (2026-10-03)
+
+[Acoustic modal matching](Result/artifacts/T13_ACOUSTIC_MODAL_CUTS_2026-10-03.md)
+now derives the tree pole residue and full parent cubic projection for
+three acoustic legs, including chemical mixing. Independent matrix-pole
+and potential-derivative checks agree with the low-q EFT and Bose limits.
+Next derive off-shell source/contact/local real response and complete
+thermal sunset/source/entropy, not this same tree vertex again. All-mode
+quantum/heavy channels and independent physical inputs remain open.
+Preserve Full Goal/R1-R5, 7/11 October and Core-owner/failed baseline
+boundaries. Planning observations of uncommitted modal work are historical;
+current canonical evidence is acoustic_modal_cut_evidence_2026_10_03.
+
+## Prior Thermal Cut And Static Handoff (2026-10-03)
 
 [The thermal successor](Result/artifacts/T13_THERMAL_CUT_STIFFNESS_2026-10-03.md)
 now computes leading pair/Landau cuts with internal tree curvature and
