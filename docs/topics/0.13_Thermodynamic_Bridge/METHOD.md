@@ -1,6 +1,16 @@
 ﻿# Method
 
 
+## Conserved Density Source And Restricted Information (2026-10-03)
+
+[Derivation](Result/artifacts/T13_NOETHER_DENSITY_READOUT_2026-10-03.md)
+varies external a0=delta_mu in the existing tree action with seagull s*a0.
+Six-state evolution and mode projections check chi_nn, q0 closed charge
+and static d(mu*s)/dmu. Density modes, not raw Phi, feed the conditional
+detector map. Restricted gain and action-unit information analyses give
+explicit conditional inverses and full-covariance sensitivity; no fitted
+scale, invented uncertainty, assigned linewidth or physical data admission.
+
 ## Even Covariance Hierarchy Without Amplitude Fit (2026-10-03)
 
 [Derivation](Result/artifacts/T13_GAUSSIAN_WORK_REMAINDER_2026-10-03.md)

@@ -1,0 +1,26 @@
+{
+  "schema_version": "uet-protocol-screen-not-numeric-source-v1",
+  "owner_topic": "0.13_Thermodynamic_Bridge",
+  "status": "CONDITIONAL_DENSITY_SPECTROSCOPY_ROUTE_NOT_ADMITTED",
+  "selected_protocol": "one low-temperature SVP He4 coherent inelastic-neutron density-spectrum route; not roton fitting or a thermal TTG protocol",
+  "selection_is_not_evidence_acceptance": true,
+  "records": [
+    {"source_id": "Beauvois2018_IN5", "doi": "10.1103/PhysRevB.97.184520", "url": "https://arxiv.org/html/1802.08120v3", "locator": "Sections II-III and IV.2; Figure 5 caption", "role": "PROTOCOL_SCREEN_ONLY_NOT_CALIBRATION_OR_HOLDOUT", "verified_protocol_facts": ["IN5 time-of-flight experiment on low-temperature He4 including SVP", "cell/background and multiple-scattering corrections described", "joint energy-wavevector resolution affects observed single-excitation width", "SVP spectra include earlier-study data; separate ancestry must be checked"], "numeric_rows_admitted": 0, "preprocessing": "No figure digitization, source-curve extraction, fit or numeric import", "raw_data_permission": "NOT_VERIFIED", "row_uncertainty_and_covariance": "NOT_ACQUIRED", "independence_from_existing_calibration": "NOT_ESTABLISHED", "low_q_overlap_with_UET_validity": "NOT_ESTABLISHED", "transfer_to_existing_1p7K_calibration_state_admitted": false},
+    {"source_id": "NIST_Copley2013", "url": "https://www.ncnr.nist.gov/summerschool/ss13/pdf/SS2013_Lecture_Copley.pdf", "locator": "Slides 27-30 and 41", "role": "STANDARD_SCATTERING_MAPPING_REFERENCE_NOT_COEFFICIENT_DATA", "verified_protocol_facts": ["neutron spectroscopy intensity relates to dynamic structure factor with flux, atom count and kinematic factors", "coherent and incoherent channels must be separated"], "numeric_rows_admitted": 0}
+  ],
+  "required_input_packet": [
+    "Admitted He4 state and a derived Noether-current to atomic-number-current map; C is not charge or mass",
+    "Independent Q and energy-axis calibration and natural/SI action scale covariance, not target-curve fit",
+    "Incident flux, detector efficiency, coherent scattering, sample atom count and normalization with uncertainty",
+    "Joint R(Q,E;Qprime,Eprime) resolution kernel and background/multiple-scattering corrections with covariance",
+    "Permitted study-only low-q numeric rows, row identity, source hash, ancestry and preprocessing uncertainty",
+    "Controlled theoretical low-q/interaction remainder and correctly identified density-visible pole",
+    "Independent thermal observable if the requested result is Phi-to-temperature, not density spectroscopy alone"
+  ],
+  "data_roles": {"current": "LITERATURE_PROTOCOL_SCREEN_AND_DERIVED_OPERATOR", "future_calibration": "Independent gain/state/unit/current mapping and kinetic dispersion inputs, locked before comparison", "future_comparison": "Separate response rows after calibration and provenance lock", "holdout": "Xie2026 remains locked; prior exposure REVIEW_REQUIRED; new source is not declared blind"},
+  "lab_feasibility_established": false,
+  "instrument_access_or_cost_established": false,
+  "physical_measurement_protocol_admitted": false,
+  "external_contact_purchase_or_submission_authorized": false,
+  "claim_boundary": "One conditional protocol route and exact missing-input list, not acquired data, independent physical calibration, demonstrated low-q resolution, intrinsic damping, second sound or thermal prediction. Web source identity/locator is recorded; no local raw dataset or numeric-source hash is invented. This screen's own hash is linked by the derived artifact."
+}

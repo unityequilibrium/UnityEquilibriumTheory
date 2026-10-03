@@ -10,7 +10,19 @@
 
 ## ผลหลักสำหรับพอร์ตและทุนรอบถัดไป
 
-Latest science 3 October: [even work/remainder](Result/artifacts/T13_GAUSSIAN_WORK_REMAINDER_2026-10-03.md)
+## Latest Noether Density And Measurement-Input Handoff (2026-10-03)
+
+[Noether density derivation](Result/artifacts/T13_NOETHER_DENSITY_READOUT_2026-10-03.md)
+and [conditional measurement card](Result/artifacts/T13_DENSITY_SPECTROSCOPY_MEASUREMENT_CARD_2026-10-03.md)
+close tree operator/contact/projection and restricted gain/unit information,
+including the inverse with independent scale. Current canonical
+noether_density_readout_evidence_2026_10_03; next particle-current/same-state
+SI action scale, gain/joint resolution covariance and permitted low-q rows.
+No physical density/temperature, full measurement design/G2-G4/R1-R5/Goal
+or owner acceptance. Old work FAIL, parent/heat/KMS,7/11 October/holdout
+REVIEW_REQUIRED and NOT_RUN model trial/settings unchanged. Below is ancestry.
+
+Prior science 3 October: [even work/remainder](Result/artifacts/T13_GAUSSIAN_WORK_REMAINDER_2026-10-03.md)
 closes the conditional parity/coefficient formula, not original-grid or
 parent-error certification. Source/readout/material scale remains R2-R3;
 full interacting/approximation remains R1. Old source-work FAIL stays.

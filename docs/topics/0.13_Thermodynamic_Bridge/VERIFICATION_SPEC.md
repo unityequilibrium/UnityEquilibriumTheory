@@ -1,6 +1,18 @@
 # Verification Spec
 
 
+## Noether Density And Calibration Verification (2026-10-03)
+
+Run Research_T13_Noether_Density_Readout.py/test_t13_noether_density_readout.py.
+Ten checks: six-state/spectral agreement, Ward/static derivative, positive
+density strengths/completeness, q0/contact negative, coordinate covariance,
+dark Phi and gain/unit rank/inverse. Density and unit subprotocols fixed
+before their respective first audits; final inverse check adds no gate.
+Identity1e-8/static FD1e-6/pole1e-5/negative.1/null1e-12; causal1e-6 unchanged
+and not rerun. Tests include log-gradient FD, inverse-family recovery,
+invalid inputs/negative kinetic not clipped, hashes and runtime Path read
+allowlist. No physical uncertainty or pristine-blindness certification.
+
 ## Even Work Hierarchy And Bound Verification (2026-10-03)
 
 [Artifact](Result/artifacts/t13_gaussian_work_remainder.json) separately

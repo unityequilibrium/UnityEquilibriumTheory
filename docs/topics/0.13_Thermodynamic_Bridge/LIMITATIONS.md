@@ -1,6 +1,18 @@
 # Limitations
 
 
+## Tree Density Is Not Physical Detector Or Thermal Admission (2026-10-03)
+
+[Card](Result/artifacts/T13_DENSITY_SPECTROSCOPY_MEASUREMENT_CARD_2026-10-03.md)
+does not admit Noether charge as He4 number density, same-state SI action
+scale, gain/joint resolution or full KMS structure factor. The q3 family
+requires open physical scales and does not preserve q5/full dispersion
+or already-admitted physical EOS. Coordinate redundancy is not no-go;
+zero SVP pressure/vacuum offset cannot anchor the scale. Low-T source is
+not the existing1.7K calibration; ancestry/rights/low-q overlap/precision
+remain open. Density alone does not provide alpha_Phi_K. Parent/heat/
+transport, old FAIL, owner scope and Xie REVIEW_REQUIRED are unchanged.
+
 ## A Formal Tail Bound Is Not Useful Parent Error Control (2026-10-03)
 
 [Even-work result](Result/artifacts/T13_GAUSSIAN_WORK_REMAINDER_2026-10-03.md)

@@ -1,6 +1,16 @@
 # Formula Audit: 0.13_Thermodynamic_Bridge
 
 
+## Noether Readout And Conditional Unit Inverse (2026-10-03)
+
+[Registry](Data/03_Research/t13_noether_density_readout_registry.json)
+declares source/contact, mode projection, restricted gain and q3 action
+unit information. a0:E, n:E3, chi_nn:E2, Rnn:E4, h:E3, Phi:E, chi_nh:E0;
+pi_phase is not UET Pi; C/R_gen/R_obs excluded. A_Q:Jm/B_Q:Jm3 and
+U_unit:Jm^-3 per nativeE4 need declared same-state action normalization.
+Independent U increases conditional rank2 to3; inverse and full-covariance
+gradient derived. No physical linewidth/atomic/temperature or Core admission.
+
 ## Even Work Coefficients And Conditional Norm Tail (2026-10-03)
 
 [Registry](Data/03_Research/t13_gaussian_work_remainder_registry.json)

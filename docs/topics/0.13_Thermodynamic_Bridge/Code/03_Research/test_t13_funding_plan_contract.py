@@ -679,7 +679,8 @@ def test_gaussian_work_identity_does_not_relabel_failed_grid_or_unlock_full_goal
 
 
 def test_even_work_remainder_does_not_accept_parent_error_or_physical_input():
-    field = PLAN["execution_review_2026_10_01"]["current_scientific_evidence_field"]
+    latest = PLAN[PLAN["execution_review_2026_10_01"]["current_scientific_evidence_field"]]
+    field = latest["work_remainder_predecessor_evidence_field"]
     assert field == "gaussian_work_remainder_evidence_2026_10_03"
     assert field in PLAN["portfolio_strategy_2026_10_01"]["accepted_preliminary_evidence_fields"]
     evidence = PLAN[field]
@@ -700,4 +701,34 @@ def test_even_work_remainder_does_not_accept_parent_error_or_physical_input():
         assert evidence[key] is result[key] is False
     content = (ROOT/"docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/T13_GAUSSIAN_WORK_REMAINDER_2026-10-03.md").read_text()
     assert evidence["sha256"] in content and all(name+":" in content for name in result["report"])
+    assert all(card["status"] == "PLANNED_NOT_ACCEPTED" for card in PLAN["result_level_execution_2026_10_01"]["result_cards"])
+
+
+def test_density_readout_closure_does_not_admit_physical_measurement_or_full_goal():
+    field = PLAN["execution_review_2026_10_01"]["current_scientific_evidence_field"]
+    assert field == "noether_density_readout_evidence_2026_10_03"
+    assert field in PLAN["portfolio_strategy_2026_10_01"]["accepted_preliminary_evidence_fields"]
+    evidence = PLAN[field]
+    path = ROOT/evidence["path"]
+    result = json.loads(path.read_text())
+    assert hashlib.sha256(path.read_bytes()).hexdigest() == evidence["sha256"]
+    assert result["closure_level"] == evidence["closure_level"] == "CLOSED_FOR_LANE"
+    assert result["verification_status"] == evidence["verification_status"] == "PASS_SCOPED_NOETHER_DENSITY_READOUT"
+    assert result["branch_id"] == evidence["branch_id"]
+    assert result["controlling_blocker"] == evidence["controlling_blocker"]
+    assert all(result["checks"].values())
+    for key in ("tree_Noether_density_readout_verified", "restricted_gain_density_map_ambiguity_verified", "conditional_dispersion_unit_scale_information_verified"):
+        assert evidence[key] is result[key] is True
+    for key in ("physical_Noether_to_atomic_density_map_admitted", "physical_measurement_protocol_admitted",
+                "physical_resolution_or_intrinsic_damping_admitted", "full_measurement_design_completed",
+                "independent_alpha_Phi_K_admitted", "physical_Kubo_emitted", "full_SK_KMS_matching_closed",
+                "nonlinear_parent_action_completed", "controlled_full_action_truncation_error_established",
+                "old_source_work_audit_promoted", "full_core_unlock", "core_composition_gate_overwritten"):
+        assert evidence[key] is result[key] is False
+    for note in ("T13_NOETHER_DENSITY_READOUT_2026-10-03.md", "T13_DENSITY_SPECTROSCOPY_MEASUREMENT_CARD_2026-10-03.md"):
+        content = (ROOT/"docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts"/note).read_text()
+        assert evidence["sha256"] in content and all(name+":" in content for name in result["report"])
+    assert result["external_numeric_rows_admitted"] == 0
+    assert not result["xie_2026_accessed"] and result["prior_Xie_context_exposure_review"] == "REVIEW_REQUIRED"
+    assert not result["claim_promotion"] and not result["parameter_fitting"]
     assert all(card["status"] == "PLANNED_NOT_ACCEPTED" for card in PLAN["result_level_execution_2026_10_01"]["result_cards"])

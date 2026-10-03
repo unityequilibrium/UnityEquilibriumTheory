@@ -6,6 +6,17 @@ description: "Research module for Thermodynamic Bridge within the Unity Equilibr
 
 # 0.13 Thermodynamic Bridge
 
+## Noether Density Readout And Independent Inputs (2026-10-03)
+
+[Derived readout](Result/artifacts/T13_NOETHER_DENSITY_READOUT_2026-10-03.md)
+closes tree density/source/contact and independent mode projection.
+[Measurement card](Result/artifacts/T13_DENSITY_SPECTROSCOPY_MEASUREMENT_CARD_2026-10-03.md)
+derives restricted gain/unit ambiguities and inverse with independent scale.
+CLOSED_FOR_LANE only; not atomic density, temperature or physical validation.
+Canonical noether_density_readout_evidence_2026_10_03; next particle-current/
+state/SI scale, gain/joint resolution covariance and permitted low-q rows.
+Parent/heat/KMS, old work FAIL, full Goal/owner/holdout/dates/models unchanged.
+
 ## Even Gaussian Work And Conservative Remainder (2026-10-03)
 
 [New result](Result/artifacts/T13_GAUSSIAN_WORK_REMAINDER_2026-10-03.md)

@@ -6,7 +6,19 @@
 
 ตัวควบคุมงาน: [funding_portfolio_14d_plan.json](Data/03_Research/funding_portfolio_14d_plan.json) | คำสั่งเริ่มงาน: [GOAL_BRIEF_FUNDING_14D.md](GOAL_BRIEF_FUNDING_14D.md)
 
-Latest science 3 October: [even work/remainder](Result/artifacts/T13_GAUSSIAN_WORK_REMAINDER_2026-10-03.md)
+## Latest Noether Density And Measurement-Input Handoff (2026-10-03)
+
+[Noether density derivation](Result/artifacts/T13_NOETHER_DENSITY_READOUT_2026-10-03.md)
+and [conditional measurement card](Result/artifacts/T13_DENSITY_SPECTROSCOPY_MEASUREMENT_CARD_2026-10-03.md)
+close tree operator/contact/projection and restricted gain/unit information,
+including the inverse with independent scale. Current canonical
+noether_density_readout_evidence_2026_10_03; next particle-current/same-state
+SI action scale, gain/joint resolution covariance and permitted low-q rows.
+No physical density/temperature, full measurement design/G2-G4/R1-R5/Goal
+or owner acceptance. Old work FAIL, parent/heat/KMS,7/11 October/holdout
+REVIEW_REQUIRED and NOT_RUN model trial/settings unchanged. Below is ancestry.
+
+Prior science 3 October: [even work/remainder](Result/artifacts/T13_GAUSSIAN_WORK_REMAINDER_2026-10-03.md)
 derives W4/W6 and parity, explaining the old grid without fit. Formal tail
 is loose/non-interval, not useful original-grid or full-parent control.
 Old source-work FAIL remains. Next independent source/readout/scale and

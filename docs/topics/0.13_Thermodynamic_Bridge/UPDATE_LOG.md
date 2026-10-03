@@ -1,3 +1,27 @@
+## 2026-10-03 - Noether density readout and conditional independent-input inverse
+
+MAJOR_RESULT_CLOSURE: T13_NOETHER_DENSITY_READOUT_AND_CALIBRATION_BOUNDARY, CLOSED_FOR_LANE. Full scientific Goal/G2-G4/R1-R5 and physical Topic13 remain unaccepted.
+
+WHAT_IS_ACTUALLY_CLOSED: Same-action tree density source/contact, conservation and density-visible mode projection checked by independent six-state and spectral calculations. Constructive gain and retained-q3 unit/kinetic families identify missing information; the conditional inverse recovers kinetic/unit inputs when independent scale is supplied. This narrows measurement design beyond a list of unknown coefficients.
+
+WHAT_REMAINS_OPEN: Atomic-number-current/state/SI action map, independent gain and joint resolution covariance, permitted low-q numeric rows/ancestry/rights, practical precision and theory remainder. Physical temperature/heat/entropy/transport/KMS and nonlinear parent remain open; old work FAIL retained.
+
+DEPENDENCY_UNLOCKED: Same-state density measurement and higher-dispersion information research only; no physical/Core/Gravity/owner composition or full measurement-design acceptance.
+
+STATUS: PASS_SCOPED_NOETHER_DENSITY_READOUT. Scientific progress from new internal evidence, not a plan-only pass or experimental validation.
+
+WHAT_CHANGED: Topic-local calculation/49 tests/registry/protocol screen/artifact/derivation/measurement card; canonical current record with predecessor ancestry, one funding-contract test, five research docs and five funding/Goal handoffs. No primary/Core-owner, action, predecessor or old gate edited.
+
+EQUATION_OR_MAPPING: delta_n=s*a0+sqrt(s)*(2mu*sigma+dot_pi_phase); chi_nn=s+j_minus D^-1 j_plus=sum Rnn/(E_j^2-z^2). Density/contact n:E3, chi:E2, h:E3, Phi:E in the natural-action lane, not SI temperature. Restricted I=G_inst*Z_N^2*S_Noether. A_Q=E_unit*c/Q_unit, B_Q=E_unit*eta/Q_unit^3; independent declared U=E_unit*Q_unit^3 adds rank2-to3 and permits the conditional positive inverse. This assumes same-state action normalization; it does not preserve q5/full curves or already admitted physical EOS.
+
+VERIFICATION: Final13-file linked run299 passed in146.13 seconds, including49 new density and32 funding-contract tests; focused49/55 runs are subsets. Ten scientific checks pass. Direct/six-state error<=1.910e-12, density/mixed modal errors<=9.757e-13/2.920e-12, Ward<=2.941e-15; independent-scale inverse witnesses<=4.220e-15. Source/negative-contact, coordinate/dark-Phi, central charge/log-gradient differences, rejected inputs, negative kinetic without clipping and audit-time Path allowlist checked. Artifact2b6688dab3cb55c623fa5c1a43320ef28d65fe82e95b27d6ea1731f9c632ac12; source/protected hashes and two note/card links checked. HEAD comparison confirms original calendar, old evidence, G0-G5/R1-R5 acceptance, model/holdout/history unchanged and accepted evidence append-only. Initial documentation patch failed to match a BOM heading and made no changes; reapplied at existing section anchors, not an evidence/gate repair. Density and unit subprotocols were declared before their respective first audits; final inverse-family subcheck added before its run with unchanged thresholds. Original causal branch not rerun. No whole-repository, external or continuum validation/model trial.
+
+CONTROLLING_BLOCKER: Noether_to_atomic_density_SI_state_resolution_and_independent_gain_not_admitted. Full parent/heat/KMS remain separate controlling obligations for broader closure.
+
+NEXT_ACTION: Verify same-state particle-current/action scales and primary protocol ancestry/uncertainty; derive next-order dispersion and test whether it lifts the restricted unit family with controlled validity. Do not assume independent U is the only possible extra information. Preserve7/11 October and full Goal acceptance. Commit this safe local wave; prior publication authorization denial remains, no retry/workaround or new-head CI/public-main claim.
+
+CLAIM_BOUNDARY: Tree Noether/operator and restricted information result, not automatic He4 atomic density, full KMS structure factor, intrinsic width, independent alpha or physical UET/Full Topic13/Core/global closure. No fit, rate/width, quantum Phi loop/vacuum fill, clipping/padding/filter, threshold/ontology/owner change or numeric Xie read. Prior exposure REVIEW_REQUIRED, C not charge/mass and pi_phase not UET Pi; R_gen/R_obs excluded. No new Goal/automation/model configuration/contact/purchase/submission; conditional low-T protocol does not transfer existing1.7K calibration.
+
 ## 2026-10-03 - Even finite-pair work and conditional conservative remainder
 
 MAJOR_RESULT_CLOSURE: T13_FINITE_PAIR_CYCLIC_WORK_PARITY_AND_REMAINDER, CLOSED_FOR_LANE. This closes the declared finite-pair coefficient/parity/formal-bound question, not Full Goal/G2-G4/R1-R5 or physical Topic13 acceptance.
