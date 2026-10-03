@@ -9,6 +9,70 @@ next second-order source work/heat-readout, independent material scale
 and interacting/collision/entropy/physical transport. Full Goal/R1-R5,
 owner/holdout/model trial and original dates unchanged. Below is history.
 
+## ข้อเสนอการเลือกงานหลังยืนยันว่าเป้าทุนยังไม่แน่
+
+ข้อเสนอนี้ใช้หลักฐานล่าสุดที่ current pointer ของ canonical contract ชี้อยู่
+ไม่รับ G0-G5/R1-R5 ไม่เปลี่ยน Goal และไม่เริ่มสองสัปดาห์ใหม่:
+**ตรึงผลวิทยาศาสตร์ 7 ต.ค. / ตรวจพอร์ต 11 ต.ค. 2026 ตามแผนเดิม**.
+ยังไม่ทราบชื่อทุน สถาบัน/PI คุณสมบัติผู้สมัคร งบ หรือวันปิดรับจริง
+จึงตั้งเป้า review-ready ไม่ใช่ submission-ready.
+
+### สิ่งที่นำไปเล่าเป็นผลงานได้แล้ว
+
+Core-owner บันทึก physical O(2)/He-4 composition ว่า `CLOSED_FOR_CORE`
+ในขอบเขตนั้นโดยเฉพาะ การทบทวนนี้อ่าน matrix และ gate เท่านั้น ไม่ rerun
+หรือรับรองผลใหม่ ส่วน graphite TTG/source/alpha และ branch เพื่อพอร์ต
+เป็นคนละ track ห้ามใช้คำว่า Full Topic 13 โดยไม่บอก lane.
+สำหรับ named Gaussian branch ปิด collisionless streaming/static endpoint
+พร้อม conserving charge/first-order energy ในขอบเขตที่ประกาศแล้ว แต่
+ยังไม่ปิด second-order heating, physical readout, independent scale
+หรือ interacting transport. Artifact/hash อยู่ใน science handoff ด้านบน.
+
+### คำถามเดียวก่อน freeze
+
+**ข้อมูล equilibrium ที่ล็อกไว้กำหนด dynamic response อะไรได้ และการวัด
+อิสระอะไรจำเป็นเพื่อทดสอบส่วนที่ยังไม่ถูกกำหนด?** ผลชิ้นเดียวสำหรับพอร์ต
+ต้องมีสมการ/หลักฐานและ measurement design ไม่ใช่การรวบรวม PASS.
+
+| กำหนดเดิม | งานที่เปลี่ยนคำตอบได้ | ผลส่งมอบและเงื่อนไขหยุด |
+| --- | --- | --- |
+| 3-4 ต.ค. | เลือก response observable หนึ่งตัว; ตัดสินขอบเขต source work อันดับสองเทียบกับ heat/entropy และตรวจ mapping ที่ข้อมูลเดิมให้ได้ | Derivation/witness ที่มี assumptions และวิธีตรวจอิสระ; work ไม่เท่ากับความร้อน ถ้ายังพิสูจน์ไม่ได้ให้ระบุ unresolved ไม่ขยายเป็น full interacting theory ก่อนพอร์ต |
+| ไม่เกิน 5 ต.ค. | ตัดสิน predictive / scoped structural / unresolved จากหลักฐาน ไม่ใช่จากชื่อ branch | Predictive ต้องมี operator และ input/material map อิสระครบ; structural ต้องมี proof/witness ตาม G2/G3 เดิม การแยก absorption กับ entropy อย่างเดียวไม่รับ G2 อัตโนมัติ |
+| 3-6 ต.ค. คู่ขนาน | ออกแบบหนึ่ง source-to-state-to-detector protocol | ระบุวัดอะไร หน่วย state/source/readout nuisance และ covariance; แสดง sensitivity/rank gain ของข้อมูลใหม่ ถ้ายังไม่รู้ noise ให้รายงาน precision requirement ไม่สร้าง uncertainty สมมติเป็นข้อมูลจริง |
+| 6-7 ต.ค. | ตรวจอิสระ uncertainty/invariance และเทียบ related work | Scientific decision และ measurement card; numerical convergence ไม่แทน approximation error หรือ external replication |
+| 8-11 ต.ค. | ตรึงหลักฐาน ทำ report/reproduction/claim map/pitch และ aims | พอร์ต v1 พร้อมทบทวน; งานที่ยังไม่ปิดอยู่ใน future aims ไม่ซ่อนในคำว่า completed |
+
+ถ้าถึง 7 ต.ค. แล้วยังไม่มีผลที่ครบ G2-G4 ให้คง scientific `UNRESOLVED`
+และส่งเฉพาะ preliminary portfolio ตามจริง ไม่ย้ายเกณฑ์เพื่อให้ Goal จบ.
+การส่งพอร์ตเบื้องต้นกับการปิดเป้าหมายวิทยาศาสตร์เป็นคนละการตัดสิน.
+หลังสอง wave ที่ไม่ลด blocker ต้องส่ง route decision พร้อมเหตุผล
+ว่าจะจำกัดโจทย์ เปลี่ยนวิธี หรือรอ input อะไร ไม่รันเดิมต่อโดยไม่มีคำถามใหม่.
+
+### อีก 2-3 เดือนต้องเพิ่มหลักฐาน ไม่ใช่เพิ่ม log
+
+25 ต.ค. ให้ตัดสิน source-complete/validity boundary (R1);
+8 พ.ย. ให้ตัดสิน independent material/readout/scale พร้อม numeric input
+หรือ conditional measurement feasibility (R2-R3);
+22 พ.ย. ทำ locked comparison เมื่อ prerequisites พร้อม หรือ verified
+structural result พร้อม measurement design (R4);
+6 ธ.ค. ตรวจ reproduction/robustness; 20 ธ.ค. freeze research release (R5).
+งาน source acquisition ทำคู่ขนานได้ แต่ไม่เปิด Gravity/Galaxy/chaos เพื่อ
+ทดแทนหลักฐาน thermal. หากข้อมูลยังไม่ได้ ต้องบอกว่าทุนจะซื้อการวัดใด
+และการวัดนั้นจะเปลี่ยนข้อสรุปอย่างไร. วันเหล่านี้เป็น review dates เดิม
+ไม่ใช่วันรอบทุนที่ยืนยันแล้ว และไม่รับประกัน Full Topic 13 ภายในสามเดือน.
+
+### โมเดลที่เสนอให้ทดลอง ไม่ใช่ผล benchmark
+
+ใช้ **GPT-6.1 Sol / high** เป็นตัวหลักถ้าเลือกตัวเดียว;
+ใช้ **GPT-6 Astra / high** กับ derivation/identifiability/route decision
+และ xhigh เฉพาะ proof obligation ที่ระบุ input/output ชัด;
+ใช้ Luna กับ inventory/provenance เท่านั้น.
+ตาม [OpenAI model-selection guidance](https://developers.openai.com/api/docs/guides/model-selection)
+ควรเทียบด้วย input เดียวและใช้ configuration เบาสุดที่ผ่านคุณภาพจริง.
+ทดลองไม่เกิน 90 นาทีต่อ configuration ตาม contract เดิม บันทึกเวลารวม
+แก้ข้อผิดพลาดและ usage ที่หาได้; trial ยัง `NOT_RUN` และ settings ไม่เปลี่ยน.
+คนละโมเดลเห็นตรงกันไม่ใช่ independent physics verification.
+
 วันที่ทบทวน: 3 ตุลาคม 2026 | ฉบับสรุปเพื่อเลือกงาน ไม่ใช่ controller ใหม่
 
 Science handoff ล่าสุด: [Gaussian Noether completion](Result/artifacts/T13_THERMAL_NOETHER_RESPONSE_2026-10-03.md) ปิด pair-local charge และพลังงานอันดับแรกเมื่อรวม covariance กับ stationary mean/contact จาก action; ตัด background shift แล้ว Ward ไม่ผ่าน. Full-domain translation ต้องระบุ ไม่ใช้แทน finite-cutoff transport. งานถัดไป collisionless soft limit และ actual heat-source/readout/material scale; second-order work/entropy และ full interacting/vacuum/physical transport ยังเปิด. Canonical `thermal_noether_response_evidence_2026_10_03`; วัน/เกณฑ์/full Goal/owner/holdout/โมเดลเดิม. ข้อความด้านล่างเป็น predecessor/planning history ไม่ใช้เป็น current pointer.

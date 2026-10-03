@@ -1,3 +1,27 @@
+## 2026-10-03 - Bounded portfolio target and next-round research decisions
+
+MAJOR_RESULT_CLOSURE: PLANNING_ONLY. No scientific acceptance or Goal completion.
+
+WHAT_IS_ACTUALLY_CLOSED: Existing delivery priorities now explicitly distinguish one scientific question plus measurement design from Full Topic13 closure, using the current committed collisionless evidence rather than the earlier Landau snapshot.
+
+WHAT_REMAINS_OPEN: G0-G5/R1-R5; second-order work, physical source/readout/scale and interacting transport. Funder, PI, eligibility, budget and actual call deadline remain unknown.
+
+DEPENDENCY_UNLOCKED: None. Read-only Core-owner O(2)/He-4 composition and separate graphite/predictive branches retain their own scope.
+
+STATUS: PLAN_CLARIFIED_NOT_SCIENTIFIC_ACCEPTANCE.
+
+WHAT_CHANGED: Added a bounded decision section to FUNDING_EXECUTION_BRIEF_2026-10-03.md. No canonical controller, research module, registry, physical gate or model configuration changed.
+
+EQUATION_OR_MAPPING: Planned equilibrium-to-dynamic-response identifiability and source-to-state-to-detector measurement design. Second-order source work is an obligation, not a computed heating or entropy result.
+
+VERIFICATION: Four planning test files: 52 passed in 1.43 seconds; git diff --check passed. Current collisionless artifact hash matched be7cb2e3bb5ba749e91876e56005ea63269f5b93b0d317eedf7ee8adebfc65a3. Read-only primary Core matrix hash matched 969351376d918204c00c7d71e213a0e56f00d7fc04390b9c3a054faa5f5e7abb. No science rerun, model trial or funder eligibility check.
+
+CONTROLLING_BLOCKER: full_interacting_work_entropy_and_physical_heat_source_transport_open in current science; independent physical input and funding eligibility are separate.
+
+NEXT_ACTION: Preserve 7 October scientific freeze and 11 October portfolio review; decide predictive/structural/unresolved by 5 October and send preliminary evidence only if scientific acceptance remains unmet. Retain 25 October, 8/22 November and 6/20 December review dates; no confirmed next funding round. Scoped local commit; prior push denial remains, no retry or public-main/CI claim.
+
+CLAIM_BOUNDARY: Planning only. No no-go from missing input, G2 acceptance from an absorption/entropy distinction alone, ontology/threshold/holdout change, new Goal/automation, external contact, purchase or submission. Model roles are proposals checked against official guidance, not a measured UET benchmark.
+
 ## 2026-10-03 - Gaussian collisionless source ray and full-domain endpoint
 
 MAJOR_RESULT_CLOSURE: T13_GAUSSIAN_COLLISIONLESS_SOFT_RAY_SOURCE_RESPONSE, CLOSED_FOR_LANE. Full Topic13/Goal/R1-R5 remain unaccepted; Core-owner bounded composition unchanged.
