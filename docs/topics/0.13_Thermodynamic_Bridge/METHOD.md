@@ -1,5 +1,17 @@
 ﻿# Method
 
+## Two-Momentum Covariance And Equilibrium Bose Limit (2026-10-03)
+
+[Derivation](Result/artifacts/T13_FINITE_Q_THERMAL_SOURCE_2026-10-03.md)
+uses both acoustic covariances in a two-momentum Sylvester response and
+checks against paired thermal propagator insertions. The static number
+channel uses a symmetric Bose divided difference with its exact diagonal
+limit, not a relaxation parameter. External q source dressing and quartic/
+background contact stay action-derived. Exact batched Schur acoustic and
+companion heavy modes retain the scalar method and the same full grids.
+Tree source continuity is checked; complete loop-current/energy, collision
+and physical heat/readout mappings remain separate obligations.
+
 ## Named Acoustic Thermal Insertion With Virtual Tree Response (2026-10-03)
 
 [Derivation](Result/artifacts/T13_THERMAL_VIRTUAL_RESPONSE_2026-10-03.md)

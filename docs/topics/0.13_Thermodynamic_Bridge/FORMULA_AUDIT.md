@@ -1,5 +1,16 @@
 # Formula Audit: 0.13_Thermodynamic_Bridge
 
+## Finite-Q Source And Bose Population Contract (2026-10-03)
+
+[Registry](Data/03_Research/t13_finite_q_thermal_source_registry.json)
+declares finite-momentum cross-covariance and static Bose divided-difference
+IDs in the existing named thermal-insertion branch. z/p/r E, divided
+occupation derivative E^-1, h E3 and susceptibility E^-2, not Kelvin.
+Use both initial covariances, actual momentum triangles and action source
+d(z,q), not a fitted thermal source or damping. Static phase vertex follows
+the exact radial equation. Tree charge continuity is not full loop-current
+or energy closure; no C/Pi/R_gen/R_obs/Core registry change.
+
 ## Virtual Thermal Insertion And Dynamic Source Covariance (2026-10-03)
 
 [Registry](Data/03_Research/t13_thermal_virtual_response_registry.json)

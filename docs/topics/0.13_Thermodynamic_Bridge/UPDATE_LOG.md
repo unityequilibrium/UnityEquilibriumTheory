@@ -1,3 +1,27 @@
+## 2026-10-03 - Finite-q source and static thermal population
+
+MAJOR_RESULT_CLOSURE: T13_FINITE_Q_THERMAL_SOURCE_AND_STATIC_POPULATION_LIMIT, CLOSED_FOR_LANE. Full Topic13/Goal/R1-R5 remain open; the separate Core-owner bounded composition result is unchanged.
+
+WHAT_IS_ACTUALLY_CLOSED: Finite-q action-source response agrees with an independent two-momentum cross-covariance calculation. Its static Bose divided difference derives the population term and approaches the same-action pressure target without an assigned relaxation time.
+
+WHAT_REMAINS_OPEN: Full loop-current Ward and energy-exchange balance, collisionless soft-frequency limits, collision/relaxation and full interacting/vacuum/approximation matching. Independent material/source/readout/thermal scale and uncertainty, physical Kubo/SK-KMS and full Goal acceptance remain open.
+
+DEPENDENCY_UNLOCKED: Current/energy and source-to-measurement research only. No physical/Core/Gravity or owner-composition admission; original conserved-C branch unchanged.
+
+STATUS: PASS_SCOPED_FINITE_Q_THERMAL_SOURCE; public safety safe.
+
+WHAT_CHANGED: Six new topic-local calculation/quadrature/test/registry/artifact/derivation files; canonical evidence and one funding regression; five research docs and five portfolio/Goal handoffs. Parent actions, predecessor artifacts, historical planning and all existing acceptance dates/rules preserved.
+
+EQUATION_OR_MAPPING: (-iz-L_Ar,Ap)delta_Cov=delta_A Cov_p+Cov_r delta_A^T; delta_chi=d(-z,q)^T[B-integral n M]d(z,q). Static [n(Ep)-n(Er)]/(Er-Ep) tends to n(1+n)/T and yields the pressure-population term. h E3 and chi E^-2 are natural-energy source/response units, not SI heat or Kelvin. Only acoustic thermal population with virtual classical tree propagation; not independent heavy quantum loops.
+
+VERIFICATION: Final single twenty-two-file linked selection354 passed in181.71 seconds, including20 finite-q and27 funding tests. Six artifact checks; cross-covariance matrix discrepancy7.278e-16, source projection6.261e-16, tree continuity3.365e-15 and batch/scalar channels1.114e-15. Direct q0 static pressure agreement4.961e-12; finest finite-q target discrepancies2.404e-5/7.878e-6 across two mu witnesses and two T grids. Joint quadrature4.135e-8 and tail4.338e-10 are numerical diagnostics, not total physical/approximation uncertainty. Artifact SHA-256 a1583b3ef2ec12929078800a6c1ee18f10d0fe4243957206febd4098363c0a57. Exact Bose/triangle/angular/scalar/free/zero-T/coordinate/invalid-domain, registry/hash and audit-time Path read checks pass. Initial scalar-only audit was deliberately interrupted after verifying the exact batched replacement; no completed artifact, neither numerical FAIL nor PASS. Grids, tails and gates were not reduced. Original causal1e-6 unchanged/not passed here; new static-soft diagnostic1e-3 preregistered before the first attempt. All pre-existing contract values compared against HEAD unchanged except accepted preliminary list/current handoff; one evidence field added. Whitespace passes. Earlier354-test run is a repeated selection, not added. No full repo/external/model trial or new-head CI.
+
+CONTROLLING_BLOCKER: collisionless_soft_limit_full_interacting_matching_and_physical_transport_open; independent material/calibration inputs remain separately open.
+
+NEXT_ACTION: Commit the scoped wave locally; publication denial still awaits authorization, no retry/workaround. Derive loop-current/energy Ward and collisionless soft limits, then one actual heat-source/readout operator and independent material scale. No relaxation coefficient inferred from static variance. Preserve7 October freeze/11 October portfolio review and R1-R5/full Goal criteria; funder/PI/budget/deadline unknown.
+
+CLAIM_BOUNDARY: Named acoustic-populated Gaussian rest-frame prescription only; not full collision/EOS/Kubo/SK-KMS/thermal calibration, original conserved-C repair or global UET closure. No fit, invented data/alpha, assigned width, clipping/padding/filter, threshold/ontology/Core-owner edits or Xie numeric reads; prior exposure REVIEW_REQUIRED. No new Goal/automation/model configuration/contact/purchase/submission. Goal remains active because substantive physics and measurement work remains.
+
 ## 2026-10-03 - Virtual source completion and independent dynamic covariance
 
 MAJOR_RESULT_CLOSURE: T13_THERMAL_VIRTUAL_SOURCE_STATIC_COMPLETION_AND_DYNAMIC_COVARIANCE, CLOSED_FOR_LANE in a named acoustic thermal-insertion extension. Full Topic13/Goal/R1-R5 remain open.

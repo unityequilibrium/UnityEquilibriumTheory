@@ -10,7 +10,19 @@
 
 ปิดคำถามว่า He-4/O(2) bridge ที่แช่แข็ง calibration แล้วกำหนด independent dynamic response ได้หรือไม่ และต้องวัดอะไรเพิ่มจึงแยกคำตอบได้ ผลสำเร็จต้องมี predictive-content derivation หรือ scoped nonidentifiability proof ที่เพิ่มจาก matching identity เดิม พร้อม measurement design และชุดหลักฐาน ไม่ใช้จำนวน artifacts/PASS เป็นเกณฑ์สำเร็จ
 
-## Latest Virtual Source And Covariance Handoff (2026-10-03)
+## Latest Finite-Q Source And Population Handoff (2026-10-03)
+
+[Finite-q extension](Result/artifacts/T13_FINITE_Q_THERMAL_SOURCE_2026-10-03.md)
+independently checks source response with cross-covariance and recovers
+static population/pressure via the Bose divided difference without
+assigned relaxation. Next loop-current/energy Ward and collisionless
+soft-frequency limits, then actual heat-source/readout and independent
+material scale. Full interacting/vacuum/approximation and physical
+transport remain open. Canonical finite_q_thermal_source_evidence_2026_10_03;
+full Goal/R1-R5,7/11 October, owner/holdout/model rules unchanged.
+Earlier handoffs retain their historical blockers and scope.
+
+## Prior Virtual Source And Covariance Handoff (2026-10-03)
 
 [Named thermal-insertion extension](Result/artifacts/T13_THERMAL_VIRTUAL_RESPONSE_2026-10-03.md)
 derives virtual tree/contact completion of the old static gap without fit,

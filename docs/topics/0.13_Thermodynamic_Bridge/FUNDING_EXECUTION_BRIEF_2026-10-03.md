@@ -2,7 +2,9 @@
 
 วันที่ทบทวน: 3 ตุลาคม 2026 | ฉบับสรุปเพื่อเลือกงาน ไม่ใช่ controller ใหม่
 
-Science handoff ล่าสุด: [virtual/contact and covariance](Result/artifacts/T13_THERMAL_VIRTUAL_RESPONSE_2026-10-03.md) ปิดที่มาของ static gap เดิมด้วย virtual tree/contact ที่ derive โดยไม่ fit ใน named acoustic thermal-insertion extension และตรวจ q0 complex-frequency source กับ real-time covariance อิสระ. static fixed-mu กับ dynamic fixed-charge เป็นคนละลิมิต; งานถัดไป finite-q source/population relaxation, full interacting/vacuum matching และ independent material/readout/scale. Canonical `thermal_virtual_response_evidence_2026_10_03`; วัน/เกณฑ์/full Goal/owner/holdout/โมเดลยังเดิม. Handoffs และ pending statements ด้านล่างเป็นประวัติรอบก่อน ไม่ใช้เป็น current pointer.
+Science handoff ล่าสุด: [finite-q source/population](Result/artifacts/T13_FINITE_Q_THERMAL_SOURCE_2026-10-03.md) ตรวจ source response กับ cross-covariance อิสระ และเชื่อม static population กลับ pressure target โดยไม่ใส่ relaxation time. งานถัดไป loop-current/energy Ward และ collisionless soft-frequency limit แล้วเชื่อม actual heat-source/readout กับ independent material scale; full interacting/vacuum/physical transport ยังเปิด. Canonical `finite_q_thermal_source_evidence_2026_10_03`; วัน/เกณฑ์/full Goal/owner/holdout/โมเดลเดิม. ข้อความด้านล่างเป็น predecessor/planning history ไม่ใช้เป็น current pointer.
+
+Science handoff ก่อนหน้า: [virtual/contact and covariance](Result/artifacts/T13_THERMAL_VIRTUAL_RESPONSE_2026-10-03.md) ปิดที่มาของ static gap ด้วยเทอมที่ derive โดยไม่ fit และตรวจ q0 source กับ covariance. Field `thermal_virtual_response_evidence_2026_10_03` เก็บตาม scope รอบนั้น; fixed-mu static และ fixed-charge dynamic ยังเป็นคนละลิมิต.
 
 Science handoff ก่อนหน้า: [thermal source target](Result/artifacts/T13_THERMAL_SOURCE_CURVATURE_2026-10-03.md) ได้ same-action pressure Hessian และพบ cut-only matching gap3.65%/66.4% ในสอง witnesses. ตัวควบคุมรอบนั้นคือ actual dynamic source/contact/virtual completion ไม่ fit residual. Field `thermal_source_curvature_evidence_2026_10_03` เป็น predecessor ที่ยังเก็บหลักฐานเดิมไว้.
 

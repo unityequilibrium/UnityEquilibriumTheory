@@ -6,6 +6,18 @@ description: "Research module for Thermodynamic Bridge within the Unity Equilibr
 
 # 0.13 Thermodynamic Bridge
 
+## Finite-Q Source And Static Population Bridge (2026-10-03)
+
+[New result](Result/artifacts/T13_FINITE_Q_THERMAL_SOURCE_2026-10-03.md)
+extends the named thermal-insertion prescription to finite q, independently
+checked by cross-covariance. Its static Bose divided difference recovers
+the pressure population term without an assigned relaxation time. Static
+q refinements approach the independent pressure target; this does not
+close the collisionless soft-frequency regime or physical conductivity.
+Next loop-current/energy Ward and actual heat-source/readout mapping,
+alongside full interacting/vacuum and independent material-scale inputs.
+Full Topic13/Goal/R1-R5 remain open; older sections are predecessor scope.
+
 ## Virtual Contact Completion And Dynamic Covariance (2026-10-03)
 
 [New named extension](Result/artifacts/T13_THERMAL_VIRTUAL_RESPONSE_2026-10-03.md)

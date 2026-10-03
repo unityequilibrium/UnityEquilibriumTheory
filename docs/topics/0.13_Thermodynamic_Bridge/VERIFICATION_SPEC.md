@@ -1,5 +1,21 @@
 # Verification Spec
 
+## Finite-Q Cross-Covariance And Static Limit Verification (2026-10-03)
+
+Run Research_T13_Finite_Q_Thermal_Source.py/test_t13_finite_q_thermal_source.py.
+Six checks require physical momentum triangles, independent cross-covariance,
+tree source continuity, exact Bose diagonal limit, batch/scalar channel
+agreement and integrated static pressure recovery plus finite-q convergence.
+mu1.05/1.2, T divisors256/512, radial24/48/96, angular32/64/128 and tails32/40;
+static q/p_T1/16,1/32,1/64; dynamic q.01/.005/.0025 and z=.02i/.05i/.03+.02i
+locked before the first scalar-only attempt. Identity1e-9/covariance1e-7/
+quadrature1e-6/tail1e-8/original causal1e-6 unchanged; static soft diagnostic
+1e-3 is new and not a physical-gate override. Check q0 predecessor, Bose/
+geometry/coordinate/zero-T/decoupled/invalid-domain, protected hashes and
+audit-time Path reads. Aborted scalar attempt is not FAIL/PASS; batch
+retains exact equations and complete grids. No assigned collision/width
+or full loop-current/energy/physical admission from this result.
+
 ## Virtual Source And Independent Covariance Verification (2026-10-03)
 
 Run Research_T13_Thermal_Virtual_Response.py/test_t13_thermal_virtual_response.py.

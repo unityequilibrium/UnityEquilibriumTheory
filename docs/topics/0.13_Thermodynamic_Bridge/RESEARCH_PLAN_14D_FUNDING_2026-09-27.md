@@ -6,7 +6,15 @@
 
 ตัวควบคุมงาน: [funding_portfolio_14d_plan.json](Data/03_Research/funding_portfolio_14d_plan.json) | คำสั่งเริ่มงาน: [GOAL_BRIEF_FUNDING_14D.md](GOAL_BRIEF_FUNDING_14D.md)
 
-Latest science 3 October: [virtual/contact and dynamic covariance](Result/artifacts/T13_THERMAL_VIRTUAL_RESPONSE_2026-10-03.md)
+Latest science 3 October: [finite-q source/population](Result/artifacts/T13_FINITE_Q_THERMAL_SOURCE_2026-10-03.md)
+checks cross-covariance and static pressure-population recovery without
+assigned relaxation. Next loop-current/energy Ward and collisionless
+soft-frequency limits, actual heat-source/readout and independent
+material scale; full interacting/vacuum and physical admission remain open.
+Canonical finite_q_thermal_source_evidence_2026_10_03; full Goal/R1-R5
+and7/11 October unchanged.
+
+Prior science 3 October: [virtual/contact and dynamic covariance](Result/artifacts/T13_THERMAL_VIRTUAL_RESPONSE_2026-10-03.md)
 closes the static gap in a named acoustic thermal-insertion extension
 without fitted contact. Independent real-time covariance verifies complex
 q0 source response; fixed-mu static differs from fixed-charge dynamics.

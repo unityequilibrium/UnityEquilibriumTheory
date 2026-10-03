@@ -10,7 +10,16 @@
 
 ## ผลหลักสำหรับพอร์ตและทุนรอบถัดไป
 
-Latest science 3 October: [virtual source/covariance](Result/artifacts/T13_THERMAL_VIRTUAL_RESPONSE_2026-10-03.md)
+Latest science 3 October: [finite-q source/population](Result/artifacts/T13_FINITE_Q_THERMAL_SOURCE_2026-10-03.md)
+adds independently checked cross-covariance and static pressure-population
+recovery without relaxation input. R1 next requires loop-current/energy
+Ward, collisionless soft-frequency and full interacting/vacuum matching;
+actual heat-source/readout and independent material scale stay R2-R3.
+Canonical finite_q_thermal_source_evidence_2026_10_03. No full R1-R5/Goal,
+physical or Core-owner acceptance, date/model/NOT_RUN/holdout change.
+Earlier records retain their predecessor scope.
+
+Prior science 3 October: [virtual source/covariance](Result/artifacts/T13_THERMAL_VIRTUAL_RESPONSE_2026-10-03.md)
 derives mixed tree/contact completion without fit in a named acoustic
 thermal-insertion extension. Independent real-time covariance checks
 q0 source response; fixed-mu static is not fixed-charge dynamic. R1 next

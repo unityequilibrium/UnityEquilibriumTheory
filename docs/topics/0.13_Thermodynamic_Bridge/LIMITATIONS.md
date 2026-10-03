@@ -1,5 +1,18 @@
 # Limitations
 
+## Static Population Recovery Does Not Derive Collision Physics (2026-10-03)
+
+[Finite-q result](Result/artifacts/T13_FINITE_Q_THERMAL_SOURCE_2026-10-03.md)
+recovers equilibrium Bose population response and finite-q complex source
+samples in the named Gaussian extension. It does not set a collision rate,
+homogeneous rethermalization, physical conductivity or low-frequency z/q
+regime. Charge continuity checks the tree source, not full loop-current Ward
+or dissipative energy balance. Heavy modes remain virtual; full quantum/
+vacuum/interacting pressure, approximation and material/readout/scale/
+uncertainty admission remain open. Finite tails/refinements are not full
+error bounds. The intentionally stopped scalar audit is not a failed result;
+batch equivalence, unchanged grids and complete rerun are explicitly recorded.
+
 ## Completed Static Gap Is Not Full Thermal Transport (2026-10-03)
 
 [Virtual/covariance result](Result/artifacts/T13_THERMAL_VIRTUAL_RESPONSE_2026-10-03.md)

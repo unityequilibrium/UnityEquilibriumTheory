@@ -548,7 +548,8 @@ def test_thermal_source_curvature_is_not_assigned_dynamic_contact_or_physics():
 
 
 def test_virtual_completion_is_named_and_does_not_unlock_physical_or_full_goal():
-    field = PLAN["execution_review_2026_10_01"]["current_scientific_evidence_field"]
+    latest = PLAN[PLAN["execution_review_2026_10_01"]["current_scientific_evidence_field"]]
+    field = latest["virtual_source_predecessor_evidence_field"]
     assert field == "thermal_virtual_response_evidence_2026_10_03"
     assert field in PLAN["portfolio_strategy_2026_10_01"]["accepted_preliminary_evidence_fields"]
     evidence = PLAN[field]
@@ -567,6 +568,31 @@ def test_virtual_completion_is_named_and_does_not_unlock_physical_or_full_goal()
                 "full_core_unlock", "core_composition_gate_overwritten"):
         assert evidence[key] is result[key] is False
     content = (ROOT/"docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/T13_THERMAL_VIRTUAL_RESPONSE_2026-10-03.md").read_text()
+    assert evidence["sha256"] in content and all(name+":" in content for name in result["report"])
+    assert not result["xie_2026_accessed"] and result["prior_Xie_context_exposure_review"] == "REVIEW_REQUIRED"
+    assert all(card["status"] == "PLANNED_NOT_ACCEPTED" for card in PLAN["result_level_execution_2026_10_01"]["result_cards"])
+
+
+def test_finite_q_static_population_is_not_assigned_collision_or_physical_transport():
+    field = PLAN["execution_review_2026_10_01"]["current_scientific_evidence_field"]
+    assert field == "finite_q_thermal_source_evidence_2026_10_03"
+    assert field in PLAN["portfolio_strategy_2026_10_01"]["accepted_preliminary_evidence_fields"]
+    evidence = PLAN[field]
+    path = ROOT/evidence["path"]
+    result = json.loads(path.read_text())
+    assert hashlib.sha256(path.read_bytes()).hexdigest() == evidence["sha256"]
+    assert evidence["verification_status"] == result["verification_status"] == "PASS_SCOPED_FINITE_Q_THERMAL_SOURCE"
+    assert evidence["controlling_blocker"] == result["controlling_blocker"]
+    assert evidence["branch_id"] == result["branch_id"]
+    assert all(result["checks"].values()) and evidence["closure_level"] == result["closure_level"] == "CLOSED_FOR_LANE"
+    for key in ("static_population_limit_derived", "finite_q_source_checked_for_prescription"):
+        assert evidence[key] is result[key] is True
+    for key in ("full_loop_source_current_Ward_closed", "full_energy_exchange_ledger_closed", "assigned_relaxation_time", "full_collision_operator_computed",
+                "full_off_shell_source_matching_closed", "full_real_self_energy_matched", "all_parent_modes_and_quantum_Phi_loops_included",
+                "full_two_loop_pressure_computed", "full_SK_KMS_matching_closed", "physical_Kubo_emitted", "independent_alpha_Phi_K_admitted",
+                "controlled_full_action_truncation_error_established", "full_core_unlock", "core_composition_gate_overwritten"):
+        assert evidence[key] is result[key] is False
+    content = (ROOT/"docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/T13_FINITE_Q_THERMAL_SOURCE_2026-10-03.md").read_text()
     assert evidence["sha256"] in content and all(name+":" in content for name in result["report"])
     assert not result["xie_2026_accessed"] and result["prior_Xie_context_exposure_review"] == "REVIEW_REQUIRED"
     assert all(card["status"] == "PLANNED_NOT_ACCEPTED" for card in PLAN["result_level_execution_2026_10_01"]["result_cards"])
