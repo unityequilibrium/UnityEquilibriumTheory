@@ -45,7 +45,8 @@
       "collisionless_soft_source_evidence_2026_10_03",
       "gaussian_work_remainder_evidence_2026_10_03",
       "noether_density_readout_evidence_2026_10_03",
-      "q5_dispersion_information_evidence_2026_10_03"
+      "q5_dispersion_information_evidence_2026_10_03",
+      "multi_q_estimator_evidence_2026_10_03"
     ],
     "observed_partial_evidence_fields": ["gaussian_source_work_evidence_2026_10_03"],
     "new_real_axis_exploration_is_accepted_evidence": true,
@@ -256,8 +257,8 @@
   },
   "execution_review_2026_10_01": {
     "record_class": "PLANNING_NOT_SCIENTIFIC_CLOSURE",
-    "current_scientific_evidence_field": "q5_dispersion_information_evidence_2026_10_03",
-    "current_question": "Derived q5 information removes the retained-q3 unit/kinetic family without independent U in the strict positive class with other native inputs fixed; a rational tree-coefficient expansion envelope is verified. This is not material or temperature calibration. Inverse relative conditioning is 26-246 and a finite-q proxy can still bias I by 1.48% at the finest first-state point. Next derive an explicit multi-q estimator/covariance and tree bias versus signal-resolution window, then admit same-state particle-current/native inputs, independent instrument covariance and permitted rows. Gain, alpha_Phi_K, physical interaction/finite-T/heat/KMS and full measurement design remain open. Predecessor q3 proof, old work/causal failures, G2-G4/full R1-R5/Goal and Core-owner boundaries are preserved.",
+    "current_scientific_evidence_field": "multi_q_estimator_evidence_2026_10_03",
+    "current_question": "Explicit multi-q estimator, full data/native covariance differential and exact sufficient energy-only error budget are verified for ten rational tree windows. Smaller q reduces tree bias but amplifies decorrelated energy-shape error; four positive conservative budgets span 1.65e-16 to4.19e-14 for the illustrative1% I target, six windows are noncertified and one inverse is invalid. This is not necessary laboratory precision or physical no-go. Next compare q5 versus independent-scale/q3 using documented peak resolution/joint covariance, same-state particle-current/native inputs and controlled interaction error, or freeze an explicit acquisition gap. No unchanged-grid rerun. Gain, alpha, parent/heat/KMS/full design/G2-G4/R1-R5/Goal/owner acceptance, original failures, dates and holdout/model policy remain unchanged.",
     "scientific_deliverable_is_not_full_topic_closure": true,
     "model_trial": {
       "status": "NOT_RUN",
@@ -1526,6 +1527,79 @@
     "next_funding_call_confirmed": false,
     "submission_ready": false,
     "claim_promotion": false
+  },
+  "multi_q_estimator_evidence_2026_10_03": {
+    "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/t13_multi_q_estimator.json",
+    "sha256": "56c9aa7ef469c51a30337bea9ea958c8d2459ed7e2316fbbe49644ad192c57b1",
+    "major_result_id": "T13_MULTI_Q_ESTIMATOR_COVARIANCE_AND_TREE_BIAS_BUDGET",
+    "topic": "0.13_Thermodynamic_Bridge",
+    "verification_status": "PASS_SCOPED_MULTI_Q_ESTIMATOR",
+    "closure_level": "CLOSED_FOR_LANE",
+    "branch_id": "t13.candidate.acoustic_thermal_insertion_tree_virtual_response_v1",
+    "what_is_closed": "Explicit three-node estimator, full data/native differential and correlated-axis controls, rational sufficient tree-bias plus energy-only error budget; all ten windows retained",
+    "scientific_contribution": "Finite-q bias and q5 noise amplification are quantified, not conflated with physical detector precision. Four conservative positive budgets and six noncertified windows motivate an input-backed comparison with the independent-scale/q3 route.",
+    "equation_or_mapping": "beta_hat=W*(E_i/q_i); Sigma_beta=J Sigma_log(E,q) J^T; Var(I)=g_full^T Sigma_full g_full; rational component box maps to target I interval",
+    "units": {
+      "beta": "c:1,eta:E^-2,zeta:E^-4",
+      "energy_error_budget": "dimensionless sufficient requirement, not instrument data"
+    },
+    "derivation_class": "DERIVED_INTERPOLATION_JACOBIAN_EXACT_RATIONAL_TREE_ERROR_REQUIREMENT",
+    "observable": "conditional density-dispersion information",
+    "data_role": "DERIVED_CONTROL_NO_EMPIRICAL_CALIBRATION",
+    "controlling_blocker": "physical_peak_resolution_joint_covariance_native_state_and_interaction_error_not_admitted",
+    "open_blockers": [
+      "source_detector_to_peak_resolution_and_correlated_bias",
+      "permitted_same_state_low_q_rows_and_native_current_map",
+      "physical_q_native_state_interaction_error_outside_energy_only_budget",
+      "thermal_gain_alpha_heat_entropy_KMS_parent_closure"
+    ],
+    "dependency_unlocked": [
+      "instrument_input_and_resolution_feasibility_research_only"
+    ],
+    "claim_boundary": "Sufficient energy-only budget and prospective full covariance at fixed rational tree inputs, not necessary laboratory precision, optimal design, a physical no-go, full measurement design or physical/thermal/Core/Goal acceptance.",
+    "q5_information_predecessor_evidence_field": "q5_dispersion_information_evidence_2026_10_03",
+    "evidence_artifacts": [
+      {
+        "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/t13_multi_q_estimator.json",
+        "sha256": "56c9aa7ef469c51a30337bea9ea958c8d2459ed7e2316fbbe49644ad192c57b1"
+      }
+    ],
+    "density_readout_predecessor_evidence_field": "noether_density_readout_evidence_2026_10_03",
+    "work_remainder_predecessor_evidence_field": "gaussian_work_remainder_evidence_2026_10_03",
+    "source_work_predecessor_evidence_field": "gaussian_source_work_evidence_2026_10_03",
+    "soft_source_predecessor_evidence_field": "collisionless_soft_source_evidence_2026_10_03",
+    "noether_source_predecessor_evidence_field": "thermal_noether_response_evidence_2026_10_03",
+    "finite_q_source_predecessor_evidence_field": "finite_q_thermal_source_evidence_2026_10_03",
+    "virtual_source_predecessor_evidence_field": "thermal_virtual_response_evidence_2026_10_03",
+    "source_curvature_predecessor_evidence_field": "thermal_source_curvature_evidence_2026_10_03",
+    "source_Landau_predecessor_evidence_field": "acoustic_source_Landau_evidence_2026_10_03",
+    "pair_predecessor_evidence_field": "acoustic_source_pair_evidence_2026_10_03",
+    "acoustic_predecessor_evidence_field": "acoustic_modal_cut_evidence_2026_10_03",
+    "thermal_predecessor_evidence_field": "thermal_cut_stiffness_evidence_2026_10_03",
+    "vacuum_predecessor_evidence_field": "vacuum_cut_log_evidence_2026_10_03",
+    "interaction_predecessor_evidence_field": "low_T_interaction_evidence_2026_10_02",
+    "phase_eft_predecessor_evidence_field": "low_T_phase_eft_evidence_2026_10_02",
+    "predecessor_validity_evidence_field": "hartree_low_T_validity_evidence_2026_10_02",
+    "inherited_joint_Phi_response_evidence_field": "hartree_joint_phi_response_evidence_2026_10_02",
+    "inherited_joint_Phi_static_evidence_field": "hartree_joint_phi_static_evidence_2026_10_02",
+    "inherited_fixed_Phi_finite_q_poles_evidence_field": "hartree_finite_q_poles_evidence_2026_10_02",
+    "prior_Hartree_results_are_not_new_EFT_dynamics": true,
+    "multi_q_estimator_verified": true,
+    "joint_data_differential_verified": true,
+    "rational_energy_only_budget_verified": true,
+    "physical_noise_acquired": false,
+    "physical_resolution_admitted": false,
+    "physical_q5_measured": false,
+    "physical_measurement_design_completed": false,
+    "physical_material_map_admitted": false,
+    "independent_alpha_Phi_K_admitted": false,
+    "full_SK_KMS_matching_closed": false,
+    "physical_Kubo_emitted": false,
+    "nonlinear_parent_action_completed": false,
+    "controlled_full_action_truncation_error_established": false,
+    "full_core_unlock": false,
+    "core_composition_gate_overwritten": false,
+    "old_source_work_audit_promoted": false
   },
   "claim_boundary": "Plan only. No scientific acceptance, new physical prediction, funding eligibility, external validation or global claim is established by this record. A completed portfolio and a completed scientific result are separate obligations."
 }

@@ -10,7 +10,50 @@
 
 ## ผลหลักสำหรับพอร์ตและทุนรอบถัดไป
 
-## Latest Q5 Information And Precision Handoff (2026-10-03)
+## Latest Multi-Q Estimator And Feasibility Handoff (2026-10-03)
+
+MAJOR_RESULT_CLOSURE: T13_MULTI_Q_ESTIMATOR_COVARIANCE_AND_TREE_BIAS_BUDGET,
+CLOSED_FOR_LANE, not full measurement design/G2-G4/R1-R5/Goal acceptance.
+
+WHAT_IS_ACTUALLY_CLOSED: Three-node coefficient estimator, full data/native
+differential/correlation controls and sufficient rational tree/noise budget.
+
+WHAT_REMAINS_OPEN: Physical resolution/joint covariance/native-current map,
+same-state permitted rows, interaction error, gain/alpha/parent/heat/KMS.
+
+DEPENDENCY_UNLOCKED: Input-backed acquisition-route feasibility research
+only; no physical/Core/Gravity or owner-composition promotion.
+
+STATUS: PASS_SCOPED_MULTI_Q_ESTIMATOR. Four of ten windows have a positive
+conservative energy-only budget; six remain noncertified, one inverse invalid.
+
+WHAT_CHANGED: [Derivation](Result/artifacts/T13_MULTI_Q_ESTIMATOR_2026-10-03.md)
+and [window card](Result/artifacts/T13_MULTI_Q_MEASUREMENT_WINDOW_CARD_2026-10-03.md)
+advance canonical multi_q_estimator_evidence_2026_10_03, with ancestry intact.
+
+EQUATION_OR_MAPPING: beta_hat=W*(E_i/q_i), Sigma_beta=J Sigma_log(E,q) J^T;
+r=beta0*beta2/beta1^2 maps to conditional I; all native correlations remain.
+
+VERIFICATION: Exact identities, independent estimators/finite differences,
+rational boxes/corners and retained windows; artifact SHA256
+56c9aa7ef469c51a30337bea9ea958c8d2459ed7e2316fbbe49644ad192c57b1.
+Linked final counts belong in UPDATE_LOG; no experiment or model trial run.
+
+CONTROLLING_BLOCKER:
+physical_peak_resolution_joint_covariance_native_state_and_interaction_error_not_admitted.
+
+NEXT_ACTION: Compare q5 extraction with independent-scale/q3 using documented
+resolution/native inputs before existing5/7 October decisions, or freeze a
+conditional acquisition gap. Original11 October portfolio and later R1-R5
+dates unchanged; no unchanged-grid rerun or extension by renaming a gate.
+
+CLAIM_BOUNDARY: Smaller q reduces tree bias but amplifies shape error;
+1.65e-16 to4.19e-14 sufficient bounds are not necessary lab precision/no-go.
+No acquired noise, alpha, full design/Goal/owner admission or old FAIL repair.
+Holdout REVIEW_REQUIRED/no numeric Xie use and NOT_RUN trial/settings unchanged.
+Funder/PI/budget/deadline unknown: review-ready, not submission-ready.
+
+## Prior Q5 Information And Precision Handoff (2026-10-03)
 
 [Q5 derivation](Result/artifacts/T13_Q5_DISPERSION_INFORMATION_2026-10-03.md)
 and [measurement supplement](Result/artifacts/T13_Q5_MEASUREMENT_INFORMATION_CARD_2026-10-03.md)

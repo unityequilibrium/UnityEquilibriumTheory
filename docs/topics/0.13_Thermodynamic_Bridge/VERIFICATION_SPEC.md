@@ -1,6 +1,19 @@
 # Verification Spec
 
 
+## Multi-Q Estimator And Conditional Budget Verification (2026-10-03)
+
+Run Research_T13_Multi_Q_Estimator.py/test_t13_multi_q_estimator.py.
+Seven method checks: exact interpolation/axes, independent Newton recovery,
+tree-box containment, data/native differential and correlated nulls,
+rational budget/corners, all ranges retained and no physical noise assigned.
+Protocol fixes mu1.05/1.2, q_max.04/.02/.01/.005/.0025 and node ratios1/half/
+quarter; roots80digits, estimators70/100, FD1e-24 and96 dyadic steps.
+Estimator1e-45/Jacobian1e-8 unchanged; illustrative target1% not physical gate.
+Replay exact endpoints and boxes, invalid inverse/domain and serialization
+bounds. Audit-time Path allowlist and hashes do not certify historical
+blinding. Original causal1e-6 not rerun; no physical/full-design acceptance.
+
 ## Q5 Information And Rational Tree Envelope Verification (2026-10-03)
 
 Run Research_T13_Q5_Dispersion_Information.py/test_t13_q5_dispersion_information.py.

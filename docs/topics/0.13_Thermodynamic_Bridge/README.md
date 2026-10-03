@@ -6,6 +6,18 @@ description: "Research module for Thermodynamic Bridge within the Unity Equilibr
 
 # 0.13 Thermodynamic Bridge
 
+## Multi-Q Bias And Sensitivity Are Now Explicit (2026-10-03)
+
+[Estimator derivation](Result/artifacts/T13_MULTI_Q_ESTIMATOR_2026-10-03.md)
+and [window card](Result/artifacts/T13_MULTI_Q_MEASUREMENT_WINDOW_CARD_2026-10-03.md)
+close the conditional estimator/differential/rational energy-only budget,
+not physical precision. Ten windows retained: four positive sufficient
+budgets, six noncertified, one inverse outside its domain. Smaller q reduces
+tree bias but greatly amplifies energy-shape error; no lab noise assigned.
+Canonical multi_q_estimator_evidence_2026_10_03; next input-backed comparison
+of q5 and independent-scale/q3 before original7/11 October. Gain/alpha/
+parent/heat/KMS/full design/Goal/owner/holdout/models remain unchanged.
+
 ## Q5 Information Removes The Restricted Q3 Unit Family (2026-10-03)
 
 [Q5 derivation](Result/artifacts/T13_Q5_DISPERSION_INFORMATION_2026-10-03.md)

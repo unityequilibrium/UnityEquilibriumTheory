@@ -1,6 +1,18 @@
 ﻿# Method
 
 
+## Explicit Multi-Q Estimator And Joint Differential (2026-10-03)
+
+[Derivation](Result/artifacts/T13_MULTI_Q_ESTIMATOR_2026-10-03.md)
+uses exact three-node Lagrange weights on E/q versus q^2, independently
+checked by Newton divided differences. The full interpolation Jacobian
+includes energy and q dependence; the kinetic inverse includes native
+r0/D/s with all correlations left explicit. Exact common multiplicative
+axes cancel in the ratio, not in coefficient covariance or nonlinear
+resolution bias. Rational tree envelopes and a triangle inequality give
+a conservative sufficient energy-only target box; no measured noise,
+physical parameter tuning, optimal budget or parent error asserted.
+
 ## Q5 Determinant Series And Conditional Inverse (2026-10-03)
 
 [Derivation](Result/artifacts/T13_Q5_DISPERSION_INFORMATION_2026-10-03.md)

@@ -1,6 +1,18 @@
 # Limitations
 
 
+## A Sufficient Multi-Q Budget Is Not Physical Feasibility (2026-10-03)
+
+[Window card](Result/artifacts/T13_MULTI_Q_MEASUREMENT_WINDOW_CARD_2026-10-03.md)
+retains six noncertified windows and one invalid inverse. Four sufficient
+bounds1.65e-16 to4.19e-14 refer only to bounded energy error at exact q and
+fixed rational tree inputs, not necessary instrument precision or no-go.
+Local covariance lacks acquired resolution/native-state/material input;
+tree bias and decorrelated shape sensitivity trade off as q decreases.
+q/native/interaction errors, gain/alpha/heat/KMS and nonlinear parent remain
+open. Full design/G2-G4/R1-R5/Goal and Core-owner acceptance unchanged;
+original failures and Xie REVIEW_REQUIRED retained.
+
 ## Q5 Rank Is Not Practical Or Physical Precision (2026-10-03)
 
 [Supplement](Result/artifacts/T13_Q5_MEASUREMENT_INFORMATION_CARD_2026-10-03.md)

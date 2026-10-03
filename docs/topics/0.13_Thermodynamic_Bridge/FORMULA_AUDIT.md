@@ -1,6 +1,17 @@
 # Formula Audit: 0.13_Thermodynamic_Bridge
 
 
+## Multi-Q Weights, Covariance And Rational Component Box (2026-10-03)
+
+[Registry](Data/03_Research/t13_multi_q_estimator_registry.json)
+records exact interpolation, joint energy/q differential and the sufficient
+tree/noise bound. beta=(c:1,eta:E^-2,zeta:E^-4), I:E^-2; log inputs are
+reference ratios. Native r0:1,D:E4,s:E2 are derived correlated inputs,
+not new independently acquired coefficients. Var(I)=g_full^T Sigma_full
+g_full is first-order with unknown full covariance, not a fabricated error.
+Exact rational box excludes q/native/resolution/interaction uncertainty.
+No physical alpha, Kubo, KMS, state/ontology or Core-registry promotion.
+
 ## Q5 Unit-Free Information And Exact Witness Bound (2026-10-03)
 
 [Registry](Data/03_Research/t13_q5_dispersion_information_registry.json)

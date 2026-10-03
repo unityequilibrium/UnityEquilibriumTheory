@@ -1,3 +1,77 @@
+## 2026-10-03 - Multi-q estimator, joint covariance and sufficient energy budget
+
+MAJOR_RESULT_CLOSURE: T13_MULTI_Q_ESTIMATOR_COVARIANCE_AND_TREE_BIAS_BUDGET,
+CLOSED_FOR_LANE. Full scientific Goal/G2-G4/R1-R5 and physical Topic13 remain
+unaccepted; the active Goal is not completed by this wave.
+
+WHAT_IS_ACTUALLY_CLOSED: Exact three-node coefficient interpolation and
+axis invariance, full energy/q/native differential with correlated controls,
+and replayable rational sufficient tree-bias plus energy-only error budgets.
+
+WHAT_REMAINS_OPEN: Physical detector/peak resolution and full covariance,
+same-state native/material/current/action input and permitted rows,
+interaction/finite-T/parent/heat/entropy/KMS, gain and independent alpha.
+
+DEPENDENCY_UNLOCKED: Instrument/input-backed route-feasibility research
+only, not physical/Core/Gravity/owner/full-design acceptance.
+
+STATUS: PASS_SCOPED_MULTI_Q_ESTIMATOR. All10 preregistered windows retained;
+4 positive sufficient budgets,6 noncertified,1 inverse outside its domain.
+
+WHAT_CHANGED: New estimator/41 tests/local registry/artifact/derivation/
+window card; canonical record/ancestry/current question with34 funding
+contract tests; five research docs/five handoffs, this log and daily ledger.
+No Core-owner/action/predecessor/old failure or physical gate edited.
+
+EQUATION_OR_MAPPING: beta_hat=W*(E_i/q_i), W from exact Lagrange weights
+in q_i^2; J_beta includes q and energy, Sigma_beta=J Sigma_data J^T;
+Var(I)=g_full^T Sigma_full g_full with all9 inputs. Exact common axes cancel
+in r. |beta_hat_k/c-u_k|<=T_k+epsilon*N_k maps a rational component box to
+the illustrative1% I interval; fixed q/native tree only, not laboratory noise.
+
+VERIFICATION: Final11-file linked266 passed in27.11 seconds, including41
+new and34 funding-contract tests; earlier75/39 runs are subsets/superseded.
+Seven scientific method checks pass. Ratio/native central log differential
+relative disagreements<=2.347e-35/1.999e-43. Four sufficient energy-only bounds
+1.654e-16 to4.192e-14; one invalid inverse and six noncertified windows stay.
+Full rational box/endpoint replay, eight corners per positive budget,
+independent Newton70/100 digits and exact monomial/common-axis checks.
+Artifact56c9aa7ef469c51a30337bea9ea958c8d2459ed7e2316fbbe49644ad192c57b1.
+Source/protected hashes and audit-time Path read allowlist tested. HEAD
+comparison preserves all prior records/calendar/acceptance/model/holdout/
+history, with evidence append-only. Original causal1e-6 unchanged/not rerun.
+No full-repository, external, continuum or model-trial verification.
+
+Initial audit crashed before artifact creation because exact integer decimal
+serialization exceeded Python's4300-digit limit, not a scientific gate FAIL.
+Bounded local decimal encoding fixes this without modifying global safety or
+the predecessor. An initial test run had38 passes/2 setup errors with an
+overlong parameter identifier; explicit short IDs reran cleanly. One manual
+PowerShell pipeline parse failed and was repeated with a proper collected
+array. One integration patch failed atomically on out-of-order anchors;
+reapplied in file order. A generated Markdown heading marker was corrected.
+No grid/threshold/target tuning or failed physical result relabel occurred.
+
+CONTROLLING_BLOCKER:
+physical_peak_resolution_joint_covariance_native_state_and_interaction_error_not_admitted.
+Broader thermal/parent obligations and the old source-work FAIL remain.
+
+NEXT_ACTION: Compare q5 versus independent-scale/q3 using documented
+instrument/native input; produce feasibility or an explicit acquisition gap
+before existing5/7 October decisions and11 October portfolio review. Smaller
+q is not a free accuracy improvement; do not rerun unchanged grids. Scoped
+local commit; prior publication denial remains, no push retry/workaround or
+new-head CI/public-main claim without human payload/destination authorization.
+
+CLAIM_BOUNDARY: Conditional tree methods requirement, not necessary detector
+precision, optimal design, physical no-go, calibration/alpha/Kubo/KMS or Full
+Topic13/Core/global/Goal closure. No empirical noise, fit of physical
+parameters, width/rate, clipping/padding/filter, ontology/owner/holdout change
+or numeric Xie read; exposure REVIEW_REQUIRED. Linear interpolation is an
+estimator, not acquired calibration. R_gen/R_obs excluded, C not charge/mass,
+pi_phase not UET Pi. Funder/PI/budget/deadline unknown, trialNOT_RUN/settings
+unchanged; no new Goal/automation/contact/purchase/submission.
+
 ## 2026-10-03 - Q5 unit-free information and exact tree-witness envelope
 
 MAJOR_RESULT_CLOSURE: T13_Q5_UNIT_FREE_KINETIC_IDENTIFIABILITY_AND_TREE_REMAINDER, CLOSED_FOR_LANE. Full Topic13/scientific Goal/G2-G4/R1-R5 remain unaccepted.
