@@ -1,5 +1,16 @@
 # Formula Audit: 0.13_Thermodynamic_Bridge
 
+## Virtual Thermal Insertion And Dynamic Source Covariance (2026-10-03)
+
+[Registry](Data/03_Research/t13_thermal_virtual_response_registry.json)
+declares a named extension with static pair/mixed/contact and time-domain
+covariance source equations. h E3, source dressing E^-2, integrated
+bubble/contact E2 and susceptibility E^-2 in the natural lane, not Kelvin.
+Mixed terms use actual tree poles; seagull and background shift use T/Q
+and the active Hessian. No fitted residual or assigned relaxation width.
+The phase charge constraint distinguishes q0 dynamic from fixed-mu static.
+C/Pi/R_gen/R_obs meanings and Core registry remain unchanged.
+
 ## Stationary Source Jets And Thermal Hessian (2026-10-03)
 
 [Registry](Data/03_Research/t13_thermal_source_curvature_registry.json)

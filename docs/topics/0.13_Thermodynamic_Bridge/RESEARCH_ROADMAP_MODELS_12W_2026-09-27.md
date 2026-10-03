@@ -10,7 +10,15 @@
 
 ## ผลหลักสำหรับพอร์ตและทุนรอบถัดไป
 
-Latest science 3 October: [thermal source curvature](Result/artifacts/T13_THERMAL_SOURCE_CURVATURE_2026-10-03.md)
+Latest science 3 October: [virtual source/covariance](Result/artifacts/T13_THERMAL_VIRTUAL_RESPONSE_2026-10-03.md)
+derives mixed tree/contact completion without fit in a named acoustic
+thermal-insertion extension. Independent real-time covariance checks
+q0 source response; fixed-mu static is not fixed-charge dynamic. R1 next
+requires finite-q source/population relaxation and full interacting/vacuum
+matching. R2-R3 physical inputs, dates/acceptance/models/NOT_RUN unchanged.
+Canonical thermal_virtual_response_evidence_2026_10_03; earlier records keep scope.
+
+Prior science 3 October: [thermal source curvature](Result/artifacts/T13_THERMAL_SOURCE_CURVATURE_2026-10-03.md)
 derives the acoustic thermal pressure/source Hessian with virtual and
 background contributions. R1 next requires actual dynamic source/contact
 completion returning the static target; cut-only mismatch is3.65%/66.4%,
@@ -58,7 +66,19 @@ control, followed by finite-T collision/normal response as justified.
 Independent material/source/readout/scale remains under R2-R3. No review
 date, R1-R5 acceptance, model/trial policy or uncertain call scenario changes.
 
-### Current science: new thermal prescription, then quantify its control
+### Latest science: virtual/contact completion and ensemble-aware dynamic response
+
+[Named thermal-insertion extension](Result/artifacts/T13_THERMAL_VIRTUAL_RESPONSE_2026-10-03.md)
+now derives the virtual/contact terms missing from acoustic-only static
+response and independently checks q0 complex-frequency source response
+with real-time covariance. This changes the next calculation to finite-q
+source and population-relaxation matching: fixed-mu static and fixed-charge
+homogeneous dynamic limits cannot be identified. Full interacting/vacuum
+matching, approximation and physical input remain open. Canonical
+thermal_virtual_response_evidence_2026_10_03; no full R1-R5/Goal/physical
+acceptance, date/model/holdout or owner change. Earlier sections are predecessor scope.
+
+### Prior science: new thermal prescription, then quantify its control
 
 [Tree-matched phase EFT](Result/artifacts/T13_LOW_T_PHASE_EFT_2026-10-02.md)
 now closes a separate low-T thermal-difference calculation, with independent

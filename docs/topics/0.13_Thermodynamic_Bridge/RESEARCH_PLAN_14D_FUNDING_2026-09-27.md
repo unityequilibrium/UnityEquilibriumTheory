@@ -6,7 +6,15 @@
 
 ตัวควบคุมงาน: [funding_portfolio_14d_plan.json](Data/03_Research/funding_portfolio_14d_plan.json) | คำสั่งเริ่มงาน: [GOAL_BRIEF_FUNDING_14D.md](GOAL_BRIEF_FUNDING_14D.md)
 
-Latest science 3 October: [thermal source curvature](Result/artifacts/T13_THERMAL_SOURCE_CURVATURE_2026-10-03.md)
+Latest science 3 October: [virtual/contact and dynamic covariance](Result/artifacts/T13_THERMAL_VIRTUAL_RESPONSE_2026-10-03.md)
+closes the static gap in a named acoustic thermal-insertion extension
+without fitted contact. Independent real-time covariance verifies complex
+q0 source response; fixed-mu static differs from fixed-charge dynamics.
+Next finite-q source/population relaxation and full interacting/vacuum
+matching, plus independent physical input. Canonical
+thermal_virtual_response_evidence_2026_10_03; full acceptance and7/11 October unchanged.
+
+Prior science 3 October: [thermal source curvature](Result/artifacts/T13_THERMAL_SOURCE_CURVATURE_2026-10-03.md)
 derives a same-action static pressure matching target. Acoustic cuts alone
 differ by3.65%/66.4%; actual source/contact/virtual completion must account
 for it, not fit a static residual. Canonical thermal_source_curvature_evidence_2026_10_03;

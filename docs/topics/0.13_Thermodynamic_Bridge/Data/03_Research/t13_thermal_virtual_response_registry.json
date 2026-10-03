@@ -1,0 +1,13 @@
+{
+  "schema_version": "uet-topic-local-equation-contract-v1",
+  "owner_topic": "0.13_Thermodynamic_Bridge",
+  "branch_id": "t13.candidate.acoustic_thermal_insertion_tree_virtual_response_v1",
+  "parent_branch_id": "t13.candidate.tree_matched_classical_phi_low_T_phase_EFT_v1",
+  "status": "NAMED_THERMAL_INSERTION_EXTENSION_NOT_CORE_PROMOTION",
+  "entries": [
+    {"id": "t13.thermal_insertion.virtual_static_completion", "ontology": "acoustic thermal population, virtual tree radial/Phi propagation; no C/Pi/R_gen/R_obs fluctuation state", "equation": "chi=population+pair+mixed_virtual-contact; mixed/n=sum_j [abs(P_aj)^2/(E_a+E_j)+abs(N_aj)^2/(E_j-E_a)]/(2E_a E_j)", "units": "chi:E^-2; projected integrand per n:E^-5", "derivation_class": "DERIVED_TREE_SPECTRAL_RESOLUTION_AND_STATIONARY_BACKGROUND_CONTACT", "observable": "conditional equilibrium h susceptibility", "data_role": "DERIVED", "verification_status": "PASS_SCOPED_THERMAL_VIRTUAL_RESPONSE", "controlling_blocker": "dynamic_and_interacting_thermal_admission_open", "claim_boundary": "Named one-acoustic thermal insertion, not all-mode quantum thermal determinant or calibrated heat"},
+    {"id": "t13.thermal_insertion.dynamic_covariance_source", "ontology": "h original external action source; tree field/velocity covariance is a diagnostic, not an independent R_gen state", "equation": "(-iz-L_A) delta_Cov=delta_A Cov+Cov delta_A^T; delta_chi=d(-z)^T[B-S-T delta_x]d(z)", "units": "z:E; d:E^-2; integrated B/contact:E^2; delta_chi:E^-2", "derivation_class": "DERIVED_REAL_TIME_GAUSSIAN_COVARIANCE_AND_RETARDED_TREE_PROPAGATION", "observable": "conditional q0 complex-frequency source response", "data_role": "DERIVED", "verification_status": "PASS_SCOPED_THERMAL_VIRTUAL_RESPONSE", "controlling_blocker": "finite_q_population_relaxation_and_physical_transport_open", "claim_boundary": "q0 fixed-charge dynamical limit is not grand-canonical static susceptibility; no assigned damping, full SK/KMS or physical Kubo"}
+  ],
+  "core_registry_modified": false,
+  "claim_promotion": false
+}

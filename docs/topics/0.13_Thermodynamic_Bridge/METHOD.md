@@ -1,5 +1,17 @@
 ﻿# Method
 
+## Named Acoustic Thermal Insertion With Virtual Tree Response (2026-10-03)
+
+[Derivation](Result/artifacts/T13_THERMAL_VIRTUAL_RESPONSE_2026-10-03.md)
+uses tree spectral completeness with only acoustic thermal population.
+Compute mixed virtual terms and quartic/tadpole-background contact from
+T/Q/Hessian, not the static residual. Independently solve 36-component
+real-time covariance response to check the matrix bubble and original
+external source dressing. Grand-canonical population variance belongs
+to the static limit, not homogeneous charge-conserving dynamics. The
+explicit named extension does not add heavy quantum/vacuum occupation
+to the old phase-EFT branch. Finite-q/collision/physical matching is open.
+
 ## Same-Action Thermal Source Hessian (2026-10-03)
 
 [Derivation](Result/artifacts/T13_THERMAL_SOURCE_CURVATURE_2026-10-03.md)

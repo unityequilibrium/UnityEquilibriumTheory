@@ -1,5 +1,18 @@
 # Limitations
 
+## Completed Static Gap Is Not Full Thermal Transport (2026-10-03)
+
+[Virtual/covariance result](Result/artifacts/T13_THERMAL_VIRTUAL_RESPONSE_2026-10-03.md)
+closes the prior static matching obligation in a named acoustic-insertion
+extension, not full source response of the old acoustic-only truncation.
+Heavy virtual tree propagation is not independent heavy quantum loops.
+Complex-frequency q0 checks are not full real-axis/finite-q global stability
+or a collision operator. Static fixed-mu population variance and dynamic
+fixed-charge response cannot be identified; the tree limits differ already.
+Full interacting/vacuum matching, approximation/material uncertainty,
+Kubo/SK-KMS, alpha and source/readout remain open. First-failure/raw errors
+are retained; 50-digit projection is not higher-precision physical input.
+
 ## Static Curvature Is Not An Assigned Dynamic Contact (2026-10-03)
 
 [Source Hessian](Result/artifacts/T13_THERMAL_SOURCE_CURVATURE_2026-10-03.md)

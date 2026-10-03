@@ -10,7 +10,19 @@
 
 ปิดคำถามว่า He-4/O(2) bridge ที่แช่แข็ง calibration แล้วกำหนด independent dynamic response ได้หรือไม่ และต้องวัดอะไรเพิ่มจึงแยกคำตอบได้ ผลสำเร็จต้องมี predictive-content derivation หรือ scoped nonidentifiability proof ที่เพิ่มจาก matching identity เดิม พร้อม measurement design และชุดหลักฐาน ไม่ใช้จำนวน artifacts/PASS เป็นเกณฑ์สำเร็จ
 
-## Latest Thermal Source Curvature Handoff (2026-10-03)
+## Latest Virtual Source And Covariance Handoff (2026-10-03)
+
+[Named thermal-insertion extension](Result/artifacts/T13_THERMAL_VIRTUAL_RESPONSE_2026-10-03.md)
+derives virtual tree/contact completion of the old static gap without fit,
+plus q0 complex-frequency source response checked with independent
+real-time covariance. Fixed-mu static and fixed-charge dynamic limits
+differ; next finite-q source/population relaxation, full interacting/vacuum
+matching and independent material/readout/scale. Current canonical field
+thermal_virtual_response_evidence_2026_10_03. Full Goal/R1-R5/physical/Core
+acceptance, 7/11 October, owner/holdout/model rules remain unchanged.
+Earlier handoffs retain their own scope and historical blockers.
+
+## Prior Thermal Source Curvature Handoff (2026-10-03)
 
 [Static source target](Result/artifacts/T13_THERMAL_SOURCE_CURVATURE_2026-10-03.md)
 now differentiates the same-action acoustic thermal pressure and tree

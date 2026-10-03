@@ -6,6 +6,17 @@ description: "Research module for Thermodynamic Bridge within the Unity Equilibr
 
 # 0.13 Thermodynamic Bridge
 
+## Virtual Contact Completion And Dynamic Covariance (2026-10-03)
+
+[New named extension](Result/artifacts/T13_THERMAL_VIRTUAL_RESPONSE_2026-10-03.md)
+derives mixed virtual tree/contact terms that close the predecessor's
+static gap without fitting. Non-real q0 dynamic source response agrees
+with an independent real-time covariance equation. Fixed-mu static and
+q0 fixed-charge limits are different, so this does not close transport.
+Next finite-q source/population relaxation, full interacting/vacuum and
+approximation matching, then independent material/readout/scale. Earlier
+sections retain historical scope; Full Topic13/Goal/physical gates remain open.
+
 ## Thermal Source Curvature And Static Matching (2026-10-03)
 
 [New result](Result/artifacts/T13_THERMAL_SOURCE_CURVATURE_2026-10-03.md)

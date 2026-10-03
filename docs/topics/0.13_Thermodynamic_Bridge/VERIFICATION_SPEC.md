@@ -1,5 +1,19 @@
 # Verification Spec
 
+## Virtual Source And Independent Covariance Verification (2026-10-03)
+
+Run Research_T13_Thermal_Virtual_Response.py/test_t13_thermal_virtual_response.py.
+Seven checks require independent static eigenvalue/pressure agreement,
+tree inverse/spectral completeness, 36-component real-time covariance,
+derived background contact, charge/reality/reciprocity and ensemble limits.
+mu1.05/1.2, p.005/.02/.04, T divisors256/512, orders24/48/96, tails32/40,
+z=.02i/.05i/.1i/.03+.02i fixed before first audit; identities1e-9,
+covariance1e-7, quadrature1e-6, tail1e-8, original causal1e-6 unchanged.
+Retain failed binary64 projection and historical hashes; independently
+rebuild contact with 50-digit arithmetic without changing physical input.
+Require coordinate/zero-T/decoupled/invalid-domain, protected-hash and
+runtime-read controls. No physical transport or full acceptance from PASS.
+
 ## Thermal Source Curvature Verification (2026-10-03)
 
 Run Research_T13_Thermal_Source_Curvature.py/test_t13_thermal_source_curvature.py.
