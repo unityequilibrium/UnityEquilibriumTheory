@@ -6,6 +6,20 @@ description: "Research module for Thermodynamic Bridge within the Unity Equilibr
 
 # 0.13 Thermodynamic Bridge
 
+## Source Archive And Omitted-Term Boundary (2026-10-03)
+
+[Source/derivation](Result/artifacts/T13_LOW_Q_SOURCE_BOUNDARY_2026-10-03.md)
+and [route card](Result/artifacts/T13_LOW_Q_ROUTE_DECISION_CARD_2026-10-03.md)
+close two bounded subresults: permitted versioned numeric archive and
+exact omitted-q4 alias/four-node separation. Aggregate remains PARTIAL;
+float641e-8 gate still FAIL, independent80-digit method checked separately.
+Three-node quintic alias grows as1/q_max if q4 is uncontrolled. Four nodes
+separate only four declared bases, not full physics. Source files overlap
+and have missing uncertainty; no native I/alpha or physical comparison.
+Canonical low_q_source_boundary_evidence_2026_10_03 is observed-partial,
+not accepted full evidence. Next same-state scale/current and non-tree
+remainder/covariance. Owner1.7K calibration/dates/holdout/models unchanged.
+
 ## Multi-Q Bias And Sensitivity Are Now Explicit (2026-10-03)
 
 [Estimator derivation](Result/artifacts/T13_MULTI_Q_ESTIMATOR_2026-10-03.md)

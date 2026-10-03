@@ -1,6 +1,18 @@
 # Limitations
 
 
+## Source Availability Does Not Close The Physical Model (2026-10-03)
+
+[Card](Result/artifacts/T13_LOW_Q_ROUTE_DECISION_CARD_2026-10-03.md)
+keeps the archive distinct from physical admission: mixed/overlapping
+ancestry, missing errors, unknown joint covariance/native scale/remainder.
+Odd-tree certificates cannot cover an unknown q4 term; even the four-term
+extension does not exclude other terms, including an energy q2 term.
+Exact rank is not practical precision: original float64 gate still FAIL.
+No physical q4/q5 detection, native I/alpha/Kubo/KMS or full design/Goal.
+Core-owner's distinct1.7K calibration is neither removed nor transferred;
+old failures, dates/holdout REVIEW_REQUIRED and model trial remain.
+
 ## A Sufficient Multi-Q Budget Is Not Physical Feasibility (2026-10-03)
 
 [Window card](Result/artifacts/T13_MULTI_Q_MEASUREMENT_WINDOW_CARD_2026-10-03.md)

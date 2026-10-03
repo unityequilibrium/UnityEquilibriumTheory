@@ -764,7 +764,8 @@ def test_q5_information_does_not_admit_physical_precision_or_full_goal():
 
 
 def test_multi_q_budget_does_not_admit_noise_measurement_or_full_goal():
-    field = PLAN["execution_review_2026_10_01"]["current_scientific_evidence_field"]
+    latest = PLAN[PLAN["execution_review_2026_10_01"]["current_scientific_evidence_field"]]
+    field = latest["multi_q_predecessor_evidence_field"]
     assert field == "multi_q_estimator_evidence_2026_10_03"
     assert field in PLAN["portfolio_strategy_2026_10_01"]["accepted_preliminary_evidence_fields"]
     evidence = PLAN[field]
@@ -786,5 +787,33 @@ def test_multi_q_budget_does_not_admit_noise_measurement_or_full_goal():
         content = (ROOT/"docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts"/note).read_text()
         assert evidence["sha256"] in content and all(name+":" in content for name in result["report"])
     assert result["external_numeric_rows_admitted"] == 0 and not result["external_parameter_fitting"]
+    assert not result["xie_2026_accessed"] and result["prior_Xie_context_exposure_review"] == "REVIEW_REQUIRED"
+    assert all(card["status"] == "PLANNED_NOT_ACCEPTED" for card in PLAN["result_level_execution_2026_10_01"]["result_cards"])
+
+
+def test_low_q_source_archive_does_not_promote_partial_or_physical_result():
+    field = PLAN["execution_review_2026_10_01"]["current_scientific_evidence_field"]
+    assert field == "low_q_source_boundary_evidence_2026_10_03"
+    assert field in PLAN["portfolio_strategy_2026_10_01"]["observed_partial_evidence_fields"]
+    assert field not in PLAN["portfolio_strategy_2026_10_01"]["accepted_preliminary_evidence_fields"]
+    evidence = PLAN[field]
+    path = ROOT/evidence["path"]
+    result = json.loads(path.read_text())
+    assert hashlib.sha256(path.read_bytes()).hexdigest() == evidence["sha256"]
+    for key in ("closure_level", "verification_status", "controlling_blocker", "branch_id", "major_result_id", "subresults"):
+        assert evidence[key] == result[key]
+    assert result["closure_level"] == "PARTIAL" and result["verification_status"] == "FAIL_SCOPED_LOW_Q_SOURCE_BOUNDARY"
+    assert not all(result["checks"].values()) and all(result["extended_checks"].values())
+    for key in ("numeric_source_archive_acquired", "q4_alias_verified", "four_node_separation_verified"):
+        assert evidence[key] is result[key] is True
+    for key in ("physical_q5_measured", "physical_q4_detected_by_this_audit", "physical_I_inferred", "physical_joint_covariance_acquired",
+                "physical_material_map_admitted", "physical_measurement_design_completed", "independent_alpha_Phi_K_admitted",
+                "physical_Kubo_emitted", "full_SK_KMS_matching_closed", "nonlinear_parent_action_completed",
+                "controlled_full_action_truncation_error_established", "full_core_unlock", "core_composition_gate_overwritten", "old_source_work_audit_promoted"):
+        assert evidence[key] is result[key] is False
+    for note in ("T13_LOW_Q_SOURCE_BOUNDARY_2026-10-03.md", "T13_LOW_Q_ROUTE_DECISION_CARD_2026-10-03.md"):
+        content = (ROOT/"docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts"/note).read_text()
+        assert evidence["sha256"] in content and all(name+":" in content for name in result["report"])
+    assert result["external_numeric_rows_admitted_to_UET_comparison"] == 0 and not result["external_UET_parameter_fitting"]
     assert not result["xie_2026_accessed"] and result["prior_Xie_context_exposure_review"] == "REVIEW_REQUIRED"
     assert all(card["status"] == "PLANNED_NOT_ACCEPTED" for card in PLAN["result_level_execution_2026_10_01"]["result_cards"])

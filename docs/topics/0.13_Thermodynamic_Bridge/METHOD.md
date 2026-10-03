@@ -1,6 +1,18 @@
 ﻿# Method
 
 
+## Raw Source Parsing And Explicit Nuisance Basis (2026-10-03)
+
+[Derivation](Result/artifacts/T13_LOW_Q_SOURCE_BOUNDARY_2026-10-03.md)
+keeps raw author bytes, UTF16-LE/Latin1 encodings, lexical line and pressure
+identity, null NAN/-- cells and hybrid ancestry. Exact q4 omitted-basis
+alias is checked against a known polynomial control. Four-node generalized
+Vandermonde equals ordinary Vandermonde times e3(q), proving rank in this
+class; exact elimination and independent80-digit LU recover controls.
+Original scaled float64 gate remains FAIL, not replaced by high precision.
+Source coefficient interpolation is exposed diagnosis, not UET parameter
+calibration. No source interpolation, imputation or native I inference.
+
 ## Explicit Multi-Q Estimator And Joint Differential (2026-10-03)
 
 [Derivation](Result/artifacts/T13_MULTI_Q_ESTIMATOR_2026-10-03.md)

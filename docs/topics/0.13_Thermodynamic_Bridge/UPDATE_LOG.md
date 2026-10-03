@@ -1,3 +1,94 @@
+## 2026-10-03 - Permitted low-q source archive and omitted-q4 measurement boundary
+
+MAJOR_RESULT_CLOSURE: T13_LOW_Q_NUMERIC_SOURCE_AND_OMITTED_TERM_MEASUREMENT_BOUNDARY,
+aggregate PARTIAL/FAIL. Subresults T13_GODFRIN_V1_NUMERIC_SOURCE_ARCHIVE and
+T13_Q4_ALIAS_AND_FOUR_NODE_SEPARATION CLOSED_FOR_LANE; no physical/full Goal/
+G2-G4/R1-R5 acceptance.
+
+WHAT_IS_ACTUALLY_CLOSED: Versioned author numeric tables/supplement with
+declared CC BY attribution, raw hashes/units/encoding/row identity, missing
+cells and overlapping ancestry; exact omitted-q4 alias/constructive ambiguity,
+four-node rank proof/recovery and an independent80-digit control.
+
+WHAT_REMAINS_OPEN: Same-state material/current/action scale, joint q/energy/
+native covariance and non-tree/finite-T remainder, source version/ancestry,
+response alpha/heat/entropy/Kubo/KMS/parent. Source bytes are available, not
+an admitted physical comparison; Core-owner1.7K calibration not transferred.
+
+DEPENDENCY_UNLOCKED: Source-backed measurement-model and independent-scale
+research only; original physical/Core/Gravity/full-design gates unchanged.
+
+STATUS: PROGRESS: preceding multi-q wave changed authoritative evidence;
+this wave acquires new numeric input and a different structural result.
+Original float641e-8 control still FAIL, not repaired by the80digit extension.
+
+WHAT_CHANGED: New parser/37 tests/source protocol/raw folder3 author files/
+byte-preserving attributes/final and first-failure artifacts/two notes;
+canonical observed-partial record/ancestry/current question with35 funding
+tests, six research/data docs/five handoffs, this log and daily ledger.
+All prior source/action/Core-owner/failure evidence and accepted list intact.
+
+EQUATION_OR_MAPPING: For omitted b4*q4 in energy, three-node ratios1/half/
+quarter give delta(c,eta,zeta)=b4*(-qmax^3/90,7*qmax/18,28/(45*qmax)).
+Compensating these offsets leaves three observations unchanged. Four basis
+powers0/2/3/4 have detV=Vandermonde(q)*e3(q), nonzero for positive distinct
+nodes. This is conditional measurement-model algebra, not an action change.
+Natural b4:E^-3; exposed coefficients meV*angstrom^(1,3,4,5), not native
+I/Kelvin inference. Other bases, including energy q2, are not proved absent.
+
+VERIFICATION: Final12-file linked304 passed in29.51 seconds, including37 new/
+35 funding tests; earlier36/72 are subsets, not added. Audit exits1 as
+expected:7/8 original checks pass, float64 errors3.378e-8/5.627e-7/4.809e-5
+fail1e-8. First failureba1acb4929d07a222476f4c0b0b0ca0684e9da17a86f3a6ea8438ac31a42982d
+unchanged; two separately declared extension checks pass,80digit error
+<=9.675e-71 vs1e-45. Exact rank/alias/recovery, negative geometry/units,
+lexical row hashes/ancestry/missing, frozen source windows/no physical I and
+runtime audit Path-read allowlist tested. AllPressures has7350 cells,7118
+energies and232 missing pairs; P0 has1727 energies/1693 missing errors,
+with75 ultrasound/76 hybrid/1576 neutron entries and preserved separators.
+These views overlap, not independent observations. Artifact
+2c254806eb21b23dc282cbe30f052bf9af2376e427bc5c9b0de229d63f06945e.
+HEAD comparison preserves old records/accepted evidence/dates/acceptance/
+holdout/model/owner history; only current record/question/partial append.
+Raw/source/protected hashes and note links checked; original causal1e-6
+unchanged/not rerun. No full repo/external/continuum/model-trial validation.
+Staged raw Git blobs match no-filter working-file identities. Whole staged
+whitespace check flags upstream CRLF/trailing spaces and a final blank line
+in the raw author files. These files are deliberately unchanged; repository-
+authored changes are checked separately with the raw archive excluded.
+Pre-commit confirmation reran the same12 files:304 passed in27.78 seconds.
+This is reproducibility of the same checks, not additional scientific evidence.
+
+First parser attempt crashed before artifact on the AllPressures encoding:
+raw bytes showed UTF16-LE BOM, not Latin1. Corrected decoder/row-byte hash
+and manifest; raw bytes, units, window, formula and thresholds unchanged.
+The next audit produced the retained float64 FAIL. Only afterwards declared
+the separate80digit method before its first run; original checks remain
+identical to first failure. arXiv v2 HTML404 was not treated as evidence;
+the actual v1/source files were used. Web extractor could not decode UTF16
+and TeX; direct permitted-file downloads supplied the byte archives.
+
+CONTROLLING_BLOCKER:
+native_material_map_joint_covariance_and_non_tree_remainder_not_admitted.
+Float64 arithmetic failure is separately retained, not a physical no-go.
+
+NEXT_ACTION: Derive same-state scale/current correspondence and bound
+non-tree nuisance/remainder before physical q5 or independent-scale/q3.
+Do not choose the source curve that fits UET or reuse tree-only error budgets
+outside their class. Preserve7 October freeze/11 October review and R1-R5.
+Scoped local commit; prior publication denial remains, no push retry/
+workaround/new-head CI/public-main claim without payload/destination approval.
+
+CLAIM_BOUNDARY: Source/archive and conditional algebra only; no physical q4
+detection, q5/native I/alpha calibration, assigned noise/width/Kubo/KMS/heat or
+Full Topic13/Core/global/Goal promotion. Original source-work/conserved-C
+FAIL unchanged; no ontology/threshold/owner/holdout changes, numeric Xie read,
+source/uncertainty imputation, target tuning or native parameter fit.
+Archive is exposed, not blind; exposure REVIEW_REQUIRED. No new Goal/
+automation/model switch/contact/purchase/submission; funder/PI/budget/
+deadline unknown, next call scenario. Author raw files attributed unchanged;
+no redistribution of APS final paper.
+
 ## 2026-10-03 - Multi-q estimator, joint covariance and sufficient energy budget
 
 MAJOR_RESULT_CLOSURE: T13_MULTI_Q_ESTIMATOR_COVARIANCE_AND_TREE_BIAS_BUDGET,

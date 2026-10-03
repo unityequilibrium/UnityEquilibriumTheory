@@ -1,6 +1,18 @@
 # Verification Spec
 
 
+## Source Boundary And Preserved Float64 Failure Verification (2026-10-03)
+
+Run Research_T13_Low_Q_Source_Boundary.py/test_t13_low_q_source_boundary.py.
+Expected audit exit1/PARTIAL: seven original checks pass, scaled float641e-8
+fails; exact source/alias/rank subresults and separate80digit1e-45 method
+are not a repaired aggregate. Protect first failure and all raw hashes.
+Test encodings/headers/row IDs/missing/separators/ancestry, exact alias/
+determinant/recovery, frozen windows and no physical inverse/imputation.
+Precision extension declared after float failure, before its first run.
+Runtime Path allowlist/hashes and raw-folder -text attributes required.
+Original causal1e-6 unchanged/not rerun; no physical source/Goal acceptance.
+
 ## Multi-Q Estimator And Conditional Budget Verification (2026-10-03)
 
 Run Research_T13_Multi_Q_Estimator.py/test_t13_multi_q_estimator.py.

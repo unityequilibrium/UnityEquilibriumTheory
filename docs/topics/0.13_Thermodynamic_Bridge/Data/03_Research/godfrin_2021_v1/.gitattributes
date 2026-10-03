@@ -1,0 +1,3 @@
+# Preserve author-file byte hashes across Git checkouts.
+*.txt -text
+*.tex -text

@@ -6,7 +6,49 @@
 
 ตัวควบคุมงาน: [funding_portfolio_14d_plan.json](Data/03_Research/funding_portfolio_14d_plan.json) | คำสั่งเริ่มงาน: [GOAL_BRIEF_FUNDING_14D.md](GOAL_BRIEF_FUNDING_14D.md)
 
-## Latest Multi-Q Estimator And Feasibility Handoff (2026-10-03)
+## Latest Numeric Source And Omitted-Term Handoff (2026-10-03)
+
+MAJOR_RESULT_CLOSURE: Aggregate PARTIAL; numeric archive and exact q4-alias/
+four-node separation CLOSED_FOR_LANE subresults, not full physical/Goal closure.
+
+WHAT_IS_ACTUALLY_CLOSED: Versioned raw-source provenance and an explicit
+three-observation confounding mechanism with a conditional four-node remedy.
+
+WHAT_REMAINS_OPEN: Material/current/native scale, joint covariance and
+non-tree remainder, source ancestry/version parity, response thermal closure.
+
+DEPENDENCY_UNLOCKED: Source-backed measurement-model/independent-scale
+research only; no G2-G4/R1-R5/physical/Core-owner acceptance.
+
+STATUS: Original float64 gate remains FAIL; exact and separate80-digit
+controls pass. Missing/hybrid rows retained, not promoted or filled.
+
+WHAT_CHANGED: [Source/algebra note](Result/artifacts/T13_LOW_Q_SOURCE_BOUNDARY_2026-10-03.md)
+and [route card](Result/artifacts/T13_LOW_Q_ROUTE_DECISION_CARD_2026-10-03.md).
+Canonical low_q_source_boundary_evidence_2026_10_03 is observed-partial;
+prior accepted evidence and original failures retain their own scope.
+
+EQUATION_OR_MAPPING: q4 nuisance aliases into three-node q5 as1/q_max;
+four positive points separate powers0/2/3/4 only, not all physical terms.
+
+VERIFICATION: Raw/first-failure hashes, exact rank/alias,80digit alternative,
+missing/correlation/ancestry boundaries. Artifact SHA256
+2c254806eb21b23dc282cbe30f052bf9af2376e427bc5c9b0de229d63f06945e;
+final linked counts in UPDATE_LOG, no experimental validation.
+
+CONTROLLING_BLOCKER:
+native_material_map_joint_covariance_and_non_tree_remainder_not_admitted.
+
+NEXT_ACTION: Bound nuisance/remainder and derive same-state scale/current
+before choosing physical q5 versus independent-scale/q3; no target tuning.
+Keep original7 October freeze/11 October review and later R1-R5 dates.
+
+CLAIM_BOUNDARY: Source available does not mean physical calibration or
+blind independence. No physical q4/q5/native I/alpha/full design/Goal claim.
+Owner1.7K calibration not removed/transferred; holdout REVIEW_REQUIRED,
+trialNOT_RUN/settings and unknown funder/PI/budget/deadline unchanged.
+
+## Prior Multi-Q Estimator And Feasibility Handoff (2026-10-03)
 
 MAJOR_RESULT_CLOSURE: T13_MULTI_Q_ESTIMATOR_COVARIANCE_AND_TREE_BIAS_BUDGET,
 CLOSED_FOR_LANE, not full measurement design/G2-G4/R1-R5/Goal acceptance.

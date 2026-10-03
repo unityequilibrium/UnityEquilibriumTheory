@@ -1,0 +1,769 @@
+%\documentclass[prl,aps,epsf,multicol]{revtex4-1}
+%\documentclass[aps,prl,preprint,superscriptaddress]{revtex4-1}
+%\documentclass[prl,aps,superscriptaddress,twocolumn]{revtex4-1}
+\documentclass[prb,preprintnumbers,superscriptaddress,showpacs,preprint]{revtex4-1}
+\usepackage{graphicx}
+\usepackage{rotating}
+\usepackage{dcolumn}% Align table columns on decimal point
+\usepackage{bm}% bold math
+\usepackage{amsmath,amssymb,amsfonts,textcomp}
+\usepackage{multirow}
+%\usepackage[hypertex]{hyperref}
+\usepackage{color}
+\usepackage{array}
+\usepackage{hhline}
+\usepackage[normalem]{ulem}
+\usepackage{booktabs}
+\usepackage{amsmath}    % need for subequations
+\usepackage{verbatim}   % useful for program listings
+\usepackage{subfigure}  % use for side-by-side figures
+\tolerance=10000
+%
+\begin{document}
+
+\title{The dispersion relation of excitations in superfluid $^4$He\\
+SUPPLEMENTAL MATERIAL} 
+
+
+\author{H. Godfrin}
+ \email[Corresponding author: ]{henri.godfrin@neel.cnrs.fr}
+  \affiliation{Univ. Grenoble Alpes, CNRS, Grenoble INP{\,$^\dagger$}, Institut N\'eel, 38000 Grenoble, France}
+ \thanks{Institute of Engineering Univ. Grenoble Alpes}
+\author{K. Beauvois} 
+  \affiliation{Univ. Grenoble Alpes, CNRS, Grenoble INP{\,$^\dagger$}, Institut N\'eel, 38000 Grenoble, France}
+	\thanks{Institute of Engineering Univ. Grenoble Alpes}
+	  \affiliation{Institut Laue-Langevin, CS 20156, 38042 Grenoble Cedex 9, France}
+\author{A. Sultan}	
+  \affiliation{Univ. Grenoble Alpes, CNRS, Grenoble INP{\,$^\dagger$}, Institut N\'eel, 38000 Grenoble, France}
+	\thanks{Institute of Engineering Univ. Grenoble Alpes}
+	  \affiliation{Institut Laue-Langevin, CS 20156, 38042 Grenoble Cedex 9, France}
+\author{E.~Krotscheck}
+   \affiliation{Department of Physics, University at Buffalo, SUNY Buffalo NY 14260, USA}
+   \affiliation{Institute for Theoretical Physics, Johannes Kepler University, A 4040 Linz, Austria}
+\author{J. Dawidowski}
+   \affiliation{Comisi\'on Nacional de Energ\'ia At\'omica and CONICET, Centro At\'omico Bariloche, (8400) San Carlos de Bariloche,
+R\'io Negro, Argentina}
+\author{B. F\aa k} 
+   \affiliation{Institut Laue-Langevin, CS 20156, 38042 Grenoble Cedex 9, France}
+\author{J. Ollivier}
+   \affiliation{Institut Laue-Langevin, CS 20156, 38042 Grenoble Cedex 9, France}
+
+\date{\today}
+
+
+\maketitle 
+
+\section{Introduction} 
+We provide in this Supplemental Material additional information on:
+\begin{itemize}
+\item The analogy between the maxon wave-vector, and the Debye wave-vector of a periodic solid.
+\item The extension of Landau's analytical model, developed here to describe quantitatively the neutron data. 
+\item The appropriate phonon and roton parameters, needed to calculate analytically the low temperature properties of superfluid $^4$He. 
+\item Data tables of the thermodynamical properties of superfluid $^4$He at saturated vapor pressure (SVP), calculated using the measured dispersion curve:
+\begin{itemize}
+\item TABLE I: Specific heat (total, phonon, and roton contributions), and total molar entropy, as a function of temperature.
+\item TABLE II: Upper bound on the uncertainties of the specific heat.
+\item TABLE III: Total density, normal fluid densities (total, phonon and roton
+contributions), and same quantities divided by the total density, as a function of temperature.
+\end{itemize}
+\item Detailed data files of the thermodynamical properties of superfluid $^4$He at SVP. 
+Data are shown for $T<$1.3\,K: above this temperature, the dispersion relation depends on temperature (see manuscript).
+\begin{itemize}
+\item Dispersion relation of superfluid $^4$He at SVP and very low temperatures.
+\item The dispersion relation at several pressures, essentially covering the whole pressure range: P=0, 0.51, 1.02, 2.01, 5.01, 10.01, 24.08 bar. 
+\item Detailed values of the specific heat and entropy vs. temperature at SVP.
+\item Number density of roton and phonon excitations vs. temperature, at SVP.
+\end{itemize}
+
+\end{itemize}
+
+\newpage
+\section{Comparing maxon and Debye wave-vectors}
+The following section illustrates the connection between the maxon wave-vector $k_M$ and the Debye wave-vector $k_D$ of a periodic system. 
+The Debye wave-vector k$_D$=(6$\pi^2$n)$^{1/3}$ is defined by assigning one degree of freedom per atom to the longitudinal acoustic phonon mode. The density of states is integrated with an upper limit k$_{D}$ obtained from  
+$N_a=(V/(2\pi^2))\int^{k_{D}}_{0}k^2dk$, 
+where $N_a$ is Avogadro's number and V the molar volume (see manuscript). 
+
+\begin{figure}[htbp]
+	\centering
+		\includegraphics[width=0.7\columnwidth]{kDebye-kMaxon.eps}
+	\caption{The ratio of the maxon wave-vector and the Debye wave-vector calculated for the longitudinal phonon of a periodic system, as a function of density.}
+	\label{fig:kDebye}
+\end{figure}
+
+The Debye model \cite{FetterWalecka} usually describes a solid, where the wave-vector is limited by the inverse of the lattice spacing. In a liquid, such a limitation does not exist. The hard core of the helium atoms, however, introduces a characteristic length and solid-like properties, like the very existence of roton excitations \cite{SmithSolid,NozSolid}. The Debye wave-vector is quantitatively similar to the maxon wave-vector (the ratio is very close to one), the maxon being analogous to a zone-boundary phonon. At high pressures, one can expect this analogy to work even better, and k$_M$ closely follows, indeed, the density dependence of k$_D$, as seen in Fig. \ref{fig:kDebye}.
+
+\newpage
+\section{Extension of Landau's analytical model}
+Analytical expressions for the thermodynamical properties of superfluid $^4$He are given below.
+They are particularly useful at temperatures below 0.7\,K, in particular when phonon and roton contributions 
+must be considered separately, like in flow experiments, for instance. 
+
+\subsection{Phonons}
+The phonon dispersion relation is described here by the series expansion up to ${\cal O}\left(k^7\right)$ 
+ 
+\begin{equation}
+\epsilon^{Ph}(k)=\hbar\omega=\hbar c k(1+ \alpha_1 k +\alpha_2 k^2 + \alpha_3 k^3 + \alpha_4 k^4+ \alpha_5 k^5+ \alpha_6 k^6) 
+\end{equation}
+
+The corresponding inverse series describing the single-valued (phonon) branch of the spectrum is:
+
+$k=a_1 \omega + a_2 \omega^2 + a_3 \omega^3 + a_4 \omega^4 + a_5 \omega^5 + a_6 \omega^6 + a_7 \omega^7 +{\cal O}\left(\omega^8\right) $
+
+where the coefficients are 
+\small
+\begin{align*}
+&a_1=\frac{1}{c} \nonumber\\
+&a_2=-\frac{\alpha_1}{c^2} \nonumber\\
+&a_3=\frac{2 \alpha_1^2-\alpha_2}{c^3}; \nonumber\\
+&a_4=\frac{-5 \alpha_1^3+5 \alpha_1 \alpha_2-\alpha_3}{c^4} \nonumber\\
+&a_5=\frac{14 \alpha_1^4-21 \alpha_1^2 \alpha_2+6 \alpha_1 \alpha_3+3 \alpha_2^2-\alpha_4}{c^5} \nonumber\\
+&a_6=\frac{-42 \alpha_1^5+84 \alpha_1^3 \alpha_2-28 \alpha_1^2 \alpha_3-28 \alpha_1 \alpha_2^2+7 \alpha_1 \alpha_4+7 \alpha_2 \alpha_3-\alpha_5}{c^6} \nonumber\\
+&a_7=\frac{132 \alpha_1^6-330 \alpha_1^4 \alpha_2+120 \alpha_1^3 \alpha_3+180 \alpha_1^2 \alpha_2^2-36 \alpha_1^2 \alpha_4-72 \alpha_1 \alpha_2 \alpha_3+8 \alpha_1 \alpha_5-12 \alpha_2^3+8 \alpha_2 \alpha_4+4 \alpha_3^2-\alpha_6}{c^7}\nonumber\\
+\end{align*}
+
+\normalsize
+The density of states of an isotropic 3-dimensional phonon system is
+
+\begin{equation}
+D(\omega) d\omega=\left(\frac{1}{2 \pi^2} \right) k^2 V dk 
+\label{dos}
+\end{equation}
+
+and hence
+
+$D(\omega)=d_2 \omega^2 + d_3 \omega^3 + d_4 \omega^4 + d_5 \omega^5 + d_6 \omega^6 + d_7 \omega^7 + d_8 \omega^8  +{\cal O}\left(\omega^9\right) $, \\
+
+with
+
+\small
+$d_2= \frac{V}{2 \pi ^2 c^3}$\\
+
+$d_3= - \frac{2 \text{$\alpha_1$} V}{\pi ^2 c^4} $\\
+
+$d_4= \frac{5 V \left(2 \text{$\alpha_1$}^2-\text{$\alpha_2$}\right)}{2 \pi ^2 c^5}+\frac{5 \text{$\alpha_1$}^2 V}{2 \pi ^2 c^5}$\\
+
+$d_5= \frac{3 V \left(-5 \text{$\alpha_1$}^3+5 \text{$\alpha_1$} \text{$\alpha_2$}-\text{$\alpha_3$}\right)}{\pi ^2 c^6}-\frac{\text{$\alpha_1$}^3 V}{\pi ^2 c^6}-\frac{6 \text{$\alpha_1$} V \left(2 \text{$\alpha_1$}^2-\text{$\alpha_2$}\right)}{\pi ^2 c^6}$\\
+
+$d_6= -\frac{7 \text{$\alpha_1$} V \left(-5 \text{$\alpha_1$}^3+5 \text{$\alpha_1$} \text{$\alpha_2$}-\text{$\alpha_3$}\right)}{\pi ^2 c^7}+\frac{7 \text{$\alpha_1$}^2 V \left(2 \text{$\alpha_1$}^2-\text{$\alpha_2$}\right)}{2 \pi ^2 c^7}+\frac{7 V \left(2 \text{$\alpha_1$}^2-\text{$\alpha_2$}\right)^2}{2 \pi ^2 c^7}+\frac{7 V \left(14 \text{$\alpha_1$}^4-21 \text{$\alpha_1$}^2 \text{$\alpha_2$}+6 \text{$\alpha_1$} \text{$\alpha_3$}+3 \text{$\alpha_2$}^2-\text{$\alpha_4$}\right)}{2 \pi ^2 c^7}$\\
+
+$d_7=-\frac{4 \text{$\alpha_1$} V \left(2 \text{$\alpha_1$}^2-\text{$\alpha_2$}\right)^2}{\pi ^2 c^8}-\frac{8 \text{$\alpha_1$} V \left(14 \text{$\alpha_1$}^4-21 \text{$\alpha_1$}^2 \text{$\alpha_2$}+6 \text{$\alpha_1$} \text{$\alpha_3$}+3 \text{$\alpha_2$}^2-\text{$\alpha_4$}\right)}{\pi ^2 c^8} + \frac{4 \text{$\alpha_1$}^2 V \left(-5 \text{$\alpha_1$}^3+5 \text{$\alpha_1$} \text{$\alpha_2$}-\text{$\alpha_3$}\right)}{\pi ^2 c^8}$\\
+
+$+\frac{8 V \left(2 \text{$\alpha_1$}^2-\text{$\alpha_2$}\right) \left(-5 \text{$\alpha_1$}^3+5 \text{$\alpha_1$} \text{$\alpha_2$}-\text{$\alpha_3$}\right)}{\pi ^2 c^8}
++\frac{4 V \left(-42 \text{$\alpha_1$}^5+84 \text{$\alpha_1$}^3 \text{$\alpha_2$}-28 \text{$\alpha_1$}^2 \text{$\alpha_3$}-28 \text{$\alpha_1$} \text{$\alpha_2$}^2+7 \text{$\alpha_1$} \text{$\alpha_4$}+7 \text{$\alpha_2$} \text{$\alpha_3$}-\text{$\alpha_5$}\right)}{\pi ^2 c^8} $\\
+
+$d_8=\frac{9 V \left(-5 \text{$\alpha_1$}^3+5 \text{$\alpha_1$} \text{$\alpha_2$}-\text{$\alpha_3$}\right)^2}{2 \pi ^2 c^9} + \frac{3 V \left(2 \text{$\alpha_1$}^2-\text{$\alpha_2$}\right)^3}{2 \pi ^2 c^9} + \frac{9 V \left(2 \text{$\alpha_1$}^2-\text{$\alpha_2$}\right) \left(14 \text{$\alpha_1$}^4-21 \text{$\alpha_1$}^2 \text{$\alpha_2$}+6 \text{$\alpha_1$} \text{$\alpha_3$}+3 \text{$\alpha_2$}^2-\text{$\alpha_4$}\right)}{\pi ^2 c^9}$\\
+
+$+ \frac{9 \text{$\alpha_1$}^2 V \left(14 \text{$\alpha_1$}^4-21 \text{$\alpha_1$}^2 \text{$\alpha_2$}+6 \text{$\alpha_1$} \text{$\alpha_3$}+3 \text{$\alpha_2$}^2-\text{$\alpha_4$}\right)}{2 \pi ^2 c^9} 
+- \frac{9 \text{$\alpha_1$} V \left(2 \text{$\alpha_1$}^2-\text{$\alpha_2$}\right) \left(-5 \text{$\alpha_1$}^3+5 \text{$\alpha_1$} \text{$\alpha_2$}-\text{$\alpha_3$}\right)}{\pi ^2 c^9}$\\
+
+$ - \frac{9 \text{$\alpha_1$} V \left(-42 \text{$\alpha_1$}^5+84 \text{$\alpha_1$}^3 \text{$\alpha_2$}-28 \text{$\alpha_1$}^2 \text{$\alpha_3$}-28 \text{$\alpha_1$} \text{$\alpha_2$}^2+7 \text{$\alpha_1$} \text{$\alpha_4$}+7 \text{$\alpha_2$} \text{$\alpha_3$}-\text{$\alpha_5$}\right)}{\pi ^2 c^9}$\\
+
+$ + \frac{9 V \left(132 \text{$\alpha_1$}^6-330 \text{$\alpha_1$}^4 \text{$\alpha_2$}+120 \text{$\alpha_1$}^3 \text{$\alpha_3$}+180 \text{$\alpha_1$}^2 \text{$\alpha_2$}^2-36 \text{$\alpha_1$}^2 \text{$\alpha_4$}-72 \text{$\alpha_1$} \text{$\alpha_2$} \text{$\alpha_3$}+8 \text{$\alpha_1$} \text{$\alpha_5$}-12 \text{$\alpha_2$}^3+8 \text{$\alpha_2$} \text{$\alpha_4$}+4 \text{$\alpha_3$}^2-\text{$\alpha_6$}\right)}{2 \pi ^2 c^9}$\\
+\normalsize
+
+The thermodynamical system consists of a fixed number of atoms N in a constant volume V, kept at a temperature T. 
+The appropriate thermodynamic potential is the Helmholz free energy F=E-TS, where E is the internal energy of the system, and S its entropy. 
+Thermodynamical properties can be calculated as a function of temperature by elementary statistical physics using the phonon variables of the second quantization Hamiltonian \cite{FetterWalecka}. 
+The number of phonons is not conserved; since it is not an independent variable, it is determined by minimization of the free energy F with respect to the phonon number, immediately showing, according to the definition of the chemical potential, that the phonon chemical potentials must vanish: $\mu_i^{Ph}$=0 (see the discussion in Ref. \onlinecite{FetterWalecka}).   
+The internal energy E in the presence of density excitations (phonons, rotons...) is obtained using the dispersion relation $\epsilon(k)$,  
+the Bose-Einstein distribution function $n(\epsilon(k))$, and the density of states (Eq. \ref{dos}): 
+
+\begin{equation}
+	\label{equ:energy1}
+E = E_0 + (k_B V/2\pi^2)\int_{0}^{\infty}\frac{\epsilon(k)}{e^{\frac{\epsilon(k)}{k_B T}}-1}k^2dk
+\end{equation}
+where $E_0$ is the (constant) phonon zero-point energy.
+
+The upper limit of the integral is taken as infinity, the exponential factor making  this choice possible in the very low temperature limit. 
+The integral can be performed over energies instead of wave-vectors, using Eq. \ref{dos}: 
+\begin{equation}
+	\label{equ:energy2}
+ E = E_0 + \int_{0}^{\infty} D(\omega) \hbar \omega  \left(e^{ \frac{\hbar \omega}{k_B T}}-1\right)^{-1} d\omega
+\end{equation}
+
+which yields, using the series expansion for the density of states calculated above:  
+
+\begin{equation}
+E^{Ph}=E_0 + \frac{\textbf{A}}{4} T^4 + \frac{\textbf{B}}{5} T^5 + \frac{\textbf{C}}{6} T^6 + \frac{\textbf{D}}{7} T^7+\frac{\textbf{E}}{8} T^8 + \frac{\textbf{K}}{9} T^9+\frac{\textbf{L}}{10} T^{10}
+\end{equation}
+
+where 
+
+$\textbf{A}=\frac{2 \pi ^2 k_B^4 V}{15 c^3 \hbar ^3} $\\
+
+$\textbf{B}=-\frac{240 \left(\alpha_1 k_B^5 V \zeta (5)\right)}{\pi ^2 c^4 \hbar ^4} $\\
+
+$\textbf{C}=\frac{40 \pi ^4 k_B^6 V \left(3 \alpha_1^2-\alpha_2\right)}{21 c^5 \hbar ^5} $\\
+
+$\textbf{D}=-\frac{5040 \left(k_B^7 V \zeta (7) \left(28 \alpha_1^3-21 \alpha_1 \alpha_2+3 \alpha_3\right)\right)}{\pi ^2 c^6 \hbar ^6} $\\
+
+$\textbf{E}=\frac{224 \pi ^6 k_B^8 V \left(30 \alpha_1^4-36 \alpha_1^2 \alpha_2+8 \alpha_1 \alpha_3+4 \alpha_2^2-\alpha_4\right)}{15 c^7 \hbar ^7}$\\
+
+$\textbf{K}=\frac{1451520 \left(k_B^9 V \zeta (9) \left(99 \alpha_1^5-165 \alpha_1^3 \alpha_2+45 \alpha_1^2 \alpha_3+45 \alpha_1 \alpha_2^2-9 \alpha_1 \alpha_4-9 \alpha_2 \alpha_3+\alpha_5\right)\right)}{\pi ^2 c^8 \hbar ^8} $\\
+
+$\textbf{L}=\frac{640 \pi ^8 k_B^{10} V \left(1001 \alpha_1^6-2145 \alpha_1^4 \alpha_2+660 \alpha_1^3 \alpha_3+165 \alpha_1^2 \left(6 \alpha_2^2-\alpha_4\right)+30 \alpha_1 (\alpha_5-11 \alpha_2 \alpha_3)-55 \alpha_2^3+30 \alpha_2 \alpha_4+15 \alpha_3^2-3 \alpha_6\right)}{11 c^9 \hbar ^9} $\\
+
+where $\zeta(s)$ is the Riemann zeta function.\\
+
+The specific heat at constant volume is then calculated with the expression $C_V = \left(\frac{\partial E}{\partial T}\right)_{V}$
+
+\begin{equation}
+C_{V}^{Ph}=\textbf{A} T^3 + \textbf{B} T^4+  \textbf{C} T^5+ \textbf{D} T^6+ \textbf{E} T^7+ \textbf{K} T^8+ \textbf{L} T^9
+\end{equation}
+
+The entropy can be obtained by integrating $dS=\frac{C_V}{T} dT$, i.e., 
+$S(T)=\int_0^T \frac{C_V(T')}{T'} dT'$
+
+\begin{equation}
+S^{Ph}=\frac{\textbf{A}}{3} T^3+\frac{\textbf{B}}{4} T^4+\frac{\textbf{C}}{5} T^5+\frac{\textbf{D}}{6} T^6+\frac{\textbf{E}}{7} T^7+\frac{\textbf{K}}{8} T^8+\frac{\textbf{L}}{9} T^9
+\end{equation}
+
+and the Helmholz free energy is $F=E-T S$,
+
+\begin{equation}
+F^{Ph}=E_0 - \frac{\textbf{A}}{12} T^4 - \frac{\textbf{B}}{20} T^5 - \frac{\textbf{C}}{30} T^6 - \frac{\textbf{D}}{42} T^7-\frac{\textbf{E}}{56} T^8 - \frac{\textbf{K}}{72} T^9-\frac{\textbf{L}}{90} T^{10}
+\end{equation}
+\\
+It has been assumed in the manuscript that the $\alpha_1$ term of the dispersion relation is exactly zero. This assumption is supported by measurements \cite{Rugar1984} that placed an upper limit to this coefficient of 10$^{-3}$\,\AA. In addition, there are no theoretical indications that this coefficient could have a finite value. Note, however, that even a relatively small value of $\alpha_1$ would significantly affect the coefficients \textbf{B}, \textbf{C}, \textbf{D}, etc..., where $\alpha_1$ systematically appears multiplied by a large numerical factor.
+
+The values of the phonon parameters at saturated vapor pressure obtained in this work are, when temperatures are expressed in kelvin and C$_V$ in J/(mol.K):
+
+\noindent \textbf{A}=0.0831 \\
+\textbf{B}=0\\
+\textbf{C}=-0.0548\\
+\textbf{D}=0.0653 \\
+\textbf{E}=0.0603 \\
+\textbf{K}=-0.262 \\ 
+\textbf{L}=0.141\\
+
+\subsection{Rotons}
+The analytical calculation of the roton contribution to the thermodynamical properties has been formulated by Landau \cite{Landauroton,Landauroton2} in his 1947 paper. 
+The excitation energies around the roton minimum are described by the expansion
+
+\begin{equation}
+	\epsilon_R(k)=\Delta_R+\frac{\hbar^2}{2m_4\mu_R}(k-k_R)^2+B_R(k-k_R)^3+C_R(k-k_R)^4
+	\label{Eq:roton}
+\end{equation}
+
+where $\Delta_R$ is the roton energy, $k_R$ the roton wave-vector, and $\mu_R$ the roton effective mass. We have introduced here B$_R$ and C$_R$, two parameters that describe the deformation of the roton minimum with respect to the simple parabolic shape assumed by Landau. 
+
+The statistical physics calculation \cite{FetterWalecka} of the thermodynamic functions follows the lines already discussed above for the small wave-vector phonons. The internal energy is calculated using Eq. \ref{equ:energy1}, integrating now around the roton wave-vector.
+Landau obtains the expression \cite{Landauroton2} : 
+
+\begin{equation}
+C_V^R=C_{\textit{L}} e^{-\frac{\Delta_R}{k_B T}} \left(1 +\frac{k_B T}{\Delta_R} +\frac{3}{4} \left(\frac{k_B T}{\Delta_R}\right)^2\right)
+\label{eq:CvRotonLandau}
+\end{equation}
+
+with  $C_{\textit{L}}=\frac{\Delta_R^2 k_R^2 V \sqrt{\mu_R m_4}}{\sqrt{2} \pi^{3/2} \sqrt{k_B} T^{3/2} \hbar}$\\
+
+The analysis of the measured specific heats with Landau's analytical expression is therefore sensitive to a combination of several roton parameters (energy, wave-vector and effective mass). 
+
+Landau also assumes that $\left|k-k_R\right|<<k_R$. 
+The analytical calculation for a parabolic dispersion relation can be done, however, without this last assumption. 
+We calculate here the average energy of the rotons E$_R$ and their specific heat C$_V^R$ with Eq. \ref{equ:energy1} using Eq. \ref{Eq:roton} with B$_R$=C$_R$=0, and including in the integrand three terms originating from the expansion of $(k-k_R)^2$. The calculation is performed by integration over wave-vectors. The first term gives Landau's expression,the second term vanishes by symmetry, and  an additional term is found:
+
+\begin{equation}
+C_V^{addit}=C_{\textit{L}} e^{-\frac{\Delta_R}{k_B T}}\left(\frac{T }{2\tau_R}\right)\left(1+\frac{3 k_B T}{\Delta_R}+\frac{15}{4}\left(\frac{k_B T}{\Delta_R}\right)^2\right)
+\label{eq:CvRotonHG}
+\end{equation}
+
+where we introduced the parameter $\tau_R$ $=\frac{k_R^2 \hbar^2}{2 k_B \mu_R m_4}$,  
+ which has the dimensions of temperature.
+The additional term is rather similar to Landau's expression, but its magnitude is affected by an additional multiplicative coefficient T/(2$\tau_R$). Since $\tau_R$ $\approx$ 158\,K, this additional term is of the same magnitude as the third term in Eq. \ref{eq:CvRotonLandau} for temperatures above 1\,K, and they are both very small.
+In fact, the integral appearing in the additional term has the form found by Landau in his original 1941 paper \cite{Landauroton}, where the roton was supposed to be at zero wave-vector. 
+
+As shown in the manuscript, it is necessary to take into account the large asymmetry (cubic term) and the deformation of the minimum
+(quartic term). Unfortunately, 
+we have not found a simple analytical expression for the case where the coefficients B or C in Eq. \ref{eq:CvRotonHG} are finite. 
+At the analytical level, we are therefore essentially left with Landau's formula, of fundamental interest, but of modest accuracy, and limited to temperatures well below 1\,K (see manuscript).  
+
+The roton parameters at saturated vapor pressure are:
+
+ \noindent $\Delta_R$= \textit{0.7418(10)}\,meV = 8.608\,K (from Ref. \onlinecite{stirling-83,GlydeBook,StirlingExeter})\\
+ $k_R$=1.918(2)\, \AA$^{-1}$\\
+ $\mu_R$=0.141(2)\\
+ B$_R$=2.64(5)\, \AA$^{3}$, and  \\
+ C$_R$=-10.5(5)\, \AA$^{4}$  \\
+
+Graphs providing phonon and roton parameters at other pressures are given in the manuscript.
+
+
+
+
+\newpage
+\section{TABLES}
+\label{tablesSuppMat}
+\subsection{Specific heat and entropy at SVP: numerical calculation}
+\begingroup
+\squeezetable
+% Please add the following required packages to your document preamble:
+% \usepackage{booktabs}
+\begin{table}[!h]
+\begin{tabular}{@{}|c|l|l|l|l|l|@{}}
+\hline \hline
+\multicolumn{1}{|c|}{Temperature} & \multicolumn{1}{c|}{Cv  (total) } & \multicolumn{1}{c|}{Cv  (phonons) } & \multicolumn{1}{c|}{Cv  (rotons)} &  & \multicolumn{1}{c|}{S (total)} \\ \midrule \hline
+\multicolumn{1}{|c|}{\textit{K}}  & \multicolumn{1}{c|}{J/(K.mol)}  & \multicolumn{1}{c|}{J/(K.mol)}    & \multicolumn{1}{c|}{J/(K.mol)}   &  & \multicolumn{1}{c|}{J/(K.mol)} \\ \midrule \hline 
+0.01	&	8.309E-08	&	8.309E-08	&	0.000	&	&	2.763E-08	\\	\midrule
+0.02	&	6.645E-07	&	6.645E-07	&	6.550E-182	&	&	2.214E-07	\\	\midrule	
+0.03	&	2.242E-06	&	2.242E-06	&	7.090E-120	&	&	7.471E-07	\\	\midrule	
+0.04	&	5.312E-06	&	5.312E-06	&	6.500E-89	&	&	1.771E-06	\\	\midrule
+0.05	&	1.037E-05	&	1.037E-05	&	2.270E-70	&	&	3.459E-06	\\	\midrule
+0.06	&	1.791E-05	&	1.791E-05	&	4.980E-58	&	&	5.974E-06	\\	\midrule
+0.07	&	2.841E-05	&	2.841E-05	&	3.130E-49	&	&	9.482E-06	\\	\midrule
+0.08	&	4.238E-05	&	4.238E-05	&	1.210E-42	&	&	1.415E-05	\\	\midrule
+0.09	&	6.028E-05	&	6.028E-05	&	1.580E-37	&	&	2.013E-05	\\	\midrule
+0.10	&	8.260E-05	&	8.260E-05	&	1.920E-33	&	&	2.760E-05	\\	\midrule
+0.11	&	1.098E-04	&	1.098E-04	&	4.170E-30	&	&	3.670E-05	\\	\midrule
+0.12	&	1.424E-04	&	1.424E-04	&	2.480E-27	&	&	4.762E-05	\\	\midrule
+0.13	&	1.808E-04	&	1.808E-04	&	5.490E-25	&	&	6.049E-05	\\	\midrule
+0.14	&	2.255E-04	&	2.255E-04	&	5.570E-23	&	&	7.550E-05	\\	\midrule
+0.15	&	2.770E-04	&	2.770E-04	&	3.030E-21	&	&	9.276E-05	\\	\midrule
+0.16	&	3.357E-04	&	3.357E-04	&	9.950E-20	&	&	1.124E-04	\\	\midrule
+0.17	&	4.020E-04	&	4.020E-04	&	2.150E-18	&	&	1.347E-04	\\	\midrule
+0.18	&	4.764E-04	&	4.764E-04	&	3.290E-17	&	&	1.598E-04	\\	\midrule
+0.19	&	5.594E-04	&	5.594E-04	&	3.770E-16	&	&	1.877E-04	\\	\midrule
+0.20	&	6.513E-04	&	6.513E-04	&	3.360E-15	&	&	2.187E-04	\\	\midrule
+0.21	&	7.527E-04	&	7.527E-04	&	2.430E-14	&	&	2.529E-04	\\	\midrule
+0.22	&	8.639E-04	&	8.639E-04	&	1.460E-13	&	&	2.904E-04	\\	\midrule
+0.23	&	9.853E-04	&	9.853E-04	&	7.520E-13	&	&	3.315E-04	\\	\midrule
+0.24	&	0.001117	&	0.001117	&	3.360E-12	&	&	3.762E-04	\\	\midrule
+0.25	&	0.001261	&	0.001261	&	1.330E-11	&	&	4.247E-04	\\	\midrule
+0.26	&	0.001415	&	0.001415	&	4.720E-11	&	&	4.771E-04	\\	\midrule
+0.27	&	0.001582	&	0.001582	&	1.520E-10	&	&	5.336E-04	\\	\midrule
+0.28	&	0.001761	&	0.001761	&	4.510E-10	&	&	5.943E-04	\\	\midrule
+0.29	&	0.001953	&	0.001953	&	1.230E-09	&	&	6.594E-04	\\	\midrule
+0.30	&	0.002157	&	0.002157	&	3.170E-09	&	&	7.290E-04	\\	\midrule
+0.31	&	0.002376	&	0.002376	&	7.630E-09	&	&	8.033E-04	\\	\midrule
+0.32	&	0.002608	&	0.002608	&	1.735E-08	&	&	8.823E-04	\\	\midrule
+0.33	&	0.002854	&	0.002854	&	3.752E-08	&	&	9.663E-04	\\	\midrule
+0.34	&	0.003116	&	0.003116	&	7.742E-08	&	&	0.001055	\\	\midrule
+0.35	&	0.003392	&	0.003392	&	1.531E-07	&	&	0.001149	\\	\midrule
+0.36	&	0.003684	&	0.003684	&	2.911E-07	&	&	0.001249	\\	\midrule
+0.37	&	0.003992	&	0.003991	&	5.343E-07	&	&	0.001354	\\	\midrule
+0.38	&	0.004316	&	0.004315	&	9.488E-07	&	&	0.001465	\\	\midrule
+0.39	&	0.004657	&	0.004655	&	1.634E-06	&	&	0.001582	\\	\bottomrule	\hline 
+\end{tabular}
+\end{table}
+\endgroup
+
+
+\newpage
+\begingroup
+\squeezetable
+% Please add the following required packages to your document preamble:
+% \usepackage{booktabs}
+\begin{table}[!h]
+\begin{tabular}{@{}|c|l|l|l|l|l|@{}}
+\hline 
+\multicolumn{1}{|c|}{Temperature} & \multicolumn{1}{c|}{Cv  (total) } & \multicolumn{1}{c|}{Cv  (phonons) } & \multicolumn{1}{c|}{Cv  (rotons)} &  & \multicolumn{1}{c|}{S (total)} \\ \midrule \hline
+\multicolumn{1}{|c|}{\textit{K}}  & \multicolumn{1}{c|}{J/(K.mol)}  & \multicolumn{1}{c|}{J/(K.mol)}    & \multicolumn{1}{c|}{J/(K.mol)}   &  & \multicolumn{1}{c|}{J/(K.mol)} \\ \midrule \hline 
+0.40	&	0.005016	&	0.005013	&	2.738E-06	&	&	0.001704	\\	\midrule	
+0.41	&	0.005392	&	0.005388	&	4.468E-06	&	&	0.001832	\\	\midrule	
+0.42	&	0.005787	&	0.005780	&	7.119E-06	&	&	0.001967	\\	\midrule	
+0.43	&	0.006202	&	0.006191	&	1.109E-05	&	&	0.002108	\\	\midrule	
+0.44	&	0.006637	&	0.006620	&	1.692E-05	&	&	0.002255	\\	\midrule	
+0.45	&	0.007094	&	0.007069	&	2.532E-05	&	&	0.002409	\\	\midrule	
+0.46	&	0.007573	&	0.007536	&	3.721E-05	&	&	0.002570	\\	\midrule	
+0.47	&	0.008077	&	0.008023	&	5.377E-05	&	&	0.002739	\\	\midrule	
+0.48	&	0.008607	&	0.008531	&	7.647E-05	&	&	0.002914	\\	\midrule	
+0.49	&	0.009166	&	0.009059	&	1.071E-04	&	&	0.003097	\\	\midrule	
+0.50	&	0.009756	&	0.009607	&	1.480E-04	&	&	0.003288	\\	\midrule	
+0.51	&	0.01038	&	0.01018	&	2.018E-04	&	&	0.003488	\\	\midrule	
+0.52	&	0.01104	&	0.01077	&	2.717E-04	&	&	0.003696	\\	\midrule	
+0.53	&	0.01175	&	0.01138	&	3.617E-04	&	&	0.003913	\\	\midrule	
+0.54	&	0.01250	&	0.01202	&	4.761E-04	&	&	0.004139	\\	\midrule	
+0.55	&	0.01330	&	0.01268	&	6.203E-04	&	&	0.004376	\\	\midrule	
+0.56	&	0.01416	&	0.01336	&	8.003E-04	&	&	0.004623	\\	\midrule	
+0.57	&	0.01509	&	0.01407	&	0.001022	&	&	0.004882	\\	\midrule	
+0.58	&	0.01610	&	0.01480	&	0.001295	&	&	0.005153	\\	\midrule	
+0.59	&	0.01719	&	0.01556	&	0.001627	&	&	0.005437	\\	\midrule	
+0.60	&	0.01837	&	0.01634	&	0.002028	&	&	0.005736	\\	\midrule	
+0.61	&	0.01966	&	0.01715	&	0.002509	&	&	0.006050	\\	\midrule	
+0.62	&	0.02106	&	0.01798	&	0.003082	&	&	0.006381	\\	\midrule	
+0.63	&	0.02260	&	0.01884	&	0.003759	&	&	0.006730	\\	\midrule	
+0.64	&	0.02428	&	0.01973	&	0.004556	&	&	0.007099	\\	\midrule	
+0.65	&	0.02613	&	0.02064	&	0.005487	&	&	0.007489	\\	\midrule	
+0.66	&	0.02816	&	0.02159	&	0.006570	&	&	0.007903	\\	\midrule	
+0.67	&	0.03038	&	0.02256	&	0.007823	&	&	0.008343	\\	\midrule	
+0.68	&	0.03283	&	0.02356	&	0.009264	&	&	0.008811	\\	\midrule	
+0.69	&	0.03551	&	0.02460	&	0.01091	&	&	0.009310	\\	\midrule	
+0.70	&	0.03846	&	0.02566	&	0.01279	&	&	0.009841	\\	\midrule	
+0.71	&	0.04169	&	0.02676	&	0.01493	&	&	0.01041	\\	\midrule	
+0.72	&	0.04523	&	0.02788	&	0.01734	&	&	0.01101	\\	\midrule	
+0.73	&	0.04911	&	0.02905	&	0.02006	&	&	0.01166	\\	\midrule	
+0.74	&	0.05335	&	0.03024	&	0.02311	&	&	0.01236	\\	\midrule	
+0.75	&	0.05784	&	0.03147	&	0.02651	&	&	0.01310	\\	\midrule	
+0.76	&	0.06304	&	0.03273	&	0.03030	&	&	0.01390	\\	\midrule	
+0.77	&	0.06855	&	0.03404	&	0.03451	&	&	0.01476	\\	\midrule	
+0.78	&	0.07455	&	0.03537	&	0.03917	&	&	0.01569	\\	\midrule	
+0.79	&	0.08106	&	0.03675	&	0.04430	&	&	0.01668	\\	\bottomrule	\hline
+\end{tabular}
+\end{table}
+\endgroup
+
+
+\newpage
+\begingroup
+\squeezetable
+% Please add the following required packages to your document preamble:
+% \usepackage{booktabs}
+\begin{table}[!h]
+\begin{tabular}{@{}|c|l|l|l|l|l|@{}}
+\hline
+\multicolumn{1}{|c|}{Temperature} & \multicolumn{1}{c|}{Cv  (total) } & \multicolumn{1}{c|}{Cv  (phonons) } & \multicolumn{1}{c|}{Cv  (rotons)} &  & \multicolumn{1}{c|}{S (total)} \\ \midrule \hline
+\multicolumn{1}{|c|}{\textit{K}}  & \multicolumn{1}{c|}{J/(K.mol)}  & \multicolumn{1}{c|}{J/(K.mol)}    & \multicolumn{1}{c|}{J/(K.mol)}   &  & \multicolumn{1}{c|}{J/(K.mol)} \\ \midrule \hline 
+0.80	&	0.08812	&	0.03816	&	0.04994	&	&	0.01774	\\	\midrule	
+0.81	&	0.09576	&	0.03962	&	0.05613	&	&	0.01888	\\	\midrule	
+0.82	&	0.1040	&	0.04112	&	0.06290	&	&	0.02011	\\	\midrule	
+0.83	&	0.1129	&	0.04265	&	0.07028	&	&	0.02142	\\	\midrule	
+0.84	&	0.1225	&	0.04423	&	0.07831	&	&	0.02283	\\	\midrule	
+0.85	&	0.1329	&	0.04586	&	0.08702	&	&	0.02434	\\	\midrule	
+0.86	&	0.1440	&	0.04753	&	0.09645	&	&	0.02596	\\	\midrule	
+0.87	&	0.1559	&	0.04925	&	0.1066	&	&	0.02769	\\	\midrule	
+0.88	&	0.1687	&	0.05101	&	0.1176	&	&	0.02955	\\	\midrule	
+0.89	&	0.1823	&	0.05283	&	0.1294	&	&	0.03153	\\	\midrule	
+0.90	&	0.1968	&	0.05469	&	0.1421	&	&	0.03364	\\	\midrule	
+0.91	&	0.2124	&	0.05661	&	0.1557	&	&	0.03590	\\	\midrule	
+0.92	&	0.2289	&	0.05857	&	0.1702	&	&	0.03831	\\	\midrule	
+0.93	&	0.2464	&	0.06060	&	0.1858	&	&	0.04088	\\	\midrule	
+0.94	&	0.2651	&	0.06268	&	0.2023	&	&	0.04362	\\	\midrule	
+0.95	&	0.2848	&	0.06481	&	0.2200	&	&	0.04653	\\	\midrule	
+0.96	&	0.3057	&	0.06701	&	0.2387	&	&	0.04962	\\	\midrule	
+0.97	&	0.3279	&	0.06927	&	0.2585	&	&	0.05290	\\	\midrule	
+0.98	&	0.3512	&	0.07158	&	0.2796	&	&	0.05638	\\	\midrule	
+0.99	&	0.3759	&	0.07397	&	0.3018	&	&	0.06007	\\	\midrule	
+1.00	&	0.4018	&	0.07641	&	0.3253	&	&	0.06397	\\	\midrule	
+1.01	&	0.4291	&	0.07893	&	0.3501	&	&	0.06811	\\	\midrule	
+1.02	&	0.4578	&	0.08151	&	0.3763	&	&	0.07248	\\	\midrule	
+1.03	&	0.4880	&	0.08416	&	0.4038	&	&	0.07709	\\	\midrule	
+1.04	&	0.5196	&	0.08689	&	0.4327	&	&	0.08195	\\	\midrule	
+1.05	&	0.5527	&	0.08969	&	0.4630	&	&	0.08708	\\	\midrule	
+1.06	&	0.5874	&	0.09256	&	0.4948	&	&	0.09249	\\	\midrule	
+1.07	&	0.6237	&	0.09552	&	0.5281	&	&	0.09817	\\	\midrule	
+1.08	&	0.6616	&	0.09855	&	0.5630	&	&	0.1041	\\	\midrule	
+1.09	&	0.7012	&	0.1017	&	0.5995	&	&	0.1104	\\	\midrule	
+1.10	&	0.7424	&	0.1049	&	0.6375	&	&	0.1170	\\	\midrule	
+1.11	&	0.7854	&	0.1081	&	0.6773	&	&	0.1239	\\	\midrule	
+1.12	&	0.8302	&	0.1115	&	0.7187	&	&	0.1311	\\	\midrule	
+1.13	&	0.8768	&	0.1150	&	0.7618	&	&	0.1387	\\	\midrule	
+1.14	&	0.9252	&	0.1185	&	0.8067	&	&	0.1466	\\	\midrule	
+1.15	&	0.9755	&	0.1221	&	0.8533	&	&	0.1549	\\	\midrule	
+1.16	&	1.028	&	0.1259	&	0.9018	&	&	0.1636	\\	\midrule	
+1.17	&	1.082	&	0.1297	&	0.9521	&	&	0.1727	\\	\midrule	
+1.18	&	1.138	&	0.1336	&	1.004	&	&	0.1821	\\	\midrule	
+1.19	&	1.196	&	0.1376	&	1.058	&	&	0.1920	\\	\bottomrule	 \hline
+\end{tabular}
+\end{table}
+\endgroup
+
+
+\newpage
+\begingroup
+\squeezetable
+% Please add the following required packages to your document preamble:
+% \usepackage{booktabs}
+\begin{table}[!h]
+\begin{tabular}{@{}|c|l|l|l|l|l|@{}}
+\hline 
+\multicolumn{1}{|c|}{Temperature} & \multicolumn{1}{c|}{Cv  (total) } & \multicolumn{1}{c|}{Cv  (phonons) } & \multicolumn{1}{c|}{Cv  (rotons)} &  & \multicolumn{1}{c|}{S (total)} \\ \midrule \hline
+\multicolumn{1}{|c|}{\textit{K}}  & \multicolumn{1}{c|}{J/(K.mol)}  & \multicolumn{1}{c|}{J/(K.mol)}    & \multicolumn{1}{c|}{J/(K.mol)}   &  & \multicolumn{1}{c|}{J/(K.mol)} \\ \midrule \hline 
+1.20	&	1.256	&	0.1418	&	1.115	&	&	0.2022	\\	\midrule	
+1.21	&	1.319	&	0.1460	&	1.173	&	&	0.2129	\\	\midrule	
+1.22	&	1.383	&	0.1503	&	1.233	&	&	0.2240	\\	\midrule	
+1.23	&	1.447	&	0.1547	&	1.295	&	&	0.2356	\\	\midrule	
+1.24	&	1.518	&	0.1593	&	1.359	&	&	0.2476	\\	\midrule	
+1.25	&	1.589	&	0.1639	&	1.425	&	&	0.2600	\\	\midrule	
+1.26	&	1.662	&	0.1687	&	1.493	&	&	0.2730	\\	\midrule	
+1.27	&	1.737	&	0.1736	&	1.564	&	&	0.2864	\\	\midrule	
+1.28	&	1.815	&	0.1785	&	1.636	&	&	0.3004	\\	\midrule	
+1.29	&	1.896	&	0.1836	&	1.711	&	&	0.3148	\\	\midrule	
+1.30	&	1.977	&	0.1889	&	1.788	&	&	0.3297	\\	\bottomrule	
+\hline \hline 
+\end{tabular}
+\caption{Specific heat (total, phonon, and roton contributions), and total molar entropy, at saturated vapor pressure, as a function of temperature, calculated numerically using the measured dispersion relation (this work).}
+\label{tab:Cv+S}
+\end{table}
+\endgroup
+
+
+\begingroup
+\squeezetable
+% Please add the following required packages to your document preamble:
+% \usepackage{booktabs}
+\begin{table}[!h]
+\begin{tabular}{@{}|c|l|l|c|@{}}
+\hline 
+\multicolumn{1}{|c|}{Temperature} & \multicolumn{1}{c|}{Cv  (total) } & \multicolumn{1}{c|}{error Cv  } & \multicolumn{1}{c|}{rel. error Cv}  \\ \midrule \hline
+\multicolumn{1}{|c|}{\textit{K}}  & \multicolumn{1}{c|}{J/(K.mol)}  & \multicolumn{1}{c|}{J/(K.mol)}    & \multicolumn{1}{c|}{\%}   \\ \midrule \hline 
+0.05 &1.037E-5	&1.3E-8	&0.13	\\	\midrule
+0.1	 &8.26E-5	  &1.1E-7	&0.13	\\	\midrule
+0.2	 &6.513E-4	&1.1E-6	&0.17	\\	\midrule
+0.3	 &0.002157	&5.7E-6	&0.26	\\	\midrule
+0.4	 &0.005016	&1.8E-5	&0.36	\\	\midrule
+0.5	 &0.009756	&3.7E-5	&0.38	\\	\midrule
+0.6  &0.01837	  &9.2E-5	&0.50	\\	\midrule
+0.7  &0.03846	  &3.3E-4	&0.86	\\	\midrule
+0.8  &0.08812	  &9.9E-4	&1.1	\\	\midrule
+0.9	 &0.1968	  &0.0023	&1.2	\\	\midrule
+1.0  &0.4018	  &0.0045	&1.1	\\	\midrule
+1.1	 &0.7424	  &0.0083	&1.1	\\	\midrule
+1.2	 &1.256	    &0.013	&1.0	\\	\midrule 
+1.3	 &1.977	    &0.021	&1.1	\\	\bottomrule
+\hline \hline 
+\end{tabular}
+\caption{Upper bound on the uncertainties of the specific heat at  saturated vapor pressure, calculated numerically as a function of temperature using the measured dispersion relation. The uncertainty has been calculated assuming a systematic shift of the dispersion relation, in the same direction for all wave-vectors, with the maximum uncertainty estimated for $\epsilon(k)$.}
+\label{tab:CvErr}
+\end{table}
+\endgroup
+
+
+\newpage
+\subsection{Normal fluid densities and relative densities at SVP}
+\begingroup
+\begin{table}[!h]
+\resizebox{0.7\columnwidth}{!}{%
+\begin{tabular}{|l|l|l|l|l|l|l|l|}
+\hline
+T    & $\rho$  & $\rho_n$   & $\rho_n^{Ph}$& $\rho_n^{R}$  & $\rho_n$/$\rho$  & $\rho_n^{Ph}$/$\rho$ & $\rho_n^{R}$/$\rho$ \\ \hline \hline
+$K$    & $g/cm^3$& $g/cm^3$   &    $g/cm^3$    & $g/cm^3$        & --       & --        & --         \\ \hline
+0.00	&	0.14514	&	--	&	--	&	--	&	--	&	--	&	--	\\
+0.05	&	0.14514	&	1.1029E-10	&	1.1029E-10	&	3.9369E-74	&	7.59E-10	&	7.59E-10	&	2.71E-73	\\
+0.10	&	0.14514	&	1.7539E-09	&	1.7539E-09	&	6.6529E-37	&	1.21E-08	&	1.20E-08	&	4.58E-36	\\
+0.15	&	0.14514	&	8.7988E-09	&	8.7988E-09	&	1.5656E-24	&	6.06E-08	&	6.06E-08	&	1.07E-23	\\
+0.20	&	0.14514	&	2.7495E-08	&	2.7495E-08	&	2.3054E-18	&	1.89E-07	&	1.89E-07	&	1.58E-17	\\
+0.25	&	0.14514	&	6.6263E-08	&	6.6263E-08	&	1.1304E-14	&	4.56E-07	&	4.56E-07	&	7.78E-14	\\
+0.30	&	0.14514	&	1.3550E-07	&	1.3550E-07	&	3.2126E-12	&	9.33E-07	&	9.33E-07	&	2.21E-11	\\
+0.35	&	0.14514	&	2.4760E-07	&	2.4742E-07	&	1.7978E-10	&	1.70E-06	&	1.70E-06	&	1.23E-09	\\
+0.40	&	0.14514	&	4.1961E-07	&	4.1596E-07	&	3.6495E-09	&	2.89E-06	&	2.86E-06	&	2.51E-08	\\
+0.45	&	0.14514	&	6.9447E-07	&	6.5675E-07	&	3.7718E-08	&	4.78E-06	&	4.52E-06	&	2.59E-07	\\
+0.50	&	0.14514	&	1.2304E-06	&	9.8722E-07	&	2.4320E-07	&	8.47E-06	&	6.80E-06	&	1.67E-06	\\
+0.55	&	0.14514	&	2.5399E-06	&	1.4267E-06	&	1.1132E-06	&	1.75E-05	&	9.82E-06	&	7.67E-06	\\
+0.60	&	0.14514	&	5.9393E-06	&	1.9968E-06	&	3.9426E-06	&	4.09E-05	&	1.37E-05	&	2.71E-05	\\
+0.65	&	0.14513	&	1.4188E-05	&	2.7220E-06	&	1.1466E-05	&	9.77E-05	&	1.87E-05	&	7.90E-05	\\
+0.70	&	0.14513	&	3.2202E-05	&	3.6307E-06	&	2.8571E-05	&	2.21E-04	&	2.50E-05	&	1.96E-04	\\
+0.75	&	0.14513	&	6.7687E-05	&	4.7567E-06	&	6.2930E-05	&	4.66E-04	&	3.27E-05	&	4.33E-04	\\
+0.80	&	0.14513	&	1.3156E-04	&	6.1411E-06	&	1.2542E-04	&	9.06E-04	&	4.23E-05	&	8.64E-04	\\
+0.85	&	0.14513	&	2.3809E-04	&	7.8347E-06	&	2.3026E-04	&	0.00164	&	5.39E-05	&	0.00158	\\
+0.90	&	0.14512	&	4.0476E-04	&	9.9013E-06	&	3.9486E-04	&	0.00278	&	6.82E-05	&	0.00272	\\
+0.95	&	0.14512	&	6.5191E-04	&	1.2420E-05	&	6.3949E-04	&	0.00449	&	8.55E-05	&	0.00440	\\
+1.00	&	0.14512	&	0.0010023	&	1.5487E-05	&	9.8677E-04	&	0.00690	&	1.06E-04	&	0.00679	\\
+1.05	&	0.14512	&	0.0014804	&	1.9218E-05	&	0.0014612	&	0.0102	&	1.32E-04	&	0.0101	\\
+1.10	&	0.14511	&	0.0021123	&	2.3749E-05	&	0.0020885	&	0.0145	&	1.63E-04	&	0.0143	\\
+1.15	&	0.14511	&	0.0029246	&	2.9235E-05	&	0.0028954	&	0.0201	&	2.01E-04	&	0.0199	\\
+1.20	&	0.14512	&	0.0039448	&	3.5848E-05	&	0.0039090	&	0.0271	&	2.47E-04	&	0.0269	\\
+1.25	&	0.14512	&	0.0052006	&	4.3777E-05	&	0.0051569	&	0.0358	&	3.01E-04	&	0.0355	\\
+1.30	&	0.14512	&	0.0067199	&	5.3222E-05	&	0.0066667	&	0.0463	&	3.66E-04	&	0.0459	\\ \hline
+\end{tabular}%
+}
+\caption{Total density $\rho$ (from Ref. \onlinecite{DonnellyBarenghi}), normal fluid densities (total, phonon and roton contributions), and same quantities divided by the total density, as a function of temperature, calculated numerically using the measured dispersion relation, at saturated vapor pressure.}
+\label{tab:rho_n}
+\end{table}
+\endgroup
+
+\newpage
+\section{Data files}
+Data files provided for several parameters of interest, extending the tables present in the manuscript, are attached; their content is described  below. 
+
+\begin{enumerate}
+	\item DispersionP0allRange.txt  
+	
+	This file contains the data of the dispersion relation of $^4$He at saturated vapor pressure and very low temperatures (T$<$100\,mK). 
+	For wave-vectors k$<$0.15\,\AA$^{-1}$: ultrasound data \cite{Rugar1984}. From 0.15 to 0.3\,\AA$^{-1}$: ultrasound and present neutron data combined within respective uncertainties; for k$>$ 0.3\,\AA$^{-1}$, present neutron data at  saturated vapor pressure and very low temperatures (T$<$0.1K). Details are given in the main article, together with an abstract of the present data table.
+\begin{itemize}
+\item First two lines are headers.
+\item First column: wavevector in \AA$^{-1}$, from 0 to 3.6\,\AA$^{-1}$.
+\item Second column: excitation energy in meV.
+\item Third column: uncertainty of excitation energy in meV.
+\end{itemize}
+
+	\item DispersionAllPressures.txt
+	
+This file contains the data for several pressures, measured at low temperatures using an incident neutron energy of 3.52\,meV.
+The initial raw data have been grouped in wave-vector bins of width 0.002\,\AA$^{-1}$, reducing the total number of data points from $\approx$90000 to $\approx$1000 points in the present file. 
+
+Missing data points are indicated in the table as NAN, i.e. Not A Number; they correspond to a few gaps in the detector tubes set-up (see manuscript, section IV B).
+
+The different columns correspond to (k, E, errE) at different pressures, where k is the wave-vector, E the excitation energy and errE the corresponding uncertainty.
+The pressures (as indicated in the 3rd row of each column) are:
+P= 0, 0.51, 1.02, 2.01, 5.01, 10.01, 24.08 bar
+\begin{itemize}
+\item First three lines are headers. The different columns are:
+\item c1: row index
+\item c2: Q (\AA$^{-1}$)
+\item c3: E at P=0
+\item c4: errE at P=0
+\item c5: E at P=0.51 bar
+\item c6: errE at P=0.51 bar
+\item c7: E at P=1.02 bar
+\item c8: errE at P=1.02 bar
+\item c9: E at P=2.01 bar
+\item c10: errE at P=2.01 bar
+\item c11: E at P=5.01 bar
+\item c12: errE at P=5.01 bar
+\item c13: E at P=10.01 bar
+\item c14: errE at P=10.01 bar
+\item c15: E at P=24.08 bar
+\item c16: errE at P=24.08 bar
+\end{itemize}
+
+	\item Cv-and-Entropy.txt
+	
+The file contains data of the thermodynamical properties at saturated vapor pressure, calculated using the measured dispersion curve. 
+\begin{itemize}
+\item First two lines are headers.  The different columns are:
+\item c1: Temperature ($T$) in kelvin.
+\item c2: Total specific heat ($C_V$)  in J/(K.mol). 
+\item c3: uncertainty of $C_V$, calculated assuming a shift of the dispersion relation, in the same direction for all wave-vectors, with the maximum uncertainty estimated for $\epsilon(k)$. Above 0.8\,K the relative uncertainty of $C_V$ is almost constant at 1.1\%. Below this temperature, it decreases monotonically, reaching a minimum value of 0.13\%, deduced from the relative accuracy of the sound velocity data, which determine the very low temperature behavior.  
+\item c4: phonon contribution $C_V^{Ph}$ (integral in the range $0<k<k_M$) in J/(K.mol). 
+\item c5: roton contribution $C_V^{R}$ (integral in the range  $k_M<k<3.6$\,\AA$^{-1}$), 
+\item c6: void
+\item c7: total entropy $S$ in J/(K.mol).  
+The maxon wave-vector at saturated vapor pressure is $k_M$=1.103\,\AA$^{-1}$.
+\end{itemize}
+	
+  \item ExcitationsNumberDensity.txt
+
+The number density of excitations (phonons, roton, and total number, per helium atom) as a function of temperature, at saturated vapor pressure. 
+\begin{itemize}
+\item First line contains headers.  The different columns are:
+\item c1: Temperature ($T$) in kelvin.
+\item c2: Number of phonons per helium atom.
+\item c3: Number of rotons per helium atom.
+\item c4: Number of excitations (phonons+rotons) per helium atom.
+\end{itemize}
+
+\end{enumerate}
+
+
+\begin{thebibliography}{10}%
+\makeatletter
+\providecommand \@ifxundefined [1]{%
+ \@ifx{#1\undefined}
+}%
+\providecommand \@ifnum [1]{%
+ \ifnum #1\expandafter \@firstoftwo
+ \else \expandafter \@secondoftwo
+ \fi
+}%
+\providecommand \@ifx [1]{%
+ \ifx #1\expandafter \@firstoftwo
+ \else \expandafter \@secondoftwo
+ \fi
+}%
+\providecommand \natexlab [1]{#1}%
+\providecommand \enquote  [1]{``#1''}%
+\providecommand \bibnamefont  [1]{#1}%
+\providecommand \bibfnamefont [1]{#1}%
+\providecommand \citenamefont [1]{#1}%
+\providecommand \href@noop [0]{\@secondoftwo}%
+\providecommand \href [0]{\begingroup \@sanitize@url \@href}%
+\providecommand \@href[1]{\@@startlink{#1}\@@href}%
+\providecommand \@@href[1]{\endgroup#1\@@endlink}%
+\providecommand \@sanitize@url [0]{\catcode `\\12\catcode `\$12\catcode
+  `\&12\catcode `\#12\catcode `\^12\catcode `\_12\catcode `\%12\relax}%
+\providecommand \@@startlink[1]{}%
+\providecommand \@@endlink[0]{}%
+\providecommand \url  [0]{\begingroup\@sanitize@url \@url }%
+\providecommand \@url [1]{\endgroup\@href {#1}{\urlprefix }}%
+\providecommand \urlprefix  [0]{URL }%
+\providecommand \Eprint [0]{\href }%
+\providecommand \doibase [0]{http://dx.doi.org/}%
+\providecommand \selectlanguage [0]{\@gobble}%
+\providecommand \bibinfo  [0]{\@secondoftwo}%
+\providecommand \bibfield  [0]{\@secondoftwo}%
+\providecommand \translation [1]{[#1]}%
+\providecommand \BibitemOpen [0]{}%
+\providecommand \bibitemStop [0]{}%
+\providecommand \bibitemNoStop [0]{.\EOS\space}%
+\providecommand \EOS [0]{\spacefactor3000\relax}%
+\providecommand \BibitemShut  [1]{\csname bibitem#1\endcsname}%
+\let\auto@bib@innerbib\@empty
+%</preamble>
+\bibitem [{\citenamefont {Fetter}\ and\ \citenamefont
+  {Walecka}(1971)}]{FetterWalecka}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {A.~L.}\ \bibnamefont
+  {Fetter}}\ and\ \bibinfo {author} {\bibfnamefont {J.~D.}\ \bibnamefont
+  {Walecka}},\ }\href@noop {} {\emph {\bibinfo {title} {{Q}uantum Theory of
+  Many-Particle Systems}}}\ (\bibinfo  {publisher} {McGraw-Hill},\ \bibinfo
+  {address} {New York},\ \bibinfo {year} {1971})\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Jackson}\ \emph {et~al.}(1981)\citenamefont
+  {Jackson}, \citenamefont {Jennings}, \citenamefont {Smith},\ and\
+  \citenamefont {Lande}}]{SmithSolid}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {A.~D.}\ \bibnamefont
+  {Jackson}}, \bibinfo {author} {\bibfnamefont {B.~K.}\ \bibnamefont
+  {Jennings}}, \bibinfo {author} {\bibfnamefont {R.~A.}\ \bibnamefont {Smith}},
+  \ and\ \bibinfo {author} {\bibfnamefont {A.}~\bibnamefont {Lande}},\
+  }\href@noop {} {\bibfield  {journal} {\bibinfo  {journal} {Phys. Rev. B}\
+  }\textbf {\bibinfo {volume} {24}},\ \bibinfo {pages} {105} (\bibinfo {year}
+  {1981})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Nozi\`eres}(2004)}]{NozSolid}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {P.}~\bibnamefont
+  {Nozi\`eres}},\ }\href@noop {} {\bibfield  {journal} {\bibinfo  {journal} {J.
+  Low Temp. Phys.}\ }\textbf {\bibinfo {volume} {137}},\ \bibinfo {pages} {45}
+  (\bibinfo {year} {2004})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Rugar}\ and\ \citenamefont
+  {Foster}(1984)}]{Rugar1984}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {D.}~\bibnamefont
+  {Rugar}}\ and\ \bibinfo {author} {\bibfnamefont {J.~S.}\ \bibnamefont
+  {Foster}},\ }\href@noop {} {\bibfield  {journal} {\bibinfo  {journal} {Phys.
+  Rev. B}\ }\textbf {\bibinfo {volume} {30}},\ \bibinfo {pages} {2595}
+  (\bibinfo {year} {1984})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Landau}(1941)}]{Landauroton}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {L.}~\bibnamefont
+  {Landau}},\ }\href@noop {} {\bibfield  {journal} {\bibinfo  {journal} {J.
+  Phys. (Moscow)}\ }\textbf {\bibinfo {volume} {5}},\ \bibinfo {pages} {71}
+  (\bibinfo {year} {1941})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Landau}(1947)}]{Landauroton2}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {L.}~\bibnamefont
+  {Landau}},\ }\href@noop {} {\bibfield  {journal} {\bibinfo  {journal} {J.
+  Phys. (Moscow)}\ }\textbf {\bibinfo {volume} {11}},\ \bibinfo {pages} {91}
+  (\bibinfo {year} {1947})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Stirling}(1983)}]{stirling-83}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {W.~G.}\ \bibnamefont
+  {Stirling}},\ }in\ \href@noop {} {\emph {\bibinfo {booktitle} {{$75^{\rm
+  th}$} Jubilee Conference on Helium-4}}},\ \bibinfo {editor} {edited by\
+  \bibinfo {editor} {\bibfnamefont {J.~G.~M.}\ \bibnamefont {Armitage}}}\
+  (\bibinfo  {publisher} {World Scientific},\ \bibinfo {address} {Singapore},\
+  \bibinfo {year} {1983})\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Glyde}(1994)}]{GlydeBook}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {H.~R.}\ \bibnamefont
+  {Glyde}},\ }\href@noop {} {\emph {\bibinfo {title} {Excitations in Liquid and
+  Solid Helium}}},\ Oxford Series on Neutron Scattering in Condensed Matter\
+  (\bibinfo  {publisher} {Clarendon},\ \bibinfo {address} {Oxford},\ \bibinfo
+  {year} {1994})\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Stirling}(1991)}]{StirlingExeter}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {W.~G.}\ \bibnamefont
+  {Stirling}},\ }in\ \href@noop {} {\emph {\bibinfo {booktitle} {Excitations in
+  Two-Dimensional and Three-Dimensional {Q}uantum Fluids}}},\ \bibinfo {series}
+  {NATO Advanced Study Institute, Series B: Physics}, Vol.\ \bibinfo {volume}
+  {257},\ \bibinfo {editor} {edited by\ \bibinfo {editor} {\bibfnamefont
+  {A.~F.~G.}\ \bibnamefont {Wyatt}}\ and\ \bibinfo {editor} {\bibfnamefont
+  {H.~J.}\ \bibnamefont {Lauter}}}\ (\bibinfo  {publisher} {Plenum},\ \bibinfo
+  {address} {New York},\ \bibinfo {year} {1991})\ pp.\ \bibinfo {pages}
+  {25--46}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Donnelly}\ and\ \citenamefont
+  {Barenghi}(1998)}]{DonnellyBarenghi}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {R.~J.}\ \bibnamefont
+  {Donnelly}}\ and\ \bibinfo {author} {\bibfnamefont {C.~F.}\ \bibnamefont
+  {Barenghi}},\ }\href {\doibase 10.1063/1.556028} {\bibfield  {journal}
+  {\bibinfo  {journal} {J. Phys. Chem. Ref. Data}\ }\textbf {\bibinfo {volume}
+  {27}},\ \bibinfo {pages} {1217} (\bibinfo {year} {1998})},\ \Eprint
+  {http://arxiv.org/abs/https://doi.org/10.1063/1.556028}
+  {https://doi.org/10.1063/1.556028} \BibitemShut {NoStop}%
+\end{thebibliography}%
+
+
+\end{document}
+

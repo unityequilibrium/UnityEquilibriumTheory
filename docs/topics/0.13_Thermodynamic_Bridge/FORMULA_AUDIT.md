@@ -1,6 +1,17 @@
 # Formula Audit: 0.13_Thermodynamic_Bridge
 
 
+## Omitted-Q4 Alias And Four-Term Conditional Rank (2026-10-03)
+
+[Registry](Data/03_Research/t13_low_q_source_protocol.json)
+defines measurement diagnostics, not a UET action extension. An omitted
+energy b4*q4 gives delta_beta=b4*W*q3 and delta_zeta=28*b4/(45*q_max)
+for node ratios1/half/quarter. Native b4:E^-3; exposed source coefficients
+meV*angstrom^(1,3,4,5). Four positive distinct nodes on powers0/2/3/4 have
+detV=Vandermonde(q)*e3(q), not an all-basis/optimality theorem.
+Other terms/remainders, units/current/material map and covariance stay
+open. Exact/80digit method does not repair old float64 or physical gates.
+
 ## Multi-Q Weights, Covariance And Rational Component Box (2026-10-03)
 
 [Registry](Data/03_Research/t13_multi_q_estimator_registry.json)

@@ -1,0 +1,36 @@
+{
+  "schema_version": "uet-source-and-estimator-screen-v1",
+  "owner_topic": "0.13_Thermodynamic_Bridge",
+  "status": "RETROSPECTIVE_SOURCE_SCREEN_BEFORE_ESTIMATOR_RUN_NOT_BLIND_PREREGISTRATION",
+  "source_identity": {
+    "authors": "H. Godfrin, K. Beauvois, A. Sultan, E. Krotscheck, J. Dawidowski, B. Fak and J. Ollivier",
+    "title": "The dispersion relation of Landau elementary excitations and the thermodynamic properties of superfluid 4He",
+    "arxiv_version": "2012.09067v1",
+    "arxiv_url": "https://arxiv.org/abs/2012.09067v1",
+    "journal_doi": "10.1103/PhysRevB.103.104516",
+    "journal_version_parity": "NOT_ESTABLISHED_DO_NOT_MERGE_VERSION_ROWS",
+    "license": "CC-BY-4.0_AS_DECLARED_BY_ARXIV_RECORD",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "license_locator": "arXiv version record view-license link; author-submitted work and ancillary files, not APS final-paper redistribution",
+    "source_role": "EXPOSED_LITERATURE_SOURCE_SCREEN_NOT_UET_CALIBRATION_OR_BLIND_HOLDOUT",
+    "access_date": "2026-10-03",
+    "attribution_and_changes": "Credit authors and version/DOI/license in source note; raw bytes unchanged; parsed view retains lexical numbers, null missing cells and source line identities; no digitization or model-parameter fit",
+    "current_admission": "NUMERIC_ARCHIVE_AND_ROW_PROVENANCE_ONLY_NOT_MATERIAL_PREDICTION"
+  },
+  "raw_files": [
+    {"name": "DispersionAllPressures.txt", "url": "https://arxiv.org/src/2012.09067v1/anc/DispersionAllPressures.txt", "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/godfrin_2021_v1/DispersionAllPressures.txt", "sha256": "15a56ccdd2f681de0e1d3d1517dc4641732dbef4e2d6153591154cc4b039b50a", "locator": "three header lines; first column upstream row index; second wavevector; seven energy/error pairs in declared pressure order", "encoding": "UTF-16-LE with BOM, confirmed from raw bytes", "units": {"q": "angstrom^-1", "energy": "meV", "reported_error": "meV", "pressure": "bar"}, "preprocessing": "tab parser; NAN becomes null, never zero; no omitted raw rows", "ancestry": "author neutron dataset at multiple pressures, low-q systematics flagged; not the hybrid full-range file"},
+    {"name": "DispersionP0allRange.txt", "url": "https://arxiv.org/src/2012.09067v1/anc/DispersionP0allRange.txt", "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/godfrin_2021_v1/DispersionP0allRange.txt", "sha256": "59ca6ea78dd08880b69bf32cb2906cdefc811d5e0423c6439b01263696baa645", "locator": "two header lines; k,e,err(e) with separator and missing cells preserved", "encoding": "latin-1, source unit character byte retained without UTF-8 replacement", "units": {"q": "angstrom^-1", "energy": "meV", "reported_error": "meV"}, "preprocessing": "tab parser; -- becomes null; separator rows counted, not converted to observations", "ancestry": "q<0.15 ultrasound; 0.15<=q<=0.3 combined ultrasound/neutron; q>0.3 neutron, per supplement; not independent of all-pressures file"},
+    {"name": "Supplemental-v2.tex", "url": "https://arxiv.org/src/2012.09067v1/anc/Supplemental-v2.tex", "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/godfrin_2021_v1/Supplemental-v2.tex", "sha256": "e734a6d87fe41c6926a2cc12381be70cdad1f1ddc7fbfeecbe5cd2af2379a259", "locator": "ancillary data-file documentation around lines570-589", "role": "SOURCE_UNIT_AND_ANCESTRY_DOCUMENTATION_NOT_UET_EQUATION"}
+  ],
+  "source_limitations": {"reported_energy_errors_are_not_assumed_one_sigma": true, "joint_q_energy_covariance": "NOT_PROVIDED_IN_ARCHIVED_TEXT_TABLES", "peak_resolution_not_same_as_energy_error": true, "rotational_energy_calibration_ancestry": "source manuscript detailed analysis uses external roton reference; not independent of that source family", "raw_neutron_events_acquired": false, "unknown_missing_uncertainty_must_remain_null": true, "natural_q_to_physical_Q_map_admitted": false},
+  "protocol": {"pressures_bar": [0, 0.51, 1.02, 2.01, 5.01, 10.01, 24.08], "three_node_physical_windows_angstrom_inverse": [[0.8, 0.4, 0.2], [0.6, 0.3, 0.15], [0.4, 0.2, 0.1]], "four_node_physical_window_angstrom_inverse": [0.6, 0.3, 0.2, 0.15], "q4_control_maxima": [0.02, 0.01, 0.005], "q4_control_beta": [1, 2, 3, -1], "q4_control_is_not_physical_coefficient": true, "four_node_ratios": ["1", "1/2", "1/3", "1/4"], "source_inspected_before_protocol": true, "no_source_interpolation_or_window_tuning": true},
+  "equation_entries": [
+    {"id": "t13.measurement.omitted_q4_alias", "ontology": "Measurement model discrepancy diagnostic, not an addition to UET action or state", "units": "E=cq+eta q3+b4 q4+zeta q5; native b4:E^-3 or measured b4:meV angstrom^4", "equation": "delta_beta_k=b4*sum_i W_ki*q_i^3; at fixed ratios quintic alias is proportional to b4/q_max", "derivation_class": "DERIVED_EXACT_THREE_NODE_OMITTED_BASIS_ALIAS", "observable": "dispersion-estimator model discrepancy", "data_role": "DERIVED_CONTROL_AND_EXPOSED_SOURCE_SCREEN", "verification_status": "CONTROLLED_BY_LINKED_ARTIFACT", "controlling_blocker": "physical_non_tree_remainder_and_native_mapping_not_admitted", "claim_boundary": "A possible q4 term spoils three-node q5 extraction without a bound; not evidence that UET action must be changed"},
+    {"id": "t13.measurement.four_node_q4_separation", "ontology": "Alternative coefficient estimator including one explicit nuisance basis, not calibrated physics", "units": "f=E/q has powers0,2,3,4; measured coefficients meV angstrom^(1,3,4,5)", "equation": "V_ik=q_i^p_k, p=(0,2,3,4); detV=prod_(i<j)(q_j-q_i)*sum_(i<j<k)q_i*q_j*q_k", "derivation_class": "DERIVED_GENERALIZED_VANDERMONDE_RANK_AND_LINEAR_ESTIMATOR", "observable": "conditional extra-observation information", "data_role": "DERIVED_CONTROL_NOT_UET_PARAMETER_FIT", "verification_status": "CONTROLLED_BY_LINKED_ARTIFACT", "controlling_blocker": "higher_remainder_resolution_covariance_and_physical_scale_unknown", "claim_boundary": "Four points separate only the declared four basis coefficients; not all-order model selection, optimal design or thermal calibration"}
+  ],
+  "thresholds": {"independent_float_control_relative": 1e-8, "original_causal_leakage": 1e-6},
+  "precision_extension": {"status": "DECLARED_AFTER_PRESERVED_FLOAT64_FAILURE_BEFORE_FIRST_MP80_RUN", "digits": 80, "relative_tolerance": 1e-45, "first_failure_sha256": "ba1acb4929d07a222476f4c0b0b0ca0684e9da17a86f3a6ea8438ac31a42982d", "old_float64_gate_is_not_replaced": true, "method": "Independent mpmath LU with exact fraction inputs and column scaling; does not assign instrument precision"},
+  "holdout_policy": {"xie_2026_numeric_use": false, "prior_context_exposure": "REVIEW_REQUIRED", "new_source_is_blind": false},
+  "core_registry_modified": false,
+  "physical_gate_changed": false
+}

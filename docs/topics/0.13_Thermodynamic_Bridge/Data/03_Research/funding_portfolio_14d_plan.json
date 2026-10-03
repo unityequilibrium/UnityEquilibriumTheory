@@ -48,7 +48,7 @@
       "q5_dispersion_information_evidence_2026_10_03",
       "multi_q_estimator_evidence_2026_10_03"
     ],
-    "observed_partial_evidence_fields": ["gaussian_source_work_evidence_2026_10_03"],
+    "observed_partial_evidence_fields": ["gaussian_source_work_evidence_2026_10_03", "low_q_source_boundary_evidence_2026_10_03"],
     "new_real_axis_exploration_is_accepted_evidence": true,
     "real_axis_acceptance_boundary": "Audited ten-point fixed-Phi grid only; no global stability, truncation or physical prediction acceptance",
     "minimum_portfolio_bundle": [
@@ -257,8 +257,8 @@
   },
   "execution_review_2026_10_01": {
     "record_class": "PLANNING_NOT_SCIENTIFIC_CLOSURE",
-    "current_scientific_evidence_field": "multi_q_estimator_evidence_2026_10_03",
-    "current_question": "Explicit multi-q estimator, full data/native covariance differential and exact sufficient energy-only error budget are verified for ten rational tree windows. Smaller q reduces tree bias but amplifies decorrelated energy-shape error; four positive conservative budgets span 1.65e-16 to4.19e-14 for the illustrative1% I target, six windows are noncertified and one inverse is invalid. This is not necessary laboratory precision or physical no-go. Next compare q5 versus independent-scale/q3 using documented peak resolution/joint covariance, same-state particle-current/native inputs and controlled interaction error, or freeze an explicit acquisition gap. No unchanged-grid rerun. Gain, alpha, parent/heat/KMS/full design/G2-G4/R1-R5/Goal/owner acceptance, original failures, dates and holdout/model policy remain unchanged.",
+    "current_scientific_evidence_field": "low_q_source_boundary_evidence_2026_10_03",
+    "current_question": "Permitted Godfrin2012.09067v1 author numeric files are archived with unit/hash/line/pressure identity, missing cells and mixed ancestry. Exact q4 alias shows three-node quintic contamination proportional to1/q_max; four distinct positive points separate the declared c/eta/b4/zeta class, not all physical terms. Original float64 gate remains FAIL; declared80-digit independent extension and exact source/algebra subresults pass, aggregate PARTIAL. Next bound non-tree terms and derive same-state independent scale/current mapping with joint covariance before q5 or independent-scale/q3 material inference. No source fit/tuning/imputation or native I inference. Core-owner1.7K calibration is not removed or transferred. Old failures, G2-G4/R1-R5/Goal, dates, holdout and models remain unchanged.",
     "scientific_deliverable_is_not_full_topic_closure": true,
     "model_trial": {
       "status": "NOT_RUN",
@@ -1595,6 +1595,93 @@
     "independent_alpha_Phi_K_admitted": false,
     "full_SK_KMS_matching_closed": false,
     "physical_Kubo_emitted": false,
+    "nonlinear_parent_action_completed": false,
+    "controlled_full_action_truncation_error_established": false,
+    "full_core_unlock": false,
+    "core_composition_gate_overwritten": false,
+    "old_source_work_audit_promoted": false
+  },
+  "low_q_source_boundary_evidence_2026_10_03": {
+    "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/t13_low_q_source_boundary.json",
+    "sha256": "2c254806eb21b23dc282cbe30f052bf9af2376e427bc5c9b0de229d63f06945e",
+    "major_result_id": "T13_LOW_Q_NUMERIC_SOURCE_AND_OMITTED_TERM_MEASUREMENT_BOUNDARY",
+    "topic": "0.13_Thermodynamic_Bridge",
+    "verification_status": "FAIL_SCOPED_LOW_Q_SOURCE_BOUNDARY",
+    "closure_level": "PARTIAL",
+    "branch_id": "t13.candidate.acoustic_thermal_insertion_tree_virtual_response_v1",
+    "what_is_closed": "Two bounded subresults: versioned permitted author numeric archive with missing/ancestry provenance; exact q4 alias and conditional four-node separation checked by 80-digit LU. Original float64 gate remains FAIL.",
+    "scientific_contribution": "An unbounded omitted q4 term aliases into a three-node quintic estimate as1/q_max; lowering q alone does not resolve measurement-model bias. Numeric files are exposed and partly hybrid, not independent blind data or native calibration.",
+    "equation_or_mapping": "delta_beta_k=b4 sum W_ki q_i^3; delta_zeta=28*b4/(45*q_max); four-node detV=Vandermonde(q)*e3(q)",
+    "units": {
+      "source_q": "angstrom^-1",
+      "source_energy_error": "meV",
+      "source_coefficients": "meV angstrom^(1,3,4,5)",
+      "native_q4_coefficient": "E^-3"
+    },
+    "derivation_class": "SOURCE_ARCHIVE_AND_DERIVED_EXACT_MEASUREMENT_MODEL_DISCREPANCY",
+    "observable": "exposed coefficient estimates, not native kinetic/temperature prediction",
+    "data_role": "LITERATURE_SOURCE_SCREEN_EXPOSED_COMPARISON_NOT_CALIBRATION_OR_HOLDOUT",
+    "subresults": [
+      {
+        "major_result_id": "T13_GODFRIN_V1_NUMERIC_SOURCE_ARCHIVE",
+        "closure_level": "CLOSED_FOR_LANE"
+      },
+      {
+        "major_result_id": "T13_Q4_ALIAS_AND_FOUR_NODE_SEPARATION",
+        "closure_level": "CLOSED_FOR_LANE"
+      }
+    ],
+    "controlling_blocker": "native_material_map_joint_covariance_and_non_tree_remainder_not_admitted",
+    "open_blockers": [
+      "same_state_atomic_current_and_action_unit_map",
+      "joint_q_energy_covariance_and_non_tree_remainder",
+      "source_calibration_ancestry_and_version_parity",
+      "independent_thermal_alpha_heat_entropy_KMS_parent"
+    ],
+    "dependency_unlocked": [
+      "source_backed_measurement_model_and_scale_route_research_only"
+    ],
+    "claim_boundary": "Aggregate PARTIAL with float64 FAIL retained; source/algebra subresults only. Four-term conditional class does not exclude other terms, establish physical q4/q5/native I/alpha, covariance, detector feasibility, full Topic13/Core/Goal or external validation.",
+    "multi_q_predecessor_evidence_field": "multi_q_estimator_evidence_2026_10_03",
+    "evidence_artifacts": [
+      {
+        "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/t13_low_q_source_boundary.json",
+        "sha256": "2c254806eb21b23dc282cbe30f052bf9af2376e427bc5c9b0de229d63f06945e"
+      }
+    ],
+    "q5_information_predecessor_evidence_field": "q5_dispersion_information_evidence_2026_10_03",
+    "density_readout_predecessor_evidence_field": "noether_density_readout_evidence_2026_10_03",
+    "work_remainder_predecessor_evidence_field": "gaussian_work_remainder_evidence_2026_10_03",
+    "source_work_predecessor_evidence_field": "gaussian_source_work_evidence_2026_10_03",
+    "soft_source_predecessor_evidence_field": "collisionless_soft_source_evidence_2026_10_03",
+    "noether_source_predecessor_evidence_field": "thermal_noether_response_evidence_2026_10_03",
+    "finite_q_source_predecessor_evidence_field": "finite_q_thermal_source_evidence_2026_10_03",
+    "virtual_source_predecessor_evidence_field": "thermal_virtual_response_evidence_2026_10_03",
+    "source_curvature_predecessor_evidence_field": "thermal_source_curvature_evidence_2026_10_03",
+    "source_Landau_predecessor_evidence_field": "acoustic_source_Landau_evidence_2026_10_03",
+    "pair_predecessor_evidence_field": "acoustic_source_pair_evidence_2026_10_03",
+    "acoustic_predecessor_evidence_field": "acoustic_modal_cut_evidence_2026_10_03",
+    "thermal_predecessor_evidence_field": "thermal_cut_stiffness_evidence_2026_10_03",
+    "vacuum_predecessor_evidence_field": "vacuum_cut_log_evidence_2026_10_03",
+    "interaction_predecessor_evidence_field": "low_T_interaction_evidence_2026_10_02",
+    "phase_eft_predecessor_evidence_field": "low_T_phase_eft_evidence_2026_10_02",
+    "predecessor_validity_evidence_field": "hartree_low_T_validity_evidence_2026_10_02",
+    "inherited_joint_Phi_response_evidence_field": "hartree_joint_phi_response_evidence_2026_10_02",
+    "inherited_joint_Phi_static_evidence_field": "hartree_joint_phi_static_evidence_2026_10_02",
+    "inherited_fixed_Phi_finite_q_poles_evidence_field": "hartree_finite_q_poles_evidence_2026_10_02",
+    "prior_Hartree_results_are_not_new_EFT_dynamics": true,
+    "numeric_source_archive_acquired": true,
+    "q4_alias_verified": true,
+    "four_node_separation_verified": true,
+    "physical_q5_measured": false,
+    "physical_q4_detected_by_this_audit": false,
+    "physical_I_inferred": false,
+    "physical_joint_covariance_acquired": false,
+    "physical_material_map_admitted": false,
+    "physical_measurement_design_completed": false,
+    "independent_alpha_Phi_K_admitted": false,
+    "physical_Kubo_emitted": false,
+    "full_SK_KMS_matching_closed": false,
     "nonlinear_parent_action_completed": false,
     "controlled_full_action_truncation_error_established": false,
     "full_core_unlock": false,
