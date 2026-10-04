@@ -1,24 +1,62 @@
 """Read-only input audit; emit a conditional Core-to-Topic13 handoff.
 
-No scientific verifier rerun or parameter fit. --topic13-root selects the
-declared checkout containing the new source and low-temperature branch.
+No scientific verifier rerun or parameter fit. Inputs are immutable Git blobs.
+--topic13-root optionally selects a repository containing the locked objects;
+its working files are never used as evidence.
 """
 import argparse
 import hashlib
 import json
+import subprocess
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[4]
 CORE = "docs/core/07_artifacts/topic13/"
 T13 = "docs/topics/0.13_Thermodynamic_Bridge/"
+CORE_REVISION = "031bb504078b4c7984c13f623ff64907a51b48e3"
+TOPIC13_REVISION = "41cae79c4f23a540701a2ecd244740399288bc9a"
+PRIOR_HANDOFF = CORE+"core_he4_same_state_correspondence_2026_10_04.json"
+
+
+def git_bytes(base, revision, path):
+    return subprocess.check_output(["git", "-C", str(base), "show", revision+":"+path])
 
 
 def build(topic_root):
     inputs = []
+    prior_raw = git_bytes(ROOT, CORE_REVISION, PRIOR_HANDOFF)
+    prior = json.loads(prior_raw)
+    old_inputs = {(x["checkout_role"], x["path"]): x["sha256"] for x in prior["inputs"]}
+    def locked_bytes(base, path, checkout):
+        revision = CORE_REVISION if checkout == "core" else TOPIC13_REVISION
+        raw = git_bytes(base, revision, path)
+        sha = hashlib.sha256(raw).hexdigest()
+        old_sha = old_inputs[(checkout, path)]
+        newline_recipe = None
+        if sha == old_sha:
+            origin = "EXACT_BLOB_BYTES"
+        elif hashlib.sha256(raw.replace(b"\n", b"\r\n")).hexdigest() == old_sha:
+            origin = "CRLF_CHECKOUT_OF_IDENTICAL_LF_BLOB"
+            newline_recipe = "ALL_LF_TO_CRLF"
+        else:
+            # Historical checkout had two CRLF lines amid otherwise LF bytes.
+            # Freeze the exact recipe; never accept an arbitrary normalization.
+            lines = raw.splitlines(keepends=True)
+            mixed = b"".join(line.replace(b"\n",b"\r\n") if i in (8,9) else line
+                             for i,line in enumerate(lines,1))
+            if path == "docs/core/03_lanes/thermal/he4_normal_viscosity_kubo.py" and hashlib.sha256(mixed).hexdigest() == old_sha:
+                origin = "MIXED_NEWLINE_CHECKOUT_OF_IDENTICAL_LF_BLOB"
+                newline_recipe = {"LF_TO_CRLF_LINES_1_BASED":[8,9]}
+            else:
+                raise ValueError("prior input differs beyond declared newline encoding: "+path)
+        blob = subprocess.check_output(["git","-C",str(base),"rev-parse",revision+":"+path], text=True).strip()
+        inputs.append({"path": path, "checkout_role": checkout, "revision":revision,
+                       "git_blob_oid":blob, "sha256":sha, "byte_source":"IMMUTABLE_GIT_BLOB",
+                       "prior_checkout_sha256":old_sha,"prior_byte_origin":origin,
+                       "prior_newline_recipe":newline_recipe})
+        return raw
     def read(base, path, checkout):
-        raw = (base / path).read_bytes()
-        inputs.append({"path": path, "checkout_role": checkout,
-                       "sha256": hashlib.sha256(raw).hexdigest()})
+        raw = locked_bytes(base, path, checkout)
         return json.loads(raw)
     cal = read(ROOT, CORE+"t13_he4_o2_response_calibration_audit.json", "core")
     si = read(ROOT, CORE+"t13_he4_o2_si_beta_mapping_audit.json", "core")
@@ -31,15 +69,17 @@ def build(topic_root):
                  "docs/core/03_lanes/thermal/he4_o2_response_calibration.py",
                  "docs/core/03_lanes/thermal/he4_o2_si_beta_mapping.py",
                  "docs/core/03_lanes/thermal/he4_normal_viscosity_kubo.py"]:
-        raw=(ROOT/path).read_bytes()
-        inputs.append({"path":path,"checkout_role":"core", "sha256":hashlib.sha256(raw).hexdigest()})
+        locked_bytes(ROOT, path, "core")
     c, s, n = cal["record"], si["record"], natural["state"]
     alpha_return = c["theta_T_K_per_natural_temperature"] * n["alpha_phi_temperature_natural"] / c["Z_Phi_normalized_per_natural_Phi"]
     # Conditional thermodynamic chain rule, not admitted atomic charge matching.
     energy_unit = 1.380649e-23*c["theta_T_K_per_natural_temperature"]
     charge_unit = s["energy_density_scale_J_m3"]/energy_unit
     return {
-        "schema_version":"core-he4-same-state-correspondence-v1",
+        "schema_version":"core-he4-same-state-correspondence-v2",
+        "input_identity_gate":"PASS_IMMUTABLE_BLOBS_AND_PRIOR_NEWLINE_ORIGIN",
+        "input_revisions":{"core":CORE_REVISION,"topic13":TOPIC13_REVISION},
+        "prior_handoff":{"revision":CORE_REVISION,"path":PRIOR_HANDOFF,"sha256":hashlib.sha256(prior_raw).hexdigest()},
         "owner_id":"FOUNDATION", "evidence_status":"INTERNAL",
         "organization_status":"REVIEW_REQUIRED",
         "organization_next_action":"ORG register this opt-in audit and handoff without changing existing physics gates",
@@ -106,7 +146,7 @@ def build(topic_root):
         ],
         "claim_boundary":"Existing bounded Core composition preserved. Transfer to the low-T material is not admitted; no global no-go or empirical validation.",
         "inputs":inputs,
-        "reproduce":"py -3.14 docs/scripts/core/audit/audit_he4_same_state_correspondence.py --topic13-root <checkout-with-low-T-source>"
+        "reproduce":"py -3.14 docs/scripts/core/audit/audit_he4_same_state_correspondence.py --check (requires the two recorded revisions in Git object database)"
     }
 
 
