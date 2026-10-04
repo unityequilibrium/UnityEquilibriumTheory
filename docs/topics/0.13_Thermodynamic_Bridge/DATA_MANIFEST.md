@@ -1,4 +1,16 @@
 # Data Manifest
+## New Response-Branch Numeric Archive (2026-10-03)
+
+[Protocol/provenance](Data/03_Research/t13_low_q_source_protocol.json)
+and [attribution/source note](Result/artifacts/T13_LOW_Q_SOURCE_BOUNDARY_2026-10-03.md)
+archive author ancillary files for arXiv2012.09067v1 under its declared
+CC BY4.0. Exact file hashes/units/encoding/line-pressure row identity and
+null missing cells are recorded; local raw-folder attributes preserve bytes.
+This is exposed source-screen input, not physical UET calibration/prediction
+or blind holdout. Two files have overlapping/mixed ancestry; missing
+uncertainty and joint covariance remain. Journal-version parity unknown.
+No numeric Xie read or transfer of the Core-owner1.7K calibration below.
+
 ## Current Core-Ready Data Projection (2026-08-28)
 
 - He-4 SVP equilibrium anchor: source-locked density/superfluid-fraction grid with row identity and hashes; calibration role only, not holdout.

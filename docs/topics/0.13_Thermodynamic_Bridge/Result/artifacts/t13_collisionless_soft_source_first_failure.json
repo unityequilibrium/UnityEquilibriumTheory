@@ -1,0 +1,5397 @@
+{
+  "major_result_id": "T13_GAUSSIAN_COLLISIONLESS_SOFT_RAY_SOURCE_RESPONSE",
+  "topic": "0.13_Thermodynamic_Bridge",
+  "branch_id": "t13.candidate.acoustic_thermal_insertion_tree_virtual_response_v1",
+  "created_at": "2026-10-03T09:38:10.076989+00:00",
+  "closure_level": "PARTIAL",
+  "verification_status": "FAIL_SCOPED_COLLISIONLESS_SOFT_SOURCE",
+  "what_is_closed": "Analytic Gaussian collisionless source ray including six exact streaming channels, centred finite-q convergence and independent static pressure-Hessian endpoint, conditional on checks",
+  "equation_or_mapping": "z=w*q; X_zero=(N0+t*N1+t^2*N2)/(-i*w-t*H_ii); angular logarithmic moments integrate streaming denominators without a collision rate",
+  "units": {
+    "p_q_z_mu_T": "E",
+    "ray_group_velocity": "E^0",
+    "h": "E^3",
+    "Phi": "E",
+    "integrated_chi_Phi_per_h": "E^-2"
+  },
+  "derivation_class": "DERIVED_SINGULAR_PERTURBATION_OF_NAMED_GAUSSIAN_COVARIANCE",
+  "observable": "conditional complex-frequency natural-unit action-source susceptibility, not physical temperature or heat response",
+  "data_role": "DERIVED_NOT_CALIBRATION",
+  "action_controls": {
+    "Z": 1.0,
+    "m0_sq": 1.0,
+    "u": 1.0,
+    "gamma": 0.04000000000000001,
+    "epsilon": 0.05,
+    "Phi_reference": 0.0,
+    "response_mass_sq": 1.0,
+    "response_quartic": 1.0,
+    "response_kinetic": 1.0
+  },
+  "checks": {
+    "analytic_covariance_and_momentum_jet": true,
+    "exact_zero_channel_drive_cancellation": true,
+    "local_rotation_matches_cartesian_covariance_and_projection": true,
+    "centred_soft_covariance_and_source_converge": true,
+    "centred_refinement_improves_covariance_and_chi": false,
+    "analytic_angular_transport_matches_quadrature": true,
+    "radial_refinement": true,
+    "thermal_tail": false,
+    "independent_static_pressure_hessian": true
+  },
+  "point_examples": [
+    {
+      "mu": 1.05,
+      "p": 0.005,
+      "cosine": -0.6,
+      "ray": {
+        "real": 0.0,
+        "imag": 0.10538351386168118
+      },
+      "soft_chi": {
+        "real": -15.218218608386522,
+        "imag": -4.807846561006704e-16
+      },
+      "zero_drive_error": 1.0333154475618274e-14,
+      "raw_stationary_phase_cancellation": {
+        "real": 1.3877787807814457e-16,
+        "imag": 0.0
+      },
+      "differences": [
+        {
+          "q_over_p": 0.015625,
+          "q": 7.8125e-05,
+          "centre_p": 0.004976660615202352,
+          "centre_cosine": -0.5949647221181081,
+          "finite_chi": {
+            "real": -16.2487852935431,
+            "imag": 0.0
+          },
+          "centred_soft_chi": {
+            "real": -16.245037786827133,
+            "imag": -1.6499742695900483e-16
+          },
+          "raw_fixed_p_chi_error": 0.06771927199078674,
+          "raw_fixed_p_covariance_error": 0.014254421482401044,
+          "centred_chi_error": 0.0002306862418631229,
+          "centred_covariance_error": 0.0003279062716900599,
+          "tree_source_ray_error": 6.704079172460628e-09
+        },
+        {
+          "q_over_p": 0.0078125,
+          "q": 3.90625e-05,
+          "centre_p": 0.004988305721357359,
+          "centre_cosine": -0.5974911957058217,
+          "finite_chi": {
+            "real": -15.729758793679188,
+            "imag": 0.0
+          },
+          "centred_soft_chi": {
+            "real": -15.728823124129661,
+            "imag": -4.266558405663603e-16
+          },
+          "raw_fixed_p_chi_error": 0.03361367046013946,
+          "raw_fixed_p_covariance_error": 0.007070349393082971,
+          "centred_chi_error": 5.948757527139127e-05,
+          "centred_covariance_error": 9.005975473165072e-05,
+          "tree_source_ray_error": 1.6760197131207158e-09
+        },
+        {
+          "q_over_p": 0.00390625,
+          "q": 1.953125e-05,
+          "centre_p": 0.004994146735672836,
+          "centre_cosine": -0.5987478008287118,
+          "finite_chi": {
+            "real": -15.47305386974569,
+            "imag": 0.0
+          },
+          "centred_soft_chi": {
+            "real": -15.472820130173126,
+            "imag": 3.408724144843938e-17
+          },
+          "raw_fixed_p_chi_error": 0.016745406799369617,
+          "raw_fixed_p_covariance_error": 0.003520721163482959,
+          "centred_chi_error": 1.5106462209100701e-05,
+          "centred_covariance_error": 2.9239978367068668e-05,
+          "tree_source_ray_error": 4.1900500325059093e-10
+        }
+      ]
+    },
+    {
+      "mu": 1.05,
+      "p": 0.005,
+      "cosine": 0.3,
+      "ray": {
+        "real": 0.0,
+        "imag": 0.10538351386168118
+      },
+      "soft_chi": {
+        "real": -53.33788209376589,
+        "imag": 2.2097919635317752e-16
+      },
+      "zero_drive_error": 1.0333154475618274e-14,
+      "raw_stationary_phase_cancellation": {
+        "real": 1.3877787807814457e-16,
+        "imag": 0.0
+      },
+      "differences": [
+        {
+          "q_over_p": 0.015625,
+          "q": 7.8125e-05,
+          "centre_p": 0.005011857278385554,
+          "centre_cosine": 0.3070842632804921,
+          "finite_chi": {
+            "real": -52.46084091116686,
+            "imag": 0.0
+          },
+          "centred_soft_chi": {
+            "real": -52.46214536018254,
+            "imag": -1.8321201037310304e-16
+          },
+          "raw_fixed_p_chi_error": 0.01644311975224711,
+          "raw_fixed_p_covariance_error": 0.011417306984137714,
+          "centred_chi_error": 2.486457629060901e-05,
+          "centred_covariance_error": 0.00013965887640098067,
+          "tree_source_ray_error": 6.704079172460628e-09
+        },
+        {
+          "q_over_p": 0.0078125,
+          "q": 3.90625e-05,
+          "centre_p": 0.005005894047992483,
+          "centre_cosine": 0.3035484242039399,
+          "finite_chi": {
+            "real": -52.900698254820384,
+            "imag": 0.0
+          },
+          "centred_soft_chi": {
+            "real": -52.901041261749945,
+            "imag": 1.1405980825648177e-16
+          },
+          "raw_fixed_p_chi_error": 0.00819649790700268,
+          "raw_fixed_p_covariance_error": 0.005747195227375558,
+          "centred_chi_error": 6.483935313572104e-06,
+          "centred_covariance_error": 3.719845261378169e-05,
+          "tree_source_ray_error": 1.6760197131207158e-09
+        },
+        {
+          "q_over_p": 0.00390625,
+          "q": 1.953125e-05,
+          "centre_p": 0.005002938360846717,
+          "centre_cosine": 0.3017757797728456,
+          "finite_chi": {
+            "real": -53.11963704770403,
+            "imag": 0.0
+          },
+          "centred_soft_chi": {
+            "real": -53.11972492129706,
+            "imag": -1.6808860079476895e-16
+          },
+          "raw_fixed_p_chi_error": 0.004091745631710564,
+          "raw_fixed_p_covariance_error": 0.0028830918896726185,
+          "centred_chi_error": 1.6542554232276729e-06,
+          "centred_covariance_error": 1.1575728837267931e-05,
+          "tree_source_ray_error": 4.1900500325059093e-10
+        }
+      ]
+    },
+    {
+      "mu": 1.05,
+      "p": 0.005,
+      "cosine": 0.8,
+      "ray": {
+        "real": 0.0,
+        "imag": 0.10538351386168118
+      },
+      "soft_chi": {
+        "real": 24.311103392643517,
+        "imag": 6.564633290684829e-16
+      },
+      "zero_drive_error": 1.0333154475618274e-14,
+      "raw_stationary_phase_cancellation": {
+        "real": 1.3877787807814457e-16,
+        "imag": 0.0
+      },
+      "differences": [
+        {
+          "q_over_p": 0.015625,
+          "q": 7.8125e-05,
+          "centre_p": 0.005031304590154153,
+          "centre_cosine": 0.8027863206501373,
+          "finite_chi": {
+            "real": 24.645138493872693,
+            "imag": 0.0
+          },
+          "centred_soft_chi": {
+            "real": 24.648658201149487,
+            "imag": 3.2198086843158655e-16
+          },
+          "raw_fixed_p_chi_error": 0.013740022237339276,
+          "raw_fixed_p_covariance_error": 0.014821568203919746,
+          "centred_chi_error": 0.00014279508637229395,
+          "centred_covariance_error": 0.0005132096916405203,
+          "tree_source_ray_error": 6.704079172460628e-09
+        },
+        {
+          "q_over_p": 0.0078125,
+          "q": 3.90625e-05,
+          "centre_p": 0.005015638690109821,
+          "centre_cosine": 0.8013996817446173,
+          "finite_chi": {
+            "real": 24.481668955918053,
+            "imag": 0.0
+          },
+          "centred_soft_chi": {
+            "real": 24.482565792248835,
+            "imag": -2.009316599619332e-16
+          },
+          "raw_fixed_p_chi_error": 0.007015953184837713,
+          "raw_fixed_p_covariance_error": 0.007558268242301837,
+          "centred_chi_error": 3.663163160233243e-05,
+          "centred_covariance_error": 0.0001642727765361884,
+          "tree_source_ray_error": 1.6760197131207158e-09
+        },
+        {
+          "q_over_p": 0.00390625,
+          "q": 1.953125e-05,
+          "centre_p": 0.005007815927870317,
+          "centre_cosine": 0.800701479997337,
+          "finite_chi": {
+            "real": 24.397285907341697,
+            "imag": 0.0
+          },
+          "centred_soft_chi": {
+            "real": 24.39751225671172,
+            "imag": -1.0154235844337387e-16
+          },
+          "raw_fixed_p_chi_error": 0.0035449857337309784,
+          "raw_fixed_p_covariance_error": 0.003816527653854503,
+          "centred_chi_error": 9.277559434848245e-06,
+          "centred_covariance_error": 6.546254803765351e-05,
+          "tree_source_ray_error": 4.1900500325059093e-10
+        }
+      ]
+    },
+    {
+      "mu": 1.05,
+      "p": 0.005,
+      "cosine": -0.6,
+      "ray": {
+        "real": 0.0,
+        "imag": 0.3161505415850435
+      },
+      "soft_chi": {
+        "real": -20.307583165171337,
+        "imag": -9.036275864343929e-17
+      },
+      "zero_drive_error": 1.1581656471373078e-14,
+      "raw_stationary_phase_cancellation": {
+        "real": 0.0,
+        "imag": 0.0
+      },
+      "differences": [
+        {
+          "q_over_p": 0.015625,
+          "q": 7.8125e-05,
+          "centre_p": 0.004976660615202352,
+          "centre_cosine": -0.5949647221181081,
+          "finite_chi": {
+            "real": -21.679710404691093,
+            "imag": 0.0
+          },
+          "centred_soft_chi": {
+            "real": -21.674726143385456,
+            "imag": -3.463390760941224e-17
+          },
+          "raw_fixed_p_chi_error": 0.06756723477922436,
+          "raw_fixed_p_covariance_error": 0.005946902522386545,
+          "centred_chi_error": 0.00022995729093251165,
+          "centred_covariance_error": 5.318138030536741e-05,
+          "tree_source_ray_error": 6.784781239956199e-09
+        },
+        {
+          "q_over_p": 0.0078125,
+          "q": 3.90625e-05,
+          "centre_p": 0.004988305721357359,
+          "centre_cosine": -0.5974911957058217,
+          "finite_chi": {
+            "real": -20.988664619563792,
+            "imag": 0.0
+          },
+          "centred_soft_chi": {
+            "real": -20.987420166141803,
+            "imag": -8.932896444040032e-17
+          },
+          "raw_fixed_p_chi_error": 0.033538282170403645,
+          "raw_fixed_p_covariance_error": 0.002976964706744697,
+          "centred_chi_error": 5.929520694483269e-05,
+          "centred_covariance_error": 1.5460715970026583e-05,
+          "tree_source_ray_error": 1.6961952339788989e-09
+        },
+        {
+          "q_over_p": 0.00390625,
+          "q": 1.953125e-05,
+          "centre_p": 0.004994146735672836,
+          "centre_cosine": -0.5987478008287118,
+          "finite_chi": {
+            "real": -20.646879627902507,
+            "imag": 0.0
+          },
+          "centred_soft_chi": {
+            "real": -20.64656875185719,
+            "imag": 7.731284825847499e-18
+          },
+          "raw_fixed_p_chi_error": 0.01670787015724661,
+          "raw_fixed_p_covariance_error": 0.0014892771453258562,
+          "centred_chi_error": 1.5057031948265034e-05,
+          "centred_covariance_error": 5.42831527279871e-06,
+          "tree_source_ray_error": 4.2404890761726623e-10
+        }
+      ]
+    },
+    {
+      "mu": 1.05,
+      "p": 0.005,
+      "cosine": 0.3,
+      "ray": {
+        "real": 0.0,
+        "imag": 0.3161505415850435
+      },
+      "soft_chi": {
+        "real": -71.05925037096505,
+        "imag": 6.430651124720407e-17
+      },
+      "zero_drive_error": 1.1581656471373078e-14,
+      "raw_stationary_phase_cancellation": {
+        "real": 0.0,
+        "imag": 0.0
+      },
+      "differences": [
+        {
+          "q_over_p": 0.015625,
+          "q": 7.8125e-05,
+          "centre_p": 0.005011857278385554,
+          "centre_cosine": 0.3070842632804921,
+          "finite_chi": {
+            "real": -69.8916125319141,
+            "imag": 0.0
+          },
+          "centred_soft_chi": {
+            "real": -69.8933499714432,
+            "imag": -5.4246472957307665e-17
+          },
+          "raw_fixed_p_chi_error": 0.01643189075250981,
+          "raw_fixed_p_covariance_error": 0.0007745568195655656,
+          "centred_chi_error": 2.4858438317868703e-05,
+          "centred_covariance_error": 0.00011255739213563713,
+          "tree_source_ray_error": 6.784781239956199e-09
+        },
+        {
+          "q_over_p": 0.0078125,
+          "q": 3.90625e-05,
+          "centre_p": 0.005005894047992483,
+          "centre_cosine": 0.3035484242039399,
+          "finite_chi": {
+            "real": -70.4772116789728,
+            "imag": 0.0
+          },
+          "centred_soft_chi": {
+            "real": -70.47766852058953,
+            "imag": 2.984092153732084e-17
+          },
+          "raw_fixed_p_chi_error": 0.008190892655829013,
+          "raw_fixed_p_covariance_error": 0.00037090400418967364,
+          "centred_chi_error": 6.4820761856685695e-06,
+          "centred_covariance_error": 5.4846158513452116e-05,
+          "tree_source_ray_error": 1.6961952339788989e-09
+        },
+        {
+          "q_over_p": 0.00390625,
+          "q": 1.953125e-05,
+          "centre_p": 0.005002938360846717,
+          "centre_cosine": 0.3017757797728456,
+          "finite_chi": {
+            "real": -70.76869296610434,
+            "imag": 0.0
+          },
+          "centred_soft_chi": {
+            "real": -70.7688100000594,
+            "imag": -4.893503110255271e-17
+          },
+          "raw_fixed_p_chi_error": 0.004088945539727067,
+          "raw_fixed_p_covariance_error": 0.0001813069492664846,
+          "centred_chi_error": 1.6537505020067207e-06,
+          "centred_covariance_error": 2.7291442538259015e-05,
+          "tree_source_ray_error": 4.2404890761726623e-10
+        }
+      ]
+    },
+    {
+      "mu": 1.05,
+      "p": 0.005,
+      "cosine": 0.8,
+      "ray": {
+        "real": 0.0,
+        "imag": 0.3161505415850435
+      },
+      "soft_chi": {
+        "real": 32.322755561676786,
+        "imag": 7.484307417614078e-17
+      },
+      "zero_drive_error": 1.1581656471373078e-14,
+      "raw_stationary_phase_cancellation": {
+        "real": 0.0,
+        "imag": 0.0
+      },
+      "differences": [
+        {
+          "q_over_p": 0.015625,
+          "q": 7.8125e-05,
+          "centre_p": 0.005031304590154153,
+          "centre_cosine": 0.8027863206501373,
+          "finite_chi": {
+            "real": 32.76756759299086,
+            "imag": 0.0
+          },
+          "centred_soft_chi": {
+            "real": 32.77224491679739,
+            "imag": 3.60308919228963e-17
+          },
+          "raw_fixed_p_chi_error": 0.013761575199407187,
+          "raw_fixed_p_covariance_error": 0.010824275540902395,
+          "centred_chi_error": 0.0001427221058065321,
+          "centred_covariance_error": 0.00016111715819035904,
+          "tree_source_ray_error": 6.784781239956199e-09
+        },
+        {
+          "q_over_p": 0.0078125,
+          "q": 3.90625e-05,
+          "centre_p": 0.005015638690109821,
+          "centre_cosine": 0.8013996817446173,
+          "finite_chi": {
+            "real": 32.54988316840979,
+            "imag": 0.0
+          },
+          "centred_soft_chi": {
+            "real": 32.55107500533201,
+            "imag": -2.1286882411850094e-17
+          },
+          "raw_fixed_p_chi_error": 0.007026863978215347,
+          "raw_fixed_p_covariance_error": 0.0054600455370840606,
+          "centred_chi_error": 3.6614364411068465e-05,
+          "centred_covariance_error": 5.425215331416786e-05,
+          "tree_source_ray_error": 1.6961952339788989e-09
+        },
+        {
+          "q_over_p": 0.00390625,
+          "q": 1.953125e-05,
+          "centre_p": 0.005007815927870317,
+          "centre_cosine": 0.800701479997337,
+          "finite_chi": {
+            "real": 32.437516708412886,
+            "imag": 0.0
+          },
+          "centred_soft_chi": {
+            "real": 32.437817516308584,
+            "imag": -1.6880302447083997e-17
+          },
+          "raw_fixed_p_chi_error": 0.0035504753459870823,
+          "raw_fixed_p_covariance_error": 0.0027420842313720965,
+          "centred_chi_error": 9.273370366142844e-06,
+          "centred_covariance_error": 2.2623540312152092e-05,
+          "tree_source_ray_error": 4.2404890761726623e-10
+        }
+      ]
+    },
+    {
+      "mu": 1.05,
+      "p": 0.005,
+      "cosine": -0.6,
+      "ray": {
+        "real": 0.1264602166340174,
+        "imag": 0.08430681108934496
+      },
+      "soft_chi": {
+        "real": -36.18128977691724,
+        "imag": 44.11294139002919
+      },
+      "zero_drive_error": 9.755652679766407e-15,
+      "raw_stationary_phase_cancellation": {
+        "real": 1.1796119636642288e-16,
+        "imag": -5.551115123125783e-17
+      },
+      "differences": [
+        {
+          "q_over_p": 0.015625,
+          "q": 7.8125e-05,
+          "centre_p": 0.004976660615202352,
+          "centre_cosine": -0.5949647221181081,
+          "finite_chi": {
+            "real": -38.61693683197106,
+            "imag": 47.08959695541711
+          },
+          "centred_soft_chi": {
+            "real": -38.608102968465744,
+            "imag": 47.078789074399424
+          },
+          "raw_fixed_p_chi_error": 0.06741367647567169,
+          "raw_fixed_p_covariance_error": 0.013010766353115773,
+          "centred_chi_error": 0.0002292641622193928,
+          "centred_covariance_error": 0.00014148482313176798,
+          "tree_source_ray_error": 6.832687115757356e-09
+        },
+        {
+          "q_over_p": 0.0078125,
+          "q": 3.90625e-05,
+          "centre_p": 0.004988305721357359,
+          "centre_cosine": -0.5974911957058217,
+          "finite_chi": {
+            "real": -37.390272665925494,
+            "imag": 45.59045566567357
+          },
+          "centred_soft_chi": {
+            "real": -37.388067022580586,
+            "imag": 45.58775722789514
+          },
+          "raw_fixed_p_chi_error": 0.0334620231548697,
+          "raw_fixed_p_covariance_error": 0.0064809549752008495,
+          "centred_chi_error": 5.911224857616453e-05,
+          "centred_covariance_error": 4.471154188269592e-05,
+          "tree_source_ray_error": 1.7081716128088759e-09
+        },
+        {
+          "q_over_p": 0.00390625,
+          "q": 1.953125e-05,
+          "centre_p": 0.004994146735672836,
+          "centre_cosine": -0.5987478008287118,
+          "finite_chi": {
+            "real": -36.78357332150796,
+            "imag": 44.848997953218486
+          },
+          "centred_soft_chi": {
+            "real": -36.78302232707256,
+            "imag": 44.848323862986206
+          },
+          "raw_fixed_p_chi_error": 0.016669870900179056,
+          "raw_fixed_p_covariance_error": 0.003234415217259404,
+          "centred_chi_error": 1.5010012027031406e-05,
+          "centred_covariance_error": 1.771646861193654e-05,
+          "tree_source_ray_error": 4.270431802496603e-10
+        }
+      ]
+    },
+    {
+      "mu": 1.05,
+      "p": 0.005,
+      "cosine": 0.3,
+      "ray": {
+        "real": 0.1264602166340174,
+        "imag": 0.08430681108934496
+      },
+      "soft_chi": {
+        "real": -126.24610523382438,
+        "imag": 154.25171977438174
+      },
+      "zero_drive_error": 9.755652679766407e-15,
+      "raw_stationary_phase_cancellation": {
+        "real": 1.1796119636642288e-16,
+        "imag": -5.551115123125783e-17
+      },
+      "differences": [
+        {
+          "q_over_p": 0.015625,
+          "q": 7.8125e-05,
+          "centre_p": 0.005011857278385554,
+          "centre_cosine": 0.3070842632804921,
+          "finite_chi": {
+            "real": -124.17296379889575,
+            "imag": 151.71703381332162
+          },
+          "centred_soft_chi": {
+            "real": -124.17606508087943,
+            "imag": 151.72080370481063
+          },
+          "raw_fixed_p_chi_error": 0.01642784455112594,
+          "raw_fixed_p_covariance_error": 0.010265763955601878,
+          "centred_chi_error": 2.4898710168280845e-05,
+          "centred_covariance_error": 9.689939916710454e-05,
+          "tree_source_ray_error": 6.832687115757356e-09
+        },
+        {
+          "q_over_p": 0.0078125,
+          "q": 3.90625e-05,
+          "centre_p": 0.005005894047992483,
+          "centre_cosine": 0.3035484242039399,
+          "finite_chi": {
+            "real": -125.21269556437284,
+            "imag": 152.98823961124094
+          },
+          "centred_soft_chi": {
+            "real": -125.21351081026101,
+            "imag": 152.98923087890097
+          },
+          "raw_fixed_p_chi_error": 0.008188881391478465,
+          "raw_fixed_p_covariance_error": 0.005137494613274587,
+          "centred_chi_error": 6.491990678506519e-06,
+          "centred_covariance_error": 3.619990280171044e-05,
+          "tree_source_ray_error": 1.7081716128088759e-09
+        },
+        {
+          "q_over_p": 0.00390625,
+          "q": 1.953125e-05,
+          "centre_p": 0.005002938360846717,
+          "centre_cosine": 0.3017757797728456,
+          "finite_chi": {
+            "real": -125.73022065175408,
+            "imag": 153.62098205503594
+          },
+          "centred_soft_chi": {
+            "real": -125.73042947759056,
+            "imag": 153.62123600026825
+          },
+          "raw_fixed_p_chi_error": 0.004087942862173596,
+          "raw_fixed_p_covariance_error": 0.0025697444868371102,
+          "centred_chi_error": 1.6562103955139028e-06,
+          "centred_covariance_error": 1.6253614727687785e-05,
+          "tree_source_ray_error": 4.270431802496603e-10
+        }
+      ]
+    },
+    {
+      "mu": 1.05,
+      "p": 0.005,
+      "cosine": 0.8,
+      "ray": {
+        "real": 0.1264602166340174,
+        "imag": 0.08430681108934496
+      },
+      "soft_chi": {
+        "real": 57.26511187521666,
+        "imag": -70.03479203033885
+      },
+      "zero_drive_error": 9.755652679766407e-15,
+      "raw_stationary_phase_cancellation": {
+        "real": 1.1796119636642288e-16,
+        "imag": -5.551115123125783e-17
+      },
+      "differences": [
+        {
+          "q_over_p": 0.015625,
+          "q": 7.8125e-05,
+          "centre_p": 0.005031304590154153,
+          "centre_cosine": 0.8027863206501373,
+          "finite_chi": {
+            "real": 58.05496792540265,
+            "imag": -70.99913392893498
+          },
+          "centred_soft_chi": {
+            "real": 58.06327260501638,
+            "imag": -71.00926599659593
+          },
+          "raw_fixed_p_chi_error": 0.013778890938291941,
+          "raw_fixed_p_covariance_error": 0.014030677426884942,
+          "centred_chi_error": 0.00014282351115860287,
+          "centred_covariance_error": 0.00019103032297323577,
+          "tree_source_ray_error": 6.832687115757356e-09
+        },
+        {
+          "q_over_p": 0.0078125,
+          "q": 3.90625e-05,
+          "centre_p": 0.005015638690109821,
+          "centre_cosine": 0.8013996817446173,
+          "finite_chi": {
+            "real": 57.66842495376602,
+            "imag": -70.52720201448187
+          },
+          "centred_soft_chi": {
+            "real": 57.670541062583936,
+            "imag": -70.52978384665818
+          },
+          "raw_fixed_p_chi_error": 0.007035735288561219,
+          "raw_fixed_p_covariance_error": 0.007068249106851102,
+          "centred_chi_error": 3.664107106833056e-05,
+          "centred_covariance_error": 7.296316130819174e-05,
+          "tree_source_ray_error": 1.7081716128088759e-09
+        },
+        {
+          "q_over_p": 0.00390625,
+          "q": 1.953125e-05,
+          "centre_p": 0.005007815927870317,
+          "centre_cosine": 0.800701479997337,
+          "finite_chi": {
+            "real": 57.46889476019493,
+            "imag": -70.28359354230841
+          },
+          "centred_soft_chi": {
+            "real": 57.469428842597495,
+            "imag": -70.2842451791399
+          },
+          "raw_fixed_p_chi_error": 0.003554965165585735,
+          "raw_fixed_p_covariance_error": 0.0035474908796455503,
+          "centred_chi_error": 9.280223263107901e-06,
+          "centred_covariance_error": 3.298552134605578e-05,
+          "tree_source_ray_error": 4.270431802496603e-10
+        }
+      ]
+    },
+    {
+      "mu": 1.05,
+      "p": 0.02,
+      "cosine": -0.6,
+      "ray": {
+        "real": 0.0,
+        "imag": 0.10538351386168118
+      },
+      "soft_chi": {
+        "real": -0.14741610709105624,
+        "imag": 5.554962307130473e-17
+      },
+      "zero_drive_error": 1.145420837264241e-15,
+      "raw_stationary_phase_cancellation": {
+        "real": 1.3877787807814457e-16,
+        "imag": 0.0
+      },
+      "differences": [
+        {
+          "q_over_p": 0.015625,
+          "q": 0.0003125,
+          "centre_p": 0.019906642460809407,
+          "centre_cosine": -0.5949647221181081,
+          "finite_chi": {
+            "real": -0.1949807906572607,
+            "imag": 0.0
+          },
+          "centred_soft_chi": {
+            "real": -0.19477299076978172,
+            "imag": -2.434812149654493e-16
+          },
+          "raw_fixed_p_chi_error": 0.3226559465230257,
+          "raw_fixed_p_covariance_error": 0.0211858786377173,
+          "centred_chi_error": 0.001066882459717444,
+          "centred_covariance_error": 0.0008260628196341131,
+          "tree_source_ray_error": 1.0726525854674616e-07
+        },
+        {
+          "q_over_p": 0.0078125,
+          "q": 0.00015625,
+          "centre_p": 0.019953222885429438,
+          "centre_cosine": -0.5974911957058217,
+          "finite_chi": {
+            "real": -0.1709931264140927,
+            "imag": 0.0
+          },
+          "centred_soft_chi": {
+            "real": -0.17094130244421812,
+            "imag": -1.0616072645142435e-16
+          },
+          "raw_fixed_p_chi_error": 0.15993516440149494,
+          "raw_fixed_p_covariance_error": 0.010526218592343088,
+          "centred_chi_error": 0.0003031682170052918,
+          "centred_covariance_error": 0.0003578692025553829,
+          "tree_source_ray_error": 2.6816317513633743e-08
+        },
+        {
+          "q_over_p": 0.00390625,
+          "q": 7.8125e-05,
+          "centre_p": 0.019976586942691343,
+          "centre_cosine": -0.5987478008287118,
+          "finite_chi": {
+            "real": -0.1591533858480867,
+            "imag": 0.0
+          },
+          "centred_soft_chi": {
+            "real": -0.15914044701439511,
+            "imag": -1.2084824943267107e-17
+          },
+          "raw_fixed_p_chi_error": 0.0796200563740335,
+          "raw_fixed_p_covariance_error": 0.005245813776228331,
+          "centred_chi_error": 8.130449508167916e-05,
+          "centred_covariance_error": 0.00017200965781980683,
+          "tree_source_ray_error": 6.704079172460628e-09
+        }
+      ]
+    },
+    {
+      "mu": 1.05,
+      "p": 0.02,
+      "cosine": 0.3,
+      "ray": {
+        "real": 0.0,
+        "imag": 0.10538351386168118
+      },
+      "soft_chi": {
+        "real": -2.0255885365108637,
+        "imag": -2.2268520759073053e-17
+      },
+      "zero_drive_error": 1.145420837264241e-15,
+      "raw_stationary_phase_cancellation": {
+        "real": 1.3877787807814457e-16,
+        "imag": 0.0
+      },
+      "differences": [
+        {
+          "q_over_p": 0.015625,
+          "q": 0.0003125,
+          "centre_p": 0.020047429113542216,
+          "centre_cosine": 0.3070842632804921,
+          "finite_chi": {
+            "real": -1.9827654872070728,
+            "imag": 0.0
+          },
+          "centred_soft_chi": {
+            "real": -1.9828205930751506,
+            "imag": -7.286531271390335e-17
+          },
+          "raw_fixed_p_chi_error": 0.021141040508431616,
+          "raw_fixed_p_covariance_error": 0.016335744734915107,
+          "centred_chi_error": 2.779165612372047e-05,
+          "centred_covariance_error": 0.00018705090449583873,
+          "tree_source_ray_error": 1.0726525854674616e-07
+        },
+        {
+          "q_over_p": 0.0078125,
+          "q": 0.00015625,
+          "centre_p": 0.02002357619196993,
+          "centre_cosine": 0.3035484242039399,
+          "finite_chi": {
+            "real": -2.0042332713762994,
+            "imag": 0.0
+          },
+          "centred_soft_chi": {
+            "real": -2.0042479321148665,
+            "imag": -8.167080460017192e-17
+          },
+          "raw_fixed_p_chi_error": 0.01054274584874448,
+          "raw_fixed_p_covariance_error": 0.008221482410800826,
+          "centred_chi_error": 7.3148328269355675e-06,
+          "centred_covariance_error": 6.026144669338604e-05,
+          "tree_source_ray_error": 2.6816317513633743e-08
+        },
+        {
+          "q_over_p": 0.00390625,
+          "q": 7.8125e-05,
+          "centre_p": 0.02001175344338687,
+          "centre_cosine": 0.3017757797728456,
+          "finite_chi": {
+            "real": -2.014925629894205,
+            "imag": 0.0
+          },
+          "centred_soft_chi": {
+            "real": -2.0149294062105985,
+            "imag": 2.6023632254214368e-17
+          },
+          "raw_fixed_p_chi_error": 0.005264102962897765,
+          "raw_fixed_p_covariance_error": 0.00412391879071926,
+          "centred_chi_error": 1.8741680883345766e-06,
+          "centred_covariance_error": 2.4744281298858317e-05,
+          "tree_source_ray_error": 6.704079172460628e-09
+        }
+      ]
+    },
+    {
+      "mu": 1.05,
+      "p": 0.02,
+      "cosine": 0.8,
+      "ray": {
+        "real": 0.0,
+        "imag": 0.10538351386168118
+      },
+      "soft_chi": {
+        "real": 1.798314574574114,
+        "imag": -6.59162511693017e-17
+      },
+      "zero_drive_error": 1.145420837264241e-15,
+      "raw_stationary_phase_cancellation": {
+        "real": 1.3877787807814457e-16,
+        "imag": 0.0
+      },
+      "differences": [
+        {
+          "q_over_p": 0.015625,
+          "q": 0.0003125,
+          "centre_p": 0.020125218360616613,
+          "centre_cosine": 0.8027863206501373,
+          "finite_chi": {
+            "real": 1.8069281716850765,
+            "imag": 0.0
+          },
+          "centred_soft_chi": {
+            "real": 1.8071096802787725,
+            "imag": 4.625080345835249e-17
+          },
+          "raw_fixed_p_chi_error": 0.004789816660971204,
+          "raw_fixed_p_covariance_error": 0.022035023844367306,
+          "centred_chi_error": 0.00010044138199073417,
+          "centred_covariance_error": 0.002013620410222004,
+          "tree_source_ray_error": 1.0726525854674616e-07
+        },
+        {
+          "q_over_p": 0.0078125,
+          "q": 0.00015625,
+          "centre_p": 0.020062554760439284,
+          "centre_cosine": 0.8013996817446173,
+          "finite_chi": {
+            "real": 1.8027995919774726,
+            "imag": 0.0
+          },
+          "centred_soft_chi": {
+            "real": 1.8028459115648174,
+            "imag": 4.835557778379315e-17
+          },
+          "raw_fixed_p_chi_error": 0.002494011596620001,
+          "raw_fixed_p_covariance_error": 0.011280194869482797,
+          "centred_chi_error": 2.5692482672907276e-05,
+          "centred_covariance_error": 0.0009365635694809111,
+          "tree_source_ray_error": 2.6816317513633743e-08
+        },
+        {
+          "q_over_p": 0.00390625,
+          "q": 7.8125e-05,
+          "centre_p": 0.020031263711481267,
+          "centre_cosine": 0.800701479997337,
+          "finite_chi": {
+            "real": 1.8006023463555278,
+            "imag": 0.0
+          },
+          "centred_soft_chi": {
+            "real": 1.8006140456289148,
+            "imag": -9.759108535041034e-17
+          },
+          "raw_fixed_p_chi_error": 0.0012721755213242478,
+          "raw_fixed_p_covariance_error": 0.005706768943820797,
+          "centred_chi_error": 6.49737983292781e-06,
+          "centred_covariance_error": 0.0004581088530792835,
+          "tree_source_ray_error": 6.704079172460628e-09
+        }
+      ]
+    },
+    {
+      "mu": 1.05,
+      "p": 0.02,
+      "cosine": -0.6,
+      "ray": {
+        "real": 0.0,
+        "imag": 0.3161505415850435
+      },
+      "soft_chi": {
+        "real": -0.2265743825548836,
+        "imag": 7.757661424957366e-18
+      },
+      "zero_drive_error": 1.6511855756427936e-15,
+      "raw_stationary_phase_cancellation": {
+        "real": 0.0,
+        "imag": 0.0
+      },
+      "differences": [
+        {
+          "q_over_p": 0.015625,
+          "q": 0.0003125,
+          "centre_p": 0.019906642460809407,
+          "centre_cosine": -0.5949647221181081,
+          "finite_chi": {
+            "real": -0.29002387684924047,
+            "imag": 0.0
+          },
+          "centred_soft_chi": {
+            "real": -0.2897521731856134,
+            "imag": -3.6907321746400345e-17
+          },
+          "raw_fixed_p_chi_error": 0.2800382531285829,
+          "raw_fixed_p_covariance_error": 0.006569971772228329,
+          "centred_chi_error": 0.0009377105291044791,
+          "centred_covariance_error": 9.664551949653865e-05,
+          "tree_source_ray_error": 1.0855648360975194e-07
+        },
+        {
+          "q_over_p": 0.0078125,
+          "q": 0.00015625,
+          "centre_p": 0.019953222885429438,
+          "centre_cosine": -0.5974911957058217,
+          "finite_chi": {
+            "real": -0.2580271100703997,
+            "imag": 0.0
+          },
+          "centred_soft_chi": {
+            "real": -0.25795935400239056,
+            "imag": -1.6676717793137982e-17
+          },
+          "raw_fixed_p_chi_error": 0.13881855115680267,
+          "raw_fixed_p_covariance_error": 0.0032926423682794726,
+          "centred_chi_error": 0.0002626617990697106,
+          "centred_covariance_error": 4.4187768594711586e-05,
+          "tree_source_ray_error": 2.7139123348417472e-08
+        },
+        {
+          "q_over_p": 0.00390625,
+          "q": 7.8125e-05,
+          "centre_p": 0.019976586942691343,
+          "centre_cosine": -0.5987478008287118,
+          "finite_chi": {
+            "real": -0.24223287446356023,
+            "imag": 0.0
+          },
+          "centred_soft_chi": {
+            "real": -0.24221595853295952,
+            "imag": -1.254552376076192e-18
+          },
+          "raw_fixed_p_chi_error": 0.06910971898989349,
+          "raw_fixed_p_covariance_error": 0.0016481461252965182,
+          "centred_chi_error": 6.983821670202627e-05,
+          "centred_covariance_error": 2.1674954086446254e-05,
+          "tree_source_ray_error": 6.784781239956199e-09
+        }
+      ]
+    },
+    {
+      "mu": 1.05,
+      "p": 0.02,
+      "cosine": 0.3,
+      "ray": {
+        "real": 0.0,
+        "imag": 0.3161505415850435
+      },
+      "soft_chi": {
+        "real": -2.7276625804573253,
+        "imag": -6.406059821386e-18
+      },
+      "zero_drive_error": 1.6511855756427936e-15,
+      "raw_stationary_phase_cancellation": {
+        "real": 0.0,
+        "imag": 0.0
+      },
+      "differences": [
+        {
+          "q_over_p": 0.015625,
+          "q": 0.0003125,
+          "centre_p": 0.020047429113542216,
+          "centre_cosine": 0.3070842632804921,
+          "finite_chi": {
+            "real": -2.670637779268753,
+            "imag": 0.0
+          },
+          "centred_soft_chi": {
+            "real": -2.670712669596575,
+            "imag": -1.5847358154618746e-17
+          },
+          "raw_fixed_p_chi_error": 0.020906105321506323,
+          "raw_fixed_p_covariance_error": 0.0006812097998521573,
+          "centred_chi_error": 2.8041327198846903e-05,
+          "centred_covariance_error": 0.0003977278670442234,
+          "tree_source_ray_error": 1.0855648360975194e-07
+        },
+        {
+          "q_over_p": 0.0078125,
+          "q": 0.00015625,
+          "centre_p": 0.02002357619196993,
+          "centre_cosine": 0.3035484242039399,
+          "finite_chi": {
+            "real": -2.699225860793165,
+            "imag": 0.0
+          },
+          "centred_soft_chi": {
+            "real": -2.699245751798814,
+            "imag": -1.7319109548992456e-17
+          },
+          "raw_fixed_p_chi_error": 0.010425306952516332,
+          "raw_fixed_p_covariance_error": 0.00033707613431491873,
+          "centred_chi_error": 7.369097695531172e-06,
+          "centred_covariance_error": 0.00020030117162369768,
+          "tree_source_ray_error": 2.7139123348417472e-08
+        },
+        {
+          "q_over_p": 0.00390625,
+          "q": 7.8125e-05,
+          "centre_p": 0.02001175344338687,
+          "centre_cosine": 0.3017757797728456,
+          "finite_chi": {
+            "real": -2.713464017460849,
+            "imag": 0.0
+          },
+          "centred_soft_chi": {
+            "real": -2.713469137047185,
+            "imag": 5.107223178644195e-18
+          },
+          "raw_fixed_p_chi_error": 0.005205395674011821,
+          "raw_fixed_p_covariance_error": 0.00016787589277839283,
+          "centred_chi_error": 1.8867309991853662e-06,
+          "centred_covariance_error": 0.00010061526141990918,
+          "tree_source_ray_error": 6.784781239956199e-09
+        }
+      ]
+    },
+    {
+      "mu": 1.05,
+      "p": 0.02,
+      "cosine": 0.8,
+      "ray": {
+        "real": 0.0,
+        "imag": 0.3161505415850435
+      },
+      "soft_chi": {
+        "real": 2.3662114682273656,
+        "imag": -7.148454080234797e-18
+      },
+      "zero_drive_error": 1.6511855756427936e-15,
+      "raw_stationary_phase_cancellation": {
+        "real": 0.0,
+        "imag": 0.0
+      },
+      "differences": [
+        {
+          "q_over_p": 0.015625,
+          "q": 0.0003125,
+          "centre_p": 0.020125218360616613,
+          "centre_cosine": 0.8027863206501373,
+          "finite_chi": {
+            "real": 2.3778385047179604,
+            "imag": 0.0
+          },
+          "centred_soft_chi": {
+            "real": 2.3780724326863574,
+            "imag": 3.809469636178772e-18
+          },
+          "raw_fixed_p_chi_error": 0.0049137774229896505,
+          "raw_fixed_p_covariance_error": 0.01239596373669265,
+          "centred_chi_error": 9.836873140684251e-05,
+          "centred_covariance_error": 0.00041043131432808006,
+          "tree_source_ray_error": 1.0855648360975194e-07
+        },
+        {
+          "q_over_p": 0.0078125,
+          "q": 0.00015625,
+          "centre_p": 0.020062554760439284,
+          "centre_cosine": 0.8013996817446173,
+          "finite_chi": {
+            "real": 2.3722604175802866,
+            "imag": 0.0
+          },
+          "centred_soft_chi": {
+            "real": 2.3723201462105368,
+            "imag": 4.1767504904181544e-18
+          },
+          "raw_fixed_p_chi_error": 0.0025563857812981243,
+          "raw_fixed_p_covariance_error": 0.006250339140465266,
+          "centred_chi_error": 2.5177305999603375e-05,
+          "centred_covariance_error": 0.00019431391661059463,
+          "tree_source_ray_error": 2.7139123348417472e-08
+        },
+        {
+          "q_over_p": 0.00390625,
+          "q": 7.8125e-05,
+          "centre_p": 0.020031263711481267,
+          "centre_cosine": 0.800701479997337,
+          "finite_chi": {
+            "real": 2.3692957407094357,
+            "imag": 0.0
+          },
+          "centred_soft_chi": {
+            "real": 2.3693108307939568,
+            "imag": -1.0371261877521855e-17
+          },
+          "raw_fixed_p_chi_error": 0.0013034644297369885,
+          "raw_fixed_p_covariance_error": 0.0031383528845579205,
+          "centred_chi_error": 6.368976296789017e-06,
+          "centred_covariance_error": 9.559188925857577e-05,
+          "tree_source_ray_error": 6.784781239956199e-09
+        }
+      ]
+    },
+    {
+      "mu": 1.05,
+      "p": 0.02,
+      "cosine": -0.6,
+      "ray": {
+        "real": 0.1264602166340174,
+        "imag": 0.08430681108934496
+      },
+      "soft_chi": {
+        "real": -0.50270837068883,
+        "imag": 0.5140075396003683
+      },
+      "zero_drive_error": 1.1717473032453697e-15,
+      "raw_stationary_phase_cancellation": {
+        "real": 1.1796119636642288e-16,
+        "imag": -5.551115123125783e-17
+      },
+      "differences": [
+        {
+          "q_over_p": 0.015625,
+          "q": 0.0003125,
+          "centre_p": 0.019906642460809407,
+          "centre_cosine": -0.5949647221181081,
+          "finite_chi": {
+            "real": -0.6135289767721988,
+            "imag": 0.6508818808703083
+          },
+          "centred_soft_chi": {
+            "real": -0.6130644223227311,
+            "imag": 0.6502994581349677
+          },
+          "raw_fixed_p_chi_error": 0.2449514408297869,
+          "raw_fixed_p_covariance_error": 0.0138923842049787,
+          "centred_chi_error": 0.0008335949671475738,
+          "centred_covariance_error": 0.000310521294834389,
+          "tree_source_ray_error": 1.0932297815866068e-07
+        },
+        {
+          "q_over_p": 0.0078125,
+          "q": 0.00015625,
+          "centre_p": 0.019953222885429438,
+          "centre_cosine": -0.5974911957058217,
+          "finite_chi": {
+            "real": -0.5576456505857426,
+            "imag": 0.5818527998507825
+          },
+          "centred_soft_chi": {
+            "real": -0.5575297778918813,
+            "imag": 0.5817075933003846
+          },
+          "raw_fixed_p_chi_error": 0.1214218753874798,
+          "raw_fixed_p_covariance_error": 0.006918737024049699,
+          "centred_chi_error": 0.00023056024682841395,
+          "centred_covariance_error": 0.0001458433602070987,
+          "tree_source_ray_error": 2.7330747948720643e-08
+        },
+        {
+          "q_over_p": 0.00390625,
+          "q": 7.8125e-05,
+          "centre_p": 0.019976586942691343,
+          "centre_cosine": -0.5987478008287118,
+          "finite_chi": {
+            "real": -0.5300589834838085,
+            "imag": 0.5477825099042812
+          },
+          "centred_soft_chi": {
+            "real": -0.5300300517883887,
+            "imag": 0.547746262110155
+          },
+          "raw_fixed_p_chi_error": 0.060448020118552576,
+          "raw_fixed_p_covariance_error": 0.003452599231657634,
+          "centred_chi_error": 6.084745370862725e-05,
+          "centred_covariance_error": 7.184385734407438e-05,
+          "tree_source_ray_error": 6.832687115757356e-09
+        }
+      ]
+    },
+    {
+      "mu": 1.05,
+      "p": 0.02,
+      "cosine": 0.3,
+      "ray": {
+        "real": 0.1264602166340174,
+        "imag": 0.08430681108934496
+      },
+      "soft_chi": {
+        "real": -4.8512678873316055,
+        "imag": 5.945136031240076
+      },
+      "zero_drive_error": 1.1717473032453697e-15,
+      "raw_stationary_phase_cancellation": {
+        "real": 1.1796119636642288e-16,
+        "imag": -5.551115123125783e-17
+      },
+      "differences": [
+        {
+          "q_over_p": 0.015625,
+          "q": 0.0003125,
+          "centre_p": 0.020047429113542216,
+          "centre_cosine": 0.3070842632804921,
+          "finite_chi": {
+            "real": -4.751209309462198,
+            "imag": 5.8205863943537715
+          },
+          "centred_soft_chi": {
+            "real": -4.75135296474278,
+            "imag": 5.8207483708800565
+          },
+          "raw_fixed_p_chi_error": 0.020820700626654177,
+          "raw_fixed_p_covariance_error": 0.013477780608726661,
+          "centred_chi_error": 2.8814136928882802e-05,
+          "centred_covariance_error": 0.00024770370484424937,
+          "tree_source_ray_error": 1.0932297815866068e-07
+        },
+        {
+          "q_over_p": 0.0078125,
+          "q": 0.00015625,
+          "centre_p": 0.02002357619196993,
+          "centre_cosine": 0.3035484242039399,
+          "finite_chi": {
+            "real": -4.801370834426241,
+            "imag": 5.883025051036548
+          },
+          "centred_soft_chi": {
+            "real": -4.801408805110137,
+            "imag": 5.883068089068409
+          },
+          "raw_fixed_p_chi_error": 0.010382911669490525,
+          "raw_fixed_p_covariance_error": 0.0067581737096984226,
+          "centred_chi_error": 7.55809454308874e-06,
+          "centred_covariance_error": 0.00012006841665399968,
+          "tree_source_ray_error": 2.7330747948720643e-08
+        },
+        {
+          "q_over_p": 0.00390625,
+          "q": 7.8125e-05,
+          "centre_p": 0.02001175344338687,
+          "centre_cosine": 0.3017757797728456,
+          "finite_chi": {
+            "real": -4.826353968935669,
+            "imag": 5.9141234202110375
+          },
+          "centred_soft_chi": {
+            "real": -4.826363720106316,
+            "imag": 5.914134499436585
+          },
+          "raw_fixed_p_chi_error": 0.005184274722936933,
+          "raw_fixed_p_covariance_error": 0.0033837356864119253,
+          "centred_chi_error": 1.93347253395558e-06,
+          "centred_covariance_error": 5.967085901643135e-05,
+          "tree_source_ray_error": 6.832687115757356e-09
+        }
+      ]
+    },
+    {
+      "mu": 1.05,
+      "p": 0.02,
+      "cosine": 0.8,
+      "ray": {
+        "real": 0.1264602166340174,
+        "imag": 0.08430681108934496
+      },
+      "soft_chi": {
+        "real": 4.049573347525918,
+        "imag": -5.054183161959383
+      },
+      "zero_drive_error": 1.1717473032453697e-15,
+      "raw_stationary_phase_cancellation": {
+        "real": 1.1796119636642288e-16,
+        "imag": -5.551115123125783e-17
+      },
+      "differences": [
+        {
+          "q_over_p": 0.015625,
+          "q": 0.0003125,
+          "centre_p": 0.020125218360616613,
+          "centre_cosine": 0.8027863206501373,
+          "finite_chi": {
+            "real": 4.069999105896528,
+            "imag": -5.078716478546072
+          },
+          "centred_soft_chi": {
+            "real": 4.070410653738032,
+            "imag": -5.079208459462615
+          },
+          "raw_fixed_p_chi_error": 0.0049291659101742035,
+          "raw_fixed_p_covariance_error": 0.014835725620399658,
+          "centred_chi_error": 9.854378123242776e-05,
+          "centred_covariance_error": 0.0005367921967610495,
+          "tree_source_ray_error": 1.0932297815866068e-07
+        },
+        {
+          "q_over_p": 0.0078125,
+          "q": 0.00015625,
+          "centre_p": 0.020062554760439284,
+          "centre_cosine": 0.8013996817446173,
+          "finite_chi": {
+            "real": 4.060201103805953,
+            "imag": -5.066954120848353
+          },
+          "centred_soft_chi": {
+            "real": 4.060306164382249,
+            "imag": -5.067079796675242
+          },
+          "raw_fixed_p_chi_error": 0.002565412752157863,
+          "raw_fixed_p_covariance_error": 0.0074672044596199,
+          "centred_chi_error": 2.5227267499908388e-05,
+          "centred_covariance_error": 0.00026119404697595526,
+          "tree_source_ray_error": 2.7330747948720643e-08
+        },
+        {
+          "q_over_p": 0.00390625,
+          "q": 7.8125e-05,
+          "centre_p": 0.020031263711481267,
+          "centre_cosine": 0.800701479997337,
+          "finite_chi": {
+            "real": 4.05499259299722,
+            "imag": -5.060696744232528
+          },
+          "centred_soft_chi": {
+            "real": 4.055019133484755,
+            "imag": -5.060728502821908
+          },
+          "raw_fixed_p_chi_error": 0.0013083172819940841,
+          "raw_fixed_p_covariance_error": 0.0037460560524393742,
+          "centred_chi_error": 6.382266428460894e-06,
+          "centred_covariance_error": 0.00012954608788621474,
+          "tree_source_ray_error": 6.832687115757356e-09
+        }
+      ]
+    },
+    {
+      "mu": 1.05,
+      "p": 0.04,
+      "cosine": -0.6,
+      "ray": {
+        "real": 0.0,
+        "imag": 0.10538351386168118
+      },
+      "soft_chi": {
+        "real": 0.08007701454764443,
+        "imag": -5.576715639285254e-17
+      },
+      "zero_drive_error": 1.6361033712249924e-15,
+      "raw_stationary_phase_cancellation": {
+        "real": 1.3877787807814457e-16,
+        "imag": 0.0
+      },
+      "differences": [
+        {
+          "q_over_p": 0.015625,
+          "q": 0.000625,
+          "centre_p": 0.03981328492161881,
+          "centre_cosine": -0.5949647221181081,
+          "finite_chi": {
+            "real": 0.07325484610644645,
+            "imag": 0.0
+          },
+          "centred_soft_chi": {
+            "real": 0.07329803129836865,
+            "imag": -6.478050356786536e-18
+          },
+          "raw_fixed_p_chi_error": 0.08519508974874322,
+          "raw_fixed_p_covariance_error": 0.03360774672235334,
+          "centred_chi_error": 0.0005891726033733548,
+          "centred_covariance_error": 0.003094290986499957,
+          "tree_source_ray_error": 4.2906085621842506e-07
+        },
+        {
+          "q_over_p": 0.0078125,
+          "q": 0.0003125,
+          "centre_p": 0.039906445770858875,
+          "centre_cosine": -0.5974911957058217,
+          "finite_chi": {
+            "real": 0.07670697240427954,
+            "imag": 0.0
+          },
+          "centred_soft_chi": {
+            "real": 0.07671772093799317,
+            "imag": -1.1378298952964336e-17
+          },
+          "raw_fixed_p_chi_error": 0.04208501231473579,
+          "raw_fixed_p_covariance_error": 0.016652638989736318,
+          "centred_chi_error": 0.00014010496639128758,
+          "centred_covariance_error": 0.0015146379269777924,
+          "tree_source_ray_error": 1.0726525854674616e-07
+        },
+        {
+          "q_over_p": 0.00390625,
+          "q": 0.00015625,
+          "centre_p": 0.039953173885382685,
+          "centre_cosine": -0.5987478008287118,
+          "finite_chi": {
+            "real": 0.0784022163860732,
+            "imag": 0.0
+          },
+          "centred_soft_chi": {
+            "real": 0.07840489728525318,
+            "imag": -6.718650847849385e-17
+          },
+          "raw_fixed_p_chi_error": 0.02091484268028946,
+          "raw_fixed_p_covariance_error": 0.008286731859092913,
+          "centred_chi_error": 3.419300672293097e-05,
+          "centred_covariance_error": 0.000756216479575967,
+          "tree_source_ray_error": 2.6816317513633743e-08
+        }
+      ]
+    },
+    {
+      "mu": 1.05,
+      "p": 0.04,
+      "cosine": 0.3,
+      "ray": {
+        "real": 0.0,
+        "imag": 0.10538351386168118
+      },
+      "soft_chi": {
+        "real": -0.23245173286180754,
+        "imag": 3.129852433226373e-17
+      },
+      "zero_drive_error": 1.6361033712249924e-15,
+      "raw_stationary_phase_cancellation": {
+        "real": 1.3877787807814457e-16,
+        "imag": 0.0
+      },
+      "differences": [
+        {
+          "q_over_p": 0.015625,
+          "q": 0.000625,
+          "centre_p": 0.04009485822708443,
+          "centre_cosine": 0.3070842632804921,
+          "finite_chi": {
+            "real": -0.22544827081530594,
+            "imag": 0.0
+          },
+          "centred_soft_chi": {
+            "real": -0.22545388594527158,
+            "imag": 8.802330788193973e-18
+          },
+          "raw_fixed_p_chi_error": 0.030128672134550838,
+          "raw_fixed_p_covariance_error": 0.02587317289062309,
+          "centred_chi_error": 2.4905891251743678e-05,
+          "centred_covariance_error": 0.0002460595899279295,
+          "tree_source_ray_error": 4.2906085621842506e-07
+        },
+        {
+          "q_over_p": 0.0078125,
+          "q": 0.0003125,
+          "centre_p": 0.04004715238393986,
+          "centre_cosine": 0.3035484242039399,
+          "finite_chi": {
+            "real": -0.22895596631268933,
+            "imag": 0.0
+          },
+          "centred_soft_chi": {
+            "real": -0.22895753561952492,
+            "imag": 3.570601396072756e-17
+          },
+          "raw_fixed_p_chi_error": 0.015038677088272938,
+          "raw_fixed_p_covariance_error": 0.013030611781328347,
+          "centred_chi_error": 6.854139267987939e-06,
+          "centred_covariance_error": 6.367538018141757e-05,
+          "tree_source_ray_error": 1.0726525854674616e-07
+        },
+        {
+          "q_over_p": 0.00390625,
+          "q": 0.00015625,
+          "centre_p": 0.04002350688677374,
+          "centre_cosine": 0.3017757797728456,
+          "finite_chi": {
+            "real": -0.23070546291018065,
+            "imag": 0.0
+          },
+          "centred_soft_chi": {
+            "real": -0.23070587606916593,
+            "imag": 1.7155297083540068e-17
+          },
+          "raw_fixed_p_chi_error": 0.007512398079927586,
+          "raw_fixed_p_covariance_error": 0.006538416714232934,
+          "centred_chi_error": 1.790847256747756e-06,
+          "centred_covariance_error": 1.9126041956885194e-05,
+          "tree_source_ray_error": 2.6816317513633743e-08
+        }
+      ]
+    },
+    {
+      "mu": 1.05,
+      "p": 0.04,
+      "cosine": 0.8,
+      "ray": {
+        "real": 0.0,
+        "imag": 0.10538351386168118
+      },
+      "soft_chi": {
+        "real": 0.40264204301762807,
+        "imag": 6.677481296637148e-17
+      },
+      "zero_drive_error": 1.6361033712249924e-15,
+      "raw_stationary_phase_cancellation": {
+        "real": 1.3877787807814457e-16,
+        "imag": 0.0
+      },
+      "differences": [
+        {
+          "q_over_p": 0.015625,
+          "q": 0.000625,
+          "centre_p": 0.040250436721233226,
+          "centre_cosine": 0.8027863206501373,
+          "finite_chi": {
+            "real": 0.4014340221140093,
+            "imag": 0.0
+          },
+          "centred_soft_chi": {
+            "real": 0.4014673624535973,
+            "imag": -3.594823429229465e-18
+          },
+          "raw_fixed_p_chi_error": 0.0030002353816933093,
+          "raw_fixed_p_covariance_error": 0.024923030098536803,
+          "centred_chi_error": 8.304620177405019e-05,
+          "centred_covariance_error": 0.006710186470409009,
+          "tree_source_ray_error": 4.2906085621842506e-07
+        },
+        {
+          "q_over_p": 0.0078125,
+          "q": 0.0003125,
+          "centre_p": 0.04012510952087857,
+          "centre_cosine": 0.8013996817446173,
+          "finite_chi": {
+            "real": 0.4020676751752505,
+            "imag": 0.0
+          },
+          "centred_soft_chi": {
+            "real": 0.4020762093724417,
+            "imag": -6.32529602870555e-17
+          },
+          "raw_fixed_p_chi_error": 0.0014264974369614706,
+          "raw_fixed_p_covariance_error": 0.01287998446764398,
+          "centred_chi_error": 2.1225322444549547e-05,
+          "centred_covariance_error": 0.003294977329365121,
+          "tree_source_ray_error": 1.0726525854674616e-07
+        },
+        {
+          "q_over_p": 0.00390625,
+          "q": 0.00015625,
+          "centre_p": 0.040062527422962534,
+          "centre_cosine": 0.800701479997337,
+          "finite_chi": {
+            "real": 0.40236241765356656,
+            "imag": 0.0
+          },
+          "centred_soft_chi": {
+            "real": 0.4023645764545208,
+            "imag": 8.571389818487928e-17
+          },
+          "raw_fixed_p_chi_error": 0.0006944763193774735,
+          "raw_fixed_p_covariance_error": 0.006546841571132729,
+          "centred_chi_error": 5.365285814283721e-06,
+          "centred_covariance_error": 0.0016388516221890071,
+          "tree_source_ray_error": 2.6816317513633743e-08
+        }
+      ]
+    },
+    {
+      "mu": 1.05,
+      "p": 0.04,
+      "cosine": -0.6,
+      "ray": {
+        "real": 0.0,
+        "imag": 0.3161505415850435
+      },
+      "soft_chi": {
+        "real": 0.0908200840318032,
+        "imag": -7.557240494102978e-18
+      },
+      "zero_drive_error": 1.661533395988531e-15,
+      "raw_stationary_phase_cancellation": {
+        "real": 0.0,
+        "imag": 0.0
+      },
+      "differences": [
+        {
+          "q_over_p": 0.015625,
+          "q": 0.000625,
+          "centre_p": 0.03981328492161881,
+          "centre_cosine": -0.5949647221181081,
+          "finite_chi": {
+            "real": 0.08160711617878513,
+            "imag": 0.0
+          },
+          "centred_soft_chi": {
+            "real": 0.08166067576411595,
+            "imag": -4.859735714350169e-19
+          },
+          "raw_fixed_p_chi_error": 0.10144196574176129,
+          "raw_fixed_p_covariance_error": 0.00814333470055831,
+          "centred_chi_error": 0.0006558797711340492,
+          "centred_covariance_error": 0.0002729864119987172,
+          "tree_source_ray_error": 4.3422578976307633e-07
+        },
+        {
+          "q_over_p": 0.0078125,
+          "q": 0.0003125,
+          "centre_p": 0.039906445770858875,
+          "centre_cosine": -0.5974911957058217,
+          "finite_chi": {
+            "real": 0.08626721160055573,
+            "imag": 0.0
+          },
+          "centred_soft_chi": {
+            "real": 0.0862805390224175,
+            "imag": 3.833220537216208e-19
+          },
+          "raw_fixed_p_chi_error": 0.050130678470338697,
+          "raw_fixed_p_covariance_error": 0.004086940345994709,
+          "centred_chi_error": 0.00015446614048519576,
+          "centred_covariance_error": 0.0001379099467234537,
+          "tree_source_ray_error": 1.0855648360975194e-07
+        },
+        {
+          "q_over_p": 0.00390625,
+          "q": 0.00015625,
+          "centre_p": 0.039953173885382685,
+          "centre_cosine": -0.5987478008287118,
+          "finite_chi": {
+            "real": 0.0885570015340007,
+            "imag": 0.0
+          },
+          "centred_soft_chi": {
+            "real": 0.0885603252432483,
+            "imag": -7.721140562868571e-18
+          },
+          "raw_fixed_p_chi_error": 0.02491830438089015,
+          "raw_fixed_p_covariance_error": 0.002047190558645194,
+          "centred_chi_error": 3.753045439337979e-05,
+          "centred_covariance_error": 6.957676459065836e-05,
+          "tree_source_ray_error": 2.7139123348417472e-08
+        }
+      ]
+    },
+    {
+      "mu": 1.05,
+      "p": 0.04,
+      "cosine": 0.3,
+      "ray": {
+        "real": 0.0,
+        "imag": 0.3161505415850435
+      },
+      "soft_chi": {
+        "real": -0.3256496343438604,
+        "imag": 4.550274586651328e-18
+      },
+      "zero_drive_error": 1.661533395988531e-15,
+      "raw_stationary_phase_cancellation": {
+        "real": 0.0,
+        "imag": 0.0
+      },
+      "differences": [
+        {
+          "q_over_p": 0.015625,
+          "q": 0.000625,
+          "centre_p": 0.04009485822708443,
+          "centre_cosine": 0.3070842632804921,
+          "finite_chi": {
+            "real": -0.3162979951906407,
+            "imag": 0.0
+          },
+          "centred_soft_chi": {
+            "real": -0.316307183219738,
+            "imag": 1.423037056939886e-18
+          },
+          "raw_fixed_p_chi_error": 0.028716872881070353,
+          "raw_fixed_p_covariance_error": 0.0015527493024326087,
+          "centred_chi_error": 2.9047804111645947e-05,
+          "centred_covariance_error": 0.0006901820911119964,
+          "tree_source_ray_error": 4.3422578976307633e-07
+        },
+        {
+          "q_over_p": 0.0078125,
+          "q": 0.0003125,
+          "centre_p": 0.04004715238393986,
+          "centre_cosine": 0.3035484242039399,
+          "finite_chi": {
+            "real": -0.32098253822675316,
+            "imag": 0.0
+          },
+          "centred_soft_chi": {
+            "real": -0.3209850501574689,
+            "imag": 5.715165039649436e-18
+          },
+          "raw_fixed_p_chi_error": 0.014331648572278645,
+          "raw_fixed_p_covariance_error": 0.0007909940649442041,
+          "centred_chi_error": 7.825693796433043e-06,
+          "centred_covariance_error": 0.0003494981181194691,
+          "tree_source_ray_error": 1.0855648360975194e-07
+        },
+        {
+          "q_over_p": 0.00390625,
+          "q": 0.00015625,
+          "centre_p": 0.04002350688677374,
+          "centre_cosine": 0.3017757797728456,
+          "finite_chi": {
+            "real": -0.3233184277641075,
+            "imag": 0.0
+          },
+          "centred_soft_chi": {
+            "real": -0.3233190827888448,
+            "imag": 3.0655668219095508e-18
+          },
+          "raw_fixed_p_chi_error": 0.007158634108249347,
+          "raw_fixed_p_covariance_error": 0.0003993221268981969,
+          "centred_chi_error": 2.025938993868904e-06,
+          "centred_covariance_error": 0.00017596027255537856,
+          "tree_source_ray_error": 2.7139123348417472e-08
+        }
+      ]
+    },
+    {
+      "mu": 1.05,
+      "p": 0.04,
+      "cosine": 0.8,
+      "ray": {
+        "real": 0.0,
+        "imag": 0.3161505415850435
+      },
+      "soft_chi": {
+        "real": 0.5220004822753854,
+        "imag": 7.791438422319528e-18
+      },
+      "zero_drive_error": 1.661533395988531e-15,
+      "raw_stationary_phase_cancellation": {
+        "real": 0.0,
+        "imag": 0.0
+      },
+      "differences": [
+        {
+          "q_over_p": 0.015625,
+          "q": 0.000625,
+          "centre_p": 0.040250436721233226,
+          "centre_cosine": 0.8027863206501373,
+          "finite_chi": {
+            "real": 0.5205551261161142,
+            "imag": 0.0
+          },
+          "centred_soft_chi": {
+            "real": 0.5205939556204833,
+            "imag": -1.8692629588497027e-18
+          },
+          "raw_fixed_p_chi_error": 0.002768878973005828,
+          "raw_fixed_p_covariance_error": 0.01552484412695627,
+          "centred_chi_error": 7.458692892963878e-05,
+          "centred_covariance_error": 0.0008846749160618872,
+          "tree_source_ray_error": 4.3422578976307633e-07
+        },
+        {
+          "q_over_p": 0.0078125,
+          "q": 0.0003125,
+          "centre_p": 0.04012510952087857,
+          "centre_cosine": 0.8013996817446173,
+          "finite_chi": {
+            "real": 0.5213160480450741,
+            "imag": 0.0
+          },
+          "centred_soft_chi": {
+            "real": 0.5213260113684148,
+            "imag": -3.309365828270405e-18
+          },
+          "raw_fixed_p_chi_error": 0.0013111754750260995,
+          "raw_fixed_p_covariance_error": 0.007826438670918338,
+          "centred_chi_error": 1.9111502444577464e-05,
+          "centred_covariance_error": 0.0004343979759818662,
+          "tree_source_ray_error": 1.0855648360975194e-07
+        },
+        {
+          "q_over_p": 0.00390625,
+          "q": 0.00015625,
+          "centre_p": 0.040062527422962534,
+          "centre_cosine": 0.800701479997337,
+          "finite_chi": {
+            "real": 0.521668019574377,
+            "imag": 0.0
+          },
+          "centred_soft_chi": {
+            "real": 0.5216705428816422,
+            "imag": 5.54143722407117e-18
+          },
+          "raw_fixed_p_chi_error": 0.0006369011376372685,
+          "raw_fixed_p_covariance_error": 0.003929341404919292,
+          "centred_chi_error": 4.836974791016275e-06,
+          "centred_covariance_error": 0.00021590225220530234,
+          "tree_source_ray_error": 2.7139123348417472e-08
+        }
+      ]
+    },
+    {
+      "mu": 1.05,
+      "p": 0.04,
+      "cosine": -0.6,
+      "ray": {
+        "real": 0.1264602166340174,
+        "imag": 0.08430681108934496
+      },
+      "soft_chi": {
+        "real": 0.0807085860409853,
+        "imag": -0.1899809229694709
+      },
+      "zero_drive_error": 1.504298362612616e-15,
+      "raw_stationary_phase_cancellation": {
+        "real": 1.1796119636642288e-16,
+        "imag": -5.551115123125783e-17
+      },
+      "differences": [
+        {
+          "q_over_p": 0.015625,
+          "q": 0.000625,
+          "centre_p": 0.03981328492161881,
+          "centre_cosine": -0.5949647221181081,
+          "finite_chi": {
+            "real": 0.06557762629399555,
+            "imag": -0.17063368237518817
+          },
+          "centred_soft_chi": {
+            "real": 0.06565931293597926,
+            "imag": -0.17074477257770515
+          },
+          "raw_fixed_p_chi_error": 0.11899104705697652,
+          "raw_fixed_p_covariance_error": 0.014732834018637586,
+          "centred_chi_error": 0.0007537700349283193,
+          "centred_covariance_error": 0.0006277174711804064,
+          "tree_source_ray_error": 4.372917137463558e-07
+        },
+        {
+          "q_over_p": 0.0078125,
+          "q": 0.0003125,
+          "centre_p": 0.039906445770858875,
+          "centre_cosine": -0.5974911957058217,
+          "finite_chi": {
+            "real": 0.07322932200430321,
+            "imag": -0.18042453939288117
+          },
+          "centred_soft_chi": {
+            "real": 0.07324966298803304,
+            "imag": -0.18045215458905894
+          },
+          "raw_fixed_p_chi_error": 0.05879081889439569,
+          "raw_fixed_p_covariance_error": 0.00734517891879089,
+          "centred_chi_error": 0.0001761109448721103,
+          "centred_covariance_error": 0.0003104773185607273,
+          "tree_source_ray_error": 1.0932297815866068e-07
+        },
+        {
+          "q_over_p": 0.00390625,
+          "q": 0.00015625,
+          "centre_p": 0.039953173885382685,
+          "centre_cosine": -0.5987478008287118,
+          "finite_chi": {
+            "real": 0.0769904293429915,
+            "imag": -0.18523191012156515
+          },
+          "centred_soft_chi": {
+            "real": 0.07699550395329269,
+            "imag": -0.18523879358372208
+          },
+          "raw_fixed_p_chi_error": 0.029219966373436067,
+          "raw_fixed_p_covariance_error": 0.003667446941010487,
+          "centred_chi_error": 4.26305147913704e-05,
+          "centred_covariance_error": 0.00015508105497351722,
+          "tree_source_ray_error": 2.7330747948720643e-08
+        }
+      ]
+    },
+    {
+      "mu": 1.05,
+      "p": 0.04,
+      "cosine": 0.3,
+      "ray": {
+        "real": 0.1264602166340174,
+        "imag": 0.08430681108934496
+      },
+      "soft_chi": {
+        "real": -0.5867633198807871,
+        "imag": 0.7154499754406072
+      },
+      "zero_drive_error": 1.504298362612616e-15,
+      "raw_stationary_phase_cancellation": {
+        "real": 1.1796119636642288e-16,
+        "imag": -5.551115123125783e-17
+      },
+      "differences": [
+        {
+          "q_over_p": 0.015625,
+          "q": 0.000625,
+          "centre_p": 0.04009485822708443,
+          "centre_cosine": 0.3070842632804921,
+          "finite_chi": {
+            "real": -0.5711038464849065,
+            "imag": 0.6945410033445614
+          },
+          "centred_soft_chi": {
+            "real": -0.571126959230972,
+            "imag": 0.6945603434118401
+          },
+          "raw_fixed_p_chi_error": 0.028232115412989072,
+          "raw_fixed_p_covariance_error": 0.017399063409191375,
+          "centred_chi_error": 3.351450137976285e-05,
+          "centred_covariance_error": 0.0004549767567059186,
+          "tree_source_ray_error": 4.372917137463558e-07
+        },
+        {
+          "q_over_p": 0.0078125,
+          "q": 0.0003125,
+          "centre_p": 0.04004715238393986,
+          "centre_cosine": 0.3035484242039399,
+          "finite_chi": {
+            "real": -0.5789473627599684,
+            "imag": 0.7050138346930623
+          },
+          "centred_soft_chi": {
+            "real": -0.5789535052328116,
+            "imag": 0.7050191439324622
+          },
+          "raw_fixed_p_chi_error": 0.014091261163634475,
+          "raw_fixed_p_covariance_error": 0.008750285702349652,
+          "centred_chi_error": 8.899752404383645e-06,
+          "centred_covariance_error": 0.00022497373375449992,
+          "tree_source_ray_error": 1.0932297815866068e-07
+        },
+        {
+          "q_over_p": 0.00390625,
+          "q": 0.00015625,
+          "centre_p": 0.04002350688677374,
+          "centre_cosine": 0.3017757797728456,
+          "finite_chi": {
+            "real": -0.5828590624248624,
+            "imag": 0.7102368543199901
+          },
+          "centred_soft_chi": {
+            "real": -0.5828606438925242,
+            "imag": 0.7102382413215692
+          },
+          "raw_fixed_p_chi_error": 0.0070389385555634605,
+          "raw_fixed_p_covariance_error": 0.004387705153379352,
+          "centred_chi_error": 2.2894640851667845e-06,
+          "centred_covariance_error": 0.00011234820588004427,
+          "tree_source_ray_error": 2.7330747948720643e-08
+        }
+      ]
+    },
+    {
+      "mu": 1.05,
+      "p": 0.04,
+      "cosine": 0.8,
+      "ray": {
+        "real": 0.1264602166340174,
+        "imag": 0.08430681108934496
+      },
+      "soft_chi": {
+        "real": 0.8069541522468684,
+        "imag": -1.0808682035944894
+      },
+      "zero_drive_error": 1.504298362612616e-15,
+      "raw_stationary_phase_cancellation": {
+        "real": 1.1796119636642288e-16,
+        "imag": -5.551115123125783e-17
+      },
+      "differences": [
+        {
+          "q_over_p": 0.015625,
+          "q": 0.000625,
+          "centre_p": 0.040250436721233226,
+          "centre_cosine": 0.8027863206501373,
+          "finite_chi": {
+            "real": 0.8046438741693145,
+            "imag": -1.077359973815725
+          },
+          "centred_soft_chi": {
+            "real": 0.8047105886626607,
+            "imag": -1.0774333088523689
+          },
+          "raw_fixed_p_chi_error": 0.003114163358909319,
+          "raw_fixed_p_covariance_error": 0.017279584957039327,
+          "centred_chi_error": 7.372275050016329e-05,
+          "centred_covariance_error": 0.0010351434207479205,
+          "tree_source_ray_error": 4.372917137463558e-07
+        },
+        {
+          "q_over_p": 0.0078125,
+          "q": 0.0003125,
+          "centre_p": 0.04012510952087857,
+          "centre_cosine": 0.8013996817446173,
+          "finite_chi": {
+            "real": 0.8058641602267997,
+            "imag": -1.0791917609548487
+          },
+          "centred_soft_chi": {
+            "real": 0.8058812604034624,
+            "imag": -1.0792106253197875
+          },
+          "raw_fixed_p_chi_error": 0.0014824520961148066,
+          "raw_fixed_p_covariance_error": 0.008688648675348788,
+          "centred_chi_error": 1.8903664168255012e-05,
+          "centred_covariance_error": 0.0005131639735679025,
+          "tree_source_ray_error": 1.0932297815866068e-07
+        },
+        {
+          "q_over_p": 0.00390625,
+          "q": 0.00015625,
+          "centre_p": 0.040062527422962534,
+          "centre_cosine": 0.800701479997337,
+          "finite_chi": {
+            "real": 0.8064257678216951,
+            "imag": -1.0800498073426656
+          },
+          "centred_soft_chi": {
+            "real": 0.8064300963445201,
+            "imag": -1.0800545908051133
+          },
+          "raw_fixed_p_chi_error": 0.0007221947717387447,
+          "raw_fixed_p_covariance_error": 0.004356620711171684,
+          "centred_chi_error": 4.78607397410404e-06,
+          "centred_covariance_error": 0.0002558251443407139,
+          "tree_source_ray_error": 2.7330747948720643e-08
+        }
+      ]
+    },
+    {
+      "mu": 1.2,
+      "p": 0.005,
+      "cosine": -0.6,
+      "ray": {
+        "real": 0.0,
+        "imag": 0.1820922280970149
+      },
+      "soft_chi": {
+        "real": -2.0336836515491186,
+        "imag": 2.076025454671352e-17
+      },
+      "zero_drive_error": 5.029506446171626e-15,
+      "raw_stationary_phase_cancellation": {
+        "real": 8.326672684688674e-17,
+        "imag": 0.0
+      },
+      "differences": [
+        {
+          "q_over_p": 0.015625,
+          "q": 7.8125e-05,
+          "centre_p": 0.004976660615202352,
+          "centre_cosine": -0.5949647221181081,
+          "finite_chi": {
+            "real": -2.2069616166026442,
+            "imag": 0.0
+          },
+          "centred_soft_chi": {
+            "real": -2.206309005463657,
+            "imag": -3.246159596017562e-17
+          },
+          "raw_fixed_p_chi_error": 0.08520399174253802,
+          "raw_fixed_p_covariance_error": 0.017192138687682403,
+          "centred_chi_error": 0.0002957931719314732,
+          "centred_covariance_error": 0.00036766845716073925,
+          "tree_source_ray_error": 5.931821818807279e-09
+        },
+        {
+          "q_over_p": 0.0078125,
+          "q": 3.90625e-05,
+          "centre_p": 0.004988305721357359,
+          "centre_cosine": -0.5974911957058217,
+          "finite_chi": {
+            "real": -2.119670680477789,
+            "imag": 0.0
+          },
+          "centred_soft_chi": {
+            "real": -2.119507784593271,
+            "imag": -1.6373941525947483e-18
+          },
+          "raw_fixed_p_chi_error": 0.042281418185749514,
+          "raw_fixed_p_covariance_error": 0.00853849918305988,
+          "centred_chi_error": 7.685552546785339e-05,
+          "centred_covariance_error": 9.497393994774769e-05,
+          "tree_source_ray_error": 1.4829554174509314e-09
+        },
+        {
+          "q_over_p": 0.00390625,
+          "q": 1.953125e-05,
+          "centre_p": 0.004994146735672836,
+          "centre_cosine": -0.5987478008287118,
+          "finite_chi": {
+            "real": -2.0765143788914244,
+            "imag": 0.0
+          },
+          "centred_soft_chi": {
+            "real": -2.0764736916622475,
+            "imag": -2.1448837278991782e-17
+          },
+          "raw_fixed_p_chi_error": 0.02106066364337462,
+          "raw_fixed_p_covariance_error": 0.004254500662992087,
+          "centred_chi_error": 1.9594387032357815e-05,
+          "centred_covariance_error": 2.6426729901314642e-05,
+          "tree_source_ray_error": 3.707387560494195e-10
+        }
+      ]
+    },
+    {
+      "mu": 1.2,
+      "p": 0.005,
+      "cosine": 0.3,
+      "ray": {
+        "real": 0.0,
+        "imag": 0.1820922280970149
+      },
+      "soft_chi": {
+        "real": -8.52852122620679,
+        "imag": -1.0933350657969687e-17
+      },
+      "zero_drive_error": 5.029506446171626e-15,
+      "raw_stationary_phase_cancellation": {
+        "real": 8.326672684688674e-17,
+        "imag": 0.0
+      },
+      "differences": [
+        {
+          "q_over_p": 0.015625,
+          "q": 7.8125e-05,
+          "centre_p": 0.005011857278385554,
+          "centre_cosine": 0.3070842632804921,
+          "finite_chi": {
+            "real": -8.37943309999771,
+            "imag": 0.0
+          },
+          "centred_soft_chi": {
+            "real": -8.379648224055503,
+            "imag": 3.566830430780457e-17
+          },
+          "raw_fixed_p_chi_error": 0.017481122723943678,
+          "raw_fixed_p_covariance_error": 0.01406675601089563,
+          "centred_chi_error": 2.567220628364561e-05,
+          "centred_covariance_error": 0.00013731233744734272,
+          "tree_source_ray_error": 5.931821818807279e-09
+        },
+        {
+          "q_over_p": 0.0078125,
+          "q": 3.90625e-05,
+          "centre_p": 0.005005894047992483,
+          "centre_cosine": 0.3035484242039399,
+          "finite_chi": {
+            "real": -8.454198061523124,
+            "imag": 0.0
+          },
+          "centred_soft_chi": {
+            "real": -8.454254749803917,
+            "imag": 2.4409227799769242e-17
+          },
+          "raw_fixed_p_chi_error": 0.008714660222135842,
+          "raw_fixed_p_covariance_error": 0.007076843787950748,
+          "centred_chi_error": 6.705296027943469e-06,
+          "centred_covariance_error": 3.470449964520664e-05,
+          "tree_source_ray_error": 1.4829554174509314e-09
+        },
+        {
+          "q_over_p": 0.00390625,
+          "q": 1.953125e-05,
+          "centre_p": 0.005002938360846717,
+          "centre_cosine": 0.3017757797728456,
+          "finite_chi": {
+            "real": -8.491417051940443,
+            "imag": 0.0
+          },
+          "centred_soft_chi": {
+            "real": -8.491431589193208,
+            "imag": -2.0670423263446537e-17
+          },
+          "raw_fixed_p_chi_error": 0.004350598806312549,
+          "raw_fixed_p_covariance_error": 0.0035491134432730554,
+          "centred_chi_error": 1.7119908006589168e-06,
+          "centred_covariance_error": 9.421399123028998e-06,
+          "tree_source_ray_error": 3.707387560494195e-10
+        }
+      ]
+    },
+    {
+      "mu": 1.2,
+      "p": 0.005,
+      "cosine": 0.8,
+      "ray": {
+        "real": 0.0,
+        "imag": 0.1820922280970149
+      },
+      "soft_chi": {
+        "real": 4.701529156268501,
+        "imag": -2.6868682531113598e-17
+      },
+      "zero_drive_error": 5.029506446171626e-15,
+      "raw_stationary_phase_cancellation": {
+        "real": 8.326672684688674e-17,
+        "imag": 0.0
+      },
+      "differences": [
+        {
+          "q_over_p": 0.015625,
+          "q": 7.8125e-05,
+          "centre_p": 0.005031304590154153,
+          "centre_cosine": 0.8027863206501373,
+          "finite_chi": {
+            "real": 4.752864549736824,
+            "imag": 0.0
+          },
+          "centred_soft_chi": {
+            "real": 4.753464877616237,
+            "imag": 1.5729331014171483e-16
+          },
+          "raw_fixed_p_chi_error": 0.010918871661122799,
+          "raw_fixed_p_covariance_error": 0.017312526963298738,
+          "centred_chi_error": 0.00012629269277654562,
+          "centred_covariance_error": 0.0005783888889647003,
+          "tree_source_ray_error": 5.931821818807279e-09
+        },
+        {
+          "q_over_p": 0.0078125,
+          "q": 3.90625e-05,
+          "centre_p": 0.005015638690109821,
+          "centre_cosine": 0.8013996817446173,
+          "finite_chi": {
+            "real": 4.727802776616015,
+            "imag": 0.0
+          },
+          "centred_soft_chi": {
+            "real": 4.727955813109617,
+            "imag": 1.201696229859459e-18
+          },
+          "raw_fixed_p_chi_error": 0.005588313817533859,
+          "raw_fixed_p_covariance_error": 0.008839599779231218,
+          "centred_chi_error": 3.2368427212803097e-05,
+          "centred_covariance_error": 0.00015847539267909198,
+          "tree_source_ray_error": 1.4829554174509314e-09
+        },
+        {
+          "q_over_p": 0.00390625,
+          "q": 1.953125e-05,
+          "centre_p": 0.005007815927870317,
+          "centre_cosine": 0.800701479997337,
+          "finite_chi": {
+            "real": 4.714819671757876,
+            "imag": 0.0
+          },
+          "centred_soft_chi": {
+            "real": 4.714858304920545,
+            "imag": 1.0174143028821905e-16
+          },
+          "raw_fixed_p_chi_error": 0.0028268495307861912,
+          "raw_fixed_p_covariance_error": 0.004466298643089239,
+          "centred_chi_error": 8.193918071435034e-06,
+          "centred_covariance_error": 5.090914782355652e-05,
+          "tree_source_ray_error": 3.707387560494195e-10
+        }
+      ]
+    },
+    {
+      "mu": 1.2,
+      "p": 0.005,
+      "cosine": -0.6,
+      "ray": {
+        "real": 0.0,
+        "imag": 0.5462766842910447
+      },
+      "soft_chi": {
+        "real": -2.7176483238683264,
+        "imag": 5.504041370284611e-18
+      },
+      "zero_drive_error": 3.853619582049147e-15,
+      "raw_stationary_phase_cancellation": {
+        "real": 5.551115123125783e-17,
+        "imag": 0.0
+      },
+      "differences": [
+        {
+          "q_over_p": 0.015625,
+          "q": 7.8125e-05,
+          "centre_p": 0.004976660615202352,
+          "centre_cosine": -0.5949647221181081,
+          "finite_chi": {
+            "real": -2.9483516642988103,
+            "imag": 0.0
+          },
+          "centred_soft_chi": {
+            "real": -2.947483128646228,
+            "imag": -9.124740438632151e-18
+          },
+          "raw_fixed_p_chi_error": 0.08489080003629704,
+          "raw_fixed_p_covariance_error": 0.008496233980983528,
+          "centred_chi_error": 0.00029467027110051587,
+          "centred_covariance_error": 4.727592061825258e-05,
+          "tree_source_ray_error": 7.333326840835277e-09
+        },
+        {
+          "q_over_p": 0.0078125,
+          "q": 3.90625e-05,
+          "centre_p": 0.004988305721357359,
+          "centre_cosine": -0.5974911957058217,
+          "finite_chi": {
+            "real": -2.8321321128235404,
+            "imag": 0.0
+          },
+          "centred_soft_chi": {
+            "real": -2.8319153208821746,
+            "imag": 1.5292411983212778e-18
+          },
+          "raw_fixed_p_chi_error": 0.042126049919607195,
+          "raw_fixed_p_covariance_error": 0.004256431733505009,
+          "centred_chi_error": 7.655311575428017e-05,
+          "centred_covariance_error": 1.8006265684846705e-05,
+          "tree_source_ray_error": 1.8333318111700463e-09
+        },
+        {
+          "q_over_p": 0.00390625,
+          "q": 1.953125e-05,
+          "centre_p": 0.004994146735672836,
+          "centre_cosine": -0.5987478008287118,
+          "finite_chi": {
+            "real": -2.7746735159455476,
+            "imag": 0.0
+          },
+          "centred_soft_chi": {
+            "real": -2.7746193668691657,
+            "imag": -6.715114922126593e-18
+          },
+          "raw_fixed_p_chi_error": 0.020983286018424533,
+          "raw_fixed_p_covariance_error": 0.002130211922935773,
+          "centred_chi_error": 1.951585757256681e-05,
+          "centred_covariance_error": 8.096109271589119e-06,
+          "tree_source_ray_error": 4.583329524014283e-10
+        }
+      ]
+    },
+    {
+      "mu": 1.2,
+      "p": 0.005,
+      "cosine": 0.3,
+      "ray": {
+        "real": 0.0,
+        "imag": 0.5462766842910447
+      },
+      "soft_chi": {
+        "real": -11.364343975588369,
+        "imag": -3.214686585768831e-18
+      },
+      "zero_drive_error": 3.853619582049147e-15,
+      "raw_stationary_phase_cancellation": {
+        "real": 5.551115123125783e-17,
+        "imag": 0.0
+      },
+      "differences": [
+        {
+          "q_over_p": 0.015625,
+          "q": 7.8125e-05,
+          "centre_p": 0.005011857278385554,
+          "centre_cosine": 0.3070842632804921,
+          "finite_chi": {
+            "real": -11.165856860118177,
+            "imag": 0.0
+          },
+          "centred_soft_chi": {
+            "real": -11.16614343034679,
+            "imag": 1.1536061526564712e-17
+          },
+          "raw_fixed_p_chi_error": 0.01746577856993416,
+          "raw_fixed_p_covariance_error": 0.00350473820418489,
+          "centred_chi_error": 2.566420809471844e-05,
+          "centred_covariance_error": 7.21869824370789e-05,
+          "tree_source_ray_error": 7.333326840835277e-09
+        },
+        {
+          "q_over_p": 0.0078125,
+          "q": 3.90625e-05,
+          "centre_p": 0.005005894047992483,
+          "centre_cosine": 0.3035484242039399,
+          "finite_chi": {
+            "real": -11.265394584316237,
+            "imag": 0.0
+          },
+          "centred_soft_chi": {
+            "real": -11.26547009703505,
+            "imag": 8.685803590750002e-18
+          },
+          "raw_fixed_p_chi_error": 0.008707004248083688,
+          "raw_fixed_p_covariance_error": 0.0017317771607580214,
+          "centred_chi_error": 6.703024211459336e-06,
+          "centred_covariance_error": 3.0891091543317224e-05,
+          "tree_source_ray_error": 1.8333318111700463e-09
+        },
+        {
+          "q_over_p": 0.00390625,
+          "q": 1.953125e-05,
+          "centre_p": 0.005002938360846717,
+          "centre_cosine": 0.3017757797728456,
+          "finite_chi": {
+            "real": -11.314945728331109,
+            "imag": 0.0
+          },
+          "centred_soft_chi": {
+            "real": -11.314965092642,
+            "imag": -6.25693919565786e-18
+          },
+          "raw_fixed_p_chi_error": 0.004346775085598599,
+          "raw_fixed_p_covariance_error": 0.0008606535322372002,
+          "centred_chi_error": 1.7113893619850124e-06,
+          "centred_covariance_error": 1.471151983423163e-05,
+          "tree_source_ray_error": 4.583329524014283e-10
+        }
+      ]
+    },
+    {
+      "mu": 1.2,
+      "p": 0.005,
+      "cosine": 0.8,
+      "ray": {
+        "real": 0.0,
+        "imag": 0.5462766842910447
+      },
+      "soft_chi": {
+        "real": 6.2492786066636405,
+        "imag": -7.075614283316079e-18
+      },
+      "zero_drive_error": 3.853619582049147e-15,
+      "raw_stationary_phase_cancellation": {
+        "real": 5.551115123125783e-17,
+        "imag": 0.0
+      },
+      "differences": [
+        {
+          "q_over_p": 0.015625,
+          "q": 7.8125e-05,
+          "centre_p": 0.005031304590154153,
+          "centre_cosine": 0.8027863206501373,
+          "finite_chi": {
+            "real": 6.317639173251985,
+            "imag": 0.0
+          },
+          "centred_soft_chi": {
+            "real": 6.318438013366414,
+            "imag": 2.2398693089285794e-17
+          },
+          "raw_fixed_p_chi_error": 0.010938953260213297,
+          "raw_fixed_p_covariance_error": 0.012512553950704641,
+          "centred_chi_error": 0.00012642999943012742,
+          "centred_covariance_error": 0.00012847157222160805,
+          "tree_source_ray_error": 7.333326840835277e-09
+        },
+        {
+          "q_over_p": 0.0078125,
+          "q": 3.90625e-05,
+          "centre_p": 0.005015638690109821,
+          "centre_cosine": 0.8013996817446173,
+          "finite_chi": {
+            "real": 6.284265483135677,
+            "imag": 0.0
+          },
+          "centred_soft_chi": {
+            "real": 6.284469126193207,
+            "imag": -5.560794191463511e-19
+          },
+          "raw_fixed_p_chi_error": 0.005598546436180576,
+          "raw_fixed_p_covariance_error": 0.006307372826151212,
+          "centred_chi_error": 3.240417821150175e-05,
+          "centred_covariance_error": 3.7264823532479746e-05,
+          "tree_source_ray_error": 1.8333318111700463e-09
+        },
+        {
+          "q_over_p": 0.00390625,
+          "q": 1.953125e-05,
+          "centre_p": 0.005007815927870317,
+          "centre_cosine": 0.800701479997337,
+          "finite_chi": {
+            "real": 6.266976654483454,
+            "imag": 0.0
+          },
+          "centred_soft_chi": {
+            "real": 6.267028063165229,
+            "imag": 3.1289165134722955e-17
+          },
+          "raw_fixed_p_chi_error": 0.0028320145305958493,
+          "raw_fixed_p_covariance_error": 0.0031665482829354168,
+          "centred_chi_error": 8.203039982812995e-06,
+          "centred_covariance_error": 1.3247995628690053e-05,
+          "tree_source_ray_error": 4.583329524014283e-10
+        }
+      ]
+    },
+    {
+      "mu": 1.2,
+      "p": 0.005,
+      "cosine": -0.6,
+      "ray": {
+        "real": 0.21851067371641786,
+        "imag": 0.14567378247761192
+      },
+      "soft_chi": {
+        "real": -4.8473326325085715,
+        "imag": 5.9461188271006264
+      },
+      "zero_drive_error": 5.227658735730246e-15,
+      "raw_stationary_phase_cancellation": {
+        "real": 1.249000902703301e-16,
+        "imag": 5.551115123125783e-17
+      },
+      "differences": [
+        {
+          "q_over_p": 0.015625,
+          "q": 7.8125e-05,
+          "centre_p": 0.004976660615202352,
+          "centre_cosine": -0.5949647221181081,
+          "finite_chi": {
+            "real": -5.2571670614573165,
+            "imag": 6.446767647060621
+          },
+          "centred_soft_chi": {
+            "real": -5.2556247470866,
+            "imag": 6.4448835129253546
+          },
+          "raw_fixed_p_chi_error": 0.08433783526225407,
+          "raw_fixed_p_covariance_error": 0.012892127417226422,
+          "centred_chi_error": 0.0002927911751994074,
+          "centred_covariance_error": 0.00013551209547735637,
+          "tree_source_ray_error": 5.6120870500012686e-09
+        },
+        {
+          "q_over_p": 0.0078125,
+          "q": 3.90625e-05,
+          "centre_p": 0.004988305721357359,
+          "centre_cosine": -0.5974911957058217,
+          "finite_chi": {
+            "real": -5.050708358089427,
+            "imag": 6.194559998392144
+          },
+          "centred_soft_chi": {
+            "real": -5.05032338542474,
+            "imag": 6.194089707880099
+          },
+          "raw_fixed_p_chi_error": 0.04185168453719356,
+          "raw_fixed_p_covariance_error": 0.006424426999861884,
+          "centred_chi_error": 7.604628286678917e-05,
+          "centred_covariance_error": 3.7491178553719455e-05,
+          "tree_source_ray_error": 1.4030217567920552e-09
+        },
+        {
+          "q_over_p": 0.00390625,
+          "q": 1.953125e-05,
+          "centre_p": 0.004994146735672836,
+          "centre_cosine": -0.5987478008287118,
+          "finite_chi": {
+            "real": -4.948635598498427,
+            "imag": 6.069869185443508
+          },
+          "centred_soft_chi": {
+            "real": -4.948539442020174,
+            "imag": 6.069751719062193
+          },
+          "raw_fixed_p_chi_error": 0.020846631991291248,
+          "raw_fixed_p_covariance_error": 0.0032068540797284876,
+          "centred_chi_error": 1.9384145127978285e-05,
+          "centred_covariance_error": 1.2393162463566634e-05,
+          "tree_source_ray_error": 3.507554887228951e-10
+        }
+      ]
+    },
+    {
+      "mu": 1.2,
+      "p": 0.005,
+      "cosine": 0.3,
+      "ray": {
+        "real": 0.21851067371641786,
+        "imag": 0.14567378247761192
+      },
+      "soft_chi": {
+        "real": -20.206011943840533,
+        "imag": 24.70951620338132
+      },
+      "zero_drive_error": 5.227658735730246e-15,
+      "raw_stationary_phase_cancellation": {
+        "real": 1.249000902703301e-16,
+        "imag": 5.551115123125783e-17
+      },
+      "differences": [
+        {
+          "q_over_p": 0.015625,
+          "q": 7.8125e-05,
+          "centre_p": 0.005011857278385554,
+          "centre_cosine": 0.3070842632804921,
+          "finite_chi": {
+            "real": -19.853411948448134,
+            "imag": 24.27873678141318
+          },
+          "centred_soft_chi": {
+            "real": -19.853921618989745,
+            "imag": 24.279358911263337
+          },
+          "raw_fixed_p_chi_error": 0.017440362081052804,
+          "raw_fixed_p_covariance_error": 0.009647865331913325,
+          "centred_chi_error": 2.5642745292052878e-05,
+          "centred_covariance_error": 8.487607465821615e-05,
+          "tree_source_ray_error": 5.6120870500012686e-09
+        },
+        {
+          "q_over_p": 0.0078125,
+          "q": 3.90625e-05,
+          "centre_p": 0.005005894047992483,
+          "centre_cosine": 0.3035484242039399,
+          "finite_chi": {
+            "real": -20.030234556257426,
+            "imag": 24.49476494471229
+          },
+          "centred_soft_chi": {
+            "real": -20.030368849044144,
+            "imag": 24.494928875850256
+          },
+          "raw_fixed_p_chi_error": 0.008694332392293827,
+          "raw_fixed_p_covariance_error": 0.004830298309434738,
+          "centred_chi_error": 6.6972661792572435e-06,
+          "centred_covariance_error": 2.5668638891848336e-05,
+          "tree_source_ray_error": 1.4030217567920552e-09
+        },
+        {
+          "q_over_p": 0.00390625,
+          "q": 1.953125e-05,
+          "centre_p": 0.005002938360846717,
+          "centre_cosine": 0.3017757797728456,
+          "finite_chi": {
+            "real": -20.11825906646769,
+            "imag": 24.602306495639436
+          },
+          "centred_soft_chi": {
+            "real": -20.118293503253277,
+            "imag": 24.602348533383058
+          },
+          "raw_fixed_p_chi_error": 0.004340448624805298,
+          "raw_fixed_p_covariance_error": 0.002416601557164949,
+          "centred_chi_error": 1.709901813137417e-06,
+          "centred_covariance_error": 9.70204504574802e-06,
+          "tree_source_ray_error": 3.507554887228951e-10
+        }
+      ]
+    },
+    {
+      "mu": 1.2,
+      "p": 0.005,
+      "cosine": 0.8,
+      "ray": {
+        "real": 0.21851067371641786,
+        "imag": 0.14567378247761192
+      },
+      "soft_chi": {
+        "real": 11.082400248563307,
+        "imag": -13.510193622446849
+      },
+      "zero_drive_error": 5.227658735730246e-15,
+      "raw_stationary_phase_cancellation": {
+        "real": 1.249000902703301e-16,
+        "imag": 5.551115123125783e-17
+      },
+      "differences": [
+        {
+          "q_over_p": 0.015625,
+          "q": 7.8125e-05,
+          "centre_p": 0.005031304590154153,
+          "centre_cosine": 0.8027863206501373,
+          "finite_chi": {
+            "real": 11.20387260410224,
+            "imag": -13.658581331658652
+          },
+          "centred_soft_chi": {
+            "real": 11.205291690807591,
+            "imag": -13.660313939276747
+          },
+          "raw_fixed_p_chi_error": 0.010974322319717017,
+          "raw_fixed_p_covariance_error": 0.0143095566573166,
+          "centred_chi_error": 0.00012675841900375463,
+          "centred_covariance_error": 0.00016276749566277197,
+          "tree_source_ray_error": 5.6120870500012686e-09
+        },
+        {
+          "q_over_p": 0.0078125,
+          "q": 3.90625e-05,
+          "centre_p": 0.005015638690109821,
+          "centre_cosine": 0.8013996817446173,
+          "finite_chi": {
+            "real": 11.144569361592893,
+            "imag": -13.586137478352562
+          },
+          "centred_soft_chi": {
+            "real": 11.144931119344971,
+            "imag": -13.586579163722373
+          },
+          "raw_fixed_p_chi_error": 0.005616599150081473,
+          "raw_fixed_p_covariance_error": 0.007207339702434006,
+          "centred_chi_error": 3.248902551448626e-05,
+          "centred_covariance_error": 5.0946286163768886e-05,
+          "tree_source_ray_error": 1.4030217567920552e-09
+        },
+        {
+          "q_over_p": 0.00390625,
+          "q": 1.953125e-05,
+          "centre_p": 0.005007815927870317,
+          "centre_cosine": 0.800701479997337,
+          "finite_chi": {
+            "real": 11.113848299282715,
+            "imag": -13.548609476171535
+          },
+          "centred_soft_chi": {
+            "real": 11.113939623149935,
+            "imag": -13.548720977844301
+          },
+          "raw_fixed_p_chi_error": 0.002841134295309687,
+          "raw_fixed_p_covariance_error": 0.003616947548890148,
+          "centred_chi_error": 8.224606223276012e-06,
+          "centred_covariance_error": 1.982968601189417e-05,
+          "tree_source_ray_error": 3.507554887228951e-10
+        }
+      ]
+    },
+    {
+      "mu": 1.2,
+      "p": 0.02,
+      "cosine": -0.6,
+      "ray": {
+        "real": 0.0,
+        "imag": 0.1820922280970149
+      },
+      "soft_chi": {
+        "real": 0.052417751153391756,
+        "imag": 4.519125269152929e-18
+      },
+      "zero_drive_error": 1.2202540852077245e-15,
+      "raw_stationary_phase_cancellation": {
+        "real": 8.326672684688674e-17,
+        "imag": 0.0
+      },
+      "differences": [
+        {
+          "q_over_p": 0.015625,
+          "q": 0.0003125,
+          "centre_p": 0.019906642460809407,
+          "centre_cosine": -0.5949647221181081,
+          "finite_chi": {
+            "real": 0.04659340774949006,
+            "imag": 0.0
+          },
+          "centred_soft_chi": {
+            "real": 0.04662498664432857,
+            "imag": -3.071865895860724e-18
+          },
+          "raw_fixed_p_chi_error": 0.11111395044128726,
+          "raw_fixed_p_covariance_error": 0.04963851915450743,
+          "centred_chi_error": 0.0006772955256675533,
+          "centred_covariance_error": 0.0016508985717447655,
+          "tree_source_ray_error": 9.490914188059556e-08
+        },
+        {
+          "q_over_p": 0.0078125,
+          "q": 0.00015625,
+          "centre_p": 0.019953222885429438,
+          "centre_cosine": -0.5974911957058217,
+          "finite_chi": {
+            "real": 0.04953692503278723,
+            "imag": 0.0
+          },
+          "centred_soft_chi": {
+            "real": 0.04954478634556203,
+            "imag": -2.1402268605763034e-17
+          },
+          "raw_fixed_p_chi_error": 0.054958979681792815,
+          "raw_fixed_p_covariance_error": 0.024914551841196057,
+          "centred_chi_error": 0.00015867083813770708,
+          "centred_covariance_error": 0.0006149570728302037,
+          "tree_source_ray_error": 2.3727286892264798e-08
+        },
+        {
+          "q_over_p": 0.00390625,
+          "q": 7.8125e-05,
+          "centre_p": 0.019976586942691343,
+          "centre_cosine": -0.5987478008287118,
+          "finite_chi": {
+            "real": 0.05098514913777291,
+            "imag": 0.0
+          },
+          "centred_soft_chi": {
+            "real": 0.05098711009041351,
+            "imag": 1.8346518189995714e-17
+          },
+          "raw_fixed_p_chi_error": 0.02733047458343978,
+          "raw_fixed_p_covariance_error": 0.012478177704170259,
+          "centred_chi_error": 3.845977222720223e-05,
+          "centred_covariance_error": 0.0002752375656989836,
+          "tree_source_ray_error": 5.931821818807279e-09
+        }
+      ]
+    },
+    {
+      "mu": 1.2,
+      "p": 0.02,
+      "cosine": 0.3,
+      "ray": {
+        "real": 0.0,
+        "imag": 0.1820922280970149
+      },
+      "soft_chi": {
+        "real": -0.2030677756699405,
+        "imag": -2.1060904566971576e-18
+      },
+      "zero_drive_error": 1.2202540852077245e-15,
+      "raw_stationary_phase_cancellation": {
+        "real": 8.326672684688674e-17,
+        "imag": 0.0
+      },
+      "differences": [
+        {
+          "q_over_p": 0.015625,
+          "q": 0.0003125,
+          "centre_p": 0.020047429113542216,
+          "centre_cosine": 0.3070842632804921,
+          "finite_chi": {
+            "real": -0.19735859525061522,
+            "imag": 0.0
+          },
+          "centred_soft_chi": {
+            "real": -0.19736400721488295,
+            "imag": -8.445395733748612e-18
+          },
+          "raw_fixed_p_chi_error": 0.028114654826400354,
+          "raw_fixed_p_covariance_error": 0.02696652523800354,
+          "centred_chi_error": 2.742123218971524e-05,
+          "centred_covariance_error": 0.00022551254927868808,
+          "tree_source_ray_error": 9.490914188059556e-08
+        },
+        {
+          "q_over_p": 0.0078125,
+          "q": 0.00015625,
+          "centre_p": 0.02002357619196993,
+          "centre_cosine": 0.3035484242039399,
+          "finite_chi": {
+            "real": -0.20021896650111987,
+            "imag": 0.0
+          },
+          "centred_soft_chi": {
+            "real": -0.2002204456886792,
+            "imag": 4.08625156509225e-18
+          },
+          "raw_fixed_p_chi_error": 0.014028858884291864,
+          "raw_fixed_p_covariance_error": 0.01357229166941444,
+          "centred_chi_error": 7.387794759121798e-06,
+          "centred_covariance_error": 5.9536178512536615e-05,
+          "tree_source_ray_error": 2.3727286892264798e-08
+        },
+        {
+          "q_over_p": 0.00390625,
+          "q": 7.8125e-05,
+          "centre_p": 0.02001175344338687,
+          "centre_cosine": 0.3017757797728456,
+          "finite_chi": {
+            "real": -0.2016449111531588,
+            "imag": 0.0
+          },
+          "centred_soft_chi": {
+            "real": -0.20164529682468904,
+            "imag": 9.182780656923488e-18
+          },
+          "raw_fixed_p_chi_error": 0.007006845434178452,
+          "raw_fixed_p_covariance_error": 0.006808007957818967,
+          "centred_chi_error": 1.9126234844694703e-06,
+          "centred_covariance_error": 1.856440461527567e-05,
+          "tree_source_ray_error": 5.931821818807279e-09
+        }
+      ]
+    },
+    {
+      "mu": 1.2,
+      "p": 0.02,
+      "cosine": 0.8,
+      "ray": {
+        "real": 0.0,
+        "imag": 0.1820922280970149
+      },
+      "soft_chi": {
+        "real": 0.31723026899777146,
+        "imag": -6.1686580884551e-18
+      },
+      "zero_drive_error": 1.2202540852077245e-15,
+      "raw_stationary_phase_cancellation": {
+        "real": 8.326672684688674e-17,
+        "imag": 0.0
+      },
+      "differences": [
+        {
+          "q_over_p": 0.015625,
+          "q": 0.0003125,
+          "centre_p": 0.020125218360616613,
+          "centre_cosine": 0.8027863206501373,
+          "finite_chi": {
+            "real": 0.31690300577879077,
+            "imag": 0.0
+          },
+          "centred_soft_chi": {
+            "real": 0.31692658511438765,
+            "imag": -1.952848813472123e-18
+          },
+          "raw_fixed_p_chi_error": 0.0010316267108262233,
+          "raw_fixed_p_covariance_error": 0.07998073147805303,
+          "centred_chi_error": 7.439999263037203e-05,
+          "centred_covariance_error": 0.007870366918166954,
+          "tree_source_ray_error": 9.490914188059556e-08
+        },
+        {
+          "q_over_p": 0.0078125,
+          "q": 0.00015625,
+          "centre_p": 0.020062554760439284,
+          "centre_cosine": 0.8013996817446173,
+          "finite_chi": {
+            "real": 0.31709031173768876,
+            "imag": 0.0
+          },
+          "centred_soft_chi": {
+            "real": 0.3170963549305992,
+            "imag": -1.7356903686691025e-17
+          },
+          "raw_fixed_p_chi_error": 0.00044118507519748905,
+          "raw_fixed_p_covariance_error": 0.04158281780423674,
+          "centred_chi_error": 1.905790721480739e-05,
+          "centred_covariance_error": 0.0032247644409255094,
+          "tree_source_ray_error": 2.3727286892264798e-08
+        },
+        {
+          "q_over_p": 0.00390625,
+          "q": 7.8125e-05,
+          "centre_p": 0.020031263711481267,
+          "centre_cosine": 0.800701479997337,
+          "finite_chi": {
+            "real": 0.31716632049506266,
+            "imag": 0.0
+          },
+          "centred_soft_chi": {
+            "real": 0.3171678501089862,
+            "imag": -2.636656702903876e-18
+          },
+          "raw_fixed_p_chi_error": 0.00020158386181379372,
+          "raw_fixed_p_covariance_error": 0.021196387885619387,
+          "centred_chi_error": 4.822726903113391e-06,
+          "centred_covariance_error": 0.0015051408826789775,
+          "tree_source_ray_error": 5.931821818807279e-09
+        }
+      ]
+    },
+    {
+      "mu": 1.2,
+      "p": 0.02,
+      "cosine": -0.6,
+      "ray": {
+        "real": 0.0,
+        "imag": 0.5462766842910447
+      },
+      "soft_chi": {
+        "real": 0.06511974902439488,
+        "imag": 3.857271837169713e-19
+      },
+      "zero_drive_error": 1.0427155143552755e-15,
+      "raw_stationary_phase_cancellation": {
+        "real": 5.551115123125783e-17,
+        "imag": 0.0
+      },
+      "differences": [
+        {
+          "q_over_p": 0.015625,
+          "q": 0.0003125,
+          "centre_p": 0.019906642460809407,
+          "centre_cosine": -0.5949647221181081,
+          "finite_chi": {
+            "real": 0.057343571119784886,
+            "imag": 0.0
+          },
+          "centred_soft_chi": {
+            "real": 0.057385348856588636,
+            "imag": -6.014154919685562e-19
+          },
+          "raw_fixed_p_chi_error": 0.1194135115861229,
+          "raw_fixed_p_covariance_error": 0.011216315906858626,
+          "centred_chi_error": 0.0007280209606838189,
+          "centred_covariance_error": 0.00014279818575869515,
+          "tree_source_ray_error": 1.1733321799713887e-07
+        },
+        {
+          "q_over_p": 0.0078125,
+          "q": 0.00015625,
+          "centre_p": 0.019953222885429438,
+          "centre_cosine": -0.5974911957058217,
+          "finite_chi": {
+            "real": 0.06127330208584919,
+            "imag": 0.0
+          },
+          "centred_soft_chi": {
+            "real": 0.06128370243739756,
+            "imag": -7.25981193971366e-18
+          },
+          "raw_fixed_p_chi_error": 0.059067287515262835,
+          "raw_fixed_p_covariance_error": 0.0056236170530993305,
+          "centred_chi_error": 0.0001697082769924295,
+          "centred_covariance_error": 6.762995409482929e-05,
+          "tree_source_ray_error": 2.933330699933259e-08
+        },
+        {
+          "q_over_p": 0.00390625,
+          "q": 7.8125e-05,
+          "centre_p": 0.019976586942691343,
+          "centre_cosine": -0.5987478008287118,
+          "finite_chi": {
+            "real": 0.06320690252153927,
+            "imag": 0.0
+          },
+          "centred_soft_chi": {
+            "real": 0.0632094968344224,
+            "imag": 5.968958939014338e-18
+          },
+          "raw_fixed_p_chi_error": 0.02937429169358487,
+          "raw_fixed_p_covariance_error": 0.0028155640064312583,
+          "centred_chi_error": 4.104308708431169e-05,
+          "centred_covariance_error": 3.3345826937592675e-05,
+          "tree_source_ray_error": 7.333326840835277e-09
+        }
+      ]
+    },
+    {
+      "mu": 1.2,
+      "p": 0.02,
+      "cosine": 0.3,
+      "ray": {
+        "real": 0.0,
+        "imag": 0.5462766842910447
+      },
+      "soft_chi": {
+        "real": -0.2748081467190755,
+        "imag": -2.649567065769718e-19
+      },
+      "zero_drive_error": 1.0427155143552755e-15,
+      "raw_stationary_phase_cancellation": {
+        "real": 5.551115123125783e-17,
+        "imag": 0.0
+      },
+      "differences": [
+        {
+          "q_over_p": 0.015625,
+          "q": 0.0003125,
+          "centre_p": 0.020047429113542216,
+          "centre_cosine": 0.3070842632804921,
+          "finite_chi": {
+            "real": -0.2672016554957195,
+            "imag": 0.0
+          },
+          "centred_soft_chi": {
+            "real": -0.267209073195948,
+            "imag": -2.9853482585119688e-18
+          },
+          "raw_fixed_p_chi_error": 0.02767927848635354,
+          "raw_fixed_p_covariance_error": 0.004374705400714723,
+          "centred_chi_error": 2.7759911517137597e-05,
+          "centred_covariance_error": 0.00021847187317675627,
+          "tree_source_ray_error": 1.1733321799713887e-07
+        },
+        {
+          "q_over_p": 0.0078125,
+          "q": 0.00015625,
+          "centre_p": 0.02002357619196993,
+          "centre_cosine": 0.3035484242039399,
+          "finite_chi": {
+            "real": -0.27101269562770075,
+            "imag": 0.0
+          },
+          "centred_soft_chi": {
+            "real": -0.2710147179338659,
+            "imag": 1.7708718944169892e-18
+          },
+          "raw_fixed_p_chi_error": 0.013811275745237175,
+          "raw_fixed_p_covariance_error": 0.0021603080259008484,
+          "centred_chi_error": 7.461979115218018e-06,
+          "centred_covariance_error": 0.00010716021233280585,
+          "tree_source_ray_error": 2.933330699933259e-08
+        },
+        {
+          "q_over_p": 0.00390625,
+          "q": 7.8125e-05,
+          "centre_p": 0.02001175344338687,
+          "centre_cosine": 0.3017757797728456,
+          "finite_chi": {
+            "real": -0.2729124959580629,
+            "imag": 0.0
+          },
+          "centred_soft_chi": {
+            "real": -0.27291302265202877,
+            "imag": 2.146633575511907e-18
+          },
+          "raw_fixed_p_chi_error": 0.006898087933872116,
+          "raw_fixed_p_covariance_error": 0.0010732712397088031,
+          "centred_chi_error": 1.929896788241572e-06,
+          "centred_covariance_error": 5.339895063819474e-05,
+          "tree_source_ray_error": 7.333326840835277e-09
+        }
+      ]
+    },
+    {
+      "mu": 1.2,
+      "p": 0.02,
+      "cosine": 0.8,
+      "ray": {
+        "real": 0.0,
+        "imag": 0.5462766842910447
+      },
+      "soft_chi": {
+        "real": 0.4176245856302033,
+        "imag": -1.822764117519916e-19
+      },
+      "zero_drive_error": 1.0427155143552755e-15,
+      "raw_stationary_phase_cancellation": {
+        "real": 5.551115123125783e-17,
+        "imag": 0.0
+      },
+      "differences": [
+        {
+          "q_over_p": 0.015625,
+          "q": 0.0003125,
+          "centre_p": 0.020125218360616613,
+          "centre_cosine": 0.8027863206501373,
+          "finite_chi": {
+            "real": 0.4172213990332467,
+            "imag": 0.0
+          },
+          "centred_soft_chi": {
+            "real": 0.41725254787689586,
+            "imag": -1.1179897602226745e-18
+          },
+          "raw_fixed_p_chi_error": 0.0009654283076946595,
+          "raw_fixed_p_covariance_error": 0.0167184583275299,
+          "centred_chi_error": 7.465225510948087e-05,
+          "centred_covariance_error": 0.0003032107512712874,
+          "tree_source_ray_error": 1.1733321799713887e-07
+        },
+        {
+          "q_over_p": 0.0078125,
+          "q": 0.00015625,
+          "centre_p": 0.020062554760439284,
+          "centre_cosine": 0.8013996817446173,
+          "finite_chi": {
+            "real": 0.41745445783385676,
+            "imag": 0.0
+          },
+          "centred_soft_chi": {
+            "real": 0.41746244189852166,
+            "imag": -6.447167753729121e-18
+          },
+          "raw_fixed_p_chi_error": 0.0004073701649768491,
+          "raw_fixed_p_covariance_error": 0.008434538100015059,
+          "centred_chi_error": 1.9125228675881163e-05,
+          "centred_covariance_error": 0.00013167044116985474,
+          "tree_source_ray_error": 2.933330699933259e-08
+        },
+        {
+          "q_over_p": 0.00390625,
+          "q": 7.8125e-05,
+          "centre_p": 0.020031263711481267,
+          "centre_cosine": 0.800701479997337,
+          "finite_chi": {
+            "real": 0.4175475363250624,
+            "imag": 0.0
+          },
+          "centred_soft_chi": {
+            "real": 0.41754955730812787,
+            "imag": -3.34140067959623e-20
+          },
+          "raw_fixed_p_chi_error": 0.00018449417920316975,
+          "raw_fixed_p_covariance_error": 0.004236244027898402,
+          "centred_chi_error": 4.8401034801300725e-06,
+          "centred_covariance_error": 6.300877922220879e-05,
+          "tree_source_ray_error": 7.333326840835277e-09
+        }
+      ]
+    },
+    {
+      "mu": 1.2,
+      "p": 0.02,
+      "cosine": -0.6,
+      "ray": {
+        "real": 0.21851067371641786,
+        "imag": 0.14567378247761192
+      },
+      "soft_chi": {
+        "real": 0.10573878795954916,
+        "imag": -0.11968302487375826
+      },
+      "zero_drive_error": 1.3705587596604304e-15,
+      "raw_stationary_phase_cancellation": {
+        "real": 1.249000902703301e-16,
+        "imag": 5.551115123125783e-17
+      },
+      "differences": [
+        {
+          "q_over_p": 0.015625,
+          "q": 0.0003125,
+          "centre_p": 0.019906642460809407,
+          "centre_cosine": -0.5949647221181081,
+          "finite_chi": {
+            "real": 0.09192919859259574,
+            "imag": -0.10272665934729974
+          },
+          "centred_soft_chi": {
+            "real": 0.09200282243803215,
+            "imag": -0.10281674943558505
+          },
+          "raw_fixed_p_chi_error": 0.13693201852468503,
+          "raw_fixed_p_covariance_error": 0.01420651561310691,
+          "centred_chi_error": 0.0008432778859847028,
+          "centred_covariance_error": 0.00022039694330532131,
+          "tree_source_ray_error": 8.97933868445547e-08
+        },
+        {
+          "q_over_p": 0.0078125,
+          "q": 0.00015625,
+          "centre_p": 0.019953222885429438,
+          "centre_cosine": -0.5974911957058217,
+          "finite_chi": {
+            "real": 0.09890759071855004,
+            "imag": -0.11129505884739743
+          },
+          "centred_soft_chi": {
+            "real": 0.09892592010741585,
+            "imag": -0.1113174863660722
+          },
+          "raw_fixed_p_chi_error": 0.06773697211919967,
+          "raw_fixed_p_covariance_error": 0.007082886133290837,
+          "centred_chi_error": 0.00019449580571139437,
+          "centred_covariance_error": 9.338499870922304e-05,
+          "tree_source_ray_error": 2.244834803199773e-08
+        },
+        {
+          "q_over_p": 0.00390625,
+          "q": 7.8125e-05,
+          "centre_p": 0.019976586942691343,
+          "centre_cosine": -0.5987478008287118,
+          "finite_chi": {
+            "real": 0.10234152984003697,
+            "imag": -0.11551152312856927
+          },
+          "centred_soft_chi": {
+            "real": 0.10234610214669615,
+            "imag": -0.11551711756048333
+          },
+          "raw_fixed_p_chi_error": 0.033686813538742325,
+          "raw_fixed_p_covariance_error": 0.003536480975499216,
+          "centred_chi_error": 4.6815465557422296e-05,
+          "centred_covariance_error": 4.443617944430645e-05,
+          "tree_source_ray_error": 5.6120870500012686e-09
+        }
+      ]
+    },
+    {
+      "mu": 1.2,
+      "p": 0.02,
+      "cosine": 0.3,
+      "ray": {
+        "real": 0.21851067371641786,
+        "imag": 0.14567378247761192
+      },
+      "soft_chi": {
+        "real": -0.49543014440302896,
+        "imag": 0.6176037049002243
+      },
+      "zero_drive_error": 1.3705587596604304e-15,
+      "raw_stationary_phase_cancellation": {
+        "real": 1.249000902703301e-16,
+        "imag": 5.551115123125783e-17
+      },
+      "differences": [
+        {
+          "q_over_p": 0.015625,
+          "q": 0.0003125,
+          "centre_p": 0.020047429113542216,
+          "centre_cosine": 0.3070842632804921,
+          "finite_chi": {
+            "real": -0.48193800197470976,
+            "imag": 0.6010203338278302
+          },
+          "centred_soft_chi": {
+            "real": -0.4819516482906898,
+            "imag": 0.6010370114540386
+          },
+          "raw_fixed_p_chi_error": 0.027001378705376108,
+          "raw_fixed_p_covariance_error": 0.014344433476836794,
+          "centred_chi_error": 2.797119876313748e-05,
+          "centred_covariance_error": 0.0001549715724778778,
+          "tree_source_ray_error": 8.97933868445547e-08
+        },
+        {
+          "q_over_p": 0.0078125,
+          "q": 0.00015625,
+          "centre_p": 0.02002357619196993,
+          "centre_cosine": 0.3035484242039399,
+          "finite_chi": {
+            "real": -0.4886979593265768,
+            "imag": 0.6093291895871809
+          },
+          "centred_soft_chi": {
+            "real": -0.4887016687250434,
+            "imag": 0.6093337244407648
+          },
+          "raw_fixed_p_chi_error": 0.01347279897845513,
+          "raw_fixed_p_covariance_error": 0.007204632091027604,
+          "centred_chi_error": 7.500596353223055e-06,
+          "centred_covariance_error": 6.71860427940806e-05,
+          "tree_source_ray_error": 2.244834803199773e-08
+        },
+        {
+          "q_over_p": 0.00390625,
+          "q": 7.8125e-05,
+          "centre_p": 0.02001175344338687,
+          "centre_cosine": 0.3017757797728456,
+          "finite_chi": {
+            "real": -0.49206774723761726,
+            "imag": 0.6134710145652394
+          },
+          "centred_soft_chi": {
+            "real": -0.4920687120492525,
+            "imag": 0.6134721942470573
+          },
+          "raw_fixed_p_chi_error": 0.006728979285131421,
+          "raw_fixed_p_covariance_error": 0.0036102779217513587,
+          "centred_chi_error": 1.9378319748660828e-06,
+          "centred_covariance_error": 3.2243015224289856e-05,
+          "tree_source_ray_error": 5.6120870500012686e-09
+        }
+      ]
+    },
+    {
+      "mu": 1.2,
+      "p": 0.02,
+      "cosine": 0.8,
+      "ray": {
+        "real": 0.21851067371641786,
+        "imag": 0.14567378247761192
+      },
+      "soft_chi": {
+        "real": 0.7308962754907327,
+        "imag": -0.8827054385132753
+      },
+      "zero_drive_error": 1.3705587596604304e-15,
+      "raw_stationary_phase_cancellation": {
+        "real": 1.249000902703301e-16,
+        "imag": 5.551115123125783e-17
+      },
+      "differences": [
+        {
+          "q_over_p": 0.015625,
+          "q": 0.0003125,
+          "centre_p": 0.020125218360616613,
+          "centre_cosine": 0.8027863206501373,
+          "finite_chi": {
+            "real": 0.7302388243537501,
+            "imag": -0.8819687569133193
+          },
+          "centred_soft_chi": {
+            "real": 0.7302941419911835,
+            "imag": -0.8820359426236067
+          },
+          "raw_fixed_p_chi_error": 0.0008615776595113643,
+          "raw_fixed_p_covariance_error": 0.016574558049728905,
+          "centred_chi_error": 7.599896670412896e-05,
+          "centred_covariance_error": 0.00032134965801141404,
+          "tree_source_ray_error": 8.97933868445547e-08
+        },
+        {
+          "q_over_p": 0.0078125,
+          "q": 0.00015625,
+          "centre_p": 0.020062554760439284,
+          "centre_cosine": 0.8013996817446173,
+          "finite_chi": {
+            "real": 0.7306234078561746,
+            "imag": -0.8824052250361311
+          },
+          "centred_soft_chi": {
+            "real": 0.7306375854952161,
+            "imag": -0.8824224464624226
+          },
+          "raw_fixed_p_chi_error": 0.0003539973848242977,
+          "raw_fixed_p_covariance_error": 0.008337219841453346,
+          "centred_chi_error": 1.9470763897291643e-05,
+          "centred_covariance_error": 0.00014889040082879598,
+          "tree_source_ray_error": 2.244834803199773e-08
+        },
+        {
+          "q_over_p": 0.00390625,
+          "q": 7.8125e-05,
+          "centre_p": 0.020031263711481267,
+          "centre_cosine": 0.800701479997337,
+          "finite_chi": {
+            "real": 0.7307740686864852,
+            "imag": -0.8825726841435126
+          },
+          "centred_soft_chi": {
+            "real": 0.7307776572615936,
+            "imag": -0.8825770434046133
+          },
+          "raw_fixed_p_chi_error": 0.00015744738560253432,
+          "raw_fixed_p_covariance_error": 0.004181195616862819,
+          "centred_chi_error": 4.927622181423636e-06,
+          "centred_covariance_error": 7.281637761903308e-05,
+          "tree_source_ray_error": 5.6120870500012686e-09
+        }
+      ]
+    },
+    {
+      "mu": 1.2,
+      "p": 0.04,
+      "cosine": -0.6,
+      "ray": {
+        "real": 0.0,
+        "imag": 0.1820922280970149
+      },
+      "soft_chi": {
+        "real": 0.017483132297620475,
+        "imag": -3.988691585682392e-18
+      },
+      "zero_drive_error": 3.9602615848493647e-16,
+      "raw_stationary_phase_cancellation": {
+        "real": 8.326672684688674e-17,
+        "imag": 0.0
+      },
+      "differences": [
+        {
+          "q_over_p": 0.015625,
+          "q": 0.000625,
+          "centre_p": 0.03981328492161881,
+          "centre_cosine": -0.5949647221181081,
+          "finite_chi": {
+            "real": 0.01712096594949463,
+            "imag": 0.0
+          },
+          "centred_soft_chi": {
+            "real": 0.017125237116044176,
+            "imag": -2.0793702148458137e-18
+          },
+          "raw_fixed_p_chi_error": 0.02071518661304971,
+          "raw_fixed_p_covariance_error": 0.019839303500288997,
+          "centred_chi_error": 0.0002494077320274639,
+          "centred_covariance_error": 0.002604802634926681,
+          "tree_source_ray_error": 3.796364584561498e-07
+        },
+        {
+          "q_over_p": 0.0078125,
+          "q": 0.0003125,
+          "centre_p": 0.039906445770858875,
+          "centre_cosine": -0.5974911957058217,
+          "finite_chi": {
+            "real": 0.017306257961624393,
+            "imag": 0.0
+          },
+          "centred_soft_chi": {
+            "real": 0.017307314302866608,
+            "imag": -2.85451335867669e-18
+          },
+          "raw_fixed_p_chi_error": 0.010116856235204228,
+          "raw_fixed_p_covariance_error": 0.009421529308505608,
+          "centred_chi_error": 6.1034382558093296e-05,
+          "centred_covariance_error": 0.0011723924990206629,
+          "tree_source_ray_error": 9.490914188059556e-08
+        },
+        {
+          "q_over_p": 0.00390625,
+          "q": 0.00015625,
+          "centre_p": 0.039953173885382685,
+          "centre_cosine": -0.5987478008287118,
+          "finite_chi": {
+            "real": 0.017395738865837507,
+            "imag": 0.0
+          },
+          "centred_soft_chi": {
+            "real": 0.017396001500154107,
+            "imag": 2.0788628510288344e-18
+          },
+          "raw_fixed_p_chi_error": 0.0049987285055815315,
+          "raw_fixed_p_covariance_error": 0.0045882386100334046,
+          "centred_chi_error": 1.509739560540922e-05,
+          "centred_covariance_error": 0.0005684669791348113,
+          "tree_source_ray_error": 2.3727286892264798e-08
+        }
+      ]
+    },
+    {
+      "mu": 1.2,
+      "p": 0.04,
+      "cosine": 0.3,
+      "ray": {
+        "real": 0.0,
+        "imag": 0.1820922280970149
+      },
+      "soft_chi": {
+        "real": -0.009080137797914832,
+        "imag": 1.9239803006725595e-18
+      },
+      "zero_drive_error": 3.9602615848493647e-16,
+      "raw_stationary_phase_cancellation": {
+        "real": 8.326672684688674e-17,
+        "imag": 0.0
+      },
+      "differences": [
+        {
+          "q_over_p": 0.015625,
+          "q": 0.000625,
+          "centre_p": 0.04009485822708443,
+          "centre_cosine": 0.3070842632804921,
+          "finite_chi": {
+            "real": -0.008530292164576321,
+            "imag": 0.0
+          },
+          "centred_soft_chi": {
+            "real": -0.008530110437661265,
+            "imag": -3.545949241626971e-18
+          },
+          "raw_fixed_p_chi_error": 0.060554767512975095,
+          "raw_fixed_p_covariance_error": 0.06452883902896768,
+          "centred_chi_error": 2.1304169082468592e-05,
+          "centred_covariance_error": 0.000805552453043501,
+          "tree_source_ray_error": 3.796364584561498e-07
+        },
+        {
+          "q_over_p": 0.0078125,
+          "q": 0.0003125,
+          "centre_p": 0.04004715238393986,
+          "centre_cosine": 0.3035484242039399,
+          "finite_chi": {
+            "real": -0.008805144409586354,
+            "imag": 0.0
+          },
+          "centred_soft_chi": {
+            "real": -0.008805113792816212,
+            "imag": 2.385167511936523e-19
+          },
+          "raw_fixed_p_chi_error": 0.030285155847703964,
+          "raw_fixed_p_covariance_error": 0.032558915028584365,
+          "centred_chi_error": 3.4771578042187862e-06,
+          "centred_covariance_error": 0.00030460181595781287,
+          "tree_source_ray_error": 9.490914188059556e-08
+        },
+        {
+          "q_over_p": 0.00390625,
+          "q": 0.00015625,
+          "centre_p": 0.04002350688677374,
+          "centre_cosine": 0.3017757797728456,
+          "finite_chi": {
+            "real": -0.008942634696380207,
+            "imag": 0.0
+          },
+          "centred_soft_chi": {
+            "real": -0.008942628913714744,
+            "imag": 2.841331289343646e-18
+          },
+          "raw_fixed_p_chi_error": 0.015143283570674597,
+          "raw_fixed_p_covariance_error": 0.01635198039362111,
+          "centred_chi_error": 6.466404363400697e-07,
+          "centred_covariance_error": 0.0001370560113806574,
+          "tree_source_ray_error": 2.3727286892264798e-08
+        }
+      ]
+    },
+    {
+      "mu": 1.2,
+      "p": 0.04,
+      "cosine": 0.8,
+      "ray": {
+        "real": 0.0,
+        "imag": 0.1820922280970149
+      },
+      "soft_chi": {
+        "real": 0.04496542771571703,
+        "imag": 5.171271422063838e-18
+      },
+      "zero_drive_error": 3.9602615848493647e-16,
+      "raw_stationary_phase_cancellation": {
+        "real": 8.326672684688674e-17,
+        "imag": 0.0
+      },
+      "differences": [
+        {
+          "q_over_p": 0.015625,
+          "q": 0.000625,
+          "centre_p": 0.040250436721233226,
+          "centre_cosine": 0.8027863206501373,
+          "finite_chi": {
+            "real": 0.0443828536531365,
+            "imag": 0.0
+          },
+          "centred_soft_chi": {
+            "real": 0.04438411576071197,
+            "imag": -5.090435802232147e-19
+          },
+          "raw_fixed_p_chi_error": 0.012956044058197537,
+          "raw_fixed_p_covariance_error": 0.012217460494817286,
+          "centred_chi_error": 2.843601936937752e-05,
+          "centred_covariance_error": 0.002405809777659371,
+          "tree_source_ray_error": 3.796364584561498e-07
+        },
+        {
+          "q_over_p": 0.0078125,
+          "q": 0.0003125,
+          "centre_p": 0.04012510952087857,
+          "centre_cosine": 0.8013996817446173,
+          "finite_chi": {
+            "real": 0.044675463056790495,
+            "imag": 0.0
+          },
+          "centred_soft_chi": {
+            "real": 0.044675800918365385,
+            "imag": -1.486582132498298e-18
+          },
+          "raw_fixed_p_chi_error": 0.0064486133827029515,
+          "raw_fixed_p_covariance_error": 0.005896909339784411,
+          "centred_chi_error": 7.562518588266952e-06,
+          "centred_covariance_error": 0.001146841335242551,
+          "tree_source_ray_error": 9.490914188059556e-08
+        },
+        {
+          "q_over_p": 0.00390625,
+          "q": 0.00015625,
+          "centre_p": 0.040062527422962534,
+          "centre_cosine": 0.800701479997337,
+          "finite_chi": {
+            "real": 0.0448207926971831,
+            "imag": 0.0
+          },
+          "centred_soft_chi": {
+            "real": 0.044820880012416305,
+            "imag": 1.456684648448382e-18
+          },
+          "raw_fixed_p_chi_error": 0.003216582736593726,
+          "raw_fixed_p_covariance_error": 0.0028945793254377883,
+          "centred_chi_error": 1.948092790218424e-06,
+          "centred_covariance_error": 0.0005664026047993138,
+          "tree_source_ray_error": 2.3727286892264798e-08
+        }
+      ]
+    },
+    {
+      "mu": 1.2,
+      "p": 0.04,
+      "cosine": -0.6,
+      "ray": {
+        "real": 0.0,
+        "imag": 0.5462766842910447
+      },
+      "soft_chi": {
+        "real": 0.021895075343766043,
+        "imag": -1.7512466800721807e-18
+      },
+      "zero_drive_error": 2.9377834121980084e-16,
+      "raw_stationary_phase_cancellation": {
+        "real": 5.551115123125783e-17,
+        "imag": 0.0
+      },
+      "differences": [
+        {
+          "q_over_p": 0.015625,
+          "q": 0.000625,
+          "centre_p": 0.03981328492161881,
+          "centre_cosine": -0.5949647221181081,
+          "finite_chi": {
+            "real": 0.021397080199939786,
+            "imag": 0.0
+          },
+          "centred_soft_chi": {
+            "real": 0.02140268576975051,
+            "imag": -5.0583819279036795e-19
+          },
+          "raw_fixed_p_chi_error": 0.022744618870108,
+          "raw_fixed_p_covariance_error": 0.016340095754804444,
+          "centred_chi_error": 0.0002619096440058854,
+          "centred_covariance_error": 0.0004947056584661284,
+          "tree_source_ray_error": 4.693327057864599e-07
+        },
+        {
+          "q_over_p": 0.0078125,
+          "q": 0.0003125,
+          "centre_p": 0.039906445770858875,
+          "centre_cosine": -0.5974911957058217,
+          "finite_chi": {
+            "real": 0.02165165932860629,
+            "imag": 0.0
+          },
+          "centred_soft_chi": {
+            "real": 0.02165304590960039,
+            "imag": -7.245383988400633e-19
+          },
+          "raw_fixed_p_chi_error": 0.01111738650532011,
+          "raw_fixed_p_covariance_error": 0.00819942044222522,
+          "centred_chi_error": 6.403630232383766e-05,
+          "centred_covariance_error": 0.00024477019266402477,
+          "tree_source_ray_error": 1.1733321799713887e-07
+        },
+        {
+          "q_over_p": 0.00390625,
+          "q": 0.00015625,
+          "centre_p": 0.039953173885382685,
+          "centre_cosine": -0.5987478008287118,
+          "finite_chi": {
+            "real": 0.021774751662685027,
+            "imag": 0.0
+          },
+          "centred_soft_chi": {
+            "real": 0.021775096430080444,
+            "imag": 2.505132980931692e-19
+          },
+          "raw_fixed_p_chi_error": 0.005495467779482889,
+          "raw_fixed_p_covariance_error": 0.004106884704359143,
+          "centred_chi_error": 1.5833105333169605e-05,
+          "centred_covariance_error": 0.00012230796368423465,
+          "tree_source_ray_error": 2.933330699933259e-08
+        }
+      ]
+    },
+    {
+      "mu": 1.2,
+      "p": 0.04,
+      "cosine": 0.3,
+      "ray": {
+        "real": 0.0,
+        "imag": 0.5462766842910447
+      },
+      "soft_chi": {
+        "real": -0.013367124298677986,
+        "imag": 8.679278558721128e-19
+      },
+      "zero_drive_error": 2.9377834121980084e-16,
+      "raw_stationary_phase_cancellation": {
+        "real": 5.551115123125783e-17,
+        "imag": 0.0
+      },
+      "differences": [
+        {
+          "q_over_p": 0.015625,
+          "q": 0.000625,
+          "centre_p": 0.04009485822708443,
+          "centre_cosine": 0.3070842632804921,
+          "finite_chi": {
+            "real": -0.012630098475777384,
+            "imag": 0.0
+          },
+          "centred_soft_chi": {
+            "real": -0.012629970752905752,
+            "imag": -1.2760959877069474e-18
+          },
+          "raw_fixed_p_chi_error": 0.05513720127323829,
+          "raw_fixed_p_covariance_error": 0.006039987092272509,
+          "centred_chi_error": 1.0112681504193638e-05,
+          "centred_covariance_error": 0.00043345828253100283,
+          "tree_source_ray_error": 4.693327057864599e-07
+        },
+        {
+          "q_over_p": 0.0078125,
+          "q": 0.0003125,
+          "centre_p": 0.04004715238393986,
+          "centre_cosine": 0.3035484242039399,
+          "finite_chi": {
+            "real": -0.012998572325973949,
+            "imag": 0.0
+          },
+          "centred_soft_chi": {
+            "real": -0.012998560230457012,
+            "imag": -3.194698311675273e-19
+          },
+          "raw_fixed_p_chi_error": 0.02757152282488216,
+          "raw_fixed_p_covariance_error": 0.002984478902374938,
+          "centred_chi_error": 9.305274370815128e-07,
+          "centred_covariance_error": 0.00021544890551763847,
+          "tree_source_ray_error": 1.1733321799713887e-07
+        },
+        {
+          "q_over_p": 0.00390625,
+          "q": 0.00015625,
+          "centre_p": 0.04002350688677374,
+          "centre_cosine": 0.3017757797728456,
+          "finite_chi": {
+            "real": -0.013182853556814249,
+            "imag": 0.0
+          },
+          "centred_soft_chi": {
+            "real": -0.013182853037929546,
+            "imag": 9.706294360993798e-19
+          },
+          "raw_fixed_p_chi_error": 0.013785369070141872,
+          "raw_fixed_p_covariance_error": 0.0014831669229173076,
+          "centred_chi_error": 3.9360577036942215e-08,
+          "centred_covariance_error": 0.00010767124614785178,
+          "tree_source_ray_error": 2.933330699933259e-08
+        }
+      ]
+    },
+    {
+      "mu": 1.2,
+      "p": 0.04,
+      "cosine": 0.8,
+      "ray": {
+        "real": 0.0,
+        "imag": 0.5462766842910447
+      },
+      "soft_chi": {
+        "real": 0.05845707316375899,
+        "imag": 2.321098949429953e-18
+      },
+      "zero_drive_error": 2.9377834121980084e-16,
+      "raw_stationary_phase_cancellation": {
+        "real": 5.551115123125783e-17,
+        "imag": 0.0
+      },
+      "differences": [
+        {
+          "q_over_p": 0.015625,
+          "q": 0.000625,
+          "centre_p": 0.040250436721233226,
+          "centre_cosine": 0.8027863206501373,
+          "finite_chi": {
+            "real": 0.057704034510249885,
+            "imag": 0.0
+          },
+          "centred_soft_chi": {
+            "real": 0.05770571506609479,
+            "imag": -1.0724755959292636e-19
+          },
+          "raw_fixed_p_chi_error": 0.012881908257698383,
+          "raw_fixed_p_covariance_error": 0.024406993747668346,
+          "centred_chi_error": 2.9122866651542536e-05,
+          "centred_covariance_error": 0.0008382093731806842,
+          "tree_source_ray_error": 4.693327057864599e-07
+        },
+        {
+          "q_over_p": 0.0078125,
+          "q": 0.0003125,
+          "centre_p": 0.04012510952087857,
+          "centre_cosine": 0.8013996817446173,
+          "finite_chi": {
+            "real": 0.05808234545024004,
+            "imag": 0.0
+          },
+          "centred_soft_chi": {
+            "real": 0.058082794944533916,
+            "imag": -1.370902879152082e-19
+          },
+          "raw_fixed_p_chi_error": 0.006410305772052688,
+          "raw_fixed_p_covariance_error": 0.012340610001958272,
+          "centred_chi_error": 7.738854411284707e-06,
+          "centred_covariance_error": 0.0003979959677234024,
+          "tree_source_ray_error": 1.1733321799713887e-07
+        },
+        {
+          "q_over_p": 0.00390625,
+          "q": 0.00015625,
+          "centre_p": 0.040062527422962534,
+          "centre_cosine": 0.800701479997337,
+          "finite_chi": {
+            "real": 0.05827017931465326,
+            "imag": 0.0
+          },
+          "centred_soft_chi": {
+            "real": 0.058270295434032546,
+            "imag": 2.7368949499037793e-19
+          },
+          "raw_fixed_p_chi_error": 0.0031971126673101596,
+          "raw_fixed_p_covariance_error": 0.006204933651294559,
+          "centred_chi_error": 1.9927714184508745e-06,
+          "centred_covariance_error": 0.000196004906105712,
+          "tree_source_ray_error": 2.933330699933259e-08
+        }
+      ]
+    },
+    {
+      "mu": 1.2,
+      "p": 0.04,
+      "cosine": -0.6,
+      "ray": {
+        "real": 0.21851067371641786,
+        "imag": 0.14567378247761192
+      },
+      "soft_chi": {
+        "real": 0.035428046416559444,
+        "imag": -0.041510149040703534
+      },
+      "zero_drive_error": 3.958309602290317e-16,
+      "raw_stationary_phase_cancellation": {
+        "real": 1.249000902703301e-16,
+        "imag": 5.551115123125783e-17
+      },
+      "differences": [
+        {
+          "q_over_p": 0.015625,
+          "q": 0.000625,
+          "centre_p": 0.03981328492161881,
+          "centre_cosine": -0.5949647221181081,
+          "finite_chi": {
+            "real": 0.03452954207995483,
+            "imag": -0.040369800479538434
+          },
+          "centred_soft_chi": {
+            "real": 0.034539291685209444,
+            "imag": -0.040381924388617235
+          },
+          "raw_fixed_p_chi_error": 0.026602664148725585,
+          "raw_fixed_p_covariance_error": 0.016070029076330122,
+          "centred_chi_error": 0.0002927795542517938,
+          "centred_covariance_error": 0.00040812516394477454,
+          "tree_source_ray_error": 3.591734501687306e-07
+        },
+        {
+          "q_over_p": 0.0078125,
+          "q": 0.0003125,
+          "centre_p": 0.039906445770858875,
+          "centre_cosine": -0.5974911957058217,
+          "finite_chi": {
+            "real": 0.03498852521177312,
+            "imag": -0.04095210520463245
+          },
+          "centred_soft_chi": {
+            "real": 0.034990937655538984,
+            "imag": -0.0409551051597014
+          },
+          "raw_fixed_p_chi_error": 0.013016383341031739,
+          "raw_fixed_p_covariance_error": 0.008048131462627516,
+          "centred_chi_error": 7.146497262844415e-05,
+          "centred_covariance_error": 0.00019536367522470413,
+          "tree_source_ray_error": 8.97933868445547e-08
+        },
+        {
+          "q_over_p": 0.00390625,
+          "q": 0.00015625,
+          "centre_p": 0.039953173885382685,
+          "centre_cosine": -0.5987478008287118,
+          "finite_chi": {
+            "real": 0.03521069959444953,
+            "imag": -0.0412341360022835
+          },
+          "centred_soft_chi": {
+            "real": 0.03521129953860205,
+            "imag": -0.04123488205546326
+          },
+          "raw_fixed_p_chi_error": 0.0064375111716922645,
+          "raw_fixed_p_covariance_error": 0.004027549419777886,
+          "centred_chi_error": 1.765582930542859e-05,
+          "centred_covariance_error": 9.671318555652806e-05,
+          "tree_source_ray_error": 2.244834803199773e-08
+        }
+      ]
+    },
+    {
+      "mu": 1.2,
+      "p": 0.04,
+      "cosine": 0.3,
+      "ray": {
+        "real": 0.21851067371641786,
+        "imag": 0.14567378247761192
+      },
+      "soft_chi": {
+        "real": -0.02589776533479446,
+        "imag": 0.03482607404425775
+      },
+      "zero_drive_error": 3.958309602290317e-16,
+      "raw_stationary_phase_cancellation": {
+        "real": 1.249000902703301e-16,
+        "imag": 5.551115123125783e-17
+      },
+      "differences": [
+        {
+          "q_over_p": 0.015625,
+          "q": 0.000625,
+          "centre_p": 0.04009485822708443,
+          "centre_cosine": 0.3070842632804921,
+          "finite_chi": {
+            "real": -0.024594626239687584,
+            "imag": 0.03318029897185448
+          },
+          "centred_soft_chi": {
+            "real": -0.024594627003231857,
+            "imag": 0.0331803322867738
+          },
+          "raw_fixed_p_chi_error": 0.04836938027939271,
+          "raw_fixed_p_covariance_error": 0.018388402136054777,
+          "centred_chi_error": 8.068353331340306e-07,
+          "centred_covariance_error": 0.00028805210242619287,
+          "tree_source_ray_error": 3.591734501687306e-07
+        },
+        {
+          "q_over_p": 0.0078125,
+          "q": 0.0003125,
+          "centre_p": 0.04004715238393986,
+          "centre_cosine": 0.3035484242039399,
+          "finite_chi": {
+            "real": -0.025246166319595406,
+            "imag": 0.034003232649825715
+          },
+          "centred_soft_chi": {
+            "real": -0.025246201735239362,
+            "imag": 0.03400328534694684
+          },
+          "raw_fixed_p_chi_error": 0.024184278138274288,
+          "raw_fixed_p_covariance_error": 0.009277396528317437,
+          "centred_chi_error": 1.4991946313001026e-06,
+          "centred_covariance_error": 0.00013286143647014783,
+          "tree_source_ray_error": 8.97933868445547e-08
+        },
+        {
+          "q_over_p": 0.00390625,
+          "q": 0.00015625,
+          "centre_p": 0.04002350688677374,
+          "centre_cosine": 0.3017757797728456,
+          "finite_chi": {
+            "real": -0.025571985025652028,
+            "imag": 0.03441469832161243
+          },
+          "centred_soft_chi": {
+            "real": -0.02557199832760504,
+            "imag": 0.03441471709773023
+          },
+          "raw_fixed_p_chi_error": 0.012091052044331243,
+          "raw_fixed_p_covariance_error": 0.004659511873076939,
+          "centred_chi_error": 5.366837819150575e-07,
+          "centred_covariance_error": 6.499733163821335e-05,
+          "tree_source_ray_error": 2.244834803199773e-08
+        }
+      ]
+    },
+    {
+      "mu": 1.2,
+      "p": 0.04,
+      "cosine": 0.8,
+      "ray": {
+        "real": 0.21851067371641786,
+        "imag": 0.14567378247761192
+      },
+      "soft_chi": {
+        "real": 0.099854266941837,
+        "imag": -0.11992592344422626
+      },
+      "zero_drive_error": 3.958309602290317e-16,
+      "raw_stationary_phase_cancellation": {
+        "real": 1.249000902703301e-16,
+        "imag": 5.551115123125783e-17
+      },
+      "differences": [
+        {
+          "q_over_p": 0.015625,
+          "q": 0.000625,
+          "centre_p": 0.040250436721233226,
+          "centre_cosine": 0.8027863206501373,
+          "finite_chi": {
+            "real": 0.09857062871839115,
+            "imag": -0.11839175616016831
+          },
+          "centred_soft_chi": {
+            "real": 0.09857383638802436,
+            "imag": -0.11839577187247313
+          },
+          "raw_fixed_p_chi_error": 0.012818247236666408,
+          "raw_fixed_p_covariance_error": 0.023369408078584644,
+          "centred_chi_error": 3.336086346593173e-05,
+          "centred_covariance_error": 0.0005978905992790295,
+          "tree_source_ray_error": 3.591734501687306e-07
+        },
+        {
+          "q_over_p": 0.0078125,
+          "q": 0.0003125,
+          "centre_p": 0.04012510952087857,
+          "centre_cosine": 0.8013996817446173,
+          "finite_chi": {
+            "real": 0.09921572108786236,
+            "imag": -0.11916290803455712
+          },
+          "centred_soft_chi": {
+            "real": 0.09921657445019008,
+            "imag": -0.1191639746320288
+          },
+          "raw_fixed_p_chi_error": 0.006375670000956013,
+          "raw_fixed_p_covariance_error": 0.011757983296926823,
+          "centred_chi_error": 8.80919118391157e-06,
+          "centred_covariance_error": 0.0002922040774969909,
+          "tree_source_ray_error": 8.97933868445547e-08
+        },
+        {
+          "q_over_p": 0.00390625,
+          "q": 0.00015625,
+          "centre_p": 0.040062527422962534,
+          "centre_cosine": 0.800701479997337,
+          "finite_chi": {
+            "real": 0.09953585117352223,
+            "imag": -0.11954548020179986
+          },
+          "centred_soft_chi": {
+            "real": 0.0995360710776404,
+            "imag": -0.11954575484725977
+          },
+          "raw_fixed_p_chi_error": 0.0031790789049131645,
+          "raw_fixed_p_covariance_error": 0.0058973759041133006,
+          "centred_chi_error": 2.2617464256306936e-06,
+          "centred_covariance_error": 0.00014514038136872993,
+          "tree_source_ray_error": 2.244834803199773e-08
+        }
+      ]
+    }
+  ],
+  "covariance_jet_examples": [
+    {
+      "mu": 1.05,
+      "p": 0.005,
+      "step": 5.000000000000001e-07,
+      "covariance_error": 0.0,
+      "derivative_error": 2.070506071331914e-08
+    },
+    {
+      "mu": 1.05,
+      "p": 0.02,
+      "step": 2.0000000000000003e-06,
+      "covariance_error": 1.938665357029335e-20,
+      "derivative_error": 2.3521561682831285e-08
+    },
+    {
+      "mu": 1.05,
+      "p": 0.04,
+      "step": 4.000000000000001e-06,
+      "covariance_error": 3.0827714518934057e-19,
+      "derivative_error": 2.9677655550654844e-08
+    },
+    {
+      "mu": 1.2,
+      "p": 0.005,
+      "step": 5.000000000000001e-07,
+      "covariance_error": 1.1248599341893742e-16,
+      "derivative_error": 2.128224426116675e-08
+    },
+    {
+      "mu": 1.2,
+      "p": 0.02,
+      "step": 2.0000000000000003e-06,
+      "covariance_error": 1.5417869470422264e-20,
+      "derivative_error": 2.765946312390428e-08
+    },
+    {
+      "mu": 1.2,
+      "p": 0.04,
+      "step": 4.000000000000001e-06,
+      "covariance_error": 1.1352815111004506e-16,
+      "derivative_error": 4.5509916247457276e-08
+    }
+  ],
+  "rotation_examples": [
+    {
+      "mu": 1.05,
+      "p": 0.005,
+      "r": 0.011,
+      "q": 0.008,
+      "z": {
+        "real": 0.0,
+        "imag": 0.02
+      },
+      "covariance_error": 7.714143597715074e-16,
+      "projection_error": 2.941577186472419e-11
+    },
+    {
+      "mu": 1.05,
+      "p": 0.005,
+      "r": 0.011,
+      "q": 0.008,
+      "z": {
+        "real": 0.0,
+        "imag": 0.05
+      },
+      "covariance_error": 2.5005685086746423e-16,
+      "projection_error": 3.70985037600323e-11
+    },
+    {
+      "mu": 1.05,
+      "p": 0.005,
+      "r": 0.011,
+      "q": 0.008,
+      "z": {
+        "real": 0.03,
+        "imag": 0.02
+      },
+      "covariance_error": 6.328109818748801e-16,
+      "projection_error": 5.828450025963845e-12
+    },
+    {
+      "mu": 1.05,
+      "p": 0.02,
+      "r": 0.031,
+      "q": 0.02,
+      "z": {
+        "real": 0.0,
+        "imag": 0.02
+      },
+      "covariance_error": 3.9419860275884704e-16,
+      "projection_error": 8.583691918263377e-13
+    },
+    {
+      "mu": 1.05,
+      "p": 0.02,
+      "r": 0.031,
+      "q": 0.02,
+      "z": {
+        "real": 0.0,
+        "imag": 0.05
+      },
+      "covariance_error": 4.0651280028070256e-16,
+      "projection_error": 1.0559257892092582e-12
+    },
+    {
+      "mu": 1.05,
+      "p": 0.02,
+      "r": 0.031,
+      "q": 0.02,
+      "z": {
+        "real": 0.03,
+        "imag": 0.02
+      },
+      "covariance_error": 1.0194886585348656e-15,
+      "projection_error": 4.826778418273379e-13
+    },
+    {
+      "mu": 1.05,
+      "p": 0.04,
+      "r": 0.037,
+      "q": 0.02,
+      "z": {
+        "real": 0.0,
+        "imag": 0.02
+      },
+      "covariance_error": 1.1957040396711363e-15,
+      "projection_error": 2.5570695971264205e-13
+    },
+    {
+      "mu": 1.05,
+      "p": 0.04,
+      "r": 0.037,
+      "q": 0.02,
+      "z": {
+        "real": 0.0,
+        "imag": 0.05
+      },
+      "covariance_error": 1.485958269452082e-16,
+      "projection_error": 1.0087357556818147e-13
+    },
+    {
+      "mu": 1.05,
+      "p": 0.04,
+      "r": 0.037,
+      "q": 0.02,
+      "z": {
+        "real": 0.03,
+        "imag": 0.02
+      },
+      "covariance_error": 1.2379921707442252e-15,
+      "projection_error": 1.2379278260271317e-13
+    },
+    {
+      "mu": 1.2,
+      "p": 0.005,
+      "r": 0.011,
+      "q": 0.008,
+      "z": {
+        "real": 0.0,
+        "imag": 0.02
+      },
+      "covariance_error": 2.5566297269959478e-15,
+      "projection_error": 3.942610418881141e-12
+    },
+    {
+      "mu": 1.2,
+      "p": 0.005,
+      "r": 0.011,
+      "q": 0.008,
+      "z": {
+        "real": 0.0,
+        "imag": 0.05
+      },
+      "covariance_error": 5.594279976838126e-16,
+      "projection_error": 1.102249785601177e-11
+    },
+    {
+      "mu": 1.2,
+      "p": 0.005,
+      "r": 0.011,
+      "q": 0.008,
+      "z": {
+        "real": 0.03,
+        "imag": 0.02
+      },
+      "covariance_error": 6.869501653259506e-16,
+      "projection_error": 6.367879161625655e-11
+    },
+    {
+      "mu": 1.2,
+      "p": 0.02,
+      "r": 0.031,
+      "q": 0.02,
+      "z": {
+        "real": 0.0,
+        "imag": 0.02
+      },
+      "covariance_error": 1.2368384073215327e-15,
+      "projection_error": 9.439991285755233e-12
+    },
+    {
+      "mu": 1.2,
+      "p": 0.02,
+      "r": 0.031,
+      "q": 0.02,
+      "z": {
+        "real": 0.0,
+        "imag": 0.05
+      },
+      "covariance_error": 1.819045514285532e-15,
+      "projection_error": 2.7722999161474984e-13
+    },
+    {
+      "mu": 1.2,
+      "p": 0.02,
+      "r": 0.031,
+      "q": 0.02,
+      "z": {
+        "real": 0.03,
+        "imag": 0.02
+      },
+      "covariance_error": 4.0915789123272315e-15,
+      "projection_error": 3.9646670814914564e-13
+    },
+    {
+      "mu": 1.2,
+      "p": 0.04,
+      "r": 0.037,
+      "q": 0.02,
+      "z": {
+        "real": 0.0,
+        "imag": 0.02
+      },
+      "covariance_error": 2.151121405839299e-15,
+      "projection_error": 1.5827805997183166e-13
+    },
+    {
+      "mu": 1.2,
+      "p": 0.04,
+      "r": 0.037,
+      "q": 0.02,
+      "z": {
+        "real": 0.0,
+        "imag": 0.05
+      },
+      "covariance_error": 1.191774380636306e-16,
+      "projection_error": 4.082008325249341e-11
+    },
+    {
+      "mu": 1.2,
+      "p": 0.04,
+      "r": 0.037,
+      "q": 0.02,
+      "z": {
+        "real": 0.03,
+        "imag": 0.02
+      },
+      "covariance_error": 4.7778071070319905e-15,
+      "projection_error": 2.7548874313993193e-13
+    }
+  ],
+  "angular_examples": [
+    {
+      "mu": 1.05,
+      "ray": {
+        "real": 0.0,
+        "imag": 0.0
+      },
+      "analytic_chi": {
+        "real": 0.0886326580194634,
+        "imag": -6.349926817597949e-33
+      },
+      "orders": [
+        16,
+        32,
+        64
+      ],
+      "errors": [
+        1.064719926061737e-14,
+        8.611705284322874e-15,
+        1.2526116777196907e-14
+      ],
+      "finest_difference": 3.914411492874067e-15
+    },
+    {
+      "mu": 1.05,
+      "ray": {
+        "real": 0.0,
+        "imag": 0.10538351386168118
+      },
+      "analytic_chi": {
+        "real": -0.3339873215047775,
+        "imag": -1.7955981043865846e-35
+      },
+      "orders": [
+        16,
+        32,
+        64
+      ],
+      "errors": [
+        5.894037615169169e-09,
+        1.5789699279437866e-14,
+        1.7617980246066024e-14
+      ],
+      "finest_difference": 3.3407679510754015e-14
+    },
+    {
+      "mu": 1.05,
+      "ray": {
+        "real": 0.0,
+        "imag": 0.3161505415850435
+      },
+      "analytic_chi": {
+        "real": -0.47407706231430735,
+        "imag": 1.681038397219395e-35
+      },
+      "orders": [
+        16,
+        32,
+        64
+      ],
+      "errors": [
+        4.800816965309031e-15,
+        1.3465706104081409e-14,
+        1.7329778291062458e-14
+      ],
+      "finest_difference": 3.079548439364485e-14
+    },
+    {
+      "mu": 1.05,
+      "ray": {
+        "real": 0.1264602166340174,
+        "imag": 0.08430681108934496
+      },
+      "analytic_chi": {
+        "real": -0.9119498350622388,
+        "imag": 1.0770295343913254
+      },
+      "orders": [
+        16,
+        32,
+        64
+      ],
+      "errors": [
+        6.708172447215264e-08,
+        3.0531826202138434e-14,
+        1.6916603270013385e-14
+      ],
+      "finest_difference": 4.19436235564918e-14
+    },
+    {
+      "mu": 1.2,
+      "ray": {
+        "real": 0.0,
+        "imag": 0.0
+      },
+      "analytic_chi": {
+        "real": 0.012858720276745395,
+        "imag": -1.5028236481097487e-32
+      },
+      "orders": [
+        16,
+        32,
+        64
+      ],
+      "errors": [
+        1.1467042775997714e-14,
+        4.182097953599166e-15,
+        5.396255423998924e-15
+      ],
+      "finest_difference": 1.214157470399753e-15
+    },
+    {
+      "mu": 1.2,
+      "ray": {
+        "real": 0.0,
+        "imag": 0.1820922280970149
+      },
+      "analytic_chi": {
+        "real": 0.02711214144823121,
+        "imag": -3.677137038687071e-35
+      },
+      "orders": [
+        16,
+        32,
+        64
+      ],
+      "errors": [
+        4.773125350869194e-09,
+        1.9706847293827878e-14,
+        3.391113328520078e-14
+      ],
+      "finest_difference": 5.3617980556331684e-14
+    },
+    {
+      "mu": 1.2,
+      "ray": {
+        "real": 0.0,
+        "imag": 0.5462766842910447
+      },
+      "analytic_chi": {
+        "real": 0.03153993791382809,
+        "imag": -2.129639451983208e-35
+      },
+      "orders": [
+        16,
+        32,
+        64
+      ],
+      "errors": [
+        6.1600955035346405e-15,
+        2.904045016888129e-14,
+        3.102048086342436e-14
+      ],
+      "finest_difference": 6.006093103182762e-14
+    },
+    {
+      "mu": 1.2,
+      "ray": {
+        "real": 0.21851067371641786,
+        "imag": 0.14567378247761192
+      },
+      "analytic_chi": {
+        "real": 0.0471548861820017,
+        "imag": -0.04623073934634492
+      },
+      "orders": [
+        16,
+        32,
+        64
+      ],
+      "errors": [
+        4.2008116955411844e-08,
+        3.90714993426253e-14,
+        5.0475479047088884e-14
+      ],
+      "finest_difference": 8.420163042434121e-14
+    }
+  ],
+  "thermal_examples": [
+    {
+      "mu": 1.05,
+      "T": 0.00037216591771240014,
+      "T_scale_divisor": 256,
+      "ray": {
+        "real": 0.0,
+        "imag": 0.0
+      },
+      "orders": [
+        12,
+        24,
+        48
+      ],
+      "values": [
+        {
+          "real": 4.9068591356292836e-11,
+          "imag": 7.597893228109885e-43
+        },
+        {
+          "real": 4.906859135629304e-11,
+          "imag": -2.1892849843742304e-42
+        },
+        {
+          "real": 4.906859135629527e-11,
+          "imag": 1.2073079190684416e-42
+        }
+      ],
+      "refinement_errors": [
+        4.214409817406269e-15,
+        4.5436605843911146e-14
+      ],
+      "tail_error": 3.541558219262359e-10,
+      "pressure_hessian_target": 4.9068591356360535e-11,
+      "static_hessian_error": 1.3300413983102248e-12
+    },
+    {
+      "mu": 1.05,
+      "T": 0.00037216591771240014,
+      "T_scale_divisor": 256,
+      "ray": {
+        "real": 0.0,
+        "imag": 0.10538351386168118
+      },
+      "orders": [
+        12,
+        24,
+        48
+      ],
+      "values": [
+        {
+          "real": -5.966397689309766e-13,
+          "imag": 4.362982731359492e-44
+        },
+        {
+          "real": -5.966397690212655e-13,
+          "imag": -1.6677282773395292e-44
+        },
+        {
+          "real": -5.966397690030087e-13,
+          "imag": 1.0573416239822191e-44
+        }
+      ],
+      "refinement_errors": [
+        1.5132900824711975e-10,
+        3.05994376846628e-11
+      ],
+      "tail_error": 8.952475753090137e-08,
+      "pressure_hessian_target": null,
+      "static_hessian_error": null
+    },
+    {
+      "mu": 1.05,
+      "T": 0.00037216591771240014,
+      "T_scale_divisor": 256,
+      "ray": {
+        "real": 0.0,
+        "imag": 0.3161505415850435
+      },
+      "orders": [
+        12,
+        24,
+        48
+      ],
+      "values": [
+        {
+          "real": -9.638564931921275e-12,
+          "imag": 1.5331111533932677e-44
+        },
+        {
+          "real": -9.638564932041644e-12,
+          "imag": -3.1871110681650034e-45
+        },
+        {
+          "real": -9.638564932022301e-12,
+          "imag": 8.034906996458285e-45
+        }
+      ],
+      "refinement_errors": [
+        1.2488303005775061e-11,
+        2.0068780871925042e-12
+      ],
+      "tail_error": 7.316584826085442e-09,
+      "pressure_hessian_target": null,
+      "static_hessian_error": null
+    },
+    {
+      "mu": 1.05,
+      "T": 0.00037216591771240014,
+      "T_scale_divisor": 256,
+      "ray": {
+        "real": 0.1264602166340174,
+        "imag": 0.08430681108934496
+      },
+      "orders": [
+        12,
+        24,
+        48
+      ],
+      "values": [
+        {
+          "real": -7.585919977227726e-11,
+          "imag": 3.7113083276506644e-11
+        },
+        {
+          "real": -7.585919977248205e-11,
+          "imag": 3.7113083276779225e-11
+        },
+        {
+          "real": -7.585919977245355e-11,
+          "imag": 3.7113083276737304e-11
+        }
+      ],
+      "refinement_errors": [
+        4.037134427987164e-12,
+        6.002409404494118e-13
+      ],
+      "tail_error": 2.1181600060829577e-09,
+      "pressure_hessian_target": null,
+      "static_hessian_error": null
+    },
+    {
+      "mu": 1.05,
+      "T": 0.00018608295885620007,
+      "T_scale_divisor": 512,
+      "ray": {
+        "real": 0.0,
+        "imag": 0.0
+      },
+      "orders": [
+        12,
+        24,
+        48
+      ],
+      "values": [
+        {
+          "real": 3.0706807614893194e-12,
+          "imag": -8.068104687860551e-43
+        },
+        {
+          "real": 3.0706807614891332e-12,
+          "imag": 1.0306929205315386e-42
+        },
+        {
+          "real": 3.070680761488104e-12,
+          "imag": 4.710855241931613e-43
+        }
+      ],
+      "refinement_errors": [
+        6.063685275144597e-14,
+        3.3514685642232907e-13
+      ],
+      "tail_error": 4.335128535702708e-10,
+      "pressure_hessian_target": 3.070680761505537e-12,
+      "static_hessian_error": 5.6772404304644e-12
+    },
+    {
+      "mu": 1.05,
+      "T": 0.00018608295885620007,
+      "T_scale_divisor": 512,
+      "ray": {
+        "real": 0.0,
+        "imag": 0.10538351386168118
+      },
+      "orders": [
+        12,
+        24,
+        48
+      ],
+      "values": [
+        {
+          "real": -3.7511886110297665e-14,
+          "imag": 2.084200115601815e-45
+        },
+        {
+          "real": -3.751188613486019e-14,
+          "imag": -1.0407804595261984e-45
+        },
+        {
+          "real": -3.751188613515551e-14,
+          "imag": 5.673368807322155e-47
+        }
+      ],
+      "refinement_errors": [
+        6.547932148977137e-10,
+        7.872650482485227e-12
+      ],
+      "tail_error": 4.261864470498334e-07,
+      "pressure_hessian_target": null,
+      "static_hessian_error": null
+    },
+    {
+      "mu": 1.05,
+      "T": 0.00018608295885620007,
+      "T_scale_divisor": 512,
+      "ray": {
+        "real": 0.0,
+        "imag": 0.3161505415850435
+      },
+      "orders": [
+        12,
+        24,
+        48
+      ],
+      "values": [
+        {
+          "real": -6.029162455422017e-13,
+          "imag": 2.4978611251406055e-45
+        },
+        {
+          "real": -6.029162455759393e-13,
+          "imag": 1.61675534842011e-45
+        },
+        {
+          "real": -6.029162455766001e-13,
+          "imag": 5.01435174730233e-46
+        }
+      ],
+      "refinement_errors": [
+        5.595735651038659e-11,
+        1.0959650575195187e-12
+      ],
+      "tail_error": 3.523659356373444e-08,
+      "pressure_hessian_target": null,
+      "static_hessian_error": null
+    },
+    {
+      "mu": 1.05,
+      "T": 0.00018608295885620007,
+      "T_scale_divisor": 512,
+      "ray": {
+        "real": 0.1264602166340174,
+        "imag": 0.08430681108934496
+      },
+      "orders": [
+        12,
+        24,
+        48
+      ],
+      "values": [
+        {
+          "real": -4.746819099854076e-12,
+          "imag": 2.3193553689959233e-12
+        },
+        {
+          "real": -4.746819099914978e-12,
+          "imag": 2.319355369071066e-12
+        },
+        {
+          "real": -4.746819099917682e-12,
+          "imag": 2.319355369073958e-12
+        }
+      ],
+      "refinement_errors": [
+        1.830793510419488e-11,
+        7.494514297435858e-13
+      ],
+      "tail_error": 1.0999395721186304e-08,
+      "pressure_hessian_target": null,
+      "static_hessian_error": null
+    },
+    {
+      "mu": 1.2,
+      "T": 0.0013271355827413984,
+      "T_scale_divisor": 256,
+      "ray": {
+        "real": 0.0,
+        "imag": 0.0
+      },
+      "orders": [
+        12,
+        24,
+        48
+      ],
+      "values": [
+        {
+          "real": 2.200877531567493e-10,
+          "imag": -1.792950687194718e-39
+        },
+        {
+          "real": 2.2008775315663208e-10,
+          "imag": -1.3792142621667995e-39
+        },
+        {
+          "real": 2.200877531565824e-10,
+          "imag": 3.4168950131281793e-40
+        }
+      ],
+      "refinement_errors": [
+        5.326375536750508e-13,
+        2.2573966442425423e-13
+      ],
+      "tail_error": 1.651042523213099e-10,
+      "pressure_hessian_target": 2.2008775315676717e-10,
+      "static_hessian_error": 8.395354429258995e-13
+    },
+    {
+      "mu": 1.2,
+      "T": 0.0013271355827413984,
+      "T_scale_divisor": 256,
+      "ray": {
+        "real": 0.0,
+        "imag": 0.1820922280970149
+      },
+      "orders": [
+        12,
+        24,
+        48
+      ],
+      "values": [
+        {
+          "real": 1.4874061863557816e-10,
+          "imag": -3.2706630424167476e-43
+        },
+        {
+          "real": 1.4874061863534376e-10,
+          "imag": -7.719254375183035e-43
+        },
+        {
+          "real": 1.4874061863529387e-10,
+          "imag": -2.6037979997405927e-43
+        }
+      ],
+      "refinement_errors": [
+        1.5759132120897749e-12,
+        3.35411612189905e-13
+      ],
+      "tail_error": 5.628231186092207e-10,
+      "pressure_hessian_target": null,
+      "static_hessian_error": null
+    },
+    {
+      "mu": 1.2,
+      "T": 0.0013271355827413984,
+      "T_scale_divisor": 256,
+      "ray": {
+        "real": 0.0,
+        "imag": 0.5462766842910447
+      },
+      "orders": [
+        12,
+        24,
+        48
+      ],
+      "values": [
+        {
+          "real": 1.257279740728719e-10,
+          "imag": -1.6086851131598732e-43
+        },
+        {
+          "real": 1.2572797407259675e-10,
+          "imag": -7.863214399422603e-43
+        },
+        {
+          "real": 1.2572797407254283e-10,
+          "imag": -1.5968797774301833e-43
+        }
+      ],
+      "refinement_errors": [
+        2.1883829217750636e-12,
+        4.288769987629437e-13
+      ],
+      "tail_error": 8.255290111357807e-10,
+      "pressure_hessian_target": null,
+      "static_hessian_error": null
+    },
+    {
+      "mu": 1.2,
+      "T": 0.0013271355827413984,
+      "T_scale_divisor": 256,
+      "ray": {
+        "real": 0.21851067371641786,
+        "imag": 0.14567378247761192
+      },
+      "orders": [
+        12,
+        24,
+        48
+      ],
+      "values": [
+        {
+          "real": 5.93057507432109e-11,
+          "imag": 6.710057956383518e-11
+        },
+        {
+          "real": 5.930575074281564e-11,
+          "imag": 6.710057956417506e-11
+        },
+        {
+          "real": 5.930575074275202e-11,
+          "imag": 6.710057956423972e-11
+        }
+      ],
+      "refinement_errors": [
+        5.821143030034638e-12,
+        1.012913545869816e-12
+      ],
+      "tail_error": 2.7718969028748445e-09,
+      "pressure_hessian_target": null,
+      "static_hessian_error": null
+    },
+    {
+      "mu": 1.2,
+      "T": 0.0006635677913706992,
+      "T_scale_divisor": 512,
+      "ray": {
+        "real": 0.0,
+        "imag": 0.0
+      },
+      "orders": [
+        12,
+        24,
+        48
+      ],
+      "values": [
+        {
+          "real": 1.3765795719468309e-11,
+          "imag": -2.7002705346320834e-40
+        },
+        {
+          "real": 1.3765795719457266e-11,
+          "imag": 2.0537209499598668e-41
+        },
+        {
+          "real": 1.3765795719460798e-11,
+          "imag": -2.0274260396992354e-40
+        }
+      ],
+      "refinement_errors": [
+        8.021721580932082e-13,
+        2.5655425568297873e-13
+      ],
+      "tail_error": 1.9599759293666678e-10,
+      "pressure_hessian_target": 1.3765795719498548e-11,
+      "static_hessian_error": 2.7422903651740643e-12
+    },
+    {
+      "mu": 1.2,
+      "T": 0.0006635677913706992,
+      "T_scale_divisor": 512,
+      "ray": {
+        "real": 0.0,
+        "imag": 0.1820922280970149
+      },
+      "orders": [
+        12,
+        24,
+        48
+      ],
+      "values": [
+        {
+          "real": 9.300709042459469e-12,
+          "imag": -9.146665489481526e-44
+        },
+        {
+          "real": 9.300709042451526e-12,
+          "imag": -1.3173438866939958e-43
+        },
+        {
+          "real": 9.300709042442198e-12,
+          "imag": -1.6027256647286845e-44
+        }
+      ],
+      "refinement_errors": [
+        8.539377281837801e-13,
+        1.0029773072696008e-12
+      ],
+      "tail_error": 2.3750203918593802e-09,
+      "pressure_hessian_target": null,
+      "static_hessian_error": null
+    },
+    {
+      "mu": 1.2,
+      "T": 0.0006635677913706992,
+      "T_scale_divisor": 512,
+      "ray": {
+        "real": 0.0,
+        "imag": 0.5462766842910447
+      },
+      "orders": [
+        12,
+        24,
+        48
+      ],
+      "values": [
+        {
+          "real": 7.861309987133124e-12,
+          "imag": -2.1670602424258525e-44
+        },
+        {
+          "real": 7.861309987115915e-12,
+          "imag": -2.6070645120609494e-44
+        },
+        {
+          "real": 7.861309987110226e-12,
+          "imag": -1.5188292183573248e-44
+        }
+      ],
+      "refinement_errors": [
+        2.1891051463930646e-12,
+        7.236048836337639e-13
+      ],
+      "tail_error": 3.669789411050703e-09,
+      "pressure_hessian_target": null,
+      "static_hessian_error": null
+    },
+    {
+      "mu": 1.2,
+      "T": 0.0006635677913706992,
+      "T_scale_divisor": 512,
+      "ray": {
+        "real": 0.21851067371641786,
+        "imag": 0.14567378247761192
+      },
+      "orders": [
+        12,
+        24,
+        48
+      ],
+      "values": [
+        {
+          "real": 3.7042907724554585e-12,
+          "imag": 4.19557635006395e-12
+        },
+        {
+          "real": 3.704290772407717e-12,
+          "imag": 4.195576350149428e-12
+        },
+        {
+          "real": 3.704290772396825e-12,
+          "imag": 4.195576350150735e-12
+        }
+      ],
+      "refinement_errors": [
+        1.7493134159547616e-11,
+        1.9601101041681597e-12
+      ],
+      "tail_error": 1.3894196901208888e-08,
+      "pressure_hessian_target": null,
+      "static_hessian_error": null
+    }
+  ],
+  "declared_grids": {
+    "mu": [
+      1.05,
+      1.2
+    ],
+    "momenta": [
+      0.005,
+      0.02,
+      0.04
+    ],
+    "cosines": [
+      -0.6,
+      0.3,
+      0.8
+    ],
+    "point_T": 0.004,
+    "ray_over_sound_speed": [
+      {
+        "real": 0.0,
+        "imag": 0.5
+      },
+      {
+        "real": 0.0,
+        "imag": 1.5
+      },
+      {
+        "real": 0.6,
+        "imag": 0.4
+      }
+    ],
+    "q_over_p": [
+      0.015625,
+      0.0078125,
+      0.00390625
+    ],
+    "orders": [
+      12,
+      24,
+      48
+    ],
+    "angular_orders": [
+      16,
+      32,
+      64
+    ],
+    "tails": [
+      32.0,
+      40.0
+    ],
+    "thermal_scale_divisors": [
+      256,
+      512
+    ],
+    "momentum_FD_fraction": 0.0001,
+    "locked_before_first_audit": true
+  },
+  "thresholds": {
+    "identity_relative": 1e-09,
+    "method_relative": 1e-07,
+    "covariance_FD_relative": 1e-05,
+    "point_soft_relative": 0.01,
+    "quadrature_relative": 1e-06,
+    "tail_relative": 1e-08,
+    "original_causal_leakage": 1e-06
+  },
+  "matching_convention": "Exact vector centre k=p_vector+q_vector/2, not a fitted momentum shift; raw fixed-p errors retained",
+  "angular_evaluation": "Logarithmic moments or convergent fixed 64-term series when abs(b/a)<1/4; static removable numerator resolved analytically, no filter",
+  "equation_registry_ids": [
+    "t13.thermal_insertion.collisionless_streaming_source",
+    "t13.thermal_insertion.soft_angular_static_endpoint"
+  ],
+  "evidence_artifacts": [
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/Research_T13_Collisionless_Soft_Source.py",
+      "sha256": "a438a2afafbdb1d2d34de53d30796f48c72079c10e28efbe0effc4243213de2d"
+    },
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/t13_collisionless_soft_source_registry.json",
+      "sha256": "029cd472f2c9aeea24f2e02b9dd7ba911c6171b57ccf2e27b2ead933ce63c179"
+    },
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/test_t13_collisionless_soft_source.py",
+      "sha256": "58500f8a43761262ef72493b446e1a1c99879c0274502eca376466ac9df89b9f"
+    }
+  ],
+  "protected_evidence_hashes": [
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/t13_thermal_noether_response.json",
+      "sha256": "2765fdd0b0fe83bbed54c4af2fa3fde32f40694d109ea37978b0f7b5ec268906"
+    },
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/Research_T13_Thermal_Noether_Response.py",
+      "sha256": "c748024ad5bf783f14d3bf8e59e0406d4d2417bf4cf889168f7ad21081448943"
+    },
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/t13_finite_q_thermal_source.json",
+      "sha256": "a1583b3ef2ec12929078800a6c1ee18f10d0fe4243957206febd4098363c0a57"
+    },
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/t13_thermal_source_curvature.json",
+      "sha256": "b5955d1e8425795da7658ab161dadb6c649e1e03be1ecb113a7b2e3e29bf061e"
+    },
+    {
+      "path": "docs/core/02_equations/o2/uet_o2_action_thermal_observable_bridge.py",
+      "sha256": "1cf745562548bc9a61d9ebb86069b8aff73e2a776756aa9efe7ab1a45b669ebe"
+    },
+    {
+      "path": "docs/core/02_equations/o2/uet_o2_action_thermal_stiffness_beta.py",
+      "sha256": "c1c3278a79df611ddae2f67ff811022722ab0c56f68bf91cc5480f34db9a95e6"
+    },
+    {
+      "path": "docs/core/02_equations/covariant/uet_covariant_matter.py",
+      "sha256": "8a57d95e898a8ac962bbd749670ad0695b597281937da36496d2ec7e074f9c53"
+    },
+    {
+      "path": "docs/core/02_equations/covariant/uet_covariant_response.py",
+      "sha256": "7fb4b7228afb8ede0ac4f1664d634346ef46cc7678c94ed7b55d73645590c0c2"
+    }
+  ],
+  "controlling_blocker": "full_interacting_work_entropy_and_physical_heat_source_transport_open",
+  "open_blockers": [
+    "full_interacting_vacuum_thermal_matching_and_truncation_control",
+    "second_order_source_work_entropy_and_dissipative_balance",
+    "collision_operator_and_hydrodynamic_transport",
+    "independent_material_heat_source_readout_scale_and_uncertainty"
+  ],
+  "dependency_unlocked": [],
+  "gaussian_collisionless_soft_ray_response_closed": false,
+  "static_pressure_endpoint_checked_for_prescription": false,
+  "full_loop_source_current_Ward_closed": false,
+  "full_energy_exchange_ledger_closed": false,
+  "full_collision_operator_computed": false,
+  "physical_Kubo_emitted": false,
+  "full_SK_KMS_matching_closed": false,
+  "full_off_shell_source_matching_closed": false,
+  "full_real_self_energy_matched": false,
+  "full_two_loop_pressure_computed": false,
+  "all_parent_modes_and_quantum_Phi_loops_included": false,
+  "independent_alpha_Phi_K_admitted": false,
+  "controlled_full_action_truncation_error_established": false,
+  "full_core_unlock": false,
+  "core_composition_gate_overwritten": false,
+  "claim_promotion": false,
+  "state_variables": [
+    "classical_tree_radial_phase_Phi_fluctuations_and_covariance_velocities"
+  ],
+  "excluded_variables": [
+    "C",
+    "UET_Pi",
+    "R_gen",
+    "R_obs"
+  ],
+  "parameter_fitting": false,
+  "assigned_width": false,
+  "assigned_relaxation_time": false,
+  "clipping": false,
+  "cone_padding": false,
+  "xie_2026_accessed": false,
+  "prior_Xie_context_exposure_review": "REVIEW_REQUIRED",
+  "original_causal_status": "FAILED_CONSERVED_C_BASELINE_NOT_RETESTED_OR_REPAIRED",
+  "primary_references": [
+    "https://arxiv.org/abs/cond-mat/0307246",
+    "https://arxiv.org/abs/2310.01988"
+  ],
+  "claim_boundary": "Named acoustic-populated Gaussian soft ray and declared complex-frequency grids only. Full-domain momentum translation and source convention explicit; not continuum-interacting proof, hydrodynamic collisions, second-order heating/entropy, physical readout/alpha/Kubo or Full Topic13/Core/global closure.",
+  "report": {
+    "MAJOR_RESULT_CLOSURE": "PARTIAL",
+    "WHAT_IS_ACTUALLY_CLOSED": "Analytic Gaussian collisionless source ray including six exact streaming channels, centred finite-q convergence and independent static pressure-Hessian endpoint, conditional on checks",
+    "WHAT_REMAINS_OPEN": [
+      "full_interacting_vacuum_thermal_matching_and_truncation_control",
+      "second_order_source_work_entropy_and_dissipative_balance",
+      "collision_operator_and_hydrodynamic_transport",
+      "independent_material_heat_source_readout_scale_and_uncertainty"
+    ],
+    "DEPENDENCY_UNLOCKED": [],
+    "STATUS": "FAIL_SCOPED_COLLISIONLESS_SOFT_SOURCE",
+    "WHAT_CHANGED": "Resolved exact streaming channels and derived angular/static source limit",
+    "EQUATION_OR_MAPPING": "z=w*q; X_zero=(N0+t*N1+t^2*N2)/(-i*w-t*H_ii); angular logarithmic moments integrate streaming denominators without a collision rate",
+    "VERIFICATION": {
+      "analytic_covariance_and_momentum_jet": true,
+      "exact_zero_channel_drive_cancellation": true,
+      "local_rotation_matches_cartesian_covariance_and_projection": true,
+      "centred_soft_covariance_and_source_converge": true,
+      "centred_refinement_improves_covariance_and_chi": false,
+      "analytic_angular_transport_matches_quadrature": true,
+      "radial_refinement": true,
+      "thermal_tail": false,
+      "independent_static_pressure_hessian": true
+    },
+    "CONTROLLING_BLOCKER": "full_interacting_work_entropy_and_physical_heat_source_transport_open",
+    "NEXT_ACTION": "Actual source work/heat-readout and independent material mapping; interacting/collision/entropy completion without assigned rates",
+    "CLAIM_BOUNDARY": "Named acoustic-populated Gaussian soft ray and declared complex-frequency grids only. Full-domain momentum translation and source convention explicit; not continuum-interacting proof, hydrodynamic collisions, second-order heating/entropy, physical readout/alpha/Kubo or Full Topic13/Core/global closure."
+  }
+}

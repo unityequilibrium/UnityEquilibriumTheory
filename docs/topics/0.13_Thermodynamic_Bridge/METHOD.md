@@ -1,5 +1,346 @@
 ﻿# Method
 
+
+## Raw Source Parsing And Explicit Nuisance Basis (2026-10-03)
+
+[Derivation](Result/artifacts/T13_LOW_Q_SOURCE_BOUNDARY_2026-10-03.md)
+keeps raw author bytes, UTF16-LE/Latin1 encodings, lexical line and pressure
+identity, null NAN/-- cells and hybrid ancestry. Exact q4 omitted-basis
+alias is checked against a known polynomial control. Four-node generalized
+Vandermonde equals ordinary Vandermonde times e3(q), proving rank in this
+class; exact elimination and independent80-digit LU recover controls.
+Original scaled float64 gate remains FAIL, not replaced by high precision.
+Source coefficient interpolation is exposed diagnosis, not UET parameter
+calibration. No source interpolation, imputation or native I inference.
+
+## Explicit Multi-Q Estimator And Joint Differential (2026-10-03)
+
+[Derivation](Result/artifacts/T13_MULTI_Q_ESTIMATOR_2026-10-03.md)
+uses exact three-node Lagrange weights on E/q versus q^2, independently
+checked by Newton divided differences. The full interpolation Jacobian
+includes energy and q dependence; the kinetic inverse includes native
+r0/D/s with all correlations left explicit. Exact common multiplicative
+axes cancel in the ratio, not in coefficient covariance or nonlinear
+resolution bias. Rational tree envelopes and a triangle inequality give
+a conservative sufficient energy-only target box; no measured noise,
+physical parameter tuning, optimal budget or parent error asserted.
+
+## Q5 Determinant Series And Conditional Inverse (2026-10-03)
+
+[Derivation](Result/artifacts/T13_Q5_DISPERSION_INFORMATION_2026-10-03.md)
+matches E^2 coefficients through q6 in the full three-mode determinant,
+without fitting. The unit-free ratio A_Q*C_Q/B_Q^2 is strictly monotone
+in positive kinetic I with other native inputs known. Full matrix roots
+and50/80-digit monotone polynomial roots independently check it. Exact
+rational residual cancellation and derivative bounds give a tree envelope;
+the rounded-state witness is not a certified physical EOS. A separately
+declared finite-q bias diagnostic and full-covariance gradient expose
+inference limitations. No experimental coefficient, rate or width input.
+
+## Conserved Density Source And Restricted Information (2026-10-03)
+
+[Derivation](Result/artifacts/T13_NOETHER_DENSITY_READOUT_2026-10-03.md)
+varies external a0=delta_mu in the existing tree action with seagull s*a0.
+Six-state evolution and mode projections check chi_nn, q0 closed charge
+and static d(mu*s)/dmu. Density modes, not raw Phi, feed the conditional
+detector map. Restricted gain and action-unit information analyses give
+explicit conditional inverses and full-covariance sensitivity; no fitted
+scale, invented uncertainty, assigned linewidth or physical data admission.
+
+## Even Covariance Hierarchy Without Amplitude Fit (2026-10-03)
+
+[Derivation](Result/artifacts/T13_GAUSSIAN_WORK_REMAINDER_2026-10-03.md)
+evolves zero-amplitude covariance derivatives at orders2/4/6 and checks
+work coefficients against endpoint rotating energy plus the independent
+old finite flow. Positive-energy whitening, Peano-Baker majorization and
+block parity give a conditional even-tail formula. Analytic all-time tone
+triangle bounds, not sampled cone claims; no physical heat/readout map.
+The old pulse, amplitudes, thresholds and FAIL stay intact.
+
+## Cyclic Source Work Without Assigned Dissipation (2026-10-03)
+
+[Work derivation](Result/artifacts/T13_GAUSSIAN_SOURCE_WORK_2026-10-03.md)
+constructs a compact Phi-only source through the unsourced radial/phase
+rows. Real-pair orientation is twice the single-oriented predecessor.
+Exact Liouvillian-tone integration and independent stimulated transition
+work resolve the zero-amplitude coefficient without an amplitude fit.
+Original finite-amplitude and binary64 controls remain FAIL; no parameter,
+pulse or gate is changed. Conditional entropy is not a thermal readout.
+
+## Collisionless Streaming And Full Momentum Domain (2026-10-03)
+
+[Derivation](Result/artifacts/T13_COLLISIONLESS_SOFT_SOURCE_2026-10-03.md)
+uses a phase-local covariance and first-order momentum perturbation to
+resolve six exact opposite-frequency channels without rates or filtering.
+Convergence holds vector centre fixed; analytic angular moments and
+full-domain Bose quadrature with explicit tail complement are independently
+checked. Raw finite-tail/moving-centre failures and 35/50-digit equivalence
+remain visible. Not physical thermalization, heat transport or Kelvin alpha.
+
+## Noether Moments And Stationary Contact Completion (2026-10-03)
+
+[Derivation](Result/artifacts/T13_THERMAL_NOETHER_RESPONSE_2026-10-03.md)
+uses symmetrized density/current and quadratic energy/flux moments of the
+two-momentum covariance. Compute f/S from both initial covariances and the
+active stationary shift; delta_d=D^-1[-delta_f-M d]. Mean and covariance
+charge divergences cancel. Energy contacts and arbitrary-covariance Euler
+evolution are independent checks. Continuum contact averaging needs full
+momentum translation; finite cutoff effects are not hidden. h0=0 first-order
+energy is not second-order heating, entropy or physical transport/KMS.
+
+## Two-Momentum Covariance And Equilibrium Bose Limit (2026-10-03)
+
+[Derivation](Result/artifacts/T13_FINITE_Q_THERMAL_SOURCE_2026-10-03.md)
+uses both acoustic covariances in a two-momentum Sylvester response and
+checks against paired thermal propagator insertions. The static number
+channel uses a symmetric Bose divided difference with its exact diagonal
+limit, not a relaxation parameter. External q source dressing and quartic/
+background contact stay action-derived. Exact batched Schur acoustic and
+companion heavy modes retain the scalar method and the same full grids.
+Tree source continuity is checked; complete loop-current/energy, collision
+and physical heat/readout mappings remain separate obligations.
+
+## Named Acoustic Thermal Insertion With Virtual Tree Response (2026-10-03)
+
+[Derivation](Result/artifacts/T13_THERMAL_VIRTUAL_RESPONSE_2026-10-03.md)
+uses tree spectral completeness with only acoustic thermal population.
+Compute mixed virtual terms and quartic/tadpole-background contact from
+T/Q/Hessian, not the static residual. Independently solve 36-component
+real-time covariance response to check the matrix bubble and original
+external source dressing. Grand-canonical population variance belongs
+to the static limit, not homogeneous charge-conserving dynamics. The
+explicit named extension does not add heavy quantum/vacuum occupation
+to the old phase-EFT branch. Finite-q/collision/physical matching is open.
+
+## Same-Action Thermal Source Hessian (2026-10-03)
+
+[Derivation](Result/artifacts/T13_THERMAL_SOURCE_CURVATURE_2026-10-03.md)
+differentiates the stationary source path and gyroscopic acoustic eigenmode,
+including background acceleration, quartic/seagull and virtual polarization.
+Differentiate thermal pressure on a fixed p domain, checking reoptimized
+tree states and energy/kernel derivatives independently. Keep the static
+population/pair matching residual as an obligation, not fitted contact.
+Exact stationary phase cancellation removes a known tiny-p numerical loss;
+raw errors and first-failure artifact remain visible. Full dynamics open.
+
+## Off-Shell Landau Source And Flux Bounds (2026-10-03)
+
+[Derivation](Result/artifacts/T13_ACOUSTIC_SOURCE_LANDAU_2026-10-03.md)
+uses the same parent/cubic tensor, negative-positive acoustic legs and Bose
+difference in a positive Gram kernel. Check on-shell optical projection,
+independent angular roots and source coordinate covariance. Derive group
+velocity by differentiating the gyroscopic kernel; positive K/V0 gives
+H-F>=0 and the acoustic Schur root gives E>=cp. Distinguish conditional
+support exclusion from unresolved finite domains; do not fill cq..Eq gap.
+Full local real/contact/thermal and material readout remain separate.
+
+## Off-Shell Pair Source Interface (2026-10-03)
+
+[Derivation](Result/artifacts/T13_ACOUSTIC_SOURCE_PAIR_2026-10-03.md) uses
+chi_hh=ePhi^T D^-1 ePhi with the original +h Phi action and the full tree
+Schur expression. Internal positive-frequency acoustic polarizations give
+R_pair=integral V Vdagger and Im delta_chi=d_hdagger R_pair d_h. Static
+source derivatives, independent matrix pole and modal optical projection
+check the interface. Gram accumulation/contraction uses 50 decimal digits
+of the same samples to avoid double-matrix cancellation, not new physics.
+Full Landau/contact/local real/thermal and detector/scale remain open.
+
+## Tree Acoustic Mode Projection (2026-10-03)
+
+Use [the modal derivation](Result/artifacts/T13_ACOUSTIC_MODAL_CUTS_2026-10-03.md).
+Derive symplectic residue from the same parent kernel, verify by inverted
+matrix pole, derive all cubic tensor entries from shifted potential and
+project on signed acoustic polarizations. Cancel exact on-shell linear
+frequency sums analytically, rejecting unsupported/unbalanced legs. Replace
+LO cut amplitude without double-counting residues; recover soft EFT/known
+limits and retain all off-shell/all-mode/real-pressure/input obligations.
+
+## Thermal Cuts And Independent Static Coherence (2026-10-03)
+
+Use [the thermal derivation](Result/artifacts/T13_THERMAL_CUT_STIFFNESS_2026-10-03.md).
+Separate pair and signed Landau phase space, exact-tree internal energy
+support and Bose factors. Rearrange the original parent root to retain its
+small curvature, rather than clip endpoints. Verify soft coefficient by a
+Bose moment and static linear-loop bubble+tadpole by analytic P(X,h), fully
+relaxed flow pressure and independent angular/radial integrals. Distinguish
+static LO and curvature-resolved leading-cut orders. Full residues/vertices,
+real matching, thermal sunset and source/entropy/transport remain open.
+
+## Vacuum Cut and Subtracted Matching Method (2026-10-03)
+
+Use [the new derivation](Result/artifacts/T13_VACUUM_CUT_LOG_2026-10-03.md).
+Derive the cut from canonical cubic vertices and check the original spatial
+phase-space integral, retarded analytic continuation and independent
+four-subtracted Cauchy integral. Keep near-shell internal curvature and
+finite local Wilson/source conditions separate from the computed log.
+Construct equal-cut/different-real local examples and restricted matching
+rank; distinguish off-shell source conventions from physical observables.
+Formal UV integration is not EFT UV validity. No fitted width or external
+input, full thermal-sunset/KMS/normal/heat transport closure is implied.
+
+## Phase Interaction and On-Shell Cut Method (2026-10-02)
+
+Use [the interaction derivation](Result/artifacts/T13_LOW_T_INTERACTIONS_2026-10-02.md).
+Differentiate the same tree P(X,h) through P4, canonicalize with chi, and
+check vertices against directly reoptimized pressure in time/space gradient
+directions. Derive the q5 parent coefficient and T8 Bose moment separately.
+For the convex low-q branch, integrate the actual energy-conserving angular
+root and LO cubic amplitude; distinguish occupation rate from pole width.
+Keep higher-derivative residues/vertices and real self-energy open. One
+explicitly subtracted quartic thermal-thermal Wick term is not the full
+two-loop pressure. Audit source access, energy/Bose identity, coordinate
+invariance and known-limit negative controls; do not assign damping or
+import nonrelativistic coefficients. No full KMS/transport admission follows.
+
+## Tree-Matched Phase Thermal EFT (2026-10-02)
+
+Use the [new-branch derivation](Result/artifacts/T13_LOW_T_PHASE_EFT_2026-10-02.md).
+Jointly eliminate radial/classical Phi at tree order with external h E3;
+derive P0(X,h), chi/rho and parent phase dispersion from the unchanged
+action trial inputs. Quantize the low-energy phase only; compute the finite
+thermal determinant, T4/T6 coefficients and source/entropy derivatives in
+that order. Full quantum vacuum/Wilson matching is not included. Cross-check
+Schur versus polynomial/first-order energy parent, actual Bose pressure and
+entropy, moving angular partition and implicit source derivatives. Separate
+physical kinetic ambiguity from Phi-coordinate rescaling. Do not import
+old Hartree masses/poles or append a phase gas to its potential. Conditional
+measurement inversion is not SI calibration or actual detector feasibility.
+
+## Joint Hartree Low-Temperature Validity (2026-10-02)
+
+Use the [conditional compatibility derivation](Result/artifacts/T13_HARTREE_LOW_T_VALIDITY_2026-10-02.md).
+Solve unchanged joint zero-T states, retaining internal gaps, local static
+block and scaled stationary Jacobian. Differentiate insertion/double-bubble
+terms: off-shell entropy includes mass residuals; on shell it is internal
+Bose entropy. Check reoptimized envelopes and independently scaled adaptive
+integration. Compare the positive-gap asymptotic with conditional entropy
+of one external linear bosonic mode; source coefficients and upper-plane
+expansion are independent controls. Never insert that comparator into the
+potential or repair the old internal mass. This is an approximation-admission
+boundary, not global physical proof.
+
+## Joint Classical-Phi Source Response (2026-10-02)
+
+Use the [joint retarded derivation](Result/artifacts/T13_HARTREE_JOINT_PHI_RESPONSE_2026-10-02.md).
+Keep epsilon*Z_Phi*(q^2-z^2) from the original action and the mass-source
+vertex (-sqrt(2)*gamma,0,0). Build the actual 3-field external response and
+gauge source Hessians from the covariance bubble at the joint a/b states.
+Eliminate radial and Phi together, retaining their block and covariance
+determinants. Solve new local phase roots, not old fixed-Phi answers.
+Check dynamic counterterms with the independently derived mass slope and
+normalization curvature, upper absolute loops and reoptimized static charge
+potential. No phenomenological damping or quantum Phi loop is added.
+
+## Homogeneous Classical-Phi Stationarity (2026-10-02)
+
+Use the [joint static derivation](Result/artifacts/T13_HARTREE_JOINT_PHI_STATIC_2026-10-02.md).
+Retain N(m2(Phi)): V_b=V_R-N, dm_b^2/dPhi=-gamma/(1+4uD).
+Solve all three matter equations and V_R'-gamma*(s+I_s+I_p)/2=0 together;
+Phi is a classical state, not a fitted coefficient. Explicit residual scales
+are E^2/E^3 at Q=1 E. Check exact counterterm algebra, multiple orders/seeds,
+the actual mass-source bubble, independently reoptimized potential and the
+radially relaxed Phi curvature. Keep the old fixed-Phi background/poles as
+predecessors; they do not supply new-branch dynamics or material admission.
+
+## Actual Finite-q Principal Kernel and Pole (2026-10-02)
+
+Use the [separate pole verifier and derivation](Result/artifacts/T13_HARTREE_FINITE_Q_POLES_2026-10-02.md).
+Freeze radial nodes before searching frequency; retain complex Cauchy
+subtraction, original source-frequency polynomials and all contacts. Compute
+the equal-mass vacuum angular reference in centered shell coordinates with
+a bounded parity series. Independently check lower source-signature
+reciprocity with unsplit Matsubara moments and direct lower integration.
+Continue each loop using the accepted finite-q discontinuity and solve
+Gamma_phase(q,z)=0, retaining radial/covariance factors and the uneliminated
+determinant. Refine orders, seeds, fixed grids, tail paths and derivatives.
+No width or q*v_soft answer is assigned. This is a local fixed-Phi
+collisionless result; older density/soft verifiers retain their own scope.
+
+## Finite-q Local Discontinuity (2026-10-02)
+
+Use exact signed collinear endpoints, not a shifted soft endpoint. Continue
+ell=p_j+q*v, the inverse shell, residues, derivative vertices and Bose difference
+analytically; do not take abs(complex energy/derivative). Integrate each full
+complex endpoint-to-infinity tail. Check the real boundary with all-channel
+original cuts and independent forward angular delta roots; refine both tail
+order and a return-to-real path. See [scope and derivation](Result/artifacts/T13_HARTREE_FINITE_Q_DISCONTINUITY_2026-10-02.md).
+This supplies D(q,v) for a later B_lower-2*pi*i*D continuation. No principal
+kernel or finite-q pole is computed by this density-only verifier.
+
+## Collisionless Soft Phase Kernel (2026-10-01)
+
+The [local Landau continuation](Result/artifacts/T13_HARTREE_SOFT_POLES_2026-10-01.md)
+derives D(v) from the angular discontinuity and same-dispersion complex
+velocity thresholds: `B_L=B_principal_lower-2*pi*i*D_analytic`. Solve the
+full complex phase inverse, not only its real part. Keep radial/covariance
+factors in the bounded winding diagnostic. This is a conditional fixed-
+Phi collisionless soft pole, not a physical sound/transport coefficient,
+finite-q uniform remainder, global stability proof or material validation.
+
+Take z=v*q with the same internal poles and static source anchor. Only
+equal-branch thermal divided differences change at leading q: integrate
+N'(p)*w*c/(v-w*c+i0) with exact angular moments, retaining the analytic
+Landau cut and full radial domain. Reoptimize covariance and eliminate
+the radial mean field only. Source Ward gives
+`Gamma_phase/q^2 -> -l^T*Gamma_AA_radial*l/s`, l=(v,i,0,0).
+Verify against both the full finite-q phase inverse and radial-current
+contraction, not a static susceptibility ratio or on-shell transverse Pi.
+See [derivation and actual numerical domain](Result/artifacts/T13_HARTREE_SOFT_COLLECTIVE_2026-10-01.md).
+Nonzero absorption at Re inverse=0 is not a real-frequency pole or a
+derived collision rate; controlled complex continuation remains open.
+
+## Scoped Real-Axis Source Response (2026-10-01)
+
+Use `Research_T13_Hartree_Real_Axis.py` with the unchanged stationary masses
+and source convention. Invert each outgoing pole energy to perform an exact
+angular Cauchy subtraction; retain its analytic -pi*g on-shell jump and the
+surviving time-source polynomial contact. Independently solve the forward
+angular energy equation and delta Jacobian, then integrate the cut with a
+different radial map. Full-domain radial quadrature, log1p and algebraic
+residues control UV cancellation without clipping or a cutoff. Reoptimize
+covariance and mean field exactly as in the current predecessor; no Ward
+projector, assigned width or new state. See [derivation and domain](Result/artifacts/T13_HARTREE_REAL_AXIS_2026-10-01.md).
+Grid convergence is not a global pole/truncation proof or microscopic transport.
+
+## Source-Responsive Hartree Field Operator (2026-10-01)
+
+The [current successor](Result/artifacts/T13_HARTREE_GAUGE_CURRENT_2026-10-01.md)
+couples the same kinetic operator to a nondynamical O2 source, computes actual
+derivative-vertex moments and seagulls, and reoptimizes covariance and mean field.
+Subtract the full vacuum current/contact reference and its analytically derived
+frequency-first spatial UV boundary; do not project the output to enforce Ward.
+Check independent matrix sums, 4D vacuum, source counterterms, units and fixed
+physical-mass thermodynamic derivatives. The source F_A^2 finite convention
+must stay explicit; real-axis, full regulator/RG, material and heat-current
+matching remain separate. Neither the source nor canonical charge is UET C/Phi.
+
+Use all three symmetric covariance channels. Compute vacuum plus thermal
+Matsubara bubbles, not the thermal difference alone, and match J_F(0) to the
+same finite tadpoles. Verify with absolute reference subtraction, direct matrix
+frequency sums and equal-mass four-dimensional vacuum integration. Solve
+deltaM=(I-KJ)^-1*L*deltavarphi and differentiate the field equation; never use
+the fixed internal inverse as the external response. See the
+[derivation](Result/artifacts/T13_HARTREE_EXTERNAL_RESPONSE_2026-10-01.md).
+Gauge/current contacts are computed by the successor; real-axis/error and
+physical input admission still require separate work.
+
+## Named Finite Hartree and Homogeneous Matching (2026-10-01)
+
+Use `t13.candidate.fixed_phi_hartree_ms_finite_potential_v1` separately from
+the original Gaussian/tree branches. Prior witness values are explicitly trial
+renormalized coefficients at Q=1, not admitted bare/material identity. Include
+vacuum and thermal loops with reference, quadrature, source-Hessian and
+thermodynamic-envelope checks. Reoptimize internal masses for external source
+derivatives; never manually set the internal phase mass to zero.
+
+Derive invariant gap countercouplings and the field quartic by matching arbitrary
+tadpole/amplitude coefficients. Verify on-gap potential normalization, exact
+rational identities, symmetric tensor channels and predecessor identity. Do not
+promote conditional vertex algebra to a computed frequency response. See the
+[proof](Result/artifacts/T13_HARTREE_COUNTERTERM_MATCHING_2026-10-01.md) and
+local verifiers/tests. C is neither the Wick matrix nor canonical charge;
+R_gen is not an independent state. Physical/Core admission stays separate.
+
 ## Finite-q Thermoelastic Compatibility (2026-09-07)
 
 For a nonzero bulk grating wavevector use `eps=B(n)*v`, not independently

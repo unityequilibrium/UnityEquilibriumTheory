@@ -2,13 +2,328 @@
 
 วันที่ออกแผน: 27 กันยายน 2026 | D1: 28 กันยายน | D14: 11 ตุลาคม 2026 (Asia/Bangkok)
 
-สถานะ: แผนเสนอเพื่อรันใน Goal mode; Goal พอร์ต 14 วันและ gate G0-G5 ยังไม่เริ่ม แต่มีผลย่อยก่อน sprint ห้าชิ้นที่ต้องนำเข้ารอบ baseline โดยไม่เลื่อน readiness วันส่งมอบตีความจากคำตอบผู้ใช้ว่า “2 สัปดาห์”; ยังไม่ทราบวันปิดรับของทุนจริง ชื่อทุน สังกัดผู้ยื่น และงบที่ขอ
+สถานะทบทวน 2 ต.ค.: มีงานวิจัยและผลย่อยต่อเนื่องแล้ว แต่ G0-G5 และผลหลักพอร์ตยังไม่รับผ่านตาม planning contract; scientific closure, portfolio review-ready และ submission-ready เป็นคนละสถานะ วันส่งมอบยังเป็น 11 ต.ค. ไม่เริ่มนับสองสัปดาห์ใหม่ ยังไม่ทราบวันปิดรับของทุนจริง ชื่อทุน สังกัดผู้ยื่น และงบที่ขอ
 
 ตัวควบคุมงาน: [funding_portfolio_14d_plan.json](Data/03_Research/funding_portfolio_14d_plan.json) | คำสั่งเริ่มงาน: [GOAL_BRIEF_FUNDING_14D.md](GOAL_BRIEF_FUNDING_14D.md)
 
+## Latest Numeric Source And Omitted-Term Handoff (2026-10-03)
+
+MAJOR_RESULT_CLOSURE: Aggregate PARTIAL; numeric archive and exact q4-alias/
+four-node separation CLOSED_FOR_LANE subresults, not full physical/Goal closure.
+
+WHAT_IS_ACTUALLY_CLOSED: Versioned raw-source provenance and an explicit
+three-observation confounding mechanism with a conditional four-node remedy.
+
+WHAT_REMAINS_OPEN: Material/current/native scale, joint covariance and
+non-tree remainder, source ancestry/version parity, response thermal closure.
+
+DEPENDENCY_UNLOCKED: Source-backed measurement-model/independent-scale
+research only; no G2-G4/R1-R5/physical/Core-owner acceptance.
+
+STATUS: Original float64 gate remains FAIL; exact and separate80-digit
+controls pass. Missing/hybrid rows retained, not promoted or filled.
+
+WHAT_CHANGED: [Source/algebra note](Result/artifacts/T13_LOW_Q_SOURCE_BOUNDARY_2026-10-03.md)
+and [route card](Result/artifacts/T13_LOW_Q_ROUTE_DECISION_CARD_2026-10-03.md).
+Canonical low_q_source_boundary_evidence_2026_10_03 is observed-partial;
+prior accepted evidence and original failures retain their own scope.
+
+EQUATION_OR_MAPPING: q4 nuisance aliases into three-node q5 as1/q_max;
+four positive points separate powers0/2/3/4 only, not all physical terms.
+
+VERIFICATION: Raw/first-failure hashes, exact rank/alias,80digit alternative,
+missing/correlation/ancestry boundaries. Artifact SHA256
+2c254806eb21b23dc282cbe30f052bf9af2376e427bc5c9b0de229d63f06945e;
+final linked counts in UPDATE_LOG, no experimental validation.
+
+CONTROLLING_BLOCKER:
+native_material_map_joint_covariance_and_non_tree_remainder_not_admitted.
+
+NEXT_ACTION: Bound nuisance/remainder and derive same-state scale/current
+before choosing physical q5 versus independent-scale/q3; no target tuning.
+Keep original7 October freeze/11 October review and later R1-R5 dates.
+
+CLAIM_BOUNDARY: Source available does not mean physical calibration or
+blind independence. No physical q4/q5/native I/alpha/full design/Goal claim.
+Owner1.7K calibration not removed/transferred; holdout REVIEW_REQUIRED,
+trialNOT_RUN/settings and unknown funder/PI/budget/deadline unchanged.
+
+## Prior Multi-Q Estimator And Feasibility Handoff (2026-10-03)
+
+MAJOR_RESULT_CLOSURE: T13_MULTI_Q_ESTIMATOR_COVARIANCE_AND_TREE_BIAS_BUDGET,
+CLOSED_FOR_LANE, not full measurement design/G2-G4/R1-R5/Goal acceptance.
+
+WHAT_IS_ACTUALLY_CLOSED: Three-node coefficient estimator, full data/native
+differential/correlation controls and sufficient rational tree/noise budget.
+
+WHAT_REMAINS_OPEN: Physical resolution/joint covariance/native-current map,
+same-state permitted rows, interaction error, gain/alpha/parent/heat/KMS.
+
+DEPENDENCY_UNLOCKED: Input-backed acquisition-route feasibility research
+only; no physical/Core/Gravity or owner-composition promotion.
+
+STATUS: PASS_SCOPED_MULTI_Q_ESTIMATOR. Four of ten windows have a positive
+conservative energy-only budget; six remain noncertified, one inverse invalid.
+
+WHAT_CHANGED: [Derivation](Result/artifacts/T13_MULTI_Q_ESTIMATOR_2026-10-03.md)
+and [window card](Result/artifacts/T13_MULTI_Q_MEASUREMENT_WINDOW_CARD_2026-10-03.md)
+advance canonical multi_q_estimator_evidence_2026_10_03, with ancestry intact.
+
+EQUATION_OR_MAPPING: beta_hat=W*(E_i/q_i), Sigma_beta=J Sigma_log(E,q) J^T;
+r=beta0*beta2/beta1^2 maps to conditional I; all native correlations remain.
+
+VERIFICATION: Exact identities, independent estimators/finite differences,
+rational boxes/corners and retained windows; artifact SHA256
+56c9aa7ef469c51a30337bea9ea958c8d2459ed7e2316fbbe49644ad192c57b1.
+Linked final counts belong in UPDATE_LOG; no experiment or model trial run.
+
+CONTROLLING_BLOCKER:
+physical_peak_resolution_joint_covariance_native_state_and_interaction_error_not_admitted.
+
+NEXT_ACTION: Compare q5 extraction with independent-scale/q3 using documented
+resolution/native inputs before existing5/7 October decisions, or freeze a
+conditional acquisition gap. Original11 October portfolio and later R1-R5
+dates unchanged; no unchanged-grid rerun or extension by renaming a gate.
+
+CLAIM_BOUNDARY: Smaller q reduces tree bias but amplifies shape error;
+1.65e-16 to4.19e-14 sufficient bounds are not necessary lab precision/no-go.
+No acquired noise, alpha, full design/Goal/owner admission or old FAIL repair.
+Holdout REVIEW_REQUIRED/no numeric Xie use and NOT_RUN trial/settings unchanged.
+Funder/PI/budget/deadline unknown: review-ready, not submission-ready.
+
+## Prior Q5 Information And Precision Handoff (2026-10-03)
+
+[Q5 derivation](Result/artifacts/T13_Q5_DISPERSION_INFORMATION_2026-10-03.md)
+and [measurement supplement](Result/artifacts/T13_Q5_MEASUREMENT_INFORMATION_CARD_2026-10-03.md)
+close a restricted unit-free kinetic inverse and rational tree envelope:
+independent U is not the only route if other native inputs are known.
+Conditioning26-246 and finite-q proxy bias remain, not physical calibration.
+Current q5_dispersion_information_evidence_2026_10_03; next explicit multi-q
+estimator/covariance, resolution/validity and material input. Gain/alpha/
+parent/heat/KMS, full design/G2-G4/R1-R5/Goal/owner acceptance, old FAILs,
+7/11 October/holdout REVIEW_REQUIRED and NOT_RUN model trial unchanged.
+
+## Prior Noether Density And Measurement-Input Handoff (2026-10-03)
+
+[Noether density derivation](Result/artifacts/T13_NOETHER_DENSITY_READOUT_2026-10-03.md)
+and [conditional measurement card](Result/artifacts/T13_DENSITY_SPECTROSCOPY_MEASUREMENT_CARD_2026-10-03.md)
+close tree operator/contact/projection and restricted gain/unit information,
+including the inverse with independent scale. Current canonical
+noether_density_readout_evidence_2026_10_03; next particle-current/same-state
+SI action scale, gain/joint resolution covariance and permitted low-q rows.
+No physical density/temperature, full measurement design/G2-G4/R1-R5/Goal
+or owner acceptance. Old work FAIL, parent/heat/KMS,7/11 October/holdout
+REVIEW_REQUIRED and NOT_RUN model trial/settings unchanged. Below is ancestry.
+
+Prior science 3 October: [even work/remainder](Result/artifacts/T13_GAUSSIAN_WORK_REMAINDER_2026-10-03.md)
+derives W4/W6 and parity, explaining the old grid without fit. Formal tail
+is loose/non-interval, not useful original-grid or full-parent control.
+Old source-work FAIL remains. Next independent source/readout/scale and
+nonlinear parent completion; no G2-G4/full R1/Goal or owner acceptance.
+Canonical gaussian_work_remainder_evidence_2026_10_03;7/11 October and
+all existing holdout/model/acceptance boundaries unchanged.
+
+Prior science 3 October: [cyclic source work](Result/artifacts/T13_GAUSSIAN_SOURCE_WORK_2026-10-03.md)
+is PARTIAL. Exact leading time/modal work and conditional Hamiltonian
+entropy boundary are verified, but the original finite-amplitude/binary64
+audit remains FAIL. It cannot accept G2-G4/full R1/Goal. Next controlled
+remainder and independent source/readout/material scale; original7/11
+October and later review dates, owner/holdout/model trial unchanged.
+Canonical gaussian_source_work_evidence_2026_10_03; older rows are history.
+
+Prior science 3 October: [collisionless soft source](Result/artifacts/T13_COLLISIONLESS_SOFT_SOURCE_2026-10-03.md)
+resolves six exact streaming channels, fixed-centre convergence and the
+static pressure endpoint in the full Bose momentum domain. Initial FAIL
+and raw truncated-tail boundary remain. Next source work/heat-readout,
+independent scale and full interacting/collision/entropy/physical transport.
+Canonical collisionless_soft_source_evidence_2026_10_03; Full Goal/R1-R5
+and7/11 October unchanged.
+
+Prior science 3 October: [Gaussian Noether source completion](Result/artifacts/T13_THERMAL_NOETHER_RESPONSE_2026-10-03.md)
+derives pair-local total charge and first-order energy with stationary
+mean/contact, independent Euler and negative controls. Full-domain
+translation is explicit; first-order energy is not heating. Next collisionless
+soft limits, actual heat-source/readout/material scale and full interacting/
+vacuum/second-order work/entropy/transport. Canonical
+thermal_noether_response_evidence_2026_10_03; full Goal/R1-R5 and7/11 October unchanged.
+
+Prior science 3 October: [finite-q source/population](Result/artifacts/T13_FINITE_Q_THERMAL_SOURCE_2026-10-03.md)
+checks cross-covariance and static pressure-population recovery without
+assigned relaxation. Next loop-current/energy Ward and collisionless
+soft-frequency limits, actual heat-source/readout and independent
+material scale; full interacting/vacuum and physical admission remain open.
+Canonical finite_q_thermal_source_evidence_2026_10_03; full Goal/R1-R5
+and7/11 October unchanged.
+
+Prior science 3 October: [virtual/contact and dynamic covariance](Result/artifacts/T13_THERMAL_VIRTUAL_RESPONSE_2026-10-03.md)
+closes the static gap in a named acoustic thermal-insertion extension
+without fitted contact. Independent real-time covariance verifies complex
+q0 source response; fixed-mu static differs from fixed-charge dynamics.
+Next finite-q source/population relaxation and full interacting/vacuum
+matching, plus independent physical input. Canonical
+thermal_virtual_response_evidence_2026_10_03; full acceptance and7/11 October unchanged.
+
+Prior science 3 October: [thermal source curvature](Result/artifacts/T13_THERMAL_SOURCE_CURVATURE_2026-10-03.md)
+derives a same-action static pressure matching target. Acoustic cuts alone
+differ by3.65%/66.4%; actual source/contact/virtual completion must account
+for it, not fit a static residual. Canonical thermal_source_curvature_evidence_2026_10_03;
+full acceptance, physical inputs, owner/holdout and7/11 October unchanged.
+
+Prior science 3 October: [Landau/source and support bounds](Result/artifacts/T13_ACOUSTIC_SOURCE_LANDAU_2026-10-03.md)
+adds declared off-shell acoustic Landau absorption and combines pair/Landau
+windows with conditional group/sound support bounds. Next local real and
+source-contact matching plus complete thermal consistency; original
+conserved-C, physical inputs and all full acceptance/7-11 October unchanged.
+Canonical field acoustic_source_Landau_evidence_2026_10_03. Earlier records
+retain predecessor/snapshot scope, including the compact planning brief.
+
+Prior science 3 October: [off-shell pair/source interface](Result/artifacts/T13_ACOUSTIC_SOURCE_PAIR_2026-10-03.md)
+supplies action-source susceptibility and positive pair spectral dressing,
+not full off-shell Landau/source/contact/local real or thermal matching.
+Canonical field acoustic_source_pair_evidence_2026_10_03; full acceptance,
+physical inputs and 7/11 October unchanged. Prior handoffs retain scope.
+
+Prior science 3 October: [tree acoustic modal matching](Result/artifacts/T13_ACOUSTIC_MODAL_CUTS_2026-10-03.md)
+supplies parent residues and cubic projection for the three-acoustic cut.
+Off-shell source/contact/local real matching and complete thermal sunset
+remain open, as do all-mode quantum/heavy channels and physical inputs.
+Canonical evidence is acoustic_modal_cut_evidence_2026_10_03. Full Goal,
+G0-G5/R1-R5 and 7/11 October unchanged; planning observations of uncommitted
+modal work are historical snapshots, not the current science status.
+
+Prior science 3 October: [finite-T cuts/static coherence](Result/artifacts/T13_THERMAL_CUT_STIFFNESS_2026-10-03.md)
+now supplies leading-vertex curved-support thermal cuts and an independent
+static pressure/loop identity. Full curved residues/vertices/real matching,
+thermal sunset/source/entropy and physical inputs remain open. Current
+evidence is thermal_cut_stiffness_evidence_2026_10_03; G0-G5/R1-R5 and
+7/11 October unchanged. Prior handoffs below retain their own scopes.
+
+Prior science 3 October: [vacuum cut/log and matching boundary](Result/artifacts/T13_VACUUM_CUT_LOG_2026-10-03.md)
+closes the formal nonlocal loop equivalence class, not the local microscopic
+match or full thermal response. Next fix the source/Wilson prescription and
+internal curvature, then thermal sunset/mixed/source/entropy consistency.
+Independent input/measurement and G0-G5/R1-R5/7-11 October stay unchanged.
+The interaction handoff below remains its historical predecessor.
+
+Latest interaction handoff: [derived phase kernels](Result/artifacts/T13_LOW_T_INTERACTIONS_2026-10-02.md)
+now compute a leading T=0 attenuation mechanism, tree T8 dispersion and one
+quartic thermal-thermal term. These are candidate methods evidence, not a
+full remainder bound or scientific acceptance. Next calculate renormalized
+cubic-sunset/mixed terms and Wilson/source consistency; independent physical
+inputs remain open. Preserve 7/11 October and all G0-G5/R1-R5 rules.
+
 แผนต่อยอดและการเลือกโมเดล: [Roadmap 12 สัปดาห์](RESEARCH_ROADMAP_MODELS_12W_2026-09-27.md) ครอบคลุม Astra/Sol/Luna, portfolio v2–v3 และการเตรียมรอบทุนใหม่หากพลาดรอบแรก
 
+ฉบับตัดสินใจอ่านง่าย: [Funding decision roadmap 2 ต.ค.](FUNDING_DECISION_ROADMAP_2026-10-02.md) ระบุผลที่เวลาอีก 2–3 เดือนต้องซื้อ, งานก่อน freeze และเงื่อนไขไม่รันวน โดยไม่ลดเกณฑ์รับผลหลัก.
+
 ## 1. ผลลัพธ์หลักที่จะปิดก่อน
+
+### Current science: separately derived low-T phase prescription
+
+[New branch](Result/artifacts/T13_LOW_T_PHASE_EFT_2026-10-02.md) supplies
+tree joint P(X,h), a gapless conservative parent, phase-only T4/T6 thermal
+differences and source/Phi/entropy checks. [Measurement design](Result/artifacts/T13_LOW_T_PHASE_EFT_MEASUREMENT_CARD_2026-10-02.md)
+identifies which extra dispersive information breaks a restricted kinetic
+ambiguity while respecting coordinate redundancy. It is conditional,
+not physical source or instrument admission. Next control vacuum Wilson/
+interaction remainder and independent material/scale/readout. Scientific
+G0-G5/R1-R5/Full Topic13 remain open; preserve 7/11 October and the methods
+route. Historical Hartree boundary below remains valid, not repaired.
+
+### Latest validity decision: conditional low-T admission exclusion
+
+[Low-temperature evidence](Result/artifacts/T13_HARTREE_LOW_T_VALIDITY_2026-10-02.md)
+now answers the pending EOS/external-mode question conditionally: internal
+positive-gap entropy cannot be asymptotically complete thermodynamics of
+the external gapless bosonic mode at these two witnesses. The source and
+stationary entropy envelopes remain consistent; this is an approximation
+boundary, not global UET no-go or missing-source no-go. Before the existing
+7 October freeze, record this bounded negative-admission result and pursue
+one consistent thermal prescription or justified restricted validity,
+alongside the independent-input measurement card. Do not repair old masses
+or append phonon free energy by hand. Full R1/Goal, physical/material
+acceptance and 11 October portfolio review are not promoted or restarted.
+Earlier notes below retain their historical wave scope.
+
+### ล่าสุด: คำนวณ joint classical-Phi response แล้วในขอบเขต candidate
+
+[ผล response ร่วม](Result/artifacts/T13_HARTREE_JOINT_PHI_RESPONSE_2026-10-02.md)
+รวม kinetic จาก action เดิม, source counterterms, pole ใหม่หกจุด และ
+charge susceptibility ที่ตรงกับ potential หลังปรับ matter–Phi ร่วมกัน
+ไม่ใช้คำตอบ clamped Phi แทนกัน จึงไม่ต้องรัน local roots ชุดเดิมอีก
+งานก่อน freeze เปลี่ยนเป็นตรวจ validity/approximation โดยเริ่มที่
+low-temperature EOS กับ external-mode consistency และ independent-input
+measurement card ห้าม repair internal Goldstone mass หรือเติม phonon
+free energy ด้วยมือ ผลใหม่นี้ไม่รับ Full R1/Goal, transport, SI alpha
+หรือการทำนายวัสดุจริง และไม่เปลี่ยนวัน 7/11 ต.ค. หรือเกณฑ์จบวิจัย
+
+### ล่าสุด: joint Phi static ไม่ใช่ joint dynamics
+
+[ผล joint classical-Phi](Result/artifacts/T13_HARTREE_JOINT_PHI_STATIC_2026-10-02.md)
+derive normalization force/curvature counterterms และคำนวณ stationary
+matter–Phi ด้วย trial action inputs เดิม พร้อม mixed static response
+ที่ตรวจอิสระแล้ว ปิดเฉพาะ homogeneous classical lane; ไม่ใช้ fixed-Phi
+poles เดิมแทน dynamics ของ branch ใหม่ งานถัดไปคือ joint retarded response,
+validity/approximation obligations และ independent-input measurement card
+วัน freeze 7 ต.ค./พอร์ต 11 ต.ค. และ Full Goal/R1 acceptance ไม่เปลี่ยน
+แผน 12 สัปดาห์ระบุผลที่เวลาเพิ่มต้องให้ ไม่ใช่สัญญาปิด Full Topic 13
+
+### จุดตัดสินใจ 2 ตุลาคม: เลือกแนวทางเตรียมพอร์ต ไม่ใช่รับผลวิจัยครบ
+
+[ผล finite-q ล่าสุด](Result/artifacts/T13_HARTREE_FINITE_Q_POLES_2026-10-02.md)
+คำนวณ principal kernel และ complex phase poles จริงในสอง fixed-Phi witnesses
+ที่ q=.04/.02/.01 แล้ว ผลลัพธ์เข้าใกล้ soft limit โดยไม่ได้ใช้คำตอบ soft
+มาแทน root และผ่าน independent moment/source, vacuum, refinement, Ward
+และ denominator checks ผลหลักย่อยนี้ปิด `CLOSED_FOR_LANE` เท่านั้น
+
+จึงเลือก **scoped response methods + measurement design** เป็นแนวทางเตรียมพอร์ต
+ตาม `route_selection_2026_10_02` ไม่เลือก material-prediction route ที่ยังขาด
+independent inputs และไม่ถือว่าปิด D05 scientific delivery, R1–R5 หรือ Full Goal
+การออกแบบการวัดและ novelty comparison ยังต้องทำจริงก่อนรับงาน ห้ามนับการเลือก
+แนวทางหรือวันครบกำหนดเป็น scientific closure
+
+| ก่อนวันเดิม | งานที่เปลี่ยนคำตอบได้ | หลักฐานที่ต้องส่ง |
+| --- | --- | --- |
+| 3–4 ต.ค. | ระบุ validity domain, regulator/action normalization และ approximation obligations ของ candidate เดิม; แยก numerical error จาก Hartree remainder | สมการ/สมมติฐานและ proof-obligation map พร้อม independent check; หากยังไม่พิสูจน์ให้คง open ไม่อ้าง global stability |
+| 5–6 ต.ค. | หนึ่ง measurement card: material/state, source/readout, units, input ที่ต้องวัดอิสระและ uncertainty; ตรวจข้อมูล/permission โดยไม่ใช้ Xie | identifiable combinations หรือ rank-gain derivation ที่ตรวจซ้ำได้; ไม่มีข้อมูลให้ระบุ measurement feasibility ไม่แทน empirical input |
+| 7 ต.ค. | ตรึง bounded result, claim/evidence/hash, approximation limits และ disposition จริง | scientific decision; preliminary/unresolved ยังไม่ใช่ full Goal completion |
+| 8–11 ต.ค. | report, reproducibility, related-work/novelty review, pitch/aims และ call-fit gaps | reviewable portfolio; submission readiness ยังขึ้นกับทุน/PI/งบจริง |
+
+เวลาที่เหลือไม่ใช้รัน pole grid เดิมซ้ำโดยไม่มีคำถามใหม่ การขยาย joint Phi ต้อง
+รักษา normalization ที่อาจขึ้นกับ m(Phi) ไม่ทิ้งเป็นค่าคงที่ การดูดกลืนแบบ
+collisionless ยังไม่ใช่ physical heat/collision/Kubo/SK-KMS coefficient
+โมเดลคง Astra/high สำหรับ lead และ Sol 6.1/high สำหรับ implementation ตาม
+roadmap; trial ยัง `NOT_RUN` และไม่มีการเปลี่ยน config หรือเริ่ม Goal พอร์ตแยก
+อัตโนมัติ ข้อความ predecessor ด้านล่างเป็นประวัติขอบเขตของผลก่อนหน้า
+
+Latest successor (2 October): [finite-q local density](Result/artifacts/T13_HARTREE_FINITE_Q_DISCONTINUITY_2026-10-02.md)
+closes exact signed shell thresholds and the analytic discontinuity needed
+by a later finite-q pole calculation. It agrees with original full cuts and
+forward angular roots and approaches the accepted soft density. No finite-q
+principal kernel/pole has been computed. Next compute those actual objects,
+then global/approximation/action and joint-Phi/material/heat obligations.
+Full Goal/R1 and physical gates remain open; original dates/models are unchanged.
+
+Latest successor (1 October): [local Landau-sheet pole](Result/artifacts/T13_HARTREE_SOFT_POLES_2026-10-01.md)
+now solves the complex collisionless soft inverse at both unchanged
+fixed-Phi witnesses. Original cut/upper reference and alternative
+seed/grid/tail/derivative/denominator checks agree. The sampled winding
+diagnostic is bounded, not certified global stability. Next: global
+complex-domain/finite-q and approximation/action obligations, then joint
+Phi/material/heat-current admission. R1-R5, physical G1/G2, full Goal and
+the existing dates/model trial remain unaccepted or unchanged as applicable.
+
+ผลล่าสุด: [collisionless soft collective kernel](Result/artifacts/T13_HARTREE_SOFT_COLLECTIVE_2026-10-01.md) derive thermal ray limit และตรวจกับ full finite-q response แล้ว ทั้งสองผู้สมัครมี absorption ที่ reactive zero จึงไม่ใช้ static susceptibility/stiffness ratio เป็น sound prediction หรือเรียกส่วน real เป็นศูนย์ว่า undamped pole งานต่อคือ controlled complex-pole และ validity-domain analysis จาก kernel ที่คำนวณนี้ แล้วปิด approximation/regulator/action และ joint-Phi/material/heat-current งานพอร์ตใช้ผล methods ที่ตรวจได้ แต่ R1–R5, G1/G2, Full Topic13 และวันเดิมยังไม่เปลี่ยน
+
+ผลถัดมา 1 ต.ค.: [actual Hartree external field response](Result/artifacts/T13_HARTREE_EXTERNAL_RESPONSE_2026-10-01.md) คำนวณ vacuum/thermal bubble สามช่องและ source-responsive covariance ที่ q/frequency ไม่เป็นศูนย์แล้ว คืน static potential/Ward โดยไม่แก้ internal mass และตรงกับ direct subtraction/4D vacuum reference งานต่อจึงไม่ต้องสร้าง field bubble เดิมซ้ำ แต่ต้อง derive gauge-current contacts, real-axis/error และ regulator/RG/joint-Phi/material match ผลนี้ปิดเฉพาะ named candidate prescription; R1–R5, physical G1/G2 และวัน D5/D10/D14 ยังไม่รับงานจาก field response อย่างเดียว
+
+ผลถัดมา 1 ต.ค.: [finite Hartree background](Result/artifacts/T13_RENORMALIZED_HARTREE_BACKGROUND_2026-10-01.md) พบ stationary candidate ที่ fixed Phi โดยรวม vacuum/thermal ใน potential เดียว และ [counterterm/potential matching](Result/artifacts/T13_HARTREE_COUNTERTERM_MATCHING_2026-10-01.md) ปิด homogeneous invariant-channel cancellation กับ potential บน gap equations ที่ต่างเพียง normalization คงที่ใน lane นี้แล้ว ไม่ต้องเดา stationary shift หรือใช้ countercoupling เดียวต่อ งานถัดไปคือ regulator/RG input และ actual external finite-q/frequency vertices รวม joint Phi/material mapping; conditional vertex algebra ไม่ใช่ physical response และ normalization ที่ขึ้นกับ m(Phi) ห้ามทิ้งเมื่อขยาย joint Phi ค่า trial renormalized inputs ยังไม่ใช่ original calibration ที่รับวัสดุแล้ว G1/G2 และวัน D5/D10/D14 ไม่เปลี่ยน
+
+ผลล่าสุดถัดมา 1 ต.ค.: [conditional dynamic composite/current](Result/artifacts/T13_POLAR_DYNAMIC_COMPOSITE_2026-10-01.md) ปิด leading phase-lane spectrum, time kernel และ current-contact identity พร้อมคืน static IR coefficient เดิมแล้ว แต่ยังไม่เป็น physical response หรือ microscopic equilibrium ต้องใช้ผลนี้ออกแบบ frequency/source protocol โดยไม่ fit relaxation pole เดียว และทำ renormalized background/full-action remainder ต่อ G1/G2 และวัน D5/D10/D14 ไม่เปลี่ยน
+
+ผลล่าสุด 1 ต.ค.: [polar static observable/source matching](Result/artifacts/T13_POLAR_STATIC_IR_OBSERVABLE_2026-10-01.md) ปิดพิกัด/source/measure และ static IR coefficient แบบมีเงื่อนไข แต่ Gaussian stationarity obstruction ยังอยู่เมื่อคืน source ให้ครบ งานวิจัยหลักต้องแยกผลนี้จาก microscopic resummation, independent predictive content และการทำนายวัสดุ G1/G2 ยังไม่เปิดจากการเพิ่ม artifact นี้
+
+หลักฐานต่อเนื่อง 1 ต.ค.: [finite-momentum thermal 1PI](Result/artifacts/T13_FINITE_MOMENTUM_THERMAL_1PI_2026-10-01.md) ปิด kernel แบบ fixed-Phi thermal one-loop และตรวจ static current เพิ่มจาก zero-momentum result แต่ bare radial expansion ไม่ uniform เมื่อ q ต่ำ จึงยังไม่ผ่าน physical G1/G2 หรือผลหลักของพอร์ต ต้องตัดสิน D5 จาก scope ที่ตรวจจริงและ obligations เรื่อง IR/current/material/measurement ที่ยังเหลือ ไม่เรียก divergence นี้ว่า no-go ของ UET ทุก completion
 
 ชื่อผลงานเสนอ: **ขอบเขตการทำนายและการออกแบบการวัดเพื่อทดสอบสะพานความร้อนที่ปรับเทียบแล้ว: กรณี He-4/O(2)**
 
@@ -248,6 +563,16 @@ Git: เก็บของเดิมใน dirty worktree; D1 สร้าง 
 [Formal auxiliary joint root](Result/artifacts/T13_HE4_FORMAL_AUXILIARY_PHI_JOINT_ROOT_2026-09-27.md) แสดงว่าใน **formal** auxiliary-field branch ของ Core ที่กำหนด `Z=1.2` มีจุดสมดุลร่วมของ `Phi`, condensate amplitude, auxiliary gap และ Ward gap โดยไม่ใช้ target density แต่สมการ `Phi` ของ approximation นี้ไม่ขึ้นกับ `T` โดยตรงเมื่อ fix `mu` และ branch เดิม `Z=1` อยู่นอก domain ของมัน ผลนี้เป็น feasibility ของคนละพารามิเตอร์และยังไม่ใช่ microscopic/He-II bridge; D4–D5 ต้องตรวจ scheme จริงก่อนเทียบข้อมูล
 
 ## 11. แหล่งอ้างอิงที่ใช้วางแผน
+
+อัปเดต D4 ล่าสุด 1 ต.ค.: [scoped real-axis response](Result/artifacts/T13_HARTREE_REAL_AXIS_2026-10-01.md) ปิด exact angular principal value และ pair/scattering cuts โดยไม่กำหนด damping width ตรวจด้วย forward on-shell delta roots และ radial phase space อีกวิธี พร้อม vacuum, Ward, refinement, reality และหน่วยบนสิบจุดที่ประกาศไว้แล้ว รับเป็น preliminary methods evidence ของ named fixed-Phi candidate ได้ แต่ numerical convergence ไม่เป็น global pole stability หรือ controlled Hartree remainder งานต่อคือ global collective/IR และ approximation/regulator/action control ก่อน joint Phi/material/heat-current admission; R1 เต็ม, physical G1/G2 และวันพอร์ตยังไม่เปลี่ยน
+
+อัปเดต D4 วันที่ 1 ต.ค.: [rest-frame Hartree current](Result/artifacts/T13_HARTREE_GAUGE_CURRENT_2026-10-01.md) ปิด source/current consistency ที่ fixed Phi ด้วย actual mixed/current loops, covariance/mean-field reoptimization และ contacts ที่ derive แล้ว Ward ไม่ได้ถูกบังคับด้วย projector และ density susceptibility ตรงกับ stationary potential อีกวิธี ผลนี้นับเป็น preliminary methods evidence สำหรับการตัดสิน D5 ได้ แต่ finite source contact ยังเป็น subtraction convention, real-axis/error และ joint-Phi/material/heat-current ยังไม่รับเข้า จึงไม่เปลี่ยน physical G1/G2, source policy หรือวันพอร์ต
+
+ผล D4 ถัดมา 1 ต.ค.: [thermal one-loop Ward/current matching](Result/artifacts/T13_THERMAL_ONE_LOOP_WARD_CURRENT_2026-10-01.md) คำนวณ tadpole และ bubble จริงแล้ว ไม่ใช่แทนค่าตาม identity และปิด static current แบบ fixed-Phi ในลำดับ one-loop ได้ แต่ amplitude Hessian แบบ bare มี infrared divergence จึงยังไม่ปิด exact finite-T background หรือ retarded response งาน D5 ต้องแยกผลนี้เป็น preliminary derivation จาก physical G1/G2 ที่ยังไม่ผ่าน แล้วตัดสินว่าจะใช้ scoped structural/methods result ในพอร์ตหรือยังขาด proof obligation ใด ไม่รัน shifted Gaussian นอก stable domain เพื่อสร้างคะแนน second sound
+
+อัปเดต D4 เพิ่มเติม 1 ต.ค.: [moving-background thermal curvature และ stationarity boundary](Result/artifacts/T13_THERMAL_GRADIENT_CURVATURE_STATIONARITY_2026-10-01.md) คำนวณเทอม thermal จากสเปกตรัมของ action ได้โดยไม่ fit และทำให้ผู้สมัครทั้งสองผ่าน local mode screen ใน approximation แต่แยกพบ amplitude-path term เพราะ background ยังไม่ stationary งานต่อที่ต้องตรวจจริงจึงเป็น matched tadpole/Ward/self-energy และ current prescription ไม่ใช้การผ่าน mode screen แทน physical G1/G2 มีค่าเทอมที่ต้องชดเชยและวิธีตรวจอิสระสำหรับงานต่อแล้ว; scientific disposition ของพอร์ตยังขึ้นกับ admission/derivation ที่เหลือ
+
+อัปเดต D4 วันที่ 1 ต.ค.: [conditional pressure-Hessian operator](Result/artifacts/T13_CONDITIONAL_TWOFLUID_OPERATOR_2026-10-01.md) ให้สมการเสียงสองโหมดจาก rest-pressure derivatives กับ relative-flow stiffness ใน imported EFT แล้ว แต่การแทน stiffness แบบ tree ตรง ๆ ไม่ผ่านที่ `mu=1.05` (โหมดเร็ว `c^2=1.8219`) และผ่านเฉพาะแบบมีเงื่อนไขที่ `mu=1.20` มีช่วง stiffness ที่ยอมรับได้จากสมการโดยไม่ fit ผู้สมัครเดิมทั้งสองไม่ใช่ He-II ที่รับเข้า ดังนั้น D5 ต้องตัดสินจาก finite-T current/normal-component derivation กับ material admission ที่มีจริง; หากยังขาด ให้ G1/G2 คงเปิด ผลนี้เป็น preliminary methods result สำหรับพอร์ตและกำหนดงาน derive relative-flow response ต่อใน W3–W4 ไม่ใช่ผลทำนาย He-II
 
 - [Donnelly–Barenghi 1998, NIST-hosted reference paper](https://srd.nist.gov/jpcrdreprint/1.556028.pdf), DOI 10.1063/1.556028: แหล่งข้อมูลสมบัติ He-4 ตาม SVP รวม second sound; ต้องย้อนจาก compilation ไป primary experiment สำหรับ protocol/uncertainty ที่ใช้ตัดสิน
 - [Lane, Fairbank & Fairbank 1947](https://journals.aps.org/pr/abstract/10.1103/PhysRev.71.600), DOI 10.1103/PhysRev.71.600: primary resonance route สำหรับการตรวจ protocol; การเปิด abstract ยังไม่ปิด state/frequency/uncertainty contract

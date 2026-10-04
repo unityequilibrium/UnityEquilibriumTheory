@@ -1,0 +1,505 @@
+{
+  "major_result_id": "T13_TREE_RELAXED_THERMAL_PHASE_GRADIENT_CURVATURE",
+  "topic": "0.13",
+  "closure_level": "CLOSED_FOR_LANE",
+  "verification_status": "PASS_TREE_RELAXED_THERMAL_CURVATURE",
+  "what_is_closed": [
+    "phase_gradient_thermal_pressure_curvature_in_declared_tree_relaxed_prescription",
+    "independent_implicit_root_and_direct_pressure_derivative_check",
+    "nonzero_amplitude_tadpole_and_path_term_quantified_without_stationary_current_admission"
+  ],
+  "equation_or_mapping": "f_s=-p_xixi=f_s_tree+integral[f_B*E_xixi-f_B*(1+f_B)*E_xi^2/T]",
+  "units": {
+    "xi_T_mu_E": "E",
+    "pressure": "E^4",
+    "stiffness": "E^2",
+    "E_xi": "dimensionless",
+    "E_xixi": "E^-1",
+    "speed_sq": "natural c=1"
+  },
+  "derivation_class": "ACTION_DERIVED_TREE_RELAXED_THERMAL_GAUSSIAN_DETERMINANT",
+  "observable": "static_phase_gradient_pressure_curvature_in_natural_units",
+  "data_role": "DERIVED_APPROXIMATE_NO_MEASURED_ROWS",
+  "primary_reference": "https://arxiv.org/abs/1212.0670",
+  "numeric_tolerance": 0.001,
+  "flow_steps": [
+    0.002,
+    0.001,
+    0.0005
+  ],
+  "checks": {
+    "zero_flow_pressure_matches_Core": true,
+    "radial_refinement": true,
+    "direct_pressure_curvature_agreement": true,
+    "flow_step_refinement": true,
+    "angular_refinement": true,
+    "cutoff_stability": true,
+    "updated_linear_modes_positive_subluminal": true,
+    "nonstationary_amplitude_tadpole_positive": true,
+    "amplitude_path_chain_rule": true
+  },
+  "examples": [
+    {
+      "T": 0.22,
+      "mu": 1.05,
+      "Phi_fixed": 0.15,
+      "tree_relaxed_amplitude_not_joint_finite_T_stationarity": true,
+      "reference": {
+        "f_s_tree": 0.10850000000000004,
+        "thermal_spectral_curvature": -0.008241813872529754,
+        "thermal_occupation_term": -0.008684466704301452,
+        "thermal_correction": -0.016926280576831206,
+        "f_s_tree_relaxed_thermal": 0.09157371942316883,
+        "thermal_held_amplitude_spectral_curvature": 0.01112518617111712,
+        "f_s_held_amplitude_thermal": 0.1109407194668157,
+        "Omega_x_at_tree_amplitude": 0.009683500021823433,
+        "amplitude_path_term": -0.019367000043646866,
+        "linearized_tadpole_delta_x_not_stationary_solution": -0.019367000043646866,
+        "fractional_linearized_amplitude_shift": -0.17849769625480977,
+        "unresummed_phase_mass_sq_after_linearized_shift": -0.019367000043646866,
+        "required_Ward_loop_inverse_at_zero_not_computed": 0.019367000043646866,
+        "path_chain_rule_absolute_residual": 6.938893903907228e-18,
+        "radial_order": 256,
+        "cutoff": 63.0
+      },
+      "radial_runs": [
+        {
+          "f_s_tree": 0.10850000000000004,
+          "thermal_spectral_curvature": -0.008241813872529981,
+          "thermal_occupation_term": -0.008684466704301742,
+          "thermal_correction": -0.016926280576831723,
+          "f_s_tree_relaxed_thermal": 0.09157371942316832,
+          "thermal_held_amplitude_spectral_curvature": 0.011125186171118582,
+          "f_s_held_amplitude_thermal": 0.11094071946681688,
+          "Omega_x_at_tree_amplitude": 0.009683500021824276,
+          "amplitude_path_term": -0.019367000043648552,
+          "linearized_tadpole_delta_x_not_stationary_solution": -0.019367000043648552,
+          "fractional_linearized_amplitude_shift": -0.1784976962548253,
+          "unresummed_phase_mass_sq_after_linearized_shift": -0.019367000043648552,
+          "required_Ward_loop_inverse_at_zero_not_computed": 0.019367000043648552,
+          "path_chain_rule_absolute_residual": 1.0408340855860843e-17,
+          "radial_order": 128,
+          "cutoff": 63.0
+        },
+        {
+          "f_s_tree": 0.10850000000000004,
+          "thermal_spectral_curvature": -0.0082418138725298,
+          "thermal_occupation_term": -0.008684466704301511,
+          "thermal_correction": -0.016926280576831314,
+          "f_s_tree_relaxed_thermal": 0.09157371942316873,
+          "thermal_held_amplitude_spectral_curvature": 0.011125186171120068,
+          "f_s_held_amplitude_thermal": 0.1109407194668186,
+          "Omega_x_at_tree_amplitude": 0.009683500021824935,
+          "amplitude_path_term": -0.01936700004364987,
+          "linearized_tadpole_delta_x_not_stationary_solution": -0.01936700004364987,
+          "fractional_linearized_amplitude_shift": -0.17849769625483744,
+          "unresummed_phase_mass_sq_after_linearized_shift": -0.01936700004364987,
+          "required_Ward_loop_inverse_at_zero_not_computed": 0.01936700004364987,
+          "path_chain_rule_absolute_residual": 0.0,
+          "radial_order": 192,
+          "cutoff": 63.0
+        },
+        {
+          "f_s_tree": 0.10850000000000004,
+          "thermal_spectral_curvature": -0.008241813872529754,
+          "thermal_occupation_term": -0.008684466704301452,
+          "thermal_correction": -0.016926280576831206,
+          "f_s_tree_relaxed_thermal": 0.09157371942316883,
+          "thermal_held_amplitude_spectral_curvature": 0.01112518617111712,
+          "f_s_held_amplitude_thermal": 0.1109407194668157,
+          "Omega_x_at_tree_amplitude": 0.009683500021823433,
+          "amplitude_path_term": -0.019367000043646866,
+          "linearized_tadpole_delta_x_not_stationary_solution": -0.019367000043646866,
+          "fractional_linearized_amplitude_shift": -0.17849769625480977,
+          "unresummed_phase_mass_sq_after_linearized_shift": -0.019367000043646866,
+          "required_Ward_loop_inverse_at_zero_not_computed": 0.019367000043646866,
+          "path_chain_rule_absolute_residual": 6.938893903907228e-18,
+          "radial_order": 256,
+          "cutoff": 63.0
+        }
+      ],
+      "direct_pressure_runs": [
+        {
+          "flow_step": 0.002,
+          "f_s_direct": 0.09157146037708924,
+          "pressure_even_residual": 0.0
+        },
+        {
+          "flow_step": 0.001,
+          "f_s_direct": 0.09157315467717142,
+          "pressure_even_residual": 0.0
+        },
+        {
+          "flow_step": 0.0005,
+          "f_s_direct": 0.09157357832439983,
+          "pressure_even_residual": 0.0
+        }
+      ],
+      "zero_flow_pressure_relative_residual": 6.653736583039265e-15,
+      "radial_last_relative_change": 1.0608339954587768e-15,
+      "direct_derivative_relative_disagreement": 1.5408216450181214e-06,
+      "flow_step_last_relative_change": 4.626297054195726e-06,
+      "angular_pressure_difference": 4.336808689942018e-18,
+      "cutoff_runs": [
+        {
+          "f_s_tree": 0.10850000000000004,
+          "thermal_spectral_curvature": -0.008241813872529737,
+          "thermal_occupation_term": -0.008684466704301456,
+          "thermal_correction": -0.016926280576831192,
+          "f_s_tree_relaxed_thermal": 0.09157371942316886,
+          "thermal_held_amplitude_spectral_curvature": 0.011125186171116987,
+          "f_s_held_amplitude_thermal": 0.11094071946681558,
+          "Omega_x_at_tree_amplitude": 0.00968350002182336,
+          "amplitude_path_term": -0.01936700004364672,
+          "linearized_tadpole_delta_x_not_stationary_solution": -0.01936700004364672,
+          "fractional_linearized_amplitude_shift": -0.1784976962548084,
+          "unresummed_phase_mass_sq_after_linearized_shift": -0.01936700004364672,
+          "required_Ward_loop_inverse_at_zero_not_computed": 0.01936700004364672,
+          "path_chain_rule_absolute_residual": 3.469446951953614e-18,
+          "radial_order": 256,
+          "cutoff": 52.5
+        },
+        {
+          "f_s_tree": 0.10850000000000004,
+          "thermal_spectral_curvature": -0.008241813872529804,
+          "thermal_occupation_term": -0.00868446670430147,
+          "thermal_correction": -0.016926280576831272,
+          "f_s_tree_relaxed_thermal": 0.09157371942316878,
+          "thermal_held_amplitude_spectral_curvature": 0.011125186171117265,
+          "f_s_held_amplitude_thermal": 0.11094071946681584,
+          "Omega_x_at_tree_amplitude": 0.009683500021823534,
+          "amplitude_path_term": -0.019367000043647067,
+          "linearized_tadpole_delta_x_not_stationary_solution": -0.019367000043647067,
+          "fractional_linearized_amplitude_shift": -0.17849769625481163,
+          "unresummed_phase_mass_sq_after_linearized_shift": -0.019367000043647067,
+          "required_Ward_loop_inverse_at_zero_not_computed": 0.019367000043647067,
+          "path_chain_rule_absolute_residual": 0.0,
+          "radial_order": 256,
+          "cutoff": 73.5
+        },
+        {
+          "f_s_tree": 0.10850000000000004,
+          "thermal_spectral_curvature": -0.008241813872529955,
+          "thermal_occupation_term": -0.008684466704301563,
+          "thermal_correction": -0.01692628057683152,
+          "f_s_tree_relaxed_thermal": 0.09157371942316853,
+          "thermal_held_amplitude_spectral_curvature": 0.011125186171117568,
+          "f_s_held_amplitude_thermal": 0.11094071946681605,
+          "Omega_x_at_tree_amplitude": 0.009683500021823763,
+          "amplitude_path_term": -0.019367000043647525,
+          "linearized_tadpole_delta_x_not_stationary_solution": -0.019367000043647525,
+          "fractional_linearized_amplitude_shift": -0.17849769625481585,
+          "unresummed_phase_mass_sq_after_linearized_shift": -0.019367000043647525,
+          "required_Ward_loop_inverse_at_zero_not_computed": 0.019367000043647525,
+          "path_chain_rule_absolute_residual": 0.0,
+          "radial_order": 256,
+          "cutoff": 94.5
+        }
+      ],
+      "cutoff_relative_span": 3.6371451272872356e-15,
+      "old_tree_modes": {
+        "positive_quadratic_energy": true,
+        "speed_sq": [
+          0.045983326878356,
+          1.821912967534086
+        ],
+        "subluminal": false,
+        "secular_relative_residual": 1.9870865293359597e-16
+      },
+      "thermal_curvature_coefficients": {
+        "K_N": 0.02051038563721358,
+        "G_N": 0.003368635653734855,
+        "K_S": 2.601115069027354,
+        "G_S": 0.10096002566404363,
+        "M": -0.01768574616894123
+      },
+      "thermal_curvature_modes": {
+        "positive_quadratic_energy": true,
+        "speed_sq": [
+          0.037103129813610455,
+          0.17181439857476077
+        ],
+        "subluminal": true,
+        "secular_relative_residual": 5.661642549795303e-17
+      },
+      "conditional_normal_current_coefficient_not_mass_density": 0.013023631691235535,
+      "held_amplitude_curvature_modes": {
+        "positive_quadratic_energy": false,
+        "speed_sq": null,
+        "subluminal": false,
+        "secular_relative_residual": null
+      },
+      "held_amplitude_mode_mixing_role": "INCONSISTENT_EOS_DERIVATIVE_PROTOCOL_SCREEN_ONLY",
+      "path_current_identification_admitted": false,
+      "stiffness_in_previous_causal_interval": true,
+      "physical_HeII_state_admitted": false
+    },
+    {
+      "T": 0.22,
+      "mu": 1.2,
+      "Phi_fixed": 0.15,
+      "tree_relaxed_amplitude_not_joint_finite_T_stationarity": true,
+      "reference": {
+        "f_s_tree": 0.44599999999999995,
+        "thermal_spectral_curvature": -0.0039188787356690714,
+        "thermal_occupation_term": -0.0049023663361268816,
+        "thermal_correction": -0.008821245071795953,
+        "f_s_tree_relaxed_thermal": 0.43717875492820396,
+        "thermal_held_amplitude_spectral_curvature": 0.008940300621354386,
+        "f_s_held_amplitude_thermal": 0.4500379342852274,
+        "Omega_x_at_tree_amplitude": 0.006429589678511729,
+        "amplitude_path_term": -0.012859179357023458,
+        "linearized_tadpole_delta_x_not_stationary_solution": -0.012859179357023458,
+        "fractional_linearized_amplitude_shift": -0.02883224071081493,
+        "unresummed_phase_mass_sq_after_linearized_shift": -0.012859179357023458,
+        "required_Ward_loop_inverse_at_zero_not_computed": 0.012859179357023458,
+        "path_chain_rule_absolute_residual": 0.0,
+        "radial_order": 256,
+        "cutoff": 72.0
+      },
+      "radial_runs": [
+        {
+          "f_s_tree": 0.44599999999999995,
+          "thermal_spectral_curvature": -0.003918878735669375,
+          "thermal_occupation_term": -0.004902366336127182,
+          "thermal_correction": -0.008821245071796557,
+          "f_s_tree_relaxed_thermal": 0.4371787549282034,
+          "thermal_held_amplitude_spectral_curvature": 0.008940300621356034,
+          "f_s_held_amplitude_thermal": 0.4500379342852288,
+          "Omega_x_at_tree_amplitude": 0.006429589678512705,
+          "amplitude_path_term": -0.01285917935702541,
+          "linearized_tadpole_delta_x_not_stationary_solution": -0.01285917935702541,
+          "fractional_linearized_amplitude_shift": -0.028832240710819308,
+          "unresummed_phase_mass_sq_after_linearized_shift": -0.01285917935702541,
+          "required_Ward_loop_inverse_at_zero_not_computed": 0.01285917935702541,
+          "path_chain_rule_absolute_residual": 0.0,
+          "radial_order": 128,
+          "cutoff": 72.0
+        },
+        {
+          "f_s_tree": 0.44599999999999995,
+          "thermal_spectral_curvature": -0.003918878735669123,
+          "thermal_occupation_term": -0.004902366336126949,
+          "thermal_correction": -0.008821245071796071,
+          "f_s_tree_relaxed_thermal": 0.4371787549282039,
+          "thermal_held_amplitude_spectral_curvature": 0.008940300621357762,
+          "f_s_held_amplitude_thermal": 0.45003793428523076,
+          "Omega_x_at_tree_amplitude": 0.0064295896785134445,
+          "amplitude_path_term": -0.012859179357026889,
+          "linearized_tadpole_delta_x_not_stationary_solution": -0.012859179357026889,
+          "fractional_linearized_amplitude_shift": -0.028832240710822625,
+          "unresummed_phase_mass_sq_after_linearized_shift": -0.012859179357026889,
+          "required_Ward_loop_inverse_at_zero_not_computed": 0.012859179357026889,
+          "path_chain_rule_absolute_residual": 3.469446951953614e-18,
+          "radial_order": 192,
+          "cutoff": 72.0
+        },
+        {
+          "f_s_tree": 0.44599999999999995,
+          "thermal_spectral_curvature": -0.0039188787356690714,
+          "thermal_occupation_term": -0.0049023663361268816,
+          "thermal_correction": -0.008821245071795953,
+          "f_s_tree_relaxed_thermal": 0.43717875492820396,
+          "thermal_held_amplitude_spectral_curvature": 0.008940300621354386,
+          "f_s_held_amplitude_thermal": 0.4500379342852274,
+          "Omega_x_at_tree_amplitude": 0.006429589678511729,
+          "amplitude_path_term": -0.012859179357023458,
+          "linearized_tadpole_delta_x_not_stationary_solution": -0.012859179357023458,
+          "fractional_linearized_amplitude_shift": -0.02883224071081493,
+          "unresummed_phase_mass_sq_after_linearized_shift": -0.012859179357023458,
+          "required_Ward_loop_inverse_at_zero_not_computed": 0.012859179357023458,
+          "path_chain_rule_absolute_residual": 0.0,
+          "radial_order": 256,
+          "cutoff": 72.0
+        }
+      ],
+      "direct_pressure_runs": [
+        {
+          "flow_step": 0.002,
+          "f_s_direct": 0.4371766850336245,
+          "pressure_even_residual": 0.0
+        },
+        {
+          "flow_step": 0.001,
+          "f_s_direct": 0.43717823743072426,
+          "pressure_even_residual": 0.0
+        },
+        {
+          "flow_step": 0.0005,
+          "f_s_direct": 0.4371786255230603,
+          "pressure_even_residual": 0.0
+        }
+      ],
+      "zero_flow_pressure_relative_residual": 4.0353416371825127e-16,
+      "radial_last_relative_change": 1.269758665202617e-16,
+      "direct_derivative_relative_disagreement": 2.960005311270823e-07,
+      "flow_step_last_relative_change": 8.877200268097796e-07,
+      "angular_pressure_difference": 0.0,
+      "cutoff_runs": [
+        {
+          "f_s_tree": 0.44599999999999995,
+          "thermal_spectral_curvature": -0.0039188787356690714,
+          "thermal_occupation_term": -0.004902366336126897,
+          "thermal_correction": -0.008821245071795969,
+          "f_s_tree_relaxed_thermal": 0.43717875492820396,
+          "thermal_held_amplitude_spectral_curvature": 0.008940300621354253,
+          "f_s_held_amplitude_thermal": 0.4500379342852273,
+          "Omega_x_at_tree_amplitude": 0.006429589678511663,
+          "amplitude_path_term": -0.012859179357023326,
+          "linearized_tadpole_delta_x_not_stationary_solution": -0.012859179357023326,
+          "fractional_linearized_amplitude_shift": -0.028832240710814635,
+          "unresummed_phase_mass_sq_after_linearized_shift": -0.012859179357023326,
+          "required_Ward_loop_inverse_at_zero_not_computed": 0.012859179357023326,
+          "path_chain_rule_absolute_residual": 1.734723475976807e-18,
+          "radial_order": 256,
+          "cutoff": 60.0
+        },
+        {
+          "f_s_tree": 0.44599999999999995,
+          "thermal_spectral_curvature": -0.003918878735669088,
+          "thermal_occupation_term": -0.00490236633612688,
+          "thermal_correction": -0.008821245071795967,
+          "f_s_tree_relaxed_thermal": 0.43717875492820396,
+          "thermal_held_amplitude_spectral_curvature": 0.008940300621354525,
+          "f_s_held_amplitude_thermal": 0.4500379342852276,
+          "Omega_x_at_tree_amplitude": 0.006429589678511807,
+          "amplitude_path_term": -0.012859179357023614,
+          "linearized_tadpole_delta_x_not_stationary_solution": -0.012859179357023614,
+          "fractional_linearized_amplitude_shift": -0.02883224071081528,
+          "unresummed_phase_mass_sq_after_linearized_shift": -0.012859179357023614,
+          "required_Ward_loop_inverse_at_zero_not_computed": 0.012859179357023614,
+          "path_chain_rule_absolute_residual": 0.0,
+          "radial_order": 256,
+          "cutoff": 84.0
+        },
+        {
+          "f_s_tree": 0.44599999999999995,
+          "thermal_spectral_curvature": -0.003918878735669158,
+          "thermal_occupation_term": -0.004902366336126923,
+          "thermal_correction": -0.008821245071796081,
+          "f_s_tree_relaxed_thermal": 0.4371787549282039,
+          "thermal_held_amplitude_spectral_curvature": 0.00894030062135481,
+          "f_s_held_amplitude_thermal": 0.45003793428522787,
+          "Omega_x_at_tree_amplitude": 0.006429589678511985,
+          "amplitude_path_term": -0.01285917935702397,
+          "linearized_tadpole_delta_x_not_stationary_solution": -0.01285917935702397,
+          "fractional_linearized_amplitude_shift": -0.028832240710816078,
+          "unresummed_phase_mass_sq_after_linearized_shift": -0.01285917935702397,
+          "required_Ward_loop_inverse_at_zero_not_computed": 0.01285917935702397,
+          "path_chain_rule_absolute_residual": 1.734723475976807e-18,
+          "radial_order": 256,
+          "cutoff": 108.0
+        }
+      ],
+      "cutoff_relative_span": 1.269758665202617e-16,
+      "old_tree_modes": {
+        "positive_quadratic_energy": true,
+        "speed_sq": [
+          0.13377466615687467,
+          0.6578951939373222
+        ],
+        "subluminal": true,
+        "secular_relative_residual": 1.0333368563515815e-16
+      },
+      "thermal_curvature_coefficients": {
+        "K_N": 0.016829856938325838,
+        "G_N": 0.002715273624106846,
+        "K_S": 4.800849692588321,
+        "G_S": 0.6295374070966137,
+        "M": -0.01234438700290612
+      },
+      "thermal_curvature_modes": {
+        "positive_quadratic_energy": true,
+        "speed_sq": [
+          0.12470902435028171,
+          0.16964408708503906
+        ],
+        "subluminal": true,
+        "secular_relative_residual": 7.310973724374987e-17
+      },
+      "conditional_normal_current_coefficient_not_mass_density": 0.008930715300850989,
+      "held_amplitude_curvature_modes": {
+        "positive_quadratic_energy": false,
+        "speed_sq": null,
+        "subluminal": false,
+        "secular_relative_residual": null
+      },
+      "held_amplitude_mode_mixing_role": "INCONSISTENT_EOS_DERIVATIVE_PROTOCOL_SCREEN_ONLY",
+      "path_current_identification_admitted": false,
+      "stiffness_in_previous_causal_interval": true,
+      "physical_HeII_state_admitted": false
+    }
+  ],
+  "evidence_artifacts": [
+    {
+      "path": "docs/core/02_equations/o2/uet_o2_finite_temperature_quasiparticle_eos.py",
+      "sha256": "ba814f3aa02b5e31112a6595dac7727b7025b08e08f0631f50567f270cebbb7f"
+    },
+    {
+      "path": "docs/core/02_equations/o2/uet_o2_action_thermal_observable_bridge.py",
+      "sha256": "1cf745562548bc9a61d9ebb86069b8aff73e2a776756aa9efe7ab1a45b669ebe"
+    },
+    {
+      "path": "docs/core/02_equations/o2/uet_o2_finite_density_eos.py",
+      "sha256": "ea744a8645f993600300fa9fd99a764e1f07b30fb272b47399c34aa114152c6d"
+    },
+    {
+      "path": "docs/core/02_equations/o2/uet_o2_action_thermal_stiffness_beta.py",
+      "sha256": "c1c3278a79df611ddae2f67ff811022722ab0c56f68bf91cc5480f34db9a95e6"
+    },
+    {
+      "path": "docs/core/02_equations/covariant/uet_covariant_matter.py",
+      "sha256": "8a57d95e898a8ac962bbd749670ad0695b597281937da36496d2ec7e074f9c53"
+    },
+    {
+      "path": "docs/core/02_equations/covariant/uet_covariant_response.py",
+      "sha256": "7fb4b7228afb8ede0ac4f1664d634346ef46cc7678c94ed7b55d73645590c0c2"
+    },
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/t13_he4_condensed_state_identifiability.json",
+      "sha256": "7467dbd2e599140d2e9e5f0ecd836a83a287b8be62617deea8b87a31aa2fbfd9"
+    },
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/Research_T13_Conditional_TwoFluid_Operator.py",
+      "sha256": "465506134b2dc3c55f4697c2d4f7152887523bbd80081718d281403e87b022e5"
+    },
+    {
+      "path": "docs/core/02_equations/o2/uet_o2_gaussian_thermal_stationarity_no_go.py",
+      "sha256": "bb1ea760ab26f270e96791f6274597bebb6f1d0923789caf72432cdd004bb43c"
+    },
+    {
+      "path": "docs/core/02_equations/o2/uet_o2_gaussian_offshell_background.py",
+      "sha256": "a2e9162034b192af006134d98096f6f5588092e67f3047f991f91cc73d9fce09"
+    },
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/t13_conditional_twofluid_operator.json",
+      "sha256": "8606303e4818030dd74061c14b243542c19c4cbb262dda29261951d4c87d6412"
+    },
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/Research_T13_Moving_Background_Thermal_Stiffness.py",
+      "sha256": "07c686318181dcf55c389c8d26ce55077dcf22cc13a458f1e210cdb363e14890"
+    }
+  ],
+  "open_blockers": [
+    "joint_finite_T_condensate_amplitude_and_Phi_stationarity",
+    "Ward_consistent_interacting_retarded_source_detector_response",
+    "independent_physical_material_and_normal_component_match",
+    "clean_Core_admission_and_independent_data"
+  ],
+  "controlling_blocker": "joint_finite_T_stationary_current_response_not_derived",
+  "dependency_unlocked": [
+    "static_relative_flow_current_design_in_declared_approximation_only"
+  ],
+  "source_detector_response_derived": false,
+  "physical_finite_T_stiffness_admitted": false,
+  "microscopic_Ward_loop_response_computed": false,
+  "weak_coupling_or_truncation_error_bound_established": false,
+  "normal_component_dictionary": "n_normal_current=n-mu*f_s conditional imported EFT decomposition; not Landau mass density",
+  "g1_physical_unlock": false,
+  "g2_science_unlock": false,
+  "full_core_unlock": false,
+  "claim_promotion": false,
+  "parameter_fitting": false,
+  "xie_2026_accessed": false,
+  "claim_boundary": "Static curvature on a tree-relaxed thermal-only background; not a jointly stationary finite-T UET completion, physical normal density/Kubo or He-II prediction. Prior failed tree-only lift remains preserved."
+}

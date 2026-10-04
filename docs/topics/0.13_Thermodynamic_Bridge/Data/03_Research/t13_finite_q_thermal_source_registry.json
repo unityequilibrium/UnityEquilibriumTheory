@@ -1,0 +1,13 @@
+{
+  "schema_version": "uet-topic-local-equation-contract-v1",
+  "owner_topic": "0.13_Thermodynamic_Bridge",
+  "branch_id": "t13.candidate.acoustic_thermal_insertion_tree_virtual_response_v1",
+  "status": "LOCAL_FINITE_Q_DIAGNOSTIC_ARTIFACT_CONTROLLED_NOT_CORE_PROMOTION",
+  "verification_artifact": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/t13_finite_q_thermal_source.json",
+  "entries": [
+    {"id": "t13.thermal_insertion.finite_q_cross_covariance", "ontology": "classical tree field/velocity cross-covariance with only acoustic thermal population; C/Pi/R_gen/R_obs excluded", "equation": "(-iz-A_r dot - dot A_p^T) delta_Cov=delta_A Cov_p+Cov_r delta_A^T", "units": "z,p,r:E; integrated source susceptibility:E^-2", "derivation_class": "DERIVED_TWO_MOMENTUM_LINEAR_COVARIANCE_RESPONSE", "observable": "conditional finite-q external h response", "data_role": "DERIVED", "verification_status": "PASS_SCOPED_FINITE_Q_THERMAL_SOURCE", "controlling_blocker": "collisionless_soft_limit_full_interacting_matching_and_physical_transport_open", "claim_boundary": "No assigned relaxation, full collision operator, complete loop-current Ward/energy ledger, independent heavy quantum population or physical transport"},
+    {"id": "t13.thermal_insertion.static_Bose_population_limit", "ontology": "equilibrium acoustic Bose occupation response, not information/observer state", "equation": "[n(Ep)-n(Er)]/(Er-Ep) -> n(E)(1+n(E))/T", "units": "divided difference:E^-1; static susceptibility:E^-2", "derivation_class": "DERIVED_THERMAL_SPECTRAL_DIVIDED_DIFFERENCE", "observable": "static fixed-mu population part of source susceptibility", "data_role": "DERIVED", "verification_status": "PASS_SCOPED_FINITE_Q_THERMAL_SOURCE", "controlling_blocker": "collisionless_soft_limit_full_interacting_matching_and_physical_transport_open", "claim_boundary": "Static limit does not infer a collision time, homogeneous rethermalization, heat conductivity or alpha_Phi_K"}
+  ],
+  "core_registry_modified": false,
+  "claim_promotion": false
+}

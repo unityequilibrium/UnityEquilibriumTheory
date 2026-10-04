@@ -1,0 +1,1038 @@
+{
+  "major_result_id": "T13_THERMAL_VIRTUAL_SOURCE_STATIC_COMPLETION_AND_DYNAMIC_COVARIANCE",
+  "topic": "0.13_Thermodynamic_Bridge",
+  "branch_id": "t13.candidate.acoustic_thermal_insertion_tree_virtual_response_v1",
+  "parent_branch_id": "t13.candidate.tree_matched_classical_phi_low_T_phase_EFT_v1",
+  "created_at": "2026-10-03T06:31:45.997716+00:00",
+  "closure_level": "CLOSED_FOR_LANE",
+  "verification_status": "PASS_SCOPED_THERMAL_VIRTUAL_RESPONSE",
+  "what_is_closed": "Derived mixed virtual tree propagation/contact completes the acoustic thermal static susceptibility; non-real q0 dynamic source correction independently agrees with real-time covariance evolution",
+  "equation_or_mapping": "chi_static=population+pair+mixed_virtual-contact; delta_chi(z,0)=d(-z)^T [B_acoustic_insertion(z)-S-T delta_x] d(z)",
+  "units": {
+    "h": "E^3",
+    "Phi": "E",
+    "P": "E^4",
+    "chi": "E^-2",
+    "B_and_contact": "E^2 after d^3p integration",
+    "d": "E^-2"
+  },
+  "derivation_class": "ONE_ACOUSTIC_THERMAL_COVARIANCE_INSERTION_WITH_VIRTUAL_CLASSICAL_TREE_PROPAGATION",
+  "observable": "conditional action-source susceptibility, not calibrated heat response",
+  "data_role": "DERIVED_NOT_CALIBRATION",
+  "action_controls": {
+    "Z": 1.0,
+    "m0_sq": 1.0,
+    "u": 1.0,
+    "gamma": 0.04000000000000001,
+    "epsilon": 0.05,
+    "Phi_reference": 0.0,
+    "response_mass_sq": 1.0,
+    "response_quartic": 1.0,
+    "response_kinetic": 1.0
+  },
+  "checks": {
+    "virtual_tree_and_contact_close_static_pressure_target": true,
+    "full_tree_inverse_has_independent_modal_decomposition": true,
+    "real_time_covariance_independently_checks_dynamic_bubble_and_source": true,
+    "frequency_reciprocity_and_derived_background_shift": true,
+    "source_charge_constraint_and_response_reality": true,
+    "integrated_static_and_dynamic_quadrature_and_tail": true,
+    "static_and_q0_dynamic_ensembles_are_not_silently_identified": true
+  },
+  "examples": [
+    {
+      "mu": 1.05,
+      "points": [
+        {
+          "p": 0.005,
+          "tree_energies": [
+            0.001053894002626375,
+            1.0021441001778362,
+            2.149255369266588
+          ],
+          "pair_per_n": 0.014804075479547657,
+          "mixed_per_n": [
+            4.0762887015348786e-05,
+            0.0027334579526194325
+          ],
+          "contact_per_n": -3.2645792508100794e-05,
+          "nonpopulation_per_n": 0.01761094211169054,
+          "static_identity_error": 0.0,
+          "contact_projection_error": 1.25932280914097e-12,
+          "raw_binary64_contact_projection_error": 2.385313077471437e-09,
+          "background_shift_equation_error": 0.0,
+          "frequency_checks": [
+            {
+              "z": {
+                "real": 0.0,
+                "imag": 0.02
+              },
+              "response_per_n": {
+                "real": -0.000984581361776815,
+                "imag": -3.1554436208840472e-30
+              },
+              "propagator_error": 2.6448564619353346e-16,
+              "bubble_spectral_error": 2.2647434557213154e-16,
+              "bubble_covariance_error": 4.568220101769943e-16,
+              "source_covariance_error": 1.4609305118369893e-09,
+              "reciprocity_error": 0.0,
+              "source_charge_constraint_error": 4.751647218297207e-16,
+              "response_reality_error": 6.409716339114132e-27
+            },
+            {
+              "z": {
+                "real": 0.0,
+                "imag": 0.05
+              },
+              "response_per_n": {
+                "real": -0.0009807093922113985,
+                "imag": 0.0
+              },
+              "propagator_error": 3.8598090143276157e-16,
+              "bubble_spectral_error": 1.5482222943877873e-16,
+              "bubble_covariance_error": 3.724389691302143e-16,
+              "source_covariance_error": 1.2679085134083997e-11,
+              "reciprocity_error": 0.0,
+              "source_charge_constraint_error": 2.262778321637147e-15,
+              "response_reality_error": 0.0
+            },
+            {
+              "z": {
+                "real": 0.0,
+                "imag": 0.1
+              },
+              "response_per_n": {
+                "real": -0.0009659073322203504,
+                "imag": -2.465190328815662e-32
+              },
+              "propagator_error": 3.566390562443231e-16,
+              "bubble_spectral_error": 1.7852875861475598e-16,
+              "bubble_covariance_error": 3.2612971526459897e-16,
+              "source_covariance_error": 5.057401621922196e-11,
+              "reciprocity_error": 0.0,
+              "source_charge_constraint_error": 0.0,
+              "response_reality_error": 5.104403386500607e-29
+            },
+            {
+              "z": {
+                "real": 0.03,
+                "imag": 0.02
+              },
+              "response_per_n": {
+                "real": -0.0009868468583498213,
+                "imag": -2.3035192301679164e-06
+              },
+              "propagator_error": 1.6507999966800879e-15,
+              "bubble_spectral_error": 2.2067291277336534e-16,
+              "bubble_covariance_error": 3.462848138310668e-16,
+              "source_covariance_error": 6.714217830033621e-10,
+              "reciprocity_error": 0.0,
+              "source_charge_constraint_error": 8.43406102172948e-15,
+              "response_reality_error": 0.0
+            }
+          ]
+        },
+        {
+          "p": 0.02,
+          "tree_energies": [
+            0.004219105683519996,
+            1.0023313910259302,
+            2.1494258610722823
+          ],
+          "pair_per_n": 0.05904001082952704,
+          "mixed_per_n": [
+            0.00016240950291849355,
+            0.01091967995282339
+          ],
+          "contact_per_n": -0.00018722944235184083,
+          "nonpopulation_per_n": 0.07030932972762077,
+          "static_identity_error": 1.5790550541815378e-15,
+          "contact_projection_error": 5.802349049296275e-13,
+          "raw_binary64_contact_projection_error": 8.602416773145298e-11,
+          "background_shift_equation_error": 4.440892098500626e-16,
+          "frequency_checks": [
+            {
+              "z": {
+                "real": 0.0,
+                "imag": 0.02
+              },
+              "response_per_n": {
+                "real": -0.003861531502294957,
+                "imag": -6.310887241768095e-30
+              },
+              "propagator_error": 4.565267749561012e-16,
+              "bubble_spectral_error": 9.466129527661332e-17,
+              "bubble_covariance_error": 5.518330959091319e-16,
+              "source_covariance_error": 1.9119313436937258e-11,
+              "reciprocity_error": 0.0,
+              "source_charge_constraint_error": 4.751647218297207e-16,
+              "response_reality_error": 3.268592908289084e-27
+            },
+            {
+              "z": {
+                "real": 0.0,
+                "imag": 0.05
+              },
+              "response_per_n": {
+                "real": -0.003863163115993773,
+                "imag": 3.944304526105059e-31
+              },
+              "propagator_error": 8.441713597078346e-16,
+              "bubble_spectral_error": 3.74448311153368e-16,
+              "bubble_covariance_error": 4.707524036944188e-16,
+              "source_covariance_error": 8.96647574227102e-12,
+              "reciprocity_error": 0.0,
+              "source_charge_constraint_error": 2.262778321637147e-15,
+              "response_reality_error": 2.042007757723382e-28
+            },
+            {
+              "z": {
+                "real": 0.0,
+                "imag": 0.1
+              },
+              "response_per_n": {
+                "real": -0.003807615621104765,
+                "imag": 0.0
+              },
+              "propagator_error": 1.003371903937283e-15,
+              "bubble_spectral_error": 6.519611219547711e-17,
+              "bubble_covariance_error": 1.4028401686083122e-16,
+              "source_covariance_error": 5.5691702841333446e-12,
+              "reciprocity_error": 0.0,
+              "source_charge_constraint_error": 0.0,
+              "response_reality_error": 0.0
+            },
+            {
+              "z": {
+                "real": 0.03,
+                "imag": 0.02
+              },
+              "response_per_n": {
+                "real": -0.003893806215987731,
+                "imag": -1.7679271995217627e-06
+              },
+              "propagator_error": 6.010377265577445e-16,
+              "bubble_spectral_error": 4.638410833661532e-16,
+              "bubble_covariance_error": 2.664576863340428e-16,
+              "source_covariance_error": 2.7234837330887176e-11,
+              "reciprocity_error": 0.0,
+              "source_charge_constraint_error": 8.43406102172948e-15,
+              "response_reality_error": 1.0072545483912263e-11
+            }
+          ]
+        },
+        {
+          "p": 0.04,
+          "tree_energies": [
+            0.00846074685870249,
+            1.0029304854253709,
+            2.1499712574130125
+          ],
+          "pair_per_n": 0.11696281436662333,
+          "mixed_per_n": [
+            0.00032074580445188466,
+            0.021749296211436297
+          ],
+          "contact_per_n": -0.0007344482728528805,
+          "nonpopulation_per_n": 0.13976730465536438,
+          "static_identity_error": 3.971683604268979e-16,
+          "contact_projection_error": 4.2706845409504626e-13,
+          "raw_binary64_contact_projection_error": 9.413663411402353e-12,
+          "background_shift_equation_error": 0.0,
+          "frequency_checks": [
+            {
+              "z": {
+                "real": 0.0,
+                "imag": 0.02
+              },
+              "response_per_n": {
+                "real": -0.007289298904685104,
+                "imag": 0.0
+              },
+              "propagator_error": 6.565051584443303e-16,
+              "bubble_spectral_error": 3.9514793027532774e-16,
+              "bubble_covariance_error": 2.0567276337510233e-16,
+              "source_covariance_error": 2.1323206179347007e-13,
+              "reciprocity_error": 0.0,
+              "source_charge_constraint_error": 4.751647218297207e-16,
+              "response_reality_error": 0.0
+            },
+            {
+              "z": {
+                "real": 0.0,
+                "imag": 0.05
+              },
+              "response_per_n": {
+                "real": -0.007349533807070097,
+                "imag": 0.0
+              },
+              "propagator_error": 1.4524288540384488e-15,
+              "bubble_spectral_error": 2.3866065066024906e-16,
+              "bubble_covariance_error": 2.09808839361462e-16,
+              "source_covariance_error": 1.1027404312309202e-12,
+              "reciprocity_error": 0.0,
+              "source_charge_constraint_error": 2.262778321637147e-15,
+              "response_reality_error": 0.0
+            },
+            {
+              "z": {
+                "real": 0.0,
+                "imag": 0.1
+              },
+              "response_per_n": {
+                "real": -0.007259399227568797,
+                "imag": 0.0
+              },
+              "propagator_error": 2.0064230965097636e-15,
+              "bubble_spectral_error": 1.201237372533102e-16,
+              "bubble_covariance_error": 1.3854408718414604e-16,
+              "source_covariance_error": 3.135186713299256e-13,
+              "reciprocity_error": 0.0,
+              "source_charge_constraint_error": 0.0,
+              "response_reality_error": 0.0
+            },
+            {
+              "z": {
+                "real": 0.03,
+                "imag": 0.02
+              },
+              "response_per_n": {
+                "real": -0.007437112009085756,
+                "imag": 4.94266415050279e-05
+              },
+              "propagator_error": 1.1870272821109322e-15,
+              "bubble_spectral_error": 2.38902142979454e-16,
+              "bubble_covariance_error": 3.1111345502605254e-16,
+              "source_covariance_error": 8.38677478730584e-12,
+              "reciprocity_error": 0.0,
+              "source_charge_constraint_error": 8.43406102172948e-15,
+              "response_reality_error": 1.0538877423617476e-12
+            }
+          ]
+        }
+      ],
+      "thermal_rows": [
+        {
+          "T": 0.00037216591771240014,
+          "divisor": 256,
+          "pair": 9.459517799519566e-12,
+          "mixed_lower": 2.6044456920830946e-14,
+          "mixed_upper": 1.7468900602693628e-12,
+          "contact": -2.167560057436336e-14,
+          "population": 3.7814463439076395e-11,
+          "chi_completed": 4.9068591356360516e-11,
+          "static_target": 4.906859135636053e-11,
+          "matching_error": 2.634006135875284e-16,
+          "dynamic_q0": [
+            {
+              "z": {
+                "real": 0.0,
+                "imag": 0.02
+              },
+              "delta_chi_q0": {
+                "real": -6.281707754041875e-13,
+                "imag": -3.149223940077797e-40
+              },
+              "quadrature_error": 2.3007338441564506e-11,
+              "tail_error": 4.661537431244989e-11
+            },
+            {
+              "z": {
+                "real": 0.0,
+                "imag": 0.05
+              },
+              "delta_chi_q0": {
+                "real": -6.259672411282577e-13,
+                "imag": 3.18473050155232e-42
+              },
+              "quadrature_error": 1.628915157700167e-11,
+              "tail_error": 4.7391960633354615e-11
+            },
+            {
+              "z": {
+                "real": 0.0,
+                "imag": 0.1
+              },
+              "delta_chi_q0": {
+                "real": -6.165596290248699e-13,
+                "imag": -2.490602374278983e-42
+              },
+              "quadrature_error": 1.8856519896806114e-11,
+              "tail_error": 4.765946917881826e-11
+            },
+            {
+              "z": {
+                "real": 0.03,
+                "imag": 0.02
+              },
+              "delta_chi_q0": {
+                "real": -6.2998050674889e-13,
+                "imag": -1.368022048860196e-15
+              },
+              "quadrature_error": 1.527690367241689e-10,
+              "tail_error": 4.7686247151259175e-11
+            }
+          ],
+          "quadrature_error": 2.634006135875285e-16,
+          "tail_error": 3.5415555839972503e-10
+        },
+        {
+          "T": 0.00018608295885620007,
+          "divisor": 512,
+          "pair": 5.917741677043666e-13,
+          "mixed_lower": 1.6294880478581696e-15,
+          "mixed_upper": 1.0926142704169425e-13,
+          "contact": -1.2892123199078104e-15,
+          "population": 2.3667264663917094e-12,
+          "chi_completed": 3.0706807615055363e-12,
+          "static_target": 3.070680761505535e-12,
+          "matching_error": 3.945999094433347e-16,
+          "dynamic_q0": [
+            {
+              "z": {
+                "real": 0.0,
+                "imag": 0.02
+              },
+              "delta_chi_q0": {
+                "real": -3.937642111420641e-14,
+                "imag": 5.126720076595952e-42
+              },
+              "quadrature_error": 6.157713133617428e-10,
+              "tail_error": 6.318256310757474e-11
+            },
+            {
+              "z": {
+                "real": 0.0,
+                "imag": 0.05
+              },
+              "delta_chi_q0": {
+                "real": -3.921590789342117e-14,
+                "imag": -4.040835477576186e-42
+              },
+              "quadrature_error": 2.8841269809558474e-10,
+              "tail_error": 6.370911636283857e-11
+            },
+            {
+              "z": {
+                "real": 0.0,
+                "imag": 0.1
+              },
+              "delta_chi_q0": {
+                "real": -3.862322239730727e-14,
+                "imag": -7.201458029489739e-44
+              },
+              "quadrature_error": 7.294169151961043e-12,
+              "tail_error": 6.38106224414303e-11
+            },
+            {
+              "z": {
+                "real": 0.03,
+                "imag": 0.02
+              },
+              "delta_chi_q0": {
+                "real": -3.94594209498695e-14,
+                "imag": -9.404960923108233e-17
+              },
+              "quadrature_error": 3.8232225316310896e-10,
+              "tail_error": 6.393213231437914e-11
+            }
+          ],
+          "quadrature_error": 2.6306660629555635e-16,
+          "tail_error": 4.335135110463921e-10
+        }
+      ],
+      "static_fixed_mu_tree_chi": 20.218561284228095,
+      "q0_fixed_charge_tree_chi": 19.911031028691852,
+      "fixed_charge_limit_error": 9.957057400730723e-11,
+      "noncommuting_tree_limit_fraction": 0.015445220043758192
+    },
+    {
+      "mu": 1.2,
+      "points": [
+        {
+          "p": 0.005,
+          "tree_energies": [
+            0.0018209419569728171,
+            1.042983180343782,
+            2.5800193991923646
+          ],
+          "pair_per_n": 0.0012767207293253777,
+          "mixed_per_n": [
+            0.006979951470000606,
+            0.0005543162902322073
+          ],
+          "contact_per_n": -0.005068326268116484,
+          "nonpopulation_per_n": 0.013879314757674675,
+          "static_identity_error": 2.249752463486451e-15,
+          "contact_projection_error": 1.1979363294177108e-15,
+          "raw_binary64_contact_projection_error": 1.7589470258601593e-11,
+          "background_shift_equation_error": 0.0,
+          "frequency_checks": [
+            {
+              "z": {
+                "real": 0.0,
+                "imag": 0.02
+              },
+              "response_per_n": {
+                "real": 0.011693005207626506,
+                "imag": 0.0
+              },
+              "propagator_error": 3.192826341783097e-16,
+              "bubble_spectral_error": 1.976728112494411e-18,
+              "bubble_covariance_error": 1.2161421645303851e-17,
+              "source_covariance_error": 2.2977324236362932e-11,
+              "reciprocity_error": 0.0,
+              "source_charge_constraint_error": 9.398270815669748e-16,
+              "response_reality_error": 0.0
+            },
+            {
+              "z": {
+                "real": 0.0,
+                "imag": 0.05
+              },
+              "response_per_n": {
+                "real": 0.01163287605823804,
+                "imag": 3.1554436208840472e-30
+              },
+              "propagator_error": 1.6174256838852913e-15,
+              "bubble_spectral_error": 1.3755165383244127e-16,
+              "bubble_covariance_error": 2.3816617453606314e-17,
+              "source_covariance_error": 6.142415126881938e-11,
+              "reciprocity_error": 0.0,
+              "source_charge_constraint_error": 9.419378253269135e-16,
+              "response_reality_error": 5.425044683854361e-28
+            },
+            {
+              "z": {
+                "real": 0.0,
+                "imag": 0.1
+              },
+              "response_per_n": {
+                "real": 0.011426906500969114,
+                "imag": 2.465190328815662e-32
+              },
+              "propagator_error": 3.811230334073181e-15,
+              "bubble_spectral_error": 2.5343798600613327e-16,
+              "bubble_covariance_error": 1.2328471397388089e-16,
+              "source_covariance_error": 2.079195513278888e-11,
+              "reciprocity_error": 0.0,
+              "source_charge_constraint_error": 1.4242283057926987e-15,
+              "response_reality_error": 4.314711647647751e-30
+            },
+            {
+              "z": {
+                "real": 0.03,
+                "imag": 0.02
+              },
+              "response_per_n": {
+                "real": 0.011716039387453608,
+                "imag": 3.423821049824624e-05
+              },
+              "propagator_error": 8.674591666121607e-16,
+              "bubble_spectral_error": 1.2419703667457676e-15,
+              "bubble_covariance_error": 5.400448017955101e-17,
+              "source_covariance_error": 5.5747572507654296e-11,
+              "reciprocity_error": 0.0,
+              "source_charge_constraint_error": 8.510451801589068e-16,
+              "response_reality_error": 2.8404868939812015e-11
+            }
+          ]
+        },
+        {
+          "p": 0.02,
+          "tree_energies": [
+            0.007284948156751187,
+            1.0431633766327333,
+            2.5801549235852392
+          ],
+          "pair_per_n": 0.005102087951078224,
+          "mixed_per_n": [
+            0.027885259272372453,
+            0.002216312142565065
+          ],
+          "contact_per_n": -0.020311927311089096,
+          "nonpopulation_per_n": 0.055515586677104836,
+          "static_identity_error": 1.7498601828658034e-15,
+          "contact_projection_error": 1.5372752220581025e-15,
+          "raw_binary64_contact_projection_error": 2.902034002529685e-13,
+          "background_shift_equation_error": 5.551115123125783e-17,
+          "frequency_checks": [
+            {
+              "z": {
+                "real": 0.0,
+                "imag": 0.02
+              },
+              "response_per_n": {
+                "real": 0.04684930209387539,
+                "imag": 0.0
+              },
+              "propagator_error": 3.2922640621890176e-16,
+              "bubble_spectral_error": 2.5789308018791236e-16,
+              "bubble_covariance_error": 7.741019624792302e-16,
+              "source_covariance_error": 5.175588487818426e-12,
+              "reciprocity_error": 0.0,
+              "source_charge_constraint_error": 9.398270815669748e-16,
+              "response_reality_error": 0.0
+            },
+            {
+              "z": {
+                "real": 0.0,
+                "imag": 0.05
+              },
+              "response_per_n": {
+                "real": 0.04655198198045418,
+                "imag": -1.5777218104420236e-30
+              },
+              "propagator_error": 1.3485505239320457e-15,
+              "bubble_spectral_error": 1.4938739802910528e-16,
+              "bubble_covariance_error": 5.616949437602901e-16,
+              "source_covariance_error": 2.2942837324096908e-12,
+              "reciprocity_error": 0.0,
+              "source_charge_constraint_error": 9.419378253269135e-16,
+              "response_reality_error": 6.778322826746509e-29
+            },
+            {
+              "z": {
+                "real": 0.0,
+                "imag": 0.1
+              },
+              "response_per_n": {
+                "real": 0.04571571540927544,
+                "imag": -1.9721522630525295e-31
+              },
+              "propagator_error": 3.2080479013641193e-15,
+              "bubble_spectral_error": 9.586647683522188e-17,
+              "bubble_covariance_error": 2.499834016040184e-16,
+              "source_covariance_error": 8.014171819172628e-14,
+              "reciprocity_error": 0.0,
+              "source_charge_constraint_error": 1.4242283057926987e-15,
+              "response_reality_error": 8.627896317039335e-30
+            },
+            {
+              "z": {
+                "real": 0.03,
+                "imag": 0.02
+              },
+              "response_per_n": {
+                "real": 0.04685883725313095,
+                "imag": 0.0001740557729492942
+              },
+              "propagator_error": 7.052568663727626e-16,
+              "bubble_spectral_error": 2.5960572777025997e-16,
+              "bubble_covariance_error": 1.3991408304003033e-16,
+              "source_covariance_error": 2.221049909089692e-12,
+              "reciprocity_error": 0.0,
+              "source_charge_constraint_error": 8.510451801589068e-16,
+              "response_reality_error": 1.2183291469353179e-12
+            }
+          ]
+        },
+        {
+          "p": 0.04,
+          "tree_energies": [
+            0.014577444595390305,
+            1.0437397935950337,
+            2.580588512702843
+          ],
+          "pair_per_n": 0.010173579945031276,
+          "mixed_per_n": [
+            0.05555017136277702,
+            0.0044265342003436126
+          ],
+          "contact_per_n": -0.04087012292047335,
+          "nonpopulation_per_n": 0.11102040842862526,
+          "static_identity_error": 3.7500639758688486e-16,
+          "contact_projection_error": 1.0186747787486512e-15,
+          "raw_binary64_contact_projection_error": 1.747027245553937e-13,
+          "background_shift_equation_error": 2.7755575615628914e-17,
+          "frequency_checks": [
+            {
+              "z": {
+                "real": 0.0,
+                "imag": 0.02
+              },
+              "response_per_n": {
+                "real": 0.09387479578447633,
+                "imag": 0.0
+              },
+              "propagator_error": 1.1445943796610536e-16,
+              "bubble_spectral_error": 2.4713822618328958e-17,
+              "bubble_covariance_error": 2.650477852518523e-16,
+              "source_covariance_error": 2.7958167133936344e-12,
+              "reciprocity_error": 0.0,
+              "source_charge_constraint_error": 9.398270815669748e-16,
+              "response_reality_error": 0.0
+            },
+            {
+              "z": {
+                "real": 0.0,
+                "imag": 0.05
+              },
+              "response_per_n": {
+                "real": 0.09320705205197566,
+                "imag": 0.0
+              },
+              "propagator_error": 3.341177731541118e-16,
+              "bubble_spectral_error": 3.6067760867325607e-16,
+              "bubble_covariance_error": 3.4923589876155083e-16,
+              "source_covariance_error": 4.597786090972392e-13,
+              "reciprocity_error": 0.0,
+              "source_charge_constraint_error": 9.419378253269135e-16,
+              "response_reality_error": 0.0
+            },
+            {
+              "z": {
+                "real": 0.0,
+                "imag": 0.1
+              },
+              "response_per_n": {
+                "real": 0.09148068172451307,
+                "imag": 0.0
+              },
+              "propagator_error": 9.361704363852487e-16,
+              "bubble_spectral_error": 1.4622949837748743e-16,
+              "bubble_covariance_error": 2.8304541415523585e-16,
+              "source_covariance_error": 1.5655629962172224e-13,
+              "reciprocity_error": 0.0,
+              "source_charge_constraint_error": 1.4242283057926987e-15,
+              "response_reality_error": 0.0
+            },
+            {
+              "z": {
+                "real": 0.03,
+                "imag": 0.02
+              },
+              "response_per_n": {
+                "real": 0.09384624595007662,
+                "imag": 0.000575206834378672
+              },
+              "propagator_error": 3.6661661028891444e-16,
+              "bubble_spectral_error": 1.9878374468220128e-16,
+              "bubble_covariance_error": 2.789568993280176e-16,
+              "source_covariance_error": 1.3032788719744127e-12,
+              "reciprocity_error": 0.0,
+              "source_charge_constraint_error": 8.510451801589068e-16,
+              "response_reality_error": 6.484442420776854e-13
+            }
+          ]
+        }
+      ],
+      "thermal_rows": [
+        {
+          "T": 0.0013271355827413984,
+          "divisor": 256,
+          "pair": 1.4796372672593377e-11,
+          "mixed_lower": 8.087870931211229e-11,
+          "mixed_upper": 6.426126220370734e-12,
+          "contact": -5.883859557665995e-11,
+          "population": 5.914794937503084e-11,
+          "chi_completed": 2.2008775315676717e-10,
+          "static_target": 2.2008775315676699e-10,
+          "matching_error": 8.22152784062857e-16,
+          "dynamic_q0": [
+            {
+              "z": {
+                "real": 0.0,
+                "imag": 0.02
+              },
+              "delta_chi_q0": {
+                "real": 1.357174379908925e-10,
+                "imag": 1.3562818151012229e-38
+              },
+              "quadrature_error": 2.4889368148532836e-11,
+              "tail_error": 5.748284683097757e-11
+            },
+            {
+              "z": {
+                "real": 0.0,
+                "imag": 0.05
+              },
+              "delta_chi_q0": {
+                "real": 1.3492796719189015e-10,
+                "imag": 2.2127552033236598e-40
+              },
+              "quadrature_error": 1.9167500539434284e-12,
+              "tail_error": 5.748123632535055e-11
+            },
+            {
+              "z": {
+                "real": 0.0,
+                "imag": 0.1
+              },
+              "delta_chi_q0": {
+                "real": 1.3251885337761777e-10,
+                "imag": 2.6400360955283465e-41
+              },
+              "quadrature_error": 9.76870555132749e-13,
+              "tail_error": 5.7417673547654836e-11
+            },
+            {
+              "z": {
+                "real": 0.03,
+                "imag": 0.02
+              },
+              "delta_chi_q0": {
+                "real": 1.3585357884164103e-10,
+                "imag": 4.609160818842561e-13
+              },
+              "quadrature_error": 3.6526591055509015e-12,
+              "tail_error": 5.7570662084806494e-11
+            }
+          ],
+          "quadrature_error": 1.1745039772326518e-16,
+          "tail_error": 1.651042522939119e-10
+        },
+        {
+          "T": 0.0006635677913706992,
+          "divisor": 512,
+          "pair": 9.256547175182203e-13,
+          "mixed_lower": 5.060490094523019e-12,
+          "mixed_upper": 4.019137013861226e-13,
+          "contact": -3.675706989915161e-12,
+          "population": 3.702030216156026e-12,
+          "chi_completed": 1.3765795719498551e-11,
+          "static_target": 1.3765795719498535e-11,
+          "matching_error": 1.1736242254446917e-15,
+          "dynamic_q0": [
+            {
+              "z": {
+                "real": 0.0,
+                "imag": 0.02
+              },
+              "delta_chi_q0": {
+                "real": 8.480237150848678e-12,
+                "imag": -1.0387594058686475e-39
+              },
+              "quadrature_error": 2.6805994175718676e-11,
+              "tail_error": 6.697659726669154e-11
+            },
+            {
+              "z": {
+                "real": 0.0,
+                "imag": 0.05
+              },
+              "delta_chi_q0": {
+                "real": 8.435302452933193e-12,
+                "imag": -7.870501573642973e-41
+              },
+              "quadrature_error": 2.423581099355665e-12,
+              "tail_error": 6.686682087186239e-11
+            },
+            {
+              "z": {
+                "real": 0.0,
+                "imag": 0.1
+              },
+              "delta_chi_q0": {
+                "real": 8.285718589360976e-12,
+                "imag": 7.831307667236277e-42
+              },
+              "quadrature_error": 3.690472631118425e-12,
+              "tail_error": 6.678552407633485e-11
+            },
+            {
+              "z": {
+                "real": 0.03,
+                "imag": 0.02
+              },
+              "delta_chi_q0": {
+                "real": 8.495072234163404e-12,
+                "imag": 2.5463811062710237e-14
+              },
+              "quadrature_error": 1.1321177399955506e-11,
+              "tail_error": 6.699086780245083e-11
+            }
+          ],
+          "quadrature_error": 2.3472484508893806e-16,
+          "tail_error": 1.9599759289771418e-10
+        }
+      ],
+      "static_fixed_mu_tree_chi": 18.61576235634509,
+      "q0_fixed_charge_tree_chi": 18.37882377324864,
+      "fixed_charge_limit_error": 9.192374758217759e-11,
+      "noncommuting_tree_limit_fraction": 0.012891934000767036
+    }
+  ],
+  "state_variables": [
+    "radial_fluctuation",
+    "phase_fluctuation",
+    "Phi_fluctuation",
+    "their_time_derivatives_for_covariance_only"
+  ],
+  "excluded_variables": [
+    "C",
+    "UET_Pi",
+    "R_gen",
+    "R_obs"
+  ],
+  "equation_registry_ids": [
+    "t13.thermal_insertion.virtual_static_completion",
+    "t13.thermal_insertion.dynamic_covariance_source"
+  ],
+  "declared_grids": {
+    "mu": [
+      1.05,
+      1.2
+    ],
+    "momenta": [
+      0.005,
+      0.02,
+      0.04
+    ],
+    "T_divisors": [
+      256,
+      512
+    ],
+    "orders": [
+      24,
+      48,
+      96
+    ],
+    "tails": [
+      32.0,
+      40.0
+    ],
+    "frequencies": [
+      {
+        "real": 0.0,
+        "imag": 0.02
+      },
+      {
+        "real": 0.0,
+        "imag": 0.05
+      },
+      {
+        "real": 0.0,
+        "imag": 0.1
+      },
+      {
+        "real": 0.03,
+        "imag": 0.02
+      }
+    ],
+    "locked_before_first_audit": true
+  },
+  "thresholds": {
+    "identity_relative": 1e-09,
+    "covariance_relative": 1e-07,
+    "quadrature_relative": 1e-06,
+    "thermal_tail_relative": 1e-08,
+    "original_causal_leakage": 1e-06
+  },
+  "evidence_artifacts": [
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/Research_T13_Thermal_Virtual_Response.py",
+      "sha256": "87af5fdc8f479f5b5219ce480fac22d6c143c570f31207d4acab2e8a6c8354ff"
+    },
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/t13_thermal_virtual_response_registry.json",
+      "sha256": "fa4da91a9da4bd5ba19588c36e930197b5cfe840c2a72df8aadc047bd48ee66e"
+    },
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/test_t13_thermal_virtual_response.py",
+      "sha256": "8d3aff35e9adae99252a294be73323d07fe76d334387aae8c08cb91055edf560"
+    }
+  ],
+  "protected_evidence_hashes": [
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/t13_thermal_source_curvature.json",
+      "sha256": "b5955d1e8425795da7658ab161dadb6c649e1e03be1ecb113a7b2e3e29bf061e"
+    },
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/Research_T13_Thermal_Source_Curvature.py",
+      "sha256": "46983c106f4a95b12354eab1feba91d226a9dcf902f93bd0e6e49cf351e6c83a"
+    },
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/t13_acoustic_source_Landau.json",
+      "sha256": "1d9337b1f7074fb90a6034f082017b39e07d32defbfbcd6d26520f2a126adbd2"
+    },
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/t13_thermal_virtual_response_first_failure.json",
+      "sha256": "1b67bdac27a4a1aa6f52f9fa06164fc6545ac92cab2b4e1fc83ab17c064e0e0c"
+    },
+    {
+      "path": "docs/core/02_equations/o2/uet_o2_action_thermal_observable_bridge.py",
+      "sha256": "1cf745562548bc9a61d9ebb86069b8aff73e2a776756aa9efe7ab1a45b669ebe"
+    },
+    {
+      "path": "docs/core/02_equations/o2/uet_o2_action_thermal_stiffness_beta.py",
+      "sha256": "c1c3278a79df611ddae2f67ff811022722ab0c56f68bf91cc5480f34db9a95e6"
+    },
+    {
+      "path": "docs/core/02_equations/covariant/uet_covariant_matter.py",
+      "sha256": "8a57d95e898a8ac962bbd749670ad0695b597281937da36496d2ec7e074f9c53"
+    },
+    {
+      "path": "docs/core/02_equations/covariant/uet_covariant_response.py",
+      "sha256": "7fb4b7228afb8ede0ac4f1664d634346ef46cc7678c94ed7b55d73645590c0c2"
+    }
+  ],
+  "prescription": {
+    "thermal_population": "acoustic only",
+    "heavy_modes": "virtual classical tree propagation; zero assigned thermal occupations",
+    "vacuum": "not included",
+    "dynamic_population_relaxation": "not included",
+    "static_population": "grand canonical equilibrium variance, not a q0 dynamical term",
+    "new_named_extension": true
+  },
+  "controlling_blocker": "finite_q_source_transport_and_complete_interacting_thermal_matching_open",
+  "open_blockers": [
+    "finite_q_source_response_and_population_relaxation",
+    "vacuum_and_full_interacting_thermal_sunset_matching",
+    "independent_material_readout_scale_KMS_Kubo_and_uncertainty"
+  ],
+  "dependency_unlocked": [
+    "finite_q_source_and_population_relaxation_research_only"
+  ],
+  "static_virtual_contact_matching_closed_for_prescription": true,
+  "q0_complex_dynamic_covariance_checked": true,
+  "full_off_shell_source_matching_closed": false,
+  "full_real_self_energy_matched": false,
+  "dynamic_contact_fixed_from_static_residual": false,
+  "all_parent_modes_and_quantum_Phi_loops_included": false,
+  "full_two_loop_pressure_computed": false,
+  "full_SK_KMS_matching_closed": false,
+  "physical_Kubo_emitted": false,
+  "independent_alpha_Phi_K_admitted": false,
+  "controlled_full_action_truncation_error_established": false,
+  "full_core_unlock": false,
+  "core_composition_gate_overwritten": false,
+  "claim_promotion": false,
+  "parameter_fitting": false,
+  "assigned_width": false,
+  "clipping": false,
+  "cone_padding": false,
+  "xie_2026_accessed": false,
+  "prior_Xie_context_exposure_review": "REVIEW_REQUIRED",
+  "primary_references": [
+    "https://arxiv.org/abs/cond-mat/0305138"
+  ],
+  "claim_boundary": "Named acoustic-thermal-insertion Gaussian extension, finite rest-domain grids and non-real q0 frequency samples. Not heavy quantum/vacuum loops, equilibrated dynamic transport, global retarded stability, physical calibration, original conserved-C repair or Full Topic13/Core/UET closure.",
+  "report": {
+    "MAJOR_RESULT_CLOSURE": "CLOSED_FOR_LANE",
+    "WHAT_IS_ACTUALLY_CLOSED": "Derived mixed virtual tree propagation/contact completes the acoustic thermal static susceptibility; non-real q0 dynamic source correction independently agrees with real-time covariance evolution",
+    "WHAT_REMAINS_OPEN": [
+      "finite_q_source_response_and_population_relaxation",
+      "vacuum_and_full_interacting_thermal_sunset_matching",
+      "independent_material_readout_scale_KMS_Kubo_and_uncertainty"
+    ],
+    "DEPENDENCY_UNLOCKED": [
+      "finite_q_source_and_population_relaxation_research_only"
+    ],
+    "STATUS": "PASS_SCOPED_THERMAL_VIRTUAL_RESPONSE",
+    "WHAT_CHANGED": "Derived virtual/contact completion and independent time-domain covariance check",
+    "EQUATION_OR_MAPPING": "chi_static=population+pair+mixed_virtual-contact; delta_chi(z,0)=d(-z)^T [B_acoustic_insertion(z)-S-T delta_x] d(z)",
+    "VERIFICATION": {
+      "virtual_tree_and_contact_close_static_pressure_target": true,
+      "full_tree_inverse_has_independent_modal_decomposition": true,
+      "real_time_covariance_independently_checks_dynamic_bubble_and_source": true,
+      "frequency_reciprocity_and_derived_background_shift": true,
+      "source_charge_constraint_and_response_reality": true,
+      "integrated_static_and_dynamic_quadrature_and_tail": true,
+      "static_and_q0_dynamic_ensembles_are_not_silently_identified": true
+    },
+    "CONTROLLING_BLOCKER": "finite_q_source_transport_and_complete_interacting_thermal_matching_open",
+    "NEXT_ACTION": "Finite-q source and population-relaxation matching, then interacting thermal and physical input",
+    "CLAIM_BOUNDARY": "Named acoustic-thermal-insertion Gaussian extension, finite rest-domain grids and non-real q0 frequency samples. Not heavy quantum/vacuum loops, equilibrated dynamic transport, global retarded stability, physical calibration, original conserved-C repair or Full Topic13/Core/UET closure."
+  }
+}

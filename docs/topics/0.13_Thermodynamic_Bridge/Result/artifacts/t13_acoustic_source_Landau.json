@@ -1,0 +1,2162 @@
+{
+  "major_result_id": "T13_ACOUSTIC_OFF_SHELL_LANDAU_SOURCE_AND_FLUX_BOUND",
+  "topic": "0.13_Thermodynamic_Bridge",
+  "branch_id": "t13.candidate.tree_matched_classical_phi_low_T_phase_EFT_v1",
+  "created_at": "2026-10-03T01:46:40.543290+00:00",
+  "closure_level": "CLOSED_FOR_LANE",
+  "verification_status": "PASS_SCOPED_LANDAU_SOURCE_INTERFACE",
+  "what_is_closed": "Conditional positive-energy tree group/sound support bounds and declared off-shell acoustic Landau/pair source spectral window with modal projection",
+  "equation_or_mapping": "H-F=(E-p)^2 udagger K u+udagger V0 u>=0; R_L=integral V_L V_Ldagger (np-nr)/(16pi q); Im delta_chi_hh=d_hdagger R_L d_h",
+  "units": {
+    "q_omega_T_h": "E/E/E/E^3",
+    "Phi": "E",
+    "R_L": "E^2",
+    "source_chi": "E^-2",
+    "group_velocity_front_speed": "1"
+  },
+  "derivation_class": "TREE_ENERGY_FLUX_IDENTITY_AND_OFF_SHELL_ACOUSTIC_LANDAU_CUT",
+  "observable": "Conditional source absorption, not physical heat/Kubo or Kelvin calibration",
+  "data_role": "DERIVED_NOT_CALIBRATION",
+  "equation_registry_ids": [
+    "t13.phase_eft.quadratic_energy_flux_support_bound",
+    "t13.phase_eft.off_shell_acoustic_Landau_source_kernel",
+    "t13.phase_eft.acoustic_source_spectral_window"
+  ],
+  "action_controls": {
+    "Z": 1.0,
+    "m0_sq": 1.0,
+    "u": 1.0,
+    "gamma": 0.04000000000000001,
+    "epsilon": 0.05,
+    "Phi_reference": 0.0,
+    "response_mass_sq": 1.0,
+    "response_quartic": 1.0,
+    "response_kinetic": 1.0
+  },
+  "checks": {
+    "conditional_positive_energy_flux_identity": true,
+    "group_velocity_independent_FD": true,
+    "on_shell_Landau_projects_to_prior_modal_rate": true,
+    "positive_hermitian_Landau_kernel_source": true,
+    "source_gram_energy_Bose_and_strict_support": true,
+    "quadrature_tail_and_independent_angular_root": true,
+    "outside_front_support_has_structural_reason": true,
+    "conditional_sound_bound_and_combined_cut_window": true
+  },
+  "examples": [
+    {
+      "mu": 1.05,
+      "flux_checks": [
+        {
+          "p": 0.04,
+          "v_flux": 0.21301828390384597,
+          "v_implicit": 0.21301828390384991,
+          "velocity_identity_error": 1.8502128855747833e-14,
+          "velocity_FD_error": 3.3833878841914545e-11,
+          "mass_form": 6.785132811951093e-05,
+          "energy_minus_flux_identity_error": 9.46613922769485e-17,
+          "positive_energy": 0.000143168474814088,
+          "front_speed_margin": 0.7869817160961541,
+          "energy_over_sound_bound": 1.003566230222625
+        },
+        {
+          "p": 0.08062413162493715,
+          "v_flux": 0.21980094881767845,
+          "v_implicit": 0.21980094881767845,
+          "velocity_identity_error": 0.0,
+          "velocity_FD_error": 1.2612884755805132e-10,
+          "mass_form": 0.00027481885317831323,
+          "energy_minus_flux_identity_error": 0.0,
+          "positive_energy": 0.0005942480438337935,
+          "front_speed_margin": 0.7801990511823216,
+          "energy_over_sound_bound": 1.0143811295295795
+        },
+        {
+          "p": 0.07262774647651084,
+          "v_flux": 0.21812031621915606,
+          "v_implicit": 0.21812031621915604,
+          "velocity_identity_error": 1.2724892434018638e-16,
+          "velocity_FD_error": 1.043718582135655e-10,
+          "mass_form": 0.00022317814392331983,
+          "energy_minus_flux_identity_error": 0.0,
+          "positive_energy": 0.00047966350684902517,
+          "front_speed_margin": 0.7818796837808439,
+          "energy_over_sound_bound": 1.01169150039913
+        },
+        {
+          "p": 0.07409109108227462,
+          "v_flux": 0.21841550385598846,
+          "v_implicit": 0.21841550385598854,
+          "velocity_identity_error": 3.812308438589064e-16,
+          "velocity_FD_error": 1.0841023382556062e-10,
+          "mass_form": 0.00023223124320277124,
+          "energy_minus_flux_identity_error": 0.0,
+          "positive_energy": 0.000499653125838387,
+          "front_speed_margin": 0.7815844961440115,
+          "energy_over_sound_bound": 1.0121634373173274
+        },
+        {
+          "p": 0.04530874840466624,
+          "v_flux": 0.21365218413054476,
+          "v_implicit": 0.21365218413054476,
+          "velocity_identity_error": 0.0,
+          "velocity_FD_error": 4.4673873322872186e-11,
+          "mass_form": 8.703222876948211e-05,
+          "energy_minus_flux_identity_error": 1.47261170105949e-16,
+          "positive_energy": 0.0001840611092023547,
+          "front_speed_margin": 0.7863478158694552,
+          "energy_over_sound_bound": 1.0045724948315162
+        },
+        {
+          "p": 0.037312363256239926,
+          "v_flux": 0.21272695531665833,
+          "v_implicit": 0.2127269553166603,
+          "velocity_identity_error": 9.263733718071582e-15,
+          "velocity_FD_error": 3.08449714021575e-11,
+          "mass_form": 5.904730162302601e-05,
+          "energy_minus_flux_identity_error": 0.0,
+          "positive_energy": 0.00012446087353556128,
+          "front_speed_margin": 0.7872730446833417,
+          "energy_over_sound_bound": 1.0031040794908608
+        },
+        {
+          "p": 0.03877570786200372,
+          "v_flux": 0.21288310215335537,
+          "v_implicit": 0.21288310215335832,
+          "velocity_identity_error": 1.3820218634061521e-14,
+          "velocity_FD_error": 3.3954321491420586e-11,
+          "mass_form": 6.376522708486312e-05,
+          "energy_minus_flux_identity_error": 1.0077644766923761e-16,
+          "positive_energy": 0.00013448109622349552,
+          "front_speed_margin": 0.7871168978466446,
+          "energy_over_sound_bound": 1.0033517596651822
+        },
+        {
+          "p": 0.02,
+          "v_flux": 0.21133156608090792,
+          "v_implicit": 0.21133156608090795,
+          "velocity_identity_error": 1.3133662959277336e-16,
+          "velocity_FD_error": 8.529920082089093e-12,
+          "mass_form": 1.6975512400233726e-05,
+          "energy_minus_flux_identity_error": 9.516768193748155e-17,
+          "positive_energy": 3.560170553742146e-05,
+          "front_speed_margin": 0.7886684339190921,
+          "energy_over_sound_bound": 1.0008931968850674
+        },
+        {
+          "p": 0.07562993069989361,
+          "v_flux": 0.21873192091866817,
+          "v_implicit": 0.21873192091866814,
+          "velocity_identity_error": 1.2689311875036917e-16,
+          "velocity_FD_error": 1.1302915726228448e-10,
+          "mass_form": 0.0002419435203273037,
+          "energy_minus_flux_identity_error": 0.0,
+          "positive_energy": 0.0005211445920129457,
+          "front_speed_margin": 0.7812680790813318,
+          "energy_over_sound_bound": 1.0126695383178346
+        },
+        {
+          "p": 0.07163038551806797,
+          "v_flux": 0.21792232453969299,
+          "v_implicit": 0.21792232453969296,
+          "velocity_identity_error": 1.2736453538780714e-16,
+          "velocity_FD_error": 1.0225945707798868e-10,
+          "mass_form": 0.0002171100254905523,
+          "energy_minus_flux_identity_error": 0.0,
+          "positive_energy": 0.0004662881765027233,
+          "front_speed_margin": 0.782077675460307,
+          "energy_over_sound_bound": 1.0113750699494293
+        },
+        {
+          "p": 0.07642722521292714,
+          "v_flux": 0.2188982732867799,
+          "v_implicit": 0.21889827328677994,
+          "velocity_identity_error": 1.2679668596227878e-16,
+          "velocity_FD_error": 1.157606827927794e-10,
+          "mass_form": 0.00024705299063639116,
+          "energy_minus_flux_identity_error": 1.0180872380369035e-16,
+          "positive_energy": 0.0005324701715032226,
+          "front_speed_margin": 0.7811017267132201,
+          "energy_over_sound_bound": 1.0129357072920742
+        },
+        {
+          "p": 0.04031454747962271,
+          "v_flux": 0.21305368256599191,
+          "v_implicit": 0.21305368256599627,
+          "velocity_identity_error": 2.045318024626918e-14,
+          "velocity_FD_error": 3.574759944303182e-11,
+          "mass_form": 6.892156338629504e-05,
+          "energy_minus_flux_identity_error": 0.0,
+          "positive_energy": 0.0001454452715050897,
+          "front_speed_margin": 0.7869463174340081,
+          "energy_over_sound_bound": 1.0036223983661725
+        },
+        {
+          "p": 0.03631500229779706,
+          "v_flux": 0.2126239248572176,
+          "v_implicit": 0.21262392485721915,
+          "velocity_identity_error": 7.310147414120815e-15,
+          "velocity_FD_error": 2.7789394855661553e-11,
+          "mass_form": 5.593537417973358e-05,
+          "energy_minus_flux_identity_error": 1.149905893240652e-16,
+          "positive_energy": 0.00011785770675437816,
+          "front_speed_margin": 0.7873760751427824,
+          "energy_over_sound_bound": 1.002940683187523
+        },
+        {
+          "p": 0.041111841992656224,
+          "v_flux": 0.21314463009809279,
+          "v_implicit": 0.2131446300980981,
+          "velocity_identity_error": 2.4871914155872637e-14,
+          "velocity_FD_error": 3.6841425177445584e-11,
+          "mass_form": 7.167172624265821e-05,
+          "energy_minus_flux_identity_error": 1.7914945333656548e-16,
+          "positive_energy": 0.0001512985599862018,
+          "front_speed_margin": 0.7868553699019072,
+          "energy_over_sound_bound": 1.003766720799981
+        }
+      ],
+      "modal_controls": [
+        {
+          "q": 0.04,
+          "T": 0.00037216591771240014,
+          "modal_projection_error": 2.9115657853429435e-13
+        },
+        {
+          "q": 0.04,
+          "T": 0.00018608295885620007,
+          "modal_projection_error": 1.7236118183614156e-12
+        },
+        {
+          "q": 0.02,
+          "T": 0.00037216591771240014,
+          "modal_projection_error": 2.0990713454310924e-12
+        },
+        {
+          "q": 0.02,
+          "T": 0.00018608295885620007,
+          "modal_projection_error": 8.93713021420344e-12
+        }
+      ],
+      "off_shell_Landau_rows": [
+        {
+          "q": 0.04,
+          "omega": 0.004230373429351245,
+          "omega_over_Eq": 0.5,
+          "T": 0.00037216591771240014,
+          "support": {
+            "status": "SUPPORTED",
+            "p_min": 0.009993365184395335,
+            "endpoint": "LOWER_ANGULAR_ENDPOINT"
+          },
+          "p_max": 0.08062413162493715,
+          "source_spectral_response": 3.8341156871289765e-12,
+          "Landau_inverse_spectral_units": "E^2",
+          "pair_source_response": 0.0,
+          "pair_support_status": "NO_PAIR_SUPPORT_CONDITIONAL_Ep_GE_cp_BOUND",
+          "combined_pair_Landau_source_response": 3.8341156871289765e-12,
+          "combined_window_is_full_retarded_response": false,
+          "Landau_spectral_matrix": {
+            "real": [
+              [
+                2.7019104777281714e-07,
+                0.0,
+                -1.668540079620084e-08
+              ],
+              [
+                0.0,
+                4.794039819049448e-10,
+                0.0
+              ],
+              [
+                -1.668540079620084e-08,
+                0.0,
+                1.0303922441251343e-09
+              ]
+            ],
+            "imag": [
+              [
+                0.0,
+                1.1381124229300563e-08,
+                0.0
+              ],
+              [
+                -1.1381124229300563e-08,
+                0.0,
+                7.02832125352578e-10
+              ],
+              [
+                0.0,
+                -7.02832125352578e-10,
+                0.0
+              ]
+            ]
+          },
+          "scaled_min_eigenvalue": 7.117294278604254e-16,
+          "hermitian_error": 0.0,
+          "source_gram_error": 1.6854860580405697e-15,
+          "quadrature_error": 1.5380060279620197e-14,
+          "tail_error": 7.93189738913892e-12,
+          "angular_root_method_error": 1.2887647771292705e-12,
+          "support_margin": 4.1045626225977294e-05,
+          "energy_residual": 7.483666386735933e-14,
+          "Bose_identity_error": 4.440789317586641e-16,
+          "imaginary_source_correction_over_tree": 1.8901092980885392e-13,
+          "correction_ratio_is_not_full_perturbative_control": true
+        },
+        {
+          "q": 0.04,
+          "omega": 0.00761467217283224,
+          "omega_over_Eq": 0.9,
+          "T": 0.00037216591771240014,
+          "support": {
+            "status": "SUPPORTED",
+            "p_min": 0.001996980035969024,
+            "endpoint": "LOWER_ANGULAR_ENDPOINT"
+          },
+          "p_max": 0.07262774647651084,
+          "source_spectral_response": 4.923356985448926e-09,
+          "Landau_inverse_spectral_units": "E^2",
+          "pair_source_response": 0.0,
+          "pair_support_status": "NO_PAIR_SUPPORT_CONDITIONAL_Ep_GE_cp_BOUND",
+          "combined_pair_Landau_source_response": 4.923356985448926e-09,
+          "combined_window_is_full_retarded_response": false,
+          "Landau_spectral_matrix": {
+            "real": [
+              [
+                2.9953193639524282e-05,
+                0.0,
+                -1.8536732811047414e-06
+              ],
+              [
+                0.0,
+                1.729723682247068e-07,
+                0.0
+              ],
+              [
+                -1.8536732811047414e-06,
+                0.0,
+                1.1471586218979313e-07
+              ]
+            ],
+            "imag": [
+              [
+                0.0,
+                2.276192111610155e-06,
+                0.0
+              ],
+              [
+                -2.276192111610155e-06,
+                0.0,
+                1.4086388139260186e-07
+              ],
+              [
+                0.0,
+                -1.4086388139260186e-07,
+                0.0
+              ]
+            ]
+          },
+          "scaled_min_eigenvalue": 7.009055908843978e-16,
+          "hermitian_error": 0.0,
+          "source_gram_error": 2.0161380497033437e-15,
+          "quadrature_error": 1.3844147941296293e-13,
+          "tail_error": 3.046082172394297e-11,
+          "angular_root_method_error": 3.4150018331891807e-12,
+          "support_margin": 0.0002595620787023689,
+          "energy_residual": 5.319440186614431e-14,
+          "Bose_identity_error": 4.4408920869487818e-16,
+          "imaginary_source_correction_over_tree": 2.2919504921803072e-10,
+          "correction_ratio_is_not_full_perturbative_control": true
+        },
+        {
+          "q": 0.04,
+          "omega": 0.008469207605561191,
+          "omega_over_Eq": 1.001,
+          "T": 0.00037216591771240014,
+          "support": {
+            "status": "SUPPORTED",
+            "p_min": 0.0034603246417328126,
+            "endpoint": "UPPER_ANGULAR_ENDPOINT"
+          },
+          "p_max": 0.07409109108227462,
+          "source_spectral_response": 0.00019598075861187802,
+          "Landau_inverse_spectral_units": "E^2",
+          "pair_source_response": 0.019970205893951324,
+          "pair_support_status": "PAIR_SUPPORT_EVALUATED_ABOVE_Eq",
+          "combined_pair_Landau_source_response": 0.0201661866525632,
+          "combined_window_is_full_retarded_response": false,
+          "Landau_spectral_matrix": {
+            "real": [
+              [
+                1.1676658576160855e-05,
+                0.0,
+                -7.220172579558171e-07
+              ],
+              [
+                0.0,
+                8.276575053889674e-08,
+                0.0
+              ],
+              [
+                -7.220172579558171e-07,
+                0.0,
+                4.464541780377666e-08
+              ]
+            ],
+            "imag": [
+              [
+                0.0,
+                9.830671916090705e-07,
+                0.0
+              ],
+              [
+                -9.830671916090705e-07,
+                0.0,
+                6.078734095265204e-08
+              ],
+              [
+                0.0,
+                -6.078734095265204e-08,
+                0.0
+              ]
+            ]
+          },
+          "scaled_min_eigenvalue": 1.2276458845614183e-15,
+          "hermitian_error": 0.0,
+          "source_gram_error": 4.149140125406397e-16,
+          "quadrature_error": 3.3469730344944936e-14,
+          "tail_error": 4.5979387823045216e-12,
+          "angular_root_method_error": 1.459114277434583e-13,
+          "support_margin": 1.064151136431768e-06,
+          "energy_residual": 5.03874736533888e-14,
+          "Bose_identity_error": 4.440892097337942e-16,
+          "imaginary_source_correction_over_tree": 1.4835486593041586e-06,
+          "correction_ratio_is_not_full_perturbative_control": true
+        },
+        {
+          "q": 0.04,
+          "omega": 0.004230373429351245,
+          "omega_over_Eq": 0.5,
+          "T": 0.00018608295885620007,
+          "support": {
+            "status": "SUPPORTED",
+            "p_min": 0.009993365184395335,
+            "endpoint": "LOWER_ANGULAR_ENDPOINT"
+          },
+          "p_max": 0.04530874840466624,
+          "source_spectral_response": 8.50315358805819e-15,
+          "Landau_inverse_spectral_units": "E^2",
+          "pair_source_response": 0.0,
+          "pair_support_status": "NO_PAIR_SUPPORT_CONDITIONAL_Ep_GE_cp_BOUND",
+          "combined_pair_Landau_source_response": 8.50315358805819e-15,
+          "combined_window_is_full_retarded_response": false,
+          "Landau_spectral_matrix": {
+            "real": [
+              [
+                4.68965769354374e-10,
+                0.0,
+                -2.8971118817322026e-11
+              ],
+              [
+                0.0,
+                8.339183627884279e-13,
+                0.0
+              ],
+              [
+                -2.8971118817322026e-11,
+                0.0,
+                1.7897379385015972e-12
+              ]
+            ],
+            "imag": [
+              [
+                0.0,
+                1.9775710580734547e-11,
+                0.0
+              ],
+              [
+                -1.9775710580734547e-11,
+                0.0,
+                1.2216769569184023e-12
+              ],
+              [
+                0.0,
+                -1.2216769569184023e-12,
+                0.0
+              ]
+            ]
+          },
+          "scaled_min_eigenvalue": 2.6101319838572377e-17,
+          "hermitian_error": 0.0,
+          "source_gram_error": 1.8554549134073885e-16,
+          "quadrature_error": 1.6587766925862054e-13,
+          "tail_error": 9.017510879159909e-13,
+          "angular_root_method_error": 1.0667010297179077e-12,
+          "support_margin": 2.05230950444113e-05,
+          "energy_residual": 7.422156799995639e-14,
+          "Bose_identity_error": 2.2204460486556037e-16,
+          "imaginary_source_correction_over_tree": 4.191811351393651e-16,
+          "correction_ratio_is_not_full_perturbative_control": true
+        },
+        {
+          "q": 0.04,
+          "omega": 0.00761467217283224,
+          "omega_over_Eq": 0.9,
+          "T": 0.00018608295885620007,
+          "support": {
+            "status": "SUPPORTED",
+            "p_min": 0.001996980035969024,
+            "endpoint": "LOWER_ANGULAR_ENDPOINT"
+          },
+          "p_max": 0.037312363256239926,
+          "source_spectral_response": 1.3464149727120434e-10,
+          "Landau_inverse_spectral_units": "E^2",
+          "pair_source_response": 0.0,
+          "pair_support_status": "NO_PAIR_SUPPORT_CONDITIONAL_Ep_GE_cp_BOUND",
+          "combined_pair_Landau_source_response": 1.3464149727120434e-10,
+          "combined_window_is_full_retarded_response": false,
+          "Landau_spectral_matrix": {
+            "real": [
+              [
+                4.224448830655448e-06,
+                0.0,
+                -2.6151353188082126e-07
+              ],
+              [
+                0.0,
+                2.4440178175841776e-08,
+                0.0
+              ],
+              [
+                -2.6151353188082126e-07,
+                0.0,
+                1.618893692427691e-08
+              ]
+            ],
+            "imag": [
+              [
+                0.0,
+                3.2131942034742944e-07,
+                0.0
+              ],
+              [
+                -3.2131942034742944e-07,
+                0.0,
+                1.9891211935529544e-08
+              ],
+              [
+                0.0,
+                -1.9891211935529544e-08,
+                0.0
+              ]
+            ]
+          },
+          "scaled_min_eigenvalue": 3.183092951547769e-17,
+          "hermitian_error": 0.0,
+          "source_gram_error": 7.29549951028953e-15,
+          "quadrature_error": 5.855598291153439e-13,
+          "tail_error": 2.8809927566133354e-11,
+          "angular_root_method_error": 4.872433738727315e-12,
+          "support_margin": 0.00012978995079626632,
+          "energy_residual": 5.319440186614431e-14,
+          "Bose_identity_error": 3.696014913473713e-30,
+          "imaginary_source_correction_over_tree": 6.26791124126645e-12,
+          "correction_ratio_is_not_full_perturbative_control": true
+        },
+        {
+          "q": 0.04,
+          "omega": 0.008469207605561191,
+          "omega_over_Eq": 1.001,
+          "T": 0.00018608295885620007,
+          "support": {
+            "status": "SUPPORTED",
+            "p_min": 0.0034603246417328126,
+            "endpoint": "UPPER_ANGULAR_ENDPOINT"
+          },
+          "p_max": 0.03877570786200372,
+          "source_spectral_response": 7.93852745529516e-06,
+          "Landau_inverse_spectral_units": "E^2",
+          "pair_source_response": 0.019810966560382535,
+          "pair_support_status": "PAIR_SUPPORT_EVALUATED_ABOVE_Eq",
+          "combined_pair_Landau_source_response": 0.01981890508783783,
+          "combined_window_is_full_retarded_response": false,
+          "Landau_spectral_matrix": {
+            "real": [
+              [
+                7.702594005033556e-07,
+                0.0,
+                -4.7647102769349606e-08
+              ],
+              [
+                0.0,
+                5.472519586453543e-09,
+                0.0
+              ],
+              [
+                -4.7647102769349606e-08,
+                0.0,
+                2.9473795152274588e-09
+              ]
+            ],
+            "imag": [
+              [
+                0.0,
+                6.492498288406295e-08,
+                0.0
+              ],
+              [
+                -6.492498288406295e-08,
+                0.0,
+                4.016165026265294e-09
+              ],
+              [
+                0.0,
+                -4.016165026265294e-09,
+                0.0
+              ]
+            ]
+          },
+          "scaled_min_eigenvalue": 4.408099030673051e-17,
+          "hermitian_error": 0.0,
+          "source_gram_error": 4.267960031752801e-16,
+          "quadrature_error": 3.4570476257197686e-14,
+          "tail_error": 1.5294234773786162e-12,
+          "angular_root_method_error": 2.547972138956422e-13,
+          "support_margin": 5.320934717278902e-07,
+          "energy_residual": 4.7315066723304114e-14,
+          "Bose_identity_error": 3.704936228620322e-32,
+          "imaginary_source_correction_over_tree": 6.009361248813227e-08,
+          "correction_ratio_is_not_full_perturbative_control": true
+        },
+        {
+          "q": 0.02,
+          "omega": 0.002109552841759998,
+          "omega_over_Eq": 0.5,
+          "T": 0.00037216591771240014,
+          "support": {
+            "status": "SUPPORTED",
+            "p_min": 0.004999164259351803,
+            "endpoint": "LOWER_ANGULAR_ENDPOINT"
+          },
+          "p_max": 0.07562993069989361,
+          "source_spectral_response": 1.1767567989324305e-11,
+          "Landau_inverse_spectral_units": "E^2",
+          "pair_source_response": 0.0,
+          "pair_support_status": "NO_PAIR_SUPPORT_CONDITIONAL_Ep_GE_cp_BOUND",
+          "combined_pair_Landau_source_response": 1.1767567989324305e-11,
+          "combined_window_is_full_retarded_response": false,
+          "Landau_spectral_matrix": {
+            "real": [
+              [
+                9.353476063526008e-06,
+                0.0,
+                -5.790010207663121e-07
+              ],
+              [
+                0.0,
+                4.198560477829905e-09,
+                0.0
+              ],
+              [
+                -5.790010207663121e-07,
+                0.0,
+                3.584146093153187e-08
+              ]
+            ],
+            "imag": [
+              [
+                0.0,
+                1.981692872709391e-07,
+                0.0
+              ],
+              [
+                -1.981692872709391e-07,
+                0.0,
+                1.2267127803061024e-08
+              ],
+              [
+                0.0,
+                -1.2267127803061024e-08,
+                0.0
+              ]
+            ]
+          },
+          "scaled_min_eigenvalue": 7.341967378095525e-17,
+          "hermitian_error": 0.0,
+          "source_gram_error": 5.491660249112865e-16,
+          "quadrature_error": 5.600120539032844e-13,
+          "tail_error": 6.718565794517792e-11,
+          "angular_root_method_error": 1.6926669802828128e-12,
+          "support_margin": 8.219846304413636e-05,
+          "energy_residual": 7.380304910448474e-14,
+          "Bose_identity_error": 2.8667098002179978e-15,
+          "imaginary_source_correction_over_tree": 5.793385540172773e-13,
+          "correction_ratio_is_not_full_perturbative_control": true
+        },
+        {
+          "q": 0.02,
+          "omega": 0.0037971951151679964,
+          "omega_over_Eq": 0.9,
+          "T": 0.00037216591771240014,
+          "support": {
+            "status": "SUPPORTED",
+            "p_min": 0.0009996190775261539,
+            "endpoint": "LOWER_ANGULAR_ENDPOINT"
+          },
+          "p_max": 0.07163038551806797,
+          "source_spectral_response": 7.16118075484852e-09,
+          "Landau_inverse_spectral_units": "E^2",
+          "pair_source_response": 0.0,
+          "pair_support_status": "NO_PAIR_SUPPORT_CONDITIONAL_Ep_GE_cp_BOUND",
+          "combined_pair_Landau_source_response": 7.16118075484852e-09,
+          "combined_window_is_full_retarded_response": false,
+          "Landau_spectral_matrix": {
+            "real": [
+              [
+                0.00012929127569513777,
+                0.0,
+                -8.008133076186272e-06
+              ],
+              [
+                0.0,
+                1.8830971276528507e-07,
+                0.0
+              ],
+              [
+                -8.008133076186272e-06,
+                0.0,
+                4.960134006313977e-07
+              ]
+            ],
+            "imag": [
+              [
+                0.0,
+                4.934244519547251e-06,
+                0.0
+              ],
+              [
+                -4.934244519547251e-06,
+                0.0,
+                3.056208157811342e-07
+              ],
+              [
+                0.0,
+                -3.056208157811342e-07,
+                0.0
+              ]
+            ]
+          },
+          "scaled_min_eigenvalue": 7.228266464963773e-17,
+          "hermitian_error": 0.0,
+          "source_gram_error": 6.4685023166894494e-15,
+          "quadrature_error": 1.0257196530750412e-13,
+          "tail_error": 5.1161232966215904e-11,
+          "angular_root_method_error": 4.689664179599851e-13,
+          "support_margin": 0.000520290851467764,
+          "energy_residual": 5.322225453836256e-14,
+          "Bose_identity_error": 4.440562948727063e-16,
+          "imaginary_source_correction_over_tree": 3.328082316460026e-10,
+          "correction_ratio_is_not_full_perturbative_control": true
+        },
+        {
+          "q": 0.02,
+          "omega": 0.0042233247892035156,
+          "omega_over_Eq": 1.001,
+          "T": 0.00037216591771240014,
+          "support": {
+            "status": "SUPPORTED",
+            "p_min": 0.0057964587723853215,
+            "endpoint": "UPPER_ANGULAR_ENDPOINT"
+          },
+          "p_max": 0.07642722521292714,
+          "source_spectral_response": 7.748696801008655e-05,
+          "Landau_inverse_spectral_units": "E^2",
+          "pair_source_response": 0.0013315128827382815,
+          "pair_support_status": "PAIR_SUPPORT_EVALUATED_ABOVE_Eq",
+          "combined_pair_Landau_source_response": 0.001408999850748368,
+          "combined_window_is_full_retarded_response": false,
+          "Landau_spectral_matrix": {
+            "real": [
+              [
+                5.910072876161645e-06,
+                0.0,
+                -3.6552674079856847e-07
+              ],
+              [
+                0.0,
+                1.0547606644206335e-08,
+                0.0
+              ],
+              [
+                -3.6552674079856847e-07,
+                0.0,
+                2.260714092961596e-08
+              ]
+            ],
+            "imag": [
+              [
+                0.0,
+                2.4967359563511505e-07,
+                0.0
+              ],
+              [
+                -2.4967359563511505e-07,
+                0.0,
+                1.544185403891768e-08
+              ],
+              [
+                0.0,
+                -1.544185403891768e-08,
+                0.0
+              ]
+            ]
+          },
+          "scaled_min_eigenvalue": 3.626713086161961e-16,
+          "hermitian_error": 0.0,
+          "source_gram_error": 4.722319670144092e-15,
+          "quadrature_error": 2.2894505363772654e-13,
+          "tail_error": 4.700282178350087e-12,
+          "angular_root_method_error": 4.766044852275056e-13,
+          "support_margin": 2.5674638692851914e-07,
+          "energy_residual": 4.764680275780058e-14,
+          "Bose_identity_error": 4.4407873524387146e-16,
+          "imaginary_source_correction_over_tree": 5.810541048846582e-07,
+          "correction_ratio_is_not_full_perturbative_control": true
+        },
+        {
+          "q": 0.02,
+          "omega": 0.002109552841759998,
+          "omega_over_Eq": 0.5,
+          "T": 0.00018608295885620007,
+          "support": {
+            "status": "SUPPORTED",
+            "p_min": 0.004999164259351803,
+            "endpoint": "LOWER_ANGULAR_ENDPOINT"
+          },
+          "p_max": 0.04031454747962271,
+          "source_spectral_response": 2.413054868306539e-13,
+          "Landau_inverse_spectral_units": "E^2",
+          "pair_source_response": 0.0,
+          "pair_support_status": "NO_PAIR_SUPPORT_CONDITIONAL_Ep_GE_cp_BOUND",
+          "combined_pair_Landau_source_response": 2.413054868306539e-13,
+          "combined_window_is_full_retarded_response": false,
+          "Landau_spectral_matrix": {
+            "real": [
+              [
+                2.6867830049078415e-07,
+                0.0,
+                -1.663511319151198e-08
+              ],
+              [
+                0.0,
+                1.2074833716756075e-10,
+                0.0
+              ],
+              [
+                -1.663511319151198e-08,
+                0.0,
+                1.0299566455897753e-09
+              ]
+            ],
+            "imag": [
+              [
+                0.0,
+                5.695827175244398e-09,
+                0.0
+              ],
+              [
+                -5.695827175244398e-09,
+                0.0,
+                3.5265497852545597e-10
+              ],
+              [
+                0.0,
+                -3.5265497852545597e-10,
+                0.0
+              ]
+            ]
+          },
+          "scaled_min_eigenvalue": -2.8628604268623e-19,
+          "hermitian_error": 0.0,
+          "source_gram_error": 2.301473060433714e-14,
+          "quadrature_error": 3.240892518738021e-13,
+          "tail_error": 1.1859072230767577e-11,
+          "angular_root_method_error": 2.512790132346264e-13,
+          "support_margin": 4.110035878168716e-05,
+          "energy_residual": 7.400862862845265e-14,
+          "Bose_identity_error": 4.4407861582296264e-16,
+          "imaginary_source_correction_over_tree": 1.1879903472300511e-14,
+          "correction_ratio_is_not_full_perturbative_control": true
+        },
+        {
+          "q": 0.02,
+          "omega": 0.0037971951151679964,
+          "omega_over_Eq": 0.9,
+          "T": 0.00018608295885620007,
+          "support": {
+            "status": "SUPPORTED",
+            "p_min": 0.0009996190775261539,
+            "endpoint": "LOWER_ANGULAR_ENDPOINT"
+          },
+          "p_max": 0.03631500229779706,
+          "source_spectral_response": 3.2082425793089407e-10,
+          "Landau_inverse_spectral_units": "E^2",
+          "pair_source_response": 0.0,
+          "pair_support_status": "NO_PAIR_SUPPORT_CONDITIONAL_Ep_GE_cp_BOUND",
+          "combined_pair_Landau_source_response": 3.2082425793089407e-10,
+          "combined_window_is_full_retarded_response": false,
+          "Landau_spectral_matrix": {
+            "real": [
+              [
+                2.998120882403148e-05,
+                0.0,
+                -1.857268534697345e-06
+              ],
+              [
+                0.0,
+                4.37051892708657e-08,
+                0.0
+              ],
+              [
+                -1.857268534697345e-06,
+                0.0,
+                1.1505361725752226e-07
+              ]
+            ],
+            "imag": [
+              [
+                0.0,
+                1.1446982193770684e-06,
+                0.0
+              ],
+              [
+                -1.1446982193770684e-06,
+                0.0,
+                7.091149024594528e-08
+              ],
+              [
+                0.0,
+                -7.091149024594528e-08,
+                0.0
+              ]
+            ]
+          },
+          "scaled_min_eigenvalue": -3.487479018167422e-18,
+          "hermitian_error": 0.0,
+          "source_gram_error": 2.4171545794878863e-15,
+          "quadrature_error": 1.8064201890706138e-13,
+          "tail_error": 4.102024121937986e-11,
+          "angular_root_method_error": 3.19064404492401e-13,
+          "support_margin": 0.0002601810959476092,
+          "energy_residual": 5.299383284506486e-14,
+          "Bose_identity_error": 4.44089208630177e-16,
+          "imaginary_source_correction_over_tree": 1.4909964935437583e-11,
+          "correction_ratio_is_not_full_perturbative_control": true
+        },
+        {
+          "q": 0.02,
+          "omega": 0.0042233247892035156,
+          "omega_over_Eq": 1.001,
+          "T": 0.00018608295885620007,
+          "support": {
+            "status": "SUPPORTED",
+            "p_min": 0.0057964587723853215,
+            "endpoint": "UPPER_ANGULAR_ENDPOINT"
+          },
+          "p_max": 0.041111841992656224,
+          "source_spectral_response": 9.615202900799306e-07,
+          "Landau_inverse_spectral_units": "E^2",
+          "pair_source_response": 0.0012691186069582756,
+          "pair_support_status": "PAIR_SUPPORT_EVALUATED_ABOVE_Eq",
+          "combined_pair_Landau_source_response": 0.0012700801272483556,
+          "combined_window_is_full_retarded_response": false,
+          "Landau_spectral_matrix": {
+            "real": [
+              [
+                1.0878920362898642e-07,
+                0.0,
+                -6.730381524621598e-09
+              ],
+              [
+                0.0,
+                1.944965643122429e-10,
+                0.0
+              ],
+              [
+                -6.730381524621598e-09,
+                0.0,
+                4.163835899586634e-10
+              ]
+            ],
+            "imag": [
+              [
+                0.0,
+                4.59990334680425e-09,
+                0.0
+              ],
+              [
+                -4.59990334680425e-09,
+                0.0,
+                2.8457890157253665e-10
+              ],
+              [
+                0.0,
+                -2.8457890157253665e-10,
+                0.0
+              ]
+            ]
+          },
+          "scaled_min_eigenvalue": 9.999059716698738e-18,
+          "hermitian_error": 0.0,
+          "source_gram_error": 1.3213963698840203e-15,
+          "quadrature_error": 3.0832581963960474e-15,
+          "tail_error": 1.2154644275649848e-12,
+          "angular_root_method_error": 7.8116548732977e-13,
+          "support_margin": 1.2837499852036416e-07,
+          "energy_residual": 4.908442180652732e-14,
+          "Bose_identity_error": 4.4408920972652887e-16,
+          "imaginary_source_correction_over_tree": 7.210184187463693e-09,
+          "correction_ratio_is_not_full_perturbative_control": true
+        }
+      ],
+      "outside_front_support": [
+        {
+          "status": "NO_LANDAU_SUPPORT_CONDITIONAL_UNIT_FRONT_SPEED_BOUND",
+          "p_min": null
+        },
+        {
+          "status": "NO_LANDAU_SUPPORT_CONDITIONAL_UNIT_FRONT_SPEED_BOUND",
+          "p_min": null
+        }
+      ]
+    },
+    {
+      "mu": 1.2,
+      "flux_checks": [
+        {
+          "p": 0.04,
+          "v_flux": 0.364939038212302,
+          "v_implicit": 0.364939038212302,
+          "velocity_identity_error": 0.0,
+          "velocity_FD_error": 5.934905178100294e-12,
+          "mass_form": 0.0001839465308489069,
+          "energy_minus_flux_identity_error": 1.275520617407246e-16,
+          "positive_energy": 0.000425003781863348,
+          "front_speed_margin": 0.635060961787698,
+          "energy_over_sound_bound": 1.0006910198566896
+        },
+        {
+          "p": 0.15576391584455304,
+          "v_flux": 0.37541970442530265,
+          "v_implicit": 0.37541970442530265,
+          "velocity_identity_error": 0.0,
+          "velocity_FD_error": 9.015549185192814e-11,
+          "mass_form": 0.0027645865053892694,
+          "energy_minus_flux_identity_error": 1.3201945862326082e-16,
+          "positive_energy": 0.006569953755556312,
+          "front_speed_margin": 0.6245802955746973,
+          "energy_over_sound_bound": 1.0103640758149024
+        },
+        {
+          "p": 0.14776461946362307,
+          "v_flux": 0.374314984932692,
+          "v_implicit": 0.374314984932692,
+          "velocity_identity_error": 0.0,
+          "velocity_FD_error": 8.277726393470564e-11,
+          "mass_form": 0.002490291959497676,
+          "energy_minus_flux_identity_error": 7.349934176430397e-17,
+          "positive_energy": 0.005900472828517564,
+          "front_speed_margin": 0.625685015067308,
+          "energy_over_sound_bound": 1.0093378143684286
+        },
+        {
+          "p": 0.16001765204021282,
+          "v_flux": 0.3760290350945636,
+          "v_implicit": 0.37602903509456365,
+          "velocity_identity_error": 1.4762464078684218e-16,
+          "velocity_FD_error": 9.483155961358102e-11,
+          "mass_form": 0.0029161111698267476,
+          "energy_minus_flux_identity_error": 0.0,
+          "positive_energy": 0.006941470131222042,
+          "front_speed_margin": 0.6239709649054364,
+          "energy_over_sound_bound": 1.010930809490709
+        },
+        {
+          "p": 0.08288131142969968,
+          "v_flux": 0.36741026556451556,
+          "v_implicit": 0.3674102655645155,
+          "velocity_identity_error": 1.5108764352560076e-16,
+          "velocity_FD_error": 2.7961336923570514e-11,
+          "mass_form": 0.0007880966801403613,
+          "energy_minus_flux_identity_error": 0.0,
+          "positive_energy": 0.0018329580314658338,
+          "front_speed_margin": 0.6325897344354845,
+          "energy_over_sound_bound": 1.0029591454082172
+        },
+        {
+          "p": 0.07488201504876969,
+          "v_flux": 0.36682033453113694,
+          "v_implicit": 0.3668203345311369,
+          "velocity_identity_error": 1.513306270281095e-16,
+          "velocity_FD_error": 2.4119226665785376e-11,
+          "mass_form": 0.0006436324089805391,
+          "energy_minus_flux_identity_error": 7.25413411845335e-17,
+          "positive_energy": 0.0014945990173072048,
+          "front_speed_margin": 0.6331796654688631,
+          "energy_over_sound_bound": 1.002416992681124
+        },
+        {
+          "p": 0.08713504762535944,
+          "v_flux": 0.3677477902227102,
+          "v_implicit": 0.3677477902227102,
+          "velocity_identity_error": 0.0,
+          "velocity_FD_error": 3.0216512553220794e-11,
+          "mass_form": 0.0008708191355910847,
+          "energy_minus_flux_identity_error": 1.0696617535783399e-16,
+          "positive_energy": 0.002027186947385045,
+          "front_speed_margin": 0.6322522097772898,
+          "energy_over_sound_bound": 1.003269533656827
+        },
+        {
+          "p": 0.02,
+          "v_flux": 0.3643732864585074,
+          "v_implicit": 0.3643732864585074,
+          "velocity_identity_error": 0.0,
+          "velocity_FD_error": 5.138661917913625e-13,
+          "mass_form": 4.600850905868107e-05,
+          "energy_minus_flux_identity_error": 0.0,
+          "positive_energy": 0.00010614093929310504,
+          "front_speed_margin": 0.6356267135414926,
+          "energy_over_sound_bound": 1.0001728564809915
+        },
+        {
+          "p": 0.15076504686055392,
+          "v_flux": 0.3747230240100224,
+          "v_implicit": 0.3747230240100225,
+          "velocity_identity_error": 2.962783051717319e-16,
+          "velocity_FD_error": 8.479218442821343e-11,
+          "mass_form": 0.002591542309811238,
+          "energy_minus_flux_identity_error": 7.055000578773453e-17,
+          "positive_energy": 0.006147141508379569,
+          "front_speed_margin": 0.6252769759899777,
+          "energy_over_sound_bound": 1.009716689796015
+        },
+        {
+          "p": 0.1467651349791562,
+          "v_flux": 0.3741807551534066,
+          "v_implicit": 0.3741807551534067,
+          "velocity_identity_error": 2.9670767652654586e-16,
+          "velocity_FD_error": 8.008184694961644e-11,
+          "mass_form": 0.002457000465990816,
+          "energy_minus_flux_identity_error": 7.452222179187199e-17,
+          "positive_energy": 0.0058194838877106934,
+          "front_speed_margin": 0.6258192448465933,
+          "energy_over_sound_bound": 1.0092132255216997
+        },
+        {
+          "p": 0.1652960935206825,
+          "v_flux": 0.37680608156647394,
+          "v_implicit": 0.37680608156647394,
+          "velocity_identity_error": 0.0,
+          "velocity_FD_error": 9.936306232525921e-11,
+          "mass_form": 0.0031095820093365186,
+          "energy_minus_flux_identity_error": 0.0,
+          "positive_energy": 0.007417579245727144,
+          "front_speed_margin": 0.623193918433526,
+          "energy_over_sound_bound": 1.0116542351482618
+        },
+        {
+          "p": 0.07788244244570054,
+          "v_flux": 0.36703473806368137,
+          "v_implicit": 0.36703473806368137,
+          "velocity_identity_error": 0.0,
+          "velocity_FD_error": 2.3922588038845256e-11,
+          "mass_form": 0.0006961187015703457,
+          "energy_minus_flux_identity_error": 0.0,
+          "positive_energy": 0.0016174074712335589,
+          "front_speed_margin": 0.6329652619363186,
+          "energy_over_sound_bound": 1.0026139804390535
+        },
+        {
+          "p": 0.07388253056430283,
+          "v_flux": 0.3667507494761262,
+          "v_implicit": 0.36675074947612624,
+          "velocity_identity_error": 1.5135933958022175e-16,
+          "velocity_FD_error": 2.3228815126157898e-11,
+          "mass_form": 0.000626602194619586,
+          "energy_minus_flux_identity_error": 7.452680272838084e-17,
+          "positive_energy": 0.0014547815454219468,
+          "front_speed_margin": 0.6332492505238738,
+          "energy_over_sound_bound": 1.002353072534039
+        },
+        {
+          "p": 0.09241348910582911,
+          "v_flux": 0.36818950710765425,
+          "v_implicit": 0.36818950710765425,
+          "velocity_identity_error": 0.0,
+          "velocity_FD_error": 3.5482466593587585e-11,
+          "mass_form": 0.000979152782914551,
+          "energy_minus_flux_identity_error": 0.0,
+          "positive_energy": 0.0022820785216437064,
+          "front_speed_margin": 0.6318104928923458,
+          "energy_over_sound_bound": 1.003675956946319
+        }
+      ],
+      "modal_controls": [
+        {
+          "q": 0.04,
+          "T": 0.0013271355827413984,
+          "modal_projection_error": 3.0537520938459822e-12
+        },
+        {
+          "q": 0.04,
+          "T": 0.0006635677913706992,
+          "modal_projection_error": 1.077027047321321e-11
+        },
+        {
+          "q": 0.02,
+          "T": 0.0013271355827413984,
+          "modal_projection_error": 5.238026216696062e-12
+        },
+        {
+          "q": 0.02,
+          "T": 0.0006635677913706992,
+          "modal_projection_error": 1.1206084439204019e-11
+        }
+      ],
+      "off_shell_Landau_rows": [
+        {
+          "q": 0.04,
+          "omega": 0.0072887222976951525,
+          "omega_over_Eq": 0.5,
+          "T": 0.0013271355827413984,
+          "support": {
+            "status": "SUPPORTED",
+            "p_min": 0.009998707014846297,
+            "endpoint": "LOWER_ANGULAR_ENDPOINT"
+          },
+          "p_max": 0.15576391584455304,
+          "source_spectral_response": 1.637503457099942e-11,
+          "Landau_inverse_spectral_units": "E^2",
+          "pair_source_response": 0.0,
+          "pair_support_status": "NO_PAIR_SUPPORT_CONDITIONAL_Ep_GE_cp_BOUND",
+          "combined_pair_Landau_source_response": 1.637503457099942e-11,
+          "combined_window_is_full_retarded_response": false,
+          "Landau_spectral_matrix": {
+            "real": [
+              [
+                7.824710976217848e-05,
+                0.0,
+                -2.338381354130578e-06
+              ],
+              [
+                0.0,
+                2.9778105914644766e-08,
+                0.0
+              ],
+              [
+                -2.338381354130578e-06,
+                0.0,
+                6.988153879149328e-08
+              ]
+            ],
+            "imag": [
+              [
+                0.0,
+                1.5264493359181683e-06,
+                0.0
+              ],
+              [
+                -1.5264493359181683e-06,
+                0.0,
+                4.5617308019672085e-08
+              ],
+              [
+                0.0,
+                -4.5617308019672085e-08,
+                0.0
+              ]
+            ]
+          },
+          "scaled_min_eigenvalue": 1.1398889449122156e-17,
+          "hermitian_error": 0.0,
+          "source_gram_error": 9.668836938022704e-15,
+          "quadrature_error": 5.919696084503695e-16,
+          "tail_error": 7.159497500121869e-11,
+          "angular_root_method_error": 6.768185856615892e-13,
+          "support_margin": 8.482751054605941e-05,
+          "energy_residual": 6.402227934864835e-14,
+          "Bose_identity_error": 3.083118784064076e-15,
+          "imaginary_source_correction_over_tree": 8.772135754824766e-13,
+          "correction_ratio_is_not_full_perturbative_control": true
+        },
+        {
+          "q": 0.04,
+          "omega": 0.013119700135851274,
+          "omega_over_Eq": 0.9,
+          "T": 0.0013271355827413984,
+          "support": {
+            "status": "SUPPORTED",
+            "p_min": 0.0019994106339163214,
+            "endpoint": "LOWER_ANGULAR_ENDPOINT"
+          },
+          "p_max": 0.14776461946362307,
+          "source_spectral_response": 7.020008449861946e-09,
+          "Landau_inverse_spectral_units": "E^2",
+          "pair_source_response": 0.0,
+          "pair_support_status": "NO_PAIR_SUPPORT_CONDITIONAL_Ep_GE_cp_BOUND",
+          "combined_pair_Landau_source_response": 7.020008449861946e-09,
+          "combined_window_is_full_retarded_response": false,
+          "Landau_spectral_matrix": {
+            "real": [
+              [
+                0.0010167840002555035,
+                0.0,
+                -3.0403652910674446e-05
+              ],
+              [
+                0.0,
+                1.2552943844932047e-06,
+                0.0
+              ],
+              [
+                -3.0403652910674446e-05,
+                0.0,
+                9.091235263839721e-07
+              ]
+            ],
+            "imag": [
+              [
+                0.0,
+                3.572620709166915e-05,
+                0.0
+              ],
+              [
+                -3.572620709166915e-05,
+                0.0,
+                1.0682776744706737e-06
+              ],
+              [
+                0.0,
+                -1.0682776744706737e-06,
+                0.0
+              ]
+            ]
+          },
+          "scaled_min_eigenvalue": 9.873178278146182e-18,
+          "hermitian_error": 0.0,
+          "source_gram_error": 3.5349556277355826e-16,
+          "quadrature_error": 2.0620574495124233e-14,
+          "tail_error": 5.795430136632804e-11,
+          "angular_root_method_error": 2.1127251468432998e-13,
+          "support_margin": 0.0005369713275827914,
+          "energy_residual": 5.3550233655932635e-14,
+          "Bose_identity_error": 4.44044007459441e-16,
+          "imaginary_source_correction_over_tree": 3.582368485445196e-10,
+          "correction_ratio_is_not_full_perturbative_control": true
+        },
+        {
+          "q": 0.04,
+          "omega": 0.014592022039985693,
+          "omega_over_Eq": 1.001,
+          "T": 0.0013271355827413984,
+          "support": {
+            "status": "SUPPORTED",
+            "p_min": 0.014252443210506055,
+            "endpoint": "UPPER_ANGULAR_ENDPOINT"
+          },
+          "p_max": 0.16001765204021282,
+          "source_spectral_response": 5.527981947873782e-05,
+          "Landau_inverse_spectral_units": "E^2",
+          "pair_source_response": 0.0011539262904094903,
+          "pair_support_status": "PAIR_SUPPORT_EVALUATED_ABOVE_Eq",
+          "combined_pair_Landau_source_response": 0.001209206109888228,
+          "combined_window_is_full_retarded_response": false,
+          "Landau_spectral_matrix": {
+            "real": [
+              [
+                2.391268592994951e-05,
+                0.0,
+                -7.13697319256947e-07
+              ],
+              [
+                0.0,
+                3.614280697276853e-08,
+                0.0
+              ],
+              [
+                -7.13697319256947e-07,
+                0.0,
+                2.1300998814643452e-08
+              ]
+            ],
+            "imag": [
+              [
+                0.0,
+                9.29660638523589e-07,
+                0.0
+              ],
+              [
+                -9.29660638523589e-07,
+                0.0,
+                2.7746656976725616e-08
+              ],
+              [
+                0.0,
+                -2.7746656976725616e-08,
+                0.0
+              ]
+            ]
+          },
+          "scaled_min_eigenvalue": 4.6642766777118034e-17,
+          "hermitian_error": 0.0,
+          "source_gram_error": 6.129057259892776e-16,
+          "quadrature_error": 2.3290417587592548e-14,
+          "tail_error": 3.90923530150481e-12,
+          "angular_root_method_error": 6.4992523183903e-13,
+          "support_margin": 1.9007707618978742e-07,
+          "energy_residual": 4.969252451588377e-14,
+          "Bose_identity_error": 2.2203715176097452e-16,
+          "imaginary_source_correction_over_tree": 5.554859284810037e-07,
+          "correction_ratio_is_not_full_perturbative_control": true
+        },
+        {
+          "q": 0.04,
+          "omega": 0.0072887222976951525,
+          "omega_over_Eq": 0.5,
+          "T": 0.0006635677913706992,
+          "support": {
+            "status": "SUPPORTED",
+            "p_min": 0.009998707014846297,
+            "endpoint": "LOWER_ANGULAR_ENDPOINT"
+          },
+          "p_max": 0.08288131142969968,
+          "source_spectral_response": 3.830020916813496e-13,
+          "Landau_inverse_spectral_units": "E^2",
+          "pair_source_response": 0.0,
+          "pair_support_status": "NO_PAIR_SUPPORT_CONDITIONAL_Ep_GE_cp_BOUND",
+          "combined_pair_Landau_source_response": 3.830020916813496e-13,
+          "combined_window_is_full_retarded_response": false,
+          "Landau_spectral_matrix": {
+            "real": [
+              [
+                2.4484849872237643e-06,
+                0.0,
+                -7.318664803429778e-08
+              ],
+              [
+                0.0,
+                9.32787995023873e-10,
+                0.0
+              ],
+              [
+                -7.318664803429778e-08,
+                0.0,
+                2.187591787973221e-09
+              ]
+            ],
+            "imag": [
+              [
+                0.0,
+                4.779034229679988e-08,
+                0.0
+              ],
+              [
+                -4.779034229679988e-08,
+                0.0,
+                1.42848141685129e-09
+              ],
+              [
+                0.0,
+                -1.42848141685129e-09,
+                0.0
+              ]
+            ]
+          },
+          "scaled_min_eigenvalue": 1.0638382255527242e-18,
+          "hermitian_error": 0.0,
+          "source_gram_error": 3.137301223493963e-14,
+          "quadrature_error": 4.35003951156726e-14,
+          "tail_error": 1.1509018173194724e-11,
+          "angular_root_method_error": 1.059959627651889e-12,
+          "support_margin": 4.24149555230402e-05,
+          "energy_residual": 7.401832296442244e-14,
+          "Bose_identity_error": 4.4407413888899436e-16,
+          "imaginary_source_correction_over_tree": 2.051749160005336e-14,
+          "correction_ratio_is_not_full_perturbative_control": true
+        },
+        {
+          "q": 0.04,
+          "omega": 0.013119700135851274,
+          "omega_over_Eq": 0.9,
+          "T": 0.0006635677913706992,
+          "support": {
+            "status": "SUPPORTED",
+            "p_min": 0.0019994106339163214,
+            "endpoint": "LOWER_ANGULAR_ENDPOINT"
+          },
+          "p_max": 0.07488201504876969,
+          "source_spectral_response": 3.0828623058543815e-10,
+          "Landau_inverse_spectral_units": "E^2",
+          "pair_source_response": 0.0,
+          "pair_support_status": "NO_PAIR_SUPPORT_CONDITIONAL_Ep_GE_cp_BOUND",
+          "combined_pair_Landau_source_response": 3.0828623058543815e-10,
+          "combined_window_is_full_retarded_response": false,
+          "Landau_spectral_matrix": {
+            "real": [
+              [
+                0.00023943757498589595,
+                0.0,
+                -7.1606568195490875e-06
+              ],
+              [
+                0.0,
+                2.9582894426169666e-07,
+                0.0
+              ],
+              [
+                -7.1606568195490875e-06,
+                0.0,
+                2.1414770765839828e-07
+              ]
+            ],
+            "imag": [
+              [
+                0.0,
+                8.416207505122038e-06,
+                0.0
+              ],
+              [
+                -8.416207505122038e-06,
+                0.0,
+                2.5169641382456494e-07
+              ],
+              [
+                0.0,
+                -2.5169641382456494e-07,
+                0.0
+              ]
+            ]
+          },
+          "scaled_min_eigenvalue": -4.840345749253499e-19,
+          "hermitian_error": 0.0,
+          "source_gram_error": 2.3477630986289238e-15,
+          "quadrature_error": 9.221678056686038e-13,
+          "tail_error": 4.5927444827471574e-11,
+          "angular_root_method_error": 5.728541960654575e-13,
+          "support_margin": 0.00026852364677865115,
+          "energy_residual": 5.1434668869525417e-14,
+          "Bose_identity_error": 4.440892075493265e-16,
+          "imaginary_source_correction_over_tree": 1.5732101817736176e-11,
+          "correction_ratio_is_not_full_perturbative_control": true
+        },
+        {
+          "q": 0.04,
+          "omega": 0.014592022039985693,
+          "omega_over_Eq": 1.001,
+          "T": 0.0006635677913706992,
+          "support": {
+            "status": "SUPPORTED",
+            "p_min": 0.014252443210506055,
+            "endpoint": "UPPER_ANGULAR_ENDPOINT"
+          },
+          "p_max": 0.08713504762535944,
+          "source_spectral_response": 3.8659153203297417e-07,
+          "Landau_inverse_spectral_units": "E^2",
+          "pair_source_response": 0.0010958393274115947,
+          "pair_support_status": "PAIR_SUPPORT_EVALUATED_ABOVE_Eq",
+          "combined_pair_Landau_source_response": 0.0010962259189436277,
+          "combined_window_is_full_retarded_response": false,
+          "Landau_spectral_matrix": {
+            "real": [
+              [
+                2.3679201052466034e-07,
+                0.0,
+                -7.069544295592776e-09
+              ],
+              [
+                0.0,
+                3.584971015388745e-10,
+                0.0
+              ],
+              [
+                -7.069544295592776e-09,
+                0.0,
+                2.110648124569042e-10
+              ]
+            ],
+            "imag": [
+              [
+                0.0,
+                9.21353320923311e-09,
+                0.0
+              ],
+              [
+                -9.21353320923311e-09,
+                0.0,
+                2.75074725655671e-10
+              ],
+              [
+                0.0,
+                -2.75074725655671e-10,
+                0.0
+              ]
+            ]
+          },
+          "scaled_min_eigenvalue": 1.9185625570709324e-18,
+          "hermitian_error": 0.0,
+          "source_gram_error": 3.1496030326246286e-15,
+          "quadrature_error": 3.2468299088491283e-13,
+          "tail_error": 9.529603262623822e-13,
+          "angular_root_method_error": 1.1697351784643294e-12,
+          "support_margin": 9.503954301326445e-08,
+          "energy_residual": 4.9930287791079384e-14,
+          "Bose_identity_error": 2.220446047999404e-16,
+          "imaginary_source_correction_over_tree": 3.8847116025193916e-09,
+          "correction_ratio_is_not_full_perturbative_control": true
+        },
+        {
+          "q": 0.02,
+          "omega": 0.0036424740783755935,
+          "omega_over_Eq": 0.5,
+          "T": 0.0013271355827413984,
+          "support": {
+            "status": "SUPPORTED",
+            "p_min": 0.004999838030847168,
+            "endpoint": "LOWER_ANGULAR_ENDPOINT"
+          },
+          "p_max": 0.15076504686055392,
+          "source_spectral_response": 4.9621184356489994e-11,
+          "Landau_inverse_spectral_units": "E^2",
+          "pair_source_response": 0.0,
+          "pair_support_status": "NO_PAIR_SUPPORT_CONDITIONAL_Ep_GE_cp_BOUND",
+          "combined_pair_Landau_source_response": 4.9621184356489994e-11,
+          "combined_window_is_full_retarded_response": false,
+          "Landau_spectral_matrix": {
+            "real": [
+              [
+                0.000651842335436685,
+                0.0,
+                -1.9493277819412418e-05
+              ],
+              [
+                0.0,
+                6.221034815447534e-08,
+                0.0
+              ],
+              [
+                -1.9493277819412418e-05,
+                0.0,
+                5.82944506898095e-07
+              ]
+            ],
+            "imag": [
+              [
+                0.0,
+                6.367991654864067e-06,
+                0.0
+              ],
+              [
+                -6.367991654864067e-06,
+                0.0,
+                1.904341712930129e-07
+              ],
+              [
+                0.0,
+                -1.904341712930129e-07,
+                0.0
+              ]
+            ]
+          },
+          "scaled_min_eigenvalue": 7.286400785556446e-19,
+          "hermitian_error": 0.0,
+          "source_gram_error": 4.688411820426678e-15,
+          "quadrature_error": 3.1568639590872963e-13,
+          "tail_error": 1.4358000732733343e-10,
+          "angular_root_method_error": 3.9676987366977546e-12,
+          "support_margin": 0.00016968937265104955,
+          "energy_residual": 7.453291860115091e-14,
+          "Bose_identity_error": 2.6550647912954053e-14,
+          "imaginary_source_correction_over_tree": 2.655268236329139e-12,
+          "correction_ratio_is_not_full_perturbative_control": true
+        },
+        {
+          "q": 0.02,
+          "omega": 0.006556453341076069,
+          "omega_over_Eq": 0.9,
+          "T": 0.0013271355827413984,
+          "support": {
+            "status": "SUPPORTED",
+            "p_min": 0.0009999261494494502,
+            "endpoint": "LOWER_ANGULAR_ENDPOINT"
+          },
+          "p_max": 0.1467651349791562,
+          "source_spectral_response": 8.102443153848762e-09,
+          "Landau_inverse_spectral_units": "E^2",
+          "pair_source_response": 0.0,
+          "pair_support_status": "NO_PAIR_SUPPORT_CONDITIONAL_Ep_GE_cp_BOUND",
+          "combined_pair_Landau_source_response": 8.102443153848762e-09,
+          "combined_window_is_full_retarded_response": false,
+          "Landau_spectral_matrix": {
+            "real": [
+              [
+                0.0033555920457187653,
+                0.0,
+                -0.00010036675383734335
+              ],
+              [
+                0.0,
+                1.0381324774080044e-06,
+                0.0
+              ],
+              [
+                -0.00010036675383734335,
+                0.0,
+                3.001999552699656e-06
+              ]
+            ],
+            "imag": [
+              [
+                0.0,
+                5.9021587552321984e-05,
+                0.0
+              ],
+              [
+                -5.9021587552321984e-05,
+                0.0,
+                1.7653534473574656e-06
+              ],
+              [
+                0.0,
+                -1.7653534473574656e-06,
+                0.0
+              ]
+            ]
+          },
+          "scaled_min_eigenvalue": 1.5584074339184051e-18,
+          "hermitian_error": 0.0,
+          "source_gram_error": 0.0,
+          "quadrature_error": 1.692656683387475e-13,
+          "tail_error": 1.0402937300553297e-10,
+          "angular_root_method_error": 9.269796553171456e-14,
+          "support_margin": 0.0010741389712434213,
+          "energy_residual": 5.2784228828291114e-14,
+          "Bose_identity_error": 3.940035264142475e-15,
+          "imaginary_source_correction_over_tree": 4.130024297566987e-10,
+          "correction_ratio_is_not_full_perturbative_control": true
+        },
+        {
+          "q": 0.02,
+          "omega": 0.007292233104907938,
+          "omega_over_Eq": 1.001,
+          "T": 0.0013271355827413984,
+          "support": {
+            "status": "SUPPORTED",
+            "p_min": 0.019530884690975737,
+            "endpoint": "UPPER_ANGULAR_ENDPOINT"
+          },
+          "p_max": 0.1652960935206825,
+          "source_spectral_response": 2.390178375825461e-05,
+          "Landau_inverse_spectral_units": "E^2",
+          "pair_source_response": 8.889762323125678e-05,
+          "pair_support_status": "PAIR_SUPPORT_EVALUATED_ABOVE_Eq",
+          "combined_pair_Landau_source_response": 0.00011279940698951139,
+          "combined_window_is_full_retarded_response": false,
+          "Landau_spectral_matrix": {
+            "real": [
+              [
+                1.1109124624032556e-05,
+                0.0,
+                -3.3158741309589065e-07
+              ],
+              [
+                0.0,
+                4.204913518282004e-09,
+                0.0
+              ],
+              [
+                -3.3158741309589065e-07,
+                0.0,
+                9.897292162882372e-09
+              ]
+            ],
+            "imag": [
+              [
+                0.0,
+                2.1613142516890798e-07,
+                0.0
+              ],
+              [
+                -2.1613142516890798e-07,
+                0.0,
+                6.451140853707588e-09
+              ],
+              [
+                0.0,
+                -6.451140853707588e-09,
+                0.0
+              ]
+            ]
+          },
+          "scaled_min_eigenvalue": 2.4178321264488188e-17,
+          "hermitian_error": 0.0,
+          "source_gram_error": 4.25256770367244e-15,
+          "quadrature_error": 2.5883962089686253e-13,
+          "tail_error": 3.780532688564799e-12,
+          "angular_root_method_error": 8.530650813566916e-13,
+          "support_margin": 8.737836709737934e-08,
+          "energy_residual": 4.912355277673657e-14,
+          "Bose_identity_error": 2.2022756371286958e-15,
+          "imaginary_source_correction_over_tree": 2.392518928188368e-07,
+          "correction_ratio_is_not_full_perturbative_control": true
+        },
+        {
+          "q": 0.02,
+          "omega": 0.0036424740783755935,
+          "omega_over_Eq": 0.5,
+          "T": 0.0006635677913706992,
+          "support": {
+            "status": "SUPPORTED",
+            "p_min": 0.004999838030847168,
+            "endpoint": "LOWER_ANGULAR_ENDPOINT"
+          },
+          "p_max": 0.07788244244570054,
+          "source_spectral_response": 1.033872309410928e-12,
+          "Landau_inverse_spectral_units": "E^2",
+          "pair_source_response": 0.0,
+          "pair_support_status": "NO_PAIR_SUPPORT_CONDITIONAL_Ep_GE_cp_BOUND",
+          "combined_pair_Landau_source_response": 1.033872309410928e-12,
+          "combined_window_is_full_retarded_response": false,
+          "Landau_spectral_matrix": {
+            "real": [
+              [
+                7.814929595803034e-05,
+                0.0,
+                -2.337302708685242e-06
+              ],
+              [
+                0.0,
+                7.462662504020907e-09,
+                0.0
+              ],
+              [
+                -2.337302708685242e-06,
+                0.0,
+                6.990445599048929e-08
+              ]
+            ],
+            "imag": [
+              [
+                0.0,
+                7.636764832421407e-07,
+                0.0
+              ],
+              [
+                -7.636764832421407e-07,
+                0.0,
+                2.2840169562889097e-08
+              ],
+              [
+                0.0,
+                -2.2840169562889097e-08,
+                0.0
+              ]
+            ]
+          },
+          "scaled_min_eigenvalue": -6.672075998839624e-20,
+          "hermitian_error": 0.0,
+          "source_gram_error": 5.703695693395633e-14,
+          "quadrature_error": 7.66092277722523e-13,
+          "tail_error": 9.232095608711433e-11,
+          "angular_root_method_error": 6.420564295955975e-13,
+          "support_margin": 8.4849486610028e-05,
+          "energy_residual": 7.393760774970403e-14,
+          "Bose_identity_error": 3.523481652530875e-15,
+          "imaginary_source_correction_over_tree": 5.532331279876113e-14,
+          "correction_ratio_is_not_full_perturbative_control": true
+        },
+        {
+          "q": 0.02,
+          "omega": 0.006556453341076069,
+          "omega_over_Eq": 0.9,
+          "T": 0.0006635677913706992,
+          "support": {
+            "status": "SUPPORTED",
+            "p_min": 0.0009999261494494502,
+            "endpoint": "LOWER_ANGULAR_ENDPOINT"
+          },
+          "p_max": 0.07388253056430283,
+          "source_spectral_response": 4.4466989663026475e-10,
+          "Landau_inverse_spectral_units": "E^2",
+          "pair_source_response": 0.0,
+          "pair_support_status": "NO_PAIR_SUPPORT_CONDITIONAL_Ep_GE_cp_BOUND",
+          "combined_pair_Landau_source_response": 4.4466989663026475e-10,
+          "combined_window_is_full_retarded_response": false,
+          "Landau_spectral_matrix": {
+            "real": [
+              [
+                0.0010169457837156364,
+                0.0,
+                -3.041937599658032e-05
+              ],
+              [
+                0.0,
+                3.1473673379946144e-07,
+                0.0
+              ],
+              [
+                -3.041937599658032e-05,
+                0.0,
+                9.099191520428258e-07
+              ]
+            ],
+            "imag": [
+              [
+                0.0,
+                1.7890505100247608e-05,
+                0.0
+              ],
+              [
+                -1.7890505100247608e-05,
+                0.0,
+                5.351494880324813e-07
+              ],
+              [
+                0.0,
+                -5.351494880324813e-07,
+                0.0
+              ]
+            ]
+          },
+          "scaled_min_eigenvalue": -4.802355958055723e-19,
+          "hermitian_error": 0.0,
+          "source_gram_error": 5.1039587408353016e-14,
+          "quadrature_error": 1.1498440079011647e-13,
+          "tail_error": 7.282395764136102e-11,
+          "angular_root_method_error": 2.4438545041539414e-13,
+          "support_margin": 0.0005372213794643255,
+          "energy_residual": 4.7360285515108316e-14,
+          "Bose_identity_error": 4.4404377549226284e-16,
+          "imaginary_source_correction_over_tree": 2.2665971764420644e-11,
+          "correction_ratio_is_not_full_perturbative_control": true
+        },
+        {
+          "q": 0.02,
+          "omega": 0.007292233104907938,
+          "omega_over_Eq": 1.001,
+          "T": 0.0006635677913706992,
+          "support": {
+            "status": "SUPPORTED",
+            "p_min": 0.019530884690975737,
+            "endpoint": "UPPER_ANGULAR_ENDPOINT"
+          },
+          "p_max": 0.09241348910582911,
+          "source_spectral_response": 4.101714640217898e-08,
+          "Landau_inverse_spectral_units": "E^2",
+          "pair_source_response": 7.253649202017578e-05,
+          "pair_support_status": "PAIR_SUPPORT_EVALUATED_ABOVE_Eq",
+          "combined_pair_Landau_source_response": 7.257750916657795e-05,
+          "combined_window_is_full_retarded_response": false,
+          "Landau_spectral_matrix": {
+            "real": [
+              [
+                2.6133167191322545e-08,
+                0.0,
+                -7.802495184372264e-10
+              ],
+              [
+                0.0,
+                9.906364737999412e-12,
+                0.0
+              ],
+              [
+                -7.802495184372264e-10,
+                0.0,
+                2.3295659151957742e-11
+              ]
+            ],
+            "imag": [
+              [
+                0.0,
+                5.088069931684153e-10,
+                0.0
+              ],
+              [
+                -5.088069931684153e-10,
+                0.0,
+                1.519128869414263e-11
+              ],
+              [
+                0.0,
+                -1.519128869414263e-11,
+                0.0
+              ]
+            ]
+          },
+          "scaled_min_eigenvalue": 1.861227091555151e-18,
+          "hermitian_error": 0.0,
+          "source_gram_error": 9.680017476894996e-16,
+          "quadrature_error": 2.2489907271319377e-13,
+          "tail_error": 8.566815467052072e-13,
+          "angular_root_method_error": 1.824683294394707e-12,
+          "support_margin": 4.368929618081552e-08,
+          "energy_residual": 4.8885666322611936e-14,
+          "Bose_identity_error": 4.44074218414589e-16,
+          "imaginary_source_correction_over_tree": 4.10573119312049e-10,
+          "correction_ratio_is_not_full_perturbative_control": true
+        }
+      ],
+      "outside_front_support": [
+        {
+          "status": "NO_LANDAU_SUPPORT_CONDITIONAL_UNIT_FRONT_SPEED_BOUND",
+          "p_min": null
+        },
+        {
+          "status": "NO_LANDAU_SUPPORT_CONDITIONAL_UNIT_FRONT_SPEED_BOUND",
+          "p_min": null
+        }
+      ]
+    }
+  ],
+  "thresholds": {
+    "identity_relative": 1e-09,
+    "velocity_FD_relative": 1e-06,
+    "modal_projection_relative": 1e-06,
+    "quadrature_relative": 1e-06,
+    "tail_relative": 1e-08,
+    "original_causal_leakage": 1e-06
+  },
+  "declared_grids": {
+    "mu": [
+      1.05,
+      1.2
+    ],
+    "q": [
+      0.04,
+      0.02
+    ],
+    "omega_over_Eq": [
+      0.5,
+      0.9,
+      1.001
+    ],
+    "T_divisors": [
+      256,
+      512
+    ],
+    "orders": [
+      24,
+      48,
+      96
+    ],
+    "thermal_tails": [
+      32.0,
+      40.0
+    ],
+    "locked_before_first_audit": true
+  },
+  "evidence_artifacts": [
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/Research_T13_Acoustic_Source_Landau.py",
+      "sha256": "98522ab49b79f89c7059092cf8fc1fb48f91957780725488af0e8600e3dab5a1"
+    },
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/t13_acoustic_source_Landau_registry.json",
+      "sha256": "674dd717e29eb9efa9723f0b06acef4d19f3ba94ac8c4c494df3c21925b6db14"
+    },
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/test_t13_acoustic_source_Landau.py",
+      "sha256": "b16cd7a9416f39fdc1c380ccd803c4a01146a9e004f21c6a1071c86b5fe98723"
+    }
+  ],
+  "protected_evidence_hashes": [
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/t13_acoustic_source_pair.json",
+      "sha256": "c151cc3d2b8342f3ab0b6569a68f40a58ce2d604d99a419e934556e605b4f025"
+    },
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/Research_T13_Acoustic_Source_Pair.py",
+      "sha256": "c4c6059fd06a9c7edfc87feb3f6df11e591e08a550ecc7bfd6b2f7166df4fd41"
+    },
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/t13_acoustic_modal_cuts.json",
+      "sha256": "6f44a1c7e28aaa3c925a9f9f452892529ba12c5378a0e6222aeab6e3662e7840"
+    },
+    {
+      "path": "docs/core/02_equations/o2/uet_o2_action_thermal_observable_bridge.py",
+      "sha256": "1cf745562548bc9a61d9ebb86069b8aff73e2a776756aa9efe7ab1a45b669ebe"
+    },
+    {
+      "path": "docs/core/02_equations/o2/uet_o2_action_thermal_stiffness_beta.py",
+      "sha256": "c1c3278a79df611ddae2f67ff811022722ab0c56f68bf91cc5480f34db9a95e6"
+    },
+    {
+      "path": "docs/core/02_equations/covariant/uet_covariant_matter.py",
+      "sha256": "8a57d95e898a8ac962bbd749670ad0695b597281937da36496d2ec7e074f9c53"
+    },
+    {
+      "path": "docs/core/02_equations/covariant/uet_covariant_response.py",
+      "sha256": "7fb4b7228afb8ede0ac4f1664d634346ef46cc7678c94ed7b55d73645590c0c2"
+    }
+  ],
+  "controlling_blocker": "local_real_source_contact_and_complete_thermal_sunset_matching_open",
+  "open_blockers": [
+    "principal_value_finite_local_real_and_complete_source_contact_matching",
+    "all_mode_quantum_heavy_and_complete_thermal_sunset_pressure",
+    "physical_material_readout_scale_transport_and_total_uncertainty"
+  ],
+  "dependency_unlocked": [
+    "dispersive_and_source_matching_research_only"
+  ],
+  "full_off_shell_source_matching_closed": false,
+  "full_real_self_energy_matched": false,
+  "full_two_loop_pressure_computed": false,
+  "all_parent_modes_and_quantum_Phi_loops_included": false,
+  "full_SK_KMS_matching_closed": false,
+  "physical_Kubo_emitted": false,
+  "independent_alpha_Phi_K_admitted": false,
+  "finite_thermal_tail_is_total_error_bound": false,
+  "controlled_full_action_truncation_error_established": false,
+  "full_core_unlock": false,
+  "core_composition_gate_overwritten": false,
+  "claim_promotion": false,
+  "parameter_fitting": false,
+  "assigned_width": false,
+  "clipping": false,
+  "cone_padding": false,
+  "xie_2026_accessed": false,
+  "prior_Xie_context_exposure_review": "REVIEW_REQUIRED",
+  "primary_references": [
+    "https://arxiv.org/abs/cond-mat/9708104"
+  ],
+  "claim_boundary": "Declared acoustic Landau/source quadrature and conditional quadratic-parent energy-flux support only. Not full retarded/contact/local real response, all-mode loops, interacting EOS, physical transport/calibration/causal closure or global UET; original conserved-C and owner Core unchanged.",
+  "report": {
+    "MAJOR_RESULT_CLOSURE": "CLOSED_FOR_LANE",
+    "WHAT_IS_ACTUALLY_CLOSED": "Conditional positive-energy tree group/sound support bounds and declared off-shell acoustic Landau/pair source spectral window with modal projection",
+    "WHAT_REMAINS_OPEN": [
+      "principal_value_finite_local_real_and_complete_source_contact_matching",
+      "all_mode_quantum_heavy_and_complete_thermal_sunset_pressure",
+      "physical_material_readout_scale_transport_and_total_uncertainty"
+    ],
+    "DEPENDENCY_UNLOCKED": [
+      "dispersive_and_source_matching_research_only"
+    ],
+    "STATUS": "PASS_SCOPED_LANDAU_SOURCE_INTERFACE",
+    "WHAT_CHANGED": "Derived Landau/source support and quadratic energy-flux boundary",
+    "EQUATION_OR_MAPPING": "H-F=(E-p)^2 udagger K u+udagger V0 u>=0; R_L=integral V_L V_Ldagger (np-nr)/(16pi q); Im delta_chi_hh=d_hdagger R_L d_h",
+    "VERIFICATION": {
+      "conditional_positive_energy_flux_identity": true,
+      "group_velocity_independent_FD": true,
+      "on_shell_Landau_projects_to_prior_modal_rate": true,
+      "positive_hermitian_Landau_kernel_source": true,
+      "source_gram_energy_Bose_and_strict_support": true,
+      "quadrature_tail_and_independent_angular_root": true,
+      "outside_front_support_has_structural_reason": true,
+      "conditional_sound_bound_and_combined_cut_window": true
+    },
+    "CONTROLLING_BLOCKER": "local_real_source_contact_and_complete_thermal_sunset_matching_open",
+    "NEXT_ACTION": "Derive dispersive/local/source contact matching and complete thermal consistency",
+    "CLAIM_BOUNDARY": "Declared acoustic Landau/source quadrature and conditional quadratic-parent energy-flux support only. Not full retarded/contact/local real response, all-mode loops, interacting EOS, physical transport/calibration/causal closure or global UET; original conserved-C and owner Core unchanged."
+  }
+}

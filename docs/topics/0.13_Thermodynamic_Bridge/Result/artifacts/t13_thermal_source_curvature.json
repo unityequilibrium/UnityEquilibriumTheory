@@ -1,0 +1,556 @@
+{
+  "major_result_id": "T13_THERMAL_STATIC_SOURCE_CURVATURE_MATCHING_TARGET",
+  "topic": "0.13_Thermodynamic_Bridge",
+  "branch_id": "t13.candidate.tree_matched_classical_phi_low_T_phase_EFT_v1",
+  "created_at": "2026-10-03T02:15:29.961361+00:00",
+  "closure_level": "CLOSED_FOR_LANE",
+  "verification_status": "PASS_SCOPED_THERMAL_SOURCE_CURVATURE",
+  "what_is_closed": "Source energy derivatives and thermal acoustic determinant Hessian, with an independently checked static matching obligation beyond acoustic cuts",
+  "equation_or_mapping": "chi_th=integral [n(1+n) E_h^2/T - n E_hh]; V_L source=2E E_h; required static supplement=chi_pair-chi_energy_curvature",
+  "units": {
+    "h": "E^3",
+    "Phi": "E",
+    "P": "E^4",
+    "E_h": "E^-2",
+    "E_hh": "E^-5",
+    "chi": "E^-2"
+  },
+  "derivation_class": "SAME_TREE_ACTION_SOURCE_EIGENVALUE_VARIATION_AND_ONE_ACOUSTIC_THERMAL_DETERMINANT",
+  "observable": "Conditional equilibrium h susceptibility and static source matching target, not material heat/calibration",
+  "data_role": "DERIVED_NOT_CALIBRATION",
+  "action_controls": {
+    "Z": 1.0,
+    "m0_sq": 1.0,
+    "u": 1.0,
+    "gamma": 0.04000000000000001,
+    "epsilon": 0.05,
+    "Phi_reference": 0.0,
+    "response_mass_sq": 1.0,
+    "response_quartic": 1.0,
+    "response_kinetic": 1.0
+  },
+  "checks": {
+    "stationary_source_and_Landau_vertex_identity": true,
+    "energy_source_derivatives_independent_FD": true,
+    "thermal_pressure_derivatives_independent_FD": true,
+    "thermal_quadrature_tail_and_pointwise_identities": true,
+    "source_curvature_resolves_seagull_kinematic_virtual_terms": true,
+    "population_and_acoustic_pair_are_not_total_static_response": true
+  },
+  "examples": [
+    {
+      "mu": 1.05,
+      "source_Ward_cancellation": 4.440892098500626e-15,
+      "energy_derivative_points": [
+        {
+          "p": 0.005,
+          "E": 0.001053894002626375,
+          "E_h": 0.003949927386968454,
+          "E_hh": -0.01761094211169054,
+          "E_hh_seagull_background": -3.264579250810078e-05,
+          "E_hh_kinematic": -0.0006577845334415591,
+          "E_hh_virtual_polarization": -0.01692051178574088,
+          "Landau_vertex": 8.325609567871447e-06,
+          "pair_vertex_squared": 6.931577467663258e-11,
+          "raw_source_contraction_error": 7.823671421636073e-13,
+          "vertex_derivative_error": 4.069529998250235e-16,
+          "mode_norm_error": 4.1150330859976413e-16,
+          "kernel_derivative_residual": 5.727448668199827e-16,
+          "source_FD": [
+            {
+              "step": 0.0001,
+              "first_error": 4.106009540440976e-06,
+              "second_error": 8.791452743910402e-06
+            },
+            {
+              "step": 5e-05,
+              "first_error": 1.0265116151616352e-06,
+              "second_error": 2.1954728114690607e-06
+            },
+            {
+              "step": 2.5e-05,
+              "first_error": 2.5662883062189125e-07,
+              "second_error": 5.455543665425352e-07
+            }
+          ]
+        },
+        {
+          "p": 0.02,
+          "E": 0.004219105683519996,
+          "E_h": 0.01578277685472172,
+          "E_hh": -0.07030932972762066,
+          "E_hh_seagull_background": -0.00018722944235184083,
+          "E_hh_kinematic": -0.002632092867319256,
+          "E_hh_virtual_polarization": -0.06749000741794957,
+          "Landau_vertex": 0.0001331784070589685,
+          "pair_vertex_squared": 1.7736488106764312e-08,
+          "raw_source_contraction_error": 5.922559804563213e-14,
+          "vertex_derivative_error": 0.0,
+          "mode_norm_error": 0.0,
+          "kernel_derivative_residual": 7.980682647435813e-16,
+          "source_FD": [
+            {
+              "step": 0.0001,
+              "first_error": 4.1059981001783085e-06,
+              "second_error": 8.807148320724698e-06
+            },
+            {
+              "step": 5e-05,
+              "first_error": 1.0265090689064012e-06,
+              "second_error": 2.2034907386670632e-06
+            },
+            {
+              "step": 2.5e-05,
+              "first_error": 2.5662904852252004e-07,
+              "second_error": 5.800247610866698e-07
+            }
+          ]
+        },
+        {
+          "p": 0.04,
+          "E": 0.00846074685870249,
+          "E_h": 0.03145779337838894,
+          "E_hh": -0.13976730465536444,
+          "E_hh_seagull_background": -0.0007344482728528808,
+          "E_hh_kinematic": -0.005270033810037913,
+          "E_hh_virtual_polarization": -0.13376282257247366,
+          "Landau_vertex": 0.0005323128530158323,
+          "pair_vertex_squared": 2.833569734858551e-07,
+          "raw_source_contraction_error": 1.2220657453708985e-15,
+          "vertex_derivative_error": 2.0367762422848306e-16,
+          "mode_norm_error": 2.0503195580098448e-16,
+          "kernel_derivative_residual": 4.560658789029335e-16,
+          "source_FD": [
+            {
+              "step": 0.0001,
+              "first_error": 4.105956456492795e-06,
+              "second_error": 8.850512815159488e-06
+            },
+            {
+              "step": 5e-05,
+              "first_error": 1.0264984918821958e-06,
+              "second_error": 2.21407774265129e-06
+            },
+            {
+              "step": 2.5e-05,
+              "first_error": 2.5662538440544897e-07,
+              "second_error": 5.459706288583187e-07
+            }
+          ]
+        }
+      ],
+      "thermal_rows": [
+        {
+          "T": 0.00037216591771240014,
+          "temperature_divisor": 256,
+          "pressure": 2.2460797874598573e-13,
+          "thermal_Phi": -2.5243579589099675e-12,
+          "chi_population": 3.78144634390764e-11,
+          "chi_energy_curvature": 1.1254127917284121e-11,
+          "chi_pair_static": 9.459517799519566e-12,
+          "chi_seagull_background": 2.1675600574363357e-14,
+          "chi_kinematic": 4.2043736329277084e-13,
+          "chi_virtual_polarization": 1.0812014953417003e-11,
+          "chi_thermal": 4.906859135636052e-11,
+          "required_additional_static_matching": -1.7946101177645549e-12,
+          "missing_curvature_fraction": 0.22935502337026645,
+          "acoustic_cut_only_relative_mismatch": 0.036573499832738283,
+          "pointwise_identity_error": 1.2577410260303332e-15,
+          "curvature_decomposition_error": 1.435550711496187e-15,
+          "raw_source_contraction_error": 0.0003540139966226606,
+          "p_max": 0.07063076644054181,
+          "pressure_FD": [
+            {
+              "step": 0.0001,
+              "first_error": 3.304839018700487e-06,
+              "second_error": 7.683408182957723e-06
+            },
+            {
+              "step": 5e-05,
+              "first_error": 8.262218753404186e-07,
+              "second_error": 1.9209538609747827e-06
+            },
+            {
+              "step": 2.5e-05,
+              "first_error": 2.0651662708222217e-07,
+              "second_error": 9.838238654454039e-07
+            }
+          ],
+          "quadrature_error": 2.6340061358752846e-16,
+          "tail_error": 3.541558218003386e-10,
+          "static_matching_residual_is_not_fitted_contact": true
+        },
+        {
+          "T": 0.00018608295885620007,
+          "temperature_divisor": 512,
+          "pressure": 1.4042129973671429e-14,
+          "thermal_Phi": -1.5788501401598643e-13,
+          "chi_population": 2.3667264663917094e-12,
+          "chi_energy_curvature": 7.039542951138275e-13,
+          "chi_pair_static": 5.917741677043666e-13,
+          "chi_seagull_background": 1.28921231990781e-15,
+          "chi_kinematic": 2.6291671005052373e-14,
+          "chi_virtual_polarization": 6.763734117888677e-13,
+          "chi_thermal": 3.070680761505537e-12,
+          "required_additional_static_matching": -1.1218012740946091e-13,
+          "missing_curvature_fraction": 0.22925023790772792,
+          "acoustic_cut_only_relative_mismatch": 0.03653265712794567,
+          "pointwise_identity_error": 1.1594483357186908e-15,
+          "curvature_decomposition_error": 7.17192838861522e-16,
+          "raw_source_contraction_error": 0.0007550259302378881,
+          "p_max": 0.035315383220270904,
+          "pressure_FD": [
+            {
+              "step": 0.0001,
+              "first_error": 3.303712292319739e-06,
+              "second_error": 7.746857295539781e-06
+            },
+            {
+              "step": 5e-05,
+              "first_error": 8.258802982867433e-07,
+              "second_error": 2.15694881274192e-06
+            },
+            {
+              "step": 2.5e-05,
+              "first_error": 2.064092216514989e-07,
+              "second_error": 1.0276120927465437e-06
+            }
+          ],
+          "quadrature_error": 0.0,
+          "tail_error": 4.33513511046392e-10,
+          "static_matching_residual_is_not_fitted_contact": true
+        }
+      ]
+    },
+    {
+      "mu": 1.2,
+      "source_Ward_cancellation": 4.440892098500626e-16,
+      "energy_derivative_points": [
+        {
+          "p": 0.005,
+          "E": 0.0018209419569728171,
+          "E_h": 0.0015247407462796799,
+          "E_hh": -0.013879314757674706,
+          "E_hh_seagull_background": -0.005068326268116484,
+          "E_hh_kinematic": -0.00016933919538474206,
+          "E_hh_virtual_polarization": -0.00864164929417348,
+          "Landau_vertex": 5.552928796813428e-06,
+          "pair_vertex_squared": 3.083501822247983e-11,
+          "raw_source_contraction_error": 5.752209979585817e-12,
+          "vertex_derivative_error": 0.0,
+          "mode_norm_error": 1.190814642206291e-16,
+          "kernel_derivative_residual": 5.527657089204883e-16,
+          "source_FD": [
+            {
+              "step": 0.0001,
+              "first_error": 4.567016427353553e-06,
+              "second_error": 3.244507576851939e-05
+            },
+            {
+              "step": 5e-05,
+              "first_error": 1.1417593909294667e-06,
+              "second_error": 8.102441647976059e-06
+            },
+            {
+              "step": 2.5e-05,
+              "first_error": 2.854424652992133e-07,
+              "second_error": 2.0031127469683473e-06
+            }
+          ]
+        },
+        {
+          "p": 0.02,
+          "E": 0.007284948156751187,
+          "E_h": 0.006096593000585633,
+          "E_hh": -0.05551558667710493,
+          "E_hh_seagull_background": -0.020311927311089092,
+          "E_hh_kinematic": -0.0006771594449919603,
+          "E_hh_virtual_polarization": -0.034526499921023884,
+          "Landau_vertex": 8.882672788415701e-05,
+          "pair_vertex_squared": 7.890187586606077e-09,
+          "raw_source_contraction_error": 3.001103558689342e-13,
+          "vertex_derivative_error": 1.5257262626788728e-16,
+          "mode_norm_error": 1.1906217028937847e-16,
+          "kernel_derivative_residual": 1.3975799257720749e-16,
+          "source_FD": [
+            {
+              "step": 0.0001,
+              "first_error": 4.5650438781974904e-06,
+              "second_error": 3.242273591915166e-05
+            },
+            {
+              "step": 5e-05,
+              "first_error": 1.141266563602237e-06,
+              "second_error": 8.094992251827177e-06
+            },
+            {
+              "step": 2.5e-05,
+              "first_error": 2.8531814469350876e-07,
+              "second_error": 2.026727117674695e-06
+            }
+          ]
+        },
+        {
+          "p": 0.04,
+          "E": 0.014577444595390305,
+          "E_h": 0.01217804573753389,
+          "E_hh": -0.11102040842862522,
+          "E_hh_seagull_background": -0.04087012292047335,
+          "E_hh_kinematic": -0.0013530552584771548,
+          "E_hh_virtual_polarization": -0.06879723024967471,
+          "Landau_vertex": 0.0003550495740380587,
+          "pair_vertex_squared": 1.2606020002460693e-07,
+          "raw_source_contraction_error": 9.099919307776643e-14,
+          "vertex_derivative_error": 0.0,
+          "mode_norm_error": 0.0,
+          "kernel_derivative_residual": 7.230097329813884e-16,
+          "source_FD": [
+            {
+              "step": 0.0001,
+              "first_error": 4.558743623343035e-06,
+              "second_error": 3.234998624247021e-05
+            },
+            {
+              "step": 5e-05,
+              "first_error": 1.1396917054854305e-06,
+              "second_error": 8.077697158659085e-06
+            },
+            {
+              "step": 2.5e-05,
+              "first_error": 2.8492552096834257e-07,
+              "second_error": 2.015093731004448e-06
+            }
+          ]
+        }
+      ],
+      "thermal_rows": [
+        {
+          "T": 0.0013271355827413984,
+          "temperature_divisor": 256,
+          "pressure": 7.040666198558091e-12,
+          "thermal_Phi": -1.7676583618549954e-11,
+          "chi_population": 5.914794937503084e-11,
+          "chi_energy_curvature": 1.6093980378173612e-10,
+          "chi_pair_static": 1.4796372672593377e-11,
+          "chi_seagull_background": 5.883859557665995e-11,
+          "chi_kinematic": 1.9632927563140265e-12,
+          "chi_virtual_polarization": 1.0013791544876234e-10,
+          "chi_thermal": 2.2008775315676696e-10,
+          "required_additional_static_matching": -1.4614343110914276e-10,
+          "missing_curvature_fraction": 0.7312528819679477,
+          "acoustic_cut_only_relative_mismatch": 0.6640234588839017,
+          "pointwise_identity_error": 1.1671307230642595e-15,
+          "curvature_decomposition_error": 1.284922364008279e-15,
+          "raw_source_contraction_error": 0.00015880257397984744,
+          "p_max": 0.14576520882970675,
+          "pressure_FD": [
+            {
+              "step": 0.0001,
+              "first_error": 4.390194987407011e-06,
+              "second_error": 2.5898873859269717e-05
+            },
+            {
+              "step": 5e-05,
+              "first_error": 1.0976914646753898e-06,
+              "second_error": 6.027367661971884e-06
+            },
+            {
+              "step": 2.5e-05,
+              "first_error": 2.747430655880988e-07,
+              "second_error": 1.5261610416056145e-06
+            }
+          ],
+          "quadrature_error": 9.396031817861222e-16,
+          "tail_error": 1.6510389994271889e-10,
+          "static_matching_residual_is_not_fitted_contact": true
+        },
+        {
+          "T": 0.0006635677913706992,
+          "temperature_divisor": 512,
+          "pressure": 4.4014834465126796e-13,
+          "thermal_Phi": -1.1055361834801108e-12,
+          "chi_population": 3.702030216156027e-12,
+          "chi_energy_curvature": 1.0063765503342512e-11,
+          "chi_pair_static": 9.256547175182203e-13,
+          "chi_seagull_background": 3.675706989915161e-12,
+          "chi_kinematic": 1.227831196750232e-13,
+          "chi_virtual_polarization": 6.265275393752342e-12,
+          "chi_thermal": 1.3765795719498538e-11,
+          "required_additional_static_matching": -9.138110785824291e-12,
+          "missing_curvature_fraction": 0.7310703796866395,
+          "acoustic_cut_only_relative_mismatch": 0.6638272840908593,
+          "pointwise_identity_error": 1.3905064649742078e-15,
+          "curvature_decomposition_error": 1.4448154818595859e-15,
+          "raw_source_contraction_error": 0.0010124288168466538,
+          "p_max": 0.07288260441485338,
+          "pressure_FD": [
+            {
+              "step": 0.0001,
+              "first_error": 4.391037748487996e-06,
+              "second_error": 2.6114975182932948e-05
+            },
+            {
+              "step": 5e-05,
+              "first_error": 1.0976769082833452e-06,
+              "second_error": 5.775333840835542e-06
+            },
+            {
+              "step": 2.5e-05,
+              "first_error": 2.7466367768939985e-07,
+              "second_error": 3.1038716976670623e-06
+            }
+          ],
+          "quadrature_error": 7.041745352668149e-16,
+          "tail_error": 1.9599759289771438e-10,
+          "static_matching_residual_is_not_fitted_contact": true
+        }
+      ]
+    }
+  ],
+  "equation_registry_ids": [
+    "t13.phase_eft.stationary_source_energy_jets",
+    "t13.phase_eft.thermal_static_source_curvature"
+  ],
+  "declared_grids": {
+    "mu": [
+      1.05,
+      1.2
+    ],
+    "T_divisors": [
+      256,
+      512
+    ],
+    "momenta": [
+      0.005,
+      0.02,
+      0.04
+    ],
+    "orders": [
+      24,
+      48,
+      96
+    ],
+    "tails": [
+      32.0,
+      40.0
+    ],
+    "source_steps": [
+      0.0001,
+      5e-05,
+      2.5e-05
+    ],
+    "locked_before_first_audit": true
+  },
+  "thresholds": {
+    "identity_relative": 1e-09,
+    "source_FD_relative": 0.0001,
+    "quadrature_relative": 1e-06,
+    "thermal_tail_relative": 1e-08,
+    "original_causal_leakage": 1e-06
+  },
+  "evidence_artifacts": [
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/Research_T13_Thermal_Source_Curvature.py",
+      "sha256": "46983c106f4a95b12354eab1feba91d226a9dcf902f93bd0e6e49cf351e6c83a"
+    },
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/t13_thermal_source_curvature_registry.json",
+      "sha256": "8ae99fe4713bf6d0fb1f557c914903356dd4615a49169c593f9f082cb54d7e7d"
+    },
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/test_t13_thermal_source_curvature.py",
+      "sha256": "94030631e55375cb0f3aa69d93c2adccd2f5412f6328db99204738b0b8ebac34"
+    }
+  ],
+  "protected_evidence_hashes": [
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/t13_acoustic_source_Landau.json",
+      "sha256": "1d9337b1f7074fb90a6034f082017b39e07d32defbfbcd6d26520f2a126adbd2"
+    },
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/t13_acoustic_source_pair.json",
+      "sha256": "c151cc3d2b8342f3ab0b6569a68f40a58ce2d604d99a419e934556e605b4f025"
+    },
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/Research_T13_Acoustic_Source_Landau.py",
+      "sha256": "98522ab49b79f89c7059092cf8fc1fb48f91957780725488af0e8600e3dab5a1"
+    },
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/t13_thermal_source_curvature_first_failure.json",
+      "sha256": "c5a15a30b3b9a2e14218d5b85fdb6e4266db3f7652bf72c7de5438aab9cfe585"
+    },
+    {
+      "path": "docs/core/02_equations/o2/uet_o2_action_thermal_observable_bridge.py",
+      "sha256": "1cf745562548bc9a61d9ebb86069b8aff73e2a776756aa9efe7ab1a45b669ebe"
+    },
+    {
+      "path": "docs/core/02_equations/o2/uet_o2_action_thermal_stiffness_beta.py",
+      "sha256": "c1c3278a79df611ddae2f67ff811022722ab0c56f68bf91cc5480f34db9a95e6"
+    },
+    {
+      "path": "docs/core/02_equations/covariant/uet_covariant_matter.py",
+      "sha256": "8a57d95e898a8ac962bbd749670ad0695b597281937da36496d2ec7e074f9c53"
+    },
+    {
+      "path": "docs/core/02_equations/covariant/uet_covariant_response.py",
+      "sha256": "7fb4b7228afb8ede0ac4f1664d634346ef46cc7678c94ed7b55d73645590c0c2"
+    }
+  ],
+  "controlling_blocker": "dynamic_source_contact_virtual_mode_and_full_thermal_matching_open",
+  "open_blockers": [
+    "derive_dynamic_contact_virtual_mode_real_matching_not_assign_static_residual",
+    "complete_thermal_sunset_and_all_mode_quantum_admission",
+    "independent_material_readout_scale_transport_and_uncertainty"
+  ],
+  "dependency_unlocked": [
+    "source_contact_and_virtual_mode_matching_research_only"
+  ],
+  "full_off_shell_source_matching_closed": false,
+  "full_real_self_energy_matched": false,
+  "dynamic_contact_fixed_from_static_residual": false,
+  "full_two_loop_pressure_computed": false,
+  "all_parent_modes_and_quantum_Phi_loops_included": false,
+  "full_SK_KMS_matching_closed": false,
+  "physical_Kubo_emitted": false,
+  "independent_alpha_Phi_K_admitted": false,
+  "controlled_full_action_truncation_error_established": false,
+  "full_core_unlock": false,
+  "core_composition_gate_overwritten": false,
+  "claim_promotion": false,
+  "parameter_fitting": false,
+  "assigned_width": false,
+  "clipping": false,
+  "cone_padding": false,
+  "xie_2026_accessed": false,
+  "prior_Xie_context_exposure_review": "REVIEW_REQUIRED",
+  "primary_references": [
+    "https://arxiv.org/abs/cond-mat/0305138"
+  ],
+  "claim_boundary": "One tree acoustic thermal determinant/source curvature on stated rest-domain and finite p grid. Virtual tree eigenvector variation is not a new quantum-heavy prescription; static target is not assigned dynamic contact, full response/EOS/transport/material calibration or UET/Core closure.",
+  "report": {
+    "MAJOR_RESULT_CLOSURE": "CLOSED_FOR_LANE",
+    "WHAT_IS_ACTUALLY_CLOSED": "Source energy derivatives and thermal acoustic determinant Hessian, with an independently checked static matching obligation beyond acoustic cuts",
+    "WHAT_REMAINS_OPEN": [
+      "derive_dynamic_contact_virtual_mode_real_matching_not_assign_static_residual",
+      "complete_thermal_sunset_and_all_mode_quantum_admission",
+      "independent_material_readout_scale_transport_and_uncertainty"
+    ],
+    "DEPENDENCY_UNLOCKED": [
+      "source_contact_and_virtual_mode_matching_research_only"
+    ],
+    "STATUS": "PASS_SCOPED_THERMAL_SOURCE_CURVATURE",
+    "WHAT_CHANGED": "Derived source energy curvature and independently checked pressure Hessian",
+    "EQUATION_OR_MAPPING": "chi_th=integral [n(1+n) E_h^2/T - n E_hh]; V_L source=2E E_h; required static supplement=chi_pair-chi_energy_curvature",
+    "VERIFICATION": {
+      "stationary_source_and_Landau_vertex_identity": true,
+      "energy_source_derivatives_independent_FD": true,
+      "thermal_pressure_derivatives_independent_FD": true,
+      "thermal_quadrature_tail_and_pointwise_identities": true,
+      "source_curvature_resolves_seagull_kinematic_virtual_terms": true,
+      "population_and_acoustic_pair_are_not_total_static_response": true
+    },
+    "CONTROLLING_BLOCKER": "dynamic_source_contact_virtual_mode_and_full_thermal_matching_open",
+    "NEXT_ACTION": "Derive actual dynamic contact/virtual-mode matching and complete thermal consistency",
+    "CLAIM_BOUNDARY": "One tree acoustic thermal determinant/source curvature on stated rest-domain and finite p grid. Virtual tree eigenvector variation is not a new quantum-heavy prescription; static target is not assigned dynamic contact, full response/EOS/transport/material calibration or UET/Core closure."
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "schema_version": "uet-topic-local-equation-contract-v1",
+  "owner_topic": "0.13_Thermodynamic_Bridge",
+  "branch_id": "t13.candidate.tree_matched_classical_phi_low_T_phase_EFT_v1",
+  "status": "SCOPED_LOCAL_VERIFICATION_NOT_CORE_PROMOTION",
+  "entries": [
+    {"id": "t13.phase_eft.quadratic_energy_flux_support_bound", "ontology": "K/V0 are the declared O2/Phi parent, not conserved C; R_gen/R_obs excluded", "equation": "H-F=(E-p)^2 udagger K u+udagger V0 u>=0; v_group=F/H<=1", "units": "v:1; quadratic spectral H/F:E^2", "derivation_class": "CONDITIONAL_DERIVED_QUADRATIC_ENERGY_FLUX", "observable": "acoustic group velocity and conditional Landau support boundary", "data_role": "DERIVED", "verification_status": "PASS_SCOPED_LANDAU_SOURCE_INTERFACE", "controlling_blocker": "full_source_and_thermal_matching_open", "claim_boundary": "Requires positive K and V0>=0; not global/nonlinear or old conserved-C causal closure"},
+    {"id": "t13.phase_eft.off_shell_acoustic_Landau_source_kernel", "ontology": "h is the original external source; only acoustic internal modes, no independent quantum Phi loop", "equation": "R_L=integral V_L V_Ldagger (np-nr)/(16pi q); Im delta_chi=d_hdagger R_L d_h", "units": "R_L:E^2; chi:E^-2", "derivation_class": "DERIVED_ACOUSTIC_LANDAU_SPECTRAL_GRAM", "observable": "conditional off-shell Landau source absorption", "data_role": "DERIVED", "verification_status": "PASS_SCOPED_LANDAU_SOURCE_INTERFACE", "controlling_blocker": "local_real_source_contact_and_thermal_sunset_open", "claim_boundary": "Finite declared thermal quadrature, not full retarded/source/KMS/transport/calibration"},
+    {"id": "t13.phase_eft.acoustic_source_spectral_window", "ontology": "pair and Landau are distinct acoustic channels, not Kelvin/heat transport", "equation": "Ep>=c p excludes pair at omega<cq; declared source cut=pair+Landau", "units": "chi:E^-2; c:1", "derivation_class": "CONDITIONAL_SCHUR_SOUND_BOUND_AND_SPECTRAL_WINDOW", "observable": "conditional absorption in stated frequency window", "data_role": "DERIVED", "verification_status": "PASS_SCOPED_LANDAU_SOURCE_INTERFACE", "controlling_blocker": "real_source_contact_and_complete_thermal_matching_open", "claim_boundary": "Does not fill cq<=omega<=Eq gap or full spectral/retarded/transport response"}
+  ],
+  "core_registry_modified": false,
+  "claim_promotion": false
+}

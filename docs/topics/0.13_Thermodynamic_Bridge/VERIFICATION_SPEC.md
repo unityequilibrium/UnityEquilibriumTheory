@@ -1,5 +1,411 @@
 # Verification Spec
 
+
+## Source Boundary And Preserved Float64 Failure Verification (2026-10-03)
+
+Run Research_T13_Low_Q_Source_Boundary.py/test_t13_low_q_source_boundary.py.
+Expected audit exit1/PARTIAL: seven original checks pass, scaled float641e-8
+fails; exact source/alias/rank subresults and separate80digit1e-45 method
+are not a repaired aggregate. Protect first failure and all raw hashes.
+Test encodings/headers/row IDs/missing/separators/ancestry, exact alias/
+determinant/recovery, frozen windows and no physical inverse/imputation.
+Precision extension declared after float failure, before its first run.
+Runtime Path allowlist/hashes and raw-folder -text attributes required.
+Original causal1e-6 unchanged/not rerun; no physical source/Goal acceptance.
+
+## Multi-Q Estimator And Conditional Budget Verification (2026-10-03)
+
+Run Research_T13_Multi_Q_Estimator.py/test_t13_multi_q_estimator.py.
+Seven method checks: exact interpolation/axes, independent Newton recovery,
+tree-box containment, data/native differential and correlated nulls,
+rational budget/corners, all ranges retained and no physical noise assigned.
+Protocol fixes mu1.05/1.2, q_max.04/.02/.01/.005/.0025 and node ratios1/half/
+quarter; roots80digits, estimators70/100, FD1e-24 and96 dyadic steps.
+Estimator1e-45/Jacobian1e-8 unchanged; illustrative target1% not physical gate.
+Replay exact endpoints and boxes, invalid inverse/domain and serialization
+bounds. Audit-time Path allowlist and hashes do not certify historical
+blinding. Original causal1e-6 not rerun; no physical/full-design acceptance.
+
+## Q5 Information And Rational Tree Envelope Verification (2026-10-03)
+
+Run Research_T13_Q5_Dispersion_Information.py/test_t13_q5_dispersion_information.py.
+Eight checks: determinant/prior-q3, matrix/dual-precision roots, q5
+refinement, rational envelope, rank/inverse, old-family separation,
+coordinate invariance and gradient FD. Registry freezes two mu, three q,
+two unit/coordinate changes,50/80 digits,300 bisections and FD1e-8.
+Identity1e-9/matrix1e-8/precision1e-40/finest extraction1e-3,
+refinement3-5/gradient1e-5; original causal1e-6 unchanged/not rerun.
+Later finite-q bias diagnostic is non-gating, declared before its run.
+Reject unproved domains; exact fraction, not float display, controls the
+witness envelope. Scope, hashes and runtime Path read allowlist required.
+
+## Noether Density And Calibration Verification (2026-10-03)
+
+Run Research_T13_Noether_Density_Readout.py/test_t13_noether_density_readout.py.
+Ten checks: six-state/spectral agreement, Ward/static derivative, positive
+density strengths/completeness, q0/contact negative, coordinate covariance,
+dark Phi and gain/unit rank/inverse. Density and unit subprotocols fixed
+before their respective first audits; final inverse check adds no gate.
+Identity1e-8/static FD1e-6/pole1e-5/negative.1/null1e-12; causal1e-6 unchanged
+and not rerun. Tests include log-gradient FD, inverse-family recovery,
+invalid inputs/negative kinetic not clipped, hashes and runtime Path read
+allowlist. No physical uncertainty or pristine-blindness certification.
+
+## Even Work Hierarchy And Bound Verification (2026-10-03)
+
+[Artifact](Result/artifacts/t13_gaussian_work_remainder.json) separately
+checks parity/positive energy, coefficient refinement, order4/6 energy
+ledger, independent old-grid prediction, sign reversal, tone implementation,
+known saturating tail and retained predecessor FAIL. New gates were fixed
+before its first audit; no original gate is replaced. Tests also check
+the factor-two negative, tiny positive tails without cosh subtraction,
+rejected inputs, scope/provenance and runtime evidence read allowlist.
+Order2 cancellation stays reported; no interval or parent-error acceptance.
+
+## Cyclic Source-Work Failure And Verified Leading Identities (2026-10-03)
+
+[Work artifact](Result/artifacts/t13_gaussian_source_work.json) preserves
+all thirteen frozen gates and the first FAIL. Three additional extended
+checks test independent exact time convolution/modal work, real work and
+35/50-digit control at the same parameters. They do not replace the failed
+binary64/finite-amplitude checks. Tests verify the reported failure, input
+hashes, factor-two orientation, entropy/rank boundaries and audit-time
+read allowlist. Test PASS means record integrity, not physical acceptance.
+
+## Collisionless Soft-Ray Verification (2026-10-03)
+
+Run Research_T13_Collisionless_Soft_Source.py/test_t13_collisionless_soft_source.py.
+Check momentum-jet FD, independent Cartesian projection, exact zero drives,
+fixed-centre refinements, angular quadrature, full-domain split/refinement,
+static pressure endpoint and 35/50-digit equivalence. Preserve first FAIL,
+raw moving-centre and truncated-tail errors; do not claim their old gates pass.
+Artifact/registry/source hashes and audit-time Path allowlist exclude numeric
+holdout reads, not certify pristine blindness or whole-program security.
+Original conserved-C threshold1e-6 is unchanged and not rerun here.
+
+## Gaussian Noether Source Verification (2026-10-03)
+
+Run Research_T13_Thermal_Noether_Response.py/test_t13_thermal_noether_response.py.
+Eight checks: covariance torque/total charge/rotating and physical energy,
+phase contact/stationary energy contact, independent spectral force/modal
+contact and omitted-background negative. mu1.05/1.2, T.002/.004, three
+physical triangles plus q0; z=.02i/.05i/.03+.02i preregistered. Ward1e-9,
+method1e-7, negative-control1e-3; original causal1e-6 unchanged/not passed.
+Zero-response energy uses absolute operator-term scale fixed before first
+audit, not its vanishing net value. Require arbitrary-covariance Euler,
+stationary drive, coordinate/zero-T/decoupled/invalid triangle/q0/real-z/
+moving/nonzero-h, protected hashes/registry and audit-time Path allowlist.
+No second-order work/entropy, full interacting/cutoff transport or physical
+mapping acceptance. Earlier verifiers keep their own scope.
+
+## Finite-Q Cross-Covariance And Static Limit Verification (2026-10-03)
+
+Run Research_T13_Finite_Q_Thermal_Source.py/test_t13_finite_q_thermal_source.py.
+Six checks require physical momentum triangles, independent cross-covariance,
+tree source continuity, exact Bose diagonal limit, batch/scalar channel
+agreement and integrated static pressure recovery plus finite-q convergence.
+mu1.05/1.2, T divisors256/512, radial24/48/96, angular32/64/128 and tails32/40;
+static q/p_T1/16,1/32,1/64; dynamic q.01/.005/.0025 and z=.02i/.05i/.03+.02i
+locked before the first scalar-only attempt. Identity1e-9/covariance1e-7/
+quadrature1e-6/tail1e-8/original causal1e-6 unchanged; static soft diagnostic
+1e-3 is new and not a physical-gate override. Check q0 predecessor, Bose/
+geometry/coordinate/zero-T/decoupled/invalid-domain, protected hashes and
+audit-time Path reads. Aborted scalar attempt is not FAIL/PASS; batch
+retains exact equations and complete grids. No assigned collision/width
+or full loop-current/energy/physical admission from this result.
+
+## Virtual Source And Independent Covariance Verification (2026-10-03)
+
+Run Research_T13_Thermal_Virtual_Response.py/test_t13_thermal_virtual_response.py.
+Seven checks require independent static eigenvalue/pressure agreement,
+tree inverse/spectral completeness, 36-component real-time covariance,
+derived background contact, charge/reality/reciprocity and ensemble limits.
+mu1.05/1.2, p.005/.02/.04, T divisors256/512, orders24/48/96, tails32/40,
+z=.02i/.05i/.1i/.03+.02i fixed before first audit; identities1e-9,
+covariance1e-7, quadrature1e-6, tail1e-8, original causal1e-6 unchanged.
+Retain failed binary64 projection and historical hashes; independently
+rebuild contact with 50-digit arithmetic without changing physical input.
+Require coordinate/zero-T/decoupled/invalid-domain, protected-hash and
+runtime-read controls. No physical transport or full acceptance from PASS.
+
+## Thermal Source Curvature Verification (2026-10-03)
+
+Run Research_T13_Thermal_Source_Curvature.py/test_t13_thermal_source_curvature.py.
+Six checks require stationary/eigenvalue/vertex and independent source-state
+FDs, fixed-domain pressure Hessian, decomposition, quadrature/tail and an
+explicit cut-only matching mismatch. Retain raw tiny-p cancellation and
+first-failure JSON. Exact phase derivative cancellation is analytic, not
+mass repair; all grids and1e-9 identity/1e-4 FD/1e-6 quadrature/1e-8 tail
+and original1e-6 causal gates stay fixed. Require coordinate/free/zero-T,
+invalid-domain, protected hashes and audit-time Path read controls. No
+dynamic contact assigned from residual or physical/full Goal admission.
+
+## Off-Shell Landau Source And Support Verification (2026-10-03)
+
+Run Research_T13_Acoustic_Source_Landau.py/test_t13_acoustic_source_Landau.py.
+Eight checks require energy-flux/implicit velocity and independent finite
+difference, on-shell modal projection, Hermitian positive Gram/source,
+Bose/strict shell, independent angular root, quadrature/tail and conditional
+support/window bounds. Require zero-T/free/coordinate/invalid-input and
+audit-time read allowlist/protected hash controls. Preserve grids and 1e-9
+identity/1e-6 quadrature/original1e-6 causal gates; no clipping/padding or
+source at the tree pole. Unresolved support is not absence; full response,
+physical uncertainty, historical blinding and Goal are not accepted here.
+
+## Off-Shell Pair Source Verification (2026-10-03)
+
+Run Research_T13_Acoustic_Source_Pair.py and test_t13_acoustic_source_pair.py.
+Six checks cover stationary source derivative, Schur/matrix inverse, source
+pole residue, modal optical projection, positive Hermitian pair matrix and
+source Gram/Bose/support/convergence. Complex-orientation, coordinate
+covariance, zero-coupling, invalid support and runtime read/hash controls
+are required. Preserve first-failure JSON and report rounded-matrix error;
+decimal contraction uses unchanged samples/grids/1e-9 identity threshold.
+No source/physical/full Goal unlock follows from these checks.
+
+## Acoustic Parent Modal Verification (2026-10-03)
+
+Research_T13_Acoustic_Modal_Cuts.py/test_t13_acoustic_modal_cuts.py use
+declared parent-mode q, residue-offset, potential-step and predecessor
+thermal grids/gates. Require independent matrix residue, symplectic norm,
+kernel/energy ledger, shifted-potential cubic, raw/stable contraction,
+low-q EFT/vacuum/soft Bose, quadrature/tail/support/energy/Bose, permutation,
+reality/coordinate/decoupled/invalid-input and runtime/hash checks. Causal
+1e-6 unchanged. No all-mode quantum or off-shell/physical unlock from these
+tests; [derivation](Result/artifacts/T13_ACOUSTIC_MODAL_CUTS_2026-10-03.md).
+
+## Finite-T Cuts And Static Thermal Coherence (2026-10-03)
+
+Research_T13_Thermal_Cut_Stiffness.py and test_t13_thermal_cut_stiffness.py
+use grids/gates declared before audit, original causal 1e-6 unchanged.
+Require pair/Landau order and thermal-tail refinement, strict support and
+energy/Bose identities, independent angular root and original-parent root,
+soft Bose/NR and vacuum controls, analytic/finite-difference/angular pressure
+and static loop agreement, missing-bubble/mismatched-energy negatives,
+free/coordinate/invalid-input controls and protected hashes/runtime allowlist.
+The first naive pair root failed support; cancellation-free same-parent
+rearrangement repaired precision, not the physics/grid/threshold. No full
+kinetic/real/KMS/thermal-pressure or material admission from this check.
+See [scope](Result/artifacts/T13_THERMAL_CUT_STIFFNESS_2026-10-03.md).
+
+## Vacuum Cut/Log And Matching Boundary (2026-10-03)
+
+Research_T13_Vacuum_Cut_Log.py and test_t13_vacuum_cut_log.py verify the
+[new result](Result/artifacts/T13_VACUUM_CUT_LOG_2026-10-03.md). Use the
+declared mu/q/frequency/threshold/quadrature/scale/local grids and matching
+ratios, original gates including causal 1e-6. Require direct original-vertex
+phase space, expanded cut polynomial, upper-half-frequency/reality,
+four-subtracted Cauchy and scale running, prior optical-theorem/Bose limit,
+free/spacelike/coordinate/invalid-input controls, fixed-convention rank and
+on-shell null directions, protected hashes and runtime source allowlist.
+Threshold is explicitly rejected without curvature prescription, not padded.
+No passing diagnostic accepts microscopic/physical/full-Topic13 closure.
+
+## Low-T Interactions and Derived Decay (2026-10-02)
+
+Use Research_T13_Low_T_Interactions.py and test_t13_low_T_interactions.py.
+The [result](Result/artifacts/T13_LOW_T_INTERACTIONS_2026-10-02.md) declares
+grids/gates before its new checks, preserving original causal 1e-6.
+Require direct stationary pressure/finite-difference P3/P4 agreement, parent
+q5/group-velocity convergence, actual angular support without clipping,
+phase-space versus analytic q5, quadrature refinement, energy/Bose identity,
+known dilute-Bose factor-two and free/decoupled controls. Check tree T8 by
+independent Bose moments/entropy integral, quartic by subtracted Wick tensor,
+coordinate invariance and evidence/protected hashes. Runtime file audit
+excludes holdout and external numeric source; prior Xie review stays open.
+No small calculated term or passed numerical gate accepts full two-loop
+pressure, real self-energy, finite-T transport, KMS or physical scale.
+
+## Tree-Matched Phase-EFT Verification (2026-10-02)
+
+Research_T13_Low_T_Phase_EFT.py; named branch independent of Hartree.
+mu=1.05/1.2, q=.008/.004/.002, T=c*dispersion_scale/(32,64,128),
+source steps .0004/.0002/.0001, xi=0/.02/.04, adaptive tolerances
+1e-8/1e-10; diagnostic Z_Phi=.5/1/2 and coordinate scales .5/2.
+Gates fixed before first audit: identity <=1e-9, derivative <=2e-5,
+finest eta expansion <=5e-4, finest T6 pressure <=5e-5 and entropy <=1e-4.
+Check actual implicit source derivatives, polynomial/first-order parent,
+positive/conserved quadratic energy, Bose pressure/entropy/moment,
+relative-flow angular determinant and normalization/decoupling negatives.
+Reject noncondensed/nontimelike/nonmonotone/nonpositive-energy inputs.
+Numerical checks are not vacuum/interaction or physical precision bounds.
+Source/protected hashes and claim flags must pass; original 1e-6 threshold,
+failed Hartree/conserved-C, prior Xie REVIEW_REQUIRED and physical gates
+unchanged. See [scope note](Result/artifacts/T13_LOW_T_PHASE_EFT_2026-10-02.md).
+
+## Low-T Compatibility Verification (2026-10-02)
+
+Research_T13_Hartree_Low_T_Validity.py and sixteen tests. Original controls;
+zero-T orders/splits 128/20,192/40,256/64, seeds .8/1.2; source orders
+96/144/192; T=Delta0/(2,4,8,16,32,64). Envelope T=.02/.01 E, relative
+steps .02/.01/.005; upper q=.008/.004/.002 E, z=i*(.2 or .4)*q.
+Gates: scaled roots <=1e-8, state/source refinement <=2e-5, entropy envelope
+<=1e-3, Ward <=1e-3, finest quadratic expansion <=5e-4, improving Boltzmann
+finite-T diagnostic <=.1. Conditional analytical asymptotics, not that
+tolerance, controls exclusion. Verify original dispersion, equal-mass/
+gapless Bose controls, units, off-shell entropy residuals, full reoptimization,
+local nondegeneracy, stable adaptive refinement and source/protected hashes.
+Legacy deep-T rounding is disclosed; resolved entropy <=2e-5 at Delta/T<=16.
+No mass/phonon repair, holdout read or physical/global unlock. See the
+[result note](Result/artifacts/T13_HARTREE_LOW_T_VALIDITY_2026-10-02.md).
+
+## Joint Classical-Phi Retarded Verification (2026-10-02)
+
+Research_T13_Hartree_Joint_Phi_Response.py and 21 focused tests. Freeze
+q=.04/.02/.01, orders 64/24,96/32,128/40, seeds .2-.01i/.4-.005i and the
+inherited local continuation strip. Actual joint stationary inputs and
+original response kinetic remain fixed. Root and full determinant <=1e-8;
+refinement/independent upper loop/static envelope agreement <=2e-5;
+phase-current Ward <=1e-3; counterterm identity <=1e-10, nonzero even/
+covariance singular values >.01. Check independent parent kinetic signs,
+arbitrary noncommuting complex counterterms, units, static Hessian/charge
+envelope and actual new roots/grids/tails/derivatives. Clamped answer,
+frozen Phi counterterms and principal sheet are negative controls. Preserve
+old validators/hashes and causal threshold 1e-6; no old failure is repaired.
+Listed hash/read/holdout and physical/Core/Goal boundaries must match the
+[artifact/derivation](Result/artifacts/T13_HARTREE_JOINT_PHI_RESPONSE_2026-10-02.md).
+
+## Joint Classical-Phi Static Verification (2026-10-02)
+
+Separate Research_T13_Hartree_Joint_Phi_Static.py and eighteen tests.
+Orders/splits 128/20,192/40,256/64; unchanged action inputs, seeds .8/1.2;
+static source-loop orders 96/144/192; difference steps .002/.001/.0005 Q.
+Require algebra <=1e-10, scaled roots <=1e-8, state refinement <=1e-5 and
+static Hessian/relaxed-force agreement <=2e-5. Check rational normalization
+derivatives, arbitrary signed tadpoles, decoupling/invalid domains, actual
+four-equation states, source-loop Ward/reciprocity, reoptimized potential,
+Schur curvature, units, source/protected hashes and read/claim boundaries.
+Dropping N and reusing fixed-Phi stationarity are negative controls. Local
+static positivity does not unlock dynamics or physical/Core/Goal gates.
+Causal threshold remains 1e-6; no new holdout read. See the [result note](Result/artifacts/T13_HARTREE_JOINT_PHI_STATIC_2026-10-02.md).
+
+## Actual Finite-q Pole Verification (2026-10-02)
+
+Separate verifier `Research_T13_Hartree_Finite_Q_Poles.py` and 22 tests.
+Freeze q=.04/.02/.01, orders (64,24)/(96,32)/(128,40), rays
+(.19,.2,.3,.4,.45), alternate rays (.21,.25,.35,.43) and inherited two
+independent seeds before running. Verify frequency polynomials, upper/lower
+unsplit Matsubara moments, time-source signature, direct lower integration,
+analytic vacuum reference and original integrated upper response. Require
+phase and uneliminated determinant residual <=1e-8, refinement/seed/grid/tail
+agreement <=2e-5, nonzero radial/covariance factors, simple local derivatives
+and inherited phase-current Ward tolerance 1e-3 without projection. Wrong
+principal-lower sheet and substituted soft answer are negative controls.
+Only the new artifact sets finite_q_complex_pole_computed=true. Preserve
+old flags, protected hashes, natural units, leakage 1e-6, holdout boundary
+and physical/full-Goal gates. No global stability or Hartree remainder
+follows. See [result](Result/artifacts/T13_HARTREE_FINITE_Q_POLES_2026-10-02.md).
+
+## Finite-q Local Discontinuity Verification (2026-10-02)
+
+Separate verifier `Research_T13_Hartree_Finite_Q_Discontinuity.py`: preregister
+q=.04/.02/.01, real v=.2/.3/.4, complex references equal to the unchanged
+prior soft poles, orders 64/96/128, original full radial orders 48/80 and
+horizontal/return-to-real tails. Require original all-channel cut agreement
+absolute 1e-8, final tail refinement/path agreement 1e-9 and exact endpoint
+residual 1e-11. Check forward angular roots and active-channel counts at five
+radial samples per witness, exact positive/negative threshold shift, signed
+Bose continuation, natural-unit scaling and decreasing finite-q/soft density
+difference. Refuse declared-domain/pair-threshold violations. Label complex
+domain/path checks sampled, never global proof; finite_q_complex_pole_computed
+must remain false. Preserve original real/upper-only validators, hashes,
+Core/funding gates, Xie exposure review and causal threshold 1e-6.
+
+## Collisionless Soft Collective Verification (2026-10-01)
+
+For separate `Research_T13_Hartree_Soft_Poles.py`, preregister orders
+64/96/128, seeds .2-.01i/.4-.005i, two velocity split grids and horizontal/
+return-to-real tails. Compare density with original cuts at .2/.3/.4;
+check original upper integral at .3+.02i with orders 128/256/512, absolute
+1e-9 unchanged. Refine the reference rather than relax its tolerance.
+Require root absolute 1e-8, local/refinement absolute 2e-5 and cut 1e-10;
+these do not change predecessor physical thresholds. Check both-sided
+boundary approach, nonzero derivative/residue, Cauchy-Riemann, principal-
+lower negative control and nonzero radial/covariance elimination factors.
+Nested 64/128/256/512 counterclockwise samples cover upper bounds
+(-1.5,1.5,.002,.5) and local lower (.12,.58,-.02,-.0005); require winding
+integer distance 1e-6 and finest phase increment below pi/2. Label sampled
+windings, never certified counts/global stability. Check hash/read/unit
+contracts, no fitted width and no Core/holdout promotion. Original causal
+leakage threshold remains 1e-6.
+
+Run `Research_T13_Hartree_Soft_Collective.py` and its seventeen tests.
+Require independent original Cauchy angular integrals, signed velocity,
+forward-dispersion derivatives, exact static/cold limits and Landau-cut
+checks. Preregister rays .1,.3,.6,1.2 and q=.04,.02,.01 at the unchanged
+two witnesses. Require decreasing full-response/soft-limit disagreement,
+independent field/current phase Ward and finite-q quadrature refinement;
+record residual finite-q corrections separately from numerical error.
+New scaled phase metrics use absolute 1e-3, soft-loop refinement inherits
+2e-5 and static phase Ward inherits 2e-5. No predecessor or causal
+threshold is changed; the original leakage threshold is still 1e-6.
+Require nonzero absorption at the computed reactive zero and refuse to
+call it an undamped pole. Check code/evidence/protected hashes, the sole
+derived-predecessor text-read path, natural units and negative controls
+against the static-polynomial shortcut. Full physical/global/truncation
+flags remain false. No fitted width, filter or phase pseudoinverse.
+
+## Scoped Real-Axis Verification (2026-10-01)
+
+Run `Research_T13_Hartree_Real_Axis.py` and `test_t13_hartree_real_axis.py`.
+Require independent forward angular delta roots/Jacobian and tangent-mapped
+radial cut integration, agreement with committed upper-half-plane loops and
+4D vacuum below/above threshold, signed-frequency reality, source/current
+Ward, cold scattering absence, reference/order/endpoint refinement and units.
+Use the inherited absolute point/vacuum 1e-7, radial/Ward 2e-5 and derivative
+relative 1e-6 tolerances. Require no output width, cutoff, clipped endpoints,
+Ward projection or uniform pseudoinverse; the eta sequence is verification only.
+Check omitted-cut/contact negative controls and predecessor/protected hashes;
+audit text reads must be only the current predecessor artifact. Physical/Core,
+global-pole and truncation flags remain false; real-axis admission is scoped
+to the recorded grid. Original causal threshold 1e-6 is unchanged.
+
+## Actual External Field Response (2026-10-01)
+
+Run the subsequent `Research_T13_Hartree_Gauge_Current.py` and
+`test_t13_hartree_gauge_current.py`. Require derivative kinetic/source seagulls,
+actual mixed and current Matsubara moments, independent 4D vacuum contact,
+analytic UV boundary, auxiliary/routing/grid/reality, source counterterm replay,
+reoptimized Ward and independent stationary-potential density/stiffness checks.
+Negative controls must fail when the classical seagull or derived UV surface
+is omitted; never impose a Ward projector. New current-only tolerances are
+absolute 1e-7 for point/reference and 2e-5 for grid/Ward; predecessor and causal
+thresholds are unchanged. Reject real-axis evaluation and uniform-Goldstone
+pseudoinversion. Verify units, code/predecessor/protected hashes and read allowlist.
+The successor current flag may pass within its lane; physical Kubo, material,
+real-axis/full-regulator/RG, joint-Phi and Core unlock remain false.
+
+Run `Research_T13_Hartree_External_Response.py` and
+`test_t13_hartree_external_response.py` under `Code/03_Research/` after the
+background and counterterm evidence. Require full vacuum/thermal three-channel
+frequency sums, direct-subtraction/tadpole agreement, independent 4D vacuum
+reference, static source Hessian/Ward, momentum routing, grid refinement,
+retarded reality/parity and actual-bubble source counterterm checks.
+Point-frequency tolerance is absolute 1e-7; quadrature/routing 1e-5; static
+radial relative 2e-5; Ward/source algebra absolute 1e-9. Original causal 1e-6
+and predecessor thresholds are unchanged. Refuse real nonzero frequency,
+negative/zero trial masses and undeclared filtering; no fitted width is added.
+Check read allowlists and evidence/protected hashes. Full physical/Core unlock,
+gauge-current, real-axis, RG, joint-Phi and Kubo flags remain false.
+
+## Finite Hartree and Homogeneous Counterterms (2026-10-01)
+
+Run `Research_T13_Renormalized_Hartree_Background.py` then
+`Research_T13_Hartree_Counterterm_Matching.py` under `Code/03_Research/`, and
+their test modules. Candidate thresholds stay identity 1e-7, refinement 1e-5,
+derivative 2e-5. Counterterm algebra uses 1e-10; it does not replace the original
+thermal causal threshold 1e-6.
+
+Require vacuum/chemical-shift checks, source reoptimization, entropy/charge
+protocol, reference/order/seed refinement and internal/external distinction.
+Counterterms must cover arbitrary signed finite tadpoles/amplitude, independent
+tensor/matrix inversion, exact-rational potential cancellation, negative
+single-coupling controls, action scaling, predecessor hashes and pole refusal.
+Complex vertex probes check a declared conditional identity, not physical loops.
+Runner read allowlists exclude Data/numeric holdout paths; this is not pristine
+repository-wide blinding. Physical/Core flags remain false, original failures
+and Core-composition hashes unchanged; prior Xie exposure review stays open.
+
 ## Finite-q Spatial Compatibility (2026-09-07)
 
 Run `docs.scripts.audit.audit_topic13_thermoelastic_spatial_compatibility` and

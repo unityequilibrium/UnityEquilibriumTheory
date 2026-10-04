@@ -1,0 +1,87 @@
+{
+  "record_class": "PLANNING_NOT_SCIENTIFIC_CLOSURE",
+  "owner_topic": "0.13_Thermodynamic_Bridge",
+  "review_date": "2026-10-02",
+  "timezone": "Asia/Bangkok",
+  "status": "PLAN_REVIEW_READY_NOT_SCIENTIFIC_ACCEPTANCE",
+  "canonical_acceptance_contract": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/funding_portfolio_14d_plan.json",
+  "decision_document": "docs/topics/0.13_Thermodynamic_Bridge/FUNDING_DECISION_ROADMAP_2026-10-02.md",
+  "baseline": {
+    "topic_head": "eee23b669a6f51e13e7466d32d767efceb8009b8",
+    "artifact": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/t13_hartree_low_T_validity.json",
+    "sha256": "6b6d5db3086439ce68703accacc04733dee8efb5535e85067b5c9941628c7f39",
+    "closure_level": "CLOSED_FOR_LANE",
+    "controlling_blocker": "gapless_equilibrium_thermal_prescription_not_derived",
+    "new_scientific_validation_performed_by_this_record": false
+  },
+  "sprint": {
+    "start": "2026-09-28",
+    "route_review": "2026-10-02",
+    "scientific_freeze": "2026-10-07",
+    "portfolio_review": "2026-10-11",
+    "restarted": false,
+    "selected_route": "SCOPED_RESPONSE_METHODS_AND_MEASUREMENT_DESIGN",
+    "scientific_disposition_accepted": false,
+    "prediction_requires_canonical_admission": true,
+    "portfolio_ready_implies_science_closed": false,
+    "portfolio_ready_implies_submission_ready": false
+  },
+  "work_packets": [
+    {"id": "A", "owner": "Topic13 derivation lead", "question": "Can a separately named same-action loop-ordered low-T prescription provide consistent stationary/phase/source/entropy response within a declared control domain?", "deadline": "2026-10-04", "status": "PLANNED_NOT_ACCEPTED", "requires": ["declared new branch and approximation", "units and stable domain", "source/Ward/static agreement", "independent mode and thermal checks", "explicit numerical versus approximation uncertainty"], "forbidden": ["old Hartree mass repair", "phonon gas appended to old Hartree potential", "physical acceptance from local numerical convergence"]},
+    {"id": "B", "owner": "source and measurement design owner", "question": "Which independent measurement adds identifiable information for one material/state/protocol?", "deadline": "2026-10-06", "status": "PLANNED_NOT_ACCEPTED", "parallel_to": "A", "requires": ["operator and parameter combination", "state and detector/protocol", "units and permission/provenance", "independence and ancestry/covariance", "precision rationale and information gain"], "feasibility_counts_as_empirical_data": false},
+    {"id": "C", "owner": "numerical verifier", "question": "Does an independently formulated check recover the declared response and limits?", "deadline": "2026-10-06", "status": "PLANNED_NOT_ACCEPTED", "depends_on": ["A"], "approximation_error_equals_numerical_error": false},
+    {"id": "D", "owner": "research lead and reviewer when available", "question": "Which bounded scientific disposition is actually supported, and what remains open?", "deadline": "2026-10-07", "status": "PLANNED_NOT_ACCEPTED", "depends_on": ["A", "B", "C"], "requires": ["canonical G0-G5 assessment", "related-work and novelty boundary", "evidence hashes", "measurement design", "actual review or disclosed reviewer absence"]}
+  ],
+  "long_term_reviews": [
+    {"date": "2026-10-25", "results": ["R1"], "deliverable": "Same-prescription candidate response and declared thermal/approximation domain", "status": "PLANNED_NOT_ACCEPTED", "fallback": "Exact validity/control obligation and justified branch decision, not repeat unchanged roots"},
+    {"date": "2026-11-08", "results": ["R2", "R3"], "deliverable": "Independent material/state/dimensional map and numeric input OR explicitly non-empirical measurement feasibility", "status": "PLANNED_NOT_ACCEPTED", "fallback": "Measurement request card; no invented rows/calibration"},
+    {"date": "2026-11-22", "results": ["R4"], "deliverable": "Locked independent comparison OR verified scoped structural result plus measurement design", "status": "PLANNED_NOT_ACCEPTED", "empirical_requires": ["R1", "R2", "R3 numeric-input admission", "preregistered protocol/competitor/uncertainty"], "fallback": "Preserve mismatch or exact unresolved proof obligation"},
+    {"date": "2026-12-06", "results": ["R4"], "deliverable": "Second protocol/state only after first result and preregistration", "status": "PLANNED_NOT_ACCEPTED", "fallback": "Strengthen first result or prepare earlier actual call"},
+    {"date": "2026-12-20", "results": ["R5"], "deliverable": "Reproducible bounded research release and actual review disposition", "status": "PLANNED_NOT_ACCEPTED", "fallback": "Disclose unfinished obligations/reviewer absence; do not infer scientific acceptance"}
+  ],
+  "call_scenarios": [
+    {"status": "SCENARIO_NOT_CONFIRMED_CALL", "assumed_deadline": "2026-12-11", "scientific_freeze": "2026-11-27", "institutional_documents": "2026-12-04", "attachment_review": "2026-12-08", "overrides_later_research_review": true},
+    {"status": "SCENARIO_NOT_CONFIRMED_CALL", "assumed_deadline": "2027-01-11", "scientific_freeze": "2026-12-28", "institutional_documents": "2027-01-04", "attachment_review": "2027-01-08", "overrides_later_research_review": true}
+  ],
+  "funding_unknowns": {"confirmed_call": null, "actual_deadline": null, "principal_investigator": null, "host_eligibility": null, "cash_budget": null, "lab_access_confirmed": false},
+  "model_recommendations": {
+    "lead": {"model": "gpt-6-astra", "effort": "high"},
+    "bounded_hard_proof": {"model": "gpt-6-astra", "effort": "xhigh", "requires": "Explicit obligation and exit condition"},
+    "implementation_or_quota_constrained_single_model": {"model": "gpt-6.1-sol", "effort": "high", "science_acceptance_unchanged": true},
+    "optional_inventory": {"model": "gpt-6-luna", "effort": "medium", "final_scientific_signoff": false},
+    "trial_status": "NOT_RUN",
+    "trial_minutes_per_configuration_max": 90,
+    "trial_requires": ["same input packet hash", "same acceptance", "zero critical errors", "independent check", "total time including reviewer correction", "usage/cost unknown stays null"],
+    "trial_result": null,
+    "model_configuration_changed": false,
+    "sources_checked_on": "2026-10-02",
+    "official_sources": ["https://developers.openai.com/api/docs/guides/model-selection", "https://developers.openai.com/api/docs/guides/latest-model?model=gpt-6-astra"]
+  },
+  "execution_policy": {
+    "decisive_questions_in_flight_max": 1,
+    "source_inventory_may_run_parallel": true,
+    "two_waves_without_decisive_evidence": "Choose justified approximation/measurement/branch disposition or exact unresolved obligation; no automatic Goal completion/pause",
+    "portfolio_v1_preserved_if_first_call_missed": true,
+    "unchanged_reruns_are_progress": false,
+    "model_agreement_is_external_replication": false,
+    "new_goal_or_automation_created": false,
+    "existing_active_goal_reconfigured": false,
+    "purchase_contact_or_submission_authorized_by_plan": false
+  },
+  "protected_boundaries": {
+    "canonical_completion_rule_changed": false,
+    "physical_gate_changed": false,
+    "core_composition_overwritten": false,
+    "dependency_unlock": false,
+    "claim_promotion": false,
+    "causal_leakage_threshold": 1e-6,
+    "conserved_C_failed_branch": "BLOCKED",
+    "xie_2026_use_allowed": false,
+    "prior_xie_exposure": "REVIEW_REQUIRED",
+    "new_numeric_holdout_access": false,
+    "ontology_changed": false,
+    "public_api_added": false
+  },
+  "report_fields": ["MAJOR_RESULT_CLOSURE", "WHAT_IS_ACTUALLY_CLOSED", "WHAT_REMAINS_OPEN", "DEPENDENCY_UNLOCKED", "STATUS", "WHAT_CHANGED", "EQUATION_OR_MAPPING", "VERIFICATION", "CONTROLLING_BLOCKER", "NEXT_ACTION", "CLAIM_BOUNDARY"],
+  "claim_boundary": "Planning and source-backed model recommendations only. No new scientific closure, EOS/calibration/source data, external validation, funding eligibility or Full Topic13/Core acceptance. Review dates do not accept results."
+}

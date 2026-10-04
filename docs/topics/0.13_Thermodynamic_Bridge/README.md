@@ -6,6 +6,395 @@ description: "Research module for Thermodynamic Bridge within the Unity Equilibr
 
 # 0.13 Thermodynamic Bridge
 
+## Source Archive And Omitted-Term Boundary (2026-10-03)
+
+[Source/derivation](Result/artifacts/T13_LOW_Q_SOURCE_BOUNDARY_2026-10-03.md)
+and [route card](Result/artifacts/T13_LOW_Q_ROUTE_DECISION_CARD_2026-10-03.md)
+close two bounded subresults: permitted versioned numeric archive and
+exact omitted-q4 alias/four-node separation. Aggregate remains PARTIAL;
+float641e-8 gate still FAIL, independent80-digit method checked separately.
+Three-node quintic alias grows as1/q_max if q4 is uncontrolled. Four nodes
+separate only four declared bases, not full physics. Source files overlap
+and have missing uncertainty; no native I/alpha or physical comparison.
+Canonical low_q_source_boundary_evidence_2026_10_03 is observed-partial,
+not accepted full evidence. Next same-state scale/current and non-tree
+remainder/covariance. Owner1.7K calibration/dates/holdout/models unchanged.
+
+## Multi-Q Bias And Sensitivity Are Now Explicit (2026-10-03)
+
+[Estimator derivation](Result/artifacts/T13_MULTI_Q_ESTIMATOR_2026-10-03.md)
+and [window card](Result/artifacts/T13_MULTI_Q_MEASUREMENT_WINDOW_CARD_2026-10-03.md)
+close the conditional estimator/differential/rational energy-only budget,
+not physical precision. Ten windows retained: four positive sufficient
+budgets, six noncertified, one inverse outside its domain. Smaller q reduces
+tree bias but greatly amplifies energy-shape error; no lab noise assigned.
+Canonical multi_q_estimator_evidence_2026_10_03; next input-backed comparison
+of q5 and independent-scale/q3 before original7/11 October. Gain/alpha/
+parent/heat/KMS/full design/Goal/owner/holdout/models remain unchanged.
+
+## Q5 Information Removes The Restricted Q3 Unit Family (2026-10-03)
+
+[Q5 derivation](Result/artifacts/T13_Q5_DISPERSION_INFORMATION_2026-10-03.md)
+and [measurement supplement](Result/artifacts/T13_Q5_MEASUREMENT_INFORMATION_CARD_2026-10-03.md)
+close the strict positive-class unit-free inverse and an exact rational
+tree-coefficient expansion envelope. Independent U is not the only
+information route when other native inputs are known. This is not material
+calibration: relative conditioning26-246 and finite-q bias remain explicit.
+Canonical q5_dispersion_information_evidence_2026_10_03; next multi-q
+estimator/covariance and physical validity/resolution. Gain/alpha/parent/
+KMS, old failures, full Goal/owner/holdout/dates/models unchanged.
+
+## Noether Density Readout And Independent Inputs (2026-10-03)
+
+[Derived readout](Result/artifacts/T13_NOETHER_DENSITY_READOUT_2026-10-03.md)
+closes tree density/source/contact and independent mode projection.
+[Measurement card](Result/artifacts/T13_DENSITY_SPECTROSCOPY_MEASUREMENT_CARD_2026-10-03.md)
+derives restricted gain/unit ambiguities and inverse with independent scale.
+CLOSED_FOR_LANE only; not atomic density, temperature or physical validation.
+Canonical noether_density_readout_evidence_2026_10_03; next particle-current/
+state/SI scale, gain/joint resolution covariance and permitted low-q rows.
+Parent/heat/KMS, old work FAIL, full Goal/owner/holdout/dates/models unchanged.
+
+## Even Gaussian Work And Conservative Remainder (2026-10-03)
+
+[New result](Result/artifacts/T13_GAUSSIAN_WORK_REMAINDER_2026-10-03.md)
+derives parity and W4/W6 rather than fitting the old amplitude grid.
+Through-six work agrees with independent original finite flow within
+4.302e-9 relative; quartic domination explains the leading-limit failure.
+The formal remainder bound is too loose for a useful old-grid certificate
+and is not interval evaluated. Original source-work FAIL and Core-owner
+scope remain unchanged. Canonical gaussian_work_remainder_evidence_2026_10_03;
+next physical source/readout scale and controlled nonlinear parent terms.
+No Full Goal/R1-R5 or physical heat/transport admission. Below is history.
+
+## Gaussian Cyclic Work And Entropy Boundary (2026-10-03)
+
+[Source-work record](Result/artifacts/T13_GAUSSIAN_SOURCE_WORK_2026-10-03.md)
+is PARTIAL: the leading coefficient is independently verified by exact
+time convolution and modal transitions; conditional Hamiltonian entropy
+invariance is checked. The frozen finite-amplitude/binary64 audit remains
+FAIL. Rank-deficient thermal insertion has no complete-state entropy;
+rotating Gaussian energy is not physical SI heat. Current canonical field
+gaussian_source_work_evidence_2026_10_03; no Full Goal/Core-owner promotion.
+Earlier sections retain predecessor scope.
+
+## Gaussian Collisionless Source Ray (2026-10-03)
+
+[Soft-ray result](Result/artifacts/T13_COLLISIONLESS_SOFT_SOURCE_2026-10-03.md)
+resolves six exact streaming channels and checks fixed-centre finite-q
+convergence plus the static pressure endpoint. First moving-centre and
+finite-tail failures remain; full Bose-domain integration is explicit,
+not cone padding or a finite-cutoff certificate. Next second-order source
+work/heat-readout, independent material scale and interacting/collision/
+entropy/physical transport. Full Goal/R1-R5 and Core-owner unchanged.
+Earlier sections retain predecessor scope, not the current controller.
+
+## Conserving Gaussian Charge And Linear Energy Response (2026-10-03)
+
+[Noether result](Result/artifacts/T13_THERMAL_NOETHER_RESPONSE_2026-10-03.md)
+derives total source charge/current and first-order natural-energy balance
+in the named thermal-insertion branch. Covariance alone is not conserved;
+stationary mean/seagull/background contact are required and independently
+checked. Pair-local identities require full-domain translation for integration,
+not a shifted finite-cutoff transport certificate. Next collisionless soft
+limits, actual heat-source/readout/material scale, full interacting/vacuum
+and second-order work/entropy/transport. Full Goal/R1-R5/Core-owner unchanged.
+
+## Finite-Q Source And Static Population Bridge (2026-10-03)
+
+[New result](Result/artifacts/T13_FINITE_Q_THERMAL_SOURCE_2026-10-03.md)
+extends the named thermal-insertion prescription to finite q, independently
+checked by cross-covariance. Its static Bose divided difference recovers
+the pressure population term without an assigned relaxation time. Static
+q refinements approach the independent pressure target; this does not
+close the collisionless soft-frequency regime or physical conductivity.
+Next loop-current/energy Ward and actual heat-source/readout mapping,
+alongside full interacting/vacuum and independent material-scale inputs.
+Full Topic13/Goal/R1-R5 remain open; older sections are predecessor scope.
+
+## Virtual Contact Completion And Dynamic Covariance (2026-10-03)
+
+[New named extension](Result/artifacts/T13_THERMAL_VIRTUAL_RESPONSE_2026-10-03.md)
+derives mixed virtual tree/contact terms that close the predecessor's
+static gap without fitting. Non-real q0 dynamic source response agrees
+with an independent real-time covariance equation. Fixed-mu static and
+q0 fixed-charge limits are different, so this does not close transport.
+Next finite-q source/population relaxation, full interacting/vacuum and
+approximation matching, then independent material/readout/scale. Earlier
+sections retain historical scope; Full Topic13/Goal/physical gates remain open.
+
+## Thermal Source Curvature And Static Matching (2026-10-03)
+
+[New result](Result/artifacts/T13_THERMAL_SOURCE_CURVATURE_2026-10-03.md)
+derives the acoustic thermal pressure source Hessian, independently checked
+against recomputed stationary states. Energy curvature is essential; the
+acoustic cut-only static projections differ by about3.65%/66.4% at the two
+witnesses. This supplies a real static matching target and identifies
+background/kinematic/virtual contributions, not an assigned dynamic contact.
+Next actual dynamic source/virtual completion and full thermal matching;
+physical input/transport and Full Topic13/Goal remain open.
+
+## Landau Source And Conditional Support Bounds (2026-10-03)
+
+[New result](Result/artifacts/T13_ACOUSTIC_SOURCE_LANDAU_2026-10-03.md)
+adds the declared off-shell acoustic Landau source response and conditional
+quadratic energy-flux/sound support bounds. Its optical projection matches
+prior damping and the stated pair/Landau window is now assembled. This is
+not full real/contact/thermal response or old conserved-C causal repair.
+Next local real/source contact and complete thermal matching; independent
+material/readout/scale and Full Topic13/Goal remain open. Earlier sections
+below retain their predecessor scope.
+
+## Action Source And Off-Shell Pair Response (2026-10-03)
+
+[Pair-source result](Result/artifacts/T13_ACOUSTIC_SOURCE_PAIR_2026-10-03.md)
+now derives the original h-to-Phi tree susceptibility and a positive pair
+spectral matrix whose acoustic-pole projection reproduces prior damping.
+This closes that source/cut interface, not a full retarded/temperature
+observable. Next off-shell Landau/contact/local real and complete thermal
+matching; physical source/scale/readout and Full Topic13/Goal remain open.
+
+## Acoustic Parent Residue And Cubic Matching (2026-10-03)
+
+The [modal successor](Result/artifacts/T13_ACOUSTIC_MODAL_CUTS_2026-10-03.md)
+derives the acoustic tree residue and full parent cubic projection before
+recomputing the three-acoustic pair/Landau cuts. Independent matrix/potential
+and low-q EFT checks agree; finite modal corrections are quantified, not a
+total error bound. Off-shell source/local real matching, thermal sunset,
+all-mode quantum/transport and physical input remain open. Owner Core and
+full Goal/R1-R5 admission unchanged.
+
+## Finite-T Cuts And Static Thermal Coherence (2026-10-03)
+
+The [thermal successor](Result/artifacts/T13_THERMAL_CUT_STIFFNESS_2026-10-03.md)
+computes leading-vertex pair/Landau cuts with internal tree curvature and
+closes LO static bubble/tadpole-pressure coherence. Landau dominates at the
+declared soft witnesses; dropping the bubble fails the static check. This
+is not full curved real matching, thermal sunset, normal/heat/Kubo/KMS or
+material prediction. Current controller is matched_curvature_real_response_and_full_thermal_sunset_open.
+Core-owner composition, failed baselines, dates and Goal acceptance unchanged.
+
+## Vacuum Cut, Real Logarithm and Matching Boundary (2026-10-03)
+
+The [new vacuum result](Result/artifacts/T13_VACUUM_CUT_LOG_2026-10-03.md)
+closes the formal linear-phase cut/log equivalence class and independent
+subtracted dispersion reconstruction. Equal decay cuts do not fix local
+real matching terms. Fixed-convention off-shell rank four is not four
+physical parameters or four lab measurements; leading on-shell rank is one.
+Current controller: state-dependent local Wilson and thermal-sunset matching.
+Internal curvature, physical inputs and finite-T heat/KMS transport remain
+open. Full Topic13/R1-R5/Goal and owner Core gates are not promoted; original
+conserved-C failure, Xie REVIEW_REQUIRED and 7/11 October dates remain.
+
+## Derived Phase Interactions and Attenuation (2026-10-02)
+
+The [interaction result](Result/artifacts/T13_LOW_T_INTERACTIONS_2026-10-02.md)
+derives cubic/quartic vertices and a leading zero-T one-to-two phonon decay,
+not an assigned damping width. Exact-tree phase-space, energy/Bose balance,
+direct stationary pressure and a known-limit factor-two check agree.
+Tree-dispersion thermal pressure extends to T8; one quartic thermal-thermal
+term is computed separately, not relabelled a total error bound.
+The controller is now renormalized cubic-sunset/vacuum Wilson matching,
+with physical inputs and finite-T normal/heat transport still open.
+Full Topic13/R1-R5/Core unlock remains false; predecessor hashes, failed
+conserved-C branch, prior Xie review and 7/11 October dates are preserved.
+
+## New Tree-Matched Low-T Phase Prescription (2026-10-02)
+
+The [separate EFT derivation](Result/artifacts/T13_LOW_T_PHASE_EFT_2026-10-02.md)
+matches joint tree P(X,h) from the same action, a gapless conservative
+parent and one-loop phase thermal **differences** through T4/T6. Independent
+parent/entropy/source/relative-flow checks agree. This is a new prescription,
+not an old Hartree mass repair or full vacuum-matched quantum EOS.
+The [measurement card](Result/artifacts/T13_LOW_T_PHASE_EFT_MEASUREMENT_CARD_2026-10-02.md)
+shows static/leading-T4 input leaves an invariant kinetic combination open,
+while subleading dispersion supplies conditional information. Its small
+signal and unknown physical detector/scale preclude a lab-feasibility claim.
+Next control Wilson/interaction remainder and independent inputs. Full
+Topic13/R1-R5 and original causal/Core gates remain open; 7/11 October and
+the owner composition are unchanged. Earlier results retain their branches.
+
+## Low-Temperature Admission Boundary (2026-10-02)
+
+The [same-prescription low-T audit](Result/artifacts/T13_HARTREE_LOW_T_VALIDITY_2026-10-02.md)
+finds positive internal zero-T gaps while external phase derivative response
+is gapless. Stationary entropy is consistent but exponentially suppressed,
+not the T^3 law required if that external mode is a physical equilibrium
+bosonic excitation. This conditionally excludes asymptotically complete
+low-T EOS admission for this prescription at two witnesses, not global UET
+no-go or a retraction of the response result. Next derive a consistent
+thermal approximation or justified restricted validity without mass/phonon
+repair. Independent material/source/thermal input, full Goal/Topic13,
+Core composition and 7/11 October dates remain unchanged. Earlier entries
+retain their scope at their own wave.
+
+## Joint Classical-Phi Retarded Response (2026-10-02)
+
+The [joint dynamic successor](Result/artifacts/T13_HARTREE_JOINT_PHI_RESPONSE_2026-10-02.md)
+computes same-action classical-Phi/matter response, six new local phase
+poles and the fully relaxed charge susceptibility. Its quadratic source
+counterterms, static limits, independent upper loops, grids/seeds/tails
+and Ward/determinant checks agree. Clamped Phi is not an equivalent answer.
+This closes a named candidate-response lane, not full R1/Topic13, physical
+thermal transport or approximation control. Next test low-temperature EOS/
+external-mode consistency and validity, then independently admit material/
+source/readout/thermal input. No mass repair or added phonon free energy.
+Old static/fixed-Phi artifacts, Core composition, physical gates and
+7/11 October dates retain their scope.
+
+## Joint Classical-Phi Static Candidate (2026-10-02)
+
+The [joint stationary successor](Result/artifacts/T13_HARTREE_JOINT_PHI_STATIC_2026-10-02.md)
+derives mass-normalization Phi counterterms and solves homogeneous matter/Phi
+states with unchanged trial action coefficients. Covariance, actual source
+loop, reoptimized potential and relaxed-force checks agree; the amplitude/
+Phi static block is locally positive. This closes a classical static lane,
+not quantum Phi, joint finite-q dynamics, global stability or material
+thermal transport. Old fixed-Phi poles below are not joint-Phi poles. Next:
+joint retarded response and validity/remainder, alongside independent-input
+measurement design. Full Goal/R1, Core composition and 7/11 October dates
+remain unchanged; methods preparation is not submission readiness.
+
+## Actual Finite-q Phase Poles (2026-10-02)
+
+The [finite-q pole successor](Result/artifacts/T13_HARTREE_FINITE_Q_POLES_2026-10-02.md)
+computes the fixed-grid principal kernel and actual complex phase poles at
+both unchanged fixed-Phi witnesses and q=.04/.02/.01. Independent frequency
+moments/source reciprocity, vacuum reference, grids/seeds/tails, Ward and
+denominator checks agree. Poles approach the accepted soft limit without
+substituting it. This closes one bounded calculation, not global stability,
+Hartree approximation error or material heat/sound prediction. Next:
+validity-domain/full-action remainder, joint Phi and independent material/
+thermal input. Full Goal/R1 and physical gates remain open. D5 selects
+methods/measurement-design portfolio preparation, not scientific acceptance;
+dates and model policy remain unchanged. Older notes retain their own scope.
+
+## Finite-q Local Spectral Discontinuity (2026-10-02)
+
+The [finite-q density successor](Result/artifacts/T13_HARTREE_FINITE_Q_DISCONTINUITY_2026-10-02.md)
+derives exact signed shell endpoints and the analytic joint thermal density
+needed for a later finite-q pole calculation. Original full cuts and forward
+angular roots agree on the declared grid; two complex tail paths and the
+approach to the accepted soft density agree. This is not a computed finite-q
+pole, global contour theorem or physical thermal normalization. Next: fixed-
+grid principal kernel and actual pole, then approximation/action and joint
+Phi/material/heat input. Full funding/Core gates and original dates remain.
+
+## Collisionless Soft Collective Response (2026-10-01)
+
+The [local Landau-sheet successor](Result/artifacts/T13_HARTREE_SOFT_POLES_2026-10-01.md)
+computes simple complex soft poles from the derived thermal cut, not an
+assigned width. Original-cut, alternative grid/tail/seed and denominator
+checks agree at both fixed-Phi witnesses. Bounded winding is a numerical
+diagnostic, not certified global stability. Next: complex-domain/finite-q
+and approximation/action control, then joint Phi/material/heat admission.
+Original/Core and full funding gates remain unchanged; the predecessor
+below retains its original scope.
+
+The [soft-ray successor](Result/artifacts/T13_HARTREE_SOFT_COLLECTIVE_2026-10-01.md)
+derives the thermal z=v*q, q->0 phase/source kernel and verifies it against
+the unchanged full finite-q response. The static susceptibility/stiffness
+ratio cannot replace this nonlocal kernel; both witnesses have absorption
+at their reactive zero, not an undamped real-frequency pole. This closes
+a same-candidate infrared response question, not a physical sound speed,
+complex-pole/global stability proof or Full Topic13. Next: collective pole
+and validity-domain analysis, approximation/regulator/action control and
+joint-Phi/material/heat-current admission. Original and Core gates remain.
+
+## Real-Axis Hartree Response (2026-10-01)
+
+The [real-axis successor](Result/artifacts/T13_HARTREE_REAL_AXIS_2026-10-01.md)
+computes exact angular principal values and pair/scattering cuts without an
+assigned damping width. Independent forward-shell delta roots and radial
+phase-space integration agree; source/current Ward, vacuum, refinement,
+reality and units pass on ten declared points at the same fixed-Phi witnesses.
+This closes the named-grid real-axis calculation, not global collective
+stability, a Hartree truncation bound or material heat transport. Next:
+global spectral/IR and approximation/regulator/action limits, joint Phi and
+independent material/source/detector inputs. Core/funding gates remain separate.
+
+## Source-Complete Hartree Current (2026-10-01)
+
+The successor [source-complete rest-frame current](Result/artifacts/T13_HARTREE_GAUGE_CURRENT_2026-10-01.md)
+now computes mixed/current loops, covariance and mean-field response, seagulls
+and a derived UV surface contact. Actual Ward transversality and an independent
+stationary-potential density derivative agree without projecting the tensor.
+This closes a fixed-Phi candidate current question, not physical heat transport.
+Its real-axis successor is linked above; global spectral/error, full
+regulator/RG/action and joint-Phi/material admission remain. The finite vacuum source contact is a declared convention, not a
+microscopic input. Physical funding/Core gates and original failures are unchanged.
+
+## Computed Hartree External Field Response (2026-10-01)
+
+The [external response](Result/artifacts/T13_HARTREE_EXTERNAL_RESPONSE_2026-10-01.md)
+now computes the three-channel vacuum/thermal covariance bubble and source
+response at finite momentum and upper-half-plane frequency in the same named
+candidate. Absolute subtraction, tadpole derivatives, independent frequency
+sums and a four-dimensional vacuum reference agree. The static potential/Ward
+limits are recovered without forcing the internal phase mass to zero.
+
+This is CLOSED_FOR_LANE, not a material prediction or complete current vertex.
+Its gauge-current successor is linked above; real-axis/error and regulator/RG/material
+matching remain open. Original failures, recorded Core composition and funding gates remain.
+
+## Fixed-Phi Hartree Candidate and Counterterm Match (2026-10-01)
+
+The [finite Hartree background](Result/artifacts/T13_RENORMALIZED_HARTREE_BACKGROUND_2026-10-01.md)
+now has nonzero stationary amplitudes at the two preserved witnesses, using
+vacuum plus thermal loops. Source-reoptimized external static angular curvature
+is zero although its internal propagator is gapped; these are different response
+objects. Entropy and canonical-charge derivatives agree with this finite
+potential, without a new material calibration.
+
+The subsequent [counterterm/potential match](Result/artifacts/T13_HARTREE_COUNTERTERM_MATCHING_2026-10-01.md)
+derives two invariant gap countercouplings and a distinct field quartic.
+Coefficient and on-gap potential cancellation hold for arbitrary finite probes
+and reproduce the prior witnesses without retuning. A conditional external-vertex
+identity was algebraic in that predecessor; the subsequent external-response
+artifact above computes its actual field bubble in a declared subtraction.
+
+Both results are CLOSED_FOR_LANE, not a repaired original Gaussian branch or
+physical He-II/graphite prediction. Their field/current successors are above;
+full regulator/RG and material matching, joint Phi/global phase, response remainder
+and transport remain open. Recorded Core composition, original failures, the
+11 October portfolio target and model policy are unchanged.
+
+## Conditional Dynamic IR Research Update (2026-10-01)
+
+The [dynamic composite/source result](Result/artifacts/T13_POLAR_DYNAMIC_COMPOSITE_2026-10-01.md)
+derives pair and thermal-scattering continua for the same Cartesian
+longitudinal observable, a retarded oscillatory time kernel, and a
+contact-completed Gaussian current Ward identity. Independent calculations
+return the earlier static IR coefficient. These are leading conditional
+phase-lane results, not microscopic damping, Kubo transport or a physical
+temperature response. Renormalized amplitude/Phi equilibrium, full-action
+matching remainder and independent material/source/detector inputs remain
+controlling. The linear phase extension is not valid across all thermal
+momenta in the first witness; neither witness is promoted to material physics.
+
+## Polar IR Research Update (2026-10-01)
+
+The [source-complete polar result](Result/artifacts/T13_POLAR_STATIC_IR_OBSERVABLE_2026-10-01.md)
+derives a conditional static longitudinal susceptibility matching the earlier
+1/q loop coefficient without a negative reconstructed inverse. The same-field
+action, source and Jacobian are checked; the original Gaussian tadpole remains
+when the offshell Cartesian source is restored. This identifies a consistent
+leading static observable route, not an exact finite-T equilibrium or a new
+thermal measurement map. Next: source-complete interacting background and
+finite-frequency composite/current matching. Core/funding gates stay separate.
+
+## Thermal Response Research Update (2026-10-01)
+
+The [finite-momentum one-loop result](Result/artifacts/T13_FINITE_MOMENTUM_THERMAL_1PI_2026-10-01.md)
+extends the zero-momentum Ward/current calculation to a two-by-two thermal
+kernel at nonzero momentum and complex frequency. Its static phase limit
+matches the earlier current, while the radial `1/q` term explicitly shows
+why the bare expansion cannot be used uniformly at long wavelength.
+This closes a fixed-Phi response diagnostic, not a stable infrared completion,
+physical damping or an independent He-II/graphite prediction. Next: match
+an amplitude-direction infrared treatment and real-axis/current response.
+Core composition and physical funding gates remain separate and unchanged.
+
 ## Finite-q Material Compatibility (2026-09-07)
 
 The [spatial compatibility result](../../core/artifacts/t13_thermoelastic_spatial_compatibility_audit.json)

@@ -1,0 +1,924 @@
+{
+  "major_result_id": "T13_FIXED_PHI_FINITE_HARTREE_BACKGROUND_AND_SOURCE_BOUNDARY",
+  "topic": "0.13",
+  "branch_id": "t13.candidate.fixed_phi_hartree_ms_finite_potential_v1",
+  "closure_level": "CLOSED_FOR_LANE",
+  "verification_status": "PASS_FIXED_PHI_HARTREE_SOURCE_BACKGROUND",
+  "what_is_closed": [
+    "specified_finite_vacuum_plus_thermal_Hartree_potential",
+    "stationary_amplitude_and_internal_gap_candidate",
+    "external_static_Ward_and_radial_source_reoptimization",
+    "thermodynamic_entropy_charge_envelope_in_this_prescription"
+  ],
+  "equation_or_mapping": "F=U+Omega_F+[(a0-a)I_s+(b0-b)I_p]/2+u*(3I_s^2+2I_s I_p+3I_p^2)/4; a=2u*s and b=2u*(I_p-I_s) at field stationarity; Gamma_ext,pi(0)=0 is not internal b",
+  "units": {
+    "T_mu_Q_auxiliary_mass": "E",
+    "s_a_b_r_tadpoles": "E^2",
+    "u_Z_lambda": "dimensionless",
+    "potential": "E^4",
+    "entropy_canonical_charge": "E^3",
+    "external_curvature": "E^2"
+  },
+  "derivation_class": "SPECIFIED_FINITE_POTENTIAL_HARTREE_CANDIDATE_NOT_FULL_COVARIANT_RENORMALIZATION",
+  "observable": "canonical_field_source_curvature_and_grand_potential_not_temperature_or_helium_density",
+  "data_role": "DERIVED_NATURAL_UNIT_NO_MEASURED_ROWS",
+  "MS_scale": 1.0,
+  "auxiliary_mass": 1.0,
+  "scheme_policy": "Q=1 is a declared renormalization convention, not an SI or material calibration. The prior numeric m,Z,lambda are trial renormalized coefficients in this named candidate, not proof of their bare-to-renormalized or material identity. Varying Q with fixed m,u is not an RG-invariant physical test; running/matching is open.",
+  "method_references": [
+    {
+      "url": "https://arxiv.org/pdf/1410.1337",
+      "locator": "II-IV, finite gap/field/potential and counterterm distinction",
+      "role": "standard_Hartree_renormalization_context_no_material_data"
+    },
+    {
+      "url": "https://arxiv.org/abs/1509.07847",
+      "locator": "abstract; external source and symmetry-preserving reorganizations",
+      "role": "method_context_not_implementation_of_symmetry_improved_2PI"
+    }
+  ],
+  "checks": {
+    "symmetric_vacuum_MS_and_chemical_shift_independence": true,
+    "finite_loop_derivative_is_half_renormalized_tadpole": true,
+    "nonzero_stationary_amplitude_and_gap_equations": true,
+    "vacuum_thermal_quadrature_and_split_refinement": true,
+    "auxiliary_subtraction_mass_not_physical_parameter": true,
+    "numerical_seed_is_not_parameter_fit": true,
+    "internal_external_transverse_curvatures_are_distinct": true,
+    "internal_gap_not_manually_removed": true,
+    "source_reoptimized_radial_response_stable": true,
+    "external_transverse_Ward_from_source_reoptimization": true,
+    "stationary_entropy_envelope": true,
+    "charge_derivative_keeps_physical_mass_fixed": true
+  },
+  "examples": [
+    {
+      "T": 0.22,
+      "mu": 1.05,
+      "r": 0.10850000000000004,
+      "Z": 1.0,
+      "lambda": 1.0,
+      "u_canonical": 1.0,
+      "Phi_fixed": 0.15,
+      "s_tree_canonical": 0.10850000000000004,
+      "background": {
+        "s": 0.11673154472530303,
+        "a": 0.23346308945060604,
+        "b": 0.009691508884317981,
+        "residual": [
+          -1.0755285551056204e-16,
+          2.42861286636753e-17,
+          -4.59918561568351e-15
+        ],
+        "potential": -0.011336277863228668,
+        "loops": {
+          "sigma": -0.003269324791866111,
+          "phase": 0.0015764296502952333,
+          "loop_free_energy": -0.008402851664361227,
+          "quasiparticle_entropy": 0.03052039809367707,
+          "thermal": [
+            0.003493347119272678,
+            0.006869168352556986,
+            -0.0022061359766127504,
+            0.03052039809367707
+          ],
+          "vacuum": [
+            -0.006762671911138789,
+            -0.005292738702261753,
+            -0.0061967156877484764
+          ]
+        },
+        "internal_low_frequency_gap": 0.02205229368565022,
+        "external_transverse_curvature": -1.0755285551056204e-16,
+        "propagator_gap_is_not_external_Goldstone_mass": true
+      },
+      "quadrature_split_refinement": [
+        {
+          "s": 0.11673154230645444,
+          "a": 0.2334630846129089,
+          "b": 0.00969151634786788,
+          "residual": [
+            -1.5959455978986625e-16,
+            1.5959455978986625e-16,
+            -4.554082805308113e-15
+          ],
+          "potential": -0.01133627786672457,
+          "loops": {
+            "sigma": -0.0032693251200977143,
+            "phase": 0.001576433053838585,
+            "loop_free_energy": -0.008402851654066238,
+            "quasiparticle_entropy": 0.030520397969912464,
+            "thermal": [
+              0.003493347137631732,
+              0.006869167830181882,
+              -0.002206135959428474,
+              0.030520397969912464
+            ],
+            "vacuum": [
+              -0.006762672257729446,
+              -0.005292734776343297,
+              -0.006196715694637764
+            ]
+          },
+          "internal_low_frequency_gap": 0.02205230194318175,
+          "external_transverse_curvature": -1.5959455978986625e-16,
+          "propagator_gap_is_not_external_Goldstone_mass": true
+        },
+        {
+          "s": 0.11673154459552634,
+          "a": 0.23346308919105266,
+          "b": 0.00969150928396326,
+          "residual": [
+            -1.43982048506075e-16,
+            1.1622647289044608e-16,
+            -4.58270574266173e-15
+          ],
+          "potential": -0.011336277863411653,
+          "loops": {
+            "sigma": -0.0032693248093776093,
+            "phase": 0.0015764298326063821,
+            "loop_free_energy": -0.008402851663804924,
+            "quasiparticle_entropy": 0.030520398087058098,
+            "thermal": [
+              0.0034933471202594113,
+              0.006869168324586814,
+              -0.00220613597569349,
+              0.030520398087058098
+            ],
+            "vacuum": [
+              -0.006762671929637021,
+              -0.005292738491980432,
+              -0.006196715688111434
+            ]
+          },
+          "internal_low_frequency_gap": 0.022052294127787343,
+          "external_transverse_curvature": -1.43982048506075e-16,
+          "propagator_gap_is_not_external_Goldstone_mass": true
+        },
+        {
+          "s": 0.11673154472530303,
+          "a": 0.23346308945060604,
+          "b": 0.009691508884317981,
+          "residual": [
+            -1.0755285551056204e-16,
+            2.42861286636753e-17,
+            -4.59918561568351e-15
+          ],
+          "potential": -0.011336277863228668,
+          "loops": {
+            "sigma": -0.003269324791866111,
+            "phase": 0.0015764296502952333,
+            "loop_free_energy": -0.008402851664361227,
+            "quasiparticle_entropy": 0.03052039809367707,
+            "thermal": [
+              0.003493347119272678,
+              0.006869168352556986,
+              -0.0022061359766127504,
+              0.03052039809367707
+            ],
+            "vacuum": [
+              -0.006762671911138789,
+              -0.005292738702261753,
+              -0.0061967156877484764
+            ]
+          },
+          "internal_low_frequency_gap": 0.02205229368565022,
+          "external_transverse_curvature": -1.0755285551056204e-16,
+          "propagator_gap_is_not_external_Goldstone_mass": true
+        }
+      ],
+      "auxiliary_reference_runs": [
+        {
+          "s": 0.11673154439825516,
+          "a": 0.23346308879651037,
+          "b": 0.009691508807456064,
+          "residual": [
+            -1.6306400674181987e-16,
+            2.0469737016526324e-16,
+            -4.585307827875695e-15
+          ],
+          "potential": -0.011336277848110499,
+          "loops": {
+            "sigma": -0.0032693247004964214,
+            "phase": 0.001576429703233984,
+            "loop_free_energy": -0.008402851648234417,
+            "quasiparticle_entropy": 0.030520398106523024,
+            "thermal": [
+              0.003493347124186397,
+              0.006869168359512555,
+              -0.002206135978019228,
+              0.030520398106523024
+            ],
+            "vacuum": [
+              -0.006762671824682818,
+              -0.005292738656278571,
+              -0.006196715670215189
+            ]
+          },
+          "internal_low_frequency_gap": 0.022052293569031507,
+          "external_transverse_curvature": -1.6306400674181987e-16,
+          "propagator_gap_is_not_external_Goldstone_mass": true
+        },
+        {
+          "s": 0.11673154472530303,
+          "a": 0.23346308945060604,
+          "b": 0.009691508884317981,
+          "residual": [
+            -1.0755285551056204e-16,
+            2.42861286636753e-17,
+            -4.59918561568351e-15
+          ],
+          "potential": -0.011336277863228668,
+          "loops": {
+            "sigma": -0.003269324791866111,
+            "phase": 0.0015764296502952333,
+            "loop_free_energy": -0.008402851664361227,
+            "quasiparticle_entropy": 0.03052039809367707,
+            "thermal": [
+              0.003493347119272678,
+              0.006869168352556986,
+              -0.0022061359766127504,
+              0.03052039809367707
+            ],
+            "vacuum": [
+              -0.006762671911138789,
+              -0.005292738702261753,
+              -0.0061967156877484764
+            ]
+          },
+          "internal_low_frequency_gap": 0.02205229368565022,
+          "external_transverse_curvature": -1.0755285551056204e-16,
+          "propagator_gap_is_not_external_Goldstone_mass": true
+        },
+        {
+          "s": 0.11673154465455883,
+          "a": 0.2334630893091177,
+          "b": 0.009691508928826484,
+          "residual": [
+            -1.4224732503009818e-16,
+            1.5612511283791264e-16,
+            -4.574032125281846e-15
+          ],
+          "potential": -0.01133627787171054,
+          "loops": {
+            "sigma": -0.0032693247797436335,
+            "phase": 0.0015764296846719691,
+            "loop_free_energy": -0.00840285167257673,
+            "quasiparticle_entropy": 0.030520398094790614,
+            "thermal": [
+              0.003493347120198695,
+              0.0068691683496940135,
+              -0.0022061359767070136,
+              0.030520398094790614
+            ],
+            "vacuum": [
+              -0.006762671899942329,
+              -0.005292738665022044,
+              -0.006196715695869716
+            ]
+          },
+          "internal_low_frequency_gap": 0.022052293729840227,
+          "external_transverse_curvature": -1.4224732503009818e-16,
+          "propagator_gap_is_not_external_Goldstone_mass": true
+        }
+      ],
+      "numerical_seed_runs": [
+        {
+          "s": 0.11673154472539339,
+          "a": 0.2334630894500399,
+          "b": 0.00969150888433895,
+          "residual": [
+            1.0097131464270603e-13,
+            -8.478599766714723e-13,
+            -7.063924098438257e-14
+          ],
+          "potential": -0.011336277863228668,
+          "loops": {
+            "sigma": -0.003269324791861672,
+            "phase": 0.0015764296502926373,
+            "loop_free_energy": -0.008402851664360285,
+            "quasiparticle_entropy": 0.03052039809368581,
+            "thermal": [
+              0.0034933471192767347,
+              0.0068691683525567504,
+              -0.002206135976613667,
+              0.03052039809368581
+            ],
+            "vacuum": [
+              -0.0067626719111384065,
+              -0.005292738702264113,
+              -0.0061967156877466185
+            ]
+          },
+          "internal_low_frequency_gap": 0.022052293685648632,
+          "external_transverse_curvature": 1.0097131464270603e-13,
+          "propagator_gap_is_not_external_Goldstone_mass": true
+        },
+        {
+          "s": 0.1167315447253035,
+          "a": 0.23346308945060698,
+          "b": 0.009691508884322337,
+          "residual": [
+            6.938893903907228e-18,
+            -6.938893903907228e-18,
+            3.0574501264091225e-16
+          ],
+          "potential": -0.011336277863228668,
+          "loops": {
+            "sigma": -0.003269324791866118,
+            "phase": 0.001576429650294896,
+            "loop_free_energy": -0.008402851664361225,
+            "quasiparticle_entropy": 0.030520398093676925,
+            "thermal": [
+              0.00349334711927266,
+              0.006869168352556673,
+              -0.0022061359766127335,
+              0.030520398093676925
+            ],
+            "vacuum": [
+              -0.006762671911138778,
+              -0.005292738702261777,
+              -0.006196715687748491
+            ]
+          },
+          "internal_low_frequency_gap": 0.02205229368565521,
+          "external_transverse_curvature": 6.938893903907228e-18,
+          "propagator_gap_is_not_external_Goldstone_mass": true
+        }
+      ],
+      "quadrature_relative_residual": 7.701122690662032e-07,
+      "auxiliary_reference_relative_residual": 7.930851531057215e-09,
+      "seed_relative_residual": 2.424949130386267e-12,
+      "loop_derivative_check": {
+        "free_energy_mass_derivatives": [
+          -0.0016346624069150596,
+          0.0007882148309549613
+        ],
+        "half_tadpoles": [
+          -0.0016346623959330555,
+          0.0007882148251476167
+        ],
+        "relative_residual": 7.367718085563392e-09
+      },
+      "external_response": {
+        "tadpole_mass_derivative_matrix": [
+          [
+            -0.007791241176591054,
+            0.0016578986530610277
+          ],
+          [
+            0.0016578986546272267,
+            -0.07904354705802316
+          ]
+        ],
+        "implicit_mass_response": [
+          2.878034620881354,
+          0.8028432948734662
+        ],
+        "implicit_response_determinant": 1.2620933570812412,
+        "external_radial_curvature": 0.20498867523555234,
+        "fixed_mass_radial_curvature": 0.23346308945060604,
+        "source_reoptimized_Hessian": [
+          {
+            "relative_field_step": 0.003,
+            "external_radial_difference": 0.20498763342184614,
+            "external_transverse_difference": 4.6121630989296966e-07,
+            "radial_relative_residual": 5.0822988392207336e-06
+          },
+          {
+            "relative_field_step": 0.0015,
+            "external_radial_difference": 0.20498841486845906,
+            "external_transverse_difference": 1.1533297346218394e-07,
+            "radial_relative_residual": 1.2701535485604154e-06
+          },
+          {
+            "relative_field_step": 0.00075,
+            "external_radial_difference": 0.2049886097364037,
+            "external_transverse_difference": 2.8955432118784468e-08,
+            "radial_relative_residual": 3.1952569357063254e-07
+          }
+        ],
+        "forcing_internal_b_zero_gap_residual": -0.009691508884317981,
+        "internal_b_identity_residual": 4.7080395138010545e-15
+      },
+      "thermodynamic_envelope": {
+        "stationary_pressure_T_derivative": 0.030520398214951328,
+        "fixed_variational_entropy": 0.030520398203241945,
+        "quasiparticle_entropy": 0.03052039809367707,
+        "entropy_relative_residual": 3.973547713087555e-09,
+        "entropy_envelope_relative_residual": 3.589890162913889e-09,
+        "canonical_charge_pressure_derivative": 0.13658215954696806,
+        "fixed_variational_charge": 0.13658215160490836,
+        "charge_envelope_relative_residual": 5.814859127539762e-08,
+        "charge_is_not_C_or_helium_mass_density": true,
+        "grand_canonical_energy_definition": 0.1387894772683771,
+        "energy_identity_is_not_dynamical_ledger_proof": true
+      }
+    },
+    {
+      "T": 0.22,
+      "mu": 1.2,
+      "r": 0.44599999999999995,
+      "Z": 1.0,
+      "lambda": 1.0,
+      "u_canonical": 1.0,
+      "Phi_fixed": 0.15,
+      "s_tree_canonical": 0.44599999999999995,
+      "background": {
+        "s": 0.449916887205158,
+        "a": 0.8998337744103163,
+        "b": 0.012470671054547374,
+        "residual": [
+          -2.62307536802453e-14,
+          2.645279828517033e-14,
+          3.954944011175243e-13
+        ],
+        "potential": -0.061475480081455064,
+        "loops": {
+          "sigma": -0.0025380556830683285,
+          "phase": 0.0036972798440207174,
+          "loop_free_energy": -0.011739923830187349,
+          "quasiparticle_entropy": 0.027362039481224662,
+          "thermal": [
+            0.0016319935976696974,
+            0.006185902538487677,
+            -0.0018086122169094143,
+            0.027362039481224662
+          ],
+          "vacuum": [
+            -0.004170049280738026,
+            -0.00248862269446696,
+            -0.009931311613277935
+          ]
+        },
+        "internal_low_frequency_gap": 0.041015015893169166,
+        "external_transverse_curvature": -2.62307536802453e-14,
+        "propagator_gap_is_not_external_Goldstone_mass": true
+      },
+      "quadrature_split_refinement": [
+        {
+          "s": 0.44991679992486044,
+          "a": 0.8998335998497208,
+          "b": 0.012470667885275863,
+          "residual": [
+            -2.6161364741206228e-14,
+            2.6272387043668743e-14,
+            3.9541633856110536e-13
+          ],
+          "potential": -0.06147547472835028,
+          "loops": {
+            "sigma": -0.0025380334668349868,
+            "phase": 0.0036973004756183066,
+            "loop_free_energy": -0.011739918261420127,
+            "quasiparticle_entropy": 0.027362041194941025,
+            "thermal": [
+              0.0016319938839643878,
+              0.006185902935285766,
+              -0.001808612369152706,
+              0.027362041194941025
+            ],
+            "vacuum": [
+              -0.0041700273507993746,
+              -0.002488602459667459,
+              -0.009931305892267421
+            ]
+          },
+          "internal_low_frequency_gap": 0.04101500724735332,
+          "external_transverse_curvature": -2.6161364741206228e-14,
+          "propagator_gap_is_not_external_Goldstone_mass": true
+        },
+        {
+          "s": 0.44991688252870177,
+          "a": 0.8998337650574033,
+          "b": 0.012470670884331896,
+          "residual": [
+            -2.6183916146393926e-14,
+            2.585084923900638e-14,
+            3.955273608635679e-13
+          ],
+          "potential": -0.061475479794651886,
+          "loops": {
+            "sigma": -0.0025380544926773196,
+            "phase": 0.0036972809493039595,
+            "loop_free_energy": -0.011739923531829734,
+            "quasiparticle_entropy": 0.02736203957305575,
+            "thermal": [
+              0.0016319936130097645,
+              0.006185902559771916,
+              -0.0018086122250678212,
+              0.02736203957305575
+            ],
+            "vacuum": [
+              -0.004170048105687084,
+              -0.002488621610467957,
+              -0.009931311306761913
+            ]
+          },
+          "internal_low_frequency_gap": 0.04101501542926079,
+          "external_transverse_curvature": -2.6183916146393926e-14,
+          "propagator_gap_is_not_external_Goldstone_mass": true
+        },
+        {
+          "s": 0.449916887205158,
+          "a": 0.8998337744103163,
+          "b": 0.012470671054547374,
+          "residual": [
+            -2.62307536802453e-14,
+            2.645279828517033e-14,
+            3.954944011175243e-13
+          ],
+          "potential": -0.061475480081455064,
+          "loops": {
+            "sigma": -0.0025380556830683285,
+            "phase": 0.0036972798440207174,
+            "loop_free_energy": -0.011739923830187349,
+            "quasiparticle_entropy": 0.027362039481224662,
+            "thermal": [
+              0.0016319935976696974,
+              0.006185902538487677,
+              -0.0018086122169094143,
+              0.027362039481224662
+            ],
+            "vacuum": [
+              -0.004170049280738026,
+              -0.00248862269446696,
+              -0.009931311613277935
+            ]
+          },
+          "internal_low_frequency_gap": 0.041015015893169166,
+          "external_transverse_curvature": -2.62307536802453e-14,
+          "propagator_gap_is_not_external_Goldstone_mass": true
+        }
+      ],
+      "auxiliary_reference_runs": [
+        {
+          "s": 0.4499168866875585,
+          "a": 0.899833773375117,
+          "b": 0.01247067089940774,
+          "residual": [
+            -2.6142282782970483e-14,
+            2.619779393420174e-14,
+            3.953747051976819e-13
+          ],
+          "potential": -0.061475480014092705,
+          "loops": {
+            "sigma": -0.0025380555342759915,
+            "phase": 0.003697279915243258,
+            "loop_free_energy": -0.011739923761798096,
+            "quasiparticle_entropy": 0.027362039495035118,
+            "thermal": [
+              0.001631993599531563,
+              0.006185902548875807,
+              -0.0018086122182339698,
+              0.027362039495035118
+            ],
+            "vacuum": [
+              -0.004170049133807555,
+              -0.002488622633632549,
+              -0.009931311543564126
+            ]
+          },
+          "internal_low_frequency_gap": 0.041015015618045936,
+          "external_transverse_curvature": -2.6142282782970483e-14,
+          "propagator_gap_is_not_external_Goldstone_mass": true
+        },
+        {
+          "s": 0.449916887205158,
+          "a": 0.8998337744103163,
+          "b": 0.012470671054547374,
+          "residual": [
+            -2.62307536802453e-14,
+            2.645279828517033e-14,
+            3.954944011175243e-13
+          ],
+          "potential": -0.061475480081455064,
+          "loops": {
+            "sigma": -0.0025380556830683285,
+            "phase": 0.0036972798440207174,
+            "loop_free_energy": -0.011739923830187349,
+            "quasiparticle_entropy": 0.027362039481224662,
+            "thermal": [
+              0.0016319935976696974,
+              0.006185902538487677,
+              -0.0018086122169094143,
+              0.027362039481224662
+            ],
+            "vacuum": [
+              -0.004170049280738026,
+              -0.00248862269446696,
+              -0.009931311613277935
+            ]
+          },
+          "internal_low_frequency_gap": 0.041015015893169166,
+          "external_transverse_curvature": -2.62307536802453e-14,
+          "propagator_gap_is_not_external_Goldstone_mass": true
+        },
+        {
+          "s": 0.4499168881288951,
+          "a": 0.8998337762577902,
+          "b": 0.012470671418697994,
+          "residual": [
+            -2.61709057203241e-14,
+            2.61709057203241e-14,
+            3.95518687246188e-13
+          ],
+          "potential": -0.061475480153982145,
+          "loops": {
+            "sigma": -0.0025380559595214063,
+            "phase": 0.0036972797496429245,
+            "loop_free_energy": -0.011739923904385741,
+            "quasiparticle_entropy": 0.027362039454242714,
+            "thermal": [
+              0.0016319935942418974,
+              0.006185902514804919,
+              -0.001808612214275583,
+              0.027362039454242714
+            ],
+            "vacuum": [
+              -0.004170049553763304,
+              -0.0024886227651619948,
+              -0.009931311690110158
+            ]
+          },
+          "internal_low_frequency_gap": 0.04101501652746524,
+          "external_transverse_curvature": -2.61709057203241e-14,
+          "propagator_gap_is_not_external_Goldstone_mass": true
+        }
+      ],
+      "numerical_seed_runs": [
+        {
+          "s": 0.4499168872053017,
+          "a": 0.8998337744094621,
+          "b": 0.012470671054225148,
+          "residual": [
+            1.2965149787103059e-13,
+            -1.2709052560344603e-12,
+            -1.291571016803772e-13
+          ],
+          "potential": -0.061475480081455064,
+          "loops": {
+            "sigma": -0.00253805568307111,
+            "phase": 0.0036972798440412266,
+            "loop_free_energy": -0.011739923830186861,
+            "quasiparticle_entropy": 0.02736203948124126,
+            "thermal": [
+              0.0016319935976714685,
+              0.006185902538507695,
+              -0.0018086122169111065,
+              0.02736203948124126
+            ],
+            "vacuum": [
+              -0.004170049280742579,
+              -0.0024886226944664685,
+              -0.009931311613275755
+            ]
+          },
+          "internal_low_frequency_gap": 0.04101501589262329,
+          "external_transverse_curvature": 1.2965149787103059e-13,
+          "propagator_gap_is_not_external_Goldstone_mass": true
+        },
+        {
+          "s": 0.4499168872051521,
+          "a": 0.8998337744103513,
+          "b": 0.012470671054038093,
+          "residual": [
+            3.4867941867133823e-16,
+            4.6613754522972783e-14,
+            -2.1124768601055166e-13
+          ],
+          "potential": -0.06147548008145505,
+          "loops": {
+            "sigma": -0.0025380556830690753,
+            "phase": 0.003697279844055422,
+            "loop_free_energy": -0.011739923830188334,
+            "quasiparticle_entropy": 0.02736203948123795,
+            "thermal": [
+              0.0016319935976702544,
+              0.006185902538517647,
+              -0.00180861221691096,
+              0.02736203948123795
+            ],
+            "vacuum": [
+              -0.00417004928073933,
+              -0.0024886226944622254,
+              -0.009931311613277373
+            ]
+          },
+          "internal_low_frequency_gap": 0.041015015892333716,
+          "external_transverse_curvature": 3.4867941867133823e-16,
+          "propagator_gap_is_not_external_Goldstone_mass": true
+        }
+      ],
+      "quadrature_relative_residual": 2.5413800897045036e-07,
+      "auxiliary_reference_relative_residual": 2.9200563300690874e-08,
+      "seed_relative_residual": 4.0838332715509296e-11,
+      "loop_derivative_check": {
+        "free_energy_mass_derivatives": [
+          -0.0012690278405729325,
+          0.0018486399243686483
+        ],
+        "half_tadpoles": [
+          -0.0012690278415341642,
+          0.0018486399220103587
+        ],
+        "relative_residual": 1.2756889721020507e-09
+      },
+      "external_response": {
+        "tadpole_mass_derivative_matrix": [
+          [
+            0.0026317784776841067,
+            0.001659816126792456
+          ],
+          [
+            0.0016598161265316356,
+            -0.06803703924102013
+          ]
+        ],
+        "implicit_mass_response": [
+          2.9747964034661316,
+          0.8504642549128016
+        ],
+        "implicit_response_determinant": 1.1914416427956103,
+        "external_radial_curvature": 0.877154727012504,
+        "fixed_mass_radial_curvature": 0.8998337744103163,
+        "source_reoptimized_Hessian": [
+          {
+            "relative_field_step": 0.003,
+            "external_radial_difference": 0.8770768593974537,
+            "external_transverse_difference": 1.9736077580105257e-06,
+            "radial_relative_residual": 8.87729526527492e-05
+          },
+          {
+            "relative_field_step": 0.0015,
+            "external_radial_difference": 0.8771353564009862,
+            "external_transverse_difference": 4.934276438571512e-07,
+            "radial_relative_residual": 2.208346021659313e-05
+          },
+          {
+            "relative_field_step": 0.00075,
+            "external_radial_difference": 0.877149890506698,
+            "external_transverse_difference": 1.2327122978255505e-07,
+            "radial_relative_residual": 5.513857084804563e-06
+          }
+        ],
+        "forcing_internal_b_zero_gap_residual": -0.012470671054547374,
+        "internal_b_identity_residual": 3.6928272939551476e-13
+      },
+      "thermodynamic_envelope": {
+        "stationary_pressure_T_derivative": 0.027362039610866824,
+        "fixed_variational_entropy": 0.027362039603454822,
+        "quasiparticle_entropy": 0.027362039481224662,
+        "entropy_relative_residual": 4.738029968365254e-09,
+        "entropy_envelope_relative_residual": 4.467143543962493e-09,
+        "canonical_charge_pressure_derivative": 0.5535310518823705,
+        "fixed_variational_charge": 0.5535310370882729,
+        "charge_envelope_relative_residual": 2.6726771684693063e-08,
+        "charge_is_not_C_or_helium_mass_density": true,
+        "grand_canonical_energy_definition": 0.6087814308917803,
+        "energy_identity_is_not_dynamical_ledger_proof": true
+      }
+    }
+  ],
+  "symmetric_vacuum_reference": [
+    {
+      "mu": 0.0,
+      "auxiliary": 0.8,
+      "relative_residual": 2.658191289306444e-08
+    },
+    {
+      "mu": 0.0,
+      "auxiliary": 1.0,
+      "relative_residual": 1.426136675419798e-08
+    },
+    {
+      "mu": 0.0,
+      "auxiliary": 1.3,
+      "relative_residual": 0.0
+    },
+    {
+      "mu": 0.4,
+      "auxiliary": 0.8,
+      "relative_residual": 3.2431627716711375e-08
+    },
+    {
+      "mu": 0.4,
+      "auxiliary": 1.0,
+      "relative_residual": 1.7399714780097497e-08
+    },
+    {
+      "mu": 0.4,
+      "auxiliary": 1.3,
+      "relative_residual": 2.220446049250313e-16
+    },
+    {
+      "mu": 0.8,
+      "auxiliary": 0.8,
+      "relative_residual": 6.885479286733442e-08
+    },
+    {
+      "mu": 0.8,
+      "auxiliary": 1.0,
+      "relative_residual": 3.694027972400704e-08
+    },
+    {
+      "mu": 0.8,
+      "auxiliary": 1.3,
+      "relative_residual": 0.0
+    }
+  ],
+  "thresholds": {
+    "identity": 1e-07,
+    "refinement": 1e-05,
+    "source_thermo_derivative": 2e-05
+  },
+  "evidence_artifacts": [
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/t13_polar_dynamic_composite.json",
+      "sha256": "2f07a63af3ce9945bf254d5da238bdefbd53597dae105ee7e50bbcbe8bc61f7d"
+    },
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/Research_T13_Renormalized_Hartree_Background.py",
+      "sha256": "bf72364e42b28cb5e05c8a1518f4c979032be7e738bd3f0bc7a545817e386da5"
+    }
+  ],
+  "protected_evidence_hashes": [
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/t13_conditional_twofluid_operator.json",
+      "sha256": "8606303e4818030dd74061c14b243542c19c4cbb262dda29261951d4c87d6412"
+    },
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/t13_polar_static_ir_observable.json",
+      "sha256": "4b3021ff3b74f180c683e161ad6e43b4ef959df37464882c6abd04b4a6cceabd"
+    },
+    {
+      "path": "docs/core/07_artifacts/topic13/t13_topic13_closure_matrix.json",
+      "sha256": "e6e84772a400273c438e0b8ca3c7b5b14c9d720da0420fb4021b1c0e7a54fe66"
+    },
+    {
+      "path": "docs/core/07_artifacts/gates/uet_major_result_dependency_unlock_gate.json",
+      "sha256": "ecbefdf12ee1eb6661ae8096e3f62bf1ffa7992c96ca94f1149fdbc25a8bbe6e"
+    }
+  ],
+  "open_blockers": [
+    "covariant_counterterm_tensor_and_RG_matching_to_original_action_inputs",
+    "joint_Phi_stationarity_and_material_matching",
+    "external_finite_q_frequency_vertex_equations_not_internal_propagator_substitution",
+    "IR_dynamic_matching_remainder_normal_component_and_SK_KMS_transport"
+  ],
+  "controlling_blocker": "finite_potential_candidate_counterterm_and_external_dynamic_matching_not_closed",
+  "dependency_unlocked": [
+    "fixed_Phi_Hartree_external_vertex_and_counterterm_matching_design_only"
+  ],
+  "specified_vacuum_loop_subtraction_derived": true,
+  "fixed_Phi_candidate_stationarity_derived": true,
+  "external_static_Ward_matched_in_candidate": true,
+  "internal_Hartree_gap_generated": true,
+  "global_phase_minimum_selected": false,
+  "finite_q_local_stability_established": false,
+  "manual_Goldstone_mass_fix": false,
+  "internal_gap_used_as_physical_Goldstone_mass": false,
+  "full_covariant_counterterm_match": false,
+  "renormalization_scheme_material_match": false,
+  "joint_Phi_stationarity_derived": false,
+  "exact_microscopic_stationarity": false,
+  "external_finite_frequency_response_derived": false,
+  "microscopic_IR_matching_established": false,
+  "physical_Kubo_emitted": false,
+  "g1_physical_unlock": false,
+  "g2_science_unlock": false,
+  "full_core_unlock": false,
+  "core_composition_gate_overwritten": false,
+  "claim_promotion": false,
+  "parameter_fitting": false,
+  "xie_2026_accessed": false,
+  "IR_filter": false,
+  "clipping": false,
+  "C_relabelled_as_charge_or_mass": false,
+  "R_gen_added_as_state": false,
+  "claim_boundary": "A fixed-Phi finite-potential Hartree candidate with vacuum and thermal loops, not full covariant counterterm/RG matching, exact UET equilibrium, a physical internal Goldstone mass, finite-frequency external response, material validation or full Topic13 closure. Its internal gapped propagator cannot replace the prior massless observable response.",
+  "report": {
+    "MAJOR_RESULT_CLOSURE": "T13_FIXED_PHI_FINITE_HARTREE_BACKGROUND_AND_SOURCE_BOUNDARY: CLOSED_FOR_LANE",
+    "WHAT_IS_ACTUALLY_CLOSED": [
+      "specified_finite_vacuum_plus_thermal_Hartree_potential",
+      "stationary_amplitude_and_internal_gap_candidate",
+      "external_static_Ward_and_radial_source_reoptimization",
+      "thermodynamic_entropy_charge_envelope_in_this_prescription"
+    ],
+    "WHAT_REMAINS_OPEN": [
+      "covariant_counterterm_tensor_and_RG_matching_to_original_action_inputs",
+      "joint_Phi_stationarity_and_material_matching",
+      "external_finite_q_frequency_vertex_equations_not_internal_propagator_substitution",
+      "IR_dynamic_matching_remainder_normal_component_and_SK_KMS_transport"
+    ],
+    "DEPENDENCY_UNLOCKED": [
+      "fixed_Phi_Hartree_external_vertex_and_counterterm_matching_design_only"
+    ],
+    "STATUS": "PASS_FIXED_PHI_HARTREE_SOURCE_BACKGROUND",
+    "WHAT_CHANGED": "Computed a self-consistent finite vacuum/thermal potential, stationary candidate, source Hessian and pressure-envelope checks; preserved baseline failures.",
+    "EQUATION_OR_MAPPING": "F=U+Omega_F+[(a0-a)I_s+(b0-b)I_p]/2+u*(3I_s^2+2I_s I_p+3I_p^2)/4; a=2u*s and b=2u*(I_p-I_s) at field stationarity; Gamma_ext,pi(0)=0 is not internal b",
+    "VERIFICATION": "Vacuum/thermal quadrature, subtraction-reference/seed refinement, reoptimized source Hessian and entropy/charge envelope.",
+    "CONTROLLING_BLOCKER": "finite_potential_candidate_counterterm_and_external_dynamic_matching_not_closed",
+    "NEXT_ACTION": "Match the counterterm tensor and RG input, then derive external finite-frequency/current vertex equations and joint Phi/material state; never replace them with the internal Hartree propagator.",
+    "CLAIM_BOUNDARY": "A fixed-Phi finite-potential Hartree candidate with vacuum and thermal loops, not full covariant counterterm/RG matching, exact UET equilibrium, a physical internal Goldstone mass, finite-frequency external response, material validation or full Topic13 closure. Its internal gapped propagator cannot replace the prior massless observable response."
+  }
+}

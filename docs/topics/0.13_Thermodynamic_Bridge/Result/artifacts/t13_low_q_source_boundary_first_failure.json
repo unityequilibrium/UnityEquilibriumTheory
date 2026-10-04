@@ -1,0 +1,974 @@
+{
+  "major_result_id": "T13_LOW_Q_NUMERIC_SOURCE_AND_OMITTED_TERM_MEASUREMENT_BOUNDARY",
+  "topic": "0.13_Thermodynamic_Bridge",
+  "branch_id": "t13.candidate.acoustic_thermal_insertion_tree_virtual_response_v1",
+  "generated_at": "2026-10-03T15:15:39.355661+00:00",
+  "closure_level": "PARTIAL",
+  "verification_status": "FAIL_SCOPED_LOW_Q_SOURCE_BOUNDARY",
+  "what_is_closed": "Versioned author numeric-source archive/row provenance with missing cells and mixed ancestry; exact q4 alias and four-node separation under the declared coefficient class",
+  "equation_or_mapping": "delta_beta_k=b4*sum W_ki*q_i^3; quintic alias scales b4/q_max; four basis powers(0,2,3,4) have detV=Vandermonde(q)*e3(q)",
+  "units": {
+    "source_q": "angstrom^-1",
+    "source_energy_error": "meV",
+    "source_coefficients": "meV angstrom^(1,3,4,5)",
+    "native_q4_coefficient": "E^-3"
+  },
+  "derivation_class": "SOURCE_ARCHIVE_AND_DERIVED_EXACT_MEASUREMENT_MODEL_DISCREPANCY",
+  "observable": "exposed dispersion coefficient estimates, not native kinetic or Kelvin inference",
+  "data_role": "LITERATURE_SOURCE_SCREEN_EXPOSED_COMPARISON_NOT_CALIBRATION_OR_HOLDOUT",
+  "source_identity": {
+    "authors": "H. Godfrin, K. Beauvois, A. Sultan, E. Krotscheck, J. Dawidowski, B. Fak and J. Ollivier",
+    "title": "The dispersion relation of Landau elementary excitations and the thermodynamic properties of superfluid 4He",
+    "arxiv_version": "2012.09067v1",
+    "arxiv_url": "https://arxiv.org/abs/2012.09067v1",
+    "journal_doi": "10.1103/PhysRevB.103.104516",
+    "journal_version_parity": "NOT_ESTABLISHED_DO_NOT_MERGE_VERSION_ROWS",
+    "license": "CC-BY-4.0_AS_DECLARED_BY_ARXIV_RECORD",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "license_locator": "arXiv version record view-license link; author-submitted work and ancillary files, not APS final-paper redistribution",
+    "source_role": "EXPOSED_LITERATURE_SOURCE_SCREEN_NOT_UET_CALIBRATION_OR_BLIND_HOLDOUT",
+    "access_date": "2026-10-03",
+    "attribution_and_changes": "Credit authors and version/DOI/license in source note; raw bytes unchanged; parsed view retains lexical numbers, null missing cells and source line identities; no digitization or model-parameter fit",
+    "current_admission": "NUMERIC_ARCHIVE_AND_ROW_PROVENANCE_ONLY_NOT_MATERIAL_PREDICTION"
+  },
+  "declared_protocol": {
+    "pressures_bar": [
+      0,
+      0.51,
+      1.02,
+      2.01,
+      5.01,
+      10.01,
+      24.08
+    ],
+    "three_node_physical_windows_angstrom_inverse": [
+      [
+        0.8,
+        0.4,
+        0.2
+      ],
+      [
+        0.6,
+        0.3,
+        0.15
+      ],
+      [
+        0.4,
+        0.2,
+        0.1
+      ]
+    ],
+    "four_node_physical_window_angstrom_inverse": [
+      0.6,
+      0.3,
+      0.2,
+      0.15
+    ],
+    "q4_control_maxima": [
+      0.02,
+      0.01,
+      0.005
+    ],
+    "q4_control_beta": [
+      1,
+      2,
+      3,
+      -1
+    ],
+    "q4_control_is_not_physical_coefficient": true,
+    "four_node_ratios": [
+      "1",
+      "1/2",
+      "1/3",
+      "1/4"
+    ],
+    "source_inspected_before_protocol": true,
+    "no_source_interpolation_or_window_tuning": true
+  },
+  "thresholds": {
+    "independent_float_control_relative": 1e-08,
+    "original_causal_leakage": 1e-06
+  },
+  "checks": {
+    "source_hash_headers_units_and_row_identity": true,
+    "missing_and_ancestry_retained": true,
+    "three_node_omitted_q4_alias_exact": true,
+    "alias_scaling_exact": true,
+    "four_node_rank_and_recovery_exact": true,
+    "independent_scaled_float_control": false,
+    "missing_physical_window_not_filled": true,
+    "no_physical_inverse_from_source": true
+  },
+  "source_summaries": [
+    {
+      "table": "all_pressures",
+      "row_cells_archived_including_missing": 7350,
+      "energies_present": 7118,
+      "errors_missing": 232,
+      "ancestry_counts": {
+        "NEUTRON_AUTHOR_TABLE": 7175,
+        "NEUTRON_LOW_Q_SYSTEMATICS_FLAGGED": 175
+      },
+      "unique_row_ids": true
+    },
+    {
+      "table": "P0_hybrid",
+      "row_cells_archived_including_missing": 1727,
+      "energies_present": 1727,
+      "errors_missing": 1693,
+      "ancestry_counts": {
+        "COMBINED_ULTRASOUND_NEUTRON": 76,
+        "NEUTRON": 1576,
+        "ULTRASOUND": 75
+      },
+      "unique_row_ids": true
+    }
+  ],
+  "p0_separator_line_numbers": [
+    1726
+  ],
+  "controls": [
+    {
+      "q_max": 0.02,
+      "four_recovery_exact": true,
+      "four_determinant_identity_exact": true,
+      "independent_float_relative_error": 3.377543789095938e-08,
+      "three_alias_identity_exact": true,
+      "alias_exact": [
+        {
+          "numerator": "-1",
+          "denominator": "11250000"
+        },
+        {
+          "numerator": "7",
+          "denominator": "900"
+        },
+        {
+          "numerator": "280",
+          "denominator": "9"
+        }
+      ],
+      "alias_scaled_constants_exact": [
+        {
+          "numerator": "-1",
+          "denominator": "90"
+        },
+        {
+          "numerator": "7",
+          "denominator": "18"
+        },
+        {
+          "numerator": "28",
+          "denominator": "45"
+        }
+      ]
+    },
+    {
+      "q_max": 0.01,
+      "four_recovery_exact": true,
+      "four_determinant_identity_exact": true,
+      "independent_float_relative_error": 5.626605905639792e-07,
+      "three_alias_identity_exact": true,
+      "alias_exact": [
+        {
+          "numerator": "-1",
+          "denominator": "90000000"
+        },
+        {
+          "numerator": "7",
+          "denominator": "1800"
+        },
+        {
+          "numerator": "560",
+          "denominator": "9"
+        }
+      ],
+      "alias_scaled_constants_exact": [
+        {
+          "numerator": "-1",
+          "denominator": "90"
+        },
+        {
+          "numerator": "7",
+          "denominator": "18"
+        },
+        {
+          "numerator": "28",
+          "denominator": "45"
+        }
+      ]
+    },
+    {
+      "q_max": 0.005,
+      "four_recovery_exact": true,
+      "four_determinant_identity_exact": true,
+      "independent_float_relative_error": 4.809025290597457e-05,
+      "three_alias_identity_exact": true,
+      "alias_exact": [
+        {
+          "numerator": "-1",
+          "denominator": "720000000"
+        },
+        {
+          "numerator": "7",
+          "denominator": "3600"
+        },
+        {
+          "numerator": "1120",
+          "denominator": "9"
+        }
+      ],
+      "alias_scaled_constants_exact": [
+        {
+          "numerator": "-1",
+          "denominator": "90"
+        },
+        {
+          "numerator": "7",
+          "denominator": "18"
+        },
+        {
+          "numerator": "28",
+          "denominator": "45"
+        }
+      ]
+    }
+  ],
+  "source_windows": [
+    {
+      "table": "all_pressures",
+      "three_node": [
+        {
+          "q_angstrom_inverse": [
+            0.8,
+            0.4,
+            0.2
+          ],
+          "source_rows": [
+            {
+              "row_id": "DispersionAllPressures.txt:L329:P0",
+              "source_file": "DispersionAllPressures.txt",
+              "line_number": 329,
+              "line_encoding": "utf-16-le",
+              "line_sha256": "2a479a66709f7a7093601518c85767c3a808c2976c10dcf8d580252b53fdedea",
+              "source_line_lexical": "326\t0.800\t1.1002\t0.0019\t1.1085\t0.0019\t1.1139\t0.0019\t1.1252\t0.0019\t1.1545\t0.0020\t1.1836\t0.0020\t1.2043\t0.0021",
+              "q_exact": "4/5",
+              "energy_exact": "5501/5000",
+              "error_exact": "19/10000",
+              "pressure_bar": "0",
+              "ancestry": "NEUTRON_AUTHOR_TABLE"
+            },
+            {
+              "row_id": "DispersionAllPressures.txt:L129:P0",
+              "source_file": "DispersionAllPressures.txt",
+              "line_number": 129,
+              "line_encoding": "utf-16-le",
+              "line_sha256": "4e61c3301f5b2af43e93b04c1e7ec7a227ca860282034af0d349f59b04429c93",
+              "source_line_lexical": "126\t0.400\t0.6581\t0.0012\t0.6657\t0.0012\t0.6696\t0.0012\t0.6885\t0.0013\t0.7205\t0.0013\t0.7693\t0.0014\t0.8524\t0.0015",
+              "q_exact": "2/5",
+              "energy_exact": "6581/10000",
+              "error_exact": "3/2500",
+              "pressure_bar": "0",
+              "ancestry": "NEUTRON_AUTHOR_TABLE"
+            },
+            {
+              "row_id": "DispersionAllPressures.txt:L29:P0",
+              "source_file": "DispersionAllPressures.txt",
+              "line_number": 29,
+              "line_encoding": "utf-16-le",
+              "line_sha256": "8bc039275c081edeb240475504409ad21406e61828038b428f2c646f6f32e44d",
+              "source_line_lexical": "26\t0.200\t0.3262\t0.0011\t0.3280\t0.0011\t0.3398\t0.0012\t0.3472\t0.0012\t0.3715\t0.0013\t0.4026\t0.0014\t0.4705\t0.0016",
+              "q_exact": "1/5",
+              "energy_exact": "1631/5000",
+              "error_exact": "11/10000",
+              "pressure_bar": "0",
+              "ancestry": "NEUTRON_AUTHOR_TABLE"
+            }
+          ],
+          "classification": "ROW_PRESENT_EXPOSED_ESTIMATOR_NOT_UET_INFERENCE",
+          "physical_I_estimate": null,
+          "coefficients": [
+            1.6189833333333334,
+            0.3458333333333333,
+            -1.1354166666666667
+          ],
+          "coefficients_exact": [
+            {
+              "numerator": "97139",
+              "denominator": "60000"
+            },
+            {
+              "numerator": "83",
+              "denominator": "240"
+            },
+            {
+              "numerator": "-109",
+              "denominator": "96"
+            }
+          ],
+          "reported_errors_complete": true,
+          "joint_covariance_acquired": false,
+          "theoretical_remainder_bounded": false,
+          "contains_low_q_or_hybrid_ancestry": false
+        },
+        {
+          "q_angstrom_inverse": [
+            0.6,
+            0.3,
+            0.15
+          ],
+          "source_rows": [
+            {
+              "row_id": "DispersionAllPressures.txt:L229:P0",
+              "source_file": "DispersionAllPressures.txt",
+              "line_number": 229,
+              "line_encoding": "utf-16-le",
+              "line_sha256": "464eaf483fb6d7c464fb2f7c0a017ed394e197dc3c7535cff4907817eb7c3f8d",
+              "source_line_lexical": "226\t0.600\t0.9279\t0.0016\t0.9357\t0.0016\t0.9415\t0.0016\t0.9570\t0.0016\t0.9909\t0.0017\t1.0325\t0.0018\t1.0880\t0.0019",
+              "q_exact": "3/5",
+              "energy_exact": "9279/10000",
+              "error_exact": "1/625",
+              "pressure_bar": "0",
+              "ancestry": "NEUTRON_AUTHOR_TABLE"
+            },
+            {
+              "row_id": "DispersionAllPressures.txt:L79:P0",
+              "source_file": "DispersionAllPressures.txt",
+              "line_number": 79,
+              "line_encoding": "utf-16-le",
+              "line_sha256": "17d79085d29613660bf0876e4638affe7001bee6b6b960718c377d9f81f4f9a9",
+              "source_line_lexical": "76\t0.300\t0.4952\t0.0010\t0.4992\t0.0010\t0.5079\t0.0011\t0.5179\t0.0011\t0.5475\t0.0011\t0.5977\t0.0013\t0.6776\t0.0014",
+              "q_exact": "3/10",
+              "energy_exact": "619/1250",
+              "error_exact": "1/1000",
+              "pressure_bar": "0",
+              "ancestry": "NEUTRON_AUTHOR_TABLE"
+            },
+            {
+              "row_id": "DispersionAllPressures.txt:L4:P0",
+              "source_file": "DispersionAllPressures.txt",
+              "line_number": 4,
+              "line_encoding": "utf-16-le",
+              "line_sha256": "47835a5ab19814e1b127b1c7bb5f5bab2887bf2da33301b6467d55521f909ada",
+              "source_line_lexical": "1\t0.150\t0.2447\t0.0014\t0.2497\t0.0015\t0.2559\t0.0015\t0.2589\t0.0015\t0.2802\t0.0017\t0.3042\t0.0018\t0.3521\t0.0021",
+              "q_exact": "3/20",
+              "energy_exact": "2447/10000",
+              "error_exact": "7/5000",
+              "pressure_bar": "0",
+              "ancestry": "NEUTRON_LOW_Q_SYSTEMATICS_FLAGGED"
+            }
+          ],
+          "classification": "ROW_PRESENT_EXPOSED_ESTIMATOR_NOT_UET_INFERENCE",
+          "physical_I_estimate": null,
+          "coefficients": [
+            1.6208555555555555,
+            0.5104938271604939,
+            -1.991769547325103
+          ],
+          "coefficients_exact": [
+            {
+              "numerator": "145877",
+              "denominator": "90000"
+            },
+            {
+              "numerator": "827",
+              "denominator": "1620"
+            },
+            {
+              "numerator": "-484",
+              "denominator": "243"
+            }
+          ],
+          "reported_errors_complete": true,
+          "joint_covariance_acquired": false,
+          "theoretical_remainder_bounded": false,
+          "contains_low_q_or_hybrid_ancestry": true
+        },
+        {
+          "q_angstrom_inverse": [
+            0.4,
+            0.2,
+            0.1
+          ],
+          "source_rows": [
+            {
+              "row_id": "DispersionAllPressures.txt:L129:P0",
+              "source_file": "DispersionAllPressures.txt",
+              "line_number": 129,
+              "line_encoding": "utf-16-le",
+              "line_sha256": "4e61c3301f5b2af43e93b04c1e7ec7a227ca860282034af0d349f59b04429c93",
+              "source_line_lexical": "126\t0.400\t0.6581\t0.0012\t0.6657\t0.0012\t0.6696\t0.0012\t0.6885\t0.0013\t0.7205\t0.0013\t0.7693\t0.0014\t0.8524\t0.0015",
+              "q_exact": "2/5",
+              "energy_exact": "6581/10000",
+              "error_exact": "3/2500",
+              "pressure_bar": "0",
+              "ancestry": "NEUTRON_AUTHOR_TABLE"
+            },
+            {
+              "row_id": "DispersionAllPressures.txt:L29:P0",
+              "source_file": "DispersionAllPressures.txt",
+              "line_number": 29,
+              "line_encoding": "utf-16-le",
+              "line_sha256": "8bc039275c081edeb240475504409ad21406e61828038b428f2c646f6f32e44d",
+              "source_line_lexical": "26\t0.200\t0.3262\t0.0011\t0.3280\t0.0011\t0.3398\t0.0012\t0.3472\t0.0012\t0.3715\t0.0013\t0.4026\t0.0014\t0.4705\t0.0016",
+              "q_exact": "1/5",
+              "energy_exact": "1631/5000",
+              "error_exact": "11/10000",
+              "pressure_bar": "0",
+              "ancestry": "NEUTRON_AUTHOR_TABLE"
+            },
+            null
+          ],
+          "classification": "MISSING_ROWS_NO_INTERPOLATION_OR_SUBSTITUTE",
+          "physical_I_estimate": null,
+          "coefficients": null
+        }
+      ],
+      "four_node": {
+        "q_angstrom_inverse": [
+          0.6,
+          0.3,
+          0.2,
+          0.15
+        ],
+        "source_rows": [
+          {
+            "row_id": "DispersionAllPressures.txt:L229:P0",
+            "source_file": "DispersionAllPressures.txt",
+            "line_number": 229,
+            "line_encoding": "utf-16-le",
+            "line_sha256": "464eaf483fb6d7c464fb2f7c0a017ed394e197dc3c7535cff4907817eb7c3f8d",
+            "source_line_lexical": "226\t0.600\t0.9279\t0.0016\t0.9357\t0.0016\t0.9415\t0.0016\t0.9570\t0.0016\t0.9909\t0.0017\t1.0325\t0.0018\t1.0880\t0.0019",
+            "q_exact": "3/5",
+            "energy_exact": "9279/10000",
+            "error_exact": "1/625",
+            "pressure_bar": "0",
+            "ancestry": "NEUTRON_AUTHOR_TABLE"
+          },
+          {
+            "row_id": "DispersionAllPressures.txt:L79:P0",
+            "source_file": "DispersionAllPressures.txt",
+            "line_number": 79,
+            "line_encoding": "utf-16-le",
+            "line_sha256": "17d79085d29613660bf0876e4638affe7001bee6b6b960718c377d9f81f4f9a9",
+            "source_line_lexical": "76\t0.300\t0.4952\t0.0010\t0.4992\t0.0010\t0.5079\t0.0011\t0.5179\t0.0011\t0.5475\t0.0011\t0.5977\t0.0013\t0.6776\t0.0014",
+            "q_exact": "3/10",
+            "energy_exact": "619/1250",
+            "error_exact": "1/1000",
+            "pressure_bar": "0",
+            "ancestry": "NEUTRON_AUTHOR_TABLE"
+          },
+          {
+            "row_id": "DispersionAllPressures.txt:L29:P0",
+            "source_file": "DispersionAllPressures.txt",
+            "line_number": 29,
+            "line_encoding": "utf-16-le",
+            "line_sha256": "8bc039275c081edeb240475504409ad21406e61828038b428f2c646f6f32e44d",
+            "source_line_lexical": "26\t0.200\t0.3262\t0.0011\t0.3280\t0.0011\t0.3398\t0.0012\t0.3472\t0.0012\t0.3715\t0.0013\t0.4026\t0.0014\t0.4705\t0.0016",
+            "q_exact": "1/5",
+            "energy_exact": "1631/5000",
+            "error_exact": "11/10000",
+            "pressure_bar": "0",
+            "ancestry": "NEUTRON_AUTHOR_TABLE"
+          },
+          {
+            "row_id": "DispersionAllPressures.txt:L4:P0",
+            "source_file": "DispersionAllPressures.txt",
+            "line_number": 4,
+            "line_encoding": "utf-16-le",
+            "line_sha256": "47835a5ab19814e1b127b1c7bb5f5bab2887bf2da33301b6467d55521f909ada",
+            "source_line_lexical": "1\t0.150\t0.2447\t0.0014\t0.2497\t0.0015\t0.2559\t0.0015\t0.2589\t0.0015\t0.2802\t0.0017\t0.3042\t0.0018\t0.3521\t0.0021",
+            "q_exact": "3/20",
+            "energy_exact": "2447/10000",
+            "error_exact": "7/5000",
+            "pressure_bar": "0",
+            "ancestry": "NEUTRON_LOW_Q_SYSTEMATICS_FLAGGED"
+          }
+        ],
+        "classification": "ROW_PRESENT_EXPOSED_ESTIMATOR_NOT_UET_INFERENCE",
+        "physical_I_estimate": null,
+        "coefficients": [
+          1.6495638888888888,
+          -2.280594135802469,
+          11.961805555555555,
+          -14.396604938271604
+        ],
+        "coefficients_exact": [
+          {
+            "numerator": "593843",
+            "denominator": "360000"
+          },
+          {
+            "numerator": "-59113",
+            "denominator": "25920"
+          },
+          {
+            "numerator": "3445",
+            "denominator": "288"
+          },
+          {
+            "numerator": "-9329",
+            "denominator": "648"
+          }
+        ],
+        "reported_errors_complete": true,
+        "joint_covariance_acquired": false,
+        "theoretical_remainder_bounded": false,
+        "contains_low_q_or_hybrid_ancestry": true
+      }
+    },
+    {
+      "table": "P0_hybrid",
+      "three_node": [
+        {
+          "q_angstrom_inverse": [
+            0.8,
+            0.4,
+            0.2
+          ],
+          "source_rows": [
+            {
+              "row_id": "DispersionP0allRange.txt:L403:P0",
+              "source_file": "DispersionP0allRange.txt",
+              "line_number": 403,
+              "line_encoding": "latin-1",
+              "line_sha256": "937f38ba1b1a0d3a1b3f947370742bc0f06b552ddcd441d8c9427293afeed163",
+              "source_line_lexical": "0.800\t1.1002\t0.0019",
+              "q_exact": "4/5",
+              "energy_exact": "5501/5000",
+              "error_exact": "19/10000",
+              "pressure_bar": "0",
+              "ancestry": "NEUTRON"
+            },
+            {
+              "row_id": "DispersionP0allRange.txt:L203:P0",
+              "source_file": "DispersionP0allRange.txt",
+              "line_number": 203,
+              "line_encoding": "latin-1",
+              "line_sha256": "0f593d059ae4c6b20012376d0b742479d341d1e6bbac61895997953933789904",
+              "source_line_lexical": "0.400\t0.6581\t0.0012",
+              "q_exact": "2/5",
+              "energy_exact": "6581/10000",
+              "error_exact": "3/2500",
+              "pressure_bar": "0",
+              "ancestry": "NEUTRON"
+            },
+            {
+              "row_id": "DispersionP0allRange.txt:L103:P0",
+              "source_file": "DispersionP0allRange.txt",
+              "line_number": 103,
+              "line_encoding": "latin-1",
+              "line_sha256": "31fbc352548c58f8156930a3b9fe6975f3d812d59cc4ce280691e0efb92144e8",
+              "source_line_lexical": "0.200\t0.3244\t--",
+              "q_exact": "1/5",
+              "energy_exact": "811/2500",
+              "error_exact": null,
+              "pressure_bar": "0",
+              "ancestry": "COMBINED_ULTRASOUND_NEUTRON"
+            }
+          ],
+          "classification": "ROW_PRESENT_EXPOSED_ESTIMATOR_NOT_UET_INFERENCE",
+          "physical_I_estimate": null,
+          "coefficients": [
+            1.6061833333333333,
+            0.44583333333333336,
+            -1.2604166666666667
+          ],
+          "coefficients_exact": [
+            {
+              "numerator": "96371",
+              "denominator": "60000"
+            },
+            {
+              "numerator": "107",
+              "denominator": "240"
+            },
+            {
+              "numerator": "-121",
+              "denominator": "96"
+            }
+          ],
+          "reported_errors_complete": false,
+          "joint_covariance_acquired": false,
+          "theoretical_remainder_bounded": false,
+          "contains_low_q_or_hybrid_ancestry": true
+        },
+        {
+          "q_angstrom_inverse": [
+            0.6,
+            0.3,
+            0.15
+          ],
+          "source_rows": [
+            {
+              "row_id": "DispersionP0allRange.txt:L303:P0",
+              "source_file": "DispersionP0allRange.txt",
+              "line_number": 303,
+              "line_encoding": "latin-1",
+              "line_sha256": "339e268bd6d5a20464084f12b8434905146b7a2250ef35021690d9dd0014b38a",
+              "source_line_lexical": "0.600\t0.9279\t0.0016",
+              "q_exact": "3/5",
+              "energy_exact": "9279/10000",
+              "error_exact": "1/625",
+              "pressure_bar": "0",
+              "ancestry": "NEUTRON"
+            },
+            {
+              "row_id": "DispersionP0allRange.txt:L153:P0",
+              "source_file": "DispersionP0allRange.txt",
+              "line_number": 153,
+              "line_encoding": "latin-1",
+              "line_sha256": "c5990f491da6b7cf30e363070f9acf2ecddf8e9a47650ef6dfdd19ad35f39f3f",
+              "source_line_lexical": "0.300\t0.4938\t--",
+              "q_exact": "3/10",
+              "energy_exact": "2469/5000",
+              "error_exact": null,
+              "pressure_bar": "0",
+              "ancestry": "COMBINED_ULTRASOUND_NEUTRON"
+            },
+            {
+              "row_id": "DispersionP0allRange.txt:L78:P0",
+              "source_file": "DispersionP0allRange.txt",
+              "line_number": 78,
+              "line_encoding": "latin-1",
+              "line_sha256": "80c6cf18ce6a71d30e331324a6b4678f32c24bbe85e5b2214e16e6dab93fe76b",
+              "source_line_lexical": "0.150\t0.2407\t0.0014",
+              "q_exact": "3/20",
+              "energy_exact": "2407/10000",
+              "error_exact": "7/5000",
+              "pressure_bar": "0",
+              "ancestry": "COMBINED_ULTRASOUND_NEUTRON"
+            }
+          ],
+          "classification": "ROW_PRESENT_EXPOSED_ESTIMATOR_NOT_UET_INFERENCE",
+          "physical_I_estimate": null,
+          "coefficients": [
+            1.5850037037037037,
+            0.9393004115226338,
+            -2.9062642889803385
+          ],
+          "coefficients_exact": [
+            {
+              "numerator": "427951",
+              "denominator": "270000"
+            },
+            {
+              "numerator": "913",
+              "denominator": "972"
+            },
+            {
+              "numerator": "-6356",
+              "denominator": "2187"
+            }
+          ],
+          "reported_errors_complete": false,
+          "joint_covariance_acquired": false,
+          "theoretical_remainder_bounded": false,
+          "contains_low_q_or_hybrid_ancestry": true
+        },
+        {
+          "q_angstrom_inverse": [
+            0.4,
+            0.2,
+            0.1
+          ],
+          "source_rows": [
+            {
+              "row_id": "DispersionP0allRange.txt:L203:P0",
+              "source_file": "DispersionP0allRange.txt",
+              "line_number": 203,
+              "line_encoding": "latin-1",
+              "line_sha256": "0f593d059ae4c6b20012376d0b742479d341d1e6bbac61895997953933789904",
+              "source_line_lexical": "0.400\t0.6581\t0.0012",
+              "q_exact": "2/5",
+              "energy_exact": "6581/10000",
+              "error_exact": "3/2500",
+              "pressure_bar": "0",
+              "ancestry": "NEUTRON"
+            },
+            {
+              "row_id": "DispersionP0allRange.txt:L103:P0",
+              "source_file": "DispersionP0allRange.txt",
+              "line_number": 103,
+              "line_encoding": "latin-1",
+              "line_sha256": "31fbc352548c58f8156930a3b9fe6975f3d812d59cc4ce280691e0efb92144e8",
+              "source_line_lexical": "0.200\t0.3244\t--",
+              "q_exact": "1/5",
+              "energy_exact": "811/2500",
+              "error_exact": null,
+              "pressure_bar": "0",
+              "ancestry": "COMBINED_ULTRASOUND_NEUTRON"
+            },
+            {
+              "row_id": "DispersionP0allRange.txt:L53:P0",
+              "source_file": "DispersionP0allRange.txt",
+              "line_number": 53,
+              "line_encoding": "latin-1",
+              "line_sha256": "af13824864a78c09a4db19979819a8cecde6405a73ba184aee43464fc14ff1f4",
+              "source_line_lexical": "0.100\t0.1587\t--",
+              "q_exact": "1/10",
+              "energy_exact": "1587/10000",
+              "error_exact": null,
+              "pressure_bar": "0",
+              "ancestry": "ULTRASOUND"
+            }
+          ],
+          "classification": "ROW_PRESENT_EXPOSED_ESTIMATOR_NOT_UET_INFERENCE",
+          "physical_I_estimate": null,
+          "coefficients": [
+            1.572738888888889,
+            1.4909722222222221,
+            -6.486111111111111
+          ],
+          "coefficients_exact": [
+            {
+              "numerator": "283093",
+              "denominator": "180000"
+            },
+            {
+              "numerator": "2147",
+              "denominator": "1440"
+            },
+            {
+              "numerator": "-467",
+              "denominator": "72"
+            }
+          ],
+          "reported_errors_complete": false,
+          "joint_covariance_acquired": false,
+          "theoretical_remainder_bounded": false,
+          "contains_low_q_or_hybrid_ancestry": true
+        }
+      ],
+      "four_node": {
+        "q_angstrom_inverse": [
+          0.6,
+          0.3,
+          0.2,
+          0.15
+        ],
+        "source_rows": [
+          {
+            "row_id": "DispersionP0allRange.txt:L303:P0",
+            "source_file": "DispersionP0allRange.txt",
+            "line_number": 303,
+            "line_encoding": "latin-1",
+            "line_sha256": "339e268bd6d5a20464084f12b8434905146b7a2250ef35021690d9dd0014b38a",
+            "source_line_lexical": "0.600\t0.9279\t0.0016",
+            "q_exact": "3/5",
+            "energy_exact": "9279/10000",
+            "error_exact": "1/625",
+            "pressure_bar": "0",
+            "ancestry": "NEUTRON"
+          },
+          {
+            "row_id": "DispersionP0allRange.txt:L153:P0",
+            "source_file": "DispersionP0allRange.txt",
+            "line_number": 153,
+            "line_encoding": "latin-1",
+            "line_sha256": "c5990f491da6b7cf30e363070f9acf2ecddf8e9a47650ef6dfdd19ad35f39f3f",
+            "source_line_lexical": "0.300\t0.4938\t--",
+            "q_exact": "3/10",
+            "energy_exact": "2469/5000",
+            "error_exact": null,
+            "pressure_bar": "0",
+            "ancestry": "COMBINED_ULTRASOUND_NEUTRON"
+          },
+          {
+            "row_id": "DispersionP0allRange.txt:L103:P0",
+            "source_file": "DispersionP0allRange.txt",
+            "line_number": 103,
+            "line_encoding": "latin-1",
+            "line_sha256": "31fbc352548c58f8156930a3b9fe6975f3d812d59cc4ce280691e0efb92144e8",
+            "source_line_lexical": "0.200\t0.3244\t--",
+            "q_exact": "1/5",
+            "energy_exact": "811/2500",
+            "error_exact": null,
+            "pressure_bar": "0",
+            "ancestry": "COMBINED_ULTRASOUND_NEUTRON"
+          },
+          {
+            "row_id": "DispersionP0allRange.txt:L78:P0",
+            "source_file": "DispersionP0allRange.txt",
+            "line_number": 78,
+            "line_encoding": "latin-1",
+            "line_sha256": "80c6cf18ce6a71d30e331324a6b4678f32c24bbe85e5b2214e16e6dab93fe76b",
+            "source_line_lexical": "0.150\t0.2407\t0.0014",
+            "q_exact": "3/20",
+            "energy_exact": "2407/10000",
+            "error_exact": "7/5000",
+            "pressure_bar": "0",
+            "ancestry": "COMBINED_ULTRASOUND_NEUTRON"
+          }
+        ],
+        "classification": "ROW_PRESENT_EXPOSED_ESTIMATOR_NOT_UET_INFERENCE",
+        "physical_I_estimate": null,
+        "coefficients": [
+          1.5685027777777778,
+          2.543557098765432,
+          -6.875385802469136,
+          4.223765432098766
+        ],
+        "coefficients_exact": [
+          {
+            "numerator": "564661",
+            "denominator": "360000"
+          },
+          {
+            "numerator": "65929",
+            "denominator": "25920"
+          },
+          {
+            "numerator": "-17821",
+            "denominator": "2592"
+          },
+          {
+            "numerator": "2737",
+            "denominator": "648"
+          }
+        ],
+        "reported_errors_complete": false,
+        "joint_covariance_acquired": false,
+        "theoretical_remainder_bounded": false,
+        "contains_low_q_or_hybrid_ancestry": true
+      }
+    }
+  ],
+  "evidence_artifacts": [
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/t13_low_q_source_protocol.json",
+      "sha256": "5d3e00317d060e13873727a8a50816c407d637a5ae80a0e722179fce48c00bf5"
+    },
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/Research_T13_Low_Q_Source_Boundary.py",
+      "sha256": "913c17e667277d02870ffdc4e94236f9ebbb50b67f4bf95b540350b5db7ae2f7"
+    },
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/test_t13_low_q_source_boundary.py",
+      "sha256": "c1f571a73bb731008c9fb8abbd4f76096bf369039b9a1d2351ef17193a43802e"
+    },
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/godfrin_2021_v1/DispersionAllPressures.txt",
+      "sha256": "15a56ccdd2f681de0e1d3d1517dc4641732dbef4e2d6153591154cc4b039b50a"
+    },
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/godfrin_2021_v1/DispersionP0allRange.txt",
+      "sha256": "59ca6ea78dd08880b69bf32cb2906cdefc811d5e0423c6439b01263696baa645"
+    },
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/godfrin_2021_v1/Supplemental-v2.tex",
+      "sha256": "e734a6d87fe41c6926a2cc12381be70cdad1f1ddc7fbfeecbe5cd2af2379a259"
+    }
+  ],
+  "protected_evidence_hashes": [
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/t13_multi_q_estimator.json",
+      "sha256": "56c9aa7ef469c51a30337bea9ea958c8d2459ed7e2316fbbe49644ad192c57b1"
+    },
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/t13_multi_q_estimator_registry.json",
+      "sha256": "1680d4c3cb4309916082fd351ed533e49ee8d0ed81ce440a0d934336f49361a9"
+    },
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/t13_q5_dispersion_information.json",
+      "sha256": "c4b23308c1ffdc45215cdba8d1fb0e3ba8b44c861d8c2c402bec22b3055a6485"
+    },
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/t13_noether_density_readout.json",
+      "sha256": "2b6688dab3cb55c623fa5c1a43320ef28d65fe82e95b27d6ea1731f9c632ac12"
+    },
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/t13_gaussian_source_work.json",
+      "sha256": "959441d2940f0aa209d72b8f8671d440807dd14ae9a80aff4357606f3bce4c62"
+    },
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/t13_gaussian_source_work_first_failure.json",
+      "sha256": "0c8c828f512f0a70653d30c15c4b0f1e7d960fb878712c774ae298dd038f35f4"
+    },
+    {
+      "path": "docs/core/02_equations/o2/uet_o2_action_thermal_observable_bridge.py",
+      "sha256": "1cf745562548bc9a61d9ebb86069b8aff73e2a776756aa9efe7ab1a45b669ebe"
+    },
+    {
+      "path": "docs/core/02_equations/o2/uet_o2_action_thermal_stiffness_beta.py",
+      "sha256": "c1c3278a79df611ddae2f67ff811022722ab0c56f68bf91cc5480f34db9a95e6"
+    },
+    {
+      "path": "docs/core/02_equations/covariant/uet_covariant_matter.py",
+      "sha256": "8a57d95e898a8ac962bbd749670ad0695b597281937da36496d2ec7e074f9c53"
+    },
+    {
+      "path": "docs/core/02_equations/covariant/uet_covariant_response.py",
+      "sha256": "7fb4b7228afb8ede0ac4f1664d634346ef46cc7678c94ed7b55d73645590c0c2"
+    }
+  ],
+  "equation_registry_ids": [
+    "t13.measurement.omitted_q4_alias",
+    "t13.measurement.four_node_q4_separation"
+  ],
+  "controlling_blocker": "native_material_map_joint_covariance_and_non_tree_remainder_not_admitted",
+  "open_blockers": [
+    "same_state_atomic_current_and_action_unit_map",
+    "joint_q_energy_covariance_and_non_tree_remainder",
+    "source_calibration_ancestry_and_version_parity",
+    "independent_thermal_alpha_heat_entropy_KMS_parent"
+  ],
+  "dependency_unlocked": [],
+  "numeric_source_archive_acquired": false,
+  "q4_alias_verified": false,
+  "four_node_separation_verified": false,
+  "source_tables_are_independent_of_each_other": false,
+  "reported_errors_assumed_one_sigma": false,
+  "source_is_blind_holdout": false,
+  "physical_q5_measured": false,
+  "physical_q4_detected_by_this_audit": false,
+  "physical_I_inferred": false,
+  "physical_joint_covariance_acquired": false,
+  "physical_material_map_admitted": false,
+  "physical_measurement_design_completed": false,
+  "independent_alpha_Phi_K_admitted": false,
+  "physical_Kubo_emitted": false,
+  "full_SK_KMS_matching_closed": false,
+  "nonlinear_parent_action_completed": false,
+  "controlled_full_action_truncation_error_established": false,
+  "external_numeric_rows_admitted_to_UET_comparison": 0,
+  "full_core_unlock": false,
+  "core_composition_gate_overwritten": false,
+  "old_source_work_audit_promoted": false,
+  "external_UET_parameter_fitting": false,
+  "missing_row_or_uncertainty_imputation": false,
+  "source_window_tuning": false,
+  "clipping": false,
+  "cone_padding": false,
+  "claim_promotion": false,
+  "xie_2026_accessed": false,
+  "prior_Xie_context_exposure_review": "REVIEW_REQUIRED",
+  "claim_boundary": "Source packaging and exact estimator-confounding/separation result, not physical q4 detection, q5/temperature calibration, necessary lab precision or global no-go. Archived source is exposed/mixed and lacks joint covariance; four points separate only four declared basis terms, not all higher remainders. Original tree results/causal FAIL and Core-owner scope unchanged.",
+  "report": {
+    "MAJOR_RESULT_CLOSURE": "PARTIAL",
+    "WHAT_IS_ACTUALLY_CLOSED": "Versioned author numeric-source archive/row provenance with missing cells and mixed ancestry; exact q4 alias and four-node separation under the declared coefficient class",
+    "WHAT_REMAINS_OPEN": [
+      "same_state_atomic_current_and_action_unit_map",
+      "joint_q_energy_covariance_and_non_tree_remainder",
+      "source_calibration_ancestry_and_version_parity",
+      "independent_thermal_alpha_heat_entropy_KMS_parent"
+    ],
+    "DEPENDENCY_UNLOCKED": [],
+    "STATUS": "FAIL_SCOPED_LOW_Q_SOURCE_BOUNDARY",
+    "WHAT_CHANGED": "Acquired permitted numeric source and derived omitted-basis diagnostic",
+    "EQUATION_OR_MAPPING": "delta_beta_k=b4*sum W_ki*q_i^3; quintic alias scales b4/q_max; four basis powers(0,2,3,4) have detV=Vandermonde(q)*e3(q)",
+    "VERIFICATION": {
+      "source_hash_headers_units_and_row_identity": true,
+      "missing_and_ancestry_retained": true,
+      "three_node_omitted_q4_alias_exact": true,
+      "alias_scaling_exact": true,
+      "four_node_rank_and_recovery_exact": true,
+      "independent_scaled_float_control": false,
+      "missing_physical_window_not_filled": true,
+      "no_physical_inverse_from_source": true
+    },
+    "CONTROLLING_BLOCKER": "native_material_map_joint_covariance_and_non_tree_remainder_not_admitted",
+    "NEXT_ACTION": "Derive source-to-scale independent input and bound nuisance/remainder before physical inference; no target tuning",
+    "CLAIM_BOUNDARY": "Source packaging and exact estimator-confounding/separation result, not physical q4 detection, q5/temperature calibration, necessary lab precision or global no-go. Archived source is exposed/mixed and lacks joint covariance; four points separate only four declared basis terms, not all higher remainders. Original tree results/causal FAIL and Core-owner scope unchanged."
+  }
+}

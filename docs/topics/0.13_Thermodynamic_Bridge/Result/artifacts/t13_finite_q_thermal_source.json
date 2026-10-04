@@ -1,0 +1,1178 @@
+{
+  "major_result_id": "T13_FINITE_Q_THERMAL_SOURCE_AND_STATIC_POPULATION_LIMIT",
+  "topic": "0.13_Thermodynamic_Bridge",
+  "branch_id": "t13.candidate.acoustic_thermal_insertion_tree_virtual_response_v1",
+  "created_at": "2026-10-03T07:19:30.201579+00:00",
+  "closure_level": "CLOSED_FOR_LANE",
+  "verification_status": "PASS_SCOPED_FINITE_Q_THERMAL_SOURCE",
+  "what_is_closed": "Finite-q thermal source/cross-covariance and analytic static Bose-population limit, subject to the recorded checks",
+  "equation_or_mapping": "(-iz-L_Ar,Ap) delta_Cov=delta_A Cov_p+Cov_r delta_A^T; static population uses [n(Ep)-n(Er)]/(Er-Ep)",
+  "units": {
+    "h": "E^3",
+    "Phi": "E",
+    "chi": "E^-2",
+    "integrated_bubble_contact": "E^2",
+    "Bose_divided_difference": "E^-1"
+  },
+  "derivation_class": "DERIVED_FINITE_MOMENTUM_GAUSSIAN_COVARIANCE_AND_THERMAL_SPECTRAL_RESOLUTION",
+  "observable": "conditional action-source susceptibility, not calibrated heat transport",
+  "data_role": "DERIVED_NOT_CALIBRATION",
+  "action_controls": {
+    "Z": 1.0,
+    "m0_sq": 1.0,
+    "u": 1.0,
+    "gamma": 0.04000000000000001,
+    "epsilon": 0.05,
+    "Phi_reference": 0.0,
+    "response_mass_sq": 1.0,
+    "response_quartic": 1.0,
+    "response_kinetic": 1.0
+  },
+  "checks": {
+    "cross_covariance_independently_matches_finite_momentum_bubble": true,
+    "finite_q_source_satisfies_charge_continuity": true,
+    "Bose_divided_difference_supplies_static_population": true,
+    "batched_exact_modes_and_scalar_channel_methods_agree": true,
+    "static_limit_returns_pressure_and_converges": true,
+    "static_and_dynamic_quadrature_and_tail": true
+  },
+  "examples": [
+    {
+      "mu": 1.05,
+      "cross_covariance_points": [
+        {
+          "p": 0.005,
+          "r": 0.011,
+          "q": 0.008,
+          "momentum_cosine": 0.39999999999999986,
+          "frequency_checks": [
+            {
+              "z": {
+                "real": 0.0,
+                "imag": 0.02
+              },
+              "matrix_error": 5.996829965942542e-16,
+              "source_projection_error": 0.0,
+              "continuity_error": 3.364255261707996e-15
+            },
+            {
+              "z": {
+                "real": 0.0,
+                "imag": 0.05
+              },
+              "matrix_error": 5.478084665830153e-16,
+              "source_projection_error": 1.293719372813115e-16,
+              "continuity_error": 1.9301564059104303e-15
+            },
+            {
+              "z": {
+                "real": 0.03,
+                "imag": 0.02
+              },
+              "matrix_error": 4.111742648169182e-16,
+              "source_projection_error": 5.563368950235374e-16,
+              "continuity_error": 2.9758993036701618e-15
+            }
+          ],
+          "diagonal_population_error": 8.694704328466154e-16
+        },
+        {
+          "p": 0.02,
+          "r": 0.031,
+          "q": 0.02,
+          "momentum_cosine": 0.2012499999999998,
+          "frequency_checks": [
+            {
+              "z": {
+                "real": 0.0,
+                "imag": 0.02
+              },
+              "matrix_error": 2.673665237762386e-16,
+              "source_projection_error": 3.488176266172058e-33,
+              "continuity_error": 4.849535241901465e-16
+            },
+            {
+              "z": {
+                "real": 0.0,
+                "imag": 0.05
+              },
+              "matrix_error": 1.3789248893490266e-16,
+              "source_projection_error": 3.7075878894370973e-16,
+              "continuity_error": 8.082542168242735e-16
+            },
+            {
+              "z": {
+                "real": 0.03,
+                "imag": 0.02
+              },
+              "matrix_error": 1.882812709881886e-16,
+              "source_projection_error": 9.202237051832381e-17,
+              "continuity_error": 2.8889935856510104e-15
+            }
+          ],
+          "diagonal_population_error": 0.0
+        },
+        {
+          "p": 0.04,
+          "r": 0.037,
+          "q": 0.02,
+          "momentum_cosine": -0.39437500000000014,
+          "frequency_checks": [
+            {
+              "z": {
+                "real": 0.0,
+                "imag": 0.02
+              },
+              "matrix_error": 2.049696471329839e-16,
+              "source_projection_error": 4.130993478088494e-16,
+              "continuity_error": 4.849535241901465e-16
+            },
+            {
+              "z": {
+                "real": 0.0,
+                "imag": 0.05
+              },
+              "matrix_error": 3.083302533770021e-16,
+              "source_projection_error": 4.062657237310935e-16,
+              "continuity_error": 8.082542168242735e-16
+            },
+            {
+              "z": {
+                "real": 0.03,
+                "imag": 0.02
+              },
+              "matrix_error": 3.182982000775832e-16,
+              "source_projection_error": 5.041196984986809e-16,
+              "continuity_error": 2.8889935856510104e-15
+            }
+          ],
+          "diagonal_population_error": 5.394996753437262e-16
+        }
+      ],
+      "thermal_rows": [
+        {
+          "T": 0.00037216591771240014,
+          "divisor": 256,
+          "zero_q_static": {
+            "pair": 1.0345387253569032e-11,
+            "intrabranch_population": 3.7814463439076395e-11,
+            "mixed_number": 8.870650631407327e-13,
+            "contact": -2.167560051613649e-14,
+            "chi": 4.9068591356302297e-11
+          },
+          "zero_q_target_error": 1.1866197642118159e-12,
+          "static_soft_rows": [
+            {
+              "q": 0.00011036057256334657,
+              "q_over_thermal_momentum": 0.0625,
+              "pair": 1.0355905626891755e-11,
+              "intrabranch_population": 3.7795463662572575e-11,
+              "mixed_number": 8.870698181961473e-13,
+              "contact": -1.1622929747520534e-14,
+              "chi": 4.9050062037408e-11,
+              "target_error": 0.0003776207639211104,
+              "quadrature_error": 4.134155674396986e-08,
+              "tail_error": 3.543565379427482e-10
+            },
+            {
+              "q": 5.5180286281673284e-05,
+              "q_over_thermal_momentum": 0.03125,
+              "pair": 1.0348012212852078e-11,
+              "intrabranch_population": 3.780966181210017e-11,
+              "mixed_number": 8.870662519023929e-13,
+              "contact": -1.916243252909564e-14,
+              "chi": 4.9063902709383735e-11,
+              "target_error": 9.555291576920435e-05,
+              "quadrature_error": 4.582570097438454e-09,
+              "tail_error": 3.5420626148006274e-10
+            },
+            {
+              "q": 2.7590143140836642e-05,
+              "q_over_thermal_momentum": 0.015625,
+              "pair": 1.0346042830274444e-11,
+              "intrabranch_population": 3.781325652999791e-11,
+              "mixed_number": 8.870653603310118e-13,
+              "contact": -2.1047308517297872e-14,
+              "chi": 4.9067412029120664e-11,
+              "target_error": 2.403425913112183e-05,
+              "quadrature_error": 6.143849761533287e-10,
+              "tail_error": 3.541680215749353e-10
+            }
+          ],
+          "dynamic_rows": [
+            {
+              "q": 0.01,
+              "z": {
+                "real": 0.0,
+                "imag": 0.02
+              },
+              "delta_chi": {
+                "real": -9.02953133481251e-13,
+                "imag": 1.7141064798928074e-41
+              },
+              "quadrature_error": 1.235416872319472e-10,
+              "tail_error": 4.891967266810434e-11
+            },
+            {
+              "q": 0.01,
+              "z": {
+                "real": 0.0,
+                "imag": 0.05
+              },
+              "delta_chi": {
+                "real": -6.694015802973927e-13,
+                "imag": 1.4247540749609729e-42
+              },
+              "quadrature_error": 2.00926711381057e-11,
+              "tail_error": 4.7839994870930075e-11
+            },
+            {
+              "q": 0.01,
+              "z": {
+                "real": 0.03,
+                "imag": 0.02
+              },
+              "delta_chi": {
+                "real": -5.970683907904669e-13,
+                "imag": -7.89998689269713e-14
+              },
+              "quadrature_error": 1.5639355829367152e-10,
+              "tail_error": 4.7293004953346466e-11
+            },
+            {
+              "q": 0.005,
+              "z": {
+                "real": 0.0,
+                "imag": 0.02
+              },
+              "delta_chi": {
+                "real": -6.96614147534456e-13,
+                "imag": -1.042371211609612e-41
+              },
+              "quadrature_error": 4.353251840583974e-10,
+              "tail_error": 4.736341550930492e-11
+            },
+            {
+              "q": 0.005,
+              "z": {
+                "real": 0.0,
+                "imag": 0.05
+              },
+              "delta_chi": {
+                "real": -6.368204104058102e-13,
+                "imag": 2.5536116429561955e-43
+              },
+              "quadrature_error": 2.863005555514088e-11,
+              "tail_error": 4.7508517225063194e-11
+            },
+            {
+              "q": 0.005,
+              "z": {
+                "real": 0.03,
+                "imag": 0.02
+              },
+              "delta_chi": {
+                "real": -6.217725017453579e-13,
+                "imag": -2.080040078237146e-14
+              },
+              "quadrature_error": 1.0315922589100818e-10,
+              "tail_error": 4.756986851882692e-11
+            },
+            {
+              "q": 0.0025,
+              "z": {
+                "real": 0.0,
+                "imag": 0.02
+              },
+              "delta_chi": {
+                "real": -6.452639772878355e-13,
+                "imag": 4.1016039181882083e-42
+              },
+              "quadrature_error": 3.1757351544362995e-10,
+              "tail_error": 4.681423800708862e-11
+            },
+            {
+              "q": 0.0025,
+              "z": {
+                "real": 0.0,
+                "imag": 0.05
+              },
+              "delta_chi": {
+                "real": -6.286801865427443e-13,
+                "imag": 2.605703738005535e-42
+              },
+              "quadrature_error": 4.638374263638802e-11,
+              "tail_error": 4.7420981236992584e-11
+            },
+            {
+              "q": 0.0025,
+              "z": {
+                "real": 0.03,
+                "imag": 0.02
+              },
+              "delta_chi": {
+                "real": -6.27929706330271e-13,
+                "imag": -6.227666662296513e-15
+              },
+              "quadrature_error": 1.185630581884062e-10,
+              "tail_error": 4.765699985949861e-11
+            }
+          ]
+        },
+        {
+          "T": 0.00018608295885620007,
+          "divisor": 512,
+          "zero_q_static": {
+            "pair": 6.47200921852098e-13,
+            "intrabranch_population": 2.36672646639171e-12,
+            "mixed_number": 5.5464160941822436e-14,
+            "contact": -1.2892123046748855e-15,
+            "chi": 3.0706807614903053e-12
+          },
+          "zero_q_target_error": 4.960383928309009e-12,
+          "static_soft_rows": [
+            {
+              "q": 5.5180286281673284e-05,
+              "q_over_thermal_momentum": 0.0625,
+              "pair": 6.478586773251937e-13,
+              "intrabranch_population": 2.3655391490673344e-12,
+              "mixed_number": 5.546431237986822e-14,
+              "contact": -6.609604472682867e-16,
+              "chi": 3.0695230992196648e-12,
+              "target_error": 0.00037700509293735196,
+              "quadrature_error": 4.1289024655938795e-08,
+              "tail_error": 4.3375530131945095e-10
+            },
+            {
+              "q": 2.7590143140836642e-05,
+              "q_over_thermal_momentum": 0.03125,
+              "pair": 6.473650710747446e-13,
+              "intrabranch_population": 2.366426406911583e-12,
+              "mixed_number": 5.5464198801298875e-14,
+              "contact": -1.1321493395629452e-15,
+              "chi": 3.0703878261271897e-12,
+              "target_error": 9.53975359534963e-05,
+              "quadrature_error": 4.5762231608503695e-09,
+              "tail_error": 4.3357473453649377e-10
+            },
+            {
+              "q": 1.3795071570418321e-05,
+              "q_over_thermal_momentum": 0.015625,
+              "pair": 6.47241917711947e-13,
+              "intrabranch_population": 2.366651045127615e-12,
+              "mixed_number": 5.546417040668933e-14,
+              "contact": -1.2499465626406298e-15,
+              "chi": 3.070607079808892e-12,
+              "target_error": 2.3995231796422835e-05,
+              "quadrature_error": 6.131537855246965e-10,
+              "tail_error": 4.33529569620941e-10
+            }
+          ],
+          "dynamic_rows": [
+            {
+              "q": 0.01,
+              "z": {
+                "real": 0.0,
+                "imag": 0.02
+              },
+              "delta_chi": {
+                "real": -5.6562304637924023e-14,
+                "imag": -1.2869026783995524e-42
+              },
+              "quadrature_error": 6.688527058233168e-10,
+              "tail_error": 6.398104184554527e-11
+            },
+            {
+              "q": 0.01,
+              "z": {
+                "real": 0.0,
+                "imag": 0.05
+              },
+              "delta_chi": {
+                "real": -4.193238714432938e-14,
+                "imag": -9.772960069213098e-44
+              },
+              "quadrature_error": 1.3445774075811448e-10,
+              "tail_error": 6.384649962627083e-11
+            },
+            {
+              "q": 0.01,
+              "z": {
+                "real": 0.03,
+                "imag": 0.02
+              },
+              "delta_chi": {
+                "real": -3.740104124999893e-14,
+                "imag": -4.949358146433088e-15
+              },
+              "quadrature_error": 2.436446241450406e-10,
+              "tail_error": 6.38187740789139e-11
+            },
+            {
+              "q": 0.005,
+              "z": {
+                "real": 0.0,
+                "imag": 0.02
+              },
+              "delta_chi": {
+                "real": -4.365703363351202e-14,
+                "imag": -2.6831808684612077e-42
+              },
+              "quadrature_error": 1.5652637686250718e-09,
+              "tail_error": 6.343942342740019e-11
+            },
+            {
+              "q": 0.005,
+              "z": {
+                "real": 0.0,
+                "imag": 0.05
+              },
+              "delta_chi": {
+                "real": -3.989468872396298e-14,
+                "imag": 3.7656607954100085e-44
+              },
+              "quadrature_error": 4.4840757908923964e-10,
+              "tail_error": 6.374465046869284e-11
+            },
+            {
+              "q": 0.005,
+              "z": {
+                "real": 0.03,
+                "imag": 0.02
+              },
+              "delta_chi": {
+                "real": -3.894607477849129e-14,
+                "imag": -1.3094049351116657e-15
+              },
+              "quadrature_error": 8.41227051422722e-10,
+              "tail_error": 6.390147636462206e-11
+            },
+            {
+              "q": 0.0025,
+              "z": {
+                "real": 0.0,
+                "imag": 0.02
+              },
+              "delta_chi": {
+                "real": -4.044546499983893e-14,
+                "imag": 1.55233250012529e-42
+              },
+              "quadrature_error": 1.323503525380006e-09,
+              "tail_error": 6.324857789274729e-11
+            },
+            {
+              "q": 0.0025,
+              "z": {
+                "real": 0.0,
+                "imag": 0.05
+              },
+              "delta_chi": {
+                "real": -3.9385581396581276e-14,
+                "imag": -7.715003990507612e-45
+              },
+              "quadrature_error": 2.865134162519952e-12,
+              "tail_error": 6.371522556816921e-11
+            },
+            {
+              "q": 0.0025,
+              "z": {
+                "real": 0.03,
+                "imag": 0.02
+              },
+              "delta_chi": {
+                "real": -3.933115929977884e-14,
+                "imag": -3.9798544017356953e-16
+              },
+              "quadrature_error": 2.5997751861850574e-10,
+              "tail_error": 6.392253950585001e-11
+            }
+          ]
+        }
+      ],
+      "batch_equivalence_momenta": [
+        1e-07,
+        0.001,
+        0.005,
+        0.02,
+        0.031,
+        0.039
+      ],
+      "batch_scalar_channel_errors": {
+        "pair": 7.833360768180077e-16,
+        "intrabranch_population": 1.1134717771763836e-15,
+        "mixed_number": 3.336064147023156e-16
+      }
+    },
+    {
+      "mu": 1.2,
+      "cross_covariance_points": [
+        {
+          "p": 0.005,
+          "r": 0.011,
+          "q": 0.008,
+          "momentum_cosine": 0.39999999999999986,
+          "frequency_checks": [
+            {
+              "z": {
+                "real": 0.0,
+                "imag": 0.02
+              },
+              "matrix_error": 1.8071406656226363e-16,
+              "source_projection_error": 4.98456989705272e-16,
+              "continuity_error": 1.1582192362806288e-15
+            },
+            {
+              "z": {
+                "real": 0.0,
+                "imag": 0.05
+              },
+              "matrix_error": 2.7115967559376906e-16,
+              "source_projection_error": 2.523501977782763e-16,
+              "continuity_error": 7.980133348278349e-16
+            },
+            {
+              "z": {
+                "real": 0.03,
+                "imag": 0.02
+              },
+              "matrix_error": 7.277684378823371e-16,
+              "source_projection_error": 4.630400413304963e-16,
+              "continuity_error": 5.499376473137014e-16
+            }
+          ],
+          "diagonal_population_error": 1.573250208174563e-16
+        },
+        {
+          "p": 0.02,
+          "r": 0.031,
+          "q": 0.02,
+          "momentum_cosine": 0.2012499999999998,
+          "frequency_checks": [
+            {
+              "z": {
+                "real": 0.0,
+                "imag": 0.02
+              },
+              "matrix_error": 1.7019629931702034e-16,
+              "source_projection_error": 2.18695502103036e-16,
+              "continuity_error": 7.627177494512803e-16
+            },
+            {
+              "z": {
+                "real": 0.0,
+                "imag": 0.05
+              },
+              "matrix_error": 3.1524486471378813e-16,
+              "source_projection_error": 1.3985037990032235e-16,
+              "continuity_error": 1.7284393458490942e-16
+            },
+            {
+              "z": {
+                "real": 0.03,
+                "imag": 0.02
+              },
+              "matrix_error": 5.471141049460645e-16,
+              "source_projection_error": 1.3398489214364034e-16,
+              "continuity_error": 8.717998469425374e-16
+            }
+          ],
+          "diagonal_population_error": 4.0523597127162015e-16
+        },
+        {
+          "p": 0.04,
+          "r": 0.037,
+          "q": 0.02,
+          "momentum_cosine": -0.39437500000000014,
+          "frequency_checks": [
+            {
+              "z": {
+                "real": 0.0,
+                "imag": 0.02
+              },
+              "matrix_error": 3.5736666419009045e-16,
+              "source_projection_error": 3.9155809932017924e-16,
+              "continuity_error": 7.627177494512803e-16
+            },
+            {
+              "z": {
+                "real": 0.0,
+                "imag": 0.05
+              },
+              "matrix_error": 2.406874212680804e-17,
+              "source_projection_error": 6.260589364070573e-16,
+              "continuity_error": 1.7284393458490942e-16
+            },
+            {
+              "z": {
+                "real": 0.03,
+                "imag": 0.02
+              },
+              "matrix_error": 2.9857928023665235e-16,
+              "source_projection_error": 2.398768250147446e-16,
+              "continuity_error": 8.717998469425374e-16
+            }
+          ],
+          "diagonal_population_error": 2.1220995039625221e-16
+        }
+      ],
+      "thermal_rows": [
+        {
+          "T": 0.0013271355827413984,
+          "divisor": 256,
+          "zero_q_static": {
+            "pair": 5.82454586234848e-11,
+            "intrabranch_population": 5.914794937503084e-11,
+            "mixed_number": 4.3855749581591573e-11,
+            "contact": -5.883859557655026e-11,
+            "chi": 2.2008775315665746e-10
+          },
+          "zero_q_target_error": 4.975198847557518e-13,
+          "static_soft_rows": [
+            {
+              "q": 0.0002277581387964168,
+              "q_over_thermal_momentum": 0.0625,
+              "pair": 5.826127050056736e-11,
+              "intrabranch_population": 5.911938423336419e-11,
+              "mixed_number": 4.3855769829823776e-11,
+              "contact": -5.882408107170617e-11,
+              "chi": 2.200605056354615e-10,
+              "target_error": 0.00012380298728407736,
+              "quadrature_error": 1.3299861082337638e-08,
+              "tail_error": 1.6515476624915506e-10
+            },
+            {
+              "q": 0.0001138790693982084,
+              "q_over_thermal_momentum": 0.03125,
+              "pair": 5.824940622495377e-11,
+              "intrabranch_population": 5.91407321395029e-11,
+              "mixed_number": 4.385575464364164e-11,
+              "contact": -5.883496694971248e-11,
+              "chi": 2.200808599578108e-10,
+              "target_error": 3.132022957793163e-05,
+              "quadrature_error": 1.474829258761221e-09,
+              "tail_error": 1.651175278902358e-10
+            },
+            {
+              "q": 5.69395346991042e-05,
+              "q_over_thermal_momentum": 0.015625,
+              "pair": 5.82464447343497e-11,
+              "intrabranch_population": 5.914613551127132e-11,
+              "mixed_number": 4.385575084710358e-11,
+              "contact": -5.883768841981201e-11,
+              "chi": 2.2008601951253659e-10,
+              "target_error": 7.87705906170566e-06,
+              "quadrature_error": 1.979057139794951e-10,
+              "tail_error": 1.651076669639153e-10
+            }
+          ],
+          "dynamic_rows": [
+            {
+              "q": 0.01,
+              "z": {
+                "real": 0.0,
+                "imag": 0.02
+              },
+              "delta_chi": {
+                "real": 1.344609334558216e-10,
+                "imag": -5.4777891253585335e-40
+              },
+              "quadrature_error": 4.54695107047371e-11,
+              "tail_error": 5.746865233879978e-11
+            },
+            {
+              "q": 0.01,
+              "z": {
+                "real": 0.0,
+                "imag": 0.05
+              },
+              "delta_chi": {
+                "real": 1.3469944709639103e-10,
+                "imag": 4.675049798724488e-41
+              },
+              "quadrature_error": 1.01267863995915e-12,
+              "tail_error": 5.7477428867311907e-11
+            },
+            {
+              "q": 0.01,
+              "z": {
+                "real": 0.03,
+                "imag": 0.02
+              },
+              "delta_chi": {
+                "real": 1.3597126262149863e-10,
+                "imag": 1.1148313690683276e-13
+              },
+              "quadrature_error": 8.074282432054649e-12,
+              "tail_error": 5.7573828417688095e-11
+            },
+            {
+              "q": 0.005,
+              "z": {
+                "real": 0.0,
+                "imag": 0.02
+              },
+              "delta_chi": {
+                "real": 1.3539596969258766e-10,
+                "imag": 1.264277696825899e-40
+              },
+              "quadrature_error": 2.30868307464896e-11,
+              "tail_error": 5.747938518470489e-11
+            },
+            {
+              "q": 0.005,
+              "z": {
+                "real": 0.0,
+                "imag": 0.05
+              },
+              "delta_chi": {
+                "real": 1.3487066353655305e-10,
+                "imag": -1.7806834538629162e-40
+              },
+              "quadrature_error": 1.173346277014213e-11,
+              "tail_error": 5.748112631257917e-11
+            },
+            {
+              "q": 0.005,
+              "z": {
+                "real": 0.03,
+                "imag": 0.02
+              },
+              "delta_chi": {
+                "real": 1.3588336178920707e-10,
+                "imag": 3.740117824602677e-13
+              },
+              "quadrature_error": 1.2847158802389866e-11,
+              "tail_error": 5.75722947209599e-11
+            },
+            {
+              "q": 0.0025,
+              "z": {
+                "real": 0.0,
+                "imag": 0.02
+              },
+              "delta_chi": {
+                "real": 1.3563662409066248e-10,
+                "imag": -6.3005216408142335e-40
+              },
+              "quadrature_error": 3.4258541684912557e-11,
+              "tail_error": 5.7482410542581594e-11
+            },
+            {
+              "q": 0.0025,
+              "z": {
+                "real": 0.0,
+                "imag": 0.05
+              },
+              "delta_chi": {
+                "real": 1.349136304981471e-10,
+                "imag": -1.8408281069129517e-41
+              },
+              "quadrature_error": 1.180904814941806e-11,
+              "tail_error": 5.748121342379958e-11
+            },
+            {
+              "q": 0.0025,
+              "z": {
+                "real": 0.03,
+                "imag": 0.02
+              },
+              "delta_chi": {
+                "real": 1.3586104768483816e-10,
+                "imag": 4.392179957539587e-13
+              },
+              "quadrature_error": 5.90194651485891e-12,
+              "tail_error": 5.75714884141295e-11
+            }
+          ]
+        },
+        {
+          "T": 0.0006635677913706992,
+          "divisor": 512,
+          "zero_q_static": {
+            "pair": 3.650490925529147e-12,
+            "intrabranch_population": 3.702030216156027e-12,
+            "mixed_number": 2.737567587898219e-12,
+            "contact": -3.67570698988612e-12,
+            "chi": 1.3765795719469511e-11
+          },
+          "zero_q_target_error": 2.1086506458564773e-12,
+          "static_soft_rows": [
+            {
+              "q": 0.0001138790693982084,
+              "q_over_thermal_momentum": 0.0625,
+              "pair": 3.65148067950027e-12,
+              "intrabranch_population": 3.700245321445119e-12,
+              "mixed_number": 2.737568327254019e-12,
+              "contact": -3.67480015778722e-12,
+              "chi": 1.3764094485986628e-11,
+              "target_error": 0.00012358410269743564,
+              "quadrature_error": 1.3289699541052987e-08,
+              "tail_error": 1.960569137798223e-10
+            },
+            {
+              "q": 5.69395346991042e-05,
+              "q_over_thermal_momentum": 0.03125,
+              "pair": 3.6507380284990026e-12,
+              "intrabranch_population": 3.7015792456555824e-12,
+              "mixed_number": 2.7375677727370357e-12,
+              "contact": -3.675480281847068e-12,
+              "chi": 1.3765365328738689e-11,
+              "target_error": 3.126522931324259e-05,
+              "quadrature_error": 1.4722178414035255e-09,
+              "tail_error": 1.9601205399153123e-10
+            },
+            {
+              "q": 2.84697673495521e-05,
+              "q_over_thermal_momentum": 0.015625,
+              "pair": 3.650552651925501e-12,
+              "intrabranch_population": 3.701916876354818e-12,
+              "mixed_number": 2.7375676341079176e-12,
+              "contact": -3.675650312883246e-12,
+              "chi": 1.3765687475271482e-11,
+              "target_error": 7.863274253197039e-06,
+              "quadrature_error": 1.976315408638923e-10,
+              "tail_error": 1.960007771794948e-10
+            }
+          ],
+          "dynamic_rows": [
+            {
+              "q": 0.01,
+              "z": {
+                "real": 0.0,
+                "imag": 0.02
+              },
+              "delta_chi": {
+                "real": 8.402798050431814e-12,
+                "imag": -1.4347838994352547e-43
+              },
+              "quadrature_error": 8.913417855036175e-11,
+              "tail_error": 6.694359537329302e-11
+            },
+            {
+              "q": 0.01,
+              "z": {
+                "real": 0.0,
+                "imag": 0.05
+              },
+              "delta_chi": {
+                "real": 8.42107094399816e-12,
+                "imag": -1.3007410929587549e-41
+              },
+              "quadrature_error": 2.4263339684725717e-11,
+              "tail_error": 6.686298800950319e-11
+            },
+            {
+              "q": 0.01,
+              "z": {
+                "real": 0.03,
+                "imag": 0.02
+              },
+              "delta_chi": {
+                "real": 8.502154508639919e-12,
+                "imag": 3.5221970960771423e-15
+              },
+              "quadrature_error": 3.172925195923016e-11,
+              "tail_error": 6.699984458187516e-11
+            },
+            {
+              "q": 0.005,
+              "z": {
+                "real": 0.0,
+                "imag": 0.02
+              },
+              "delta_chi": {
+                "real": 8.460446807009983e-12,
+                "imag": 4.094037722523747e-41
+              },
+              "quadrature_error": 7.25675394030073e-11,
+              "tail_error": 6.696827886504741e-11
+            },
+            {
+              "q": 0.005,
+              "z": {
+                "real": 0.0,
+                "imag": 0.05
+              },
+              "delta_chi": {
+                "real": 8.431734026842905e-12,
+                "imag": 6.543835120455979e-42
+              },
+              "quadrature_error": 5.856879707599933e-12,
+              "tail_error": 6.686733668198465e-11
+            },
+            {
+              "q": 0.005,
+              "z": {
+                "real": 0.03,
+                "imag": 0.02
+              },
+              "delta_chi": {
+                "real": 8.496866912621303e-12,
+                "imag": 2.000416791377396e-14
+              },
+              "quadrature_error": 3.2415656953413223e-11,
+              "tail_error": 6.699386758393967e-11
+            },
+            {
+              "q": 0.0025,
+              "z": {
+                "real": 0.0,
+                "imag": 0.02
+              },
+              "delta_chi": {
+                "real": 8.4752635945521e-12,
+                "imag": -6.241792788053242e-41
+              },
+              "quadrature_error": 1.4144783170925892e-10,
+              "tail_error": 6.697434528739715e-11
+            },
+            {
+              "q": 0.0025,
+              "z": {
+                "real": 0.0,
+                "imag": 0.05
+              },
+              "delta_chi": {
+                "real": 8.43440969192704e-12,
+                "imag": -9.066066855207124e-42
+              },
+              "quadrature_error": 1.6260437517923206e-12,
+              "tail_error": 6.686757750037516e-11
+            },
+            {
+              "q": 0.0025,
+              "z": {
+                "real": 0.03,
+                "imag": 0.02
+              },
+              "delta_chi": {
+                "real": 8.49552244588669e-12,
+                "imag": 2.4100490890722358e-14
+              },
+              "quadrature_error": 3.542609578486081e-11,
+              "tail_error": 6.699184305187461e-11
+            }
+          ]
+        }
+      ],
+      "batch_equivalence_momenta": [
+        1e-07,
+        0.001,
+        0.005,
+        0.02,
+        0.031,
+        0.039
+      ],
+      "batch_scalar_channel_errors": {
+        "pair": 3.667428152570498e-16,
+        "intrabranch_population": 8.047467553363173e-16,
+        "mixed_number": 2.2817842176127025e-16
+      }
+    }
+  ],
+  "state_variables": [
+    "radial_fluctuation",
+    "phase_fluctuation",
+    "Phi_fluctuation",
+    "tree_velocities_for_cross_covariance_only"
+  ],
+  "excluded_variables": [
+    "C",
+    "UET_Pi",
+    "R_gen",
+    "R_obs"
+  ],
+  "execution_note": "Initial scalar-only audit deliberately stopped before artifact after an independently verified batched-equivalence check; no failure/completion inferred from timeout. Same declared grids/gates retained.",
+  "primary_references": [
+    "https://arxiv.org/abs/cond-mat/0307246",
+    "https://arxiv.org/abs/2310.01988"
+  ],
+  "equation_registry_ids": [
+    "t13.thermal_insertion.finite_q_cross_covariance",
+    "t13.thermal_insertion.static_Bose_population_limit"
+  ],
+  "declared_grids": {
+    "mu": [
+      1.05,
+      1.2
+    ],
+    "momentum_triples": [
+      [
+        0.005,
+        0.011,
+        0.008
+      ],
+      [
+        0.02,
+        0.031,
+        0.02
+      ],
+      [
+        0.04,
+        0.037,
+        0.02
+      ]
+    ],
+    "cross_covariance_T": 0.004,
+    "T_divisors": [
+      256,
+      512
+    ],
+    "orders": [
+      24,
+      48,
+      96
+    ],
+    "angular_orders": [
+      32,
+      64,
+      128
+    ],
+    "tails": [
+      32.0,
+      40.0
+    ],
+    "static_q_ratios": [
+      0.0625,
+      0.03125,
+      0.015625
+    ],
+    "dynamic_q": [
+      0.01,
+      0.005,
+      0.0025
+    ],
+    "frequencies": [
+      {
+        "real": 0.0,
+        "imag": 0.02
+      },
+      {
+        "real": 0.0,
+        "imag": 0.05
+      },
+      {
+        "real": 0.03,
+        "imag": 0.02
+      }
+    ],
+    "locked_before_first_audit": true
+  },
+  "thresholds": {
+    "identity_relative": 1e-09,
+    "covariance_relative": 1e-07,
+    "quadrature_relative": 1e-06,
+    "thermal_tail_relative": 1e-08,
+    "static_soft_limit_relative": 0.001,
+    "original_causal_leakage": 1e-06
+  },
+  "evidence_artifacts": [
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/Research_T13_Finite_Q_Thermal_Source.py",
+      "sha256": "2b74fb0f36f9b47ced152b22799043feff2b4ccae544fa5be394806f0cfbca8a"
+    },
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/t13_finite_q_thermal_source_registry.json",
+      "sha256": "0612748d11929ac2bb643520f4bbcd453050fb7cac3f01fab653f630bc154640"
+    },
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/test_t13_finite_q_thermal_source.py",
+      "sha256": "198cc139eaa074f4c358ba39e2f3f7a6230f2c8d0cb40f4589ad16d357c11c17"
+    },
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/Research_T13_Thermal_Mode_Quadrature.py",
+      "sha256": "f4ace33062bf4acc23ea124e482ef675de8ee4e47216f573e2ae16dd9535214e"
+    }
+  ],
+  "protected_evidence_hashes": [
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/t13_thermal_virtual_response.json",
+      "sha256": "a05474ba7a9fdf0005df0c67f2d4a2ff1dbc5432016a1988ccd22730e70e70b0"
+    },
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/Research_T13_Thermal_Virtual_Response.py",
+      "sha256": "87af5fdc8f479f5b5219ce480fac22d6c143c570f31207d4acab2e8a6c8354ff"
+    },
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/t13_thermal_source_curvature.json",
+      "sha256": "b5955d1e8425795da7658ab161dadb6c649e1e03be1ecb113a7b2e3e29bf061e"
+    },
+    {
+      "path": "docs/core/02_equations/o2/uet_o2_action_thermal_observable_bridge.py",
+      "sha256": "1cf745562548bc9a61d9ebb86069b8aff73e2a776756aa9efe7ab1a45b669ebe"
+    },
+    {
+      "path": "docs/core/02_equations/o2/uet_o2_action_thermal_stiffness_beta.py",
+      "sha256": "c1c3278a79df611ddae2f67ff811022722ab0c56f68bf91cc5480f34db9a95e6"
+    },
+    {
+      "path": "docs/core/02_equations/covariant/uet_covariant_matter.py",
+      "sha256": "8a57d95e898a8ac962bbd749670ad0695b597281937da36496d2ec7e074f9c53"
+    },
+    {
+      "path": "docs/core/02_equations/covariant/uet_covariant_response.py",
+      "sha256": "7fb4b7228afb8ede0ac4f1664d634346ef46cc7678c94ed7b55d73645590c0c2"
+    }
+  ],
+  "controlling_blocker": "collisionless_soft_limit_full_interacting_matching_and_physical_transport_open",
+  "open_blockers": [
+    "collisionless_soft_frequency_limit_and_population_relaxation",
+    "full_loop_source_current_Ward_and_energy_ledger",
+    "full_vacuum_interacting_thermal_matching_and_approximation_control",
+    "independent_material_source_readout_scale_KMS_Kubo_uncertainty"
+  ],
+  "dependency_unlocked": [
+    "collisionless_population_and_interacting_matching_research_only"
+  ],
+  "static_population_limit_derived": true,
+  "finite_q_source_checked_for_prescription": true,
+  "full_loop_source_current_Ward_closed": false,
+  "full_energy_exchange_ledger_closed": false,
+  "assigned_relaxation_time": false,
+  "full_collision_operator_computed": false,
+  "physical_Kubo_emitted": false,
+  "full_off_shell_source_matching_closed": false,
+  "full_real_self_energy_matched": false,
+  "full_two_loop_pressure_computed": false,
+  "all_parent_modes_and_quantum_Phi_loops_included": false,
+  "full_SK_KMS_matching_closed": false,
+  "independent_alpha_Phi_K_admitted": false,
+  "controlled_full_action_truncation_error_established": false,
+  "full_core_unlock": false,
+  "core_composition_gate_overwritten": false,
+  "claim_promotion": false,
+  "parameter_fitting": false,
+  "assigned_width": false,
+  "clipping": false,
+  "cone_padding": false,
+  "xie_2026_accessed": false,
+  "prior_Xie_context_exposure_review": "REVIEW_REQUIRED",
+  "claim_boundary": "Named acoustic thermal-insertion rest-domain finite grids only. Bose static occupation variance is not a collision rate, homogeneous equilibration, physical conductivity, full SK/KMS/material/calibration, original conserved-C repair or Full Topic13/Core/UET closure.",
+  "report": {
+    "MAJOR_RESULT_CLOSURE": "CLOSED_FOR_LANE",
+    "WHAT_IS_ACTUALLY_CLOSED": "Finite-q thermal source/cross-covariance and analytic static Bose-population limit, subject to the recorded checks",
+    "WHAT_REMAINS_OPEN": [
+      "collisionless_soft_frequency_limit_and_population_relaxation",
+      "full_loop_source_current_Ward_and_energy_ledger",
+      "full_vacuum_interacting_thermal_matching_and_approximation_control",
+      "independent_material_source_readout_scale_KMS_Kubo_uncertainty"
+    ],
+    "DEPENDENCY_UNLOCKED": [
+      "collisionless_population_and_interacting_matching_research_only"
+    ],
+    "STATUS": "PASS_SCOPED_FINITE_Q_THERMAL_SOURCE",
+    "WHAT_CHANGED": "Finite-q source/cross-covariance and static divided Bose population",
+    "EQUATION_OR_MAPPING": "(-iz-L_Ar,Ap) delta_Cov=delta_A Cov_p+Cov_r delta_A^T; static population uses [n(Ep)-n(Er)]/(Er-Ep)",
+    "VERIFICATION": {
+      "cross_covariance_independently_matches_finite_momentum_bubble": true,
+      "finite_q_source_satisfies_charge_continuity": true,
+      "Bose_divided_difference_supplies_static_population": true,
+      "batched_exact_modes_and_scalar_channel_methods_agree": true,
+      "static_limit_returns_pressure_and_converges": true,
+      "static_and_dynamic_quadrature_and_tail": true
+    },
+    "CONTROLLING_BLOCKER": "collisionless_soft_limit_full_interacting_matching_and_physical_transport_open",
+    "NEXT_ACTION": "Resolve full recorded checks then soft-frequency/collision and physical matching without assigned relaxation",
+    "CLAIM_BOUNDARY": "Named acoustic thermal-insertion rest-domain finite grids only. Bose static occupation variance is not a collision rate, homogeneous equilibration, physical conductivity, full SK/KMS/material/calibration, original conserved-C repair or Full Topic13/Core/UET closure."
+  }
+}

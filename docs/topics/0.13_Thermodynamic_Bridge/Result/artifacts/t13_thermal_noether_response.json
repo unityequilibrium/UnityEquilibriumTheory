@@ -1,0 +1,3771 @@
+{
+  "major_result_id": "T13_GAUSSIAN_THERMAL_SOURCE_NOETHER_BALANCE",
+  "topic": "0.13_Thermodynamic_Bridge",
+  "branch_id": "t13.candidate.acoustic_thermal_insertion_tree_virtual_response_v1",
+  "created_at": "2026-10-03T08:32:24.642303+00:00",
+  "closure_level": "CLOSED_FOR_LANE",
+  "verification_status": "PASS_SCOPED_GAUSSIAN_NOETHER_RESPONSE",
+  "what_is_closed": "Pair-local Gaussian source charge and first-order rotating/physical energy balance, conditional on recorded checks and momentum translation for continuum integration",
+  "equation_or_mapping": "-iz delta_n+iq delta_j=0 after covariance, seagull, stationary shift and mean correction; delta_E=delta_Hrot+mu delta_n",
+  "units": {
+    "h": "E^3",
+    "integrated_density_current_per_h": "E^0",
+    "integrated_energy_flux_per_h": "E",
+    "Phi": "E"
+  },
+  "derivation_class": "DERIVED_NOETHER_MOMENTS_OF_NAMED_ONE_THERMAL_INSERTION",
+  "observable": "conditional natural-energy charge/energy source response, not calibrated heat flux",
+  "data_role": "DERIVED_NOT_CALIBRATION",
+  "action_controls": {
+    "Z": 1.0,
+    "m0_sq": 1.0,
+    "u": 1.0,
+    "gamma": 0.04000000000000001,
+    "epsilon": 0.05,
+    "Phi_reference": 0.0,
+    "response_mass_sq": 1.0,
+    "response_quartic": 1.0,
+    "response_kinetic": 1.0
+  },
+  "checks": {
+    "fluctuation_ward_error": true,
+    "total_charge_ward_error": true,
+    "rotating_energy_ward_error": true,
+    "physical_energy_ward_error": true,
+    "phase_contact_identity_error": true,
+    "energy_contact_cancellation_error": true,
+    "independent_source_force_and_contact": true,
+    "missing_background_contact_is_detected": true
+  },
+  "examples": [
+    {
+      "mu": 1.05,
+      "T": 0.002,
+      "p": 0.005,
+      "r": 0.011,
+      "q": 0.008,
+      "z": {
+        "real": 0.0,
+        "imag": 0.02
+      },
+      "values": {
+        "density": {
+          "real": 2.325971142059327,
+          "imag": 0.0
+        },
+        "current": {
+          "real": 0.0,
+          "imag": 5.607160918737037
+        },
+        "rotating_energy": {
+          "real": 6.961842932286873e-05,
+          "imag": 0.0
+        },
+        "rotating_flux": {
+          "real": 0.0,
+          "imag": 0.00017404607330719437
+        },
+        "energy_term_scale": {
+          "real": 0.000989512938375937,
+          "imag": 0.0
+        },
+        "flux_term_scale": {
+          "real": 0.0003919353857538135,
+          "imag": 0.0
+        }
+      },
+      "total_density": {
+        "real": 0.24130430795341118,
+        "imag": 0.0
+      },
+      "total_current": {
+        "real": 0.0,
+        "imag": 0.6032607698871022
+      },
+      "physical_energy": {
+        "real": 0.2534391417804046,
+        "imag": 0.0
+      },
+      "physical_flux": {
+        "real": 0.0,
+        "imag": 0.6335978544547645
+      },
+      "fluctuation_ward_error": 8.874273711845621e-12,
+      "total_charge_ward_error": 1.6518837810858265e-13,
+      "rotating_energy_ward_error": 7.869669776345081e-15,
+      "physical_energy_ward_error": 1.6518417703779447e-13,
+      "source_force_method_error": 1.903016855831599e-16,
+      "contact_method_error": 2.0427540091944958e-16,
+      "phase_contact_identity_error": 7.915445167013673e-17,
+      "omitted_background_shift_ward_error": 376.06488569363717,
+      "covariance_stationary_energy_drive": {
+        "real": -3.3881317890172014e-20,
+        "imag": 0.0
+      },
+      "explicit_energy_contact": {
+        "real": -13.120829750412039,
+        "imag": 0.0
+      },
+      "mean_energy_contact": {
+        "real": 13.120829750412039,
+        "imag": 0.0
+      },
+      "energy_contact_cancellation_error": 0.0
+    },
+    {
+      "mu": 1.05,
+      "T": 0.002,
+      "p": 0.005,
+      "r": 0.011,
+      "q": 0.008,
+      "z": {
+        "real": 0.0,
+        "imag": 0.05
+      },
+      "values": {
+        "density": {
+          "real": 0.37438916896211794,
+          "imag": 0.0
+        },
+        "current": {
+          "real": 0.0,
+          "imag": 2.2505215951324735
+        },
+        "rotating_energy": {
+          "real": 3.0791704083989635e-05,
+          "imag": 0.0
+        },
+        "rotating_flux": {
+          "real": 0.0,
+          "imag": 0.00019244815052477316
+        },
+        "energy_term_scale": {
+          "real": 0.0009584455152489104,
+          "imag": 0.0
+        },
+        "flux_term_scale": {
+          "real": 0.0009111909404480915,
+          "imag": 0.0
+        }
+      },
+      "total_density": {
+        "real": 0.03897237351029159,
+        "imag": 0.0
+      },
+      "total_current": {
+        "real": 0.0,
+        "imag": 0.24357733443751606
+      },
+      "physical_energy": {
+        "real": 0.04095178388989016,
+        "imag": 0.0
+      },
+      "physical_flux": {
+        "real": 0.0,
+        "imag": 0.2559486493099166
+      },
+      "fluctuation_ward_error": 8.794445518397046e-12,
+      "total_charge_ward_error": 2.077801395849639e-13,
+      "rotating_energy_ward_error": 2.348403071155595e-14,
+      "physical_energy_ward_error": 2.0778860020306591e-13,
+      "source_force_method_error": 6.842191916206141e-16,
+      "contact_method_error": 2.0427540091944958e-16,
+      "phase_contact_identity_error": 7.915445167013673e-17,
+      "omitted_background_shift_ward_error": 375.6683029680536,
+      "covariance_stationary_energy_drive": {
+        "real": -5.082197683525802e-21,
+        "imag": 0.0
+      },
+      "explicit_energy_contact": {
+        "real": -13.171856982666261,
+        "imag": 0.0
+      },
+      "mean_energy_contact": {
+        "real": 13.171856982666261,
+        "imag": 0.0
+      },
+      "energy_contact_cancellation_error": 0.0
+    },
+    {
+      "mu": 1.05,
+      "T": 0.002,
+      "p": 0.005,
+      "r": 0.011,
+      "q": 0.008,
+      "z": {
+        "real": 0.03,
+        "imag": 0.02
+      },
+      "values": {
+        "density": {
+          "real": -0.2777461963202583,
+          "imag": 0.669312207418504
+        },
+        "current": {
+          "real": -2.6103777368612366,
+          "imag": 1.7423898417706762
+        },
+        "rotating_energy": {
+          "real": 1.7890344960107903e-05,
+          "imag": 1.3384742779802208e-05
+        },
+        "rotating_flux": {
+          "real": 3.3626936651003536e-05,
+          "imag": 9.4918647824451e-05
+        },
+        "energy_term_scale": {
+          "real": 0.0009530602099074943,
+          "imag": 0.0
+        },
+        "flux_term_scale": {
+          "real": 0.0006629901293483263,
+          "imag": 0.0
+        }
+      },
+      "total_density": {
+        "real": -0.02886446262465092,
+        "imag": 0.06978415727278742
+      },
+      "total_current": {
+        "real": -0.28270212802250727,
+        "imag": 0.1895294332097326
+      },
+      "physical_energy": {
+        "real": -0.03028979541092336,
+        "imag": 0.0732867498792066
+      },
+      "physical_flux": {
+        "real": -0.29680360748698165,
+        "imag": 0.1991008235180437
+      },
+      "fluctuation_ward_error": 9.78200265144669e-12,
+      "total_charge_ward_error": 2.0457333940895323e-13,
+      "rotating_energy_ward_error": 2.6172317042098916e-14,
+      "physical_energy_ward_error": 2.0457392234632147e-13,
+      "source_force_method_error": 3.8271108792888377e-16,
+      "contact_method_error": 2.0427540091944958e-16,
+      "phase_contact_identity_error": 7.915445167013673e-17,
+      "omitted_background_shift_ward_error": 375.53569990924126,
+      "covariance_stationary_energy_drive": {
+        "real": -2.0328790734103208e-20,
+        "imag": -2.270048298641525e-19
+      },
+      "explicit_energy_contact": {
+        "real": -13.236939860091086,
+        "imag": 0.011092621219332396
+      },
+      "mean_energy_contact": {
+        "real": 13.236939860091086,
+        "imag": -0.011092621219332396
+      },
+      "energy_contact_cancellation_error": 0.0
+    },
+    {
+      "mu": 1.05,
+      "T": 0.002,
+      "p": 0.02,
+      "r": 0.031,
+      "q": 0.02,
+      "z": {
+        "real": 0.0,
+        "imag": 0.02
+      },
+      "values": {
+        "density": {
+          "real": 0.3251840869876112,
+          "imag": 0.0
+        },
+        "current": {
+          "real": 0.0,
+          "imag": 0.28863920666976983
+        },
+        "rotating_energy": {
+          "real": 8.503121036943515e-05,
+          "imag": 0.0
+        },
+        "rotating_flux": {
+          "real": 0.0,
+          "imag": 8.503121036943923e-05
+        },
+        "energy_term_scale": {
+          "real": 0.00036285725052000677,
+          "imag": 0.0
+        },
+        "flux_term_scale": {
+          "real": 8.503436296035784e-05,
+          "imag": 0.0
+        }
+      },
+      "total_density": {
+        "real": -0.011397249944269716,
+        "imag": 0.0
+      },
+      "total_current": {
+        "real": 0.0,
+        "imag": -0.011397249944302634
+      },
+      "physical_energy": {
+        "real": -0.011882081231113768,
+        "imag": 0.0
+      },
+      "physical_flux": {
+        "real": 0.0,
+        "imag": -0.011882081231148327
+      },
+      "fluctuation_ward_error": 4.396009933836874e-13,
+      "total_charge_ward_error": 2.6325981126960644e-14,
+      "rotating_energy_ward_error": 9.101188626832874e-15,
+      "physical_energy_ward_error": 2.6317927338306968e-14,
+      "source_force_method_error": 1.2880964637838325e-15,
+      "contact_method_error": 2.5690045939837854e-16,
+      "phase_contact_identity_error": 0.0,
+      "omitted_background_shift_ward_error": 62.58970715717619,
+      "covariance_stationary_energy_drive": {
+        "real": -2.541098841762901e-20,
+        "imag": 0.0
+      },
+      "explicit_energy_contact": {
+        "real": -0.31414107487543813,
+        "imag": 0.0
+      },
+      "mean_energy_contact": {
+        "real": 0.31414107487543813,
+        "imag": 0.0
+      },
+      "energy_contact_cancellation_error": 0.0
+    },
+    {
+      "mu": 1.05,
+      "T": 0.002,
+      "p": 0.02,
+      "r": 0.031,
+      "q": 0.02,
+      "z": {
+        "real": 0.0,
+        "imag": 0.05
+      },
+      "values": {
+        "density": {
+          "real": 0.05377676923246516,
+          "imag": 0.0
+        },
+        "current": {
+          "real": 0.0,
+          "imag": 0.11945923402304744
+        },
+        "rotating_energy": {
+          "real": 1.366500079684707e-05,
+          "imag": 0.0
+        },
+        "rotating_flux": {
+          "real": 0.0,
+          "imag": 3.416250199211621e-05
+        },
+        "energy_term_scale": {
+          "real": 0.00031176817881004525,
+          "imag": 0.0
+        },
+        "flux_term_scale": {
+          "real": 6.056430145421394e-05,
+          "imag": 0.0
+        }
+      },
+      "total_density": {
+        "real": -0.0019481529913489698,
+        "imag": 0.0
+      },
+      "total_current": {
+        "real": 0.0,
+        "imag": -0.004870382478367255
+      },
+      "physical_energy": {
+        "real": -0.0020318956401195716,
+        "imag": 0.0
+      },
+      "physical_flux": {
+        "real": 0.0,
+        "imag": -0.005079739100293502
+      },
+      "fluctuation_ward_error": 2.1582460711121827e-13,
+      "total_charge_ward_error": 9.988755896458813e-15,
+      "rotating_energy_ward_error": 1.739474242429805e-15,
+      "physical_energy_ward_error": 9.986939089770486e-15,
+      "source_force_method_error": 2.2652163740253355e-16,
+      "contact_method_error": 2.5690045939837854e-16,
+      "phase_contact_identity_error": 0.0,
+      "omitted_background_shift_ward_error": 62.57542212726592,
+      "covariance_stationary_energy_drive": {
+        "real": -2.541098841762901e-21,
+        "imag": 0.0
+      },
+      "explicit_energy_contact": {
+        "real": -0.3251621444733134,
+        "imag": 0.0
+      },
+      "mean_energy_contact": {
+        "real": 0.3251621444733134,
+        "imag": 0.0
+      },
+      "energy_contact_cancellation_error": 0.0
+    },
+    {
+      "mu": 1.05,
+      "T": 0.002,
+      "p": 0.02,
+      "r": 0.031,
+      "q": 0.02,
+      "z": {
+        "real": 0.03,
+        "imag": 0.02
+      },
+      "values": {
+        "density": {
+          "real": -0.03950222833997802,
+          "imag": 0.09722969530118607
+        },
+        "current": {
+          "real": -0.13899358447224217,
+          "imag": 0.09495114454244731
+        },
+        "rotating_energy": {
+          "real": -1.1575523382271845e-05,
+          "imag": 2.6985621415757667e-05
+        },
+        "rotating_flux": {
+          "real": -4.4348906489170466e-05,
+          "imag": 2.8902908741368988e-05
+        },
+        "energy_term_scale": {
+          "real": 0.00029874769143270073,
+          "imag": 0.0
+        },
+        "flux_term_scale": {
+          "real": 7.192172394872192e-05,
+          "imag": 0.0
+        }
+      },
+      "total_density": {
+        "real": 0.001400029651767415,
+        "imag": -0.003584402163628514
+      },
+      "total_current": {
+        "real": 0.005684446641308377,
+        "imag": -0.003976573593685737
+      },
+      "physical_energy": {
+        "real": 0.001458455610973514,
+        "imag": -0.0037366366503941823
+      },
+      "physical_flux": {
+        "real": 0.005924320066884626,
+        "imag": -0.004146499364628654
+      },
+      "fluctuation_ward_error": 7.67974404188671e-13,
+      "total_charge_ward_error": 4.192217380984257e-14,
+      "rotating_energy_ward_error": 1.0876704480258837e-14,
+      "physical_energy_ward_error": 4.190839176718902e-14,
+      "source_force_method_error": 8.878858602917237e-16,
+      "contact_method_error": 2.5690045939837854e-16,
+      "phase_contact_identity_error": 0.0,
+      "omitted_background_shift_ward_error": 62.60092945090268,
+      "covariance_stationary_energy_drive": {
+        "real": 1.6940658945086007e-21,
+        "imag": -4.658681209898652e-20
+      },
+      "explicit_energy_contact": {
+        "real": -0.33014676457302256,
+        "imag": 0.0038159377424226695
+      },
+      "mean_energy_contact": {
+        "real": 0.33014676457302256,
+        "imag": -0.0038159377424226695
+      },
+      "energy_contact_cancellation_error": 0.0
+    },
+    {
+      "mu": 1.05,
+      "T": 0.002,
+      "p": 0.04,
+      "r": 0.037,
+      "q": 0.02,
+      "z": {
+        "real": 0.0,
+        "imag": 0.02
+      },
+      "values": {
+        "density": {
+          "real": 0.019305712126728103,
+          "imag": 0.0
+        },
+        "current": {
+          "real": 0.0,
+          "imag": 0.0038742166596594184
+        },
+        "rotating_energy": {
+          "real": -8.151955916626898e-07,
+          "imag": 0.0
+        },
+        "rotating_flux": {
+          "real": 0.0,
+          "imag": -8.151955916619811e-07
+        },
+        "energy_term_scale": {
+          "real": 9.481028333631916e-05,
+          "imag": 0.0
+        },
+        "flux_term_scale": {
+          "real": 5.160913804222312e-06,
+          "imag": 0.0
+        }
+      },
+      "total_density": {
+        "real": -0.02921452503604627,
+        "imag": 0.0
+      },
+      "total_current": {
+        "real": 0.0,
+        "imag": -0.02921452503605055
+      },
+      "physical_energy": {
+        "real": -0.030676066483440245,
+        "imag": 0.0
+      },
+      "physical_flux": {
+        "real": 0.0,
+        "imag": -0.03067606648344474
+      },
+      "fluctuation_ward_error": 1.3955203302850757e-13,
+      "total_charge_ward_error": 4.0868815961240947e-14,
+      "rotating_energy_ward_error": 7.0893254167906965e-15,
+      "physical_energy_ward_error": 4.0892844623173454e-14,
+      "source_force_method_error": 5.465589001901407e-16,
+      "contact_method_error": 2.237771390626313e-16,
+      "phase_contact_identity_error": 1.0967783191810468e-16,
+      "omitted_background_shift_ward_error": 85.48199808871954,
+      "covariance_stationary_energy_drive": {
+        "real": -1.2705494208814505e-21,
+        "imag": 0.0
+      },
+      "explicit_energy_contact": {
+        "real": -0.03560956376101725,
+        "imag": 0.0
+      },
+      "mean_energy_contact": {
+        "real": 0.03560956376101725,
+        "imag": 0.0
+      },
+      "energy_contact_cancellation_error": 0.0
+    },
+    {
+      "mu": 1.05,
+      "T": 0.002,
+      "p": 0.04,
+      "r": 0.037,
+      "q": 0.02,
+      "z": {
+        "real": 0.0,
+        "imag": 0.05
+      },
+      "values": {
+        "density": {
+          "real": 0.003071286677299688,
+          "imag": 0.0
+        },
+        "current": {
+          "real": 0.0,
+          "imag": 0.00160371327382081
+        },
+        "rotating_energy": {
+          "real": -2.590957536565528e-06,
+          "imag": 0.0
+        },
+        "rotating_flux": {
+          "real": -0.0,
+          "imag": -6.477393841413037e-06
+        },
+        "energy_term_scale": {
+          "real": 9.852489070245817e-05,
+          "imag": 0.0
+        },
+        "flux_term_scale": {
+          "real": 8.237072229758884e-06,
+          "imag": 0.0
+        }
+      },
+      "total_density": {
+        "real": -0.005016124958520021,
+        "imag": 0.0
+      },
+      "total_current": {
+        "real": 0.0,
+        "imag": -0.012540312396302359
+      },
+      "physical_energy": {
+        "real": -0.0052695221639825875,
+        "imag": 0.0
+      },
+      "physical_flux": {
+        "real": 0.0,
+        "imag": -0.013173805409958892
+      },
+      "fluctuation_ward_error": 1.6894633981291787e-13,
+      "total_charge_ward_error": 5.2850666846103306e-14,
+      "rotating_energy_ward_error": 3.072811397816721e-15,
+      "physical_energy_ward_error": 5.2803209099316966e-14,
+      "source_force_method_error": 5.269261145520902e-16,
+      "contact_method_error": 2.237771390626313e-16,
+      "phase_contact_identity_error": 1.0967783191810468e-16,
+      "omitted_background_shift_ward_error": 84.92679718763677,
+      "covariance_stationary_energy_drive": {
+        "real": -2.329340604949326e-21,
+        "imag": 0.0
+      },
+      "explicit_energy_contact": {
+        "real": -0.036871854990985733,
+        "imag": 0.0
+      },
+      "mean_energy_contact": {
+        "real": 0.036871854990985733,
+        "imag": 0.0
+      },
+      "energy_contact_cancellation_error": 0.0
+    },
+    {
+      "mu": 1.05,
+      "T": 0.002,
+      "p": 0.04,
+      "r": 0.037,
+      "q": 0.02,
+      "z": {
+        "real": 0.03,
+        "imag": 0.02
+      },
+      "values": {
+        "density": {
+          "real": -0.002367816332303145,
+          "imag": 0.005396398057270473
+        },
+        "current": {
+          "real": -0.001865990462589807,
+          "imag": 0.0012748797049712019
+        },
+        "rotating_energy": {
+          "real": -3.24686163821808e-06,
+          "imag": 7.131173486678406e-07
+        },
+        "rotating_flux": {
+          "real": -5.583409805994826e-06,
+          "imag": -2.177185615216881e-06
+        },
+        "energy_term_scale": {
+          "real": 0.00010082514100567358,
+          "imag": 0.0
+        },
+        "flux_term_scale": {
+          "real": 7.390253668039992e-06,
+          "imag": 0.0
+        }
+      },
+      "total_density": {
+        "real": 0.003595486518002621,
+        "imag": -0.009248925348692875
+      },
+      "total_current": {
+        "real": 0.01464215512569956,
+        "imag": -0.010277901505037967
+      },
+      "physical_energy": {
+        "real": 0.0037720139822645343,
+        "imag": -0.00971065849877885
+      },
+      "physical_flux": {
+        "real": 0.015368679472178544,
+        "imag": -0.010793973765905083
+      },
+      "fluctuation_ward_error": 1.8013814544688337e-13,
+      "total_charge_ward_error": 4.932414347083573e-14,
+      "rotating_energy_ward_error": 3.0572829368218373e-15,
+      "physical_energy_ward_error": 4.93305455266227e-14,
+      "source_force_method_error": 5.016522279213366e-16,
+      "contact_method_error": 2.237771390626313e-16,
+      "phase_contact_identity_error": 1.0967783191810468e-16,
+      "omitted_background_shift_ward_error": 84.8658353724318,
+      "covariance_stationary_energy_drive": {
+        "real": -4.0234064994579266e-21,
+        "imag": -9.317362419797304e-21
+      },
+      "explicit_energy_contact": {
+        "real": -0.03744139407482249,
+        "imag": 0.0004372217520070926
+      },
+      "mean_energy_contact": {
+        "real": 0.03744139407482249,
+        "imag": -0.0004372217520070926
+      },
+      "energy_contact_cancellation_error": 0.0
+    },
+    {
+      "mu": 1.05,
+      "T": 0.002,
+      "p": 0.02,
+      "r": 0.02,
+      "q": 0.0,
+      "z": {
+        "real": 0.0,
+        "imag": 0.02
+      },
+      "values": {
+        "density": {
+          "real": 0.043146877387238325,
+          "imag": 0.0
+        },
+        "current": {
+          "real": 0.0,
+          "imag": 0.0
+        },
+        "rotating_energy": {
+          "real": -1.0110185258427329e-17,
+          "imag": 0.0
+        },
+        "rotating_flux": {
+          "real": 0.0,
+          "imag": 0.0
+        },
+        "energy_term_scale": {
+          "real": 0.0004217671991711803,
+          "imag": 0.0
+        },
+        "flux_term_scale": {
+          "real": 0.0,
+          "imag": 0.0
+        }
+      },
+      "total_density": {
+        "real": 1.3759826611448034e-14,
+        "imag": 0.0
+      },
+      "total_current": {
+        "real": 0.0,
+        "imag": 0.0
+      },
+      "physical_energy": {
+        "real": 1.443770775676201e-14,
+        "imag": 0.0
+      },
+      "physical_flux": {
+        "real": 0.0,
+        "imag": 0.0
+      },
+      "fluctuation_ward_error": 1.6339594087690226e-13,
+      "total_charge_ward_error": 1.594533306310599e-13,
+      "rotating_energy_ward_error": 2.3971008836853536e-14,
+      "physical_energy_ward_error": 1.5934174957991274e-13,
+      "source_force_method_error": 6.801807378199385e-16,
+      "contact_method_error": 2.4063676580492782e-16,
+      "phase_contact_identity_error": 0.0,
+      "omitted_background_shift_ward_error": 1599.0415578234536,
+      "covariance_stationary_energy_drive": {
+        "real": 9.825582188149884e-20,
+        "imag": 0.0
+      },
+      "explicit_energy_contact": {
+        "real": -0.5542863025559918,
+        "imag": 0.0
+      },
+      "mean_energy_contact": {
+        "real": 0.5542863025559919,
+        "imag": 0.0
+      },
+      "energy_contact_cancellation_error": 1.0014887789086273e-16
+    },
+    {
+      "mu": 1.05,
+      "T": 0.002,
+      "p": 0.02,
+      "r": 0.02,
+      "q": 0.0,
+      "z": {
+        "real": 0.0,
+        "imag": 0.05
+      },
+      "values": {
+        "density": {
+          "real": 0.007886199115449966,
+          "imag": 0.0
+        },
+        "current": {
+          "real": -0.0,
+          "imag": 0.0
+        },
+        "rotating_energy": {
+          "real": 3.2526065174565133e-19,
+          "imag": 0.0
+        },
+        "rotating_flux": {
+          "real": 0.0,
+          "imag": 0.0
+        },
+        "energy_term_scale": {
+          "real": 0.00041979070955125295,
+          "imag": 0.0
+        },
+        "flux_term_scale": {
+          "real": 0.0,
+          "imag": 0.0
+        }
+      },
+      "total_density": {
+        "real": 1.532107773982716e-14,
+        "imag": 0.0
+      },
+      "total_current": {
+        "real": 0.0,
+        "imag": 0.0
+      },
+      "physical_energy": {
+        "real": 1.6087456887470265e-14,
+        "imag": 0.0
+      },
+      "physical_flux": {
+        "real": 0.0,
+        "imag": 0.0
+      },
+      "fluctuation_ward_error": 1.038806083308176e-12,
+      "total_charge_ward_error": 9.713854237985383e-13,
+      "rotating_energy_ward_error": 7.74816222334572e-16,
+      "physical_energy_ward_error": 9.714050639347272e-13,
+      "source_force_method_error": 5.956445233409539e-16,
+      "contact_method_error": 2.4063676580492782e-16,
+      "phase_contact_identity_error": 0.0,
+      "omitted_background_shift_ward_error": 1396.2306118049896,
+      "covariance_stationary_energy_drive": {
+        "real": -1.0164395367051604e-20,
+        "imag": 0.0
+      },
+      "explicit_energy_contact": {
+        "real": -0.5531420961419982,
+        "imag": 0.0
+      },
+      "mean_energy_contact": {
+        "real": 0.5531420961419983,
+        "imag": 0.0
+      },
+      "energy_contact_cancellation_error": 1.0035604163637448e-16
+    },
+    {
+      "mu": 1.05,
+      "T": 0.002,
+      "p": 0.02,
+      "r": 0.02,
+      "q": 0.0,
+      "z": {
+        "real": 0.03,
+        "imag": 0.02
+      },
+      "values": {
+        "density": {
+          "real": -0.0053975214960573226,
+          "imag": 0.01503304588089936
+        },
+        "current": {
+          "real": -0.0,
+          "imag": 0.0
+        },
+        "rotating_energy": {
+          "real": 2.981555974335137e-19,
+          "imag": 2.4108675261225523e-19
+        },
+        "rotating_flux": {
+          "real": 0.0,
+          "imag": 0.0
+        },
+        "energy_term_scale": {
+          "real": 0.00042125949439355366,
+          "imag": 0.0
+        },
+        "flux_term_scale": {
+          "real": 0.0,
+          "imag": 0.0
+        }
+      },
+      "total_density": {
+        "real": 5.4903998014665945e-15,
+        "imag": 2.995867443011946e-15
+      },
+      "total_current": {
+        "real": 0.0,
+        "imag": 0.0
+      },
+      "physical_energy": {
+        "real": 5.765217947137358e-15,
+        "imag": 3.1459019019151556e-15
+      },
+      "physical_flux": {
+        "real": 0.0,
+        "imag": 0.0
+      },
+      "fluctuation_ward_error": 1.259515872900342e-13,
+      "total_charge_ward_error": 1.957900948462794e-13,
+      "rotating_energy_ward_error": 9.102022201435584e-16,
+      "physical_energy_ward_error": 1.958013404172434e-13,
+      "source_force_method_error": 1.3581887364493078e-15,
+      "contact_method_error": 2.4063676580492782e-16,
+      "phase_contact_identity_error": 0.0,
+      "omitted_background_shift_ward_error": 1330.5223246279784,
+      "covariance_stationary_energy_drive": {
+        "real": -1.2705494208814505e-20,
+        "imag": -9.317362419797304e-21
+      },
+      "explicit_energy_contact": {
+        "real": -0.5547773560911411,
+        "imag": -0.0006563676296184316
+      },
+      "mean_energy_contact": {
+        "real": 0.5547773560911411,
+        "imag": 0.0006563676296184316
+      },
+      "energy_contact_cancellation_error": 0.0
+    },
+    {
+      "mu": 1.05,
+      "T": 0.004,
+      "p": 0.005,
+      "r": 0.011,
+      "q": 0.008,
+      "z": {
+        "real": 0.0,
+        "imag": 0.02
+      },
+      "values": {
+        "density": {
+          "real": 5.2207683629816835,
+          "imag": 0.0
+        },
+        "current": {
+          "real": 0.0,
+          "imag": 12.447188011105538
+        },
+        "rotating_energy": {
+          "real": 0.00011815979580291874,
+          "imag": 0.0
+        },
+        "rotating_flux": {
+          "real": 0.0,
+          "imag": 0.00029539948950745037
+        },
+        "energy_term_scale": {
+          "real": 0.002419526734423298,
+          "imag": 0.0
+        },
+        "flux_term_scale": {
+          "real": 0.0009501364139045772,
+          "imag": 0.0
+        }
+      },
+      "total_density": {
+        "real": 0.2524397829978664,
+        "imag": 0.0
+      },
+      "total_current": {
+        "real": 0.0,
+        "imag": 0.6310994575014579
+      },
+      "physical_energy": {
+        "real": 0.26517993194356265,
+        "imag": 0.0
+      },
+      "physical_flux": {
+        "real": 0.0,
+        "imag": 0.6629498298660382
+      },
+      "fluctuation_ward_error": 5.757773883214684e-12,
+      "total_charge_ward_error": 1.3655849898145064e-13,
+      "rotating_energy_ward_error": 2.193538322186356e-14,
+      "physical_energy_ward_error": 1.36558614974488e-13,
+      "source_force_method_error": 5.154730729086522e-16,
+      "contact_method_error": 3.936913991296439e-19,
+      "phase_contact_identity_error": 6.701027209840074e-17,
+      "omitted_background_shift_ward_error": 386.52232983623713,
+      "covariance_stationary_energy_drive": {
+        "real": -7.047314121155779e-19,
+        "imag": 0.0
+      },
+      "explicit_energy_contact": {
+        "real": -30.997361394522454,
+        "imag": 0.0
+      },
+      "mean_energy_contact": {
+        "real": 30.997361394522454,
+        "imag": 0.0
+      },
+      "energy_contact_cancellation_error": 0.0
+    },
+    {
+      "mu": 1.05,
+      "T": 0.004,
+      "p": 0.005,
+      "r": 0.011,
+      "q": 0.008,
+      "z": {
+        "real": 0.0,
+        "imag": 0.05
+      },
+      "values": {
+        "density": {
+          "real": 0.8402141590436862,
+          "imag": 0.0
+        },
+        "current": {
+          "real": 0.0,
+          "imag": 4.995872352829355
+        },
+        "rotating_energy": {
+          "real": 3.963017411586368e-05,
+          "imag": 0.0
+        },
+        "rotating_flux": {
+          "real": 0.0,
+          "imag": 0.0002476885882244423
+        },
+        "energy_term_scale": {
+          "real": 0.002359329211981393,
+          "imag": 0.0
+        },
+        "flux_term_scale": {
+          "real": 0.0022692402849457784,
+          "imag": 0.0
+        }
+      },
+      "total_density": {
+        "real": 0.04077158929081248,
+        "imag": 0.0
+      },
+      "total_current": {
+        "real": 0.0,
+        "imag": 0.2548224330712925
+      },
+      "physical_energy": {
+        "real": 0.042849798929468975,
+        "imag": 0.0
+      },
+      "physical_flux": {
+        "real": 0.0,
+        "imag": 0.26781124331308154
+      },
+      "fluctuation_ward_error": 7.434665732497256e-12,
+      "total_charge_ward_error": 1.858653051262394e-13,
+      "rotating_energy_ward_error": 1.7292814717678454e-14,
+      "physical_energy_ward_error": 1.8587383413664497e-13,
+      "source_force_method_error": 2.973789868895707e-16,
+      "contact_method_error": 3.936913991296439e-19,
+      "phase_contact_identity_error": 6.701027209840074e-17,
+      "omitted_background_shift_ward_error": 386.08698891746855,
+      "covariance_stationary_energy_drive": {
+        "real": -2.236166980751353e-19,
+        "imag": 0.0
+      },
+      "explicit_energy_contact": {
+        "real": -31.117914878643095,
+        "imag": 0.0
+      },
+      "mean_energy_contact": {
+        "real": 31.117914878643088,
+        "imag": 0.0
+      },
+      "energy_contact_cancellation_error": 1.141694002524188e-16
+    },
+    {
+      "mu": 1.05,
+      "T": 0.004,
+      "p": 0.005,
+      "r": 0.011,
+      "q": 0.008,
+      "z": {
+        "real": 0.03,
+        "imag": 0.02
+      },
+      "values": {
+        "density": {
+          "real": -0.623373051030363,
+          "imag": 1.5019920216739413
+        },
+        "current": {
+          "real": -5.794707239532326,
+          "imag": 3.8678837522763927
+        },
+        "rotating_energy": {
+          "real": 1.343162564545683e-05,
+          "imag": 2.7063372215544646e-05
+        },
+        "rotating_flux": {
+          "real": -1.7289834368142804e-05,
+          "imag": 0.00013506670992219605
+        },
+        "energy_term_scale": {
+          "real": 0.0023514596767984426,
+          "imag": 0.0
+        },
+        "flux_term_scale": {
+          "real": 0.0016430358912453845,
+          "imag": 0.0
+        }
+      },
+      "total_density": {
+        "real": -0.030196744763693717,
+        "imag": 0.07300646638859143
+      },
+      "total_current": {
+        "real": -0.2957539588320488,
+        "imag": 0.19828238705031653
+      },
+      "physical_energy": {
+        "real": -0.03169315037623295,
+        "imag": 0.07668385308023655
+      },
+      "physical_flux": {
+        "real": -0.3105589466080194,
+        "imag": 0.20833157311275458
+      },
+      "fluctuation_ward_error": 5.59355882540971e-12,
+      "total_charge_ward_error": 1.4440485327077382e-13,
+      "rotating_energy_ward_error": 2.988142240680978e-14,
+      "physical_energy_ward_error": 1.4441605883588314e-13,
+      "source_force_method_error": 1.0432884068540122e-15,
+      "contact_method_error": 3.936913991296439e-19,
+      "phase_contact_identity_error": 6.701027209840074e-17,
+      "omitted_background_shift_ward_error": 385.9404728664922,
+      "covariance_stationary_energy_drive": {
+        "real": -3.1848438816761693e-19,
+        "imag": -2.981555974335137e-19
+      },
+      "explicit_energy_contact": {
+        "real": -31.27167152393581,
+        "imag": 0.02620717041900606
+      },
+      "mean_energy_contact": {
+        "real": 31.27167152393581,
+        "imag": -0.026207170419006068
+      },
+      "energy_contact_cancellation_error": 1.1094532413974656e-19
+    },
+    {
+      "mu": 1.05,
+      "T": 0.004,
+      "p": 0.02,
+      "r": 0.031,
+      "q": 0.02,
+      "z": {
+        "real": 0.0,
+        "imag": 0.02
+      },
+      "values": {
+        "density": {
+          "real": 1.1651731069142313,
+          "imag": 0.0
+        },
+        "current": {
+          "real": 0.0,
+          "imag": 0.9692868164807411
+        },
+        "rotating_energy": {
+          "real": 0.00021396918210933352,
+          "imag": 0.0
+        },
+        "rotating_flux": {
+          "real": 0.0,
+          "imag": 0.00021396918210932022
+        },
+        "energy_term_scale": {
+          "real": 0.0014920614627271216,
+          "imag": 0.0
+        },
+        "flux_term_scale": {
+          "real": 0.00021398137806175846,
+          "imag": 0.0
+        }
+      },
+      "total_density": {
+        "real": -0.28803614660078725,
+        "imag": 0.0
+      },
+      "total_current": {
+        "real": 0.0,
+        "imag": -0.2880361466008736
+      },
+      "physical_energy": {
+        "real": -0.3022239847487173,
+        "imag": 0.0
+      },
+      "physical_flux": {
+        "real": 0.0,
+        "imag": -0.302223984748808
+      },
+      "fluctuation_ward_error": 2.2438301310063286e-13,
+      "total_charge_ward_error": 1.78216720526806e-14,
+      "rotating_energy_ward_error": 7.794890581846868e-15,
+      "physical_energy_ward_error": 1.7824008891086813e-14,
+      "source_force_method_error": 3.97865268284183e-16,
+      "contact_method_error": 1.9232924893391387e-16,
+      "phase_contact_identity_error": 4.712660318845934e-17,
+      "omitted_background_shift_ward_error": 68.27030920934573,
+      "covariance_stationary_energy_drive": {
+        "real": 1.6263032587282567e-19,
+        "imag": 0.0
+      },
+      "explicit_energy_contact": {
+        "real": -1.32712523967357,
+        "imag": 0.0
+      },
+      "mean_energy_contact": {
+        "real": 1.32712523967357,
+        "imag": 0.0
+      },
+      "energy_contact_cancellation_error": 0.0
+    },
+    {
+      "mu": 1.05,
+      "T": 0.004,
+      "p": 0.02,
+      "r": 0.031,
+      "q": 0.02,
+      "z": {
+        "real": 0.0,
+        "imag": 0.05
+      },
+      "values": {
+        "density": {
+          "real": 0.19161093909802673,
+          "imag": 0.0
+        },
+        "current": {
+          "real": 0.0,
+          "imag": 0.40114888788770625
+        },
+        "rotating_energy": {
+          "real": 1.2522327890844955e-05,
+          "imag": 0.0
+        },
+        "rotating_flux": {
+          "real": 0.0,
+          "imag": 3.130581972714189e-05
+        },
+        "energy_term_scale": {
+          "real": 0.001375444498386475,
+          "imag": 0.0
+        },
+        "flux_term_scale": {
+          "real": 0.0002756782966013048,
+          "imag": 0.0
+        }
+      },
+      "total_density": {
+        "real": -0.049427159058012426,
+        "imag": 0.0
+      },
+      "total_current": {
+        "real": 0.0,
+        "imag": -0.12356789764519477
+      },
+      "physical_energy": {
+        "real": -0.051885994683022206,
+        "imag": 0.0
+      },
+      "physical_flux": {
+        "real": 0.0,
+        "imag": -0.12971498670772738
+      },
+      "fluctuation_ward_error": 9.803675769441657e-13,
+      "total_charge_ward_error": 8.154112117562094e-14,
+      "rotating_energy_ward_error": 7.941740149783975e-15,
+      "physical_energy_ward_error": 8.152378313881821e-14,
+      "source_force_method_error": 2.57014449548014e-16,
+      "contact_method_error": 1.9232924893391387e-16,
+      "phase_contact_identity_error": 4.712660318845934e-17,
+      "omitted_background_shift_ward_error": 68.17985441100592,
+      "covariance_stationary_energy_drive": {
+        "real": 1.0842021724855044e-19,
+        "imag": 0.0
+      },
+      "explicit_energy_contact": {
+        "real": -1.3737048019949718,
+        "imag": 0.0
+      },
+      "mean_energy_contact": {
+        "real": 1.3737048019949718,
+        "imag": 0.0
+      },
+      "energy_contact_cancellation_error": 0.0
+    },
+    {
+      "mu": 1.05,
+      "T": 0.004,
+      "p": 0.02,
+      "r": 0.031,
+      "q": 0.02,
+      "z": {
+        "real": 0.03,
+        "imag": 0.02
+      },
+      "values": {
+        "density": {
+          "real": -0.14129464429811334,
+          "imag": 0.34537555774052764
+        },
+        "current": {
+          "real": -0.46674493168024817,
+          "imag": 0.3188426711706543
+        },
+        "rotating_energy": {
+          "real": -5.905718933190622e-05,
+          "imag": 7.658970806674999e-05
+        },
+        "rotating_flux": {
+          "real": -0.00016517549206460785,
+          "imag": 5.582737276822665e-05
+        },
+        "energy_term_scale": {
+          "real": 0.0013511390969852956,
+          "imag": 0.0
+        },
+        "flux_term_scale": {
+          "real": 0.0002704795428555396,
+          "imag": 0.0
+        }
+      },
+      "total_density": {
+        "real": 0.03543989240134238,
+        "imag": -0.09111110103843312
+      },
+      "total_current": {
+        "real": 0.14427093964062215,
+        "imag": -0.1012267591563582
+      },
+      "physical_energy": {
+        "real": 0.03715282983207759,
+        "imag": -0.09559006638228804
+      },
+      "physical_flux": {
+        "real": 0.15131931113058866,
+        "imag": -0.1062322697414079
+      },
+      "fluctuation_ward_error": 8.4545967986374e-13,
+      "total_charge_ward_error": 6.459636575078522e-14,
+      "rotating_energy_ward_error": 2.96812959978179e-15,
+      "physical_energy_ward_error": 6.45837612910698e-14,
+      "source_force_method_error": 7.682307534896404e-16,
+      "contact_method_error": 1.9232924893391387e-16,
+      "phase_contact_identity_error": 4.712660318845934e-17,
+      "omitted_background_shift_ward_error": 68.18399873518393,
+      "covariance_stationary_energy_drive": {
+        "real": -4.743384504624082e-20,
+        "imag": 1.8634724839594607e-19
+      },
+      "explicit_energy_contact": {
+        "real": -1.39476976441102,
+        "imag": 0.016127970972589962
+      },
+      "mean_energy_contact": {
+        "real": 1.39476976441102,
+        "imag": -0.016127970972589962
+      },
+      "energy_contact_cancellation_error": 0.0
+    },
+    {
+      "mu": 1.05,
+      "T": 0.004,
+      "p": 0.04,
+      "r": 0.037,
+      "q": 0.02,
+      "z": {
+        "real": 0.0,
+        "imag": 0.02
+      },
+      "values": {
+        "density": {
+          "real": 0.1555189137437471,
+          "imag": 0.0
+        },
+        "current": {
+          "real": 0.0,
+          "imag": 0.02166167751053334
+        },
+        "rotating_energy": {
+          "real": -2.1265642064044097e-05,
+          "imag": 0.0
+        },
+        "rotating_flux": {
+          "real": -0.0,
+          "imag": -2.1265642063996822e-05
+        },
+        "energy_term_scale": {
+          "real": 0.0008023610836396674,
+          "imag": 0.0
+        },
+        "flux_term_scale": {
+          "real": 3.7373646756258266e-05,
+          "imag": 0.0
+        }
+      },
+      "total_density": {
+        "real": -0.2610483530210706,
+        "imag": 0.0
+      },
+      "total_current": {
+        "real": 0.0,
+        "imag": -0.26104835302112406
+      },
+      "physical_energy": {
+        "real": -0.2741220363141882,
+        "imag": 0.0
+      },
+      "physical_flux": {
+        "real": 0.0,
+        "imag": -0.27412203631424426
+      },
+      "fluctuation_ward_error": 1.964174924168566e-13,
+      "total_charge_ward_error": 6.101017726636443e-14,
+      "rotating_energy_ward_error": 5.629441974893912e-14,
+      "physical_energy_ward_error": 6.092960538100751e-14,
+      "source_force_method_error": 4.091697689276439e-16,
+      "contact_method_error": 1.8705788283479219e-16,
+      "phase_contact_identity_error": 0.0,
+      "omitted_background_shift_ward_error": 87.47401297200977,
+      "covariance_stationary_energy_drive": {
+        "real": -2.507217523872729e-19,
+        "imag": 0.0
+      },
+      "explicit_energy_contact": {
+        "real": -0.30475665782256295,
+        "imag": 0.0
+      },
+      "mean_energy_contact": {
+        "real": 0.30475665782256284,
+        "imag": 0.0
+      },
+      "energy_contact_cancellation_error": 1.8214910095115242e-16
+    },
+    {
+      "mu": 1.05,
+      "T": 0.004,
+      "p": 0.04,
+      "r": 0.037,
+      "q": 0.02,
+      "z": {
+        "real": 0.0,
+        "imag": 0.05
+      },
+      "values": {
+        "density": {
+          "real": 0.024644430890894298,
+          "imag": 0.0
+        },
+        "current": {
+          "real": 0.0,
+          "imag": 0.008966276510255463
+        },
+        "rotating_energy": {
+          "real": -2.5529834402413475e-05,
+          "imag": 0.0
+        },
+        "rotating_flux": {
+          "real": -0.0,
+          "imag": -6.382458600604355e-05
+        },
+        "energy_term_scale": {
+          "real": 0.0008446502682841681,
+          "imag": 0.0
+        },
+        "flux_term_scale": {
+          "real": 7.01272481592752e-05,
+          "imag": 0.0
+        }
+      },
+      "total_density": {
+        "real": -0.04482306753162907,
+        "imag": 0.0
+      },
+      "total_current": {
+        "real": 0.0,
+        "imag": -0.11205766882907936
+      },
+      "physical_energy": {
+        "real": -0.047089750742612936,
+        "imag": 0.0
+      },
+      "physical_flux": {
+        "real": 0.0,
+        "imag": -0.11772437685653937
+      },
+      "fluctuation_ward_error": 4.551421543172885e-14,
+      "total_charge_ward_error": 1.8284240581722063e-14,
+      "rotating_energy_ward_error": 4.522938298909162e-15,
+      "physical_energy_ward_error": 1.831206841001009e-14,
+      "source_force_method_error": 3.7682104985920123e-16,
+      "contact_method_error": 1.8705788283479219e-16,
+      "phase_contact_identity_error": 0.0,
+      "omitted_background_shift_ward_error": 86.85207227717211,
+      "covariance_stationary_energy_drive": {
+        "real": 1.1519648082658485e-19,
+        "imag": 0.0
+      },
+      "explicit_energy_contact": {
+        "real": -0.31556059832486966,
+        "imag": 0.0
+      },
+      "mean_energy_contact": {
+        "real": 0.3155605983248696,
+        "imag": 0.0
+      },
+      "energy_contact_cancellation_error": 8.795640445279721e-17
+    },
+    {
+      "mu": 1.05,
+      "T": 0.004,
+      "p": 0.04,
+      "r": 0.037,
+      "q": 0.02,
+      "z": {
+        "real": 0.03,
+        "imag": 0.02
+      },
+      "values": {
+        "density": {
+          "real": -0.019079474233798466,
+          "imag": 0.0431810944291263
+        },
+        "current": {
+          "real": -0.010432609992389921,
+          "imag": 0.007127455841251002
+        },
+        "rotating_energy": {
+          "real": -2.7325296968965017e-05,
+          "imag": 2.0513144831468623e-06
+        },
+        "rotating_flux": {
+          "real": -4.3039259936569555e-05,
+          "imag": -2.4248325244239644e-05
+        },
+        "energy_term_scale": {
+          "real": 0.0008681311206288552,
+          "imag": 0.0
+        },
+        "flux_term_scale": {
+          "real": 5.4868461520842895e-05,
+          "imag": 0.0
+        }
+      },
+      "total_density": {
+        "real": 0.032128049254183964,
+        "imag": -0.08264750994602221
+      },
+      "total_current": {
+        "real": 0.13083958382730101,
+        "imag": -0.09184321566485436
+      },
+      "physical_energy": {
+        "real": 0.0337071264199242,
+        "imag": -0.08677783412884017
+      },
+      "physical_flux": {
+        "real": 0.1373385237587295,
+        "imag": -0.09645962477334132
+      },
+      "fluctuation_ward_error": 4.3235050567053775e-14,
+      "total_charge_ward_error": 1.1180947522069196e-14,
+      "rotating_energy_ward_error": 1.56442831541827e-14,
+      "physical_energy_ward_error": 1.1223381889644131e-14,
+      "source_force_method_error": 4.1972638260772904e-16,
+      "contact_method_error": 1.8705788283479219e-16,
+      "phase_contact_identity_error": 0.0,
+      "omitted_background_shift_ward_error": 86.77328957312622,
+      "covariance_stationary_energy_drive": {
+        "real": -1.6940658945086007e-21,
+        "imag": -1.6940658945086007e-20
+      },
+      "explicit_energy_contact": {
+        "real": -0.3204351850597967,
+        "imag": 0.0037421887916646106
+      },
+      "mean_energy_contact": {
+        "real": 0.3204351850597966,
+        "imag": -0.0037421887916646106
+      },
+      "energy_contact_cancellation_error": 8.661247067121032e-17
+    },
+    {
+      "mu": 1.05,
+      "T": 0.004,
+      "p": 0.02,
+      "r": 0.02,
+      "q": 0.0,
+      "z": {
+        "real": 0.0,
+        "imag": 0.02
+      },
+      "values": {
+        "density": {
+          "real": 0.16703593510847714,
+          "imag": 0.0
+        },
+        "current": {
+          "real": 0.0,
+          "imag": 0.0
+        },
+        "rotating_energy": {
+          "real": -1.8973538018496328e-17,
+          "imag": 0.0
+        },
+        "rotating_flux": {
+          "real": 0.0,
+          "imag": 0.0
+        },
+        "energy_term_scale": {
+          "real": 0.0016328013237068009,
+          "imag": 0.0
+        },
+        "flux_term_scale": {
+          "real": 0.0,
+          "imag": 0.0
+        }
+      },
+      "total_density": {
+        "real": -1.2126410986468272e-13,
+        "imag": 0.0
+      },
+      "total_current": {
+        "real": 0.0,
+        "imag": 0.0
+      },
+      "physical_energy": {
+        "real": -1.2734628889593535e-13,
+        "imag": 0.0
+      },
+      "physical_flux": {
+        "real": 0.0,
+        "imag": 0.0
+      },
+      "fluctuation_ward_error": 3.5420469561887927e-13,
+      "total_charge_ward_error": 3.629880893170888e-13,
+      "rotating_energy_ward_error": 1.1620236793673355e-14,
+      "physical_energy_ward_error": 3.630421795827443e-13,
+      "source_force_method_error": 1.3580404966612651e-15,
+      "contact_method_error": 2.223963494980531e-16,
+      "phase_contact_identity_error": 6.092250425567436e-17,
+      "omitted_background_shift_ward_error": 1599.0415578239954,
+      "covariance_stationary_energy_drive": {
+        "real": -9.486769009248164e-20,
+        "imag": 0.0
+      },
+      "explicit_energy_contact": {
+        "real": -2.1458269166130766,
+        "imag": 0.0
+      },
+      "mean_energy_contact": {
+        "real": 2.1458269166130766,
+        "imag": 0.0
+      },
+      "energy_contact_cancellation_error": 0.0
+    },
+    {
+      "mu": 1.05,
+      "T": 0.004,
+      "p": 0.02,
+      "r": 0.02,
+      "q": 0.0,
+      "z": {
+        "real": 0.0,
+        "imag": 0.05
+      },
+      "values": {
+        "density": {
+          "real": 0.03053010376348908,
+          "imag": 0.0
+        },
+        "current": {
+          "real": -0.0,
+          "imag": 0.0
+        },
+        "rotating_energy": {
+          "real": 6.830473686658678e-18,
+          "imag": 0.0
+        },
+        "rotating_flux": {
+          "real": 0.0,
+          "imag": 0.0
+        },
+        "energy_term_scale": {
+          "real": 0.001625149673995779,
+          "imag": 0.0
+        },
+        "flux_term_scale": {
+          "real": 0.0,
+          "imag": 0.0
+        }
+      },
+      "total_density": {
+        "real": 4.0321912475604904e-14,
+        "imag": 0.0
+      },
+      "total_current": {
+        "real": 0.0,
+        "imag": 0.0
+      },
+      "physical_energy": {
+        "real": 4.234483857307181e-14,
+        "imag": 0.0
+      },
+      "physical_flux": {
+        "real": 0.0,
+        "imag": 0.0
+      },
+      "fluctuation_ward_error": 7.405789472641318e-13,
+      "total_charge_ward_error": 6.603631744588511e-13,
+      "rotating_energy_ward_error": 4.20298129824836e-15,
+      "physical_energy_ward_error": 6.604697121418755e-13,
+      "source_force_method_error": 4.984120655178108e-16,
+      "contact_method_error": 2.223963494980531e-16,
+      "phase_contact_identity_error": 6.092250425567436e-17,
+      "omitted_background_shift_ward_error": 1396.2306118035347,
+      "covariance_stationary_energy_drive": {
+        "real": 5.421010862427522e-20,
+        "imag": 0.0
+      },
+      "explicit_energy_contact": {
+        "real": -2.141397312435621,
+        "imag": 0.0
+      },
+      "mean_energy_contact": {
+        "real": 2.141397312435621,
+        "imag": 0.0
+      },
+      "energy_contact_cancellation_error": 0.0
+    },
+    {
+      "mu": 1.05,
+      "T": 0.004,
+      "p": 0.02,
+      "r": 0.02,
+      "q": 0.0,
+      "z": {
+        "real": 0.03,
+        "imag": 0.02
+      },
+      "values": {
+        "density": {
+          "real": -0.02089560369040777,
+          "imag": 0.058197928293008634
+        },
+        "current": {
+          "real": 0.0,
+          "imag": 0.0
+        },
+        "rotating_energy": {
+          "real": -4.7704895589362195e-18,
+          "imag": 2.8254901538035324e-18
+        },
+        "rotating_flux": {
+          "real": 0.0,
+          "imag": 0.0
+        },
+        "energy_term_scale": {
+          "real": 0.0016308358293901483,
+          "imag": 0.0
+        },
+        "flux_term_scale": {
+          "real": 0.0,
+          "imag": 0.0
+        }
+      },
+      "total_density": {
+        "real": 1.6844164951734797e-14,
+        "imag": 3.518019209280965e-14
+      },
+      "total_current": {
+        "real": 0.0,
+        "imag": 0.0
+      },
+      "physical_energy": {
+        "real": 1.76816027097626e-14,
+        "imag": 3.6942027187603934e-14
+      },
+      "physical_flux": {
+        "real": 0.0,
+        "imag": 0.0
+      },
+      "fluctuation_ward_error": 3.0716712522049866e-13,
+      "total_charge_ward_error": 3.1539153583255596e-13,
+      "rotating_energy_ward_error": 3.3997619237132222e-15,
+      "physical_energy_ward_error": 3.1539529913161395e-13,
+      "source_force_method_error": 3.942515945980602e-16,
+      "contact_method_error": 2.223963494980531e-16,
+      "phase_contact_identity_error": 6.092250425567436e-17,
+      "omitted_background_shift_ward_error": 1330.5223246269488,
+      "covariance_stationary_energy_drive": {
+        "real": 2.371692252312041e-20,
+        "imag": 6.776263578034403e-20
+      },
+      "explicit_energy_contact": {
+        "real": -2.1477279484234644,
+        "imag": -0.0025410177381868047
+      },
+      "mean_energy_contact": {
+        "real": 2.1477279484234644,
+        "imag": 0.0025410177381868047
+      },
+      "energy_contact_cancellation_error": 0.0
+    },
+    {
+      "mu": 1.2,
+      "T": 0.002,
+      "p": 0.005,
+      "r": 0.011,
+      "q": 0.008,
+      "z": {
+        "real": 0.0,
+        "imag": 0.02
+      },
+      "values": {
+        "density": {
+          "real": 1.5249023201283105,
+          "imag": 0.0
+        },
+        "current": {
+          "real": 0.0,
+          "imag": 3.415424414106427
+        },
+        "rotating_energy": {
+          "real": 3.841417367335699e-05,
+          "imag": 0.0
+        },
+        "rotating_flux": {
+          "real": 0.0,
+          "imag": 9.603543418344878e-05
+        },
+        "energy_term_scale": {
+          "real": 0.000671459275530614,
+          "imag": 0.0
+        },
+        "flux_term_scale": {
+          "real": 0.00020189227010265542,
+          "imag": 0.0
+        }
+      },
+      "total_density": {
+        "real": 0.235863423791687,
+        "imag": 0.0
+      },
+      "total_current": {
+        "real": 0.0,
+        "imag": 0.5896585594612667
+      },
+      "physical_energy": {
+        "real": 0.28307452272369776,
+        "imag": 0.0
+      },
+      "physical_flux": {
+        "real": 0.0,
+        "imag": 0.7076863067877034
+      },
+      "fluctuation_ward_error": 2.2602857459383212e-11,
+      "total_charge_ward_error": 1.3521286508611417e-12,
+      "rotating_energy_ward_error": 2.993885132621294e-14,
+      "physical_energy_ward_error": 1.3521082662272324e-12,
+      "source_force_method_error": 3.894034676725492e-15,
+      "contact_method_error": 9.28147959398756e-17,
+      "phase_contact_identity_error": 0.0,
+      "omitted_background_shift_ward_error": 1479.8486659595474,
+      "covariance_stationary_energy_drive": {
+        "real": -6.776263578034403e-21,
+        "imag": 0.0
+      },
+      "explicit_energy_contact": {
+        "real": -8.439899443232678,
+        "imag": 0.0
+      },
+      "mean_energy_contact": {
+        "real": 8.439899443232676,
+        "imag": 0.0
+      },
+      "energy_contact_cancellation_error": 1.0523566372728399e-16
+    },
+    {
+      "mu": 1.2,
+      "T": 0.002,
+      "p": 0.005,
+      "r": 0.011,
+      "q": 0.008,
+      "z": {
+        "real": 0.0,
+        "imag": 0.05
+      },
+      "values": {
+        "density": {
+          "real": 0.2527494405627815,
+          "imag": 0.0
+        },
+        "current": {
+          "real": 0.0,
+          "imag": 1.3873292620497666
+        },
+        "rotating_energy": {
+          "real": 2.3410955360110027e-05,
+          "imag": 0.0
+        },
+        "rotating_flux": {
+          "real": 0.0,
+          "imag": 0.00014631847100059588
+        },
+        "energy_term_scale": {
+          "real": 0.0006447833386802955,
+          "imag": 0.0
+        },
+        "flux_term_scale": {
+          "real": 0.00042744200745640365,
+          "imag": 0.0
+        }
+      },
+      "total_density": {
+        "real": 0.03900368451490771,
+        "imag": 0.0
+      },
+      "total_current": {
+        "real": 0.0,
+        "imag": 0.24377302821669233
+      },
+      "physical_energy": {
+        "real": 0.04682783237324936,
+        "imag": 0.0
+      },
+      "physical_flux": {
+        "real": 0.0,
+        "imag": 0.2926739523310314
+      },
+      "fluctuation_ward_error": 3.759174746084955e-12,
+      "total_charge_ward_error": 2.7189753992928085e-13,
+      "rotating_energy_ward_error": 2.059462357337912e-14,
+      "physical_energy_ward_error": 2.718936603565289e-13,
+      "source_force_method_error": 1.6623086054070963e-16,
+      "contact_method_error": 9.28147959398756e-17,
+      "phase_contact_identity_error": 0.0,
+      "omitted_background_shift_ward_error": 1465.2232094954124,
+      "covariance_stationary_energy_drive": {
+        "real": -1.6601845766184287e-19,
+        "imag": 0.0
+      },
+      "explicit_energy_contact": {
+        "real": -8.573722001235701,
+        "imag": 0.0
+      },
+      "mean_energy_contact": {
+        "real": 8.5737220012357,
+        "imag": 0.0
+      },
+      "energy_contact_cancellation_error": 1.0359309755694377e-16
+    },
+    {
+      "mu": 1.2,
+      "T": 0.002,
+      "p": 0.005,
+      "r": 0.011,
+      "q": 0.008,
+      "z": {
+        "real": 0.03,
+        "imag": 0.02
+      },
+      "values": {
+        "density": {
+          "real": -0.1844084955144254,
+          "imag": 0.4580161026918062
+        },
+        "current": {
+          "real": -1.6102412427221957,
+          "imag": 1.0846000185116627
+        },
+        "rotating_energy": {
+          "real": 1.8371571987184143e-05,
+          "imag": 5.341138477986651e-06
+        },
+        "rotating_flux": {
+          "real": 5.554054875700471e-05,
+          "imag": 6.595819926047603e-05
+        },
+        "energy_term_scale": {
+          "real": 0.0006402645759036958,
+          "imag": 0.0
+        },
+        "flux_term_scale": {
+          "real": 0.0003041373563502243,
+          "imag": 0.0
+        }
+      },
+      "total_density": {
+        "real": -0.0285232588400188,
+        "imag": 0.0705945698815601
+      },
+      "total_current": {
+        "real": -0.28344864534779846,
+        "imag": 0.1934214899526413
+      },
+      "physical_energy": {
+        "real": -0.03420953903603537,
+        "imag": 0.0847188249963501
+      },
+      "physical_flux": {
+        "real": -0.3400828338686011,
+        "imag": 0.23217174614243002
+      },
+      "fluctuation_ward_error": 1.22028684102558e-11,
+      "total_charge_ward_error": 9.068814105391345e-13,
+      "rotating_energy_ward_error": 2.275847756212812e-14,
+      "physical_energy_ward_error": 9.068640468024578e-13,
+      "source_force_method_error": 3.6232660757300996e-15,
+      "contact_method_error": 9.28147959398756e-17,
+      "phase_contact_identity_error": 0.0,
+      "omitted_background_shift_ward_error": 1460.3793108400803,
+      "covariance_stationary_energy_drive": {
+        "real": -1.6601845766184287e-19,
+        "imag": 1.2197274440461925e-19
+      },
+      "explicit_energy_contact": {
+        "real": -8.647413581988387,
+        "imag": 0.04295346130966228
+      },
+      "mean_energy_contact": {
+        "real": 8.647413581988385,
+        "imag": -0.04295346130966228
+      },
+      "energy_contact_cancellation_error": 1.0270903021124226e-16
+    },
+    {
+      "mu": 1.2,
+      "T": 0.002,
+      "p": 0.02,
+      "r": 0.031,
+      "q": 0.02,
+      "z": {
+        "real": 0.0,
+        "imag": 0.02
+      },
+      "values": {
+        "density": {
+          "real": 0.08342453675080289,
+          "imag": 0.0
+        },
+        "current": {
+          "real": 0.0,
+          "imag": 0.07348001630418291
+        },
+        "rotating_energy": {
+          "real": 1.4036808942687603e-05,
+          "imag": 0.0
+        },
+        "rotating_flux": {
+          "real": 0.0,
+          "imag": 1.4036808942680785e-05
+        },
+        "energy_term_scale": {
+          "real": 0.00010178589005553728,
+          "imag": 0.0
+        },
+        "flux_term_scale": {
+          "real": 1.4186538067664384e-05,
+          "imag": 0.0
+        }
+      },
+      "total_density": {
+        "real": 0.00995746274369777,
+        "imag": 0.0
+      },
+      "total_current": {
+        "real": 0.0,
+        "imag": 0.009957462743670847
+      },
+      "physical_energy": {
+        "real": 0.01196299210138001,
+        "imag": 0.0
+      },
+      "physical_flux": {
+        "real": 0.0,
+        "imag": 0.011962992101347696
+      },
+      "fluctuation_ward_error": 1.3493898308752148e-12,
+      "total_charge_ward_error": 9.160933500353781e-14,
+      "rotating_energy_ward_error": 5.879514067044848e-14,
+      "physical_energy_ward_error": 9.162048724456214e-14,
+      "source_force_method_error": 1.1581069265921084e-15,
+      "contact_method_error": 2.953558239624322e-16,
+      "phase_contact_identity_error": 7.810325445481088e-17,
+      "omitted_background_shift_ward_error": 236.5452582713052,
+      "covariance_stationary_energy_drive": {
+        "real": -1.3552527156068805e-20,
+        "imag": 0.0
+      },
+      "explicit_energy_contact": {
+        "real": -0.07458449138798998,
+        "imag": 0.0
+      },
+      "mean_energy_contact": {
+        "real": 0.07458449138798998,
+        "imag": 0.0
+      },
+      "energy_contact_cancellation_error": 0.0
+    },
+    {
+      "mu": 1.2,
+      "T": 0.002,
+      "p": 0.02,
+      "r": 0.031,
+      "q": 0.02,
+      "z": {
+        "real": 0.0,
+        "imag": 0.05
+      },
+      "values": {
+        "density": {
+          "real": 0.017037541616222632,
+          "imag": 0.0
+        },
+        "current": {
+          "real": 0.0,
+          "imag": 0.03253137488135531
+        },
+        "rotating_energy": {
+          "real": 3.5313246159322457e-06,
+          "imag": 0.0
+        },
+        "rotating_flux": {
+          "real": 0.0,
+          "imag": 8.828311539827536e-06
+        },
+        "energy_term_scale": {
+          "real": 8.373006376563398e-05,
+          "imag": 0.0
+        },
+        "flux_term_scale": {
+          "real": 1.304578609841861e-05,
+          "imag": 0.0
+        }
+      },
+      "total_density": {
+        "real": 0.0019565046255646916,
+        "imag": 0.0
+      },
+      "total_current": {
+        "real": 0.0,
+        "imag": 0.0048912615639020544
+      },
+      "physical_energy": {
+        "real": 0.0023513368752935623,
+        "imag": 0.0
+      },
+      "physical_flux": {
+        "real": 0.0,
+        "imag": 0.005878342188222293
+      },
+      "fluctuation_ward_error": 4.777907047113159e-13,
+      "total_charge_ward_error": 6.887316688978882e-14,
+      "rotating_energy_ward_error": 1.3843694195671135e-14,
+      "physical_energy_ward_error": 6.889248283643541e-14,
+      "source_force_method_error": 3.823434788273052e-16,
+      "contact_method_error": 2.953558239624322e-16,
+      "phase_contact_identity_error": 7.810325445481088e-17,
+      "omitted_background_shift_ward_error": 219.07712895116708,
+      "covariance_stationary_energy_drive": {
+        "real": 7.623296525288703e-21,
+        "imag": 0.0
+      },
+      "explicit_energy_contact": {
+        "real": -0.08257469582792479,
+        "imag": 0.0
+      },
+      "mean_energy_contact": {
+        "real": 0.08257469582792479,
+        "imag": 0.0
+      },
+      "energy_contact_cancellation_error": 0.0
+    },
+    {
+      "mu": 1.2,
+      "T": 0.002,
+      "p": 0.02,
+      "r": 0.031,
+      "q": 0.02,
+      "z": {
+        "real": 0.03,
+        "imag": 0.02
+      },
+      "values": {
+        "density": {
+          "real": -0.00960671450027091,
+          "imag": 0.03485920844722121
+        },
+        "current": {
+          "real": -0.038052184242832694,
+          "imag": 0.027456715117517603
+        },
+        "rotating_energy": {
+          "real": -6.550158980138451e-07,
+          "imag": 4.7009044844178455e-06
+        },
+        "rotating_flux": {
+          "real": -5.683428331433517e-06,
+          "imag": 6.3963408286142526e-06
+        },
+        "energy_term_scale": {
+          "real": 8.275349000597893e-05,
+          "imag": 0.0
+        },
+        "flux_term_scale": {
+          "real": 1.243116746691648e-05,
+          "imag": 0.0
+        }
+      },
+      "total_density": {
+        "real": -0.0012740653864524807,
+        "imag": 0.00385268517988048
+      },
+      "total_current": {
+        "real": -0.005763783259557474,
+        "imag": 0.0045049623833734835
+      },
+      "physical_energy": {
+        "real": -0.0015295334796409906,
+        "imag": 0.004627923120340994
+      },
+      "physical_flux": {
+        "real": -0.006922223339800403,
+        "imag": 0.0054123512008767945
+      },
+      "fluctuation_ward_error": 1.449666138480815e-13,
+      "total_charge_ward_error": 2.6340283695559604e-14,
+      "rotating_energy_ward_error": 3.258823172720467e-14,
+      "physical_energy_ward_error": 2.6351204840972883e-14,
+      "source_force_method_error": 2.2340641712555884e-15,
+      "contact_method_error": 2.953558239624322e-16,
+      "phase_contact_identity_error": 7.810325445481088e-17,
+      "omitted_background_shift_ward_error": 211.75763866072322,
+      "covariance_stationary_energy_drive": {
+        "real": -6.776263578034403e-21,
+        "imag": -1.4823076576950256e-20
+      },
+      "explicit_energy_contact": {
+        "real": -0.08578271891755208,
+        "imag": 0.003193850213544816
+      },
+      "mean_energy_contact": {
+        "real": 0.08578271891755208,
+        "imag": -0.003193850213544816
+      },
+      "energy_contact_cancellation_error": 0.0
+    },
+    {
+      "mu": 1.2,
+      "T": 0.002,
+      "p": 0.04,
+      "r": 0.037,
+      "q": 0.02,
+      "z": {
+        "real": 0.0,
+        "imag": 0.02
+      },
+      "values": {
+        "density": {
+          "real": 0.002270940572185966,
+          "imag": 0.0
+        },
+        "current": {
+          "real": 0.0,
+          "imag": 0.0003655028378866153
+        },
+        "rotating_energy": {
+          "real": -9.767394430346402e-08,
+          "imag": 0.0
+        },
+        "rotating_flux": {
+          "real": 0.0,
+          "imag": -9.767394430338157e-08
+        },
+        "energy_term_scale": {
+          "real": 1.0906847248980158e-05,
+          "imag": 0.0
+        },
+        "flux_term_scale": {
+          "real": 4.970850999600126e-07,
+          "imag": 0.0
+        }
+      },
+      "total_density": {
+        "real": -0.0015284435291790313,
+        "imag": 0.0
+      },
+      "total_current": {
+        "real": 0.0,
+        "imag": -0.001528443529180491
+      },
+      "physical_energy": {
+        "real": -0.001834229908959141,
+        "imag": 0.0
+      },
+      "physical_flux": {
+        "real": 0.0,
+        "imag": -0.0018342299089608926
+      },
+      "fluctuation_ward_error": 3.823886386381175e-13,
+      "total_charge_ward_error": 1.7526838173302172e-13,
+      "rotating_energy_ward_error": 7.229894481431703e-15,
+      "physical_energy_ward_error": 1.752378403992372e-13,
+      "source_force_method_error": 5.96484863391592e-15,
+      "contact_method_error": 3.8770654133643073e-16,
+      "phase_contact_identity_error": 7.249817414106711e-17,
+      "omitted_background_shift_ward_error": 281.5204023113502,
+      "covariance_stationary_energy_drive": {
+        "real": -1.9058241313221758e-21,
+        "imag": 0.0
+      },
+      "explicit_energy_contact": {
+        "real": -0.002508454047824828,
+        "imag": 0.0
+      },
+      "mean_energy_contact": {
+        "real": 0.0025084540478248285,
+        "imag": 0.0
+      },
+      "energy_contact_cancellation_error": 8.644385360980844e-17
+    },
+    {
+      "mu": 1.2,
+      "T": 0.002,
+      "p": 0.04,
+      "r": 0.037,
+      "q": 0.02,
+      "z": {
+        "real": 0.0,
+        "imag": 0.05
+      },
+      "values": {
+        "density": {
+          "real": 0.00060798775476926,
+          "imag": 0.0
+        },
+        "current": {
+          "real": 0.0,
+          "imag": 0.0001618455942344574
+        },
+        "rotating_energy": {
+          "real": -1.6368795820731085e-07,
+          "imag": 0.0
+        },
+        "rotating_flux": {
+          "real": -0.0,
+          "imag": -4.09219895518017e-07
+        },
+        "energy_term_scale": {
+          "real": 9.098873326924145e-06,
+          "imag": 0.0
+        },
+        "flux_term_scale": {
+          "real": 5.881151048019021e-07,
+          "imag": 0.0
+        }
+      },
+      "total_density": {
+        "real": -0.0003002674152405495,
+        "imag": 0.0
+      },
+      "total_current": {
+        "real": 0.0,
+        "imag": -0.0007506685381019703
+      },
+      "physical_energy": {
+        "real": -0.0003604845862468667,
+        "imag": 0.0
+      },
+      "physical_flux": {
+        "real": 0.0,
+        "imag": -0.0009012114656178824
+      },
+      "fluctuation_ward_error": 2.2028333395000065e-13,
+      "total_charge_ward_error": 1.2260732636702793e-13,
+      "rotating_energy_ward_error": 1.1144729323034356e-14,
+      "physical_energy_ward_error": 1.2255532326366675e-13,
+      "source_force_method_error": 6.61186318042154e-16,
+      "contact_method_error": 3.8770654133643073e-16,
+      "phase_contact_identity_error": 7.249817414106711e-17,
+      "omitted_background_shift_ward_error": 213.3694259937479,
+      "covariance_stationary_energy_drive": {
+        "real": -2.4352197233561135e-21,
+        "imag": 0.0
+      },
+      "explicit_energy_contact": {
+        "real": -0.002778000410424963,
+        "imag": 0.0
+      },
+      "mean_energy_contact": {
+        "real": 0.0027780004104249636,
+        "imag": 0.0
+      },
+      "energy_contact_cancellation_error": 7.805630038187426e-17
+    },
+    {
+      "mu": 1.2,
+      "T": 0.002,
+      "p": 0.04,
+      "r": 0.037,
+      "q": 0.02,
+      "z": {
+        "real": 0.03,
+        "imag": 0.02
+      },
+      "values": {
+        "density": {
+          "real": 0.00010179383937389827,
+          "imag": 0.0014297740855351267
+        },
+        "current": {
+          "real": -0.00018930987976342685,
+          "imag": 0.00013662187504971923
+        },
+        "rotating_energy": {
+          "real": -2.0259959239227533e-07,
+          "imag": -2.44097660460126e-08
+        },
+        "rotating_flux": {
+          "real": -2.794896225422747e-07,
+          "imag": -2.392142414611565e-07
+        },
+        "energy_term_scale": {
+          "real": 9.545866289750005e-06,
+          "imag": 0.0
+        },
+        "flux_term_scale": {
+          "real": 5.258780096345817e-07,
+          "imag": 0.0
+        }
+      },
+      "total_density": {
+        "real": 0.00019548184368932615,
+        "imag": -0.0005912453541761817
+      },
+      "total_current": {
+        "real": 0.0008844681197109255,
+        "imag": -0.0006913861875754795
+      },
+      "physical_energy": {
+        "real": 0.0002343756128347991,
+        "imag": -0.000709518834777464
+      },
+      "physical_flux": {
+        "real": 0.0010610822540305684,
+        "imag": -0.0008299026393320364
+      },
+      "fluctuation_ward_error": 1.9511951087944686e-13,
+      "total_charge_ward_error": 1.181474394249269e-13,
+      "rotating_energy_ward_error": 1.0511990233062942e-14,
+      "physical_energy_ward_error": 1.181340122653537e-13,
+      "source_force_method_error": 2.0796872799664085e-15,
+      "contact_method_error": 3.8770654133643073e-16,
+      "phase_contact_identity_error": 7.249817414106711e-17,
+      "omitted_background_shift_ward_error": 191.43695679649932,
+      "covariance_stationary_energy_drive": {
+        "real": -2.2234614865425384e-21,
+        "imag": 9.529120656610879e-22
+      },
+      "explicit_energy_contact": {
+        "real": -0.0028861954033209502,
+        "imag": 0.00010774576881330288
+      },
+      "mean_energy_contact": {
+        "real": 0.0028861954033209507,
+        "imag": -0.00010774576881330288
+      },
+      "energy_contact_cancellation_error": 7.507790145006676e-17
+    },
+    {
+      "mu": 1.2,
+      "T": 0.002,
+      "p": 0.02,
+      "r": 0.02,
+      "q": 0.0,
+      "z": {
+        "real": 0.0,
+        "imag": 0.02
+      },
+      "values": {
+        "density": {
+          "real": 0.0365952474270575,
+          "imag": 0.0
+        },
+        "current": {
+          "real": 0.0,
+          "imag": 0.0
+        },
+        "rotating_energy": {
+          "real": 4.7366082410460475e-18,
+          "imag": 0.0
+        },
+        "rotating_flux": {
+          "real": 0.0,
+          "imag": 0.0
+        },
+        "energy_term_scale": {
+          "real": 0.0001440114517029391,
+          "imag": 0.0
+        },
+        "flux_term_scale": {
+          "real": 0.0,
+          "imag": 0.0
+        }
+      },
+      "total_density": {
+        "real": -1.0486056467584604e-13,
+        "imag": 0.0
+      },
+      "total_current": {
+        "real": 0.0,
+        "imag": 0.0
+      },
+      "physical_energy": {
+        "real": -1.2582794100277418e-13,
+        "imag": 0.0
+      },
+      "physical_flux": {
+        "real": 0.0,
+        "imag": 0.0
+      },
+      "fluctuation_ward_error": 1.4319400792693068e-12,
+      "total_charge_ward_error": 1.4327074148727417e-12,
+      "rotating_energy_ward_error": 3.289049714474463e-14,
+      "physical_energy_ward_error": 1.4326534847341071e-12,
+      "source_force_method_error": 3.962707237803472e-16,
+      "contact_method_error": 1.6022930076363623e-16,
+      "phase_contact_identity_error": 0.0,
+      "omitted_background_shift_ward_error": 1983.9644257467703,
+      "covariance_stationary_energy_drive": {
+        "real": 6.776263578034403e-21,
+        "imag": 0.0
+      },
+      "explicit_energy_contact": {
+        "real": -0.15579661180653737,
+        "imag": 0.0
+      },
+      "mean_energy_contact": {
+        "real": 0.15579661180653737,
+        "imag": 0.0
+      },
+      "energy_contact_cancellation_error": 0.0
+    },
+    {
+      "mu": 1.2,
+      "T": 0.002,
+      "p": 0.02,
+      "r": 0.02,
+      "q": 0.0,
+      "z": {
+        "real": 0.0,
+        "imag": 0.05
+      },
+      "values": {
+        "density": {
+          "real": 0.008249663265581547,
+          "imag": 0.0
+        },
+        "current": {
+          "real": -0.0,
+          "imag": 0.0
+        },
+        "rotating_energy": {
+          "real": -1.0503208545953324e-18,
+          "imag": 0.0
+        },
+        "rotating_flux": {
+          "real": 0.0,
+          "imag": 0.0
+        },
+        "energy_term_scale": {
+          "real": 0.0001338784278771491,
+          "imag": 0.0
+        },
+        "flux_term_scale": {
+          "real": 0.0,
+          "imag": 0.0
+        }
+      },
+      "total_density": {
+        "real": -9.695369507234375e-15,
+        "imag": 0.0
+      },
+      "total_current": {
+        "real": 0.0,
+        "imag": 0.0
+      },
+      "physical_energy": {
+        "real": -1.1635493729535845e-14,
+        "imag": 0.0
+      },
+      "physical_flux": {
+        "real": 0.0,
+        "imag": 0.0
+      },
+      "fluctuation_ward_error": 5.743220470011436e-13,
+      "total_charge_ward_error": 5.876221365106359e-13,
+      "rotating_energy_ward_error": 7.845333047674705e-15,
+      "physical_energy_ward_error": 5.876751851836941e-13,
+      "source_force_method_error": 1.2933048524248553e-15,
+      "contact_method_error": 1.6022930076363623e-16,
+      "phase_contact_identity_error": 0.0,
+      "omitted_background_shift_ward_error": 1404.973223252526,
+      "covariance_stationary_energy_drive": {
+        "real": 2.0328790734103208e-20,
+        "imag": 0.0
+      },
+      "explicit_energy_contact": {
+        "real": -0.1555041721109518,
+        "imag": 0.0
+      },
+      "mean_energy_contact": {
+        "real": 0.1555041721109518,
+        "imag": 0.0
+      },
+      "energy_contact_cancellation_error": 0.0
+    },
+    {
+      "mu": 1.2,
+      "T": 0.002,
+      "p": 0.02,
+      "r": 0.02,
+      "q": 0.0,
+      "z": {
+        "real": 0.03,
+        "imag": 0.02
+      },
+      "values": {
+        "density": {
+          "real": -0.004250067330708512,
+          "imag": 0.017664278384843114
+        },
+        "current": {
+          "real": 0.0,
+          "imag": -0.0
+        },
+        "rotating_energy": {
+          "real": -1.7923217163900995e-18,
+          "imag": 4.368731244141664e-18
+        },
+        "rotating_flux": {
+          "real": 0.0,
+          "imag": 0.0
+        },
+        "energy_term_scale": {
+          "real": 0.00013205742789697942,
+          "imag": 0.0
+        },
+        "flux_term_scale": {
+          "real": 0.0,
+          "imag": 0.0
+        }
+      },
+      "total_density": {
+        "real": 1.7077485259253677e-14,
+        "imag": -1.9744622603568018e-14
+      },
+      "total_current": {
+        "real": 0.0,
+        "imag": -0.0
+      },
+      "physical_energy": {
+        "real": 2.0491189989388022e-14,
+        "imag": -2.368917839303748e-14
+      },
+      "physical_flux": {
+        "real": 0.0,
+        "imag": 0.0
+      },
+      "fluctuation_ward_error": 7.173533789949297e-13,
+      "total_charge_ward_error": 7.184290629369581e-13,
+      "rotating_energy_ward_error": 3.575792913997808e-14,
+      "physical_energy_ward_error": 7.183263956071682e-13,
+      "source_force_method_error": 2.008697779533214e-15,
+      "contact_method_error": 1.6022930076363623e-16,
+      "phase_contact_identity_error": 0.0,
+      "omitted_background_shift_ward_error": 1230.7701052610744,
+      "covariance_stationary_energy_drive": {
+        "real": 2.964615315390051e-21,
+        "imag": -1.6940658945086007e-20
+      },
+      "explicit_energy_contact": {
+        "real": -0.1559221031330263,
+        "imag": -0.000167705410728742
+      },
+      "mean_energy_contact": {
+        "real": 0.1559221031330263,
+        "imag": 0.000167705410728742
+      },
+      "energy_contact_cancellation_error": 0.0
+    },
+    {
+      "mu": 1.2,
+      "T": 0.004,
+      "p": 0.005,
+      "r": 0.011,
+      "q": 0.008,
+      "z": {
+        "real": 0.0,
+        "imag": 0.02
+      },
+      "values": {
+        "density": {
+          "real": 3.924388193224079,
+          "imag": 0.0
+        },
+        "current": {
+          "real": 0.0,
+          "imag": 8.339283455953092
+        },
+        "rotating_energy": {
+          "real": 6.400627593793577e-05,
+          "imag": 0.0
+        },
+        "rotating_flux": {
+          "real": 0.0,
+          "imag": 0.0001600156898449037
+        },
+        "energy_term_scale": {
+          "real": 0.001952937904655958,
+          "imag": 0.0
+        },
+        "flux_term_scale": {
+          "real": 0.000566122250240109,
+          "imag": 0.0
+        }
+      },
+      "total_density": {
+        "real": 0.30692208267719323,
+        "imag": 0.0
+      },
+      "total_current": {
+        "real": 0.0,
+        "imag": 0.7673052066975625
+      },
+      "physical_energy": {
+        "real": 0.3683705054885698,
+        "imag": 0.0
+      },
+      "physical_flux": {
+        "real": 0.0,
+        "imag": 0.9209262637269199
+      },
+      "fluctuation_ward_error": 1.569259635418171e-12,
+      "total_charge_ward_error": 1.3172256349206883e-13,
+      "rotating_energy_ward_error": 1.1795726161650013e-14,
+      "physical_energy_ward_error": 1.3172259256087746e-13,
+      "source_force_method_error": 5.706451199432001e-15,
+      "contact_method_error": 3.08754136522421e-16,
+      "phase_contact_identity_error": 0.0,
+      "omitted_background_shift_ward_error": 1517.7450470297986,
+      "covariance_stationary_energy_drive": {
+        "real": 8.673617379884035e-19,
+        "imag": 0.0
+      },
+      "explicit_energy_contact": {
+        "real": -22.66728511643831,
+        "imag": 0.0
+      },
+      "mean_energy_contact": {
+        "real": 22.66728511643831,
+        "imag": 0.0
+      },
+      "energy_contact_cancellation_error": 0.0
+    },
+    {
+      "mu": 1.2,
+      "T": 0.004,
+      "p": 0.005,
+      "r": 0.011,
+      "q": 0.008,
+      "z": {
+        "real": 0.0,
+        "imag": 0.05
+      },
+      "values": {
+        "density": {
+          "real": 0.6507570834035725,
+          "imag": 0.0
+        },
+        "current": {
+          "real": 0.0,
+          "imag": 3.387377307788184
+        },
+        "rotating_energy": {
+          "real": 3.278496640733491e-05,
+          "imag": 0.0
+        },
+        "rotating_flux": {
+          "real": 0.0,
+          "imag": 0.00020490604004564652
+        },
+        "energy_term_scale": {
+          "real": 0.0018762962284902482,
+          "imag": 0.0
+        },
+        "flux_term_scale": {
+          "real": 0.0012565938105542356,
+          "imag": 0.0
+        }
+      },
+      "total_density": {
+        "real": 0.050754495454508164,
+        "imag": 0.0
+      },
+      "total_current": {
+        "real": 0.0,
+        "imag": 0.3172155965917782
+      },
+      "physical_energy": {
+        "real": 0.06093817951181713,
+        "imag": 0.0
+      },
+      "physical_flux": {
+        "real": 0.0,
+        "imag": 0.3808636219501795
+      },
+      "fluctuation_ward_error": 8.580586143624408e-13,
+      "total_charge_ward_error": 7.721305622675588e-14,
+      "rotating_energy_ward_error": 1.5147786956856895e-14,
+      "physical_energy_ward_error": 7.719412017828052e-14,
+      "source_force_method_error": 1.154191818229882e-15,
+      "contact_method_error": 3.08754136522421e-16,
+      "phase_contact_identity_error": 0.0,
+      "omitted_background_shift_ward_error": 1501.4691321637818,
+      "covariance_stationary_energy_drive": {
+        "real": 2.303929616531697e-19,
+        "imag": 0.0
+      },
+      "explicit_energy_contact": {
+        "real": -23.026700103073516,
+        "imag": 0.0
+      },
+      "mean_energy_contact": {
+        "real": 23.026700103073516,
+        "imag": 0.0
+      },
+      "energy_contact_cancellation_error": 0.0
+    },
+    {
+      "mu": 1.2,
+      "T": 0.004,
+      "p": 0.005,
+      "r": 0.011,
+      "q": 0.008,
+      "z": {
+        "real": 0.03,
+        "imag": 0.02
+      },
+      "values": {
+        "density": {
+          "real": -0.4746354800228261,
+          "imag": 1.1795254818062442
+        },
+        "current": {
+          "real": -3.931651113799558,
+          "imag": 2.6482172737529415
+        },
+        "rotating_energy": {
+          "real": 2.224474584924509e-05,
+          "imag": 1.1087338675101914e-05
+        },
+        "rotating_flux": {
+          "real": 5.5699450246832584e-05,
+          "imag": 9.718938465482546e-05
+        },
+        "energy_term_scale": {
+          "real": 0.0018641528824749547,
+          "imag": 0.0
+        },
+        "flux_term_scale": {
+          "real": 0.0008898815977221732,
+          "imag": 0.0
+        }
+      },
+      "total_density": {
+        "real": -0.037116525427223546,
+        "imag": 0.0918630462239951
+      },
+      "total_current": {
+        "real": -0.3688445859109635,
+        "imag": 0.2516951097667586
+      },
+      "physical_energy": {
+        "real": -0.044517585766819,
+        "imag": 0.11024674280746923
+      },
+      "physical_flux": {
+        "real": -0.4425578036429093,
+        "imag": 0.3021313211047651
+      },
+      "fluctuation_ward_error": 2.643335188759613e-12,
+      "total_charge_ward_error": 2.6349944891986396e-13,
+      "rotating_energy_ward_error": 1.2349183729194225e-14,
+      "physical_energy_ward_error": 2.634927114348127e-13,
+      "source_force_method_error": 2.9150073300651817e-15,
+      "contact_method_error": 3.08754136522421e-16,
+      "phase_contact_identity_error": 0.0,
+      "omitted_background_shift_ward_error": 1496.0856273104546,
+      "covariance_stationary_energy_drive": {
+        "real": -2.778268066994105e-19,
+        "imag": 2.0328790734103208e-19
+      },
+      "explicit_energy_contact": {
+        "real": -23.224617025532304,
+        "imag": 0.11536270073716436
+      },
+      "mean_energy_contact": {
+        "real": 23.224617025532304,
+        "imag": -0.11536270073716436
+      },
+      "energy_contact_cancellation_error": 0.0
+    },
+    {
+      "mu": 1.2,
+      "T": 0.004,
+      "p": 0.02,
+      "r": 0.031,
+      "q": 0.02,
+      "z": {
+        "real": 0.0,
+        "imag": 0.02
+      },
+      "values": {
+        "density": {
+          "real": 0.6031601735618822,
+          "imag": 0.0
+        },
+        "current": {
+          "real": 0.0,
+          "imag": 0.454836717036121
+        },
+        "rotating_energy": {
+          "real": 6.119320039609575e-05,
+          "imag": 0.0
+        },
+        "rotating_flux": {
+          "real": 0.0,
+          "imag": 6.119320039615838e-05
+        },
+        "energy_term_scale": {
+          "real": 0.0008917087572038014,
+          "imag": 0.0
+        },
+        "flux_term_scale": {
+          "real": 9.012122890756051e-05,
+          "imag": 0.0
+        }
+      },
+      "total_density": {
+        "real": -0.03857915303946069,
+        "imag": 0.0
+      },
+      "total_current": {
+        "real": 0.0,
+        "imag": -0.03857915303935888
+      },
+      "physical_energy": {
+        "real": -0.04623379044695673,
+        "imag": 0.0
+      },
+      "physical_flux": {
+        "real": 0.0,
+        "imag": -0.0462337904468345
+      },
+      "fluctuation_ward_error": 3.4377588930527415e-13,
+      "total_charge_ward_error": 4.642021161555285e-14,
+      "rotating_energy_ward_error": 6.378650013090093e-14,
+      "physical_energy_ward_error": 4.644276977406594e-14,
+      "source_force_method_error": 2.7156497357090387e-15,
+      "contact_method_error": 2.0846216757844302e-16,
+      "phase_contact_identity_error": 3.8981856257250124e-17,
+      "omitted_background_shift_ward_error": 254.06713036600618,
+      "covariance_stationary_energy_drive": {
+        "real": -1.6263032587282567e-19,
+        "imag": 0.0
+      },
+      "explicit_energy_contact": {
+        "real": -0.5977118223038331,
+        "imag": 0.0
+      },
+      "mean_energy_contact": {
+        "real": 0.5977118223038332,
+        "imag": 0.0
+      },
+      "energy_contact_cancellation_error": 9.287276771152772e-17
+    },
+    {
+      "mu": 1.2,
+      "T": 0.004,
+      "p": 0.02,
+      "r": 0.031,
+      "q": 0.02,
+      "z": {
+        "real": 0.0,
+        "imag": 0.05
+      },
+      "values": {
+        "density": {
+          "real": 0.12424225064715899,
+          "imag": 0.0
+        },
+        "current": {
+          "real": 0.0,
+          "imag": 0.20136582188625476
+        },
+        "rotating_energy": {
+          "real": 8.16242483038972e-06,
+          "imag": 0.0
+        },
+        "rotating_flux": {
+          "real": 0.0,
+          "imag": 2.0406062075947417e-05
+        },
+        "energy_term_scale": {
+          "real": 0.0007378418376171776,
+          "imag": 0.0
+        },
+        "flux_term_scale": {
+          "real": 0.0001137885754770243,
+          "imag": 0.0
+        }
+      },
+      "total_density": {
+        "real": -0.007574064958143778,
+        "imag": 0.0
+      },
+      "total_current": {
+        "real": 0.0,
+        "imag": -0.018935162395412403
+      },
+      "physical_energy": {
+        "real": -0.009080715524942143,
+        "imag": 0.0
+      },
+      "physical_flux": {
+        "real": 0.0,
+        "imag": -0.022701788812418935
+      },
+      "fluctuation_ward_error": 2.381993651817745e-13,
+      "total_charge_ward_error": 4.987492529554837e-14,
+      "rotating_energy_ward_error": 1.3725569310534254e-14,
+      "physical_energy_ward_error": 4.989545065460789e-14,
+      "source_force_method_error": 2.2770100903899855e-15,
+      "contact_method_error": 2.0846216757844302e-16,
+      "phase_contact_identity_error": 3.8981856257250124e-17,
+      "omitted_background_shift_ward_error": 232.29406148705786,
+      "covariance_stationary_energy_drive": {
+        "real": 2.439454888092385e-19,
+        "imag": 0.0
+      },
+      "explicit_energy_contact": {
+        "real": -0.6617548590875163,
+        "imag": 0.0
+      },
+      "mean_energy_contact": {
+        "real": 0.6617548590875165,
+        "imag": 0.0
+      },
+      "energy_contact_cancellation_error": 1.677695311759442e-16
+    },
+    {
+      "mu": 1.2,
+      "T": 0.004,
+      "p": 0.02,
+      "r": 0.031,
+      "q": 0.02,
+      "z": {
+        "real": 0.03,
+        "imag": 0.02
+      },
+      "values": {
+        "density": {
+          "real": -0.06813207540825306,
+          "imag": 0.2560564830727077
+        },
+        "current": {
+          "real": -0.2355386146766438,
+          "imag": 0.16995410042407258
+        },
+        "rotating_energy": {
+          "real": -1.2951625709103865e-05,
+          "imag": 2.2923689020404138e-05
+        },
+        "rotating_flux": {
+          "real": -4.235112758408459e-05,
+          "imag": 2.1433907821499716e-05
+        },
+        "energy_term_scale": {
+          "real": 0.0007351545815028645,
+          "imag": 0.0
+        },
+        "flux_term_scale": {
+          "real": 9.28489892996757e-05,
+          "imag": 0.0
+        }
+      },
+      "total_density": {
+        "real": 0.004934566313266192,
+        "imag": -0.014909210241490944
+      },
+      "total_current": {
+        "real": 0.022311059711450115,
+        "imag": -0.017429249048982826
+      },
+      "physical_energy": {
+        "real": 0.0059085279502103264,
+        "imag": -0.017868128600768727
+      },
+      "physical_flux": {
+        "real": 0.02673092052615605,
+        "imag": -0.02089366495095789
+      },
+      "fluctuation_ward_error": 1.6256794515463718e-13,
+      "total_charge_ward_error": 3.841962897752019e-14,
+      "rotating_energy_ward_error": 1.7478585396774797e-14,
+      "physical_energy_ward_error": 3.840746719634586e-14,
+      "source_force_method_error": 2.217337894013728e-15,
+      "contact_method_error": 2.0846216757844302e-16,
+      "phase_contact_identity_error": 3.8981856257250124e-17,
+      "omitted_background_shift_ward_error": 223.3519410509234,
+      "covariance_stationary_energy_drive": {
+        "real": 2.0328790734103208e-20,
+        "imag": 7.792703114739563e-20
+      },
+      "explicit_energy_contact": {
+        "real": -0.6874674488822368,
+        "imag": 0.025599360282225436
+      },
+      "mean_energy_contact": {
+        "real": 0.6874674488822368,
+        "imag": -0.025599360282225436
+      },
+      "energy_contact_cancellation_error": 0.0
+    },
+    {
+      "mu": 1.2,
+      "T": 0.004,
+      "p": 0.04,
+      "r": 0.037,
+      "q": 0.02,
+      "z": {
+        "real": 0.0,
+        "imag": 0.02
+      },
+      "values": {
+        "density": {
+          "real": 0.07299479864819101,
+          "imag": 0.0
+        },
+        "current": {
+          "real": 0.0,
+          "imag": 0.007150365002619456
+        },
+        "rotating_energy": {
+          "real": -7.084649124200174e-06,
+          "imag": 0.0
+        },
+        "rotating_flux": {
+          "real": -0.0,
+          "imag": -7.084649124203259e-06
+        },
+        "energy_term_scale": {
+          "real": 0.0003658304283274279,
+          "imag": 0.0
+        },
+        "flux_term_scale": {
+          "real": 1.3037764338868243e-05,
+          "imag": 0.0
+        }
+      },
+      "total_density": {
+        "real": -0.05531436625877413,
+        "imag": 0.0
+      },
+      "total_current": {
+        "real": 0.0,
+        "imag": -0.05531436625879562
+      },
+      "physical_energy": {
+        "real": -0.06638432415965316,
+        "imag": 0.0
+      },
+      "physical_flux": {
+        "real": 0.0,
+        "imag": -0.06638432415967895
+      },
+      "fluctuation_ward_error": 1.628499007767615e-13,
+      "total_charge_ward_error": 7.931847642245702e-14,
+      "rotating_energy_ward_error": 8.142812915665e-15,
+      "physical_energy_ward_error": 7.930168033013033e-14,
+      "source_force_method_error": 4.627935754711661e-15,
+      "contact_method_error": 1.8635039959226951e-16,
+      "phase_contact_identity_error": 1.0452941910440944e-16,
+      "omitted_background_shift_ward_error": 288.1677624431226,
+      "covariance_stationary_energy_drive": {
+        "real": -1.0842021724855044e-19,
+        "imag": 0.0
+      },
+      "explicit_energy_contact": {
+        "real": -0.08350831091353064,
+        "imag": 0.0
+      },
+      "mean_energy_contact": {
+        "real": 0.08350831091353066,
+        "imag": 0.0
+      },
+      "energy_contact_cancellation_error": 8.309225546535318e-17
+    },
+    {
+      "mu": 1.2,
+      "T": 0.004,
+      "p": 0.04,
+      "r": 0.037,
+      "q": 0.02,
+      "z": {
+        "real": 0.0,
+        "imag": 0.05
+      },
+      "values": {
+        "density": {
+          "real": 0.019767669644879096,
+          "imag": 0.0
+        },
+        "current": {
+          "real": 0.0,
+          "imag": 0.0031661757564966815
+        },
+        "rotating_energy": {
+          "real": -6.5697825018012205e-06,
+          "imag": 0.0
+        },
+        "rotating_flux": {
+          "real": -0.0,
+          "imag": -1.6424456254511037e-05
+        },
+        "energy_term_scale": {
+          "real": 0.00030546264502607454,
+          "imag": 0.0
+        },
+        "flux_term_scale": {
+          "real": 1.913533573329158e-05,
+          "imag": 0.0
+        }
+      },
+      "total_density": {
+        "real": -0.010866795833690601,
+        "imag": 0.0
+      },
+      "total_current": {
+        "real": 0.0,
+        "imag": -0.02716698958422062
+      },
+      "physical_energy": {
+        "real": -0.013046724782930522,
+        "imag": 0.0
+      },
+      "physical_flux": {
+        "real": 0.0,
+        "imag": -0.032616811957319254
+      },
+      "fluctuation_ward_error": 6.563393057490358e-14,
+      "total_charge_ward_error": 3.69093736746859e-14,
+      "rotating_energy_ward_error": 1.0201858262838086e-14,
+      "physical_energy_ward_error": 3.6840742447518156e-14,
+      "source_force_method_error": 7.745754115427974e-16,
+      "contact_method_error": 1.8635039959226951e-16,
+      "phase_contact_identity_error": 1.0452941910440944e-16,
+      "omitted_background_shift_ward_error": 216.66089427718364,
+      "covariance_stationary_energy_drive": {
+        "real": 5.251604272976662e-20,
+        "imag": 0.0
+      },
+      "explicit_energy_contact": {
+        "real": -0.09248210049965276,
+        "imag": 0.0
+      },
+      "mean_energy_contact": {
+        "real": 0.09248210049965279,
+        "imag": 0.0
+      },
+      "energy_contact_cancellation_error": 1.500591761306996e-16
+    },
+    {
+      "mu": 1.2,
+      "T": 0.004,
+      "p": 0.04,
+      "r": 0.037,
+      "q": 0.02,
+      "z": {
+        "real": 0.03,
+        "imag": 0.02
+      },
+      "values": {
+        "density": {
+          "real": 0.003788289718829607,
+          "imag": 0.046721599999219925
+        },
+        "current": {
+          "real": -0.0037033784868002154,
+          "imag": 0.0026727971614615435
+        },
+        "rotating_energy": {
+          "real": -6.791056928187191e-06,
+          "imag": -2.0765460835393626e-06
+        },
+        "rotating_flux": {
+          "real": -8.110039308730262e-06,
+          "imag": -9.905876053495965e-06
+        },
+        "energy_term_scale": {
+          "real": 0.00032079427964376946,
+          "imag": 0.0
+        },
+        "flux_term_scale": {
+          "real": 1.533097250863338e-05,
+          "imag": 0.0
+        }
+      },
+      "total_density": {
+        "real": 0.00707469693274132,
+        "imag": -0.02139747045339261
+      },
+      "total_current": {
+        "real": 0.03200951585252018,
+        "imag": -0.025021508747353743
+      },
+      "physical_energy": {
+        "real": 0.008482845262361398,
+        "imag": -0.02567904109015467
+      },
+      "physical_flux": {
+        "real": 0.03840330898371549,
+        "imag": -0.030035716372877986
+      },
+      "fluctuation_ward_error": 1.0461194512492793e-13,
+      "total_charge_ward_error": 6.51644016699388e-14,
+      "rotating_energy_ward_error": 1.8806022755070434e-14,
+      "physical_energy_ward_error": 6.518196002501369e-14,
+      "source_force_method_error": 5.18035309888939e-16,
+      "contact_method_error": 1.8635039959226951e-16,
+      "phase_contact_identity_error": 1.0452941910440944e-16,
+      "omitted_background_shift_ward_error": 193.79028386409198,
+      "covariance_stationary_energy_drive": {
+        "real": -4.2351647362715017e-20,
+        "imag": -1.6940658945086007e-21
+      },
+      "explicit_energy_contact": {
+        "real": -0.09608413655912369,
+        "imag": 0.0035870941454341273
+      },
+      "mean_energy_contact": {
+        "real": 0.0960841365591237,
+        "imag": -0.0035870941454341273
+      },
+      "energy_contact_cancellation_error": 7.216657909905353e-17
+    },
+    {
+      "mu": 1.2,
+      "T": 0.004,
+      "p": 0.02,
+      "r": 0.02,
+      "q": 0.0,
+      "z": {
+        "real": 0.0,
+        "imag": 0.02
+      },
+      "values": {
+        "density": {
+          "real": 0.26273550589102457,
+          "imag": 0.0
+        },
+        "current": {
+          "real": 0.0,
+          "imag": 0.0
+        },
+        "rotating_energy": {
+          "real": 2.4584284261108813e-17,
+          "imag": 0.0
+        },
+        "rotating_flux": {
+          "real": 0.0,
+          "imag": 0.0
+        },
+        "energy_term_scale": {
+          "real": 0.0010339299301822989,
+          "imag": 0.0
+        },
+        "flux_term_scale": {
+          "real": 0.0,
+          "imag": 0.0
+        }
+      },
+      "total_density": {
+        "real": 3.351208199831035e-13,
+        "imag": 0.0
+      },
+      "total_current": {
+        "real": 0.0,
+        "imag": 0.0
+      },
+      "physical_energy": {
+        "real": 4.021695682639853e-13,
+        "imag": 0.0
+      },
+      "physical_flux": {
+        "real": 0.0,
+        "imag": 0.0
+      },
+      "fluctuation_ward_error": 6.408596996286627e-13,
+      "total_charge_ward_error": 6.377532013551227e-13,
+      "rotating_energy_ward_error": 2.377751484259112e-14,
+      "physical_energy_ward_error": 6.377921890501459e-13,
+      "source_force_method_error": 2.6190238866944853e-15,
+      "contact_method_error": 1.9960441354063659e-16,
+      "phase_contact_identity_error": 0.0,
+      "omitted_background_shift_ward_error": 1983.964425750212,
+      "covariance_stationary_energy_drive": {
+        "real": -3.2526065174565133e-19,
+        "imag": 0.0
+      },
+      "explicit_energy_contact": {
+        "real": -1.11854146363332,
+        "imag": 0.0
+      },
+      "mean_energy_contact": {
+        "real": 1.11854146363332,
+        "imag": 0.0
+      },
+      "energy_contact_cancellation_error": 0.0
+    },
+    {
+      "mu": 1.2,
+      "T": 0.004,
+      "p": 0.02,
+      "r": 0.02,
+      "q": 0.0,
+      "z": {
+        "real": 0.0,
+        "imag": 0.05
+      },
+      "values": {
+        "density": {
+          "real": 0.05922844095627522,
+          "imag": 0.0
+        },
+        "current": {
+          "real": 0.0,
+          "imag": 0.0
+        },
+        "rotating_energy": {
+          "real": 1.9569849213363355e-17,
+          "imag": 0.0
+        },
+        "rotating_flux": {
+          "real": 0.0,
+          "imag": 0.0
+        },
+        "energy_term_scale": {
+          "real": 0.0009611799058414976,
+          "imag": 0.0
+        },
+        "flux_term_scale": {
+          "real": 0.0,
+          "imag": 0.0
+        }
+      },
+      "total_density": {
+        "real": -1.4733353426166218e-13,
+        "imag": 0.0
+      },
+      "total_current": {
+        "real": 0.0,
+        "imag": 0.0
+      },
+      "physical_energy": {
+        "real": -1.7678067126478124e-13,
+        "imag": 0.0
+      },
+      "physical_flux": {
+        "real": 0.0,
+        "imag": 0.0
+      },
+      "fluctuation_ward_error": 1.2312965486262477e-12,
+      "total_charge_ward_error": 1.2437735307792955e-12,
+      "rotating_energy_ward_error": 2.03602354714545e-14,
+      "physical_energy_ward_error": 1.2436358586794185e-12,
+      "source_force_method_error": 9.690349118408872e-16,
+      "contact_method_error": 1.9960441354063659e-16,
+      "phase_contact_identity_error": 0.0,
+      "omitted_background_shift_ward_error": 1404.9732232507506,
+      "covariance_stationary_energy_drive": {
+        "real": -3.3881317890172014e-20,
+        "imag": 0.0
+      },
+      "explicit_energy_contact": {
+        "real": -1.1164418934223135,
+        "imag": 0.0
+      },
+      "mean_energy_contact": {
+        "real": 1.1164418934223135,
+        "imag": 0.0
+      },
+      "energy_contact_cancellation_error": 0.0
+    },
+    {
+      "mu": 1.2,
+      "T": 0.004,
+      "p": 0.02,
+      "r": 0.02,
+      "q": 0.0,
+      "z": {
+        "real": 0.03,
+        "imag": 0.02
+      },
+      "values": {
+        "density": {
+          "real": -0.030513349921381994,
+          "imag": 0.12682065142174095
+        },
+        "current": {
+          "real": 0.0,
+          "imag": 0.0
+        },
+        "rotating_energy": {
+          "real": -2.1521413123837263e-17,
+          "imag": 5.7153548115983915e-18
+        },
+        "rotating_flux": {
+          "real": 0.0,
+          "imag": 0.0
+        },
+        "energy_term_scale": {
+          "real": 0.0009481060401170262,
+          "imag": 0.0
+        },
+        "flux_term_scale": {
+          "real": 0.0,
+          "imag": 0.0
+        }
+      },
+      "total_density": {
+        "real": 4.1713160703338303e-14,
+        "imag": -1.1685097334179773e-14
+      },
+      "total_current": {
+        "real": 0.0,
+        "imag": 0.0
+      },
+      "physical_energy": {
+        "real": 5.003427143088213e-14,
+        "imag": -1.4016401446204128e-14
+      },
+      "physical_flux": {
+        "real": 0.0,
+        "imag": 0.0
+      },
+      "fluctuation_ward_error": 1.6514590525408723e-13,
+      "total_charge_ward_error": 1.6604948880087855e-13,
+      "rotating_energy_ward_error": 2.3486177285153593e-14,
+      "physical_energy_ward_error": 1.6597836614608396e-13,
+      "source_force_method_error": 5.394453809750109e-16,
+      "contact_method_error": 1.9960441354063659e-16,
+      "phase_contact_identity_error": 0.0,
+      "omitted_background_shift_ward_error": 1230.7701052621512,
+      "covariance_stationary_energy_drive": {
+        "real": -7.453889935837843e-20,
+        "imag": -1.5585406229479126e-19
+      },
+      "explicit_energy_contact": {
+        "real": -1.1194424283614781,
+        "imag": -0.0012040406617358987
+      },
+      "mean_energy_contact": {
+        "real": 1.1194424283614781,
+        "imag": 0.0012040406617358987
+      },
+      "energy_contact_cancellation_error": 0.0
+    }
+  ],
+  "declared_grids": {
+    "mu": [
+      1.05,
+      1.2
+    ],
+    "T": [
+      0.002,
+      0.004
+    ],
+    "momentum_triples": [
+      [
+        0.005,
+        0.011,
+        0.008
+      ],
+      [
+        0.02,
+        0.031,
+        0.02
+      ],
+      [
+        0.04,
+        0.037,
+        0.02
+      ],
+      [
+        0.02,
+        0.02,
+        0.0
+      ]
+    ],
+    "frequencies": [
+      {
+        "real": 0.0,
+        "imag": 0.02
+      },
+      {
+        "real": 0.0,
+        "imag": 0.05
+      },
+      {
+        "real": 0.03,
+        "imag": 0.02
+      }
+    ],
+    "locked_before_first_audit": true
+  },
+  "thresholds": {
+    "ward_relative": 1e-09,
+    "method_relative": 1e-07,
+    "negative_control_minimum": 0.001,
+    "original_causal_leakage": 1e-06
+  },
+  "equation_registry_ids": [
+    "t13.thermal_insertion.Noether_charge_response",
+    "t13.thermal_insertion.Noether_linear_energy_response"
+  ],
+  "evidence_artifacts": [
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/Research_T13_Thermal_Noether_Response.py",
+      "sha256": "c748024ad5bf783f14d3bf8e59e0406d4d2417bf4cf889168f7ad21081448943"
+    },
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/t13_thermal_noether_response_registry.json",
+      "sha256": "7c6fc3e7a066b60aab64916110c9ab5dbaa1aedd00bcfc63ce81892ed0f756ec"
+    },
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/test_t13_thermal_noether_response.py",
+      "sha256": "a0f76d5d7b5d564be6b19650053a04efcf1050001583bf2575143528baa84f5e"
+    }
+  ],
+  "protected_evidence_hashes": [
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/t13_finite_q_thermal_source.json",
+      "sha256": "a1583b3ef2ec12929078800a6c1ee18f10d0fe4243957206febd4098363c0a57"
+    },
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/Research_T13_Finite_Q_Thermal_Source.py",
+      "sha256": "2b74fb0f36f9b47ced152b22799043feff2b4ccae544fa5be394806f0cfbca8a"
+    },
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/t13_thermal_virtual_response.json",
+      "sha256": "a05474ba7a9fdf0005df0c67f2d4a2ff1dbc5432016a1988ccd22730e70e70b0"
+    },
+    {
+      "path": "docs/core/02_equations/o2/uet_o2_action_thermal_observable_bridge.py",
+      "sha256": "1cf745562548bc9a61d9ebb86069b8aff73e2a776756aa9efe7ab1a45b669ebe"
+    },
+    {
+      "path": "docs/core/02_equations/o2/uet_o2_action_thermal_stiffness_beta.py",
+      "sha256": "c1c3278a79df611ddae2f67ff811022722ab0c56f68bf91cc5480f34db9a95e6"
+    },
+    {
+      "path": "docs/core/02_equations/covariant/uet_covariant_matter.py",
+      "sha256": "8a57d95e898a8ac962bbd749670ad0695b597281937da36496d2ec7e074f9c53"
+    },
+    {
+      "path": "docs/core/02_equations/covariant/uet_covariant_response.py",
+      "sha256": "7fb4b7228afb8ede0ac4f1664d634346ef46cc7678c94ed7b55d73645590c0c2"
+    }
+  ],
+  "controlling_blocker": "collisionless_soft_limit_full_interacting_energy_and_physical_transport_open",
+  "open_blockers": [
+    "collisionless_soft_frequency_and_collision_operator",
+    "full_interacting_vacuum_thermal_matching_and_truncation_control",
+    "second_order_source_work_entropy_and_dissipative_balance",
+    "independent_material_source_readout_scale_and_uncertainty"
+  ],
+  "dependency_unlocked": [
+    "collisionless_limit_and_physical_heat_source_mapping_research_only"
+  ],
+  "gaussian_pair_local_charge_Ward_closed": true,
+  "first_order_Gaussian_energy_balance_closed": true,
+  "full_loop_source_current_Ward_closed": false,
+  "full_energy_exchange_ledger_closed": false,
+  "full_collision_operator_computed": false,
+  "physical_Kubo_emitted": false,
+  "full_SK_KMS_matching_closed": false,
+  "full_off_shell_source_matching_closed": false,
+  "full_real_self_energy_matched": false,
+  "full_two_loop_pressure_computed": false,
+  "all_parent_modes_and_quantum_Phi_loops_included": false,
+  "independent_alpha_Phi_K_admitted": false,
+  "controlled_full_action_truncation_error_established": false,
+  "full_core_unlock": false,
+  "core_composition_gate_overwritten": false,
+  "state_variables": [
+    "classical_tree_radial_phase_Phi_fluctuations_and_covariance_velocities"
+  ],
+  "excluded_variables": [
+    "C",
+    "UET_Pi",
+    "R_gen",
+    "R_obs"
+  ],
+  "claim_promotion": false,
+  "parameter_fitting": false,
+  "assigned_width": false,
+  "assigned_relaxation_time": false,
+  "clipping": false,
+  "cone_padding": false,
+  "xie_2026_accessed": false,
+  "prior_Xie_context_exposure_review": "REVIEW_REQUIRED",
+  "primary_references": [
+    "https://journals.aps.org/pr/abstract/10.1103/PhysRev.124.287",
+    "https://arxiv.org/abs/cond-mat/0307246"
+  ],
+  "claim_boundary": "Pair-local rest-domain Gaussian first-order Noether identities with full-domain translation assumption only. Not full collision/transport/KMS/entropy or second-order heating/physical material/calibration; no original conserved-C repair or Full Topic13/Core/global closure.",
+  "report": {
+    "MAJOR_RESULT_CLOSURE": "CLOSED_FOR_LANE",
+    "WHAT_IS_ACTUALLY_CLOSED": "Pair-local Gaussian source charge and first-order rotating/physical energy balance, conditional on recorded checks and momentum translation for continuum integration",
+    "WHAT_REMAINS_OPEN": [
+      "collisionless_soft_frequency_and_collision_operator",
+      "full_interacting_vacuum_thermal_matching_and_truncation_control",
+      "second_order_source_work_entropy_and_dissipative_balance",
+      "independent_material_source_readout_scale_and_uncertainty"
+    ],
+    "DEPENDENCY_UNLOCKED": [
+      "collisionless_limit_and_physical_heat_source_mapping_research_only"
+    ],
+    "STATUS": "PASS_SCOPED_GAUSSIAN_NOETHER_RESPONSE",
+    "WHAT_CHANGED": "Derived Noether covariance and stationary mean/contact response",
+    "EQUATION_OR_MAPPING": "-iz delta_n+iq delta_j=0 after covariance, seagull, stationary shift and mean correction; delta_E=delta_Hrot+mu delta_n",
+    "VERIFICATION": {
+      "fluctuation_ward_error": true,
+      "total_charge_ward_error": true,
+      "rotating_energy_ward_error": true,
+      "physical_energy_ward_error": true,
+      "phase_contact_identity_error": true,
+      "energy_contact_cancellation_error": true,
+      "independent_source_force_and_contact": true,
+      "missing_background_contact_is_detected": true
+    },
+    "CONTROLLING_BLOCKER": "collisionless_soft_limit_full_interacting_energy_and_physical_transport_open",
+    "NEXT_ACTION": "Collisionless limits, interacting matching and actual heat-source/readout without assigned rates",
+    "CLAIM_BOUNDARY": "Pair-local rest-domain Gaussian first-order Noether identities with full-domain translation assumption only. Not full collision/transport/KMS/entropy or second-order heating/physical material/calibration; no original conserved-C repair or Full Topic13/Core/global closure."
+  }
+}

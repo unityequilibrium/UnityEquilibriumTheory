@@ -1,0 +1,2384 @@
+{
+  "schema_version": "t13-fixed-phi-hartree-real-axis-v1",
+  "generated_at": "2026-10-01T12:32:37.027544+00:00",
+  "major_result_id": "T13_FIXED_PHI_HARTREE_REAL_AXIS_RESPONSE",
+  "topic": "0.13",
+  "branch_id": "t13.candidate.fixed_phi_hartree_ms_finite_potential_v1",
+  "closure_level": "CLOSED_FOR_LANE",
+  "verification_status": "PASS_SCOPED_HARTREE_REAL_AXIS_RESPONSE",
+  "what_is_closed": [
+    "exact_retarded_angular_PV_and_pair_scattering_cuts",
+    "independent_direct_on_shell_phase_space_verification",
+    "full_domain_subtracted_real_axis_loop_and_reoptimized_current_on_declared_grid",
+    "real_axis_contact_Ward_vacuum_reality_and_unit_checks"
+  ],
+  "equation_or_mapping": "int_L^U g(ell)/(omega+p-ell+i0) dell = int (g-g_star)/(omega+p-ell) dell + g_star log| (omega+p-L)/(omega+p-U) | - i*pi*g_star; Pi=Gamma_AA-Gamma_Aphi*Gamma_phiphi^-1*Gamma_phiA",
+  "units": {
+    "q_omega_T_mu_A": "E",
+    "s_a_b": "E^2",
+    "J_covariance_bubble": "dimensionless",
+    "Y_mixed": "E",
+    "Gamma_current_spectral_density": "E^2",
+    "g_mass_mass": "E^-3",
+    "g_mass_source": "E^-2",
+    "g_source_source": "E^-1",
+    "radial_measure": "E^3",
+    "dell_divided_by_denominator": "dimensionless"
+  },
+  "derivation_class": "EXACT_ANGULAR_CAUCHY_REDUCTION_OF_DECLARED_HARTREE_SOURCE_LOOPS_WITH_NUMERICAL_FULL_DOMAIN_RADIAL_QUADRATURE",
+  "observable": "conditional_O2_current_and_external_field_response_not_material_temperature_or_heat_flux",
+  "data_role": "DERIVED_FIXED_NATURAL_UNIT_WITNESSES_NO_EMPIRICAL_ROWS",
+  "state_variables": [
+    "existing_O2_Cartesian_fields_at_fixed_Phi"
+  ],
+  "excluded_variables": [
+    "R_gen",
+    "R_obs",
+    "nondynamical_A_source"
+  ],
+  "equation_registry_ids": [
+    "t13.diagnostic.hartree_real_axis_Cauchy",
+    "t13.diagnostic.hartree_on_shell_source_cut"
+  ],
+  "examples": [
+    {
+      "T": 0.22,
+      "mu": 1.05,
+      "Phi_fixed": 0.15,
+      "s": 0.11673154472530303,
+      "a": 0.23346308945060604,
+      "b": 0.009691508884317981,
+      "u_canonical": 1.0,
+      "point_cut_checks": [
+        {
+          "shell_residual": 4.440892098500626e-16,
+          "relative_slope_FD_disagreement": 1.2994019193968143e-09,
+          "active_shell_count": 4,
+          "k": 0.3,
+          "q": 0.08,
+          "omega": 0.015,
+          "direct_delta_vs_PV_cut_disagreement": 2.842170943040401e-14,
+          "PV_source_metric_discontinuity_disagreement": 9.155133597044475e-16,
+          "transverse_discontinuity_disagreement": 0.0,
+          "pair_norm": 0.0,
+          "scattering_norm": 98.48072780822979
+        },
+        {
+          "shell_residual": 1.3877787807814457e-17,
+          "relative_slope_FD_disagreement": 9.285017199545109e-12,
+          "active_shell_count": 1,
+          "k": 0.3,
+          "q": 0.08,
+          "omega": 0.15,
+          "direct_delta_vs_PV_cut_disagreement": 4.547473508864641e-13,
+          "PV_source_metric_discontinuity_disagreement": 1.5888218580782548e-14,
+          "transverse_discontinuity_disagreement": 0.0,
+          "pair_norm": 253.0871217696415,
+          "scattering_norm": 0.0
+        },
+        {
+          "shell_residual": 0.0,
+          "relative_slope_FD_disagreement": 0.0,
+          "active_shell_count": 0,
+          "k": 0.3,
+          "q": 0.08,
+          "omega": 0.4,
+          "direct_delta_vs_PV_cut_disagreement": 0.0,
+          "PV_source_metric_discontinuity_disagreement": 4.440892098500626e-16,
+          "transverse_discontinuity_disagreement": 0.0,
+          "pair_norm": 0.0,
+          "scattering_norm": 0.0
+        },
+        {
+          "shell_residual": 1.3877787807814457e-17,
+          "relative_slope_FD_disagreement": 9.285017199545109e-12,
+          "active_shell_count": 1,
+          "k": 0.3,
+          "q": 0.08,
+          "omega": -0.15,
+          "direct_delta_vs_PV_cut_disagreement": 4.547473508864641e-13,
+          "PV_source_metric_discontinuity_disagreement": 1.831026719408895e-14,
+          "transverse_discontinuity_disagreement": 0.0,
+          "pair_norm": 253.0871217696415,
+          "scattering_norm": 0.0
+        }
+      ],
+      "independent_angular_checks": [
+        {
+          "joint_max_error": 4.779687418147813e-13,
+          "current_block_error": 6.68514615332417e-13,
+          "transverse_error": 3.783509549267513e-16
+        },
+        {
+          "joint_max_error": 2.2403409359891383e-14,
+          "current_block_error": 1.7748296262347698e-14,
+          "transverse_error": 1.555366070226024e-15
+        },
+        {
+          "joint_max_error": 1.7185657963625912e-15,
+          "current_block_error": 3.450495378966563e-15,
+          "transverse_error": 1.8601091687804154e-15
+        }
+      ],
+      "upper_half_plane_predecessor_disagreement": 3.157506277576445e-09,
+      "responses": [
+        {
+          "q": 0.08,
+          "omega": 0.015,
+          "external_field_inverse": {
+            "real": [
+              [
+                0.2223133381689738,
+                0.0005201086959280918
+              ],
+              [
+                -0.0005201086959280919,
+                0.0061797615095600875
+              ]
+            ],
+            "imaginary": [
+              [
+                -0.018433409805155693,
+                0.031199311034793988
+              ],
+              [
+                -0.03119931103479399,
+                -2.702369722485397e-05
+              ]
+            ]
+          },
+          "onshell_current": {
+            "real": [
+              [
+                7.922094255222465,
+                -0.1790545168512249,
+                0.0,
+                0.0
+              ],
+              [
+                -0.1790545168512249,
+                -0.278511353856819,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.12105789489246714,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                0.12105789489246714
+              ]
+            ],
+            "imaginary": [
+              [
+                0.9549570197954378,
+                1.485393170194432,
+                0.0,
+                0.0
+              ],
+              [
+                1.485393170194432,
+                -0.03357273609203196,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                -0.0053495075604625695,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                -0.0053495075604625695
+              ]
+            ]
+          },
+          "cut_bubbles": {
+            "pair": {
+              "real": [
+                [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  0.0,
+                  0.0
+                ]
+              ],
+              "imaginary": [
+                [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  0.0,
+                  0.0
+                ]
+              ]
+            },
+            "scattering": {
+              "real": [
+                [
+                  -0.021507753187060878,
+                  0.012380311236758887,
+                  0.0
+                ],
+                [
+                  0.012380311236758887,
+                  -0.008123567756873099,
+                  0.0
+                ],
+                [
+                  0.0,
+                  0.0,
+                  -7.982562576836535e-05
+                ]
+              ],
+              "imaginary": [
+                [
+                  0.0,
+                  0.0,
+                  -0.001132305883028523
+                ],
+                [
+                  0.0,
+                  0.0,
+                  0.0007911708323330267
+                ],
+                [
+                  0.001132305883028523,
+                  -0.0007911708323330267,
+                  0.0
+                ]
+              ]
+            }
+          },
+          "cut_norms": {
+            "pair": 0.0,
+            "scattering": 0.028964504498125848
+          },
+          "quadrature_refinements": [
+            7.788318032025954e-06,
+            3.6293261912317965e-06
+          ],
+          "Ward_residuals": {
+            "field_source": 6.549673917708229e-10,
+            "source_source": 4.3100165241257097e-10,
+            "onshell_current": 4.024474251091081e-08,
+            "left_current": 4.024474251091081e-08
+          },
+          "covariance_Ward_residual": 1.4145783834253927e-09,
+          "loop_discontinuity_vs_exact_cut": 1.0408340855860843e-16,
+          "minus_physical_current_spectral_eigenvalues": [
+            -6.938893903907228e-18,
+            0.0053495075604625695,
+            0.0053495075604625695,
+            0.9885297558874697
+          ],
+          "radial_endpoints": [
+            0.07553664078912863,
+            0.08,
+            0.1555366407891302,
+            0.17150399126596916,
+            0.2515039912659667
+          ],
+          "endpoint_scan_refinement": 2.1452284393319587e-13,
+          "radial_compact_splits": [
+            0.0,
+            0.0671116674941554,
+            0.07079646017699115,
+            0.12575237150816646,
+            0.12901859265539847,
+            0.1404039548722408,
+            0.18034879955963498,
+            0.19324104494011574,
+            1.0
+          ]
+        },
+        {
+          "q": 0.08,
+          "omega": 0.15,
+          "external_field_inverse": {
+            "real": [
+              [
+                0.2183887514515416,
+                0.0013814144709797932
+              ],
+              [
+                -0.001381414470979794,
+                -0.01445970587237844
+              ]
+            ],
+            "imaginary": [
+              [
+                -0.00037047127523499656,
+                0.31840991880655356
+              ],
+              [
+                -0.31840991880655356,
+                -0.00515397738886071
+              ]
+            ]
+          },
+          "onshell_current": {
+            "real": [
+              [
+                -0.0367077464867315,
+                -1.6870441643569581e-06,
+                0.0,
+                0.0
+              ],
+              [
+                -1.6870441643569581e-06,
+                0.12905070361745372,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.12665142417893982,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                0.12665142417893982
+              ]
+            ],
+            "imaginary": [
+              [
+                8.997209626909752e-07,
+                -0.06882703925917956,
+                0.0,
+                0.0
+              ],
+              [
+                -0.06882703925918919,
+                -3.163334166770154e-06,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                -2.0161222126913014e-06,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                -2.0161222126913014e-06
+              ]
+            ]
+          },
+          "cut_bubbles": {
+            "pair": {
+              "real": [
+                [
+                  -0.0059738863694375095,
+                  0.010266912193323622,
+                  0.0
+                ],
+                [
+                  0.010266912193323622,
+                  -0.017645350770657636,
+                  0.0
+                ],
+                [
+                  0.0,
+                  0.0,
+                  -0.01170509807639717
+                ]
+              ],
+              "imaginary": [
+                [
+                  0.0,
+                  0.0,
+                  -0.008362007337825213
+                ],
+                [
+                  0.0,
+                  0.0,
+                  0.014371513984977482
+                ],
+                [
+                  0.008362007337825213,
+                  -0.01437151398497748,
+                  0.0
+                ]
+              ]
+            },
+            "scattering": {
+              "real": [
+                [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  0.0,
+                  0.0
+                ]
+              ],
+              "imaginary": [
+                [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  0.0,
+                  0.0
+                ]
+              ]
+            }
+          },
+          "cut_norms": {
+            "pair": 0.03532422931926332,
+            "scattering": 0.0
+          },
+          "quadrature_refinements": [
+            7.13703621009823e-07,
+            3.3221695862166445e-07
+          ],
+          "Ward_residuals": {
+            "field_source": 1.7175560152988712e-08,
+            "source_source": 3.8349505516312924e-08,
+            "onshell_current": 1.1677370738340189e-09,
+            "left_current": 1.1677378440430411e-09
+          },
+          "covariance_Ward_residual": 4.388584352301925e-08,
+          "loop_discontinuity_vs_exact_cut": 4.807786113669721e-15,
+          "minus_physical_current_spectral_eigenvalues": [
+            1.2145744555840999e-14,
+            2.0161222126913014e-06,
+            2.0161222126913014e-06,
+            4.063055117315385e-06
+          ],
+          "radial_endpoints": [
+            0.08,
+            0.23628390187499668,
+            0.3162839018749399
+          ],
+          "endpoint_scan_refinement": 6.944445019030354e-14,
+          "radial_compact_splits": [
+            0.0,
+            0.07079646017699115,
+            0.18369498485565214,
+            0.23149207967751514,
+            1.0
+          ]
+        },
+        {
+          "q": 0.08,
+          "omega": 0.4,
+          "external_field_inverse": {
+            "real": [
+              [
+                0.07852643300220528,
+                -0.0023682245254464415
+              ],
+              [
+                0.0023682245254464415,
+                -0.1474808299141867
+              ]
+            ],
+            "imaginary": [
+              [
+                -0.001134892800406618,
+                0.8424072276793654
+              ],
+              [
+                -0.8424072276793654,
+                -0.004941904753452219
+              ]
+            ]
+          },
+          "onshell_current": {
+            "real": [
+              [
+                -0.005067937531219827,
+                -1.8049596813077002e-07,
+                0.0,
+                0.0
+              ],
+              [
+                -1.8049596813072936e-07,
+                0.12669844827642943,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.12651319446329157,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                0.12651319446329157
+              ]
+            ],
+            "imaginary": [
+              [
+                3.6098482229449114e-08,
+                -0.025339689465425665,
+                0.0,
+                0.0
+              ],
+              [
+                -0.025339689465434325,
+                -9.024976343598661e-07,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                -6.389196826093654e-07,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                -6.389196826093654e-07
+              ]
+            ]
+          },
+          "cut_bubbles": {
+            "pair": {
+              "real": [
+                [
+                  -0.0007631273940933762,
+                  0.002955979800180783,
+                  0.0
+                ],
+                [
+                  0.002955979800180783,
+                  -0.011450086732598876,
+                  0.0
+                ],
+                [
+                  0.0,
+                  0.0,
+                  -0.010689241945342926
+                ]
+              ],
+              "imaginary": [
+                [
+                  0.0,
+                  0.0,
+                  -0.002856080381957494
+                ],
+                [
+                  0.0,
+                  0.0,
+                  0.011063125526539975
+                ],
+                [
+                  0.002856080381957494,
+                  -0.011063125526539975,
+                  0.0
+                ]
+              ]
+            },
+            "scattering": {
+              "real": [
+                [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  0.0,
+                  0.0
+                ]
+              ],
+              "imaginary": [
+                [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  0.0,
+                  0.0
+                ]
+              ]
+            }
+          },
+          "cut_norms": {
+            "pair": 0.022902450944303984,
+            "scattering": 0.0
+          },
+          "quadrature_refinements": [
+            1.1764541228958397e-07,
+            5.42554472017856e-08
+          ],
+          "Ward_residuals": {
+            "field_source": 1.0059081813954595e-08,
+            "source_source": 8.485053011052999e-09,
+            "onshell_current": 1.4474640234882617e-10,
+            "left_current": 1.447470949358292e-10
+          },
+          "covariance_Ward_residual": 2.1178348841126293e-08,
+          "loop_discontinuity_vs_exact_cut": 4.318160412623118e-15,
+          "minus_physical_current_spectral_eigenvalues": [
+            3.245302843519915e-16,
+            6.389196826093654e-07,
+            6.389196826093654e-07,
+            9.385961162647849e-07
+          ],
+          "radial_endpoints": [
+            0.08,
+            0.5532803301613141,
+            0.6332803301614824
+          ],
+          "endpoint_scan_refinement": 2.383648833870211e-13,
+          "radial_compact_splits": [
+            0.0,
+            0.07079646017699115,
+            0.3450926951156731,
+            0.3762179827175488,
+            1.0
+          ]
+        },
+        {
+          "q": 0.16,
+          "omega": 0.03,
+          "external_field_inverse": {
+            "real": [
+              [
+                0.24108388208960985,
+                0.0009226566792441861
+              ],
+              [
+                -0.0009226566792441859,
+                0.024739308395641577
+              ]
+            ],
+            "imaginary": [
+              [
+                -0.017538552211338737,
+                0.06245517007507581
+              ],
+              [
+                -0.06245517007507581,
+                -9.024387319524408e-05
+              ]
+            ]
+          },
+          "onshell_current": {
+            "real": [
+              [
+                6.2849418961543275,
+                -0.09011078461416598,
+                0.0,
+                0.0
+              ],
+              [
+                -0.090110784614166,
+                -0.2209552136454234,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.12106367889757916,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                0.12106367889757916
+              ]
+            ],
+            "imaginary": [
+              [
+                0.48059062419194304,
+                1.1784270829800274,
+                0.0,
+                0.0
+              ],
+              [
+                1.1784270829800414,
+                -0.01689578009856811,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                -0.0052691496792805345,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                -0.0052691496792805345
+              ]
+            ]
+          },
+          "cut_bubbles": {
+            "pair": {
+              "real": [
+                [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  0.0,
+                  0.0
+                ]
+              ],
+              "imaginary": [
+                [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  0.0,
+                  0.0
+                ]
+              ]
+            },
+            "scattering": {
+              "real": [
+                [
+                  -0.020087129170114796,
+                  0.011333318064935666,
+                  0.0
+                ],
+                [
+                  0.011333318064935666,
+                  -0.007328870270845165,
+                  0.0
+                ],
+                [
+                  0.0,
+                  0.0,
+                  -0.0002655944407626041
+                ]
+              ],
+              "imaginary": [
+                [
+                  0.0,
+                  0.0,
+                  -0.001988574135147529
+                ],
+                [
+                  0.0,
+                  0.0,
+                  0.0013711295860666071
+                ],
+                [
+                  0.001988574135147529,
+                  -0.0013711295860666071,
+                  0.0
+                ]
+              ]
+            }
+          },
+          "cut_norms": {
+            "pair": 0.0,
+            "scattering": 0.026941282110141733
+          },
+          "quadrature_refinements": [
+            7.245348512638361e-06,
+            3.375761127633048e-06
+          ],
+          "Ward_residuals": {
+            "field_source": 8.617149805618699e-09,
+            "source_source": 1.9330661670898154e-08,
+            "onshell_current": 7.669533627861334e-08,
+            "left_current": 7.669533849043649e-08
+          },
+          "covariance_Ward_residual": 1.4036190935343314e-08,
+          "loop_discontinuity_vs_exact_cut": 6.631848075539198e-15,
+          "minus_physical_current_spectral_eigenvalues": [
+            8.673617379884035e-17,
+            0.0052691496792805345,
+            0.0052691496792805345,
+            0.49748640429051105
+          ],
+          "radial_endpoints": [
+            0.04172953019032025,
+            0.13190243190098633,
+            0.16,
+            0.2017295301903191,
+            0.2919024319009852
+          ],
+          "endpoint_scan_refinement": 2.245426067304379e-14,
+          "radial_compact_splits": [
+            0.0,
+            0.038223322751969144,
+            0.09597622683505462,
+            0.11160179414203662,
+            0.1322314049586777,
+            0.16116063840057138,
+            0.20543264956601573,
+            0.2175288045997995,
+            1.0
+          ]
+        },
+        {
+          "q": 0.16,
+          "omega": 0.3,
+          "external_field_inverse": {
+            "real": [
+              [
+                0.16839474033351687,
+                -0.0016323405874760588
+              ],
+              [
+                0.001632340587476059,
+                -0.05940070849280127
+              ]
+            ],
+            "imaginary": [
+              [
+                -0.000505354460553876,
+                0.6330643719055727
+              ],
+              [
+                -0.6330643719055727,
+                -0.005277367033819582
+              ]
+            ]
+          },
+          "onshell_current": {
+            "real": [
+              [
+                -0.03661425198178608,
+                -3.5171218270630593e-06,
+                0.0,
+                0.0
+              ],
+              [
+                -3.5171218270631135e-06,
+                0.12872198481774097,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.12666955273843614,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                0.12666955273843614
+              ]
+            ],
+            "imaginary": [
+              [
+                1.8757743129663162e-06,
+                -0.06865172247682957,
+                0.0,
+                0.0
+              ],
+              [
+                -0.06865172247683783,
+                -6.594687798222483e-06,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                -4.158876043529801e-06,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                -4.158876043529801e-06
+              ]
+            ]
+          },
+          "cut_bubbles": {
+            "pair": {
+              "real": [
+                [
+                  -0.0014994113287348663,
+                  0.004414149503145618,
+                  0.0
+                ],
+                [
+                  0.004414149503145618,
+                  -0.012997100854452808,
+                  0.0
+                ],
+                [
+                  0.0,
+                  0.0,
+                  -0.011520959460306204
+                ]
+              ],
+              "imaginary": [
+                [
+                  0.0,
+                  0.0,
+                  -0.0041558855506089384
+                ],
+                [
+                  0.0,
+                  0.0,
+                  0.012236788001778486
+                ],
+                [
+                  0.0041558855506089384,
+                  -0.012236788001778486,
+                  0.0
+                ]
+              ]
+            },
+            "scattering": {
+              "real": [
+                [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  0.0,
+                  0.0
+                ]
+              ],
+              "imaginary": [
+                [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  0.0,
+                  0.0
+                ]
+              ]
+            }
+          },
+          "cut_norms": {
+            "pair": 0.02601721611034272,
+            "scattering": 0.0
+          },
+          "quadrature_refinements": [
+            3.9794758824145127e-07,
+            1.8545960758960256e-07
+          ],
+          "Ward_residuals": {
+            "field_source": 2.3706851647486795e-08,
+            "source_source": 2.7641521311605346e-08,
+            "onshell_current": 8.278972755794682e-10,
+            "left_current": 8.278997524355176e-10
+          },
+          "covariance_Ward_residual": 5.228264827051698e-08,
+          "loop_discontinuity_vs_exact_cut": 4.135147086215049e-15,
+          "minus_physical_current_spectral_eigenvalues": [
+            3.250654318271329e-15,
+            4.158876043529801e-06,
+            4.158876043529801e-06,
+            8.470462107938146e-06
+          ],
+          "radial_endpoints": [
+            0.16,
+            0.40044226439401126,
+            0.5604422643939628
+          ],
+          "endpoint_scan_refinement": 4.246603069191224e-14,
+          "radial_compact_splits": [
+            0.0,
+            0.1322314049586777,
+            0.2760828708761561,
+            0.34800518887578186,
+            1.0
+          ]
+        }
+      ],
+      "independent_integrated_delta_cut_disagreement": 5.204170427930421e-17,
+      "auxiliary_reference_disagreement": 6.551553403955079e-09,
+      "retarded_current_reality_residual": 5.307393413644945e-12,
+      "unit_scaling_disagreement": 2.984333613564871e-11,
+      "zero_temperature_scattering_norm": 0.0,
+      "upper_half_plane_to_exact_angular_limit": [
+        {
+          "eta_verification_only": 0.02,
+          "angular_distance_to_exact_limit": 142.06606709813622
+        },
+        {
+          "eta_verification_only": 0.01,
+          "angular_distance_to_exact_limit": 93.70580276973413
+        },
+        {
+          "eta_verification_only": 0.005,
+          "angular_distance_to_exact_limit": 54.10670122114185
+        },
+        {
+          "eta_verification_only": 0.0025,
+          "angular_distance_to_exact_limit": 28.68288493166497
+        }
+      ]
+    },
+    {
+      "T": 0.22,
+      "mu": 1.2,
+      "Phi_fixed": 0.15,
+      "s": 0.449916887205158,
+      "a": 0.8998337744103163,
+      "b": 0.012470671054547374,
+      "u_canonical": 1.0,
+      "point_cut_checks": [
+        {
+          "shell_residual": 2.7755575615628914e-17,
+          "relative_slope_FD_disagreement": 7.663902845678194e-10,
+          "active_shell_count": 3,
+          "k": 0.3,
+          "q": 0.08,
+          "omega": 0.015,
+          "direct_delta_vs_PV_cut_disagreement": 1.4210854715202004e-14,
+          "PV_source_metric_discontinuity_disagreement": 7.105427357601002e-15,
+          "transverse_discontinuity_disagreement": 0.0,
+          "pair_norm": 0.0,
+          "scattering_norm": 67.14734555992585
+        },
+        {
+          "shell_residual": 0.0,
+          "relative_slope_FD_disagreement": 0.0,
+          "active_shell_count": 0,
+          "k": 0.3,
+          "q": 0.08,
+          "omega": 0.15,
+          "direct_delta_vs_PV_cut_disagreement": 0.0,
+          "PV_source_metric_discontinuity_disagreement": 1.7763568394002505e-15,
+          "transverse_discontinuity_disagreement": 0.0,
+          "pair_norm": 0.0,
+          "scattering_norm": 0.0
+        },
+        {
+          "shell_residual": 0.0,
+          "relative_slope_FD_disagreement": 0.0,
+          "active_shell_count": 0,
+          "k": 0.3,
+          "q": 0.08,
+          "omega": 0.4,
+          "direct_delta_vs_PV_cut_disagreement": 0.0,
+          "PV_source_metric_discontinuity_disagreement": 1.3877787807814457e-17,
+          "transverse_discontinuity_disagreement": 0.0,
+          "pair_norm": 0.0,
+          "scattering_norm": 0.0
+        },
+        {
+          "shell_residual": 0.0,
+          "relative_slope_FD_disagreement": 0.0,
+          "active_shell_count": 0,
+          "k": 0.3,
+          "q": 0.08,
+          "omega": -0.15,
+          "direct_delta_vs_PV_cut_disagreement": 0.0,
+          "PV_source_metric_discontinuity_disagreement": 1.7763568394002505e-15,
+          "transverse_discontinuity_disagreement": 0.0,
+          "pair_norm": 0.0,
+          "scattering_norm": 0.0
+        }
+      ],
+      "independent_angular_checks": [
+        {
+          "joint_max_error": 3.2475767517401094e-13,
+          "current_block_error": 7.055514053778557e-13,
+          "transverse_error": 2.0474103795197192e-16
+        },
+        {
+          "joint_max_error": 5.0242958677880804e-14,
+          "current_block_error": 4.263256414560601e-14,
+          "transverse_error": 7.912240930894505e-16
+        },
+        {
+          "joint_max_error": 8.196435335659128e-16,
+          "current_block_error": 2.225747060571382e-15,
+          "transverse_error": 1.720982300963651e-15
+        }
+      ],
+      "upper_half_plane_predecessor_disagreement": 1.251405492650626e-08,
+      "responses": [
+        {
+          "q": 0.08,
+          "omega": 0.015,
+          "external_field_inverse": {
+            "real": [
+              [
+                0.8975622882298121,
+                0.0006544789807499249
+              ],
+              [
+                -0.0006544789807499243,
+                0.006187964979656339
+              ]
+            ],
+            "imaginary": [
+              [
+                -0.031760587452249085,
+                0.034911514713152916
+              ],
+              [
+                -0.03491151471315292,
+                -1.8074956389383606e-05
+              ]
+            ]
+          },
+          "onshell_current": {
+            "real": [
+              [
+                4.278856955394186,
+                -0.0014609168739669878,
+                0.0,
+                0.0
+              ],
+              [
+                -0.0014609168739670008,
+                -0.15042869227908345,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.4553861634979327,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                0.4553861634979327
+              ]
+            ],
+            "imaginary": [
+              [
+                0.007791556904271704,
+                0.8022858045936873,
+                0.0,
+                0.0
+              ],
+              [
+                0.8022858045936803,
+                -0.0002739219053219399,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                -0.003037250119934427,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                -0.003037250119934427
+              ]
+            ]
+          },
+          "cut_bubbles": {
+            "pair": {
+              "real": [
+                [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  0.0,
+                  0.0
+                ]
+              ],
+              "imaginary": [
+                [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  0.0,
+                  0.0
+                ]
+              ]
+            },
+            "scattering": {
+              "real": [
+                [
+                  -0.014803437495879132,
+                  0.012213319568672026,
+                  0.0
+                ],
+                [
+                  0.012213319568672026,
+                  -0.010519851451041333,
+                  0.0
+                ],
+                [
+                  0.0,
+                  0.0,
+                  -1.364590157722947e-05
+                ]
+              ],
+              "imaginary": [
+                [
+                  0.0,
+                  0.0,
+                  -0.00042623295734335614
+                ],
+                [
+                  0.0,
+                  0.0,
+                  0.0003760628015891078
+                ],
+                [
+                  0.0004262329573433561,
+                  -0.00037606280158910784,
+                  0.0
+                ]
+              ]
+            }
+          },
+          "cut_norms": {
+            "pair": 0.0,
+            "scattering": 0.025075601044827422
+          },
+          "quadrature_refinements": [
+            2.7244267514214826e-06,
+            1.2695260429573807e-06
+          ],
+          "Ward_residuals": {
+            "field_source": 3.503128586052806e-09,
+            "source_source": 5.806004401990531e-09,
+            "onshell_current": 1.0036582852846009e-08,
+            "left_current": 1.0036582283856366e-08
+          },
+          "covariance_Ward_residual": 3.902486099896518e-09,
+          "loop_discontinuity_vs_exact_cut": 3.570060913560269e-15,
+          "minus_physical_current_spectral_eigenvalues": [
+            1.1481701006621492e-16,
+            0.003037250119934427,
+            0.003037250119934427,
+            0.00806547880959353
+          ],
+          "radial_endpoints": [
+            0.0277946660393791,
+            0.08,
+            0.10779466603937778,
+            0.2246271191019431,
+            0.30462711910193313
+          ],
+          "endpoint_scan_refinement": 1.4432899320127035e-14,
+          "radial_compact_splits": [
+            0.0,
+            0.022637878147035086,
+            0.0625,
+            0.08242476348816373,
+            0.11179056617067097,
+            0.15767432480405372,
+            0.16144474536745967,
+            0.20246020773821752,
+            1.0
+          ]
+        },
+        {
+          "q": 0.08,
+          "omega": 0.15,
+          "external_field_inverse": {
+            "real": [
+              [
+                0.9206307530208072,
+                0.010133202675228785
+              ],
+              [
+                -0.01013320267522878,
+                -0.018231354806376558
+              ]
+            ],
+            "imaginary": [
+              [
+                -0.024589022042629353,
+                0.3576949193979957
+              ],
+              [
+                -0.3576949193979957,
+                -0.0041759382513439245
+              ]
+            ]
+          },
+          "onshell_current": {
+            "real": [
+              [
+                -0.13606125391349866,
+                -4.0519431963355204e-07,
+                0.0,
+                0.0
+              ],
+              [
+                -4.0519431963046207e-07,
+                0.47834053160916945,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.45892387656546035,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                0.45892387656546035
+              ]
+            ],
+            "imaginary": [
+              [
+                2.1607985364879845e-07,
+                -0.2551149495085397,
+                0.0,
+                0.0
+              ],
+              [
+                -0.2551149495085216,
+                -7.598231305806205e-07,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                -4.6376542376525535e-07,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                -4.6376542376525535e-07
+              ]
+            ]
+          },
+          "cut_bubbles": {
+            "pair": {
+              "real": [
+                [
+                  -0.01617801042397849,
+                  0.017445219738765654,
+                  0.0
+                ],
+                [
+                  0.017445219738765654,
+                  -0.01881169730721049,
+                  0.0
+                ],
+                [
+                  0.0,
+                  0.0,
+                  -0.0026555449892789883
+                ]
+              ],
+              "imaginary": [
+                [
+                  0.0,
+                  0.0,
+                  -0.0065544925323804595
+                ],
+                [
+                  0.0,
+                  0.0,
+                  0.007067905998232219
+                ],
+                [
+                  0.0065544925323804595,
+                  -0.007067905998232219,
+                  0.0
+                ]
+              ]
+            },
+            "scattering": {
+              "real": [
+                [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  0.0,
+                  0.0
+                ]
+              ],
+              "imaginary": [
+                [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  0.0,
+                  0.0
+                ]
+              ]
+            }
+          },
+          "cut_norms": {
+            "pair": 0.03764524690618918,
+            "scattering": 0.0
+          },
+          "quadrature_refinements": [
+            1.3619884672785854e-06,
+            6.389160628963997e-07
+          ],
+          "Ward_residuals": {
+            "field_source": 6.688412103577767e-08,
+            "source_source": 1.2467101317324475e-07,
+            "onshell_current": 7.87365918628116e-09,
+            "left_current": 7.873657736052371e-09
+          },
+          "covariance_Ward_residual": 8.414618550729724e-08,
+          "loop_discontinuity_vs_exact_cut": 9.029452533056509e-15,
+          "minus_physical_current_spectral_eigenvalues": [
+            3.503707743251134e-14,
+            4.6376542376525535e-07,
+            4.6376542376525535e-07,
+            9.759029491923415e-07
+          ],
+          "radial_endpoints": [
+            0.08,
+            0.12632903113276087,
+            0.20632903113277298
+          ],
+          "endpoint_scan_refinement": 1.0047518372857667e-14,
+          "radial_compact_splits": [
+            0.0,
+            0.0625,
+            0.0952471281012892,
+            0.14671462123382223,
+            1.0
+          ]
+        },
+        {
+          "q": 0.08,
+          "omega": 0.4,
+          "external_field_inverse": {
+            "real": [
+              [
+                0.7924206451484916,
+                0.005492787161340719
+              ],
+              [
+                -0.00549278716134072,
+                -0.15044523169734353
+              ]
+            ],
+            "imaginary": [
+              [
+                -0.0029779223063915107,
+                0.9687625686937705
+              ],
+              [
+                -0.9687625686937705,
+                -0.010131611172254827
+              ]
+            ]
+          },
+          "onshell_current": {
+            "real": [
+              [
+                -0.018451817360370715,
+                -3.7205774018199585e-07,
+                0.0,
+                0.0
+              ],
+              [
+                -3.720577401816706e-07,
+                0.4612954428836025,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.45899152563016676,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                0.45899152563016676
+              ]
+            ],
+            "imaginary": [
+              [
+                7.441312476971773e-08,
+                -0.0922590887057071,
+                0.0,
+                0.0
+              ],
+              [
+                -0.09225908870569609,
+                -1.8602493363175431e-06,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                -1.340941511711947e-06,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                -1.340941511711947e-06
+              ]
+            ]
+          },
+          "cut_bubbles": {
+            "pair": {
+              "real": [
+                [
+                  -0.004871063305350905,
+                  0.007168132350526078,
+                  0.0
+                ],
+                [
+                  0.007168132350526078,
+                  -0.010548451149012348,
+                  0.0
+                ],
+                [
+                  0.0,
+                  0.0,
+                  -0.005684511131016464
+                ]
+              ],
+              "imaginary": [
+                [
+                  0.0,
+                  0.0,
+                  -0.005262087638777975
+                ],
+                [
+                  0.0,
+                  0.0,
+                  0.007743563942557959
+                ],
+                [
+                  0.005262087638777975,
+                  -0.007743563942557959,
+                  0.0
+                ]
+              ]
+            },
+            "scattering": {
+              "real": [
+                [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  0.0,
+                  0.0
+                ]
+              ],
+              "imaginary": [
+                [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  0.0,
+                  0.0
+                ]
+              ]
+            }
+          },
+          "cut_norms": {
+            "pair": 0.021104020627764997,
+            "scattering": 0.0
+          },
+          "quadrature_refinements": [
+            3.737452723365925e-07,
+            1.7273161139440274e-07
+          ],
+          "Ward_residuals": {
+            "field_source": 3.780425507374398e-08,
+            "source_source": 6.335177837750693e-08,
+            "onshell_current": 1.5230958811904606e-10,
+            "left_current": 1.5230870688718326e-10
+          },
+          "covariance_Ward_residual": 5.4419083383538784e-08,
+          "loop_discontinuity_vs_exact_cut": 5.539514160941196e-15,
+          "minus_physical_current_spectral_eigenvalues": [
+            2.0349644949962405e-15,
+            1.340941511711947e-06,
+            1.340941511711947e-06,
+            1.9346624590522964e-06
+          ],
+          "radial_endpoints": [
+            0.08,
+            0.44670233640569385,
+            0.52670233640569
+          ],
+          "endpoint_scan_refinement": 2.1094237467877974e-15,
+          "radial_compact_splits": [
+            0.0,
+            0.0625,
+            0.27127084630287485,
+            0.3050336617381752,
+            1.0
+          ]
+        },
+        {
+          "q": 0.16,
+          "omega": 0.03,
+          "external_field_inverse": {
+            "real": [
+              [
+                0.919067833353964,
+                0.0011529121164726868
+              ],
+              [
+                -0.0011529121164726864,
+                0.02476721814626641
+              ]
+            ],
+            "imaginary": [
+              [
+                -0.02958541217085519,
+                0.07004315536643357
+              ],
+              [
+                -0.07004315536643357,
+                -6.097183083187149e-05
+              ]
+            ]
+          },
+          "onshell_current": {
+            "real": [
+              [
+                4.184157405167333,
+                -0.001197611482518463,
+                0.0,
+                0.0
+              ],
+              [
+                -0.00119761148251847,
+                -0.1470993698087658,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.4553739608945581,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                0.4553739608945581
+              ]
+            ],
+            "imaginary": [
+              [
+                0.006387263554996414,
+                0.7845295943292266,
+                0.0,
+                0.0
+              ],
+              [
+                0.784529594329218,
+                -0.00022455207158929513,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                -0.003006601931998111,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                -0.003006601931998111
+              ]
+            ]
+          },
+          "cut_bubbles": {
+            "pair": {
+              "real": [
+                [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  0.0,
+                  0.0
+                ]
+              ],
+              "imaginary": [
+                [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  0.0,
+                  0.0
+                ]
+              ]
+            },
+            "scattering": {
+              "real": [
+                [
+                  -0.013176229522427443,
+                  0.010658861931636688,
+                  0.0
+                ],
+                [
+                  0.010658861931636688,
+                  -0.009032529134135558,
+                  0.0
+                ],
+                [
+                  0.0,
+                  0.0,
+                  -4.5262358826134836e-05
+                ]
+              ],
+              "imaginary": [
+                [
+                  0.0,
+                  0.0,
+                  -0.0007292203218447806
+                ],
+                [
+                  0.0,
+                  0.0,
+                  0.0006342528206617844
+                ],
+                [
+                  0.0007292203218447806,
+                  -0.0006342528206617844,
+                  0.0
+                ]
+              ]
+            }
+          },
+          "cut_norms": {
+            "pair": 0.0,
+            "scattering": 0.022006644652464127
+          },
+          "quadrature_refinements": [
+            3.091041394953642e-06,
+            1.4397216491490727e-06
+          ],
+          "Ward_residuals": {
+            "field_source": 1.087745083977081e-08,
+            "source_source": 1.7634106035299488e-08,
+            "onshell_current": 1.2937842639674132e-08,
+            "left_current": 1.293784125190938e-08
+          },
+          "covariance_Ward_residual": 1.1659845852067877e-08,
+          "loop_discontinuity_vs_exact_cut": 4.370635883788432e-15,
+          "minus_physical_current_spectral_eigenvalues": [
+            1.7715863498413142e-16,
+            0.003006601931998111,
+            0.003006601931998111,
+            0.006611815626585532
+          ],
+          "radial_endpoints": [
+            0.0043906827045964505,
+            0.15560931729521654,
+            0.16,
+            0.18494505662264127,
+            0.3449450566226436
+          ],
+          "endpoint_scan_refinement": 1.8954282587912985e-13,
+          "radial_compact_splits": [
+            0.0,
+            0.0036455634933480825,
+            0.08499893309105844,
+            0.11478920608608421,
+            0.11764705882352942,
+            0.13353963447015907,
+            0.18449113110582643,
+            0.22327334887670197,
+            1.0
+          ]
+        },
+        {
+          "q": 0.16,
+          "omega": 0.3,
+          "external_field_inverse": {
+            "real": [
+              [
+                0.883924318520928,
+                0.008367392365008015
+              ],
+              [
+                -0.008367392365008015,
+                -0.06344233137017323
+              ]
+            ],
+            "imaginary": [
+              [
+                -0.008072538730237406,
+                0.726328216855507
+              ],
+              [
+                -0.726328216855507,
+                -0.008674298327343693
+              ]
+            ]
+          },
+          "onshell_current": {
+            "real": [
+              [
+                -0.1358348364227639,
+                -4.183143644808447e-06,
+                0.0,
+                0.0
+              ],
+              [
+                -4.183143644807905e-06,
+                0.4775443484343562,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.45898294708069215,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                0.45898294708069215
+              ]
+            ],
+            "imaginary": [
+              [
+                2.231004862789099e-06,
+                -0.2546903151909778,
+                0.0,
+                0.0
+              ],
+              [
+                -0.25469031519097746,
+                -7.843412280769958e-06,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                -5.005666904149643e-06,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                0.0,
+                -5.005666904149643e-06
+              ]
+            ]
+          },
+          "cut_bubbles": {
+            "pair": {
+              "real": [
+                [
+                  -0.007616755842540686,
+                  0.00976519613433863,
+                  0.0
+                ],
+                [
+                  0.00976519613433863,
+                  -0.012519835054935964,
+                  0.0
+                ],
+                [
+                  0.0,
+                  0.0,
+                  -0.004951351336756001
+                ]
+              ],
+              "imaginary": [
+                [
+                  0.0,
+                  0.0,
+                  -0.006141012913971475
+                ],
+                [
+                  0.0,
+                  0.0,
+                  0.007873367946695983
+                ],
+                [
+                  0.006141012913971475,
+                  -0.007873367946695983,
+                  0.0
+                ]
+              ]
+            },
+            "scattering": {
+              "real": [
+                [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  0.0,
+                  0.0
+                ]
+              ],
+              "imaginary": [
+                [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  0.0,
+                  0.0
+                ]
+              ]
+            }
+          },
+          "cut_norms": {
+            "pair": 0.025087828829516694,
+            "scattering": 0.0
+          },
+          "quadrature_refinements": [
+            1.203832612657607e-06,
+            5.613165349523802e-07
+          ],
+          "Ward_residuals": {
+            "field_source": 7.585693829952845e-08,
+            "source_source": 1.7161403250903626e-07,
+            "onshell_current": 1.1922072243105052e-09,
+            "left_current": 1.1922071271658805e-09
+          },
+          "covariance_Ward_residual": 1.2998237054339008e-07,
+          "loop_discontinuity_vs_exact_cut": 1.264183917424875e-16,
+          "minus_physical_current_spectral_eigenvalues": [
+            1.8478337358301283e-14,
+            5.005666904149643e-06,
+            5.005666904149643e-06,
+            1.0074417125080718e-05
+          ],
+          "radial_endpoints": [
+            0.16,
+            0.2882871119776923,
+            0.448287111977701
+          ],
+          "endpoint_scan_refinement": 8.548717289613705e-15,
+          "radial_compact_splits": [
+            0.0,
+            0.11764705882352942,
+            0.19370396320546343,
+            0.2719714961793414,
+            1.0
+          ]
+        }
+      ],
+      "independent_integrated_delta_cut_disagreement": 6.938893903907228e-17,
+      "auxiliary_reference_disagreement": 8.79660763675183e-09,
+      "retarded_current_reality_residual": 3.149180916039995e-11,
+      "unit_scaling_disagreement": 1.1501385954758921e-10,
+      "zero_temperature_scattering_norm": 0.0,
+      "upper_half_plane_to_exact_angular_limit": [
+        {
+          "eta_verification_only": 0.02,
+          "angular_distance_to_exact_limit": 18.619779429094468
+        },
+        {
+          "eta_verification_only": 0.01,
+          "angular_distance_to_exact_limit": 9.522534412783477
+        },
+        {
+          "eta_verification_only": 0.005,
+          "angular_distance_to_exact_limit": 4.789169899831204
+        },
+        {
+          "eta_verification_only": 0.0025,
+          "angular_distance_to_exact_limit": 2.398116689807044
+        }
+      ]
+    }
+  ],
+  "vacuum_reference_checks": [
+    {
+      "omega": 0.4,
+      "pair_beta": 0.0,
+      "bubble_Feynman_disagreement": 2.1995468792689044e-09,
+      "current_Feynman_disagreement": 2.2988307603799465e-09,
+      "pair_cut_normalization_disagreement": 0.0
+    },
+    {
+      "omega": 2.0,
+      "pair_beta": 0.5466975444687905,
+      "bubble_Feynman_disagreement": 4.1466108328192366e-10,
+      "current_Feynman_disagreement": 7.043789634723907e-08,
+      "pair_cut_normalization_disagreement": 5.316927453868914e-15
+    }
+  ],
+  "checks": {
+    "accepted_same_prescription_current_predecessor": true,
+    "predecessor_declared_hash_lineage_matches": true,
+    "independent_delta_roots_match_PV_discontinuity": true,
+    "on_shell_Jacobian_matches_forward_dispersion_difference": true,
+    "independent_upper_half_plane_angular_kernel": true,
+    "new_PV_matches_committed_upper_half_plane_method": true,
+    "independent_integrated_phase_space_cuts": true,
+    "real_axis_vacuum_below_and_above_pair_threshold": true,
+    "real_axis_quadrature_refinement": true,
+    "kinematic_endpoint_scan_refinement_on_declared_grid": true,
+    "integrated_loop_spectral_discontinuity": true,
+    "reoptimized_real_axis_source_and_current_Ward": true,
+    "physical_current_loss_positive_on_declared_positive_frequency_grid": true,
+    "cold_scattering_cut_absent": true,
+    "auxiliary_reference_independence": true,
+    "negative_frequency_current_reality": true,
+    "natural_energy_scaling_not_SI_mapping": true,
+    "verification_eta_approaches_exact_PV_not_output_width": true,
+    "protected_predecessor_and_core_hashes_unchanged": true
+  },
+  "thresholds": {
+    "point_and_vacuum_absolute": 1e-07,
+    "radial_quadrature_absolute": 2e-05,
+    "Ward_absolute": 2e-05,
+    "on_shell_slope_relative": 1e-06
+  },
+  "config": {
+    "orders": [
+      [
+        48,
+        48
+      ],
+      [
+        64,
+        64
+      ],
+      [
+        80,
+        80
+      ]
+    ],
+    "vacuum_order": 96,
+    "endpoint_scans": [
+      512,
+      1024
+    ],
+    "output_imaginary_width": 0.0,
+    "radial_domain": "0<=k<infinity",
+    "UV_mapping": "x=lo+(1-lo)*(1-sqrt(1-u^2))",
+    "eta_is_only_a_verification_sequence": true
+  },
+  "numerical_arithmetic": {
+    "longdouble_mantissa_bits": 52,
+    "cancellation_safe_log1p_and_on_shell_residue_identity": true,
+    "numerical_errors_are_not_physical_uncertainties": true,
+    "certified_numerical_error_bound": false
+  },
+  "evidence_artifacts": [
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/t13_hartree_gauge_current.json",
+      "sha256": "b74428070c559faa3c7caa7ab8efd0258f9f692073b7e736c62a8d44bc8ac971"
+    },
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/Research_T13_Hartree_Gauge_Current.py",
+      "sha256": "1ca6a51f5c0bb95c565d536af428c901e93e94b726079a08e64b4a71b4d95943"
+    },
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/t13_hartree_external_response.json",
+      "sha256": "5078cc2b3c8a8d679542046aa41992f0263b93665297111d4a7864baa96eae36"
+    },
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/Research_T13_Hartree_External_Response.py",
+      "sha256": "42597223c59c36f2ba3c7fbc2b93bb450bab306159e92d529350fa367649087b"
+    },
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/t13_renormalized_hartree_background.json",
+      "sha256": "c88b6bbb4b8b99667d9562dcfe10930f5c5405053126e5fa729f9016a2652669"
+    },
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/Research_T13_Renormalized_Hartree_Background.py",
+      "sha256": "bf72364e42b28cb5e05c8a1518f4c979032be7e738bd3f0bc7a545817e386da5"
+    },
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/t13_hartree_counterterm_matching.json",
+      "sha256": "8daacda13e1e740a9821ea171a7d93fefcbf3392cac5bc28ce75c129f55b4d11"
+    },
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/Research_T13_Hartree_Counterterm_Matching.py",
+      "sha256": "dd18490db2a8fb6821bdd95c01719e0eb3a2a7b9d6eba2fd9de2c8b1ea88c1da"
+    },
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/Research_T13_Hartree_Real_Axis.py",
+      "sha256": "3066bb4c1a33978e719c722bc8d97271ddc20bcd4e4e2dc09c09ec0f06204362"
+    }
+  ],
+  "protected_evidence_hashes": [
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/t13_conditional_twofluid_operator.json",
+      "sha256": "8606303e4818030dd74061c14b243542c19c4cbb262dda29261951d4c87d6412"
+    },
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/t13_polar_dynamic_composite.json",
+      "sha256": "2f07a63af3ce9945bf254d5da238bdefbd53597dae105ee7e50bbcbe8bc61f7d"
+    },
+    {
+      "path": "docs/core/07_artifacts/topic13/t13_topic13_closure_matrix.json",
+      "sha256": "e6e84772a400273c438e0b8ca3c7b5b14c9d720da0420fb4021b1c0e7a54fe66"
+    },
+    {
+      "path": "docs/core/07_artifacts/gates/uet_major_result_dependency_unlock_gate.json",
+      "sha256": "ecbefdf12ee1eb6661ae8096e3f62bf1ffa7992c96ca94f1149fdbc25a8bbe6e"
+    }
+  ],
+  "source_contact_convention": {
+    "renormalization_scale": 1.0,
+    "finite_F_A_squared_coefficient_at_scale": 0.0,
+    "role": "DECLARED_SUBTRACTION_CONVENTION_NOT_MICROSCOPIC_INPUT",
+    "scale_change": "d(loop_Pi)/d(log Qren)=(Q_E^2*I-Q_E*Q_E^T)/(24*pi^2); compensating source-contact running is not full UET RG matching",
+    "spatial_surface": "[Tr(M)-2*M0^2]/(24*pi^2) from the UV IBP boundary, not fitted to Ward residuals"
+  },
+  "method_references": [
+    {
+      "url": "https://arxiv.org/pdf/hep-ph/0203008",
+      "locator": "external action/source Ward construction",
+      "role": "established_method_not_UET_novelty"
+    },
+    {
+      "url": "https://arxiv.org/pdf/hep-ph/9802370",
+      "locator": "IV pair/scattering spectral delta functions and branch-cut dynamics",
+      "role": "method_context_different_scalar_QED_model_not_UET_validation"
+    }
+  ],
+  "open_blockers": [
+    "global_collective_poles_and_IR_truncation_control",
+    "full_covariant_nonuniform_regulator_RG_and_action_input",
+    "joint_Phi_global_state_and_material_source_detector_map",
+    "normal_component_heat_current_SK_KMS_and_collision_transport",
+    "independent_measurement_and_source_uncertainty"
+  ],
+  "controlling_blocker": "global_spectral_truncation_regulator_joint_Phi_material_and_transport_matching_not_closed",
+  "dependency_unlocked": [
+    "same_candidate_global_spectral_and_joint_state_matching_only"
+  ],
+  "real_axis_limit_admitted": true,
+  "real_axis_admission_scope": "two_fixed_Phi_witnesses_and_ten_positive_frequency_q_points_not_global",
+  "global_real_axis_stability_proved": false,
+  "controlled_truncation_error_established": false,
+  "gauge_current_vertex_computed": true,
+  "physical_current_contact_normalization_admitted": false,
+  "full_covariant_counterterm_match": false,
+  "RG_invariance_established": false,
+  "joint_Phi_stationarity_derived": false,
+  "physical_Kubo_emitted": false,
+  "g1_physical_unlock": false,
+  "g2_science_unlock": false,
+  "full_core_unlock": false,
+  "core_composition_gate_overwritten": false,
+  "claim_promotion": false,
+  "parameter_fitting": false,
+  "imposed_Ward_projection": false,
+  "clipping": false,
+  "IR_filter": false,
+  "artificial_width": false,
+  "internal_gap_used_as_physical_Goldstone_mass": false,
+  "C_relabelled_as_charge_or_mass": false,
+  "R_gen_added_as_state": false,
+  "causal_leakage_threshold_changed": false,
+  "xie_2026_accessed": false,
+  "prior_Xie_context_exposure_review": "REVIEW_REQUIRED",
+  "claim_boundary": "Fixed-Phi Hartree rest-frame real-axis loop/current response on a declared grid under the inherited source-contact convention. Not a global pole/stability or truncation proof, collision width, physical Kubo/heat/entropy/SK-KMS, material He-II/graphite prediction, finite-cone repair or global UET closure. Internal Hartree gaps do not erase the preceding massless/composite infrared boundary.",
+  "report": {
+    "MAJOR_RESULT_CLOSURE": "T13_FIXED_PHI_HARTREE_REAL_AXIS_RESPONSE: CLOSED_FOR_LANE",
+    "WHAT_IS_ACTUALLY_CLOSED": [
+      "exact_retarded_angular_PV_and_pair_scattering_cuts",
+      "independent_direct_on_shell_phase_space_verification",
+      "full_domain_subtracted_real_axis_loop_and_reoptimized_current_on_declared_grid",
+      "real_axis_contact_Ward_vacuum_reality_and_unit_checks"
+    ],
+    "WHAT_REMAINS_OPEN": [
+      "global_collective_poles_and_IR_truncation_control",
+      "full_covariant_nonuniform_regulator_RG_and_action_input",
+      "joint_Phi_global_state_and_material_source_detector_map",
+      "normal_component_heat_current_SK_KMS_and_collision_transport",
+      "independent_measurement_and_source_uncertainty"
+    ],
+    "DEPENDENCY_UNLOCKED": [
+      "same_candidate_global_spectral_and_joint_state_matching_only"
+    ],
+    "STATUS": "PASS_SCOPED_HARTREE_REAL_AXIS_RESPONSE",
+    "WHAT_CHANGED": "Computed exact angular real-axis PV and spectral cuts with independent delta roots, full-domain radial subtraction and same-current reoptimization.",
+    "EQUATION_OR_MAPPING": "int_L^U g(ell)/(omega+p-ell+i0) dell = int (g-g_star)/(omega+p-ell) dell + g_star log| (omega+p-L)/(omega+p-U) | - i*pi*g_star; Pi=Gamma_AA-Gamma_Aphi*Gamma_phiphi^-1*Gamma_phiA",
+    "VERIFICATION": "Independent angular/delta/vacuum methods; Ward, refinement, signed-frequency and scale checks without assigned output width.",
+    "CONTROLLING_BLOCKER": "global_spectral_truncation_regulator_joint_Phi_material_and_transport_matching_not_closed",
+    "NEXT_ACTION": "Analyze global collective spectral/IR and approximation/regulator/action limits, then joint Phi/material/source/detector and heat-current matching. Do not repeat the same declared-grid calculation.",
+    "CLAIM_BOUNDARY": "Fixed-Phi Hartree rest-frame real-axis loop/current response on a declared grid under the inherited source-contact convention. Not a global pole/stability or truncation proof, collision width, physical Kubo/heat/entropy/SK-KMS, material He-II/graphite prediction, finite-cone repair or global UET closure. Internal Hartree gaps do not erase the preceding massless/composite infrared boundary."
+  }
+}

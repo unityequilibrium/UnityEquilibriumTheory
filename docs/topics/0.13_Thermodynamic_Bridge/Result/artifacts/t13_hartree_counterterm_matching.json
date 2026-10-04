@@ -1,0 +1,3383 @@
+{
+  "major_result_id": "T13_FIXED_PHI_HARTREE_COUNTERTERM_AND_ON_GAP_POTENTIAL_MATCH",
+  "topic": "0.13",
+  "branch_id": "t13.candidate.fixed_phi_hartree_ms_finite_potential_v1",
+  "closure_level": "CLOSED_FOR_LANE",
+  "verification_status": "PASS_HOMOGENEOUS_HARTREE_COUNTERTERM_MATCH",
+  "what_is_closed": [
+    "two_tensor_homogeneous_gap_coefficient_cancellation",
+    "distinct_field_quartic_counterterm",
+    "on_gap_potential_cancellation_up_to_state_independent_constant",
+    "previous_stationary_witnesses_matched_without_retuning",
+    "symmetric_trace_and_two_traceless_tensor_channels",
+    "conditional_vertex_subtraction_identity_given_declared_bubble_divergence"
+  ],
+  "equation_or_mapping": "H=[[3,1],[1,3]] (not UET C); K_b(I+D*u*H)=u*H; B=u/(1+2uD); A=u/[(1+2uD)(1+4uD)]; u4=A+2B-2u; F_b_on_gap=F_finite_on_gap+N(D,D2,m2,M02)",
+  "units": {
+    "u_A_B_u4_D": "dimensionless",
+    "D2_mass_sq_reference_s_tadpole": "E^2",
+    "mu_T": "E",
+    "potential_normalization": "E^4"
+  },
+  "derivation_class": "HOMOGENEOUS_TWO_TENSOR_ALGEBRA_AND_FINITE_POTENTIAL_MATCH_NOT_FULL_REGULATOR_PROOF",
+  "observable": "canonical_static_background_and_potential_not_material_thermal_response",
+  "data_role": "DERIVED_FORMAL_DIVERGENCE_PROBES_NO_MEASURED_ROWS",
+  "method_references": [
+    {
+      "url": "https://arxiv.org/pdf/1410.1337",
+      "locator": "II-IV, independent invariant couplings, finite gap/field and potential; Eq. (6) tensor transcription independently contracted",
+      "role": "standard_2PI_Hartree_method_not_UET_novelty_or_material_calibration"
+    }
+  ],
+  "formal_probe_grid": [
+    {
+      "u": 0.1,
+      "D": -0.08,
+      "D2": -0.07,
+      "coefficient_match": {
+        "tadpole_and_amplitude_coefficient_residual": [
+          [
+            -5.551115123125783e-17,
+            1.3877787807814457e-17
+          ],
+          [
+            1.3877787807814457e-17,
+            0.0
+          ]
+        ],
+        "mass_offset_residual": 6.245004513516506e-17,
+        "field_quartic_residual": 0.0,
+        "singlet_bare_eigenvalue": 0.41322314049586784,
+        "traceless_bare_eigenvalue": 0.20325203252032523
+      },
+      "states": [
+        {
+          "counterterms": {
+            "A": 0.1049855539877713,
+            "B": 0.10162601626016261,
+            "u4": 0.1082375865080965,
+            "bare_mass_sq": 1.3487603305785125,
+            "delta_A": 0.004985553987771299,
+            "delta_B": 0.0016260162601626077,
+            "delta_4": 0.0082375865080965,
+            "delta_mass_sq": 0.04876033057851248
+          },
+          "finite_masses_sq": [
+            1.3,
+            1.3
+          ],
+          "unsubtracted_tadpoles": [
+            -0.11800000000000002,
+            -0.11800000000000002
+          ],
+          "bare_gap_residual": [
+            0.0,
+            0.0
+          ],
+          "bare_field_bracket": 0.5775000000000002,
+          "finite_field_bracket": 0.5775000000000001,
+          "field_match_residual": 1.1102230246251565e-16,
+          "bare_on_gap_potential": 0.30072314049586774,
+          "finite_on_gap_potential": 0.19,
+          "state_independent_normalization": 0.11072314049586776,
+          "potential_match_residual": -2.7755575615628914e-17
+        },
+        {
+          "counterterms": {
+            "A": 0.1049855539877713,
+            "B": 0.10162601626016261,
+            "u4": 0.1082375865080965,
+            "bare_mass_sq": 1.3487603305785125,
+            "delta_A": 0.004985553987771299,
+            "delta_B": 0.0016260162601626077,
+            "delta_4": 0.0082375865080965,
+            "delta_mass_sq": 0.04876033057851248
+          },
+          "finite_masses_sq": [
+            1.397,
+            1.327
+          ],
+          "unsubtracted_tadpoles": [
+            -0.06576000000000001,
+            -0.14016
+          ],
+          "bare_gap_residual": [
+            0.0,
+            0.0
+          ],
+          "bare_field_bracket": 0.6205000000000002,
+          "finite_field_bracket": 0.6205,
+          "field_match_residual": 1.1102230246251565e-16,
+          "bare_on_gap_potential": 0.38026814049586777,
+          "finite_on_gap_potential": 0.26954500000000003,
+          "state_independent_normalization": 0.11072314049586776,
+          "potential_match_residual": -2.7755575615628914e-17
+        },
+        {
+          "counterterms": {
+            "A": 0.1049855539877713,
+            "B": 0.10162601626016261,
+            "u4": 0.1082375865080965,
+            "bare_mass_sq": 1.3487603305785125,
+            "delta_A": 0.004985553987771299,
+            "delta_B": 0.0016260162601626077,
+            "delta_4": 0.0082375865080965,
+            "delta_mass_sq": 0.04876033057851248
+          },
+          "finite_masses_sq": [
+            1.4460000000000002,
+            1.3940000000000001
+          ],
+          "unsubtracted_tadpoles": [
+            -0.09968000000000002,
+            0.04447999999999999
+          ],
+          "bare_gap_residual": [
+            0.0,
+            0.0
+          ],
+          "bare_field_bracket": 0.6435000000000002,
+          "finite_field_bracket": 0.6435000000000002,
+          "field_match_residual": 0.0,
+          "bare_on_gap_potential": 0.41773314049586785,
+          "finite_on_gap_potential": 0.30701000000000006,
+          "state_independent_normalization": 0.11072314049586776,
+          "potential_match_residual": 2.7755575615628914e-17
+        },
+        {
+          "counterterms": {
+            "A": 0.1049855539877713,
+            "B": 0.10162601626016261,
+            "u4": 0.1082375865080965,
+            "bare_mass_sq": 1.3487603305785125,
+            "delta_A": 0.004985553987771299,
+            "delta_B": 0.0016260162601626077,
+            "delta_4": 0.0082375865080965,
+            "delta_mass_sq": 0.04876033057851248
+          },
+          "finite_masses_sq": [
+            1.3800000000000001,
+            1.46
+          ],
+          "unsubtracted_tadpoles": [
+            -0.22440000000000002,
+            0.3692
+          ],
+          "bare_gap_residual": [
+            0.0,
+            0.0
+          ],
+          "bare_field_bracket": 0.6175000000000002,
+          "finite_field_bracket": 0.6175000000000002,
+          "field_match_residual": 0.0,
+          "bare_on_gap_potential": 0.34247314049586774,
+          "finite_on_gap_potential": 0.23175000000000004,
+          "state_independent_normalization": 0.11072314049586776,
+          "potential_match_residual": -5.551115123125783e-17
+        }
+      ],
+      "single_coupling": {
+        "single_u_b_required_by_singlet": 0.10330578512396695,
+        "single_u_b_required_by_traceless": 0.10162601626016261,
+        "difference": 0.0016797688638043318,
+        "difference_formula": 0.0016797688638043409
+      }
+    },
+    {
+      "u": 0.1,
+      "D": -0.08,
+      "D2": 0.11,
+      "coefficient_match": {
+        "tadpole_and_amplitude_coefficient_residual": [
+          [
+            -5.551115123125783e-17,
+            1.3877787807814457e-17
+          ],
+          [
+            1.3877787807814457e-17,
+            0.0
+          ]
+        ],
+        "mass_offset_residual": 1.0755285551056204e-16,
+        "field_quartic_residual": 0.0,
+        "singlet_bare_eigenvalue": 0.41322314049586784,
+        "traceless_bare_eigenvalue": 0.20325203252032523
+      },
+      "states": [
+        {
+          "counterterms": {
+            "A": 0.1049855539877713,
+            "B": 0.10162601626016261,
+            "u4": 0.1082375865080965,
+            "bare_mass_sq": 1.2743801652892564,
+            "delta_A": 0.004985553987771299,
+            "delta_B": 0.0016260162601626077,
+            "delta_4": 0.0082375865080965,
+            "delta_mass_sq": -0.025619834710743694
+          },
+          "finite_masses_sq": [
+            1.3,
+            1.3
+          ],
+          "unsubtracted_tadpoles": [
+            0.06199999999999999,
+            0.06199999999999999
+          ],
+          "bare_gap_residual": [
+            0.0,
+            0.0
+          ],
+          "bare_field_bracket": 0.5775000000000002,
+          "finite_field_bracket": 0.5775000000000001,
+          "field_match_residual": 1.1102230246251565e-16,
+          "bare_on_gap_potential": 0.41080578512396704,
+          "finite_on_gap_potential": 0.19,
+          "state_independent_normalization": 0.22080578512396698,
+          "potential_match_residual": 5.551115123125783e-17
+        },
+        {
+          "counterterms": {
+            "A": 0.1049855539877713,
+            "B": 0.10162601626016261,
+            "u4": 0.1082375865080965,
+            "bare_mass_sq": 1.2743801652892564,
+            "delta_A": 0.004985553987771299,
+            "delta_B": 0.0016260162601626077,
+            "delta_4": 0.0082375865080965,
+            "delta_mass_sq": -0.025619834710743694
+          },
+          "finite_masses_sq": [
+            1.397,
+            1.327
+          ],
+          "unsubtracted_tadpoles": [
+            0.11423999999999998,
+            0.039839999999999993
+          ],
+          "bare_gap_residual": [
+            2.220446049250313e-16,
+            2.220446049250313e-16
+          ],
+          "bare_field_bracket": 0.6205000000000002,
+          "finite_field_bracket": 0.6205,
+          "field_match_residual": 1.1102230246251565e-16,
+          "bare_on_gap_potential": 0.49035078512396707,
+          "finite_on_gap_potential": 0.26954500000000003,
+          "state_independent_normalization": 0.22080578512396698,
+          "potential_match_residual": 5.551115123125783e-17
+        },
+        {
+          "counterterms": {
+            "A": 0.1049855539877713,
+            "B": 0.10162601626016261,
+            "u4": 0.1082375865080965,
+            "bare_mass_sq": 1.2743801652892564,
+            "delta_A": 0.004985553987771299,
+            "delta_B": 0.0016260162601626077,
+            "delta_4": 0.0082375865080965,
+            "delta_mass_sq": -0.025619834710743694
+          },
+          "finite_masses_sq": [
+            1.4460000000000002,
+            1.3940000000000001
+          ],
+          "unsubtracted_tadpoles": [
+            0.08032,
+            0.22448
+          ],
+          "bare_gap_residual": [
+            0.0,
+            0.0
+          ],
+          "bare_field_bracket": 0.6435000000000002,
+          "finite_field_bracket": 0.6435000000000002,
+          "field_match_residual": 0.0,
+          "bare_on_gap_potential": 0.5278157851239671,
+          "finite_on_gap_potential": 0.30701000000000006,
+          "state_independent_normalization": 0.22080578512396698,
+          "potential_match_residual": 5.551115123125783e-17
+        },
+        {
+          "counterterms": {
+            "A": 0.1049855539877713,
+            "B": 0.10162601626016261,
+            "u4": 0.1082375865080965,
+            "bare_mass_sq": 1.2743801652892564,
+            "delta_A": 0.004985553987771299,
+            "delta_B": 0.0016260162601626077,
+            "delta_4": 0.0082375865080965,
+            "delta_mass_sq": -0.025619834710743694
+          },
+          "finite_masses_sq": [
+            1.3800000000000001,
+            1.46
+          ],
+          "unsubtracted_tadpoles": [
+            -0.044400000000000016,
+            0.5492
+          ],
+          "bare_gap_residual": [
+            0.0,
+            2.220446049250313e-16
+          ],
+          "bare_field_bracket": 0.6175000000000003,
+          "finite_field_bracket": 0.6175000000000002,
+          "field_match_residual": 1.1102230246251565e-16,
+          "bare_on_gap_potential": 0.45255578512396694,
+          "finite_on_gap_potential": 0.23175000000000004,
+          "state_independent_normalization": 0.22080578512396698,
+          "potential_match_residual": -8.326672684688674e-17
+        }
+      ],
+      "single_coupling": {
+        "single_u_b_required_by_singlet": 0.10330578512396695,
+        "single_u_b_required_by_traceless": 0.10162601626016261,
+        "difference": 0.0016797688638043318,
+        "difference_formula": 0.0016797688638043409
+      }
+    },
+    {
+      "u": 0.1,
+      "D": 0.03,
+      "D2": -0.07,
+      "coefficient_match": {
+        "tadpole_and_amplitude_coefficient_residual": [
+          [
+            -5.551115123125783e-17,
+            -2.7755575615628914e-17
+          ],
+          [
+            -2.7755575615628914e-17,
+            -5.551115123125783e-17
+          ]
+        ],
+        "mass_offset_residual": 1.0061396160665481e-16,
+        "field_quartic_residual": 0.0,
+        "singlet_bare_eigenvalue": 0.3952569169960474,
+        "traceless_bare_eigenvalue": 0.1988071570576541
+      },
+      "states": [
+        {
+          "counterterms": {
+            "A": 0.09822487996919667,
+            "B": 0.09940357852882704,
+            "u4": 0.09703203702685076,
+            "bare_mass_sq": 1.3205533596837946,
+            "delta_A": -0.0017751200308033371,
+            "delta_B": -0.0005964214711729615,
+            "delta_4": -0.0029679629731492463,
+            "delta_mass_sq": 0.02055335968379457
+          },
+          "finite_masses_sq": [
+            1.3,
+            1.3
+          ],
+          "unsubtracted_tadpoles": [
+            -0.052000000000000005,
+            -0.052000000000000005
+          ],
+          "bare_gap_residual": [
+            0.0,
+            0.0
+          ],
+          "bare_field_bracket": 0.5775000000000002,
+          "finite_field_bracket": 0.5775000000000001,
+          "field_match_residual": 1.1102230246251565e-16,
+          "bare_on_gap_potential": 0.3228656126482214,
+          "finite_on_gap_potential": 0.19,
+          "state_independent_normalization": 0.13286561264822133,
+          "potential_match_residual": 5.551115123125783e-17
+        },
+        {
+          "counterterms": {
+            "A": 0.09822487996919667,
+            "B": 0.09940357852882704,
+            "u4": 0.09703203702685076,
+            "bare_mass_sq": 1.3205533596837946,
+            "delta_A": -0.0017751200308033371,
+            "delta_B": -0.0005964214711729615,
+            "delta_4": -0.0029679629731492463,
+            "delta_mass_sq": 0.02055335968379457
+          },
+          "finite_masses_sq": [
+            1.397,
+            1.327
+          ],
+          "unsubtracted_tadpoles": [
+            0.010909999999999993,
+            -0.07119
+          ],
+          "bare_gap_residual": [
+            2.220446049250313e-16,
+            2.220446049250313e-16
+          ],
+          "bare_field_bracket": 0.6205000000000003,
+          "finite_field_bracket": 0.6205,
+          "field_match_residual": 2.220446049250313e-16,
+          "bare_on_gap_potential": 0.4024106126482214,
+          "finite_on_gap_potential": 0.26954500000000003,
+          "state_independent_normalization": 0.13286561264822133,
+          "potential_match_residual": 5.551115123125783e-17
+        },
+        {
+          "counterterms": {
+            "A": 0.09822487996919667,
+            "B": 0.09940357852882704,
+            "u4": 0.09703203702685076,
+            "bare_mass_sq": 1.3205533596837946,
+            "delta_A": -0.0017751200308033371,
+            "delta_B": -0.0005964214711729615,
+            "delta_4": -0.0029679629731492463,
+            "delta_mass_sq": 0.02055335968379457
+          },
+          "finite_masses_sq": [
+            1.4460000000000002,
+            1.3940000000000001
+          ],
+          "unsubtracted_tadpoles": [
+            -0.017620000000000004,
+            0.12082000000000001
+          ],
+          "bare_gap_residual": [
+            0.0,
+            0.0
+          ],
+          "bare_field_bracket": 0.6435000000000002,
+          "finite_field_bracket": 0.6435000000000002,
+          "field_match_residual": 0.0,
+          "bare_on_gap_potential": 0.4398756126482214,
+          "finite_on_gap_potential": 0.30701000000000006,
+          "state_independent_normalization": 0.13286561264822133,
+          "potential_match_residual": 0.0
+        },
+        {
+          "counterterms": {
+            "A": 0.09822487996919667,
+            "B": 0.09940357852882704,
+            "u4": 0.09703203702685076,
+            "bare_mass_sq": 1.3205533596837946,
+            "delta_A": -0.0017751200308033371,
+            "delta_B": -0.0005964214711729615,
+            "delta_4": -0.0029679629731492463,
+            "delta_mass_sq": 0.02055335968379457
+          },
+          "finite_masses_sq": [
+            1.3800000000000001,
+            1.46
+          ],
+          "unsubtracted_tadpoles": [
+            -0.1496,
+            0.4528
+          ],
+          "bare_gap_residual": [
+            0.0,
+            2.220446049250313e-16
+          ],
+          "bare_field_bracket": 0.6175000000000002,
+          "finite_field_bracket": 0.6175000000000002,
+          "field_match_residual": 0.0,
+          "bare_on_gap_potential": 0.3646156126482214,
+          "finite_on_gap_potential": 0.23175000000000004,
+          "state_independent_normalization": 0.13286561264822133,
+          "potential_match_residual": 2.7755575615628914e-17
+        }
+      ],
+      "single_coupling": {
+        "single_u_b_required_by_singlet": 0.09881422924901186,
+        "single_u_b_required_by_traceless": 0.09940357852882704,
+        "difference": -0.0005893492798151878,
+        "difference_formula": -0.0005893492798151801
+      }
+    },
+    {
+      "u": 0.1,
+      "D": 0.03,
+      "D2": 0.11,
+      "coefficient_match": {
+        "tadpole_and_amplitude_coefficient_residual": [
+          [
+            -5.551115123125783e-17,
+            -2.7755575615628914e-17
+          ],
+          [
+            -2.7755575615628914e-17,
+            -5.551115123125783e-17
+          ]
+        ],
+        "mass_offset_residual": 6.938893903907228e-17,
+        "field_quartic_residual": 0.0,
+        "singlet_bare_eigenvalue": 0.3952569169960474,
+        "traceless_bare_eigenvalue": 0.1988071570576541
+      },
+      "states": [
+        {
+          "counterterms": {
+            "A": 0.09822487996919667,
+            "B": 0.09940357852882704,
+            "u4": 0.09703203702685076,
+            "bare_mass_sq": 1.249407114624506,
+            "delta_A": -0.0017751200308033371,
+            "delta_B": -0.0005964214711729615,
+            "delta_4": -0.0029679629731492463,
+            "delta_mass_sq": -0.050592885375494
+          },
+          "finite_masses_sq": [
+            1.3,
+            1.3
+          ],
+          "unsubtracted_tadpoles": [
+            0.128,
+            0.128
+          ],
+          "bare_gap_residual": [
+            0.0,
+            0.0
+          ],
+          "bare_field_bracket": 0.5775000000000002,
+          "finite_field_bracket": 0.5775000000000001,
+          "field_match_residual": 1.1102230246251565e-16,
+          "bare_on_gap_potential": 0.4281620553359684,
+          "finite_on_gap_potential": 0.19,
+          "state_independent_normalization": 0.2381620553359684,
+          "potential_match_residual": 0.0
+        },
+        {
+          "counterterms": {
+            "A": 0.09822487996919667,
+            "B": 0.09940357852882704,
+            "u4": 0.09703203702685076,
+            "bare_mass_sq": 1.249407114624506,
+            "delta_A": -0.0017751200308033371,
+            "delta_B": -0.0005964214711729615,
+            "delta_4": -0.0029679629731492463,
+            "delta_mass_sq": -0.050592885375494
+          },
+          "finite_masses_sq": [
+            1.397,
+            1.327
+          ],
+          "unsubtracted_tadpoles": [
+            0.19091,
+            0.10880999999999999
+          ],
+          "bare_gap_residual": [
+            2.220446049250313e-16,
+            2.220446049250313e-16
+          ],
+          "bare_field_bracket": 0.6205000000000003,
+          "finite_field_bracket": 0.6205,
+          "field_match_residual": 2.220446049250313e-16,
+          "bare_on_gap_potential": 0.5077070553359685,
+          "finite_on_gap_potential": 0.26954500000000003,
+          "state_independent_normalization": 0.2381620553359684,
+          "potential_match_residual": 5.551115123125783e-17
+        },
+        {
+          "counterterms": {
+            "A": 0.09822487996919667,
+            "B": 0.09940357852882704,
+            "u4": 0.09703203702685076,
+            "bare_mass_sq": 1.249407114624506,
+            "delta_A": -0.0017751200308033371,
+            "delta_B": -0.0005964214711729615,
+            "delta_4": -0.0029679629731492463,
+            "delta_mass_sq": -0.050592885375494
+          },
+          "finite_masses_sq": [
+            1.4460000000000002,
+            1.3940000000000001
+          ],
+          "unsubtracted_tadpoles": [
+            0.16238000000000002,
+            0.30082000000000003
+          ],
+          "bare_gap_residual": [
+            0.0,
+            0.0
+          ],
+          "bare_field_bracket": 0.6435000000000002,
+          "finite_field_bracket": 0.6435000000000002,
+          "field_match_residual": 0.0,
+          "bare_on_gap_potential": 0.5451720553359684,
+          "finite_on_gap_potential": 0.30701000000000006,
+          "state_independent_normalization": 0.2381620553359684,
+          "potential_match_residual": -1.1102230246251565e-16
+        },
+        {
+          "counterterms": {
+            "A": 0.09822487996919667,
+            "B": 0.09940357852882704,
+            "u4": 0.09703203702685076,
+            "bare_mass_sq": 1.249407114624506,
+            "delta_A": -0.0017751200308033371,
+            "delta_B": -0.0005964214711729615,
+            "delta_4": -0.0029679629731492463,
+            "delta_mass_sq": -0.050592885375494
+          },
+          "finite_masses_sq": [
+            1.3800000000000001,
+            1.46
+          ],
+          "unsubtracted_tadpoles": [
+            0.0304,
+            0.6328
+          ],
+          "bare_gap_residual": [
+            0.0,
+            2.220446049250313e-16
+          ],
+          "bare_field_bracket": 0.6175000000000002,
+          "finite_field_bracket": 0.6175000000000002,
+          "field_match_residual": 0.0,
+          "bare_on_gap_potential": 0.4699120553359684,
+          "finite_on_gap_potential": 0.23175000000000004,
+          "state_independent_normalization": 0.2381620553359684,
+          "potential_match_residual": -2.7755575615628914e-17
+        }
+      ],
+      "single_coupling": {
+        "single_u_b_required_by_singlet": 0.09881422924901186,
+        "single_u_b_required_by_traceless": 0.09940357852882704,
+        "difference": -0.0005893492798151878,
+        "difference_formula": -0.0005893492798151801
+      }
+    },
+    {
+      "u": 0.1,
+      "D": 0.2,
+      "D2": -0.07,
+      "coefficient_match": {
+        "tadpole_and_amplitude_coefficient_residual": [
+          [
+            -5.551115123125783e-17,
+            -1.3877787807814457e-17
+          ],
+          [
+            -1.3877787807814457e-17,
+            -5.551115123125783e-17
+          ]
+        ],
+        "mass_offset_residual": -7.632783294297951e-17,
+        "field_quartic_residual": 0.0,
+        "singlet_bare_eigenvalue": 0.37037037037037035,
+        "traceless_bare_eigenvalue": 0.19230769230769232
+      },
+      "states": [
+        {
+          "counterterms": {
+            "A": 0.08903133903133902,
+            "B": 0.09615384615384616,
+            "u4": 0.08133903133903131,
+            "bare_mass_sq": 1.2814814814814814,
+            "delta_A": -0.01096866096866099,
+            "delta_B": -0.0038461538461538464,
+            "delta_4": -0.018660968660968696,
+            "delta_mass_sq": -0.0185185185185186
+          },
+          "finite_masses_sq": [
+            1.3,
+            1.3
+          ],
+          "unsubtracted_tadpoles": [
+            0.05000000000000002,
+            0.05000000000000002
+          ],
+          "bare_gap_residual": [
+            0.0,
+            0.0
+          ],
+          "bare_field_bracket": 0.5775,
+          "finite_field_bracket": 0.5775000000000001,
+          "field_match_residual": -1.1102230246251565e-16,
+          "bare_on_gap_potential": 0.35353703703703704,
+          "finite_on_gap_potential": 0.19,
+          "state_independent_normalization": 0.16353703703703704,
+          "potential_match_residual": 0.0
+        },
+        {
+          "counterterms": {
+            "A": 0.08903133903133902,
+            "B": 0.09615384615384616,
+            "u4": 0.08133903133903131,
+            "bare_mass_sq": 1.2814814814814814,
+            "delta_A": -0.01096866096866099,
+            "delta_B": -0.0038461538461538464,
+            "delta_4": -0.018660968660968696,
+            "delta_mass_sq": -0.0185185185185186
+          },
+          "finite_masses_sq": [
+            1.397,
+            1.327
+          ],
+          "unsubtracted_tadpoles": [
+            0.12940000000000002,
+            0.0354
+          ],
+          "bare_gap_residual": [
+            0.0,
+            0.0
+          ],
+          "bare_field_bracket": 0.6205,
+          "finite_field_bracket": 0.6205,
+          "field_match_residual": 0.0,
+          "bare_on_gap_potential": 0.43308203703703707,
+          "finite_on_gap_potential": 0.26954500000000003,
+          "state_independent_normalization": 0.16353703703703704,
+          "potential_match_residual": 0.0
+        },
+        {
+          "counterterms": {
+            "A": 0.08903133903133902,
+            "B": 0.09615384615384616,
+            "u4": 0.08133903133903131,
+            "bare_mass_sq": 1.2814814814814814,
+            "delta_A": -0.01096866096866099,
+            "delta_B": -0.0038461538461538464,
+            "delta_4": -0.018660968660968696,
+            "delta_mass_sq": -0.0185185185185186
+          },
+          "finite_masses_sq": [
+            1.4460000000000002,
+            1.3940000000000001
+          ],
+          "unsubtracted_tadpoles": [
+            0.10920000000000005,
+            0.23880000000000004
+          ],
+          "bare_gap_residual": [
+            -2.220446049250313e-16,
+            -2.220446049250313e-16
+          ],
+          "bare_field_bracket": 0.6435000000000001,
+          "finite_field_bracket": 0.6435000000000002,
+          "field_match_residual": -1.1102230246251565e-16,
+          "bare_on_gap_potential": 0.4705470370370371,
+          "finite_on_gap_potential": 0.30701000000000006,
+          "state_independent_normalization": 0.16353703703703704,
+          "potential_match_residual": 0.0
+        },
+        {
+          "counterterms": {
+            "A": 0.08903133903133902,
+            "B": 0.09615384615384616,
+            "u4": 0.08133903133903131,
+            "bare_mass_sq": 1.2814814814814814,
+            "delta_A": -0.01096866096866099,
+            "delta_B": -0.0038461538461538464,
+            "delta_4": -0.018660968660968696,
+            "delta_mass_sq": -0.0185185185185186
+          },
+          "finite_masses_sq": [
+            1.3800000000000001,
+            1.46
+          ],
+          "unsubtracted_tadpoles": [
+            -0.033999999999999975,
+            0.5820000000000001
+          ],
+          "bare_gap_residual": [
+            0.0,
+            0.0
+          ],
+          "bare_field_bracket": 0.6174999999999999,
+          "finite_field_bracket": 0.6175000000000002,
+          "field_match_residual": -2.220446049250313e-16,
+          "bare_on_gap_potential": 0.3952870370370371,
+          "finite_on_gap_potential": 0.23175000000000004,
+          "state_independent_normalization": 0.16353703703703704,
+          "potential_match_residual": 2.7755575615628914e-17
+        }
+      ],
+      "single_coupling": {
+        "single_u_b_required_by_singlet": 0.09259259259259259,
+        "single_u_b_required_by_traceless": 0.09615384615384616,
+        "difference": -0.0035612535612535717,
+        "difference_formula": -0.0035612535612535613
+      }
+    },
+    {
+      "u": 0.1,
+      "D": 0.2,
+      "D2": 0.11,
+      "coefficient_match": {
+        "tadpole_and_amplitude_coefficient_residual": [
+          [
+            -5.551115123125783e-17,
+            -1.3877787807814457e-17
+          ],
+          [
+            -1.3877787807814457e-17,
+            -5.551115123125783e-17
+          ]
+        ],
+        "mass_offset_residual": -5.551115123125783e-17,
+        "field_quartic_residual": 0.0,
+        "singlet_bare_eigenvalue": 0.37037037037037035,
+        "traceless_bare_eigenvalue": 0.19230769230769232
+      },
+      "states": [
+        {
+          "counterterms": {
+            "A": 0.08903133903133902,
+            "B": 0.09615384615384616,
+            "u4": 0.08133903133903131,
+            "bare_mass_sq": 1.2148148148148148,
+            "delta_A": -0.01096866096866099,
+            "delta_B": -0.0038461538461538464,
+            "delta_4": -0.018660968660968696,
+            "delta_mass_sq": -0.08518518518518525
+          },
+          "finite_masses_sq": [
+            1.3,
+            1.3
+          ],
+          "unsubtracted_tadpoles": [
+            0.23000000000000004,
+            0.23000000000000004
+          ],
+          "bare_gap_residual": [
+            0.0,
+            0.0
+          ],
+          "bare_field_bracket": 0.5775000000000001,
+          "finite_field_bracket": 0.5775000000000001,
+          "field_match_residual": 0.0,
+          "bare_on_gap_potential": 0.4522037037037038,
+          "finite_on_gap_potential": 0.19,
+          "state_independent_normalization": 0.26220370370370377,
+          "potential_match_residual": 0.0
+        },
+        {
+          "counterterms": {
+            "A": 0.08903133903133902,
+            "B": 0.09615384615384616,
+            "u4": 0.08133903133903131,
+            "bare_mass_sq": 1.2148148148148148,
+            "delta_A": -0.01096866096866099,
+            "delta_B": -0.0038461538461538464,
+            "delta_4": -0.018660968660968696,
+            "delta_mass_sq": -0.08518518518518525
+          },
+          "finite_masses_sq": [
+            1.397,
+            1.327
+          ],
+          "unsubtracted_tadpoles": [
+            0.3094,
+            0.2154
+          ],
+          "bare_gap_residual": [
+            0.0,
+            0.0
+          ],
+          "bare_field_bracket": 0.6205,
+          "finite_field_bracket": 0.6205,
+          "field_match_residual": 0.0,
+          "bare_on_gap_potential": 0.5317487037037038,
+          "finite_on_gap_potential": 0.26954500000000003,
+          "state_independent_normalization": 0.26220370370370377,
+          "potential_match_residual": -5.551115123125783e-17
+        },
+        {
+          "counterterms": {
+            "A": 0.08903133903133902,
+            "B": 0.09615384615384616,
+            "u4": 0.08133903133903131,
+            "bare_mass_sq": 1.2148148148148148,
+            "delta_A": -0.01096866096866099,
+            "delta_B": -0.0038461538461538464,
+            "delta_4": -0.018660968660968696,
+            "delta_mass_sq": -0.08518518518518525
+          },
+          "finite_masses_sq": [
+            1.4460000000000002,
+            1.3940000000000001
+          ],
+          "unsubtracted_tadpoles": [
+            0.28920000000000007,
+            0.41880000000000006
+          ],
+          "bare_gap_residual": [
+            -2.220446049250313e-16,
+            0.0
+          ],
+          "bare_field_bracket": 0.6435000000000001,
+          "finite_field_bracket": 0.6435000000000002,
+          "field_match_residual": -1.1102230246251565e-16,
+          "bare_on_gap_potential": 0.5692137037037037,
+          "finite_on_gap_potential": 0.30701000000000006,
+          "state_independent_normalization": 0.26220370370370377,
+          "potential_match_residual": -1.1102230246251565e-16
+        },
+        {
+          "counterterms": {
+            "A": 0.08903133903133902,
+            "B": 0.09615384615384616,
+            "u4": 0.08133903133903131,
+            "bare_mass_sq": 1.2148148148148148,
+            "delta_A": -0.01096866096866099,
+            "delta_B": -0.0038461538461538464,
+            "delta_4": -0.018660968660968696,
+            "delta_mass_sq": -0.08518518518518525
+          },
+          "finite_masses_sq": [
+            1.3800000000000001,
+            1.46
+          ],
+          "unsubtracted_tadpoles": [
+            0.14600000000000002,
+            0.762
+          ],
+          "bare_gap_residual": [
+            0.0,
+            0.0
+          ],
+          "bare_field_bracket": 0.6175,
+          "finite_field_bracket": 0.6175000000000002,
+          "field_match_residual": -1.1102230246251565e-16,
+          "bare_on_gap_potential": 0.4939537037037037,
+          "finite_on_gap_potential": 0.23175000000000004,
+          "state_independent_normalization": 0.26220370370370377,
+          "potential_match_residual": -1.6653345369377348e-16
+        }
+      ],
+      "single_coupling": {
+        "single_u_b_required_by_singlet": 0.09259259259259259,
+        "single_u_b_required_by_traceless": 0.09615384615384616,
+        "difference": -0.0035612535612535717,
+        "difference_formula": -0.0035612535612535613
+      }
+    },
+    {
+      "u": 1.0,
+      "D": -0.08,
+      "D2": -0.07,
+      "coefficient_match": {
+        "tadpole_and_amplitude_coefficient_residual": [
+          [
+            4.440892098500626e-16,
+            2.220446049250313e-16
+          ],
+          [
+            2.220446049250313e-16,
+            4.440892098500626e-16
+          ]
+        ],
+        "mass_offset_residual": 0.0,
+        "field_quartic_residual": 0.0,
+        "singlet_bare_eigenvalue": 5.882352941176471,
+        "traceless_bare_eigenvalue": 2.380952380952381
+      },
+      "states": [
+        {
+          "counterterms": {
+            "A": 1.750700280112045,
+            "B": 1.1904761904761905,
+            "u4": 2.131652661064426,
+            "bare_mass_sq": 1.9941176470588238,
+            "delta_A": 0.750700280112045,
+            "delta_B": 0.19047619047619047,
+            "delta_4": 1.1316526610644262,
+            "delta_mass_sq": 0.6941176470588237
+          },
+          "finite_masses_sq": [
+            1.3,
+            1.3
+          ],
+          "unsubtracted_tadpoles": [
+            -0.11800000000000002,
+            -0.11800000000000002
+          ],
+          "bare_gap_residual": [
+            0.0,
+            0.0
+          ],
+          "bare_field_bracket": 0.5775000000000001,
+          "finite_field_bracket": 0.5775000000000001,
+          "field_match_residual": 0.0,
+          "bare_on_gap_potential": 0.26264705882352934,
+          "finite_on_gap_potential": 0.19,
+          "state_independent_normalization": 0.07264705882352938,
+          "potential_match_residual": -4.163336342344337e-17
+        },
+        {
+          "counterterms": {
+            "A": 1.750700280112045,
+            "B": 1.1904761904761905,
+            "u4": 2.131652661064426,
+            "bare_mass_sq": 1.9941176470588238,
+            "delta_A": 0.750700280112045,
+            "delta_B": 0.19047619047619047,
+            "delta_4": 1.1316526610644262,
+            "delta_mass_sq": 0.6941176470588237
+          },
+          "finite_masses_sq": [
+            2.2700000000000005,
+            1.57
+          ],
+          "unsubtracted_tadpoles": [
+            -0.13560000000000005,
+            -0.15960000000000002
+          ],
+          "bare_gap_residual": [
+            -4.440892098500626e-16,
+            -2.220446049250313e-16
+          ],
+          "bare_field_bracket": 1.0075,
+          "finite_field_bracket": 1.0075000000000005,
+          "field_match_residual": -4.440892098500626e-16,
+          "bare_on_gap_potential": 0.3564345588235294,
+          "finite_on_gap_potential": 0.2837875,
+          "state_independent_normalization": 0.07264705882352938,
+          "potential_match_residual": 1.3877787807814457e-17
+        },
+        {
+          "counterterms": {
+            "A": 1.750700280112045,
+            "B": 1.1904761904761905,
+            "u4": 2.131652661064426,
+            "bare_mass_sq": 1.9941176470588238,
+            "delta_A": 0.750700280112045,
+            "delta_B": 0.19047619047619047,
+            "delta_4": 1.1316526610644262,
+            "delta_mass_sq": 0.6941176470588237
+          },
+          "finite_masses_sq": [
+            2.76,
+            2.24
+          ],
+          "unsubtracted_tadpoles": [
+            -0.20479999999999998,
+            -0.023200000000000012
+          ],
+          "bare_gap_residual": [
+            4.440892098500626e-16,
+            0.0
+          ],
+          "bare_field_bracket": 1.2375000000000003,
+          "finite_field_bracket": 1.2374999999999996,
+          "field_match_residual": 6.661338147750939e-16,
+          "bare_on_gap_potential": 0.3932470588235295,
+          "finite_on_gap_potential": 0.3206,
+          "state_independent_normalization": 0.07264705882352938,
+          "potential_match_residual": 1.249000902703301e-16
+        },
+        {
+          "counterterms": {
+            "A": 1.750700280112045,
+            "B": 1.1904761904761905,
+            "u4": 2.131652661064426,
+            "bare_mass_sq": 1.9941176470588238,
+            "delta_A": 0.750700280112045,
+            "delta_B": 0.19047619047619047,
+            "delta_4": 1.1316526610644262,
+            "delta_mass_sq": 0.6941176470588237
+          },
+          "finite_masses_sq": [
+            2.1,
+            2.9
+          ],
+          "unsubtracted_tadpoles": [
+            -0.28200000000000003,
+            0.254
+          ],
+          "bare_gap_residual": [
+            4.440892098500626e-16,
+            4.440892098500626e-16
+          ],
+          "bare_field_bracket": 0.9775000000000001,
+          "finite_field_bracket": 0.9775000000000001,
+          "field_match_residual": 0.0,
+          "bare_on_gap_potential": 0.1603970588235294,
+          "finite_on_gap_potential": 0.08775000000000005,
+          "state_independent_normalization": 0.07264705882352938,
+          "potential_match_residual": -4.163336342344337e-17
+        }
+      ],
+      "single_coupling": {
+        "single_u_b_required_by_singlet": 1.4705882352941178,
+        "single_u_b_required_by_traceless": 1.1904761904761905,
+        "difference": 0.2801120448179273,
+        "difference_formula": 0.28011204481792723
+      }
+    },
+    {
+      "u": 1.0,
+      "D": -0.08,
+      "D2": 0.11,
+      "coefficient_match": {
+        "tadpole_and_amplitude_coefficient_residual": [
+          [
+            4.440892098500626e-16,
+            2.220446049250313e-16
+          ],
+          [
+            2.220446049250313e-16,
+            4.440892098500626e-16
+          ]
+        ],
+        "mass_offset_residual": -5.551115123125783e-17,
+        "field_quartic_residual": 0.0,
+        "singlet_bare_eigenvalue": 5.882352941176471,
+        "traceless_bare_eigenvalue": 2.380952380952381
+      },
+      "states": [
+        {
+          "counterterms": {
+            "A": 1.750700280112045,
+            "B": 1.1904761904761905,
+            "u4": 2.131652661064426,
+            "bare_mass_sq": 0.9352941176470588,
+            "delta_A": 0.750700280112045,
+            "delta_B": 0.19047619047619047,
+            "delta_4": 1.1316526610644262,
+            "delta_mass_sq": -0.3647058823529412
+          },
+          "finite_masses_sq": [
+            1.3,
+            1.3
+          ],
+          "unsubtracted_tadpoles": [
+            0.06199999999999999,
+            0.06199999999999999
+          ],
+          "bare_gap_residual": [
+            0.0,
+            0.0
+          ],
+          "bare_field_bracket": 0.5775000000000001,
+          "finite_field_bracket": 0.5775000000000001,
+          "field_match_residual": 0.0,
+          "bare_on_gap_potential": 0.4002941176470589,
+          "finite_on_gap_potential": 0.19,
+          "state_independent_normalization": 0.21029411764705888,
+          "potential_match_residual": 2.7755575615628914e-17
+        },
+        {
+          "counterterms": {
+            "A": 1.750700280112045,
+            "B": 1.1904761904761905,
+            "u4": 2.131652661064426,
+            "bare_mass_sq": 0.9352941176470588,
+            "delta_A": 0.750700280112045,
+            "delta_B": 0.19047619047619047,
+            "delta_4": 1.1316526610644262,
+            "delta_mass_sq": -0.3647058823529412
+          },
+          "finite_masses_sq": [
+            2.2700000000000005,
+            1.57
+          ],
+          "unsubtracted_tadpoles": [
+            0.04439999999999994,
+            0.020399999999999988
+          ],
+          "bare_gap_residual": [
+            -4.440892098500626e-16,
+            -2.220446049250313e-16
+          ],
+          "bare_field_bracket": 1.0074999999999998,
+          "finite_field_bracket": 1.0075000000000005,
+          "field_match_residual": -6.661338147750939e-16,
+          "bare_on_gap_potential": 0.4940816176470589,
+          "finite_on_gap_potential": 0.2837875,
+          "state_independent_normalization": 0.21029411764705888,
+          "potential_match_residual": -2.7755575615628914e-17
+        },
+        {
+          "counterterms": {
+            "A": 1.750700280112045,
+            "B": 1.1904761904761905,
+            "u4": 2.131652661064426,
+            "bare_mass_sq": 0.9352941176470588,
+            "delta_A": 0.750700280112045,
+            "delta_B": 0.19047619047619047,
+            "delta_4": 1.1316526610644262,
+            "delta_mass_sq": -0.3647058823529412
+          },
+          "finite_masses_sq": [
+            2.76,
+            2.24
+          ],
+          "unsubtracted_tadpoles": [
+            -0.02479999999999996,
+            0.1568
+          ],
+          "bare_gap_residual": [
+            8.881784197001252e-16,
+            0.0
+          ],
+          "bare_field_bracket": 1.2375000000000003,
+          "finite_field_bracket": 1.2374999999999996,
+          "field_match_residual": 6.661338147750939e-16,
+          "bare_on_gap_potential": 0.5308941176470588,
+          "finite_on_gap_potential": 0.3206,
+          "state_independent_normalization": 0.21029411764705888,
+          "potential_match_residual": -2.7755575615628914e-17
+        },
+        {
+          "counterterms": {
+            "A": 1.750700280112045,
+            "B": 1.1904761904761905,
+            "u4": 2.131652661064426,
+            "bare_mass_sq": 0.9352941176470588,
+            "delta_A": 0.750700280112045,
+            "delta_B": 0.19047619047619047,
+            "delta_4": 1.1316526610644262,
+            "delta_mass_sq": -0.3647058823529412
+          },
+          "finite_masses_sq": [
+            2.1,
+            2.9
+          ],
+          "unsubtracted_tadpoles": [
+            -0.10200000000000002,
+            0.43399999999999994
+          ],
+          "bare_gap_residual": [
+            0.0,
+            0.0
+          ],
+          "bare_field_bracket": 0.9775,
+          "finite_field_bracket": 0.9775000000000001,
+          "field_match_residual": -1.1102230246251565e-16,
+          "bare_on_gap_potential": 0.29804411764705885,
+          "finite_on_gap_potential": 0.08775000000000005,
+          "state_independent_normalization": 0.21029411764705888,
+          "potential_match_residual": -8.326672684688674e-17
+        }
+      ],
+      "single_coupling": {
+        "single_u_b_required_by_singlet": 1.4705882352941178,
+        "single_u_b_required_by_traceless": 1.1904761904761905,
+        "difference": 0.2801120448179273,
+        "difference_formula": 0.28011204481792723
+      }
+    },
+    {
+      "u": 1.0,
+      "D": 0.03,
+      "D2": -0.07,
+      "coefficient_match": {
+        "tadpole_and_amplitude_coefficient_residual": [
+          [
+            0.0,
+            -1.1102230246251565e-16
+          ],
+          [
+            -1.1102230246251565e-16,
+            0.0
+          ]
+        ],
+        "mass_offset_residual": 0.0,
+        "field_quartic_residual": 0.0,
+        "singlet_bare_eigenvalue": 3.571428571428571,
+        "traceless_bare_eigenvalue": 1.8867924528301885
+      },
+      "states": [
+        {
+          "counterterms": {
+            "A": 0.8423180592991912,
+            "B": 0.9433962264150942,
+            "u4": 0.7291105121293797,
+            "bare_mass_sq": 1.4857142857142858,
+            "delta_A": -0.15768194070080876,
+            "delta_B": -0.05660377358490576,
+            "delta_4": -0.2708894878706203,
+            "delta_mass_sq": 0.18571428571428572
+          },
+          "finite_masses_sq": [
+            1.3,
+            1.3
+          ],
+          "unsubtracted_tadpoles": [
+            -0.052000000000000005,
+            -0.052000000000000005
+          ],
+          "bare_gap_residual": [
+            0.0,
+            0.0
+          ],
+          "bare_field_bracket": 0.5775000000000001,
+          "finite_field_bracket": 0.5775000000000001,
+          "field_match_residual": 0.0,
+          "bare_on_gap_potential": 0.3185714285714286,
+          "finite_on_gap_potential": 0.19,
+          "state_independent_normalization": 0.12857142857142856,
+          "potential_match_residual": 5.551115123125783e-17
+        },
+        {
+          "counterterms": {
+            "A": 0.8423180592991912,
+            "B": 0.9433962264150942,
+            "u4": 0.7291105121293797,
+            "bare_mass_sq": 1.4857142857142858,
+            "delta_A": -0.15768194070080876,
+            "delta_B": -0.05660377358490576,
+            "delta_4": -0.2708894878706203,
+            "delta_mass_sq": 0.18571428571428572
+          },
+          "finite_masses_sq": [
+            2.2700000000000005,
+            1.57
+          ],
+          "unsubtracted_tadpoles": [
+            0.03710000000000001,
+            -0.06390000000000001
+          ],
+          "bare_gap_residual": [
+            -4.440892098500626e-16,
+            0.0
+          ],
+          "bare_field_bracket": 1.0075,
+          "finite_field_bracket": 1.0075000000000005,
+          "field_match_residual": -4.440892098500626e-16,
+          "bare_on_gap_potential": 0.41235892857142864,
+          "finite_on_gap_potential": 0.2837875,
+          "state_independent_normalization": 0.12857142857142856,
+          "potential_match_residual": 5.551115123125783e-17
+        },
+        {
+          "counterterms": {
+            "A": 0.8423180592991912,
+            "B": 0.9433962264150942,
+            "u4": 0.7291105121293797,
+            "bare_mass_sq": 1.4857142857142858,
+            "delta_A": -0.15768194070080876,
+            "delta_B": -0.05660377358490576,
+            "delta_4": -0.2708894878706203,
+            "delta_mass_sq": 0.18571428571428572
+          },
+          "finite_masses_sq": [
+            2.76,
+            2.24
+          ],
+          "unsubtracted_tadpoles": [
+            0.02179999999999998,
+            0.1462
+          ],
+          "bare_gap_residual": [
+            0.0,
+            -4.440892098500626e-16
+          ],
+          "bare_field_bracket": 1.2375,
+          "finite_field_bracket": 1.2374999999999996,
+          "field_match_residual": 4.440892098500626e-16,
+          "bare_on_gap_potential": 0.4491714285714286,
+          "finite_on_gap_potential": 0.3206,
+          "state_independent_normalization": 0.12857142857142856,
+          "potential_match_residual": 5.551115123125783e-17
+        },
+        {
+          "counterterms": {
+            "A": 0.8423180592991912,
+            "B": 0.9433962264150942,
+            "u4": 0.7291105121293797,
+            "bare_mass_sq": 1.4857142857142858,
+            "delta_A": -0.15768194070080876,
+            "delta_B": -0.05660377358490576,
+            "delta_4": -0.2708894878706203,
+            "delta_mass_sq": 0.18571428571428572
+          },
+          "finite_masses_sq": [
+            2.1,
+            2.9
+          ],
+          "unsubtracted_tadpoles": [
+            -0.128,
+            0.496
+          ],
+          "bare_gap_residual": [
+            0.0,
+            4.440892098500626e-16
+          ],
+          "bare_field_bracket": 0.9775,
+          "finite_field_bracket": 0.9775000000000001,
+          "field_match_residual": -1.1102230246251565e-16,
+          "bare_on_gap_potential": 0.2163214285714286,
+          "finite_on_gap_potential": 0.08775000000000005,
+          "state_independent_normalization": 0.12857142857142856,
+          "potential_match_residual": 0.0
+        }
+      ],
+      "single_coupling": {
+        "single_u_b_required_by_singlet": 0.8928571428571428,
+        "single_u_b_required_by_traceless": 0.9433962264150942,
+        "difference": -0.05053908355795145,
+        "difference_formula": -0.05053908355795147
+      }
+    },
+    {
+      "u": 1.0,
+      "D": 0.03,
+      "D2": 0.11,
+      "coefficient_match": {
+        "tadpole_and_amplitude_coefficient_residual": [
+          [
+            0.0,
+            -1.1102230246251565e-16
+          ],
+          [
+            -1.1102230246251565e-16,
+            0.0
+          ]
+        ],
+        "mass_offset_residual": 5.551115123125783e-17,
+        "field_quartic_residual": 0.0,
+        "singlet_bare_eigenvalue": 3.571428571428571,
+        "traceless_bare_eigenvalue": 1.8867924528301885
+      },
+      "states": [
+        {
+          "counterterms": {
+            "A": 0.8423180592991912,
+            "B": 0.9433962264150942,
+            "u4": 0.7291105121293797,
+            "bare_mass_sq": 0.842857142857143,
+            "delta_A": -0.15768194070080876,
+            "delta_B": -0.05660377358490576,
+            "delta_4": -0.2708894878706203,
+            "delta_mass_sq": -0.4571428571428571
+          },
+          "finite_masses_sq": [
+            1.3,
+            1.3
+          ],
+          "unsubtracted_tadpoles": [
+            0.128,
+            0.128
+          ],
+          "bare_gap_residual": [
+            0.0,
+            0.0
+          ],
+          "bare_field_bracket": 0.5775000000000001,
+          "finite_field_bracket": 0.5775000000000001,
+          "field_match_residual": 0.0,
+          "bare_on_gap_potential": 0.40214285714285714,
+          "finite_on_gap_potential": 0.19,
+          "state_independent_normalization": 0.2121428571428572,
+          "potential_match_residual": -5.551115123125783e-17
+        },
+        {
+          "counterterms": {
+            "A": 0.8423180592991912,
+            "B": 0.9433962264150942,
+            "u4": 0.7291105121293797,
+            "bare_mass_sq": 0.842857142857143,
+            "delta_A": -0.15768194070080876,
+            "delta_B": -0.05660377358490576,
+            "delta_4": -0.2708894878706203,
+            "delta_mass_sq": -0.4571428571428571
+          },
+          "finite_masses_sq": [
+            2.2700000000000005,
+            1.57
+          ],
+          "unsubtracted_tadpoles": [
+            0.21710000000000002,
+            0.1161
+          ],
+          "bare_gap_residual": [
+            -4.440892098500626e-16,
+            0.0
+          ],
+          "bare_field_bracket": 1.0075,
+          "finite_field_bracket": 1.0075000000000005,
+          "field_match_residual": -4.440892098500626e-16,
+          "bare_on_gap_potential": 0.49593035714285727,
+          "finite_on_gap_potential": 0.2837875,
+          "state_independent_normalization": 0.2121428571428572,
+          "potential_match_residual": 5.551115123125783e-17
+        },
+        {
+          "counterterms": {
+            "A": 0.8423180592991912,
+            "B": 0.9433962264150942,
+            "u4": 0.7291105121293797,
+            "bare_mass_sq": 0.842857142857143,
+            "delta_A": -0.15768194070080876,
+            "delta_B": -0.05660377358490576,
+            "delta_4": -0.2708894878706203,
+            "delta_mass_sq": -0.4571428571428571
+          },
+          "finite_masses_sq": [
+            2.76,
+            2.24
+          ],
+          "unsubtracted_tadpoles": [
+            0.2018,
+            0.32620000000000005
+          ],
+          "bare_gap_residual": [
+            0.0,
+            0.0
+          ],
+          "bare_field_bracket": 1.2375,
+          "finite_field_bracket": 1.2374999999999996,
+          "field_match_residual": 4.440892098500626e-16,
+          "bare_on_gap_potential": 0.5327428571428572,
+          "finite_on_gap_potential": 0.3206,
+          "state_independent_normalization": 0.2121428571428572,
+          "potential_match_residual": 0.0
+        },
+        {
+          "counterterms": {
+            "A": 0.8423180592991912,
+            "B": 0.9433962264150942,
+            "u4": 0.7291105121293797,
+            "bare_mass_sq": 0.842857142857143,
+            "delta_A": -0.15768194070080876,
+            "delta_B": -0.05660377358490576,
+            "delta_4": -0.2708894878706203,
+            "delta_mass_sq": -0.4571428571428571
+          },
+          "finite_masses_sq": [
+            2.1,
+            2.9
+          ],
+          "unsubtracted_tadpoles": [
+            0.052,
+            0.6759999999999999
+          ],
+          "bare_gap_residual": [
+            0.0,
+            -4.440892098500626e-16
+          ],
+          "bare_field_bracket": 0.9775,
+          "finite_field_bracket": 0.9775000000000001,
+          "field_match_residual": -1.1102230246251565e-16,
+          "bare_on_gap_potential": 0.2998928571428572,
+          "finite_on_gap_potential": 0.08775000000000005,
+          "state_independent_normalization": 0.2121428571428572,
+          "potential_match_residual": -5.551115123125783e-17
+        }
+      ],
+      "single_coupling": {
+        "single_u_b_required_by_singlet": 0.8928571428571428,
+        "single_u_b_required_by_traceless": 0.9433962264150942,
+        "difference": -0.05053908355795145,
+        "difference_formula": -0.05053908355795147
+      }
+    },
+    {
+      "u": 1.0,
+      "D": 0.2,
+      "D2": -0.07,
+      "coefficient_match": {
+        "tadpole_and_amplitude_coefficient_residual": [
+          [
+            4.440892098500626e-16,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        "mass_offset_residual": -1.3877787807814457e-17,
+        "field_quartic_residual": 0.0,
+        "singlet_bare_eigenvalue": 2.2222222222222223,
+        "traceless_bare_eigenvalue": 1.4285714285714286
+      },
+      "states": [
+        {
+          "counterterms": {
+            "A": 0.3968253968253968,
+            "B": 0.7142857142857143,
+            "u4": -0.17460317460317465,
+            "bare_mass_sq": 1.1888888888888889,
+            "delta_A": -0.6031746031746033,
+            "delta_B": -0.2857142857142857,
+            "delta_4": -1.1746031746031746,
+            "delta_mass_sq": -0.11111111111111116
+          },
+          "finite_masses_sq": [
+            1.3,
+            1.3
+          ],
+          "unsubtracted_tadpoles": [
+            0.05000000000000002,
+            0.05000000000000002
+          ],
+          "bare_gap_residual": [
+            0.0,
+            0.0
+          ],
+          "bare_field_bracket": 0.5775000000000001,
+          "finite_field_bracket": 0.5775000000000001,
+          "field_match_residual": 0.0,
+          "bare_on_gap_potential": 0.3512222222222222,
+          "finite_on_gap_potential": 0.19,
+          "state_independent_normalization": 0.16122222222222224,
+          "potential_match_residual": -2.7755575615628914e-17
+        },
+        {
+          "counterterms": {
+            "A": 0.3968253968253968,
+            "B": 0.7142857142857143,
+            "u4": -0.17460317460317465,
+            "bare_mass_sq": 1.1888888888888889,
+            "delta_A": -0.6031746031746033,
+            "delta_B": -0.2857142857142857,
+            "delta_4": -1.1746031746031746,
+            "delta_mass_sq": -0.11111111111111116
+          },
+          "finite_masses_sq": [
+            2.2700000000000005,
+            1.57
+          ],
+          "unsubtracted_tadpoles": [
+            0.3040000000000001,
+            0.08400000000000003
+          ],
+          "bare_gap_residual": [
+            0.0,
+            0.0
+          ],
+          "bare_field_bracket": 1.0075000000000003,
+          "finite_field_bracket": 1.0075000000000005,
+          "field_match_residual": -2.220446049250313e-16,
+          "bare_on_gap_potential": 0.4450097222222223,
+          "finite_on_gap_potential": 0.2837875,
+          "state_independent_normalization": 0.16122222222222224,
+          "potential_match_residual": 2.7755575615628914e-17
+        },
+        {
+          "counterterms": {
+            "A": 0.3968253968253968,
+            "B": 0.7142857142857143,
+            "u4": -0.17460317460317465,
+            "bare_mass_sq": 1.1888888888888889,
+            "delta_A": -0.6031746031746033,
+            "delta_B": -0.2857142857142857,
+            "delta_4": -1.1746031746031746,
+            "delta_mass_sq": -0.11111111111111116
+          },
+          "finite_masses_sq": [
+            2.76,
+            2.24
+          ],
+          "unsubtracted_tadpoles": [
+            0.3719999999999999,
+            0.40800000000000003
+          ],
+          "bare_gap_residual": [
+            0.0,
+            0.0
+          ],
+          "bare_field_bracket": 1.2374999999999998,
+          "finite_field_bracket": 1.2374999999999996,
+          "field_match_residual": 2.220446049250313e-16,
+          "bare_on_gap_potential": 0.48182222222222226,
+          "finite_on_gap_potential": 0.3206,
+          "state_independent_normalization": 0.16122222222222224,
+          "potential_match_residual": 2.7755575615628914e-17
+        },
+        {
+          "counterterms": {
+            "A": 0.3968253968253968,
+            "B": 0.7142857142857143,
+            "u4": -0.17460317460317465,
+            "bare_mass_sq": 1.1888888888888889,
+            "delta_A": -0.6031746031746033,
+            "delta_B": -0.2857142857142857,
+            "delta_4": -1.1746031746031746,
+            "delta_mass_sq": -0.11111111111111116
+          },
+          "finite_masses_sq": [
+            2.1,
+            2.9
+          ],
+          "unsubtracted_tadpoles": [
+            0.11000000000000001,
+            0.8700000000000001
+          ],
+          "bare_gap_residual": [
+            0.0,
+            4.440892098500626e-16
+          ],
+          "bare_field_bracket": 0.9775000000000001,
+          "finite_field_bracket": 0.9775000000000001,
+          "field_match_residual": 0.0,
+          "bare_on_gap_potential": 0.2489722222222222,
+          "finite_on_gap_potential": 0.08775000000000005,
+          "state_independent_normalization": 0.16122222222222224,
+          "potential_match_residual": -8.326672684688674e-17
+        }
+      ],
+      "single_coupling": {
+        "single_u_b_required_by_singlet": 0.5555555555555556,
+        "single_u_b_required_by_traceless": 0.7142857142857143,
+        "difference": -0.15873015873015872,
+        "difference_formula": -0.15873015873015875
+      }
+    },
+    {
+      "u": 1.0,
+      "D": 0.2,
+      "D2": 0.11,
+      "coefficient_match": {
+        "tadpole_and_amplitude_coefficient_residual": [
+          [
+            4.440892098500626e-16,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        "mass_offset_residual": 0.0,
+        "field_quartic_residual": 0.0,
+        "singlet_bare_eigenvalue": 2.2222222222222223,
+        "traceless_bare_eigenvalue": 1.4285714285714286
+      },
+      "states": [
+        {
+          "counterterms": {
+            "A": 0.3968253968253968,
+            "B": 0.7142857142857143,
+            "u4": -0.17460317460317465,
+            "bare_mass_sq": 0.7888888888888889,
+            "delta_A": -0.6031746031746033,
+            "delta_B": -0.2857142857142857,
+            "delta_4": -1.1746031746031746,
+            "delta_mass_sq": -0.5111111111111112
+          },
+          "finite_masses_sq": [
+            1.3,
+            1.3
+          ],
+          "unsubtracted_tadpoles": [
+            0.23000000000000004,
+            0.23000000000000004
+          ],
+          "bare_gap_residual": [
+            0.0,
+            0.0
+          ],
+          "bare_field_bracket": 0.5775000000000001,
+          "finite_field_bracket": 0.5775000000000001,
+          "field_match_residual": 0.0,
+          "bare_on_gap_potential": 0.40322222222222226,
+          "finite_on_gap_potential": 0.19,
+          "state_independent_normalization": 0.21322222222222229,
+          "potential_match_residual": -2.7755575615628914e-17
+        },
+        {
+          "counterterms": {
+            "A": 0.3968253968253968,
+            "B": 0.7142857142857143,
+            "u4": -0.17460317460317465,
+            "bare_mass_sq": 0.7888888888888889,
+            "delta_A": -0.6031746031746033,
+            "delta_B": -0.2857142857142857,
+            "delta_4": -1.1746031746031746,
+            "delta_mass_sq": -0.5111111111111112
+          },
+          "finite_masses_sq": [
+            2.2700000000000005,
+            1.57
+          ],
+          "unsubtracted_tadpoles": [
+            0.4840000000000001,
+            0.264
+          ],
+          "bare_gap_residual": [
+            -4.440892098500626e-16,
+            -2.220446049250313e-16
+          ],
+          "bare_field_bracket": 1.0075,
+          "finite_field_bracket": 1.0075000000000005,
+          "field_match_residual": -4.440892098500626e-16,
+          "bare_on_gap_potential": 0.4970097222222223,
+          "finite_on_gap_potential": 0.2837875,
+          "state_independent_normalization": 0.21322222222222229,
+          "potential_match_residual": -2.7755575615628914e-17
+        },
+        {
+          "counterterms": {
+            "A": 0.3968253968253968,
+            "B": 0.7142857142857143,
+            "u4": -0.17460317460317465,
+            "bare_mass_sq": 0.7888888888888889,
+            "delta_A": -0.6031746031746033,
+            "delta_B": -0.2857142857142857,
+            "delta_4": -1.1746031746031746,
+            "delta_mass_sq": -0.5111111111111112
+          },
+          "finite_masses_sq": [
+            2.76,
+            2.24
+          ],
+          "unsubtracted_tadpoles": [
+            0.5519999999999999,
+            0.5880000000000001
+          ],
+          "bare_gap_residual": [
+            0.0,
+            0.0
+          ],
+          "bare_field_bracket": 1.2374999999999998,
+          "finite_field_bracket": 1.2374999999999996,
+          "field_match_residual": 2.220446049250313e-16,
+          "bare_on_gap_potential": 0.5338222222222221,
+          "finite_on_gap_potential": 0.3206,
+          "state_independent_normalization": 0.21322222222222229,
+          "potential_match_residual": -1.942890293094024e-16
+        },
+        {
+          "counterterms": {
+            "A": 0.3968253968253968,
+            "B": 0.7142857142857143,
+            "u4": -0.17460317460317465,
+            "bare_mass_sq": 0.7888888888888889,
+            "delta_A": -0.6031746031746033,
+            "delta_B": -0.2857142857142857,
+            "delta_4": -1.1746031746031746,
+            "delta_mass_sq": -0.5111111111111112
+          },
+          "finite_masses_sq": [
+            2.1,
+            2.9
+          ],
+          "unsubtracted_tadpoles": [
+            0.29000000000000004,
+            1.05
+          ],
+          "bare_gap_residual": [
+            0.0,
+            0.0
+          ],
+          "bare_field_bracket": 0.9775,
+          "finite_field_bracket": 0.9775000000000001,
+          "field_match_residual": -1.1102230246251565e-16,
+          "bare_on_gap_potential": 0.30097222222222214,
+          "finite_on_gap_potential": 0.08775000000000005,
+          "state_independent_normalization": 0.21322222222222229,
+          "potential_match_residual": -1.942890293094024e-16
+        }
+      ],
+      "single_coupling": {
+        "single_u_b_required_by_singlet": 0.5555555555555556,
+        "single_u_b_required_by_traceless": 0.7142857142857143,
+        "difference": -0.15873015873015872,
+        "difference_formula": -0.15873015873015875
+      }
+    },
+    {
+      "u": 2.0,
+      "D": -0.08,
+      "D2": -0.07,
+      "coefficient_match": {
+        "tadpole_and_amplitude_coefficient_residual": [
+          [
+            8.881784197001252e-16,
+            4.440892098500626e-16
+          ],
+          [
+            4.440892098500626e-16,
+            8.881784197001252e-16
+          ]
+        ],
+        "mass_offset_residual": 4.440892098500626e-16,
+        "field_quartic_residual": 0.0,
+        "singlet_bare_eigenvalue": 22.222222222222225,
+        "traceless_bare_eigenvalue": 5.882352941176471
+      },
+      "states": [
+        {
+          "counterterms": {
+            "A": 8.169934640522877,
+            "B": 2.9411764705882355,
+            "u4": 10.052287581699348,
+            "bare_mass_sq": 3.9222222222222234,
+            "delta_A": 6.169934640522877,
+            "delta_B": 0.9411764705882355,
+            "delta_4": 8.052287581699348,
+            "delta_mass_sq": 2.6222222222222236
+          },
+          "finite_masses_sq": [
+            1.3,
+            1.3
+          ],
+          "unsubtracted_tadpoles": [
+            -0.11800000000000002,
+            -0.11800000000000002
+          ],
+          "bare_gap_residual": [
+            2.220446049250313e-16,
+            2.220446049250313e-16
+          ],
+          "bare_field_bracket": 0.5775000000000001,
+          "finite_field_bracket": 0.5775000000000001,
+          "field_match_residual": 0.0,
+          "bare_on_gap_potential": 0.1488888888888888,
+          "finite_on_gap_potential": 0.19,
+          "state_independent_normalization": -0.041111111111111195,
+          "potential_match_residual": -1.3877787807814457e-17
+        },
+        {
+          "counterterms": {
+            "A": 8.169934640522877,
+            "B": 2.9411764705882355,
+            "u4": 10.052287581699348,
+            "bare_mass_sq": 3.9222222222222234,
+            "delta_A": 6.169934640522877,
+            "delta_B": 0.9411764705882355,
+            "delta_4": 8.052287581699348,
+            "delta_mass_sq": 2.6222222222222236
+          },
+          "finite_masses_sq": [
+            3.2399999999999998,
+            1.84
+          ],
+          "unsubtracted_tadpoles": [
+            -0.21320000000000003,
+            -0.18120000000000003
+          ],
+          "bare_gap_residual": [
+            4.440892098500626e-16,
+            -2.220446049250313e-16
+          ],
+          "bare_field_bracket": 1.4375000000000009,
+          "finite_field_bracket": 1.4375,
+          "field_match_residual": 8.881784197001252e-16,
+          "bare_on_gap_potential": 0.2585013888888889,
+          "finite_on_gap_potential": 0.2996125,
+          "state_independent_normalization": -0.041111111111111195,
+          "potential_match_residual": 9.71445146547012e-17
+        },
+        {
+          "counterterms": {
+            "A": 8.169934640522877,
+            "B": 2.9411764705882355,
+            "u4": 10.052287581699348,
+            "bare_mass_sq": 3.9222222222222234,
+            "delta_A": 6.169934640522877,
+            "delta_B": 0.9411764705882355,
+            "delta_4": 8.052287581699348,
+            "delta_mass_sq": 2.6222222222222236
+          },
+          "finite_masses_sq": [
+            4.220000000000001,
+            3.18
+          ],
+          "unsubtracted_tadpoles": [
+            -0.3216,
+            -0.09840000000000004
+          ],
+          "bare_gap_residual": [
+            1.7763568394002505e-15,
+            4.440892098500626e-16
+          ],
+          "bare_field_bracket": 1.8975000000000009,
+          "finite_field_bracket": 1.8975000000000004,
+          "field_match_residual": 4.440892098500626e-16,
+          "bare_on_gap_potential": 0.2945888888888889,
+          "finite_on_gap_potential": 0.33570000000000005,
+          "state_independent_normalization": -0.041111111111111195,
+          "potential_match_residual": 4.163336342344337e-17
+        },
+        {
+          "counterterms": {
+            "A": 8.169934640522877,
+            "B": 2.9411764705882355,
+            "u4": 10.052287581699348,
+            "bare_mass_sq": 3.9222222222222234,
+            "delta_A": 6.169934640522877,
+            "delta_B": 0.9411764705882355,
+            "delta_4": 8.052287581699348,
+            "delta_mass_sq": 2.6222222222222236
+          },
+          "finite_masses_sq": [
+            2.9,
+            4.5
+          ],
+          "unsubtracted_tadpoles": [
+            -0.34600000000000003,
+            0.126
+          ],
+          "bare_gap_residual": [
+            8.881784197001252e-16,
+            8.881784197001252e-16
+          ],
+          "bare_field_bracket": 1.3775000000000004,
+          "finite_field_bracket": 1.3775000000000002,
+          "field_match_residual": 2.220446049250313e-16,
+          "bare_on_gap_potential": -0.11336111111111111,
+          "finite_on_gap_potential": -0.07224999999999993,
+          "state_independent_normalization": -0.041111111111111195,
+          "potential_match_residual": 1.3877787807814457e-17
+        }
+      ],
+      "single_coupling": {
+        "single_u_b_required_by_singlet": 5.555555555555555,
+        "single_u_b_required_by_traceless": 2.9411764705882355,
+        "difference": 2.61437908496732,
+        "difference_formula": 2.6143790849673207
+      }
+    },
+    {
+      "u": 2.0,
+      "D": -0.08,
+      "D2": 0.11,
+      "coefficient_match": {
+        "tadpole_and_amplitude_coefficient_residual": [
+          [
+            8.881784197001252e-16,
+            4.440892098500626e-16
+          ],
+          [
+            4.440892098500626e-16,
+            8.881784197001252e-16
+          ]
+        ],
+        "mass_offset_residual": 0.0,
+        "field_quartic_residual": 0.0,
+        "singlet_bare_eigenvalue": 22.222222222222225,
+        "traceless_bare_eigenvalue": 5.882352941176471
+      },
+      "states": [
+        {
+          "counterterms": {
+            "A": 8.169934640522877,
+            "B": 2.9411764705882355,
+            "u4": 10.052287581699348,
+            "bare_mass_sq": -0.07777777777777772,
+            "delta_A": 6.169934640522877,
+            "delta_B": 0.9411764705882355,
+            "delta_4": 8.052287581699348,
+            "delta_mass_sq": -1.3777777777777778
+          },
+          "finite_masses_sq": [
+            1.3,
+            1.3
+          ],
+          "unsubtracted_tadpoles": [
+            0.06199999999999999,
+            0.06199999999999999
+          ],
+          "bare_gap_residual": [
+            0.0,
+            0.0
+          ],
+          "bare_field_bracket": 0.5775000000000001,
+          "finite_field_bracket": 0.5775000000000001,
+          "field_match_residual": 0.0,
+          "bare_on_gap_potential": 0.368888888888889,
+          "finite_on_gap_potential": 0.19,
+          "state_independent_normalization": 0.17888888888888893,
+          "potential_match_residual": 5.551115123125783e-17
+        },
+        {
+          "counterterms": {
+            "A": 8.169934640522877,
+            "B": 2.9411764705882355,
+            "u4": 10.052287581699348,
+            "bare_mass_sq": -0.07777777777777772,
+            "delta_A": 6.169934640522877,
+            "delta_B": 0.9411764705882355,
+            "delta_4": 8.052287581699348,
+            "delta_mass_sq": -1.3777777777777778
+          },
+          "finite_masses_sq": [
+            3.2399999999999998,
+            1.84
+          ],
+          "unsubtracted_tadpoles": [
+            -0.033200000000000035,
+            -0.0012000000000000205
+          ],
+          "bare_gap_residual": [
+            4.440892098500626e-16,
+            -2.220446049250313e-16
+          ],
+          "bare_field_bracket": 1.4375,
+          "finite_field_bracket": 1.4375,
+          "field_match_residual": 0.0,
+          "bare_on_gap_potential": 0.478501388888889,
+          "finite_on_gap_potential": 0.2996125,
+          "state_independent_normalization": 0.17888888888888893,
+          "potential_match_residual": 5.551115123125783e-17
+        },
+        {
+          "counterterms": {
+            "A": 8.169934640522877,
+            "B": 2.9411764705882355,
+            "u4": 10.052287581699348,
+            "bare_mass_sq": -0.07777777777777772,
+            "delta_A": 6.169934640522877,
+            "delta_B": 0.9411764705882355,
+            "delta_4": 8.052287581699348,
+            "delta_mass_sq": -1.3777777777777778
+          },
+          "finite_masses_sq": [
+            4.220000000000001,
+            3.18
+          ],
+          "unsubtracted_tadpoles": [
+            -0.1416,
+            0.08159999999999998
+          ],
+          "bare_gap_residual": [
+            8.881784197001252e-16,
+            4.440892098500626e-16
+          ],
+          "bare_field_bracket": 1.8975000000000009,
+          "finite_field_bracket": 1.8975000000000004,
+          "field_match_residual": 4.440892098500626e-16,
+          "bare_on_gap_potential": 0.5145888888888888,
+          "finite_on_gap_potential": 0.33570000000000005,
+          "state_independent_normalization": 0.17888888888888893,
+          "potential_match_residual": -2.220446049250313e-16
+        },
+        {
+          "counterterms": {
+            "A": 8.169934640522877,
+            "B": 2.9411764705882355,
+            "u4": 10.052287581699348,
+            "bare_mass_sq": -0.07777777777777772,
+            "delta_A": 6.169934640522877,
+            "delta_B": 0.9411764705882355,
+            "delta_4": 8.052287581699348,
+            "delta_mass_sq": -1.3777777777777778
+          },
+          "finite_masses_sq": [
+            2.9,
+            4.5
+          ],
+          "unsubtracted_tadpoles": [
+            -0.16600000000000004,
+            0.306
+          ],
+          "bare_gap_residual": [
+            8.881784197001252e-16,
+            8.881784197001252e-16
+          ],
+          "bare_field_bracket": 1.3775000000000004,
+          "finite_field_bracket": 1.3775000000000002,
+          "field_match_residual": 2.220446049250313e-16,
+          "bare_on_gap_potential": 0.1066388888888889,
+          "finite_on_gap_potential": -0.07224999999999993,
+          "state_independent_normalization": 0.17888888888888893,
+          "potential_match_residual": -1.1102230246251565e-16
+        }
+      ],
+      "single_coupling": {
+        "single_u_b_required_by_singlet": 5.555555555555555,
+        "single_u_b_required_by_traceless": 2.9411764705882355,
+        "difference": 2.61437908496732,
+        "difference_formula": 2.6143790849673207
+      }
+    },
+    {
+      "u": 2.0,
+      "D": 0.03,
+      "D2": -0.07,
+      "coefficient_match": {
+        "tadpole_and_amplitude_coefficient_residual": [
+          [
+            -8.881784197001252e-16,
+            -2.220446049250313e-16
+          ],
+          [
+            -2.220446049250313e-16,
+            -8.881784197001252e-16
+          ]
+        ],
+        "mass_offset_residual": -5.551115123125783e-17,
+        "field_quartic_residual": 0.0,
+        "singlet_bare_eigenvalue": 6.451612903225806,
+        "traceless_bare_eigenvalue": 3.571428571428571
+      },
+      "states": [
+        {
+          "counterterms": {
+            "A": 1.4400921658986174,
+            "B": 1.7857142857142856,
+            "u4": 1.0115207373271886,
+            "bare_mass_sq": 1.635483870967742,
+            "delta_A": -0.5599078341013826,
+            "delta_B": -0.2142857142857144,
+            "delta_4": -0.9884792626728114,
+            "delta_mass_sq": 0.3354838709677419
+          },
+          "finite_masses_sq": [
+            1.3,
+            1.3
+          ],
+          "unsubtracted_tadpoles": [
+            -0.052000000000000005,
+            -0.052000000000000005
+          ],
+          "bare_gap_residual": [
+            0.0,
+            0.0
+          ],
+          "bare_field_bracket": 0.5775000000000001,
+          "finite_field_bracket": 0.5775000000000001,
+          "field_match_residual": 0.0,
+          "bare_on_gap_potential": 0.3146774193548387,
+          "finite_on_gap_potential": 0.19,
+          "state_independent_normalization": 0.1246774193548387,
+          "potential_match_residual": 2.7755575615628914e-17
+        },
+        {
+          "counterterms": {
+            "A": 1.4400921658986174,
+            "B": 1.7857142857142856,
+            "u4": 1.0115207373271886,
+            "bare_mass_sq": 1.635483870967742,
+            "delta_A": -0.5599078341013826,
+            "delta_B": -0.2142857142857144,
+            "delta_4": -0.9884792626728114,
+            "delta_mass_sq": 0.3354838709677419
+          },
+          "finite_masses_sq": [
+            3.2399999999999998,
+            1.84
+          ],
+          "unsubtracted_tadpoles": [
+            0.0662,
+            -0.05580000000000001
+          ],
+          "bare_gap_residual": [
+            0.0,
+            -2.220446049250313e-16
+          ],
+          "bare_field_bracket": 1.4375,
+          "finite_field_bracket": 1.4375,
+          "field_match_residual": 0.0,
+          "bare_on_gap_potential": 0.4242899193548388,
+          "finite_on_gap_potential": 0.2996125,
+          "state_independent_normalization": 0.1246774193548387,
+          "potential_match_residual": 8.326672684688674e-17
+        },
+        {
+          "counterterms": {
+            "A": 1.4400921658986174,
+            "B": 1.7857142857142856,
+            "u4": 1.0115207373271886,
+            "bare_mass_sq": 1.635483870967742,
+            "delta_A": -0.5599078341013826,
+            "delta_B": -0.2142857142857144,
+            "delta_4": -0.9884792626728114,
+            "delta_mass_sq": 0.3354838709677419
+          },
+          "finite_masses_sq": [
+            4.220000000000001,
+            3.18
+          ],
+          "unsubtracted_tadpoles": [
+            0.0656,
+            0.1744
+          ],
+          "bare_gap_residual": [
+            -8.881784197001252e-16,
+            -4.440892098500626e-16
+          ],
+          "bare_field_bracket": 1.8975,
+          "finite_field_bracket": 1.8975000000000004,
+          "field_match_residual": -4.440892098500626e-16,
+          "bare_on_gap_potential": 0.46037741935483883,
+          "finite_on_gap_potential": 0.33570000000000005,
+          "state_independent_normalization": 0.1246774193548387,
+          "potential_match_residual": 8.326672684688674e-17
+        },
+        {
+          "counterterms": {
+            "A": 1.4400921658986174,
+            "B": 1.7857142857142856,
+            "u4": 1.0115207373271886,
+            "bare_mass_sq": 1.635483870967742,
+            "delta_A": -0.5599078341013826,
+            "delta_B": -0.2142857142857144,
+            "delta_4": -0.9884792626728114,
+            "delta_mass_sq": 0.3354838709677419
+          },
+          "finite_masses_sq": [
+            2.9,
+            4.5
+          ],
+          "unsubtracted_tadpoles": [
+            -0.10400000000000001,
+            0.544
+          ],
+          "bare_gap_residual": [
+            4.440892098500626e-16,
+            0.0
+          ],
+          "bare_field_bracket": 1.3775,
+          "finite_field_bracket": 1.3775000000000002,
+          "field_match_residual": -2.220446049250313e-16,
+          "bare_on_gap_potential": 0.052427419354838745,
+          "finite_on_gap_potential": -0.07224999999999993,
+          "state_independent_normalization": 0.1246774193548387,
+          "potential_match_residual": -2.7755575615628914e-17
+        }
+      ],
+      "single_coupling": {
+        "single_u_b_required_by_singlet": 1.6129032258064517,
+        "single_u_b_required_by_traceless": 1.7857142857142856,
+        "difference": -0.17281105990783385,
+        "difference_formula": -0.1728110599078341
+      }
+    },
+    {
+      "u": 2.0,
+      "D": 0.03,
+      "D2": 0.11,
+      "coefficient_match": {
+        "tadpole_and_amplitude_coefficient_residual": [
+          [
+            -8.881784197001252e-16,
+            -2.220446049250313e-16
+          ],
+          [
+            -2.220446049250313e-16,
+            -8.881784197001252e-16
+          ]
+        ],
+        "mass_offset_residual": 0.0,
+        "field_quartic_residual": 0.0,
+        "singlet_bare_eigenvalue": 6.451612903225806,
+        "traceless_bare_eigenvalue": 3.571428571428571
+      },
+      "states": [
+        {
+          "counterterms": {
+            "A": 1.4400921658986174,
+            "B": 1.7857142857142856,
+            "u4": 1.0115207373271886,
+            "bare_mass_sq": 0.4741935483870968,
+            "delta_A": -0.5599078341013826,
+            "delta_B": -0.2142857142857144,
+            "delta_4": -0.9884792626728114,
+            "delta_mass_sq": -0.8258064516129032
+          },
+          "finite_masses_sq": [
+            1.3,
+            1.3
+          ],
+          "unsubtracted_tadpoles": [
+            0.128,
+            0.128
+          ],
+          "bare_gap_residual": [
+            0.0,
+            0.0
+          ],
+          "bare_field_bracket": 0.5775000000000001,
+          "finite_field_bracket": 0.5775000000000001,
+          "field_match_residual": 0.0,
+          "bare_on_gap_potential": 0.3785483870967742,
+          "finite_on_gap_potential": 0.19,
+          "state_independent_normalization": 0.18854838709677424,
+          "potential_match_residual": -5.551115123125783e-17
+        },
+        {
+          "counterterms": {
+            "A": 1.4400921658986174,
+            "B": 1.7857142857142856,
+            "u4": 1.0115207373271886,
+            "bare_mass_sq": 0.4741935483870968,
+            "delta_A": -0.5599078341013826,
+            "delta_B": -0.2142857142857144,
+            "delta_4": -0.9884792626728114,
+            "delta_mass_sq": -0.8258064516129032
+          },
+          "finite_masses_sq": [
+            3.2399999999999998,
+            1.84
+          ],
+          "unsubtracted_tadpoles": [
+            0.24619999999999997,
+            0.1242
+          ],
+          "bare_gap_residual": [
+            4.440892098500626e-16,
+            -2.220446049250313e-16
+          ],
+          "bare_field_bracket": 1.4375,
+          "finite_field_bracket": 1.4375,
+          "field_match_residual": 0.0,
+          "bare_on_gap_potential": 0.4881608870967743,
+          "finite_on_gap_potential": 0.2996125,
+          "state_independent_normalization": 0.18854838709677424,
+          "potential_match_residual": 5.551115123125783e-17
+        },
+        {
+          "counterterms": {
+            "A": 1.4400921658986174,
+            "B": 1.7857142857142856,
+            "u4": 1.0115207373271886,
+            "bare_mass_sq": 0.4741935483870968,
+            "delta_A": -0.5599078341013826,
+            "delta_B": -0.2142857142857144,
+            "delta_4": -0.9884792626728114,
+            "delta_mass_sq": -0.8258064516129032
+          },
+          "finite_masses_sq": [
+            4.220000000000001,
+            3.18
+          ],
+          "unsubtracted_tadpoles": [
+            0.24560000000000004,
+            0.35440000000000005
+          ],
+          "bare_gap_residual": [
+            -8.881784197001252e-16,
+            0.0
+          ],
+          "bare_field_bracket": 1.8975,
+          "finite_field_bracket": 1.8975000000000004,
+          "field_match_residual": -4.440892098500626e-16,
+          "bare_on_gap_potential": 0.5242483870967742,
+          "finite_on_gap_potential": 0.33570000000000005,
+          "state_independent_normalization": 0.18854838709677424,
+          "potential_match_residual": -5.551115123125783e-17
+        },
+        {
+          "counterterms": {
+            "A": 1.4400921658986174,
+            "B": 1.7857142857142856,
+            "u4": 1.0115207373271886,
+            "bare_mass_sq": 0.4741935483870968,
+            "delta_A": -0.5599078341013826,
+            "delta_B": -0.2142857142857144,
+            "delta_4": -0.9884792626728114,
+            "delta_mass_sq": -0.8258064516129032
+          },
+          "finite_masses_sq": [
+            2.9,
+            4.5
+          ],
+          "unsubtracted_tadpoles": [
+            0.076,
+            0.724
+          ],
+          "bare_gap_residual": [
+            -4.440892098500626e-16,
+            0.0
+          ],
+          "bare_field_bracket": 1.3775,
+          "finite_field_bracket": 1.3775000000000002,
+          "field_match_residual": -2.220446049250313e-16,
+          "bare_on_gap_potential": 0.11629838709677445,
+          "finite_on_gap_potential": -0.07224999999999993,
+          "state_independent_normalization": 0.18854838709677424,
+          "potential_match_residual": 1.3877787807814457e-16
+        }
+      ],
+      "single_coupling": {
+        "single_u_b_required_by_singlet": 1.6129032258064517,
+        "single_u_b_required_by_traceless": 1.7857142857142856,
+        "difference": -0.17281105990783385,
+        "difference_formula": -0.1728110599078341
+      }
+    },
+    {
+      "u": 2.0,
+      "D": 0.2,
+      "D2": -0.07,
+      "coefficient_match": {
+        "tadpole_and_amplitude_coefficient_residual": [
+          [
+            8.881784197001252e-16,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        "mass_offset_residual": -8.326672684688674e-17,
+        "field_quartic_residual": 0.0,
+        "singlet_bare_eigenvalue": 3.0769230769230766,
+        "traceless_bare_eigenvalue": 2.2222222222222223
+      },
+      "states": [
+        {
+          "counterterms": {
+            "A": 0.4273504273504273,
+            "B": 1.1111111111111112,
+            "u4": -1.3504273504273505,
+            "bare_mass_sq": 1.146153846153846,
+            "delta_A": -1.5726495726495728,
+            "delta_B": -0.8888888888888888,
+            "delta_4": -3.3504273504273505,
+            "delta_mass_sq": -0.15384615384615397
+          },
+          "finite_masses_sq": [
+            1.3,
+            1.3
+          ],
+          "unsubtracted_tadpoles": [
+            0.05000000000000002,
+            0.05000000000000002
+          ],
+          "bare_gap_residual": [
+            0.0,
+            0.0
+          ],
+          "bare_field_bracket": 0.5775,
+          "finite_field_bracket": 0.5775000000000001,
+          "field_match_residual": -1.1102230246251565e-16,
+          "bare_on_gap_potential": 0.35015384615384615,
+          "finite_on_gap_potential": 0.19,
+          "state_independent_normalization": 0.16015384615384615,
+          "potential_match_residual": 0.0
+        },
+        {
+          "counterterms": {
+            "A": 0.4273504273504273,
+            "B": 1.1111111111111112,
+            "u4": -1.3504273504273505,
+            "bare_mass_sq": 1.146153846153846,
+            "delta_A": -1.5726495726495728,
+            "delta_B": -0.8888888888888888,
+            "delta_4": -3.3504273504273505,
+            "delta_mass_sq": -0.15384615384615397
+          },
+          "finite_masses_sq": [
+            3.2399999999999998,
+            1.84
+          ],
+          "unsubtracted_tadpoles": [
+            0.498,
+            0.138
+          ],
+          "bare_gap_residual": [
+            4.440892098500626e-16,
+            -2.220446049250313e-16
+          ],
+          "bare_field_bracket": 1.4375,
+          "finite_field_bracket": 1.4375,
+          "field_match_residual": 0.0,
+          "bare_on_gap_potential": 0.45976634615384626,
+          "finite_on_gap_potential": 0.2996125,
+          "state_independent_normalization": 0.16015384615384615,
+          "potential_match_residual": 1.1102230246251565e-16
+        },
+        {
+          "counterterms": {
+            "A": 0.4273504273504273,
+            "B": 1.1111111111111112,
+            "u4": -1.3504273504273505,
+            "bare_mass_sq": 1.146153846153846,
+            "delta_A": -1.5726495726495728,
+            "delta_B": -0.8888888888888888,
+            "delta_4": -3.3504273504273505,
+            "delta_mass_sq": -0.15384615384615397
+          },
+          "finite_masses_sq": [
+            4.220000000000001,
+            3.18
+          ],
+          "unsubtracted_tadpoles": [
+            0.6640000000000001,
+            0.5960000000000001
+          ],
+          "bare_gap_residual": [
+            0.0,
+            0.0
+          ],
+          "bare_field_bracket": 1.8975000000000004,
+          "finite_field_bracket": 1.8975000000000004,
+          "field_match_residual": 0.0,
+          "bare_on_gap_potential": 0.4958538461538462,
+          "finite_on_gap_potential": 0.33570000000000005,
+          "state_independent_normalization": 0.16015384615384615,
+          "potential_match_residual": 0.0
+        },
+        {
+          "counterterms": {
+            "A": 0.4273504273504273,
+            "B": 1.1111111111111112,
+            "u4": -1.3504273504273505,
+            "bare_mass_sq": 1.146153846153846,
+            "delta_A": -1.5726495726495728,
+            "delta_B": -0.8888888888888888,
+            "delta_4": -3.3504273504273505,
+            "delta_mass_sq": -0.15384615384615397
+          },
+          "finite_masses_sq": [
+            2.9,
+            4.5
+          ],
+          "unsubtracted_tadpoles": [
+            0.27,
+            1.19
+          ],
+          "bare_gap_residual": [
+            -4.440892098500626e-16,
+            0.0
+          ],
+          "bare_field_bracket": 1.3775,
+          "finite_field_bracket": 1.3775000000000002,
+          "field_match_residual": -2.220446049250313e-16,
+          "bare_on_gap_potential": 0.08790384615384636,
+          "finite_on_gap_potential": -0.07224999999999993,
+          "state_independent_normalization": 0.16015384615384615,
+          "potential_match_residual": 1.3877787807814457e-16
+        }
+      ],
+      "single_coupling": {
+        "single_u_b_required_by_singlet": 0.7692307692307692,
+        "single_u_b_required_by_traceless": 1.1111111111111112,
+        "difference": -0.341880341880342,
+        "difference_formula": -0.34188034188034183
+      }
+    },
+    {
+      "u": 2.0,
+      "D": 0.2,
+      "D2": 0.11,
+      "coefficient_match": {
+        "tadpole_and_amplitude_coefficient_residual": [
+          [
+            8.881784197001252e-16,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        "mass_offset_residual": 0.0,
+        "field_quartic_residual": 0.0,
+        "singlet_bare_eigenvalue": 3.0769230769230766,
+        "traceless_bare_eigenvalue": 2.2222222222222223
+      },
+      "states": [
+        {
+          "counterterms": {
+            "A": 0.4273504273504273,
+            "B": 1.1111111111111112,
+            "u4": -1.3504273504273505,
+            "bare_mass_sq": 0.5923076923076923,
+            "delta_A": -1.5726495726495728,
+            "delta_B": -0.8888888888888888,
+            "delta_4": -3.3504273504273505,
+            "delta_mass_sq": -0.7076923076923077
+          },
+          "finite_masses_sq": [
+            1.3,
+            1.3
+          ],
+          "unsubtracted_tadpoles": [
+            0.23000000000000004,
+            0.23000000000000004
+          ],
+          "bare_gap_residual": [
+            0.0,
+            0.0
+          ],
+          "bare_field_bracket": 0.5775000000000001,
+          "finite_field_bracket": 0.5775000000000001,
+          "field_match_residual": 0.0,
+          "bare_on_gap_potential": 0.3806153846153847,
+          "finite_on_gap_potential": 0.19,
+          "state_independent_normalization": 0.1906153846153847,
+          "potential_match_residual": 0.0
+        },
+        {
+          "counterterms": {
+            "A": 0.4273504273504273,
+            "B": 1.1111111111111112,
+            "u4": -1.3504273504273505,
+            "bare_mass_sq": 0.5923076923076923,
+            "delta_A": -1.5726495726495728,
+            "delta_B": -0.8888888888888888,
+            "delta_4": -3.3504273504273505,
+            "delta_mass_sq": -0.7076923076923077
+          },
+          "finite_masses_sq": [
+            3.2399999999999998,
+            1.84
+          ],
+          "unsubtracted_tadpoles": [
+            0.6779999999999999,
+            0.31800000000000006
+          ],
+          "bare_gap_residual": [
+            0.0,
+            2.220446049250313e-16
+          ],
+          "bare_field_bracket": 1.4374999999999998,
+          "finite_field_bracket": 1.4375,
+          "field_match_residual": -2.220446049250313e-16,
+          "bare_on_gap_potential": 0.49022788461538475,
+          "finite_on_gap_potential": 0.2996125,
+          "state_independent_normalization": 0.1906153846153847,
+          "potential_match_residual": 5.551115123125783e-17
+        },
+        {
+          "counterterms": {
+            "A": 0.4273504273504273,
+            "B": 1.1111111111111112,
+            "u4": -1.3504273504273505,
+            "bare_mass_sq": 0.5923076923076923,
+            "delta_A": -1.5726495726495728,
+            "delta_B": -0.8888888888888888,
+            "delta_4": -3.3504273504273505,
+            "delta_mass_sq": -0.7076923076923077
+          },
+          "finite_masses_sq": [
+            4.220000000000001,
+            3.18
+          ],
+          "unsubtracted_tadpoles": [
+            0.8440000000000002,
+            0.7760000000000001
+          ],
+          "bare_gap_residual": [
+            0.0,
+            0.0
+          ],
+          "bare_field_bracket": 1.8975000000000009,
+          "finite_field_bracket": 1.8975000000000004,
+          "field_match_residual": 4.440892098500626e-16,
+          "bare_on_gap_potential": 0.5263153846153845,
+          "finite_on_gap_potential": 0.33570000000000005,
+          "state_independent_normalization": 0.1906153846153847,
+          "potential_match_residual": -2.220446049250313e-16
+        },
+        {
+          "counterterms": {
+            "A": 0.4273504273504273,
+            "B": 1.1111111111111112,
+            "u4": -1.3504273504273505,
+            "bare_mass_sq": 0.5923076923076923,
+            "delta_A": -1.5726495726495728,
+            "delta_B": -0.8888888888888888,
+            "delta_4": -3.3504273504273505,
+            "delta_mass_sq": -0.7076923076923077
+          },
+          "finite_masses_sq": [
+            2.9,
+            4.5
+          ],
+          "unsubtracted_tadpoles": [
+            0.45000000000000007,
+            1.37
+          ],
+          "bare_gap_residual": [
+            4.440892098500626e-16,
+            0.0
+          ],
+          "bare_field_bracket": 1.3775000000000002,
+          "finite_field_bracket": 1.3775000000000002,
+          "field_match_residual": 0.0,
+          "bare_on_gap_potential": 0.1183653846153844,
+          "finite_on_gap_potential": -0.07224999999999993,
+          "state_independent_normalization": 0.1906153846153847,
+          "potential_match_residual": -3.608224830031759e-16
+        }
+      ],
+      "single_coupling": {
+        "single_u_b_required_by_singlet": 0.7692307692307692,
+        "single_u_b_required_by_traceless": 1.1111111111111112,
+        "difference": -0.341880341880342,
+        "difference_formula": -0.34188034188034183
+      }
+    }
+  ],
+  "previous_stationary_witnesses": [
+    {
+      "mu": 1.05,
+      "T": 0.22,
+      "Phi_fixed": 0.15,
+      "mass_sq": 0.994,
+      "rows": [
+        {
+          "counterterms": {
+            "A": 1.750700280112045,
+            "B": 1.1904761904761905,
+            "u4": 2.131652661064426,
+            "bare_mass_sq": 1.4029411764705884,
+            "delta_A": 0.750700280112045,
+            "delta_B": 0.19047619047619047,
+            "delta_4": 1.1316526610644262,
+            "delta_mass_sq": 0.40894117647058836
+          },
+          "finite_masses_sq": [
+            1.3359630894506058,
+            1.1121915088843226
+          ],
+          "unsubtracted_tadpoles": [
+            -0.10014637194791458,
+            -0.07739889106045057
+          ],
+          "bare_gap_residual": [
+            2.220446049250313e-16,
+            2.220446049250313e-16
+          ],
+          "bare_field_bracket": 1.1102230246251565e-16,
+          "finite_field_bracket": -2.7755575615628914e-16,
+          "field_match_residual": 3.885780586188048e-16,
+          "bare_on_gap_potential": -0.0251325131573463,
+          "finite_on_gap_potential": -0.011336277863228671,
+          "state_independent_normalization": -0.013796235294117653,
+          "potential_match_residual": 2.2551405187698492e-17
+        },
+        {
+          "counterterms": {
+            "A": 1.750700280112045,
+            "B": 1.1904761904761905,
+            "u4": 2.131652661064426,
+            "bare_mass_sq": 0.34411764705882353,
+            "delta_A": 0.750700280112045,
+            "delta_B": 0.19047619047619047,
+            "delta_4": 1.1316526610644262,
+            "delta_mass_sq": -0.6498823529411765
+          },
+          "finite_masses_sq": [
+            1.3359630894506058,
+            1.1121915088843226
+          ],
+          "unsubtracted_tadpoles": [
+            0.07985362805208543,
+            0.10260110893954943
+          ],
+          "bare_gap_residual": [
+            2.220446049250313e-16,
+            2.220446049250313e-16
+          ],
+          "bare_field_bracket": 1.1102230246251565e-16,
+          "finite_field_bracket": -2.7755575615628914e-16,
+          "field_match_residual": 3.885780586188048e-16,
+          "bare_on_gap_potential": -0.047897219039699276,
+          "finite_on_gap_potential": -0.011336277863228671,
+          "state_independent_normalization": -0.03656094117647059,
+          "potential_match_residual": -1.3877787807814457e-17
+        },
+        {
+          "counterterms": {
+            "A": 0.8423180592991912,
+            "B": 0.9433962264150942,
+            "u4": 0.7291105121293797,
+            "bare_mass_sq": 1.2446428571428572,
+            "delta_A": -0.15768194070080876,
+            "delta_B": -0.05660377358490576,
+            "delta_4": -0.2708894878706203,
+            "delta_mass_sq": 0.25064285714285717
+          },
+          "finite_masses_sq": [
+            1.3359630894506058,
+            1.1121915088843226
+          ],
+          "unsubtracted_tadpoles": [
+            -0.06319043210834793,
+            -0.06505782508317509
+          ],
+          "bare_gap_residual": [
+            0.0,
+            0.0
+          ],
+          "bare_field_bracket": -1.1102230246251565e-16,
+          "finite_field_bracket": -2.7755575615628914e-16,
+          "field_match_residual": 1.6653345369377348e-16,
+          "bare_on_gap_potential": -0.019710795720371523,
+          "finite_on_gap_potential": -0.011336277863228671,
+          "state_independent_normalization": -0.008374517857142858,
+          "potential_match_residual": 6.938893903907228e-18
+        },
+        {
+          "counterterms": {
+            "A": 0.8423180592991912,
+            "B": 0.9433962264150942,
+            "u4": 0.7291105121293797,
+            "bare_mass_sq": 0.6017857142857144,
+            "delta_A": -0.15768194070080876,
+            "delta_B": -0.05660377358490576,
+            "delta_4": -0.2708894878706203,
+            "delta_mass_sq": -0.3922142857142856
+          },
+          "finite_masses_sq": [
+            1.3359630894506058,
+            1.1121915088843226
+          ],
+          "unsubtracted_tadpoles": [
+            0.11680956789165207,
+            0.11494217491682492
+          ],
+          "bare_gap_residual": [
+            2.220446049250313e-16,
+            0.0
+          ],
+          "bare_field_bracket": -5.551115123125783e-17,
+          "finite_field_bracket": -2.7755575615628914e-16,
+          "field_match_residual": 2.220446049250313e-16,
+          "bare_on_gap_potential": -0.03353222429180011,
+          "finite_on_gap_potential": -0.011336277863228671,
+          "state_independent_normalization": -0.022195946428571426,
+          "potential_match_residual": -1.3877787807814457e-17
+        },
+        {
+          "counterterms": {
+            "A": 0.3968253968253968,
+            "B": 0.7142857142857143,
+            "u4": -0.17460317460317465,
+            "bare_mass_sq": 1.1522222222222223,
+            "delta_A": -0.6031746031746033,
+            "delta_B": -0.2857142857142857,
+            "delta_4": -1.1746031746031746,
+            "delta_mass_sq": 0.15822222222222226
+          },
+          "finite_masses_sq": [
+            1.3359630894506058,
+            1.1121915088843226
+          ],
+          "unsubtracted_tadpoles": [
+            -0.006076706901744944,
+            -0.04598526857284024
+          ],
+          "bare_gap_residual": [
+            0.0,
+            0.0
+          ],
+          "bare_field_bracket": -1.3183898417423734e-16,
+          "finite_field_bracket": -2.7755575615628914e-16,
+          "field_match_residual": 1.457167719820518e-16,
+          "bare_on_gap_potential": -0.016545388974339777,
+          "finite_on_gap_potential": -0.011336277863228671,
+          "state_independent_normalization": -0.005209111111111113,
+          "potential_match_residual": 7.806255641895632e-18
+        },
+        {
+          "counterterms": {
+            "A": 0.3968253968253968,
+            "B": 0.7142857142857143,
+            "u4": -0.17460317460317465,
+            "bare_mass_sq": 0.7522222222222222,
+            "delta_A": -0.6031746031746033,
+            "delta_B": -0.2857142857142857,
+            "delta_4": -1.1746031746031746,
+            "delta_mass_sq": -0.24177777777777776
+          },
+          "finite_masses_sq": [
+            1.3359630894506058,
+            1.1121915088843226
+          ],
+          "unsubtracted_tadpoles": [
+            0.17392329309825505,
+            0.13401473142715975
+          ],
+          "bare_gap_residual": [
+            2.220446049250313e-16,
+            0.0
+          ],
+          "bare_field_bracket": -2.220446049250313e-16,
+          "finite_field_bracket": -2.7755575615628914e-16,
+          "field_match_residual": 5.551115123125783e-17,
+          "bare_on_gap_potential": -0.02514538897433979,
+          "finite_on_gap_potential": -0.011336277863228671,
+          "state_independent_normalization": -0.013809111111111112,
+          "potential_match_residual": -6.938893903907228e-18
+        }
+      ],
+      "previous_variational_potential": -0.011336277863228668,
+      "on_gap_potential_to_previous_residual": 3.469446951953614e-18,
+      "shifted_masses_to_previous_residual": 4.593547764386585e-15
+    },
+    {
+      "mu": 1.2,
+      "T": 0.22,
+      "Phi_fixed": 0.15,
+      "mass_sq": 0.994,
+      "rows": [
+        {
+          "counterterms": {
+            "A": 1.750700280112045,
+            "B": 1.1904761904761905,
+            "u4": 2.131652661064426,
+            "bare_mass_sq": 1.4029411764705884,
+            "delta_A": 0.750700280112045,
+            "delta_B": 0.19047619047619047,
+            "delta_4": 1.1316526610644262,
+            "delta_mass_sq": 0.40894117647058836
+          },
+          "finite_masses_sq": [
+            2.3398337744102897,
+            1.4524706710541517
+          ],
+          "unsubtracted_tadpoles": [
+            -0.17972475763589152,
+            -0.10250037384031144
+          ],
+          "bare_gap_residual": [
+            -4.440892098500626e-16,
+            2.220446049250313e-16
+          ],
+          "bare_field_bracket": -2.609024107869118e-14,
+          "finite_field_bracket": -2.6201263381153694e-14,
+          "field_match_residual": 1.1102230246251565e-16,
+          "bare_on_gap_potential": -0.07527171537557201,
+          "finite_on_gap_potential": -0.06147548008145437,
+          "state_independent_normalization": -0.013796235294117653,
+          "potential_match_residual": 1.5612511283791264e-17
+        },
+        {
+          "counterterms": {
+            "A": 1.750700280112045,
+            "B": 1.1904761904761905,
+            "u4": 2.131652661064426,
+            "bare_mass_sq": 0.34411764705882353,
+            "delta_A": 0.750700280112045,
+            "delta_B": 0.19047619047619047,
+            "delta_4": 1.1316526610644262,
+            "delta_mass_sq": -0.6498823529411765
+          },
+          "finite_masses_sq": [
+            2.3398337744102897,
+            1.4524706710541517
+          ],
+          "unsubtracted_tadpoles": [
+            0.0002752423641085022,
+            0.07749962615968858
+          ],
+          "bare_gap_residual": [
+            4.440892098500626e-16,
+            2.220446049250313e-16
+          ],
+          "bare_field_bracket": -2.584044089815052e-14,
+          "finite_field_bracket": -2.6201263381153694e-14,
+          "field_match_residual": 3.608224830031759e-16,
+          "bare_on_gap_potential": -0.0980364212579249,
+          "finite_on_gap_potential": -0.06147548008145437,
+          "state_independent_normalization": -0.03656094117647059,
+          "potential_match_residual": 5.551115123125783e-17
+        },
+        {
+          "counterterms": {
+            "A": 0.8423180592991912,
+            "B": 0.9433962264150942,
+            "u4": 0.7291105121293797,
+            "bare_mass_sq": 1.2446428571428572,
+            "delta_A": -0.15768194070080876,
+            "delta_B": -0.05660377358490576,
+            "delta_4": -0.2708894878706203,
+            "delta_mass_sq": 0.25064285714285717
+          },
+          "finite_masses_sq": [
+            2.3398337744102897,
+            1.4524706710541517
+          ],
+          "unsubtracted_tadpoles": [
+            -0.032343042450759654,
+            -0.05272860002435474
+          ],
+          "bare_gap_residual": [
+            0.0,
+            0.0
+          ],
+          "bare_field_bracket": -2.6423307986078726e-14,
+          "finite_field_bracket": -2.6201263381153694e-14,
+          "field_match_residual": -2.220446049250313e-16,
+          "bare_on_gap_potential": -0.06984999793859724,
+          "finite_on_gap_potential": -0.06147548008145437,
+          "state_independent_normalization": -0.008374517857142858,
+          "potential_match_residual": -1.0408340855860843e-17
+        },
+        {
+          "counterterms": {
+            "A": 0.8423180592991912,
+            "B": 0.9433962264150942,
+            "u4": 0.7291105121293797,
+            "bare_mass_sq": 0.6017857142857144,
+            "delta_A": -0.15768194070080876,
+            "delta_B": -0.05660377358490576,
+            "delta_4": -0.2708894878706203,
+            "delta_mass_sq": -0.3922142857142856
+          },
+          "finite_masses_sq": [
+            2.3398337744102897,
+            1.4524706710541517
+          ],
+          "unsubtracted_tadpoles": [
+            0.14765695754924035,
+            0.12727139997564527
+          ],
+          "bare_gap_residual": [
+            0.0,
+            0.0
+          ],
+          "bare_field_bracket": -2.631228568361621e-14,
+          "finite_field_bracket": -2.6201263381153694e-14,
+          "field_match_residual": -1.1102230246251565e-16,
+          "bare_on_gap_potential": -0.08367142651002579,
+          "finite_on_gap_potential": -0.06147548008145437,
+          "state_independent_normalization": -0.022195946428571426,
+          "potential_match_residual": 3.469446951953614e-18
+        },
+        {
+          "counterterms": {
+            "A": 0.3968253968253968,
+            "B": 0.7142857142857143,
+            "u4": -0.17460317460317465,
+            "bare_mass_sq": 1.1522222222222223,
+            "delta_A": -0.6031746031746033,
+            "delta_B": -0.2857142857142857,
+            "delta_4": -1.1746031746031746,
+            "delta_mass_sq": 0.15822222222222226
+          },
+          "finite_masses_sq": [
+            2.3398337744102897,
+            1.4524706710541517
+          ],
+          "unsubtracted_tadpoles": [
+            0.1954286991989896,
+            0.024191414054851063
+          ],
+          "bare_gap_residual": [
+            0.0,
+            0.0
+          ],
+          "bare_field_bracket": -2.6256774532384952e-14,
+          "finite_field_bracket": -2.6201263381153694e-14,
+          "field_match_residual": -5.551115123125783e-17,
+          "bare_on_gap_potential": -0.06668459119256546,
+          "finite_on_gap_potential": -0.06147548008145437,
+          "state_independent_normalization": -0.005209111111111113,
+          "potential_match_residual": 1.8214596497756474e-17
+        },
+        {
+          "counterterms": {
+            "A": 0.3968253968253968,
+            "B": 0.7142857142857143,
+            "u4": -0.17460317460317465,
+            "bare_mass_sq": 0.7522222222222222,
+            "delta_A": -0.6031746031746033,
+            "delta_B": -0.2857142857142857,
+            "delta_4": -1.1746031746031746,
+            "delta_mass_sq": -0.24177777777777776
+          },
+          "finite_masses_sq": [
+            2.3398337744102897,
+            1.4524706710541517
+          ],
+          "unsubtracted_tadpoles": [
+            0.37542869919898963,
+            0.20419141405485108
+          ],
+          "bare_gap_residual": [
+            0.0,
+            0.0
+          ],
+          "bare_field_bracket": -2.6201263381153694e-14,
+          "finite_field_bracket": -2.6201263381153694e-14,
+          "field_match_residual": 0.0,
+          "bare_on_gap_potential": -0.07528459119256552,
+          "finite_on_gap_potential": -0.06147548008145437,
+          "state_independent_normalization": -0.013809111111111112,
+          "potential_match_residual": -3.469446951953614e-17
+        }
+      ],
+      "previous_variational_potential": -0.061475480081455064,
+      "on_gap_potential_to_previous_residual": 6.938893903907228e-16,
+      "shifted_masses_to_previous_residual": 3.95591545632179e-13
+    }
+  ],
+  "symmetric_tensor_and_conditional_vertex_checks": [
+    {
+      "u": 0.1,
+      "D": -0.08,
+      "tensor_coefficient_residual": 5.551115123125783e-17,
+      "conditional_vertex": {
+        "maximum_response_residual": 1.1102569054260746e-16,
+        "noncommuting_bubble_residual": 0.004,
+        "bare_inverse_subtraction_residual": 8.881784197001252e-16
+      }
+    },
+    {
+      "u": 0.1,
+      "D": 0.03,
+      "tensor_coefficient_residual": 0.0,
+      "conditional_vertex": {
+        "maximum_response_residual": 5.55149627486669e-17,
+        "noncommuting_bubble_residual": 0.004,
+        "bare_inverse_subtraction_residual": 8.881784197001252e-16
+      }
+    },
+    {
+      "u": 0.1,
+      "D": 0.2,
+      "tensor_coefficient_residual": 0.0,
+      "conditional_vertex": {
+        "maximum_response_residual": 5.551157474611588e-17,
+        "noncommuting_bubble_residual": 0.004,
+        "bare_inverse_subtraction_residual": 8.881784197001252e-16
+      }
+    },
+    {
+      "u": 1.0,
+      "D": -0.08,
+      "tensor_coefficient_residual": 0.0,
+      "conditional_vertex": {
+        "maximum_response_residual": 2.2215299868541707e-16,
+        "noncommuting_bubble_residual": 0.04,
+        "bare_inverse_subtraction_residual": 0.0
+      }
+    },
+    {
+      "u": 1.0,
+      "D": 0.03,
+      "tensor_coefficient_residual": 0.0,
+      "conditional_vertex": {
+        "maximum_response_residual": 4.443059973708341e-16,
+        "noncommuting_bubble_residual": 0.04,
+        "bare_inverse_subtraction_residual": 0.0
+      }
+    },
+    {
+      "u": 1.0,
+      "D": 0.2,
+      "tensor_coefficient_residual": 0.0,
+      "conditional_vertex": {
+        "maximum_response_residual": 1.7817696036042146e-15,
+        "noncommuting_bubble_residual": 0.04,
+        "bare_inverse_subtraction_residual": 5.551115123125783e-17
+      }
+    },
+    {
+      "u": 2.0,
+      "D": -0.08,
+      "tensor_coefficient_residual": 0.0,
+      "conditional_vertex": {
+        "maximum_response_residual": 0.0,
+        "noncommuting_bubble_residual": 0.08,
+        "bare_inverse_subtraction_residual": 0.0
+      }
+    },
+    {
+      "u": 2.0,
+      "D": 0.03,
+      "tensor_coefficient_residual": 8.881784197001252e-16,
+      "conditional_vertex": {
+        "maximum_response_residual": 8.95090418262362e-16,
+        "noncommuting_bubble_residual": 0.08,
+        "bare_inverse_subtraction_residual": 0.0
+      }
+    },
+    {
+      "u": 2.0,
+      "D": 0.2,
+      "tensor_coefficient_residual": 0.0,
+      "conditional_vertex": {
+        "maximum_response_residual": 3.614624287906422e-15,
+        "noncommuting_bubble_residual": 0.08,
+        "bare_inverse_subtraction_residual": 5.551115123125783e-17
+      }
+    }
+  ],
+  "checks": {
+    "previous_candidate_acceptance_and_scope_preserved": true,
+    "two_tensor_gap_coefficient_identity": true,
+    "mass_and_field_counterterm_coefficients": true,
+    "arbitrary_probe_gap_field_and_potential_cancellation": true,
+    "single_coupling_obstruction_for_nonzero_divergence": true,
+    "matched_previous_fixed_Phi_stationary_witnesses": true,
+    "finite_on_gap_potential_matches_previous_without_retuning": true,
+    "full_symmetric_two_tensor_channels": true,
+    "conditional_noncommuting_vertex_subtraction_identity": true
+  },
+  "maximum_formal_residual": 1.7763568394002505e-15,
+  "maximum_previous_witness_residual": 4.440892098500626e-16,
+  "thresholds": {
+    "algebraic_identity": 1e-10
+  },
+  "evidence_artifacts": [
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/t13_renormalized_hartree_background.json",
+      "sha256": "c88b6bbb4b8b99667d9562dcfe10930f5c5405053126e5fa729f9016a2652669"
+    },
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/Research_T13_Hartree_Counterterm_Matching.py",
+      "sha256": "dd18490db2a8fb6821bdd95c01719e0eb3a2a7b9d6eba2fd9de2c8b1ea88c1da"
+    }
+  ],
+  "protected_evidence_hashes": [
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/t13_conditional_twofluid_operator.json",
+      "sha256": "8606303e4818030dd74061c14b243542c19c4cbb262dda29261951d4c87d6412"
+    },
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/t13_polar_dynamic_composite.json",
+      "sha256": "2f07a63af3ce9945bf254d5da238bdefbd53597dae105ee7e50bbcbe8bc61f7d"
+    },
+    {
+      "path": "docs/core/07_artifacts/topic13/t13_topic13_closure_matrix.json",
+      "sha256": "e6e84772a400273c438e0b8ca3c7b5b14c9d720da0420fb4021b1c0e7a54fe66"
+    },
+    {
+      "path": "docs/core/07_artifacts/gates/uet_major_result_dependency_unlock_gate.json",
+      "sha256": "ecbefdf12ee1eb6661ae8096e3f62bf1ffa7992c96ca94f1149fdbc25a8bbe6e"
+    }
+  ],
+  "probe_policy": "D and D2 are independent formal vacuum-divergence values. No finite probe is claimed to implement a regulator or continuum UV limit. Counterterms contain no T,mu,Phi or finite-tadpole input; mass_sq is a fixed-Phi action input, not a new calibration. Bare quartic sign at these probes is not a global-stability claim.",
+  "open_blockers": [
+    "vacuum_regulator_tensor_and_translation_shift_match",
+    "source_dependent_external_finite_q_frequency_vertex_renormalization",
+    "RG_and_action_material_coefficient_identity",
+    "joint_Phi_and_global_phase_state",
+    "microscopic_IR_remainder_normal_component_SK_KMS_and_transport"
+  ],
+  "controlling_blocker": "external_vertex_and_regulator_RG_material_matching_not_closed",
+  "dependency_unlocked": [
+    "external_vertex_matching_with_homogeneous_counterterm_contract_only"
+  ],
+  "homogeneous_counterterm_projection_derived": true,
+  "on_gap_potential_counterterm_cancellation_derived": true,
+  "conditional_vertex_subtraction_identity_derived": true,
+  "finite_frequency_bubble_divergence_computed": false,
+  "same_coupling_counterterm_sufficient": false,
+  "finite_probe_is_physical_UV_limit": false,
+  "temperature_dependent_counterterms": false,
+  "full_covariant_counterterm_match": false,
+  "RG_invariance_established": false,
+  "external_finite_frequency_response_derived": false,
+  "joint_Phi_stationarity_derived": false,
+  "internal_gap_used_as_physical_Goldstone_mass": false,
+  "physical_Kubo_emitted": false,
+  "g1_physical_unlock": false,
+  "g2_science_unlock": false,
+  "full_core_unlock": false,
+  "core_composition_gate_overwritten": false,
+  "claim_promotion": false,
+  "parameter_fitting": false,
+  "xie_2026_accessed": false,
+  "C_relabelled_as_charge_or_mass": false,
+  "R_gen_added_as_state": false,
+  "claim_boundary": "Homogeneous fixed-Phi Hartree counterterm and on-gap potential matching only. Formal divergence cancellation is not a covariant regulator construction, RG/material matching, full external response, physical prediction or global UET closure. The original Gaussian and physical admission blockers remain.",
+  "report": {
+    "MAJOR_RESULT_CLOSURE": "T13_FIXED_PHI_HARTREE_COUNTERTERM_AND_ON_GAP_POTENTIAL_MATCH: CLOSED_FOR_LANE",
+    "WHAT_IS_ACTUALLY_CLOSED": [
+      "two_tensor_homogeneous_gap_coefficient_cancellation",
+      "distinct_field_quartic_counterterm",
+      "on_gap_potential_cancellation_up_to_state_independent_constant",
+      "previous_stationary_witnesses_matched_without_retuning",
+      "symmetric_trace_and_two_traceless_tensor_channels",
+      "conditional_vertex_subtraction_identity_given_declared_bubble_divergence"
+    ],
+    "WHAT_REMAINS_OPEN": [
+      "vacuum_regulator_tensor_and_translation_shift_match",
+      "source_dependent_external_finite_q_frequency_vertex_renormalization",
+      "RG_and_action_material_coefficient_identity",
+      "joint_Phi_and_global_phase_state",
+      "microscopic_IR_remainder_normal_component_SK_KMS_and_transport"
+    ],
+    "DEPENDENCY_UNLOCKED": [
+      "external_vertex_matching_with_homogeneous_counterterm_contract_only"
+    ],
+    "STATUS": "PASS_HOMOGENEOUS_HARTREE_COUNTERTERM_MATCH",
+    "WHAT_CHANGED": "Matched gap/field tensor projections and on-gap potential to the previous fixed-Phi finite candidate, without retuning.",
+    "EQUATION_OR_MAPPING": "H=[[3,1],[1,3]] (not UET C); K_b(I+D*u*H)=u*H; B=u/(1+2uD); A=u/[(1+2uD)(1+4uD)]; u4=A+2B-2u; F_b_on_gap=F_finite_on_gap+N(D,D2,m2,M02)",
+    "VERIFICATION": "Coefficient identities, independent formal divergence/state probes, on-gap normalization and previous witness matching.",
+    "CONTROLLING_BLOCKER": "external_vertex_and_regulator_RG_material_matching_not_closed",
+    "NEXT_ACTION": "Construct regulator/source-dependent external vertex and RG input matching; do not use the internal Hartree gap as physical response.",
+    "CLAIM_BOUNDARY": "Homogeneous fixed-Phi Hartree counterterm and on-gap potential matching only. Formal divergence cancellation is not a covariant regulator construction, RG/material matching, full external response, physical prediction or global UET closure. The original Gaussian and physical admission blockers remain."
+  }
+}

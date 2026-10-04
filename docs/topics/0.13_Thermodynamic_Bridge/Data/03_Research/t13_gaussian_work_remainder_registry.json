@@ -1,0 +1,14 @@
+{
+  "schema_version": "uet-topic-local-equation-contract-v1",
+  "owner_topic": "0.13_Thermodynamic_Bridge",
+  "branch_id": "t13.candidate.acoustic_thermal_insertion_tree_virtual_response_v1",
+  "status": "LOCAL_WORK_REMAINDER_ARTIFACT_CONTROLLED_NOT_CORE_PROMOTION",
+  "verification_artifact": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/t13_gaussian_work_remainder.json",
+  "numerical_protocol": {"locked_before_first_audit": true, "source_predecessor_sha256": "959441d2940f0aa209d72b8f8671d440807dd14ae9a80aff4357606f3bce4c62", "old_pulse_amplitudes_thresholds_changed": false, "coefficient_orders": [2, 4, 6], "coefficient_solvers": [{"rtol": 1e-10, "atol": 1e-13, "max_step": 0.25}, {"rtol": 2.5e-12, "atol": 2.5e-15, "max_step": 0.125}]},
+  "entries": [
+    {"id": "t13.thermal_insertion.even_cyclic_work_hierarchy", "ontology": "same prescribed Gaussian two-block control; covariance derivatives, not new physical states", "equation": "P A(epsilon) P=A(-epsilon),P C0 P=C0,P H0 P=H0 => W(-epsilon)=W(epsilon); Cn'=A0 Cn+Cn A0^T+A1 C(n-1)+C(n-1) A1^T", "units": "epsilon:dimensionless; W2,W4,W6:E per internal pair", "derivation_class": "DERIVED_PARITY_AND_COVARIANCE_TAYLOR_RECURRENCE", "observable": "finite-pair rotating-energy work coefficients", "data_role": "DERIVED_NOT_FITTED", "verification_status": "CONTROLLED_BY_LINKED_ARTIFACT", "controlling_blocker": "physical_source_readout_scale_and_parent_interaction_remainder_open", "claim_boundary": "No fit from amplitudes, no nonlinear parent action completion or physical heat/temperature map"},
+    {"id": "t13.thermal_insertion.even_work_norm_remainder", "ontology": "positive rotating-energy metric in a finite Gaussian control, not SI material energy or a universal state norm", "equation": "H0 A0+A0^T H0=0; eta<=L sum_nu||H0^(1/2) A1_nu H0^(-1/2)||; |R_2N|<=E0 sum_(k>N)(2|epsilon|eta)^(2k)/(2k)!", "units": "eta:dimensionless; remainder:E per internal pair", "derivation_class": "DERIVED_ENERGY_METRIC_PEANO_BAKER_MAJORANT", "observable": "conditional conservative truncation bound", "data_role": "DERIVED_AND_DIAGNOSTIC_ONLY_KNOWN_CONTROL", "verification_status": "CONTROLLED_BY_LINKED_ARTIFACT", "controlling_blocker": "useful_original_grid_and_parent_action_error_certificate_missing", "claim_boundary": "Analytic formula is not an interval certificate for its floating-point evaluation; a loose bound does not certify the original grid or the full UET action"}
+  ],
+  "core_registry_modified": false,
+  "claim_promotion": false
+}

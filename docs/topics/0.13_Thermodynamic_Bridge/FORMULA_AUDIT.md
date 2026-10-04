@@ -1,5 +1,379 @@
 # Formula Audit: 0.13_Thermodynamic_Bridge
 
+
+## Omitted-Q4 Alias And Four-Term Conditional Rank (2026-10-03)
+
+[Registry](Data/03_Research/t13_low_q_source_protocol.json)
+defines measurement diagnostics, not a UET action extension. An omitted
+energy b4*q4 gives delta_beta=b4*W*q3 and delta_zeta=28*b4/(45*q_max)
+for node ratios1/half/quarter. Native b4:E^-3; exposed source coefficients
+meV*angstrom^(1,3,4,5). Four positive distinct nodes on powers0/2/3/4 have
+detV=Vandermonde(q)*e3(q), not an all-basis/optimality theorem.
+Other terms/remainders, units/current/material map and covariance stay
+open. Exact/80digit method does not repair old float64 or physical gates.
+
+## Multi-Q Weights, Covariance And Rational Component Box (2026-10-03)
+
+[Registry](Data/03_Research/t13_multi_q_estimator_registry.json)
+records exact interpolation, joint energy/q differential and the sufficient
+tree/noise bound. beta=(c:1,eta:E^-2,zeta:E^-4), I:E^-2; log inputs are
+reference ratios. Native r0:1,D:E4,s:E2 are derived correlated inputs,
+not new independently acquired coefficients. Var(I)=g_full^T Sigma_full
+g_full is first-order with unknown full covariance, not a fabricated error.
+Exact rational box excludes q/native/resolution/interaction uncertainty.
+No physical alpha, Kubo, KMS, state/ontology or Core-registry promotion.
+
+## Q5 Unit-Free Information And Exact Witness Bound (2026-10-03)
+
+[Registry](Data/03_Research/t13_q5_dispersion_information_registry.json)
+records full tree determinant, q5 inverse and rational envelope. c:1,
+eta:E^-2,zeta:E^-4,I:E^-2; A_Q:Jm,B_Q:Jm3,C_Q:Jm5 and r:1,D:E4.
+Parameters(log E_unit,log Q_unit,I) are not three log parameters.
+r=r0-D*(I/(1+sI))^2 is monotone only in the declared positive class.
+The exact witness envelope does not certify EOS/state or physical
+approximation. No field/charge ontology or Core registry change; no
+independent temperature scale or gain identification from pole positions.
+
+## Noether Readout And Conditional Unit Inverse (2026-10-03)
+
+[Registry](Data/03_Research/t13_noether_density_readout_registry.json)
+declares source/contact, mode projection, restricted gain and q3 action
+unit information. a0:E, n:E3, chi_nn:E2, Rnn:E4, h:E3, Phi:E, chi_nh:E0;
+pi_phase is not UET Pi; C/R_gen/R_obs excluded. A_Q:Jm/B_Q:Jm3 and
+U_unit:Jm^-3 per nativeE4 need declared same-state action normalization.
+Independent U increases conditional rank2 to3; inverse and full-covariance
+gradient derived. No physical linewidth/atomic/temperature or Core admission.
+
+## Even Work Coefficients And Conditional Norm Tail (2026-10-03)
+
+[Registry](Data/03_Research/t13_gaussian_work_remainder_registry.json)
+records the block-parity covariance recurrence and energy-metric
+Peano-Baker bound. W2/W4/W6:E per internal pair, epsilon/eta dimensionless;
+rotating Gaussian energy is not full Noether/SI heat. Positive H0/PSD C0,
+free energy-skew generator and compact endpoints are assumptions. No
+factorial in coefficient recurrence, no fit; the bound has (2epsilon eta),
+not epsilon eta. Numeric values are not interval certificates and the
+loose tail does not bound uncomputed nonlinear parent terms.
+
+## Cyclic Work And Conditional Gaussian Entropy (2026-10-03)
+
+[Registry](Data/03_Research/t13_gaussian_source_work_registry.json) records
+W2=int bdot*T:X=int h*dot_l_Phi and independent pair/number modal work;
+the real pair counts both orientations. h:E^3, b:E, loop mean per internal
+pair:E^-2 and pair W2:E; no SI momentum measure or Kelvin map admitted.
+S*P*S^T=P and conditional full-rank Delta_s=log|det S|=0 do not define
+entropy of the rank-deficient primary insertion. Aggregate artifact stays
+FAIL/PARTIAL despite the verified zero-amplitude identities.
+
+## Exact Zero-Channel Soft Source (2026-10-03)
+
+[Registry](Data/03_Research/t13_collisionless_soft_source_registry.json)
+records phase-rotated covariance, six streaming denominators, logarithmic
+angular moments and same-action static pressure endpoint. Full-domain
+tail complement and fixed-centre repair are explicit; first failure retained.
+Natural susceptibility E^-2 is not independent SI calibration. C/R_gen
+ontology, physical gates, Core registry and prior equations are unchanged.
+
+## Gaussian Noether Charge And Linear Energy Contract (2026-10-03)
+
+[Registry](Data/03_Research/t13_thermal_noether_response_registry.json)
+declares covariance-plus-mean charge/current and first-order energy in the
+existing branch. Integrated density/current per h E0; energy/flux per h E;
+h E3 in natural units, not SI heat/Kelvin. n is O(2) Noether charge, not
+signed C/mass; pi_phase is not UET Pi and R_gen/R_obs are excluded.
+T/Q/V0 derive stationary contact, not a fitted Ward repair. Full-domain
+translation is explicit; full interacting/dissipative/material and Core
+registry admission remain unchanged.
+
+## Finite-Q Source And Bose Population Contract (2026-10-03)
+
+[Registry](Data/03_Research/t13_finite_q_thermal_source_registry.json)
+declares finite-momentum cross-covariance and static Bose divided-difference
+IDs in the existing named thermal-insertion branch. z/p/r E, divided
+occupation derivative E^-1, h E3 and susceptibility E^-2, not Kelvin.
+Use both initial covariances, actual momentum triangles and action source
+d(z,q), not a fitted thermal source or damping. Static phase vertex follows
+the exact radial equation. Tree charge continuity is not full loop-current
+or energy closure; no C/Pi/R_gen/R_obs/Core registry change.
+
+## Virtual Thermal Insertion And Dynamic Source Covariance (2026-10-03)
+
+[Registry](Data/03_Research/t13_thermal_virtual_response_registry.json)
+declares a named extension with static pair/mixed/contact and time-domain
+covariance source equations. h E3, source dressing E^-2, integrated
+bubble/contact E2 and susceptibility E^-2 in the natural lane, not Kelvin.
+Mixed terms use actual tree poles; seagull and background shift use T/Q
+and the active Hessian. No fitted residual or assigned relaxation width.
+The phase charge constraint distinguishes q0 dynamic from fixed-mu static.
+C/Pi/R_gen/R_obs meanings and Core registry remain unchanged.
+
+## Stationary Source Jets And Thermal Hessian (2026-10-03)
+
+[Registry](Data/03_Research/t13_thermal_source_curvature_registry.json)
+declares stationary/eigenvalue source variation and thermal Hessian IDs.
+h E3, E_h E^-2, E_hh E^-5, P E4 and chi E^-2 in the same natural lane.
+T/Q are potential derivatives, not temperature or free matching parameters.
+D_hh retains stationary acceleration; E_hh retains virtual polarization.
+The independently checked static target is not an admitted dynamic contact
+or material alpha. No C/Pi/R_gen/R_obs relabel or Core registry edit.
+
+## Landau Source And Quadratic Support Contract (2026-10-03)
+
+[Local registry](Data/03_Research/t13_acoustic_source_Landau_registry.json)
+records conditional energy-flux, off-shell Landau/source and acoustic
+spectral-window IDs. H/F are normalized E2 forms, v/c dimensionless, R_L E2,
+h E3 and chi E^-2, not SI heat or Kelvin mapping. Positive K/V0, continuous
+rest acoustic branch and stated support domain are explicit. Same action
+fixes cubic/source inputs; real/contact/thermal matching remains open.
+No C/phase/Pi or R_gen/R_obs relabel, Core registry/owner edit or claim unlock.
+
+## Action-Source Pair Contract (2026-10-03)
+
+[Local registry](Data/03_Research/t13_acoustic_source_pair_registry.json)
+declares tree source Schur and off-shell acoustic pair-source kernel IDs.
+h is nondynamical (E^3), Phi response (E), chi E^-2, spectral inverse R E^2.
+All coefficients come from the declared parent, not target calibration.
+Derived relations are scoped to the stated acoustic/pair approximation;
+independent static/matrix/pole controls do not close full real/source or
+physical thermal mapping. C/R_gen/R_obs excluded; no Core registry edit.
+
+## Acoustic Tree Modal Contract (2026-10-03)
+
+The [registry](Data/03_Research/t13_acoustic_modal_cut_registry.json) records
+pole residue, parent cubic projection and restricted acoustic cuts. Kernel
+E2, cubic tensor/amplitude E, residue/polarization dimensionless, rate E.
+Chemical mixing enters normalization; no Euclidean-vector norm shortcut.
+Cartesian phase is not UET Pi; radial amplitude is not C, heavy Phi component
+remains tree-slaved, R_gen/R_obs excluded. Independent potential/matrix/soft
+checks and [boundaries](Result/artifacts/T13_ACOUSTIC_MODAL_CUTS_2026-10-03.md)
+do not change Core registry or imply full off-shell/all-mode matching.
+
+## Thermal Cut/Static Coherence Contract (2026-10-03)
+
+The [local registry](Data/03_Research/t13_thermal_cut_stiffness_registry.json)
+records pair/Landau, soft Bose limit and static P(X,h) coherence separately.
+Gamma occupation is twice pole width; Sigma E2 is not Phi, gamma/T/q E,
+g E^-2, h and static/soft coefficients E^-4. Phase is not UET Pi and traces
+are excluded. The [derivation](Result/artifacts/T13_THERMAL_CUT_STIFFNESS_2026-10-03.md)
+shows static thermal bubble necessity and internal-curvature support without
+claiming full curved residues/vertices or physical input. Core registry unchanged.
+
+## Vacuum Cut/Log And Restricted Matching Contract (2026-10-03)
+
+The [local registry](Data/03_Research/t13_vacuum_cut_log_registry.json)
+records four cut/log/local-ambiguity/matching interfaces with ontology,
+units, derivation, role and boundary. Sigma is not Phi; acoustic z/K2 have
+E2, Sigma E2, cubic g E^-2 and degree-six local coefficients E^-4.
+The [derivation](Result/artifacts/T13_VACUUM_CUT_LOG_2026-10-03.md) checks
+phase space and subtracted Cauchy independently, with explicit scale running.
+No local coefficient is calibrated. Four fixed-convention coefficients
+are not four physical parameters; source/contact redundancy remains.
+Original action, predecessor artifacts and owner Core registry unchanged.
+
+## Low-T Interaction and Cut Contract (2026-10-02)
+
+The [local machine-readable registry](Data/03_Research/t13_low_T_interaction_registry.json)
+records ontology, units, origin, observable, role, verification and boundaries
+before Core promotion. The [derivation](Result/artifacts/T13_LOW_T_INTERACTIONS_2026-10-02.md)
+supplies P3/P4 canonical cubic/quartic vertices (E^-2/E^-4), zeta and C8_disp
+(E^-4), and Gamma_occupation=3(g_t+g_s/c2)^2*c2*q5/(80pi) with E.
+gamma_pole=Gamma_occupation/2. This is a convex low-q cut, not physical Kubo.
+The separately subtracted Q8 quartic thermal-thermal term omits cubic-sunset,
+mixed vacuum terms and Wilson counterterms; it is not total interacting P.
+Canonical phase is not UET Pi; radial amplitude is not C; R_gen/R_obs are
+excluded. Prior action/thermal artifact unchanged; no Kelvin alpha derived.
+
+## Tree-Matched Low-T Phase EFT (2026-10-02)
+
+| Local registry ID | Ontology / equation | Units | Derivation class / observable / data role | Verification / controlling blocker / claim boundary |
+| --- | --- | --- | --- | --- |
+| t13.diagnostic.joint_tree_P_X_h | s is O2 amplitude squared, not C; existing Phi; external h not state. P0=r2/(4u)-V+h*Phi; P_X=s/2, P_XX=1/(2U) | X/s/chi/rho E2, Phi E, h E3, P E4, U dimensionless | joint classical stationary elimination; natural equilibrium source response; DERIVED with imported trial action inputs | stationary/Hessian/source checks; vacuum/physical map open; tree lane only |
+| t13.diagnostic.tree_matched_acoustic_T6 | eta=H*(1-c2)^2/[2c*(2sU+4mu2)], H=1+gamma2*s*epsilon*Z_Phi/(V'')2 | eta E^-2; c/H dimensionless | tree conservative Schur/parent derivative expansion; acoustic dispersion; DERIVED | polynomial and six-state energy checks; higher derivative/Wilson control open; not original conserved-C repair |
+| t13.diagnostic.phase_EFT_thermal_source_response | Delta_T P=A4*T4+B6*T6; A4=pi2/(90c3), B6=-4pi4*eta/(63c6); Delta_T Phi=partial_h A4*T4+... | P E4, entropy E3, A4 dimensionless, B6 E^-2, A4_h E^-3 | declared phase one-loop finite thermal difference, not full vacuum loop matching; natural pressure/entropy/Phi; DERIVED | independent Bose/source/flow checks; interaction/material/thermal map open; not physical alpha/Kubo |
+| t13.diagnostic.phase_EFT_kinetic_identifiability | eta=eta_base*(1+s*I), I=gamma2*epsilon*Z_Phi/(V'')2 invariant under Phi rescaling | I/eta E^-2, Z_Phi dimensionless | constructive single-unknown family plus analytic inverse; conditional dispersion calibration design; DERIVED not measured | positive parent and coordinate/decoupled controls; source/readout/error feasibility open; not global minimum measurement proof |
+
+See [derivation](Result/artifacts/T13_LOW_T_PHASE_EFT_2026-10-02.md) and
+[measurement card](Result/artifacts/T13_LOW_T_PHASE_EFT_MEASUREMENT_CARD_2026-10-02.md).
+Constants/units derive from declared action or standard Bose integral,
+not fitted target data. R_gen/R_obs remain excluded; no Core equation is
+promoted. Thermal differences are not full quantum pressure or He-II/TTG.
+
+## Joint Low-T Compatibility Boundary (2026-10-02)
+
+| Diagnostic ID | Equation | Units | Origin | Verified scope | Remaining obligation |
+| --- | --- | --- | --- | --- | --- |
+| t13.diagnostic.joint_hartree_entropy_envelope | -partial_T Omega=s_internal+(R_a*d_T I_s+R_b*d_T I_p)/2; stationary R_a=R_b=0 | potential E^4, entropy E^3, residuals/tadpoles E^2 | trace-log/insertion/double-bubble derivatives; no classical Phi thermal trace-log | independent joint/frozen envelopes and off-shell control | new thermal prescription and physical heat/entropy transport |
+| t13.diagnostic.joint_hartree_low_T_compatibility_boundary | Delta^2=2ab/(A+sqrt(A^2-4ab)); s_H/T^3->0 versus conditional 2pi^2/(45c^3), c^2=rho/chi | gap/T/Phi E, a/b/chi/rho E^2; entropy E^3; c and s/T^3 dimensionless | original internal spectrum, joint source derivative expansion and one-boson integral | conditional noncritical positive-gap branch at two numerical zero-T witnesses, not global proof | consistent gapless prescription/restricted validity; independent thermal scale |
+
+See [derivation and assumptions](Result/artifacts/T13_HARTREE_LOW_T_VALIDITY_2026-10-02.md).
+Constants are topic-derived relations/numerical controls, not fitted
+material coefficients. Mode counting is a comparator, not added potential.
+Natural energy units remain separate from normalized TTG/SI alpha. Local
+diagnostic IDs only, no promoted Core equation or ontology/owner edit.
+
+## Same-Action Classical-Phi Joint Response (2026-10-02)
+
+| Diagnostic ID | Equation | Units | Origin | Verified scope | Remaining obligation |
+| --- | --- | --- | --- | --- | --- |
+| t13.diagnostic.classical_Phi_hartree_joint_retarded | Gamma=Gamma_tree+L^T*J*(I-KJ)^-1*L/2; Phi tree=epsilon*Z_Phi*(q^2-z^2)+V_R'' | fields/source E; Gamma/current E^2; z/q dimensionless | original conservative kinetic and reciprocal mass-source, actual matter bubble | two joint states, six local phase roots and independent upper/static checks | full-frequency/global/causal validity, approximation and material/thermal map |
+| t13.diagnostic.joint_Phi_quadratic_counterterm | K_b=(I+DK)^-1*K; L_b=(I+DK)^-1*L; Gamma_tree_b=Gamma_tree-D*L^T*(I+DK)^-1*L/2 | K/J/D dimensionless, L E, contact E^2 | separate original mass slope, matter quartic and N_PhiPhi derivative | arbitrary noncommuting complex-matrix identity and actual-loop replay | physical regulator/RG and controlled Hartree remainder |
+| t13.diagnostic.joint_Phi_charge_envelope | chi_joint=Gamma_A0A0-Gamma_A0E*Gamma_EE^-1*Gamma_EA0=-d_mu^2 Omega_joint, E=(radial,Phi) | natural E^2 | same stationary potential and source response | two reoptimized charge-envelope checks, not clamped Phi | material/state/observable input and energy/heat transport |
+
+See [same-action derivation](Result/artifacts/T13_HARTREE_JOINT_PHI_RESPONSE_2026-10-02.md).
+Local diagnostic IDs only, not promoted Core equations. Z_Phi=1 is an
+original trial action input, not inferred from EOS or measured transport.
+No full-frequency spectrum, physical alpha, original causal repair or
+global UET claim follows; C/Phi/R_gen/R_obs retain their meanings.
+
+## Homogeneous Classical-Phi Hartree Extension (2026-10-02)
+
+| Diagnostic ID | Equation | Units | Origin | Verified scope | Remaining obligation |
+| --- | --- | --- | --- | --- | --- |
+| t13.diagnostic.hartree_Phi_normalization_jet | V_b=V_R-N(m2); N_Phi=-gamma*d/(1+4uD); N_PhiPhi=gamma^2*D/(1+4uD) | N E^4; force E^3; curvature E^2 | derivative of predecessor affine normalization with same declared action | rational algebra and arbitrary signed-tadpole on-gap replay | full regulator/covariant kinetic and off-gap/quantum matching |
+| t13.diagnostic.classical_Phi_hartree_joint_static | V_R'-gamma*(s+I_s+I_p)/2=0; Gamma_joint=Gamma_tree+L_joint^T*J*(I-KJ)^-1*L_joint/2 | Phi/gamma E; s/a/b E^2; Hessian E^2 | original reciprocal mass slope and actual static source bubble | two homogeneous classical states, mixed reciprocity and local static amplitude/Phi positivity | joint finite-q dynamics, quantum Phi, approximation control and material/thermal input |
+
+See [derivation and scope](Result/artifacts/T13_HARTREE_JOINT_PHI_STATIC_2026-10-02.md).
+These are topic-local diagnostic IDs, not promoted Core equations. The
+canonical O(2) amplitude is not collective C; no R_gen/R_obs state is added.
+No old fixed-Phi pole, static positivity or convergence substitutes for
+new-branch dynamics, physical transport or a Hartree error bound.
+
+## Actual Finite-q Principal Kernel and Pole (2026-10-02)
+
+| Diagnostic ID | Equation | Units | Origin | Closure scope | Verification | Forbidden substitution | Remaining obligation |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| t13.diagnostic.hartree_finite_q_principal_kernel | complex Cauchy subtraction; B_L(q,z)=B_lower(q,z)-2*pi*i*D(q,z/q) | q,z,k E; B/Y/Pi units 1, E, E^2 | unchanged source polynomial and spectral cut; fixed grid | local strip in named fixed-Phi candidate | independent unsplit moments, lower source signature, direct lower/original upper loops and analytic vacuum | plain source conjugation, assigned width or moving trial grid | global analytic domain and regulator/action/remainder |
+| t13.diagnostic.hartree_finite_q_phase_pole | Gamma_pp-Gamma_pr*Gamma_rp/Gamma_rr=0; det_full=det(I-Kcov*J)*det(Gamma_field) | phase inverse E^2; v=z/q dimensionless; det_full E^4 | same covariance and field-source reoptimization | six actual finite-q roots, CLOSED_FOR_LANE | orders, seeds, grids/tails, derivative, Ward and nonzero factors | q*v_soft called finite-q root; absorption called material collision rate | joint Phi/full action/material/thermal and physical transport |
+
+See [derivation and evidence](Result/artifacts/T13_HARTREE_FINITE_Q_POLES_2026-10-02.md).
+These diagnostic IDs do not add or promote a Core equation. The angular
+vacuum-series bound is not Hartree truncation control; block-rescaling is
+not full-loop RG. Old density and soft artifacts retain their own scope.
+
+## Finite-q Local Discontinuity (2026-10-02)
+
+| formula_id | relation | variables and units | constant_origin | proof_status | verification_role | failure_mode | next_hardening_step |
+| :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- |
+| t13.diagnostic.hartree_finite_q_local_discontinuity | `sign*(E(k+sign*q)-E(k))=q*v; D=int k^2*g*sign*d(r^2)/dell/(8*pi^2*k*q)` | q,k,ell,T,mu E; v dimensionless; bubble/mixed/current density dimensionless/E/E^2 | exact same-candidate dispersion and Cauchy cut; no assigned width | local finite-q shell derivation, sampled complex-tail and real-grid checks; not global contour proof | independent all-channel original cuts, forward angular roots, two paths, orders and soft-density limit | soft pole times q called finite-q pole; abs(complex energy) breaks analyticity; omitted cuts hidden | actual principal kernel/pole, global domain, approximation/action and joint-Phi/material |
+
+See [finite-q density derivation](Result/artifacts/T13_HARTREE_FINITE_Q_DISCONTINUITY_2026-10-02.md).
+This is a local diagnostic ID, not an admitted Core equation or physical unlock.
+
+## Collisionless Soft Collective Kernel (2026-10-01)
+
+| formula_id | relation | variables and units | constant_origin | proof_status | verification_role | failure_mode | next_hardening_step |
+| :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- |
+| t13.diagnostic.hartree_local_Landau_continuation | `D_ab=int W_ab*v^(n+1)/(2*abs(w)*w^n); B_L=B_principal_lower-2*pi*i*D_analytic; K_phase(v_pole)=0` | v,w dimensionless; k E; bubble/mixed/current D dimensionless/E/E^2 | original Cauchy cut and same internal dispersion, no assigned width | derived local continuation with numerical pole/analyticity checks | original cut, upper reference, two seeds/grids/tails, derivative/residue | principal lower mistaken for retarded; collisionless pole called material sound | certified complex-domain/finite-q and approximation/action |
+| t13.diagnostic.hartree_soft_uneliminated_determinant | `D_full=det(I-K_cov*J)*Gamma_radial*K_phase` | cov determinant/phase coefficient dimensionless; radial/full leading determinant E^2 | block source-equation Schur identity | derived factorization and sampled winding, not certified count | denominator checks and nested upper/local-lower rectangles | elimination pole hidden or sampled count called global proof | global validity, joint Phi/material/heat input |
+
+See [local pole derivation](Result/artifacts/T13_HARTREE_SOFT_POLES_2026-10-01.md).
+These local diagnostic IDs add no admitted Core equation or ontology.
+
+| formula_id | relation | variables and units | constant_origin | proof_status | verification_role | failure_mode | next_hardening_step |
+| :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- |
+| t13.diagnostic.hartree_soft_ray | `A_n=1/2 int c^n*w*c/(v-w*c+i0); delta B=-N'(p)*Tr(Va Rp Vb Rp)*(A_n(v,w)-A_n(0,w))/2` inside full radial integral | v,w,A_n dimensionless; p,T E; N' E^-1; R E^-1; bubble dimensionless, mixed E, current E^2 | expansion of unchanged equal-branch thermal divided difference | derived fixed-Phi collisionless limit, numerical radial/domain verification | independent Cauchy integral and unchanged full finite-q PV response | static thermodynamic derivative used as dynamical susceptibility; imaginary cut replaced by width | complex collective poles and candidate validity domain |
+| t13.diagnostic.hartree_radial_source_phase_Ward | `Gamma_phase/q^2 -> -l^T*Gamma_AA_radial*l/s`, l=(v,i,0,0) | phase inverse E^2; s E^2; source Hessian E^2; final coefficient dimensionless | same-action source Ward after radial-only elimination | derived identity and scoped finite-q check | independent phase Schur/current contraction, reactive-zero absorption and units | fully on-shell Pi contracted instead; Re inverse zero called undamped pole | approximation/regulator/action, joint Phi and material/heat admission |
+
+See [derivation](Result/artifacts/T13_HARTREE_SOFT_COLLECTIVE_2026-10-01.md).
+Local diagnostic IDs only; no admitted Core equation or ontology change.
+
+## Scoped Hartree Real-Axis Response (2026-10-01)
+
+| formula_id | relation | variables and units | constant_origin | proof_status | verification_role | failure_mode | next_hardening_step |
+| :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- |
+| t13.diagnostic.hartree_real_axis_Cauchy | `int g/(ell_star-ell+i0)=int (g-g_star)/(ell_star-ell)+g_star logabs-i*pi*g_star` | ell,p,q,omega E; mass g E^-3, mixed E^-2, current E^-1; radial measure E^3 | exact outgoing-pole coordinate of the existing kinetic/source action | angular identity; full-domain radial numerical admission on declared grid | independent upper-half-plane method, vacuum PV, refinement and Ward | assigned width called collision damping; clipping/log endpoints or q=0 pseudoinverse | global poles/IR and approximation/regulator/action control |
+| t13.diagnostic.hartree_on_shell_source_cut | `rho_joint=(B_R-S B_R^dagger S)/(2i); cut=-pi*int g*delta(omega+p-ell)` | bubble cut dimensionless; mixed E; current E^2; S=time anti-Hermitian source signature | forward energy conservation, original residues and derivative vertices | independently checked delta roots and radial phase space | separate pair/scattering, T=0, signed frequency, loss and energy units | elementwise imaginary mixed matrix used as spectral density; branch absorption called physical Kubo | joint Phi/material/heat-current and microscopic transport matching |
+
+See [derivation](Result/artifacts/T13_HARTREE_REAL_AXIS_2026-10-01.md).
+Local diagnostic IDs only; no new admitted Core equation or ontology.
+
+## Computed Hartree External Field Response (2026-10-01)
+
+| formula_id | relation | units | constant_origin | proof_status | verification_role | failure_mode | next_hardening_step |
+| :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- |
+| t13.diagnostic.hartree_gauge_source_current | `deltaI=(I-J_F*K_H)^-1*(J_F*L*deltavarphi+Y*deltaA); Pi=Gamma_AA-Gamma_Aphi*Gamma_phiphi^-1*Gamma_phiA` | Y,L E; Pi E^2; Noether density E^3; A E | same source-coupled kinetic action and stationary Hartree derivatives | computed rest-frame vacuum/thermal current, Ward and density envelope | independent frequency sums, source derivatives, omitted contacts, units and counterterm replay | projection called a calculated current; charge relabelled C; response called heat/Kubo | real-axis/error, joint Phi and material/heat current |
+| t13.diagnostic.hartree_vacuum_source_contact | `surface_spatial=[Tr(M)-2M0^2]/(24pi^2); Pi_ref=(Q_E^2*I-Q_E*Q_E^T)*c_ref` | surface/current E^2; c_ref dimensionless | UV total-derivative boundary and 4D Feynman reference; finite F_A^2=0 at Qren=1 is a convention | rest-frame subtracted source Hessian, not full arbitrary-flow regulator/RG | analytic boundary, 4D vacuum, auxiliary/routing and scale-change test | surface tuned to Ward; source normalization called microscopic input | full nonuniform regulator/action and finite input match |
+
+See [source-current derivation](Result/artifacts/T13_HARTREE_GAUGE_CURRENT_2026-10-01.md).
+These remain local diagnostic IDs, not admitted Core equations or new ontology.
+
+| formula_id | relation | variables and units | constant_origin | proof_status | verification_role | failure_mode | next_hardening_step |
+| :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- |
+| t13.diagnostic.hartree_covariance_bubble | `J_F(Q)=J_F(0)+integral[J_raw(Q)-J_raw(0)]` | J dimensionless; q,z,T,mu E; masses E^2 | same finite tadpole subtraction, not fitted counterterm | computed full vacuum/thermal three-channel rest-frame prescription | absolute subtraction, 4D vacuum, direct Matsubara and routing | thermal-only loop used with vacuum stationary state; arbitrary probes called calculation | full regulator/RG, gauge sources and real axis |
+| t13.diagnostic.hartree_external_BSE | `deltaM=(I-KJ)^-1*L*deltavarphi; Gamma_ext=G_int^-1+L^T*J*(I-KJ)^-1*L/2` | Gamma E^2; L E; K dimensionless; varphi existing O2 field E | invariant Hartree gap and field derivatives | candidate source response; static Ward/Hessian recovered | independent tree-source derivative, potential curvature and counterterm source equation | internal b called physical Goldstone mass; field response called current/temperature | gauge contacts, spectral/IR error and joint Phi/material |
+
+See [actual bubble/source derivation](Result/artifacts/T13_HARTREE_EXTERNAL_RESPONSE_2026-10-01.md).
+Local diagnostic IDs only, not new admitted Core equations. This uses canonical
+O(2) varphi at fixed UET Phi, not a new state or a C/charge/mass identity.
+
+## Finite Hartree Background and Homogeneous Counterterms (2026-10-01)
+
+| formula_id | relation | variables and units | constant_origin | proof_status | verification_role | failure_mode | next_hardening_step |
+| :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- |
+| t13.diagnostic.hartree_finite_vacuum | `partial_a Omega_F=I_s/2; partial_b Omega_F=I_p/2` | Omega E^4; a,b,I E^2; Q E | declared finite subtraction, Q=1 convention; trial action inputs not material matched | finite prescription | covariance, auxiliary and quadrature checks | shifted a,b called physical masses; Q variation called RG invariance | regulator/action running and source matching |
+| t13.diagnostic.hartree_stationary_candidate | `F=U+Omega_F+[(a0-a)I_s+(b0-b)I_p]/2+D_H; a=2us; b=2u(I_p-I_s)` | F E^4; s,a,b,I E^2; u dimensionless | variational Hartree and Wick coefficients | local fixed-Phi candidate | field/gap and entropy/charge envelope | forcing b=0; energy identity called dynamical ledger | joint Phi and external response |
+| t13.diagnostic.hartree_external_source | `Gamma_ext,pi(0)=B_field; Gamma_ext,rad=B_field+2s*dB_field/ds` | curvature E^2; field E | reoptimized internal masses | static candidate source identity | implicit versus potential differences | internal inverse substituted for source response | renormalized frequency/current vertices |
+| t13.diagnostic.hartree_counterterm_projection | `K_b*(I+D*K)=K; B=u/(1+2uD); A=u/[(1+2uD)(1+4uD)]; u4=A+2B-2u` | K,A,B,u4,D dimensionless; D2,m2 E^2 | invariant coefficient cancellation | homogeneous algebra; scoped single-coupling obstruction | tensor/matrix/eigenvalue and negative controls | one countercoupling for all channels; probes called UV regulator | actual vacuum tensor/translation/source decomposition |
+| t13.diagnostic.hartree_potential_match | `V_b_on_gap=V_F_on_gap+N(D,D2,m2,M02)` | potentials/N E^4; tadpoles/s E^2 | polynomial cancellation on gap equations | fixed-action on-gap identity | exact rational, arbitrary probes and predecessor | dropping m(Phi)-dependent N in joint Phi dynamics | source-dependent 2PI and joint Phi match |
+| t13.diagnostic.hartree_conditional_vertex_subtraction | `[K_b^-1-J_F-D*I]^-1=[K^-1-J_F]^-1` | three-channel vertex/bubble dimensionless | assumed J_b=J_F+D*I plus inverse identity | conditional, not frequency bubble computation | noncommuting complex matrix probes | algebra called spectrum/transport | actual bubble and external source equations |
+
+See [background](Result/artifacts/T13_RENORMALIZED_HARTREE_BACKGROUND_2026-10-01.md)
+and [counterterm proof](Result/artifacts/T13_HARTREE_COUNTERTERM_MATCHING_2026-10-01.md).
+Local diagnostic IDs only, not new admitted Core equations. Canonical natural
+units have no new SI conversion. C is not a Wick matrix or canonical charge;
+Phi and R_gen ontology and physical admission gates are unchanged.
+
+## Conditional Dynamic Composite and Current (2026-10-01)
+
+| formula_id | relation | variables and units | constant_origin | proof_status | verification_role | failure_mode | next_hardening_step |
+| :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- |
+| t13.diagnostic.polar_dynamic_composite | `chi_cl^R=i*x*T/(16pi*rho_s^2*q)*log[(z+cq)/(z-cq)]` | chi E^-2; x,rho_s E^2; T,q,z E; c dimensionless | same Cartesian source, leading Gaussian phase action with tree matching | conditional classical IR derivation | independent pair/scattering integral, time transform and previous static coefficient | branch continuum replaced by fitted single-pole relaxation; leading phase approximation called microscopic response | renormalized state and full-action dynamic remainder |
+| t13.diagnostic.polar_pair_scattering_spectrum | `Im chi=x/(16pi*rho_s^2*q)*[cq/2*Theta(omega-cq)+T*log((1-exp(-(omega+cq)/(2T)))/(1-exp(-abs(omega-cq)/(2T))))]` | susceptibility E^-2; all exponential/log arguments dimensionless | Gaussian on-shell triangle and Bose occupations | derived in explicit linear continuum extension | direct Matsubara sums, independent Bose phase-space integration, thermal dispersion/refinement | threshold clipped; vacuum static UV divergence hidden; continuum absorption called Kubo damping | microscopic high-momentum and interacting matching; no arbitrary width |
+| t13.diagnostic.polar_current_contact | `Pi=W-(WQ)(WQ)^T/(Q^T W Q); Q^T Pi=0` | W,Pi E^2; Q,gauge source E | conditional phase action source Hessian including contact | Gaussian source/Ward identity | independent source-action Hessian and full Gaussian detailed balance | dropped contact violates Ward; Gaussian FDT called complete microscopic SK/KMS | normal-component and full finite-T current prescription |
+
+See [conditional dynamical derivation](Result/artifacts/T13_POLAR_DYNAMIC_COMPOSITE_2026-10-01.md).
+These are local diagnostic IDs only, not new admitted Core equations. C, Phi,
+R_gen and physical closure gates are unchanged.
+
+## Polar Source and Static IR Observable (2026-10-01)
+
+| formula_id | relation | variables and units | constant_origin | proof_status | verification_role | failure_mode | next_hardening_step |
+| :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- |
+| t13.diagnostic.polar_source_measure | `varphi=rho*(cos theta,sin theta); J_l=U'_rho; (1/2)logdet H_polar-log rho=(1/2)logdet H_cart` | rho E; theta dimensionless; J E^3; Jacobian E | exact same-field coordinate/source identity with common Gaussian regulator | derived including offshell source | full action, Jacobian integral and determinant/derivative checks | dropping source/measure fakes thermal stationarity | interacting/vacuum background matching, not another coordinate-only repair |
+| t13.diagnostic.polar_static_composite | `chi_l=1/[Z(q^2+2r)]+x*T/(16rho_s^2*q); Gamma_l/Z=1/(Z*chi_l)` | susceptibility E^-2; inverse/stiffness E^2; x E^2 | Cartesian longitudinal observable and connected Gaussian phase contraction | conditional leading static IR, exact leading one-loop coefficient match | independent source/logdet vs Wick; prior finite-q coefficient; positive IR witness | modulus response substituted for Cartesian/temperature observable; template called exact resummation | renormalized order parameter, stiffness and dynamical composite current |
+| t13.diagnostic.polar_offshell_boundary | `H_theta_theta=rho^2*H_cart,tt-rho*U'_rho=0` at J=0 | angular Hessian E^4; U'_rho E^3 | full Hessian chain rule | identity even at nonstationary rho | explicit nonzero tadpole witness | massless polar angle mistaken for valid equilibrium | require source-complete stationarity and matching before physical claims |
+
+See [derivation and source-complete boundary](Result/artifacts/T13_POLAR_STATIC_IR_OBSERVABLE_2026-10-01.md)
+and `Code/03_Research/Research_T13_Polar_Static_IR_Observable.py`.
+No new admitted Core equation, physical alpha, Kubo coefficient or gate unlock.
+
+## Finite-Momentum Thermal 1PI (2026-10-01)
+
+| formula_id | relation | variables and units | constant_origin | proof_status | verification_role | failure_mode | next_hardening_step |
+| :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- |
+| t13.diagnostic.thermal_1pi_finite_q | `B_ab=-Delta_T int Tr[G V_a G_shift V_b]/(2Z)` | bubble E^2; vertices E; residues E^-1; T,q,complex frequency E | existing quartic Cartesian Hessian and thermal pole residues | derived at fixed Phi, formal thermal one-loop | full-matrix frequency sum and upper-half-plane refinement | complex-frequency evaluation mistaken for real-axis damping or a stable resummed state | real-axis/current vertices and infrared completion |
+| t13.diagnostic.static_radial_goldstone_IR | `J_00=1/(8q); B_sigma~-lambda*r*T/(4Z^2*q); q_IR=lambda*T/(8Z^2)` | J E^-1; bubble E^2; r E^2; q_IR E | exact zero-Matsubara convolution of tree Goldstone propagators | analytic leading boundary, full-bubble refinement checked | identifies nonuniform bare expansion; zero mode retained | clipping the divergence or calling q_IR a physical causal cutoff | amplitude-direction observable and matching of the same IR coefficient |
+| t13.diagnostic.finite_q_current_match | `delta_Z_pi=[B_pi(q)-B_pi(0)]/q^2; f=Z*(x+delta_x)+Z*x*delta_Z_pi` | delta_Z dimensionless; x,f E^2 | prior Ward shift plus actual finite-q bubble | matches static current in fixed-Phi one-loop order | separate gradient convergence and previous-current check | finite phase response used to infer physical sound or finite-T normal transport | matched current and material/source/detector admission |
+
+See [derivation and infrared boundary](Result/artifacts/T13_FINITE_MOMENTUM_THERMAL_1PI_2026-10-01.md)
+and `Code/03_Research/Research_T13_Finite_Momentum_Thermal_1PI.py`.
+These are local diagnostic IDs, not new admitted Core equations. Initial dynamic
+quadrature failure was repaired with integration coordinates, not changed
+parameters or thresholds. No SI map, physical Kubo or Core unlock is supplied.
+
+## Thermal One-Loop Ward and Static Current (2026-10-01)
+
+| formula_id | relation | variables and units | constant_origin | proof_status | verification_role | failure_mode | next_hardening_step |
+| :-- | :-- | :-- | :-- | :-- | :-- | :-- | :-- |
+| t13.diagnostic.thermal_transverse_1pi_zero | `Sigma_pi,T(0)=lambda/Z^2*(I_sigma+3I_pi)-4lambda^2*x0/Z^3*B=2Omega_G,x/Z` | Sigma and Omega_x E^2; I E^2; B dimensionless | Cartesian derivatives of existing O(2) quartic Hessian; no selected counterterm | derived within thermal one-loop difference | independent matrix/Matsubara and pole-residue checks | zero-momentum equality is not a retarded pole or physical response | derive finite-q/frequency kernel and IR treatment |
+| t13.diagnostic.loop_order_condensate_current | `delta_x=-2Omega_G,x/lambda; f_1loop=f_held+Z*delta_x=f_path` | x and f E^2; Z and lambda dimensionless | formal loop-order stationarity and chain rule | derived at fixed Phi, not exact equilibrium | unit/coupling limits and current matching | bare shifted determinant is unstable; no uniform error bound | consistent resummed state and material/current map |
+| t13.diagnostic.gaussian_amplitude_hessian_IR | `radial_integrand(Omega_G,xx)~-g^2*T/(4pi^2*k^2)` | integrand E^-1; Hessian dimensionless | analytic gapless-mode derivative | derived asymptote with numerical refinement | exposes nonintegrable bare IR limit | finite-grid derivative misreported as continuum uncertainty | finite-momentum analysis, resummation or justified effective variables |
+
+Code: `Code/03_Research/Research_T13_Thermal_OneLoop_Ward_Current.py`.
+See [derivation and claim boundary](Result/artifacts/T13_THERMAL_ONE_LOOP_WARD_CURRENT_2026-10-01.md).
+These diagnostic IDs are not new admitted Core equations; no SI alpha,
+physical Kubo, source/detector response or Full Topic13 claim is promoted.
+
 ## Finite-q Spatial Compatibility (2026-09-07)
 
 | formula_id | relation | code surface | variables and units | constant_origin | proof_status | verification_role | failure_mode | next_hardening_step |

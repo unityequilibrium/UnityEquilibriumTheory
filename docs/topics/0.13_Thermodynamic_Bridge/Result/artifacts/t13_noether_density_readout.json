@@ -1,0 +1,1453 @@
+{
+  "major_result_id": "T13_NOETHER_DENSITY_READOUT_AND_CALIBRATION_BOUNDARY",
+  "topic": "0.13_Thermodynamic_Bridge",
+  "branch_id": "t13.candidate.acoustic_thermal_insertion_tree_virtual_response_v1",
+  "generated_at": "2026-10-03T13:16:50.450149+00:00",
+  "closure_level": "CLOSED_FOR_LANE",
+  "verification_status": "PASS_SCOPED_NOETHER_DENSITY_READOUT",
+  "what_is_closed": "Tree Noether density/source/contact, independent spectral and first-order projection, coordinate covariance, restricted gain/density-map and q-cubed action-unit/kinetic identifiability with conditional inverse when checks pass",
+  "equation_or_mapping": "delta_n=s*a0+sqrt(s)*(2mu*sigma+dot_pi_phase); chi_nn=s+j_minus D^-1 j_plus=sum Rnn/(E_j^2-z^2); I=G_inst*Z_N^2*(R_instrument convolve S_Noether) conditional",
+  "units": {
+    "a0": "E",
+    "Noether_density_current": "E^3",
+    "chi_nn": "E^2",
+    "density_pole_strength": "E^4",
+    "chi_nh": "E^0",
+    "h": "E^3",
+    "Phi": "E",
+    "atomic_density_temperature_and_count_map": "not admitted; SI scales and source/detector conversions remain independent inputs"
+  },
+  "derivation_class": "DERIVED_SAME_ACTION_TREE_NOETHER_SOURCE_HESSIAN_AND_MODAL_READOUT_WITH_CONSTRUCTIVE_GAIN_BOUNDARY",
+  "observable": "conditional density-susceptibility poles/strength, not temperature or second sound",
+  "data_role": "DERIVED_AND_CONSTRUCTIVE_CONTROL_NO_EXPERIMENTAL_ROWS",
+  "declared_protocol": {
+    "density_protocol_locked_before_first_density_audit": true,
+    "unit_family_locked_before_first_unit_information_audit": true,
+    "unit_family_scales": [
+      1.01,
+      1.02
+    ],
+    "mu_grid": [
+      1.05,
+      1.2
+    ],
+    "q_grid": [
+      0.002,
+      0.01,
+      0.04
+    ],
+    "upper_half_plane_frequencies": [
+      {
+        "real": 0.0,
+        "imag": 0.02
+      },
+      {
+        "real": 0.0,
+        "imag": 0.05
+      },
+      {
+        "real": 0.03,
+        "imag": 0.02
+      }
+    ],
+    "finite_difference_steps": [
+      0.0001,
+      5e-05
+    ],
+    "pole_offsets": [
+      0.0001,
+      5e-05
+    ],
+    "coordinate_scales": [
+      0.5,
+      2.0
+    ],
+    "trial_inputs_not_lab_settings": true
+  },
+  "action_controls": {
+    "Z": 1.0,
+    "m0_sq": 1.0,
+    "u": 1.0,
+    "gamma": 0.04000000000000001,
+    "epsilon": 0.05,
+    "Phi_reference": 0.0,
+    "response_mass_sq": 1.0,
+    "response_quartic": 1.0,
+    "response_kinetic": 1.0
+  },
+  "thresholds": {
+    "identity_relative": 1e-08,
+    "static_derivative_relative": 1e-06,
+    "pole_projection_relative": 1e-05,
+    "negative_control_minimum": 0.1,
+    "gain_null_absolute": 1e-12,
+    "original_causal_leakage": 1e-06
+  },
+  "checks": {
+    "independent_six_state_density_response": true,
+    "all_tree_modal_density_and_mixed_projection": true,
+    "source_charge_ward": true,
+    "static_pressure_charge_curvature": true,
+    "density_pole_and_sum_rule": true,
+    "q0_closed_charge_and_contact_negative": true,
+    "Phi_coordinate_invariance_not_absolute_thermal_scale": true,
+    "decoupled_Phi_is_not_seen_as_density": true,
+    "gain_map_constructive_nonidentifiability": true,
+    "conditional_unit_kinetic_information_and_inverse": true
+  },
+  "examples": [
+    {
+      "mu": 1.05,
+      "unit_information": {
+        "scope": "q_cubed_dispersion_with_native_static_inputs_fixed_but_action_SI_scales_open",
+        "parameter_order": [
+          "log_E_unit",
+          "log_Q_unit",
+          "I_kinetic"
+        ],
+        "observable_order": [
+          "log_linear_energy_Q_coefficient",
+          "log_cubic_energy_Q_coefficient"
+        ],
+        "jacobian": [
+          [
+            1.0,
+            -1.0,
+            0.0
+          ],
+          [
+            1.0,
+            -3.0,
+            0.10382124484428876
+          ]
+        ],
+        "null_direction": [
+          1.0,
+          1.0,
+          19.26387997947436
+        ],
+        "null_residual": 1.459303065750402e-16,
+        "dispersion_only_rank": 2,
+        "plus_independent_volumetric_scale_rank": 3,
+        "augmented_determinant": -0.415284979377155,
+        "analytic_determinant": -0.41528497937715503,
+        "eta_base": 0.46938170971775434,
+        "I_kinetic_reference": 0.031670403838020805,
+        "inverse_reference_error": 1.1612146747101964e-14,
+        "positive_reference_inverse": {
+          "q_unit": 1.0,
+          "energy_unit": 1.0,
+          "eta": 0.4709301566824913,
+          "I_kinetic": 0.03167040383802117
+        },
+        "witnesses": [
+          {
+            "unit_ratio": 1.01,
+            "energy_unit_ratio": 1.01,
+            "q_unit_ratio": 1.01,
+            "I_kinetic": 0.22527239763173956,
+            "response_kinetic": 7.113025737969801,
+            "same_linear_coefficient_error": 0.0,
+            "same_cubic_coefficient_error": 0.0,
+            "static_native_pressure_error": 0.0,
+            "volumetric_scale_ratio": 1.04060401,
+            "independent_scale_inverse_error": 0.0,
+            "data_role": "CONSTRUCTIVE_UNIT_KINETIC_AMBIGUITY_NOT_SI_CALIBRATION"
+          },
+          {
+            "unit_ratio": 1.02,
+            "energy_unit_ratio": 1.02,
+            "q_unit_ratio": 1.02,
+            "I_kinetic": 0.42080077942340305,
+            "response_kinetic": 13.286877602685486,
+            "same_linear_coefficient_error": 0.0,
+            "same_cubic_coefficient_error": 2.357511000030705e-16,
+            "static_native_pressure_error": 0.0,
+            "volumetric_scale_ratio": 1.08243216,
+            "independent_scale_inverse_error": 0.0,
+            "data_role": "CONSTRUCTIVE_UNIT_KINETIC_AMBIGUITY_NOT_SI_CALIBRATION"
+          }
+        ],
+        "log_input_order_for_uncertainty": [
+          "linear",
+          "cubic",
+          "volumetric_scale",
+          "c",
+          "eta_base",
+          "s"
+        ],
+        "log_gradient_I": [
+          -14.44790998460577,
+          9.63193998973718,
+          4.81596999486859,
+          14.44790998460577,
+          -9.63193998973718,
+          -0.03167040383802117
+        ],
+        "uncertainty_contract": "Var(I)=g^T Sigma_log g plus a separately controlled theory remainder; no independent errors or instrument precision assumed",
+        "native_static_inputs_do_not_include_admitted_physical_volumetric_scale": true,
+        "volumetric_relation_requires_declared_action_normalization": true,
+        "independent_physical_scale_already_locked_would_remove_this_family": true,
+        "absolute_pressure_at_SVP_or_vacuum_offset_is_not_automatically_a_scale_anchor": true,
+        "only_retained_q_and_q_cubed_coefficients_preserved_not_full_curve": true
+      },
+      "static_density_susceptibility": 2.344829283659969,
+      "tree_pressure_chi": 2.344829283659969,
+      "static_pressure_error": 0.0,
+      "static_derivative_checks": [
+        {
+          "step": 0.0001,
+          "pressure_charge_derivative": 2.3448292934964003,
+          "relative_error": 4.194945556326306e-09
+        },
+        {
+          "step": 5e-05,
+          "pressure_charge_derivative": 2.3448292861247277,
+          "relative_error": 1.0511462962398999e-09
+        }
+      ],
+      "q_rows": [
+        {
+          "q": 0.002,
+          "modes": [
+            {
+              "energy": 0.0004215378228648344,
+              "density_strength": 4.1665461999304596e-07,
+              "mixed_density_Phi_strength": 1.5089070907817876e-07,
+              "on_shell_ward_error": 1.6796630645820894e-16
+            },
+            {
+              "energy": 1.0021336108497219,
+              "density_strength": 1.8592464192824137e-15,
+              "mixed_density_Phi_strength": -1.928093390981588e-07,
+              "on_shell_ward_error": 7.02713118623941e-11
+            },
+            {
+              "energy": 2.149245820944232,
+              "density_strength": 3.443660728165181e-13,
+              "mixed_density_Phi_strength": 4.1918630075917155e-08,
+              "on_shell_ward_error": 1.6416220725121373e-09
+            }
+          ],
+          "responses": [
+            {
+              "z": {
+                "real": 0.0,
+                "imag": 0.02
+              },
+              "density": {
+                "real": 0.001041174023762484,
+                "imag": 0.0
+              },
+              "density_h": {
+                "real": 0.0003768764308455727,
+                "imag": 0.0
+              },
+              "six_state_relative_error": 2.2659266111950674e-13,
+              "modal_relative_error": 1.5453286263848713e-13,
+              "mixed_modal_relative_error": 1.4110756791316795e-13,
+              "ward_error": 7.424282857945134e-16
+            },
+            {
+              "z": {
+                "real": 0.0,
+                "imag": 0.05
+              },
+              "density": {
+                "real": 0.0001666500029822715,
+                "imag": 0.0
+              },
+              "density_h": {
+                "real": 6.016955133936186e-05,
+                "imag": 0.0
+              },
+              "six_state_relative_error": 1.2491257929296403e-12,
+              "modal_relative_error": 9.596148669653755e-14,
+              "mixed_modal_relative_error": 2.919772636050757e-12,
+              "ward_error": 1.0571268034313981e-17
+            },
+            {
+              "z": {
+                "real": 0.03,
+                "imag": 0.02
+              },
+              "density": {
+                "real": -0.0001232397443033939,
+                "imag": 0.00029588053898589595
+              },
+              "density_h": {
+                "real": -4.481405699955157e-05,
+                "imag": 0.00010715236911225737
+              },
+              "six_state_relative_error": 1.9096876197759913e-12,
+              "modal_relative_error": 9.756724412920316e-13,
+              "mixed_modal_relative_error": 1.40858048996783e-12,
+              "ward_error": 1.4549627257393074e-15
+            }
+          ],
+          "pole_residue_checks": [
+            {
+              "offset": 0.0001,
+              "density_strength_estimate": 4.1665461999285193e-07,
+              "relative_error": 4.656698262068388e-13
+            },
+            {
+              "offset": 5e-05,
+              "density_strength_estimate": 4.1665461999344544e-07,
+              "relative_error": 9.587843133842938e-13
+            }
+          ],
+          "sum_rule_relative_error": 3.176462750695297e-15,
+          "coordinate_controls": [
+            {
+              "scale": 0.5,
+              "z": {
+                "real": 0.0,
+                "imag": 0.02
+              },
+              "density_invariant_error": 1.3328980065853338e-14,
+              "h_column_covariance_error": 9.205794440818295e-14
+            },
+            {
+              "scale": 2.0,
+              "z": {
+                "real": 0.0,
+                "imag": 0.02
+              },
+              "density_invariant_error": 0.0,
+              "h_column_covariance_error": 0.0
+            },
+            {
+              "scale": 0.5,
+              "z": {
+                "real": 0.0,
+                "imag": 0.05
+              },
+              "density_invariant_error": 8.327505286208004e-14,
+              "h_column_covariance_error": 3.459670422721563e-13
+            },
+            {
+              "scale": 2.0,
+              "z": {
+                "real": 0.0,
+                "imag": 0.05
+              },
+              "density_invariant_error": 0.0,
+              "h_column_covariance_error": 0.0
+            },
+            {
+              "scale": 0.5,
+              "z": {
+                "real": 0.03,
+                "imag": 0.02
+              },
+              "density_invariant_error": 5.90898251831012e-13,
+              "h_column_covariance_error": 1.8809489152633388e-12
+            },
+            {
+              "scale": 2.0,
+              "z": {
+                "real": 0.03,
+                "imag": 0.02
+              },
+              "density_invariant_error": 0.0,
+              "h_column_covariance_error": 0.0
+            }
+          ]
+        },
+        {
+          "q": 0.01,
+          "modes": [
+            {
+              "energy": 0.0021081411350824942,
+              "density_strength": 1.041615777771078e-05,
+              "mixed_density_Phi_strength": 3.7717730645249116e-06,
+              "on_shell_ward_error": 1.3437438501349675e-16
+            },
+            {
+              "energy": 1.0021815611628528,
+              "density_strength": 1.1617577367101944e-12,
+              "mixed_density_Phi_strength": -4.8196706888966955e-06,
+              "on_shell_ward_error": 9.063101326327029e-12
+            },
+            {
+              "energy": 2.1492894697413885,
+              "density_strength": 2.1521599058814246e-10,
+              "mixed_density_Phi_strength": 1.0478976243516066e-06,
+              "on_shell_ward_error": 2.186602339083343e-11
+            }
+          ],
+          "responses": [
+            {
+              "z": {
+                "real": 0.0,
+                "imag": 0.02
+              },
+              "density": {
+                "real": 0.025754248117167144,
+                "imag": 0.0
+              },
+              "density_h": {
+                "real": 0.009321246822322507,
+                "imag": 0.0
+              },
+              "six_state_relative_error": 1.670448386165387e-14,
+              "modal_relative_error": 2.411373073577454e-14,
+              "mixed_modal_relative_error": 3.722084628898545e-15,
+              "ward_error": 2.940438862467652e-15
+            },
+            {
+              "z": {
+                "real": 0.0,
+                "imag": 0.05
+              },
+              "density": {
+                "real": 0.004159069565871476,
+                "imag": 0.0
+              },
+              "density_h": {
+                "real": 0.0015014718740313446,
+                "imag": 0.0
+              },
+              "six_state_relative_error": 5.0051294843775456e-14,
+              "modal_relative_error": 8.550429535812069e-15,
+              "mixed_modal_relative_error": 3.104999449087382e-14,
+              "ward_error": 1.301079142684798e-16
+            },
+            {
+              "z": {
+                "real": 0.03,
+                "imag": 0.02
+              },
+              "density": {
+                "real": -0.003062328995787525,
+                "imag": 0.007415502532924445
+              },
+              "density_h": {
+                "real": -0.0011134677767544177,
+                "imag": 0.002685206401905251
+              },
+              "six_state_relative_error": 7.050909479462993e-14,
+              "modal_relative_error": 4.038246553801235e-14,
+              "mixed_modal_relative_error": 9.474706881220536e-15,
+              "ward_error": 1.4224202582936687e-15
+            }
+          ],
+          "pole_residue_checks": [
+            {
+              "offset": 0.0001,
+              "density_strength_estimate": 1.0416157777710152e-05,
+              "relative_error": 6.017616037935427e-14
+            },
+            {
+              "offset": 5e-05,
+              "density_strength_estimate": 1.0416157777750791e-05,
+              "relative_error": 3.841353329714889e-12
+            }
+          ],
+          "sum_rule_relative_error": 8.13174464177998e-16,
+          "coordinate_controls": [
+            {
+              "scale": 0.5,
+              "z": {
+                "real": 0.0,
+                "imag": 0.02
+              },
+              "density_invariant_error": 1.2932503634828637e-14,
+              "h_column_covariance_error": 7.444169257797063e-15
+            },
+            {
+              "scale": 2.0,
+              "z": {
+                "real": 0.0,
+                "imag": 0.02
+              },
+              "density_invariant_error": 0.0,
+              "h_column_covariance_error": 0.0
+            },
+            {
+              "scale": 0.5,
+              "z": {
+                "real": 0.0,
+                "imag": 0.05
+              },
+              "density_invariant_error": 3.3367529895851975e-15,
+              "h_column_covariance_error": 7.856370699086458e-14
+            },
+            {
+              "scale": 2.0,
+              "z": {
+                "real": 0.0,
+                "imag": 0.05
+              },
+              "density_invariant_error": 0.0,
+              "h_column_covariance_error": 0.0
+            },
+            {
+              "scale": 0.5,
+              "z": {
+                "real": 0.03,
+                "imag": 0.02
+              },
+              "density_invariant_error": 9.838768026672914e-14,
+              "h_column_covariance_error": 1.9756203011592808e-14
+            },
+            {
+              "scale": 2.0,
+              "z": {
+                "real": 0.03,
+                "imag": 0.02
+              },
+              "density_invariant_error": 0.0,
+              "h_column_covariance_error": 0.0
+            }
+          ]
+        },
+        {
+          "q": 0.04,
+          "modes": [
+            {
+              "energy": 0.00846074685870249,
+              "density_strength": 0.0001666066460264062,
+              "mixed_density_Phi_strength": 6.022495676887483e-05,
+              "on_shell_ward_error": 1.3439530431039696e-16
+            },
+            {
+              "energy": 1.0029304854253709,
+              "density_strength": 2.96328032839145e-10,
+              "mixed_density_Phi_strength": -7.697430691567554e-05,
+              "on_shell_ward_error": 1.901103415746085e-13
+            },
+            {
+              "energy": 2.1499712574130125,
+              "density_strength": 5.504413290654042e-08,
+              "mixed_density_Phi_strength": 1.6749350146794163e-05,
+              "on_shell_ward_error": 3.8228876216275126e-13
+            }
+          ],
+          "responses": [
+            {
+              "z": {
+                "real": 0.0,
+                "imag": 0.02
+              },
+              "density": {
+                "real": 0.3532913922156866,
+                "imag": 0.0
+              },
+              "density_h": {
+                "real": 0.12763486763486565,
+                "imag": 0.0
+              },
+              "six_state_relative_error": 1.571256828056765e-16,
+              "modal_relative_error": 4.713770484170293e-16,
+              "mixed_modal_relative_error": 8.698430493156872e-16,
+              "ward_error": 3.682633190758042e-16
+            },
+            {
+              "z": {
+                "real": 0.0,
+                "imag": 0.05
+              },
+              "density": {
+                "real": 0.06478756362127316,
+                "imag": 0.0
+              },
+              "density_h": {
+                "real": 0.023346684951174146,
+                "imag": 0.0
+              },
+              "six_state_relative_error": 6.854544067223494e-15,
+              "modal_relative_error": 2.1420450210073419e-16,
+              "mixed_modal_relative_error": 1.3374499477285372e-15,
+              "ward_error": 4.163453256591353e-17
+            },
+            {
+              "z": {
+                "real": 0.03,
+                "imag": 0.02
+              },
+              "density": {
+                "real": -0.043963740105398275,
+                "imag": 0.12314323463197135
+              },
+              "density_h": {
+                "real": -0.01596495274535363,
+                "imag": 0.044513715930139156
+              },
+              "six_state_relative_error": 4.542784912611551e-15,
+              "modal_relative_error": 2.216168025788437e-15,
+              "mixed_modal_relative_error": 2.177600754791413e-15,
+              "ward_error": 6.246496034162407e-16
+            }
+          ],
+          "pole_residue_checks": [
+            {
+              "offset": 0.0001,
+              "density_strength_estimate": 0.00016660664602660886,
+              "relative_error": 1.2164250101972837e-12
+            },
+            {
+              "offset": 5e-05,
+              "density_strength_estimate": 0.00016660664602631068,
+              "relative_error": 5.733157330400484e-13
+            }
+          ],
+          "sum_rule_relative_error": 3.2526978567119934e-16,
+          "coordinate_controls": [
+            {
+              "scale": 0.5,
+              "z": {
+                "real": 0.0,
+                "imag": 0.02
+              },
+              "density_invariant_error": 1.8855081936681145e-15,
+              "h_column_covariance_error": 2.174607623289218e-16
+            },
+            {
+              "scale": 2.0,
+              "z": {
+                "real": 0.0,
+                "imag": 0.02
+              },
+              "density_invariant_error": 0.0,
+              "h_column_covariance_error": 0.0
+            },
+            {
+              "scale": 0.5,
+              "z": {
+                "real": 0.0,
+                "imag": 0.05
+              },
+              "density_invariant_error": 4.2840900420146838e-16,
+              "h_column_covariance_error": 1.426613277577088e-14
+            },
+            {
+              "scale": 2.0,
+              "z": {
+                "real": 0.0,
+                "imag": 0.05
+              },
+              "density_invariant_error": 0.0,
+              "h_column_covariance_error": 0.0
+            },
+            {
+              "scale": 0.5,
+              "z": {
+                "real": 0.03,
+                "imag": 0.02
+              },
+              "density_invariant_error": 1.910433588810148e-15,
+              "h_column_covariance_error": 1.7744682670326468e-15
+            },
+            {
+              "scale": 2.0,
+              "z": {
+                "real": 0.03,
+                "imag": 0.02
+              },
+              "density_invariant_error": 0.0,
+              "h_column_covariance_error": 0.0
+            }
+          ]
+        }
+      ],
+      "q0_dynamic_controls": [
+        {
+          "z": {
+            "real": 0.0,
+            "imag": 0.02
+          },
+          "total_density_scaled_error": 3.7304541179058525e-15,
+          "missing_contact_scaled_error": 0.9999999999999962,
+          "neutral_h_density_scaled_error": 1.9984575631638495e-16
+        },
+        {
+          "z": {
+            "real": 0.0,
+            "imag": 0.05
+          },
+          "total_density_scaled_error": 0.0,
+          "missing_contact_scaled_error": 1.0,
+          "neutral_h_density_scaled_error": 8.659982773710014e-16
+        },
+        {
+          "z": {
+            "real": 0.03,
+            "imag": 0.02
+          },
+          "total_density_scaled_error": 3.934249641799927e-15,
+          "missing_contact_scaled_error": 1.0000000000000036,
+          "neutral_h_density_scaled_error": 3.033920700721953e-15
+        }
+      ]
+    },
+    {
+      "mu": 1.2,
+      "unit_information": {
+        "scope": "q_cubed_dispersion_with_native_static_inputs_fixed_but_action_SI_scales_open",
+        "parameter_order": [
+          "log_E_unit",
+          "log_Q_unit",
+          "I_kinetic"
+        ],
+        "observable_order": [
+          "log_linear_energy_Q_coefficient",
+          "log_cubic_energy_Q_coefficient"
+        ],
+        "jacobian": [
+          [
+            1.0,
+            -1.0,
+            0.0
+          ],
+          [
+            1.0,
+            -3.0,
+            0.44162922036627367
+          ]
+        ],
+        "null_direction": [
+          1.0,
+          1.0,
+          4.528685847239142
+        ],
+        "null_residual": 8.325177546994041e-17,
+        "dispersion_only_rank": 2,
+        "plus_independent_volumetric_scale_rank": 3,
+        "augmented_determinant": -1.7665168814650944,
+        "analytic_determinant": -1.7665168814650947,
+        "eta_base": 0.15553883020784293,
+        "I_kinetic_reference": 0.026916058230921518,
+        "inverse_reference_error": 3.866963270239773e-16,
+        "positive_reference_inverse": {
+          "q_unit": 1.0,
+          "energy_unit": 1.0,
+          "eta": 0.15740994933839672,
+          "I_kinetic": 0.026916058230921507
+        },
+        "witnesses": [
+          {
+            "unit_ratio": 1.01,
+            "energy_unit_ratio": 1.01,
+            "q_unit_ratio": 1.01,
+            "I_kinetic": 0.07242935099567513,
+            "response_kinetic": 2.690934548226952,
+            "same_linear_coefficient_error": 0.0,
+            "same_cubic_coefficient_error": 0.0,
+            "static_native_pressure_error": 0.0,
+            "volumetric_scale_ratio": 1.04060401,
+            "independent_scale_inverse_error": 0.0,
+            "data_role": "CONSTRUCTIVE_UNIT_KINETIC_AMBIGUITY_NOT_SI_CALIBRATION"
+          },
+          {
+            "unit_ratio": 1.02,
+            "energy_unit_ratio": 1.02,
+            "q_unit_ratio": 1.02,
+            "I_kinetic": 0.11839551234515204,
+            "response_kinetic": 4.398694315839224,
+            "same_linear_coefficient_error": 0.0,
+            "same_cubic_coefficient_error": 1.7632669175161565e-16,
+            "static_native_pressure_error": 0.0,
+            "volumetric_scale_ratio": 1.08243216,
+            "independent_scale_inverse_error": 4.2197575835886444e-15,
+            "data_role": "CONSTRUCTIVE_UNIT_KINETIC_AMBIGUITY_NOT_SI_CALIBRATION"
+          }
+        ],
+        "log_input_order_for_uncertainty": [
+          "linear",
+          "cubic",
+          "volumetric_scale",
+          "c",
+          "eta_base",
+          "s"
+        ],
+        "log_gradient_I": [
+          -3.3965143854293567,
+          2.264342923619571,
+          1.1321714618097856,
+          3.3965143854293567,
+          -2.264342923619571,
+          -0.026916058230921507
+        ],
+        "uncertainty_contract": "Var(I)=g^T Sigma_log g plus a separately controlled theory remainder; no independent errors or instrument precision assumed",
+        "native_static_inputs_do_not_include_admitted_physical_volumetric_scale": true,
+        "volumetric_relation_requires_declared_action_normalization": true,
+        "independent_physical_scale_already_locked_would_remove_this_family": true,
+        "absolute_pressure_at_SVP_or_vacuum_offset_is_not_automatically_a_scale_anchor": true,
+        "only_retained_q_and_q_cubed_coefficients_preserved_not_full_curve": true
+      },
+      "static_density_susceptibility": 3.3698326994536987,
+      "tree_pressure_chi": 3.369832699453699,
+      "static_pressure_error": 1.3178375588855084e-16,
+      "static_derivative_checks": [
+        {
+          "step": 0.0001,
+          "pressure_charge_derivative": 3.3698327091352676,
+          "relative_error": 2.873011723603086e-09
+        },
+        {
+          "step": 5e-05,
+          "pressure_charge_derivative": 3.369832701880515,
+          "relative_error": 7.201593492043139e-10
+        }
+      ],
+      "q_rows": [
+        {
+          "q": 0.002,
+          "modes": [
+            {
+              "energy": 0.0007283701716651864,
+              "density_strength": 1.7877669866820402e-06,
+              "mixed_density_Phi_strength": 4.74048771154974e-07,
+              "on_shell_ward_error": 0.0
+            },
+            {
+              "energy": 1.042973088421788,
+              "density_strength": 1.6062033924173554e-14,
+              "mixed_density_Phi_strength": -5.666501996982773e-07,
+              "on_shell_ward_error": 1.0450495408448887e-10
+            },
+            {
+              "energy": 2.58001180943487,
+              "density_strength": 9.291946437142778e-13,
+              "mixed_density_Phi_strength": 9.2601428391131e-08,
+              "on_shell_ward_error": 1.3726673651484451e-09
+            }
+          ],
+          "responses": [
+            {
+              "z": {
+                "real": 0.0,
+                "imag": 0.02
+              },
+              "density": {
+                "real": 0.004463497495461988,
+                "imag": 0.0
+              },
+              "density_h": {
+                "real": 0.0011830453582292039,
+                "imag": 0.0
+              },
+              "six_state_relative_error": 2.487338742217093e-13,
+              "modal_relative_error": 1.0493460318728362e-13,
+              "mixed_modal_relative_error": 1.0080952361109585e-14,
+              "ward_error": 5.943266517167929e-16
+            },
+            {
+              "z": {
+                "real": 0.0,
+                "imag": 0.05
+              },
+              "density": {
+                "real": 0.000714955074752055,
+                "imag": 0.0
+              },
+              "density_h": {
+                "real": 0.00018907346134651448,
+                "imag": 0.0
+              },
+              "six_state_relative_error": 1.3975713404218605e-12,
+              "modal_relative_error": 3.487862503222837e-14,
+              "mixed_modal_relative_error": 8.128356928324325e-14,
+              "ward_error": 2.789696528466577e-17
+            },
+            {
+              "z": {
+                "real": 0.03,
+                "imag": 0.02
+              },
+              "density": {
+                "real": -0.0005285297573230374,
+                "imag": 0.00126981875432719
+              },
+              "density_h": {
+                "real": -0.00014065351777847734,
+                "imag": 0.0003367077481358227
+              },
+              "six_state_relative_error": 3.223932855243668e-13,
+              "modal_relative_error": 1.3431376654440632e-13,
+              "mixed_modal_relative_error": 2.4396022270231973e-13,
+              "ward_error": 2.330899115551282e-16
+            }
+          ],
+          "pole_residue_checks": [
+            {
+              "offset": 0.0001,
+              "density_strength_estimate": 1.7877669866835276e-06,
+              "relative_error": 8.319819453304687e-13
+            },
+            {
+              "offset": 5e-05,
+              "density_strength_estimate": 1.7877669866832485e-06,
+              "relative_error": 6.7586688212648e-13
+            }
+          ],
+          "sum_rule_relative_error": 1.53982909604558e-15,
+          "coordinate_controls": [
+            {
+              "scale": 0.5,
+              "z": {
+                "real": 0.0,
+                "imag": 0.02
+              },
+              "density_invariant_error": 0.0,
+              "h_column_covariance_error": 0.0
+            },
+            {
+              "scale": 2.0,
+              "z": {
+                "real": 0.0,
+                "imag": 0.02
+              },
+              "density_invariant_error": 0.0,
+              "h_column_covariance_error": 0.0
+            },
+            {
+              "scale": 0.5,
+              "z": {
+                "real": 0.0,
+                "imag": 0.05
+              },
+              "density_invariant_error": 0.0,
+              "h_column_covariance_error": 0.0
+            },
+            {
+              "scale": 2.0,
+              "z": {
+                "real": 0.0,
+                "imag": 0.05
+              },
+              "density_invariant_error": 0.0,
+              "h_column_covariance_error": 0.0
+            },
+            {
+              "scale": 0.5,
+              "z": {
+                "real": 0.03,
+                "imag": 0.02
+              },
+              "density_invariant_error": 0.0,
+              "h_column_covariance_error": 0.0
+            },
+            {
+              "scale": 2.0,
+              "z": {
+                "real": 0.03,
+                "imag": 0.02
+              },
+              "density_invariant_error": 0.0,
+              "h_column_covariance_error": 0.0
+            }
+          ]
+        },
+        {
+          "q": 0.01,
+          "modes": [
+            {
+              "energy": 0.003642001964178031,
+              "density_strength": 4.46936075366049e-05,
+              "mixed_density_Phi_strength": 1.1850013579439053e-05,
+              "on_shell_ward_error": 1.297410936948682e-16
+            },
+            {
+              "energy": 1.0430192221171806,
+              "density_strength": 1.0036933040912967e-11,
+              "mixed_density_Phi_strength": -1.4164957037883147e-05,
+              "on_shell_ward_error": 3.994788994526644e-12
+            },
+            {
+              "energy": 2.5800465051301593,
+              "density_strength": 5.80724930037245e-10,
+              "mixed_density_Phi_strength": 2.314943458328596e-06,
+              "on_shell_ward_error": 2.5472040768695824e-11
+            }
+          ],
+          "responses": [
+            {
+              "z": {
+                "real": 0.0,
+                "imag": 0.02
+              },
+              "density": {
+                "real": 0.10814779001546504,
+                "imag": 0.0
+              },
+              "density_h": {
+                "real": 0.028661517125981445,
+                "imag": 0.0
+              },
+              "six_state_relative_error": 5.646187161628708e-15,
+              "modal_relative_error": 3.2080608872890386e-15,
+              "mixed_modal_relative_error": 3.0262240975448812e-15,
+              "ward_error": 4.851646136463616e-16
+            },
+            {
+              "z": {
+                "real": 0.0,
+                "imag": 0.05
+              },
+              "density": {
+                "real": 0.017783091870994527,
+                "imag": 0.0
+              },
+              "density_h": {
+                "real": 0.004702346146410227,
+                "imag": 0.0
+              },
+              "six_state_relative_error": 1.5607845821738238e-14,
+              "modal_relative_error": 7.413726765325663e-15,
+              "mixed_modal_relative_error": 3.6152783175161907e-14,
+              "ward_error": 1.479752071621402e-16
+            },
+            {
+              "z": {
+                "real": 0.03,
+                "imag": 0.02
+              },
+              "density": {
+                "real": -0.012972644204859052,
+                "imag": 0.03198279737757995
+              },
+              "density_h": {
+                "real": -0.0034522313054536485,
+                "imag": 0.008479869145199485
+              },
+              "six_state_relative_error": 4.5725955083929575e-14,
+              "modal_relative_error": 2.634962201888288e-14,
+              "mixed_modal_relative_error": 1.5446461607752565e-14,
+              "ward_error": 9.775857916179582e-16
+            }
+          ],
+          "pole_residue_checks": [
+            {
+              "offset": 0.0001,
+              "density_strength_estimate": 4.4693607536566574e-05,
+              "relative_error": 8.575397894648004e-13
+            },
+            {
+              "offset": 5e-05,
+              "density_strength_estimate": 4.469360753652685e-05,
+              "relative_error": 1.7463124637651292e-12
+            }
+          ],
+          "sum_rule_relative_error": 7.580697088224394e-16,
+          "coordinate_controls": [
+            {
+              "scale": 0.5,
+              "z": {
+                "real": 0.0,
+                "imag": 0.02
+              },
+              "density_invariant_error": 0.0,
+              "h_column_covariance_error": 0.0
+            },
+            {
+              "scale": 2.0,
+              "z": {
+                "real": 0.0,
+                "imag": 0.02
+              },
+              "density_invariant_error": 0.0,
+              "h_column_covariance_error": 0.0
+            },
+            {
+              "scale": 0.5,
+              "z": {
+                "real": 0.0,
+                "imag": 0.05
+              },
+              "density_invariant_error": 0.0,
+              "h_column_covariance_error": 0.0
+            },
+            {
+              "scale": 2.0,
+              "z": {
+                "real": 0.0,
+                "imag": 0.05
+              },
+              "density_invariant_error": 0.0,
+              "h_column_covariance_error": 0.0
+            },
+            {
+              "scale": 0.5,
+              "z": {
+                "real": 0.03,
+                "imag": 0.02
+              },
+              "density_invariant_error": 0.0,
+              "h_column_covariance_error": 0.0
+            },
+            {
+              "scale": 2.0,
+              "z": {
+                "real": 0.03,
+                "imag": 0.02
+              },
+              "density_invariant_error": 0.0,
+              "h_column_covariance_error": 0.0
+            }
+          ]
+        },
+        {
+          "q": 0.04,
+          "modes": [
+            {
+              "energy": 0.014577444595390305,
+              "density_strength": 0.0007149560319097899,
+              "mixed_density_Phi_strength": 0.0001892992713688884,
+              "on_shell_ward_error": 1.2975394898405677e-16
+            },
+            {
+              "energy": 1.0437397935950337,
+              "density_strength": 2.5621190019172396e-09,
+              "mixed_density_Phi_strength": -0.00022631531953023814,
+              "on_shell_ward_error": 2.723908393114996e-13
+            },
+            {
+              "energy": 2.580588512702843,
+              "density_strength": 1.4857874669806886e-07,
+              "mixed_density_Phi_strength": 3.7016048161638075e-05,
+              "on_shell_ward_error": 6.208594432917828e-12
+            }
+          ],
+          "responses": [
+            {
+              "z": {
+                "real": 0.0,
+                "imag": 0.02
+              },
+              "density": {
+                "real": 1.1672715751570781,
+                "imag": 0.0
+              },
+              "density_h": {
+                "real": 0.3088569706332408,
+                "imag": 0.0
+              },
+              "six_state_relative_error": 3.804506331701789e-16,
+              "modal_relative_error": 1.902253165850895e-16,
+              "mixed_modal_relative_error": 5.391927964336842e-16,
+              "ward_error": 0.0
+            },
+            {
+              "z": {
+                "real": 0.0,
+                "imag": 0.05
+              },
+              "density": {
+                "real": 0.2635781015160976,
+                "imag": 0.0
+              },
+              "density_h": {
+                "real": 0.06958598869570283,
+                "imag": 0.0
+              },
+              "six_state_relative_error": 4.212121637720161e-16,
+              "modal_relative_error": 6.318182456580245e-16,
+              "mixed_modal_relative_error": 5.983009540254524e-16,
+              "ward_error": 1.5525267636683562e-16
+            },
+            {
+              "z": {
+                "real": 0.03,
+                "imag": 0.02
+              },
+              "density": {
+                "real": -0.13499344744407243,
+                "imag": 0.5634547199580144
+              },
+              "density_h": {
+                "real": -0.03594457086879902,
+                "imag": 0.14918596407807327
+              },
+              "six_state_relative_error": 9.580797997992637e-16,
+              "modal_relative_error": 2.1423315602205438e-16,
+              "mixed_modal_relative_error": 1.0861676429049782e-15,
+              "ward_error": 1.527706993649561e-16
+            }
+          ],
+          "pole_residue_checks": [
+            {
+              "offset": 0.0001,
+              "density_strength_estimate": 0.0007149560319103106,
+              "relative_error": 7.283557032918544e-13
+            },
+            {
+              "offset": 5e-05,
+              "density_strength_estimate": 0.0007149560319114935,
+              "relative_error": 2.382813484448464e-12
+            }
+          ],
+          "sum_rule_relative_error": 2.274209126467313e-15,
+          "coordinate_controls": [
+            {
+              "scale": 0.5,
+              "z": {
+                "real": 0.0,
+                "imag": 0.02
+              },
+              "density_invariant_error": 0.0,
+              "h_column_covariance_error": 0.0
+            },
+            {
+              "scale": 2.0,
+              "z": {
+                "real": 0.0,
+                "imag": 0.02
+              },
+              "density_invariant_error": 0.0,
+              "h_column_covariance_error": 0.0
+            },
+            {
+              "scale": 0.5,
+              "z": {
+                "real": 0.0,
+                "imag": 0.05
+              },
+              "density_invariant_error": 0.0,
+              "h_column_covariance_error": 0.0
+            },
+            {
+              "scale": 2.0,
+              "z": {
+                "real": 0.0,
+                "imag": 0.05
+              },
+              "density_invariant_error": 0.0,
+              "h_column_covariance_error": 0.0
+            },
+            {
+              "scale": 0.5,
+              "z": {
+                "real": 0.03,
+                "imag": 0.02
+              },
+              "density_invariant_error": 0.0,
+              "h_column_covariance_error": 0.0
+            },
+            {
+              "scale": 2.0,
+              "z": {
+                "real": 0.03,
+                "imag": 0.02
+              },
+              "density_invariant_error": 0.0,
+              "h_column_covariance_error": 0.0
+            }
+          ]
+        }
+      ],
+      "q0_dynamic_controls": [
+        {
+          "z": {
+            "real": 0.0,
+            "imag": 0.02
+          },
+          "total_density_scaled_error": 1.242021410934685e-15,
+          "missing_contact_scaled_error": 0.9999999999999988,
+          "neutral_h_density_scaled_error": 2.4840428218693697e-16
+        },
+        {
+          "z": {
+            "real": 0.0,
+            "imag": 0.05
+          },
+          "total_density_scaled_error": 1.1178192698412163e-15,
+          "missing_contact_scaled_error": 0.9999999999999989,
+          "neutral_h_density_scaled_error": 2.1735374691356986e-16
+        },
+        {
+          "z": {
+            "real": 0.03,
+            "imag": 0.02
+          },
+          "total_density_scaled_error": 4.521026178221871e-16,
+          "missing_contact_scaled_error": 0.9999999999999999,
+          "neutral_h_density_scaled_error": 2.410169669980676e-16
+        }
+      ]
+    }
+  ],
+  "instrument_gain_boundary": {
+    "log_parameter_order": [
+      "instrument_gain",
+      "Noether_to_atomic_density_map"
+    ],
+    "log_intensity_jacobian": [
+      [
+        1.0,
+        2.0
+      ]
+    ],
+    "null_direction": [
+      -2.0,
+      1.0
+    ],
+    "null_residual": 0.0,
+    "amplitude_only_rank": 1,
+    "plus_independent_gain_rank": 2,
+    "positive_class_inverse": "Z_N=sqrt(I/(G_inst*S_N)); conditional on known nonzero S_N and all other input/units",
+    "conditional_not_full_UET_minimum_measurements": true,
+    "witnesses": [
+      {
+        "coordinate_scale": 0.5,
+        "gain": 4.0,
+        "density_map": 0.5,
+        "same_intensity_product": 1.0,
+        "data_role": "CONSTRUCTIVE_IDENTIFIABILITY_WITNESS_NOT_DATA"
+      },
+      {
+        "coordinate_scale": 2.0,
+        "gain": 0.25,
+        "density_map": 2.0,
+        "same_intensity_product": 1.0,
+        "data_role": "CONSTRUCTIVE_IDENTIFIABILITY_WITNESS_NOT_DATA"
+      }
+    ]
+  },
+  "decoupled_h_to_density_max": 0.0,
+  "protocol_screen_status": "CONDITIONAL_DENSITY_SPECTROSCOPY_ROUTE_NOT_ADMITTED",
+  "external_numeric_rows_admitted": 0,
+  "evidence_artifacts": [
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/Research_T13_Noether_Density_Readout.py",
+      "sha256": "2700b1147f973c26789061a7218d3cc49ca2a981a535f364f35f32be286b4e90"
+    },
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/t13_noether_density_readout_registry.json",
+      "sha256": "986bb58ce4b0617726e4a7b661778e55f1ceac59a97787deb1b6fbd2621b79e0"
+    },
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/t13_density_spectroscopy_protocol_screen.json",
+      "sha256": "40d5674f0ba16516735dfc79003eca9996b696a810ff9ec99e94c8ead593095e"
+    },
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/test_t13_noether_density_readout.py",
+      "sha256": "3edbb0d5ad4677f8e520ed0fffd4fcc4804bb4d06076378f0d057f6f01790360"
+    }
+  ],
+  "protected_evidence_hashes": [
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/t13_gaussian_work_remainder.json",
+      "sha256": "0bff6697f0c94f749cbaf2134c3e78ae36de40c66783a7303e8c5f5aadf307b1"
+    },
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/t13_gaussian_source_work.json",
+      "sha256": "959441d2940f0aa209d72b8f8671d440807dd14ae9a80aff4357606f3bce4c62"
+    },
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/t13_gaussian_source_work_first_failure.json",
+      "sha256": "0c8c828f512f0a70653d30c15c4b0f1e7d960fb878712c774ae298dd038f35f4"
+    },
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/t13_thermal_noether_response.json",
+      "sha256": "2765fdd0b0fe83bbed54c4af2fa3fde32f40694d109ea37978b0f7b5ec268906"
+    },
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/t13_low_T_phase_eft.json",
+      "sha256": "050aceb4f94f3534929d8c59c75da4dda8efe16ce7aec250a34f6f8b5868dcb7"
+    },
+    {
+      "path": "docs/core/02_equations/o2/uet_o2_action_thermal_observable_bridge.py",
+      "sha256": "1cf745562548bc9a61d9ebb86069b8aff73e2a776756aa9efe7ab1a45b669ebe"
+    },
+    {
+      "path": "docs/core/02_equations/o2/uet_o2_action_thermal_stiffness_beta.py",
+      "sha256": "c1c3278a79df611ddae2f67ff811022722ab0c56f68bf91cc5480f34db9a95e6"
+    },
+    {
+      "path": "docs/core/02_equations/covariant/uet_covariant_matter.py",
+      "sha256": "8a57d95e898a8ac962bbd749670ad0695b597281937da36496d2ec7e074f9c53"
+    },
+    {
+      "path": "docs/core/02_equations/covariant/uet_covariant_response.py",
+      "sha256": "7fb4b7228afb8ede0ac4f1664d634346ef46cc7678c94ed7b55d73645590c0c2"
+    }
+  ],
+  "equation_registry_ids": [
+    "t13.readout.noether_density_source",
+    "t13.readout.density_pole_projection",
+    "t13.readout.gain_mapping_identifiability",
+    "t13.readout.dispersion_action_unit_information"
+  ],
+  "controlling_blocker": "Noether_to_atomic_density_SI_state_resolution_and_independent_gain_not_admitted",
+  "open_blockers": [
+    "Noether_charge_to_He4_number_density_and_action_unit_state_match",
+    "independent_Q_energy_temperature_gain_and_joint_resolution_covariance",
+    "permitted_primary_low_q_numeric_rows_uncertainty_and_source_ancestry",
+    "nonlinear_parent_interaction_and_physical_heat_entropy_KMS"
+  ],
+  "dependency_unlocked": [
+    "same_state_density_protocol_information_gap_research_only"
+  ],
+  "tree_Noether_density_readout_verified": true,
+  "restricted_gain_density_map_ambiguity_verified": true,
+  "conditional_dispersion_unit_scale_information_verified": true,
+  "physical_Noether_to_atomic_density_map_admitted": false,
+  "physical_measurement_protocol_admitted": false,
+  "physical_resolution_or_intrinsic_damping_admitted": false,
+  "full_measurement_design_completed": false,
+  "independent_alpha_Phi_K_admitted": false,
+  "physical_Kubo_emitted": false,
+  "full_SK_KMS_matching_closed": false,
+  "nonlinear_parent_action_completed": false,
+  "controlled_full_action_truncation_error_established": false,
+  "old_source_work_audit_promoted": false,
+  "full_core_unlock": false,
+  "core_composition_gate_overwritten": false,
+  "C_relabelled_as_charge_or_mass": false,
+  "state_variables": [
+    "existing_radial_phase_Phi_tree_fluctuations"
+  ],
+  "excluded_variables": [
+    "C",
+    "UET_Pi",
+    "R_gen",
+    "R_obs",
+    "external_a0",
+    "instrument_gain"
+  ],
+  "parameter_fitting": false,
+  "assigned_width": false,
+  "assigned_relaxation_time": false,
+  "quantum_Phi_loops_added": false,
+  "predecessor_covariance_vacuum_populations_changed": false,
+  "clipping": false,
+  "cone_padding": false,
+  "claim_promotion": false,
+  "xie_2026_accessed": false,
+  "prior_Xie_context_exposure_review": "REVIEW_REQUIRED",
+  "claim_boundary": "Same-action tree Noether charge readout only, not automatic He4 atomic density, S(Q,E) admission, SI temperature, heat, full finite-T/KMS transport or physical UET validation. Instrument-gain ambiguity is a restricted class result, not a global minimum-measurement theorem; Phi coordinate invariance is not a physical no-go. Original failures, owner gates and exposure review remain unchanged.",
+  "report": {
+    "MAJOR_RESULT_CLOSURE": "CLOSED_FOR_LANE",
+    "WHAT_IS_ACTUALLY_CLOSED": "Tree Noether density/source/contact, independent spectral and first-order projection, coordinate covariance, restricted gain/density-map and q-cubed action-unit/kinetic identifiability with conditional inverse when checks pass",
+    "WHAT_REMAINS_OPEN": [
+      "Noether_charge_to_He4_number_density_and_action_unit_state_match",
+      "independent_Q_energy_temperature_gain_and_joint_resolution_covariance",
+      "permitted_primary_low_q_numeric_rows_uncertainty_and_source_ancestry",
+      "nonlinear_parent_interaction_and_physical_heat_entropy_KMS"
+    ],
+    "DEPENDENCY_UNLOCKED": [
+      "same_state_density_protocol_information_gap_research_only"
+    ],
+    "STATUS": "PASS_SCOPED_NOETHER_DENSITY_READOUT",
+    "WHAT_CHANGED": "Derived Noether density readout and selected conditional spectroscopy input packet",
+    "EQUATION_OR_MAPPING": "delta_n=s*a0+sqrt(s)*(2mu*sigma+dot_pi_phase); chi_nn=s+j_minus D^-1 j_plus=sum Rnn/(E_j^2-z^2); I=G_inst*Z_N^2*(R_instrument convolve S_Noether) conditional",
+    "VERIFICATION": {
+      "independent_six_state_density_response": true,
+      "all_tree_modal_density_and_mixed_projection": true,
+      "source_charge_ward": true,
+      "static_pressure_charge_curvature": true,
+      "density_pole_and_sum_rule": true,
+      "q0_closed_charge_and_contact_negative": true,
+      "Phi_coordinate_invariance_not_absolute_thermal_scale": true,
+      "decoupled_Phi_is_not_seen_as_density": true,
+      "gain_map_constructive_nonidentifiability": true,
+      "conditional_unit_kinetic_information_and_inverse": true
+    },
+    "CONTROLLING_BLOCKER": "Noether_to_atomic_density_SI_state_resolution_and_independent_gain_not_admitted",
+    "NEXT_ACTION": "Verify particle-current/state/units and obtain independent resolution/gain with primary low-q source rows; never identify resolution width with intrinsic damping",
+    "CLAIM_BOUNDARY": "Same-action tree Noether charge readout only, not automatic He4 atomic density, S(Q,E) admission, SI temperature, heat, full finite-T/KMS transport or physical UET validation. Instrument-gain ambiguity is a restricted class result, not a global minimum-measurement theorem; Phi coordinate invariance is not a physical no-go. Original failures, owner gates and exposure review remain unchanged."
+  }
+}

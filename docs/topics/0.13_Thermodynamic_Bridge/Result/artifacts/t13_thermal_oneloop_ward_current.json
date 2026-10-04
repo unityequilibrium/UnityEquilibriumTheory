@@ -1,0 +1,719 @@
+{
+  "major_result_id": "T13_THERMAL_ONE_LOOP_WARD_AND_STATIC_CURRENT_MATCH",
+  "topic": "0.13",
+  "closure_level": "CLOSED_FOR_LANE",
+  "verification_status": "PASS_THERMAL_ONE_LOOP_WARD_CURRENT",
+  "what_is_closed": [
+    "computed_thermal_transverse_tadpole_and_bubble_at_zero_external_momentum",
+    "one_loop_amplitude_shift_Ward_cancellation_at_fixed_Phi",
+    "one_loop_static_current_matches_tree_relaxed_pressure_curvature",
+    "nonintegrable_bare_amplitude_Hessian_IR_boundary_identified"
+  ],
+  "equation_or_mapping": "Sigma_pi,T(0)=lambda/Z^2*(I_sigma+3I_pi)-4lambda^2*x0/Z^3*B=2Omega_G,x/Z; delta_x=-2Omega_G,x/lambda; f_1loop=f_held+Z*delta_x=f_path",
+  "units": {
+    "T_mu_k_nu_A": "E",
+    "x_r_loop_inverse_stiffness": "E^2",
+    "Omega": "E^4",
+    "Omega_x": "E^2",
+    "Z_lambda": "dimensionless",
+    "Omega_xx": "dimensionless after radial integration"
+  },
+  "derivation_class": "ACTION_DERIVED_THERMAL_ONE_LOOP_1PI_DIFFERENCE_FIXED_PHI_FORMAL_ORDER",
+  "observable": "zero_momentum_transverse_inverse_and_static_phase_gradient_current_coefficient",
+  "data_role": "DERIVED_NATURAL_UNIT_NO_MEASURED_ROWS",
+  "primary_reference": {
+    "url": "https://arxiv.org/abs/1212.0670",
+    "scope": "method context and low_T_weak_coupling caveat; not material admission or an error bound"
+  },
+  "tolerances": {
+    "algebra": 1e-10,
+    "Matsubara_relative": 1e-06,
+    "quadrature_relative": 0.001
+  },
+  "checks": {
+    "thermal_tadpole_plus_bubble_Ward_identity": true,
+    "independent_Matsubara_matrix_sum": true,
+    "Matsubara_refinement": true,
+    "radial_refinement": true,
+    "cutoff_refinement": true,
+    "previous_tadpole_independently_reproduced": true,
+    "static_current_loop_order_matching": true,
+    "bare_shift_instability_not_hidden": true,
+    "infrared_Hessian_boundary": true
+  },
+  "examples": [
+    {
+      "T": 0.22,
+      "mu": 1.05,
+      "Phi_fixed": 0.15,
+      "Z": 1.0,
+      "lambda": 1.0,
+      "r": 0.10850000000000004,
+      "reference": {
+        "x_tree": 0.10850000000000004,
+        "thermal_sigma_resolvent": 0.0036397046628251833,
+        "thermal_phase_resolvent": 0.00844788605517131,
+        "thermal_determinant_resolvent": 0.022157517937078933,
+        "transverse_tadpole": 0.028983362828339115,
+        "transverse_bubble": -0.00961636278469226,
+        "transverse_loop_inverse_at_zero": 0.019367000043646852,
+        "Omega_G_x": 0.00968350002182343,
+        "Ward_rhs_2_Omega_G_x_over_Z": 0.01936700004364686,
+        "delta_x_order_one_loop": -0.01936700004364686,
+        "fractional_amplitude_sq_shift": -0.17849769625480968,
+        "shifted_tree_transverse_inverse": -0.01936700004364686,
+        "Ward_cancellation_absolute_residual": 5.204170427930421e-18,
+        "radial_order": 256,
+        "cutoff": 63.0
+      },
+      "radial_runs": [
+        {
+          "x_tree": 0.10850000000000004,
+          "thermal_sigma_resolvent": 0.0036397046628252605,
+          "thermal_phase_resolvent": 0.008447886055172781,
+          "thermal_determinant_resolvent": 0.022157517937085328,
+          "transverse_tadpole": 0.028983362828343604,
+          "transverse_bubble": -0.009616362784695036,
+          "transverse_loop_inverse_at_zero": 0.019367000043648566,
+          "Omega_G_x": 0.009683500021824281,
+          "Ward_rhs_2_Omega_G_x_over_Z": 0.019367000043648563,
+          "delta_x_order_one_loop": -0.019367000043648563,
+          "fractional_amplitude_sq_shift": -0.1784976962548254,
+          "shifted_tree_transverse_inverse": -0.019367000043648563,
+          "Ward_cancellation_absolute_residual": 5.204170427930421e-18,
+          "radial_order": 128,
+          "cutoff": 63.0
+        },
+        {
+          "x_tree": 0.10850000000000004,
+          "thermal_sigma_resolvent": 0.0036397046628252002,
+          "thermal_phase_resolvent": 0.008447886055174266,
+          "thermal_determinant_resolvent": 0.022157517937092485,
+          "transverse_tadpole": 0.028983362828348,
+          "transverse_bubble": -0.009616362784698141,
+          "transverse_loop_inverse_at_zero": 0.019367000043649857,
+          "Omega_G_x": 0.009683500021824934,
+          "Ward_rhs_2_Omega_G_x_over_Z": 0.019367000043649867,
+          "delta_x_order_one_loop": -0.019367000043649867,
+          "fractional_amplitude_sq_shift": -0.1784976962548374,
+          "shifted_tree_transverse_inverse": -0.019367000043649867,
+          "Ward_cancellation_absolute_residual": 8.673617379884035e-18,
+          "radial_order": 192,
+          "cutoff": 63.0
+        },
+        {
+          "x_tree": 0.10850000000000004,
+          "thermal_sigma_resolvent": 0.0036397046628251833,
+          "thermal_phase_resolvent": 0.00844788605517131,
+          "thermal_determinant_resolvent": 0.022157517937078933,
+          "transverse_tadpole": 0.028983362828339115,
+          "transverse_bubble": -0.00961636278469226,
+          "transverse_loop_inverse_at_zero": 0.019367000043646852,
+          "Omega_G_x": 0.00968350002182343,
+          "Ward_rhs_2_Omega_G_x_over_Z": 0.01936700004364686,
+          "delta_x_order_one_loop": -0.01936700004364686,
+          "fractional_amplitude_sq_shift": -0.17849769625480968,
+          "shifted_tree_transverse_inverse": -0.01936700004364686,
+          "Ward_cancellation_absolute_residual": 5.204170427930421e-18,
+          "radial_order": 256,
+          "cutoff": 63.0
+        }
+      ],
+      "cutoff_runs": [
+        {
+          "x_tree": 0.10850000000000004,
+          "thermal_sigma_resolvent": 0.0036397046628251733,
+          "thermal_phase_resolvent": 0.0084478860551712,
+          "thermal_determinant_resolvent": 0.02215751793707845,
+          "transverse_tadpole": 0.02898336282833877,
+          "transverse_bubble": -0.00961636278469205,
+          "transverse_loop_inverse_at_zero": 0.01936700004364672,
+          "Omega_G_x": 0.00968350002182336,
+          "Ward_rhs_2_Omega_G_x_over_Z": 0.01936700004364672,
+          "delta_x_order_one_loop": -0.01936700004364672,
+          "fractional_amplitude_sq_shift": -0.1784976962548084,
+          "shifted_tree_transverse_inverse": -0.01936700004364672,
+          "Ward_cancellation_absolute_residual": 0.0,
+          "radial_order": 256,
+          "cutoff": 52.5
+        },
+        {
+          "x_tree": 0.10850000000000004,
+          "thermal_sigma_resolvent": 0.0036397046628252093,
+          "thermal_phase_resolvent": 0.008447886055171437,
+          "thermal_determinant_resolvent": 0.022157517937079367,
+          "transverse_tadpole": 0.028983362828339517,
+          "transverse_bubble": -0.00961636278469245,
+          "transverse_loop_inverse_at_zero": 0.019367000043647067,
+          "Omega_G_x": 0.009683500021823534,
+          "Ward_rhs_2_Omega_G_x_over_Z": 0.019367000043647067,
+          "delta_x_order_one_loop": -0.019367000043647067,
+          "fractional_amplitude_sq_shift": -0.17849769625481163,
+          "shifted_tree_transverse_inverse": -0.019367000043647067,
+          "Ward_cancellation_absolute_residual": 0.0,
+          "radial_order": 256,
+          "cutoff": 73.5
+        },
+        {
+          "x_tree": 0.10850000000000004,
+          "thermal_sigma_resolvent": 0.0036397046628252818,
+          "thermal_phase_resolvent": 0.00844788605517167,
+          "thermal_determinant_resolvent": 0.02215751793708015,
+          "transverse_tadpole": 0.02898336282834029,
+          "transverse_bubble": -0.00961636278469279,
+          "transverse_loop_inverse_at_zero": 0.0193670000436475,
+          "Omega_G_x": 0.009683500021823757,
+          "Ward_rhs_2_Omega_G_x_over_Z": 0.019367000043647515,
+          "delta_x_order_one_loop": -0.019367000043647515,
+          "fractional_amplitude_sq_shift": -0.17849769625481574,
+          "shifted_tree_transverse_inverse": -0.019367000043647515,
+          "Ward_cancellation_absolute_residual": 1.3877787807814457e-17,
+          "radial_order": 256,
+          "cutoff": 94.5
+        }
+      ],
+      "current_stiffness_order_one_loop": 0.09157371942316885,
+      "previous_path_stiffness": 0.09157371942316883,
+      "static_current_order_matching_absolute_residual": 1.3877787807814457e-17,
+      "bare_shifted_low_mode_sq_at_k_zero": -0.0006763200102257727,
+      "bare_shifted_Gaussian_not_evaluated_as_equilibrium": true,
+      "infrared_amplitude_hessian_asymptotic_constant": -0.005572665100328578,
+      "infrared_witnesses": [
+        {
+          "k": 0.001,
+          "k_sq_times_amplitude_hessian_integrand": -0.0055712937459413995
+        },
+        {
+          "k": 0.0005,
+          "k_sq_times_amplitude_hessian_integrand": -0.005571979410412419
+        },
+        {
+          "k": 0.00025,
+          "k_sq_times_amplitude_hessian_integrand": -0.005572322253808813
+        }
+      ]
+    },
+    {
+      "T": 0.22,
+      "mu": 1.2,
+      "Phi_fixed": 0.15,
+      "Z": 1.0,
+      "lambda": 1.0,
+      "r": 0.44599999999999995,
+      "reference": {
+        "x_tree": 0.44599999999999995,
+        "thermal_sigma_resolvent": 0.0016601795798739725,
+        "thermal_phase_resolvent": 0.007878640617401542,
+        "thermal_determinant_resolvent": 0.0069713688761519794,
+        "transverse_tadpole": 0.0252961014320786,
+        "transverse_bubble": -0.01243692207505513,
+        "transverse_loop_inverse_at_zero": 0.01285917935702347,
+        "Omega_G_x": 0.00642958967851173,
+        "Ward_rhs_2_Omega_G_x_over_Z": 0.01285917935702346,
+        "delta_x_order_one_loop": -0.01285917935702346,
+        "fractional_amplitude_sq_shift": -0.028832240710814933,
+        "shifted_tree_transverse_inverse": -0.01285917935702346,
+        "Ward_cancellation_absolute_residual": 1.0408340855860843e-17,
+        "radial_order": 256,
+        "cutoff": 72.0
+      },
+      "radial_runs": [
+        {
+          "x_tree": 0.44599999999999995,
+          "thermal_sigma_resolvent": 0.0016601795798741033,
+          "thermal_phase_resolvent": 0.007878640617403104,
+          "thermal_determinant_resolvent": 0.006971368876153587,
+          "transverse_tadpole": 0.025296101432083416,
+          "transverse_bubble": -0.012436922075057998,
+          "transverse_loop_inverse_at_zero": 0.012859179357025418,
+          "Omega_G_x": 0.006429589678512707,
+          "Ward_rhs_2_Omega_G_x_over_Z": 0.012859179357025415,
+          "delta_x_order_one_loop": -0.012859179357025415,
+          "fractional_amplitude_sq_shift": -0.02883224071081932,
+          "shifted_tree_transverse_inverse": -0.012859179357025415,
+          "Ward_cancellation_absolute_residual": 3.469446951953614e-18,
+          "radial_order": 128,
+          "cutoff": 72.0
+        },
+        {
+          "x_tree": 0.44599999999999995,
+          "thermal_sigma_resolvent": 0.0016601795798739927,
+          "thermal_phase_resolvent": 0.007878640617404911,
+          "thermal_determinant_resolvent": 0.006971368876155735,
+          "transverse_tadpole": 0.025296101432088727,
+          "transverse_bubble": -0.01243692207506183,
+          "transverse_loop_inverse_at_zero": 0.012859179357026898,
+          "Omega_G_x": 0.0064295896785134445,
+          "Ward_rhs_2_Omega_G_x_over_Z": 0.012859179357026889,
+          "delta_x_order_one_loop": -0.012859179357026889,
+          "fractional_amplitude_sq_shift": -0.028832240710822625,
+          "shifted_tree_transverse_inverse": -0.012859179357026889,
+          "Ward_cancellation_absolute_residual": 8.673617379884035e-18,
+          "radial_order": 192,
+          "cutoff": 72.0
+        },
+        {
+          "x_tree": 0.44599999999999995,
+          "thermal_sigma_resolvent": 0.0016601795798739725,
+          "thermal_phase_resolvent": 0.007878640617401542,
+          "thermal_determinant_resolvent": 0.0069713688761519794,
+          "transverse_tadpole": 0.0252961014320786,
+          "transverse_bubble": -0.01243692207505513,
+          "transverse_loop_inverse_at_zero": 0.01285917935702347,
+          "Omega_G_x": 0.00642958967851173,
+          "Ward_rhs_2_Omega_G_x_over_Z": 0.01285917935702346,
+          "delta_x_order_one_loop": -0.01285917935702346,
+          "fractional_amplitude_sq_shift": -0.028832240710814933,
+          "shifted_tree_transverse_inverse": -0.01285917935702346,
+          "Ward_cancellation_absolute_residual": 1.0408340855860843e-17,
+          "radial_order": 256,
+          "cutoff": 72.0
+        }
+      ],
+      "cutoff_runs": [
+        {
+          "x_tree": 0.44599999999999995,
+          "thermal_sigma_resolvent": 0.0016601795798739717,
+          "thermal_phase_resolvent": 0.007878640617401402,
+          "thermal_determinant_resolvent": 0.006971368876151836,
+          "transverse_tadpole": 0.02529610143207818,
+          "transverse_bubble": -0.012436922075054875,
+          "transverse_loop_inverse_at_zero": 0.012859179357023305,
+          "Omega_G_x": 0.006429589678511659,
+          "Ward_rhs_2_Omega_G_x_over_Z": 0.012859179357023317,
+          "delta_x_order_one_loop": -0.012859179357023317,
+          "fractional_amplitude_sq_shift": -0.028832240710814614,
+          "shifted_tree_transverse_inverse": -0.012859179357023317,
+          "Ward_cancellation_absolute_residual": 1.214306433183765e-17,
+          "radial_order": 256,
+          "cutoff": 60.0
+        },
+        {
+          "x_tree": 0.44599999999999995,
+          "thermal_sigma_resolvent": 0.0016601795798739801,
+          "thermal_phase_resolvent": 0.00787864061740168,
+          "thermal_determinant_resolvent": 0.006971368876152119,
+          "transverse_tadpole": 0.02529610143207902,
+          "transverse_bubble": -0.01243692207505538,
+          "transverse_loop_inverse_at_zero": 0.01285917935702364,
+          "Omega_G_x": 0.00642958967851181,
+          "Ward_rhs_2_Omega_G_x_over_Z": 0.01285917935702362,
+          "delta_x_order_one_loop": -0.01285917935702362,
+          "fractional_amplitude_sq_shift": -0.028832240710815298,
+          "shifted_tree_transverse_inverse": -0.01285917935702362,
+          "Ward_cancellation_absolute_residual": 1.9081958235744878e-17,
+          "radial_order": 256,
+          "cutoff": 84.0
+        },
+        {
+          "x_tree": 0.44599999999999995,
+          "thermal_sigma_resolvent": 0.001660179579874012,
+          "thermal_phase_resolvent": 0.007878640617401936,
+          "thermal_determinant_resolvent": 0.0069713688761523784,
+          "transverse_tadpole": 0.02529610143207982,
+          "transverse_bubble": -0.012436922075055841,
+          "transverse_loop_inverse_at_zero": 0.01285917935702398,
+          "Omega_G_x": 0.006429589678511986,
+          "Ward_rhs_2_Omega_G_x_over_Z": 0.012859179357023971,
+          "delta_x_order_one_loop": -0.012859179357023971,
+          "fractional_amplitude_sq_shift": -0.02883224071081608,
+          "shifted_tree_transverse_inverse": -0.012859179357023971,
+          "Ward_cancellation_absolute_residual": 8.673617379884035e-18,
+          "radial_order": 256,
+          "cutoff": 108.0
+        }
+      ],
+      "current_stiffness_order_one_loop": 0.43717875492820396,
+      "previous_path_stiffness": 0.43717875492820396,
+      "static_current_order_matching_absolute_residual": 0.0,
+      "bare_shifted_low_mode_sq_at_k_zero": -0.0016622141292716996,
+      "bare_shifted_Gaussian_not_evaluated_as_equilibrium": true,
+      "infrared_amplitude_hessian_asymptotic_constant": -0.005572665100328578,
+      "infrared_witnesses": [
+        {
+          "k": 0.001,
+          "k_sq_times_amplitude_hessian_integrand": -0.005570346187971148
+        },
+        {
+          "k": 0.0005,
+          "k_sq_times_amplitude_hessian_integrand": -0.005571505639653436
+        },
+        {
+          "k": 0.00025,
+          "k_sq_times_amplitude_hessian_integrand": -0.005572085369430414
+        }
+      ]
+    }
+  ],
+  "Matsubara_checks": [
+    {
+      "mu": 1.05,
+      "runs": [
+        {
+          "k": 0.2,
+          "terms": 128,
+          "direct_matrix_sum_thermal": [
+            15.416814267079989,
+            -8.340008749621141,
+            7.076805517458845
+          ],
+          "pole_residue_thermal": [
+            15.416814267110508,
+            -8.34000874962041,
+            7.076805517490097
+          ],
+          "maximum_relative_disagreement": 4.4161640413530044e-12
+        },
+        {
+          "k": 0.2,
+          "terms": 256,
+          "direct_matrix_sum_thermal": [
+            15.416814267109537,
+            -8.340008749620429,
+            7.076805517489107
+          ],
+          "pole_residue_thermal": [
+            15.416814267110508,
+            -8.34000874962041,
+            7.076805517490097
+          ],
+          "maximum_relative_disagreement": 1.3993869628296245e-13
+        },
+        {
+          "k": 0.2,
+          "terms": 512,
+          "direct_matrix_sum_thermal": [
+            15.416814267110475,
+            -8.340008749620408,
+            7.076805517490063
+          ],
+          "pole_residue_thermal": [
+            15.416814267110508,
+            -8.34000874962041,
+            7.076805517490097
+          ],
+          "maximum_relative_disagreement": 4.894716730973575e-15
+        }
+      ]
+    },
+    {
+      "mu": 1.05,
+      "runs": [
+        {
+          "k": 0.8,
+          "terms": 128,
+          "direct_matrix_sum_thermal": [
+            0.5306436030693125,
+            -0.08127117533583464,
+            0.4493724277334785
+          ],
+          "pole_residue_thermal": [
+            0.530643603111937,
+            -0.08127117533491186,
+            0.44937242777702513
+          ],
+          "maximum_relative_disagreement": 9.690539087410893e-11
+        },
+        {
+          "k": 0.8,
+          "terms": 256,
+          "direct_matrix_sum_thermal": [
+            0.5306436031105906,
+            -0.08127117533494096,
+            0.44937242777565123
+          ],
+          "pole_residue_thermal": [
+            0.530643603111937,
+            -0.08127117533491186,
+            0.44937242777702513
+          ],
+          "maximum_relative_disagreement": 3.0573771509972337e-12
+        },
+        {
+          "k": 0.8,
+          "terms": 512,
+          "direct_matrix_sum_thermal": [
+            0.530643603111894,
+            -0.08127117533491274,
+            0.4493724277769826
+          ],
+          "pole_residue_thermal": [
+            0.530643603111937,
+            -0.08127117533491186,
+            0.44937242777702513
+          ],
+          "maximum_relative_disagreement": 9.462427869349014e-14
+        }
+      ]
+    },
+    {
+      "mu": 1.05,
+      "runs": [
+        {
+          "k": 2.0,
+          "terms": 128,
+          "direct_matrix_sum_thermal": [
+            0.0033182578240585903,
+            -0.0001361418353256101,
+            0.0031821159887329697
+          ],
+          "pole_residue_thermal": [
+            0.0033182579536455196,
+            -0.00013614183335319735,
+            0.0031821161202923217
+          ],
+          "maximum_relative_disagreement": 4.134335359892358e-08
+        },
+        {
+          "k": 2.0,
+          "terms": 256,
+          "direct_matrix_sum_thermal": [
+            0.0033182579495553144,
+            -0.00013614183341545405,
+            0.0031821161161397216
+          ],
+          "pole_residue_thermal": [
+            0.0033182579536455196,
+            -0.00013614183335319735,
+            0.0031821161202923217
+          ],
+          "maximum_relative_disagreement": 1.304980705220161e-09
+        },
+        {
+          "k": 2.0,
+          "terms": 512,
+          "direct_matrix_sum_thermal": [
+            0.003318257953515924,
+            -0.00013614183335514986,
+            0.0031821161201611714
+          ],
+          "pole_residue_thermal": [
+            0.0033182579536455196,
+            -0.00013614183335319735,
+            0.0031821161202923217
+          ],
+          "maximum_relative_disagreement": 4.121480612160268e-11
+        }
+      ]
+    },
+    {
+      "mu": 1.2,
+      "runs": [
+        {
+          "k": 0.2,
+          "terms": 128,
+          "direct_matrix_sum_thermal": [
+            13.965345739706441,
+            -8.854176901485037,
+            5.111168838221407
+          ],
+          "pole_residue_thermal": [
+            13.965345739764778,
+            -8.854176901480717,
+            5.111168838284062
+          ],
+          "maximum_relative_disagreement": 1.2258403555680738e-11
+        },
+        {
+          "k": 0.2,
+          "terms": 256,
+          "direct_matrix_sum_thermal": [
+            13.96534573976293,
+            -8.854176901480848,
+            5.11116883828208
+          ],
+          "pole_residue_thermal": [
+            13.965345739764778,
+            -8.854176901480717,
+            5.111168838284062
+          ],
+          "maximum_relative_disagreement": 3.8768550150580114e-13
+        },
+        {
+          "k": 0.2,
+          "terms": 512,
+          "direct_matrix_sum_thermal": [
+            13.96534573976471,
+            -8.854176901480717,
+            5.111168838283995
+          ],
+          "pole_residue_thermal": [
+            13.965345739764778,
+            -8.854176901480717,
+            5.111168838284062
+          ],
+          "maximum_relative_disagreement": 1.3032905698312453e-14
+        }
+      ]
+    },
+    {
+      "mu": 1.2,
+      "runs": [
+        {
+          "k": 0.8,
+          "terms": 128,
+          "direct_matrix_sum_thermal": [
+            0.4339462917440853,
+            -0.16354403933525696,
+            0.2704022524088281
+          ],
+          "pole_residue_thermal": [
+            0.433946291818311,
+            -0.1635440393301633,
+            0.27040225248814775
+          ],
+          "maximum_relative_disagreement": 2.933395015014386e-10
+        },
+        {
+          "k": 0.8,
+          "terms": 256,
+          "direct_matrix_sum_thermal": [
+            0.43394629181596844,
+            -0.16354403933032413,
+            0.2704022524856453
+          ],
+          "pole_residue_thermal": [
+            0.433946291818311,
+            -0.1635440393301633,
+            0.27040225248814775
+          ],
+          "maximum_relative_disagreement": 9.254518682734677e-12
+        },
+        {
+          "k": 0.8,
+          "terms": 512,
+          "direct_matrix_sum_thermal": [
+            0.43394629181823796,
+            -0.16354403933016842,
+            0.2704022524880696
+          ],
+          "pole_residue_thermal": [
+            0.433946291818311,
+            -0.1635440393301633,
+            0.27040225248814775
+          ],
+          "maximum_relative_disagreement": 2.8904974057875833e-13
+        }
+      ]
+    },
+    {
+      "mu": 1.2,
+      "runs": [
+        {
+          "k": 2.0,
+          "terms": 128,
+          "direct_matrix_sum_thermal": [
+            0.003519246626763284,
+            -0.0004931481808286772,
+            0.0030260984459345996
+          ],
+          "pole_residue_thermal": [
+            0.0035192468091682578,
+            -0.0004931481714210566,
+            0.0030260986377472015
+          ],
+          "maximum_relative_disagreement": 6.338610362317263e-08
+        },
+        {
+          "k": 2.0,
+          "terms": 256,
+          "direct_matrix_sum_thermal": [
+            0.003519246803410536,
+            -0.0004931481717180206,
+            0.0030260986316930083
+          ],
+          "pole_residue_thermal": [
+            0.0035192468091682578,
+            -0.0004931481714210566,
+            0.0030260986377472015
+          ],
+          "maximum_relative_disagreement": 2.0006595606555147e-09
+        },
+        {
+          "k": 2.0,
+          "terms": 512,
+          "direct_matrix_sum_thermal": [
+            0.0035192468089868534,
+            -0.0004931481714303965,
+            0.0030260986375569843
+          ],
+          "pole_residue_thermal": [
+            0.0035192468091682578,
+            -0.0004931481714210566,
+            0.0030260986377472015
+          ],
+          "maximum_relative_disagreement": 6.285888941545682e-11
+        }
+      ]
+    }
+  ],
+  "evidence_artifacts": [
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/t13_moving_background_thermal_stiffness.json",
+      "sha256": "324b8f52002a981929e61c6fd838f4876a87d6655b814603ef182740b3648084"
+    },
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/Research_T13_Moving_Background_Thermal_Stiffness.py",
+      "sha256": "07c686318181dcf55c389c8d26ce55077dcf22cc13a458f1e210cdb363e14890"
+    },
+    {
+      "path": "docs/core/02_equations/o2/uet_o2_gaussian_offshell_background.py",
+      "sha256": "a2e9162034b192af006134d98096f6f5588092e67f3047f991f91cc73d9fce09"
+    },
+    {
+      "path": "docs/core/02_equations/o2/uet_o2_gaussian_thermal_stationarity_no_go.py",
+      "sha256": "bb1ea760ab26f270e96791f6274597bebb6f1d0923789caf72432cdd004bb43c"
+    },
+    {
+      "path": "docs/core/02_equations/o2/uet_o2_finite_density_eos.py",
+      "sha256": "ea744a8645f993600300fa9fd99a764e1f07b30fb272b47399c34aa114152c6d"
+    },
+    {
+      "path": "docs/core/02_equations/o2/uet_o2_action_thermal_observable_bridge.py",
+      "sha256": "1cf745562548bc9a61d9ebb86069b8aff73e2a776756aa9efe7ab1a45b669ebe"
+    },
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/Research_T13_Thermal_OneLoop_Ward_Current.py",
+      "sha256": "f08019a22031b2a2a87bf14a03b7d1dc74ac39c66f068899c79caa11ea2596ad"
+    }
+  ],
+  "protected_evidence_hashes": [
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/t13_conditional_twofluid_operator.json",
+      "sha256": "8606303e4818030dd74061c14b243542c19c4cbb262dda29261951d4c87d6412"
+    },
+    {
+      "path": "docs/core/07_artifacts/topic13/t13_topic13_closure_matrix.json",
+      "sha256": "e6e84772a400273c438e0b8ca3c7b5b14c9d720da0420fb4021b1c0e7a54fe66"
+    },
+    {
+      "path": "docs/core/07_artifacts/gates/uet_major_result_dependency_unlock_gate.json",
+      "sha256": "ecbefdf12ee1eb6661ae8096e3f62bf1ffa7992c96ca94f1149fdbc25a8bbe6e"
+    }
+  ],
+  "open_blockers": [
+    "finite_frequency_and_momentum_retarded_Ward_response_and_IR_resummation",
+    "joint_Phi_and_amplitude_renormalized_finite_T_background",
+    "physical_material_normal_component_and_source_detector_matching",
+    "controlled_truncation_error_and_independent_comparison_inputs"
+  ],
+  "controlling_blocker": "finite_momentum_retarded_Ward_current_and_IR_resummation_not_derived",
+  "dependency_unlocked": [
+    "fixed_Phi_thermal_one_loop_current_design_only"
+  ],
+  "thermal_zero_momentum_loop_computed": true,
+  "loop_order_amplitude_shift_computed": true,
+  "finite_momentum_retarded_response_derived": false,
+  "joint_Phi_stationarity_derived": false,
+  "exact_stationary_finite_T_background_derived": false,
+  "vacuum_renormalization_matched": false,
+  "controlled_truncation_error_established": false,
+  "physical_Kubo_emitted": false,
+  "g1_physical_unlock": false,
+  "g2_science_unlock": false,
+  "full_core_unlock": false,
+  "claim_promotion": false,
+  "parameter_fitting": false,
+  "xie_2026_accessed": false,
+  "claim_boundary": "Thermal difference of the one-loop 1PI functional at a tree condensed, fixed-Phi background. Formal order matching, not an exact stable resummed state, finite-q retarded kernel, physical transport or He-II prediction. The exact Gaussian no-go and old failing tree lift remain preserved."
+}
