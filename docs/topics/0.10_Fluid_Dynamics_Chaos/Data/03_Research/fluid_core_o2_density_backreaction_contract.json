@@ -1,0 +1,128 @@
+{
+  "schema_version": "t010-core-o2-density-backreaction-v1",
+  "date": "2026-10-01",
+  "record_role": "TREE_MEAN_DENSITY_BACKREACTION_GAUSSIAN_SUBSET_ONLY",
+  "card": "docs/topics/0.10_Fluid_Dynamics_Chaos/CORE_O2_DENSITY_BACKREACTION.md",
+  "prior_ward_contract": "docs/topics/0.10_Fluid_Dynamics_Chaos/Data/03_Research/fluid_core_o2_current_ward_contract.json",
+  "prior_ward_verifier": "docs/topics/0.10_Fluid_Dynamics_Chaos/Code/03_Research/Research_Fluid_Core_O2_Current_Ward.py",
+  "prior_ward_artifact": "docs/topics/0.10_Fluid_Dynamics_Chaos/Result/artifacts/fluid_core_o2_current_ward_audit.json",
+  "physical_controller": "vector_momentum_constitutive_origin_and_material_frame_admission_open",
+  "candidate_controller": "useful_certified_current_error_and_interacting_Noether_heat_frame_material_correspondence_open",
+  "mu": 1.28,
+  "temperatures": [
+    0.002,
+    0.004
+  ],
+  "lambda_exploratory": 0.01,
+  "configuration": {
+    "Z": 1.0,
+    "mass_squared": 1.0,
+    "response_coupling": 0.0,
+    "epsilon_nc": 0.0,
+    "Phi_fixed": 0.15,
+    "phi_equilibrium": 0.0
+  },
+  "core_matter_source": "docs/core/02_equations/covariant/uet_covariant_matter.py",
+  "core_response_source": "docs/core/02_equations/covariant/uet_covariant_response.py",
+  "source_adapter": "docs/topics/0.10_Fluid_Dynamics_Chaos/Code/03_Research/Research_Fluid_Core_O2_Common_Flow.py",
+  "AST_selected_matter_definitions": [
+    "_finite_scalar",
+    "_doublet",
+    "_doublet_gradients",
+    "matter_amplitude_sq",
+    "matter_potential",
+    "interaction_energy_density",
+    "matter_kinetic_scalar",
+    "matter_noether_current",
+    "coupled_matter_stress_tensor",
+    "coupled_matter_lagrangian_scalar",
+    "matter_eom_residual"
+  ],
+  "AST_selected_response_definitions": [
+    "_finite_scalar",
+    "_finite_array",
+    "validate_lorentz_metric",
+    "response_displacement"
+  ],
+  "verification": {
+    "locked_before_first_execution": true,
+    "cutoff_factor": 60,
+    "branches": [
+      "lower",
+      "upper"
+    ],
+    "parent_over_thermal_k": [
+      0.1,
+      1.0,
+      10.0,
+      60.0
+    ],
+    "phase_orders": [
+      8,
+      16,
+      32
+    ],
+    "background_phases": [
+      0.0,
+      0.37
+    ],
+    "coefficient_amplitudes_over_rho": [
+      0.01,
+      0.02,
+      0.04,
+      0.08
+    ],
+    "mu_relative_steps": [
+      0.001,
+      0.0003,
+      0.0001
+    ],
+    "thermal_orders": [
+      64,
+      128,
+      256
+    ],
+    "thermal_relative_steps": [
+      0.001,
+      0.0003,
+      0.0001
+    ],
+    "source_conditioned_tolerance": 1e-08,
+    "derivative_relative_tolerance": 1e-05,
+    "refinement_relative_tolerance": 0.01,
+    "negative_control_floor": 0.001,
+    "energy_scale": 2,
+    "thermal_branch": "lower",
+    "derivative_domain": "fixed_central_K"
+  },
+  "admission": {
+    "full_nonlinear_wave": false,
+    "full_interacting_density_backreaction": false,
+    "interacting_Noether_current": false,
+    "self_consistent_thermal_gap": false,
+    "paper_low_T_accuracy": false,
+    "physical_heat_current": false,
+    "physical_material_frame": false,
+    "SI_charge_atom_mapping": false,
+    "all_channel_collision": false,
+    "physical_frequency_window": false,
+    "physical_UET_operator": false,
+    "physical_HeII_state": false,
+    "physical_J04_executed": false,
+    "physical_J05_executed": false,
+    "physical_J06_executed": false,
+    "formal_verification": false,
+    "external_math_review": false,
+    "interval_certificate": false,
+    "useful_relative_error_certificate": false,
+    "claim_promotion": false,
+    "dependency_unlock": false
+  },
+  "binding_repair_card": "docs/topics/0.10_Fluid_Dynamics_Chaos/CORE_O2_DENSITY_SOURCE_BINDING_REPAIR.md",
+  "first_binding_failure": "docs/topics/0.10_Fluid_Dynamics_Chaos/Result/previews/fluid_core_o2_density_backreaction_first_failure.json",
+  "first_contract_archive": "docs/topics/0.10_Fluid_Dynamics_Chaos/Result/previews/fluid_core_o2_density_backreaction_first_contract.json",
+  "first_verifier_archive": "docs/topics/0.10_Fluid_Dynamics_Chaos/Result/previews/core_o2_density_backreaction_first_verifier.py.txt",
+  "derivative_center_repair_card": "docs/topics/0.10_Fluid_Dynamics_Chaos/CORE_O2_DENSITY_DERIVATIVE_CENTER_REPAIR.md",
+  "uncentered_verifier_archive": "docs/topics/0.10_Fluid_Dynamics_Chaos/Result/previews/core_o2_density_backreaction_uncentered_verifier.py.txt",
+  "uncentered_failure": "docs/topics/0.10_Fluid_Dynamics_Chaos/Result/previews/fluid_core_o2_density_backreaction_uncentered_failure.json"
+}

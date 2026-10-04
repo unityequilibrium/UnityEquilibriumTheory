@@ -1,0 +1,1173 @@
+{
+  "schema_version": "t010-interacting-method-audit-v1",
+  "date": "2026-10-02",
+  "status": "PASS_SOURCE_BRANCH_CONDITIONAL_ALGEBRA_ONLY",
+  "check_count": 156,
+  "passing_check_count": 156,
+  "checks": {
+    "contract_identity": {
+      "pass": true
+    },
+    "all_prelocked_values_unchanged": {
+      "pass": true
+    },
+    "card_identity": {
+      "pass": true
+    },
+    "registry_identity": {
+      "pass": true
+    },
+    "prior_scope": {
+      "pass": true
+    },
+    "prior_sources_fresh": {
+      "pass": true
+    },
+    "no_method_gate_admitted": {
+      "pass": true
+    },
+    "no_physical_admission": {
+      "pass": true
+    },
+    "thermal/selected/0.002/64/expected_branch_rejection": {
+      "pass": true
+    },
+    "thermal/selected/0.002/128/expected_branch_rejection": {
+      "pass": true
+    },
+    "thermal/selected/0.002/256/expected_branch_rejection": {
+      "pass": true
+    },
+    "thermal/selected/0.004/64/expected_branch_rejection": {
+      "pass": true
+    },
+    "thermal/selected/0.004/128/expected_branch_rejection": {
+      "pass": true
+    },
+    "thermal/selected/0.004/256/expected_branch_rejection": {
+      "pass": true
+    },
+    "thermal/normal_control/64/normal_domain": {
+      "pass": true
+    },
+    "thermal/normal_control/64/finite_scalars": {
+      "pass": true
+    },
+    "thermal/normal_control/64/condensate_contribution_included": {
+      "pass": true
+    },
+    "thermal/normal_control/64/physical_kubo_coefficient_included": {
+      "pass": true
+    },
+    "thermal/normal_control/64/physical_si_mapping_included": {
+      "pass": true
+    },
+    "thermal/normal_control/64/gap": {
+      "pass": true,
+      "value": -5.779139357141956e-13,
+      "tolerance": 1e-08
+    },
+    "thermal/normal_control/64/functional_stationarity": {
+      "pass": true,
+      "value": 1.2979316495025441e-16,
+      "tolerance": 1e-08
+    },
+    "thermal/normal_control/64/Legendre": {
+      "pass": true,
+      "value": 0.0,
+      "tolerance": 1e-08
+    },
+    "thermal/normal_control/64/solver_cutoff": {
+      "pass": true,
+      "value": 0.0,
+      "tolerance": 1e-14
+    },
+    "thermal/normal_control/128/normal_domain": {
+      "pass": true
+    },
+    "thermal/normal_control/128/finite_scalars": {
+      "pass": true
+    },
+    "thermal/normal_control/128/condensate_contribution_included": {
+      "pass": true
+    },
+    "thermal/normal_control/128/physical_kubo_coefficient_included": {
+      "pass": true
+    },
+    "thermal/normal_control/128/physical_si_mapping_included": {
+      "pass": true
+    },
+    "thermal/normal_control/128/gap": {
+      "pass": true,
+      "value": -6.96445146290605e-13,
+      "tolerance": 1e-08
+    },
+    "thermal/normal_control/128/functional_stationarity": {
+      "pass": true,
+      "value": 1.564139773558144e-16,
+      "tolerance": 1e-08
+    },
+    "thermal/normal_control/128/Legendre": {
+      "pass": true,
+      "value": 0.0,
+      "tolerance": 1e-08
+    },
+    "thermal/normal_control/128/solver_cutoff": {
+      "pass": true,
+      "value": 0.0,
+      "tolerance": 1e-14
+    },
+    "thermal/normal_control/256/normal_domain": {
+      "pass": true
+    },
+    "thermal/normal_control/256/finite_scalars": {
+      "pass": true
+    },
+    "thermal/normal_control/256/condensate_contribution_included": {
+      "pass": true
+    },
+    "thermal/normal_control/256/physical_kubo_coefficient_included": {
+      "pass": true
+    },
+    "thermal/normal_control/256/physical_si_mapping_included": {
+      "pass": true
+    },
+    "thermal/normal_control/256/gap": {
+      "pass": true,
+      "value": -6.964448379706122e-13,
+      "tolerance": 1e-08
+    },
+    "thermal/normal_control/256/functional_stationarity": {
+      "pass": true,
+      "value": 1.5641390811049595e-16,
+      "tolerance": 1e-08
+    },
+    "thermal/normal_control/256/Legendre": {
+      "pass": true,
+      "value": 0.0,
+      "tolerance": 1e-08
+    },
+    "thermal/normal_control/256/solver_cutoff": {
+      "pass": true,
+      "value": 0.0,
+      "tolerance": 1e-14
+    },
+    "thermal/last_order_refinement/dressed_mass_sq": {
+      "pass": true,
+      "value": 0.0,
+      "tolerance": 0.01
+    },
+    "thermal/last_order_refinement/pressure": {
+      "pass": true,
+      "value": 6.27817331233994e-13,
+      "tolerance": 0.01
+    },
+    "renormalized/selected/0.002/64/expected_branch_rejection": {
+      "pass": true
+    },
+    "renormalized/selected/0.002/128/expected_branch_rejection": {
+      "pass": true
+    },
+    "renormalized/selected/0.002/256/expected_branch_rejection": {
+      "pass": true
+    },
+    "renormalized/selected/0.004/64/expected_branch_rejection": {
+      "pass": true
+    },
+    "renormalized/selected/0.004/128/expected_branch_rejection": {
+      "pass": true
+    },
+    "renormalized/selected/0.004/256/expected_branch_rejection": {
+      "pass": true
+    },
+    "renormalized/normal_control/64/normal_domain": {
+      "pass": true
+    },
+    "renormalized/normal_control/64/finite_scalars": {
+      "pass": true
+    },
+    "renormalized/normal_control/64/condensed_branch_included": {
+      "pass": true
+    },
+    "renormalized/normal_control/64/physical_kubo_coefficient_included": {
+      "pass": true
+    },
+    "renormalized/normal_control/64/physical_si_mapping_included": {
+      "pass": true
+    },
+    "renormalized/normal_control/64/gap": {
+      "pass": true,
+      "value": 4.877157600441948e-12,
+      "tolerance": 1e-08
+    },
+    "renormalized/normal_control/64/functional_stationarity": {
+      "pass": true,
+      "value": -1.0952361482727673e-15,
+      "tolerance": 1e-08
+    },
+    "renormalized/normal_control/64/Legendre": {
+      "pass": true,
+      "value": 0.0,
+      "tolerance": 1e-08
+    },
+    "renormalized/normal_control/64/solver_cutoff": {
+      "pass": true,
+      "value": 0.0,
+      "tolerance": 1e-14
+    },
+    "renormalized/normal_control/128/normal_domain": {
+      "pass": true
+    },
+    "renormalized/normal_control/128/finite_scalars": {
+      "pass": true
+    },
+    "renormalized/normal_control/128/condensed_branch_included": {
+      "pass": true
+    },
+    "renormalized/normal_control/128/physical_kubo_coefficient_included": {
+      "pass": true
+    },
+    "renormalized/normal_control/128/physical_si_mapping_included": {
+      "pass": true
+    },
+    "renormalized/normal_control/128/gap": {
+      "pass": true,
+      "value": 4.758647028670331e-12,
+      "tolerance": 1e-08
+    },
+    "renormalized/normal_control/128/functional_stationarity": {
+      "pass": true,
+      "value": -1.0686228589816828e-15,
+      "tolerance": 1e-08
+    },
+    "renormalized/normal_control/128/Legendre": {
+      "pass": true,
+      "value": 0.0,
+      "tolerance": 1e-08
+    },
+    "renormalized/normal_control/128/solver_cutoff": {
+      "pass": true,
+      "value": 0.0,
+      "tolerance": 1e-14
+    },
+    "renormalized/normal_control/256/normal_domain": {
+      "pass": true
+    },
+    "renormalized/normal_control/256/finite_scalars": {
+      "pass": true
+    },
+    "renormalized/normal_control/256/condensed_branch_included": {
+      "pass": true
+    },
+    "renormalized/normal_control/256/physical_kubo_coefficient_included": {
+      "pass": true
+    },
+    "renormalized/normal_control/256/physical_si_mapping_included": {
+      "pass": true
+    },
+    "renormalized/normal_control/256/gap": {
+      "pass": true,
+      "value": 4.758649115759513e-12,
+      "tolerance": 1e-08
+    },
+    "renormalized/normal_control/256/functional_stationarity": {
+      "pass": true,
+      "value": -1.0686233276675925e-15,
+      "tolerance": 1e-08
+    },
+    "renormalized/normal_control/256/Legendre": {
+      "pass": true,
+      "value": 0.0,
+      "tolerance": 1e-08
+    },
+    "renormalized/normal_control/256/solver_cutoff": {
+      "pass": true,
+      "value": 0.0,
+      "tolerance": 1e-14
+    },
+    "renormalized/last_order_refinement/dressed_mass_sq": {
+      "pass": true,
+      "value": 0.0,
+      "tolerance": 0.01
+    },
+    "renormalized/last_order_refinement/pressure": {
+      "pass": true,
+      "value": 1.7264519872030446e-08,
+      "tolerance": 0.01
+    },
+    "conditional/-1/100/positive_condensates": {
+      "pass": true
+    },
+    "conditional/-1/100/nonnegative_components": {
+      "pass": true
+    },
+    "conditional/-1/100/stationary_three_equations": {
+      "pass": true
+    },
+    "conditional/-1/100/stationary_Goldstone_residual": {
+      "pass": true
+    },
+    "conditional/-1/100/gapless_replacement": {
+      "pass": true
+    },
+    "conditional/-1/100/gapless_original_D_residual": {
+      "pass": true
+    },
+    "conditional/-1/100/original_stationary_determinant": {
+      "pass": true
+    },
+    "conditional/-1/100/gapless_determinant": {
+      "pass": true
+    },
+    "conditional/-1/100/off_shell_identity": {
+      "pass": true
+    },
+    "conditional/-1/100/wrong_coefficient_negative_control": {
+      "pass": true
+    },
+    "conditional/-1/100/stationary/unit_scale/R_rho": {
+      "pass": true
+    },
+    "conditional/-1/100/stationary/unit_scale/R_Y": {
+      "pass": true
+    },
+    "conditional/-1/100/stationary/unit_scale/R_D": {
+      "pass": true
+    },
+    "conditional/-1/100/stationary/unit_scale/R_G": {
+      "pass": true
+    },
+    "conditional/-1/100/stationary/unit_scale/determinant_zero": {
+      "pass": true
+    },
+    "conditional/-1/100/gapless/unit_scale/R_rho": {
+      "pass": true
+    },
+    "conditional/-1/100/gapless/unit_scale/R_Y": {
+      "pass": true
+    },
+    "conditional/-1/100/gapless/unit_scale/R_D": {
+      "pass": true
+    },
+    "conditional/-1/100/gapless/unit_scale/R_G": {
+      "pass": true
+    },
+    "conditional/-1/100/gapless/unit_scale/determinant_zero": {
+      "pass": true
+    },
+    "conditional/-1/100/off_shell/unit_scale/R_rho": {
+      "pass": true
+    },
+    "conditional/-1/100/off_shell/unit_scale/R_Y": {
+      "pass": true
+    },
+    "conditional/-1/100/off_shell/unit_scale/R_D": {
+      "pass": true
+    },
+    "conditional/-1/100/off_shell/unit_scale/R_G": {
+      "pass": true
+    },
+    "conditional/-1/100/off_shell/unit_scale/determinant_zero": {
+      "pass": true
+    },
+    "conditional/0/positive_condensates": {
+      "pass": true
+    },
+    "conditional/0/nonnegative_components": {
+      "pass": true
+    },
+    "conditional/0/stationary_three_equations": {
+      "pass": true
+    },
+    "conditional/0/stationary_Goldstone_residual": {
+      "pass": true
+    },
+    "conditional/0/gapless_replacement": {
+      "pass": true
+    },
+    "conditional/0/gapless_original_D_residual": {
+      "pass": true
+    },
+    "conditional/0/original_stationary_determinant": {
+      "pass": true
+    },
+    "conditional/0/gapless_determinant": {
+      "pass": true
+    },
+    "conditional/0/off_shell_identity": {
+      "pass": true
+    },
+    "conditional/0/wrong_coefficient_negative_control": {
+      "pass": true
+    },
+    "conditional/0/stationary/unit_scale/R_rho": {
+      "pass": true
+    },
+    "conditional/0/stationary/unit_scale/R_Y": {
+      "pass": true
+    },
+    "conditional/0/stationary/unit_scale/R_D": {
+      "pass": true
+    },
+    "conditional/0/stationary/unit_scale/R_G": {
+      "pass": true
+    },
+    "conditional/0/stationary/unit_scale/determinant_zero": {
+      "pass": true
+    },
+    "conditional/0/gapless/unit_scale/R_rho": {
+      "pass": true
+    },
+    "conditional/0/gapless/unit_scale/R_Y": {
+      "pass": true
+    },
+    "conditional/0/gapless/unit_scale/R_D": {
+      "pass": true
+    },
+    "conditional/0/gapless/unit_scale/R_G": {
+      "pass": true
+    },
+    "conditional/0/gapless/unit_scale/determinant_zero": {
+      "pass": true
+    },
+    "conditional/0/off_shell/unit_scale/R_rho": {
+      "pass": true
+    },
+    "conditional/0/off_shell/unit_scale/R_Y": {
+      "pass": true
+    },
+    "conditional/0/off_shell/unit_scale/R_D": {
+      "pass": true
+    },
+    "conditional/0/off_shell/unit_scale/R_G": {
+      "pass": true
+    },
+    "conditional/0/off_shell/unit_scale/determinant_zero": {
+      "pass": true
+    },
+    "conditional/1/100/positive_condensates": {
+      "pass": true
+    },
+    "conditional/1/100/nonnegative_components": {
+      "pass": true
+    },
+    "conditional/1/100/stationary_three_equations": {
+      "pass": true
+    },
+    "conditional/1/100/stationary_Goldstone_residual": {
+      "pass": true
+    },
+    "conditional/1/100/gapless_replacement": {
+      "pass": true
+    },
+    "conditional/1/100/gapless_original_D_residual": {
+      "pass": true
+    },
+    "conditional/1/100/original_stationary_determinant": {
+      "pass": true
+    },
+    "conditional/1/100/gapless_determinant": {
+      "pass": true
+    },
+    "conditional/1/100/off_shell_identity": {
+      "pass": true
+    },
+    "conditional/1/100/wrong_coefficient_negative_control": {
+      "pass": true
+    },
+    "conditional/1/100/stationary/unit_scale/R_rho": {
+      "pass": true
+    },
+    "conditional/1/100/stationary/unit_scale/R_Y": {
+      "pass": true
+    },
+    "conditional/1/100/stationary/unit_scale/R_D": {
+      "pass": true
+    },
+    "conditional/1/100/stationary/unit_scale/R_G": {
+      "pass": true
+    },
+    "conditional/1/100/stationary/unit_scale/determinant_zero": {
+      "pass": true
+    },
+    "conditional/1/100/gapless/unit_scale/R_rho": {
+      "pass": true
+    },
+    "conditional/1/100/gapless/unit_scale/R_Y": {
+      "pass": true
+    },
+    "conditional/1/100/gapless/unit_scale/R_D": {
+      "pass": true
+    },
+    "conditional/1/100/gapless/unit_scale/R_G": {
+      "pass": true
+    },
+    "conditional/1/100/gapless/unit_scale/determinant_zero": {
+      "pass": true
+    },
+    "conditional/1/100/off_shell/unit_scale/R_rho": {
+      "pass": true
+    },
+    "conditional/1/100/off_shell/unit_scale/R_Y": {
+      "pass": true
+    },
+    "conditional/1/100/off_shell/unit_scale/R_D": {
+      "pass": true
+    },
+    "conditional/1/100/off_shell/unit_scale/R_G": {
+      "pass": true
+    },
+    "conditional/1/100/off_shell/unit_scale/determinant_zero": {
+      "pass": true
+    },
+    "complete_selected_probes": {
+      "pass": true
+    },
+    "complete_normal_controls": {
+      "pass": true
+    },
+    "complete_algebra_witnesses": {
+      "pass": true
+    }
+  },
+  "input_hashes": {
+    "docs/topics/0.10_Fluid_Dynamics_Chaos/Data/03_Research/fluid_core_o2_interacting_method_contract.json": "cfb4897d65ca0935eeffcecf710c29ca3c70ac60e591b85e8b7c95bf5ddca446",
+    "docs/topics/0.10_Fluid_Dynamics_Chaos/Code/03_Research/Research_Fluid_Core_O2_Interacting_Method.py": "0bec7436b775f1fda36ccf862fa48da48c851bce1ba633fbee52d7f0c5855779",
+    "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry_topic10_o2_interacting_method_addendum.json": "7849faf7a3d4ed570f31b089c0c804312c1533f204023cf4e69b3b9e2b971301",
+    "docs/topics/0.10_Fluid_Dynamics_Chaos/CORE_O2_INTERACTING_METHOD_ADMISSION.md": "54df71448731c4d7d395a8b0845ef48f6096e8a5d292edb59dceb964e66dfa8d",
+    "docs/topics/0.10_Fluid_Dynamics_Chaos/Result/artifacts/fluid_core_o2_density_backreaction_audit.json": "1583089126fba0596eab63ec30faafd4f86df9211f30674753283620762887c3",
+    "docs/topics/0.10_Fluid_Dynamics_Chaos/Code/03_Research/Research_Fluid_Core_O2_Common_Flow.py": "b083323ad31df5527a94a888e8eae43984eb77698bda1c6c3d080e2ea940f5e2",
+    "docs/core/02_equations/covariant/uet_covariant_response.py": "7fb4b7228afb8ede0ac4f1664d634346ef46cc7678c94ed7b55d73645590c0c2",
+    "docs/core/02_equations/o2/uet_o2_finite_density_eos.py": "ea744a8645f993600300fa9fd99a764e1f07b30fb272b47399c34aa114152c6d",
+    "docs/core/02_equations/o2/uet_o2_finite_temperature_self_energy.py": "d227b567a9ffa26af46e4563853afb584207d4e99279ad4be954b8aa91dc9210",
+    "docs/core/02_equations/o2/uet_o2_finite_temperature_hartree_thermodynamics.py": "476a91e839f0f32c8d7519fc5333e11aed3c59b4226db95284875cf8a248f471",
+    "docs/core/02_equations/o2/uet_o2_renormalized_normal_branch.py": "cf536a7e04fe75f284c5c5078f5719276b2ca0459e84bbbb1dd027290c92537c",
+    "docs/core/02_equations/o2/uet_o2_finite_temperature_renormalized_hartree.py": "f63aabec987dc71b636722d7bbb74740233adebae1b3801e66a6e244444be471",
+    "docs/topics/0.10_Fluid_Dynamics_Chaos/Data/03_Research/fluid_core_o2_density_backreaction_contract.json": "adfbee7be7611d072285b53189ad02022e2ace83a8661e54344a1233b3bf9949",
+    "docs/topics/0.10_Fluid_Dynamics_Chaos/Code/03_Research/Research_Fluid_Core_O2_Density_Backreaction.py": "ec40febd37f5ecfa22201796621a91fa4ff6cbb541a30888d7825fab970b61bd",
+    "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry_topic10_o2_density_backreaction_addendum.json": "524d1c3530ab3e875ad9aeac5a0227db7d3e6460197425fe19aea892b14315ef",
+    "docs/topics/0.10_Fluid_Dynamics_Chaos/CORE_O2_DENSITY_BACKREACTION.md": "be95e3f2131d08507afe4179514a4d63740f11b52a0440b8135caba917fc5171",
+    "docs/topics/0.10_Fluid_Dynamics_Chaos/Data/03_Research/fluid_core_o2_current_ward_contract.json": "1ece00c9a6cc45015a72c1de977f4474c877c7999a7ac44f24f45dd622b2bdd8",
+    "docs/topics/0.10_Fluid_Dynamics_Chaos/Code/03_Research/Research_Fluid_Core_O2_Current_Ward.py": "96f9fa56fe8e34483697b9b806b8a88eade492eced295dc6e92ebee439948722",
+    "docs/topics/0.10_Fluid_Dynamics_Chaos/Result/artifacts/fluid_core_o2_current_ward_audit.json": "244b07dba91a8cfd40bb8f3f26922c73b7f6fc7d839f961f970ee6f87a24fbd4",
+    "docs/core/02_equations/covariant/uet_covariant_matter.py": "8a57d95e898a8ac962bbd749670ad0695b597281937da36496d2ec7e074f9c53",
+    "docs/topics/0.10_Fluid_Dynamics_Chaos/CORE_O2_DENSITY_SOURCE_BINDING_REPAIR.md": "6bb3ede2263c626f4fc2906d838ad6c61cc25033b742d731dc5109655900f1cc",
+    "docs/topics/0.10_Fluid_Dynamics_Chaos/Result/previews/fluid_core_o2_density_backreaction_first_failure.json": "25a6a09a48977ed5bd1c00c61c15ce0eaf8e2a70dc707098dab21b18328868aa",
+    "docs/topics/0.10_Fluid_Dynamics_Chaos/Result/previews/fluid_core_o2_density_backreaction_first_contract.json": "60a4941244e4dcbaeb882f1fcf58034cf6b3ec040238ec180d578da42333d537",
+    "docs/topics/0.10_Fluid_Dynamics_Chaos/Result/previews/core_o2_density_backreaction_first_verifier.py.txt": "3458fbf3f9db4e58b65f3e6c6f44715bdc8f9458aa21e76b0f44f53d8ff8fe46",
+    "docs/topics/0.10_Fluid_Dynamics_Chaos/CORE_O2_DENSITY_DERIVATIVE_CENTER_REPAIR.md": "f3ee71c8fbf0773f272823577aafcacbf0dd29d05b3d0d12acae96ad7de7780b",
+    "docs/topics/0.10_Fluid_Dynamics_Chaos/Result/previews/core_o2_density_backreaction_uncentered_verifier.py.txt": "a641ae467b13c7d40c0a091cdfeddf3f8ab4bae536e1242955bec2b72fec2cc7",
+    "docs/topics/0.10_Fluid_Dynamics_Chaos/Result/previews/fluid_core_o2_density_backreaction_uncentered_failure.json": "542dba0017723653e0bb6607c4e43e5f041da45d8eafca90f2a190e2b8600a0b",
+    "docs/topics/0.10_Fluid_Dynamics_Chaos/CORE_O2_MICROSCOPIC_CURRENT_WARD.md": "2679190ef730d41212c570a3b962c351bc45f9eb3c879cf3a35617617a3bbc8a",
+    "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry_topic10_o2_current_ward_addendum.json": "4c31a8065e9317f5a15daefafd9e0b4a3fb44367eb24808e9e7863d95e08d4f8",
+    "docs/topics/0.10_Fluid_Dynamics_Chaos/Data/03_Research/fluid_core_o2_current_bound_contract.json": "dd7990f6da9b193d1fa087c26fd200ad5ee873f93f49ea5b70fd140edf77180e",
+    "docs/topics/0.10_Fluid_Dynamics_Chaos/Code/03_Research/Research_Fluid_Core_O2_Current_Bound.py": "a367217b1ff6a9fbfe2a714bb95776c3ca26633973a4f3cad0430411aac60e15",
+    "docs/topics/0.10_Fluid_Dynamics_Chaos/Result/artifacts/fluid_core_o2_current_bound_audit.json": "709bcdcc46f7291fcb028b93794ee533cbf271bfb1e98a2823192efe3c156d21",
+    "docs/topics/0.10_Fluid_Dynamics_Chaos/Code/03_Research/Research_Fluid_Core_O2_Flow_Hessian.py": "d8ecff1e604f545d68ec03b5abf4a6cc53e3ea377cafee0c75762dd1c2ccbc62",
+    "docs/topics/0.10_Fluid_Dynamics_Chaos/CORE_O2_GOLDSTONE_CURRENT_BOUND.md": "5fccaf6def52afaf8d4c2615f1fb255507d542bdeab50687a59956748f79db2f",
+    "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry_topic10_o2_current_bound_addendum.json": "e467f7e0a225429c1f833a42b81d67e1c0db9dc0f1347f556282fe9e5ddab5d8",
+    "docs/topics/0.10_Fluid_Dynamics_Chaos/Data/03_Research/fluid_core_o2_continuum_form_contract.json": "2132f2adbc09082a5d4f991ddfcbcbb5133fe147e3bd521cc4fca1a952960609",
+    "docs/topics/0.10_Fluid_Dynamics_Chaos/Code/03_Research/Research_Fluid_Core_O2_Continuum_Form.py": "0f9db4ad112f01da8a00e57dbd4d842f3c2947f814e1ccf68e6d42af796c7ef8",
+    "docs/topics/0.10_Fluid_Dynamics_Chaos/Result/artifacts/fluid_core_o2_continuum_form_audit.json": "22792c7ec7ab209ca5b23a870f2b72467feb482d4f89050925364c5ba40c932f",
+    "docs/topics/0.10_Fluid_Dynamics_Chaos/CORE_O2_GOLDSTONE_CONTINUUM_FORM.md": "269bd387dde1ea664b7ab7935b96a35d6b1fa6175879f32ba6d913f46a7d0de9",
+    "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry_topic10_o2_continuum_form_addendum.json": "1b1797573264b2210a0ce6bfaa1eec84d7827bc59c2677907c9af185e236ac13",
+    "docs/topics/0.10_Fluid_Dynamics_Chaos/Data/03_Research/fluid_core_o2_infrared_trials_contract.json": "55fb10489110d257a897e0c41b95743ae502cef0130e856508ab7786c075f85d",
+    "docs/topics/0.10_Fluid_Dynamics_Chaos/Code/03_Research/Research_Fluid_Core_O2_Infrared_Trials.py": "d62ccc1853c0e02829f0b0a79d71bd1b43488c7b2d93a15d6c8e26f19157bcdf",
+    "docs/topics/0.10_Fluid_Dynamics_Chaos/Result/artifacts/fluid_core_o2_infrared_trials_audit.json": "4b550b4f455c7b5e67dd64def2208c5729425d7c851050dcc65c31f0a1c048b2",
+    "docs/topics/0.10_Fluid_Dynamics_Chaos/CORE_O2_GOLDSTONE_INFRARED_TRIALS.md": "ad908db9afc36d14102bbf18bba321795ec9b99a43abd4c2819ca49e61dfd97c",
+    "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry_topic10_o2_infrared_trials_addendum.json": "1e3bf2adc560597f2acfac9cb511519f7b9d82e9ea882b8a5d5fd2cd2d555642",
+    "docs/topics/0.10_Fluid_Dynamics_Chaos/Data/03_Research/fluid_core_o2_vector_refinement_contract.json": "5216da4f2549980292cce50314361448456db01816e3a5dba8a3c00120c880f0",
+    "docs/topics/0.10_Fluid_Dynamics_Chaos/Code/03_Research/Research_Fluid_Core_O2_Vector_Refinement.py": "f73896652c997abdb17bd6d9b155e52c40722e36af70f703976b3b18dbe1d827",
+    "docs/topics/0.10_Fluid_Dynamics_Chaos/Result/artifacts/fluid_core_o2_vector_refinement_audit.json": "4990aba84fe30276d7441bdca9567729a63797d5df0a0263d667f6df491f37f5",
+    "docs/topics/0.10_Fluid_Dynamics_Chaos/CORE_O2_GOLDSTONE_VECTOR_REFINEMENT.md": "5957e4f1373faea4e38036f040e4b84c611f11a52d8f5e3188b29e469ed2d4ef",
+    "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry_topic10_o2_vector_refinement_addendum.json": "9263469bc87c7bfaa47ce608adc1da710510885d003cf8a603e25605e06bfee1",
+    "docs/topics/0.10_Fluid_Dynamics_Chaos/Data/03_Research/fluid_core_o2_goldstone_galerkin_contract.json": "d36a29ef8524a9c839ba237ac7507ea6e8c217d777a8f9fcd87302e9b5b37fee",
+    "docs/topics/0.10_Fluid_Dynamics_Chaos/Code/03_Research/Research_Fluid_Core_O2_Goldstone_Galerkin.py": "f7caeae9655172514adc464723917a1a8e367a3a1832ada2938a2d44f1afdc74",
+    "docs/topics/0.10_Fluid_Dynamics_Chaos/Result/artifacts/fluid_core_o2_goldstone_galerkin_audit.json": "4b4c706aab168108e7d5829a6a0563eaf9f99c893afd2586020eb89b55e6d24b",
+    "docs/topics/0.10_Fluid_Dynamics_Chaos/CORE_O2_GOLDSTONE_GALERKIN_DERIVATION.md": "5cd09900d57ae2d61c2007f6a0b2f7d565903894721c81b8b81b29257bccac90",
+    "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry_topic10_o2_goldstone_galerkin_addendum.json": "73bb37bd79dfc2bfde8231998db142d539db83a9b1186e1e23c1dff8dadd6fb8",
+    "docs/topics/0.10_Fluid_Dynamics_Chaos/Data/03_Research/fluid_core_o2_common_flow_contract.json": "c9a190c89d682080a9a90254cfd205e606cd9063f9d34c68b00eeeef8634c75c",
+    "docs/topics/0.10_Fluid_Dynamics_Chaos/Data/03_Research/fluid_core_o2_goldstone_collision_contract.json": "331535ea4a63e47e0d100c317511013605ab5044f1bdbff835ba48fbd3e6b912",
+    "docs/topics/0.10_Fluid_Dynamics_Chaos/Code/03_Research/Research_Fluid_Core_O2_Goldstone_Collision.py": "1b8cc6ff1782da5c5f01dcf4d95052871a4ea2c7a5e1aa967478e9f800cd3fe8",
+    "docs/topics/0.10_Fluid_Dynamics_Chaos/Result/artifacts/fluid_core_o2_goldstone_collision_audit.json": "c130a512a015940ed5db9f2a181fa34731910fa17aa58c5c4e59e0cdb3dfe56b",
+    "docs/core/02_equations/o2/uet_o2_finite_temperature_quasiparticle_eos.py": "ba814f3aa02b5e31112a6595dac7727b7025b08e08f0631f50567f270cebbb7f",
+    "docs/core/02_equations/o2/uet_o2_formal_transverse_response.py": "a8ee43c6fb6edb227476412cde6cc9b2d4a643fc42cca0fd2d438b343efad1ba",
+    "docs/core/02_equations/o2/uet_o2_invariant_galerkin_collision_operator.py": "278b168e5c3b444ac4df4b96b5a7d00410cd9485c511ab2a17aa4f11c6f6d94e",
+    "docs/core/07_artifacts/topic13/t13_invariant_galerkin_collision_operator_audit.json": "433427f32612e478d71a1a4ff64f96e3d22da7fc33d3de0c10f3a0a480234011",
+    "docs/core/07_artifacts/topic13/t13_collision_evidence_reconciliation.json": "cad197d2635b08d3454cc49734b292b32971c2f18e3d3f1d2b2c0b5ca77c9bf6",
+    "docs/topics/0.10_Fluid_Dynamics_Chaos/Result/artifacts/fluid_core_o2_ideal_modes_audit.json": "b2e5d7fb5fff8f1a48148e1661bbf640027174b58b9fe765f53cded351c512f6",
+    "docs/topics/0.10_Fluid_Dynamics_Chaos/Result/previews/fluid_core_o2_goldstone_galerkin_first_execution.json": "18e4854a368c5b0d6860da12435bd8dae00d8d77302d66036c40972404ae710a",
+    "docs/topics/0.10_Fluid_Dynamics_Chaos/Result/previews/core_o2_goldstone_galerkin_first_execution_verifier.py.txt": "0be34c2e579b4aaf44dae168c63a4b50276508759c6073751e9c2484c0439c81",
+    "docs/topics/0.10_Fluid_Dynamics_Chaos/Result/previews/fluid_core_o2_infrared_trials_first_execution.json": "ec07cc39289b88ab60fb5d8b7e6fd419015056e9b012d30720a15e90d98fcea8",
+    "docs/topics/0.10_Fluid_Dynamics_Chaos/Result/previews/core_o2_infrared_trials_first_execution_verifier.py.txt": "7525ab5686c248947ab87082e876e9ccb69471e30d38be6f6492429d8c972c74",
+    "docs/topics/0.10_Fluid_Dynamics_Chaos/CORE_O2_GOLDSTONE_INFRARED_GEOMETRY_REPAIR.md": "4143ea435c9ed16896775a4a23312325d0d48b59c6b248c31fefa1b25a485bbc",
+    "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry_topic10_o2_infrared_geometry_addendum.json": "0af8e9ccfcc6de538e17e96448c47935b37177c5fee37599bd3f66d789288f22"
+  },
+  "source_AST_definition_hashes": {
+    "response": {
+      "_finite_scalar": "611afaf642e9806923015be0db63b9842119fe6cfc28d7f893d9dd33ce03e23e",
+      "response_displacement": "8b990dbbcabc8331c8bc3ca7392291a1658961280f97635541fc6b0f6a9cfbd1"
+    },
+    "finite_density": {
+      "_finite_scalar": "171028c1f34cb4018cbba2ac0d4680f7f51a22f2bd50e86fd80bea09309b8ef3",
+      "effective_mass_sq": "a0720c80988fbb29643cdf35e8a621b435b4134a37d573c6ef6d2d379bcc54e6"
+    },
+    "self_energy": {
+      "UETO2FiniteTemperatureSelfEnergyState": "66ab1725eeae744194aa9af5f20bf427fc40767a0e6f70431878ef1a1ab70a94",
+      "_finite": "f3076cb3dc5681858247a40f79cd2568bc9094264bc32f6eeb85fca22bde0f28",
+      "_positive": "a21ba65fba46599ec105ae704744850ad4ea07e6481f3f23de132308ba217499",
+      "_bose": "e59c16d90e16777a1e9e698223712c804835b46fbead2c4fa2638b314f670bcc",
+      "_quadrature": "7d24a5a0e56b400046873ee418f643936139ffd4c487fe7de8218f2431f3d4b6",
+      "_cutoff": "0d80fc3bed4e20a57af547340c2035f05b0268ac53d608d10dc78fecfc4ed6c0",
+      "_thermal_tadpole_and_derivative": "995c0fcfbc6c79b71266965b2486170a6d2e325705ea2080add5a7fdffdbce4f",
+      "_gap_residual": "489f2939b95ba9625432ca170acac16df7e20536487e8e5d3a4e810227d9feb2",
+      "uet_o2_finite_temperature_self_energy_state": "58679a114a1167a04598ccd8a5b7de5abe2c11547b8312698ec7241b41ea8f64"
+    },
+    "thermo": {
+      "UETO2HartreeThermodynamicState": "4dea43b303e59675302082d3604b893c98af88d8524dcddc9bdcd316a1757929",
+      "_positive": "2f417e29a95ca5982152cbc71207983ada03459e802f274cee81e81c4b82e465",
+      "_finite": "f3076cb3dc5681858247a40f79cd2568bc9094264bc32f6eeb85fca22bde0f28",
+      "_bose": "206491048bce935214f3b1e66b01117ba5dc2063f8422a530de24e4e2ed63a31",
+      "_bose_log": "c5cfe8b5b44d1613c14ad2abf99dc2a58a9a23433c1d37e8f04eb26c75578d35",
+      "_thermal_one_loop_state": "b45d1e1c929c0b03eeb0b82e984b1e16cd1dc0ab33544687a5d3978a2ad2d738",
+      "uet_o2_hartree_thermodynamic_state": "fec5367b4c8856dbdc056c2d6c45fc864cc57ba3f7d5380b2e5e8983e3a95f1b"
+    },
+    "vacuum": {
+      "_positive": "2f417e29a95ca5982152cbc71207983ada03459e802f274cee81e81c4b82e465",
+      "_finite": "f3076cb3dc5681858247a40f79cd2568bc9094264bc32f6eeb85fca22bde0f28",
+      "_quadrature": "52bc51c9d9688676d50f30ca9addb04109fac5b5dee9e5a04e713d260041db82",
+      "_vacuum_terms": "7e48b6fa16cb53d8537c457a69951f796985b84b18077588078fe2eceb2e9679"
+    },
+    "renormalized": {
+      "UETO2RenormalizedHartreeNormalState": "efff8dd619f0a28425032ab38451c43340689a1dd8028fb5fb69e0c451b93ee8",
+      "_finite": "f3076cb3dc5681858247a40f79cd2568bc9094264bc32f6eeb85fca22bde0f28",
+      "_positive": "a21ba65fba46599ec105ae704744850ad4ea07e6481f3f23de132308ba217499",
+      "_cutoff": "7e1da2144a36f149e59bbefc09a6e7754d433636a001fbec437bb82c4e07f403",
+      "_one_loop_terms": "aa3804d373ce6be41b2be8b9711fb717b699ae84e2be3a47136c0d760958243c",
+      "_gap_terms": "5fe4b6586ecd99cad52b1dc1825228e30fa3aa3e52956583c98fed51a308be83",
+      "uet_o2_renormalized_hartree_normal_state": "356875a8d74bde6973804be3baeeeab167cdf3a97af25c6391eb682f0ee65a51"
+    }
+  },
+  "locked_verification": {
+    "locked_before_first_execution": true,
+    "orders": [
+      64,
+      128,
+      256
+    ],
+    "cutoff_factor": 60,
+    "gap_absolute_tolerance": 1e-08,
+    "Legendre_relative_tolerance": 1e-08,
+    "refinement_relative_tolerance": 0.01,
+    "energy_scale": 2,
+    "rational_witness": {
+      "mu": "128/100",
+      "mass_squared": "1",
+      "lambda": "1/100",
+      "I_plus": "1/20",
+      "I_minus": [
+        "-1/100",
+        "0",
+        "1/100"
+      ]
+    }
+  },
+  "normal_branch_probes": [
+    {
+      "method": "thermal",
+      "T": 0.002,
+      "mu": 1.28,
+      "order": 64,
+      "rejected": true,
+      "error_type": "ValueError",
+      "message": "no self-consistent Hartree solution in the normal branch"
+    },
+    {
+      "method": "thermal",
+      "T": 0.002,
+      "mu": 1.28,
+      "order": 128,
+      "rejected": true,
+      "error_type": "ValueError",
+      "message": "no self-consistent Hartree solution in the normal branch"
+    },
+    {
+      "method": "thermal",
+      "T": 0.002,
+      "mu": 1.28,
+      "order": 256,
+      "rejected": true,
+      "error_type": "ValueError",
+      "message": "no self-consistent Hartree solution in the normal branch"
+    },
+    {
+      "method": "thermal",
+      "T": 0.004,
+      "mu": 1.28,
+      "order": 64,
+      "rejected": true,
+      "error_type": "ValueError",
+      "message": "no self-consistent Hartree solution in the normal branch"
+    },
+    {
+      "method": "thermal",
+      "T": 0.004,
+      "mu": 1.28,
+      "order": 128,
+      "rejected": true,
+      "error_type": "ValueError",
+      "message": "no self-consistent Hartree solution in the normal branch"
+    },
+    {
+      "method": "thermal",
+      "T": 0.004,
+      "mu": 1.28,
+      "order": 256,
+      "rejected": true,
+      "error_type": "ValueError",
+      "message": "no self-consistent Hartree solution in the normal branch"
+    },
+    {
+      "method": "renormalized",
+      "T": 0.002,
+      "mu": 1.28,
+      "order": 64,
+      "rejected": true,
+      "error_type": "ValueError",
+      "message": "no renormalized Hartree solution in the normal branch"
+    },
+    {
+      "method": "renormalized",
+      "T": 0.002,
+      "mu": 1.28,
+      "order": 128,
+      "rejected": true,
+      "error_type": "ValueError",
+      "message": "no renormalized Hartree solution in the normal branch"
+    },
+    {
+      "method": "renormalized",
+      "T": 0.002,
+      "mu": 1.28,
+      "order": 256,
+      "rejected": true,
+      "error_type": "ValueError",
+      "message": "no renormalized Hartree solution in the normal branch"
+    },
+    {
+      "method": "renormalized",
+      "T": 0.004,
+      "mu": 1.28,
+      "order": 64,
+      "rejected": true,
+      "error_type": "ValueError",
+      "message": "no renormalized Hartree solution in the normal branch"
+    },
+    {
+      "method": "renormalized",
+      "T": 0.004,
+      "mu": 1.28,
+      "order": 128,
+      "rejected": true,
+      "error_type": "ValueError",
+      "message": "no renormalized Hartree solution in the normal branch"
+    },
+    {
+      "method": "renormalized",
+      "T": 0.004,
+      "mu": 1.28,
+      "order": 256,
+      "rejected": true,
+      "error_type": "ValueError",
+      "message": "no renormalized Hartree solution in the normal branch"
+    }
+  ],
+  "normal_controls": [
+    {
+      "temperature": 0.2,
+      "chemical_potential": 0.3,
+      "space_response": 0.15,
+      "base_mass_sq": 1.0,
+      "dressed_mass_sq": 1.0000038947564462,
+      "thermal_tadpole": 9.736892560392998e-05,
+      "one_loop_pressure": 5.083657369867637e-05,
+      "double_bubble_pressure": 1.89614153465273e-10,
+      "pressure": 5.083676331282984e-05,
+      "charge_density": 0.00023128766425981967,
+      "entropy_density": 0.001643493060242764,
+      "energy_density": 0.00034724814801366885,
+      "charge_susceptibility": 0.0012878355386380846,
+      "heat_capacity_at_mu": 0.008232448007753761,
+      "gap_residual": -5.779139357141956e-13,
+      "pressure_stationarity_residual": 1.2979316495025441e-16,
+      "momentum_cutoff": 60.0,
+      "quadrature_order": 64,
+      "unit_lane": "natural",
+      "equilibrium_normal_branch": true,
+      "vacuum_counterterm_included": false,
+      "condensate_contribution_included": false,
+      "physical_kubo_coefficient_included": false,
+      "physical_si_mapping_included": false,
+      "data_role": "ACTION_DERIVED_HARTREE_EQUILIBRIUM_NOT_PHYSICAL_TRANSPORT",
+      "method": "thermal",
+      "role": "independent_synthetic_normal_branch_control_not_selected_condensate_or_material"
+    },
+    {
+      "temperature": 0.2,
+      "chemical_potential": 0.3,
+      "space_response": 0.15,
+      "base_mass_sq": 1.0,
+      "dressed_mass_sq": 1.0000038947564462,
+      "thermal_tadpole": 9.736892856721026e-05,
+      "one_loop_pressure": 5.083657430538111e-05,
+      "double_bubble_pressure": 1.896141650065299e-10,
+      "pressure": 5.0836763919546116e-05,
+      "charge_density": 0.00023128766683628058,
+      "entropy_density": 0.0016434930638075163,
+      "energy_density": 0.00034724814889284134,
+      "charge_susceptibility": 0.0012878355485400682,
+      "heat_capacity_at_mu": 0.00823244802007253,
+      "gap_residual": -6.96445146290605e-13,
+      "pressure_stationarity_residual": 1.564139773558144e-16,
+      "momentum_cutoff": 60.0,
+      "quadrature_order": 128,
+      "unit_lane": "natural",
+      "equilibrium_normal_branch": true,
+      "vacuum_counterterm_included": false,
+      "condensate_contribution_included": false,
+      "physical_kubo_coefficient_included": false,
+      "physical_si_mapping_included": false,
+      "data_role": "ACTION_DERIVED_HARTREE_EQUILIBRIUM_NOT_PHYSICAL_TRANSPORT",
+      "method": "thermal",
+      "role": "independent_synthetic_normal_branch_control_not_selected_condensate_or_material"
+    },
+    {
+      "temperature": 0.2,
+      "chemical_potential": 0.3,
+      "space_response": 0.15,
+      "base_mass_sq": 1.0,
+      "dressed_mass_sq": 1.0000038947564462,
+      "thermal_tadpole": 9.736892856720253e-05,
+      "one_loop_pressure": 5.0836574305349193e-05,
+      "double_bubble_pressure": 1.896141650064998e-10,
+      "pressure": 5.08367639195142e-05,
+      "charge_density": 0.0002312876668362644,
+      "entropy_density": 0.0016434930638072798,
+      "energy_density": 0.0003472481488928211,
+      "charge_susceptibility": 0.001287835548539978,
+      "heat_capacity_at_mu": 0.008232448020072199,
+      "gap_residual": -6.964448379706122e-13,
+      "pressure_stationarity_residual": 1.5641390811049595e-16,
+      "momentum_cutoff": 60.0,
+      "quadrature_order": 256,
+      "unit_lane": "natural",
+      "equilibrium_normal_branch": true,
+      "vacuum_counterterm_included": false,
+      "condensate_contribution_included": false,
+      "physical_kubo_coefficient_included": false,
+      "physical_si_mapping_included": false,
+      "data_role": "ACTION_DERIVED_HARTREE_EQUILIBRIUM_NOT_PHYSICAL_TRANSPORT",
+      "method": "thermal",
+      "role": "independent_synthetic_normal_branch_control_not_selected_condensate_or_material"
+    },
+    {
+      "temperature": 0.2,
+      "chemical_potential": 0.3,
+      "space_response": 0.15,
+      "base_mass_sq": 1.0,
+      "dressed_mass_sq": 1.0000038947619032,
+      "reference_mass_sq": 1.0,
+      "vacuum_grand_potential": 7.311921267028321e-13,
+      "thermal_grand_potential": -5.083657369814551e-05,
+      "total_one_loop_grand_potential": -5.083657296695338e-05,
+      "vacuum_tadpole": 4.8642428516765594e-14,
+      "thermal_tadpole": 9.736892560270441e-05,
+      "total_tadpole": 9.736892565134684e-05,
+      "thermal_self_energy": 3.894757026053874e-06,
+      "double_bubble_pressure": 1.8961415364995018e-10,
+      "pressure": 5.083676258110703e-05,
+      "charge_density": 0.00023128766425738588,
+      "entropy_density": 0.0016434930602288473,
+      "energy_density": 0.00034724814874187817,
+      "charge_susceptibility": 0.0012878355386243944,
+      "heat_capacity_at_mu": 0.008232448007703005,
+      "gap_residual": 4.877157600441948e-12,
+      "functional_stationarity_residual": -1.0952361482727673e-15,
+      "vacuum_mass_second_derivative": 2.4653546683651208e-08,
+      "total_tadpole_mass_derivative": -0.00022456443650160525,
+      "momentum_cutoff": 60.0,
+      "quadrature_order": 64,
+      "iterations": 35,
+      "component_count": 2,
+      "unit_lane": "natural",
+      "vacuum_counterterm_included": true,
+      "hartree_interaction_included": true,
+      "condensed_branch_included": false,
+      "physical_kubo_coefficient_included": false,
+      "physical_si_mapping_included": false,
+      "data_role": "ACTION_DERIVED_RENORMALIZED_HARTREE_NORMAL_SCHEME_NOT_PHYSICAL",
+      "method": "renormalized",
+      "role": "independent_synthetic_normal_branch_control_not_selected_condensate_or_material"
+    },
+    {
+      "temperature": 0.2,
+      "chemical_potential": 0.3,
+      "space_response": 0.15,
+      "base_mass_sq": 1.0,
+      "dressed_mass_sq": 1.0000038947619032,
+      "reference_mass_sq": 1.0,
+      "vacuum_grand_potential": 6.716803612065318e-13,
+      "thermal_grand_potential": -5.083657430484868e-05,
+      "total_one_loop_grand_potential": -5.0836573633168316e-05,
+      "vacuum_tadpole": 4.812647767394008e-14,
+      "thermal_tadpole": 9.736892856598468e-05,
+      "total_tadpole": 9.736892861411115e-05,
+      "thermal_self_energy": 3.894757144564446e-06,
+      "double_bubble_pressure": 1.8961416518919748e-10,
+      "pressure": 5.0836763247333505e-05,
+      "charge_density": 0.0002312876668338468,
+      "entropy_density": 0.0016434930637935921,
+      "energy_density": 0.00034724814956153897,
+      "charge_susceptibility": 0.001287835548526378,
+      "heat_capacity_at_mu": 0.008232448020021774,
+      "gap_residual": 4.758647028670331e-12,
+      "functional_stationarity_residual": -1.0686228589816828e-15,
+      "vacuum_mass_second_derivative": 2.465354680535498e-08,
+      "total_tadpole_mass_derivative": -0.00022456443029780234,
+      "momentum_cutoff": 60.0,
+      "quadrature_order": 128,
+      "iterations": 35,
+      "component_count": 2,
+      "unit_lane": "natural",
+      "vacuum_counterterm_included": true,
+      "hartree_interaction_included": true,
+      "condensed_branch_included": false,
+      "physical_kubo_coefficient_included": false,
+      "physical_si_mapping_included": false,
+      "data_role": "ACTION_DERIVED_RENORMALIZED_HARTREE_NORMAL_SCHEME_NOT_PHYSICAL",
+      "method": "renormalized",
+      "role": "independent_synthetic_normal_branch_control_not_selected_condensate_or_material"
+    },
+    {
+      "temperature": 0.2,
+      "chemical_potential": 0.3,
+      "space_response": 0.15,
+      "base_mass_sq": 1.0,
+      "dressed_mass_sq": 1.0000038947619032,
+      "reference_mass_sq": 1.0,
+      "vacuum_grand_potential": -2.0602260905866953e-13,
+      "thermal_grand_potential": -5.083657430481803e-05,
+      "total_one_loop_grand_potential": -5.083657451084064e-05,
+      "vacuum_tadpole": 4.808201775283856e-14,
+      "thermal_tadpole": 9.736892856597695e-05,
+      "total_tadpole": 9.736892861405897e-05,
+      "thermal_self_energy": 3.894757144562359e-06,
+      "double_bubble_pressure": 1.8961416518899425e-10,
+      "pressure": 5.083676412500583e-05,
+      "charge_density": 0.00023128766683383064,
+      "entropy_density": 0.0016434930637933619,
+      "energy_density": 0.0003472481486838157,
+      "charge_susceptibility": 0.0012878355485262875,
+      "heat_capacity_at_mu": 0.008232448020021443,
+      "gap_residual": 4.758649115759513e-12,
+      "functional_stationarity_residual": -1.0686233276675925e-15,
+      "vacuum_mass_second_derivative": 2.465354680319077e-08,
+      "total_tadpole_mass_derivative": -0.0002245644302977848,
+      "momentum_cutoff": 60.0,
+      "quadrature_order": 256,
+      "iterations": 35,
+      "component_count": 2,
+      "unit_lane": "natural",
+      "vacuum_counterterm_included": true,
+      "hartree_interaction_included": true,
+      "condensed_branch_included": false,
+      "physical_kubo_coefficient_included": false,
+      "physical_si_mapping_included": false,
+      "data_role": "ACTION_DERIVED_RENORMALIZED_HARTREE_NORMAL_SCHEME_NOT_PHYSICAL",
+      "method": "renormalized",
+      "role": "independent_synthetic_normal_branch_control_not_selected_condensate_or_material"
+    }
+  ],
+  "conditional_algebra": [
+    {
+      "I_minus": "-1/100",
+      "role": "synthetic_exact_conditional_algebra_not_thermal_state",
+      "original_stationary": {
+        "x": "255/4",
+        "Y": "569/250",
+        "D": "3187/5000"
+      },
+      "original_residuals": {
+        "R_rho": "0",
+        "R_Y": "0",
+        "R_D": "0",
+        "R_G": "1/5000",
+        "determinant_zero": "51/200000"
+      },
+      "gapless_replacement": {
+        "x": "3187/50",
+        "Y": "11379/5000",
+        "D": "3187/5000"
+      },
+      "gapless_original_residuals": {
+        "R_rho": "0",
+        "R_Y": "0",
+        "R_D": "1/10000",
+        "R_G": "0",
+        "determinant_zero": "0"
+      },
+      "off_shell_residuals": {
+        "R_rho": "897/4375",
+        "R_Y": "3797/7000",
+        "R_D": "2861/10000",
+        "R_G": "-3211/8750",
+        "determinant_zero": "-6547229/76562500"
+      }
+    },
+    {
+      "I_minus": "0",
+      "role": "synthetic_exact_conditional_algebra_not_thermal_state",
+      "original_stationary": {
+        "x": "3187/50",
+        "Y": "11379/5000",
+        "D": "3187/5000"
+      },
+      "original_residuals": {
+        "R_rho": "0",
+        "R_Y": "0",
+        "R_D": "0",
+        "R_G": "0",
+        "determinant_zero": "0"
+      },
+      "gapless_replacement": {
+        "x": "3187/50",
+        "Y": "11379/5000",
+        "D": "3187/5000"
+      },
+      "gapless_original_residuals": {
+        "R_rho": "0",
+        "R_Y": "0",
+        "R_D": "0",
+        "R_G": "0",
+        "determinant_zero": "0"
+      },
+      "off_shell_residuals": {
+        "R_rho": "897/4375",
+        "R_Y": "3797/7000",
+        "R_D": "143/500",
+        "R_G": "-3211/8750",
+        "determinant_zero": "-6547229/76562500"
+      }
+    },
+    {
+      "I_minus": "1/100",
+      "role": "synthetic_exact_conditional_algebra_not_thermal_state",
+      "original_stationary": {
+        "x": "6373/100",
+        "Y": "5689/2500",
+        "D": "3187/5000"
+      },
+      "original_residuals": {
+        "R_rho": "0",
+        "R_Y": "0",
+        "R_D": "0",
+        "R_G": "-1/5000",
+        "determinant_zero": "-6373/25000000"
+      },
+      "gapless_replacement": {
+        "x": "3187/50",
+        "Y": "11379/5000",
+        "D": "3187/5000"
+      },
+      "gapless_original_residuals": {
+        "R_rho": "0",
+        "R_Y": "0",
+        "R_D": "-1/10000",
+        "R_G": "0",
+        "determinant_zero": "0"
+      },
+      "off_shell_residuals": {
+        "R_rho": "897/4375",
+        "R_Y": "3797/7000",
+        "R_D": "2859/10000",
+        "R_G": "-3211/8750",
+        "determinant_zero": "-6547229/76562500"
+      }
+    }
+  ],
+  "execution_errors": [],
+  "method_gate": {
+    "condensed_action_and_state": "NOT_STARTED",
+    "full_matrix_Dyson": "NOT_STARTED",
+    "Goldstone_source_Ward": "NOT_STARTED",
+    "renormalization_scheme": "NOT_STARTED",
+    "pressure_implicit_thermodynamics": "NOT_STARTED",
+    "dynamic_source_vertices_causal_response": "NOT_STARTED",
+    "collision_dissipation_correspondence": "NOT_STARTED",
+    "approximation_sunset_control": "NOT_STARTED",
+    "heat_frame_SI_mapping": "NOT_STARTED",
+    "Topic13_EOS_independent_protocol": "NOT_STARTED"
+  },
+  "admission": {
+    "condensed_interacting_state": false,
+    "full_Noether_Ward": false,
+    "formal_verification": false,
+    "external_math_review": false,
+    "physical_heat_current": false,
+    "physical_material_frame": false,
+    "physical_UET_operator": false,
+    "physical_HeII_state": false,
+    "physical_J04": false,
+    "physical_J05": false,
+    "physical_J06": false,
+    "useful_continuum_error": false,
+    "claim_promotion": false,
+    "dependency_unlock": false
+  },
+  "normal_branch_and_conditional_algebra_supported": true,
+  "unit_powers": {
+    "residuals": 2,
+    "determinant_zero": 4
+  },
+  "physical_controller": "vector_momentum_constitutive_origin_and_material_frame_admission_open",
+  "controlling_measured_blocker": "useful_certified_current_error_and_interacting_Noether_heat_frame_material_correspondence_open",
+  "method_controller": "condensed_twoPI_stationarity_Goldstone_and_source_response_contract_not_admitted",
+  "full_condensed_interacting_state_computed": false,
+  "full_Noether_Ward_completed": false,
+  "physical_J04_executed": false,
+  "physical_J05_executed": false,
+  "physical_J06_executed": false,
+  "physical_heat_current_matched": false,
+  "physical_material_frame_admitted": false,
+  "formal_verification": false,
+  "external_math_review": false,
+  "whole_Core_runtime_executed": false,
+  "useful_relative_error_certified": false,
+  "claim_promotion": false,
+  "dependency_unlock": false,
+  "parameters_fitted": false,
+  "thresholds_relaxed": false,
+  "source_execution": "verbatim selected AST definitions; pure quadrature value memoization only",
+  "primary_sources": [
+    {
+      "url": "https://arxiv.org/html/1310.5953v2",
+      "reviewed": "selected action/stationarity/Goldstone/pressure sections and equations;not full replication"
+    },
+    {
+      "url": "https://arxiv.org/html/1305.3221v2",
+      "reviewed": "selected sections3/6 Ward constraint and thermodynamic consistency;not finite-density implementation"
+    },
+    {
+      "url": "https://researchonline.jcu.edu.au/44119/",
+      "reviewed": "author repository abstract/metadata only;full arXiv1603.03425v2 unavailable",
+      "not_universal_no_go": true
+    }
+  ],
+  "notes": [
+    "Normal rejection is branch-specific, not a condensed-state no-go.",
+    "Exact Fraction witnesses are conditional source algebra; tadpoles are synthetic, not solved thermal integrals.",
+    "Goldstone replacement changes original stationarity obligations.",
+    "The normal-control state is separate from selected condensate and material observables.",
+    "No microscopic vacuum scheme match, finite-density symmetry-improved implementation, dynamic Ward or physical heat/frame mapping."
+  ]
+}

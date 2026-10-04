@@ -6,6 +6,12 @@ uet_history/** linguist-documentation
 # Mark generated/vendored files
 *.lock linguist-generated
 
+# Immutable attributed author archives: retain upstream whitespace and bytes.
+# Integrity is enforced by Topic13 source SHA-256 and parser regression tests.
+/docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/godfrin_2021_v1/DispersionAllPressures.txt -whitespace
+/docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/godfrin_2021_v1/DispersionP0allRange.txt -whitespace
+/docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/godfrin_2021_v1/Supplemental-v2.tex -whitespace
+
 # QH-15 public raw entries are byte-hash locked; do not apply autocrlf.
 /docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/qh15_materialscloud/README.txt -text
 /docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/qh15_materialscloud/raw_data/*.csv -text

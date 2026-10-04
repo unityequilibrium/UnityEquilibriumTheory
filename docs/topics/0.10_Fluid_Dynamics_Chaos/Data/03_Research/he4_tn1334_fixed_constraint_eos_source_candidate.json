@@ -1,0 +1,297 @@
+{
+  "schema_version": "t010-he4-fixed-constraint-source-candidate-v1",
+  "package_id": "T10_T13_HE4_TN1334_FIXED_CONSTRAINT_EOS_CANDIDATE",
+  "date": "2026-09-30",
+  "record_role": "SOURCE_CANDIDATE_NOT_ADMITTED_MATERIAL_EOS",
+  "status": "PARTIAL_EOS_SOURCE_FOUND_PHYSICAL_ADMISSION_BLOCKED",
+  "area": "research-core",
+  "topics": [
+    "0.10_Fluid_Dynamics_Chaos",
+    "0.13_Thermodynamic_Bridge"
+  ],
+  "source": {
+    "title": "Thermophysical Properties of Helium-4 from 0.8 to 1500 K with Pressures to 2000 MPa",
+    "authors": [
+      "Vincent D. Arp",
+      "Robert D. McCarty",
+      "Daniel G. Friend"
+    ],
+    "edition": "NIST Technical Note 1334 revised, September 1998 PDF imprint",
+    "official_url": "https://nvlpubs.nist.gov/nistpubs/Legacy/TN/nbstechnicalnote1334.pdf",
+    "publisher_page": "https://www.nist.gov/publications/thermophysical-properties-helium-4-08-1500-k-pressures-2000-mpa",
+    "original_filename": "nbstechnicalnote1334.pdf",
+    "downloaded_pdf_sha256": "1532e4c65e1d2bc29da10db9e9ffd57e48ed46070a583bd8019581b44dc81c22",
+    "pdf_page_count": 156,
+    "raw_pdf_publicly_committed": false,
+    "temporary_local_review_path": "tmp/pdfs/he4-eos-source-review/nist-tn1334-revised-1998.pdf",
+    "local_copy_policy": "temporary review copy; not required for offline verifier; upstream URL and SHA identify reproducible retrieval",
+    "local_numeric_copy": "docs/topics/0.10_Fluid_Dynamics_Chaos/Data/03_Research/he4_tn1334_fixed_constraint_eos_source_candidate.json",
+    "license_or_terms": "NIST public scientific report; numerical facts and attribution only packaged; full PDF not redistributed",
+    "source_class": "calculated tables from fitted EOS, not raw independent experiments",
+    "temperature_scale": "EPT-76 primary adjustment; report states consistency with ITS-90 within appropriate uncertainty, not an exact identity",
+    "visual_review": {
+      "method": "Poppler full-page rendering inspected",
+      "pdf_pages_one_based": [
+        9,
+        10,
+        20,
+        21
+      ],
+      "printed_pages": [
+        3,
+        4,
+        14,
+        15
+      ],
+      "table": "Appendix A coexisting liquid and vapor",
+      "row_selection": "three liquid rows at 1.650,1.700,1.750 K; parallel derivative table row pairs matched"
+    }
+  },
+  "column_contract": {
+    "temperature_K": {
+      "source_unit": "K",
+      "SI_unit": "K",
+      "constraint": "equilibrium saturated liquid temperature"
+    },
+    "density_kg_m3": {
+      "source_unit": "kg/m^3",
+      "SI_unit": "kg/m^3",
+      "constraint": "equilibrium saturated liquid"
+    },
+    "pressure_MPa": {
+      "source_unit": "MPa",
+      "SI_unit": "Pa",
+      "conversion": "multiply by 1000000"
+    },
+    "entropy_J_gK": {
+      "source_unit": "J/(g K)",
+      "SI_unit": "J/(kg K)",
+      "conversion": "multiply by 1000",
+      "absolute_entropy_anchor": "UNRESOLVED_FOR_THIS_EDITION"
+    },
+    "cv_J_gK": {
+      "source_unit": "J/(g K)",
+      "SI_unit": "J/(kg K)",
+      "constraint": "T ds/dT at fixed specific volume",
+      "conversion": "multiply by 1000"
+    },
+    "cp_J_gK": {
+      "source_unit": "J/(g K)",
+      "SI_unit": "J/(kg K)",
+      "constraint": "T ds/dT at fixed pressure",
+      "conversion": "multiply by 1000"
+    },
+    "adiabatic_sound_m_s": {
+      "source_unit": "m/s",
+      "SI_unit": "m/s",
+      "role": "classical thermodynamic adiabatic speed; not second sound or a fully mixed two-fluid eigenvalue"
+    },
+    "alpha_times_T": {
+      "source_unit": "dimensionless",
+      "SI_unit": "1/K after division by T",
+      "definition": "(T/V)(partial V/partial T)_P",
+      "conversion": "divide by temperature_K"
+    },
+    "pressure_times_kappa": {
+      "source_unit": "dimensionless",
+      "SI_unit": "1/Pa after division by P_Pa",
+      "definition": "(P/rho)(partial rho/partial P)_T",
+      "conversion": "divide by pressure_MPa*1000000"
+    },
+    "gruneisen": {
+      "source_unit": "dimensionless",
+      "SI_unit": "dimensionless",
+      "definition": "(V/c_v)(partial P/partial T)_V",
+      "source_symbol": "phi",
+      "UET_Phi_equivalence": false
+    }
+  },
+  "rows": [
+    {
+      "row_id": "tn1334-liquid-1.650K",
+      "phase": "He II liquid",
+      "equilibrium_path": "SVP",
+      "pair_position": "first/liquid row, not following vapor row",
+      "raw_tokens": {
+        "temperature_K": "1.650",
+        "density_kg_m3": "145.3",
+        "pressure_MPa": "0.9224E-03",
+        "entropy_J_gK": "0.3374",
+        "cv_J_gK": "1.879",
+        "cp_J_gK": "1.881",
+        "adiabatic_sound_m_s": "233.8",
+        "alpha_times_T": "-0.6013E-02",
+        "pressure_times_kappa": "0.1162E-03",
+        "gruneisen": "-0.1059"
+      },
+      "transport": {
+        "ordinary_conductivity_W_mK": null,
+        "ordinary_viscosity_Pa_s": null,
+        "thermal_diffusivity_m2_s": null,
+        "Prandtl": null
+      },
+      "physical_uncertainties": null,
+      "covariance": null
+    },
+    {
+      "row_id": "tn1334-liquid-1.700K",
+      "phase": "He II liquid",
+      "equilibrium_path": "SVP",
+      "pair_position": "first/liquid row, not following vapor row",
+      "raw_tokens": {
+        "temperature_K": "1.700",
+        "density_kg_m3": "145.3",
+        "pressure_MPa": "0.1128E-02",
+        "entropy_J_gK": "0.3981",
+        "cv_J_gK": "2.191",
+        "cp_J_gK": "2.193",
+        "adiabatic_sound_m_s": "233.1",
+        "alpha_times_T": "-0.7003E-02",
+        "pressure_times_kappa": "0.1429E-03",
+        "gruneisen": "-0.1021"
+      },
+      "transport": {
+        "ordinary_conductivity_W_mK": null,
+        "ordinary_viscosity_Pa_s": null,
+        "thermal_diffusivity_m2_s": null,
+        "Prandtl": null
+      },
+      "physical_uncertainties": null,
+      "covariance": null
+    },
+    {
+      "row_id": "tn1334-liquid-1.750K",
+      "phase": "He II liquid",
+      "equilibrium_path": "SVP",
+      "pair_position": "first/liquid row, not following vapor row",
+      "raw_tokens": {
+        "temperature_K": "1.750",
+        "density_kg_m3": "145.4",
+        "pressure_MPa": "0.1366E-02",
+        "entropy_J_gK": "0.4666",
+        "cv_J_gK": "2.541",
+        "cp_J_gK": "2.543",
+        "adiabatic_sound_m_s": "232.4",
+        "alpha_times_T": "-0.8149E-02",
+        "pressure_times_kappa": "0.1741E-03",
+        "gruneisen": "-0.9887E-01"
+      },
+      "transport": {
+        "ordinary_conductivity_W_mK": null,
+        "ordinary_viscosity_Pa_s": null,
+        "thermal_diffusivity_m2_s": null,
+        "Prandtl": null
+      },
+      "physical_uncertainties": null,
+      "covariance": null
+    }
+  ],
+  "source_scope": {
+    "branch_definition": "140<rho<190 kg/m^3 and T<T_A, T_A=2.53-0.0056*(rho-140)-0.035*max(0,rho-180)",
+    "selected_rows_outside_EOS_blend": true,
+    "equilibrium_path_vs_derivative": "rows lie on SVP but cp and alpha have fixed P constraints, cv fixed V and kappa fixed T; do not differentiate the path to replace these constraints"
+  },
+  "uncertainty_contract": {
+    "per_row_standard_uncertainty": null,
+    "covariance": null,
+    "density_source_global_estimate": {
+      "average_percent": 0.1,
+      "maximum_percent": 0.5,
+      "range_K": [
+        0.8,
+        20
+      ],
+      "range_MPa": [
+        0,
+        0.2
+      ],
+      "exception": "critical region",
+      "role": "global source estimate, not row standard deviation or bounds for derived properties"
+    },
+    "derived_properties_statement": "Section 3.3 warns derived quantities typically less accurate than density by an order of magnitude; not a per-row numerical acceptance budget",
+    "entropy_reference": "UNRESOLVED_FOR_TN1334_REVISED_EDITION",
+    "printing_intervals_are_physical_uncertainty": false
+  },
+  "ancestry": {
+    "EOS_primary": {
+      "doi": "10.1007/BF00683459",
+      "url": "https://link.springer.com/article/10.1007/BF00683459",
+      "review_scope": "publisher abstract and reference list, not paywalled full coefficients",
+      "finding": "Arp 1990 fits PVT, specific heat, fixed-volume pressure derivative, sound velocity and lambda-line properties from 14 authors; references Maynard 1976 and Tam-Ahlers 1987",
+      "row_specific_training_overlap": "UNRESOLVED; bibliography alone does not identify which exact sound rows were fitted"
+    },
+    "superfluid_fraction": {
+      "role": "NOT_INGESTED",
+      "finding": "TN1334 Section 5.1 fit uses Maynard 1976 superfluid-density data, which have sound-derived ancestry"
+    },
+    "source_second_fourth_sound": {
+      "role": "NOT_INGESTED_NOT_INDEPENDENT_TEST_TARGET",
+      "finding": "TN1334 Section 5.2 computes speeds from superfluid fraction and classical thermodynamics using standard two-fluid theory"
+    },
+    "Maynard": {
+      "doi": "10.1103/PhysRevB.14.3868",
+      "url": "https://journals.aps.org/prb/abstract/10.1103/PhysRevB.14.3868",
+      "review_scope": "official publisher abstract available via search; direct page fetch 403",
+      "finding": "first, second and fourth sound measured together and converted through two-fluid equations into thermodynamic properties"
+    },
+    "older_EOS": {
+      "url": "https://nvlpubs.nist.gov/nistpubs/Legacy/TN/nbstechnicalnote1029.pdf",
+      "role": "ARCHIVE_LEAD_NOT_NUMERIC_INPUT",
+      "finding": "NBS1029 uses Brooks-Donnelly fitted inputs and T58 scale; not an independent modern holdout"
+    },
+    "independent_validation_admitted": false
+  },
+  "excluded_sources": [
+    {
+      "url": "https://nvlpubs.nist.gov/nistpubs/ir/2023/NIST.IR.8474.pdf",
+      "reason": "NIST IR8474 Helmholtz EOS valid for normal helium I; explicitly excludes helium II",
+      "role": "SCOPE_SCREEN_ONLY"
+    }
+  ],
+  "audit_contract": {
+    "locked_before_first_execution": true,
+    "role": "OFFLINE_TRANSCRIPTION_UNIT_AND_PRINTING_COMPATIBILITY_DIAGNOSTIC",
+    "printing_rule": "symmetric half of the last displayed decimal unit for every raw token, including T; assumption for diagnostic compatibility only; source rounding mode not asserted",
+    "identity_checks": [
+      "cp-cv=T*alpha_p^2/(rho*kappa_T)",
+      "adiabatic_sound^2=cp/(cv*rho*kappa_T)",
+      "gruneisen=alpha_p/(rho*cv*kappa_T)"
+    ],
+    "interval_acceptance": "closed interval overlap, no adjustable residual tolerance; use endpoint extrema and no probability/covariance assumption",
+    "failure_policy": "retain failed diagnostic; do not change tokens, rounding rule or identity interpretation to force PASS",
+    "negative_controls": [
+      "pressure conversion 1 rather than 1e6",
+      "alpha_times_T used as alpha_p without division by T",
+      "pressure_times_kappa used as kappa_T without division by P_Pa",
+      "vapor density substituted for liquid",
+      "blank transport read as zero"
+    ],
+    "physical_acceptance_threshold": null
+  },
+  "remaining_blockers": [
+    "per_row_EOS_uncertainty_covariance_missing",
+    "absolute_entropy_anchor_for_selected_edition_unresolved",
+    "EOS_and_response_exact_experimental_ancestry_split_unresolved",
+    "primary_response_state_frequency_geometry_protocol_missing",
+    "physical_Core_to_material_Legendre_state_SI_mapping_missing",
+    "superfluid_phase_stiffness_and_response_density_mapping_missing",
+    "state_matched_dissipative_transport_missing"
+  ],
+  "source_acquisition_controller": "he4_fixed_constraint_EOS_source_found_but_covariance_entropy_anchor_and_independence_open",
+  "parent_input_controller": "two_fluid_fixed_pressure_EOS_and_UET_state_mapping_missing",
+  "physical_controller": "vector_momentum_constitutive_origin_and_material_frame_admission_open",
+  "numerical_HeII_source_rows_ingested": true,
+  "admitted_material_values_assigned": false,
+  "physical_uet_operator_admitted": false,
+  "physical_prediction_executed": false,
+  "physical_J05_executed": false,
+  "physical_J06_executed": false,
+  "claim_promotion": false,
+  "dependency_unlock": false,
+  "reused_inputs": [
+    "docs/topics/0.10_Fluid_Dynamics_Chaos/Data/03_Research/he4_two_fluid_thermodynamic_input_requirements.json",
+    "docs/topics/0.10_Fluid_Dynamics_Chaos/Result/artifacts/fluid_two_fluid_eos_reference_audit.json",
+    "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/he4_svp_second_sound_response_source_package.json",
+    "docs/topics/0.13_Thermodynamic_Bridge/HE4_SECOND_SOUND_PROTOCOL_CARD.md"
+  ]
+}

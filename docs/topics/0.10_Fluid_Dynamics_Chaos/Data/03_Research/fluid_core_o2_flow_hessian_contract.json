@@ -1,0 +1,122 @@
+{
+  "schema_version": "t010-core-o2-flow-hessian-v1",
+  "date": "2026-09-30",
+  "record_role": "APPROXIMATE_FIXED_PHI_FLOW_HESSIAN_REFERENCE_NOT_ADMISSION",
+  "physical_controller": "vector_momentum_constitutive_origin_and_material_frame_admission_open",
+  "current_candidate_controller": "finite_temperature_phase_stiffness_and_normal_momentum_common_action_match_missing",
+  "passed_scalar_next_controller": "fixed_Phi_flow_scalar_correspondence_passed_but_two_fluid_current_stress_entrainment_modes_and_material_mapping_open",
+  "card": "docs/topics/0.10_Fluid_Dynamics_Chaos/CORE_O2_FLOW_HESSIAN_DERIVATION.md",
+  "source_contract": "docs/topics/0.10_Fluid_Dynamics_Chaos/Data/03_Research/fluid_core_o2_common_flow_contract.json",
+  "source_adapter": "docs/topics/0.10_Fluid_Dynamics_Chaos/Code/03_Research/Research_Fluid_Core_O2_Common_Flow.py",
+  "configuration": {
+    "Z": 1.0,
+    "mass_squared": 1.0,
+    "lambda": 1.0,
+    "response_coupling": 0.0,
+    "epsilon_nc": 0.0,
+    "phi_equilibrium": 0.0,
+    "phase_tolerance": 1e-10,
+    "Phi_fixed": 0.15
+  },
+  "states": [
+    {
+      "branch": "condensed",
+      "T": 0.04,
+      "mu": 1.28
+    },
+    {
+      "branch": "condensed",
+      "T": 0.08,
+      "mu": 1.28
+    },
+    {
+      "branch": "condensed",
+      "T": 0.16,
+      "mu": 1.28
+    }
+  ],
+  "derivation": {
+    "kernel": "F=(E^2-k^2)*(E^2-k^2-2*(mu^2-h^2-m_eff^2/Z))-4*(mu*E+h*k_z)^2",
+    "ensemble": "fixed normal-rest T, mu=partial_0 psi and h=partial_z psi; fixed Phi; tree amplitude follows each phase invariant",
+    "phase_curvature": "f_s_flow=f_s_tree+integral measure*[N*mean(E_hh)-N*(1+N)*mean(E_h^2)/T]",
+    "finite_difference": "f_s_thermal=-[-Pth(2h)+16Pth(h)-30Pth(0)+16Pth(-h)-Pth(-2h)]/(12h^2)",
+    "separate_target": "w=T*p_T+mu*p_mu ?= mu^2*f_s_flow+chi_perp_qp",
+    "forbidden_repair": "Never construct f_s_flow from (w-chi_perp_qp)/mu^2",
+    "classification": "new topic-local Gaussian-flow extension; not source-verbatim finite-flow Core runtime",
+    "omitted": "thermal gap-equation melting, self-energy, vacuum counterterms, full stress/entrainment, live Phi, Kubo and SI"
+  },
+  "verification": {
+    "locked_before_first_execution": true,
+    "radial_orders": [
+      128,
+      256,
+      384
+    ],
+    "order_sweep_cutoff": 70,
+    "cutoffs": [
+      45,
+      70,
+      100
+    ],
+    "cutoff_sweep_order": 384,
+    "angular_orders": [
+      12,
+      24,
+      36
+    ],
+    "flow_relative_steps": [
+      0.001,
+      0.0003,
+      0.0001
+    ],
+    "pressure_derivative_relative_step": 0.0001,
+    "composition_relative_tolerance": 1e-05,
+    "implicit_refinement_relative_tolerance": 1e-06,
+    "flow_correction_relative_tolerance": 1e-05,
+    "flow_step_refinement_relative_tolerance": 1e-05,
+    "zero_flow_root_relative_tolerance": 1e-09,
+    "determinant_relative_tolerance": 1e-10,
+    "pressure_parity_relative_tolerance": 1e-09,
+    "root_imaginary_relative_tolerance": 1e-09,
+    "negative_control_floor": 1e-07,
+    "relative_metric": "abs(a-b)/max(abs(a),abs(b),1e-30)",
+    "threshold_policy": "retain first diagnostic and all failed target checks; no fitted repair or post-preview relaxation"
+  },
+  "admission": {
+    "complete_flow_master_function": false,
+    "physical_UET_operator": false,
+    "physical_HeII_state": false,
+    "physical_J04_executed": false,
+    "physical_J05_executed": false,
+    "physical_J06_executed": false,
+    "material_values_assigned": false,
+    "claim_promotion": false,
+    "dependency_unlock": false,
+    "full_two_fluid_stress_entrainment_derived": false,
+    "physical_normal_density": false
+  },
+  "primary_sources": [
+    {
+      "title": "From a complex scalar field to the two-fluid picture of superfluidity",
+      "version": "1212.0670v3",
+      "url": "https://arxiv.org/html/1212.0670v3",
+      "doi": "10.1103/PhysRevD.87.065001",
+      "equations": [
+        "5b",
+        "28",
+        "34-36",
+        "71-75",
+        "111-113"
+      ],
+      "review_scope": "selected quadratic-action, current and normal-rest pressure correspondence; no full paper replication"
+    }
+  ],
+  "reused_inputs": [
+    "docs/core/02_equations/covariant/uet_covariant_matter.py",
+    "docs/core/02_equations/o2/uet_o2_finite_temperature_two_fluid_response.py",
+    "docs/core/07_artifacts/topic13/t13_uet_o2_finite_temperature_two_fluid_response_audit.json",
+    "docs/topics/0.10_Fluid_Dynamics_Chaos/Data/03_Research/fluid_two_fluid_eos_reference_contract.json",
+    "docs/topics/0.13_Thermodynamic_Bridge/HE4_SECOND_SOUND_PROTOCOL_CARD.md",
+    "docs/topics/0.10_Fluid_Dynamics_Chaos/Result/artifacts/fluid_core_o2_common_flow_composition_audit.json"
+  ]
+}

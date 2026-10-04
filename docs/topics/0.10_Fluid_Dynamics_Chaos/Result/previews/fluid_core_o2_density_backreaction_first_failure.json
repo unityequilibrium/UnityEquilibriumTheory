@@ -1,0 +1,17 @@
+{
+  "record_role": "HISTORICAL_OBSERVED_INPUT_BINDING_FAILURE_NOT_GENERATED_PHYSICS_ARTIFACT",
+  "date": "2026-10-01",
+  "status": "INPUT_SOURCE_BINDING_FAILURE",
+  "process_exit_code": 1,
+  "observed_exception": {
+    "type": "ValueError",
+    "message": "Missing source definitions: {'coupled_matter_scalar_equation_residual'}"
+  },
+  "completed_scientific_states": 0,
+  "artifact_produced": false,
+  "scientific_parameters_or_thresholds_changed": false,
+  "historical_input_hashes": {
+    "docs/topics/0.10_Fluid_Dynamics_Chaos/Result/previews/core_o2_density_backreaction_first_verifier.py.txt": "3458fbf3f9db4e58b65f3e6c6f44715bdc8f9458aa21e76b0f44f53d8ff8fe46",
+    "docs/topics/0.10_Fluid_Dynamics_Chaos/Result/previews/fluid_core_o2_density_backreaction_first_contract.json": "60a4941244e4dcbaeb882f1fcf58034cf6b3ec040238ec180d578da42333d537"
+  }
+}

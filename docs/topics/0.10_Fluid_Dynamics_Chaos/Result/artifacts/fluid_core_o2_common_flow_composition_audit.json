@@ -1,0 +1,1579 @@
+{
+  "schema_version": "t010-core-o2-common-flow-composition-audit-v1",
+  "date": "2026-09-30",
+  "status": "PASS_SOURCE_COMPOSITION_DIAGNOSTIC_ONLY",
+  "check_count": 69,
+  "passing_check_count": 69,
+  "checks": {
+    "source_function_scope_only": {
+      "pass": true
+    },
+    "locked_controls": {
+      "pass": true
+    },
+    "boundary/complete_flow_master_function": {
+      "pass": true
+    },
+    "boundary/physical_UET_operator": {
+      "pass": true
+    },
+    "boundary/physical_HeII_state": {
+      "pass": true
+    },
+    "boundary/physical_J04_executed": {
+      "pass": true
+    },
+    "boundary/physical_J05_executed": {
+      "pass": true
+    },
+    "boundary/physical_J06_executed": {
+      "pass": true
+    },
+    "boundary/material_values_assigned": {
+      "pass": true
+    },
+    "boundary/claim_promotion": {
+      "pass": true
+    },
+    "boundary/dependency_unlock": {
+      "pass": true
+    },
+    "closed_fixed_Phi_configuration": {
+      "pass": true
+    },
+    "SI_or_mass_density_not_emitted": {
+      "pass": true
+    },
+    "stiffness_conversion_dimensions": {
+      "pass": true
+    },
+    "normal/0.12/branch_matches": {
+      "pass": true
+    },
+    "normal/0.12/finite_source_state": {
+      "pass": true
+    },
+    "normal/0.12/entropy_positive": {
+      "metric": 0.00011837907365321031,
+      "minimum": 0.0,
+      "pass": true
+    },
+    "normal/0.12/total_enthalpy_positive": {
+      "metric": 1.9270995120660174e-05,
+      "minimum": 0.0,
+      "pass": true
+    },
+    "normal/0.12/Doppler_proxy_positive": {
+      "metric": 1.927099512067154e-05,
+      "minimum": 0.0,
+      "pass": true
+    },
+    "normal/0.12/quadrature_order_component_stability": {
+      "metric": 1.7458438681697914e-13,
+      "threshold": 1e-06,
+      "pass": true
+    },
+    "normal/0.12/cutoff_factor_component_stability": {
+      "metric": 1.3513160617563906e-13,
+      "threshold": 1e-06,
+      "pass": true
+    },
+    "normal/0.12/pressure_derivative_component_stability": {
+      "metric": 4.002641558059823e-11,
+      "threshold": 1e-06,
+      "pass": true
+    },
+    "normal/0.12/normal_gas_enthalpy_control": {
+      "metric": 5.898596352172496e-13,
+      "threshold": 1e-05,
+      "pass": true
+    },
+    "normal/0.12/normal_tree_stiffness_zero": {
+      "pass": true
+    },
+    "normal/0.22/branch_matches": {
+      "pass": true
+    },
+    "normal/0.22/finite_source_state": {
+      "pass": true
+    },
+    "normal/0.22/entropy_positive": {
+      "metric": 0.0030822362174951646,
+      "minimum": 0.0,
+      "pass": true
+    },
+    "normal/0.22/total_enthalpy_positive": {
+      "metric": 0.0008468305206464094,
+      "minimum": 0.0,
+      "pass": true
+    },
+    "normal/0.22/Doppler_proxy_positive": {
+      "metric": 0.0008468305206466535,
+      "minimum": 0.0,
+      "pass": true
+    },
+    "normal/0.22/quadrature_order_component_stability": {
+      "metric": 9.205399935535983e-14,
+      "threshold": 1e-06,
+      "pass": true
+    },
+    "normal/0.22/cutoff_factor_component_stability": {
+      "metric": 1.0076007996200744e-13,
+      "threshold": 1e-06,
+      "pass": true
+    },
+    "normal/0.22/pressure_derivative_component_stability": {
+      "metric": 3.0714540257786736e-13,
+      "threshold": 1e-06,
+      "pass": true
+    },
+    "normal/0.22/normal_gas_enthalpy_control": {
+      "metric": 2.8832490479593163e-13,
+      "threshold": 1e-05,
+      "pass": true
+    },
+    "normal/0.22/normal_tree_stiffness_zero": {
+      "pass": true
+    },
+    "condensed/0.04/branch_matches": {
+      "pass": true
+    },
+    "condensed/0.04/finite_source_state": {
+      "pass": true
+    },
+    "condensed/0.04/entropy_positive": {
+      "metric": 0.0003650340301905585,
+      "minimum": 0.0,
+      "pass": true
+    },
+    "condensed/0.04/total_enthalpy_positive": {
+      "metric": 1.0459571117916195,
+      "minimum": 0.0,
+      "pass": true
+    },
+    "condensed/0.04/Doppler_proxy_positive": {
+      "metric": 7.528724032859426e-05,
+      "minimum": 0.0,
+      "pass": true
+    },
+    "condensed/0.04/quadrature_order_component_stability": {
+      "metric": 1.5162231181076813e-11,
+      "threshold": 1e-06,
+      "pass": true
+    },
+    "condensed/0.04/cutoff_factor_component_stability": {
+      "metric": 2.806952942436083e-12,
+      "threshold": 1e-06,
+      "pass": true
+    },
+    "condensed/0.04/pressure_derivative_component_stability": {
+      "metric": 9.438344100015427e-13,
+      "threshold": 1e-06,
+      "pass": true
+    },
+    "condensed/0.04/condensed_tree_stiffness_positive": {
+      "metric": 0.6384000000000001,
+      "minimum": 0.0,
+      "pass": true
+    },
+    "condensed/0.08/branch_matches": {
+      "pass": true
+    },
+    "condensed/0.08/finite_source_state": {
+      "pass": true
+    },
+    "condensed/0.08/entropy_positive": {
+      "metric": 0.002317267126517031,
+      "minimum": 0.0,
+      "pass": true
+    },
+    "condensed/0.08/total_enthalpy_positive": {
+      "metric": 1.0460234533473236,
+      "minimum": 0.0,
+      "pass": true
+    },
+    "condensed/0.08/Doppler_proxy_positive": {
+      "metric": 0.0007769892267661129,
+      "minimum": 0.0,
+      "pass": true
+    },
+    "condensed/0.08/quadrature_order_component_stability": {
+      "metric": 3.0310450809253364e-11,
+      "threshold": 1e-06,
+      "pass": true
+    },
+    "condensed/0.08/cutoff_factor_component_stability": {
+      "metric": 5.611311954653599e-12,
+      "threshold": 1e-06,
+      "pass": true
+    },
+    "condensed/0.08/pressure_derivative_component_stability": {
+      "metric": 7.966679902006917e-13,
+      "threshold": 1e-06,
+      "pass": true
+    },
+    "condensed/0.08/condensed_tree_stiffness_positive": {
+      "metric": 0.6384000000000001,
+      "minimum": 0.0,
+      "pass": true
+    },
+    "condensed/0.16/branch_matches": {
+      "pass": true
+    },
+    "condensed/0.16/finite_source_state": {
+      "pass": true
+    },
+    "condensed/0.16/entropy_positive": {
+      "metric": 0.012758423488812749,
+      "minimum": 0.0,
+      "pass": true
+    },
+    "condensed/0.16/total_enthalpy_positive": {
+      "metric": 1.0472427793047376,
+      "minimum": 0.0,
+      "pass": true
+    },
+    "condensed/0.16/Doppler_proxy_positive": {
+      "metric": 0.006425413134386733,
+      "minimum": 0.0,
+      "pass": true
+    },
+    "condensed/0.16/quadrature_order_component_stability": {
+      "metric": 6.03002023680481e-11,
+      "threshold": 1e-06,
+      "pass": true
+    },
+    "condensed/0.16/cutoff_factor_component_stability": {
+      "metric": 1.1164005810662858e-11,
+      "threshold": 1e-06,
+      "pass": true
+    },
+    "condensed/0.16/pressure_derivative_component_stability": {
+      "metric": 9.47552333627387e-13,
+      "threshold": 1e-06,
+      "pass": true
+    },
+    "condensed/0.16/condensed_tree_stiffness_positive": {
+      "metric": 0.6384000000000001,
+      "minimum": 0.0,
+      "pass": true
+    },
+    "tree_phase_charge_inertia": {
+      "metric": 0.0,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "tree_condensed_q_positive": {
+      "metric": 0.6384000000000001,
+      "minimum": 0.0,
+      "pass": true
+    },
+    "tree_charge_susceptibility_positive": {
+      "metric": 3.9151999999999996,
+      "minimum": 0.0,
+      "pass": true
+    },
+    "tree_sound_squared_positive": {
+      "metric": 0.1630568042501022,
+      "minimum": 0.0,
+      "pass": true
+    },
+    "source_Goldstone_equals_tree_EOS_sound": {
+      "metric": 5.4861487043365626e-11,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "stiffness_without_mu_squared_error_detected": {
+      "metric": 0.38964843750000006,
+      "minimum": 1e-07,
+      "pass": true
+    },
+    "consistent_two_fluid_common_boost_positive_control": {
+      "metric": 0.0,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "omit_entropy_in_normal_inertia_detected": {
+      "metric": 0.07142857142857148,
+      "minimum": 1e-07,
+      "pass": true
+    }
+  },
+  "input_hashes": {
+    "docs/topics/0.10_Fluid_Dynamics_Chaos/Data/03_Research/fluid_core_o2_common_flow_contract.json": "c9a190c89d682080a9a90254cfd205e606cd9063f9d34c68b00eeeef8634c75c",
+    "docs/topics/0.10_Fluid_Dynamics_Chaos/CORE_O2_COMMON_FLOW_COMPOSITION_CONTRACT.md": "c88c8643e4cec213f2906443b021a215e916afeeed4b24258dd21d547d41e2b8",
+    "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry_topic10_o2_common_flow_addendum.json": "1d4b17a42b2b93c280752ff1c5e62b0628f6bd82d0fb66ca21dd1b1588e4d9d3",
+    "docs/topics/0.10_Fluid_Dynamics_Chaos/Code/03_Research/Research_Fluid_Core_O2_Common_Flow.py": "b083323ad31df5527a94a888e8eae43984eb77698bda1c6c3d080e2ea940f5e2",
+    "docs/core/02_equations/covariant/uet_covariant_response.py": "7fb4b7228afb8ede0ac4f1664d634346ef46cc7678c94ed7b55d73645590c0c2",
+    "docs/core/02_equations/o2/uet_o2_finite_density_eos.py": "ea744a8645f993600300fa9fd99a764e1f07b30fb272b47399c34aa114152c6d",
+    "docs/core/02_equations/o2/uet_o2_finite_temperature_quasiparticle_eos.py": "ba814f3aa02b5e31112a6595dac7727b7025b08e08f0631f50567f270cebbb7f",
+    "docs/core/02_equations/o2/uet_o2_formal_transverse_response.py": "a8ee43c6fb6edb227476412cde6cc9b2d4a643fc42cca0fd2d438b343efad1ba",
+    "docs/core/02_equations/covariant/uet_covariant_matter.py": "8a57d95e898a8ac962bbd749670ad0695b597281937da36496d2ec7e074f9c53",
+    "docs/core/02_equations/o2/uet_o2_finite_temperature_two_fluid_response.py": "d8a32af7f257986e4e84581cd4af325fb9c09ee2b3c00fa96c77cca130b28ccf",
+    "docs/core/07_artifacts/topic13/t13_uet_o2_finite_temperature_two_fluid_response_audit.json": "c642e7b3e87539008d5005ca403ff6104736bd477b51791f74954bd8eef9ad0f",
+    "docs/topics/0.10_Fluid_Dynamics_Chaos/Data/03_Research/fluid_two_fluid_eos_reference_contract.json": "0554b385b88b442eeb99b4fbf49f45d34735904f6f24892472db9f48319de9ea",
+    "docs/topics/0.13_Thermodynamic_Bridge/HE4_SECOND_SOUND_PROTOCOL_CARD.md": "3e63ee75d51935420e9d4cb5e2141cf5cdb52c7596a6ea31a78e621ae1313449"
+  },
+  "AST_definition_hashes": {
+    "response": {
+      "_finite_scalar": "611afaf642e9806923015be0db63b9842119fe6cfc28d7f893d9dd33ce03e23e",
+      "response_displacement": "8b990dbbcabc8331c8bc3ca7392291a1658961280f97635541fc6b0f6a9cfbd1"
+    },
+    "finite_density": {
+      "_finite_scalar": "171028c1f34cb4018cbba2ac0d4680f7f51a22f2bd50e86fd80bea09309b8ef3",
+      "effective_mass_sq": "a0720c80988fbb29643cdf35e8a621b435b4134a37d573c6ef6d2d379bcc54e6",
+      "condensate_control": "fca1db7402b342ede2ee88e170e58f583e01ac2b6f9c60a447b4a296ed6af337"
+    },
+    "EOS": {
+      "_finite": "f3076cb3dc5681858247a40f79cd2568bc9094264bc32f6eeb85fca22bde0f28",
+      "_positive": "a21ba65fba46599ec105ae704744850ad4ea07e6481f3f23de132308ba217499",
+      "_quadrature": "62bbbb0ca27952d3e5e178d6e22eedd3310cbb53007cad0a8c676ee177925c02",
+      "_thermal_log": "afd4177023ddf33b98fb14d726f937b3e9888730a58798cb98972a943a85da64",
+      "_effective_chemical_potential": "93c1524b912e51f3d395935107bd3fca6ad7c369a792c2b8452bf3a3c1c6b22e",
+      "_condensed_amplitude_sq": "cd5a4bc9ad918a0cf2654241882102ce320bc0ba966e124faf8f0ab8d5aa1921",
+      "condensed_quasiparticle_energies": "6ac351825a1892245a41c6945205ae01a1ccb44ac31934f87494a9e02ca56ae5",
+      "_thermal_pressure_normal": "7ca90fc13293d08408f3b25c841c8ab095b30ff9711dc753dfb950d3dcc757e7",
+      "_thermal_pressure_condensed": "ea8ac8daf0bc4f8c83fc343dc7238f57f677c13f1aa5fa92d0d7e9abca1e6f5f",
+      "quasiparticle_pressure": "bbe6876d8db4c878ce94294c9c25bc10b8a257fe604e8a1f63f0c8680d1c69e0"
+    },
+    "transverse": {
+      "FormalTransverseResponse": "15f39deb7da0d6c4133254bc6d03212fe4ad3b2dda9d8cc694143bd10c393f5d",
+      "_positive": "f5645bdb8a7e35833f7ab6a05d9b5c1a1539f945e3bc6e1a43e822291bc27f38",
+      "_quadrature": "62bbbb0ca27952d3e5e178d6e22eedd3310cbb53007cad0a8c676ee177925c02",
+      "_minus_bose_derivative": "e79eafdd7dd4956ad8fdbfd1e2affd3f7bdd59d86a4144ed7e33ffafbf484c21",
+      "_branch_energies": "e6bf9885a7c95c814e678941f7ad7e73b766134f5dcca5758af460828982f810",
+      "formal_transverse_quasiparticle_response": "bec0adf319910ebd4254497b5eff5fa07d7f6f20d2423a95194aedd9cbe2069c"
+    }
+  },
+  "source_state_results": [
+    {
+      "point": {
+        "branch": "normal",
+        "T": 0.12,
+        "mu": 0.35
+      },
+      "final": {
+        "branch": "normal",
+        "T": 0.12,
+        "mu": 0.35,
+        "Phi_fixed": 0.15,
+        "order": 384,
+        "cutoff_factor": 100,
+        "derivative_relative_step": 0.0001,
+        "pressure": 1.7456957886201575e-06,
+        "charge_density": 1.4472875092214107e-05,
+        "entropy_density": 0.00011837907365321031,
+        "enthalpy": 1.9270995120660174e-05,
+        "tree_phase_stiffness": 0.0,
+        "static_Doppler_momentum_proxy": 1.927099512067154e-05,
+        "proposed_composite_inertia": 1.927099512067154e-05,
+        "composition_residual": 1.136718215215271e-17,
+        "relative_composition_residual": 5.898596352172496e-13,
+        "role": "natural-unit source-function diagnostic; no physical rho_n/rho_s or He-II state"
+      },
+      "order_sweep": [
+        {
+          "branch": "normal",
+          "T": 0.12,
+          "mu": 0.35,
+          "Phi_fixed": 0.15,
+          "order": 128,
+          "cutoff_factor": 70,
+          "derivative_relative_step": 0.0001,
+          "pressure": 1.7456957886207115e-06,
+          "charge_density": 1.447287509221499e-05,
+          "entropy_density": 0.00011837907365324155,
+          "enthalpy": 1.927099512066423e-05,
+          "tree_phase_stiffness": 0.0,
+          "static_Doppler_momentum_proxy": 1.927099512067414e-05,
+          "proposed_composite_inertia": 1.927099512067414e-05,
+          "composition_residual": 9.910285482875314e-18,
+          "relative_composition_residual": 5.142591454575923e-13,
+          "role": "natural-unit source-function diagnostic; no physical rho_n/rho_s or He-II state"
+        },
+        {
+          "branch": "normal",
+          "T": 0.12,
+          "mu": 0.35,
+          "Phi_fixed": 0.15,
+          "order": 256,
+          "cutoff_factor": 70,
+          "derivative_relative_step": 0.0001,
+          "pressure": 1.745695788620538e-06,
+          "charge_density": 1.4472875092216755e-05,
+          "entropy_density": 0.00011837907365323255,
+          "enthalpy": 1.927099512066377e-05,
+          "tree_phase_stiffness": 0.0,
+          "static_Doppler_momentum_proxy": 1.9270995120672137e-05,
+          "proposed_composite_inertia": 1.9270995120672137e-05,
+          "composition_residual": 8.368685518872487e-18,
+          "relative_composition_residual": 4.342632783864564e-13,
+          "role": "natural-unit source-function diagnostic; no physical rho_n/rho_s or He-II state"
+        },
+        {
+          "branch": "normal",
+          "T": 0.12,
+          "mu": 0.35,
+          "Phi_fixed": 0.15,
+          "order": 384,
+          "cutoff_factor": 70,
+          "derivative_relative_step": 0.0001,
+          "pressure": 1.7456957886203934e-06,
+          "charge_density": 1.447287509221005e-05,
+          "entropy_density": 0.00011837907365322408,
+          "enthalpy": 1.9270995120660404e-05,
+          "tree_phase_stiffness": 0.0,
+          "static_Doppler_momentum_proxy": 1.927099512067371e-05,
+          "proposed_composite_inertia": 1.927099512067371e-05,
+          "composition_residual": 1.330519353547055e-17,
+          "relative_composition_residual": 6.904258681066701e-13,
+          "role": "natural-unit source-function diagnostic; no physical rho_n/rho_s or He-II state"
+        }
+      ],
+      "cutoff_sweep": [
+        {
+          "branch": "normal",
+          "T": 0.12,
+          "mu": 0.35,
+          "Phi_fixed": 0.15,
+          "order": 384,
+          "cutoff_factor": 45,
+          "derivative_relative_step": 0.0001,
+          "pressure": 1.7456957886205872e-06,
+          "charge_density": 1.4472875092215344e-05,
+          "entropy_density": 0.0001183790736532359,
+          "enthalpy": 1.9270995120663677e-05,
+          "tree_phase_stiffness": 0.0,
+          "static_Doppler_momentum_proxy": 1.927099512067427e-05,
+          "proposed_composite_inertia": 1.927099512067427e-05,
+          "composition_residual": 1.0591299972467771e-17,
+          "relative_composition_residual": 5.495979790428796e-13,
+          "role": "natural-unit source-function diagnostic; no physical rho_n/rho_s or He-II state"
+        },
+        {
+          "branch": "normal",
+          "T": 0.12,
+          "mu": 0.35,
+          "Phi_fixed": 0.15,
+          "order": 384,
+          "cutoff_factor": 70,
+          "derivative_relative_step": 0.0001,
+          "pressure": 1.7456957886203934e-06,
+          "charge_density": 1.447287509221005e-05,
+          "entropy_density": 0.00011837907365322408,
+          "enthalpy": 1.9270995120660404e-05,
+          "tree_phase_stiffness": 0.0,
+          "static_Doppler_momentum_proxy": 1.927099512067371e-05,
+          "proposed_composite_inertia": 1.927099512067371e-05,
+          "composition_residual": 1.330519353547055e-17,
+          "relative_composition_residual": 6.904258681066701e-13,
+          "role": "natural-unit source-function diagnostic; no physical rho_n/rho_s or He-II state"
+        },
+        {
+          "branch": "normal",
+          "T": 0.12,
+          "mu": 0.35,
+          "Phi_fixed": 0.15,
+          "order": 384,
+          "cutoff_factor": 100,
+          "derivative_relative_step": 0.0001,
+          "pressure": 1.7456957886201575e-06,
+          "charge_density": 1.4472875092214107e-05,
+          "entropy_density": 0.00011837907365321031,
+          "enthalpy": 1.9270995120660174e-05,
+          "tree_phase_stiffness": 0.0,
+          "static_Doppler_momentum_proxy": 1.927099512067154e-05,
+          "proposed_composite_inertia": 1.927099512067154e-05,
+          "composition_residual": 1.136718215215271e-17,
+          "relative_composition_residual": 5.898596352172496e-13,
+          "role": "natural-unit source-function diagnostic; no physical rho_n/rho_s or He-II state"
+        }
+      ],
+      "derivative_sweep": [
+        {
+          "branch": "normal",
+          "T": 0.12,
+          "mu": 0.35,
+          "Phi_fixed": 0.15,
+          "order": 384,
+          "cutoff_factor": 70,
+          "derivative_relative_step": 0.001,
+          "pressure": 1.7456957886203934e-06,
+          "charge_density": 1.4472875089838869e-05,
+          "entropy_density": 0.00011837907285350957,
+          "enthalpy": 1.9270995023864752e-05,
+          "tree_phase_stiffness": 0.0,
+          "static_Doppler_momentum_proxy": 1.927099512067371e-05,
+          "proposed_composite_inertia": 1.927099512067371e-05,
+          "composition_residual": 9.680895747044872e-14,
+          "relative_composition_residual": 5.02355778018921e-09,
+          "role": "natural-unit source-function diagnostic; no physical rho_n/rho_s or He-II state"
+        },
+        {
+          "branch": "normal",
+          "T": 0.12,
+          "mu": 0.35,
+          "Phi_fixed": 0.15,
+          "order": 384,
+          "cutoff_factor": 70,
+          "derivative_relative_step": 0.0003,
+          "pressure": 1.7456957886203934e-06,
+          "charge_density": 1.4472875092201522e-05,
+          "entropy_density": 0.00011837907364682105,
+          "enthalpy": 1.9270995119889056e-05,
+          "tree_phase_stiffness": 0.0,
+          "static_Doppler_momentum_proxy": 1.927099512067371e-05,
+          "proposed_composite_inertia": 1.927099512067371e-05,
+          "composition_residual": 7.846540528867046e-16,
+          "relative_composition_residual": 4.071684144867727e-11,
+          "role": "natural-unit source-function diagnostic; no physical rho_n/rho_s or He-II state"
+        },
+        {
+          "branch": "normal",
+          "T": 0.12,
+          "mu": 0.35,
+          "Phi_fixed": 0.15,
+          "order": 384,
+          "cutoff_factor": 70,
+          "derivative_relative_step": 0.0001,
+          "pressure": 1.7456957886203934e-06,
+          "charge_density": 1.447287509221005e-05,
+          "entropy_density": 0.00011837907365322408,
+          "enthalpy": 1.9270995120660404e-05,
+          "tree_phase_stiffness": 0.0,
+          "static_Doppler_momentum_proxy": 1.927099512067371e-05,
+          "proposed_composite_inertia": 1.927099512067371e-05,
+          "composition_residual": 1.330519353547055e-17,
+          "relative_composition_residual": 6.904258681066701e-13,
+          "role": "natural-unit source-function diagnostic; no physical rho_n/rho_s or He-II state"
+        }
+      ],
+      "component_refinement_changes": {
+        "quadrature_order": {
+          "pressure": 8.284998834645765e-14,
+          "enthalpy": 1.7458438681697914e-13,
+          "static_Doppler_momentum_proxy": 8.157820290336005e-14
+        },
+        "cutoff_factor": {
+          "pressure": 1.3513160617563906e-13,
+          "enthalpy": 1.1955426287569641e-14,
+          "static_Doppler_momentum_proxy": 1.1252165917704835e-13
+        },
+        "pressure_derivative": {
+          "pressure": 0.0,
+          "enthalpy": 4.002641558059823e-11,
+          "static_Doppler_momentum_proxy": 0.0
+        }
+      },
+      "observed_refinement_spread_relative": 4.00264155805751e-11,
+      "composition_target": {
+        "pass": true,
+        "relative_threshold": 1e-05,
+        "exceeds_threshold_plus_observed_spread": false,
+        "interpretation": "conditional proxy/tree composition target only; refinement spread is not a rigorous physical uncertainty bound"
+      }
+    },
+    {
+      "point": {
+        "branch": "normal",
+        "T": 0.22,
+        "mu": 0.35
+      },
+      "final": {
+        "branch": "normal",
+        "T": 0.22,
+        "mu": 0.35,
+        "Phi_fixed": 0.15,
+        "order": 384,
+        "cutoff_factor": 100,
+        "derivative_relative_step": 0.0001,
+        "pressure": 0.000114233959700497,
+        "charge_density": 0.0004821101508499233,
+        "entropy_density": 0.0030822362174951646,
+        "enthalpy": 0.0008468305206464094,
+        "tree_phase_stiffness": 0.0,
+        "static_Doppler_momentum_proxy": 0.0008468305206466535,
+        "proposed_composite_inertia": 0.0008468305206466535,
+        "composition_residual": 2.441623292437356e-16,
+        "relative_composition_residual": 2.8832490479593163e-13,
+        "role": "natural-unit source-function diagnostic; no physical rho_n/rho_s or He-II state"
+      },
+      "order_sweep": [
+        {
+          "branch": "normal",
+          "T": 0.22,
+          "mu": 0.35,
+          "Phi_fixed": 0.15,
+          "order": 128,
+          "cutoff_factor": 70,
+          "derivative_relative_step": 0.0001,
+          "pressure": 0.00011423395970051265,
+          "charge_density": 0.0004821101508503864,
+          "entropy_density": 0.0030822362174955822,
+          "enthalpy": 0.0008468305206466633,
+          "tree_phase_stiffness": 0.0,
+          "static_Doppler_momentum_proxy": 0.0008468305206466218,
+          "proposed_composite_inertia": 0.0008468305206466218,
+          "composition_residual": -4.152494320619482e-17,
+          "relative_composition_residual": 4.9035718710852816e-14,
+          "role": "natural-unit source-function diagnostic; no physical rho_n/rho_s or He-II state"
+        },
+        {
+          "branch": "normal",
+          "T": 0.22,
+          "mu": 0.35,
+          "Phi_fixed": 0.15,
+          "order": 256,
+          "cutoff_factor": 70,
+          "derivative_relative_step": 0.0001,
+          "pressure": 0.00011423395970050353,
+          "charge_density": 0.00048211015085017177,
+          "entropy_density": 0.0030822362174951195,
+          "enthalpy": 0.0008468305206464863,
+          "tree_phase_stiffness": 0.0,
+          "static_Doppler_momentum_proxy": 0.000846830520646594,
+          "proposed_composite_inertia": 0.000846830520646594,
+          "composition_residual": 1.0766127572781059e-16,
+          "relative_composition_residual": 1.2713438297619017e-13,
+          "role": "natural-unit source-function diagnostic; no physical rho_n/rho_s or He-II state"
+        },
+        {
+          "branch": "normal",
+          "T": 0.22,
+          "mu": 0.35,
+          "Phi_fixed": 0.15,
+          "order": 384,
+          "cutoff_factor": 70,
+          "derivative_relative_step": 0.0001,
+          "pressure": 0.00011423395970050735,
+          "charge_density": 0.0004821101508499685,
+          "entropy_density": 0.0030822362174954807,
+          "enthalpy": 0.0008468305206464947,
+          "tree_phase_stiffness": 0.0,
+          "static_Doppler_momentum_proxy": 0.000846830520646672,
+          "proposed_composite_inertia": 0.000846830520646672,
+          "composition_residual": 1.7726705520137997e-16,
+          "relative_composition_residual": 2.0933002635050532e-13,
+          "role": "natural-unit source-function diagnostic; no physical rho_n/rho_s or He-II state"
+        }
+      ],
+      "cutoff_sweep": [
+        {
+          "branch": "normal",
+          "T": 0.22,
+          "mu": 0.35,
+          "Phi_fixed": 0.15,
+          "order": 384,
+          "cutoff_factor": 45,
+          "derivative_relative_step": 0.0001,
+          "pressure": 0.00011423395970051172,
+          "charge_density": 0.0004821101508501492,
+          "entropy_density": 0.0030822362174955484,
+          "enthalpy": 0.0008468305206465729,
+          "tree_phase_stiffness": 0.0,
+          "static_Doppler_momentum_proxy": 0.0008468305206466571,
+          "proposed_composite_inertia": 0.0008468305206466571,
+          "composition_residual": 8.42425088021237e-17,
+          "relative_composition_residual": 9.947977399042537e-14,
+          "role": "natural-unit source-function diagnostic; no physical rho_n/rho_s or He-II state"
+        },
+        {
+          "branch": "normal",
+          "T": 0.22,
+          "mu": 0.35,
+          "Phi_fixed": 0.15,
+          "order": 384,
+          "cutoff_factor": 70,
+          "derivative_relative_step": 0.0001,
+          "pressure": 0.00011423395970050735,
+          "charge_density": 0.0004821101508499685,
+          "entropy_density": 0.0030822362174954807,
+          "enthalpy": 0.0008468305206464947,
+          "tree_phase_stiffness": 0.0,
+          "static_Doppler_momentum_proxy": 0.000846830520646672,
+          "proposed_composite_inertia": 0.000846830520646672,
+          "composition_residual": 1.7726705520137997e-16,
+          "relative_composition_residual": 2.0933002635050532e-13,
+          "role": "natural-unit source-function diagnostic; no physical rho_n/rho_s or He-II state"
+        },
+        {
+          "branch": "normal",
+          "T": 0.22,
+          "mu": 0.35,
+          "Phi_fixed": 0.15,
+          "order": 384,
+          "cutoff_factor": 100,
+          "derivative_relative_step": 0.0001,
+          "pressure": 0.000114233959700497,
+          "charge_density": 0.0004821101508499233,
+          "entropy_density": 0.0030822362174951646,
+          "enthalpy": 0.0008468305206464094,
+          "tree_phase_stiffness": 0.0,
+          "static_Doppler_momentum_proxy": 0.0008468305206466535,
+          "proposed_composite_inertia": 0.0008468305206466535,
+          "composition_residual": 2.441623292437356e-16,
+          "relative_composition_residual": 2.8832490479593163e-13,
+          "role": "natural-unit source-function diagnostic; no physical rho_n/rho_s or He-II state"
+        }
+      ],
+      "derivative_sweep": [
+        {
+          "branch": "normal",
+          "T": 0.22,
+          "mu": 0.35,
+          "Phi_fixed": 0.15,
+          "order": 384,
+          "cutoff_factor": 70,
+          "derivative_relative_step": 0.001,
+          "pressure": 0.00011423395970050735,
+          "charge_density": 0.0004821101508413401,
+          "entropy_density": 0.0030822362175405636,
+          "enthalpy": 0.000846830520653393,
+          "tree_phase_stiffness": 0.0,
+          "static_Doppler_momentum_proxy": 0.000846830520646672,
+          "proposed_composite_inertia": 0.000846830520646672,
+          "composition_residual": -6.7210776874548905e-15,
+          "relative_composition_residual": 7.936744748251487e-12,
+          "role": "natural-unit source-function diagnostic; no physical rho_n/rho_s or He-II state"
+        },
+        {
+          "branch": "normal",
+          "T": 0.22,
+          "mu": 0.35,
+          "Phi_fixed": 0.15,
+          "order": 384,
+          "cutoff_factor": 70,
+          "derivative_relative_step": 0.0003,
+          "pressure": 0.00011423395970050735,
+          "charge_density": 0.00048211015085019817,
+          "entropy_density": 0.003082236217496298,
+          "enthalpy": 0.0008468305206467548,
+          "tree_phase_stiffness": 0.0,
+          "static_Doppler_momentum_proxy": 0.000846830520646672,
+          "proposed_composite_inertia": 0.000846830520646672,
+          "composition_residual": -8.283304597789254e-17,
+          "relative_composition_residual": 9.781537622738252e-14,
+          "role": "natural-unit source-function diagnostic; no physical rho_n/rho_s or He-II state"
+        },
+        {
+          "branch": "normal",
+          "T": 0.22,
+          "mu": 0.35,
+          "Phi_fixed": 0.15,
+          "order": 384,
+          "cutoff_factor": 70,
+          "derivative_relative_step": 0.0001,
+          "pressure": 0.00011423395970050735,
+          "charge_density": 0.0004821101508499685,
+          "entropy_density": 0.0030822362174954807,
+          "enthalpy": 0.0008468305206464947,
+          "tree_phase_stiffness": 0.0,
+          "static_Doppler_momentum_proxy": 0.000846830520646672,
+          "proposed_composite_inertia": 0.000846830520646672,
+          "composition_residual": 1.7726705520137997e-16,
+          "relative_composition_residual": 2.0933002635050532e-13,
+          "role": "natural-unit source-function diagnostic; no physical rho_n/rho_s or He-II state"
+        }
+      ],
+      "component_refinement_changes": {
+        "quadrature_order": {
+          "pressure": 3.345601140003579e-14,
+          "enthalpy": 9.858355981035035e-15,
+          "static_Doppler_momentum_proxy": 9.205399935535983e-14
+        },
+        "cutoff_factor": {
+          "pressure": 9.063969045967143e-14,
+          "enthalpy": 1.0076007996200744e-13,
+          "static_Doppler_momentum_proxy": 2.17652015165663e-14
+        },
+        "pressure_derivative": {
+          "pressure": 0.0,
+          "enthalpy": 3.0714540257786736e-13,
+          "static_Doppler_momentum_proxy": 0.0
+        }
+      },
+      "observed_refinement_spread_relative": 3.0714540257790407e-13,
+      "composition_target": {
+        "pass": true,
+        "relative_threshold": 1e-05,
+        "exceeds_threshold_plus_observed_spread": false,
+        "interpretation": "conditional proxy/tree composition target only; refinement spread is not a rigorous physical uncertainty bound"
+      }
+    },
+    {
+      "point": {
+        "branch": "condensed",
+        "T": 0.04,
+        "mu": 1.28
+      },
+      "final": {
+        "branch": "condensed",
+        "T": 0.04,
+        "mu": 1.28,
+        "Phi_fixed": 0.15,
+        "order": 384,
+        "cutoff_factor": 100,
+        "derivative_relative_step": 0.0001,
+        "pressure": 0.10189245591065266,
+        "charge_density": 0.8171425862737592,
+        "entropy_density": 0.0003650340301905585,
+        "enthalpy": 1.0459571117916195,
+        "tree_phase_stiffness": 0.6384000000000001,
+        "static_Doppler_momentum_proxy": 7.528724032859426e-05,
+        "proposed_composite_inertia": 1.0460298472403289,
+        "composition_residual": 7.27354487093379e-05,
+        "relative_composition_residual": 6.953477369812248e-05,
+        "role": "natural-unit source-function diagnostic; no physical rho_n/rho_s or He-II state"
+      },
+      "order_sweep": [
+        {
+          "branch": "condensed",
+          "T": 0.04,
+          "mu": 1.28,
+          "Phi_fixed": 0.15,
+          "order": 128,
+          "cutoff_factor": 70,
+          "derivative_relative_step": 0.0001,
+          "pressure": 0.10189245580389998,
+          "charge_density": 0.8171425860235073,
+          "entropy_density": 0.000365031361434139,
+          "enthalpy": 1.0459571113645467,
+          "tree_phase_stiffness": 0.6384000000000001,
+          "static_Doppler_momentum_proxy": 7.528724035062336e-05,
+          "proposed_composite_inertia": 1.0460298472403509,
+          "composition_residual": 7.273587580414187e-05,
+          "relative_composition_residual": 6.95351819989024e-05,
+          "role": "natural-unit source-function diagnostic; no physical rho_n/rho_s or He-II state"
+        },
+        {
+          "branch": "condensed",
+          "T": 0.04,
+          "mu": 1.28,
+          "Phi_fixed": 0.15,
+          "order": 256,
+          "cutoff_factor": 70,
+          "derivative_relative_step": 0.0001,
+          "pressure": 0.10189245590939375,
+          "charge_density": 0.8171425862707326,
+          "entropy_density": 0.00036503399873423953,
+          "enthalpy": 1.045957111786487,
+          "tree_phase_stiffness": 0.6384000000000001,
+          "static_Doppler_momentum_proxy": 7.52872403286235e-05,
+          "proposed_composite_inertia": 1.0460298472403289,
+          "composition_residual": 7.273545384189894e-05,
+          "relative_composition_residual": 6.953477860482859e-05,
+          "role": "natural-unit source-function diagnostic; no physical rho_n/rho_s or He-II state"
+        },
+        {
+          "branch": "condensed",
+          "T": 0.04,
+          "mu": 1.28,
+          "Phi_fixed": 0.15,
+          "order": 384,
+          "cutoff_factor": 70,
+          "derivative_relative_step": 0.0001,
+          "pressure": 0.10189245591093866,
+          "charge_density": 0.8171425862743645,
+          "entropy_density": 0.00036503403722197103,
+          "enthalpy": 1.0459571117926754,
+          "tree_phase_stiffness": 0.6384000000000001,
+          "static_Doppler_momentum_proxy": 7.52872403285918e-05,
+          "proposed_composite_inertia": 1.0460298472403289,
+          "composition_residual": 7.27354476535158e-05,
+          "relative_composition_residual": 6.953477268876113e-05,
+          "role": "natural-unit source-function diagnostic; no physical rho_n/rho_s or He-II state"
+        }
+      ],
+      "cutoff_sweep": [
+        {
+          "branch": "condensed",
+          "T": 0.04,
+          "mu": 1.28,
+          "Phi_fixed": 0.15,
+          "order": 384,
+          "cutoff_factor": 45,
+          "derivative_relative_step": 0.0001,
+          "pressure": 0.10189245591104831,
+          "charge_density": 0.8171425862746357,
+          "entropy_density": 0.00036503404004378787,
+          "enthalpy": 1.0459571117931354,
+          "tree_phase_stiffness": 0.6384000000000001,
+          "static_Doppler_momentum_proxy": 7.528724032860324e-05,
+          "proposed_composite_inertia": 1.0460298472403289,
+          "composition_residual": 7.273544719343938e-05,
+          "relative_composition_residual": 6.953477224893007e-05,
+          "role": "natural-unit source-function diagnostic; no physical rho_n/rho_s or He-II state"
+        },
+        {
+          "branch": "condensed",
+          "T": 0.04,
+          "mu": 1.28,
+          "Phi_fixed": 0.15,
+          "order": 384,
+          "cutoff_factor": 70,
+          "derivative_relative_step": 0.0001,
+          "pressure": 0.10189245591093866,
+          "charge_density": 0.8171425862743645,
+          "entropy_density": 0.00036503403722197103,
+          "enthalpy": 1.0459571117926754,
+          "tree_phase_stiffness": 0.6384000000000001,
+          "static_Doppler_momentum_proxy": 7.52872403285918e-05,
+          "proposed_composite_inertia": 1.0460298472403289,
+          "composition_residual": 7.27354476535158e-05,
+          "relative_composition_residual": 6.953477268876113e-05,
+          "role": "natural-unit source-function diagnostic; no physical rho_n/rho_s or He-II state"
+        },
+        {
+          "branch": "condensed",
+          "T": 0.04,
+          "mu": 1.28,
+          "Phi_fixed": 0.15,
+          "order": 384,
+          "cutoff_factor": 100,
+          "derivative_relative_step": 0.0001,
+          "pressure": 0.10189245591065266,
+          "charge_density": 0.8171425862737592,
+          "entropy_density": 0.0003650340301905585,
+          "enthalpy": 1.0459571117916195,
+          "tree_phase_stiffness": 0.6384000000000001,
+          "static_Doppler_momentum_proxy": 7.528724032859426e-05,
+          "proposed_composite_inertia": 1.0460298472403289,
+          "composition_residual": 7.27354487093379e-05,
+          "relative_composition_residual": 6.953477369812248e-05,
+          "role": "natural-unit source-function diagnostic; no physical rho_n/rho_s or He-II state"
+        }
+      ],
+      "derivative_sweep": [
+        {
+          "branch": "condensed",
+          "T": 0.04,
+          "mu": 1.28,
+          "Phi_fixed": 0.15,
+          "order": 384,
+          "cutoff_factor": 70,
+          "derivative_relative_step": 0.001,
+          "pressure": 0.10189245591093866,
+          "charge_density": 0.8171425862753521,
+          "entropy_density": 0.0003650340523476033,
+          "enthalpy": 1.0459571117945445,
+          "tree_phase_stiffness": 0.6384000000000001,
+          "static_Doppler_momentum_proxy": 7.52872403285918e-05,
+          "proposed_composite_inertia": 1.0460298472403289,
+          "composition_residual": 7.273544578434432e-05,
+          "relative_composition_residual": 6.953477090184131e-05,
+          "role": "natural-unit source-function diagnostic; no physical rho_n/rho_s or He-II state"
+        },
+        {
+          "branch": "condensed",
+          "T": 0.04,
+          "mu": 1.28,
+          "Phi_fixed": 0.15,
+          "order": 384,
+          "cutoff_factor": 70,
+          "derivative_relative_step": 0.0003,
+          "pressure": 0.10189245591093866,
+          "charge_density": 0.8171425862751298,
+          "entropy_density": 0.0003650340374108632,
+          "enthalpy": 1.0459571117936626,
+          "tree_phase_stiffness": 0.6384000000000001,
+          "static_Doppler_momentum_proxy": 7.52872403285918e-05,
+          "proposed_composite_inertia": 1.0460298472403289,
+          "composition_residual": 7.273544666630549e-05,
+          "relative_composition_residual": 6.953477174499236e-05,
+          "role": "natural-unit source-function diagnostic; no physical rho_n/rho_s or He-II state"
+        },
+        {
+          "branch": "condensed",
+          "T": 0.04,
+          "mu": 1.28,
+          "Phi_fixed": 0.15,
+          "order": 384,
+          "cutoff_factor": 70,
+          "derivative_relative_step": 0.0001,
+          "pressure": 0.10189245591093866,
+          "charge_density": 0.8171425862743645,
+          "entropy_density": 0.00036503403722197103,
+          "enthalpy": 1.0459571117926754,
+          "tree_phase_stiffness": 0.6384000000000001,
+          "static_Doppler_momentum_proxy": 7.52872403285918e-05,
+          "proposed_composite_inertia": 1.0460298472403289,
+          "composition_residual": 7.27354476535158e-05,
+          "relative_composition_residual": 6.953477268876113e-05,
+          "role": "natural-unit source-function diagnostic; no physical rho_n/rho_s or He-II state"
+        }
+      ],
+      "component_refinement_changes": {
+        "quadrature_order": {
+          "pressure": 1.5162231181076813e-11,
+          "enthalpy": 5.916478858922138e-12,
+          "static_Doppler_momentum_proxy": 4.210455965669542e-13
+        },
+        "cutoff_factor": {
+          "pressure": 2.806952942436083e-12,
+          "enthalpy": 1.0094315383629266e-12,
+          "static_Doppler_momentum_proxy": 3.276199169526098e-14
+        },
+        "pressure_derivative": {
+          "pressure": 0.0,
+          "enthalpy": 9.438344100015427e-13,
+          "static_Doppler_momentum_proxy": 0.0
+        }
+      },
+      "observed_refinement_spread_relative": 5.916097762361298e-12,
+      "composition_target": {
+        "pass": false,
+        "relative_threshold": 1e-05,
+        "exceeds_threshold_plus_observed_spread": true,
+        "interpretation": "conditional proxy/tree composition target only; refinement spread is not a rigorous physical uncertainty bound"
+      }
+    },
+    {
+      "point": {
+        "branch": "condensed",
+        "T": 0.08,
+        "mu": 1.28
+      },
+      "final": {
+        "branch": "condensed",
+        "T": 0.08,
+        "mu": 1.28,
+        "Phi_fixed": 0.15,
+        "order": 384,
+        "cutoff_factor": 100,
+        "derivative_relative_step": 0.0001,
+        "pressure": 0.10193955753696793,
+        "charge_density": 0.8170609937321892,
+        "entropy_density": 0.002317267126517031,
+        "enthalpy": 1.0460234533473236,
+        "tree_phase_stiffness": 0.6384000000000001,
+        "static_Doppler_momentum_proxy": 0.0007769892267661129,
+        "proposed_composite_inertia": 1.0467315492267664,
+        "composition_residual": 0.0007080958794427605,
+        "relative_composition_residual": 0.000676482790612206,
+        "role": "natural-unit source-function diagnostic; no physical rho_n/rho_s or He-II state"
+      },
+      "order_sweep": [
+        {
+          "branch": "condensed",
+          "T": 0.08,
+          "mu": 1.28,
+          "Phi_fixed": 0.15,
+          "order": 128,
+          "cutoff_factor": 70,
+          "derivative_relative_step": 0.0001,
+          "pressure": 0.10193955732346258,
+          "charge_density": 0.8170609932318841,
+          "entropy_density": 0.0023172644578068704,
+          "enthalpy": 1.0460234524934362,
+          "tree_phase_stiffness": 0.6384000000000001,
+          "static_Doppler_momentum_proxy": 0.0007769892267853069,
+          "proposed_composite_inertia": 1.0467315492267855,
+          "composition_residual": 0.0007080967333492616,
+          "relative_composition_residual": 0.0006764836063958601,
+          "role": "natural-unit source-function diagnostic; no physical rho_n/rho_s or He-II state"
+        },
+        {
+          "branch": "condensed",
+          "T": 0.08,
+          "mu": 1.28,
+          "Phi_fixed": 0.15,
+          "order": 256,
+          "cutoff_factor": 70,
+          "derivative_relative_step": 0.0001,
+          "pressure": 0.10193955753445011,
+          "charge_density": 0.8170609937264067,
+          "entropy_density": 0.0023172670950838414,
+          "enthalpy": 1.0460234533374073,
+          "tree_phase_stiffness": 0.6384000000000001,
+          "static_Doppler_momentum_proxy": 0.0007769892267663506,
+          "proposed_composite_inertia": 1.0467315492267666,
+          "composition_residual": 0.0007080958893592726,
+          "relative_composition_residual": 0.0006764828000859931,
+          "role": "natural-unit source-function diagnostic; no physical rho_n/rho_s or He-II state"
+        },
+        {
+          "branch": "condensed",
+          "T": 0.08,
+          "mu": 1.28,
+          "Phi_fixed": 0.15,
+          "order": 384,
+          "cutoff_factor": 70,
+          "derivative_relative_step": 0.0001,
+          "pressure": 0.10193955753753994,
+          "charge_density": 0.8170609937336799,
+          "entropy_density": 0.0023172671337219155,
+          "enthalpy": 1.046023453349808,
+          "tree_phase_stiffness": 0.6384000000000001,
+          "static_Doppler_momentum_proxy": 0.0007769892267662241,
+          "proposed_composite_inertia": 1.0467315492267664,
+          "composition_residual": 0.0007080958769583034,
+          "relative_composition_residual": 0.000676482788238668,
+          "role": "natural-unit source-function diagnostic; no physical rho_n/rho_s or He-II state"
+        }
+      ],
+      "cutoff_sweep": [
+        {
+          "branch": "condensed",
+          "T": 0.08,
+          "mu": 1.28,
+          "Phi_fixed": 0.15,
+          "order": 384,
+          "cutoff_factor": 45,
+          "derivative_relative_step": 0.0001,
+          "pressure": 0.10193955753775924,
+          "charge_density": 0.8170609937340775,
+          "entropy_density": 0.002317267136485908,
+          "enthalpy": 1.0460234533505381,
+          "tree_phase_stiffness": 0.6384000000000001,
+          "static_Doppler_momentum_proxy": 0.0007769892267663393,
+          "proposed_composite_inertia": 1.0467315492267666,
+          "composition_residual": 0.0007080958762284428,
+          "relative_composition_residual": 0.000676482787541392,
+          "role": "natural-unit source-function diagnostic; no physical rho_n/rho_s or He-II state"
+        },
+        {
+          "branch": "condensed",
+          "T": 0.08,
+          "mu": 1.28,
+          "Phi_fixed": 0.15,
+          "order": 384,
+          "cutoff_factor": 70,
+          "derivative_relative_step": 0.0001,
+          "pressure": 0.10193955753753994,
+          "charge_density": 0.8170609937336799,
+          "entropy_density": 0.0023172671337219155,
+          "enthalpy": 1.046023453349808,
+          "tree_phase_stiffness": 0.6384000000000001,
+          "static_Doppler_momentum_proxy": 0.0007769892267662241,
+          "proposed_composite_inertia": 1.0467315492267664,
+          "composition_residual": 0.0007080958769583034,
+          "relative_composition_residual": 0.000676482788238668,
+          "role": "natural-unit source-function diagnostic; no physical rho_n/rho_s or He-II state"
+        },
+        {
+          "branch": "condensed",
+          "T": 0.08,
+          "mu": 1.28,
+          "Phi_fixed": 0.15,
+          "order": 384,
+          "cutoff_factor": 100,
+          "derivative_relative_step": 0.0001,
+          "pressure": 0.10193955753696793,
+          "charge_density": 0.8170609937321892,
+          "entropy_density": 0.002317267126517031,
+          "enthalpy": 1.0460234533473236,
+          "tree_phase_stiffness": 0.6384000000000001,
+          "static_Doppler_momentum_proxy": 0.0007769892267661129,
+          "proposed_composite_inertia": 1.0467315492267664,
+          "composition_residual": 0.0007080958794427605,
+          "relative_composition_residual": 0.000676482790612206,
+          "role": "natural-unit source-function diagnostic; no physical rho_n/rho_s or He-II state"
+        }
+      ],
+      "derivative_sweep": [
+        {
+          "branch": "condensed",
+          "T": 0.08,
+          "mu": 1.28,
+          "Phi_fixed": 0.15,
+          "order": 384,
+          "cutoff_factor": 70,
+          "derivative_relative_step": 0.001,
+          "pressure": 0.10193955753753994,
+          "charge_density": 0.8170609937345997,
+          "entropy_density": 0.002317267136395703,
+          "enthalpy": 1.0460234533511994,
+          "tree_phase_stiffness": 0.6384000000000001,
+          "static_Doppler_momentum_proxy": 0.0007769892267662241,
+          "proposed_composite_inertia": 1.0467315492267664,
+          "composition_residual": 0.000708095875566972,
+          "relative_composition_residual": 0.0006764827869094528,
+          "role": "natural-unit source-function diagnostic; no physical rho_n/rho_s or He-II state"
+        },
+        {
+          "branch": "condensed",
+          "T": 0.08,
+          "mu": 1.28,
+          "Phi_fixed": 0.15,
+          "order": 384,
+          "cutoff_factor": 70,
+          "derivative_relative_step": 0.0003,
+          "pressure": 0.10193955753753994,
+          "charge_density": 0.8170609937343307,
+          "entropy_density": 0.0023172671337257705,
+          "enthalpy": 1.0460234533506414,
+          "tree_phase_stiffness": 0.6384000000000001,
+          "static_Doppler_momentum_proxy": 0.0007769892267662241,
+          "proposed_composite_inertia": 1.0467315492267664,
+          "composition_residual": 0.00070809587612497,
+          "relative_composition_residual": 0.0006764827874425389,
+          "role": "natural-unit source-function diagnostic; no physical rho_n/rho_s or He-II state"
+        },
+        {
+          "branch": "condensed",
+          "T": 0.08,
+          "mu": 1.28,
+          "Phi_fixed": 0.15,
+          "order": 384,
+          "cutoff_factor": 70,
+          "derivative_relative_step": 0.0001,
+          "pressure": 0.10193955753753994,
+          "charge_density": 0.8170609937336799,
+          "entropy_density": 0.0023172671337219155,
+          "enthalpy": 1.046023453349808,
+          "tree_phase_stiffness": 0.6384000000000001,
+          "static_Doppler_momentum_proxy": 0.0007769892267662241,
+          "proposed_composite_inertia": 1.0467315492267664,
+          "composition_residual": 0.0007080958769583034,
+          "relative_composition_residual": 0.000676482788238668,
+          "role": "natural-unit source-function diagnostic; no physical rho_n/rho_s or He-II state"
+        }
+      ],
+      "component_refinement_changes": {
+        "quadrature_order": {
+          "pressure": 3.0310450809253364e-11,
+          "enthalpy": 1.1855132938119819e-11,
+          "static_Doppler_momentum_proxy": 1.627023502474187e-13
+        },
+        "cutoff_factor": {
+          "pressure": 5.611311954653599e-12,
+          "enthalpy": 2.3751447221856224e-12,
+          "static_Doppler_momentum_proxy": 1.431669051062425e-13
+        },
+        "pressure_derivative": {
+          "pressure": 0.0,
+          "enthalpy": 7.966679902006917e-13,
+          "static_Doppler_momentum_proxy": 0.0
+        }
+      },
+      "observed_refinement_spread_relative": 1.1847233918751316e-11,
+      "composition_target": {
+        "pass": false,
+        "relative_threshold": 1e-05,
+        "exceeds_threshold_plus_observed_spread": true,
+        "interpretation": "conditional proxy/tree composition target only; refinement spread is not a rigorous physical uncertainty bound"
+      }
+    },
+    {
+      "point": {
+        "branch": "condensed",
+        "T": 0.16,
+        "mu": 1.28
+      },
+      "final": {
+        "branch": "condensed",
+        "T": 0.16,
+        "mu": 1.28,
+        "Phi_fixed": 0.15,
+        "order": 384,
+        "cutoff_factor": 100,
+        "derivative_relative_step": 0.0001,
+        "pressure": 0.10248102016916888,
+        "charge_density": 0.8165636183957248,
+        "entropy_density": 0.012758423488812749,
+        "enthalpy": 1.0472427793047376,
+        "tree_phase_stiffness": 0.6384000000000001,
+        "static_Doppler_momentum_proxy": 0.006425413134386733,
+        "proposed_composite_inertia": 1.052379973134387,
+        "composition_residual": 0.005137193829649389,
+        "relative_composition_residual": 0.004881500941479222,
+        "role": "natural-unit source-function diagnostic; no physical rho_n/rho_s or He-II state"
+      },
+      "order_sweep": [
+        {
+          "branch": "condensed",
+          "T": 0.16,
+          "mu": 1.28,
+          "Phi_fixed": 0.15,
+          "order": 128,
+          "cutoff_factor": 70,
+          "derivative_relative_step": 0.0001,
+          "pressure": 0.10248101974215837,
+          "charge_density": 0.8165636173950062,
+          "entropy_density": 0.012758420819882857,
+          "enthalpy": 1.0472427775967892,
+          "tree_phase_stiffness": 0.6384000000000001,
+          "static_Doppler_momentum_proxy": 0.006425413134388317,
+          "proposed_composite_inertia": 1.0523799731343886,
+          "composition_residual": 0.005137195537599393,
+          "relative_composition_residual": 0.004881502564419643,
+          "role": "natural-unit source-function diagnostic; no physical rho_n/rho_s or He-II state"
+        },
+        {
+          "branch": "condensed",
+          "T": 0.16,
+          "mu": 1.28,
+          "Phi_fixed": 0.15,
+          "order": 256,
+          "cutoff_factor": 70,
+          "derivative_relative_step": 0.0001,
+          "pressure": 0.10248102016413335,
+          "charge_density": 0.8165636183839703,
+          "entropy_density": 0.012758423457240781,
+          "enthalpy": 1.0472427792846404,
+          "tree_phase_stiffness": 0.6384000000000001,
+          "static_Doppler_momentum_proxy": 0.006425413134387199,
+          "proposed_composite_inertia": 1.0523799731343875,
+          "composition_residual": 0.00513719384974709,
+          "relative_composition_residual": 0.004881500960576601,
+          "role": "natural-unit source-function diagnostic; no physical rho_n/rho_s or He-II state"
+        },
+        {
+          "branch": "condensed",
+          "T": 0.16,
+          "mu": 1.28,
+          "Phi_fixed": 0.15,
+          "order": 384,
+          "cutoff_factor": 70,
+          "derivative_relative_step": 0.0001,
+          "pressure": 0.10248102017031298,
+          "charge_density": 0.8165636183984534,
+          "entropy_density": 0.01275842349593668,
+          "enthalpy": 1.0472427793093704,
+          "tree_phase_stiffness": 0.6384000000000001,
+          "static_Doppler_momentum_proxy": 0.006425413134387424,
+          "proposed_composite_inertia": 1.0523799731343877,
+          "composition_residual": 0.005137193825017317,
+          "relative_composition_residual": 0.004881500937077698,
+          "role": "natural-unit source-function diagnostic; no physical rho_n/rho_s or He-II state"
+        }
+      ],
+      "cutoff_sweep": [
+        {
+          "branch": "condensed",
+          "T": 0.16,
+          "mu": 1.28,
+          "Phi_fixed": 0.15,
+          "order": 384,
+          "cutoff_factor": 45,
+          "derivative_relative_step": 0.0001,
+          "pressure": 0.10248102017075163,
+          "charge_density": 0.8165636183995195,
+          "entropy_density": 0.012758423498723801,
+          "enthalpy": 1.0472427793111807,
+          "tree_phase_stiffness": 0.6384000000000001,
+          "static_Doppler_momentum_proxy": 0.006425413134387707,
+          "proposed_composite_inertia": 1.052379973134388,
+          "composition_residual": 0.005137193823207209,
+          "relative_composition_residual": 0.004881500935357684,
+          "role": "natural-unit source-function diagnostic; no physical rho_n/rho_s or He-II state"
+        },
+        {
+          "branch": "condensed",
+          "T": 0.16,
+          "mu": 1.28,
+          "Phi_fixed": 0.15,
+          "order": 384,
+          "cutoff_factor": 70,
+          "derivative_relative_step": 0.0001,
+          "pressure": 0.10248102017031298,
+          "charge_density": 0.8165636183984534,
+          "entropy_density": 0.01275842349593668,
+          "enthalpy": 1.0472427793093704,
+          "tree_phase_stiffness": 0.6384000000000001,
+          "static_Doppler_momentum_proxy": 0.006425413134387424,
+          "proposed_composite_inertia": 1.0523799731343877,
+          "composition_residual": 0.005137193825017317,
+          "relative_composition_residual": 0.004881500937077698,
+          "role": "natural-unit source-function diagnostic; no physical rho_n/rho_s or He-II state"
+        },
+        {
+          "branch": "condensed",
+          "T": 0.16,
+          "mu": 1.28,
+          "Phi_fixed": 0.15,
+          "order": 384,
+          "cutoff_factor": 100,
+          "derivative_relative_step": 0.0001,
+          "pressure": 0.10248102016916888,
+          "charge_density": 0.8165636183957248,
+          "entropy_density": 0.012758423488812749,
+          "enthalpy": 1.0472427793047376,
+          "tree_phase_stiffness": 0.6384000000000001,
+          "static_Doppler_momentum_proxy": 0.006425413134386733,
+          "proposed_composite_inertia": 1.052379973134387,
+          "composition_residual": 0.005137193829649389,
+          "relative_composition_residual": 0.004881500941479222,
+          "role": "natural-unit source-function diagnostic; no physical rho_n/rho_s or He-II state"
+        }
+      ],
+      "derivative_sweep": [
+        {
+          "branch": "condensed",
+          "T": 0.16,
+          "mu": 1.28,
+          "Phi_fixed": 0.15,
+          "order": 384,
+          "cutoff_factor": 70,
+          "derivative_relative_step": 0.001,
+          "pressure": 0.10248102017031298,
+          "charge_density": 0.8165636183996108,
+          "entropy_density": 0.012758423495950558,
+          "enthalpy": 1.047242779310854,
+          "tree_phase_stiffness": 0.6384000000000001,
+          "static_Doppler_momentum_proxy": 0.006425413134387424,
+          "proposed_composite_inertia": 1.0523799731343877,
+          "composition_residual": 0.0051371938235336145,
+          "relative_composition_residual": 0.004881500935667845,
+          "role": "natural-unit source-function diagnostic; no physical rho_n/rho_s or He-II state"
+        },
+        {
+          "branch": "condensed",
+          "T": 0.16,
+          "mu": 1.28,
+          "Phi_fixed": 0.15,
+          "order": 384,
+          "cutoff_factor": 70,
+          "derivative_relative_step": 0.0003,
+          "pressure": 0.10248102017031298,
+          "charge_density": 0.8165636183992306,
+          "entropy_density": 0.012758423495921262,
+          "enthalpy": 1.0472427793103627,
+          "tree_phase_stiffness": 0.6384000000000001,
+          "static_Doppler_momentum_proxy": 0.006425413134387424,
+          "proposed_composite_inertia": 1.0523799731343877,
+          "composition_residual": 0.005137193824024999,
+          "relative_composition_residual": 0.004881500936134772,
+          "role": "natural-unit source-function diagnostic; no physical rho_n/rho_s or He-II state"
+        },
+        {
+          "branch": "condensed",
+          "T": 0.16,
+          "mu": 1.28,
+          "Phi_fixed": 0.15,
+          "order": 384,
+          "cutoff_factor": 70,
+          "derivative_relative_step": 0.0001,
+          "pressure": 0.10248102017031298,
+          "charge_density": 0.8165636183984534,
+          "entropy_density": 0.01275842349593668,
+          "enthalpy": 1.0472427793093704,
+          "tree_phase_stiffness": 0.6384000000000001,
+          "static_Doppler_momentum_proxy": 0.006425413134387424,
+          "proposed_composite_inertia": 1.0523799731343877,
+          "composition_residual": 0.005137193825017317,
+          "relative_composition_residual": 0.004881500937077698,
+          "role": "natural-unit source-function diagnostic; no physical rho_n/rho_s or He-II state"
+        }
+      ],
+      "component_refinement_changes": {
+        "quadrature_order": {
+          "pressure": 6.03002023680481e-11,
+          "enthalpy": 2.3614386575412084e-11,
+          "static_Doppler_momentum_proxy": 3.5097206539153475e-14
+        },
+        "cutoff_factor": {
+          "pressure": 1.1164005810662858e-11,
+          "enthalpy": 4.423748464717059e-12,
+          "static_Doppler_momentum_proxy": 1.0758643696809737e-13
+        },
+        "pressure_derivative": {
+          "pressure": 0.0,
+          "enthalpy": 9.47552333627387e-13,
+          "static_Doppler_momentum_proxy": 0.0
+        }
+      },
+      "observed_refinement_spread_relative": 2.349932721478567e-11,
+      "composition_target": {
+        "pass": false,
+        "relative_threshold": 1e-05,
+        "exceeds_threshold_plus_observed_spread": true,
+        "interpretation": "conditional proxy/tree composition target only; refinement spread is not a rigorous physical uncertainty bound"
+      }
+    }
+  ],
+  "tree_Goldstone_control": [
+    {
+      "k": 0.001,
+      "source_E_over_k_squared": 0.16305689370578302,
+      "analytic_tree_sound_squared": 0.1630568042501022
+    },
+    {
+      "k": 0.0001,
+      "source_E_over_k_squared": 0.1630568051446591,
+      "analytic_tree_sound_squared": 0.1630568042501022
+    },
+    {
+      "k": 1e-05,
+      "source_E_over_k_squared": 0.16305680425904773,
+      "analytic_tree_sound_squared": 0.1630568042501022
+    }
+  ],
+  "condensed_composition_gate": {
+    "status": "FAIL_REQUIRED_COMMON_FLOW_IDENTITY",
+    "target_pass": false,
+    "failed_points": [
+      {
+        "branch": "condensed",
+        "T": 0.04,
+        "mu": 1.28
+      },
+      {
+        "branch": "condensed",
+        "T": 0.08,
+        "mu": 1.28
+      },
+      {
+        "branch": "condensed",
+        "T": 0.16,
+        "mu": 1.28
+      }
+    ],
+    "operator_admitted": false,
+    "physical_material_mapping_admitted": false
+  },
+  "candidate_controller": "finite_temperature_phase_stiffness_and_normal_momentum_common_action_match_missing",
+  "physical_controller": "vector_momentum_constitutive_origin_and_material_frame_admission_open",
+  "locked_verification": {
+    "locked_before_first_execution": true,
+    "orders": [
+      128,
+      256,
+      384
+    ],
+    "order_sweep_cutoff": 70,
+    "cutoffs": [
+      45,
+      70,
+      100
+    ],
+    "cutoff_sweep_order": 384,
+    "derivative_relative_steps": [
+      0.001,
+      0.0003,
+      0.0001
+    ],
+    "composition_relative_tolerance": 1e-05,
+    "refinement_relative_tolerance": 1e-06,
+    "identity_tolerance": 1e-08,
+    "negative_control_floor": 1e-07,
+    "spectrum_momenta": [
+      0.001,
+      0.0001,
+      1e-05
+    ],
+    "relative_metric": "abs(a-b)/max(abs(a),abs(b),1e-30)",
+    "threshold_policy": "retain failed diagnostic/target; no post-preview adjustment"
+  },
+  "whole_Core_runtime_executed": false,
+  "complete_flow_master_function_derived": false,
+  "phase_stiffness_repaired_to_force_identity": false,
+  "physical_HeII_state_assigned": false,
+  "physical_UET_operator_admitted": false,
+  "physical_prediction_executed": false,
+  "physical_J04_executed": false,
+  "physical_J05_executed": false,
+  "physical_J06_executed": false,
+  "claim_promotion": false,
+  "dependency_unlock": false,
+  "thresholds_relaxed": false,
+  "notes": [
+    "AST selected source bodies execute in isolated explicit configuration namespaces; the full Core facade is not imported.",
+    "Quadrature memoization does not change nodes, weights or integrands; source body hashes are retained.",
+    "Five-point wrapper derivatives differ from the native Core second-order state function.",
+    "Target failure rejects only identifying this formal Doppler proxy plus tree stiffness as one complete ideal inertia.",
+    "No corrected coefficient is fitted or emitted; full finite-T current/stress/flow action must be derived consistently.",
+    "Natural relativistic inertia E^4 is not a material SI mass density or He-II sound prediction.",
+    "Prior Core/Topic13 static lanes and admission gates are not modified."
+  ]
+}

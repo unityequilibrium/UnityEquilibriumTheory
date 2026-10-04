@@ -1,0 +1,57 @@
+{
+  "schema_version": "uet-equation-registry-addendum-v1",
+  "status": "CONDITIONAL_CORRESPONDENCE_NOT_MERGED",
+  "extends": "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry.json",
+  "equation_entries": [
+    {
+      "equation_id": "candidate.topic10_13.o2_leading_Goldstone_collision",
+      "classification": "tree_low_energy_asymptotic_derivation",
+      "relation_or_code_path": {
+        "pressure": "P(X)=(X-m_c^2)^2/(4lambda_c)",
+        "cubic": "g3*(varphi_t^3-varphi_t*grad_varphi^2)",
+        "rate": "Gamma_occ/k^5 -> 3lambda_c*mu^6/(20pi*r*B^4)",
+        "pole": "gamma_pole=Gamma_occ/2"
+      },
+      "variables": {
+        "theta": "matter phase, not response Phi",
+        "varphi": "canonically normalized fluctuation E",
+        "mu": "chemical potential E",
+        "g3": "leading cubic coupling E^-2",
+        "Gamma_occ": "probability decay E, not transport relaxation time"
+      },
+      "mathematical_role": "leading 1->2 collision channel and equilibrium triad invariants",
+      "standard_physics_counterpart": "Beliaev phonon decay in 3D, tree weak-coupling asymptotics",
+      "observable_mapping": {
+        "status": "NOT_ADMITTED",
+        "reason": "no connected heat-current collision projection/thermalization or material/SI mapping"
+      },
+      "unit_lane": "natural_fixed_Phi_tree_low_energy",
+      "parameter_dimensions": "M E; Gamma E; Gamma/k^5 E^-4; gamma curvature E^-2",
+      "source_or_origin": "docs/topics/0.10_Fluid_Dynamics_Chaos/CORE_O2_GOLDSTONE_COLLISION_DERIVATION.md",
+      "assumptions": [
+        "fixed response",
+        "weak-coupling exploratory channel",
+        "leading derivative vertex with source tree curvature",
+        "no finite-T transport"
+      ],
+      "symmetry_and_conservation": "derivative soft limit; energy/momentum on-shell and Bose triad detailed balance",
+      "limiting_cases": [
+        "k->0",
+        "nonrelativistic mu-m ->0"
+      ],
+      "implementation_paths": [
+        "docs/topics/0.10_Fluid_Dynamics_Chaos/Code/03_Research/Research_Fluid_Core_O2_Goldstone_Collision.py"
+      ],
+      "verifier_paths": [
+        "docs/topics/0.10_Fluid_Dynamics_Chaos/Code/03_Research/Research_Fluid_Core_O2_Goldstone_Collision.py"
+      ],
+      "evidence_class": "INTERNAL_ASYMPTOTIC_CHANNEL_REFERENCE",
+      "proof_status": "derivation/scope/thresholds locked before first execution; no full microscopic or theorem closure",
+      "blockers": [
+        "vector_momentum_constitutive_origin_and_material_frame_admission_open",
+        "connected_collision_heat_current_and_thermalization_window_missing"
+      ],
+      "claim_boundary": "no full finite-T collision, physical Kubo, collective sound damping, material or dependency unlock"
+    }
+  ]
+}

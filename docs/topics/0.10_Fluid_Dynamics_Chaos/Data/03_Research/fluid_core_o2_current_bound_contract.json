@@ -1,0 +1,76 @@
+{
+  "schema_version": "t010-core-o2-current-bound-v1",
+  "date": "2026-10-01",
+  "record_role": "CONDITIONAL_SELECTED_FINITE_CUTOFF_CURRENT_UPPER_BOUND_INTERNAL",
+  "card": "docs/topics/0.10_Fluid_Dynamics_Chaos/CORE_O2_GOLDSTONE_CURRENT_BOUND.md",
+  "continuum_contract": "docs/topics/0.10_Fluid_Dynamics_Chaos/Data/03_Research/fluid_core_o2_continuum_form_contract.json",
+  "continuum_verifier": "docs/topics/0.10_Fluid_Dynamics_Chaos/Code/03_Research/Research_Fluid_Core_O2_Continuum_Form.py",
+  "continuum_artifact": "docs/topics/0.10_Fluid_Dynamics_Chaos/Result/artifacts/fluid_core_o2_continuum_form_audit.json",
+  "physical_controller": "vector_momentum_constitutive_origin_and_material_frame_admission_open",
+  "previous_measured_controller": "source_weighted_continuum_current_upper_bound_and_microscopic_heat_current_correspondence_open",
+  "candidate_controller": "useful_certified_continuum_current_error_and_microscopic_heat_current_correspondence_open",
+  "mu": 1.28,
+  "temperatures": [
+    0.002,
+    0.004
+  ],
+  "lambda_exploratory": 0.01,
+  "verification": {
+    "locked_before_first_execution": true,
+    "cutoff_factor": 60,
+    "patch1_parent_over_K": [
+      0.5,
+      0.625,
+      0.75,
+      0.875,
+      1.0
+    ],
+    "patch1_daughter_over_K": [
+      1e-06,
+      0.001,
+      0.05,
+      0.125,
+      0.249999
+    ],
+    "patch2_parent_over_K": [
+      0.75,
+      0.875,
+      1.0
+    ],
+    "patch2_daughter_over_K": [
+      0.25,
+      0.375,
+      0.5
+    ],
+    "current_orders": [
+      64,
+      128,
+      256
+    ],
+    "algebra_relative_tolerance": 1e-08,
+    "event_relative_tolerance": 1e-09,
+    "refinement_relative_tolerance": 0.01,
+    "max_cutoff_energy_over_radial_gap": 0.1,
+    "energy_scale": 2,
+    "proof_policy": "Explicit conditional analytic lower/weighted/dual inequalities; numerical diagnostics only, no formal/interval/full inverse certificate"
+  },
+  "admission": {
+    "formal_verification": false,
+    "external_math_review": false,
+    "interval_certification": false,
+    "useful_relative_error_certificate": false,
+    "strong_Hilbert_inverse": false,
+    "unbounded_momentum_domain": false,
+    "all_channel_interacting_domain": false,
+    "physical_heat_current": false,
+    "physical_relaxation_time": false,
+    "physical_frequency_window": false,
+    "physical_UET_operator": false,
+    "physical_HeII_state": false,
+    "physical_J04_executed": false,
+    "physical_J05_executed": false,
+    "physical_J06_executed": false,
+    "claim_promotion": false,
+    "dependency_unlock": false
+  }
+}

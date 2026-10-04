@@ -1,0 +1,292 @@
+"""Independent Gaussian phase-flow Hessian; no material or complete two-fluid admission."""
+from __future__ import annotations
+import argparse
+from functools import lru_cache
+import hashlib
+import importlib.util
+import json
+from pathlib import Path
+import numpy as np
+
+ROOT=next(p for p in Path(__file__).resolve().parents if (p/"docs/core").is_dir())
+TOPIC=ROOT/"docs/topics/0.10_Fluid_Dynamics_Chaos"
+CONTRACT=TOPIC/"Data/03_Research/fluid_core_o2_flow_hessian_contract.json"
+OUTPUT=TOPIC/"Result/artifacts/fluid_core_o2_flow_hessian_audit.json"
+REGISTRY=ROOT/"docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry_topic10_o2_flow_hessian_addendum.json"
+
+
+def load_adapter(path):
+    spec=importlib.util.spec_from_file_location("topic10_source_composition_adapter",path)
+    module=importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(module)
+    return module
+
+
+def relative(a,b):
+    return abs(a-b)/max(abs(a),abs(b),1e-30)
+
+
+def bose(E,T):
+    x=np.asarray(E)/T
+    # Evaluate expm1 only on its safe interval, not via eager np.where.
+    result=np.empty_like(x,dtype=float)
+    mask=x<=50
+    result[mask]=1/np.expm1(x[mask])
+    result[~mask]=np.exp(-x[~mask])
+    return result
+
+
+def thermal_log(E,T):
+    x=np.asarray(E)/T
+    return -np.log(-np.expm1(-x))
+
+
+@lru_cache(maxsize=None)
+def quadrature(order,cutoff):
+    nodes,weights=np.polynomial.legendre.leggauss(order)
+    return .5*cutoff*(nodes+1),.5*cutoff*weights
+
+
+def positive_roots(k,mu,h,cosine,mc2,imag_tol):
+    r=mu*mu-h*h-mc2
+    if r<=0:
+        raise ValueError("flow leaves declared tree condensed branch")
+    kz=k*cosine
+    coefficients=[1.,0.,-(2*k*k+2*r+4*mu*mu),-8*mu*h*kz,
+                  k**4+2*r*k*k-4*h*h*kz*kz]
+    roots=np.roots(coefficients)
+    imag=max(abs(v.imag)/max(1.,abs(v.real)) for v in roots)
+    if imag>imag_tol:
+        raise FloatingPointError("complex flow root; no clipping permitted")
+    real=np.sort(roots.real)
+    if not (real[0]<0 and real[1]<0 and real[2]>0 and real[3]>0):
+        raise FloatingPointError("flow spectrum does not have two positive/two negative roots")
+    selected=real[2:]
+    residual=0.
+    for E in selected:
+        x=E*E-k*k
+        left=x*(x-2*r)
+        right=4*(mu*E+h*kz)**2
+        residual=max(residual,abs(left-right)/max(abs(left)+abs(right),1e-30))
+    return selected,imag,residual
+
+
+@lru_cache(maxsize=None)
+def flow_spectrum(mu,mc2,h,radial_order,cutoff,angular_order,imag_tol):
+    momenta,weights=quadrature(radial_order,cutoff)
+    angles,aw=np.polynomial.legendre.leggauss(angular_order)
+    energies=np.empty((radial_order,angular_order,2))
+    imaginary=determinant=0.
+    for i,k in enumerate(momenta):
+        if h==0:
+            vals,im,res=positive_roots(float(k),mu,h,0.,mc2,imag_tol)
+            energies[i,:,:]=vals
+            imaginary=max(imaginary,im)
+            determinant=max(determinant,res)
+        else:
+            for j,c in enumerate(angles):
+                vals,im,res=positive_roots(float(k),mu,h,float(c),mc2,imag_tol)
+                energies[i,j,:]=vals
+                imaginary=max(imaginary,im)
+                determinant=max(determinant,res)
+    measure=weights[:,None]*momenta[:,None]**2*aw[None,:]/(4*np.pi**2)
+    return energies,measure,imaginary,determinant,momenta
+
+
+def cutoff_value(p,T,mu,factor):
+    c=p["configuration"]
+    mc=np.sqrt(c["mass_squared"]/c["Z"])
+    radial=np.sqrt(mu*mu-mc*mc)
+    return max(factor*T,factor*mc,factor*mu,factor*radial,1.)
+
+
+def finite_flow_thermal(p,T,mu,h,order,factor,angular):
+    cutoff=cutoff_value(p,T,mu,factor)
+    energies,measure,im,res,_=flow_spectrum(mu,p["configuration"]["mass_squared"]/p["configuration"]["Z"],
+                   h,order,cutoff,angular,p["verification"]["root_imaginary_relative_tolerance"])
+    value=float(T*np.sum(measure*np.sum(thermal_log(energies,T),axis=2)))
+    return value,im,res
+
+
+def flow_curvature(p,T,mu,relative_step,order,factor,angular):
+    h=mu*relative_step
+    points=[]
+    im=res=0.
+    for multiplier in [-2,-1,0,1,2]:
+        value,mi,mr=finite_flow_thermal(p,T,mu,multiplier*h,order,factor,angular)
+        points.append(value)
+        im=max(im,mi);res=max(res,mr)
+    second=(-points[4]+16*points[3]-30*points[2]+16*points[1]-points[0])/(12*h*h)
+    parity=max(relative(points[0],points[4]),relative(points[1],points[3]))
+    return {"relative_flow_step":relative_step,"radial_order":order,"cutoff_factor":factor,
+            "angular_order":angular,"thermal_phase_correction":-second,"pressure_samples":points,
+            "pressure_parity_relative":parity,"root_imaginary_relative":im,"determinant_relative":res}
+
+
+def implicit_phase(p,base,ns,T,mu,order,factor):
+    """Compute phase curvature from kernel only; no enthalpy or momentum proxy input."""
+    cfg=base.configuration(p,order,factor)
+    cutoff=cutoff_value(p,T,mu,factor)
+    k,w=quadrature(order,cutoff)
+    energies=np.array([ns["EOS"]["condensed_quasiparticle_energies"](float(v),mu,p["configuration"]["Phi_fixed"],cfg) for v in k])
+    mc2=p["configuration"]["mass_squared"]/p["configuration"]["Z"]
+    r=mu*mu-mc2
+    kk=k[:,None]**2
+    x=energies**2-kk
+    a_den=x-r-2*mu*mu
+    mean_a2=4*mu*mu*kk/(3*a_den**2)
+    numerator=4*x-8*kk/3-32*mu*mu*kk/(3*a_den)+16*mu*mu*kk*(a_den+2*energies**2)/(3*a_den**2)
+    mean_b=-numerator/(4*energies*a_den)
+    N=bose(energies,T)
+    measure=w[:,None]*kk/(2*np.pi**2)
+    root_b_term=float(np.sum(measure*N*mean_b))
+    occupation_term=float(np.sum(measure*N*(1+N)*mean_a2/T))
+    delta=root_b_term-occupation_term
+    c=p["configuration"]
+    fs_tree=c["Z"]*(c["Z"]*mu*mu-c["mass_squared"])/c["lambda"]
+    return {"order":order,"cutoff_factor":factor,"root_curvature_term":root_b_term,
+            "occupation_curvature_term":occupation_term,"thermal_phase_correction":delta,
+            "tree_phase_stiffness":fs_tree,"flow_phase_stiffness":fs_tree+delta}
+
+
+def audit(p,path):
+    base=load_adapter(ROOT/p["source_adapter"])
+    original=json.loads((ROOT/p["source_contract"]).read_text(encoding="utf-8"))
+    ns,source_id=base.source_functions(original)
+    rules=p["verification"]
+    checks={}
+    def flag(n,v):checks[n]={"pass":bool(v)}
+    def close(n,v,t):checks[n]={"metric":float(v),"threshold":t,"pass":bool(np.isfinite(v) and v<=t)}
+    def greater(n,v,t=0.):checks[n]={"metric":float(v),"minimum":t,"pass":bool(np.isfinite(v) and v>t)}
+    flag("scope",p["record_role"]=="APPROXIMATE_FIXED_PHI_FLOW_HESSIAN_REFERENCE_NOT_ADMISSION")
+    flag("locked_rules",rules["locked_before_first_execution"] is True and
+         rules["radial_orders"]==[128,256,384] and rules["cutoffs"]==[45,70,100] and
+         rules["angular_orders"]==[12,24,36] and rules["flow_relative_steps"]==[.001,.0003,.0001] and
+         rules["composition_relative_tolerance"]==1e-5 and rules["flow_correction_relative_tolerance"]==1e-5)
+    flag("source_configuration_unchanged",p["configuration"]==original["configuration"])
+    states_match=p["states"]==[s for s in original["states"] if s["branch"]=="condensed"]
+    flag("states_match_original_condensed_points",states_match)
+    flag("closed_response_source",p["configuration"]["response_coupling"]==0 and p["configuration"]["epsilon_nc"]==0)
+    for k,v in p["admission"].items():flag("boundary/"+k,v is False)
+    rows=[]
+    for point in p["states"]:
+        T,mu=point["T"],point["mu"]
+        label=str(T)
+        implicit_orders=[implicit_phase(p,base,ns,T,mu,o,rules["order_sweep_cutoff"]) for o in rules["radial_orders"]]
+        implicit_cutoffs=[implicit_phase(p,base,ns,T,mu,rules["cutoff_sweep_order"],f) for f in rules["cutoffs"]]
+        final=implicit_cutoffs[-1]
+        source=base.state(original,ns,point,rules["radial_orders"][-1],rules["cutoffs"][-1],
+                          rules["pressure_derivative_relative_step"])
+        rootflow=flow_spectrum(mu,p["configuration"]["mass_squared"]/p["configuration"]["Z"],0.,
+                         rules["radial_orders"][-1],cutoff_value(p,T,mu,rules["cutoffs"][-1]),
+                         rules["angular_orders"][-1],rules["root_imaginary_relative_tolerance"])
+        energies=rootflow[0][:,0,:]
+        cfg=base.configuration(p,rules["radial_orders"][-1],rules["cutoffs"][-1])
+        direct=np.array([ns["EOS"]["condensed_quasiparticle_energies"](float(k),mu,p["configuration"]["Phi_fixed"],cfg)[::-1]
+                         for k in rootflow[-1]])
+        root_error=float(np.max(abs(energies-direct)/np.maximum(abs(direct),1e-30)))
+        close(label+"/zero_flow_roots_match_Core",root_error,rules["zero_flow_root_relative_tolerance"])
+        for name,sweep in [("implicit_order",implicit_orders),("implicit_cutoff",implicit_cutoffs)]:
+            changes={key:relative(sweep[-1][key],sweep[-2][key]) for key in
+                     ("thermal_phase_correction","root_curvature_term","occupation_curvature_term")}
+            close(label+"/"+name+"_refinement",max(changes.values()),rules["implicit_refinement_relative_tolerance"])
+        angles=[flow_curvature(p,T,mu,rules["flow_relative_steps"][0],rules["radial_orders"][-1],
+                             rules["cutoffs"][-1],a) for a in rules["angular_orders"]]
+        steps=[flow_curvature(p,T,mu,h,rules["radial_orders"][-1],rules["cutoffs"][-1],
+                             rules["angular_orders"][-1]) for h in rules["flow_relative_steps"]]
+        finite=steps[-1]
+        close(label+"/angular_correction_refinement",relative(angles[-1]["thermal_phase_correction"],
+                         angles[-2]["thermal_phase_correction"]),rules["implicit_refinement_relative_tolerance"])
+        close(label+"/step_correction_refinement",relative(steps[-1]["thermal_phase_correction"],
+                         steps[-2]["thermal_phase_correction"]),rules["flow_step_refinement_relative_tolerance"])
+        correction_error=relative(final["thermal_phase_correction"],finite["thermal_phase_correction"])
+        close(label+"/independent_implicit_and_flow_curvature",correction_error,rules["flow_correction_relative_tolerance"])
+        for seq in [angles,steps]:
+            for row in seq:
+                key=label+"/flow/"+str(row["angular_order"])+"/"+str(row["relative_flow_step"])
+                close(key+"/determinant",row["determinant_relative"],rules["determinant_relative_tolerance"])
+                close(key+"/parity",row["pressure_parity_relative"],rules["pressure_parity_relative_tolerance"])
+                close(key+"/imaginary",row["root_imaginary_relative"],rules["root_imaginary_relative_tolerance"])
+        greater(label+"/flow_stiffness_positive",final["flow_phase_stiffness"])
+        greater(label+"/thermal_correction_nonzero",abs(final["thermal_phase_correction"]),rules["negative_control_floor"])
+        close(label+"/tree_matches_source",relative(final["tree_phase_stiffness"],source["tree_phase_stiffness"]),1e-12)
+        composition=mu*mu*final["flow_phase_stiffness"]+source["static_Doppler_momentum_proxy"]
+        error=relative(composition,source["enthalpy"])
+        target={"pass":bool(error<=rules["composition_relative_tolerance"]),
+                "relative_residual":error,"threshold":rules["composition_relative_tolerance"],
+                "composite_inertia":composition,"source_enthalpy":source["enthalpy"],
+                "role":"scalar common-flow target only; no full Ward/entrainment or material admission"}
+        # These perturbations do not fit the phase coefficient to the target.
+        doppler_delta=-source["static_Doppler_momentum_proxy"]/(mu*mu)
+        no_occ_delta=final["root_curvature_term"]
+        greater(label+"/pure_Doppler_correction_error_detected",relative(doppler_delta,final["thermal_phase_correction"]),rules["negative_control_floor"])
+        greater(label+"/omitted_occupation_curvature_detected",relative(no_occ_delta,final["thermal_phase_correction"]),rules["negative_control_floor"])
+        greater(label+"/tree_only_mismatch_retained",source["relative_composition_residual"],rules["composition_relative_tolerance"])
+        rows.append({"point":point,"source_zero_flow":source,"implicit_order_sweep":implicit_orders,
+            "implicit_cutoff_sweep":implicit_cutoffs,"implicit_final":final,"angular_sweep":angles,
+            "flow_step_sweep":steps,"finite_flow_final":finite,"correction_relative_difference":correction_error,
+            "composition_target":target,"negative_controls":{"pure_Doppler_thermal_correction":doppler_delta,
+             "omit_occupation_thermal_correction":no_occ_delta,"tree_only_composition_residual":source["relative_composition_residual"]}})
+    control_pass=all(q["pass"] for q in checks.values())
+    scalar_pass=bool(rows) and states_match and all(q["composition_target"]["pass"] for q in rows)
+    preview=TOPIC/"Result/previews/fluid_core_o2_flow_hessian_first_execution.json"
+    preview_source=TOPIC/"Result/previews/core_o2_flow_hessian_first_execution_verifier.py.txt"
+    initial=json.loads(preview.read_text(encoding="utf-8"))
+    initial_source_hash=hashlib.sha256(preview_source.read_bytes()).hexdigest()
+    flag("first_execution_source_archive_matches",initial_source_hash==initial["input_hashes"][Path(__file__).relative_to(ROOT).as_posix()])
+    # Archive integrity is a diagnostic control; never let it silently bypass a failure.
+    control_pass=all(q["pass"] for q in checks.values())
+    hashes_paths=[path,ROOT/p["card"],REGISTRY,Path(__file__).resolve(),preview,preview_source,ROOT/p["source_adapter"],
+                  ROOT/p["source_contract"]]+[ROOT/f for f in original["core_sources"].values()]+[ROOT/f for f in p["reused_inputs"]]
+    hashes={f.relative_to(ROOT).as_posix() if f.is_relative_to(ROOT) else f.name:hashlib.sha256(f.read_bytes()).hexdigest() for f in hashes_paths}
+    return {"schema_version":"t010-core-o2-flow-hessian-audit-v1","date":p["date"],
+      "status":"PASS_APPROXIMATE_FLOW_HESSIAN_REFERENCE_ONLY" if control_pass else "FLOW_HESSIAN_REFERENCE_FAIL",
+      "check_count":len(checks),"passing_check_count":sum(q["pass"] for q in checks.values()),"checks":checks,
+      "input_hashes":hashes,"source_AST_definition_hashes":source_id,"state_results":rows,
+      "initial_execution_record":{"artifact":preview.relative_to(ROOT).as_posix(),
+          "verifier_source_archive":preview_source.relative_to(ROOT).as_posix(),
+          "original_verifier_sha256":initial_source_hash,"status":initial["status"],
+          "check_count":initial["check_count"],"role":"immutable historical preview; earlier verifier before empty-state fail-closed guard, not a current source-fresh audit"},
+      "scalar_correspondence_gate":{"status":"PASS_CURRENT_SOURCE_SCALAR_TARGET_ONLY" if scalar_pass else "FAIL_REQUIRED_COMMON_FLOW_IDENTITY",
+         "target_pass":scalar_pass,"threshold":rules["composition_relative_tolerance"],
+         "full_current_stress_entrainment_admitted":False,"physical_material_mapping_admitted":False},
+      "candidate_controller":p["passed_scalar_next_controller"] if control_pass and scalar_pass else p["current_candidate_controller"],
+      "physical_controller":p["physical_controller"],"locked_verification":rules,
+      "new_topic_local_finite_flow_kernel":True,"whole_Core_runtime_executed":False,
+      "phase_curvature_derived_from_flow_pressure":True,"phase_stiffness_fitted_to_enthalpy":False,
+      "thermal_gap_equation_solved":False,"full_two_fluid_stress_entrainment_derived":False,
+      "physical_normal_density_assigned":False,"physical_HeII_state_assigned":False,
+      "physical_UET_operator_admitted":False,"physical_prediction_executed":False,
+      "physical_J04_executed":False,"physical_J05_executed":False,"physical_J06_executed":False,
+      "claim_promotion":False,"dependency_unlock":False,"thresholds_relaxed":False,
+      "notes":["Phase curvature uses action-root derivatives independently of the enthalpy and static proxy.",
+        "A separate finite-flow quartic root pressure Hessian tests the implicit derivative integral.",
+        "Both positive modes, normal-rest T/mu, fixed Phi and tree amplitude at each phase invariant are retained.",
+        "This new topic-local Gaussian-flow extension is not an unchanged finite-flow Core implementation.",
+        "A scalar PASS is not a complete Ward, entrainment, longitudinal dynamics, material SI or He-II validation.",
+        "The earlier tree-only composition FAIL artifact remains immutable."]}
+
+
+def main():
+    parser=argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--contract-json",type=Path,default=CONTRACT)
+    parser.add_argument("--output",type=Path,default=OUTPUT)
+    args=parser.parse_args()
+    path=args.contract_json.resolve()
+    result=audit(json.loads(path.read_text(encoding="utf-8")),path)
+    args.output.parent.mkdir(parents=True,exist_ok=True)
+    args.output.write_text(json.dumps(result,ensure_ascii=False,indent=2)+"\n",encoding="utf-8",newline="\n")
+    print(result["status"],result["passing_check_count"],"/",result["check_count"])
+    print("Independent scalar correspondence:",result["scalar_correspondence_gate"]["status"])
+    for row in result["state_results"]:
+        print(row["point"],"delta_fs",row["implicit_final"]["thermal_phase_correction"],
+              "independent correction residual",row["correction_relative_difference"],
+              "common-flow residual",row["composition_target"]["relative_residual"])
+    if result["passing_check_count"]!=result["check_count"]:
+        print("FAIL:",[(n,c) for n,c in result["checks"].items() if not c["pass"]])
+        return 1
+    return 0
+
+
+if __name__=="__main__":
+    raise SystemExit(main())

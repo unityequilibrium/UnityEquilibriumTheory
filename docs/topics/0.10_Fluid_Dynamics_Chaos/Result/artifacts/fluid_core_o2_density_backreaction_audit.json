@@ -1,0 +1,3558 @@
+{
+  "schema_version": "t010-density-backreaction-audit-v1",
+  "date": "2026-10-01",
+  "status": "PASS_LEADING_MEAN_DENSITY_GAUSSIAN_SUBSET_ONLY",
+  "check_count": 398,
+  "passing_check_count": 398,
+  "checks": {
+    "scope": {
+      "pass": true
+    },
+    "locked_states": {
+      "pass": true
+    },
+    "locked_controls": {
+      "pass": true
+    },
+    "configuration": {
+      "pass": true
+    },
+    "boundary_fields": {
+      "pass": true
+    },
+    "boundary/SI_charge_atom_mapping": {
+      "pass": true
+    },
+    "boundary/all_channel_collision": {
+      "pass": true
+    },
+    "boundary/claim_promotion": {
+      "pass": true
+    },
+    "boundary/dependency_unlock": {
+      "pass": true
+    },
+    "boundary/external_math_review": {
+      "pass": true
+    },
+    "boundary/formal_verification": {
+      "pass": true
+    },
+    "boundary/full_interacting_density_backreaction": {
+      "pass": true
+    },
+    "boundary/full_nonlinear_wave": {
+      "pass": true
+    },
+    "boundary/interacting_Noether_current": {
+      "pass": true
+    },
+    "boundary/interval_certificate": {
+      "pass": true
+    },
+    "boundary/paper_low_T_accuracy": {
+      "pass": true
+    },
+    "boundary/physical_HeII_state": {
+      "pass": true
+    },
+    "boundary/physical_J04_executed": {
+      "pass": true
+    },
+    "boundary/physical_J05_executed": {
+      "pass": true
+    },
+    "boundary/physical_J06_executed": {
+      "pass": true
+    },
+    "boundary/physical_UET_operator": {
+      "pass": true
+    },
+    "boundary/physical_frequency_window": {
+      "pass": true
+    },
+    "boundary/physical_heat_current": {
+      "pass": true
+    },
+    "boundary/physical_material_frame": {
+      "pass": true
+    },
+    "boundary/self_consistent_thermal_gap": {
+      "pass": true
+    },
+    "boundary/useful_relative_error_certificate": {
+      "pass": true
+    },
+    "prior_source_fresh": {
+      "pass": true
+    },
+    "prior_scope": {
+      "pass": true
+    },
+    "card_locked": {
+      "pass": true
+    },
+    "registry_locked": {
+      "pass": true
+    },
+    "source_binding_name": {
+      "pass": true
+    },
+    "binding_repair_card_identity": {
+      "pass": true
+    },
+    "first_binding_failure_identity": {
+      "pass": true
+    },
+    "first_contract_archive_identity": {
+      "pass": true
+    },
+    "first_verifier_archive_identity": {
+      "pass": true
+    },
+    "derivative_center_repair_card_identity": {
+      "pass": true
+    },
+    "uncentered_verifier_archive_identity": {
+      "pass": true
+    },
+    "uncentered_failure_identity": {
+      "pass": true
+    },
+    "0.002/paper_regime_not_satisfied": {
+      "pass": true
+    },
+    "0.002/lower/0.1/raw_charge": {
+      "metric": 1.658377821310208e-11,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.002/lower/0.1/raw_energy": {
+      "metric": 1.3344896623749916e-11,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.002/lower/0.1/corrected_charge": {
+      "metric": 2.3723457334178352e-11,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.002/lower/0.1/corrected_energy": {
+      "metric": 1.3815700031058149e-11,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.002/lower/0.1/grand_density": {
+      "metric": 3.753915381320187e-11,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.002/lower/0.1/tadpole_raw": {
+      "metric": 1.2861013580932393e-11,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.002/lower/0.1/tadpole_corrected": {
+      "metric": 1.3970420928676478e-11,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.002/lower/0.1/action": {
+      "metric": 9.82279680576992e-13,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.002/lower/0.1/spatial_charge": {
+      "metric": 3.93595669719989e-12,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.002/lower/0.1/spatial_energy": {
+      "metric": 8.535582752865741e-12,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.002/lower/0.1/phase_order": {
+      "metric": 3.3971878805182066e-11,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.002/lower/0.1/charge_root_identity": {
+      "metric": 0.0,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.002/lower/0.1/raw_plus_condensate": {
+      "metric": 3.43032115468981e-17,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.002/lower/0.1/energy_Legendre": {
+      "metric": 9.95461673258236e-17,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.002/lower/0.1/omitted_mean_shift_negative": {
+      "metric": 1.000000196292624,
+      "minimum": 0.001,
+      "pass": true
+    },
+    "0.002/lower/0.1/mu_derivative/0.001": {
+      "metric": 2.6444855033680453e-10,
+      "threshold": 1e-05,
+      "pass": true
+    },
+    "0.002/lower/0.1/mu_derivative/0.0003": {
+      "metric": 2.0526885115795986e-12,
+      "threshold": 1e-05,
+      "pass": true
+    },
+    "0.002/lower/0.1/mu_derivative/0.0001": {
+      "metric": 1.5648226866460601e-12,
+      "threshold": 1e-05,
+      "pass": true
+    },
+    "0.002/lower/1.0/raw_charge": {
+      "metric": 2.4774611850154418e-11,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.002/lower/1.0/raw_energy": {
+      "metric": 1.2178854300434552e-11,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.002/lower/1.0/corrected_charge": {
+      "metric": 1.4872363158346228e-11,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.002/lower/1.0/corrected_energy": {
+      "metric": 1.7078974347873033e-11,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.002/lower/1.0/grand_density": {
+      "metric": 3.116517042135672e-11,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.002/lower/1.0/tadpole_raw": {
+      "metric": 1.1302305201144563e-11,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.002/lower/1.0/tadpole_corrected": {
+      "metric": 1.1945083628899355e-11,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.002/lower/1.0/action": {
+      "metric": 2.2349852116151478e-12,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.002/lower/1.0/spatial_charge": {
+      "metric": 6.820237939642706e-13,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.002/lower/1.0/spatial_energy": {
+      "metric": 1.777095512119493e-12,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.002/lower/1.0/phase_order": {
+      "metric": 2.982111317048141e-11,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.002/lower/1.0/charge_root_identity": {
+      "metric": 0.0,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.002/lower/1.0/raw_plus_condensate": {
+      "metric": 2.8215977759724773e-18,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.002/lower/1.0/energy_Legendre": {
+      "metric": 8.681295752852311e-17,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.002/lower/1.0/omitted_mean_shift_negative": {
+      "metric": 1.0000196281434899,
+      "minimum": 0.001,
+      "pass": true
+    },
+    "0.002/lower/1.0/mu_derivative/0.001": {
+      "metric": 2.643880238217874e-10,
+      "threshold": 1e-05,
+      "pass": true
+    },
+    "0.002/lower/1.0/mu_derivative/0.0003": {
+      "metric": 2.4830295500882647e-12,
+      "threshold": 1e-05,
+      "pass": true
+    },
+    "0.002/lower/1.0/mu_derivative/0.0001": {
+      "metric": 1.5186537314787794e-12,
+      "threshold": 1e-05,
+      "pass": true
+    },
+    "0.002/lower/10.0/raw_charge": {
+      "metric": 1.8880030351913363e-11,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.002/lower/10.0/raw_energy": {
+      "metric": 1.1474684544010986e-11,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.002/lower/10.0/corrected_charge": {
+      "metric": 1.7051160253274315e-11,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.002/lower/10.0/corrected_energy": {
+      "metric": 1.969459358597785e-11,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.002/lower/10.0/grand_density": {
+      "metric": 3.567894623993874e-11,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.002/lower/10.0/tadpole_raw": {
+      "metric": 1.0637809434042481e-11,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.002/lower/10.0/tadpole_corrected": {
+      "metric": 8.486036151922932e-12,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.002/lower/10.0/action": {
+      "metric": 2.314565386178274e-12,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.002/lower/10.0/spatial_charge": {
+      "metric": 1.5124271352424518e-13,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.002/lower/10.0/spatial_energy": {
+      "metric": 1.508310216750396e-13,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.002/lower/10.0/phase_order": {
+      "metric": 3.359201432767422e-11,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.002/lower/10.0/charge_root_identity": {
+      "metric": 3.3958336440722627e-16,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.002/lower/10.0/raw_plus_condensate": {
+      "metric": 1.1351681602282376e-16,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.002/lower/10.0/energy_Legendre": {
+      "metric": 6.56239262821518e-17,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.002/lower/10.0/omitted_mean_shift_negative": {
+      "metric": 1.0019516748822468,
+      "minimum": 0.001,
+      "pass": true
+    },
+    "0.002/lower/10.0/mu_derivative/0.001": {
+      "metric": 2.6265482820114203e-10,
+      "threshold": 1e-05,
+      "pass": true
+    },
+    "0.002/lower/10.0/mu_derivative/0.0003": {
+      "metric": 2.174691865663877e-12,
+      "threshold": 1e-05,
+      "pass": true
+    },
+    "0.002/lower/10.0/mu_derivative/0.0001": {
+      "metric": 1.4012907532264192e-12,
+      "threshold": 1e-05,
+      "pass": true
+    },
+    "0.002/lower/60.0/raw_charge": {
+      "metric": 1.0382421498995237e-11,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.002/lower/60.0/raw_energy": {
+      "metric": 1.43984849891195e-11,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.002/lower/60.0/corrected_charge": {
+      "metric": 2.1402161750643667e-11,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.002/lower/60.0/corrected_energy": {
+      "metric": 1.4373256787457372e-11,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.002/lower/60.0/grand_density": {
+      "metric": 2.79100198129514e-11,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.002/lower/60.0/tadpole_raw": {
+      "metric": 9.365319603886356e-12,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.002/lower/60.0/tadpole_corrected": {
+      "metric": 1.027971778783724e-11,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.002/lower/60.0/action": {
+      "metric": 1.2732385476041555e-12,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.002/lower/60.0/spatial_charge": {
+      "metric": 3.990197722822984e-14,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.002/lower/60.0/spatial_energy": {
+      "metric": 1.724583990891612e-14,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.002/lower/60.0/phase_order": {
+      "metric": 2.1890626528586956e-11,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.002/lower/60.0/charge_root_identity": {
+      "metric": 0.0,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.002/lower/60.0/raw_plus_condensate": {
+      "metric": 1.3812289137658628e-16,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.002/lower/60.0/energy_Legendre": {
+      "metric": 7.344187376624817e-18,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.002/lower/60.0/omitted_mean_shift_negative": {
+      "metric": 1.0580459582978492,
+      "minimum": 0.001,
+      "pass": true
+    },
+    "0.002/lower/60.0/mu_derivative/0.001": {
+      "metric": 2.0686912295985142e-10,
+      "threshold": 1e-05,
+      "pass": true
+    },
+    "0.002/lower/60.0/mu_derivative/0.0003": {
+      "metric": 1.8866981277096686e-12,
+      "threshold": 1e-05,
+      "pass": true
+    },
+    "0.002/lower/60.0/mu_derivative/0.0001": {
+      "metric": 8.430688874800983e-13,
+      "threshold": 1e-05,
+      "pass": true
+    },
+    "0.002/upper/0.1/raw_charge": {
+      "metric": 7.852215025341301e-12,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.002/upper/0.1/raw_energy": {
+      "metric": 5.201205949151304e-12,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.002/upper/0.1/corrected_charge": {
+      "metric": 3.0506587102967975e-12,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.002/upper/0.1/corrected_energy": {
+      "metric": 9.423023708190845e-12,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.002/upper/0.1/grand_density": {
+      "metric": 8.252051191313841e-12,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.002/upper/0.1/tadpole_raw": {
+      "metric": 3.2227767324149486e-12,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.002/upper/0.1/tadpole_corrected": {
+      "metric": 2.9796055003079793e-12,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.002/upper/0.1/action": {
+      "metric": 4.114058635003462e-13,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.002/upper/0.1/spatial_charge": {
+      "metric": 5.4070638423989955e-15,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.002/upper/0.1/spatial_energy": {
+      "metric": 5.7615110648443465e-15,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.002/upper/0.1/phase_order": {
+      "metric": 1.2048945970195681e-11,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.002/upper/0.1/charge_root_identity": {
+      "metric": 0.0,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.002/upper/0.1/raw_plus_condensate": {
+      "metric": 0.0,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.002/upper/0.1/energy_Legendre": {
+      "metric": 1.7341977691222007e-16,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.002/upper/0.1/omitted_mean_shift_negative": {
+      "metric": 0.6394905199814328,
+      "minimum": 0.001,
+      "pass": true
+    },
+    "0.002/upper/0.1/mu_derivative/0.001": {
+      "metric": 1.1936603641109262e-12,
+      "threshold": 1e-05,
+      "pass": true
+    },
+    "0.002/upper/0.1/mu_derivative/0.0003": {
+      "metric": 2.6989636537034365e-13,
+      "threshold": 1e-05,
+      "pass": true
+    },
+    "0.002/upper/0.1/mu_derivative/0.0001": {
+      "metric": 1.499316379809115e-12,
+      "threshold": 1e-05,
+      "pass": true
+    },
+    "0.002/upper/1.0/raw_charge": {
+      "metric": 4.37532620982847e-12,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.002/upper/1.0/raw_energy": {
+      "metric": 5.429371735692599e-12,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.002/upper/1.0/corrected_charge": {
+      "metric": 2.5179171182897834e-12,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.002/upper/1.0/corrected_energy": {
+      "metric": 3.3584136014435203e-12,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.002/upper/1.0/grand_density": {
+      "metric": 4.11830404034666e-12,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.002/upper/1.0/tadpole_raw": {
+      "metric": 1.7071660982673398e-12,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.002/upper/1.0/tadpole_corrected": {
+      "metric": 2.1843078929813604e-12,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.002/upper/1.0/action": {
+      "metric": 1.1641949397901924e-12,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.002/upper/1.0/spatial_charge": {
+      "metric": 4.966489525877962e-15,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.002/upper/1.0/spatial_energy": {
+      "metric": 5.237711464241387e-15,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.002/upper/1.0/phase_order": {
+      "metric": 4.6211569990946096e-12,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.002/upper/1.0/charge_root_identity": {
+      "metric": 1.6180891890913066e-16,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.002/upper/1.0/raw_plus_condensate": {
+      "metric": 0.0,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.002/upper/1.0/energy_Legendre": {
+      "metric": 1.734180316763152e-16,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.002/upper/1.0/omitted_mean_shift_negative": {
+      "metric": 0.6394892682756729,
+      "minimum": 0.001,
+      "pass": true
+    },
+    "0.002/upper/1.0/mu_derivative/0.001": {
+      "metric": 1.2401035545195775e-12,
+      "threshold": 1e-05,
+      "pass": true
+    },
+    "0.002/upper/1.0/mu_derivative/0.0003": {
+      "metric": 3.26854016196444e-13,
+      "threshold": 1e-05,
+      "pass": true
+    },
+    "0.002/upper/1.0/mu_derivative/0.0001": {
+      "metric": 3.9740270484082497e-13,
+      "threshold": 1e-05,
+      "pass": true
+    },
+    "0.002/upper/10.0/raw_charge": {
+      "metric": 7.198019769078773e-12,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.002/upper/10.0/raw_energy": {
+      "metric": 6.143221136764362e-12,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.002/upper/10.0/corrected_charge": {
+      "metric": 4.023741534049725e-12,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.002/upper/10.0/corrected_energy": {
+      "metric": 6.315598605248748e-12,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.002/upper/10.0/grand_density": {
+      "metric": 7.819467406445861e-12,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.002/upper/10.0/tadpole_raw": {
+      "metric": 2.8579680926401976e-12,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.002/upper/10.0/tadpole_corrected": {
+      "metric": 2.326193420507686e-12,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.002/upper/10.0/action": {
+      "metric": 3.9000107660523255e-13,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.002/upper/10.0/spatial_charge": {
+      "metric": 8.202925486628196e-15,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.002/upper/10.0/spatial_energy": {
+      "metric": 7.538582472622748e-15,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.002/upper/10.0/phase_order": {
+      "metric": 9.52744993818001e-12,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.002/upper/10.0/charge_root_identity": {
+      "metric": 1.618635327036241e-16,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.002/upper/10.0/raw_plus_condensate": {
+      "metric": 0.0,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.002/upper/10.0/energy_Legendre": {
+      "metric": 3.4648737376210385e-16,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.002/upper/10.0/omitted_mean_shift_negative": {
+      "metric": 0.6393641547720388,
+      "minimum": 0.001,
+      "pass": true
+    },
+    "0.002/upper/10.0/mu_derivative/0.001": {
+      "metric": 1.21171040581933e-12,
+      "threshold": 1e-05,
+      "pass": true
+    },
+    "0.002/upper/10.0/mu_derivative/0.0003": {
+      "metric": 4.737745602235078e-13,
+      "threshold": 1e-05,
+      "pass": true
+    },
+    "0.002/upper/10.0/mu_derivative/0.0001": {
+      "metric": 5.794714470789743e-13,
+      "threshold": 1e-05,
+      "pass": true
+    },
+    "0.002/upper/60.0/raw_charge": {
+      "metric": 6.195590930091368e-12,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.002/upper/60.0/raw_energy": {
+      "metric": 3.4219414602502314e-12,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.002/upper/60.0/corrected_charge": {
+      "metric": 1.3147578579812948e-12,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.002/upper/60.0/corrected_energy": {
+      "metric": 3.5250815262759966e-12,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.002/upper/60.0/grand_density": {
+      "metric": 3.411429113689337e-12,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.002/upper/60.0/tadpole_raw": {
+      "metric": 2.1991508748484568e-12,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.002/upper/60.0/tadpole_corrected": {
+      "metric": 1.8688632422612092e-12,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.002/upper/60.0/action": {
+      "metric": 5.843901377652914e-13,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.002/upper/60.0/spatial_charge": {
+      "metric": 5.6444547363315155e-15,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.002/upper/60.0/spatial_energy": {
+      "metric": 4.830576265956255e-15,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.002/upper/60.0/phase_order": {
+      "metric": 5.576590138599359e-12,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.002/upper/60.0/charge_root_identity": {
+      "metric": 1.6376355608529267e-16,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.002/upper/60.0/raw_plus_condensate": {
+      "metric": 1.9249749018759803e-16,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.002/upper/60.0/energy_Legendre": {
+      "metric": 1.672993771517523e-16,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.002/upper/60.0/omitted_mean_shift_negative": {
+      "metric": 0.6350120324078734,
+      "minimum": 0.001,
+      "pass": true
+    },
+    "0.002/upper/60.0/mu_derivative/0.001": {
+      "metric": 8.839956757484097e-13,
+      "threshold": 1e-05,
+      "pass": true
+    },
+    "0.002/upper/60.0/mu_derivative/0.0003": {
+      "metric": 1.4443945646722814e-13,
+      "threshold": 1e-05,
+      "pass": true
+    },
+    "0.002/upper/60.0/mu_derivative/0.0001": {
+      "metric": 6.069077388520946e-13,
+      "threshold": 1e-05,
+      "pass": true
+    },
+    "0.002/thermal/64/charge_sum": {
+      "metric": 1.2136414632244123e-16,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.002/thermal/64/mean_shift_charge": {
+      "metric": 0.0,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.002/thermal/64/entropy_Legendre": {
+      "metric": 4.853172900095104e-16,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.002/thermal/64/P_positive": {
+      "metric": 2.6638147653865382e-11,
+      "minimum": 0,
+      "pass": true
+    },
+    "0.002/thermal/64/U_G_positive": {
+      "metric": 7.989431246651718e-11,
+      "minimum": 0,
+      "pass": true
+    },
+    "0.002/thermal/128/charge_sum": {
+      "metric": 6.798202503837718e-16,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.002/thermal/128/mean_shift_charge": {
+      "metric": 4.007813520146018e-16,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.002/thermal/128/entropy_Legendre": {
+      "metric": 3.2354486000634223e-16,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.002/thermal/128/P_positive": {
+      "metric": 2.6638159691818426e-11,
+      "minimum": 0,
+      "pass": true
+    },
+    "0.002/thermal/128/U_G_positive": {
+      "metric": 7.98943124665167e-11,
+      "minimum": 0,
+      "pass": true
+    },
+    "0.002/thermal/256/charge_sum": {
+      "metric": 5.228859632122033e-16,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.002/thermal/256/mean_shift_charge": {
+      "metric": 1.001953380036585e-15,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.002/thermal/256/entropy_Legendre": {
+      "metric": 8.088621500158578e-16,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.002/thermal/256/P_positive": {
+      "metric": 2.6638159884263873e-11,
+      "minimum": 0,
+      "pass": true
+    },
+    "0.002/thermal/256/U_G_positive": {
+      "metric": 7.989431246651644e-11,
+      "minimum": 0,
+      "pass": true
+    },
+    "0.002/thermal_refinement/P": {
+      "metric": 7.224427199883126e-09,
+      "threshold": 0.01,
+      "pass": true
+    },
+    "0.002/thermal_refinement/q_corrected": {
+      "metric": 3.476894230409349e-15,
+      "threshold": 0.01,
+      "pass": true
+    },
+    "0.002/thermal_refinement/U_grand": {
+      "metric": 3.2354486000634232e-15,
+      "threshold": 0.01,
+      "pass": true
+    },
+    "0.002/thermal_refinement/mean_shift": {
+      "metric": 8.133690856226123e-14,
+      "threshold": 0.01,
+      "pass": true
+    },
+    "0.002/thermal_mu/0.001": {
+      "metric": 2.6584127832869086e-09,
+      "threshold": 1e-05,
+      "pass": true
+    },
+    "0.002/thermal_T/0.001": {
+      "metric": 3.09341132116054e-14,
+      "threshold": 1e-05,
+      "pass": true
+    },
+    "0.002/thermal_mu/0.0003": {
+      "metric": 2.2056626794482803e-11,
+      "threshold": 1e-05,
+      "pass": true
+    },
+    "0.002/thermal_T/0.0003": {
+      "metric": 6.199245980960279e-14,
+      "threshold": 1e-05,
+      "pass": true
+    },
+    "0.002/thermal_mu/0.0001": {
+      "metric": 4.428298924366832e-12,
+      "threshold": 1e-05,
+      "pass": true
+    },
+    "0.002/thermal_T/0.0001": {
+      "metric": 2.018792528865755e-12,
+      "threshold": 1e-05,
+      "pass": true
+    },
+    "0.004/paper_regime_not_satisfied": {
+      "pass": true
+    },
+    "0.004/lower/0.1/raw_charge": {
+      "metric": 1.9336766984119825e-11,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.004/lower/0.1/raw_energy": {
+      "metric": 1.5778502233621216e-11,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.004/lower/0.1/corrected_charge": {
+      "metric": 1.0443057527296063e-11,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.004/lower/0.1/corrected_energy": {
+      "metric": 1.5405260984602217e-11,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.004/lower/0.1/grand_density": {
+      "metric": 2.584829308798936e-11,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.004/lower/0.1/tadpole_raw": {
+      "metric": 1.0541374896871112e-11,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.004/lower/0.1/tadpole_corrected": {
+      "metric": 5.864337497105236e-12,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.004/lower/0.1/action": {
+      "metric": 2.2625657923094257e-12,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.004/lower/0.1/spatial_charge": {
+      "metric": 6.662461194201591e-12,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.004/lower/0.1/spatial_energy": {
+      "metric": 4.448089226383645e-12,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.004/lower/0.1/phase_order": {
+      "metric": 2.1965406715271164e-11,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.004/lower/0.1/charge_root_identity": {
+      "metric": 3.969619111439812e-16,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.004/lower/0.1/raw_plus_condensate": {
+      "metric": 2.139900560744359e-16,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.004/lower/0.1/energy_Legendre": {
+      "metric": 6.514436632364296e-17,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.004/lower/0.1/omitted_mean_shift_negative": {
+      "metric": 1.000000785169139,
+      "minimum": 0.001,
+      "pass": true
+    },
+    "0.004/lower/0.1/mu_derivative/0.001": {
+      "metric": 2.6441050690497585e-10,
+      "threshold": 1e-05,
+      "pass": true
+    },
+    "0.004/lower/0.1/mu_derivative/0.0003": {
+      "metric": 2.4998014751106988e-12,
+      "threshold": 1e-05,
+      "pass": true
+    },
+    "0.004/lower/0.1/mu_derivative/0.0001": {
+      "metric": 2.327916967585355e-12,
+      "threshold": 1e-05,
+      "pass": true
+    },
+    "0.004/lower/1.0/raw_charge": {
+      "metric": 1.9874013709811582e-11,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.004/lower/1.0/raw_energy": {
+      "metric": 1.3369134715111116e-11,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.004/lower/1.0/corrected_charge": {
+      "metric": 1.7820706536422724e-11,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.004/lower/1.0/corrected_energy": {
+      "metric": 1.3374062299669747e-11,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.004/lower/1.0/grand_density": {
+      "metric": 2.2502071927320975e-11,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.004/lower/1.0/tadpole_raw": {
+      "metric": 8.133182912268228e-12,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.004/lower/1.0/tadpole_corrected": {
+      "metric": 1.1236703419696012e-11,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.004/lower/1.0/action": {
+      "metric": 1.2318774147492278e-12,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.004/lower/1.0/spatial_charge": {
+      "metric": 7.10873655432436e-13,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.004/lower/1.0/spatial_energy": {
+      "metric": 4.0088877482772986e-13,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.004/lower/1.0/phase_order": {
+      "metric": 1.8056494821922906e-11,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.004/lower/1.0/charge_root_identity": {
+      "metric": 2.11733862892567e-16,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.004/lower/1.0/raw_plus_condensate": {
+      "metric": 2.213361428836714e-16,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.004/lower/1.0/energy_Legendre": {
+      "metric": 2.0264873718293095e-16,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.004/lower/1.0/omitted_mean_shift_negative": {
+      "metric": 1.0000784990140223,
+      "minimum": 0.001,
+      "pass": true
+    },
+    "0.004/lower/1.0/mu_derivative/0.001": {
+      "metric": 2.643958858034805e-10,
+      "threshold": 1e-05,
+      "pass": true
+    },
+    "0.004/lower/1.0/mu_derivative/0.0003": {
+      "metric": 2.5494874430893996e-12,
+      "threshold": 1e-05,
+      "pass": true
+    },
+    "0.004/lower/1.0/mu_derivative/0.0001": {
+      "metric": 1.49293546725549e-12,
+      "threshold": 1e-05,
+      "pass": true
+    },
+    "0.004/lower/10.0/raw_charge": {
+      "metric": 1.7014117564314333e-11,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.004/lower/10.0/raw_energy": {
+      "metric": 1.2286280642022753e-11,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.004/lower/10.0/corrected_charge": {
+      "metric": 1.3578445852669302e-11,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.004/lower/10.0/corrected_energy": {
+      "metric": 1.15122482522579e-11,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.004/lower/10.0/grand_density": {
+      "metric": 2.4699076685688747e-11,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.004/lower/10.0/tadpole_raw": {
+      "metric": 8.515306132259027e-12,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.004/lower/10.0/tadpole_corrected": {
+      "metric": 6.023927317374878e-12,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.004/lower/10.0/action": {
+      "metric": 1.0185341704758472e-12,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.004/lower/10.0/spatial_charge": {
+      "metric": 8.350371542357146e-14,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.004/lower/10.0/spatial_energy": {
+      "metric": 1.194109741023007e-13,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.004/lower/10.0/phase_order": {
+      "metric": 2.225783250670018e-11,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.004/lower/10.0/charge_root_identity": {
+      "metric": 1.7106040538350366e-16,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.004/lower/10.0/raw_plus_condensate": {
+      "metric": 2.4119784695925312e-17,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.004/lower/10.0/energy_Legendre": {
+      "metric": 4.3709256292907264e-17,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.004/lower/10.0/omitted_mean_shift_negative": {
+      "metric": 1.0076740278995215,
+      "minimum": 0.001,
+      "pass": true
+    },
+    "0.004/lower/10.0/mu_derivative/0.001": {
+      "metric": 2.57093525667083e-10,
+      "threshold": 1e-05,
+      "pass": true
+    },
+    "0.004/lower/10.0/mu_derivative/0.0003": {
+      "metric": 2.1249123556738825e-12,
+      "threshold": 1e-05,
+      "pass": true
+    },
+    "0.004/lower/10.0/mu_derivative/0.0001": {
+      "metric": 6.03158989382234e-13,
+      "threshold": 1e-05,
+      "pass": true
+    },
+    "0.004/lower/60.0/raw_charge": {
+      "metric": 1.2355466076627668e-11,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.004/lower/60.0/raw_energy": {
+      "metric": 9.070922093015195e-12,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.004/lower/60.0/corrected_charge": {
+      "metric": 8.531142970907682e-12,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.004/lower/60.0/corrected_energy": {
+      "metric": 1.5798951368197744e-11,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.004/lower/60.0/grand_density": {
+      "metric": 2.312494965374145e-11,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.004/lower/60.0/tadpole_raw": {
+      "metric": 7.889940960403765e-12,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.004/lower/60.0/tadpole_corrected": {
+      "metric": 3.1526776329451656e-12,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.004/lower/60.0/action": {
+      "metric": 1.448110835965581e-12,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.004/lower/60.0/spatial_charge": {
+      "metric": 3.278374921251994e-15,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.004/lower/60.0/spatial_energy": {
+      "metric": 8.391722270041668e-15,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.004/lower/60.0/phase_order": {
+      "metric": 1.6187225108945802e-11,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.004/lower/60.0/charge_root_identity": {
+      "metric": 0.0,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.004/lower/60.0/raw_plus_condensate": {
+      "metric": 3.0366992230307466e-16,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.004/lower/60.0/energy_Legendre": {
+      "metric": 1.2867042857078485e-16,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.004/lower/60.0/omitted_mean_shift_negative": {
+      "metric": 1.1408732837565314,
+      "minimum": 0.001,
+      "pass": true
+    },
+    "0.004/lower/60.0/mu_derivative/0.001": {
+      "metric": 1.0759778712350417e-10,
+      "threshold": 1e-05,
+      "pass": true
+    },
+    "0.004/lower/60.0/mu_derivative/0.0003": {
+      "metric": 1.0801479519273403e-12,
+      "threshold": 1e-05,
+      "pass": true
+    },
+    "0.004/lower/60.0/mu_derivative/0.0001": {
+      "metric": 3.29024298804793e-12,
+      "threshold": 1e-05,
+      "pass": true
+    },
+    "0.004/upper/0.1/raw_charge": {
+      "metric": 6.1192846172066165e-12,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.004/upper/0.1/raw_energy": {
+      "metric": 5.276295103483833e-12,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.004/upper/0.1/corrected_charge": {
+      "metric": 2.4749457303889206e-12,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.004/upper/0.1/corrected_energy": {
+      "metric": 6.10584835336107e-12,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.004/upper/0.1/grand_density": {
+      "metric": 6.0006446024666106e-12,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.004/upper/0.1/tadpole_raw": {
+      "metric": 1.7558117026784748e-12,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.004/upper/0.1/tadpole_corrected": {
+      "metric": 1.4547868750799947e-12,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.004/upper/0.1/action": {
+      "metric": 4.110535968948218e-13,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.004/upper/0.1/spatial_charge": {
+      "metric": 4.606017382522092e-15,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.004/upper/0.1/spatial_energy": {
+      "metric": 7.070944339542446e-15,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.004/upper/0.1/phase_order": {
+      "metric": 9.541986765207533e-12,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.004/upper/0.1/charge_root_identity": {
+      "metric": 0.0,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.004/upper/0.1/raw_plus_condensate": {
+      "metric": 0.0,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.004/upper/0.1/energy_Legendre": {
+      "metric": 1.7341972402576281e-16,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.004/upper/0.1/omitted_mean_shift_negative": {
+      "metric": 0.639490482050789,
+      "minimum": 0.001,
+      "pass": true
+    },
+    "0.004/upper/0.1/mu_derivative/0.001": {
+      "metric": 1.2189025949500222e-12,
+      "threshold": 1e-05,
+      "pass": true
+    },
+    "0.004/upper/0.1/mu_derivative/0.0003": {
+      "metric": 1.3705170555192737e-13,
+      "threshold": 1e-05,
+      "pass": true
+    },
+    "0.004/upper/0.1/mu_derivative/0.0001": {
+      "metric": 1.2609727761111807e-12,
+      "threshold": 1e-05,
+      "pass": true
+    },
+    "0.004/upper/1.0/raw_charge": {
+      "metric": 5.599924032205068e-12,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.004/upper/1.0/raw_energy": {
+      "metric": 4.498673386644477e-12,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.004/upper/1.0/corrected_charge": {
+      "metric": 1.578844838735428e-12,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.004/upper/1.0/corrected_energy": {
+      "metric": 4.991078871262451e-12,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.004/upper/1.0/grand_density": {
+      "metric": 3.93328530351721e-12,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.004/upper/1.0/tadpole_raw": {
+      "metric": 2.257280914447529e-12,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.004/upper/1.0/tadpole_corrected": {
+      "metric": 3.038574399025405e-12,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.004/upper/1.0/action": {
+      "metric": 3.4782227522715637e-13,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.004/upper/1.0/spatial_charge": {
+      "metric": 4.966493331319499e-15,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.004/upper/1.0/spatial_energy": {
+      "metric": 2.9330745250743585e-15,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.004/upper/1.0/phase_order": {
+      "metric": 8.488206959003334e-12,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.004/upper/1.0/charge_root_identity": {
+      "metric": 3.2362114918239405e-16,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.004/upper/1.0/raw_plus_condensate": {
+      "metric": 1.9358077963896858e-16,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.004/upper/1.0/energy_Legendre": {
+      "metric": 1.734127432990793e-16,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.004/upper/1.0/omitted_mean_shift_negative": {
+      "metric": 0.6394854752969678,
+      "minimum": 0.001,
+      "pass": true
+    },
+    "0.004/upper/1.0/mu_derivative/0.001": {
+      "metric": 1.2768472440991358e-12,
+      "threshold": 1e-05,
+      "pass": true
+    },
+    "0.004/upper/1.0/mu_derivative/0.0003": {
+      "metric": 3.1083811378968947e-13,
+      "threshold": 1e-05,
+      "pass": true
+    },
+    "0.004/upper/1.0/mu_derivative/0.0001": {
+      "metric": 8.029040711215196e-13,
+      "threshold": 1e-05,
+      "pass": true
+    },
+    "0.004/upper/10.0/raw_charge": {
+      "metric": 6.626681288480289e-12,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.004/upper/10.0/raw_energy": {
+      "metric": 5.009153586819986e-12,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.004/upper/10.0/corrected_charge": {
+      "metric": 2.939044653080504e-12,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.004/upper/10.0/corrected_energy": {
+      "metric": 4.786434341612448e-12,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.004/upper/10.0/grand_density": {
+      "metric": 5.424625259012069e-12,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.004/upper/10.0/tadpole_raw": {
+      "metric": 2.0025446261027064e-12,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.004/upper/10.0/tadpole_corrected": {
+      "metric": 2.424952787670736e-12,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.004/upper/10.0/action": {
+      "metric": 7.61959205495822e-13,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.004/upper/10.0/spatial_charge": {
+      "metric": 7.17810829024292e-15,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.004/upper/10.0/spatial_energy": {
+      "metric": 2.3418385568504362e-15,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.004/upper/10.0/phase_order": {
+      "metric": 9.298161463727031e-12,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.004/upper/10.0/charge_root_identity": {
+      "metric": 3.2405746218472705e-16,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.004/upper/10.0/raw_plus_condensate": {
+      "metric": 0.0,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.004/upper/10.0/energy_Legendre": {
+      "metric": 5.181525674275992e-16,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.004/upper/10.0/omitted_mean_shift_negative": {
+      "metric": 0.638985711404112,
+      "minimum": 0.001,
+      "pass": true
+    },
+    "0.004/upper/10.0/mu_derivative/0.001": {
+      "metric": 1.21683577050365e-12,
+      "threshold": 1e-05,
+      "pass": true
+    },
+    "0.004/upper/10.0/mu_derivative/0.0003": {
+      "metric": 1.545754094621148e-13,
+      "threshold": 1e-05,
+      "pass": true
+    },
+    "0.004/upper/10.0/mu_derivative/0.0001": {
+      "metric": 9.637468925373783e-13,
+      "threshold": 1e-05,
+      "pass": true
+    },
+    "0.004/upper/60.0/raw_charge": {
+      "metric": 4.3999044392586765e-12,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.004/upper/60.0/raw_energy": {
+      "metric": 5.5746470852533e-12,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.004/upper/60.0/corrected_charge": {
+      "metric": 2.534323009410357e-12,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.004/upper/60.0/corrected_energy": {
+      "metric": 4.1653635929277116e-12,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.004/upper/60.0/grand_density": {
+      "metric": 4.653096039258958e-12,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.004/upper/60.0/tadpole_raw": {
+      "metric": 1.5229523072677278e-12,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.004/upper/60.0/tadpole_corrected": {
+      "metric": 1.8743779606103664e-12,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.004/upper/60.0/action": {
+      "metric": 4.986377113788838e-13,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.004/upper/60.0/spatial_charge": {
+      "metric": 5.4871693017209234e-15,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.004/upper/60.0/spatial_energy": {
+      "metric": 2.7171581864584714e-15,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.004/upper/60.0/phase_order": {
+      "metric": 7.229149990410065e-12,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.004/upper/60.0/charge_root_identity": {
+      "metric": 5.078365897991651e-16,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.004/upper/60.0/raw_plus_condensate": {
+      "metric": 1.8941128620454258e-16,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.004/upper/60.0/energy_Legendre": {
+      "metric": 3.025999232071856e-16,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.004/upper/60.0/omitted_mean_shift_negative": {
+      "metric": 0.6223853329784315,
+      "minimum": 0.001,
+      "pass": true
+    },
+    "0.004/upper/60.0/mu_derivative/0.001": {
+      "metric": 3.26708206104119e-14,
+      "threshold": 1e-05,
+      "pass": true
+    },
+    "0.004/upper/60.0/mu_derivative/0.0003": {
+      "metric": 2.4257661106073464e-13,
+      "threshold": 1e-05,
+      "pass": true
+    },
+    "0.004/upper/60.0/mu_derivative/0.0001": {
+      "metric": 2.4291516878726743e-13,
+      "threshold": 1e-05,
+      "pass": true
+    },
+    "0.004/thermal/64/charge_sum": {
+      "metric": 1.040563393417768e-15,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.004/thermal/64/mean_shift_charge": {
+      "metric": 8.013227613241022e-16,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.004/thermal/64/entropy_Legendre": {
+      "metric": 1.6207705103221848e-16,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.004/thermal/64/P_positive": {
+      "metric": 4.257284561555943e-10,
+      "minimum": 0,
+      "pass": true
+    },
+    "0.004/thermal/64/U_G_positive": {
+      "metric": 1.2759064396917558e-09,
+      "minimum": 0,
+      "pass": true
+    },
+    "0.004/thermal/128/charge_sum": {
+      "metric": 1.6022592098560157e-16,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.004/thermal/128/mean_shift_charge": {
+      "metric": 6.009920709930011e-16,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.004/thermal/128/entropy_Legendre": {
+      "metric": 4.862311530966575e-16,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.004/thermal/128/P_positive": {
+      "metric": 4.2572864876284316e-10,
+      "minimum": 0,
+      "pass": true
+    },
+    "0.004/thermal/128/U_G_positive": {
+      "metric": 1.27590643969175e-09,
+      "minimum": 0,
+      "pass": true
+    },
+    "0.004/thermal/256/charge_sum": {
+      "metric": 1.4435010072307045e-15,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.004/thermal/256/mean_shift_charge": {
+      "metric": 8.013227613240655e-16,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.004/thermal/256/entropy_Legendre": {
+      "metric": 3.2415410206443953e-16,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "0.004/thermal/256/P_positive": {
+      "metric": 4.2572865184197026e-10,
+      "minimum": 0,
+      "pass": true
+    },
+    "0.004/thermal/256/U_G_positive": {
+      "metric": 1.2759064396917454e-09,
+      "minimum": 0,
+      "pass": true
+    },
+    "0.004/thermal_refinement/P": {
+      "metric": 7.232604815631629e-09,
+      "threshold": 0.01,
+      "pass": true
+    },
+    "0.004/thermal_refinement/q_corrected": {
+      "metric": 1.903415365797195e-15,
+      "threshold": 0.01,
+      "pass": true
+    },
+    "0.004/thermal_refinement/U_grand": {
+      "metric": 3.565695122708823e-15,
+      "threshold": 0.01,
+      "pass": true
+    },
+    "0.004/thermal_refinement/mean_shift": {
+      "metric": 8.067230449036142e-14,
+      "threshold": 0.01,
+      "pass": true
+    },
+    "0.004/thermal_mu/0.001": {
+      "metric": 2.622643861366007e-09,
+      "threshold": 1e-05,
+      "pass": true
+    },
+    "0.004/thermal_T/0.001": {
+      "metric": 1.1175069061792597e-13,
+      "threshold": 1e-05,
+      "pass": true
+    },
+    "0.004/thermal_mu/0.0003": {
+      "metric": 2.079893693796029e-11,
+      "threshold": 1e-05,
+      "pass": true
+    },
+    "0.004/thermal_T/0.0003": {
+      "metric": 2.610834620449985e-13,
+      "threshold": 1e-05,
+      "pass": true
+    },
+    "0.004/thermal_mu/0.0001": {
+      "metric": 2.4607988320814786e-12,
+      "threshold": 1e-05,
+      "pass": true
+    },
+    "0.004/thermal_T/0.0001": {
+      "metric": 2.865944771637901e-13,
+      "threshold": 1e-05,
+      "pass": true
+    },
+    "scale/lower/rho": {
+      "metric": 0.0,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "scale/lower/shift_per_amplitude_squared": {
+      "metric": 0.0,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "scale/lower/q_raw_coefficient": {
+      "metric": 0.0,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "scale/lower/q_corrected_coefficient": {
+      "metric": 0.0,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "scale/lower/e_corrected_coefficient": {
+      "metric": 0.0,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "scale/lower/q_per_action": {
+      "metric": 0.0,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "scale/lower/e_per_action": {
+      "metric": 0.0,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "scale/upper/rho": {
+      "metric": 0.0,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "scale/upper/shift_per_amplitude_squared": {
+      "metric": 0.0,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "scale/upper/q_raw_coefficient": {
+      "metric": 0.0,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "scale/upper/q_corrected_coefficient": {
+      "metric": 0.0,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "scale/upper/e_corrected_coefficient": {
+      "metric": 0.0,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "scale/upper/q_per_action": {
+      "metric": 0.0,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "scale/upper/e_per_action": {
+      "metric": 0.0,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "scale/thermal/P": {
+      "metric": 0.0,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "scale/thermal/q_corrected": {
+      "metric": 0.0,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "scale/thermal/U_grand": {
+      "metric": 0.0,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "scale/thermal/mean_shift": {
+      "metric": 0.0,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "scale/thermal/entropy": {
+      "metric": 0.0,
+      "threshold": 1e-08,
+      "pass": true
+    },
+    "complete_states": {
+      "pass": true
+    }
+  },
+  "input_hashes": {
+    "docs/topics/0.10_Fluid_Dynamics_Chaos/Data/03_Research/fluid_core_o2_density_backreaction_contract.json": "adfbee7be7611d072285b53189ad02022e2ace83a8661e54344a1233b3bf9949",
+    "docs/topics/0.10_Fluid_Dynamics_Chaos/Code/03_Research/Research_Fluid_Core_O2_Density_Backreaction.py": "ec40febd37f5ecfa22201796621a91fa4ff6cbb541a30888d7825fab970b61bd",
+    "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry_topic10_o2_density_backreaction_addendum.json": "524d1c3530ab3e875ad9aeac5a0227db7d3e6460197425fe19aea892b14315ef",
+    "docs/topics/0.10_Fluid_Dynamics_Chaos/CORE_O2_DENSITY_BACKREACTION.md": "be95e3f2131d08507afe4179514a4d63740f11b52a0440b8135caba917fc5171",
+    "docs/topics/0.10_Fluid_Dynamics_Chaos/Data/03_Research/fluid_core_o2_current_ward_contract.json": "1ece00c9a6cc45015a72c1de977f4474c877c7999a7ac44f24f45dd622b2bdd8",
+    "docs/topics/0.10_Fluid_Dynamics_Chaos/Code/03_Research/Research_Fluid_Core_O2_Current_Ward.py": "96f9fa56fe8e34483697b9b806b8a88eade492eced295dc6e92ebee439948722",
+    "docs/topics/0.10_Fluid_Dynamics_Chaos/Result/artifacts/fluid_core_o2_current_ward_audit.json": "244b07dba91a8cfd40bb8f3f26922c73b7f6fc7d839f961f970ee6f87a24fbd4",
+    "docs/topics/0.10_Fluid_Dynamics_Chaos/Code/03_Research/Research_Fluid_Core_O2_Common_Flow.py": "b083323ad31df5527a94a888e8eae43984eb77698bda1c6c3d080e2ea940f5e2",
+    "docs/core/02_equations/covariant/uet_covariant_matter.py": "8a57d95e898a8ac962bbd749670ad0695b597281937da36496d2ec7e074f9c53",
+    "docs/core/02_equations/covariant/uet_covariant_response.py": "7fb4b7228afb8ede0ac4f1664d634346ef46cc7678c94ed7b55d73645590c0c2",
+    "docs/topics/0.10_Fluid_Dynamics_Chaos/CORE_O2_DENSITY_SOURCE_BINDING_REPAIR.md": "6bb3ede2263c626f4fc2906d838ad6c61cc25033b742d731dc5109655900f1cc",
+    "docs/topics/0.10_Fluid_Dynamics_Chaos/Result/previews/fluid_core_o2_density_backreaction_first_failure.json": "25a6a09a48977ed5bd1c00c61c15ce0eaf8e2a70dc707098dab21b18328868aa",
+    "docs/topics/0.10_Fluid_Dynamics_Chaos/Result/previews/fluid_core_o2_density_backreaction_first_contract.json": "60a4941244e4dcbaeb882f1fcf58034cf6b3ec040238ec180d578da42333d537",
+    "docs/topics/0.10_Fluid_Dynamics_Chaos/Result/previews/core_o2_density_backreaction_first_verifier.py.txt": "3458fbf3f9db4e58b65f3e6c6f44715bdc8f9458aa21e76b0f44f53d8ff8fe46",
+    "docs/topics/0.10_Fluid_Dynamics_Chaos/CORE_O2_DENSITY_DERIVATIVE_CENTER_REPAIR.md": "f3ee71c8fbf0773f272823577aafcacbf0dd29d05b3d0d12acae96ad7de7780b",
+    "docs/topics/0.10_Fluid_Dynamics_Chaos/Result/previews/core_o2_density_backreaction_uncentered_verifier.py.txt": "a641ae467b13c7d40c0a091cdfeddf3f8ab4bae536e1242955bec2b72fec2cc7",
+    "docs/topics/0.10_Fluid_Dynamics_Chaos/Result/previews/fluid_core_o2_density_backreaction_uncentered_failure.json": "542dba0017723653e0bb6607c4e43e5f041da45d8eafca90f2a190e2b8600a0b",
+    "docs/topics/0.10_Fluid_Dynamics_Chaos/CORE_O2_MICROSCOPIC_CURRENT_WARD.md": "2679190ef730d41212c570a3b962c351bc45f9eb3c879cf3a35617617a3bbc8a",
+    "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry_topic10_o2_current_ward_addendum.json": "4c31a8065e9317f5a15daefafd9e0b4a3fb44367eb24808e9e7863d95e08d4f8",
+    "docs/topics/0.10_Fluid_Dynamics_Chaos/Data/03_Research/fluid_core_o2_current_bound_contract.json": "dd7990f6da9b193d1fa087c26fd200ad5ee873f93f49ea5b70fd140edf77180e",
+    "docs/topics/0.10_Fluid_Dynamics_Chaos/Code/03_Research/Research_Fluid_Core_O2_Current_Bound.py": "a367217b1ff6a9fbfe2a714bb95776c3ca26633973a4f3cad0430411aac60e15",
+    "docs/topics/0.10_Fluid_Dynamics_Chaos/Result/artifacts/fluid_core_o2_current_bound_audit.json": "709bcdcc46f7291fcb028b93794ee533cbf271bfb1e98a2823192efe3c156d21",
+    "docs/topics/0.10_Fluid_Dynamics_Chaos/Code/03_Research/Research_Fluid_Core_O2_Flow_Hessian.py": "d8ecff1e604f545d68ec03b5abf4a6cc53e3ea377cafee0c75762dd1c2ccbc62",
+    "docs/topics/0.10_Fluid_Dynamics_Chaos/CORE_O2_GOLDSTONE_CURRENT_BOUND.md": "5fccaf6def52afaf8d4c2615f1fb255507d542bdeab50687a59956748f79db2f",
+    "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry_topic10_o2_current_bound_addendum.json": "e467f7e0a225429c1f833a42b81d67e1c0db9dc0f1347f556282fe9e5ddab5d8",
+    "docs/topics/0.10_Fluid_Dynamics_Chaos/Data/03_Research/fluid_core_o2_continuum_form_contract.json": "2132f2adbc09082a5d4f991ddfcbcbb5133fe147e3bd521cc4fca1a952960609",
+    "docs/topics/0.10_Fluid_Dynamics_Chaos/Code/03_Research/Research_Fluid_Core_O2_Continuum_Form.py": "0f9db4ad112f01da8a00e57dbd4d842f3c2947f814e1ccf68e6d42af796c7ef8",
+    "docs/topics/0.10_Fluid_Dynamics_Chaos/Result/artifacts/fluid_core_o2_continuum_form_audit.json": "22792c7ec7ab209ca5b23a870f2b72467feb482d4f89050925364c5ba40c932f",
+    "docs/topics/0.10_Fluid_Dynamics_Chaos/CORE_O2_GOLDSTONE_CONTINUUM_FORM.md": "269bd387dde1ea664b7ab7935b96a35d6b1fa6175879f32ba6d913f46a7d0de9",
+    "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry_topic10_o2_continuum_form_addendum.json": "1b1797573264b2210a0ce6bfaa1eec84d7827bc59c2677907c9af185e236ac13",
+    "docs/topics/0.10_Fluid_Dynamics_Chaos/Data/03_Research/fluid_core_o2_infrared_trials_contract.json": "55fb10489110d257a897e0c41b95743ae502cef0130e856508ab7786c075f85d",
+    "docs/topics/0.10_Fluid_Dynamics_Chaos/Code/03_Research/Research_Fluid_Core_O2_Infrared_Trials.py": "d62ccc1853c0e02829f0b0a79d71bd1b43488c7b2d93a15d6c8e26f19157bcdf",
+    "docs/topics/0.10_Fluid_Dynamics_Chaos/Result/artifacts/fluid_core_o2_infrared_trials_audit.json": "4b550b4f455c7b5e67dd64def2208c5729425d7c851050dcc65c31f0a1c048b2",
+    "docs/topics/0.10_Fluid_Dynamics_Chaos/CORE_O2_GOLDSTONE_INFRARED_TRIALS.md": "ad908db9afc36d14102bbf18bba321795ec9b99a43abd4c2819ca49e61dfd97c",
+    "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry_topic10_o2_infrared_trials_addendum.json": "1e3bf2adc560597f2acfac9cb511519f7b9d82e9ea882b8a5d5fd2cd2d555642",
+    "docs/topics/0.10_Fluid_Dynamics_Chaos/Data/03_Research/fluid_core_o2_vector_refinement_contract.json": "5216da4f2549980292cce50314361448456db01816e3a5dba8a3c00120c880f0",
+    "docs/topics/0.10_Fluid_Dynamics_Chaos/Code/03_Research/Research_Fluid_Core_O2_Vector_Refinement.py": "f73896652c997abdb17bd6d9b155e52c40722e36af70f703976b3b18dbe1d827",
+    "docs/topics/0.10_Fluid_Dynamics_Chaos/Result/artifacts/fluid_core_o2_vector_refinement_audit.json": "4990aba84fe30276d7441bdca9567729a63797d5df0a0263d667f6df491f37f5",
+    "docs/topics/0.10_Fluid_Dynamics_Chaos/CORE_O2_GOLDSTONE_VECTOR_REFINEMENT.md": "5957e4f1373faea4e38036f040e4b84c611f11a52d8f5e3188b29e469ed2d4ef",
+    "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry_topic10_o2_vector_refinement_addendum.json": "9263469bc87c7bfaa47ce608adc1da710510885d003cf8a603e25605e06bfee1",
+    "docs/topics/0.10_Fluid_Dynamics_Chaos/Data/03_Research/fluid_core_o2_goldstone_galerkin_contract.json": "d36a29ef8524a9c839ba237ac7507ea6e8c217d777a8f9fcd87302e9b5b37fee",
+    "docs/topics/0.10_Fluid_Dynamics_Chaos/Code/03_Research/Research_Fluid_Core_O2_Goldstone_Galerkin.py": "f7caeae9655172514adc464723917a1a8e367a3a1832ada2938a2d44f1afdc74",
+    "docs/topics/0.10_Fluid_Dynamics_Chaos/Result/artifacts/fluid_core_o2_goldstone_galerkin_audit.json": "4b4c706aab168108e7d5829a6a0563eaf9f99c893afd2586020eb89b55e6d24b",
+    "docs/topics/0.10_Fluid_Dynamics_Chaos/CORE_O2_GOLDSTONE_GALERKIN_DERIVATION.md": "5cd09900d57ae2d61c2007f6a0b2f7d565903894721c81b8b81b29257bccac90",
+    "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry_topic10_o2_goldstone_galerkin_addendum.json": "73bb37bd79dfc2bfde8231998db142d539db83a9b1186e1e23c1dff8dadd6fb8",
+    "docs/topics/0.10_Fluid_Dynamics_Chaos/Data/03_Research/fluid_core_o2_common_flow_contract.json": "c9a190c89d682080a9a90254cfd205e606cd9063f9d34c68b00eeeef8634c75c",
+    "docs/topics/0.10_Fluid_Dynamics_Chaos/Data/03_Research/fluid_core_o2_goldstone_collision_contract.json": "331535ea4a63e47e0d100c317511013605ab5044f1bdbff835ba48fbd3e6b912",
+    "docs/topics/0.10_Fluid_Dynamics_Chaos/Code/03_Research/Research_Fluid_Core_O2_Goldstone_Collision.py": "1b8cc6ff1782da5c5f01dcf4d95052871a4ea2c7a5e1aa967478e9f800cd3fe8",
+    "docs/topics/0.10_Fluid_Dynamics_Chaos/Result/artifacts/fluid_core_o2_goldstone_collision_audit.json": "c130a512a015940ed5db9f2a181fa34731910fa17aa58c5c4e59e0cdb3dfe56b",
+    "docs/core/02_equations/o2/uet_o2_finite_density_eos.py": "ea744a8645f993600300fa9fd99a764e1f07b30fb272b47399c34aa114152c6d",
+    "docs/core/02_equations/o2/uet_o2_finite_temperature_quasiparticle_eos.py": "ba814f3aa02b5e31112a6595dac7727b7025b08e08f0631f50567f270cebbb7f",
+    "docs/core/02_equations/o2/uet_o2_formal_transverse_response.py": "a8ee43c6fb6edb227476412cde6cc9b2d4a643fc42cca0fd2d438b343efad1ba",
+    "docs/core/02_equations/o2/uet_o2_invariant_galerkin_collision_operator.py": "278b168e5c3b444ac4df4b96b5a7d00410cd9485c511ab2a17aa4f11c6f6d94e",
+    "docs/core/07_artifacts/topic13/t13_invariant_galerkin_collision_operator_audit.json": "433427f32612e478d71a1a4ff64f96e3d22da7fc33d3de0c10f3a0a480234011",
+    "docs/core/07_artifacts/topic13/t13_collision_evidence_reconciliation.json": "cad197d2635b08d3454cc49734b292b32971c2f18e3d3f1d2b2c0b5ca77c9bf6",
+    "docs/topics/0.10_Fluid_Dynamics_Chaos/Result/artifacts/fluid_core_o2_ideal_modes_audit.json": "b2e5d7fb5fff8f1a48148e1661bbf640027174b58b9fe765f53cded351c512f6",
+    "docs/topics/0.10_Fluid_Dynamics_Chaos/Result/previews/fluid_core_o2_goldstone_galerkin_first_execution.json": "18e4854a368c5b0d6860da12435bd8dae00d8d77302d66036c40972404ae710a",
+    "docs/topics/0.10_Fluid_Dynamics_Chaos/Result/previews/core_o2_goldstone_galerkin_first_execution_verifier.py.txt": "0be34c2e579b4aaf44dae168c63a4b50276508759c6073751e9c2484c0439c81",
+    "docs/topics/0.10_Fluid_Dynamics_Chaos/Result/previews/fluid_core_o2_infrared_trials_first_execution.json": "ec07cc39289b88ab60fb5d8b7e6fd419015056e9b012d30720a15e90d98fcea8",
+    "docs/topics/0.10_Fluid_Dynamics_Chaos/Result/previews/core_o2_infrared_trials_first_execution_verifier.py.txt": "7525ab5686c248947ab87082e876e9ccb69471e30d38be6f6492429d8c972c74",
+    "docs/topics/0.10_Fluid_Dynamics_Chaos/CORE_O2_GOLDSTONE_INFRARED_GEOMETRY_REPAIR.md": "4143ea435c9ed16896775a4a23312325d0d48b59c6b248c31fefa1b25a485bbc",
+    "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry_topic10_o2_infrared_geometry_addendum.json": "0af8e9ccfcc6de538e17e96448c47935b37177c5fee37599bd3f66d789288f22"
+  },
+  "source_AST_definition_hashes": {
+    "response": {
+      "_finite_scalar": "611afaf642e9806923015be0db63b9842119fe6cfc28d7f893d9dd33ce03e23e",
+      "_finite_array": "ae09adae7d4f453866dce2131f35b22d2203e7b912fbe6e3cbe6af30091bdfd0",
+      "validate_lorentz_metric": "559d80dfc41d673e408703baf9c281d9439a7e31d142e82b049800a6cc128c18",
+      "response_displacement": "8b990dbbcabc8331c8bc3ca7392291a1658961280f97635541fc6b0f6a9cfbd1"
+    },
+    "matter": {
+      "_finite_scalar": "171028c1f34cb4018cbba2ac0d4680f7f51a22f2bd50e86fd80bea09309b8ef3",
+      "_doublet": "494852ca7c21d27d78eeca18d4bbd898a6047e6ca1780d8da65ac8fff4df8869",
+      "_doublet_gradients": "e684389987a23c5445e34dbf928d6b28719203fc450d73fe9af778282fba7c37",
+      "matter_amplitude_sq": "57823f0faa5fd54510c31c5cdab83237f5cfe61f58a9ad2b16ec3bb460c6776c",
+      "matter_potential": "59c53e90b9255021dc5cd66af5759599c402f32953514515cb3311e8ee561528",
+      "interaction_energy_density": "2660a461f52adade233124c8cdd7335b83c911cf2cef079edf70aa6819d3a4b5",
+      "matter_kinetic_scalar": "8a86b1d3473b18ac8628cca198bea1d90660aff60b8a9ab4d1b37efc9307d531",
+      "matter_noether_current": "e680a16b72d5500ddd9e6f6e6948f5da54ff386fb830b71286e297c74f4bce5a",
+      "coupled_matter_stress_tensor": "89e2df9114090efdcad6b8690c30626bba734a22835acb9b490237b1a4ce6d4c",
+      "coupled_matter_lagrangian_scalar": "d0cff5f008ee526987c8b6a556b27855b1357998f45b492ee0a8a618c215f3f5",
+      "matter_eom_residual": "ab97b41b9caf4f80bc0e1317b17cdee9ffa7ed5665b2aa2d1fc29399d9df8096"
+    }
+  },
+  "locked_verification": {
+    "locked_before_first_execution": true,
+    "cutoff_factor": 60,
+    "branches": [
+      "lower",
+      "upper"
+    ],
+    "parent_over_thermal_k": [
+      0.1,
+      1.0,
+      10.0,
+      60.0
+    ],
+    "phase_orders": [
+      8,
+      16,
+      32
+    ],
+    "background_phases": [
+      0.0,
+      0.37
+    ],
+    "coefficient_amplitudes_over_rho": [
+      0.01,
+      0.02,
+      0.04,
+      0.08
+    ],
+    "mu_relative_steps": [
+      0.001,
+      0.0003,
+      0.0001
+    ],
+    "thermal_orders": [
+      64,
+      128,
+      256
+    ],
+    "thermal_relative_steps": [
+      0.001,
+      0.0003,
+      0.0001
+    ],
+    "source_conditioned_tolerance": 1e-08,
+    "derivative_relative_tolerance": 1e-05,
+    "refinement_relative_tolerance": 0.01,
+    "negative_control_floor": 0.001,
+    "energy_scale": 2,
+    "thermal_branch": "lower",
+    "derivative_domain": "fixed_central_K"
+  },
+  "state_results": [
+    {
+      "T": 0.002,
+      "parameters": {
+        "T": 0.002,
+        "mu": 1.28,
+        "m2": 1.0,
+        "r": 0.6384000000000001,
+        "B": 3.9152000000000005,
+        "g3": 0.01652262482792171,
+        "c": 0.4038029274907528,
+        "K": 0.2971746657352999,
+        "lambda_c": 0.01,
+        "Z": 1.0,
+        "Phi": 0.15,
+        "k": 0.2971746657352999
+      },
+      "paper_T_squared_over_lambda_mu_squared": 0.00024414062499999995,
+      "mode_points": [
+        {
+          "branch": "lower",
+          "parent_over_thermal_k": 0.1,
+          "k": 0.0004952911095588332,
+          "mode": {
+            "E": 0.00020000001345829737,
+            "polarization": 0.0004010024687673167,
+            "action_per_amplitude_squared": 0.0006132831828316131,
+            "group_velocity": 0.4038030090082461,
+            "E_h": -0.00032385195493959604,
+            "E_mu": 0.00020484389383590386,
+            "charge_flux": 0.0003238519549395961,
+            "grand_flux": 8.076060723615022e-05,
+            "physical_energy_flux": 0.0004952911095588332
+          },
+          "density": {
+            "rho": 7.989993742175272,
+            "shift_per_amplitude_squared": -0.03128915098926881,
+            "q_raw_coefficient": 0.6400001831144063,
+            "q_condensate_coefficient": -0.6400003087417215,
+            "q_corrected_coefficient": -1.2562731519530417e-07,
+            "e_raw_coefficient": 0.819200357043085,
+            "e_condensate_coefficient": -0.8192003951894036,
+            "e_corrected_coefficient": -3.8146318629919283e-08,
+            "grand_coefficient": 1.2265664482007005e-07,
+            "q_per_action": -0.00020484389383590386,
+            "e_per_action": -6.22001706516596e-05,
+            "radial_force_coefficient": -0.039949987983098414,
+            "charge_cancellation_condition": 5094435.933353801
+          },
+          "source_coefficient_sets": 12,
+          "maximum_conditioned_errors": {
+            "raw_charge": 1.658377821310208e-11,
+            "raw_energy": 1.3344896623749916e-11,
+            "corrected_charge": 2.3723457334178352e-11,
+            "corrected_energy": 1.3815700031058149e-11,
+            "grand_density": 3.753915381320187e-11,
+            "tadpole_raw": 1.2861013580932393e-11,
+            "tadpole_corrected": 1.3970420928676478e-11,
+            "action": 9.82279680576992e-13,
+            "spatial_charge": 3.93595669719989e-12,
+            "spatial_energy": 8.535582752865741e-12,
+            "phase_order": 3.3971878805182066e-11
+          },
+          "source_final": {
+            "raw": [
+              0.6400001831185709,
+              0.8192003570321529,
+              3.650975684022515e-14,
+              -0.039949987982990945,
+              1.98612957691334e-07,
+              3.0375370810056135e-07
+            ],
+            "corrected": [
+              -1.2562049238015174e-07,
+              -3.814980347047607e-08,
+              -4.3485826920925693e-13,
+              3.4207363784307725e-13,
+              1.986129576919996e-07,
+              3.037537081005682e-07
+            ]
+          },
+          "corrected_charge_source_actual_relative_error": 5.430996548654741e-05,
+          "mu_derivative_sweep": [
+            {
+              "relative_step": 0.001,
+              "q_finite": -0.00020484389378173318,
+              "relative_error": 2.6444855033680453e-10
+            },
+            {
+              "relative_step": 0.0003,
+              "q_finite": -0.00020484389383548337,
+              "relative_error": 2.0526885115795986e-12
+            },
+            {
+              "relative_step": 0.0001,
+              "q_finite": -0.0002048438938355833,
+              "relative_error": 1.5648226866460601e-12
+            }
+          ]
+        },
+        {
+          "branch": "lower",
+          "parent_over_thermal_k": 1.0,
+          "k": 0.0049529110955883315,
+          "mode": {
+            "E": 0.0020000134581826547,
+            "polarization": 0.004009987564843522,
+            "action_per_amplitude_squared": 0.00613280689219951,
+            "group_velocity": 0.4038110791243024,
+            "E_h": -0.0032385027365441138,
+            "E_mu": 0.002048388522554312,
+            "charge_flux": 0.0032385027365441138,
+            "grand_flux": 0.0008076275928118658,
+            "physical_energy_flux": 0.0049529110955883315
+          },
+          "density": {
+            "rho": 7.989993742175272,
+            "shift_per_amplitude_squared": -0.03129064528305087,
+            "q_raw_coefficient": 0.6400183112292698,
+            "q_condensate_coefficient": -0.6400308736005188,
+            "q_corrected_coefficient": -1.2562371249023456e-05,
+            "e_raw_coefficient": 0.8192357040697862,
+            "e_condensate_coefficient": -0.819239518208664,
+            "e_corrected_coefficient": -3.814138877915662e-06,
+            "grand_coefficient": 1.2265696320834362e-05,
+            "q_per_action": -0.002048388522554312,
+            "e_per_action": -0.0006219238506868646,
+            "radial_force_coefficient": -0.03995189589739936,
+            "charge_cancellation_condition": 50948.25339207135
+          },
+          "source_coefficient_sets": 12,
+          "maximum_conditioned_errors": {
+            "raw_charge": 2.4774611850154418e-11,
+            "raw_energy": 1.2178854300434552e-11,
+            "corrected_charge": 1.4872363158346228e-11,
+            "corrected_energy": 1.7078974347873033e-11,
+            "grand_density": 3.116517042135672e-11,
+            "tadpole_raw": 1.1302305201144563e-11,
+            "tadpole_corrected": 1.1945083628899355e-11,
+            "action": 2.2349852116151478e-12,
+            "spatial_charge": 6.820237939642706e-13,
+            "spatial_energy": 1.777095512119493e-12,
+            "phase_order": 2.982111317048141e-11
+          },
+          "source_final": {
+            "raw": [
+              0.6400183112308884,
+              0.8192357040622764,
+              6.335111096528129e-13,
+              -0.03995189589729445,
+              1.986111190307194e-05,
+              3.0375247303472554e-05
+            ],
+            "corrected": [
+              -1.2562362233465051e-05,
+              -3.8141528696212367e-06,
+              6.563644056944236e-13,
+              1.7326457253991904e-13,
+              1.986111190308502e-05,
+              3.0375247303518558e-05
+            ]
+          },
+          "corrected_charge_source_actual_relative_error": 7.176637455947798e-07,
+          "mu_derivative_sweep": [
+            {
+              "relative_step": 0.001,
+              "q_finite": -0.0020483885220127424,
+              "relative_error": 2.643880238217874e-10
+            },
+            {
+              "relative_step": 0.0003,
+              "q_finite": -0.0020483885225492256,
+              "relative_error": 2.4830295500882647e-12
+            },
+            {
+              "relative_step": 0.0001,
+              "q_finite": -0.002048388522551201,
+              "relative_error": 1.5186537314787794e-12
+            }
+          ]
+        },
+        {
+          "branch": "lower",
+          "parent_over_thermal_k": 10.0,
+          "k": 0.04952911095588331,
+          "mode": {
+            "E": 0.02001344672523407,
+            "polarization": 0.04006280616361626,
+            "action_per_amplitude_squared": 0.06130317632761108,
+            "group_velocity": 0.40461693471107996,
+            "E_h": -0.03236822772571531,
+            "E_mu": 0.02043355073067168,
+            "charge_flux": 0.032368227725715314,
+            "grand_flux": 0.008097779466967712,
+            "physical_energy_flux": 0.04952911095588331
+          },
+          "density": {
+            "rho": 7.989993742175272,
+            "shift_per_amplitude_squared": -0.03143979575381839,
+            "q_raw_coefficient": 0.6418290130369491,
+            "q_condensate_coefficient": -0.6430816546003907,
+            "q_corrected_coefficient": -0.0012526415634415526,
+            "e_raw_coefficient": 0.8227680245408152,
+            "e_condensate_coefficient": -0.8231445178885001,
+            "e_corrected_coefficient": -0.00037649334768491264,
+            "grand_coefficient": 0.0012268878535202747,
+            "q_per_action": -0.020433550730671688,
+            "e_per_action": -0.0061414982100256865,
+            "radial_force_coefficient": -0.04014233121847532,
+            "charge_cancellation_condition": 513.380422116575
+          },
+          "source_coefficient_sets": 12,
+          "maximum_conditioned_errors": {
+            "raw_charge": 1.8880030351913363e-11,
+            "raw_energy": 1.1474684544010986e-11,
+            "corrected_charge": 1.7051160253274315e-11,
+            "corrected_energy": 1.969459358597785e-11,
+            "grand_density": 3.567894623993874e-11,
+            "tadpole_raw": 1.0637809434042481e-11,
+            "tadpole_corrected": 8.486036151922932e-12,
+            "action": 2.314565386178274e-12,
+            "spatial_charge": 1.5124271352424518e-13,
+            "spatial_energy": 1.508310216750396e-13,
+            "phase_order": 3.359201432767422e-11
+          },
+          "source_final": {
+            "raw": [
+              0.6418290130409325,
+              0.8227680245353778,
+              -9.756281097015354e-14,
+              -0.040142331218428876,
+              0.001984275171682143,
+              0.003036291822278605
+            ],
+            "corrected": [
+              -0.0012526415531670103,
+              -0.0003764933638889945,
+              1.9043503904564476e-12,
+              1.037181402560911e-13,
+              0.001984275171682096,
+              0.0030362918222785512
+            ]
+          },
+          "corrected_charge_source_actual_relative_error": 8.202300310434699e-09,
+          "mu_derivative_sweep": [
+            {
+              "relative_step": 0.001,
+              "q_finite": -0.020433550725304717,
+              "relative_error": 2.6265482820114203e-10
+            },
+            {
+              "relative_step": 0.0003,
+              "q_finite": -0.02043355073062725,
+              "relative_error": 2.174691865663877e-12
+            },
+            {
+              "relative_step": 0.0001,
+              "q_finite": -0.020433550730643055,
+              "relative_error": 1.4012907532264192e-12
+            }
+          ]
+        },
+        {
+          "branch": "lower",
+          "parent_over_thermal_k": 60.0,
+          "k": 0.2971746657352999,
+          "mode": {
+            "E": 0.12282023431199045,
+            "polarization": 0.23289872977465978,
+            "action_per_amplitude_squared": 0.3628514876859992,
+            "group_velocity": 0.4317110038111526,
+            "E_h": -0.19074360866574178,
+            "E_mu": 0.1125111851178958,
+            "charge_flux": 0.19074360866574178,
+            "grand_flux": 0.05302284664315037,
+            "physical_energy_flux": 0.2971746657352999
+          },
+          "density": {
+            "rho": 7.989993742175272,
+            "shift_per_amplitude_squared": -0.03638067476994664,
+            "q_raw_coefficient": 0.7033194402935047,
+            "q_condensate_coefficient": -0.7441442911948479,
+            "q_corrected_coefficient": -0.04082485090134334,
+            "e_raw_coefficient": 0.9448143883137347,
+            "e_condensate_coefficient": -0.9525046927294054,
+            "e_corrected_coefficient": -0.00769030441567075,
+            "grand_coefficient": 0.04456550473804873,
+            "q_per_action": -0.1125111851178958,
+            "e_per_action": -0.021194082638916187,
+            "radial_force_coefficient": -0.046450845546267876,
+            "charge_cancellation_condition": 18.2277283263847
+          },
+          "source_coefficient_sets": 12,
+          "maximum_conditioned_errors": {
+            "raw_charge": 1.0382421498995237e-11,
+            "raw_energy": 1.43984849891195e-11,
+            "corrected_charge": 2.1402161750643667e-11,
+            "corrected_energy": 1.4373256787457372e-11,
+            "grand_density": 2.79100198129514e-11,
+            "tadpole_raw": 9.365319603886356e-12,
+            "tadpole_corrected": 1.027971778783724e-11,
+            "action": 1.2732385476041555e-12,
+            "spatial_charge": 3.990197722822984e-14,
+            "spatial_energy": 1.724583990891612e-14,
+            "phase_order": 2.1890626528586956e-11
+          },
+          "source_final": {
+            "raw": [
+              0.7033194402913242,
+              0.9448143883001308,
+              1.444455017890718e-12,
+              -0.04645084554621986,
+              0.06921160217096059,
+              0.10783026956464355
+            ],
+            "corrected": [
+              -0.0408248509018735,
+              -0.007690304426051166,
+              2.762792105329258e-13,
+              2.822671401035818e-13,
+              0.06921160217096099,
+              0.10783026956464495
+            ]
+          },
+          "corrected_charge_source_actual_relative_error": 1.2986189492973707e-11,
+          "mu_derivative_sweep": [
+            {
+              "relative_step": 0.001,
+              "q_finite": -0.11251118509462071,
+              "relative_error": 2.0686912295985142e-10
+            },
+            {
+              "relative_step": 0.0003,
+              "q_finite": -0.11251118511768353,
+              "relative_error": 1.8866981277096686e-12
+            },
+            {
+              "relative_step": 0.0001,
+              "q_finite": -0.11251118511780095,
+              "relative_error": 8.430688874800983e-13
+            }
+          ]
+        },
+        {
+          "branch": "upper",
+          "parent_over_thermal_k": 0.1,
+          "k": 0.0004952911095588332,
+          "mode": {
+            "E": 2.798285269701172,
+            "polarization": -1.0930801492326556,
+            "action_per_amplitude_squared": 1.6717295408982664,
+            "group_velocity": 0.00032513540407503753,
+            "E_h": 0.00032385195493959604,
+            "E_mu": 2.7445378933261377,
+            "charge_flux": -0.00032385195493959604,
+            "grand_flux": 0.0009098216118815162,
+            "physical_energy_flux": 0.0004952911095588332
+          },
+          "density": {
+            "rho": 7.989993742175272,
+            "shift_per_amplitude_squared": -0.14344418737590067,
+            "q_raw_coefficient": -1.6540625841067487,
+            "q_condensate_coefficient": -2.9340624882812505,
+            "q_corrected_coefficient": -4.588125072387999,
+            "e_raw_coefficient": 2.5607760415632836,
+            "e_condensate_coefficient": -3.755599985000001,
+            "e_corrected_coefficient": -1.1948239434367176,
+            "grand_coefficient": 4.677976149219922,
+            "q_per_action": -2.7445378933261377,
+            "e_per_action": -0.7147232337562843,
+            "radial_force_coefficient": -0.18314953844155,
+            "charge_cancellation_condition": 0.6394905199814328
+          },
+          "source_coefficient_sets": 12,
+          "maximum_conditioned_errors": {
+            "raw_charge": 7.852215025341301e-12,
+            "raw_energy": 5.201205949151304e-12,
+            "corrected_charge": 3.0506587102967975e-12,
+            "corrected_energy": 9.423023708190845e-12,
+            "grand_density": 8.252051191313841e-12,
+            "tadpole_raw": 3.2227767324149486e-12,
+            "tadpole_corrected": 2.9796055003079793e-12,
+            "action": 4.114058635003462e-13,
+            "spatial_charge": 5.4070638423989955e-15,
+            "spatial_energy": 5.7615110648443465e-15,
+            "phase_order": 1.2048945970195681e-11
+          },
+          "source_final": {
+            "raw": [
+              -1.6540625840987824,
+              2.5607760415499645,
+              -2.0099307194667814e-13,
+              -0.183149538441476,
+              -0.0005413928799501771,
+              0.000827992779193781
+            ],
+            "corrected": [
+              -4.588125072384522,
+              -1.1948239434431782,
+              6.530565095248515e-13,
+              2.854873040647097e-13,
+              -0.0005413928799501764,
+              0.000827992779193782
+            ]
+          },
+          "corrected_charge_source_actual_relative_error": 7.578735231200201e-13,
+          "mu_derivative_sweep": [
+            {
+              "relative_step": 0.001,
+              "q_finite": -2.7445378933228617,
+              "relative_error": 1.1936603641109262e-12
+            },
+            {
+              "relative_step": 0.0003,
+              "q_finite": -2.744537893325397,
+              "relative_error": 2.6989636537034365e-13
+            },
+            {
+              "relative_step": 0.0001,
+              "q_finite": -2.744537893322023,
+              "relative_error": 1.499316379809115e-12
+            }
+          ]
+        },
+        {
+          "branch": "upper",
+          "parent_over_thermal_k": 1.0,
+          "k": 0.0049529110955883315,
+          "mode": {
+            "E": 2.7982932409958057,
+            "polarization": -1.0930798728372737,
+            "action_per_amplitude_squared": 1.6717377970528913,
+            "group_velocity": 0.0032513370882913967,
+            "E_h": 0.0032385027365441138,
+            "E_mu": 2.7445286257641714,
+            "charge_flux": -0.0032385027365441133,
+            "grand_flux": 0.009098194598364796,
+            "physical_energy_flux": 0.004952911095588331
+          },
+          "density": {
+            "rho": 7.989993742175272,
+            "shift_per_amplitude_squared": -0.14344413065703265,
+            "q_raw_coefficient": -1.6540709106518492,
+            "q_condensate_coefficient": -2.934061328131745,
+            "q_corrected_coefficient": -4.5881322387835946,
+            "e_raw_coefficient": 2.5608018125759564,
+            "e_condensate_coefficient": -3.755598500008634,
+            "e_corrected_coefficient": -1.1947966874326772,
+            "grand_coefficient": 4.678012578210324,
+            "q_per_action": -2.744528625764171,
+            "e_per_action": -0.7147033999823336,
+            "radial_force_coefficient": -0.1831494660228993,
+            "charge_cancellation_condition": 0.6394892682756728
+          },
+          "source_coefficient_sets": 12,
+          "maximum_conditioned_errors": {
+            "raw_charge": 4.37532620982847e-12,
+            "raw_energy": 5.429371735692599e-12,
+            "corrected_charge": 2.5179171182897834e-12,
+            "corrected_energy": 3.3584136014435203e-12,
+            "grand_density": 4.11830404034666e-12,
+            "tadpole_raw": 1.7071660982673398e-12,
+            "tadpole_corrected": 2.1843078929813604e-12,
+            "action": 1.1641949397901924e-12,
+            "spatial_charge": 4.966489525877962e-15,
+            "spatial_energy": 5.237711464241387e-15,
+            "phase_order": 4.6211569990946096e-12
+          },
+          "source_final": {
+            "raw": [
+              -1.6540709106510008,
+              2.5608018125678553,
+              2.980927401243496e-13,
+              -0.1831494660228759,
+              -0.005413927430540022,
+              0.00827996868393766
+            ],
+            "corrected": [
+              -4.588132238780358,
+              -1.1947966874391311,
+              -2.693873363312019e-13,
+              1.5348854332447793e-14,
+              -0.005413927430540018,
+              0.008279968683937657
+            ]
+          },
+          "corrected_charge_source_actual_relative_error": 7.054116997825073e-13,
+          "mu_derivative_sweep": [
+            {
+              "relative_step": 0.001,
+              "q_finite": -2.7445286257607675,
+              "relative_error": 1.2401035545195775e-12
+            },
+            {
+              "relative_step": 0.0003,
+              "q_finite": -2.744528625763274,
+              "relative_error": 3.26854016196444e-13
+            },
+            {
+              "relative_step": 0.0001,
+              "q_finite": -2.7445286257630803,
+              "relative_error": 3.9740270484082497e-13
+            }
+          ]
+        },
+        {
+          "branch": "upper",
+          "parent_over_thermal_k": 10.0,
+          "k": 0.04952911095588331,
+          "mode": {
+            "E": 2.7990901606797767,
+            "polarization": -1.0930522488399543,
+            "action_per_amplitude_squared": 1.6725631867190989,
+            "group_velocity": 0.032496431777213126,
+            "E_h": 0.03236822772571531,
+            "E_mu": 2.743602604196217,
+            "charge_flux": -0.0323682277257153,
+            "grand_flux": 0.0909604424447989,
+            "physical_energy_flux": 0.04952911095588331
+          },
+          "density": {
+            "rho": 7.989993742175272,
+            "shift_per_amplitude_squared": -0.1434384620317041,
+            "q_raw_coefficient": -1.6549033348726068,
+            "q_condensate_coefficient": -2.9339453798926365,
+            "q_corrected_coefficient": -4.588848714765243,
+            "e_raw_coefficient": 2.5633788904237047,
+            "e_condensate_coefficient": -3.7554500862625746,
+            "e_corrected_coefficient": -1.192071195838869,
+            "grand_coefficient": 4.681655159060642,
+            "q_per_action": -2.7436026041962167,
+            "e_per_action": -0.7127211726913809,
+            "radial_force_coefficient": -0.18314222832207983,
+            "charge_cancellation_condition": 0.6393641547720389
+          },
+          "source_coefficient_sets": 12,
+          "maximum_conditioned_errors": {
+            "raw_charge": 7.198019769078773e-12,
+            "raw_energy": 6.143221136764362e-12,
+            "corrected_charge": 4.023741534049725e-12,
+            "corrected_energy": 6.315598605248748e-12,
+            "grand_density": 7.819467406445861e-12,
+            "tadpole_raw": 2.8579680926401976e-12,
+            "tadpole_corrected": 2.326193420507686e-12,
+            "action": 3.9000107660523255e-13,
+            "spatial_charge": 8.202925486628196e-15,
+            "spatial_energy": 7.538582472622748e-15,
+            "phase_order": 9.52744993818001e-12
+          },
+          "source_final": {
+            "raw": [
+              -1.654903334865997,
+              2.563378890421437,
+              -1.773729782596209e-14,
+              -0.1831422283218276,
+              -0.05413790611337178,
+              0.0828405676557359
+            ],
+            "corrected": [
+              -4.588848714768662,
+              -1.1920711958503183,
+              7.402615643408751e-13,
+              1.3605679966404582e-13,
+              -0.05413790611337183,
+              0.08284056765573593
+            ]
+          },
+          "corrected_charge_source_actual_relative_error": 7.449796125166276e-13,
+          "mu_derivative_sweep": [
+            {
+              "relative_step": 0.001,
+              "q_finite": -2.7436026041928923,
+              "relative_error": 1.21171040581933e-12
+            },
+            {
+              "relative_step": 0.0003,
+              "q_finite": -2.743602604194917,
+              "relative_error": 4.737745602235078e-13
+            },
+            {
+              "relative_step": 0.0001,
+              "q_finite": -2.743602604194627,
+              "relative_error": 5.794714470789743e-13
+            }
+          ]
+        },
+        {
+          "branch": "upper",
+          "parent_over_thermal_k": 60.0,
+          "k": 0.2971746657352999,
+          "mode": {
+            "E": 2.8270020788731873,
+            "polarization": -1.0920949438397567,
+            "action_per_amplitude_squared": 1.7014617273783381,
+            "group_velocity": 0.19148428962005443,
+            "E_h": 0.19074360866574178,
+            "E_mu": 2.7117706800331596,
+            "charge_flux": -0.1907436086657418,
+            "grand_flux": 0.5413264848274494,
+            "physical_energy_flux": 0.29717466573529994
+          },
+          "density": {
+            "rho": 7.989993742175272,
+            "shift_per_amplitude_squared": -0.1432421052758773,
+            "q_raw_coefficient": -1.6840450020912578,
+            "q_condensate_coefficient": -2.929929023411894,
+            "q_corrected_coefficient": -4.613974025503151,
+            "e_raw_coefficient": 2.654458237744917,
+            "e_condensate_coefficient": -3.7503091499672245,
+            "e_corrected_coefficient": -1.095850912222308,
+            "grand_coefficient": 4.810035840421726,
+            "q_per_action": -2.71177068003316,
+            "e_per_action": -0.6440643915692577,
+            "radial_force_coefficient": -0.18289152001624015,
+            "charge_cancellation_condition": 0.6350120324078736
+          },
+          "source_coefficient_sets": 12,
+          "maximum_conditioned_errors": {
+            "raw_charge": 6.195590930091368e-12,
+            "raw_energy": 3.4219414602502314e-12,
+            "corrected_charge": 1.3147578579812948e-12,
+            "corrected_energy": 3.5250815262759966e-12,
+            "grand_density": 3.411429113689337e-12,
+            "tadpole_raw": 2.1991508748484568e-12,
+            "tadpole_corrected": 1.8688632422612092e-12,
+            "action": 5.843901377652914e-13,
+            "spatial_charge": 5.6444547363315155e-15,
+            "spatial_energy": 4.830576265956255e-15,
+            "phase_order": 5.576590138599359e-12
+          },
+          "source_final": {
+            "raw": [
+              -1.6840450020808282,
+              2.6544582377365296,
+              6.522605646815966e-13,
+              -0.18289152001614092,
+              -0.3245429498867915,
+              0.5056313200950635
+            ],
+            "corrected": [
+              -4.613974025500037,
+              -1.0958509122277575,
+              -5.5797499824681326e-14,
+              4.9512630605474804e-14,
+              -0.3245429498867926,
+              0.5056313200950623
+            ]
+          },
+          "corrected_charge_source_actual_relative_error": 6.748962005977188e-13,
+          "mu_derivative_sweep": [
+            {
+              "relative_step": 0.001,
+              "q_finite": -2.711770680030763,
+              "relative_error": 8.839956757484097e-13
+            },
+            {
+              "relative_step": 0.0003,
+              "q_finite": -2.7117706800327683,
+              "relative_error": 1.4443945646722814e-13
+            },
+            {
+              "relative_step": 0.0001,
+              "q_finite": -2.7117706800315142,
+              "relative_error": 6.069077388520946e-13
+            }
+          ]
+        }
+      ],
+      "thermal_sweep": [
+        {
+          "order": 64,
+          "P": 2.6638147653865382e-11,
+          "q_raw": 1.0566452138109684e-06,
+          "q_condensate": -1.0567269946523522e-06,
+          "q_corrected": -8.178084138372768e-11,
+          "U_grand": 7.989431246651718e-11,
+          "energy_correction": -2.4785164504654257e-11,
+          "entropy": 5.3266230060191295e-08,
+          "mean_shift": -5.166261646829461e-08,
+          "background_charge": -1.0567269946523522e-06,
+          "fixed_K": 0.2971746657352999
+        },
+        {
+          "order": 128,
+          "P": 2.6638159691818426e-11,
+          "q_raw": 1.0566452138111024e-06,
+          "q_condensate": -1.0567269946524854e-06,
+          "q_corrected": -8.178084138372721e-11,
+          "U_grand": 7.98943124665167e-11,
+          "energy_correction": -2.478516450465414e-11,
+          "entropy": 5.3266236079167575e-08,
+          "mean_shift": -5.166261646830114e-08,
+          "background_charge": -1.0567269946524859e-06,
+          "fixed_K": 0.2971746657352999
+        },
+        {
+          "order": 256,
+          "P": 2.6638159884263873e-11,
+          "q_raw": 1.0566452138110167e-06,
+          "q_condensate": -1.056726994652401e-06,
+          "q_corrected": -8.178084138372693e-11,
+          "U_grand": 7.989431246651644e-11,
+          "energy_correction": -2.4785164504654038e-11,
+          "entropy": 5.326623617539019e-08,
+          "mean_shift": -5.1662616468296936e-08,
+          "background_charge": -1.0567269946523999e-06,
+          "fixed_K": 0.2971746657352999
+        }
+      ],
+      "thermal_derivatives": [
+        {
+          "relative_step": 0.001,
+          "fixed_K": 0.2971746657352999,
+          "q_finite": -8.17808411663197e-11,
+          "s_finite": 5.326623617538854e-08
+        },
+        {
+          "relative_step": 0.0003,
+          "fixed_K": 0.2971746657352999,
+          "q_finite": -8.178084138192312e-11,
+          "s_finite": 5.3266236175386885e-08
+        },
+        {
+          "relative_step": 0.0001,
+          "fixed_K": 0.2971746657352999,
+          "q_finite": -8.178084138336478e-11,
+          "s_finite": 5.326623617549772e-08
+        }
+      ]
+    },
+    {
+      "T": 0.004,
+      "parameters": {
+        "T": 0.004,
+        "mu": 1.28,
+        "m2": 1.0,
+        "r": 0.6384000000000001,
+        "B": 3.9152000000000005,
+        "g3": 0.01652262482792171,
+        "c": 0.4038029274907528,
+        "K": 0.5943493314705998,
+        "lambda_c": 0.01,
+        "Z": 1.0,
+        "Phi": 0.15,
+        "k": 0.5943493314705998
+      },
+      "paper_T_squared_over_lambda_mu_squared": 0.0009765624999999998,
+      "mode_points": [
+        {
+          "branch": "lower",
+          "parent_over_thermal_k": 0.1,
+          "k": 0.0009905822191176663,
+          "mode": {
+            "E": 0.000400000107666351,
+            "polarization": 0.000802004712544678,
+            "action_per_amplitude_squared": 0.0012265662145327099,
+            "group_velocity": 0.40380325356058594,
+            "E_h": -0.0006477038079823507,
+            "E_mu": 0.0004096874821167373,
+            "charge_flux": 0.0006477038079823509,
+            "grand_flux": 0.0001615213449002572,
+            "physical_energy_flux": 0.0009905822191176663
+          },
+          "density": {
+            "rho": 7.989993742175272,
+            "shift_per_amplitude_squared": -0.03128919627171156,
+            "q_raw_coefficient": 0.640000732457369,
+            "q_condensate_coefficient": -0.6400012349661932,
+            "q_corrected_coefficient": -5.025088240813635e-07,
+            "e_raw_coefficient": 0.8192014281720503,
+            "e_condensate_coefficient": -0.8192015807567273,
+            "e_corrected_coefficient": -1.525846769511528e-07,
+            "grand_coefficient": 4.906266178729925e-07,
+            "q_per_action": -0.00040968748211673715,
+            "e_per_action": -0.00012439986944307247,
+            "radial_force_coefficient": -0.03995004579972133,
+            "charge_cancellation_condition": 1273611.9333549605
+          },
+          "source_coefficient_sets": 12,
+          "maximum_conditioned_errors": {
+            "raw_charge": 1.9336766984119825e-11,
+            "raw_energy": 1.5778502233621216e-11,
+            "corrected_charge": 1.0443057527296063e-11,
+            "corrected_energy": 1.5405260984602217e-11,
+            "grand_density": 2.584829308798936e-11,
+            "tadpole_raw": 1.0541374896871112e-11,
+            "tadpole_corrected": 5.864337497105236e-12,
+            "action": 2.2625657923094257e-12,
+            "spatial_charge": 6.662461194201591e-12,
+            "spatial_energy": 4.448089226383645e-12,
+            "phase_order": 2.1965406715271164e-11
+          },
+          "source_final": {
+            "raw": [
+              0.6400007324629999,
+              0.8192014281591246,
+              1.7867882592834158e-12,
+              -0.039950045799679555,
+              7.944516078950913e-07,
+              1.2150146826841647e-06
+            ],
+            "corrected": [
+              -5.025036819865209e-07,
+              -1.525927395193545e-07,
+              2.1244579099970783e-13,
+              -5.938802424857334e-14,
+              7.94451607893961e-07,
+              1.2150146826819864e-06
+            ]
+          },
+          "corrected_charge_source_actual_relative_error": 1.0232844869967913e-05,
+          "mu_derivative_sweep": [
+            {
+              "relative_step": 0.001,
+              "q_finite": -0.0004096874820084115,
+              "relative_error": 2.6441050690497585e-10
+            },
+            {
+              "relative_step": 0.0003,
+              "q_finite": -0.000409687482115713,
+              "relative_error": 2.4998014751106988e-12
+            },
+            {
+              "relative_step": 0.0001,
+              "q_finite": -0.00040968748211578344,
+              "relative_error": 2.327916967585355e-12
+            }
+          ]
+        },
+        {
+          "branch": "lower",
+          "parent_over_thermal_k": 1.0,
+          "k": 0.009905822191176663,
+          "mode": {
+            "E": 0.004000107662680822,
+            "polarization": 0.008019750155761611,
+            "action_per_amplitude_squared": 0.012265462666962632,
+            "group_velocity": 0.40383553262155675,
+            "E_h": -0.00647690358021436,
+            "E_mu": 0.0040964715144714454,
+            "charge_flux": 0.006476903580214362,
+            "grand_flux": 0.00161538560850228,
+            "physical_energy_flux": 0.009905822191176663
+          },
+          "density": {
+            "rho": 7.989993742175272,
+            "shift_per_amplitude_squared": -0.03129517310815128,
+            "q_raw_coefficient": 0.6400732423552898,
+            "q_condensate_coefficient": -0.6401234874737167,
+            "q_corrected_coefficient": -5.02451184270254e-05,
+            "e_raw_coefficient": 0.8193428133859715,
+            "e_condensate_coefficient": -0.8193580639663575,
+            "e_corrected_coefficient": -1.5250580386149742e-05,
+            "grand_coefficient": 4.906317120044277e-05,
+            "q_per_action": -0.004096471514471446,
+            "e_per_action": -0.0012433758758426299,
+            "radial_force_coefficient": -0.03995767702448756,
+            "charge_cancellation_condition": 12740.013508046839
+          },
+          "source_coefficient_sets": 12,
+          "maximum_conditioned_errors": {
+            "raw_charge": 1.9874013709811582e-11,
+            "raw_energy": 1.3369134715111116e-11,
+            "corrected_charge": 1.7820706536422724e-11,
+            "corrected_energy": 1.3374062299669747e-11,
+            "grand_density": 2.2502071927320975e-11,
+            "tadpole_raw": 8.133182912268228e-12,
+            "tadpole_corrected": 1.1236703419696012e-11,
+            "action": 1.2318774147492278e-12,
+            "spatial_charge": 7.10873655432436e-13,
+            "spatial_energy": 4.0088877482772986e-13,
+            "phase_order": 1.8056494821922906e-11
+          },
+          "source_final": {
+            "raw": [
+              0.6400732423608312,
+              0.8193428133786428,
+              2.105145631737158e-12,
+              -0.03995767702435971,
+              7.944221906064532e-05,
+              0.00012149949227142325
+            ],
+            "corrected": [
+              -5.024511853553377e-05,
+              -1.525058168745579e-05,
+              1.1394446753061397e-15,
+              2.3228612087838135e-13,
+              7.944221906062083e-05,
+              0.00012149949227143643
+            ]
+          },
+          "corrected_charge_source_actual_relative_error": 2.1595803298722255e-09,
+          "mu_derivative_sweep": [
+            {
+              "relative_step": 0.001,
+              "q_finite": -0.004096471513388356,
+              "relative_error": 2.643958858034805e-10
+            },
+            {
+              "relative_step": 0.0003,
+              "q_finite": -0.004096471514461002,
+              "relative_error": 2.5494874430893996e-12
+            },
+            {
+              "relative_step": 0.0001,
+              "q_finite": -0.0040964715144653305,
+              "relative_error": 1.49293546725549e-12
+            }
+          ]
+        },
+        {
+          "branch": "lower",
+          "parent_over_thermal_k": 10.0,
+          "k": 0.09905822191176662,
+          "mode": {
+            "E": 0.040107297228583104,
+            "polarization": 0.07990223066693336,
+            "action_per_amplitude_squared": 0.1224565337096913,
+            "group_velocity": 0.4070450260261928,
+            "E_h": -0.06463495786524825,
+            "E_mu": 0.04056399777815787,
+            "charge_flux": 0.06463495786524825,
+            "grand_flux": 0.016325475844248857,
+            "physical_energy_flux": 0.09905822191176662
+          },
+          "density": {
+            "rho": 7.989993742175272,
+            "shift_per_amplitude_squared": -0.03188841982494443,
+            "q_raw_coefficient": 0.6472906570525387,
+            "q_condensate_coefficient": -0.6522579836138596,
+            "q_corrected_coefficient": -0.004967326561320833,
+            "e_raw_coefficient": 0.8334434416223262,
+            "e_condensate_coefficient": -0.8348902190257402,
+            "e_corrected_coefficient": -0.001446777403414071,
+            "grand_coefficient": 0.004911400595076595,
+            "q_per_action": -0.040563997778157876,
+            "e_per_action": -0.011814619927458983,
+            "radial_force_coefficient": -0.04071513443248905,
+            "charge_cancellation_condition": 131.30966437616726
+          },
+          "source_coefficient_sets": 12,
+          "maximum_conditioned_errors": {
+            "raw_charge": 1.7014117564314333e-11,
+            "raw_energy": 1.2286280642022753e-11,
+            "corrected_charge": 1.3578445852669302e-11,
+            "corrected_energy": 1.15122482522579e-11,
+            "grand_density": 2.4699076685688747e-11,
+            "tadpole_raw": 8.515306132259027e-12,
+            "tadpole_corrected": 6.023927317374878e-12,
+            "action": 1.0185341704758472e-12,
+            "spatial_charge": 8.350371542357146e-14,
+            "spatial_energy": 1.194109741023007e-13,
+            "phase_order": 2.225783250670018e-11
+          },
+          "source_final": {
+            "raw": [
+              0.6472906570498757,
+              0.8334434416120863,
+              2.8821040376411837e-13,
+              -0.04071513443247553,
+              0.007914972896650151,
+              0.01213032649076036
+            ],
+            "corrected": [
+              -0.004967326558807901,
+              -0.001446777412101925,
+              8.488906244513312e-13,
+              -9.321820128378396e-14,
+              0.007914972896650335,
+              0.012130326490759912
+            ]
+          },
+          "corrected_charge_source_actual_relative_error": 5.05892188077604e-10,
+          "mu_derivative_sweep": [
+            {
+              "relative_step": 0.001,
+              "q_finite": -0.040563997767729135,
+              "relative_error": 2.57093525667083e-10
+            },
+            {
+              "relative_step": 0.0003,
+              "q_finite": -0.04056399777807168,
+              "relative_error": 2.1249123556738825e-12
+            },
+            {
+              "relative_step": 0.0001,
+              "q_finite": -0.04056399777813341,
+              "relative_error": 6.03158989382234e-13
+            }
+          ]
+        },
+        {
+          "branch": "lower",
+          "parent_over_thermal_k": 60.0,
+          "k": 0.5943493314705998,
+          "mode": {
+            "E": 0.2607525859995963,
+            "polarization": 0.42733758939252436,
+            "action_per_amplitude_squared": 0.7011773890672667,
+            "group_velocity": 0.5012197206677589,
+            "E_h": -0.36223046340037995,
+            "E_mu": 0.17445073382611961,
+            "charge_flux": 0.36223046340037995,
+            "grand_flux": 0.1306943383181134,
+            "physical_energy_flux": 0.5943493314705998
+          },
+          "density": {
+            "rho": 7.989993742175272,
+            "shift_per_amplitude_squared": -0.048430959268249675,
+            "q_raw_coefficient": 0.8683045273259351,
+            "q_condensate_coefficient": -0.9906254373910026,
+            "q_corrected_coefficient": -0.12232091006506725,
+            "e_raw_coefficient": 1.294263612420932,
+            "e_condensate_coefficient": -1.2680005598604833,
+            "e_corrected_coefficient": 0.026263052560448752,
+            "grand_coefficient": 0.18283381744373484,
+            "q_per_action": -0.17445073382611961,
+            "e_per_action": 0.03745564670216317,
+            "radial_force_coefficient": -0.06183664879370118,
+            "charge_cancellation_condition": 8.098578050670572
+          },
+          "source_coefficient_sets": 12,
+          "maximum_conditioned_errors": {
+            "raw_charge": 1.2355466076627668e-11,
+            "raw_energy": 9.070922093015195e-12,
+            "corrected_charge": 8.531142970907682e-12,
+            "corrected_energy": 1.5798951368197744e-11,
+            "grand_density": 2.312494965374145e-11,
+            "tadpole_raw": 7.889940960403765e-12,
+            "tadpole_corrected": 3.1526776329451656e-12,
+            "action": 1.448110835965581e-12,
+            "spatial_charge": 3.278374921251994e-15,
+            "spatial_energy": 8.391722270041668e-15,
+            "phase_order": 1.6187225108945802e-11
+          },
+          "source_final": {
+            "raw": [
+              0.868304527331312,
+              1.2942636124173454,
+              1.4608090341779227e-12,
+              -0.061836648793611886,
+              0.2539878105677041,
+              0.4167443124344286
+            ],
+            "corrected": [
+              -0.12232091006064097,
+              0.02626305255698979,
+              6.650996349538717e-13,
+              -4.1252451687976597e-14,
+              0.2539878105677043,
+              0.41674431243442933
+            ]
+          },
+          "corrected_charge_source_actual_relative_error": 3.618579019388008e-11,
+          "mu_derivative_sweep": [
+            {
+              "relative_step": 0.001,
+              "q_finite": -0.1744507338073491,
+              "relative_error": 1.0759778712350417e-10
+            },
+            {
+              "relative_step": 0.0003,
+              "q_finite": -0.17445073382593118,
+              "relative_error": 1.0801479519273403e-12
+            },
+            {
+              "relative_step": 0.0001,
+              "q_finite": -0.17445073382554563,
+              "relative_error": 3.29024298804793e-12
+            }
+          ]
+        },
+        {
+          "branch": "upper",
+          "parent_over_thermal_k": 0.1,
+          "k": 0.0009905822191176663,
+          "mode": {
+            "E": 2.7982855112561658,
+            "polarization": -1.0930801408569928,
+            "action_per_amplitude_squared": 1.6717297910854279,
+            "group_velocity": 0.0006502707054071218,
+            "E_h": 0.0006477038079823507,
+            "E_mu": 2.7445376124887875,
+            "charge_flux": -0.0006477038079823507,
+            "grand_flux": 0.0018196430933350755,
+            "physical_energy_flux": 0.0009905822191176663
+          },
+          "density": {
+            "rho": 7.989993742175272,
+            "shift_per_amplitude_squared": -0.14344418565713762,
+            "q_raw_coefficient": -1.654062836426968,
+            "q_condensate_coefficient": -2.9340624531250112,
+            "q_corrected_coefficient": -4.5881252895519795,
+            "e_raw_coefficient": 2.56077682250313,
+            "e_condensate_coefficient": -3.7555999400000144,
+            "e_corrected_coefficient": -1.1948231174968837,
+            "grand_coefficient": 4.67797725312965,
+            "q_per_action": -2.7445376124887875,
+            "e_per_action": -0.7147226327294822,
+            "radial_force_coefficient": -0.1831495362470333,
+            "charge_cancellation_condition": 0.639490482050789
+          },
+          "source_coefficient_sets": 12,
+          "maximum_conditioned_errors": {
+            "raw_charge": 6.1192846172066165e-12,
+            "raw_energy": 5.276295103483833e-12,
+            "corrected_charge": 2.4749457303889206e-12,
+            "corrected_energy": 6.10584835336107e-12,
+            "grand_density": 6.0006446024666106e-12,
+            "tadpole_raw": 1.7558117026784748e-12,
+            "tadpole_corrected": 1.4547868750799947e-12,
+            "action": 4.110535968948218e-13,
+            "spatial_charge": 4.606017382522092e-15,
+            "spatial_energy": 7.070944339542446e-15,
+            "phase_order": 9.541986765207533e-12
+          },
+          "source_final": {
+            "raw": [
+              -1.654062836422036,
+              2.560776822489619,
+              1.332623845603326e-12,
+              -0.18314953624700794,
+              -0.0010827857516035714,
+              0.0016559858062185154
+            ],
+            "corrected": [
+              -4.588125289547056,
+              -1.1948231175062105,
+              1.0526165237348043e-12,
+              -4.4922744035123607e-14,
+              -0.001082785751603571,
+              0.0016559858062185106
+            ]
+          },
+          "corrected_charge_source_actual_relative_error": 1.0730249654709258e-12,
+          "mu_derivative_sweep": [
+            {
+              "relative_step": 0.001,
+              "q_finite": -2.744537612485442,
+              "relative_error": 1.2189025949500222e-12
+            },
+            {
+              "relative_step": 0.0003,
+              "q_finite": -2.7445376124884113,
+              "relative_error": 1.3705170555192737e-13
+            },
+            {
+              "relative_step": 0.0001,
+              "q_finite": -2.7445376124853267,
+              "relative_error": 1.2609727761111807e-12
+            }
+          ]
+        },
+        {
+          "branch": "upper",
+          "parent_over_thermal_k": 1.0,
+          "k": 0.009905822191176663,
+          "mode": {
+            "E": 2.798317396180293,
+            "polarization": -1.093079035294314,
+            "action_per_amplitude_squared": 1.6717628154300905,
+            "group_velocity": 0.006502571437639264,
+            "E_h": 0.00647690358021436,
+            "E_mu": 2.744500543132131,
+            "charge_flux": -0.006476903580214362,
+            "grand_flux": 0.01819625877385105,
+            "physical_energy_flux": 0.009905822191176663
+          },
+          "density": {
+            "rho": 7.989993742175272,
+            "shift_per_amplitude_squared": -0.14344395878562122,
+            "q_raw_coefficient": -1.6540961423280844,
+            "q_condensate_coefficient": -2.9340578126079007,
+            "q_corrected_coefficient": -4.5881539549359855,
+            "e_raw_coefficient": 2.5608799065254186,
+            "e_condensate_coefficient": -3.755594000138113,
+            "e_corrected_coefficient": -1.1947140936126948,
+            "grand_coefficient": 4.678122968705367,
+            "q_per_action": -2.744500543132132,
+            "e_per_action": -0.714643299028836,
+            "radial_force_coefficient": -0.1831492465774812,
+            "charge_cancellation_condition": 0.6394854752969676
+          },
+          "source_coefficient_sets": 12,
+          "maximum_conditioned_errors": {
+            "raw_charge": 5.599924032205068e-12,
+            "raw_energy": 4.498673386644477e-12,
+            "corrected_charge": 1.578844838735428e-12,
+            "corrected_energy": 4.991078871262451e-12,
+            "grand_density": 3.93328530351721e-12,
+            "tadpole_raw": 2.257280914447529e-12,
+            "tadpole_corrected": 3.038574399025405e-12,
+            "action": 3.4782227522715637e-13,
+            "spatial_charge": 4.966493331319499e-15,
+            "spatial_energy": 2.9330745250743585e-15,
+            "phase_order": 8.488206959003334e-12
+          },
+          "source_final": {
+            "raw": [
+              -1.654096142325777,
+              2.5608799065184336,
+              -9.94780910490736e-13,
+              -0.18314924657739767,
+              -0.01082784656452839,
+              0.016560185195471415
+            ],
+            "corrected": [
+              -4.588153954928746,
+              -1.1947140936216505,
+              8.907310756711787e-13,
+              2.2714850727196513e-13,
+              -0.010827846564528407,
+              0.016560185195471366
+            ]
+          },
+          "corrected_charge_source_actual_relative_error": 1.5778769348372329e-12,
+          "mu_derivative_sweep": [
+            {
+              "relative_step": 0.001,
+              "q_finite": -2.744500543128628,
+              "relative_error": 1.2768472440991358e-12
+            },
+            {
+              "relative_step": 0.0003,
+              "q_finite": -2.744500543131279,
+              "relative_error": 3.1083811378968947e-13
+            },
+            {
+              "relative_step": 0.0001,
+              "q_finite": -2.7445005431299285,
+              "relative_error": 8.029040711215196e-13
+            }
+          ]
+        },
+        {
+          "branch": "upper",
+          "parent_over_thermal_k": 10.0,
+          "k": 0.09905822191176662,
+          "mode": {
+            "E": 2.801502537454796,
+            "polarization": -1.0929687271661064,
+            "action_per_amplitude_squared": 1.6750616430192273,
+            "group_velocity": 0.06489052412011877,
+            "E_h": 0.06463495786524825,
+            "E_mu": 2.7408053303639837,
+            "charge_flux": -0.06463495786524825,
+            "grand_flux": 0.18179096797928437,
+            "physical_energy_flux": 0.09905822191176662
+          },
+          "density": {
+            "rho": 7.989993742175272,
+            "shift_per_amplitude_squared": -0.14342132370811392,
+            "q_raw_coefficient": -1.6574230538342023,
+            "q_condensate_coefficient": -2.93359482604115,
+            "q_corrected_coefficient": -4.591017879875352,
+            "e_raw_coefficient": 2.571187934403787,
+            "e_condensate_coefficient": -3.755001377332672,
+            "e_corrected_coefficient": -1.1838134429288862,
+            "grand_coefficient": 4.692689443311565,
+            "q_per_action": -2.7408053303639845,
+            "e_per_action": -0.7067282854111046,
+            "radial_force_coefficient": -0.18312034611051986,
+            "charge_cancellation_condition": 0.638985711404112
+          },
+          "source_coefficient_sets": 12,
+          "maximum_conditioned_errors": {
+            "raw_charge": 6.626681288480289e-12,
+            "raw_energy": 5.009153586819986e-12,
+            "corrected_charge": 2.939044653080504e-12,
+            "corrected_energy": 4.786434341612448e-12,
+            "grand_density": 5.424625259012069e-12,
+            "tadpole_raw": 2.0025446261027064e-12,
+            "tadpole_corrected": 2.424952787670736e-12,
+            "action": 7.61959205495822e-13,
+            "spatial_charge": 7.17810829024292e-15,
+            "spatial_energy": 2.3418385568504362e-15,
+            "phase_order": 9.298161463727031e-12
+          },
+          "source_final": {
+            "raw": [
+              -1.657423053836576,
+              2.571187934402148,
+              5.193949169653434e-13,
+              -0.18312034611044015,
+              -0.10826753871824153,
+              0.16592862795008703
+            ],
+            "corrected": [
+              -4.591017879877291,
+              -1.1838134429402227,
+              5.473948799562822e-13,
+              1.8271142665015762e-13,
+              -0.10826753871824167,
+              0.1659286279500872
+            ]
+          },
+          "corrected_charge_source_actual_relative_error": 4.223232278627493e-13,
+          "mu_derivative_sweep": [
+            {
+              "relative_step": 0.001,
+              "q_finite": -2.7408053303606494,
+              "relative_error": 1.21683577050365e-12
+            },
+            {
+              "relative_step": 0.0003,
+              "q_finite": -2.740805330363561,
+              "relative_error": 1.545754094621148e-13
+            },
+            {
+              "relative_step": 0.0001,
+              "q_finite": -2.740805330361343,
+              "relative_error": 9.637468925373783e-13
+            }
+          ]
+        },
+        {
+          "branch": "upper",
+          "parent_over_thermal_k": 60.0,
+          "k": 0.5943493314705998,
+          "mode": {
+            "E": 2.9101392311251404,
+            "polarization": -1.0893566010940503,
+            "action_per_amplitude_squared": 1.7874210841225857,
+            "group_velocity": 0.36355797458324113,
+            "E_h": 0.36223046340037995,
+            "E_mu": 2.6234179582787878,
+            "charge_flux": -0.3622304634003799,
+            "grand_flux": 1.0580043246230861,
+            "physical_energy_flux": 0.5943493314705998
+          },
+          "density": {
+            "rho": 7.989993742175272,
+            "shift_per_amplitude_squared": -0.14268138249505255,
+            "q_raw_coefficient": -1.7706927867467392,
+            "q_condensate_coefficient": -2.918459784346589,
+            "q_corrected_coefficient": -4.689152571093329,
+            "e_raw_coefficient": 2.93515745240954,
+            "e_condensate_coefficient": -3.735628523963634,
+            "e_corrected_coefficient": -0.800471071554095,
+            "grand_coefficient": 5.201644219445367,
+            "q_per_action": -2.6234179582787864,
+            "e_per_action": -0.44783575547170695,
+            "radial_force_coefficient": -0.18217558916968313,
+            "charge_cancellation_condition": 0.6223853329784313
+          },
+          "source_coefficient_sets": 12,
+          "maximum_conditioned_errors": {
+            "raw_charge": 4.3999044392586765e-12,
+            "raw_energy": 5.5746470852533e-12,
+            "corrected_charge": 2.534323009410357e-12,
+            "corrected_energy": 4.1653635929277116e-12,
+            "grand_density": 4.653096039258958e-12,
+            "tadpole_raw": 1.5229523072677278e-12,
+            "tadpole_corrected": 1.8743779606103664e-12,
+            "action": 4.986377113788838e-13,
+            "spatial_charge": 5.4871693017209234e-15,
+            "spatial_energy": 2.7171581864584714e-15,
+            "phase_order": 7.229149990410065e-12
+          },
+          "source_final": {
+            "raw": [
+              -1.7706927867429636,
+              2.935157452404172,
+              6.759757294525328e-13,
+              -0.18217558916965,
+              -0.6474583675933325,
+              1.0623525264047167
+            ],
+            "corrected": [
+              -4.689152571086939,
+              -0.800471071566321,
+              6.605786616341503e-13,
+              -7.348784926135507e-15,
+              -0.6474583675933332,
+              1.0623525264047127
+            ]
+          },
+          "corrected_charge_source_actual_relative_error": 1.3628142042416838e-12,
+          "mu_derivative_sweep": [
+            {
+              "relative_step": 0.001,
+              "q_finite": -2.623417958278872,
+              "relative_error": 3.26708206104119e-14
+            },
+            {
+              "relative_step": 0.0003,
+              "q_finite": -2.62341795827815,
+              "relative_error": 2.4257661106073464e-13
+            },
+            {
+              "relative_step": 0.0001,
+              "q_finite": -2.623417958278149,
+              "relative_error": 2.4291516878726743e-13
+            }
+          ]
+        }
+      ],
+      "thermal_sweep": [
+        {
+          "order": 64,
+          "P": 4.257284561555943e-10,
+          "q_raw": 4.22686992442731e-06,
+          "q_condensate": -4.228173655542577e-06,
+          "q_corrected": -1.3037311152627832e-09,
+          "U_grand": 1.2759064396917558e-09,
+          "energy_correction": -3.9286938784460667e-10,
+          "entropy": 4.2540872396183754e-07,
+          "mean_shift": -2.0671234390061769e-07,
+          "background_charge": -4.228173655542574e-06,
+          "fixed_K": 0.5943493314705998
+        },
+        {
+          "order": 128,
+          "P": 4.2572864876284316e-10,
+          "q_raw": 4.226869924427844e-06,
+          "q_condensate": -4.228173655543106e-06,
+          "q_corrected": -1.3037311152627766e-09,
+          "U_grand": 1.27590643969175e-09,
+          "energy_correction": -3.928693878446042e-10,
+          "entropy": 4.254087721136484e-07,
+          "mean_shift": -2.0671234390064379e-07,
+          "background_charge": -4.2281736555431085e-06,
+          "fixed_K": 0.5943493314705998
+        },
+        {
+          "order": 256,
+          "P": 4.2572865184197026e-10,
+          "q_raw": 4.226869924427502e-06,
+          "q_condensate": -4.2281736555427705e-06,
+          "q_corrected": -1.303731115262774e-09,
+          "U_grand": 1.2759064396917454e-09,
+          "energy_correction": -3.9286938784460543e-10,
+          "entropy": 4.25408772883429e-07,
+          "mean_shift": -2.067123439006271e-07,
+          "background_charge": -4.228173655542767e-06,
+          "fixed_K": 0.5943493314705998
+        }
+      ],
+      "thermal_derivatives": [
+        {
+          "relative_step": 0.001,
+          "fixed_K": 0.5943493314705998,
+          "q_finite": -1.3037311118435517e-09,
+          "s_finite": 4.2540877288338145e-07
+        },
+        {
+          "relative_step": 0.0003,
+          "fixed_K": 0.5943493314705998,
+          "q_finite": -1.3037311152356579e-09,
+          "s_finite": 4.254087728833179e-07
+        },
+        {
+          "relative_step": 0.0001,
+          "fixed_K": 0.5943493314705998,
+          "q_finite": -1.3037311152595659e-09,
+          "s_finite": 4.2540877288330707e-07
+        }
+      ]
+    }
+  ],
+  "execution_errors": [],
+  "leading_mean_density_backreaction_supported": true,
+  "fixed_domain_Gaussian_density_Legendre_supported": true,
+  "full_interacting_density_backreaction_completed": false,
+  "full_nonlinear_wave_solved": false,
+  "interacting_Noether_current_completed": false,
+  "self_consistent_thermal_gap_solved": false,
+  "paper_low_T_accuracy_admitted": false,
+  "physical_heat_current_matched": false,
+  "physical_material_frame_admitted": false,
+  "physical_UET_operator_admitted": false,
+  "physical_HeII_state_assigned": false,
+  "formal_verification": false,
+  "external_math_review": false,
+  "interval_certified": false,
+  "whole_Core_runtime_executed": false,
+  "physical_J04_executed": false,
+  "physical_J05_executed": false,
+  "physical_J06_executed": false,
+  "physical_frequency_window": null,
+  "physical_relaxation_time": null,
+  "live_Phi_executed": false,
+  "useful_relative_error_certified": false,
+  "claim_promotion": false,
+  "dependency_unlock": false,
+  "parameters_fitted": false,
+  "thresholds_relaxed": false,
+  "unit_powers": {
+    "mean_shift": 1,
+    "q_density": 3,
+    "e_density": 4,
+    "Nwave": 3,
+    "q_per_action": 0,
+    "e_per_action": 1,
+    "thermal_P": 4,
+    "thermal_q": 3
+  },
+  "physical_controller": "vector_momentum_constitutive_origin_and_material_frame_admission_open",
+  "controlling_measured_blocker": "useful_certified_current_error_and_interacting_Noether_heat_frame_material_correspondence_open",
+  "notes": [
+    "Mean radial response is order-A^2 only; no full nonlinear wave or interacting EOS.",
+    "Source errors report cancellation conditioning; no interval certification.",
+    "Thermal derivatives hold the central physical K fixed.",
+    "Paper T^2>>lambda*mu^2 regime is not admitted for the selected states."
+  ]
+}

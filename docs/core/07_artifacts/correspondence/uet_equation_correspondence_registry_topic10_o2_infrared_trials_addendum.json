@@ -1,0 +1,57 @@
+{
+  "schema_version": "uet-equation-registry-addendum-v1",
+  "status": "NUMERICAL_METHOD_AND_GRAM_DOMAIN_LEMMA_NOT_CORE_PROMOTION",
+  "extends": "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry_topic10_o2_vector_refinement_addendum.json",
+  "equation_entries": [
+    {
+      "equation_id": "candidate.topic10_13.o2_independent_smooth_soft_trial",
+      "classification": "independent_variational_trial_enrichment_and_finite_cutoff_Gram_domain_lemma",
+      "relation_or_code_path": {
+        "hybrid": "seed k,T,EVEN1..N-2; two-pass weighted seed transform",
+        "smooth": "A_eps=T*k/sqrt(k^2+eps^2); eps=delta*T/c",
+        "norm_limit": "dominated convergence in finite-cutoff Bose Hilbert norm only"
+      },
+      "variables": {
+        "A": "radial vector feature E",
+        "epsilon": "trial-smoothing momentum E",
+        "delta": "dimensionless numerical trial parameter",
+        "G": "E5",
+        "Q": "E6",
+        "R": "finite kinetic response E4"
+      },
+      "mathematical_role": "identify soft-trial approximation effects without modifying collision kernel",
+      "standard_physics_counterpart": "linearized Boltzmann variational trial-space enrichment",
+      "observable_mapping": {
+        "status": "NOT_ADMITTED",
+        "reason": "no continuum collision-domain/upper bound or material heat-current correspondence"
+      },
+      "unit_lane": "natural_fixed_Phi_selected_tree_kinetic",
+      "parameter_dimensions": "same old state/coupling; trial epsilon E",
+      "source_or_origin": "docs/topics/0.10_Fluid_Dynamics_Chaos/CORE_O2_GOLDSTONE_INFRARED_TRIALS.md",
+      "assumptions": [
+        "same cubic channel and integration domain",
+        "positive smooth epsilon before its limit",
+        "finite-cutoff Bose Hilbert space"
+      ],
+      "symmetry_and_conservation": "momentum seed first; unchanged raw conserving event form",
+      "limiting_cases": [
+        "smooth Cartesian origin for epsilon>0",
+        "pointwise soft seed limit away from k=0",
+        "HYBRID18 includes EVEN17 and lies within SOFT35"
+      ],
+      "implementation_paths": [
+        "docs/topics/0.10_Fluid_Dynamics_Chaos/Code/03_Research/Research_Fluid_Core_O2_Infrared_Trials.py"
+      ],
+      "verifier_paths": [
+        "docs/topics/0.10_Fluid_Dynamics_Chaos/Code/03_Research/Research_Fluid_Core_O2_Infrared_Trials.py"
+      ],
+      "evidence_class": "FINITE_VARIATIONAL_NUMERICAL_DIAGNOSTIC_AND_GRAM_DOMAIN_LEMMA",
+      "proof_status": "local Gram dominated-convergence argument; no formal or continuum collision convergence proof",
+      "blockers": [
+        "vector_momentum_constitutive_origin_and_material_frame_admission_open",
+        "independent_soft_trial_refinement_continuum_collision_domain_and_physical_heat_current_admission_open"
+      ],
+      "claim_boundary": "No new core equation, physical response/time, conductivity, damping or dependency unlock"
+    }
+  ]
+}

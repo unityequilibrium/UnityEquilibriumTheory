@@ -1,0 +1,1270 @@
+{
+  "schema_version": "t010-core-o2-flow-hessian-audit-v1",
+  "date": "2026-09-30",
+  "status": "PASS_APPROXIMATE_FLOW_HESSIAN_REFERENCE_ONLY",
+  "check_count": 96,
+  "passing_check_count": 96,
+  "checks": {
+    "scope": {
+      "pass": true
+    },
+    "locked_rules": {
+      "pass": true
+    },
+    "source_configuration_unchanged": {
+      "pass": true
+    },
+    "closed_response_source": {
+      "pass": true
+    },
+    "boundary/complete_flow_master_function": {
+      "pass": true
+    },
+    "boundary/physical_UET_operator": {
+      "pass": true
+    },
+    "boundary/physical_HeII_state": {
+      "pass": true
+    },
+    "boundary/physical_J04_executed": {
+      "pass": true
+    },
+    "boundary/physical_J05_executed": {
+      "pass": true
+    },
+    "boundary/physical_J06_executed": {
+      "pass": true
+    },
+    "boundary/material_values_assigned": {
+      "pass": true
+    },
+    "boundary/claim_promotion": {
+      "pass": true
+    },
+    "boundary/dependency_unlock": {
+      "pass": true
+    },
+    "boundary/full_two_fluid_stress_entrainment_derived": {
+      "pass": true
+    },
+    "boundary/physical_normal_density": {
+      "pass": true
+    },
+    "0.04/zero_flow_roots_match_Core": {
+      "metric": 1.5643665820815474e-14,
+      "threshold": 1e-09,
+      "pass": true
+    },
+    "0.04/implicit_order_refinement": {
+      "metric": 4.2755415122290965e-13,
+      "threshold": 1e-06,
+      "pass": true
+    },
+    "0.04/implicit_cutoff_refinement": {
+      "metric": 2.5076363596049335e-13,
+      "threshold": 1e-06,
+      "pass": true
+    },
+    "0.04/angular_correction_refinement": {
+      "metric": 9.529814582061478e-10,
+      "threshold": 1e-06,
+      "pass": true
+    },
+    "0.04/step_correction_refinement": {
+      "metric": 2.0655479465306228e-07,
+      "threshold": 1e-05,
+      "pass": true
+    },
+    "0.04/independent_implicit_and_flow_curvature": {
+      "metric": 2.2433007877763158e-07,
+      "threshold": 1e-05,
+      "pass": true
+    },
+    "0.04/flow/12/0.001/determinant": {
+      "metric": 3.8991926695298764e-12,
+      "threshold": 1e-10,
+      "pass": true
+    },
+    "0.04/flow/12/0.001/parity": {
+      "metric": 0.0,
+      "threshold": 1e-09,
+      "pass": true
+    },
+    "0.04/flow/12/0.001/imaginary": {
+      "metric": 0.0,
+      "threshold": 1e-09,
+      "pass": true
+    },
+    "0.04/flow/24/0.001/determinant": {
+      "metric": 3.6803963338447045e-12,
+      "threshold": 1e-10,
+      "pass": true
+    },
+    "0.04/flow/24/0.001/parity": {
+      "metric": 0.0,
+      "threshold": 1e-09,
+      "pass": true
+    },
+    "0.04/flow/24/0.001/imaginary": {
+      "metric": 0.0,
+      "threshold": 1e-09,
+      "pass": true
+    },
+    "0.04/flow/36/0.001/determinant": {
+      "metric": 4.120240828580425e-12,
+      "threshold": 1e-10,
+      "pass": true
+    },
+    "0.04/flow/36/0.001/parity": {
+      "metric": 0.0,
+      "threshold": 1e-09,
+      "pass": true
+    },
+    "0.04/flow/36/0.001/imaginary": {
+      "metric": 0.0,
+      "threshold": 1e-09,
+      "pass": true
+    },
+    "0.04/flow/36/0.0003/determinant": {
+      "metric": 4.219273992892636e-12,
+      "threshold": 1e-10,
+      "pass": true
+    },
+    "0.04/flow/36/0.0003/parity": {
+      "metric": 0.0,
+      "threshold": 1e-09,
+      "pass": true
+    },
+    "0.04/flow/36/0.0003/imaginary": {
+      "metric": 0.0,
+      "threshold": 1e-09,
+      "pass": true
+    },
+    "0.04/flow/36/0.0001/determinant": {
+      "metric": 3.7450748157092215e-12,
+      "threshold": 1e-10,
+      "pass": true
+    },
+    "0.04/flow/36/0.0001/parity": {
+      "metric": 0.0,
+      "threshold": 1e-09,
+      "pass": true
+    },
+    "0.04/flow/36/0.0001/imaginary": {
+      "metric": 0.0,
+      "threshold": 1e-09,
+      "pass": true
+    },
+    "0.04/flow_stiffness_positive": {
+      "metric": 0.6383556058070382,
+      "minimum": 0.0,
+      "pass": true
+    },
+    "0.04/thermal_correction_nonzero": {
+      "metric": 4.4394192961864324e-05,
+      "minimum": 1e-07,
+      "pass": true
+    },
+    "0.04/tree_matches_source": {
+      "metric": 0.0,
+      "threshold": 1e-12,
+      "pass": true
+    },
+    "0.04/pure_Doppler_correction_error_detected": {
+      "metric": 0.03389411763186354,
+      "minimum": 1e-07,
+      "pass": true
+    },
+    "0.04/omitted_occupation_curvature_detected": {
+      "metric": 0.6731309110789487,
+      "minimum": 1e-07,
+      "pass": true
+    },
+    "0.04/tree_only_mismatch_retained": {
+      "metric": 6.953477369812248e-05,
+      "minimum": 1e-05,
+      "pass": true
+    },
+    "0.08/zero_flow_roots_match_Core": {
+      "metric": 1.5643665820815474e-14,
+      "threshold": 1e-09,
+      "pass": true
+    },
+    "0.08/implicit_order_refinement": {
+      "metric": 2.726126868509771e-13,
+      "threshold": 1e-06,
+      "pass": true
+    },
+    "0.08/implicit_cutoff_refinement": {
+      "metric": 1.3857424726386376e-13,
+      "threshold": 1e-06,
+      "pass": true
+    },
+    "0.08/angular_correction_refinement": {
+      "metric": 7.328792804090989e-10,
+      "threshold": 1e-06,
+      "pass": true
+    },
+    "0.08/step_correction_refinement": {
+      "metric": 2.4988423930668753e-07,
+      "threshold": 1e-05,
+      "pass": true
+    },
+    "0.08/independent_implicit_and_flow_curvature": {
+      "metric": 2.6065865282700225e-07,
+      "threshold": 1e-05,
+      "pass": true
+    },
+    "0.08/flow/12/0.001/determinant": {
+      "metric": 3.8991926695298764e-12,
+      "threshold": 1e-10,
+      "pass": true
+    },
+    "0.08/flow/12/0.001/parity": {
+      "metric": 0.0,
+      "threshold": 1e-09,
+      "pass": true
+    },
+    "0.08/flow/12/0.001/imaginary": {
+      "metric": 0.0,
+      "threshold": 1e-09,
+      "pass": true
+    },
+    "0.08/flow/24/0.001/determinant": {
+      "metric": 3.6803963338447045e-12,
+      "threshold": 1e-10,
+      "pass": true
+    },
+    "0.08/flow/24/0.001/parity": {
+      "metric": 2.6616434587522276e-16,
+      "threshold": 1e-09,
+      "pass": true
+    },
+    "0.08/flow/24/0.001/imaginary": {
+      "metric": 0.0,
+      "threshold": 1e-09,
+      "pass": true
+    },
+    "0.08/flow/36/0.001/determinant": {
+      "metric": 4.120240828580425e-12,
+      "threshold": 1e-10,
+      "pass": true
+    },
+    "0.08/flow/36/0.001/parity": {
+      "metric": 0.0,
+      "threshold": 1e-09,
+      "pass": true
+    },
+    "0.08/flow/36/0.001/imaginary": {
+      "metric": 0.0,
+      "threshold": 1e-09,
+      "pass": true
+    },
+    "0.08/flow/36/0.0003/determinant": {
+      "metric": 4.219273992892636e-12,
+      "threshold": 1e-10,
+      "pass": true
+    },
+    "0.08/flow/36/0.0003/parity": {
+      "metric": 1.3308276517599455e-16,
+      "threshold": 1e-09,
+      "pass": true
+    },
+    "0.08/flow/36/0.0003/imaginary": {
+      "metric": 0.0,
+      "threshold": 1e-09,
+      "pass": true
+    },
+    "0.08/flow/36/0.0001/determinant": {
+      "metric": 3.7450748157092215e-12,
+      "threshold": 1e-10,
+      "pass": true
+    },
+    "0.08/flow/36/0.0001/parity": {
+      "metric": 1.3308308905690606e-16,
+      "threshold": 1e-09,
+      "pass": true
+    },
+    "0.08/flow/36/0.0001/imaginary": {
+      "metric": 0.0,
+      "threshold": 1e-09,
+      "pass": true
+    },
+    "0.08/flow_stiffness_positive": {
+      "metric": 0.6379678125765317,
+      "minimum": 0.0,
+      "pass": true
+    },
+    "0.08/thermal_correction_nonzero": {
+      "metric": 0.0004321874234684278,
+      "minimum": 1e-07,
+      "pass": true
+    },
+    "0.08/tree_matches_source": {
+      "metric": 0.0,
+      "threshold": 1e-12,
+      "pass": true
+    },
+    "0.08/pure_Doppler_correction_error_detected": {
+      "metric": 0.08866706227341144,
+      "minimum": 1e-07,
+      "pass": true
+    },
+    "0.08/omitted_occupation_curvature_detected": {
+      "metric": 0.6390433582867712,
+      "minimum": 1e-07,
+      "pass": true
+    },
+    "0.08/tree_only_mismatch_retained": {
+      "metric": 0.000676482790612206,
+      "minimum": 1e-05,
+      "pass": true
+    },
+    "0.16/zero_flow_roots_match_Core": {
+      "metric": 1.5643665820815474e-14,
+      "threshold": 1e-09,
+      "pass": true
+    },
+    "0.16/implicit_order_refinement": {
+      "metric": 7.021320374211613e-14,
+      "threshold": 1e-06,
+      "pass": true
+    },
+    "0.16/implicit_cutoff_refinement": {
+      "metric": 1.2601065309274383e-13,
+      "threshold": 1e-06,
+      "pass": true
+    },
+    "0.16/angular_correction_refinement": {
+      "metric": 1.45975822729377e-10,
+      "threshold": 1e-06,
+      "pass": true
+    },
+    "0.16/step_correction_refinement": {
+      "metric": 2.9546930490299682e-08,
+      "threshold": 1e-05,
+      "pass": true
+    },
+    "0.16/independent_implicit_and_flow_curvature": {
+      "metric": 4.058406037980121e-08,
+      "threshold": 1e-05,
+      "pass": true
+    },
+    "0.16/flow/12/0.001/determinant": {
+      "metric": 3.8991926695298764e-12,
+      "threshold": 1e-10,
+      "pass": true
+    },
+    "0.16/flow/12/0.001/parity": {
+      "metric": 1.8302155006462559e-16,
+      "threshold": 1e-09,
+      "pass": true
+    },
+    "0.16/flow/12/0.001/imaginary": {
+      "metric": 0.0,
+      "threshold": 1e-09,
+      "pass": true
+    },
+    "0.16/flow/24/0.001/determinant": {
+      "metric": 3.6803963338447045e-12,
+      "threshold": 1e-10,
+      "pass": true
+    },
+    "0.16/flow/24/0.001/parity": {
+      "metric": 1.8302393087260536e-16,
+      "threshold": 1e-09,
+      "pass": true
+    },
+    "0.16/flow/24/0.001/imaginary": {
+      "metric": 0.0,
+      "threshold": 1e-09,
+      "pass": true
+    },
+    "0.16/flow/36/0.001/determinant": {
+      "metric": 4.120240828580425e-12,
+      "threshold": 1e-10,
+      "pass": true
+    },
+    "0.16/flow/36/0.001/parity": {
+      "metric": 0.0,
+      "threshold": 1e-09,
+      "pass": true
+    },
+    "0.16/flow/36/0.001/imaginary": {
+      "metric": 0.0,
+      "threshold": 1e-09,
+      "pass": true
+    },
+    "0.16/flow/36/0.0003/determinant": {
+      "metric": 4.219273992892636e-12,
+      "threshold": 1e-10,
+      "pass": true
+    },
+    "0.16/flow/36/0.0003/parity": {
+      "metric": 1.830246530537446e-16,
+      "threshold": 1e-09,
+      "pass": true
+    },
+    "0.16/flow/36/0.0003/imaginary": {
+      "metric": 0.0,
+      "threshold": 1e-09,
+      "pass": true
+    },
+    "0.16/flow/36/0.0001/determinant": {
+      "metric": 3.7450748157092215e-12,
+      "threshold": 1e-10,
+      "pass": true
+    },
+    "0.16/flow/36/0.0001/parity": {
+      "metric": 1.8302471654225657e-16,
+      "threshold": 1e-09,
+      "pass": true
+    },
+    "0.16/flow/36/0.0001/imaginary": {
+      "metric": 0.0,
+      "threshold": 1e-09,
+      "pass": true
+    },
+    "0.16/flow_stiffness_positive": {
+      "metric": 0.6352645057242812,
+      "minimum": 0.0,
+      "pass": true
+    },
+    "0.16/thermal_correction_nonzero": {
+      "metric": 0.003135494275718908,
+      "minimum": 1e-07,
+      "pass": true
+    },
+    "0.16/tree_matches_source": {
+      "metric": 0.0,
+      "threshold": 1e-12,
+      "pass": true
+    },
+    "0.16/pure_Doppler_correction_error_detected": {
+      "metric": 0.20048816879256223,
+      "minimum": 1e-07,
+      "pass": true
+    },
+    "0.16/omitted_occupation_curvature_detected": {
+      "metric": 0.5922294960698011,
+      "minimum": 1e-07,
+      "pass": true
+    },
+    "0.16/tree_only_mismatch_retained": {
+      "metric": 0.004881500941479222,
+      "minimum": 1e-05,
+      "pass": true
+    }
+  },
+  "input_hashes": {
+    "docs/topics/0.10_Fluid_Dynamics_Chaos/Data/03_Research/fluid_core_o2_flow_hessian_contract.json": "06dd62d5be82f115ef444360e58c2b2c19a993193db6a99736e5e65075174210",
+    "docs/topics/0.10_Fluid_Dynamics_Chaos/CORE_O2_FLOW_HESSIAN_DERIVATION.md": "d9b91304fcbf4af95adfaddd05f0fb39b107df93727f1385174ba2f2ee14ba60",
+    "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry_topic10_o2_flow_hessian_addendum.json": "0703fb4f244e4b2362d28245cfe2852de7240716cd490422c84d18f7851c4023",
+    "docs/topics/0.10_Fluid_Dynamics_Chaos/Code/03_Research/Research_Fluid_Core_O2_Flow_Hessian.py": "822aecceccd7e1e7bbc198b8b95b58e2768ec86b832d16fb7ceb6874b4b9286c",
+    "docs/topics/0.10_Fluid_Dynamics_Chaos/Code/03_Research/Research_Fluid_Core_O2_Common_Flow.py": "b083323ad31df5527a94a888e8eae43984eb77698bda1c6c3d080e2ea940f5e2",
+    "docs/topics/0.10_Fluid_Dynamics_Chaos/Data/03_Research/fluid_core_o2_common_flow_contract.json": "c9a190c89d682080a9a90254cfd205e606cd9063f9d34c68b00eeeef8634c75c",
+    "docs/core/02_equations/covariant/uet_covariant_response.py": "7fb4b7228afb8ede0ac4f1664d634346ef46cc7678c94ed7b55d73645590c0c2",
+    "docs/core/02_equations/o2/uet_o2_finite_density_eos.py": "ea744a8645f993600300fa9fd99a764e1f07b30fb272b47399c34aa114152c6d",
+    "docs/core/02_equations/o2/uet_o2_finite_temperature_quasiparticle_eos.py": "ba814f3aa02b5e31112a6595dac7727b7025b08e08f0631f50567f270cebbb7f",
+    "docs/core/02_equations/o2/uet_o2_formal_transverse_response.py": "a8ee43c6fb6edb227476412cde6cc9b2d4a643fc42cca0fd2d438b343efad1ba",
+    "docs/core/02_equations/covariant/uet_covariant_matter.py": "8a57d95e898a8ac962bbd749670ad0695b597281937da36496d2ec7e074f9c53",
+    "docs/core/02_equations/o2/uet_o2_finite_temperature_two_fluid_response.py": "d8a32af7f257986e4e84581cd4af325fb9c09ee2b3c00fa96c77cca130b28ccf",
+    "docs/core/07_artifacts/topic13/t13_uet_o2_finite_temperature_two_fluid_response_audit.json": "c642e7b3e87539008d5005ca403ff6104736bd477b51791f74954bd8eef9ad0f",
+    "docs/topics/0.10_Fluid_Dynamics_Chaos/Data/03_Research/fluid_two_fluid_eos_reference_contract.json": "0554b385b88b442eeb99b4fbf49f45d34735904f6f24892472db9f48319de9ea",
+    "docs/topics/0.13_Thermodynamic_Bridge/HE4_SECOND_SOUND_PROTOCOL_CARD.md": "3e63ee75d51935420e9d4cb5e2141cf5cdb52c7596a6ea31a78e621ae1313449",
+    "docs/topics/0.10_Fluid_Dynamics_Chaos/Result/artifacts/fluid_core_o2_common_flow_composition_audit.json": "8667c87e7073a43a8255c3ad15980fa95c39890f2d4ca9ffbb75e9a0e4dbdae3"
+  },
+  "source_AST_definition_hashes": {
+    "response": {
+      "_finite_scalar": "611afaf642e9806923015be0db63b9842119fe6cfc28d7f893d9dd33ce03e23e",
+      "response_displacement": "8b990dbbcabc8331c8bc3ca7392291a1658961280f97635541fc6b0f6a9cfbd1"
+    },
+    "finite_density": {
+      "_finite_scalar": "171028c1f34cb4018cbba2ac0d4680f7f51a22f2bd50e86fd80bea09309b8ef3",
+      "effective_mass_sq": "a0720c80988fbb29643cdf35e8a621b435b4134a37d573c6ef6d2d379bcc54e6",
+      "condensate_control": "fca1db7402b342ede2ee88e170e58f583e01ac2b6f9c60a447b4a296ed6af337"
+    },
+    "EOS": {
+      "_finite": "f3076cb3dc5681858247a40f79cd2568bc9094264bc32f6eeb85fca22bde0f28",
+      "_positive": "a21ba65fba46599ec105ae704744850ad4ea07e6481f3f23de132308ba217499",
+      "_quadrature": "62bbbb0ca27952d3e5e178d6e22eedd3310cbb53007cad0a8c676ee177925c02",
+      "_thermal_log": "afd4177023ddf33b98fb14d726f937b3e9888730a58798cb98972a943a85da64",
+      "_effective_chemical_potential": "93c1524b912e51f3d395935107bd3fca6ad7c369a792c2b8452bf3a3c1c6b22e",
+      "_condensed_amplitude_sq": "cd5a4bc9ad918a0cf2654241882102ce320bc0ba966e124faf8f0ab8d5aa1921",
+      "condensed_quasiparticle_energies": "6ac351825a1892245a41c6945205ae01a1ccb44ac31934f87494a9e02ca56ae5",
+      "_thermal_pressure_normal": "7ca90fc13293d08408f3b25c841c8ab095b30ff9711dc753dfb950d3dcc757e7",
+      "_thermal_pressure_condensed": "ea8ac8daf0bc4f8c83fc343dc7238f57f677c13f1aa5fa92d0d7e9abca1e6f5f",
+      "quasiparticle_pressure": "bbe6876d8db4c878ce94294c9c25bc10b8a257fe604e8a1f63f0c8680d1c69e0"
+    },
+    "transverse": {
+      "FormalTransverseResponse": "15f39deb7da0d6c4133254bc6d03212fe4ad3b2dda9d8cc694143bd10c393f5d",
+      "_positive": "f5645bdb8a7e35833f7ab6a05d9b5c1a1539f945e3bc6e1a43e822291bc27f38",
+      "_quadrature": "62bbbb0ca27952d3e5e178d6e22eedd3310cbb53007cad0a8c676ee177925c02",
+      "_minus_bose_derivative": "e79eafdd7dd4956ad8fdbfd1e2affd3f7bdd59d86a4144ed7e33ffafbf484c21",
+      "_branch_energies": "e6bf9885a7c95c814e678941f7ad7e73b766134f5dcca5758af460828982f810",
+      "formal_transverse_quasiparticle_response": "bec0adf319910ebd4254497b5eff5fa07d7f6f20d2423a95194aedd9cbe2069c"
+    }
+  },
+  "state_results": [
+    {
+      "point": {
+        "branch": "condensed",
+        "T": 0.04,
+        "mu": 1.28
+      },
+      "source_zero_flow": {
+        "branch": "condensed",
+        "T": 0.04,
+        "mu": 1.28,
+        "Phi_fixed": 0.15,
+        "order": 384,
+        "cutoff_factor": 100,
+        "derivative_relative_step": 0.0001,
+        "pressure": 0.10189245591065266,
+        "charge_density": 0.8171425862737592,
+        "entropy_density": 0.0003650340301905585,
+        "enthalpy": 1.0459571117916195,
+        "tree_phase_stiffness": 0.6384000000000001,
+        "static_Doppler_momentum_proxy": 7.528724032859426e-05,
+        "proposed_composite_inertia": 1.0460298472403289,
+        "composition_residual": 7.27354487093379e-05,
+        "relative_composition_residual": 6.953477369812248e-05,
+        "role": "natural-unit source-function diagnostic; no physical rho_n/rho_s or He-II state"
+      },
+      "implicit_order_sweep": [
+        {
+          "order": 128,
+          "cutoff_factor": 70,
+          "root_curvature_term": -1.4511089406969064e-05,
+          "occupation_curvature_term": 2.9883103568623426e-05,
+          "thermal_phase_correction": -4.439419297559249e-05,
+          "tree_phase_stiffness": 0.6384000000000001,
+          "flow_phase_stiffness": 0.6383556058070244
+        },
+        {
+          "order": 256,
+          "cutoff_factor": 70,
+          "root_curvature_term": -1.4511089406830674e-05,
+          "occupation_curvature_term": 2.988310355504567e-05,
+          "thermal_phase_correction": -4.4394192961876345e-05,
+          "tree_phase_stiffness": 0.6384000000000001,
+          "flow_phase_stiffness": 0.6383556058070382
+        },
+        {
+          "order": 384,
+          "cutoff_factor": 70,
+          "root_curvature_term": -1.4511089406826302e-05,
+          "occupation_curvature_term": 2.9883103555032894e-05,
+          "thermal_phase_correction": -4.4394192961859194e-05,
+          "tree_phase_stiffness": 0.6384000000000001,
+          "flow_phase_stiffness": 0.6383556058070382
+        }
+      ],
+      "implicit_cutoff_sweep": [
+        {
+          "order": 384,
+          "cutoff_factor": 45,
+          "root_curvature_term": -1.4511089406826608e-05,
+          "occupation_curvature_term": 2.9883103555037275e-05,
+          "thermal_phase_correction": -4.439419296186388e-05,
+          "tree_phase_stiffness": 0.6384000000000001,
+          "flow_phase_stiffness": 0.6383556058070382
+        },
+        {
+          "order": 384,
+          "cutoff_factor": 70,
+          "root_curvature_term": -1.4511089406826302e-05,
+          "occupation_curvature_term": 2.9883103555032894e-05,
+          "thermal_phase_correction": -4.4394192961859194e-05,
+          "tree_phase_stiffness": 0.6384000000000001,
+          "flow_phase_stiffness": 0.6383556058070382
+        },
+        {
+          "order": 384,
+          "cutoff_factor": 100,
+          "root_curvature_term": -1.451108940682994e-05,
+          "occupation_curvature_term": 2.988310355503438e-05,
+          "thermal_phase_correction": -4.4394192961864324e-05,
+          "tree_phase_stiffness": 0.6384000000000001,
+          "flow_phase_stiffness": 0.6383556058070382
+        }
+      ],
+      "implicit_final": {
+        "order": 384,
+        "cutoff_factor": 100,
+        "root_curvature_term": -1.451108940682994e-05,
+        "occupation_curvature_term": 2.988310355503438e-05,
+        "thermal_phase_correction": -4.4394192961864324e-05,
+        "tree_phase_stiffness": 0.6384000000000001,
+        "flow_phase_stiffness": 0.6383556058070382
+      },
+      "angular_sweep": [
+        {
+          "relative_flow_step": 0.001,
+          "radial_order": 384,
+          "cutoff_factor": 100,
+          "angular_order": 12,
+          "thermal_phase_correction": -4.439419291912686e-05,
+          "pressure_samples": [
+            3.816056127871236e-06,
+            3.815947020623681e-06,
+            3.815910652628905e-06,
+            3.815947020623681e-06,
+            3.816056127871236e-06
+          ],
+          "pressure_parity_relative": 0.0,
+          "root_imaginary_relative": 0.0,
+          "determinant_relative": 3.8991926695298764e-12
+        },
+        {
+          "relative_flow_step": 0.001,
+          "radial_order": 384,
+          "cutoff_factor": 100,
+          "angular_order": 24,
+          "thermal_phase_correction": -4.4394192923305846e-05,
+          "pressure_samples": [
+            3.816056127871248e-06,
+            3.815947020623684e-06,
+            3.815910652628905e-06,
+            3.815947020623684e-06,
+            3.816056127871248e-06
+          ],
+          "pressure_parity_relative": 0.0,
+          "root_imaginary_relative": 0.0,
+          "determinant_relative": 3.6803963338447045e-12
+        },
+        {
+          "relative_flow_step": 0.001,
+          "radial_order": 384,
+          "cutoff_factor": 100,
+          "angular_order": 36,
+          "thermal_phase_correction": -4.4394192880999e-05,
+          "pressure_samples": [
+            3.816056127871226e-06,
+            3.815947020623658e-06,
+            3.815910652628907e-06,
+            3.815947020623658e-06,
+            3.816056127871226e-06
+          ],
+          "pressure_parity_relative": 0.0,
+          "root_imaginary_relative": 0.0,
+          "determinant_relative": 4.120240828580425e-12
+        }
+      ],
+      "flow_step_sweep": [
+        {
+          "relative_flow_step": 0.001,
+          "radial_order": 384,
+          "cutoff_factor": 100,
+          "angular_order": 36,
+          "thermal_phase_correction": -4.4394192880999e-05,
+          "pressure_samples": [
+            3.816056127871226e-06,
+            3.815947020623658e-06,
+            3.815910652628907e-06,
+            3.815947020623658e-06,
+            3.816056127871226e-06
+          ],
+          "pressure_parity_relative": 0.0,
+          "root_imaginary_relative": 0.0,
+          "determinant_relative": 4.120240828580425e-12
+        },
+        {
+          "relative_flow_step": 0.0003,
+          "radial_order": 384,
+          "cutoff_factor": 100,
+          "angular_order": 36,
+          "thermal_phase_correction": -4.439419217274477e-05,
+          "pressure_samples": [
+            3.815923745044346e-06,
+            3.815913925726122e-06,
+            3.815910652628907e-06,
+            3.815913925726122e-06,
+            3.815923745044346e-06
+          ],
+          "pressure_parity_relative": 0.0,
+          "root_imaginary_relative": 0.0,
+          "determinant_relative": 4.219273992892636e-12
+        },
+        {
+          "relative_flow_step": 0.0001,
+          "radial_order": 384,
+          "cutoff_factor": 100,
+          "angular_order": 36,
+          "thermal_phase_correction": -4.439418300291152e-05,
+          "pressure_samples": [
+            3.815912107338224e-06,
+            3.815911016306099e-06,
+            3.815910652628907e-06,
+            3.815911016306099e-06,
+            3.815912107338224e-06
+          ],
+          "pressure_parity_relative": 0.0,
+          "root_imaginary_relative": 0.0,
+          "determinant_relative": 3.7450748157092215e-12
+        }
+      ],
+      "finite_flow_final": {
+        "relative_flow_step": 0.0001,
+        "radial_order": 384,
+        "cutoff_factor": 100,
+        "angular_order": 36,
+        "thermal_phase_correction": -4.439418300291152e-05,
+        "pressure_samples": [
+          3.815912107338224e-06,
+          3.815911016306099e-06,
+          3.815910652628907e-06,
+          3.815911016306099e-06,
+          3.815912107338224e-06
+        ],
+        "pressure_parity_relative": 0.0,
+        "root_imaginary_relative": 0.0,
+        "determinant_relative": 3.7450748157092215e-12
+      },
+      "correction_relative_difference": 2.2433007877763158e-07,
+      "composition_target": {
+        "pass": true,
+        "relative_residual": 2.830441787795666e-12,
+        "threshold": 1e-05,
+        "composite_inertia": 1.04595711179458,
+        "source_enthalpy": 1.0459571117916195,
+        "role": "scalar common-flow target only; no full Ward/entrainment or material admission"
+      },
+      "negative_controls": {
+        "pure_Doppler_thermal_correction": -4.595168477087052e-05,
+        "omit_occupation_thermal_correction": -1.451108940682994e-05,
+        "tree_only_composition_residual": 6.953477369812248e-05
+      }
+    },
+    {
+      "point": {
+        "branch": "condensed",
+        "T": 0.08,
+        "mu": 1.28
+      },
+      "source_zero_flow": {
+        "branch": "condensed",
+        "T": 0.08,
+        "mu": 1.28,
+        "Phi_fixed": 0.15,
+        "order": 384,
+        "cutoff_factor": 100,
+        "derivative_relative_step": 0.0001,
+        "pressure": 0.10193955753696793,
+        "charge_density": 0.8170609937321892,
+        "entropy_density": 0.002317267126517031,
+        "enthalpy": 1.0460234533473236,
+        "tree_phase_stiffness": 0.6384000000000001,
+        "static_Doppler_momentum_proxy": 0.0007769892267661129,
+        "proposed_composite_inertia": 1.0467315492267664,
+        "composition_residual": 0.0007080958794427605,
+        "relative_composition_residual": 0.000676482790612206,
+        "role": "natural-unit source-function diagnostic; no physical rho_n/rho_s or He-II state"
+      },
+      "implicit_order_sweep": [
+        {
+          "order": 128,
+          "cutoff_factor": 70,
+          "root_curvature_term": -0.00015600092096619534,
+          "occupation_curvature_term": 0.00027618650251511225,
+          "thermal_phase_correction": -0.0004321874234813076,
+          "tree_phase_stiffness": 0.6384000000000001,
+          "flow_phase_stiffness": 0.6379678125765188
+        },
+        {
+          "order": 256,
+          "cutoff_factor": 70,
+          "root_curvature_term": -0.00015600092096591095,
+          "occupation_curvature_term": 0.0002761865025026631,
+          "thermal_phase_correction": -0.00043218742346857406,
+          "tree_phase_stiffness": 0.6384000000000001,
+          "flow_phase_stiffness": 0.6379678125765315
+        },
+        {
+          "order": 384,
+          "cutoff_factor": 70,
+          "root_curvature_term": -0.00015600092096586842,
+          "occupation_curvature_term": 0.0002761865025026093,
+          "thermal_phase_correction": -0.00043218742346847773,
+          "tree_phase_stiffness": 0.6384000000000001,
+          "flow_phase_stiffness": 0.6379678125765316
+        }
+      ],
+      "implicit_cutoff_sweep": [
+        {
+          "order": 384,
+          "cutoff_factor": 45,
+          "root_curvature_term": -0.00015600092096589225,
+          "occupation_curvature_term": 0.0002761865025026526,
+          "thermal_phase_correction": -0.00043218742346854484,
+          "tree_phase_stiffness": 0.6384000000000001,
+          "flow_phase_stiffness": 0.6379678125765316
+        },
+        {
+          "order": 384,
+          "cutoff_factor": 70,
+          "root_curvature_term": -0.00015600092096586842,
+          "occupation_curvature_term": 0.0002761865025026093,
+          "thermal_phase_correction": -0.00043218742346847773,
+          "tree_phase_stiffness": 0.6384000000000001,
+          "flow_phase_stiffness": 0.6379678125765316
+        },
+        {
+          "order": 384,
+          "cutoff_factor": 100,
+          "root_curvature_term": -0.0001560009209658568,
+          "occupation_curvature_term": 0.000276186502502571,
+          "thermal_phase_correction": -0.0004321874234684278,
+          "tree_phase_stiffness": 0.6384000000000001,
+          "flow_phase_stiffness": 0.6379678125765317
+        }
+      ],
+      "implicit_final": {
+        "order": 384,
+        "cutoff_factor": 100,
+        "root_curvature_term": -0.0001560009209658568,
+        "occupation_curvature_term": 0.000276186502502571,
+        "thermal_phase_correction": -0.0004321874234684278,
+        "tree_phase_stiffness": 0.6384000000000001,
+        "flow_phase_stiffness": 0.6379678125765317
+      },
+      "angular_sweep": [
+        {
+          "relative_flow_step": 0.001,
+          "radial_order": 384,
+          "cutoff_factor": 100,
+          "angular_order": 12,
+          "thermal_phase_correction": -0.0004321874237021444,
+          "pressure_samples": [
+            5.091895318937515e-05,
+            5.091789101768832e-05,
+            5.0917536967892535e-05,
+            5.091789101768832e-05,
+            5.091895318937515e-05
+          ],
+          "pressure_parity_relative": 0.0,
+          "root_imaginary_relative": 0.0,
+          "determinant_relative": 3.8991926695298764e-12
+        },
+        {
+          "relative_flow_step": 0.001,
+          "radial_order": 384,
+          "cutoff_factor": 100,
+          "angular_order": 24,
+          "thermal_phase_correction": -0.00043218742315344794,
+          "pressure_samples": [
+            5.0918953189375204e-05,
+            5.0917891017687984e-05,
+            5.0917536967892535e-05,
+            5.0917891017688e-05,
+            5.0918953189375204e-05
+          ],
+          "pressure_parity_relative": 2.6616434587522276e-16,
+          "root_imaginary_relative": 0.0,
+          "determinant_relative": 3.6803963338447045e-12
+        },
+        {
+          "relative_flow_step": 0.001,
+          "radial_order": 384,
+          "cutoff_factor": 100,
+          "angular_order": 36,
+          "thermal_phase_correction": -0.00043218742347018915,
+          "pressure_samples": [
+            5.0918953189375265e-05,
+            5.09178910176882e-05,
+            5.091753696789255e-05,
+            5.09178910176882e-05,
+            5.0918953189375265e-05
+          ],
+          "pressure_parity_relative": 0.0,
+          "root_imaginary_relative": 0.0,
+          "determinant_relative": 4.120240828580425e-12
+        }
+      ],
+      "flow_step_sweep": [
+        {
+          "relative_flow_step": 0.001,
+          "radial_order": 384,
+          "cutoff_factor": 100,
+          "angular_order": 36,
+          "thermal_phase_correction": -0.00043218742347018915,
+          "pressure_samples": [
+            5.0918953189375265e-05,
+            5.09178910176882e-05,
+            5.091753696789255e-05,
+            5.09178910176882e-05,
+            5.0918953189375265e-05
+          ],
+          "pressure_parity_relative": 0.0,
+          "root_imaginary_relative": 0.0,
+          "determinant_relative": 4.120240828580425e-12
+        },
+        {
+          "relative_flow_step": 0.0003,
+          "radial_order": 384,
+          "cutoff_factor": 100,
+          "angular_order": 36,
+          "thermal_phase_correction": -0.00043218742812499504,
+          "pressure_samples": [
+            5.0917664425391e-05,
+            5.091756883222223e-05,
+            5.091753696789255e-05,
+            5.091756883222223e-05,
+            5.0917664425390995e-05
+          ],
+          "pressure_parity_relative": 1.3308276517599455e-16,
+          "root_imaginary_relative": 0.0,
+          "determinant_relative": 4.219273992892636e-12
+        },
+        {
+          "relative_flow_step": 0.0001,
+          "radial_order": 384,
+          "cutoff_factor": 100,
+          "angular_order": 36,
+          "thermal_phase_correction": -0.00043218753612184874,
+          "pressure_samples": [
+            5.091755112981338e-05,
+            5.091754050837282e-05,
+            5.091753696789255e-05,
+            5.091754050837283e-05,
+            5.091755112981338e-05
+          ],
+          "pressure_parity_relative": 1.3308308905690606e-16,
+          "root_imaginary_relative": 0.0,
+          "determinant_relative": 3.7450748157092215e-12
+        }
+      ],
+      "finite_flow_final": {
+        "relative_flow_step": 0.0001,
+        "radial_order": 384,
+        "cutoff_factor": 100,
+        "angular_order": 36,
+        "thermal_phase_correction": -0.00043218753612184874,
+        "pressure_samples": [
+          5.091755112981338e-05,
+          5.091754050837282e-05,
+          5.091753696789255e-05,
+          5.091754050837283e-05,
+          5.091755112981338e-05
+        ],
+        "pressure_parity_relative": 1.3308308905690606e-16,
+        "root_imaginary_relative": 0.0,
+        "determinant_relative": 3.7450748157092215e-12
+      },
+      "correction_relative_difference": 2.6065865282700225e-07,
+      "composition_target": {
+        "pass": true,
+        "relative_residual": 4.619528058279338e-12,
+        "threshold": 1e-05,
+        "composite_inertia": 1.0460234533521557,
+        "source_enthalpy": 1.0460234533473236,
+        "role": "scalar common-flow target only; no full Ward/entrainment or material admission"
+      },
+      "negative_controls": {
+        "pure_Doppler_thermal_correction": -0.0004742365886023638,
+        "omit_occupation_thermal_correction": -0.0001560009209658568,
+        "tree_only_composition_residual": 0.000676482790612206
+      }
+    },
+    {
+      "point": {
+        "branch": "condensed",
+        "T": 0.16,
+        "mu": 1.28
+      },
+      "source_zero_flow": {
+        "branch": "condensed",
+        "T": 0.16,
+        "mu": 1.28,
+        "Phi_fixed": 0.15,
+        "order": 384,
+        "cutoff_factor": 100,
+        "derivative_relative_step": 0.0001,
+        "pressure": 0.10248102016916888,
+        "charge_density": 0.8165636183957248,
+        "entropy_density": 0.012758423488812749,
+        "enthalpy": 1.0472427793047376,
+        "tree_phase_stiffness": 0.6384000000000001,
+        "static_Doppler_momentum_proxy": 0.006425413134386733,
+        "proposed_composite_inertia": 1.052379973134387,
+        "composition_residual": 0.005137193829649389,
+        "relative_composition_residual": 0.004881500941479222,
+        "role": "natural-unit source-function diagnostic; no physical rho_n/rho_s or He-II state"
+      },
+      "implicit_order_sweep": [
+        {
+          "order": 128,
+          "cutoff_factor": 70,
+          "root_curvature_term": -0.0012785620808805054,
+          "occupation_curvature_term": 0.001856932194839174,
+          "thermal_phase_correction": -0.0031354942757196797,
+          "tree_phase_stiffness": 0.6384000000000001,
+          "flow_phase_stiffness": 0.6352645057242804
+        },
+        {
+          "order": 256,
+          "cutoff_factor": 70,
+          "root_curvature_term": -0.001278562080880404,
+          "occupation_curvature_term": 0.0018569321948389836,
+          "thermal_phase_correction": -0.0031354942757193874,
+          "tree_phase_stiffness": 0.6384000000000001,
+          "flow_phase_stiffness": 0.6352645057242807
+        },
+        {
+          "order": 384,
+          "cutoff_factor": 70,
+          "root_curvature_term": -0.0012785620808803142,
+          "occupation_curvature_term": 0.0018569321948389839,
+          "thermal_phase_correction": -0.003135494275719298,
+          "tree_phase_stiffness": 0.6384000000000001,
+          "flow_phase_stiffness": 0.6352645057242807
+        }
+      ],
+      "implicit_cutoff_sweep": [
+        {
+          "order": 384,
+          "cutoff_factor": 45,
+          "root_curvature_term": -0.0012785620808804425,
+          "occupation_curvature_term": 0.0018569321948391105,
+          "thermal_phase_correction": -0.003135494275719553,
+          "tree_phase_stiffness": 0.6384000000000001,
+          "flow_phase_stiffness": 0.6352645057242805
+        },
+        {
+          "order": 384,
+          "cutoff_factor": 70,
+          "root_curvature_term": -0.0012785620808803142,
+          "occupation_curvature_term": 0.0018569321948389839,
+          "thermal_phase_correction": -0.003135494275719298,
+          "tree_phase_stiffness": 0.6384000000000001,
+          "flow_phase_stiffness": 0.6352645057242807
+        },
+        {
+          "order": 384,
+          "cutoff_factor": 100,
+          "root_curvature_term": -0.001278562080880153,
+          "occupation_curvature_term": 0.001856932194838755,
+          "thermal_phase_correction": -0.003135494275718908,
+          "tree_phase_stiffness": 0.6384000000000001,
+          "flow_phase_stiffness": 0.6352645057242812
+        }
+      ],
+      "implicit_final": {
+        "order": 384,
+        "cutoff_factor": 100,
+        "root_curvature_term": -0.001278562080880153,
+        "occupation_curvature_term": 0.001856932194838755,
+        "thermal_phase_correction": -0.003135494275718908,
+        "tree_phase_stiffness": 0.6384000000000001,
+        "flow_phase_stiffness": 0.6352645057242812
+      },
+      "angular_sweep": [
+        {
+          "relative_flow_step": 0.001,
+          "radial_order": 384,
+          "cutoff_factor": 100,
+          "angular_order": 12,
+          "thermal_phase_correction": -0.003135494272897842,
+          "pressure_samples": [
+            0.0005923904436951105,
+            0.0005923827377744247,
+            0.0005923801691688523,
+            0.0005923827377744247,
+            0.0005923904436951104
+          ],
+          "pressure_parity_relative": 1.8302155006462559e-16,
+          "root_imaginary_relative": 0.0,
+          "determinant_relative": 3.8991926695298764e-12
+        },
+        {
+          "relative_flow_step": 0.001,
+          "radial_order": 384,
+          "cutoff_factor": 100,
+          "angular_order": 24,
+          "thermal_phase_correction": -0.003135494267686604,
+          "pressure_samples": [
+            0.0005923904436951106,
+            0.0005923827377744215,
+            0.0005923801691688523,
+            0.0005923827377744214,
+            0.0005923904436951106
+          ],
+          "pressure_parity_relative": 1.8302393087260536e-16,
+          "root_imaginary_relative": 0.0,
+          "determinant_relative": 3.6803963338447045e-12
+        },
+        {
+          "relative_flow_step": 0.001,
+          "radial_order": 384,
+          "cutoff_factor": 100,
+          "angular_order": 36,
+          "thermal_phase_correction": -0.0031354942681443105,
+          "pressure_samples": [
+            0.0005923904436951086,
+            0.0005923827377744218,
+            0.0005923801691688524,
+            0.0005923827377744218,
+            0.0005923904436951086
+          ],
+          "pressure_parity_relative": 0.0,
+          "root_imaginary_relative": 0.0,
+          "determinant_relative": 4.120240828580425e-12
+        }
+      ],
+      "flow_step_sweep": [
+        {
+          "relative_flow_step": 0.001,
+          "radial_order": 384,
+          "cutoff_factor": 100,
+          "angular_order": 36,
+          "thermal_phase_correction": -0.0031354942681443105,
+          "pressure_samples": [
+            0.0005923904436951086,
+            0.0005923827377744218,
+            0.0005923801691688524,
+            0.0005923827377744218,
+            0.0005923904436951086
+          ],
+          "pressure_parity_relative": 0.0,
+          "root_imaginary_relative": 0.0,
+          "determinant_relative": 4.120240828580425e-12
+        },
+        {
+          "relative_flow_step": 0.0003,
+          "radial_order": 384,
+          "cutoff_factor": 100,
+          "angular_order": 36,
+          "thermal_phase_correction": -0.0031354942411120496,
+          "pressure_samples": [
+            0.0005923810938648583,
+            0.0005923804003426424,
+            0.0005923801691688524,
+            0.0005923804003426423,
+            0.0005923810938648583
+          ],
+          "pressure_parity_relative": 1.830246530537446e-16,
+          "root_imaginary_relative": 0.0,
+          "determinant_relative": 4.219273992892636e-12
+        },
+        {
+          "relative_flow_step": 0.0001,
+          "radial_order": 384,
+          "cutoff_factor": 100,
+          "angular_order": 36,
+          "thermal_phase_correction": -0.003135494148467819,
+          "pressure_samples": [
+            0.0005923802719127417,
+            0.0005923801948548215,
+            0.0005923801691688524,
+            0.0005923801948548216,
+            0.0005923802719127417
+          ],
+          "pressure_parity_relative": 1.8302471654225657e-16,
+          "root_imaginary_relative": 0.0,
+          "determinant_relative": 3.7450748157092215e-12
+        }
+      ],
+      "finite_flow_final": {
+        "relative_flow_step": 0.0001,
+        "radial_order": 384,
+        "cutoff_factor": 100,
+        "angular_order": 36,
+        "thermal_phase_correction": -0.003135494148467819,
+        "pressure_samples": [
+          0.0005923802719127417,
+          0.0005923801948548215,
+          0.0005923801691688524,
+          0.0005923801948548216,
+          0.0005923802719127417
+        ],
+        "pressure_parity_relative": 1.8302471654225657e-16,
+        "root_imaginary_relative": 0.0,
+        "determinant_relative": 3.7450748157092215e-12
+      },
+      "correction_relative_difference": 4.058406037980121e-08,
+      "composition_target": {
+        "pass": true,
+        "relative_residual": 7.936625408872088e-12,
+        "threshold": 1e-05,
+        "composite_inertia": 1.0472427793130492,
+        "source_enthalpy": 1.0472427793047376,
+        "role": "scalar common-flow target only; no full Ward/entrainment or material admission"
+      },
+      "negative_controls": {
+        "pure_Doppler_thermal_correction": -0.003921760946280965,
+        "omit_occupation_thermal_correction": -0.001278562080880153,
+        "tree_only_composition_residual": 0.004881500941479222
+      }
+    }
+  ],
+  "scalar_correspondence_gate": {
+    "status": "PASS_CURRENT_SOURCE_SCALAR_TARGET_ONLY",
+    "target_pass": true,
+    "threshold": 1e-05,
+    "full_current_stress_entrainment_admitted": false,
+    "physical_material_mapping_admitted": false
+  },
+  "candidate_controller": "fixed_Phi_flow_scalar_correspondence_passed_but_two_fluid_current_stress_entrainment_modes_and_material_mapping_open",
+  "physical_controller": "vector_momentum_constitutive_origin_and_material_frame_admission_open",
+  "locked_verification": {
+    "locked_before_first_execution": true,
+    "radial_orders": [
+      128,
+      256,
+      384
+    ],
+    "order_sweep_cutoff": 70,
+    "cutoffs": [
+      45,
+      70,
+      100
+    ],
+    "cutoff_sweep_order": 384,
+    "angular_orders": [
+      12,
+      24,
+      36
+    ],
+    "flow_relative_steps": [
+      0.001,
+      0.0003,
+      0.0001
+    ],
+    "pressure_derivative_relative_step": 0.0001,
+    "composition_relative_tolerance": 1e-05,
+    "implicit_refinement_relative_tolerance": 1e-06,
+    "flow_correction_relative_tolerance": 1e-05,
+    "flow_step_refinement_relative_tolerance": 1e-05,
+    "zero_flow_root_relative_tolerance": 1e-09,
+    "determinant_relative_tolerance": 1e-10,
+    "pressure_parity_relative_tolerance": 1e-09,
+    "root_imaginary_relative_tolerance": 1e-09,
+    "negative_control_floor": 1e-07,
+    "relative_metric": "abs(a-b)/max(abs(a),abs(b),1e-30)",
+    "threshold_policy": "retain first diagnostic and all failed target checks; no fitted repair or post-preview relaxation"
+  },
+  "new_topic_local_finite_flow_kernel": true,
+  "whole_Core_runtime_executed": false,
+  "phase_curvature_derived_from_flow_pressure": true,
+  "phase_stiffness_fitted_to_enthalpy": false,
+  "thermal_gap_equation_solved": false,
+  "full_two_fluid_stress_entrainment_derived": false,
+  "physical_normal_density_assigned": false,
+  "physical_HeII_state_assigned": false,
+  "physical_UET_operator_admitted": false,
+  "physical_prediction_executed": false,
+  "physical_J04_executed": false,
+  "physical_J05_executed": false,
+  "physical_J06_executed": false,
+  "claim_promotion": false,
+  "dependency_unlock": false,
+  "thresholds_relaxed": false,
+  "notes": [
+    "Phase curvature uses action-root derivatives independently of the enthalpy and static proxy.",
+    "A separate finite-flow quartic root pressure Hessian tests the implicit derivative integral.",
+    "Both positive modes, normal-rest T/mu, fixed Phi and tree amplitude at each phase invariant are retained.",
+    "This new topic-local Gaussian-flow extension is not an unchanged finite-flow Core implementation.",
+    "A scalar PASS is not a complete Ward, entrainment, longitudinal dynamics, material SI or He-II validation.",
+    "The earlier tree-only composition FAIL artifact remains immutable."
+  ]
+}

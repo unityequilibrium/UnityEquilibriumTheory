@@ -217,3 +217,356 @@ prioritizes theorem scope, norm separation, rotational-flow representability and
 vorticity-aware observables inside J00/J01. A finite-window NS or Euler stress
 case is conditional on later source and model admission. These papers add no
 scientific dependency, alter no numerical threshold and close no work package.
+
+## Vector-state checkpoint — 2026-09-30
+
+J01's legacy no-go remains scoped and unchanged. Its follow-up now provides a
+[vector/material-rate candidate](VECTOR_STATE_RESEARCH_CONTRACT.md) and a separate
+instantaneous normalized audit (150 checks). Independent u supports vortical
+states; conditional scalar/fluid work exchange, stress gauge and frame identities
+pass the selected controls. The initial control's cancelling-work FAIL is retained;
+the amended harmonic controls detect missing/reversed force and Pi/Q confusion
+without tolerance relaxation.
+
+This does not admit physical J04/J05, run a trajectory or close UET/Core.
+The controller has narrowed to
+vector_momentum_constitutive_origin_and_material_frame_admission_open.
+Starting at rest is not the same as freezing u and its acceleration to zero;
+the parent Eulerian Pi evolution needs the latter for this limit.
+
+Topic 13 consumes only a proposed reciprocal-work/frame interface. He-II second
+sound still requires an admitted two-fluid entropy/temperature/relative-flow state,
+state-matched transport and a primary measurement protocol. The current
+[Topic 13 protocol](../0.13_Thermodynamic_Bridge/HE4_SECOND_SOUND_PROTOCOL_CARD.md)
+also records calibration/response source ancestry overlap: the recommended rows
+are neither blind nor established as independent. J02/J03 source work can continue
+in parallel, with no He-4-to-graphite parameter transfer.
+## Conditional conservative-origin follow-up (2026-09-30)
+
+The [variational derivation](VECTOR_VARIATIONAL_ORIGIN.md) and its
+[72-check audit](Result/artifacts/fluid_vector_variational_origin_audit.json)
+show that the reversible subset of the vector/material-rate reference follows
+from one declared volume-preserving action with an independent internal scalar.
+This narrows the conditional reference-origin question only. The action choice
+and material attachment are not a microscopic UET derivation; the overall
+vector_momentum_constitutive_origin_and_material_frame_admission_open controller
+remains. Next assess the physical configuration/material assignment, coefficient
+origins and SI observable map. Physical J04/J05, two-fluid J02/J06, graphite and
+all blocked upstream gates remain blocked.
+
+Canonical m=rho0 u+h Q grad Phi is a rate derivative, not a new mass or an automatic
+measurement of total mechanical momentum. Local Q transport needs a separate
+test because its work integrates to zero. The full dissipative/thermal closure
+and Topic 13's calibration/response ancestry overlap are unaffected. Reference
+mathematics can continue under explicit labels without unlocking physical lanes.
+
+## Coupled mode-eligibility checkpoint (2026-09-30)
+
+The [139-check mode audit](SECOND_SOUND_MODE_ELIGIBILITY.md) narrows the J05
+candidate question: the current stable homogeneous single-velocity model has
+diffusive/gapped sectors but no hydrodynamic second-sound acoustic pair.
+This diagnostic is a J01/J05 candidate screening follow-up, not physical J05
+execution. Its coupled controller is
+isothermal_single_velocity_candidate_counterflow_acoustic_mode_missing.
+
+J02/J05/J06 must use a separately registered and materially justified
+entropy/temperature, normal-superfluid relative-motion and superfluid
+phase/chemical-potential operator. Do not fit the existing oscillator to the
+exposed recommended speed rows; calibration/response ancestry remains unresolved.
+The current candidate remains a bounded isothermal/scalar-fluid reference.
+
+A separate synthetic standard two-fluid operator validates acoustic/work
+sensitivity. The initial complex-metric preview is retained as invalid; the
+repaired controls pass with original tolerances and an explicit post-preview
+harness amendment. No physical/Core/Topic 13 dependency unlock occurs.
+The overall momentum/material-frame/SI admission controller remains unchanged.
+
+## Standard two-fluid/EOS checkpoint (2026-09-30)
+
+The [standard state/EOS comparator](TWO_FLUID_STATE_EOS_REFERENCE.md) extends the
+earlier counterflow control to full longitudinal density/entropy mixing and
+both sound branches. Its 59-check reference verifies reciprocal work and
+identifies the limited conditions for zero-mass-current reduction. It is a
+J02/J05 preparation follow-up, not physical package execution.
+
+The new coupled input controller is
+two_fluid_fixed_pressure_EOS_and_UET_state_mapping_missing.
+J02/J05 need independent material rho/rho_s/entropy, fixed-pressure EOS derivatives
+and a physical Core state/Legendre/phase correspondence. SVP path slopes alone
+leave isothermal compressibility undetermined; two positive local EOS witnesses
+make that ambiguity explicit. Source overlap, primary response protocol,
+uncertainty and the separate dissipative tensor remain controlling downstream.
+No parent gate, legacy single-velocity exclusion, matching constant or physical
+J04/J05/J06 status is promoted.
+
+## He-II source-acquisition checkpoint (2026-09-30)
+
+The [fixed-constraint source card](HE4_FIXED_CONSTRAINT_EOS_SOURCE_CARD.md)
+packages three TN1334 fitted-EOS liquid rows with explicit derivative constraints.
+The source audit passes 56 transcription/unit/printing checks and detects five
+incorrect interpretations. This is J02 source preparation, not physical J05/J06.
+
+Fixed-pressure/volume/temperature derivatives are found, but per-row uncertainty,
+covariance, the selected entropy reference and exact EOS/response experimental
+ancestry remain unresolved. Source-computed sound speeds cannot validate UET
+independently. Modern IR8474 is outside the He-II domain. No source rs fit or
+two-fluid numerical speed is imported or predicted in this wave.
+
+The narrower acquisition controller is
+he4_fixed_constraint_EOS_source_found_but_covariance_entropy_anchor_and_independence_open.
+Resolve that source package or select a better source, then freeze a primary
+state/frequency/geometry/uncertainty response and independent experiment split.
+The physical Legendre/state/SI and superfluid-phase response correspondence,
+dissipative closure and earlier single-velocity exclusion remain controlling.
+All physical package states and Core/Topic 13 dependency gates are unchanged.
+
+## Entropy-source/reference transfer checkpoint (2026-09-30)
+
+J02 preparation now includes [six source entropy tokens and a coordinate contract](HE4_ENTROPY_SOURCE_AND_REFERENCE_CONTRACT.md),
+with a [116-check audit](Result/artifacts/he4_entropy_source_reference_audit.json).
+Table 8.5 states its own zero-T integration convention; Table 8.3 has a distinct
+fountain-pressure lineage. These narrow source identification, not physical
+J05/J06 or an independent response split. Original TN1334 and Topic 13 packages
+stay unchanged.
+
+The current acquisition controller is
+he4_entropy_integration_anchor_found_but_TN1334_reference_transfer_covariance_and_independence_open.
+Next resolve selected-edition reference conversion or replace that candidate,
+source derivative covariance and exact experimental ancestry, and lock a primary
+matched response protocol. The ideal two-fluid coordinate check demonstrates why
+both entropy current and chemical-potential force must accompany a reference
+change; positive work alone is insufficient. No material entropy offset or sound
+prediction is fitted. Physical Core state/SI/phase/transport admission, the earlier
+single-velocity mode exclusion and blocked J04/J05/J06 remain unchanged.
+
+## Current Core common-flow composition checkpoint (2026-09-30)
+
+J01/J02 preparation now includes a [Core source-function composition contract](CORE_O2_COMMON_FLOW_COMPOSITION_CONTRACT.md)
+and [69-check execution artifact](Result/artifacts/fluid_core_o2_common_flow_composition_audit.json).
+The ideal common-flow scalar target FAIL_REQUIRED_COMMON_FLOW_IDENTITY at all
+three declared condensed points rejects the shortcut of combining formal Doppler
+normal response with tree phase stiffness as one physical two-fluid inertia.
+Normal/tree controls and separate component refinements pass. This is not
+physical J04/J05/J06 execution or a complete failure of the existing O(2) lane.
+
+The narrower candidate controller is
+finite_temperature_phase_stiffness_and_normal_momentum_common_action_match_missing.
+Next derive flow-dependent finite-T phase stiffness/current/stress/normal response
+from one common effective action with Ward/entrainment consistency. Do not fit a
+coefficient from this identity. Source entropy-reference transfer/covariance and
+independent response protocol remain separate required work; their current
+snapshots are retained. Overall material/frame/SI admission and physical package
+states are unchanged; the normal-only heat balance cannot cover condensed He-II.
+
+## Fixed-Phi flow-Hessian candidate handoff (2026-09-30)
+
+The [new independent phase-flow reference](CORE_O2_FLOW_HESSIAN_DERIVATION.md)
+derives thermal stiffness from a tree-reduced Gaussian action rather than
+forcing the common-flow identity. Implicit and finite-flow curvatures agree,
+and the separate scalar target passes at all three prior condensed controls.
+The previous tree-only shortcut FAIL remains as historical/current comparison.
+
+The machine plan now records a separate flow-Hessian snapshot/history item.
+Next derive complete current/stress/entrainment and longitudinal two-fluid
+modes at the same ensemble. Material/SI, independent EOS/entropy/protocol,
+Core admission and physical J04/J05/J06 remain separate prerequisites.
+This narrows J01/J02 preparation only; no work-package status or dependency
+is promoted. Original null material inputs and Topic 13 constants are unchanged.
+
+## Local ideal operator preparation (2026-09-30)
+
+The [current/stress/ideal-mode reference](CORE_O2_LOCAL_IDEAL_TWO_FLUID_DERIVATION.md)
+extends the independently derived phase curvature with current source/metric
+variation, EOS derivatives and local entrainment. Its conditional ideal operator
+has two acoustic pairs at all three controls and positive reciprocal work.
+Both reference coefficients and operators are evaluated without sound-speed fitting.
+
+The new snapshot/history records the additional local-equilibrium entropy
+assumption. Nonlinear/interacting/live-response completion, collision/thermalization
+and a physical hydrodynamic window are explicit remaining blockers, followed by
+material/SI and independent source/protocol admission. J01/J02 preparation narrows;
+J04/J05/J06 remain NOT_STARTED and no package dependency is unlocked.
+The source acquisition and overall material/frame controller remain unchanged.
+
+## Connected collision handoff (2026-10-01)
+
+[The Goldstone channel](CORE_O2_GOLDSTONE_COLLISION_DERIVATION.md) adds
+action-derived microscopic preparation to the ideal two-current reference.
+It audits T=0 single-mode decay, Bose triad invariants and derivative soft
+behavior; the joint JSON retains previous snapshots and adds the current
+159-control package plus the first failed diagnostic.
+
+Existing Topic13 scalar/gain-loss/contact/Kubo evidence remains scoped. Next
+requires connected condensed collision/current matching, including vector
+heat-current projection, interacting thermal state and resolution/allowed-channel
+control. A single-mode width or positive disconnected graph cannot establish
+omega*tau <<1. Material/independent EOS/entropy/response sources and nonlinear/
+live-response work remain separate; J04/J05/J06 stay NOT_STARTED.
+
+## Shared-basis kinetic current handoff (2026-10-01)
+
+[The Galerkin package](CORE_O2_GOLDSTONE_GALERKIN_DERIVATION.md) replaces
+disconnected representative-triad diagnostics with shared scalar/vector event
+integrals for the selected leading Goldstone cubic process. Raw invariants,
+four finite-basis nulls, source momentum constraint and independent finite
+resolvents pass; the joint JSON preserves every earlier snapshot.
+
+The1% cutoff and basis response gates FAIL. Current-source representation and
+quadrature PASS cannot promote this package. The controlling measured blocker
+is finite_basis_and_cutoff_current_response_not_converged.
+Next: stable higher-order vector functions, low-energy-valid cutoff/soft-current
+convergence, then full kinetic-to-condensate/charge heat-current/frame and
+interacting thermal collision completion. Material/SI/He-II ancestry and
+nonlinear/live-response obligations remain. Physical J04/J05/J06 stay NOT_STARTED.
+
+## Stable-vector and low-momentum handoff (2026-10-01)
+
+[The vector refinement](CORE_O2_GOLDSTONE_VECTOR_REFINEMENT.md) resolves
+Gram-conditioning ambiguity under the same selected cubic process.541 structural
+controls pass, including shared off-grid recurrence, raw momentum, same-span
+old response and whole-action scaling. SOFT within-family refinement passes.
+
+Overall1% convergence still FAILS: EVEN basis/cutoff and cross-family response.
+Controller:
+stable_vector_basis_cross_family_or_cutoff_current_response_not_converged.
+Next: an independently soft-enriched family and infrared/continuum-current
+bounds while retaining the old failed targets, then physical heat-current/frame/
+interacting-state and material/SI/source admission. Earlier snapshots remain
+immutable and physical J04/J05/J06 stay NOT_STARTED; no dependency unlock.
+
+## Enriched finite targets and continuum-domain handoff (2026-10-01)
+
+[The infrared trial package](CORE_O2_GOLDSTONE_INFRARED_TRIALS.md) tests
+independent soft enrichment of the old EVEN space and smooth-origin trials.
+664 structural controls and declared1% finite enriched/smooth targets pass.
+HYBRID/SOFT differences0.04684%/0.04251%; no prior FAIL is relabeled.
+
+First near-collinear rounding failure and source are retained; the separately
+registered numerical geometry repair changes no collision weights or thresholds.
+Controlling measured blocker:
+infrared_collision_form_domain_continuum_current_and_physical_heat_current_admission_open.
+Next: collision-form domain and continuum source-weighted upper/error bounds,
+then microscopic condensate/charge heat-current/frame and interacting thermal
+completion. Gram-norm approximation or discrete variational ordering alone
+cannot unlock physical J04/J05/J06, material/SI or independent-source admission.
+
+## OpenAI direct-bridge and current-blocker review (2026-10-01)
+
+The [additional review](OPENAI_FORMAL_TRANSFER_REVIEW_2026-10-01.md) and
+[source/design record](Data/03_Research/openai_topic10_formal_transfer_review_2026_10_01.json)
+add a scoped static comparison of pinned reference/submission definitions and
+direct theorem bridges. No formal checker was run. OA0 is completed source
+inspection; OA1-OA6 are proposed design tasks within J00-J09, not new gates or
+package promotions. Current finite enriched/smooth trial targets do not close
+continuum collision-domain/source-weighted upper bounds, physical heat current
+or two-fluid/material/SI correspondence. Analytic versus smooth forcing and
+regularity assumptions must remain explicit in any future adversarial source.
+Physical J04/J05/J06 remain NOT_STARTED and the machine-readable plan/DAG is unchanged.
+
+## Selected finite-cutoff form-domain and no-uniform-gap checkpoint (2026-10-01)
+
+J01/J02 preparation now has a [conditional internal continuum-form derivation](CORE_O2_GOLDSTONE_CONTINUUM_FORM.md)
+and [292-check source/unit/bound diagnostic](Result/artifacts/fluid_core_o2_continuum_form_audit.json).
+Bounded soft trials are admitted to the selected finite-K form and smooth
+approximation is controlled in both G/Q norms. The radial vector null is
+momentum only; compact projected soft bumps show no uniform positive vector
+gap. This is a scoped internal derivation with independent/formal review open.
+
+The machine-readable plan retains prior snapshots/history and physical states,
+and now exposes the selected next controller:
+source_weighted_continuum_current_upper_bound_and_microscopic_heat_current_correspondence_open.
+Derive a source-specific upper/error bound without an assumed uniform gap,
+then microscopic heat-current/frame/interacting-state, nonlinear/live and
+material/SI/independent-source admission. No-uniform-gap is not a divergent-current
+result or blanket denial of source-specific hydrodynamics. J04/J05/J06 remain
+NOT_STARTED; Topic13/Core admission and all old failed/enriched finite targets
+are unchanged. OpenAI source reviews remain dated historical design snapshots.
+
+## Current selected response-bound wave (2026-10-01)
+
+[The selected current card](CORE_O2_GOLDSTONE_CURRENT_BOUND.md) narrows the
+mathematical controller within existing J01/J02: exact momentum-orthogonal
+kinetic current has a conditionally derived finite continuum ratio bound
+without a uniform positive vector gap. The same289-check source/unit/patch
+diagnostic passes; all earlier history and the ten-package dependency DAG stay.
+
+The upper constant is extremely loose, so the next mathematical obligation
+is a useful/certified continuum upper-lower/error bracket and independent/formal
+review. The physical obligation remains microscopic condensate/charge heat
+current and material frame, interacting thermal state/channels, then Topic13
+fixed-pressure EOS/entropy reference/covariance/independent protocol and SI
+observable correspondence. Neither finiteness nor absence of uniform gap
+executes or admits physical J04/J05/J06; those remain NOT_STARTED.
+Current selected controller:
+useful_certified_continuum_current_error_and_microscopic_heat_current_correspondence_open.
+Overall physical controller remains vector_momentum_constitutive_origin_and_material_frame_admission_open.
+
+## Tree spatial microscopic current checkpoint (2026-10-01)
+
+Existing J01/J02 preparation now has a [tree current origin card](CORE_O2_MICROSCOPIC_CURRENT_WARD.md)
+and [303-check artifact](Result/artifacts/fluid_core_o2_current_ward_audit.json).
+Direct Core source currents and independent flow-root derivatives identify the
+selected kinetic flux as H-mu Q flux, with J_E=k and J_G=E*v_g. Momentum
+projection recovers the previous selected current without changing the kernel
+or the old continuum/no-gap/current-bound results.
+
+This narrows spatial origin while exposing the remaining condensate-adjusted
+charge/energy densities, interacting Noether and material heat/enthalpy/frame
+obligations. Zero momentum does not impose zero mass/charge flow. Topic13
+fixed-pressure EOS/entropy reference/covariance, independent response protocol
+and Core SI/atom/state mapping remain necessary. A useful certified continuum
+error bracket remains a parallel mathematical obligation.
+
+The plan adds one snapshot/history/J02 subrecord and retains all previous
+snapshots/history, ten-package DAG and physical states. Selected controller:
+useful_certified_current_error_and_interacting_Noether_heat_frame_material_correspondence_open.
+Overall controller remains vector_momentum_constitutive_origin_and_material_frame_admission_open.
+Physical J04/J05/J06 remain NOT_STARTED; no dependency or claim promotion.
+OpenAI work remains a source-reviewed method/design transfer, not this field
+derivation's proof, material evidence or an executed formal verifier.
+
+## Leading mean density response checkpoint (2026-10-01)
+
+Existing J01/J02 preparation adds [mean density response](CORE_O2_DENSITY_BACKREACTION.md)
+and [398-check artifact](Result/artifacts/fluid_core_o2_density_backreaction_audit.json).
+Condensate mean response explains why raw wave charge alone does not match
+-d_mu E. The corrected charge/energy and fixed-K Gaussian Legendre checks pass,
+with conditioning and two archived caller-wiring failures visible.
+
+This narrows leading density origin while leaving self-consistent interacting
+action/gap/source Ward, material heat/enthalpy/mass-charge frame and useful
+certified continuum error open. The selected states do not satisfy the primary
+paper's thermal approximation regime, so that accuracy is not admitted.
+Topic13 fixed-pressure EOS, entropy transfer/covariance, independent protocol
+and Core SI atom/state mapping still control physical use.
+
+One snapshot/history/J02 subrecord is added; all old snapshots/results/history,
+the ten-package DAG and physical statuses stay. Selected controller remains
+useful_certified_current_error_and_interacting_Noether_heat_frame_material_correspondence_open.
+Overall controller remains vector_momentum_constitutive_origin_and_material_frame_admission_open.
+Physical J04/J05/J06 remain NOT_STARTED; no claim or dependency promotion.
+
+## Condensed interacting method selection before numerical implementation
+
+The2026-10-02 [method card](CORE_O2_INTERACTING_METHOD_ADMISSION.md),
+[locked contract](Data/03_Research/fluid_core_o2_interacting_method_contract.json)
+and [156-check artifact](Result/artifacts/fluid_core_o2_interacting_method_audit.json)
+reuse six current Core modules without editing primary definitions. Both
+normal Hartree solvers reject the selected condensate states at all orders;
+six independent normal-control returns preserve their normal/Kubo/SI boundary.
+
+Exact conditional source algebra confirms that the inspected gapless
+replacement changes original stationarity. It cannot inherit stationary
+pressure/dynamic-source properties merely from a zero Goldstone inverse
+propagator. Ten action/Dyson/Goldstone/renormalization/pressure/dynamic-source/
+collision/accuracy/material/Topic13 obligations remain NOT_STARTED.
+Method controller:
+condensed_twoPI_stationarity_Goldstone_and_source_response_contract_not_admitted.
+
+Next compare candidate methods on this obligation matrix, then prelock an
+admitted condensed action/state/source contract before a numerical solver.
+The useful continuum-current error, interacting Noether heat/frame, Topic13
+fixed-pressure EOS/entropy reference/covariance, independent dynamic protocol
+and Core SI state/atom map remain open. J04/J05/J06/DAG/claims do not advance.
+OpenAI theorem/checker practice supplies methodological discipline; it
+does not supply this condensate interaction or material correspondence.
