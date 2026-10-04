@@ -1,0 +1,99 @@
+{
+  "schema_version": "uet-equation-registry-addendum-v1",
+  "status": "CONDITIONAL_INTERNAL_MATHEMATICAL_DERIVATION_NOT_CORE_PROMOTION",
+  "extends": "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry_topic10_o2_infrared_trials_addendum.json",
+  "equation_entries": [
+    {
+      "equation_id": "candidate.topic10_13.o2_finite_cutoff_form_domain",
+      "classification": "conditional_derived_integral_majorant_and_form_domain",
+      "relation_or_code_path": {
+        "majorant": "W<=3g3^2*T/(4pi^3*c_s^5)*k*p*q*(p+T/c_s)*(q+T/c_s)",
+        "norms": "bounded trials finite G/Q; soft smooth approximation converges in both",
+        "domain": "maximal Delta-pullback domain closed via radial/event a.e. subsequences"
+      },
+      "variables": {
+        "W": "event density per dk dp E2",
+        "w": "radial Gram density per dk E2",
+        "A": "vector radial feature E",
+        "Q": "E6",
+        "G": "E5",
+        "W_prefactor": "E^-3"
+      },
+      "mathematical_role": "close selected finite-cutoff bounded-trial domain obligation",
+      "standard_physics_counterpart": "linearized conserving Boltzmann quadratic form for selected1<->2 channel",
+      "observable_mapping": {
+        "status": "NOT_ADMITTED",
+        "reason": "finite-cutoff model domain not material current or full interacting action"
+      },
+      "unit_lane": "natural_selected_tree_kinetic",
+      "parameter_dimensions": "same old state/coupling; exact numerical factors derived from original measure",
+      "source_or_origin": "docs/topics/0.10_Fluid_Dynamics_Chaos/CORE_O2_GOLDSTONE_CONTINUUM_FORM.md",
+      "assumptions": [
+        "positive T,K,r,mu,lambda",
+        "B=r+2mu^2",
+        "same curved dispersion/cubic process"
+      ],
+      "symmetry_and_conservation": "raw conserving triads; momentum-only radial vector nullspace",
+      "limiting_cases": [
+        "soft seed smoothing tends to zero in G/Q"
+      ],
+      "implementation_paths": [
+        "docs/topics/0.10_Fluid_Dynamics_Chaos/Code/03_Research/Research_Fluid_Core_O2_Continuum_Form.py"
+      ],
+      "verifier_paths": [
+        "docs/topics/0.10_Fluid_Dynamics_Chaos/Code/03_Research/Research_Fluid_Core_O2_Continuum_Form.py"
+      ],
+      "evidence_class": "CONDITIONAL_INTERNAL_ANALYTIC_DERIVATION_WITH_EXACT_ALGEBRA_DIAGNOSTICS",
+      "proof_status": "explicit derivation requiring independent mathematical review; no Lean/interval certificate",
+      "blockers": [
+        "source_weighted_continuum_current_upper_bound_and_microscopic_heat_current_correspondence_open",
+        "vector_momentum_constitutive_origin_and_material_frame_admission_open"
+      ],
+      "claim_boundary": "No all-channel/unbounded-K/physical heat-current or dependency admission"
+    },
+    {
+      "equation_id": "candidate.topic10_13.o2_no_uniform_vector_gap",
+      "classification": "conditional_derived_no_uniform_coercivity_countersequence",
+      "relation_or_code_path": {
+        "bump": "A_eps=M*(k/eps)*exp[-1/(1-(k/eps)^2)] on k<eps",
+        "estimate": "Q_eps=O(eps^2), projected G_eps>=constant*eps; inf Q/G=0"
+      },
+      "variables": {
+        "epsilon": "momentum support E",
+        "M": "feature amplitude E",
+        "Q_over_G": "Rayleigh rate E"
+      },
+      "mathematical_role": "separate momentum-only nullspace from absence of uniform positive gap",
+      "standard_physics_counterpart": "soft-mode variational non-coercivity in selected collision model",
+      "observable_mapping": {
+        "status": "NOT_ADMITTED",
+        "reason": "no uniform gap does not determine source current finiteness or physical transport"
+      },
+      "unit_lane": "same natural selected model",
+      "parameter_dimensions": "epsilon diagnostic sequence, not scattering regulator",
+      "source_or_origin": "docs/topics/0.10_Fluid_Dynamics_Chaos/CORE_O2_GOLDSTONE_CONTINUUM_FORM.md",
+      "assumptions": [
+        "same finite-K domain",
+        "zero momentum projection",
+        "no added width/channel"
+      ],
+      "symmetry_and_conservation": "Q unchanged by momentum subtraction; projected Gram remains positive",
+      "limiting_cases": [
+        "epsilon->0 Rayleigh upper bound->0"
+      ],
+      "implementation_paths": [
+        "docs/topics/0.10_Fluid_Dynamics_Chaos/Code/03_Research/Research_Fluid_Core_O2_Continuum_Form.py"
+      ],
+      "verifier_paths": [
+        "docs/topics/0.10_Fluid_Dynamics_Chaos/Code/03_Research/Research_Fluid_Core_O2_Continuum_Form.py"
+      ],
+      "evidence_class": "CONDITIONAL_INTERNAL_NO_UNIFORM_GAP_DERIVATION",
+      "proof_status": "analytic countersequence; diagnostics evaluate bounds, not full spectrum",
+      "blockers": [
+        "source_weighted_continuum_current_upper_bound_and_microscopic_heat_current_correspondence_open",
+        "vector_momentum_constitutive_origin_and_material_frame_admission_open"
+      ],
+      "claim_boundary": "No universal UET no-go, no physical lifetime and no divergent-current conclusion"
+    }
+  ]
+}

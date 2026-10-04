@@ -1,0 +1,97 @@
+{
+  "schema_version": "t010-core-o2-goldstone-collision-v1",
+  "date": "2026-10-01",
+  "record_role": "LOW_ENERGY_TREE_GOLDSTONE_CHANNEL_NOT_THERMALIZATION",
+  "card": "docs/topics/0.10_Fluid_Dynamics_Chaos/CORE_O2_GOLDSTONE_COLLISION_DERIVATION.md",
+  "physical_controller": "vector_momentum_constitutive_origin_and_material_frame_admission_open",
+  "previous_candidate_controller": "fixed_Phi_local_ideal_two_fluid_reference_passed_but_thermalization_live_response_and_material_observable_admission_open",
+  "passed_reference_next_controller": "leading_Goldstone_decay_channel_checked_but_connected_collision_heat_current_thermalization_and_material_admission_open",
+  "source_adapter": "docs/topics/0.10_Fluid_Dynamics_Chaos/Code/03_Research/Research_Fluid_Core_O2_Common_Flow.py",
+  "source_contract": "docs/topics/0.10_Fluid_Dynamics_Chaos/Data/03_Research/fluid_core_o2_common_flow_contract.json",
+  "configuration": {
+    "Z": 1,
+    "mass_squared": 1,
+    "lambda": 1,
+    "response_coupling": 0,
+    "epsilon_nc": 0,
+    "phi_equilibrium": 0,
+    "phase_tolerance": 1e-10,
+    "Phi_fixed": 0.15
+  },
+  "mu": 1.28,
+  "exploratory_couplings": [
+    0.01,
+    0.001
+  ],
+  "momenta": [
+    0.02,
+    0.01,
+    0.005
+  ],
+  "verification": {
+    "locked_before_first_execution": true,
+    "orders": [
+      48,
+      96,
+      192
+    ],
+    "energy_relative_tolerance": 1e-11,
+    "algebra_relative_tolerance": 1e-10,
+    "order_relative_tolerance": 1e-7,
+    "leading_coefficient_relative_tolerance": 0.001,
+    "curvature_relative_tolerance": 0.001,
+    "finite_velocity_relative_tolerance": 0.000001,
+    "velocity_step_fraction": 0.0001,
+    "triad_fractions": [
+      0.2,
+      0.35,
+      0.5,
+      0.7
+    ],
+    "equilibrium_balance_temperature": 0.04,
+    "nr_relative_mu": [
+      0.01,
+      0.001,
+      0.0001
+    ],
+    "nr_coefficient_relative_tolerance": 0.001,
+    "negative_control_floor": 0.0001,
+    "threshold_policy": "locked before first execution; retain failures; no parameter tuning or threshold relaxation"
+  },
+  "admission": {
+    "thermalization": false,
+    "finite_temperature_transport": false,
+    "collision_spectral_gap": false,
+    "physical_frequency_window": false,
+    "live_Phi": false,
+    "complete_nonlinear_operator": false,
+    "physical_two_fluid_operator": false,
+    "physical_HeII_state": false,
+    "physical_J04_executed": false,
+    "physical_J05_executed": false,
+    "physical_J06_executed": false,
+    "claim_promotion": false,
+    "dependency_unlock": false
+  },
+  "reused_inputs": [
+    "docs/topics/0.10_Fluid_Dynamics_Chaos/Result/artifacts/fluid_core_o2_ideal_modes_audit.json",
+    "docs/core/02_equations/covariant/uet_covariant_matter.py",
+    "docs/core/02_equations/o2/uet_o2_condensed_relative_flow_collision.py",
+    "docs/core/07_artifacts/topic13/t13_collision_evidence_reconciliation.json",
+    "docs/core/07_artifacts/topic13/t13_uet_o2_condensed_relative_flow_collision_audit.json",
+    "docs/core/07_artifacts/topic13/t13_uet_o2_condensed_relative_flow_kubo_admission_audit.json"
+  ],
+  "primary_sources": [
+    {
+      "url": "https://arxiv.org/html/hep-ph/0204199v2",
+      "equations": "14-20,25",
+      "review_scope": "selected leading action and exclusions"
+    },
+    {
+      "url": "https://link.springer.com/article/10.1007/s10955-024-03328-2",
+      "doi": "10.1007/s10955-024-03328-2",
+      "equations": "13-22",
+      "review_scope": "selected FGR, Bose symmetry, pole/occupation normalization and NR coefficient; not theorem replication"
+    }
+  ]
+}

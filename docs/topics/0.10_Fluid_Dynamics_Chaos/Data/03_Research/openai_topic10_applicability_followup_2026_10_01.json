@@ -1,0 +1,97 @@
+{
+  "schema_version": "t10-openai-applicability-followup-v1",
+  "date": "2026-10-01",
+  "area": "research-core",
+  "record_role": "SOURCE_METADATA_ABSTRACT_DOCUMENTATION_AND_CURRENT_LOCAL_EVIDENCE_REVIEW",
+  "uet_base_commit": "e17cab50d1e663b8e2d62eea20429a96c49120eb",
+  "previous_review": "docs/topics/0.10_Fluid_Dynamics_Chaos/Data/03_Research/openai_topic10_formal_transfer_review_2026_10_01.json",
+  "external_repository": {
+    "url": "https://github.com/openai/NavierStokesAndEuler",
+    "current_main_commit": "f9e8bc5b38b6e212696e8a30e3e91517af887bbd",
+    "revision_unchanged_from_previous_review": true
+  },
+  "source_records": [
+    {
+      "url": "https://openai.com/index/navier-stokes-solution/",
+      "scope": "Official account; workflow and forced NS/unforced Euler distinction"
+    },
+    {
+      "url": "https://github.com/openai/NavierStokesAndEuler/blob/f9e8bc5b38b6e212696e8a30e3e91517af887bbd/README.md",
+      "scope": "Published mathematical statement and build/check instructions"
+    },
+    {
+      "url": "https://github.com/leanprover/comparator/blob/v4.34.0-rc2/README.md",
+      "scope": "Statement identity, permitted axioms, kernel replay and definition-hole limitations"
+    },
+    {
+      "url": "https://arxiv.org/abs/2609.20803v2",
+      "version": "v2",
+      "revision_date": "2026-09-29",
+      "scope": "Metadata and abstract only; full v2 proof not audited",
+      "full_html_available_in_review": false
+    }
+  ],
+  "latest_local_evidence": {
+    "path": "docs/topics/0.10_Fluid_Dynamics_Chaos/Result/artifacts/fluid_core_o2_continuum_form_audit.json",
+    "sha256": "22792c7ec7ab209ca5b23a870f2b72467feb482d4f89050925364c5ba40c932f",
+    "check_count": 292,
+    "passing_check_count": 292,
+    "interpretation": "Conditional selected finite-K continuum-form domain and no-uniform-vector-gap internal derivation; no source-specific current upper bound or physical admission"
+  },
+  "transfer_assessment": [
+    {
+      "area": "Hypothesis and proof-obligation decomposition",
+      "potential": "HIGH",
+      "basis": "Reviewer inference; compatible with current J01/J02 controlling obligations",
+      "measured_acceleration": null
+    },
+    {
+      "area": "Small Lean/Comparator pilot for scalar curl and collision identities",
+      "potential": "HIGH_CONDITIONAL",
+      "basis": "Requires exact statement/definitions and actual checker certificates; proposed only",
+      "measured_acceleration": null
+    },
+    {
+      "area": "Continuum domain and source-specific inverse bound",
+      "potential": "HIGH_CONDITIONAL",
+      "basis": "Method transfer; external NS proof does not prove the selected collision model",
+      "measured_acceleration": null
+    },
+    {
+      "area": "3D forced-flow numerical stress case",
+      "potential": "CONDITIONAL_LATER",
+      "basis": "Requires admitted operator, matched forcing/source and refinement; finite trajectory is not a singularity proof",
+      "measured_acceleration": null
+    },
+    {
+      "area": "UET physical heat current, He-II EOS, SI scale and transport coefficients",
+      "potential": "NO_DIRECT_EVIDENCE",
+      "basis": "Must be derived/mapped and tested independently in Core/Topic10/Topic13",
+      "measured_acceleration": null
+    },
+    {
+      "area": "UET speed improvement",
+      "potential": "NO_DIRECT_EVIDENCE",
+      "basis": "No matched work-precision or performance evidence from this source review",
+      "measured_acceleration": null
+    }
+  ],
+  "physical_controller": "vector_momentum_constitutive_origin_and_material_frame_admission_open",
+  "measured_controller": "source_weighted_continuum_current_upper_bound_and_microscopic_heat_current_correspondence_open",
+  "build_executed": false,
+  "comparator_executed": false,
+  "nanoda_executed": false,
+  "full_v2_proof_audited": false,
+  "new_physics_execution": false,
+  "claim_promotion": false,
+  "dependency_unlock": false,
+  "physical_J04_executed": false,
+  "physical_J05_executed": false,
+  "physical_J06_executed": false,
+  "raw_external_payloads_vendored": false,
+  "notes": [
+    "Prior report and manifest retain their dated as-reviewed snapshot.",
+    "Absence of a uniform vector gap does not establish divergent current response or failure of a source-specific hydrodynamic window.",
+    "Potential ratings are qualitative research-design judgments, not measured speedups or percentages of topic closure."
+  ]
+}

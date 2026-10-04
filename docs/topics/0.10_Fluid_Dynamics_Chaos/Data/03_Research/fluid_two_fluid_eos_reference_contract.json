@@ -1,0 +1,95 @@
+{
+  "schema_version": "t10-two-fluid-eos-reference-v1",
+  "date": "2026-09-30",
+  "status": "STANDARD_PHYSICS_REFERENCE_NOT_UET_STATE",
+  "controlling_blocker": "vector_momentum_constitutive_origin_and_material_frame_admission_open",
+  "coupled_input_blocker": "two_fluid_fixed_pressure_EOS_and_UET_state_mapping_missing",
+  "claim_promotion": false,
+  "dependency_unlock": false,
+  "physical_uet_operator_admitted": false,
+  "physical_prediction_executed": false,
+  "derivation_card": "docs/topics/0.10_Fluid_Dynamics_Chaos/TWO_FLUID_STATE_EOS_REFERENCE.md",
+  "material_requirements": "docs/topics/0.10_Fluid_Dynamics_Chaos/Data/03_Research/he4_two_fluid_thermodynamic_input_requirements.json",
+  "state": [
+    "delta_rho",
+    "delta_sigma",
+    "total_mass_current_j",
+    "delta_superfluid_velocity"
+  ],
+  "ontology": {
+    "rho": "material mass density, not C",
+    "sigma": "physical entropy density target, not Q or R trace",
+    "e": "material internal-energy EOS target, not normalized Core free-energy ledger",
+    "mu_mass": "chemical potential per mass, not Core mu_C",
+    "vartheta_sf": "separate U(1) superfluid phase, not Phi or theta_T",
+    "rho_s": "superfluid response density, not automatically condensate fraction",
+    "T": "EOS conjugate e_sigma, not a rematching of Phi"
+  },
+  "assumptions": [
+    "uniform rest state; both components and entropy positive",
+    "vortex-free ideal longitudinal linear response",
+    "positive internal-energy Hessian; no dissipative transport or mean counterflow",
+    "rho_s frozen at rest equilibrium at linear order; no general entrainment model",
+    "normalized controls only, with separate SI target dimensions"
+  ],
+  "equations": {
+    "thermodynamics": "de=mu_mass*d_rho+T*d_sigma; p=rho*mu_mass+sigma*T-e",
+    "state": "rho_t=-div(j); sigma_t=-sigma*div(v_n); j_t=-grad(delta_p); v_s_t=-grad(delta_mu_mass)",
+    "mass_current": "j=rho_n*v_n+rho_s*v_s; w=v_n-v_s",
+    "sound_polynomial": "c^4-(rho*A+2*sigma*B+sigma^2*D/rho_n)*c^2+sigma^2*rho_s/rho_n*(A*D-B^2)=0",
+    "thermo": "c_T^2=rho*(A-B^2/D); c_S^2=rho*A+2*sigma*B+sigma^2*D/rho; c_v=T/(rho*D); c_p/c_v=c_S^2/c_T^2",
+    "path": "alpha_p=alpha_path+kappa_T*p_path_prime; c_p=c_sat+T*alpha_p*p_path_prime/rho; c_p-c_v=T*alpha_p^2/(rho*kappa_T)"
+  },
+  "verification": {
+    "identity_tolerance": 1e-09,
+    "derivative_tolerance": 1e-07,
+    "negative_control_floor": 1e-08,
+    "steps": [
+      0.001,
+      0.0001,
+      1e-05
+    ],
+    "wavenumbers": [
+      0.2,
+      0.1,
+      0.05,
+      0.025,
+      0.0125,
+      0.00625,
+      0.003125
+    ],
+    "periodic_grid": 32,
+    "base": {
+      "rho": 1,
+      "rho_s": 0.6,
+      "sigma": 0.8,
+      "T": 1,
+      "A": 9,
+      "B": -0.2,
+      "D": 1.4
+    },
+    "path_witness": {
+      "rho": 1,
+      "rho_s": 0.6,
+      "s": 0.8,
+      "T": 1,
+      "c_sat": 1.5,
+      "alpha_path": 0.04,
+      "p_path_prime": 0.3,
+      "kappa_T": [
+        0.1,
+        0.2
+      ]
+    },
+    "threshold_policy": "All synthetic controls, error controls and tolerances declared before first audit; preserve a failure before any amendment; no material fit.",
+    "periodic_fields": [
+      "0.1 sin x+0.04 cos 2x",
+      "0.08 cos x+0.03 sin 3x",
+      "0.12 sin 2x+0.07 cos x",
+      "0.09 cos 2x+0.05 sin 3x"
+    ],
+    "thermodynamic_gauge": "Local Taylor energy and mass-chemical-potential offsets zero; temperature reference T retained; no absolute material energy inference."
+  },
+  "physical_admission": "BLOCKED",
+  "next_action": "Source-lock independent fixed-pressure EOS/response protocol and materially justify a separate UET entropy/superfluid phase/relative-motion coupling through Core."
+}

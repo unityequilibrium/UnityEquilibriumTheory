@@ -1,0 +1,1075 @@
+{
+  "schema_version": "t10-mode-eligibility-invalid-preview-v1",
+  "status": "INVALID_COMPLEX_METRIC_PREVIEW_NOT_ACCEPTED",
+  "reason": "Imported real-array RMS used mean(a**2) for complex work matrices; ComplexWarning showed imaginary components discarded. Nominal 123-check PASS is not accepted evidence.",
+  "original_artifact_sha256": "e0ed1ed2ab0aad56dbb0a0e2667da1095ba4796916f8dacf200758fb19af08a2",
+  "original_payload": {
+    "checks": {
+      "uniform_Phi_equilibrium": {
+        "metric": 6.938893903907228e-18,
+        "threshold": 1e-09,
+        "pass": true
+      },
+      "finite_positive_gap_stiffness": {
+        "metric": 1.011171333464878,
+        "minimum": 0.0,
+        "pass": true
+      },
+      "stable_Hessian_determinant": {
+        "metric": 0.4291994091194379,
+        "minimum": 0.0,
+        "pass": true
+      },
+      "stable_effective_conserved_susceptibility": {
+        "metric": 0.4244576511566481,
+        "minimum": 0.0,
+        "pass": true
+      },
+      "finite_positive_relaxation": {
+        "metric": 1.0,
+        "minimum": 0.0,
+        "pass": true
+      },
+      "canonical_Hessian_directional_derivative": {
+        "metric": 7.03041157989623e-11,
+        "threshold": 1e-07,
+        "pass": true
+      },
+      "linear_force_projection_control_nonzero": {
+        "metric": 0.18538642720639562,
+        "minimum": 1e-08,
+        "pass": true
+      },
+      "linear_scalar_force_is_pressure_gradient": {
+        "metric": 2.6999973506249883e-16,
+        "threshold": 1e-09,
+        "pass": true
+      },
+      "projected_linear_velocity_constraint": {
+        "metric": 4.9383873980874034e-15,
+        "threshold": 1e-09,
+        "pass": true
+      },
+      "k0_fast_root_gap": {
+        "metric": 1.0055701534278345,
+        "minimum": 0.0,
+        "pass": true
+      },
+      "simple_scalar_zero_root_derivative": {
+        "metric": 1.011171333464878,
+        "minimum": 0.0,
+        "pass": true
+      },
+      "reference_quadratic_flux_reciprocity": {
+        "metric": 0.0,
+        "threshold": 1e-09,
+        "pass": true
+      },
+      "reference_flux_thermodynamic_identity": {
+        "metric": 0.0,
+        "threshold": 1e-09,
+        "pass": true
+      },
+      "reference_availability_temperature_weight": {
+        "metric": 1.0,
+        "minimum": 0.0,
+        "pass": true
+      },
+      "reference_availability_relative_inertia": {
+        "metric": 0.24,
+        "minimum": 0.0,
+        "pass": true
+      },
+      "k=0.2/characteristic_polynomial_eigen_match": {
+        "metric": 3.246791710033308e-16,
+        "threshold": 1e-09,
+        "pass": true
+      },
+      "k=0.2/characteristic_root_residual": {
+        "metric": 1.0689932351299025e-16,
+        "threshold": 1e-09,
+        "pass": true
+      },
+      "k=0.2/slow_rest_mode_nonoscillatory": {
+        "metric": 0.0,
+        "threshold": 1e-09,
+        "pass": true
+      },
+      "k=0.2/slow_rest_mode_stable": {
+        "metric": 0.0,
+        "threshold": 1e-09,
+        "pass": true
+      },
+      "k=0.2/fast_sector_remains_gapped": {
+        "metric": 1.0258339220169135,
+        "minimum": 0.5027850767139173,
+        "pass": true
+      },
+      "k=0.2/full_shear_block_spectrum": {
+        "metric": 0.0,
+        "threshold": 1e-09,
+        "pass": true
+      },
+      "k=0.2/ideal_counterflow_acoustic_pair": {
+        "metric": 1.3877787807814457e-17,
+        "threshold": 1e-09,
+        "pass": true
+      },
+      "k=0.2/ideal_reference_positive_work_symmetrizer": {
+        "metric": 0.0,
+        "threshold": 1e-09,
+        "pass": true
+      },
+      "k=0.2/diffusive_reference_work_loss": {
+        "metric": 0.0,
+        "threshold": 1e-09,
+        "pass": true
+      },
+      "k=0.2/reference_damping_order_k_squared": {
+        "metric": 3.885780586188048e-16,
+        "threshold": 1e-09,
+        "pass": true
+      },
+      "k=0.2/Galilean_rest_frame_spectrum": {
+        "metric": 7.879000145549163e-16,
+        "threshold": 1e-09,
+        "pass": true
+      },
+      "k=0.2/advected_diffusive_apparent_speed": {
+        "metric": 5.551115123125783e-17,
+        "threshold": 1e-09,
+        "pass": true
+      },
+      "k=0.2/out_of_contract_massless_undamped_wave": {
+        "metric": 0.0,
+        "threshold": 1e-09,
+        "pass": true
+      },
+      "k=0.2/clamped_relative_motion_has_no_wave": {
+        "metric": 0.0,
+        "threshold": 1e-09,
+        "pass": true
+      },
+      "k=0.2/finite_state_unit_chart_preserves_poles": {
+        "metric": 6.980392432354008e-16,
+        "threshold": 1e-09,
+        "pass": true
+      },
+      "k=0.1/characteristic_polynomial_eigen_match": {
+        "metric": 4.529201338659439e-16,
+        "threshold": 1e-09,
+        "pass": true
+      },
+      "k=0.1/characteristic_root_residual": {
+        "metric": 7.007649738862742e-17,
+        "threshold": 1e-09,
+        "pass": true
+      },
+      "k=0.1/slow_rest_mode_nonoscillatory": {
+        "metric": 0.0,
+        "threshold": 1e-09,
+        "pass": true
+      },
+      "k=0.1/slow_rest_mode_stable": {
+        "metric": 0.0,
+        "threshold": 1e-09,
+        "pass": true
+      },
+      "k=0.1/fast_sector_remains_gapped": {
+        "metric": 1.010678584643604,
+        "minimum": 0.5027850767139173,
+        "pass": true
+      },
+      "k=0.1/full_shear_block_spectrum": {
+        "metric": 0.0,
+        "threshold": 1e-09,
+        "pass": true
+      },
+      "k=0.1/ideal_counterflow_acoustic_pair": {
+        "metric": 6.938893903907228e-18,
+        "threshold": 1e-09,
+        "pass": true
+      },
+      "k=0.1/ideal_reference_positive_work_symmetrizer": {
+        "metric": 0.0,
+        "threshold": 1e-09,
+        "pass": true
+      },
+      "k=0.1/diffusive_reference_work_loss": {
+        "metric": 0.0,
+        "threshold": 1e-09,
+        "pass": true
+      },
+      "k=0.1/reference_damping_order_k_squared": {
+        "metric": 2.0816681711721685e-16,
+        "threshold": 1e-09,
+        "pass": true
+      },
+      "k=0.1/Galilean_rest_frame_spectrum": {
+        "metric": 2.456304299870655e-16,
+        "threshold": 1e-09,
+        "pass": true
+      },
+      "k=0.1/advected_diffusive_apparent_speed": {
+        "metric": 5.551115123125783e-17,
+        "threshold": 1e-09,
+        "pass": true
+      },
+      "k=0.1/out_of_contract_massless_undamped_wave": {
+        "metric": 1.3877787807814457e-17,
+        "threshold": 1e-09,
+        "pass": true
+      },
+      "k=0.1/clamped_relative_motion_has_no_wave": {
+        "metric": 0.0,
+        "threshold": 1e-09,
+        "pass": true
+      },
+      "k=0.1/finite_state_unit_chart_preserves_poles": {
+        "metric": 7.246722141855101e-16,
+        "threshold": 1e-09,
+        "pass": true
+      },
+      "k=0.05/characteristic_polynomial_eigen_match": {
+        "metric": 7.396933685508193e-16,
+        "threshold": 1e-09,
+        "pass": true
+      },
+      "k=0.05/characteristic_root_residual": {
+        "metric": 2.3529190303549227e-16,
+        "threshold": 1e-09,
+        "pass": true
+      },
+      "k=0.05/slow_rest_mode_nonoscillatory": {
+        "metric": 0.0,
+        "threshold": 1e-09,
+        "pass": true
+      },
+      "k=0.05/slow_rest_mode_stable": {
+        "metric": 0.0,
+        "threshold": 1e-09,
+        "pass": true
+      },
+      "k=0.05/fast_sector_remains_gapped": {
+        "metric": 1.0068499700535223,
+        "minimum": 0.5027850767139173,
+        "pass": true
+      },
+      "k=0.05/full_shear_block_spectrum": {
+        "metric": 0.0,
+        "threshold": 1e-09,
+        "pass": true
+      },
+      "k=0.05/ideal_counterflow_acoustic_pair": {
+        "metric": 3.469446951953614e-18,
+        "threshold": 1e-09,
+        "pass": true
+      },
+      "k=0.05/ideal_reference_positive_work_symmetrizer": {
+        "metric": 0.0,
+        "threshold": 1e-09,
+        "pass": true
+      },
+      "k=0.05/diffusive_reference_work_loss": {
+        "metric": 0.0,
+        "threshold": 1e-09,
+        "pass": true
+      },
+      "k=0.05/reference_damping_order_k_squared": {
+        "metric": 2.0816681711721685e-16,
+        "threshold": 1e-09,
+        "pass": true
+      },
+      "k=0.05/Galilean_rest_frame_spectrum": {
+        "metric": 6.973895958680061e-16,
+        "threshold": 1e-09,
+        "pass": true
+      },
+      "k=0.05/advected_diffusive_apparent_speed": {
+        "metric": 5.551115123125783e-17,
+        "threshold": 1e-09,
+        "pass": true
+      },
+      "k=0.05/out_of_contract_massless_undamped_wave": {
+        "metric": 0.0,
+        "threshold": 1e-09,
+        "pass": true
+      },
+      "k=0.05/clamped_relative_motion_has_no_wave": {
+        "metric": 0.0,
+        "threshold": 1e-09,
+        "pass": true
+      },
+      "k=0.05/finite_state_unit_chart_preserves_poles": {
+        "metric": 4.9901137381183e-16,
+        "threshold": 1e-09,
+        "pass": true
+      },
+      "k=0.025/characteristic_polynomial_eigen_match": {
+        "metric": 1.0412490604949858e-15,
+        "threshold": 1e-09,
+        "pass": true
+      },
+      "k=0.025/characteristic_root_residual": {
+        "metric": 1.9063464164425225e-16,
+        "threshold": 1e-09,
+        "pass": true
+      },
+      "k=0.025/slow_rest_mode_nonoscillatory": {
+        "metric": 0.0,
+        "threshold": 1e-09,
+        "pass": true
+      },
+      "k=0.025/slow_rest_mode_stable": {
+        "metric": 0.0,
+        "threshold": 1e-09,
+        "pass": true
+      },
+      "k=0.025/fast_sector_remains_gapped": {
+        "metric": 1.0058902777506014,
+        "minimum": 0.5027850767139173,
+        "pass": true
+      },
+      "k=0.025/full_shear_block_spectrum": {
+        "metric": 0.0,
+        "threshold": 1e-09,
+        "pass": true
+      },
+      "k=0.025/ideal_counterflow_acoustic_pair": {
+        "metric": 1.734723475976807e-18,
+        "threshold": 1e-09,
+        "pass": true
+      },
+      "k=0.025/ideal_reference_positive_work_symmetrizer": {
+        "metric": 0.0,
+        "threshold": 1e-09,
+        "pass": true
+      },
+      "k=0.025/diffusive_reference_work_loss": {
+        "metric": 0.0,
+        "threshold": 1e-09,
+        "pass": true
+      },
+      "k=0.025/reference_damping_order_k_squared": {
+        "metric": 1.5959455978986625e-15,
+        "threshold": 1e-09,
+        "pass": true
+      },
+      "k=0.025/Galilean_rest_frame_spectrum": {
+        "metric": 3.979525531788874e-16,
+        "threshold": 1e-09,
+        "pass": true
+      },
+      "k=0.025/advected_diffusive_apparent_speed": {
+        "metric": 5.551115123125783e-17,
+        "threshold": 1e-09,
+        "pass": true
+      },
+      "k=0.025/out_of_contract_massless_undamped_wave": {
+        "metric": 3.469446951953614e-18,
+        "threshold": 1e-09,
+        "pass": true
+      },
+      "k=0.025/clamped_relative_motion_has_no_wave": {
+        "metric": 0.0,
+        "threshold": 1e-09,
+        "pass": true
+      },
+      "k=0.025/finite_state_unit_chart_preserves_poles": {
+        "metric": 4.994874668660228e-16,
+        "threshold": 1e-09,
+        "pass": true
+      },
+      "k=0.0125/characteristic_polynomial_eigen_match": {
+        "metric": 1.1039852922727276e-16,
+        "threshold": 1e-09,
+        "pass": true
+      },
+      "k=0.0125/characteristic_root_residual": {
+        "metric": 7.4526098465076e-17,
+        "threshold": 1e-09,
+        "pass": true
+      },
+      "k=0.0125/slow_rest_mode_nonoscillatory": {
+        "metric": 0.0,
+        "threshold": 1e-09,
+        "pass": true
+      },
+      "k=0.0125/slow_rest_mode_stable": {
+        "metric": 0.0,
+        "threshold": 1e-09,
+        "pass": true
+      },
+      "k=0.0125/fast_sector_remains_gapped": {
+        "metric": 1.005650195157571,
+        "minimum": 0.5027850767139173,
+        "pass": true
+      },
+      "k=0.0125/full_shear_block_spectrum": {
+        "metric": 0.0,
+        "threshold": 1e-09,
+        "pass": true
+      },
+      "k=0.0125/ideal_counterflow_acoustic_pair": {
+        "metric": 8.673617379884035e-19,
+        "threshold": 1e-09,
+        "pass": true
+      },
+      "k=0.0125/ideal_reference_positive_work_symmetrizer": {
+        "metric": 0.0,
+        "threshold": 1e-09,
+        "pass": true
+      },
+      "k=0.0125/diffusive_reference_work_loss": {
+        "metric": 0.0,
+        "threshold": 1e-09,
+        "pass": true
+      },
+      "k=0.0125/reference_damping_order_k_squared": {
+        "metric": 1.1796119636642288e-15,
+        "threshold": 1e-09,
+        "pass": true
+      },
+      "k=0.0125/Galilean_rest_frame_spectrum": {
+        "metric": 5.629242548018072e-16,
+        "threshold": 1e-09,
+        "pass": true
+      },
+      "k=0.0125/advected_diffusive_apparent_speed": {
+        "metric": 5.551115123125783e-17,
+        "threshold": 1e-09,
+        "pass": true
+      },
+      "k=0.0125/out_of_contract_massless_undamped_wave": {
+        "metric": 0.0,
+        "threshold": 1e-09,
+        "pass": true
+      },
+      "k=0.0125/clamped_relative_motion_has_no_wave": {
+        "metric": 0.0,
+        "threshold": 1e-09,
+        "pass": true
+      },
+      "k=0.0125/finite_state_unit_chart_preserves_poles": {
+        "metric": 3.5327529352727277e-16,
+        "threshold": 1e-09,
+        "pass": true
+      },
+      "k=0.00625/characteristic_polynomial_eigen_match": {
+        "metric": 5.945497650227816e-16,
+        "threshold": 1e-09,
+        "pass": true
+      },
+      "k=0.00625/characteristic_root_residual": {
+        "metric": 1.5731911301002924e-16,
+        "threshold": 1e-09,
+        "pass": true
+      },
+      "k=0.00625/slow_rest_mode_nonoscillatory": {
+        "metric": 0.0,
+        "threshold": 1e-09,
+        "pass": true
+      },
+      "k=0.00625/slow_rest_mode_stable": {
+        "metric": 0.0,
+        "threshold": 1e-09,
+        "pass": true
+      },
+      "k=0.00625/fast_sector_remains_gapped": {
+        "metric": 1.005590164526047,
+        "minimum": 0.5027850767139173,
+        "pass": true
+      },
+      "k=0.00625/full_shear_block_spectrum": {
+        "metric": 0.0,
+        "threshold": 1e-09,
+        "pass": true
+      },
+      "k=0.00625/ideal_counterflow_acoustic_pair": {
+        "metric": 4.336808689942018e-19,
+        "threshold": 1e-09,
+        "pass": true
+      },
+      "k=0.00625/ideal_reference_positive_work_symmetrizer": {
+        "metric": 0.0,
+        "threshold": 1e-09,
+        "pass": true
+      },
+      "k=0.00625/diffusive_reference_work_loss": {
+        "metric": 0.0,
+        "threshold": 1e-09,
+        "pass": true
+      },
+      "k=0.00625/reference_damping_order_k_squared": {
+        "metric": 1.1796119636642288e-15,
+        "threshold": 1e-09,
+        "pass": true
+      },
+      "k=0.00625/Galilean_rest_frame_spectrum": {
+        "metric": 4.68409252816366e-16,
+        "threshold": 1e-09,
+        "pass": true
+      },
+      "k=0.00625/advected_diffusive_apparent_speed": {
+        "metric": 5.551115123125783e-17,
+        "threshold": 1e-09,
+        "pass": true
+      },
+      "k=0.00625/out_of_contract_massless_undamped_wave": {
+        "metric": 8.673617379884035e-19,
+        "threshold": 1e-09,
+        "pass": true
+      },
+      "k=0.00625/clamped_relative_motion_has_no_wave": {
+        "metric": 0.0,
+        "threshold": 1e-09,
+        "pass": true
+      },
+      "k=0.00625/finite_state_unit_chart_preserves_poles": {
+        "metric": 5.58610629646549e-16,
+        "threshold": 1e-09,
+        "pass": true
+      },
+      "k=0.003125/characteristic_polynomial_eigen_match": {
+        "metric": 9.99775801418978e-16,
+        "threshold": 1e-09,
+        "pass": true
+      },
+      "k=0.003125/characteristic_root_residual": {
+        "metric": 4.565549912419302e-17,
+        "threshold": 1e-09,
+        "pass": true
+      },
+      "k=0.003125/slow_rest_mode_nonoscillatory": {
+        "metric": 0.0,
+        "threshold": 1e-09,
+        "pass": true
+      },
+      "k=0.003125/slow_rest_mode_stable": {
+        "metric": 0.0,
+        "threshold": 1e-09,
+        "pass": true
+      },
+      "k=0.003125/fast_sector_remains_gapped": {
+        "metric": 1.0055751562440023,
+        "minimum": 0.5027850767139173,
+        "pass": true
+      },
+      "k=0.003125/full_shear_block_spectrum": {
+        "metric": 0.0,
+        "threshold": 1e-09,
+        "pass": true
+      },
+      "k=0.003125/ideal_counterflow_acoustic_pair": {
+        "metric": 2.168404344971009e-19,
+        "threshold": 1e-09,
+        "pass": true
+      },
+      "k=0.003125/ideal_reference_positive_work_symmetrizer": {
+        "metric": 0.0,
+        "threshold": 1e-09,
+        "pass": true
+      },
+      "k=0.003125/diffusive_reference_work_loss": {
+        "metric": 0.0,
+        "threshold": 1e-09,
+        "pass": true
+      },
+      "k=0.003125/reference_damping_order_k_squared": {
+        "metric": 4.371503159461554e-15,
+        "threshold": 1e-09,
+        "pass": true
+      },
+      "k=0.003125/Galilean_rest_frame_spectrum": {
+        "metric": 3.4913685434416186e-16,
+        "threshold": 1e-09,
+        "pass": true
+      },
+      "k=0.003125/advected_diffusive_apparent_speed": {
+        "metric": 5.551115123125783e-17,
+        "threshold": 1e-09,
+        "pass": true
+      },
+      "k=0.003125/out_of_contract_massless_undamped_wave": {
+        "metric": 0.0,
+        "threshold": 1e-09,
+        "pass": true
+      },
+      "k=0.003125/clamped_relative_motion_has_no_wave": {
+        "metric": 0.0,
+        "threshold": 1e-09,
+        "pass": true
+      },
+      "k=0.003125/finite_state_unit_chart_preserves_poles": {
+        "metric": 1.766508279734407e-16,
+        "threshold": 1e-09,
+        "pass": true
+      },
+      "finest_diffusive_slope_matches_simple_root_derivation": {
+        "metric": 9.933968109998581e-06,
+        "threshold": 0.001,
+        "pass": true
+      },
+      "diffusive_slope_refinement": {
+        "metric": 0.0,
+        "threshold": 1e-09,
+        "pass": true
+      },
+      "finest_reference_acoustic_speed": {
+        "metric": 1.302083174124997e-09,
+        "threshold": 0.001,
+        "pass": true
+      }
+    },
+    "reference_check_count": 123,
+    "equilibrium": {
+      "C0": 0.7,
+      "Phi0": 0.06102276478189089,
+      "mu_C0": -0.36767898383683095,
+      "mu_Phi0": 6.938893903907228e-18,
+      "A": 0.45474430880452704,
+      "B": -0.175,
+      "D": 1.011171333464878,
+      "effective_susceptibility": 0.4244576511566481,
+      "predicted_diffusive_coefficient": 0.4244576511566481,
+      "alpha": 1.0,
+      "gamma": 1.0,
+      "fast_roots_k0": [
+        {
+          "real": -0.5000000000000002,
+          "imag": 0.8724513358720235
+        },
+        {
+          "real": -0.5000000000000002,
+          "imag": -0.8724513358720235
+        }
+      ]
+    },
+    "canonical_Hessian_derivative_controls": [
+      {
+        "step": 0.001,
+        "error": 7.071067774582852e-07
+      },
+      {
+        "step": 0.0001,
+        "error": 7.071133732489146e-09
+      },
+      {
+        "step": 1e-05,
+        "error": 7.03041157989623e-11
+      }
+    ],
+    "wavenumber_records": [
+      {
+        "k": 0.2,
+        "scalar_modes": [
+          {
+            "real": -0.018603806782141265,
+            "imag": 0.0
+          },
+          {
+            "real": -0.5005929827850198,
+            "imag": 0.8954004138635406
+          },
+          {
+            "real": -0.5005929827850198,
+            "imag": -0.8954004138635406
+          }
+        ],
+        "shear_mode": -0.004000000000000001,
+        "slow_coefficient": 0.46509516955353153,
+        "reference_modes": [
+          {
+            "real": 0.0,
+            "imag": 0.2449489742783178
+          },
+          {
+            "real": -1.3877787807814457e-17,
+            "imag": -0.2449489742783178
+          }
+        ],
+        "reference_damped_modes": [
+          {
+            "real": -0.003599999999999992,
+            "imag": 0.2449476678803046
+          },
+          {
+            "real": -0.0035999999999999782,
+            "imag": -0.2449476678803046
+          }
+        ],
+        "reference_phase_speed": 1.2247383394015228,
+        "apparent_bulk_advection_speed": 0.36999999999999994,
+        "massless_undamped_control_speed": 1.0,
+        "unit_k": 0.15384615384615385
+      },
+      {
+        "k": 0.1,
+        "scalar_modes": [
+          {
+            "real": -0.0043462661003931865,
+            "imag": 0.0
+          },
+          {
+            "real": -0.5001505884938262,
+            "imag": 0.8782485925331608
+          },
+          {
+            "real": -0.5001505884938262,
+            "imag": -0.8782485925331608
+          }
+        ],
+        "shear_mode": -0.0010000000000000002,
+        "slow_coefficient": 0.4346266100393186,
+        "reference_modes": [
+          {
+            "real": 0.0,
+            "imag": 0.1224744871391589
+          },
+          {
+            "real": -6.938893903907228e-18,
+            "imag": -0.1224744871391589
+          }
+        ],
+        "reference_damped_modes": [
+          {
+            "real": -0.000899999999999998,
+            "imag": 0.12247432383973388
+          },
+          {
+            "real": -0.000899999999999998,
+            "imag": -0.12247432383973386
+          }
+        ],
+        "reference_phase_speed": 1.2247432383973387,
+        "apparent_bulk_advection_speed": 0.36999999999999994,
+        "massless_undamped_control_speed": 1.0,
+        "unit_k": 0.07692307692307693
+      },
+      {
+        "k": 0.05,
+        "scalar_modes": [
+          {
+            "real": -0.0010675013269266396,
+            "imag": 0.0
+          },
+          {
+            "real": -0.5000378047225424,
+            "imag": 0.8739044890862153
+          },
+          {
+            "real": -0.5000378047225424,
+            "imag": -0.8739044890862153
+          }
+        ],
+        "shear_mode": -0.00025000000000000006,
+        "slow_coefficient": 0.42700053077065575,
+        "reference_modes": [
+          {
+            "real": 0.0,
+            "imag": 0.06123724356957945
+          },
+          {
+            "real": -3.469446951953614e-18,
+            "imag": -0.06123724356957945
+          }
+        ],
+        "reference_damped_modes": [
+          {
+            "real": -0.00022499999999999604,
+            "imag": 0.06123722315716155
+          },
+          {
+            "real": -0.00022500000000000298,
+            "imag": -0.06123722315716153
+          }
+        ],
+        "reference_phase_speed": 1.224744463143231,
+        "apparent_bulk_advection_speed": 0.36999999999999994,
+        "massless_undamped_control_speed": 1.0,
+        "unit_k": 0.038461538461538464
+      },
+      {
+        "k": 0.025,
+        "scalar_modes": [
+          {
+            "real": -0.0002656833823230529,
+            "imag": 0.0
+          },
+          {
+            "real": -0.5000094612178403,
+            "imag": 0.8728148655733513
+          },
+          {
+            "real": -0.5000094612178403,
+            "imag": -0.8728148655733513
+          }
+        ],
+        "shear_mode": -6.250000000000001e-05,
+        "slow_coefficient": 0.42509341171688453,
+        "reference_modes": [
+          {
+            "real": 0.0,
+            "imag": 0.030618621784789725
+          },
+          {
+            "real": -1.734723475976807e-18,
+            "imag": -0.030618621784789725
+          }
+        ],
+        "reference_damped_modes": [
+          {
+            "real": -5.6250000000000744e-05,
+            "imag": 0.03061861923323781
+          },
+          {
+            "real": -5.6249999999997274e-05,
+            "imag": -0.030618619233237807
+          }
+        ],
+        "reference_phase_speed": 1.2247447693295124,
+        "apparent_bulk_advection_speed": 0.36999999999999994,
+        "massless_undamped_control_speed": 1.0,
+        "unit_k": 0.019230769230769232
+      },
+      {
+        "k": 0.0125,
+        "scalar_modes": [
+          {
+            "real": -6.634634278878164e-05,
+            "imag": 0.0
+          },
+          {
+            "real": -0.5000023659347621,
+            "imag": 0.872542233407702
+          },
+          {
+            "real": -0.5000023659347621,
+            "imag": -0.872542233407702
+          }
+        ],
+        "shear_mode": -1.5625000000000004e-05,
+        "slow_coefficient": 0.42461659384820244,
+        "reference_modes": [
+          {
+            "real": 0.0,
+            "imag": 0.015309310892394862
+          },
+          {
+            "real": -8.673617379884035e-19,
+            "imag": -0.015309310892394862
+          }
+        ],
+        "reference_damped_modes": [
+          {
+            "real": -1.4062500000000186e-05,
+            "imag": 0.015309310573450889
+          },
+          {
+            "real": -1.4062500000000186e-05,
+            "imag": -0.015309310573450884
+          }
+        ],
+        "reference_phase_speed": 1.224744845876071,
+        "apparent_bulk_advection_speed": 0.36999999999999994,
+        "massless_undamped_control_speed": 1.0,
+        "unit_k": 0.009615384615384616
+      },
+      {
+        "k": 0.00625,
+        "scalar_modes": [
+          {
+            "real": -1.658192917926441e-05,
+            "imag": 0.0
+          },
+          {
+            "real": -0.500000591523131,
+            "imag": 0.8724740612006991
+          },
+          {
+            "real": -0.500000591523131,
+            "imag": -0.8724740612006991
+          }
+        ],
+        "shear_mode": -3.906250000000001e-06,
+        "slow_coefficient": 0.42449738698916883,
+        "reference_modes": [
+          {
+            "real": 0.0,
+            "imag": 0.007654655446197431
+          },
+          {
+            "real": -4.336808689942018e-19,
+            "imag": -0.007654655446197431
+          }
+        ],
+        "reference_damped_modes": [
+          {
+            "real": -3.515624999999613e-06,
+            "imag": 0.0076546554063294334
+          },
+          {
+            "real": -3.51562500000048e-06,
+            "imag": -0.007654655406329435
+          }
+        ],
+        "reference_phase_speed": 1.2247448650127095,
+        "apparent_bulk_advection_speed": 0.36999999999999994,
+        "massless_undamped_control_speed": 1.0,
+        "unit_k": 0.004807692307692308
+      },
+      {
+        "k": 0.003125,
+        "scalar_modes": [
+          {
+            "real": -4.145191260983967e-06,
+            "imag": 0.0
+          },
+          {
+            "real": -0.5000001478832488,
+            "imag": 0.8724570172632453
+          },
+          {
+            "real": -0.5000001478832488,
+            "imag": -0.8724570172632453
+          }
+        ],
+        "shear_mode": -9.765625000000002e-07,
+        "slow_coefficient": 0.4244675851247581,
+        "reference_modes": [
+          {
+            "real": 0.0,
+            "imag": 0.0038273277230987156
+          },
+          {
+            "real": -2.168404344971009e-19,
+            "imag": -0.0038273277230987156
+          }
+        ],
+        "reference_damped_modes": [
+          {
+            "real": -8.7890625000012e-07,
+            "imag": 0.0038273277181152168
+          },
+          {
+            "real": -8.789062499997948e-07,
+            "imag": -0.0038273277181152168
+          }
+        ],
+        "reference_phase_speed": 1.2247448697968693,
+        "apparent_bulk_advection_speed": 0.36999999999999994,
+        "massless_undamped_control_speed": 1.0,
+        "unit_k": 0.002403846153846154
+      }
+    ],
+    "separate_two_fluid_reference": {
+      "controls": {
+        "rho_s": 0.6,
+        "rho_n": 0.4,
+        "T": 1,
+        "s": 1,
+        "c_p": 1,
+        "D_T": 0.07,
+        "D_w": 0.11
+      },
+      "a": 0.6,
+      "b": 2.5,
+      "ideal_phase_speed": 1.224744871391589,
+      "availability_weights": [
+        1.0,
+        0.24
+      ],
+      "reference_damping_coefficient": 0.08999999999999563,
+      "coefficient_origin": "synthetic; not calibrated or physical He-II"
+    },
+    "canonical_source_expressions": {
+      "mu_C": "config.a_matter * C + config.b_matter * C ** 3 - config.kappa_matter * lap_C - config.coupling_g * C * Phi",
+      "mu_Phi": "config.a_space * Phi + config.b_space * Phi ** 3 - config.kappa_space * lap_Phi - 0.5 * config.coupling_g * C ** 2"
+    },
+    "pass": true,
+    "schema_version": "t10-second-sound-mode-eligibility-audit-v1",
+    "status": "PASS_CURRENT_CANDIDATE_HYDRODYNAMIC_MODE_EXCLUSION_ONLY",
+    "controlling_blocker": "vector_momentum_constitutive_origin_and_material_frame_admission_open",
+    "coupled_branch_blocker": "isothermal_single_velocity_candidate_counterflow_acoustic_mode_missing",
+    "candidate_disposition": "NOT_ELIGIBLE_AS_HYDRODYNAMIC_SECOND_SOUND_OPERATOR_UNDER_DECLARED_ASSUMPTIONS",
+    "claim_promotion": false,
+    "dependency_unlock": false,
+    "physical_uet_operator_admitted": false,
+    "physical_prediction_executed": false,
+    "scope": [
+      "uniform rest equilibrium; mu_Phi=0, conserved mu_C spatially constant",
+      "finite constant coefficients",
+      "D>0 and A*D-B^2>0 for the scoped stable branch",
+      "gamma=1/tau>0 and alpha=M_Phi/tau>0",
+      "no sources or boundary forcing",
+      "continuum long wavelength or expanding-domain family; not fixed-box minimum k"
+    ],
+    "reference_scope": [
+      "separate ideal two-fluid state; zero net mass current",
+      "low thermal expansion / constant pressure reduction, c_p approximately c_v",
+      "positive rho_s,rho_n,T,s,c_p",
+      "vortex-free equilibrium; no mean counterflow",
+      "synthetic diffusion only; no physical transport tensor"
+    ],
+    "thresholds": {
+      "C0": 0.7,
+      "wavenumbers": [
+        0.2,
+        0.1,
+        0.05,
+        0.025,
+        0.0125,
+        0.00625,
+        0.003125
+      ],
+      "identity_tolerance": 1e-09,
+      "hessian_derivative_tolerance": 1e-07,
+      "small_k_slope_tolerance": 0.001,
+      "negative_control_floor": 1e-08,
+      "field_directional_steps": [
+        0.001,
+        0.0001,
+        1e-05
+      ],
+      "projection_grid": 32,
+      "boost_velocity": 0.37,
+      "unit_length_scale": 1.3,
+      "unit_time_scale": 0.8,
+      "two_fluid_controls": {
+        "rho_s": 0.6,
+        "rho_n": 0.4,
+        "T": 1,
+        "s": 1,
+        "c_p": 1,
+        "D_T": 0.07,
+        "D_w": 0.11
+      },
+      "control_origin": "Synthetic reference only; no He-4 speed, calibration or transport values",
+      "threshold_policy": "All thresholds and controls locked before first audit; preserve any numerical FAIL before amendment."
+    },
+    "input_hashes": {
+      "docs/topics/0.10_Fluid_Dynamics_Chaos/Code/03_Research/Research_Fluid_Second_Sound_Mode_Eligibility.py": "0f5e4c9851c32f54d203d4eec4db280a643a6e4dbe552d0d6146c551a6a5c87a",
+      "docs/topics/0.10_Fluid_Dynamics_Chaos/Code/03_Research/Research_Fluid_Vector_State_Contract.py": "3b81d328a8a7c073ed3804cf3815b09ca7b50b3d25a8547b7a18d84f6e8bfe0f",
+      "docs/topics/0.10_Fluid_Dynamics_Chaos/Data/03_Research/fluid_second_sound_mode_eligibility_contract.json": "3f3f799c3c51bf3f6a3b48008705a6ef3e5e251a01b0ba5c152b4480d35bf276",
+      "docs/topics/0.10_Fluid_Dynamics_Chaos/Data/03_Research/fluid_vector_state_research_contract.json": "ce7fee2d3a093e983316d9a867a1a2bbd16ab36efb77b5c97f5380bba2017f70",
+      "docs/topics/0.10_Fluid_Dynamics_Chaos/SECOND_SOUND_MODE_ELIGIBILITY.md": "d48d3bfd8bbc1a2c94a86eb050e45dcb0a57f7c26e04165fd0dfd2fef76dfbac",
+      "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry_topic10_second_sound_mode_addendum.json": "d6a5941f7c4c4bd7ce7a37a9c134e0597d5a09963af15817ed508275467600e5",
+      "docs/core/02_equations/matter_space/uet_matter_space.py": "488db6aa26b99856e2eb82a2f46a9857f623f418ef8e537498fa71d5e4f633aa",
+      "docs/topics/0.13_Thermodynamic_Bridge/HE4_SECOND_SOUND_PROTOCOL_CARD.md": "3e63ee75d51935420e9d4cb5e2141cf5cdb52c7596a6ea31a78e621ae1313449",
+      "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry_topic13_continuum_relative_flow_addendum.json": "72beccc6257279e23400ceca47ac0615cfc5d1703aa628b47c6ee58ce26fb604"
+    },
+    "excludes": [
+      "all-UET no-go",
+      "nonlinear propagation",
+      "finite-frequency He-II fit",
+      "SI material prediction",
+      "full entropy/FDT closure",
+      "PDE trajectory",
+      "formal kernel proof",
+      "Core/Topic 13 unlock"
+    ]
+  },
+  "claim_promotion": false,
+  "dependency_unlock": false,
+  "disposition": "Retain preview; use local absolute-square norm, add imaginary-work/sign-error sensitivity controls and rerun with unchanged thresholds. New error controls are post-preview harness repair, not blind preregistration."
+}

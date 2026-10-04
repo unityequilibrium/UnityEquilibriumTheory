@@ -1,0 +1,81 @@
+{
+  "schema_version": "uet-equation-registry-addendum-v1",
+  "status": "CANDIDATE_DIAGNOSTIC_NOT_MERGED",
+  "extends": "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry.json",
+  "equation_entries": [
+    {
+      "equation_id": "uet.topic10.second_sound_mode_eligibility_reference",
+      "version": "1",
+      "classification": "derived_reference_boundary",
+      "relation_or_code_path": {
+        "A": "a_C+3*b_C*C0^2-g*Phi0",
+        "B": "-g*C0",
+        "D": "a_Phi+3*b_Phi*Phi0^2",
+        "P": "(lambda+M_C*k^2*A_k)*(lambda^2+gamma*lambda+alpha*D_k)-M_C*k^2*alpha*B^2",
+        "slow": "lambda=-M_C*(A-B^2/D)*k^2+O(k^4)",
+        "shear": "lambda=-eta*k^2/rho0",
+        "reference_a": "(rho_s/rho)*T*s/c_p",
+        "reference_b": "(rho/rho_n)*s",
+        "reference_c2_squared": "(rho_s/rho_n)*T*s^2/c_p",
+        "reference_energy_weights": [
+          "rho*c_p/T",
+          "rho_s*rho_n/rho"
+        ],
+        "reference_flux": "rho_s*s*delta_T*w"
+      },
+      "variables": {
+        "c": "perturbation of structural C, not mass",
+        "phi": "effective response perturbation, not temperature",
+        "q": "material rate perturbation",
+        "u_T": "transverse common-flow perturbation only",
+        "delta_T": "separate standard two-fluid temperature perturbation",
+        "w": "separate normal-superfluid relative velocity",
+        "s": "specific entropy per mass, distinct from growth rate lambda or C/Phi"
+      },
+      "mathematical_role": "linearized spectral exclusion and separate counterflow/work positive control",
+      "standard_physics_counterpart": "hydrodynamic acoustic second sound in a vortex-free low-expansion two-fluid reference",
+      "observable_mapping": {
+        "status": "BLOCKED",
+        "reference": "small-k pole class and wave availability only",
+        "physical": "no assigned C/Phi-to-temperature or matched He-II frequency protocol"
+      },
+      "unit_lane": "normalized_symbol_controls_with_separate_SI_dimension_targets",
+      "parameter_dimensions": "See SECOND_SOUND_MODE_ELIGIBILITY.md; numerical controls are synthetic",
+      "source_or_origin": "canonical scalar derivative Hessian and declared vector candidate; standard two-fluid equations reduced independently",
+      "assumptions": [
+        "uniform rest equilibrium; mu_Phi=0, conserved mu_C spatially constant",
+        "finite constant coefficients",
+        "D>0 and A*D-B^2>0 for the scoped stable branch",
+        "gamma=1/tau>0 and alpha=M_Phi/tau>0",
+        "no sources or boundary forcing",
+        "continuum long wavelength or expanding-domain family; not fixed-box minimum k",
+        "separate ideal two-fluid state; zero net mass current",
+        "low thermal expansion / constant pressure reduction, c_p approximately c_v",
+        "positive rho_s,rho_n,T,s,c_p",
+        "vortex-free equilibrium; no mean counterflow",
+        "synthetic diffusion only; no physical transport tensor"
+      ],
+      "symmetry_and_conservation": "rest-frame spectrum; solenoidal projection; ideal counterflow reference has positive quadratic work symmetrizer",
+      "limiting_cases": [
+        "finite-gap damped candidate has diffusive/gapped sectors",
+        "mean-flow advection Doppler shift is removable",
+        "massless undamped scalar wave outside candidate assumptions",
+        "ideal two-fluid reference has acoustic pair"
+      ],
+      "implementation_paths": [
+        "docs/topics/0.10_Fluid_Dynamics_Chaos/Code/03_Research/Research_Fluid_Second_Sound_Mode_Eligibility.py"
+      ],
+      "verifier_paths": [
+        "docs/topics/0.10_Fluid_Dynamics_Chaos/Code/03_Research/Research_Fluid_Second_Sound_Mode_Eligibility.py"
+      ],
+      "evidence_class": "CONDITIONAL_LINEARIZED_REFERENCE_NO_GO",
+      "proof_status": "analytic simple-root/decoupled-shear argument with executed numerical controls; not formal kernel proof",
+      "blockers": [
+        "current isothermal candidate has no registered entropy/relative-velocity state",
+        "physical state, EOS/transport and independent measurement unadmitted"
+      ],
+      "claim_boundary": "Current stable homogeneous branch only; not all UET, nonlinear waves, He-II validation or Core unlock",
+      "harness_boundary": "Initial invalid complex-metric preview retained; post-preview sensitivity controls added, thresholds unchanged."
+    }
+  ]
+}
