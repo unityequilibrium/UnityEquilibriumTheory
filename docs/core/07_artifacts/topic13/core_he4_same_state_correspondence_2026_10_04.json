@@ -1,0 +1,191 @@
+{
+  "schema_version": "core-he4-same-state-correspondence-v1",
+  "owner_id": "FOUNDATION",
+  "evidence_status": "INTERNAL",
+  "organization_status": "REVIEW_REQUIRED",
+  "organization_next_action": "ORG register this opt-in audit and handoff without changing existing physics gates",
+  "disposition": "SPECIFIC_ADDITIONAL_INPUTS_REQUIRED",
+  "controlling_blocker": "same_state_atomic_current_action_measure_and_low_T_remainder_not_admitted",
+  "physical_transfer_admitted": false,
+  "claim_promotion": false,
+  "core_state": {
+    "phase": "He II external material; action anchor is the normal quasiparticle branch",
+    "temperature_K": 1.7,
+    "derivative_rows_K": [
+      1.6,
+      1.7,
+      1.8
+    ],
+    "pressure": "SVP path; absolute pressure value not locked by this calibration",
+    "density_kg_m3": 145.26863945323475,
+    "number_density_m3": 2.185648035384131e+28,
+    "source": "Donnelly-Barenghi 1998 DOI 10.1063/1.556028; source-evaluated rows",
+    "source_snapshot_sha256": "12665f1450f4a1370206e23a11eff4b13606041e870ccbf59805f842e423a25a",
+    "action_anchor": {
+      "temperature": 0.22,
+      "chemical_potential": 0.35,
+      "space_response": 0.15,
+      "branch": "normal"
+    },
+    "normalization": {
+      "alpha_Phi_K": -1.02237987858849,
+      "alpha_uncertainty_K_per_normalized_base_Phi": 0.056753979576408715,
+      "theta_T_K_per_natural_temperature": 7.727272727272727,
+      "Z_Phi_normalized_per_natural_Phi": -0.017488421860832278,
+      "Z_Phi_uncertainty_bound": 0.0009712263618290997
+    },
+    "energy_density_scale_J_m3": 512994.17164886114,
+    "derivation_class": "EXTERNAL_CALIBRATION_AND_SCALE_CONVENTION_WITH_LOCAL_ACTION_DERIVATIVES",
+    "independence": "External to UET target fitting; calibration reconstruction itself is not independent validation or a blind response dataset"
+  },
+  "low_T_state": {
+    "phase": "declared condensed tree/phase EFT; atomic material identification open",
+    "source_temperature": "Godfrin primary low-T source documents T<100mK; hybrid rows also require component-specific temperature/ancestry, not a 1.7K row",
+    "source_pressure": "seven source pressures; SVP hybrid has mixed ultrasound/neutron ancestry",
+    "density_kg_m3": null,
+    "physical_chemical_potential": null,
+    "action_chemical_potentials": [
+      1.05,
+      1.2
+    ],
+    "tree_states": [
+      {
+        "mu": 1.05,
+        "xi": 0.0,
+        "h": 0.0,
+        "Phi": 0.04159353886477326,
+        "s": 0.10416374155459096
+      },
+      {
+        "mu": 1.2,
+        "xi": 0.0,
+        "h": 0.0,
+        "Phi": 0.17354957461700313,
+        "s": 0.4469419829846801
+      }
+    ],
+    "units": "action natural E; source meV and angstrom^-1; conversion unadmitted",
+    "source_identity": {
+      "authors": "H. Godfrin, K. Beauvois, A. Sultan, E. Krotscheck, J. Dawidowski, B. Fak and J. Ollivier",
+      "title": "The dispersion relation of Landau elementary excitations and the thermodynamic properties of superfluid 4He",
+      "arxiv_version": "2012.09067v1",
+      "arxiv_url": "https://arxiv.org/abs/2012.09067v1",
+      "journal_doi": "10.1103/PhysRevB.103.104516",
+      "journal_version_parity": "NOT_ESTABLISHED_DO_NOT_MERGE_VERSION_ROWS",
+      "license": "CC-BY-4.0_AS_DECLARED_BY_ARXIV_RECORD",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "license_locator": "arXiv version record view-license link; author-submitted work and ancillary files, not APS final-paper redistribution",
+      "source_role": "EXPOSED_LITERATURE_SOURCE_SCREEN_NOT_UET_CALIBRATION_OR_BLIND_HOLDOUT",
+      "access_date": "2026-10-03",
+      "attribution_and_changes": "Credit authors and version/DOI/license in source note; raw bytes unchanged; parsed view retains lexical numbers, null missing cells and source line identities; no digitization or model-parameter fit",
+      "current_admission": "NUMERIC_ARCHIVE_AND_ROW_PROVENANCE_ONLY_NOT_MATERIAL_PREDICTION"
+    },
+    "source_limitations": {
+      "reported_energy_errors_are_not_assumed_one_sigma": true,
+      "joint_q_energy_covariance": "NOT_PROVIDED_IN_ARCHIVED_TEXT_TABLES",
+      "peak_resolution_not_same_as_energy_error": true,
+      "rotational_energy_calibration_ancestry": "source manuscript detailed analysis uses external roton reference; not independent of that source family",
+      "raw_neutron_events_acquired": false,
+      "unknown_missing_uncertainty_must_remain_null": true,
+      "natural_q_to_physical_Q_map_admitted": false
+    },
+    "original_source_audit_status": "FAIL_SCOPED_LOW_Q_SOURCE_BOUNDARY",
+    "derivation_class": "TREE_MATCHED_LOW_ENERGY_EFT_PLUS_PHASE_ONE_LOOP_THERMAL_DETERMINANT_NOT_FULL_QUANTUM_COMPLETION"
+  },
+  "chemical_potential_current_normalization": {
+    "core_action": "phase theta=-mu*t; charge is d p/d mu with declared natural measure",
+    "transport_reference": "delta_mu=0 relative to SVP; not absolute atom chemical potential or action mu=0",
+    "conditional_relation": "if mu_phys=E_unit*mu_nat+constant and p_phys=e0*p_nat+constant, n_Q_phys=(e0/E_unit)*n_Q_nat",
+    "energy_unit_J": 1.0668651363636363e-22,
+    "conditional_charge_unit_m3": 4.8084256778450895e+27,
+    "normal_anchor_charge_fraction_of_atom_density": 0.0001071700772757291,
+    "interpretation": "diagnostic under stated chain rule; charge-to-atom/normal-component matching not derived; no material no-go"
+  },
+  "action_measure_normalization": {
+    "thermal_integral": "d^3k/(2pi)^3; radial k^2 dk/(2pi^2), natural action variables",
+    "conditional_relation": "ell=hbar*c_star/E_unit; S_phys/hbar=A integral d4x_nat L_nat; e0=A*E_unit/ell^3",
+    "c_star_m_s": null,
+    "ell_m": null,
+    "A": null,
+    "status": "MISSING_SPACETIME_AND_ACTION_NORMALIZATION",
+    "field_rescaling_is_action_measure": false
+  },
+  "constraints_and_checks": {
+    "calibration_alpha_reconstruction_relative_error": 0.0,
+    "calibration_identity_only": true,
+    "temperature_domains_overlap": false,
+    "SVP_derivative_equals_fixed_mu_derivative": false,
+    "normal_branch_equals_full_HeII": false,
+    "source_covariance_supplied": false,
+    "new_model_solve_or_fit": false,
+    "Xie_numeric_read": false
+  },
+  "checks_scope": "Metadata/source audit and conditional dimensional chain rule; existing physical models were not rerun",
+  "required_inputs": [
+    "same-state T/pressure/density rows and their covariance, not transfer of 1.7K values",
+    "atomic U(1) charge assignment/current unit and chemical-potential zero/rest-energy convention",
+    "length/time/energy scale and action prefactor from independent input; response Z_Phi alone is insufficient",
+    "thermodynamic path Jacobian linking SVP equilibrium derivatives to fixed-(mu,Phi) action derivatives",
+    "same-state independent scale or pressure/compressibility/density-current observable not used in matching, with source ancestry review",
+    "bound interaction/finite-T and omitted dispersion terms before selecting q3/q5 inference"
+  ],
+  "claim_boundary": "Existing bounded Core composition preserved. Transfer to the low-T material is not admitted; no global no-go or empirical validation.",
+  "inputs": [
+    {
+      "path": "docs/core/07_artifacts/topic13/t13_he4_o2_response_calibration_audit.json",
+      "checkout_role": "core",
+      "sha256": "705783a70c4c2b87505afa47863b2eceee73ead6c7dd26b3b415ba5dfb871d4f"
+    },
+    {
+      "path": "docs/core/07_artifacts/topic13/t13_he4_o2_si_beta_mapping_audit.json",
+      "checkout_role": "core",
+      "sha256": "4fe52bd87f1531dcaaadeeddd99ea48744d4ef574eb7b1e6d9c65bb8f41aa2a9"
+    },
+    {
+      "path": "docs/core/07_artifacts/topic13/t13_uet_o2_action_thermal_observable_bridge_audit.json",
+      "checkout_role": "core",
+      "sha256": "7ba49d3f629c91f3f88dda6ad717d8928e58439de7517a5979f0a465b9f52585"
+    },
+    {
+      "path": "docs/core/07_artifacts/topic13/t13_he4_matching_independence_audit.json",
+      "checkout_role": "core",
+      "sha256": "f639bacd8447955b6799e08d2eaeda8575591b56d5dd7972b077c478e5a4ee5d"
+    },
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/t13_low_q_source_protocol.json",
+      "checkout_role": "topic13",
+      "sha256": "66f2e1d12a097f114b0ff5e5f6a3e69479a72cf12bbc24a394421ffdf6d49e2a"
+    },
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/t13_low_T_phase_eft.json",
+      "checkout_role": "topic13",
+      "sha256": "050aceb4f94f3534929d8c59c75da4dda8efe16ce7aec250a34f6f8b5868dcb7"
+    },
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/t13_low_q_source_boundary.json",
+      "checkout_role": "topic13",
+      "sha256": "2c254806eb21b23dc282cbe30f052bf9af2376e427bc5c9b0de229d63f06945e"
+    },
+    {
+      "path": "docs/core/03_lanes/thermal/he4_svp_reference.py",
+      "checkout_role": "core",
+      "sha256": "0fa04451375a761f525c1bb2acc65f99b1e2632eb42d5bc95987fcaa4a007367"
+    },
+    {
+      "path": "docs/core/03_lanes/thermal/he4_o2_response_calibration.py",
+      "checkout_role": "core",
+      "sha256": "92254aa63a54adc2ff826a73ca8d2856d0b4c6a59b7675280edd7cfd38d8f536"
+    },
+    {
+      "path": "docs/core/03_lanes/thermal/he4_o2_si_beta_mapping.py",
+      "checkout_role": "core",
+      "sha256": "326e0cdbbd73cce4ee4b54166bbce2e949ce66ff90c7bf431f7df235468820bc"
+    },
+    {
+      "path": "docs/core/03_lanes/thermal/he4_normal_viscosity_kubo.py",
+      "checkout_role": "core",
+      "sha256": "7a0b55c49fb9605f92a09539f8fe21eddeb44071544c8064d0a95014f574b4c7"
+    }
+  ],
+  "reproduce": "py -3.14 docs/scripts/core/audit/audit_he4_same_state_correspondence.py --topic13-root <checkout-with-low-T-source>"
+}
