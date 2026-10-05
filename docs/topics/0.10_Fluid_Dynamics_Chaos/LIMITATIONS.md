@@ -369,3 +369,15 @@ Existing Topic13 tree/acoustic source-curvature evidence has a different parent,
 source dimension and quantum/mode scope; no physical composition is inferred.
 SD02 completion is only the [derivation handoff](CORE_O2_STATIONARY_SOURCE_HANDOFF.md).
 All prior failures/physical controllers/gates remain; no benchmark expansion.
+
+## SD03 does not close material heat or EOS admission
+
+160 exact checks and four regressions complete only the conditional material
+interface derivation. The pressure/covariance/scaling fixtures are not He4 data,
+physical constants, a new sound benchmark or SI calibration. Particle/atom/velocity
+maps and actual h,n,current/normal component still require admitted state/source
+response. Existing material input values and six physical-scale fields remain null.
+Frame invariance is linear/isotropic rest only. Reduced sound covariance is
+first-order and needs an evidenced domain; it is not a physical error bound.
+First entropy-reference failures are retained; see [handoff](MATERIAL_FRAME_EOS_HANDOFF.md).
+All prior physical/Core/Topic13 blockers and the full joint research scope remain.

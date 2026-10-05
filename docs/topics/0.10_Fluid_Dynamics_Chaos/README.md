@@ -540,3 +540,16 @@ is pinned as a separate parent/scope, not borrowed as interacting vertex evidenc
 SD02 is COMPLETED_SCOPED_DERIVATION_ONLY; SD03 remains PLANNED. Method/physical
 controllers, all ten method gates and physical J04/J05/J06 are unchanged.
 No thermal state, full vertex, physical current/stress or new benchmark expansion.
+
+## SD03 material frame and EOS handoff (2026-10-05)
+
+[SD03 handoff](MATERIAL_FRAME_EOS_HANDOFF.md) connects the stationary source Hessian
+to enthalpy heat subtraction, fixed-pressure c_p, entropy-reference/source changes,
+SI particle/pressure/velocity maps and joint covariance/protocol requirements.
+The [160-check artifact](Result/artifacts/fluid_material_frame_eos_handoff.json)
+and four focused regressions pass after retaining and repairing the first two
+entropy-current target failures. All three secondary handoffs SD01-SD03 are
+COMPLETED_SCOPED_DERIVATION_ONLY. Existing material input values/scales remain null;
+all ten method gates and physical J04/J05/J06 are unchanged. Full research remains
+open under the shared finite-density state/source/renormalization controller.
+Topic10 stays secondary; new benchmark expansion remains deferred.

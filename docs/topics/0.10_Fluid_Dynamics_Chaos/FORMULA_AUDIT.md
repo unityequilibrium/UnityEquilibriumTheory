@@ -375,3 +375,14 @@ current/stress definitions, Euclidean pressure signs and actual source/measure
 contracts. No full vertex, physical stability, ensemble/frame/SI or dynamic Ward
 promotion follows. Topic13 h:E3/chi:E-2 cannot be equated with charge mu:E or
 fixture source units by symbol similarity.
+
+## SD03 local frame/ensemble/source-unit registry
+
+[Three-entry local registry](Data/03_Research/fluid_material_frame_eos_handoff_registry.json)
+records conditional enthalpy-versus-generator subtraction, stationary p(T,mu)
+fixed-pressure c_p and source/SI/covariance Jacobians with ontology, units,
+assumptions and absent physical observable mapping. Central Core registry unchanged.
+Source entropy transformations must carry the full particle current n*u+j_N;
+perturbation-only substitution caused the retained first failure. Frame and source
+transformations preserve the conditional ledger while supplying no atom/state/
+pressure/velocity normalization. See [handoff](MATERIAL_FRAME_EOS_HANDOFF.md).

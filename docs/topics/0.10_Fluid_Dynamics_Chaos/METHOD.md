@@ -375,3 +375,13 @@ quotient solving rejects incompatible phase sources and singular domains.
 This checks the conditional method, not a gHF thermal state or physical response.
 Existing Topic13 source curvature is inspected/pinned without importing its
 numeric result or changing its parent. See [handoff](CORE_O2_STATIONARY_SOURCE_HANDOFF.md).
+
+## SD03 pressure-ensemble and material-frame chain
+
+Use the [preregistered contract](MATERIAL_FRAME_EOS_HANDOFF_CONTRACT.md) and
+[handoff](MATERIAL_FRAME_EOS_HANDOFF.md): exact derivative jets transform the full
+stationary p(T,mu) Hessian into fixed-pressure specific entropy/c_p. Independently
+check source/reference shifts, linear enthalpy heat subtraction and total-versus-
+perturbation current. Rational SI Jacobians/covariance controls carry no physical
+scale/noise assignment. Existing two-fluid quartic, normal-lane frame and material
+source/protocol records are pinned at their own scopes, not numerically rerun.

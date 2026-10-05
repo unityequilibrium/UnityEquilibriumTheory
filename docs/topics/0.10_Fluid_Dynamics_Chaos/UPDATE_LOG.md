@@ -931,3 +931,45 @@ CLAIM_BOUNDARY: Internal numerical-method validation only; not evidence that UET
   or new material payload, benchmark expansion, fit, threshold relaxation or unlock.
 - Next checkpoint: scoped source/hash/history/link/JSON/whitespace review, commit,
   push and dependent draft PR based on PR31; check exact-head CI. No merge or next wave.
+
+## 2026-10-05 SD03 wave definition (preregistration)
+
+- Objective: source-pressure to material heat/frame, fixed-pressure EOS,
+  entropy-coordinate, SI-source map and covariance/protocol handoff.
+- Controller: existing finite-density gHF state/renormalization/external-source
+  method gate; existing unassigned He4 material requirements remain authoritative.
+- Card and Data/03_Research/fluid_material_frame_eos_handoff_{contract,registry}.json
+  prelock exact fixtures/source identities. Acceptance: exact chain/frame/unit/
+  covariance positives and discriminating wrong-frame/ensemble/reference negatives.
+- No Core/Topic13 physical source change, solver, material comparison, new benchmark,
+  calibration, fit or gate unlock. Stop after this conditional SD03 handoff.
+
+## 2026-10-05 SD03 completed material-frame/EOS derivation handoff
+
+- Changed: frozen card/contract/local registry, verifier/four regressions,
+  first failure/source archives, current artifact/handoff, six topic docs and
+  one plan snapshot/history/J02 subrecord. All secondary handoffs SD01-SD03
+  are completed only at their conditional derivation scope.
+- New evidence: enthalpy heat differs from rotating-generator flux and is
+  invariant under the declared linear frame shift. Stationary p(T,mu) c_p at
+  fixed pressure differs from fixed-mu/path derivatives; reference-shift/source
+  Hessian, SI Jacobian and full-covariance conditions are explicit.
+- First execution154/156: two entropy-current reference targets omitted a*n*u
+  by using only charge perturbation. First source/result preserved byte-identically.
+  Corrected total-current target, two omission negatives and two archive guards
+  give160/160. EOS, equations, inputs/steps and thresholds unchanged.
+- Four independent regressions PASS (pytest2.36s).108 preregistered and112 current
+  evidence identities; actual material/scales/covariance remain unassigned.
+- Narrowed: conditional source-to-material interface and exact prerequisite
+  handoff; no regulated state, full source vertex, He4 EOS/protocol or heat admission.
+- Next shared controller unchanged: finite_density_gHF_integral_state_renormalization_and_external_source_vertex_not_admitted.
+  Existing He4 input requirements control actual values/covariance/protocol.
+  Overall/selected physical controllers, all ten method gates/sixteen admissions,
+  previous artifacts/snapshots/history/J02/DAG and physical J04/J05/J06 retained.
+- Five relevant additional predecessor files were restored only from newline-
+  equivalent HEAD bytes; no scientific Core/Topic13 source or central gate changes.
+  Inherited central audit failures remain; no new central PASS is claimed.
+- Public safety: safe reviewed summaries/code/small algebra outputs; no raw/private,
+  material benchmark expansion, response rematching, physical uncertainty or fit.
+- Next: scoped hash/history/link/JSON/whitespace review, commit/push and dependent
+  draft PR after PR31/32; exact-head CI. Stop this wave; full research stays open.

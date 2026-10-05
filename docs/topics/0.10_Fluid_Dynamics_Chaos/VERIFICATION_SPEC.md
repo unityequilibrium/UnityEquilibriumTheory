@@ -482,3 +482,19 @@ cross expectation was corrected from its polynomial expansion; its original
 source is retained. No verifier/contract/threshold changed for that correction.
 Topic13 artifacts are pinned predecessor scope, not numerical reruns. All sixteen
 admissions false and ten method gates NOT_STARTED; no physical benchmark/state.
+
+## SD03 exact material-frame and fixed-pressure handoff checks
+
+Command: python docs/topics/0.10_Fluid_Dynamics_Chaos/Code/03_Research/Research_Fluid_Material_Frame_EOS_Handoff.py.
+[Contract](Data/03_Research/fluid_material_frame_eos_handoff_contract.json),
+[result](Result/artifacts/fluid_material_frame_eos_handoff.json),
+[handoff](MATERIAL_FRAME_EOS_HANDOFF.md).
+108 identities were prelocked. First154/156 failed two entropy-current reference
+targets omitting convective charge. Original source/result retained. Correct
+J_N,total=n*u+j_N target and two new omission negatives plus archive guards give
+160/160 with112 fresh identities. No EOS/source equation, fixture, threshold,
+physical input or calibration changed. Four independent regressions cover
+pressure Taylor/tangent/Richardson and entropy derivative, total-current/frame,
+covariance/unit factors, and archive/provenance/false or stale scope. All exact
+checks use Fraction algebra; material covariance/scales and inputs remain null.
+No physical heat/current, thermal solver, material benchmark or gate promotion.
