@@ -570,3 +570,48 @@ fixed-pressure EOS/entropy reference/covariance, independent dynamic protocol
 and Core SI state/atom map remain open. J04/J05/J06/DAG/claims do not advance.
 OpenAI theorem/checker practice supplies methodological discipline; it
 does not supply this condensate interaction or material correspondence.
+
+## Execution priority: Topic 10 as a secondary derivation lane (2026-10-05)
+
+Explicit user direction now keeps Topic 10 secondary. Advance one derivation
+wave at a time when it answers a shared Core/Topic 13 question. Do not expand
+multiple benchmark families or open new production benchmark lanes.
+
+The machine-readable `execution_priority_policy` records this scheduling
+decision separately from scientific snapshots, gate status and wave history.
+The full J00-J09 research scope remains; deferred work is not completed work.
+
+| Order | Shared derivation | Required handoff |
+| --- | --- | --- |
+| SD01 | Condensed functional stationarity and static Goldstone compatibility | State the chosen approximation, its variation and remaining obligations; a static identity does not admit an interacting state |
+| SD02 | Pressure, current and stress from the same source-varied stationary state | Derive implicit-state/external response and distinguish it from frozen-state curvature; dynamic Ward/causal response remains separate |
+| SD03 | Material heat/frame and Topic 13 correspondence | List the needed mass/charge/heat frame, Legendre/SI map, fixed-constraint EOS, entropy reference/covariance and independent protocol |
+
+These are planned derivation handoffs, not newly executed results or admitted
+operators. SD01 uses the existing [method/source card](CORE_O2_INTERACTING_METHOD_ADMISSION.md)
+as its starting boundary. Benchmark expansion requires explicit reprioritization
+and the relevant admitted state, source and error protocol. Existing benchmarks
+are retained and rerun only for relevant evidence changes or a specific check.
+
+No verifier rerun is needed for this scheduling-only change. J04/J05/J06 remain
+NOT_STARTED; all ten method gates, prior artifacts, fitted constants and locked
+thresholds are unchanged. Method controller remains
+condensed_twoPI_stationarity_Goldstone_and_source_response_contract_not_admitted.
+Overall controller remains
+vector_momentum_constitutive_origin_and_material_frame_admission_open.
+
+## SD01 completed within the secondary derivation boundary (2026-10-05)
+
+The [shared handoff](CORE_O2_GAPLESS_FUNCTIONAL_HANDOFF.md) records an explicit
+phenomenological gHF approximation with fixed-Q mean-field variation and static
+Goldstone consistency. Its [artifact](Result/artifacts/fluid_core_o2_gapless_functional_audit.json)
+passes 192/192 exact internal checks; four focused regressions pass. The original
+186-check execution is retained. No thermal integral state or external vertex is
+computed. All ten method gates and physical J04/J05/J06 stay NOT_STARTED.
+
+SD01 is COMPLETED_SCOPED_DERIVATION_ONLY; SD02/SD03 remain PLANNED. The next method
+controller is finite_density_gHF_integral_state_renormalization_and_external_source_vertex_not_admitted.
+Overall and selected physical controllers are unchanged. Topic 10 stays secondary;
+new benchmark expansion is deferred. Central foundation/path-reference failures
+and scientific-link DRIFT remain disclosed in the handoff; this is not an all-Core
+verification pass or admission of the candidate registry.

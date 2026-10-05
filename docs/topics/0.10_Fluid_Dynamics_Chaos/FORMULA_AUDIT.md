@@ -348,3 +348,18 @@ but are not self-consistent thermal inputs or a full-paper proof audit.
 No full matrix/Goldstone/source Ward, pressure derivative, interaction/current,
 microscopic scheme, sunset accuracy, material heat/frame or SI mapping is
 derived by this audit. See [method card](CORE_O2_INTERACTING_METHOD_ADMISSION.md).
+
+## SD01 gHF candidate registry boundary
+
+The [unmerged candidate addendum](../../core/07_artifacts/correspondence/uet_equation_correspondence_registry_topic10_o2_gapless_functional_addendum.json)
+records ontology, source normalization, natural-unit powers, conditional proof
+class, assumptions and NOT_ADMITTED observables. The [handoff](CORE_O2_GAPLESS_FUNCTIONAL_HANDOFF.md)
+checks Sigma by variation of V2_g and h by fixed-Q variation of V_field, then
+K_g Jphi=Jh for arbitrary symmetric Q. V_field is only the field-dependent part,
+not the complete regulated 2PI action. The correction is phenomenological;
+original Core action and prior equations/artifacts stay unchanged.
+
+The Schur external/implicit-state expressions are conditional chain-rule
+obligations and were not evaluated. No full matrix integral state, regulator,
+local/dynamic Ward, current/stress, collision, material heat/frame or SI map is
+admitted. Static algebra completion cannot promote the central blocked foundation.

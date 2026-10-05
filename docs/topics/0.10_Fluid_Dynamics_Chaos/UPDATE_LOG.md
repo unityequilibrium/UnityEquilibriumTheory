@@ -822,3 +822,69 @@ CLAIM_BOUNDARY: Internal numerical-method validation only; not evidence that UET
   Python files. No scientific behavior/control changed;156/156 diagnostic and
   four focused regressions pass again(3.112s). Current artifact/source hashes
   were refreshed without changing any prior snapshot/history entry.
+
+## 2026-10-05 Secondary shared-derivation priority
+
+- Area: research-core; workflow/claim-boundary pass under explicit user direction.
+- Changed: joint plan JSON `execution_priority_policy`, joint plan and README;
+  Topic 10 now supports shared Core/Topic 13 derivations, one wave at a time.
+  New benchmark expansion is deferred; full J00-J09 obligations are retained.
+- Derivation order: SD01 functional stationarity/static Goldstone; SD02
+  source-varied pressure/current/stress; SD03 material heat/frame/EOS handoff.
+  Queue items are PLANNED; no new scientific execution is recorded.
+- Checkout recovery:76 inspected tracked paths matched HEAD after CRLF-to-LF
+  conversion only and were restored to committed bytes. All71 input hashes
+  in the prior interacting-method artifact are fresh; three untracked
+  gapless-functional preregistration files remain byte-identical and uncommitted.
+- Verified: JSON parsing and preservation of every pre-existing plan field;
+  unchanged package/method/physical statuses, source hashes and documentation
+  prefixes, local links and scoped whitespace review. No scientific verifier
+  was rerun because evidence-producing state did not change.
+- Narrowed: execution priority and permissible next work, not a physics blocker.
+- Method controller unchanged:
+  condensed_twoPI_stationarity_Goldstone_and_source_response_contract_not_admitted.
+- Overall controller unchanged:
+  vector_momentum_constitutive_origin_and_material_frame_admission_open.
+- Claim impact: none; all prior results, constants, thresholds, scientific
+  snapshots/history and NOT_STARTED J04/J05/J06 states remain unchanged.
+- Public safety: safe for this planning packet; no raw/private payload included.
+- Next: complete the SD01 derivation handoff within its declared boundary;
+  do not start new production benchmarks. Scoped commit/push and a new draft PR
+  based on current main; prior PR29 was merged on 2026-10-04.
+
+- Publication checkpoint: priority commit da025620 pushed; draft PR31 opened
+  (https://github.com/unityequilibrium/UnityEquilibriumTheory/pull/31).
+  Local scoped review passed; CI was pending at the first inspection.
+  Next: required PR checks and SD01 shared derivation; no benchmark expansion.
+
+## 2026-10-05 SD01 conditional gHF shared derivation
+
+- Area: research-core. Topic 10 remains secondary; no new benchmark lane.
+- Changed: frozen source card/contract/unmerged candidate addendum, exact
+  verifier and four regressions, immutable first source/result, current artifact,
+  completed handoff, six topic docs and joint plan snapshot/history/J02 subrecord.
+- Actual evidence: first 186/186 passed unchanged; current 192/192 adds four
+  fixed-Q field-variation checks and two archive guards. Four focused regressions
+  pass. All 81 input hashes are fresh; three preregistration identities retained.
+- Narrowed: same declared gHF functional's mean-field variation and conditional
+  static Goldstone identity. The modification is phenomenological; no integral
+  state, finite-density renormalization, source vertex or material map is admitted.
+- Next method controller:
+  finite_density_gHF_integral_state_renormalization_and_external_source_vertex_not_admitted.
+  SD01 COMPLETED_SCOPED_DERIVATION_ONLY; SD02/SD03 remain PLANNED.
+- All prior snapshots/history/artifacts/J02 fields/DAG and physical J04/J05/J06
+  states preserved. Ten method gates stay NOT_STARTED, sixteen admissions false;
+  overall and selected physical controllers unchanged. No claim promotion.
+- Mandatory audits: F0 --no-write PASS_WITH_DISCLOSED_GAPS with inventory BLOCKED;
+  foundation audit FAIL (222 inherited missing-path errors); scientific-link
+  --check DRIFT with six baseline-unchanged inputs; read-only path build PASS
+  (eight checks); compatibility --no-write audit PASS, interpretation BLOCKED.
+  First compatibility runtime lacked SciPy; existing repository virtual environment
+  completed it (exit 0). No central generated audit artifact was overwritten.
+- Review: JSON/old-plan-field preservation, source freshness, exact candidate
+  locks, append-only doc prefixes and new local links. One legacy absolute README
+  link was excluded from new-link review; it is unchanged from HEAD.
+- Public safety: safe reviewed source summaries/code/small artifacts; no raw,
+  private or new material dataset. Central audit blockers remain explicit.
+- Next checkpoint: scoped commit/push and update draft PR31 for final SD01 scope;
+  check new-head CI. No merge, primary Core change or new benchmark expansion.

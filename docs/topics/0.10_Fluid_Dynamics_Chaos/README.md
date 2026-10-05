@@ -501,3 +501,29 @@ not a solved interacting thermal state. Ten independent condensed-method
 obligations remain NOT_STARTED; no conserved/gapless method or material heat
 frame is admitted. This narrows method selection before implementing a solver.
 Overall/selected physical controllers and J04/J05/J06 remain unchanged.
+
+## Current execution priority (2026-10-05)
+
+Topic 10 is a secondary lane under explicit user direction. Prioritize shared
+Core/Topic 13 derivations: functional stationarity/Goldstone consistency,
+source-varied current/stress/thermodynamic response, then the material heat/frame
+and EOS/protocol handoff. Advance one derivation wave at a time; new benchmark
+expansion is deferred. See the [joint plan](JOINT_RESEARCH_PLAN_TOPIC10_TOPIC13.md)
+and its machine-readable `execution_priority_policy`. This is a scheduling
+change, not a new result, readiness upgrade or physical gate admission.
+
+## SD01 completed within the secondary derivation boundary (2026-10-05)
+
+The [shared handoff](CORE_O2_GAPLESS_FUNCTIONAL_HANDOFF.md) records an explicit
+phenomenological gHF approximation with fixed-Q mean-field variation and static
+Goldstone consistency. Its [artifact](Result/artifacts/fluid_core_o2_gapless_functional_audit.json)
+passes 192/192 exact internal checks; four focused regressions pass. The original
+186-check execution is retained. No thermal integral state or external vertex is
+computed. All ten method gates and physical J04/J05/J06 stay NOT_STARTED.
+
+SD01 is COMPLETED_SCOPED_DERIVATION_ONLY; SD02/SD03 remain PLANNED. The next method
+controller is finite_density_gHF_integral_state_renormalization_and_external_source_vertex_not_admitted.
+Overall and selected physical controllers are unchanged. Topic 10 stays secondary;
+new benchmark expansion is deferred. Central foundation/path-reference failures
+and scientific-link DRIFT remain disclosed in the handoff; this is not an all-Core
+verification pass or admission of the candidate registry.

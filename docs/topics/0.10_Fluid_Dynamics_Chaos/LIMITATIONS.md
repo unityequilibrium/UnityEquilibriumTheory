@@ -346,3 +346,15 @@ and Topic13 EOS/protocol. All ten method gates remain NOT_STARTED.
 The mean-density Gaussian and continuum bounds remain at their prior scope.
 No full Noether Ward, physical J04/J05/J06, formal/independent validation,
 material state or dependency promotion follows.
+
+## SD01 does not admit a physical gapless method
+
+192/192 internal checks establish the declared candidate's conditional polynomial
+variation/static identity. The phenomenological modification is not an unmodified
+microscopic derivation. Synthetic Q is not a solved propagator; static zero mode
+and radial positivity are not dynamic Ward, full stability, thermodynamic accuracy
+or material heat. No integral, counterterm/source scheme or external vertex has
+been solved. All ten method gates remain NOT_STARTED; SD02/SD03 remain PLANNED.
+Central foundation audit failures and scientific-link DRIFT remain open.
+See the [handoff](CORE_O2_GAPLESS_FUNCTIONAL_HANDOFF.md) for the exact audit boundary
+and unchanged Core/Topic13/material controllers. No benchmark expansion.
