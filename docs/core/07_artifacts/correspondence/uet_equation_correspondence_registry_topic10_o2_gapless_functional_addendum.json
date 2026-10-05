@@ -1,0 +1,88 @@
+{
+  "schema_version": "uet-equation-registry-addendum-v1",
+  "status": "SOURCE_GUIDED_FUNCTIONAL_CANDIDATE_NOT_CORE_PROMOTION",
+  "extends": "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry_topic10_o2_interacting_method_addendum.json",
+  "equation_entries": [
+    {
+      "equation_id": "candidate.topic10_13.O2_gapless_HF_functional",
+      "classification": "phenomenological_source_normalized_approximation_functional_candidate",
+      "relation": "V2_g=lambda/4*(3*(tr Q)^2-2*tr(Q^2));Sigma_g=lambda*(3*tr Q I-2Q);K_g Jphi=J h",
+      "variables": {
+        "phi": "canonical mean real doublet;natural E1",
+        "Q": "coincident symmetric tadpole matrix;natural E2;not UET Q=DtPhi",
+        "lambda": "existing canonical quartic coupling;dimensionless",
+        "mu_charge": "chemical potential E1;not source renormalization scale",
+        "Phi_UET": "separate fixed response variable,not diagram functional"
+      },
+      "mathematical_role": "conditional functional variation and global static Goldstone consistency",
+      "standard_physics_counterpart": "modified gapless Phi-derivable O(2) Hartree-Fock approximation",
+      "unit_lane": "natural_source_algebra",
+      "units": {
+        "V2": 4,
+        "Sigma": 2,
+        "K": 2,
+        "h": 3
+      },
+      "source_or_origin": "docs/topics/0.10_Fluid_Dynamics_Chaos/CORE_O2_GAPLESS_FUNCTIONAL_CANDIDATE.md",
+      "primary_reference": "https://arxiv.org/pdf/hep-ph/0506157",
+      "source_normalization": "lambda_paper/N=lambda_here;N=2",
+      "proof_status": "conditional exact polynomial variation;no integral solution,formal or independent review",
+      "assumptions": [
+        "source phenomenological correction explicit",
+        "same classical O(2) action normalization",
+        "symmetric real coincident Q",
+        "static zero-frequency/momentum block with uniform chemical potential",
+        "all finite-density renormalization and source extension gates remain open"
+      ],
+      "observable_mapping": {
+        "status": "NOT_ADMITTED",
+        "reason": "no interacting thermal state,current,SI,He-II or independent protocol"
+      },
+      "implementation_paths": [
+        "docs/topics/0.10_Fluid_Dynamics_Chaos/Code/03_Research/Research_Fluid_Core_O2_Gapless_Functional.py"
+      ],
+      "evidence_class": "INTERNAL_CONDITIONAL_SOURCE_ALGEBRA_ONLY",
+      "blockers": [
+        "finite_density_gHF_integral_state_renormalization_and_external_source_vertex_not_admitted"
+      ],
+      "claim_boundary": "No full microscopic diagram derivation,local dynamic Ward,conserving material heat or state admission"
+    },
+    {
+      "equation_id": "candidate.topic10_13.stationary_source_response_Schur_reference",
+      "classification": "conditional_implicit_stationary_derivative",
+      "relation": "H_ext=Gamma_phiphi-Gamma_phiG*(Gamma_GG)^(-1)*Gamma_Gphi;p_thetatheta=-Omega_thetatheta+Omega_thetay*(Omega_yy)^(-1)*Omega_ytheta",
+      "variables": {
+        "Gamma": "source-varied approximation action;not implemented",
+        "G": "full pair-space propagator;coordinate/measure conventions must be defined",
+        "y": "stationary mean field and propagator with phase fixed/quotiented",
+        "theta": "temperature and chemical potential E1"
+      },
+      "mathematical_role": "separate frozen-state/internal/physical external-response and thermodynamic derivatives",
+      "standard_physics_counterpart": "stationary 2PI external vertex and equilibrium implicit thermodynamics",
+      "unit_lane": "conditional_natural_density_with_measures_pending",
+      "units": {
+        "density_Hessian_ij": "E^(4-d_i-d_j);functional measures still required"
+      },
+      "source_or_origin": "docs/topics/0.10_Fluid_Dynamics_Chaos/CORE_O2_GAPLESS_FUNCTIONAL_CANDIDATE.md",
+      "primary_reference": "https://arxiv.org/pdf/hep-ph/0203008",
+      "proof_status": "conditional chain derivation only;not numerical/full functional proof",
+      "assumptions": [
+        "differentiable stationary branch",
+        "pair/state Hessian invertible on explicitly admissible domain",
+        "global phase quotient or gauge fixed",
+        "same regulator,measure,sources,counterterms",
+        "internal and external propagators kept distinct"
+      ],
+      "observable_mapping": {
+        "status": "NOT_ADMITTED",
+        "reason": "source/contour/vertex and material maps missing"
+      },
+      "implementation_paths": [],
+      "evidence_class": "CONDITIONAL_DERIVATION_NOT_EXECUTED",
+      "blockers": [
+        "finite_density_gHF_integral_state_renormalization_and_external_source_vertex_not_admitted"
+      ],
+      "claim_boundary": "No automatic local Ward,causal/positive spectral density or microscopic collision/heat response"
+    }
+  ]
+}
