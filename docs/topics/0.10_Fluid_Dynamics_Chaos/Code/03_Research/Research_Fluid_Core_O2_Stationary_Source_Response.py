@@ -1,0 +1,288 @@
+"""SD02 exact coincident tensor and stationary source chain diagnostics.
+
+Synthetic algebra controls only: no gHF state, external vertex or material run.
+"""
+from fractions import Fraction as F
+import argparse
+import hashlib
+import importlib.util
+import json
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parents[5]
+TOPIC = Path('docs/topics/0.10_Fluid_Dynamics_Chaos')
+CONTRACT = ROOT/TOPIC/'Data/03_Research/fluid_core_o2_stationary_source_response_contract.json'
+OUTPUT = ROOT/TOPIC/'Result/artifacts/fluid_core_o2_stationary_source_response.json'
+LOCK = '471b7b918b5a558a2488e5fa0cd28b35fbb1355ceb3a4cff6523063d2e1b9184'
+
+
+def sha(p):
+    return hashlib.sha256(p.read_bytes()).hexdigest()
+
+
+def rational(x):
+    if isinstance(x, list):
+        return [rational(v) for v in x]
+    return F(x)
+
+
+def encode(x):
+    if isinstance(x, F):
+        return str(x)
+    if isinstance(x, list):
+        return [encode(v) for v in x]
+    if isinstance(x, dict):
+        return {k: encode(v) for k, v in x.items()}
+    return x
+
+
+def transpose(a):
+    return [list(row) for row in zip(*a)]
+
+
+def mm(a, b):
+    return [[sum(a[i][k]*b[k][j] for k in range(len(b)))
+             for j in range(len(b[0]))] for i in range(len(a))]
+
+
+def mv(a, v):
+    return [sum(x*y for x, y in zip(row, v)) for row in a]
+
+
+def scale(a, x):
+    return [[x*y for y in row] for row in a]
+
+
+def add(a, b):
+    return [[x+y for x, y in zip(ar, br)] for ar, br in zip(a, b)]
+
+
+def inverse(a):
+    n = len(a)
+    if not n or any(len(row) != n for row in a):
+        raise ValueError('square nonempty Hessian required')
+    augmented = [[F(v) for v in row]+[F(i == j) for j in range(n)]
+                 for i, row in enumerate(a)]
+    for k in range(n):
+        pivot = next((i for i in range(k, n) if augmented[i][k]), None)
+        if pivot is None:
+            raise ValueError('singular Hessian; declare an admissible quotient')
+        augmented[k], augmented[pivot] = augmented[pivot], augmented[k]
+        divisor = augmented[k][k]
+        augmented[k] = [v/divisor for v in augmented[k]]
+        for i in range(n):
+            if i != k:
+                factor = augmented[i][k]
+                augmented[i] = [v-factor*w for v, w in zip(augmented[i], augmented[k])]
+    return [row[n:] for row in augmented]
+
+
+def dot(a, b):
+    return sum(x*y for x, y in zip(a, b))
+
+
+def stationary(c, source):
+    return mv(inverse(c['A']), [-v for v in [x+y for x, y in zip(mv(c['B'], source), c['l'])]])
+
+
+def functional(c, state, source):
+    return (dot(state, mv(c['A'], state))/2+dot(state, mv(c['B'], source))
+            +dot(source, mv(c['D'], source))/2+dot(c['l'], state)
+            +dot(c['q'], source)+c['constant'])
+
+
+def pressure(c, source):
+    return -functional(c, stationary(c, source), source)
+
+
+def response(c):
+    correction = mm(mm(transpose(c['B']), inverse(c['A'])), c['B'])
+    return add(scale(c['D'], -1), correction), correction
+
+
+def tensor(variation, coupling, modified=True):
+    # Contracted full symmetric-index tensor, not a solved pair-space vertex.
+    tr = variation[0][0]+variation[1][1]
+    trace_weight, matrix_weight = (3, -2) if modified else (1, 2)
+    return [[coupling*(trace_weight*tr*(i == j)+matrix_weight*variation[i][j])
+             for j in range(2)] for i in range(2)]
+
+
+def tensor_components(coupling, modified=True):
+    trace_weight, pair_weight = (3, -1) if modified else (1, 1)
+    return [[[[coupling*(trace_weight*(a == b)*(c == d)
+                        +pair_weight*((a == c)*(b == d)+(a == d)*(b == c)))
+               for d in range(2)] for c in range(2)] for b in range(2)] for a in range(2)]
+
+
+def quotient_response(a, b, active):
+    """Only a decoupled null direction with no source component may be removed."""
+    n = len(a); excluded = [i for i in range(n) if i not in active]
+    if not active or len(set(active)) != len(active) or any(i < 0 or i >= n for i in active):
+        raise ValueError('declared admissible active coordinates required')
+    if any(a[i][j] or a[j][i] for i in excluded for j in range(n)):
+        raise ValueError('excluded direction is not a decoupled null phase')
+    if any(v for i in excluded for v in b[i]):
+        raise ValueError('source obstructs phase quotient stationarity')
+    block = [[a[i][j] for j in active] for i in active]
+    value = scale(mm(inverse(block), [b[i] for i in active]), -1)
+    result = [[F(0) for _ in b[0]] for _ in range(n)]
+    for i, row in zip(active, value):
+        result[i] = row
+    return result
+
+
+def audit(contract_path=CONTRACT):
+    canonical = json.loads(CONTRACT.read_text(encoding='utf-8'))
+    supplied = json.loads(Path(contract_path).read_text(encoding='utf-8'))
+    checks = []; records = {}; inherited = canonical['prelocked_input_hashes']
+    def check(name, passed):
+        checks.append({'name': name, 'passed': bool(passed)})
+    def finish():
+        inputs = dict(inherited)
+        for path in ['Result/previews/core_o2_stationary_source_first_verifier.py.txt', 'Result/previews/fluid_core_o2_stationary_source_first_execution.json']:
+            p = ROOT/TOPIC/path
+            inputs[p.relative_to(ROOT).as_posix()] = sha(p)
+        for p in [CONTRACT, Path(__file__)]:
+            inputs[p.relative_to(ROOT).as_posix()] = sha(p)
+        return encode({'schema_version': 't010-sd02-source-response-audit-v1',
+          'date': '2026-10-05', 'date_role': 'wave_version_not_execution_timestamp',
+          'status': 'PASS_CONDITIONAL_STATIONARY_SOURCE_DERIVATION_ONLY' if all(x['passed'] for x in checks) else 'STATIONARY_SOURCE_DIAGNOSTIC_FAIL',
+          'check_count': len(checks), 'passing_check_count': sum(x['passed'] for x in checks),
+          'checks': checks, 'input_hashes': inputs,
+          'evaluated_contract_hash': sha(Path(contract_path)), 'derived_controls': records,
+          'method_gate': canonical['method_gate'], 'admission': canonical['admission'],
+          'method_controller': canonical['method_controller'], 'physical_controller': canonical['physical_controller'],
+          'physical_J04_executed': False, 'physical_J05_executed': False, 'physical_J06_executed': False,
+          'thermal_integrals_executed': False, 'interacting_state_computed': False,
+          'full_pair_space_external_vertex_computed': False, 'physical_current_stress_computed': False,
+          'new_benchmark_expansion': False, 'claim_promotion': False, 'dependency_unlock': False,
+          'parameters_fitted': False, 'thresholds_relaxed': False,
+          'formal_verification': False, 'external_replication': False,
+          'Core_and_Topic13_source_edited': False,
+          'scope': 'exact local coincident tensor and synthetic stationary-functional chain controls;not full source/thermal/material admission'})
+    check('canonical_contract_locked', sha(CONTRACT) == LOCK)
+    check('supplied_contract_unchanged', supplied == canonical)
+    check('all_sixteen_admissions_false', len(canonical['admission']) == 16 and all(v is False for v in canonical['admission'].values()))
+    check('all_ten_method_gates_not_started', len(canonical['method_gate']) == 10 and all(v == 'NOT_STARTED' for v in canonical['method_gate'].values()))
+    check('benchmark_expansion_not_authorized', canonical['new_benchmark_expansions_authorized'] is False)
+    for path, expected in inherited.items():
+        check('prelocked_input:'+path, (ROOT/path).is_file() and sha(ROOT/path) == expected)
+    if not all(x['passed'] for x in checks):
+        return finish()
+    first_path = ROOT/TOPIC/'Result/previews/fluid_core_o2_stationary_source_first_execution.json'
+    first = json.loads(first_path.read_text(encoding='utf-8'))
+    check('first_147_execution_retained', first['status'] == 'PASS_CONDITIONAL_STATIONARY_SOURCE_DERIVATION_ONLY' and first['check_count'] == 147 and first['passing_check_count'] == 147)
+    check('first_source_identity_retained', sha(ROOT/TOPIC/'Result/previews/core_o2_stationary_source_first_verifier.py.txt') == first['input_hashes'][Path(__file__).relative_to(ROOT).as_posix()])
+    if not all(x['passed'] for x in checks):
+        return finish()
+    module_path = ROOT/TOPIC/'Code/03_Research/Research_Fluid_Core_O2_Gapless_Functional.py'
+    spec = importlib.util.spec_from_file_location('sd01_algebra', module_path)
+    sd01 = importlib.util.module_from_spec(spec); spec.loader.exec_module(sd01)
+    c = {k: rational(canonical[k]) for k in ['A', 'B', 'D', 'l', 'q', 'constant', 'source']}
+    source = c['source']; state = stationary(c, source); hessian, correction = response(c)
+    gradient = [-v for v in [a+b+d for a, b, d in zip(mv(transpose(c['B']), state), mv(c['D'], source), c['q'])]]
+    derivative_state = scale(mm(inverse(c['A']), c['B']), -1)
+    check('stationarity_zero', [a+b+d for a, b, d in zip(mv(c['A'], state), mv(c['B'], source), c['l'])] == [0, 0])
+    check('Maxwell_symmetric', hessian == transpose(hessian))
+    check('frozen_curvature_negative_detected', hessian != scale(c['D'], -1))
+    check('missing_direct_contact_negative_detected', hessian != correction)
+    check('positive_state_relaxation_correction', correction[0][0] > 0 and correction[0][0]*correction[1][1]-correction[0][1]**2 > 0)
+    for token in canonical['steps']:
+        step = F(token)
+        for i in range(2):
+            plus = list(source); minus = list(source); plus[i] += step; minus[i] -= step
+            check(f'envelope_FD:{token}:{i}', (pressure(c, plus)-pressure(c, minus))/(2*step) == gradient[i])
+            check(f'implicit_state_FD:{token}:{i}', [(a-b)/(2*step) for a, b in zip(stationary(c, plus), stationary(c, minus))] == [row[i] for row in derivative_state])
+            check(f'diagonal_Hessian_FD:{token}:{i}', (pressure(c, plus)-2*pressure(c, source)+pressure(c, minus))/step**2 == hessian[i][i])
+        total = F(0)
+        for a in [-1, 1]:
+            for b in [-1, 1]:
+                total += a*b*pressure(c, [source[0]+a*step, source[1]+b*step])
+        check('mixed_Hessian_FD:'+token, total/(4*step**2) == hessian[0][1])
+    transform = rational(canonical['coordinate_change'])
+    transformed = dict(c, A=mm(mm(transpose(transform), c['A']), transform), B=mm(transpose(transform), c['B']), l=mv(transpose(transform), c['l']))
+    check('state_coordinate_pressure_invariance', pressure(transformed, source) == pressure(c, source))
+    check('state_coordinate_Hessian_invariance', response(transformed)[0] == hessian)
+    # s=R s_new: source gain must transform gradient and curvature together.
+    changed = dict(c, B=mm(c['B'], transform), D=mm(mm(transpose(transform), c['D']), transform), q=mv(transpose(transform), c['q']))
+    new_source = mv(inverse(transform), source)
+    check('source_coordinate_pressure_invariance', pressure(changed, new_source) == pressure(c, source))
+    check('source_coordinate_Hessian_covariance', response(changed)[0] == mm(mm(transpose(transform), hessian), transform))
+    check('unchanged_source_Hessian_negative', response(changed)[0] != hessian)
+    coupling = F(canonical['lambda']); qa, qb, qc = rational(canonical['tadpole_point']); q = [[qa, qc], [qc, qb]]
+    for i, variation in enumerate(rational(canonical['tadpole_variations'])):
+        full = tensor_components(coupling)
+        contraction = [[sum(full[a][b][cc][dd]*variation[cc][dd] for cc in range(2) for dd in range(2)) for b in range(2)] for a in range(2)]
+        check('full_index_tensor:'+str(i), contraction == tensor(variation, coupling))
+        for token in canonical['steps']:
+            step = F(token)
+            plus = add(q, scale(variation, step)); minus = add(q, scale(variation, -step))
+            diff = scale(add(sd01.self_energy(plus, coupling), scale(sd01.self_energy(minus, coupling), -1)), F(1)/(2*step))
+            check(f'self_energy_FD:{i}:{token}', diff == contraction)
+        eig = 4*coupling if i == 0 else -2*coupling
+        check('sector_eigenvalue:'+str(i), contraction == scale(variation, eig))
+        if i:
+            check('old_Hartree_tensor_negative:'+str(i), tensor(variation, coupling, False) != contraction)
+        if i == 2:
+            check('symmetric_offdiagonal_double_negative', scale(contraction, 2) != contraction)
+    try:
+        inverse([[F(2), F(0)], [F(0), F(0)]])
+        check('singular_state_rejected', False)
+    except ValueError:
+        check('singular_state_rejected', True)
+    phase_a = [[F(2), F(0)], [F(0), F(0)]]
+    phase_b = [[F(1), F(2)], [F(0), F(0)]]
+    phase_derivative = quotient_response(phase_a, phase_b, [0])
+    check('phase_quotient_source_compatible', add(mm(phase_a, phase_derivative), phase_b) == [[0, 0], [0, 0]])
+    try:
+        quotient_response(phase_a, [[F(1), F(2)], [F(1), F(0)]], [0])
+        check('phase_source_obstruction_detected', False)
+    except ValueError:
+        check('phase_source_obstruction_detected', True)
+    indefinite = [[F(1), F(0)], [F(0), F(-1)]]
+    indefinite_correction = mm(mm(transpose([[F(0)], [F(1)]]), inverse(indefinite)), [[F(0)], [F(1)]])
+    check('invertibility_not_positivity_negative', indefinite_correction == [[F(-1)]])
+    # Nonstationary affine path y(s+t e0)=y0+t v gives F_s+F_y*v.
+    y0 = [F(0), F(0)]; v = [F(1), F(-1)]; step = F(canonical['steps'][0])
+    ps = [source[0]+step, source[1]]; ms = [source[0]-step, source[1]]
+    direct = (functional(c, [step*x for x in v], ps)-functional(c, [-step*x for x in v], ms))/(2*step)
+    held = mv(transpose(c['B']), y0)[0]+mv(c['D'], source)[0]+c['q'][0]
+    path_term = dot([a+b for a, b in zip(mv(c['B'], source), c['l'])], v)
+    check('nonstationary_chain_term', direct == held+path_term)
+    check('nonstationary_envelope_negative', direct != held)
+    endpoint = source[0]
+    bound_derivative = ((endpoint+step)**3/3-(endpoint-step)**3/3)/(2*step)
+    check('moving_bound_derivative', bound_derivative-step**2/3 == endpoint**2)
+    check('omitted_moving_bound_negative', endpoint**2 != 0)
+    energy = canonical['energy_scale']; scaled = dict(c, A=scale(c['A'], energy**2), B=scale(c['B'], energy**2), D=scale(c['D'], energy**2), l=[energy**3*x for x in c['l']], q=[energy**3*x for x in c['q']], constant=energy**4*c['constant'])
+    scaled_source = [energy*x for x in source]
+    check('unit_stationary_E1', stationary(scaled, scaled_source) == [energy*x for x in state])
+    check('unit_pressure_E4', pressure(scaled, scaled_source) == energy**4*pressure(c, source))
+    check('unit_source_Hessian_E2', response(scaled)[0] == scale(hessian, energy**2))
+    t13 = json.loads((ROOT/'docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/t13_thermal_source_curvature.json').read_text(encoding='utf-8'))
+    check('Topic13_predecessor_scope', t13['verification_status'] == 'PASS_SCOPED_THERMAL_SOURCE_CURVATURE' and t13['full_two_loop_pressure_computed'] is False and t13['full_off_shell_source_matching_closed'] is False and t13['full_core_unlock'] is False)
+    records.update({'state': state, 'pressure': pressure(c, source), 'source_gradient': gradient,
+                    'pressure_Hessian': hessian, 'frozen_Hessian': scale(c['D'], -1),
+                    'state_relaxation_correction': correction, 'local_tensor_trace_eigenvalue': 4*coupling,
+                    'local_tensor_traceless_eigenvalue': -2*coupling,
+                    'indefinite_correction_negative': indefinite_correction,
+                    'nonstationary_path_term': path_term,
+                    'moving_bound_derivative': endpoint**2,
+                    'Topic13_record_role': 'pinned predecessor scope only;not numerical rerun/composition'})
+    return finish()
+
+
+def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--contract-json', type=Path, default=CONTRACT)
+    parser.add_argument('--output', type=Path, default=OUTPUT)
+    args = parser.parse_args(); result = audit(args.contract_json)
+    args.output.parent.mkdir(parents=True, exist_ok=True)
+    args.output.write_text(json.dumps(result, indent=2)+'\n', encoding='utf-8', newline='\n')
+    print(result['status'], str(result['passing_check_count'])+'/'+str(result['check_count']))
+    return 0 if result['status'].startswith('PASS_') else 1
+
+
+if __name__ == '__main__':
+    raise SystemExit(main())

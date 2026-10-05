@@ -615,3 +615,16 @@ Overall and selected physical controllers are unchanged. Topic 10 stays secondar
 new benchmark expansion is deferred. Central foundation/path-reference failures
 and scientific-link DRIFT remain disclosed in the handoff; this is not an all-Core
 verification pass or admission of the candidate registry.
+
+## SD02 conditional stationary source response (2026-10-05)
+
+The [SD02 handoff](CORE_O2_STATIONARY_SOURCE_HANDOFF.md) and
+[149-check artifact](Result/artifacts/fluid_core_o2_stationary_source_response.json)
+complete the scoped coincident-tensor and stationary-source chain derivation.
+gHF trace response agrees with Hartree while its traceless kernel changes sign;
+static pressure curvature needs both direct and state-relaxation terms. Exact
+synthetic/domain negatives and four regressions pass. Existing Topic13 curvature
+is pinned as a separate parent/scope, not borrowed as interacting vertex evidence.
+SD02 is COMPLETED_SCOPED_DERIVATION_ONLY; SD03 remains PLANNED. Method/physical
+controllers, all ten method gates and physical J04/J05/J06 are unchanged.
+No thermal state, full vertex, physical current/stress or new benchmark expansion.

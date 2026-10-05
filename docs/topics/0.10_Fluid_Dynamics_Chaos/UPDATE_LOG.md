@@ -888,3 +888,46 @@ CLAIM_BOUNDARY: Internal numerical-method validation only; not evidence that UET
   private or new material dataset. Central audit blockers remain explicit.
 - Next checkpoint: scoped commit/push and update draft PR31 for final SD01 scope;
   check new-head CI. No merge, primary Core change or new benchmark expansion.
+
+## 2026-10-05 SD02 wave definition (preregistration)
+
+- Objective: derive the gHF coincident response tensor and same-stationary-source
+  pressure/current/stress response obligations; connect existing Topic13 curvature.
+- Canonical card/contract/registry: CORE_O2_STATIONARY_SOURCE_RESPONSE.md and
+  Data/03_Research/fluid_core_o2_stationary_source_response_{contract,registry}.json.
+- Acceptance: exact tensor/Schur/envelope/coordinate identities and discriminating
+  frozen, singular, quotient, nonstationary and domain negatives; pinned inputs.
+- Method controller remains finite_density_gHF_integral_state_renormalization_and_external_source_vertex_not_admitted.
+- No thermal solver, new material benchmark, physical gate, Core/Topic13 source
+  change, fit or threshold relaxation. Stop after this scoped derivation handoff.
+
+## 2026-10-05 SD02 completed conditional source-response derivation
+
+- Changed: frozen card/contract/local equation registry, verifier/four tests,
+  first 147-check source/result and first-test archive, current 149-check result,
+  handoff, six topic docs and one plan snapshot/history/J02 subrecord.
+- New evidence: full-index gHF tensor trace eigenvalue 4lambda and traceless
+  -2lambda versus Hartree +2lambda. Exact synthetic pressure separates held,
+  direct-contact and relaxed Hessians. Quotient source/null-domain, nonstationary,
+  indefinite-positivity and moving-bound negatives identify concrete requirements.
+- Execution: first 147/147; stronger quotient checks plus archive guards 149/149.
+  Four regressions pass (pytest 2.53s). First test run 1 FAIL/3 PASS from handwritten
+  mixed expectation 1/5 instead of 2/5; explicit polynomial expansion corrected
+  only that test arithmetic. First test source retained; verifier/contract unchanged.
+- Inputs: 91 preregistered identities and 95 current artifact identities. Six
+  relevant Topic13 committed files were newline-restored only after exact HEAD
+  comparison; their source/artifact values were not scientifically modified.
+- Narrowed: conditional same-approximation tensor/source differentiation
+  obligation; no admitted regulated state or external response. SD02 is
+  COMPLETED_SCOPED_DERIVATION_ONLY; SD03 remains PLANNED. All ten method gates,
+  sixteen false admissions, prior snapshots/history/J02 fields/DAG and physical
+  J04/J05/J06 preserved. Method and overall/selected physical controllers unchanged.
+- Next method controller: finite_density_gHF_integral_state_renormalization_and_external_source_vertex_not_admitted.
+  Requires actual same-functional state/source/contour/renormalization contract
+  before physical response numerics. SD03 is the material/frame/EOS handoff.
+- Central Core inputs/gates are unchanged; prior foundation FAIL/link DRIFT
+  remain disclosed rather than rerun as if this local algebra repaired them.
+- Public safety: safe reviewed summaries/code/small diagnostics; no raw/private
+  or new material payload, benchmark expansion, fit, threshold relaxation or unlock.
+- Next checkpoint: scoped source/hash/history/link/JSON/whitespace review, commit,
+  push and dependent draft PR based on PR31; check exact-head CI. No merge or next wave.

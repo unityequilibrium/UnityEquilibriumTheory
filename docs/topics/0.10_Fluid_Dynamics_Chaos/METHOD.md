@@ -363,3 +363,15 @@ symmetric off-diagonal variation convention. Synthetic tadpoles test conditional
 static stationarity only. Retain the original Hartree comparator, correction
 omission/half-normalization negatives and first execution. No thermal solver or
 source-varied vertex is executed; SD02 remains planned and Topic 10 secondary.
+
+## SD02 tensor and stationary source chain
+
+The [locked derivation](CORE_O2_STATIONARY_SOURCE_RESPONSE.md) computes the full
+symmetric-index derivative of SD01 Sigma_g and compares trace/traceless sectors
+with Hartree. One exact synthetic quadratic functional discriminates frozen,
+relaxed and direct-contact source Hessians through independent stationary
+substitution/finite differences and coordinate/unit transformations. Actual
+quotient solving rejects incompatible phase sources and singular domains.
+This checks the conditional method, not a gHF thermal state or physical response.
+Existing Topic13 source curvature is inspected/pinned without importing its
+numeric result or changing its parent. See [handoff](CORE_O2_STATIONARY_SOURCE_HANDOFF.md).

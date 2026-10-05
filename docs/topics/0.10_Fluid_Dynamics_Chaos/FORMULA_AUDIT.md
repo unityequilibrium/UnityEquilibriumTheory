@@ -363,3 +363,15 @@ The Schur external/implicit-state expressions are conditional chain-rule
 obligations and were not evaluated. No full matrix integral state, regulator,
 local/dynamic Ward, current/stress, collision, material heat/frame or SI map is
 admitted. Static algebra completion cannot promote the central blocked foundation.
+
+## SD02 local response registry
+
+[Local candidate registry](Data/03_Research/fluid_core_o2_stationary_source_response_registry.json)
+records the dimensionless coincident gHF tensor, symmetric-index convention and
+conditional envelope/Schur response with source/state units and domain conditions.
+Both observable mappings remain NOT_ADMITTED; central Core registry unchanged.
+The [handoff](CORE_O2_STATIONARY_SOURCE_HANDOFF.md) distinguishes conditional
+current/stress definitions, Euclidean pressure signs and actual source/measure
+contracts. No full vertex, physical stability, ensemble/frame/SI or dynamic Ward
+promotion follows. Topic13 h:E3/chi:E-2 cannot be equated with charge mu:E or
+fixture source units by symbol similarity.

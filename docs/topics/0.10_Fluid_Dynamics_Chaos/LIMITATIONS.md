@@ -358,3 +358,14 @@ been solved. All ten method gates remain NOT_STARTED; SD02/SD03 remain PLANNED.
 Central foundation audit failures and scientific-link DRIFT remain open.
 See the [handoff](CORE_O2_GAPLESS_FUNCTIONAL_HANDOFF.md) for the exact audit boundary
 and unchanged Core/Topic13/material controllers. No benchmark expansion.
+
+## SD02 conditional response is not a solved source vertex
+
+149/149 checks use an exact local coincident tensor and one synthetic quadratic
+functional. Full Gamma_GG, regulated pair-space loops, finite-density state,
+local/dynamic Ward, current/stress, causal contact, material frame and SI remain
+open. The negative bare traceless eigenvalue is not a physical instability claim.
+Existing Topic13 tree/acoustic source-curvature evidence has a different parent,
+source dimension and quantum/mode scope; no physical composition is inferred.
+SD02 completion is only the [derivation handoff](CORE_O2_STATIONARY_SOURCE_HANDOFF.md).
+All prior failures/physical controllers/gates remain; no benchmark expansion.
