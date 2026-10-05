@@ -501,3 +501,13 @@ not a solved interacting thermal state. Ten independent condensed-method
 obligations remain NOT_STARTED; no conserved/gapless method or material heat
 frame is admitted. This narrows method selection before implementing a solver.
 Overall/selected physical controllers and J04/J05/J06 remain unchanged.
+
+## Current execution priority (2026-10-05)
+
+Topic 10 is a secondary lane under explicit user direction. Prioritize shared
+Core/Topic 13 derivations: functional stationarity/Goldstone consistency,
+source-varied current/stress/thermodynamic response, then the material heat/frame
+and EOS/protocol handoff. Advance one derivation wave at a time; new benchmark
+expansion is deferred. See the [joint plan](JOINT_RESEARCH_PLAN_TOPIC10_TOPIC13.md)
+and its machine-readable `execution_priority_policy`. This is a scheduling
+change, not a new result, readiness upgrade or physical gate admission.

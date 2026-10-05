@@ -822,3 +822,32 @@ CLAIM_BOUNDARY: Internal numerical-method validation only; not evidence that UET
   Python files. No scientific behavior/control changed;156/156 diagnostic and
   four focused regressions pass again(3.112s). Current artifact/source hashes
   were refreshed without changing any prior snapshot/history entry.
+
+## 2026-10-05 Secondary shared-derivation priority
+
+- Area: research-core; workflow/claim-boundary pass under explicit user direction.
+- Changed: joint plan JSON `execution_priority_policy`, joint plan and README;
+  Topic 10 now supports shared Core/Topic 13 derivations, one wave at a time.
+  New benchmark expansion is deferred; full J00-J09 obligations are retained.
+- Derivation order: SD01 functional stationarity/static Goldstone; SD02
+  source-varied pressure/current/stress; SD03 material heat/frame/EOS handoff.
+  Queue items are PLANNED; no new scientific execution is recorded.
+- Checkout recovery:76 inspected tracked paths matched HEAD after CRLF-to-LF
+  conversion only and were restored to committed bytes. All71 input hashes
+  in the prior interacting-method artifact are fresh; three untracked
+  gapless-functional preregistration files remain byte-identical and uncommitted.
+- Verified: JSON parsing and preservation of every pre-existing plan field;
+  unchanged package/method/physical statuses, source hashes and documentation
+  prefixes, local links and scoped whitespace review. No scientific verifier
+  was rerun because evidence-producing state did not change.
+- Narrowed: execution priority and permissible next work, not a physics blocker.
+- Method controller unchanged:
+  condensed_twoPI_stationarity_Goldstone_and_source_response_contract_not_admitted.
+- Overall controller unchanged:
+  vector_momentum_constitutive_origin_and_material_frame_admission_open.
+- Claim impact: none; all prior results, constants, thresholds, scientific
+  snapshots/history and NOT_STARTED J04/J05/J06 states remain unchanged.
+- Public safety: safe for this planning packet; no raw/private payload included.
+- Next: complete the SD01 derivation handoff within its declared boundary;
+  do not start new production benchmarks. Scoped commit/push and a new draft PR
+  based on current main; prior PR29 was merged on 2026-10-04.

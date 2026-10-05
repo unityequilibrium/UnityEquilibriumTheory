@@ -4190,5 +4190,52 @@
     "dependency_unlock": false,
     "parameters_fitted": false,
     "thresholds_relaxed": false
+  },
+  "execution_priority_policy": {
+    "date": "2026-10-05",
+    "authority": "explicit_user_direction",
+    "record_role": "EXECUTION_PRIORITY_ONLY_NOT_SCIENTIFIC_EVIDENCE",
+    "topic10_role": "SECONDARY_SHARED_DERIVATION_SUPPORT",
+    "shared_workspaces": [
+      "docs/core",
+      "docs/topics/0.13_Thermodynamic_Bridge"
+    ],
+    "active_derivation_wave_limit": 1,
+    "new_benchmark_expansions_authorized": false,
+    "benchmark_expansion_policy": "DEFERRED_UNTIL_EXPLICIT_REPRIORITIZATION_AND_REQUIRED_ADMISSION",
+    "existing_benchmark_policy": "Preserve existing results and thresholds; rerun only for relevant evidence-producing changes or a specific verification need.",
+    "derivation_queue": [
+      {
+        "id": "SD01",
+        "status": "PLANNED",
+        "shared_question": "Can a declared condensed approximation functional satisfy its own stationarity and static Goldstone relation together?",
+        "deliverable": "Conditional derivation and method-obligation handoff; distinguish original Hartree from the modified functional and static identities from dynamic Ward response.",
+        "source_card": "CORE_O2_INTERACTING_METHOD_ADMISSION.md"
+      },
+      {
+        "id": "SD02",
+        "status": "PLANNED",
+        "depends_on": [
+          "SD01"
+        ],
+        "shared_question": "Do source-varied pressure, current and stress follow consistently from the same stationary state?",
+        "deliverable": "Explicit implicit-state derivative and external-response derivation; identify frozen-state versus relaxed response and remaining causal/dynamic obligations."
+      },
+      {
+        "id": "SD03",
+        "status": "PLANNED",
+        "depends_on": [
+          "SD02"
+        ],
+        "shared_question": "What additional state, frame and units are required to interpret the shared response as material heat or second sound?",
+        "deliverable": "Core-to-Topic13 handoff listing mass/charge/heat-frame correspondence, Legendre/SI map, fixed-constraint EOS, entropy reference, covariance and independent measurement protocol."
+      }
+    ],
+    "retained_scope": "All ten work packages remain in the long-term plan; priority changes do not remove obligations.",
+    "scientific_gate_changes": false,
+    "claim_promotion": false,
+    "dependency_unlock": false,
+    "next_method_controller": "condensed_twoPI_stationarity_Goldstone_and_source_response_contract_not_admitted",
+    "physical_controller": "vector_momentum_constitutive_origin_and_material_frame_admission_open"
   }
 }
