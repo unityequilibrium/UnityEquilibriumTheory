@@ -851,3 +851,8 @@ CLAIM_BOUNDARY: Internal numerical-method validation only; not evidence that UET
 - Next: complete the SD01 derivation handoff within its declared boundary;
   do not start new production benchmarks. Scoped commit/push and a new draft PR
   based on current main; prior PR29 was merged on 2026-10-04.
+
+- Publication checkpoint: priority commit da025620 pushed; draft PR31 opened
+  (https://github.com/unityequilibrium/UnityEquilibriumTheory/pull/31).
+  Local scoped review passed; CI was pending at the first inspection.
+  Next: required PR checks and SD01 shared derivation; no benchmark expansion.
