@@ -856,3 +856,35 @@ CLAIM_BOUNDARY: Internal numerical-method validation only; not evidence that UET
   (https://github.com/unityequilibrium/UnityEquilibriumTheory/pull/31).
   Local scoped review passed; CI was pending at the first inspection.
   Next: required PR checks and SD01 shared derivation; no benchmark expansion.
+
+## 2026-10-05 SD01 conditional gHF shared derivation
+
+- Area: research-core. Topic 10 remains secondary; no new benchmark lane.
+- Changed: frozen source card/contract/unmerged candidate addendum, exact
+  verifier and four regressions, immutable first source/result, current artifact,
+  completed handoff, six topic docs and joint plan snapshot/history/J02 subrecord.
+- Actual evidence: first 186/186 passed unchanged; current 192/192 adds four
+  fixed-Q field-variation checks and two archive guards. Four focused regressions
+  pass. All 81 input hashes are fresh; three preregistration identities retained.
+- Narrowed: same declared gHF functional's mean-field variation and conditional
+  static Goldstone identity. The modification is phenomenological; no integral
+  state, finite-density renormalization, source vertex or material map is admitted.
+- Next method controller:
+  finite_density_gHF_integral_state_renormalization_and_external_source_vertex_not_admitted.
+  SD01 COMPLETED_SCOPED_DERIVATION_ONLY; SD02/SD03 remain PLANNED.
+- All prior snapshots/history/artifacts/J02 fields/DAG and physical J04/J05/J06
+  states preserved. Ten method gates stay NOT_STARTED, sixteen admissions false;
+  overall and selected physical controllers unchanged. No claim promotion.
+- Mandatory audits: F0 --no-write PASS_WITH_DISCLOSED_GAPS with inventory BLOCKED;
+  foundation audit FAIL (222 inherited missing-path errors); scientific-link
+  --check DRIFT with six baseline-unchanged inputs; read-only path build PASS
+  (eight checks); compatibility --no-write audit PASS, interpretation BLOCKED.
+  First compatibility runtime lacked SciPy; existing repository virtual environment
+  completed it (exit 0). No central generated audit artifact was overwritten.
+- Review: JSON/old-plan-field preservation, source freshness, exact candidate
+  locks, append-only doc prefixes and new local links. One legacy absolute README
+  link was excluded from new-link review; it is unchanged from HEAD.
+- Public safety: safe reviewed source summaries/code/small artifacts; no raw,
+  private or new material dataset. Central audit blockers remain explicit.
+- Next checkpoint: scoped commit/push and update draft PR31 for final SD01 scope;
+  check new-head CI. No merge, primary Core change or new benchmark expansion.

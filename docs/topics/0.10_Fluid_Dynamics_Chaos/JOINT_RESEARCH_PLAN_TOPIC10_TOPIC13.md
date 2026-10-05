@@ -599,3 +599,19 @@ thresholds are unchanged. Method controller remains
 condensed_twoPI_stationarity_Goldstone_and_source_response_contract_not_admitted.
 Overall controller remains
 vector_momentum_constitutive_origin_and_material_frame_admission_open.
+
+## SD01 completed within the secondary derivation boundary (2026-10-05)
+
+The [shared handoff](CORE_O2_GAPLESS_FUNCTIONAL_HANDOFF.md) records an explicit
+phenomenological gHF approximation with fixed-Q mean-field variation and static
+Goldstone consistency. Its [artifact](Result/artifacts/fluid_core_o2_gapless_functional_audit.json)
+passes 192/192 exact internal checks; four focused regressions pass. The original
+186-check execution is retained. No thermal integral state or external vertex is
+computed. All ten method gates and physical J04/J05/J06 stay NOT_STARTED.
+
+SD01 is COMPLETED_SCOPED_DERIVATION_ONLY; SD02/SD03 remain PLANNED. The next method
+controller is finite_density_gHF_integral_state_renormalization_and_external_source_vertex_not_admitted.
+Overall and selected physical controllers are unchanged. Topic 10 stays secondary;
+new benchmark expansion is deferred. Central foundation/path-reference failures
+and scientific-link DRIFT remain disclosed in the handoff; this is not an all-Core
+verification pass or admission of the candidate registry.
