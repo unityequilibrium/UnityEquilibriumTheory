@@ -822,3 +822,112 @@ CLAIM_BOUNDARY: Internal numerical-method validation only; not evidence that UET
   Python files. No scientific behavior/control changed;156/156 diagnostic and
   four focused regressions pass again(3.112s). Current artifact/source hashes
   were refreshed without changing any prior snapshot/history entry.
+
+## 2026-10-05 Secondary shared-derivation priority
+
+- Area: research-core; workflow/claim-boundary pass under explicit user direction.
+- Changed: joint plan JSON `execution_priority_policy`, joint plan and README;
+  Topic 10 now supports shared Core/Topic 13 derivations, one wave at a time.
+  New benchmark expansion is deferred; full J00-J09 obligations are retained.
+- Derivation order: SD01 functional stationarity/static Goldstone; SD02
+  source-varied pressure/current/stress; SD03 material heat/frame/EOS handoff.
+  Queue items are PLANNED; no new scientific execution is recorded.
+- Checkout recovery:76 inspected tracked paths matched HEAD after CRLF-to-LF
+  conversion only and were restored to committed bytes. All71 input hashes
+  in the prior interacting-method artifact are fresh; three untracked
+  gapless-functional preregistration files remain byte-identical and uncommitted.
+- Verified: JSON parsing and preservation of every pre-existing plan field;
+  unchanged package/method/physical statuses, source hashes and documentation
+  prefixes, local links and scoped whitespace review. No scientific verifier
+  was rerun because evidence-producing state did not change.
+- Narrowed: execution priority and permissible next work, not a physics blocker.
+- Method controller unchanged:
+  condensed_twoPI_stationarity_Goldstone_and_source_response_contract_not_admitted.
+- Overall controller unchanged:
+  vector_momentum_constitutive_origin_and_material_frame_admission_open.
+- Claim impact: none; all prior results, constants, thresholds, scientific
+  snapshots/history and NOT_STARTED J04/J05/J06 states remain unchanged.
+- Public safety: safe for this planning packet; no raw/private payload included.
+- Next: complete the SD01 derivation handoff within its declared boundary;
+  do not start new production benchmarks. Scoped commit/push and a new draft PR
+  based on current main; prior PR29 was merged on 2026-10-04.
+
+- Publication checkpoint: priority commit da025620 pushed; draft PR31 opened
+  (https://github.com/unityequilibrium/UnityEquilibriumTheory/pull/31).
+  Local scoped review passed; CI was pending at the first inspection.
+  Next: required PR checks and SD01 shared derivation; no benchmark expansion.
+
+## 2026-10-05 SD01 conditional gHF shared derivation
+
+- Area: research-core. Topic 10 remains secondary; no new benchmark lane.
+- Changed: frozen source card/contract/unmerged candidate addendum, exact
+  verifier and four regressions, immutable first source/result, current artifact,
+  completed handoff, six topic docs and joint plan snapshot/history/J02 subrecord.
+- Actual evidence: first 186/186 passed unchanged; current 192/192 adds four
+  fixed-Q field-variation checks and two archive guards. Four focused regressions
+  pass. All 81 input hashes are fresh; three preregistration identities retained.
+- Narrowed: same declared gHF functional's mean-field variation and conditional
+  static Goldstone identity. The modification is phenomenological; no integral
+  state, finite-density renormalization, source vertex or material map is admitted.
+- Next method controller:
+  finite_density_gHF_integral_state_renormalization_and_external_source_vertex_not_admitted.
+  SD01 COMPLETED_SCOPED_DERIVATION_ONLY; SD02/SD03 remain PLANNED.
+- All prior snapshots/history/artifacts/J02 fields/DAG and physical J04/J05/J06
+  states preserved. Ten method gates stay NOT_STARTED, sixteen admissions false;
+  overall and selected physical controllers unchanged. No claim promotion.
+- Mandatory audits: F0 --no-write PASS_WITH_DISCLOSED_GAPS with inventory BLOCKED;
+  foundation audit FAIL (222 inherited missing-path errors); scientific-link
+  --check DRIFT with six baseline-unchanged inputs; read-only path build PASS
+  (eight checks); compatibility --no-write audit PASS, interpretation BLOCKED.
+  First compatibility runtime lacked SciPy; existing repository virtual environment
+  completed it (exit 0). No central generated audit artifact was overwritten.
+- Review: JSON/old-plan-field preservation, source freshness, exact candidate
+  locks, append-only doc prefixes and new local links. One legacy absolute README
+  link was excluded from new-link review; it is unchanged from HEAD.
+- Public safety: safe reviewed source summaries/code/small artifacts; no raw,
+  private or new material dataset. Central audit blockers remain explicit.
+- Next checkpoint: scoped commit/push and update draft PR31 for final SD01 scope;
+  check new-head CI. No merge, primary Core change or new benchmark expansion.
+
+## 2026-10-05 SD02 wave definition (preregistration)
+
+- Objective: derive the gHF coincident response tensor and same-stationary-source
+  pressure/current/stress response obligations; connect existing Topic13 curvature.
+- Canonical card/contract/registry: CORE_O2_STATIONARY_SOURCE_RESPONSE.md and
+  Data/03_Research/fluid_core_o2_stationary_source_response_{contract,registry}.json.
+- Acceptance: exact tensor/Schur/envelope/coordinate identities and discriminating
+  frozen, singular, quotient, nonstationary and domain negatives; pinned inputs.
+- Method controller remains finite_density_gHF_integral_state_renormalization_and_external_source_vertex_not_admitted.
+- No thermal solver, new material benchmark, physical gate, Core/Topic13 source
+  change, fit or threshold relaxation. Stop after this scoped derivation handoff.
+
+## 2026-10-05 SD02 completed conditional source-response derivation
+
+- Changed: frozen card/contract/local equation registry, verifier/four tests,
+  first 147-check source/result and first-test archive, current 149-check result,
+  handoff, six topic docs and one plan snapshot/history/J02 subrecord.
+- New evidence: full-index gHF tensor trace eigenvalue 4lambda and traceless
+  -2lambda versus Hartree +2lambda. Exact synthetic pressure separates held,
+  direct-contact and relaxed Hessians. Quotient source/null-domain, nonstationary,
+  indefinite-positivity and moving-bound negatives identify concrete requirements.
+- Execution: first 147/147; stronger quotient checks plus archive guards 149/149.
+  Four regressions pass (pytest 2.53s). First test run 1 FAIL/3 PASS from handwritten
+  mixed expectation 1/5 instead of 2/5; explicit polynomial expansion corrected
+  only that test arithmetic. First test source retained; verifier/contract unchanged.
+- Inputs: 91 preregistered identities and 95 current artifact identities. Six
+  relevant Topic13 committed files were newline-restored only after exact HEAD
+  comparison; their source/artifact values were not scientifically modified.
+- Narrowed: conditional same-approximation tensor/source differentiation
+  obligation; no admitted regulated state or external response. SD02 is
+  COMPLETED_SCOPED_DERIVATION_ONLY; SD03 remains PLANNED. All ten method gates,
+  sixteen false admissions, prior snapshots/history/J02 fields/DAG and physical
+  J04/J05/J06 preserved. Method and overall/selected physical controllers unchanged.
+- Next method controller: finite_density_gHF_integral_state_renormalization_and_external_source_vertex_not_admitted.
+  Requires actual same-functional state/source/contour/renormalization contract
+  before physical response numerics. SD03 is the material/frame/EOS handoff.
+- Central Core inputs/gates are unchanged; prior foundation FAIL/link DRIFT
+  remain disclosed rather than rerun as if this local algebra repaired them.
+- Public safety: safe reviewed summaries/code/small diagnostics; no raw/private
+  or new material payload, benchmark expansion, fit, threshold relaxation or unlock.
+- Next checkpoint: scoped source/hash/history/link/JSON/whitespace review, commit,
+  push and dependent draft PR based on PR31; check exact-head CI. No merge or next wave.

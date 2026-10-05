@@ -352,3 +352,26 @@ and appropriate pressure; Pilaftsis/Teresi supplies a different constrained
 method. Brown et al. was accessible only as author abstract/metadata and
 motivates a separate dynamic-source gate. Neither a full-paper reproduction
 nor a finite-density symmetry-improved implementation is reported.
+
+## SD01 same-functional conditional variation
+
+Use the [frozen gHF candidate](CORE_O2_GAPLESS_FUNCTIONAL_CANDIDATE.md) and
+[completed handoff](CORE_O2_GAPLESS_FUNCTIONAL_HANDOFF.md): sparse exact polynomial
+identities plus independent Fraction coordinate variations, rotations and unit
+scaling. Derive h from the declared fixed-Q V_field and Sigma from V2 using the
+symmetric off-diagonal variation convention. Synthetic tadpoles test conditional
+static stationarity only. Retain the original Hartree comparator, correction
+omission/half-normalization negatives and first execution. No thermal solver or
+source-varied vertex is executed; SD02 remains planned and Topic 10 secondary.
+
+## SD02 tensor and stationary source chain
+
+The [locked derivation](CORE_O2_STATIONARY_SOURCE_RESPONSE.md) computes the full
+symmetric-index derivative of SD01 Sigma_g and compares trace/traceless sectors
+with Hartree. One exact synthetic quadratic functional discriminates frozen,
+relaxed and direct-contact source Hessians through independent stationary
+substitution/finite differences and coordinate/unit transformations. Actual
+quotient solving rejects incompatible phase sources and singular domains.
+This checks the conditional method, not a gHF thermal state or physical response.
+Existing Topic13 source curvature is inspected/pinned without importing its
+numeric result or changing its parent. See [handoff](CORE_O2_STATIONARY_SOURCE_HANDOFF.md).

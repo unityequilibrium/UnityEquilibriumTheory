@@ -444,3 +444,41 @@ exact branch messages, independent normal controls, exact residual tradeoff,
 alternate scale3, and false gates/admissions/changed states/thresholds/stale
 prior source rejection before computation. Cross-runtime nonzero normal
 quantities use relative1e-8. No condensed state or dynamic Ward is executed.
+
+## SD01 conditional gHF functional diagnostics
+
+Command: python docs/topics/0.10_Fluid_Dynamics_Chaos/Code/03_Research/Research_Fluid_Core_O2_Gapless_Functional.py.
+[Contract](Data/03_Research/fluid_core_o2_gapless_functional_contract.json),
+[handoff](CORE_O2_GAPLESS_FUNCTIONAL_HANDOFF.md),
+[artifact](Result/artifacts/fluid_core_o2_gapless_functional_audit.json).
+
+The contract/card/addendum hashes were locked before execution. Exact Fraction
+and polynomial arithmetic requires zero residual without a relaxed tolerance.
+Three off-shell symmetric Q/phi points, steps 1/7 and 1/11, rational 3/5-4/5 rotation,
+three I_minus witnesses and scale 2 are unchanged. Detected negatives omit or
+halve DeltaV2, misuse its symmetric off-diagonal derivative, or identify frozen
+and external responses. The last negative is a symbolic obligation, not a vertex
+calculation. First execution 186/186 is immutable; four additional mean-field
+checks and two archive guards produce 192/192 with 81 fresh input hashes.
+Four regressions cover independent expanded-coordinate/Richardson variations,
+extra rational rotation, old/new residual tradeoff, repeatability and false/stale
+scope rejection. Temperature integrals and all sixteen admissions remain false;
+all ten method gates remain NOT_STARTED. Required central audit failures are
+reported separately in the handoff and must not be renamed into physics passes.
+
+## SD02 exact stationary-source derivation controls
+
+Command: python docs/topics/0.10_Fluid_Dynamics_Chaos/Code/03_Research/Research_Fluid_Core_O2_Stationary_Source_Response.py.
+[Contract](Data/03_Research/fluid_core_o2_stationary_source_response_contract.json),
+[result](Result/artifacts/fluid_core_o2_stationary_source_response.json),
+[handoff](CORE_O2_STATIONARY_SOURCE_HANDOFF.md).
+91 inputs were prelocked before first execution. First 147/147 source/result are
+retained; actual quotient-solving/rejection and two archive guards give 149/149
+with 95 input identities. Exact Fraction residuals, steps 1/7 and 1/11, one
+quadratic fixture, three symmetric variations and energy scale 2 are unchanged.
+Four tests use independent expanded pressure/cofactor/tensor expressions,
+quotient-domain rejection and false/stale scope guards. A handwritten first-test
+cross expectation was corrected from its polynomial expansion; its original
+source is retained. No verifier/contract/threshold changed for that correction.
+Topic13 artifacts are pinned predecessor scope, not numerical reruns. All sixteen
+admissions false and ten method gates NOT_STARTED; no physical benchmark/state.

@@ -501,3 +501,42 @@ not a solved interacting thermal state. Ten independent condensed-method
 obligations remain NOT_STARTED; no conserved/gapless method or material heat
 frame is admitted. This narrows method selection before implementing a solver.
 Overall/selected physical controllers and J04/J05/J06 remain unchanged.
+
+## Current execution priority (2026-10-05)
+
+Topic 10 is a secondary lane under explicit user direction. Prioritize shared
+Core/Topic 13 derivations: functional stationarity/Goldstone consistency,
+source-varied current/stress/thermodynamic response, then the material heat/frame
+and EOS/protocol handoff. Advance one derivation wave at a time; new benchmark
+expansion is deferred. See the [joint plan](JOINT_RESEARCH_PLAN_TOPIC10_TOPIC13.md)
+and its machine-readable `execution_priority_policy`. This is a scheduling
+change, not a new result, readiness upgrade or physical gate admission.
+
+## SD01 completed within the secondary derivation boundary (2026-10-05)
+
+The [shared handoff](CORE_O2_GAPLESS_FUNCTIONAL_HANDOFF.md) records an explicit
+phenomenological gHF approximation with fixed-Q mean-field variation and static
+Goldstone consistency. Its [artifact](Result/artifacts/fluid_core_o2_gapless_functional_audit.json)
+passes 192/192 exact internal checks; four focused regressions pass. The original
+186-check execution is retained. No thermal integral state or external vertex is
+computed. All ten method gates and physical J04/J05/J06 stay NOT_STARTED.
+
+SD01 is COMPLETED_SCOPED_DERIVATION_ONLY; SD02/SD03 remain PLANNED. The next method
+controller is finite_density_gHF_integral_state_renormalization_and_external_source_vertex_not_admitted.
+Overall and selected physical controllers are unchanged. Topic 10 stays secondary;
+new benchmark expansion is deferred. Central foundation/path-reference failures
+and scientific-link DRIFT remain disclosed in the handoff; this is not an all-Core
+verification pass or admission of the candidate registry.
+
+## SD02 conditional stationary source response (2026-10-05)
+
+The [SD02 handoff](CORE_O2_STATIONARY_SOURCE_HANDOFF.md) and
+[149-check artifact](Result/artifacts/fluid_core_o2_stationary_source_response.json)
+complete the scoped coincident-tensor and stationary-source chain derivation.
+gHF trace response agrees with Hartree while its traceless kernel changes sign;
+static pressure curvature needs both direct and state-relaxation terms. Exact
+synthetic/domain negatives and four regressions pass. Existing Topic13 curvature
+is pinned as a separate parent/scope, not borrowed as interacting vertex evidence.
+SD02 is COMPLETED_SCOPED_DERIVATION_ONLY; SD03 remains PLANNED. Method/physical
+controllers, all ten method gates and physical J04/J05/J06 are unchanged.
+No thermal state, full vertex, physical current/stress or new benchmark expansion.
