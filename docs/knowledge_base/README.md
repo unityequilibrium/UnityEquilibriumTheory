@@ -8,6 +8,15 @@ it should not be treated as the current working path without verification.
 
 For day-to-day personal research use, start with the small local helper:
 
+Schema-3 queries are read-only and do not migrate existing databases. See
+[PILOT.md](PILOT.md) for the explicit rebuild, evidence packet and cost interfaces,
+and [PILOT_RESULTS.json](PILOT_RESULTS.json) for measured results and open blockers.
+For a legacy index, build a new path first:
+
+```bash
+python -m docs.knowledge_base.personal_kb --db tmp/research-foundation-pilot/new-index.sqlite3 ingest --rebuild
+```
+
 ```bash
 python -m docs.knowledge_base.personal_kb status
 python -m docs.knowledge_base.personal_kb ingest --dry-run
