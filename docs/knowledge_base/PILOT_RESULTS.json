@@ -1,0 +1,88 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-11",
+  "experiment_id": "research-foundation-pilot-v1",
+  "scope": "Static tool repair and controlled acceptance fixtures; no scientific gate promotion",
+  "baseline_git_revision": "5959daf97d432c25cddf81736fa81b4184ee5430",
+  "baseline_source_hashes": {
+    "docs\\knowledge_base\\personal_kb.py": "c2a2daba697596dc70148d45b1dcc83bebeb43578aedc0f894d2c227cac0cc92",
+    "docs\\knowledge_base\\api_client.py": "614c09c88bc72b89e8b076eca5169f2363e24fd3fb04cbf14ef81b67cdc65538",
+    "docs\\knowledge_base\\cost_dashboard.py": "f578a46959f2aa822cf736a927621dc84270403204bf45c8ef5fe923b20683a8"
+  },
+  "installed_skill_hashes": {
+    "uet-claim-auditor": "e610259512a61915d8e6913744d1106db5d7e91e58fee29521255124fb2983e7",
+    "uet-data-provenance-audit": "a4f2caa5019b3ee53965c4697a5d21de5911051844b0b53882d5c72b6f2a1e9f",
+    "uet-formula-audit": "ef6e70ab9960d21386e9e62775d47409f19cab62ec649c4e9359cd56e2ea841e",
+    "uet-hardening-wave": "32bd4aa6f30dfd76d98b75f7c94e3dda1a496a7492dc1d62637af61b709e90cb",
+    "uet-repo-wide-progress-snapshot": "c14e1b44dc7ed7065db3463b23d28c131bd25a6092bf1349a49a538522f94396",
+    "uet-result-artifact-reviewer": "4a0aac22967ed0f372cdfb00c286dc8f00e0bac98c95355a2f3870f026d174b2",
+    "uet-standards-drift-detector": "045d8e281fd992fc5f1288c1493918823540adc4813685701aa444de5793c94f",
+    "uet-status-reconstructor": "fdc7b8fa83a4239f8924b95e0e8836796d3a7dbd0544178f7f958a8fa0439c97",
+    "uet-update-log-writer": "d0b1cc2558c216c86fdc9fa228c023944fd6e7cdaa4a684ffaea9375841ca337"
+  },
+  "corpus_hashes": {
+    "docs/topics/For Work/04_Claim_and_Evidence_Rubric.md": "3eba0285f5cde9110174d988e8575477d49c8255de0f04f8a715d69e073f0e3a",
+    "docs/topics/For Work/12_Data_Standard.md": "a0217e7caf29e3747bca642932f1f1d457a29ddfba1dfef5216df391ea28e3fa",
+    "docs/topics/For Work/18_Research_Hardening_Workflow.md": "2162649698d5b8eca40d359f5b8936c9bc6b9d1d36dd93cd3d3df94134bf895e",
+    "docs/topics/For Work/EQUATION_RESEARCH_AND_PHYSICAL_CORRESPONDENCE_STANDARD.md": "f1c9f93f2f916449147af0198b88fa44798daa12dceb5d10a77b0848b43b85d5"
+  },
+  "baseline_acceptance": {
+    "tests": 24,
+    "failures": 13,
+    "errors": 0,
+    "skipped": 0,
+    "seconds": 9.042
+  },
+  "after_acceptance": {
+    "tests": 24,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "seconds": 8.739
+  },
+  "final_regression": {
+    "tests": 42,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "seconds": 11.788
+  },
+  "local_corpus_metrics": {
+    "before": {
+      "tasks": 8,
+      "total_context_utf8_bytes": 12460,
+      "median_retrieval_seconds": 0.001638949994230643,
+      "existing_source_paths": 8,
+      "actual_input_tokens": null,
+      "actual_output_tokens": null,
+      "answer_quality": null,
+      "relevance_accuracy": null
+    },
+    "after": {
+      "tasks": 8,
+      "total_context_utf8_bytes": 34256,
+      "median_retrieval_seconds": 0.11590244999388233,
+      "existing_source_paths": 8,
+      "actual_input_tokens": null,
+      "actual_output_tokens": null,
+      "answer_quality": null,
+      "relevance_accuracy": null
+    }
+  },
+  "api": {
+    "status": "blocked",
+    "reason": "Actual config with agents.local_data is missing",
+    "calls": 0,
+    "reported_cost_usd": 0
+  },
+  "live_index_unchanged": true,
+  "decision": "No Jev/MCP expansion: real API usage and independent paired quality review remain blocked",
+  "limitations": [
+    "24-case fixture acceptance is not an independent evaluation of all nine skills.",
+    "Context bytes are not model token counts; packet format includes extra provenance and full selected chunks.",
+    "Source-path existence is not relevance accuracy or mandatory-evidence recall.",
+    "Single local timing pass does not establish a performance improvement.",
+    "No actual model calls, token measurements, or domain-reviewed paired answers were obtained.",
+    "Working-tree corpus hashes may differ from public main; retain these identities when reproducing."
+  ]
+}
