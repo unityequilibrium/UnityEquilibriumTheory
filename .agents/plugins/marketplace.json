@@ -1,0 +1,20 @@
+{
+  "name": "uet-research-tools",
+  "interface": {
+    "displayName": "UET Research Tools"
+  },
+  "plugins": [
+    {
+      "name": "uet-evidence",
+      "source": {
+        "source": "local",
+        "path": "./plugins/uet-evidence"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Research"
+    }
+  ]
+}
