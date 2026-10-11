@@ -188,7 +188,8 @@ class CostTracker:
             entry = CostEntry(datetime.now(timezone.utc).isoformat(),agent_id,model,
                 input_tokens,output_tokens,cost,0.0,endpoint,success,error,
                 request_id or str(uuid.uuid4()),experiment_id,status,estimate,reservation,state,
-                {k:v for k,v in (usage or {}).items() if k in {'prompt_tokens','completion_tokens','total_tokens','cost','prompt_tokens_details','completion_tokens_details'}})
+                {k:v for k,v in (usage or {}).items() if k in {'prompt_tokens','completion_tokens',
+                    'input_tokens','output_tokens','total_tokens','cost','prompt_tokens_details','completion_tokens_details'}})
             other = sum((self._amount(e) for e in self.effective_entries()
                 if e.get('request_id') != entry.request_id and e.get('agent_id') == agent_id
                 and e.get('timestamp','')[:10] == entry.timestamp[:10]), Decimal(0))
@@ -234,12 +235,18 @@ class OpenRouterClient:
         if self.base_url != 'https://openrouter.ai/api/v1':
             raise ValueError('Pilot requires the official OpenRouter endpoint')
         key = self._get_key(agent_id)
-        models = self._client.get(self.base_url+'/models'); models.raise_for_status()
         model = self._get_model(agent_id)
+        decision_model = model == 'typesafe/jev-1.13'
+        models = self._client.get(self.base_url+'/models',
+            params={'output_modalities':'decisions'} if decision_model else None)
+        models.raise_for_status()
         record = next((r for r in models.json()['data'] if r['id']==model),None)
         if record is None:
             raise ValueError('Configured model is unavailable; no substitute selected')
-        pricing = record.get('pricing',{})
+        pricing = dict(record.get('pricing',{}))
+        if decision_model:
+            # Decisions model metadata declares only input/output token pricing.
+            pricing.setdefault('request','0')
         required = ('prompt','completion','request')
         if any(k not in pricing for k in required):
             raise UnresolvedCost('Incomplete current price metadata')
@@ -289,12 +296,15 @@ class OpenRouterClient:
             request_id = self.cost_tracker.reserve(agent_id,model,amount,self.experiment_id,
                 self.experiment_limit,self.agents[agent_id].get('daily_budget_usd',0))
             try:
-                response = self._client.post(self.base_url+'/'+endpoint,
+                url = (self.base_url.removesuffix('/api/v1')+'/api/alpha/decisions'
+                       if endpoint == 'decisions' else self.base_url+'/'+endpoint)
+                response = self._client.post(url,
                     headers={'Authorization':'Bearer '+key,'Content-Type':'application/json'},json=payload)
                 response.raise_for_status()
                 data = response.json()
                 usage = data.get('usage',{})
-                entry = self.cost_tracker.log_call(agent_id,model,usage.get('prompt_tokens',0),usage.get('completion_tokens',0),
+                entry = self.cost_tracker.log_call(agent_id,model,usage.get('prompt_tokens',usage.get('input_tokens',0)),
+                    usage.get('completion_tokens',usage.get('output_tokens',0)),
                     endpoint,request_id=request_id,experiment_id=self.experiment_id,
                     provider_cost=usage.get('cost'),usage=usage,reservation=float(amount))
                 self.last_cost_entry = entry
@@ -325,6 +335,14 @@ class OpenRouterClient:
     def embed(self, texts, agent_id='embedding'):
         data = self._request(agent_id,{'model':self._get_model(agent_id),'input':texts},'embeddings')
         return [item['embedding'] for item in data['data']]
+
+    def decide(self, agent_id, state, questions):
+        """Experimental Decisions API; does not replace chat or scientific gates."""
+        if self._get_model(agent_id) != 'typesafe/jev-1.13':
+            raise ValueError('Pilot decisions are pinned to typesafe/jev-1.13')
+        return self._request(agent_id,{'model':self._get_model(agent_id),
+            'state':state,'questions':questions,
+            'provider':{'only':['typesafe'],'allow_fallbacks':False}},'decisions')
 
     def close(self):
         self._client.close()

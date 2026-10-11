@@ -85,3 +85,31 @@ token reduction is an efficiency target, never permission to omit evidence.
 Do not expand to Jev/MCP until paired quality review and actual usage support
 the change. A missing API configuration or absent domain review must remain a
 visible blocker in the result report.
+
+## User-selected Jev follow-up
+
+After the initial checkpoint, the user selected `typesafe/jev-1.13`. This is a
+Decisions model, so the follow-up tests relevance classification rather than
+pretending it can generate the paired main-model answers. `jev_pilot` uses eight
+authored fixtures with explicit relevance labels, including contrary evidence,
+irrelevant administrative content and ambiguous source notes. It calls
+`/api/alpha/decisions` with TypeSafe-only routing and no fallback/retries.
+
+Preflight discovers decision models with `output_modalities=decisions`; the
+default chat-model listing excludes Jev. Official Decisions model metadata
+declares input/output pricing without a request-fee field, treated as zero only
+for this pinned Jev pilot. The same experiment ledger and $2 cap apply. Usage
+uses `input_tokens`/`output_tokens`, which differ from chat usage field names.
+
+Run `python -m docs.knowledge_base.jev_pilot` in a terminal; the credential prompt
+does not echo or persist the key. Existing experiment calls block duplicate runs.
+Missing/invalid typed answers stop the experiment. A document is dropped only
+when the drop probability and confidence are both at least 0.9; mandatory
+evidence is always retained. These thresholds have not been calibrated for real
+research, and model confidence is not a scientific evidence score.
+
+See `JEV_PILOT_RESULTS.json` for actual Jev usage, cost, decisions, fixture recall,
+latency and downstream context **bytes**. Byte reduction is not measured main-
+model token/cost saving. A 32-decision, short authored test set is not independent
+natural-corpus validation; ambiguity and contrary-evidence behavior still need
+broader testing. Main-model answer quality remains unmeasured.
