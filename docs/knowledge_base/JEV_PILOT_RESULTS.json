@@ -1,0 +1,275 @@
+{
+  "model": "typesafe/jev-1.13",
+  "scope": "8 authored relevance fixtures; no main-model answer calls",
+  "threshold_status": "Uncalibrated pilot only",
+  "tasks": [
+    {
+      "question": "What evidence is needed to assess claim wording in a research project?",
+      "raw_choices": {
+        "method": "keep",
+        "contrary": "keep",
+        "unrelated": "drop",
+        "ambiguous": "unknown"
+      },
+      "expected": {
+        "method": "keep",
+        "contrary": "keep",
+        "unrelated": "drop",
+        "ambiguous": "unknown"
+      },
+      "retained_ids": [
+        "method",
+        "contrary",
+        "ambiguous"
+      ],
+      "raw_relevant_kept": 2,
+      "policy_relevant_kept": 2,
+      "relevant_total": 2,
+      "before_utf8_bytes": 838,
+      "after_utf8_bytes": 614,
+      "latency_seconds": 0.47969400000874884,
+      "usage": {
+        "input_tokens": 956,
+        "output_tokens": 148,
+        "cost": 4.0152e-05
+      }
+    },
+    {
+      "question": "What evidence is needed to assess source provenance in a research project?",
+      "raw_choices": {
+        "method": "keep",
+        "contrary": "keep",
+        "unrelated": "drop",
+        "ambiguous": "unknown"
+      },
+      "expected": {
+        "method": "keep",
+        "contrary": "keep",
+        "unrelated": "drop",
+        "ambiguous": "unknown"
+      },
+      "retained_ids": [
+        "method",
+        "contrary",
+        "ambiguous"
+      ],
+      "raw_relevant_kept": 2,
+      "policy_relevant_kept": 2,
+      "relevant_total": 2,
+      "before_utf8_bytes": 850,
+      "after_utf8_bytes": 626,
+      "latency_seconds": 0.46310449999873526,
+      "usage": {
+        "input_tokens": 960,
+        "output_tokens": 148,
+        "cost": 4.032e-05
+      }
+    },
+    {
+      "question": "What evidence is needed to assess equation units in a research project?",
+      "raw_choices": {
+        "method": "keep",
+        "contrary": "keep",
+        "unrelated": "drop",
+        "ambiguous": "unknown"
+      },
+      "expected": {
+        "method": "keep",
+        "contrary": "keep",
+        "unrelated": "drop",
+        "ambiguous": "unknown"
+      },
+      "retained_ids": [
+        "method",
+        "contrary",
+        "ambiguous"
+      ],
+      "raw_relevant_kept": 2,
+      "policy_relevant_kept": 2,
+      "relevant_total": 2,
+      "before_utf8_bytes": 841,
+      "after_utf8_bytes": 617,
+      "latency_seconds": 0.5126766999892425,
+      "usage": {
+        "input_tokens": 956,
+        "output_tokens": 148,
+        "cost": 4.0152e-05
+      }
+    },
+    {
+      "question": "What evidence is needed to assess observable mapping in a research project?",
+      "raw_choices": {
+        "method": "keep",
+        "contrary": "keep",
+        "unrelated": "drop",
+        "ambiguous": "unknown"
+      },
+      "expected": {
+        "method": "keep",
+        "contrary": "keep",
+        "unrelated": "drop",
+        "ambiguous": "unknown"
+      },
+      "retained_ids": [
+        "method",
+        "contrary",
+        "ambiguous"
+      ],
+      "raw_relevant_kept": 2,
+      "policy_relevant_kept": 2,
+      "relevant_total": 2,
+      "before_utf8_bytes": 853,
+      "after_utf8_bytes": 629,
+      "latency_seconds": 0.47828819998539984,
+      "usage": {
+        "input_tokens": 956,
+        "output_tokens": 148,
+        "cost": 4.0152e-05
+      }
+    },
+    {
+      "question": "What evidence is needed to assess experiment baselines in a research project?",
+      "raw_choices": {
+        "method": "keep",
+        "contrary": "keep",
+        "unrelated": "drop",
+        "ambiguous": "unknown"
+      },
+      "expected": {
+        "method": "keep",
+        "contrary": "keep",
+        "unrelated": "drop",
+        "ambiguous": "unknown"
+      },
+      "retained_ids": [
+        "method",
+        "contrary",
+        "ambiguous"
+      ],
+      "raw_relevant_kept": 2,
+      "policy_relevant_kept": 2,
+      "relevant_total": 2,
+      "before_utf8_bytes": 859,
+      "after_utf8_bytes": 635,
+      "latency_seconds": 0.4804205999826081,
+      "usage": {
+        "input_tokens": 960,
+        "output_tokens": 148,
+        "cost": 4.032e-05
+      }
+    },
+    {
+      "question": "What evidence is needed to assess holdout evaluation in a research project?",
+      "raw_choices": {
+        "method": "keep",
+        "contrary": "keep",
+        "unrelated": "drop",
+        "ambiguous": "unknown"
+      },
+      "expected": {
+        "method": "keep",
+        "contrary": "keep",
+        "unrelated": "drop",
+        "ambiguous": "unknown"
+      },
+      "retained_ids": [
+        "method",
+        "contrary",
+        "ambiguous"
+      ],
+      "raw_relevant_kept": 2,
+      "policy_relevant_kept": 2,
+      "relevant_total": 2,
+      "before_utf8_bytes": 853,
+      "after_utf8_bytes": 629,
+      "latency_seconds": 0.6748972999921534,
+      "usage": {
+        "input_tokens": 960,
+        "output_tokens": 148,
+        "cost": 4.032e-05
+      }
+    },
+    {
+      "question": "What evidence is needed to assess reproducibility in a research project?",
+      "raw_choices": {
+        "method": "keep",
+        "contrary": "keep",
+        "unrelated": "drop",
+        "ambiguous": "unknown"
+      },
+      "expected": {
+        "method": "keep",
+        "contrary": "keep",
+        "unrelated": "drop",
+        "ambiguous": "unknown"
+      },
+      "retained_ids": [
+        "method",
+        "contrary",
+        "ambiguous"
+      ],
+      "raw_relevant_kept": 2,
+      "policy_relevant_kept": 2,
+      "relevant_total": 2,
+      "before_utf8_bytes": 844,
+      "after_utf8_bytes": 620,
+      "latency_seconds": 0.45235190002131276,
+      "usage": {
+        "input_tokens": 968,
+        "output_tokens": 148,
+        "cost": 4.0656e-05
+      }
+    },
+    {
+      "question": "What evidence is needed to assess blocker status in a research project?",
+      "raw_choices": {
+        "method": "keep",
+        "contrary": "keep",
+        "unrelated": "drop",
+        "ambiguous": "unknown"
+      },
+      "expected": {
+        "method": "keep",
+        "contrary": "keep",
+        "unrelated": "drop",
+        "ambiguous": "unknown"
+      },
+      "retained_ids": [
+        "method",
+        "contrary",
+        "ambiguous"
+      ],
+      "raw_relevant_kept": 2,
+      "policy_relevant_kept": 2,
+      "relevant_total": 2,
+      "before_utf8_bytes": 841,
+      "after_utf8_bytes": 617,
+      "latency_seconds": 0.4678377000091132,
+      "usage": {
+        "input_tokens": 956,
+        "output_tokens": 148,
+        "cost": 4.0152e-05
+      }
+    }
+  ],
+  "downstream_actual_token_savings": null,
+  "main_model_quality": null,
+  "calls": 8,
+  "reported_cost_usd": 0.000322224,
+  "experiment_accounted_usd": "0.000322224",
+  "status": "complete",
+  "decision": "Experimental only: natural-corpus and downstream answer evaluation remain required",
+  "summary": {
+    "decision_accuracy": 32,
+    "decisions_total": 32,
+    "raw_relevant_kept": 16,
+    "policy_relevant_kept": 16,
+    "relevant_total": 16,
+    "before_utf8_bytes": 6779,
+    "after_utf8_bytes": 4987,
+    "context_byte_reduction_fraction": 0.264345773712937,
+    "actual_jev_input_tokens": 7672,
+    "actual_jev_output_tokens": 1184,
+    "median_latency_seconds": 0.47899109999707434
+  }
+}
