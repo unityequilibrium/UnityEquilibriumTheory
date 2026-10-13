@@ -386,3 +386,12 @@ Source entropy transformations must carry the full particle current n*u+j_N;
 perturbation-only substitution caused the retained first failure. Frame and source
 transformations preserve the conditional ledger while supplying no atom/state/
 pressure/velocity normalization. See [handoff](MATERIAL_FRAME_EOS_HANDOFF.md).
+
+## SD04 local matrix/auxiliary candidates
+
+[Three-entry registry](Data/03_Research/fluid_core_o2_matrix_tadpole_registry.json)
+records the finite-density matrix Matsubara chain, zero-flow one-loop subtraction
+and modified auxiliary gap/source representation. Natural K:E2,G:E-2,Q:E2,
+L/Omega:E4,x/Y/D:E2,n:E3; fixed Y0:E2 is not a fitted physical scale.
+Derivation is conditional and observables NOT_ADMITTED. Original Core equations/
+central registry unchanged; a finite one-loop candidate is not full 2PI proof.

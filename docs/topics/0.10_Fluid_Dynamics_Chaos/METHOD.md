@@ -385,3 +385,13 @@ check source/reference shifts, linear enthalpy heat subtraction and total-versus
 perturbation current. Rational SI Jacobians/covariance controls carry no physical
 scale/noise assignment. Existing two-fluid quartic, normal-lane frame and material
 source/protocol records are pinned at their own scopes, not numerically rerun.
+
+## SD04 same-matrix state/pressure prerequisite
+
+[Contract](CORE_O2_MATRIX_TADPOLE_CONTRACT.md) and [handoff](CORE_O2_MATRIX_TADPOLE_HANDOFF.md)
+keep antisymmetric finite-mu frequency mixing in both poles and residues. The
+same regulated L supplies2L_Y=I_plus,2L_D=I_minus. A fixed-reference matrix
+one-loop subtraction needs its D^2 term; full modified counterterms remain open.
+Auxiliary gHF stationarity has +AD^2/(4lambda), scalar D=mu^2-m^2-4lambda*Q11
+and recovered x=D/lambda+I_minus. Ward restriction follows variation. No root,
+thermal momentum EOS, full response or physical state is computed.

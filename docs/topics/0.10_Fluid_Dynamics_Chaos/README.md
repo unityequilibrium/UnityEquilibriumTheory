@@ -553,3 +553,11 @@ COMPLETED_SCOPED_DERIVATION_ONLY. Existing material input values/scales remain n
 all ten method gates and physical J04/J05/J06 are unchanged. Full research remains
 open under the shared finite-density state/source/renormalization controller.
 Topic10 stays secondary; new benchmark expansion remains deferred.
+
+## SD04 secondary matrix-state prerequisite (2026-10-13)
+
+[SD04 handoff](CORE_O2_MATRIX_TADPOLE_HANDOFF.md) derives finite-density matrix
+residues, IR/UV and the modified auxiliary gap/source chain. The58/58 conditional
+checks and four independent integrand tests do not solve a thermal state or admit
+full 2PI renormalization, material response or a new benchmark. Topic10 remains
+secondary; existing method/material controllers and physical gates stay open.

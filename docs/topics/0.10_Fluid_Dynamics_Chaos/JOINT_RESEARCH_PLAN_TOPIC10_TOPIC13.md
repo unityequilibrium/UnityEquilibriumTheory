@@ -641,3 +641,13 @@ COMPLETED_SCOPED_DERIVATION_ONLY. Existing material input values/scales remain n
 all ten method gates and physical J04/J05/J06 are unchanged. Full research remains
 open under the shared finite-density state/source/renormalization controller.
 Topic10 stays secondary; new benchmark expansion remains deferred.
+
+## SD04 shared finite-density matrix prerequisite (2026-10-13)
+
+[Handoff](CORE_O2_MATRIX_TADPOLE_HANDOFF.md) adds the actual conditional matrix
+tadpole/auxiliary state/source chain to completed SD01-SD03. New source evidence
+includes unchanged published Core PR34 same-state handoff; its atomic/measure/
+mu-reference/low-T remainder controller remains open. SD04 passed58/58 and
+four independent integrand tests. It admits no state root, full counterterms,
+physical EOS/current or new material benchmark. Topic10 stays secondary; all
+J00-J09 obligations and the existing method/physical controllers remain.

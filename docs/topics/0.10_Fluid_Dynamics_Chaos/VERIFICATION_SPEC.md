@@ -498,3 +498,15 @@ pressure Taylor/tangent/Richardson and entropy derivative, total-current/frame,
 covariance/unit factors, and archive/provenance/false or stale scope. All exact
 checks use Fraction algebra; material covariance/scales and inputs remain null.
 No physical heat/current, thermal solver, material benchmark or gate promotion.
+
+## SD04 conditional matrix-state prerequisite verification
+
+[58-check artifact](Result/artifacts/fluid_core_o2_matrix_tadpole.json),
+[verifier](Code/03_Research/Research_Fluid_Core_O2_Matrix_Tadpole.py) and
+[four independent tests](Code/03_Research/test_fluid_core_o2_matrix_tadpole.py)
+cover inverse/residue/source, IR/UV/subtraction and auxiliary-chain positives/
+negatives with118 preregistered/123 current identities. First startup source
+and complete53/55 failure are retained. Coefficient-reading expansion changes
+no scientific series, inputs or tolerances. Independent frequency/Matsubara
+checks at one momentum are not integrated thermal-state or material checks.
+All existing ten gates/sixteen admissions and physical J04/J05/J06 stay open.

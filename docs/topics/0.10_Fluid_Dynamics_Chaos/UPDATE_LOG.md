@@ -973,3 +973,55 @@ CLAIM_BOUNDARY: Internal numerical-method validation only; not evidence that UET
   material benchmark expansion, response rematching, physical uncertainty or fit.
 - Next: scoped hash/history/link/JSON/whitespace review, commit/push and dependent
   draft PR after PR31/32; exact-head CI. Stop this wave; full research stays open.
+
+## 2026-10-13 SD04 wave definition (preregistration)
+
+- New shared question: finite-density matrix tadpoles/subtraction and modified
+  stationary auxiliary chain; normal scalar reuse is not assumed.
+- Canonical card: CORE_O2_MATRIX_TADPOLE_CONTRACT.md; local contract/registry
+  fluid_core_o2_matrix_tadpole_{contract,registry}.json. Existing method controller
+  finite_density_gHF_integral_state_renormalization_and_external_source_vertex_not_admitted.
+- Acceptance: exact kernel/residue/IR/UV/auxiliary/source chains and negatives;
+  independent locked integrand controls, not thermal-state solver or benchmark.
+- PR34/main Core same-state handoff incorporated unchanged; both October5 ledger
+  histories retained. SD01-SD03 remain draft dependencies. Previous October5
+  SD04 edit attempt was not executed due approval-review usage limit.
+- Scope research-core; Topic10 secondary. No primary Core/Topic13 scientific
+  edit, material benchmark, physical scheme/counterterm admission, fit or gate
+  promotion. Stop after this discriminating state-prerequisite derivation.
+
+- SD04 startup attempt stopped before any algebra: ROOT parents[4] resolved
+  docs instead of repository root, causing FileNotFoundError. Startup source
+  retained in Result/previews/core_o2_matrix_tadpole_startup_verifier.py.txt.
+  Corrected only root-depth discovery to parents[5]; frozen scientific inputs,
+  equations and tolerances unchanged. No numerical/scientific failure renamed.
+
+## 2026-10-13 SD04 completed conditional matrix-state derivation
+
+- Changed: frozen card/contract/local registry, verifier/four tests, startup
+  source, first complete source/result, current artifact/handoff, six topic docs,
+  additive plan snapshot/history/J02 record and one SD04 queue completion.
+- New evidence: full finite-mu mixing/residue and trace-log derivatives; gapless
+  3D tadpole IR limits; both trace/traceless UV subtractions; same-modified
+  auxiliary sign, scalar gap and condensate recovery/source chain. No roots.
+- Startup stopped before algebra from one-level root discovery error; source
+  preserved and only discovery repaired. First full53/55 failed coefficient
+  queries on an unexpanded Laurent expression; whole-series identity passed.
+  Added algebraic expansion before coefficient extraction, retaining series/
+  equations/fixtures/tolerances. Three archive/root guards give58/58.
+- Four independent integrand regressions PASS18.33s;118 preregistered/123 current
+  identities. Direct frequency/Matsubara and UV/IR controls do not integrate
+  thermal momentum, solve a state or compare material observations.
+- Narrowed: matrix/UV/auxiliary state prerequisites, not admission of an integral
+  state or full modified-functional renormalization/source vertex. All old
+  snapshots/history/DAG/J02 fields/gates and physical J04/J05/J06 retained.
+- Existing controlling blocker remains finite_density_gHF_integral_state_renormalization_and_external_source_vertex_not_admitted.
+  Next complete full counterterm/source and regulator/branch/approximation
+  contract before admitting integral-state/source-response numerics.
+- Published-main PR34 Core files incorporated byte-identically, both October5
+  ledger histories preserved. Core same-state controller remains open; prior
+  central foundation FAIL/BLOCKED/link DRIFT not rerun or promoted.
+- Public safety safe: synthetic/symbolic source diagnostics only; no raw/private,
+  physical scales/covariance, benchmark expansion, fit or threshold relaxation.
+- Next checkpoint: scoped hash/history/JSON/link/whitespace review, commit/push
+  and dependent draft PR (SD01-SD03 remain drafts); exact-head CI. Stop this wave.

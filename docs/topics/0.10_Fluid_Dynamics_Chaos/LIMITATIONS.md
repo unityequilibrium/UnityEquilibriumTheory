@@ -381,3 +381,13 @@ Frame invariance is linear/isotropic rest only. Reduced sound covariance is
 first-order and needs an evidenced domain; it is not a physical error bound.
 First entropy-reference failures are retained; see [handoff](MATERIAL_FRAME_EOS_HANDOFF.md).
 All prior physical/Core/Topic13 blockers and the full joint research scope remain.
+
+## SD04 matrix-state scope
+
+[SD04](CORE_O2_MATRIX_TADPOLE_HANDOFF.md) is an integrand/auxiliary derivation.
+IR tadpole convergence does not establish response/transport convergence;
+one-loop UV subtraction does not prove full modified 2PI renormalization.
+Auxiliary stationarity is not convex stability. State roots, reference/regulator
+control, full source vertices, finite-flow counterterms and approximation errors
+remain open. Published Core same-state atomic/action/measure/mu/remainder inputs
+are still missing. No physical scale/value/covariance or benchmark is assigned.
