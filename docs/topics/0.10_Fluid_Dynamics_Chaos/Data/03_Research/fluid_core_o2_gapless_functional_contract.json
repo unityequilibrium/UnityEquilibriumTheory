@@ -1,0 +1,186 @@
+{
+  "schema_version": "t010-gapless-functional-candidate-v1",
+  "date": "2026-10-02",
+  "record_role": "CONDITIONAL_SOURCE_FUNCTIONAL_ALGEBRA_ONLY",
+  "card": "docs/topics/0.10_Fluid_Dynamics_Chaos/CORE_O2_GAPLESS_FUNCTIONAL_CANDIDATE.md",
+  "registry": "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry_topic10_o2_gapless_functional_addendum.json",
+  "prior_method_artifact": "docs/topics/0.10_Fluid_Dynamics_Chaos/Result/artifacts/fluid_core_o2_interacting_method_audit.json",
+  "configuration": {
+    "Z": 1,
+    "mass_squared": "1",
+    "mu_charge": "128/100",
+    "lambda_here": "1/100",
+    "N": 2,
+    "lambda_paper_over_lambda_here": 2,
+    "Phi_UET_fixed": 0.15,
+    "selected_temperatures": [
+      0.002,
+      0.004
+    ],
+    "temperature_integrals_executed": false
+  },
+  "verification": {
+    "locked_before_first_execution": true,
+    "arithmetic": "Fraction_exact_no_sampling_tolerance",
+    "variation_steps": [
+      "1/7",
+      "1/11"
+    ],
+    "energy_scale": 2,
+    "stationary_witness": {
+      "I_plus": "1/20",
+      "I_minus": [
+        "-1/100",
+        "0",
+        "1/100"
+      ]
+    },
+    "off_shell": [
+      {
+        "phi": [
+          "3/5",
+          "4/5"
+        ],
+        "Q": [
+          "1/20",
+          "3/100",
+          "1/100"
+        ]
+      },
+      {
+        "phi": [
+          "6/5",
+          "-2/5"
+        ],
+        "Q": [
+          "3/100",
+          "7/100",
+          "-1/50"
+        ]
+      },
+      {
+        "phi": [
+          "4/5",
+          "3/5"
+        ],
+        "Q": [
+          "1/10",
+          "1/25",
+          "1/40"
+        ]
+      }
+    ],
+    "rotation": [
+      [
+        "3/5",
+        "-4/5"
+      ],
+      [
+        "4/5",
+        "3/5"
+      ]
+    ],
+    "negative_controls": [
+      "omit_DeltaV2",
+      "halve_paper_to_N_normalization",
+      "wrong_off_diagonal_variation_factor",
+      "frozen_state_equals_external_response_not_admitted"
+    ]
+  },
+  "source_module_paths": [
+    "docs/core/02_equations/o2/uet_o2_energy_momentum_conserving_bethe_salpeter.py",
+    "docs/core/02_equations/o2/uet_o2_charge_conserving_ladder_response.py",
+    "docs/core/02_equations/o2/uet_o2_kinetic_collision_kubo.py"
+  ],
+  "method_gate": {
+    "condensed_action_and_state": "NOT_STARTED",
+    "full_matrix_Dyson": "NOT_STARTED",
+    "Goldstone_source_Ward": "NOT_STARTED",
+    "renormalization_scheme": "NOT_STARTED",
+    "pressure_implicit_thermodynamics": "NOT_STARTED",
+    "dynamic_source_vertices_causal_response": "NOT_STARTED",
+    "collision_dissipation_correspondence": "NOT_STARTED",
+    "approximation_sunset_control": "NOT_STARTED",
+    "heat_frame_SI_mapping": "NOT_STARTED",
+    "Topic13_EOS_independent_protocol": "NOT_STARTED"
+  },
+  "admission": {
+    "condensed_integral_state": false,
+    "modified_functional_physically_admitted": false,
+    "full_Noether_Ward": false,
+    "external_source_vertex": false,
+    "formal_verification": false,
+    "external_math_review": false,
+    "physical_heat_current": false,
+    "physical_material_frame": false,
+    "physical_UET_operator": false,
+    "physical_HeII_state": false,
+    "physical_J04": false,
+    "physical_J05": false,
+    "physical_J06": false,
+    "useful_continuum_error": false,
+    "claim_promotion": false,
+    "dependency_unlock": false
+  },
+  "physical_controller": "vector_momentum_constitutive_origin_and_material_frame_admission_open",
+  "candidate_controller": "useful_certified_current_error_and_interacting_Noether_heat_frame_material_correspondence_open",
+  "method_controller": "finite_density_gHF_integral_state_renormalization_and_external_source_vertex_not_admitted",
+  "method_comparison": [
+    {
+      "id": "original_Hartree",
+      "decision": "stationary_background_comparator_internal_Goldstone_not_admitted"
+    },
+    {
+      "id": "Alford_gapless_replacement",
+      "decision": "comparison_only_changes_original_stationarity"
+    },
+    {
+      "id": "symmetry_improved_CJT",
+      "decision": "comparison_only_finite_density_and_dynamic_response_unestablished"
+    },
+    {
+      "id": "stationary_2PI_external_vertices",
+      "decision": "source_response_audit_route_internal_external_thresholds_distinct"
+    },
+    {
+      "id": "gapless_Phi_derivable_HF",
+      "decision": "next_conditional_functional_candidate_not_physical_method_admission"
+    },
+    {
+      "id": "large_N_or_strict_perturbation",
+      "decision": "alternative_no_N2_or_selected_regime_error_certificate"
+    }
+  ],
+  "primary_sources": [
+    {
+      "url": "https://arxiv.org/pdf/hep-ph/0506157",
+      "version": "v2_2005-08-09",
+      "reviewed": "II_eq9-18,selected_III_and_VI;no_full_proof_or_figures_replication",
+      "phenomenological_correction": true
+    },
+    {
+      "url": "https://arxiv.org/pdf/hep-ph/0203008",
+      "version": "v3_2002-05-08",
+      "reviewed": "selected_III_eq19-31,V.C,VI;internal_threshold_and_feedback_limitations_retained"
+    },
+    {
+      "url": "https://arxiv.org/html/1310.5953v2",
+      "reviewed": "selected_condensed_Hartree_stationarity_Goldstone_pressure;no_full_replication"
+    },
+    {
+      "url": "https://arxiv.org/html/1305.3221v2",
+      "reviewed": "selected3_and6_Ward_constraint_thermodynamic_consistency"
+    },
+    {
+      "url": "https://researchonline.jcu.edu.au/44119/",
+      "reviewed": "author_abstract_metadata_only;not_universal_no_go"
+    }
+  ],
+  "prelocked_source_hashes": {
+    "docs/topics/0.10_Fluid_Dynamics_Chaos/CORE_O2_GAPLESS_FUNCTIONAL_CANDIDATE.md": "cbd879aa6e0407613b2ff0b1fa4c97918db625b7e918eac5b6b662809a87f3ec",
+    "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry_topic10_o2_gapless_functional_addendum.json": "05f950e82f7361bb1230b7bdedf3c1e98db85dc7d4aa648a97a50c36dda9d469",
+    "docs/core/02_equations/o2/uet_o2_energy_momentum_conserving_bethe_salpeter.py": "98b43f2bde1bf335ed7296f51b253e707699e4052b0903d216ab5381eac5b835",
+    "docs/core/02_equations/o2/uet_o2_charge_conserving_ladder_response.py": "d01d7d04bbdb2e86ac660c0e7fb18052e33b0efd75ccb6b8bc61c8649d452eea",
+    "docs/core/02_equations/o2/uet_o2_kinetic_collision_kubo.py": "7892adc7b5a91fc2d229a47b868fe3b6c7054432a6b2743f10f5f3f232fd3a92"
+  }
+}

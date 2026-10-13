@@ -1,0 +1,43 @@
+{
+  "schema_version": "uet-topic-local-equation-contract-v1",
+  "owner_topic": "0.10_Fluid_Dynamics_Chaos",
+  "status": "CONDITIONAL_SOURCE_RESPONSE_DERIVATION_NOT_CORE_PROMOTION",
+  "core_registry_modified": false,
+  "entries": [
+    {
+      "id": "candidate.topic10_13.gHF_coincident_response_tensor",
+      "ontology": "symmetric coincident Q:E2, canonical self-energy Sigma:E2; neither material-rate Q nor collision rate",
+      "equation": "T_abcd=lambda*(3delta_ab delta_cd-delta_ac delta_bd-delta_ad delta_bc);deltaSigma=T:deltaQ",
+      "units": "T:E0;trace eigenvalue4lambda,traceless eigenvalue-2lambda",
+      "derivation_class": "EXACT_DERIVATIVE_OF_DECLARED_PHENOMENOLOGICAL_APPROXIMATION",
+      "proof_status": "PREREGISTERED_EXACT_RATIONAL_CHECK",
+      "observable_mapping": "NOT_ADMITTED",
+      "failure_mode": "wrong symmetric pair-space factor or reuse of original Hartree kernel",
+      "source": "docs/topics/0.10_Fluid_Dynamics_Chaos/CORE_O2_GAPLESS_FUNCTIONAL_CANDIDATE.md",
+      "implementation": "docs/topics/0.10_Fluid_Dynamics_Chaos/Code/03_Research/Research_Fluid_Core_O2_Stationary_Source_Response.py",
+      "artifact": "docs/topics/0.10_Fluid_Dynamics_Chaos/Result/artifacts/fluid_core_o2_stationary_source_response.json",
+      "claim_boundary": "Coincident algebra tensor only;not full regulated pair-space/external vertex or state stability"
+    },
+    {
+      "id": "candidate.topic10_13.stationary_source_envelope_schur",
+      "ontology": "differentiable stationary F(y,s);phase-fixed admissible inverse;Omega density and generating W conventions distinct",
+      "equation": "Fstar_ss=Fss-Fsy Fyy^-1 Fys;p=-Omega_star",
+      "units": "density Hessian block:E^(4-d_i-d_j);fixture sources/state E1;actual functional measures pending",
+      "derivation_class": "CONDITIONAL_IMPLICIT_FUNCTION_CHAIN_RULE",
+      "assumptions": [
+        "same source/ensemble/regulator/counterterms/measure",
+        "full stationarity",
+        "invertible declared quotient",
+        "no branch discontinuity"
+      ],
+      "proof_status": "PREREGISTERED_SYNTHETIC_EXACT_CHECK_NOT_GHF_STATE",
+      "observable_mapping": "NOT_ADMITTED",
+      "failure_mode": "frozen/nonstationary/singular/ensemble or moving-domain substitution",
+      "source": "docs/topics/0.10_Fluid_Dynamics_Chaos/CORE_O2_STATIONARY_SOURCE_RESPONSE.md",
+      "implementation": "docs/topics/0.10_Fluid_Dynamics_Chaos/Code/03_Research/Research_Fluid_Core_O2_Stationary_Source_Response.py",
+      "artifact": "docs/topics/0.10_Fluid_Dynamics_Chaos/Result/artifacts/fluid_core_o2_stationary_source_response.json",
+      "claim_boundary": "No computed physical pressure/current/stress,thermal state,causal or local Ward response"
+    }
+  ],
+  "claim_promotion": false
+}

@@ -1,0 +1,58 @@
+{
+  "schema_version": "uet-topic-local-equation-contract-v1",
+  "owner_topic": "0.10_Fluid_Dynamics_Chaos",
+  "status": "CONDITIONAL_MATERIAL_FRAME_HANDOFF_NOT_CORE_PROMOTION",
+  "core_registry_modified": false,
+  "entries": [
+    {
+      "id": "candidate.topic10_13.material_heat_generator_frame",
+      "ontology": "declared linear isotropic rest particle/energy currents;charge not mass without lane map",
+      "equation": "q=JE-(epsilon+p)*JN/n;JG=q+T*S*JN/n",
+      "units": "natural current JE:E4,JN:E3,q:E4;physical units require scale and velocity map",
+      "derivation_class": "CONDITIONAL_GIBBS_AND_LINEAR_FRAME_CHAIN",
+      "assumptions": [
+        "same admitted stationary state and conserved source",
+        "n nonzero",
+        "linear rest frame",
+        "Gibbs enthalpy convention fixed"
+      ],
+      "observable_mapping": "NOT_ADMITTED",
+      "failure_mode": "generator-as-heat or momentum/charge-as-mass substitution"
+    },
+    {
+      "id": "candidate.topic10_13.stationary_pressure_fixed_P_heat_capacity",
+      "ontology": "stationary p(T,mu),entropy per conserved particle S/n",
+      "equation": "cp=T/n*(pTT-2(S/n)*pTmu+(S/n)^2*pmumu)",
+      "units": "natural cp per particle:E0;SI mass-specific E0/(m_atom*Theta0)",
+      "derivation_class": "CONDITIONAL_ENSEMBLE_CHAIN_AND_ENTROPY_COORDINATE_TRANSFORM",
+      "assumptions": [
+        "full stationary source Hessian",
+        "n>0",
+        "fixed pressure",
+        "same entropy reference and source gain"
+      ],
+      "observable_mapping": "NOT_ADMITTED",
+      "failure_mode": "fixed-mu/SVP or shifted entropy without transformed Hessian"
+    },
+    {
+      "id": "candidate.topic10_13.material_source_SI_covariance_handoff",
+      "ontology": "formal P0,E0,Theta0,V0,m_atom maps and restricted second-sound differential",
+      "equation": "nSI=P0/E0*pbar_mu;SSI=P0/Theta0*pbar_T;var(c2)/c2^2=(g^T Cov g)/4",
+      "units": "nSI:m^-3;SSI:J m^-3 K^-1;cpSI:J kg^-1 K^-1;Cov source units declared",
+      "derivation_class": "CONDITIONAL_UNIT_JACOBIAN_AND_FIRST_ORDER_COVARIANCE",
+      "assumptions": [
+        "particle/atom/pressure/velocity maps admitted",
+        "source scales statistically consistent",
+        "reduced sound domain evidenced",
+        "joint covariance or labeled bounds acquired"
+      ],
+      "observable_mapping": "NOT_ADMITTED",
+      "failure_mode": "Kelvin-only calibration,diagonal noise assumption,source-overlap validation or reduced-speed formula outside domain"
+    }
+  ],
+  "source": "docs/topics/0.10_Fluid_Dynamics_Chaos/MATERIAL_FRAME_EOS_HANDOFF_CONTRACT.md",
+  "implementation": "docs/topics/0.10_Fluid_Dynamics_Chaos/Code/03_Research/Research_Fluid_Material_Frame_EOS_Handoff.py",
+  "artifact": "docs/topics/0.10_Fluid_Dynamics_Chaos/Result/artifacts/fluid_material_frame_eos_handoff.json",
+  "proof_status": "PREREGISTERED_EXACT_CHAIN_DIAGNOSTIC_NOT_PHYSICAL_RESULT",
+  "claim_promotion": false
+}
