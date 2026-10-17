@@ -1,3 +1,14 @@
+<!-- action-discrimination-v1:start -->
+## 2026-10-18 - Action-class counterexample and conditional static falsifier
+
+RESULT: Derived an exact canonical scalar/O2 comparator image including nonminimal curvature and an allowed zero-signal member. This settles a scoped uniqueness limitation mathematically, not by missing-data prose; it does not reject every UET formulation.
+WHAT_CHANGED: Result/T13_ACTION_DISCRIMINATION_2026-10-18.md proves field substitution/surjectivity, the static cubic-source law, Schur softening, massless boundary and joint-set rejection rule. Added producer, 18 controls, contract and one small canonical t13_action_discrimination.json. Reviewed seven connected routes, including actual physical-memory feedback separately from trace postprocessing.
+VERIFICATION: 18 tests PASS, including exact coefficient and implicit-series identities, current action/RHS/memory/noise-kernel controls, zero-signal example, singular/invalid-domain refusal and reserved synthetic source enclosure. Producer emit/read-only check PASS; changed-path completeness audit zero errors across 11 contracts; ten local report links resolve. Foundation audit remains FAIL/BLOCKED (224 existing errors, 62 registry entries); compatibility audit PASS/BLOCKED with existing controllers. No Core equation, coefficient or gate modified.
+CONTROLLING_RESULT: FORMAL_ACTION_CLASS_EQUIVALENCE_WITH_CONDITIONAL_STATIC_FALSIFIER. In the audited classical action class, a corresponding ordinary scalar comparator produces the same complete forward map. Two-mode/pole, phase-field, trace, tree-level O2 and limited linear KMS controls do not establish a unique UET discriminator. Full interacting quantum/open-sector equivalence was not claimed.
+CLAIM_BOUNDARY: A specified effective model remains falsifiable: under admitted static preparation u=A*z+B*z^3 permits independently calibrated, frozen instrument-unit predictions and disjoint-set rejection. Synthetic examples are not measured validation or an SI Phi anchor. Curvature/preparation/source/readout corrections and their joint uncertainty must be admitted, not assumed zero.
+NEXT_ACTION: Do not fit MEMS curves to distinguish identical forward equations. For a practical effective-model test admit the prepared-invariant source and observer/error packet, freeze calibration, then score reserved sources. Unique identification needs an independently justified cross-system or source/detector relation outside the comparator image; do not add one to rescue the claim. This completes the requested scoped derivation/counterexample outcome, not Full Topic13/Core research.
+<!-- action-discrimination-v1:end -->
+
 <!-- physical-route-admission-v1:start -->
 ## 2026-10-18 - Selected native MIMO physical-route admission decision
 
