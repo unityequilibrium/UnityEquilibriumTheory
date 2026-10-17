@@ -160,6 +160,8 @@ def validate_contract(contract: dict, root: Path = ROOT, schema: dict | None = N
     refs += [contract["observation"][k] for k in ("unit_conversion_evidence", "frame_transform_evidence") if contract["observation"].get(k)]
     if contract["error_budget"].get("acceptance_evidence"):
         refs.append(contract["error_budget"]["acceptance_evidence"])
+    if contract["data_policy"].get("independence_evidence"):
+        refs.append(contract["data_policy"]["independence_evidence"])
     for ref in refs:
         if not isinstance(ref, str) or (ref.split("#")[0] not in known_locators and not ref.startswith(("https://", "http://"))):
             errors.append(f"unidentified evidence locator: {ref}")
@@ -343,15 +345,11 @@ def build_report(root: Path, changed: list[str] | None = None) -> dict:
         if p.endswith(".json") and scientific_path(p) and (root / p).is_file():
             try:
                 obj = load_json(root / p)
-                new_result = p not in baseline["legacy_paths"]
-                if new_result:
-                    matched = next((c for _, c in contracts if isinstance(obj, dict) and c["contract_id"] == obj.get("contract_id")), None)
-                    if matched is None or obj.get("contract_sha256") != contract_hash(matched) or obj.get("identities") != matched["identities"]:
-                        errors.append(f"new result lacks exact contract hash/input lineage: {p}")
-                    else:
-                        covered = True
-                elif p not in coverage and not (isinstance(obj, dict) and obj.get("contract_id") in seen):
-                    errors.append(f"changed result lacks producer/contract lineage: {p}")
+                matched = next((c for _, c in contracts if isinstance(obj, dict) and c["contract_id"] == obj.get("contract_id")), None)
+                if matched is None or obj.get("contract_sha256") != contract_hash(matched) or obj.get("identities") != matched["identities"]:
+                    errors.append(f"changed result lacks exact contract hash/input lineage: {p}")
+                else:
+                    covered = True
             except (OSError, ValueError) as exc:
                 errors.append(f"invalid changed result {p}: {exc}")
         if scientific_path(p) and (root / p).is_file() and not covered:

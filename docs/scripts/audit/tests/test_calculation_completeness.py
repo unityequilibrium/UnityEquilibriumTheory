@@ -200,6 +200,11 @@ class ContractTests(unittest.TestCase):
         self.assertTrue(any("exact contract" in e for e in audit.build_report(self.root, [rel])["errors"]))
         path.write_text(json.dumps(audit.artifact_metadata(self.c, self.root)))
         self.assertEqual(audit.build_report(self.root, [rel])["errors"], [])
+        # A pre-standard artifact is grandfathered only while unchanged.
+        baseline = self.root / audit.BASELINE
+        baseline.write_text(json.dumps(dict(routes=[], legacy_paths=[rel])))
+        path.write_text('{"old_result":true}')
+        self.assertTrue(any("exact contract" in e for e in audit.build_report(self.root, [rel])["errors"]))
 
     def test_path_escape_duplicate_json_nan(self):
         with self.assertRaises(ValueError): audit.repo_path(self.root, "../outside")
