@@ -1,3 +1,14 @@
+<!-- actual-readout-admission-v1:start -->
+## 2026-10-18 - Actual low-power processed readout admission
+
+RESULT: Advanced to actual Fig3c experimental rows. Source caption binds this low-power curve to Set III, and source authors classify it as one stable fixed-point regime. Thus a concrete stationary candidate exists; the missing prerequisite is not simply absent online data or mandatory phase. With the rounded independently published rates, 9/1001 amplitudes fall below the central ideal notch minimum, 403/1001 are at/above unity and 589/1001 lie inside the central finite-inverse domain. These are conditional readout-domain counts, NOT physical rejection or automatic admission of the inside subset.
+SOURCE: Bounded ranges transferred 99,458 bytes to obtain one 39,201-byte CC-BY-4.0 CSV, member CRC32 64c6589e and SHA-256 4303b1e7493456ac6cc5eaf6f263cb125ab5588cb98087545d34c04dc9157db2 verified. Whole 377 MB archive not downloaded. The small working copy normalizes CRLF to LF only, preserving every numeric token; producer reconstructs upstream SHA/CRC. Table retrieval succeeded using the publisher's cookie-unsupported URL after the earlier redirect; no calibration uncertainty invented.
+WHAT_CHANGED: Added small CSV and source/processing manifest, readout diagnostic producer with six controls, PHYSICAL_COMPARISON/DIAGNOSTIC contract, compact canonical JSON and Result/T13_READOUT_ADMISSION_2026-10-18.md. This is a separate real-observation path from the earlier formal controls; earlier header-only exposure statements retain their historical scope.
+VERIFICATION: Six controls PASS; offline producer emit/check PASS; explicit changed-path completeness audit zero errors across 13 contracts; seven local report links resolve. All 1001 rows retained, no missing/nonfinite fields or duplicate detuning/row keys, no clipping/fitting. No physical residual or statistical theory score computed. Existing foundation/action-class blockers unchanged and not promoted.
+CONTROLLING_BLOCKER: Exact-curve noise/gain/mismatch and joint calibration/averaging error model remain unadmitted. Observed out-of-central-domain values can reflect noise or processing; unknown uncertainty is not zero. Detuning-axis conversion not used and still needs verification for a dimensional residual. Compatible rows cannot be selected post-hoc as a clean validation set.
+NEXT_ACTION: Trace the correction/noise/uncertainty record matched to this low-power curve or an appropriately documented processed product. Do not apply exact gcd to noisy rounded rows, infer noise from neighboring detunings without a model, or request a large Fourier archive as a substitute. This exposed curve is not blind holdout. Goal remains active; no push/contact/worktree.
+<!-- actual-readout-admission-v1:end -->
+
 <!-- shared-source-scale-v1:start -->
 ## 2026-10-18 - Shared-scale model-class rejection and actual averaging
 
