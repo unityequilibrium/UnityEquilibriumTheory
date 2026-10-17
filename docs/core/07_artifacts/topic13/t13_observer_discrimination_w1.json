@@ -40,7 +40,7 @@
   ],
   "physical_operator_admitted": false,
   "contract_id": "T13_OBSERVER_JOINT_DISCRIMINATION_V1",
-  "contract_sha256": "1c91aba089e85d744215b16de3c84576bde03a6e68f6a14d46a363728668a41c",
+  "contract_sha256": "5e8db787b40574917b9a8f8d24f9fe758d0267fdf382b5aa668d591a73d0f2dc",
   "contract_review_status": "INCOMPLETE",
   "identities": [
     {
@@ -59,7 +59,7 @@
       "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/T13_OBSERVER_DISCRIMINATION_2026-10-17.md",
       "kind": "working_file",
       "role": "evidence",
-      "sha256": "eed6132f6b5214afcaa14bee30e501f3bdfa087b9cbd81e19ed79fbc53893d78"
+      "sha256": "b9c1ffd4a9a821965a98c16dda7e3022ce0931d5a1fe3935f786faa84e292e79"
     },
     {
       "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/T13_INVARIANT_POLE_DISCRIMINATION_2026-10-15.md",

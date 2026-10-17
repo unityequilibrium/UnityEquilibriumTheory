@@ -1,3 +1,14 @@
+<!-- observer-round-completion-v1:start -->
+## 2026-10-18 - Complete approved observer-discrimination round, not Full Topic13
+
+RESULT: Audited the whole approved W1-W3 research objective plus continued comparator/source/readout questions against the original design's finite outcomes. Conditional identifiability, bounded discrimination/no-uniform-separation result, mechanism-equivalence limits and a concrete physical-feasibility/missing-input decision are delivered. This is not a closure defined around the latest tests, and not a claim of physical UET validation or falsification.
+EVIDENCE: Existing Result/T13_OBSERVER_DISCRIMINATION_2026-10-17.md now contains the requirement/evidence/limit matrix, references to every continuation decision and explicit reopening boundary. W3 still has no admitted records and a detailed missing-input card. Native cavity readout does not substitute for signed mechanical harmonics or a UET material map.
+LINEAGE: Read-only owner status/HEAD/diff check confirms tracked owner evidence remains at 0f17012ffd6ad456c150b10e048efd868ce95588. Untracked local input directory was not opened/imported or assumed eligible; no remote-main freshness claim. Initial sandbox denial for owner git status was resolved with an approved read-only check, not by changing the worktree.
+VERIFICATION: 100 tests across observer, dual-channel, native physical-route, action-class, source-feedback and actual-readout modules PASS. All six producer --check commands reproduce saved outputs. Shared completeness zero errors across 13 contracts; final proof-note identity and three observer artifact metadata records refreshed via generator. Foundation remains FAIL/BLOCKED with 224 existing errors and 62 entries; no parent gate or scientific claim promoted.
+CONTROLLING_SCIENTIFIC_BOUNDARY: Original physical kernel still needs independently justified same-state material/source/operator correspondence, permitted signed harmonic measurements and joint errors. A uniquely UET claim additionally needs a constraint outside the demonstrated comparator freedom. Instrument optimization alone cannot supply these.
+STOP_REOPEN: The approved research round's structural/feasibility end state is verified. Do not continue unchanged source searches, cavity-noise benchmarking or synthetic passes just to prolong execution. Reopen for an eligible new operator/record package, independently justified distinguishing constraint, or a genuinely different authorized research objective. Full Topic13/Core remain open.
+<!-- observer-round-completion-v1:end -->
+
 <!-- gain-enclosure-v1:start -->
 ## 2026-10-18 - Constant-gain repair excluded; native-versus-UET scope checkpoint
 
