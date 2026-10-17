@@ -1,3 +1,15 @@
+<!-- observer-discrimination-execution-v1:start -->
+## 2026-10-17 - Observer-aware W1/W2/W3 decision
+
+RESULT: Completed the scoped formal/design/feasibility path; no physical test or Full Topic13 closure.
+NEW_EVIDENCE: Joint gain/background/clock equivalence exposes A=gL+c, D=gB/a, P=p/a; a constructive nonzero-residue family defeats uniform finite-design separation without independent lower bounds. Exact divided-difference error rule and 53-candidate conditional design control documented in Result/T13_OBSERVER_DISCRIMINATION_2026-10-17.md.
+REUSED_EVIDENCE: Owner commit 0f17012ffd6ad456c150b10e048efd868ce95588 supplies prior inverse/invariance, harmonic readout, convolution/mode restrictions and nine-route source disposition. Not merged, rerun or relabeled as new physics.
+VERIFICATION: 18 exact/domain/source-admission tests PASS; generated W1/W2/W3 evidence reproduced by read-only check; contract audit reports zero structural errors. Foundation audit remains FAIL with 224 existing errors, including pre-migration implementation paths; foundation remains BLOCKED.
+CONTROLLING_BLOCKER: No admitted same-state mechanical kernel/source/readout/uncertainty package in the pinned nine-route screen; nuisance calibration and material correspondence remain physical prerequisites.
+CLAIM_BOUNDARY: Synthetic controls and conditional proofs only; ordinary pole comparator may be identical. No SI Phi anchor, acquired measurements, holdout use, email, physical acceptance or dependency unlock.
+NEXT_ACTION: Stop this plan at its explicit feasibility exit. Reopen only for an eligible record/operator package with independent clock/transfer/error bounds, not another identical source search or pole-fit sweep.
+<!-- observer-discrimination-execution-v1:end -->
+
 <!-- observable-discrimination-design-v1:start -->
 ## 2026-10-17 - Observer-aware research design (planning only)
 
