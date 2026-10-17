@@ -1,3 +1,14 @@
+<!-- dual-channel-identifiability-v1:start -->
+## 2026-10-17 - Independent dual-channel control and reciprocity design
+
+RESULT: Completed the bounded two-channel operator/identifiability question, not a physical material test.
+WHAT_CHANGED: Result/T13_DUAL_CHANNEL_IDENTIFIABILITY_2026-10-17.md derives passive-static ambiguity, a noncollinear independent-control inverse and a gain-aware mass-weighted reciprocity check; exact producer/tests and one compact canonical artifact preserve contract identities.
+VERIFICATION: 11 tests PASS; generated evidence read-only reproduction PASS; standalone and changed-path contract checks have zero errors. Foundation audit remains FAIL/BLOCKED with 224 existing errors; no gate or Core implementation modified.
+CONTROLLING_BLOCKER: Same-state material reduction and independently calibrated source residuals, modal masses/relative gains and error bounds are not admitted. Two sensors alone do not establish independent controls; passive equilibrium is insufficient when self-nonlinearity is unknown.
+CLAIM_BOUNDARY: Ordinary conservative mechanics has the same reciprocal interaction. A reserved synthetic point is not external validation, a beam mode is not identified as Phi, and no SI Phi/He-II/Full Topic13 claim is promoted.
+NEXT_ACTION: Stop at the declared physical prerequisite. Reopen with an admitted two-channel independent-control/calibration package, or a separately scoped theory-derived distinguishing relation; no automatic dataset fitting, source search, contact or lab build.
+<!-- dual-channel-identifiability-v1:end -->
+
 <!-- measurement-testbed-screen-v1:start -->
 ## 2026-10-17 - Measurement card and alternative-platform screen
 

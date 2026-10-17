@@ -1,0 +1,73 @@
+{
+  "status": "PASS_EXACT_CONDITIONAL_DUAL_CHANNEL_DESIGN",
+  "scope": "Generic conservative two-coordinate interaction; material/UET correspondence not admitted",
+  "interaction": "V_int=kappa*q^2*r; alpha=2*kappa/mq; beta=kappa/mr",
+  "observed": "ell=lambda/Gq^2; a=alpha/Gr; b=beta*Gr/Gq^2, offsets/phase already calibrated",
+  "passive_no_go": "sr=0 static: z=-b*y^2/wr2; Rq=(ell-a*b/wr2)*y^3; a->a+t,ell->ell+t*b/wr2 preserves both channels",
+  "active_design": "two independent rows (y^3,y*z), nonzero determinant, calibrated sources; b from Rr/y^2",
+  "reciprocity_rule": "mq*a*(Gr/Gq)^2-2*mr*b=0; known positive modal masses, independent relative gains and error budget required",
+  "unknown_gain_boundary": "Any nonzero same-sign a,b can satisfy reciprocity by choosing a relative gain; opposite signs cannot under this real constant-gain positive-mass model",
+  "synthetic_controls": {
+    "ell": "1/3",
+    "a": "2/5",
+    "b": "5/18",
+    "calibration_rows": [
+      [
+        "1",
+        "1",
+        "11/15"
+      ],
+      [
+        "1",
+        "2",
+        "17/15"
+      ]
+    ],
+    "reserved_y_z": [
+      "2",
+      "3"
+    ],
+    "predicted_Rq": "76/15"
+  },
+  "limits": [
+    "unknown or freely fitted forcing destroys the inference",
+    "singular/near-collinear controls are not identified by adding samples on same line",
+    "finite-noise uncertainty and damping/omitted terms need a physical contract",
+    "same interaction in ordinary mechanics gives same predictions; no UET-specific mechanism discrimination"
+  ],
+  "next_action": "No physical scoring: need admitted material operator and independently calibrated two-channel sources/gain ratio/masses, or an independently constrained distinguishing relation",
+  "physical_acceptance": false,
+  "holdout_accessed": false,
+  "new_source_search": false,
+  "contract_id": "T13_DUAL_CHANNEL_IDENTIFIABILITY_V1",
+  "contract_sha256": "725a0f7bf3e184354da5dd427f229c941d94eb57c6b4e3b3794bbc1e68d22acf",
+  "contract_review_status": "INCOMPLETE",
+  "identities": [
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/Research_T13_Dual_Channel_Identifiability.py",
+      "kind": "working_file",
+      "role": "code",
+      "sha256": "9dd6ff921bdda49a1206b4c363556473569d813e48e88f9ca3ca340fe1592637"
+    },
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/test_t13_dual_channel_identifiability.py",
+      "kind": "working_file",
+      "role": "code",
+      "sha256": "70b7ce1e554a4aa486e0f9050d4912635dd84df7141b57c9ba8ffdb9108e5369"
+    },
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/T13_DUAL_CHANNEL_IDENTIFIABILITY_2026-10-17.md",
+      "kind": "working_file",
+      "role": "evidence",
+      "sha256": "7102eb63d8a8cd401c1d604006312a1ab120bd37929ec459d9cb3e3f8d6d62cf"
+    },
+    {
+      "path": "docs/core/02_equations/covariant/uet_covariant_matter.py",
+      "kind": "working_file",
+      "role": "evidence",
+      "sha256": "8a57d95e898a8ac962bbd749670ad0695b597281937da36496d2ec7e074f9c53"
+    }
+  ],
+  "generator_path": "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/Research_T13_Dual_Channel_Identifiability.py",
+  "evidence_class": "FORMAL_CONDITIONAL_NOT_PHYSICAL_VALIDATION"
+}
