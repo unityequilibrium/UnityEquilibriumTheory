@@ -113,4 +113,60 @@ Two legitimate paths remain:
 
 The first path needs same-state absolute input/port/linewidth, displacement/branch and uncertainty records. The second is a different scientific question; do not quietly substitute it for theory testing. Earlier action-class equivalence still controls unique UET claims. This result closes the source-feedback false-positive question and makes the next observation packet specific; it does not close Full Topic13 or prove a real material's cubic response.
 
+## F. Follow-up: what the candidate phase/time/calibration products contain
+
+Fifteen additional candidate member headers were inspected using 129,878 range bytes, with the same directory identity and no numeric response rows decoded. Together with the earlier two Fig3c members, this is 17 selected schemas, not an exhaustive assertion about every archive payload.
+
+| Candidate group | Header evidence | Admitted role and restriction |
+| --- | --- | --- |
+| Fig9 continuous/pulsed b/c | `freq` and absolute S21; pulsed up/down columns | Frequency sweeps, not time or complex-phase records merely because the filename says pulsed |
+| Fig6 | Frequency, S_ww data and S_ww fit | Calibration spectrum and model fit distinguished; the fitted column is not a second experiment |
+| Fig7 a/b | Frequency, absolute S21 and its fit | Calibration magnitude products; no explicit paired real/imaginary record in these headers |
+| Fig8f | Parameters, n_c and P_d dBm from n_c | Derived calibration product; not an independent n-versus-power validation pair |
+| Fig11 a/b | First-author and comparison metrics | Literature/comparison-table role, not a new same-state detector trace |
+| Fig12 a/b | Frequency, Fourier of beta_r / alpha | State-spectrum products. Header alone does not admit measured-versus-simulated origin, complex-value representation, transform normalization/window or pairing to a physical source |
+| Fig14/15/16 selected members | Fixed-point/stability columns, duplicate-solution/imaginary-root comments | Model-root products as declared, not independently measured branch stability; folder/embedded figure labels differ and require explicit binding |
+
+The two Fig12 members would expand to 412,966,875 and 419,426,184 bytes. Their spectra may be useful for their own declared analysis, but loading them is not justified merely to look for an experimental time-domain quadrature record. No claim is made that a properly identified full complex Fourier record could never reconstruct a waveform; that would additionally require its sampling, transform/window, preparation and source lineage.
+
+### Why a derived calibration column cannot independently confirm its own formula
+
+If a published pipeline calculates P_est=F(n_est,calibration), then P_est-F(n_est,calibration)=0 by construction. At fixed calibration the pair's Jacobian with respect to n_est is the single column `(1,F')`; it supplies no second independent measured quantity. This does not make calibration invalid. It means the derived pair cannot be reused as an independent validation of the conversion equation. Generator settings, separately calibrated line attenuation and their joint errors could provide the missing external constraint, but must be traced as such rather than inferred from this residual being zero. The source's Notes 1-2 calibration methods remain useful evidence; no claim is made that the original authors performed a circular validation.
+
+**Minimum next product for unique state reconstruction:** a state-identified experimental complex transmission record (or a documented independent branch equivalent), paired device-input source settings, the corresponding transfer calibration/deembedding record, and a joint uncertainty/omission description. Separate calibration rows from candidate comparison rows. The current selected schemas do not admit this packet. This is not proof that no such record exists elsewhere, nor authorization to request it by email. Do not substitute computed fixed points or spectra of an unadmitted state for experimental phase data. The necessary-condition test below can sometimes reject a model WITHOUT unique state reconstruction, so missing phase must not be made a blanket prohibition on every diagnostic.
+
+## G. A phase-free necessary-condition test is possible
+
+Supplementary Note 6.1, Eqs. (18)-(21), fixes the stationary native hypothesis
+
+```text
+K_eff=K+2*g0^2*Omega_m/(Omega_m^2+Gamma_m^2/4)
+delta=Delta+K_eff*n.
+```
+
+K, g0, Omega_m and Gamma_m must be locked from the independent calibration role, not fitted to the comparison rows. This is a standard native model relation, not a new UET coefficient prediction or a mapping of the cavity mode to the covariant matter field. The ideal real-port magnitude inverse in section D constructs n_R and delta_R^2 independently of this mechanical relation. Therefore every admitted stationary observation must satisfy
+
+```text
+F(R,Delta,n_in;calibration)=(Delta+K_eff*n_R)^2-delta_R^2=0.
+```
+
+F has angular-frequency-squared units. It does NOT choose the hidden detuning sign from the model and then call that choice independent validation. With a predeclared joint calibration/measurement/omission set, exclusion of zero from the possible F values rejects this specified stationary source/readout hypothesis. Inclusion of zero is merely non-rejection: the unmeasured sign, model class and other candidate branches are not verified. Multiple rows must share the SAME admitted calibration parameters; separately retuning each row is forbidden. Per-row inclusion is not proof that one common parameter tuple explains all rows.
+
+At Delta=0, the necessary condition is insensitive to the sign of K_eff. At known nonzero detuning,
+`F(K_eff)-F(-K_eff)=4*Delta*K_eff*n_R`. Thus an independently calibrated detuned control can distinguish these restricted sign hypotheses without measuring phase, when the projected joint-error sets separate and the stationary domain is independently justified. The exact controls use one on-resonance and one detuned setting; they are not measured acceptance or a prescription to ignore dynamical instability. This is an information-bearing protocol change, not a request to run a larger arbitrary parameter grid.
+
+### Retaining complex mismatch instead of setting it to zero
+
+For known complex circle coefficient c_m*exp(i*phi), known drive intensity I=E^2 and R=|t|^2, keep n>=0 latent and require BOTH
+
+```text
+F_n=n*[a^2+(Delta+K_eff*n)^2]-I=0
+G_n=I*(R-1)-n*[c_m^2-2*c_m*a*cos(phi)+2*c_m*Delta*sin(phi)]
+    -2*c_m*K_eff*sin(phi)*n^2=0.
+```
+
+These two polynomial constraints eliminate phase as an independently required record, not the physical effect of mismatch. Failure of every nonnegative n and every common admitted calibration tuple is a valid rejection condition; selecting a convenient n and proclaiming a measured occupation is not. No global uncertainty-feasibility solver or physical numerical threshold is claimed by the finite controls. For actual oscillating data use the sideband/time-dependent native operator instead: the stationary cubic condition is outside its domain.
+
+**Revised next dependency:** raw phase is useful but not logically necessary for this projected falsifier. What is necessary is a matched independent source/transfer calibration, a justified stationary-data role, and bounded joint errors. If those are available from public calibration products, a necessary-condition diagnostic can proceed on magnitude data; if not, do not invent real-port deembedding or reuse model-derived power as independent input. Even a successful native-model comparison would not overcome the earlier UET/comparator equivalence result.
+
 Reproduction: [producer](../Code/03_Research/Research_T13_Source_Feedback.py), [controls](../Code/03_Research/test_t13_source_feedback.py), [contract](../calculation_contracts/source_feedback.json), [canonical output](../../../core/07_artifacts/topic13/t13_source_feedback.json). The curated header/reference file is the input; no numerical experimental row or copied archive is needed for these formal results.

@@ -9,6 +9,7 @@ import hashlib
 from itertools import permutations
 import json
 from pathlib import Path
+import re
 import shutil
 import sys
 
@@ -114,6 +115,30 @@ def mismatch_magnitude_squared(a,magnitude,cosine,sine,delta):
     return 1+(magnitude*magnitude-2*magnitude*a*cosine+2*magnitude*delta*sine)/(a*a+delta*delta)
 
 
+def mechanical_kerr(g0,omega,gamma):
+    """Native stationary Eq.20; coefficients must be independently calibrated."""
+    if g0<0 or omega<=0 or gamma<0:
+        raise ValueError('outside declared native rate domain')
+    return 2*g0*g0*omega/(omega*omega+gamma*gamma/4)
+
+
+def phase_free_native_residual(a,port,input_flux,magnitude_squared,detuning,effective_kerr):
+    """Necessary condition only: no latent sign selected or physical score issued."""
+    n,delta2=infer_occupation(a,port,input_flux,magnitude_squared)
+    return (detuning+effective_kerr*n)**2-delta2
+
+
+def general_phase_free_constraints(n,a,magnitude,cosine,sine,detuning,effective_kerr,intensity,r):
+    """Evaluate simultaneous latent-n constraints; NOT a global feasibility solver."""
+    if n<0 or a<=0 or magnitude<=0 or intensity<=0 or r<0 or cosine*cosine+sine*sine!=1:
+        raise ValueError('invalid stationary complex-transfer candidate')
+    delta=detuning+effective_kerr*n
+    first=n*(a*a+delta*delta)-intensity
+    second=(intensity*(r-1)-n*(magnitude*magnitude-2*magnitude*a*cosine+2*magnitude*detuning*sine)
+            -2*magnitude*effective_kerr*sine*n*n)
+    return first,second
+
+
 def inspect_curated_headers(source):
     rows=[]
     for item in source['headers']:
@@ -135,6 +160,48 @@ def inspect_curated_headers(source):
     if {r['role'] for r in rows}!={'experiment','simulation'}:
         raise ValueError('experiment/simulation distinction lost')
     return rows
+
+
+def inspect_follow_up_headers(source):
+    """Classify declared products, never infer numeric payload or missing data globally."""
+    review=source['follow_up_header_review']
+    if review['numeric_rows_decoded']!=0 or review['whole_member_crc_verified']:
+        raise ValueError('follow-up source role changed; full-data review required')
+    counts={}; rows=[]; mismatch=[]
+    for item in review['headers']:
+        text=item['header']
+        if hashlib.sha256(text.encode('utf-8')).hexdigest()!=item['sha256']:
+            raise ValueError('follow-up header identity changed')
+        lines=text.splitlines()
+        if len(lines)!=3 or lines[0]!='sep=,':
+            raise ValueError('only the declared three-line comma header is admitted')
+        cols=lines[2].split(',')
+        if 'P_d dBm from n_c' in cols:
+            kind='DERIVED_CALIBRATION_POWER_NOT_INDEPENDENT_PAIR'
+        elif cols[0]=='first author':
+            kind='LITERATURE_COMPARISON_TABLE'
+        elif any('fourier of ' in c for c in cols):
+            kind='FOURIER_STATE_PROVENANCE_AND_COMPLEX_REPRESENTATION_UNRESOLVED'
+        elif 'stable/unstable' in cols or 'stable or unstable' in cols:
+            kind='DECLARED_FIXED_POINT_MODEL_PRODUCT'
+        elif 'S_ww data' in cols and 'S_ww fit' in cols:
+            kind='CALIBRATION_SPECTRUM_WITH_MODEL_FIT'
+        elif cols[0]=='freq' and any(c.startswith('S21 absolute') for c in cols):
+            kind='MAGNITUDE_FREQUENCY_SWEEP_NOT_DECLARED_TIME_TRACE'
+        else:
+            raise ValueError('new source schema needs an explicit product-role review')
+        counts[kind]=counts.get(kind,0)+1
+        folder=re.search(r'Figure_(\d+)/',item['member'])
+        embedded=re.search(r'Fig (\d+)',lines[1])
+        if folder and embedded and folder.group(1)!=embedded.group(1):
+            mismatch.append(item['member'])
+        rows.append({'member':item['member'],'role':kind,'header_identity_verified':True})
+    if len(rows)!=15:
+        raise ValueError('candidate inventory changed; do not reuse the old coverage statement')
+    return {'selected_headers':len(rows),'roles':counts,'members':rows,
+            'folder_comment_binding_review':mismatch,
+            'independent_validation_of_derived_power_pair':False,
+            'boundary':'selected declared schemas only; Fourier complex payload and every other archive member remain unassessed'}
 
 
 def calculate(source):
@@ -159,6 +226,14 @@ def calculate(source):
     mismatch_candidates=(Q(0),Q(-16,7))
     if any(mismatch_magnitude_squared(Q(1),Q(1,2),Q(3,5),Q(4,5),d)!=Q(13,20) for d in mismatch_candidates):
         raise ValueError('complex mismatch ambiguity witness failed')
+    keff=Q(3,4)+mechanical_kerr(Q(1,2),Q(1),Q(2))
+    resonant=phase_free_native_residual(a,port,Q(25,8),Q(17,25),Q(0),keff)
+    detuned=phase_free_native_residual(a,port,Q(45,8),Q(37,45),Q(1,2),keff)
+    wrong=phase_free_native_residual(a,port,Q(45,8),Q(37,45),Q(1,2),-keff)
+    if (resonant,detuned,wrong)!=(Q(0),Q(0),Q(-2)):
+        raise ValueError('phase-free detuned control failed')
+    if general_phase_free_constraints(Q(1),Q(1),Q(1,2),Q(3,5),Q(4,5),Q(-1),Q(1),Q(1),Q(13,20))!=(0,0):
+        raise ValueError('general complex-transfer constraints failed')
     return {'status':'STABLE_SOURCE_FEEDBACK_COUNTEREXAMPLE_AND_HEADER_ADMISSION',
         'linear_spring_apparent_source_polynomial':[str(c) for c in coeffs],
         'true_mechanical_duffing':'0','source_corrected_law':'hbar*G*n=k*x; incident power is not internal occupation',
@@ -169,7 +244,12 @@ def calculate(source):
             'recovered_occupation':str(occupation),'magnitude_only_detuning_candidates':['-1','1'],'complex_recovered_detuning':'1'},
         'complex_mismatch_control':{'magnitude_squared':'13/20','detuning_candidates':['0','-16/7'],
             'occupation_candidates':['1','49/305'],'boundary':'abstract calibrated transfer, not measured data; circle coefficient magnitude need not equal drive coupling'},
+        'phase_free_native_controls':{'K_eff':str(keff),'resonant_residual':str(resonant),
+            'detuned_residual':str(detuned),'wrong_sign_detuned_residual':str(wrong),
+            'boundary':'necessary condition under independent calibration; no unique state reconstruction or measured acceptance',
+            'complex_mismatch':'simultaneous latent-n constraints defined, not a global joint-uncertainty solver'},
         'inspected_headers':inspect_curated_headers(source),
+        'follow_up_header_review':inspect_follow_up_headers(source),
         'archive_readme_delimiter':source['data_record']['readme']['advertised_separator'],
         'member_level_delimiter_precedence':True,
         'admission':source['admission'],'physical_acceptance':False,'numeric_rows_scored':0,

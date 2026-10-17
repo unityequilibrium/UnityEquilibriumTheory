@@ -1,3 +1,14 @@
+<!-- phase-free-discrimination-v1:start -->
+## 2026-10-18 - Phase-free necessary-condition discrimination
+
+RESULT: A calibrated stationary magnitude can reject a locked native source/readout hypothesis without uniquely reconstructing phase. Derived F=(Delta+K_eff*n_R)^2-delta_R^2 and simultaneous latent-occupation constraints retaining complex mismatch. At zero detuning the sign ambiguity persists; an independently calibrated nonzero-detuning control can distinguish the restricted sign hypotheses. This is a formal protocol, not a measured result or a UET-specific prediction.
+WHAT_CHANGED: Extended the existing source-feedback proof, producer, controls, curated source metadata, calculation contract and canonical artifact rather than creating a second result system. Reviewed 15 further headers (17 selected schemas total), separating frequency sweeps, fits, derived power, literature tables, unresolved Fourier products and declared model fixed points. Supplement pages 10-13 supplied the native stationary equations; page 14 extraction was interrupted with no usable caption, so Fourier binding is not promoted.
+VERIFICATION: 23 unittest controls PASS; producer emit/read-only check PASS; standalone and explicit changed-path completeness audits zero errors across 12 contracts. Six local report links resolve. Foundation audit retains 224 pre-existing errors; existing manifest path audit PASS read-only. No measured response row decoded/scored, full member CRC claimed, large archive retained or physics gate changed.
+CONTROLLING_BLOCKER: Physical scoring remains NOT_ADMITTED pending run-matched independent source/transfer/coefficient calibration, independently justified stationary records and bounded joint uncertainty/omissions. Raw phase alone is not a universal prerequisite; unique state reconstruction is a stronger task than projected rejection. Multiple rows must share one common calibration tuple, not row-wise fits.
+CLAIM_BOUNDARY: Non-rejection is not verification, unique mechanism identification or SI Phi normalization. A native apparatus benchmark does not break the earlier UET/comparator equivalence. Model-derived power cannot independently validate its own conversion; published independent calibration methods exist and are not declared absent.
+NEXT_ACTION: Trace matched calibration/state lineage for an eligible magnitude-only diagnostic before scoring values; retain all complex-transfer candidates and shared error dependencies. Reuse the existing equations/controls, do not launch large simulations or repeat unchanged evidence. Goal remains active across this checkpoint; no push/contact/worktree authorized.
+<!-- phase-free-discrimination-v1:end -->
+
 <!-- source-feedback-protocol-v1:start -->
 ## 2026-10-18 - Stable source-feedback false positive and actual readout admission
 

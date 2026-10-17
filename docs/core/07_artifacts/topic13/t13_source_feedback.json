@@ -45,6 +45,14 @@
     ],
     "boundary": "abstract calibrated transfer, not measured data; circle coefficient magnitude need not equal drive coupling"
   },
+  "phase_free_native_controls": {
+    "K_eff": "1",
+    "resonant_residual": "0",
+    "detuned_residual": "0",
+    "wrong_sign_detuned_residual": "-2",
+    "boundary": "necessary condition under independent calibration; no unique state reconstruction or measured acceptance",
+    "complex_mismatch": "simultaneous latent-n constraints defined, not a global joint-uncertainty solver"
+  },
   "inspected_headers": [
     {
       "member": "Self-Sustained Oscillations Non-Linear Optomechanical System/Figure_3/Figure_3_c_Experiment.csv",
@@ -69,19 +77,115 @@
       "whole_member_crc_verified": false
     }
   ],
+  "follow_up_header_review": {
+    "selected_headers": 15,
+    "roles": {
+      "MAGNITUDE_FREQUENCY_SWEEP_NOT_DECLARED_TIME_TRACE": 6,
+      "CALIBRATION_SPECTRUM_WITH_MODEL_FIT": 1,
+      "DERIVED_CALIBRATION_POWER_NOT_INDEPENDENT_PAIR": 1,
+      "LITERATURE_COMPARISON_TABLE": 2,
+      "FOURIER_STATE_PROVENANCE_AND_COMPLEX_REPRESENTATION_UNRESOLVED": 2,
+      "DECLARED_FIXED_POINT_MODEL_PRODUCT": 3
+    },
+    "members": [
+      {
+        "member": "Figure_9/Figure_9_b_continuous.csv",
+        "role": "MAGNITUDE_FREQUENCY_SWEEP_NOT_DECLARED_TIME_TRACE",
+        "header_identity_verified": true
+      },
+      {
+        "member": "Figure_9/Figure_9_b_pulsed.csv",
+        "role": "MAGNITUDE_FREQUENCY_SWEEP_NOT_DECLARED_TIME_TRACE",
+        "header_identity_verified": true
+      },
+      {
+        "member": "Figure_9/Figure_9_c_continuous.csv",
+        "role": "MAGNITUDE_FREQUENCY_SWEEP_NOT_DECLARED_TIME_TRACE",
+        "header_identity_verified": true
+      },
+      {
+        "member": "Figure_9/Figure_9_c_pulsed.csv",
+        "role": "MAGNITUDE_FREQUENCY_SWEEP_NOT_DECLARED_TIME_TRACE",
+        "header_identity_verified": true
+      },
+      {
+        "member": "Figure_6/Figure_6.csv",
+        "role": "CALIBRATION_SPECTRUM_WITH_MODEL_FIT",
+        "header_identity_verified": true
+      },
+      {
+        "member": "Figure_7/Figure_7_a.csv",
+        "role": "MAGNITUDE_FREQUENCY_SWEEP_NOT_DECLARED_TIME_TRACE",
+        "header_identity_verified": true
+      },
+      {
+        "member": "Figure_7/Figure_7_b.csv",
+        "role": "MAGNITUDE_FREQUENCY_SWEEP_NOT_DECLARED_TIME_TRACE",
+        "header_identity_verified": true
+      },
+      {
+        "member": "Figure_8/Figure_8_f.csv",
+        "role": "DERIVED_CALIBRATION_POWER_NOT_INDEPENDENT_PAIR",
+        "header_identity_verified": true
+      },
+      {
+        "member": "Figure_11/Figure_11_a.csv",
+        "role": "LITERATURE_COMPARISON_TABLE",
+        "header_identity_verified": true
+      },
+      {
+        "member": "Figure_11/Figure_11_b.csv",
+        "role": "LITERATURE_COMPARISON_TABLE",
+        "header_identity_verified": true
+      },
+      {
+        "member": "Figure_12/Figure_12_a.csv",
+        "role": "FOURIER_STATE_PROVENANCE_AND_COMPLEX_REPRESENTATION_UNRESOLVED",
+        "header_identity_verified": true
+      },
+      {
+        "member": "Figure_12/Figure_12_b.csv",
+        "role": "FOURIER_STATE_PROVENANCE_AND_COMPLEX_REPRESENTATION_UNRESOLVED",
+        "header_identity_verified": true
+      },
+      {
+        "member": "Figure_14/Figure_14.csv",
+        "role": "DECLARED_FIXED_POINT_MODEL_PRODUCT",
+        "header_identity_verified": true
+      },
+      {
+        "member": "Figure_15/Figure_15_a.csv",
+        "role": "DECLARED_FIXED_POINT_MODEL_PRODUCT",
+        "header_identity_verified": true
+      },
+      {
+        "member": "Figure_16/Figure_16_a.csv",
+        "role": "DECLARED_FIXED_POINT_MODEL_PRODUCT",
+        "header_identity_verified": true
+      }
+    ],
+    "folder_comment_binding_review": [
+      "Figure_14/Figure_14.csv",
+      "Figure_15/Figure_15_a.csv",
+      "Figure_16/Figure_16_a.csv"
+    ],
+    "independent_validation_of_derived_power_pair": false,
+    "boundary": "selected declared schemas only; Fourier complex payload and every other archive member remain unassessed"
+  },
   "archive_readme_delimiter": "semicolon",
   "member_level_delimiter_precedence": true,
   "admission": {
     "static_cubic_source_score": "NOT_ADMITTED",
     "reason": "Inspected displayed-data columns are detuning and absolute scattering, not jointly calibrated static displacement and prepared source occupation; stable/oscillating operator and branch must be classified before inversion",
-    "positive_route": "Under independently calibrated ideal real-port single-pole stationary transfer, absolute scattering can determine photon occupation without phase; complex mismatch can also make occupation multivalued",
+    "positive_route": "Independently calibrated stationary magnitude permits a necessary-condition falsifier without selecting phase. General complex mismatch retains simultaneous latent-occupation constraints; unique reconstruction is not required for rejection of all candidates.",
+    "magnitude_necessary_condition": "FORMALLY_DERIVED_NOT_PHYSICALLY_SCORED; residual and joint-candidate policy in proof section G",
     "next_inputs": [
-      "same-state application and joint uncertainty of the published independent calibration methods, including device-input photon flux and complex mismatch",
-      "stationary operating-region and offset/phase or independently justified branch record",
-      "independent displacement/source relation, Kerr and thermal/geometry corrections with joint bounds",
+      "same-state application and joint uncertainty of independent device-input flux and transfer calibration, including complex mismatch",
+      "independently justified stationary operating-region; phase/branch only additionally required for unique state reconstruction",
+      "independent coefficient calibration and bounded Kerr/thermal/geometry omissions; no row-wise retuning",
       "eligible reserved records and full member checksum before numerical scoring"
     ],
-    "boundary": "Header-only preflight does not prove no other archive member can supply additional observables; source calibration methods were inspected, not declared absent"
+    "boundary": "Header-only preflight does not prove no other archive member can supply additional observables. Native-model rejection/non-rejection is not unique UET validation; source calibration methods were inspected, not declared absent"
   },
   "physical_acceptance": false,
   "numeric_rows_scored": 0,
@@ -90,32 +194,32 @@
   "large_archive_download": false,
   "claim_boundary": "ordinary comparator source-feedback/protocol result; no UET material map, intrinsic nonlinearity measurement or unique theory validation",
   "contract_id": "T13_SOURCE_FEEDBACK_PROTOCOL_V1",
-  "contract_sha256": "0c87a2c26f081c6754e8a29626cfc6a4ee996f8b70e47218ded4e8dca6cf4c6b",
+  "contract_sha256": "6b5dc8a140aecc2cc6c1bcdd8991b1897cd4f360205ae823f4b9cebe99dcf5ea",
   "contract_review_status": "INCOMPLETE",
   "identities": [
     {
       "path": "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/Research_T13_Source_Feedback.py",
       "kind": "working_file",
       "role": "code",
-      "sha256": "7219cf590dbdb8799b14b5ef76377f5d4d7545e699f7f12a37c58864cfb23427"
+      "sha256": "df0a3d374a4c505e1c8644d7602767681416e5c0c5a3f0bed6609782355cb49b"
     },
     {
       "path": "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/test_t13_source_feedback.py",
       "kind": "working_file",
       "role": "code",
-      "sha256": "e2ee78fca85d8670ff48a556c01ebd43018df91c8335b08568b4d9291c663471"
+      "sha256": "a973f082bca40cc700c7dd3f4d3e3fb011c02cd1d4e79cdb658d2febcbfc80e1"
     },
     {
       "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/T13_SOURCE_FEEDBACK_PROTOCOL_2026-10-18.md",
       "kind": "working_file",
       "role": "evidence",
-      "sha256": "a07ad3f549071860500636369cab07461af5cc573e2fa6777126f011593be65d"
+      "sha256": "6661af4da1f4ce52e568c3b147a2876570819cc41c94ac3d40b2398bfe712c7e"
     },
     {
       "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/source_feedback_protocol_references.json",
       "kind": "working_file",
       "role": "input",
-      "sha256": "fe1bd01b0e03e70363876a0022030a668c19ebea72c1745d3e03ba723bd96563"
+      "sha256": "8072719a2368de5ec341345d2d04884dbe5fde6638e0a23ee8580e74ff189ddd"
     }
   ],
   "generator_path": "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/Research_T13_Source_Feedback.py",

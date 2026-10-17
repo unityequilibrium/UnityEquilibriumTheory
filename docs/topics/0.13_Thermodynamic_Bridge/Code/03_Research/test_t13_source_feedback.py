@@ -78,6 +78,25 @@ class SourceFeedbackTests(unittest.TestCase):
         with self.assertRaises(ValueError):
             m.mismatch_magnitude_squared(Q(1),Q(1,2),Q(1),Q(1),Q(0))
 
+    def test_phase_free_native_test_can_reject_a_locked_foil(self):
+        k=Q(3,4)+m.mechanical_kerr(Q(1,2),Q(1),Q(2))
+        self.assertEqual(k,1)
+        self.assertEqual(m.phase_free_native_residual(Q(3,4),Q(1,2),Q(25,8),Q(17,25),Q(0),k),0)
+        self.assertNotEqual(m.phase_free_native_residual(Q(3,4),Q(1,2),Q(25,8),Q(17,25),Q(0),Q(0)),0)
+
+    def test_on_resonance_sign_degeneracy_is_broken_by_detuned_control(self):
+        for k in (Q(-1),Q(1)):
+            self.assertEqual(m.phase_free_native_residual(Q(3,4),Q(1,2),Q(25,8),Q(17,25),Q(0),k),0)
+        correct=m.phase_free_native_residual(Q(3,4),Q(1,2),Q(45,8),Q(37,45),Q(1,2),Q(1))
+        wrong=m.phase_free_native_residual(Q(3,4),Q(1,2),Q(45,8),Q(37,45),Q(1,2),Q(-1))
+        self.assertEqual(correct,0); self.assertEqual(wrong,-2)
+        self.assertEqual(correct-wrong,4*Q(1,2)*Q(1)*Q(1))
+
+    def test_general_mismatch_constraints_do_not_select_a_state_then_validate_it(self):
+        args=(Q(1),Q(1,2),Q(3,5),Q(4,5),Q(-1),Q(1),Q(1),Q(13,20))
+        self.assertEqual(m.general_phase_free_constraints(Q(1),*args),(0,0))
+        self.assertNotEqual(m.general_phase_free_constraints(Q(49,305),*args),(0,0))
+
     def test_absolute_csv_value_must_be_squared(self):
         # Critical hanger: magnitude=4/5 at delta=1, a=port=3/4.
         flux=Q(25,12)
@@ -106,6 +125,26 @@ class SourceFeedbackTests(unittest.TestCase):
         s=deepcopy(self.source); s['headers'][0]['header']=s['headers'][0]['header'].replace('absolute','complex')
         with self.assertRaises(ValueError):
             m.inspect_curated_headers(s)
+
+    def test_followup_products_are_not_reclassified_as_raw_phase(self):
+        r=m.inspect_follow_up_headers(self.source)
+        self.assertEqual(r['selected_headers'],15)
+        self.assertEqual(r['roles']['MAGNITUDE_FREQUENCY_SWEEP_NOT_DECLARED_TIME_TRACE'],6)
+        self.assertEqual(r['roles']['FOURIER_STATE_PROVENANCE_AND_COMPLEX_REPRESENTATION_UNRESOLVED'],2)
+        self.assertEqual(r['roles']['DECLARED_FIXED_POINT_MODEL_PRODUCT'],3)
+        self.assertFalse(r['independent_validation_of_derived_power_pair'])
+
+    def test_folder_number_is_not_silently_used_as_figure_identity(self):
+        r=m.inspect_follow_up_headers(self.source)
+        self.assertEqual(r['folder_comment_binding_review'],['Figure_14/Figure_14.csv','Figure_15/Figure_15_a.csv','Figure_16/Figure_16_a.csv'])
+
+    def test_followup_header_identity_or_role_drift_fails(self):
+        s=deepcopy(self.source); s['follow_up_header_review']['headers'][0]['header']='sep=,\nchanged\nphase,time\n'
+        with self.assertRaises(ValueError):
+            m.inspect_follow_up_headers(s)
+        s=deepcopy(self.source); s['follow_up_header_review']['numeric_rows_decoded']=1
+        with self.assertRaises(ValueError):
+            m.inspect_follow_up_headers(s)
 
     def test_numeric_exposure_is_not_hidden_as_header_scope(self):
         s=deepcopy(self.source); s['headers'][0]['numeric_rows_decoded']=1
