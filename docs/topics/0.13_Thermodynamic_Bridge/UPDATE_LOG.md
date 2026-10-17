@@ -1,3 +1,15 @@
+<!-- source-feedback-protocol-v1:start -->
+## 2026-10-18 - Stable source-feedback false positive and actual readout admission
+
+RESULT: A linear mechanical spring can give an exact positive incident-source cubic while the full four-state cavity/mechanical fixed-point branch is locally stable. This is a physical source-feedback comparator, not observer metadata changing reality or measured UET nonlinearity.
+WHAT_CHANGED: Added Result/T13_SOURCE_FEEDBACK_PROTOCOL_2026-10-18.md, curated source/header references, exact producer/tests, contract and one compact canonical t13_source_feedback.json. Derived full source polynomial, all-branch Hurwitz certificate, ideal-port occupation inverse and complex-mismatch ambiguity. Inspected a new public processed archive without downloading it or scoring rows.
+VERIFICATION: 17 controls PASS, including exact drift determinant and stability polynomial, no-clipping/domain rejection, magnitude-versus-square and phase/mismatch controls. Producer emit/check PASS; standalone/explicit changed-path completeness audit zero errors across 12 contracts; six report-local links resolve. Foundation remains FAIL/BLOCKED with 224 pre-existing errors and 62 registry entries; existing manifest path audit PASS read-only, not new-asset registration or physics promotion.
+SOURCE_EVIDENCE: Zenodo processed-data archive exists (CC-BY-4.0); 95 directory entries and two CSV three-line headers inspected by bounded ranges. Actual comma separator overrides README semicolon wording. Public author code pinned at 28b419e385fa456f589d991d2f367849ffd09404. Supplementary calibration methods were inspected in memory on pages 1-5; calibration is NOT absent from source. No PDF/ZIP/member copy retained, no numerical response record decoded, no author code executed.
+CONTROLLING_BLOCKER: static_cubic_source_score=NOT_ADMITTED. The inspected columns are detuning and S21 absolute, not the required static internal-source/displacement pair. Ideal magnitude can recover occupation under real deembedded port assumptions; actual complex mismatch can leave occupation multivalued, and state/branch and joint calibration bounds remain to be admitted.
+CLAIM_BOUNDARY: Ordinary optomechanical counterexample and protocol review only. Source device has Kerr/dynamic effects not set to zero as an accepted fit. Prior action-class uniqueness limitation remains. Article NC-ND license differs from data/code CC-BY; no article figure adaptation or raw source copy published.
+NEXT_ACTION: Inspect available phase/time/calibration product headers and same-state method coverage before asking for external records or scoring values. Resolve the source/readout candidate set without assuming the constitutive law being tested; do not substitute a native-instrument benchmark for a UET test. This is a checkpoint, not Full Topic13 closure.
+<!-- source-feedback-protocol-v1:end -->
+
 <!-- action-discrimination-v1:start -->
 ## 2026-10-18 - Action-class counterexample and conditional static falsifier
 

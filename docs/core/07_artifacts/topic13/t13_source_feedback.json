@@ -1,0 +1,123 @@
+{
+  "status": "STABLE_SOURCE_FEEDBACK_COUNTEREXAMPLE_AND_HEADER_ADMISSION",
+  "linear_spring_apparent_source_polynomial": [
+    "9/16",
+    "0",
+    "1",
+    "0",
+    "0"
+  ],
+  "true_mechanical_duffing": "0",
+  "source_corrected_law": "hbar*G*n=k*x; incident power is not internal occupation",
+  "all_t_nonnegative_stability_certificate": {
+    "H2": [
+      "5867/32",
+      "3/2"
+    ],
+    "H3": [
+      "315375/256",
+      "11579/8",
+      "15"
+    ],
+    "boundary": "local linear stability of declared mathematical branch, not global or real-apparatus validation"
+  },
+  "jacobian_polynomial_exact_controls": 10,
+  "inverse_control": {
+    "transmission_real": "19/25",
+    "transmission_imag": "-8/25",
+    "magnitude_squared": "17/25",
+    "recovered_occupation": "1",
+    "magnitude_only_detuning_candidates": [
+      "-1",
+      "1"
+    ],
+    "complex_recovered_detuning": "1"
+  },
+  "complex_mismatch_control": {
+    "magnitude_squared": "13/20",
+    "detuning_candidates": [
+      "0",
+      "-16/7"
+    ],
+    "occupation_candidates": [
+      "1",
+      "49/305"
+    ],
+    "boundary": "abstract calibrated transfer, not measured data; circle coefficient magnitude need not equal drive coupling"
+  },
+  "inspected_headers": [
+    {
+      "member": "Self-Sustained Oscillations Non-Linear Optomechanical System/Figure_3/Figure_3_c_Experiment.csv",
+      "role": "experiment",
+      "delimiter": ",",
+      "columns": [
+        "detuning Delta",
+        "S21 absolute"
+      ],
+      "header_identity_verified": true,
+      "whole_member_crc_verified": false
+    },
+    {
+      "member": "Self-Sustained Oscillations Non-Linear Optomechanical System/Figure_3/Figure_3_c_Simulation.csv",
+      "role": "simulation",
+      "delimiter": ",",
+      "columns": [
+        "detuning Delta",
+        "S21 absolute"
+      ],
+      "header_identity_verified": true,
+      "whole_member_crc_verified": false
+    }
+  ],
+  "archive_readme_delimiter": "semicolon",
+  "member_level_delimiter_precedence": true,
+  "admission": {
+    "static_cubic_source_score": "NOT_ADMITTED",
+    "reason": "Inspected displayed-data columns are detuning and absolute scattering, not jointly calibrated static displacement and prepared source occupation; stable/oscillating operator and branch must be classified before inversion",
+    "positive_route": "Under independently calibrated ideal real-port single-pole stationary transfer, absolute scattering can determine photon occupation without phase; complex mismatch can also make occupation multivalued",
+    "next_inputs": [
+      "same-state application and joint uncertainty of the published independent calibration methods, including device-input photon flux and complex mismatch",
+      "stationary operating-region and offset/phase or independently justified branch record",
+      "independent displacement/source relation, Kerr and thermal/geometry corrections with joint bounds",
+      "eligible reserved records and full member checksum before numerical scoring"
+    ],
+    "boundary": "Header-only preflight does not prove no other archive member can supply additional observables; source calibration methods were inspected, not declared absent"
+  },
+  "physical_acceptance": false,
+  "numeric_rows_scored": 0,
+  "numeric_rows_decoded": 0,
+  "new_UET_terms": 0,
+  "large_archive_download": false,
+  "claim_boundary": "ordinary comparator source-feedback/protocol result; no UET material map, intrinsic nonlinearity measurement or unique theory validation",
+  "contract_id": "T13_SOURCE_FEEDBACK_PROTOCOL_V1",
+  "contract_sha256": "0c87a2c26f081c6754e8a29626cfc6a4ee996f8b70e47218ded4e8dca6cf4c6b",
+  "contract_review_status": "INCOMPLETE",
+  "identities": [
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/Research_T13_Source_Feedback.py",
+      "kind": "working_file",
+      "role": "code",
+      "sha256": "7219cf590dbdb8799b14b5ef76377f5d4d7545e699f7f12a37c58864cfb23427"
+    },
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/test_t13_source_feedback.py",
+      "kind": "working_file",
+      "role": "code",
+      "sha256": "e2ee78fca85d8670ff48a556c01ebd43018df91c8335b08568b4d9291c663471"
+    },
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/T13_SOURCE_FEEDBACK_PROTOCOL_2026-10-18.md",
+      "kind": "working_file",
+      "role": "evidence",
+      "sha256": "a07ad3f549071860500636369cab07461af5cc573e2fa6777126f011593be65d"
+    },
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/source_feedback_protocol_references.json",
+      "kind": "working_file",
+      "role": "input",
+      "sha256": "fe1bd01b0e03e70363876a0022030a668c19ebea72c1745d3e03ba723bd96563"
+    }
+  ],
+  "generator_path": "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/Research_T13_Source_Feedback.py",
+  "evidence_class": "FORMAL_PROTOCOL_AND_HEADER_METADATA_ONLY"
+}

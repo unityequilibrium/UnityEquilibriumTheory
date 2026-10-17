@@ -1,0 +1,200 @@
+"""Formal source-feedback counterexample and header-only source admission.
+
+No archive download, numerical experimental rows, trajectory or physical score.
+"""
+from __future__ import annotations
+import argparse
+from fractions import Fraction as Q
+import hashlib
+from itertools import permutations
+import json
+from pathlib import Path
+import shutil
+import sys
+
+ROOT=Path(__file__).resolve().parents[5]
+sys.path.insert(0,str(ROOT))
+from docs.scripts.audit.audit_calculation_completeness import artifact_metadata,load_json
+
+SOURCE="docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/source_feedback_protocol_references.json"
+CONTRACT="docs/topics/0.13_Thermodynamic_Bridge/calculation_contracts/source_feedback.json"
+OUTPUT="docs/core/07_artifacts/topic13/t13_source_feedback.json"
+
+
+def incident_source_coefficients(k,beta,a,detuning,g):
+    if k<=0 or beta<0 or a<=0 or g<=0:
+        raise ValueError('outside positive-stiffness declared comparator domain')
+    d=a*a+detuning*detuning
+    return (k*d,2*k*detuning*g,k*g*g+beta*d,2*beta*detuning*g,beta*g*g)
+
+
+def evaluate_source(coefficients,x):
+    return sum(c*x**j for j,c in enumerate(coefficients,1))
+
+
+def characteristic_coefficients(a,gamma,w2,c,g,n,delta):
+    if min(a,gamma,w2,c,g)<=0 or n<0:
+        raise ValueError('invalid local stability inputs')
+    d=a*a+delta*delta
+    return (gamma+2*a,w2+2*a*gamma+d,2*a*w2+gamma*d,w2*d+2*c*g*n*delta)
+
+
+def hurwitz(coeffs):
+    a1,a2,a3,a4=coeffs
+    h2=a1*a2-a3
+    h3=a3*h2-a1*a1*a4
+    return h2,h3,all(x>0 for x in (*coeffs,h2,h3))
+
+
+def drift_matrix(a,gamma,w2,c,g,delta,ar,ai):
+    return ((Q(0),Q(1),Q(0),Q(0)),(-w2,-gamma,2*c*ar,2*c*ai),
+            (-g*ai,Q(0),-a,-delta),(g*ar,Q(0),delta,-a))
+
+
+def determinant(matrix):
+    if len(matrix)!=4 or any(len(r)!=4 for r in matrix):
+        raise ValueError('this exact control is only a 4x4 determinant')
+    result=Q(0)
+    for perm in permutations(range(4)):
+        inversions=sum(perm[i]>perm[j] for i in range(4) for j in range(i+1,4))
+        term=Q(-1 if inversions%2 else 1)
+        for i in range(4):
+            term*=matrix[i][perm[i]]
+        result+=term
+    return result
+
+
+def check_characteristic_at_fixed_point(x,ar,ai):
+    a,gamma,w2,c,g=Q(3,4),Q(10),Q(1),Q(1),Q(1)
+    n=ar*ar+ai*ai
+    if n!=x or a*ai!=x*ar:
+        raise ValueError('quadratures do not describe the declared fixed point')
+    j=drift_matrix(a,gamma,w2,c,g,x,ar,ai)
+    a1,a2,a3,a4=characteristic_coefficients(a,gamma,w2,c,g,n,x)
+    # Degree <=4; five distinct exact values certify this fixed-point polynomial.
+    for s in map(Q,(-1,0,1,2,3)):
+        matrix=[[s*int(i==k)-j[i][k] for k in range(4)] for i in range(4)]
+        if determinant(matrix)!=s**4+a1*s**3+a2*s**2+a3*s+a4:
+            raise ValueError('characteristic polynomial differs from actual drift matrix')
+    if not hurwitz((a1,a2,a3,a4))[2]:
+        raise ValueError('fixed point not certified stable')
+    return 5
+
+
+def transmission_components(a,port,delta):
+    if not 0<port<=a:
+        raise ValueError('need declared passive hanger port convention')
+    d=a*a+delta*delta
+    return 1-port*a/d,-port*delta/d
+
+
+def infer_occupation(a,port,input_flux,magnitude_squared):
+    """Stationary calibrated inverse, not an arbitrary magnitude normalization."""
+    if not 0<port<=a or input_flux<0 or not 0<=magnitude_squared<1:
+        raise ValueError('invalid calibrated single-pole inverse domain')
+    d=port*(2*a-port)/(1-magnitude_squared)
+    if d<a*a:
+        raise ValueError('magnitude incompatible with declared transfer; do not clip')
+    return input_flux*(1-magnitude_squared)/(2*a-port),d-a*a
+
+
+def infer_complex_port(port,tr,ti):
+    if port<=0:
+        raise ValueError('port must be positive')
+    denominator=(1-tr)**2+ti*ti
+    if denominator==0:
+        raise ValueError('no finite inverse at unit transmission')
+    return port*(1-tr)/denominator,-port*ti/denominator
+
+
+def mismatch_magnitude_squared(a,magnitude,cosine,sine,delta):
+    """Explicit complex circle coefficient; not equated to input-port coupling."""
+    if a<=0 or magnitude<=0 or cosine*cosine+sine*sine!=1:
+        raise ValueError('need calibrated positive rates and exact phase convention')
+    return 1+(magnitude*magnitude-2*magnitude*a*cosine+2*magnitude*delta*sine)/(a*a+delta*delta)
+
+
+def inspect_curated_headers(source):
+    rows=[]
+    for item in source['headers']:
+        text=item['header']
+        if hashlib.sha256(text.encode('utf-8')).hexdigest()!=item['raw_header_sha256']:
+            raise ValueError('curated raw header identity changed')
+        lines=text.splitlines()
+        if len(lines)!=3 or not lines[0].startswith('sep='):
+            raise ValueError('exactly three source header lines required, no numeric rows')
+        delimiter=lines[0][4:]
+        columns=lines[2].split(delimiter)
+        if columns!=['detuning Delta','S21 absolute']:
+            raise ValueError('source schema changed; new protocol review required')
+        if item['numeric_rows_decoded']!=0 or item['whole_member_crc_verified']:
+            raise ValueError('header-only scope changed; review actual source role')
+        rows.append({'member':item['member'],'role':'experiment' if 'Experiment' in lines[1] else 'simulation',
+                     'delimiter':delimiter,'columns':columns,'header_identity_verified':True,
+                     'whole_member_crc_verified':False})
+    if {r['role'] for r in rows}!={'experiment','simulation'}:
+        raise ValueError('experiment/simulation distinction lost')
+    return rows
+
+
+def calculate(source):
+    coeffs=incident_source_coefficients(Q(1),Q(0),Q(3,4),Q(0),Q(1))
+    if coeffs!=(Q(9,16),Q(0),Q(1),Q(0),Q(0)):
+        raise ValueError('linear-spring apparent-cubic identity failed')
+    # Positive coefficient certificates in t=x^2; proof derives them for all t>=0.
+    h2=(Q(5867,32),Q(3,2))
+    h3=(Q(315375,256),Q(11579,8),Q(15))
+    for t in (Q(0),Q(1,4),Q(1)):
+        cs=(Q(23,2),Q(265,16)+t,Q(57,8)+10*t,Q(9,16)+3*t)
+        observed=hurwitz(cs)
+        if observed[0]!=h2[0]+h2[1]*t or observed[1]!=sum(v*t**i for i,v in enumerate(h3)):
+            raise ValueError('Hurwitz polynomial certificate failed')
+    count=check_characteristic_at_fixed_point(Q(1),Q(3,5),Q(4,5))
+    count+=check_characteristic_at_fixed_point(Q(9,16),Q(3,5),Q(9,20))
+    a,port,flux=Q(3,4),Q(1,2),Q(25,8)
+    tr,ti=transmission_components(a,port,Q(1))
+    occupation,delta2=infer_occupation(a,port,flux,tr*tr+ti*ti)
+    if occupation!=1 or delta2!=1 or infer_complex_port(port,tr,ti)!=(a,Q(1)):
+        raise ValueError('conditional source/readout inversion failed')
+    mismatch_candidates=(Q(0),Q(-16,7))
+    if any(mismatch_magnitude_squared(Q(1),Q(1,2),Q(3,5),Q(4,5),d)!=Q(13,20) for d in mismatch_candidates):
+        raise ValueError('complex mismatch ambiguity witness failed')
+    return {'status':'STABLE_SOURCE_FEEDBACK_COUNTEREXAMPLE_AND_HEADER_ADMISSION',
+        'linear_spring_apparent_source_polynomial':[str(c) for c in coeffs],
+        'true_mechanical_duffing':'0','source_corrected_law':'hbar*G*n=k*x; incident power is not internal occupation',
+        'all_t_nonnegative_stability_certificate':{'H2':[str(x) for x in h2],'H3':[str(x) for x in h3],
+            'boundary':'local linear stability of declared mathematical branch, not global or real-apparatus validation'},
+        'jacobian_polynomial_exact_controls':count,
+        'inverse_control':{'transmission_real':str(tr),'transmission_imag':str(ti),'magnitude_squared':str(tr*tr+ti*ti),
+            'recovered_occupation':str(occupation),'magnitude_only_detuning_candidates':['-1','1'],'complex_recovered_detuning':'1'},
+        'complex_mismatch_control':{'magnitude_squared':'13/20','detuning_candidates':['0','-16/7'],
+            'occupation_candidates':['1','49/305'],'boundary':'abstract calibrated transfer, not measured data; circle coefficient magnitude need not equal drive coupling'},
+        'inspected_headers':inspect_curated_headers(source),
+        'archive_readme_delimiter':source['data_record']['readme']['advertised_separator'],
+        'member_level_delimiter_precedence':True,
+        'admission':source['admission'],'physical_acceptance':False,'numeric_rows_scored':0,
+        'numeric_rows_decoded':0,'new_UET_terms':0,'large_archive_download':False,
+        'claim_boundary':'ordinary comparator source-feedback/protocol result; no UET material map, intrinsic nonlinearity measurement or unique theory validation'}
+
+
+def record():
+    return {**calculate(load_json(ROOT/SOURCE)),**artifact_metadata(load_json(ROOT/CONTRACT),ROOT),
+            'generator_path':Path(__file__).relative_to(ROOT).as_posix(),'evidence_class':'FORMAL_PROTOCOL_AND_HEADER_METADATA_ONLY'}
+
+
+def main():
+    p=argparse.ArgumentParser(description=__doc__)
+    mode=p.add_mutually_exclusive_group(required=True)
+    mode.add_argument('--emit',action='store_true'); mode.add_argument('--check',action='store_true')
+    args=p.parse_args(); text=json.dumps(record(),ensure_ascii=False,indent=2,allow_nan=False)+'\n'; path=ROOT/OUTPUT
+    if args.emit:
+        if shutil.disk_usage(ROOT).free<100*1024*1024:
+            raise SystemExit('Insufficient free space')
+        path.write_text(text,encoding='utf-8',newline='\n')
+    elif not path.exists() or path.read_text(encoding='utf-8')!=text:
+        raise SystemExit('Missing/drifted evidence; check does not write')
+    print('STABLE_SOURCE_FEEDBACK_COUNTEREXAMPLE_AND_HEADER_ADMISSION; no physical score')
+
+
+if __name__=='__main__':
+    main()
