@@ -35,6 +35,29 @@ def parse_rows(text):
     return values
 
 
+def gain_enclosure(values,lower):
+    """Optimistic closed range m_i=g*t_i+e_i, lower<=t_i<=1.
+
+    This optimizes a necessary envelope, not a cavity fit or adopted gain/noise.
+    Detuning/order constraints are relaxed, so compatibility is not sufficient.
+    """
+    if not values or not 0<=lower<=1 or min(values)<0 or max(values)<=0:
+        raise ValueError('need nonnegative magnitudes with a positive maximum and 0<=lower<=1')
+    lo,hi=min(values),max(values)
+    gap=lower*hi-lo
+    error=max(Q(0),gap/(1+lower))
+    optimizer=(hi+lo)/(1+lower) if gap>0 else hi
+    return {'closed_envelope_gain_only_possible':gap<=0,
+            'noiseless_gain_lower_bound':str(hi),
+            'noiseless_gain_upper_bound':str(lo/lower) if lower else None,
+            'largest_lower_ratio_allowing_noiseless_gain':str(lo/hi),
+            'unit_gain_minimum_uniform_amplitude_error':str(max(Q(0),hi-1,lower-lo)),
+            'optimistic_minimum_uniform_amplitude_error':str(error),
+            'envelope_optimizer_NOT_adopted_gain':str(optimizer),
+            'applied_gain_correction':False,'estimated_noise_distribution':False,
+            'boundary':'necessary closed-envelope compatibility, not a fit, physical uncertainty estimate or sufficient detuning/stability test'}
+
+
 def profile(rows,internal,external):
     if internal<0 or external<=0:
         raise ValueError('outside central passive hanger domain')
@@ -55,6 +78,7 @@ def profile(rows,internal,external):
             'central_ideal_minimum_magnitude':str(lower),
             'central_ideal_minimum_squared':str(lower*lower),
             'domain_counts':counts,'clipped_or_dropped_rows':0,
+            'global_gain_enclosure':gain_enclosure([m for _,m in rows],lower),
             'boundary':'central rounded calibration domain only; inside-domain is not physical admission, outside-domain is not theory rejection'}
 
 

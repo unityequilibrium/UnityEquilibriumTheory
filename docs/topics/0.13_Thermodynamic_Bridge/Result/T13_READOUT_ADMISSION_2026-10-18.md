@@ -42,4 +42,37 @@ The earlier exact rational gcd controls must NOT be applied directly to these ro
 
 The next useful source check is the calibration/processing and noise record linked to this exact curve. Do not fit an unknown gain to the comparison rows and call it independent calibration; do not acquire large Fourier products to solve this readout uncertainty without a source binding. Native apparatus compatibility would still not resolve the earlier UET/comparator equivalence or supply an SI Phi anchor.
 
+## Can one global gain correction alone repair the domain mismatch?
+
+The authors' [arXiv v2 methods](https://arxiv.org/html/2510.01775v2#S3.SS1), section III.1, explicitly describe complex circle fitting with gain, phase/delay and impedance mismatch. This is an author preprint, not a newly verified copy of the final supplement: its version/section numbering is kept distinct. It supports the existence of a calibration method, not an exact-curve gain/mismatch/noise packet for our CSV. The illustrative calibration working point differs from Set III. No preprint parameter or quality-factor identity is substituted into the final-version rate ratio. The mean-field simulation's omission of explicit noise is not evidence that measured readout noise vanishes.
+
+Test a deliberately permissive envelope, not an independent calibration:
+
+```text
+m_i=g*t_i+e_i, g>0, l<=t_i<=1, |e_i|<=eta
+l=17/58; m_min=min(m_i); m_max=max(m_i).
+```
+
+The upper endpoint is the CLOSED envelope; finite stationary inversion is stricter. Each t_i is allowed to vary independently, ignoring detuning and stability constraints. Thus failure of this permissive envelope rules out a noiseless constant-gain-only explanation of the central ideal range; success would not establish a cavity model.
+
+At eta=0 a common gain requires m_max<=g<=m_min/l. Actual endpoints require simultaneously g>=1.3560284 and g<=0.5158183. No such gain exists. A simple constant normalization factor alone cannot repair all rows under this central real-port assumption. No gain correction was applied.
+
+For a uniform residual allowance, the necessary conditions are eta>=m_max-g, eta>=g*l-m_min and eta>=0. Multiplying the first by l and adding the second eliminates g. The optimistic minimax envelope is
+
+```text
+eta_star=max(0,(l*m_max-m_min)/(1+l)).
+```
+
+When positive, equality is attained by the envelope optimizer g_star=(m_max+m_min)/(1+l), balancing both endpoint violations. This is an algebraic lower bound over a relaxed range, NOT a fitted physical gain or a noise estimate. Here eta_star is about 0.1904476 in the REPORTED amplitude units; a locked unit gain instead needs an envelope of at least 0.3560284. Neither number is a standard deviation, confidence interval, measured noise floor or accepted error budget. No row was changed and no target-fit gain was adopted as calibration.
+
+Alternatively, a noiseless global gain could satisfy the relaxed range only if the actual lower ratio l were at most m_min/m_max, about 0.1114933. This is a required calibration change for that particular explanation, not an assertion that the independently published central ratio is wrong. Uncertainty or complex mismatch may change the real admissible range. Without an independently supported lower bound on that ratio, the central-domain diagnosis cannot be upgraded to rejection. If a valid lower bound l_0 is available, the same monotone formula at l_0 gives a conservative necessary envelope; it still requires an independently justified readout/noise model before statistical use.
+
+**Narrowed decision:** do not spend another wave searching for one scalar normalization that makes this curve exact. The next useful packet must address noise and/or frequency-dependent or complex readout corrections and their joint calibration uncertainty. Arbitrary frequency-dependent gain fitted to every target would erase the test rather than provide calibration. This result rejects only the noiseless constant-gain repair of the conditional central range, not the source's nonlinear model or UET.
+
+## Scope checkpoint: the native readout diagnostic is not the UET discriminator
+
+The [approved observer-aware design](../RESEARCH_DESIGN_OBSERVABLE_DISCRIMINATION_2026-10-17.md) concerns the inherited mechanical nonlinear kernel, with a same-state material/operator mapping and signed harmonic readout. A native cavity S21 magnitude is not that kernel. The [action-class result](T13_ACTION_DISCRIMINATION_2026-10-18.md) also demonstrates why fitting a shared scalar comparator cannot identify a uniquely UET mechanism.
+
+There are therefore TWO distinct dependencies: the native diagnostic needs an admitted measurement-error/correction packet; the UET research question additionally needs the material/source/kernel correspondence or an independent distinguishing constraint. Solving the former does not solve the latter. This wave closes the constant-gain-only repair question; do not expand it into an unlimited native-apparatus benchmark. Return to the original kernel's remaining correspondence/feasibility decision before further cavity data acquisition. This is not a declaration that every UET hypothesis is untestable.
+
 Reproduction: [producer](../Code/03_Research/Research_T13_Readout_Admission.py), [controls](../Code/03_Research/test_t13_readout_admission.py), [contract](../calculation_contracts/readout_admission.json), [canonical diagnostic](../../../core/07_artifacts/topic13/t13_readout_admission.json). Emit/check are offline and deterministic from the small verified CSV and manifest; no repeated network fetch is needed.

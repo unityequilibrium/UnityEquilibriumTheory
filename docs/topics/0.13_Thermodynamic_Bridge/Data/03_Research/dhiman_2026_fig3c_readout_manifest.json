@@ -44,6 +44,18 @@
     "relative_power": "Single nominal-power sweep; input photon flux varies with photon energy unless source power frequency dependence is traced. Not used here.",
     "detuning_unit": "Header says detuning Delta without unit; normalized-axis correspondence must be verified before any dimensional residual is scored."
   },
+  "follow_up_method_review": {
+    "url": "https://arxiv.org/html/2510.01775v2#S3.SS1",
+    "version": "arXiv:2510.01775v2, distinct from version-of-record supplement",
+    "scope": "Section III.1 circle-fitting method explicitly includes gain/phase/delay and impedance mismatch; section VIII.2 mean-field simulation omits explicit noise.",
+    "boundary": "Method existence and noiseless mean-field simulation do not identify exact-curve measurement-noise/gain uncertainties. No preprint values or quality-factor identity adopted. Illustrative calibration state is not substituted for Set III.",
+    "new_data_acquired": false
+  },
+  "gain_envelope_diagnostic": {
+    "model": "reported amplitude m_i=g*t_i+e_i; one g>0, independently variable t_i in closed central ideal range [l,1]",
+    "role": "optimistic necessary range-enclosure test, not calibration, cavity fit, physical rejection or statistical noise estimate",
+    "policy": "No computed envelope optimizer is applied as gain correction. Unknown physical uncertainty and complex mismatch remain open; all rows retained."
+  },
   "decision": {
     "purpose": "Check pointwise compatibility with the CENTRAL ideal transfer domain, not physical acceptance/rejection",
     "unknowns": [

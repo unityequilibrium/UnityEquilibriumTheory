@@ -1,3 +1,14 @@
+<!-- gain-enclosure-v1:start -->
+## 2026-10-18 - Constant-gain repair excluded; native-versus-UET scope checkpoint
+
+RESULT: A single noiseless gain cannot place every actual Fig3c magnitude in the central real-port range: it would require g>=1.3560284 and g<=0.5158183 simultaneously. Derived an optimistic necessary uniform-amplitude enclosure, eta_star=max(0,(l*m_max-m_min)/(1+l)), about 0.1904476 reported amplitude units at l=17/58. This is NOT a measured uncertainty/noise floor, accepted tolerance or applied correction. It excludes only constant-gain-only repair of the conditional central range, not physical theory.
+SOURCE_REVIEW: Author arXiv v2 section III.1 describes complex circle fitting with gain/phase/delay/mismatch; version and section numbering explicitly distinct from final supplement. Its illustrative calibration state is not Set III, and no values or quality-factor identity adopted. Mean-field omission of explicit noise does not imply noiseless measurements. Exact-curve correction/noise packet still unlocated in inspected records; no global absence claim.
+WHAT_CHANGED: Existing readout producer/tests, source manifest, report, contract and canonical artifact extended. No additional data acquisition/copy. Added a formal closed-envelope minimax proof and ratio condition l<=m_min/m_max for a noiseless gain explanation, preserving all rows and unknown errors.
+VERIFICATION: 11 controls PASS; producer emit/check PASS; exact gain/error bounds and invalid/degenerate domains tested. No global confidence or nonlinear feasibility claim. Earlier 1001-row profile and source hashes unchanged.
+SCOPE_CHECKPOINT: Re-read approved observer-aware design and W1/W2/W3 decision. Original target is a same-state mechanical nonlinear kernel, not native cavity magnitude. Native readout errors and UET material/operator correspondence are separate dependencies; even a perfect native fit does not supply the missing UET relation or defeat action-class equivalence.
+NEXT_ACTION: Stop unchanged scalar-gain rescue and do not grow an unlimited native-apparatus benchmark. Return to the original kernel's correspondence/feasibility controller and inspect current owner evidence before further cavity acquisition. No claim promoted; goal remains active across this scoped commit.
+<!-- gain-enclosure-v1:end -->
+
 <!-- actual-readout-admission-v1:start -->
 ## 2026-10-18 - Actual low-power processed readout admission
 
