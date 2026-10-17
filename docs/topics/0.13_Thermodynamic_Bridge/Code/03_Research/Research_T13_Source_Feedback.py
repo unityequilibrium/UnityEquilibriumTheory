@@ -139,6 +139,61 @@ def general_phase_free_constraints(n,a,magnitude,cosine,sine,detuning,effective_
     return first,second
 
 
+def shared_scale_polynomial(a,port,relative_power,r,detuning):
+    """Ascending coefficients in b=K_eff*C/(2*a-port), flux=C*relative_power.
+
+    relative_power denotes linear relative photon flux, not unconverted watts/dBm.
+    Conditional real-port stationary law; C is one common positive source scale.
+    Exact controls only, not a rounded-data hypothesis test.
+    """
+    if relative_power<=0:
+        raise ValueError('positive relative input power required')
+    _,delta2=infer_occupation(a,port,Q(1),r)
+    x=relative_power*(1-r)
+    return (detuning*detuning-delta2,2*detuning*x,x*x)
+
+
+def _trim_polynomial(p):
+    p=list(map(Q,p))
+    while p and p[-1]==0:
+        p.pop()
+    return tuple(p)
+
+
+def _polynomial_remainder(a,b):
+    a=list(_trim_polynomial(a)); b=_trim_polynomial(b)
+    if not b:
+        raise ValueError('zero polynomial divisor')
+    while len(a)>=len(b):
+        scale=a[-1]/b[-1]; offset=len(a)-len(b)
+        for i,value in enumerate(b):
+            a[i+offset]-=scale*value
+        a=list(_trim_polynomial(a))
+    return tuple(a)
+
+
+def common_real_quadratic_candidate(polynomials):
+    """Exact rational gcd decision, not a joint-uncertainty feasibility solver."""
+    if not polynomials:
+        raise ValueError('at least one declared row required')
+    g=()
+    for p in polynomials:
+        p=_trim_polynomial(p)
+        if len(p)>3:
+            raise ValueError('only degree-at-most-two constraints supported')
+        while p:
+            g,p=p,_polynomial_remainder(g,p)
+        if g:
+            g=tuple(c/g[-1] for c in g)
+    if not g:
+        return (),True  # Every constraint was zero: no information, not validation.
+    if len(g)==1:
+        return g,False
+    if len(g)==2:
+        return g,True
+    return g,g[1]*g[1]-4*g[2]*g[0]>=0
+
+
 def inspect_curated_headers(source):
     rows=[]
     for item in source['headers']:
@@ -234,6 +289,13 @@ def calculate(source):
         raise ValueError('phase-free detuned control failed')
     if general_phase_free_constraints(Q(1),Q(1),Q(1,2),Q(3,5),Q(4,5),Q(-1),Q(1),Q(1),Q(13,20))!=(0,0):
         raise ValueError('general complex-transfer constraints failed')
+    shared_rows=(shared_scale_polynomial(a,port,Q(25,8),Q(17,25),Q(0)),
+                 shared_scale_polynomial(a,port,Q(45,8),Q(37,45),Q(1,2)))
+    common,exists=common_real_quadratic_candidate(shared_rows)
+    incompatible=shared_scale_polynomial(a,port,Q(25,4),Q(17,25),Q(0))
+    rejected,rejected_exists=common_real_quadratic_candidate((shared_rows[0],incompatible))
+    if (common,exists,rejected,rejected_exists)!=((Q(-1),Q(1)),True,(Q(1),),False):
+        raise ValueError('shared source-scale discrimination failed')
     return {'status':'STABLE_SOURCE_FEEDBACK_COUNTEREXAMPLE_AND_HEADER_ADMISSION',
         'linear_spring_apparent_source_polynomial':[str(c) for c in coeffs],
         'true_mechanical_duffing':'0','source_corrected_law':'hbar*G*n=k*x; incident power is not internal occupation',
@@ -248,6 +310,11 @@ def calculate(source):
             'detuned_residual':str(detuned),'wrong_sign_detuned_residual':str(wrong),
             'boundary':'necessary condition under independent calibration; no unique state reconstruction or measured acceptance',
             'complex_mismatch':'simultaneous latent-n constraints defined, not a global joint-uncertainty solver'},
+        'shared_source_scale_controls':{'consistent_gcd':[str(x) for x in common],
+            'consistent_common_real_candidate':exists,'inconsistent_gcd':[str(x) for x in rejected],
+            'inconsistent_common_real_candidate':rejected_exists,
+            'identified_combination':'b=K_eff*C/(2*a-port); K_eff and absolute flux scale C not separately identified',
+            'boundary':'exact rational controls, independently known real-port transfer and relative input; no measured rejection or error-bound claim'},
         'inspected_headers':inspect_curated_headers(source),
         'follow_up_header_review':inspect_follow_up_headers(source),
         'archive_readme_delimiter':source['data_record']['readme']['advertised_separator'],

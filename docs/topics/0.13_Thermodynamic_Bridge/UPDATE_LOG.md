@@ -1,3 +1,14 @@
+<!-- shared-source-scale-v1:start -->
+## 2026-10-18 - Shared-scale model-class rejection and actual averaging
+
+RESULT: Derived a common-parameter rejection route that need not separately identify absolute input flux C or K_eff. Under independently admitted real-port transfer and relative photon-flux settings, all stationary rows must share one root of their q_i(b), b=K_eff*C/(2*a-c_p). Exact controls show individually feasible rows with NO common root; row-wise fitting would hide this discrepancy. C and K_eff remain scale-degenerate, so surviving b is not an SI anchor.
+WHAT_CHANGED: Extended the existing proof section H, exact degree<=2 rational gcd decision, controls, source-role metadata, contract and canonical artifact. Recorded the actual pulsed complex-average operator and the difference between |mean(t)|^2 and mean(|t|^2). No new UET term, measured row or large source copy introduced.
+VERIFICATION: 30 unittest controls PASS; producer emit/check PASS; explicit changed-path completeness check zero errors across 12 contracts. Exact gcd is NOT an acceptance test on rounded experimental numbers; physical use still requires joint error/omission sets. No global interval solver or measured threshold claimed.
+CONTROLLING_BLOCKER: Relative photon-flux lineage, independently calibrated real-port transfer, common-scale/parameter drift bounds and a justified stationary selection/error policy must be admitted before physical scoring. Absolute C/K_eff separation and raw phase are not universal prerequisites for this narrower rejection task. Model-generated stable roots are not independent stationarity evidence.
+CLAIM_BOUNDARY: This is a native effective-model necessary condition and nuisance-parameter identifiability result, not UET-specific validation. Main article's complex pulse averaging does not justify stationary inversion in its self-oscillating regions. Previous foundation/action-class limitations unchanged.
+NEXT_ACTION: Inspect concrete calibration/state products against these reduced prerequisites; do not expand abstract controls instead of admitting a physical packet. Table-only web retrieval failed at publisher authentication redirect; no values inferred. Goal remains active; scoped local checkpoint only, no push/contact/worktree.
+<!-- shared-source-scale-v1:end -->
+
 <!-- phase-free-discrimination-v1:start -->
 ## 2026-10-18 - Phase-free necessary-condition discrimination
 

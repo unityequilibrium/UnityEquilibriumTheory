@@ -114,6 +114,48 @@ class SourceFeedbackTests(unittest.TestCase):
             with self.assertRaises(ValueError):
                 m.transmission_components(Q(1),p,Q(1))
 
+    def test_shared_scale_two_rows_break_resonant_sign_ambiguity(self):
+        first=m.shared_scale_polynomial(Q(3,4),Q(1,2),Q(25,8),Q(17,25),Q(0))
+        second=m.shared_scale_polynomial(Q(3,4),Q(1,2),Q(45,8),Q(37,45),Q(1,2))
+        self.assertEqual(first,(-1,0,1)); self.assertEqual(second,(-2,1,1))
+        self.assertEqual(m.common_real_quadratic_candidate((first,second)),((-1,1),True))
+        self.assertEqual(m.common_real_quadratic_candidate((second,first)),((-1,1),True))
+
+    def test_individually_feasible_rows_can_reject_every_common_scale(self):
+        rows=((-1,0,1),(-1,0,4))
+        self.assertTrue(all(m.common_real_quadratic_candidate((p,))[1] for p in rows))
+        self.assertEqual(m.common_real_quadratic_candidate(rows),((1,),False))
+
+    def test_gcd_does_not_confuse_complex_roots_with_real_states(self):
+        self.assertEqual(m.common_real_quadratic_candidate(((1,0,1),(2,0,2))),((1,0,1),False))
+        self.assertEqual(m.common_real_quadratic_candidate(((0,0,1),)),((0,0,1),True))
+
+    def test_zero_or_constant_constraints_are_explicit(self):
+        self.assertEqual(m.common_real_quadratic_candidate(((0,0),())),((),True))
+        self.assertEqual(m.common_real_quadratic_candidate(((0,),(-1,1))),((-1,1),True))
+        self.assertEqual(m.common_real_quadratic_candidate(((2,),)),((1,),False))
+        for rows in ((),((1,2,3,4),)):
+            with self.assertRaises(ValueError):
+                m.common_real_quadratic_candidate(rows)
+
+    def test_absolute_flux_and_kerr_scale_are_not_separately_identified(self):
+        for scale in (Q(1,7),Q(1),Q(19,3)):
+            c=Q(5,2)*scale; k=Q(7,4)/scale
+            self.assertEqual(k*c,Q(35,8))
+
+    def test_shared_scale_does_not_admit_zero_power_or_unit_transmission(self):
+        for power,r in ((Q(0),Q(17,25)),(Q(-1),Q(17,25)),(Q(1),Q(1))):
+            with self.assertRaises(ValueError):
+                m.shared_scale_polynomial(Q(3,4),Q(1,2),power,r,Q(0))
+
+    def test_complex_average_magnitude_is_not_average_intensity(self):
+        samples=((Q(1,2),Q(1,2)),(Q(1,2),Q(-1,2)))
+        mean_re=sum(x[0] for x in samples)/2
+        mean_im=sum(x[1] for x in samples)/2
+        carrier=mean_re*mean_re+mean_im*mean_im
+        intensity=sum(re*re+im*im for re,im in samples)/2
+        self.assertEqual(carrier,Q(1,4)); self.assertEqual(intensity,Q(1,2))
+
     def test_actual_member_headers_override_generic_readme_separator(self):
         rows=m.inspect_curated_headers(self.source)
         self.assertEqual(self.source['data_record']['readme']['advertised_separator'],'semicolon')

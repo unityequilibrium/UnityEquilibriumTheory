@@ -169,4 +169,36 @@ These two polynomial constraints eliminate phase as an independently required re
 
 **Revised next dependency:** raw phase is useful but not logically necessary for this projected falsifier. What is necessary is a matched independent source/transfer calibration, a justified stationary-data role, and bounded joint errors. If those are available from public calibration products, a necessary-condition diagnostic can proceed on magnitude data; if not, do not invent real-port deembedding or reuse model-derived power as independent input. Even a successful native-model comparison would not overcome the earlier UET/comparator equivalence result.
 
+## H. Rejecting a shared model without knowing the absolute input scale
+
+Absolute flux calibration is necessary for a physical occupation or separate K_eff measurement, but not for every model-class rejection. Suppose the stationary, real-deembedded transfer has independently known shared a and c_p. Let p_i>0 be a known RELATIVE PHOTON-FLUX setting and n_in,i=C*p_i with one unknown C>0 shared across the admitted records. Linear relative power needs its known photon-energy/frequency conversion before being called p_i; dBm is not a linear p_i. Frequency-dependent attenuation, gain, linewidth or operating-state drift must be bounded, not silently assigned the same C/a/c_p.
+
+From the transfer independently construct
+
+```text
+d_i=c_p*(2*a-c_p)/(1-R_i)-a^2 >= 0
+X_i=p_i*(1-R_i)
+b=K_eff*C/(2*a-c_p)
+q_i(b)=X_i^2*b^2+2*Delta_i*X_i*b+Delta_i^2-d_i.
+```
+
+Every admitted stationary row of this restricted family must have q_i(b)=0 for ONE common real b. With dimensionless relative flux p_i, b has angular-frequency units and q_i has angular-frequency-squared units. The C-to-K_eff transformation C->lambda*C, K_eff->K_eff/lambda (lambda>0) leaves every q_i unchanged. Consequently, a surviving b cannot identify either physical quantity separately. Additional independent information is needed for those quantities, not necessarily to reject the shared forward-model family.
+
+For exact rational controls, compute the monic polynomial gcd of all q_i. A constant nonzero gcd excludes every common complex root, hence every common real b. A linear gcd has one real candidate; a quadratic additionally requires a nonnegative discriminant. Identically zero constraints give no information, not validation. The verifier explicitly supports degree <=2 only. This is an exact algebraic diagnostic; equality/gcd of rounded measured CSV values is NOT a valid physical rejection rule. For actual measurements use admitted joint error/omission sets and ask whether ANY one common tuple survives. No global interval feasibility implementation or confidence threshold is claimed here.
+
+Two exact controls expose the information gained by sharing parameters:
+
+- q_1=b^2-1 (on resonance) and q_2=b^2+b-2 (detuned) have gcd b-1. The first sign ambiguity is removed without measuring phase or separately calibrating C.
+- q_1=b^2-1 and q_3=4*b^2-1 each admit real candidates alone, but their common gcd is 1. No common b exists. Refitting each row would conceal this incompatibility.
+
+These controls are in the same abstract real-port domain as section G, not measured records or evidence for a new UET coefficient. This restricted native-model route can therefore investigate common-parameter compatibility before requiring an absolute source anchor. Real-port deembedding, relative-input lineage, stationarity and joint errors remain necessary. The complex-mismatch operator in section G cannot be replaced by this shortcut when its real-port conditions are unestablished.
+
+### The actual time-averaging operator is not innocuous
+
+The source's pulsed protocol (main text, pulsed-measurement section and Fig.3) records complex S21(t), waits within a 1.4 s pulse and averages the final 2 ms, with 0.8 s equilibration between pulses. This is evidence for its acquisition/processing method, not independent proof that every plotted point is a static fixed point. The paper deliberately includes self-oscillating regions and uses a different operator there.
+
+In general, |mean(t)|^2 differs from mean(|t|^2); their difference is the nonnegative temporal variance. For t=1/2+i/2 and 1/2-i/2, the former is 1/4 and the latter is 1/2. A magnitude column from an averaged complex carrier cannot be inverted as a sequence of instantaneous stationary magnitudes without a justified state/averaging bound. This is an observer/processing effect; it does not create or remove the source backaction in sections B-C. A model-predicted stable root alone is not an independent measured stationarity check, and post-hoc removal of disagreeing rows is not an admissible selection policy.
+
+**Narrower next prerequisite:** establish relative-flux and real-port calibration lineage and an independently justified stationary selection/error policy for a shared-scale diagnostic. An absolute C/K_eff split and unique phase reconstruction are optional additional identification tasks, not blanket prerequisites for all rejection tests. No measured score is admitted in this wave. The earlier action-class limitation on unique UET claims remains unchanged.
+
 Reproduction: [producer](../Code/03_Research/Research_T13_Source_Feedback.py), [controls](../Code/03_Research/test_t13_source_feedback.py), [contract](../calculation_contracts/source_feedback.json), [canonical output](../../../core/07_artifacts/topic13/t13_source_feedback.json). The curated header/reference file is the input; no numerical experimental row or copied archive is needed for these formal results.
