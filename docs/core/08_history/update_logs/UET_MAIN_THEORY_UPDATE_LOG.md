@@ -1,5 +1,16 @@
 # UET Main-Theory Closure Update Log
 
+<!-- calculation-completeness-adoption-v1:start -->
+## 2026-10-17 - Calculation/observer contract adoption (methodological only)
+
+- Added the scoped matter-space/observer contract and shared coverage inventory.
+- Verification: standalone contract tests plus existing state-dependence, trace-isolation and dissipation tests; detailed results in WORK_LEDGER/2026/2026-10-17.md.
+- Closed: component/observer/identity review requirements are explicit and executable.
+- Open: physical detector, entropy interpretation, SI observable and existing foundation gates remain unresolved. Registry pre-migration path drift remains visible.
+- Claim impact: none; no equation, scientific result artifact or physical threshold changed.
+- Next: review the actual material/operator gap before new physics runs; standard linkage is For Work/30_Calculation_and_Observation_Completeness_Standard.md.
+<!-- calculation-completeness-adoption-v1:end -->
+
 > **Scope:** `docs/core` main-theory closure program
 > **Purpose:** Record completed closure waves, the artifact actually generated,
 > and the next controlling blocker without promoting physical claims.

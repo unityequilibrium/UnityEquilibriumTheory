@@ -1,3 +1,14 @@
+<!-- calculation-completeness-adoption-v1:start -->
+## 2026-10-17 - Scoped calculation and observation coverage adoption
+
+WHAT_CHANGED: Added He-4 and nonlinear formal/physical contract reviews. Exact October 15-17 owner evidence is pinned to 0f17012ffd6ad456c150b10e048efd868ce95588, not merged into this checkout.
+VERIFICATION: Shared contract/observer regression suite and identity checks; no Topic13 scientific producer rerun, new source data, fit or holdout access.
+RESULT: Metadata coverage exists; imported owner lineage stays INCOMPLETE/LOCAL_ONLY. Formal invariants are reused, not rederived; an unavailable pinned object remains a visible gap.
+CONTROLLING_BLOCKER: He-4 needs an admitted same-state condensed model/observable; nonlinear application needs independent kernel/source/readout matching. Existing physics controllers remain authoritative.
+CLAIM_BOUNDARY: No physical prediction, independent validation, calibration or Full Topic13 promotion. Coverage PASS is not scientific closure.
+NEXT_ACTION: Review those named prerequisites using the shared standard before new searches or model runs. Workflow linkage: For Work/30_Calculation_and_Observation_Completeness_Standard.md.
+<!-- calculation-completeness-adoption-v1:end -->
+
 ## 2026-09-24 - Core handoff revalidation
 
 MAJOR_RESULT_CLOSURE: PARTIAL; fresh Core results and exact provenance failure isolated.
