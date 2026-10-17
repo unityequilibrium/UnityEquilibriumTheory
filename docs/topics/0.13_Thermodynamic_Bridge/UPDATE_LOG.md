@@ -1,3 +1,13 @@
+<!-- observable-discrimination-design-v1:start -->
+## 2026-10-17 - Observer-aware research design (planning only)
+
+WHAT_CHANGED: Added RESEARCH_DESIGN_OBSERVABLE_DISCRIMINATION_2026-10-17.md with three bounded waves: joint source/instrument identifiability, discriminating measurement design, and conditional physical admission/testing.
+VERIFICATION: Read existing gain audit and pinned October 15-17 invariant/visibility evidence; no scientific rerun, scoring, new data or holdout access. Local document links and scoped diff checked.
+CONTROLLING_BLOCKER: Physical source/kernel/readout matching remains absent; first execution task is the unresolved joint nuisance-identifiability question, not a repeated invariant derivation. He-4 additionally needs an admitted condensed state/operator.
+CLAIM_BOUNDARY: Design delivered, not a new formal proof, physical result, Full Topic13 closure or running Goal.
+NEXT_ACTION: Start W1 when long execution is enabled; reuse prior results and stop at the declared decision or exact external prerequisite.
+<!-- observable-discrimination-design-v1:end -->
+
 <!-- calculation-completeness-adoption-v1:start -->
 ## 2026-10-17 - Scoped calculation and observation coverage adoption
 
