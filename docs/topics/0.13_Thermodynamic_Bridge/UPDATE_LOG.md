@@ -1,3 +1,14 @@
+<!-- physical-route-admission-v1:start -->
+## 2026-10-18 - Selected native MIMO physical-route admission decision
+
+RESULT: Selected the U-shaped MEMS native two-input/two-direction route after inspecting three alternatives; completed a route-specific limitation decision, not a locked physical UET test or Full Topic13 closure.
+WHAT_CHANGED: Added Result/T13_PHYSICAL_ROUTE_ADMISSION_2026-10-18.md, curated public source metadata, one source-model producer, tests, calculation contract and canonical t13_physical_route_admission.json. Direct forcing, voltage-square harmonics, moving-gap dependence and DC-biased local operator prevent silently reusing the old source-free kernel.
+VERIFICATION: 12 exact/control tests PASS; optional in-memory public supplement verification matched SHA-256 and all 11 Table S1 values, without retaining raw DOCX. Producer emit and read-only check PASS. Completeness audit: 10 contracts, zero errors; explicit changed-path audit zero errors; six local report links resolve. Foundation audit remains FAIL/BLOCKED with 224 pre-existing missing-path errors in 62 registry entries; no Core equation or physics gate changed.
+CONTROLLING_BLOCKER: SELECTED_NATIVE_MIMO_ROUTE_NOT_ADMITTED_FOR_UET_TEST. Seven concrete prerequisites remain: UET material projection, biased source state, source transfer, readout transfer, normalization/modal mass, joint error budget and eligible comparison records. Source normalization equations exist but the available image rendering was insufficient for sign-off; this is not evidence of absent source physics.
+CLAIM_BOUNDARY: Source-model bias enclosure and harmonic identities are not measured predictions. Upstream model parameters follow frequency/geometry adjustment. Authors' favorable inertial sensitivity evidence is retained, not replaced by an invented physical omission bound. No observed rows scored, no new UET term, no calibration or holdout fabricated, no author contact/worktree/push.
+NEXT_ACTION: First admit a predeclared UET-to-material relation that distinguishes the ordinary comparator; if the complete source/readout forward maps coincide, this protocol cannot discriminate them. Then require independently calibrated same-state source/readout/error records and reserved outputs before numeric acceptance. Reopen only for decision-changing inputs, not another unchanged keyword search or simulated pass.
+<!-- physical-route-admission-v1:end -->
+
 <!-- dual-channel-identifiability-v1:start -->
 ## 2026-10-17 - Independent dual-channel control and reciprocity design
 

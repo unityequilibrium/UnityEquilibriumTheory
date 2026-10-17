@@ -1,0 +1,166 @@
+{
+  "route_status": "SELECTED_NATIVE_MIMO_ROUTE_NOT_ADMITTED_FOR_UET_TEST",
+  "selected_route": "USHAPE_2022_NATIVE_MIMO",
+  "selection_reason": "Among the inspected candidates this provides two electrode inputs, two directional readouts and published full nonlinear equations; capability does not establish independent calibration or UET correspondence.",
+  "alternatives": [
+    {
+      "id": "BEAM_2021",
+      "doi": "10.1038/s41378-020-00230-1",
+      "url": "https://www.nature.com/articles/s41378-020-00230-1",
+      "locators": [
+        "Materials and methods, Experimental process, Fig. 8"
+      ],
+      "role": "alternative base-excited 1:2 platform",
+      "known_limit": "One point measures both spectral modes; independent modal normalization and source participation/calibration not admitted. Different frequency experiments might supply informative dynamics; lack of two actuators is not a universal no-go."
+    },
+    {
+      "id": "ARCH_2016",
+      "doi": "10.1038/srep34717",
+      "url": "https://www.nature.com/articles/srep34717",
+      "locators": [
+        "Devices and electrothermal frequency shifting, Fig. 1-2"
+      ],
+      "role": "alternative tunable electrostatic platform",
+      "known_limit": "State-changing thermal tuning and electrode/readout matching need separate review; not an already admitted fixed-state source/observer package."
+    },
+    {
+      "id": "MEMS_2017",
+      "doi": "10.1038/ncomms15523",
+      "url": "https://www.nature.com/articles/ncomms15523",
+      "locators": [
+        "Transient characterizations",
+        "Self-sustaining oscillation and ringdown around internal resonance",
+        "Data availability"
+      ],
+      "role": "alternative coherent-transfer observation",
+      "known_limit": "3:1 instead of current 2:1 operator; published readout caveat confounds torsional response with principal-mode third harmonic at resonance. Data are author-requested, not acquired here."
+    }
+  ],
+  "native_operator_difference": [
+    "gap-dependent squared-voltage sources",
+    "nonlinear inertial terms",
+    "bias-dependent equilibrium and local mass/stiffness",
+    "damping and coordinate/readout normalization"
+  ],
+  "configured_model_diagnostic": {
+    "y_interval": [
+      "42437537466993/562949953421312",
+      "84875074933987/1125899906842624"
+    ],
+    "frequency_ratio_squared_interval": [
+      "7979710599893567601500183829198022541288257717231687950476837781535289558797196023744336547020800/2003080462772590925797938806258296572196189512917300895427505914995446156415106010206324201094269",
+      "10099321227990331274112344644188443463004929938510932508636834111786036768585010682567677129523200/2535148710696567469573166642297793534572768968444419222711761835699389776343061810091583175729973"
+    ],
+    "auxiliary_frequency_squared_interval": [
+      "106311101254167107674766474756795931461649354473375800773340464220799133860458188/26484742925884531392111322455073983364274957755697074267687435517686684275063805",
+      "358799966732815223981573092408881232380399592987563029163199037149426714015909947/89386007374860551006357063538870078345291017543261863809549137936507432071875220"
+    ],
+    "monotonicity_lower_bound": "832689/250000",
+    "root_width": "1/1125899906842624"
+  },
+  "zero_bias_model_diagnostic": {
+    "y_interval": [
+      "0",
+      "0"
+    ],
+    "frequency_ratio_squared_interval": [
+      "47961/10000",
+      "47961/10000"
+    ],
+    "auxiliary_frequency_squared_interval": [
+      "47961/10000",
+      "47961/10000"
+    ],
+    "monotonicity_lower_bound": "47961/10000",
+    "root_width": "0"
+  },
+  "fixed_coordinate_second_to_first_voltage_square_ratio": "1/432",
+  "ratio_boundary": "Source-equation algebra only, not a measured total-force contamination bound under moving gap",
+  "direct_auxiliary_drive_boundary": "Published high-mode drive is not source-free auxiliary response of the inherited low-mode cubic-kernel protocol",
+  "inertia_identity": "u*u_dot^2+u^2*u_ddot=-(A^3*Omega^2/2)*(cos(theta)+cos(3theta)) for u=A*cos(theta)",
+  "authors_sensitivity_boundary": "Supplement text reports delta1/delta2 sensitivity as small for its tested 54 V DC, 0.5 V AC internal-resonance configuration; this is model sensitivity evidence, not a supplied measurement uncertainty bound.",
+  "calibration_origin": "Upstream model values calculated after geometry/material adjustment to frequency data, not independently predicted UET constants or a covariance-bearing calibration package",
+  "unmet_prerequisites": [
+    {
+      "id": "material_projection",
+      "status": "NOT_ADMITTED",
+      "needed": "Named finite-mode projection of current UET lane or quantitatively bounded reduction to the selected native operator; a beam coordinate is not Phi by label"
+    },
+    {
+      "id": "biased_source_state",
+      "status": "INCOMPLETE",
+      "needed": "Both electrodes' DC/AC settings, equilibrium offsets and local linearization in the same material state; no pooling bias settings as one frozen kernel"
+    },
+    {
+      "id": "source_transfer",
+      "status": "INCOMPLETE",
+      "needed": "Calibrated electrode-to-modal generalized forces, voltage phase/time and gap dependence; retain or bound direct harmonic forcing"
+    },
+    {
+      "id": "readout_transfer",
+      "status": "INCOMPLETE",
+      "needed": "Signed complex two-axis records, timing/exposure and detector transfer; point A to generalized-coordinate mapping at point B and independent relative gain"
+    },
+    {
+      "id": "normalization_and_mass",
+      "status": "NOT_ADMITTED",
+      "needed": "Readable verified S16/S18 normalization plus independently supported modal masses/profiles and covariance or conservative bounds; do not set alpha1=2*alpha2 in published dimensionless coordinates"
+    },
+    {
+      "id": "error_budget",
+      "status": "NOT_ADMITTED",
+      "needed": "Joint uncertainties for geometry/frequency calibration, source/readout/noise, damping and omitted terms in the actual comparison output; no universal 10 percent bound inferred"
+    },
+    {
+      "id": "comparison_records",
+      "status": "NOT_ADMITTED",
+      "needed": "Exact eligible two-channel row/trajectory locator and usage terms, provenance, calibration partition and previous-exposure record; published curves already inspected are not blind holdout"
+    }
+  ],
+  "data_access_boundary": {
+    "queries": [
+      "site.zenodo.org s41598-022-14657-1",
+      "site.figshare.com Nonlinear mode saturation",
+      "site.data.4tu.nl U-shaped resonator",
+      "Exact paper title plus dataset"
+    ],
+    "result": "No exact qualifying numeric-record locator identified in this bounded pass; not a claim that no public data exist anywhere",
+    "restart_condition": "New exact record, verified normalization/source-operator package or separately authorized acquisition; no unchanged keyword loop"
+  },
+  "physical_acceptance": false,
+  "experimental_rows_scored": 0,
+  "new_UET_terms": 0,
+  "decision": "Current inputs support a route-specific limitation and exact missing packet, not locked physical UET prediction",
+  "next_input": "Verified native normalization plus independently calibrated same-state source/readout/error records and a derived or bounded UET-to-native operator map",
+  "contract_id": "T13_PHYSICAL_ROUTE_ADMISSION_V1",
+  "contract_sha256": "892eef97d005de8d9bee0de319f0714171daf0d74b48d77c850d4bb3eed137bd",
+  "contract_review_status": "INCOMPLETE",
+  "identities": [
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/physical_route_admission_sources.json",
+      "kind": "working_file",
+      "role": "input",
+      "sha256": "5628386581b503e6dd2e65c38bbc100ff47ab79f646b1da9d37592631e8bde4e"
+    },
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/Research_T13_Physical_Route_Admission.py",
+      "kind": "working_file",
+      "role": "code",
+      "sha256": "628dac8633bb98c15e4c448dece7cb8632fbe38b2fbc6670b5b62f74f96a688e"
+    },
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/test_t13_physical_route_admission.py",
+      "kind": "working_file",
+      "role": "code",
+      "sha256": "6a5f8143b155cb9f4ba0118eb8c2402a59b4209e53612eb8ec56885fcba4fa84"
+    },
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/T13_PHYSICAL_ROUTE_ADMISSION_2026-10-18.md",
+      "kind": "working_file",
+      "role": "evidence",
+      "sha256": "c716f5e5cfad6bbe0050d2329fcd9520f58f4acaa9f8c239050249c9418fdbc7"
+    }
+  ],
+  "generator_path": "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/Research_T13_Physical_Route_Admission.py",
+  "evidence_class": "SOURCE_MODEL_DIAGNOSTIC_AND_PHYSICAL_ROUTE_LIMITATION"
+}
