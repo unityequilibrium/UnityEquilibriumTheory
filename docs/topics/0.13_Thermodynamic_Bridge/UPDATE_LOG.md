@@ -1,3 +1,13 @@
+<!-- measurement-testbed-screen-v1:start -->
+## 2026-10-17 - Measurement card and alternative-platform screen
+
+WHAT_CHANGED: Added MEASUREMENT_REQUIREMENTS_AND_TESTBED_SCREEN_2026-10-17.md: one measurement/admission card and four source roles, with primary links and access limits. Selected dual-channel mechanical operator review as a next research question, not a material already admitted to UET.
+VERIFICATION: Primary publisher/archive metadata inspected; 3:1 numeric archive distinguished from the present 2:1 operator; simplified theoretical model not treated as experimental data; full-page access failures retained. Local links/scoped diff checked; no unchanged scientific verifier rerun.
+CONTROLLING_BLOCKER: New material/action/source/readout mapping and independent cross-channel calibration are not established. No candidate admitted, no physics gate changed.
+CLAIM_BOUNDARY: Feasibility/design only; no archive downloaded, measurement scored, coordinate relabeled Phi, fit, holdout read, author contact or physical acceptance.
+NEXT_ACTION: Bounded dual-channel operator/identifiability review against an explicit ordinary comparator; do not repeat the parked graphite search or build a lab automatically.
+<!-- measurement-testbed-screen-v1:end -->
+
 <!-- observer-discrimination-execution-v1:start -->
 ## 2026-10-17 - Observer-aware W1/W2/W3 decision
 
