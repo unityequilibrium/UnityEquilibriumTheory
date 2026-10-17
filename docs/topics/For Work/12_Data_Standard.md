@@ -1,5 +1,9 @@
 # How to: Data Standard
 
+Apply [Calculation and Observation Completeness v1](30_Calculation_and_Observation_Completeness_Standard.md)
+to product level, frame/epoch/time and upstream correction lineage. Reference existing
+manifests; never silently correct already-corrected observations twice.
+
 This document defines the standard for the `Data/` pillar in every UET topic.
 
 ## Core principle

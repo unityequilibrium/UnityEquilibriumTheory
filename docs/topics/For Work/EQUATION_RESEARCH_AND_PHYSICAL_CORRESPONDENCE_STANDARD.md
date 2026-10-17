@@ -1,5 +1,9 @@
 # UET Equation Research and Physical Correspondence Standard
 
+The scoped [Calculation and Observation Completeness Standard](30_Calculation_and_Observation_Completeness_Standard.md)
+extends F0-F8 with component, observer, correction and error-budget contracts.
+It introduces no additional scientific PASS and never bypasses a required F gate.
+
 This is the canonical workflow for creating, reviewing, implementing, and promoting
 UET equations. It supplements the project constitution, lifecycle, formula-audit, and
 hardening standards; it does not replace them.

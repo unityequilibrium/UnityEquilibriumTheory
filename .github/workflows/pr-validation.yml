@@ -113,6 +113,12 @@ jobs:
         with:
           python-version: '3.12'
       - run: python -m compileall -q docs
+      - name: Check scoped calculation and observation contracts
+        env:
+          BASE_SHA: ${{ github.event.pull_request.base.sha }}
+        run: |
+          python docs/scripts/audit/audit_calculation_completeness.py --changed "$BASE_SHA" --check
+          python -m unittest discover -s docs/scripts/audit/tests -p test_calculation_completeness.py -v
       - name: Parse changed research JSON artifacts
         env:
           BASE_SHA: ${{ github.event.pull_request.base.sha }}

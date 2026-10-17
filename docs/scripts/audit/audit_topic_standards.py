@@ -135,6 +135,12 @@ def main() -> int:
         if scope_class == "future_concept" and status not in {"Draft", "Archived"}:
             failures.append(f"Future concept should not advertise mature status in this phase: {topic_dir.name}")
 
+    from audit_calculation_completeness import build_report
+    try:
+        failures.extend(build_report(DOCS_ROOT.parent)["errors"])
+    except (OSError, ValueError, KeyError, TypeError) as exc:
+        failures.append(f"Calculation contract audit failed: {exc}")
+
     if failures:
         print("Topic standards audit failed:")
         for failure in failures:

@@ -1,5 +1,9 @@
 # How to: Result Standard
 
+New verification producers follow [Calculation and Observation Completeness v1](30_Calculation_and_Observation_Completeness_Standard.md).
+Attach contract ID/hash and input/config/code identities through the producer.
+Preserve old results and distinguish contract review, execution and scientific status.
+
 This document defines the standard for the `Result/` pillar.
 
 ## Core principle

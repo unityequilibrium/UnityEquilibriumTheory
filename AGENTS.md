@@ -569,3 +569,17 @@ The normal publish checkpoint is the same day as the completed section: commit
 the coherent unit, push the branch, and open or update a draft PR when it is
 not ready to merge. Use git fetch --prune origin during branch inventory so
 stale origin/codex/... references do not look like active remote branches.
+
+### Calculation and observation completeness
+
+Apply `docs/topics/For Work/30_Calculation_and_Observation_Completeness_Standard.md`
+to new or changed scientific calculation paths. Read the existing calculation
+contract first; declare input/model/observer/processing/output, applicability and
+error budgets. Unknown effects are not zero. Preserve distinctions between
+physical state, dissipation trace and observer record. Trace upstream corrections
+before applying any again. Run `docs/scripts/audit/audit_calculation_completeness.py
+--check` and the changed-path check before physical promotion or handoff. Review
+contract identity when code, data, configuration, model or observable changes.
+Formal and diagnostic work may continue within declared limits; contract coverage
+does not override physics gates. Gradually review legacy work, beginning with Core
+and Topic 13, without rerunning unchanged evidence or rewriting historical results.

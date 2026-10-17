@@ -1,5 +1,8 @@
 # UET Standards Workspace
 
+New and changed calculation paths use [Calculation and Observation Completeness v1](30_Calculation_and_Observation_Completeness_Standard.md).
+Start with the existing scoped contract and coverage inventory before rerunning research.
+
 This folder is the permanent operating standard for UET topic work.
 
 It is not a theory manifesto. It is the place that defines how research work is organized,

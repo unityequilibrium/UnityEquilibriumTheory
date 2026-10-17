@@ -1,0 +1,395 @@
+"""Read-only contract validation and compact gradual-adoption inventory.
+
+Only --emit-report writes, and only the requested methodological report. No
+scientific artifact, threshold, gate, data or source file is regenerated here.
+The stdlib schema interpreter implements exactly the keywords used by v1.
+"""
+from __future__ import annotations
+
+import argparse
+import hashlib
+import json
+import math
+from pathlib import Path
+import re
+import subprocess
+import sys
+
+ROOT = Path(__file__).resolve().parents[3]
+SCHEMA = "docs/meta/schemas/calculation_contract_v1.schema.json"
+BASELINE = "docs/meta/calculation_completeness_baseline.json"
+REPORT = "docs/meta/calculation_completeness_inventory.json"
+GROUPS = {"system_state", "drive_environment", "propagation", "frame_time", "detector", "processing", "numerics"}
+TEXT = {".py", ".md", ".json", ".yaml", ".yml", ".csv", ".txt", ".toml"}
+SUPPORT = {
+    "docs/scripts/audit/audit_calculation_completeness.py",
+    "docs/scripts/audit/build_calculation_contract_pilots.py",
+    "docs/scripts/audit/audit_topic_standards.py",
+}
+
+
+def load_json(path: Path):
+    def pairs(items):
+        result = {}
+        for k, v in items:
+            if k in result:
+                raise ValueError(f"duplicate JSON key: {k}")
+            result[k] = v
+        return result
+    return json.loads(path.read_text(encoding="utf-8-sig"), object_pairs_hook=pairs,
+                      parse_constant=lambda x: (_ for _ in ()).throw(ValueError(x)))
+
+
+def git(root: Path, *args: str) -> bytes:
+    result = subprocess.run(["git", "-c", "core.fsmonitor=false", "-C", str(root), *args],
+                            capture_output=True, check=False)
+    if result.returncode:
+        raise ValueError(result.stderr.decode("utf-8", errors="replace").strip())
+    return result.stdout
+
+
+def repo_path(root: Path, path: str) -> Path:
+    if not path or "\\" in path or Path(path).is_absolute() or re.match(r"^[A-Za-z]:", path):
+        raise ValueError(f"not a repository-relative POSIX path: {path}")
+    target = (root / path).resolve()
+    if not target.is_relative_to(root.resolve()):
+        raise ValueError(f"path escapes repository: {path}")
+    return target
+
+
+def identity_bytes(root: Path, item: dict) -> bytes:
+    path = item["path"]
+    repo_path(root, path)
+    if item["kind"] == "git_blob":
+        commit = item.get("commit", "")
+        if not re.fullmatch(r"[0-9a-f]{40}", commit):
+            raise ValueError("git_blob needs an immutable 40-character commit")
+        data = git(root, "show", f"{commit}:{path}")
+    else:
+        data = repo_path(root, path).read_bytes()
+    if Path(path).suffix.lower() in TEXT:
+        data = data.replace(b"\r\n", b"\n").replace(b"\r", b"\n")
+    return data
+
+
+def identity_hash(root: Path, item: dict) -> str:
+    return hashlib.sha256(identity_bytes(root, item)).hexdigest()
+
+
+def contract_hash(contract: dict) -> str:
+    return hashlib.sha256(json.dumps(contract, ensure_ascii=False, sort_keys=True,
+                                     separators=(",", ":"), allow_nan=False).encode()).hexdigest()
+
+
+def review_payload_hash(contract: dict) -> str:
+    """Bind explicit review to the model, scope, parameters and observation policy."""
+    return contract_hash({k: v for k, v in contract.items() if k != "review"})
+
+
+def schema_errors(value, schema: dict, loc: str = "contract") -> list[str]:
+    supported = {"$schema", "$id", "title", "description", "$comment", "type", "const", "enum",
+                 "required", "properties", "items", "minItems", "minLength", "pattern", "minimum"}
+    if set(schema) - supported:
+        return [f"{loc}: unsupported schema keywords: {sorted(set(schema) - supported)}"]
+    errors = []
+    types = {"object": lambda x: isinstance(x, dict), "array": lambda x: isinstance(x, list),
+             "string": lambda x: isinstance(x, str), "boolean": lambda x: isinstance(x, bool),
+             "number": lambda x: type(x) in (int, float) and math.isfinite(x),
+             "null": lambda x: x is None}
+    expected = schema.get("type")
+    if expected and not any(types[t](value) for t in ([expected] if isinstance(expected, str) else expected)):
+        return [f"{loc}: expected {expected}"]
+    if "const" in schema and value != schema["const"]:
+        errors.append(f"{loc}: invalid constant")
+    if "enum" in schema and value not in schema["enum"]:
+        errors.append(f"{loc}: outside enum")
+    if isinstance(value, str):
+        if len(value.strip()) < schema.get("minLength", 0):
+            errors.append(f"{loc}: empty value")
+        if "pattern" in schema and not re.search(schema["pattern"], value):
+            errors.append(f"{loc}: invalid pattern")
+    if type(value) in (int, float) and "minimum" in schema and value < schema["minimum"]:
+        errors.append(f"{loc}: below minimum")
+    if isinstance(value, dict):
+        errors += [f"{loc}: missing {k}" for k in schema.get("required", []) if k not in value]
+        for k, sub in schema.get("properties", {}).items():
+            if k in value:
+                errors += schema_errors(value[k], sub, f"{loc}.{k}")
+    if isinstance(value, list):
+        if len(value) < schema.get("minItems", 0):
+            errors.append(f"{loc}: insufficient items")
+        if "items" in schema:
+            for i, item in enumerate(value):
+                errors += schema_errors(item, schema["items"], f"{loc}[{i}]")
+    return errors
+
+
+def validate_contract(contract: dict, root: Path = ROOT, schema: dict | None = None) -> dict:
+    errors = schema_errors(contract, schema or load_json(root / SCHEMA))
+    gaps = []
+    result = {"contract_id": contract.get("contract_id", "UNKNOWN"), "errors": errors,
+              "gaps": gaps, "effective_status": "INCOMPLETE"}
+    if errors:
+        return result
+    stale = False
+    if contract["review"]["status"] == "COMPLETE_FOR_SCOPE":
+        if contract["review"].get("scope_sha256") != review_payload_hash(contract):
+            stale = True
+            errors.append("STALE scope/model/config review: explicit renewed scope_sha256 required")
+    identity_keys = set()
+    for item in contract["identities"]:
+        key = (item["kind"], item.get("commit"), item["path"])
+        if key in identity_keys:
+            errors.append(f"duplicate identity: {key}")
+        identity_keys.add(key)
+        try:
+            if identity_hash(root, item) != item["sha256"]:
+                stale = True
+                errors.append(f"STALE identity: {item['path']}")
+        except (OSError, ValueError) as exc:
+            if (item.get("availability") == "LOCAL_ONLY" and contract["review"]["status"] == "INCOMPLETE"
+                    and contract["output"]["claim_intent"] != "PHYSICAL_ACCEPTANCE"):
+                gaps.append(f"unavailable-local-evidence:{item['path']}")
+            else:
+                errors.append(f"identity unavailable: {item['path']}: {exc}")
+    identity_paths = {x["path"] for x in contract["identities"]}
+    known_locators = identity_paths | {f"git:{x['commit']}:{x['path']}" for x in contract["identities"] if x.get("commit")}
+    refs = list(contract["evidence"]) + list(contract["review"].get("coverage_evidence", []))
+    refs += [ref for c in contract["components"] for ref in c["evidence"]]
+    refs += [c["evidence"] for c in contract["observation"]["corrections"]]
+    refs += [contract["observation"][k] for k in ("unit_conversion_evidence", "frame_transform_evidence") if contract["observation"].get(k)]
+    if contract["error_budget"].get("acceptance_evidence"):
+        refs.append(contract["error_budget"]["acceptance_evidence"])
+    for ref in refs:
+        if not isinstance(ref, str) or (ref.split("#")[0] not in known_locators and not ref.startswith(("https://", "http://"))):
+            errors.append(f"unidentified evidence locator: {ref}")
+    for path in contract["entrypoints"]:
+        try:
+            repo_path(root, path)
+        except ValueError as exc:
+            errors.append(str(exc))
+        if path not in identity_paths:
+            errors.append(f"entrypoint has no code/evidence identity: {path}")
+    ids = [c["id"] for c in contract["components"]]
+    if len(ids) != len(set(ids)):
+        errors.append("duplicate component IDs")
+    missing_groups = GROUPS - {c["group"] for c in contract["components"]}
+    if missing_groups:
+        errors.append(f"missing component groups: {sorted(missing_groups)}")
+    bounds = {}
+    for c in contract["components"]:
+        d = c["disposition"]
+        if d == "UNKNOWN":
+            gaps.append(c["id"])
+            if not c.get("owner") or not c.get("next_action"):
+                errors.append(f"{c['id']}: UNKNOWN needs owner and next_action")
+        elif d != "NOT_APPLICABLE" and not c["evidence"]:
+            errors.append(f"{c['id']}: evidence required")
+        if d == "BOUNDED_OMISSION":
+            bound = c.get("bound")
+            if type(bound) not in (int, float) or not math.isfinite(bound) or bound < 0:
+                errors.append(f"{c['id']}: finite nonnegative omission bound required")
+            elif c.get("unit") != contract["output"]["unit"]:
+                errors.append(f"{c['id']}: omission bound must use output unit")
+            elif not c.get("joint_group"):
+                errors.append(f"{c['id']}: joint_group required")
+            else:
+                # A shared group denotes one joint bound, not independent errors.
+                group = c["joint_group"]
+                if group in bounds and bounds[group] != bound:
+                    errors.append(f"{group}: inconsistent joint omission bound")
+                bounds[group] = bound
+    budget = contract["error_budget"]
+    if budget["unit"] != contract["output"]["unit"]:
+        errors.append("error budget/output unit mismatch")
+    if bounds and (budget["omission_limit"] is None or sum(bounds.values()) > budget["omission_limit"]):
+        errors.append("joint omission bounds exceed declared omission budget")
+    corrections = {}
+    for c in contract["observation"]["corrections"]:
+        if c["id"] in corrections:
+            errors.append(f"duplicate/reapplied correction: {c['id']}")
+        corrections[c["id"]] = c["state"]
+        if c["state"] == "UNKNOWN":
+            gaps.append(f"correction:{c['id']}")
+    if any(c["disposition"] == "UPSTREAM_CORRECTED" for c in contract["components"]):
+        if "APPLIED_UPSTREAM" not in corrections.values():
+            errors.append("upstream-corrected component lacks applied correction provenance")
+    data = contract["data_policy"]
+    observation = contract["observation"]
+    if observation.get("comparison_unit", contract["output"]["unit"]) != contract["output"]["unit"] and not observation.get("unit_conversion_evidence"):
+        errors.append("comparison/output unit mismatch without conversion evidence")
+    if observation.get("comparison_frame", observation["frame"]) != observation["frame"] and not observation.get("frame_transform_evidence"):
+        errors.append("comparison/model frame mismatch without transformation evidence")
+    if observation.get("trace_scope") == "dissipation_history" and observation.get("trace_used_as_complete_state"):
+        errors.append("dissipation trace cannot stand for complete observable state")
+    if data["uses_observations"] and contract["profile"] != "PHYSICAL_COMPARISON":
+        errors.append("observational inference cannot be labeled FORMAL/SYNTHETIC")
+    if data["independent_validation"]:
+        if set(data["calibration_ids"]) & set(data["comparison_ids"]):
+            errors.append("calibration data reused as independent validation")
+        if not data["comparison_ids"]:
+            errors.append("independent validation has no named comparison data")
+        if not data.get("independence_evidence"):
+            errors.append("independent validation requires ancestry/independence evidence")
+    status = contract["review"]["status"]
+    if status == "COMPLETE_FOR_SCOPE" and gaps:
+        errors.append("COMPLETE_FOR_SCOPE contradicts unresolved components/corrections")
+    if status == "COMPLETE_FOR_SCOPE" and not contract["review"].get("coverage_evidence"):
+        errors.append("COMPLETE_FOR_SCOPE requires substantive coverage review evidence")
+    physical = contract["output"]["claim_intent"] == "PHYSICAL_ACCEPTANCE"
+    if physical:
+        if not data["uses_observations"] or not data["comparison_ids"]:
+            errors.append("physical acceptance requires named actual comparison observations")
+        if contract["profile"] != "PHYSICAL_COMPARISON" or status != "COMPLETE_FOR_SCOPE" or gaps:
+            errors.append("physical acceptance requires complete physical contract")
+        if budget.get("omission_limit") is None or not budget.get("acceptance_evidence"):
+            errors.append("physical acceptance requires sourced quantitative error criterion")
+        limit = budget.get("acceptance_limit")
+        if type(limit) not in (int, float) or not math.isfinite(limit) or limit < 0:
+            errors.append("physical acceptance requires finite output-unit acceptance_limit")
+        elif budget.get("omission_limit") is not None and budget["omission_limit"] > limit:
+            errors.append("omission allocation exceeds total acceptance limit")
+        if not contract.get("physical_gates"):
+            errors.append("physical acceptance requires existing physics gates")
+        for gate in contract.get("physical_gates", []):
+            try:
+                if any(v not in {"PASS", "EXTERNAL_COMPARISON", "EXTERNALLY_VALIDATED"} for v in gate["accepted"]):
+                    errors.append(f"non-accepting physics gate state cannot be whitelisted: {gate['path']}")
+                obj = load_json(repo_path(root, gate["path"]))
+                for key in gate["field"].split("."):
+                    obj = obj[key]
+                if obj not in gate["accepted"]:
+                    errors.append(f"physical gate blocks acceptance: {gate['path']}")
+                if gate["path"] not in identity_paths:
+                    errors.append(f"physical gate lacks identity: {gate['path']}")
+            except (OSError, ValueError, KeyError, TypeError) as exc:
+                errors.append(f"physical gate unavailable: {exc}")
+    result["effective_status"] = "STALE" if stale else (
+        "INCOMPLETE" if errors or gaps else status)
+    return result
+
+
+def artifact_metadata(contract: dict, root: Path = ROOT) -> dict:
+    """Additive producer interface; does not rewrite or promote saved results."""
+    review = validate_contract(contract, root)
+    if review["errors"]:
+        raise ValueError("; ".join(review["errors"]))
+    return {"contract_id": contract["contract_id"], "contract_sha256": contract_hash(contract),
+            "contract_review_status": review["effective_status"],
+            "identities": contract["identities"]}
+
+
+def scientific_path(path: str) -> bool:
+    p = Path(path)
+    if p.suffix not in {".py", ".json"} or path in SUPPORT:
+        return False
+    if p.name.startswith("test_") or "05_tests" in p.parts or "test" in p.parts or p.name == "__init__.py":
+        return False
+    if p.suffix == ".json":
+        return "/Result/artifacts/" in path or path.startswith("docs/core/07_artifacts/")
+    return (path.startswith("docs/core/") or path.startswith("docs/scripts/audit/")
+            or (path.startswith("docs/topics/0.") and "/Code/" in path))
+
+
+def discover_contracts(root: Path) -> list[tuple[str, dict]]:
+    result = []
+    # Bounded to research workspaces; do not walk caches, media, .git or books.
+    for base in (root / "docs/core", root / "docs/topics"):
+        paths = set(base.rglob("CALCULATION_CONTRACT.json"))
+        paths.update(p for d in base.rglob("calculation_contracts") if d.is_dir() for p in d.glob("*.json"))
+        for path in sorted(paths):
+            result.append((path.relative_to(root).as_posix(), load_json(path)))
+    # Existing manifests may embed the same contract; no competing duplicate IDs.
+    baseline = load_json(root / BASELINE) if (root / BASELINE).exists() else {}
+    for locator in baseline.get("embedded_contracts", []):
+        result.append((locator, load_json(repo_path(root, locator))["calculation_contract"]))
+    return result
+
+
+def build_report(root: Path, changed: list[str] | None = None) -> dict:
+    contracts = discover_contracts(root)
+    errors, reviews, coverage, seen = [], [], {}, set()
+    schema = load_json(root / SCHEMA)
+    for locator, contract in contracts:
+        review = validate_contract(contract, root, schema)
+        review["path"] = locator
+        review["contract_sha256"] = contract_hash(contract)
+        reviews.append(review)
+        if review["contract_id"] in seen:
+            errors.append(f"duplicate contract_id: {review['contract_id']}")
+        seen.add(review["contract_id"])
+        errors.extend(f"{locator}: {e}" for e in review["errors"])
+        for identity in contract.get("identities", []):
+            if identity.get("kind") == "working_file":
+                coverage.setdefault(identity["path"], []).append(review["contract_id"])
+    baseline = load_json(root / BASELINE) if (root / BASELINE).exists() else {"routes": [], "legacy_paths": []}
+    routes = []
+    for route in baseline["routes"]:
+        ids = sorted({cid for p in route["paths"] for cid in coverage.get(p, [])})
+        routes.append({**route, "contract_ids": ids,
+                       "review_status": "SEE_CONTRACTS" if ids else "UNREVIEWED"})
+    # Explicit legacy path queue prevents registry seed coverage being mistaken for completeness.
+    try:
+        discovered = git(root, "ls-files", "--cached", "--others", "--exclude-standard").decode().splitlines()
+    except ValueError:
+        # Non-Git fixture/workspace support, without treating missing Git history as evidence.
+        discovered = [p.relative_to(root).as_posix() for p in (root / "docs").rglob("*") if p.is_file()]
+    current = {p for p in discovered if scientific_path(p) and (root / p).is_file()}
+    unreviewed = sorted(p for p in current if p not in coverage)
+    missing = sorted(p for p in baseline["legacy_paths"] if not (root / p).is_file())
+    changed = sorted(set(changed or []))
+    for p in changed:
+        covered = p in coverage or p in baseline.get("support_paths", [])
+        if p.endswith(".json") and scientific_path(p) and (root / p).is_file():
+            try:
+                obj = load_json(root / p)
+                new_result = p not in baseline["legacy_paths"]
+                if new_result:
+                    matched = next((c for _, c in contracts if isinstance(obj, dict) and c["contract_id"] == obj.get("contract_id")), None)
+                    if matched is None or obj.get("contract_sha256") != contract_hash(matched) or obj.get("identities") != matched["identities"]:
+                        errors.append(f"new result lacks exact contract hash/input lineage: {p}")
+                    else:
+                        covered = True
+                elif p not in coverage and not (isinstance(obj, dict) and obj.get("contract_id") in seen):
+                    errors.append(f"changed result lacks producer/contract lineage: {p}")
+            except (OSError, ValueError) as exc:
+                errors.append(f"invalid changed result {p}: {exc}")
+        if scientific_path(p) and (root / p).is_file() and not covered:
+            errors.append(f"changed scientific path needs classification/contract: {p}")
+    return {"schema_version": "uet-calculation-coverage-v1", "kind": "METHODOLOGICAL_NOT_PHYSICS_GATE",
+            "baseline_lineage": baseline.get("lineage", {}),
+            "summary": {"contracts": len(reviews), "legacy_routes": len(routes),
+                        "unreviewed_current_paths": len(unreviewed), "missing_or_relocated_baseline_paths": len(missing), "errors": len(errors)},
+            "contracts": reviews, "routes": routes, "unreviewed_current_paths": unreviewed,
+            "missing_or_relocated_baseline_paths": missing,
+            "changed_paths": changed, "errors": errors, "claim_promotion": False}
+
+
+def main(argv: list[str] | None = None) -> int:
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--inventory", action="store_true")
+    parser.add_argument("--check", action="store_true")
+    parser.add_argument("--changed", metavar="BASE_REF")
+    parser.add_argument("--emit-report", action="store_true")
+    parser.add_argument("--output", default=REPORT)
+    args = parser.parse_args(argv)
+    if args.check and args.emit_report:
+        parser.error("--check is read-only and cannot be combined with --emit-report")
+    try:
+        changed = git(ROOT, "diff", "--name-only", "--diff-filter=ACMR", args.changed, "HEAD").decode().splitlines() if args.changed else []
+        report = build_report(ROOT, changed)
+        if args.emit_report:
+            target = repo_path(ROOT, args.output)
+            target.parent.mkdir(parents=True, exist_ok=True)
+            target.write_text(json.dumps(report, ensure_ascii=False, indent=2) + "\n", encoding="utf-8", newline="\n")
+        print(json.dumps(report["summary"], sort_keys=True))
+        for error in report["errors"]:
+            print(error, file=sys.stderr)
+        return int(bool(report["errors"]))
+    except (OSError, ValueError, KeyError, TypeError) as exc:
+        print(f"calculation completeness audit failed: {exc}", file=sys.stderr)
+        return 1
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())

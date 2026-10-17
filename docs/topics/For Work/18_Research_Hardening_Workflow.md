@@ -1,5 +1,9 @@
 # Research Hardening Workflow
 
+Before a new wave, consult [Calculation and Observation Completeness v1](30_Calculation_and_Observation_Completeness_Standard.md)
+and its existing contract. Review stale identities and unresolved components before
+expanding scope; reuse unchanged derivations and verifier evidence.
+
 This document defines the standard hardening workflow for moving a topic from
 loosely organized research into an auditable package with explicit blockers.
 

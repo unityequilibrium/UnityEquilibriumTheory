@@ -1,5 +1,9 @@
 # Formula Audit Standard
 
+Use [Calculation and Observation Completeness v1](30_Calculation_and_Observation_Completeness_Standard.md)
+for each calculation path. Link its contract from the formula entry; distinguish
+field-coordinate conventions from identifiable physical parameter combinations.
+
 This guide defines how UET topics must document formulas, constants, units, and proof
 status before scientific wording is promoted.
 

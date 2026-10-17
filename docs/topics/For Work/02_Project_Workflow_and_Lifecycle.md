@@ -1,5 +1,9 @@
 # Project Workflow and Topic Lifecycle
 
+Calculation paths also follow [Calculation and Observation Completeness v1](30_Calculation_and_Observation_Completeness_Standard.md).
+Declare a scoped contract before using new/changed calculations for physical claims;
+unknown contributions permit bounded diagnostic work but not physical acceptance.
+
 This document defines how a UET topic should move from idea to structured research work.
 
 ## Purpose
