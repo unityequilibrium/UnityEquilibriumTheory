@@ -1,0 +1,65 @@
+{
+  "status": "PREFIX_PREPARATION_CONDITIONALLY_POSSIBLE_PHYSICAL_PACKET_NOT_ADMITTED",
+  "observer_rank": 2,
+  "observer_closure": "sum(y)=0",
+  "full_collinear_state": [
+    "q",
+    "q_dot",
+    "delta_phi",
+    "delta_phi_dot"
+  ],
+  "hidden_state_identity_control": [
+    "3/5",
+    "-2/7"
+  ],
+  "uncertainty_policy": "joint state/parameter/observer sets; no unmeasured effects assigned zero",
+  "old_four_frequency_kernel_evaluated": false,
+  "physical_forecast_run": false,
+  "physical_acceptance": false,
+  "new_core_term": false,
+  "numeric_records_acquired": false,
+  "reopen": "same-state correspondence, frozen coefficients, eligible split records, full state and joint source/damping/observer bounds",
+  "boundary": "prefix model-conditioned state calibration is not independent Phi observation or unique UET discrimination",
+  "contract_id": "T13_GRAPHITE_PREPARATION_PREDICTION_V1",
+  "contract_sha256": "36c408efc6020d628f376e8b6685d59c3b8b54f2e85f443c244a58dcdf3f65ed",
+  "contract_review_status": "INCOMPLETE",
+  "identities": [
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/Research_T13_Graphite_Preparation.py",
+      "sha256": "773db11675bf06f903587e5fb01428f1c044fa684c5102952e45a8f80ced0e59",
+      "kind": "working_file",
+      "role": "code"
+    },
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/test_t13_graphite_preparation.py",
+      "sha256": "429d29f268cfa411aff42b5ece03a92a864df3eed18e88a4d986735aa34c6b6b",
+      "kind": "working_file",
+      "role": "code"
+    },
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/T13_GRAPHITE_PREPARATION_PREDICTION_2026-10-18.md",
+      "sha256": "a1245be5a76f751a6345fd7e24b4887c4b344a6752ffa53d30724165b490b5ba",
+      "kind": "working_file",
+      "role": "evidence"
+    },
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/T13_MECHANICAL_SOURCE_BRIDGE_2026-10-18.md",
+      "sha256": "eb3f60743ec5a04415eb4b301f873506f048c51729b7b10f452d250f301f7126",
+      "kind": "working_file",
+      "role": "evidence"
+    },
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/T13_ACTION_DISCRIMINATION_2026-10-18.md",
+      "sha256": "3f1638627b31ca7f4f3c61ce75a3b07ed3a530d1e951be2a348ec595544adb18",
+      "kind": "working_file",
+      "role": "evidence"
+    },
+    {
+      "path": "docs/core/02_equations/covariant/uet_covariant_matter.py",
+      "sha256": "8a57d95e898a8ac962bbd749670ad0695b597281937da36496d2ec7e074f9c53",
+      "kind": "working_file",
+      "role": "code"
+    }
+  ],
+  "generator_path": "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/Research_T13_Graphite_Preparation.py"
+}

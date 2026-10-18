@@ -1,3 +1,15 @@
+<!-- graphite-preparation-prediction-v1:start -->
+## 2026-10-18 - Same-graphite source/preparation comparison and prefix-state design
+
+RESULT: Inspected the published graphite source/readout architecture rather than claiming no such model exists. Its globally fitted force is not independent input. Prefer a conditional prefix-preparation/later-forecast design, not substitution of ringdown into the old driven four-frequency kernel.
+NEW_EVIDENCE: Exact three-intensity left inverse yields two blurred shear coordinates plus a redundant closure channel with joint box-error bounds. Existing coupled dynamics require q,q_dot,delta_phi,delta_phi_dot, not q,q_dot alone. Exact derivative-based state estimator and two incomplete-state counterexamples derived under stated nonzero-coordinate/no-force conditions; no differentiation of measured records.
+SOURCE_REVIEW: Gerbig et al. NJP 27 053004 published PDF equations 1-6, processing and data statement; Mishina et al. PRB 62 2908 generation abstract. Numeric records are request-only in the inspected paper. Bounded locator searches returned no eligible same-state packet; no claim of global absence, email, download or digitization. Source formula extraction ambiguity not silently repaired.
+CHANGED: T13_GRAPHITE_PREPARATION_PREDICTION_2026-10-18.md, formal contract, exact-control producer/tests and generated artifact. No Core equation or existing result changed. Physical correspondence remains conditional; no extra source/damping term adopted.
+VERIFICATION: Eight new exact controls PASS; generator emit/check PASS; shared completeness 15 contracts, zero errors. Prior source/action identities verified by contract audit rather than redoing their proofs. Physical source-tail/damping/observer memory and full-state bounds remain unknown, not assigned zero.
+GOAL_AUDIT: All five requested steps covered in report final section. Outcome C: same-state mode/coefficient correspondence, eligible signed prefix/suffix records, full initial-state set and joint source/damping/observer bounds are needed. Full-trace fitted force or displacement/velocity alone cannot substitute. No physical forecast, acceptance, unique UET discrimination or Full Topic13 promotion.
+NEXT_ACTION: Reopen on the named existing evidence packet; if a new dissipative/material interaction is necessary, propose separately and stop D before implementation. No repeated identical searches/fixtures. Local scoped commit only, no push/PR.
+<!-- graphite-preparation-prediction-v1:end -->
+
 <!-- mechanical-source-bridge-v1:start -->
 ## 2026-10-18 - New-goal mechanical source/preparation bridge decision
 
