@@ -206,6 +206,21 @@ independent authorized work rather than freezing the whole project.
 - Next: W9 finite locked research-return decision from W5/W6. The triage queue and
   physical gaps remain open; do not wait for all historical cleanup to choose it.
 
+### [2026-10-19] Completion audit repair: residual entrypoint/chain drift
+
+- After W8, active-source search found two root-agent architecture links and one
+  routing-matrix name still pointing at the nonexistent 5x5 file. Corrected to
+  the actual 5x4 owner without changing folders or unrelated root-agent edits.
+- Core AGENTS and impact/effect spec still described the diagram as a mandatory
+  full sequence. They now explicitly defer to standard 30's relational/nested
+  contract and describe the diagram as one possible decomposition. No equation,
+  physical interpretation, status or historical artifact is changed by that sync.
+- Checks: scoped links/whitespace and active-text search; foundation audit remains
+  FAIL/BLOCKED with the same 224 stale-reference errors. No threshold relaxed,
+  foundation result rewritten or unchanged scientific producer rerun.
+- Next: W9 finite research-return/admission decision, then requirement-by-requirement
+  completion audit. The existing scientific triage queue remains open.
+
 ## [2026-10-17] - Scoped calculation and observation contracts v1
 
 - Area: research-standards; pilot linkage: Core matter-space/observer and Topic13, then astronomy coverage.

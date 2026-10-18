@@ -178,7 +178,7 @@ Then choose the next standard by task.
 ### If the task is topic building or refactoring
 
 1. [`docs/topics/For Work/02_Project_Workflow_and_Lifecycle.md`](./docs/topics/For%20Work/02_Project_Workflow_and_Lifecycle.md)
-2. [`docs/topics/For Work/10_Topic_Architecture_5x5(+1).md`](./docs/topics/For%20Work/10_Topic_Architecture_5x5(+1).md)
+2. [`docs/topics/For Work/10_Topic_Architecture_5x4.md`](./docs/topics/For%20Work/10_Topic_Architecture_5x4.md)
 3. the relevant standards in `11-18`
 
 ### If the task is book writing or history publishing
@@ -539,7 +539,7 @@ required to explain the same hardening wave.
 - AI-generated wording needs review: open
   [`03_AI_Usage_and_Governance.md`](./docs/topics/For%20Work/03_AI_Usage_and_Governance.md)
 - Topic structure is messy: open
-  [`10_Topic_Architecture_5x5(+1).md`](./docs/topics/For%20Work/10_Topic_Architecture_5x5(+1).md)
+  [`10_Topic_Architecture_5x4.md`](./docs/topics/For%20Work/10_Topic_Architecture_5x4.md)
 - Data provenance is weak: open
   [`12_Data_Standard.md`](./docs/topics/For%20Work/12_Data_Standard.md)
 - Result artifacts are unclear: open

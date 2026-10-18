@@ -53,7 +53,7 @@ input-output relation, not denying the physical carrier.
 
 ## Causal sequence
 
-The full sequence is
+One possible measurement-chain decomposition is
 
 ```text
 source matter/field behaviour
@@ -65,6 +65,13 @@ source matter/field behaviour
   -> observer record R_obs or Y_B
   -> possible new receiver behaviour
 ```
+
+This is not a compulsory serial sequence for every model. Systems and subsystems
+are selected for the question, timescale and accuracy; a system can receive one
+channel and supply another. Internal couplings may be unobserved and a detector
+may be part of a larger modeled system. Follow standard 30's relationship-specific
+roles and state/accounting contract. Missing graph edges do not prove isolation;
+impact/effect are not defined as large/small response, proximity or separate forces.
 
 The carrier may be a photon, neutrino, gravitational-wave perturbation, field
 excitation, or another declared physical channel. The carrier identity is not
