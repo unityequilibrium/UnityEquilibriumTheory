@@ -6,6 +6,25 @@
 
 ## Entries
 
+### 2026-10-19 - W5 standards-adoption Core pilot
+
+- Scope/type: metadata and evidence-reuse review at ced764b9b; not an equation change.
+- Changed: existing matter-space calculation contract now uses relationship-based
+  roles, C/Phi/Pi state ownership and a nonadditive source-system aggregate. Existing
+  pilot initializer matches it; pinned prior-contract identity preserves lineage.
+- Reused: specification sections 1-5, unchanged free-energy/force/RHS implementation
+  and action-discrimination section D's ordinary phase-field comparator. Current
+  source text matches HEAD after LF normalization; no scientific verifier rerun.
+- Decision: explicit normalized constitutive model remains usable in that scope;
+  no UET-only restriction follows merely from nested systems or observation roles.
+  Physical receiver/carrier/backaction admission remains UNKNOWN/INCOMPLETE.
+- Verification: contract regression suite, identity/baseline checks and read-only
+  coverage audit. Foundation audit currently FAIL with 224 errors (including old
+  root implementation paths); foundation gate remains BLOCKED. These are not waived
+  by the pilot or silently repaired through generated-output edits.
+- Next controller: W6 separate He4/O2, graphite/TTG and nonlinear evidence owners,
+  state/operator gaps and decision-changing inputs. No automatic data search or fit.
+
 ### 2026-08-02 - Narrow Wave 1 legacy wording controller
 
 - Scope: central foundation report, impact/effect ontology, and wording audit.

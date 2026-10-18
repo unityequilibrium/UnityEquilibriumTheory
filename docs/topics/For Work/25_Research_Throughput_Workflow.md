@@ -15,7 +15,10 @@ deep topic reading begins.
 
 ## Core Rule
 
-Read the generated packet first.
+Use a current, identity-matched generated packet first when one exists for the
+requested scope. It is a navigation aid, not the scientific controller. If absent,
+stale or unrelated, inspect the existing contract and bounded work card directly;
+do not generate new artifacts merely to answer an analytical question.
 
 Do not open a whole topic folder if the packet already names the controlling blocker, the
 recommended files, and the stop condition.
@@ -28,7 +31,9 @@ recommended files, and the stop condition.
 .venv\Scripts\python.exe docs\scripts\audit\audit_core_research_hardening.py --json --top 5
 ```
 
-2. Pick the first topic unless the user names a topic.
+2. Honor the user's question and the earliest unresolved dependency of its intended
+   claim under standard 32. Queue rank is a suggestion only when no scope is chosen;
+   verify current evidence identities and prerequisites before adopting it.
 
 3. Read only the files listed in that topic packet.
 
@@ -109,7 +114,9 @@ This keeps hardening auditable without paying the full topic-reading cost every 
 
 A throughput-focused wave is complete when:
 
-- the controlling blocker is narrower than before
+- the declared decision is answered or the controlling prerequisite is narrowed
+  with evidence; a proof, counterexample, equivalence or rejected route is valid
+  closure under standard 32 profile applicability
 - the narrower blocker is visible in an artifact, manifest, gate, or topic doc
 - the relevant packet stop condition is satisfied
 - claim wording did not get stronger without stronger evidence

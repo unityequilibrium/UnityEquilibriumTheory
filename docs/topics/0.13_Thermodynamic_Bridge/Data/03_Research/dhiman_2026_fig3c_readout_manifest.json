@@ -1,0 +1,73 @@
+{
+  "kind": "REVIEWED_SMALL_PROCESSED_MEMBER_NOT_RAW_APPARATUS_RECORD",
+  "owner": "Topic13",
+  "review_date": "2026-10-18",
+  "source": {
+    "doi": "10.5281/zenodo.18954807",
+    "api": "https://zenodo.org/api/records/18954807",
+    "license": "CC-BY-4.0",
+    "archive_bytes": 377463133,
+    "archive_publisher_md5": "c877b7ea8d697bb58a0a90f7cc7b6ada",
+    "whole_archive_hash_verified": false,
+    "member": "Self-Sustained Oscillations Non-Linear Optomechanical System/Figure_3/Figure_3_c_Experiment.csv",
+    "member_bytes": 39201,
+    "member_sha256": "4303b1e7493456ac6cc5eaf6f263cb125ab5588cb98087545d34c04dc9157db2",
+    "member_crc32": "64c6589e",
+    "member_crc_verified": true,
+    "directory_sha256": "9ca0a759de66205c2a53ba9c4c23809c120355cd084e530bc106a5d651394b77",
+    "acquisition_range_bytes": 99458,
+    "whole_archive_downloaded": false
+  },
+  "local": {
+    "normalized_text_sha256": "361312be67c6bca19506299c7f7ede6dfd6824a3d803893e7f318b7158260948",
+    "upstream_line_endings": "CRLF; reconstructable from normalized text with verified upstream SHA-256 and CRC32",
+    "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/dhiman_2026_fig3c_experiment.csv",
+    "preprocessing": "UTF-8 source with line endings normalized to LF for repository storage; numeric tokens and all rows preserved. No filtering, clipping, normalization, fit or deembedding.",
+    "product_level": "Processed displayed Fig3c experimental magnitude; not raw complex time records",
+    "role": "Exposed exploratory readout-domain diagnostic, not independent validation or holdout"
+  },
+  "calibration": {
+    "url": "https://www.nature.com/articles/s41467-026-73259-x/tables/1?error=cookies_not_supported",
+    "working_point": "Set III, linked to Fig3c by main caption",
+    "kappa_internal_over_2pi_MHz": "0.68",
+    "kappa_external_over_2pi_MHz": "1.64",
+    "uncertainty": "Not supplied as a joint error/deembedding packet in inspected table; rounded central values only",
+    "use": "Dimensionless ideal real-port amplitude-domain calculation only. Frequency units cancel in ratio; no detuning values used in a physical residual."
+  },
+  "method": {
+    "url": "https://www.nature.com/articles/s41467-026-73259-x",
+    "locators": [
+      "Fig3 caption and Connecting experiment, model and stability analysis: Fig3c at low power, parameter Set III",
+      "Pulsed measurement: 1.4 s pulse, last 2 ms complex average, 0.8 s equilibration"
+    ],
+    "stationarity_support": "Authors identify Fig3c as a single stable fixed-point regime throughout; acquisition method supports steady-state intent. Not an independently quantified per-record stationarity/averaging error bound.",
+    "relative_power": "Single nominal-power sweep; input photon flux varies with photon energy unless source power frequency dependence is traced. Not used here.",
+    "detuning_unit": "Header says detuning Delta without unit; normalized-axis correspondence must be verified before any dimensional residual is scored."
+  },
+  "follow_up_method_review": {
+    "url": "https://arxiv.org/html/2510.01775v2#S3.SS1",
+    "version": "arXiv:2510.01775v2, distinct from version-of-record supplement",
+    "scope": "Section III.1 circle-fitting method explicitly includes gain/phase/delay and impedance mismatch; section VIII.2 mean-field simulation omits explicit noise.",
+    "boundary": "Method existence and noiseless mean-field simulation do not identify exact-curve measurement-noise/gain uncertainties. No preprint values or quality-factor identity adopted. Illustrative calibration state is not substituted for Set III.",
+    "new_data_acquired": false
+  },
+  "gain_envelope_diagnostic": {
+    "model": "reported amplitude m_i=g*t_i+e_i; one g>0, independently variable t_i in closed central ideal range [l,1]",
+    "role": "optimistic necessary range-enclosure test, not calibration, cavity fit, physical rejection or statistical noise estimate",
+    "policy": "No computed envelope optimizer is applied as gain correction. Unknown physical uncertainty and complex mismatch remain open; all rows retained."
+  },
+  "decision": {
+    "purpose": "Check pointwise compatibility with the CENTRAL ideal transfer domain, not physical acceptance/rejection",
+    "unknowns": [
+      "complex deembedding/gain and mismatch record",
+      "per-record noise and correlated uncertainty",
+      "rounded calibration uncertainty",
+      "independent stationarity/averaging bounds",
+      "detuning-axis conversion"
+    ],
+    "physical_acceptance": false,
+    "theory_rejection": false,
+    "new_held_out_rows": false,
+    "policy": "Keep all rows and report outside-domain counts. Do not clip, select compatible rows after seeing residuals, infer a noise law from neighboring detunings, or reuse this exposed curve as blind validation."
+  }
+}

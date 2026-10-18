@@ -1,0 +1,54 @@
+{
+  "schema_version": "uet-calculation-contract-v1",
+  "contract_id": "T13_OBSERVER_JOINT_DISCRIMINATION_V1",
+  "profile": "FORMAL",
+  "review": {"status": "INCOMPLETE", "reviewer": "agent:observer-discrimination", "rationale": "Exact joint-nuisance proofs and synthetic controls, plus pinned source feasibility. Owner evidence is LOCAL_ONLY; no physical source/operator admission or independent review."},
+  "question": "Which conditional pole combinations remain identifiable through unknown common gain/background/clock and what bounded-error design can discriminate them?",
+  "output": {"quantity": "joint equivalence, contrast bound and physical feasibility disposition", "unit": "abstract output per instrument squared-frequency coordinate for contrast", "domain": "Inherited real off-pole weak-response scalar kernel; same-state conditional mechanical readout only", "accuracy": "Exact rational controls; finite nested 53-candidate design check, not a physical/global optimum", "claim_intent": "FORMAL_RESULT"},
+  "model": {
+    "formula_ids": ["inherited.K4=L-B/(p-x)", "conditional.y=g*F(a*z)+c", "joint.A=g*L+c,D=g*B/a,P=p/a", "contrast.T=s23-s12"],
+    "assumptions": "a>0; p>0; common constant baseline gain/background; nonzero g,B for inversion; nuisance bounds independent of target scoring; true coordinates exact or uncertainty separately enclosed",
+    "approximation": "Inherited normal-branch lossless tree-level kernel; not a raw diffraction/optical forward model or He-II operator",
+    "initial_boundary": "Controlled same-state weak narrow-band drives and off-pole domain conditional on inherited operator; no state or material newly admitted",
+    "drive_environment": "No measured drive used. Source direct harmonics, mode profile and temporal transfer must be admitted before physical testing",
+    "parameters": "L,B,p inherited combinations; a,g,c nuisance, not predicted; synthetic A=5,D=3,P=4 and delta=1/100 are method fixtures only; grid denominators 4,8,16, 53 candidates, one finite run"
+  },
+  "data_policy": {"uses_observations": false, "calibration_ids": [], "comparison_ids": [], "independent_validation": false, "holdout_policy": "No measured row, reserved source, private input, download or email; source manifest review does not restore blind eligibility"},
+  "observation": {
+    "source_state": "Inherited conditional mechanical-mode state, not newly established material correspondence",
+    "generated_trace": "No dissipation trace used as complete state or physical entropy",
+    "carrier": "No physical carrier admitted; mathematical input-output path only",
+    "observer_state": "Common g,c,a or independently bounded deviations; arbitrary per-frequency transfer is a degeneracy negative control",
+    "readout": "Signed phase-resolved reconstructed mechanical kernel under inherited Q1/Q2/Q3 conditions; actual raw readout requires convolution and mode mapping first",
+    "backaction": "No new detector coupling; no physical backaction claimed or silently omitted in physical acceptance",
+    "frame": "Declared mathematical mode frame; no astrophysical frame conversion",
+    "time_convention": "Angular frequency; inherited mediated channel x=(2*omega)^2 in conditional SI, common positive clock scale x=a*z",
+    "product_level": "FORMAL_CONDITIONAL and pinned source feasibility, not measured-kernel product",
+    "corrections": []
+  },
+  "components": [
+    {"id":"state","group":"system_state","disposition":"MODELED","reason":"Conditional scalar pole only, no physical material state assertion","evidence":["docs/topics/0.13_Thermodynamic_Bridge/Result/T13_OBSERVER_DISCRIMINATION_2026-10-17.md"]},
+    {"id":"drive","group":"drive_environment","disposition":"MODELED","reason":"Conditional external-drive protocol and inherited readout restrictions; physical source not admitted","evidence":["docs/topics/0.13_Thermodynamic_Bridge/Result/T13_OBSERVER_DISCRIMINATION_2026-10-17.md"]},
+    {"id":"propagation","group":"propagation","disposition":"NOT_APPLICABLE","reason":"No physical carrier propagation claimed by this scalar formal theorem","evidence":["docs/topics/0.13_Thermodynamic_Bridge/Result/T13_OBSERVER_DISCRIMINATION_2026-10-17.md"]},
+    {"id":"clock","group":"frame_time","disposition":"MODELED","reason":"Pure common squared-frequency scale; no additive angular-frequency shift or per-row clock fits","evidence":["docs/topics/0.13_Thermodynamic_Bridge/Result/T13_OBSERVER_DISCRIMINATION_2026-10-17.md"]},
+    {"id":"readout","group":"detector","disposition":"MODELED","reason":"Explicit conditional gain/background families; physical raw detector operator remains outside accepted scope","evidence":["docs/topics/0.13_Thermodynamic_Bridge/Result/T13_OBSERVER_DISCRIMINATION_2026-10-17.md"]},
+    {"id":"lineage","group":"processing","disposition":"UNKNOWN","reason":"Pinned owner source/derivations remain LOCAL_ONLY and no physical kernel package is admitted","owner":"Topic13/EVIDENCE","next_action":"Integrate exact owner evidence through reviewed workflow; admit same-state kernel/source/readout before scoring observations","evidence":["docs/topics/0.13_Thermodynamic_Bridge/Result/T13_OBSERVER_DISCRIMINATION_2026-10-17.md"]},
+    {"id":"exact","group":"numerics","disposition":"MODELED","reason":"Fraction arithmetic, explicit finite grid cap; global claims rely on proof, not grid rank","evidence":["docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/Research_T13_Observer_Discrimination.py"]}
+  ],
+  "error_budget": {"unit":"abstract output per instrument squared-frequency coordinate for contrast", "numerical":"Exact Fraction operations; no roundoff in controls", "approximation":"Inherited scalar truncation; damping/mode mixing require different admitted operator", "measurement":"No measured data; physical eta/M/clock bounds unknown", "systematic":"Joint enclosure E=sum abs(w_i)*delta_i with justified drift bounds; no independence assumed", "omissions":"No physical omission treated as bounded without evidence", "dependence":"Joint deterministic box enclosure, not confidence interval", "acceptance":"Conditional affine rejection only if abs(T)>E; overlap inconclusive, no physical pass", "omission_limit":null},
+  "identities": [
+    {"path":"docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/Research_T13_Observer_Discrimination.py","kind":"working_file","role":"code","sha256":"fbe27f4b6dca36aa7c23294f57ac0c11a7534b830998e61258e2ff58ba6960c7"},
+    {"path":"docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/test_t13_observer_discrimination.py","kind":"working_file","role":"code","sha256":"7b7b97138ecc351c1c6dd678afe2cb7bf9f02b891a6d195e4e5ded792544740b"},
+    {"path":"docs/topics/0.13_Thermodynamic_Bridge/Result/T13_OBSERVER_DISCRIMINATION_2026-10-17.md","kind":"working_file","role":"evidence","sha256":"b9c1ffd4a9a821965a98c16dda7e3022ce0931d5a1fe3935f786faa84e292e79"},
+    {"path":"docs/topics/0.13_Thermodynamic_Bridge/Result/T13_INVARIANT_POLE_DISCRIMINATION_2026-10-15.md","kind":"git_blob","role":"evidence","commit":"0f17012ffd6ad456c150b10e048efd868ce95588","availability":"LOCAL_ONLY","sha256":"84bc32d4887b2639ea8921136a1fa269ce269b865d15549de55129696a05ec6b"},
+    {"path":"docs/topics/0.13_Thermodynamic_Bridge/Result/T13_NONLINEAR_READOUT_MAP_2026-10-15.md","kind":"git_blob","role":"evidence","commit":"0f17012ffd6ad456c150b10e048efd868ce95588","availability":"LOCAL_ONLY","sha256":"4d6ac57fc8cc879b2d207e0c8db09b2180b982048548c0f0b79e6c36b944f745"},
+    {"path":"docs/topics/0.13_Thermodynamic_Bridge/Result/T13_TEMPORAL_READOUT_CONTROL_2026-10-15.md","kind":"git_blob","role":"evidence","commit":"0f17012ffd6ad456c150b10e048efd868ce95588","availability":"LOCAL_ONLY","sha256":"f2bb47f979f4e4095c3d0cc3d0329fe2cf1a460423a8b5c27c66bf43b4b1683d"},
+    {"path":"docs/topics/0.13_Thermodynamic_Bridge/Result/T13_FINITE_STACK_READOUT_2026-10-15.md","kind":"git_blob","role":"evidence","commit":"0f17012ffd6ad456c150b10e048efd868ce95588","availability":"LOCAL_ONLY","sha256":"c04d7538db9dcdebe438c7e09115074c2d125c5183436a15697b09f2482b2a3c"},
+    {"path":"docs/topics/0.13_Thermodynamic_Bridge/Result/T13_NONLINEAR_SOURCE_ADMISSION_DECISION_2026-10-15.md","kind":"git_blob","role":"evidence","commit":"0f17012ffd6ad456c150b10e048efd868ce95588","availability":"LOCAL_ONLY","sha256":"1c43ce555692655754e98bed14f9a3d669630dc2f58aa2841e59a3cd71aaa639"},
+    {"path":"docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/graphite_nonlinear_response_source_fit.json","kind":"git_blob","role":"input","commit":"0f17012ffd6ad456c150b10e048efd868ce95588","availability":"LOCAL_ONLY","sha256":"740ee9a5497aa0481cc77bf04460b3cae79e7e2fa02e5a0deb89342029517b5d"}
+  ],
+  "entrypoints": ["docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/Research_T13_Observer_Discrimination.py", "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/test_t13_observer_discrimination.py"],
+  "evidence": ["docs/topics/0.13_Thermodynamic_Bridge/Result/T13_OBSERVER_DISCRIMINATION_2026-10-17.md"],
+  "claim_boundary": "Conditional joint identifiability and affine-discrimination design; no independent coefficients, SI Phi amplitude, acquired physical kernel, UET-specific mechanism, He-II completion or Full Topic13/Core promotion",
+  "next_action": "Stop at exact source admission prerequisite; reopen with an eligible same-state measured kernel and independently justified transfer/error/clock contract, not another unchanged sweep"
+}
