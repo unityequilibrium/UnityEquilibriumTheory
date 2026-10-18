@@ -1,3 +1,16 @@
+<!-- theory-sequencing-memory-pilot-v1:start -->
+## 2026-10-18 - Apply the sequencing standard to one existing memory proposition
+
+- Scope / type: TD0-TD3 evidence-reuse and design audit; no restart of completed W1-W3.
+- Changed: section 8 of RESEARCH_DESIGN_OBSERVABLE_DISCRIMINATION_2026-10-17.md now contains the bounded card, evidence map, alternatives and stop condition under standard 32.
+- Result: existing force-history memory acts before state evolution; derived trace is computed afterward. Reused existing trace invariance and ordinary-comparator boundaries. No new state, equation, verifier output or physical evidence.
+- Verification: direct implementation/formula/saved-artifact/test-definition inspection; local link and scoped whitespace checks. No scientific rerun or claim promotion.
+- Blocker narrowed: not a missing generic memory demonstration. The next design decision is whether the intended information concept is this scoped mechanism, a stronger physically derived restriction, or a different role; author acceptance is not inferred.
+- Current controller: covariant_open_system_formula_audit.json open_items/claim_ceiling and covariant_open_system_verification.json research_status/coefficient_provenance.evidence_status retain their original scope. Existing physical/comparator controllers unchanged.
+- Still open / next: author scope reconciliation, then one precise physical-origin/comparator question if authorized. No automatic data acquisition, contact, new branch or lane.
+- Workflow linkage: standard 32 pilot complete as a methodological classification, NOT TD0-TD6 scientific acceptance or Full Topic13 completion.
+<!-- theory-sequencing-memory-pilot-v1:end -->
+
 <!-- graphite-input-revalidation-v1:start -->
 ## 2026-10-18 - Revalidate actual inputs before more calculations
 

@@ -111,3 +111,80 @@ Handoff: RESULT; NEW_EVIDENCE; REUSED_EVIDENCE; OBSERVABLE_AND_UNITS; VERIFICATI
 ## Design verification
 
 Planning-only change. Existing evidence read, not regenerated. No data scored, no holdout accessed, no independent physical result produced, no science gate changed. The plan builds on the shared completeness standard; it does not replace it or the older funding plan outside this specific measurement-discrimination workstream.
+
+## 8. Sequencing-standard pilot: history-dependent response versus derived record
+
+Date: 2026-10-18. Baseline: `b307897a4`, canonical worktree
+`C:/Users/santa/Desktop/uet_harness`, branch `codex/research/source-backaction-discrimination`.
+Class: evidence-reuse/design audit, not a new calculation, physical test or W1-W3 restart.
+Uses [standard 32](../For%20Work/32_Theory_Development_and_Research_Sequencing_Standard.md).
+
+### Bounded work card
+
+- **Question / intended claim:** Does the existing architecture already distinguish history
+  that changes future response from a record computed after dynamics? This is a bounded
+  reconstruction of the project's memory idea, not an assertion that the author defines
+  all information as memory, entropy or a new field.
+- **Stage and scope:** TD0-TD3 review of the named existing implementations only.
+- **Already have:** the state/record distinction in the
+  [main ontology](../../core/01_contracts/UET_MAIN_THEORY_AXIOMS_SPEC.md);
+  [open-system implementation](../../core/02_equations/covariant/uet_covariant_open_system.py);
+  its [formula audit](../../core/07_artifacts/correspondence/covariant_open_system_formula_audit.json)
+  and [saved control](../../core/07_artifacts/verification/covariant_open_system_verification.json);
+  [trace implementation](../../core/02_equations/matter_space/uet_trace.py);
+  [trace/no-backreaction controls](../../core/07_artifacts/verification/matter_space_variational_verification.json);
+  and the [existing comparator result](Result/T13_ACTION_DISCRIMINATION_2026-10-18.md).
+- **Missing/disputed:** author acceptance of this narrower proposition as a sufficient
+  expression of the intended information concept; physical origin and independent matching
+  of memory coefficients; a justified restriction distinguishing it from ordinary memory models.
+- **Controlling dependencies:** the formula audit's `open_items` and
+  `claim_ceiling`, the open-system result's `research_status` and
+  `coefficient_provenance.evidence_status`, and the existing calculation contract
+  [CORE_MATTER_SPACE_OBSERVER_V1](../../core/00_governance/calculation_contracts/matter_space_observer.json).
+  The latter covers the matter/trace distinction, NOT certification of the open-system path.
+  Existing Topic13 physical/comparator controllers are unchanged.
+- **One action and why:** compare actual function inputs and update order to saved
+  results and the previously proved comparator boundary. This decides whether another
+  demonstration or additional state is needed before any new theory design.
+- **Outcomes / acceptance:** distinguish an implemented mechanism, an output-only record,
+  or a missing mechanism; report constitutive assumptions separately from physical support.
+  Completion is evidence-backed classification and an exact next decision, not a new PASS.
+- **Stop / reopen:** stop this audit once the roles and remaining decision are explicit.
+  Reopen calculations only for a changed hypothesis/input/implementation or demonstrably
+  stale evidence. Do not restart the closed observer-discrimination round.
+- **Reviewer question:** author: is physical history-dependent response the intended
+  proposition, a narrower example, or insufficient? Subsequently, a statistical-mechanics
+  reviewer should assess one chosen microscopic/state/transport correspondence.
+- **Non-goals:** no new equation/term, universal information-mass identification, physical
+  coefficient, material substitution, old-source hunt, scientific gate edit or status promotion.
+
+### Findings and disposition
+
+| Stage | Existing evidence and decision | Remaining gap |
+| --- | --- | --- |
+| TD0 | Existing ontology already separates physical memory from generated and observed records. This is not a newly discovered definition of the author's entire theory. | Author's intended breadth/identity of information remains unconfirmed. |
+| TD1 | `open_system_evolution` accepts `force_history`; `_memory_convolution` computes the retarded input; `rate=-memory_force+source` advances the state before trace production. The full model includes history, not just its present state array. | Exponential kernel and coefficients are declared constitutive inputs, not uniquely forced by the broad concept. |
+| TD2 | Saved open-system control reports internal support/normalization/KMS/positivity checks; its coefficient source is `internal://wave4-preregistered-control`, evidence `SIMULATION_ONLY`. Matter-space saved checks separately report trace-switch invariance and trace-history no-backreaction. | No fresh verifier run, universal well-posedness proof, microscopic derivation or measured coefficient is supplied here. |
+| TD3 | Existing action-discrimination section D already constructs ordinary linear-filter/damped-oscillator comparators for these controls. | History dependence alone is not a uniquely UET prediction or proof of a new substance. |
+| TD4-TD6 | Not executed by this pilot; original He-4, graphite and parent gates retain separate scope. | Physical realization, testing and transfer require their own existing prerequisites. |
+
+**Decision:** the weak mathematical proposition is already represented: some named
+models use history in their dynamics, while their generated trace is an output.
+The trace-only path by itself does not establish feedback. No new field or duplicated
+memory demonstration is needed to establish that implementation distinction.
+
+This does NOT show that every information variable is a memory force, that the same
+present reduced coordinates determine a closed Markov state, or that microscopic physics
+has acquired new laws. It also does not establish a universal entropy/energy conversion.
+The earlier action/comparator result remains in force.
+
+**Next decision:** confirm whether the intended theory requires (a) this constitutive
+history-dependent response as a scoped application, (b) a derivation/physical restriction
+on the existing memory law, or (c) a genuinely different mathematical role for information.
+Option (b) needs a specific source/microscopic hypothesis, not another constant sweep;
+option (c) first needs a bounded proposition and state/observable definition. These are
+alternatives for author review, not three automatically active research lanes.
+
+**Verification:** direct source/formula/artifact/test-definition inspection and local
+link/whitespace review only. Existing results reused, not regenerated or newly certified.
+This completes one methodological pilot; physical research and theory closure are unchanged.
