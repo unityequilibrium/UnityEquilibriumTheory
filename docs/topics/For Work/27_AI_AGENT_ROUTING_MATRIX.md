@@ -19,7 +19,7 @@ Use the task type, not the agent's preference, to choose a skill.
 | "Review result artifacts" | `uet-result-artifact-reviewer` | `uet-status-reconstructor` | `14_Result_Standard.md`, topic `VERIFICATION_SPEC.md` |
 | "Docs and artifacts disagree" | `uet-standards-drift-detector` | `uet-status-reconstructor` | `02_Project_Workflow_and_Lifecycle.md`, `18_Research_Hardening_Workflow.md` |
 | "Write/update an update log" | `uet-update-log-writer` | `uet-hardening-wave` | `24_TEMPLATE_UPDATE_LOG.md` |
-| "Create or repair a topic structure" | `uet-hardening-wave` | `uet-data-provenance-audit` | `10_Topic_Architecture_5x5(+1).md`, `02_Project_Workflow_and_Lifecycle.md` |
+| "Create or repair a topic structure" | `uet-hardening-wave` | `uet-data-provenance-audit` | `10_Topic_Architecture_5x4.md`, `02_Project_Workflow_and_Lifecycle.md` |
 
 ## Default reconstruction order
 

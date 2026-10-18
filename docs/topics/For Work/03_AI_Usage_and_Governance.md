@@ -1,5 +1,13 @@
 # AI Usage and Governance
 
+Use [Theory Development and Research Sequencing v1](32_Theory_Development_and_Research_Sequencing_Standard.md)
+for theory reconstruction and new branches. Distinguish the author's recorded intent,
+AI proposals, imported laws and later interpretations; archive presence is not approval.
+Do not treat conversational A/B/C quality grades as the A-E claim classes, scientific
+evidence or a judgment of the author. Separate construction from adversarial review;
+another AI is not independent empirical replication. Record the exact specialist
+question when expertise is missing, without automatically contacting anyone.
+
 This document exists because AI accelerates both progress and confusion.
 
 The goal is not to stop using AI. The goal is to use AI in a way that protects the

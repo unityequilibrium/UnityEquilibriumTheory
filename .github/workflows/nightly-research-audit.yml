@@ -20,6 +20,8 @@ jobs:
     timeout-minutes: 60
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
@@ -27,6 +29,12 @@ jobs:
       - name: Compile repository sources
         run: python -m compileall -q docs services_and_experiments
       - name: Run full research tests
+        # Contract coverage remains distinct from the scientific suite below.
+        run: |
+          set -euo pipefail
+          python docs/scripts/audit/audit_calculation_completeness.py --check
+          python -m unittest discover -s docs/scripts/audit/tests -p test_calculation_completeness.py -v
+      - name: Run scientific research tests
         run: |
           set -euo pipefail
           if find docs -type f \( -name 'test_*.py' -o -name '*_test.py' \) | grep -q .; then

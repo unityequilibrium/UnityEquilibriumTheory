@@ -46,7 +46,7 @@ jobs:
               echo "$key=false" >> "$GITHUB_OUTPUT"
             fi
           }
-          set_output research '^(docs/(core|topics|meta|scripts)/|docs/UET_Documentation_Details/)'
+          set_output research '^(docs/(core|topics|meta|scripts|data/external)/|docs/UET_Documentation_Details/|\.github/workflows/(pr-validation|nightly-research-audit)\.yml$)'
           set_output books '^(uet_history/BOOK_WORKFLOW\.md|uet_history/3_publish/books/)'
           set_output services '^services_and_experiments/'
           set_output policy '^thailand_proposals/'
@@ -83,7 +83,7 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - run: python -m pip install --upgrade pytest numpy scipy mpmath h5py pandas matplotlib sympy pyyaml phonopy
+      - run: python -m pip install --upgrade pytest numpy scipy mpmath h5py pandas matplotlib sympy pyyaml httpx==0.28.1
       - run: python -m compileall -q docs services_and_experiments
       - name: Run changed Python tests
         env:
@@ -91,17 +91,7 @@ jobs:
           HEAD_SHA: ${{ github.event.pull_request.head.sha }}
         run: |
           set -euo pipefail
-          git diff --name-only --diff-filter=ACMRTUXB "$BASE_SHA" "$HEAD_SHA" \
-            | grep -E '(^|/)(test_[^/]+\.py|[^/]+_test\.py)$' \
-            | while IFS= read -r file; do
-                test -f "$file" || continue
-                case "$file" in
-                  docs/scripts/Legacy/*|docs/scripts/core/legacy/*|docs/core/08_history/legacy/*)
-                    continue
-                    ;;
-                esac
-                printf '%s\n' "$file"
-              done > changed-tests.txt || true
+          git diff --name-only "$BASE_SHA" "$HEAD_SHA" | grep -E '(^|/)(test_[^/]+\.py|[^/]+_test\.py)$' > changed-tests.txt || true
           if test -s changed-tests.txt; then
             tests="$(cat changed-tests.txt)"
             pytest -q $tests
@@ -123,6 +113,13 @@ jobs:
         with:
           python-version: '3.12'
       - run: python -m compileall -q docs
+      - name: Check scoped calculation and observation contracts
+        env:
+          BASE_SHA: ${{ github.event.pull_request.base.sha }}
+        run: |
+          set -euo pipefail
+          python docs/scripts/audit/audit_calculation_completeness.py --changed "$BASE_SHA" --check
+          python -m unittest discover -s docs/scripts/audit/tests -p test_calculation_completeness.py -v
       - name: Parse changed research JSON artifacts
         env:
           BASE_SHA: ${{ github.event.pull_request.base.sha }}

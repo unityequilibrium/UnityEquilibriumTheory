@@ -1,5 +1,28 @@
 # UET Agent Operating Guide
 
+## Theory-development decision order
+
+For theory reconstruction, model design or repeated stalled research, apply
+`docs/topics/For Work/32_Theory_Development_and_Research_Sequencing_Standard.md`.
+Reconstruct author intent versus AI proposals and existing results before adding
+equations. Order work by proposition, minimal model, consistency, comparator,
+physical realization, locked test and generalization. These planning stages do
+not replace F0-F8, calculation contracts, claim classes or canonical physics gates.
+Use one bounded card in the existing research-design/METHOD/wave record: have,
+missing/disputed, current evidence/controller, next action and why, outcomes,
+stop/reopening condition and reviewer question. Reuse unchanged evidence; no new
+term/branch merely to escape a comparator or keep activity going. Human acceptance
+of intent is not physical proof; AI agreement or conversational grades are not
+validation. Preserve unrelated work and historical results. Request specialist
+review of a precise gap without automatic external contact.
+
+Before equation/observer design, apply standard 30's boundary-first system partition:
+internal impact, signal transport, receiver effect, detector state, observable and
+source backaction are separate. Do not infer full observability or significant
+reciprocal influence from an internal interaction or a detection. New/revised
+non-FORMAL calculation contracts declare observation.system_partition; legacy gaps
+remain visible without rewriting old scientific evidence.
+
 This file is the root entrypoint for AI agents and collaborators working in this repository.
 
 It does not replace the project standards. It tells an agent where truth lives, how to work
@@ -155,7 +178,7 @@ Then choose the next standard by task.
 ### If the task is topic building or refactoring
 
 1. [`docs/topics/For Work/02_Project_Workflow_and_Lifecycle.md`](./docs/topics/For%20Work/02_Project_Workflow_and_Lifecycle.md)
-2. [`docs/topics/For Work/10_Topic_Architecture_5x5(+1).md`](./docs/topics/For%20Work/10_Topic_Architecture_5x5(+1).md)
+2. [`docs/topics/For Work/10_Topic_Architecture_5x4.md`](./docs/topics/For%20Work/10_Topic_Architecture_5x4.md)
 3. the relevant standards in `11-18`
 
 ### If the task is book writing or history publishing
@@ -516,7 +539,7 @@ required to explain the same hardening wave.
 - AI-generated wording needs review: open
   [`03_AI_Usage_and_Governance.md`](./docs/topics/For%20Work/03_AI_Usage_and_Governance.md)
 - Topic structure is messy: open
-  [`10_Topic_Architecture_5x5(+1).md`](./docs/topics/For%20Work/10_Topic_Architecture_5x5(+1).md)
+  [`10_Topic_Architecture_5x4.md`](./docs/topics/For%20Work/10_Topic_Architecture_5x4.md)
 - Data provenance is weak: open
   [`12_Data_Standard.md`](./docs/topics/For%20Work/12_Data_Standard.md)
 - Result artifacts are unclear: open
@@ -569,3 +592,17 @@ The normal publish checkpoint is the same day as the completed section: commit
 the coherent unit, push the branch, and open or update a draft PR when it is
 not ready to merge. Use git fetch --prune origin during branch inventory so
 stale origin/codex/... references do not look like active remote branches.
+
+### Calculation and observation completeness
+
+Apply `docs/topics/For Work/30_Calculation_and_Observation_Completeness_Standard.md`
+to new or changed scientific calculation paths. Read the existing calculation
+contract first; declare input/model/observer/processing/output, applicability and
+error budgets. Unknown effects are not zero. Preserve distinctions between
+physical state, dissipation trace and observer record. Trace upstream corrections
+before applying any again. Run `docs/scripts/audit/audit_calculation_completeness.py
+--check` and the changed-path check before physical promotion or handoff. Review
+contract identity when code, data, configuration, model or observable changes.
+Formal and diagnostic work may continue within declared limits; contract coverage
+does not override physics gates. Gradually review legacy work, beginning with Core
+and Topic 13, without rerunning unchanged evidence or rewriting historical results.

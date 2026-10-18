@@ -1,5 +1,15 @@
 # How to: Result Standard
 
+New verification producers follow [Calculation and Observation Completeness v1](30_Calculation_and_Observation_Completeness_Standard.md).
+Attach contract ID/hash and input/config/code identities through the producer.
+Preserve old results and distinguish contract review, execution and scientific status.
+
+Applicability: an analytical proof/counterexample may remain in its canonical
+derivation/specification record, linked from the study. It does not need a fake
+script run or JSON artifact. The artifact rules below apply to executable
+verification producers; existing Core canonical artifact paths remain governed
+by their own migration/path helpers, not a newly copied topic Result directory.
+
 This document defines the standard for the `Result/` pillar.
 
 ## Core principle

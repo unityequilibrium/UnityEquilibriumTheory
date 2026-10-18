@@ -4,6 +4,11 @@ This rubric defines how to classify statements in UET topics.
 
 Its purpose is to stop claim inflation.
 
+Use [profile-specific applicability and evidence types](32_Theory_Development_and_Research_Sequencing_Standard.md#applicability-and-evidence-types).
+For FORMAL work cite the proposition, assumptions and proof/counterexample rather
+than inventing a script, dataset or threshold. These classes describe evidence
+wording; they are not grades, a universal chronological ladder or guarantees of truth.
+
 ## Purpose
 
 Provide a shared language for describing what kind of claim exists, what evidence supports
@@ -87,6 +92,13 @@ Allowed wording:
 
 ### Class D: External replication
 
+Compatibility note: the historical class name is retained. An outside rerun using
+the same supplied data/code is external computational reproduction; a study with
+independently obtained data is a different evidence type under the National Academies
+terminology linked in the standards entrypoint. Record which actually happened.
+Do not describe a same-package rerun as independent empirical confirmation. Historical
+labels/artifacts are not rewritten or promoted by this clarification.
+
 Use when:
 
 - an outside person or team can rerun the method from the provided package
@@ -101,6 +113,10 @@ Allowed wording:
 Use when:
 
 - the claim exists in a reviewed publication or accepted equivalent external venue
+
+Review status does not establish correctness, replication, predictive performance or
+support beyond the publication's actual evidence. A class E statement can retain
+open limitations or later be contradicted; classes need not be traversed in order.
 
 Allowed wording:
 
@@ -118,6 +134,9 @@ The following transitions are forbidden without explicit evidence:
 ## 3. Required mapping for every major claim
 
 Every major topic claim should answer:
+
+Fields apply to the claimed evidence type. Mark genuinely inapplicable fields with
+a reason and cite existing records; missing required evidence is not non-applicability.
 
 - claim text
 - claim class

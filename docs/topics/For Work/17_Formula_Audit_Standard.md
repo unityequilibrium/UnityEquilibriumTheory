@@ -1,5 +1,15 @@
 # Formula Audit Standard
 
+Apply [Theory Development and Research Sequencing v1](32_Theory_Development_and_Research_Sequencing_Standard.md)
+before adding terms or interpreting a new formula family. Record why each state/term
+is necessary, its origin, independent parameter freedom, comparator equivalence and
+the earliest missing dependency. Mathematical consistency is not novelty or physical
+support; borrowed mathematics is allowed, but analogy is not a derivation.
+
+Use [Calculation and Observation Completeness v1](30_Calculation_and_Observation_Completeness_Standard.md)
+for each calculation path. Link its contract from the formula entry; distinguish
+field-coordinate conventions from identifiable physical parameter combinations.
+
 This guide defines how UET topics must document formulas, constants, units, and proof
 status before scientific wording is promoted.
 

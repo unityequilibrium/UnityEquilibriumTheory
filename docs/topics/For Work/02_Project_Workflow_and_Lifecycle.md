@@ -1,5 +1,16 @@
 # Project Workflow and Topic Lifecycle
 
+Theory design follows [Theory Development and Research Sequencing v1](32_Theory_Development_and_Research_Sequencing_Standard.md):
+proposition -> minimal model -> consistency -> comparator -> physical realization ->
+locked test -> generalization. These are decision stages, not readiness labels or
+new physics gates. Reuse the existing evidence before selecting the next dependency.
+Explicit FORMAL/normalized exploration may continue with physical correspondence
+open under the existing F2 exception; it cannot satisfy a physical acceptance claim.
+
+Calculation paths also follow [Calculation and Observation Completeness v1](30_Calculation_and_Observation_Completeness_Standard.md).
+Declare a scoped contract before using new/changed calculations for physical claims;
+unknown contributions permit bounded diagnostic work but not physical acceptance.
+
 This document defines how a UET topic should move from idea to structured research work.
 
 ## Purpose
