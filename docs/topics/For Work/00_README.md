@@ -235,7 +235,7 @@ flowchart TD
 - Every standards page should be easy to scan, not just correct in prose.
 - Every important formula must declare origin, units, and proof status.
 - Repository prose must not be promoted from dictation alone; it must be tied to a derivation, script, artifact, or source record.
-- Every topic README must include at least one conceptual diagram and one evidence/status matrix so later readers can understand the theory role, data path, formula status, verifier role, and limitations without reading the whole folder first.
+- Every topic README must make scope, evidence and blockers legible; use a diagram or evidence matrix when it clarifies actual relationships, not as an automatic completion requirement. Apply standard 32's profile rules and reuse existing records.
 - Scientific hardening should strengthen the research argument by exposing dependencies, mechanisms, tests, and blockers; it must not collapse the topic into only defensive wording.
 
 ## Common failure modes
@@ -254,4 +254,4 @@ flowchart TD
 - [ ] every main standard links to the correct renamed files
 - [ ] practical guides contain commands only where they help real execution
 - [ ] diagrams and tables exist to support fast scanning
-- [ ] topic README templates require a conceptual diagram and evidence/status matrix
+- [ ] topic README templates expose scope/evidence/blockers without irrelevant mandatory graphics or duplicate records

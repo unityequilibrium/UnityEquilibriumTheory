@@ -14,7 +14,7 @@ copies, new checkout, retroactive PASS, global rerun or automatic external conta
 | --- | --- | --- |
 | W0 baseline | Current checkout/commit, dirty work, distinct evidence owners and discovery limits recorded | Captured below; existing baseline is historical, not relabeled current |
 | W1 ownership audit | A/B/C/D responsibility and one primary owner per major requirement; conflicts explicitly resolved or assigned | Index map added; architecture link repaired; unresolved semantic/tooling conflicts below |
-| W2 applicability | Required / when relevant / illustrative distinguished across FORMAL, SYNTHETIC and PHYSICAL_COMPARISON; verification versus empirical support and review rules aligned | Pending source-level edits and cross-standard review; retain F2 exception |
+| W2 applicability | Required / when relevant / illustrative distinguished across FORMAL, SYNTHETIC and PHYSICAL_COMPARISON; verification versus empirical support and review rules aligned | Source-level repairs in 01/04/14/18/20/25/32 and entrypoint; reviewed below; F2 exception retained |
 | W3 proposition provenance | One existing proposition separates human intent, AI proposal, imported law, ansatz and consequences, preserving undecided choices | Reuse 2026-10-17 Topic13 design note and term-origin audit; verify identities before adopting |
 | W4 relational observation | Multiple relationship-dependent roles and nested subsystems supported without unaccounted duplicate state/energy; old records readable; omitted influence still detected | Pending schema/checker compatibility tests and standard 30 repair |
 | W5 Core pilot | Matter-space chain and comparator yield a scoped decision, not mandatory novelty | Reuse explicit generator/derivatives/evolution and existing evidence; no new model by default |
@@ -66,6 +66,32 @@ independent authorized work rather than freezing the whole project.
   101 legacy routes, 1 declared and 7 unreviewed partitions, 2755 unreviewed paths.
   Scoped Markdown file links and whitespace check PASS. This does not certify
   semantic adequacy or completeness of the legacy inventory.
+
+### [2026-10-19] W2 applicability and evidence-type reconciliation
+
+- Controlling question: can the existing methodology support a formal proof or
+  bounded diagnostic without inventing apparatus, data, numerical thresholds,
+  extra JSON gates or mandatory graphics? Standard 32 now states profile-specific
+  MUST / WHEN RELEVANT / illustrative rules as one shared applicability owner.
+- Changed: 01 and 04 permit reasoned non-applicability for numerical objects while
+  preserving actual proof obligations. 04 retains historical class D but explicitly
+  distinguishes same-package external reproduction from independent-data studies;
+  class E peer review is not a guarantee of truth or an obligatory final ladder.
+- 18 accepts a canonical proof/counterexample as formal evidence, keeps machine
+  controllers where automation/physical gates require them, and does not equate
+  blocker renaming with scientific progress. 25 packet priority now defers to the
+  question/dependency and current identities. 14 exempts analytic proofs from fake
+  JSON runs; 20/00 use graphics only where informative and avoid duplicate forms.
+- Verification: scoped file-link/anchor and whitespace review; reviewed FORMAL
+  proof without data, SYNTHETIC normalized scope, PHYSICAL_COMPARISON with unknown
+  influences, external same-data rerun, and peer-reviewed-but-limited wording.
+  No numerical producer, contract, physics gate or historical artifact was edited.
+- Outcome: these identified applicability conflicts are repaired in their owners.
+  This is a source-level methodology review, not a full automated semantic audit
+  of every standards sentence or every topic. W4's single-role schema limitation
+  is deliberately still open; documentation does not claim tooling already supports it.
+- Next controller: W3 reconstruct one existing proposition against current source
+  and comparator evidence; then W4 compatible relational-system implementation.
 
 ## [2026-10-17] - Scoped calculation and observation contracts v1
 

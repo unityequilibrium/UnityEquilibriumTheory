@@ -24,6 +24,45 @@ open under the existing F2 exception. They still need mathematical definitions, 
 normalization, assumptions and applicable checks. They cannot bypass physical F gates.
 Purely analytic work need not acquire data or implement a numerical solver.
 
+### Applicability and evidence types
+
+MUST means required for the claim in its stated scope; WHEN RELEVANT means assess
+applicability and record a reason if omitted; examples/templates are illustrative,
+not extra gates. Use the existing contract/METHOD, not a second form.
+
+| Profile | MUST | WHEN RELEVANT / legitimate non-applicability |
+| --- | --- | --- |
+| FORMAL | Definitions, assumptions, proposition, derivation/proof or counterexample, admissible domain and limitations | Numerical metrics, datasets, instruments and solver may be inapplicable; identify imported results and proof dependencies instead |
+| SYNTHETIC | Explicit state/input/output, chosen laws and parameters, initial/boundary conditions, computational method and error controls | Physical apparatus/SI map not required for a normalized model; no material-validation claim follows |
+| PHYSICAL_COMPARISON | Physical correspondence/units, actual data product and parameter provenance, measurement/processing model, uncertainty and scoped comparison rule | Use supported upstream correction/calibration or prescribed trajectories; do not resimulate irrelevant instrument detail or double-correct data |
+
+A physical-data diagnostic uses PHYSICAL_COMPARISON even when incomplete. Unknown
+effects remain limitations; they block only conclusions dependent on them, not
+independent formal or diagnostic work. Do not relabel observed data as synthetic.
+For a formal proof, a logical contradiction/counterexample can be the rejection
+criterion; no fabricated numerical threshold or empirical holdout is required.
+
+Distinguish evidence types without adding a readiness ladder:
+
+- Mathematical verification checks a stated implication under its assumptions;
+  numerical verification checks implementation/approximation in a declared domain.
+  Neither alone establishes correspondence with nature.
+- Physical validation/comparison evaluates declared predictions against measurements
+  with uncertainty and alternatives. It supports or rejects a scope, not absolute truth.
+- Calibration estimates declared parameters; fitting adjusts them to the scored data.
+  A predictive test locks the model/parameter policy and rejection rule before its
+  reserved comparison; prior exposure must be recorded, not relabeled as fresh holdout.
+- Equivalence, a counterexample, rejection and inconclusive evidence are valid outcomes.
+  Novelty is a separate question from consistency, useful application and empirical fit.
+- Human/expert review must name reviewer competence, exact question, sources examined,
+  disposition and unresolved objections. Required specialist judgment cannot be replaced
+  by a schema PASS, AI consensus or author approval of intended meaning.
+
+The [entrypoint ownership map](00_README.md#authority-layers-and-requirement-owners)
+links the external measurement, reproducibility and integrity sources. This section
+controls profile applicability for 01/04/18/20/25; it does not waive applicable
+F0-F8 physical gates or require every field for every research type.
+
 ## 2. Reconstruct before redesigning
 
 Start with the current canonical model/contract and last decision-producing results.

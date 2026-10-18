@@ -10,6 +10,11 @@
 - [Topic normalization]
 - [Readiness review]
 
+Template guidance: use [profile applicability](32_Theory_Development_and_Research_Sequencing_Standard.md#applicability-and-evidence-types).
+Declare FORMAL, SYNTHETIC or PHYSICAL_COMPARISON and link the existing contract/METHOD.
+Keep required evidence; mark inapplicable fields with reasons, do not invent data,
+metrics, scripts or equipment. Placeholders are not evidence or additional gates.
+
 ## Workflow summary
 
 ```mermaid
@@ -22,8 +27,9 @@ flowchart LR
 
 ## Theory role diagram
 
-Every topic README must include a topic-specific conceptual diagram. Replace this generic
-diagram with the actual physical, mathematical, or computational role of the topic.
+Use a topic-specific conceptual diagram when it clarifies a dependency or mechanism;
+otherwise a short precise explanation suffices. Never retain this generic diagram
+as if it described the actual study.
 
 ```mermaid
 flowchart TD
@@ -45,8 +51,9 @@ flowchart TD
 
 ## Evidence and dependency matrix
 
-Every topic README must include a compact matrix that tells a later reader what makes the
-topic strong and what still blocks it.
+Expose support and remaining blockers in a compact matrix or an equally clear
+scope-specific summary. Omit inapplicable rows with reasons. Do not copy evidence
+already controlled in a linked contract, registry or result.
 
 | Layer | Current status | Evidence path | Main blocker |
 | :-- | :-- | :-- | :-- |
@@ -131,10 +138,10 @@ Choose one:
 ## Checklist
 
 - [ ] problem and scope are bounded
-- [ ] README has a topic-specific conceptual diagram
-- [ ] README has an evidence/status matrix
+- [ ] a diagram is used only where it makes the mechanism/dependencies clearer
+- [ ] evidence and remaining blockers are clear, without duplicate records
 - [ ] assumptions and exclusions are explicit
-- [ ] data and baseline are named
+- [ ] applicable data and comparator/proof dependencies are named
 - [ ] formulas, units, and proof status are named
-- [ ] metrics and thresholds are defined
+- [ ] applicable numerical criteria or logical proof/rejection criteria are defined
 - [ ] limitations and readiness are honest
