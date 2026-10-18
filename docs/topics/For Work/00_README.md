@@ -1,5 +1,10 @@
 # UET Standards Workspace
 
+For theory design or stalled multi-branch work, start with
+[Theory Development and Research Sequencing v1](32_Theory_Development_and_Research_Sequencing_Standard.md).
+Reconstruct accepted ideas and existing evidence, identify the earliest unresolved
+dependency of the intended claim, and use one bounded work card before expanding.
+
 New and changed calculation paths use [Calculation and Observation Completeness v1](30_Calculation_and_Observation_Completeness_Standard.md).
 Start with the existing scoped contract and coverage inventory before rerunning research.
 
@@ -109,6 +114,7 @@ flowchart TD
 | `27_AI_AGENT_ROUTING_MATRIX.md` | AI task routing matrix | routing common user requests to the minimum useful skill set |
 | `28_AI_AGENT_SKILL_AUTHORING_STANDARD.md` | UET skill authoring rules | creating or reviewing skills without replacing `For Work` |
 | `29_TEMPLATE_AI_AGENT_SKILL_SPEC.md` | skill spec template | drafting a portable UET skill before installing it |
+| `32_Theory_Development_and_Research_Sequencing_Standard.md` | proposition-to-model-to-test decision order | reconstructing intent, selecting minimal models, comparing existing theories and stopping unproductive expansion; TD stages do not replace F0-F8 |
 
 ## Quick decision matrix
 

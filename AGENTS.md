@@ -1,5 +1,21 @@
 # UET Agent Operating Guide
 
+## Theory-development decision order
+
+For theory reconstruction, model design or repeated stalled research, apply
+`docs/topics/For Work/32_Theory_Development_and_Research_Sequencing_Standard.md`.
+Reconstruct author intent versus AI proposals and existing results before adding
+equations. Order work by proposition, minimal model, consistency, comparator,
+physical realization, locked test and generalization. These planning stages do
+not replace F0-F8, calculation contracts, claim classes or canonical physics gates.
+Use one bounded card in the existing research-design/METHOD/wave record: have,
+missing/disputed, current evidence/controller, next action and why, outcomes,
+stop/reopening condition and reviewer question. Reuse unchanged evidence; no new
+term/branch merely to escape a comparator or keep activity going. Human acceptance
+of intent is not physical proof; AI agreement or conversational grades are not
+validation. Preserve unrelated work and historical results. Request specialist
+review of a precise gap without automatic external contact.
+
 This file is the root entrypoint for AI agents and collaborators working in this repository.
 
 It does not replace the project standards. It tells an agent where truth lives, how to work

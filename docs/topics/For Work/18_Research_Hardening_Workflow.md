@@ -1,5 +1,12 @@
 # Research Hardening Workflow
 
+Before choosing a wave, use [Theory Development and Research Sequencing v1](32_Theory_Development_and_Research_Sequencing_Standard.md).
+Put its bounded work card in the existing research-design/METHOD/wave record, linking
+the current contract and blocker rather than making another registry. Choose the
+earliest unresolved dependency of the intended claim. Reuse counterexamples and
+equivalences; after two no-evidence-change attempts, reassess instead of expanding.
+More documentation, cells or tests alone is not scientific progress.
+
 Before a new wave, consult [Calculation and Observation Completeness v1](30_Calculation_and_Observation_Completeness_Standard.md)
 and its existing contract. Review stale identities and unresolved components before
 expanding scope; reuse unchanged derivations and verifier evidence.
