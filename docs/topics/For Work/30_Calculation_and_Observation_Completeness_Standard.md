@@ -79,11 +79,28 @@ source backaction are distinct edges. Do not force them into a universal serial
 pipeline: some channels are absent, unobserved, aggregated, indirect or unresolved.
 Do not infer a physical absence from an omitted graph edge.
 
-New or revised non-FORMAL contracts declare `observation.system_partition`:
+New or revised non-FORMAL contracts declare `observation.system_partition` with
+`role_mode: RELATIONAL`. A system has no permanent source/detector species: its
+role follows the particular coupling or observable. One node may receive one
+signal and provide another. A category is a modeling label, not physical isolation.
+Include timescale, level of description and accuracy in the boundary.
 
 - `boundary`: included/excluded systems, approximation, timescale and accuracy scope.
-- `systems`: unique `id`, `role` (SOURCE, DETECTOR, ENVIRONMENT, CARRIER, AUXILIARY)
-  and declared `state`. Detector and observable IDs are distinct.
+- `systems`: unique `id` and declared `state`; optional `categories` and `parent_id`.
+  Detector and observable IDs are distinct. In RELATIONAL mode omit fixed `role`.
+- Every relational system has `state_accounting` with `kind`, `state_ids`,
+  `owner_ids`, `rule`. INDEPENDENT systems own nonempty, globally unique state IDs
+  and have no owner_ids. AGGREGATE/VIEW systems have no new state_ids and reference
+  existing INDEPENDENT owner IDs. State IDs name actual modeled degrees of freedom,
+  not arbitrary aliases to evade duplicate checks. AGGREGATE containment is acyclic;
+  a parent's owner set covers its children. VIEW is a derived/coarse-grained view,
+  not another independently initialized state. Overlapping classifications use views
+  or categories rather than copied physical states. The rule explains storage and
+  interaction-energy allocation; aggregates are not additive extra energy stores.
+- `accounting_component_id` references the existing system_state component, with
+  derivation/implementation evidence or UNKNOWN. The checker verifies ownership
+  structure, not whether different state names hide the same physical degree of
+  freedom, whether all interactions were found, or whether the energy law is valid.
 - `couplings`: directed `id`, `source`, `target`, `kind`, `map` and `component_id`.
   Kinds are INTERNAL, SIGNAL, DETECTION, BACKACTION, ENVIRONMENT, RECEIVER_DYNAMICS.
   A directed effective edge does not assert fundamental nonreciprocity or waive
@@ -91,9 +108,12 @@ New or revised non-FORMAL contracts declare `observation.system_partition`:
 - `observables`: `id`, `detector_id`, `target_systems`, `quantity`, `readout_map`
   and detector/processing `component_id`. Only declared target quantities are claimed
   visible; no requirement exists that every internal coordinate be recoverable.
-- For each claimed detector, assess BACKACTION to each SOURCE in the declared
-  boundary explicitly. These are assessments, NOT mandatory active feedback terms.
-  Aggregate sources where the physical question justifies one subsystem.
+- Each observable declares `backaction_targets` and `backaction_scope_reason`.
+  Include every observed target other than the receiver itself and assess additional
+  upstream/unobserved systems when their influence matters to the claim. The reason
+  must justify that scope, including mediated feedback and aggregation. BACKACTION
+  edges assess each receiver-to-target influence separately; they need not be active.
+  Structural inclusion of observed targets does not prove the entire scope adequate.
 - With no measurement claim, use an empty observable list and a scoped
   `no_detector_reason`; a formal proof must not invent a detector to fill a form.
 
@@ -104,11 +124,30 @@ needs a scope-specific reason (e.g. a synthetic no-feedback definition, not an
 unjustified claim of exact physical isolation); UNKNOWN needs owner/next action.
 Weak feedback is not zero feedback. A significant/unknown source perturbation cannot
 be dismissed because the receiver is geographically external or called an observer.
+Distance, propagation delay, velocity/momentum, channel coupling and receiver
+susceptibility are assessed where relevant, not compressed into a universal
+distance-strength rule. Impact/effect are not large/small-response categories.
+
+When a prior partition is changed, add `boundary_change`: `baseline_identity`
+identifies the old contract through an existing identity (path, or git:commit:path),
+`baseline_contract_id` and canonical `baseline_contract_sha256` bind its version;
+`component_id` points to mapping evidence, `outcome` is EQUIVALENT, APPROXIMATE,
+DIFFERENT or UNRESOLVED, and `explanation` states correspondence, error allowance
+or the difference. The prior contract is referenced, not copied. EQUIVALENT needs
+admitted mapping evidence; UNKNOWN cannot establish it. This is a scoped relation,
+not a new science status. Changed scope invalidates an old review hash. The checker
+binds the baseline identity but a substantive reviewer must assess equivalence.
 
 Example: A and B interact internally, B supplies a declared channel to D, and D reads
 one quantity. This does not expose all of A/B. D-to-A/B influence may be modeled,
 bounded, inapplicable to the formal scope or unknown independently of that reading.
 The detector itself can be part of a larger modeled system when the boundary expands.
+
+Compatibility: absent role_mode means LEGACY_FIXED; retain the original node-role
+interpretation and its per-SOURCE backaction checks. Old contracts are readable,
+not silently converted or freshly certified. Relational-only fields in legacy mode
+are rejected rather than ignored. The changed-contract check requires RELATIONAL
+for non-FORMAL edits. FORMAL work still need not invent an observation apparatus.
 
 The existing checker validates endpoint/component references, declared detection paths,
 separate detector/observable IDs and explicit backaction assessments. UNKNOWN routes

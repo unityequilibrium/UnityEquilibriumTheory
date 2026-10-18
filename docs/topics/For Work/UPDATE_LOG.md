@@ -16,7 +16,7 @@ copies, new checkout, retroactive PASS, global rerun or automatic external conta
 | W1 ownership audit | A/B/C/D responsibility and one primary owner per major requirement; conflicts explicitly resolved or assigned | Index map added; architecture link repaired; unresolved semantic/tooling conflicts below |
 | W2 applicability | Required / when relevant / illustrative distinguished across FORMAL, SYNTHETIC and PHYSICAL_COMPARISON; verification versus empirical support and review rules aligned | Source-level repairs in 01/04/14/18/20/25/32 and entrypoint; reviewed below; F2 exception retained |
 | W3 proposition provenance | One existing proposition separates human intent, AI proposal, imported law, ansatz and consequences, preserving undecided choices | Design note section 9 records direct author clarification and unchanged source/comparator blob identities; physical uniqueness remains unconfirmed |
-| W4 relational observation | Multiple relationship-dependent roles and nested subsystems supported without unaccounted duplicate state/energy; old records readable; omitted influence still detected | Pending schema/checker compatibility tests and standard 30 repair |
+| W4 relational observation | Multiple relationship-dependent roles and nested subsystems supported without unaccounted duplicate state/energy; old records readable; omitted influence still detected | Explicit RELATIONAL mode, ownership/containment and boundary-baseline binding implemented; 44 tests and read-only legacy check pass; semantic accounting still needs review |
 | W5 Core pilot | Matter-space chain and comparator yield a scoped decision, not mandatory novelty | Reuse explicit generator/derivatives/evolution and existing evidence; no new model by default |
 | W6 Topic13 pilot | He4/O2, graphite/TTG and nonlinear routes each expose evidence, missing prerequisite and one decision-changing action | Review owner lineage; no aggregate promotion or repeated data hunts |
 | W7 legacy triage | All discovered calculation/claim routes have reasoned disposition; discovered coverage and unknown coverage distinguished | Reuse existing inventory/queue; prioritize public claims and dependencies, then active physical work, reused formal/synthetic, history |
@@ -92,6 +92,33 @@ independent authorized work rather than freezing the whole project.
   is deliberately still open; documentation does not claim tooling already supports it.
 - Next controller: W3 reconstruct one existing proposition against current source
   and comparator evidence; then W4 compatible relational-system implementation.
+
+### [2026-10-19] W4 relational observation implementation
+
+- Baseline: `ee3d15150`. Changed only standard 30/template 31, existing v1 schema,
+  validator and tests. RELATIONAL mode gives roles to actual coupling/readout
+  relationships, not permanent node classes. LEGACY_FIXED is the unchanged default
+  for older graphs; mixed semantics are rejected, not silently reinterpreted.
+- State accounting: independent state IDs have unique owners; aggregates/views
+  reference those owners without new storage; containment is acyclic and parent
+  ownership covers children. Accounting references an existing component/evidence
+  ledger. Semantic aliases, full energy validity and exhaustive couplings still
+  require substantive review; structural validation is not a physics proof.
+- Observables specify justified backaction scope including observed targets. No
+  category, distance or weak-response label waives declared path/omission checks.
+  A changed boundary names the old identified contract/hash and mapping evidence,
+  with equivalent/approximate/different/unresolved disposition. Old review hashes
+  cannot authorize changed scope. Equivalent mappings cannot use UNKNOWN evidence.
+- Checks: 44 contract/observer tests PASS (34 previous + 10 new); read-only checker
+  reports 15 contracts / 0 errors, 101 legacy routes, 1 declared and 7 unreviewed
+  partitions, 2755 unreviewed current paths. Scoped file-link and whitespace checks
+  PASS. A fixture duplication found during development was fixed; final suite passes.
+- Existing scientific producers, equations, thresholds and historical artifacts
+  unchanged. No numerical physics run or physical claim promotion. New/changed
+  non-FORMAL contracts require RELATIONAL mode in the changed-contract check;
+  read-only legacy validation retains its original scope.
+- Next controller: W5 use these rules on the existing matter-space contract and
+  source/comparator chain before expanding standards or adopting other topics.
 
 ## [2026-10-17] - Scoped calculation and observation contracts v1
 

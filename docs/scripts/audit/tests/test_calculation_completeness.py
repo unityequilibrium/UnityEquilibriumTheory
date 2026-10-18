@@ -85,6 +85,112 @@ class ContractTests(unittest.TestCase):
         g["systems"].append(dict(id="hidden", role="AUXILIARY", state="unobserved internal state"))
         self.assertEqual(self.errors(), [])
 
+    def relational_partition(self):
+        g = self.c["observation"].get("system_partition") or self.partition()
+        g.update(role_mode="RELATIONAL", accounting_component_id="system_state")
+        for system in g["systems"]:
+            system.pop("role")
+            system["state_accounting"] = dict(kind="INDEPENDENT",
+                state_ids=[system["id"]+".state"], owner_ids=[],
+                rule="Each declared state and its energy contribution counted once")
+        g["observables"][0].update(backaction_targets=["A", "B"],
+            backaction_scope_reason="A/B jointly generate this receiver input; assess both")
+        return g
+
+    def test_relational_receiver_can_be_another_relationships_source(self):
+        g = self.relational_partition()
+        g["systems"].append(dict(id="E", state="second receiver",
+            state_accounting=dict(kind="INDEPENDENT", state_ids=["E.state"], owner_ids=[], rule="own receiver storage")))
+        g["couplings"] += [dict(id="de", source="D", target="E", kind="DETECTION", component_id="propagation", map="D supplies E"),
+            dict(id="ed", source="E", target="D", kind="BACKACTION", component_id="backreaction", map="assessed absent in synthetic scope")]
+        g["observables"].append(dict(id="second_reading", detector_id="E", target_systems=["D"],
+            quantity="D state", readout_map="read E", component_id="detector",
+            backaction_targets=["D"], backaction_scope_reason="D is the prepared system for this separate observation; no A/B claim"))
+        self.assertEqual(self.errors(), [])
+
+    def test_relational_nested_aggregate_is_not_an_extra_independent_state(self):
+        g = self.relational_partition()
+        g["systems"].append(dict(id="AB", state="joint description of A/B", categories=["coupled", "thermal"],
+            state_accounting=dict(kind="AGGREGATE", state_ids=[], owner_ids=["A", "B"], rule="same A/B storage, never additive")))
+        for s in g["systems"][:2]:
+            s["parent_id"] = "AB"
+        self.assertEqual(self.errors(), [])
+        g["systems"][-1]["state_accounting"]["state_ids"] = ["extra_energy"]
+        self.assertTrue(any("not new independent" in e for e in self.errors()))
+
+    def test_relational_duplicate_independent_state_is_rejected(self):
+        g = self.relational_partition()
+        g["systems"][1]["state_accounting"]["state_ids"] = ["A.state"]
+        self.assertTrue(any("duplicate independent state" in e for e in self.errors()))
+
+    def test_relational_containment_cycle_and_unaccounted_child_rejected(self):
+        g = self.relational_partition()
+        for sid, parent in (("AB", "ALL"), ("ALL", "AB")):
+            g["systems"].append(dict(id=sid, parent_id=parent, state="same subsystem view",
+                state_accounting=dict(kind="AGGREGATE", state_ids=[], owner_ids=["A"], rule="no duplicate storage")))
+        g["systems"][1]["parent_id"] = "AB"
+        self.assertTrue(any("cyclic subsystem" in e for e in self.errors()))
+        self.assertTrue(any("omits child" in e for e in self.errors()))
+
+    def test_relational_view_requires_real_state_owners(self):
+        g = self.relational_partition()
+        g["systems"].append(dict(id="view", state="computed view",
+            state_accounting=dict(kind="VIEW", state_ids=[], owner_ids=["absent"], rule="derived statistic")))
+        self.assertTrue(any("must be an independent" in e for e in self.errors()))
+
+    def test_relational_mode_is_explicit_and_no_fixed_role_is_silently_reused(self):
+        g = self.relational_partition()
+        g.pop("role_mode")
+        self.assertTrue(any("legacy system needs role" in e for e in self.errors()))
+        g["role_mode"] = "RELATIONAL"
+        g["systems"][0]["role"] = "SOURCE"
+        self.assertTrue(any("not system.role" in e for e in self.errors()))
+
+    def test_relational_categories_do_not_waive_detection_or_backaction(self):
+        g = self.relational_partition()
+        g["systems"][1]["categories"] = ["external"]
+        g["couplings"] = [e for e in g["couplings"] if e["kind"] != "DETECTION" and e["id"] != "back_B"]
+        self.assertTrue(any("no declared detection path" in e for e in self.errors()))
+        self.assertTrue(any("missing backaction assessment D->B" in e for e in self.errors()))
+        g["observables"][0]["backaction_targets"] = ["A"]
+        self.assertTrue(any("omits an observed target" in e for e in self.errors()))
+
+    def test_relational_unknown_accounting_is_a_gap_not_complete(self):
+        self.relational_partition()
+        row = next(c for c in self.c["components"] if c["id"] == "system_state")
+        row.update(disposition="UNKNOWN", owner="reviewer", next_action="justify state/energy accounting")
+        self.c["review"]["status"] = "INCOMPLETE"
+        self.assertIn("system_state", audit.validate_contract(self.c, self.root)["gaps"])
+        self.c["review"]["status"] = "COMPLETE_FOR_SCOPE"
+        self.assertTrue(any("unresolved" in e for e in self.errors()))
+
+    def boundary_change(self):
+        baseline = copy.deepcopy(self.c)
+        path = "baseline.json"
+        (self.root / path).write_text(json.dumps(baseline), encoding="utf-8")
+        identity = dict(path=path, kind="working_file", role="evidence")
+        identity["sha256"] = audit.identity_hash(self.root, identity)
+        self.c["identities"].append(identity)
+        g = self.relational_partition()
+        g["boundary_change"] = dict(baseline_identity=path, baseline_contract_id=baseline["contract_id"],
+            baseline_contract_sha256=audit.contract_hash(baseline), component_id="system_state",
+            outcome="EQUIVALENT", explanation="same state ownership under a relabeling; formal example only")
+        return g
+
+    def test_boundary_change_checks_baseline_identity_and_mapping_evidence(self):
+        g = self.boundary_change()
+        self.assertEqual(self.errors(), [])
+        g["boundary_change"]["baseline_contract_sha256"] = "0"*64
+        self.assertTrue(any("baseline contract ID/hash mismatch" in e for e in self.errors()))
+        g["boundary_change"].update(component_id="backreaction")
+        self.assertTrue(any("boundary equivalence needs" in e for e in self.errors()))
+
+    def test_boundary_change_invalidates_old_scope_review(self):
+        self.relational_partition()
+        self.c["review"]["scope_sha256"] = audit.review_payload_hash(self.c)
+        self.c["observation"]["system_partition"]["boundary"] = "new time window and output accuracy"
+        self.assertTrue(any("scope/model/config" in e for e in audit.validate_contract(self.c, self.root)["errors"]))
+
     def test_partition_requires_explicit_backaction_assessment_not_reciprocity(self):
         g = self.partition()
         g["couplings"] = [e for e in g["couplings"] if e["id"] != "back_A"]
@@ -115,6 +221,9 @@ class ContractTests(unittest.TestCase):
         report = audit.build_report(self.root, [path])
         self.assertTrue(any("requires observation.system_partition" in e for e in report["errors"]))
         self.partition()
+        self.save_contract()
+        self.assertTrue(any("RELATIONAL role_mode" in e for e in audit.build_report(self.root, [path])["errors"]))
+        self.relational_partition()
         self.save_contract()
         self.assertEqual(audit.build_report(self.root, [path])["errors"], [])
 

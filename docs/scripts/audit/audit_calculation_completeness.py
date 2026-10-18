@@ -124,6 +124,67 @@ def schema_errors(value, schema: dict, loc: str = "contract") -> list[str]:
     return errors
 
 
+def relational_accounting_errors(graph: dict, systems: dict, components: dict) -> list[str]:
+    """Validate declared ownership; semantic state/energy equivalence still needs review."""
+    errors = []
+    accounting = components.get(graph.get("accounting_component_id"))
+    if accounting is None or accounting["group"] != "system_state":
+        errors.append("RELATIONAL partition needs system_state accounting_component_id")
+    elif accounting["disposition"] in {"NOT_APPLICABLE", "BOUNDED_OMISSION"}:
+        errors.append("declared state accounting cannot be absent or omitted")
+    owners = {}
+    for sid, system in systems.items():
+        if "role" in system:
+            errors.append(f"{sid}: RELATIONAL roles belong to relationships, not system.role")
+        a = system.get("state_accounting")
+        if a is None:
+            errors.append(f"{sid}: RELATIONAL system needs state_accounting")
+            continue
+        for field in ("state_ids", "owner_ids"):
+            if len(a[field]) != len(set(a[field])):
+                errors.append(f"{sid}: duplicate {field}")
+        if a["kind"] == "INDEPENDENT":
+            if not a["state_ids"] or a["owner_ids"]:
+                errors.append(f"{sid}: independent state needs state_ids and no owner_ids")
+            for state in a["state_ids"]:
+                if state in owners:
+                    errors.append(f"{sid}: duplicate independent state {state} owned by {owners[state]}")
+                owners[state] = sid
+        else:
+            if a["state_ids"] or not a["owner_ids"]:
+                errors.append(f"{sid}: aggregate/view references owners, not new independent states")
+            for owner in a["owner_ids"]:
+                if systems.get(owner, {}).get("state_accounting", {}).get("kind") != "INDEPENDENT":
+                    errors.append(f"{sid}: state owner {owner} must be an independent system")
+        parent = system.get("parent_id")
+        if parent is not None:
+            if systems.get(parent, {}).get("state_accounting", {}).get("kind") != "AGGREGATE":
+                errors.append(f"{sid}: parent must be an aggregate system")
+            parent_owners = set(systems.get(parent, {}).get("state_accounting", {}).get("owner_ids", []))
+            child_owners = {sid} if a["kind"] == "INDEPENDENT" else set(a["owner_ids"])
+            if not child_owners <= parent_owners:
+                errors.append(f"{sid}: parent accounting omits child owners")
+        seen = {sid}
+        while parent in systems:
+            if parent in seen:
+                errors.append(f"{sid}: cyclic subsystem containment")
+                break
+            seen.add(parent)
+            parent = systems[parent].get("parent_id")
+    change = graph.get("boundary_change")
+    if change:
+        component = components.get(change["component_id"])
+        if component is None:
+            errors.append("boundary change needs an identified mapping component")
+        elif change["outcome"] == "EQUIVALENT" and component["disposition"] not in {"MODELED", "UPSTREAM_CORRECTED"}:
+            errors.append("boundary equivalence needs admitted mapping evidence, not an omission or unknown")
+        elif component["disposition"] == "NOT_APPLICABLE":
+            errors.append("boundary change mapping cannot be not applicable")
+        if change["outcome"] == "UNRESOLVED" and component and component["disposition"] != "UNKNOWN":
+            errors.append("unresolved boundary change needs UNKNOWN mapping component")
+    return errors
+
+
 def partition_errors(contract: dict) -> list[str]:
     """Check declared interaction topology, not completeness or physical validity."""
     graph = contract["observation"].get("system_partition")
@@ -132,6 +193,17 @@ def partition_errors(contract: dict) -> list[str]:
     errors = []
     systems = {s["id"]: s for s in graph["systems"]}
     components = {c["id"]: c for c in contract["components"]}
+    relational = graph.get("role_mode", "LEGACY_FIXED") == "RELATIONAL"
+    if relational:
+        errors.extend(relational_accounting_errors(graph, systems, components))
+    else:
+        for sid, system in systems.items():
+            if "role" not in system:
+                errors.append(f"{sid}: legacy system needs role; choose RELATIONAL explicitly to change semantics")
+            if any(k in system for k in ("parent_id", "state_accounting", "categories")):
+                errors.append(f"{sid}: relational fields require explicit RELATIONAL role_mode")
+        if "boundary_change" in graph or "accounting_component_id" in graph:
+            errors.append("relational accounting fields require explicit RELATIONAL role_mode")
     for label, rows in (("system", graph["systems"]), ("coupling", graph["couplings"]),
                         ("observable", graph["observables"])):
         ids = [r["id"] for r in rows]
@@ -142,9 +214,9 @@ def partition_errors(contract: dict) -> list[str]:
             errors.append(f"{edge['id']}: unknown coupling endpoint")
         if edge["component_id"] not in components:
             errors.append(f"{edge['id']}: unknown coupling component")
-        if edge["kind"] == "DETECTION" and systems.get(edge["target"], {}).get("role") != "DETECTOR":
+        if not relational and edge["kind"] == "DETECTION" and systems.get(edge["target"], {}).get("role") != "DETECTOR":
             errors.append(f"{edge['id']}: detection must target a detector system")
-        if edge["kind"] == "BACKACTION" and systems.get(edge["source"], {}).get("role") != "DETECTOR":
+        if not relational and edge["kind"] == "BACKACTION" and systems.get(edge["source"], {}).get("role") != "DETECTOR":
             errors.append(f"{edge['id']}: backaction must originate at a detector system")
     if not graph["observables"] and not graph.get("no_detector_reason"):
         errors.append("system_partition: no observables needs a scoped no_detector_reason")
@@ -152,7 +224,8 @@ def partition_errors(contract: dict) -> list[str]:
         detector = observable["detector_id"]
         if observable["id"] in systems:
             errors.append(f"{observable['id']}: observable ID must differ from system IDs")
-        if systems.get(detector, {}).get("role") != "DETECTOR":
+        receiver_exists = detector in systems if relational else systems.get(detector, {}).get("role") == "DETECTOR"
+        if not receiver_exists:
             errors.append(f"{observable['id']}: observable is not a detector system")
         readout = components.get(observable["component_id"])
         if readout is None:
@@ -178,10 +251,25 @@ def partition_errors(contract: dict) -> list[str]:
                            and e["source"] in reachable for e in active)
             if not incoming:
                 errors.append(f"{observable['id']}: no declared detection path from {target}")
-        # Assess detector-to-source influence separately for every declared source
-        # in this boundary. The assessment may be UNKNOWN, bounded, modeled or NA.
-        for source, item in systems.items():
-            if item["role"] == "SOURCE" and not any(
+        # Legacy graphs retain their fixed source scope. Relational graphs explicitly
+        # declare the assessment scope, including observed targets and any other
+        # coupled owners justified by review. No category implies isolation.
+        if relational:
+            targets = observable.get("backaction_targets", [])
+            if "backaction_targets" not in observable or not observable.get("backaction_scope_reason"):
+                errors.append(f"{observable['id']}: relational observable needs backaction targets and scope reason")
+            if len(targets) != len(set(targets)):
+                errors.append(f"{observable['id']}: duplicate backaction targets")
+            if not (set(observable["target_systems"]) - {detector}) <= set(targets):
+                errors.append(f"{observable['id']}: backaction scope omits an observed target")
+            if any(t not in systems or t == detector for t in targets):
+                errors.append(f"{observable['id']}: invalid backaction target")
+        else:
+            if "backaction_targets" in observable or "backaction_scope_reason" in observable:
+                errors.append(f"{observable['id']}: relational scope fields require RELATIONAL role_mode")
+            targets = [s for s, item in systems.items() if item.get("role") == "SOURCE"]
+        for source in targets:
+            if not any(
                     e["kind"] == "BACKACTION" and e["source"] == detector
                     and e["target"] == source for e in graph["couplings"]):
                 errors.append(f"{observable['id']}: missing backaction assessment {detector}->{source}")
@@ -221,6 +309,19 @@ def validate_contract(contract: dict, root: Path = ROOT, schema: dict | None = N
                 errors.append(f"identity unavailable: {item['path']}: {exc}")
     identity_paths = {x["path"] for x in contract["identities"]}
     known_locators = identity_paths | {f"git:{x['commit']}:{x['path']}" for x in contract["identities"] if x.get("commit")}
+    change = contract["observation"].get("system_partition", {}).get("boundary_change")
+    if change:
+        matches = [i for i in contract["identities"] if
+                   (f"git:{i['commit']}:{i['path']}" if i.get("commit") else i["path"]) == change["baseline_identity"]]
+        if len(matches) != 1:
+            errors.append("boundary change baseline must resolve to one identified contract")
+        else:
+            try:
+                baseline = json.loads(identity_bytes(root, matches[0]).decode("utf-8-sig"))
+                if not isinstance(baseline, dict) or baseline.get("contract_id") != change["baseline_contract_id"] or contract_hash(baseline) != change["baseline_contract_sha256"]:
+                    errors.append("boundary change baseline contract ID/hash mismatch")
+            except (OSError, ValueError, TypeError) as exc:
+                errors.append(f"boundary change baseline unavailable/invalid: {exc}")
     refs = list(contract["evidence"]) + list(contract["review"].get("coverage_evidence", []))
     refs += [ref for c in contract["components"] for ref in c["evidence"]]
     refs += [c["evidence"] for c in contract["observation"]["corrections"]]
@@ -384,6 +485,10 @@ def build_report(root: Path, changed: list[str] | None = None) -> dict:
         if (locator in (changed or []) and contract.get("profile") != "FORMAL"
                 and "system_partition" not in contract.get("observation", {})):
             review["errors"].append("changed non-FORMAL contract requires observation.system_partition")
+            review["effective_status"] = "INCOMPLETE"
+        elif (locator in (changed or []) and contract.get("profile") != "FORMAL"
+              and contract["observation"]["system_partition"].get("role_mode") != "RELATIONAL"):
+            review["errors"].append("changed non-FORMAL contract requires explicit RELATIONAL role_mode")
             review["effective_status"] = "INCOMPLETE"
         review["path"] = locator
         review["contract_sha256"] = contract_hash(contract)
