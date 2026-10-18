@@ -86,3 +86,42 @@ Outcome C for the present admission decision: exact missing inputs are above and
 3. Primary-source inspection: published PDF sections/equations and data statement inspected, older generation result cross-checked; bounded locator searches recorded, no archive acquired.
 4. Freeze: formal hypothesis, units, comparator, data roles, errors, control cap and decision rules above were fixed before controls; no physical calculation admitted.
 5. Execution: only new exact observer/state identities checked. Physical prerequisites fail; no target fit, source reconstruction from suffix, or threshold chosen. Final condition C is a prerequisite result, not theory validation.
+
+## Continued material-side audit: finite-layer kinetic projection
+
+The existing [MP48 residue derivation](../../../core/03_lanes/topic13_support/T13_MP48_INTERLAYER_MODE_RESIDUE.md) already derives the mass-centroid kinetic metric and spectral residue. The [MP48 crystal audit](../../../core/03_lanes/topic13_support/T13_MP48_SHEAR_IRREP.md) establishes the SOURCE bulk Gamma doublet's E2g character. These are not missing or redone here. They do not automatically specify a nine-layer sample or equate its normal coordinate to the UET field. The older shape-only status is superseded by that scoped source-irrep result, not by an unperformed new experiment.
+
+[Tan et al., Nature Materials 11 (2012) 294-300](https://doi.org/10.1038/nmat3245), [author PDF](https://www-g.eng.cam.ac.uk/nms/publications/pdf/nmat3245.pdf), page 3 equations 1-2 and the intervening eigenvector expression, gives a free-ended identical-layer nearest-neighbour shear chain. Its highest branch approaches the bulk shear mode. We use its analytic layer profile and mass metric as a conditional material model, NOT its fitted force constant or Raman spectra as independent data for the heated nine-layer preparation.
+
+Predeclared extension: N=9 target, N=2 exact rigid reference, N=3,4 implementation controls. No force constant, observed frequency or pump/readout record fitted. Compare free-chain eigenvector and matrix independently, check translation removal, and calculate the kinetic residue for a NAMED coordinate. Floating tolerance 1e-12 is code roundoff only, not a physical model error. This extension covers a material-side geometry question, not the missing optical operator or UET identity.
+
+Let each layer have mass per area mu, physical in-plane displacement u_j, and define the highest-mode profile and a coordinate Q by
+
+```text
+e_j = cos[(N-1)*(2j-1)*pi/(2N)],  u_j=e_j*a,
+r_j = +1/n_A on odd layers, -1/n_B on even layers,
+Q = r.u = mean(u_odd)-mean(u_even),
+M_Q/area = mu*sum(e_j^2)/(r.e)^2.
+```
+
+Here a and Q are lengths; mu is kg/m^2. Their conjugate generalized forces are force/area. The force projected onto Q is f_Q=(e.f)/(r.e), where f_j is force per layer area, because sum(f_j*delta u_j)=f_Q*delta Q. A total sample modal mass requires an illuminated mode/area profile; this formula does not supply one.
+
+The rigid odd/even-group approximation with center-of-mass fixed instead gives M_rigid/area=mu*n_A*n_B/N. Cauchy-Schwarz shows eta=(r.e)^2/(sum(r_j^2)*sum(e_j^2))<=1 and M_Q=M_rigid/eta. Equality requires e proportional to r. The N=2 reference is exactly rigid. For a longer free-ended highest mode, surface amplitudes need not equal interior amplitudes; a named coordinate's pole mass is therefore not automatically the two-group reduced mass. This is a layer-profile/projection correction, not renormalization of Phi.
+
+For an arbitrary drive profile, the highest-mode projection can even vanish while nonzero layer forces excite other modes. Total intensity or total deposited momentum cannot replace e.f. This continues the earlier directional-force distinction; it does not assert that every graphite pump has zero projection. Likewise Q as an odd/even centroid is NOT automatically the relative displacement inferred by the paper's four-atom diffraction ansatz. Before applying the earlier three-channel inverse to a finite-layer mode, project the actual structure factor onto e and compare its observer rows, including layer weighting and stacking. Uniform force f_j=constant has e.f=0 for this optical mode, a useful translation-channel check rather than a proposed pump.
+
+The chain's angular-frequency ratio to its bulk limit is cos(pi/(2N)) on this highest branch. It may diagnose the finite-size model but cannot be retuned to the measured post-pump frequency. A frequency mismatch needs material-state/model errors, not an eigenvector relabeling. No full finite-layer crystal irrep is inferred from the chain alone.
+
+Result interpretation: kinematic material mass/projection is more specified than an arbitrary gain, but a material chain is not the action's field-to-material map. Even an accepted M_Q would not determine source polarization/carrier dynamics, nonlinear coefficients, damping, or Phi correspondence. The next decision is whether the finite-layer diffraction projection admits Q with bounded model error; only then assess independent coefficient/state information. No bulk dataset is silently substituted for the nine-layer experiment.
+
+### Conditional finite-layer observer projection (positive partial bridge)
+
+There is an analytic special case that does not require every layer displacement to be rigidly equal. Assume kinematic basal-plane scattering, identical layer form factors, AB stacking with layer factors F_A and F_B=F_A*exp(-i*phi), no depth/probe weighting and small displacement. Sum displacements within each group; first-order scattering depends only on their centroids. For center-of-mass-fixed Q=u_A-u_B, put t=G.Q. The unperturbed amplitude (dividing out F_A) is S_0=n_A+n_B*exp(-i*phi), and its derivative is S'_0=-i*n_A*n_B*(1-exp(-i*phi))/N. Thus
+
+```text
+d(I/I0)/dt = 2*n_A*n_B*sin(phi)/(n_A^2+n_B^2+2*n_A*n_B*cos(phi)).
+```
+
+For a first-order phase with cos(phi)=-1/2, the ratio to the balanced-group observer coefficient is exactly n_A*n_B/(n_A^2+n_B^2-n_A*n_B): 20/21 for N=9, and one for equal groups. The direction/sign and actual reciprocal phases must still be verified from the sample geometry; no phase or finite-thickness Ewald correction is declared measured here. This provides an explicit conditional map from a finite-layer centroid coordinate to a linear diffraction signal, not just a missing-item list. Under these assumptions the earlier two-coordinate inverse can be rescaled coherently, while its zero-sum closure remains. This correction does NOT repair unknown thermal division, temporal blur, layer attenuation, dynamical scattering or nonlinear harmonics. Outside these assumptions the full layer-resolved observer is required.
+
+The computed N=9 free-chain centroid pole mass is approximately 2.68033 times the layer mass per area, versus 20/9 for the rigid grouped ansatz (ratio about 1.20615). These are model-coordinate ratios, not measured sample masses, a physical discrepancy significance, or a new Phi calibration. Their effect and the 20/21 conditional readout factor show why a force or displacement gain should not be copied unchanged between conventions.

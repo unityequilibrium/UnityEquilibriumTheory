@@ -52,5 +52,45 @@ class PreparationTests(unittest.TestCase):
         for k in ('old_four_frequency_kernel_evaluated','physical_forecast_run','physical_acceptance','new_core_term','numeric_records_acquired'):
             self.assertFalse(r[k])
 
+    def test_two_layer_reduced_mass_reference(self):
+        r=m.finite_layer_projection(2)
+        self.assertAlmostEqual(r['rigid_overlap_fraction'],1)
+        self.assertAlmostEqual(r['pole_mass_per_layer_mass'],.5)
+
+    def test_nine_layer_mass_is_coordinate_projected_not_total_mass(self):
+        r=m.finite_layer_projection(9)
+        self.assertGreater(r['pole_mass_per_layer_mass'],r['rigid_mass_per_layer_mass'])
+        self.assertLess(r['rigid_overlap_fraction'],1)
+        self.assertAlmostEqual(r['pole_mass_per_layer_mass']*r['rigid_overlap_fraction'],20/9)
+        self.assertFalse(r['observer_admitted']);self.assertFalse(r['uet_field_map_admitted'])
+
+    def test_independent_spectrum_and_mode_mass_work_identity(self):
+        import numpy as np
+        for n in (3,4,9):
+            r=m.finite_layer_projection(n);e=np.array(r['profile'])
+            d=np.eye(n-1,n,k=1)-np.eye(n-1,n)
+            values,vectors=np.linalg.eigh(d.T@d)
+            self.assertAlmostEqual(values[-1],4*r['frequency_over_bulk']**2)
+            self.assertAlmostEqual(abs(float(vectors[:,-1]@e))/float(np.linalg.norm(e)),1)
+            force=np.arange(1,n+1,dtype=float);dq=.3
+            displacement=e*dq/r['centroid_projection']
+            self.assertAlmostEqual(float(force@displacement),float(e@force)*dq/r['centroid_projection'])
+            self.assertAlmostEqual(float(e@np.ones(n)),0)
+
+    def test_invalid_layer_counts_refused(self):
+        for n in (0,1,2.5,True):
+            with self.assertRaises(ValueError):m.finite_layer_projection(n)
+
+    def test_conditional_finite_layer_readout_ratio(self):
+        self.assertEqual(m.finite_layer_projection(9)['conditional_equal_layer_basal_observer_ratio'],'20/21')
+        self.assertEqual(m.finite_layer_projection(4)['conditional_equal_layer_basal_observer_ratio'],'1')
+        import cmath
+        import math
+        phi=2*math.pi/3;na,nb=5,4
+        s=na+nb*cmath.exp(-1j*phi)
+        derivative=-1j*na*nb/(na+nb)*(1-cmath.exp(-1j*phi))
+        slope=2*(s.conjugate()*derivative).real/abs(s)**2
+        self.assertAlmostEqual(slope/math.tan(phi/2),20/21)
+
 
 if __name__=='__main__':unittest.main()

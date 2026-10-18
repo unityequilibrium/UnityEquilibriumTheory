@@ -1,3 +1,13 @@
+<!-- graphite-finite-layer-projection-v1:start -->
+## 2026-10-18 - Continue same-material finite-layer mass and observer projection
+
+RESULT: Reused existing MP48 material mass-metric and confirmed source E2g audit rather than repeating them or calling them absent. Distinguished bulk evidence from the nine-layer preparation. Extended the existing preparation packet, no new tracking/report/artifact family.
+NEW_EVIDENCE: Tan et al. nmat3245 p.3 supplies the free-chain highest layer profile. For declared odd/even-centroid Q, mass per area is mu*sum(e^2)/(r.e)^2 and conjugate drive is e.f/(r.e). N=9 pole mass/layer mass is 2.680327965 versus rigid 20/9; these conditional model ratios are not measured graphite uncertainties. Under equal-layer kinematic basal AB scattering, a first-order root-of-unity phase gives an exact 20/21 linear observer correction, independent of internal within-group rigidity at first order.
+VERIFICATION: Thirteen tests PASS (eight retained, five new): independent matrix spectrum, translation orthogonality, work projection, two-layer mass reference, nine-layer mass inequality, finite-layer readout complex-amplitude derivative and invalid input refusal. Generator emit/check PASS; changed-path completeness zero errors across 15 contracts. No physical fit or Core change.
+BOUNDARY: Free-chain profile, same layer masses, no depth weighting and linear kinematic diffraction are declared hypotheses. No fitted coupling, measured pump frequency, sample area or physical error bound imported. Conditional centroid Q is not automatically canonical chi. Existing Phi/source/damping/coefficient/state/measurement prerequisites persist; source-irrep evidence is scoped to bulk MP48, not a finite-layer crystal proof.
+NEXT_ACTION: Check finite-layer observer adequacy and independent coefficient/state packet before scoring physical forecasts. Do not transfer bulk gains or reduce force to total intensity. Goal continuation remains open; this material-side result is not Full Topic13 closure or a physical test.
+<!-- graphite-finite-layer-projection-v1:end -->
+
 <!-- graphite-preparation-prediction-v1:start -->
 ## 2026-10-18 - Same-graphite source/preparation comparison and prefix-state design
 
