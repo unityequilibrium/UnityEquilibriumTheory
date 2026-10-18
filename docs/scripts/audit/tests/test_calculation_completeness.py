@@ -427,6 +427,23 @@ class ObserverControls(unittest.TestCase):
                           and target.slice.value == "system_partition" for target in node.targets)]
         saved = audit.load_json(audit.ROOT / "docs/core/00_governance/calculation_contracts/matter_space_observer.json")
         self.assertEqual(values, [saved["observation"]["system_partition"]])
+        baselines = [ast.literal_eval(node.args[1]) for node in ast.walk(tree)
+                     if isinstance(node, ast.Call) and isinstance(node.func, ast.Attribute)
+                     and node.func.attr == "insert" and len(node.args) == 2
+                     and isinstance(node.args[1], ast.Dict)]
+        self.assertIn(saved["identities"][0], baselines)
+
+    def test_core_relational_pilot_keeps_source_state_and_physical_gap(self):
+        saved = audit.load_json(audit.ROOT / "docs/core/00_governance/calculation_contracts/matter_space_observer.json")
+        graph = saved["observation"]["system_partition"]
+        self.assertEqual(graph["role_mode"], "RELATIONAL")
+        independent = {sid for s in graph["systems"] for sid in s["state_accounting"]["state_ids"]}
+        self.assertEqual(independent, {"matter_space.C", "matter_space.Phi", "matter_space.Pi", "candidate.receiver_state"})
+        self.assertFalse(next(s for s in graph["systems"] if s["id"] == "source_system")["state_accounting"]["state_ids"])
+        result = audit.validate_contract(saved)
+        self.assertEqual(result["errors"], [])
+        self.assertEqual(result["effective_status"], "INCOMPLETE")
+        self.assertIn("detector", result["gaps"])
 
     def test_velocity_raw_signal_and_frame_recovery(self):
         emitted = 100.0

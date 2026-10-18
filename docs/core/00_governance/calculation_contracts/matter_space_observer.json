@@ -43,11 +43,22 @@
   },
   "observation": {
     "system_partition": {
-      "boundary": "Normalized C and Phi/Pi dynamics plus a separately represented candidate receiver. Internal coupling is modeled; no physical carrier, detector mapping or source backaction is admitted.",
+      "role_mode": "RELATIONAL",
+      "accounting_component_id": "system_state",
+      "boundary": "Same normalized one-dimensional C/Phi/Pi dynamics and candidate receiver; source-time convention, configured periodic/zero-flux boundary and inherited numerical tolerances only. The aggregate is a view, not a new state. No physical carrier, detector mapping or source backaction is admitted.",
+      "boundary_change": {
+        "baseline_identity": "git:ced764b9bf1b438c3684636b16a4a628cbf9cf70:docs/core/00_governance/calculation_contracts/matter_space_observer.json",
+        "baseline_contract_id": "CORE_MATTER_SPACE_OBSERVER_V1",
+        "baseline_contract_sha256": "6d11ee73d8c65ae830696c0ddcdb16c4ca3f72f7b5872061322d5d5f7d96f23d",
+        "component_id": "system_state",
+        "outcome": "EQUIVALENT",
+        "explanation": "Bookkeeping equivalence only: the old C/Phi/Pi state projects identically to the new independent owners; source_system adds no coordinate or energy. Dynamics and readout functions are unchanged. This does not admit the UNKNOWN physical detector or assert physical completeness."
+      },
       "systems": [
-        {"id": "C_system", "role": "SOURCE", "state": "C collective coordinate in the declared normalized lane"},
-        {"id": "response", "role": "SOURCE", "state": "Phi and Pi; physical memory state of this model, not a detector record"},
-        {"id": "D", "role": "DETECTOR", "state": "Candidate normalized receiver state; physical instrument realization UNKNOWN"}
+        {"id": "C_system", "parent_id": "source_system", "state": "C collective coordinate in the declared normalized lane", "state_accounting": {"kind": "INDEPENDENT", "state_ids": ["matter_space.C"], "owner_ids": [], "rule": "C is initialized once; its contribution belongs to the common Omega, not an independently additive duplicate energy."}},
+        {"id": "response", "parent_id": "source_system", "state": "Phi and Pi; memory state of this model, not a detector record", "state_accounting": {"kind": "INDEPENDENT", "state_ids": ["matter_space.Phi", "matter_space.Pi"], "owner_ids": [], "rule": "Phi/Pi are initialized once; Pi storage is tau/(2*M_Phi) integral Pi^2. The shared C/Phi interaction is counted only in Omega."}},
+        {"id": "D", "state": "Candidate normalized receiver state; physical instrument realization UNKNOWN", "state_accounting": {"kind": "INDEPENDENT", "state_ids": ["candidate.receiver_state"], "owner_ids": [], "rule": "Toy receiver state is not a copy of source state or source energy; physical receiver storage and feedback remain UNKNOWN in the detector component."}},
+        {"id": "source_system", "state": "Joint description of C/Phi/Pi, not an extra coordinate", "categories": ["normalized", "coupled_response"], "state_accounting": {"kind": "AGGREGATE", "state_ids": [], "owner_ids": ["C_system", "response"], "rule": "Use the existing Omega plus Pi storage once, including -g*C^2*Phi/2 once; do not sum this aggregate as a new energy on top of its owners."}}
       ],
       "couplings": [
         {"id": "C_to_response", "source": "C_system", "target": "response", "kind": "INTERNAL", "component_id": "system_state", "map": "Paired variational coupling in Omega; see matter_space_rhs"},
@@ -57,7 +68,7 @@
         {"id": "D_to_response_assessment", "source": "D", "target": "response", "kind": "BACKACTION", "component_id": "detector", "map": "Physical response-sector feedback unadmitted; existing no-trace-feedback implementation is not proof of physical isolation"}
       ],
       "observables": [
-        {"id": "candidate_receiver_readout", "detector_id": "D", "target_systems": ["C_system", "response"], "quantity": "Selected normalized receiver record, not the complete source state", "readout_map": "Existing toy gain/payload relation only; material detector correspondence UNKNOWN", "component_id": "detector"}
+        {"id": "candidate_receiver_readout", "detector_id": "D", "target_systems": ["C_system", "response"], "quantity": "Selected normalized receiver record, not the complete source state", "readout_map": "Existing toy gain/payload relation only; material detector correspondence UNKNOWN", "component_id": "detector", "backaction_targets": ["C_system", "response"], "backaction_scope_reason": "Both independent source owners are assessed; source_system is their nonadditive view, not a third affected state. No physical feedback route is admitted by this review."}
       ]
     },
     "source_state": "Source-scoped state, not automatically a material state.",
@@ -150,6 +161,13 @@
     "omission_limit": null
   },
   "identities": [
+    {
+      "path": "docs/core/00_governance/calculation_contracts/matter_space_observer.json",
+      "kind": "git_blob",
+      "commit": "ced764b9bf1b438c3684636b16a4a628cbf9cf70",
+      "role": "evidence",
+      "sha256": "2a67ca63b40c0bcec2bb47653e36e218cadf460a3ea12ff1731e47edff807b0c"
+    },
     {
       "path": "docs/core/01_contracts/MATTER_SPACE_RESEARCH_SPEC.md",
       "kind": "working_file",

@@ -316,3 +316,30 @@ implementation may remain an explicitly provisional normalized model in the mean
 Verification: direct current source/specification/comparator and dirty-state review;
 no re-derivation of the closed comparator, numeric sweep, new artifact or gate change.
 Next: W4 compatibility-tested relational roles, then W5 Core scope/comparator pilot.
+
+## 10. Standards adoption W5: Core pilot decision
+
+Date: 2026-10-19, baseline `ced764b9b`. The existing
+[matter-space contract](../../core/00_governance/calculation_contracts/matter_space_observer.json)
+is actually migrated to RELATIONAL representation, not merely scheduled for review.
+The old contract is pinned as Git evidence; no scientific artifact is rewritten.
+
+| Chain | Evidence reused / decision |
+| --- | --- |
+| Proposition and state | Section 9's history/response proposition is a model-design idea; C/Phi/Pi are chosen normalized coordinates, not a universal information/entropy identity |
+| Generator and evolution | Existing specification sections 2-4 and free_energy/chemical_potentials/RHS functions close the selected normalized chain; term choices remain constitutive |
+| Nested accounting | C_system owns C; response owns Phi/Pi; source_system is their aggregate, with no independent state and no extra energy added to Omega plus Pi storage |
+| Measurement | D remains a candidate receiver with UNKNOWN physical realization and backaction; a category or external location supplies no omission bound |
+| Comparator | Existing action-discrimination section D constructs the same ordinary phase-field dynamics and readout in this named scope; boundary/role bookkeeping adds no distinguishing force law |
+| Disposition | Retain the normalized model and existing conditional consequences; do not claim physical validation, unique UET mechanism or entropy production in SI |
+
+Verification: current specification/implementation text equals the committed source
+after LF normalization; contract identities and pinned baseline are checked by the
+validator. Regression tests cover initializer agreement and preserved INCOMPLETE
+detector status. No unchanged algebra, numeric sweep or scientific producer was rerun.
+The independent foundation audit remains FAIL/BLOCKED (224 errors, including stale
+pre-migration paths), not overridden by this methodological pilot.
+
+W5 closes the scoped adoption decision, not the physics. Next controller: W6 reconstruct
+He4/O2, graphite/TTG and nonlinear routes separately and name which new evidence could
+change each decision; do not assume one dataset or new detector model repairs all three.
