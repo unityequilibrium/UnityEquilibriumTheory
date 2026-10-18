@@ -97,6 +97,7 @@ record. Link the current calculation contract and blocker field; do not duplicat
 
 ```text
 Question / intended claim:
+System boundary / internal coupling / detector path / backaction assessment (standard 30):
 Stage and scope (TD0-TD6; not an evidence status):
 Current model and source/code/config identities:
 Already have (evidence links and limits):

@@ -139,6 +139,24 @@ def pilots() -> list[tuple[str, dict]]:
     c["observation"].update(trace_scope="dissipation_history", generated_trace="R=G_ret*sigma; sigma is normalized dissipation, not an admitted physical entropy or full-state information measure.",
         readout="observer_record=observer_gain*carrier_payload; optional receiver update is an explicit normalized linear law.",
         observer_state="receiver_state and fixed gains; no physical instrument trajectory, response time or noise completion.")
+    c["observation"]["system_partition"] = {
+      "boundary": "Normalized C and Phi/Pi dynamics plus a separately represented candidate receiver. Internal coupling is modeled; no physical carrier, detector mapping or source backaction is admitted.",
+      "systems": [
+        {"id": "C_system", "role": "SOURCE", "state": "C collective coordinate in the declared normalized lane"},
+        {"id": "response", "role": "SOURCE", "state": "Phi and Pi; physical memory state of this model, not a detector record"},
+        {"id": "D", "role": "DETECTOR", "state": "Candidate normalized receiver state; physical instrument realization UNKNOWN"}
+      ],
+      "couplings": [
+        {"id": "C_to_response", "source": "C_system", "target": "response", "kind": "INTERNAL", "component_id": "system_state", "map": "Paired variational coupling in Omega; see matter_space_rhs"},
+        {"id": "response_to_C", "source": "response", "target": "C_system", "kind": "INTERNAL", "component_id": "system_state", "map": "Response enters mu_C; this is not detector backaction"},
+        {"id": "candidate_detection", "source": "response", "target": "D", "kind": "DETECTION", "component_id": "detector", "map": "Candidate readout of a generated trace from C/Phi history; carrier and physical detector correspondence remain UNKNOWN"},
+        {"id": "D_to_C_assessment", "source": "D", "target": "C_system", "kind": "BACKACTION", "component_id": "detector", "map": "Physical source feedback unadmitted; not inferred from a recorded signal"},
+        {"id": "D_to_response_assessment", "source": "D", "target": "response", "kind": "BACKACTION", "component_id": "detector", "map": "Physical response-sector feedback unadmitted; existing no-trace-feedback implementation is not proof of physical isolation"}
+      ],
+      "observables": [
+        {"id": "candidate_receiver_readout", "detector_id": "D", "target_systems": ["C_system", "response"], "quantity": "Selected normalized receiver record, not the complete source state", "readout_map": "Existing toy gain/payload relation only; material detector correspondence UNKNOWN", "component_id": "detector"}
+      ]
+    }
     result.append(("docs/core/00_governance/calculation_contracts/matter_space_observer.json", c))
     he_files = [f"{T13}/Result/artifacts/t13_funding_heii_operator_domain_decision.json",
                 f"{T13}/Result/artifacts/t13_twofluid_source_visibility.json",

@@ -15,6 +15,7 @@ locator in the baseline's `embedded_contracts`. Never clone an entire dataset.
 | model | formula_ids; assumptions; approximation; initial_boundary; drive_environment; parameters |
 | data_policy | Observations used? Calibration/comparison IDs, independence evidence, holdout policy |
 | observation | Source state; trace scope; carrier; observer state; readout; backaction; frame/time; product level; corrections |
+| observation.system_partition | Boundary; systems(id/role/state); directed couplings(id/source/target/kind/map/component_id); observables(id/detector_id/target_systems/quantity/readout_map/component_id) |
 | error_budget | Numerical/approximation/measurement/systematic/omission errors, dependence, acceptance evidence, output-unit omission_limit |
 | identities | Each input/config/code/evidence path, role, kind and SHA-256; pinned Git sources also need a full commit |
 | entrypoints/evidence | Paths for execution or formal derivation; exact evidence locators |
@@ -22,6 +23,17 @@ locator in the baseline's `embedded_contracts`. Never clone an entire dataset.
 | claim_boundary/next_action | What this result does not decide; concrete next missing prerequisite |
 
 ## Component rows
+
+Use the boundary-first definitions in standard 30 before filling observation prose.
+Every coupling/readout references a component below; do not duplicate its disposition,
+evidence or error bound in another registry. A DETECTION edge ends at a DETECTOR;
+BACKACTION assessments start at that detector and separately cover each declared
+SOURCE. No active feedback is required merely because detection exists. Unobserved
+subsystems may remain in the graph. For a scope without measurement, observables=[]
+and no_detector_reason states why. Omitted edges are not evidence of isolation.
+New/revised non-FORMAL contracts need this graph; unchanged legacy contracts retain
+their evidence and enter the visible unreviewed queue. Re-review payload identity after
+editing it. Do not rename a physical comparison FORMAL to avoid the requirement.
 
 Include `system_state`, `drive_environment`, `propagation`, `frame_time`,
 `detector`, `processing`, `numerics`. Add separate effects when their treatment

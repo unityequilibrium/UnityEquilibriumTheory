@@ -16,6 +16,13 @@ of intent is not physical proof; AI agreement or conversational grades are not
 validation. Preserve unrelated work and historical results. Request specialist
 review of a precise gap without automatic external contact.
 
+Before equation/observer design, apply standard 30's boundary-first system partition:
+internal impact, signal transport, receiver effect, detector state, observable and
+source backaction are separate. Do not infer full observability or significant
+reciprocal influence from an internal interaction or a detection. New/revised
+non-FORMAL calculation contracts declare observation.system_partition; legacy gaps
+remain visible without rewriting old scientific evidence.
+
 This file is the root entrypoint for AI agents and collaborators working in this repository.
 
 It does not replace the project standards. It tells an agent where truth lives, how to work

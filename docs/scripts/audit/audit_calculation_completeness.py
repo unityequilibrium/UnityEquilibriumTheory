@@ -124,6 +124,70 @@ def schema_errors(value, schema: dict, loc: str = "contract") -> list[str]:
     return errors
 
 
+def partition_errors(contract: dict) -> list[str]:
+    """Check declared interaction topology, not completeness or physical validity."""
+    graph = contract["observation"].get("system_partition")
+    if graph is None:
+        return []
+    errors = []
+    systems = {s["id"]: s for s in graph["systems"]}
+    components = {c["id"]: c for c in contract["components"]}
+    for label, rows in (("system", graph["systems"]), ("coupling", graph["couplings"]),
+                        ("observable", graph["observables"])):
+        ids = [r["id"] for r in rows]
+        if len(ids) != len(set(ids)):
+            errors.append(f"system_partition: duplicate {label} IDs")
+    for edge in graph["couplings"]:
+        if edge["source"] not in systems or edge["target"] not in systems:
+            errors.append(f"{edge['id']}: unknown coupling endpoint")
+        if edge["component_id"] not in components:
+            errors.append(f"{edge['id']}: unknown coupling component")
+        if edge["kind"] == "DETECTION" and systems.get(edge["target"], {}).get("role") != "DETECTOR":
+            errors.append(f"{edge['id']}: detection must target a detector system")
+        if edge["kind"] == "BACKACTION" and systems.get(edge["source"], {}).get("role") != "DETECTOR":
+            errors.append(f"{edge['id']}: backaction must originate at a detector system")
+    if not graph["observables"] and not graph.get("no_detector_reason"):
+        errors.append("system_partition: no observables needs a scoped no_detector_reason")
+    for observable in graph["observables"]:
+        detector = observable["detector_id"]
+        if observable["id"] in systems:
+            errors.append(f"{observable['id']}: observable ID must differ from system IDs")
+        if systems.get(detector, {}).get("role") != "DETECTOR":
+            errors.append(f"{observable['id']}: observable is not a detector system")
+        readout = components.get(observable["component_id"])
+        if readout is None:
+            errors.append(f"{observable['id']}: unknown readout component")
+        elif readout["group"] not in {"detector", "processing"}:
+            errors.append(f"{observable['id']}: readout needs detector/processing component")
+        elif readout["disposition"] in {"NOT_APPLICABLE", "BOUNDED_OMISSION"}:
+            errors.append(f"{observable['id']}: claimed readout cannot be absent or omitted")
+        # Non-NA edges may be provisional UNKNOWN routes, which remain gaps in the
+        # component ledger. Do not invent a reverse edge from an observed signal.
+        active = [e for e in graph["couplings"] if e["kind"] != "BACKACTION"
+                  and components.get(e["component_id"], {}).get("disposition")
+                  in {"MODELED", "UPSTREAM_CORRECTED", "UNKNOWN"}]
+        for target in observable["target_systems"]:
+            if target not in systems:
+                errors.append(f"{observable['id']}: unknown observable target")
+                continue
+            reachable = {target}
+            for _ in systems:
+                reachable |= {e["target"] for e in active if e["source"] in reachable
+                              and e["kind"] != "RECEIVER_DYNAMICS"}
+            incoming = any(e["kind"] == "DETECTION" and e["target"] == detector
+                           and e["source"] in reachable for e in active)
+            if not incoming:
+                errors.append(f"{observable['id']}: no declared detection path from {target}")
+        # Assess detector-to-source influence separately for every declared source
+        # in this boundary. The assessment may be UNKNOWN, bounded, modeled or NA.
+        for source, item in systems.items():
+            if item["role"] == "SOURCE" and not any(
+                    e["kind"] == "BACKACTION" and e["source"] == detector
+                    and e["target"] == source for e in graph["couplings"]):
+                errors.append(f"{observable['id']}: missing backaction assessment {detector}->{source}")
+    return errors
+
+
 def validate_contract(contract: dict, root: Path = ROOT, schema: dict | None = None) -> dict:
     errors = schema_errors(contract, schema or load_json(root / SCHEMA))
     gaps = []
@@ -131,6 +195,9 @@ def validate_contract(contract: dict, root: Path = ROOT, schema: dict | None = N
               "gaps": gaps, "effective_status": "INCOMPLETE"}
     if errors:
         return result
+    errors.extend(partition_errors(contract))
+    if contract["profile"] != "FORMAL" and "system_partition" not in contract["observation"]:
+        gaps.append("system_partition:legacy_unreviewed")
     stale = False
     if contract["review"]["status"] == "COMPLETE_FOR_SCOPE":
         if contract["review"].get("scope_sha256") != review_payload_hash(contract):
@@ -314,6 +381,10 @@ def build_report(root: Path, changed: list[str] | None = None) -> dict:
     schema = load_json(root / SCHEMA)
     for locator, contract in contracts:
         review = validate_contract(contract, root, schema)
+        if (locator in (changed or []) and contract.get("profile") != "FORMAL"
+                and "system_partition" not in contract.get("observation", {})):
+            review["errors"].append("changed non-FORMAL contract requires observation.system_partition")
+            review["effective_status"] = "INCOMPLETE"
         review["path"] = locator
         review["contract_sha256"] = contract_hash(contract)
         reviews.append(review)
@@ -357,6 +428,8 @@ def build_report(root: Path, changed: list[str] | None = None) -> dict:
     return {"schema_version": "uet-calculation-coverage-v1", "kind": "METHODOLOGICAL_NOT_PHYSICS_GATE",
             "baseline_lineage": baseline.get("lineage", {}),
             "summary": {"contracts": len(reviews), "legacy_routes": len(routes),
+                        "partition_declared": sum("system_partition" in c.get("observation", {}) for _, c in contracts),
+                        "partition_unreviewed": sum("system_partition:legacy_unreviewed" in r["gaps"] for r in reviews),
                         "unreviewed_current_paths": len(unreviewed), "missing_or_relocated_baseline_paths": len(missing), "errors": len(errors)},
             "contracts": reviews, "routes": routes, "unreviewed_current_paths": unreviewed,
             "missing_or_relocated_baseline_paths": missing,

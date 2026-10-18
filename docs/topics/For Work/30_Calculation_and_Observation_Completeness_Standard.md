@@ -56,6 +56,68 @@ ledger includes every relevant physical effect: record a substantive review.
 
 ## Observer and thermodynamic boundaries
 
+### Boundary-first interaction and observation contract
+
+Define the system partition BEFORE identifying a state, trace or response with an
+observable. The boundary is a declared modeling choice for this question, timescale
+and precision, not proof that separated systems have no interaction.
+
+| Term | Required meaning | Prohibited inference |
+| --- | --- | --- |
+| Subsystem | A declared set of degrees of freedom and its state | Outside the chosen boundary means physically disconnected |
+| Impact | Physical coupling/state change between specified systems | Every internal impact reaches every observer |
+| Effect | A receiver-relative consequence of a specified interaction/channel, including receiver behavior or a derived record | A separate force/substance, or necessarily a human interpretation |
+| Detector | A physical receiving system with a state and response | The measured quantity itself is a system |
+| Observable | A defined quantity/functional/operator used to obtain a predicted or recorded value | All source-state detail, or automatic source feedback |
+| Backaction | Detector/receiver influence on the source through a declared physical route | Readout metadata changes source dynamics, or detection implies a large source perturbation |
+
+Impact and effect are not exclusive species of event: one detector interaction can
+have a physical impact and a receiver-side effect. An observable is not necessarily
+directly read out; its measurement operator and uncertainty must be declared.
+Internal source coupling, signal transport, detector coupling, receiver response and
+source backaction are distinct edges. Do not force them into a universal serial
+pipeline: some channels are absent, unobserved, aggregated, indirect or unresolved.
+Do not infer a physical absence from an omitted graph edge.
+
+New or revised non-FORMAL contracts declare `observation.system_partition`:
+
+- `boundary`: included/excluded systems, approximation, timescale and accuracy scope.
+- `systems`: unique `id`, `role` (SOURCE, DETECTOR, ENVIRONMENT, CARRIER, AUXILIARY)
+  and declared `state`. Detector and observable IDs are distinct.
+- `couplings`: directed `id`, `source`, `target`, `kind`, `map` and `component_id`.
+  Kinds are INTERNAL, SIGNAL, DETECTION, BACKACTION, ENVIRONMENT, RECEIVER_DYNAMICS.
+  A directed effective edge does not assert fundamental nonreciprocity or waive
+  conservation: justify neglected reverse influence in the same component ledger.
+- `observables`: `id`, `detector_id`, `target_systems`, `quantity`, `readout_map`
+  and detector/processing `component_id`. Only declared target quantities are claimed
+  visible; no requirement exists that every internal coordinate be recoverable.
+- For each claimed detector, assess BACKACTION to each SOURCE in the declared
+  boundary explicitly. These are assessments, NOT mandatory active feedback terms.
+  Aggregate sources where the physical question justifies one subsystem.
+- With no measurement claim, use an empty observable list and a scoped
+  `no_detector_reason`; a formal proof must not invent a detector to fill a form.
+
+Each coupling/readout references an EXISTING component row, not a new status registry.
+MODELED requires a law/implementation; UPSTREAM_CORRECTED needs correction provenance;
+BOUNDED_OMISSION needs the existing output-unit joint error budget; NOT_APPLICABLE
+needs a scope-specific reason (e.g. a synthetic no-feedback definition, not an
+unjustified claim of exact physical isolation); UNKNOWN needs owner/next action.
+Weak feedback is not zero feedback. A significant/unknown source perturbation cannot
+be dismissed because the receiver is geographically external or called an observer.
+
+Example: A and B interact internally, B supplies a declared channel to D, and D reads
+one quantity. This does not expose all of A/B. D-to-A/B influence may be modeled,
+bounded, inapplicable to the formal scope or unknown independently of that reading.
+The detector itself can be part of a larger modeled system when the boundary expands.
+
+The existing checker validates endpoint/component references, declared detection paths,
+separate detector/observable IDs and explicit backaction assessments. UNKNOWN routes
+remain diagnostic gaps, not accepted physical channels. No graph/schema can prove
+exhaustive couplings, complete observability, physical isolation or valid omission bounds;
+substantive review remains required. Legacy non-FORMAL contracts without this section
+are reported as `system_partition:legacy_unreviewed`, not silently accepted as complete.
+No historical scientific artifact is rewritten or downgraded by this metadata addition.
+
 Distinguish source state, generated trace, physical carrier, detector interaction,
 receiver state and recorded value. R_gen is not the source's complete state, and
 R_obs is a record rather than an independent substance. A dissipation-history trace

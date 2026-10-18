@@ -1,6 +1,7 @@
 """Behavioral enforcement tests and explicit synthetic observer controls."""
 from __future__ import annotations
 import copy
+import ast
 import importlib.util
 import json
 import math
@@ -62,6 +63,97 @@ class ContractTests(unittest.TestCase):
         p.parent.mkdir(parents=True, exist_ok=True)
         p.write_text(json.dumps(self.c))
 
+    def partition(self):
+        for row in self.c["components"]:
+            if row["group"] in {"system_state", "propagation", "detector"}:
+                row.update(disposition="MODELED", evidence=[self.path])
+        self.c["components"].append(dict(id="backreaction", group="detector",
+            disposition="NOT_APPLICABLE", reason="No feedback in this synthetic protocol", evidence=[]))
+        self.c["observation"]["system_partition"] = dict(
+            boundary="A/B model and separate receiver D; not all internal states are observed",
+            systems=[dict(id=s, role="DETECTOR" if s == "D" else "SOURCE", state="declared state")
+                     for s in ("A", "B", "D")],
+            couplings=[dict(id="ab", source="A", target="B", kind="INTERNAL", component_id="system_state", map="declared coupling"),
+                       dict(id="bd", source="B", target="D", kind="DETECTION", component_id="propagation", map="declared detection"),
+                       *[dict(id="back_"+s, source="D", target=s, kind="BACKACTION", component_id="backreaction", map="absent by scoped model definition") for s in ("A", "B")]],
+            observables=[dict(id="reading", detector_id="D", target_systems=["B"], quantity="selected response",
+                              readout_map="readout from receiver state", component_id="detector")])
+        return self.c["observation"]["system_partition"]
+
+    def test_partition_selective_detection_without_source_feedback(self):
+        g = self.partition()
+        g["systems"].append(dict(id="hidden", role="AUXILIARY", state="unobserved internal state"))
+        self.assertEqual(self.errors(), [])
+
+    def test_partition_requires_explicit_backaction_assessment_not_reciprocity(self):
+        g = self.partition()
+        g["couplings"] = [e for e in g["couplings"] if e["id"] != "back_A"]
+        self.assertTrue(any("backaction assessment" in e for e in self.errors()))
+
+    def test_partition_receiver_and_observable_are_distinct(self):
+        g = self.partition()
+        g["observables"][0]["id"] = "D"
+        self.assertTrue(any("must differ" in e for e in self.errors()))
+        g["observables"][0].update(id="reading", detector_id="A")
+        self.assertTrue(any("not a detector" in e for e in self.errors()))
+
+    def test_partition_cannot_observe_an_unconnected_or_omitted_channel(self):
+        g = self.partition()
+        component = next(c for c in self.c["components"] if c["id"] == "propagation")
+        component.update(disposition="BOUNDED_OMISSION", bound=0.0, unit="1", joint_group="omitted_signal")
+        self.c["error_budget"]["omission_limit"] = 0.0
+        self.assertTrue(any("no declared detection path" in e for e in self.errors()))
+        component.update(disposition="MODELED")
+        g["couplings"] = [e for e in g["couplings"] if e["kind"] != "DETECTION"]
+        self.assertTrue(any("no declared detection path" in e for e in self.errors()))
+
+    def test_changed_nonformal_contract_needs_partition(self):
+        self.c["profile"] = "SYNTHETIC"
+        self.c["review"]["status"] = "INCOMPLETE"
+        self.save_contract()
+        path = "docs/core/calculation_contracts/formal.json"
+        report = audit.build_report(self.root, [path])
+        self.assertTrue(any("requires observation.system_partition" in e for e in report["errors"]))
+        self.partition()
+        self.save_contract()
+        self.assertEqual(audit.build_report(self.root, [path])["errors"], [])
+
+    def test_declared_source_can_be_unobserved(self):
+        g = self.partition()
+        g["systems"].append(dict(id="U", role="SOURCE", state="unobserved source state"))
+        g["couplings"].append(dict(id="back_U", source="D", target="U", kind="BACKACTION",
+            component_id="backreaction", map="no route in the declared synthetic model"))
+        self.assertEqual(self.errors(), [])
+
+    def test_partition_rejects_missing_references_and_duplicates(self):
+        g = self.partition()
+        g["systems"].append(copy.deepcopy(g["systems"][0]))
+        g["couplings"][0].update(target="missing", component_id="missing")
+        self.assertTrue(any("duplicate system" in e for e in self.errors()))
+        self.assertTrue(any("unknown coupling" in e for e in self.errors()))
+
+    def test_partition_unknown_backaction_remains_diagnostic_gap(self):
+        self.partition()
+        self.c["components"][-1].update(disposition="UNKNOWN", owner="reviewer", next_action="bound receiver feedback")
+        self.c["review"]["status"] = "INCOMPLETE"
+        r = audit.validate_contract(self.c, self.root)
+        self.assertEqual(r["errors"], [])
+        self.assertIn("backreaction", r["gaps"])
+
+    def test_partition_formal_no_detector_exemption(self):
+        self.c["observation"]["system_partition"] = dict(boundary="pure algebra", systems=[dict(id="x", role="SOURCE", state="symbol")],
+            couplings=[], observables=[], no_detector_reason="No apparatus or measurement claim")
+        self.assertEqual(self.errors(), [])
+
+    def test_legacy_physical_partition_gap_is_not_silently_complete(self):
+        self.c["profile"] = "PHYSICAL_COMPARISON"
+        self.c["review"]["status"] = "INCOMPLETE"
+        r = audit.validate_contract(self.c, self.root)
+        self.assertEqual(r["errors"], [])
+        self.assertIn("system_partition:legacy_unreviewed", r["gaps"])
+        self.c["review"]["status"] = "COMPLETE_FOR_SCOPE"
+        self.assertTrue(any("unresolved" in e for e in self.errors()))
+
     def test_formal_instrument_exemption(self):
         self.assertEqual(self.errors(), [])
 
@@ -101,6 +193,7 @@ class ContractTests(unittest.TestCase):
         self.assertTrue(any("cannot be whitelisted" in e for e in self.errors()))
 
     def test_explicit_physical_acceptance_contract_can_pass_structural_review(self):
+        self.partition()
         self.c["profile"] = "PHYSICAL_COMPARISON"
         self.c["output"]["claim_intent"] = "PHYSICAL_ACCEPTANCE"
         self.c["data_policy"].update(uses_observations=True, comparison_ids=["independent-observed-row"])
@@ -215,6 +308,17 @@ class ContractTests(unittest.TestCase):
 
 
 class ObserverControls(unittest.TestCase):
+    def test_pilot_builder_and_saved_partition_agree(self):
+        builder = audit.ROOT / "docs/scripts/audit/build_calculation_contract_pilots.py"
+        tree = ast.parse(builder.read_text(encoding="utf-8-sig"))
+        values = [ast.literal_eval(node.value) for node in ast.walk(tree)
+                  if isinstance(node, ast.Assign) and isinstance(node.value, ast.Dict)
+                  and any(isinstance(target, ast.Subscript)
+                          and isinstance(target.slice, ast.Constant)
+                          and target.slice.value == "system_partition" for target in node.targets)]
+        saved = audit.load_json(audit.ROOT / "docs/core/00_governance/calculation_contracts/matter_space_observer.json")
+        self.assertEqual(values, [saved["observation"]["system_partition"]])
+
     def test_velocity_raw_signal_and_frame_recovery(self):
         emitted = 100.0
         for beta in (-0.02, 0.0, 0.03):

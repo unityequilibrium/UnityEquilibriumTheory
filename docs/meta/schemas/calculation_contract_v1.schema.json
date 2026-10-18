@@ -39,6 +39,27 @@
       "holdout_policy": {"type": "string", "minLength": 1}
     }},
     "observation": {"type": "object", "required": ["source_state", "generated_trace", "carrier", "observer_state", "readout", "backaction", "frame", "time_convention", "product_level", "corrections"], "properties": {
+      "system_partition": {"type": "object", "required": ["boundary", "systems", "couplings", "observables"], "properties": {
+        "boundary": {"type": "string", "minLength": 1},
+        "no_detector_reason": {"type": "string", "minLength": 1},
+        "systems": {"type": "array", "minItems": 1, "items": {"type": "object", "required": ["id", "role", "state"], "properties": {
+          "id": {"type": "string", "minLength": 1},
+          "role": {"enum": ["SOURCE", "DETECTOR", "ENVIRONMENT", "CARRIER", "AUXILIARY"]},
+          "state": {"type": "string", "minLength": 1}
+        }}},
+        "couplings": {"type": "array", "items": {"type": "object", "required": ["id", "source", "target", "kind", "component_id", "map"], "properties": {
+          "id": {"type": "string", "minLength": 1},
+          "source": {"type": "string", "minLength": 1}, "target": {"type": "string", "minLength": 1},
+          "kind": {"enum": ["INTERNAL", "SIGNAL", "DETECTION", "BACKACTION", "ENVIRONMENT", "RECEIVER_DYNAMICS"]},
+          "component_id": {"type": "string", "minLength": 1}, "map": {"type": "string", "minLength": 1}
+        }}},
+        "observables": {"type": "array", "items": {"type": "object", "required": ["id", "detector_id", "target_systems", "quantity", "readout_map", "component_id"], "properties": {
+          "id": {"type": "string", "minLength": 1}, "detector_id": {"type": "string", "minLength": 1},
+          "target_systems": {"type": "array", "minItems": 1, "items": {"type": "string", "minLength": 1}},
+          "quantity": {"type": "string", "minLength": 1}, "readout_map": {"type": "string", "minLength": 1},
+          "component_id": {"type": "string", "minLength": 1}
+        }}}
+      }},
       "source_state": {"type": "string", "minLength": 1}, "generated_trace": {"type": "string", "minLength": 1},
       "carrier": {"type": "string", "minLength": 1}, "observer_state": {"type": "string", "minLength": 1},
       "readout": {"type": "string", "minLength": 1}, "backaction": {"type": "string", "minLength": 1},
