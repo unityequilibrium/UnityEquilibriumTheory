@@ -202,6 +202,123 @@
       "physical_displacement_or_error_budget_assigned": false
     }
   ],
+  "source_geometry_checks": [
+    {
+      "hk": [
+        1,
+        0
+      ],
+      "layers": 9,
+      "layer_phase": -2.0943951023931957,
+      "layer_factor_ratio_abs": 0.9999999999999994,
+      "G_times_a": [
+        6.283185307179586,
+        3.6275987284684357
+      ],
+      "linear_row_wrt_article_P": [
+        10.364567795624106,
+        5.983986006837704
+      ],
+      "coherent_reference_second_derivative": 0.8379439698346909,
+      "sample_geometry_measured": false
+    },
+    {
+      "hk": [
+        0,
+        1
+      ],
+      "layers": 9,
+      "layer_phase": 2.0943951023931957,
+      "layer_factor_ratio_abs": 1.0000000000000004,
+      "G_times_a": [
+        0.0,
+        7.255197456936871
+      ],
+      "linear_row_wrt_article_P": [
+        -0.0,
+        -11.967972013675409
+      ],
+      "coherent_reference_second_derivative": 0.8379439698346909,
+      "sample_geometry_measured": false
+    },
+    {
+      "hk": [
+        -1,
+        1
+      ],
+      "layers": 9,
+      "layer_phase": -2.0943951023931953,
+      "layer_factor_ratio_abs": 0.9999999999999999,
+      "G_times_a": [
+        -6.283185307179586,
+        3.6275987284684357
+      ],
+      "linear_row_wrt_article_P": [
+        -10.364567795624097,
+        5.983986006837698
+      ],
+      "coherent_reference_second_derivative": 0.8379439698346893,
+      "sample_geometry_measured": false
+    },
+    {
+      "hk": [
+        2,
+        0
+      ],
+      "layers": 9,
+      "layer_phase": 2.0943951023931953,
+      "layer_factor_ratio_abs": 1.000000000000001,
+      "G_times_a": [
+        12.566370614359172,
+        7.255197456936871
+      ],
+      "linear_row_wrt_article_P": [
+        -20.729135591248195,
+        -11.967972013675396
+      ],
+      "coherent_reference_second_derivative": 0.8379439698346893,
+      "sample_geometry_measured": false
+    },
+    {
+      "hk": [
+        1,
+        1
+      ],
+      "layers": 9,
+      "layer_phase": -0.0,
+      "layer_factor_ratio_abs": 1.0,
+      "G_times_a": [
+        6.283185307179586,
+        10.882796185405308
+      ],
+      "linear_row_wrt_article_P": [
+        -0.0,
+        -0.0
+      ],
+      "coherent_reference_second_derivative": -0.5956284366823863,
+      "sample_geometry_measured": false
+    }
+  ],
+  "shared_reference_cubic_ambiguity": {
+    "true_material_third": "0",
+    "inferred_third_with_unmodeled_divisor": "-3/1000000",
+    "role": "rational counterexample, not physical bias estimate",
+    "requires_undivided_reference_and_correction_bound": true
+  },
+  "processed_third_only_null_direction": {
+    "variables": [
+      "B",
+      "C",
+      "E=b2*C"
+    ],
+    "null_vector": [
+      3,
+      0,
+      1
+    ],
+    "scope": "cubic processed third amplitudes, uncalibrated common divisor and free C; not full-record no-go",
+    "more_same_processed_orders_sufficient": false
+  },
   "two_order_candidate": {
     "orders": [
       1,
@@ -221,24 +338,24 @@
   "reopen": "same-state correspondence, frozen coefficients, eligible split records, full state and joint source/damping/observer bounds",
   "boundary": "prefix model-conditioned state calibration is not independent Phi observation or unique UET discrimination",
   "contract_id": "T13_GRAPHITE_PREPARATION_PREDICTION_V1",
-  "contract_sha256": "740e61cca6a4af1d0af2ab262c036fbf3cffb2f3ae131e3f48975d9c02dbce66",
+  "contract_sha256": "297b357bdcf487ef1031175beda00fbb3e79698f27372f7b8555229ff5533292",
   "contract_review_status": "INCOMPLETE",
   "identities": [
     {
       "path": "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/Research_T13_Graphite_Preparation.py",
-      "sha256": "8f6adcefe9e13b60d57a610afd7d81c5a66179caf5fed473b6245f19d95f4d0e",
+      "sha256": "4589721feb1f412ee4a406394d146b55287a59500ab3108b3ee3c08b2451df38",
       "kind": "working_file",
       "role": "code"
     },
     {
       "path": "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/test_t13_graphite_preparation.py",
-      "sha256": "5a16ef8b40467892995b158e3296bc52fc388479330f2e439604690496e5a120",
+      "sha256": "0d7c329b58436fc540f844bfe79519fe78fbb237526ef1a731e84e3a4516e8cc",
       "kind": "working_file",
       "role": "code"
     },
     {
       "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/T13_GRAPHITE_PREPARATION_PREDICTION_2026-10-18.md",
-      "sha256": "9963246758257b7168411e6bbf953acdca35c1cd56fc1560a2afa772eef37531",
+      "sha256": "481b8fbdaadf4bf9aadf53d84a4486ea8a202150f5695397bad39d22034a3c56",
       "kind": "working_file",
       "role": "evidence"
     },

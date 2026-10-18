@@ -172,5 +172,55 @@ class PreparationTests(unittest.TestCase):
         c=float(2*np.mean(q**3*np.cos(3*angle)))/6
         self.assertAlmostEqual(c,a**3/24+a*a*b/4+b**3/8)
 
+    def test_source_basis_reproduces_published_linear_rows(self):
+        import math
+        expected={(1,0):(2*math.pi*math.sqrt(3),2*math.pi),
+                  (0,1):(0.,-4*math.pi),(-1,1):(-2*math.pi*math.sqrt(3),2*math.pi)}
+        for (h,k),row in expected.items():
+            actual=m.source_geometry(h,k,2)['linear_row_wrt_article_P']
+            for a,b in zip(actual,row):self.assertAlmostEqual(a,b)
+
+    def test_source_first_second_order_conjugacy_and_finite_layer_factor(self):
+        first=m.source_geometry(1,0);second=m.source_geometry(2,0)
+        self.assertAlmostEqual(first['layer_phase'],-second['layer_phase'])
+        self.assertAlmostEqual(first['layer_factor_ratio_abs'],1)
+        bulk=m.source_geometry(1,0,2)['linear_row_wrt_article_P']
+        for a,b in zip(first['linear_row_wrt_article_P'],bulk):self.assertAlmostEqual(a/b,20/21)
+
+    def test_reference_zero_linear_is_not_zero_quadratic(self):
+        import numpy as np
+        ref=m.source_geometry(1,1)
+        self.assertLess(max(abs(x) for x in ref['linear_row_wrt_article_P']),1e-12)
+        self.assertLess(ref['coherent_reference_second_derivative'],0)
+        p=m.finite_layer_projection(9);b=np.array(p['profile'])/p['centroid_projection']
+        self.assertAlmostEqual(ref['coherent_reference_second_derivative'],-2*float(b@b)/9)
+
+    def test_polynomial_division_derivatives_multiply_back_exactly(self):
+        a1,a2,a3,b2=Q(2),Q(3),Q(-4),Q(-1,5)
+        c1,c2,c3=m.divided_cubic(a1,a2,a3,b2)
+        self.assertEqual(c1,a1);self.assertEqual(c2+b2,a2)
+        self.assertEqual(c3+3*c1*b2,a3)
+
+    def test_shared_reference_defeats_uncorrected_two_order_discriminant(self):
+        k1,k3,b2,c=Q(2),Q(-3),Q(1,10),Q(1,100000)
+        first=(k3-3*k1*b2)*c;second=(-8*k3+6*k1*b2)*c
+        inferred,_=m.two_order_third(first,second,k1,k3)
+        self.assertEqual(inferred,-3*b2*c)
+        self.assertNotEqual(inferred,0)  # True coordinate third is zero in this counterexample.
+
+    def test_divisor_error_envelope_and_refusal(self):
+        mag,rho=Q(2),Q(1,10)
+        self.assertEqual(m.division_omission_bound(mag,rho),mag/(1-rho)-mag)
+        for rho in (Q(-1),Q(1),Q(2)):
+            with self.assertRaises(ValueError):m.division_omission_bound(mag,rho)
+
+    def test_more_processed_third_orders_cannot_remove_common_divisor_null(self):
+        b,c,e=Q(0),Q(1,100000),Q(-1,1000000);delta=Q(1,10000000)
+        for order,k1,k3 in ((1,Q(2),Q(-3)),(2,Q(-2),Q(3)),(4,Q(2),Q(-3)),(5,Q(-2),Q(3))):
+            before=k1*order*(b-3*e)+k3*order**3*c
+            after=k1*order*((b+3*delta)-3*(e+delta))+k3*order**3*c
+            self.assertEqual(before,after)
+        self.assertLess(e/c,0);self.assertLess((e+delta)/c,0)
+
 
 if __name__=='__main__':unittest.main()

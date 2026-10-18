@@ -103,6 +103,35 @@ def two_order_third(first,second,k1,k3):
     return (8*first+second)/(6*k1),-(2*first+second)/(6*k3)
 
 
+def source_geometry(h,k,n=9):
+    """Source four-atom basal convention; not a measured sample orientation."""
+    import cmath
+    import math
+    if any(not isinstance(v,int) or isinstance(v,bool) for v in (h,k)):
+        raise ValueError('integer basal reciprocal indices required')
+    fa=1+cmath.exp(-2j*math.pi*(h+2*k)/3)
+    fb=1+cmath.exp(-2j*math.pi*(2*h+k)/3)
+    ratio=fb/fa;phase=-cmath.phase(ratio)
+    g=(2*math.pi*h,2*math.pi*(h+2*k)/math.sqrt(3))
+    obs=finite_layer_observer(n,0.,phase)
+    k1,k2,k3=obs['derivatives_at_zero']
+    return {'hk':[h,k],'layers':n,'layer_phase':phase,'layer_factor_ratio_abs':abs(ratio),
+            'G_times_a':list(g),'linear_row_wrt_article_P':[-k1*v for v in g],
+            'coherent_reference_second_derivative':k2,
+            'sample_geometry_measured':False}
+
+
+def divided_cubic(a1,a2,a3,b2):
+    """Derivative coefficients of N/(1+b2*q^2/2) through third order."""
+    return a1,a2-b2,a3-3*a1*b2
+
+
+def division_omission_bound(magnitude,rho):
+    if magnitude<0 or not 0<=rho<1:
+        raise ValueError('nonnegative magnitude and divisor radius below one required')
+    return magnitude*rho/(1-rho)
+
+
 def calculate():
     x,z=Q(2,7),Q(-3,11)
     y=observe(x,z)
@@ -117,6 +146,17 @@ def calculate():
             'hidden_state_identity_control':[str(t) for t in (d,w)],
             'finite_layer_material_projection':[finite_layer_projection(n) for n in (2,3,4,9)],
             'full_observer_controls':[finite_layer_observer(9,t) for t in (0.,-.001,.001,-.01,.01,-.1,.1)],
+            'source_geometry_checks':[source_geometry(h,k) for h,k in ((1,0),(0,1),(-1,1),(2,0),(1,1))],
+            'shared_reference_cubic_ambiguity':{'true_material_third':'0',
+                'inferred_third_with_unmodeled_divisor':str(two_order_third(
+                    (Q(-3)-3*Q(2)*Q(1,10))*Q(1,100000),
+                    (-8*Q(-3)+6*Q(2)*Q(1,10))*Q(1,100000),Q(2),Q(-3))[0]),
+                'role':'rational counterexample, not physical bias estimate',
+                'requires_undivided_reference_and_correction_bound':True},
+            'processed_third_only_null_direction':{'variables':['B','C','E=b2*C'],
+                'null_vector':[3,0,1],
+                'scope':'cubic processed third amplitudes, uncalibrated common divisor and free C; not full-record no-go',
+                'more_same_processed_orders_sufficient':False},
             'two_order_candidate':{'orders':[1,2],'phase_pair':'plus/minus 2*pi/3',
                 'material_third_formula':'(8*Y3_first+Y3_second)/(6*K1)',
                 'joint_error_bound':'(8*E_first+E_second)/(6*abs(K1)) plus coefficient uncertainty',

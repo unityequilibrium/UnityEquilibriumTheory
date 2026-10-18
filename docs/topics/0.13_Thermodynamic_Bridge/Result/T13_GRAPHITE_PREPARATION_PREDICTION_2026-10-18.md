@@ -191,4 +191,33 @@ The determinant is -6*K1*K3, nonzero on the inspected conditional N=9 observer. 
 
 If both channels retain the SAME unknown linear transfer at 3*omega, the inversion returns H(3*omega)*B and H(3*omega)*C, not their unblurred values. Absolute amplitudes need that transfer calibrated; distinguishing zero/nonzero B requires a nonvanishing-transfer bound and noise accounting. Common transfer alone therefore preserves the algebraic separation, not an unblurred material measurement.
 
+### Continued source-geometry and baseline-processing audit
+
+The [primary article](https://arxiv.org/html/2412.16392v2), equations 1-3 and the figure-3 processing discussion, specifies the four-atom basal basis and division by a scaled reference-peak estimate. The reference peak has zero shear response in the SAME small-displacement approximation, not a stated all-orders symmetry theorem. We now check that source geometry and the consequence of a residual reference response; no actual processing bias is asserted.
+
+Predeclared mathematical extension: dimensionless lattice a=1, direct vectors (1,0),(-1/2,sqrt(3)/2), two atoms per layer from equation 1, basal G_hk=2*pi*(h,(h+2*k)/sqrt(3)). Inspect (100),(010),(-110),(200),(110); N=2 source unit-cell reference and N=9 conditional chain. No lattice constant, physical sample orientation, force, target intensity or correction scale fitted. The basis factors are
+
+```text
+F_A=1+exp[-2*pi*i*(h+2*k)/3],
+F_B=1+exp[-2*pi*i*(2*h+k)/3].
+```
+
+For the three first-order peaks, |F_A|=|F_B| and their ratio is a cube root of unity, verifying the earlier equal-layer phase assumption within this ideal basal geometry. The (100)/(200) pair has conjugate phase ratios and doubled G, so its two-order proposal is geometrically possible in the source model. Depending on axis/sign convention, the first phase is -2*pi/3 rather than +2*pi/3; keep the signed K1 and coordinate convention consistently. Using Q=-a*P for the article's choice of moving B layers, the N=2 rows reproduce its displayed linear coefficients. N=9 carries the previously derived common 20/21 factor under the declared finite-layer observer, not a new empirical normalization. These are model-geometry checks, not acquisition of calibrated peaks.
+
+For (110), F_A=F_B=2 and the relative layer phase is zero. The linear derivative vanishes, but the FULL normalized coherent observer has
+
+```text
+I_ref''(0) = -2*[N*sum(b_j^2)-(sum b_j)^2]/N^2 < 0
+```
+
+for a nonuniform optical mode. It can therefore contain a quadratic coherent signal when G_ref.Q is nonzero. A special displacement perpendicular to that G is an exception; averaging a symmetry star does not in general annihilate the even quadratic contribution. Small experimental amplitude may make this negligible, but a quantitative bound is needed at cubic-precision targets. No conflict with the article's explicitly first-order approximation is inferred.
+
+Suppose, as a conditional processing model, a normalized numerator is 1+a1*q+a2*q^2/2+a3*q^3/6 and its applied divisor contains an unremoved even component 1+b2*q^2/2. Then the divided linear derivative remains a1, its second derivative is a2-b2, and its third is a3-3*a1*b2. Thus reference normalization can alter the apparent cubic readout even for sinusoidal material motion. This algebra is not a claim that the experiment's fitted thermal scaling equals this simplified divisor; actual scaling, heating, timing and shared correlations must be recorded before using it. A calibrated pipeline may remove or bound the effect.
+
+This matters for the proposed two-order discriminant. If BOTH orders share the same unmodeled divisor b2, the reconstructed B acquires a leading bias -b2*(Q^3)_3/2, despite the pure geometric-cubic cancellation. At the instantaneous cubic expansion level, dividing by D(q) multiplies the material-linear vector by 1/D(q), so this residual lies in the same order-scaling direction as material motion. Two reciprocal orders alone cannot distinguish that shared normalization effect from true third motion. Therefore keep/review the undivided reference and numerator records and forward-model their common correction; simply adding one more processed curve is insufficient.
+
+There is still a usable bounded path: if |D-1|<=rho<1 and |N|<=M independently on the domain, |N/D-N|<=M*rho/(1-rho). The same bound controls joint normalization omission before harmonic/state propagation, without setting reference response to zero. If no finite divisor-away-from-zero and correction bound is available, refuse a physical cubic score. This pinpoints a pipeline prerequisite, not a new action term, a reason to tune a cubic coefficient or a proof that UET/that experiment is wrong.
+
+For the narrower inference using ONLY processed third-amplitude channels with uncalibrated common b2, define C=(Q^3)_3/6 and E=b2*C. Every reciprocal order has the form Y3_i=k1_i*m_i*(B-3*E)+k3_i*m_i^3*C through the retained cubic order. The B and E columns are proportional for ANY number of such channels; (delta B,delta C,delta E)=(3*delta,0,delta) leaves every Y3_i unchanged. More processed third-harmonic peaks alone therefore cannot remove this particular ambiguity. This is not a claim about full time records, independent amplitude/preparation constraints, calibrated reference response, or higher-order full-forward inference. Once b2 is fixed/bounded by justified reference/processing evidence, or an independently informative observable is added, that null direction need not remain. This is why undivided reference/correction evidence takes priority over another processed harmonic curve.
+
 If the two third-amplitude errors (including Taylor omissions) have joint component bounds E1,E2, then |delta B|<=(8*E1+E2)/(6*|K1|), before coefficient/geometry uncertainties. This is conservative without assuming independence. E_i includes 2*B4_i*max|G_i.Q|^4 for the cubic Taylor remainder; independent physical error bounds and actual reciprocal geometry are still missing. Unknown channel-specific gains can destroy the stated cancellation; they may not be fitted separately to force it. The next useful data request is therefore simultaneous normalized first/second-order signed time records with shared timing/processing and weighting information, not merely a larger archive of the same scalar trace. This designs a measurement discriminant; it is not an executed physical experiment or unique UET test.

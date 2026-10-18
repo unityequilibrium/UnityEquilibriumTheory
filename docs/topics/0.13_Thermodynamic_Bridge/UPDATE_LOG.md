@@ -1,3 +1,13 @@
+<!-- graphite-baseline-geometry-v1:start -->
+## 2026-10-18 - Source geometry verified; shared reference exposes a cubic ambiguity
+
+RESULT: Re-read Gerbig equations 1-3 and figure-3 processing, then constructed reciprocal phases directly from its four-atom basis. The ideal (100)/(200) phase pair is conjugate; two-layer linear rows reproduce the displayed equations, with signed convention retained. This verifies model geometry, not measured sample calibration.
+NEW_BLOCKER_DETAIL: The (110) reference has zero linear but nonzero quadratic coherent response in the same full kinematic model. Unremoved even content in a shared divisor changes a3 to a3-3*a1*b2 and can bias the new two-order material-third estimate. This does not allege experimental error: the paper's zero-response statement is explicitly in the small-displacement approximation, and actual correction scaling/error has not been acquired.
+IDENTIFIABILITY: For processed third amplitudes alone with free common reference coefficient, all orders depend on B-3*E and C, E=b2*C. Null direction (3,0,1) leaves every retained-cubic output unchanged. More processed harmonic channels alone do not resolve this restricted ambiguity; raw reference/correction bounds, calibrated operator, or independent information can. Not a no-go for full time records or UET.
+VERIFICATION: 31 tests PASS (seven new controls), including source linear rows, phase pair, reference curvature, exact polynomial division, two-order false-positive witness, divisor envelope/refusal and multi-order null witness. Generator emit/check PASS; completeness 15 contracts zero errors. Extended the same report/contract/output; no new artifact family, physical fit, action term or source parameter.
+NEXT: Prioritize undivided numerator/reference time records, actual scaling/thermal/temporal correction and a divisor-away-from-zero bound. Do not treat another processed curve as independent information or continue unchanged baseline assumptions. No raw/private/holdout access, contact, push or PR; broader goal remains active.
+<!-- graphite-baseline-geometry-v1:end -->
+
 <!-- graphite-full-observer-bounds-v1:start -->
 ## 2026-10-18 - Full finite-layer observer bounds and a two-order discriminant
 
