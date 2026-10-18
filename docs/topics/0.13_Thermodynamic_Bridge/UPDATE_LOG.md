@@ -1,3 +1,13 @@
+<!-- graphite-input-revalidation-v1:start -->
+## 2026-10-18 - Revalidate actual inputs before more calculations
+
+READ_ONLY_CHECK: Canonical HEAD 32ae6c61e; owner branch remains 0f17012ff. Tracked Data/06_data search finds no committed Gerbig/2412.16392/adcfbc numeric packet. This is a bounded local search, not global absence. The changed Oxford TGS manifest is a different protocol and remains untouched.
+SOURCE_DISPOSITION: The untracked sun_2015_graphite_raman_strain_model_source_package.json is labelled a DFT model comparator for in-plane E2g(2), not an experimental calibration. Primary arXiv:1502.04323v3 abstract/introduction independently confirm that mode/method scope. It is not the nine-layer coherent low-frequency shear full-record packet; none of its numeric rows are imported. Source package left unmodified and unstaged, no private/holdout accessed.
+OUTCOME: No new physical result or eligible record from this pass. Existing source/observer derivations retained without rerunning unchanged controls or generating a new artifact. Full-trace invariant can remove a common applied divisor but does not create records, calibrate exposure/thermal effects, or identify Phi/source coefficients.
+CONTROLLING_BLOCKER: eligible_same_state_full_records_and_independent_material_source_parameter_packet_missing. This external prerequisite persisted across the preceding continuation waves; safe current-input checks are exhausted. Further unchanged control runs cannot close it.
+REOPEN: Supply simultaneous full normalized (100),(010),(-110) traces with correction/relative-gain identity and joint time/exposure/thermal uncertainty, OR admitted undivided/reference records, together with independent model coefficient/source-state correspondence. A user-authorized acquisition/contact step is a separate action; no email, new hypothesis, Core edit, dataset purchase, push or PR is inferred from continue.
+<!-- graphite-input-revalidation-v1:end -->
+
 <!-- graphite-full-trace-invariant-v1:start -->
 ## 2026-10-18 - Positive full-trace alternative to the processed-harmonic ambiguity
 
