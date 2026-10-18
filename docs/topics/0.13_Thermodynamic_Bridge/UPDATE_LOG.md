@@ -1,3 +1,14 @@
+<!-- existing-state-force-chain-v1:start -->
+## 2026-10-18 - Locate the existing state-generator-force chain
+
+- Scope/type: TD1-TD3 evidence reuse, baseline 701030dfc; no new mathematical or numerical model.
+- Result: matter-space already declares C/Phi/Pi, one normalized functional, exact functional-derivative forces, an explicit configured RHS, extended-energy storage and source ledger. The preceding force_history limitation belongs to a different helper, not all Core.
+- Changed: existing research-design section 8 now records that distinction and links the canonical specification; parent causality/SI/physical limits preserved.
+- Checks: direct source/specification and saved variational/ledger/trace-control review; local link and whitespace checks. No unchanged test/artifact rerun or scientific gate change.
+- Term-origin result: common-generator consistency constrains paired derivatives, not the unique polynomial/coupling/relaxation choice. Next controller: author reconciliation of any additional intended restriction beyond the comparator; do not rebuild the state-to-force chain or silently compose lanes.
+- Claim boundary: existing explicit normalized dynamics, not global well-posedness, material matching or universal information theory. Author acceptance of the ansatz remains unconfirmed.
+<!-- existing-state-force-chain-v1:end -->
+
 <!-- memory-law-origin-audit-v1:start -->
 ## 2026-10-18 - Inspect the origin and closure of the existing memory law
 

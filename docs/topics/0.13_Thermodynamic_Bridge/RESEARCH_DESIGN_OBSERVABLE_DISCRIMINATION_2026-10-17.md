@@ -227,3 +227,55 @@ state-to-force closure is not required; the claim must retain that application s
 foundational claim needs the missing state/force and microscopic/constitutive assumptions
 made explicit, with the author's intended scope confirmed before implementation.
 No new equation or full-theory impossibility conclusion follows.
+
+### Existing state-to-force closure found: keep the lanes separate
+
+Reviewed 2026-10-18 at `701030dfc`. This narrows the preceding finding: a missing
+state-to-force map in the prescribed-input open-system HELPER is not evidence that
+the entire repository lacks a closed state-to-rate construction.
+
+The [matter-space specification](../../core/01_contracts/MATTER_SPACE_RESEARCH_SPEC.md),
+sections 2-5, already declares the chain implemented by
+`matter_space_free_energy`, `matter_space_chemical_potentials` and `matter_space_rhs`:
+
+- State: C, Phi, Pi; configured coefficients, spatial operators, boundaries and sources.
+- Generator: the declared normalized Omega[C,Phi], including the chosen quartics,
+  gradient penalties and `-g*C^2*Phi/2` interaction.
+- Forces: mu_C and mu_Phi are the generator's functional derivatives.
+- Evolution: C follows its selected conserved/nonconserved rule; Phi_t=Pi and
+  tau*Pi_t=-Pi-M_Phi*mu_Phi+J_Phi.
+- Ledger: the extended energy includes Pi storage; declared source powers and
+  nonnegative dissipation are accounted for. This is not an SI entropy derivation.
+- Record: optional retarded trace is computed afterward; it is not the memory state.
+
+Given the declared full discretized state and configuration, the RHS is explicit;
+there is no arbitrary force_history input required by this implementation.
+This observation is not a global existence/uniqueness theorem, an accepted continuum
+causality proof or identification of these coordinates with a physical material.
+
+Reuse the saved matter-space controls: variational derivatives, source-ledger closure,
+trace-switch invariance and history separation. Their parent causal/SI/physical
+limitations remain in force. No new numerical test, kernel substitution or coupling
+between this lane and the open-system helper is necessary for this finding.
+
+
+The term-origin review for this existing lane yields:
+
+| Choice | Existing justification | What is NOT fixed by it |
+| --- | --- | --- |
+| Quadratic/quartic local potentials | Declared polynomial constitutive model; positive quartics control large amplitudes. | Unique coefficients, physical energy units or universal state meaning. |
+| Gradient penalties | Declared spatial variation cost and discrete variational consistency. | A derivation of physical space, inertia or universal information storage. |
+| C-squared/Phi coupling | Common generator fixes the paired C and Phi derivative factors/signs. | Why this interaction rather than another admissible one, or a measured g. |
+| Conserved versus nonconserved C | Explicit alternative configuration choices. | Universal mass conservation for an unspecified relational C. |
+| Pi relaxation and mobilities | Selected dissipative/inertial effective law with a declared ledger. | Microscopic bath reduction, physical relaxation time or unique optimization law. |
+
+Thus the existing mathematics supplies conditional consistency constraints after choices
+are made, but it does not make those constitutive choices unique consequences of the
+author's broad principles. Further coefficient sweeps would not resolve that logical gap.
+**Updated next dependency:** the TD1 construction and term-origin audit now exist in this
+named lane. Reconcile whether the intended proposition supplies an additional constraint beyond an
+ordinary coupled phase-field model. The specification explicitly calls the coupling
+a constitutive choice, not a first-principles spacetime derivation. The existing TD3
+ordinary-comparator result applies in its stated scope. Do not demand new experimental
+data to establish the already-implemented algebra, and do not claim the author has
+approved this ansatz as the unique realization of the foundational information idea.
