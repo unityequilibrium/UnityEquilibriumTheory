@@ -113,6 +113,41 @@ the research check, explicit fail-fast preserves failures, and nightly checkout
 fetches pinned ancestry. YAML parsing and local commands are verified; hosted job
 execution and remote required-check configuration are not claimed or changed.
 
+## W0-W9 completion audit — 2026-10-19
+
+This audits the actual adoption-plan deliverables, not the validity of UET or the
+completion of every scientific item in the queue. W7 explicitly requires a reasoned
+discovery/triage disposition, not retroactive certification of all old results;
+W9 explicitly permits a precise prerequisite outcome. No narrower success criterion
+is substituted for a scientific result: those result claims remain open.
+
+| Requirement | Current authoritative evidence inspected | Completion and retained limits |
+| --- | --- | --- |
+| W0 current lineage and baseline without extra checkout/copies | Standards log W0-W1, daily ledger, branch/HEAD/worktree/status outputs | Current versus historical and cross-worktree evidence separated; 452 unrelated paths preserved, no copied raw/scientific payload |
+| W1 separate academic practice, operations, UET propositions and studies; assign owners | 00 entrypoint ownership/source map; source-level conflicts in standards log; final root/routing/Core conformance commit 6c259e611 | Major requirements have owners; stale architecture links and universal-chain wording repaired, compatibility history retained |
+| W2 applicable method profiles and evidence types | Standards 01/04/14/18/20/25/32 and profile tests | Formal proof needs no invented apparatus/data; fit/prediction, reproduction/independent data, peer-review/truth, review competence and negative/equivalent/inconclusive outcomes distinguished; existing F gates preserved |
+| W3 one proposition's authorship and translation | Topic13 design section 9, source/comparator identities and marked local log | Author boundary intent distinguished from AI schema and constitutive ansatz; unapproved physical interpretations remain unapproved |
+| W4 relationship-dependent roles, nested ownership, old-record compatibility | Schema/checker, standard 30/template 31, regression cases, pinned old-contract mapping | Duplicate declared state ownership, invalid containment/path/backaction scope and unbound baseline changes rejected; semantic energy/physics adequacy still needs review |
+| W5 actual Core pilot and comparator decision | Core matter-space contract/initializer, Core log and Topic13 design section 10 | Source state/functions unchanged; aggregate adds no state/energy; ordinary-comparator limitation and UNKNOWN physical receiver preserved |
+| W6 He4/O2, TTG, coherent-shear and nonlinear distinctions | Topic13 design section 11; pinned 0f17012ff evidence and two migrated physical contracts | Each route names evidence/prerequisite/stop; old bounded Core composition does not admit the later physical operator; formal invariants do not require a universal absolute Phi scale |
+| W7 all discovered routes have reasoned dispositions, not file-count science | Existing generated inventory: source identities, inventory_scope, 120 route/package/contract/surface units and adoption fields | No missing action/reason/next step; partial links do not certify a family; unknown history/private prose limits explicit. 40 current numbered folders versus old 41-topic prose is not a readiness promotion |
+| W8 astronomy and changed-path CI | Three existing astronomy contracts/initializer/local logs; input/result tests; PR/nightly workflow YAML and local commands | Offline products distinguished from raw instruments; inputs identified without output-field pollution; result lineage preserved; pinned code/history and visible failures wired. Physical gaps, dirty-source separation and dynamic-frame claim-label repair remain open |
+| W9 finite research-return decision | Topic13 design section 12 and marked local log; existing graphite contract payload 7a1e0986... validates | Frozen feasibility rule reaches no physical scoring for this declared packet; same-state joint observation/preparation/state/error packet is the exact reopening prerequisite. No new derivation, numerical forecast or global data-absence claim |
+| Verification, compatibility and unchanged scientific evidence | 58 relevant tests PASS, current/changed-path checks, read-only inventory byte/freshness checks, YAML parse, scoped links/whitespace; foundation audit FAIL/BLOCKED remains visible | Local methodology/control implementation verified in scope. No full old scientific rerun, physics threshold relaxation, hidden claim promotion, hosted-CI success, remote ruleset change, email or push claimed |
+
+The full generated inventory was compared against a fresh read-only build after
+the conformance changes and matches current source/discovery identities. Scientific
+producers/equations/data/results were not rewritten by these waves; identified
+dirty code and historical outputs remain with their owners. Local contract/structural
+checks report zero errors, but scientific incompleteness is not an error to hide:
+all physical promotion restrictions and the foundation's 224 stale-reference errors
+remain explicit. The broad scientific queue is future work, not silently discarded.
+
+Final handoff: the operating/adoption plan is implemented with an auditable W9
+prerequisite finish. Do not restart unchanged blocked research automatically. Reopen
+the named scientific route on its declared evidence change; independent bounded
+formal/normalized work may continue without pretending those physical gaps are closed.
+
 Review queue order is Core/Topic13 first, then the three astronomy packages, then
 other topics by dependency and claim importance. Every discovered legacy path is
 unreviewed until it has a reviewed contract or an explicit support disposition.

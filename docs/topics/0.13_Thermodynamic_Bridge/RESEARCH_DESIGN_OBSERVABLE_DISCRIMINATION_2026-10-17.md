@@ -387,3 +387,75 @@ Next controller: W7 inventory and reasoned route/claim dispositions, while W9's
 research-return choice may use these specific prerequisites without waiting for
 archival cleanup. W8 astronomy adoption follows the successful methodological pilot,
 not an assertion that Topic13 physics has passed.
+
+## 12. Standards adoption W9: finite research-return admission decision
+
+Date: 2026-10-19; checkout `6c259e611`. This freezes and answers a feasibility
+question using existing evidence. It is NOT a locked numerical physical forecast,
+a new derivation or a repetition of the closed algebra/fixtures.
+
+### Locked question and rules
+
+- **Question:** does the currently declared graphite preparation packet admit a
+  prefix-calibrated, prospectively reserved suffix test of the existing coupled
+  model now, rather than merely another fitted reproduction of the same trace?
+- **Controller:** existing `T13_GRAPHITE_PREPARATION_PREDICTION_V1` contract,
+  canonical payload SHA-256 `7a1e0986fef13bdf87c01f00ad64ee7299827f08f874148aeac306f5cb87e69c`.
+  Its source/config/evidence identities validate at this checkout. The 2026-10-18
+  report is reused, not rerun or silently superseded by this decision record.
+- **Model/assumptions:** existing homogeneous collinear conservative matter/response
+  candidate and its material/readout hypotheses. No new optical force, damping
+  action, regularizing floor or universal Phi/entropy identity is introduced.
+  The old static/driven kernel is not substituted for this transient protocol.
+- **Comparator:** the explicitly forward-equivalent ordinary scalar model in the
+  action-discrimination report. A successful forecast could support this restricted
+  effective model, not identify UET uniquely. More precise identical records do
+  not remove that comparator equivalence.
+- **Parameter/state policy:** freeze model version and all admissible coefficient
+  combinations independently or using an explicitly calibration-only prefix.
+  Propagate the whole admitted coupled-state/parameter/error set; do not infer
+  forces or hidden state anew from suffix targets. No numerical coefficients or
+  cutoff time are invented in the absence of an admitted physical packet.
+- **Observation/error policy:** use actual jointly identified channels, correction/
+  divisor and exposure convention, time-zero, finite temporal memory, residual
+  source/heating/damping and state-estimation bounds. Preserve correlation or use
+  justified conservative joint bounds. Ratio cancellation does not remove unknown
+  convolution, thermal evolution or the hidden response state's initial velocity.
+  Absolute Phi amplitude is not required when a justified invariant/material chart
+  suffices; the remaining evolution/measurement correspondence is still required.
+- **Exposure policy:** prefix is calibration, not independent validation. Previously
+  seen published figures are exposed. No suffix is retroactively called blind;
+  a future reserved comparison needs recorded exposure and use restrictions.
+- **Decision rule:** admit physical scoring only after the model-to-material map,
+  complete finite state/parameter/error set, actual record identities and source/
+  measurement protocol are supplied. Then reject the fixed model/protocol only
+  when its joint prediction set is disjoint from the reserved measurement set;
+  overlap is non-rejection, not proof. Missing/unbounded prerequisites mean
+  inconclusive feasibility and no physical score, not a theoretical no-go.
+
+### Evidence checked and outcome
+
+The current contract has `uses_observations=false`, empty calibration/comparison
+IDs and the unresolved component IDs `residual-source`, `carrier`, `clock`.
+The identity check reports zero structural errors but INCOMPLETE. Its prior exact
+readout/full-state results remain conditional; those results do not create measured
+records or finite physical bounds. The local filename search supplied no new
+candidate packet; this is NOT an assertion that none exists online or elsewhere.
+
+**Outcome: physical scoring is not admitted for this declared packet.** This is a
+completed finite admission decision with a precise prerequisite, not new empirical
+support, rejection of UET, Full Topic13 closure or a license to run more fixtures.
+
+**One reopening prerequisite:** an admitted same-state preparation/observation
+packet: simultaneous full first-order channels with common applied-divisor identity
+OR raw/reference correction evidence; declared time/exposure and joint error policy;
+independently justified model/material/coefficient combinations and a finite coupled
+state/source-tail set at a calibration-only cutoff. Check that packet against the
+existing contract first. A figure, a fitted global force, a new generic heat-capacity
+table or renamed observer category alone is insufficient. No email, external
+acquisition, new chat or endless search is authorized by this record.
+
+The normalized Core model and independent bounded formal tasks remain usable in
+their own scopes; this feasibility stop does not freeze the whole project. The
+standards-adoption goal can close with this explicit W9 prerequisite outcome while
+the scientific research questions and triage queue remain open.

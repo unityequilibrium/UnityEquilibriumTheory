@@ -1,3 +1,14 @@
+<!-- standards-adoption-w9-20261019:start -->
+## 2026-10-19 - W9 finite research-return admission decision
+
+- Scope: existing graphite prefix/suffix candidate; design section 12 at 6c259e611, not a new model or repeated algebra.
+- Locked: model/comparator, calibration-only prefix, full state/error-set propagation, exposure policy and disjoint-set rejection rule; no numerical forecast falsely claimed locked.
+- Verification: existing contract payload 7a1e0986... validated with 0 errors but INCOMPLETE; uses_observations=false, empty comparison/calibration IDs, residual-source/carrier/clock gaps.
+- Outcome: this declared packet does not admit physical scoring. Reopen on a same-state jointly identified preparation/readout packet with finite state/source/observer bounds, not another figure, fitted source or parameter sweep.
+- Claim boundary: completed feasibility decision, not UET rejection/support, Full Topic13 closure or a global data-availability assertion. No data acquired, scored or emailed; independent formal work remains allowed.
+- Workflow linkage: W9 closes the standards-adoption research-return decision; scientific prerequisites and existing queue remain open.
+<!-- standards-adoption-w9-20261019:end -->
+
 <!-- standards-adoption-w6-20261019:start -->
 ## 2026-10-19 - W6 Topic13 route-specific standards adoption
 

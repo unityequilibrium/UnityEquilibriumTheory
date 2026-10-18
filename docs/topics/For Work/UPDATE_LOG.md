@@ -21,7 +21,7 @@ copies, new checkout, retroactive PASS, global rerun or automatic external conta
 | W6 Topic13 pilot | He4/O2, graphite/TTG and nonlinear routes each expose evidence, missing prerequisite and one decision-changing action | Design section 11 and adoption review separate five scoped routes/owners; two physical contracts adopt UNKNOWN relational topology; FORMAL proofs reused; no physical promotion |
 | W7 legacy triage | All discovered calculation/claim routes have reasoned disposition; discovered coverage and unknown coverage distinguished | Existing generated inventory now covers 120 overlapping route/package/contract/surface units with reasons/actions; 40 current topic packages, 133 formal-document candidates; no scientific review or hidden-archive completeness inferred |
 | W8 expansion/enforcement | Pilot method applied to 0.3, 0.1, 0.26; 10/23 only by verified dependency; changed-path CI rejects real gaps without duplicate forms | Existing astronomy contracts adopt offline product scope and explicit input/code versions; input/result distinction and CI trigger/history/fail-fast controls tested locally; physical gaps and remote-CI uncertainty retained |
-| W9 research return | One locked, comparator-backed question reaches supported/rejected/equivalent/inconclusive or precise prerequisite outcome | Select from W5/W6; do not wait for all archival migration; no invented restriction to escape a comparator |
+| W9 research return | One locked, comparator-backed question reaches supported/rejected/equivalent/inconclusive or precise prerequisite outcome | Design section 12 freezes graphite preparation admission rule and reaches INCOMPLETE/no physical scoring for the declared packet; exact same-state joint packet needed to reopen; no new algebra/fixtures or numerical forecast claimed |
 
 W1 completion here is the ownership/index pass, NOT a claim that every sentence
 or every topic has been reconciled. W2 and W4 close the explicitly identified
@@ -220,6 +220,24 @@ independent authorized work rather than freezing the whole project.
   foundation result rewritten or unchanged scientific producer rerun.
 - Next: W9 finite research-return/admission decision, then requirement-by-requirement
   completion audit. The existing scientific triage queue remains open.
+
+### [2026-10-19] W9 finite research-return decision
+
+- Question: can the existing graphite preparation packet admit a prospective
+  prefix/suffix model test now? Model/comparator, parameter/state/error-set policy,
+  source/readout requirements and exposure/rejection rule frozen in design section 12.
+- Reused the identity-matched existing formal contract/report rather than running
+  its fixtures again. Contract SHA-256 `7a1e0986fef13bdf87c01f00ad64ee7299827f08f874148aeac306f5cb87e69c`
+  validates with zero errors but remains INCOMPLETE: no observed/calibration/comparison
+  packet and unresolved residual-source/carrier/clock components.
+- Outcome: no physical scoring for the declared packet; exact reopening prerequisite
+  is a same-state jointly identified record/processing/preparation/error packet.
+  This is the goal's permitted finite prerequisite outcome, NOT a locked numerical
+  prediction, new physics result, global data-absence claim or full theory closure.
+- No new formula, source hunt, external contact, fit, holdout read, simulation or
+  scientific gate edit. Independent normalized/formal work may proceed in its scope.
+- Completion verification is recorded in the existing adoption review; no new
+  status registry or general-science gate is created by closing this method goal.
 
 ## [2026-10-17] - Scoped calculation and observation contracts v1
 
