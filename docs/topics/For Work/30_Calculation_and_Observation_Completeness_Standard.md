@@ -227,6 +227,14 @@ records pre-standard entrypoints as UNREVIEWED; it is not a scientific exemption
 Unchanged legacy paths stay in the review queue. New or changed scientific paths
 need a contract or an explicit support/test disposition. New result artifacts need
 producer/contract lineage. Existing consumers tolerate additive contract metadata.
+Input JSON under Data/shared source packages is an input, not a result artifact:
+bind its identity without inserting output-contract fields into the original data.
+The changed-path guard covers declared tabular/binary inputs and preparation code;
+result JSON retains exact producer/contract lineage checks. Offline analysis of
+published summaries may model the input product and processing configuration while
+keeping upstream physical correspondence/corrections unknown; it need not invent
+a new telescope trajectory or detector simulation. Pin distinct code versions when
+unrelated dirty source work is held back, and do not call that a current rerun.
 
 Inventory by equation IDs, verifiers, scientific entrypoints and topic verification
 specs. Deduplicate shared code; never equate file count with experiment count. Start

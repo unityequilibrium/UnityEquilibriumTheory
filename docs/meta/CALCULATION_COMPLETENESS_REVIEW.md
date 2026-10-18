@@ -87,6 +87,32 @@ Next: W8 adopt the same method on the existing H0, galaxy and dynamic-frame
 contracts, enforce changed-path coverage and preserve actual data-product scope.
 W9's locked research-return decision need not wait for every queued archival review.
 
+### W8 astronomy and changed-input enforcement, 2026-10-19
+
+The three existing astronomy contracts now distinguish offline product input and
+analysis configuration from raw physical source/instrument states. Source-code
+evidence is pinned to `f7ba82307ae4afc698cccc9533d1056782004b9c`; unrelated dirty
+scientific producer work is not integrated or certified. Selected unchanged local
+input products have explicit identities; hashes do not establish upstream validity.
+
+| Study | Current product/method boundary | Required next review |
+| --- | --- | --- |
+| 0.3 | Published Planck/SH0ES H0 scalars, embedded in the verifier, plus source-lock/CODATA policy; not HST exposures | Scalar/source-record parity, covariance/likelihood assumptions and physical beta-law justification. No new velocity correction to an already derived scalar |
+| 0.1 | SPARC working-copy primary input; LITTLE THINGS is not automatically used by that primary verifier | Row/extraction, units, inclination/distance and mass-model/error provenance; no raw-data replication claim |
+| 0.26 | Laniakea landmark visualization/provenance; Cosmicflows/Pioneer files have separate non-acceptance roles | Source/frame/preprocessing and actual residual/competitor gates. Producer class D is not supported as external replication by this visualization; processing gap remains until owner repair |
+
+No upstream correction was silently marked applied; all physical contracts remain
+INCOMPLETE. Offline read-only processing is not a claim of universal physical
+isolation. Topic10/23 are not opened merely because of their numbers; no necessary
+dependency from this adoption wave was established.
+
+CI now distinguishes source JSON/tabular/binary data from result JSON: new/changed
+inputs need classification/identity, not fabricated result fields. Result payloads
+still require exact contract lineage. Workflow-only/shared-input changes trigger
+the research check, explicit fail-fast preserves failures, and nightly checkout
+fetches pinned ancestry. YAML parsing and local commands are verified; hosted job
+execution and remote required-check configuration are not claimed or changed.
+
 Review queue order is Core/Topic13 first, then the three astronomy packages, then
 other topics by dependency and claim importance. Every discovered legacy path is
 unreviewed until it has a reviewed contract or an explicit support disposition.

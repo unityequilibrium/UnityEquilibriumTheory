@@ -22,7 +22,7 @@ REPORT = "docs/meta/calculation_completeness_inventory.json"
 REGISTRY = "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry.json"
 MIGRATION_MAP = "docs/core/07_artifacts/archive/uet_core_file_migration_map.json"
 GROUPS = {"system_state", "drive_environment", "propagation", "frame_time", "detector", "processing", "numerics"}
-TEXT = {".py", ".md", ".json", ".yaml", ".yml", ".csv", ".txt", ".toml"}
+TEXT = {".py", ".md", ".json", ".yaml", ".yml", ".csv", ".tsv", ".txt", ".toml"}
 SUPPORT = {
     "docs/scripts/audit/audit_calculation_completeness.py",
     "docs/scripts/audit/build_calculation_contract_pilots.py",
@@ -451,16 +451,22 @@ def artifact_metadata(contract: dict, root: Path = ROOT) -> dict:
             "identities": contract["identities"]}
 
 
+def result_path(path: str) -> bool:
+    return path.endswith(".json") and ("/Result/artifacts/" in path or path.startswith("docs/core/07_artifacts/"))
+
+
 def scientific_path(path: str) -> bool:
     p = Path(path)
-    if p.suffix not in {".py", ".json"} or path in SUPPORT:
+    if p.suffix not in {".py", ".json", ".csv", ".tsv", ".npy", ".npz", ".h5", ".hdf5", ".dat"} or path in SUPPORT:
         return False
     if p.name.startswith("test_") or "05_tests" in p.parts or "test" in p.parts or p.name == "__init__.py":
         return False
-    if p.suffix == ".json":
-        return "/Result/artifacts/" in path or path.startswith("docs/core/07_artifacts/")
+    data_input = (path.startswith("docs/data/external/") or path.startswith("docs/core/06_data/")
+                  or (path.startswith("docs/topics/0.") and "/Data/" in path))
+    if p.suffix != ".py":
+        return result_path(path) or data_input
     return (path.startswith("docs/core/") or path.startswith("docs/scripts/audit/")
-            or (path.startswith("docs/topics/0.") and "/Code/" in path))
+            or (path.startswith("docs/topics/0.") and "/Code/" in path) or data_input)
 
 
 def discover_contracts(root: Path) -> list[tuple[str, dict]]:
@@ -668,7 +674,7 @@ def build_report(root: Path, changed: list[str] | None = None) -> dict:
     changed = sorted(set(changed or []))
     for p in changed:
         covered = p in coverage or p in baseline.get("support_paths", [])
-        if p.endswith(".json") and scientific_path(p) and (root / p).is_file():
+        if result_path(p) and (root / p).is_file():
             try:
                 obj = load_json(root / p)
                 matched = next((c for _, c in contracts if isinstance(obj, dict) and c["contract_id"] == obj.get("contract_id")), None)

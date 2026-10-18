@@ -148,6 +148,76 @@ def unadmitted_measurement_partition(state: str, quantity: str) -> dict:
     }
 
 
+ASTRONOMY_INPUTS = {
+    "0.3_Cosmology_Hubble_Tension": ["Code/03_Research/Research_Hubble_Comparison.py", "Code/01_Engine/Engine_Cosmology.py",
+        "Data/03_Research/source_lock_manifest.json",
+        "docs/data/external/cosmology/hubble_tension/planck_2018/source_record.json",
+        "docs/data/external/cosmology/hubble_tension/shoes_2022/source_record.json",
+        "docs/data/external/constants/codata/fine_structure/source_record.json"],
+    "0.1_Galaxy_Rotation_Problem": ["Code/03_Research/Research_Galaxy_Rotation.py",
+        "Code/01_Engine/Engine_Galaxy_V3.py", "Data/03_Research/sparc_data.json"],
+    "0.26_Cosmic_Dynamic_Frame": ["Code/03_Research/Research_Cosmic_Flows.py",
+        "Data/03_Research/Laniakea_Flows.json", "Data/03_Research/source_lock_manifest.json",
+        "Data/Cosmicflows_3_Subset.csv", "Data/Pioneer_Anomaly_Data.csv"]
+}
+ASTRONOMY_CODE_COMMIT = "f7ba82307ae4afc698cccc9533d1056782004b9c"
+
+
+def adopt_offline_product(contract: dict, topic: str, root: Path = ROOT) -> dict:
+    """Bind local source/product scope, without running a scientific producer."""
+    prefix = f"docs/topics/{topic}/"
+    files = [p if p.startswith("docs/") else prefix+p for p in ASTRONOMY_INPUTS[topic]]
+    existing = {i["path"]: i for i in contract["identities"]}
+    for path in files:
+        if path not in existing or path.endswith(".py"):
+            item = {"path": path, "kind": "working_file", "role": "code" if path.endswith(".py") else "input"}
+            if path.endswith(".py"):
+                item.update(kind="git_blob", commit=ASTRONOMY_CODE_COMMIT)
+            item["sha256"] = identity_hash(root, item)
+            if path in existing:
+                existing[path].clear()
+                existing[path].update(item)
+            else:
+                contract["identities"].append(item)
+    contract["review"]["rationale"] = "W8 source/product admission review only. Scientific code evidence is pinned to f7ba82307; unrelated uncommitted producer work is not integrated or certified. Unchanged local input products are identified separately. Upstream observation and physical claims remain INCOMPLETE."
+    contract["entrypoints"] = sorted(set(contract["entrypoints"] + [files[0]]))
+    contract["observation"]["system_partition"] = {
+        "role_mode": "RELATIONAL", "accounting_component_id": "system_state",
+        "boundary": "Offline analysis of fixed published/catalog working products. Input numbers and analysis configuration are computational states, not a reconstruction of every cosmic or instrument degree of freedom. Upstream frame/correction/measurement uncertainty remains in the component ledger; no new raw telescope reduction or physical trajectory is performed.",
+        "systems": [
+            {"id": "data_product", "state": "Published estimates or catalog/landmark working inputs and recorded uncertainties",
+             "state_accounting": {"kind": "INDEPENDENT", "state_ids": ["product.input_vector"], "owner_ids": [], "rule": "Input vector counted once as a statistical/computational object, not additional physical energy or a raw source state."}},
+            {"id": "analysis", "state": "Declared processing configuration excluding the already counted input vector",
+             "state_accounting": {"kind": "INDEPENDENT", "state_ids": ["analysis.configuration"], "owner_ids": [], "rule": "Configuration is separate from source inputs; output is a derived record, not an independent physical substance."}}],
+        "couplings": [
+            {"id": "product_readout", "source": "data_product", "target": "analysis", "kind": "DETECTION", "component_id": "processing", "map": "Existing offline read/compare or visualization operator; upstream instrument response is not recreated"},
+            {"id": "offline_feedback", "source": "analysis", "target": "data_product", "kind": "BACKACTION", "component_id": "offline_read_only", "map": "No source-input update or coupling to an observing spacecraft in the declared offline calculation"}],
+        "observables": [{"id": "analysis_record", "detector_id": "analysis", "target_systems": ["data_product"],
+            "quantity": contract["output"]["quantity"], "readout_map": "Primary verifier and product-level contract; no claim to recover raw astronomical state",
+            "component_id": "processing", "backaction_targets": ["data_product"],
+            "backaction_scope_reason": "Read-only offline product analysis; physical upstream response/corrections remain separate unknowns rather than a new spacecraft feedback simulation."}]
+    }
+    if not any(c["id"] == "offline_read_only" for c in contract["components"]):
+        contract["components"].append({"id": "offline_read_only", "group": "processing", "disposition": "NOT_APPLICABLE",
+            "reason": "The declared offline calculation reads fixed products; source-input update/physical detector feedback is not part of this software protocol. This is not a universal physical-isolation claim.", "evidence": [files[0]]})
+    if topic.startswith("0.3_"):
+        contract["model"]["assumptions"] = "Published Planck/SH0ES scalar references and source-locked constant policy only; source values are embedded in the verifier, not loaded from raw HST data. The compared cosmology law remains a model assumption, not a first-principles derivation established here."
+        contract["error_budget"]["measurement"] = "Published scalar uncertainties only; script combines them in quadrature. Cross-covariance and adequacy for a joint cosmological likelihood are not established by this review."
+        contract["next_action"] = "Audit the embedded scalar-to-source-record parity, covariance/likelihood assumptions and physical justification of the fixed beta law; do not apply a new HST velocity correction to a published H0 scalar."
+    elif topic.startswith("0.1_"):
+        contract["model"]["assumptions"] = "Primary verifier uses the SPARC working copy; LITTLE THINGS is listed in the manifest but is not automatically a numeric acceptance input. Distance/inclination/mass-to-light and extraction lineage remain unreviewed."
+        contract["next_action"] = "Trace SPARC working rows to source/product, units, distance/inclination and mass-model assumptions plus uncertainties; keep LITTLE THINGS separate unless a declared verifier actually uses it. No new fit or rerun without changed evidence."
+    else:
+        contract["model"]["assumptions"] = "Primary result is Laniakea working-landmark visualization/provenance; Cosmicflows and Pioneer inputs are separately hashed, not numeric model-acceptance residuals."
+        processing = next(c for c in contract["components"] if c["id"] == "processing")
+        processing.update(disposition="UNKNOWN", owner="research-core",
+            reason="Producer labels an internal visualization artifact claim_class D; external-replication meaning is unsupported by this run. Preserve unrelated dirty producer work and resolve its claim metadata before promotion.",
+            next_action="Review and reconcile the existing producer's claim label in its owner wave; no source/data rewrite or physical acceptance here.")
+        contract["next_action"] = "Separate landmark visualization from Cosmicflows frame/calibration analysis and Pioneer residual/thermal-recoil comparison. Reconcile the producer's unsupported external claim label before promotion; raw preprocessing and quantitative residual gates remain open."
+    contract["claim_boundary"] = "Offline source/product coverage and diagnostic scope only; no raw HST reduction, upstream correction duplication, new cosmology/galaxy validation, external replication or promotion of heuristic fits. Code evidence is the named committed version, not unrelated dirty producer work."
+    return contract
+
+
 def pilots() -> list[tuple[str, dict]]:
     result = []
     core_files = ["docs/core/01_contracts/MATTER_SPACE_RESEARCH_SPEC.md",
@@ -262,7 +332,7 @@ def pilots() -> list[tuple[str, dict]]:
             corrections=[{"id": "upstream-frame-and-instrument-processing", "state": "UNKNOWN",
                           "evidence": files[0]}])
         c["claim_boundary"] = "Source/coverage review only; no raw HST reprocessing, double correction, new cosmology claim or promotion of heuristic fits."
-        result.append((f"{folder}/calculation_contracts/observation_coverage.json", c))
+        result.append((f"{folder}/calculation_contracts/observation_coverage.json", adopt_offline_product(c, topic)))
     return result
 
 

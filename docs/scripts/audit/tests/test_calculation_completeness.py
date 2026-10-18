@@ -385,6 +385,49 @@ class ContractTests(unittest.TestCase):
         r = audit.build_report(self.root, ["docs/core/new.py", "docs/core/test_new.py"])
         self.assertEqual(len(r["errors"]), 1)
 
+    def test_data_inputs_need_identity_not_result_payload_metadata(self):
+        path = "docs/topics/0.99_Test/Data/input.json"
+        p = self.root / path
+        p.parent.mkdir(parents=True)
+        p.write_text('{"observed":1}')
+        self.assertTrue(audit.scientific_path(path))
+        self.assertFalse(audit.result_path(path))
+        self.assertTrue(any("classification/contract" in e for e in audit.build_report(self.root, [path])["errors"]))
+        item = dict(path=path, kind="working_file", role="input")
+        item["sha256"] = audit.identity_hash(self.root, item)
+        self.c["identities"].append(item)
+        self.c["review"]["scope_sha256"] = audit.review_payload_hash(self.c)
+        self.save_contract()
+        self.assertEqual(audit.build_report(self.root, [path])["errors"], [])
+        p.write_text('{"observed":2}')
+        self.assertTrue(any("STALE identity" in e for e in audit.build_report(self.root, [path])["errors"]))
+
+    def test_shared_and_binary_input_discovery_is_not_artifact_classification(self):
+        for p in ("docs/data/external/records/source_record.json", "docs/core/06_data/source_packages/input.h5",
+                  "docs/topics/0.1_Test/Data/rows.csv", "docs/topics/0.1_Test/Data/modes.npz"):
+            self.assertTrue(audit.scientific_path(p))
+            self.assertFalse(audit.result_path(p))
+
+    def test_tsv_text_hash_normalizes_line_endings_but_binary_hash_does_not(self):
+        for suffix, equal in ((".tsv", True), (".h5", False)):
+            path = "input" + suffix
+            item = dict(path=path, kind="working_file")
+            (self.root/path).write_bytes(b"x\r\n")
+            before = audit.identity_hash(self.root, item)
+            (self.root/path).write_bytes(b"x\n")
+            self.assertEqual(before == audit.identity_hash(self.root, item), equal)
+
+    def test_ci_contract_checks_are_fail_visible_and_history_complete(self):
+        pr = (audit.ROOT / ".github/workflows/pr-validation.yml").read_text(encoding="utf-8-sig")
+        nightly = (audit.ROOT / ".github/workflows/nightly-research-audit.yml").read_text(encoding="utf-8-sig")
+        self.assertIn("scripts|data/external", pr)
+        self.assertIn("pr-validation|nightly-research-audit", pr)
+        self.assertIn('audit_calculation_completeness.py --changed "$BASE_SHA" --check', pr)
+        self.assertIn("fetch-depth: 0", nightly)
+        for text in (pr, nightly):
+            step = text.split("python docs/scripts/audit/audit_calculation_completeness.py", 1)[0].rsplit("run: |", 1)[1]
+            self.assertIn("set -euo pipefail", step)
+
     def test_inventory_read_only_deterministic(self):
         self.save_contract()
         before = {str(p):p.read_bytes() for p in self.root.rglob("*") if p.is_file()}
@@ -508,6 +551,9 @@ class ObserverControls(unittest.TestCase):
         values = [ast.literal_eval(node.value) for node in ast.walk(tree)
                   if isinstance(node, ast.Assign) and isinstance(node.value, ast.Dict)
                   and any(isinstance(target, ast.Subscript)
+                          and isinstance(target.value, ast.Subscript)
+                          and isinstance(target.value.value, ast.Name)
+                          and target.value.value.id == "c"
                           and isinstance(target.slice, ast.Constant)
                           and target.slice.value == "system_partition" for target in node.targets)]
         saved = audit.load_json(audit.ROOT / "docs/core/00_governance/calculation_contracts/matter_space_observer.json")
@@ -555,6 +601,26 @@ class ObserverControls(unittest.TestCase):
             result = audit.validate_contract(saved)
             self.assertEqual(result["errors"], [])
             self.assertNotIn("system_partition:legacy_unreviewed", result["gaps"])
+
+    def test_astronomy_contracts_are_offline_products_not_raw_instrument_reductions(self):
+        path = audit.ROOT / "docs/scripts/audit/build_calculation_contract_pilots.py"
+        spec = importlib.util.spec_from_file_location("astronomy_builder", path)
+        builder = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(builder)
+        for topic in builder.ASTRONOMY_INPUTS:
+            saved = audit.load_json(audit.ROOT / f"docs/topics/{topic}/calculation_contracts/observation_coverage.json")
+            self.assertEqual(builder.adopt_offline_product(copy.deepcopy(saved), topic), saved)
+            graph = saved["observation"]["system_partition"]
+            self.assertEqual({s["id"] for s in graph["systems"]}, {"data_product", "analysis"})
+            self.assertEqual(graph["role_mode"], "RELATIONAL")
+            self.assertTrue(any(i["kind"] == "git_blob" and i["commit"] == builder.ASTRONOMY_CODE_COMMIT for i in saved["identities"]))
+            result = audit.validate_contract(saved)
+            self.assertEqual(result["errors"], [])
+            self.assertEqual(result["effective_status"], "INCOMPLETE")
+            self.assertIn("correction:upstream-frame-and-instrument-processing", result["gaps"])
+            if topic.startswith("0.26_"):
+                self.assertIn("processing", result["gaps"])
+                self.assertIn("claim_class D", next(c["reason"] for c in saved["components"] if c["id"] == "processing"))
 
     def test_velocity_raw_signal_and_frame_recovery(self):
         emitted = 100.0

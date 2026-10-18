@@ -20,7 +20,7 @@ copies, new checkout, retroactive PASS, global rerun or automatic external conta
 | W5 Core pilot | Matter-space chain and comparator yield a scoped decision, not mandatory novelty | Existing Core contract migrated with pinned baseline; design section 10 and Core log retain normalized constitutive scope and UNKNOWN physical detector; foundation FAIL/BLOCKED remains visible |
 | W6 Topic13 pilot | He4/O2, graphite/TTG and nonlinear routes each expose evidence, missing prerequisite and one decision-changing action | Design section 11 and adoption review separate five scoped routes/owners; two physical contracts adopt UNKNOWN relational topology; FORMAL proofs reused; no physical promotion |
 | W7 legacy triage | All discovered calculation/claim routes have reasoned disposition; discovered coverage and unknown coverage distinguished | Existing generated inventory now covers 120 overlapping route/package/contract/surface units with reasons/actions; 40 current topic packages, 133 formal-document candidates; no scientific review or hidden-archive completeness inferred |
-| W8 expansion/enforcement | Pilot method applied to 0.3, 0.1, 0.26; 10/23 only by verified dependency; changed-path CI rejects real gaps without duplicate forms | Pending pilot acceptance; structural checks never substitute for physics review |
+| W8 expansion/enforcement | Pilot method applied to 0.3, 0.1, 0.26; 10/23 only by verified dependency; changed-path CI rejects real gaps without duplicate forms | Existing astronomy contracts adopt offline product scope and explicit input/code versions; input/result distinction and CI trigger/history/fail-fast controls tested locally; physical gaps and remote-CI uncertainty retained |
 | W9 research return | One locked, comparator-backed question reaches supported/rejected/equivalent/inconclusive or precise prerequisite outcome | Select from W5/W6; do not wait for all archival migration; no invented restriction to escape a comparator |
 
 W1 completion here is the ownership/index pass, NOT a claim that every sentence
@@ -179,6 +179,32 @@ independent authorized work rather than freezing the whole project.
 - Next controller: W8 existing astronomy-contract adoption and changed-path CI,
   followed by W9 locked research-return decision. Review queue remains explicit
   rather than blocking independent formal work until all archives are cleaned.
+
+### [2026-10-19] W8 astronomy products and CI enforcement
+
+- Baseline: `f7ba82307`. Existing 0.3/0.1/0.26 contracts now declare offline
+  input-product/analysis states, not fabricated raw observatory models. Added
+  actual unchanged input identities and pinned committed code evidence; unrelated
+  dirty producer work is preserved and not silently part of the admitted version.
+- Source review: H0 uses published scalars embedded in code, not HST exposures;
+  primary galaxy verifier uses SPARC, not every catalog listed in its manifest;
+  dynamic-frame primary output is a landmark visualization, not a Pioneer residual
+  fit. Existing class-D producer wording is exposed as a processing/claim gap,
+  not treated as external replication or overwritten inside dirty code.
+- Tooling/CI: input JSON/CSV/TSV/binary data and preparation code require scope/
+  identity but not result payload metadata. Result JSON keeps its exact contract
+  binding. Shared inputs/workflow edits trigger research checks, both contract
+  steps fail fast, and nightly checkout preserves pinned ancestry. No remote
+  ruleset write, hosted success claim, scientific rerun or numerical threshold edit.
+- Verification: 58 tests PASS, including raw-input/result distinction, identity
+  staleness, workflow wiring, astronomy-contract initializer equality and preserved
+  correction/physical gaps. Workflow YAML parse PASS. Current/read-only/changed-path
+  audits and scoped link/whitespace checks control the final handoff.
+- Discovery broadened to input packages; increased uncovered-path count reflects
+  newly visible old inputs, not new scientific failures or copied data. Existing
+  generated inventory is refreshed deterministically; scientific artifacts are not.
+- Next: W9 finite locked research-return decision from W5/W6. The triage queue and
+  physical gaps remain open; do not wait for all historical cleanup to choose it.
 
 ## [2026-10-17] - Scoped calculation and observation contracts v1
 
