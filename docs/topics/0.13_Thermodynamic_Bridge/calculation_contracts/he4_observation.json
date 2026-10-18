@@ -42,6 +42,22 @@
     "holdout_policy": "Source ancestry overlaps; not independent or blind validation; no new data consumed."
   },
   "observation": {
+    "system_partition": {
+      "role_mode": "RELATIONAL", "accounting_component_id": "system_state",
+      "boundary": "Admission topology only: sample, drive and receiver are distinct candidate systems. Their state laws, applicable time protocol, physical units and error budget are not admitted by this graph. No missing coupling is set to zero.",
+      "systems": [
+        {"id": "sample", "state": "No selected Ward-consistent condensed finite-temperature state/material map; frozen normal calibration is not He-II", "state_accounting": {"kind": "INDEPENDENT", "state_ids": ["candidate.sample_state"], "owner_ids": [], "rule": "Unadmitted state-vector placeholder, not an asserted number of physical degrees of freedom or an energy law; system_state/detector gaps remain open."}},
+        {"id": "drive", "state": "Unadmitted physical drive state/protocol", "state_accounting": {"kind": "INDEPENDENT", "state_ids": ["candidate.drive_state"], "owner_ids": [], "rule": "Unadmitted state-vector placeholder, not an asserted number of physical degrees of freedom or an energy law; system_state/detector gaps remain open."}},
+        {"id": "receiver", "state": "Unadmitted receiver state/readout calibration", "state_accounting": {"kind": "INDEPENDENT", "state_ids": ["candidate.receiver_state"], "owner_ids": [], "rule": "Unadmitted state-vector placeholder, not an asserted number of physical degrees of freedom or an energy law; system_state/detector gaps remain open."}}
+      ],
+      "couplings": [
+        {"id": "drive_to_sample", "source": "drive", "target": "sample", "kind": "SIGNAL", "component_id": "drive_environment", "map": "UNKNOWN source-to-state operator; no fitted target-derived input admitted"},
+        {"id": "sample_to_receiver", "source": "sample", "target": "receiver", "kind": "DETECTION", "component_id": "detector", "map": "UNKNOWN state-to-readout operator in the declared physical protocol"},
+        {"id": "receiver_to_sample", "source": "receiver", "target": "sample", "kind": "BACKACTION", "component_id": "detector", "map": "UNKNOWN feedback; no omission bound supplied"},
+        {"id": "receiver_to_drive", "source": "receiver", "target": "drive", "kind": "BACKACTION", "component_id": "detector", "map": "UNKNOWN direct/mediated feedback within the source-readout protocol"}
+      ],
+      "observables": [{"id": "candidate_reading", "detector_id": "receiver", "target_systems": ["sample"], "quantity": "He-II second-sound phase velocity, conditional on same-state longitudinal mode identification", "readout_map": "UNKNOWN physical operator, not a complete-state measurement", "component_id": "detector", "backaction_targets": ["sample", "drive"], "backaction_scope_reason": "Assess the sampled state and its drive separately; topology is provisional and additional coupled systems require substantive scope review."}]
+    },
     "source_state": "Source-scoped state, not automatically a material state.",
     "generated_trace": "Derived record only; not the full observable state.",
     "carrier": "No physical carrier admitted by this metadata review.",
@@ -168,5 +184,5 @@
     "git:0f17012ffd6ad456c150b10e048efd868ce95588:docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/he4_svp_second_sound_response_source_package.json"
   ],
   "claim_boundary": "Frozen normal branch is not a condensed He-II prediction. Missing operator is not a global no-go or a proved rank/nonidentifiability result. Preserve existing BLOCKED physical gate.",
-  "next_action": "Select an admissible stationary condensed model and independent material state/current map; frozen normal calibration is not He-II.; Specify actual protocol and justified perturbation constraints.; Derive the relevant observable operator; full-amplitude claims additionally require source/readout projections.; Lock physical state, units and primary measurement frequency/time protocol.; Admit the longitudinal two-fluid mode on that same model domain."
+  "next_action": "Specify one fixed Ward-consistent condensed finite-temperature completion and independent material state/current map; then derive its same-state longitudinal operator. Additional helium data or detector detail alone cannot repair the unselected model."
 }

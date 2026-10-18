@@ -9,8 +9,11 @@ coverage counts and the unreviewed queue. The
 
 The editable checkout started on `codex/services/research-foundation-pilot` at
 `35a01e65b6baf8a6ff34fae4a8744ccc3e3adf1d` with 452 pre-existing changes.
-Work continues on `codex/research/calculation-observation-standard` without making
-another checkout or incorporating those unrelated changes into these commits.
+That initial capture continued on `codex/research/calculation-observation-standard`.
+This is historical lineage, not the current branch. The subsequent W0-W9 sequence,
+current checkout identities and open scope are recorded in the existing
+[standards log](../topics/For%20Work/UPDATE_LOG.md#standards-restructure-w0-w9);
+no additional checkout or unrelated dirty work is incorporated by adoption.
 The origin/main value in the baseline is a cached ref, not a new remote fetch.
 
 Topic13 October 15-17 evidence belongs to the distinct owner commit
@@ -32,6 +35,19 @@ that is a visible evidence gap and never grounds physical acceptance.
 | Dynamic frame | Galaxy, spacecraft and heuristic-fit inputs remain separate sub-observables. | No transfer of a fitted drag hypothesis into a general cosmology result. |
 
 ## Checks and remaining pre-existing drift
+
+### W6 adoption review, 2026-10-19
+
+Core uses a nonadditive relational aggregate; He4 and nonlinear physical contracts
+now declare provisional admission topology without promoting UNKNOWN physical state,
+source, readout or feedback. Formal invariant and coherent-shear preparation remain
+FORMAL, without fake equipment/data. See [Topic13 design section 11](../topics/0.13_Thermodynamic_Bridge/RESEARCH_DESIGN_OBSERVABLE_DISCRIMINATION_2026-10-17.md#11-standards-adoption-w6-separate-topic13-routes-and-prerequisites)
+for exact route-specific evidence, prerequisite, stop and owner boundaries.
+
+In particular the old O2/He4 Core composition gate is not the later frozen-bundle
+second-sound operator, graphite coherent shear is not thermal TTG, and an absolute
+Phi scale is not an unconditional prerequisite for the invariant-only test. Full
+TTG contract migration remains a visible W7 coverage gap. No physics status changes.
 
 The standalone contract suite checks schema/identity enforcement and synthetic
 observer controls. Selected existing matter-space tests check physical-state

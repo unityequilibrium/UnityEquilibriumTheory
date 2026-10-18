@@ -37,6 +37,22 @@
     "holdout_policy": "No holdout access, fitting, external validation or new blind-eligibility decision."
   },
   "observation": {
+    "system_partition": {
+      "role_mode": "RELATIONAL", "accounting_component_id": "system_state",
+      "boundary": "Admission topology only: sample, drive and receiver are distinct candidate systems. Their state laws, applicable time protocol, physical units and error budget are not admitted by this graph. No missing coupling is set to zero.",
+      "systems": [
+        {"id": "sample", "state": "Unadmitted material mode/state and invariant-kernel matching; no absolute Phi amplitude inferred", "state_accounting": {"kind": "INDEPENDENT", "state_ids": ["candidate.sample_state"], "owner_ids": [], "rule": "Unadmitted state-vector placeholder, not an asserted number of physical degrees of freedom or an energy law; system_state/detector gaps remain open."}},
+        {"id": "drive", "state": "Unadmitted physical drive state/protocol", "state_accounting": {"kind": "INDEPENDENT", "state_ids": ["candidate.drive_state"], "owner_ids": [], "rule": "Unadmitted state-vector placeholder, not an asserted number of physical degrees of freedom or an energy law; system_state/detector gaps remain open."}},
+        {"id": "receiver", "state": "Unadmitted receiver state/readout calibration", "state_accounting": {"kind": "INDEPENDENT", "state_ids": ["candidate.receiver_state"], "owner_ids": [], "rule": "Unadmitted state-vector placeholder, not an asserted number of physical degrees of freedom or an energy law; system_state/detector gaps remain open."}}
+      ],
+      "couplings": [
+        {"id": "drive_to_sample", "source": "drive", "target": "sample", "kind": "SIGNAL", "component_id": "drive_environment", "map": "UNKNOWN source-to-state operator; no fitted target-derived input admitted"},
+        {"id": "sample_to_receiver", "source": "sample", "target": "receiver", "kind": "DETECTION", "component_id": "detector", "map": "UNKNOWN state-to-readout operator in the declared physical protocol"},
+        {"id": "receiver_to_sample", "source": "receiver", "target": "sample", "kind": "BACKACTION", "component_id": "detector", "map": "UNKNOWN feedback; no omission bound supplied"},
+        {"id": "receiver_to_drive", "source": "receiver", "target": "drive", "kind": "BACKACTION", "component_id": "detector", "map": "UNKNOWN direct/mediated feedback within the source-readout protocol"}
+      ],
+      "observables": [{"id": "candidate_reading", "detector_id": "receiver", "target_systems": ["sample"], "quantity": "Independently driven kernel response in an admitted instrument coordinate/time chart", "readout_map": "UNKNOWN physical operator, not a complete-state measurement", "component_id": "detector", "backaction_targets": ["sample", "drive"], "backaction_scope_reason": "Assess the sampled state and its drive separately; topology is provisional and additional coupled systems require substantive scope review."}]
+    },
     "source_state": "Source-scoped state, not automatically a material state.",
     "generated_trace": "Derived record only; not the full observable state.",
     "carrier": "No physical carrier admitted by this metadata review.",
@@ -111,10 +127,10 @@
       "id": "system_state",
       "group": "system_state",
       "disposition": "UNKNOWN",
-      "reason": "Independent material mode/state and base-Phi correspondence missing.",
+      "reason": "Independent material mode/state and effective kernel correspondence missing; an absolute base-Phi scale is required only for claims that use that scale.",
       "evidence": [],
       "owner": "FOUNDATION",
-      "next_action": "Independent material mode/state and base-Phi correspondence missing."
+      "next_action": "Independent material mode/state and effective kernel correspondence missing; an absolute base-Phi scale is required only for claims that use that scale."
     }
   ],
   "error_budget": {
@@ -154,5 +170,5 @@
     "git:0f17012ffd6ad456c150b10e048efd868ce95588:docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/t13_invariant_pole_discrimination.json"
   ],
   "claim_boundary": "No admitted physical kernel package. Reuse formal result without rerunning fixtures or treating a graphite inquiry as a helium prerequisite.",
-  "next_action": "Independent material mode/state and base-Phi correspondence missing.; Acquire an eligible independently characterized drive/kernel package before physical scoring.; Source/readout gain, phase, mode and units are not admitted.; Lock physical frequency convention and coordinate conversion.; Instrument transfer and mode matching remain open."
+  "next_action": "Admit one actual same-state source/kernel/readout operator with units, gain/phase, frequency convention and joint uncertainty; use identifiable combinations where justified. Do not demand an absolute Phi scale for a scale-invariant test, and do not substitute a different native forcing protocol."
 }

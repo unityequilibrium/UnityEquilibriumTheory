@@ -125,6 +125,29 @@ def baseline() -> dict:
         "legacy_paths": legacy, "routes": routes}
 
 
+def unadmitted_measurement_partition(state: str, quantity: str) -> dict:
+    """Admission topology only: UNKNOWN components do not become physical equations."""
+    def system(sid: str, description: str) -> dict:
+        return {"id": sid, "state": description, "state_accounting": {
+            "kind": "INDEPENDENT", "state_ids": [f"candidate.{sid}_state"], "owner_ids": [],
+            "rule": "Unadmitted state-vector placeholder, not an asserted number of physical degrees of freedom or an energy law; system_state/detector gaps remain open."}}
+    return {
+        "role_mode": "RELATIONAL", "accounting_component_id": "system_state",
+        "boundary": "Admission topology only: sample, drive and receiver are distinct candidate systems. Their state laws, applicable time protocol, physical units and error budget are not admitted by this graph. No missing coupling is set to zero.",
+        "systems": [system("sample", state), system("drive", "Unadmitted physical drive state/protocol"),
+                    system("receiver", "Unadmitted receiver state/readout calibration")],
+        "couplings": [
+            {"id": "drive_to_sample", "source": "drive", "target": "sample", "kind": "SIGNAL", "component_id": "drive_environment", "map": "UNKNOWN source-to-state operator; no fitted target-derived input admitted"},
+            {"id": "sample_to_receiver", "source": "sample", "target": "receiver", "kind": "DETECTION", "component_id": "detector", "map": "UNKNOWN state-to-readout operator in the declared physical protocol"},
+            {"id": "receiver_to_sample", "source": "receiver", "target": "sample", "kind": "BACKACTION", "component_id": "detector", "map": "UNKNOWN feedback; no omission bound supplied"},
+            {"id": "receiver_to_drive", "source": "receiver", "target": "drive", "kind": "BACKACTION", "component_id": "detector", "map": "UNKNOWN direct/mediated feedback within the source-readout protocol"}],
+        "observables": [{"id": "candidate_reading", "detector_id": "receiver", "target_systems": ["sample"],
+            "quantity": quantity, "readout_map": "UNKNOWN physical operator, not a complete-state measurement",
+            "component_id": "detector", "backaction_targets": ["sample", "drive"],
+            "backaction_scope_reason": "Assess the sampled state and its drive separately; topology is provisional and additional coupled systems require substantive scope review."}]
+    }
+
+
 def pilots() -> list[tuple[str, dict]]:
     result = []
     core_files = ["docs/core/01_contracts/MATTER_SPACE_RESEARCH_SPEC.md",
@@ -191,6 +214,10 @@ def pilots() -> list[tuple[str, dict]]:
         comparison_ids=["Donnelly-Barenghi:second-sound:Table4.3"],
         holdout_policy="Source ancestry overlaps; not independent or blind validation; no new data consumed.")
     c["claim_boundary"] = "Frozen normal branch is not a condensed He-II prediction. Missing operator is not a global no-go or a proved rank/nonidentifiability result. Preserve existing BLOCKED physical gate."
+    c["observation"]["system_partition"] = unadmitted_measurement_partition(
+        "No selected Ward-consistent condensed finite-temperature state/material map; frozen normal calibration is not He-II",
+        "He-II second-sound phase velocity, conditional on same-state longitudinal mode identification")
+    c["next_action"] = "Specify one fixed Ward-consistent condensed finite-temperature completion and independent material state/current map; then derive its same-state longitudinal operator. Additional helium data or detector detail alone cannot repair the unselected model."
     result.append((f"{T13}/calculation_contracts/he4_observation.json", c))
     kernel_files = [f"{T13}/Result/T13_INVARIANT_POLE_DISCRIMINATION_2026-10-15.md",
                     f"{T13}/Result/artifacts/t13_invariant_pole_discrimination.json"]
@@ -204,12 +231,16 @@ def pilots() -> list[tuple[str, dict]]:
     result.append((f"{T13}/calculation_contracts/nonlinear_formal.json", c))
     c = make_contract("T13_NONLINEAR_PHYSICAL_ADMISSION_V1", "PHYSICAL_COMPARISON",
         "Do existing records measure the independently driven mechanical kernel required by the invariant test?", kernel_files,
-        commit=T13_COMMIT, unknown={"system_state": "Independent material mode/state and base-Phi correspondence missing.",
+        commit=T13_COMMIT, unknown={"system_state": "Independent material mode/state and effective kernel correspondence missing; an absolute base-Phi scale is required only for claims that use that scale.",
         "drive_environment": "Acquire an eligible independently characterized drive/kernel package before physical scoring.",
         "detector": "Source/readout gain, phase, mode and units are not admitted.",
         "frame_time": "Lock physical frequency convention and coordinate conversion.",
         "propagation": "Instrument transfer and mode matching remain open."})
     c["claim_boundary"] = "No admitted physical kernel package. Reuse formal result without rerunning fixtures or treating a graphite inquiry as a helium prerequisite."
+    c["observation"]["system_partition"] = unadmitted_measurement_partition(
+        "Unadmitted material mode/state and invariant-kernel matching; no absolute Phi amplitude inferred",
+        "Independently driven kernel response in an admitted instrument coordinate/time chart")
+    c["next_action"] = "Admit one actual same-state source/kernel/readout operator with units, gain/phase, frequency convention and joint uncertainty; use identifiable combinations where justified. Do not demand an absolute Phi scale for a scale-invariant test, and do not substitute a different native forcing protocol."
     result.append((f"{T13}/calculation_contracts/nonlinear_physical.json", c))
     astronomy = [
         ("0.3_Cosmology_Hubble_Tension", "H0_PUBLISHED_SUMMARY_V1", "Published scalar H0 comparison, not raw HST reduction", "km s^-1 Mpc^-1"),

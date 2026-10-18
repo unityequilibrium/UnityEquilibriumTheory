@@ -1,3 +1,14 @@
+<!-- standards-adoption-w6-20261019:start -->
+## 2026-10-19 - W6 Topic13 route-specific standards adoption
+
+- Scope: standards-adoption review at cc03b4ea9; design section 11 and existing He4/nonlinear physical contracts.
+- Changed: explicit relational admission topology keeps state/source/readout/backaction UNKNOWN; invariant-only tests no longer inherit an unconditional absolute-Phi prerequisite.
+- Evidence: pinned 0f17012ff operator-domain/visibility/invariant decisions, current aggregate thermal gate and unchanged graphite preparation/native-source reports. Distinct owners and protocols are not merged.
+- Decision: He4 model/operator, TTG independent thermal mapping, coherent-shear preparation and nonlinear source/kernel matching are separate prerequisites. No generic data hunt or repeated algebra authorized.
+- Verification: 47 contract/observer tests PASS; read-only contract and changed-path checks, scoped links and whitespace. No scientific result, data, threshold or physical gate change.
+- Next: W7 reasoned inventory/claim dispositions; full TTG contract coverage remains open, not silently supplied by the FORMAL coherent-shear contract.
+<!-- standards-adoption-w6-20261019:end -->
+
 <!-- standards-adoption-w3-20261019:start -->
 ## 2026-10-19 - W3 proposition/provenance reconciliation
 

@@ -445,6 +445,32 @@ class ObserverControls(unittest.TestCase):
         self.assertEqual(result["effective_status"], "INCOMPLETE")
         self.assertIn("detector", result["gaps"])
 
+    def test_topic13_admission_graphs_preserve_unknown_state_and_operator(self):
+        path = audit.ROOT / "docs/scripts/audit/build_calculation_contract_pilots.py"
+        spec = importlib.util.spec_from_file_location("pilot_builder", path)
+        builder = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(builder)
+        for name in ("he4_observation", "nonlinear_physical"):
+            saved = audit.load_json(audit.ROOT / f"docs/topics/0.13_Thermodynamic_Bridge/calculation_contracts/{name}.json")
+            graph = saved["observation"]["system_partition"]
+            expected = builder.unadmitted_measurement_partition(graph["systems"][0]["state"], graph["observables"][0]["quantity"])
+            self.assertEqual(graph, expected)
+            result = audit.validate_contract(saved)
+            self.assertEqual(result["errors"], [])
+            self.assertEqual(result["effective_status"], "INCOMPLETE")
+            self.assertTrue({"system_state", "detector", "drive_environment"} <= set(result["gaps"]))
+            self.assertFalse(saved["data_policy"]["independent_validation"])
+            self.assertEqual(saved["output"]["claim_intent"], "DIAGNOSTIC")
+
+    def test_formal_invariant_and_graphite_design_do_not_invent_apparatus(self):
+        for name in ("nonlinear_formal", "graphite_preparation_prediction"):
+            saved = audit.load_json(audit.ROOT / f"docs/topics/0.13_Thermodynamic_Bridge/calculation_contracts/{name}.json")
+            self.assertEqual(saved["profile"], "FORMAL")
+            self.assertFalse(saved["data_policy"]["uses_observations"])
+            result = audit.validate_contract(saved)
+            self.assertEqual(result["errors"], [])
+            self.assertNotIn("system_partition:legacy_unreviewed", result["gaps"])
+
     def test_velocity_raw_signal_and_frame_recovery(self):
         emitted = 100.0
         for beta in (-0.02, 0.0, 0.03):

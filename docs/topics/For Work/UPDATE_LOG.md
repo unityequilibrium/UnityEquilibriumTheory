@@ -18,7 +18,7 @@ copies, new checkout, retroactive PASS, global rerun or automatic external conta
 | W3 proposition provenance | One existing proposition separates human intent, AI proposal, imported law, ansatz and consequences, preserving undecided choices | Design note section 9 records direct author clarification and unchanged source/comparator blob identities; physical uniqueness remains unconfirmed |
 | W4 relational observation | Multiple relationship-dependent roles and nested subsystems supported without unaccounted duplicate state/energy; old records readable; omitted influence still detected | Explicit RELATIONAL mode, ownership/containment and boundary-baseline binding implemented; 44 tests and read-only legacy check pass; semantic accounting still needs review |
 | W5 Core pilot | Matter-space chain and comparator yield a scoped decision, not mandatory novelty | Existing Core contract migrated with pinned baseline; design section 10 and Core log retain normalized constitutive scope and UNKNOWN physical detector; foundation FAIL/BLOCKED remains visible |
-| W6 Topic13 pilot | He4/O2, graphite/TTG and nonlinear routes each expose evidence, missing prerequisite and one decision-changing action | Review owner lineage; no aggregate promotion or repeated data hunts |
+| W6 Topic13 pilot | He4/O2, graphite/TTG and nonlinear routes each expose evidence, missing prerequisite and one decision-changing action | Design section 11 and adoption review separate five scoped routes/owners; two physical contracts adopt UNKNOWN relational topology; FORMAL proofs reused; no physical promotion |
 | W7 legacy triage | All discovered calculation/claim routes have reasoned disposition; discovered coverage and unknown coverage distinguished | Reuse existing inventory/queue; prioritize public claims and dependencies, then active physical work, reused formal/synthetic, history |
 | W8 expansion/enforcement | Pilot method applied to 0.3, 0.1, 0.26; 10/23 only by verified dependency; changed-path CI rejects real gaps without duplicate forms | Pending pilot acceptance; structural checks never substitute for physics review |
 | W9 research return | One locked, comparator-backed question reaches supported/rejected/equivalent/inconclusive or precise prerequisite outcome | Select from W5/W6; do not wait for all archival migration; no invented restriction to escape a comparator |
@@ -119,6 +119,31 @@ independent authorized work rather than freezing the whole project.
   read-only legacy validation retains its original scope.
 - Next controller: W5 use these rules on the existing matter-space contract and
   source/comparator chain before expanding standards or adopting other topics.
+
+### [2026-10-19] W6 Topic13 route-specific adoption
+
+- Baseline: `cc03b4ea9`. Pinned operator-domain/visibility/pole evidence at
+  `0f17012ff` inspected alongside the current aggregate gate and unchanged
+  coherent-shear preparation/native-source reports. Review is per model/claim,
+  not a date-based replacement of all old He4 or graphite evidence.
+- Changed: existing He4 and nonlinear physical contracts plus initializer now
+  expose RELATIONAL admission topology with UNKNOWN state/accounting, source,
+  readout and feedback. These placeholders disclose missing operators, not new
+  equations or physical degrees of freedom. Formal contracts need no apparatus.
+- Clarified: later He-II operator admission is distinct from old bounded O2/He4
+  Core composition; graphite thermal TTG differs from coherent-shear preparation;
+  invariant-only predictions do not unconditionally need an absolute Phi scale.
+- Evidence/next actions: Topic13 design section 11 and CALCULATION_COMPLETENESS_REVIEW
+  specify source, prerequisite, stop and owner boundaries. Full thermal-TTG contract
+  coverage remains an explicit W7 gap; no inferred global coverage or physics PASS.
+- Verification: 47 tests PASS, including initializer/contract graph agreement,
+  preserved INCOMPLETE state and the formal no-apparatus exception. Read-only
+  contract audit and scoped file links/whitespace checked; changed-path audit runs
+  against this scoped commit, not unrelated dirty work. No source hunt, new data,
+  fitting, holdout read or scientific producer/threshold/gate edit.
+- Next controller: W7 discovery/claim triage using the existing inventory, then W8
+  astronomy adoption and W9 a locked research-return decision. Do not wait for all
+  historical cleanup to identify W9's concrete question.
 
 ## [2026-10-17] - Scoped calculation and observation contracts v1
 

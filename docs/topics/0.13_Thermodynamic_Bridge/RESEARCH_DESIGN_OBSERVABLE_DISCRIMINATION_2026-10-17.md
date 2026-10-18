@@ -343,3 +343,47 @@ pre-migration paths), not overridden by this methodological pilot.
 W5 closes the scoped adoption decision, not the physics. Next controller: W6 reconstruct
 He4/O2, graphite/TTG and nonlinear routes separately and name which new evidence could
 change each decision; do not assume one dataset or new detector model repairs all three.
+
+## 11. Standards adoption W6: separate Topic13 routes and prerequisites
+
+Date: 2026-10-19; baseline `cc03b4ea9`. Review/adoption of existing results only.
+The He4 and nonlinear physical contracts now expose a RELATIONAL admission topology;
+all missing state/operator/accounting remain UNKNOWN, not manufactured equations.
+The candidate state-vector labels in those graphs do not assert a physical number
+of degrees of freedom. Formal contracts retain their no-apparatus scope.
+
+| Route / controlling source | Already established in that source's scope | Missing prerequisite and action that could change the decision | Stop / boundary |
+| --- | --- | --- | --- |
+| He4 selected frozen bundle: he4_observation contract, pinned `0f17012ff` operator-domain decision, `g1_physical_protocol_status` | Scoped operator-domain audit; normal-branch calibration alone does not admit a stationary condensed He-II longitudinal response. Two-fluid visibility algebra separates eigenmode speed from source/readout visibility | Specify one fixed Ward-consistent condensed finite-T completion, independent material charge/stiffness/state map and relevant longitudinal operator. A mode-identified phase-speed comparison may require less amplitude calibration than a waveform/detectability claim | No repeated helium dataset search or same-bundle rank calculation; reopen only on model/operator admission, not better detector prose |
+| Graphite thermal/TTG: current full-bridge gate, `status` / `controlling_blocker` | Scoped normalized thermal operators and material comparators are retained; aggregate graphite status BLOCKED_OPEN_T13_FULL_BRIDGE | Independent base-Phi dimensional mapping or eligible independent alpha calibration, with same-state C_src/transport/source-readout uncertainty for the actual claim | Another heat-capacity table or mismatched harmonic sample alone does not close this bridge; no automatic email or source acquisition |
+| Graphite coherent-shear preparation: graphite_preparation_prediction FORMAL contract and its 2026-10-18 report | Conditional diffraction-coordinate inverse, closure channel, coupled-state requirement and prefix/suffix rejection design; ordinary comparator remains forward-equivalent | Admit actual simultaneous processed channels with common divisor or raw/reference corrections; bound source tail, temporal convolution and full coupled-state/parameter error set before a suffix forecast | This is not TTG or the prior driven four-frequency kernel. Fitted force is not independent input; prefix calibration is not held-out validation; no new response fit |
+| Nonlinear formal invariant: nonlinear_formal contract, pinned pole-discrimination report | Conditional invariant `F(x)=L-B/(p-x)` inverse/finite-error design survives a field-coordinate rescaling; ordinary material poles remain comparators | Reuse algebra; integrate pinned lineage before public promotion. No new absolute Phi number is required just to state the invariant | Mathematical result does not admit a material, independent calibration or physical prediction |
+| Nonlinear physical application: nonlinear_physical contract and native-source route report | Exact old invariant is reusable only with its specified source/response protocol; inspected MEMS native forcing differs from a source-free auxiliary channel | Admit same-state mode/source/readout matching in the actual coordinate/time chart, gains/phases, baseline and joint uncertainty. Absolute Phi normalization is required only for claims that actually depend on it | No substitution of extra native forcing, a fitted source or a generic laser/electrode setting into the old kernel; no repeated fixtures or model-term invention |
+
+### Scope and lineage reconciliation
+
+The 2026-09-27 aggregate gate retains `core_result_status =
+T13_FULL_THERMODYNAMIC_BRIDGE_CORE_READY` and its earlier bounded O2/He4 Core
+composition statement. The later frozen-bundle operator decision belongs to a
+different owner (`0f17012ffd6ad456c150b10e048efd868ce95588`) and a narrower physical
+second-sound question. Neither is silently merged into the other. The old scoped
+composition does not establish the later operator; the later missing operator
+does not erase every earlier O2 result. Parent physics gates remain unchanged.
+
+Pinned evidence bytes were inspected using their actual Git commit, not a similarly
+named working-tree artifact. Contract identity checks retain LOCAL_ONLY lineage
+limitations: local availability is not publication or independent replication.
+Graphite thermal coverage is referenced to its existing gate, not falsely declared
+fully contract-migrated by a coherent-shear FORMAL contract; W7 must retain that gap.
+
+**Decision:** He4's next dependency is model/operator admission; the nonlinear
+physical dependency is native source/kernel/readout correspondence; thermal TTG's
+is the independent physical bridge; coherent shear has a distinct preparation/data
+admission packet. None is fixed by generic observer bookkeeping. Existing negatives
+and formal results remain reusable. No data were acquired/scored, no holdout was
+read, and no scientific producer, coefficient, threshold or gate was changed.
+
+Next controller: W7 inventory and reasoned route/claim dispositions, while W9's
+research-return choice may use these specific prerequisites without waiting for
+archival cleanup. W8 astronomy adoption follows the successful methodological pilot,
+not an assertion that Topic13 physics has passed.
