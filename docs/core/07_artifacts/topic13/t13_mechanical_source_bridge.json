@@ -1,0 +1,105 @@
+{
+  "status": "NORMAL_BRANCH_SCALAR_DRIVE_DOES_NOT_SUPPLY_COHERENT_MATTER_FORCE",
+  "source_kind": "mass/stiffness modulation, not additive directional force",
+  "zero_initial_state_prediction": "chi=0 for arbitrary finite continuous scalar history on interval of unique solution",
+  "nonzero_coupling_required_for_controls": true,
+  "proof_basis": "polynomial state vector field is locally Lipschitz; zero is a solution; uniqueness, not a time sweep",
+  "current_core_controls": {
+    "nonzero_epsilon": 0.5,
+    "nonzero_coupling": 0.6,
+    "scalar_settings": 6,
+    "nonzero_state_controls": 12,
+    "largest_acceleration_roundoff": 1.1102230246251565e-16,
+    "boundary": "finite implementation controls supplement initial-value uniqueness proof; 1e-13 is a code-roundoff check, not physical tolerance"
+  },
+  "inverse_residual_example": [
+    "-59/480",
+    "0"
+  ],
+  "inverse_residual_role": "constructing J from a compared trajectory is a tautological inverse input, not independent pump calibration",
+  "nonzero_background_boundary": {
+    "example_hessian": [
+      "6",
+      "0"
+    ],
+    "boundary": "different broken-background expansion, not the inherited stable-normal mechanical kernel"
+  },
+  "minimum_missing_input": "independently justified conjugate-drive functional OR preparation-to-initial-state map, with mode/projection and matched signed readout/joint errors; a free-ringdown protocol is not the four-drive kernel test",
+  "units": {
+    "chi": "E",
+    "delta_phi": "E",
+    "h": "E",
+    "matter_force_or_J": "E^3",
+    "conditional_lab_acceleration_drive": "m/s^2"
+  },
+  "physical_source_operator_added": false,
+  "physical_test_run": false,
+  "physical_acceptance": false,
+  "new_material_parameter": false,
+  "new_data_acquired": false,
+  "new_held_out_rows": false,
+  "claim_boundary": "normal homogeneous coherent first-moment source/preparation restriction only; not zero thermal/variance response, no parametric-seed prohibition, no global UET no-go",
+  "contract_id": "T13_MECHANICAL_SOURCE_BRIDGE_V1",
+  "contract_sha256": "b710f76e11a3af5cdd31f0071b6cad42967a54970d572e87faffcd4196482399",
+  "contract_review_status": "INCOMPLETE",
+  "identities": [
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/Research_T13_Mechanical_Source_Bridge.py",
+      "sha256": "745c4e1126a96fcde6d6701636a6bdfcb8adeed3c7eeb19f7b7446fdb64932ea",
+      "kind": "working_file",
+      "role": "code"
+    },
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/test_t13_mechanical_source_bridge.py",
+      "sha256": "011e53eeb2fecc7c44ea81fbf9781d9514d3dad1166dee11dfbb4608e8228c57",
+      "kind": "working_file",
+      "role": "code"
+    },
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/T13_MECHANICAL_SOURCE_BRIDGE_2026-10-18.md",
+      "sha256": "eb3f60743ec5a04415eb4b301f873506f048c51729b7b10f452d250f301f7126",
+      "kind": "working_file",
+      "role": "evidence"
+    },
+    {
+      "path": "docs/core/02_equations/covariant/uet_covariant_matter.py",
+      "sha256": "8a57d95e898a8ac962bbd749670ad0695b597281937da36496d2ec7e074f9c53",
+      "kind": "working_file",
+      "role": "code"
+    },
+    {
+      "path": "docs/core/02_equations/covariant/uet_covariant_response.py",
+      "sha256": "7fb4b7228afb8ede0ac4f1664d634346ef46cc7678c94ed7b55d73645590c0c2",
+      "kind": "working_file",
+      "role": "code"
+    },
+    {
+      "path": "docs/core/02_equations/matter_space/uet_matter_space.py",
+      "sha256": "488db6aa26b99856e2eb82a2f46a9857f623f418ef8e537498fa71d5e4f633aa",
+      "kind": "working_file",
+      "role": "code"
+    },
+    {
+      "path": "docs/core/02_equations/covariant/uet_covariant_reduction.py",
+      "sha256": "aa65633292562810e4aa5aaed6c689ee00483543342187597c49534524a754dc",
+      "kind": "working_file",
+      "role": "code"
+    },
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/T13_NONLINEAR_READOUT_MAP_2026-10-15.md",
+      "kind": "git_blob",
+      "role": "evidence",
+      "commit": "0f17012ffd6ad456c150b10e048efd868ce95588",
+      "availability": "LOCAL_ONLY",
+      "sha256": "4d6ac57fc8cc879b2d207e0c8db09b2180b982048548c0f0b79e6c36b944f745"
+    },
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/T13_OBSERVER_DISCRIMINATION_2026-10-17.md",
+      "kind": "working_file",
+      "role": "evidence",
+      "sha256": "b9c1ffd4a9a821965a98c16dda7e3022ce0931d5a1fe3935f786faa84e292e79"
+    }
+  ],
+  "generator_path": "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/Research_T13_Mechanical_Source_Bridge.py",
+  "evidence_class": "FORMAL_SOURCE_INTERFACE_NOT_PHYSICAL_VALIDATION"
+}
