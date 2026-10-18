@@ -222,5 +222,47 @@ class PreparationTests(unittest.TestCase):
             self.assertEqual(before,after)
         self.assertLess(e/c,0);self.assertLess((e+delta)/c,0)
 
+    def test_common_applied_divisor_cancels_exactly_for_full_traces(self):
+        values=(Q(11,10),Q(9,10),Q(1))
+        expected=m.shared_divisor_ratios(values)
+        for d in (Q(1,2),Q(1),Q(2)):
+            self.assertEqual(m.shared_divisor_ratios(tuple(v/d for v in values)),expected)
+
+    def test_linear_surrogate_recovers_state_and_arbitrary_common_divisor(self):
+        x,z,scale=Q(1,1000),Q(-1,2000),Q(2)
+        for d in (Q(1,2),Q(1),Q(2)):
+            observed=tuple((1+scale*v)/d for v in m.observe(x,z))
+            self.assertEqual(m.linear_common_reconstruct(observed,scale),(x,z,d))
+
+    def test_full_nine_layer_ratio_geometry_has_rank_two(self):
+        import math
+        r=m.full_ratio_observer(9,.0001,-.0002)
+        self.assertAlmostEqual(r['baseline_ratio_jacobian_determinant'],24*math.pi**2*math.sqrt(3)*(20/21)**2)
+        self.assertGreater(r['baseline_ratio_jacobian_determinant'],0)
+        h=1e-6
+        plus=m.full_ratio_observer(9,h,0)['ratios'];minus=m.full_ratio_observer(9,-h,0)['ratios']
+        expected=2*math.pi*(20/21)*math.sqrt(3)
+        self.assertAlmostEqual((plus[0]-minus[0])/(2*h),expected,places=6)
+
+    def test_different_divisors_do_not_cancel(self):
+        values=(Q(11,10),Q(9,10),Q(1))
+        changed=(values[0]/2,values[1],values[2])
+        self.assertNotEqual(m.shared_divisor_ratios(values),m.shared_divisor_ratios(changed))
+
+    def test_joint_quotient_bound_and_invalid_domains(self):
+        a,b,ea,eb=Q(2),Q(3),Q(1,10),Q(1,5)
+        bound=m.quotient_error_bound(a,b,ea,eb)
+        for sa,sb in product((-1,1),repeat=2):
+            self.assertLessEqual(abs((a+sa*ea)/(b+sb*eb)-a/b),bound)
+        with self.assertRaises(ValueError):m.quotient_error_bound(a,b,ea,b)
+        with self.assertRaises(ValueError):m.shared_divisor_ratios((1,0,1))
+
+    def test_ratio_of_convolutions_is_not_convolution_of_ratio(self):
+        from fractions import Fraction as F
+        a=(F(1),F(3));b=(F(1),F(2))
+        ratio_after=sum(a)/sum(b)
+        ratio_before=(a[0]/b[0]+a[1]/b[1])/2
+        self.assertNotEqual(ratio_after,ratio_before)
+
 
 if __name__=='__main__':unittest.main()

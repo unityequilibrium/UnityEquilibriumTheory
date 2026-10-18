@@ -132,6 +132,49 @@ def division_omission_bound(magnitude,rho):
     return magnitude*rho/(1-rho)
 
 
+def shared_divisor_ratios(values):
+    """Only positive simultaneous normalized intensity traces, not harmonic coefficients."""
+    import math
+    if len(values)!=3 or any(not math.isfinite(v) or v<=0 for v in values):
+        raise ValueError('three finite positive normalized intensities required')
+    return values[0]/values[1],values[2]/values[1]
+
+
+def linear_common_reconstruct(values,scale):
+    """Exact inversion of LINEAR observer plus unknown common divisor only."""
+    shared_divisor_ratios(values)
+    if scale<=0: raise ValueError('positive known observer scale required')
+    divisor=3/sum(values)
+    corrected=tuple((divisor*v-1)/scale for v in values)
+    return (*reconstruct(corrected),divisor)
+
+
+def quotient_error_bound(a,b,ea,eb):
+    import math
+    if any(not math.isfinite(v) for v in (a,b,ea,eb)) or min(ea,eb)<0 or abs(b)<=eb:
+        raise ValueError('finite joint errors and denominator separated from zero required')
+    return (ea+abs(a/b)*eb)/(abs(b)-eb)
+
+
+def full_ratio_observer(n,pa,pb):
+    import math
+    geometry=[source_geometry(h,k,n) for h,k in ((1,0),(0,1),(-1,1))]
+    intensities=[]
+    for p in geometry:
+        t=-p['G_times_a'][0]*pa-p['G_times_a'][1]*pb
+        intensities.append(finite_layer_observer(n,t,p['layer_phase'])['intensity'])
+    rows=[p['linear_row_wrt_article_P'] for p in geometry]
+    jac=[[rows[i][j]-rows[1][j] for j in (0,1)] for i in (0,2)]
+    determinant=jac[0][0]*jac[1][1]-jac[0][1]*jac[1][0]
+    f=float(Q(((n+1)//2)*(n//2),((n+1)//2)**2+(n//2)**2-((n+1)//2)*(n//2)))
+    expected=24*math.pi**2*math.sqrt(3)*f*f
+    if abs(determinant-expected)>1e-10:raise ValueError('ratio Jacobian identity failed')
+    return {'layers':n,'P':[pa,pb],'intensities':intensities,
+            'ratios':list(shared_divisor_ratios(intensities)),
+            'baseline_ratio_jacobian_determinant':determinant,
+            'common_applied_divisor_cancels':True,'actual_processing_identity_admitted':False}
+
+
 def calculate():
     x,z=Q(2,7),Q(-3,11)
     y=observe(x,z)
@@ -147,12 +190,14 @@ def calculate():
             'finite_layer_material_projection':[finite_layer_projection(n) for n in (2,3,4,9)],
             'full_observer_controls':[finite_layer_observer(9,t) for t in (0.,-.001,.001,-.01,.01,-.1,.1)],
             'source_geometry_checks':[source_geometry(h,k) for h,k in ((1,0),(0,1),(-1,1),(2,0),(1,1))],
+            'full_record_invariant_controls':[full_ratio_observer(9,*p) for p in ((0.,0.),(.0001,-.0002),(-.0001,.0002))],
             'shared_reference_cubic_ambiguity':{'true_material_third':'0',
                 'inferred_third_with_unmodeled_divisor':str(two_order_third(
                     (Q(-3)-3*Q(2)*Q(1,10))*Q(1,100000),
                     (-8*Q(-3)+6*Q(2)*Q(1,10))*Q(1,100000),Q(2),Q(-3))[0]),
                 'role':'rational counterexample, not physical bias estimate',
-                'requires_undivided_reference_and_correction_bound':True},
+                'requires_undivided_reference_and_correction_bound':True,
+                'requirement_scope':'processed-third-only inference; full-trace common-divisor invariant is an alternative sufficient observer packet'},
             'processed_third_only_null_direction':{'variables':['B','C','E=b2*C'],
                 'null_vector':[3,0,1],
                 'scope':'cubic processed third amplitudes, uncalibrated common divisor and free C; not full-record no-go',

@@ -1,3 +1,13 @@
+<!-- graphite-full-trace-invariant-v1:start -->
+## 2026-10-18 - Positive full-trace alternative to the processed-harmonic ambiguity
+
+RESULT: Shared applied divisor cancels exactly in ratios of three simultaneous full normalized first-order traces. Source-model ratio Jacobian has rank two at baseline, so the FULL nonlinear ratio observer has a local inverse. The earlier processed-third-only null proof is reused and remains valid; it is not a no-go for full records.
+POSITIVE_BRIDGE: An exact linear-surrogate inversion recovers two coordinates plus arbitrary common divisor without knowing its waveform. Nonlinear inference must instead use the full ratio operator; do not impose sum(I)=3 at cubic precision. Joint quotient error bound/refusal added, with no independence assumption. This relaxes an unnecessarily universal raw-reference demand while retaining a verifiable common-processing requirement.
+LIMITS: Different divisors or relative gain drift do not cancel. Applied post-processing division cancels, but a time-varying thermal factor inside exposure convolution generally does not. A conditional positive-kernel relative-variation bound is derived, not assigned to data; no physical rho, state, error cutoff or unknown effect set to zero.
+VERIFICATION: 37 tests PASS (six new), including exact common-divisor cancellation and linear inversion, independent finite-difference ratio Jacobian check, different-divisor counterexample, joint quotient envelope/refusal and convolution noncommutation. Generator emit/check PASS; changed-path completeness 15 contracts zero errors. No physical fit, new Core term, trace acquisition or UET validation.
+NEXT: Seek existing simultaneous full first-order numeric traces plus correction/gain identity and joint thermal/exposure uncertainties, OR an admitted raw/reference package. This is an alternative sufficient observer packet, not an executed reconstruction or replacement for missing source/coefficient/Phi correspondence. Broader research goal stays active; local scoped commit only.
+<!-- graphite-full-trace-invariant-v1:end -->
+
 <!-- graphite-baseline-geometry-v1:start -->
 ## 2026-10-18 - Source geometry verified; shared reference exposes a cubic ambiguity
 

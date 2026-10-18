@@ -299,11 +299,71 @@
       "sample_geometry_measured": false
     }
   ],
+  "full_record_invariant_controls": [
+    {
+      "layers": 9,
+      "P": [
+        0.0,
+        0.0
+      ],
+      "intensities": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "ratios": [
+        1.0,
+        1.0
+      ],
+      "baseline_ratio_jacobian_determinant": 372.12857193561194,
+      "common_applied_divisor_cancels": true,
+      "actual_processing_identity_admitted": false
+    },
+    {
+      "layers": 9,
+      "P": [
+        0.0001,
+        -0.0002
+      ],
+      "intensities": [
+        0.9998396635369998,
+        1.002394475472275,
+        0.9977675148224298
+      ],
+      "ratios": [
+        0.9974512908861839,
+        0.9953840920285747
+      ],
+      "baseline_ratio_jacobian_determinant": 372.12857193561194,
+      "common_applied_divisor_cancels": true,
+      "actual_processing_identity_admitted": false
+    },
+    {
+      "layers": 9,
+      "P": [
+        -0.0001,
+        0.0002
+      ],
+      "intensities": [
+        1.0001603443799594,
+        0.9976072888312912,
+        1.002234021026295
+      ],
+      "ratios": [
+        1.002559178924664,
+        1.004637829180683
+      ],
+      "baseline_ratio_jacobian_determinant": 372.12857193561194,
+      "common_applied_divisor_cancels": true,
+      "actual_processing_identity_admitted": false
+    }
+  ],
   "shared_reference_cubic_ambiguity": {
     "true_material_third": "0",
     "inferred_third_with_unmodeled_divisor": "-3/1000000",
     "role": "rational counterexample, not physical bias estimate",
-    "requires_undivided_reference_and_correction_bound": true
+    "requires_undivided_reference_and_correction_bound": true,
+    "requirement_scope": "processed-third-only inference; full-trace common-divisor invariant is an alternative sufficient observer packet"
   },
   "processed_third_only_null_direction": {
     "variables": [
@@ -338,24 +398,24 @@
   "reopen": "same-state correspondence, frozen coefficients, eligible split records, full state and joint source/damping/observer bounds",
   "boundary": "prefix model-conditioned state calibration is not independent Phi observation or unique UET discrimination",
   "contract_id": "T13_GRAPHITE_PREPARATION_PREDICTION_V1",
-  "contract_sha256": "297b357bdcf487ef1031175beda00fbb3e79698f27372f7b8555229ff5533292",
+  "contract_sha256": "7a1e0986fef13bdf87c01f00ad64ee7299827f08f874148aeac306f5cb87e69c",
   "contract_review_status": "INCOMPLETE",
   "identities": [
     {
       "path": "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/Research_T13_Graphite_Preparation.py",
-      "sha256": "4589721feb1f412ee4a406394d146b55287a59500ab3108b3ee3c08b2451df38",
+      "sha256": "122efa9b7e694583002ae2137ad096103826fba6e4c5ba72f29092f547bc67fb",
       "kind": "working_file",
       "role": "code"
     },
     {
       "path": "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/test_t13_graphite_preparation.py",
-      "sha256": "0d7c329b58436fc540f844bfe79519fe78fbb237526ef1a731e84e3a4516e8cc",
+      "sha256": "97a068ec5bf94c698b20f996eae0d4ff23db842e1865fa91e18513e7f0c13c34",
       "kind": "working_file",
       "role": "code"
     },
     {
       "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/T13_GRAPHITE_PREPARATION_PREDICTION_2026-10-18.md",
-      "sha256": "481b8fbdaadf4bf9aadf53d84a4486ea8a202150f5695397bad39d22034a3c56",
+      "sha256": "8d14fb9f154129cae5778ffca3dafbf890fa29d19908884b3de59f0097a4e223",
       "kind": "working_file",
       "role": "evidence"
     },
