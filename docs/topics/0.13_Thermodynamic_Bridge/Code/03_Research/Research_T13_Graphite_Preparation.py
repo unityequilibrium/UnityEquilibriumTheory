@@ -65,6 +65,44 @@ def finite_layer_projection(n):
             'observer_admitted':False,'uet_field_map_admitted':False}
 
 
+def finite_layer_observer(n,t,phase=None):
+    """Conditional full kinematic intensity; Taylor bounds are analytic, not grid claims."""
+    import math
+    import numpy as np
+    if phase is None: phase=2*math.pi/3
+    if not math.isfinite(t) or not math.isfinite(phase):
+        raise ValueError('finite displacement phase and layer phase required')
+    p=finite_layer_projection(n)
+    b=np.array(p['profile'])/p['centroid_projection']
+    c=np.array([1 if j%2==0 else np.exp(-1j*phase) for j in range(n)])
+    base=c.sum();den=float(abs(base)**2)
+    if abs(base)<=1e-12*n:
+        raise ValueError('near-extinct baseline cannot be normalized at declared precision')
+    delta=b[:,None]-b[None,:]
+    weights=c[:,None]*c.conjugate()[None,:]
+    derivatives=[float(np.real(np.sum(weights*(-1j*delta)**k))/den) for k in (1,2,3)]
+    intensity=float(abs(np.sum(c*np.exp(-1j*t*b)))**2/den)
+    pair=float(np.real(np.sum(weights*np.exp(-1j*t*delta)))/den)
+    if abs(intensity-pair)>1e-12: raise ValueError('amplitude/pair observer mismatch')
+    b2=float(np.sum(delta**2)/(2*den))
+    b4=float(np.sum(delta**4)/(24*den))
+    linear=1+derivatives[0]*t
+    cubic=linear+derivatives[1]*t*t/2+derivatives[2]*t*t*t/6
+    if abs(intensity-linear)>b2*t*t+1e-12 or abs(intensity-cubic)>b4*t**4+1e-12:
+        raise ValueError('analytic observer envelope failed implementation check')
+    return {'layers':n,'t':t,'intensity':intensity,'derivatives_at_zero':derivatives,
+            'linear_error':abs(intensity-linear),'linear_bound_coefficient':b2,
+            'cubic_error':abs(intensity-cubic),'cubic_bound_coefficient':b4,
+            'leading_detector_cubic_ratio':derivatives[2]/(24*derivatives[0]**3) if abs(derivatives[0])>1e-12 else None,
+            'physical_displacement_or_error_budget_assigned':False}
+
+
+def two_order_third(first,second,k1,k3):
+    """Cubic observer-order inversion; geometry/transfer assumptions must be admitted."""
+    if k1==0 or k3==0: raise ValueError('two-order cubic map is singular')
+    return (8*first+second)/(6*k1),-(2*first+second)/(6*k3)
+
+
 def calculate():
     x,z=Q(2,7),Q(-3,11)
     y=observe(x,z)
@@ -78,6 +116,11 @@ def calculate():
             'full_collinear_state':['q','q_dot','delta_phi','delta_phi_dot'],
             'hidden_state_identity_control':[str(t) for t in (d,w)],
             'finite_layer_material_projection':[finite_layer_projection(n) for n in (2,3,4,9)],
+            'full_observer_controls':[finite_layer_observer(9,t) for t in (0.,-.001,.001,-.01,.01,-.1,.1)],
+            'two_order_candidate':{'orders':[1,2],'phase_pair':'plus/minus 2*pi/3',
+                'material_third_formula':'(8*Y3_first+Y3_second)/(6*K1)',
+                'joint_error_bound':'(8*E_first+E_second)/(6*abs(K1)) plus coefficient uncertainty',
+                'physical_geometry_or_records_admitted':False},
             'uncertainty_policy':'joint state/parameter/observer sets; no unmeasured effects assigned zero',
             'old_four_frequency_kernel_evaluated':False,'physical_forecast_run':False,
             'physical_acceptance':False,'new_core_term':False,'numeric_records_acquired':False,

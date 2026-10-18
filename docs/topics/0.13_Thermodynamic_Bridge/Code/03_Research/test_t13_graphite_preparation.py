@@ -92,5 +92,85 @@ class PreparationTests(unittest.TestCase):
         slope=2*(s.conjugate()*derivative).real/abs(s)**2
         self.assertAlmostEqual(slope/math.tan(phi/2),20/21)
 
+    def test_full_bilayer_intensity_and_cubic_are_known_analytically(self):
+        import math
+        phi=2*math.pi/3
+        for t in (-.1,0.,.1):
+            r=m.finite_layer_observer(2,t,phi)
+            self.assertAlmostEqual(r['intensity'],(1+math.cos(phi-t))/(1+math.cos(phi)))
+            k1,k2,k3=r['derivatives_at_zero']
+            self.assertAlmostEqual(k1,math.tan(phi/2));self.assertAlmostEqual(k3,-k1)
+
+    def test_global_and_cubic_bounds_at_predeclared_controls(self):
+        for n in (2,3,4,9):
+            for t in (0.,-.001,.001,-.01,.01,-.1,.1):
+                r=m.finite_layer_observer(n,t)
+                self.assertLessEqual(r['linear_error'],r['linear_bound_coefficient']*t*t+1e-12)
+                self.assertLessEqual(r['cubic_error'],r['cubic_bound_coefficient']*t**4+1e-12)
+                self.assertFalse(r['physical_displacement_or_error_budget_assigned'])
+
+    def test_bound_coefficient_matches_independent_variance_identity(self):
+        import numpy as np
+        p=m.finite_layer_projection(9);b=np.array(p['profile'])/p['centroid_projection']
+        expected=(9*float(b@b)-float(b.sum())**2)/21
+        self.assertAlmostEqual(m.finite_layer_observer(9,.1)['linear_bound_coefficient'],expected)
+
+    def test_nine_layer_linear_slope_recovers_preceding_projection(self):
+        import math
+        r=m.finite_layer_observer(9,0.)
+        self.assertAlmostEqual(r['derivatives_at_zero'][0]/math.sqrt(3),20/21)
+
+    def test_sinusoidal_material_input_generates_cubic_detector_harmonic(self):
+        import numpy as np
+        k1,k2,k3=m.finite_layer_observer(9,0.)['derivatives_at_zero']
+        angles=2*np.pi*np.arange(16)/16;amplitude=.01;t=amplitude*np.cos(angles)
+        polynomial=1+k1*t+k2*t*t/2+k3*t*t*t/6
+        cosine3=float(2*np.mean(polynomial*np.cos(3*angles)))
+        self.assertNotEqual(k3,0)
+        self.assertAlmostEqual(cosine3,k3*amplitude**3/24,places=14)
+
+    def test_extinct_baselines_and_nonfinite_inputs_refused(self):
+        import math
+        for t,phi in ((0.,math.pi),(float('nan'),0.),(0.,float('inf'))):
+            with self.assertRaises(ValueError):m.finite_layer_observer(2,t,phi)
+
+    def test_common_clock_phase_cancels_but_constant_gain_does_not(self):
+        import cmath
+        y1,y3=1+.4j,.02-.01j;angle=.7;gain=2.
+        raw=y3/y1**3
+        shifted=(y3*cmath.exp(-3j*angle))/(y1*cmath.exp(-1j*angle))**3
+        self.assertAlmostEqual(abs(shifted-raw),0)
+        self.assertAlmostEqual(abs((gain*y3)/(gain*y1)**3-raw/gain**2),0)
+
+    def test_common_gaussian_temporal_blur_does_not_cancel(self):
+        import math
+        u=.6  # dimensionless omega*sigma, mathematical input not experiment calibration
+        h1=math.exp(-u*u/2);h3=math.exp(-9*u*u/2)
+        self.assertAlmostEqual(h3/h1**3,math.exp(-3*u*u))
+        self.assertNotEqual(h3/h1**3,1)
+
+    def test_two_orders_separate_material_and_observer_third_exactly(self):
+        k1,k3=Q(2),Q(-3);b,c=Q(1,1000),Q(2,1000000)
+        first=k1*b+k3*c;second=-2*k1*b-8*k3*c
+        self.assertEqual(m.two_order_third(first,second,k1,k3),(b,c))
+        self.assertEqual(m.two_order_third(k3*c,-8*k3*c,k1,k3),(0,c))
+
+    def test_two_order_joint_error_bound_and_singular_refusal(self):
+        k1,k3=Q(2),Q(-3);e1,e2=Q(1,100),Q(1,200)
+        errors=[abs(m.two_order_third(a*e1,b*e2,k1,k3)[0]) for a,b in product((-1,1),repeat=2)]
+        self.assertEqual(max(errors),(8*e1+e2)/(6*abs(k1)))
+        with self.assertRaises(ValueError):m.two_order_third(Q(1),Q(1),Q(0),k3)
+
+    def test_two_order_conjugate_derivatives_and_mixed_cubic_harmonic(self):
+        import math
+        import numpy as np
+        first=m.finite_layer_observer(9,0.,2*math.pi/3)['derivatives_at_zero']
+        second=m.finite_layer_observer(9,0.,-2*math.pi/3)['derivatives_at_zero']
+        self.assertAlmostEqual(first[0],-second[0]);self.assertAlmostEqual(first[2],-second[2])
+        angle=2*np.pi*np.arange(32)/32;a,b=.1,.02
+        q=a*np.cos(angle)+b*np.cos(3*angle)
+        c=float(2*np.mean(q**3*np.cos(3*angle)))/6
+        self.assertAlmostEqual(c,a**3/24+a*a*b/4+b**3/8)
+
 
 if __name__=='__main__':unittest.main()

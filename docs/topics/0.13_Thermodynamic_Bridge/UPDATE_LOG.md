@@ -1,3 +1,14 @@
+<!-- graphite-full-observer-bounds-v1:start -->
+## 2026-10-18 - Full finite-layer observer bounds and a two-order discriminant
+
+RESULT: Extended the existing packet, not a new artifact family. Derived global B2*t^2 linear and B4*t^4 cubic remainder bounds for the declared full kinematic layer observer. A sinusoidal MATERIAL trajectory can generate a nonzero detector third harmonic; raw cubic ratios are therefore not an intrinsic UET kernel.
+POSITIVE_ROUTE: Derived a sufficient injective two-coordinate observer domain from smallest singular value minus Jacobian drift. Proposed simultaneous G/2G reciprocal orders with verified conjugate AB phases: material third B=(8*Y3_first+Y3_second)/(6*K1) separates leading geometric detector cubic under fixed geometry/transfer assumptions. Joint error envelope includes Taylor omissions and coefficient uncertainty. Common unknown temporal transfer leaves blurred B, not absolute B; no actual geometry or records admitted.
+OBSERVATION_DETAIL: Same-record common time origin cancels in Y3/Y1^3, but constant gain and Gaussian blur generally do not. This removes an unnecessary absolute-clock demand without assuming all instrument effects cancel. No experiment resolution, amplitude window or physical threshold chosen.
+VERIFICATION: 24 tests PASS (11 new controls) including exact bilayer, independent pair/amplitude expressions, all predeclared finite-layer controls, analytic variance bound identity, synthetic polynomial third harmonic, normalization refusal, clock/gain/blur, two-order inversion and mixed cubic terms. Global inequalities and local inverse domain proved analytically, not inferred from finite checks. Producer emit/check PASS, changed-path completeness 15 contracts zero errors; four local report links resolve.
+BOUNDARY: These are conditional geometry/operator results. No physical forecast, UET discrimination, calibration-to-validation relabeling, target fit, new Core term, private/raw/holdout access, data archive or contact. Existing state/source/material/observer empirical prerequisites remain controlling.
+NEXT: Admit actual first/second-order reciprocal geometry, weighting, signed records and joint transfer errors before applying the discriminant; do not repeat single-trace searches or call a detector-generated third harmonic evidence for UET. Research goal remains open. Local scoped commit only, no push/PR.
+<!-- graphite-full-observer-bounds-v1:end -->
+
 <!-- graphite-finite-layer-projection-v1:start -->
 ## 2026-10-18 - Continue same-material finite-layer mass and observer projection
 

@@ -125,3 +125,70 @@ d(I/I0)/dt = 2*n_A*n_B*sin(phi)/(n_A^2+n_B^2+2*n_A*n_B*cos(phi)).
 For a first-order phase with cos(phi)=-1/2, the ratio to the balanced-group observer coefficient is exactly n_A*n_B/(n_A^2+n_B^2-n_A*n_B): 20/21 for N=9, and one for equal groups. The direction/sign and actual reciprocal phases must still be verified from the sample geometry; no phase or finite-thickness Ewald correction is declared measured here. This provides an explicit conditional map from a finite-layer centroid coordinate to a linear diffraction signal, not just a missing-item list. Under these assumptions the earlier two-coordinate inverse can be rescaled coherently, while its zero-sum closure remains. This correction does NOT repair unknown thermal division, temporal blur, layer attenuation, dynamical scattering or nonlinear harmonics. Outside these assumptions the full layer-resolved observer is required.
 
 The computed N=9 free-chain centroid pole mass is approximately 2.68033 times the layer mass per area, versus 20/9 for the rigid grouped ansatz (ratio about 1.20615). These are model-coordinate ratios, not measured sample masses, a physical discrepancy significance, or a new Phi calibration. Their effect and the 20/21 conditional readout factor show why a force or displacement gain should not be copied unchanged between conventions.
+
+## Continued observer audit: finite-displacement bounds and false cubic signal
+
+Freeze before numerical controls: retain the preceding equal-layer basal AB kinematic observer and highest free-chain profile. Target N=9; N=2 exact reference; N=3,4 cross-checks. Choose dimensionless t=G.Q in {0,+/-0.001,+/-0.01,+/-0.1} ONLY as mathematical controls, not measured displacements or a physical acceptance window. No sampling of a UET trajectory or target tuning. Aim: bound linear-observer error for arbitrary real t and determine whether nonlinear diffraction alone can generate a cubic harmonic from sinusoidal material motion.
+
+Let b_j=e_j/(r.e), c_j=1 on odd layers and exp(-i*phi) on even layers. With D=|sum(c_j)|^2>0 the full conditional observer is
+
+```text
+I(t)=|sum_j c_j exp(-i*t*b_j)|^2/D,
+K_n=I^(n)(0)=sum_jk c_j conjugate(c_k)*[-i*(b_j-b_k)]^n/D.
+```
+
+This is a real intensity despite the complex representation; each ordered pair has a conjugate partner. All layers move; a common translation multiplies the amplitude by a phase and leaves I unchanged. No linearization or mode-frequency approximation is used in this observer formula, but its kinematic scattering, fixed form-factor and mode-profile assumptions remain unvalidated physically.
+
+Taylor's integral remainder and |c_j|=1 give a GLOBAL linear-error envelope, not merely an asymptotic statement:
+
+```text
+|I(t)-1-K_1*t| <= B_2*t^2,
+B_2 = sum_jk (b_j-b_k)^2/(2*D)
+    = [N*sum(b_j^2)-(sum b_j)^2]/D.
+```
+
+Similarly, after including terms through cubic,
+`|I(t)-1-K_1*t-K_2*t^2/2-K_3*t^3/6| <= B_4*|t|^4`, where `B_4=sum_jk |b_j-b_k|^4/(24*D)`. Both inequalities follow from bounded derivatives of real exponentials for all real arguments, not finite-grid success. They are conditional OBSERVER bounds only, not total physics/measurement errors. Near an extinct baseline D they can become large; normalizing a zero baseline is invalid and must be refused, not clipped.
+
+If an independently established |G.Q|<=A and allowed intensity omission eta are provided, the sufficient admission condition B_2*A^2<=eta can be checked without fitting the output. No A or eta is assigned from the response being tested. The bound also specifies how a nonlinear deviation from the old three-channel zero-sum closure can be an observer effect rather than a failed dynamical equation. Channel bounds must be propagated jointly through the prior left inverse; temporal transfer and thermal correction errors remain additional.
+
+For a perfectly SINUSOIDAL input coordinate t(s)=A*cos(omega*s), the cubic Taylor term contributes cosine amplitude K_3*A^3/24 at 3*omega and K_3*A^3/8 at omega. Thus a nonzero measured third harmonic can arise in the detector even when the MATERIAL trajectory contains no third harmonic at all. At K_1!=0 the small-amplitude raw ratio tends to K_3/(24*K_1^3), not necessarily zero. This is detector-generated effective cubic response, not an intrinsic quartic UET kernel. The bilayer reference has K_3=-K_1 exactly. No measured graphite cubic coefficient is inferred here.
+
+For the exact observer, the cubic-polynomial third-harmonic amplitude is only the leading term: the amplitude error is bounded conservatively by 2*B_4*A^4 using the above uniform remainder and the cosine Fourier coefficient norm. This avoids claiming an uncomputed harmonic series is exact. If a common temporal response is linear/time-invariant, its frequency transfer multiplies each harmonic, so raw ratios also require the relative transfer at omega and 3*omega; cancellation is not automatic. State-dependent/nonlinear detector response requires its own bounds.
+
+Acceptance consequence: subtract or forward-model this SPECIFIED observer nonlinearity with joint parameter/profile errors before testing a mechanical third-harmonic claim. One cannot simply attribute the observed cubic ratio to UET, nor independently tune one cubic correction per channel. The full intensity forward operator may be preferable to noisy inverse differentiation. Its validity for the actual sample, mode mixture, Ewald/depth weighting and damping/source preparation remains the controlling empirical question.
+
+### Which temporal uncertainties cancel, and which do not
+
+There is a useful cancellation, not a requirement to know every clock offset perfectly. For consistent complex harmonic coefficients of the SAME stationary record, a common time shift multiplies Y_n by exp(-i*n*omega*t0). Hence Y_3/Y_1^3 is invariant to that common shift. Separate channel/run shifts, nonstationary finite windows or timing-dependent preparation are not covered by this identity. A constant detector gain G instead leaves a factor G^-2 in the ratio; it does NOT cancel like the phase.
+
+A common normalized linear temporal kernel has harmonic transfer H(n*omega), so the ratio gains H(3*omega)/H(omega)^3. For a hypothetical Gaussian kernel of standard deviation sigma, H=exp[-omega^2*sigma^2/2]; the multiplier is exp[-3*omega^2*sigma^2], not one. This is an analytic conditional transfer calculation, not an assignment of the experiment's fitted resolution or physical uncertainty. The formulas show exactly which calibration combinations are needed, rather than demanding an absolute clock or assuming every instrument effect cancels. Unknown/non-Gaussian transfer still requires the measured operator or bounds. Frequency-varying transfer and cubic observation therefore remain confounders even after the favorable common-clock cancellation.
+
+### A sufficient local inverse domain, without assuming linearity is exact
+
+For three declared reciprocal in-plane rows g_i, define the unblurred two-coordinate observer F_i(Q)=I_i(g_i.Q). Suppose its baseline Jacobian J0 has smallest singular value s>0 and each channel has the above B2_i. On a convex ball |Q|<=R, |I'_i(g_i.Q)-I'_i(0)|<=2*B2_i*|g_i|*R. Consequently the Jacobian drift has operator norm at most L=2*R*sqrt(sum_i B2_i^2*|g_i|^4). For any two points in that ball, integrate along their joining segment and use the triangle inequality to obtain
+
+```text
+|F(Q)-F(P)| >= (s-L)*|Q-P|.
+```
+
+If L<s, the full nonlinear observer is injective there and inverse state error is at most output-vector error/(s-L) for admissible paired outputs (or twice the measurement radius when comparing two candidate states in the same error ball). This is a sufficient bound, not a necessary amplitude cutoff or an evaluated physical domain. It gives a constructive route beyond the linear inverse once geometry, R and joint errors are independently supplied. It does not invert temporal blur, identify Phi, or prove a globally unique state over multiple diffraction periods. No hypothetical geometry or amplitude is silently declared to be the actual experiment's.
+
+### Candidate discriminating readout: two reciprocal orders, one material trajectory
+
+A bounded extension can separate geometric detector cubic from a true coordinate third harmonic without assigning either one to UET. Freeze two simultaneous same-direction reciprocal orders G and 2G with verified AB phases +2*pi/3 and -2*pi/3, respectively, identical normalized layer weighting, and corrected/common temporal transfer. Complex conjugation then gives K1_second=-K1_first and K3_second=-K3_first for the SAME normalized profile. This is a proposed geometry to admit, not a claim that an eligible (100)/(200) dataset was acquired.
+
+For a coordinate with only odd fundamental and third components, let B be its signed third cosine amplitude and C=(Q^3)_3/6. The quadratic observer term has no odd harmonics. Through cubic order the two measured third amplitudes obey
+
+```text
+Y3_first  = K1*B + K3*C,
+Y3_second = -2*K1*B - 8*K3*C,
+B = (8*Y3_first + Y3_second)/(6*K1),
+C = -(2*Y3_first + Y3_second)/(6*K3).
+```
+
+The determinant is -6*K1*K3, nonzero on the inspected conditional N=9 observer. Thus two orders add information that repeating the same detector gain does not. For Q=A*cos(theta)+B*cos(3*theta), C=A^3/24+A^2*B/4+B^3/8; no need to drop mixed cubic terms or suppose B=0. A sinusoidal material trajectory then gives inferred B=0 even though each raw channel has a third harmonic. Other material harmonics, even motion, unequal transfer, background and mode mixture require the full operator rather than this two-component formula.
+
+If both channels retain the SAME unknown linear transfer at 3*omega, the inversion returns H(3*omega)*B and H(3*omega)*C, not their unblurred values. Absolute amplitudes need that transfer calibrated; distinguishing zero/nonzero B requires a nonvanishing-transfer bound and noise accounting. Common transfer alone therefore preserves the algebraic separation, not an unblurred material measurement.
+
+If the two third-amplitude errors (including Taylor omissions) have joint component bounds E1,E2, then |delta B|<=(8*E1+E2)/(6*|K1|), before coefficient/geometry uncertainties. This is conservative without assuming independence. E_i includes 2*B4_i*max|G_i.Q|^4 for the cubic Taylor remainder; independent physical error bounds and actual reciprocal geometry are still missing. Unknown channel-specific gains can destroy the stated cancellation; they may not be fitted separately to force it. The next useful data request is therefore simultaneous normalized first/second-order signed time records with shared timing/processing and weighting information, not merely a larger archive of the same scalar trace. This designs a measurement discriminant; it is not an executed physical experiment or unique UET test.

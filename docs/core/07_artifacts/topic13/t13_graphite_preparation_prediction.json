@@ -88,6 +88,130 @@
       "uet_field_map_admitted": false
     }
   ],
+  "full_observer_controls": [
+    {
+      "layers": 9,
+      "t": 0.0,
+      "intensity": 1.0,
+      "derivatives_at_zero": [
+        1.6495721976846442,
+        0.8379439698346893,
+        -2.1253897907889385
+      ],
+      "linear_error": 0.0,
+      "linear_bound_coefficient": 1.1487119850303162,
+      "cubic_error": 0.0,
+      "cubic_bound_coefficient": 0.12828853572036153,
+      "leading_detector_cubic_ratio": -0.019729376633005925,
+      "physical_displacement_or_error_budget_assigned": false
+    },
+    {
+      "layers": 9,
+      "t": -0.001,
+      "intensity": 0.9983508471284713,
+      "derivatives_at_zero": [
+        1.6495721976846442,
+        0.8379439698346893,
+        -2.1253897907889385
+      ],
+      "linear_error": 4.1932615602036094e-07,
+      "linear_bound_coefficient": 1.1487119850303162,
+      "cubic_error": 6.050715484207103e-14,
+      "cubic_bound_coefficient": 0.12828853572036153,
+      "leading_detector_cubic_ratio": -0.019729376633005925,
+      "physical_displacement_or_error_budget_assigned": false
+    },
+    {
+      "layers": 9,
+      "t": 0.001,
+      "intensity": 1.0016499908153775,
+      "derivatives_at_zero": [
+        1.6495721976846442,
+        0.8379439698346893,
+        -2.1253897907889385
+      ],
+      "linear_error": 4.1861769295437057e-07,
+      "linear_bound_coefficient": 1.1487119850303162,
+      "cubic_error": 6.039613253960852e-14,
+      "cubic_bound_coefficient": 0.12828853572036153,
+      "leading_detector_cubic_ratio": -0.019729376633005925,
+      "physical_displacement_or_error_budget_assigned": false
+    },
+    {
+      "layers": 9,
+      "t": -0.01,
+      "intensity": 0.9835465288424278,
+      "derivatives_at_zero": [
+        1.6495721976846442,
+        0.8379439698346893,
+        -2.1253897907889385
+      ],
+      "linear_error": 4.225081927422547e-05,
+      "linear_bound_coefficient": 1.1487119850303162,
+      "cubic_error": 6.108492600631621e-10,
+      "cubic_bound_coefficient": 0.12828853572036153,
+      "leading_detector_cubic_ratio": -0.019729376633005925,
+      "physical_displacement_or_error_budget_assigned": false
+    },
+    {
+      "layers": 9,
+      "t": 0.01,
+      "intensity": 1.016537264338438,
+      "derivatives_at_zero": [
+        1.6495721976846442,
+        0.8379439698346893,
+        -2.1253897907889385
+      ],
+      "linear_error": 4.154236159159552e-05,
+      "linear_bound_coefficient": 1.1487119850303162,
+      "cubic_error": 6.052682799406739e-10,
+      "cubic_bound_coefficient": 0.12828853572036153,
+      "leading_detector_cubic_ratio": -0.019729376633005925,
+      "physical_displacement_or_error_budget_assigned": false
+    },
+    {
+      "layers": 9,
+      "t": -0.1,
+      "intensity": 0.8395803756772876,
+      "derivatives_at_zero": [
+        1.6495721976846442,
+        0.8379439698346893,
+        -2.1253897907889385
+      ],
+      "linear_error": 0.004537595445752052,
+      "linear_bound_coefficient": 1.1487119850303162,
+      "cubic_error": 6.3560352195901615e-06,
+      "cubic_bound_coefficient": 0.12828853572036153,
+      "leading_detector_cubic_ratio": -0.019729376633005925,
+      "physical_displacement_or_error_budget_assigned": false
+    },
+    {
+      "layers": 9,
+      "t": 0.1,
+      "intensity": 1.168786909778239,
+      "derivatives_at_zero": [
+        1.6495721976846442,
+        0.8379439698346893,
+        -2.1253897907889385
+      ],
+      "linear_error": 0.0038296900097745112,
+      "linear_bound_coefficient": 1.1487119850303162,
+      "cubic_error": 5.798207600715699e-06,
+      "cubic_bound_coefficient": 0.12828853572036153,
+      "leading_detector_cubic_ratio": -0.019729376633005925,
+      "physical_displacement_or_error_budget_assigned": false
+    }
+  ],
+  "two_order_candidate": {
+    "orders": [
+      1,
+      2
+    ],
+    "phase_pair": "plus/minus 2*pi/3",
+    "material_third_formula": "(8*Y3_first+Y3_second)/(6*K1)",
+    "joint_error_bound": "(8*E_first+E_second)/(6*abs(K1)) plus coefficient uncertainty",
+    "physical_geometry_or_records_admitted": false
+  },
   "uncertainty_policy": "joint state/parameter/observer sets; no unmeasured effects assigned zero",
   "old_four_frequency_kernel_evaluated": false,
   "physical_forecast_run": false,
@@ -97,24 +221,24 @@
   "reopen": "same-state correspondence, frozen coefficients, eligible split records, full state and joint source/damping/observer bounds",
   "boundary": "prefix model-conditioned state calibration is not independent Phi observation or unique UET discrimination",
   "contract_id": "T13_GRAPHITE_PREPARATION_PREDICTION_V1",
-  "contract_sha256": "b8b6e69b92fbdf7d20003cabbe961d61cb6ad7e450fc14ff195497638c1cccc5",
+  "contract_sha256": "740e61cca6a4af1d0af2ab262c036fbf3cffb2f3ae131e3f48975d9c02dbce66",
   "contract_review_status": "INCOMPLETE",
   "identities": [
     {
       "path": "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/Research_T13_Graphite_Preparation.py",
-      "sha256": "aac1ad0a0853aa74066dfec0a4e2804104587c55c862127cb08bf86ab5cf73d0",
+      "sha256": "8f6adcefe9e13b60d57a610afd7d81c5a66179caf5fed473b6245f19d95f4d0e",
       "kind": "working_file",
       "role": "code"
     },
     {
       "path": "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/test_t13_graphite_preparation.py",
-      "sha256": "9208aec63377336371047267e05c2f5efcd312d8080326a15d9b9318c103d99b",
+      "sha256": "5a16ef8b40467892995b158e3296bc52fc388479330f2e439604690496e5a120",
       "kind": "working_file",
       "role": "code"
     },
     {
       "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/T13_GRAPHITE_PREPARATION_PREDICTION_2026-10-18.md",
-      "sha256": "2d09fd1f09408aa3bf99dcb02508507720f43188604d1a573369c6472ccb2e11",
+      "sha256": "9963246758257b7168411e6bbf953acdca35c1cd56fc1560a2afa772eef37531",
       "kind": "working_file",
       "role": "evidence"
     },
