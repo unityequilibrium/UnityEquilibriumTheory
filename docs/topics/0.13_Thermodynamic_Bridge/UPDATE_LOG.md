@@ -1,3 +1,14 @@
+<!-- memory-law-origin-audit-v1:start -->
+## 2026-10-18 - Inspect the origin and closure of the existing memory law
+
+- Scope/type: TD1-TD3 source/code audit following the standard-32 pilot; no new calculation.
+- Changed: existing research-design section 8 now distinguishes the assumed exponential kernel, internal coefficient fixture, prescribed force-history input, construction-only KMS residual and PSD ledger from stronger derivation claims.
+- New decision evidence: state_metric is stored/validated but not used by the evolution law; force_history is supplied independently of state. The helper is not by itself a closed autonomous state-to-force theory. This is not a claim of a defect in its declared constitutive-control scope or of absence throughout the repository.
+- Verification: direct implementation, producer and existing test-definition review; no numerical rerun or saved-artifact change. Local link/whitespace checks only.
+- Blocker narrowed: for a stronger self-contained claim, define the state/force/free-energy correspondence and admissible histories before seeking physical coefficients. A prescribed-input application can retain its narrower scope.
+- Next: author scope confirmation, then one justified state/force interface if requested; no automatic identification with matter-space, new field, source hunt, threshold change or physical promotion.
+<!-- memory-law-origin-audit-v1:end -->
+
 <!-- theory-sequencing-memory-pilot-v1:start -->
 ## 2026-10-18 - Apply the sequencing standard to one existing memory proposition
 

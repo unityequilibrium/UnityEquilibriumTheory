@@ -188,3 +188,42 @@ alternatives for author review, not three automatically active research lanes.
 **Verification:** direct source/formula/artifact/test-definition inspection and local
 link/whitespace review only. Existing results reused, not regenerated or newly certified.
 This completes one methodological pilot; physical research and theory closure are unchanged.
+
+### Origin and closure follow-up: what the open-system control actually establishes
+
+Reviewed 2026-10-18 at `407702088`; source, producer and saved artifacts are unchanged.
+This is a TD1-TD3 source/code audit, not a new calculation or a physical falsification.
+
+| Item | Authoritative source behavior | Consequence |
+| --- | --- | --- |
+| Exponential law | Formula ID `UET-OPEN-EXP-MEMORY-001` is explicitly a causal constitutive ansatz; the registry lists exponential memory as an assumption. | The broad history/response idea does not derive this kernel in the cited work. The function name `derive_retarded_kernel` evaluates the declared law; it does not establish its microscopic origin. |
+| Coefficients and relaxation | Producer `_config` fixes L, tau and T as a simulation-only control with an internal source identity. | Positivity/normalization checks do not independently select material values or a unique memory law. |
+| State-to-force closure | `open_system_evolution` accepts `force_history` independently of `physical_state`. `state_metric` is validated/stored but is not read in the evolution or force construction. | This helper advances a state under prescribed history; it does not by itself derive a thermodynamic force from a state functional or define a closed autonomous system. This is a scope limitation, not a demonstrated bug in its declared control role. |
+| Noise consistency | `derive_noise_kernel` constructs covariance and its expected KMS expression using the same formula; the producer tests that residual. | The saved residual checks internal construction consistency, not independent microscopic derivation, measurement or simulation of a stochastic bath. |
+| Entropy ledger | Nonnegative memory production is assigned through the PSD quadratic form; storage rate is the difference from force-memory power. | This bookkeeping does not alone prove a state-entropy identity for the prescribed trajectory or thermodynamic completeness of arbitrary force histories. |
+
+Implementation locators: `OpenSystemConfig.__post_init__`, `derive_noise_kernel`,
+`entropy_current_divergence`, and `open_system_evolution` in the linked module.
+Producer: [audit_uet_covariant_open_system.py](../../scripts/audit/audit_uet_covariant_open_system.py),
+especially `_config` and `build_artifacts`. Existing
+[test definitions](../../core/05_tests/regression/root/test_uet_covariant_open_system.py)
+were inspected, not rerun; their named checks do not establish the missing state-to-force map.
+No saved PASS, numerical value or threshold is rewritten.
+
+**Narrowed next dependency:** if the intended claim is a self-contained mathematical
+theory of system response, first declare one state/force/free-energy correspondence and
+its units, admissible histories and boundary/initial data. Then inspect whether the
+existing memory ledger follows from that correspondence. Do not jump directly from
+kernel positivity to a claim about nature, request a material dataset to repair this
+mathematical gap, or silently set force equal to metric times state.
+
+The matter-space lane already defines functional derivatives, but this audit does not
+identify its C/Phi variables with the abstract open-system vector. Composing those
+lanes would require an explicit justified interface and is NOT authorized by similarity
+of terminology. For a prescribed-input application rather than an autonomous theory,
+state-to-force closure is not required; the claim must retain that application scope.
+
+**Decision:** keep this control as reusable constitutive mathematics. A stronger
+foundational claim needs the missing state/force and microscopic/constitutive assumptions
+made explicit, with the author's intended scope confirmed before implementation.
+No new equation or full-theory impossibility conclusion follows.
