@@ -393,6 +393,91 @@ class ContractTests(unittest.TestCase):
         self.assertEqual(a["summary"]["contracts"], 1)
         self.assertEqual(before, {str(p):p.read_bytes() for p in self.root.rglob("*") if p.is_file()})
 
+    def write_inventory_baseline(self, paths):
+        p = self.root / audit.BASELINE
+        p.parent.mkdir(parents=True, exist_ok=True)
+        p.write_text(json.dumps(dict(routes=[dict(route_id="family", owner="CORE", paths=paths,
+            claim_boundary="declared normalized family")], legacy_paths=[])), encoding="utf-8")
+
+    def test_inventory_partial_contract_never_certifies_entire_route(self):
+        self.save_contract()
+        self.write_inventory_baseline([self.path, "docs/core/unreviewed.py"])
+        (self.root / "docs/core/unreviewed.py").write_text("# another unreviewed implementation")
+        result = audit.build_report(self.root)
+        family = next(r for r in result["routes"] if r["route_id"] == "family")
+        scoped = next(r for r in result["routes"] if r["route_id"] == "contract:TEST")
+        self.assertEqual(family["contract_ids"], ["TEST"])
+        self.assertEqual(family["review_status"], "UNREVIEWED")
+        self.assertIn("docs/core/unreviewed.py", family["uncovered_paths"])
+        self.assertEqual(family["adoption"]["action"], "REVIEW_MODEL_OR_CODE")
+        self.assertEqual(scoped["adoption"]["action"], "REUSE_SCOPED_EVIDENCE")
+
+    def test_inventory_explicit_migration_aliases_not_filename_guesses(self):
+        self.save_contract()
+        old = "docs/core/old_example.py"
+        self.write_inventory_baseline([old])
+        p = self.root / audit.MIGRATION_MAP
+        p.parent.mkdir(parents=True, exist_ok=True)
+        p.write_text(json.dumps(dict(files=[dict(canonical_path=self.path, current_path=self.path, legacy_paths=[old])])), encoding="utf-8")
+        family = next(r for r in audit.build_report(self.root)["routes"] if r["route_id"] == "family")
+        self.assertEqual(family["resolved_paths"], [self.path])
+        self.assertEqual(family["missing_paths"], [])
+        self.assertEqual(family["contract_ids"], ["TEST"])
+        self.assertEqual(family["coverage_scope"], "RELATED_ONLY_NOT_PACKAGE_COVERAGE")
+
+    def test_inventory_ambiguous_alias_is_error_not_arbitrary_coverage(self):
+        self.save_contract()
+        old = "docs/core/old.py"
+        self.write_inventory_baseline([old])
+        p = self.root / audit.MIGRATION_MAP
+        p.parent.mkdir(parents=True, exist_ok=True)
+        p.write_text(json.dumps(dict(files=[dict(canonical_path=target, legacy_paths=[old])
+            for target in (self.path, "docs/core/different.py")])), encoding="utf-8")
+        report = audit.build_report(self.root)
+        self.assertTrue(any("ambiguous migration alias" in e for e in report["errors"]))
+        family = next(r for r in report["routes"] if r["route_id"] == "family")
+        self.assertEqual(family["contract_ids"], [])
+
+    def test_inventory_discovers_topic_without_verification_spec_and_loose_sources(self):
+        folder = self.root / "docs/topics/0.99_New_Topic"
+        folder.mkdir(parents=True)
+        (folder / "README.md").write_text("# provisional idea")
+        formal = self.root / "docs/core/01_contracts/new_proposition.md"
+        formal.parent.mkdir(parents=True)
+        formal.write_text("# a mathematical proposition")
+        report = audit.build_report(self.root)
+        topic = next(r for r in report["routes"] if r["route_id"] == folder.name)
+        self.assertIn("docs/topics/0.99_New_Topic/VERIFICATION_SPEC.md", topic["missing_paths"])
+        group = next(r for r in report["routes"] if r["route_id"] == "unassigned:CORE")
+        self.assertIn(formal.relative_to(self.root).as_posix(), group["resolved_paths"])
+        self.assertEqual(group["adoption"]["action"], "REVIEW_MODEL_OR_CODE")
+        self.assertFalse(group["adoption"]["claim_promotion"])
+
+    def test_inventory_unknown_and_invalid_contracts_never_request_blind_reruns(self):
+        self.c["review"]["status"] = "INCOMPLETE"
+        self.c["components"][0].update(disposition="UNKNOWN", owner="reviewer", next_action="supply matching physical state")
+        self.save_contract()
+        route = next(r for r in audit.build_report(self.root)["routes"] if r["route_id"] == "contract:TEST")
+        self.assertEqual(route["adoption"]["action"], "WAIT_FOR_PREREQUISITE")
+        self.assertIn(self.c["components"][0]["id"], route["adoption"]["reason"])
+        (self.root / self.path).write_text("# a changed input")
+        report = audit.build_report(self.root)
+        route = next(r for r in report["routes"] if r["route_id"] == "contract:TEST")
+        self.assertEqual(route["adoption"]["action"], "REVIEW_MODEL_OR_CODE")
+
+    def test_inventory_formal_public_lineage_gap_is_not_a_new_physics_job(self):
+        self.c["review"]["status"] = "INCOMPLETE"
+        row = next(c for c in self.c["components"] if c["id"] == "processing")
+        row.update(disposition="UNKNOWN", reason="Clean public lineage integration of the pinned research commit remains open.",
+            owner="repo-ops", next_action="review the publication lineage")
+        self.save_contract()
+        scoped = next(r for r in audit.build_report(self.root)["routes"] if r["route_id"] == "contract:TEST")
+        self.assertEqual(scoped["adoption"]["action"], "UPDATE_METADATA")
+        row["reason"] = "Unknown numerical processing changes the physical conclusion"
+        self.save_contract()
+        scoped = next(r for r in audit.build_report(self.root)["routes"] if r["route_id"] == "contract:TEST")
+        self.assertEqual(scoped["adoption"]["action"], "WAIT_FOR_PREREQUISITE")
+
     def test_new_result_exact_contract_metadata(self):
         self.save_contract()
         path = self.root / "docs/core/07_artifacts/verification/new.json"

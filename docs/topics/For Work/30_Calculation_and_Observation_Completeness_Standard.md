@@ -233,6 +233,26 @@ specs. Deduplicate shared code; never equate file count with experiment count. S
 with matter-space/observer, He-4 and nonlinear-response pilots; then published-H0,
 galaxy and dynamic-frame data paths; then remaining topics by dependency and claims.
 
+The existing inventory reports equation families, topic packages, scoped contracts
+and unassigned research-surface groups as distinct, potentially overlapping units.
+It discovers current numbered topics even without a verification spec and includes
+formal Core contract/lane/proof/research-note documents as classification candidates.
+Resolve old paths only through the explicit migration map; ambiguous aliases are
+errors, never basename guesses. A linked contract or shared source file does not
+certify the whole package: show resolved/missing/uncovered paths and coverage_scope.
+
+Each discovered route has an `adoption` action, reason, priority basis and next
+action. These are work-queue dispositions, NOT new scientific states. Reuse is
+limited to a complete, identity-matched scoped contract; missing prerequisites wait;
+stale identities or unreviewed family/package surfaces need targeted review first.
+Do not infer a required rerun without evidence-producing changes, historical
+inactivity from directory names, or full-topic support from a narrow formal proof.
+Restrict a claim, mark history-only or supersede a result only after substantive
+review records the evidence in its existing owner. Report discovery limits and
+unreviewed material explicitly; hidden historical prose/private sources are not
+certified by this inventory. Current discovered counts do not promote readiness
+or silently replace a conflicting topic-index count.
+
 Preserve old artifacts. Record whether a legacy claim can be reused within its old
 scope, needs restriction, needs rerun, or awaits inputs. Rerun only changed producers
 or demonstrated stale results. Superseding results retain a link to the old evidence.

@@ -19,7 +19,7 @@ copies, new checkout, retroactive PASS, global rerun or automatic external conta
 | W4 relational observation | Multiple relationship-dependent roles and nested subsystems supported without unaccounted duplicate state/energy; old records readable; omitted influence still detected | Explicit RELATIONAL mode, ownership/containment and boundary-baseline binding implemented; 44 tests and read-only legacy check pass; semantic accounting still needs review |
 | W5 Core pilot | Matter-space chain and comparator yield a scoped decision, not mandatory novelty | Existing Core contract migrated with pinned baseline; design section 10 and Core log retain normalized constitutive scope and UNKNOWN physical detector; foundation FAIL/BLOCKED remains visible |
 | W6 Topic13 pilot | He4/O2, graphite/TTG and nonlinear routes each expose evidence, missing prerequisite and one decision-changing action | Design section 11 and adoption review separate five scoped routes/owners; two physical contracts adopt UNKNOWN relational topology; FORMAL proofs reused; no physical promotion |
-| W7 legacy triage | All discovered calculation/claim routes have reasoned disposition; discovered coverage and unknown coverage distinguished | Reuse existing inventory/queue; prioritize public claims and dependencies, then active physical work, reused formal/synthetic, history |
+| W7 legacy triage | All discovered calculation/claim routes have reasoned disposition; discovered coverage and unknown coverage distinguished | Existing generated inventory now covers 120 overlapping route/package/contract/surface units with reasons/actions; 40 current topic packages, 133 formal-document candidates; no scientific review or hidden-archive completeness inferred |
 | W8 expansion/enforcement | Pilot method applied to 0.3, 0.1, 0.26; 10/23 only by verified dependency; changed-path CI rejects real gaps without duplicate forms | Pending pilot acceptance; structural checks never substitute for physics review |
 | W9 research return | One locked, comparator-backed question reaches supported/rejected/equivalent/inconclusive or precise prerequisite outcome | Select from W5/W6; do not wait for all archival migration; no invented restriction to escape a comparator |
 
@@ -144,6 +144,41 @@ independent authorized work rather than freezing the whole project.
 - Next controller: W7 discovery/claim triage using the existing inventory, then W8
   astronomy adoption and W9 a locked research-return decision. Do not wait for all
   historical cleanup to identify W9's concrete question.
+
+### [2026-10-19] W7 current-route discovery and conservative adoption queue
+
+- Baseline: `bd7815b32`. The old 101-route seed contained pre-migration paths and
+  only topics with a verification spec. Related contract overlap previously gave
+  `SEE_CONTRACTS`, without showing whether a whole route was actually covered.
+- Changed: existing read-only validator/report now discovers current registry
+  entries, all numbered-topic folders including missing specs, scoped contracts
+  and grouped unassigned research surfaces. Formal Core contracts/lanes/proofs/
+  research-note documents are included; files are not counted as experiments.
+- Explicit migration aliases resolve paths; conflicts fail visibly. Each route
+  lists resolved/missing/uncovered paths, related versus exact formula links,
+  scope-limited status and adoption action/reason/priority/next action. A narrow
+  contract never certifies its whole family/topic. UNKNOWN prerequisites wait;
+  stale/unreviewed sources need review before deciding whether any rerun is needed.
+  A recorded FORMAL public-lineage-only gap is metadata work, not a new physics job.
+- Generated existing inventory: 120 overlapping units = 62 equation families,
+  40 topic packages, 15 scoped contracts, 3 loose-surface groups. All have reasoned
+  dispositions: 105 targeted-review, 14 prerequisite-wait, 1 metadata-repair. These
+  are queue actions, NOT 105 scientific failures or 120 independent experiments.
+  Discovery includes 133 formal documents and 2885 uncovered source/result/document
+  paths; no omitted hidden/archive prose is declared reviewed. Current 40 matching
+  topic directories differs from old 41-topic index prose; no readiness relabeling.
+- Verification: 53 tests PASS; inventory/check and generation report 0 errors.
+  All 120 routes have actions/reasons/next steps, no family/package has automatic
+  scoped reuse, and no physics claim is promoted. Identity-matched read-only and
+  changed-path checks, scoped links/whitespace are the final handoff controls.
+  Generated report is ~1.4 MB of paths/metadata, not copied source or scientific payloads.
+- Completion scope: all routes discovered by the declared current registry/topic/
+  contract/surface sources have a disposition. This is not completed substantive
+  review of their science, proof of archival exhaustiveness, or authorization to
+  mark any historical directory inactive. No numerical research rerun or gate edit.
+- Next controller: W8 existing astronomy-contract adoption and changed-path CI,
+  followed by W9 locked research-return decision. Review queue remains explicit
+  rather than blocking independent formal work until all archives are cleaned.
 
 ## [2026-10-17] - Scoped calculation and observation contracts v1
 

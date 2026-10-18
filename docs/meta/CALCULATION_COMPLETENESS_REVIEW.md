@@ -62,6 +62,31 @@ whitelist them, and no foundation gate is promoted.
 
 ## Next work
 
+### W7 route triage, 2026-10-19
+
+The generated inventory now extends the historical seed with current equation
+registry entries, all discovered numbered-topic packages (including missing specs),
+scoped contracts and grouped unassigned research surfaces. Core formal contract,
+lane, proof and research-note documents are included as candidates. File/route
+counts are not experiment counts. The inventory records generator/schema/source
+identities; read its `inventory_scope` before interpreting coverage.
+
+Explicit migration aliases reconnect old paths with canonical implementations;
+ambiguities fail visibly. Package/family links remain RELATED_ONLY_NOT_PACKAGE_COVERAGE,
+with missing/uncovered paths and an evidence-matched adoption action. A complete
+scoped contract may be reusable without certifying its topic; UNKNOWN prerequisites
+wait; unreviewed or stale sources need targeted inspection, not a blind rerun.
+
+Discovery is not a scientific review of every claim or every historical idea. No
+directory is declared inactive by its name and no claim is automatically reduced,
+promoted or made history-only. Those decisions require local substantive evidence.
+The live directory count may disagree with old readiness/index prose; that drift
+is reported, not silently "fixed" by changing a scientific status or unrelated file.
+
+Next: W8 adopt the same method on the existing H0, galaxy and dynamic-frame
+contracts, enforce changed-path coverage and preserve actual data-product scope.
+W9's locked research-return decision need not wait for every queued archival review.
+
 Review queue order is Core/Topic13 first, then the three astronomy packages, then
 other topics by dependency and claim importance. Every discovered legacy path is
 unreviewed until it has a reviewed contract or an explicit support disposition.

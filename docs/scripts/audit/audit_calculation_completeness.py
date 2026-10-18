@@ -19,6 +19,8 @@ ROOT = Path(__file__).resolve().parents[3]
 SCHEMA = "docs/meta/schemas/calculation_contract_v1.schema.json"
 BASELINE = "docs/meta/calculation_completeness_baseline.json"
 REPORT = "docs/meta/calculation_completeness_inventory.json"
+REGISTRY = "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry.json"
+MIGRATION_MAP = "docs/core/07_artifacts/archive/uet_core_file_migration_map.json"
 GROUPS = {"system_state", "drive_environment", "propagation", "frame_time", "detector", "processing", "numerics"}
 TEXT = {".py", ".md", ".json", ".yaml", ".yml", ".csv", ".txt", ".toml"}
 SUPPORT = {
@@ -476,6 +478,151 @@ def discover_contracts(root: Path) -> list[tuple[str, dict]]:
     return result
 
 
+def adoption_inventory(root: Path, baseline: dict, contracts: list, reviews: list,
+                       current: set[str]) -> tuple[list, dict, list[str]]:
+    """Triage declared routes, not individual files as experiments or scientific grades."""
+    aliases, errors, sources, ambiguous = {}, [], [], set()
+    for path in (BASELINE, REGISTRY, MIGRATION_MAP, SCHEMA, "docs/scripts/audit/audit_calculation_completeness.py"):
+        if repo_path(root, path).is_file():
+            sources.append({"path": path, "sha256": identity_hash(root, {"path": path, "kind": "working_file"})})
+    if repo_path(root, MIGRATION_MAP).is_file():
+        for row in load_json(repo_path(root, MIGRATION_MAP)).get("files", []):
+            target = row["canonical_path"]
+            for alias in [target, row.get("current_path", target), *row.get("legacy_paths", [])]:
+                if alias in ambiguous:
+                    continue
+                if alias in aliases and aliases[alias] != target:
+                    errors.append(f"ambiguous migration alias: {alias}")
+                    ambiguous.add(alias)
+                    aliases.pop(alias)
+                    continue
+                aliases[alias] = target
+
+    resolved_cache, existence = {}, {p: True for p in current}
+
+    def resolve(path):
+        if path in resolved_cache:
+            return resolved_cache[path]
+        target = aliases.get(path, path)
+        # Never guess by basename or accept a mapping outside this repository.
+        repo_path(root, target)
+        resolved_cache[path] = target
+        return target
+
+    def exists(path):
+        if path not in existence:
+            existence[path] = repo_path(root, path).is_file()
+        return existence[path]
+
+    seeds = {}
+    for route in baseline.get("routes", []):
+        rid = route["route_id"]
+        if rid in seeds:
+            errors.append(f"duplicate baseline route_id: {rid}")
+        seeds[rid] = {**route, "kind": "EQUATION_FAMILY" if route["owner"] == "CORE" else "TOPIC_PACKAGE",
+                      "baseline_paths": route["paths"], "discovery": [BASELINE]}
+    if repo_path(root, REGISTRY).is_file():
+        for entry in load_json(repo_path(root, REGISTRY)).get("entries", []):
+            rid = entry["equation_id"]
+            route = seeds.setdefault(rid, {"route_id": rid, "owner": "CORE", "kind": "EQUATION_FAMILY", "paths": [], "discovery": []})
+            route["paths"] = sorted(set(route["paths"] + entry.get("implementation_paths", []) + entry.get("verifier_paths", [])))
+            route.update(claim_boundary=entry.get("claim_boundary", "Unreviewed"),
+                         registry_classification=entry.get("classification"),
+                         downstream_dependencies=entry.get("downstream_dependencies", []))
+            route["discovery"].append(REGISTRY)
+    topics = sorted(p for p in (root / "docs/topics").glob("0.*") if p.is_dir() and re.match(r"^0\.\d+_", p.name))
+    for folder in topics:
+        owner = folder.name
+        prefix = folder.relative_to(root).as_posix() + "/"
+        route = seeds.setdefault(owner, {"route_id": owner, "owner": owner, "kind": "TOPIC_PACKAGE", "paths": [],
+            "claim_boundary": "Unreviewed topic package, not accepted from folder presence", "discovery": []})
+        docs = [prefix + name for name in ("README.md", "METHOD.md", "LIMITATIONS.md", "FORMULA_AUDIT.md", "DATA_MANIFEST.md")
+                if repo_path(root, prefix + name).is_file()]
+        # A missing verification spec remains a named gap, not a reason to omit a topic.
+        route["paths"] = sorted(set(route["paths"] + docs + [prefix + "VERIFICATION_SPEC.md"]
+                                    + [p for p in current if p.startswith(prefix)]))
+        route["discovery"].append(prefix)
+    contract_by_id = {c["contract_id"]: (locator, c) for locator, c in contracts}
+    review_by_id = {r["contract_id"]: r for r in reviews}
+    coverage = {}
+    for locator, contract in contracts:
+        cid = contract["contract_id"]
+        paths = sorted({i["path"] for i in contract["identities"] if i["kind"] == "working_file"})
+        for path in paths:
+            coverage.setdefault(resolve(path), set()).add(cid)
+        owner = locator.split("/")[2] if locator.startswith("docs/topics/") else "CORE"
+        seeds["contract:" + cid] = {"route_id": "contract:" + cid, "owner": owner,
+            "kind": "CONTRACT_PATH", "paths": paths, "contract_id": cid,
+            "claim_boundary": contract["claim_boundary"], "discovery": [locator]}
+    named = {resolve(p) for r in seeds.values() for p in r["paths"]}
+    # Loose sources/results are classification candidates, not one experiment per file.
+    loose = sorted(current - named)
+    groups = {}
+    for path in loose:
+        canonical = resolve(path)
+        if canonical in named:
+            continue
+        bucket = "CORE" if path.startswith("docs/core/") else "AUDIT_TOOLS" if path.startswith("docs/scripts/") else "OTHER_RESEARCH"
+        groups.setdefault(bucket, set()).add(canonical)
+    for owner, paths in sorted(groups.items()):
+        seeds["unassigned:" + owner] = {"route_id": "unassigned:" + owner, "owner": owner,
+            "kind": "SURFACE_GROUP", "paths": sorted(paths), "discovery": ["current research-surface discovery"],
+            "claim_boundary": "Unassigned scientific-looking surfaces; classify before treating them as independent studies or evidence"}
+    routes = []
+    for rid, seed in sorted(seeds.items()):
+        paths = sorted({resolve(p) for p in seed["paths"]})
+        ids = {cid for p in paths for cid in coverage.get(p, [])}
+        formula_ids = {c["contract_id"] for _, c in contracts if rid in c["model"]["formula_ids"]}
+        ids |= formula_ids
+        if seed["kind"] == "TOPIC_PACKAGE":
+            ids |= {cid for cid, (loc, _) in contract_by_id.items() if loc.startswith(f"docs/topics/{seed['owner']}/")}
+        if seed.get("contract_id"):
+            ids = {seed["contract_id"]}
+        missing = [p for p in paths if not exists(p)]
+        uncovered = [p for p in paths if p not in coverage]
+        linked = [review_by_id[cid] for cid in sorted(ids)]
+        priority = 1 if seed["kind"] in {"EQUATION_FAMILY", "TOPIC_PACKAGE", "SURFACE_GROUP"} else (
+            2 if contract_by_id[seed["contract_id"]][1]["profile"] == "PHYSICAL_COMPARISON" else 3)
+        if seed["kind"] == "CONTRACT_PATH":
+            review = linked[0]
+            contract = contract_by_id[seed["contract_id"]][1]
+            if review["errors"] or review["effective_status"] == "STALE":
+                action, reason = "REVIEW_MODEL_OR_CODE", "Contract identities/structure are invalid or stale; inspect errors before reuse, do not automatically rerun physics."
+            elif (review["gaps"] and contract["profile"] == "FORMAL"
+                  and set(review["gaps"]) <= {"processing"}
+                  and any(c["id"] == "processing" and c["reason"] == "Clean public lineage integration of the pinned research commit remains open."
+                          for c in contract["components"])):
+                action, reason = "UPDATE_METADATA", "Only the explicitly recorded public-lineage integration gap remains; retain the old conditional formal evidence locally without fresh certification or public promotion."
+            elif review["gaps"]:
+                action, reason = "WAIT_FOR_PREREQUISITE", "Scoped prerequisites remain: " + "; ".join(review["gaps"])
+            elif review["effective_status"] == "COMPLETE_FOR_SCOPE":
+                action, reason = "REUSE_SCOPED_EVIDENCE", "Identity-matched reviewed contract only; no parent-topic or physical-claim promotion."
+            else:
+                action, reason = "UPDATE_METADATA", "Explicit scope review is not complete; no evidence-producing change is established that would justify a rerun."
+            next_action = contract["next_action"]
+        else:
+            action = "REVIEW_MODEL_OR_CODE"
+            reason = (f"Package/family scope is not certified by {len(ids)} related contract(s); "
+                      f"{len(uncovered)} declared paths lack working-file coverage and {len(missing)} resolved paths are unavailable. "
+                      "Overlap is a navigation link, not full-route acceptance or a demonstrated code defect.")
+            next_action = "Review the named claim/model and its current gate, classify uncovered inputs/results and attach scoped evidence; reuse unchanged results and do not rerun merely for coverage."
+        routes.append({**seed, "resolved_paths": paths, "missing_paths": missing,
+            "uncovered_paths": uncovered, "contract_ids": sorted(ids), "exact_formula_contract_ids": sorted(formula_ids),
+            "review_status": linked[0]["effective_status"] if seed["kind"] == "CONTRACT_PATH" else "UNREVIEWED",
+            "coverage_scope": "SCOPED_CONTRACT" if seed["kind"] == "CONTRACT_PATH" else "RELATED_ONLY_NOT_PACKAGE_COVERAGE",
+            "adoption": {"action": action, "reason": reason, "priority": priority,
+                         "priority_basis": "possible public/dependency surface" if priority == 1 else "physical-comparison contract" if priority == 2 else "scoped formal/synthetic contract",
+                         "next_action": next_action, "claim_promotion": False}})
+    routes.sort(key=lambda r: (r["adoption"]["priority"], r["owner"], r["route_id"]))
+    scope = {"sources": sources, "numbered_topic_packages": len(topics),
+             "route_unit": "declared equation family, topic package, scoped contract or unassigned surface group; overlapping units are not independent experiments",
+             "limitations": ["No exhaustive recovery of equations/claims hidden in historical prose, external chats, books or private raw archives",
+                            "Public/dependency priority is conservative triage, not a verified claim audit or a scientific evidence grade",
+                            "All discovered routes have a reasoned next disposition, not completed scientific review; history is not declared inactive by its directory name"],
+             "claim_promotion": False}
+    return routes, scope, sorted(set(errors))
+
+
 def build_report(root: Path, changed: list[str] | None = None) -> dict:
     contracts = discover_contracts(root)
     errors, reviews, coverage, seen = [], [], {}, set()
@@ -501,11 +648,6 @@ def build_report(root: Path, changed: list[str] | None = None) -> dict:
             if identity.get("kind") == "working_file":
                 coverage.setdefault(identity["path"], []).append(review["contract_id"])
     baseline = load_json(root / BASELINE) if (root / BASELINE).exists() else {"routes": [], "legacy_paths": []}
-    routes = []
-    for route in baseline["routes"]:
-        ids = sorted({cid for p in route["paths"] for cid in coverage.get(p, [])})
-        routes.append({**route, "contract_ids": ids,
-                       "review_status": "SEE_CONTRACTS" if ids else "UNREVIEWED"})
     # Explicit legacy path queue prevents registry seed coverage being mistaken for completeness.
     try:
         discovered = git(root, "ls-files", "--cached", "--others", "--exclude-standard").decode().splitlines()
@@ -513,6 +655,14 @@ def build_report(root: Path, changed: list[str] | None = None) -> dict:
         # Non-Git fixture/workspace support, without treating missing Git history as evidence.
         discovered = [p.relative_to(root).as_posix() for p in (root / "docs").rglob("*") if p.is_file()]
     current = {p for p in discovered if scientific_path(p) and (root / p).is_file()}
+    formal_roots = ("docs/core/01_contracts/", "docs/core/03_lanes/", "docs/core/04_proofs/",
+                    "docs/core/08_history/research_notes/")
+    formal_documents = {p for p in discovered if p.startswith(formal_roots)
+                        and Path(p).suffix in {".md", ".tex"} and repo_path(root, p).is_file()}
+    current |= formal_documents
+    routes, inventory_scope, inventory_errors = adoption_inventory(root, baseline, contracts, reviews, current)
+    inventory_scope["formal_document_surfaces"] = len(formal_documents)
+    errors.extend(inventory_errors)
     unreviewed = sorted(p for p in current if p not in coverage)
     missing = sorted(p for p in baseline["legacy_paths"] if not (root / p).is_file())
     changed = sorted(set(changed or []))
@@ -532,11 +682,12 @@ def build_report(root: Path, changed: list[str] | None = None) -> dict:
             errors.append(f"changed scientific path needs classification/contract: {p}")
     return {"schema_version": "uet-calculation-coverage-v1", "kind": "METHODOLOGICAL_NOT_PHYSICS_GATE",
             "baseline_lineage": baseline.get("lineage", {}),
-            "summary": {"contracts": len(reviews), "legacy_routes": len(routes),
+            "summary": {"contracts": len(reviews), "legacy_routes": len(baseline["routes"]),
+                        "discovered_routes": len(routes), "numbered_topic_packages": inventory_scope["numbered_topic_packages"],
                         "partition_declared": sum("system_partition" in c.get("observation", {}) for _, c in contracts),
                         "partition_unreviewed": sum("system_partition:legacy_unreviewed" in r["gaps"] for r in reviews),
                         "unreviewed_current_paths": len(unreviewed), "missing_or_relocated_baseline_paths": len(missing), "errors": len(errors)},
-            "contracts": reviews, "routes": routes, "unreviewed_current_paths": unreviewed,
+            "contracts": reviews, "routes": routes, "inventory_scope": inventory_scope, "unreviewed_current_paths": unreviewed,
             "missing_or_relocated_baseline_paths": missing,
             "changed_paths": changed, "errors": errors, "claim_promotion": False}
 
