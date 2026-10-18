@@ -279,3 +279,40 @@ a constitutive choice, not a first-principles spacetime derivation. The existing
 ordinary-comparator result applies in its stated scope. Do not demand new experimental
 data to establish the already-implemented algebra, and do not claim the author has
 approved this ansatz as the unique realization of the foundational information idea.
+
+## 9. Standards adoption W3: proposition and provenance reconciliation
+
+Date: 2026-10-19; reviewed checkout `4b38514da`, same canonical worktree/branch
+as section 8. Scope: one existing history-dependent-system proposition, not a
+reconstruction of every historical UET idea. No new equation, run or data access.
+
+**Bounded proposition:** a declared system may retain state/history that affects
+its next response through specified couplings; a derived observation record need
+not itself be an independently evolving source. Boundaries and receiver/source
+roles are relative to the question and relationship, not permanent species.
+
+| Origin / evidence | What is accepted for this review | What is NOT established |
+| --- | --- | --- |
+| Direct author clarification in this chat, 2026-10-19, paragraph beginning with the clarification about not inferring stronger impact from proximity | Study boundaries/categories and interacting subsystems must precede fixed source/detector labels; the same object may be treated at different system levels | No distance-strength law, new numerical coupling, universal entropy identity or approval of a particular action |
+| Earlier AI translation / current graph schema | Distinct source, response and receiver nodes can be useful modeling choices | One exclusive role per node is an implementation restriction, not the author's ontological claim; repair in adoption W4 |
+| Existing matter-space spec sections 1-5 and functions cited in section 8 | C/Phi/Pi are selected normalized states, the generator and dissipative laws define a specific implementation; R is postprocessing | This ansatz is not uniquely derived from the author's system idea; "ordered reference" and "space response" are lane definitions, not measured universal identifications |
+| Imported/modeling mathematics exposed by the existing comparator, action-discrimination section D | Ordinary coupled order-parameter dynamics with the same generator, mobility, discretization and readout reproduce this named normalized lane | Shared mathematics does not establish a new UET-specific law, nor invalidate the utility of the model |
+| Consequences conditional on the selected laws | Paired variational forces, configured state-to-rate closure and separated trace role already have scoped evidence in section 8 | No universal information-mass/entropy conversion, independent SI scale or empirical confirmation follows |
+
+Identity boundary: the current tracked specification blob is
+`cfc4a32ec9289d5e66c5119871db12ba4d15d659`, implementation blob
+`1e1085a1af30a30d27339310e572dd843ed623c1`, and action-discrimination report blob
+`fa8b751f43ff8e0b460757d5032c5dd6b0bce852`; those three working files are unchanged
+at review. These are Git object identities, not contract SHA-256 values. Cross-tree
+He4 results are not incorporated by this review.
+
+**Decision:** the author's latest clarification settles the intended role/boundary
+method, not the uniqueness or physical meaning of the ansatz. It is sufficient to
+repair the graph representation next; do not require the author to invent another
+equation before that methodological repair. Additional UET-specific restrictions
+remain unconfirmed and cannot be invented to evade the comparator. The existing
+implementation may remain an explicitly provisional normalized model in the meantime.
+
+Verification: direct current source/specification/comparator and dirty-state review;
+no re-derivation of the closed comparator, numeric sweep, new artifact or gate change.
+Next: W4 compatibility-tested relational roles, then W5 Core scope/comparator pilot.

@@ -1,3 +1,13 @@
+<!-- standards-adoption-w3-20261019:start -->
+## 2026-10-19 - W3 proposition/provenance reconciliation
+
+- Scope: standards-adoption W3, baseline 4b38514da; existing design section 9.
+- Changed: one bounded system/history proposition separates direct author clarification, AI schema choices, existing constitutive ansatz, imported comparator and conditional consequences.
+- Evidence: unchanged matter-space specification/implementation and action-discrimination report; Git blob identities recorded in the design note. No numerical rerun or physical promotion.
+- Decision: relational boundary intent is clear enough for W4; author acceptance of the ansatz as unique physics remains unconfirmed. No new distance law, entropy identity or equation invented.
+- Verification: scoped source/lineage, links and whitespace; existing scientific blockers retained. Next: compatible relationship-dependent roles, then Core pilot.
+<!-- standards-adoption-w3-20261019:end -->
+
 <!-- existing-state-force-chain-v1:start -->
 ## 2026-10-18 - Locate the existing state-generator-force chain
 
