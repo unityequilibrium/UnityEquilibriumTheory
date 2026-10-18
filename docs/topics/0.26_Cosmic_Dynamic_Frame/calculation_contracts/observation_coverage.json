@@ -5,7 +5,7 @@
   "review": {
     "status": "INCOMPLETE",
     "reviewer": "agent:calculation-observation-standard-v1",
-    "rationale": "W8 source/product admission review only. Scientific code evidence is pinned to f7ba82307; unrelated uncommitted producer work is not integrated or certified. Unchanged local input products are identified separately. Upstream observation and physical claims remain INCOMPLETE.",
+    "rationale": "W8 source/product admission review only. Scientific code evidence is pinned to public main 829c71502 after verifying all five hashes equal the original local f7ba82307 evidence; unrelated uncommitted producer work is not integrated or certified. Unchanged local input products are identified separately. Upstream observation and physical claims remain INCOMPLETE.",
     "coverage_evidence": [
       "docs/topics/0.26_Cosmic_Dynamic_Frame/DATA_MANIFEST.md",
       "docs/topics/0.26_Cosmic_Dynamic_Frame/VERIFICATION_SPEC.md"
@@ -225,7 +225,7 @@
       "path": "docs/topics/0.26_Cosmic_Dynamic_Frame/Code/03_Research/Research_Cosmic_Flows.py",
       "kind": "git_blob",
       "role": "code",
-      "commit": "f7ba82307ae4afc698cccc9533d1056782004b9c",
+      "commit": "829c7150260452df186c46bdc653ad758983eaee",
       "sha256": "38cfa9bb8c13e2080160b247cf36b9d50a4119d38ba469d8191b58fcd02bf932"
     },
     {

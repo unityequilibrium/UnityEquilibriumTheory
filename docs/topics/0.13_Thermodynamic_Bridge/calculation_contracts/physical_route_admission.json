@@ -1,31 +1,249 @@
 {
-  "schema_version":"uet-calculation-contract-v1",
-  "contract_id":"T13_PHYSICAL_ROUTE_ADMISSION_V1",
-  "profile":"SYNTHETIC",
-  "review":{"status":"INCOMPLETE","reviewer":"agent:physical-route-admission","rationale":"Source-model operator and reference transcription reviewed; no experimental response inference. UET correspondence, native normalization sign-off, independent calibration and output-unit physical error budget remain unadmitted. Structural validation is not independent physical review."},
-  "question":"Does the selected two-electrode/two-direction native MEMS protocol admit a locked physical UET discrimination test with the currently verified inputs?",
-  "output":{"quantity":"source-model bias enclosure, source harmonic identity and route admission decision","unit":"dimensionless native source-model coordinates and squared frequencies","domain":"Declared zero-AC E2 54 V DC source-model branch y in [0,1/4], E1 off; positive local mass/stiffness and no physical measured-response score","accuracy":"48 exact rational bisections; root enclosure width <= 2^-50; exact voltage-square and inertial identities; no physical uncertainty threshold invented","claim_intent":"DIAGNOSTIC"},
-  "model":{"formula_ids":["RochaYounis2022.Eq1-2.native-comparator","native.f=wn2^2*y+k32*y^3-beta2*Vdc2^2/(1-y)^2","native.local_w2^2=(wn2^2+3*k32*y0^2-2*beta2*Vdc2^2/(1-y0)^3)/(1+delta2*y0^2)","native.voltage-square-harmonics","native.inertial-cubic-harmonics"],"assumptions":"Reference Table S1 decimal values treated as exact source-model inputs for this diagnostic, not exact material constants. Conditional E1-off source configuration; only the explicitly bracketed stable branch is certified.","approximation":"Local linearization around a configured static state; no experimental driven mean shift reconstructed. Inertia sensitivity favorable in the authors' tested IR configuration is retained, not assumed to supply a physical omission bound.","initial_boundary":"Static residual on [0,1/4]; bounded monotonicity and positive local stiffness; invalid branch/domain refuses computation without clipping","drive_environment":"Electrostatic squared voltage and gap factor explicitly distinguished. Published 54 V / 0.5 V cosine-coefficient reference for harmonic algebra; root computation uses AC=0. Pressure/damping/source transfer are not inferred from response fits.","parameters":"11 Table S1 model coefficients from hash-verified public supplement; upstream geometry/material adjustment to frequency data is disclosed. No new UET parameter, fit, uncertainty, sweep or response trajectory."},
-  "data_policy":{"uses_observations":false,"calibration_ids":[],"comparison_ids":[],"independent_validation":false,"holdout_policy":"Cites physical publications as protocol/equation/model-parameter sources only; no measured response rows or digitized curves used for inference. Already inspected figures are not blind holdout. Raw comparison records and calibration split remain unadmitted."},
-  "observation":{"source_state":"Native mechanical x/y generalized coordinates with bias-dependent equilibrium; neither is identified as Phi","generated_trace":"No dissipation trace identified with all state or information; no entropy identity invoked","carrier":"No optical propagation computation or measured waveform score in this source-model diagnostic","observer_state":"Published directional camera targets differ from generalized coordinate point; mode-profile map, phase/exposure, gain, offsets and uncertainty not admitted","readout":"Two directional observations are capability evidence, not calibrated signed modal records. Native normalization equation images exist but the current renderer did not permit sign-off.","backaction":"Electrode forcing enters native equations; optical detector interaction not quantified and therefore no physical acceptance or zero-backaction assertion","frame":"Native dimensionless mode coordinates only; mass and SI normalization not independently established","time_convention":"Dimensionless native time; distinguish voltage, force and mechanical frequencies. No SI timing calibration or RMS-to-peak conversion invented.","product_level":"Curated reference metadata plus exact source-model diagnostic, not raw experimental data or reduction","corrections":[{"id":"source-and-detector-transfer","state":"UNKNOWN","evidence":"docs/topics/0.13_Thermodynamic_Bridge/Result/T13_PHYSICAL_ROUTE_ADMISSION_2026-10-18.md"}]},
-  "components":[
-    {"id":"source-model-state","group":"system_state","disposition":"MODELED","reason":"Configured static branch and local mass/stiffness enclosed from native equations; not a measured material reconstruction","evidence":["docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/Research_T13_Physical_Route_Admission.py"]},
-    {"id":"source-model-drive","group":"drive_environment","disposition":"MODELED","reason":"Voltage-square harmonics, gap-factor domain and bias-dependent equilibrium explicit; pure-sine or source-free auxiliary assumptions not silently reused","evidence":["docs/topics/0.13_Thermodynamic_Bridge/Result/T13_PHYSICAL_ROUTE_ADMISSION_2026-10-18.md"]},
-    {"id":"carrier-for-diagnostic","group":"propagation","disposition":"NOT_APPLICABLE","reason":"No camera signal, measured amplitude or optical propagation output calculated; physical use would require its own transfer assessment","evidence":["docs/topics/0.13_Thermodynamic_Bridge/Result/T13_PHYSICAL_ROUTE_ADMISSION_2026-10-18.md"]},
-    {"id":"physical-time-and-normalization","group":"frame_time","disposition":"UNKNOWN","reason":"Native normalization images not signed off; experimental synchronization and source/detector timing not admitted","owner":"Topic13 source/operator reviewer","next_action":"Verify S16/S18 and common time/phase convention in the calibration package before physical scoring","evidence":["docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/physical_route_admission_sources.json"]},
-    {"id":"physical-detector","group":"detector","disposition":"UNKNOWN","reason":"Directional readout is documented but point-to-mode normalization, gains, exposure, offsets and detector interaction/error records remain unadmitted","owner":"Topic13 observation reviewer","next_action":"Supply independent point-A/point-B profile map, signed two-channel transfer and joint uncertainty for the same operating state","evidence":["docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/physical_route_admission_sources.json"]},
-    {"id":"physical-admission-and-processing","group":"processing","disposition":"UNKNOWN","reason":"No admitted UET material projection, independent calibration/holdout partition, eligible numeric records or joint acceptance sets","owner":"Topic13/Core correspondence reviewer","next_action":"First establish a predeclared distinguishing material/operator relation; only then admit the seven-item same-state packet. Do not fit a map to reserved outputs.","evidence":["docs/topics/0.13_Thermodynamic_Bridge/Result/T13_PHYSICAL_ROUTE_ADMISSION_2026-10-18.md"]},
-    {"id":"numerics","group":"numerics","disposition":"MODELED","reason":"Exact Fraction residual, monotonicity and interval endpoints; bounded bisection, nested refinement, singularity/branch refusal and harmonic identity tests","evidence":["docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/test_t13_physical_route_admission.py"]}
+  "schema_version": "uet-calculation-contract-v1",
+  "contract_id": "T13_PHYSICAL_ROUTE_ADMISSION_V1",
+  "profile": "SYNTHETIC",
+  "review": {
+    "status": "INCOMPLETE",
+    "reviewer": "agent:physical-route-admission",
+    "rationale": "Source-model operator and reference transcription reviewed; no experimental response inference. UET correspondence, native normalization sign-off, independent calibration and output-unit physical error budget remain unadmitted. Structural validation is not independent physical review."
+  },
+  "question": "Does the selected two-electrode/two-direction native MEMS protocol admit a locked physical UET discrimination test with the currently verified inputs?",
+  "output": {
+    "quantity": "source-model bias enclosure, source harmonic identity and route admission decision",
+    "unit": "dimensionless native source-model coordinates and squared frequencies",
+    "domain": "Declared zero-AC E2 54 V DC source-model branch y in [0,1/4], E1 off; positive local mass/stiffness and no physical measured-response score",
+    "accuracy": "48 exact rational bisections; root enclosure width <= 2^-50; exact voltage-square and inertial identities; no physical uncertainty threshold invented",
+    "claim_intent": "DIAGNOSTIC"
+  },
+  "model": {
+    "formula_ids": [
+      "RochaYounis2022.Eq1-2.native-comparator",
+      "native.f=wn2^2*y+k32*y^3-beta2*Vdc2^2/(1-y)^2",
+      "native.local_w2^2=(wn2^2+3*k32*y0^2-2*beta2*Vdc2^2/(1-y0)^3)/(1+delta2*y0^2)",
+      "native.voltage-square-harmonics",
+      "native.inertial-cubic-harmonics"
+    ],
+    "assumptions": "Reference Table S1 decimal values treated as exact source-model inputs for this diagnostic, not exact material constants. Conditional E1-off source configuration; only the explicitly bracketed stable branch is certified.",
+    "approximation": "Local linearization around a configured static state; no experimental driven mean shift reconstructed. Inertia sensitivity favorable in the authors' tested IR configuration is retained, not assumed to supply a physical omission bound.",
+    "initial_boundary": "Static residual on [0,1/4]; bounded monotonicity and positive local stiffness; invalid branch/domain refuses computation without clipping",
+    "drive_environment": "Electrostatic squared voltage and gap factor explicitly distinguished. Published 54 V / 0.5 V cosine-coefficient reference for harmonic algebra; root computation uses AC=0. Pressure/damping/source transfer are not inferred from response fits.",
+    "parameters": "11 Table S1 model coefficients from hash-verified public supplement; upstream geometry/material adjustment to frequency data is disclosed. No new UET parameter, fit, uncertainty, sweep or response trajectory."
+  },
+  "data_policy": {
+    "uses_observations": false,
+    "calibration_ids": [],
+    "comparison_ids": [],
+    "independent_validation": false,
+    "holdout_policy": "Cites physical publications as protocol/equation/model-parameter sources only; no measured response rows or digitized curves used for inference. Already inspected figures are not blind holdout. Raw comparison records and calibration split remain unadmitted."
+  },
+  "observation": {
+    "source_state": "Native mechanical x/y generalized coordinates with bias-dependent equilibrium; neither is identified as Phi",
+    "generated_trace": "No dissipation trace identified with all state or information; no entropy identity invoked",
+    "carrier": "No optical propagation computation or measured waveform score in this source-model diagnostic",
+    "observer_state": "Published directional camera targets differ from generalized coordinate point; mode-profile map, phase/exposure, gain, offsets and uncertainty not admitted",
+    "readout": "Two directional observations are capability evidence, not calibrated signed modal records. Native normalization equation images exist but the current renderer did not permit sign-off.",
+    "backaction": "Electrode forcing enters native equations; optical detector interaction not quantified and therefore no physical acceptance or zero-backaction assertion",
+    "frame": "Native dimensionless mode coordinates only; mass and SI normalization not independently established",
+    "time_convention": "Dimensionless native time; distinguish voltage, force and mechanical frequencies. No SI timing calibration or RMS-to-peak conversion invented.",
+    "product_level": "Curated reference metadata plus exact source-model diagnostic, not raw experimental data or reduction",
+    "corrections": [
+      {
+        "id": "source-and-detector-transfer",
+        "state": "UNKNOWN",
+        "evidence": "docs/topics/0.13_Thermodynamic_Bridge/Result/T13_PHYSICAL_ROUTE_ADMISSION_2026-10-18.md"
+      }
+    ],
+    "system_partition": {
+      "role_mode": "RELATIONAL",
+      "accounting_component_id": "source-model-state",
+      "boundary": "Offline admission analysis of a fixed reference/product, not a complete physical detector simulation. Original physical preparation, transfer, calibration and backaction gaps remain unadmitted.",
+      "systems": [
+        {
+          "id": "input_record",
+          "state": "Declared fixed reference/product",
+          "state_accounting": {
+            "kind": "INDEPENDENT",
+            "state_ids": [
+              "physical_route_admission.input"
+            ],
+            "owner_ids": [],
+            "rule": "Count input once as a computational object, not added physical energy or a complete source state."
+          }
+        },
+        {
+          "id": "analysis",
+          "state": "Admission-test configuration excluding the fixed input",
+          "state_accounting": {
+            "kind": "INDEPENDENT",
+            "state_ids": [
+              "physical_route_admission.config"
+            ],
+            "owner_ids": [],
+            "rule": "Configuration is separate; output is derived, not another physical substance."
+          }
+        }
+      ],
+      "couplings": [
+        {
+          "id": "offline_read",
+          "source": "input_record",
+          "target": "analysis",
+          "kind": "DETECTION",
+          "component_id": "physical-admission-and-processing",
+          "map": "Existing diagnostic algorithm reads the fixed input; physical measurement transfer is not reconstructed."
+        },
+        {
+          "id": "offline_feedback",
+          "source": "analysis",
+          "target": "input_record",
+          "kind": "BACKACTION",
+          "component_id": "offline_read_only",
+          "map": "No software update of the fixed input. This does not assume zero physical detector backaction."
+        }
+      ],
+      "observables": [
+        {
+          "id": "admission_record",
+          "detector_id": "analysis",
+          "target_systems": [
+            "input_record"
+          ],
+          "quantity": "Conditional admission/domain diagnostic",
+          "readout_map": "Existing entrypoint and evidence only; no calibrated physical residual or UET validation",
+          "component_id": "physical-admission-and-processing",
+          "backaction_targets": [
+            "input_record"
+          ],
+          "backaction_scope_reason": "Fixed-input offline analysis only. Original physical detector/backaction uncertainty remains UNKNOWN."
+        }
+      ]
+    }
+  },
+  "components": [
+    {
+      "id": "source-model-state",
+      "group": "system_state",
+      "disposition": "MODELED",
+      "reason": "Configured static branch and local mass/stiffness enclosed from native equations; not a measured material reconstruction",
+      "evidence": [
+        "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/Research_T13_Physical_Route_Admission.py"
+      ]
+    },
+    {
+      "id": "source-model-drive",
+      "group": "drive_environment",
+      "disposition": "MODELED",
+      "reason": "Voltage-square harmonics, gap-factor domain and bias-dependent equilibrium explicit; pure-sine or source-free auxiliary assumptions not silently reused",
+      "evidence": [
+        "docs/topics/0.13_Thermodynamic_Bridge/Result/T13_PHYSICAL_ROUTE_ADMISSION_2026-10-18.md"
+      ]
+    },
+    {
+      "id": "carrier-for-diagnostic",
+      "group": "propagation",
+      "disposition": "NOT_APPLICABLE",
+      "reason": "No camera signal, measured amplitude or optical propagation output calculated; physical use would require its own transfer assessment",
+      "evidence": [
+        "docs/topics/0.13_Thermodynamic_Bridge/Result/T13_PHYSICAL_ROUTE_ADMISSION_2026-10-18.md"
+      ]
+    },
+    {
+      "id": "physical-time-and-normalization",
+      "group": "frame_time",
+      "disposition": "UNKNOWN",
+      "reason": "Native normalization images not signed off; experimental synchronization and source/detector timing not admitted",
+      "owner": "Topic13 source/operator reviewer",
+      "next_action": "Verify S16/S18 and common time/phase convention in the calibration package before physical scoring",
+      "evidence": [
+        "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/physical_route_admission_sources.json"
+      ]
+    },
+    {
+      "id": "physical-detector",
+      "group": "detector",
+      "disposition": "UNKNOWN",
+      "reason": "Directional readout is documented but point-to-mode normalization, gains, exposure, offsets and detector interaction/error records remain unadmitted",
+      "owner": "Topic13 observation reviewer",
+      "next_action": "Supply independent point-A/point-B profile map, signed two-channel transfer and joint uncertainty for the same operating state",
+      "evidence": [
+        "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/physical_route_admission_sources.json"
+      ]
+    },
+    {
+      "id": "physical-admission-and-processing",
+      "group": "processing",
+      "disposition": "UNKNOWN",
+      "reason": "No admitted UET material projection, independent calibration/holdout partition, eligible numeric records or joint acceptance sets",
+      "owner": "Topic13/Core correspondence reviewer",
+      "next_action": "First establish a predeclared distinguishing material/operator relation; only then admit the seven-item same-state packet. Do not fit a map to reserved outputs.",
+      "evidence": [
+        "docs/topics/0.13_Thermodynamic_Bridge/Result/T13_PHYSICAL_ROUTE_ADMISSION_2026-10-18.md"
+      ]
+    },
+    {
+      "id": "numerics",
+      "group": "numerics",
+      "disposition": "MODELED",
+      "reason": "Exact Fraction residual, monotonicity and interval endpoints; bounded bisection, nested refinement, singularity/branch refusal and harmonic identity tests",
+      "evidence": [
+        "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/test_t13_physical_route_admission.py"
+      ]
+    },
+    {
+      "id": "offline_read_only",
+      "group": "processing",
+      "disposition": "NOT_APPLICABLE",
+      "reason": "Fixed inputs are not changed by this offline computation. Physical detector backaction is not excluded or set to zero.",
+      "evidence": [
+        "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/Research_T13_Physical_Route_Admission.py"
+      ]
+    }
   ],
-  "error_budget":{"unit":"dimensionless native source-model coordinates and squared frequencies","numerical":"Exact rational operations and root width <= 2^-50 on declared branch; interval enclosure rather than floating-point root guess","approximation":"Local source-model linearization, not experimental prediction. Full driven response, material projection and physical omission bounds remain open.","measurement":"No measured-response comparison, measurement error or manufacturer specification substituted for run-specific uncertainty","systematic":"Upstream fitted geometry, modal normalization, source phase/force transfer, detector gains/offsets/exposure and bias-dependent state require independent calibration","omissions":"Unadmitted physical effects not assigned zero; paper's small inertial sensitivity at its IR setting does not certify every use","dependence":"No covariance or independence invented; future error propagation must use justified joint sets or conservative bounds","acceptance":"Only source-model diagnostic identities are checked now. Physical rejection requires predeclared independently calibrated prediction and measurement sets and existing physics gates; no numeric physical threshold available.","omission_limit":null},
-  "identities":[
-    {"path":"docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/physical_route_admission_sources.json","kind":"working_file","role":"input","sha256":"5628386581b503e6dd2e65c38bbc100ff47ab79f646b1da9d37592631e8bde4e"},
-    {"path":"docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/Research_T13_Physical_Route_Admission.py","kind":"working_file","role":"code","sha256":"628dac8633bb98c15e4c448dece7cb8632fbe38b2fbc6670b5b62f74f96a688e"},
-    {"path":"docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/test_t13_physical_route_admission.py","kind":"working_file","role":"code","sha256":"6a5f8143b155cb9f4ba0118eb8c2402a59b4209e53612eb8ec56885fcba4fa84"},
-    {"path":"docs/topics/0.13_Thermodynamic_Bridge/Result/T13_PHYSICAL_ROUTE_ADMISSION_2026-10-18.md","kind":"working_file","role":"evidence","sha256":"c716f5e5cfad6bbe0050d2329fcd9520f58f4acaa9f8c239050249c9418fdbc7"}
+  "error_budget": {
+    "unit": "dimensionless native source-model coordinates and squared frequencies",
+    "numerical": "Exact rational operations and root width <= 2^-50 on declared branch; interval enclosure rather than floating-point root guess",
+    "approximation": "Local source-model linearization, not experimental prediction. Full driven response, material projection and physical omission bounds remain open.",
+    "measurement": "No measured-response comparison, measurement error or manufacturer specification substituted for run-specific uncertainty",
+    "systematic": "Upstream fitted geometry, modal normalization, source phase/force transfer, detector gains/offsets/exposure and bias-dependent state require independent calibration",
+    "omissions": "Unadmitted physical effects not assigned zero; paper's small inertial sensitivity at its IR setting does not certify every use",
+    "dependence": "No covariance or independence invented; future error propagation must use justified joint sets or conservative bounds",
+    "acceptance": "Only source-model diagnostic identities are checked now. Physical rejection requires predeclared independently calibrated prediction and measurement sets and existing physics gates; no numeric physical threshold available.",
+    "omission_limit": null
+  },
+  "identities": [
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/physical_route_admission_sources.json",
+      "kind": "working_file",
+      "role": "input",
+      "sha256": "5628386581b503e6dd2e65c38bbc100ff47ab79f646b1da9d37592631e8bde4e"
+    },
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/Research_T13_Physical_Route_Admission.py",
+      "kind": "working_file",
+      "role": "code",
+      "sha256": "628dac8633bb98c15e4c448dece7cb8632fbe38b2fbc6670b5b62f74f96a688e"
+    },
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/test_t13_physical_route_admission.py",
+      "kind": "working_file",
+      "role": "code",
+      "sha256": "6a5f8143b155cb9f4ba0118eb8c2402a59b4209e53612eb8ec56885fcba4fa84"
+    },
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/T13_PHYSICAL_ROUTE_ADMISSION_2026-10-18.md",
+      "kind": "working_file",
+      "role": "evidence",
+      "sha256": "c716f5e5cfad6bbe0050d2329fcd9520f58f4acaa9f8c239050249c9418fdbc7"
+    }
   ],
-  "entrypoints":["docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/Research_T13_Physical_Route_Admission.py","docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/test_t13_physical_route_admission.py"],
-  "evidence":["docs/topics/0.13_Thermodynamic_Bridge/Result/T13_PHYSICAL_ROUTE_ADMISSION_2026-10-18.md","https://www.nature.com/articles/s41598-022-14657-1"],
-  "claim_boundary":"Selected-route limitation and sourced native-model diagnostic only; no locked UET physical prediction, external validation, unique UET mechanism, SI Phi anchor, He-II or Full Topic13/Core closure",
-  "next_action":"Reopen when a named distinguishing UET material projection or independently calibrated same-state source/readout/error packet supplies decision-changing evidence; do not repeat unchanged keyword searches or score already exposed response plots as blind. No automatic contact, purchase, worktree or push."
+  "entrypoints": [
+    "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/Research_T13_Physical_Route_Admission.py",
+    "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/test_t13_physical_route_admission.py"
+  ],
+  "evidence": [
+    "docs/topics/0.13_Thermodynamic_Bridge/Result/T13_PHYSICAL_ROUTE_ADMISSION_2026-10-18.md",
+    "https://www.nature.com/articles/s41598-022-14657-1"
+  ],
+  "claim_boundary": "Selected-route limitation and sourced native-model diagnostic only; no locked UET physical prediction, external validation, unique UET mechanism, SI Phi anchor, He-II or Full Topic13/Core closure",
+  "next_action": "Reopen when a named distinguishing UET material projection or independently calibrated same-state source/readout/error packet supplies decision-changing evidence; do not repeat unchanged keyword searches or score already exposed response plots as blind. No automatic contact, purchase, worktree or push."
 }

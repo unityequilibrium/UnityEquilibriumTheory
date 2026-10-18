@@ -160,7 +160,7 @@ ASTRONOMY_INPUTS = {
         "Data/03_Research/Laniakea_Flows.json", "Data/03_Research/source_lock_manifest.json",
         "Data/Cosmicflows_3_Subset.csv", "Data/Pioneer_Anomaly_Data.csv"]
 }
-ASTRONOMY_CODE_COMMIT = "f7ba82307ae4afc698cccc9533d1056782004b9c"
+ASTRONOMY_CODE_COMMIT = "829c7150260452df186c46bdc653ad758983eaee"  # All five source hashes match the former local pin.
 
 
 def adopt_offline_product(contract: dict, topic: str, root: Path = ROOT) -> dict:
@@ -179,7 +179,7 @@ def adopt_offline_product(contract: dict, topic: str, root: Path = ROOT) -> dict
                 existing[path].update(item)
             else:
                 contract["identities"].append(item)
-    contract["review"]["rationale"] = "W8 source/product admission review only. Scientific code evidence is pinned to f7ba82307; unrelated uncommitted producer work is not integrated or certified. Unchanged local input products are identified separately. Upstream observation and physical claims remain INCOMPLETE."
+    contract["review"]["rationale"] = "W8 source/product admission review only. Scientific code evidence is pinned to public main 829c71502 after verifying all five hashes equal the original local f7ba82307 evidence; unrelated uncommitted producer work is not integrated or certified. Unchanged local input products are identified separately. Upstream observation and physical claims remain INCOMPLETE."
     contract["entrypoints"] = sorted(set(contract["entrypoints"] + [files[0]]))
     contract["observation"]["system_partition"] = {
         "role_mode": "RELATIONAL", "accounting_component_id": "system_state",
@@ -237,7 +237,7 @@ def pilots() -> list[tuple[str, dict]]:
       "accounting_component_id": "system_state",
       "boundary": "Same normalized one-dimensional C/Phi/Pi dynamics and candidate receiver; source-time convention, configured periodic/zero-flux boundary and inherited numerical tolerances only. The aggregate is a view, not a new state. No physical carrier, detector mapping or source backaction is admitted.",
       "boundary_change": {
-        "baseline_identity": "git:ced764b9bf1b438c3684636b16a4a628cbf9cf70:docs/core/00_governance/calculation_contracts/matter_space_observer.json",
+        "baseline_identity": "docs/core/00_governance/calculation_contract_baselines/matter_space_observer_legacy.json",
         "baseline_contract_id": "CORE_MATTER_SPACE_OBSERVER_V1",
         "baseline_contract_sha256": "6d11ee73d8c65ae830696c0ddcdb16c4ca3f72f7b5872061322d5d5f7d96f23d",
         "component_id": "system_state",
@@ -262,8 +262,8 @@ def pilots() -> list[tuple[str, dict]]:
       ]
     }
     c["identities"].insert(0, {
-        "path": "docs/core/00_governance/calculation_contracts/matter_space_observer.json",
-        "kind": "git_blob", "commit": "ced764b9bf1b438c3684636b16a4a628cbf9cf70",
+        "path": "docs/core/00_governance/calculation_contract_baselines/matter_space_observer_legacy.json",
+        "kind": "working_file",
         "role": "evidence", "sha256": "2a67ca63b40c0bcec2bb47653e36e218cadf460a3ea12ff1731e47edff807b0c"
     })
     result.append(("docs/core/00_governance/calculation_contracts/matter_space_observer.json", c))

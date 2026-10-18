@@ -1,26 +1,254 @@
 {
-  "schema_version":"uet-calculation-contract-v1",
-  "contract_id":"T13_ACTUAL_READOUT_ADMISSION_V1",
-  "profile":"PHYSICAL_COMPARISON",
-  "review":{"status":"INCOMPLETE","reviewer":"agent:actual-readout-admission","rationale":"Verified small processed member, central-domain profile and exact shared-gain/minimax necessary enclosure; no optimizer adopted as calibration. Unknown run-matched gain/mismatch, noise and joint calibration/averaging errors prevent physical acceptance or rejection."},
-  "question":"Can the actual low-power Fig3c processed magnitude be pointwise inverted using the independently published central ideal hanger rates, without clipping, fitting or silently ignoring measurement effects?",
-  "output":{"quantity":"all-row domain counts and constant-gain necessary error enclosure","unit":"dimensionless S21 amplitude","domain":"One exposed low-power Set III processed experimental curve; not raw complex time records or all source data","accuracy":"Exact rational comparisons of preserved decimal tokens against rounded central rates; no physical uncertainty threshold","claim_intent":"DIAGNOSTIC"},
-  "model":{"formula_ids":["audit.passive-hanger-amplitude-domain","audit.shared-gain-range-enclosure","audit.optimistic-uniform-error-minimax"],"assumptions":"Conditional real-deembedded stationary passive single-pole transfer. Central lower amplitude bound kappa_int/(kappa_int+kappa_ext), upper finite-inverse boundary 1. Gain-only diagnostic relaxes to closed range [l,1] with independently variable latent amplitudes and one common positive gain; compatibility is only necessary.","approximation":"Ideal transfer not admitted as exact measurement operator. Noise, complex mismatch and averaging cannot be silently dropped; outside-domain counts do not reject physics.","initial_boundary":"Authors classify Fig3c as a single stable fixed-point regime; per-record stationarity/averaging bounds remain unresolved.","drive_environment":"Low-power nominal single-power sweep per source. Absolute flux and Kerr not inferred or used in this dimensionless domain profile.","parameters":"Set III linewidths from independently determined source Table1, rounded central 0.68 and 1.64 MHz in frequency-over-2pi units. Common conversion cancels; no target-derived gain adopted as calibration, selected branch or physical calibration uncertainty invented. Envelope optimizer is a diagnostic certificate, not a correction."},
-  "data_policy":{"uses_observations":true,"calibration_ids":["Dhiman2026-Table1-SetIII-central-rates"],"comparison_ids":["Zenodo18954807-Figure3c-Experiment"],"independent_validation":false,"holdout_policy":"All 1001 processed experimental rows exposed for exploratory domain assessment. No theory residual scored. This curve is not blind holdout and compatible rows may not be selected post-hoc as independent validation."},
-  "observation":{"source_state":"Authors' low-drive stationary candidate; no independent new trajectory measurement","generated_trace":"No dissipation proxy or universal Phi identification","carrier":"Conditional cavity transfer only, not full apparatus validation","observer_state":"Gain, complex mismatch, noise covariance and correction uncertainty unknown for this exported curve","readout":"All reported S21 absolute values preserved; no clipping or pointwise inverse performed","backaction":"Native optomechanical source backaction acknowledged, not newly inferred or set to zero; domain profile does not estimate it","frame":"Same source linewidth units cancel in dimensionless ratio; detuning-axis conversion unresolved and not used in a physical residual","time_convention":"Complex time-average over final 2 ms of 1.4 s pulse per paper, with equilibration; not generally mean instantaneous intensity","product_level":"Processed displayed-figure experimental CSV, CRLF normalized to LF only","corrections":[{"id":"gain-mismatch-noise-and-averaging","state":"UNKNOWN","evidence":"docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/dhiman_2026_fig3c_readout_manifest.json"}]},
-  "components":[
-    {"id":"system-state","group":"system_state","disposition":"UNKNOWN","reason":"Author classification supports a stationary candidate, not a new quantified per-record state bound","owner":"Topic13 readout reviewer","next_action":"Trace matched state/averaging evidence before a physical residual","evidence":["docs/topics/0.13_Thermodynamic_Bridge/Result/T13_READOUT_ADMISSION_2026-10-18.md"]},
-    {"id":"absolute-drive","group":"drive_environment","disposition":"NOT_APPLICABLE","reason":"No occupation or dimensional response inferred; conditional dimensionless amplitude-domain profile does not require absolute flux","evidence":["docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/Research_T13_Readout_Admission.py"]},
-    {"id":"conditional-carrier","group":"propagation","disposition":"MODELED","reason":"Central ideal passive single-pole amplitude range only, not asserted complete measured transfer","evidence":["docs/topics/0.13_Thermodynamic_Bridge/Result/T13_READOUT_ADMISSION_2026-10-18.md"]},
-    {"id":"frame-and-units","group":"frame_time","disposition":"MODELED","reason":"Linewidth common unit cancels; detuning tokens preserved but not interpreted as dimensional residual inputs","evidence":["docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/dhiman_2026_fig3c_readout_manifest.json"]},
-    {"id":"actual-observer","group":"detector","disposition":"UNKNOWN","reason":"Joint noise/gain/mismatch/calibration error packet unadmitted; unknown is not zero","owner":"Topic13 readout reviewer","next_action":"Trace exact-curve correction and uncertainty record, no target-fit replacement","evidence":["docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/dhiman_2026_fig3c_readout_manifest.json"]},
-    {"id":"processed-member","group":"processing","disposition":"MODELED","reason":"Verified upstream SHA/CRC reconstructed from newline-normalized copy; every row preserved, source averaging disclosed","evidence":["docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/Research_T13_Readout_Admission.py"]},
-    {"id":"exact-profile","group":"numerics","disposition":"MODELED","reason":"Fraction parsing and exact central-domain comparisons, duplicates and malformed values checked; no fitting or data deletion","evidence":["docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/test_t13_readout_admission.py"]}
+  "schema_version": "uet-calculation-contract-v1",
+  "contract_id": "T13_ACTUAL_READOUT_ADMISSION_V1",
+  "profile": "PHYSICAL_COMPARISON",
+  "review": {
+    "status": "INCOMPLETE",
+    "reviewer": "agent:actual-readout-admission",
+    "rationale": "Verified small processed member, central-domain profile and exact shared-gain/minimax necessary enclosure; no optimizer adopted as calibration. Unknown run-matched gain/mismatch, noise and joint calibration/averaging errors prevent physical acceptance or rejection."
+  },
+  "question": "Can the actual low-power Fig3c processed magnitude be pointwise inverted using the independently published central ideal hanger rates, without clipping, fitting or silently ignoring measurement effects?",
+  "output": {
+    "quantity": "all-row domain counts and constant-gain necessary error enclosure",
+    "unit": "dimensionless S21 amplitude",
+    "domain": "One exposed low-power Set III processed experimental curve; not raw complex time records or all source data",
+    "accuracy": "Exact rational comparisons of preserved decimal tokens against rounded central rates; no physical uncertainty threshold",
+    "claim_intent": "DIAGNOSTIC"
+  },
+  "model": {
+    "formula_ids": [
+      "audit.passive-hanger-amplitude-domain",
+      "audit.shared-gain-range-enclosure",
+      "audit.optimistic-uniform-error-minimax"
+    ],
+    "assumptions": "Conditional real-deembedded stationary passive single-pole transfer. Central lower amplitude bound kappa_int/(kappa_int+kappa_ext), upper finite-inverse boundary 1. Gain-only diagnostic relaxes to closed range [l,1] with independently variable latent amplitudes and one common positive gain; compatibility is only necessary.",
+    "approximation": "Ideal transfer not admitted as exact measurement operator. Noise, complex mismatch and averaging cannot be silently dropped; outside-domain counts do not reject physics.",
+    "initial_boundary": "Authors classify Fig3c as a single stable fixed-point regime; per-record stationarity/averaging bounds remain unresolved.",
+    "drive_environment": "Low-power nominal single-power sweep per source. Absolute flux and Kerr not inferred or used in this dimensionless domain profile.",
+    "parameters": "Set III linewidths from independently determined source Table1, rounded central 0.68 and 1.64 MHz in frequency-over-2pi units. Common conversion cancels; no target-derived gain adopted as calibration, selected branch or physical calibration uncertainty invented. Envelope optimizer is a diagnostic certificate, not a correction."
+  },
+  "data_policy": {
+    "uses_observations": true,
+    "calibration_ids": [
+      "Dhiman2026-Table1-SetIII-central-rates"
+    ],
+    "comparison_ids": [
+      "Zenodo18954807-Figure3c-Experiment"
+    ],
+    "independent_validation": false,
+    "holdout_policy": "All 1001 processed experimental rows exposed for exploratory domain assessment. No theory residual scored. This curve is not blind holdout and compatible rows may not be selected post-hoc as independent validation."
+  },
+  "observation": {
+    "source_state": "Authors' low-drive stationary candidate; no independent new trajectory measurement",
+    "generated_trace": "No dissipation proxy or universal Phi identification",
+    "carrier": "Conditional cavity transfer only, not full apparatus validation",
+    "observer_state": "Gain, complex mismatch, noise covariance and correction uncertainty unknown for this exported curve",
+    "readout": "All reported S21 absolute values preserved; no clipping or pointwise inverse performed",
+    "backaction": "Native optomechanical source backaction acknowledged, not newly inferred or set to zero; domain profile does not estimate it",
+    "frame": "Same source linewidth units cancel in dimensionless ratio; detuning-axis conversion unresolved and not used in a physical residual",
+    "time_convention": "Complex time-average over final 2 ms of 1.4 s pulse per paper, with equilibration; not generally mean instantaneous intensity",
+    "product_level": "Processed displayed-figure experimental CSV, CRLF normalized to LF only",
+    "corrections": [
+      {
+        "id": "gain-mismatch-noise-and-averaging",
+        "state": "UNKNOWN",
+        "evidence": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/dhiman_2026_fig3c_readout_manifest.json"
+      }
+    ],
+    "system_partition": {
+      "role_mode": "RELATIONAL",
+      "accounting_component_id": "system-state",
+      "boundary": "Offline admission analysis of a fixed reference/product, not a complete physical detector simulation. Original physical preparation, transfer, calibration and backaction gaps remain unadmitted.",
+      "systems": [
+        {
+          "id": "input_record",
+          "state": "Declared fixed reference/product",
+          "state_accounting": {
+            "kind": "INDEPENDENT",
+            "state_ids": [
+              "readout_admission.input"
+            ],
+            "owner_ids": [],
+            "rule": "Count input once as a computational object, not added physical energy or a complete source state."
+          }
+        },
+        {
+          "id": "analysis",
+          "state": "Admission-test configuration excluding the fixed input",
+          "state_accounting": {
+            "kind": "INDEPENDENT",
+            "state_ids": [
+              "readout_admission.config"
+            ],
+            "owner_ids": [],
+            "rule": "Configuration is separate; output is derived, not another physical substance."
+          }
+        }
+      ],
+      "couplings": [
+        {
+          "id": "offline_read",
+          "source": "input_record",
+          "target": "analysis",
+          "kind": "DETECTION",
+          "component_id": "processed-member",
+          "map": "Existing diagnostic algorithm reads the fixed input; physical measurement transfer is not reconstructed."
+        },
+        {
+          "id": "offline_feedback",
+          "source": "analysis",
+          "target": "input_record",
+          "kind": "BACKACTION",
+          "component_id": "offline_read_only",
+          "map": "No software update of the fixed input. This does not assume zero physical detector backaction."
+        }
+      ],
+      "observables": [
+        {
+          "id": "admission_record",
+          "detector_id": "analysis",
+          "target_systems": [
+            "input_record"
+          ],
+          "quantity": "Conditional admission/domain diagnostic",
+          "readout_map": "Existing entrypoint and evidence only; no calibrated physical residual or UET validation",
+          "component_id": "processed-member",
+          "backaction_targets": [
+            "input_record"
+          ],
+          "backaction_scope_reason": "Fixed-input offline analysis only. Original physical detector/backaction uncertainty remains UNKNOWN."
+        }
+      ]
+    }
+  },
+  "components": [
+    {
+      "id": "system-state",
+      "group": "system_state",
+      "disposition": "UNKNOWN",
+      "reason": "Author classification supports a stationary candidate, not a new quantified per-record state bound",
+      "owner": "Topic13 readout reviewer",
+      "next_action": "Trace matched state/averaging evidence before a physical residual",
+      "evidence": [
+        "docs/topics/0.13_Thermodynamic_Bridge/Result/T13_READOUT_ADMISSION_2026-10-18.md"
+      ]
+    },
+    {
+      "id": "absolute-drive",
+      "group": "drive_environment",
+      "disposition": "NOT_APPLICABLE",
+      "reason": "No occupation or dimensional response inferred; conditional dimensionless amplitude-domain profile does not require absolute flux",
+      "evidence": [
+        "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/Research_T13_Readout_Admission.py"
+      ]
+    },
+    {
+      "id": "conditional-carrier",
+      "group": "propagation",
+      "disposition": "MODELED",
+      "reason": "Central ideal passive single-pole amplitude range only, not asserted complete measured transfer",
+      "evidence": [
+        "docs/topics/0.13_Thermodynamic_Bridge/Result/T13_READOUT_ADMISSION_2026-10-18.md"
+      ]
+    },
+    {
+      "id": "frame-and-units",
+      "group": "frame_time",
+      "disposition": "MODELED",
+      "reason": "Linewidth common unit cancels; detuning tokens preserved but not interpreted as dimensional residual inputs",
+      "evidence": [
+        "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/dhiman_2026_fig3c_readout_manifest.json"
+      ]
+    },
+    {
+      "id": "actual-observer",
+      "group": "detector",
+      "disposition": "UNKNOWN",
+      "reason": "Joint noise/gain/mismatch/calibration error packet unadmitted; unknown is not zero",
+      "owner": "Topic13 readout reviewer",
+      "next_action": "Trace exact-curve correction and uncertainty record, no target-fit replacement",
+      "evidence": [
+        "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/dhiman_2026_fig3c_readout_manifest.json"
+      ]
+    },
+    {
+      "id": "processed-member",
+      "group": "processing",
+      "disposition": "MODELED",
+      "reason": "Verified upstream SHA/CRC reconstructed from newline-normalized copy; every row preserved, source averaging disclosed",
+      "evidence": [
+        "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/Research_T13_Readout_Admission.py"
+      ]
+    },
+    {
+      "id": "exact-profile",
+      "group": "numerics",
+      "disposition": "MODELED",
+      "reason": "Fraction parsing and exact central-domain comparisons, duplicates and malformed values checked; no fitting or data deletion",
+      "evidence": [
+        "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/test_t13_readout_admission.py"
+      ]
+    },
+    {
+      "id": "offline_read_only",
+      "group": "processing",
+      "disposition": "NOT_APPLICABLE",
+      "reason": "Fixed inputs are not changed by this offline computation. Physical detector backaction is not excluded or set to zero.",
+      "evidence": [
+        "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/Research_T13_Readout_Admission.py"
+      ]
+    }
   ],
-  "error_budget":{"unit":"dimensionless S21 amplitude","numerical":"Exact decimal-token rational arithmetic; central-bound counts and relaxed minimax enclosure deterministic","approximation":"Ideal real-port transfer is conditional; central rate rounding has no invented physical error bound","measurement":"Unknown magnitude noise and complex-average uncertainty; out-of-domain observed values do not alone falsify a noiseless law","systematic":"Unknown gain/mismatch/deembedding and run-matched state dependence","omissions":"No omitted measurement effect assumed zero; this profile is diagnostic only","dependence":"No independence/covariance inferred from neighboring detuning points; common calibration and processing effects retained as unresolved","acceptance":"No physical acceptance/rejection or statistical threshold; keep all rows and require admitted joint measurement/calibration/averaging model before scoring","omission_limit":null},
-  "identities":[{"path":"docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/dhiman_2026_fig3c_experiment.csv","sha256":"361312be67c6bca19506299c7f7ede6dfd6824a3d803893e7f318b7158260948","kind":"working_file","role":"input"},{"path":"docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/dhiman_2026_fig3c_readout_manifest.json","sha256":"5ec4f362804c96494b5039bb5a9fa92cf1f2710a8e22044839c58ecef3b2798c","kind":"working_file","role":"input"},{"path":"docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/Research_T13_Readout_Admission.py","sha256":"51578a9580251465bc5469a48a4c72e173b74a82ae0eba940ef051506d491b41","kind":"working_file","role":"code"},{"path":"docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/test_t13_readout_admission.py","sha256":"7eb26e2a128eee5b58fcc42f8a73fc4b57a00f1566562a26c45a361cb835ece4","kind":"working_file","role":"code"},{"path":"docs/topics/0.13_Thermodynamic_Bridge/Result/T13_READOUT_ADMISSION_2026-10-18.md","sha256":"246186ce102aaf63a3f825b81fdbe24b0209b982839d0a75461400d2a777d684","kind":"working_file","role":"evidence"}],
-  "entrypoints":["docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/Research_T13_Readout_Admission.py","docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/test_t13_readout_admission.py"],
-  "evidence":["docs/topics/0.13_Thermodynamic_Bridge/Result/T13_READOUT_ADMISSION_2026-10-18.md"],
-  "claim_boundary":"Exploratory processed-data/readout compatibility only; no UET theory rejection/validation, independent replication, absolute Phi anchor or new physics gate result.",
-  "next_action":"Trace run-matched noise and/or complex/frequency-dependent readout corrections with joint calibration/averaging bounds. A noiseless constant-gain-only repair of the central domain is ruled out; do not search that unchanged route again. Native readout is not the original mechanical kernel; return to material/operator correspondence before more cavity acquisition. Do not apply exact gcd to noisy rows, clip values, invent uncertainty, fit gain to targets or relabel exposed data blind holdout."
+  "error_budget": {
+    "unit": "dimensionless S21 amplitude",
+    "numerical": "Exact decimal-token rational arithmetic; central-bound counts and relaxed minimax enclosure deterministic",
+    "approximation": "Ideal real-port transfer is conditional; central rate rounding has no invented physical error bound",
+    "measurement": "Unknown magnitude noise and complex-average uncertainty; out-of-domain observed values do not alone falsify a noiseless law",
+    "systematic": "Unknown gain/mismatch/deembedding and run-matched state dependence",
+    "omissions": "No omitted measurement effect assumed zero; this profile is diagnostic only",
+    "dependence": "No independence/covariance inferred from neighboring detuning points; common calibration and processing effects retained as unresolved",
+    "acceptance": "No physical acceptance/rejection or statistical threshold; keep all rows and require admitted joint measurement/calibration/averaging model before scoring",
+    "omission_limit": null
+  },
+  "identities": [
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/dhiman_2026_fig3c_experiment.csv",
+      "sha256": "361312be67c6bca19506299c7f7ede6dfd6824a3d803893e7f318b7158260948",
+      "kind": "working_file",
+      "role": "input"
+    },
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/dhiman_2026_fig3c_readout_manifest.json",
+      "sha256": "5ec4f362804c96494b5039bb5a9fa92cf1f2710a8e22044839c58ecef3b2798c",
+      "kind": "working_file",
+      "role": "input"
+    },
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/Research_T13_Readout_Admission.py",
+      "sha256": "51578a9580251465bc5469a48a4c72e173b74a82ae0eba940ef051506d491b41",
+      "kind": "working_file",
+      "role": "code"
+    },
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/test_t13_readout_admission.py",
+      "sha256": "7eb26e2a128eee5b58fcc42f8a73fc4b57a00f1566562a26c45a361cb835ece4",
+      "kind": "working_file",
+      "role": "code"
+    },
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/T13_READOUT_ADMISSION_2026-10-18.md",
+      "sha256": "246186ce102aaf63a3f825b81fdbe24b0209b982839d0a75461400d2a777d684",
+      "kind": "working_file",
+      "role": "evidence"
+    }
+  ],
+  "entrypoints": [
+    "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/Research_T13_Readout_Admission.py",
+    "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/test_t13_readout_admission.py"
+  ],
+  "evidence": [
+    "docs/topics/0.13_Thermodynamic_Bridge/Result/T13_READOUT_ADMISSION_2026-10-18.md"
+  ],
+  "claim_boundary": "Exploratory processed-data/readout compatibility only; no UET theory rejection/validation, independent replication, absolute Phi anchor or new physics gate result.",
+  "next_action": "Trace run-matched noise and/or complex/frequency-dependent readout corrections with joint calibration/averaging bounds. A noiseless constant-gain-only repair of the central domain is ruled out; do not search that unchanged route again. Native readout is not the original mechanical kernel; return to material/operator correspondence before more cavity acquisition. Do not apply exact gcd to noisy rows, clip values, invent uncertainty, fit gain to targets or relabel exposed data blind holdout."
 }

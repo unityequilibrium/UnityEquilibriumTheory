@@ -5,7 +5,7 @@
   "review": {
     "status": "INCOMPLETE",
     "reviewer": "agent:calculation-observation-standard-v1",
-    "rationale": "W8 source/product admission review only. Scientific code evidence is pinned to f7ba82307; unrelated uncommitted producer work is not integrated or certified. Unchanged local input products are identified separately. Upstream observation and physical claims remain INCOMPLETE.",
+    "rationale": "W8 source/product admission review only. Scientific code evidence is pinned to public main 829c71502 after verifying all five hashes equal the original local f7ba82307 evidence; unrelated uncommitted producer work is not integrated or certified. Unchanged local input products are identified separately. Upstream observation and physical claims remain INCOMPLETE.",
     "coverage_evidence": [
       "docs/topics/0.1_Galaxy_Rotation_Problem/DATA_MANIFEST.md",
       "docs/topics/0.1_Galaxy_Rotation_Problem/VERIFICATION_SPEC.md"
@@ -223,14 +223,14 @@
       "path": "docs/topics/0.1_Galaxy_Rotation_Problem/Code/03_Research/Research_Galaxy_Rotation.py",
       "kind": "git_blob",
       "role": "code",
-      "commit": "f7ba82307ae4afc698cccc9533d1056782004b9c",
+      "commit": "829c7150260452df186c46bdc653ad758983eaee",
       "sha256": "3b3a622cf6268cd7a659b1014c905c5543d302291565f481059ca9326c76f23f"
     },
     {
       "path": "docs/topics/0.1_Galaxy_Rotation_Problem/Code/01_Engine/Engine_Galaxy_V3.py",
       "kind": "git_blob",
       "role": "code",
-      "commit": "f7ba82307ae4afc698cccc9533d1056782004b9c",
+      "commit": "829c7150260452df186c46bdc653ad758983eaee",
       "sha256": "f47f6919c93d7d0bf722c50cf3cf6631de4fe1cf1bb5f748d9960f0e95d5b4db"
     },
     {

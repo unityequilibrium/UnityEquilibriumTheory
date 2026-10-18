@@ -2,6 +2,18 @@
 
 > Scope: shared research standards and the foundation-first equation workflow.
 
+## PR #37 clean-public integration repair
+
+- Expanded the reused sparse publish checkout before asserting file absence;
+  imported 28 truly missing committed Topic13 dependencies, not dirty files.
+- Rebound five equal-hash astronomy sources to public main `829c71502`; packaged
+  the exact previous Core contract as a hash-checked portable baseline.
+- Declared relational offline input/analysis partitions on two admission
+  contracts without removing physical UNKNOWNs or INCOMPLETE claim boundaries.
+- Changed-test suite: 205 PASS. Whole-diff calculation contract review: 0 errors.
+  Hosted CI and merge remain the publish checkpoint, not a physics promotion.
+  Full provenance correction is in WORK_LEDGER/2026/2026-10-19.md.
+
 ## Standards restructure W0-W9
 
 Execution record for the approved long-term goal, not a new physics gate. The

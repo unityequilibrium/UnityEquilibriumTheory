@@ -545,6 +545,18 @@ class ContractTests(unittest.TestCase):
 
 
 class ObserverControls(unittest.TestCase):
+    def test_admission_products_keep_physical_unknowns_after_relational_adoption(self):
+        for name in ("physical_route_admission", "readout_admission"):
+            path = audit.ROOT / f"docs/topics/0.13_Thermodynamic_Bridge/calculation_contracts/{name}.json"
+            contract = audit.load_json(path)
+            self.assertEqual(contract["review"]["status"], "INCOMPLETE")
+            self.assertNotEqual(contract["output"]["claim_intent"], "PHYSICAL_ACCEPTANCE")
+            partition = contract["observation"]["system_partition"]
+            self.assertEqual(partition["role_mode"], "RELATIONAL")
+            self.assertTrue(any(c["group"] == "detector" and c["disposition"] == "UNKNOWN"
+                                for c in contract["components"]))
+            self.assertEqual(audit.validate_contract(contract)["errors"], [])
+
     def test_pilot_builder_and_saved_partition_agree(self):
         builder = audit.ROOT / "docs/scripts/audit/build_calculation_contract_pilots.py"
         tree = ast.parse(builder.read_text(encoding="utf-8-sig"))

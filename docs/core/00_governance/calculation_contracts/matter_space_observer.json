@@ -47,7 +47,7 @@
       "accounting_component_id": "system_state",
       "boundary": "Same normalized one-dimensional C/Phi/Pi dynamics and candidate receiver; source-time convention, configured periodic/zero-flux boundary and inherited numerical tolerances only. The aggregate is a view, not a new state. No physical carrier, detector mapping or source backaction is admitted.",
       "boundary_change": {
-        "baseline_identity": "git:ced764b9bf1b438c3684636b16a4a628cbf9cf70:docs/core/00_governance/calculation_contracts/matter_space_observer.json",
+        "baseline_identity": "docs/core/00_governance/calculation_contract_baselines/matter_space_observer_legacy.json",
         "baseline_contract_id": "CORE_MATTER_SPACE_OBSERVER_V1",
         "baseline_contract_sha256": "6d11ee73d8c65ae830696c0ddcdb16c4ca3f72f7b5872061322d5d5f7d96f23d",
         "component_id": "system_state",
@@ -162,9 +162,8 @@
   },
   "identities": [
     {
-      "path": "docs/core/00_governance/calculation_contracts/matter_space_observer.json",
-      "kind": "git_blob",
-      "commit": "ced764b9bf1b438c3684636b16a4a628cbf9cf70",
+      "path": "docs/core/00_governance/calculation_contract_baselines/matter_space_observer_legacy.json",
+      "kind": "working_file",
       "role": "evidence",
       "sha256": "2a67ca63b40c0bcec2bb47653e36e218cadf460a3ea12ff1731e47edff807b0c"
     },

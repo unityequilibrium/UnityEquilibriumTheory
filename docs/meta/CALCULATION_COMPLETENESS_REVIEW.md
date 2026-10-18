@@ -1,5 +1,18 @@
 # Calculation and observation adoption review
 
+## Public integration note (PR #37)
+
+The publish worktree was sparse; missing on-disk paths were not all missing from
+main. After expanding the existing checkout, only 28 direct Topic13 dependencies
+needed their exact committed sources packaged. Five astronomy source identities
+are now pinned to equal-hash public main `829c71502`, and the previous Core
+contract is a hash-checked portable baseline instead of a local-only Git lookup.
+Two offline admission contracts gained relational partitions; physical UNKNOWNs
+and INCOMPLETE scope remain. The current generated inventory retains ten missing
+or relocated historical baseline paths and does not certify full legacy coverage.
+Changed Python tests: 205 pass; whole-diff contract check: 0 errors. Hosted CI is
+the final integration gate, independent of scientific acceptance.
+
 This is a methodological handoff, not a scientific gate. The generated
 [inventory](calculation_completeness_inventory.json) is the source for current
 coverage counts and the unreviewed queue. The
