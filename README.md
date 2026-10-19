@@ -1,5 +1,8 @@
 # 🔬 Unity Equilibrium Theory (UET) v0.9.0: The "Thermodynamics of Ethics" Framework
 
+<!-- UET-RESEARCH-RETROSPECTIVE: 2026-10-19; navigation notice, not a physics gate -->
+> **ทบทวนก่อนวิจัยต่อ — 19 ต.ค. 2026:** ภาพรวมยังมีช่องว่างด้านนิยาม สายสืบทอดสมการ หน่วย และการทดสอบ ข้อความ/ป้ายผลเก่าต้องอ่านตามขอบเขตหลักฐาน อ่าน [รายงานข้อผิดพลาดและบทเรียน UET](docs/meta/UET_RESEARCH_RETROSPECTIVE.md) โดยเฉพาะข้อ R01–R18 และลำดับแก้ใน §8 ก่อนขยายงาน สถานะจริงยังอ้างอิง artifact/gate ของเส้นทางนั้น
+
 ![Tests](https://img.shields.io/badge/Tests-400+_Verified-brightgreen)
 ![Topics](https://img.shields.io/badge/Topics-38_Master_Domains-blue)
 ![Math](https://img.shields.io/badge/Millennium_Problems-8_Mapped-ff69b4)

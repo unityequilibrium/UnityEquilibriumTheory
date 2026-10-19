@@ -6,6 +6,9 @@ description: "Research module for Thermodynamic Bridge within the Unity Equilibr
 
 # 0.13 Thermodynamic Bridge
 
+<!-- UET-RESEARCH-RETROSPECTIVE: 2026-10-19; navigation notice, not a physics gate -->
+> **ทบทวนก่อนวิจัยต่อ — 19 ต.ค. 2026:** bounded He-4 closure ไม่ปิด Full Topic 13; physical mapping, data admission และข้อจำกัด comparator ต้องตรวจแยกตามสาย อ่าน [รายงานข้อผิดพลาดและบทเรียน UET](../../meta/UET_RESEARCH_RETROSPECTIVE.md) โดยเฉพาะข้อ R01–R18 และลำดับแก้ใน §8 ก่อนขยายงาน สถานะจริงยังอ้างอิง artifact/gate ของเส้นทางนั้น
+
 ## Source Archive And Omitted-Term Boundary (2026-10-03)
 
 [Source/derivation](Result/artifacts/T13_LOW_Q_SOURCE_BOUNDARY_2026-10-03.md)
