@@ -7,6 +7,9 @@ author: "Unity Equilibrium Team"
 
 # Unity Equilibrium Theory Research Hub
 
+<!-- UET-RESEARCH-RETROSPECTIVE: 2026-10-19; navigation notice, not a physics gate -->
+> **ทบทวนก่อนวิจัยต่อ — 19 ต.ค. 2026:** ผลรันและความครบของเอกสารไม่เท่ากับการยืนยันทางฟิสิกส์ ตรวจข้อจำกัดและตัวควบคุมก่อนนำผลเก่าไปอ้างใหม่ อ่าน [รายงานข้อผิดพลาดและบทเรียน UET](meta/UET_RESEARCH_RETROSPECTIVE.md) โดยเฉพาะข้อ R01–R18 และลำดับแก้ใน §8 ก่อนขยายงาน สถานะจริงยังอ้างอิง artifact/gate ของเส้นทางนั้น
+
 This documentation hub is the normative entry point for the repository's technical and
 research-facing material. It is organized to distinguish repository infrastructure from
 scientific claims, and to distinguish current standards from archived historical material.
