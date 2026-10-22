@@ -1,3 +1,471 @@
+## 2026-10-22 - Smooth finite preparation exposes retained state outside the first mode
+
+- Scope/type: one FORMAL state-sufficiency card continuing section 23.5.
+  [Argument section 24](../../meta/UET_THEORY_ARGUMENT.md) and the existing
+  [cycle contract](calculation_contracts/energy_memory_cycle.json) control this pass.
+  Same rod/reference coefficients; no candidate state, fit or physical experiment.
+- Locked preparation: from perturbation rest, smooth b(t)=sin^4(pi*t) on [0,1],
+  F_b=epsilon*(b(t)-exp(-a*T_s)*b(t-T_s)), a=1/10,T_s=2*pi/beta_0.
+  Prescribed manufactured f_P=-G*x_write holds nominal p=0 until t_r=T_s+2.
+  The one-unit wait after write still has that input; it is not undriven waiting.
+- Decision: q_0=q_0_dot=0 exactly after write, but higher mechanical modes retain
+  finite energy. At release, actual projected (p,q_0,q_0_dot)=(0,0,0) matches
+  baseline while 0.002177<x(t_r)/epsilon<0.002187. With both inputs zero,
+  p_dot(t_r+)/epsilon has the same enclosure in normalized controls. The
+  first-mode read-state restart gives zero and is insufficient for this class.
+- Comparison boundary: this does not claim the same-write one-mode simulation
+  also ends at zero, different futures from identical complete states, or failure
+  of every possible reduced representation. The prior steady-band certificate
+  remains valid for its own protocol. This read is an instant and initial slope,
+  not a uniform finite read-waveform or physical derivative measurement.
+- Energy/error: storage and later response are traceable to mechanical deformation/
+  rates, boundary work and dissipation. Zero nominal f_P*p_dot is not zero hardware
+  cost. Matched prescribed-input initial error is bounded by sqrt(42*E_init) for x
+  and sqrt((21/10)*E_init) for the released slope. Conditional initial-state
+  precision is not evidence of actual preparation/source/detector performance.
+- Checks actually run: nine exact SymPy 1.14.0 structural/dual-stiffness checks.
+  The first helper's matrix-versus-scalar zero test failed; checking matrix entries
+  corrected only the helper, not model/protocol/criterion. A 60-digit closed-form
+  sum agrees with mpmath 1.3.0 35-digit interval evaluation. The analytic infinite
+  endpoint tail is <4.3e-6<the predeclared 1e-5 budget; n=0 is exactly zero.
+  No integration, fit, stochastic samples, observations or old scientific rerun.
+- QA: both read-only completeness modes exit 0 (16 contracts/121 routes/0 errors;
+  3752 paths still unreviewed). Review INCOMPLETE/physical-correspondence UNKNOWN.
+  All 27 identities/12 original fingerprints match; 85 report links resolve,
+  160 fence markers/56 tables are consistent; new privacy/whitespace checked.
+- Next controller: section 24.6 / contract next_action. Freeze this witness and
+  the separate positive steady result. Before more scope, checkpoint the ten
+  completed uncommitted sections. A later reviewed choice is protocol-limited
+  one-Phi response versus a wider history reduction with justified state/readout
+  and error budget; no automatic terms, pulse scans or new material-data hunt.
+- Safety/checkpoint: new text/metadata/entries safe; historical log remains partial
+  for publication. No Core/API/default/threshold/artifact/physics-gate changes,
+  external contact, commit/push/merge or automatic next card. Scope expansion
+  stops at the tenth daily section pending a separate safe checkpoint decision.
+- Subsequent local checkpoint: the author's continuation authorizes the proposed
+  scoped safe commit, not push/merge or more research. Only the ten 2026-10-22
+  entries are selected as additions to the HEAD log; older pending edits remain
+  in the working copy. Report/contract now disclose the retrospective and three
+  scientific source/verifier files excluded from this documentation snapshot.
+  No self-contained reproduction or publication readiness is asserted. The daily
+  ledger records the completed safety/identity checks and local-only boundary.
+
+
+## 2026-10-22 - Locked harmonic protocol and positive first-mode error certificate
+
+- Scope/type: one FORMAL method-admission card continuing section 22.6.
+  [Argument section 23](../../meta/UET_THEORY_ARGUMENT.md) and the existing
+  [cycle contract](calculation_contracts/energy_memory_cycle.json) are the
+  controllers. Explicit design from known bounds, not blind preregistration or data.
+- Locked protocol: steady small harmonic endpoint force only, f_P=0; both p/F_b
+  and x/F_b complex phasor transfers; 0.99<=omega/omega_0<=1.01 around the unloaded
+  mechanical fundamental. Prior normalized controls retained; Gamma_P=1 is an
+  explicitly added method-control value, not a fit or new UET/material constant.
+  Target is 1% per-channel relative complex error, not a changed physics threshold.
+- Positive result: the unchanged raw first mode meets the target throughout the
+  band. Symbolic error identities give the same error for both outputs; rational
+  uniform guardrails give 18511/2066610 <0.009 <0.01. No mode, coefficient, residue,
+  readout or band was optimized after the check to make it pass.
+- Limits/control: same mechanical-drive DC transfer has 83.073% relative error
+  and stays excluded. The older 79.117% example used electrical drive, not this
+  port. Arbitrary input mixtures, transient preparation/history, energy/work/
+  dissipation and physical uncertainties are not covered by the two-output result.
+- Extra budget: if independently supported combined corrected-transfer error is
+  bounded by eta, total error <=(0.009+eta)/(1-eta); eta<=1/1010 suffices for 1%.
+  This is not a measured bound, a requirement on every parameter, or permission
+  to assume independent uncertainties/zero unknown effects.
+- Checks actually run: 14 exact assertions (3 symbolic transfer/error identities
+  and 11 rational/control checks) with SymPy 1.14.0/Python fractions. Signed atan
+  remainders and tangent/range checks provide the pi enclosure and uniform
+  certificate. Five 50-digit mpmath in-band points and one off-band DC control
+  check consistency, not the whole band by sampling. No integration, fit,
+  random sample, physical observation or old scientific verifier rerun.
+- QA: completeness full/changed checks exit 0, 16 contracts/121 routes/0 errors;
+  3752 paths remain unreviewed. Direct review INCOMPLETE/physical-correspondence
+  UNKNOWN; all 27 identities/12 original fingerprints match. Report: 85 local
+  links, 144 balanced fence markers/55 consistent tables, new privacy/whitespace.
+- Blocker before/after: one normalized response protocol now has positive
+  approximation-admission evidence. Exact whole-rod closure rejection remains;
+  physical total accuracy and finite-time prepared-state validity stay open.
+  No universal Phi/thermal Phi_E/material or novelty/learning/global claim promoted.
+- Next controller: section 23.5 / contract next_action. Freeze this method card;
+  no denser grid or parameter/band optimization. A new FORMAL finite-preparation
+  card needs one write envelope, wait/read window and initial higher-mode bounds.
+  Do not reuse the steady certificate as memory evidence or rerun old equivalence.
+- Safety/checkpoint: new text/metadata/entries safe; historical log partial for
+  publication. No Core/API/default/threshold/artifact/gate mutation, sample/data
+  acquisition, external contact, commit/push/merge or automatic next wave.
+
+## 2026-10-22 - Fixed-loaded rod projection and one-mode closure boundary
+
+- Scope/type: one FORMAL mode/boundary-admission pass continuing section 21.6.
+  [Argument section 22](../../meta/UET_THEORY_ARGUMENT.md) and the existing
+  [cycle contract](calculation_contracts/energy_memory_cycle.json) are the
+  controllers. One declared geometry, no material selection or Core equation change.
+- New reference: uniform small polarization perturbation reciprocally coupled to
+  a clamped/endpoint-loaded longitudinal rod with declared mass-proportional drag.
+  Coupling, boundary work, modal source and both mathematical outputs derive from
+  one quadratic availability. Imported elasticity and AI-added assumptions are
+  separated; this is not admission of the full quartic physical C/Phi/Pi model.
+- Decision: every mechanical mode has nonzero endpoint-source/coupling overlap.
+  Endpoint displacement is a sum of modes, not q_0. Exact all-frequency/same-port
+  whole-rod closure by a three-state constant-coefficient model is rejected.
+  Unrenormalized first mode misses 1-8/pi^2 = 18.943% of static compliance.
+  This is a reference-model error, not measured UET/material error.
+- New error control: analytic absolute modal-tail bound below the first omitted
+  frequency, plus a feedback-denominator margin and input-dependent p-error bound.
+  A normalized infinitesimal stable control amplifies the static compliance deficit
+  to 79.117% p-response difference. No project threshold or physical parameter fit.
+- Protocol limit: ideal endpoint-force steps have different leading p-response
+  order from direct single-mode forcing in this reference. The old cubic result
+  remains valid in its declared finite-state model; no physical port equivalence
+  follows by naming. Band bounds do not admit broadband steps or unknown initial tails.
+- Checks actually run: 17 exact SymPy 1.14.0 mode/boundary/energy/transfer/error/
+  limit/unit checks and 20 mpmath 50-digit pointwise compliance-tail inequalities
+  pass. Uniform-band support is analytic, not inferred from point sampling or
+  interval arithmetic. No time integration, fit, data acquisition, random samples,
+  physical observations or old scientific verifier rerun.
+- QA: both completeness modes exit 0, 16 contracts/121 routes/0 errors; 3752 paths
+  remain unreviewed. Direct review INCOMPLETE/physical-correspondence UNKNOWN;
+  all 27 source identities/12 original fingerprints match. Report: 85 local links,
+  134 balanced fence markers/52 consistent tables; new privacy/whitespace checked.
+- Blocker before/after: geometry/force/readout projection is explicit for the
+  reference; exact closure is closed as a scoped rejection. Effective use still
+  needs a fixed-state protocol, accuracy/band, physical parameter uncertainty and
+  initial-tail control that pass modal and feedback error bounds. No universal
+  Phi, thermal Phi_E/Z_Phi map, learned-rule/global-openness or novelty inference.
+- Next controller: section 22.6 / contract next_action. Do not repeat the exact
+  closure attempt or add modes/Core terms to make it pass. Reopen approximation
+  only with the declared protocol and inputs; reject a DC-inclusive first-mode
+  compliance budget below its known deficit without further integration/fitting.
+- Safety/checkpoint: new text/metadata/entries safe; historical log partial for
+  publication. No sample, source/Core/API/default/threshold/artifact/gate mutation,
+  external contact, commit/push/merge or automatic next wave. Preserve unrelated
+  work and use a separate publication/safety checkpoint.
+
+## 2026-10-22 - Conditional polarization-elastic correspondence and boundary admission
+
+- Scope/type: one FORMAL correspondence-screening pass continuing section 20.6.
+  [Argument section 21](../../meta/UET_THEORY_ARGUMENT.md) and the existing
+  [cycle contract](calculation_contracts/energy_memory_cycle.json) remain the
+  controllers; no material admission, new core equation or physical promotion.
+- New decision: a scalar relaxational-polarization/damped-elastic-mode class is
+  a conditional standard comparator for the retained interaction-modulation role.
+  The SI/force dictionary closes potential, drift, inertia, storage and port power
+  algebraically. Its scales and physical coefficients are not independently known.
+  Targeted primary arXiv sections have different approximations; they are not
+  represented as a single source derivation of the full C/Phi/Pi model.
+- Boundary result: uniform scalar P times longitudinal strain integrates to the
+  displacement difference at the ends. Periodic/fixed-end displacement gives zero
+  modal overlap. A nonzero open-end witness is not a controlled single-mode
+  closure. Prototype periodic C/Phi boundaries are not physical displacement or
+  variable-cell boundaries by naming; no contradiction of the prototype follows.
+- Testable constraints: same-state, zero-initial-perturbation transfer functions
+  are reciprocal in calibrated conjugate ports. Stable local released stiffness
+  is clamped stiffness minus h^2/k_Phi, where h=-g*C_bar. Null linear cross-response
+  at C_bar=0 is compatible with nonzero quadratic coupling. Static elimination
+  cannot replace finite-frequency/initial-Phi/Pi memory in the full prepared class.
+- Checks actually run: 14 exact read-only SymPy 1.14.0 scaling/unit/reciprocity/
+  Schur/limit/overlap checks pass. No trajectory integration, fit, random sample,
+  physical observation or old scientific verifier rerun. Local factor-resolution
+  and Phi_E composition sources inspected, not regenerated or treated as new data.
+- QA: both completeness modes exit 0, 16 contracts/121 routes/0 errors; 3752 paths
+  remain unreviewed. Direct review INCOMPLETE/physical-correspondence UNKNOWN.
+  All 27 source identities and 12 original fingerprints match. Report: 85 local
+  links resolve, 120 fence markers/51 tables consistent; new privacy/whitespace
+  checked. Coverage changes do not establish scientific acceptance.
+- Blocker before/after: candidate class and exact mapping constraints are now
+  explicit. Nonzero compatible boundary/mode projection and a controlled retained-
+  mode/overdamped band precede physical scale fitting, source/readout admission
+  and same-state parameter/uncertainty closure. Existing thermal Z_Phi/Phi_E/
+  material-operator gaps and the stopped K/E_MC physical-cost route are not closed.
+- Next controller: section 21.6 / contract next_action. One mode/boundary-closure
+  card for a declared geometry/preparation must project coupling, both conjugate
+  sources and both readouts from one physical model. Stop that realization for
+  zero overlap or uncontrolled truncation; no compensating term or generic data hunt.
+- Claim impact: conditional physical-role correspondence and falsifiable class-
+  consistency constraints, not a measured Phi, universal information/space identity,
+  new-mechanics discrimination, learned-rule benefit, global openness or parent
+  gate promotion. Standard matched-comparator equivalence remains unchanged.
+- Safety/checkpoint: new report/metadata/entries safe; historical log partial for
+  publication. No sample selection, copied paper/data package, Core/API/default/
+  threshold/artifact/gate mutation, external contact, commit/push/merge or automatic
+  next wave. Preserve unrelated work and separate later publication review.
+
+## 2026-10-22 - Retained-state correspondence and source-response role constraints
+
+- Scope/type: one FORMAL consequence/correspondence pass requested by the author.
+  [Argument section 20](../../meta/UET_THEORY_ARGUMENT.md) and the existing
+  [cycle contract](calculation_contracts/energy_memory_cycle.json) connect the
+  retained-state proposal to actual C/Phi/Pi state, feedback and permitted outputs.
+- New decision: the reachable same-C/different-Pi preparation already proved in
+  section 10 rejects full-class scalar-only occupation closure with the same
+  well-posed generator/future input. It does not reject every reduced/stochastic
+  model or claim that C itself cannot retain a basin label. Old evidence reused.
+- Role constraint: the unchanged -g*C^2*Phi/2 coupling modulates C curvature and
+  interaction strength while preserving C reflection at J_C=0. Uniform bias is
+  a different operator; microscopic channel labels are not C/Phi subsystem names.
+  Entropy, trace and preparation/readout information retain distinct meanings.
+- New general response result: same-state on/off comparison for a right J_Phi
+  step epsilon has zero first/second C-derivative changes and third-derivative
+  change M_C*g*C(0)*epsilon/tau. Direct J_C step j changes the first derivative.
+  Signed/even readout and permitted controls determine what can be distinguished.
+- Checks actually run: 13 exact SymPy 1.14.0 parity/curvature/source/Lie-derivative
+  checks exit 0. No old memory/retention/entropy/equivalence verifier or solver
+  rerun, time integration, fit, random draw or physical observation. Targeted
+  Tong field-versus-pair-interaction text read; not a complete literature review.
+- QA: both read-only completeness modes exit 0, 16 contracts/121 routes/0 errors,
+  with 3754 paths still unreviewed. Direct contract validation INCOMPLETE and
+  physical-correspondence UNKNOWN. All 25 identities/12 original fingerprints
+  match; 83 report links resolve, 110 fences/49 tables and new privacy/whitespace
+  checked. Formal/schema coverage is not scientific promotion.
+- Next controller: section 20.6 / contract next_action. Freeze the completed
+  memory/reduction/equivalence decisions. A new physical pass must identify an
+  independently measurable slow retained state that modulates interaction strength,
+  with units, symmetry, reciprocal energy/work and admitted preparation/readout.
+  Otherwise stop at a precise model-choice/input gap; no term or generic data hunt.
+- Claim impact: actual formal memory feedback and scoped source-role predictions,
+  not a universal information-energy law, physical Phi, learned-rule benefit,
+  new-mechanics identification, global openness or parent gate promotion. Matched
+  standard comparator remains forward-identical; K/E_MC cost route remains on hold.
+- Safety/checkpoint: new text/metadata safe; historical log partial for publication.
+  No Core/API/default/threshold/artifact/gate mutation, material selection,
+  contact/acquisition, commit/push/merge or automatic next wave. Unrelated work kept.
+
+## 2026-10-22 - Interconversion source correspondence and channel-work discriminator
+
+- Scope/type: one FORMAL continuation of section 18.7. [Argument section 19](../../meta/UET_THEORY_ARGUMENT.md)
+  and the existing [cycle contract](calculation_contracts/energy_memory_cycle.json)
+  distinguish free energy, decay/bare rates, MC credit, signed work and readout.
+- Source finding: archived Longo definitions include mixing free energy and a
+  distinct forced-conversion source. The pinned parent supports an alternative
+  reduced-temperature convention; historical source/UET coefficients stay unchanged.
+  K_eq, K_decay and per-direction bare rates are not interchangeable; declared
+  symmetric rates give K_decay=2*k in one clock. MC energy credit is not admitted
+  per-event work, and the published K/E relation is not an independent energy meter.
+- New force result: fixed J_C=-K*C has a conditional homogeneous restoring
+  potential K*C^2/(2*M_C); naively using -f(C)*C doubles its force. Transferring
+  that local potential into the full diffusion/reaction operator adds a spatial
+  term, so no silent full-operator equivalence or physical drive admission.
+- Thermodynamic control: a separately declared two-state/two-channel comparator
+  has stationary p=2/3 but opposed channel currents, entropy rate 2*k_B*nu*ln(2)
+  and chemical free-energy input T times that rate. Merging channel labels hides
+  this input. It is standard thermodynamics, not a new UET state or physical Phi.
+- New test design: ideal removal of driven versus natural channel gives initial
+  p_dot=+nu versus -nu and C_dot=+/-2*s*nu. Actual separable switch, fixed bath/
+  Hamiltonian and channel-resolved event/readout operators remain prerequisites.
+- Checks actually run: 29 read-only SymPy 1.14.0 expression checks plus four
+  cut-response checks exit 0. Initial unreduced log-ratio assertion resolved by
+  a domain-safe log difference, no physical formula/threshold change. No time
+  integration, event sampling, fitting, observations or old scientific rerun.
+- QA: both completeness modes exit 0, 16 contracts/121 routes/0 errors; 3754
+  paths unreviewed. Direct validation stays INCOMPLETE/physical-correspondence
+  UNKNOWN. All 25 identities/12 original fingerprints match, raw archive/member
+  checked; 81 report links, 106 fences/46 tables and new privacy/whitespace clear.
+- Next controller: section 19.7 / contract next_action. Stop physical-cost claims
+  based only on K/E_MC until energy-resolved channels, affinity/work and clock
+  are specified. Independent next task is one retained-state/information versus
+  standard-comparator correspondence card, reusing earlier response/equivalence
+  results; no new learning term, entropy identity or generic material search.
+- Claim impact: source audit, conditional comparator and discriminating protocol,
+  not measured heat, actual source/controller/Phi admission, theory novelty,
+  learning/global openness or parent promotion. A completed formal pass is not
+  closure of the remaining physical-source prerequisite.
+- Safety/checkpoint: new text/metadata safe; older log partial for publication.
+  No source/Core/API/default/threshold/artifact/gate mutation, article/data copy,
+  contact, commit/push/merge or next automatic wave. Unrelated work preserved.
+
+## 2026-10-22 - Joint interaction ledger and conditional write-port work
+
+- Scope/type: one author-requested FORMAL continuation of section 17.8.
+  [Argument section 18](../../meta/UET_THEORY_ARGUMENT.md) and the existing
+  [cycle contract](calculation_contracts/energy_memory_cycle.json) now distinguish
+  joint state storage, interaction allocation, source ports and controller costs.
+- New joint result: the unchanged homogeneous nonconserved C/Phi/Pi functional
+  closes sector and total balances with an explicit interaction contribution.
+  A no-drive instantaneous control makes both uncoupled contributions increase
+  while interaction storage falls and the total decreases. Fixed eta partitions
+  redistribute sector power, so no unique information-energy store is identified.
+- Source result: generalized-force ports give a conditional joint balance.
+  Old versus force work differences equal their dissipation differences; neither
+  physical mechanism is selected by the trajectory. Canonical sigma/trace stays
+  unchanged and is not relabeled measured heat.
+- New preparation result: exact integration of the existing paired write path
+  gives net force work 19/30 versus old net work 9/14 in the frozen unit fixture.
+  The 1/105 difference is the old held-C source/loss term, not a numerical error.
+  Inclusive-potential boundary reassignment has zero endpoint contribution for
+  this path and does not remove that difference. Both signs still share net work.
+- Boundary: net port work is not gross supply, apparatus consumption, heat or
+  energy per bit. If Omega is free energy, its decay is not internal-energy heat
+  by itself. Controller storage/recovery/bath and chemical/material flows remain
+  unadmitted; no hidden controller or detector was invented to fill the gap.
+- Checks actually run: read-only SymPy 1.14.0, 30 exact derivatives/control/
+  polynomial-integral checks plus four boundary/work checks, both exit 0.
+  No ODE/PDE integration, stochastic simulation, fitting, measured data or old
+  verifier rerun. Targeted Seifert force/work/inertia sections read, not full review.
+- QA: both completeness modes exit 0, 16 contracts/121 routes/0 errors, 3754
+  discovery paths still unreviewed. Direct validation stays INCOMPLETE with
+  physical-correspondence UNKNOWN. All 25 source identities and 12 original
+  fingerprints match; 81 local report links, 94 fences/42 tables and new-text
+  privacy/whitespace checked. Metadata coverage is not physical acceptance.
+- Next controller: section 18.7 / contract next_action. Inspect the existing
+  interconversion candidate against a thermodynamically specified drive; produce
+  one correspondence card for force versus conversion/reservoir source, work
+  operator and entropy counting. Admit conditionally, reject, or name the exact
+  missing operator and stop that physical-cost route; no generic material hunt.
+- Claim impact: formal joint closure and conditional work only, not unique
+  microscopic/physical costs, new mechanics, learning, global openness or parent
+  gate promotion. Existing ordinary-comparator equivalence remains applicable.
+- Safety/checkpoint: new text/metadata safe; historical log remains partial for
+  publication. Unrelated dirty work preserved. No core/API/default/threshold/
+  artifact/gate change, acquisition/contact, commit/push/merge or automatic next wave.
+
+## 2026-10-22 - Conditional reaction closure and source-work interpretation
+
+- Scope/type: one FORMAL continuation of the section 16 reaction candidate.
+  [Argument section 17](../../meta/UET_THEORY_ARGUMENT.md) extends the existing
+  [cycle contract](calculation_contracts/energy_memory_cycle.json). Prescribed
+  fixed-Phi C-sector comparison, not an unforced full-system thermal closure.
+- New compatible closure: a positive coarse two-way flux pair reproduces old
+  constant-mobility passive drift when Omega is postulated complete isothermal
+  free energy and one effective pair captures the relevant affinity. Entropy/
+  free-energy loss matches conditionally; this does not calibrate SI scales,
+  admit a bath or derive physical heat from the old normalized ledger.
+- New distinction: the smooth equilibrium limit has positive forward/reverse
+  traffic while net drift/coarse entropy production vanish. Local quadratic-
+  variation limit 2*M_C*theta/N is not a detector variance or full SDE derivation.
+- Forced-source control: mu_C=M_C=s=theta=1,J_C=2 gives drift/affinity of opposite
+  signs, rejecting passive-ratio transfer to that driven interpretation. The
+  manufactured hold J_C=M_C*mu_C likewise needs explicit source/work or channels;
+  this is not a contradiction of the old ODE.
+- Ledger finding: old injection and generalized-force interpretations share
+  Omega_dot but assign different work/dissipation. Under a held coordinate,
+  old P=D=M_C*mu_C^2 while force P=D=0. Physical source declaration is needed;
+  no code/gate/ledger repair or SI-heat relabeling is made during this audit.
+- Finite-N comparator: adjacent-edge detailed balance is separated from
+  same-state coarse flux ratios. Intrinsic/binomial entropy must be counted
+  once with its declared measure; no exact old drift/global endpoint closure
+  follows from constructing a Gibbs-compatible finite chain.
+- Checks actually run: 17 read-only SymPy 1.14.0 expression/limit/control checks
+  exit 0. Initial hyperbolic/exponential expression was not reduced by the first
+  simplifier; exponential normalization resolves it without formula/input change.
+  No integration, chain simulation, random events, fitting or old verifier rerun.
+- Source boundary: targeted Seifert 2012 primary-text sections on currents,
+  entropy/free energy and rate ratios; not a full review/FT audit or physical
+  observation. No new article/data files or external contact.
+- Final QA: both read-only completeness modes exit 0, 16 contracts/121 routes/
+  0 errors; 3754 paths remain unreviewed. All 25 identities and 12 original
+  fingerprints match; 80 links resolve, 80 fences/39 tables checked and new-section
+  privacy/whitespace clear. Review INCOMPLETE with physical-correspondence UNKNOWN.
+- Next controller: section 17.8 / contract next_action. Declare injection/current
+  versus force/constraint preparation and track C/Phi/Pi/controller work without
+  mixing ledger interpretations. Preserve conditional alternatives when physical
+  source/bath input is absent; no generic dataset hunt or new UET term.
+- Claim impact: conditional C-sector consistency and scoped rejected transfers,
+  not universal entropy, unique microscopic kinetics, physical validation, learning,
+  global openness or parent promotion. Existing physics gates/artifacts unchanged.
+- Safety/checkpoint: safe new text/contract; historical log remains partial for
+  publication. Unrelated work preserved. No noise implementation, core/API/default/
+  threshold changes, commit/push/merge, acquisition/contact or automatic next wave.
+
+## 2026-10-22 - Existing-source realization selection and interconversion balance
+
+- Scope/type: one FORMAL continuation from section 15. [Argument section 16](../../meta/UET_THEORY_ARGUMENT.md)
+  selects a source-grounded two-state interconversion research candidate through
+  the same [cycle contract](calculation_contracts/energy_memory_cycle.json).
+  Topic11 sources/pilot/gates were inspected, not changed or rerun.
+- New decision: signed A/B population contrast can change while total population
+  stays fixed. Nonconserved C is therefore not automatically total matter-number
+  loss; conserved count still does not close physical mass-energy/bath accounting.
+- Source: existing Longo et al. arXiv:2110.00093v1 archive, StructureFactor.tex
+  lines 109-115, supplies concentration contrast and diffusion/interconversion
+  operator family. Raw archive/member identity checked without extraction copies
+  or downloads. Source temperature/sign-convention caution exposed, not repaired
+  silently or used for a temperature calibration.
+- Conditional kinetic correspondence: C=s*c_hat, Omega=lambda_F*f_source(C/s)
+  gives mu_C=(lambda_F/s)*mu_hat and M_C=s^2*L/lambda_F for the homogeneous K=0
+  natural-conversion branch. This is not the full diffusion-plus-reaction source
+  PDE, independent scale calibration or a derivation of the physical Phi coupling.
+- New identifiability result: many positive two-way gross fluxes share the same
+  net drift. In a stated local independent-jump example, activity a gives
+  quadratic-variation rate 4*s^2*a/N; doubled activity leaves drift unchanged
+  but doubles that rate. No unique microscopic traffic/noise/heat follows from
+  deterministic C drift alone; no stochastic term was added.
+- Existing evidence distinction: pilot C_phase is a preparation-relative
+  persistence summary, not the signed state C. Saved pilot is simulation-only,
+  dependency-blocked and topic-impact NONE despite local verification PASS.
+  Both recorded preregistration raw hashes match; full producer/Core code
+  identity is not recorded, so no fresh-reproduction claim. Wave55 stays unchanged.
+- Checks actually run: nine read-only SymPy 1.14.0 expression checks exit 0;
+  archive/member and two preregistration hashes checked. No solver, random events,
+  measured data, fitting, pilot/Wave55/retention/EOS rerun or generated result.
+- Final completeness checks: both read-only modes exit 0, 16 contracts/121 routes/
+  0 errors; 25 contract identities match, including the raw binary source archive.
+  All 12 original fingerprints unchanged; 80 report links resolve, 70 fences and
+  38 tables checked, new-section privacy/whitespace clear. Unreviewed paths fall
+  to 3754 after source bindings, not seven newly accepted scientific results.
+- Next controller: section 16.7 / contract next_action. Specify one independently
+  justified reaction energy/rate closure and check source-work, response and
+  conditional uncertainty compatibility; retain explicit alternatives if the
+  required rate/bath/physical-Phi input is unavailable. No generic material hunt.
+- Claim impact: selected formal realization candidate and conditional relations,
+  not universal C ontology, new mechanics, material validation, learned rules,
+  global openness or parent promotion. Review INCOMPLETE; physical-correspondence
+  UNKNOWN; Topic11 estimator/causal dependencies unchanged.
+- Safety/checkpoint: safe new text/metadata; historical log remains partial for
+  publication. Existing dirty work preserved. No new source copies, equation/
+  default/threshold/gate/old artifact edits, contact or commit/push/merge; no next
+  wave opened solely to sustain activity.
+
+## 2026-10-22 - C candidate meanings and coordinate/state closure
+
+- Scope/type: one FORMAL continuation requested by the author to investigate
+  what C can represent. [Argument section 15](../../meta/UET_THEORY_ARGUMENT.md)
+  extends the existing [cycle contract](calculation_contracts/energy_memory_cycle.json),
+  not a new model, ontology registry, material test or physics gate.
+- Coverage: ten candidate classes distinguish signed structural order, reference
+  deviation, population contrast, log odds, positive coordinates, conserved
+  density/charge, conjugate force, entropy/information statistics, energy/trace
+  and complex/phase labels. These are alternatives/roles, not ten accepted UET lanes.
+- New result: smooth invertible y=f(C) preserves the homogeneous deterministic
+  cycle only with transformed generator, mobility M_y=M_C*(f')^2, source
+  J_y=f'*J_C and the same transformed readout. Normalized source power and
+  dissipation are invariant; no physical energy/entropy closure follows.
+- Probability/positive maps: logistic p and exponential q avoid raw negative
+  domains but change the forms of dynamics/readout. They are not entropy,
+  Bayesian learning, a conserved density or the earlier linear mean-field map
+  merely by relabeling. Nonlinear maps need not preserve conserved integrals.
+- Deciding counterexample: old fixture states (+/-1,0,1) share (mu_C,Phi,Pi)
+  =(0,0,1), but have mu_C_dot=-1/+1. Force-only global state replacement loses
+  predictive closure; a local invertible branch is a narrower separate claim.
+- Readout consequence: conditional log-odds delta variance scales as
+  ell^2/[4*n_s*p*(1-p)] only in a local interior/large-count regime. Endpoint
+  plug-in estimates can diverge; no hidden prior, censoring or physical detector.
+- Checks actually run: 14 read-only SymPy 1.14.0 written-expression checks,
+  exit 0; no ODE/PDE integration, random draws, parameter search or old verifier
+  rerun. Conserved-integral statement is analytic by chain rule/integration by parts.
+- Metadata/QA: initial completeness checks exposed unequal output/error-budget
+  unit labels; labels synchronized without changing science or weakening a check.
+  Both final read-only modes exit 0: 16 contracts/121 routes/0 errors, with 3761
+  current paths still unreviewed. All 12 original fingerprints and 16 source
+  identities match; 71 local report links resolve; 64 fences/36 tables checked.
+  New-section privacy and whitespace review clear.
+- Literature: selected Tong SFT sections 1 and 4.1-4.2, plus existing local
+  spec/RHS/ontology and previous results. Not a full field/archive review or
+  proof of novelty; no external contact/data acquired.
+- Next controller: argument section 15.7 / contract next_action. Examine existing
+  microscopic/coarse-state, preparation and readout evidence for one signed
+  structural realization, independently determine its map/scales and use the
+  section 14.9 generator/energy/kinetic questions before physical comparison.
+- Claim impact: exact formal maps and a rejected reduction, not a universal C
+  identity, new mechanics, particle/antiparticle result, physical information law,
+  learned-rule/persistence benefit or global-openness claim. Review remains
+  INCOMPLETE with physical-correspondence UNKNOWN; parent physics gates unchanged.
+- Safety/checkpoint: new text safe; older log remains partial for publication.
+  No source/default/threshold/old artifact changes, raw private content or large
+  output. Unrelated dirty work preserved. Local completion only; no commit/push/
+  merge, automatic acquisition/contact/publication or next wave from this pass.
+
 <!-- standards-adoption-w9-20261019:start -->
 ## 2026-10-19 - W9 finite research-return admission decision
 
