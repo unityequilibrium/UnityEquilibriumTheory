@@ -19,6 +19,30 @@ scientific claims, and to distinguish current standards from archived historical
 - Claim inventory: [docs/meta/claim_inventory.md](./meta/claim_inventory.md)
 - Topic readiness map: [docs/meta/topic_readiness.json](./meta/topic_readiness.json)
 
+<a id="latest-research-updates"></a>
+## Latest research updates
+
+> **ขอบเขตชุดเผยแพร่:** รอบนี้เผยแพร่เฉพาะสาม README และ WORK_LEDGER ไม่รวมงานวิจัย/PR ค้าง การตรวจ availability อ้าง main `d0210c00b63398f70e1f8f285a6daf5169645933` ชื่อแหล่งที่กำกับ **working-only** เป็นหลักฐานใน workspace ไม่ใช่ลิงก์ที่เปิดได้จาก public main จึงแสดงเป็นชื่อแทน hyperlink; ไม่ได้ลบผลหรือยกระดับข้ออ้าง
+>
+> แหล่งที่ยังไม่รวม: `docs/meta/UET_THEORY_ARGUMENT.md` (§§23–25), `docs/topics/0.13_Thermodynamic_Bridge/calculation_contracts/energy_memory_cycle.json` และ `docs/meta/UET_RESEARCH_RETROSPECTIVE.md` ชุด source/verifier ที่รายงานอ้างยังต้องมี publication review แยก ส่วน pending curved 3+1 narrative/artifacts คงไว้ใน workspace เดิม ไม่ถูกพามาในชุดนี้
+
+**ตรวจถึง 23 ตุลาคม 2026** — แหล่งวิจัยคือ UET Theory Argument (working-only) ใน local source commit `1346edfc07c2d2f9eb2adbd5257e820fa186a37b` บน `codex/research/source-backaction-discrimination` ไม่ใช่การออก release หรือการรับรองว่า public `main` อัปเดตตรงกันแล้ว
+
+| ทางเข้า | สิ่งที่อ่านได้ / ขอบเขต |
+| --- | --- |
+| §23.3 steady-response certificate (working-only) | first-mode เทียบ full normalized rod–polarization reference; F_b-only steady harmonic input, f_P=0, omega/omega_0 ใน [0.99,1.01]; error ของ complex p/F_b และ x/F_b <0.9%<1% ไม่ใช่ความแม่นยำกับธรรมชาติ |
+| §24.6 prepared-history limitation (working-only) | smooth write + controlled wait + released read: projected state เดียวกันอาจละ higher modes ที่ยังเปลี่ยน output ได้ จึงไม่พอสำหรับ protocol นี้ ไม่ปฏิเสธทุก reduction หรือผล steady ของ §23 |
+| §25.2–5 equation/term relationships (working-only) | generator ต่างจาก kinetics; C/I ไม่ใช่การ rename เป็น C/Phi/Pi; แยก exact rewrite, coordinate map, conditional reduction และ model alternatives ไม่รับรองทุกสูตรใน registry |
+| §25.7 next research question (working-only) | ผลคงอยู่จำขนาดหรือทิศ/เครื่องหมาย และเปลี่ยน response ผ่าน state/input ใด ก่อนเลือก realization ไม่เปิด scan/fit เพื่อหนี comparator |
+| [Core current realization](./core/README.md#current-response-realization) | Omega + complete C/Phi/Pi state + evolution/input/boundary/readout; opt-in normalized prototype ไม่ใช่ universal master; default ยัง legacy_local |
+| Calculation contract ของ cycle (working-only) | T13_ENERGY_MEMORY_CYCLE_FORMAL_V1, review INCOMPLETE / physical correspondence UNKNOWN; ใช้เฉพาะ declared path ไม่ครอบทุก family |
+| [Foundation controller](./core/07_artifacts/gates/uet_foundation_compatibility_decision.json) / [Topic 13 full bridge controller](./topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json) | FOUNDATION_NOT_CLOSED; legacy graphite/TTG aggregate BLOCKED_OPEN_T13_FULL_BRIDGE แยกจาก O(2)/He-4 Core-ready; ไม่มี external/global promotion |
+| [Topic 13 UPDATE_LOG](./topics/0.13_Thermodynamic_Bridge/UPDATE_LOG.md) / [daily WORK_LEDGER](../WORK_LEDGER/2026/2026-10-23.md) | ประวัติงานที่ทำจริงและขอบเขต commit/publication; logs ไม่แทนผลใน artifact |
+
+สำหรับผู้อ่านทั่วไป ดู [สรุปข้อเสนอรวมและบทบาทเทอมในหน้าแรก](../README.md#research-updates-2026-10-23) ซึ่งยังรักษาสมมติฐานระดับจักรวาลของผู้เขียนไว้โดยไม่ใช้ subsystem result ตัดสินแทน ทั้งผลบวก/ข้อจำกัดข้างต้นเป็น FORMAL/normalized ยังขาด physical mapping, หน่วย, parameter origins, preparation และ measurement uncertainty รวมถึงสิ่งที่เพิ่มเหนือ standard comparator
+
+**ข้อจำกัดการเข้าถึงหลักฐาน:** working copy, local commit และ public main เป็นคนละชั้น รายงาน §§23–25 อยู่ใน source commit นี้ แต่ retrospective (working-only) และ source/verifier สามไฟล์ที่รายงานระบุยังไม่อยู่ใน tree ของ commit นี้ จึงเป็น publication gap แม้ไฟล์มีในเครื่อง ไม่ใช่ชุดทำซ้ำครบทุกงาน และไม่ใช่ข้อยืนยันว่าทุก branch/remote ขาดไฟล์เหล่านี้ ไม่มีการเผยแพร่หรือยกระดับ physics gate จากการอัปเดต hub
+
 ## Documentation architecture
 
 ### Technical
@@ -60,12 +84,14 @@ source for release metadata, claim wording, or current standards.
 
 ## Repository counts used by this release
 
-- `41` topic directories are currently present under `docs/topics/`
+> **Historical snapshot:** เก็บจำนวนเดิมตาม release summary โดยไม่ทราบ run identity/วันตัดยอดที่พอรับรองความสดในรอบนี้ ตัวเลขไม่ใช่จำนวนผลที่ผ่านการยืนยัน และไม่ได้แทนด้วยจำนวนคาดเดาใหม่
+
+- `41` topic directories were reported under `docs/topics/` in the original snapshot
 - `39` of those are numbered research-topic directories
 - `2` are supporting workspaces
 - `14` automated test files are tracked as `test_*.py`
 - `8` topic-level verification scripts are tracked as `Verify_*.py`
-- `23` bibliography entries are currently curated in `references.bib`
+- `23` bibliography entries were reported in `references.bib` in the original snapshot
 
 ## Normalized flagship topics
 
@@ -89,3 +115,15 @@ limitations, and readiness are expected to be explicit.
 ---
 
 *Unity Equilibrium Theory Team | repository-first standards pass*
+
+---
+
+<a id="wording-history-2026-10-23"></a>
+## ภาคผนวก: ถ้อยคำที่ปรับในรอบนี้
+
+ตรวจ 23 ตุลาคม 2026 — เก็บถ้อยคำที่แทนจาก public-main baseline ไม่ใช่รับรองข้ออ้างเก่า ตารางแสดงเฉพาะ cell ที่เปลี่ยนเมื่อเนื้อหาแถวอื่นคงเดิม สูตร/ตัวอย่าง/แผนภาพเดิมไม่ถูกเขียนใหม่
+
+| ตำแหน่ง | ข้อความเดิม | ข้อความใหม่ | เหตุผล | หลักฐาน/ขอบเขต |
+| --- | --- | --- | --- | --- |
+| Repository counts / topic directories | <code>- &#96;41&#96; topic directories are currently present under &#96;docs/topics/&#96;</code> | <code>- &#96;41&#96; topic directories were reported under &#96;docs/topics/&#96; in the original snapshot</code> | เก็บ 41 เดิมในฐานะ original snapshot; รอบนี้ไม่รับรองความสด/วันตัดยอด | [release metadata](./meta/release_manifest.json) / [claim rubric](./topics/For%20Work/04_Claim_and_Evidence_Rubric.md) |
+| Repository counts / bibliography | <code>- &#96;23&#96; bibliography entries are currently curated in &#96;references.bib&#96;</code> | <code>- &#96;23&#96; bibliography entries were reported in &#96;references.bib&#96; in the original snapshot</code> | เก็บ 23 และจำนวนอื่นครบ โดยไม่อ้างว่าเป็นการนับใหม่ | [release metadata](./meta/release_manifest.json) / [claim rubric](./topics/For%20Work/04_Claim_and_Evidence_Rubric.md) |
