@@ -8,7 +8,7 @@
 
 ลักษณะงาน: วิจัยเชิง argument และตรวจความสอดคล้องจากหลักฐานเดิม ไม่ใช่การรับรองหรือหักล้าง UET ทั้งหมด
 
-สถานะล่าสุด: §24 สร้าง smooth finite write–controlled-wait–read จาก rest พบ projected first-mode state เท่า baseline แต่ higher modes เก็บร่องรอยที่ทำให้ endpoint/initial released response ต่าง มี analytic tail และ interval enclosure กัน numerical artifact; ไม่รับ first-mode state เป็นตัวแทน memory class นี้ ส่วน positive steady certificate §23 คงเดิม ไม่ยกไปยืนยัน transient/physical Phi หรือทั้งทฤษฎี
+สถานะล่าสุด: §25 แยก generator, kinetics, state, ledger และ output ของสมการหลายรูป ตรวจว่า canonical C/I ไม่ใช่การ rename C/Phi/Pi และ static elimination ให้ผลต่อ C คนละลำดับ ตรวจขอบเขตการตั้ง field เป็นศูนย์/ลดสมการ และจัด family/registry overlap โดยไม่เลือก universal master หรือแก้ Core; ผล steady §23 และ retained-history projection §24 คงเดิม ไม่เลื่อน physical claims
 
 ## 1. บทสรุปและคำถามหลัก
 
@@ -2630,3 +2630,178 @@ E_init < (0.002177*|epsilon|)^2/42
 ประเมิน closed-form 16-mode sum ที่ 60 digits แล้วทำ interval evaluation ด้วย mpmath 1.3.0, 35 digits; ตรวจ beta guard, analytic tail <4.3e-6<1e-5 และ positive whole-sum enclosure ตาม §24.3 ไม่มี numerical time integration, Monte Carlo, parameter fit, old memory/source verifier rerun หรือ physical observation
 
 ทำซ้ำได้จาก B_n, shaper และ tail formula ที่แสดง ให้ n=0 เป็น exact zero จาก structural identity ไม่ตัดทิ้งเพราะตัวเลขเล็ก ใช้ interval arithmetic สำหรับ finite partial sum และบวก symmetric tail enclosure; ไม่ใช้ partial-sum convergence แทน bound ของสิ่งที่ละ ไม่มี new result artifact/registry หรือ Core/API/default/threshold/gate mutation Review ยัง INCOMPLETE/physical-correspondence UNKNOWN และยังไม่รับรอง actual controller/detector/physical memory
+
+## 25. สมการรูปต่าง ๆ แทนกันอย่างไร และอะไรเป็นแกนจริง
+
+### 25.1 Bounded relationship audit — 23 ตุลาคม 2026
+
+สถานะปิด card: ตรวจ source/metadata และอนุมานสั้นตามขอบเขตใน §25.2–8 แล้ว ไม่ได้รวมทุก family เป็นแม่บทเดียว ผู้เขียนขอวิจัยความสัมพันธ์และฐานของเทอม ก่อนเพิ่มสมการหรือเลือก realization ใหม่
+
+| Work card | ขอบเขตและหลักตัดสิน |
+| --- | --- |
+| Question | รูป functional, force/chemical potential, evolution, ledger, trace, coordinate map และ comparator ใดตามกันได้จริง? อะไรเป็น generator และอะไรยังเป็นสมมติฐานที่เลือกเพิ่ม? |
+| Have / controller | §4–5, §15–24, central registry 62 entries, family contract 14 groups และ scoped compatibility decision; ใช้ผลเดิม ไม่รัน fixtures/solver เดิมซ้ำ |
+| Baseline | branch `codex/research/source-backaction-discrimination`, HEAD `0b5a52acc2e3803331de3fedb57cfd43c7f07b2f`, ไม่มี upstream; 461 รายการสถานะค้างก่อนแก้ ไม่ได้ตรวจ remote main สด |
+| Boundary | FORMAL/source audit ของนิยามและ operator; ไม่ประดิษฐ์ detector หรืออ้างว่าตัวแปร normalized เป็น physical energy/space/information แล้ว |
+| Next action / why | ตาม functional ถึง actual update/source/readout และแยก exact rewrite, conditional reduction, alternative model, derived output, unresolved bridge; จึงตัดสินได้ว่าใช้สูตรหนึ่งแทนอีกสูตรได้เมื่อใด |
+| Acceptance | ทุก family ในขอบเขตมีบทบาท; จุดเชื่อมสำคัญมีนิยาม/domain/operator และหลักฐานหรือ counterexample; ระบุสมการหลักเฉพาะ family โดยไม่เลือก universal law แทนผู้เขียน |
+| Stop / reopen | หยุดเมื่อเชื่อมได้พร้อมเงื่อนไข หรือชี้ว่าขาด transformation/closure/physical map ใด ไม่เติมเทอมเพื่อทำให้ภาพครบ; เปิดใหม่เมื่อ premise หรือหลักฐานที่เกี่ยวข้องเปลี่ยน |
+| Non-goals / reviewer | ไม่เปลี่ยน Core/defaults/thresholds/gates ไม่ส่งข้อมูลหรือ push; ผู้ตรวจควรทักจุดที่เรียกสองรูปว่าเท่ากันทั้งที่เปลี่ยน state, kinetics, source หรือ observable |
+
+### 25.2 คำตอบเรื่อง “สมการหลัก” ต้องแยกสามระดับ
+
+**ระดับแนวคิด:** เป้าหมายเรื่องระบบซ้อนระบบ ปฏิสัมพันธ์ พลังงาน ผลคงอยู่และการตอบสนองใน §3 ยังเป็นภาพรวมของผู้เขียน ไม่ถูกแทนด้วย polynomial ใดเพียงเพราะ AI เขียนลงโค้ด
+
+**ระดับแบบจำลองที่ทำงานได้:** ต้องระบุ **state + functional/action (ถ้ามี) + กฎวิวัฒน์/kinetics + inputs/boundaries + readout** การมี Omega อย่างเดียวไม่กำหนดการเคลื่อนที่ทั้งหมด สำหรับสายวิจัยล่าสุด แกนที่ตามโค้ดได้คือ `matter_space_coupled_v1`: state (C,Phi,Pi), Omega[C,Phi] และกฎวิวัฒน์ใน [spec](../core/01_contracts/MATTER_SPACE_RESEARCH_SPEC.md)/[implementation](../core/02_equations/matter_space/uet_matter_space.py) ไม่ใช่ R, sigma หรือกราฟผลลัพธ์
+
+**ระดับ UET ทั้งโครงการ:** ยังไม่มี derivation/transform ที่ยืนยันว่า legacy C/I, dissipative C/Phi/Pi, conservative covariant parent และทุก topic เป็นรูปของกฎเดียวกัน [Compatibility decision](../core/07_artifacts/gates/uet_foundation_compatibility_decision.json) ยังระบุ FOUNDATION_NOT_CLOSED ชื่อไฟล์ “master”, คำว่า “parent” และชื่อ “canonical” ของ mode ไม่เลือกกฎสากลแทนหลักฐาน
+
+ลำดับที่ควรอ่านในสายล่าสุด:
+
+~~~text
+กำหนด state/หน่วย/ขอบเขต และเลือก Omega
+  -> หา mu_C, mu_Phi จาก variational derivatives
+  + ประกาศ kinetics, sources และ initial/boundary data
+  -> กฎวิวัฒน์ C,Phi,Pi
+  -> ตรวจ extended availability และบัญชี source/dissipation
+  -> สร้าง readout/trace ภายใต้ operator ที่ประกาศ
+~~~
+
+ลูกศร “หาอนุพันธ์” เป็น derivation ภายในแบบจำลอง แต่ **การเลือก Omega และ kinetics เองยังเป็น constitutive/model choices** ไม่ใช่ผลที่ Landauer หรือชื่อ information บังคับให้ต้องเป็นแบบนี้ หลัก thermodynamics ไม่เลือก coefficient/operator ทั้งหมดให้เอง งาน [Onsager 1931](https://journals.aps.org/pr/abstract/10.1103/PhysRev.37.405) แยก phenomenological coupling กับสมมติฐาน microscopic reversibility; งาน [Halperin–Hohenberg–Ma 1974](https://journals.aps.org/prb/abstract/10.1103/PhysRevB.10.139) ศึกษาผลของ conservation laws ต่อ dynamics อ่านต้นทางเหล่านี้เป็นฐานวิธีคิด ไม่ใช่หลักฐานว่าพวกเขา derive UET หรือรับรอง couplings ของเรา
+
+### 25.3 เทอมใดเป็น state เทอมใดเป็นกฎ และเทอมใดเป็นผลที่คำนวณตามมา
+
+| วัตถุ | หน้าที่และหลักที่ใช้ | สิ่งที่ห้ามแทนกันโดยเงียบ ๆ |
+| --- | --- | --- |
+| C | coordinate ของสภาพระบบ; เลือก conservation และ physical map ตาม lane | ไม่ใช่มวลหรือพลังงานสากล; C กับ C^2 ไม่เก็บเครื่องหมายเท่ากัน |
+| legacy I | field ที่ถูก initialize/evolve และกลับมีผลต่อ C ใน C/I mode | ไม่ใช่ I_trace; ตัวอักษร I ไม่ทำให้เท่ากับ Shannon information/entropy |
+| Phi, Pi | effective response และ Pi=Phi_t; คู่ initial data ของ damped second-order response | Pi ไม่ใช่ field ใหม่จากการแตกสูตร แต่ตัดมันออกไม่ได้โดยไม่กำหนด reduction/initial history |
+| Omega, mu_C, mu_Phi | functional ที่เลือกและอนุพันธ์เชิงสถานะของมัน | mu ไม่ใช่ energy ก้อนใหม่; การพิสูจน์ derivative ไม่ได้พิสูจน์ที่มาทางธรรมชาติของ Omega |
+| a,b,kappa | coefficients ของ local shape และ spatial-gradient cost | spatial gradient ไม่ใช่ temporal memory ทั้งหมด; ชื่อ “space-memory” ไม่แทน history law |
+| M,tau,g,beta | kinetics/time scale และ coupling ที่ต้องประกาศ origin/units | normalized beta ไม่ใช่ inverse temperature beta โดยอัตโนมัติ; Landauer SI bound ไม่กำหนดค่า g/beta เหล่านี้ |
+| J_C,J_Phi; legacy J_in/J_out | source operators/ports ตาม implementation แต่ละ mode | current source, conjugate force และ boundary traction มีบัญชีงานต่างกัน; ใช้ split เดียวกันตลอดตาม §18/§22 |
+| E,sigma,R และ observer record | extended normalized availability, dissipation, derived trace และค่าที่อ่านตามลำดับ | E ไม่ใช่ Omega อย่างเดียวเมื่อมี Pi; sigma/R ไม่แทน complete state, heat/entropy หรือ physical detector record ทุกชนิด |
+
+ใน [parameter source](../core/01_contracts/units/uet_parameters.py) ค่า default operator ยังเป็น `legacy_local` ขณะที่ normalized variational mode และ C/Phi/Pi เป็น **opt-in** การตรวจนี้ไม่เปลี่ยน defaults การกดรันไฟล์ชื่อ master โดยไม่ล็อก mode จึงไม่ยืนยันว่ากำลังทดสอบสมการในรายงานล่าสุด
+
+S_comm, information sums และ quantity ใน archive ต้องอ่านตามนิยามของฉบับนั้น ไม่ย้ายมาใส่ใน I/Phi/R เพียงเพราะผู้เขียนใช้คำไทยว่า “ข้อมูล” เหมือนกัน ปัญหาหน่วยเดิมและ Landauer boundary ยังคงตาม §4.3 (ผลที่ 5)/ย้อนหลัง R03–R04; รายชื่อ “เจ็ดฐาน” ของผู้เขียนยังไม่ถูกแทนด้วยจำนวนเทอมหรือจำนวนกลุ่มในตารางนี้
+
+### 25.4 ตรวจการเชื่อม C/I กับ C/Phi/Pi: ไม่ใช่แค่เปลี่ยนชื่อ
+
+แหล่ง [canonical C/I audit](../core/08_history/research_notes/UET_FOUNDATION_COMPATIBILITY_AUDIT.md) และ [master implementation](../core/02_equations/matter_space/uet_master_equation.py), functions `omega_functional_complete`, `information_propagator_step`, `dynamics_step_complete` ให้ scoped periodic normalized system:
+
+~~~text
+Omega_CI = integral [V_L(C)+kappa/2 |grad C|^2
+                    +1/2 |grad I|^2+kappa_I/2 I^2+beta*C*I] dx
+C_t = -V_L'(C)+kappa*lap(C)-beta*I
+I_t = lap(I)-kappa_I*I-beta*C
+V_L(C) = alpha/2*(C^2-C0^2)^2 + gamma/4*(C^2-C0^2)^4.
+~~~
+
+นี่เป็น `legacy_variational_v1` ไม่ใช่ทุก option ใน seven-term header; exchange, game/density, W_N, constraints, inertia และ viscosity ไม่อยู่ใน pure-gradient contract นี้ Actual V_L มี degree 8 เมื่อ gamma!=0 ไม่ใช่ quartic a*C^2/2+b*C^4/4 ของ matter-space โดยตรง ส่วน `legacy_local` ยังเรียก shifted reaction derivative อีกตัว ไม่ใช่ V_L' ที่ปิดแล้วตาม canonical mode
+
+สายล่าสุดเลือก:
+
+~~~text
+Omega_CP = integral [a_C/2*C^2+b_C/4*C^4+kappa_C/2*|grad C|^2
+                  +a_Phi/2*Phi^2+b_Phi/4*Phi^4+kappa_Phi/2*|grad Phi|^2
+                  -g/2*C^2*Phi] dx
+C_t = -M_C*mu_C+J_C          (nonconserved control)
+   or M_C*lap(mu_C)+J_C      (conserved branch)
+Phi_t=Pi
+tau_Phi*Pi_t+Pi=-M_Phi*mu_Phi+J_Phi.
+~~~
+
+normalized units เท่านั้น coefficients ไม่ได้ derive จาก SI entropy และสองตัวเลือกของ C ไม่ใช่กฎเดียวกัน เหตุที่การ rename ใช้ไม่ได้ตรง ๆ มีอย่างน้อยสามข้อ:
+
+1. coupling เก่า beta*C*I ให้อนุพันธ์ (beta*I,beta*C) แต่ coupling ใหม่ -g*C^2*Phi/2 ให้ (-g*C*Phi,-g*C^2/2) จึงต่างทั้ง parity และ state dependence
+2. เมื่อตรึง C coordinate เดิมและ beta*g!=0 ไม่มี constant nonzero rescaling I=r*Phi ที่ทำให้ coupling ทั้งคู่เท่ากันสำหรับทุก C,Phi การจับคู่เฉพาะ coupling ด้วย I=-(g/(2*beta))*C*Phi ทำได้ แต่ Jacobian determinant เป็น -(g/(2*beta))*C จึง singular ที่ C=0 และเปลี่ยน I^2, gradient, kinetics, source และ readout ตามไปด้วย ไม่ใช่ full equivalence
+3. canonical C/I ต้องกำหนดสอง initial fields ส่วน C/Phi/Pi ต้องกำหนดสาม การเปลี่ยน first-order pair เป็น damped second-order response เพิ่ม admissible initial data; อาจ restrict/reduce ได้เมื่อมีเงื่อนไข แต่ไม่ใช่ rename ที่ invertible ครบทั้ง class
+
+**ผลใหม่ที่ชี้ความต่างเชิงกลไก:** ใน homogeneous static sector ไม่มี gradients/sources และ kappa_I>0 การ eliminate I แบบ quadratic ทำให้:
+
+~~~text
+I_*=-beta*C/kappa_I
+Omega_CI,eff = V_L(C) - beta^2/(2*kappa_I)*C^2.
+~~~
+
+ใน response sector a_Phi>0,b_Phi>0 ให้ stationary root
+a_Phi*Phi_*+b_Phi*Phi_*^3=g*C^2/2 ซึ่งมี root เดียว สำหรับ C ใกล้ศูนย์:
+
+~~~text
+Phi_* = (g/(2*a_Phi))*C^2
+        -(b_Phi/a_Phi)*(g/(2*a_Phi))^3*C^6 + O(C^10)
+Omega_CP,eff = U_C(C)
+              -g^2/(8*a_Phi)*C^4
+              +b_Phi*g^4/(64*a_Phi^4)*C^8 + O(C^12).
+~~~
+
+U_C คือ local a_C*C^2/2+b_C*C^4/4 ของสายนี้ ไม่ได้ตั้งให้เท่ากับ V_L: **การตัด field เก่าเปลี่ยน quadratic term ของ C ส่วนการตัด response ใหม่นี้เปลี่ยน quartic term เป็นลำดับนำ** เพราะแบบหนึ่งรับ signed C อีกแบบรับ C^2 นี่เป็นผลจาก model choices ที่ตรวจได้ ไม่ใช่หลักฐานว่าข้อมูลของผู้เขียนต้องเป็นแบบใดแบบหนึ่ง
+
+ถ้าละ b_Phi จริงเป็น quadratic response comparator พจน์ -g^2*C^4/(8*a_Phi) เป็น exact static correction ของ comparator นั้น แต่ไม่ตั้ง b_Phi=0 เงียบ ๆ ใน v1 ที่บังคับ b_Phi>0 กรณี a_Phi=0 ซึ่ง v1 อนุญาตก็อยู่นอก Taylor reduction นี้ ค่า effective quartic ติดลบไม่อนุญาตให้ตัดสินความไม่เสถียรทั่ว domain จาก truncated series; ต้องกลับไปตรวจ full functional/regime
+
+การ eliminate แบบนี้เป็น **static/conditional reduction** ไม่ใช่การลบ dynamic memory: ต้องกลับไปใช้ full initial state และ time-scale separation ก่อนใช้ทำนาย write–wait–read ผล §24 จึงไม่ได้หายไปเพราะแทน stationary root ลงใน Omega
+
+### 25.5 รูปสมการที่ต่างกัน ใช้แทนกันได้ระดับไหน
+
+| สองรูป/สองเส้นทาง | ความสัมพันธ์ที่ตามหลักฐานได้ | เงื่อนไขที่ต้องคง |
+| --- | --- | --- |
+| Omega -> mu_C,mu_Phi | exact variational derivatives ภายใต้ boundary/discrete operator ที่ประกาศ | เปลี่ยน functional/gradient/boundary ต้องตรวจอนุพันธ์ใหม่ |
+| Phi_t=Pi และ Pi_t -> second-order Phi equation | exact rewrite | ต้องเก็บทั้ง Phi(t0),Pi(t0); จำนวนนิยามเพิ่มไม่ใช่กลไกเพิ่ม |
+| C/Phi/Pi -> tau_Phi=0 overdamped response | singular/conditional limiting model ไม่ใช่ rename | ยังได้ Phi_t=-M_Phi*mu_Phi+J_Phi ไม่ใช่ mu_Phi=0; ต้องตรวจ initial layer/time scales |
+| Phi -> stationary Phi_*(C) หรือ I -> I_*(C) | static elimination/adiabatic approximation ตาม scope | ไม่แทน independent memory initial data; spatial fields โดยทั่วไปให้ nonlocal inverse operator ไม่ใช่ local substitution นี้ |
+| nonconserved C_t=-M*mu กับ conserved C_t=M*lap(mu) | คนละ kinetic law แม้ใช้ Omega เดียว | closed conserved integral และ equilibrium constraint ต่าง; ไม่ใช้ชื่อ Model ใน comment แทน actual operator |
+| smooth invertible C-coordinate changes ใน §15 | exact เมื่อ push forward generator, mobility, inputs และ readout ครบ | nonlinear map ไม่รักษา constant mobility/conserved integral เอง; C^2 สูญเสีย sign ถ้าไม่จำกัด branch |
+| dynamic I/Phi -> R=G_ret*sigma | derived-output construction ไม่ใช่แทน state | R ไม่มี feedback ใน v1; history kernel choice ไม่ปิด complete observability |
+| covariant action -> classical scalar/O(2) comparator | ใช้ exact scoped map เดิม §4.4 ไม่ทำซ้ำ | epsilon_nc>0, units/coefficients/domain เดิม; ไม่เพิ่ม quantum/noise/dissipative equivalence |
+| Noether fields -> coarse-grained n -> C=(n-n_ref)/n_scale | ขั้นท้าย affine invertible เมื่อ scale>0; ขั้น coarse graining many-to-one | invertible ปลายทางไม่กู้ microscopic state กลับมา; symmetric double well ยังเป็น constitutive choice |
+| quartic response -> linear rod/reference -> first-mode output | declared linear comparator + projection/approximation ไม่ใช่ exact global chain | coefficient/port/unit dictionary ต้องประกาศ; §23 ผ่าน steady protocol แต่ §24 ตัด prepared-history sufficiency ของ projection นี้ |
+
+ตัวอย่าง concrete ของความต่างระหว่าง “ตั้งค่า” กับ “ลดระบบ”: เมื่อ Phi=Pi=0, J_Phi=0 แต่ g*C^2!=0:
+
+~~~text
+Pi_t = M_Phi*g*C^2/(2*tau_Phi) != 0.
+~~~
+
+ดังนั้น Phi=0 เป็น reference snapshot ไม่ใช่ invariant subspace ของ coupled dynamics โดยทั่วไป ใน C/I ก็มี I_t=-beta*C เมื่อ I=0 จึงตั้ง I เป็นศูนย์แล้วละทั้ง field ไม่ได้หากยังเปิด coupling การลดแบบปิดต้องมี decoupling, source cancellation หรือ approximation ที่ตรวจแล้ว
+
+เช่นเดียวกัน บน closed periodic/zero-flux domain ไม่มี C-source:
+integral C_t dx=0 ใน conserved branch แต่เป็น -M_C*integral mu_C dx ใน nonconserved branch สำหรับ uniform C ที่ mu_C!=0 จึงตอบสนองต่างกันทันที ไม่ใช่เพียงเลือกวิธีคำนวณหรือเพิ่มความละเอียด Static constrained conserved equilibrium ยังอนุญาต constant mu_C ที่ไม่จำเป็นเป็นศูนย์ ต่างจาก unconstrained nonconserved stationary condition
+
+### 25.6 ภาพรวมทุก family และขอบเขตที่ไม่ได้ตรวจใหม่
+
+ใช้ 14 groups/11 equation families +3 support groups จาก [machine-readable family contract](../core/07_artifacts/archive/uet_core_equation_family_contract.json) พร้อมรายละเอียดราย family เดิมใน §5 ไม่สร้างทะเบียนซ้ำ:
+
+| กลุ่มที่เชื่อมในการอ่าน | Family IDs ของเดิม | บทบาทที่ไม่ควรปน |
+| --- | --- | --- |
+| normalized generators | core.legacy_master; core.matter_space | model choices ต่างกัน; ความเท่ากันต้องมี full map ไม่ใช่คำว่า information |
+| conservative parent/symmetry | core.covariant_response; core.covariant_parent; core.o2_superfluid | action/Noether/EOS ของ realization ที่ประกาศ ไม่ได้ปิด normalized dissipation/thermal/material ทุกสาย |
+| kinetic/transport alternatives | core.matter_space_flux; core.covariant_diffusion; core.hyperbolic_phase | explicit flux/relaxation หรือ comparator ไม่ได้เป็นผลของเปลี่ยนตัวอักษรใน gradient flow |
+| derived output/measurement | core.trace; core.observable_contract | trace kernel กับ measurement map คนละบทบาท; ไม่สร้าง state feedback จาก record |
+| coordinate/current/frame tools | core.noether_mapping; core.lorentz | ตรวจ transform/current ตาม scope ไม่ได้พิสูจน์ว่าทุก update covariant หรือ coarse graining invertible |
+| parameter/support layer | core.parameter_contract; core.support_and_adapters | controls, solvers, adapters และ provenance ไม่ใช่ independent physics laws |
+
+[Family narrative เดิม](../core/01_contracts/UET_CORE_EQUATION_FAMILY_CONTRACT.md) ยังพิมพ์ 9 equation families ขณะที่ JSON ที่ใช้ปัจจุบันมี 11 จึงใช้ชื่อ/IDs และ controller ของรุ่นที่ประกาศ ไม่เฉลี่ยจำนวนหรือแก้ไฟล์ Core ในรอบนี้ แถว legacy ใน archive ที่กว้างกว่าผล repaired canonical mode ต้องอ่านร่วม scoped compatibility decision ตาม §4.6 ไม่เรียกทุก C/I implementation ว่าผิดเหมือนกัน
+
+สำรวจ metadata ของ central registry 62 IDs กับ 67 addenda พบ 97 addendum rows/97 unique IDs: 48 IDs อยู่ใน central registry แล้ว อีก 49 ยังแยกอยู่ใน addenda จึงมี union 111 IDs ใน snapshot ที่สำรวจ **ไม่ใช่ 159 สมการอิสระ และไม่ใช่ 111 ผลฟิสิกส์ที่ตรวจผ่าน** เป็นการตรวจ ownership/overlap ของ metadata ไม่ได้ตรวจ proof/implementation ของทุก addendum ใหม่ และไม่ได้ merge registry
+
+Identity ของ addendum inventory: เรียง basename ของ `uet_equation_correspondence_registry*addendum.json` แล้วสร้างบรรทัด `basename + space + SHA256(LF-normalized bytes)`, join ด้วย LF และ final LF ได้ aggregate SHA256 `11cb96794ea3c36ac2ab100cf7eac58defb3ad60d3fc7f21f6a431791b84b023` ใช้ระบุ snapshot ของการนับ ไม่ใช่ physics gate หรือหลักฐานความเท่ากันทุกสูตร
+
+### 25.7 คำวินิจฉัยและโจทย์ถัดไปที่ไม่วนเพิ่มสมการ
+
+1. **ยังไม่มี universal master ที่ปิดแล้ว:** สำหรับงานล่าสุด ให้ชี้ Omega + complete C/Phi/Pi kinetics เป็นแกน realization ที่ตรวจ ไม่ใช้ seven-term historical header แทนทุกกลไกหรือเลือกแทนเจตนาผู้เขียน
+2. **จำนวนรูปเขียนไม่เท่ากับจำนวนสมมติฐาน:** mu, Pi rewrite, ledger และ readout บางส่วนตามจาก generator/operator เดิม จึงไม่ใช่ทุกสมการเป็นกฎใหม่ แต่การเปลี่ยน coupling, conservation, source หรือ independent state เป็นการเลือกใหม่จริง ต้องมีเหตุผลทางทฤษฎี
+3. **ข้อเชื่อมที่สำคัญยังเปิดอย่างเฉพาะเจาะจง:** signed C/I กับ even-C^2 response ไม่ได้แทน information แบบเดียวกันอัตโนมัติ; static reduction และ coarse graining ไม่เก็บ history ที่จำเป็นทั้งหมด; material/SI mapping และ UET-specific restriction ยังไม่ได้เกิดจาก symbolic checks เหล่านี้
+4. **ไม่เพิ่มเทอมเพื่อให้ทุก family ดูตรงกัน:** freeze exact/conditional relationships ที่มีแล้ว ผู้เขียนไม่ต้อง derive สมการเองหรืออธิบายเจ็ดฐานใหม่ทั้งชุด
+
+งานถัดไปหนึ่งโจทย์ที่ควรให้ผู้เขียนทบทวนก่อนเลือก generator คือ **ในสถานการณ์ที่ตั้งใจศึกษา ผลคงอยู่ควรจำเพียงขนาดการเปลี่ยนสภาพ หรือจำทิศ/เครื่องหมายด้วย และสิ่งนั้นเปลี่ยนการตอบสนองครั้งถัดไปผ่าน state/input ใด?** ไม่บังคับให้ information ทั้งทฤษฎีเป็น scalar เดียว ไม่ใช้คำตอบรับรองฟิสิกส์ และไม่สรุปว่า C/Phi/Pi ปัจจุบันแทนเจตนาครบแล้ว
+
+ถ้าสองแบบต่างกันแต่เจตนายังไม่เลือก ให้คงเป็น alternatives ไม่รันหาวัสดุมาเลือกแทนความหมาย หากเลือก scope ได้จึงตรวจ realization เดิมที่ตรงกับ scope นั้นและบอก missing bridge; ไม่ใช้ precision หรือ optimizer ทำให้ exact-equivalent comparators ต่างกัน และไม่เปิด pulse/parameter scans เดิมซ้ำ
+
+### 25.8 Verification และ claim boundary
+
+ตรวจ source/registry โดยไม่เปลี่ยน code, defaults, gates หรือสูตรที่ขึ้นทะเบียน ใช้ SymPy 1.14.0 ตรวจ exact algebra 8 กลุ่ม: derivative/degree ของ V_L, สอง coupling force pairs, obstruction ของ constant I=r*Phi, coupling-only map/Jacobian, quadratic static eliminations, quartic response local series, zero-field invariance/tau-zero distinction และ first/second-order rewrite ตรวจ AST เพิ่มว่าค่า default ใน parameter source ยัง legacy_local ไม่ import engine เพื่อรัน solver
+
+การทดสอบเป็น homogeneous normalized/formal relations ตาม hypotheses ข้างต้น ไม่ใช่ proof ว่าไม่มี nonlinear/history representation ใดเชื่อมสอง model ได้เลย ไม่ใช่ finite-duration memory certificate ใหม่ และไม่ใช่ physical comparison, independent validation หรือการรับรองสูตรทั้ง registry ผล §23–24, thermal-ledger bug และ physical gates เดิมไม่เปลี่ยน
+
+ใช้ cycle contract เดิมสำหรับ source/report identity และขอบเขต path ที่มีอยู่ ไม่ทำให้ contract ของ cycle กลายเป็นใบรับรองทุก Core family ไม่มี new calculation runner/contract ต่อหน้าเอกสาร หรือการคัดลอก artifacts/ทะเบียนทั้งชุด Primary literature ที่อ่านรอบนี้จำกัด APS abstract/source material ที่เกี่ยวกับฐานวิธีคิดข้างต้น ไม่ใช่ systematic literature review และไม่ติดต่อผู้เชี่ยวชาญหรือหา dataset ใหม่

@@ -1,3 +1,49 @@
+## 2026-10-23 - Equation generators, term roles and cross-form relationship audit
+
+- Scope/type: one FORMAL source/relationship audit requested by the author.
+  [Argument section 25](../../meta/UET_THEORY_ARGUMENT.md) controls the conclusions;
+  the existing [cycle contract](calculation_contracts/energy_memory_cycle.json)
+  pins supporting identities without certifying every mapped Core family.
+- Decision: the latest working realization has a state C/Phi/Pi, functional,
+  kinetic law, source/boundary and readout contract; Omega alone is not the
+  universal master. Canonical C/I and C/Phi/Pi are not a constant field rename.
+  The actual parameter default remains legacy_local; opt-in models stay explicit.
+- New local consequences: with C fixed and nonzero beta,g, I=r*Phi cannot match
+  both couplings globally. A coupling-only I proportional to C*Phi is singular
+  at C=0 and changes other operators. Static quadratic I elimination shifts
+  the C^2 term; quartic-response local elimination shifts C^4 at leading order.
+  The latter series assumes a_Phi>0 near C=0, not b_Phi=0 in actual v1 or a
+  dynamic-memory reduction. The actual legacy V_L is degree 8 for gamma!=0.
+- Additional boundaries: Phi=Pi=0 is not generally invariant with g*C^2!=0;
+  I=0 is not invariant with beta*C!=0. First/second-order rewriting preserves
+  initial data, tau=0 is not stationary slaving, and conserved/nonconserved
+  C flows differ even with one functional. Derived trace is not a state substitute.
+- Coverage: 14 family groups retain their roles; 62 base IDs plus 97 rows in
+  67 addenda overlap by 48 IDs (union 111). This is metadata counting, not
+  111 proofs or independent equations. The older narrative's 9-equation-family
+  count is noted versus 11 in the JSON; Core docs/registries are not rewritten.
+- Checks actually run: eight exact SymPy 1.14.0 algebra groups plus parameter AST
+  default check; no engine import, solver, fit, physical data or old verifier
+  rerun. Primary APS source abstracts/material on kinetics/conservation and
+  Onsager reciprocity were read, not a systematic literature review.
+- QA: full/changed read-only completeness exit 0 (16 contracts/121 routes/0 errors;
+  3745 paths unreviewed). All 35 source identities/12 original fingerprints match.
+  Report: 94 local links, 172 fence markers/60 tables consistent; new-section
+  privacy/whitespace clear. Review INCOMPLETE/physical-correspondence UNKNOWN.
+- Claim impact: no universal I=Phi=entropy/energy mapping, known-theory nesting,
+  physical validation, novelty, learning/global-openness or physics-gate promotion.
+  Earlier steady-band certificate, prepared-history counterexample and thermal
+  helper limitation remain unchanged. New normalized algebra is not physical data.
+- Next controller: section 25.7 / contract next_action. Review for one intended
+  situation whether retained effects preserve direction/sign or only magnitude,
+  and which state/input affects later response. Keep unchosen alternatives;
+  no new term, pulse/parameter scan or generic material-data search to force unity.
+- Files/safety: report, supporting contract metadata, this entry and daily ledger.
+  New content safe; pre-existing older log edits remain excluded from the scoped
+  local commit. No Core/API/default/equation/threshold/artifact/gate mutation,
+  external contact, push/merge or automatic next research card.
+
+
 ## 2026-10-22 - Smooth finite preparation exposes retained state outside the first mode
 
 - Scope/type: one FORMAL state-sufficiency card continuing section 23.5.
