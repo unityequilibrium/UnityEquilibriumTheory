@@ -1,3 +1,28 @@
+## 2026-10-24 - Joint thermal reference R3 information, comparator and closure
+
+- Completed: [Argument sections 30.8-30.12](../../meta/UET_THEORY_ARGUMENT.md)
+  and the same joint FORMAL path, not another model or physical gate.
+- Derived from the actual mixed block generator: entropy chain rule and C/Y
+  mutual-information flows. Y flow includes reversible currents; odd-Pi heat
+  accounting and vanishing boundary integrals yield partial second laws in REF-E.
+- Exact limit/symmetry result: g=0 Gibbs factorizes; g!=0 C/Phi covariance can
+  vanish by C-reflection while a nonzero mixed log-density derivative proves
+  dependence. MI is a derived statistical quantity, not a universal I/Phi state.
+- Comparator verdict: exact mixed overdamped/underdamped Langevin equivalence
+  for matched potential/state/sources/bath/readout. No UET-specific restriction
+  is established and no term is added to escape that result.
+- Actually run: 14 exact groups and 24 regression tests pass. Adversarial
+  self-review bound actual Core returns as well as local formulas and separated
+  drift notation from the potential coefficient. No Core source was edited.
+- Closure: R0-R3 conditional derivation is finished, not stalled waiting for
+  lab data. HIST-F intrinsic entropy, temperature/measure and physical mapping
+  remain UNKNOWN; contract INCOMPLETE and parent physics gates unchanged.
+- One proposed next question: explicit joint coarse-graining/thermal dictionary
+  for the existing family. Not started; no beam extension, external contact,
+  source hunting, push or publication. Signed/magnitude ontology stays deferred.
+- Safe new synthesis/metadata; preserve old evidence and unrelated topic-log
+  diff. Scoped final commit follows identity/artifact/document checks only.
+
 ## 2026-10-24 - Joint thermal reference R2 stationarity, parity and entropy
 
 - Result: [Argument sections 30.5-30.7](../../meta/UET_THEORY_ARGUMENT.md)

@@ -5,7 +5,7 @@
   "review": {
     "status": "INCOMPLETE",
     "reviewer": "agent:joint-thermal-reference (construction and adversarial self-review, not independent specialist)",
-    "rationale": "R0-R2 completed: nine exact symbolic groups and sixteen regression tests passed with SymPy 1.14.0. Core homogeneous AST, first law, free-energy heat nonuniqueness, Gibbs residual, odd Pi parity, reversible versus irreversible currents, coercive sum-of-squares bound, entropy-current balance and positive Gibbs friction are checked. Wrong heat sign, diffusion and Pi parity are rejected. Boundary/integrability arguments are in report section 30, not inferred from samples. Construction/adversarial self-review only; R3 information/comparator remains. HIST-F physical heat/measure is UNKNOWN; no physics gate promotion."
+    "rationale": "R0-R3 derivation completed: fourteen exact symbolic groups and twenty-four regression tests passed with SymPy 1.14.0. Actual Core homogeneous assignments AND returns, first law, intrinsic-entropy heat nonuniqueness, Gibbs residual, odd Pi parity/current split, coercive bound, entropy-production account, positive equilibrium friction, mixed block-generator information flow, covariance/dependence distinction, cell normalization and exact matched standard comparator were checked. Wrong heat sign, diffusion, Pi parity and Core return mutations are rejected. Boundary/integrability and symmetry arguments remain explicit analytic dependencies, not sampled validation. Construction/adversarial self-review only, not independent specialist review. Mathematical reference scope is concluded, but HIST-F joint intrinsic entropy/physical heat/measure remains UNKNOWN; INCOMPLETE is not an unperformed R3 and no physics gate is promoted."
   },
   "question": "Under which explicit thermal and coarse-graining assumptions does the existing homogeneous nonconserved C/Phi/Pi drift admit a consistent joint energy, heat, entropy and information account, and what is equivalent to a standard comparator?",
   "output": {
@@ -23,7 +23,7 @@
     ],
     "assumptions": "Keep original Omega, state and deterministic drift. Add independent Gaussian bath forcing only in C and Pi with D_C=M_C*Theta, D_Pi=M_Phi*Theta/tau^2. Pi odd, C/Phi even. REF-E defines Omega as reference potential; HIST-F remains a separate coarse-free-energy interpretation with unresolved intrinsic entropy and reference-measure correspondence. Independence and bath are declared extra hypotheses, not derived Core laws.",
     "approximation": "No approximation within REF-E generator algebra. Homogeneous/nonconserved selection is a scope restriction, not a theorem reducing all Core lanes. Quartic extension on R is not the bounded binary process. No new material law or SI map.",
-    "initial_boundary": "Arbitrary admissible initial density for identities; normalizable source-free Gibbs candidate on R^3. Fixed product measure and tails supporting integration by parts. No trajectory solver or assertion of unique invariant measure/ergodicity/lifetime.",
+    "initial_boundary": "Admissible smooth positive initial density with finite entropy/Fisher integrals and finite expected shifted energy; source-free Gibbs on R^3 has coercive quartic/Gaussian tails. Fixed product measure and vanishing entropy/heat/information boundary integrals. For finite-time nonexplosion arguments, prescribed sources are bounded on finite intervals. No trajectory solver or assertion of unique invariant measure/ergodicity/lifetime.",
     "drive_environment": "One conditional isothermal bath with normalized energy scale Theta. Sources J_C(t),J_Phi(t) are prescribed, not state/velocity feedback. No additional detector, hidden controller, independent Phi noise, chemical reservoir or strong-coupling microscopic proof.",
     "parameters": "All old coefficients remain symbolic and locked in sign/domain, with zero calibration/fitting. m_Phi=tau/M_Phi and gamma_Phi=1/M_Phi are definitions. Noise strengths are conditional FDT choices, not a derivation of mobility/coupling values. If physical total energy=N*epsilon_0*E_ref and k_B*T=epsilon_0*theta_site, the per-site normalized reference uses Theta=theta_site/N. A different energy normalization requires a consistent mobility/generator change. Unknown physical scales are not assigned numbers."
   },
@@ -206,7 +206,7 @@
       "id": "entropy-processing",
       "group": "processing",
       "disposition": "MODELED",
-      "reason": "Fixed-measure Shannon joint/marginal entropy, mutual information and current-based decomposition must be derived; not the universal author information.",
+      "reason": "Fixed-measure entropy chain rule and mutual-information flow are derived from the mixed block generator using total Y currents and odd-Pi irreversible heat accounting. Partial nonnegative productions are REF-E results, not universal author information or material HIST-F heat bounds.",
       "evidence": [
         "docs/meta/UET_THEORY_ARGUMENT.md#joint-thermal-reference",
         "https://arxiv.org/html/1402.3276"
@@ -238,7 +238,7 @@
     {
       "path": "docs/meta/UET_THEORY_ARGUMENT.md",
       "kind": "working_file",
-      "sha256": "630706b2ac674d510a70e00b1397142675e45d6a7d6f6f3581b57d1acb0074cb",
+      "sha256": "d590b084fa85ed1e3133364a8b889b79ad5c3a901e3a8044ed4e00ae3d763d4a",
       "role": "evidence",
       "availability": "REQUIRED"
     },
@@ -281,14 +281,14 @@
     {
       "path": "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/Research_T13_Joint_Thermodynamic_Completion.py",
       "kind": "working_file",
-      "sha256": "33591d675bed295a0bf00b978594bf4836a506c18cfa680fce1299fb4ec0b93f",
+      "sha256": "c701195cf6da2376701d8543b883c5342d3a3186bf21d326180db25d10bcc18c",
       "role": "code",
       "availability": "REQUIRED"
     },
     {
       "path": "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/test_t13_joint_thermodynamic_completion.py",
       "kind": "working_file",
-      "sha256": "adbaef003f06fcb447063bc3e719123dfc7ada42d1a627b3bc723afe4a08244e",
+      "sha256": "7c17734128178640b556600899c330c78e62ad05409814b042f03bfc2be3fb06",
       "role": "code",
       "availability": "REQUIRED"
     }
@@ -307,5 +307,5 @@
     "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/Research_T13_Joint_Thermodynamic_Completion.py"
   ],
   "claim_boundary": "Conditional mathematical thermal completion and matched standard-comparator audit only. No new Core stochastic law, SI internal-energy/heat validation, physical acceptance, unique mobility, universal information identity, learning/cosmology or UET novelty.",
-  "next_action": "R3 derive entropy chain rule and mixed-generator information flow for C | (Phi,Pi), retain odd parity, check dependence without covariance and matched standard comparator. Do not add a Core term, rerun old verifiers or develop the beam plan."
+  "next_action": "R0-R3 is concluded; do not continue automatically. Proposed single next question: can one explicit joint coarse-graining/thermal measure from standard statistical mechanics realize the existing Omega family and fix intrinsic entropy and temperature dependence without fitting or extra Core terms? Request precise specialist review of that dictionary; no automatic contact, old reruns, beam development or physical promotion."
 }

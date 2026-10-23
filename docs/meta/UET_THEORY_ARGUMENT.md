@@ -3433,7 +3433,7 @@ d\Pi&=\frac{-\Pi-M_\Phi\mu_\Phi+J_\Phi}{\tau}dt+
 \end{aligned}
 \]
 
-W_C,W_Pi อิสระ; **ไม่มี independent noise ใน dPhi** C/Phi เป็น even และ Pi เป็น odd ภายใต้ time reversal; bath scale Theta เป็น normalized energy ไม่ใช่อุณหภูมิ SI ที่สอบเทียบแล้ว นี่ไม่ใช่การแก้ stochastic law ของ Core และ independent noises ไม่ได้ตามจากคำว่าอ่างเดียวโดยลำพัง
+W_C,W_Pi อิสระ; **ไม่มี independent noise ใน dPhi** C/Phi เป็น even และ Pi เป็น odd ภายใต้ time reversal (คำว่า even/odd ตรงนี้ไม่ใช่การเลือกค่า C บวก/ลบหรือ signed/magnitude information) bath scale Theta เป็น normalized energy ไม่ใช่อุณหภูมิ SI ที่สอบเทียบแล้ว นี่ไม่ใช่การแก้ stochastic law ของ Core และ independent noises ไม่ได้ตามจากคำว่าอ่างเดียวโดยลำพัง
 
 | การอ่าน | สิ่งที่กำหนดเพิ่ม | อนุญาตให้เรียกอะไร / ยังไม่อนุญาต |
 | --- | --- | --- |
@@ -3525,15 +3525,15 @@ F^{(\kappa)}(C,\Phi;\vartheta)=\Omega_0(C,\Phi)+(\Theta_0-\vartheta)\kappa\Phi^2
 
 ### 30.5 R2 — Generator, Gibbs reference และ normalizability
 
-เขียน a_C=-M_C mu_C+J_C, a_Pi=(-Pi-M_Phi mu_Phi+J_Phi)/tau และ D_C=M_C Theta, D_Pi=M_Phi Theta/tau² โดย coefficient ของ second derivative คือ D ไม่ใช่ noise amplitude เอง Itô backward generator และ forward equation คือ
+ให้ drift components \(\mathfrak a_C=-M_C\mu_C+J_C\), \(\mathfrak a_\Pi=(-\Pi-M_\Phi\mu_\Phi+J_\Phi)/\tau\) (ไม่ใช่ quadratic coefficient a_C ของ potential) และ D_C=M_C Theta, D_Pi=M_Phi Theta/tau² โดย coefficient ของ second derivative คือ D ไม่ใช่ noise amplitude เอง Itô backward generator และ forward equation คือ
 
 \[
 \begin{aligned}
-Lf&=a_C\partial_Cf+\Pi\partial_\Phi f+a_\Pi\partial_\Pi f
+Lf&=\mathfrak a_C\partial_Cf+\Pi\partial_\Phi f+\mathfrak a_\Pi\partial_\Pi f
  +D_C\partial_C^2f+D_\Pi\partial_\Pi^2f,\\
 \partial_t\rho&=-\partial_C j_C-\partial_\Phi j_\Phi-\partial_\Pi j_\Pi,\\
-j_C&=a_C\rho-D_C\partial_C\rho,\quad j_\Phi=\Pi\rho,\quad
-j_\Pi=a_\Pi\rho-D_\Pi\partial_\Pi\rho.
+j_C&=\mathfrak a_C\rho-D_C\partial_C\rho,\quad j_\Phi=\Pi\rho,\quad
+j_\Pi=\mathfrak a_\Pi\rho-D_\Pi\partial_\Pi\rho.
 \end{aligned}
 \]
 
@@ -3556,7 +3556,7 @@ E\geq\frac{b_C}{16}C^4+\frac{b_\Phi}{8}\Phi^4
 จาก parity epsilon=(+,+,-) แยก a^irr_i=[a_i(x)+epsilon_i a_i(epsilon x)]/2 และ a^rev_i=[a_i(x)-epsilon_i a_i(epsilon x)]/2 ได้
 
 \[
-a^{\rm irr}=(a_C,0,-\Pi/\tau),\qquad
+a^{\rm irr}=(\mathfrak a_C,0,-\Pi/\tau),\qquad
 a^{\rm rev}=(0,\Pi,(-M_\Phi\mu_\Phi+J_\Phi)/\tau).
 \]
 
@@ -3578,7 +3578,7 @@ current คู่หลังไม่เป็นศูนย์ทั่วไ
  +\int\frac{(j_\Pi^{\rm irr})^2}{D_\Pi\rho}\,dx\geq0.}
 \]
 
-พิสูจน์: ∂_t rho=-div j ให้ dot S=-∫j·grad ln rho; reversible contribution รวมเป็นศูนย์เพราะ div a^rev=0 ส่วน heat rates เขียนเป็น ∫(a_C/M_C)j_C และ -∫m Pi j_Pi^irr ได้ โดยรูปนี้ต่างจากค่าเฉลี่ย Itô ใน R1 แค่ total derivatives ที่ boundary หายไป จาก j_C/(D_C rho)=a_C/D_C-∂_C ln rho และ j_Pi^irr/(D_Pi rho)=-m Pi/Theta-∂_Pi ln rho จึงได้สองกำลังสองข้างบนโดยตรง ไม่ย้าย jump-rate entropy formula มาใช้กับ odd variable โดยไม่ตรวจ
+พิสูจน์: ∂_t rho=-div j ให้ dot S=-∫j·grad ln rho; reversible contribution รวมเป็นศูนย์เพราะ div a^rev=0 ส่วน heat rates เขียนเป็น \(\int(\mathfrak a_C/M_C)j_C\) และ -∫m Pi j_Pi^irr ได้ โดยรูปนี้ต่างจากค่าเฉลี่ย Itô ใน R1 แค่ total derivatives ที่ boundary หายไป จาก \(j_C/(D_C\rho)=\mathfrak a_C/D_C-\partial_C\ln\rho\) และ j_Pi^irr/(D_Pi rho)=-m Pi/Theta-∂_Pi ln rho จึงได้สองกำลังสองข้างบนโดยตรง ไม่ย้าย jump-rate entropy formula มาใช้กับ odd variable โดยไม่ตรวจ
 
 **ผลที่ตัดสินได้:** ที่ rho_G มี dot Sigma=0 แต่
 
@@ -3601,3 +3601,118 @@ current คู่หลังไม่เป็นศูนย์ทั่วไ
 - exact homogeneous AST projection ผูก Ω, mu, E, drift และ sigma กับ source ปัจจุบัน; ไม่เป็นการทดสอบ spatial solver หรือรัน retention/kernel fixtures ใหม่
 
 **ผลหลัง R2:** ไม่พบ contradiction ของ REF-E ภายใต้เงื่อนไขที่ประกาศ ได้ stationary normalized Gibbs และ nonnegative entropy-production account ส่วน HIST-F physical heat, microscopic bath, measure/coefficients-versus-temperature, SI mapping และ specialist review ยังเปิดอยู่; R3 ต้องตรวจว่าการแยก information ใช้ได้กับ generator นี้จริงและอะไรเพิ่มจาก comparator
+
+### 30.8 R3 — Information จาก joint generator ไม่ใช่ state หรือ substance เพิ่ม
+
+แบ่ง X=C และ Y=(Phi,Pi) ตามที่ล็อกไว้ ได้ L=L_C+L_Y โดย L_C เปลี่ยน C ส่วน L_Y เปลี่ยน Phi/Pi ไม่มี mixed diffusion เพราะ dW_C dW_Pi=0 นี่คือ **continuous block-generator structure** ไม่ใช่คำกล่าวว่าทุก dt มีเพียง subsystem เดียวเปลี่ยนแบบ jump process ทั้งสองส่วนเปลี่ยนต่อเนื่องได้ และการมีอ่างเดียวไม่รับประกัน structure นี้ในวัสดุจริงที่อาจมี correlated noise/memory
+
+การแบ่ง generator ไม่ได้ทำให้ marginal C เป็น closed Markov model ด้วยตัวเอง: เมื่อ g≠0 การ integrate Phi/Pi ออกยังเหลือ conditional mean ⟨Phi\|C⟩ ใน marginal drift ซึ่งต้องรู้จาก joint density การคง Y ไว้จึงมีหน้าที่ทางพลวัต/ประวัติ ไม่ใช่การเพิ่มสัญลักษณ์ information เพื่ออุดช่องว่าง และไม่แปลว่า measurement ของ C เพียงตัวเดียวกู้ Y ได้ครบ
+
+ใช้ product reference measure เดิม กำหนด rho_C=∫rho dY, rho_Y=∫rho dC และ
+
+\[
+\mathcal I(C;Y)=\int\rho\ln\frac{\rho}{\rho_C\rho_Y}\,dx,\qquad
+S_{CY}=S_C+S_Y-\mathcal I.
+\]
+
+I แบบนี้เป็น derived mutual information (nats) จาก joint distribution **ไม่ใช่ legacy I, Phi, Pi, R หรือ information ทุกความหมายของผู้เขียน** ไม่มีการเพิ่ม state ที่ต้องให้ค่าเริ่มต้นอีกตัว Differential entropies ต้องอ้าง measure/coordinates ส่วน mutual information คงค่าภายใต้ invertible coordinate changes ภายในแต่ละ subsystem แต่การหยาบข้อมูลหรือเลือกขอบเขตใหม่อาจเปลี่ยน I ได้
+
+จาก normalization และ continuity equation โดยตรง:
+
+\[
+\begin{aligned}
+\dot{\mathcal I}&=\dot{\mathcal I}_C+\dot{\mathcal I}_Y,\\
+\dot{\mathcal I}_C&=\int j_C\partial_C\ln\frac{\rho}{\rho_C\rho_Y}\,dx,\\
+\dot{\mathcal I}_Y&=\int\left(j_\Phi\partial_\Phi+j_\Pi\partial_\Pi\right)
+                 \ln\frac{\rho}{\rho_C\rho_Y}\,dx.
+\end{aligned}
+\]
+
+พิสูจน์โดย differentiate ∫rho ln rho ลบ marginal terms; terms คงที่หายเพราะ probability normalized แล้ว integrate by parts แยกตาม L_C/L_Y ต้องใช้ **total j_Pi รวม reversible current** ใน I_dot_Y ไม่แทนด้วย j_Pi^irr อย่างเดียว Odd parity ไม่ได้หายไป: มันยังควบคุม heat/irreversible split ของ §30.6 และ reversible Y drift มี divergence เป็นศูนย์เมื่อถือ C คงที่
+
+จึงได้ partial second laws ของ **REF-E** ที่ตรวจจาก generator นี้จริง:
+
+\[
+\begin{aligned}
+\dot\Sigma_C&=\dot S_C+\langle\dot Q^C_{\rm out}\rangle/\Theta-\dot{\mathcal I}_C
+ =\int(j_C^{\rm irr})^2/(D_C\rho)\,dx\geq0,\\
+\dot\Sigma_Y&=\dot S_Y+\langle\dot Q^Y_{\rm out}\rangle/\Theta-\dot{\mathcal I}_Y
+ =\int(j_\Pi^{\rm irr})^2/(D_\Pi\rho)\,dx\geq0,\\
+\dot\Sigma&=\dot\Sigma_C+\dot\Sigma_Y.
+\end{aligned}
+\]
+
+ตัวตรวจแยก algebra ของ Y ที่ยังมี reversible entropy divergence เหลืออยู่ **ก่อน** ใช้ boundary integral; ไม่ประกาศว่า integrand นั้นเป็นศูนย์ทุกจุด ทั้ง I_dot_C และ I_dot_Y ไม่จำเป็นต้องมีเครื่องหมายบวก ผลนี้สอดคล้องกับแนวทาง [Horowitz–Esposito §III/Discussion](https://arxiv.org/html/1402.3276) แต่ mixed underdamped derivation/parity นี้ถูกตรวจต่างหาก ไม่ถือว่าชื่อ “bipartite” พิสูจน์ local thermodynamics ให้เอง
+
+สำหรับ HIST-F หากมี dictionary ที่ถูกต้อง total physical system entropy ต้องรวม ⟨S_int⟩ และ bath heat ต้องลบ Theta dS_int พร้อมกัน จึงรักษา total balance ได้; **ยังนำ partial heat/entropy bounds ข้างบนไปอ้างกับวัสดุไม่ได้** เพราะ intrinsic entropy และการแบ่ง interaction ระหว่าง subsystems ยังไม่ระบุ ไม่มีการอนุมาน physical heat จาก mutual information เพียงอย่างเดียว
+
+### 30.9 R3 — ตรวจ limits: ไม่สัมพันธ์เชิงเส้นไม่ได้แปลว่าไม่มี information
+
+- **g=0 ที่ equilibrium:** E=E_C(C)+E_Y(Phi,Pi) และ Z=Z_C Z_Y จึง rho_G=rho_C rho_Y และ I=0 ไม่สรุปว่า uncoupling ทำให้ initial correlations ของ distribution ใด ๆ หายทันที
+- **g≠0 ที่ equilibrium:** Ω และ rho_G เป็น even ใน C ทำให้ ⟨C⟩=⟨C Phi⟩=0 จึง Cov(C,Phi)=0 แต่
+  \(\partial_C\partial_\Phi\ln\rho_G=gC/\Theta\)
+  ไม่เป็นศูนย์ใน open set จึง factorize C กับ Y ไม่ได้และ I>0 สำหรับ density/finite-integral conditions นี้ เป็น analytic symmetry/dependence argument ไม่ใช่การคำนวณ MI จาก sample หรือใช้ covariance เป็น proxy
+- **Pi ที่ equilibrium:** kinetic term แยกเป็น Gaussian จึง Pi อิสระจาก (C,Phi) ใน rho_G แต่ระหว่าง transient Phi/Pi และ C อาจสัมพันธ์กัน ห้ามยก equilibrium factorization เป็น history-observability theorem
+- **statistical dependence ไม่เท่ากับ learning:** rho_G อาจมี static I>0 แต่ I_dot=0 และ total entropy production=0 ความสัมพันธ์ที่มีอยู่ไม่ได้พิสูจน์ adaptation, improvement, ความจำที่คงตลอดกาล หรือ causal transfer ที่ผู้วัดระบุได้ครบ
+- **signed/magnitude ยังไม่เลือกแทนผู้เขียน:** coupling C²Phi ของ reference นี้ตอบสนองต่อ C² ไม่ใช่ตัว C ที่มีเครื่องหมายในทุกบริบท จึงเป็นข้อจำกัดของ realization นี้ ไม่เปลี่ยน information ontology รวมให้เหลือ magnitude, entropy หรือ I(C;Y)
+
+### 30.10 R3 — Comparator และคำวินิจฉัยที่ปิดรอบได้
+
+เปลี่ยนชื่อเป็น standard overdamped coordinate x=C และ underdamped coordinate q=Phi,v=Pi โดย m=tau/M_Phi, gamma=1/M_Phi จะได้ **ตรงทุก term**:
+
+\[
+dx=M_C(-\partial_x\Omega+f_C)dt+\sqrt{2M_C\Theta}\,dW_C,
+\quad dq=vdt,
+\quad m\,dv=(-\gamma v-\partial_q\Omega+f_\Phi)dt+\sqrt{2\gamma\Theta}\,dW_\Pi.
+\]
+
+เมื่อ potential, state, sources, bath และ readout เหมือนกัน generator และ probability law ตรงกันภายใต้ well-posedness ข้างต้น จึงไม่มีการทดสอบใดแยก **ชื่อ UET** ออกจากคู่เทียบที่เท่ากันนี้ได้ด้วยการเพิ่ม precision/sample หรือปรับ observer อย่างเดียว นี่คือ equivalence ของ conditional reference ไม่ใช่การตัดสินว่า UET ทุก family เป็นทฤษฎีเดียวกันหรือไม่มีคุณค่า และไม่เพิ่ม term เพื่อหลบผลนี้
+
+| ประเด็นตัดสิน | ผลของรอบนี้ | ขอบเขต/สิ่งที่ยังไม่ตามมา |
+| --- | --- | --- |
+| Drift/functional เดิมยอมรับ thermal completion นี้หรือไม่ | **สอดคล้องภายใต้เงื่อนไข**: first law, stationary Gibbs, parity และ joint/partial entropy balance | ต้องเพิ่ม bath/FDT, independent noises, measure, parity, domain และ boundary assumptions; ไม่ใช่ Core stochastic law ที่ derive แล้ว |
+| Ω แบบ coarse free energy ให้ material internal energy/heat ทันทีหรือไม่ | **ต้องเพิ่มเงื่อนไข**: thermal-extension witness ให้ความร้อนต่างกันแม้ drift ณ bath เดียวกันเท่ากัน | ต้องทราบ joint intrinsic entropy, temperature dependence และ microscopic/physical correspondence; ไม่ตั้งค่าที่ไม่รู้เป็นศูนย์ |
+| sigma_det/Theta เป็น total entropy production หรือไม่ | **ขัดแย้งกับการระบุเช่นนั้นใน finite-Theta reference**: friction บวกที่ Gibbs แต่ total EP=0 | ไม่ปฏิเสธ deterministic descent หรือแก้ old trace code; ต้องระบุ bath/noise ในการตีความ |
+| มี information quantity ที่คำนวณร่วมได้หรือไม่ | **สอดคล้องภายใต้เงื่อนไข**: joint/marginal entropy และ MI flow จาก L_C+L_Y | ไม่ใช่ universal I ของผู้เขียน ไม่ใช่ observable ครบ และไม่พิสูจน์ learning/cosmology |
+| Completion นี้เพิ่มกฎที่แยก UET จาก standard mixed Langevin หรือไม่ | **เทียบเท่าคู่เทียบในขอบเขตนี้** | ยังไม่มี UET-specific restriction เหนือ comparator; consistency ไม่เท่ากับ novelty |
+
+**สรุปอ่านง่ายสี่ข้อ:**
+
+1. จากสมการเดิมจริง: joint storage, reciprocal coupling, deterministic drift และการมี actual retained state ไม่ใช่เพียง trace ยังใช้ได้ ผลใหม่คือเมื่อเติมอ่างอย่างเปิดเผย บัญชีร่วมของ reference ปิดได้
+2. สิ่งที่เพิ่มตามเงื่อนไข: bath, white Gaussian noise/FDT, parity, measure และ real-line domain ไม่ได้ตามจากคำว่า information หรือ energy conservation เพียงคำเดียว
+3. คำที่ใช้ได้: E/heat/entropy production ใช้เป็น **normalized REF-E quantities** ตาม convention นี้; HIST-F material heat ต้องรู้ intrinsic entropy; MI เป็นปริมาณความสัมพันธ์ของ distribution ไม่ใช่การเพิ่มสารข้อมูล
+4. สิ่งที่ยังไม่ใช่ข้อเสนอเฉพาะ UET: thermostat/generator นี้และ MI accounting เทียบเท่ากรอบมาตรฐาน ไม่เลือก mobility/coupling, physical mapping หรือข้อเสนอจักรวาลให้เอง
+
+### 30.11 หลักฐาน การทำซ้ำ และจุดหยุด
+
+หลักฐานรอบนี้: [symbolic verifier](../topics/0.13_Thermodynamic_Bridge/Code/03_Research/Research_T13_Joint_Thermodynamic_Completion.py), [regression tests](../topics/0.13_Thermodynamic_Bridge/Code/03_Research/test_t13_joint_thermodynamic_completion.py), [compact artifact](../topics/0.13_Thermodynamic_Bridge/Result/artifacts/t13_joint_thermodynamic_completion.json) และ [contract](../topics/0.13_Thermodynamic_Bridge/calculation_contracts/joint_thermodynamic_completion.json) ใช้ schema/hash interface เดิม ไม่สร้าง physics gate ใหม่
+
+คำสั่งทำซ้ำเฉพาะรอบนี้จาก repo root (ไม่ใช่การรันงานเก่าทั้งหมด):
+
+```text
+python -X utf8 -B -m unittest discover -s docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research -p test_t13_joint_thermodynamic_completion.py -v
+python -X utf8 -B docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/Research_T13_Joint_Thermodynamic_Completion.py --check
+python -X utf8 -B docs/scripts/audit/audit_calculation_completeness.py --check
+python -X utf8 -B docs/scripts/audit/audit_calculation_completeness.py --changed BASE_REF --check
+```
+
+ใช้ Python environment ที่มี SymPy 1.14.0 ตาม artifact; BASE_REF คือ commit ก่อน diff ที่ต้องตรวจ `--check` ไม่เขียนไฟล์; เฉพาะ `--emit-report` ของ producer สร้าง artifact นี้เมื่อทบทวน source/config/contract แล้ว Byte output เป็น canonical LF ไม่มี timestamp/random sample หรือสำเนาผลเก่าทั้งก้อน ฝั่ง Core ถูกอ่าน/ตรวจ AST เฉพาะ homogeneous projection ไม่ได้แก้หรือเรียก solver รายงานกับ source/test/schema/ontology และ baseline cycle contract มี identities; เปลี่ยนรายงานจึง refresh dependent report hash พร้อมบอกว่า append-only ไม่ใช่ rerun/promotion
+
+**ผลตรวจสุดท้ายของรอบนี้:** 14 exact symbolic groups และ 24 regression tests ของ path ใหม่ผ่าน พร้อม negative controls ที่ระบุ แต่ analytic boundary, admissibility และ microscopic interpretation ยังเป็นสมมติฐาน/ข้อจำกัดที่ต้องอ่าน ไม่แปลง test count เป็นคะแนนความถูกต้องของทฤษฎี ไม่มี Monte Carlo, parameter sweep, data fit, ห้องทดลอง หรือ rerun ของ retained-history/kernel/comparator เก่า การตรวจ integrity/ลิงก์/contract แยกบันทึกตามที่รันจริงใน UPDATE_LOG และ WORK_LEDGER
+
+**การทบทวนความหมาย:** ส่งสรุป R1 ให้ผู้เขียนแล้ว; ยังไม่มีการยืนยันใหม่ว่า information ทั้งทฤษฎีเท่ากับตัวใด งานอิสระ R2–R3 จึงทำตาม alternative ที่ล็อก ไม่ถือความเงียบเป็นการเลือก ontology การเห็นด้วยของผู้เขียนหรือการ self-review ของ AI ไม่ใช่ independent specialist review
+
+**สถานะปิดงาน:** R0–R3 จบเป็น conditional derivation + underdetermination witness + comparator equivalence แล้ว ไม่ติดรอ lab data และไม่ต้องรอพิสูจน์ UET ทั้งหมด Contract review ยังคง INCOMPLETE เพราะ HIST-F physical correspondence เปิดอยู่ ไม่ใช่เพราะรอบ derivation ยังไม่ทำ; causal, He-4, graphite และ Core gates เดิมคง controller ของตนเอง แผนคานและข้อเสนอจักรวาล/learning/persistence ไม่ถูกยืนยันหรือปฏิเสธจากผลนี้
+
+### 30.12 หนึ่งโจทย์ถัดไปที่เสนอ — ยังไม่เริ่มอัตโนมัติ
+
+**คำถามเดียว:** มี joint coarse-graining จากฐาน statistical mechanics ที่ประกาศ state/measure/partition function ชัด แล้วให้ free-energy family เดิมพร้อม intrinsic entropy ของ C/Phi ได้ภายใต้ limit ใด โดยไม่ fit หรือเพิ่ม Core term เพื่อให้เข้ารูปหรือไม่?
+
+- **มีแล้ว:** REF-E consistency และ standard equivalence; state-counting ของ C ใน §14; counterexample ใน §30.4 ที่บอกว่า single-temperature drift ไม่พอ จึงไม่ต้องกลับไปคำนวณ retention หรือหาข้อมูลฮีเลียมเพื่อแก้คำถามนี้
+- **ขาดจริง:** joint fast/slow dictionary, reference measure, temperature dependence ของ coefficients/coupling และการนับ N ไม่ใช่เพียงจำนวนข้อมูลทดลอง หาก F รวม degeneracy แล้วต้องไม่คูณ exp(S_int) ใน measure ซ้ำ
+- **การทำหนึ่งงานที่เปลี่ยนคำตัดสินได้:** ตรวจหนึ่ง explicit joint coarse-graining/comparator จากวรรณกรรมเทียบกับ family เดิม โดยใช้ C-side bridge ที่มี; ทำตาราง F=-vartheta ln Z, S_int=-∂_vartheta F, U=F+vartheta S_int และขอบเขตการลดรูป ไม่เริ่มหลายวัสดุหรือสร้างสสารข้อมูลใหม่
+- **ผลส่งมอบ/ผลเป็นไปได้:** ถ้าจับคู่ได้ให้แสดง derivation และเงื่อนไข ถ้าได้หลาย thermal dictionaries ให้ชี้ independent restriction ที่ยังไม่มี ถ้าจับคู่ไม่ได้ให้ระบุ mismatch ไม่ใส่ term เพิ่มเพื่อให้ผ่าน และถ้าเทียบเท่าให้เก็บ equivalence นั้น
+- **จุดหยุด/เปิดต่อ:** จบที่ correspondence หรือ counterexample หนึ่งชุด; หลังสองความพยายามที่ไม่เปลี่ยนคำตัดสินให้สรุป prerequisite หยุดเส้นทาง ไม่มี automatic source hunt, beam test หรือ experiment
+- **คำถามผู้ตรวจเฉพาะทาง:** constrained free energy/measure นี้นับ fast entropy ซ้ำหรือขาดหรือไม่ และ derivative/coupling ที่อ้างเป็น energetic/entropic ใดจริง? ให้ packet สั้นจาก §§30.2–30.4, 30.6, 30.8 และผล comparator ไม่ขอให้รับรองทั้ง UET; รอบนี้เตรียมคำถามแต่ไม่ส่งอีเมล/ติดต่อใคร
+
+การทำข้อถัดไปต้องได้รับทิศทางใหม่ ผลปัจจุบันไม่ให้สิทธิ์เปลี่ยนสมการ/API/defaults/thresholds/physics gates, push, merge หรือเผยแพร่ การคอมมิตในเครื่องเป็นเพียงการรักษาชุดหลักฐานที่ตรวจได้ ไม่เท่ากับ public main

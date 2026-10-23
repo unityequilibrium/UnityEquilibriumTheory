@@ -89,6 +89,8 @@ def core_projection_residuals(source_text=None):
             return s.Rational(str(n.value))
         if isinstance(n, ast.UnaryOp) and isinstance(n.op, ast.USub):
             return -evaluate(n.operand)
+        if isinstance(n, ast.Tuple):
+            return tuple(evaluate(x) for x in n.elts)
         if isinstance(n, ast.BinOp):
             a, b = evaluate(n.left), evaluate(n.right)
             operations = {ast.Add: lambda: a+b, ast.Sub: lambda: a-b,
@@ -104,7 +106,7 @@ def core_projection_residuals(source_text=None):
             if fn == "gradient_energy_integral_1d":
                 return s.Integer(0)
             if fn == "matter_space_free_energy":
-                return r["omega"]
+                return values["projected_omega"]
             if fn == "state.space_rate.copy":
                 return r["Pi"]
         raise ValueError(f"unsupported homogeneous Core expression: {name}")
@@ -124,20 +126,41 @@ def core_projection_residuals(source_text=None):
             raise ValueError(f"ambiguous nonconserved Core branch: {fn}")
         return branches[0]
 
+    def returned(fn):
+        returns = [n for n in functions[fn].body if isinstance(n, ast.Return)]
+        if len(returns) != 1:
+            raise ValueError(f"ambiguous Core return: {fn}")
+        return evaluate(returns[0].value)
+
+    # Bind actual return expressions too; matching an unused local is insufficient.
+    values["local_density"] = assignment("matter_space_free_energy", "local_density")
+    for name in ("local", "matter_gradient", "space_gradient"):
+        values[name] = assignment("matter_space_free_energy", name)
+    values["projected_omega"] = returned("matter_space_free_energy")
+    values["mu_C"] = assignment("matter_space_chemical_potentials", "mu_C")
+    values["mu_Phi"] = assignment("matter_space_chemical_potentials", "mu_Phi")
+    values["mu_matter"], values["mu_space"] = returned("matter_space_chemical_potentials")
+    values["kinetic"] = assignment("matter_space_extended_energy", "kinetic")
+    values["dC"] = assignment("matter_space_rhs", "dC", nonconserved_body("matter_space_rhs"))
+    for name in ("dPhi", "dPi"):
+        values[name] = assignment("matter_space_rhs", name)
+    rhs = returned("matter_space_rhs")
+    values["sigma_matter"] = assignment("matter_space_dissipation", "sigma_matter", nonconserved_body("matter_space_dissipation"))
+    values["sigma_space"] = assignment("matter_space_dissipation", "sigma_space")
+    sigma = returned("matter_space_dissipation")
     projected = {
-        "omega": assignment("matter_space_free_energy", "local_density"),
-        "muC": assignment("matter_space_chemical_potentials", "mu_C"),
-        "muP": assignment("matter_space_chemical_potentials", "mu_Phi"),
-        "energy": r["omega"] + assignment("matter_space_extended_energy", "kinetic"),
-        "dC": assignment("matter_space_rhs", "dC", nonconserved_body("matter_space_rhs")),
-        "dPhi": assignment("matter_space_rhs", "dPhi"),
-        "dPi": assignment("matter_space_rhs", "dPi"),
-        "sigmaC": assignment("matter_space_dissipation", "sigma_matter", nonconserved_body("matter_space_dissipation")),
-        "sigmaPi": assignment("matter_space_dissipation", "sigma_space"),
+        "omega": values["projected_omega"],
+        "muC": values["mu_matter"], "muP": values["mu_space"],
+        "energy": returned("matter_space_extended_energy"),
+        "dC": rhs[0], "dPhi": rhs[1], "dPi": rhs[2],
+        "returned_muC": rhs[3], "returned_muP": rhs[4],
+        "sigmaC": sigma[0], "sigmaPi": sigma[1], "sigma_total": sigma[2],
     }
     expected = dict(omega=r["omega"], muC=r["muC"], muP=r["muP"], energy=r["energy"],
                     dC=r["drift"][0], dPhi=r["Pi"], dPi=r["drift"][2],
-                    sigmaC=r["MC"]*r["muC"]**2, sigmaPi=r["Pi"]**2/r["MP"])
+                    returned_muC=r["muC"], returned_muP=r["muP"],
+                    sigmaC=r["MC"]*r["muC"]**2, sigmaPi=r["Pi"]**2/r["MP"],
+                    sigma_total=r["MC"]*r["muC"]**2+r["Pi"]**2/r["MP"])
     return {k: s.simplify(v-expected[k]) for k, v in projected.items()}
 
 
@@ -297,13 +320,111 @@ def r2_checks():
     }
 
 
-def calculate():
+def generator_partition_residuals():
     r = reference()
+    C, Phi, Pi = r["state"]
+    f = s.Function("f")(C, Phi, Pi)
+    LC = r["drift"][0]*s.diff(f, C)+r["DC"]*s.diff(f, C, 2)
+    LY = Pi*s.diff(f, Phi)+r["drift"][2]*s.diff(f, Pi)+r["DP"]*s.diff(f, Pi, 2)
+    covariance = r["noise"]*r["noise"].T
+    return {"L_equals_LC_plus_LY": generator(f, r)-LC-LY,
+            "C_Pi_quadratic_covariation": covariance[0, 2],
+            "C_Phi_quadratic_covariation": covariance[0, 1]}
+
+
+def information_residuals():
+    """Fixed-measure chain rule and current-based flow, not a universal I state.
+
+    Marginal entropy integrands are lifted to the joint domain. The Y balance
+    includes a reversible entropy divergence, which integrates to zero, NOT a
+    pointwise zero or an omitted reversible information current.
+    """
+    r = reference()
+    p, pC, pY, Z = s.symbols("rho rho_C rho_Y Z", positive=True)
+    uC, uF, uP, vC, vF, vP = s.symbols("u_C u_Phi u_Pi v_C v_Phi v_Pi", real=True)
+    theta, Pi = r["theta"], r["Pi"]
+    rev, _ = parity_split(r)
+    jC = p*(r["drift"][0]-r["DC"]*uC)
+    jF = p*Pi
+    jPirr = p*(-Pi/r["tau"]-r["DP"]*uP)
+    jPrev = p*rev[2]
+    jP = jPirr+jPrev
+    IC = jC*(uC-vC)
+    IY = jF*(uF-vF)+jP*(uP-vP)
+    SC = -jC*vC
+    SY = -jF*vF-jP*vP
+    Sjoint = -jC*uC-jF*uF-jP*uP
+    qC = r["drift"][0]*jC/r["MC"]
+    qY = -r["tau"]*Pi*jPirr/r["MP"]
+    chain = -p*s.log(p)+p*s.log(pC)+p*s.log(pY)+p*s.log(p/(pC*pY))
+    return {
+        "joint_marginal_entropy_chain_rule": s.expand_log(chain, force=True),
+        "entropy_rate_chain_rule_with_all_currents": Sjoint-SC-SY+IC+IY,
+        "C_partial_second_law": SC+qC/theta-IC-jC**2/(r["DC"]*p),
+        "Y_partial_second_law_up_to_reversible_entropy_divergence":
+            SY+qY/theta-IY-jPirr**2/(r["DP"]*p)+jF*uF+jPrev*uP,
+        "reversible_Y_drift_divergence": s.diff(rev[1], r["Phi"])+s.diff(rev[2], Pi),
+        "ensemble_free_energy_relative_entropy_identity":
+            p*r["energy"]+theta*p*s.log(p)+theta*p*s.log(Z)
+            -theta*p*(s.log(p)+r["energy"]/theta+s.log(Z)),
+    }
+
+
+def gibbs_dependence_residuals():
+    r = reference()
+    C, Phi, Pi = r["state"]
+    EC = r["aC"]*C**2/2+r["bC"]*C**4/4
+    EY = r["aP"]*Phi**2/2+r["bP"]*Phi**4/4+r["tau"]*Pi**2/(2*r["MP"])
+    logp = -r["energy"]/r["theta"]
+    return {
+        "zero_coupling_energy_separates": r["energy"].subs(r["g"], 0)-EC-EY,
+        "C_reflection_symmetry": r["energy"].subs(C, -C)-r["energy"],
+        "C_Phi_cross_moment_integrand_odd": C*Phi+(-C)*Phi,
+        "nonzero_dependence_witness": s.diff(logp, C, Phi)-r["g"]*C/r["theta"],
+        "Pi_independent_of_C_at_Gibbs": s.diff(logp, C, Pi),
+        "Pi_independent_of_Phi_at_Gibbs": s.diff(logp, Phi, Pi),
+    }
+
+
+def comparator_residuals():
+    r = reference()
+    m, gamma = r["tau"]/r["MP"], 1/r["MP"]
+    fC, fPhi = r["JC"]/r["MC"], r["JP"]/r["MP"]
+    return {
+        "overdamped_C_force_port": r["drift"][0]-r["MC"]*(-r["muC"]+fC),
+        "underdamped_mass_friction_force_port": m*r["drift"][2]+gamma*r["Pi"]+r["muP"]-fPhi,
+        "force_noise_amplitude": m*r["noise"][2, 1]-s.sqrt(2*gamma*r["theta"]),
+        "C_noise_amplitude": r["noise"][0, 0]-s.sqrt(2*r["MC"]*r["theta"]),
+        "velocity_state": r["drift"][1]-r["Pi"],
+        "same_energy": r["energy"]-r["omega"]-m*r["Pi"]**2/2,
+    }
+
+
+def normalization_residuals():
+    N = s.Symbol("N", integer=True, positive=True)
+    epsilon0, theta_site = s.symbols("epsilon_0 theta_site", positive=True)
+    Eref = s.Symbol("E_ref", real=True)
+    return {"total_energy_over_kBT_equals_per_site_exponent":
+            N*epsilon0*Eref/(epsilon0*theta_site)-Eref/(theta_site/N)}
+
+
+def r3_checks():
+    return {
+        "R3_generator_partition": _exact_zeros(generator_partition_residuals()),
+        "R3_entropy_information_flow": _exact_zeros(information_residuals()),
+        "R3_equilibrium_dependence_not_covariance": _exact_zeros(gibbs_dependence_residuals()),
+        "R3_standard_comparator": _exact_zeros(comparator_residuals()),
+        "R3_cell_normalization": _exact_zeros(normalization_residuals()),
+    }
+
+
+def calculate():
     checks = {
         "core_homogeneous_projection": _exact_zeros(core_projection_residuals()),
         "R1_first_law": _exact_zeros(first_law_residuals()),
         "R1_free_energy_nonuniqueness": _exact_zeros(coarse_free_energy_residuals()),
         **r2_checks(),
+        **r3_checks(),
     }
     if all(s.simplify(v) == 0 for v in first_law_residuals(-1).values()):
         raise ValueError("wrong heat sign was not rejected")
@@ -312,14 +433,23 @@ def calculate():
     if all(s.simplify(v) == 0 for v in parity_residuals(pi_parity=1).values()):
         raise ValueError("wrong Pi parity was not rejected")
     return {
-        "completed_rounds": ["R0", "R1", "R2"], "checks": checks,
+        "completed_rounds": ["R0", "R1", "R2", "R3"], "checks": checks,
         "negative_controls": {"wrong_heat_sign_rejected": True, "wrong_C_diffusion_rejected": True,
                               "wrong_Pi_diffusion_rejected": True, "wrong_Pi_parity_rejected": True},
-        "interpretation": "REF-E first law and Gibbs/entropy account close conditionally. Positive equilibrium friction loss is not total entropy production. HIST-F physical heat needs intrinsic entropy/measure.",
+        "interpretation": "Conditional REF-E consistency and exact matched standard-Langevin equivalence. Sigma is not total entropy production; mutual information is a derived statistical quantity, not the author's universal information. HIST-F physical heat remains underdetermined without intrinsic entropy/measure.",
+        "decisions": {
+            "REF_E": "consistent under declared thermostat, parity, measure and boundary assumptions",
+            "HIST_F": "additional thermal/microscopic correspondence required; one-temperature heat nonuniqueness proved",
+            "comparator": "exact same generator/state/source/readout implies no UET-label discrimination",
+            "not_inferred": ["unique mobility or coupling", "universal information ontology", "physical material validation",
+                             "cosmological openness, learning or persistence", "finite-temperature memory lifetime"],
+            "one_next_question": "Can one explicit joint coarse-graining/thermal measure realize the existing Omega family and fix intrinsic entropy without fitting or extra Core terms? Not started here."},
         "physical_acceptance": False, "new_core_terms": 0, "observational_rows": 0,
         "old_scientific_verifiers_rerun": False, "unique_UET_discriminator": False,
         "method": {"sympy": s.__version__, "arithmetic": "exact", "samples": 0},
         "limitations": ["No SI/microscopic correspondence", "No independent specialist review",
+                        "Density smoothness, tail and finite-integral assumptions are analytic conditions, not sampled tests",
+                        "Quartic R-domain diffusion is not the finite-N bounded binary process",
                         "No stochastic trajectory, finite-temperature retention lifetime or spatial/conserved proof"],
     }
 

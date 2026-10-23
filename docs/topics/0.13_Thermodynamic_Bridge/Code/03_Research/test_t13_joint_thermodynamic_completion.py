@@ -26,6 +26,16 @@ class JointThermodynamicCompletionTests(unittest.TestCase):
         self.assertNotEqual(changed, text)
         self.assertNotEqual(m.core_projection_residuals(changed)["dPhi"], 0)
 
+    def test_actual_core_returns_are_bound_not_only_local_formulas(self):
+        text = (m.ROOT/m.CORE).read_text(encoding="utf-8-sig")
+        changed = text.replace("return float(matter_space_free_energy(state, dx, config) + kinetic)",
+                               "return float(2 * matter_space_free_energy(state, dx, config) + kinetic)")
+        self.assertNotEqual(changed, text)
+        self.assertNotEqual(m.core_projection_residuals(changed)["energy"], 0)
+        changed = text.replace("return dC, dPhi, dPi, mu_matter, mu_space",
+                               "return dC, dPi, dPhi, mu_matter, mu_space")
+        self.assertNotEqual(m.core_projection_residuals(changed)["dPhi"], 0)
+
     def test_first_law_ito_and_stratonovich_agree(self):
         self.assertZeros(m.first_law_residuals())
 
@@ -101,6 +111,37 @@ class JointThermodynamicCompletionTests(unittest.TestCase):
         self.assertEqual(s.simplify(variance-r["MP"]*r["theta"]/r["tau"]), 0)
         self.assertTrue((variance/r["MP"]).is_positive)
         self.assertZeros(m.equilibrium_current_residuals())
+
+    def test_generator_splits_without_mixed_quadratic_variation(self):
+        self.assertZeros(m.generator_partition_residuals())
+
+    def test_continuous_entropy_chain_rule_and_partial_balances(self):
+        self.assertZeros(m.information_residuals())
+
+    def test_zero_coupling_gibbs_factorizes(self):
+        r = m.reference()
+        self.assertZeros(m.gibbs_dependence_residuals())
+        self.assertEqual(s.diff(-r["energy"]/r["theta"], r["C"], r["Phi"]).subs(r["g"], 0), 0)
+
+    def test_zero_covariance_does_not_imply_gibbs_independence(self):
+        r = m.reference()
+        self.assertEqual(s.simplify(r["energy"].subs(r["C"], -r["C"])-r["energy"]), 0)
+        witness = s.diff(-r["energy"]/r["theta"], r["C"], r["Phi"])
+        self.assertNotEqual(witness, 0)  # A symbolic nonzero function for g != 0.
+        self.assertEqual(s.simplify(witness-r["g"]*r["C"]/r["theta"]), 0)
+
+    def test_underdamped_standard_comparator_is_exact(self):
+        self.assertZeros(m.comparator_residuals())
+
+    def test_per_site_temperature_scale_contains_N(self):
+        self.assertZeros(m.normalization_residuals())
+
+    def test_information_is_not_an_added_state_or_observation(self):
+        result = m.calculate()
+        self.assertEqual(result["completed_rounds"], ["R0", "R1", "R2", "R3"])
+        self.assertEqual(len(m.reference()["state"]), 3)
+        self.assertEqual(result["method"]["samples"], 0)
+        self.assertFalse(result["unique_UET_discriminator"])
 
     def test_no_physics_promotion_from_symbolic_checks(self):
         result = m.calculate()
