@@ -1,3 +1,46 @@
+## 2026-10-24 - Foundations review L3 UET mapping and bounded handoff
+
+- Completed: [Foundations review sections 4-6](../../meta/UET_THERMODYNAMIC_FOUNDATIONS_REVIEW.md)
+  map C/Phi/Pi/Omega/storage/coefficients/sigma/R/MI/ports to existing evidence,
+  extra assumptions and missing physical dictionary. Added plain-language summary.
+- Recorded, not silently repaired: METHOD Landauer-to-beta arrow/presentation
+  drift and material-lane reuse boundary. Existing ontology and INCOMPLETE
+  contract remain controlling; no new contradiction of all Core is claimed.
+- Delivered minimum pre-model decisions, responsibility split and precise
+  specialist questions. Both signed/magnitude alternatives and cosmic openness
+  intent remain. One next feasibility question is proposed, not started.
+- Claim boundary: conditional reference and standard equivalence retained;
+  intrinsic-entropy/measure/T/SI correspondence remains open. No new model,
+  calculation, contract, tests, artifact, Core/README/METHOD or physics gate edit.
+- Public safety safe. Next: read-only completeness and document/preservation QA,
+  then scoped local commit only. No push/PR/merge/publication or external contact.
+- Final QA: normal and baseline-changed read-only completeness exit 0 with
+  17 contracts/122 routes/0 errors; legacy coverage gaps are not promoted away.
+  The 8 joint and 42 cycle identities still match, both reviews INCOMPLETE.
+  Four protected hashes (including working-only METHOD) and the original log
+  body/unrelated tracked-diff digest are unchanged. Checked 30 local link uses,
+  6 public primary URLs, 4 anchors and 6 tables, fences and privacy. Self-review
+  corrected bit/nat factors, derivative assumptions, heat conventions and
+  section locators in the new report only. No old scientific rerun or repair.
+- L0-L3 acceptance: synthesis delivered; physical dictionary remains the next
+  prerequisite. Preserve original 578/79 log diff; commit only report/new logs
+  locally. Next feasibility work remains proposed, not started or published.
+
+## 2026-10-24 - Foundations review L2 object levels and thermodynamic dictionary
+
+- Completed: [Foundations review section 3](../../meta/UET_THERMODYNAMIC_FOUNDATIONS_REVIEW.md)
+  distinguishes entropy/information objects, energy/free-energy/HMF levels,
+  internal versus bath elimination, retained memory, source ports and records.
+  Imported definitions are labeled as literature, not new UET equations.
+- Conditions made explicit: measure/degeneracy counted once, N/domain and
+  temperature conventions, conditional equilibration, preparation and odd Pi.
+  Seifert/Talkner-Hanggi assignment/reconstruction differences remain visible.
+- Reused existing witnesses and mixed-generator results; no symbolic/numerical
+  test or scientific verifier was run. No model, microstate or dictionary chosen.
+- Controller unchanged: physical intrinsic-entropy/measure/temperature mapping.
+  Public safety safe; L0-L1 local checkpoint 5c7a444a7, no push/publication.
+  Next: term-by-term UET disposition, documentation drift and minimum decisions.
+
 ## 2026-10-24 - Foundations review L1 primary-text scope and counterarguments
 
 - Completed: [Foundations review section 2](../../meta/UET_THERMODYNAMIC_FOUNDATIONS_REVIEW.md)
