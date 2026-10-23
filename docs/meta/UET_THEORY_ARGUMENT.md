@@ -30,6 +30,8 @@ UET ในเจตนาที่กู้ได้ไม่ใช่เพี�
 
 สำหรับการอ่านเพื่อปิดรอบนี้ เริ่มที่ **§9.1 ตรวจรับตามแผน → §9.2 ชุดส่งตรวจสั้น → §9.4 สิ่งที่ต้องทำก่อน B** ไม่ต้องอ่านประวัติทั้งหมดใหม่ การเลือกโจทย์ B ไม่ต้องรอปิดฟิสิกส์ทุกสาขาหรือยืนยันรายชื่อเจ็ดฐานให้ครบ แต่ต้องไม่เลือก representation แทนเจตนาผู้เขียน
 
+**ภาคต่อ 24 ตุลาคม 2026:** ดู §26 สำหรับข้อเสนอแกนที่ตรวจในรอบนี้ ขอบเขตของสมมติฐาน/kinetics และการแยก causal fixture ออกจาก changing-C audit ข้อความเรื่องการตรวจรับ A/B ด้านบนเป็นประวัติของรอบนั้น ไม่ใช่การยืนยันว่า author choices หรือ physical gates ปิดแล้ว
+
 ## 2. A0 — ฐานหลักฐาน ขอบเขต และสายสืบทอด
 
 | รายการ | จุดยึดของรอบ A |
@@ -2805,3 +2807,150 @@ Identity ของ addendum inventory: เรียง basename ของ `uet_e
 การทดสอบเป็น homogeneous normalized/formal relations ตาม hypotheses ข้างต้น ไม่ใช่ proof ว่าไม่มี nonlinear/history representation ใดเชื่อมสอง model ได้เลย ไม่ใช่ finite-duration memory certificate ใหม่ และไม่ใช่ physical comparison, independent validation หรือการรับรองสูตรทั้ง registry ผล §23–24, thermal-ledger bug และ physical gates เดิมไม่เปลี่ยน
 
 ใช้ cycle contract เดิมสำหรับ source/report identity และขอบเขต path ที่มีอยู่ ไม่ทำให้ contract ของ cycle กลายเป็นใบรับรองทุก Core family ไม่มี new calculation runner/contract ต่อหน้าเอกสาร หรือการคัดลอก artifacts/ทะเบียนทั้งชุด Primary literature ที่อ่านรอบนี้จำกัด APS abstract/source material ที่เกี่ยวกับฐานวิธีคิดข้างต้น ไม่ใช่ systematic literature review และไม่ติดต่อผู้เชี่ยวชาญหรือหา dataset ใหม่
+
+## 26. จากหลักคิดสู่คำทำนาย: สิ่งที่บัญชีพลังงานและความจำกำหนดได้ — 24 ตุลาคม 2026
+
+### 26.1 คำถามที่ล็อกและฐานของรอบนี้
+
+**คำอธิบายสำหรับผู้เขียน:** เรามีกลไกที่ผลของอดีตย้อนเปลี่ยนการตอบสนองแล้ว แต่การมีพลังงานและความจำยังไม่ได้เลือกอัตราการตอบสนองให้เพียงค่าเดียว รอบนี้ตรวจรอยต่อนั้น ไม่เพิ่มกลไกเพื่อให้ดูเป็นทฤษฎีใหม่ และไม่ขอให้ผู้เขียนตรวจคณิตศาสตร์เอง
+
+| Work card | ขอบเขตและหลักตัดสิน |
+| --- | --- |
+| Question / proposition | ในวงจร retained-state เดิม ความสอดคล้องของบัญชีพลังงานและการมี feedback เพียงพอเลือกกฎตอบสนองเชิงเวลาแล้วหรือไม่? ถ้าไม่ ส่วนใดต้องเป็น constitutive input, derivation หรือ calibration? |
+| Stage / boundary | FORMAL TD0–TD3; homogeneous nonconserved sector ของ realization เดิมบน periodic domain ความยาวหนึ่ง ไม่เลือกแทน conserved/spatial lane หรือทั้งจักรวาล ไม่มี detector หรือ SI assertion |
+| Baseline / lineage | working branch `codex/research/source-backaction-discrimination`, HEAD `1346edfc07c2d2f9eb2adbd5257e820fa186a37b`, ไม่มี upstream; 463 สถานะค้างก่อนแก้ แยกงานอื่นไว้ ไม่มีการ fetch ยืนยัน public main ในรอบนี้ |
+| Have / controller | §§3, 10–12, 15–25; [spec/RHS เดิม](../core/01_contracts/MATTER_SPACE_RESEARCH_SPEC.md), [implementation](../core/02_equations/matter_space/uet_matter_space.py), [cycle contract](../topics/0.13_Thermodynamic_Bridge/calculation_contracts/energy_memory_cycle.json) เดิมที่ยัง INCOMPLETE |
+| Missing / disputed | physical meaning ของ signed coordinate, kinetic coefficient origins, admitted preparation/readout และ UET-specific extra restriction; ไม่อนุมาน author acceptance ของ generator จากการมีโค้ด |
+| Action / why | ใช้อนุพันธ์และ ledger เดิมสร้างคู่เปรียบเทียบที่เปลี่ยนเฉพาะ mobility ซึ่งมีอยู่แล้ว โดยตรึง functional, state, clock และ inputs; จึงแยกข้อกำหนด thermodynamic ออกจากการกำหนด kinetics ได้ |
+| Outcomes / acceptance | ถ้า response ถูกบังคับให้เหมือนกันจึงมี selection ใน scope; ถ้าพบสอง specification ที่ยังปิด ledger แต่ให้ response ต่างกัน ให้ปฏิเสธเฉพาะข้ออ้างว่า ledger+feedback กำหนด kinetics เอง |
+| Stop / reopen | จบเมื่อมี counterexample ที่ระบุ specification ครบ ไม่ scan mobility หรือเพิ่ม term; เปิดใหม่เมื่อมี independent kinetic law/calibration หรือข้อเสนอเพิ่มที่ตัดหนึ่งทางเลือกได้ |
+| Non-goals / review | ไม่ทดลองวัสดุ ไม่ซ่อม Core/thermal helper ไม่เปลี่ยนเกณฑ์หรือ gates; mathematical-physics reviewer ตรวจ implication ส่วนผู้เขียนตรวจความหมาย ไม่ใช่รับรองฟิสิกส์ |
+
+การทำภาคต่อนี้ใช้ขอบเขตงานในข้อความแนบที่ให้ดำเนินต่อ ไม่ได้แปลว่าผู้เขียนเลือก signed/magnitude interpretation ทุกกรณี หรืออนุมัติการทดลองกายภาพและการเผยแพร่ ข้อเสนอจักรวาลเป็นระบบเปิดยังเป็นเป้าหมายเดิม ไม่ถูกแทนด้วยตัวอย่าง subsystem นี้
+
+### 26.2 ข้อเสนอแกนและแผนที่เหตุ–ผลที่ใช้ตรวจ
+
+**ข้อเสนอที่กู้จาก §3 และใช้ในขอบเขตนี้:** ปฏิสัมพันธ์อาจเปลี่ยนสถานะหรือความสัมพันธ์ที่คงอยู่หลังเหตุการณ์นั้น และเมื่อสิ่งคงอยู่มี coupling กลับเข้ากฎวิวัฒน์ มันอาจเปลี่ยนการตอบสนองครั้งถัดไปโดยไม่ต้องมีเจตนา
+
+ใน realization เดิม ความสัมพันธ์ที่ตามตรวจได้คือ:
+
+~~~text
+preparation / inputs -> X=(C,Phi,Pi)
+past effects retained in X -> mu_C,mu_Phi and kinetics -> later X
+X -> E_eff, sigma -> derived R
+X -> declared mathematical readout
+~~~
+
+ลูกศร `R -> X` ไม่มีในโหมดนี้ และการเพิ่ม detector ในอนาคตต้องเพิ่ม measurement/backaction contract ตามจริง ไม่ใช่ให้การอ่านข้อมูลสร้าง feedback ขึ้นเอง คำว่า information ในเจตนาผู้เขียนอาจกล่าวถึงสถานะ ความสัมพันธ์ หรือสิ่งที่คงอยู่หลายชนิด ไม่ถูกนิยามให้เท่ากับ Phi, sigma, R หรือ entropy ทั้งหมด
+
+| ชั้นของเหตุผล | สิ่งที่ใช้ต่อได้ | สิ่งที่ยังเป็นการเลือกหรือช่องว่าง |
+| --- | --- | --- |
+| เจตนาผู้เขียน | ระบบซ้อนระบบ ปฏิสัมพันธ์ พลังงาน ผลคงอยู่ และการตอบสนอง; global openness อยู่ในเป้าหมาย | เจ็ดฐานไม่ถูกแทนด้วยรายชื่อที่ AI จัดเอง; ตัวอย่างนี้ยังไม่ให้ global exchange law |
+| ฐานฟิสิกส์นำเข้า | variational forces, gradient/damped response และบัญชีตามขอบเขต; ใช้ stochastic thermodynamics ตรวจความหมายของ work/heat เมื่อมี correspondence | การยืมโครงสร้างไม่ derive polynomial, coefficients หรือ material identity ให้ UET |
+| realization ที่เลือกไว้ก่อนหน้า | Omega, X และ coupling `-g*C^2*Phi/2` ใน spec; tau และ mobilities อยู่ในกฎวิวัฒน์ | เป็น constitutive choice ของ candidate ไม่ใช่ผลจำเป็นจากคำว่า information; หลักฐานการยอมรับแต่ละ choice โดยผู้เขียนไม่อนุมานเพิ่ม |
+| ผลที่ตามจากแบบจำลอง | mu pair, normalized ledger, source/trace restrictions และ retained-state consequences เดิม | ไม่ให้ entropy/learning/physical accuracy หรือ novelty โดยอัตโนมัติ |
+| สิ่งที่ต้องตรวจภายนอก | independent coefficient origins, physical preparation/readout และ matched comparator | ยังไม่มีผลการวัดหรือ specialist sign-off ในรอบนี้ |
+
+### 26.3 คู่เปรียบเทียบที่ปิดคำถามเรื่อง kinetic selection
+
+ใช้ homogeneous nonconserved law เดิม โดยไม่มี drive ระหว่าง read:
+
+~~~text
+Omega = -C^2/2 + C^4/4 + Phi^2/2 + Phi^4/4 - C^2*Phi/2
+mu_C = -C + C^3 - C*Phi
+mu_Phi = Phi + Phi^3 - C^2/2
+C_dot = -m*mu_C
+Phi_dot = Pi
+Pi_dot = -Pi-mu_Phi
+E_eff = Omega + Pi^2/2
+E_eff_dot = -m*mu_C^2 - Pi^2,   m=M_C>0.
+~~~
+
+ทุก coefficient อื่นคงเป็น unit fixture เดิม: `a_C=-1`, `b_C=a_Phi=b_Phi=g=M_Phi=tau=1`; gradients เป็นศูนย์ ไม่ได้ตั้ง gradient coefficients ที่ v1 ต้องเป็นบวกให้หายไป เปลี่ยนเฉพาะค่าของ M_C ที่มีใน specification อยู่แล้ว ไม่เพิ่ม degree of freedom, term, source หรือ optimization objective
+
+เริ่ม read จาก **complete state เดียวกัน** `(C,Phi,Pi)=(1,0,1)` ที่ใช้ในงานก่อนหน้า และใช้ clock/readout เดียวกัน ให้สอง specification เป็น `m=1` และ `m=2` ทั้งคู่เป็น positive mobility ไม่ใช่การ fit หลังเห็นข้อมูล
+
+| ค่าที่ cutoff `t=0` | m=1 | m=2 |
+| --- | --- | --- |
+| `(mu_C,mu_Phi)` | `(0,-1/2)` | `(0,-1/2)` |
+| `E_eff` | `1/4` | `1/4` |
+| `E_eff_dot` | `-1` | `-1` |
+| `(C_dot,Phi_dot,Pi_dot)` | `(0,1,-1/2)` | `(0,1,-1/2)` |
+| `C_ddot` | `1` | `2` |
+
+**Derivation:** จาก vector field เดิม `C_ddot=-m*(mu_CC*C_dot+mu_CPhi*Phi_dot)`; ที่ state นี้ `C_dot=0`, `mu_CPhi=-1`, `Phi_dot=1` จึงได้ `C_ddot=m` ทั้งสองยังมี retained response และ energy descent แต่ short-time response เป็น
+
+~~~text
+C_m(t) = 1 + (m/2)*t^2 + O(t^3).
+C_2(t)-C_1(t) = t^2/2 + O(t^3).
+~~~
+
+local solution มีและมีเอกลักษณ์ในเวลาใกล้ศูนย์เพราะ vector field เป็น polynomial ผลนี้ไม่ต้องอ้าง global existence หรืออินทิเกรต trajectory ใหม่ และไม่ใช่การได้อนาคตสองแบบจาก **กฎที่กำหนดครบเหมือนกัน**: กฎทั้งสองต่างกันที่ coefficient m ซึ่งเป็นสิ่งที่กำลังพิสูจน์ว่ายังต้องกำหนด
+
+ความต่างนี้ไม่ใช่แค่เปลี่ยนหน่วยเวลาร่วมกัน: ถ้าใช้ `t -> alpha*t` กับทุก state อนุพันธ์แรกของ Phi ที่เริ่มจาก Pi=1 จะเปลี่ยนด้วย การรักษา `Phi_dot(0)=1` ใน clock/readout เดิมบังคับ alpha=1 แต่ C_ddot ยังต่างอยู่ ไม่อนุญาตให้ rescale state/inputs/readout ใหม่แล้วเรียกการทดลองเดิม
+
+**คำตัดสิน:** ภายใน candidate ที่ระบุ การมี functional/energy descent และ retained-state feedback ไม่กำหนด kinetic coefficient หรือ timed response เพียงหนึ่งเดียว ข้อนี้ปฏิเสธเฉพาะความเพียงพอของเงื่อนไขเหล่านั้น ไม่ได้ปฏิเสธกลไกความจำ UET ทั้งหมดหรือทฤษฎีที่มี phenomenological parameters การใช้ coefficient จาก calibration อิสระเป็นทางเลือกที่ชอบธรรมสำหรับ effective model; หากจะอ้างกฎพื้นฐานที่กำหนด coefficient เอง ต้องมีหลักการหรือ microscopic derivation เพิ่ม
+
+ตรวจหลักฐานภายนอกแบบเจาะจงที่ [Seifert §§2.1, 2.6.2, Eqs. 1–3 และ 42–44](https://arxiv.org/html/1205.4176): potential/forces กับ mobility มีคนละบทบาท และ equilibrium Einstein relation ผูก diffusion กับ mobility/temperature ภายใต้ assumptions ที่ระบุ ไม่ใช่การกำหนด mobility จาก potential เพียงตัวเดียว การใช้กรอบนี้เป็น comparator ไม่ได้ระบุว่า M_C ของเราคือ mobility ของ colloid แล้ว หรือเพิ่ม stochastic noise เข้าสมการเดิม
+
+### 26.4 ตัวอย่างสองความหมายที่ให้ผู้เขียนตรวจได้โดยไม่ต้องอ่านสมการ
+
+| ความหมายในสถานการณ์ที่จะเลือก | ตัวอย่างที่ใช้คิด ไม่ใช่คำประกาศ correspondence | ผลต่องานที่ต้องเลือก |
+| --- | --- | --- |
+| ทิศ/เครื่องหมายเป็นสิ่งแยกได้ | สภาพที่มีขนาดเท่ากันแต่กลับทิศทำให้ signed readout หรือการตอบสนองต่อ probe ที่ระบุเปลี่ยน | ต้องเก็บทิศใน full state หรือใน representation ที่กู้มันได้ ไม่จำเป็นว่าทุก field ต้องเก็บทิศซ้ำ |
+| เครื่องหมายเป็น redundancy หรือไม่อยู่ใน scope | การกลับเครื่องหมายพร้อม transformation ที่ยอมรับทำให้ preparation, inputs และทุก readout ใน class เดิมแยกไม่ออก | อาจใช้ quotient/even coordinate ได้เฉพาะ class ที่พิสูจน์ว่าปิดแล้ว ไม่ได้ลบทุก signed state หรือ spatial history |
+
+ใช้ผลเดิม §§12–15/20/25 ไม่รัน sign/coordinate fixtures ซ้ำ ใน C/Phi/Pi ช่อง `C^2 -> Phi` ไม่แยกเครื่องหมายของ C แต่ C เองยังเก็บเครื่องหมายได้ จึงไม่ขัดเจตนา signed memory เพียงเพราะ Phi ไม่แยกมัน ส่วน beta*C*I เดิมกับ quadratic coupling มี symmetry/kinetic contracts ต่างกันและยังไม่ใช่การ rename
+
+**คำถามให้ผู้เขียนตรวจเฉพาะจุด:** ในตัวอย่างที่จะทำเป็นชิ้นแรก ต้องให้เหตุการณ์ที่ขนาดเท่ากันแต่ทิศตรงข้ามแยกออกจากกันได้ในอนาคตหรือไม่ หรือให้ตรวจทั้งสอง class ไปก่อน? นี่เป็นการเลือกเจตนาและขอบเขต ไม่ใช่ให้ผู้เขียนรับรองว่าแบบใดถูกทางฟิสิกส์ ไม่ต้องนิยาม information ทั้งจักรวาลให้จบในคำตอบเดียว
+
+**Author review ที่ได้รับจริงในรอบนี้:** ผู้เขียนเลือกให้ตรวจทั้งสองแบบไว้ก่อนและยังไม่เลือก จึงบันทึกเป็น explicit deferral ของ signed/magnitude choice ไม่ใช่ implicit acceptance ของ generator, การระบุว่าเครื่องหมายไม่มีความหมาย หรือการรับรองฟิสิกส์ งานอิสระด้าน consistency/finite read-window เดินต่อได้โดยแยก scope ให้ชัด
+
+### 26.5 แก้การรวม causal blockers ที่กว้างเกินหลักฐาน
+
+การตาม [producer `causal_pulse_metrics`](../scripts/audit/audit_matter_space_core.py) ให้รายละเอียดที่ต้องเพิ่มจากคำแนะนำก่อนเริ่มรอบนี้: fixture ของค่า `prearrival_leakage=0.017639381271029236` ใช้ `coupling_g=0`, เริ่ม `C=0` ทุก cell และไม่มี C source จึงคง C=0 ตาม RHS; กระตุ้นเฉพาะ Pi และอ่าน Phi ที่ระยะหนึ่ง แม้ artifact รวมใช้ชื่อ full-candidate verification ผล leakage นี้เป็น **decoupled Phi pulse subcheck** ไม่ใช่ changing-C probe
+
+| หลักฐานเดิม | ตัดสินอะไรได้ | สิ่งที่ห้ามถ่ายผลข้าม |
+| --- | --- | --- |
+| [variational verification](../core/07_artifacts/verification/matter_space_variational_verification.json) + producer ของ pulse | Heun/RK2 fixture นี้ยังไม่ผ่าน prearrival tolerance เดิม | ไม่ใช้ waveform นี้พิสูจน์ว่า C parabolic tail เป็นสาเหตุ เพราะ C ไม่เคลื่อนและ g=0 |
+| [discretization diagnostic](../core/07_artifacts/archive/matter_space_causal_discretization_diagnostic.json) | numerical support bound ของ stencil กว้างกว่า declared cone; record นี้เองระบุ continuum NOT_TESTED_BY_THIS_GATE | upper bound ไม่ใช่ความเร็วจริงทุก trajectory หรือ continuum no-go proof |
+| [causal reference](../core/07_artifacts/verification/matter_space_causal_reference_verification.json) | selected frozen-C recurrence มี compact support ใน scope ของมัน | ไม่ใช่การซ่อม full changing-C/shared ledger หรือหลักฐาน SI |
+| [changing-C cone compatibility](../core/07_artifacts/archive/matter_space_causal_cone_compatibility.json) + [producer](../scripts/audit/audit_matter_space_causal_cone_compatibility.py) | split probe เดิมมี ledger PASS แต่ support FAIL; มี high-k diagnostic ของ hypothetical Cattaneo extension ที่ยังมี k^4 | unbounded group-speed diagnostic ไม่ใช่ proof ใหม่ของ nonlinear full-system front speed; ไม่ใช่สาเหตุที่วัดจาก decoupled pulse ด้านบน |
+| [named coupled flux branch](../core/07_artifacts/verification/matter_space_flux_phi_coupled_verification.json) | internal verification ของ branch ที่ประกาศและจำกัด kappa_C=0 | ไม่รับรอง original conserved-gradient operator ที่ kappa_C>0 ไม่ derive alpha_Phi_K หรือ external thermal validity |
+
+ดังนั้นไม่ต้องเริ่มค้นประเด็น changing-C k^4 จากศูนย์ และไม่สรุปว่าซ่อมตัว integrator อย่างเดียวจะปิดทุก lane ผลอ่านในรอบนี้เป็น **source-level scope correction** ไม่ใช่ rerun หรือ theorem เพิ่มจาก group velocity เป้าหมาย effective parabolic description กับ strict finite-cone description ต้องประกาศต่างกัน โดยไม่ผ่อนเกณฑ์หรือเปลี่ยนสถานะของผลเดิม
+
+ขั้นต่อทาง causal จะเปิดเฉพาะเมื่อเลือกว่าจะตรวจ fixture/numerics เดิม, changing-C effective scope หรือ named finite-cone realization ใด หากจะอ้าง strict continuum theorem ต้องมี proof ที่ครอบคลุม state/operator/boundary/readout ของข้ออ้างนั้น ไม่ใช้ชื่อ BLOCKED หรือ sample group speeds แทน proof และไม่เปิดทุกทางพร้อมกัน
+
+### 26.6 จากช่องว่างภายในสู่คำถามตรวจภายนอก
+
+| คำถามเฉพาะ | หลักฐาน/คู่เทียบที่ต้องใช้ | ผลตัดสินและสิ่งที่เปิดงานต่อ |
+| --- | --- | --- |
+| หลักคิดเพิ่มกฎ kinetics หรือเพียงกำหนด admissible family? | §26.3, origin table และ standard gradient/damped comparator | หากไม่มีข้อจำกัดเพิ่ม ให้รายงาน effective/constitutive model ไม่อ้าง unique fundamental derivation; ถ้ามี ต้องแสดงผลที่ตัดหนึ่ง specification โดยไม่ fit เป้าหมาย |
+| สถานะที่ผู้เขียนต้องการเก็บคืออะไร? | สอง class ใน §26.4, prepared-state results เดิม และ source/readout เดียวกัน | ผู้เขียนยืนยัน/แก้เจตนา; ผู้ตรวจ information/statistical mechanics ตรวจ object และ transformation ไม่ถือ author agreement เป็น physics proof |
+| coefficient ในระบบจริงวัดหรือ derive อิสระได้หรือไม่? | dictionary §§21–22, parameter policy และ conjugate ports | รับเข้าระบบจริงได้เมื่อ independent calibration/derivation และ uncertainty ตรง scope; ไม่มีข้อมูลนี้ให้ระบุ item ที่ขาด ไม่ fit scored response แล้วยืนยัน prediction |
+| ควรแก้ causal path ใด? | producer/fixture และห้าแถว §26.5 | numerical analyst ตรวจ pulse; mathematical physicist ตรวจ changing-C operator/front claim; เลือกขอบเขตก่อนซ่อม ไม่ใช้ sublane PASS ปิด parent |
+| finite preparation ให้ผลที่เครื่องวัดอ่านได้จริงหรือไม่? | smooth write–wait–read §24, full rod comparator, preparation/readout error account | งาน formal ถัดไปที่ยังเปิดคือ finite read-window/bandwidth admission; initial slope กับค่า ณ จุดเวลาเดียวไม่ใช่การรับรอง detector แล้ว |
+
+ไม่มีการส่งอีเมล ติดต่อผู้ตรวจ ซื้อข้อมูล ดาวน์โหลดชุดใหญ่ หรืออ้าง review ภายนอกในรอบนี้ ข้อผิดพลาด thermal helper ใน §4.5/§18 ต้องซ่อมแยกก่อนนำ dependent claims กลับมาใช้; ไม่ใช้มันบล็อก proof นี้ที่ไม่ได้เรียก helper
+
+### 26.7 ลำดับงานต่อและขอบเขตที่ยังไม่สำเร็จ
+
+1. **ข้อเสนอ/representation:** ใช้ข้อเสนอใน §26.2 พร้อม signed/magnitude alternatives; ยังไม่เลือก generator เป็นสากลหรือปิด author review แทนผู้เขียน
+2. **ความสอดคล้อง:** §26.3 ตัดข้ออ้างว่า ledger+feedback เลือก kinetics ได้เอง และ §26.5 แยก causal scopes ด้วยผลเดิม งานซ่อมแต่ละเส้นทางต้องอนุมัติขอบเขตตามเหตุผลนั้น
+3. **comparator/เนื้อหาเพิ่ม:** exact forward-equivalence ในผลเดิมยังอยู่ ไม่รันหา label discrimination ที่ไม่มี; ต้องเพิ่ม justified restriction จึงอ้างผลเฉพาะ UET หรือเลือกส่งผลเป็น reformulation/application ตามจริง
+4. **physical admission:** polarization–elastic เป็น conditional reference class ไม่ใช่ตัวอย่างวัสดุที่รับเข้าแล้ว; source, units, state preparation, independent coefficients, detector/backaction และ joint uncertainty ยังขาด ห้ามเปลี่ยน UNKNOWN เป็นศูนย์
+5. **locked test:** ยังไม่มี empirical model/parameter policy/rejection rule ที่ล็อกก่อนใช้ reserved physical comparison; ข้อมูลที่เคยดูไม่กลายเป็น blind holdout ย้อนหลัง
+6. **generalization/global openness:** ยังไม่มี forward relation จาก retained-state mechanism สู่ cosmology หรือ boundary/exchange law ที่ปิดข้อเสนอจักรวาลเปิด การพักการขยายส่วนนี้ไม่ใช่การปฏิเสธ premise ของผู้เขียน
+
+**งานอิสระถัดไปที่ทำได้โดยไม่เลือกความหมายทั้งทฤษฎี:** ตรวจ finite read-window ของ reference/preparation เดิมใน §24 ว่าผลต่างคงอยู่หลังการเฉลี่ยตามเวลาที่ประกาศได้หรือไม่ พร้อม error margin; ถ้า bound ใช้ไม่ได้ให้ระบุ bandwidth/preparation prerequisite ไม่เพิ่ม modes หรือปรับ pulses เพื่อบังคับผ่าน นี่ไม่ใช่การรับรองว่าจะพบ material หรือ observable ที่พร้อมอยู่แล้ว
+
+### 26.8 Verification, lineage และ claim boundary
+
+ก่อนแก้เอกสาร รัน completeness แบบอ่านอย่างเดียว: 16 contracts, 121 discovered routes, 0 errors, 101 legacy routes; review ของ cycle ยัง INCOMPLETE และ physical gates ไม่เปลี่ยน รายงาน source/contract ของรอบนี้แยกจากงานค้างอื่นและ public README ที่เผยแพร่ไปแล้ว
+
+SymPy 1.14.0 และ AST checks ผ่าน 10 กลุ่ม: actual mu pair/nonconserved RHS, functional derivatives, exact ledger, common state/energy/energy rate, different C acceleration, Taylor coefficient, common-clock obstruction, decoupled pulse inputs และ saved structural-scope fields เทียบ source identities อีก 41 รายการด้วย canonical binary/text-aware helper ตรงทั้งหมด; report identity จะ refresh หลัง final edit แล้วตรวจพร้อม contract ไม่เรียก self-edited report ว่าตรวจ hash ผ่านล่วงหน้า
+
+helper แรกอ่านทุก identity เป็น UTF-8 จึงหยุดที่ archive `.src` แบบ binary หลังผ่าน mathematical/source assertions แล้ว แก้เฉพาะ helper ให้ใช้ `identity_hash` ของตัวตรวจมาตรฐานและรันซ้ำผ่าน ไม่เปลี่ยน input, formula, parameter หรือ scientific artifact เหตุการณ์นี้เป็นข้อผิดพลาดของการตรวจ provenance ไม่ใช่ contradiction ทางฟิสิกส์
+
+ผล document/contract QA ขั้นส่งต่อบันทึกใน [WORK_LEDGER วันที่ 24 ตุลาคม](../../WORK_LEDGER/2026/2026-10-24.md) แยกจากผลวิทยาศาสตร์ ไม่มี time integration, parameter scan, old numerical-verifier rerun, observations, proof assistant, independent replication หรือ specialist sign-off และไม่มี physics-gate promotion
