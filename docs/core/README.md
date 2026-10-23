@@ -63,6 +63,87 @@ Current foundation artifacts:
 - [Generalized-harmonic principal-system verification](07_artifacts/verification/curved_3p1_gh_principal_system_verification.json)
 - [Generalized-harmonic branch gate](07_artifacts/gates/curved_3p1_gh_branch_gate.json)
 
+<a id="current-response-realization"></a>
+### Current response realization — ตรวจถึง 23 ตุลาคม 2026
+
+> **ขอบเขตชุดเผยแพร่:** รอบนี้เผยแพร่เฉพาะสาม README และ WORK_LEDGER ไม่รวมงานวิจัย/PR ค้าง การตรวจ availability อ้าง main `d0210c00b63398f70e1f8f285a6daf5169645933` ชื่อแหล่งที่กำกับ **working-only** เป็นหลักฐานใน workspace ไม่ใช่ลิงก์ที่เปิดได้จาก public main จึงแสดงเป็นชื่อแทน hyperlink; ไม่ได้ลบผลหรือยกระดับข้ออ้าง
+>
+> แหล่งที่ยังไม่รวม: `docs/meta/UET_THEORY_ARGUMENT.md` (§§23–25), `docs/topics/0.13_Thermodynamic_Bridge/calculation_contracts/energy_memory_cycle.json` และ `docs/meta/UET_RESEARCH_RETROSPECTIVE.md` ชุด source/verifier ที่รายงานอ้างยังต้องมี publication review แยก ส่วน pending curved 3+1 narrative/artifacts คงไว้ใน workspace เดิม ไม่ถูกพามาในชุดนี้
+
+แหล่งสรุปคือ Theory Argument §§25.2–5 (working-only) ใน **local source commit `1346edfc07c2d2f9eb2adbd5257e820fa186a37b`** บน `codex/research/source-backaction-discrimination` ไม่ใช่ release ใหม่หรือหลักฐานว่า public main ตรงกับ working copy แล้ว ส่วนนี้อธิบาย realization ล่าสุด ไม่ได้แทนที่ controller ของทุก Core family
+
+**Functional ไม่ใช่ kinetic law:** Omega ระบุ cost/availability landscape ที่เลือก; variational derivatives ระบุ mu ของ landscape นั้น แต่ยังต้องเลือกกฎวิวัฒน์ mobility, conservation, sources, initial/boundary data และ measurement/readout แยก การหาอนุพันธ์ได้ถูกไม่พิสูจน์ว่าธรรมชาติเลือก functional หรือ coefficients เหล่านั้น
+
+#### สมการที่ใช้จริงและสถานะ opt-in
+
+`matter_space_coupled_v1` ใช้ state `(C,Phi,Pi)` ใน normalized 1D prototype ตาม [MATTER_SPACE_RESEARCH_SPEC](01_contracts/MATTER_SPACE_RESEARCH_SPEC.md) และ [implementation](02_equations/matter_space/uet_matter_space.py):
+
+```text
+Omega[C,Phi] = integral [
+    a_C*C^2/2 + b_C*C^4/4 + kappa_C*|grad C|^2/2
+  + a_Phi*Phi^2/2 + b_Phi*Phi^4/4 + kappa_Phi*|grad Phi|^2/2
+  - g*C^2*Phi/2
+] dx
+mu_C   = a_C*C + b_C*C^3 - kappa_C*lap(C) - g*C*Phi
+mu_Phi = a_Phi*Phi + b_Phi*Phi^3 - kappa_Phi*lap(Phi) - g*C^2/2
+
+C_t = -M_C*mu_C + J_C           # nonconserved control
+   or M_C*lap(mu_C) + J_C       # conserved branch, separate kinetic law
+Phi_t = Pi
+tau_Phi*Pi_t + Pi = -M_Phi*mu_Phi + J_Phi
+
+E = Omega + tau_Phi/(2*M_Phi)*integral Pi^2 dx
+R = G_ret * (sigma_C + sigma_Phi)  # derived trace, no feedback in v1
+```
+
+สูตรนี้ใช้ periodic/zero-flux boundaries ตาม spec และ coefficient domain ที่ประกาศ ไม่ใช่ SI energy/entropy/curvature contract ใน closed conserved lane ต้องมี `integral J_C dx=0`; ใน undriven case extended ledger มี `dE/dt=-integral(sigma_C+sigma_Phi)dx` ไม่ใช่อ้างว่า Omega ลดทุก step ในทุก driven/inertial model Source work ใช้ `P_C=integral mu_C*J_C dx` และ `P_Phi=integral Pi*J_Phi/M_Phi dx` ตาม additive-source convention นี้ ไม่ย้ายไปใช้กับ force/traction ports โดยไม่แปลงบัญชี
+
+โหมดนี้และ `legacy_variational_v1` เป็น **opt-in** ค่า default ใน [parameter source](01_contracts/units/uet_parameters.py) ยังเป็น **`legacy_local`**; รอบนี้ไม่เปลี่ยนค่าใด การเปิดไฟล์ชื่อ master จึงไม่ระบุ model จนกว่าจะล็อก mode/config/source identity
+
+| วัตถุ | บทบาทที่ต้องรักษา |
+| --- | --- |
+| Legacy I | independent initialized/evolving field ที่มี coupling กลับสู่ C ใน C/I mode ไม่ใช่ derived I_trace หรือ entropy สากล |
+| Phi | effective response coordinate ที่มี dynamics; ไม่ใช่ metric, particle หรือ information substance |
+| Pi=Phi_t | rate/initial datum คู่กับ Phi; ไม่ใช่สารอีกชนิด การเขียน first-order pair ไม่เพิ่มกลไกใหม่ |
+| E, sigma | extended normalized availability กับ dissipation; ไม่ใช่ physical energy/heat/entropy จนมี dimensional correspondence |
+| R / I_trace | derived history output จาก sigma; ไม่มี feedback ไป C/Phi/Pi ใน v1 และไม่แทน complete state |
+| Observer record | ผลจาก detector state + admitted input + measurement/processing operator; ไม่ใช่ R ทุกชนิดหรือ source state ทั้งหมด |
+
+ระบบผู้วัดเป็น subsystem ได้เช่นกัน แต่ต้องประกาศ boundary/coupling: internal impact, signal transport, receiver effect และ source backaction เป็นคนละคำถาม การตรวจพบไม่แปลว่ามี reciprocal influence ที่สำคัญหรือสังเกต hidden state ได้ครบ การเปลี่ยน metadata การอ่านอย่างเดียวไม่เปลี่ยน source dynamics
+
+#### ความสัมพันธ์ของรูปสมการและเงื่อนไขใช้แทนกัน
+
+| รูปที่เทียบ | ความสัมพันธ์ / หลักที่ใช้ | ขอบเขตที่ไม่ตามมา |
+| --- | --- | --- |
+| Omega → mu_C,mu_Phi | exact variational differentiation เมื่อใช้ functional/boundary/discrete operator เดิม | ไม่เลือก kinetics หรือพิสูจน์ physical interpretation ให้เอง |
+| Phi/Pi pair ↔ second-order Phi | exact rewrite เมื่อเก็บ Phi(t0),Pi(t0) และ sources เดิม | ไม่อนุญาตให้ทิ้ง independent initial rate |
+| Smooth invertible coordinate map | exact หาก push forward generator, mobility, sources และ readout ครบ | C^2 สูญ sign ข้าม branches; nonlinear map ไม่รักษา constant mobility เอง |
+| tau_Phi→0 / stationary Phi_*(C) | คนละ conditional reduction: overdamped evolution กับ static/adiabatic elimination | tau=0 ยังได้ Phi_t=-M_Phi*mu_Phi+J_Phi ไม่ใช่ mu_Phi=0; ต้องตรวจ time scales/initial layer/history |
+| Legacy C/I ↔ C/Phi/Pi | alternative models; unresolved full bridge ไม่ใช่ constant rename | beta*C*I กับ -g*C^2*Phi/2 ต่าง parity/state dependence; สอง initial fields ไม่เท่ากับสาม |
+| Conserved ↔ nonconserved C | คนละ kinetic law แม้ใช้ Omega เดียว | conserved integral/equilibrium constraint ต่าง ไม่ใช่แค่ numerical precision |
+| State → R → observer record | derived output และ measurement mapping ไม่ใช่ invertible state transform | kernel/readout ไม่รับรอง complete observability หรือ feedback |
+| Response → rod comparator → first mode | declared linear comparator และ projection/approximation | §23 รับเฉพาะ steady narrow-band protocol; §24 ปฏิเสธ projected-state sufficiency สำหรับ prepared-history class ที่ระบุ |
+
+อ่าน §25.4 (working-only) สำหรับข้อโต้แย้ง/อนุมานและ §25.5 (working-only) สำหรับ relation domains เช่น stationary I elimination ให้ quadratic C correction เมื่อ kappa_I>0 ส่วน Phi sector ให้ leading quartic correction ใกล้ C=0 เมื่อ a_Phi>0,b_Phi>0 ไม่ใช่การลบ dynamic memory และไม่พิสูจน์ว่าไม่มี nonlinear representation อื่นใดเชื่อมได้
+
+#### ที่มาของ coefficients และสิ่งที่ยังไม่ derive
+
+| ชั้นที่มา | ตัวอย่างในขอบเขตนี้ | สิ่งที่หลักฐานรองรับ |
+| --- | --- | --- |
+| Definition / identity | Pi=Phi_t; นิยาม mu เป็น variational derivatives | บทบาท/การเปลี่ยนรูปภายใน model ไม่กำหนด parameter กายภาพ |
+| Imported result | โครง variational/gradient flow, relaxation และ conservation จากกรอบมาตรฐาน; Landauer bound ใน SI เมื่อเงื่อนไขตรง | นำผลพร้อมเงื่อนไข ไม่ทำให้ coefficient ของ UET derive จากชื่อทฤษฎี |
+| Constitutive choice | a,b,kappa,g; การเลือก M,tau, sources และ conserved/nonconserved law | normalized model/control inputs ที่ต้องประกาศ origin/units แยก ไม่ใช่ universal constants |
+| Conditional derivation | mu_C,mu_Phi และ extended ledger หลังเลือก functional/kinetics | exact ภายใน assumptions; ไม่ย้อนพิสูจน์ที่มาของ functional |
+| Calibration / open physical anchor | physical scale, material correspondence และ dimensional coefficients | ต้องมี independent source/calibration กับ uncertainty; ยังไม่ปิดโดย symbolic audit หรือ fit เป้าหมาย |
+
+normalized beta ของ C/I **ไม่ใช่** inverse temperature และไม่เท่ากับ k_B*T*ln(2) ซึ่งมีหน่วย joules ส่วนหลังเป็น Landauer process bound ในบริบทที่ใช้ได้ ไม่ derive g/beta/tau หรือมวลข้อมูลสากลให้เอง ดู [scoped compatibility audit](08_history/research_notes/UET_FOUNDATION_COMPATIBILITY_AUDIT.md)
+
+**ผลและ controller:** §23.3 (working-only) ให้ error bound <0.9%<1% ของ complex p/F_b และ x/F_b **เทียบ full normalized reference** ใน F_b-only steady band [0.99,1.01] ของ omega/omega_0 ไม่ใช่ physical accuracy; §24.6 (working-only) แสดง prepared-history ที่ projection นี้เก็บไม่ครบโดยใช้ smooth write/controlled wait/released read ไม่ได้เปลี่ยนผล steady เดิมหรือยืนยัน learning
+
+[Compatibility decision](07_artifacts/gates/uet_foundation_compatibility_decision.json) ยัง `FOUNDATION_NOT_CLOSED`; cycle contract (working-only) ยัง review `INCOMPLETE` / physical correspondence `UNKNOWN` เฉพาะ declared path ไม่ครอบทุก family ช่อง physical map/หน่วย/source/preparation/detector uncertainty และข้อจำกัดใหม่เหนือ comparator ยังเปิดอยู่ Thermal helper bug ที่รายงานไว้ไม่ได้ซ่อมในรอบนี้และต้องทบทวนเฉพาะ claims ที่พึ่งมัน
+
+รายงาน §§23–25 อยู่ใน local source commit ที่ระบุ แต่ retrospective และ source/verifier สามไฟล์ที่รายงานชี้ยังไม่อยู่ใน tree ของ commit นั้น จึงไม่ใช่ complete public reproduction packet; ไม่อนุมานสถานะ remote หรือทำให้ลิงก์ที่เปิดได้ในเครื่องเท่ากับเผยแพร่แล้ว บันทึกงานที่ [Topic 13 UPDATE_LOG](../topics/0.13_Thermodynamic_Bridge/UPDATE_LOG.md) / [WORK_LEDGER](../../WORK_LEDGER/2026/2026-10-23.md) ผลสายนี้ไม่เปลี่ยนสถานะเส้นทาง curved 3+1 ที่แยกทำอยู่
+
 > **Historical engine layer for candidate UET equation families**
 > **Version 0.9.0** | Last Updated: 2026-01-13
 
@@ -75,14 +156,16 @@ Current foundation artifacts:
 
 ## 🎯 Purpose
 
-This directory contains the **computational core** of the Unity Equilibrium Theory. It is the "Engine" that solves the fundamental energy functional for all 20 physics domains (from Galaxies to Quantum Mechanics).
+This directory contains the **computational core** of the Unity Equilibrium Theory: candidate equation families, scoped comparators and solver implementations, not one closed physical engine for all 20 historically listed domains (from Galaxies to Quantum Mechanics).
 
-**The Rule:** Nature is constrained optimization.
+**Historical proposal:** Nature is described here through a constrained-optimization interpretation, not an established universal law.
 > *The system state evolves to minimize the generalized energy functional $\Omega$.*
 
 **The Value Equation:**
 > $$\mathcal{V} = -\Delta\Omega$$
 > *When disequilibrium decreases, the system gains Value.*
+
+> ข้อความและ Value equation เดิมคงไว้เป็น interpretation ของ selected functional ไม่ใช่ข้อพิสูจน์ว่า driven/inertial systems ต้องลด Omega ทุกขณะ หรือว่า improvement/learning/persistence ตามจากค่าลดลงนี้เสมอ Extended availability, physical energy conservation, heat และ entropy เป็นคนละบัญชี
 
 ---
 
@@ -140,7 +223,7 @@ $$
 
 ## 🌐 Multi-Domain Interpretation
 
-C และ I มีความหมายต่างกันในแต่ละ domain — แต่สมการเดียวกัน:
+C และ I ในตารางเดิมเป็น lane-specific interpretations ของ shared template; ยังไม่มีหลักฐานว่าทุก domain เป็นสมการกายภาพเดียวกัน:
 
 | Domain | C = | I = |
 |:-------|:----|:----|
@@ -156,7 +239,7 @@ C และ I มีความหมายต่างกันในแต่
 
 ## ✅ Validator Scripts
 
-These scripts ensure the engine adheres to fundamental physics limits (Axiom 11):
+These scripts check declared internal conditions (historically grouped under Axiom 11); they do not establish complete physical validation or override the foundation gates:
 
 | Script | Purpose |
 |:-------|:--------|
@@ -176,3 +259,17 @@ These scripts ensure the engine adheres to fundamental physics limits (Axiom 11)
 
 *Unity Equilibrium Theory — Core Engine v0.9.0*
 *"𝒱 = -ΔΩ — ระบบที่ลดความไม่สมดุล = ระบบที่สร้าง Value"*
+
+---
+
+<a id="wording-history-2026-10-23"></a>
+## ภาคผนวก: ถ้อยคำที่ปรับในรอบนี้
+
+ตรวจ 23 ตุลาคม 2026 — เก็บถ้อยคำที่แทนจาก public-main baseline ไม่ใช่รับรองข้ออ้างเก่า ตารางแสดงเฉพาะ cell ที่เปลี่ยนเมื่อเนื้อหาแถวอื่นคงเดิม สูตร/ตัวอย่าง/แผนภาพเดิมไม่ถูกเขียนใหม่
+
+| ตำแหน่ง | ข้อความเดิม | ข้อความใหม่ | เหตุผล | หลักฐาน/ขอบเขต |
+| --- | --- | --- | --- | --- |
+| Purpose / scope | <code>This directory contains the &#42;&#42;computational core&#42;&#42; of the Unity Equilibrium Theory. It is the "Engine" that solves the fundamental energy functional for all 20 physics domains &#40;from Galaxies to Quantum Mechanics&#41;.</code> | <code>This directory contains the &#42;&#42;computational core&#42;&#42; of the Unity Equilibrium Theory: candidate equation families, scoped comparators and solver implementations, not one closed physical engine for all 20 historically listed domains &#40;from Galaxies to Quantum Mechanics&#41;.</code> | ไม่ใช้ engine family หนึ่งแทน physical closure ทุก domain; คงจำนวน 20 และขอบเขตประวัติ | §25.2–5 (working-only) / [foundation decision](07_artifacts/gates/uet_foundation_compatibility_decision.json) |
+| Purpose / optimization interpretation | <code>&#42;&#42;The Rule:&#42;&#42; Nature is constrained optimization.</code> | <code>&#42;&#42;Historical proposal:&#42;&#42; Nature is described here through a constrained-optimization interpretation, not an established universal law.</code> | กฎ driven/inertial และ extended availability ไม่เท่ากับ universal Omega minimization; คง Value formula เดิม | §25.2–5 (working-only) / [foundation decision](07_artifacts/gates/uet_foundation_compatibility_decision.json) |
+| Multi-Domain Interpretation introduction | <code>C และ I มีความหมายต่างกันในแต่ละ domain — แต่สมการเดียวกัน:</code> | <code>C และ I ในตารางเดิมเป็น lane-specific interpretations ของ shared template; ยังไม่มีหลักฐานว่าทุก domain เป็นสมการกายภาพเดียวกัน:</code> | shared template ไม่ทำให้ unit/ontology/kinetics/observable ทุก domain เท่ากัน | §25.2–5 (working-only) / [foundation decision](07_artifacts/gates/uet_foundation_compatibility_decision.json) |
+| Validator Scripts introduction | <code>These scripts ensure the engine adheres to fundamental physics limits &#40;Axiom 11&#41;:</code> | <code>These scripts check declared internal conditions &#40;historically grouped under Axiom 11&#41;; they do not establish complete physical validation or override the foundation gates:</code> | internal checks ไม่แทน F0–F8 หรือ override parent blocker | §25.2–5 (working-only) / [foundation decision](07_artifacts/gates/uet_foundation_compatibility_decision.json) |
