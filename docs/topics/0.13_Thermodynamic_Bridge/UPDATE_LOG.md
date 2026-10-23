@@ -1,3 +1,38 @@
+## 2026-10-24 - Foundations review L1 primary-text scope and counterarguments
+
+- Completed: [Foundations review section 2](../../meta/UET_THERMODYNAMIC_FOUNDATIONS_REVIEW.md)
+  with six primary-source cards: result, object, assumptions, non-implications,
+  UET location, version and section/equation locators. Read the relevant main
+  texts, not abstracts alone; no raw paper copies or broad new source hunt.
+- Reused: Argument 14/17-19/30 and the existing Shannon/Landauer/Bennett boundary.
+  Seifert/Talkner-Hanggi reconstruction and trajectory-assignment disagreement
+  is retained, not resolved by authority. Rendered date/version anomalies noted.
+- Controller unchanged: intrinsic-entropy-correspondence. New synthesis is not
+  physical validation, a new microscopic model, or a thermal-dictionary choice.
+  No code, equation, contract, gate, old artifact or verifier rerun changed.
+- Public safety: safe summarized public sources, no private source reproduction.
+  Local checkpoint for L0-L1 only; explicit no-push request controls publication.
+  Next: relationship synthesis and UET mapping, without choosing a micro model.
+- L0-L1 QA: 12 document links resolve locally or were opened as primary sources;
+  table/fence/privacy checks pass. Four protected canonical hashes, the original
+  Topic log body and unrelated tracked-diff digest are unchanged; index was empty.
+
+## 2026-10-24 - Foundations review L0 baseline and claim boundary
+
+- Scope: literature/argument synthesis only, no new model or calculation path.
+  [Foundations review section 1](../../meta/UET_THERMODYNAMIC_FOUNDATIONS_REVIEW.md)
+  records the completed baseline and bounded card; L1-L3 are not yet claimed.
+- Baseline: local 81ad20f12, same branch/worktree, index empty and 463 unrelated
+  statuses. All 8 joint-contract and 42 cycle identities match; both existing
+  reviews remain INCOMPLETE. No old scientific verifier was rerun.
+- Preserved: Argument sections 14/17-19/30, code/artifacts/contracts/gates,
+  author openness goal and deferred information ontology. Old log 578/79 diff
+  remains separate. No new registry, contract, numerical test or artifact.
+- Controller: intrinsic-entropy-correspondence remains open; source synthesis
+  can clarify conditions, not close physical correspondence by citation.
+- Public safety: safe new synthesis; no raw/private source copied or published.
+  Next: primary-text review with precise locators, then theory-to-UET synthesis.
+
 ## 2026-10-24 - Joint thermal reference R3 information, comparator and closure
 
 - Completed: [Argument sections 30.8-30.12](../../meta/UET_THEORY_ARGUMENT.md)
