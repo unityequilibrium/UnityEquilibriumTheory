@@ -1,3 +1,37 @@
+## 2026-10-24 - Prospective retained-state physical test plan
+
+- Scope/type: completed plan and FORMAL structural review, not an experiment.
+  [Argument sections 28-29](../../meta/UET_THEORY_ARGUMENT.md) and the existing
+  [cycle contract](calculation_contracts/energy_memory_cycle.json) control this
+  continuation; full Topic 13 and other lane gates are unchanged.
+- Decision evidence: unit scaling does not impose the old source's invariant
+  ratios, and receiver memory can mimic source history. The completed §28 audit
+  is local commit e599db397; its exact source/detector constraints remain scoped.
+- New design: one proposed piezoelectric-resistor cantilever, reciprocal
+  source/charge energy and separate receiver, independent calibration C then
+  numerical lock L and fresh scored V. Both signed and magnitude classes stay
+  available, without selecting a universal information ontology for the author.
+- Fixed prospective rules: opposite/zero preparations with nominally equal
+  (q1,v1,Q), weighted finite-time controls, declared read window/amplitude rule,
+  observer-aware statistics, joint error/coverage and four-case decisions;
+  ten balanced blocks with no optional stopping or automatic invalid replacement.
+- Checks actually run: 12 SymPy 1.14.0 structural groups pass energy/stiffness,
+  units, sign/energy/projection, conditional control identity and decision/error
+  algebra. No actual apparatus coefficients, Gramian, response record or physical
+  prediction is evaluated; full-text access limitations are disclosed.
+- Controller after this wave: §29.5/29.9 same-system calibration/observation/
+  residual-bound packet and executable numerical admission before a physical
+  lock. Contract review remains INCOMPLETE; actual source/receiver admission
+  UNKNOWN. Plan completion is not physical acceptance or UET-specific novelty.
+- Next action requires new direction: apparatus/domain review, implementation
+  of prospective analysis, or independently authorized calibration. No automatic
+  contact, purchase, experiment, material substitution, push, merge or gate repair.
+- Document/contract QA: normal and changed-path read-only completeness exit 0,
+  16 contracts/121 routes/0 errors; 42 identities match. Earlier report sections,
+  new tables/links/fences/privacy and scoped whitespace were checked.
+- Preservation: this new entry does not rewrite or endorse the older log entries
+  or include their pre-existing uncommitted changes in this wave's commit.
+
 ## 2026-10-23 - Equation generators, term roles and cross-form relationship audit
 
 - Scope/type: one FORMAL source/relationship audit requested by the author.

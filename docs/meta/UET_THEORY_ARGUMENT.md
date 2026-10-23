@@ -3189,3 +3189,191 @@ Card/scaling/receiver criteria ถูกเขียนก่อนตรวจ 
 การรับรอง `B_D<tau_D/h_ph` ใช้ `0<exp(-h_ph/tau_D)<1` เมื่อ h_ph,tau_D>0; จึงได้ sufficient inequalities ที่ระบุ ไม่ใช้ sampled bandwidth values แทน proof ทุกค่า ทั้งหมดเป็น internal symbolic/self-review ไม่ใช่ independent specialist หรือ hardware verification การตรวจ contract ไม่พบรูปแบบ/identity error และทั้ง 42 identities ตรง แต่ review คง INCOMPLETE เพราะ physical gaps ยังเปิด
 
 **ปิด card นี้:** ได้เงื่อนไข invariant และ receiver-state contamination ที่ตัดสินได้จริง Unit conversion และ ideal boxcar อย่างเดียวไม่ปิด physical admission ไม่ fit ratios, เพิ่ม source term หรือแก้ physical gates ผู้เขียนให้เดินต่อถึงแผนทดสอบระบบจริงที่ล็อกได้ จึงต้องเตรียม prospective protocol พร้อม calibration/admission และจุดหยุด แยกจากการอ้างว่ามี sample ผ่านแล้ว งานต่อไม่ใช่ automatic experiment, email, data purchase หรือการเปลี่ยน meaning ของ information แทนผู้เขียน
+
+## 29. แผนทดสอบระบบจริงแบบ prospective: retained state ในคาน piezoelectric–resistor
+
+### 29.1 โจทย์ที่ล็อกได้ และสิ่งที่แผนนี้ไม่อ้าง
+
+**ข้อเสนอแผน:** ใช้คานยึดปลายเดียวติดแผ่น piezoelectric ต่อวงจรตัวต้านทาน ตรวจว่าประวัติการกระตุ้นที่จบด้วยสถานะหยาบเหมือนกัน ยังเหลือสถานะไฟฟ้า/การสั่นส่วนอื่นที่ทำให้ผลอ่านภายหลังต่างกันหรือไม่ เปรียบเทียบแบบจำลองหลายโหมดมาตรฐานกับแบบจำลองหนึ่งโหมดที่ถูกจำกัดสถานะอย่างประกาศชัด ไม่เปรียบเทียบชื่อ UET กับ standard physics ที่ให้ forward prediction เดียวกัน
+
+นี่เป็นคำตอบระดับ **แผนที่กำหนดขั้นสอบเทียบและวิธีล็อกได้** ไม่ใช่การรับรองว่ามี apparatus, ตัวเลขสอบเทียบ หรือ blind result อยู่แล้ว เป้าหมายปลายทางที่ผู้เขียนเลือกคือแผนทดสอบระบบจริง; การเตรียมแผนไม่อนุญาตให้ทดลอง ติดต่อใคร จัดซื้อ หรือเผยแพร่โดยอัตโนมัติ
+
+| Work card | ข้อกำหนดรอบนี้ |
+| --- | --- |
+| Intended claim / stage | TD4–TD5 prospective design: หนึ่ง physical realization ของลูกศร retained state -> later response; ไม่ใช่ universal information ontology หรือ UET novelty |
+| Parent / have | ใช้ argument และ controls §§21–28, ผลว่าพลังงาน/trace ไม่ใช่ complete state และการแยก source–receiver เดิม; ไม่รัน closed verifiers ซ้ำ |
+| Demonstrated gap | fixed rod/polarization certificate ต้องมี source ratios และเครื่องตรวจเฉพาะที่ยังไม่มี การใช้หน่วยหรือ ideal detector แทนไม่พอ |
+| Why this system | มี electromechanical ports, observable electrical state และการสั่นที่สร้าง/อ่านได้ เหมาะกับการตรวจ causal state loop โดยตรง มากกว่าหา helium/graphite data เพิ่มโดยไม่ระบุ operator |
+| Change / freedoms | เป็น **AI-proposed alternative physical realization ของ causal question** ไม่ใช่ exact rewrite ของ rod หรือ nonlinear C/Phi/Pi เลือก charge Q, beam modes และ circuit; ไม่มี Core term, constant หรือ physics gate ใหม่ |
+| One action / acceptance | ระบุ apparatus, reciprocal model/units, independent calibration, fixed preparation/read/analysis algorithms และกฎรับ–ปฏิเสธก่อนเก็บ scored records ให้ผู้ตรวจเห็นว่าต้องเติมค่าใดและหยุดเมื่อไร |
+| Stop / reviewer | ปิดที่แผนและ exact structural checks ไม่เริ่ม apparatus/model fit ผู้ตรวจ electromechanics/metrology ต้องตรวจว่า source/receiver/error packet ทำให้ prediction sets แยกจริงหรือไม่ |
+
+**ไม่โอนใบรับรองผิดระบบ:** ทุกตัวเลข margin, chi=20/21, h=1/10000 และ modal spectrum ของ rod ใน §§24–28 อยู่ใน scope เดิม คาน bending และ charge circuit ด้านล่างมี geometry/operator/time scale ต่างกัน จึงต้องมี prediction/error admission ของตน ไม่ใช้การเปลี่ยน realization ทำให้ result เดิมดูเป็น physical PASS หรือหนี comparator ที่เทียบเท่า
+
+### 29.2 ฐานภายนอก: รับอะไรมา และยังไม่ได้รับอะไร
+
+| Primary source / ตำแหน่งที่อ่านได้ | ใช้เป็นฐานของแผน | ขอบเขตที่ไม่ข้าม |
+| --- | --- | --- |
+| [Hagood–von Flotow 1991, NASA NTRS record/abstract](https://ntrs.nasa.gov/citations/19910051612), DOI 10.1016/0022-460X(91)90762-9 | cantilever กับ resistive/resonant piezoelectric shunts มี experimental precedent | record ไม่มี full-text download; ไม่อ้างตรวจ derivation หรือคัด numerical apparatus parameters จาก full paper |
+| [Thomas–Deü–Ducarne 2009, publisher abstract](https://onlinelibrary.wiley.com/doi/10.1002/nme.2632) | charge/voltage variables, modal reduction และ shunted cantilever เป็น physical modeling framework ที่มีอยู่ | abstract ไม่รับรอง control pulse, uncertainty หรือเครื่องมือที่เราเสนอ; publisher ระบุ correction ปี 2009 จึงไม่อ้าง unversioned manuscript ว่าเป็นฉบับแก้แล้ว |
+| [Richardt et al. 2025, DTU record/abstract](https://orbit.dtu.dk/en/publications/sensorless-calibration-of-piezoelectric-shunts-using-capacitance-), DOI 10.1088/1361-665X/adbac8 | independent electrical calibration ต้องแยก capacitance convention และ residual-mode corrections | เป็น calibration precedent ไม่ใช่ค่าพารามิเตอร์ของคานที่เราเลือกหรือ blind response data; full PDF/publisher access ไม่สำเร็จในรอบนี้ จึงไม่กล่าวว่าตรวจทุกสมการแล้ว |
+
+สามแหล่งนี้รองรับ **เหตุผลเลือก architecture และประเด็น calibration** สมการและ protocol ด้านล่างเป็น proposed reciprocal reference ที่เราเขียนพร้อม assumptions และต้องให้ผู้เชี่ยวชาญตรวจ ไม่สวมว่าเป็นการ reproduce experiment หรืออนุมาน UET จากสามบทความ ไม่มีภาพ/ค่าทดลองจากบทความถูกใช้ fit หรือเป็น holdout
+
+### 29.3 Apparatus ที่เสนอหนึ่งชุด และขอบเขตที่ต้องวัด
+
+เสนอ steel cantilever ความยาวอิสระ 200 mm, กว้าง 20 mm, หนา 0.5 mm, ยึดกับ rigid fixture ที่ปลายหนึ่ง; piezoelectric patch หนึ่งชิ้นขนาดเสนอ 40 x 20 x 0.2 mm อยู่ช่วง 5–45 mm จาก clamp บนด้านหนึ่ง ตัวเลขเหล่านี้เป็น **engineering starting design ของ AI ไม่ใช่ dimensions ที่ยืมจาก source หรือ apparatus ที่มีแล้ว** ต้องให้ผู้รับผิดชอบห้องทดลองรับรอง geometry, bonding, stress/voltage/laser limits และความเหมาะสมก่อนสร้าง ไม่มีการเลือกผู้ขาย/รุ่น/ราคา
+
+Patch/electrodes ต่อ calibrated passive resistance R และ measured electrical drive port V_d ที่ตั้งศูนย์ได้; mechanical drive port เป็น calibrated transverse tip force F คง actuator, wiring, sensor และ loading เดิมทั้ง calibration/write/read ไม่ใช้การถอดอุปกรณ์ที่เปลี่ยนระบบโดยไม่คิดผล การใช้แรงไฟฟ้า/แม่เหล็กสร้าง F ต้อง calibrate force ที่ถึงคาน ไม่ใช้ command voltage แทนแรง
+
+ใช้ optical displacement/velocity sensing อย่างน้อยสองตำแหน่งที่ modal observation matrix ของสอง bending modes แรกมี rank ครบ พร้อมช่องตรวจที่สามเพื่อเช็ก spatial residual และวัด voltage/current ของวงจรพร้อมกัน ตำแหน่งจริง, spot size, clock, phase และ transfer functions ต้องล็อกก่อน scored runs การสแกนทีละจุดต่างเวลาไม่เท่ากับ simultaneous state snapshot หากยังไม่พิสูจน์ repeatability/phase reconstruction
+
+| System / relation | State หรือ channel ที่ต้องตามรอย | Disposition ก่อน calibration |
+| --- | --- | --- |
+| Beam + bonded patch | modal displacement q, velocity v, clamp/bonding/environment | proposed model; coefficients, residual modes และ thermal/nonlinear bounds UNKNOWN |
+| Electrodes + R + zeroed drive port | free electrode charge Q; voltage V เป็น conjugate readout ไม่ใช่อีก independent state ใน ideal RC reference | actual capacitance/leakage/lead inductance/source impedance UNKNOWN |
+| Optical carrier/receiver + DAQ | beam interaction -> light -> detector/filter state -> recorded samples | transfer, delay, reset, gain/noise และ optical/mechanical backaction UNKNOWN |
+| Electrical sensing | voltage/current instrument input admittance และ electronic memory | ต้องรวมโหลดเข้าวงจรหรือมี output-unit bound ไม่ถือ high-impedance=ศูนย์ผลกระทบ |
+| Supports, air, thermal bath, drives | mechanical loss, heat, prescribed input และ source power | source-system exchanges ต้องแยกจากพลังงานรวมของ controller/laboratory |
+
+State Q ไม่ใช่ information ทั้งหมด, entropy, polarization order parameter หรือ legacy I โดยอัตโนมัติ คานทั้งชุดเป็นระบบย่อยของ laboratory ที่เปิดรับส่ง work/heat ได้; ไม่ใช้การเลือก subsystem นี้ตัดสินแทนข้อเสนอ “จักรวาลเป็นระบบเปิด” ของผู้เขียน
+
+### 29.4 Minimal reciprocal reference และบัญชีหน่วย
+
+ใน linear, time-invariant, small-deflection regime ใช้ mechanical modes ที่มี dimensionless spatial shapes จึงให้ q_n มีหน่วย m, M เป็น kg, D เป็น kg/s, K_sc เป็น N/m, Q เป็น C, C_p เป็น F, theta_n เป็น C/m, R เป็น ohm, F เป็น N และ V_d เป็น V เลือก sign ของ electrical port ให้ Q เพิ่มเมื่อ current เข้าสู่ electrode และใช้ K_sc ที่ short-circuit boundary ตามนิยามนี้:
+
+C_p ในส่วนนี้คือ **capacitance** ไม่ใช่ Core state C; Q คือ electrode charge ไม่ใช่ legacy I/Phi การใช้สัญลักษณ์คล้ายกันในฟิสิกส์คนละแบบไม่ทำให้ ontology หรือ kinetics ของสมการเดิมเท่ากัน
+
+~~~text
+V = (Q-theta^T*q)/C_p
+E = v^T*M*v/2 + q^T*K_sc*q/2 + (Q-theta^T*q)^2/(2*C_p)
+q_dot = v
+M*v_dot + D*v + K_sc*q - theta*V = b*F
+R*Q_dot + V = V_d
+E_dot = F*b^T*v + V_d*Q_dot - v^T*D*v - R*Q_dot^2.
+~~~
+
+ต้องมี M,K_sc positive definite, C_p,R>0 และ D positive semidefinite ใน admitted model; electrode equipotential/quasistatic electric field, frequency-independent ideal R/C และ linear reciprocal coupling เป็น assumptions ไม่ใช่สิ่งที่ source abstract พิสูจน์ให้คานนี้ Lead inductance/dielectric loss/extra modes ที่มีผลต้องรวมใน reference หรือ bound **ก่อน** test lock; ไม่ลบออกเพราะต้องการมีเพียงหนึ่ง electrical state
+
+Energy identity นี้เป็น **deterministic noiseless reference** ไม่ใช่ pathwise heat law ของ actual thermal circuit: mechanical thermal fluctuations, resistor noise และ source fluctuations ต้อง propagate จาก source เข้าสู่ output ด้วย ไม่ปนว่าทั้งหมดเป็น detector noise และไม่อนุมาน thermodynamic entropy จาก quadratic storage โดยไม่มี bath/noise convention
+
+Stored quadratic energy มีหน่วย J; port powers และ R*Q_dot^2 เป็น W โดยเฉพาะ capacitor term รวม interaction อยู่แล้ว ห้ามเพิ่ม -Q*theta^T*q/C_p ซ้ำ K_Q=K_sc+theta*theta^T/C_p คือ stiffness เมื่อ Q ถูกตรึง ไม่ใช่ K_sc; measured relaxed/SC/OC quantities ต้องอยู่ใน convention เดียวกัน ความร้อนใน R เป็นเฉพาะ resistor channel ไม่ใช่ total entropy/information และไม่ได้ทำให้เครื่องมือ/การควบคุมไม่มีต้นทุน
+
+ใน truncation N=2 ให้ z=(q_1,q_2,v_1,v_2,Q), z_dot=A*z+B*u, u=(F,V_d) พร้อม detector model แยกต่างหาก `y_raw=H_det[c^T*q]+receiver_initial+offset+noise` ผลจากแหล่งกำเนิดมี internal reciprocal impact ส่วน record ขึ้นกับ carrier/receiver state อีกชั้น การทดสอบนี้ไม่ต้องเรียก Q ว่า C หรือ Phi เพื่อให้บัญชีปิด
+
+**ความสัมพันธ์กับงานเดิม:** นี่เป็น constitutive realization อีกแบบของ joint storage + dissipative electrical coordinate + elastic memory มี balance ที่ตรวจได้ แต่ไม่ใช่ exact transformation ของ scalar ferroelectric polarization–rod model เพราะ physical variable, stiffness, spatial coupling และ boundary เปลี่ยน และไม่แทน nonlinear C/Phi/Pi ด้วย linear charge dynamics การเพิ่มผลทดลองให้ reference นี้จะสนับสนุนลูกศรเชิงกลไกใน scope เท่านั้น
+
+### 29.5 Two-stage lock: calibrate ก่อน แล้วจึง freeze prediction
+
+**Stage C — calibration/admission ที่ไม่ใช้ scored history:** ใช้ apparatus ชุดเดียวหลังติด actuator/sensors/wiring ครบ จัดชุด C1 geometry/material/clamp/bond, C2 linear force/voltage-to-state frequency/time responses, C3 electrical impedance/capacitance/leakage และ SC/OC conventions, C4 optical/electrical receiver transfer/reset/noise/drift, C5 independent check of mode shapes/initial-state estimator/source cross-talk, C6 nonlinearity/tail/backaction/temperature bounds เก็บ raw identity และ processing history ของแต่ละชุด ห้ามใช้ literature/manufacturer numbers แทน run-specific uncertainty เงียบ ๆ
+
+SC/OC หรือ sensor-power changes ใน calibration เปลี่ยน boundary จริง จึงต้องบันทึกและ map กลับสู่ **fixed R/read configuration** ไม่ผสม coefficients คนละสภาพ Stage C fit/identification ทำได้และเรียกตรง ๆ ว่า calibration ไม่ใช่ prediction; parameters ที่ระบุไม่ได้ต้องใช้ joint admissible sets หรือหยุด ไม่แยกเป็น point estimates แล้วสมมติ independence
+
+จาก Stage C เลือก model order/reference bandwidth และรับรอง neglected response ต่อ output ของ **fixed protocol** รวม actuator/sensor tails นอก band การเห็นไม่กี่ resonance หรือเพิ่ม N จนกราฟนิ่งไม่ใช่ infinite-tail bound และ finite-duration drive ไม่เป็น exactly bandlimited หากไม่มี analytic/physical residual bound ที่น่าเชื่อถือ ให้บันทึก inconclusive/admission fail ไม่สร้างคำรับรองจาก finite frequency samples เพียงอย่างเดียว
+
+**Stage L — numerical lock ก่อน scored records:** บันทึก source/config/code/data hashes, geometry, full/reference และ reduced model, joint parameter set, input waveforms, estimator, filter/time window, allowed state/temperature, amplitude, trial order/count, invalid-run rules, prediction sets/error budget และ analysis script ใน existing METHOD/contract/wave surfaces ผู้รับผิดชอบและผู้ตรวจลง review; output physical values ต้องมีจริงในขั้นนี้ การเขียนแผนวันนี้ไม่แสร้งว่า fields เหล่านั้น filled แล้ว
+
+Scored set V ต้องเป็น fresh records ที่ยังไม่ใช้เลือก model/parameters/protocol ภาพที่เคยดูไม่กลายเป็น blind holdout ย้อนหลัง ถ้ามีการแก้ source/model/readout หลังเริ่มดู V ต้องยกเลิก lock รุ่นนั้น บอกเหตุผล เก็บผลเดิม และเริ่ม fresh V ใหม่เมื่อได้รับอนุญาต ไม่ไล่เติมคำอธิบายจนผ่าน
+
+### 29.6 Preparation และ read protocol ที่กำหนด algorithm ไว้แล้ว
+
+ใช้ calibrated short-circuit second-mode frequency omega_2 เพื่อกำหนด `T_2=2*pi/omega_2`, write duration `T_w=4*T_2`, **read window h=T_2/4** และ nominal rest reference z=0 ทั้งหมดเป็น proposed engineering choices ก่อนข้อมูลทดสอบ ไม่ยืม short-window certificate ของ rod และไม่เปลี่ยน h หลังเห็นผล ถ้า coupled/damped prediction ใน window นี้แยกไม่ได้ ให้ plan นี้ไม่ผ่าน admission
+
+Target states คือ `z_+=(0,delta,0,0,0)`, `z_-=-z_+`, `z_0=0` ดังนั้น projected coarse state `(q_1,v_1,Q)` เท่ากัน nominally แต่ q_2 ต่างกัน พลังงานที่เก็บในสอง target เครื่องหมายตรงข้ามเท่ากันใน quadratic reference; นี่ไม่รับรองว่า measured work, temperature หรือ omitted states เท่ากันโดยไม่ตรวจ Actual state errors และ receiver state ทุก arm ต้องรวมใน prediction ไม่ถือ nominal targeting เป็น perfect preparation
+
+เพื่อไม่เลือก pulse ด้วยการไล่หา scored response ให้สร้าง control จาก calibration matrix เพียงครั้งเดียว ใช้ diagonal input scale U_0 จาก approved force/voltage limits, B_u=B*U_0 และ phi(t)=sin^4(pi*t/T_w):
+
+~~~text
+W_phi = integral_0^T_w phi(s)^2 * exp(A*(T_w-s))*B_u*B_u^T
+                           *exp(A^T*(T_w-s)) ds
+u_+(s) = U_0*phi(s)^2*B_u^T*exp(A^T*(T_w-s))*W_phi^-1*z_+
+u_-(s) = -u_+(s);   u_0(s)=0.
+~~~
+
+ถ้า W_phi invertible สูตรให้ nominal target จาก initial rest ตาม variation-of-constants ไม่ได้บอกว่า actual beam ไม่มี omitted modes ใช้ scaled/energy-weighted coordinates เมื่อประเมิน conditioning เพื่อไม่ใช้ unit-dependent matrix condition number เป็นเหตุผลทางฟิสิกส์ หาก rank/uncertainty หรือ source constraints ไม่รับรอง target ให้หยุด ไม่เพิ่ม actuator/state เพื่อทำให้ผ่านเงียบ ๆ weighted control norm เป็นเครื่องมือออกแบบ preparation ไม่ใช่ physical work cost หรือกฎ optimization/learning ใหม่ของ UET
+
+delta กำหนดด้วยกฎเดียวก่อน V: `delta=delta_max/2` โดย delta_max เป็นค่ามากสุดที่ Stage C **รับรองพร้อมกัน** สำหรับ linearity, mechanical/electrical/thermal safety, detector range และ actual shaped-input amplitudes ห้ามขยาย amplitude หลังเห็น readoutเพื่อเพิ่ม significance ถ้าไม่มี delta_max>0 หรือ robust separation ไม่ถึงเกณฑ์ ให้ไม่รับเข้า แผนไม่บังคับให้ apparatus ต้องผ่าน
+
+ก่อนทุก write ต้อง reset source และ receiver แยกตาม admitted procedure; finite reset/settling time และ residual-state bounds ต้องล็อกใน L ไม่ใช้คำว่า “รอจนสงบ” โดยไม่มี criterion ช่วงท้าย write ใช้ multi-point/voltage-current records ประเมิน `(q_1,q_2,v_1,v_2,Q)` กับ uncertainty ด้วย frozen estimator **ไม่ใช้ future read record** มาย้อน fit initial state
+
+เมื่อ t=T_w ให้ future F=V_d=0 ตาม actual zero-port calibration และอ่าน h ที่กำหนด ไม่ถอด drive/sensing circuit ให้ boundary เปลี่ยน Gate เตรียม state ต้องบังคับทั้ง full target tolerance และ projected-state match ข้าม arms; ถ้า projected states ต่างกันพอให้ reduced modelอธิบาย signal ให้จัดว่า preparation invalid/inconclusive ไม่เรียก hidden memory proof
+
+### 29.7 Observer-aware outputs, comparison และ error budget
+
+Primary signed record ต่อ arm คือค่าเฉลี่ยของ **forward-convolved raw detector output** บน h ใน record units ที่ calibrate แล้ว ไม่ทำ inverse filtering/derivative estimation ที่ไม่มี noise bound กำหนดต่อ balanced block:
+
+~~~text
+S=(y_+-y_-)/2
+M=(abs(y_+-y_0)+abs(y_--y_0))/2.
+~~~
+
+คงสอง class ตามการตัดสินใจผู้เขียน: S ถาม direction contrast; M ถาม written/unwritten magnitude contrast ไม่ใช้ผลหนึ่งเลือก ontology ของ information ให้ทั้งทฤษฎี ค่า absolute เป็นหลัง baseline subtraction ตามสูตร ไม่ใช่ mean(abs(raw samples)); ใช้ Lipschitz/error-set propagation ของ abs ไม่สมมติ folded noise ไม่มี bias
+
+การตรวจ preparation อ่านสถานะมากกว่าที่ส่งให้ reduced predictor โดยตั้งใจ ไม่อ้างว่า q_2 มองไม่เห็นด้วยหลักธรรมชาติ: เรากำลังตรวจว่าการ **ละ** state นั้นจาก model ทำให้ทำนายไม่ได้ในขอบเขตนี้หรือไม่ ไม่ใช่สร้างความลึกลับจากตัวแปรที่เราเลือกไม่ส่งให้มัน
+
+Full reference ใช้ admitted multimode/electrical/detector state พร้อม residual bounds Reduced comparator ใช้ **same calibrated ports, declared projection `(q_1,v_1,Q)`, same observation model และ actual projected-state uncertainty** ไม่ fit reserve outputs และไม่ initialize ด้วย hidden q_2; nominal zero projection/zero future inputs ให้ zero source response แต่ receiver initial-state contribution ไม่จำเป็นเป็นศูนย์ อีก comparator คือ full standard electromechanics ที่ให้สมการเดียวกัน: เทียบเท่าโดย construction จึงไม่มี claim ว่า experiment แยก label UET จากมัน
+
+Prediction sets I_full และ I_red สำหรับ S/M ต้อง propagate **joint** coefficient/source/initial-state/clock/receiver uncertainty, model residual, loading/nonlinearity และ processing error ใน record units เหมือนกัน การมี pairwise separation ที่ matched parameter หนึ่งค่าไม่เพียงพอหาก unions ของ admissible predictions ยังซ้อนกัน ไม่สมมติ covariance เป็นศูนย์; ใช้ conservative sum/interval ที่มีเหตุผลได้
+
+ก่อน V ต้องมี source/model prediction sets แยกกันหลัง nuisance propagation และมี independent per-statistic observation bound B_obs จาก calibration กำหนด engineering admission guard `dist(I_full,I_red)>4*B_obs` สำหรับทั้ง S และ M หากต้องการประกาศ simultaneous discrimination ของทั้งสอง ค่า 4 เป็น guard ที่เสนอสำหรับแผนนี้ ไม่ใช่ universal/project physics threshold และไม่อ้าง statistical confidence จากตัวคูณนี้ หากผ่านแค่ class เดียว ต้องล็อกว่าอีก class inconclusive **ก่อน V** และไม่เลือกเฉพาะผลสวยภายหลัง
+
+| Budget / control | ต้องมีใน L | สิ่งที่ห้ามทำ |
+| --- | --- | --- |
+| Initial/preparation | full/projection state uncertainty, hidden residual modes, actual forces/voltage and actuator state after zero command | ใช้ target ของ nominal model เป็น measured state |
+| Coefficients/approximation | joint M,D,K_sc,C_p,theta,R plus boundary/temperature/regime and out-of-band residual bound | ใส่ relaxed stiffness/capacitance แล้วนับ coupling ซ้ำ |
+| Detector/carrier | temporal/spatial response, phase/clock/exposure, gain/offset/reset and filtering history | วัดเห็น signal แล้วสรุปว่ารู้ full source state |
+| Backaction/cross-talk | optical force/heating, electrical input admittance, mechanical support/actuator loading, receiver-only control | เรียก non-contact หรือ high impedance ว่าไม่มีผล |
+| Error combination | same output units, paired/baseline dependence, drift and invalid-run policy | หาร uncertainty ด้วย sqrt(N) โดยไม่รองรับ independence/stochastic model |
+| Numerical | integration/matrix exponential/Gramian enclosure and parameter propagation bounds | ใช้ floating-point rank หรือ one-model curveแทน certified admission |
+
+Receiver-only calibration/control ต้องทดสอบ electronic memory/cross-talk ขณะ source ถูกตรวจว่าอยู่ใน admitted rest รวมทั้ง shutter/reference or dummy-input checks ที่ระบุ boundary changes ให้ชัด หาก record contrast อยู่ได้โดยไม่มี source contrast ให้ขยาย receiver/systematic uncertainty ไม่โยนเป็นความจำของ beam โครงสร้าง energy balance ของ source ไม่ได้คำนวณ detector heat/entropy ให้เอง
+
+### 29.8 Trial count, falsification, invalid runs และจุดหยุด
+
+เสนอ fixed **10 balanced blocks** แต่ละ block มี +, -, zero รวม 30 scored preparations; arm order randomize จาก seed ที่ hash-lock ใน L นี่เป็น replication/drift design ไม่ใช่ sample-size power guarantee การไม่สมมติ independence อาจทำให้ uncertainty ไม่ลดตามจำนวน block ต้องยอม inconclusive ถ้า B_obs ไม่พอ ไม่มี sequential optional stopping หรือเก็บเพิ่มจน significant
+
+Primary summary คือ `S_bar=sum(S_block)/10` และ `M_bar=sum(M_block)/10` จากครบทั้งสิบ block พร้อมรายงานค่าราย block ไม่เลือก pooling/absolute-value order หลังเห็นผล หาก bounds ของ arm records เป็น b_+,b_-,b_0 จะได้ `B_S<=(b_++b_-)/2` และ `B_M<=(b_++b_-)/2+b_0`; การเฉลี่ยสิบ block ใช้ค่าเฉลี่ยของ bounds อย่างอนุรักษนิยม ไม่หารด้วย sqrt(10) เอง
+
+รายงานทุก block กับทั้งสอง statistics และ valid/invalid reasons ที่ตัดสินจาก pre-read preparation/instrument limits ไม่ใช้ขนาด/เครื่องหมาย readout เลือกทิ้ง trial หากมี invalid block **ไม่แทนที่ด้วย blockใหม่อัตโนมัติ**: การตัดสิน intended 10-block test เป็น incomplete พร้อมแสดงข้อมูลที่เก็บแล้ว; restart ต้องมีเหตุผลและ fresh lock ที่ได้รับอนุญาต
+
+| Observed result หลัง uncertainty checks | ตัดสินได้ | ตัดสินไม่ได้ |
+| --- | --- | --- |
+| ทั้ง S/M อยู่ใน I_full พร้อม observation bounds แต่แยกจาก I_red ตามกฎที่ล็อก | ปฏิเสธ first-mode prepared-state sufficiency ใน apparatus/protocol นี้; สนับสนุน retained-state -> response realization แบบมีขอบเขต | ไม่ยืนยัน UET เหนือ full standard model, learning หรือ cosmology |
+| ผลตรง I_red และอยู่นอก I_full หลังครบทุก validity check | ปฏิเสธ admitted full reference/preparation/correspondence packet ที่ล็อก; ต้องตามว่าข้อใดผิด | ไม่พิสูจน์ว่าปฏิสัมพันธ์ทุกแบบไม่มี memory หรือ UET ทั้งหมดผิด |
+| ผลอยู่นอกทั้งสอง | model/observation/source packet ที่รวมไว้ไม่อธิบายผลใน budget; เปิด model-failure investigation | ห้ามสรุปเป็น new physics จาก residual เลย |
+| Prediction/measurement sets overlap, source/receiver controls fail หรือ preparation invalid | inconclusive/admission failure พร้อมระบุ input ที่ขาด | ไม่เป็น PASS, ไม่ใช่ evidence ว่าทฤษฎีถูก/ผิด และไม่ให้รันซ้ำเหมือนเดิมไม่จำกัด |
+
+สำหรับ simultaneous S/M conclusions ใช้ **joint observation bounds** ที่ครอบคลุม 30 records และ shared baseline/drift; การรายงาน pointwise 95% หลายค่าจะไม่กลายเป็น joint 95% เอง หากจะใช้ confidence model แทน deterministic bounds ต้องล็อก distribution/dependence/coverage และ multiplicity ก่อน V มิฉะนั้นรายงานเป็น calibrated bounds ตาม assumptions เท่านั้น
+
+Default prospective error policy คือ total failure probability budget 0.01: 0.005 สำหรับ joint calibration/parameter/model-admission coverage และ 0.005 สำหรับ future-record stochastic coverage ทั้ง 30 records ใช้ union bound/valid joint method โดยไม่ต้องสมมติ independence หากแบ่งเท่ากันให้ marginal future-record tail budget 0.005/30 แล้ว propagate เป็น S_bar/M_bar bounds ร่วมกัน Source stochastic forces และ measurement noise ต้องมีแบบจำลอง/coverage ที่รองรับแยกก่อนรวมใน record-level B_obs ไม่ถือ extrema ของ finite calibration sample เป็น absolute noise bound ถ้า coverage assumption ตรวจรองรับไม่ได้ ให้ไม่รับเข้า ไม่ประกาศ confidence 99% จากจำนวนรอบหรือตัวคูณ 4 ส่วน deterministic hard-bound alternative ใช้ได้เมื่อมี physical justification และต้องเลือก/ล็อกก่อน V ไม่เปลี่ยนนโยบายตามผล
+
+นิยามการตัดสินเชิง set ให้แน่นอน: สร้าง joint measurement set J จาก observed statistics และ bounds ที่ล็อก ถ้า `J intersect I_full` ไม่ว่าง แต่ `J intersect I_red` ว่าง ให้เรียก full reference **compatible within scope** และ reduced comparator rejected within budget ไม่เรียก full reference “พิสูจน์ถูก” สลับเงื่อนไขเพื่อปฏิเสธ full reference; ถ้าทั้งสอง intersections ว่างเป็น packet/model failure; ถ้าทั้งสองไม่ว่างเป็น inconclusive ใช้ joint sets สำหรับข้อสรุปร่วม ไม่เลือก marginal ที่ให้ผลสนับสนุน
+
+### 29.9 สิ่งที่ปิดได้วันนี้ และ prerequisite ก่อนลงมือจริง
+
+รอบนี้ต้องตรวจ exact energy/SC-versus-Q stiffness relation, units, linear sign/energy symmetry, zero projected comparator, weighted-Gramian target identity และ decision-set/error logic จากสูตรที่ประกาศ ยังไม่คำนวณ Gramian ของคานจริงหรือสร้าง prediction numbers จากค่าที่ไม่มี วันนี้จึงได้ **pre-registration-ready protocol design พร้อมกฎเติมค่าจาก calibration** ไม่ใช่ numerical lock ที่เสร็จแล้ว หรือ guarantee ว่า apparatus ตัวแรกจะผ่าน
+
+สิ่งที่ต้องมีเพื่อปิด L มีจำนวนจำกัด: (1) ผู้รับผิดชอบ/ผู้เชี่ยวชาญรับรอง apparatus และ physical reference รวม source/receiver boundary (2) Stage C packet ของชุดเดียว (3) source, mode, state-estimator และ receiver/loading bounds ที่พอ (4) กรอก locked record, รัน prediction/admission script แล้ว review ก่อนเก็บ V หากข้อใดไม่ได้ ให้จบที่ไม่รับเข้า/แผนต้องทบทวน ไม่อีเมลขอข้อมูลไปเรื่อย ๆ และไม่เปลี่ยนระบบโดยอัตโนมัติ
+
+คำถามผู้ตรวจที่เจาะจงคือ **“ภายใต้ข้อมูล calibration ชุดนี้ มี admissible source+receiver realization ที่ทำให้ I_full กับ I_red แยกจริงตลอด uncertainty set และตัววัดไม่สร้าง contrast แทน source หรือไม่?”** ไม่ขอให้ผู้ตรวจตัดสินทั้งจักรวาลหรือให้ผู้เขียนตรวจ matrix algebra เอง ผู้เขียนยังไม่ต้องเลือกว่า signed หรือ magnitude คือ information ทั้งทฤษฎี
+
+งานหลังส่งแผนต้องได้รับทิศทางใหม่ตามชนิดงาน: implement prospective analysis tools, ทำ calibration จริง หรือแก้ข้อเสนอ UET-specific ที่ยังไม่มี การเปิด source files/ผลลบเดิมต่อไปโดยไม่มี input ใหม่ไม่ใช่เงื่อนไขให้ goal นี้ทำงานไม่จบ และผลของคานไม่เลื่อน causal/He-4/graphite/Core gates ที่ยังเปิดอยู่
+
+### 29.10 Verification, adversarial self-review และการตรวจรับแผน
+
+หลังบันทึก apparatus/protocol/criteria แล้ว SymPy 1.14.0 ผ่าน **12 กลุ่มตรวจเชิงโครงสร้าง**: reciprocal energy/port identity, SC-versus-Q stiffness และ conjugate voltage, sign/energy symmetry, target/coarse projection และ zero-state comparator, conditional weighted-Gramian identity กับ kernel substitution, signed/magnitude/error-coefficient algebra, union-bound failure budget, SI dimensions และ four-case decision-set logic ไม่มีค่าของคานจริง, controllability Gramian, waveform หรือ physical prediction ถูกคำนวณจาก invented calibration
+
+การตรวจ Gramian นี้พิสูจน์เพียงว่า **ถ้า** matrix ที่นิยาม invertible และ source reference ใช้ได้ สูตร control ให้ nominal target ไม่ได้พิสูจน์ว่า apparatus ที่เสนอมาควบคุมได้จริงหรือบังคับ neglected modes ได้ครบ การตรวจ error coefficients อาศัย triangle/reverse-triangle inequalities ของ absolute value; default joint coverage ใช้ union bound ไม่สมมติ independence ไม่มี probability claim จาก symbolic tests
+
+Adversarial self-review แยกขั้น construction ออกจากการตรวจแล้วแก้ความกำกวมสี่ข้อก่อนส่ง: (1) source thermal noise ไม่ใช่ detector noise ทั้งหมด และ noiseless energy identity ไม่ใช่ full stochastic thermodynamics (2) ระบุ primary pooling/abs order ของสิบ blocks ให้แน่นอน (3) ไม่เอา finite calibration extrema มาเป็น hard noise limit หรือ pointwise coverage มาเป็น joint confidence (4) ใช้ joint prediction/measurement-set intersections ไม่เลือก marginal หรือ point parameter ที่สวย การแก้เหล่านี้ไม่เปลี่ยน Core equations หรือทำให้ physics gate ผ่าน
+
+| Completion audit ของเป้าหมายที่ผู้เขียนเลือก | ตำแหน่ง / ผล |
+| --- | --- |
+| ข้อเสนอหนึ่งข้อ, non-goals, causal/state map และ origin/alternative classes | §§26–29; แยก author deferral, imported physics และ AI realization/protocol |
+| ผลที่ตัดสินได้จากงานเดิมโดยไม่รันซ้ำ | §26 kinetic non-selection, §27 finite-window certificate และ §28 invariant/receiver-memory admission limit |
+| ระบบจริงที่เสนอและ mathematical/physical correspondence boundary | §§29.2–29.4; source-backed architecture, explicit new variable meanings, units/ports/ledger; ไม่ใช้ rod certificate ผิดระบบ |
+| วิธี lock input–model–observer–processing–output ก่อน test | §§29.5–29.7; independent C, numerical L, fresh V, pulse/read/estimator and joint budget |
+| Positive/negative/inconclusive results, comparator และ finite stops | §§29.7–29.8; fixed counts, no replacement/optional stopping, four-case rules; full standard equivalence คงอยู่ |
+| สิ่งที่ยังไม่มีและหน้าที่ผู้ตรวจ | §29.9; apparatus approval, actual C packet, executable admission/prediction analysis และ filled/reviewed L ต้องมาก่อน experiment |
+
+**ผลตรวจรับ: เสร็จระดับ prospective research/test-plan deliverable** ตามขอบเขตที่ผู้เขียนขอ ไม่ได้เสร็จ numerical physical-test lock หรือการทดลองจริง การผ่าน document/contract checks จะรายงานแยกใน work log; review ของ calculation contract ยังคง INCOMPLETE, source/receiver numerical admission UNKNOWN และ gates เดิมไม่เลื่อน ไม่มีการเลือก information ontology, ส่งอีเมล, ซื้อข้อมูล หรือเผยแพร่จากแผนนี้
