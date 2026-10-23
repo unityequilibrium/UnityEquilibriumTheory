@@ -29,6 +29,13 @@
     - [⚔️ 3. Bridging Theoretical Conflicts](#️-3-bridging-theoretical-conflicts)
     - [❤️ 4. Impact on Humanity (Cross-Disciplinary)](#️-4-impact-on-humanity-cross-disciplinary)
   - [🎯 6. The Core Equation (Detailed Explanation)](#-6-the-core-equation-detailed-explanation)
+    - [Current model formulation / แบบจำลองแกนปัจจุบัน](#current-master-equation)
+      - [Functional and terms / Functional และเทอม](#current-master-functional)
+      - [Complete state and evolution / สถานะครบและพลวัต](#current-master-dynamics)
+      - [Where did I go? / I ไปอยู่ตรงไหน?](#current-master-information)
+      - [Model complexity / ความซับซ้อน](#current-master-complexity)
+      - [Research evidence / หลักฐาน](#current-master-evidence)
+      - [Dependency map / แผนที่ความสัมพันธ์](#current-master-dependency-map)
     - [The Vision](#the-vision)
     - [The Full Implementation (Field Equation)](#the-full-implementation-field-equation)
     - [Why This Works (The Tree of Physics)](#why-this-works-the-tree-of-physics)
@@ -236,6 +243,171 @@ UET retains a **"Civilization-Level Operating System"** vision across 6 domains;
 ---
 
 ## 🎯 6. The Core Equation (Detailed Explanation)
+
+<!-- UET-CURRENT-MASTER-PRESENTATION:START -->
+<a id="current-master-equation"></a>
+### Current model formulation / แบบจำลองแกนปัจจุบัน
+
+**EN — What is presented here:** an existing candidate realization of UET's interaction–retained-state–later-response proposal, not a newly derived universal law. In the current response lane, the calculational core is **a functional plus a complete state and declared evolution laws**. The historical `Omega = C·I` vision is preserved below, but it is not the complete equation used for these calculations.
+
+**TH — ส่วนนี้นำเสนออะไร:** realization ที่มีอยู่แล้วของข้อเสนอเรื่องปฏิสัมพันธ์ ผลคงอยู่ และการตอบสนองภายหลัง ไม่ใช่การประกาศกฎสากลที่ derive ใหม่ แกนคำนวณของสาย response คือ **functional พร้อมสถานะครบและกฎวิวัฒน์ที่ประกาศ** ส่วนวิสัยทัศน์ `Omega = C·I` เดิมเก็บไว้ด้านล่าง แต่ไม่ใช่สมการคำนวณครบชุดของงานนี้
+
+> **Scope / ขอบเขต:** `matter_space_coupled_v1`; normalized 1D prototype; opt-in; physical correspondence remains open. The engine default is still `legacy_local`. / แบบจำลองหนึ่งมิติแบบ normalized ที่ต้องเลือกเปิดใช้เอง ยังไม่ปิดการแมปกายภาพ และไม่เปลี่ยน default ของ engine
+
+**EN — Intended proposition:** interactions may leave persistent changes in a system's state, structure or correlations; those changes may affect a later response. This realization investigates one state-mediated mechanism. It does not establish that every retained change is one scalar information quantity, nor does subsystem openness establish the author's global-open-universe hypothesis.
+
+**TH — ข้อเสนอที่ตั้งใจศึกษา:** ปฏิสัมพันธ์อาจทิ้งผลคงอยู่ในสถานะ โครงสร้าง หรือความสัมพันธ์ของระบบ และผลนั้นอาจเปลี่ยนการตอบสนองครั้งต่อไป realization นี้ศึกษากลไกผ่านสถานะหนึ่งแบบ ไม่ถือว่าผลคงอยู่ทั้งหมดต้องเป็นข้อมูล scalar ตัวเดียว และไม่ใช้ความเปิดของ subsystem ยืนยันสมมติฐานจักรวาลเปิดทั้งหมดของผู้เขียน
+
+<a id="current-master-functional"></a>
+#### Functional and term structure / Functional และโครงสร้างเทอม
+
+$$
+\boxed{
+\begin{aligned}
+\Omega[C,\Phi]=\int\Big[&
+\frac{a_C}{2}C^2+\frac{b_C}{4}C^4
++\frac{\kappa_C}{2}|\nabla C|^2\\
+&+\frac{a_\Phi}{2}\Phi^2+\frac{b_\Phi}{4}\Phi^4
++\frac{\kappa_\Phi}{2}|\nabla\Phi|^2
+-\frac{g}{2}C^2\Phi
+\Big]\,dx
+\end{aligned}}
+$$
+
+| Part / ส่วน | Mathematical role / หน้าที่ | Interpretation boundary / ขอบเขตการตีความ |
+| --- | --- | --- |
+| `a_C C²/2 + b_C C⁴/4` | Local landscape of the system-state coordinate / รูปร่าง functional เฉพาะที่ของสถานะระบบ | Chosen polynomial, not a derivation of matter or existence / เป็น polynomial ที่เลือก ไม่ใช่ derivation ของสสารหรือการมีอยู่ |
+| `a_Phi Phi²/2 + b_Phi Phi⁴/4` | Local response landscape / รูปร่าง functional ของการตอบสนอง | Effective response, not a metric or information substance / ไม่ใช่ metric หรือสารข้อมูล |
+| `kappa_C*norm(grad C)²/2`, `kappa_Phi*norm(grad Phi)²/2` | Spatial-gradient contributions / ส่วนที่ขึ้นกับความต่างเชิงพื้นที่ | Not, by themselves, a complete temporal-memory law / ไม่ใช่กฎความจำตามเวลาที่ครบแล้ว |
+| `-g C² Phi/2` | Coupling between the two sectors / เทอมเชื่อมสองส่วน | Constitutive choice; its form and value are not fixed by the word information / เป็นการเลือกแบบจำลอง ไม่ได้ถูกบังคับด้วยคำว่าข้อมูล |
+
+**EN:** `a,b,kappa,g` describe the selected normalized landscape and coupling; `M,tau` below describe kinetics and response time. Their numerical defaults are benchmark controls, not universal physical constants. The polynomial form, coupling and kinetics are model choices; their variational derivatives can then be derived within that model. A correct derivative does not retrospectively derive the choice of functional.
+
+**TH:** `a,b,kappa,g` กำหนดรูปร่าง functional และ coupling แบบ normalized ส่วน `M,tau` ด้านล่างกำหนด kinetics และเวลาตอบสนอง ค่า default เป็น benchmark controls ไม่ใช่ค่าคงที่สากล รูป polynomial, coupling และ kinetics เป็นสิ่งที่เลือกในแบบจำลอง แล้วจึงหาอนุพันธ์ตามมาได้ การหาอนุพันธ์ถูกไม่ใช่การพิสูจน์ย้อนหลังว่าธรรมชาติต้องเลือก functional นี้
+
+<a id="current-master-dynamics"></a>
+#### Complete state and evolution / สถานะครบและกฎวิวัฒน์
+
+$$
+\mu_C=\frac{\delta\Omega}{\delta C},
+\qquad
+\mu_\Phi=\frac{\delta\Omega}{\delta\Phi},
+\qquad
+\text{state}=(C,\Phi,\Pi).
+$$
+
+$$
+\partial_t C=
+\begin{cases}
+M_C\nabla^2\mu_C+J_C & \text{conserved lane},\\
+-M_C\mu_C+J_C & \text{nonconserved control},
+\end{cases}
+$$
+
+$$
+\partial_t\Phi=\Pi,
+\qquad
+\tau_\Phi\partial_t\Pi+\Pi=-M_\Phi\mu_\Phi+J_\Phi.
+$$
+
+**EN:** choose one C law for the declared calculation; the two lines are alternatives, not simultaneous updates or mere numerical methods. The conserved lane preserves the declared integral when its source has zero net integral. Each spatial position has three state coordinates; the whole field is not just three numbers. Initial `C,Phi,Pi`, sources, coefficients and periodic/zero-flux boundaries must be specified. `Pi` is the rate paired with `Phi`, not a third substance: writing a second-order response as a first-order pair preserves its independent initial rate.
+
+**TH:** ต้องเลือกกฎ C หนึ่งแบบต่อการคำนวณ สองบรรทัดเป็นทางเลือก ไม่ใช่ใช้พร้อมกันหรือแค่เปลี่ยนวิธีคำนวณ แบบ conserved รักษาอินทิกรัลที่ประกาศเมื่อ source มีอินทิกรัลสุทธิเป็นศูนย์ แต่ละตำแหน่งมีสาม state coordinates ไม่ใช่ว่าทั้งสนามมีแค่สามตัวเลข ต้องระบุค่าเริ่มต้น `C,Phi,Pi`, sources, coefficients และขอบเขต periodic/zero-flux ส่วน `Pi` เป็นอัตราการเปลี่ยนที่คู่กับ `Phi` ไม่ใช่สารชนิดที่สาม การเขียนสมการอันดับสองเป็นคู่สมการอันดับหนึ่งยังต้องเก็บอัตราเริ่มต้นเดิม
+
+**EN — Ledger, not another independent field:** the selected kinetics gives the extended normalized availability below. With the declared constant coefficients, boundary conditions and additive-source convention, its continuum balance separates dissipation from source work; a finite numerical step still needs its own error check. `P_C = integral mu_C J_C dx` and `P_Phi = integral Pi J_Phi/M_Phi dx`; a force/traction port needs its own matching, not the same formula by name.
+
+**TH — บัญชี ไม่ใช่ field อิสระเพิ่ม:** kinetics ที่เลือกให้ extended normalized availability ด้านล่าง ภายใต้ coefficients คงที่ เงื่อนไขขอบเขต และ additive-source convention ที่ประกาศ บัญชี continuum แยก dissipation ออกจากงานของ source ส่วนผลรันที่ใช้ time step จำกัดยังต้องตรวจ error ของตัวเอง โดย `P_C = integral mu_C J_C dx` และ `P_Phi = integral Pi J_Phi/M_Phi dx` ถ้าใช้ force/traction port ต้องตรวจการจับคู่ใหม่ ไม่ใช่ยืมสูตรเพราะใช้ชื่อ source เหมือนกัน
+
+$$
+E=\Omega+\frac{\tau_\Phi}{2M_\Phi}\int\Pi^2\,dx,
+\qquad
+\frac{dE}{dt}=-\int(\sigma_C+\sigma_\Phi)\,dx+P_C+P_\Phi.
+$$
+
+**EN:** with zero sources this balance is non-increasing under its assumptions; it does not assert that `Omega` alone decreases in every driven/inertial run. `E,sigma` are not automatically joules, heat or thermodynamic entropy.
+
+**TH:** เมื่อไม่มี sources บัญชีนี้ไม่เพิ่มภายใต้สมมติฐานของมัน ไม่ได้กล่าวว่า `Omega` อย่างเดียวต้องลดทุกรอบที่มีแรงขับหรือ inertia และยังไม่ถือว่า `E,sigma` เป็นจูล ความร้อน หรือ thermodynamic entropy อัตโนมัติ
+
+<a id="current-master-information"></a>
+#### Where did I go? / I ไปอยู่ตรงไหน?
+
+| Symbol or context / ตัวแปรหรือบริบท | Role in the cited model / บทบาท | What it is not / สิ่งที่ไม่ใช่ |
+| --- | --- | --- |
+| Historical `I` in the Vision | Individualism/Isolation metaphor / คำตีความเชิงแนวคิด | Not a current universal definition of mass, information or latency / ไม่ใช่นิยามสากลปัจจุบันของมวล ข้อมูล หรือ latency |
+| Legacy C/I field `I` | Independently initialized/evolving field that couples back to C / field ที่มีค่าเริ่มต้นและพลวัต พร้อม coupling กลับสู่ C | Not automatically Shannon information, entropy, Phi or I_trace / ไม่เท่ากับปริมาณเหล่านั้นโดยชื่อ |
+| `C` | System-state coordinate with lane-specific mapping / coordinate ของสถานะที่ต้องแมปตาม lane | Not universally mass, light speed or energy / ไม่ใช่มวล ความเร็วแสง หรือพลังงานสากล |
+| `Phi` / Φ (Phi, not Ψ/Psi) | Effective response coordinate in this realization / coordinate การตอบสนองของ realization นี้ | Not a renamed, fully equivalent legacy I or a completed information definition / ไม่ใช่ I เดิมที่พิสูจน์ว่าเท่ากันครบแล้ว |
+| `Pi = Phi_t` | Response rate and initial datum / อัตราตอบสนองและค่าเริ่มต้นที่ต้องเก็บ | Not an information quantity merely because it retains dynamical history / ไม่เป็นปริมาณข้อมูลเพียงเพราะร่วมเก็บผลอดีต |
+| `R / I_trace` and observer record | Derived dissipation trace and separately declared measurement output / ร่องรอยจาก dissipation กับผลอ่านที่ต้องประกาศแยก | Not complete state or all information; R has no feedback in v1 / ไม่ใช่สถานะครบหรือข้อมูลทั้งหมด และ R ไม่มี feedback ใน v1 |
+
+**EN:** the legacy coupling is `beta*C*I`; the response coupling is `-g*C²*Phi/2`. They differ in state dependence and admissible initial data. With nonzero couplings and C held as the same coordinate, a constant rescaling `I=r*Phi` cannot make the full models identical. The C-to-Phi source uses C², so that source alone does not distinguish C's two signs; this is not a claim that every state or output loses sign. The information concept has not been disproved or silently moved into Phi: its mathematical correspondence remains a question to resolve.
+
+**TH:** coupling เก่าคือ `beta*C*I` ส่วน response คือ `-g*C²*Phi/2` ซึ่งขึ้นกับสถานะและต้องการค่าเริ่มต้นต่างกัน เมื่อ coupling ไม่เป็นศูนย์และคง C เป็น coordinate เดิม การแทน `I=r*Phi` ด้วยค่าคงที่ไม่ทำให้ทั้งแบบจำลองเท่ากัน แรงขับจาก C ไป Phi ใช้ C² จึงไม่แยกสองเครื่องหมายผ่านช่องทางนี้อย่างเดียว ไม่ได้หมายความว่าทุกสถานะหรือทุก output สูญเครื่องหมาย แนวคิดข้อมูลไม่ได้ถูกพิสูจน์ว่าผิดหรือถูกย้ายเข้า Phi เงียบ ๆ แต่ยังต้องปิดความสัมพันธ์ทางคณิตศาสตร์ให้ชัด
+
+
+**EN:** the historical three-term C/I sketch below is also shorter than the repaired legacy gradient-flow contract: that contract includes the I-gradient and quadratic I contributions. Its short display should not be mistaken for the full old model.
+
+**TH:** สูตร C/I สามเทอมที่เก็บไว้ด้านล่างก็สั้นกว่า legacy gradient-flow contract ที่ตรวจแก้แล้วเช่นกัน เพราะ contract นั้นยังมีส่วน gradient ของ I และส่วน quadratic ของ I ภาพสั้นเดิมจึงไม่ใช่รายละเอียดครบของแบบจำลองเก่า
+
+Sources / ต้นทาง: [response ontology and functional](docs/core/01_contracts/MATTER_SPACE_RESEARCH_SPEC.md), [implemented response operator](docs/core/02_equations/matter_space/uet_matter_space.py), [scoped legacy C/I compatibility audit](docs/core/08_history/research_notes/UET_FOUNDATION_COMPATIBILITY_AUDIT.md). The detailed relationship argument is working-only evidence at `docs/meta/UET_THEORY_ARGUMENT.md` §§25.2–5, local source commit `1346edfc07c2d2f9eb2adbd5257e820fa186a37b`; it is not included in the current public evidence packet. / รายงานความสัมพันธ์ละเอียดเป็นหลักฐานในเครื่องตาม path/commit นี้ ยังไม่รวมในชุดหลักฐานสาธารณะปัจจุบัน
+
+<a id="current-master-complexity"></a>
+#### Is it still simple? / ยังเรียบง่ายอยู่หรือไม่?
+
+**EN:** it is a small coupled-field model in architecture, but not the two-symbol slogan. Compared with the scoped two-field C/I gradient flow, the response realization genuinely includes an independently prepared response rate. Compared with the old multi-option master implementation, this declared lane excludes exchange/game/will/layer additions that do not belong to its contract. More displayed lines do not all represent new assumptions, but a new state, coupling or kinetic law is a real modeling choice.
+
+**TH:** โครงสร้างยังเป็นแบบจำลอง coupled fields ขนาดเล็ก แต่ไม่ใช่สโลแกนสองตัวอักษร เมื่อเทียบกับ scoped C/I gradient flow ที่มีสอง field สาย response เพิ่มอัตราตอบสนองที่เตรียมค่าเริ่มต้นได้อย่างอิสระจริง เมื่อเทียบกับ master implementation เก่าที่รวมหลาย options สายนี้ไม่เอา exchange/game/will/layer ที่อยู่นอก contract มาปน จำนวนบรรทัดที่มากขึ้นไม่ใช่สมมติฐานใหม่ทุกบรรทัด แต่การเพิ่ม state, coupling หรือ kinetic law คือการเลือกแบบจำลองเพิ่มจริง
+
+| Layer / ชั้น | What is chosen or follows / อะไรเลือก อะไรตามมา | Research role / หน้าที่ |
+| --- | --- | --- |
+| Model assumptions / สมมติฐานแบบจำลอง | State meanings, functional, coupling, conservation, kinetics and coefficient origins / ความหมายสถานะ functional coupling conservation kinetics และที่มา coefficients | Must be justified and compared; not derived merely by writing Omega / ต้องมีเหตุผลและคู่เทียบ ไม่ได้ derive ด้วยการเขียน Omega |
+| Mathematical consequences / ผลตามทางคณิตศาสตร์ | `mu_C,mu_Phi`, first/second-order rewrite and conditional ledger identities / อนุพันธ์ การเปลี่ยนรูปอันดับสมการ และบัญชีภายใต้เงื่อนไข | Supporting equations from selected premises, not independent new forces / สมการประกอบที่ตามจากฐานที่เลือก ไม่ใช่แรงใหม่ทุกตัว |
+| Preparation and realization / การเตรียมและ realization | Initial/boundary data, drives, dimensional map and measurement model / ค่าเริ่มต้น ขอบเขต แรงขับ การแมปหน่วย และแบบจำลองการวัด | Further physical/input choices; some remain open / เป็นการเลือกหรืออินพุตเพิ่ม บางส่วนยังเปิด |
+| Numerical and diagnostic layer / ชั้นคำนวณและ diagnostic | Discretization, solver, error checks, optional trace and protocol-specific projection / discretization solver error trace ทางเลือก และ projection ตาม protocol | Approximation/measurement choices must be assessed; they are not all automatic derivatives / ต้องตรวจความเหมาะสม ไม่ใช่ทั้งหมดตามมาอัตโนมัติ |
+| Other equation families / สมการสายอื่น | Covariant parent, O(2), transport and other lanes retain their own contracts / แต่ละสายคง contract ของตัวเอง | Not all established as child equations of this functional / ยังไม่พิสูจน์ว่าทั้งหมดเป็นสมการลูกของ functional นี้ |
+
+<a id="current-master-evidence"></a>
+#### What the research supports / งานวิจัยรองรับอะไร
+
+| Existing result / ผลเดิม | Decision within scope / สิ่งที่ตัดสินได้ | What does not follow / สิ่งที่ยังไม่ตามมา |
+| --- | --- | --- |
+| §23 steady-response comparison | A first-mode approximation has <0.9% relative-error bounds for complex `p/F_b` and `x/F_b` against the full normalized rod–polarization reference, for F_b-only steady forcing with f_P=0 and omega/omega_0 in [0.99,1.01] / ผ่านเกณฑ์เทียบแบบจำลองเต็มภายใต้แรงขับและย่านที่ตรึง | Not accuracy against nature, arbitrary inputs or preparation transients / ไม่ใช่ความแม่นยำกับธรรมชาติหรือทุกอินพุต |
+| §24 prepared-history counterexample | A smooth finite-energy write / controlled wait / released read leaves higher-mode history outside the tested projected state `(p,q0,q0dot)` / สถานะย่อที่ทดสอบเก็บประวัติใน higher modes ไม่ครบ | Not different futures from an identical complete state; not new mechanics or learning validation / ไม่ใช่อนาคตต่างจากสถานะครบเดียวกันหรือการยืนยัน learning |
+| §25 relationship audit | Exact rewrites, conditional reductions and alternative models are distinguished / แยกรูปเขียนเทียบเท่า การลดแบบมีเงื่อนไข และแบบจำลองทางเลือกได้ | Not a closed universal master or a proof that Phi equals all information / ไม่ใช่การปิดแม่บทสากลหรือพิสูจน์ว่า Phi คือข้อมูลทั้งหมด |
+
+**EN:** these results constrain different links, not one universal implication chain: the rod–polarization reference is a declared comparator, not an already-derived physical realization of the full quartic functional. See the [scoped latest-results summary](#research-bounded-results) and its working-evidence boundary. Physical units, parameter origins, preparation, observer uncertainty and any independently restrictive UET addition remain open. The [compatibility controller](docs/core/07_artifacts/gates/uet_foundation_compatibility_decision.json) still states `FOUNDATION_NOT_CLOSED`.
+
+**TH:** ผลเหล่านี้ตรวจคนละรอยต่อ ไม่ใช่สาย implication สากลเส้นเดียว โดย rod–polarization reference เป็นคู่เทียบที่ประกาศ ไม่ใช่ realization กายภาพที่ derive จาก quartic functional ครบแล้ว อ่าน [สรุปผลตามขอบเขต](#research-bounded-results) พร้อมข้อจำกัดหลักฐานในเครื่อง ช่องหน่วยจริง ที่มา parameters การเตรียมระบบ uncertainty ผู้วัด และข้อจำกัดที่ UET เพิ่มอย่างอิสระยังเปิดอยู่ controller ยังระบุ `FOUNDATION_NOT_CLOSED`
+
+<a id="current-master-dependency-map"></a>
+#### Research dependency map / แผนที่ความสัมพันธ์ที่ตรวจได้
+
+```mermaid
+graph TD
+    Intent["Author proposition<br/>Interaction, retained state, later response"]
+    Functional["Chosen functional<br/>Omega C,Phi"]
+    Derivatives["Variational derivatives<br/>mu_C, mu_Phi"]
+    Conditions["Declared kinetics and sources<br/>Complete initial state and boundaries"]
+    Evolution["Evolution of C, Phi, Pi"]
+    Ledger["Availability and dissipation ledger"]
+    Trace["Optional R / I_trace<br/>No feedback in v1"]
+    Readout["Declared readout / observer model<br/>Mapping may remain open"]
+
+    Intent -->|"one candidate realization"| Functional
+    Functional --> Derivatives
+    Derivatives --> Evolution
+    Conditions --> Evolution
+    Evolution --> Ledger
+    Ledger --> Trace
+    Evolution --> Readout
+```
+
+**EN:** this is a model-dependency diagram, not a mandatory physical detection pipeline. Observation roles belong to declared couplings and protocols; a detector/record is not another copy of the source state. Readout metadata alone must not change source evolution. Any actual detector backaction requires an explicit interaction or a justified omission bound. The [Core formulation](docs/core/README.md#current-response-realization) and [response specification](docs/core/01_contracts/MATTER_SPACE_RESEARCH_SPEC.md) carry the detailed equations and domains.
+
+**TH:** ผังนี้แสดง dependency ของแบบจำลอง ไม่บังคับว่าการตรวจจับจริงต้องเดินเป็นสายนี้ทุกกรณี บทบาทผู้วัดขึ้นกับ coupling และ protocol ที่ประกาศ detector/record ไม่ใช่สำเนาสถานะต้นทางอีกก้อน การเปลี่ยน metadata การอ่านอย่างเดียวต้องไม่เปลี่ยนพลวัตต้นทาง ส่วน backaction จริงต้องมีปฏิสัมพันธ์ชัดหรือมีขอบเขตที่รองรับการละ รายละเอียดสมการและ domain อ่านต่อใน Core/spec ที่ลิงก์ไว้
+
+**Historical material follows / เนื้อหาประวัติอยู่ถัดไป:** the original headings, formulas, tables and Tree of Physics remain intact. Their preservation records the development of the proposal; it does not make the old symbol dictionary or derivation arrows current physical results. / คงหัวข้อ สูตร ตาราง และ Tree of Physics เดิมไว้ครบ เพื่อรักษาประวัติ ไม่ใช่รับรองพจนานุกรมสัญลักษณ์หรือลูกศร derivation เดิมเป็นผลกายภาพปัจจุบัน
+<!-- UET-CURRENT-MASTER-PRESENTATION:END -->
 
 > **ขอบเขตของส่วนเดิม:** สูตรเชิงวิสัยทัศน์และตารางคำตีความด้านล่างคงไว้เป็นประวัติ/แนวคิด ไม่ใช่นิยามกายภาพปัจจุบันหรือ derivation ว่า standard physics ทุกสาขาตามจากสูตรเดียว ดู [แกน realization ล่าสุด](#research-current-realization) และ [บทบาทเทอม](#research-term-roles) ก่อนใช้ C/I/Omega ในการคำนวณ
 
