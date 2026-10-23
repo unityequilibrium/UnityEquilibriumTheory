@@ -3079,3 +3079,113 @@ E_0/epsilon^2 <0.000114131481 <115/10^6 <1/1000.
 ข้อจำกัดที่ยังเปิดชัดเจนคือ h นี้สั้นใน normalized clock ไม่มี physical clock scale หรือ detector bandwidth/readout admission; boxcar ไม่ใช่ physical noise model และเป็น certificate ของ known preparation ไม่ใช่ universal memory lifetime หรือ generic history reconstruction ไม่มี time integration, random sample, fitting, numerical-threshold change, added candidate mode, observation, independent specialist validation หรือ physics-gate promotion
 
 การทบทวนแบบ adversarial ภายในแยกสามจุดสำคัญ: lower energy bound เดิมใช้แทน upper bound ไม่ได้; endpoint velocity ไม่ถูก bound จาก L2 energy โดยผิดวิธี; ระหว่าง read ต้องปลด p ให้ coupled จริง ไม่คง clamp เพื่อทำ bound ง่ายขึ้น การตรวจเหล่านี้เป็น self-review โดย AI ไม่ใช่ reviewer ภายนอก ผล document/contract QA และ scoped commit อยู่ใน [WORK_LEDGER](../../WORK_LEDGER/2026/2026-10-24.md)
+
+## 28. เงื่อนไขย้าย certificate ไปสู่ระบบจริงและตัวรับ — 24 ตุลาคม 2026
+
+### 28.1 คำถามและ system partition ก่อนกำหนดการอ่าน
+
+รอบก่อนเป็น progress ที่มีผลและ local checkpoint `41ea972e8e041405f8d88abc84d90c42ea85f572` แล้ว ไม่รัน §§26–27 ซ้ำ รอบนี้ถามว่า **การเปลี่ยนหน่วยและการอ่านผ่านตัวรับเพียงพอให้ใช้ certificate เดิมกับระบบจริงหรือยัง และต้องสอบเทียบอะไรโดยอิสระ?** ใช้ source/reference เดิม ไม่เลือกวัสดุใหม่หรือปรับ ratio ให้เข้าข้อมูล
+
+| Work card | ขอบเขตและผลตัดสิน |
+| --- | --- |
+| Profile / claim | FORMAL dimensional/measurement admission conditions ไม่ใช้ experimental observations, ไม่เป็น physical acceptance หรือ source-paper reproduction |
+| Partition | source คือ full `(p,u,u_t)` และพลังงานร่วมเดิม; conditional receiver มี state z ของตัวเอง ไม่ใช่ Phi/Pi หรือสำเนาสถานะ source; observable คือค่าเฉลี่ย z ไม่ใช่ receiver ทั้งระบบ |
+| Coupling / backaction | mathematical input x->receiver เป็น conditional effective map; ไม่ได้ระบุ photon/circuit/carrier จริง Source ไม่รับ z กลับใน comparator ที่ประกาศ แต่ actual loading/backaction และ receiver energy ยัง UNKNOWN ไม่ใช่พิสูจน์ว่าไม่มีผล |
+| Inputs / fixed result | same known preparation/read h=1/10000, source coefficients/margins เดิม; เพิ่มเพียง symbolic physical scales และ conditional calibrated receiver parameters ไม่เพิ่ม UET term หรือ state |
+| Action / acceptance | derive scale-invariant source requirements และ receiver-memory/finite-window bound; ตัดสินได้ว่าหน่วยอย่างเดียวหรือ ideal readout ใช้ปิด physical admission ไม่ได้ ระบุ independent packet ที่จำเป็น |
+| Stop / review | จบเมื่อได้ constraints/counterexample และ disposition ของ source models; ไม่เริ่ม material/data hunt หรือเปลี่ยน window เพื่อทำให้ detector ผ่าน ผู้ตรวจต้องแยก sufficient design condition ออกจาก universal necessity |
+
+partition ใน cycle contract ใช้เฉพาะ measurement extension นี้ ไม่ประกาศว่า formal proofs ก่อนหน้ามี hardware อยู่แล้ว ไม่ให้ schema coverage หรือการเพิ่ม z กลายเป็น thermodynamic closure ของ source+detector
+
+### 28.2 Unit scaling ไม่สามารถเลือก dimensionless physics ให้เรา
+
+ให้ physical bare mechanical stiffness `K_b=A_perp*Y/L=1/H_0`, acoustic speed `c_el=sqrt(Y/rho)`, source variables `p_ph=P_*p`, `u_ph=x_*u`, `t_ph=t_0*t`, และ availability scale E_*>0 การใช้ fixed-free rod ใน §22 ให้ normalized coefficients:
+
+~~~text
+mechanical stiffness: K_b*x_*^2/E_*
+mechanical inertia:   rho*A_perp*L*x_*^2/(E_* *t_0^2)
+coupling:             G*P_* *x_*/E_*
+polar stiffness:      K_P*P_*^2/E_*
+polar friction:       Gamma_P*P_*^2/(E_* *t_0)
+body damping:         gamma_b*t_0.
+~~~
+
+เพื่อได้ fixture เดิม (stiffness,inertia,coupling,friction)=(1,1,1,1), K_P,norm=21/20 และ damping=1/5 ต้องมี:
+
+~~~text
+t_0=L/c_el
+chi=G^2/(K_P*K_b)=20/21
+theta_P=Gamma_P/(K_P*t_0)=20/21
+d=gamma_b*t_0=1/5.
+~~~
+
+เมื่อเลือก orientation ให้ G>0 แล้ว หาก ratios เหล่านี้ตรง ก็เลือก x_*>0 ใดและกำหนด `P_*=K_b*x_*/G`, `E_*=K_b*x_*^2` เพื่อได้ coefficients ข้างต้นจริง จึงเป็น necessary/sufficient scaling เฉพาะ linear reference นี้ ไม่ใช่ correspondence ของ full nonlinear UET หรือหลักฐานว่ามี sample ดังกล่าว
+
+chi, theta_P และ d เป็น ratios ของระบบจริง ไม่เปลี่ยนด้วยการเปลี่ยนหน่วย และไม่ให้ fit scored history เพื่อกำหนดมันย้อนหลัง Real admission ต้องมี independently measured/derived values และ uncertainty/perturbation budget; exact reference equalities ไม่ใช่ข้อเรียกร้องให้ค่าที่วัดไม่มี uncertainty
+
+H_0 เป็น compliance เมื่อ polarization coordinate ถูกตรึงตาม convention ไม่ใช่ fully relaxed measured compliance ใช้ Schur relation เดิมได้ `C_xx=H_0/(1-chi)=21*H_0` ที่ fixture นี้ หากนำ relaxed compliance มาแทน bare H_0 แล้วเพิ่ม coupling อีกจะนับซ้ำ Near-stability factor 1/(1-chi)=21 ทำให้ source-state/boundary/parameter uncertainty สำคัญ ไม่หายไปเพราะกราฟ fit ดี
+
+แรงเขียน physical ที่มี amplitude F_* ผูกกับ `F_*=E_*epsilon/x_*=K_b*x_*epsilon` จึงให้ displacement scale `x_*epsilon=H_0*F_*` ถ้า ratios/inputs/preparation ตรงภายใน admitted error แล้ว margins §27 แปลงเป็น:
+
+~~~text
+h_ph=10^-4*L/c_el
+pointwise source margin >677e-6*H_0*abs(F_*)
+ideal boxcar source margin >1177e-6*H_0*abs(F_*).
+~~~
+
+ค่าพวกนี้ไม่ต้องเลือก x_* เพื่อขยาย signal ตามใจ แต่ต้อง calibrate bare H_0 กับ force waveform ที่ถึง source จริง และ bound linearization/source error ไม่ใช่ใช้ command voltage หรือ arbitrary amplitude unit แทนแรงที่วัดได้
+
+### 28.3 Conditional receiver: การวัดตัวรับด้วยเปลี่ยนคำตอบอย่างไร
+
+ใช้ **AI-declared reference receiver** เพียงเพื่อแสดง admission requirement ไม่อ้างว่าเป็นอุปกรณ์จริงจาก paper ใด: `tau_D*z_dot+z=g_D*x`, tau_D>0, independently calibrated gain g_D>0 โดย z เป็น receiver state และ tau_D ไม่ใช่ tau_Phi เมื่อเปรียบ known written history กับ zero-history baseline ภายใต้ receiver law เดียวกัน ให้ Delta z_0 เป็นความต่างสถานะ receiver ตอนเริ่ม read ที่ยังไม่ทราบ:
+
+~~~text
+Delta z_bar = B_D*Delta z_0
+ + g_D/h_ph * integral_0^h_ph [1-exp(-(h_ph-s)/tau_D)]*Delta x(s) ds
+B_D=(tau_D/h_ph)*(1-exp(-h_ph/tau_D))
+A_D=1-B_D.
+~~~
+
+จาก pointwise source lower bound M_x=677e-6*H_0*abs(F_*) ใน branch ที่เป็นบวก ได้ conservative bound ในหน่วย record:
+
+~~~text
+Delta z_bar >= g_D*M_x*A_D - B_D*abs(Delta z_0) - B_other.
+~~~
+
+B_other รวม source/parameter/model/gain/readout/baseline errors ที่เหลือโดย joint bound หรือ conservative sum ไม่สมมติ independence ถ้า x ไม่มี history contrast เลย แต่ Delta z_0 ไม่เป็นศูนย์ ก็มี `Delta z_bar=B_D*Delta z_0` ได้: การพบ record ที่มีความจำไม่ localize ความจำไว้ใน source โดยอัตโนมัติ ต้องควบคุม/สอบเทียบ receiver state ด้วย
+
+ตัวอย่าง **sufficient design criterion** ที่ประกาศก่อน symbolic check: ถ้า `tau_D<=h_ph/10` จะมี A_D>=9/10 และ B_D<=1/10 ดังนั้น condition `B_D*abs(Delta z_0)+B_other <(9/10)*g_D*M_x` เพียงพอให้ record contrast ยังเป็นบวก นี่ไม่ใช่ necessary bandwidth ของเครื่องวัดทุกชนิด หรือ project physics threshold; slower detector อาจใช้ protocol/analysis อื่นได้ แต่ต้องตรวจใหม่ ไม่อ้าง certificate นี้ให้เอง
+
+สำหรับ receiver model นี้เท่านั้น f_D=1/(2*pi*tau_D) และ unloaded mechanical fundamental f_0=c_el/(4*L) ทำให้ criterion นี้ต้องการ:
+
+~~~text
+tau_D<=10^-5*L/c_el
+f_D/f_0>=200000/pi  (ประมาณ 6.37e4).
+~~~
+
+เป็นข้อจำกัดแรงของ **วิธีอ่านสั้นและ sufficient criterion ที่เราเลือก** ไม่ใช่ข้อจำกัดธรรมชาติทั้งหมด f_0 คือ unloaded reference ไม่ใช่ resonance ที่วัดหลัง coupling โดยไม่ตรวจ boundary Bare/loaded และ detector/source clocks ห้ามปนกัน ไม่มี sensor ใดได้รับการรับเข้าเพียงเพราะได้ ratio นี้
+
+Signed versus magnitude conclusions §27 จะส่งผ่านไปสู่ raw record ได้เมื่อ operator, reset/baseline และ offset corrections รองรับ การได้ `abs(z_bar)` จากเครื่องไม่ได้เท่ากับ `abs(x_bar)` โดยชื่อ และ `abs(z_bar)-abs(z_base)` ไม่เท่ากับ `abs(z_bar-z_base)` ทั่วไป หาก kernel มี negative lobes/nonlinearities/delay ต้องใช้ admitted operator/error bound อื่น ไม่ถือเป็น positive first-order receiver โดยอัตโนมัติ
+
+### 28.4 ตรวจฐานภายนอกและคำตัดสินก่อนเลือก physical test
+
+อ่านต้นฉบับเฉพาะส่วนเดิมอีกครั้ง ไม่ใช้ภาพผลลัพธ์เป็น validation data:
+
+| Source | สิ่งที่ source รองรับ | Disposition สำหรับ exact protocol นี้ |
+| --- | --- | --- |
+| [Brierley–Littlewood, §II Eqs. 1–5](https://arxiv.org/pdf/1307.7886v1) | polarization/elastic action และ finite-time strain response | ฐานกลไกใช้ได้ แต่เป็น spatial vector/domain-wall model ที่มี polarization inertia/dipolar terms ไม่ใช่ calibrated scalar relaxational fixed-free rod/receiver packet |
+| [Vorotiahin et al., §II Eqs. 3, 5–6](https://arxiv.org/pdf/1607.05686) | relaxational polarization ร่วมกับ electrostatics และ elasticity | mechanical force balance ถูกใช้เป็น static เพราะสมมติ polarization front ช้ากว่า sound; จึงไม่ให้ inertial retained elastic waveform ของ read protocol นี้โดยตรง |
+
+Versioned PDF ของ source หลัง fetch ไม่สำเร็จในรอบนี้ จึงอ่าน unversioned PDF ร่วม abs metadata ตาม locator ข้างต้น ไม่อ้าง byte identity หรือ accepted-manuscript reproduction ของมัน ไม่ดาวน์โหลดสำเนาหรือใช้ observed values จากภาพ ทั้งสองเป็นฐานของคนละ assumption ไม่ใช่หลักฐานว่าประกอบทุก assumption แล้วได้ experiment เดียวครบแล้ว และไม่ปฏิเสธวัสดุทุกชนิดที่ใช้ในงานเหล่านั้น
+
+**คำตัดสิน:** fixed certificate ยังไม่เป็น locked physical test เพราะไม่มี same-system independent packet สำหรับ (1) chi/theta_P/d และ bare/relaxed boundaries (2) force/clock/preparation ที่ถึง source (3) receiver transfer/initial state/backaction และ joint uncertainty ที่เล็กกว่า margin ประเด็นที่ขาดจึงเป็นรายการวัดเฉพาะ ไม่ใช่คำกว้าง ๆ ว่าข้อมูล helium/graphite ไม่พอ
+
+เป้าหมายทดลองต้องแยกด้วย: full rod เทียบกับ first-mode reduction ทดสอบ state sufficiency ได้ แต่ matched standard comparator ที่ forward-identical ยังแยก label UET ไม่ได้ การได้ hardware precision เพิ่มไม่สร้าง UET-specific restriction ที่ยังไม่มี หากจะพัฒนาฟิสิกส์ใหม่ต้องกลับไปข้อเสนอเพิ่มที่มีเหตุผล ไม่ใช้ detector experiment นี้แทนการตอบเรื่อง novelty
+
+### 28.5 Verification และขอบเขตงานต่อ
+
+Card/scaling/receiver criteria ถูกเขียนก่อนตรวจ exact algebra SymPy 1.14.0 ผ่าน 9 กลุ่ม: clock จาก inertia/stiffness, invariant coupling/relaxation ratios, sufficient scale substitution, bare/relaxed compliance และ force scale, Fubini receiver kernel, average weights, sufficient receiver budget, bandwidth ratio และ receiver-only-memory/magnitude counterexample ไม่รัน source preparation หรือ endpoint verifier เดิมซ้ำ
+
+การรับรอง `B_D<tau_D/h_ph` ใช้ `0<exp(-h_ph/tau_D)<1` เมื่อ h_ph,tau_D>0; จึงได้ sufficient inequalities ที่ระบุ ไม่ใช้ sampled bandwidth values แทน proof ทุกค่า ทั้งหมดเป็น internal symbolic/self-review ไม่ใช่ independent specialist หรือ hardware verification การตรวจ contract ไม่พบรูปแบบ/identity error และทั้ง 42 identities ตรง แต่ review คง INCOMPLETE เพราะ physical gaps ยังเปิด
+
+**ปิด card นี้:** ได้เงื่อนไข invariant และ receiver-state contamination ที่ตัดสินได้จริง Unit conversion และ ideal boxcar อย่างเดียวไม่ปิด physical admission ไม่ fit ratios, เพิ่ม source term หรือแก้ physical gates ผู้เขียนให้เดินต่อถึงแผนทดสอบระบบจริงที่ล็อกได้ จึงต้องเตรียม prospective protocol พร้อม calibration/admission และจุดหยุด แยกจากการอ้างว่ามี sample ผ่านแล้ว งานต่อไม่ใช่ automatic experiment, email, data purchase หรือการเปลี่ยน meaning ของ information แทนผู้เขียน
