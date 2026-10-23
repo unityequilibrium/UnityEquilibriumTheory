@@ -1,0 +1,311 @@
+{
+  "schema_version": "uet-calculation-contract-v1",
+  "contract_id": "T13_JOINT_THERMODYNAMIC_COMPLETION_FORMAL_V1",
+  "profile": "FORMAL",
+  "review": {
+    "status": "INCOMPLETE",
+    "reviewer": "agent:joint-thermal-reference (construction and adversarial self-review, not independent specialist)",
+    "rationale": "R0 source/scope lock and R1 exact first-law/free-energy analysis completed. Three exact groups and nine regression tests passed with SymPy 1.14.0, including Core AST homogeneous expressions and deliberate wrong heat sign. Construction/adversarial self-review only. R2 generator/parity/entropy and R3 information/comparator remain to be checked. HIST-F physical heat/measure is UNKNOWN; no physics gate promotion."
+  },
+  "question": "Under which explicit thermal and coarse-graining assumptions does the existing homogeneous nonconserved C/Phi/Pi drift admit a consistent joint energy, heat, entropy and information account, and what is equivalent to a standard comparator?",
+  "output": {
+    "quantity": "Conditional exact first-law, Fokker-Planck/Gibbs, parity, entropy-production and information-flow identities or counterexamples; no empirical predictions.",
+    "unit": "normalized reference energy and nats; exact identity residuals",
+    "domain": "Unit homogeneous cell C,Phi,Pi in R; constant positive M_C,M_Phi,tau,Theta,b_C,b_Phi; finite real a_C,a_Phi,g. Fixed flat product measure. Smooth positive densities, finite entropy/Fisher integrals and vanishing boundary terms. Equilibrium uses J_C=J_Phi=0; driven balance only prescribed time-dependent sources. Not conserved/spatial/causal lanes, finite-N binary full process, physical material or cosmology.",
+    "accuracy": "Exact symbolic residual zero plus analytic boundary/coercivity and integration-by-parts arguments; falsifying mutations must be nonzero. No sampling error, numerical tolerance, Monte Carlo or fitted thresholds.",
+    "claim_intent": "FORMAL_RESULT"
+  },
+  "model": {
+    "formula_ids": [
+      "docs/core/01_contracts/MATTER_SPACE_RESEARCH_SPEC.md#2-candidate-functional",
+      "docs/core/01_contracts/MATTER_SPACE_RESEARCH_SPEC.md#4-energy-and-dissipation-ledger",
+      "docs/meta/UET_THEORY_ARGUMENT.md#joint-thermal-reference"
+    ],
+    "assumptions": "Keep original Omega, state and deterministic drift. Add independent Gaussian bath forcing only in C and Pi with D_C=M_C*Theta, D_Pi=M_Phi*Theta/tau^2. Pi odd, C/Phi even. REF-E defines Omega as reference potential; HIST-F remains a separate coarse-free-energy interpretation with unresolved intrinsic entropy and reference-measure correspondence. Independence and bath are declared extra hypotheses, not derived Core laws.",
+    "approximation": "No approximation within REF-E generator algebra. Homogeneous/nonconserved selection is a scope restriction, not a theorem reducing all Core lanes. Quartic extension on R is not the bounded binary process. No new material law or SI map.",
+    "initial_boundary": "Arbitrary admissible initial density for identities; normalizable source-free Gibbs candidate on R^3. Fixed product measure and tails supporting integration by parts. No trajectory solver or assertion of unique invariant measure/ergodicity/lifetime.",
+    "drive_environment": "One conditional isothermal bath with normalized energy scale Theta. Sources J_C(t),J_Phi(t) are prescribed, not state/velocity feedback. No additional detector, hidden controller, independent Phi noise, chemical reservoir or strong-coupling microscopic proof.",
+    "parameters": "All old coefficients remain symbolic and locked in sign/domain, with zero calibration/fitting. m_Phi=tau/M_Phi and gamma_Phi=1/M_Phi are definitions. Noise strengths are conditional FDT choices, not a derivation of mobility/coupling values. If physical total energy=N*epsilon_0*E_ref and k_B*T=epsilon_0*theta_site, the per-site normalized reference uses Theta=theta_site/N. A different energy normalization requires a consistent mobility/generator change. Unknown physical scales are not assigned numbers."
+  },
+  "data_policy": {
+    "uses_observations": false,
+    "calibration_ids": [],
+    "comparison_ids": [],
+    "independent_validation": false,
+    "holdout_policy": "No observations, calibration data, blind holdout or empirical validation. Primary publications are formula/condition sources only."
+  },
+  "observation": {
+    "source_state": "Independent C and Y=(Phi,Pi); deterministic core remains unchanged.",
+    "generated_trace": "Existing sigma_det=M_C*mu_C^2+Pi^2/M_Phi is a drift-dissipation trace, not assumed thermodynamic entropy. No new R state.",
+    "carrier": "NOT_APPLICABLE: no spatial transport or physical detection in this homogeneous formal proposition.",
+    "observer_state": "NOT_APPLICABLE for exact algebra; real observer memory/loading is not claimed absent.",
+    "readout": "Exact symbolic residuals and density/entropy functionals on a fixed measure, not measured records or an identifiability claim.",
+    "backaction": "No detector in this boundary; mutual C/Y coupling counted once in Omega. Bath forcing/friction is explicitly modeled; real detector backaction remains outside scope.",
+    "frame": "Declared normalized homogeneous reference, no SI or cosmological frame mapping.",
+    "time_convention": "Itô generator; Stratonovich work/heat with explicit conversion. C/Phi even and Pi odd under time reversal; prescribed sources reverse as controls.",
+    "product_level": "FORMAL conditional derivations and reproducible symbolic controls only.",
+    "corrections": [],
+    "trace_scope": "dissipation_history",
+    "trace_used_as_complete_state": false,
+    "system_partition": {
+      "boundary": "Thermal reference C | Y=(Phi,Pi), with a single ideal bath and prescribed work ports. No receiver or spatial signal path; not a reclassification of the prospective beam.",
+      "role_mode": "RELATIONAL",
+      "accounting_component_id": "joint-state",
+      "no_detector_reason": "This FORMAL question concerns a generator and ensemble accounting, not physical measurement or full observability.",
+      "systems": [
+        {
+          "id": "C-sector",
+          "state": "C",
+          "state_accounting": {
+            "kind": "INDEPENDENT",
+            "state_ids": [
+              "ref.C"
+            ],
+            "owner_ids": [],
+            "rule": "Own C only; interaction -g*C^2*Phi/2 belongs to total Omega once."
+          }
+        },
+        {
+          "id": "Y-sector",
+          "state": "Phi,Pi",
+          "state_accounting": {
+            "kind": "INDEPENDENT",
+            "state_ids": [
+              "ref.Phi",
+              "ref.Pi"
+            ],
+            "owner_ids": [],
+            "rule": "Own Phi and odd Pi; kinetic tau*Pi^2/(2*M_Phi) counted once, no duplicate memory state."
+          }
+        },
+        {
+          "id": "joint",
+          "state": "Aggregate C,Phi,Pi",
+          "state_accounting": {
+            "kind": "AGGREGATE",
+            "state_ids": [],
+            "owner_ids": [
+              "C-sector",
+              "Y-sector"
+            ],
+            "rule": "Total E contains interaction once; no unique subsystem interaction-energy assignment implied."
+          }
+        },
+        {
+          "id": "bath",
+          "state": "Ideal reservoir, eliminated microscopic degrees of freedom",
+          "state_accounting": {
+            "kind": "INDEPENDENT",
+            "state_ids": [
+              "ref.bath_reservoir"
+            ],
+            "owner_ids": [],
+            "rule": "Reservoir is represented by declared Langevin friction/noise and heat functional, not an extra simulated finite-energy state or microscopic derivation."
+          }
+        }
+      ],
+      "couplings": [
+        {
+          "id": "C-to-Y",
+          "source": "C-sector",
+          "target": "Y-sector",
+          "kind": "INTERNAL",
+          "component_id": "joint-state",
+          "map": "mu_Phi contains -g*C^2/2."
+        },
+        {
+          "id": "Y-to-C",
+          "source": "Y-sector",
+          "target": "C-sector",
+          "kind": "INTERNAL",
+          "component_id": "joint-state",
+          "map": "mu_C contains -g*C*Phi."
+        },
+        {
+          "id": "bath-C",
+          "source": "bath",
+          "target": "C-sector",
+          "kind": "ENVIRONMENT",
+          "component_id": "thermal-reference",
+          "map": "Drift -M_C*mu_C, independent C noise sqrt(2*M_C*Theta); joint physical heat interpretation conditional."
+        },
+        {
+          "id": "bath-Y",
+          "source": "bath",
+          "target": "Y-sector",
+          "kind": "ENVIRONMENT",
+          "component_id": "thermal-reference",
+          "map": "Pi friction -Pi/tau and independent Pi noise sqrt(2*M_Phi*Theta)/tau; no independent Phi noise."
+        }
+      ],
+      "observables": []
+    }
+  },
+  "components": [
+    {
+      "id": "joint-state",
+      "group": "system_state",
+      "disposition": "MODELED",
+      "reason": "Original homogeneous drift, joint storage and reciprocal coupling; derive consequences in report, no state/term added to Core.",
+      "evidence": [
+        "docs/core/01_contracts/MATTER_SPACE_RESEARCH_SPEC.md",
+        "docs/core/02_equations/matter_space/uet_matter_space.py",
+        "docs/meta/UET_THEORY_ARGUMENT.md#joint-thermal-reference"
+      ]
+    },
+    {
+      "id": "thermal-reference",
+      "group": "drive_environment",
+      "disposition": "MODELED",
+      "reason": "Conditional one-bath Gaussian completion with constant mobilities and prescribed force ports; not selected uniquely by deterministic energy balance.",
+      "evidence": [
+        "docs/meta/UET_THEORY_ARGUMENT.md#joint-thermal-reference",
+        "https://arxiv.org/html/1205.4176"
+      ]
+    },
+    {
+      "id": "intrinsic-entropy-correspondence",
+      "group": "system_state",
+      "disposition": "UNKNOWN",
+      "reason": "HIST-F requires thermal dependence/measure and intrinsic entropy for joint C/Phi; REF-E cannot establish material heat.",
+      "evidence": [
+        "docs/meta/UET_THEORY_ARGUMENT.md#joint-thermal-reference",
+        "docs/meta/UET_THEORY_ARGUMENT.md"
+      ],
+      "owner": "theory author with statistical-mechanics specialist",
+      "next_action": "After formal verdict, review one joint coarse-graining dictionary with declared measure and thermal dependence; do not fit a material or add a term to force novelty."
+    },
+    {
+      "id": "homogeneous-transport",
+      "group": "propagation",
+      "disposition": "NOT_APPLICABLE",
+      "reason": "No spatial signal propagation in unit-cell FORMAL proposition; no claim for front speeds or causal lanes.",
+      "evidence": [
+        "docs/meta/UET_THEORY_ARGUMENT.md#joint-thermal-reference"
+      ]
+    },
+    {
+      "id": "reference-frame-time",
+      "group": "frame_time",
+      "disposition": "MODELED",
+      "reason": "Fixed normalized clock and reference measure; even C/Phi, odd Pi and stochastic conventions declared.",
+      "evidence": [
+        "docs/meta/UET_THEORY_ARGUMENT.md#joint-thermal-reference"
+      ]
+    },
+    {
+      "id": "physical-detector",
+      "group": "detector",
+      "disposition": "NOT_APPLICABLE",
+      "reason": "No measured data or detector response needed for generator identities; actual sensors/loading remain unadmitted, not zero.",
+      "evidence": [
+        "docs/meta/UET_THEORY_ARGUMENT.md#joint-thermal-reference"
+      ]
+    },
+    {
+      "id": "entropy-processing",
+      "group": "processing",
+      "disposition": "MODELED",
+      "reason": "Fixed-measure Shannon joint/marginal entropy, mutual information and current-based decomposition must be derived; not the universal author information.",
+      "evidence": [
+        "docs/meta/UET_THEORY_ARGUMENT.md#joint-thermal-reference",
+        "https://arxiv.org/html/1402.3276"
+      ]
+    },
+    {
+      "id": "symbolic-method",
+      "group": "numerics",
+      "disposition": "MODELED",
+      "reason": "Exact symbolic residuals, actual Core homogeneous AST projection and negative controls; no Monte Carlo, integration or parameter search. Analytic arguments in the report remain explicit proof dependencies.",
+      "evidence": [
+        "docs/meta/UET_THEORY_ARGUMENT.md#joint-thermal-reference",
+        "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/Research_T13_Joint_Thermodynamic_Completion.py"
+      ]
+    }
+  ],
+  "error_budget": {
+    "unit": "normalized reference energy and nats; exact identity residuals",
+    "numerical": "Exact symbolic calculations; no floating acceptance threshold.",
+    "approximation": "Results conditional on chosen homogeneous quartic reference, fixed coefficients/measure and admissible density boundaries; not an approximation-error certificate for a material.",
+    "measurement": "NOT_APPLICABLE: no observations.",
+    "systematic": "HIST-F intrinsic entropy/reference measure and SI mapping unknown; cannot be treated as zero physical error.",
+    "omissions": "Spatial/conserved/detector/microscopic sectors outside FORMAL claim, not negligibly small effects in nature.",
+    "dependence": "Mutual C/Y dependence retained. Noise independence is an explicit hypothesis, not inferred from missing covariance; joint error independence not assumed.",
+    "acceptance": "Declared exact residuals vanish, analytic conditions stated, deliberate wrong-noise/heat/parity controls fail. Equivalence/contradiction are valid conclusions, not required scientific PASS.",
+    "omission_limit": null
+  },
+  "identities": [
+    {
+      "path": "docs/meta/UET_THEORY_ARGUMENT.md",
+      "kind": "working_file",
+      "sha256": "11170231e1d84aacc545244d5f4bf84a442dbb179c744ef21593ba65b14f2242",
+      "role": "evidence",
+      "availability": "REQUIRED"
+    },
+    {
+      "path": "docs/core/02_equations/matter_space/uet_matter_space.py",
+      "kind": "working_file",
+      "sha256": "488db6aa26b99856e2eb82a2f46a9857f623f418ef8e537498fa71d5e4f633aa",
+      "role": "code",
+      "availability": "REQUIRED"
+    },
+    {
+      "path": "docs/core/01_contracts/MATTER_SPACE_RESEARCH_SPEC.md",
+      "kind": "working_file",
+      "sha256": "d178f1978c93a09350a4da6ea11153a93fbfb13ad12c9d390846f741ad5db848",
+      "role": "input",
+      "availability": "REQUIRED"
+    },
+    {
+      "path": "docs/core/07_artifacts/correspondence/matter_space_ontology_contract.json",
+      "kind": "working_file",
+      "sha256": "c460094a30d7ae72f1ccc4c5c335e3fe402d99fe3120d1156bb5d52810ff2e99",
+      "role": "input",
+      "availability": "REQUIRED"
+    },
+    {
+      "path": "docs/meta/schemas/calculation_contract_v1.schema.json",
+      "kind": "working_file",
+      "sha256": "ec556052d755908a2ec7b3ec10b411839f4f0bee549fd902fb1f915f8475ebc3",
+      "role": "config",
+      "availability": "REQUIRED"
+    },
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/calculation_contracts/energy_memory_cycle.json",
+      "kind": "git_blob",
+      "commit": "9af800914241b559e57581f6c1ae42ced461e6ba",
+      "sha256": "d97ab6d9c53bce6bf72661c6b0e6f5fc9b97ed0482e0fdd7a94b28469aaa207e",
+      "role": "evidence",
+      "availability": "REQUIRED"
+    },
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/Research_T13_Joint_Thermodynamic_Completion.py",
+      "kind": "working_file",
+      "sha256": "df3aeb8e05e505156edc9c1454e4e520c508f4ff8916d91c123500280f720900",
+      "role": "code",
+      "availability": "REQUIRED"
+    },
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/test_t13_joint_thermodynamic_completion.py",
+      "kind": "working_file",
+      "sha256": "2b039c25fc4106a28ef5a254e4486b98ed36d20e7f75f4c56e7eb63dd8b98c0d",
+      "role": "code",
+      "availability": "REQUIRED"
+    }
+  ],
+  "entrypoints": [
+    "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/Research_T13_Joint_Thermodynamic_Completion.py",
+    "docs/meta/UET_THEORY_ARGUMENT.md"
+  ],
+  "evidence": [
+    "docs/meta/UET_THEORY_ARGUMENT.md#joint-thermal-reference",
+    "docs/core/01_contracts/MATTER_SPACE_RESEARCH_SPEC.md",
+    "docs/core/02_equations/matter_space/uet_matter_space.py",
+    "docs/core/07_artifacts/correspondence/matter_space_ontology_contract.json",
+    "https://arxiv.org/html/1205.4176",
+    "https://arxiv.org/html/1402.3276",
+    "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/Research_T13_Joint_Thermodynamic_Completion.py"
+  ],
+  "claim_boundary": "Conditional mathematical thermal completion and matched standard-comparator audit only. No new Core stochastic law, SI internal-energy/heat validation, physical acceptance, unique mobility, universal information identity, learning/cosmology or UET novelty.",
+  "next_action": "R2 derive and check joint Fokker-Planck/Gibbs, time reversal and entropy; then R3 mixed-generator information flow and matched comparator. No old verifier, beam development or physical promotion."
+}

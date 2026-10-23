@@ -1,6 +1,7 @@
 {
   "schema_version": "uet-calculation-contract-v1",
   "contract_id": "T13_ENERGY_MEMORY_CYCLE_FORMAL_V1",
+  "identity_refresh_note": "2026-10-24: report navigation and append-only section 30 start a separate joint-thermal FORMAL path with its own contract. Refreshing this report identity preserves sections 1-29 and does not extend this cycle contract to certify the new stochastic reference or rerun old scientific evidence.",
   "profile": "FORMAL",
   "review": {
     "status": "INCOMPLETE",
@@ -423,7 +424,7 @@
     {
       "path": "docs/meta/UET_THEORY_ARGUMENT.md",
       "kind": "working_file",
-      "sha256": "cbb665368ca71a2379fc50df4e9870f319314cd4934fc7266633976f24ffe0a0",
+      "sha256": "11170231e1d84aacc545244d5f4bf84a442dbb179c744ef21593ba65b14f2242",
       "role": "evidence"
     },
     {

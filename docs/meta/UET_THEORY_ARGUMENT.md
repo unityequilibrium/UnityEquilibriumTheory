@@ -8,7 +8,7 @@
 
 ลักษณะงาน: วิจัยเชิง argument และตรวจความสอดคล้องจากหลักฐานเดิม ไม่ใช่การรับรองหรือหักล้าง UET ทั้งหมด
 
-สถานะล่าสุด: §25 แยก generator, kinetics, state, ledger และ output ของสมการหลายรูป ตรวจว่า canonical C/I ไม่ใช่การ rename C/Phi/Pi และ static elimination ให้ผลต่อ C คนละลำดับ ตรวจขอบเขตการตั้ง field เป็นศูนย์/ลดสมการ และจัด family/registry overlap โดยไม่เลือก universal master หรือแก้ Core; ผล steady §23 และ retained-history projection §24 คงเดิม ไม่เลื่อน physical claims
+ทางอ่านล่าสุด — 24 ตุลาคม 2026: §30 ตรวจ thermal reference ร่วมของ C–Phi–Pi แยก potential energy ออกจาก coarse free energy; สถานะของแต่ละรอบและผลตรวจอยู่ในส่วนนั้น ไม่เพิ่ม stochastic law เข้า Core หรือเลื่อน physical claims ส่วน §25 ยังคงเป็น relationship audit และ §§26–29 เป็นผล/แผนต่อที่มีขอบเขตของตนเอง
 
 ## 1. บทสรุปและคำถามหลัก
 
@@ -3377,3 +3377,148 @@ Adversarial self-review แยกขั้น construction ออกจากก
 | สิ่งที่ยังไม่มีและหน้าที่ผู้ตรวจ | §29.9; apparatus approval, actual C packet, executable admission/prediction analysis และ filled/reviewed L ต้องมาก่อน experiment |
 
 **ผลตรวจรับ: เสร็จระดับ prospective research/test-plan deliverable** ตามขอบเขตที่ผู้เขียนขอ ไม่ได้เสร็จ numerical physical-test lock หรือการทดลองจริง การผ่าน document/contract checks จะรายงานแยกใน work log; review ของ calculation contract ยังคง INCOMPLETE, source/receiver numerical admission UNKNOWN และ gates เดิมไม่เลื่อน ไม่มีการเลือก information ontology, ส่งอีเมล, ซื้อข้อมูล หรือเผยแพร่จากแผนนี้
+
+<a id="joint-thermal-reference"></a>
+
+## 30. วงจรเทอร์โมร่วม C–Phi–Pi: conditional thermal reference
+
+วันที่ตัดยอด: 24 ตุลาคม 2026; area `research-core` รอบ R0–R3 ตามคำสั่งผู้เขียน งานนี้พักการขยายแผนคาน §29 ไว้ ไม่ยกเลิกผลเดิม และไม่ถือว่าแบบจำลองย่อยนี้แทนข้อเสนอจักรวาลเปิด learning หรือ persistence ทั้งหมด
+
+### 30.1 R0 — ฐานหลักฐาน ขอบเขต และการใช้ผลเดิม
+
+ฐาน local คือ commit `9af800914241b559e57581f6c1ae42ced461e6ba`, branch `codex/research/source-backaction-discrimination`, ไม่มี upstream ณ เริ่มรอบ พบรายการงานค้างอื่น 463 รายการ (ไม่ใช่ตัววัดความก้าวหน้าทฤษฎี) โดยรายงานและ cycle contract สะอาดก่อนรอบนี้ แต่ Topic 13 UPDATE_LOG มี diff เดิม 578 additions / 79 deletions แยกเก็บไว้ ไม่มีการสลับ worktree รวมงานเก่า หรือถือว่า local HEAD เท่ากับ public main
+
+ตรวจ source identities ทั้ง 42 รายการของ cycle contract เดิมตรงกันก่อนเริ่ม ไม่รัน scientific verifiers ของ §§14–29 ซ้ำ หลักฐานที่เป็น local-only ยังมีขอบเขตการเข้าถึงเดิมตาม §2 รอบนี้สร้าง [FORMAL contract ใหม่หนึ่งฉบับ](../topics/0.13_Thermodynamic_Bridge/calculation_contracts/joint_thermodynamic_completion.json) ไม่ขยายคำรับรองของ contract เก่าไปครอบคลุม stochastic reference ใหม่
+
+| มีแล้ว / ใช้ต่อ | ขอบเขตที่ยืนยันจากหลักฐานเดิม | สิ่งที่ยังขาดสำหรับคำถามนี้ |
+| --- | --- | --- |
+| §§14–16: state-counting / mean-field และ binary comparator | C=s_C m, \|m\|≤1; mixing entropy และ coefficient matching มีเงื่อนไข; Ω ฝั่งนี้เป็น free energy | joint microscopic state/measure และ intrinsic entropy ของ Phi ยังไม่ปิด |
+| §17: C-only thermal closure | Phi ถูก prescribed; local jump moments / noise scale มี N ตาม normalization | ไม่ใช่ joint process ของ C–Phi–Pi หรือ Gaussian law บนทั้งเส้นจริง |
+| §§18–19: source/heat/channel audit | ledger source ไม่เท่ากับ force-port work เสมอ; channel ที่รวมทิ้งอาจซ่อน entropy | ต้องประกาศ bath และ work/heat ของ reference นี้ ไม่ซ่อม thermal helper sign bug เงียบ ๆ |
+| §§20–25: coupling, memory, observer และ relationship | state, trace และ readout คนละหน้าที่; static elimination ไม่เท่ากับ dynamic reduction | noise, time reversal และ joint entropy ยังไม่ได้ตามจาก deterministic ledger |
+| §§26–28: kinetics / finite read / scaling | energy descent ไม่เลือก mobility; receiver memory เลียนแบบ source history ได้ | FDT ผูก noise กับ mobility ได้ภายใต้สมมติฐาน แต่ไม่เลือก mobility เอง |
+| §29: prospective beam/circuit test | ตรวจ causal-loop ย่อยและวาง protocol ได้; full standard model label-equivalent | ไม่ใช้แทน joint thermal derivation; ยังไม่มี apparatus/calibration/numerical lock |
+
+**ที่มาและสิทธิ์ของข้อสมมติ:** เจตนาผู้เขียนคือผลจากปฏิสัมพันธ์คงอยู่และเปลี่ยนการตอบสนองในระบบซ้อนระบบ และผู้เขียนยังไม่เลือก signed/magnitude ontology การเลือก homogeneous sector, อ่างเดียว, Gaussian noise อิสระ, flat reference measure และ parity ด้านล่างเป็น **AI-designed conditional reference ตามแผนที่อนุมัติ** ไม่ใช่คำจำกัดความ information ของผู้เขียน ผลจาก stochastic thermodynamics เป็นฐานนำเข้า ไม่ใช่ข้อเสนอเฉพาะ UET
+
+Bounded work card:
+
+- **คำถาม / TD2–TD3:** drift เดิมยอมรับ thermal completion ที่ให้ first law, stationary Gibbs และ entropy/information accounting ร่วมกันได้หรือไม่ และต้องเพิ่มอะไร?
+- **Boundary:** unit-cell homogeneous C กับ Y=(Phi,Pi); interaction รวมใน Ω ครั้งเดียว; bath เป็น environment ที่แทนด้วย Langevin law ไม่ใช่สำเนา state ของระบบ ไม่มี carrier/detector ใน FORMAL question นี้ จึงไม่อ้าง full observability หรือ zero backaction ของเครื่องจริง
+- **Controller:** contract ใหม่และผล symbolic ใน §30 เท่านั้น; causal, He-4, graphite และ Core gates เดิมไม่เปลี่ยน
+- **มี / ขาด:** deterministic state/ledger มีแล้ว; joint bath/measure และ meaning ของ physical heat ต้องระบุเพิ่ม การอ่าน Ω แบบ coarse free energy ยังขาด intrinsic entropy/thermal correspondence
+- **การกระทำเดียวและเหตุผล:** derive generator และบัญชีร่วมของ reference ที่ล็อก ไม่เลือกวัสดุหรือเพิ่ม term เพื่อให้ต่างจาก comparator
+- **ผลยอมรับได้:** สอดคล้องภายใต้เงื่อนไข / ต้องเพิ่มเงื่อนไข / contradiction / equivalence พร้อมสมมติฐานต้นเหตุ
+- **จุดหยุด:** จบเมื่อ joint identity หรือ counterexample ตรวจได้และ comparator ชัด; ไม่รอ SI/lab หากสองความพยายามไม่เปลี่ยนคำตัดสินให้ระบุ prerequisite ไม่รันซ้ำ
+- **คำถามผู้ตรวจ:** statistical/mathematical physicist ตรวจ heat ภายใต้ coarse-graining และ parity/current decomposition ที่ระบุ ไม่ต้องรับรอง UET ทั้งหมด; รอบนี้ไม่ติดต่อบุคคลภายนอก
+
+### 30.2 Reference ที่ล็อก และสองความหมายของ Ω
+
+ใช้ C,Phi,Pi∈R ใน homogeneous **unit-cell** sector ที่ C ไม่อนุรักษ์ ไม่มี gradients/continuum limit โดยคง functional และ deterministic drift เดิมจาก [research specification](../core/01_contracts/MATTER_SPACE_RESEARCH_SPEC.md) และ [implementation](../core/02_equations/matter_space/uet_matter_space.py):
+
+\[
+\Omega=\frac{a_C}2C^2+\frac{b_C}4C^4+\frac{a_\Phi}2\Phi^2+\frac{b_\Phi}4\Phi^4-\frac g2C^2\Phi,
+\quad \mu_C=\partial_C\Omega,\quad\mu_\Phi=\partial_\Phi\Omega,
+\quad E=\Omega+\frac{\tau}{2M_\Phi}\Pi^2.
+\]
+
+กำหนด M_C,M_Phi,tau,Theta,b_C,b_Phi>0, a_C,a_Phi,g เป็นจำนวนจริงจำกัด คง coefficients ไว้ระหว่าง small-noise limit ให้ J_C,J_Phi เป็น prescribed functions of time ไม่ใช่ hidden state feedback แล้วเสนอ Itô law:
+
+\[
+\begin{aligned}
+dC&=(-M_C\mu_C+J_C)dt+\sqrt{2M_C\Theta}\,dW_C,\\
+d\Phi&=\Pi\,dt,\\
+d\Pi&=\frac{-\Pi-M_\Phi\mu_\Phi+J_\Phi}{\tau}dt+
+\frac{\sqrt{2M_\Phi\Theta}}{\tau}\,dW_\Pi.
+\end{aligned}
+\]
+
+W_C,W_Pi อิสระ; **ไม่มี independent noise ใน dPhi** C/Phi เป็น even และ Pi เป็น odd ภายใต้ time reversal; bath scale Theta เป็น normalized energy ไม่ใช่อุณหภูมิ SI ที่สอบเทียบแล้ว นี่ไม่ใช่การแก้ stochastic law ของ Core และ independent noises ไม่ได้ตามจากคำว่าอ่างเดียวโดยลำพัง
+
+| การอ่าน | สิ่งที่กำหนดเพิ่ม | อนุญาตให้เรียกอะไร / ยังไม่อนุญาต |
+| --- | --- | --- |
+| **REF-E: potential reference** | Ω เป็น normalized potential energy ตามนิยามของ reference, product measure dC dPhi dPi คงที่ ไม่มี unresolved intrinsic entropy ใน reference นี้ | ตรวจ normalized first law/Gibbs/entropy production ได้; ไม่อ้างว่าเป็น material internal energy/heat |
+| **HIST-F: historical free-energy bridge** | Ω มี coarse free energy เช่น -theta h_2(m) ของ §14; ต้องทราบ thermal dependence, intrinsic entropy และ measure ที่สอดคล้อง | ห้ามใช้ E=Ω+kinetic เป็น physical internal energy หรือ -dE เป็น material heat โดยอัตโนมัติ; intrinsic entropy ของ Phi ยัง UNKNOWN ไม่ตั้งเป็นศูนย์ |
+
+ฐานนำเข้า: [Seifert (2012), §§2.6.1, 4.5.1, 9.2.1–9.2.4](https://arxiv.org/html/1205.4176) และ [Horowitz–Esposito (2014), §III และ Discussion](https://arxiv.org/html/1402.3276) ใช้ตรวจเงื่อนไขของ stochastic energetics / information flow โดย derive mixed overdamped–underdamped case นี้เอง ไม่คัด jump formula มาแทนการตรวจ ไม่คัดข้อมูลสังเกตหรือถือบทความเป็น empirical validation ของ UET
+
+**สถานะหลัง R0:** ล็อก scope, source identities, imported assumptions และการไม่ทำซ้ำแล้ว; R1–R3 ยังต้องตรวจจริง ผลทางฟิสิกส์ยังไม่ถูกเลื่อน
+
+### 30.3 R1 — First law ร่วม: ปิดบัญชี reference ได้โดยไม่เรียกทุก loss ว่าความร้อน
+
+ส่วนนี้เป็น **ผลอนุมานภายใต้ REF-E** ไม่ใช่การค้นพบ material energy ใหม่ ให้ m=tau/M_Phi, gamma=1/M_Phi และ force ports f_C=J_C/M_C, f_Phi=J_Phi/M_Phi พลังงาน E ไม่รวม driving potential ไว้ใน storage; ใช้ force-port work แบบ exclusive และกำหนด **Q_out เป็นบวกเมื่อพลังงานออกไปสู่อ่าง** ไม่สลับ sign convention ระหว่างทาง
+
+Itô formula กับ SDE ใน §30.2 ให้
+
+\[
+\begin{aligned}
+dE={}&\left[-\sigma_{\rm det}+\mu_CJ_C+\frac{\Pi J_\Phi}{M_\Phi}
+ +M_C\Theta\,\Omega_{CC}+\frac{\Theta}{\tau}\right]dt\\
+&+\sqrt{2M_C\Theta}\,\mu_C\,dW_C
+ +\sqrt{\frac{2\Theta}{M_\Phi}}\,\Pi\,dW_\Pi,\\
+\sigma_{\rm det}={}&M_C\mu_C^2+\frac{\Pi^2}{M_\Phi}.
+\end{aligned}
+\]
+
+เทอม M_C Theta Ω_CC และ Theta/tau มาจาก quadratic variation ไม่ใช่ term เพิ่มใน Core ไม่ตัดออกเพราะค่าเฉลี่ย noise เป็นศูนย์ และ Ω_CC อาจติดลบในบาง state จึงไม่เรียก correction ทั้งหมดว่า instantaneous positive injection
+
+ใน Stratonovich convention (วงกลม ∘) บัญชีเดียวกันเขียนเป็น
+
+\[
+\begin{aligned}
+\delta W_{\rm on}&=f_C\circ dC+f_\Phi\Pi\,dt,\\
+\delta Q^{C}_{\rm out}&=(f_C-\mu_C)\circ dC,\\
+\delta Q^{Y}_{\rm out}&=\gamma\Pi^2dt-\sqrt{2\gamma\Theta}\,\Pi\circ dW_\Pi,\\
+dE&=\boxed{\delta W_{\rm on}-\delta Q^{C}_{\rm out}-\delta Q^{Y}_{\rm out}}.
+\end{aligned}
+\]
+
+พิสูจน์โดย dΩ=mu_C∘dC+mu_Phi Pi dt และ d(m Pi²/2)=m Pi∘dPi เทอม ±mu_Phi Pi ยกเลิกกัน interaction -g C²Phi/2 จึงถูกนับใน Ω **ครั้งเดียว** ไม่เพิ่ม energy ก้อนเดียวกันซ้ำในแต่ละ subsystem ไม่มี work port อิสระที่ conjugate กับ dPi; f_Phi conjugate กับ dPhi=Pi dt
+
+noise ของ state เป็น additive จึงไม่มี Itô–Stratonovich **state-drift** correction แต่ products ใน heat/energy ยังมี correction โดยเฉพาะ
+
+\[
+\begin{aligned}
+\delta Q^C_{\rm out}\big|_{dt}
+ &=(f_C-\mu_C)(-M_C\mu_C+J_C)-M_C\Theta\Omega_{CC},\\
+\delta Q^Y_{\rm out}\big|_{dt}&=\Pi^2/M_\Phi-\Theta/\tau.
+\end{aligned}
+\]
+
+ตัวตรวจตรวจ coefficients ของ dt,dW_C,dW_Pi แยกกัน จึงไม่ใช้เพียง equality ของค่าเฉลี่ยเป็นหลักฐานของ trajectory first law การกลับ sign ของ Q_out อย่างเดียวทำให้ทั้ง drift และ noise residual ไม่เป็นศูนย์
+
+**source ledger ไม่ถูกเปลี่ยนชื่อเป็น port work:** ใช้ข้อค้นพบ §18 ต่อ โดย P_led=mu_C J_C+Pi J_Phi/M_Phi เป็น contribution ใน deterministic dE/dt ส่วน work ที่พอร์ตใหม่ที่ประกาศมี C contribution f_C∘dC ซึ่งไม่เท่ากับ mu_C J_C dt ทั่วไป นี่ไม่ใช่การลบผลเดิม แต่บอกว่า deterministic source insertion กับ bath-coupled force port ใช้บัญชีคนละการจัดสรร ไม่ใช้ thermal helper ที่พบ sign bug มาพิสูจน์บัญชีใหม่นี้
+
+เมื่อลด amplitude noise ด้วย epsilon→0 โดยคง coefficients/drift เดิม จะคืน deterministic nonconserved law เดิม การส่ง Theta→0 ใน **REF-E ที่ coefficients ไม่ขึ้นกับ Theta** ให้ข้อจำกัดเดียวกันทางคณิตศาสตร์ แต่ไม่ใช่คำทำนายการลดอุณหภูมิของวัสดุจริงหรือการ freeze memory ตลอดกาลที่ finite temperature
+
+### 30.4 R1 — หาก Ω เป็น free energy: สิ่งที่ปิดได้และสิ่งที่ยังไม่รู้
+
+ให้ F(x;vartheta) เป็น constrained free energy บน measure ที่ประกาศ เมื่อ coarse-grained fast states อยู่ใน conditional thermal equilibrium จึงใช้ S_int=-∂_vartheta F และ U=F+vartheta S_int ได้ เงื่อนไข fast equilibration และการจัด measure ไม่ได้ตามจาก drift อย่างเดียว ผลของ [Seifert §§9.2.1–9.2.4](https://arxiv.org/html/1205.4176) ชี้รอยต่อนี้; สมการด้านล่างเป็นการประยุกต์/อนุมานสำหรับ reference นี้ ไม่ใช่ derivation microscopic ของ UET
+
+ที่ bath คงที่ และเมื่อ kinetic coefficient m และ force-port mapping เดิมไม่ขึ้นกับอุณหภูมิ ให้ F=Ω ณ bath นั้น จะมี
+
+\[
+U_{\rm joint}=E_{\rm ref}+\Theta S_{\rm int},\qquad
+\delta Q_{\rm out}^{\rm phys}=\delta Q_{\rm out}^{\rm ref}-\Theta\circ dS_{\rm int}.
+\]
+
+จึง **ตรวจ algebra ของ reference ได้ แต่ยังระบุ physical heat ไม่ได้** หากไม่ทราบ S_int หาก coefficients/m/measure ขึ้นกับอุณหภูมิ ต้องรวม dependence นั้นในอนุพันธ์ ไม่เลือกมอง coefficients คงที่เพื่อปิด physical heat โดยไม่มีหลักฐาน ส่วน mixing entropy ของ C ใน §14 ไม่ได้ระบุ entropy ของ Phi หรือบังคับให้สองส่วนบวกกันแบบไม่มี interaction contribution
+
+มี counterexample เชิง constitutive ที่ชี้ underdetermination โดยไม่เพิ่มสมการ Core: ที่ bath Theta_0 เดียวกัน พิจารณาสอง thermal extensions (kappa≥0)
+
+\[
+F^{(\kappa)}(C,\Phi;\vartheta)=\Omega_0(C,\Phi)+(\Theta_0-\vartheta)\kappa\Phi^2.
+\]
+
+ทุกตัวให้ F^(kappa)(Theta_0)=Ω_0 และ drift/Gibbs density ณ bath เดียวกัน แต่ S_int^(kappa)=kappa Phi² และ U^(kappa)=Ω_0+Theta_0 kappa Phi² ต่างกัน; ความร้อนต่างกันด้วย -Theta_0 kappa d(Phi²) ตัวอย่างนี้ตีความเป็น density of internal states exp(kappa Phi²) กับ conditional energy U^(kappa) ได้ และ quartic tails ยังจำกัด partition ในช่วงอุณหภูมิที่เป็นบวก ไม่อ้างว่าเป็น microscopic model ของวัสดุจริง ข้อสรุปคือ **ข้อมูล potential/drift ณ อุณหภูมิเดียวไม่เลือก thermal dictionary ให้เอง** ไม่ใช่ contradiction ของ deterministic UET
+
+**Normalization / N / domain:** ถ้า total physical energy เป็น N epsilon_0 E_ref และ k_B T=epsilon_0 theta_site จะได้
+
+\[
+\exp[-N E_{\rm ref}/\theta_{\rm site}]
+=\exp[-E_{\rm ref}/\Theta],\qquad \Theta=\theta_{\rm site}/N.
+\]
+
+นี่เป็น conditional choice ของ per-site normalized ledger ไม่ใช่การให้ Theta เท่ากับ SI temperature โดยตรง และไม่ใช่การคูณ N เพิ่มใน noise โดยไม่เปลี่ยน energy/mobility convention หากใช้ total-energy ledger ต้องแปลงทั้ง generator ให้สอดคล้องกัน Near-equilibrium local jump moment ของ §17 รองรับ scale นี้ตามเงื่อนไขเดิมเท่านั้น ไม่กำหนด full process: binary C=s_C m มีขอบเขต [-s_C,s_C] และ finite jumps ขณะที่ additive Gaussian diffusion กับ quartic นี้ใช้ C∈R การไม่มี reflecting boundary ไม่ได้มาจาก binary model; ห้ามขยายการเทียบ h_2/อนุกรมเดิมออกนอก domain/remainder ที่พิสูจน์ไว้
+
+**สรุปให้ผู้เขียนตรวจความหมายหลัง R1:** สมการเดิมรับบัญชีพลังงานร่วมแบบมีอ่างได้เมื่อบอกอ่างและวิธีนับให้ครบ แต่ “พลังงานที่ลดตามสมการ”, “งานที่ป้อน”, “ความร้อนสู่อ่าง” และ “ข้อมูลที่สัมพันธ์กัน” ยังไม่ใช่สิ่งเดียวกัน ถ้า Ω รวม entropy ระดับจุลภาคมาแล้ว ต้องรู้ว่ารวมอะไรจึงเรียกความร้อนจริงได้ ไม่ต้องให้ผู้เขียนตรวจอนุพันธ์หรือเลือกนิยาม information ตอนนี้ ส่วน R2–R3 ที่ตรวจ reference ตามเงื่อนไขนี้ทำต่อได้โดยไม่รอคำตอบ

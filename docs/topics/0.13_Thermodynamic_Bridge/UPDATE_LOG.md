@@ -1,3 +1,42 @@
+## 2026-10-24 - Joint thermal reference R1 energy, force ports and heat
+
+- Completed: [Argument sections 30.3-30.4](../../meta/UET_THEORY_ARGUMENT.md),
+  exact symbolic producer/regression suite and compact identity-bound artifact.
+  These are conditional REF-E results, not a stochastic modification of Core.
+- Actual result: first law closes coefficient-by-coefficient in dt/dW_C/dW_Pi,
+  including Itô/Stratonovich corrections. Source insertion in the old ledger
+  is not renamed force-port work; interaction energy is counted once.
+- HIST-F result: at one bath, identical free energy/drift can admit different
+  intrinsic entropies and physical heat. A thermal-extension counterexample
+  makes this underdetermination explicit; unknown entropy is not set to zero.
+- Checks run: 3 exact groups and 9 regression tests passed, including actual
+  homogeneous Core AST projection and wrong-heat-sign detection. No old
+  retention/kernel/comparator scientific verifier, data fit or solver rerun.
+- Controller: R2 Gibbs/parity/entropy and R3 information/comparator remain open;
+  contract INCOMPLETE and material correspondence UNKNOWN. Prior gates unchanged.
+- Author checkpoint: plain-language distinction between stored energy, work,
+  bath heat and information sent after R1; independent reference checks proceed.
+- Safety/preservation: safe synthesis, no private sources or publication; old
+  topic-log diff remains excluded. Commit this bounded R0/R1 unit after QA.
+
+## 2026-10-24 - Joint thermal reference R0 scope and source lock
+
+- Scope: FORMAL homogeneous nonconserved C/Phi/Pi, not a Core equation change.
+  [Argument section 30](../../meta/UET_THEORY_ARGUMENT.md) and the new
+  [joint thermal contract](calculation_contracts/joint_thermodynamic_completion.json)
+  govern this path. Beam-plan development is paused; previous results remain.
+- Baseline: local 9af800914, same branch/worktree, no upstream. All 42 old
+  cycle-contract identities matched before edits. No old verifier was rerun.
+- Completed: have/missing/reuse map of sections 14-29; boundary-first C/Y/bath
+  partition; author intent versus imported physics versus AI reference choices;
+  REF-E potential versus HIST-F coarse free energy kept separate.
+- Controlling gap: joint first-law, generator/parity and information derivations
+  are not yet checked; physical intrinsic entropy/measure remain UNKNOWN.
+  INCOMPLETE contract and existing physics gates are not promoted by setup.
+- Next: R1 exact work/heat account, not a material search or beam simulation.
+- Preservation: old UPDATE_LOG diff 578/79 is excluded from this scoped wave.
+  Reviewed synthesis is safe; no raw/private sources, push or publication.
+
 ## 2026-10-24 - Prospective retained-state physical test plan
 
 - Scope/type: completed plan and FORMAL structural review, not an experiment.
