@@ -2954,3 +2954,128 @@ SymPy 1.14.0 และ AST checks ผ่าน 10 กลุ่ม: actual mu pai
 helper แรกอ่านทุก identity เป็น UTF-8 จึงหยุดที่ archive `.src` แบบ binary หลังผ่าน mathematical/source assertions แล้ว แก้เฉพาะ helper ให้ใช้ `identity_hash` ของตัวตรวจมาตรฐานและรันซ้ำผ่าน ไม่เปลี่ยน input, formula, parameter หรือ scientific artifact เหตุการณ์นี้เป็นข้อผิดพลาดของการตรวจ provenance ไม่ใช่ contradiction ทางฟิสิกส์
 
 ผล document/contract QA ขั้นส่งต่อบันทึกใน [WORK_LEDGER วันที่ 24 ตุลาคม](../../WORK_LEDGER/2026/2026-10-24.md) แยกจากผลวิทยาศาสตร์ ไม่มี time integration, parameter scan, old numerical-verifier rerun, observations, proof assistant, independent replication หรือ specialist sign-off และไม่มี physics-gate promotion
+
+## 27. Finite read-window ของประวัติเดิม — 24 ตุลาคม 2026
+
+### 27.1 Card ที่ล็อกก่อนประเมิน energy bound
+
+**คำถาม:** ผล retained history ใน §24 ซึ่งเดิมรับรองค่า ณ release และ initial slope ยังแยกได้หรือไม่เมื่ออ่าน endpoint เฉลี่ยตลอดช่วงเวลาบวก โดยใช้ full coupled reference เดิมหลังปลดทุก input?
+
+| Work card | ขอบเขตที่ล็อก |
+| --- | --- |
+| Baseline | ต่อจาก local checkpoint `353380f2a7829f31a1a447bd2b50c32c88fef711`; source identities เดิม ไม่แก้ candidate, pulse, coefficient, wait หรือ projected-state map |
+| State / boundary | FORMAL linear rod/polarization ของ §§22–24; full state `(p,u,u_t)`, clamped left และ released right traction `u_X(1)=p` ใน normalized controls ไม่มี sensor หรือ bath model เพิ่ม |
+| Preparation | smooth two-pulse write และ controlled wait เดิมจน `t_r`; p(t_r)=q_0(t_r)=q_0_dot(t_r)=0; หลัง release ให้ f_P=F_b=0 จริง ไม่ clamp p ต่อระหว่าง read |
+| Read / alternatives | `y_h=(1/h)*integral_0^h x(t_r+s) ds`, ตรึง h=1/10000; ตรวจทั้ง signed y_h และ magnitude `abs(y_h)` เป็น mathematical outputs ไม่ระบุ hardware bandwidth แล้ว |
+| Acceptance | จากจุดยึดเดิม a_*=2177/10^6, ต้องรับรอง `E_2(t_r)/epsilon^2<=1/1000` และพิสูจน์ averaged readout มี signed margin มากกว่า a_*/2; energy tail budget 10^-8, N=16 เดิมใช้ evaluate reference ไม่เพิ่ม candidate modes |
+| Method | finite exact modal preparation + interval sum สำหรับ energy output ใหม่; analytic tail และ full coupled energy/trace bound ไม่ integrate read trajectory ไม่ rerun endpoint certificate เดิม |
+| Stop / reopen | ถ้า energy enclosure เกิน budget หรือครอบเกณฑ์ ให้ไม่รับ certificate นี้ ไม่ลด h/เพิ่ม N/แก้ pulse เพื่อบังคับผ่าน; physical admission ต้องมี clock, transfer, preparation และ error bounds ที่อิสระ |
+| Claim boundary | finite-time averaging ไม่เท่ากับ finite-bandwidth apparatus, sampling/noise admission หรือการยืนยันฟิสิกส์ใหม่; ผลหนึ่ง reduction class ไม่ตัดสินทุก representation |
+
+### 27.2 Joint-energy bound ที่ไม่ต้องสมมติ endpoint velocity ของเครื่องวัด
+
+ตั้งเวลา s=0 ที่ release ใช้ controls เดิม A_perp=Y=rho=L=G=Gamma_P=1, K_P=21/20, gamma_b=1/5 และให้ E_0=E_2(t_r) พลังงานร่วมหลัง release เป็น:
+
+~~~text
+E(s) = integral_0^1 (u_t^2+u_X^2)/2 dX + (21/40)*p^2 - p*x
+E_dot = -p_dot^2-(1/5)*integral_0^1 u_t^2 dX <=0.
+~~~
+
+การ complete square ใน p และ `x^2<=integral u_X^2` ให้ elastic/polarization part `V>=integral u_X^2/42>=0` จึงมี `||u_t(s)||_2<=sqrt(2*E_0)` และ `||u_X(s)||_2<=sqrt(42*E_0)` ตอน release p=0 จึงใช้ bound ที่แคบกว่าสำหรับ state เริ่ม read: `||u_X(0)||_2<=sqrt(2*E_0)`
+
+ให้ w(X,s)=u(X,s)-u(X,0) โดย w(0,s)=0 ได้:
+
+~~~text
+||w||_2 <= s*sqrt(2*E_0)
+||w_X||_2 <= (sqrt(42)+sqrt(2))*sqrt(E_0)
+|x(s)-x(0)|^2 = |w(1,s)|^2
+              <= 2*||w||_2*||w_X||_2
+              <= K_*^2*E_0*s
+K_*^2=4*(1+sqrt(21)) <45/2.
+|y_h-x(0)| <= (2/3)*K_*sqrt(E_0*h).
+~~~
+
+ใช้ integral Cauchy–Schwarz กับ displacement trace ใน energy space ไม่สมมติว่า pointwise `u_t(1,s)` มี bound จาก L2 energy เพียงอย่างเดียว ขอบเขตนี้รวม polarization feedback ระหว่าง read ผ่าน joint energy แล้ว ไม่ใช้ clamped mechanical evolution มาแทนการอ่านหลัง release
+
+ถ้ารับรอง energy budget ที่ล็อกได้ สำหรับ epsilon>0 และทุก 0<s<=h=1/10000:
+
+~~~text
+|x(s)-x(0)|/epsilon < 3/2000
+x(s)/epsilon > (2177-1500)/10^6 = 677/10^6
+|y_h-x(0)|/epsilon < 1/1000
+y_h/epsilon >1177/10^6 > a_*/2.
+~~~
+
+นี่เป็น conditional certificate จนกว่าจะตรวจ upper bound ของ E_0 จริง ไม่ใช้ positive lower bound ใน §24.5 แทน upper bound และไม่ตีความ short window ใน normalized clock ว่าเครื่องตรวจทำได้แล้ว
+
+### 27.3 พลังงานจาก preparation เดิม: output ใหม่ ไม่รัน write ซ้ำ
+
+จาก closed expressions §24.2 ให้ `Z_n=exp(r_n*t_r)*B_n*(1-exp(-i*beta_n*T_s))`, m_n=1/2, K_n=omega_n^2/2 จะได้:
+
+~~~text
+q_n/epsilon     = (-1)^n*Im(Z_n)/(m_n*beta_n)
+q_n_dot/epsilon = (-1)^n*Im(r_n*Z_n)/(m_n*beta_n)
+E_0/epsilon^2   = sum_n [m_n*(q_n_dot/epsilon)^2
+                         +K_n*(q_n/epsilon)^2]/2.
+~~~
+
+mode 0 เป็นศูนย์ exact ตาม shaper proof เดิม ไม่ใช้ floating-point cancellation; p(t_r)=0 ทำให้ไม่มี cross term ใน E_0 นี้ ประเมิน n=1..15 ด้วย interval arithmetic ที่ 35 digits ส่วนหาง n>=N=16 ใช้ c_*=999/1000 และ alpha_N เดิม โดย `|r_n|=omega_n`:
+
+~~~text
+K_B=(19/9)*3*(2*pi)^4/(2*alpha_N)
+|B_n|<=K_B/omega_n^5, |Z_n|<=2*K_B/omega_n^5
+E_n/epsilon^2 <= 4*K_B^2/(m_n*c_*^2*omega_n^10)
+sum_(n=N)^infinity omega_n^-10 <=1/(9*pi^10*N^9)
+E_tail/epsilon^2 <=184832/(81*c_*^2*alpha_N^2*pi^2*N^9).
+~~~
+
+ใช้ pi>3 ให้ rational conservative tail bound แล้วเทียบกับ budget 10^-8 ไม่ทำ energy-tail bound จากความต่างระหว่าง truncations ผล energy enclosure ที่ใช้ตัดสินจะบันทึกหลังการประเมิน ไม่เลือก h หรือ budget หลังเห็นค่า
+
+### 27.4 Signed และ magnitude-only readout มีข้อสรุปคนละแบบ
+
+conditional bounds ใน §27.2 ถ้าผ่าน จะให้:
+
+- paired histories +epsilon/-epsilon มี signed x และ y_h กลับเครื่องหมายตลอดช่วงอ่าน และมี quadratic energy เท่ากันตาม linear/quadratic reference เดิม
+- magnitude `abs(y_h)` แยกสองเครื่องหมายนี้ไม่ได้ แต่แยกแต่ละ written history ออกจาก zero-history baseline ได้ใน scope นี้
+- เพราะ x ไม่เปลี่ยนเครื่องหมายในช่วงที่รับรอง เฉพาะ class นี้จึงมี `mean(abs(x))=abs(mean(x))`; ไม่ประกาศว่า absolute value กับ averaging สลับกันได้ทั่วไป
+- zero-history first-mode predictor ที่ initialize จาก actual projected triple `(0,0,0)` และ zero future inputs ให้ y_1=0 ผลต่างจึงยังเป็น counterexample ต่อ prepared-state sufficiency ของ projection นี้ ไม่ใช่ต่อ full-state determinism หรือทุก reduced model
+
+ทั้งหมดเป็น mathematical readout alternatives ตาม author deferral ใน §26.4 ไม่ตัดสินว่า signed coordinate จำเป็นในทุกระบบ หรือ information ทั้งทฤษฎีเป็น scalar energy/entropy
+
+### 27.5 Physical uncertainty และจุดหยุดของ certificate นี้
+
+แม้ผ่าน formal window แล้ว actual temporal weighting, clock scale, transducer transfer, gain/offset, loading/backaction, pulse/clamp error, unknown initial state, linearization และ thermal/noise model ยังต้องรับเข้าแยก ค่าเฉลี่ย boxcar ไม่ใช่ ideal band-limit และไม่ใช่ sensor ที่ไม่มี memory
+
+สำหรับ matched prescribed inputs และ state error ที่มี energy E_init ใช้ผลเดิม §24.5 ได้ `abs(delta y_h)<=sqrt(42*E_init)` ตลอดช่วงอ่าน หากมี source/model/readout error bounds เพิ่ม ต้องรวมแบบ joint หรือ conservative sum ในหน่วย y เดียวกัน ไม่สมมติ independence ตัวอย่าง criterion คือ `sqrt(42*E_init)+B_source+ B_model+B_readout < (1177/10^6)*abs(epsilon)` เมื่อเปรียบกับ ideal zero baseline; การวัด baseline อีกครั้งต้องรวม error ของ baseline ด้วย ไม่ใช้ noise-free baseline โดยเงียบ ๆ
+
+ขอบเขตด้าน source/model/readout ที่ยังไม่ทราบไม่เป็นศูนย์ และ inequality นี้ยังไม่ใช่หลักฐานว่า experiment ทำได้ จะยืนยัน laboratory discrimination ต้องมี error budget จริงที่เล็กกว่า margin ไม่เพิ่ม epsilon โดยไม่ตรวจ linear regime ไม่เปลี่ยนพารามิเตอร์หรือเลือกข้อมูลให้ผลดูผ่าน
+
+### 27.6 Verification และผลตัดสิน
+
+Card, h, energy budget, tail budget และ N ถูกเขียนก่อน energy evaluation SymPy 1.14.0 และ mpmath 1.3.0 ผ่าน 8 กลุ่ม: stiffness decomposition, trace constant, boxcar integral, fixed pointwise/average budgets, positive margins, rational energy-tail guard และ actual prepared-energy admission ผล interval ที่ 35 digits คือ:
+
+~~~text
+E_partial/epsilon^2 (n=1..15) อยู่ระหว่าง
+0.0001141271824505864511125107691811919179544
+กับ 0.0001141271824505864511125107691811934803517
+E_tail/epsilon^2 <=1934588901025/450075666540524470272
+                 <4.299e-9 <1e-8
+E_0/epsilon^2 <0.000114131481 <115/10^6 <1/1000.
+~~~
+
+ตัวเลข `partial+tail_bound` เป็น enclosure ของ **upper-bound expression** ไม่ใช่ lower bound ของ energy รวม: lower bound ใช้ partial lower endpoint เพราะแต่ละ omitted modal energy ไม่เป็นลบ การใช้ rational outward guard `115/10^6` ไม่เปลี่ยน acceptance budget เดิม ไม่เพิ่ม N, pulse หรือเวลาที่เลือก ผล endpoint enclosure §24 ถูกใช้ต่อจากเดิมโดยไม่รัน verifier นั้นซ้ำ
+
+**ปิด FORMAL card ใน scope นี้:** ได้ pointwise lower margin `677*abs(epsilon)/10^6` ตลอด 0<s<=1/10000 และ boxcar signed magnitude lower margin `1177*abs(epsilon)/10^6` จึงผ่านเป้าหมาย a_*/2 ที่ล็อกไว้ โดยรวม full coupled release feedback แล้ว:
+
+| Preparation / model | Signed boxcar output | Magnitude-only output |
+| --- | --- | --- |
+| full reference, +epsilon (epsilon>0) | มากกว่า `1177*epsilon/10^6` | มากกว่า `1177*epsilon/10^6` |
+| full reference, -epsilon | น้อยกว่า `-1177*epsilon/10^6` | เท่ากับกรณี +epsilon ด้วย linear reflection |
+| zero-history reference | ศูนย์ | ศูนย์ |
+| one-mode predictor เริ่มจาก projected triple ศูนย์และ zero future inputs | ศูนย์ | ศูนย์ |
+
+จึงมีผลตรวจทั้งสอง class ตาม author deferral: signed readout เก็บ direction contrast; magnitude-only readout เก็บ written/unwritten contrast แต่ไม่เก็บเครื่องหมาย ไม่ใช้สองข้อสรุปนี้นิยาม information ทั้งทฤษฎี และไม่อ้างว่า one-mode candidate จำลอง same write inputs จบที่ศูนย์ด้วย
+
+ข้อจำกัดที่ยังเปิดชัดเจนคือ h นี้สั้นใน normalized clock ไม่มี physical clock scale หรือ detector bandwidth/readout admission; boxcar ไม่ใช่ physical noise model และเป็น certificate ของ known preparation ไม่ใช่ universal memory lifetime หรือ generic history reconstruction ไม่มี time integration, random sample, fitting, numerical-threshold change, added candidate mode, observation, independent specialist validation หรือ physics-gate promotion
+
+การทบทวนแบบ adversarial ภายในแยกสามจุดสำคัญ: lower energy bound เดิมใช้แทน upper bound ไม่ได้; endpoint velocity ไม่ถูก bound จาก L2 energy โดยผิดวิธี; ระหว่าง read ต้องปลด p ให้ coupled จริง ไม่คง clamp เพื่อทำ bound ง่ายขึ้น การตรวจเหล่านี้เป็น self-review โดย AI ไม่ใช่ reviewer ภายนอก ผล document/contract QA และ scoped commit อยู่ใน [WORK_LEDGER](../../WORK_LEDGER/2026/2026-10-24.md)
