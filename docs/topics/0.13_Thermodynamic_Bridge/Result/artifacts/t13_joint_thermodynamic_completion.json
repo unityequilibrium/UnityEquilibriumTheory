@@ -14,6 +14,37 @@
       "intrinsic_entropy_definition": "0",
       "same_F_at_reference_bath": "0"
     },
+    "R2_Gibbs_stationarity": {
+      "Fokker_Planck_residual_over_Gibbs": "0"
+    },
+    "R2_entropy_production": {
+      "C_current_heat_minus_Ito_heat_is_boundary_derivative": "0",
+      "C_entropy_plus_heat_equals_current_square": "0",
+      "Y_current_heat_minus_Ito_heat_is_boundary_derivative": "0",
+      "Y_irreversible_entropy_plus_heat_equals_current_square": "0"
+    },
+    "R2_equilibrium_currents": {
+      "irreversible_current_over_density_0": "0",
+      "irreversible_current_over_density_1": "0",
+      "irreversible_current_over_density_2": "0",
+      "reversible_current_divergence_over_density": "0"
+    },
+    "R2_normalizability_SOS": {
+      "energy_minus_coercive_lower_bound_is_sum_of_squares": "0"
+    },
+    "R2_positive_friction_at_equilibrium": {
+      "Pi_friction_loss_minus_Theta_over_tau": "0",
+      "Pi_variance_minus_Gibbs_value": "0"
+    },
+    "R2_time_reversal": {
+      "divergence_reversible_drift": "0",
+      "irreversible_0": "0",
+      "irreversible_1": "0",
+      "irreversible_2": "0",
+      "reversible_0": "0",
+      "reversible_1": "0",
+      "reversible_2": "0"
+    },
     "core_homogeneous_projection": {
       "dC": "0",
       "dPhi": "0",
@@ -28,18 +59,19 @@
   },
   "completed_rounds": [
     "R0",
-    "R1"
+    "R1",
+    "R2"
   ],
   "contract_id": "T13_JOINT_THERMODYNAMIC_COMPLETION_FORMAL_V1",
   "contract_review_status": "INCOMPLETE",
-  "contract_sha256": "27a8fcb58c457c0a08b582f7d909ba642baa7bbd979b926d3137a5090b7541e5",
+  "contract_sha256": "f5199cfcd14e98882b66d7782063933dda7f96871225bdc859b984646f74f166",
   "identities": [
     {
       "availability": "REQUIRED",
       "kind": "working_file",
       "path": "docs/meta/UET_THEORY_ARGUMENT.md",
       "role": "evidence",
-      "sha256": "11170231e1d84aacc545244d5f4bf84a442dbb179c744ef21593ba65b14f2242"
+      "sha256": "630706b2ac674d510a70e00b1397142675e45d6a7d6f6f3581b57d1acb0074cb"
     },
     {
       "availability": "REQUIRED",
@@ -82,17 +114,17 @@
       "kind": "working_file",
       "path": "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/Research_T13_Joint_Thermodynamic_Completion.py",
       "role": "code",
-      "sha256": "df3aeb8e05e505156edc9c1454e4e520c508f4ff8916d91c123500280f720900"
+      "sha256": "33591d675bed295a0bf00b978594bf4836a506c18cfa680fce1299fb4ec0b93f"
     },
     {
       "availability": "REQUIRED",
       "kind": "working_file",
       "path": "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/test_t13_joint_thermodynamic_completion.py",
       "role": "code",
-      "sha256": "2b039c25fc4106a28ef5a254e4486b98ed36d20e7f75f4c56e7eb63dd8b98c0d"
+      "sha256": "adbaef003f06fcb447063bc3e719123dfc7ada42d1a627b3bc723afe4a08244e"
     }
   ],
-  "interpretation": "REF-E first law closes; HIST-F physical heat needs intrinsic entropy/measure.",
+  "interpretation": "REF-E first law and Gibbs/entropy account close conditionally. Positive equilibrium friction loss is not total entropy production. HIST-F physical heat needs intrinsic entropy/measure.",
   "limitations": [
     "No SI/microscopic correspondence",
     "No independent specialist review",
@@ -104,6 +136,9 @@
     "sympy": "1.14.0"
   },
   "negative_controls": {
+    "wrong_C_diffusion_rejected": true,
+    "wrong_Pi_diffusion_rejected": true,
+    "wrong_Pi_parity_rejected": true,
     "wrong_heat_sign_rejected": true
   },
   "new_core_terms": 0,

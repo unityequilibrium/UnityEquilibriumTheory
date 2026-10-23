@@ -187,19 +187,135 @@ def coarse_free_energy_residuals():
     }
 
 
+def stationary_residual(c_noise_scale=1, pi_noise_scale=1):
+    """L* rho_G / rho_G, using log derivatives, with equilibrium sources zero."""
+    r = reference()
+    logp = -r["energy"]/r["theta"]
+    drift = r["drift"].subs({r["JC"]: 0, r["JP"]: 0})
+    result = sum(-s.diff(a, x)-a*s.diff(logp, x) for a, x in zip(drift, r["state"]))
+    for x, D in [(r["C"], c_noise_scale*r["DC"]), (r["Pi"], pi_noise_scale*r["DP"])]:
+        result += D*(s.diff(logp, x)**2+s.diff(logp, x, 2))
+    return s.factor(result)
+
+
+def parity_split(r, pi_parity=-1):
+    if pi_parity not in (-1, 1):
+        raise ValueError("parity must be -1 or +1")
+    parity = (1, 1, pi_parity)
+    transformed = {x: e*x for x, e in zip(r["state"], parity)}
+    reversed_drift = s.Matrix([e*a.subs(transformed, simultaneous=True)
+                              for e, a in zip(parity, r["drift"])])
+    return ((r["drift"]-reversed_drift)/2, (r["drift"]+reversed_drift)/2)
+
+
+def parity_residuals(pi_parity=-1):
+    r = reference()
+    rev, irr = parity_split(r, pi_parity)
+    target_rev = s.Matrix([0, r["Pi"], (-r["MP"]*r["muP"]+r["JP"])/r["tau"]])
+    target_irr = s.Matrix([r["drift"][0], 0, -r["Pi"]/r["tau"]])
+    return {**{f"reversible_{i}": rev[i]-target_rev[i] for i in range(3)},
+            **{f"irreversible_{i}": irr[i]-target_irr[i] for i in range(3)},
+            "divergence_reversible_drift": sum(s.diff(a, x) for a, x in zip(rev, r["state"]))}
+
+
+def equilibrium_current_residuals():
+    r = reference()
+    rev, irr = parity_split(r)
+    logp = -r["energy"]/r["theta"]
+    D = (r["DC"], 0, r["DP"])
+    result = {f"irreversible_current_over_density_{i}":
+              (irr[i]-D[i]*s.diff(logp, x)).subs({r["JC"]: 0, r["JP"]: 0})
+              for i, x in enumerate(r["state"])}
+    result["reversible_current_divergence_over_density"] = sum(
+        s.diff(a, x)+a*s.diff(logp, x) for a, x in zip(rev, r["state"])).subs({r["JP"]: 0})
+    return result
+
+
+def coercivity_residuals():
+    """Exact sum-of-squares lower bound; integrability argument is in the report."""
+    r = reference()
+    C, Phi, Pi = r["state"]
+    bC, bP, aC, aP, g = (r[k] for k in ("bC", "bP", "aC", "aP", "g"))
+    eps = bC/8
+    B = aP/2-g**2/(2*bC)
+    squares = ((s.sqrt(eps)*C**2-g*Phi/(4*s.sqrt(eps)))**2
+               +(s.sqrt(bC)*C**2/4+aC/s.sqrt(bC))**2
+               +(s.sqrt(bP/8)*Phi**2+B/(2*s.sqrt(bP/8)))**2)
+    lower = bC*C**4/16+bP*Phi**4/8+r["tau"]*Pi**2/(2*r["MP"])-aC**2/bC-2*B**2/bP
+    return {"energy_minus_coercive_lower_bound_is_sum_of_squares": r["energy"]-lower-squares}
+
+
+def entropy_residuals():
+    """Exact local algebra. Reversible entropy integrates to zero by div a_rev=0.
+
+    Boundary integrals are analytic assumptions, not evaluated finite samples.
+    Heat-current forms equal R1 Itô means up to the displayed total derivatives.
+    """
+    r = reference()
+    p = s.Symbol("rho", positive=True)
+    uC, uP = s.symbols("partial_C_logrho partial_Pi_logrho", real=True)
+    MC, MP, tau, theta, Pi = (r[k] for k in ("MC", "MP", "tau", "theta", "Pi"))
+    aC, DC, DP = r["drift"][0], r["DC"], r["DP"]
+    m = tau/MP
+    jC = p*(aC-DC*uC)
+    jP = p*(-Pi/tau-DP*uP)
+    qC, qY = (aC/MC)*jC, -m*Pi*jP
+    fCminusmu = aC/MC
+    qC_ito = (fCminusmu*aC-DC*s.diff(r["muC"], r["C"]))*p
+    qY_ito = (Pi**2/MP-theta/tau)*p
+    derivative_C = -s.diff(r["muC"], r["C"])*p+fCminusmu*p*uC
+    derivative_Pi = p+Pi*p*uP
+    return {
+        "C_entropy_plus_heat_equals_current_square":
+            -jC*uC+qC/theta-jC**2/(DC*p),
+        "Y_irreversible_entropy_plus_heat_equals_current_square":
+            -jP*uP+qY/theta-jP**2/(DP*p),
+        "C_current_heat_minus_Ito_heat_is_boundary_derivative": qC-qC_ito+DC*derivative_C,
+        "Y_current_heat_minus_Ito_heat_is_boundary_derivative": qY-qY_ito-m*DP*derivative_Pi,
+    }
+
+
+def gaussian_pi_variance():
+    r = reference()
+    Pi = r["Pi"]
+    density = s.exp(-r["tau"]*Pi**2/(2*r["MP"]*r["theta"]))
+    return s.simplify(s.integrate(Pi**2*density, (Pi, -s.oo, s.oo)) /
+                      s.integrate(density, (Pi, -s.oo, s.oo)))
+
+
+def r2_checks():
+    r = reference()
+    return {
+        "R2_Gibbs_stationarity": _exact_zeros({"Fokker_Planck_residual_over_Gibbs": stationary_residual()}),
+        "R2_time_reversal": _exact_zeros(parity_residuals()),
+        "R2_equilibrium_currents": _exact_zeros(equilibrium_current_residuals()),
+        "R2_normalizability_SOS": _exact_zeros(coercivity_residuals()),
+        "R2_entropy_production": _exact_zeros(entropy_residuals()),
+        "R2_positive_friction_at_equilibrium": _exact_zeros({
+            "Pi_variance_minus_Gibbs_value": gaussian_pi_variance()-r["MP"]*r["theta"]/r["tau"],
+            "Pi_friction_loss_minus_Theta_over_tau": gaussian_pi_variance()/r["MP"]-r["theta"]/r["tau"]}),
+    }
+
+
 def calculate():
     r = reference()
     checks = {
         "core_homogeneous_projection": _exact_zeros(core_projection_residuals()),
         "R1_first_law": _exact_zeros(first_law_residuals()),
         "R1_free_energy_nonuniqueness": _exact_zeros(coarse_free_energy_residuals()),
+        **r2_checks(),
     }
     if all(s.simplify(v) == 0 for v in first_law_residuals(-1).values()):
         raise ValueError("wrong heat sign was not rejected")
+    if stationary_residual(c_noise_scale=2) == 0 or stationary_residual(pi_noise_scale=2) == 0:
+        raise ValueError("wrong diffusion was not rejected")
+    if all(s.simplify(v) == 0 for v in parity_residuals(pi_parity=1).values()):
+        raise ValueError("wrong Pi parity was not rejected")
     return {
-        "completed_rounds": ["R0", "R1"], "checks": checks,
-        "negative_controls": {"wrong_heat_sign_rejected": True},
-        "interpretation": "REF-E first law closes; HIST-F physical heat needs intrinsic entropy/measure.",
+        "completed_rounds": ["R0", "R1", "R2"], "checks": checks,
+        "negative_controls": {"wrong_heat_sign_rejected": True, "wrong_C_diffusion_rejected": True,
+                              "wrong_Pi_diffusion_rejected": True, "wrong_Pi_parity_rejected": True},
+        "interpretation": "REF-E first law and Gibbs/entropy account close conditionally. Positive equilibrium friction loss is not total entropy production. HIST-F physical heat needs intrinsic entropy/measure.",
         "physical_acceptance": False, "new_core_terms": 0, "observational_rows": 0,
         "old_scientific_verifiers_rerun": False, "unique_UET_discriminator": False,
         "method": {"sympy": s.__version__, "arithmetic": "exact", "samples": 0},

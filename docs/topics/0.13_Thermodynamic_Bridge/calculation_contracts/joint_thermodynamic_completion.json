@@ -5,7 +5,7 @@
   "review": {
     "status": "INCOMPLETE",
     "reviewer": "agent:joint-thermal-reference (construction and adversarial self-review, not independent specialist)",
-    "rationale": "R0 source/scope lock and R1 exact first-law/free-energy analysis completed. Three exact groups and nine regression tests passed with SymPy 1.14.0, including Core AST homogeneous expressions and deliberate wrong heat sign. Construction/adversarial self-review only. R2 generator/parity/entropy and R3 information/comparator remain to be checked. HIST-F physical heat/measure is UNKNOWN; no physics gate promotion."
+    "rationale": "R0-R2 completed: nine exact symbolic groups and sixteen regression tests passed with SymPy 1.14.0. Core homogeneous AST, first law, free-energy heat nonuniqueness, Gibbs residual, odd Pi parity, reversible versus irreversible currents, coercive sum-of-squares bound, entropy-current balance and positive Gibbs friction are checked. Wrong heat sign, diffusion and Pi parity are rejected. Boundary/integrability arguments are in report section 30, not inferred from samples. Construction/adversarial self-review only; R3 information/comparator remains. HIST-F physical heat/measure is UNKNOWN; no physics gate promotion."
   },
   "question": "Under which explicit thermal and coarse-graining assumptions does the existing homogeneous nonconserved C/Phi/Pi drift admit a consistent joint energy, heat, entropy and information account, and what is equivalent to a standard comparator?",
   "output": {
@@ -238,7 +238,7 @@
     {
       "path": "docs/meta/UET_THEORY_ARGUMENT.md",
       "kind": "working_file",
-      "sha256": "11170231e1d84aacc545244d5f4bf84a442dbb179c744ef21593ba65b14f2242",
+      "sha256": "630706b2ac674d510a70e00b1397142675e45d6a7d6f6f3581b57d1acb0074cb",
       "role": "evidence",
       "availability": "REQUIRED"
     },
@@ -281,14 +281,14 @@
     {
       "path": "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/Research_T13_Joint_Thermodynamic_Completion.py",
       "kind": "working_file",
-      "sha256": "df3aeb8e05e505156edc9c1454e4e520c508f4ff8916d91c123500280f720900",
+      "sha256": "33591d675bed295a0bf00b978594bf4836a506c18cfa680fce1299fb4ec0b93f",
       "role": "code",
       "availability": "REQUIRED"
     },
     {
       "path": "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/test_t13_joint_thermodynamic_completion.py",
       "kind": "working_file",
-      "sha256": "2b039c25fc4106a28ef5a254e4486b98ed36d20e7f75f4c56e7eb63dd8b98c0d",
+      "sha256": "adbaef003f06fcb447063bc3e719123dfc7ada42d1a627b3bc723afe4a08244e",
       "role": "code",
       "availability": "REQUIRED"
     }
@@ -307,5 +307,5 @@
     "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/Research_T13_Joint_Thermodynamic_Completion.py"
   ],
   "claim_boundary": "Conditional mathematical thermal completion and matched standard-comparator audit only. No new Core stochastic law, SI internal-energy/heat validation, physical acceptance, unique mobility, universal information identity, learning/cosmology or UET novelty.",
-  "next_action": "R2 derive and check joint Fokker-Planck/Gibbs, time reversal and entropy; then R3 mixed-generator information flow and matched comparator. No old verifier, beam development or physical promotion."
+  "next_action": "R3 derive entropy chain rule and mixed-generator information flow for C | (Phi,Pi), retain odd parity, check dependence without covariance and matched standard comparator. Do not add a Core term, rerun old verifiers or develop the beam plan."
 }

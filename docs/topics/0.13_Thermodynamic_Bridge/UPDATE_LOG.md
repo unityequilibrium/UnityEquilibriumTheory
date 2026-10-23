@@ -1,3 +1,24 @@
+## 2026-10-24 - Joint thermal reference R2 stationarity, parity and entropy
+
+- Result: [Argument sections 30.5-30.7](../../meta/UET_THEORY_ARGUMENT.md)
+  derive the mixed generator, Gibbs residual and a coercive quartic/Gaussian
+  normalizability bound. C/Phi even and Pi odd yield divergence-free reversible
+  flow; nonzero equilibrium phase-space current is not irreversible production.
+- Decision evidence: joint entropy production is a sum of irreversible-current
+  squares, zero at Gibbs. Pi friction loss remains Theta/tau>0 there; old sigma
+  or sigma/Theta cannot be total entropy production of this thermal reference.
+  Noise injection, entropy measure and boundary terms cannot be omitted.
+- Actually run: 9 exact groups and 16 regression tests pass, including wrong
+  diffusion and wrong-Pi-parity controls. No RNG, Monte Carlo, solver, fit,
+  noise/threshold tuning or old scientific verifier rerun.
+- Controller: conditional REF-E consistency only; R3 information/comparator
+  still needed. HIST-F intrinsic entropy/physical heat and microscopic/SI
+  correspondence remain UNKNOWN; contract INCOMPLETE, all old gates unchanged.
+- Next: derive C | (Phi,Pi) information-flow account from this generator, not
+  import jump formulas by name or add a term to escape the standard comparator.
+- Safe new synthesis; local scoped commit after identity/artifact QA, no push.
+  Preserve earlier evidence and the unrelated historical topic-log diff.
+
 ## 2026-10-24 - Joint thermal reference R1 energy, force ports and heat
 
 - Completed: [Argument sections 30.3-30.4](../../meta/UET_THEORY_ARGUMENT.md),

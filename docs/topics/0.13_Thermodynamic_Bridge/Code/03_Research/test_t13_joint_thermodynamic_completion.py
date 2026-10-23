@@ -64,6 +64,44 @@ class JointThermodynamicCompletionTests(unittest.TestCase):
         self.assertEqual(s.simplify(ledger-port-(2*r["muC"]*r["JC"]-r["JC"]**2/r["MC"])), 0)
         self.assertNotEqual(s.simplify(ledger-port), 0)
 
+    def test_gibbs_stationarity_exact_and_sources_off(self):
+        self.assertEqual(m.stationary_residual(), 0)
+
+    def test_each_wrong_noise_coefficient_fails_locked_gibbs(self):
+        self.assertNotEqual(m.stationary_residual(c_noise_scale=2), 0)
+        self.assertNotEqual(m.stationary_residual(pi_noise_scale=2), 0)
+        self.assertNotEqual(m.stationary_residual(c_noise_scale=0), 0)
+        self.assertNotEqual(m.stationary_residual(pi_noise_scale=0), 0)
+
+    def test_odd_pi_parity_and_reversible_volume_flow(self):
+        self.assertZeros(m.parity_residuals())
+        self.assertZeros(m.equilibrium_current_residuals())
+        r = m.reference()
+        rev, _ = m.parity_split(r)
+        self.assertEqual(rev[1], r["Pi"])
+        self.assertNotEqual(rev[1], 0)  # Gibbs can have reversible phase-space current.
+
+    def test_even_pi_parity_wrongly_makes_undiffused_phi_irreversible(self):
+        r = m.reference()
+        _, irr = m.parity_split(r, pi_parity=1)
+        self.assertEqual(irr[1], r["Pi"])
+        self.assertNotEqual(m.parity_residuals(pi_parity=1)["irreversible_1"], 0)
+        with self.assertRaises(ValueError):
+            m.parity_split(r, pi_parity=0)
+
+    def test_coercive_quartic_bound_is_exact(self):
+        self.assertZeros(m.coercivity_residuals())
+
+    def test_entropy_and_heat_current_accounts_match(self):
+        self.assertZeros(m.entropy_residuals())
+
+    def test_gibbs_friction_positive_while_irreversible_currents_zero(self):
+        r = m.reference()
+        variance = m.gaussian_pi_variance()
+        self.assertEqual(s.simplify(variance-r["MP"]*r["theta"]/r["tau"]), 0)
+        self.assertTrue((variance/r["MP"]).is_positive)
+        self.assertZeros(m.equilibrium_current_residuals())
+
     def test_no_physics_promotion_from_symbolic_checks(self):
         result = m.calculate()
         self.assertFalse(result["physical_acceptance"])

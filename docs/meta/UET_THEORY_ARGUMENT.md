@@ -3522,3 +3522,82 @@ F^{(\kappa)}(C,\Phi;\vartheta)=\Omega_0(C,\Phi)+(\Theta_0-\vartheta)\kappa\Phi^2
 นี่เป็น conditional choice ของ per-site normalized ledger ไม่ใช่การให้ Theta เท่ากับ SI temperature โดยตรง และไม่ใช่การคูณ N เพิ่มใน noise โดยไม่เปลี่ยน energy/mobility convention หากใช้ total-energy ledger ต้องแปลงทั้ง generator ให้สอดคล้องกัน Near-equilibrium local jump moment ของ §17 รองรับ scale นี้ตามเงื่อนไขเดิมเท่านั้น ไม่กำหนด full process: binary C=s_C m มีขอบเขต [-s_C,s_C] และ finite jumps ขณะที่ additive Gaussian diffusion กับ quartic นี้ใช้ C∈R การไม่มี reflecting boundary ไม่ได้มาจาก binary model; ห้ามขยายการเทียบ h_2/อนุกรมเดิมออกนอก domain/remainder ที่พิสูจน์ไว้
 
 **สรุปให้ผู้เขียนตรวจความหมายหลัง R1:** สมการเดิมรับบัญชีพลังงานร่วมแบบมีอ่างได้เมื่อบอกอ่างและวิธีนับให้ครบ แต่ “พลังงานที่ลดตามสมการ”, “งานที่ป้อน”, “ความร้อนสู่อ่าง” และ “ข้อมูลที่สัมพันธ์กัน” ยังไม่ใช่สิ่งเดียวกัน ถ้า Ω รวม entropy ระดับจุลภาคมาแล้ว ต้องรู้ว่ารวมอะไรจึงเรียกความร้อนจริงได้ ไม่ต้องให้ผู้เขียนตรวจอนุพันธ์หรือเลือกนิยาม information ตอนนี้ ส่วน R2–R3 ที่ตรวจ reference ตามเงื่อนไขนี้ทำต่อได้โดยไม่รอคำตอบ
+
+### 30.5 R2 — Generator, Gibbs reference และ normalizability
+
+เขียน a_C=-M_C mu_C+J_C, a_Pi=(-Pi-M_Phi mu_Phi+J_Phi)/tau และ D_C=M_C Theta, D_Pi=M_Phi Theta/tau² โดย coefficient ของ second derivative คือ D ไม่ใช่ noise amplitude เอง Itô backward generator และ forward equation คือ
+
+\[
+\begin{aligned}
+Lf&=a_C\partial_Cf+\Pi\partial_\Phi f+a_\Pi\partial_\Pi f
+ +D_C\partial_C^2f+D_\Pi\partial_\Pi^2f,\\
+\partial_t\rho&=-\partial_C j_C-\partial_\Phi j_\Phi-\partial_\Pi j_\Pi,\\
+j_C&=a_C\rho-D_C\partial_C\rho,\quad j_\Phi=\Pi\rho,\quad
+j_\Pi=a_\Pi\rho-D_\Pi\partial_\Pi\rho.
+\end{aligned}
+\]
+
+เมื่อ J_C=J_Phi=0 ให้ rho_G=Z^(-1)exp(-E/Theta) แทนตรง ๆ จะได้ L* rho_G/rho_G=0 ทุก C,Phi,Pi ภายใต้ parameter domain ที่ล็อก ไม่ใช่ residual จาก sample grid การมี stationary density นี้ **ไม่ได้อ้าง uniqueness, mixing time หรือ memory lifetime**
+
+Z มีค่าจำกัดจริงใน sector b_C,b_Phi>0 ไม่จำเป็นต้องให้ quadratic coefficients เป็นบวก: กำหนด B=a_Phi/2-g²/(2b_C) ใช้ Young inequality กับ cubic interaction แล้ว complete squares ให้
+
+\[
+E\geq\frac{b_C}{16}C^4+\frac{b_\Phi}{8}\Phi^4
+ +\frac{\tau}{2M_\Phi}\Pi^2
+ -\frac{a_C^2}{b_C}-\frac{2B^2}{b_\Phi}.
+\]
+
+ส่วนต่างระหว่าง E กับขอบเขตนี้เป็นผลบวกสามกำลังสองตามตัวตรวจ จึงมี quartic/Gaussian tail ที่ integrable; ไม่ใช้ Gaussian approximation รอบ minimum แทนทั้ง domain สำหรับ finite-energy initial state, polynomial drift เป็น locally Lipschitz และ Itô bound ของ V=E+constant+1 ให้ LV≤K V ในช่วงเวลาจำกัดที่ sources bounded การหยุดที่ V=R, ใช้ค่าเฉลี่ย Itô/Gronwall แล้วส่ง R→∞ ป้องกัน finite-time explosion ใน reference นี้ ไม่ใช่ theorem ของ spatial/conserved lanes
+
+**FDT ไม่เลือก kinetics:** ถ้าเปลี่ยน diffusion เป็น lambda_C D_C และ lambda_Pi D_Pi โดยคง Gibbs scale/drift เดิม irreversible currents ต่อ density ที่ Gibbs จะเหลือ (lambda_C-1)M_C mu_C และ (lambda_Pi-1)Pi/tau ดังนั้น matching นี้ผูก diffusion กับ mobility ตามที่กำหนด แต่ไม่มีสมการเลือกค่า M_C,M_Phi,g ให้เอง ผล kinetic non-selection ใน §26 ยังคงอยู่ ไม่มีการปรับ noise หลังเห็น residual เพื่อให้ผ่าน
+
+### 30.6 R2 — Time reversal และ entropy production ต่างจาก deterministic loss
+
+จาก parity epsilon=(+,+,-) แยก a^irr_i=[a_i(x)+epsilon_i a_i(epsilon x)]/2 และ a^rev_i=[a_i(x)-epsilon_i a_i(epsilon x)]/2 ได้
+
+\[
+a^{\rm irr}=(a_C,0,-\Pi/\tau),\qquad
+a^{\rm rev}=(0,\Pi,(-M_\Phi\mu_\Phi+J_\Phi)/\tau).
+\]
+
+sources เป็น prescribed even force controls และ div a^rev=0 ไม่ใช้ formula นี้กับ velocity-dependent feedback ที่ไม่ได้ประกาศ ที่ Gibbs source-free:
+
+\[
+j_C^{\rm irr}=j_\Pi^{\rm irr}=0,\qquad
+(j_\Phi^{\rm rev},j_\Pi^{\rm rev})
+=(\Pi,-M_\Phi\mu_\Phi/\tau)\rho_G.
+\]
+
+current คู่หลังไม่เป็นศูนย์ทั่วไป แต่ divergence ของมันเป็นศูนย์ และอนุรักษ์ E ใน reversible flow จึงไม่ใช่เหตุให้ปฏิเสธ equilibrium การตั้ง Pi เป็น even โดยผิดทำให้ j_Phi ถูกนับ irreversible ทั้งที่ D_Phi=0 จึงใช้ entropy-production quadratic form เดิมไม่ได้ เรื่องนี้ไม่ใช่การ “แก้ parity ให้ผ่าน” แต่เป็นการทดสอบ convention ที่ล็อกไว้
+
+กำหนด differential Shannon entropy บน product measure ของ REF-E เป็น S[rho]=-∫rho ln rho (nats; ไม่ใช่ thermodynamic entropy SI โดยตัวมันเอง) ใช้ boundary terms ที่หายไปและ regularity/finite integrals ตาม contract จะ derive ได้
+
+\[
+\boxed{\dot\Sigma=\dot S[\rho]+\langle\dot Q_{\rm out}\rangle/\Theta
+=\int\frac{(j_C^{\rm irr})^2}{D_C\rho}\,dx
+ +\int\frac{(j_\Pi^{\rm irr})^2}{D_\Pi\rho}\,dx\geq0.}
+\]
+
+พิสูจน์: ∂_t rho=-div j ให้ dot S=-∫j·grad ln rho; reversible contribution รวมเป็นศูนย์เพราะ div a^rev=0 ส่วน heat rates เขียนเป็น ∫(a_C/M_C)j_C และ -∫m Pi j_Pi^irr ได้ โดยรูปนี้ต่างจากค่าเฉลี่ย Itô ใน R1 แค่ total derivatives ที่ boundary หายไป จาก j_C/(D_C rho)=a_C/D_C-∂_C ln rho และ j_Pi^irr/(D_Pi rho)=-m Pi/Theta-∂_Pi ln rho จึงได้สองกำลังสองข้างบนโดยตรง ไม่ย้าย jump-rate entropy formula มาใช้กับ odd variable โดยไม่ตรวจ
+
+**ผลที่ตัดสินได้:** ที่ rho_G มี dot Sigma=0 แต่
+
+\[
+\langle\Pi^2\rangle_G=M_\Phi\Theta/\tau,\qquad
+\langle\Pi^2/M_\Phi\rangle_G=\Theta/\tau>0.
+\]
+
+ดังนั้นแม้ friction-loss ส่วน Pi ยังเป็นบวก แต่ถูก thermal injection ชดเชย ค่าเฉลี่ย heat สุทธิของส่วนนี้เป็นศูนย์ ฝั่ง C ใช้ ∫∂_C(mu_C rho_G)=0 ได้ ⟨mu_C²⟩_G=Theta⟨Ω_CC⟩_G จึงชดเชย correction เช่นกัน **sigma_det หรือ sigma_det/Theta ไม่ใช่ total entropy production ของ finite-temperature reference** และ R ที่สร้างจาก sigma_det ไม่ใช่ information ทั้งหมดหรือ thermodynamic entropy โดยอัตโนมัติ ข้อวินิจฉัยนี้ไม่แก้คำจำกัดความ/โค้ด sigma และไม่ขัดกับ deterministic descent ในขอบเขตเดิม
+
+อีกวิธีเขียนคือ ensemble free energy ของ **REF-E**: F_ens[rho]=⟨E⟩-Theta S[rho] (ไม่ใช่การประกาศให้ Ω ทุก family เป็น physical internal energy) เมื่อไม่มีงานป้อน dot F_ens=-Theta dot Sigma≤0 และ F_ens-F_ens[rho_G]=Theta D_KL(rho||rho_G) นี่เป็น conditional relaxation principle ของ standard thermostat ไม่พิสูจน์ universal optimization, การเรียนรู้ หรือเจตนารักษาตัวเอง ถ้าอ่านแบบ HIST-F ต้องเพิ่ม intrinsic entropy ใน system entropy และแก้ heat พร้อมกัน ไม่ใส่ correction เพียงฝั่งเดียวเพื่อทำให้กฎสองดูผ่าน
+
+### 30.7 R2 — ผลตรวจเชิงลบและขอบเขตที่ยังเปิด
+
+ตัวตรวจเชิงสัญลักษณ์แยกการตรวจ stationarity, parity/current split, coercive bound, entropy-current balance และ Gaussian Pi moment จาก first-law checks ของ R1:
+
+- diffusion ผิดเป็นสองเท่าใน C หรือ Pi ทีละช่อง ทำให้ locked Gibbs residual ไม่เป็นศูนย์; ไม่เปลี่ยน Theta เพื่ออ้างว่าเป็นการผ่านกรณีเดิม
+- กลับ sign Q_out ทำลาย first law ทั้ง drift และ noise; ไม่เปลี่ยน convention กลาง derivation
+- ตั้ง Pi เป็น even ทำให้ reversible/irreversible split ผิดและเกิด undiffused irreversible Phi channel; ไม่สรุป equilibrium จาก “ทุก current ต้องศูนย์”
+- exact homogeneous AST projection ผูก Ω, mu, E, drift และ sigma กับ source ปัจจุบัน; ไม่เป็นการทดสอบ spatial solver หรือรัน retention/kernel fixtures ใหม่
+
+**ผลหลัง R2:** ไม่พบ contradiction ของ REF-E ภายใต้เงื่อนไขที่ประกาศ ได้ stationary normalized Gibbs และ nonnegative entropy-production account ส่วน HIST-F physical heat, microscopic bath, measure/coefficients-versus-temperature, SI mapping และ specialist review ยังเปิดอยู่; R3 ต้องตรวจว่าการแยก information ใช้ได้กับ generator นี้จริงและอะไรเพิ่มจาก comparator
