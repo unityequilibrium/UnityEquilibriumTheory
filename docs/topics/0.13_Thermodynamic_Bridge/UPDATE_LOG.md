@@ -1,3 +1,84 @@
+## 2026-10-24 - Joint state/measure M3: folding, verdict and scoped handoff
+
+- Completed: [report sections 5-6](../../meta/UET_JOINT_STATE_MEASURE_CONSTRUCTION.md)
+  and generated `t13_joint_state_measure_construction.json`. Readout-only
+  absolute value differs from lossy state folding; even/odd populations retain
+  the correct multiplicity and zero class is not doubled. No detector added.
+- Verdict: the chosen static reference closes conditional F/U/S and a bounded
+  Omega correspondence. It is a standard equilibrium construction, not a new
+  UET-specific discriminator, physical Phi entropy or trajectory heat law.
+- Verification actually run: new producer --emit-report then read-only --check;
+  9 exact groups, finite N=2,3,4,8 regressions and 8 falsifying controls pass.
+  New unittest discovery passes 30/30 with SymPy 1.14.0. No old science rerun.
+- Read-only completeness passes: 18 contracts/123 discovered routes/0 errors;
+  explicit seven-path precommit changed-surface check also has 0 errors. Review
+  remains INCOMPLETE: new physical-correspondence UNKNOWN; old HIST-F intrinsic-
+  entropy-correspondence and aggregate Topic 13 gates remain unchanged.
+- QA: 12 local link uses, 2 primary URLs, 4 anchors, 3 tables, 20 math blocks,
+  delimiter/privacy checks and 11+8+42 contract identities checked. Nine protected
+  hashes, prior log/ledger contents and unrelated tracked diff are preserved.
+- Next controller: physical retained-state/energy/measure correspondence;
+  specialist/author questions are prepared, not externally sent. No automatic
+  dynamics, hidden sector, material/data acquisition or physical promotion.
+- Local checkpoint branch: codex/research/joint-state-measure, created from the
+  declared baseline without changing working files. Scope seven paths, excluding
+  pre-existing log 578/79 and unrelated work; no push/PR/merge/publication.
+- Postcommit CLI --changed 6a971bd0c24684738842ae8ae6a9b48477c433f6 --check
+  also passes with 18 contracts/123 routes/0 errors. The seven committed paths
+  are covered; this is not an empty precommit BASE-to-HEAD comparison. All 463
+  pre-existing statuses and the original Topic log 578/79 remain outside scope.
+
+## 2026-10-24 - Joint state/measure M2: finite-N and Omega correspondence
+
+- Completed: report section 4, same new formal producer/tests/contract/artifact.
+- Derived the all-N entropy-value bound 0 <= h2-log(binomial)/N <= log(N+1)/N
+  from the binomial mode/normalization, with endpoint treatment and exact small-N
+  certificates. General proof is analytic, not inferred from four populations.
+- Reused Argument 14.4 coefficient map/Taylor bounds without old fixture reruns;
+  combined value errors conservatively. No finite-N force or partition/saddle
+  error bound is manufactured. Binary grid is not an all-R stochastic law.
+- Narrowed: coefficients must obey a_C=(theta-j0)/s_C^2 and b_C=theta/(3*s_C^4)
+  for this bridge. Thermal derivatives keep -theta ln2; arbitrary Core constants
+  are not thereby derived. P/Pi Jacobian, N storage and theta/N are explicit.
+- Source-convention finding: square-of-sum energy includes a Phi-dependent
+  diagonal contribution in pair notation; it cannot silently be dropped.
+- Checked by new exact groups, Gaussian symbolic integrals and mutation tests;
+  no Core or old result changed. Physical map/thermal family remains open.
+- Public safety safe. Next: folded-state/comparator verdict and final handoff,
+  not an additional constitutive term or new kinetic calculation.
+
+## 2026-10-24 - Joint state/measure M1: conditional thermodynamic dictionary
+
+- Completed: report sections 2-3, one FORMAL contract, new producer and tests.
+- Chosen binary/Phi/P energy and fixed measure give G_N=binomial(N,k), uniform
+  conditional weights, F_N=H_N-kBT log G_N, S_int=k_B log G_N, U_cond=H_N.
+  Micro/coarse partition sums and retained/intrinsic entropy chain rule agree.
+- Phi/P are directly retained; this does not set physical Phi entropy to zero.
+  No kinetic law, rates, bath elimination, fast mixing or physical heat claim.
+- New exact algebra/enumeration and conditional/nonuniform negative controls
+  were run; energy interaction is counted once. Old R0-R3/other lanes reused,
+  not rerun. New contract preserves an explicit physical-correspondence gap.
+- Blocker narrowed from unspecified joint counting to one explicit conditional
+  dictionary. Next: N/measure/thermal-limit matching to Omega, not new data.
+- Public safety safe; no raw/private source, Core/API/default/gate change.
+
+## 2026-10-24 - Joint state/measure M0: scoped construction baseline
+
+- Scope/area: research-core, one FORMAL static reference, not a new Core law.
+- Completed: baseline/intent/reuse card in the new
+  [joint state-measure report](../../meta/UET_JOINT_STATE_MEASURE_CONSTRUCTION.md).
+  HEAD 6a971bd0c24684738842ae8ae6a9b48477c433f6 matches the approved plan;
+  branch has no upstream, index empty, 463 prior dirty/untracked statuses.
+- Protected nine canonical source/contract/artifact hashes and the unrelated
+  tracked-diff digest. Preserve the pre-existing Topic log 578/79 diff.
+- Reuse Argument 14/17-19/30 and Foundations 7-10, without old verifier reruns.
+  Author scope choices are distinct from AI energy/measure choices.
+- Before: no explicit joint finite-N conditioning/measure reference. Next:
+  finish restricted F/U/S derivation, bounded Omega comparison and new checks.
+  The physical intrinsic-entropy-correspondence controller remains open.
+- Public safety safe (new public-source explanation); no raw/private content,
+  physical promotion, Core edit, push/PR/merge/contact or automatic dynamics.
+
 ## 2026-10-24 - Thermal-dictionary follow-up: coefficient and temperature feasibility
 
 - Completed: [Foundations review sections 8-10](../../meta/UET_THERMODYNAMIC_FOUNDATIONS_REVIEW.md#temperature-dependency-audit)
