@@ -1,3 +1,53 @@
+## 2026-10-25 - Phi variance V4: verified scoped static handoff
+
+- New report/FORMAL contract/producer/tests/artifact completed. Actual full new
+  suite26/26,26 symbolic identities and8 negative controls pass; --check cannot
+  write. Artifact deterministic with11 source/report/code/config identities and
+  exact contract hash; review remains INCOMPLETE, not independent physics review.
+- Read-only completeness with explicit seven changed paths:23 contracts,
+  128 discovered routes,0 errors. Links/anchors/units/privacy checked.38 protected
+  normalized hashes and284 unrelated dirty tracked raw hashes unchanged;
+  old Topic-log body preserved bytewise (SHA hex case normalized in wrapper).
+- Result: central Phi variance bounds A/B, nonzero finite-ball surface control,
+  B small-theta classical limit, separate observable-weighted quantum bound and
+  conditional scale-product frontier. No selected budgets or material window.
+- Controller: physical-parent-preparation now needs independent mu,dref,Jref
+  dictionary and observable error/preparation policy; quantum-parent comparison
+  still separate. O/P/Q no-gos/results, Core/defaults/README/physics gates intact.
+- Local checkpoint only: stage seven new-wave paths with this log's NEW PREFIX
+  only, exclude its older578/79 diff and all463 old statuses. No push/PR/merge,
+  external contact or automatic research continuation. Development wrapper
+  quoting/length/hash-case failures corrected, no scientific retuning.
+
+## 2026-10-25 - Phi variance V1-V3: central-variance construction
+
+- Added report derivations, new producer and regression tests. Read the Q
+  alternating-root/stiffness and six old radius certificates; no Q search,
+  potential re-evaluation or old producer used. Physical controls unchanged.
+- Derived joint/Schur covariance with factor5 and total theta, A uniform/tail
+  bound and B finite-ball IBP bound with surface, mean and boundary cross terms.
+  B tends to0 in the classical small-theta limit; separate harmonic quantum
+  correction grows at fixed chi. Derived product-scale frontier, no budgets,
+  material or actual physical window selected.
+- Actually ran preliminary new-only24/24 tests; exact identities and negative
+  controls pass. Added general mixed-anharmonic IBP integrand checks afterward;
+  final artifact/identity and full-package checks still pending.
+- Controller remains physical-parent-preparation: independent scales and
+  observable error/preparation policy; quantum-parent correspondence separate.
+  Claim/gates unchanged; local scoped work only, no publication or next wave.
+
+## 2026-10-25 - Phi variance V0: evidence and observable locked
+
+- Branch codex/research/phi-variance-admissibility starts at62f8efe0558e2c7f40aac1785c2b7cc780727953;
+  463 original statuses, empty index, old Topic-log diff578/79 preserved.
+- Read-only identities Q14/P20/O14/N13/M11/thermal8 match;38 protected hashes
+  captured. No root search or old scientific producer rerun.
+- Added new bounded card and one draft FORMAL contract: central Phi variance,
+  classical restricted-parent and quantum harmonic comparator separated. No
+  physical scales/error budgets selected, no new material/bath/dynamics.
+- Public safety safe. Next: observable covariance and two prescribed moment bounds;
+  Q physical-parent-preparation remains controlling, not promoted by documentation.
+
 ## 2026-10-25 - Parent static Q4: scoped construction and adversarial QA
 
 - Completed report, one new FORMAL contract/producer/tests/artifact package.
