@@ -316,3 +316,179 @@ source state, internal impact, carrier, receiver response, detector memory แ�
 METHOD snapshot ที่ใช้วินิจฉัยมี canonical-text SHA-256 `431d805567e44ab1e62a3cd7f53488abd5d9d9b9a8478c451e6af1066e658054` ต่างจาก blob ใน `81ad20f12` จึงเป็น working evidence ไม่กล่าวว่า drift ทุกจุดอยู่บน public main และไม่คัดเนื้อหาไฟล์ทั้งฉบับเข้ารายงาน ส่วน references ที่มีเพียง local checkout ยังต้องตรวจขอบเขตเผยแพร่ก่อน publish จริง
 
 ผล read-only completeness ทั้ง `--check` และ `--changed 81ad20f12d398e32e62052588dadf61ea96ce353 --check` ออกสำเร็จ: 17 contracts / 122 routes / 0 errors มี legacy routes และ coverage gaps เดิมคงอยู่ ตัวเลขนี้เป็นผลตรวจโครงสร้าง ไม่ใช่คะแนนความถูกต้องของ UET และไม่ทำให้ INCOMPLETE contracts หรือ physics gates ผ่าน รายละเอียด document/preservation QA บันทึกตามที่รันจริงใน entry ปิดรอบ L ของ [Topic 13 UPDATE_LOG](../topics/0.13_Thermodynamic_Bridge/UPDATE_LOG.md) และ [WORK_LEDGER วันที่ 24 ตุลาคม 2026](../../WORK_LEDGER/2026/2026-10-24.md)
+
+<a id="thermal-dictionary-followup"></a>
+
+## 7. ภาคต่อ — รายละเอียดที่รวมออกอยู่ตรงไหนในงานที่มีแล้ว
+
+24 ตุลาคม 2026 หลังผู้เขียนขอให้เจาะเงื่อนไข Seifert §9.2 ต่ออย่างละเอียด §§1–6 คงเป็นผลรอบ L เดิม ส่วนนี้เป็น feasibility/source audit เพิ่ม ไม่เลือก microscopic model ใหม่ ไม่เพิ่ม subsystem และไม่เริ่ม calculation path ใหม่
+
+### 7.1 คำถาม ขอบเขต และหลักฐานที่ล็อก
+
+**คำถามเดียว:** มีหลักฐานเดิมส่วนใดระบุ eliminated degrees of freedom และ temperature dependence ได้จริง และส่วนใดนำมาปิด joint C–Phi–Pi thermal dictionary ไม่ได้โดยปราศจากสมมติฐานเพิ่ม?
+
+- **ฐาน:** local commit `8e38f78c2cb84f24c94aa1b4e2f76b693c2f62e5`, branch เดิม ไม่มี upstream; index ว่างและมีงานค้างอื่น 463 รายการ ส่วนเก่าของรายงาน/ล็อกไม่ถูกแก้ย้อนหลัง ไม่อ้างว่า SHA นี้เป็น public main
+- **มีแล้ว:** C-side state counting ใน Argument §14, joint reference และ underdetermination ใน §30, Gaussian mass-source matching และ reciprocal thermal dynamics ในอีก lane
+- **ยังขาด/ผู้ควบคุม:** `intrinsic-entropy-correspondence` ใน joint contract เดิม โดยเฉพาะ joint partition/measure, thermal coefficient family และ physical map ไม่สร้าง blocker registry หรือ status ใหม่
+- **ทำอะไร/ทำไม:** ตามนิยามใน source/spec/code กับผลเก่า ก่อนบอกว่าต้องสร้างอะไรเพิ่ม เพื่อแยกช่องว่างจริงจากงานที่มีอยู่แล้วแต่คนละขอบเขต
+- **ขอบเขตระบบ:** retained C/Phi/Pi ต่างจากรายละเอียดจุลภาคภายใน, bath และ detector; ไม่ตัด Phi/Pi เป็น fast state หรือเพิ่ม hidden state แทนผู้เขียน ทั้ง signed/magnitude alternatives ยังคงอยู่
+- **ผลรับได้/หยุด:** reuse แบบมีเงื่อนไข, ไม่รองรับ direct substitution หรือยังไม่ระบุครบ; ไม่ฝืนให้ได้ dictionary ใหม่ ถ้าต้องเลือก joint microscopic ensemble หรือคำนวณใหม่ ให้หยุดที่ prerequisite ที่เฉพาะเจาะจง
+- **คำถามผู้ตรวจ:** state/measure/thermal derivatives ที่สอง lane ใช้อยู่เป็นวัตถุเดียวกันจริงหรือเพียงใช้คำ/สัญลักษณ์คล้ายกัน? นี่คือการตรวจรอยต่อ ไม่ใช่ขอให้รับรอง UET ทั้งหมด
+
+### 7.2 Seifert ต้องการ “รายละเอียด” แบบใด
+
+ใน [Seifert §§9.2.1–9.2.4, Eqs. (206)–(222)](https://arxiv.org/html/1205.4176) ต้องมีการจัด microstates ลง coarse classes, conditional equilibrium ภายในแต่ละ class และความรู้ด้านอุณหภูมิของ constrained free energy เพื่อเชื่อมกับ intrinsic entropy/internal energy และ heat การรู้เพียง coarse trajectory ไม่ได้แสดงว่าทำ construction นี้แล้ว
+
+ต้องระวังสัญลักษณ์: **Φ(ξ,λ) ใน paper คือ microscopic potential energy ไม่ใช่ Phi ของ UET** ส่วน x คือ retained mesoscopic coordinates จะจับคู่ x กับ (C,Phi) ได้ต้องมี mapping ไม่ใช่เพราะเขียนตัวอักษรเหมือนกัน และ ξ ไม่ใช่ข้อมูล detector ที่มองไม่เห็นเฉย ๆ แต่เป็น physical degrees of freedom ใน construction นั้น
+
+นำมาใช้กับช่องว่างของเรา ต้องตอบเจ็ดข้อโดยไม่ประดิษฐ์รายละเอียดขึ้นเติม:
+
+1. **อะไรคงไว้:** C/Phi/Pi แทน physical state ชนิดใด และ coarse class ถูกกำหนดอย่างไร
+2. **อะไรรวมออก:** microstates ใดมี coarse label เดียวกัน; ไม่เรียกทุกสิ่งที่ไม่ได้เขียนว่า bath
+3. **นับอย่างไร:** probability/measure, degeneracy, constraints, N และ volume ที่ใช้
+4. **พลังงานต้นทางคืออะไร:** conditional weighting รับจาก Hamiltonian หรือ effective construction ใด รวม interactions ตรงไหน
+5. **ทำไมใช้ equilibrium ภายในได้:** ต้องมี relaxation/preparation/driving scope ไม่ใช่สรุปจากค่า τ_Phi เป็นบวก
+6. **อุณหภูมิเปลี่ยนแล้วอะไรเปลี่ยน:** ทั้ง Boltzmann weights, effective coefficients และ normalization โดยล็อก physical controls ให้ถูก
+7. **heat/work หมายถึงอะไร:** thermal dictionary ต้องเข้ากับ source ports และ boundary ที่นิยาม ไม่ใช่อ่านจากการลด Ω อย่างเดียว
+
+ไม่จำเป็นต้องให้ coarse variables ทั้งหมดอยู่ equilibrium: รายละเอียดภายในอาจ thermalize ขณะที่ retained distribution ยังไม่สมดุล แต่ต้องมีเหตุผลให้ใช้ separation นั้น ดู [Esposito §§III.1–III.2 และ IV.1](https://arxiv.org/html/1112.5410) fast stationary state ที่ถูกหลาย reservoir ขับไม่จำเป็นต้องเป็น thermal equilibrium และ τ_Phi ใน Core ไม่ใช่หลักฐานวัด relaxation ของรายละเอียดที่ยังไม่ระบุ
+
+### 7.3 สี่ชุดงานเดิมตอบต่างส่วนกัน
+
+| ชุดหลักฐานที่ตรวจ | อะไรถูกคงไว้/รวมออกจริงตามขอบเขตเดิม | ใช้ต่อได้อะไร | ยังไม่ตามมา |
+| --- | --- | --- | --- |
+| [Argument §14](UET_THEORY_ARGUMENT.md), §§14.2–14.4 | เก็บ m หรือ C=s_C m; นับ binary configurations ที่ให้ population contrast เดียวกันใน mean-field comparator; Phi ยังเป็น response coordinate ที่กำหนดเพิ่ม | มี mixing entropy และ local quartic correspondence ของ C พร้อม N/domain/approximation limits | ไม่ได้ derive microstates หรือ intrinsic entropy ของ Phi/Pi; f_Phi ยืมจาก prototype และ affine j(Phi) เป็น constitutive choice |
+| [Core matter–space implementation](../core/02_equations/matter_space/uet_matter_space.py), MatterSpaceConfig และ matter_space_free_energy | โค้ดเก็บ C/Phi/Pi และ normalized coefficients ไม่ได้รวม fast microstates ใหม่ระหว่างรัน | บอก functional, derivatives, kinetics และ ledger ที่ใช้จริง; config ระบุ defaults เป็น benchmark controls และปฏิเสธ SI | ไม่มี physical T parameter หรือ microscopic conditional measure ใน interface นี้ ไม่ใช่ proof ว่า intrinsic entropy เป็นศูนย์ |
+| [Joint reference producer](../topics/0.13_Thermodynamic_Bridge/Code/03_Research/Research_T13_Joint_Thermodynamic_Completion.py), reference()/coarse_free_energy_residuals() | ประกาศ one-bath stochastic reference เพิ่มเหนือ deterministic Core; ไม่มี explicit bath microstates ถูก derive ใน producer | REF-E consistency และ HIST-F witness เดิม; เห็นว่า Θ เป็น bath-energy scale แยกจาก symbolic coefficients | FDT choice ไม่ใช่ microscopic bath elimination หรือกฎ T-dependence ของ material coefficients |
+| [Thermal mass-source matching specification](../core/03_lanes/topic13_support/T13_MATTER_STRAIN_SUSCEPTIBILITY_MATCH.md) และ [implementation](../core/03_lanes/thermal/uet_matter_strain_susceptibility.py), thermal_moments()/thermal_matching() | Gaussian thermal modes ของ canonical O(2) matter doublet บน normal branch; response displacement/strain เป็น sources ตามที่ประกาศ | มี F_th, thermal entropy/heat capacity และ direct Phi–entropy coefficient ใน conditional lane จริง | thermal increment ไม่ใช่ full joint Ω, χ ไม่ได้ระบุว่าเท่ากับ C และไม่ใช่ graphite phonon identity; ไม่มี vacuum/interaction/transport/physical-source closure |
+
+**ผลที่แคบลงจากรอบ L:** ไม่ควรพูดว่าทั้งโครงการยังไม่มีที่มาของ entropy หรือไม่เคยเชื่อม Phi กับ thermal response แต่ก็ยังไม่พบเหตุให้ถือว่างานทั้งสี่เป็น thermal dictionary เดียวกัน การตรวจนี้ระบุว่า “มีชิ้นไหนแล้ว” และปฏิเสธการนำมาต่อกันด้วยชื่อเทอมอย่างเดียว ไม่ใช่ตัดสินว่าไม่มีทางเชื่อมในอนาคต
+
+### 7.4 กรณีเดิมที่ช่วยอธิบาย: entropy เกี่ยวกับ Phi ได้โดย Phi ไม่ใช่ entropy
+
+ใน mass-source lane เดิม การเปลี่ยน response displacement เปลี่ยน mass parameter ของ χ modes ตาม source ที่ประกาศ จึงเปลี่ยน thermal population และ entropy contribution ได้ นี่ไม่ใช่การประกาศว่า Phi เป็น temperature หรือเป็นจำนวน bits และยังไม่ใช่ derivation ว่า Phi เป็น information ทั้งทฤษฎี
+
+ผลเดิมใน specification ให้ G และ r จาก free energy เดียวกัน โดย r เป็น coefficient ของการเปลี่ยน entropy ตาม Phi ใน local expansion ไม่ใช่ entropy ทั้งหมดของ Phi เอง ส่วน `thermal_moments()['entropy']` เป็น entropy ของ thermal modes ใน construction นั้น ไม่ใช่ S_int ของทุก degree of freedom ใน C/Phi/Pi
+
+สัญลักษณ์อุณหภูมิก็ไม่ใช่ตัวเดียวกันทุกไฟล์: θ ใน C-side comparator เป็น normalized k_B T/E_* ส่วน Θ เป็น bath scale ของ joint reference และ theta ใน reciprocal material dynamics เป็น temperature perturbation รอบ reference T การเชื่อมต้องตามนิยาม/หน่วย ไม่ใช้ชื่อ theta เหมือนกันแทน conversion
+
+[Reciprocal thermal dynamics specification](../core/03_lanes/topic13_support/T13_RECIPROCAL_THERMAL_DYNAMICS.md), “Positive availability and reciprocal cancellation” ยังแสดงว่า r cross term ยกเลิกออกจาก quadratic availability หลัง Legendre transform ทั้งที่ r ยังอยู่ใน entropy และ reciprocal equations ดังนั้น **ไม่เห็นเทอม entropy ชัดใน ledger ไม่ได้พิสูจน์ว่า entropy นั้นไม่มี** ต้องตามชนิด potential และ transformation ที่ใช้ ไม่เดาจากหน้าตาสมการ
+
+ผลนี้เป็น local quadratic material candidate กับ linear entropy/quadratic availability budget ไม่ใช่ nonlinear total SI first law และไม่ถูกย้ายมาเปลี่ยน Ω ของ homogeneous pilot รอบนี้ ไม่รัน integration, quadrature, finite differences หรือ verifier เดิมซ้ำ
+
+### 7.5 เงื่อนไขที่ยังห้ามนำคำตอบข้าม lane
+
+- **χ กับ C:** ชื่อ matter และรูป coupling ที่คล้ายกันไม่ระบุ coordinate map, symmetry, phase/degeneracy หรือ measure ให้เอง สอง real χ components ไม่ใช่ binary +/- states ของ §14 และไม่ใช่จำนวนบิตสองบิต
+- **ไม่มี fixed-C conditioning ใน interface นี้:** `thermal_moments(T,mass_squared)` กับ `deformed_free_energy(T,sources,delta_phi,strain)` ยังไม่รับ C หรือกฎจัด χ microstates ลง coarse classes ของ C จึงไม่ถือว่าฟังก์ชันนี้เป็น joint constrained F(C,Phi,T) แล้ว พารามิเตอร์ x=mass_squared ของ lane นี้ไม่ใช่ coarse x ใน Seifert และไม่ใช่ population contrast m ใน §14
+- **หน่วย/ขนาดระบบ:** F_th ใน Gaussian lane เป็น natural-unit density มิติ E^4; entropy density มิติ E^3 ส่วน Ω ของ joint pilot เป็น normalized unit-cell object ต้องมี volume/energy/field normalization ก่อนเทียบ ไม่คูณ N หรือ degeneracy ซ้ำ
+- **สิ่งที่ขาดจาก thermal increment:** normal branch χ=0, positive mass squared, fixed measure/kinetic normalization และ Gaussian approximation ไม่ครอบคลุม condensate, interaction loops, vacuum counterterms หรือ T-dependent resummation ที่ไม่ได้รวมไว้
+- **สมดุลทางสถิติไม่ใช่หลักฐานเวลา:** การมี equilibrium F_th ยังไม่แสดงว่า χ modes thermalize เร็วกว่า retained C/Phi หรือ driving ในระบบจริง ต้องมี kinetic/time-scale correspondence หากจะใช้ conditional-equilibrium elimination กับ dynamics นั้น
+- **thermal modes ไม่ใช่ bath-noise derivation แล้ว:** χ determinant ไม่ได้ derive Gaussian white bath ของ §30, HMF bath subtraction หรือ mobility/damping/kernel ของ Core; การเชื่อม fluctuation/transport ต้องมีที่มาเพิ่ม ไม่อนุมานจากการมี T ในสูตร
+- **การนับซ้ำ:** ถ้า material coefficients รวม thermal modes นี้แล้ว จะบวก increments ซ้ำไม่ได้; การรวม C-side state-counting กับ χ determinant ก็ต้องมี joint state accounting ก่อน ไม่ถือว่าเป็น independent factors เพราะอยู่คนละไฟล์
+- **พจน์ต้องมาด้วยกัน:** ห้ามดึง G เพียงตัวเดียวมาใช้แล้วละ r กับ companion Hessian terms หากอ้างผล matching ทั้งชุด และผลดังกล่าวยังไม่ derive mobilities/damping ของ Core
+
+### 7.6 Identity และขอบเขตการใช้ผลเก่า
+
+ตรวจ source/spec/artifact ที่เกี่ยวข้องเก้ารายการเทียบ local baseline `8e38f78c2cb84f24c94aa1b4e2f76b693c2f62e5`: canonical-text identities ตรงกับ commit นี้ ไม่เปลี่ยน source เหล่านั้น ส่วน [mass-source artifact](../core/07_artifacts/topic13/t13_matter_strain_susceptibility_matching_audit.json) กับ [reciprocal artifact](../core/07_artifacts/topic13/t13_reciprocal_thermal_dynamics_audit.json) เป็นผลที่บันทึกไว้เดิม ไม่ใช่ผลรันวันนี้
+
+ตาม legacy paths ในสอง artifacts ผ่าน [core_paths.canonical_existing_path](../core/core_paths.py) แล้วพบครบทั้ง 18 identity entries: 8 raw hashes ตรง, อีก 8 ตรงเมื่อ normalize CRLF/CR เป็น LF เท่านั้น และ 2 producer hashes ไม่ตรงแม้ normalize แล้ว ไม่เรียกสองรายการหลังว่ามี current producer identity ครบ และไม่แก้ artifact ให้ดูสด รายการ 18 นี้มี source ซ้ำระหว่าง artifacts ไม่ใช่ 18 การทดลองหรือ 18 source ที่ต่างกัน
+
+ค่า raw hash ของ generator เดิมไม่ใช่ policy text hash แบบใหม่ การตรงหลัง normalize เป็นหลักฐานเรื่องเนื้อหาข้อความ ไม่ใช่การอ้างว่า raw identity ตรง การอ่าน source/spec ที่ unchanged ใช้อธิบาย construction ได้ แต่ถ้าจะนำ numerical acceptance ของ legacy artifact มาเป็นผล current-run ใหม่ ต้องจัดการ provenance/producer review แยกก่อน; รอบนี้ไม่ต้องทำเช่นนั้นเพื่ออ่านความหมาย และไม่ใช้ปัญหา path/hash ตัดสินว่าผลวิทยาศาสตร์ผิด
+
+Controlling blockers ของ legacy lanes ยังเป็น `physical_material_mass_source_and_vacuum_matching_missing` และ `physical_material_and_preparation_match_missing`; ไม่ทับ `intrinsic-entropy-correspondence` ของ joint reference และไม่เลื่อน physics gates จากการตรวจเอกสารนี้
+
+<a id="temperature-dependency-audit"></a>
+
+## 8. อุณหภูมิเข้ามาตรงไหน — ตรวจตามเทอม ไม่เดาจากชื่อฟังก์ชัน
+
+### 8.1 “ค่าคงที่ตอนรัน” ไม่เท่ากับ “ไม่ขึ้นกับ T ทางกายภาพ”
+
+MatterSpaceConfig เก็บตัวเลขสำหรับหนึ่ง realization และไม่มี physical-temperature argument ส่วน `reference()` แยก Θ ออกจาก a_C, b_C, a_Phi, b_Phi, g, M_C, M_Phi, τ อย่างชัดเจน นี่คือขอบเขตที่ implementation รองรับ ไม่ใช่หลักฐานว่า coefficients ของวัสดุไม่พึ่ง T หรือว่า entropy เป็นศูนย์
+
+ถ้าใช้ REF-E เป็น T-independent reference potential ตามนิยาม การคง coefficients แล้วเปลี่ยน bath-energy scale เป็น family ของแบบจำลอง reference ที่ตั้งได้ แต่ถ้าอ้าง HIST-F ว่า Ω เป็น coarse free energy ของระบบเดิม ต้องมีเหตุผลว่าฟังก์ชัน coefficients, state normalization และ measure เปลี่ยนกับ physical T อย่างไร การเลือกสอง reading นี้ต้องไม่สลับกลางข้ออ้าง
+
+### 8.2 Temperature-dependency sheet ของสิ่งที่มีอยู่
+
+| เทอม/ข้อมูล | หลักฐานเดิมบอกอะไร | อะไรยังไม่กำหนด และทำไมสำคัญ |
+| --- | --- | --- |
+| a_C, b_C | §14.4 ให้ a_C=(θ−j_0)/s_C² และ b_C=θ/(3s_C⁴) ภายใต้ local mean-field matching | เป็น conditional correspondence ไม่ใช่ measured thermal family; ต้องระบุ E_*, s_C, j_0 และสิ่งที่ล็อกเมื่อเปลี่ยน T จึงตาม entropy contribution ได้ |
+| g | §14 ใช้ g=γ/s_C² จาก affine j(Phi) ที่ผู้ตรวจเลือก | ต้องรู้ origin/T-dependence ของ γ และ normalization; constant g ใน fixture ไม่ตัดสินว่า physical coupling เป็น energetic หรือ entropic ทั้งหมด |
+| a_Phi, b_Phi และ f_Phi | §14 ยืม response free-energy sector ของ prototype; Core เก็บ polynomial coefficients | ยังไม่มี full joint microstate counting ของ sector นี้; thermal mass-source increment อีก lane ไม่กำหนด total a_Phi(T), b_Phi(T) ของ realization นี้ให้เอง |
+| κ_C, κ_Phi และ spatial measure | Core มี gradient terms แต่ joint pilot เป็น homogeneous unit cell | spatial thermal dictionary ไม่ได้ถูกตรวจใน pilot; ไม่ใช้การไม่ปรากฏของ gradient เป็นคำตอบเรื่อง entropy ของ spatial modes หรือ continuum cutoff |
+| K_ref=τ Pi²/(2M_Phi) | positive storage ใน normalized reference; Pi เป็น rate coordinate | ต้องระบุ physical variable ที่ล็อกในการทำ T derivative และ normalization; fixed Pi กับ fixed physical canonical momentum ไม่ใช่เงื่อนไขเดียวกันโดยอัตโนมัติ |
+| M_C, M_Phi, τ และ noise | positivity/drift/FDT relation ของ REF-E ถูกประกาศไว้ | ไม่ได้ derive mobilities หรือ temperature laws; M_Phi กับ τ ยังเข้าพจน์ storage จึงแยกทิ้งจาก thermal interpretation ทั้งหมดไม่ได้ |
+| E_*, s_C, N, volume และ Θ | §§14/17 และ joint contract ให้ conditional scale conventions | หาก scale หรือ state/volume เปลี่ยนเมื่อเปลี่ยน T ต้องตามการแปลงนั้น ไม่เอา normalized derivative ไปเรียก SI entropy; ต้องล็อก ensemble/physical controls ก่อน |
+| Additive reference ของ free energy | gradient/drift ที่ T เดียวไม่บอก normalization นี้ | T-dependent reference เกี่ยวกับ absolute entropy/U; แต่ term ที่ขึ้นกับ T อย่างเดียวและไม่ขึ้นกับ state ยกเลิกใน state differences ของ isothermal fixed-control process ได้ ไม่อ้างว่าความกำกวมทุกแบบทำให้ heat ทุกชนิดไม่ทราบเสมอ |
+
+ตารางนี้อ่านจากนิยาม/ผลเดิม ไม่ได้ fit functions ของ T หรือคำนวณ derivatives ใหม่ การให้ numerical fixture คงที่เป็นวิธีล็อก benchmark ที่ถูกต้องได้ แต่ไม่ใช่ derivation ของ material T-dependence และการจับคู่ที่ T จุดเดียวไม่ใช่หลักฐานการจับคู่ตลอดช่วงอุณหภูมิ
+
+### 8.3 เหตุใดต้องบอกว่า derivative ล็อกอะไร
+
+เมื่อใช้ S_int=-∂F/∂T ต้องบอกว่า fixed physical retained state, external control, particle constraint/ensemble และ reference measure คืออะไร ไม่ใช่ถือว่าตัวเลข normalized ทุกตัวถูกล็อกแล้วเท่ากับ physical controls ถูกล็อก เช่น C=s_C m ต้องรู้ว่า scale s_C ถูกกำหนดอย่างไร; fixed-volume field density ไม่ใช่ total energy ของตัวอย่างที่ volume เปลี่ยน
+
+ใน Gaussian implementation `thermal_moments(temperature,mass_squared)` ให้ thermal derivatives/entropy ที่ fixed mass_squared ตาม construction ของ source probe ถ้าใน realization อื่น mass parameter, kinetic normalization หรือ measure มี T-dependence เพิ่ม จะใช้ output entropy เดิมเป็น total thermal derivative โดยไม่ทบทวนไม่ได้ คำถามนี้ไม่แก้ด้วยการเปลี่ยนตัวเลข T หลายค่าอย่างเดียว
+
+สำหรับ state ที่เก็บ Pi ต้องรู้ physical conjugate-variable/measure ก่อนทำ derivative ข้าม thermal family การเป็น odd variable บอก time-reversal parity แต่ไม่ใช่หลักฐานว่า Pi มีหน่วยและ normalization ของ physical canonical momentum แล้ว รอบนี้ไม่เปลี่ยน Pi ไม่ทำ coordinate reduction หรือคำนวณ Jacobian ใหม่
+
+### 8.4 Intrinsic entropy เป็นศูนย์ได้เมื่อไร และไม่ได้แปลว่าอะไร
+
+การกำหนด reference ที่ไม่มี relevant internal degeneracy เป็นสมมติฐานได้ ไม่จำเป็นต้องใส่ hidden entropy เพิ่มทุกครั้ง แต่ถ้า reading เป็น coarse free energy ต้องมีเหตุผลให้ entropy ที่รวมออกมีค่าตามที่อ้าง ไม่ตั้งเป็นศูนย์เพราะ source ยังไม่ให้มา
+
+**ไม่มี intrinsic entropy ที่เพิ่มจากการรวมออก ไม่เท่ากับไม่มี entropy ของ distribution บน retained states** แม้ reference energy ไม่พึ่ง T, thermal probability distribution ยังขึ้นกับ bath scale ได้อยู่ และ entropy production ก็เป็นอีกปริมาณหนึ่ง ไม่แปลว่าค่า sigma หรือ R คือ entropy เหล่านั้นตามไปด้วย ดู [Argument §30.6–30.8](UET_THEORY_ARGUMENT.md)
+
+### 8.5 F(T) หลายอุณหภูมิ กับการขับ T(t) เป็นคนละโจทย์
+
+การรู้ thermal family ช่วยตรวจ derivative แต่การ ramp bath temperature ในเวลาจริงไม่ใช่โจทย์ isothermal เดิมของ §30 หรือ Seifert §9.2.2 โดยอัตโนมัติ ต้องทบทวน state/parameters, work/heat convention และ stochastic assumptions สำหรับ protocol ที่เปลี่ยน ไม่แทน Θ(t) ใน reference แล้วประกาศว่าได้ physical heating/cooling law ครบ
+
+การวัด normalized equilibrium distributions หลาย T อาจให้ข้อมูลเพิ่มเกี่ยวกับ relative landscape แต่ไม่รับรอง absolute thermal normalization/HMF reconstruction ทั่วไป ดู [Talkner–Hänggi §II Eq. (17), Appendix A](https://arxiv.org/pdf/1605.07415) จึงต้องแยก “ข้อมูลมากขึ้นมีประโยชน์” ออกจาก “ข้อมูลชนิดนี้เพียงพอให้คำตอบเอกลักษณ์แล้ว” ไม่มีการขอหรือเก็บข้อมูลเพิ่มในรอบนี้
+
+<a id="thermal-evidence-decision"></a>
+
+## 9. ผล feasibility: จะปิดอะไรด้วยหลักฐานชนิดไหน
+
+### 9.1 หลักฐานที่มีแต่ละชนิดตัดสินได้ไม่เท่ากัน
+
+| หลักฐานหรือ input ที่มี | ตอบอะไรได้ตามขอบเขต | ยังไม่ตอบอะไร |
+| --- | --- | --- |
+| Ω/drift/trajectories ที่ bath จุดเดียว | ตรวจ normalized response กับ comparator ตาม protocol | ไม่เลือก intrinsic entropy หรือ physical energy/heat ให้เอกลักษณ์ ตาม witness เดิม §30.4 |
+| C-side state counting และ mean-field construction | อธิบาย mixing entropy กับส่วน polynomial ของ C แบบมีเงื่อนไข | ไม่เติม full Phi/Pi sector หรือเปลี่ยน finite binary domain เป็นทั้งเส้นจริง |
+| Gaussian F_th และ r ของ lane เดิม | มี thermal contribution และ reciprocal entropy coupling ที่ตามต้นทางได้ | ไม่ใช่ full joint dictionary, physical material identity หรือ total entropy จาก vacuum/interaction ทุกส่วน |
+| Equilibrium distributions หลาย T ภายใต้ measure เดิม | จำกัด relative statistical landscape และบาง thermal dependence ได้เพิ่ม | normalized probabilities ไม่เลือก free-energy normalization/HMF ทั้งหมดทั่วไป และไม่ให้ kinetic/source calibration เอง |
+| Joint microscopic construction พร้อม state/measure/temperature family และ justified conditional equilibration | เป็นฐานสำหรับตรวจ constrained F/S_int/U และ heat convention ต่อได้ | ไม่รับรองว่าได้สมการ UET เดิมใน limit ที่ควบคุม หรือแยก UET จาก comparator; ต้องแสดงการจับคู่จริง |
+| Independent physical source/work/energy/measurement correspondence | ทำให้ตรวจ operational heat และ uncertainty ของระบบที่เลือกได้ | ไม่เปลี่ยน calibration เป็น blind test หรือทำให้กลไกที่ equivalent กลายเป็นฟิสิกส์ใหม่ |
+
+ดังนั้นควรขอ input ให้ตรงกับช่องว่าง ไม่ใช่ขอข้อมูลเพิ่มแบบไม่รู้จุดประสงค์ และการมีข้อมูลอุณหภูมิหรือ entropy output บางตัวไม่ทำให้ joint correspondence ครบเอง
+
+### 9.2 คำวินิจฉัยที่ได้เพิ่มจริง
+
+1. **รับใช้ต่อได้แบบมีเงื่อนไข:** C-side state counting และ Gaussian thermal/Phi-entropy mechanism มีต้นทางจริง ไม่ต้องเริ่มใหม่จากศูนย์
+2. **การแทนกันตรง ๆ ยังไม่รองรับ:** C binary population, O(2) χ modes, normalized Φ/Pi และ material response displacement ยังไม่ถูกแสดงว่าใช้ joint state/measure/units เดียวกัน จึงไม่ย้าย S_th หรือ r ไปเป็น full S_int(C,Phi) และไม่บวกสอง free energies เข้าด้วยกันอัตโนมัติ นี่ไม่ใช่ theorem ว่าไม่มี mapping ใดเป็นไปได้
+3. **แยกช่องว่างแคบลง:** สิ่งที่ขาดใน joint pilot ไม่ใช่ “entropy ทุกชนิด” แต่คือ correspondence ของ retained C/Phi/Pi กับสิ่งที่ถูกนับรวมแล้ว พร้อม total coefficient/thermal family และ normalization
+4. **ตรวจพบ representation trap ที่อธิบายได้:** function ชื่อ free_energy, coefficient ที่เป็นตัวเลขคงที่ และการไม่มี r ใน availability ไม่ตัดสิน physical internal energy หรือ zero intrinsic entropy ต้องตาม construction และชนิด potential
+5. **ไม่เพิ่มข้ออ้าง:** REF-E consistency/equivalence และ HIST-F underdetermination เดิมยังอยู่ Physical dictionary, learning, persistence และ global openness ไม่ถูกตัดสินใหม่จาก audit นี้
+
+นี่เป็นความก้าวหน้าด้าน correspondence feasibility และการคัดสิ่งที่จะใช้ต่อ ไม่ใช่ผลทำนายกายภาพใหม่หรือ microscopic closure ที่สำเร็จแล้ว และไม่อ้างว่า self-review ของ AI เป็น specialist approval
+
+### 9.3 หนึ่งงานถัดไป และสิ่งที่ผู้เขียนยังไม่ต้องทำ
+
+ไม่เริ่มตรวจจากศูนย์: [Argument §§13.2 และ 13.7](UET_THEORY_ARGUMENT.md) แยก amplitude squared, signed charge และ nonconserved order coordinate ไว้แล้ว รวมถึงข้อจำกัด conservation/EOS และ rejected double-well reduction ใน scope ของผลเดิม จึงไม่รัน EOS หรือถามซ้ำเพียงว่า C เปลี่ยนชื่อเป็น amplitude/charge ได้หรือไม่
+
+**ข้อเสนอถัดไปที่เฉพาะขึ้น:** จัดทำข้อเสนอ joint conditioning/state–measure rule สำหรับการอ่าน Ω แบบ coarse free energy หนึ่งขอบเขต โดยต้องตอบว่า C เป็น coarse constraint ของ microstates ชุดใด และ Phi เป็น retained state หรือ parameter อย่างไร หากจะ reuse Gaussian entropy ให้ระบุว่า χ ถูกนับภายใต้ constraint ของ C หรือเป็นรายละเอียดอีกส่วนที่มี accounting ต่างกัน ไม่ใช้ unconstrained thermal trace มาแทน fixed-C partition โดยปริยาย
+
+นี่ต้องเป็นข้อเสนอที่เปิดเผยสมมติฐานเพิ่ม ไม่ใช่กลับไปทำผลเก่าซ้ำหรือถือว่ารับอนุมัติจากการมีชื่อ C ใน code แล้ว ไม่เปิดวัสดุใหม่ ไม่หา heat dataset เพื่อเลี่ยงคำถาม และยังไม่ประกาศเลือก microscopic model ของทั้ง UET จาก audit นี้
+
+ชิ้นงานที่ต้องได้คือข้อเสนอที่ประกาศ retained/eliminated variables, normalization/degeneracy และ conditional domain หรือคำตัดสินตรง ๆ ว่าเป็นคนละ model/ยังต้องมี input ใด พร้อม comparator และเหตุผลที่จะเปิด calculation path หากจำเป็น ไม่บังคับให้ผลลงท้ายว่ารวมกันได้ ไม่ทำ mapping ใหม่โดยอ้างว่าเป็นสิ่งที่ผู้เขียนเคยยืนยันแล้ว และเปิดต่อเฉพาะเมื่อมี premise/constraint ที่เปลี่ยนข้อวินิจฉัย ไม่เปลี่ยนสัญลักษณ์แล้วเปิด route ที่ถูกจำกัดไว้ใหม่
+
+ผู้เขียนยังไม่ต้องคิด entropy formula, กำหนด coefficients หรือหาเครื่องมือทดลองให้ งานตามรอยและเสนอทางเลือกพร้อมหลักฐานเป็นหน้าที่ผู้วิจัย หากพบทางเลือกที่เปลี่ยนความหมายของ information/memory จริงจึงส่งให้ทบทวนเฉพาะข้อนั้น ไม่ขอให้เล่าทั้งทฤษฎีใหม่ และยังรักษาทางอ่าน signed/magnitude ทั้งสองแบบ
+
+**จุดหยุดของภาคต่อนี้:** แผนที่ eliminated content กับ T-dependence และคำวินิจฉัยการนำของเดิมมาใช้เสร็จแล้ว ยังไม่เริ่ม correspondence calculation ข้างต้น หากต้องเพิ่ม microscopic ensemble, Hamiltonian, state หรือสมมติฐาน thermal family ต้องเสนอแยกพร้อมเหตุผลก่อน ไม่เพิ่มเพื่อให้การทำงานดูต่อเนื่อง
+
+## 10. ขอบเขตและการตรวจภาคต่อ
+
+source/spec/artifact ที่ตรวจเทียบ baseline เก้ารายการคือ matter–space specification, matter–space implementation, joint reference producer, mass-source specification/implementation, reciprocal dynamics specification, mass-source artifact, reciprocal artifact และ core_paths helper ตามลิงก์ใน §7 เป็น snapshot ของ local baseline ที่ระบุ ไม่กล่าวว่าได้ตรวจทุก Core family หรือ public main สด
+
+เก็บ §§1–6 ของรายงานเดิมไว้ครบ ใช้ SHA-256 ของ canonical LF text ตรวจ preservation ไม่แก้รายงาน Argument, scientific code, calculation contracts, artifacts หรือ gates ไม่สร้าง contract ใหม่เพราะภาคต่อนี้เป็นการตรวจ source/นิยาม/รอยต่อของผลเดิม ยังไม่มีการประเมิน thermal derivatives ใหม่หรือรัน scientific calculation
+
+การตรวจ legacy identity ใน §7.6 แยกจาก completeness schema check: การที่ completeness ไม่พบ structural error ไม่ได้ certify producer identity ของ legacy artifact ทุกไฟล์ การ refresh producer/provenance ถ้าจะทำภายหลังต้องเป็น scoped repair ตามมาตรฐาน ไม่เขียน hash ใหม่เพื่อให้ประวัติดูผ่าน
+
+ผล read-only completeness ทั้งปกติและ changed-path จาก baseline `8e38f78c2cb84f24c94aa1b4e2f76b693c2f62e5` ออกสำเร็จ 17 contracts / 122 routes / 0 errors; existing joint/cycle identities 8+42 ยังตรงและ review ยังคง INCOMPLETE การตรวจ links/anchors/privacy/preservation กับ interface inspection ไม่ใช่ numerical tests หรือผลการรัน science ใหม่ รายละเอียดอยู่ใน log ปิดภาคต่อ ไม่มี push/PR/merge/เผยแพร่ หรือติดต่อผู้เชี่ยวชาญจากคำสั่งวิจัยต่อนี้

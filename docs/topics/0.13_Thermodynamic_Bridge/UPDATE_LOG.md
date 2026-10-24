@@ -1,3 +1,56 @@
+## 2026-10-24 - Thermal-dictionary follow-up: coefficient and temperature feasibility
+
+- Completed: [Foundations review sections 8-10](../../meta/UET_THERMODYNAMIC_FOUNDATIONS_REVIEW.md#temperature-dependency-audit)
+  provide a term-level T-dependency sheet, derivative/control/measure conditions,
+  and an input-to-claim decision table. Existing coefficients were not modified.
+- Decision: runtime-fixed coefficients do not establish physical T-independence;
+  one-T matching does not close a thermal family. A Phi-dependent entropy
+  contribution is present in a different conditional lane, not a full joint
+  intrinsic entropy. No automatic addition or direct cross-lane substitution.
+- Preserved REF-E/HIST-F alternatives, standard equivalence, signed/magnitude
+  options and global author intent. No new formal calculation, numerical test,
+  microscopic model/term or empirical validation was claimed.
+- Reused Argument 13.2/13.7 amplitude/charge/conservation/EOS restrictions, not
+  a reopened double-well or charge test. The specific missing interface is
+  fixed-C conditioning of the thermal trace; its mass-squared argument is not C.
+- One proposed next task is an explicit joint conditioning/state-measure rule,
+  not a chosen microscopic model or an automatic calculation.
+  Stop at this feasibility result pending separately scoped construction.
+- Controller remains intrinsic-entropy-correspondence. Next: read-only QA and
+  scoped local commit. Public safety safe; no push/PR/contact/publication.
+- QA completed: normal and baseline-changed read-only completeness exit 0
+  (17 contracts/122 routes/0 errors); 8+42 contract identities match and both
+  reviews stay INCOMPLETE. Legacy identity findings above are separate, not
+  silently covered by this schema result. No scientific verifier rerun.
+- Checked 41 local link uses, six retained public URLs, seven explicit anchors,
+  nine tables, fences and privacy; AST inspection confirms no T field in Core
+  config and no C-conditioning argument in the thermal-trace interface. The
+  original report prefix, prior logs, four protected hashes, nine selected
+  source identities and unrelated tracked-diff digest are preserved.
+- Closure: follow-up source/T feasibility audit completed; no new microscopic
+  construction or derivative calculation started. Local commit only, retaining
+  the pre-existing 578/79 Topic log diff and all unrelated user work.
+
+## 2026-10-24 - Thermal-dictionary follow-up: existing elimination evidence
+
+- Completed: [Foundations review section 7](../../meta/UET_THERMODYNAMIC_FOUNDATIONS_REVIEW.md#thermal-dictionary-followup)
+  reconstructs what C state counting, normalized Core, joint thermal reference
+  and Gaussian mass-source matching actually retain/eliminate. No new model.
+- Narrowed: entropy is not wholly absent. The separate Gaussian lane already
+  has a Phi-dependent thermal entropy increment and reciprocal r; its absence
+  from quadratic availability is a Legendre cancellation, not zero entropy.
+  Direct transfer to the C/Phi/Pi dictionary is unsupported without state,
+  measure, unit and temperature correspondence. No numerical result promoted.
+- Actual read-only provenance: nine selected sources/specs/artifacts match
+  local baseline 8e38f78c2 after LF normalization. All 18 old identity entries
+  resolve canonically: 8 raw matches, 8 LF-only matches, 2 changed producers.
+  Legacy artifacts retained as historical evidence; no rerun or refresh.
+- Controller remains intrinsic-entropy-correspondence for the joint reference;
+  separate material/vacuum/preparation blockers stay scoped to their lanes.
+- Public safety safe. Next: coefficient/T and derivative-control audit, then
+  finite prerequisite handoff. Core, old reports/contracts/gates untouched;
+  no external contact, push or publication.
+
 ## 2026-10-24 - Foundations review L3 UET mapping and bounded handoff
 
 - Completed: [Foundations review sections 4-6](../../meta/UET_THERMODYNAMIC_FOUNDATIONS_REVIEW.md)
