@@ -1,3 +1,109 @@
+## 2026-10-24 - Lattice bath P4: scoped formal package and final QA
+
+- Completed P report, one FORMAL contract, producer, tests and compact artifact.
+  New20 identities match; --emit-report and final read-only --check pass12 exact
+  groups/all16 spin controls/14 deliberate negative controls, review INCOMPLETE.
+- Full new unittest discovery passes37/37; final artifact-lineage focused test
+  passes1/1 after document identity refresh. QA fixed tuple-cache type-validation
+  bypass and a metadata unit-string mismatch, without physics/threshold changes.
+- Normal read-only completeness and final explicit seven-path build_report pass
+  (21 contracts/126 routes/0 errors). Coverage is not physical validation.
+  Report QA:8 local links/2 primary URLs,3 anchors,4 tables,21 display equations,
+  8 inline math pairs and fenced example; privacy/unit/sign/claim self-review.
+- Thirty-one protected normalized hashes and all unrelated original dirty-file
+  hashes remain unchanged. The original Topic-log body is byte-preserved; stage
+  only this round's new prefix, excluding the older578/79 log working diff.
+- Narrowed result: locked equilibrium-local parent route excluded, exact formal
+  bath/memory/FDT admitted within assumptions, simple Core reduction conditional.
+  physical-parent-preparation and Core-surrogate-admission remain UNKNOWN; all
+  old O/M/N/R and aggregate physics gates/claims unchanged.
+- One next prerequisite: admissible stationary/metastable parent reference and
+  preparation/regime evidence. No automatic recentering/search, repulsion, new
+  material, spin kinetics, experiment, external contact or next wave.
+- Public safety safe. Scoped local checkpoint on codex/research/lattice-bath-reduction
+  from e3bc64812a5ea7e6d40ba65da429dd65e89750ed; seven paths/new log prefix only.
+  No push/PR/merge/publication, Core/API/defaults/thresholds/README/gate changes.
+
+## 2026-10-24 - Lattice bath P3: exact hidden memory, conditional Core reduction
+
+- Completed report section 4/new P producer exact block response, conditional
+  hidden OU preparation/FDT, spectral noise, low-frequency remainder and limit
+  checks. Full-state and eliminated response agree with matched noise/initial law.
+- White bath alone leaves internal memory. Low-frequency dynamic mass differs
+  from bare kinetic inertia and has a stable-comparator negative coefficient
+  witness; no atomic-control retune. Explicit fast-mode and white limits commute
+  in the declared scaling, so no unsupported noncommutation claim is made.
+- Band/resolvent/positive-mass and matched-noise conditions remain necessary
+  for a Core surrogate. No C rates or annealed spin dynamics are derived.
+- Claim impact: standard-comparator equivalence/conditional mapping, no new
+  UET discriminator. Next controller remains admissible parent preparation/regime;
+  P4 new package, regression, identity and privacy/completeness QA still pending.
+
+## 2026-10-24 - Lattice bath P2: bath preparation and energy reduction
+
+- Completed report section 3/new exact finite-bath, Drude, OU covariance/parity,
+  stability, white-limit and energy-balance residuals; each checked locally.
+- Shifted conditional Gibbs and unshifted preparation differ by initial slip.
+  Normalized bath integration preserves bare mechanical potential and the O
+  parent no-go. Auxiliary variables represent bath memory, not new Core matter.
+- Colored/white equilibrium injection balances loss; friction loss is not total
+  entropy production. Gamma/cutoff are explicit free reference choices.
+- Public safety safe; no old verifier rerun, trajectory or physical promotion.
+  Next: hidden reduction/package QA, not material selection or experiment.
+
+## 2026-10-24 - Lattice bath P3: exact hidden memory, conditional Core reduction
+
+- Completed report section 4/new P producer exact block response, conditional
+  hidden OU preparation/FDT, spectral noise, low-frequency remainder and limit
+  checks. Full-state and eliminated response agree with matched noise/initial law.
+- White bath alone leaves internal memory. Low-frequency dynamic mass differs
+  from bare kinetic inertia and has a stable-comparator negative coefficient
+  witness; no atomic-control retune. Explicit fast-mode and white limits commute
+  in the declared scaling, so no unsupported noncommutation claim is made.
+- Band/resolvent/positive-mass and matched-noise conditions remain necessary
+  for a Core surrogate. No C rates or annealed spin dynamics are derived.
+- Claim impact: standard-comparator equivalence/conditional mapping, no new
+  UET discriminator. Next controller remains admissible parent preparation/regime;
+  P4 new package, regression, identity and privacy/completeness QA still pending.
+
+## 2026-10-24 - Lattice bath P2: bath preparation and energy reduction
+
+- Completed report section 3/new exact finite-bath, Drude, OU covariance/parity,
+  stability, white-limit and energy-balance residuals; each checked locally.
+- Shifted conditional Gibbs and unshifted preparation differ by initial slip.
+  Normalized bath integration preserves bare mechanical potential and the O
+  parent no-go. Auxiliary variables represent bath memory, not new Core matter.
+- Colored/white equilibrium injection balances loss; friction loss is not total
+  entropy production. Gamma/cutoff are explicit free reference choices.
+- Public safety safe; no old verifier rerun, trajectory or physical promotion.
+  Next: hidden reduction/package QA, not material selection or experiment.
+
+## 2026-10-24 - Lattice bath P1: locked local-equilibrium route excluded
+
+- Completed report section 2 and new P producer joint-coordinate/SPD/localization
+  certificate. All16 exact N4 controls have positive full internal stiffness,
+  nonzero reference force and a Gaussian mean outside R=dref/4.
+- Actual new exact check: 16 sector certificates, coordinate/port residuals and
+  rational ln2 bracket pass. Projection gives P(ball)<1/2 for every T>0, not
+  merely failure of a loose tail bound. No control retune or recentering.
+- Physical parent acceptance at this center/domain is not admitted. Formal
+  quadratic/bath reduction continues independently; O/M/N evidence unchanged.
+- Classical covariance/tail inequalities and local Taylor scope are documented;
+  no material constants, temperature sweep or lifetime claim. Package QA pending.
+- Claim impact: narrower physical applicability, no UET/Core promotion. Next
+  controller: exact preparation/kernel/noise and hidden-mode response, then the
+  prerequisite of an admissible parent preparation/regime for physical use.
+
+## 2026-10-24 - Lattice bath P0: evidence and partition locked
+
+- New round P branch codex/research/lattice-bath-reduction starts at local
+  e3bc64812a5ea7e6d40ba65da429dd65e89750ed; 463 pre-existing statuses, empty index.
+- Read-only identities match O14/N13/M11/joint-thermal8. No old producers rerun.
+  New report section 1 declares one bounded card, imported bath physics versus
+  AI choices, frozen spin labels, no CM bath and no detector/experimental claim.
+- Public safety safe. No physical-gate change or publication. Next: joint local
+  regime and independently scoped formal bath reduction, not a material search.
+
 ## 2026-10-24 - Lattice mechanics O4: scoped bridge verdict and QA
 
 - Completed [report sections 6-7](../../meta/UET_LATTICE_MECHANICAL_STATE_CONSTRUCTION.md),
