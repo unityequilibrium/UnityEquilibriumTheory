@@ -1,3 +1,64 @@
+## 2026-10-25 - Parent static Q4: scoped construction and adversarial QA
+
+- Completed report, one new FORMAL contract/producer/tests/artifact package.
+  Six symmetry orbits/all16 mapped: alternating pair certified strict minimum;
+  same-spin negative-curvature witnesses, four bounded-inconclusive orbits.
+- New28/28 unittests pass;19 exact identities/14 negative controls. Explicit
+  seven-path read-only completeness:22contracts/127routes/0errors. General
+  completeness also zero errors; coverage is not physical validation.
+- Artifact --emit-report used; final --check and14 source/config identities bind
+  the completed report. Review remains INCOMPLETE, physical_acceptance=false.
+- QA:8 local links/3 primary URLs/3 anchors/15 display equations/5tables;
+  no broken local link or privacy hit. Protected30 normalized hashes and284
+  unrelated dirty tracked hashes unchanged; original log body byte-preserved.
+- Development parser typo/audit-wrapper key corrected; unscoped whitespace
+  warnings belong to preserved old work. No scientific threshold/control retune.
+- Narrowed blocker: at least one exact-parent stationary/local-curvature witness
+  now exists, but chi/physical dictionary, observable error policy and admitted
+  local-classical window/preparation remain missing. Parent global no-go and P's
+  old-center result remain; no lifetime, spin kinetics or UET novelty claim.
+- Next controller: physical-parent-preparation via physical scales/error policy
+  before a thermal window; no automatic material/kinetics/experiment/contact.
+- Safe local-only checkpoint: seven Q paths/new log prefix only, excluding463
+  original statuses and old log diff578/79. No push/PR/merge or physics-gate change.
+
+## 2026-10-25 - Parent static Q2-Q3: local domain and static dictionary
+
+- Completed new report sections5-6 and new producer radius/coordinate/stiffness
+  enclosures. Alternating minimum: R1/32 is largest certified scheduled radius;
+  larger three interval domains unresolved, not physical instability proofs.
+- Root uncertainty carried into stiffness/domain; local Taylor value error and
+  Gaussian outside probability separate. Joint3 versus fixed-Phi hidden2 pairs,
+  sector energy offsets, canonical measure, F/U/S and quantum floor explicit.
+- Preliminary new-only unit subset passes25/25. No actual theta/chi/error policy
+  selected: no accepted thermal window, real preparation or lifetime claimed.
+- Next: complete new contract/artifact lineage and adversarial/completeness QA.
+  Physical-parent-preparation remains open; no legacy artifact/gate regeneration.
+
+## 2026-10-25 - Parent static Q1: certified witness and bounded failures
+
+- New bounded Newton/Fraction calculation covers six proven symmetry orbits and
+  all16 frozen labels. Alternating -+-+/+-+- gets a strict local minimum from
+  first seed with Krawczyk inclusion/contraction and interval LDL.
+- Same-spin orbit:8 certified nonminimum roots,19 failed line searches; four
+  other orbits exhaust27 seeds each without candidate. Failed search is not
+  nonexistence. Fixed136 candidate attempts, no extra seeds/box/control retune.
+- New report/producer derive parent gap forces, Hessian and canonical mass map.
+  P's old-center localization exclusion and O's global no-go remain unchanged.
+- Public safety safe. Next: local region and conditional static thermal dictionary,
+  not trajectories, spin rates, material or external experiment.
+
+## 2026-10-25 - Parent static Q0: lineage and bounded question locked
+
+- Branch codex/research/parent-static-reference starts at 316797ea3590bdc5cc80a9ea387c7db147c67ddf;
+  463 pre-existing statuses and empty index. Old Topic-log diff578/79 preserved.
+- Read-only helper confirms P20/O14/N13/M11/thermal8 identities, zero identity
+  errors; no old scientific producer run. New report bounded card and FORMAL
+  contract declare unchanged parent/control and static-only search/certification.
+- Controller remains P physical-parent-preparation. No root/local/material result
+  claimed yet. Next: bounded candidates then rational existence/curvature proof.
+- Public safety safe; no Core/README/gate changes, external contact or publication.
+
 ## 2026-10-24 - Lattice bath P4: scoped formal package and final QA
 
 - Completed P report, one FORMAL contract, producer, tests and compact artifact.
