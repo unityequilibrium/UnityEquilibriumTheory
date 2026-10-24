@@ -1,3 +1,87 @@
+## 2026-10-24 - Spin-strain N3: bounded correspondence and closure
+
+- Completed [report sections 5-6](../../meta/UET_SPIN_STRAIN_CORRESPONDENCE_AUDIT.md),
+  isolated FORMAL contract, producer/tests and `t13_spin_strain_correspondence.json`.
+  NN versus M squared-sum is DIFFERENT at the microinteraction level; the source
+  power law admits only a declared affine Taylor approximation. The spin
+  free-energy value envelope is proved without double-counting topology/strain
+  error or converting a value bound into a force/lifetime guarantee.
+- Actual checks: new producer --emit-report and read-only --check pass 6 exact
+  groups, finite N=4,6 controls and 8 deliberate convention errors. New unittest
+  discovery passes 32/32 with SymPy 1.14.0. No Monte Carlo, parameter sweep,
+  physical data or old scientific verifier rerun.
+- Normal read-only completeness: 19 contracts/124 routes/0 errors. Explicit
+  seven-path build_report also has 0 errors before commit; this is not an empty
+  BASE-to-HEAD check. Local report QA: 13 local links, 1 primary URL, 4 anchors,
+  7 tables, 13 math blocks, delimiter/privacy and unit/sign review completed.
+- Current 13 and old M 11/joint 8/cycle 42 identities match; artifact contract
+  hash/input lineage matches. The 14 protected source hashes, old log/ledger
+  contents and unrelated tracked-diff digest remain unchanged.
+- Claim boundary unchanged: FORMAL construction/self-review, not independent
+  specialist approval or physical validation. New review INCOMPLETE with
+  full-phi-pi-correspondence UNKNOWN; old physical/intrinsic-entropy and Topic 13
+  gates remain controlling in their original scopes.
+- Next prerequisite is one complete retained mechanical/lattice state-energy-
+  measure/reference dictionary; source lattice entropy is not zero and static
+  strain does not determine Pi inertia. No new term/hidden sector, experiment,
+  kinetics, material search or external contact starts automatically.
+- Local checkpoint branch codex/research/spin-strain-correspondence starts at
+  61d4fc0b9b4518240fcfaa072b5991b727acbe60. Public safety safe; stage only the
+  seven round-N paths/new log prefix, excluding original log 578/79 and unrelated
+  work. No push/PR/merge/publication authorized for this checkpoint.
+- Postcommit CLI --changed 61d4fc0b9b4518240fcfaa072b5991b727acbe60 --check
+  also passes (19 contracts/124 routes/0 errors) over the seven actual committed
+  paths. Index is empty, all 463 original statuses remain, old log diff stays
+  578/79 and the protected hashes/unrelated tracked-diff digest still match.
+  This factual QA note belongs to the same local checkpoint, not a new wave.
+
+## 2026-10-24 - Spin-strain N2: entropy/force from the same coupling
+
+- Completed [report section 4](../../meta/UET_SPIN_STRAIN_CORRESPONDENCE_AUDIT.md#phi-entropy-force).
+  Fixed-coordinate derivatives give dPhi S_int=-Jcal*Jcal_prime*Var(B)/(k_B*T^2)
+  and dT fPhi=dPhi S_int. Generic chain proof and direct N=4 source-power-law
+  derivatives agree; the wrong compression orientation is detected.
+- The eliminated spin arrangements supply this entropy; a retained Phi
+  distribution has a separate entropy. No hidden Phi state or information
+  energy term was added. A nonzero spin correlation force at C=0 limits the
+  M mean-field correspondence, not the full total mechanical force.
+- Source II.B-D audit distinguishes static elastic energy, vibrational free
+  energy and fixed-force potential. No Debye integration or phonon term was
+  silently added to M. Full lattice entropy/reference and Pi mapping stay open.
+- Public safety safe; no gate/Core change. Next: bounded M/Omega verdict and
+  scoped completeness/checkpoint, not a new experiment or dynamics round.
+
+## 2026-10-24 - Spin-strain N1: fixed-C nonuniform witness
+
+- Completed [report section 3](../../meta/UET_SPIN_STRAIN_CORRESPONDENCE_AUDIT.md#restricted-spin-dictionary)
+  and new exact finite-ring controls. Enumeration at N=4,k=2 yields B=0 with
+  multiplicity 4 and B=-4 with multiplicity 2, despite equal C=0. N=6 adds one
+  regression case; no larger-size search is needed to close exact equivalence.
+- Restricted Q_k, conditional probabilities, F/U/S and entropy/KL chain are
+  derived together. S_int=k_B log G holds only for uniform conditional weights;
+  M retains that property for its declared energy law. This is not a retroactive
+  failure of M, nor a use of full-magnetization free energy as fixed-k evidence.
+- Half-spin factor 1/4, one-count periodic bonds, micro/coarse and independent
+  transfer trace agree. Global-flip/fold accounting preserves zero class once.
+- Public safety safe; no physical promotion. Next: Phi-dependent entropy/force
+  and finite-domain comparison. Preserve all prior scientific results.
+
+## 2026-10-24 - Spin-strain N0: source and scoped baseline
+
+- Area research-core; completed baseline/source/dictionary card in
+  [spin-strain correspondence report](../../meta/UET_SPIN_STRAIN_CORRESPONDENCE_AUDIT.md).
+- Local HEAD 61d4fc0b9b4518240fcfaa072b5991b727acbe60 matches the plan; index
+  empty, 463 pre-existing statuses and Topic log 578/79 preserved. Captured
+  14 protected source hashes and unrelated tracked-diff digest.
+- Metadata review: M 11, joint 8 and cycle 42 identities match, reviews stay
+  INCOMPLETE. No old producer/verifier rerun or physical gate change.
+- Source: Balcerzak et al. arXiv:2003.12054 rendered v2, sections II.A-D main
+  text read; explicit v2 URL cache miss noted, no raw PDF/data/contact copied.
+- New boundary is a fixed-k finite periodic NN spin comparator with common
+  M retained spectator, not a replacement of M or physical Phi/Pi admission.
+- Public safety safe. Next: restricted nonuniform F/U/S and Phi response;
+  no experiment, new hidden sector, source hunt, push/PR/merge/publication.
+
 ## 2026-10-24 - Joint state/measure M3: folding, verdict and scoped handoff
 
 - Completed: [report sections 5-6](../../meta/UET_JOINT_STATE_MEASURE_CONSTRUCTION.md)
