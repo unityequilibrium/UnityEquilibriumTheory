@@ -1,3 +1,90 @@
+## 2026-10-24 - Lattice mechanics O4: scoped bridge verdict and QA
+
+- Completed [report sections 6-7](../../meta/UET_LATTICE_MECHANICAL_STATE_CONSTRUCTION.md),
+  new FORMAL contract/producer/tests and generated compact artifact. Canonical
+  coordinate/inertia and conditional quadratic F/U/S bridge established; parent
+  global continuation rejected, local-parent accuracy only conditionally bounded,
+  and dissipative Core/material correspondence remains unclosed.
+- Actual checks: producer --emit-report and read-only --check pass 9 exact
+  groups, all16 locked N=4 spin configurations and 11 negative controls. New
+  unittest discovery passes 30/30 with SymPy 1.14.0; no old scientific rerun,
+  random sampling, sweep, trajectory or observational data.
+- Normal read-only completeness and explicit seven-path precommit build_report
+  pass: 20 contracts/125 routes/0 errors. New 14 and old N 13/M 11/joint 8
+  identities match; artifact contract/input lineage matches. This is coverage,
+  not physical validation; self-review is not independent specialist approval.
+- Report QA: 12 local links, 3 primary URLs, 4 anchors, 5 tables, 20 math blocks,
+  delimiter/privacy and unit/sign review. Twenty-one protected hashes, original
+  Topic log/ledger contents and unrelated tracked-diff digest remain unchanged.
+- New review stays INCOMPLETE/physical-regime-and-kinetic-closure UNKNOWN; old
+  N/M/joint physical gaps and aggregate Topic 13 physics gates are not promoted.
+- One next prerequisite: an admissible physical parent/regime plus preparation/
+  reduction evidence. No counterterm, new material, damping/noise or experiment
+  is added automatically. Specialist questions are prepared, not externally sent.
+- Public safety safe. Scoped local checkpoint on codex/research/lattice-mechanical-state
+  from 91d9a3455b1019a3aafdd5553a662ee594d87a83: seven paths/new log prefix only,
+  excluding original Topic log 578/79 and unrelated work. No push/PR/merge/contact/
+  publication, Core/API/default/threshold/README/gate change.
+- Postcommit CLI --changed 91d9a3455b1019a3aafdd5553a662ee594d87a83 --check
+  passes (20 contracts/125 routes/0 errors) over seven real committed paths;
+  producer --check remains fresh. All 463 original statuses, old log 578/79,
+  21 protected hashes and unrelated diff remain; index is empty. A trailing
+  blank line in the new contract was removed before commit; semantic lineage
+  is unchanged. Include this factual QA in the same local checkpoint.
+
+## 2026-10-24 - Lattice mechanics O3: parent no-go and conditional local bound
+
+- Completed [report section 5](../../meta/UET_LATTICE_MECHANICAL_STATE_CONSTRUCTION.md#parent-local-validity).
+  Positive hidden Hessians at one locked control are proved with exact ln2
+  polynomial certificates, not relaxed numerical thresholds.
+- A fixed-Phi collision path and its finite-width transverse tube exclude the
+  unconfined parent partition for an allowed spin class. This limits a global
+  extension of the source small-strain law, not the published source regime.
+- Derived local Taylor remainder and separate Gaussian-tail value bound. Eta<1,
+  SPD and positive-gap domain are explicit prerequisites; no useful material
+  classical/local window is asserted without evidence. No force/lifetime bound
+  is obtained from a free-energy value bound, and no repulsion/cutoff is added.
+- Public safety safe; no physical promotion. Next: O4 contract/artifact/QA and
+  local scoped checkpoint, not another parent-law repair or dynamics round.
+
+## 2026-10-24 - Lattice mechanics O2: conditional vibration dictionary
+
+- Completed report section 4 and new producer Gaussian/mixture residuals. Hidden
+  shifts and stiffness determinants both weight spin arrangements; F/U/S and
+  conditional microscopic/mean-force identities agree in the SPD quadratic
+  reference. No Debye term or information-energy substance is added.
+- Exact construction check ran 8 residual groups with all16 locked-control spin
+  configurations and direct parent derivatives. This is not material validation;
+  regression/completeness QA and contract packaging are still pending here.
+- Still open: parent/local error and physical regime/kinetic closure. Next is
+  O3/O4 bounded verdict and new tests, not an experiment or Core modification.
+
+## 2026-10-24 - Lattice mechanics O1: canonical state and inertia
+
+- Completed report section 3 and new exact coordinate/momentum/measure checks.
+  Four atom coordinates become one removed CM pair, one retained Phi pair and
+  two internal pairs. The conditional inertia and normalized Pi-storage map are
+  derived; position and inverse-transpose momentum Jacobians cancel together.
+- End length includes a hidden coordinate; mixed affine-hidden stiffness is
+  nonzero. No autonomous/damped Core kinetics or detector calibration follows.
+- Claim boundary unchanged. Next: shifted vibration thermodynamics from the
+  same parent law. No old M/N verifier rerun or physics gate promotion.
+
+## 2026-10-24 - Lattice mechanics O0: source and scoped baseline
+
+- Area research-core; new report bounded card and source/geometry dictionary.
+  Baseline 91d9a3455b1019a3aafdd5553a662ee594d87a83, index empty and 463 original
+  statuses. New local branch codex/research/lattice-mechanical-state; no upstream
+  publication claim. Captured 21 protected hashes and unrelated diff/log content.
+- N 13/M 11/joint thermal 8 metadata identities match, reviews INCOMPLETE as
+  before. Source main text and Tong phase-space/phonon sections checked; no raw
+  paper/data/contact copied or old science producer rerun.
+- Author selected internal chain motion; finite open geometry and classical
+  local reduction are disclosed comparator choices, not a cure for N's negative
+  microscopic equivalence result. Public safety safe; scoped local commit only.
+- Next: canonical mass/measure and conditional thermodynamics. No Core/API/
+  default/threshold/README/gate edit, contact, experiment, push/merge/publication.
+
 ## 2026-10-24 - Spin-strain N3: bounded correspondence and closure
 
 - Completed [report sections 5-6](../../meta/UET_SPIN_STRAIN_CORRESPONDENCE_AUDIT.md),
