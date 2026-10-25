@@ -1,3 +1,36 @@
+## 2026-10-25 - Core premise T: return to the proposition without changing the parent
+
+- Scope/wave: research-core, premise/claim-boundary synthesis after the author's
+  explicit choice to return to the core proposition rather than extend the
+  atomic-platform route. Added docs/meta/UET_CORE_PROPOSITION_PREMISE_REVIEW.md;
+  no calculation path, new contract, equation, dataset or artifact was added.
+- Decision: free ends/N4/binary/frozen are scoped reference assumptions, not
+  established universal UET premises. M/O/P provenance and Argument history-response
+  results identify this distinction. Removing a premise from the overall research
+  target does not permit transferring its old inertia/root/variance certificates.
+- Reused the named history-response/standard-comparator results and M-S thermal,
+  mechanical, reduction, local-reference and platform-screen results; no scientific
+  producer, root search, trajectory or material search rerun. Frozen labels,
+  conditional equilibrium, dynamic memory, kernels and observer records remain distinct.
+- Actually checked eight contracts: identity counts8/11/13/14/20/14/11/15, no
+  identity/schema errors, reviews INCOMPLETE. Read-only completeness --check and
+  build_report with the three scoped document/log paths:24contracts/129routes,
+  zero errors;101 legacy/3738 unreviewed paths unchanged.16 local report links,
+  table structure, equation delimiters and public-safety wording checked.
+- Preservation:49 protected normalized identities and284 unrelated tracked raw
+  hashes unchanged; pre-wave Topic-log body and daily-ledger prefix byte-preserved.
+- Controller unchanged: physical-parent-preparation in the existing screen artifact
+  still requires native state/energy/boundary/readout correspondence; quantum-parent-
+  correspondence remains separate. This wave closes premise attribution, not physics.
+- Next: compare a specifically sourced retained-history requirement with existing
+  prepared-state/readout results, preserving signed/magnitude alternatives. Do not
+  open another calculation wave without a new requirement, independent restriction
+  or admitted physical input that can change the decision. Missing input is not zero.
+- Claim impact: no physical promotion/falsification or new UET-specific discriminator.
+  Methodological synthesis under standards17/18/30/32, not new measured evidence.
+  Local three-path checkpoint only; preserve old463 statuses/log578/79, no push,
+  PR, merge, Core/API/default/threshold/README/gate change or automatic next wave.
+
 ## 2026-10-25 - Physical platform S4: verified scoped screening handoff
 
 - Completed eight-path source/report/contract/producer/tests/artifact/log unit.
