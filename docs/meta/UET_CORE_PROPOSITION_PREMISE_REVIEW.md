@@ -2,6 +2,10 @@
 
 > 25 ตุลาคม 2026 — synthesis / premise-and-dependency review; ไม่ใช่แบบจำลองใหม่หรือ physical validation
 
+> **ภาคต่อรอบ U — 25 ตุลาคม 2026:** §§1–7 ด้านล่างคงเป็นบันทึกรอบ T;
+> §§8–13 เพิ่ม FORMAL response/requirement audit ของ fixture เดิม ไม่เพิ่มกฎเข้า Core
+> และไม่ใช้ผลเชิงสัญลักษณ์เป็น physical validation
+
 ## สรุปสำหรับผู้เขียน
 
 **เราไม่จำเป็นต้องทำให้ UET ทั้งหมดเป็นโซ่อะตอมอิสระสี่ตัวที่สปินหยุดเปลี่ยน**
@@ -339,3 +343,273 @@ independent restriction ที่ยังไม่ตรวจ หรือ phy
 [Topic UPDATE_LOG](../topics/0.13_Thermodynamic_Bridge/UPDATE_LOG.md) กับ
 [WORK_LEDGER](../../WORK_LEDGER/2026/2026-10-25.md)
 ไม่ push/merge/เผยแพร่หรือเริ่มโจทย์ถัดไปจากการจบรอบนี้
+
+## 8. รอบ U — ผลอดีตเปลี่ยนสถานะ ความไว และโครงสร้างอย่างไร
+
+<a id="retained-response-question"></a>
+
+### สรุปสำหรับผู้เขียน
+
+**แบบจำลองเดิมจำสาขาได้จริง แต่การจำสาขาไม่เท่ากับความไวมีขนาดมาก–น้อยต่างกัน**
+ใน unit fixture และ protocol ที่ตรวจใหม่ สองสาขาให้ response บางช่องกลับเครื่องหมาย
+แต่ขนาดของ small-signal transfer ของแต่ละ readout เมื่อกระตุ้นทีละ port เท่ากัน
+ผลนี้ไม่ปฏิเสธ memory และไม่ใช่ theorem ว่า UET หรือ fixed-law model เรียนรู้ไม่ได้
+
+ต้องเก็บข้อจำกัดสำคัญพร้อมผลนี้: ถ้าผสม input สอง port หรือผสม readout ที่มี parity
+ต่างกัน จะมี counterexample ต่อการเหมาว่าขนาดเท่ากันทุกกรณีได้ แม้ไม่เปลี่ยน model
+จึงต้องระบุว่าพูดถึงความไวของอะไร ภายใต้การกระตุ้นและการอ่านแบบใด
+
+ส่วน resource-selection มี feedback จาก distribution ผ่าน interaction ไปสู่
+distribution จริง แต่ matrix/costs เป็น fixed configuration ของรัน ไม่พบช่อง
+ที่ประสบการณ์อัปเดต matrix ภายใน และ resource ledger ไม่ป้อนกลับเข้าการอัปเดต p
+จึงแทน distribution-level adaptation ได้บางส่วน ไม่ได้ตรวจยืนยันการเรียนรู้ topology
+หรือ full resource-constrained structural adaptation
+
+คุณไม่ต้องคิดสมการเพิ่ม: จุดที่ยังขาดคือระบุ structural requirement ที่ต้องเก็บ
+พร้อม state/interaction และ readout ที่ตรงกัน ไม่ใช่เพิ่ม field เพราะชื่อว่า information
+และไม่ใช่กลับไปหามวล–ระยะ–พลังงานของโซ่ที่ยังไม่มี physical correspondence
+
+### 8.1 U0 — Bounded research card และ lineage
+
+| รายการ | คำตอบสำหรับภาคต่อ U |
+|---|---|
+| คำถาม | ผลอดีตถูกแทนเป็น transient state, stable basin, response sensitivity หรือ internal interaction change ถึงไหนใน realizations ที่มี? |
+| เจตนาที่รับมา | ผู้เขียนเลือกตรวจทั้ง memory กับการเปลี่ยนโครงสร้าง/ความสัมพันธ์ แต่ตรวจแยกกัน; ยังเก็บ signed/magnitude alternatives ไม่เลือกแทน |
+| Baseline | local commit `8b2718bb1060463090393bdec44f5110f2c93549`; เริ่ม `codex/research/core-proposition-premises` indexว่าง463งานค้าง; ภาคต่อบน `codex/research/retained-response-requirements` |
+| มีแล้ว | Argument §§10–12 finite write/transient/stable basins/comparator; §§25–27 representation/kinetic freedom; M–S ตาม §3 ของรายงานนี้ |
+| ตรวจ identities | energy-memory42, joint thermal8, M11, N13, O14, P20, Q14, variance11, screen15 ตรงขณะเริ่ม; reviewทุกฉบับ INCOMPLETE ไม่รัน producers เดิม |
+| หลักฐานใหม่ | Exact 4-output/2-port equilibrium transfer audit และ current source-dependency audit; ไม่เพิ่ม state/term/trajectory |
+| Boundary | C–Φ–Π unit fixture เป็น primary realization; resource-selection เป็นอีก comparator แยกกัน ไม่รวมพลังงานหรือ C ข้ามสองสาย; ไม่มี detector/bath ใหม่ |
+| Controller | [FORMAL contract รอบ U](../topics/0.13_Thermodynamic_Bridge/calculation_contracts/retained_response_requirement_audit.json) สำหรับคำถามใหม่; physical-parent-preparation/quantum-parent-correspondence ของ screen ไม่ถูกปิด |
+| Outcomes | แทนได้เฉพาะ scope / state-dependent response / sign memory / external configuration / representation หรือ physical input ยังขาด |
+| จุดหยุด | จบที่ gain/sign/source verdict; ไม่คำนวณ finite-amplitude switching, waiting grids, spin dynamics, topology law หรือหา platform ใหม่ |
+
+ตรวจด้วย current source/code identities ไม่ใช้ README รับรองตัวเอง ผลที่อ้างว่าเก่า
+ไม่ถูกนับเป็นการคำนวณใหม่ Current local commit/working evidence ไม่ยืนยัน public main
+และ source package ที่ยังไม่เผยแพร่ไม่ถูกอ้างว่าคนนอกทำซ้ำครบแล้ว
+
+## 9. U1 — สองสถานการณ์ที่ต้องไม่รวมความหมาย
+
+<a id="retained-response-scenarios"></a>
+
+| Requirement | State/coupling | Preparation/wait | Input/readout | ผล/ช่องว่าง |
+|---|---|---|---|---|
+| จำผลชั่วคราวของการเขียน | Φ/Π เปลี่ยน RHS ของ C | คู่เดิม `(1,0,±1)` ใน Argument §10; ใช้ผลคลายตัว §11 | future probe/clockเดียวกันตามผลเดิม | transient contrast มี; ทั้งคู่เข้าสู่ positive minimum เดียวกัน asymptotically ไม่ใช่ permanent gain memory |
+| จำ stable branch | `(±c_*,r,0)` มี signed C ต่างและ couplingจริง | ใช้ finite smooth controls จาก common idealized state `(0,0,0)` ใน §11.3; ไม่สร้าง/rerun write | baseline-subtracted probe ทีละ port | เก็บ branch/sign ได้ใน mathematical realization; actual preparation/noise/negative-C admission ยังเปิด |
+| ความไวมีขนาดเปลี่ยน | Jacobian/transfer รอบ state หลังเขียน | ตรวจ infinitesimal response ที่ equilibria; ไม่ใช้เวลา finite แล้วถือว่านิ่งเป๊ะ | C,C²,Φ,Π แยกช่อง; J_C หรือ J_Φ ทีละตัว | คำวินิจฉัยใหม่ใน §10; gain ต่างต้องไม่เกิดจาก baseline/normalization ที่เปลี่ยน |
+| ความสัมพันธ์ภายในเปลี่ยน | p มี feedback ผ่าน fixed A ใน resource lane | ใช้ source และ controls เดิม ไม่มี training protocol ใหม่ | collective compatibility กับ ledger เป็นคนละ output | p เปลี่ยนจริง แต่ A/costsไม่ใช่ adaptive state ที่อัปเดตภายใน |
+| รายละเอียดอดีตที่ย่อหาย | arrangements, hidden modes หรือ conditional law | ใช้ N/O/P และ §§24/27 เฉพาะ scope | readoutที่ประกาศ ไม่ถือ C/endpoint/trace ครบทุกอย่าง | ต้องมี closure/preparation assumptions หากจะนำมาแทน real-time response; ไม่สรุปว่าต้องเพิ่ม field ใหม่ทันที |
+
+Parameter policy ของ U2: coefficients/ports/readout และ clock เดียวกันทั้งสองสาขา
+ห้ามเปลี่ยนค่าระหว่างรันแล้วเรียกความต่างนั้นว่า learned state ภายใน
+การเปลี่ยนโครงสร้างไม่ต้องเปลี่ยนกฎฟิสิกส์พื้นฐาน แต่ต้องบอกว่าสิ่งที่เปลี่ยนอยู่ที่ไหน
+ใน model ไม่ใช้เพียงชื่อ learning ยืนยันว่ามี mechanism แล้ว
+
+Finite waiting กับ asymptotic relaxation เป็นคนละข้ออ้าง ใช้ proof/convergence
+เดิมโดยไม่เลือก wait ใหม่ ไม่มี lifetime/measurement uncertainty ใหม่ที่ถูกตั้งศูนย์
+กรณี same complete state/same law/future inputs ให้อนาคตเหมือนกันยังคงใช้
+จึงต้องชี้ state/input ที่การย่อยังไม่เก็บหากจะอ้างผลประวัติเพิ่ม
+
+## 10. U2 — ความไวของ fixture เดิม: exact response audit
+
+<a id="retained-response-transfer"></a>
+
+ใช้เฉพาะ normalized homogeneous nonconserved restriction เดิม:
+
+\[
+\dot C=C-C^3+C\Phi+J_C,\quad
+\dot\Phi=\Pi,\quad
+\dot\Pi=-\Pi-\Phi-\Phi^3+C^2/2+J_\Phi.
+\tag{U1}
+\]
+
+ทุก coefficient ใช้ unit fixture ของ Argument §11 ไม่ใช่ default/material values
+spatial derivatives เป็นศูนย์ใน restriction นี้ ไม่แก้ gradient coefficients ของ Core
+producer อ่าน mu/RHS จาก source AST และเทียบ symbolic vector โดยไม่เรียก simulation
+
+ให้ q=±1, c=c_*>0 และ r เป็น rootเดิมที่มี `2r³+r−1=0`, `c²=1+r`
+ไม่ค้น rootใหม่ กำหนด d=1+3r², perturbation ξ รอบ x_q=(qc,r,0) และ j=(J_C,J_Φ):
+
+\[
+L_q=\begin{pmatrix}-2c^2&qc&0\\0&0&1\\qc&-d&-1\end{pmatrix},
+\quad B=\begin{pmatrix}1&0\\0&0\\0&1\end{pmatrix},
+\quad K_q=\begin{pmatrix}1&0&0\\2qc&0&0\\0&1&0\\0&0&1\end{pmatrix}.
+\tag{U2}
+\]
+
+K_q คือ derivative ของ **baseline-subtracted** outputs `(C,C²,Φ,Π)`
+ดังนั้น δ(C²)=2qc δC+O(δC²) ไม่ใช่ (δC)² ส่วน δ|C|=qδC รอบ branch ที่ไม่เป็นศูนย์
+จึงสัมพันธ์กับ δ(C²)/(2c) ใน small-signal limit แต่ **การอ่าน |C| กับการหาขนาด |T|**
+เป็นคนละการดำเนินการ ไม่ใช้คำว่า magnitude รวมทั้งสองอย่างโดยไม่บอก
+
+### 10.1 Full resolvent ตรงกับการ eliminate perturbations
+
+\[
+D(z)=(z+2c^2)(z^2+z+d)-c^2,
+\qquad
+T_q(z)=\frac1{D(z)}
+\begin{pmatrix}
+z^2+z+d&qc\\
+2qc(z^2+z+d)&2c^2\\
+qc&z+2c^2\\
+qcz&z(z+2c^2)
+\end{pmatrix}.
+\tag{U3}
+\]
+
+ตรวจ T_q=K_q(zI−L_q)⁻¹B ทุก entry และ D(z)=det(zI−L_q)
+z เป็น normalized Laplace frequency ไม่ใช่ input/state ใหม่ การอ่านเป็น frequency response
+ใช้ z=iω ภายใต้ stability ของ linearized branch ไม่ใช่ผลทดลองหรือ SI gain
+
+### 10.2 Stability และ denominator ไม่พึ่ง floating eigenvalues
+
+ใช้ quadratic energy matrix P_q ที่มี 2×2 block
+`[[2c²,−qc],[−qc,d]]` กับ Π entry1 มี principal minors
+`2c²`, `c²(1+6r²)`, `c²(1+6r²)` เป็นบวก
+ให้ loss rows W_q=`[[2c²,−qc,0],[0,0,1]]` จะได้
+
+\[
+L_q^TP_q+P_qL_q=-2W_q^TW_q.
+\tag{U4}
+\]
+
+ดังนั้น eigenvalues มี real partไม่เป็นบวก หากมี eigenmodeที่ real partเป็นศูนย์
+ต้องอยู่ใน null space ของ W_q และ W_qL_q ด้วย แต่ rows
+`[W_q row2; L_q row3; W_q row1]` มี determinant `c²(1+6r²)>0`
+จึงไม่มี nonzero mode เช่นนั้น ทุก eigenvalueมี real partลบ และ D ไม่มี zero
+บน Re(z)≥0 นี่เป็นข้อสรุปของ **linearization รอบ minima เดิม** ไม่ใช่ global nonlinear
+causality/PDE/lifetime theorem หรือการรับรองทุก coefficients
+
+### 10.3 เปลี่ยนเครื่องหมาย กับเปลี่ยนขนาดความไว
+
+ให้ R=diag(−1,1,1), S=diag(−1,1), E=diag(−1,1,1,1)
+source symmetry ต้องเปลี่ยน J_C ด้วย: F(Rx,Sj)=RF(x,j)
+จึงได้ L_−=RL_+R, K_−R=EK_+ และ
+
+\[
+T_-(z)=E\,T_+(z)\,S.
+\tag{U5}
+\]
+
+| Readout response | Same J_C probe | Same J_Φ probe |
+|---|---|---|
+| δC | เท่ากัน | กลับเครื่องหมาย |
+| δ(C²) | กลับเครื่องหมาย | เท่ากัน |
+| δΦ | กลับเครื่องหมาย | เท่ากัน |
+| δΠ | กลับเครื่องหมาย | เท่ากัน |
+
+ทุกช่องจึงมี |T_−,ij(iω)|=|T_+,ij(iω)| เมื่ออ่านแต่ละ output และกระตุ้นทีละ port
+รวมกรณี response บางช่องเป็นศูนย์ เช่น DC ของ Π ไม่ใช้ relative error หารด้วยศูนย์
+ผลนี้บอกว่า **สอง stable branches ไม่ให้ gain-magnitude contrast ในแปดช่องที่ล็อกนี้**
+ไม่ใช่ไม่มี signed memory และไม่ใช่ proofว่าไม่มี preparation-dependent finite-amplitude
+threshold, mixed-protocol contrast หรือ learning ใน realization/coefficients อื่น
+
+ตัวอย่าง baseline C ของสองสาขาต่างกัน 2c แต่ T_C,J_C เท่ากันตรง ๆ
+จึงห้ามใช้ baselineต่างแทนข้อพิสูจน์ gainต่าง ในอีกด้าน Hessianของ nonlinear Ω
+ขึ้นกับ operating point อยู่แล้ว การมี fixed coefficients ไม่ได้ทำให้ response
+ไม่ขึ้นกับ state; ผลจำกัดที่นี่เกิดจาก selected equilibria/symmetry/protocol ร่วมกัน
+
+### 10.4 Counterexamples ต่อการขยายข้อสรุปเกิน protocol
+
+ที่ DC ให้ D_0=c²(2d−1)>0 และใช้เพียง normalized mathematical combinations:
+
+- **ผสม inputs:** j=ε(1,1), อ่าน C ให้ squared-gain difference ของสองสาขา
+  `4dc/D_0²≠0` แม้แต่ละ input port แยกกันมี equal magnitudes
+- **ผสม readouts:** อ่าน C+Φ ภายใต้ J_Φ ให้ squared-gain difference
+  `8c³/D_0²≠0` แม้แต่ละ output แยกกันมี equal magnitudes
+
+นี่เป็นการหักล้าง blanket claim ไม่ใช่ training-induced improvement หรือ detectorจริง
+การผสม normalized inputs/coordinates ยังไม่ให้ physical force/measurement calibration
+และไม่เพิ่ม state หรือพลังงานจากการบวกรูปอ่านออก
+สำหรับ J_C probe ขนาด finite การเปลี่ยน sign ของ inputใน symmetry มีความสำคัญ
+ผล linear parity ไม่รับรอง finite-amplitude equality ภายใต้ same positive bias
+
+## 11. U3 — เปลี่ยน distribution กับเปลี่ยน interaction ภายใน
+
+<a id="retained-response-structure"></a>
+
+ตรวจ [source resource-selection](../core/03_lanes/persistence/uet_resource_selection.py)
+และ [spec](../core/01_contracts/RESOURCE_SELECTION_DYNAMIC_GAME_SPEC.md)
+แยกจาก U1–U5 ไม่ถือ C_collective=pᵀAp เป็น C ของ coupled-field fixture โดยอัตโนมัติ
+
+| ช่องที่ตรวจ | Current source/หลักฐาน | คำวินิจฉัย |
+|---|---|---|
+| p→fitness→p | `_fitness(config,probabilities)` ใช้ A p และ costs; `_advance_probabilities` กลับไปอัปเดต p | มี state-dependent/distribution feedback จริง; ไม่ต้องมีเจตนา |
+| A, behavior/maintenance costs | fields ใน frozen `ResourceSelectionConfig`; ไม่พบ writesภายในสามฟังก์ชัน evolutionที่ตรวจ | เป็น external fixed configuration ของ lane นี้ ไม่ใช่ learned A(t) |
+| available resource→p | ไม่เข้า arguments/readsของ fitness/update หรือ update calls; resourceถูกคำนวณคู่ขนาน | resource depletion ยังไม่เป็น feedback constraint ต่อ selection ใน implementationนี้ |
+| sustain threshold→update | `persistence_time` หาใน histories หลัง loop; ไม่พบ thresholdในloop | เป็น benchmark event/readout ไม่ใช่กลไกหยุด/ปรับ p เมื่อผ่าน threshold |
+| เปลี่ยน A ระหว่างรัน | ผู้รันส่ง configurationต่าง | เปรียบเทียบโครงสร้างที่กำหนดได้ ไม่พิสูจน์การเรียน A ภายใน |
+| p เปลี่ยนโดย A คงที่ | current interactionกับ distributionทำงานร่วมกัน | อาจมีความหมายเชิง adaptation ในขอบเขตที่ระบุ ไม่ถูกปฏิเสธเพียงเพราะ A คงที่ |
+
+ใช้ [saved control artifact](../core/07_artifacts/provenance/resource_selection_dynamic_game_verification.json)
+เฉพาะ gates ที่แยก cost/interaction ไม่รัน controlsใหม่และไม่คัดทั้ง metrics มาเป็นผลรอบ U
+legacy contractมี path spellingเก่า ส่วนภาคต่อนี้ใช้ canonical provenance pathที่ระบุจริง
+ไม่ซ่อมผล/metadataเก่าเงียบ ๆ thermal helperที่มี sign bug ใน Argument §4.5 ไม่ถูกเรียก
+หรือใช้รับรอง energy/heat closureรอบนี้
+
+คู่เทียบแนวคิดจาก [Gross–Dommar D’Lima–Blasius, arXiv:q-bio/0512037v2,
+main textย่อหน้ากำหนด model](https://arxiv.org/html/q-bio/0512037)
+มี node-state dynamics และ state-dependent rewiring แยกให้เห็นว่าความสัมพันธ์ใดเปลี่ยน
+ภายใต้ local rulesคงที่ ใช้เพื่อจำแนกช่อง feedbackเท่านั้น ไม่ย้าย SIS variables/rates
+มาเป็น UET ไม่จำลองโรค และไม่อ้างเป็นนิยามสากลของ learning
+
+การใช้ equilibrium conditional distributionแทน hidden-state dynamics ยังต้องมี
+equilibration/time-scale assumptionsของกรอบที่เลือก เช่น
+[Seifert2012v1 §9.2.1/§9.2.3 Eqs.(206)–(218)](https://arxiv.org/html/1205.4176)
+การรู้ F/U/S หรือประกาศ frozen label ไม่ให้ training/transition lawมาเอง
+state/connection, intrinsic entropy, dissipation trace และ observer recordยังไม่ใช่วัตถุเดียวกัน
+
+## 12. คำวินิจฉัยรวมและสิ่งที่ยังต้องมี
+
+| ระดับข้อเสนอ | คำตอบที่ตัดสินได้ | ยังไม่ตามมา |
+|---|---|---|
+| Transient memory | คู่เดิมอาจตอบต่างระหว่าง relaxation; นำผล convergenceเดิมมาใช้ | ไม่เป็น permanent memoryจาก finite-wait plot |
+| Stable-basin memory | มี prepared signed branchใน named formal fixture | ไม่ใช่อุปกรณ์ความจำจริง/negative mass/physical lifetime |
+| เปลี่ยนความไว | แปด separate-channel linear gainsมีขนาดเท่ากัน บางช่องกลับ sign; mixed combinationsเป็นข้อยกเว้นที่ตรวจได้ | ไม่ได้พิสูจน์ retained gain-magnitude learningตาม protocolที่ล็อก และไม่ปฏิเสธทุก protocol/realization |
+| Structural/distribution adaptation | p feedbackมีจริง; A/costsเป็น external configuration และ resourceไม่feedbackใน inspected lane | ยังไม่มี internal topology update หรือ full resource-constrained adaptationที่ตรวจยืนยัน |
+| ความจำในรายละเอียดที่ย่อออก | ผล N/O/Pและprojection witnessesเดิมให้ขอบเขต | ไม่เลือกใหม่ว่า informationต้องเป็น spin, Φ, kernelหรือmutual informationทั้งหมด |
+| ความใหม่/physical correspondence | standard bistable/selection comparatorsยังอธิบายผลที่ตรวจ; physical gapsคงอยู่ | ไม่ได้ independent UET discriminator, empirical validation, learning/persistence/cosmology proof |
+
+**หนึ่งจุดส่งต่อ:** ถ้าต้องการ retained structural-response changeที่เกิน branch/sign
+ของตัวอย่างนี้ ต้องมี requirementที่ตามรอยได้ว่า *สิ่งใดในโครงสร้าง/ความสัมพันธ์ต้องเปลี่ยน
+และ readoutใดต้องต่างหลัง preparation/waitที่กำหนด* แล้วตรวจว่า current full state/input
+เก็บสิ่งนั้นแล้วหรือไม่ ไม่ตั้ง A(t), adaptive coupling หรือhidden fieldขึ้นทันที
+การต้องการตรวจทั้งสองระดับของผู้เขียนไม่ใช่การอนุมัติ lawใหม่
+
+Packetให้ผู้ตรวจมีเพียง U1–U5, preparationเดิม§11.3, gain/parity table,
+สอง mixed-scope counterexamples และ source-dependency table
+คำถามเฉพาะคือการจำแนก state-dependent response/retained structural changeถูกต้องหรือไม่
+และมี independent restrictionจากต้นทางเดิมที่ยังตกหล่นหรือไม่ ไม่ขอให้รับรองทั้ง UET
+ไม่ได้ติดต่อผู้ตรวจหรือให้ผู้เขียนตรวจ algebraแทน
+
+หยุดตรงคำวินิจฉัยนี้ ถ้าไม่มี requirement, independent restriction หรือ admitted
+physical state/preparation/readoutใหม่ที่เปลี่ยนคำตัดสินได้ ไม่รันชุดเดิมในชื่อรอบใหม่
+controllerทางกายภาพยังเป็น `physical-parent-preparation` และ `quantum-parent-correspondence`
+ตามเดิม ไม่สร้างสถานะทางฟิสิกส์ใหม่หรือปิด gateจาก FORMAL packageนี้
+
+## 13. การตรวจรับและชุดทำซ้ำรอบ U
+
+<a id="retained-response-verification"></a>
+
+แพ็กเกจ [contract](../topics/0.13_Thermodynamic_Bridge/calculation_contracts/retained_response_requirement_audit.json),
+[producer](../topics/0.13_Thermodynamic_Bridge/Code/03_Research/Research_T13_Retained_Response_Requirement_Audit.py),
+[tests](../topics/0.13_Thermodynamic_Bridge/Code/03_Research/test_t13_retained_response_requirement_audit.py)
+และ [artifact](../topics/0.13_Thermodynamic_Bridge/Result/artifacts/t13_retained_response_requirement_audit.json)
+ผูก source/config/code/report identities ใช้ FORMAL/FORMAL_RESULT และ review INCOMPLETE
+ไม่ใช้ contract coverageแทน independent specialist/physical review
+
+`--check` อ่านอย่างเดียว; `--emit-report` เขียนเฉพาะ artifactใหม่ ไม่มี networkในproducer
+ไม่มี old producer, simulation, root search, sweep, fit, physical data หรือ thresholdใหม่
+ตรวจ polynomial/resolvent/energy identitiesด้วย SymPy1.14.0
+root relations/preparation/convergenceเดิมเป็น inputที่นำมาใช้ ไม่ใช่ผลค้น rootซ้ำ
+
+Negative controlsตรวจ baselineแทนgain, coefficient retuning, input/readout parityที่ละไว้,
+factor2CของC², mixed-input/readout overclaim, finite-amplitude extrapolation,
+frozen-label learning, ledger-as-feedback และ physical promotion
+ผลจริง/counts/check commandsและpreservationบันทึกใน Topic UPDATE_LOG/WORK_LEDGER
+
+Runtimeที่มากับแอปไม่มี SymPyใน default path จึงใช้ bundled Python3.12 ร่วมกับ pure-Python
+SymPy1.14.0/mpmathที่มีอยู่แล้วใน `.venv/Lib/site-packages` ผ่าน PYTHONPATH ไม่ติดตั้งใหม่
+การลองผ่าน venv launcherไม่มี captured completionที่ใช้ตรวจรับ จึงไม่นับเป็นผลผ่าน
+แก้ syntax typoใน source-readout checkก่อนยืนยัน suite ไม่ได้เปลี่ยนสมการ
+หรือ physical parametersเพื่อช่วยผล ผลที่อ้างว่าผ่านต้องอ้าง confirmed invocationในlog

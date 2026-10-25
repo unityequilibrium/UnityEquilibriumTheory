@@ -1,3 +1,42 @@
+## 2026-10-25 - Retained response U: state memory, gain and structural boundary
+
+- Scope/wave: research-core, new FORMAL response/source-dependency audit. Added
+  sections8-13 and navigation to UET_CORE_PROPOSITION_PREMISE_REVIEW.md; old T
+  body preserved. New retained_response_requirement_audit contract, producer,
+  tests and compact artifact; no Core/API/default/threshold/README/gate change.
+- U0/U1: author requirement includes state memory and structural/relationship
+  adaptation, checked separately; signed/magnitude alternatives retained. Reused
+  old finite preparation/convergence and N-S limits without old science reruns.
+  Checked nine old contracts42/8/11/13/14/20/14/11/15 identities before work.
+- U2 result: exact4x2 transfer and positive-energy/no-zero-loss-mode stability.
+  Each separate readout/one-port small-signal magnitude equal across signed
+  branches; sign table explicit. Baseline contrast is not gain contrast. Mixed
+  inputs/readouts give exact counterexamples to an all-protocol extension.
+- U3 result: p-to-fixed-A-to-fitness-to-p feedback exists; A/costs are external
+  frozen configuration. Resource/threshold do not feed probability updates in
+  inspected source. Saved cost/interaction controls read, not rerun; thermal
+  helper bug not repaired or used. Fixed laws do not rule out all adaptation.
+- Actually ran final new suite26/26,19 exact groups,10 negative controls; new
+  producer --emit-report then --check with artifact hash unchanged by check.
+  Contract has22 identities, FORMAL_RESULT/review INCOMPLETE. Read-only full
+  completeness and explicit7-path check:25contracts/130routes/0errors; legacy101,
+  unreviewed3734 remain.24 local links/anchors, tables/math/privacy checked.
+- Preservation:92 protected normalized source/contract hashes and284 unrelated
+  tracked raw hashes unchanged; old T report body, Topic-log body and ledger
+  prefix preserved. No old result artifact regenerated or identity refreshed.
+- Runtime: bundled Python3.12 plus existing pure-Python SymPy1.14.0/mpmath from
+  repo venv via PYTHONPATH; no installation. Initial missing default dependency,
+  source-readout syntax typo and contract unit-field mismatch fixed before the
+  confirmed pass; no model, physical parameter or threshold retuning.
+- Controller: physical-parent-preparation/quantum-parent-correspondence remain
+  open. One sourced missing structural-response requirement, independent
+  restriction or admitted physical state/preparation/readout needed to reopen;
+  no automatic A(t), adaptive coupling, new platform or experiment.
+- Claim impact: FORMAL gain/source boundary only, not physical validation,
+  universal learning no-go, improvement or new UET discriminator. Workflow
+  standards17/18/30/32 applied. Local seven-path checkpoint only, old463 statuses
+  and Topic-log578/79 excluded; no push/PR/merge/publication or next wave.
+
 ## 2026-10-25 - Core premise T: return to the proposition without changing the parent
 
 - Scope/wave: research-core, premise/claim-boundary synthesis after the author's
