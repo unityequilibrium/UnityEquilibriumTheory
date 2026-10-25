@@ -1,3 +1,49 @@
+## 2026-10-25 - Retained response regimes: stationary memory, gain and write ledger
+
+- Scope/wave: research-core, one new FORMAL family-classification path on
+  codex/research/retained-response-regimes from d6ddc910313028f63828a8bf02897480822c10e3.
+  Added UET_RETAINED_RESPONSE_REGIME_CLASSIFICATION.md plus the matching contract,
+  producer/tests/artifact and ledger entry; U report/artifact remain immutable.
+- Baseline:463 old statuses, empty index, old Topic-log diff578/79 held back.
+  Ten old contracts42/8/11/13/14/20/14/11/15/22 identities checked, no errors;
+  no old producer, root search, trajectory, physical dataset or Core change.
+- New result: full admitted homogeneous nonconserved stationary classification,
+  including C=0, g=0, a_C=0, a_Phi=0 and degenerate leading-energy boundaries.
+  For a_C>0,A>0,Delta>0, origin and high-Phi minimum pair coexist; a_Phi>0
+  makes both references SPD for the declared full linear-response comparison.
+- Exact controls: a_C=3/8,g=2,other potential coefficients1 gives zero/nonzero
+  C-gain contrast, with low positive root saddles and negative root rejected.
+  All-one potential control has no nonzero admissible state. Full response
+  retains mobility/tau/source factors; U signed-pair parity recovered, not rerun.
+  C/J_Phi DC zero-versus-nonzero is guaranteed in the SPD coexistence scope;
+  C/J_C DC ordering is not universal, but the fixed control differs exactly.
+- Finite write: old two ports produce the declared quintic path from the same
+  zero state, with continuous endpoint sources. Pointwise RHS/ledger and
+  independently integrated work/loss balance exact. Nonzero final energy is
+  (-83+26*sqrt(13))/256>0, not equal-energy/cost memory; no SI heat/entropy claim.
+- Actually ran final suite33/33,40 symbolic groups/24 negative controls;
+  producer explicit emit then read-only check, artifact unchanged by check;
+  18 identities, FORMAL_RESULT/review INCOMPLETE. Full read-only completeness
+  and explicit seven-path check:26contracts/131routes/0errors;
+  legacy101/unreviewed3734 remain.
+- Reviewed17 local links/anchors, six tables,35 paired display equations,
+  inline delimiters, units, original source locators and privacy. Protected101
+  normalized hashes/284 unrelated tracked raw hashes unchanged before log edit.
+  Final log-body/ledger-prefix preservation and scoped diff checked at checkpoint.
+- Blocker narrowed: U's equal-magnitude unit-fixture restriction is not a
+  family-wide no-go; state/phase memory can change sensitivity in the old law.
+  Comparator remains EQUIVALENT for identical generator/state/ports/readout.
+  No topology-learning, improvement/generalization, physical or UET novelty claim.
+- Still controlling: physical-parent-preparation, with quantum-parent-correspondence
+  separate. One sourced independent writing/readout restriction or admitted
+  physical dictionary that changes comparator decision is the prerequisite;
+  no automatic new state, model, material, experiment or next wave.
+- Workflow linkage: standards17/18/24/30/32; no standards or physics-gate edits.
+  Local seven-path checkpoint only. Existing daily ledger already exceeds ten
+  entries: explicit decision is to commit this coherent unit locally and retain
+  the user's no-push/PR/merge/publication boundary; do not expand another wave.
+  Exclude old463 statuses and old Topic-log578/79 from the commit.
+
 ## 2026-10-25 - Retained response U: state memory, gain and structural boundary
 
 - Scope/wave: research-core, new FORMAL response/source-dependency audit. Added
