@@ -1,3 +1,58 @@
+## 2026-10-25 - Physical platform S4: verified scoped screening handoff
+
+- Completed eight-path source/report/contract/producer/tests/artifact/log unit.
+  Actual full new suite28/28,17 exact correspondence checks,8 negative controls;
+  deterministic artifact with15 local source/config/code/report identities.
+  Contract stays PHYSICAL_COMPARISON/DIAGNOSTIC, review INCOMPLETE.
+- Read-only completeness including eight changed paths:24contracts/129routes,
+  zero errors. Local links/anchors/units/privacy checked.43 protected normalized
+  hashes and284 unrelated tracked dirty hashes unchanged; old log body preserved.
+- All three inspected native descriptions do not supply unchanged-parent
+  realization; DIFFERENT and UNRESOLVED components distinguished, especially
+  Fe2012/2017 access gaps. No physical theta,chi,Var(Phi) or quantum-parent
+  acceptance; no new model, extra platform, material selection or gate promotion.
+- Controller physical-parent-preparation now requires native state/energy/
+  boundary/readout correspondence before scales. Next proposed decision is the
+  free-chain/frozen-binary reference premise; no effective model started.
+- Local checkpoint only: eight scoped paths/new log prefix, exclude463 old
+  statuses and older log578/79. No push/PR/merge despite normal publish checkpoint,
+  per explicit authorization. Scientific sources not disproved by this screen.
+
+## 2026-10-25 - Physical platform S1-S3: native correspondence witnesses
+
+- Report source-linked state/energy/boundary/scale and observation tables now
+  complete. Added PHYSICAL_COMPARISON/DIAGNOSTIC contract, new producer/tests;
+  review INCOMPLETE, physical-parent-preparation/quantum-parent gaps retained.
+- Derived native AF sign/spin normalization and nonzero doublet-leakage
+  witnesses. Classical staggering changes C and prepared sector; the Neel pair
+  has equal population C. Endpoint hidden-mode null direction remains visible.
+  No new Core order parameter, source force or Hamiltonian added.
+- Actually ran new preliminary26/26 tests,17 exact diagnostic checks and8
+  negative controls. Fixed an over-eager symbolic equality evaluation and a
+  test-string mismatch; no physical parameter/threshold retuning.
+- Three native descriptions do not supply unchanged-parent realization; Fe2012
+  original main/Methods still unverified, follow-ups not substituted for it.
+  SI conversions are context only; theta/chi/Var(Phi) remain null, not zero.
+- Controller narrowed: native-state-energy-boundary/readout correspondence
+  precedes numeric scale filling. Next: artifact/identities and scoped QA/local
+  checkpoint, not more platforms, physical acceptance or new model.
+
+## 2026-10-25 - Physical platform S0: source boundary locked
+
+- Baseline d9a1a2833,463 old statuses, index empty; old log578/79 preserved.
+  Created branch codex/research/physical-platform-screen. Q14/variance11
+  identities match;43 old normalized hashes protected. No old producer/search.
+- Added bounded card and extracted-source manifest-equivalent for the three
+  approved platforms only. Read Mn author-uploaded main text and Pt publisher
+  Results/Discussion/Methods; Fe2012 seed main text unavailable after publisher
+  and institutional attempts. Two Fe follow-ups bounded: one preprint main
+  Hamiltonian, one partially accessible indexed experimental Results.
+- Main-source versus metadata/partial access, fit/choice/observed origins and
+  unknown uncertainty explicit. No source value assigned as parent modal mass,
+  d_ref or J_ref; no physical variance evaluated. No model/gate/claim promotion.
+- Next: derive correspondence witnesses, new diagnostic contract/producer/tests,
+  then artifact and scoped QA/local commit. No publication or next wave.
+
 ## 2026-10-25 - Phi variance V4: verified scoped static handoff
 
 - New report/FORMAL contract/producer/tests/artifact completed. Actual full new
