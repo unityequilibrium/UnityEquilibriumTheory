@@ -1,0 +1,363 @@
+{
+  "analytic_dependencies": [
+    "Finite canonical Gibbs/KL identity and positivity; T-independent fixed-coordinate Hamiltonian.",
+    "Positive conditional bond variance and chain rule give entropy/force consistency.",
+    "Convex endpoint energy envelope gives a log-partition value bound for any finite class.",
+    "Taylor second-derivative supremum on |epsilon|<=rho<1 supplies exchange-value remainder.",
+    "Lattice/phonon and external-force/ensemble distinctions are audited from source, not newly computed."
+  ],
+  "checks": {
+    "N4_limits_and_energy_free_energy_envelope": {
+      "central_delta_is_four_J": true,
+      "low_T_fixed_J_entropy_ground_degeneracy": true,
+      "lower_F_difference_certificate": true,
+      "uniformity_fails_for_finite_positive_x": true,
+      "upper_Q_envelope_certificate": true,
+      "zero_coupling_or_high_T_entropy": true
+    },
+    "actual_source_N4_force_entropy": {
+      "source_Q_Maxwell": true,
+      "source_Q_Phi_entropy": true,
+      "source_Q_force": true
+    },
+    "direct_N4_derivatives_and_fluctuations": {
+      "N4_mean_witness": true,
+      "N4_partition_witness": true,
+      "N4_variance_witness": true,
+      "direct_J_entropy_derivative": true,
+      "direct_S_derivative": true,
+      "direct_U_mean_energy": true
+    },
+    "fixed_coordinate_thermodynamics": {
+      "Maxwell_force_entropy": true,
+      "Phi_entropy_from_conditional_variance": true,
+      "S_from_fixed_state_T_derivative": true,
+      "U_equals_F_plus_TS": true,
+      "beta_derivative_U": true,
+      "force_from_F": true
+    },
+    "old_mean_field_map_and_diagonal": {
+      "coordination_two_affine_parameter_map": true,
+      "diagonal_Phi_derivative_not_discarded": true,
+      "old_square_diagonal_is_retained": true
+    },
+    "strain_law_sign_and_Taylor_curvature": {
+      "Taylor_curvature": true,
+      "affine_derivative_at_reference": true,
+      "affine_value_at_reference": true,
+      "compression_coordinate": true,
+      "positive_compression_exchange_derivative": true
+    }
+  },
+  "completed_rounds": [
+    "N0",
+    "N1",
+    "N2",
+    "N3"
+  ],
+  "contract_id": "T13_SPIN_STRAIN_CORRESPONDENCE_FORMAL_V1",
+  "contract_review_status": "INCOMPLETE",
+  "contract_sha256": "8f4ef9133c9e53665cf0312f3cc6283ff078af756dfe62105353cd6d0c99e7ce",
+  "decisions": {
+    "Phi_dependent_intrinsic_entropy": "Spin configurations alone give dPhi S_int=-Jcal*Jcal_prime*Var(B)/(k_B*T^2); no added hidden Phi degree of freedom or information substance.",
+    "affine_exchange": "APPROXIMATE in a declared small-strain window, with Taylor bound; not an all-Phi coupling identity.",
+    "comparator": "Imported standard statistical mechanics; no UET-specific discriminator or physical data validation.",
+    "full_Phi_Pi": "UNRESOLVED: physical elastic/phonon potential, zero/reference convention, mode inertia and state/measure mapping are not derived by this spin-sector calculation.",
+    "microscopic_equivalence": "DIFFERENT: NN ring and M squared-sum are not exact finite-N realizations of each other; explicit fixed-C witness suffices.",
+    "uniform_counting": "Valid only for equal conditional energies (or beta*J=0 limit); NN fixed-k classes generally have nonuniform weights. M remains valid for its own chosen squared-sum energy."
+  },
+  "finite_ring_controls": [
+    {
+      "N": 4,
+      "conditional_classes": {
+        "0": {
+          "conditional_normalization": true,
+          "entropy_from_micro_probabilities": true,
+          "log_count_minus_KL": true,
+          "mean_from_log_partition": true,
+          "retained_intrinsic_chain_density": true,
+          "variance_from_mean_response": true
+        },
+        "1": {
+          "conditional_normalization": true,
+          "entropy_from_micro_probabilities": true,
+          "log_count_minus_KL": true,
+          "mean_from_log_partition": true,
+          "retained_intrinsic_chain_density": true,
+          "variance_from_mean_response": true
+        },
+        "2": {
+          "conditional_normalization": true,
+          "entropy_from_micro_probabilities": true,
+          "log_count_minus_KL": true,
+          "mean_from_log_partition": true,
+          "retained_intrinsic_chain_density": true,
+          "variance_from_mean_response": true
+        },
+        "3": {
+          "conditional_normalization": true,
+          "entropy_from_micro_probabilities": true,
+          "log_count_minus_KL": true,
+          "mean_from_log_partition": true,
+          "retained_intrinsic_chain_density": true,
+          "variance_from_mean_response": true
+        },
+        "4": {
+          "conditional_normalization": true,
+          "entropy_from_micro_probabilities": true,
+          "log_count_minus_KL": true,
+          "mean_from_log_partition": true,
+          "retained_intrinsic_chain_density": true,
+          "variance_from_mean_response": true
+        }
+      },
+      "configurations": 16,
+      "energy_envelope": {
+        "N": 4,
+        "endpoint_envelope_all_classes": true,
+        "exact_control_J": "3/2",
+        "exact_control_Jaff": "5/4"
+      },
+      "folding": {
+        "flip_0": true,
+        "flip_1": true,
+        "flip_2": true,
+        "flip_3": true,
+        "flip_4": true,
+        "fold_preserves_partition_without_zero_double": true
+      },
+      "partition": {
+        "finite_ring_transfer_trace_not_infinite_limit": true,
+        "micro_equals_sum_restricted": true,
+        "zero_coupling_counts": true
+      },
+      "source_spin_and_bonds": {
+        "all_exact_residuals_zero": true,
+        "checked_configurations": 16
+      }
+    },
+    {
+      "N": 6,
+      "conditional_classes": {
+        "0": {
+          "conditional_normalization": true,
+          "entropy_from_micro_probabilities": true,
+          "log_count_minus_KL": true,
+          "mean_from_log_partition": true,
+          "retained_intrinsic_chain_density": true,
+          "variance_from_mean_response": true
+        },
+        "1": {
+          "conditional_normalization": true,
+          "entropy_from_micro_probabilities": true,
+          "log_count_minus_KL": true,
+          "mean_from_log_partition": true,
+          "retained_intrinsic_chain_density": true,
+          "variance_from_mean_response": true
+        },
+        "2": {
+          "conditional_normalization": true,
+          "entropy_from_micro_probabilities": true,
+          "log_count_minus_KL": true,
+          "mean_from_log_partition": true,
+          "retained_intrinsic_chain_density": true,
+          "variance_from_mean_response": true
+        },
+        "3": {
+          "conditional_normalization": true,
+          "entropy_from_micro_probabilities": true,
+          "log_count_minus_KL": true,
+          "mean_from_log_partition": true,
+          "retained_intrinsic_chain_density": true,
+          "variance_from_mean_response": true
+        },
+        "4": {
+          "conditional_normalization": true,
+          "entropy_from_micro_probabilities": true,
+          "log_count_minus_KL": true,
+          "mean_from_log_partition": true,
+          "retained_intrinsic_chain_density": true,
+          "variance_from_mean_response": true
+        },
+        "5": {
+          "conditional_normalization": true,
+          "entropy_from_micro_probabilities": true,
+          "log_count_minus_KL": true,
+          "mean_from_log_partition": true,
+          "retained_intrinsic_chain_density": true,
+          "variance_from_mean_response": true
+        },
+        "6": {
+          "conditional_normalization": true,
+          "entropy_from_micro_probabilities": true,
+          "log_count_minus_KL": true,
+          "mean_from_log_partition": true,
+          "retained_intrinsic_chain_density": true,
+          "variance_from_mean_response": true
+        }
+      },
+      "configurations": 64,
+      "energy_envelope": {
+        "N": 6,
+        "endpoint_envelope_all_classes": true,
+        "exact_control_J": "3/2",
+        "exact_control_Jaff": "5/4"
+      },
+      "folding": {
+        "flip_0": true,
+        "flip_1": true,
+        "flip_2": true,
+        "flip_3": true,
+        "flip_4": true,
+        "flip_5": true,
+        "flip_6": true,
+        "fold_preserves_partition_without_zero_double": true
+      },
+      "partition": {
+        "finite_ring_transfer_trace_not_infinite_limit": true,
+        "micro_equals_sum_restricted": true,
+        "zero_coupling_counts": true
+      },
+      "source_spin_and_bonds": {
+        "all_exact_residuals_zero": true,
+        "checked_configurations": 64
+      }
+    }
+  ],
+  "identities": [
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/meta/UET_SPIN_STRAIN_CORRESPONDENCE_AUDIT.md",
+      "role": "evidence",
+      "sha256": "21e73506d528b616fb8cd13750facd14a2d33a9886d5aadd0927c580c4aed736"
+    },
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/Research_T13_Spin_Strain_Correspondence.py",
+      "role": "code",
+      "sha256": "8d249e67e124c99b10dec41e3fd4da36ab4ef31d3c68802b1af2f2052412d9aa"
+    },
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/test_t13_spin_strain_correspondence.py",
+      "role": "code",
+      "sha256": "83798d99657805df89a8aa7072296e1576525c2bb0dd1f3b1ff2a2f115b120b7"
+    },
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/meta/UET_JOINT_STATE_MEASURE_CONSTRUCTION.md",
+      "role": "evidence",
+      "sha256": "f212977ad144349816c8952e3ad75261df9fea05c61dbf3dcc8048cf4913ba0d"
+    },
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/calculation_contracts/joint_state_measure_construction.json",
+      "role": "evidence",
+      "sha256": "7eb2903da30d2dff6e85fa2b1c58c982fafd0ef44087520a18def944a88deb13"
+    },
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/t13_joint_state_measure_construction.json",
+      "role": "evidence",
+      "sha256": "7ee986e78fb3032d02c125c54c93f758b21e31cfc593e2895b8616d5cca2fd98"
+    },
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/Research_T13_Joint_State_Measure_Construction.py",
+      "role": "evidence",
+      "sha256": "67f3895fa13aa1847f04c736012369addb225d3d6ec7405ef38e49079065f50d"
+    },
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/meta/UET_THEORY_ARGUMENT.md",
+      "role": "evidence",
+      "sha256": "d590b084fa85ed1e3133364a8b889b79ad5c3a901e3a8044ed4e00ae3d763d4a"
+    },
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/meta/UET_THERMODYNAMIC_FOUNDATIONS_REVIEW.md",
+      "role": "evidence",
+      "sha256": "c1cf629e5093d741a409d6c645fcd04f9b35bb64f1d29b7627f3e6736f6f5f69"
+    },
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/core/01_contracts/MATTER_SPACE_RESEARCH_SPEC.md",
+      "role": "input",
+      "sha256": "d178f1978c93a09350a4da6ea11153a93fbfb13ad12c9d390846f741ad5db848"
+    },
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/meta/schemas/calculation_contract_v1.schema.json",
+      "role": "config",
+      "sha256": "ec556052d755908a2ec7b3ec10b411839f4f0bee549fd902fb1f915f8475ebc3"
+    },
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/scripts/audit/audit_calculation_completeness.py",
+      "role": "code",
+      "sha256": "b406d31add9834d2cd1d9f3bb8d42724d26c390413710419313dd85cba7121ca"
+    },
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/calculation_contracts/joint_thermodynamic_completion.json",
+      "role": "evidence",
+      "sha256": "352cc46ecbfee4e10d8edc5a02ed1379099a023dba423cc4df250b9ec38695b6"
+    }
+  ],
+  "kinetic_law_added": false,
+  "limitations": [
+    "No actual material mapping, calibration or independent specialist approval.",
+    "Hret is the common M spectator, not derived physical lattice internal energy.",
+    "No dynamics, fast-equilibration proof, trajectory heat, entropy production or memory lifetime.",
+    "No all-R strain integral, thermodynamic-limit phase claim or force bound from energy envelope.",
+    "No full lattice entropy is set to zero or added to old Omega automatically."
+  ],
+  "method": {
+    "arithmetic": "exact",
+    "finite_ring_is_not_full_paper_reproduction": true,
+    "parameter_sweep": false,
+    "random_samples": 0,
+    "sympy": "1.14.0"
+  },
+  "negative_controls": {
+    "discarded_conditional_interaction_energy": true,
+    "double_counted_bonds": true,
+    "histogram_entropy_omits_micro_degeneracy": true,
+    "unconstrained_partition_used_for_fixed_k": true,
+    "uniform_entropy_at_nonuniform_weights": true,
+    "wrong_spin_normalization": true,
+    "wrong_strain_orientation": true,
+    "zero_class_doubled": true
+  },
+  "new_core_terms": 0,
+  "observational_rows": 0,
+  "old_scientific_verifiers_rerun": false,
+  "physical_acceptance": false,
+  "unique_UET_discriminator": false,
+  "witness": {
+    "C_over_sC": "0",
+    "N": 4,
+    "Q": "4+2*exp(-4*x)",
+    "bond_multiplicity": {
+      "-4": 2,
+      "0": 4
+    },
+    "k": 2,
+    "mean_B": "-4/(2*exp(4*x)+1)",
+    "variance_B": "32*exp(4*x)/(2*exp(4*x)+1)^2",
+    "x": "Jcal/(k_B*T)"
+  }
+}

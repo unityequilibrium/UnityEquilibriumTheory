@@ -1,0 +1,200 @@
+{
+  "checks": {
+    "R1_first_law": {
+      "ito_energy_drift": "0",
+      "ito_stratonovich_energy_correction": "0",
+      "no_independent_Phi_noise": "0",
+      "work_minus_heat_C_noise": "0",
+      "work_minus_heat_Pi_noise": "0",
+      "work_minus_heat_dt": "0"
+    },
+    "R1_free_energy_nonuniqueness": {
+      "first_law_intrinsic_heat_correction": "0",
+      "internal_energy_differs": "0",
+      "intrinsic_entropy_definition": "0",
+      "same_F_at_reference_bath": "0"
+    },
+    "R2_Gibbs_stationarity": {
+      "Fokker_Planck_residual_over_Gibbs": "0"
+    },
+    "R2_entropy_production": {
+      "C_current_heat_minus_Ito_heat_is_boundary_derivative": "0",
+      "C_entropy_plus_heat_equals_current_square": "0",
+      "Y_current_heat_minus_Ito_heat_is_boundary_derivative": "0",
+      "Y_irreversible_entropy_plus_heat_equals_current_square": "0"
+    },
+    "R2_equilibrium_currents": {
+      "irreversible_current_over_density_0": "0",
+      "irreversible_current_over_density_1": "0",
+      "irreversible_current_over_density_2": "0",
+      "reversible_current_divergence_over_density": "0"
+    },
+    "R2_normalizability_SOS": {
+      "energy_minus_coercive_lower_bound_is_sum_of_squares": "0"
+    },
+    "R2_positive_friction_at_equilibrium": {
+      "Pi_friction_loss_minus_Theta_over_tau": "0",
+      "Pi_variance_minus_Gibbs_value": "0"
+    },
+    "R2_time_reversal": {
+      "divergence_reversible_drift": "0",
+      "irreversible_0": "0",
+      "irreversible_1": "0",
+      "irreversible_2": "0",
+      "reversible_0": "0",
+      "reversible_1": "0",
+      "reversible_2": "0"
+    },
+    "R3_cell_normalization": {
+      "total_energy_over_kBT_equals_per_site_exponent": "0"
+    },
+    "R3_entropy_information_flow": {
+      "C_partial_second_law": "0",
+      "Y_partial_second_law_up_to_reversible_entropy_divergence": "0",
+      "ensemble_free_energy_relative_entropy_identity": "0",
+      "entropy_rate_chain_rule_with_all_currents": "0",
+      "joint_marginal_entropy_chain_rule": "0",
+      "reversible_Y_drift_divergence": "0"
+    },
+    "R3_equilibrium_dependence_not_covariance": {
+      "C_Phi_cross_moment_integrand_odd": "0",
+      "C_reflection_symmetry": "0",
+      "Pi_independent_of_C_at_Gibbs": "0",
+      "Pi_independent_of_Phi_at_Gibbs": "0",
+      "nonzero_dependence_witness": "0",
+      "zero_coupling_energy_separates": "0"
+    },
+    "R3_generator_partition": {
+      "C_Phi_quadratic_covariation": "0",
+      "C_Pi_quadratic_covariation": "0",
+      "L_equals_LC_plus_LY": "0"
+    },
+    "R3_standard_comparator": {
+      "C_noise_amplitude": "0",
+      "force_noise_amplitude": "0",
+      "overdamped_C_force_port": "0",
+      "same_energy": "0",
+      "underdamped_mass_friction_force_port": "0",
+      "velocity_state": "0"
+    },
+    "core_homogeneous_projection": {
+      "dC": "0",
+      "dPhi": "0",
+      "dPi": "0",
+      "energy": "0",
+      "muC": "0",
+      "muP": "0",
+      "omega": "0",
+      "returned_muC": "0",
+      "returned_muP": "0",
+      "sigmaC": "0",
+      "sigmaPi": "0",
+      "sigma_total": "0"
+    }
+  },
+  "completed_rounds": [
+    "R0",
+    "R1",
+    "R2",
+    "R3"
+  ],
+  "contract_id": "T13_JOINT_THERMODYNAMIC_COMPLETION_FORMAL_V1",
+  "contract_review_status": "INCOMPLETE",
+  "contract_sha256": "372bc22d6a7b42ef36f59458e3f3623018b319bf82a0e7773dde32265ac87e92",
+  "decisions": {
+    "HIST_F": "additional thermal/microscopic correspondence required; one-temperature heat nonuniqueness proved",
+    "REF_E": "consistent under declared thermostat, parity, measure and boundary assumptions",
+    "comparator": "exact same generator/state/source/readout implies no UET-label discrimination",
+    "not_inferred": [
+      "unique mobility or coupling",
+      "universal information ontology",
+      "physical material validation",
+      "cosmological openness, learning or persistence",
+      "finite-temperature memory lifetime"
+    ],
+    "one_next_question": "Can one explicit joint coarse-graining/thermal measure realize the existing Omega family and fix intrinsic entropy without fitting or extra Core terms? Not started here."
+  },
+  "identities": [
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/meta/UET_THEORY_ARGUMENT.md",
+      "role": "evidence",
+      "sha256": "d590b084fa85ed1e3133364a8b889b79ad5c3a901e3a8044ed4e00ae3d763d4a"
+    },
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/core/02_equations/matter_space/uet_matter_space.py",
+      "role": "code",
+      "sha256": "488db6aa26b99856e2eb82a2f46a9857f623f418ef8e537498fa71d5e4f633aa"
+    },
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/core/01_contracts/MATTER_SPACE_RESEARCH_SPEC.md",
+      "role": "input",
+      "sha256": "d178f1978c93a09350a4da6ea11153a93fbfb13ad12c9d390846f741ad5db848"
+    },
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/core/07_artifacts/correspondence/matter_space_ontology_contract.json",
+      "role": "input",
+      "sha256": "c460094a30d7ae72f1ccc4c5c335e3fe402d99fe3120d1156bb5d52810ff2e99"
+    },
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/meta/schemas/calculation_contract_v1.schema.json",
+      "role": "config",
+      "sha256": "ec556052d755908a2ec7b3ec10b411839f4f0bee549fd902fb1f915f8475ebc3"
+    },
+    {
+      "availability": "REQUIRED",
+      "commit": "9af800914241b559e57581f6c1ae42ced461e6ba",
+      "kind": "git_blob",
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/calculation_contracts/energy_memory_cycle.json",
+      "role": "evidence",
+      "sha256": "d97ab6d9c53bce6bf72661c6b0e6f5fc9b97ed0482e0fdd7a94b28469aaa207e"
+    },
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/Research_T13_Joint_Thermodynamic_Completion.py",
+      "role": "code",
+      "sha256": "c701195cf6da2376701d8543b883c5342d3a3186bf21d326180db25d10bcc18c"
+    },
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/test_t13_joint_thermodynamic_completion.py",
+      "role": "code",
+      "sha256": "7c17734128178640b556600899c330c78e62ad05409814b042f03bfc2be3fb06"
+    }
+  ],
+  "interpretation": "Conditional REF-E consistency and exact matched standard-Langevin equivalence. Sigma is not total entropy production; mutual information is a derived statistical quantity, not the author's universal information. HIST-F physical heat remains underdetermined without intrinsic entropy/measure.",
+  "limitations": [
+    "No SI/microscopic correspondence",
+    "No independent specialist review",
+    "Density smoothness, tail and finite-integral assumptions are analytic conditions, not sampled tests",
+    "Quartic R-domain diffusion is not the finite-N bounded binary process",
+    "No stochastic trajectory, finite-temperature retention lifetime or spatial/conserved proof"
+  ],
+  "method": {
+    "arithmetic": "exact",
+    "samples": 0,
+    "sympy": "1.14.0"
+  },
+  "negative_controls": {
+    "wrong_C_diffusion_rejected": true,
+    "wrong_Pi_diffusion_rejected": true,
+    "wrong_Pi_parity_rejected": true,
+    "wrong_heat_sign_rejected": true
+  },
+  "new_core_terms": 0,
+  "observational_rows": 0,
+  "old_scientific_verifiers_rerun": false,
+  "physical_acceptance": false,
+  "unique_UET_discriminator": false
+}

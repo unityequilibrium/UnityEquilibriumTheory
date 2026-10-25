@@ -1,0 +1,418 @@
+{
+  "claim_boundary": "FORMAL retained-response/source-dependency result in named unchanged realizations only. No physical acceptance, parameter uniqueness, improvement, internal topology-learning proof, quantum-parent validation, cosmological result, universal learning no-go or new UET discriminator.",
+  "components": [
+    {
+      "disposition": "MODELED",
+      "evidence": [
+        "docs/core/02_equations/matter_space/uet_matter_space.py",
+        "docs/meta/UET_CORE_PROPOSITION_PREMISE_REVIEW.md#retained-response-transfer"
+      ],
+      "group": "system_state",
+      "id": "unit-state",
+      "reason": "Old mu/RHS, fixture, branches and 4x2 transfer checked exactly; no added state or equation."
+    },
+    {
+      "disposition": "MODELED",
+      "evidence": [
+        "docs/core/03_lanes/persistence/uet_resource_selection.py",
+        "docs/core/07_artifacts/provenance/resource_selection_dynamic_game_verification.json"
+      ],
+      "group": "system_state",
+      "id": "selection-source",
+      "reason": "Static dependency audit of current fixed-config selection source plus saved scoped controls; no selection simulation."
+    },
+    {
+      "disposition": "MODELED",
+      "evidence": [
+        "docs/meta/UET_CORE_PROPOSITION_PREMISE_REVIEW.md#retained-response-scenarios"
+      ],
+      "group": "drive_environment",
+      "id": "probe",
+      "reason": "Old normalized source ports applied separately, fixed coefficients, baseline subtraction and infinitesimal limit."
+    },
+    {
+      "disposition": "NOT_APPLICABLE",
+      "evidence": [
+        "docs/meta/UET_CORE_PROPOSITION_PREMISE_REVIEW.md"
+      ],
+      "group": "propagation",
+      "id": "signal",
+      "reason": "No spatial propagation, material signal or detection claim in a homogeneous formal derivative."
+    },
+    {
+      "disposition": "MODELED",
+      "evidence": [
+        "docs/meta/UET_CORE_PROPOSITION_PREMISE_REVIEW.md#retained-response-transfer"
+      ],
+      "group": "frame_time",
+      "id": "clock",
+      "reason": "Same normalized clock, Laplace variable and branch conventions; no time rescaling to create contrast."
+    },
+    {
+      "disposition": "NOT_APPLICABLE",
+      "evidence": [
+        "docs/meta/UET_CORE_PROPOSITION_PREMISE_REVIEW.md"
+      ],
+      "group": "detector",
+      "id": "detector",
+      "reason": "No detector. Real calibration/backaction remain prerequisites to any physical use."
+    },
+    {
+      "disposition": "MODELED",
+      "evidence": [
+        "docs/meta/UET_CORE_PROPOSITION_PREMISE_REVIEW.md#retained-response-transfer"
+      ],
+      "group": "processing",
+      "id": "readout",
+      "reason": "Separate readouts and their derivatives, baseline versus gain, input/output parity and mixed-scope counterexamples."
+    },
+    {
+      "disposition": "MODELED",
+      "evidence": [
+        "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/Research_T13_Retained_Response_Requirement_Audit.py",
+        "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/test_t13_retained_response_requirement_audit.py"
+      ],
+      "group": "numerics",
+      "id": "exact-check",
+      "reason": "Restricted source AST and exact SymPy rational/resolvent/energy identities; no eigenvalue sampling, root search or trajectories."
+    },
+    {
+      "disposition": "UNKNOWN",
+      "evidence": [
+        "docs/meta/UET_CORE_PROPOSITION_PREMISE_REVIEW.md#retained-response-structure"
+      ],
+      "group": "system_state",
+      "id": "retained-structure-correspondence",
+      "next_action": "Review one specific retained structural-response requirement against old state/input/readout before proposing any new law; no automatic redesign or external contact.",
+      "owner": "theory author with mathematical/statistical-physics reviewer",
+      "reason": "A sourced structural-response requirement, actual state/interaction map and physical preparation/readout are not supplied by the gain parity or fixed-config comparator."
+    }
+  ],
+  "contract_id": "T13_RETAINED_RESPONSE_REQUIREMENT_AUDIT_FORMAL_V1",
+  "data_policy": {
+    "calibration_ids": [],
+    "comparison_ids": [],
+    "holdout_policy": "No physical data or held-out material comparison. Gross et al. model/main text and Seifert conditions are conceptual theory sources only. Old control artifact is read by identity, not rerun or promoted as new observations.",
+    "independent_validation": false,
+    "uses_observations": false
+  },
+  "entrypoints": [
+    "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/Research_T13_Retained_Response_Requirement_Audit.py",
+    "docs/meta/UET_CORE_PROPOSITION_PREMISE_REVIEW.md"
+  ],
+  "error_budget": {
+    "acceptance": "Exact RHS/transfer/energy/parity checks and scoped negative controls pass; identity/link/completeness checks consistent. Different/equivalent/unresolved results are legitimate; no physical promotion.",
+    "approximation": "Infinitesimal derivative only. No finite-amplitude or finite-wait error bound; mixed protocol counterexamples retained.",
+    "dependence": "Symmetry, source and readout share one generator/normalization. Scalar branch outputs not independent confirmations; resource comparator remains separate.",
+    "measurement": "NOT_APPLICABLE to formal outputs; physical readout uncertainty/calibration unknown, not zero.",
+    "numerical": "Exact rational symbolic identities; c/r constrained algebraically, no numerical roots/eigenvalues/trajectories. Legacy control booleans imported without recalculation.",
+    "omission_limit": null,
+    "omissions": "Actual material, bath, observer, quantum, lifetime, adaptive topology and structural write law not added or declared negligible.",
+    "systematic": "Restricted AST arithmetic/dependency extraction and self-review; source hashes pin actual code. No evidence of universal state sufficiency, structural learning or UET novelty is assumed.",
+    "unit": "normalized state, source, time and Laplace frequency; rational symbolic identities, not SI susceptibility"
+  },
+  "evidence": [
+    "docs/meta/UET_CORE_PROPOSITION_PREMISE_REVIEW.md",
+    "docs/meta/UET_THEORY_ARGUMENT.md",
+    "docs/core/01_contracts/MATTER_SPACE_RESEARCH_SPEC.md",
+    "docs/core/01_contracts/RESOURCE_SELECTION_DYNAMIC_GAME_SPEC.md",
+    "docs/core/07_artifacts/provenance/resource_selection_dynamic_game_verification.json",
+    "https://arxiv.org/html/q-bio/0512037",
+    "https://arxiv.org/html/1205.4176"
+  ],
+  "identities": [
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/meta/UET_CORE_PROPOSITION_PREMISE_REVIEW.md",
+      "role": "evidence",
+      "sha256": "e85924a8cbd1bffce1384fa6d8c147523bd18b029c9f00d540f1592186a04635"
+    },
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/Research_T13_Retained_Response_Requirement_Audit.py",
+      "role": "code",
+      "sha256": "ece85e04207ea8dda8da7e57d63ecfd2e61554792dc2eeb11fc64824531a3014"
+    },
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/test_t13_retained_response_requirement_audit.py",
+      "role": "code",
+      "sha256": "f8a198b1b9c9440f0b0697832f3093c732bf0e126667c168a3e18f41cfa5b8db"
+    },
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/core/02_equations/matter_space/uet_matter_space.py",
+      "role": "input",
+      "sha256": "488db6aa26b99856e2eb82a2f46a9857f623f418ef8e537498fa71d5e4f633aa"
+    },
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/core/01_contracts/MATTER_SPACE_RESEARCH_SPEC.md",
+      "role": "input",
+      "sha256": "d178f1978c93a09350a4da6ea11153a93fbfb13ad12c9d390846f741ad5db848"
+    },
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/meta/UET_THEORY_ARGUMENT.md",
+      "role": "evidence",
+      "sha256": "d590b084fa85ed1e3133364a8b889b79ad5c3a901e3a8044ed4e00ae3d763d4a"
+    },
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/calculation_contracts/energy_memory_cycle.json",
+      "role": "evidence",
+      "sha256": "fabaadf5e788c1bebbb7841b3823ea0b99ee8e90b27b143d7d920cce3dd076d3"
+    },
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/core/03_lanes/persistence/uet_resource_selection.py",
+      "role": "input",
+      "sha256": "bc55c0a5b47e9980788e5c268c69c1dfeadcdf9dce7b540743d33a8f7a9a197f"
+    },
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/core/01_contracts/RESOURCE_SELECTION_DYNAMIC_GAME_SPEC.md",
+      "role": "input",
+      "sha256": "bbe67ade6f75fdae1f1cb9b5fce0589ac789495a3a253ee6096f9845c62439d5"
+    },
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/core/07_artifacts/provenance/resource_selection_dynamic_game_verification.json",
+      "role": "evidence",
+      "sha256": "b4c59a0cfb037fde910faf0412732c67dd800cff6425281f74150e4d81bb5d04"
+    },
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/core/07_artifacts/provenance/resource_selection_dynamic_game_contract.json",
+      "role": "evidence",
+      "sha256": "64a733b945af1806a701e22d4c372855ebb382a7caf399f23ab695cc68c00265"
+    },
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/t13_physical_platform_correspondence_screen.json",
+      "role": "evidence",
+      "sha256": "351c90f6376aeb474a0b77cc2fbd3b7c66e4faab83a72990f40f880bcdc81048"
+    },
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/calculation_contracts/physical_platform_correspondence_screen.json",
+      "role": "evidence",
+      "sha256": "c4065dcdadb82e391a54d6ea779492c701108e8f71c923c0792c6a2f2f6d5468"
+    },
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/meta/UET_SPIN_STRAIN_CORRESPONDENCE_AUDIT.md",
+      "role": "evidence",
+      "sha256": "21e73506d528b616fb8cd13750facd14a2d33a9886d5aadd0927c580c4aed736"
+    },
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/meta/UET_LATTICE_MECHANICAL_STATE_CONSTRUCTION.md",
+      "role": "evidence",
+      "sha256": "f272760ad1e00c12d3fd0df2315d16355f60166c97ea19843c327fc39942e659"
+    },
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/meta/UET_LATTICE_BATH_REDUCTION_AUDIT.md",
+      "role": "evidence",
+      "sha256": "e65174b4d3e3182af317db6bfb6cb86e70ffa6718dfb0a1a6f29b3e94752a13e"
+    },
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/topics/For Work/17_Formula_Audit_Standard.md",
+      "role": "evidence",
+      "sha256": "e83007810b110723f3ebf6fec80120e877c895d2855ce01bba64a95499879e08"
+    },
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/topics/For Work/18_Research_Hardening_Workflow.md",
+      "role": "evidence",
+      "sha256": "2bbefc7a1a7d4f4cb692c770e5022db0f40d648978f46a83e58ea7dcce80c843"
+    },
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/topics/For Work/30_Calculation_and_Observation_Completeness_Standard.md",
+      "role": "evidence",
+      "sha256": "8fec4618c5e21c975c62b10902d969609808ab2c98e6c004a5c0ac9596c6f762"
+    },
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/topics/For Work/32_Theory_Development_and_Research_Sequencing_Standard.md",
+      "role": "evidence",
+      "sha256": "e796ba85860736e47bd14977923ab14ffde920c1715617d93725aca12788f3c2"
+    },
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/meta/schemas/calculation_contract_v1.schema.json",
+      "role": "config",
+      "sha256": "ec556052d755908a2ec7b3ec10b411839f4f0bee549fd902fb1f915f8475ebc3"
+    },
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/scripts/audit/audit_calculation_completeness.py",
+      "role": "code",
+      "sha256": "b406d31add9834d2cd1d9f3bb8d42724d26c390413710419313dd85cba7121ca"
+    }
+  ],
+  "model": {
+    "approximation": "Jacobian response is exact only as an infinitesimal derivative about the declared steady state. Equal magnitudes apply to each of four separate channels with one source port at a time. Explicit mixed input/readout counterexamples prohibit a blanket extension. No finite-amplitude threshold, cooling, noise or physical quantum claim.",
+    "assumptions": "Unchanged unit coefficients from Argument section11, current canonical mu/RHS and allowed additive sources. Old finite smooth preparation to signed basins and convergence are analytic input, not assumed material preparation. Fixed-law state-dependence is not equated with absent adaptation, and readout contrast is not improvement.",
+    "drive_environment": "Mathematical J_C or J_Phi source probe in the old normalized ports. The reflection changes J_C sign as well as C; no independent detector or experimental calibration is implied. Resource selection/source audit is offline and no simulation is run.",
+    "formula_ids": [
+      "docs/meta/UET_CORE_PROPOSITION_PREMISE_REVIEW.md#retained-response-question",
+      "docs/meta/UET_CORE_PROPOSITION_PREMISE_REVIEW.md#retained-response-transfer",
+      "docs/meta/UET_CORE_PROPOSITION_PREMISE_REVIEW.md#retained-response-structure"
+    ],
+    "initial_boundary": "Homogeneous finite-dimensional nonconserved restriction of the old 1D model; spatial derivatives zero, positive gradient coefficients not changed. Zero perturbation initial condition about each prepared equilibrium for transfer functions; old transient pair and finite-wait limitations retained. No bath/receiver dynamics or finite wait declared as exact reset.",
+    "parameters": "a_matter=-1; b_matter=a_space=b_space=coupling_g=mobility_matter=mobility_space=tau_space=1, kappa_matter=kappa_space=1 with homogeneous derivatives zero. These are the old fixture, not defaults or physical constants; no calibration/fitting/retuning. Both branches and all readouts use the same coefficients, clock and normalization. Resource A/costs remain source configuration."
+  },
+  "next_action": "Stop after scoped memory/gain/structural verdict. Existing physical-parent-preparation controller remains open. One sourced missing structural-response requirement, independent restriction or admitted physical state/preparation/readout is needed before another calculation or model redesign. No automatic new model/platform/experiment or publication.",
+  "observation": {
+    "backaction": "Readout definitions add no force/state; actual measurement loading, noise and calibration are unadmitted, not physical zero effects.",
+    "carrier": "NOT_APPLICABLE: mathematical source/readout relations without a physical signal channel.",
+    "corrections": [],
+    "frame": "Same normalized homogeneous coordinates and clock on both branches; no physical frame/scaling change.",
+    "generated_trace": "R/sigma are not new state or feedback in this audit. Old energy/trace equality does not identify complete state.",
+    "observer_state": "NOT_APPLICABLE: no detector or receiver model is introduced.",
+    "product_level": "FORMAL response/requirement audit, no physical acceptance or new learning law",
+    "readout": "Baseline-subtracted C,C^2,Phi,Pi in separate rows. Delta(C^2)=2q*c*delta C at first order; local absolute-C readout is distinguished from modulus of a transfer function. Mixed combinations are mathematical negative controls only.",
+    "source_state": "Primary C,Phi,Pi; alternative resource comparator p,E_available. The latter is not joined to the primary state or its energy.",
+    "system_partition": {
+      "accounting_component_id": "unit-state",
+      "boundary": "Primary C/Phi/Pi state and mathematical ports/readouts. Alternative resource-selection state is a separately conditioned comparator, not an extra coupled physical sector.",
+      "couplings": [
+        {
+          "component_id": "unit-state",
+          "id": "C-to-Phi",
+          "kind": "INTERNAL",
+          "map": "Old -C^2*Phi/2 interaction gives C^2/2 source in Pi RHS.",
+          "source": "matter",
+          "target": "response"
+        },
+        {
+          "component_id": "unit-state",
+          "id": "Phi-to-C",
+          "kind": "INTERNAL",
+          "map": "Same old interaction gives C*Phi in nonconserved C RHS.",
+          "source": "response",
+          "target": "matter"
+        },
+        {
+          "component_id": "selection-source",
+          "id": "selection-feedback",
+          "kind": "INTERNAL",
+          "map": "p through fixed A to fitness and p update; no resource-to-update or internal A(t) is inferred.",
+          "source": "selection",
+          "target": "selection"
+        }
+      ],
+      "no_detector_reason": "Only mathematical source/readout and source-dependency statements are evaluated; no observation apparatus is claimed.",
+      "observables": [],
+      "role_mode": "RELATIONAL",
+      "systems": [
+        {
+          "id": "matter",
+          "state": "C",
+          "state_accounting": {
+            "kind": "INDEPENDENT",
+            "owner_ids": [],
+            "rule": "Own the old normalized C state once.",
+            "state_ids": [
+              "unit.C"
+            ]
+          }
+        },
+        {
+          "id": "response",
+          "state": "Phi,Pi",
+          "state_accounting": {
+            "kind": "INDEPENDENT",
+            "owner_ids": [],
+            "rule": "Pi=Phi rate, same old response state; no new information field.",
+            "state_ids": [
+              "unit.Phi",
+              "unit.Pi"
+            ]
+          }
+        },
+        {
+          "id": "joint",
+          "state": "C,Phi,Pi aggregate",
+          "state_accounting": {
+            "kind": "AGGREGATE",
+            "owner_ids": [
+              "matter",
+              "response"
+            ],
+            "rule": "One old Omega/kinetic ledger; interaction counted once.",
+            "state_ids": []
+          }
+        },
+        {
+          "id": "readout-view",
+          "state": "C,C^2,Phi,Pi and transfer functions",
+          "state_accounting": {
+            "kind": "VIEW",
+            "owner_ids": [
+              "matter",
+              "response"
+            ],
+            "rule": "Derived readouts/Jacobians, not independent storage or detector states.",
+            "state_ids": []
+          }
+        },
+        {
+          "id": "selection",
+          "state": "Alternative p,E_available comparator",
+          "state_accounting": {
+            "kind": "INDEPENDENT",
+            "owner_ids": [],
+            "rule": "Different realization; no state/energy identification with C/Phi/Pi. A/costs are fixed external configuration.",
+            "state_ids": [
+              "selection.p",
+              "selection.resource"
+            ]
+          }
+        }
+      ]
+    },
+    "time_convention": "Infinitesimal response at declared equilibrium, z normalized Laplace frequency; finite-wait trajectories not simulated and asymptotic convergence not finite-time reset."
+  },
+  "output": {
+    "accuracy": "Exact source-AST/symbolic arithmetic and local linear-response identities. No numerical trajectory, new root search, finite-amplitude error bound or selected physical precision. Existing finite-write/convergence statements are imported by identity and scope.",
+    "claim_intent": "FORMAL_RESULT",
+    "domain": "Old homogeneous nonconserved unit fixture only, equilibria (q*c,r,0), q=+/-1,c>0,r>0,c^2=1+r,2r^3+r-1=0. Separate J_C or J_Phi probes; baseline-subtracted C,C^2,Phi,Pi. Infinitesimal response at equilibrium. Resource lane is a separate comparator, never a joint physical energy system.",
+    "quantity": "Four-readout/two-port exact small-signal transfer, branch sign/magnitude classification, positive-energy stability witness, mixed-scope counterexamples and source-dependency dispositions",
+    "unit": "normalized state, source, time and Laplace frequency; rational symbolic identities, not SI susceptibility"
+  },
+  "profile": "FORMAL",
+  "question": "Which retained-state, sensitivity and structural-adaptation requirements are represented by the old homogeneous C/Phi/Pi unit fixture and separately inspected fixed-configuration resource-selection lane?",
+  "review": {
+    "rationale": "Exact infinitesimal response/source-dependency audit of an unchanged normalized fixture. Inherited preparation/convergence results are not rerun. No physical state/preparation/readout, structural learning, improvement, lifetime or independent UET discriminator is accepted.",
+    "reviewer": "agent:retained-response-requirements (construction and adversarial self-review, not independent specialist)",
+    "status": "INCOMPLETE"
+  },
+  "schema_version": "uet-calculation-contract-v1"
+}

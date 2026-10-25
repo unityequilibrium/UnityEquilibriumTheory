@@ -1,0 +1,320 @@
+{
+  "claim_boundary": "Static conditional realization and bounded standard-comparator correspondence only. Not a new Core Hamiltonian, exact all-R quartic, kinetic/noise/heat law, physical SI calibration, unique UET prediction, learning/lifetime/cosmological validation or closure of old HIST-F intrinsic-entropy-correspondence.",
+  "components": [
+    {
+      "disposition": "MODELED",
+      "evidence": [
+        "docs/meta/UET_JOINT_STATE_MEASURE_CONSTRUCTION.md",
+        "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/Research_T13_Joint_State_Measure_Construction.py"
+      ],
+      "group": "system_state",
+      "id": "joint-counting-state",
+      "reason": "Explicit finite microstates, retained coordinates, energy/interaction convention, multiplicity and conditional thermodynamic derivation."
+    },
+    {
+      "disposition": "MODELED",
+      "evidence": [
+        "docs/meta/UET_JOINT_STATE_MEASURE_CONSTRUCTION.md",
+        "https://arxiv.org/html/1205.4176"
+      ],
+      "group": "drive_environment",
+      "id": "static-ensemble",
+      "reason": "Canonical equilibrium family and fixed-control thermal derivative are mathematical assumptions; no bath dynamics/elimination claimed."
+    },
+    {
+      "disposition": "UNKNOWN",
+      "evidence": [
+        "docs/meta/UET_JOINT_STATE_MEASURE_CONSTRUCTION.md",
+        "docs/topics/0.13_Thermodynamic_Bridge/calculation_contracts/joint_thermodynamic_completion.json"
+      ],
+      "group": "system_state",
+      "id": "physical-correspondence",
+      "next_action": "Review independently justified physical state/energy/measure correspondence before planning dynamics or interpreting heat; no new hidden sector/data/contact automatically.",
+      "owner": "theory author with statistical-mechanics specialist",
+      "reason": "Physical retained-state/energy/measure and hidden Phi content are not identified by constructing a formal comparator. This gap does not invalidate the bounded static proof."
+    },
+    {
+      "disposition": "NOT_APPLICABLE",
+      "evidence": [
+        "docs/meta/UET_JOINT_STATE_MEASURE_CONSTRUCTION.md"
+      ],
+      "group": "propagation",
+      "id": "signal",
+      "reason": "No spatial signal or detector chain in this static FORMAL output; no physical isolation asserted."
+    },
+    {
+      "disposition": "MODELED",
+      "evidence": [
+        "docs/meta/UET_JOINT_STATE_MEASURE_CONSTRUCTION.md",
+        "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/Research_T13_Joint_State_Measure_Construction.py"
+      ],
+      "group": "frame_time",
+      "id": "frame-measure",
+      "reason": "Fixed normalized measure and P/Pi pushforward; theta versus theta/N and per-site/total conversion explicit. No dynamics/time calibration."
+    },
+    {
+      "disposition": "NOT_APPLICABLE",
+      "evidence": [
+        "docs/meta/UET_JOINT_STATE_MEASURE_CONSTRUCTION.md"
+      ],
+      "group": "detector",
+      "id": "detector",
+      "reason": "No measurement claim. Real detector effects are outside scope, not assigned zero; no observer apparatus invented."
+    },
+    {
+      "disposition": "MODELED",
+      "evidence": [
+        "docs/meta/UET_JOINT_STATE_MEASURE_CONSTRUCTION.md",
+        "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/Research_T13_Joint_State_Measure_Construction.py"
+      ],
+      "group": "processing",
+      "id": "coarse-processing",
+      "reason": "Restricted sum, full/retained/intrinsic entropy, signed readout versus lossy folding and multiplicity counted once."
+    },
+    {
+      "disposition": "MODELED",
+      "evidence": [
+        "docs/meta/UET_JOINT_STATE_MEASURE_CONSTRUCTION.md",
+        "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/Research_T13_Joint_State_Measure_Construction.py"
+      ],
+      "group": "numerics",
+      "id": "exact-method",
+      "reason": "Exact symbolic residuals, finite configuration enumeration and exact rational certificates plus analytic general-N/tail proofs; no Monte Carlo, quadrature, sweep or tolerance."
+    }
+  ],
+  "contract_id": "T13_JOINT_STATE_MEASURE_FORMAL_V1",
+  "data_policy": {
+    "calibration_ids": [],
+    "comparison_ids": [],
+    "holdout_policy": "Primary public texts supply mathematical definitions/conditions only, not observations. Exact enumeration is an implementation control, not an empirical holdout or independent replication.",
+    "independent_validation": false,
+    "uses_observations": false
+  },
+  "entrypoints": [
+    "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/Research_T13_Joint_State_Measure_Construction.py",
+    "docs/meta/UET_JOINT_STATE_MEASURE_CONSTRUCTION.md"
+  ],
+  "error_budget": {
+    "acceptance": "Declared exact residuals zero, analytic proofs/domain stated, finite regressions and falsifying mutations detected. Equivalence/contradiction valid outcomes. No physical promotion criterion.",
+    "approximation": "Finite-N reference exact; per-site value error relative to old quartic plus -theta ln2 bounded jointly by theta ln(N+1)/N + theta |m|^6/[30(1-rho^2)]. Multiply by N*E_star for total energy units. Imported remainder only in its declared domain; no finite-N force/partition approximation bound inferred.",
+    "dependence": "Spin/Phi coupling retained; finite-N and Taylor errors add conservatively. Hidden uniformity follows from chosen equal-energy conditional canonical ensemble, not covariance or measured fast relaxation.",
+    "measurement": "NOT_APPLICABLE: no observations or measurement operator used.",
+    "numerical": "Exact SymPy algebra and integer/rational enumeration. No floating acceptance threshold or statistical sampling uncertainty.",
+    "omission_limit": null,
+    "omissions": "No spatial, dynamical, hidden Phi or bath sector included in the formal definition. These are excluded claim domains, not bounded physical omissions.",
+    "systematic": "Chosen mean-field energy is not shown to represent a material/nearest-neighbor system; physical energy, entropy, T laws and normalization remain UNKNOWN, not zero error.",
+    "unit": "E_star energy; k_B entropy; normalized per-site energy; exact residuals"
+  },
+  "evidence": [
+    "docs/meta/UET_JOINT_STATE_MEASURE_CONSTRUCTION.md",
+    "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/Research_T13_Joint_State_Measure_Construction.py",
+    "docs/meta/UET_THEORY_ARGUMENT.md",
+    "docs/meta/UET_THERMODYNAMIC_FOUNDATIONS_REVIEW.md",
+    "docs/core/01_contracts/MATTER_SPACE_RESEARCH_SPEC.md",
+    "docs/topics/0.13_Thermodynamic_Bridge/calculation_contracts/joint_thermodynamic_completion.json",
+    "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/t13_joint_thermodynamic_completion.json",
+    "https://arxiv.org/html/1205.4176",
+    "https://www.damtp.cam.ac.uk/user/tong/sft/sfthtml/S1.html"
+  ],
+  "identities": [
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/meta/UET_JOINT_STATE_MEASURE_CONSTRUCTION.md",
+      "role": "evidence",
+      "sha256": "f212977ad144349816c8952e3ad75261df9fea05c61dbf3dcc8048cf4913ba0d"
+    },
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/Research_T13_Joint_State_Measure_Construction.py",
+      "role": "code",
+      "sha256": "67f3895fa13aa1847f04c736012369addb225d3d6ec7405ef38e49079065f50d"
+    },
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/test_t13_joint_state_measure_construction.py",
+      "role": "code",
+      "sha256": "266fe0ecb32f4a4a6f2c9376413f573b8a0dc282e5a013fff72c81832d86dd47"
+    },
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/meta/UET_THEORY_ARGUMENT.md",
+      "role": "evidence",
+      "sha256": "d590b084fa85ed1e3133364a8b889b79ad5c3a901e3a8044ed4e00ae3d763d4a"
+    },
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/meta/UET_THERMODYNAMIC_FOUNDATIONS_REVIEW.md",
+      "role": "evidence",
+      "sha256": "c1cf629e5093d741a409d6c645fcd04f9b35bb64f1d29b7627f3e6736f6f5f69"
+    },
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/core/01_contracts/MATTER_SPACE_RESEARCH_SPEC.md",
+      "role": "input",
+      "sha256": "d178f1978c93a09350a4da6ea11153a93fbfb13ad12c9d390846f741ad5db848"
+    },
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/core/02_equations/matter_space/uet_matter_space.py",
+      "role": "input",
+      "sha256": "488db6aa26b99856e2eb82a2f46a9857f623f418ef8e537498fa71d5e4f633aa"
+    },
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/calculation_contracts/joint_thermodynamic_completion.json",
+      "role": "evidence",
+      "sha256": "352cc46ecbfee4e10d8edc5a02ed1379099a023dba423cc4df250b9ec38695b6"
+    },
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/t13_joint_thermodynamic_completion.json",
+      "role": "evidence",
+      "sha256": "83ff084afa3fecfe451985260fb49096615a95a953aa86bad18a93b8c9d1adb4"
+    },
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/meta/schemas/calculation_contract_v1.schema.json",
+      "role": "config",
+      "sha256": "ec556052d755908a2ec7b3ec10b411839f4f0bee549fd902fb1f915f8475ebc3"
+    },
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/scripts/audit/audit_calculation_completeness.py",
+      "role": "code",
+      "sha256": "b406d31add9834d2cd1d9f3bb8d42724d26c390413710419313dd85cba7121ca"
+    }
+  ],
+  "model": {
+    "approximation": "Finite-N restricted sum and F/U/S are exact for this reference. Large-N h2 replaces log(binomial)/N with the proven finite-N value bound; imported quartic truncation only inside |m|<=rho<1. No nearest-neighbor exactness, continuum-grid/saddle-point error claim, Gaussian-sector addition, finite-N force derivative or kinetics inferred.",
+    "assumptions": "Chosen comparator H_N/E_star=N[-(j_0+gamma*Phi)*m^2/2+a_Phi*Phi^2/2+b_Phi*Phi^4/4]+P^2/(2*N*m_Phi). Hidden content is binary arrangements at fixed k only; Phi/P are directly retained with no extra hidden sector. Full square-of-sum spin energy includes its Phi-dependent diagonal convention. This is an AI constitutive reference, not derived microscopic UET physics. Conditional canonical distribution within each equal-energy class is uniform.",
+    "drive_environment": "Static canonical equilibrium family with T>0; no modeled bath microstates, sources, heat-flow trajectory, Langevin noise, transition rates, time-scale-separation proof, material preparation or detector.",
+    "formula_ids": [
+      "docs/meta/UET_JOINT_STATE_MEASURE_CONSTRUCTION.md#reference-energy",
+      "docs/meta/UET_JOINT_STATE_MEASURE_CONSTRUCTION.md#restricted-dictionary",
+      "docs/meta/UET_JOINT_STATE_MEASURE_CONSTRUCTION.md#finite-n-bound",
+      "docs/meta/UET_JOINT_STATE_MEASURE_CONSTRUCTION.md#omega-correspondence",
+      "docs/core/01_contracts/MATTER_SPACE_RESEARCH_SPEC.md#2-candidate-functional"
+    ],
+    "initial_boundary": "No time evolution or initial-value problem. Finite configuration sum, Phi/P real with quartic/Gaussian integrable tails; entropy statements assume normalized densities and finite entropy/energy integrals relative to the fixed measure. Folding uses h=0 and symmetric canonical conditional weights; general nonequilibrium hidden/sign distributions require their actual conditional entropy.",
+    "parameters": "No fit, calibration, sweeps or observations. N and all energy/scale coefficients are fixed controls, T-independent by reference definition. m_Phi=tau/M_Phi, P=N*m_Phi*Pi, theta=k_B*T/E_star and Theta=theta/N are definitions. The old small-m map a_C=(theta-j_0)/s_C^2, b_C=theta/(3*s_C^4), g=gamma/s_C^2 is reused; it constrains only a subset of old free coefficients and does not determine physical values/SI units. Fixed retained coordinates, scales, N and measure are held in T derivatives."
+  },
+  "next_action": "Round M stops at this static dictionary and scoped verdict. One proposed next prerequisite: independent physical retained-state/energy/measure correspondence. Do not start new dynamics, sector, material or acquisition automatically; specialist/author review packet is in the report, not sent.",
+  "observation": {
+    "backaction": "Readout metadata does not alter the reference energy. No detector/coupling is introduced; this is not an assertion that real measurement has zero backaction.",
+    "carrier": "NOT_APPLICABLE: static FORMAL state-counting proposition; no signal propagation.",
+    "corrections": [],
+    "frame": "Fixed normalized homogeneous equilibrium reference; no physical/SI/cosmological frame correspondence.",
+    "generated_trace": "No sigma/R/dissipation history is calculated or promoted to information. Existing traces retain their prior scope.",
+    "observer_state": "NOT_APPLICABLE: no physical receiver/detector or measurement claim.",
+    "product_level": "FORMAL exact identities and bounded approximation; not experimental records.",
+    "readout": "Signed C or |C| as mathematical function; true magnitude-state folding is separately declared with summed multiplicity, not an invertible readout transformation.",
+    "source_state": "Independent binary configuration s and Phi/P; k,m,C and Pi are derived/coarse coordinates, not added independent states.",
+    "system_partition": {
+      "accounting_component_id": "joint-counting-state",
+      "boundary": "Joint finite binary configuration and directly retained Phi/P. Coarse views/folding do not add degrees of freedom. Bath microstates, spatial signals and detector outside this static FORMAL boundary; no claim their physical effects are zero.",
+      "couplings": [
+        {
+          "component_id": "joint-counting-state",
+          "id": "response-binary",
+          "kind": "INTERNAL",
+          "map": "Static energy coefficient j_0+gamma*Phi in -N*E_star*(j_0+gamma*Phi)*m^2/2; no transition-rate law.",
+          "source": "response",
+          "target": "binary"
+        },
+        {
+          "component_id": "joint-counting-state",
+          "id": "binary-response",
+          "kind": "INTERNAL",
+          "map": "Same interaction differentiated in Phi yields -N*E_star*gamma*m^2/2. Reciprocal accounting from one energy, not an additional term or new dynamics.",
+          "source": "binary",
+          "target": "response"
+        }
+      ],
+      "no_detector_reason": "No physical measurement or full-observability claim; signed/magnitude outputs are defined mathematical maps.",
+      "observables": [],
+      "role_mode": "RELATIONAL",
+      "systems": [
+        {
+          "id": "binary",
+          "state": "s=(s_1,...,s_N), s_i=+/-1",
+          "state_accounting": {
+            "kind": "INDEPENDENT",
+            "owner_ids": [],
+            "rule": "Own N binary coordinates; fixed-k multiplicity counts their arrangements, not new particles/states.",
+            "state_ids": [
+              "mref.binary_configuration"
+            ]
+          }
+        },
+        {
+          "id": "response",
+          "state": "Phi,P",
+          "state_accounting": {
+            "kind": "INDEPENDENT",
+            "owner_ids": [],
+            "rule": "Own directly retained response coordinates; Pi=P/(N*m_Phi) is a change of coordinates, not additional storage.",
+            "state_ids": [
+              "mref.Phi",
+              "mref.P"
+            ]
+          }
+        },
+        {
+          "id": "retained-view",
+          "state": "k,C,Phi,Pi or magnitude-folded classes",
+          "state_accounting": {
+            "kind": "VIEW",
+            "owner_ids": [
+              "binary",
+              "response"
+            ],
+            "rule": "Derived/coarse partition of the same underlying configurations; eliminated arrangement/sign entropy counted once. Not another independent copy of C or Phi.",
+            "state_ids": []
+          }
+        },
+        {
+          "id": "joint",
+          "state": "Aggregate s,Phi,P",
+          "state_accounting": {
+            "kind": "AGGREGATE",
+            "owner_ids": [
+              "binary",
+              "response"
+            ],
+            "rule": "H_N includes binary, response, kinetic and interaction energy once; no unique subsystem interaction-energy split asserted.",
+            "state_ids": []
+          }
+        }
+      ]
+    },
+    "time_convention": "No time dynamics, rates, noise or time-reversal current calculation. Pi is a retained normalized coordinate from the old family, not a derived physical canonical momentum or newly proven dot-Phi law.",
+    "trace_scope": "static_thermodynamic_functionals",
+    "trace_used_as_complete_state": false
+  },
+  "output": {
+    "accuracy": "Exact identities and analytic proofs; exact finite-N enumeration only N=2,3,4,8 is regression, not proof for every N. Value-bound errors add conservatively: theta*ln(N+1)/N plus imported theta*|m|^6/[30*(1-rho^2)]. No finite-N derivative/force bound or empirical uncertainty claim.",
+    "claim_intent": "FORMAL_RESULT",
+    "domain": "Finite integer N>=2 and k=0..N; m=(2k-N)/N, C=s_C*m on its finite grid. Phi,P in R; Pi=P/(N*m_Phi), m_Phi=tau/M_Phi. Positive E_star,j_0,s_C,tau,M_Phi,b_Phi,T,k_B; nonnegative gamma,a_Phi; h=0. Fixed dimensionless measure dPhi dP and T-independent parameters/scales. Small-m bound only |m|<=rho<1; arbitrary quartic all-R dynamics, material and cosmology excluded.",
+    "quantity": "Conditional static F_N, U_cond, S_int, partition/entropy identities, finite-N free-energy value bound and controlled Omega correspondence or counterexamples; signed/magnitude bookkeeping.",
+    "unit": "E_star energy; k_B entropy; normalized per-site energy; exact residuals"
+  },
+  "profile": "FORMAL",
+  "question": "Does one explicitly chosen joint binary/retained-Phi-P reference admit an exact constrained F/U/intrinsic-entropy dictionary, and under which finite-N/large-N/small-m and measure conventions does it correspond to the old homogeneous Omega family?",
+  "review": {
+    "rationale": "Static reference derivation, exact algebra and finite-enumeration regressions are recorded in the report and generated artifact. Fixed-measure conditioning, finite-N bound, tail integrability, thermal coefficient map, signed/magnitude folding and falsifying controls are reviewed within declared assumptions. Construction/adversarial self-review is not independent specialist approval. Physical retained-state/energy/measure correspondence is UNKNOWN and the old HIST-F controller remains unchanged; mathematical closure of this example is not physical closure.",
+    "reviewer": "agent:joint-state-measure (construction and adversarial self-review; not independent specialist)",
+    "status": "INCOMPLETE"
+  },
+  "schema_version": "uet-calculation-contract-v1"
+}

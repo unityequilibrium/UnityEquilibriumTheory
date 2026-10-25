@@ -1,0 +1,733 @@
+{
+  "UET_disproved_or_validated": false,
+  "additional_platforms_beyond_approved": 0,
+  "budgets_selected": false,
+  "candidate_selected": false,
+  "checks": {
+    "Fe_doublet_leakage": true,
+    "Mn_doublet_leakage": true,
+    "Neel_maps_to_uniform_parent_labels": true,
+    "Neel_pair_distinct_staggered_readout": true,
+    "Neel_pair_same_population_C": true,
+    "Phi_not_endpoint_only": true,
+    "endpoint_null_direction": true,
+    "matching_native_bond_requires_negative_parent_prefactor": true,
+    "native_gap_order_reversed": true,
+    "open_N4_bonds": true,
+    "parent_alternating_maps_to_physical_uniform": true,
+    "spin2_projection_factor16_not4": true,
+    "spin_half_factor4": true,
+    "staggering_changes_C": true,
+    "staggering_is_involution": true,
+    "staggering_reverses_only_collinear_bond_sign": true,
+    "total_vs_per_site_factor4": true
+  },
+  "completed_sections": [
+    "S0",
+    "S1",
+    "S2",
+    "S3",
+    "S4"
+  ],
+  "contract_id": "T13_PHYSICAL_PLATFORM_CORRESPONDENCE_SCREEN_V1",
+  "contract_review_status": "INCOMPLETE",
+  "contract_sha256": "45b7c99b80e417c71980b7c40f6227547e9b2ad70534867d5ec3b20dad49d20a",
+  "facts_SI": [
+    {
+      "context": "mn2006_Cu_sites_0p36nm",
+      "fact_id": "mn_spin",
+      "is_hard_interval": false,
+      "origin": "FIT_FROM_SOURCE_MODEL",
+      "parent_parameter": false,
+      "source_id": "mn2006",
+      "source_unit": "1",
+      "source_value": "5/2",
+      "uncertainty_SI": {
+        "kind": "UNKNOWN",
+        "value": null
+      },
+      "unit_SI": "1",
+      "value_SI": "5/2"
+    },
+    {
+      "context": "mn2006_Cu_sites_0p36nm",
+      "fact_id": "mn_J",
+      "is_hard_interval": false,
+      "origin": "FIT_FROM_SOURCE_MODEL",
+      "parent_parameter": false,
+      "source_id": "mn2006",
+      "source_unit": "meV",
+      "source_value": "6.2",
+      "uncertainty_SI": {
+        "kind": "UNKNOWN",
+        "value": null
+      },
+      "unit_SI": "J",
+      "value_SI": "24833737827/25000000000000000000000000000000"
+    },
+    {
+      "context": "mn2006_Cu_sites_0p36nm",
+      "fact_id": "mn_spacing",
+      "is_hard_interval": false,
+      "origin": "OBSERVED_REPORTED",
+      "parent_parameter": false,
+      "source_id": "mn2006",
+      "source_unit": "nm",
+      "source_value": "0.36",
+      "uncertainty_SI": {
+        "kind": "UNKNOWN",
+        "value": null
+      },
+      "unit_SI": "m",
+      "value_SI": "9/25000000000"
+    },
+    {
+      "context": "mn2006_Cu_sites_0p36nm",
+      "fact_id": "mn_T",
+      "is_hard_interval": false,
+      "origin": "OBSERVED_REPORTED",
+      "parent_parameter": false,
+      "source_id": "mn2006",
+      "source_unit": "K",
+      "source_value": "0.6",
+      "uncertainty_SI": {
+        "kind": "UNKNOWN",
+        "value": null
+      },
+      "unit_SI": "K",
+      "value_SI": "3/5"
+    },
+    {
+      "context": "mn2006_different_islands",
+      "fact_id": "mn_J_variation",
+      "is_hard_interval": false,
+      "origin": "OBSERVED_REPORTED",
+      "parent_parameter": false,
+      "source_id": "mn2006",
+      "source_unit": "1",
+      "source_value": "0.05",
+      "uncertainty_SI": {
+        "kind": "UNKNOWN",
+        "value": null
+      },
+      "unit_SI": "1",
+      "value_SI": "1/20"
+    },
+    {
+      "context": "mn2006_N_sites_distinct_preparation",
+      "fact_id": "mn_J_Nsites",
+      "is_hard_interval": false,
+      "origin": "FIT_FROM_SOURCE_MODEL",
+      "parent_parameter": false,
+      "source_id": "mn2006",
+      "source_unit": "meV",
+      "source_value": "3",
+      "uncertainty_SI": {
+        "kind": "UNKNOWN",
+        "value": null
+      },
+      "unit_SI": "J",
+      "value_SI": "2403264951/5000000000000000000000000000000"
+    },
+    {
+      "context": "fe_theory2012v1",
+      "fact_id": "fe_spin",
+      "is_hard_interval": false,
+      "origin": "THEORETICAL_SOURCE_MODEL",
+      "parent_parameter": false,
+      "source_id": "fe_theory",
+      "source_unit": "1",
+      "source_value": "2",
+      "uncertainty_SI": {
+        "kind": "UNKNOWN",
+        "value": null
+      },
+      "unit_SI": "1",
+      "value_SI": "2"
+    },
+    {
+      "context": "fe_theory2012v1",
+      "fact_id": "fe_J",
+      "is_hard_interval": false,
+      "origin": "FIT_FROM_SOURCE_MODEL",
+      "parent_parameter": false,
+      "source_id": "fe_theory",
+      "source_unit": "meV",
+      "source_value": "1.6",
+      "uncertainty_SI": {
+        "kind": "UNKNOWN",
+        "value": null
+      },
+      "unit_SI": "J",
+      "value_SI": "801088317/3125000000000000000000000000000"
+    },
+    {
+      "context": "fe_theory2012v1",
+      "fact_id": "fe_Dani",
+      "is_hard_interval": false,
+      "origin": "FIT_FROM_SOURCE_MODEL",
+      "parent_parameter": false,
+      "source_id": "fe_theory",
+      "source_unit": "meV",
+      "source_value": "-1.34",
+      "uncertainty_SI": {
+        "kind": "UNKNOWN",
+        "value": null
+      },
+      "unit_SI": "J",
+      "value_SI": "-53672917239/250000000000000000000000000000000"
+    },
+    {
+      "context": "fe_theory2012v1",
+      "fact_id": "fe_Eani",
+      "is_hard_interval": false,
+      "origin": "MODEL_CHOICE",
+      "parent_parameter": false,
+      "source_id": "fe_theory",
+      "source_unit": "meV",
+      "source_value": "0",
+      "uncertainty_SI": {
+        "kind": "NOT_APPLICABLE_MODEL_CHOICE",
+        "value": null
+      },
+      "unit_SI": "J",
+      "value_SI": "0"
+    },
+    {
+      "context": "fe_theory2012v1",
+      "fact_id": "fe_Binh",
+      "is_hard_interval": false,
+      "origin": "MODEL_CHOICE",
+      "parent_parameter": false,
+      "source_id": "fe_theory",
+      "source_unit": "T",
+      "source_value": "0.1",
+      "uncertainty_SI": {
+        "kind": "NOT_APPLICABLE_MODEL_CHOICE",
+        "value": null
+      },
+      "unit_SI": "T",
+      "value_SI": "1/10"
+    },
+    {
+      "context": "fe_sensor2017_separation3nm",
+      "fact_id": "fe_deltaT1",
+      "is_hard_interval": false,
+      "origin": "OBSERVED_REPORTED",
+      "parent_parameter": false,
+      "source_id": "fe_sensor",
+      "source_unit": "ns",
+      "source_value": "26",
+      "uncertainty_SI": {
+        "confidence": null,
+        "kind": "REPORTED_ERRORBAR_CONFIDENCE_UNKNOWN",
+        "unit": "s",
+        "value": "3/1000000000"
+      },
+      "unit_SI": "s",
+      "value_SI": "13/500000000"
+    },
+    {
+      "context": "pt2015_MC_example",
+      "fact_id": "pt_T",
+      "is_hard_interval": false,
+      "origin": "OBSERVED_REPORTED",
+      "parent_parameter": false,
+      "source_id": "pt2015",
+      "source_unit": "K",
+      "source_value": "4.2",
+      "uncertainty_SI": {
+        "kind": "UNKNOWN",
+        "value": null
+      },
+      "unit_SI": "K",
+      "value_SI": "21/5"
+    },
+    {
+      "context": "pt2015_apparatus_base",
+      "fact_id": "pt_baseT",
+      "is_hard_interval": false,
+      "origin": "OBSERVED_REPORTED",
+      "parent_parameter": false,
+      "source_id": "pt2015",
+      "source_unit": "K",
+      "source_value": "0.270",
+      "uncertainty_SI": {
+        "kind": "UNKNOWN",
+        "value": null
+      },
+      "unit_SI": "K",
+      "value_SI": "27/100"
+    },
+    {
+      "context": "pt2015_nominal_length_conversion",
+      "fact_id": "pt_nominal_bond",
+      "is_hard_interval": false,
+      "origin": "MODEL_CHOICE",
+      "parent_parameter": false,
+      "source_id": "pt2015",
+      "source_unit": "angstrom",
+      "source_value": "2.33",
+      "uncertainty_SI": {
+        "kind": "UNKNOWN",
+        "value": null
+      },
+      "unit_SI": "m",
+      "value_SI": "233/1000000000000"
+    },
+    {
+      "context": "pt2015_stretch_series",
+      "fact_id": "pt_step",
+      "is_hard_interval": false,
+      "origin": "OBSERVED_REPORTED",
+      "parent_parameter": false,
+      "source_id": "pt2015",
+      "source_unit": "nm",
+      "source_value": "0.11",
+      "uncertainty_SI": {
+        "kind": "UNKNOWN",
+        "value": null
+      },
+      "unit_SI": "m",
+      "value_SI": "11/100000000000"
+    },
+    {
+      "context": "normal_material_atomic_weight_not_sample",
+      "fact_id": "Ar_Mn",
+      "is_hard_interval": false,
+      "origin": "OFFICIAL_STANDARD",
+      "parent_parameter": false,
+      "source_id": "ciaaw",
+      "source_unit": "1",
+      "source_value": "54.938043",
+      "uncertainty_SI": {
+        "confidence": null,
+        "kind": "REPORTED_PARENTHETICAL_NOT_HARD_BOUND",
+        "unit": "1",
+        "value": "1/500000"
+      },
+      "unit_SI": "1",
+      "value_SI": "54938043/1000000"
+    },
+    {
+      "context": "normal_material_atomic_weight_not_sample",
+      "fact_id": "Ar_Fe",
+      "is_hard_interval": false,
+      "origin": "OFFICIAL_STANDARD",
+      "parent_parameter": false,
+      "source_id": "ciaaw",
+      "source_unit": "1",
+      "source_value": "55.845",
+      "uncertainty_SI": {
+        "confidence": null,
+        "kind": "REPORTED_PARENTHETICAL_NOT_HARD_BOUND",
+        "unit": "1",
+        "value": "1/500"
+      },
+      "unit_SI": "1",
+      "value_SI": "11169/200"
+    },
+    {
+      "context": "normal_material_atomic_weight_not_sample",
+      "fact_id": "Ar_Pt",
+      "is_hard_interval": false,
+      "origin": "OFFICIAL_STANDARD",
+      "parent_parameter": false,
+      "source_id": "ciaaw",
+      "source_unit": "1",
+      "source_value": "195.084",
+      "uncertainty_SI": {
+        "confidence": null,
+        "kind": "REPORTED_PARENTHETICAL_NOT_HARD_BOUND",
+        "unit": "1",
+        "value": "9/1000"
+      },
+      "unit_SI": "1",
+      "value_SI": "48771/250"
+    }
+  ],
+  "identities": [
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/meta/UET_PHYSICAL_PLATFORM_CORRESPONDENCE_SCREEN.md",
+      "role": "evidence",
+      "sha256": "59165c429de0c25e2277a7ff673e0f812da5c7b442eb09642be9c659d2b292fa"
+    },
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/physical_platform_correspondence_screen_sources.json",
+      "role": "input",
+      "sha256": "ecd3d0bd90b0431b7e908edd88fe42217fe2f11b699ccf347d329163efcf70ac"
+    },
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/Research_T13_Physical_Platform_Correspondence_Screen.py",
+      "role": "code",
+      "sha256": "a113537afa15dd527640558e18926a40d57f05478f574e064f65fa991db72c02"
+    },
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/test_t13_physical_platform_correspondence_screen.py",
+      "role": "code",
+      "sha256": "443c1a57677fadaf50d35e2dd42f2c3b898a1217201e863783fd327d1fd59123"
+    },
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/meta/UET_PARENT_STATIC_REFERENCE_AUDIT.md",
+      "role": "evidence",
+      "sha256": "ec44dd5c50475d401a2f7828aae13b12f45154ab4474b30a42344aac8ba78b22"
+    },
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/calculation_contracts/parent_static_reference_audit.json",
+      "role": "evidence",
+      "sha256": "204291c88fed7c1111c66002e705aef6290185bcb7bb05e6f2d9ba35fc27fdfe"
+    },
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/t13_parent_static_reference_audit.json",
+      "role": "evidence",
+      "sha256": "8c9d3ecf62c624cf647c7a8ce926ba56dc2eb55b80144a2d6720b477b21eef1f"
+    },
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/meta/UET_PHI_VARIANCE_STATIC_ADMISSIBILITY.md",
+      "role": "evidence",
+      "sha256": "fb64dc323e1750be0446a2a9e5b44a9c13a406a966cf1307a2f7ec73330d777f"
+    },
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/calculation_contracts/phi_variance_static_admissibility.json",
+      "role": "evidence",
+      "sha256": "777eb49757fa4be88d06449670f2843c1557787e45c3b9bffde292d0b7a0fcc2"
+    },
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/t13_phi_variance_static_admissibility.json",
+      "role": "evidence",
+      "sha256": "cea5f541bd6fb0ae55b4b8da0cc28d5a4a572189fc42cc03af8841a788e75378"
+    },
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/meta/schemas/calculation_contract_v1.schema.json",
+      "role": "evidence",
+      "sha256": "ec556052d755908a2ec7b3ec10b411839f4f0bee549fd902fb1f915f8475ebc3"
+    },
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/topics/For Work/12_Data_Standard.md",
+      "role": "evidence",
+      "sha256": "a1ecf6b048778cb6049480c166a7e287254503023301d13d69091f2d29e46bac"
+    },
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/topics/For Work/30_Calculation_and_Observation_Completeness_Standard.md",
+      "role": "evidence",
+      "sha256": "8fec4618c5e21c975c62b10902d969609808ab2c98e6c004a5c0ac9596c6f762"
+    },
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/topics/For Work/32_Theory_Development_and_Research_Sequencing_Standard.md",
+      "role": "evidence",
+      "sha256": "e796ba85860736e47bd14977923ab14ffde920c1715617d93725aca12788f3c2"
+    },
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/scripts/audit/audit_calculation_completeness.py",
+      "role": "code",
+      "sha256": "b406d31add9834d2cd1d9f3bb8d42724d26c390413710419313dd85cba7121ca"
+    }
+  ],
+  "inherited_evidence": {
+    "parent_static_reference_audit": {
+      "contract_sha256": "355fd565fe6504a9d5c3e2b277f89e54d635e1050c67ac32bfbd1ac59156adcc",
+      "identities": 14
+    },
+    "phi_variance_static_admissibility": {
+      "contract_sha256": "ab4df470f4d354b3d4b5d51563dc326958b42b5d8d7f91375924b8ba914f564e",
+      "identities": 11
+    }
+  },
+  "input_product_level": "internal extracted research subset and manifest-equivalent, not upstream original",
+  "interpretation": {
+    "access": "Original Fe2012 main text unresolved.2013 theory and partially accessed2017 experiment remain distinct source contexts.",
+    "curated_verdicts": "Human-inspectable source judgments, not learned automatically from platform names or a new physics gate.",
+    "mass": "CIAAW atomic weights/u are context, never the collective modal mass.",
+    "readout": "Endpoint null direction (1,0,-3) leaves endpoint unchanged but changes Phi; conductance/spectroscopy need an independent operator.",
+    "spin_sign": "Native collinear matching would require negative parent bond prefactor; classical staggering changes C/readout/prepared sector and does not give quantum Heisenberg equivalence."
+  },
+  "negative_controls": {
+    "Hz_angular_confusion_distinguished": true,
+    "abstract_parameter_evidence_rejected": true,
+    "base_temperature_substitution_rejected": true,
+    "cross_paper_tuple_rejected": true,
+    "guessed_Phi_variance_rejected": true,
+    "quantum_parent_promotion_rejected": true,
+    "scales_without_correspondence_rejected": true,
+    "unknown_uncertainty_to_zero_rejected": true
+  },
+  "new_parent_terms": 0,
+  "next_controller": "physical-parent-preparation: native state/energy/boundary/readout correspondence is missing before scale substitution. Review the free-chain/frozen-sector premise; no model revision or new platform automatically.",
+  "old_producers_rerun": false,
+  "parameter_sweeps": 0,
+  "physical_acceptance": false,
+  "platforms": [
+    {
+      "Var_Phi": null,
+      "chi": null,
+      "curated_relations": [
+        {
+          "component": "native_spin_law",
+          "evidence": [
+            "mn_spin",
+            "mn_J"
+          ],
+          "outcome": "DIFFERENT",
+          "reason": "Quantum Heisenberg S=5/2, not unchanged frozen binary parent; sign and leakage witnesses in new derivation"
+        },
+        {
+          "component": "mechanical_boundary",
+          "evidence": [
+            "mn_spacing"
+          ],
+          "outcome": "DIFFERENT",
+          "reason": "Adsorbed chain is not the free N4 mechanical parent"
+        },
+        {
+          "component": "Phi_readout",
+          "evidence": [
+            "mn_T"
+          ],
+          "outcome": "UNRESOLVED",
+          "reason": "IETS is spin-transition spectroscopy, no calibrated coherent-compression variance"
+        },
+        {
+          "component": "parent_scale_dictionary",
+          "evidence": [
+            "mn_J",
+            "mn_spacing",
+            "Ar_Mn"
+          ],
+          "outcome": "UNRESOLVED",
+          "reason": "J_H, site spacing and atomic weight do not identify J_ref,d_ref or modal mass"
+        }
+      ],
+      "full_native_correspondence": "DIFFERENT",
+      "id": "Mn_CuN",
+      "physical_acceptance": false,
+      "physical_scale_omission_reason": "native_spin_law:DIFFERENT; mechanical_boundary:DIFFERENT; Phi_readout:UNRESOLVED; parent_scale_dictionary:UNRESOLVED; closed two-state projection not established; source support/leads not the free parent boundary; source readout is not calibrated Phi; source frozen sector not established; mu,d_ref,J_ref dictionary missing",
+      "source_ids": [
+        "mn2006"
+      ],
+      "spin_witness": {
+        "collinear_coefficient_over_positive_source_J": "25/4",
+        "conditional_four_site_dimension": 1296,
+        "four_site_dimension_is_model_comparison_not_reported_sample_size": true,
+        "negative_prefactor_is_sign_witness_not_Jref_mapping": true,
+        "off_projected_doublet_matrix_element_over_J": "5/2",
+        "parent_four_binary_label_count": 16,
+        "projected_doublet_not_invariant": true,
+        "required_parent_bond_prefactor_over_source_J": "-25",
+        "single_site_quantum_dimension": 6,
+        "source_spin": "5/2"
+      },
+      "theta": null,
+      "verdict_scope": "native inspected source description versus unchanged parent; not all realizations in nature"
+    },
+    {
+      "Var_Phi": null,
+      "chi": null,
+      "curated_relations": [
+        {
+          "component": "native_spin_law",
+          "evidence": [
+            "fe_spin",
+            "fe_J",
+            "fe_Dani",
+            "fe_Binh"
+          ],
+          "outcome": "DIFFERENT",
+          "reason": "Inspected follow-up uses S=2 Heisenberg, anisotropy and inhomogeneous field; original2012 main text remains unverified"
+        },
+        {
+          "component": "mechanical_boundary",
+          "evidence": [
+            "fe_spin"
+          ],
+          "outcome": "DIFFERENT",
+          "reason": "Supported platform and source model are not the free N4 mechanical parent"
+        },
+        {
+          "component": "Phi_readout",
+          "evidence": [
+            "fe_deltaT1"
+          ],
+          "outcome": "UNRESOLVED",
+          "reason": "2017 spin-sensor observation is not a Phi operator or mechanical lifetime; never substitute its protocol for2012"
+        },
+        {
+          "component": "parent_scale_dictionary",
+          "evidence": [
+            "fe_J",
+            "fe_Dani",
+            "Ar_Fe"
+          ],
+          "outcome": "UNRESOLVED",
+          "reason": "Source model fit and relative atomic weight are insufficient; no cross-paper T/J tuple"
+        }
+      ],
+      "full_native_correspondence": "DIFFERENT",
+      "id": "Fe_Neel",
+      "physical_acceptance": false,
+      "physical_scale_omission_reason": "native_spin_law:DIFFERENT; mechanical_boundary:DIFFERENT; Phi_readout:UNRESOLVED; parent_scale_dictionary:UNRESOLVED; closed two-state projection not established; source support/leads not the free parent boundary; source readout is not calibrated Phi; source frozen sector not established; mu,d_ref,J_ref dictionary missing",
+      "source_ids": [
+        "fe2012",
+        "fe_theory",
+        "fe_sensor"
+      ],
+      "spin_witness": {
+        "collinear_coefficient_over_positive_source_J": "4",
+        "conditional_four_site_dimension": 625,
+        "four_site_dimension_is_model_comparison_not_reported_sample_size": true,
+        "negative_prefactor_is_sign_witness_not_Jref_mapping": true,
+        "off_projected_doublet_matrix_element_over_J": "2",
+        "parent_four_binary_label_count": 16,
+        "projected_doublet_not_invariant": true,
+        "required_parent_bond_prefactor_over_source_J": "-16",
+        "single_site_quantum_dimension": 5,
+        "source_spin": "2"
+      },
+      "theta": null,
+      "verdict_scope": "native inspected source description versus unchanged parent; not all realizations in nature"
+    },
+    {
+      "Var_Phi": null,
+      "chi": null,
+      "curated_relations": [
+        {
+          "component": "native_spin_law",
+          "evidence": [
+            "pt_T"
+          ],
+          "outcome": "UNRESOLVED",
+          "reason": "Qualitative magnetic-order interpretation does not specify the parent binary distance-dependent Hamiltonian"
+        },
+        {
+          "component": "mechanical_boundary",
+          "evidence": [
+            "pt_nominal_bond",
+            "pt_step"
+          ],
+          "outcome": "DIFFERENT",
+          "reason": "Lead/apex constraint and mechanical stretch differ from free chain"
+        },
+        {
+          "component": "Phi_readout",
+          "evidence": [
+            "pt_step"
+          ],
+          "outcome": "UNRESOLVED",
+          "reason": "MC, nominal length and controlled stretch are not calibrated Var(Phi); endpoint hidden-mode null direction persists"
+        },
+        {
+          "component": "parent_scale_dictionary",
+          "evidence": [
+            "pt_T",
+            "pt_nominal_bond",
+            "Ar_Pt"
+          ],
+          "outcome": "UNRESOLVED",
+          "reason": "No source J_ref, free-mode mass or d_ref correspondence"
+        }
+      ],
+      "full_native_correspondence": "DIFFERENT",
+      "id": "Pt_junction",
+      "physical_acceptance": false,
+      "physical_scale_omission_reason": "native_spin_law:UNRESOLVED; mechanical_boundary:DIFFERENT; Phi_readout:UNRESOLVED; parent_scale_dictionary:UNRESOLVED; closed two-state projection not established; source support/leads not the free parent boundary; source readout is not calibrated Phi; source frozen sector not established; mu,d_ref,J_ref dictionary missing",
+      "source_ids": [
+        "pt2015"
+      ],
+      "spin_witness": null,
+      "theta": null,
+      "verdict_scope": "native inspected source description versus unchanged parent; not all realizations in nature"
+    }
+  ],
+  "quantum_parent_controller": "UNCHANGED: separate actual quantum-parent state/operator/anharmonic bound absent",
+  "quantum_parent_validated": false,
+  "source_access": [
+    {
+      "access": "MAIN_TEXT_AUTHOR_REPRINT",
+      "id": "mn2006",
+      "read_scope": "pp1021-1023; Eq1; Figs1-4; main preparation and IETS paragraphs",
+      "url": "https://www.researchgate.net/publication/7204412_Spin_Coupling_in_Engineered_Atomic_Structures",
+      "version": "Science312,1021-1024(2006), author-uploaded public main-text reprint"
+    },
+    {
+      "access": "METADATA_ONLY",
+      "id": "fe2012",
+      "read_scope": "IBM bibliographic/abstract record only; not scientific parameter evidence",
+      "url": "https://research.ibm.com/publications/bistability-in-atomic-scale-antiferromagnets",
+      "version": "Science335,196-199(2012); bibliography confirmed, main text not accessed"
+    },
+    {
+      "access": "MAIN_TEXT_PREPRINT",
+      "id": "fe_theory",
+      "read_scope": "PDF pp1-2, Eqs1-2 and parameter paragraph; extracted text, screenshot unavailable",
+      "url": "https://arxiv.org/pdf/1211.1538v1",
+      "version": "arXiv1211.1538v1,7Nov2012; journal2013 bytes not checked"
+    },
+    {
+      "access": "PARTIAL_MAIN_INDEXED",
+      "id": "fe_sensor",
+      "read_scope": "Indexed primary Results and Discussion/Figs1-3; full Methods and supplement not accessed",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5446215/",
+      "version": "Science Advances3,e1603137(2017), PMC5446215"
+    },
+    {
+      "access": "MAIN_TEXT_METHODS",
+      "id": "pt2015",
+      "read_scope": "Results/Figs1-3; Discussion; Methods MCBJ, Pt patterning, electromigration and magnetotransport; supplement not needed for native-boundary verdict",
+      "url": "https://www.nature.com/articles/ncomms7172",
+      "version": "Nature Communications6,6172(4Feb2015)"
+    },
+    {
+      "access": "OFFICIAL_TABLE",
+      "id": "si",
+      "read_scope": "Defining constants table and exactness explanation",
+      "url": "https://www.bipm.org/en/measurement-units/si-defining-constants",
+      "version": "BIPM revised SI fixed defining values"
+    },
+    {
+      "access": "OFFICIAL_TABLE",
+      "id": "ciaaw",
+      "read_scope": "Mn/Fe/Pt rows and applicability to normal materials",
+      "url": "https://ciaaw.org/atomic-weights.htm",
+      "version": "CIAAW definitive table labelled2024"
+    },
+    {
+      "access": "OFFICIAL_TABLE",
+      "id": "nist",
+      "read_scope": "atomic mass constant row, value/uncertainty/unit header",
+      "url": "https://physics.nist.gov/cuu/Constants/Table/allascii.txt",
+      "version": "2022 CODATA adjustment"
+    }
+  ],
+  "source_baseline_commit": "d9a1a2833d62b026c390506ec77230359bb20798",
+  "source_physics_disproved": false,
+  "trajectories": 0
+}

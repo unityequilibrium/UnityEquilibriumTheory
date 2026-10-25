@@ -1,0 +1,502 @@
+{
+  "claim_boundary": "Source-bound PHYSICAL_COMPARISON/DIAGNOSTIC, review INCOMPLETE. Conditional polynomial inequality and channel-alone readout obstruction only. No selected physical realization,source-free memory,SI write-work/heat,Pi dynamics,UET novelty or physics-gate promotion.",
+  "components": [
+    {
+      "disposition": "UNKNOWN",
+      "evidence": [
+        "docs/meta/UET_BATIO3_STATIC_CORRESPONDENCE_AUDIT.md#bto-dictionary"
+      ],
+      "group": "system_state",
+      "id": "sample-mapping",
+      "next_action": "Review native ensemble,bare/relaxed coefficients and compatible mechanical projection before scale identification.",
+      "owner": "ferroelectric thermodynamics reviewer",
+      "reason": "C/Phi/Pi dictionary and same-specimen joint/bare energy not admitted; conditional polynomial witness does not close physical state."
+    },
+    {
+      "disposition": "UNKNOWN",
+      "evidence": [
+        "docs/meta/UET_BATIO3_STATIC_CORRESPONDENCE_AUDIT.md#bto-verdict"
+      ],
+      "group": "drive_environment",
+      "id": "physical-parent-preparation",
+      "next_action": "Require same-specimen boundary/joint-potential/readout packet; no automatic experiment or model change.",
+      "owner": "source-protocol/material specialist",
+      "reason": "Actual mounting,temperature/source uncertainty and zero-drive retained preparation unavailable."
+    },
+    {
+      "disposition": "UNKNOWN",
+      "evidence": [
+        "docs/meta/UET_BATIO3_STATIC_CORRESPONDENCE_AUDIT.md#bto-observation"
+      ],
+      "group": "propagation",
+      "id": "field-transfer",
+      "next_action": "Supply command-to-state field and electrode/interface calibration; do not substitute raw voltage or DFT coefficients.",
+      "owner": "electrical/material measurement specialist",
+      "reason": "Internal field,screening,circuit and traction/mode transfer not independently calibrated."
+    },
+    {
+      "disposition": "MODELED",
+      "evidence": [
+        "docs/meta/UET_BATIO3_STATIC_CORRESPONDENCE_AUDIT.md"
+      ],
+      "group": "frame_time",
+      "id": "frame-units",
+      "reason": "Exact nominal unit/frequency conversions with source context and uncertainty retained; no DC or physical clock inference."
+    },
+    {
+      "disposition": "UNKNOWN",
+      "evidence": [
+        "docs/meta/UET_BATIO3_STATIC_CORRESPONDENCE_AUDIT.md#bto-observation"
+      ],
+      "group": "detector",
+      "id": "dielectric-readout",
+      "next_action": "Review dielectric convention and circuit/band/probe uncertainty; channel-alone even readout not full-state observation.",
+      "owner": "impedance/measurement specialist",
+      "reason": "LCR finite-frequency/background/AC amplitude/loading and strain/signed-state calibration absent."
+    },
+    {
+      "disposition": "MODELED",
+      "evidence": [
+        "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/batio3_static_correspondence_audit_sources.json"
+      ],
+      "group": "processing",
+      "id": "source-processing",
+      "reason": "Four primary sources,versioned extracted subset with origin/units/context and unknown errors; no copied article or fit."
+    },
+    {
+      "disposition": "MODELED",
+      "evidence": [
+        "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/Research_T13_BaTiO3_Static_Correspondence_Audit.py",
+        "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/test_t13_batio3_static_correspondence_audit.py"
+      ],
+      "group": "numerics",
+      "id": "exact-diagnostic",
+      "reason": "Conditional implicit-series/force-curvature identities,SI dimension checks,nominal transformations and adversarial guards; no material prediction."
+    },
+    {
+      "disposition": "UNKNOWN",
+      "evidence": [
+        "docs/meta/UET_BATIO3_STATIC_CORRESPONDENCE_AUDIT.md#bto-verdict"
+      ],
+      "group": "system_state",
+      "id": "Pi-kinetics",
+      "next_action": "No kinetic inference before mode/boundary and frequency evidence; retain separate quantum-parent-correspondence gap.",
+      "owner": "lattice-dynamics/reduction specialist",
+      "reason": "Static packet cannot identify modal inertia,damping,mobility or dynamic reduction."
+    }
+  ],
+  "contract_id": "T13_BATIO3_STATIC_CORRESPONDENCE_AUDIT_DIAGNOSTIC_V1",
+  "data_policy": {
+    "calibration_ids": [],
+    "comparison_ids": [
+      "W2006_BTO001_Pt_135C_10kHz"
+    ],
+    "holdout_policy": "Existing published protocol and source-model fits, exposed during planning; no reserved/blind holdout or new fit. Follow-up2007 explicitly builds on2006, Li potential lineage not independent replication, DFT context not specimen data. No graph digitization or raw-trace inference.",
+    "independent_validation": false,
+    "uses_observations": true
+  },
+  "entrypoints": [
+    "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/Research_T13_BaTiO3_Static_Correspondence_Audit.py",
+    "docs/meta/UET_BATIO3_STATIC_CORRESPONDENCE_AUDIT.md"
+  ],
+  "error_budget": {
+    "acceptance": "Source-linked scoped verdicts plus conditional analytic witness and unknown prerequisites; exact tests/identities/completeness support diagnostic reproducibility only.",
+    "approximation": "No finite specimen range or total force/curvature bound; sextic residual contribution is not a full error estimate.",
+    "dependence": "Source fit and follow-up not independent evidence. Li/Jiang context not calibration. Conditional source-polynomial difference not certified material falsification.",
+    "measurement": "Geometry/source-fit/covariance/internal-field/readout/DC/background errors UNKNOWN, not zero; no physical acceptance limit invented.",
+    "numerical": "Exact rational/symbolic arithmetic for source decimal points and local series; printed digits are not hard physical intervals.",
+    "omission_limit": null,
+    "omissions": "No fitted UET curve,new dynamics,material,trajectory,quantum or lifetime; missing contributions not bounded negligible.",
+    "systematic": "Source version/ensemble,relaxed coefficient double counting,multiple modes and scalar/noninjective readout remain explicit.",
+    "unit": "declared SI nominal geometry/temperature/frequency and source polynomial units; normalized exact identities and correspondence labels, not a physical accuracy score"
+  },
+  "evidence": [
+    "docs/meta/UET_BATIO3_STATIC_CORRESPONDENCE_AUDIT.md",
+    "docs/meta/UET_THEORY_ARGUMENT.md",
+    "docs/meta/UET_RETAINED_RESPONSE_REGIME_CLASSIFICATION.md",
+    "https://arxiv.org/abs/cond-mat/0603688v1",
+    "https://doi.org/10.1063/1.2042528",
+    "https://arxiv.org/abs/0706.3261v1",
+    "https://arxiv.org/abs/1512.05456v4"
+  ],
+  "identities": [
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/meta/UET_BATIO3_STATIC_CORRESPONDENCE_AUDIT.md",
+      "role": "evidence",
+      "sha256": "ecf72ff1faac1dc81c80cb4d11db3cd4728b608291e213ef8c590ca52eebdd80"
+    },
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/batio3_static_correspondence_audit_sources.json",
+      "role": "input",
+      "sha256": "b87dd49751da1198cb2078b6993b1ab8a80560d1b33d06a766ba1304230b2d06"
+    },
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/Research_T13_BaTiO3_Static_Correspondence_Audit.py",
+      "role": "code",
+      "sha256": "bb18ab0db899237889b8567de0ad3ae215a42925d808983d025cdc56b644f3d7"
+    },
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/test_t13_batio3_static_correspondence_audit.py",
+      "role": "code",
+      "sha256": "2cab8255f6975dae704bb96a7f88198759eecd65d6c790421c93b4ab21eeac18"
+    },
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/core/02_equations/matter_space/uet_matter_space.py",
+      "role": "input",
+      "sha256": "488db6aa26b99856e2eb82a2f46a9857f623f418ef8e537498fa71d5e4f633aa"
+    },
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/core/01_contracts/MATTER_SPACE_RESEARCH_SPEC.md",
+      "role": "input",
+      "sha256": "d178f1978c93a09350a4da6ea11153a93fbfb13ad12c9d390846f741ad5db848"
+    },
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/meta/UET_THEORY_ARGUMENT.md",
+      "role": "evidence",
+      "sha256": "d590b084fa85ed1e3133364a8b889b79ad5c3a901e3a8044ed4e00ae3d763d4a"
+    },
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/meta/UET_CORE_PROPOSITION_PREMISE_REVIEW.md",
+      "role": "evidence",
+      "sha256": "e85924a8cbd1bffce1384fa6d8c147523bd18b029c9f00d540f1592186a04635"
+    },
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/meta/UET_RETAINED_RESPONSE_REGIME_CLASSIFICATION.md",
+      "role": "evidence",
+      "sha256": "0ffa1cc3807e8274693ce108f0203935e79a3b14ead1bc7fd6ca2c860c8a076e"
+    },
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/calculation_contracts/energy_memory_cycle.json",
+      "role": "evidence",
+      "sha256": "fabaadf5e788c1bebbb7841b3823ea0b99ee8e90b27b143d7d920cce3dd076d3"
+    },
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/calculation_contracts/retained_response_regime_classification.json",
+      "role": "evidence",
+      "sha256": "74373e7ba222840c37f6ab33db02e950381b7603d7de9724226449f8528badb0"
+    },
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/t13_retained_response_regime_classification.json",
+      "role": "evidence",
+      "sha256": "4b90cce47ad838c02d225888d2ad96757c46ff9e5000c33b413ba3cfd20aa270"
+    },
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/Research_T13_Retained_Response_Regime_Classification.py",
+      "role": "code",
+      "sha256": "7de89f680bace17e4fd6534b255f2f4fb047984774f714ef1c9e414c9f21b4f0"
+    },
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/Research_T13_Retained_Response_Requirement_Audit.py",
+      "role": "code",
+      "sha256": "ece85e04207ea8dda8da7e57d63ecfd2e61554792dc2eeb11fc64824531a3014"
+    },
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/meta/UET_PHYSICAL_PLATFORM_CORRESPONDENCE_SCREEN.md",
+      "role": "evidence",
+      "sha256": "59165c429de0c25e2277a7ff673e0f812da5c7b442eb09642be9c659d2b292fa"
+    },
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/topics/For Work/12_Data_Standard.md",
+      "role": "evidence",
+      "sha256": "a1ecf6b048778cb6049480c166a7e287254503023301d13d69091f2d29e46bac"
+    },
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/topics/For Work/17_Formula_Audit_Standard.md",
+      "role": "evidence",
+      "sha256": "e83007810b110723f3ebf6fec80120e877c895d2855ce01bba64a95499879e08"
+    },
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/topics/For Work/18_Research_Hardening_Workflow.md",
+      "role": "evidence",
+      "sha256": "2bbefc7a1a7d4f4cb692c770e5022db0f40d648978f46a83e58ea7dcce80c843"
+    },
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/topics/For Work/30_Calculation_and_Observation_Completeness_Standard.md",
+      "role": "evidence",
+      "sha256": "8fec4618c5e21c975c62b10902d969609808ab2c98e6c004a5c0ac9596c6f762"
+    },
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/topics/For Work/32_Theory_Development_and_Research_Sequencing_Standard.md",
+      "role": "evidence",
+      "sha256": "e796ba85860736e47bd14977923ab14ffde920c1715617d93725aca12788f3c2"
+    },
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/meta/schemas/calculation_contract_v1.schema.json",
+      "role": "config",
+      "sha256": "ec556052d755908a2ec7b3ec10b411839f4f0bee549fd902fb1f915f8475ebc3"
+    },
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/scripts/audit/audit_calculation_completeness.py",
+      "role": "code",
+      "sha256": "b406d31add9834d2cd1d9f3bb8d42724d26c390413710419313dd85cba7121ca"
+    },
+    {
+      "kind": "working_file",
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/batio3_publication_manifest.json",
+      "role": "input",
+      "sha256": "c40a64b3ebde9e05989b2e199ab0dbbb118757b5d4c0846e5f226c0f7af55a42"
+    },
+    {
+      "kind": "working_file",
+      "path": "docs/scripts/audit/prepare_batio3_publication.py",
+      "role": "code",
+      "sha256": "1fb6a459138e32c232e3978538758a4c0e5cd48270926d4e5b82e88063526ee9"
+    },
+    {
+      "kind": "working_file",
+      "path": "docs/scripts/audit/tests/test_batio3_publication_package.py",
+      "role": "code",
+      "sha256": "f08c6796896e22bdd0ac3c66a288d7fbbda67cd6f92e3be4a27ffd7c19655fb5"
+    }
+  ],
+  "model": {
+    "approximation": "Near-zero static implicit-function expansion is conditional mathematics, not elimination of prepared Phi/Pi dynamics. Native source-fit polynomial is a diagnostic point model with unknown covariance/uncertainty. No approximation to actual material claimed without force/curvature bounds, ensemble and readout admission.",
+    "assumptions": "Current Core potential only; C=P/P0 is a candidate linear normalization, Phi requires an admitted compatible mechanical mode. Source native potential density and relaxed/bare joint energy are distinct. Existing Argument18/21-29 force dictionary, boundary/Schur and reduction limits reused, not rerun.",
+    "drive_environment": "Voltage source, Pt electrodes, temperature chamber and LCR receiver/circuit distinct from sample. Terminal command not identified with internal force or normalized J_C. Finite-frequency probe/loading/heating unknown, not zero.",
+    "formula_ids": [
+      "docs/meta/UET_BATIO3_STATIC_CORRESPONDENCE_AUDIT.md#bto-dictionary",
+      "docs/meta/UET_BATIO3_STATIC_CORRESPONDENCE_AUDIT.md#bto-potential",
+      "docs/meta/UET_BATIO3_STATIC_CORRESPONDENCE_AUDIT.md#bto-observation"
+    ],
+    "initial_boundary": "Native specimen bias/temperature protocol only; actual mounting/clamping/internal field and zero-drive write-release preparation unresolved. No N4 geometry, inertia, chain boundary or quantum-comparator bounds transferred.",
+    "parameters": "Printed Wang2006 Table I eighth-order Both-phase fit and nominal specimen conditions from source-input. Li selected coefficients converted by4/6/8 in a separate context, not used to fill Wang alpha/covariance. No Jiang DFT parameter used to calibrate specimen. Symbolic aPhi,bPhi,g,P0/fscale and strain stiffness/coupling express conditional relations, not new fitted Core constants."
+  },
+  "next_action": "Stop at native dictionary/witness/observation verdict. Same-specimen mechanical-ensemble,joint/bare-potential and calibrated readout packet is prerequisite before scale/kinetics work; physical-parent-preparation and separate quantum-parent-correspondence remain. No automatic new model,platform,experiment,contact or publication.",
+  "observation": {
+    "backaction": "AC/bias loading, screening, interface/thermal and mounting influence unknown. Readout metadata do not create physical force; real receiver-to-sample routes remain explicit.",
+    "carrier": "Terminal field/charge/current signal via electrodes and circuit; full transfer unknown, not a new information substance.",
+    "corrections": [],
+    "frame": "[001] specimen orientation; nominal plate geometry,135degC and10kHz kept in one context. No mixing with thin film or zero-T/fixed-D parameters.",
+    "generated_trace": "No old sigma/R trace identified with entropy, sample state or instrument record.",
+    "observer_state": "LCR receiver and voltage-drive electronics have loading/calibration states not reconstructed or assigned zero effects.",
+    "product_level": "Internal extracted physical-source diagnostic; source uncertainty and correspondence still INCOMPLETE",
+    "readout": "Source-reported dielectric response at10kHz versus DC bias, not direct signed P, strain or Pi. Absolute/relative permittivity/background and circuit definitions checked conditionally; no full-state inversion claimed.",
+    "source_state": "Physical sample polarization/elastic and other unresolved degrees; old C/Phi/Pi are candidate views, not admitted independent copies.",
+    "system_partition": {
+      "accounting_component_id": "sample-mapping",
+      "boundary": "One Wang2006 bulk specimen with electrodes, circuit/LCR and thermal/mounting environment; no claim of full microscopic closure or purely isolated equilibrium.",
+      "couplings": [
+        {
+          "component_id": "field-transfer",
+          "id": "circuit-electrodes",
+          "kind": "SIGNAL",
+          "map": "Applied bias/probe reaches electrodes; command-to-internal-field transfer unknown.",
+          "source": "circuit",
+          "target": "electrodes"
+        },
+        {
+          "component_id": "field-transfer",
+          "id": "electrodes-sample",
+          "kind": "INTERNAL",
+          "map": "Electrical boundary/interface coupling; not admitted J_C calibration.",
+          "source": "electrodes",
+          "target": "sample"
+        },
+        {
+          "component_id": "dielectric-readout",
+          "id": "sample-electrodes",
+          "kind": "SIGNAL",
+          "map": "Sample differential response affects terminal charge/current.",
+          "source": "sample",
+          "target": "electrodes"
+        },
+        {
+          "component_id": "dielectric-readout",
+          "id": "electrodes-circuit",
+          "kind": "DETECTION",
+          "map": "LCR infers dielectric product from electrical response.",
+          "source": "electrodes",
+          "target": "circuit"
+        },
+        {
+          "component_id": "physical-parent-preparation",
+          "id": "environment-sample",
+          "kind": "ENVIRONMENT",
+          "map": "Temperature and unresolved mechanical boundary/loading.",
+          "source": "environment",
+          "target": "sample"
+        },
+        {
+          "component_id": "dielectric-readout",
+          "id": "circuit-sample-backaction",
+          "kind": "BACKACTION",
+          "map": "Probe/bias loading and heating not bounded.",
+          "source": "circuit",
+          "target": "sample"
+        },
+        {
+          "component_id": "field-transfer",
+          "id": "circuit-electrodes-backaction",
+          "kind": "BACKACTION",
+          "map": "Free-charge/interface response to excitation remains unclosed.",
+          "source": "circuit",
+          "target": "electrodes"
+        },
+        {
+          "component_id": "physical-parent-preparation",
+          "id": "circuit-environment-backaction",
+          "kind": "BACKACTION",
+          "map": "Possible indirect thermal/mounting effects not declared absent.",
+          "source": "circuit",
+          "target": "environment"
+        }
+      ],
+      "observables": [
+        {
+          "backaction_scope_reason": "Assess driven sample, mediated electrode/interface and thermal/mounting routes separately; receiver detection does not imply complete observability or negligible loading.",
+          "backaction_targets": [
+            "sample",
+            "electrodes",
+            "environment"
+          ],
+          "component_id": "dielectric-readout",
+          "detector_id": "circuit",
+          "id": "native-LCR",
+          "quantity": "Published dielectric response at10kHz under DC bias",
+          "readout_map": "Terminal LCR product; conditional capacitance/permittivity/chi relations, no signed-P/Phi/Pi inversion admitted",
+          "target_systems": [
+            "sample"
+          ]
+        }
+      ],
+      "role_mode": "RELATIONAL",
+      "systems": [
+        {
+          "id": "sample",
+          "state": "Physical polarization,elastic and unresolved sample degrees",
+          "state_accounting": {
+            "kind": "INDEPENDENT",
+            "owner_ids": [],
+            "rule": "Source-scoped physical sample once; dimensional closure not assumed.",
+            "state_ids": [
+              "bto.sample"
+            ]
+          }
+        },
+        {
+          "id": "electrodes",
+          "state": "Pt electrodes and free interface charges",
+          "state_accounting": {
+            "kind": "INDEPENDENT",
+            "owner_ids": [],
+            "rule": "Free charges/interface separate from sample bound polarization, no double counting.",
+            "state_ids": [
+              "bto.electrodes"
+            ]
+          }
+        },
+        {
+          "id": "circuit",
+          "state": "Voltage source,AC probe,LCR receiver and electronics",
+          "state_accounting": {
+            "kind": "INDEPENDENT",
+            "owner_ids": [],
+            "rule": "One circuit may drive and detect; instrument response/storage not sample energy.",
+            "state_ids": [
+              "bto.circuit"
+            ]
+          }
+        },
+        {
+          "id": "environment",
+          "state": "Thermal chamber and mechanical mount/surroundings",
+          "state_accounting": {
+            "kind": "INDEPENDENT",
+            "owner_ids": [],
+            "rule": "Unknown loading/mount effects not set to zero.",
+            "state_ids": [
+              "bto.environment"
+            ]
+          }
+        },
+        {
+          "id": "candidate-view",
+          "state": "C=P/P0 and proposed Phi/Pi mechanical projection",
+          "state_accounting": {
+            "kind": "VIEW",
+            "owner_ids": [
+              "sample"
+            ],
+            "rule": "Candidate view, not additional independent physical state.",
+            "state_ids": []
+          }
+        },
+        {
+          "id": "record",
+          "state": "Published dielectric product and extracted facts",
+          "state_accounting": {
+            "kind": "VIEW",
+            "owner_ids": [
+              "sample",
+              "electrodes",
+              "circuit",
+              "environment"
+            ],
+            "rule": "Derived observation/provenance, not energy storage or information substance.",
+            "state_ids": []
+          }
+        }
+      ]
+    },
+    "time_convention": "Finite frequency10000Hz and20000*pi rad/s are not DC without a band certificate. No dynamics/time integration, lifetime, inertia or damping inference."
+  },
+  "output": {
+    "accuracy": "Exact symbolic identities and rational conversion of printed decimals, never zero physical uncertainty. Conditional local analytic series has no admitted specimen amplitude range/error certificate. No fitted Core curve, physical residual interval or approximation percentage.",
+    "claim_intent": "DIAGNOSTIC",
+    "domain": "Wang2006 arXiv v1 [001] Pt-electroded BaTiO3 nominal2x2x0.3mm3 plate,135degC,10kHz LCR under DC bias. Li2005/Wang2007/Jiang2016 are separately scoped convention/theory context, not a merged calibration tuple. Static conditional reduction requires aPhi>0,referencePhi=0,zero mechanical source and a matched ensemble.",
+    "quantity": "Source-fact subset, nominal SI transformations, conditional sextic witness and scoped state/potential/ensemble/port/readout/mechanics verdicts",
+    "unit": "declared SI nominal geometry/temperature/frequency and source polynomial units; normalized exact identities and correspondence labels, not a physical accuracy score"
+  },
+  "profile": "PHYSICAL_COMPARISON",
+  "question": "How far does the old C/Phi/Pi dictionary match the selected bulk BaTiO3 electric-field/LCR specimen, and which potential, ensemble, port and observation bridges fail or remain unknown?",
+  "review": {
+    "rationale": "Source-bound diagnostic of one bulk electroded specimen. Conditional polynomial mismatch is not material rejection; mechanical ensemble, joint/bare coefficients, internal field, finite-frequency/background/readout and uncertainty remain unadmitted.",
+    "reviewer": "agent:batio3-static-correspondence (construction and adversarial self-review, not independent ferroelectric/measurement specialist)",
+    "status": "INCOMPLETE"
+  },
+  "schema_version": "uet-calculation-contract-v1"
+}

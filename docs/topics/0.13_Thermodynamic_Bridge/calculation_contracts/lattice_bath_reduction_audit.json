@@ -1,0 +1,422 @@
+{
+  "claim_boundary": "FORMAL source-linked local-reference exclusion and conditional standard bath/GLE/internal-memory reduction only. No real material, physical heat/total entropy production, unique UET prediction, full C/Phi/Pi dynamics or Core/Topic13 physics gate promotion; old M/N/O/R evidence unchanged.",
+  "components": [
+    {
+      "disposition": "MODELED",
+      "evidence": [
+        "docs/meta/UET_LATTICE_BATH_REDUCTION_AUDIT.md",
+        "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/Research_T13_Lattice_Bath_Reduction_Audit.py"
+      ],
+      "group": "system_state",
+      "id": "joint-state",
+      "reason": "Source-linked full joint coordinates/stiffness/linear shift and exact all16 local-equilibrium exclusion; same atomic state, no CM/bath duplicate."
+    },
+    {
+      "disposition": "MODELED",
+      "evidence": [
+        "docs/meta/UET_LATTICE_BATH_REDUCTION_AUDIT.md",
+        "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/Research_T13_Lattice_Bath_Reduction_Audit.py"
+      ],
+      "group": "drive_environment",
+      "id": "bath-preparation",
+      "reason": "Completed-square finite harmonic bath, conditional versus unshifted preparation, Drude spectrum and FDT/initial slip explicitly declared."
+    },
+    {
+      "disposition": "MODELED",
+      "evidence": [
+        "docs/meta/UET_LATTICE_BATH_REDUCTION_AUDIT.md",
+        "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/Research_T13_Lattice_Bath_Reduction_Audit.py"
+      ],
+      "group": "processing",
+      "id": "hidden-reduction",
+      "reason": "Exact Schur response and conditional hidden OU/noise law; finite-band and limit identities distinguish memory from Markov surrogate."
+    },
+    {
+      "disposition": "UNKNOWN",
+      "evidence": [
+        "docs/meta/UET_LATTICE_BATH_REDUCTION_AUDIT.md",
+        "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/Research_T13_Lattice_Bath_Reduction_Audit.py"
+      ],
+      "group": "system_state",
+      "id": "physical-parent-preparation",
+      "next_action": "Review the locked local-equilibrium exclusion and prerequisites for one admissible stationary/metastable reference/preparation; do not start a new model automatically.",
+      "owner": "theory author with statistical-mechanics/lattice-dynamics specialist",
+      "reason": "Locked equilibrium-local route excluded; no admissible alternative parent preparation/regime, material or independent specialist judgment established."
+    },
+    {
+      "disposition": "UNKNOWN",
+      "evidence": [
+        "docs/meta/UET_LATTICE_BATH_REDUCTION_AUDIT.md",
+        "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/Research_T13_Lattice_Bath_Reduction_Audit.py"
+      ],
+      "group": "processing",
+      "id": "Core-surrogate-admission",
+      "next_action": "Require a justified reference/preparation, declared physical band/error and matched noise/readout before any Core correspondence admission; do not supply spin rates by assumption.",
+      "owner": "theory author with statistical-mechanics/lattice-dynamics specialist",
+      "reason": "No physical bandwidth/error target, actual bath or stochastic surrogate error acceptance, no spin rates. Formal matching cannot admit full physical Core."
+    },
+    {
+      "disposition": "NOT_APPLICABLE",
+      "evidence": [
+        "docs/meta/UET_LATTICE_BATH_REDUCTION_AUDIT.md"
+      ],
+      "group": "propagation",
+      "id": "transport",
+      "reason": "No detector signal/propagation claim. Internal coupling and bath energy exchange are not observation paths."
+    },
+    {
+      "disposition": "MODELED",
+      "evidence": [
+        "docs/meta/UET_LATTICE_BATH_REDUCTION_AUDIT.md",
+        "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/Research_T13_Lattice_Bath_Reduction_Audit.py"
+      ],
+      "group": "frame_time",
+      "id": "frame-units",
+      "reason": "Canonical length coordinates, Q/Phi force and mass/Jacobian scales, normalized time and parity/PSD conventions explicit."
+    },
+    {
+      "disposition": "NOT_APPLICABLE",
+      "evidence": [
+        "docs/meta/UET_LATTICE_BATH_REDUCTION_AUDIT.md"
+      ],
+      "group": "detector",
+      "id": "detector",
+      "reason": "No experimental apparatus or negligible-backaction assumption; mathematical readout/infinitesimal force only."
+    },
+    {
+      "disposition": "MODELED",
+      "evidence": [
+        "docs/meta/UET_LATTICE_BATH_REDUCTION_AUDIT.md",
+        "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/Research_T13_Lattice_Bath_Reduction_Audit.py",
+        "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/test_t13_lattice_bath_reduction_audit.py"
+      ],
+      "group": "numerics",
+      "id": "exact-controls",
+      "reason": "New exact symbolic source/response/covariance/limit controls and deliberate convention errors; no old verifier, random sampling or time integration."
+    }
+  ],
+  "contract_id": "T13_LATTICE_BATH_REDUCTION_AUDIT_FORMAL_V1",
+  "data_policy": {
+    "calibration_ids": [],
+    "comparison_ids": [],
+    "holdout_policy": "Published theory forms and assumptions only, no observations, fits, measured rows, material selection, blind holdout or external validation.",
+    "independent_validation": false,
+    "uses_observations": false
+  },
+  "entrypoints": [
+    "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/Research_T13_Lattice_Bath_Reduction_Audit.py",
+    "docs/meta/UET_LATTICE_BATH_REDUCTION_AUDIT.md"
+  ],
+  "error_budget": {
+    "acceptance": "Exact residuals, all16 inequality certificates and deliberate convention-error detections. Negative localization/comparator equivalence are valid results. Core surrogate additionally needs positive coefficients, declared bandwidth/resolvent and matched noise error; not admitted by formal coverage alone.",
+    "approximation": "Joint Taylor bound M3 R^3/6 and Gaussian outside probability separate. At locked center all16 means outside R, giving P(ball)<1/2 independently of bath rates. Response-weighted quantum tail and finite-band impedance/resolvent bounds are conditional, not material acceptance. White and fast-internal limits explicitly scoped.",
+    "dependence": "Spin-arrangement stiffness and preparation retained; no automatic annealing/factorization. Exact memory, matched effective noise and initial law are checked jointly. Shared remainder terms counted once, no assumed independent physical errors.",
+    "measurement": "NOT_APPLICABLE: no observed data, apparatus or uncertainty inference.",
+    "numerical": "Exact SymPy algebra/finite N4 enumeration, rational ln2 Bernstein certificates and analytic proofs. No tolerance-selected PASS, parameter sweep, Monte Carlo or trajectories.",
+    "omission_limit": null,
+    "omissions": "Real bath spectra, anharmonic/material/quantum correspondence, physical detector, escape lifetime and stochastic surrogate error remain unadmitted, not zero. Parent collision no-go unchanged. No physical entropy-production or cosmic/learning inference.",
+    "systematic": "No material/bath calibration, admissible parent equilibrium preparation or full spin kinetics. Joint quadratic omits higher-order Q-u dependence from O conditional ensemble. Dynamic low-frequency mass need not equal bare inertia or stay positive.",
+    "unit": "J_ref energy; Q/u length m; inverse response N/m; covariance m^2 or m^2/s^2; exact residuals"
+  },
+  "evidence": [
+    "docs/meta/UET_LATTICE_BATH_REDUCTION_AUDIT.md",
+    "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/Research_T13_Lattice_Bath_Reduction_Audit.py",
+    "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/test_t13_lattice_bath_reduction_audit.py",
+    "docs/meta/UET_LATTICE_MECHANICAL_STATE_CONSTRUCTION.md",
+    "https://arxiv.org/html/quant-ph/0412052",
+    "https://arxiv.org/html/1003.4203"
+  ],
+  "identities": [
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/meta/UET_LATTICE_BATH_REDUCTION_AUDIT.md",
+      "role": "evidence",
+      "sha256": "e65174b4d3e3182af317db6bfb6cb86e70ffa6718dfb0a1a6f29b3e94752a13e"
+    },
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/Research_T13_Lattice_Bath_Reduction_Audit.py",
+      "role": "code",
+      "sha256": "5e69191a17c14322d0886a64b7be97154a774cec9e55f0eafec387ef41a0ce99"
+    },
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/test_t13_lattice_bath_reduction_audit.py",
+      "role": "code",
+      "sha256": "8c25aaa430d8c2d3da263dc4878a7375097b697f037e03311d5057770b2f69a2"
+    },
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/meta/UET_LATTICE_MECHANICAL_STATE_CONSTRUCTION.md",
+      "role": "evidence",
+      "sha256": "f272760ad1e00c12d3fd0df2315d16355f60166c97ea19843c327fc39942e659"
+    },
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/Research_T13_Lattice_Mechanical_State_Construction.py",
+      "role": "code",
+      "sha256": "6489e909fcfb6cdbf13f40093d2bb44c5c3b31c2f506945f2e6837041b3a87a3"
+    },
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/calculation_contracts/lattice_mechanical_state_construction.json",
+      "role": "evidence",
+      "sha256": "8b88b0b0915405456451d37c6cfea746db379bc2616c66759ec9434789ad1a10"
+    },
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/t13_lattice_mechanical_state_construction.json",
+      "role": "evidence",
+      "sha256": "ef45426950d08fdc6abee7844fe66931b084959e29977a939bc11316ed6ba0f4"
+    },
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/meta/UET_SPIN_STRAIN_CORRESPONDENCE_AUDIT.md",
+      "role": "evidence",
+      "sha256": "21e73506d528b616fb8cd13750facd14a2d33a9886d5aadd0927c580c4aed736"
+    },
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/calculation_contracts/spin_strain_correspondence.json",
+      "role": "evidence",
+      "sha256": "6284b67cf439a29b1dcd346b100e1a1aad442d42edcfe2a3ea80e79b8f6461bc"
+    },
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/t13_spin_strain_correspondence.json",
+      "role": "evidence",
+      "sha256": "3fbb4fc5caf2d60fccbed2b7d56bac71a749c322d9b83b67d45f1f46a02ab93f"
+    },
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/meta/UET_JOINT_STATE_MEASURE_CONSTRUCTION.md",
+      "role": "evidence",
+      "sha256": "f212977ad144349816c8952e3ad75261df9fea05c61dbf3dcc8048cf4913ba0d"
+    },
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/calculation_contracts/joint_state_measure_construction.json",
+      "role": "evidence",
+      "sha256": "7eb2903da30d2dff6e85fa2b1c58c982fafd0ef44087520a18def944a88deb13"
+    },
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/t13_joint_state_measure_construction.json",
+      "role": "evidence",
+      "sha256": "7ee986e78fb3032d02c125c54c93f758b21e31cfc593e2895b8616d5cca2fd98"
+    },
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/meta/UET_THEORY_ARGUMENT.md",
+      "role": "evidence",
+      "sha256": "d590b084fa85ed1e3133364a8b889b79ad5c3a901e3a8044ed4e00ae3d763d4a"
+    },
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/meta/UET_THERMODYNAMIC_FOUNDATIONS_REVIEW.md",
+      "role": "evidence",
+      "sha256": "c1cf629e5093d741a409d6c645fcd04f9b35bb64f1d29b7627f3e6736f6f5f69"
+    },
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/calculation_contracts/joint_thermodynamic_completion.json",
+      "role": "evidence",
+      "sha256": "352cc46ecbfee4e10d8edc5a02ed1379099a023dba423cc4df250b9ec38695b6"
+    },
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/t13_joint_thermodynamic_completion.json",
+      "role": "evidence",
+      "sha256": "83ff084afa3fecfe451985260fb49096615a95a953aa86bad18a93b8c9d1adb4"
+    },
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/core/01_contracts/MATTER_SPACE_RESEARCH_SPEC.md",
+      "role": "input",
+      "sha256": "d178f1978c93a09350a4da6ea11153a93fbfb13ad12c9d390846f741ad5db848"
+    },
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/meta/schemas/calculation_contract_v1.schema.json",
+      "role": "config",
+      "sha256": "ec556052d755908a2ec7b3ec10b411839f4f0bee549fd902fb1f915f8475ebc3"
+    },
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/scripts/audit/audit_calculation_completeness.py",
+      "role": "code",
+      "sha256": "b406d31add9834d2cd1d9f3bb8d42724d26c390413710419313dd85cba7121ca"
+    }
+  ],
+  "model": {
+    "approximation": "Atomic-to-Q/u map and finite bath elimination are exact within declared existence/preparation. Drude continuum is a constitutive spectral choice; OU embedding equivalent for matched Gaussian law. Joint quadratic versus parent requires local control; all16 mean-outside-ball certificates exclude equilibrium concentration above1/2 at locked center. Hidden scalar reduction retains exact memory/FDT. Constant mass/friction only conditional with positive mass, separated band, source/readout/noise policies. No recentering or repaired parent.",
+    "assumptions": "Retain O parent, geometry, spin normalization and control. Joint second-order expansion is a new explicitly limited reference, not O's full Phi-dependent conditional dictionary. Import completed-square harmonic baths and conditional classical Gibbs; choose identical independent Drude spectra on all internal length coordinates. Spin labels are frozen; sector mixture weights belong to preparation, not an inferred equilibration law.",
+    "drive_environment": "One fixed-temperature classical bath in each internal orthonormal length coordinate; no spin-flip channel. Infinitesimal prescribed force tests mathematical response at a declared conjugate port, not an experimental source. Finite total Hamiltonian energy conserved without drive; reduced energy exchanges with bath. White-bath limit and explicit fast-internal scaling are distinct and checked; no trajectory simulation.",
+    "formula_ids": [
+      "docs/meta/UET_LATTICE_BATH_REDUCTION_AUDIT.md#joint-local-regime",
+      "docs/meta/UET_LATTICE_BATH_REDUCTION_AUDIT.md#bath-gle-dictionary",
+      "docs/meta/UET_LATTICE_BATH_REDUCTION_AUDIT.md#hidden-reduction-and-core"
+    ],
+    "initial_boundary": "Free open ends; rest-frame CM pair conditioned out and never bath-coupled. Default bath conditional Gibbs shifted by q(0), and conditional hidden Gibbs at Q(0) for stationary effective FDT. Unshifted bath or prepared hidden offsets require initial slip/forcing/transient covariance. No detector or apparatus is invented.",
+    "parameters": "O control unchanged: N4,D/Jref8,delta=ln2,nu2,dref/r0=1,epsilon_star1,R=dref/4. E_star=Jref,t_star=dref*sqrt(mu/Jref),lambda=sqrt5*epsilon_star*dref. Positive gamma_b,omega_D are free constitutive bath parameters fixed under T derivatives, not UET/material predictions. Band/error budgets are symbolic applicability conditions, not fitted thresholds. Generic rational negative/limit controls are not retuned atomic controls."
+  },
+  "next_action": "End P with exact verdict and specialist questions. One next prerequisite: admissible stationary/metastable parent reference and local preparation/regime before physical Core reduction. No automatic stationary search/recentering, repulsion/cutoff, material, spin kinetics, experiment, contact or publication.",
+  "observation": {
+    "backaction": "Internal/bath reciprocal forces follow one completed-square Hamiltonian. No claim of negligible physical detector backaction; physical apparatus remains outside scope.",
+    "carrier": "NOT_APPLICABLE to formal algebraic response; internal/bath exchange is not modeled signal transport to a detector.",
+    "corrections": [],
+    "frame": "One-dimensional internal CM rest frame; three orthonormal length coordinates and canonical momenta. Symbolic SI units only, no real material regime.",
+    "generated_trace": "No sigma/R, learning score, detector record or physical total entropy-production history produced.",
+    "observer_state": "NOT_APPLICABLE: no experimental receiver, calibration or measurement uncertainty.",
+    "product_level": "FORMAL source-informed comparator and exact controls, not a material experiment or source-paper reproduction.",
+    "readout": "Phi=Q/lambda,Pi=t_star*pQ/(mu*lambda); endpoint length=3*dref(1-epsilon_star*Phi)-u2/sqrt5. Q/Phi conjugate force and inverse response scale by lambda/lambda^2. Mathematical readout does not add source backaction.",
+    "source_state": "Same internal atomic canonical state in Q,u,pQ,pu coordinates plus frozen spin labels and harmonic bath state; no CM mode. Phi/Pi/C/k and auxiliary force are views or equivalent reduced representations, not duplicate independent state copies.",
+    "system_partition": {
+      "accounting_component_id": "joint-state",
+      "boundary": "Frozen-spin open N4 internal chain plus harmonic bath on all three internal coordinates; no CM bath. Joint quadratic global Gaussian is a formal reference, not the parent equilibrium. Finite bath and Drude/OU representation are alternatives, never extra simultaneous state copies.",
+      "boundary_change": {
+        "baseline_contract_id": "T13_LATTICE_MECHANICAL_STATE_CONSTRUCTION_FORMAL_V1",
+        "baseline_contract_sha256": "123e76779f6e5ee87c86b142b6052fdda11333319db3a461f063cbf78995d9c8",
+        "baseline_identity": "docs/topics/0.13_Thermodynamic_Bridge/calculation_contracts/lattice_mechanical_state_construction.json",
+        "component_id": "bath-preparation",
+        "explanation": "Adds declared oscillator environment and joint quadratic response reference; O Phi-fixed dictionary and parent no-go are not superseded.",
+        "outcome": "DIFFERENT"
+      },
+      "couplings": [
+        {
+          "component_id": "joint-state",
+          "id": "spin-to-force",
+          "kind": "INTERNAL",
+          "map": "O arrangement-dependent conservative potential, with frozen labels not annealed kinetics.",
+          "source": "spins",
+          "target": "chain"
+        },
+        {
+          "component_id": "bath-preparation",
+          "id": "chain-to-bath",
+          "kind": "ENVIRONMENT",
+          "map": "All internal coordinates couple to oscillator positions; no CM channel.",
+          "source": "chain",
+          "target": "bath"
+        },
+        {
+          "component_id": "bath-preparation",
+          "id": "bath-to-chain",
+          "kind": "ENVIRONMENT",
+          "map": "Same reciprocal Hamiltonian gives memory/noise/initial slip, not a detector record.",
+          "source": "bath",
+          "target": "chain"
+        }
+      ],
+      "no_detector_reason": "No physical detector or measurement claim; only formal readout and conjugate mathematical probe.",
+      "observables": [],
+      "role_mode": "RELATIONAL",
+      "systems": [
+        {
+          "id": "spins",
+          "state": "Frozen s1,...,s4",
+          "state_accounting": {
+            "kind": "INDEPENDENT",
+            "owner_ids": [],
+            "rule": "No transition law; C,k are views and sector weights are preparation.",
+            "state_ids": [
+              "pref.spins"
+            ]
+          }
+        },
+        {
+          "id": "chain",
+          "state": "Q,u,pQ,pu: three internal canonical pairs",
+          "state_accounting": {
+            "kind": "INDEPENDENT",
+            "owner_ids": [],
+            "rule": "Same atomic internal state; CM conditioned out, Phi/Pi are coordinate views.",
+            "state_ids": [
+              "pref.q",
+              "pref.p"
+            ]
+          }
+        },
+        {
+          "id": "bath",
+          "state": "z_aj,pb_aj: three harmonic channels",
+          "state_accounting": {
+            "kind": "INDEPENDENT",
+            "owner_ids": [],
+            "rule": "One completed-square bath; projected force/OU memory is an alternative law representation, not added microscopic storage.",
+            "state_ids": [
+              "pref.bath_q",
+              "pref.bath_p"
+            ]
+          }
+        },
+        {
+          "id": "views",
+          "state": "Phi,Pi,C,k,endpoint and equivalent auxiliary force/history",
+          "state_accounting": {
+            "kind": "VIEW",
+            "owner_ids": [
+              "spins",
+              "chain",
+              "bath"
+            ],
+            "rule": "Coordinate/statistic/projection/equivalent-law views; no duplicate initializable physical states.",
+            "state_ids": []
+          }
+        },
+        {
+          "id": "joint",
+          "state": "Frozen labels, chain and bath aggregate",
+          "state_accounting": {
+            "kind": "AGGREGATE",
+            "owner_ids": [
+              "spins",
+              "chain",
+              "bath"
+            ],
+            "rule": "One total Hamiltonian counts interaction once; auxiliary energy-like function is not added to finite bath energy.",
+            "state_ids": []
+          }
+        }
+      ]
+    },
+    "time_convention": "Physical time and normalized tphys=t_star*tnorm; Pi=dPhi/dtnorm is odd under time reversal, q and auxiliary force are even in declared embedding. Causal Laplace Re z>0 and Fourier exp(-i omega t); two-sided PSD integral d omega/(2pi).",
+    "trace_scope": "formal_response_and_conditional_state_reduction",
+    "trace_used_as_complete_state": false
+  },
+  "output": {
+    "accuracy": "Exact algebra/finite enumeration and analytic Gaussian projection/covariance/preparation/limit arguments. Potential remainder, local probability, quantum spectral tails and response-band error separated. No empirical tolerance, all-space parent/lifetime or stochastic-surrogate error acceptance.",
+    "claim_intent": "FORMAL_RESULT",
+    "domain": "N=4 open internal chain, CM pair conditioned out, all16 frozen-spin sectors, unchanged locked O control. Local ball ||q||<=dref/4. Formal joint quadratic reference only for global Gaussian/response results; parent global equilibrium not admitted and locked local equilibrium localization excluded. Isotropic independent Drude baths at fixed positive T,gamma_b,omega_D on three internal coordinates. No actual material, data, spin rates or trajectory.",
+    "quantity": "Joint local-equilibrium exclusion, harmonic-bath/preparation GLE and Drude embedding identities, exact hidden-memory response/FDT, conditional low-band Core normalization and error bounds.",
+    "unit": "J_ref energy; Q/u length m; inverse response N/m; covariance m^2 or m^2/s^2; exact residuals"
+  },
+  "profile": "FORMAL",
+  "question": "For the frozen-spin open four-atom chain of O, can a bath on all internal coordinates and hidden-mode reduction yield a thermodynamically consistent Phi/Pi response, in what local/classical/preparation regime, and when is constant-coefficient Core form admissible?",
+  "review": {
+    "rationale": "Exact source-linked joint stiffness/localization certificate, conditional harmonic-bath GLE/Drude/OU and hidden-memory FDT are formal results. All locked means are outside the prescribed ball. Physical parent preparation/regime, actual material/bath, full C kinetics and a physical/noise error-admitted Core surrogate remain unclosed. No old physics gate is changed.",
+    "reviewer": "agent:lattice-bath-reduction (construction and adversarial self-review, not independent specialist)",
+    "status": "INCOMPLETE"
+  },
+  "schema_version": "uet-calculation-contract-v1"
+}

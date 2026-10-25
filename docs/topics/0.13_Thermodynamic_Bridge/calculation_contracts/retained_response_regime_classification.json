@@ -1,0 +1,360 @@
+{
+  "claim_boundary": "Conditional FORMAL retained state/phase memory and state-dependent sensitivity in the old homogeneous family. Equivalent comparator with same generator, kinetics, ports and readout. Not physical validation, new physics, topology learning, improvement, generalization, noise lifetime or cosmological result. U preserved.",
+  "components": [
+    {
+      "disposition": "MODELED",
+      "evidence": [
+        "docs/core/02_equations/matter_space/uet_matter_space.py",
+        "docs/meta/UET_RETAINED_RESPONSE_REGIME_CLASSIFICATION.md#regime-classification"
+      ],
+      "group": "system_state",
+      "id": "family-state",
+      "reason": "Allowed source domain, force pair, full Hessian and degenerate leading terms."
+    },
+    {
+      "disposition": "MODELED",
+      "evidence": [
+        "docs/meta/UET_RETAINED_RESPONSE_REGIME_CLASSIFICATION.md#regime-write"
+      ],
+      "group": "drive_environment",
+      "id": "source-ports",
+      "reason": "Old ports for polynomial writes and separate future probes; source-work normalization checked."
+    },
+    {
+      "disposition": "NOT_APPLICABLE",
+      "evidence": [
+        "docs/meta/UET_RETAINED_RESPONSE_REGIME_CLASSIFICATION.md#regime-law"
+      ],
+      "group": "propagation",
+      "id": "transport",
+      "reason": "No spatial signal claim in homogeneous formal scope."
+    },
+    {
+      "disposition": "MODELED",
+      "evidence": [
+        "docs/meta/UET_RETAINED_RESPONSE_REGIME_CLASSIFICATION.md#regime-response"
+      ],
+      "group": "frame_time",
+      "id": "clock",
+      "reason": "Same clock; B includes 1/tau; T_w=1 not SI second."
+    },
+    {
+      "disposition": "NOT_APPLICABLE",
+      "evidence": [
+        "docs/meta/UET_RETAINED_RESPONSE_REGIME_CLASSIFICATION.md#regime-verdict"
+      ],
+      "group": "detector",
+      "id": "detector",
+      "reason": "No apparatus/calibration claim; actual measurement prerequisites remain unknown."
+    },
+    {
+      "disposition": "MODELED",
+      "evidence": [
+        "docs/meta/UET_RETAINED_RESPONSE_REGIME_CLASSIFICATION.md#regime-response"
+      ],
+      "group": "processing",
+      "id": "readout",
+      "reason": "Baseline derivatives, sign/magnitude, zero channel and singular readout restrictions."
+    },
+    {
+      "disposition": "MODELED",
+      "evidence": [
+        "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/Research_T13_Retained_Response_Regime_Classification.py",
+        "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/test_t13_retained_response_regime_classification.py"
+      ],
+      "group": "numerics",
+      "id": "exact-method",
+      "reason": "Restricted AST and exact rational/algebraic/polynomial/resolvent checks; no numerical roots/simulation."
+    },
+    {
+      "disposition": "UNKNOWN",
+      "evidence": [
+        "docs/meta/UET_PHYSICAL_PLATFORM_CORRESPONDENCE_SCREEN.md",
+        "docs/meta/UET_RETAINED_RESPONSE_REGIME_CLASSIFICATION.md#regime-verdict"
+      ],
+      "group": "system_state",
+      "id": "physical-parent-preparation",
+      "next_action": "Require one sourced restriction/state/source/readout changing comparator decision before another wave; retain physical-parent-preparation and separate quantum-parent-correspondence, no automatic redesign/platform/experiment.",
+      "owner": "theory author with dynamical-systems and physical-domain reviewers",
+      "reason": "No admitted physical C/Phi, constrained writing apparatus, preparation uncertainty or calibrated observable."
+    }
+  ],
+  "contract_id": "T13_RETAINED_RESPONSE_REGIME_CLASSIFICATION_FORMAL_V1",
+  "data_policy": {
+    "calibration_ids": [],
+    "comparison_ids": [],
+    "holdout_policy": "No physical data, fit, holdout or material comparison. Tong is method source only. U is identity-matched saved formal input, not rerun.",
+    "independent_validation": false,
+    "uses_observations": false
+  },
+  "entrypoints": [
+    "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/Research_T13_Retained_Response_Regime_Classification.py",
+    "docs/meta/UET_RETAINED_RESPONSE_REGIME_CLASSIFICATION.md"
+  ],
+  "error_budget": {
+    "acceptance": "Branch/leading-term proofs, exact controls, full response/ports, U recovery, write identities and adversarial tests consistent with identity/completeness/link checks, no physical promotion.",
+    "approximation": "Infinitesimal response only; no switching/finite-amplitude accuracy. Polynomial writing exact without actuator or robustness constraints.",
+    "dependence": "All results share one generator, not independent empirical confirmations. Work/loss integrated separately to avoid circular acceptance.",
+    "measurement": "NOT_APPLICABLE to formal output; physical calibration/uncertainty unknown, not zero.",
+    "numerical": "Exact rational/algebraic operations and analytic proof; no floating root/eigenvalue acceptance or sampling as general theorem.",
+    "omission_limit": null,
+    "omissions": "No spatial/conserved/causal extension, physical heat/entropy map, quantum parent, noise/lifetime, topology update, improvement or independent UET discriminator.",
+    "systematic": "Restricted AST plus analytic classification and adversarial self-review. Independent specialist absent; INCOMPLETE review.",
+    "unit": "normalized state, source, time, energy and Laplace frequency; exact rational/algebraic identities, not SI susceptibility or heat"
+  },
+  "evidence": [
+    "docs/meta/UET_RETAINED_RESPONSE_REGIME_CLASSIFICATION.md",
+    "docs/meta/UET_CORE_PROPOSITION_PREMISE_REVIEW.md",
+    "docs/meta/UET_THEORY_ARGUMENT.md",
+    "docs/core/01_contracts/MATTER_SPACE_RESEARCH_SPEC.md",
+    "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/t13_retained_response_requirement_audit.json",
+    "https://www.damtp.cam.ac.uk/user/tong/sft/sfthtml/S1.html"
+  ],
+  "identities": [
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/meta/UET_RETAINED_RESPONSE_REGIME_CLASSIFICATION.md",
+      "role": "evidence",
+      "sha256": "0ffa1cc3807e8274693ce108f0203935e79a3b14ead1bc7fd6ca2c860c8a076e"
+    },
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/Research_T13_Retained_Response_Regime_Classification.py",
+      "role": "code",
+      "sha256": "7de89f680bace17e4fd6534b255f2f4fb047984774f714ef1c9e414c9f21b4f0"
+    },
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/test_t13_retained_response_regime_classification.py",
+      "role": "code",
+      "sha256": "403a45d8fea218d8d9647bae3d85a756605dc997d0cb63d2f95b0b68d0943449"
+    },
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/core/02_equations/matter_space/uet_matter_space.py",
+      "role": "input",
+      "sha256": "488db6aa26b99856e2eb82a2f46a9857f623f418ef8e537498fa71d5e4f633aa"
+    },
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/core/01_contracts/MATTER_SPACE_RESEARCH_SPEC.md",
+      "role": "input",
+      "sha256": "d178f1978c93a09350a4da6ea11153a93fbfb13ad12c9d390846f741ad5db848"
+    },
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/meta/UET_THEORY_ARGUMENT.md",
+      "role": "evidence",
+      "sha256": "d590b084fa85ed1e3133364a8b889b79ad5c3a901e3a8044ed4e00ae3d763d4a"
+    },
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/meta/UET_CORE_PROPOSITION_PREMISE_REVIEW.md",
+      "role": "evidence",
+      "sha256": "e85924a8cbd1bffce1384fa6d8c147523bd18b029c9f00d540f1592186a04635"
+    },
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/calculation_contracts/retained_response_requirement_audit.json",
+      "role": "evidence",
+      "sha256": "6a55ae8df060d54e10b422b76dc26ed5f7159ac676d31246d85d21021d8ed8a6"
+    },
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/t13_retained_response_requirement_audit.json",
+      "role": "evidence",
+      "sha256": "dd90cc3b08994e88aabe93ce16f0f276ec27614b5aac135c77a7f1421e0be81d"
+    },
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/Research_T13_Retained_Response_Requirement_Audit.py",
+      "role": "code",
+      "sha256": "ece85e04207ea8dda8da7e57d63ecfd2e61554792dc2eeb11fc64824531a3014"
+    },
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/meta/UET_PHYSICAL_PLATFORM_CORRESPONDENCE_SCREEN.md",
+      "role": "evidence",
+      "sha256": "59165c429de0c25e2277a7ff673e0f812da5c7b442eb09642be9c659d2b292fa"
+    },
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/t13_physical_platform_correspondence_screen.json",
+      "role": "evidence",
+      "sha256": "351c90f6376aeb474a0b77cc2fbd3b7c66e4faab83a72990f40f880bcdc81048"
+    },
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/topics/For Work/17_Formula_Audit_Standard.md",
+      "role": "evidence",
+      "sha256": "e83007810b110723f3ebf6fec80120e877c895d2855ce01bba64a95499879e08"
+    },
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/topics/For Work/18_Research_Hardening_Workflow.md",
+      "role": "evidence",
+      "sha256": "2bbefc7a1a7d4f4cb692c770e5022db0f40d648978f46a83e58ea7dcce80c843"
+    },
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/topics/For Work/30_Calculation_and_Observation_Completeness_Standard.md",
+      "role": "evidence",
+      "sha256": "8fec4618c5e21c975c62b10902d969609808ab2c98e6c004a5c0ac9596c6f762"
+    },
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/topics/For Work/32_Theory_Development_and_Research_Sequencing_Standard.md",
+      "role": "evidence",
+      "sha256": "e796ba85860736e47bd14977923ab14ffde920c1715617d93725aca12788f3c2"
+    },
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/meta/schemas/calculation_contract_v1.schema.json",
+      "role": "config",
+      "sha256": "ec556052d755908a2ec7b3ec10b411839f4f0bee549fd902fb1f915f8475ebc3"
+    },
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/scripts/audit/audit_calculation_completeness.py",
+      "role": "code",
+      "sha256": "b406d31add9834d2cd1d9f3bb8d42724d26c390413710419313dd85cba7121ca"
+    }
+  ],
+  "model": {
+    "approximation": "No approximation to the declared homogeneous law for stationary algebra or forced polynomial writes. Transfer only the infinitesimal derivative at a nondegenerate minimum with zero initial perturbation. Static elimination is not dynamics. No physical detector, conserved/spatial/causal generalization or noise/quantum/lifetime.",
+    "assumptions": "Same old quartic generator and mixed gradient/inertial RHS; parameters fixed across both histories. C=0 kept before division; real roots require C^2>0. Full Hessian and leading terms decide minima. U reused only in signed-pair/single-port scope. Nonzero versus origin SPD comparison additionally requires a_Phi>0.",
+    "drive_environment": "Old J_C and J_Phi for finite writing; future probes applied separately. No source after write, bath or apparatus introduced. Readout views create no modeled force; actual loading/calibration/backaction unknown, not zero.",
+    "formula_ids": [
+      "docs/meta/UET_RETAINED_RESPONSE_REGIME_CLASSIFICATION.md#regime-law",
+      "docs/meta/UET_RETAINED_RESPONSE_REGIME_CLASSIFICATION.md#regime-classification",
+      "docs/meta/UET_RETAINED_RESPONSE_REGIME_CLASSIFICATION.md#regime-response",
+      "docs/meta/UET_RETAINED_RESPONSE_REGIME_CLASSIFICATION.md#regime-write"
+    ],
+    "initial_boundary": "Common mathematical start (0,0,0). Quintic S=10u^3-15u^4+6u^5 over T_w>0 to origin or nonzero equilibrium with both old ports available. Inputs continuous, piecewise smooth, not C-infinity after extension. No actuator/disturbance constraints. Unit normalized measure, no N=4 factor from chain work.",
+    "parameters": "Symbolic admitted source domain. Coexistence control a_C=3/8,a_Phi=b_C=b_Phi=1,g=2; noncoexistence control a_C=a_Phi=b_C=b_Phi=g=1. Both use M_C=M_Phi=tau=kappa_C=kappa_Phi=1 only for regression. T_w=1 only regression, not one second. No fitting, search, retuning between histories or new coefficients; A,B,Delta,Hessian entries are derived."
+  },
+  "next_action": "Stop after classification/response/write verdict. Require one sourced independent writing/readout restriction or physical dictionary changing the comparator decision to reopen. Existing physical-parent-preparation and separate quantum-parent-correspondence remain; no automatic redesign/material/experiment/publication.",
+  "observation": {
+    "backaction": "Views add no modeled force; actual loading, calibration, noise, source constraints and preparation error unknown, not physical zero.",
+    "carrier": "NOT_APPLICABLE: mathematical audit without physical transport.",
+    "corrections": [],
+    "frame": "Same normalized homogeneous frame, coefficients, clock and readout for both histories.",
+    "generated_trace": "Energy/loss derived once from C/Phi/Pi; sigma/R never an independent state, source or entropy.",
+    "observer_state": "NOT_APPLICABLE: no physical receiver/detector admitted.",
+    "product_level": "FORMAL classification/response/write ledger, review INCOMPLETE",
+    "readout": "Baseline-subtracted C primary; C^2,Phi,Pi separately. C^2 derivative 2C_star vanishes at origin; abs(C) has no ordinary derivative there. Transfer modulus is distinct. No zero-gain relative error.",
+    "source_state": "Existing C,Phi,Pi; branch labels and coefficients are not extra states.",
+    "system_partition": {
+      "accounting_component_id": "family-state",
+      "boundary": "Old matter and response/rate coupled by the same generator. Mathematical ports/readout views only; no bath, apparatus or spin sector.",
+      "couplings": [
+        {
+          "component_id": "family-state",
+          "id": "C-to-Phi",
+          "kind": "INTERNAL",
+          "map": "Old -g*C^2*Phi/2 gives +M_Phi*g*C^2/(2*tau) in Pi RHS.",
+          "source": "matter",
+          "target": "response"
+        },
+        {
+          "component_id": "family-state",
+          "id": "Phi-to-C",
+          "kind": "INTERNAL",
+          "map": "Same generator gives +M_C*g*C*Phi in C RHS.",
+          "source": "response",
+          "target": "matter"
+        }
+      ],
+      "no_detector_reason": "Formal relations only; no detector chain claimed.",
+      "observables": [],
+      "role_mode": "RELATIONAL",
+      "systems": [
+        {
+          "id": "matter",
+          "state": "C",
+          "state_accounting": {
+            "kind": "INDEPENDENT",
+            "owner_ids": [],
+            "rule": "Own normalized C once.",
+            "state_ids": [
+              "family.C"
+            ]
+          }
+        },
+        {
+          "id": "response",
+          "state": "Phi,Pi",
+          "state_accounting": {
+            "kind": "INDEPENDENT",
+            "owner_ids": [],
+            "rule": "Own old response and its rate once, not an information substance.",
+            "state_ids": [
+              "family.Phi",
+              "family.Pi"
+            ]
+          }
+        },
+        {
+          "id": "joint",
+          "state": "C,Phi,Pi aggregate",
+          "state_accounting": {
+            "kind": "AGGREGATE",
+            "owner_ids": [
+              "matter",
+              "response"
+            ],
+            "rule": "One Omega/kinetic ledger; interaction counted once.",
+            "state_ids": []
+          }
+        },
+        {
+          "id": "readout-view",
+          "state": "C,C^2,Phi,Pi and branch/transfer combinations",
+          "state_accounting": {
+            "kind": "VIEW",
+            "owner_ids": [
+              "matter",
+              "response"
+            ],
+            "rule": "Derived labels/readouts, not independent state/storage.",
+            "state_ids": []
+          }
+        }
+      ]
+    },
+    "time_convention": "T_w>0 normalized; future infinitesimal probes at equilibrium, Laplace variable z. No lifetime or finite-wait reset claim."
+  },
+  "output": {
+    "accuracy": "Analytic branch/leading-energy proofs and exact source-AST/SymPy algebra. Two predeclared rational controls, no numerical roots, trajectories or sweep. Finite write is an exact prescribed polynomial construction, not finite-amplitude response accuracy.",
+    "claim_intent": "FORMAL_RESULT",
+    "domain": "Homogeneous nonconserved only; b_C,b_Phi,M_C,M_Phi,tau,kappa_C,kappa_Phi>0; a_Phi,g>=0; a_C finite real. Zero post-write sources. Infinitesimal response at SPD minima, separate J_C or J_Phi probes; baseline-subtracted C primary, C^2/Phi/Pi auxiliary. Degenerate minima kept without singular-Hessian DC claims.",
+    "quantity": "Admissible stationary branches, Hessian/degenerate classification, full-state 4x2 transfer, DC/source normalization and independent exact write-work/dissipation balance",
+    "unit": "normalized state, source, time, energy and Laplace frequency; exact rational/algebraic identities, not SI susceptibility or heat"
+  },
+  "profile": "FORMAL",
+  "question": "Which admitted coefficient regimes have stationary states with different C response magnitudes, and can the old ports write them from one common initial state with a consistent normalized ledger?",
+  "review": {
+    "rationale": "Exact family classification, infinitesimal response and finite polynomial writing under the unchanged normalized law. No physical meanings, constrained apparatus, noise lifetime, improvement, topology learning or independent UET discriminator accepted.",
+    "reviewer": "agent:retained-response-regimes (construction and adversarial self-review, not independent specialist)",
+    "status": "INCOMPLETE"
+  },
+  "schema_version": "uet-calculation-contract-v1"
+}
