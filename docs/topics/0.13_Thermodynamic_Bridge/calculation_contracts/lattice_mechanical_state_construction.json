@@ -1,0 +1,342 @@
+{
+  "claim_boundary": "FORMAL internal mechanical coordinate/inertia map and conditional quadratic thermodynamic dictionary only. No global parent/material quantum acceptance, unique UET prediction, C transition/damping/noise/heat law, independent validation or learning/cosmology/physics gate promotion. Existing M/N evidence remains unchanged.",
+  "components": [
+    {
+      "disposition": "MODELED",
+      "evidence": [
+        "docs/meta/UET_LATTICE_MECHANICAL_STATE_CONSTRUCTION.md",
+        "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/Research_T13_Lattice_Mechanical_State_Construction.py"
+      ],
+      "group": "system_state",
+      "id": "canonical-state",
+      "reason": "Exact affine/hidden atomic coordinate decomposition, canonical momentum/measure and conditional kinetic-storage map; center-of-mass conditioning explicit."
+    },
+    {
+      "disposition": "MODELED",
+      "evidence": [
+        "docs/meta/UET_LATTICE_MECHANICAL_STATE_CONSTRUCTION.md",
+        "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/Research_T13_Lattice_Mechanical_State_Construction.py"
+      ],
+      "group": "drive_environment",
+      "id": "static-preparation",
+      "reason": "Fixed-coordinate conditional classical reference plus frozen-spin conservative Hamiltonian identity, not real-time equilibration."
+    },
+    {
+      "disposition": "MODELED",
+      "evidence": [
+        "docs/meta/UET_LATTICE_MECHANICAL_STATE_CONSTRUCTION.md",
+        "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/Research_T13_Lattice_Mechanical_State_Construction.py"
+      ],
+      "group": "processing",
+      "id": "local-ensemble",
+      "reason": "Source-linked b,K, shifted Gaussian, nonuniform spin/vibration F/U/S chain, mean force and Maxwell identities; parent collision no-go and local-tail scope retained."
+    },
+    {
+      "disposition": "UNKNOWN",
+      "evidence": [
+        "docs/meta/UET_LATTICE_MECHANICAL_STATE_CONSTRUCTION.md",
+        "docs/meta/UET_SPIN_STRAIN_CORRESPONDENCE_AUDIT.md"
+      ],
+      "group": "system_state",
+      "id": "physical-regime-and-kinetic-closure",
+      "next_action": "Review the finite canonical construction, collision/local validity and physical-regime/reduction prerequisite. No automatic new repulsive term, material data, kinetics, experiment or external contact.",
+      "owner": "theory author with statistical-mechanics and lattice-dynamics specialist",
+      "reason": "Admissible parent preparation/classical-local window, actual parameters and independent specialist review are absent. Full parent equilibrium excluded by collision witness; mixed affine-hidden stiffness does not close Core dynamics."
+    },
+    {
+      "disposition": "NOT_APPLICABLE",
+      "evidence": [
+        "docs/meta/UET_LATTICE_MECHANICAL_STATE_CONSTRUCTION.md"
+      ],
+      "group": "propagation",
+      "id": "transport",
+      "reason": "No physical signal transport/propagation claim; internal pair interactions not detector communication."
+    },
+    {
+      "disposition": "MODELED",
+      "evidence": [
+        "docs/meta/UET_LATTICE_MECHANICAL_STATE_CONSTRUCTION.md",
+        "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/Research_T13_Lattice_Mechanical_State_Construction.py"
+      ],
+      "group": "frame_time",
+      "id": "units-frame",
+      "reason": "Symbolic SI dimensions, classical phase-space convention and normalized time/energy map; actual atomic species/material not selected."
+    },
+    {
+      "disposition": "NOT_APPLICABLE",
+      "evidence": [
+        "docs/meta/UET_LATTICE_MECHANICAL_STATE_CONSTRUCTION.md"
+      ],
+      "group": "detector",
+      "id": "detector",
+      "reason": "No physical apparatus. Source/end-length/Phi ambiguity retained; no calibration or negligible-backaction claim."
+    },
+    {
+      "disposition": "MODELED",
+      "evidence": [
+        "docs/meta/UET_LATTICE_MECHANICAL_STATE_CONSTRUCTION.md",
+        "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/Research_T13_Lattice_Mechanical_State_Construction.py",
+        "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/test_t13_lattice_mechanical_state_construction.py"
+      ],
+      "group": "numerics",
+      "id": "exact-controls",
+      "reason": "Exact finite N4 controls, analytic positivity certificate, independent parent derivatives, Gaussian integrals and falsifying conventions. No simulation/sweep."
+    }
+  ],
+  "contract_id": "T13_LATTICE_MECHANICAL_STATE_CONSTRUCTION_FORMAL_V1",
+  "data_policy": {
+    "calibration_ids": [],
+    "comparison_ids": [],
+    "holdout_policy": "Only published model forms/conditions and local formal evidence; no measured rows, source plots, fit, new dataset or reserved holdout. Exact controls are not external material replication.",
+    "independent_validation": false,
+    "uses_observations": false
+  },
+  "entrypoints": [
+    "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/Research_T13_Lattice_Mechanical_State_Construction.py",
+    "docs/meta/UET_LATTICE_MECHANICAL_STATE_CONSTRUCTION.md"
+  ],
+  "error_budget": {
+    "acceptance": "Exact declared residuals and locked-control SPD checks pass; canonical/mode/readout errors detected; global-parent rejection and conditional/partial outcomes are valid. Formal coverage does not promote physical gates.",
+    "approximation": "Local displacement ball R=dref*(1-rho)/4, |epsilon_star*Phi|<=rho<1. Uniform third-derivative remainder epsV=M3*R^3/6 and Gaussian Markov eta=max_s(||mean_s||^2+kBT tr(K_s^-1))/R^2. Only if all K_s SPD and eta<1: |F_parent_ball-F_quadratic_full|<=epsV-kBT ln(1-eta). No all-space parent approximation, force/lifetime bound or duplicate Debye mode/error term.",
+    "dependence": "Arrangement-dependent shifts and Hessians retained in joint restricted sum. No assumed spin-vibration factorization; Markov-tail and Taylor error combined conservatively only in declared domain.",
+    "measurement": "NOT_APPLICABLE: no observations.",
+    "numerical": "Exact SymPy operations and one locked finite control; no floating tolerance, sampling, quadrature or trajectory integration.",
+    "omission_limit": null,
+    "omissions": "Quantum/transverse modes, actual detector/bath and dynamic reduction omitted from claim, not asserted zero. CM entropy excluded by declared internal conditioning. No source Debye continuum added to finite hidden-mode entropy.",
+    "systematic": "Actual material parameters, regime/preparation and kinetic reduction UNKNOWN. Collision no-go forbids unconfined parent acceptance; local positive curvature does not cure global divergence.",
+    "unit": "energy J_ref; k_B entropy; physical generalized inertia kg m^2; exact residuals"
+  },
+  "evidence": [
+    "docs/meta/UET_LATTICE_MECHANICAL_STATE_CONSTRUCTION.md",
+    "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/Research_T13_Lattice_Mechanical_State_Construction.py",
+    "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/test_t13_lattice_mechanical_state_construction.py",
+    "docs/meta/UET_SPIN_STRAIN_CORRESPONDENCE_AUDIT.md",
+    "docs/meta/UET_JOINT_STATE_MEASURE_CONSTRUCTION.md",
+    "https://arxiv.org/pdf/2003.12054",
+    "https://www.damtp.cam.ac.uk/user/tong/statphys/statmechhtml/S2.html",
+    "https://www.damtp.cam.ac.uk/user/tong/statphys/statmechhtml/S3.html"
+  ],
+  "identities": [
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/meta/UET_LATTICE_MECHANICAL_STATE_CONSTRUCTION.md",
+      "role": "evidence",
+      "sha256": "f272760ad1e00c12d3fd0df2315d16355f60166c97ea19843c327fc39942e659"
+    },
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/Research_T13_Lattice_Mechanical_State_Construction.py",
+      "role": "code",
+      "sha256": "6489e909fcfb6cdbf13f40093d2bb44c5c3b31c2f506945f2e6837041b3a87a3"
+    },
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/test_t13_lattice_mechanical_state_construction.py",
+      "role": "code",
+      "sha256": "4b217dcf86bb3ccf527752537544db0f146842c65a384e2e4e9f8ae4d9936823"
+    },
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/meta/UET_SPIN_STRAIN_CORRESPONDENCE_AUDIT.md",
+      "role": "evidence",
+      "sha256": "21e73506d528b616fb8cd13750facd14a2d33a9886d5aadd0927c580c4aed736"
+    },
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/calculation_contracts/spin_strain_correspondence.json",
+      "role": "evidence",
+      "sha256": "751360256f05754013d5f17369b8769f9e095a54882645e2887174c1bff24c7b"
+    },
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/t13_spin_strain_correspondence.json",
+      "role": "evidence",
+      "sha256": "8c76f1c00ca9d4a96385049d784749bd175e6d87f1c3711a3897ac96249dfae2"
+    },
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/meta/UET_JOINT_STATE_MEASURE_CONSTRUCTION.md",
+      "role": "evidence",
+      "sha256": "f212977ad144349816c8952e3ad75261df9fea05c61dbf3dcc8048cf4913ba0d"
+    },
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/calculation_contracts/joint_state_measure_construction.json",
+      "role": "evidence",
+      "sha256": "966683ce539ee9e090a72300c0a3e7f42bbfa01a795bfbe444de621579ac5eb3"
+    },
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/t13_joint_state_measure_construction.json",
+      "role": "evidence",
+      "sha256": "2a31fb6f9d32abf94942b52bd9b43e5a68decb7a3ebb45d2f062722906e2cdff"
+    },
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/meta/UET_THERMODYNAMIC_FOUNDATIONS_REVIEW.md",
+      "role": "evidence",
+      "sha256": "c1cf629e5093d741a409d6c645fcd04f9b35bb64f1d29b7627f3e6736f6f5f69"
+    },
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/meta/UET_THEORY_ARGUMENT.md",
+      "role": "evidence",
+      "sha256": "d590b084fa85ed1e3133364a8b889b79ad5c3a901e3a8044ed4e00ae3d763d4a"
+    },
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/core/01_contracts/MATTER_SPACE_RESEARCH_SPEC.md",
+      "role": "input",
+      "sha256": "d178f1978c93a09350a4da6ea11153a93fbfb13ad12c9d390846f741ad5db848"
+    },
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/meta/schemas/calculation_contract_v1.schema.json",
+      "role": "config",
+      "sha256": "ec556052d755908a2ec7b3ec10b411839f4f0bee549fd902fb1f915f8475ebc3"
+    },
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/scripts/audit/audit_calculation_completeness.py",
+      "role": "code",
+      "sha256": "b406d31add9834d2cd1d9f3bb8d42724d26c390413710419313dd85cba7121ca"
+    }
+  ],
+  "model": {
+    "approximation": "Atom-to-Phi/u map is exact after CM conditioning. Conditional quadratic integration is exact for its SPD reference but only locally approximates parent after remainder and tail conditions. Retain b, stiffness determinant and nonuniform arrangement weights; no additive Debye/memory-information energy or old quartic term. N periodic/squared-sum non-equivalence remains; no new UET discriminator.",
+    "assumptions": "Import Morse and nearest-neighbor half-spin exchange forms from Balcerzak et al. arXiv:2003.12054 II.A-D, not its entire infinite-chain ensemble. Finite open four-atom geometry and affine collective coordinate are explicit comparator choices approved in scope, not derived UET ontology. All elastic pairs counted once; three magnetic bonds with factor1/4. Parameters and classical h measure fixed under T derivatives. No actual material or microscopic spin-flip law.",
+    "drive_environment": "No external force, bath trajectory, detector, damping/noise or time integration. Hamiltonian energy balance checked at frozen spins. Coarse conditional equilibrium is not real-time equilibration or Markov closure; mixed affine-hidden stiffness remains. Source fixed-force potential is not silently assigned to the end-length/Phi readout.",
+    "formula_ids": [
+      "docs/meta/UET_LATTICE_MECHANICAL_STATE_CONSTRUCTION.md#mechanical-parent",
+      "docs/meta/UET_LATTICE_MECHANICAL_STATE_CONSTRUCTION.md#canonical-mechanical-map",
+      "docs/meta/UET_LATTICE_MECHANICAL_STATE_CONSTRUCTION.md#conditional-vibrational-dictionary",
+      "docs/meta/UET_LATTICE_MECHANICAL_STATE_CONSTRUCTION.md#parent-local-validity"
+    ],
+    "initial_boundary": "Free open ends, ordered sites, center-of-mass rest frame. Phi is least-squares affine compression, not end length alone. One retained pair and two integrated internal pairs; no duplicate independent atomic/collective copies. Canonical reference is conditional at fixed Phi,pPhi, not a claimed full equilibrium distribution across all Phi.",
+    "parameters": "Positive mu,D,Jref,dref,r0,delta,nu,epsilon_star,kB,T,h; E_star=Jref,t_star=dref*sqrt(mu/Jref). h is fixed classical phase-space action convention, not a low-T quantum computation. dref is not inferred coupled ground spacing. One locked control in Jref/dref units, no retuning/sweep/calibration. D stays independent when exchange is decoupled; D=8Jref is a single control, not a thermal parameter law."
+  },
+  "next_action": "End round O with scoped verdict and specialist questions. One prerequisite: an admissible physical parent/regime and reduction/preparation correspondence. No automatic added term, kinetics, experiment, dataset, contact or publication.",
+  "observation": {
+    "backaction": "Internal interactions are in one Hamiltonian; no detector modeled. Unassessed physical detector/transport effects are outside claim, not set negligible.",
+    "carrier": "NOT_APPLICABLE: formal internal-mechanics/conditional-thermodynamic construction, no signal transport model.",
+    "corrections": [],
+    "frame": "Internal one-dimensional center-of-mass rest frame; canonical CM pair conditioned out rather than integrating a divergent translation zero mode. SI dimensions assigned symbolically without actual material admission.",
+    "generated_trace": "No sigma/R trace, total entropy-production history, learning score or detector record is produced.",
+    "observer_state": "NOT_APPLICABLE: no measurement apparatus/calibration; end-length versus Phi map checked algebraically.",
+    "product_level": "Source-informed FORMAL local classical comparator; not full paper reproduction or raw physical observations.",
+    "readout": "Phi=(1-a.x/(5*dref))/epsilon_star. End length=3*dref*(1-epsilon_star*Phi)-u2/sqrt5, so scalar end readout does not identify Phi. Signed C and magnitude folding preserve global-flip bookkeeping but not source backaction. Compression/extension signs are not particle species.",
+    "source_state": "Independent spin labels and internal atom canonical coordinates. Phi,pPhi,u,pu are an invertible canonical representation of the same atomic state after CM conditioning; C,k,Pi are views/coordinate transforms.",
+    "system_partition": {
+      "accounting_component_id": "canonical-state",
+      "boundary": "Finite open internally deforming spin chain. One retained affine canonical pair and two hidden mechanical pairs re-express, not add to, the atomic coordinates. Classical/local/material regime and kinetic reduction not admitted; no bath/detector modeled.",
+      "couplings": [
+        {
+          "component_id": "local-ensemble",
+          "id": "mechanics-to-spin-weights",
+          "kind": "INTERNAL",
+          "map": "Distances set exchange and arrangement-conditioned stiffness/shift; canonical weights, not a spin transition law.",
+          "source": "mechanics",
+          "target": "spins"
+        },
+        {
+          "component_id": "local-ensemble",
+          "id": "spins-to-mechanical-force",
+          "kind": "INTERNAL",
+          "map": "Same pair Hamiltonian sets force and conditional mean force; no extra coupling or Markov/damping assumption.",
+          "source": "spins",
+          "target": "mechanics"
+        }
+      ],
+      "no_detector_reason": "No actual measurement claim; only exact source/readout coordinate algebra.",
+      "observables": [],
+      "role_mode": "RELATIONAL",
+      "systems": [
+        {
+          "id": "spins",
+          "state": "s1,...,s4",
+          "state_accounting": {
+            "kind": "INDEPENDENT",
+            "owner_ids": [],
+            "rule": "Four binary labels; k,C and arrangement classes are views, no copied states or erasure law.",
+            "state_ids": [
+              "oref.spins"
+            ]
+          }
+        },
+        {
+          "id": "mechanics",
+          "state": "Phi,pPhi,u1,u2,pu1,pu2",
+          "state_accounting": {
+            "kind": "INDEPENDENT",
+            "owner_ids": [],
+            "rule": "Own internal atomic canonical state in collective coordinates; full atomic positions are inverse views, not additive independent copies. CM pair explicitly conditioned out.",
+            "state_ids": [
+              "oref.Phi",
+              "oref.pPhi",
+              "oref.u",
+              "oref.pu"
+            ]
+          }
+        },
+        {
+          "id": "atomic-and-coarse-views",
+          "state": "x,p,C,k,Pi,readout",
+          "state_accounting": {
+            "kind": "VIEW",
+            "owner_ids": [
+              "spins",
+              "mechanics"
+            ],
+            "rule": "Inverse atomic map and coarse statistics of existing state. Pi=pPhi*t_star/Mphys; no new state created by notation or observation.",
+            "state_ids": []
+          }
+        },
+        {
+          "id": "joint",
+          "state": "Aggregate spin and internal mechanical state",
+          "state_accounting": {
+            "kind": "AGGREGATE",
+            "owner_ids": [
+              "spins",
+              "mechanics"
+            ],
+            "rule": "One kinetic and pair-interaction Hamiltonian; hidden entropy is a distribution functional. No duplicated Debye sector, Omega term or interaction energy.",
+            "state_ids": []
+          }
+        }
+      ]
+    },
+    "time_convention": "tphys=t_star*tnorm,Pi=dPhi/dtnorm,pPhi=Mphys*Pi/t_star. Hamiltonian identity only; no numerical trajectory or damping/noise/spin rates. Normalization maps an inertia ratio, not separate mobility and relaxation constants.",
+    "trace_scope": "conditional_internal_state_thermodynamic_dictionary",
+    "trace_used_as_complete_state": false
+  },
+  "output": {
+    "accuracy": "Exact canonical/Gaussian identities and finite symbolic source-linked controls; general analytic CM/partition/collision and local Taylor/Markov-tail arguments. Parent-ball versus full-quadratic value error only if all Hessians SPD and eta<1; no automatic force/lifetime/material accuracy acceptance.",
+    "claim_intent": "FORMAL_RESULT",
+    "domain": "Classical finite open N=4 chain, equal positive atomic mass, ordered coordinates and center-of-mass canonical pair conditioned out. Zero field/drive; frozen-spin conservative dynamics only. Positive fixed parameters; conditional retained Phi,pPhi. Quadratic hidden Hessian must be SPD. One exact Phi=0 control D/Jref=8,delta=ln2,nu=2,dref/r0=1,epsilon_star=1. No global parent equilibrium, all-Phi integral, material calibration, trajectory or quantum validation.",
+    "quantity": "Canonical state/inertia/measure derivation, conditional quadratic F/U/S/mean-force dictionary, fixed-C vibration weights, parent collision counterexample and conditional local value-error bound.",
+    "unit": "energy J_ref; k_B entropy; physical generalized inertia kg m^2; exact residuals"
+  },
+  "profile": "FORMAL",
+  "question": "Can one internally deforming four-atom chain account for Phi/Pi kinetic storage and eliminated-vibration entropy without state/measure double counting, and what local/parent/Core correspondence survives?",
+  "review": {
+    "rationale": "Canonical atom-to-collective map, generalized inertia and conditional shifted-Gaussian thermodynamics are checked for a source-informed finite open chain. Exact formulae and locked-control certificates are not material validation. The unconfined parent collision no-go is retained, and local value approximation needs Taylor/tail and physical classical/local regime prerequisites. Coarse kinetic closure, actual parameters and specialist review remain open; old gates/contracts are unchanged.",
+    "reviewer": "agent:lattice-mechanical-state (construction and adversarial self-review; not independent specialist)",
+    "status": "INCOMPLETE"
+  },
+  "schema_version": "uet-calculation-contract-v1"
+}

@@ -1,0 +1,450 @@
+{
+  "analytic_dependencies": [
+    "Sylvester/Bernstein rational certificates and the positive atanh series for ln2.",
+    "Gaussian halfspace projection excludes probability above 1/2 inside the locked ball.",
+    "Classical Gaussian bath integration and exact finite-oscillator elimination with conditional preparation.",
+    "Neumann/Taylor and response-weighted quantum FDT tail inequalities in the report, not a material error acceptance.",
+    "Orthogonal diagonalization of SPD stiffness transfers diagonal symbolic OU/FDT checks to the general reference.",
+    "Prepared hidden OU covariance identity gives transient FDT; a transfer function alone is insufficient.",
+    "Routh-Hurwitz, exact Schur complement and explicit fast-mode scaling justify only stated limits."
+  ],
+  "checks": {
+    "Core_conditional_normalization": {
+      "Core_inertia_ratio": true,
+      "Core_mobility_is_inverse_normalized_friction": true,
+      "Phi_force_port_scaling": true
+    },
+    "Drude_kernel_white_limit": {
+      "Drude_causal_Laplace": true,
+      "Drude_cosine_transform_convention": true,
+      "finite_colored_force_spectrum": true,
+      "one_sided_kernel_area": true,
+      "white_bath_impedance_limit": true,
+      "white_noise_two_sided_factor2": true
+    },
+    "OU_stationarity_parity_stability": {
+      "Drude_mode_cubic": true,
+      "Routh_Hurwitz_positive_margin": true,
+      "extended_OU_bath_injection_balance": true,
+      "reversible_time_parity_Pi_odd": true,
+      "stationary_Lyapunov_covariance": true,
+      "stationary_mechanical_energy_flux": true,
+      "white_friction_noise_energy_balance": true
+    },
+    "conditional_hidden_memory_FDT": {
+      "conditional_FDT_preparation_identity": true,
+      "effective_impedance_and_static_potential": true,
+      "effective_memory_same_force_port": true,
+      "hidden_conditional_Lyapunov": true,
+      "hidden_memory_resolvent": true
+    },
+    "coordinates_ports": {
+      "Phi_kinetic_inertia": true,
+      "canonical_Jacobian": true,
+      "canonical_Q_Phi_one_form": true,
+      "force_port_work": true,
+      "length_basis_orthonormal": true,
+      "no_CM_bath_channel": true,
+      "normalized_original_mass": true,
+      "readout_is_not_endpoint": true
+    },
+    "exact_block_response": {
+      "decoupled_retained_response": true,
+      "determinant_poles_not_discarded": true,
+      "full_block_solve_matches_elimination": true,
+      "static_Schur_complement": true
+    },
+    "finite_bath_preparation_energy": {
+      "Hamiltonian_force_with_counterterm": true,
+      "bath_shift_preserves_bare_potential": true,
+      "conditional_preparation_zero_noise_mean": true,
+      "finite_bath_classical_FDT": true,
+      "total_Hamiltonian_energy": true,
+      "unshifted_preparation_initial_slip": true
+    },
+    "joint_parent_derivative_link": {
+      "joint_Hessian_source_link": true,
+      "joint_gradient_source_link": true,
+      "mixed_Q_matches_old_Phi_scaling": true
+    },
+    "limits_and_invalid_mass_witness": {
+      "fast_limit_retains_static_coupling": true,
+      "negative_dynamic_mass_witness": true,
+      "static_only_elimination_misses_friction": true,
+      "white_and_explicit_fast_limit_commute": true,
+      "witness_static_stiffness_positive": true
+    },
+    "local_quantum_bound_identities": {
+      "coth_upper_series_coefficient": true,
+      "joint_Taylor_value_remainder": true,
+      "joint_gap_lower_bound": true,
+      "position_quantum_tail": true,
+      "velocity_quantum_tail": true
+    },
+    "low_frequency_remainder": {
+      "exact_Drude_Taylor_remainder": true,
+      "exact_hidden_resolvent_remainder": true,
+      "low_frequency_dynamic_mass": true,
+      "low_frequency_friction": true,
+      "static_reduced_stiffness": true,
+      "white_bath_does_not_remove_hidden_memory": true
+    },
+    "spectral_effective_noise": {
+      "effective_noise_nonnegative_factor": true,
+      "effective_noise_response_FDT_one_hidden_mode": true
+    }
+  },
+  "completed_rounds": [
+    "P0",
+    "P1",
+    "P2",
+    "P3",
+    "P4"
+  ],
+  "contract_id": "T13_LATTICE_BATH_REDUCTION_AUDIT_FORMAL_V1",
+  "contract_review_status": "INCOMPLETE",
+  "contract_sha256": "79b339d00e8f5808cab2d1f6f044a6233940a0206ff05ced275b10fa93967f51",
+  "decisions": {
+    "C_kinetics": "NOT_DERIVED: labels remain frozen, sector weights are preparation, not bath-selected transitions.",
+    "Core_Markov": "CONDITIONAL low-band approximation only; effective mass need not equal bare inertia or be positive.",
+    "bath_GLE": "EXACT for finite harmonic bath/declared conditional preparation; Drude continuum is an additional spectrum choice.",
+    "hidden_reduction": "EXACT nonlocal response and FDT with conditional hidden equilibrium; prepared offsets give extra forcing.",
+    "localization": "NOT_ADMITTED at the locked center and R=dref/4: all16 quadratic Gaussian means lie outside; projection gives P(ball)<1/2 for every T>0. Not a no-go for other references/materials.",
+    "material": "UNRESOLVED: no material selection, quantum/local physical correspondence or independent specialist validation.",
+    "novelty": "STANDARD_COMPARATOR_EQUIVALENCE within this chosen harmonic-bath class; no new UET discriminator.",
+    "parent_global": "NOT_ADMITTED: O collision no-go unchanged by normalized shifted bath integral.",
+    "quadratic_embedding": "EQUIVALENT linear Gaussian Drude reference with matched conditional initial law; not an extra independent memory substance."
+  },
+  "identities": [
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/meta/UET_LATTICE_BATH_REDUCTION_AUDIT.md",
+      "role": "evidence",
+      "sha256": "e65174b4d3e3182af317db6bfb6cb86e70ffa6718dfb0a1a6f29b3e94752a13e"
+    },
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/Research_T13_Lattice_Bath_Reduction_Audit.py",
+      "role": "code",
+      "sha256": "5e69191a17c14322d0886a64b7be97154a774cec9e55f0eafec387ef41a0ce99"
+    },
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/test_t13_lattice_bath_reduction_audit.py",
+      "role": "code",
+      "sha256": "8c25aaa430d8c2d3da263dc4878a7375097b697f037e03311d5057770b2f69a2"
+    },
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/meta/UET_LATTICE_MECHANICAL_STATE_CONSTRUCTION.md",
+      "role": "evidence",
+      "sha256": "f272760ad1e00c12d3fd0df2315d16355f60166c97ea19843c327fc39942e659"
+    },
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/Research_T13_Lattice_Mechanical_State_Construction.py",
+      "role": "code",
+      "sha256": "6489e909fcfb6cdbf13f40093d2bb44c5c3b31c2f506945f2e6837041b3a87a3"
+    },
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/calculation_contracts/lattice_mechanical_state_construction.json",
+      "role": "evidence",
+      "sha256": "73ac451243f5d8c93f1949e9e6bc2c574708d7287ec21f16e9764188117f787c"
+    },
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/t13_lattice_mechanical_state_construction.json",
+      "role": "evidence",
+      "sha256": "194208f48cb1d55ccfff73afa14748c8b3b59470085f5f27fd6547d36b796c25"
+    },
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/meta/UET_SPIN_STRAIN_CORRESPONDENCE_AUDIT.md",
+      "role": "evidence",
+      "sha256": "21e73506d528b616fb8cd13750facd14a2d33a9886d5aadd0927c580c4aed736"
+    },
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/calculation_contracts/spin_strain_correspondence.json",
+      "role": "evidence",
+      "sha256": "751360256f05754013d5f17369b8769f9e095a54882645e2887174c1bff24c7b"
+    },
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/t13_spin_strain_correspondence.json",
+      "role": "evidence",
+      "sha256": "8c76f1c00ca9d4a96385049d784749bd175e6d87f1c3711a3897ac96249dfae2"
+    },
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/meta/UET_JOINT_STATE_MEASURE_CONSTRUCTION.md",
+      "role": "evidence",
+      "sha256": "f212977ad144349816c8952e3ad75261df9fea05c61dbf3dcc8048cf4913ba0d"
+    },
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/calculation_contracts/joint_state_measure_construction.json",
+      "role": "evidence",
+      "sha256": "966683ce539ee9e090a72300c0a3e7f42bbfa01a795bfbe444de621579ac5eb3"
+    },
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/t13_joint_state_measure_construction.json",
+      "role": "evidence",
+      "sha256": "2a31fb6f9d32abf94942b52bd9b43e5a68decb7a3ebb45d2f062722906e2cdff"
+    },
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/meta/UET_THEORY_ARGUMENT.md",
+      "role": "evidence",
+      "sha256": "d590b084fa85ed1e3133364a8b889b79ad5c3a901e3a8044ed4e00ae3d763d4a"
+    },
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/meta/UET_THERMODYNAMIC_FOUNDATIONS_REVIEW.md",
+      "role": "evidence",
+      "sha256": "c1cf629e5093d741a409d6c645fcd04f9b35bb64f1d29b7627f3e6736f6f5f69"
+    },
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/calculation_contracts/joint_thermodynamic_completion.json",
+      "role": "evidence",
+      "sha256": "0a60129b9a303ad4fc1b3fbb6a06b6deec05ae45d78029cc0fce180fc60e7171"
+    },
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/t13_joint_thermodynamic_completion.json",
+      "role": "evidence",
+      "sha256": "e45cc255aee495a0b4a8ba63ba2e02cd083ed820a00da72377c3f0efe5ad58f3"
+    },
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/core/01_contracts/MATTER_SPACE_RESEARCH_SPEC.md",
+      "role": "input",
+      "sha256": "d178f1978c93a09350a4da6ea11153a93fbfb13ad12c9d390846f741ad5db848"
+    },
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/meta/schemas/calculation_contract_v1.schema.json",
+      "role": "config",
+      "sha256": "ec556052d755908a2ec7b3ec10b411839f4f0bee549fd902fb1f915f8475ebc3"
+    },
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/scripts/audit/audit_calculation_completeness.py",
+      "role": "code",
+      "sha256": "b406d31add9834d2cd1d9f3bb8d42724d26c390413710419313dd85cba7121ca"
+    }
+  ],
+  "limitations": [
+    "Joint quadratic reference is not O's full Phi-dependent conditional ensemble.",
+    "Stationary static covariance is not a finite-time escape/lifetime guarantee.",
+    "No spin transition, real material, calibrated bath, physical heat or total entropy-production claim.",
+    "Formal completion does not promote legacy contracts, Topic 13 or Core physics gates."
+  ],
+  "locked_control": {
+    "D_over_Jref": 8,
+    "N": 4,
+    "R_over_dref": "1/4",
+    "bath_cutoff": "positive free reference parameter",
+    "bath_gamma": "positive free reference parameter",
+    "delta": "ln2",
+    "dref_over_r0": 1,
+    "epsilon_star": 1,
+    "nu": 2
+  },
+  "method": {
+    "arithmetic": "exact",
+    "parameter_sweep": false,
+    "random_samples": 0,
+    "sympy": "1.14.0"
+  },
+  "negative_controls": {
+    "Phi_inertia_mistaken_for_atomic_mass": true,
+    "Pi_even_time_parity": true,
+    "counterterm_omitted_changes_static_potential": true,
+    "embedding_markov_claimed_for_Phi_pair": true,
+    "endpoint_mistaken_for_Phi": true,
+    "flat_Phi_momentum_measure_without_Jacobian": true,
+    "frozen_spins_treated_as_annealed": true,
+    "linear_force_deleted": true,
+    "mixed_stiffness_deleted": true,
+    "nonSPD_joint_admitted": true,
+    "unresolved_band_admitted": true,
+    "unshifted_bath_initial_slip_discarded": true,
+    "white_noise_factor_two_missing": true,
+    "wrong_noise_amplitude_rejected": true
+  },
+  "new_core_terms": 0,
+  "old_scientific_verifiers_rerun": false,
+  "physical_acceptance": false,
+  "spin_controls": [
+    {
+      "joint_SPD": true,
+      "k": 0,
+      "mean_outside_locked_ball": true,
+      "mixed_stiffness_nonzero": true,
+      "nonzero_linear_force": true,
+      "spins": "----",
+      "squared_mean_exact": "(-277120*log(2)**4 - 32832*log(2)**3 + 45 + 1548*log(2) + 12468*log(2)**2 + 174080*log(2)**5 + 1484800*log(2)**6)/((-3 + 20*log(2)**2)**2*(-3 + 32*log(2)**2)**2)"
+    },
+    {
+      "joint_SPD": true,
+      "k": 1,
+      "mean_outside_locked_ball": true,
+      "mixed_stiffness_nonzero": true,
+      "nonzero_linear_force": true,
+      "spins": "---+",
+      "squared_mean_exact": "(-136396800*log(2)**8 - 8368128*log(2)**6 - 2771712*log(2)**5 + 405 + 7128*log(2) + 44928*log(2)**3 + 49680*log(2)**2 + 157104*log(2)**4 + 9412608*log(2)**7 + 68157440*log(2)**9 + 1520435200*log(2)**10)/((-3 + 32*log(2)**2)**2*(-9 - 12*log(2)**2 + 640*log(2)**4)**2)"
+    },
+    {
+      "joint_SPD": true,
+      "k": 1,
+      "mean_outside_locked_ball": true,
+      "mixed_stiffness_nonzero": true,
+      "nonzero_linear_force": true,
+      "spins": "--+-",
+      "squared_mean_exact": "(-68157440*log(2)**9 - 8644608*log(2)**6 - 181584*log(2)**4 - 7128*log(2) + 405 + 44928*log(2)**3 + 60480*log(2)**2 + 2771712*log(2)**5 + 9412608*log(2)**7 + 138854400*log(2)**8 + 1520435200*log(2)**10)/((3 + 32*log(2)**2)**2*(-9 + 12*log(2)**2 + 640*log(2)**4)**2)"
+    },
+    {
+      "joint_SPD": true,
+      "k": 2,
+      "mean_outside_locked_ball": true,
+      "mixed_stiffness_nonzero": true,
+      "nonzero_linear_force": true,
+      "spins": "--++",
+      "squared_mean_exact": "(-12800*log(2)**4 - 36*log(2) + 45 + 2580*log(2)**2 + 17952*log(2)**3 + 40960*log(2)**5 + 1484800*log(2)**6)/(-9 - 12*log(2)**2 + 640*log(2)**4)**2"
+    },
+    {
+      "joint_SPD": true,
+      "k": 1,
+      "mean_outside_locked_ball": true,
+      "mixed_stiffness_nonzero": true,
+      "nonzero_linear_force": true,
+      "spins": "-+--",
+      "squared_mean_exact": "(-68157440*log(2)**9 - 8644608*log(2)**6 - 181584*log(2)**4 - 7128*log(2) + 405 + 44928*log(2)**3 + 60480*log(2)**2 + 2771712*log(2)**5 + 9412608*log(2)**7 + 138854400*log(2)**8 + 1520435200*log(2)**10)/((3 + 32*log(2)**2)**2*(-9 + 12*log(2)**2 + 640*log(2)**4)**2)"
+    },
+    {
+      "joint_SPD": true,
+      "k": 2,
+      "mean_outside_locked_ball": true,
+      "mixed_stiffness_nonzero": true,
+      "nonzero_linear_force": true,
+      "spins": "-+-+",
+      "squared_mean_exact": "(-174080*log(2)**5 - 32832*log(2)**3 - 1548*log(2) + 45 + 14388*log(2)**2 + 287360*log(2)**4 + 1484800*log(2)**6)/((3 + 20*log(2)**2)**2*(3 + 32*log(2)**2)**2)"
+    },
+    {
+      "joint_SPD": true,
+      "k": 2,
+      "mean_outside_locked_ball": true,
+      "mixed_stiffness_nonzero": true,
+      "nonzero_linear_force": true,
+      "spins": "-++-",
+      "squared_mean_exact": "(-40960*log(2)**5 + 36*log(2) + 45 + 2100*log(2)**2 + 14080*log(2)**4 + 17952*log(2)**3 + 1484800*log(2)**6)/(-9 + 12*log(2)**2 + 640*log(2)**4)**2"
+    },
+    {
+      "joint_SPD": true,
+      "k": 3,
+      "mean_outside_locked_ball": true,
+      "mixed_stiffness_nonzero": true,
+      "nonzero_linear_force": true,
+      "spins": "-+++",
+      "squared_mean_exact": "(-136396800*log(2)**8 - 8368128*log(2)**6 - 2771712*log(2)**5 + 405 + 7128*log(2) + 44928*log(2)**3 + 49680*log(2)**2 + 157104*log(2)**4 + 9412608*log(2)**7 + 68157440*log(2)**9 + 1520435200*log(2)**10)/((-3 + 32*log(2)**2)**2*(-9 - 12*log(2)**2 + 640*log(2)**4)**2)"
+    },
+    {
+      "joint_SPD": true,
+      "k": 1,
+      "mean_outside_locked_ball": true,
+      "mixed_stiffness_nonzero": true,
+      "nonzero_linear_force": true,
+      "spins": "+---",
+      "squared_mean_exact": "(-136396800*log(2)**8 - 8368128*log(2)**6 - 2771712*log(2)**5 + 405 + 7128*log(2) + 44928*log(2)**3 + 49680*log(2)**2 + 157104*log(2)**4 + 9412608*log(2)**7 + 68157440*log(2)**9 + 1520435200*log(2)**10)/((-3 + 32*log(2)**2)**2*(-9 - 12*log(2)**2 + 640*log(2)**4)**2)"
+    },
+    {
+      "joint_SPD": true,
+      "k": 2,
+      "mean_outside_locked_ball": true,
+      "mixed_stiffness_nonzero": true,
+      "nonzero_linear_force": true,
+      "spins": "+--+",
+      "squared_mean_exact": "(-40960*log(2)**5 + 36*log(2) + 45 + 2100*log(2)**2 + 14080*log(2)**4 + 17952*log(2)**3 + 1484800*log(2)**6)/(-9 + 12*log(2)**2 + 640*log(2)**4)**2"
+    },
+    {
+      "joint_SPD": true,
+      "k": 2,
+      "mean_outside_locked_ball": true,
+      "mixed_stiffness_nonzero": true,
+      "nonzero_linear_force": true,
+      "spins": "+-+-",
+      "squared_mean_exact": "(-174080*log(2)**5 - 32832*log(2)**3 - 1548*log(2) + 45 + 14388*log(2)**2 + 287360*log(2)**4 + 1484800*log(2)**6)/((3 + 20*log(2)**2)**2*(3 + 32*log(2)**2)**2)"
+    },
+    {
+      "joint_SPD": true,
+      "k": 3,
+      "mean_outside_locked_ball": true,
+      "mixed_stiffness_nonzero": true,
+      "nonzero_linear_force": true,
+      "spins": "+-++",
+      "squared_mean_exact": "(-68157440*log(2)**9 - 8644608*log(2)**6 - 181584*log(2)**4 - 7128*log(2) + 405 + 44928*log(2)**3 + 60480*log(2)**2 + 2771712*log(2)**5 + 9412608*log(2)**7 + 138854400*log(2)**8 + 1520435200*log(2)**10)/((3 + 32*log(2)**2)**2*(-9 + 12*log(2)**2 + 640*log(2)**4)**2)"
+    },
+    {
+      "joint_SPD": true,
+      "k": 2,
+      "mean_outside_locked_ball": true,
+      "mixed_stiffness_nonzero": true,
+      "nonzero_linear_force": true,
+      "spins": "++--",
+      "squared_mean_exact": "(-12800*log(2)**4 - 36*log(2) + 45 + 2580*log(2)**2 + 17952*log(2)**3 + 40960*log(2)**5 + 1484800*log(2)**6)/(-9 - 12*log(2)**2 + 640*log(2)**4)**2"
+    },
+    {
+      "joint_SPD": true,
+      "k": 3,
+      "mean_outside_locked_ball": true,
+      "mixed_stiffness_nonzero": true,
+      "nonzero_linear_force": true,
+      "spins": "++-+",
+      "squared_mean_exact": "(-68157440*log(2)**9 - 8644608*log(2)**6 - 181584*log(2)**4 - 7128*log(2) + 405 + 44928*log(2)**3 + 60480*log(2)**2 + 2771712*log(2)**5 + 9412608*log(2)**7 + 138854400*log(2)**8 + 1520435200*log(2)**10)/((3 + 32*log(2)**2)**2*(-9 + 12*log(2)**2 + 640*log(2)**4)**2)"
+    },
+    {
+      "joint_SPD": true,
+      "k": 3,
+      "mean_outside_locked_ball": true,
+      "mixed_stiffness_nonzero": true,
+      "nonzero_linear_force": true,
+      "spins": "+++-",
+      "squared_mean_exact": "(-136396800*log(2)**8 - 8368128*log(2)**6 - 2771712*log(2)**5 + 405 + 7128*log(2) + 44928*log(2)**3 + 49680*log(2)**2 + 157104*log(2)**4 + 9412608*log(2)**7 + 68157440*log(2)**9 + 1520435200*log(2)**10)/((-3 + 32*log(2)**2)**2*(-9 - 12*log(2)**2 + 640*log(2)**4)**2)"
+    },
+    {
+      "joint_SPD": true,
+      "k": 4,
+      "mean_outside_locked_ball": true,
+      "mixed_stiffness_nonzero": true,
+      "nonzero_linear_force": true,
+      "spins": "++++",
+      "squared_mean_exact": "(-277120*log(2)**4 - 32832*log(2)**3 + 45 + 1548*log(2) + 12468*log(2)**2 + 174080*log(2)**5 + 1484800*log(2)**6)/((-3 + 20*log(2)**2)**2*(-3 + 32*log(2)**2)**2)"
+    }
+  ],
+  "trajectories": 0,
+  "unique_UET_discriminator": false
+}

@@ -1,0 +1,233 @@
+{
+  "analytic_dependencies": [
+    "Restricted uniform conditioning and entropy chain rule use the declared microstate classes/measure.",
+    "Finite-N bound uses the binomial mode and normalization proof, including endpoints.",
+    "Tail certificate plus admitted parameter/domain signs establishes finite partition integrals.",
+    "Old Taylor bounds from Argument 14.4 are reused, not rerun or extended to finite-N force derivatives."
+  ],
+  "checks": {
+    "analytic_normalizability_certificate": {
+      "coercive_quartic_linear_factorization": true
+    },
+    "cell_measure_and_kinetic_normalization": {
+      "P_to_Pi_pushforward_measure": true,
+      "coarse_free_energy_per_site": true,
+      "inverse_coordinate_mapping": true,
+      "theta_over_N_in_Gibbs_exponent": true,
+      "total_to_per_site_storage": true
+    },
+    "conditional_thermodynamic_dictionary": {
+      "beta_derivative_internal_energy": true,
+      "interaction_once": true,
+      "internal_energy_from_F_plus_TS": true,
+      "intrinsic_entropy_from_T_derivative": true,
+      "restricted_log_partition": true
+    },
+    "entropy_and_ensemble_accounting": {
+      "ensemble_free_energy_density_at_Gibbs": true,
+      "micro_retained_intrinsic_entropy_density": true,
+      "uniform_conditional_normalization": true
+    },
+    "explicit_pair_diagonal_convention": {
+      "diagonal_is_not_Phi_constant": true,
+      "square_of_sum_equals_pairs_plus_diagonal": true
+    },
+    "finite_N_bound_algebra": {
+      "first_decreasing_neighbor": true,
+      "last_increasing_neighbor": true,
+      "log_bound_conversion": true,
+      "neighbor_mode_ratio_numerator": true
+    },
+    "old_quartic_map_new_thermal_split": {
+      "coupling_temperature_derivative_zero_in_this_reference": true,
+      "old_coefficient_map_in_fixed_C_coordinates": true,
+      "quartic_U_uses_thermal_coefficients_not_frozen_values": true,
+      "quartic_intrinsic_entropy_keeps_ln2": true
+    },
+    "signed_magnitude_entropy_accounting": {
+      "lost_sign_entropy_moves_into_intrinsic_for_uniform_fold": true
+    },
+    "zero_coupling_and_sign_symmetry": {
+      "gamma_zero_energy_factorizes": true,
+      "gamma_zero_intrinsic_multiplicity_is_spin_only": true,
+      "signed_energy_even": true
+    }
+  },
+  "completed_rounds": [
+    "M0",
+    "M1",
+    "M2",
+    "M3"
+  ],
+  "contract_id": "T13_JOINT_STATE_MEASURE_FORMAL_V1",
+  "contract_review_status": "INCOMPLETE",
+  "contract_sha256": "01b74b6ee77a7bc6731a40df02a6c11d309697e7cac73e111975cb26376e1e69",
+  "decisions": {
+    "Omega_correspondence": "Finite-grid exact coarse free energy; old quartic is a controlled large-N/small-m approximation only, not an exact all-R law.",
+    "comparator": "Chosen binary mean-field energy plus retained Phi/P is a standard equilibrium construction; no unique UET discriminator.",
+    "next_question": "Does a separately justified physical retained-state/energy/measure map realize this conditional dictionary? No next model or dynamics started.",
+    "old_HIST_F": "Physical intrinsic-entropy-correspondence remains open; old contracts/gates unchanged.",
+    "physical_Phi_entropy": "UNKNOWN; absence of additional hidden Phi states is a definition of this example only.",
+    "static_reference": "Conditional finite-N F/U/intrinsic-entropy dictionary closes for the chosen energy and fixed measure."
+  },
+  "finite_enumeration": [
+    {
+      "N": 2,
+      "coarse_classes": 3,
+      "configurations": 4,
+      "enumerated_multiplicity_and_weight_sum": true,
+      "exact_rational_entropy_bound_certificate": true
+    },
+    {
+      "N": 3,
+      "coarse_classes": 4,
+      "configurations": 8,
+      "enumerated_multiplicity_and_weight_sum": true,
+      "exact_rational_entropy_bound_certificate": true
+    },
+    {
+      "N": 4,
+      "coarse_classes": 5,
+      "configurations": 16,
+      "enumerated_multiplicity_and_weight_sum": true,
+      "exact_rational_entropy_bound_certificate": true
+    },
+    {
+      "N": 8,
+      "coarse_classes": 9,
+      "configurations": 256,
+      "enumerated_multiplicity_and_weight_sum": true,
+      "exact_rational_entropy_bound_certificate": true
+    }
+  ],
+  "identities": [
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/meta/UET_JOINT_STATE_MEASURE_CONSTRUCTION.md",
+      "role": "evidence",
+      "sha256": "f212977ad144349816c8952e3ad75261df9fea05c61dbf3dcc8048cf4913ba0d"
+    },
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/Research_T13_Joint_State_Measure_Construction.py",
+      "role": "code",
+      "sha256": "67f3895fa13aa1847f04c736012369addb225d3d6ec7405ef38e49079065f50d"
+    },
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/test_t13_joint_state_measure_construction.py",
+      "role": "code",
+      "sha256": "266fe0ecb32f4a4a6f2c9376413f573b8a0dc282e5a013fff72c81832d86dd47"
+    },
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/meta/UET_THEORY_ARGUMENT.md",
+      "role": "evidence",
+      "sha256": "d590b084fa85ed1e3133364a8b889b79ad5c3a901e3a8044ed4e00ae3d763d4a"
+    },
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/meta/UET_THERMODYNAMIC_FOUNDATIONS_REVIEW.md",
+      "role": "evidence",
+      "sha256": "c1cf629e5093d741a409d6c645fcd04f9b35bb64f1d29b7627f3e6736f6f5f69"
+    },
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/core/01_contracts/MATTER_SPACE_RESEARCH_SPEC.md",
+      "role": "input",
+      "sha256": "d178f1978c93a09350a4da6ea11153a93fbfb13ad12c9d390846f741ad5db848"
+    },
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/core/02_equations/matter_space/uet_matter_space.py",
+      "role": "input",
+      "sha256": "488db6aa26b99856e2eb82a2f46a9857f623f418ef8e537498fa71d5e4f633aa"
+    },
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/calculation_contracts/joint_thermodynamic_completion.json",
+      "role": "evidence",
+      "sha256": "0a60129b9a303ad4fc1b3fbb6a06b6deec05ae45d78029cc0fce180fc60e7171"
+    },
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/t13_joint_thermodynamic_completion.json",
+      "role": "evidence",
+      "sha256": "e45cc255aee495a0b4a8ba63ba2e02cd083ed820a00da72377c3f0efe5ad58f3"
+    },
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/meta/schemas/calculation_contract_v1.schema.json",
+      "role": "config",
+      "sha256": "ec556052d755908a2ec7b3ec10b411839f4f0bee549fd902fb1f915f8475ebc3"
+    },
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/scripts/audit/audit_calculation_completeness.py",
+      "role": "code",
+      "sha256": "b406d31add9834d2cd1d9f3bb8d42724d26c390413710419313dd85cba7121ca"
+    }
+  ],
+  "kinetic_law_added": false,
+  "limitations": [
+    "No independent specialist review or physical/SI calibration.",
+    "No full stochastic process, relaxation/time-scale-separation proof, heat trajectory or entropy-production law.",
+    "No full entropy counting of the physical Phi/Pi sector or Gaussian cross-lane addition.",
+    "No finite-N force bound inferred from a free-energy value bound.",
+    "Static dependence/readout is not learning, memory lifetime or cosmological openness."
+  ],
+  "magnitude_folding": [
+    {
+      "N": 2,
+      "counts_and_even_energy": true,
+      "magnitude_classes": 2
+    },
+    {
+      "N": 3,
+      "counts_and_even_energy": true,
+      "magnitude_classes": 2
+    },
+    {
+      "N": 4,
+      "counts_and_even_energy": true,
+      "magnitude_classes": 3
+    },
+    {
+      "N": 8,
+      "counts_and_even_energy": true,
+      "magnitude_classes": 5
+    }
+  ],
+  "method": {
+    "arithmetic": "exact",
+    "population_cases_are_regressions_not_general_proof": true,
+    "random_samples": 0,
+    "sympy": "1.14.0"
+  },
+  "negative_controls": {
+    "double_interaction": true,
+    "double_multiplicity": true,
+    "magnitude_not_invertible": true,
+    "omitted_Jacobian": true,
+    "omitted_multiplicity": true,
+    "wrong_N_in_kinetic_storage": true,
+    "wrong_interaction_sign": true,
+    "zero_class_double_count": true
+  },
+  "new_core_terms": 0,
+  "observational_rows": 0,
+  "old_scientific_verifiers_rerun": false,
+  "physical_acceptance": false,
+  "unique_UET_discriminator": false
+}

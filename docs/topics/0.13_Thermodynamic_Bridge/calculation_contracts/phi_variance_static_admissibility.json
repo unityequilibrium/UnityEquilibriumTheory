@@ -1,0 +1,321 @@
+{
+  "claim_boundary": "FORMAL observable-specific bounds/conditional scale relations only. No actual material or physical/quantum-parent preparation window, no UET uniqueness, learning/persistence/cosmology or physics-gate promotion. Old Q/P/O evidence unchanged.",
+  "components": [
+    {
+      "disposition": "MODELED",
+      "evidence": [
+        "docs/meta/UET_PHI_VARIANCE_STATIC_ADMISSIBILITY.md"
+      ],
+      "group": "system_state",
+      "id": "joint-state",
+      "reason": "Reuse Q certified alternating reference/root uncertainty; target central Phi variance under declared static measures."
+    },
+    {
+      "disposition": "MODELED",
+      "evidence": [
+        "docs/meta/UET_PHI_VARIANCE_STATIC_ADMISSIBILITY.md"
+      ],
+      "group": "processing",
+      "id": "classical-variance",
+      "reason": "Uniform-remainder/tail and finite-boundary moment derivations separate raw second moment and mean shift."
+    },
+    {
+      "disposition": "MODELED",
+      "evidence": [
+        "docs/meta/UET_PHI_VARIANCE_STATIC_ADMISSIBILITY.md"
+      ],
+      "group": "processing",
+      "id": "harmonic-quantum",
+      "reason": "Normal-mode weighted covariance and observable-specific coth bound for isolated quadratic comparator only."
+    },
+    {
+      "disposition": "UNKNOWN",
+      "evidence": [
+        "docs/meta/UET_PHI_VARIANCE_STATIC_ADMISSIBILITY.md"
+      ],
+      "group": "system_state",
+      "id": "physical-parent-preparation",
+      "next_action": "Review conditional scale inequalities and supply independently supported physical dictionary/error policy before any physical window claim; no automatic material or next wave.",
+      "owner": "author with statistical-mechanics/lattice-dynamics specialist",
+      "reason": "No actual scales mu,dref,Jref, chosen observable error policy or physically realized local preparation/lifetime; global parent no-go unchanged."
+    },
+    {
+      "disposition": "UNKNOWN",
+      "evidence": [
+        "docs/meta/UET_PHI_VARIANCE_STATIC_ADMISSIBILITY.md"
+      ],
+      "group": "processing",
+      "id": "quantum-parent-correspondence",
+      "next_action": "A physical quantum-parent comparison would require its own specified state/operator/preparation and anharmonic error bound, not addition of these two comparator errors.",
+      "owner": "statistical-mechanics/quantum-lattice specialist",
+      "reason": "Classical restricted-parent versus classical harmonic and quantum harmonic versus classical harmonic do not bound the actual quantum anharmonic parent's physical error."
+    },
+    {
+      "disposition": "NOT_APPLICABLE",
+      "evidence": [
+        "docs/meta/UET_PHI_VARIANCE_STATIC_ADMISSIBILITY.md"
+      ],
+      "group": "drive_environment",
+      "id": "environment",
+      "reason": "No new bath/drive or physical thermalization claim."
+    },
+    {
+      "disposition": "NOT_APPLICABLE",
+      "evidence": [
+        "docs/meta/UET_PHI_VARIANCE_STATIC_ADMISSIBILITY.md"
+      ],
+      "group": "propagation",
+      "id": "transport",
+      "reason": "No signal/detection route."
+    },
+    {
+      "disposition": "MODELED",
+      "evidence": [
+        "docs/meta/UET_PHI_VARIANCE_STATIC_ADMISSIBILITY.md"
+      ],
+      "group": "frame_time",
+      "id": "frame-units",
+      "reason": "Dimensionless variance, same total energy and theta/chi dictionary, physical-scale identifiability and force-free coordinate transformation explicit."
+    },
+    {
+      "disposition": "NOT_APPLICABLE",
+      "evidence": [
+        "docs/meta/UET_PHI_VARIANCE_STATIC_ADMISSIBILITY.md"
+      ],
+      "group": "detector",
+      "id": "detector",
+      "reason": "No apparatus/calibration or observation error assertion."
+    },
+    {
+      "disposition": "MODELED",
+      "evidence": [
+        "docs/meta/UET_PHI_VARIANCE_STATIC_ADMISSIBILITY.md",
+        "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/Research_T13_Phi_Variance_Static_Admissibility.py",
+        "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/test_t13_phi_variance_static_admissibility.py"
+      ],
+      "group": "numerics",
+      "id": "formal-controls",
+      "reason": "Exact symbolic checks and outward rational enclosures plus fixed nonphysical regression controls; no root rerun or parameter sweep."
+    }
+  ],
+  "contract_id": "T13_PHI_VARIANCE_STATIC_ADMISSIBILITY_FORMAL_V1",
+  "data_policy": {
+    "calibration_ids": [],
+    "comparison_ids": [],
+    "holdout_policy": "No observed data, material selection, fitting or blind holdout. Source equations and existing certified Q artifact only, plus declared exact regression controls, not physical parameter choices.",
+    "independent_validation": false,
+    "uses_observations": false
+  },
+  "entrypoints": [
+    "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/Research_T13_Phi_Variance_Static_Admissibility.py",
+    "docs/meta/UET_PHI_VARIANCE_STATIC_ADMISSIBILITY.md"
+  ],
+  "error_budget": {
+    "acceptance": "Variance-specific derivation/counterexample and conditional scale set with epsilon parameters; inconclusive bound is not parent rejection. Only two prescribed methods, no threshold/radius/control retuning.",
+    "approximation": "Classical-parent variance bound includes normalization, moments, mean shift and boundary. Harmonic quantum correction is a separate comparison; no total quantum-parent error claim.",
+    "dependence": "Shared reference coefficients/uncertainty and three-mode state accounted once; no independent errors assumed or unrelated comparator bounds promoted to full physical error.",
+    "measurement": "NOT_APPLICABLE: no observed data or detector; unknown future measurement error is not zero.",
+    "numerical": "Inherited rational root/stiffness/radius certificates and outward arithmetic plus exact symbolic identities. Float checks never certify physical or theorem acceptance.",
+    "omission_limit": null,
+    "omissions": "No dynamics, lifetime, spin rates, real material, bath, external validation, new UET discriminator or physical gate promotion.",
+    "systematic": "Frozen labels, restricted static ensemble, absent real material/preparation/thermalization, unknown quantum-parent and bath correspondence remain open.",
+    "unit": "dimensionless Phi variance; theta=kBT/Jref; chi=hbar/(dref*sqrt(mu*Jref)); physical scales kg,m,J,K"
+  },
+  "evidence": [
+    "docs/meta/UET_PHI_VARIANCE_STATIC_ADMISSIBILITY.md",
+    "docs/meta/UET_PARENT_STATIC_REFERENCE_AUDIT.md",
+    "https://www.damtp.cam.ac.uk/user/tong/statphys/statmechhtml/S2.html",
+    "https://www.damtp.cam.ac.uk/user/tong/statphys/statmechhtml/S3.html"
+  ],
+  "identities": [
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/meta/UET_PHI_VARIANCE_STATIC_ADMISSIBILITY.md",
+      "role": "evidence",
+      "sha256": "fb64dc323e1750be0446a2a9e5b44a9c13a406a966cf1307a2f7ec73330d777f"
+    },
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/Research_T13_Phi_Variance_Static_Admissibility.py",
+      "role": "code",
+      "sha256": "0f773223db1bdca2cd54f396fbd1ebc090c6f9b4a80eeeef558a914ebb573afa"
+    },
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/test_t13_phi_variance_static_admissibility.py",
+      "role": "code",
+      "sha256": "738289b002b1efb4cccaf77d002a3c1ba3be84f6c3c4c0299acc7f9bb45c6175"
+    },
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/meta/UET_PARENT_STATIC_REFERENCE_AUDIT.md",
+      "role": "evidence",
+      "sha256": "ec44dd5c50475d401a2f7828aae13b12f45154ab4474b30a42344aac8ba78b22"
+    },
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/Research_T13_Parent_Static_Reference_Audit.py",
+      "role": "code",
+      "sha256": "4deb7fbc6188996c480b14cebdc84cbfbda51ddce56328a6133b322602c86154"
+    },
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/calculation_contracts/parent_static_reference_audit.json",
+      "role": "evidence",
+      "sha256": "20385f0f068e36d1fe5e61ce3c8ccb59d25e2926f53db04d1adb44ca18bb8799"
+    },
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/t13_parent_static_reference_audit.json",
+      "role": "evidence",
+      "sha256": "df172ab9ec3dc602bd87a43b9751fdc5598764d342f5f80a9fc8601ccc880b28"
+    },
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/meta/schemas/calculation_contract_v1.schema.json",
+      "role": "evidence",
+      "sha256": "ec556052d755908a2ec7b3ec10b411839f4f0bee549fd902fb1f915f8475ebc3"
+    },
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/topics/For Work/30_Calculation_and_Observation_Completeness_Standard.md",
+      "role": "evidence",
+      "sha256": "8fec4618c5e21c975c62b10902d969609808ab2c98e6c004a5c0ac9596c6f762"
+    },
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/topics/For Work/32_Theory_Development_and_Research_Sequencing_Standard.md",
+      "role": "evidence",
+      "sha256": "e796ba85860736e47bd14977923ab14ffde920c1715617d93725aca12788f3c2"
+    },
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/scripts/audit/audit_calculation_completeness.py",
+      "role": "code",
+      "sha256": "b406d31add9834d2cd1d9f3bb8d42724d26c390413710419313dd85cba7121ca"
+    }
+  ],
+  "model": {
+    "approximation": "Harmonic covariance exact only for quadratic comparator. Method A uses uniform Taylor remainder/tail; method B retains finite-ball integration-by-parts surface terms and radial moment bounds. Quantum inequality applies only to harmonic comparator, not anharmonic quantum parent.",
+    "assumptions": "Unchanged O/P/Q Hamiltonian, fixed alternating spin labels, actual stationary point and local certificates imported by identity. h=(1/sqrt5,0,0), target central variance under each distribution, all3 internal pairs. No detector, bath or thermalization assertion.",
+    "drive_environment": "No new drive/environment/receiver. Classical and quantum harmonic ensembles are separately declared references at theta>0, not an implemented preparation or bath law.",
+    "formula_ids": [
+      "docs/meta/UET_PHI_VARIANCE_STATIC_ADMISSIBILITY.md#observable-and-covariance",
+      "docs/meta/UET_PHI_VARIANCE_STATIC_ADMISSIBILITY.md#classical-variance-bounds",
+      "docs/meta/UET_PHI_VARIANCE_STATIC_ADMISSIBILITY.md#quantum-and-scales"
+    ],
+    "initial_boundary": "CM canonical pair removed as before, free open chain. Static normalized restricted Boltzmann measure on a positive-gap ball about true root; restriction is not a new wall or invariant preparation. No spin-sector annealing.",
+    "parameters": "All O/P/Q physical controls unchanged. Only six radii already certified by Q; no root/radius/temperature/material sweep. theta,chi>0 and epsilon_cl,epsilon_q in(0,1) remain symbolic. At fixed physical system chi is T-independent. Inertia/mobility not inferred from static variance. Existing q interval helpers may be imported as pure arithmetic only; never Q.calculate/main or searches."
+  },
+  "next_action": "The two prescribed variance bounds and separate harmonic quantum/scale frontier are constructed. Before physical admission, supply independently supported mu,dref,Jref and observable error/preparation policy. A quantum-parent comparison requires a separate state/operator/anharmonic bound. Stop here; no automatic next wave/publication.",
+  "observation": {
+    "backaction": "No physical measurement interaction modeled. Mathematical readout and integration/restriction do not add force, noise or backaction.",
+    "carrier": "NOT_APPLICABLE: no signal transport.",
+    "corrections": [],
+    "frame": "Same one-dimensional CM rest frame and orthonormal internal length basis; inherited root/stiffness uncertainty retained, old gap mass metric and canonical normalization unchanged.",
+    "generated_trace": "No time trace, detector record or dissipation/entropy-production history; variance is a distribution functional.",
+    "observer_state": "NOT_APPLICABLE: no experimental detector or readout uncertainty assumed zero.",
+    "product_level": "FORMAL conditional static observable and comparator bounds, not physical-parent admission.",
+    "readout": "X=Phi-Phi_star=h^T y, y=(q-qstar)/dref, h=(1/sqrt5,0,0). Target Var(X)=E[X^2]-E[X]^2. Endpoint readout used only as a nonidentity control with hidden u2 contribution.",
+    "source_state": "Same frozen alternating spins and three internal canonical mechanical pairs. Phi/Pi/gaps/C/endpoint are coordinate/statistic views.",
+    "system_partition": {
+      "accounting_component_id": "joint-state",
+      "boundary": "Frozen alternating labels plus three old internal mechanical canonical pairs; no added bath, CM mode or detector.",
+      "couplings": [
+        {
+          "component_id": "joint-state",
+          "id": "spin-force",
+          "kind": "INTERNAL",
+          "map": "Unchanged frozen-sector Morse/exchange potential with all mixed stiffness retained.",
+          "source": "spins",
+          "target": "chain"
+        }
+      ],
+      "no_detector_reason": "Only a mathematical ensemble observable, no detection claim.",
+      "observables": [],
+      "role_mode": "RELATIONAL",
+      "systems": [
+        {
+          "id": "spins",
+          "state": "Frozen alternating labels",
+          "state_accounting": {
+            "kind": "INDEPENDENT",
+            "owner_ids": [],
+            "rule": "Two global-flip-equivalent preparations, not annealed transition law.",
+            "state_ids": [
+              "vref.spins"
+            ]
+          }
+        },
+        {
+          "id": "chain",
+          "state": "Three old internal canonical pairs",
+          "state_accounting": {
+            "kind": "INDEPENDENT",
+            "owner_ids": [],
+            "rule": "No extra Phi or hidden-mode copy.",
+            "state_ids": [
+              "vref.q",
+              "vref.p"
+            ]
+          }
+        },
+        {
+          "id": "views",
+          "state": "Phi,Pi,C,gaps,endpoint,variance",
+          "state_accounting": {
+            "kind": "VIEW",
+            "owner_ids": [
+              "spins",
+              "chain"
+            ],
+            "rule": "Coordinates/statistics/distribution functional, not added physical substance or detector.",
+            "state_ids": []
+          }
+        },
+        {
+          "id": "joint",
+          "state": "Labels and mechanics aggregate",
+          "state_accounting": {
+            "kind": "AGGREGATE",
+            "owner_ids": [
+              "spins",
+              "chain"
+            ],
+            "rule": "One energy law; classical/quantum harmonic comparators are alternatives, not additional simultaneous systems.",
+            "state_ids": []
+          }
+        }
+      ]
+    },
+    "time_convention": "Static only; theta,chi dimensionless via old E_star/t_star. No rates, trajectory, lifetime or cooling process simulated.",
+    "trace_scope": "static_distribution_observable",
+    "trace_used_as_complete_state": false
+  },
+  "output": {
+    "accuracy": "Exact analytic/symbolic derivation and rational source-coefficient enclosures. Numerical evaluations without a certificate are diagnostic only. Error budgets remain parameters in (0,1), no selected physical threshold or global optimum claim.",
+    "claim_intent": "FORMAL_RESULT",
+    "domain": "Same frozen alternating N4 open parent/reference certified in Q, six inherited curvature radii dref/32..dref/1024. Restricted classical Gibbs measure defined locally, not global conditioning. Separate isolated quadratic quantum reference. No other spin search, material, bath or dynamics.",
+    "quantity": "Phi variance coefficient enclosures, two classical variance bounds, separate harmonic quantum bound, and symbolic scale-admissibility inequalities",
+    "unit": "dimensionless Phi variance; theta=kBT/Jref; chi=hbar/(dref*sqrt(mu*Jref)); physical scales kg,m,J,K"
+  },
+  "profile": "FORMAL",
+  "question": "Under which variance-specific bounds and conditional physical-scale relations can the unchanged Q alternating-spin local parent be approximated by the harmonic Phi variance, without conflating classical-parent accuracy and harmonic quantum correction?",
+  "review": {
+    "rationale": "Observable-specific formal classical restricted-parent bounds and a separate harmonic quantum comparator. No material, chosen physical error policy, quantum-parent correspondence or preparation/lifetime acceptance.",
+    "reviewer": "agent:phi-variance-admissibility (construction and adversarial self-review, not independent specialist)",
+    "status": "INCOMPLETE"
+  },
+  "schema_version": "uet-calculation-contract-v1"
+}

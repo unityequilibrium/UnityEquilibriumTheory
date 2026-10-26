@@ -1,3 +1,96 @@
+## 2026-10-26 - BaTiO3 clean-main publication review packet (not published)
+
+- Wave: provenance/dependency packaging only, on public main6da62c33f6e61311990f4588b44c7737f089710e,
+  branch codex/research/batio3-publication-package. Imported62 required research
+  files, plus4 packaging/review files and2 log paths;68files total. Other local
+  commits and unrelated dirty work excluded. The three explicitly marked local
+  working-copy dependencies require author review before any publication.
+- Resolved the five divergent-artifact boundaries by exact historical git_blob
+  pins already reachable from public main. Current Core/Topic11 artifacts and
+  all45 matching current inputs remain unchanged. No Core equations/API/defaults/
+  thresholds/README/gates edit, scientific rerun, root search or new physical claim.
+- Changed only12 contracts' identities/reference hashes and11 artifacts' four
+  provenance fields. Frozen hashes confirm all scientific payloads and contract
+  model/boundary/outcome/error-budget semantics unchanged;39 immutable research
+  files retain source hashes. Review INCOMPLETE and diagnostic/formal scopes kept.
+- Actually ran: BaTiO3 check24groups/21negative controls,28regression tests;
+  metadata-only packaging check and11new packaging regression tests (39total).
+  Full and explicit68path completeness:27contracts/132routes/0errors;10missing
+  baseline paths were already absent on main, none introduced by this package.
+- Link/privacy review:268relative links,252resolved;16historical references
+  to four excluded note/ledger files remain declared in UET_BATIO3_PUBLICATION_REVIEW.md.
+  No missing Research-module imports or credential-pattern flags. Historical
+  access gaps are not programmatic inputs; do not claim complete history access.
+- Blocker: public-lineage packaging for this diagnostic is prepared for author
+  file-list review, not approved for push. Required CI/full old regression and
+  Pages build have not run. Scientific controller remains physical-parent-preparation
+  with quantum-parent-correspondence separate; no physical validation/promotion.
+- Next: author reviews the68-file list,three working-copy dependencies and
+  declared historical gaps. Only then seek publication approval; no push/PR/merge
+  performed during this preparation. Original worktree and463old statuses preserved.
+
+## 2026-10-26 - BaTiO3 B1-B3: static potential and measurement correspondence
+
+- Scope/area: research-core, secondary result-artifacts. Completed the approved
+  bulk [001]/Pt/electric-field diagnostic on codex/research/batio3-static-correspondence,
+  baseline3d42f606ea27af1ae0d2215b183c537073d09bd1. New Thai report
+  UET_BATIO3_STATIC_CORRESPONDENCE_AUDIT.md and one source-input/contract/
+  producer/tests/artifact package; no old scientific producer or Core change.
+- New result: the old zero-source,zero-reference static Phi elimination at
+  a_Phi>0 has no C^6 term, while the admitted Wang2006 fitted point polynomial
+  has nonzero P^6. Exact polynomial identification is DIFFERENT under the
+  declared linear dictionary/ensemble premises. Unknown fit uncertainty and
+  same-specimen joint/mechanical mapping prevent physical material rejection.
+  Relaxed negative quartic is not a contradiction of positive bare b_C;
+  electrostriction cannot be counted again or identified with g by name.
+- Observation result: LCR10kHz under bias is a finite-frequency dielectric
+  channel, not signed P/strain/Pi or DC gain by default. Its even channel alone
+  does not invert the signed state; this is not an all-protocol observability
+  no-go. Biased phases do not certify zero-drive write-release memory. Force-port
+  work remains distinct from the old normalized injection ledger.
+- Actually ran:28/28 regression tests;24 symbolic/unit groups and21 negative
+  controls. Explicit own-artifact emit followed by read-only --check; artifact
+  bytes unchanged by check.22 source/config/code/contract identities matched;
+  PHYSICAL_COMPARISON/DIAGNOSTIC,review INCOMPLETE,physical_acceptance false.
+  Full read-only completeness and explicit eight-path check:27contracts,
+  132discovered routes,0errors;legacy101/unreviewed3734 remain unchanged.
+- Reviewed13 local links/anchors,5 consistent tables,11 paired display equations,
+  6 inline pairs,source versions/units and privacy. Original Wang/Li tables
+  visually checked; temporary PDFs/images excluded. Source-subset original
+  filename metadata does not invent an upstream Content-Disposition name.
+- Preservation check:106 canonical identity hashes unchanged (binary .src
+  compared as raw bytes per identity helper);284 unrelated tracked raw hashes
+  unchanged; old Topic-log suffix1192782bytes retained byte-for-byte. Only the
+  new log prefix is eligible for this commit; pre-existing578/79 diff excluded.
+- Blocker narrowed: scales alone cannot close the native-potential/ensemble/
+  dielectric-readout bridge. Current controller remains physical-parent-preparation;
+  quantum-parent-correspondence stays separate. Next prerequisite is one
+  same-specimen mechanical-boundary/joint-bare-potential/calibrated-readout
+  packet, not a new term,fit,material,kinetic law or experiment.
+- Claim/publication boundary: no full physical realization,accuracy percentage,
+  independent validation,learning or UET novelty claim. Safe extracted facts
+  and original analysis only. Scoped local commit at this checkpoint;
+  no push/PR/merge/publication or automatic next research round.
+
+## 2026-10-26 - BaTiO3 B0: source scope and immutable baseline
+
+- Scope: approved bulk-electric-field BaTiO3 physical correspondence diagnostic,
+  not a new model/material fit. Baseline3d42f606ea27af1ae0d2215b183c537073d09bd1,
+  new branch codex/research/batio3-static-correspondence.463 old statuses,
+  empty index and old Topic-log578/79 preserved.
+- Completed source packet: Wang2006v1 canonical specimen/LCR/Table I;
+  Li2005 author PDF; Wang2007v1 follow-up; Jiang2016v4 ensemble context.
+  Publisher endpoints failed for Li/Wang2007; primary author/arXiv copies read.
+  Wang/Li table pages rendered and visually checked; PDFs outside repo only.
+- New extracted Data subset keeps nominal/source-fit origin,units,contexts,
+  access hashes and UNKNOWN uncertainties. No source merge,article copy,fit,
+  digitization or old producer. Eleven prior contracts identity-checked,
+  0errors;106 normalized hashes/284 unrelated raw hashes locked.
+- Source-reading section complete, not physical admission. Current controller
+  remains physical-parent-preparation; quantum-parent-correspondence separate.
+  Next within this approved wave: conditional witness/readout checks and
+  diagnostic package verification. No new equation or automatic experiment.
+
 <!-- standards-adoption-w9-20261019:start -->
 ## 2026-10-19 - W9 finite research-return admission decision
 

@@ -1,0 +1,401 @@
+{
+  "analytic_dependencies": [
+    "Canonical one-form and inverse-transpose momentum map preserve Liouville measure.",
+    "ln(2)>1/2 certificates prove positive hidden Hessians at the one locked control; no float tolerance.",
+    "Finite Gaussian integration plus conditional entropy chain gives F,U,S and mean force.",
+    "Collision tube, not merely a zero-measure line, excludes global parent equilibrium.",
+    "Local Taylor remainder and Markov Gaussian tail bound control clipped-parent value error only when prerequisites hold."
+  ],
+  "checks": {
+    "Gaussian_shift_modes": {
+      "Gaussian_integrals_match_determinant": true,
+      "determinant_under_hidden_orthogonal_rotation": true,
+      "hidden_quadratic_energy": true,
+      "mode_product_same_measure": true,
+      "square_completion_with_linear_shift": true
+    },
+    "conservative_energy": {
+      "Hamiltonian_energy_balance_frozen_spins": true,
+      "Phi_velocity_is_canonical": true
+    },
+    "coordinates_inertia_measure": {
+      "Phi_observation_operator": true,
+      "basis_has_no_affine_copy": true,
+      "basis_has_no_translation": true,
+      "basis_orthonormal": true,
+      "canonical_one_form": true,
+      "coordinate_inverse": true,
+      "end_readout_contains_hidden_mode": true,
+      "kinetic_from_atoms": true,
+      "normalized_inertia": true,
+      "phase_space_Jacobian": true,
+      "physical_affine_inertia": true,
+      "physical_p_equals_EtP": true,
+      "u1_does_not_change_end_readout": true,
+      "velocity_measure_equals_canonical_pushforward": true
+    },
+    "force_entropy_dictionary": {
+      "Maxwell_force_entropy": true,
+      "effective_and_determinant_force": true,
+      "mean_microscopic_force": true
+    },
+    "general_N_inertia_sum": {
+      "sum": true
+    },
+    "local_remainder_tail_identities": {
+      "Gaussian_tail_value_log": true,
+      "Morse_third_derivative": true,
+      "exchange_third_derivative": true,
+      "local_gap_factor": true
+    },
+    "parent_source_derivative_link": {
+      "K_00": true,
+      "K_01": true,
+      "K_10": true,
+      "K_11": true,
+      "Kphi_00": true,
+      "Kphi_01": true,
+      "Kphi_10": true,
+      "Kphi_11": true,
+      "V0": true,
+      "Vphi": true,
+      "b_0": true,
+      "b_1": true,
+      "bphi_0": true,
+      "bphi_1": true
+    },
+    "spin_vibration_mixture": {
+      "fixed_state_entropy_chain": true,
+      "internal_energy_F_plus_TS": true,
+      "probability_normalization": true,
+      "retained_not_integrated_again": true
+    },
+    "unconfined_parent_collision": {
+      "attractive_collision_leading_term": true,
+      "center_of_mass_removed": true,
+      "fixed_affine_Phi": true
+    }
+  },
+  "completed_rounds": [
+    "O0",
+    "O1",
+    "O2",
+    "O3",
+    "O4"
+  ],
+  "contract_id": "T13_LATTICE_MECHANICAL_STATE_CONSTRUCTION_FORMAL_V1",
+  "contract_review_status": "INCOMPLETE",
+  "contract_sha256": "d5c109c4133318335f5539cc7a907102874edfe86c81155790bedf5264dc7e5d",
+  "decisions": {
+    "Omega_correspondence": "PARTIAL/DIFFERENT: no removal of linear terms, periodic NN versus squared-sum difference preserved; no even-quartic identity.",
+    "coarse_kinetics": "NOT_CLOSED: affine-hidden stiffness couples retained response to eliminated state; no damping/noise/spin rates derived.",
+    "coordinates": "EXACT internal canonical coordinate decomposition; Phi is not end-length alone.",
+    "inertia": "EXACT conditional scale map; Mphys=5*mu*dref^2*epsstar^2, mPhi=5*epsstar^2/4 at N=4.",
+    "material_quantum_regime": "UNRESOLVED: classical/local window, actual parameters and independent specialist review not established.",
+    "parent_global_equilibrium": "NOT_ADMITTED: collision witness makes unconfined parent partition divergent; source small-strain law is not globally extended.",
+    "parent_local_approximation": "CONDITIONAL: Taylor and tail bounds require a local domain and eta<1; no universal/material acceptance.",
+    "quadratic_thermodynamics": "EXACT for the declared SPD conditional quadratic reference; shifted energies and determinants both weight arrangements."
+  },
+  "global_flip_invariant": true,
+  "identities": [
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/meta/UET_LATTICE_MECHANICAL_STATE_CONSTRUCTION.md",
+      "role": "evidence",
+      "sha256": "f272760ad1e00c12d3fd0df2315d16355f60166c97ea19843c327fc39942e659"
+    },
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/Research_T13_Lattice_Mechanical_State_Construction.py",
+      "role": "code",
+      "sha256": "6489e909fcfb6cdbf13f40093d2bb44c5c3b31c2f506945f2e6837041b3a87a3"
+    },
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/test_t13_lattice_mechanical_state_construction.py",
+      "role": "code",
+      "sha256": "4b217dcf86bb3ccf527752537544db0f146842c65a384e2e4e9f8ae4d9936823"
+    },
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/meta/UET_SPIN_STRAIN_CORRESPONDENCE_AUDIT.md",
+      "role": "evidence",
+      "sha256": "21e73506d528b616fb8cd13750facd14a2d33a9886d5aadd0927c580c4aed736"
+    },
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/calculation_contracts/spin_strain_correspondence.json",
+      "role": "evidence",
+      "sha256": "751360256f05754013d5f17369b8769f9e095a54882645e2887174c1bff24c7b"
+    },
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/t13_spin_strain_correspondence.json",
+      "role": "evidence",
+      "sha256": "8c76f1c00ca9d4a96385049d784749bd175e6d87f1c3711a3897ac96249dfae2"
+    },
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/meta/UET_JOINT_STATE_MEASURE_CONSTRUCTION.md",
+      "role": "evidence",
+      "sha256": "f212977ad144349816c8952e3ad75261df9fea05c61dbf3dcc8048cf4913ba0d"
+    },
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/calculation_contracts/joint_state_measure_construction.json",
+      "role": "evidence",
+      "sha256": "966683ce539ee9e090a72300c0a3e7f42bbfa01a795bfbe444de621579ac5eb3"
+    },
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/t13_joint_state_measure_construction.json",
+      "role": "evidence",
+      "sha256": "2a31fb6f9d32abf94942b52bd9b43e5a68decb7a3ebb45d2f062722906e2cdff"
+    },
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/meta/UET_THERMODYNAMIC_FOUNDATIONS_REVIEW.md",
+      "role": "evidence",
+      "sha256": "c1cf629e5093d741a409d6c645fcd04f9b35bb64f1d29b7627f3e6736f6f5f69"
+    },
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/meta/UET_THEORY_ARGUMENT.md",
+      "role": "evidence",
+      "sha256": "d590b084fa85ed1e3133364a8b889b79ad5c3a901e3a8044ed4e00ae3d763d4a"
+    },
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/core/01_contracts/MATTER_SPACE_RESEARCH_SPEC.md",
+      "role": "input",
+      "sha256": "d178f1978c93a09350a4da6ea11153a93fbfb13ad12c9d390846f741ad5db848"
+    },
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/meta/schemas/calculation_contract_v1.schema.json",
+      "role": "config",
+      "sha256": "ec556052d755908a2ec7b3ec10b411839f4f0bee549fd902fb1f915f8475ebc3"
+    },
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/scripts/audit/audit_calculation_completeness.py",
+      "role": "code",
+      "sha256": "b406d31add9834d2cd1d9f3bb8d42724d26c390413710419313dd85cba7121ca"
+    }
+  ],
+  "limitations": [
+    "No full-Phi joint integral, actual material constants or independent validation.",
+    "Reference spin labels have no transition law; no kinetic equilibration proof.",
+    "Conditional classical oscillators are not the paper three-polarization Debye continuum.",
+    "No closure of UET cosmic openness, learning, persistence or physical heat/entropy-production gates."
+  ],
+  "locked_control": {
+    "D_over_Jref": 8,
+    "N": 4,
+    "Phi": 0,
+    "delta": "ln(2)",
+    "dref_over_r0": 1,
+    "epsilon_star": 1,
+    "nu": 2,
+    "temperature_fit": false
+  },
+  "method": {
+    "arithmetic": "exact",
+    "parameter_sweep": false,
+    "random_samples": 0,
+    "sympy": "1.14.0"
+  },
+  "negative_controls": {
+    "Phi_reference_force_deleted": true,
+    "arrangements_assumed_uniform": true,
+    "end_readout_mistaken_for_Phi": true,
+    "flat_velocity_measure_without_Jacobian": true,
+    "half_spin_factor_omitted": true,
+    "linear_shift_discarded": true,
+    "nonSPD_Gaussian_admitted": true,
+    "periodic_bond_silently_added": true,
+    "retained_affine_mode_counted_as_hidden": true,
+    "stiffness_degeneracy_assumed": true,
+    "velocity_mistaken_for_canonical_momentum": true
+  },
+  "new_core_terms": 0,
+  "new_damping_or_noise": false,
+  "old_scientific_verifiers_rerun": false,
+  "physical_acceptance": false,
+  "spin_controls": [
+    {
+      "k": 0,
+      "linear_hidden_force_nonzero": true,
+      "mixed_affine_hidden_stiffness_nonzero": true,
+      "positive_hidden_Hessian": true,
+      "spins": "----"
+    },
+    {
+      "k": 1,
+      "linear_hidden_force_nonzero": true,
+      "mixed_affine_hidden_stiffness_nonzero": true,
+      "positive_hidden_Hessian": true,
+      "spins": "---+"
+    },
+    {
+      "k": 1,
+      "linear_hidden_force_nonzero": true,
+      "mixed_affine_hidden_stiffness_nonzero": true,
+      "positive_hidden_Hessian": true,
+      "spins": "--+-"
+    },
+    {
+      "k": 2,
+      "linear_hidden_force_nonzero": true,
+      "mixed_affine_hidden_stiffness_nonzero": true,
+      "positive_hidden_Hessian": true,
+      "spins": "--++"
+    },
+    {
+      "k": 1,
+      "linear_hidden_force_nonzero": true,
+      "mixed_affine_hidden_stiffness_nonzero": true,
+      "positive_hidden_Hessian": true,
+      "spins": "-+--"
+    },
+    {
+      "k": 2,
+      "linear_hidden_force_nonzero": true,
+      "mixed_affine_hidden_stiffness_nonzero": true,
+      "positive_hidden_Hessian": true,
+      "spins": "-+-+"
+    },
+    {
+      "k": 2,
+      "linear_hidden_force_nonzero": true,
+      "mixed_affine_hidden_stiffness_nonzero": true,
+      "positive_hidden_Hessian": true,
+      "spins": "-++-"
+    },
+    {
+      "k": 3,
+      "linear_hidden_force_nonzero": true,
+      "mixed_affine_hidden_stiffness_nonzero": true,
+      "positive_hidden_Hessian": true,
+      "spins": "-+++"
+    },
+    {
+      "k": 1,
+      "linear_hidden_force_nonzero": true,
+      "mixed_affine_hidden_stiffness_nonzero": true,
+      "positive_hidden_Hessian": true,
+      "spins": "+---"
+    },
+    {
+      "k": 2,
+      "linear_hidden_force_nonzero": true,
+      "mixed_affine_hidden_stiffness_nonzero": true,
+      "positive_hidden_Hessian": true,
+      "spins": "+--+"
+    },
+    {
+      "k": 2,
+      "linear_hidden_force_nonzero": true,
+      "mixed_affine_hidden_stiffness_nonzero": true,
+      "positive_hidden_Hessian": true,
+      "spins": "+-+-"
+    },
+    {
+      "k": 3,
+      "linear_hidden_force_nonzero": true,
+      "mixed_affine_hidden_stiffness_nonzero": true,
+      "positive_hidden_Hessian": true,
+      "spins": "+-++"
+    },
+    {
+      "k": 2,
+      "linear_hidden_force_nonzero": true,
+      "mixed_affine_hidden_stiffness_nonzero": true,
+      "positive_hidden_Hessian": true,
+      "spins": "++--"
+    },
+    {
+      "k": 3,
+      "linear_hidden_force_nonzero": true,
+      "mixed_affine_hidden_stiffness_nonzero": true,
+      "positive_hidden_Hessian": true,
+      "spins": "++-+"
+    },
+    {
+      "k": 3,
+      "linear_hidden_force_nonzero": true,
+      "mixed_affine_hidden_stiffness_nonzero": true,
+      "positive_hidden_Hessian": true,
+      "spins": "+++-"
+    },
+    {
+      "k": 4,
+      "linear_hidden_force_nonzero": true,
+      "mixed_affine_hidden_stiffness_nonzero": true,
+      "positive_hidden_Hessian": true,
+      "spins": "++++"
+    }
+  ],
+  "trajectories": 0,
+  "unique_UET_discriminator": false,
+  "witness_same_C": [
+    {
+      "K": [
+        [
+          "-3 + 32*log(2)**2",
+          "0"
+        ],
+        [
+          "0",
+          "3/10 + 54*log(2)**2"
+        ]
+      ],
+      "V0": "-1/4",
+      "b": [
+        "0",
+        "sqrt(5)*(-7 + log(1024))/10"
+      ],
+      "determinant": "-762*log(2)**2/5 - 9/10 + 1728*log(2)**4",
+      "k": 2,
+      "retained_force_at_u0": "1/2 + log(33554432)",
+      "shift_energy_nonzero": true,
+      "spins": "++--"
+    },
+    {
+      "K": [
+        [
+          "3 + 32*log(2)**2",
+          "0"
+        ],
+        [
+          "0",
+          "51/10 + 54*log(2)**2"
+        ]
+      ],
+      "V0": "3/4",
+      "b": [
+        "0",
+        "sqrt(5)*(1 + log(1024))/10"
+      ],
+      "determinant": "153/10 + 1626*log(2)**2/5 + 1728*log(2)**4",
+      "k": 2,
+      "retained_force_at_u0": "-3/2 + log(33554432)",
+      "shift_energy_nonzero": true,
+      "spins": "+-+-"
+    }
+  ]
+}

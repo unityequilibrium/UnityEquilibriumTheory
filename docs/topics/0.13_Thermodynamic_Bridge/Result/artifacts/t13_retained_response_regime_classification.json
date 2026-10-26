@@ -1,0 +1,483 @@
+{
+  "U_reuse": {
+    "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/t13_retained_response_requirement_audit.json",
+    "rerun": false,
+    "response_recovered": true,
+    "scope": "same-Phi signed pair, separate readout and one port at a time; no mixed-protocol extension"
+  },
+  "checks": {
+    "DC_is_Hessian_inverse_with_source_mobilities": true,
+    "U_response_recovered_without_old_producer": true,
+    "admissible_positive_root_equivalence": true,
+    "algebraic_minimum_has_positive_Hessian": true,
+    "alpha_zero_origin_has_local_positive_bound": true,
+    "canonical_homogeneous_rhs": true,
+    "characteristic_denominator_has_tau_factor": true,
+    "coexistence_control_exact_factorization": true,
+    "coexistence_roots_satisfy_original_pair": true,
+    "critical_complete_square": true,
+    "cubic_discriminant_not_used_without_admissibility": true,
+    "exact_regression_write_balance": true,
+    "full_Hessian_determinant_is_2bC_squared_pprime": true,
+    "full_jacobian_from_old_RHS": true,
+    "full_resolvent_equals_eliminated_transfer": true,
+    "full_state_pointwise_energy_ledger": true,
+    "gain_contrast_is_not_only_baseline": true,
+    "independently_integrated_write_balance": true,
+    "negative_Hessian_det_implies_positive_real_pole": true,
+    "nonzero_Hessian_CC_is_2bC_squared": true,
+    "origin_kept_before_dividing_C": true,
+    "positive_Pi_loss_for_nonzero_target": true,
+    "positive_high_branch_energy_not_equal_energy": true,
+    "prescribed_write_satisfies_full_RHS": true,
+    "quadratic_energy_stability_identity": true,
+    "quintic_endpoint_state_rate_acceleration": true,
+    "readouts_are_baseline_derivatives": true,
+    "saddle_node_has_nonzero_cubic_leading_term": true,
+    "signed_pair_symmetry_includes_sources_readouts": true,
+    "source_domain_preserved": true,
+    "source_mu_and_potential_from_same_generator": true,
+    "source_ports_include_tau": true,
+    "static_valley_derivative_not_dynamic_law": true,
+    "stationary_cubic_is_original_Phi_force": true,
+    "two_controls_have_different_classification": true,
+    "write_inputs_and_endpoint_sources": true,
+    "write_path_pointwise_ledger": true,
+    "zero_loss_mode_excluded_when_Hessian_SPD": true,
+    "zero_nonzero_CJC_transfer_difference": true,
+    "zero_target_has_zero_work_loss": true
+  },
+  "classification": {
+    "A": "-alpha + g**2/(2*b)",
+    "B": "a*g/(2*b)",
+    "Hessian_rule": "H_CC=2*b*C^2; det(H)=2*b*C^2*p'(Phi)",
+    "degenerate_boundaries": "leading energy terms, not zero-eigenvalue rejection; alpha=0 origin can be strict nonlinear minimum",
+    "global_rule": "coercive quartic; compare V_high=alpha*Phi_high^2/2+beta*Phi_high^4/4-(g*Phi_high-a)^2/(4*b) with 0; sign decides global minima, not noise lifetime",
+    "nonzero_admissibility": "g>0 requires Phi>0 and C^2=(g*Phi-a)/b>0; g=0 handled separately",
+    "p": "Phi**3*beta - Phi*(-alpha + g**2/(2*b)) + a*g/(2*b)",
+    "rows": [
+      [
+        "g=0,a>=0",
+        "origin strict global min; nonhyperbolic if a=0 or alpha=0"
+      ],
+      [
+        "g=0,a<0",
+        "signed global-minimum pair, Phi=0; alpha=0 gives nonhyperbolic minima"
+      ],
+      [
+        "g>0,a<0",
+        "one positive-Phi root, signed SPD global-minimum pair; origin unstable"
+      ],
+      [
+        "g>0,a=0,A<=0",
+        "origin unique strict global min, degenerate"
+      ],
+      [
+        "g>0,a=0,A>0",
+        "Phi=sqrt(A/beta), signed SPD global minima; origin not minimum"
+      ],
+      [
+        "g>0,a>0; A<=0 or Delta<0",
+        "origin only minimum"
+      ],
+      [
+        "g>0,a>0,A>0,Delta=0",
+        "origin min plus positive double-root pair, not minima (cubic leading term)"
+      ],
+      [
+        "g>0,a>0,A>0,Delta>0",
+        "origin min, smaller-positive-root saddle pair, larger-positive-root SPD minimum pair"
+      ]
+    ]
+  },
+  "comparator": "EQUIVALENT: same quartic generator, mixed gradient/inertial dynamics, sources and readouts as standard nonlinear multistable comparator; no UET-specific constraint added",
+  "contract_id": "T13_RETAINED_RESPONSE_REGIME_CLASSIFICATION_FORMAL_V1",
+  "contract_review_status": "INCOMPLETE",
+  "contract_sha256": "e4b3db5517af703c2ad862be9040e1926db0d3a69a5d9a5159e9cf97374517ea",
+  "exact_controls": {
+    "branches": [
+      {
+        "C_squared": "-sqrt(13)/2 - 7/8",
+        "Phi": "-sqrt(13)/4 - 1/4",
+        "admissible": false,
+        "disposition": "inadmissible",
+        "hessian_det": "-73*sqrt(13)/32 - 247/32"
+      },
+      {
+        "C_squared": "5/8",
+        "Phi": "1/2",
+        "admissible": true,
+        "disposition": "saddle_pair",
+        "hessian_det": "-5/16"
+      },
+      {
+        "C_squared": "-7/8 + sqrt(13)/2",
+        "Phi": "-1/4 + sqrt(13)/4",
+        "admissible": true,
+        "disposition": "strict_minimum_pair",
+        "hessian_det": "-247/32 + 73*sqrt(13)/32"
+      }
+    ],
+    "coexistence": {
+      "A": "1",
+      "B": "3/8",
+      "discriminant_numerator": "13/64",
+      "nonzero_minimum_pairs": 1,
+      "origin_is_strict_minimum": true,
+      "origin_nonhyperbolic": false,
+      "positive_Phi_roots_distinct": 2,
+      "regime": "coexistence",
+      "root_search": false
+    },
+    "coexistence_parameters": {
+      "M_C": 1,
+      "M_Phi": 1,
+      "a": "3/8",
+      "alpha": 1,
+      "b": 1,
+      "beta": 1,
+      "g": 2,
+      "tau": 1
+    },
+    "final_energy_difference": "-83/256 + 13*sqrt(13)/128",
+    "gain_difference": "-92/159 + 1376*sqrt(13)/2067",
+    "high_C_JC_DC_gain": "332/159 + 1376*sqrt(13)/2067",
+    "high_C_squared": "-7/8 + sqrt(13)/2",
+    "high_Phi": "-1/4 + sqrt(13)/4",
+    "high_det": "-247/32 + 73*sqrt(13)/32",
+    "high_h": "29/8 - 3*sqrt(13)/8",
+    "noncoexistence": {
+      "A": "-1/2",
+      "B": "1/2",
+      "discriminant_numerator": "-29/4",
+      "nonzero_minimum_pairs": 0,
+      "origin_is_strict_minimum": true,
+      "origin_nonhyperbolic": false,
+      "positive_Phi_roots_distinct": 0,
+      "regime": "origin_only",
+      "root_search": false
+    },
+    "noncoexistence_parameters": {
+      "M_C": 1,
+      "M_Phi": 1,
+      "a": 1,
+      "alpha": 1,
+      "b": 1,
+      "beta": 1,
+      "g": 1,
+      "tau": 1
+    },
+    "origin_C_JC_DC_gain": "8/3",
+    "saddle_Phi": "1/2",
+    "write_dissipation": "229790000785/197474944128 - 30488096005*sqrt(13)/197474944128",
+    "write_work": "331529842487/394949888256 - 652002937*sqrt(13)/12342184008"
+  },
+  "identities": [
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/meta/UET_RETAINED_RESPONSE_REGIME_CLASSIFICATION.md",
+      "role": "evidence",
+      "sha256": "0ffa1cc3807e8274693ce108f0203935e79a3b14ead1bc7fd6ca2c860c8a076e"
+    },
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/Research_T13_Retained_Response_Regime_Classification.py",
+      "role": "code",
+      "sha256": "7de89f680bace17e4fd6534b255f2f4fb047984774f714ef1c9e414c9f21b4f0"
+    },
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/test_t13_retained_response_regime_classification.py",
+      "role": "code",
+      "sha256": "403a45d8fea218d8d9647bae3d85a756605dc997d0cb63d2f95b0b68d0943449"
+    },
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/core/02_equations/matter_space/uet_matter_space.py",
+      "role": "input",
+      "sha256": "488db6aa26b99856e2eb82a2f46a9857f623f418ef8e537498fa71d5e4f633aa"
+    },
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/core/01_contracts/MATTER_SPACE_RESEARCH_SPEC.md",
+      "role": "input",
+      "sha256": "d178f1978c93a09350a4da6ea11153a93fbfb13ad12c9d390846f741ad5db848"
+    },
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/meta/UET_THEORY_ARGUMENT.md",
+      "role": "evidence",
+      "sha256": "d590b084fa85ed1e3133364a8b889b79ad5c3a901e3a8044ed4e00ae3d763d4a"
+    },
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/meta/UET_CORE_PROPOSITION_PREMISE_REVIEW.md",
+      "role": "evidence",
+      "sha256": "e85924a8cbd1bffce1384fa6d8c147523bd18b029c9f00d540f1592186a04635"
+    },
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/calculation_contracts/retained_response_requirement_audit.json",
+      "role": "evidence",
+      "sha256": "c1bb5e1c10219619da3bfbac6555358dcaee3bfe2ee278f0200257ae5627c45b"
+    },
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/t13_retained_response_requirement_audit.json",
+      "role": "evidence",
+      "sha256": "86488490c553e98c52169b42c839459afa18c300dd3bad27e7f479bee266f68f"
+    },
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/Research_T13_Retained_Response_Requirement_Audit.py",
+      "role": "code",
+      "sha256": "ece85e04207ea8dda8da7e57d63ecfd2e61554792dc2eeb11fc64824531a3014"
+    },
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/meta/UET_PHYSICAL_PLATFORM_CORRESPONDENCE_SCREEN.md",
+      "role": "evidence",
+      "sha256": "59165c429de0c25e2277a7ff673e0f812da5c7b442eb09642be9c659d2b292fa"
+    },
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/t13_physical_platform_correspondence_screen.json",
+      "role": "evidence",
+      "sha256": "56eed42bfa4d792b8eb4d495856ba9008178e116a909d97d0859d7559480a4c2"
+    },
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/topics/For Work/17_Formula_Audit_Standard.md",
+      "role": "evidence",
+      "sha256": "e83007810b110723f3ebf6fec80120e877c895d2855ce01bba64a95499879e08"
+    },
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/topics/For Work/18_Research_Hardening_Workflow.md",
+      "role": "evidence",
+      "sha256": "2bbefc7a1a7d4f4cb692c770e5022db0f40d648978f46a83e58ea7dcce80c843"
+    },
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/topics/For Work/30_Calculation_and_Observation_Completeness_Standard.md",
+      "role": "evidence",
+      "sha256": "8fec4618c5e21c975c62b10902d969609808ab2c98e6c004a5c0ac9596c6f762"
+    },
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/topics/For Work/32_Theory_Development_and_Research_Sequencing_Standard.md",
+      "role": "evidence",
+      "sha256": "e796ba85860736e47bd14977923ab14ffde920c1715617d93725aca12788f3c2"
+    },
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/meta/schemas/calculation_contract_v1.schema.json",
+      "role": "config",
+      "sha256": "ec556052d755908a2ec7b3ec10b411839f4f0bee549fd902fb1f915f8475ebc3"
+    },
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/scripts/audit/audit_calculation_completeness.py",
+      "role": "code",
+      "sha256": "b406d31add9834d2cd1d9f3bb8d42724d26c390413710419313dd85cba7121ca"
+    }
+  ],
+  "negative_controls": {
+    "absolute_C_derivative_at_origin_scope_guard": true,
+    "actual_history_coefficient_retuning_rejected": true,
+    "baseline_difference_not_a_gain_proof": true,
+    "baseline_subtracted_scope_guard": true,
+    "higher_local_minimum_is_not_global": true,
+    "instantaneous_Phi_elimination_changes_response": true,
+    "lifetime_claim_scope_guard": true,
+    "missing_source_mobility_changes_DC": true,
+    "missing_source_tau_changes_resolvent": true,
+    "negative_a_space_rejected": true,
+    "negative_square_root_not_admitted": true,
+    "new_UET_discriminator_scope_guard": true,
+    "omitted_C_squared_readout_factor_changes_transfer": true,
+    "origin_absolute_readout_one_sided_derivatives_disagree": true,
+    "origin_squared_readout_derivative_is_zero": true,
+    "physical_acceptance_scope_guard": true,
+    "ports_applied_separately_scope_guard": true,
+    "quintic_is_not_infinitely_smooth_after_extension": true,
+    "same_coefficients_for_histories_scope_guard": true,
+    "static_elimination_as_dynamics_scope_guard": true,
+    "static_response_cannot_replace_frequency_response": true,
+    "topology_learning_scope_guard": true,
+    "wrong_JPhi_work_normalization_breaks_ledger": true,
+    "zero_gain_relative_error_scope_guard": true
+  },
+  "new_UET_discriminator": false,
+  "new_model_terms": 0,
+  "next_controller": "physical-parent-preparation unchanged; quantum-parent-correspondence remains separate. A sourced restriction/readout/preparation that distinguishes the existing comparator is needed before a new physical or structural-learning claim; no automatic next wave.",
+  "numerical_roots": 0,
+  "old_producers_rerun": false,
+  "parameter_sweeps": 0,
+  "physical_acceptance": false,
+  "physics_gates_changed": false,
+  "protocol": {
+    "absolute_C_derivative_at_origin": false,
+    "baseline_subtracted": true,
+    "lifetime_claim": false,
+    "new_UET_discriminator": false,
+    "physical_acceptance": false,
+    "ports_applied_separately": true,
+    "primary_readout": "C",
+    "response": "infinitesimal_at_SPD_minimum",
+    "same_coefficients_for_histories": true,
+    "static_elimination_as_dynamics": false,
+    "topology_learning": false,
+    "write_clock": "normalized; T_w>0, regression T_w=1 not one second",
+    "zero_gain_relative_error": false
+  },
+  "response": {
+    "B": [
+      [
+        "1",
+        "0"
+      ],
+      [
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "1/tau"
+      ]
+    ],
+    "D": "-M_C*M_Phi*v**2 + (M_C*k + z)*(M_Phi*h + tau*z**2 + z)",
+    "DC_rows_C_Phi": [
+      [
+        "M_Phi*h/(M_C*M_Phi*h*k - M_C*M_Phi*v**2)",
+        "M_C*v/(M_C*M_Phi*h*k - M_C*M_Phi*v**2)"
+      ],
+      [
+        "M_Phi*v/(M_C*M_Phi*h*k - M_C*M_Phi*v**2)",
+        "M_C*k/(M_C*M_Phi*h*k - M_C*M_Phi*v**2)"
+      ]
+    ],
+    "K": [
+      [
+        "1",
+        "0",
+        "0"
+      ],
+      [
+        "2*C_star",
+        "0",
+        "0"
+      ],
+      [
+        "0",
+        "1",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "1"
+      ]
+    ],
+    "L": [
+      [
+        "-M_C*k",
+        "M_C*v",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "1"
+      ],
+      [
+        "M_Phi*v/tau",
+        "-M_Phi*h/tau",
+        "-1/tau"
+      ]
+    ],
+    "absolute_readout": "abs(C) is not differentiable at origin; modulus of transfer is a separate comparison",
+    "coexistence_comparison_domain": "a>0,alpha>0,A>0,Delta>0 for origin and high branch both SPD; C/J_Phi DC zero versus nonzero; C/J_C DC differs iff a*h_high!=det(H_high), no universal ordering/frequency claim",
+    "denominator_domain": "det(zI-L)=D/tau; no poles Re(z)>=0 for k>0,kh-v^2>0 by quadratic energy and full-rank zero-loss witness; not applied to degenerate edges",
+    "nonzero_cross_gain": "M_C*g*C_star/D(z); DC=g*C_star/[M_Phi*det(H)]",
+    "origin_cross_gain": 0,
+    "transfer": [
+      [
+        "(M_Phi*h + tau*z**2 + z)/(-M_C*M_Phi*v**2 + (M_C*k + z)*(M_Phi*h + tau*z**2 + z))",
+        "M_C*v/(-M_C*M_Phi*v**2 + (M_C*k + z)*(M_Phi*h + tau*z**2 + z))"
+      ],
+      [
+        "2*C_star*(M_Phi*h + tau*z**2 + z)/(-M_C*M_Phi*v**2 + (M_C*k + z)*(M_Phi*h + tau*z**2 + z))",
+        "2*C_star*M_C*v/(-M_C*M_Phi*v**2 + (M_C*k + z)*(M_Phi*h + tau*z**2 + z))"
+      ],
+      [
+        "M_Phi*v/(-M_C*M_Phi*v**2 + (M_C*k + z)*(M_Phi*h + tau*z**2 + z))",
+        "(M_C*k + z)/(-M_C*M_Phi*v**2 + (M_C*k + z)*(M_Phi*h + tau*z**2 + z))"
+      ],
+      [
+        "M_Phi*v*z/(-M_C*M_Phi*v**2 + (M_C*k + z)*(M_Phi*h + tau*z**2 + z))",
+        "z*(M_C*k + z)/(-M_C*M_Phi*v**2 + (M_C*k + z)*(M_Phi*h + tau*z**2 + z))"
+      ]
+    ]
+  },
+  "source_baseline_commit": "d6ddc910313028f63828a8bf02897480822c10e3",
+  "source_domain": {
+    "a_matter": "finite real; no sign restriction",
+    "homogeneous_gradients": 0,
+    "nonnegative": [
+      "a_space",
+      "coupling_g"
+    ],
+    "positive": [
+      "b_matter",
+      "kappa_matter",
+      "mobility_matter",
+      "b_space",
+      "kappa_space",
+      "mobility_space",
+      "tau_space",
+      "stability_safety",
+      "ledger_tolerance"
+    ]
+  },
+  "structural_topology_learning_proved": false,
+  "sympy_version": "1.14.0",
+  "trajectories": 0,
+  "write": {
+    "J_C_over_Ci": "M_C*(X*b*(6*u**5 - 15*u**4 + 10*u**3)**3 - Y*g*(6*u**5 - 15*u**4 + 10*u**3)**2 + a*(6*u**5 - 15*u**4 + 10*u**3)) + (30*u**4 - 60*u**3 + 30*u**2)/T_w",
+    "J_Phi": "M_Phi*(-X*g*(6*u**5 - 15*u**4 + 10*u**3)**2/2 + Y**3*beta*(6*u**5 - 15*u**4 + 10*u**3)**3 + Y*alpha*(6*u**5 - 15*u**4 + 10*u**3)) + Y*(30*u**4 - 60*u**3 + 30*u**2)/T_w + 60*Y*tau*u*(2*u**2 - 3*u + 1)/T_w**2",
+    "S": "6*u**5 - 15*u**4 + 10*u**3",
+    "common_start": [
+      0,
+      0,
+      0
+    ],
+    "integrated_dissipation": "(10472208063*M_C*M_Phi*T_w**2*X**3*b**2 - 22412586026*M_C*M_Phi*T_w**2*X**2*Y*b*g + 24350020926*M_C*M_Phi*T_w**2*X**2*a*b + 12175010463*M_C*M_Phi*T_w**2*X*Y**2*g**2 - 27088689576*M_C*M_Phi*T_w**2*X*Y*a*g + 15714912863*M_C*M_Phi*T_w**2*X*a**2 + 57302997180*Y**2)/(40112098026*M_Phi*T_w)",
+    "integrated_work": "(20944416126*M_C*M_Phi*T_w**2*X**3*b**2 - 44825172052*M_C*M_Phi*T_w**2*X**2*Y*b*g + 48700041852*M_C*M_Phi*T_w**2*X**2*a*b + 24350020926*M_C*M_Phi*T_w**2*X*Y**2*g**2 - 54177379152*M_C*M_Phi*T_w**2*X*Y*a*g + 31429825726*M_C*M_Phi*T_w**2*X*a**2 + 20056049013*M_Phi*T_w*X**2*b - 40112098026*M_Phi*T_w*X*Y*g + 40112098026*M_Phi*T_w*X*a + 20056049013*M_Phi*T_w*Y**4*beta + 40112098026*M_Phi*T_w*Y**2*alpha + 114605994360*Y**2)/(80224196052*M_Phi*T_w)",
+    "regression_zero_target": {
+      "dissipation": 0,
+      "final_energy": 0,
+      "work": 0
+    },
+    "scope": "finite exact polynomial reachability under both old write ports; sources continuous to zero at stationary endpoints, not C-infinity; no apparatus/preparation/lifetime claim",
+    "unequal_energy_and_cost_reported": true
+  }
+}
