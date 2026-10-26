@@ -8,6 +8,9 @@
 ค่า LOCAL_REVIEW_ONLY ใน source manifest เป็น snapshot ขอบเขตตอนจัดชุด
 ไม่แก้ snapshot/hash ย้อนหลังเพื่อแทนสถานะการอนุมัติปัจจุบัน
 
+เผยแพร่สาขาแล้วและเปิด [PR #41](https://github.com/unityequilibrium/UnityEquilibriumTheory/pull/41)
+ตามขอบเขต68ไฟล์ ขณะบันทึกนี้ required CI ยัง pending; การมี PR ไม่ใช่การยืนยันว่า merge แล้ว
+
 ## สรุปการตัดสินใจ
 
 ชุดนี้จัดบน `main` ที่คอมมิต `6da62c33f6e61311990f4588b44c7737f089710e`
