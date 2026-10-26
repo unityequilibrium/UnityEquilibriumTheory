@@ -85,7 +85,7 @@
   ],
   "contract_id": "T13_LATTICE_MECHANICAL_STATE_CONSTRUCTION_FORMAL_V1",
   "contract_review_status": "INCOMPLETE",
-  "contract_sha256": "123e76779f6e5ee87c86b142b6052fdda11333319db3a461f063cbf78995d9c8",
+  "contract_sha256": "d5c109c4133318335f5539cc7a907102874edfe86c81155790bedf5264dc7e5d",
   "decisions": {
     "Omega_correspondence": "PARTIAL/DIFFERENT: no removal of linear terms, periodic NN versus squared-sum difference preserved; no even-quartic identity.",
     "coarse_kinetics": "NOT_CLOSED: affine-hidden stiffness couples retained response to eliminated state; no damping/noise/spin rates derived.",
@@ -131,14 +131,14 @@
       "kind": "working_file",
       "path": "docs/topics/0.13_Thermodynamic_Bridge/calculation_contracts/spin_strain_correspondence.json",
       "role": "evidence",
-      "sha256": "6284b67cf439a29b1dcd346b100e1a1aad442d42edcfe2a3ea80e79b8f6461bc"
+      "sha256": "751360256f05754013d5f17369b8769f9e095a54882645e2887174c1bff24c7b"
     },
     {
       "availability": "REQUIRED",
       "kind": "working_file",
       "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/t13_spin_strain_correspondence.json",
       "role": "evidence",
-      "sha256": "3fbb4fc5caf2d60fccbed2b7d56bac71a749c322d9b83b67d45f1f46a02ab93f"
+      "sha256": "8c76f1c00ca9d4a96385049d784749bd175e6d87f1c3711a3897ac96249dfae2"
     },
     {
       "availability": "REQUIRED",
@@ -152,14 +152,14 @@
       "kind": "working_file",
       "path": "docs/topics/0.13_Thermodynamic_Bridge/calculation_contracts/joint_state_measure_construction.json",
       "role": "evidence",
-      "sha256": "7eb2903da30d2dff6e85fa2b1c58c982fafd0ef44087520a18def944a88deb13"
+      "sha256": "966683ce539ee9e090a72300c0a3e7f42bbfa01a795bfbe444de621579ac5eb3"
     },
     {
       "availability": "REQUIRED",
       "kind": "working_file",
       "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/t13_joint_state_measure_construction.json",
       "role": "evidence",
-      "sha256": "7ee986e78fb3032d02c125c54c93f758b21e31cfc593e2895b8616d5cca2fd98"
+      "sha256": "2a31fb6f9d32abf94942b52bd9b43e5a68decb7a3ebb45d2f062722906e2cdff"
     },
     {
       "availability": "REQUIRED",

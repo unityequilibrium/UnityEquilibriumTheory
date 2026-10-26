@@ -1,6 +1,7 @@
 """Metadata-only BaTiO3 dependency packaging; never executes research producers.
 
---rebind changes only contract identities / the four artifact provenance fields.
+--rebind changes only declared provenance; one legacy context snapshot is embedded
+byte-for-byte in the existing manifest, not supplied by private Git history at check time.
 --check is offline and read-only, and does not require the local research commit.
 Full Git history is required for the already-public historical input pins.
 """
@@ -26,6 +27,9 @@ CONTRACT = f"{T}/calculation_contracts/batio3_static_correspondence_audit.json"
 SCRIPT = "docs/scripts/audit/prepare_batio3_publication.py"
 TESTS = "docs/scripts/audit/tests/test_batio3_publication_package.py"
 META = frozenset({"contract_id", "contract_sha256", "contract_review_status", "identities"})
+JOINT = f"{T}/calculation_contracts/joint_thermodynamic_completion.json"
+PLATFORM = f"{T}/Result/artifacts/t13_physical_platform_correspondence_screen.json"
+INHERITED = ("parent_static_reference_audit", "phi_variance_static_admissibility")
 
 
 def digest(value):
@@ -40,8 +44,12 @@ def normalized_hash(path, data):
     return hashlib.sha256(data).hexdigest()
 
 
-def payload(value):
-    return {k: v for k, v in value.items() if k not in META}
+def payload(value, path=None):
+    result = deepcopy({k: v for k, v in value.items() if k not in META})
+    if path == PLATFORM:
+        for stem in INHERITED:
+            result["inherited_evidence"][stem]["contract_sha256"] = "PROVENANCE_REFERENCE_ONLY"
+    return result
 
 
 def semantics(value):
@@ -70,10 +78,43 @@ def records(manifest, kind):
     return [r for r in manifest["files"] if r["kind"] == kind]
 
 
+def verify_snapshot(manifest):
+    snapshot = manifest["historical_local_snapshots"][0]
+    text = snapshot["normalized_text"]
+    if normalized_hash(snapshot["path"], text.encode()) != snapshot["sha256"]:
+        raise ValueError("embedded historical snapshot hash mismatch")
+    if json.loads(text)["contract_id"] != snapshot["contract_id"]:
+        raise ValueError("embedded historical contract ID mismatch")
+    return snapshot
+
+
+def capture_snapshot(root, manifest):
+    """One-time local packaging input; never called by read-only check."""
+    snapshot = manifest["historical_local_snapshots"][0]
+    if "normalized_text" not in snapshot:
+        raw = git(root, "show", snapshot["commit"] + ":" + snapshot["path"])
+        if normalized_hash(snapshot["path"], raw) != snapshot["sha256"]:
+            raise ValueError("legacy source snapshot differs from declared identity")
+        snapshot["normalized_text"] = raw.decode("utf-8").replace("\r\n", "\n").replace("\r", "\n")
+    verify_snapshot(manifest)
+    row = next(r for r in manifest["files"] if r["path"] == PLATFORM)
+    if "nested_provenance" not in row:
+        old = load_json(target(root, PLATFORM))
+        if digest(payload(old)) != row["payload_sha256"]:
+            raise ValueError("legacy platform payload changed before provenance classification")
+        row["original_payload_with_provenance_sha256"] = row["payload_sha256"]
+        row["original_nested_metadata"] = {
+            stem: old["inherited_evidence"][stem]["contract_sha256"] for stem in INHERITED}
+        row["nested_provenance"] = ["inherited_evidence." + stem + ".contract_sha256" for stem in INHERITED]
+        row["payload_sha256"] = digest(payload(old, PLATFORM))
+    _write_json(target(root, MANIFEST), manifest)
+
+
 def verify_preservation(root, manifest):
     """Verify source snapshots, not a substitute for physical acceptance."""
     if manifest["approval"] != "LOCAL_REVIEW_ONLY; no push or merge authorized until file-list review":
         raise ValueError("publication approval boundary changed")
+    verify_snapshot(manifest)
     if len({r["path"] for r in manifest["files"]}) != len(manifest["files"]):
         raise ValueError("duplicate publication file")
     for r in manifest["files"]:
@@ -85,7 +126,7 @@ def verify_preservation(root, manifest):
             if digest(semantics(load_json(p))) != r["semantic_sha256"]:
                 raise ValueError("contract physics/scope changed: " + r["path"])
         elif r["kind"] == "artifact":
-            if digest(payload(load_json(p))) != r["payload_sha256"]:
+            if digest(payload(load_json(p), r["path"])) != r["payload_sha256"]:
                 raise ValueError("scientific artifact payload changed: " + r["path"])
         else:
             raise ValueError("unclassified publication file")
@@ -113,7 +154,9 @@ def _write_json(path, data):
 
 
 def rebind(root, manifest):
+    capture_snapshot(root, manifest)
     verify_preservation(root, manifest)
+    snapshot = verify_snapshot(manifest)
     pins = {x["path"]: x for x in manifest["historical_pins"]}
     contract_paths = [r["path"] for r in records(manifest, "contract")]
     artifacts = records(manifest, "artifact")
@@ -128,6 +171,13 @@ def rebind(root, manifest):
                         c["identities"].append({"path": extra, "kind": "working_file",
                                                 "role": role, "sha256": "0" * 64})
             for item in c["identities"]:
+                if (p == JOINT and item.get("commit") == snapshot["commit"]
+                        and item["path"] == snapshot["path"]):
+                    # Same REQUIRED historical bytes, now embedded in an admitted
+                    # data input instead of an unavailable local-only Git object.
+                    item["path"] = MANIFEST
+                    item["kind"] = "working_file"
+                    item.pop("commit")
                 if item["path"] in pins:
                     pin = pins[item["path"]]
                     item["kind"] = "git_blob"
@@ -152,6 +202,10 @@ def rebind(root, manifest):
             c = contracts[a["contract_id"]]
             a["contract_sha256"] = contract_hash(c)
             a["identities"] = deepcopy(c["identities"])
+            if p == PLATFORM:
+                for stem in INHERITED:
+                    upstream = load_json(target(root, f"{T}/calculation_contracts/{stem}.json"))
+                    a["inherited_evidence"][stem]["contract_sha256"] = contract_hash(upstream)
             # Existing review disposition is preserved, not promoted by packaging.
             if _write_json(target(root, p), a):
                 changed = True
@@ -170,6 +224,13 @@ def check(root, manifest):
     contracts = {}
     for row in records(manifest, "contract"):
         c = load_json(target(root, row["path"]))
+        for item in c["identities"]:
+            if item["kind"] == "git_blob":
+                git(root, "merge-base", "--is-ancestor", item["commit"], manifest["public_base"])
+        if row["path"] == JOINT:
+            binding = [i for i in c["identities"] if i["path"] == MANIFEST]
+            if len(binding) != 1 or binding[0].get("availability") != "REQUIRED":
+                raise ValueError("historical snapshot remains a REQUIRED supplied input")
         meta = artifact_metadata(c, root)
         if c["review"]["status"] != row["review_status"]:
             raise ValueError("review disposition changed during packaging")
@@ -181,6 +242,11 @@ def check(root, manifest):
             raise ValueError("stale artifact provenance: " + row["path"])
         if a.get("contract_review_status") != row["review_status"]:
             raise ValueError("artifact review disposition changed")
+        if row["path"] == PLATFORM:
+            for stem in INHERITED:
+                upstream = load_json(target(root, f"{T}/calculation_contracts/{stem}.json"))
+                if a["inherited_evidence"][stem]["contract_sha256"] != contract_hash(upstream):
+                    raise ValueError("stale nested inherited-evidence provenance")
         serialized = json.dumps(a, ensure_ascii=False, sort_keys=True, indent=2) + "\n"
         if target(root, row["path"]).read_bytes() != serialized.encode():
             raise ValueError("artifact serialization differs from its producer")
@@ -189,6 +255,7 @@ def check(root, manifest):
             "preserved_artifact_payloads": len(records(manifest, "artifact")),
             "unchanged_current_inputs": len(manifest["public_matched_inputs"]),
             "public_historical_pins": len(manifest["historical_pins"]),
+            "embedded_historical_snapshots": len(manifest["historical_local_snapshots"]),
             "old_scientific_producers_executed": False, "push_performed": False,
             "approval": manifest["approval"]}
 

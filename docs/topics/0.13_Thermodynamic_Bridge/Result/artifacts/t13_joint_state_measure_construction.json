@@ -61,7 +61,7 @@
   ],
   "contract_id": "T13_JOINT_STATE_MEASURE_FORMAL_V1",
   "contract_review_status": "INCOMPLETE",
-  "contract_sha256": "1fe52189076db2397ecd7971e394c53ef2c08f3276dc2af1709883cf4f5e282a",
+  "contract_sha256": "01b74b6ee77a7bc6731a40df02a6c11d309697e7cac73e111975cb26376e1e69",
   "decisions": {
     "Omega_correspondence": "Finite-grid exact coarse free energy; old quartic is a controlled large-N/small-m approximation only, not an exact all-R law.",
     "comparator": "Chosen binary mean-field energy plus retained Phi/P is a standard equilibrium construction; no unique UET discriminator.",
@@ -155,14 +155,14 @@
       "kind": "working_file",
       "path": "docs/topics/0.13_Thermodynamic_Bridge/calculation_contracts/joint_thermodynamic_completion.json",
       "role": "evidence",
-      "sha256": "352cc46ecbfee4e10d8edc5a02ed1379099a023dba423cc4df250b9ec38695b6"
+      "sha256": "0a60129b9a303ad4fc1b3fbb6a06b6deec05ae45d78029cc0fce180fc60e7171"
     },
     {
       "availability": "REQUIRED",
       "kind": "working_file",
       "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/t13_joint_thermodynamic_completion.json",
       "role": "evidence",
-      "sha256": "83ff084afa3fecfe451985260fb49096615a95a953aa86bad18a93b8c9d1adb4"
+      "sha256": "e45cc255aee495a0b4a8ba63ba2e02cd083ed820a00da72377c3f0efe5ad58f3"
     },
     {
       "availability": "REQUIRED",

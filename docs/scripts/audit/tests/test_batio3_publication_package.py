@@ -58,6 +58,30 @@ class PublicationTests(unittest.TestCase):
         with self.assertRaises(ValueError):
             m.target(ROOT, "../outside.json")
 
+    def test_embedded_snapshot_exact_hash_rejects_mutation(self):
+        data = m.load_json(ROOT / m.MANIFEST)
+        m.verify_snapshot(data)
+        data["historical_local_snapshots"][0]["normalized_text"] += " "
+        with self.assertRaisesRegex(ValueError, "snapshot hash"):
+            m.verify_snapshot(data)
+
+    def test_nested_provenance_only_not_counts_or_physics(self):
+        a = {"inherited_evidence": {stem: {"contract_sha256": "old", "identities": 14}
+                                    for stem in m.INHERITED}, "metric": "1/3"}
+        b = deepcopy(a)
+        b["inherited_evidence"][m.INHERITED[0]]["contract_sha256"] = "new"
+        self.assertEqual(m.digest(m.payload(a, m.PLATFORM)), m.digest(m.payload(b, m.PLATFORM)))
+        b["inherited_evidence"][m.INHERITED[0]]["identities"] = 13
+        self.assertNotEqual(m.digest(m.payload(a, m.PLATFORM)), m.digest(m.payload(b, m.PLATFORM)))
+
+    def test_active_git_pins_do_not_require_private_history(self):
+        data = m.load_json(ROOT / m.MANIFEST)
+        for row in m.records(data, "contract"):
+            c = m.load_json(ROOT / row["path"])
+            for i in c["identities"]:
+                if i["kind"] == "git_blob":
+                    self.assertEqual(m.git(ROOT, "merge-base", "--is-ancestor", i["commit"], data["public_base"]), b"")
+
     def test_approval_not_implicitly_upgraded(self):
         with self.assertRaisesRegex(ValueError, "approval boundary"):
             m.verify_preservation(ROOT, {"approval": "PUSH_NOW"})

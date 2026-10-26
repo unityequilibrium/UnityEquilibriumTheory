@@ -150,14 +150,14 @@
       "kind": "working_file",
       "path": "docs/topics/0.13_Thermodynamic_Bridge/calculation_contracts/joint_state_measure_construction.json",
       "role": "evidence",
-      "sha256": "7eb2903da30d2dff6e85fa2b1c58c982fafd0ef44087520a18def944a88deb13"
+      "sha256": "966683ce539ee9e090a72300c0a3e7f42bbfa01a795bfbe444de621579ac5eb3"
     },
     {
       "availability": "REQUIRED",
       "kind": "working_file",
       "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/t13_joint_state_measure_construction.json",
       "role": "evidence",
-      "sha256": "7ee986e78fb3032d02c125c54c93f758b21e31cfc593e2895b8616d5cca2fd98"
+      "sha256": "2a31fb6f9d32abf94942b52bd9b43e5a68decb7a3ebb45d2f062722906e2cdff"
     },
     {
       "availability": "REQUIRED",
@@ -206,7 +206,7 @@
       "kind": "working_file",
       "path": "docs/topics/0.13_Thermodynamic_Bridge/calculation_contracts/joint_thermodynamic_completion.json",
       "role": "evidence",
-      "sha256": "352cc46ecbfee4e10d8edc5a02ed1379099a023dba423cc4df250b9ec38695b6"
+      "sha256": "0a60129b9a303ad4fc1b3fbb6a06b6deec05ae45d78029cc0fce180fc60e7171"
     }
   ],
   "model": {

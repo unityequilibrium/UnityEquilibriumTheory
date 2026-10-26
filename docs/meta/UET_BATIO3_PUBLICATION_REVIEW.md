@@ -37,12 +37,12 @@ Topic UPDATE_LOG และ daily WORK_LEDGER 2 ไฟล์
 การเปลี่ยน metadata จำกัดที่:
 
 - identity locator/hash และ hash ของ contract ที่ถูกอ้างใน boundary-change หนึ่งตำแหน่ง
-- artifact `contract_id,contract_sha256,contract_review_status,identities` เท่านั้น
+- artifact `contract_id,contract_sha256,contract_review_status,identities` และสอง `inherited_evidence.*.contract_sha256` ที่ระบุชัดใน manifest เท่านั้น
 - review ทุกฉบับคง INCOMPLETE; model, assumptions, boundaries, outcome, error budget และ gates คงเดิม
 - SHA-256 ของ scientific payload ทั้ง 11 ฉบับต้องตรง baseline ก่อนจัดชุด
 - 39 immutable files ต้องตรง source hash; 45 current inputs ที่ตรง main อยู่แล้วต้องไม่เปลี่ยน
 
-ไม่เรียก old scientific calculate/main หรือ root search, ไม่ regenerate ผลวิจัยเก่า,
+ตัวบรรจุ metadata ไม่เรียก old scientific calculate/main หรือ root search และไม่ regenerate ผลวิจัยเก่า,
 ไม่เก็บบทความ PDF/ภาพ/ข้อมูล raw/private และไม่สร้างการทำนายวัสดุใหม่
 การ serialize JSON ใหม่ให้ตรง producer เป็นการจัดรูปแบบ provenance ไม่ใช่ผลคำนวณใหม่
 
@@ -157,7 +157,7 @@ Topic UPDATE_LOG และ daily WORK_LEDGER 2 ไฟล์
 
 ## 6. ผลตรวจและข้อจำกัด
 
-ผลที่รันจริงในชุด main-based:
+ผลที่รันจริงรอบเตรียมชุด main-based ก่อน CI:
 
 - BaTiO₃ regression 28/28; packaging regression 11/11 รวม 39 ข้อ
 - BaTiO₃ producer --check ผ่าน24 symbolic/unit groups และ21 negative controls
@@ -167,10 +167,32 @@ Topic UPDATE_LOG และ daily WORK_LEDGER 2 ไฟล์
 - ตรวจ268 relative documentation links:252ไปถึงไฟล์ได้;16ตำแหน่งอ้าง historical notes4ไฟล์นอกชุดตามรายการด้านล่าง
 - ไม่พบ missing Research-module imports หรือรูปแบบ credential/private-key ที่ตรวจใน62ไฟล์
 
-ไม่มี CI บน GitHub ถูกเรียก และยังไม่อ้างว่า GitHub Pages build ผ่าน
-ไม่ได้ rerun old scientific producers,root searches หรือ regression ทุกสายเก่า
-การตรวจใหม่จำกัด governance/identity และ BaTiO₃ path; ไม่ใช้เป็น physical validation ของ dependencies
-ผลผ่านในเครื่องยังไม่แทน required CI หลังเปิด PR
+รอบเตรียมชุดเดิมยังไม่เรียก CI/Pages และไม่ได้รัน regression ทุกสายเก่า
+ผลผ่านในเครื่องไม่แทน required CI หลังเปิด PR และไม่ใช้เป็น physical validation
+
+### ผล CI ครั้งแรกและการซ่อม provenance ในขอบเขตเดิม
+
+PR41 CI run40258150567 ตรวจ Python ได้336passed แต่3failed:
+สองกรณีติด baseline context ใน local Git commit9af800914 และอีกกรณีติด inherited contract hashes
+ที่ซ้อนอยู่ใน platform artifact การตรวจเฉพาะในเครื่องก่อนหน้านี้ไม่พบปัญหา local-only Git history นี้
+เก็บผลไม่ผ่านไว้ ไม่เปลี่ยนมันให้เป็นผลผ่านย้อนหลัง
+
+การซ่อมคง68ไฟล์และไม่ผ่อน REQUIRED/CI:
+
+- ฝังข้อความ snapshot ของ energy-memory contract ที่9af800914 ไว้ใน Data manifest เดิม
+  bytes หลัง normalization มี SHA-256 `d97ab6d9c53bce6bf72661c6b0e6f5fc9b97ed0482e0fdd7a94b28469aaa207e` ตรงต้นทาง
+- snapshot เป็นหลักฐานประวัติ ไม่ใช่ current contract หรือ live physics gate
+  joint-thermal contract ยังต้องมี input นี้แบบ REQUIRED แต่ไม่ต้องโหลด private/local commit ระหว่าง check
+- ผูกสอง inherited contract hashes ของ platform artifact ให้ตรง contracts ปัจจุบัน
+  ไม่เปลี่ยนค่า spin/force/scale/variance, uncertainty, verdict หรือ acceptance
+- เพิ่ม regression ของ snapshot mutation, nested metadata versus scientific values และตรวจว่า active Git pins ทั้งหมดอยู่ใน public-base history
+- หลังซ่อม รัน changed tests ครบชุดในเครื่องได้342passed และ385subtests passed
+  ใช้ Python3.14/NumPy2.3.0/SciPy1.16.3/SymPy1.14.0 ที่ติดตั้งอยู่แล้ว ไม่ติดตั้งเพิ่ม
+  runtime3.12 ที่ผสม native packages จาก venv ใช้รันครบไม่ได้ จึงไม่อ้างว่าความพยายามนั้นผ่าน
+- completeness หลังซ่อม27contracts/132routes/0errors; CIรอบใหม่ยังต้องยืนยันผลก่อน merge
+
+การรัน regression อ่านอย่างเดียวในสภาพแวดล้อมชุดเผยแพร่เป็น verification ของการจัดชุด
+ไม่ใช่ผลวิจัยใหม่หรือ independent empirical validation; ตัวบรรจุไม่ได้เรียก scientific emit เก่า
 
 ### Historical document access gaps ที่เปิดเผยไว้ก่อนอนุมัติ
 

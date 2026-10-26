@@ -57,7 +57,7 @@
   ],
   "contract_id": "T13_SPIN_STRAIN_CORRESPONDENCE_FORMAL_V1",
   "contract_review_status": "INCOMPLETE",
-  "contract_sha256": "8f4ef9133c9e53665cf0312f3cc6283ff078af756dfe62105353cd6d0c99e7ce",
+  "contract_sha256": "f1e023291c0d6b00503b68c132148f7a92548e429f6409354d7ab86a0e517eed",
   "decisions": {
     "Phi_dependent_intrinsic_entropy": "Spin configurations alone give dPhi S_int=-Jcal*Jcal_prime*Var(B)/(k_B*T^2); no added hidden Phi degree of freedom or information substance.",
     "affine_exchange": "APPROXIMATE in a declared small-strain window, with Taylor bound; not an all-Phi coupling identity.",
@@ -258,14 +258,14 @@
       "kind": "working_file",
       "path": "docs/topics/0.13_Thermodynamic_Bridge/calculation_contracts/joint_state_measure_construction.json",
       "role": "evidence",
-      "sha256": "7eb2903da30d2dff6e85fa2b1c58c982fafd0ef44087520a18def944a88deb13"
+      "sha256": "966683ce539ee9e090a72300c0a3e7f42bbfa01a795bfbe444de621579ac5eb3"
     },
     {
       "availability": "REQUIRED",
       "kind": "working_file",
       "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/t13_joint_state_measure_construction.json",
       "role": "evidence",
-      "sha256": "7ee986e78fb3032d02c125c54c93f758b21e31cfc593e2895b8616d5cca2fd98"
+      "sha256": "2a31fb6f9d32abf94942b52bd9b43e5a68decb7a3ebb45d2f062722906e2cdff"
     },
     {
       "availability": "REQUIRED",
@@ -314,7 +314,7 @@
       "kind": "working_file",
       "path": "docs/topics/0.13_Thermodynamic_Bridge/calculation_contracts/joint_thermodynamic_completion.json",
       "role": "evidence",
-      "sha256": "352cc46ecbfee4e10d8edc5a02ed1379099a023dba423cc4df250b9ec38695b6"
+      "sha256": "0a60129b9a303ad4fc1b3fbb6a06b6deec05ae45d78029cc0fce180fc60e7171"
     }
   ],
   "kinetic_law_added": false,

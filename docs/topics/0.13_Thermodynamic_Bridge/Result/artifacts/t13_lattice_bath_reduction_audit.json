@@ -103,7 +103,7 @@
   ],
   "contract_id": "T13_LATTICE_BATH_REDUCTION_AUDIT_FORMAL_V1",
   "contract_review_status": "INCOMPLETE",
-  "contract_sha256": "a3d33364219b39c4946c4654050fc58091459d810aaba6529b0f822f1b28e0c1",
+  "contract_sha256": "79b339d00e8f5808cab2d1f6f044a6233940a0206ff05ced275b10fa93967f51",
   "decisions": {
     "C_kinetics": "NOT_DERIVED: labels remain frozen, sector weights are preparation, not bath-selected transitions.",
     "Core_Markov": "CONDITIONAL low-band approximation only; effective mass need not equal bare inertia or be positive.",
@@ -156,14 +156,14 @@
       "kind": "working_file",
       "path": "docs/topics/0.13_Thermodynamic_Bridge/calculation_contracts/lattice_mechanical_state_construction.json",
       "role": "evidence",
-      "sha256": "8b88b0b0915405456451d37c6cfea746db379bc2616c66759ec9434789ad1a10"
+      "sha256": "73ac451243f5d8c93f1949e9e6bc2c574708d7287ec21f16e9764188117f787c"
     },
     {
       "availability": "REQUIRED",
       "kind": "working_file",
       "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/t13_lattice_mechanical_state_construction.json",
       "role": "evidence",
-      "sha256": "ef45426950d08fdc6abee7844fe66931b084959e29977a939bc11316ed6ba0f4"
+      "sha256": "194208f48cb1d55ccfff73afa14748c8b3b59470085f5f27fd6547d36b796c25"
     },
     {
       "availability": "REQUIRED",
@@ -177,14 +177,14 @@
       "kind": "working_file",
       "path": "docs/topics/0.13_Thermodynamic_Bridge/calculation_contracts/spin_strain_correspondence.json",
       "role": "evidence",
-      "sha256": "6284b67cf439a29b1dcd346b100e1a1aad442d42edcfe2a3ea80e79b8f6461bc"
+      "sha256": "751360256f05754013d5f17369b8769f9e095a54882645e2887174c1bff24c7b"
     },
     {
       "availability": "REQUIRED",
       "kind": "working_file",
       "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/t13_spin_strain_correspondence.json",
       "role": "evidence",
-      "sha256": "3fbb4fc5caf2d60fccbed2b7d56bac71a749c322d9b83b67d45f1f46a02ab93f"
+      "sha256": "8c76f1c00ca9d4a96385049d784749bd175e6d87f1c3711a3897ac96249dfae2"
     },
     {
       "availability": "REQUIRED",
@@ -198,14 +198,14 @@
       "kind": "working_file",
       "path": "docs/topics/0.13_Thermodynamic_Bridge/calculation_contracts/joint_state_measure_construction.json",
       "role": "evidence",
-      "sha256": "7eb2903da30d2dff6e85fa2b1c58c982fafd0ef44087520a18def944a88deb13"
+      "sha256": "966683ce539ee9e090a72300c0a3e7f42bbfa01a795bfbe444de621579ac5eb3"
     },
     {
       "availability": "REQUIRED",
       "kind": "working_file",
       "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/t13_joint_state_measure_construction.json",
       "role": "evidence",
-      "sha256": "7ee986e78fb3032d02c125c54c93f758b21e31cfc593e2895b8616d5cca2fd98"
+      "sha256": "2a31fb6f9d32abf94942b52bd9b43e5a68decb7a3ebb45d2f062722906e2cdff"
     },
     {
       "availability": "REQUIRED",
@@ -226,14 +226,14 @@
       "kind": "working_file",
       "path": "docs/topics/0.13_Thermodynamic_Bridge/calculation_contracts/joint_thermodynamic_completion.json",
       "role": "evidence",
-      "sha256": "352cc46ecbfee4e10d8edc5a02ed1379099a023dba423cc4df250b9ec38695b6"
+      "sha256": "0a60129b9a303ad4fc1b3fbb6a06b6deec05ae45d78029cc0fce180fc60e7171"
     },
     {
       "availability": "REQUIRED",
       "kind": "working_file",
       "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/t13_joint_thermodynamic_completion.json",
       "role": "evidence",
-      "sha256": "83ff084afa3fecfe451985260fb49096615a95a953aa86bad18a93b8c9d1adb4"
+      "sha256": "e45cc255aee495a0b4a8ba63ba2e02cd083ed820a00da72377c3f0efe5ad58f3"
     },
     {
       "availability": "REQUIRED",

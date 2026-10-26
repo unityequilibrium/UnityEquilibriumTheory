@@ -165,14 +165,14 @@
       "kind": "working_file",
       "path": "docs/topics/0.13_Thermodynamic_Bridge/calculation_contracts/retained_response_requirement_audit.json",
       "role": "evidence",
-      "sha256": "6a55ae8df060d54e10b422b76dc26ed5f7159ac676d31246d85d21021d8ed8a6"
+      "sha256": "c1bb5e1c10219619da3bfbac6555358dcaee3bfe2ee278f0200257ae5627c45b"
     },
     {
       "availability": "REQUIRED",
       "kind": "working_file",
       "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/t13_retained_response_requirement_audit.json",
       "role": "evidence",
-      "sha256": "dd90cc3b08994e88aabe93ce16f0f276ec27614b5aac135c77a7f1421e0be81d"
+      "sha256": "86488490c553e98c52169b42c839459afa18c300dd3bad27e7f479bee266f68f"
     },
     {
       "availability": "REQUIRED",
@@ -193,7 +193,7 @@
       "kind": "working_file",
       "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/t13_physical_platform_correspondence_screen.json",
       "role": "evidence",
-      "sha256": "351c90f6376aeb474a0b77cc2fbd3b7c66e4faab83a72990f40f880bcdc81048"
+      "sha256": "56eed42bfa4d792b8eb4d495856ba9008178e116a909d97d0859d7559480a4c2"
     },
     {
       "availability": "REQUIRED",

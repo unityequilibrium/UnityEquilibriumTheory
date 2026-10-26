@@ -28,7 +28,7 @@
   ],
   "contract_id": "T13_RETAINED_RESPONSE_REQUIREMENT_AUDIT_FORMAL_V1",
   "contract_review_status": "INCOMPLETE",
-  "contract_sha256": "f66ec33442ccdd2fe9ac6fc742bdd3e0006dca323e08855b7b80e2c4ca59dfa9",
+  "contract_sha256": "e904f5af66cfa49fd2b0003658035f68bf326a7f1571fc2bdb8a6bd72de63b1b",
   "exact_response": {
     "denominator": "6*c**2*r**2 + 2*c**2*z**2 + 2*c**2*z + c**2 + 3*r**2*z + z**3 + z**2 + z",
     "denominator_domain": "No poles in Re(z)>=0 by positive quadratic energy and full-rank loss/derivative witness; no floating eigenvalue proof.",
@@ -160,14 +160,14 @@
       "kind": "working_file",
       "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/t13_physical_platform_correspondence_screen.json",
       "role": "evidence",
-      "sha256": "351c90f6376aeb474a0b77cc2fbd3b7c66e4faab83a72990f40f880bcdc81048"
+      "sha256": "56eed42bfa4d792b8eb4d495856ba9008178e116a909d97d0859d7559480a4c2"
     },
     {
       "availability": "REQUIRED",
       "kind": "working_file",
       "path": "docs/topics/0.13_Thermodynamic_Bridge/calculation_contracts/physical_platform_correspondence_screen.json",
       "role": "evidence",
-      "sha256": "c4065dcdadb82e391a54d6ea779492c701108e8f71c923c0792c6a2f2f6d5468"
+      "sha256": "afd2b3adc90dfe762752c5f23ba69b380ca302bf3feed9dbedfd6341c1dd6754"
     },
     {
       "availability": "REQUIRED",
