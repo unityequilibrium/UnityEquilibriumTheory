@@ -1,6 +1,6 @@
 # Services and Experiments
 
-This folder keeps source-only prototype service code for a future UET platform.
+This folder keeps source-only prototype services and repository-local tools/plugins for a future UET platform.
 
 The current UET execution path is research-first: work in docs/,
 uet_history/, and thailand_proposals/ must remain useful with these
@@ -14,6 +14,7 @@ outputs, compiled binaries, credentials, `.env` files, or machine-specific cache
 
 | Area | Purpose |
 | :-- | :-- |
+| `plugins/` | repository-local plugins and MCP tools, including read-only UET evidence search |
 | `uet_agents/` | prototype agent orchestration and document ingestion helpers |
 | `uet_api/` | experimental Rust API service |
 | `uet_chain/` | experimental ledger and chain primitives |

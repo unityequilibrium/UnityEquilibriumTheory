@@ -488,6 +488,10 @@ required to explain the same hardening wave.
   source digest/provenance, claim map/blueprint lock, Draft 1, Draft 2, integrity check,
   fact/citation audit, developmental review, line edit, copyedit, rights/ethics, proof,
   publish, and maintenance distinguishable. A planned source is not yet a verified citation.
+- Use the exact canonical gate identifiers in `uet_history/BOOK_WORKFLOW.md`; never put a
+  human-friendly label such as `W04_BLUEPRINT_LOCK` or `W05_DRAFT_1_PRODUCTION` in
+  `current_gate`. Keep `status` to `NOT_STARTED`, `IN_PROGRESS`, `PASS`,
+  `PASS_WITH_OPEN_ITEMS`, `BLOCKED`, or `SUPERSEDED`.
 - Start book-writing work with a planning pass, not with a request to choose or write an
   episode. For a three-book Section, first expose the Section arc, the role of all three
   books, the book-level plans, dependencies, handoffs, claim ownership, and reference tasks;
@@ -495,6 +499,10 @@ required to explain the same hardening wave.
 - Treat uet_history/3_publish/books/โครงสร้างหนังสือ.md as the authoritative local writing
   pattern. It controls the structure and citation surface of a chosen unit; it does not replace
   the Section/Book planning pass or authorize the agent to invent a chapter or episode.
+- Treat the local eight-function pattern and A/B/C split as a Writing Unit production template,
+  not as a new gate and not as the book's chapter-count rule. Start only from an approved
+  `unit_id` and a complete Unit Execution Card; do not make the author discover the next unit
+  by choosing an episode manually.
 - A literature review is not a source list: it must synthesize positions, uncertainty,
   contrary evidence, limitations, and gaps before the blueprint is locked.
 - For in-place manuscript edits, run the W09 integrity check and preserve original
@@ -502,6 +510,9 @@ required to explain the same hardening wave.
   merge, or reorder.
 - Preserve one canonical working draft and use a local `UPDATE_LOG.md` to record each completed
   writing wave when the book is developed across multiple passes.
+- For a workflow-only audit or standards repair, do not edit manuscript prose, move book folders,
+  or promote a gate. Return a Section-by-Section handoff listing the parent state, child state,
+  missing artifacts, version/gate drift, controlling blocker, and next canonical controller.
 - A book update is complete only when the canonical source, registry state, scoped commit, and public `main` path agree.
 - If a public copy differs from the canonical working file, stop and record the drift before publishing another copy.
 ## Agent behavior expectations

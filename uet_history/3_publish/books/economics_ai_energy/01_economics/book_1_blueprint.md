@@ -98,81 +98,134 @@ B_{destroyed}=T_0S_{generated}
 
 ## Chapter architecture
 
-### Chapter 1 — What wealth is and is not
+### Chapter 1 — Biological Thermodynamics and the First Energy Revolution
+*(ปฐมบทอุณหพลศาสตร์ทางชีวภาพ และการปฏิวัติพลังงานครั้งแรก)*
 
-**Purpose:** separate real output, wealth stock, welfare, natural capital, liquidity, and financial claims.
+**Purpose:** separate real physical throughput, wealth stock, welfare, and financial claims; establish the biological human operating system, endurance mobility, and pyrotechnology (fire) as external digestion.
 
-**Owned claims:** `B1-C001`, `B1-C002`, `B1-C003`.
+**Owned claims:** `B1-C001`, `B1-C002`, `B1-C003`, `B1-C026`, `B1-C029`.
 
-**Key questions:**
+**Key topics:**
+- 1.1 ร่างกายมนุษย์ การระบายความร้อน และความต้องการพลังงานสุทธิ (Net Energy)
+- 1.2 อุตสาหกรรมฟืนและการย่อยอาหารนอกร่างกาย (Pyrotechnology as External Digestion)
+- 1.3 เวลาทางสังคมหลังพระอาทิตย์ตก และกองไฟในฐานะสถาบันแห่งแรกของมนุษย์
 
-- What does GDP measure, and what does it omit?
-- How do produced, human, natural, and financial assets differ?
-- When is a service real output even without a tangible product?
+**Boundary:** GDP is incomplete as welfare; fire/cooking/storage/fuel collection co-evolved without asserting an exclusive single-cause sequence.
 
-**Boundary:** GDP may be incomplete as welfare; it is not therefore an illusion.
+---
 
-### Chapter 2 — The economy as an open production system
+### Chapter 2 — Hadza Natural Economics and the Limits of Non-Accumulation
+*(เศรษฐศาสตร์ธรรมชาติแบบฮัดซา และข้อจำกัดของการไม่สะสม)*
 
-**Purpose:** explain how labor, capital, energy, materials, services, knowledge, and institutions transform inputs into outputs.
+**Purpose:** examine hunter-gatherer organic equality, physical Exit Rights, and the complexity ceiling imposed by the absence of surplus accumulation.
 
 **Owned claims:** `B1-C004`, `B1-C005`, `B1-C006`.
 
-**Research backbone:** BEA–BLS KLEMS, BEA input-output accounts, EIA, USGS, Commodity Flow Survey, and USEEIO.
+**Key topics:**
+- 2.1 สังคมล่าสัตว์ย้ายค่าย ทรัพยากรกระจายตัว และความเท่าเทียมตามธรรมชาติ (Organic Equality)
+- 2.2 สิทธิในการย้ายค่าย (Exit Rights) และเพดานความซับซ้อนของการไม่สะสมส่วนเกิน (Complexity Ceiling)
 
-**Boundary:** input-output footprints are average/modelled supply-chain links, not observed causal paths from an individual payment.
+**Boundary:** natural equality is rooted in mobile resource dispersion and physical exit options, not an ideological state doctrine.
 
-### Chapter 3 — Constraints, knowledge, infrastructure, and innovation
+---
 
-**Purpose:** replace the additive `N+K+I` identity with testable, sign-ambiguous mechanisms.
+### Chapter 3 — The 50,000-Person City and the Dual Faces of Accumulation
+*(สังคมเมือง 50,000 คน และเหรียญสองด้านของการสะสมทุน)*
 
-**Owned claims:** `B1-C007`, `B1-C008`, `B1-C009`.
+**Purpose:** explain the transition to dense stationary settlements (Uruk, Ancient Egypt); the physical principle that "when people cannot move to energy, energy must move to people"; and the divergence between accumulation for collective capability vs. systemic bottleneck monopolization.
 
-Constraints may stimulate search or destroy capacity. Knowledge uses multiple measures. Infrastructure is evaluated through services, utilization, depreciation, delays, externalities, and social/fiscal NPV.
+**Owned claims:** `B1-C007`, `B1-C008`, `B1-C009`, `B1-C022`.
 
-### Chapter 4 — Money, payments, credit, and fiscal flows
+**Key topics:**
+- 3.1 สังคมเมืองรวมศูนย์: เมื่อคนย้ายไม่ได้ พลังงานต้องย้ายมาหาคน
+- 3.2 กฎแห่งอำนาจเชิงระบบ และเหรียญสองด้านของการสะสมส่วนเกิน (การสะสมเพื่อพัฒนาขีดความสามารถ vs การผูกขาดคอขวดเพื่ออำนาจ)
+- 3.3 อุตสาหกรรมขนมปังและเบียร์ระดับรัฐก่อนมีระบบทุนนิยม
 
-**Purpose:** explain deposit creation, payment settlement, sectoral sources-and-uses, inflation transmission, and why money lineage is often unobservable.
+**Boundary:** systemic bottlenecks are logistical realities; accumulation of surplus is required for complex specialization and is not inherently toxic.
 
-**Owned claims:** `B1-C010` through `B1-C015`.
+---
 
-The “Stone in the Balloon” remains as a clearly labelled thought experiment: if a selected money aggregate doubles while real transactions, output, money demand, velocity, expectations, and all relative-price mechanisms are fixed, the identity implies a changed price level. Those assumptions do not hold automatically, so the metaphor is not a law or causal result.
+### Chapter 4 — The American Firewood Case Study and Energy Bottleneck Warfare
+*(เกร็ดประวัติศาสตร์อเมริกา และเปรียบเทียบสงครามฟืน VS สงครามน้ำมัน)*
 
-Funding classifications are empirical, not moral binaries. Secured debt is not automatically productive; unsecured credit is not automatically unproductive.
+**Purpose:** evaluate empirical energy transition dynamics; demonstrate early American forest clearing, firewood, and charcoal smelting as an empirical case study; provide the medieval/renaissance knowledge bridge; contrast diffuse firewood with centralized oil bottlenecks (Single Point of Failure).
 
-### Chapter 5 — Productivity, wages, distribution, and cost of living
+**Owned claims:** `B1-C026`, `B1-C027`, `B1-C029`.
 
-**Purpose:** distinguish mean and median pay, wages and compensation, output and consumer deflators, labor share, wealth distribution, housing burden, and household-specific purchasing power.
+**Key topics:**
+- 4.1 ฟืนในฐานะสะพานเชื่อมความรู้ยุโรปกับทรัพยากรอพยพในอเมริกา
+- 4.2 ถ่านไม้ถลุงเหล็กและสายธารไทม์ไลน์จากยุคกลางสู่อุปสรรคพลังงาน (Medieval Epistemological Bridge)
+- 4.3 เปรียบเทียบเชิงลึก: สงครามยุคฟืน (ไร้คอขวดเดี่ยว) VS สงครามยุคน้ำมัน (Single Point of Failure)
 
-**Owned claims:** `B1-C016` through `B1-C020`.
+**Boundary:** energy services and physical infrastructure interact; density alone is not a mono-causal historical explanation.
 
-EPI, BLS, BEA, CPS, CE, SCF/DFA, QCEW, and international sources remain separate constructions. The book must not attribute their divergence to fiat policy without an identified design.
+---
 
-### Chapter 6 — Firms, market power, SMEs, and time
+### Chapter 5 — Epistemology of the Ruler and Logistics Mathematics
+*(ญาณวิทยาแห่งไม้บรรทัด และการกำเนิดคณิตศาสตร์เพื่อลอจิสติกส์)*
 
-**Purpose:** test upstream concentration, buyer power, markups, cost pass-through, firm size, entry/survival, wage formation, and leisure/time-use channels.
+**Purpose:** trace the emergence of mathematics, accounting, and measurement rulers from physical logistics and granary ledgers to Newtonian optics and modern relativity.
 
-**Owned claims:** `B1-C021` through `B1-C025`.
+**Owned claims:** `B1-C006`, `B1-C030`.
 
-SME shares require country/year/definition/denominator. Government can employ people directly; comparative policy claims must specify outcomes and counterfactuals. Leisure may raise market services, household production, or neither.
+**Key topics:**
+- 5.1 แผ่นดินเหนียวอูรุกและเรขาคณิตอียิปต์: คณิตศาสตร์เกิดจากการทำบัญชีเสบียง
+- 5.2 สายธารไม้บรรทัดแห่งความรู้ (เรขาคณิต ➔ เลขศูนย์อินเดีย ➔ แคลคูลัส ➔ นิวตันกับปริซึมแก้ว ➔ ไอน์สไตน์)
 
-### Chapter 7 — Energy, materials, environment, and bounded history
+**Boundary:** logistics ledgers stimulated mathematical formalization without denying independent intellectual and geometric inquiry.
 
-**Purpose:** separate heat content, throughput, efficiency, useful energy, exergy, EROI, emissions, and natural-capital depletion; review historical claims with evidence tiers.
+---
 
-**Owned claims:** `B1-C026` through `B1-C032`.
+### Chapter 6 — The Gold Standard, the 1971 Fiat Shock, and Container Geometry
+*(มาตรฐานทองคำ สู่ระบบเงิน Fiat 1971 และเรขาคณิตบรรจุภัณฑ์)*
 
-Fire/cooking/storage/fuel collection are treated as potentially co-evolving. “Firewood was the first industry,” “the first war destroyed wood stores,” and “mathematics preceded speech to manage fuel” remain quarantined. Gold-standard and Great Depression history must include monetary contraction, banking crises, and international transmission rather than a single output/gold story.
+**Purpose:** analyze monetary debasement history; examine the 1971 Nixon Shock; articulate container geometry and the 40-Baht Noodle Bowl model; separate secured productive debt from unsecured debt; audit the Wage-Productivity Gap.
 
-“Profit is unpaid entropy” is retired as an identity. The testable replacement compares private financial returns with separately measured environmental and social externalities.
+**Owned claims:** `B1-C010`, `B1-C011`, `B1-C012`, `B1-C013`, `B1-C014`, `B1-C016`, `B1-C017`.
 
-### Chapter 8 — What Book 1 establishes and hands off
+**Key topics:**
+- 6.1 จากทองคำสะท้อนพลังงาน สู่การยกเลิกมาตรฐานทองคำ (Nixon Shock 1971)
+- 6.2 เรขาคณิตบรรจุภัณฑ์และปริมาตรมวลสาร (Container Geometry vs Scale Dilution)
+- 6.3 ตัวอย่างชามก๋วยเตี๋ยว 40 บาท: แบบจำลองการขยายตัวของเงินกระดาษ ($M$) โดยผลผลิต ($R$) ไม่โตตาม
+- 6.4 สินเชื่อผลิตภาพ (Secured Debt) VS สินเชื่อลอยตัวไร้ผลผลิต (Unsecured Credit)
+- 6.5 ช่องว่างค่าแรงกับผลผลิต (Wage-Productivity Gap 1971–ปัจจุบัน)
 
-**Purpose:** report supported, unsupported, and unresolved claims without prescribing the next books' conclusions.
+**Boundary:** Container geometry and Stone-in-Balloon are stylized conditional thought experiments, not instantaneous mono-causal identities.
 
-Book 2 receives production, labor, ownership, market-power, welfare, and measurement definitions for evaluating AI divergence.
+---
 
-Book 3 receives design requirements and failure modes for any energy/resource monetary proposal: convertibility, oracle governance, volatility, procyclicality, liquidity, distribution, transition, legal authority, and attack resistance. Book 1 does not claim that Dynamic Energy Money is validated or inflation-free.
+### Chapter 7 — Why Do People Hold Stocks? Forced Value Migration
+*(ทำไมคนเราต้องถือหุ้น? การถูกระบบบีบบังคับให้อพยพมูลค่า)*
+
+**Purpose:** evaluate why households are compelled to escape depreciating fiat cash into equities and physical assets; analyze the mechanics of public stock market concentration and retail liquidity traps.
+
+**Owned claims:** `B1-C018`, `B1-C019`, `B1-C020`, `B1-C021`, `B1-C022`.
+
+**Key topics:**
+- 7.1 การถูกระบบเงิน Fiat บีบบังคับให้อพยพมูลค่าออกจากเงินสดเข้าสู่หุ้น
+- 7.2 การถือหุ้นคือการถือสิทธิ์ในเนื้อน้ำมวลสารกายภาพจริงในบรรจุภัณฑ์
+- 7.3 โศกนาฏกรรมเชิงโครงสร้างและมายาคติตลาดหุ้นมหาชน
+
+**Boundary:** asset prices reflect liquidity, expectations, and interest rate channels; equity ownership is an imperfect and risky inflation hedge.
+
+---
+
+### Chapter 8 — The Unified Formulation of UET and Cross-Series Handoff
+*(สมการแม่บท UET และบทสรุปการสะสม 3 ประเภท)*
+
+**Purpose:** formulate the unified dimensional production relationship $R = f(N, K, I)$; establish the 3 types of accumulation (Security, Collective Capability, Personal Power); define cross-series handoffs to Book 2 (AI Divergence) and Book 3 (Dynamic Energy Money & Guilds).
+
+**Owned claims:** `B1-C009`, `B1-C028`, `B1-C032`.
+
+**Key topics:**
+- 8.1 สมการมูลค่าที่แท้จริงของเงิน ($P = \frac{M \cdot V_M}{R_{\text{active}} \cdot V_R}$)
+- 8.2 สมการกำเนิดนวัตกรรมและความจำเป็นทางเทอร์โมไดนามิกส์
+- 8.3 สมการพลังงานความร้อนพื้นผิวและเอนโทรปีการแพร่กระจายมวล ($dQ/dt, dS_{\text{dispersion}}$)
+- 8.4 สัญชาตญาณการออมพลังงานศักย์ กลลวงความงาม และการบริการคือผลผลิตกายภาพ
+- 8.5 การจำแนก "การสะสม 3 ประเภท" (ความมั่นคง, ขีดความสามารถร่วม, อำนาจส่วนบุคคล)
+- 8.6 ระบบปิดซ้อนย่อย (Nested Closed Systems) และสะพานเชื่อมสู่เล่มที่ 2 และเล่มที่ 3
+
+**Boundary:** $R=f(N,K,I)$ is a dimensional physical framework; Dynamic Energy Money is an exploratory proposal handed off to Book 3 with stated failure modes.
 
 ## Historical and policy quarantine
 
