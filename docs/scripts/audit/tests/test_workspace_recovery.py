@@ -65,6 +65,18 @@ class WorkspaceRecoveryTests(unittest.TestCase):
         with self.assertRaises(ValueError):
             pages.prepare(ROOT / "docs")
 
+    def test_gr_subresult_does_not_promote_blocked_program(self):
+        from docs.scripts.audit import audit_uet_gr_causal_nonclosed
+
+        verification, formula, _, program = audit_uet_gr_causal_nonclosed.build_artifacts()
+        self.assertEqual(verification["status"], "PASS")
+        self.assertEqual(formula["status"], "WARN")
+        self.assertEqual(program["status"], "BLOCKED")
+        self.assertEqual(program["claim_promotion"], "BLOCKED")
+        spec = ROOT / "docs/core/01_contracts/UET_GR_NONCLOSED_RESEARCH_SPEC.md"
+        spec_hash = hashlib.sha256(spec.read_bytes()).hexdigest()
+        self.assertIn(spec_hash, verification["source_hashes"].values())
+
 
 if __name__ == "__main__":
     unittest.main()
