@@ -183,7 +183,7 @@ def run_test():
         import matplotlib.pyplot as plt
 
         # Get Standard Showcase Path
-        from docs.core.uet_glass_box import UETPathManager
+        from docs.scripts.core.runners.uet_glass_box import UETPathManager
 
         output_dir = UETPathManager.get_result_dir(
             topic_id="0.12", experiment_name="Casimir_Validation", category="showcase"

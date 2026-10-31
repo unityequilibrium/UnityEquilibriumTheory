@@ -16,7 +16,7 @@ OUT = (
     ROOT
     / "docs/topics/0.10_Fluid_Dynamics_Chaos/Result/artifacts/chaos_method_validation.json"
 )
-CORE_MODULE = ROOT / "docs/core/uet_dynamical_stability.py"
+CORE_MODULE = ROOT / "docs/core/02_equations/matter_space/uet_dynamical_stability.py"
 
 if str(ROOT) not in __import__("sys").path:
     __import__("sys").path.insert(0, str(ROOT))

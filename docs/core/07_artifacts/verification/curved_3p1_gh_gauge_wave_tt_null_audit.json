@@ -1,0 +1,148 @@
+{
+  "schema_version": "uet-curved-3p1-gh-gauge-wave-tt-null-v1",
+  "artifact": "curved_3p1_gh_gauge_wave_tt_null_audit",
+  "diagnostic_id": "uet.main_theory.curved_3p1.gh_gauge_wave_tt_null_control",
+  "generated_at": "2026-09-24T21:31:32.188878+00:00",
+  "status": "PASS_GH_HARMONIC_GAUGE_WAVE_TT_NULL_CONTROL",
+  "claim_promotion": false,
+  "checks": {
+    "periodic_gh_gauge_wave_reaches_declared_final_time": true,
+    "gauge_wave_has_nonzero_raw_metric_perturbation": true,
+    "evolved_gauge_wave_is_null_after_tt_projection": true,
+    "evolved_gauge_wave_has_zero_ideal_detector_strain": true,
+    "gh_control_did_not_project_filter_clip_or_fit": true,
+    "literature_route_screen_and_code_hashes_are_available": true
+  },
+  "metrics": {
+    "raw_metric_perturbation_linf": 0.049623581088992896,
+    "tt_projection_linf": 0.0,
+    "detector_strain_linf": 0.0,
+    "grid_shape": [
+      12,
+      5,
+      5
+    ],
+    "input_wave_amplitude": 0.05,
+    "final_time_coordinate_units": 0.02,
+    "integration_steps": 4,
+    "tt_projection_direction": [
+      1.0,
+      0.0,
+      0.0
+    ],
+    "detector_frequency_hz": 0.0,
+    "arm_length_m": 1.0
+  },
+  "gh_time_series_output": {
+    "result_fields": [
+      "diagnostics",
+      "final_time",
+      "maximum_dt",
+      "maximum_observed_courant",
+      "minimum_dt",
+      "run_contract",
+      "state",
+      "step_count"
+    ],
+    "metric_snapshot_history_available": false,
+    "constraint_diagnostic_sample_count": 5,
+    "interpretation": "the current integrator returns a final metric state and scalar constraint diagnostics, not a metric time history or extracted waveform"
+  },
+  "mapping": {
+    "gh_state_metric": "psi_ab(t,x) from the existing periodic vacuum GH integrator",
+    "spatial_perturbation": "h_ij = gamma_ij - delta_ij",
+    "tt_projection": "h_TT = P h P - 1/2 P tr(P h P), P_ij=delta_ij-n_i n_j",
+    "negative_control_result": "the exact harmonic gauge wave varies only in the propagation-direction metric component; h_TT=0 and the ideal detector strain is zero"
+  },
+  "input_identity": {
+    "control": "existing periodic vacuum harmonic gauge-wave manufactured solution",
+    "detector_data_consumed": false,
+    "holdout_consumed": false,
+    "parameter_fit": false,
+    "raw_source_rows_consumed": 0
+  },
+  "source_hashes": {
+    "docs/data/external/gr_3p1/gw_interferometer_response/wave_extraction_route_screen.json": "22e9b6fe31ff54c1cc3e575423e64cc61b1d1651c484cd641b6c5ff976f1cfc5",
+    "docs/core/02_equations/covariant/uet_curved_3p1_gh_evolution.py": "c18f231375609cebb76d342ba7ad94471eb280089458ace85882ed2450f3581e",
+    "docs/core/02_equations/covariant/uet_curved_3p1_generalized_harmonic.py": "4f0c8ed0e5afe52e43cedefeb9c061e10dbd440fd20e8bc57a8aacfa43e76f92",
+    "docs/core/02_equations/covariant/uet_curved_3p1_gw_detector_response.py": "7400631226146f0e528ae81c65b45a4190aa3d0935463c5c5f7982d75814054c",
+    "docs/core/05_tests/regression/root/test_uet_curved_3p1_gh_gauge_wave_tt_null.py": "f4b78f87b6a247ff14291d1e07673bc5438ae4b3220362cfe4a758bf60aea126",
+    "docs/scripts/audit/audit_uet_curved_3p1_gh_gauge_wave_tt_null.py": "782c3fcfc0a76adbd676b92c48a94d9683701bdf87422333fed1961ede4e7c93"
+  },
+  "literature_route_screen": [
+    {
+      "source_id": "fontbute_etal_2025_2026_gauge_invariant_metric_extraction",
+      "url": "https://arxiv.org/abs/2508.03799",
+      "locators": [
+        "Sec. I: extraction needs gauge-invariant radiative multipoles and finite-radius control",
+        "Secs. II-III: spherical-background perturbations, extraction sphere, areal radius, and projection of the 3+1 metric"
+      ],
+      "route_requirements": [
+        "identify a spherical background on an extraction sphere",
+        "decompose metric perturbations into angular multipoles",
+        "construct gauge-invariant even/odd master functions"
+      ],
+      "screen_finding": "candidate for a future finite-radius metric extraction lane; not directly implemented or validated on the current periodic flat harmonic gauge-wave control"
+    },
+    {
+      "source_id": "nakano_etal_2015_perturbative_finite_radius_waveform_extraction",
+      "url": "https://arxiv.org/abs/1503.00718",
+      "locators": [
+        "Abstract: finite-radius Psi_4 waveform corrections organized in inverse extraction radius and tested at multiple radii/resolutions"
+      ],
+      "route_requirements": [
+        "finite-radius curvature waveform data",
+        "a declared perturbative background and extraction radius",
+        "radius/resolution comparison for extraction uncertainty"
+      ],
+      "screen_finding": "not usable without a curvature extraction surface, finite-radius sequence, and declared background"
+    },
+    {
+      "source_id": "reisswig_etal_2009_cauchy_characteristic_extraction",
+      "url": "https://arxiv.org/abs/0912.1285",
+      "locators": [
+        "Abstract: Cauchy-characteristic extraction propagates worldtube data to future null infinity"
+      ],
+      "route_requirements": [
+        "time-dependent metric/curvature data on a timelike worldtube",
+        "characteristic evolution to future null infinity",
+        "its own worldtube-radius and boundary-systematics controls"
+      ],
+      "screen_finding": "asymptotic route is not available in the current periodic GH solver"
+    }
+  ],
+  "major_result": {
+    "major_result_id": "CORE_CURVED_3P1_GH_GAUGE_WAVE_TT_NULL_CONTROL",
+    "topic": "core",
+    "closure_level": "CLOSED_FOR_LANE",
+    "what_is_closed": [
+      "the existing evolved periodic harmonic gauge-wave control has nonzero raw spatial metric perturbation but zero TT projection",
+      "the bounded ideal detector measurement operator reports zero strain for that gauge control",
+      "the test exercises actual GH final-state output rather than only a hand-constructed longitudinal tensor"
+    ],
+    "equation_or_mapping": {
+      "h_ij": "gamma_ij - delta_ij",
+      "h_TT_ij": "P_i^k P_j^l h_kl - 1/2 P_ij P^kl h_kl",
+      "negative_control": "h_TT_ij = 0 => h_D = D_ij h_TT_ij = 0"
+    },
+    "units": "GH coordinate units remain unspecified; metric perturbation and strain are dimensionless; f=0 and L=1 m are only the exact transfer-limit control inputs",
+    "derivation_class": "standard linearized-GR gauge-mode null control plus internal periodic GH evolution",
+    "observable": "TT-projected ideal detector strain of the periodic harmonic gauge-wave control",
+    "data_role": "manufactured internal negative control only; no detector data or physical radiative waveform",
+    "verification_status": "PASS_GH_HARMONIC_GAUGE_WAVE_TT_NULL_CONTROL",
+    "open_blockers": [
+      "no physical outgoing radiative GH solution or non-periodic CPBC evolution",
+      "no metric snapshots, extraction sphere/worldtube, retarded-time map, or temporal Fourier waveform",
+      "published RWZ, finite-radius Psi4, and Cauchy-characteristic routes are screened but not implemented"
+    ],
+    "dependency_unlocked": "none; this is a gauge-false-positive exclusion control only",
+    "claim_boundary": "the current periodic harmonic gauge-wave control is not physical gravitational radiation; zero TT response validates only this negative-control case, not a waveform extraction method or UET prediction",
+    "evidence_artifacts": [
+      {
+        "path": "docs/data/external/gr_3p1/gw_interferometer_response/wave_extraction_route_screen.json",
+        "sha256": "22e9b6fe31ff54c1cc3e575423e64cc61b1d1651c484cd641b6c5ff976f1cfc5"
+      }
+    ]
+  },
+  "claim_boundary": "No physical waveform, detector data, calibration, UET prediction, parent closure, or downstream dependency is claimed."
+}

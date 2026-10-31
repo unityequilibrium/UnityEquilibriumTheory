@@ -10,7 +10,7 @@ DEPENDENCY_UNLOCKED: Continuum natural-unit screened contact-response lane only.
 
 STATUS: `PASS_ACTION_DERIVED_CONTINUUM_RELATIVE_FLOW_KUBO_LANE`; full gate remains `BLOCKED_OPEN_T13_FULL_BRIDGE` / `PARTIAL`.
 
-WHAT_CHANGED: Added `docs/core/uet_o2_continuum_relative_flow_kubo.py`, its machine-readable audit, focused regression, equation-registry addendum, full-gate projection, closure-register/dependency sync, and Topic 13 documentation references.
+WHAT_CHANGED: Added `docs/core/02_equations/o2/uet_o2_continuum_relative_flow_kubo.py`, its machine-readable audit, focused regression, equation-registry addendum, full-gate projection, closure-register/dependency sync, and Topic 13 documentation references.
 
 EQUATION_OR_MAPPING: `k=Lambda*u/(1-u)` with `u in (0,1)`; `D_a=(1/3) integral[d^3k/(2*pi)^3] k^2 v_a^2[-partial_E n_a]`; `sigma_ab=lambda^2/[16*pi*(s_med+m_H^2)]`; `L_rel=Gamma_rel*((1,-1),(-1,1))`; `G_R^rel(omega)=2*D_rel/(2*Gamma_rel-i*omega)`.
 

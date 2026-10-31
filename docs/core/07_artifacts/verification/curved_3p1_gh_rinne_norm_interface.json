@@ -1,0 +1,186 @@
+{
+  "schema_version": "core-curved-3p1-gh-rinne-norm-interface-v1",
+  "artifact": "curved_3p1_gh_rinne_norm_interface",
+  "generated_at": "2026-09-25T20:31:44+00:00",
+  "major_result_id": "CORE_CURVED_3P1_GH_RINNE_NORM_INTERFACE",
+  "closure_level": "CLOSED_FOR_LANE",
+  "claim_promotion": false,
+  "full_core_unlock": false,
+  "gravity_unlock": false,
+  "major_result": {
+    "major_result_id": "CORE_CURVED_3P1_GH_RINNE_NORM_INTERFACE",
+    "topic": "core_curved_3p1",
+    "closure_level": "CLOSED_FOR_LANE",
+    "what_is_closed": [
+      "The source-matched 30-channel boundary vector and 40-component state vector are explicitly expressed in independent tensor-component coordinates, with a norm-preserving permutation to the equation order in Rinne (2006), Eqs. (109)-(120).",
+      "The mode-column conversion cancels from the state transfer operator: T_source = V_source*C_source^-1 = V_raw*B_raw^-1*R^-1.",
+      "Independent-component Euclidean and full symmetric-tensor Frobenius norms are related by fixed Gram matrices with eigenvalues in [1,2]; the existing positive-real bound therefore transfers with at most a sqrt(2) factor under the Frobenius convention."
+    ],
+    "what_remains_open": [
+      "A transfer/inverse bound over the full closed right half-plane, including the imaginary-frequency boundary and high-frequency compactification.",
+      "A useful-size stability constant; the existing positive-real low-frequency bound is extremely loose.",
+      "Variable-coefficient/nonlinear GH boundary evolution, corners, dimensional-observable mapping, and the Core curved 3+1 parent gate."
+    ],
+    "equation_or_mapping": {
+      "source_boundary_matrix": "C_source = R*B_raw*Q",
+      "source_state_matrix": "V_source = V_raw*Q",
+      "source_transfer": "T_source = V_source*C_source^-1 = V_raw*B_raw^-1*R^-1",
+      "state_tensor_metric": "G_v = I_4 kron diag(TENSOR_WEIGHTS)",
+      "boundary_tensor_metric_audit_order": "G_h = diag(I_4, 2*I_2, I_4, diag(TENSOR_WEIGHTS), diag(TENSOR_WEIGHTS))",
+      "frobenius_transfer_norm": "||G_v^(1/2)*T_source*G_h^(-1/2)||_2 <= sqrt(2)*||T_source||_2",
+      "source_channel_order_audit": "constraint[4], physical[2], gauge[4], curl_xy[10], curl_xz[10]; equation order differs only by a permutation"
+    },
+    "units": "Dimensionless frozen-coefficient Fourier-Laplace variables with tangential frequency normalized to one; no SI observable is claimed.",
+    "derivation_class": "Source-matched finite-dimensional basis identity and exact norm-equivalence bounds, with numerical residual checks.",
+    "observable": "Spectral norm of the frozen-coefficient boundary state-transfer operator.",
+    "data_role": "Internal mathematical verification linked to a primary-source formula audit; no empirical data, fit, calibration, or holdout.",
+    "verification_status": "PASS_SOURCE_STATE_NORM_INTERFACE_LANE",
+    "open_blockers": [
+      "complex_frequency_transfer_bound_and_high_frequency_compactification_missing"
+    ],
+    "dependency_unlocked": "none; this closes only the source/state norm-coordinate interface for the declared frozen-coefficient lane",
+    "claim_boundary": "This is a coordinate/norm-equivalence result, not a full Kreiss estimate, practical stability result, full GH well-posedness proof, UET validation, Core-parent closure, or Gravity compatibility."
+  },
+  "STATUS": "PASS_SOURCE_STATE_NORM_INTERFACE_LANE",
+  "MAJOR_RESULT_CLOSURE": "CLOSED_FOR_LANE",
+  "WHAT_IS_ACTUALLY_CLOSED": [
+    "Explicit source-data and state component order for the audited 30-to-40 transfer map.",
+    "Column-basis cancellation in the transfer map and norm-equivalence constants for independent-component Euclidean versus full tensor Frobenius conventions.",
+    "For the existing positive-real low-frequency result only, the Frobenius-convention upper bound is at most sqrt(2)*1e67."
+  ],
+  "WHAT_REMAINS_OPEN": [
+    "The all-complex-frequency and high-frequency transfer bound remains open.",
+    "The source paper does not state a unique component-counting convention for every symmetric tensor norm; both standard conventions are bracketed here for boundedness, not for a sharp Kreiss constant.",
+    "Full GH evolution, variable coefficients, corners, dimensional observables, and parent closure remain open."
+  ],
+  "EQUATION_OR_MAPPING": {
+    "source_boundary_matrix": "C_source = R*B_raw*Q",
+    "source_state_matrix": "V_source = V_raw*Q",
+    "source_transfer": "T_source = V_raw*B_raw^-1*R^-1",
+    "independent_component_l2_bound": "||T_source||_2 < 1e67 on the previously declared beta<0, zeta>0, max(|beta|,zeta)<=1e-2 lane",
+    "full_tensor_frobenius_bound": "||T_source||_F <= sqrt(2)*||T_source||_2 < sqrt(2)*1e67 on that same lane"
+  },
+  "VERIFICATION": {
+    "checks": {
+      "source_matrix_dimensions_match_30_boundary_channels_and_40_state_components": true,
+      "source_channel_order_change_is_norm_preserving": true,
+      "source_row_map_is_fixed_and_invertible": true,
+      "source_row_map_projector_identities_pass": true,
+      "normalized_mode_columns_map_to_independent_tensor_components": true,
+      "state_tensor_norms_have_unit_to_sqrt2_equivalence": true,
+      "source_tensor_norms_have_unit_to_sqrt2_equivalence": true,
+      "source_transfer_basis_identity_holds_on_fixed_samples": true,
+      "upstream_positive_real_transfer_artifact_and_hashes_pass": true
+    },
+    "check_count": 9,
+    "passed_count": 9,
+    "tolerance": 2e-11,
+    "source_row_singular_values": [
+      1.6329931618554516,
+      1.4142135623730947,
+      1.4142135623730947,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ],
+    "source_row_map_condition_number": 1.6329931618554516,
+    "column_metric_max_abs_residual": 4.440892098500626e-16,
+    "paper_order_permutation_orthogonality_residual": 0.0,
+    "source_metric_order_residual": 0.0,
+    "state_metric_eigenvalue_range": [
+      1.0,
+      2.0
+    ],
+    "source_metric_eigenvalue_range": [
+      1.0,
+      2.0
+    ],
+    "max_tensor_norm_conversion_factor": 1.4142135623730951,
+    "transfer_identity_samples": [
+      {
+        "zeta": 0.2,
+        "beta": -0.65,
+        "relative_transfer_identity_residual": 3.149333322568004e-15,
+        "transfer_spectral_norm_independent_component_l2": 52.92954966307285,
+        "maximum_mode_equation_residual": 1.1102230246251565e-16,
+        "maximum_source_curl_row_residual": 0.0
+      },
+      {
+        "zeta": 0.4,
+        "beta": -0.15,
+        "relative_transfer_identity_residual": 9.985196145375289e-16,
+        "transfer_spectral_norm_independent_component_l2": 3.38635261850128,
+        "maximum_mode_equation_residual": 1.1102230246251565e-16,
+        "maximum_source_curl_row_residual": 0.0
+      },
+      {
+        "zeta": 1.25,
+        "beta": -0.45,
+        "relative_transfer_identity_residual": 3.409395262040093e-16,
+        "transfer_spectral_norm_independent_component_l2": 2.98123056041586,
+        "maximum_mode_equation_residual": 5.551115123125783e-16,
+        "maximum_source_curl_row_residual": 0.0
+      }
+    ],
+    "max_transfer_identity_residual": 3.149333322568004e-15,
+    "previous_transfer_bound_artifact": {
+      "path": "docs/core/07_artifacts/verification/curved_3p1_gh_rinne_positive_real_joint_transfer_bound.json",
+      "sha256": "713bc524f275d24d607d6847bd995ddc0f15ed2a1e97d0b60d1b2210f2d967c9",
+      "status": "PASS_POSITIVE_REAL_UNIFORM_TRANSFER_BOUND",
+      "independent_component_bound": "<1e67",
+      "frobenius_convention_bound": "<1.41421356237e+67"
+    },
+    "source_hashes": {
+      "docs/scripts/audit/audit_curved_3p1_gh_rinne_negative_shift_kreiss_symbol.py": "f482a1b1cb61480bfaa3cb27e5a2b7cdad65218fcc6521d0d587e742ffce3f2b",
+      "docs/scripts/audit/audit_curved_3p1_gh_rinne_zero_shift_kreiss_symbol.py": "c8d29b710c053ac0dee5a2d21714a63b99e8c749c8ac7c0ae892c7ffcae6460c",
+      "docs/scripts/audit/audit_curved_3p1_gh_rinne_joint_real_kreiss_operator.py": "e64e7fc41bd819f5605811f7f6af55a8c436d6f84cd93a77ee9db9b3098f01e1",
+      "docs/scripts/audit/audit_curved_3p1_gh_rinne_positive_real_joint_transfer_bound.py": "c0a38ab1eafa7ab58862f84a64cb732feb658983ebe2b61518542fb51e819111",
+      "docs/core/02_equations/covariant/uet_curved_3p1_gh_linear_boundary.py": "39bd0731a3ecdbb5c5185453e0908d198cba895ba5f29dafc6bb8f9c6a3b169c",
+      "docs/core/02_equations/covariant/uet_curved_3p1_gh_boundary_projectors.py": "2aa529e3a037a5ecff2c2a5a6d454ef7cf9822ca99371393d6614bfbc062362f",
+      "docs/core/07_artifacts/verification/curved_3p1_gh_rinne_positive_real_joint_transfer_bound.json": "713bc524f275d24d607d6847bd995ddc0f15ed2a1e97d0b60d1b2210f2d967c9",
+      "docs/scripts/audit/audit_curved_3p1_gh_rinne_norm_interface.py": "69f144292ef1ea7995f580878fa6456a5b2d11e5da648b5f29018ca64ca4c862"
+    },
+    "primary_source": {
+      "locator": "https://arxiv.org/abs/gr-qc/0606053",
+      "sections": [
+        "3.1",
+        "3.2"
+      ],
+      "equations": [
+        "(54)-(55)",
+        "(69)-(74)",
+        "(109)-(120)"
+      ],
+      "note": "The primary source establishes the Kreiss inequality and supplies the state/boundary channels; tensor norm convention is explicitly bracketed rather than assumed."
+    }
+  },
+  "CONTROLLING_BLOCKER": "complex_frequency_transfer_bound_and_high_frequency_compactification_missing",
+  "DEPENDENCY_UNLOCKED": "None; Core curved 3+1 remains PARTIAL and Gravity remains blocked.",
+  "NEXT_ACTION": "Extend the analytic inverse/transfer estimate over the complex-frequency boundary and high-frequency compactification using the now-explicit source/state norm interface.",
+  "CLAIM_BOUNDARY": "Closes only a finite-dimensional norm-coordinate interface for the declared source-matched frozen-coefficient lane. It is not a full Kreiss estimate, practical stability result, full GH well-posedness proof, UET validation, Core-parent closure, or Gravity compatibility.",
+  "source_locator": "https://arxiv.org/abs/gr-qc/0606053"
+}

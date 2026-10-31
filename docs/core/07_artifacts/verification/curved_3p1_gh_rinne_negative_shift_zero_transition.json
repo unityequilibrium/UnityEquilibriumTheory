@@ -1,0 +1,705 @@
+{
+  "schema_version": "core-curved-3p1-gh-rinne-zero-transition-v1",
+  "artifact": "curved_3p1_gh_rinne_negative_shift_zero_transition",
+  "generated_at": "2026-09-25T10:21:06+00:00",
+  "major_result_id": "CORE_CURVED_3P1_GH_RINNE_ZERO_SHIFT_GLANCING_BLOCK_LIMIT",
+  "major_result": {
+    "major_result_id": "CORE_CURVED_3P1_GH_RINNE_ZERO_SHIFT_GLANCING_BLOCK_LIMIT",
+    "topic": "core_curved_3p1",
+    "closure_level": "CLOSED_FOR_LANE",
+    "what_is_closed": [
+      "For fixed real zeta>0, the negative-shift 30x30 source symbol splits into the zero-shift 10x10 u1 boundary map and a 20x20 u2 curl block whose leading scale is 1/beta. The inverse solution map converges to the zero-shift lane while the 20 glancing-mode amplitudes vanish for bounded curl data.",
+      "The source determinant's |beta|^-20 growth at fixed zeta is accounted for by the 20 stiff u2 curl directions; it is not evidence that the boundary-to-mode inverse norm diverges at beta=0."
+    ],
+    "what_remains_open": [
+      "The result is for fixed real positive zeta and its declared compact frequency sample. Joint zeta->0, the imaginary frequency boundary, |zeta|->infinity, complex right-half-plane uniformity, and the full parent CPBC evolution remain open.",
+      "The endpoint beta->-1 has the distinct family-uniform Kreiss no-go recorded in the adjacent lane and is not repaired by this beta->0 result."
+    ],
+    "dependency_unlocked": "none; no Core-parent or Gravity dependency is unlocked",
+    "equation_or_mapping": {
+      "parameter_domain": "real zeta>0 fixed; beta->0- from the negative-shift side",
+      "incoming_mode_count": "30 for beta<0 (u1_minus plus two u2_A families); 10 at beta=0 (u1_minus only, u2_A glancing)",
+      "source_matrix_block_form": "C_minus=[[A(beta,zeta),B(beta,zeta)],[0,E(beta,zeta)]] with 10+20 source rows and 10+20 mode amplitudes",
+      "top_left_limit": "A(beta,zeta)->C_zero(zeta), the registered 10x10 zero-shift source boundary matrix",
+      "top_right_bound": "B(beta,zeta)=O(1) for each fixed real zeta>0",
+      "lower_left_identity": "D=0 because each u1_minus mode satisfies the two definition-curl rows",
+      "lower_right_u2_curl_block": "beta*E=diag(((zeta^2-beta^2)/(zeta*sqrt(zeta^2+beta^2)))*I10, i*I10)->diag(I10,i*I10)",
+      "inverse_limit": "C_minus^-1 -> diag(C_zero^-1,0_20); the 20 glancing amplitudes are suppressed as O(beta) for bounded incoming curl data",
+      "determinant_interpretation": "|det C_minus|~|beta|^-20*|det C_zero| at fixed zeta; the divergence is the product of 20 stiff curl directions, not an inverse-map blow-up",
+      "claim_boundary": "analytic block limit at fixed real zeta>0; compact positive-real frequency intervals follow by continuity where C_zero is nonsingular; no conclusion for zeta->0, the imaginary axis, or |zeta|->infinity"
+    },
+    "units": "Dimensionless frozen-coefficient Fourier-Laplace variables with omega=1.",
+    "derivation_class": "analytic block asymptotic from the registered u1/u2 modes and definition-curl rows, with source-matrix and zero-shift-lane cross-checks",
+    "observable": "source boundary-to-decaying-mode operator norm and singular spectrum across the glancing-mode transition",
+    "data_role": "primary-literature formula reproduction and internal analytic/numerical verification; no empirical data or fitting",
+    "verification_status": "PASS_FIXED_FREQUENCY_GLANCING_BLOCK_LIMIT",
+    "claim_boundary": "analytic block limit at fixed real zeta>0; compact positive-real frequency intervals follow by continuity where C_zero is nonsingular; no conclusion for zeta->0, the imaginary axis, or |zeta|->infinity"
+  },
+  "closure_level": "CLOSED_FOR_LANE",
+  "MAJOR_RESULT_CLOSURE": "CLOSED_FOR_LANE",
+  "WHAT_IS_ACTUALLY_CLOSED": [
+    "For fixed real zeta>0, the negative-shift 30x30 source symbol splits into the zero-shift 10x10 u1 boundary map and a 20x20 u2 curl block whose leading scale is 1/beta. The inverse solution map converges to the zero-shift lane while the 20 glancing-mode amplitudes vanish for bounded curl data.",
+    "The source determinant's |beta|^-20 growth at fixed zeta is accounted for by the 20 stiff u2 curl directions; it is not evidence that the boundary-to-mode inverse norm diverges at beta=0."
+  ],
+  "WHAT_REMAINS_OPEN": [
+    "The result is for fixed real positive zeta and its declared compact frequency sample. Joint zeta->0, the imaginary frequency boundary, |zeta|->infinity, complex right-half-plane uniformity, and the full parent CPBC evolution remain open.",
+    "The endpoint beta->-1 has the distinct family-uniform Kreiss no-go recorded in the adjacent lane and is not repaired by this beta->0 result."
+  ],
+  "DEPENDENCY_UNLOCKED": "none; no Core-parent or Gravity dependency is unlocked",
+  "STATUS": "PASS_FIXED_FREQUENCY_GLANCING_BLOCK_LIMIT",
+  "EQUATION_OR_MAPPING": {
+    "parameter_domain": "real zeta>0 fixed; beta->0- from the negative-shift side",
+    "incoming_mode_count": "30 for beta<0 (u1_minus plus two u2_A families); 10 at beta=0 (u1_minus only, u2_A glancing)",
+    "source_matrix_block_form": "C_minus=[[A(beta,zeta),B(beta,zeta)],[0,E(beta,zeta)]] with 10+20 source rows and 10+20 mode amplitudes",
+    "top_left_limit": "A(beta,zeta)->C_zero(zeta), the registered 10x10 zero-shift source boundary matrix",
+    "top_right_bound": "B(beta,zeta)=O(1) for each fixed real zeta>0",
+    "lower_left_identity": "D=0 because each u1_minus mode satisfies the two definition-curl rows",
+    "lower_right_u2_curl_block": "beta*E=diag(((zeta^2-beta^2)/(zeta*sqrt(zeta^2+beta^2)))*I10, i*I10)->diag(I10,i*I10)",
+    "inverse_limit": "C_minus^-1 -> diag(C_zero^-1,0_20); the 20 glancing amplitudes are suppressed as O(beta) for bounded incoming curl data",
+    "determinant_interpretation": "|det C_minus|~|beta|^-20*|det C_zero| at fixed zeta; the divergence is the product of 20 stiff curl directions, not an inverse-map blow-up",
+    "claim_boundary": "analytic block limit at fixed real zeta>0; compact positive-real frequency intervals follow by continuity where C_zero is nonsingular; no conclusion for zeta->0, the imaginary axis, or |zeta|->infinity"
+  },
+  "VERIFICATION": {
+    "checks": {
+      "five_positive_real_frequencies_are_preregistered": true,
+      "all_sub_luminal_negative_shifts_are_nonzero": true,
+      "u1_modes_do_not_enter_additional_u2_curl_rows": true,
+      "incoming_u2_curl_block_matches_analytic_beta_scaling": true,
+      "top_left_block_converges_to_zero_shift_operator": true,
+      "u2_to_top_data_block_stays_bounded_on_declared_compact_frequency_grid": true,
+      "boundary_inverse_norm_converges_to_zero_shift_lane": true,
+      "ten_small_singular_values_approach_zero_shift_spectrum": true,
+      "determinant_magnitude_ratio_converges_to_beta_minus20": true
+    },
+    "frequency_values": [
+      0.25,
+      0.5,
+      1.0,
+      2.0,
+      4.0
+    ],
+    "negative_shift_magnitudes": [
+      0.1,
+      0.01,
+      0.001
+    ],
+    "cases": [
+      {
+        "zeta_real": 0.25,
+        "beta": -0.1,
+        "block_shapes": {
+          "A_u1_to_top_data": [
+            10,
+            10
+          ],
+          "B_u2_to_top_data": [
+            10,
+            20
+          ],
+          "D_u1_to_u2_curl_data": [
+            20,
+            10
+          ],
+          "E_u2_to_u2_curl_data": [
+            20,
+            20
+          ]
+        },
+        "A_to_zero_shift_max_abs": 0.3954356781013889,
+        "B_frobenius_norm": 11.410823657901483,
+        "D_max_abs": 0.0,
+        "beta_E_to_analytic_limit_max_abs": 2.220446049250313e-16,
+        "xy_curl_beta_E_diagonal": 0.7799204203436179,
+        "xz_curl_beta_E_diagonal": {
+          "real": 0.0,
+          "imag": 1.0
+        },
+        "full_inverse_norm": 3.11740394080652,
+        "zero_shift_inverse_norm": 2.455154070065396,
+        "inverse_norm_difference": 0.6622498707411242,
+        "ten_smallest_singular_values_max_difference": 2.4353245100297825,
+        "determinant_beta20_residual": -3.8779711039495908,
+        "determinant_orientation_ratio": {
+          "real": -1.0,
+          "imag": -0.0
+        }
+      },
+      {
+        "zeta_real": 0.25,
+        "beta": -0.01,
+        "block_shapes": {
+          "A_u1_to_top_data": [
+            10,
+            10
+          ],
+          "B_u2_to_top_data": [
+            10,
+            20
+          ],
+          "D_u1_to_u2_curl_data": [
+            20,
+            10
+          ],
+          "E_u2_to_u2_curl_data": [
+            20,
+            20
+          ]
+        },
+        "A_to_zero_shift_max_abs": 0.04252899065022431,
+        "B_frobenius_norm": 11.314838006150655,
+        "D_max_abs": 0.0,
+        "beta_E_to_analytic_limit_max_abs": 1.1102230246251565e-16,
+        "xy_curl_beta_E_diagonal": 0.9976022371878345,
+        "xz_curl_beta_E_diagonal": {
+          "real": 0.0,
+          "imag": 1.0
+        },
+        "full_inverse_norm": 2.508304633314898,
+        "zero_shift_inverse_norm": 2.455154070065396,
+        "inverse_norm_difference": 0.05315056324950218,
+        "ten_smallest_singular_values_max_difference": 0.06451671211401777,
+        "determinant_beta20_residual": -0.160062984884064,
+        "determinant_orientation_ratio": {
+          "real": -1.0,
+          "imag": -0.0
+        }
+      },
+      {
+        "zeta_real": 0.25,
+        "beta": -0.001,
+        "block_shapes": {
+          "A_u1_to_top_data": [
+            10,
+            10
+          ],
+          "B_u2_to_top_data": [
+            10,
+            20
+          ],
+          "D_u1_to_u2_curl_data": [
+            20,
+            10
+          ],
+          "E_u2_to_u2_curl_data": [
+            20,
+            20
+          ]
+        },
+        "A_to_zero_shift_max_abs": 0.004284555364108433,
+        "B_frobenius_norm": 11.313719812506587,
+        "D_max_abs": 0.0,
+        "beta_E_to_analytic_limit_max_abs": 1.1102230246251565e-16,
+        "xy_curl_beta_E_diagonal": 0.9999760002239972,
+        "xz_curl_beta_E_diagonal": {
+          "real": 0.0,
+          "imag": 1.0
+        },
+        "full_inverse_norm": 2.4603562832956776,
+        "zero_shift_inverse_norm": 2.455154070065396,
+        "inverse_norm_difference": 0.005202213230281583,
+        "ten_smallest_singular_values_max_difference": 0.005968410198035734,
+        "determinant_beta20_residual": -0.0138177082501727,
+        "determinant_orientation_ratio": {
+          "real": -1.0,
+          "imag": -0.0
+        }
+      },
+      {
+        "zeta_real": 0.5,
+        "beta": -0.1,
+        "block_shapes": {
+          "A_u1_to_top_data": [
+            10,
+            10
+          ],
+          "B_u2_to_top_data": [
+            10,
+            20
+          ],
+          "D_u1_to_u2_curl_data": [
+            20,
+            10
+          ],
+          "E_u2_to_u2_curl_data": [
+            20,
+            20
+          ]
+        },
+        "A_to_zero_shift_max_abs": 0.2652822077321001,
+        "B_frobenius_norm": 5.690748227132825,
+        "D_max_abs": 0.0,
+        "beta_E_to_analytic_limit_max_abs": 1.1102230246251565e-16,
+        "xy_curl_beta_E_diagonal": 0.9413574486632833,
+        "xz_curl_beta_E_diagonal": {
+          "real": 0.0,
+          "imag": 1.0
+        },
+        "full_inverse_norm": 2.2357400199415216,
+        "zero_shift_inverse_norm": 1.8201345260693915,
+        "inverse_norm_difference": 0.4156054938721301,
+        "ten_smallest_singular_values_max_difference": 0.49124399718668776,
+        "determinant_beta20_residual": -1.7745958777874549,
+        "determinant_orientation_ratio": {
+          "real": -1.0,
+          "imag": -0.0
+        }
+      },
+      {
+        "zeta_real": 0.5,
+        "beta": -0.01,
+        "block_shapes": {
+          "A_u1_to_top_data": [
+            10,
+            10
+          ],
+          "B_u2_to_top_data": [
+            10,
+            20
+          ],
+          "D_u1_to_u2_curl_data": [
+            20,
+            10
+          ],
+          "E_u2_to_u2_curl_data": [
+            20,
+            20
+          ]
+        },
+        "A_to_zero_shift_max_abs": 0.028324774548299514,
+        "B_frobenius_norm": 5.657207650479143,
+        "D_max_abs": 0.0,
+        "beta_E_to_analytic_limit_max_abs": 2.220446049250313e-16,
+        "xy_curl_beta_E_diagonal": 0.9994001399560151,
+        "xz_curl_beta_E_diagonal": {
+          "real": 0.0,
+          "imag": 1.0
+        },
+        "full_inverse_norm": 1.8544394597546352,
+        "zero_shift_inverse_norm": 1.8201345260693915,
+        "inverse_norm_difference": 0.03430493368524368,
+        "ten_smallest_singular_values_max_difference": 0.03469174865401481,
+        "determinant_beta20_residual": -0.12142451635926932,
+        "determinant_orientation_ratio": {
+          "real": -1.0,
+          "imag": -0.0
+        }
+      },
+      {
+        "zeta_real": 0.5,
+        "beta": -0.001,
+        "block_shapes": {
+          "A_u1_to_top_data": [
+            10,
+            10
+          ],
+          "B_u2_to_top_data": [
+            10,
+            20
+          ],
+          "D_u1_to_u2_curl_data": [
+            20,
+            10
+          ],
+          "E_u2_to_u2_curl_data": [
+            20,
+            20
+          ]
+        },
+        "A_to_zero_shift_max_abs": 0.0028517709358761856,
+        "B_frobenius_norm": 5.656857785011041,
+        "D_max_abs": 0.0,
+        "beta_E_to_analytic_limit_max_abs": 0.0,
+        "xy_curl_beta_E_diagonal": 0.9999940000140001,
+        "xz_curl_beta_E_diagonal": {
+          "real": 0.0,
+          "imag": 1.0
+        },
+        "full_inverse_norm": 1.8235020155725232,
+        "zero_shift_inverse_norm": 1.8201345260693915,
+        "inverse_norm_difference": 0.0033674895031317043,
+        "ten_smallest_singular_values_max_difference": 0.0033951822201343518,
+        "determinant_beta20_residual": -0.011589289622577326,
+        "determinant_orientation_ratio": {
+          "real": -1.0,
+          "imag": -0.0
+        }
+      },
+      {
+        "zeta_real": 1.0,
+        "beta": -0.1,
+        "block_shapes": {
+          "A_u1_to_top_data": [
+            10,
+            10
+          ],
+          "B_u2_to_top_data": [
+            10,
+            20
+          ],
+          "D_u1_to_u2_curl_data": [
+            20,
+            10
+          ],
+          "E_u2_to_u2_curl_data": [
+            20,
+            20
+          ]
+        },
+        "A_to_zero_shift_max_abs": 0.19157087350960422,
+        "B_frobenius_norm": 2.843265449415792,
+        "D_max_abs": 0.0,
+        "beta_E_to_analytic_limit_max_abs": 1.1102230246251565e-16,
+        "xy_curl_beta_E_diagonal": 0.9850868183078894,
+        "xz_curl_beta_E_diagonal": {
+          "real": 0.0,
+          "imag": 1.0
+        },
+        "full_inverse_norm": 1.5797693730389455,
+        "zero_shift_inverse_norm": 1.347746367427226,
+        "inverse_norm_difference": 0.2320230056117194,
+        "ten_smallest_singular_values_max_difference": 0.2833413234773685,
+        "determinant_beta20_residual": -1.03887540263473,
+        "determinant_orientation_ratio": {
+          "real": -1.0,
+          "imag": -0.0
+        }
+      },
+      {
+        "zeta_real": 1.0,
+        "beta": -0.01,
+        "block_shapes": {
+          "A_u1_to_top_data": [
+            10,
+            10
+          ],
+          "B_u2_to_top_data": [
+            10,
+            20
+          ],
+          "D_u1_to_u2_curl_data": [
+            20,
+            10
+          ],
+          "E_u2_to_u2_curl_data": [
+            20,
+            20
+          ]
+        },
+        "A_to_zero_shift_max_abs": 0.020449833872820955,
+        "B_frobenius_norm": 2.8285773659223996,
+        "D_max_abs": 0.0,
+        "beta_E_to_analytic_limit_max_abs": 1.1102230246251565e-16,
+        "xy_curl_beta_E_diagonal": 0.9998500087493127,
+        "xz_curl_beta_E_diagonal": {
+          "real": 0.0,
+          "imag": 1.0
+        },
+        "full_inverse_norm": 1.3682716692909835,
+        "zero_shift_inverse_norm": 1.347746367427226,
+        "inverse_norm_difference": 0.02052530186375745,
+        "ten_smallest_singular_values_max_difference": 0.02893960924050276,
+        "determinant_beta20_residual": -0.09072603829025638,
+        "determinant_orientation_ratio": {
+          "real": -1.0,
+          "imag": -0.0
+        }
+      },
+      {
+        "zeta_real": 1.0,
+        "beta": -0.001,
+        "block_shapes": {
+          "A_u1_to_top_data": [
+            10,
+            10
+          ],
+          "B_u2_to_top_data": [
+            10,
+            20
+          ],
+          "D_u1_to_u2_curl_data": [
+            20,
+            10
+          ],
+          "E_u2_to_u2_curl_data": [
+            20,
+            20
+          ]
+        },
+        "A_to_zero_shift_max_abs": 0.0020590795206647527,
+        "B_frobenius_norm": 2.8284286273461983,
+        "D_max_abs": 0.0,
+        "beta_E_to_analytic_limit_max_abs": 1.1102230246251565e-16,
+        "xy_curl_beta_E_diagonal": 0.999998500000875,
+        "xz_curl_beta_E_diagonal": {
+          "real": 0.0,
+          "imag": 1.0
+        },
+        "full_inverse_norm": 1.3497745986943304,
+        "zero_shift_inverse_norm": 1.347746367427226,
+        "inverse_norm_difference": 0.0020282312671042746,
+        "ten_smallest_singular_values_max_difference": 0.0029043780414936826,
+        "determinant_beta20_residual": -0.008943277722408993,
+        "determinant_orientation_ratio": {
+          "real": -1.0,
+          "imag": -0.0
+        }
+      },
+      {
+        "zeta_real": 2.0,
+        "beta": -0.1,
+        "block_shapes": {
+          "A_u1_to_top_data": [
+            10,
+            10
+          ],
+          "B_u2_to_top_data": [
+            10,
+            20
+          ],
+          "D_u1_to_u2_curl_data": [
+            20,
+            10
+          ],
+          "E_u2_to_u2_curl_data": [
+            20,
+            20
+          ]
+        },
+        "A_to_zero_shift_max_abs": 0.1508553832577102,
+        "B_frobenius_norm": 1.4213591542557191,
+        "D_max_abs": 0.0,
+        "beta_E_to_analytic_limit_max_abs": 0.0,
+        "xy_curl_beta_E_diagonal": 0.9962554580306501,
+        "xz_curl_beta_E_diagonal": {
+          "real": 0.0,
+          "imag": 1.0
+        },
+        "full_inverse_norm": 1.2487035816662213,
+        "zero_shift_inverse_norm": 1.1079512188305196,
+        "inverse_norm_difference": 0.1407523628357017,
+        "ten_smallest_singular_values_max_difference": 0.1895193559818007,
+        "determinant_beta20_residual": -0.7234556963104808,
+        "determinant_orientation_ratio": {
+          "real": -1.0,
+          "imag": -0.0
+        }
+      },
+      {
+        "zeta_real": 2.0,
+        "beta": -0.01,
+        "block_shapes": {
+          "A_u1_to_top_data": [
+            10,
+            10
+          ],
+          "B_u2_to_top_data": [
+            10,
+            20
+          ],
+          "D_u1_to_u2_curl_data": [
+            20,
+            10
+          ],
+          "E_u2_to_u2_curl_data": [
+            20,
+            20
+          ]
+        },
+        "A_to_zero_shift_max_abs": 0.01624893706510888,
+        "B_frobenius_norm": 1.4142853742869583,
+        "D_max_abs": 0.0,
+        "beta_E_to_analytic_limit_max_abs": 1.1102230246251565e-16,
+        "xy_curl_beta_E_diagonal": 0.9999625005468643,
+        "xz_curl_beta_E_diagonal": {
+          "real": 0.0,
+          "imag": 1.0
+        },
+        "full_inverse_norm": 1.1212962870587313,
+        "zero_shift_inverse_norm": 1.1079512188305196,
+        "inverse_norm_difference": 0.013345068228211687,
+        "ten_smallest_singular_values_max_difference": 0.02119951965696032,
+        "determinant_beta20_residual": -0.07071878024154898,
+        "determinant_orientation_ratio": {
+          "real": -1.0,
+          "imag": -0.0
+        }
+      },
+      {
+        "zeta_real": 2.0,
+        "beta": -0.001,
+        "block_shapes": {
+          "A_u1_to_top_data": [
+            10,
+            10
+          ],
+          "B_u2_to_top_data": [
+            10,
+            20
+          ],
+          "D_u1_to_u2_curl_data": [
+            20,
+            10
+          ],
+          "E_u2_to_u2_curl_data": [
+            20,
+            20
+          ]
+        },
+        "A_to_zero_shift_max_abs": 0.0016376645390279165,
+        "B_frobenius_norm": 1.414214280528058,
+        "D_max_abs": 0.0,
+        "beta_E_to_analytic_limit_max_abs": 1.1102230246251565e-16,
+        "xy_curl_beta_E_diagonal": 0.9999996250000548,
+        "xz_curl_beta_E_diagonal": {
+          "real": 0.0,
+          "imag": 1.0
+        },
+        "full_inverse_norm": 1.1092788836858747,
+        "zero_shift_inverse_norm": 1.1079512188305196,
+        "inverse_norm_difference": 0.0013276648553550707,
+        "ten_smallest_singular_values_max_difference": 0.0021441282706868847,
+        "determinant_beta20_residual": -0.007057324724939917,
+        "determinant_orientation_ratio": {
+          "real": -1.0,
+          "imag": -0.0
+        }
+      },
+      {
+        "zeta_real": 4.0,
+        "beta": -0.1,
+        "block_shapes": {
+          "A_u1_to_top_data": [
+            10,
+            10
+          ],
+          "B_u2_to_top_data": [
+            10,
+            20
+          ],
+          "D_u1_to_u2_curl_data": [
+            20,
+            10
+          ],
+          "E_u2_to_u2_curl_data": [
+            20,
+            20
+          ]
+        },
+        "A_to_zero_shift_max_abs": 0.13488500467296882,
+        "B_frobenius_norm": 0.7106450562710601,
+        "D_max_abs": 0.0,
+        "beta_E_to_analytic_limit_max_abs": 0.0,
+        "xy_curl_beta_E_diagonal": 0.9990628416291175,
+        "xz_curl_beta_E_diagonal": {
+          "real": 0.0,
+          "imag": 1.0
+        },
+        "full_inverse_norm": 1.1390924554980206,
+        "zero_shift_inverse_norm": 1.0283282503710223,
+        "inverse_norm_difference": 0.11076420512699836,
+        "ten_smallest_singular_values_max_difference": 0.1463048420430364,
+        "determinant_beta20_residual": -0.6134881004761255,
+        "determinant_orientation_ratio": {
+          "real": -1.0,
+          "imag": -0.0
+        }
+      },
+      {
+        "zeta_real": 4.0,
+        "beta": -0.01,
+        "block_shapes": {
+          "A_u1_to_top_data": [
+            10,
+            10
+          ],
+          "B_u2_to_top_data": [
+            10,
+            20
+          ],
+          "D_u1_to_u2_curl_data": [
+            20,
+            10
+          ],
+          "E_u2_to_u2_curl_data": [
+            20,
+            20
+          ]
+        },
+        "A_to_zero_shift_max_abs": 0.01463552343548491,
+        "B_frobenius_norm": 0.7071422735198208,
+        "D_max_abs": 0.0,
+        "beta_E_to_analytic_limit_max_abs": 1.1102230246251565e-16,
+        "xy_curl_beta_E_diagonal": 0.9999906250341795,
+        "xz_curl_beta_E_diagonal": {
+          "real": 0.0,
+          "imag": 1.0
+        },
+        "full_inverse_norm": 1.0392230152374955,
+        "zero_shift_inverse_norm": 1.0283282503710223,
+        "inverse_norm_difference": 0.010894764866473228,
+        "ten_smallest_singular_values_max_difference": 0.01595457386616994,
+        "determinant_beta20_residual": -0.06280537566799183,
+        "determinant_orientation_ratio": {
+          "real": -1.0,
+          "imag": -0.0
+        }
+      },
+      {
+        "zeta_real": 4.0,
+        "beta": -0.001,
+        "block_shapes": {
+          "A_u1_to_top_data": [
+            10,
+            10
+          ],
+          "B_u2_to_top_data": [
+            10,
+            20
+          ],
+          "D_u1_to_u2_curl_data": [
+            20,
+            10
+          ],
+          "E_u2_to_u2_curl_data": [
+            20,
+            20
+          ]
+        },
+        "A_to_zero_shift_max_abs": 0.0014761558982441247,
+        "B_frobenius_norm": 0.7071071361208948,
+        "D_max_abs": 0.0,
+        "beta_E_to_analytic_limit_max_abs": 1.1102230246251565e-16,
+        "xy_curl_beta_E_diagonal": 0.9999999062500035,
+        "xz_curl_beta_E_diagonal": {
+          "real": 0.0,
+          "imag": 1.0
+        },
+        "full_inverse_norm": 1.029416009823288,
+        "zero_shift_inverse_norm": 1.0283282503710223,
+        "inverse_norm_difference": 0.0010877594522658018,
+        "ten_smallest_singular_values_max_difference": 0.001644599117365697,
+        "determinant_beta20_residual": -0.006296753361482388,
+        "determinant_orientation_ratio": {
+          "real": -1.0,
+          "imag": -0.0
+        }
+      }
+    ],
+    "source_hashes": {
+      "docs/scripts/audit/audit_curved_3p1_gh_rinne_negative_shift_zero_transition.py": "1a9d271ae0d9fd58e56809b722613057e9cbf1679eea9c6035f8451fccea5014",
+      "docs/scripts/audit/audit_curved_3p1_gh_rinne_negative_shift_kreiss_symbol.py": "f482a1b1cb61480bfaa3cb27e5a2b7cdad65218fcc6521d0d587e742ffce3f2b",
+      "docs/core/07_artifacts/verification/curved_3p1_gh_rinne_negative_shift_kreiss_symbol.json": "5d48f6efe14f8c3501da5d8568544608fcc2d8fe7b24f798523ffdd919e39924",
+      "docs/scripts/audit/audit_curved_3p1_gh_rinne_zero_shift_kreiss_symbol.py": "c8d29b710c053ac0dee5a2d21714a63b99e8c749c8ac7c0ae892c7ffcae6460c",
+      "docs/core/07_artifacts/verification/curved_3p1_gh_rinne_zero_shift_kreiss_symbol.json": "b521608f31da55e435d5d2c736222ece29a572f8efede9992f263d3d0910f460",
+      "docs/core/02_equations/covariant/uet_curved_3p1_gh_linear_boundary.py": "39bd0731a3ecdbb5c5185453e0908d198cba895ba5f29dafc6bb8f9c6a3b169c",
+      "docs/core/02_equations/covariant/uet_curved_3p1_gh_boundary_projectors.py": "2aa529e3a037a5ecff2c2a5a6d454ef7cf9822ca99371393d6614bfbc062362f"
+    },
+    "source_reference": "https://arxiv.org/abs/gr-qc/0606053"
+  },
+  "CONTROLLING_BLOCKER": "joint_zero_frequency_glancing_and_closed_frequency_uniformity_remain_open",
+  "NEXT_ACTION": "Analyze beta->0 jointly with zeta->0 and along the imaginary axis, then extend the block estimate to compact complex frequency sets; keep the beta->-1 loss of family-uniformity separate.",
+  "CLAIM_BOUNDARY": "analytic block limit at fixed real zeta>0; compact positive-real frequency intervals follow by continuity where C_zero is nonsingular; no conclusion for zeta->0, the imaginary axis, or |zeta|->infinity",
+  "full_core_unlock": false,
+  "gravity_unlock": false,
+  "claim_promotion": false
+}

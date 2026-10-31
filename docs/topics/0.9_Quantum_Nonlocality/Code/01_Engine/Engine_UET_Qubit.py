@@ -33,8 +33,8 @@ from typing import Optional
 
 
 from docs.core.uet_parameters import get_params, UETParameters
-from docs.core.uet_matrix_engine import MatrixEvolution, UniverseState
-from docs.core.uet_glass_box import UETMetricLogger
+from docs.scripts.core.runners.uet_matrix_engine import MatrixEvolution, UniverseState
+from docs.scripts.core.runners.uet_glass_box import UETMetricLogger
 
 
 class UETQubitEngine:

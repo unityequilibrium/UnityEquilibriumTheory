@@ -37,7 +37,7 @@ try:
         sys.path.insert(0, str(engine_dir))
         
     from Engine_Cosmology import UETCosmologyEngine, H0_PLANCK, H0_SHOES
-    from docs.core.uet_glass_box import UETPathManager
+    from docs.scripts.core.runners.uet_glass_box import UETPathManager
 except Exception as e:
     print(f"CRITICAL ERROR: Could not setup Cosmology environment: {e}")
     sys.exit(1)

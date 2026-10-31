@@ -38,7 +38,7 @@ from pathlib import Path
 
 
 from docs.core.uet_master_equation import UETMasterEquation
-from docs.core.uet_glass_box import UETPathManager, UETMetricLogger
+from docs.scripts.core.runners.uet_glass_box import UETPathManager, UETMetricLogger
 
 
 def verify_poincare_perelman():

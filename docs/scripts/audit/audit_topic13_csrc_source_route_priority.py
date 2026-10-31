@@ -51,6 +51,7 @@ def spec(
     decision: str,
     rejection_reasons: tuple[str, ...],
     next_action: str,
+    additional_evidence: tuple[tuple[str, str], ...] = (),
 ) -> dict[str, Any]:
     return {
         "route_id": route_id,
@@ -69,6 +70,7 @@ def spec(
         "decision": decision,
         "rejection_reasons": rejection_reasons,
         "next_action": next_action,
+        "additional_evidence": additional_evidence,
     }
 
 
@@ -217,27 +219,52 @@ ROUTE_SPECS: tuple[dict[str, Any], ...] = (
     spec(
         "nims_mp990448",
         6,
-        "PUBLIC_SOURCE_BOUNDARY",
+        "INDEPENDENT_HARMONIC_CV_COMPARATOR",
         "NIMS MP-990448 graphite phonon archive",
         "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/nims_mdr_mp990448_phonon_source_package.json",
-        "docs/core/07_artifacts/topic13/t13_nims_mp990448_phonon_source_boundary_audit.json",
+        "docs/core/07_artifacts/topic13/t13_nims_mp990448_aa_stack_shear_instability.json",
         "PASS_SCOPED_NIMS_MP990448_PHONON_PAYLOAD_BOUNDARY",
-        "PASS_SCOPED_NIMS_MP990448_PHONON_PAYLOAD_BOUNDARY",
-        "ARCHIVE_BOUNDARY_NO_MACHINE_READABLE_C_SRC",
-        ("source_identity_and_locator", "source_hash", "holdout_and_fit_audit"),
+        "WARN_SCOPED_NIMS_AA_STACK_SHEAR_MODE_ROBUST_MATERIAL_MAPPING_OPEN",
+        "CONDITIONAL_HARMONIC_REANALYSIS_AA_LIKE_STRUCTURE_UNSTABLE_MODE",
+        (
+            "source_identity_and_locator",
+            "raw_numeric_or_reproduction_payload",
+            "source_hash",
+            "mesh_or_numerical_convergence",
+            "holdout_and_fit_audit",
+        ),
         {
             "source_identity_and_locator": "The NIMS collection, dataset, and material identity are source-locked.",
-            "source_hash": "The downloaded archive and members have SHA-256 identity.",
-            "holdout_and_fit_audit": "The boundary audit records no holdout access and no claim promotion.",
+            "raw_numeric_or_reproduction_payload": "The hash-locked raw displacement-force rows support a reproducible harmonic comparator; they are not Ding PBTE data.",
+            "source_hash": "The deposited archive/member and reanalysis inputs have SHA-256 identities.",
+            "mesh_or_numerical_convergence": "An unsymmetrized 12x12x6 mesh and five force-constant variants locate the same q-boundary negative mode.",
+            "holdout_and_fit_audit": "The diagnostic records no fit, no Xie 2026 access, and no claim promotion.",
         },
-        ("archive_exists", "archive_hash_matches_locked_download", "no_force_constants_data", "no_frequency_mesh", "no_machine_readable_thermal_rows", "no_holdout_access"),
-        (),
-        "CLOSED_PUBLIC_ROUTE_NO_MACHINE_READABLE_PAYLOAD",
         (
-            "archive contains figures and setup files but no force-constant data, frequency mesh, or machine-readable thermal rows",
-            "no Ding PBTE response, C_src uncertainty, or material/state acceptance package is available from this archive",
+            "archive_exists",
+            "archive_hash_matches_locked_source",
+            "member_hash_matches_locked_source",
+            "source_structure_is_two_atom_p6_mmm_cell",
+            "all_five_force_constant_variants_have_negative_q_boundary_modes",
+            "negative_mode_frequency_is_stable_across_variants",
+            "no_holdout_access",
+            "claim_promotion_false",
         ),
-        "Do not digitize the thermal figure for C_src acceptance; obtain a permitted raw force-constant package or use the author/same-regime route.",
+        ("accepted_as_ding_csrc", "alpha_phi_k_calibrated", "claim_promotion"),
+        "COMPARATOR_REJECTED_AA_LIKE_STACK_AND_UNSTABLE_MODE_NOT_DING_PBTE",
+        (
+            "the deposited two-atom P6/mmm cell is AA-like and is not demonstrated equivalent to stable ABAB graphite or Ding's TTG specimen",
+            "a basal-plane negative mode at q=(0,0,1/2) persists after acoustic sum-rule residual reduction and across five force-constant variants",
+            "the reanalysis is harmonic C_v comparison only, not Ding mode-resolved PBTE C_src with source-grade uncertainty",
+            "no independent alpha_Phi_K calibration or Phi-to-temperature mapping is supplied",
+        ),
+        "Keep MP-990448 as a source-specific harmonic diagnostic; do not spend further cycles trying to qualify it as Ding/natural-graphite evidence. Obtain an authorized Ding payload or a same-regime ABAB PBTE reproduction.",
+        (
+            (
+                "docs/core/07_artifacts/topic13/t13_nims_mp990448_phonon_source_boundary_audit.json",
+                "original NIMS archive boundary audit",
+            ),
+        ),
     ),
     spec(
         "huang_2023_nims",
@@ -426,8 +453,9 @@ def reference(path: Path, role: str) -> dict[str, Any]:
 
 def policy_passes(audit: dict[str, Any], route: dict[str, Any]) -> bool:
     checks = audit.get("checks", {})
+    scope_controls = audit.get("scope_controls", checks)
     return all(checks.get(key) is True for key in route["true_checks"]) and all(
-        checks.get(key) is False for key in route["false_checks"]
+        scope_controls.get(key) is False for key in route["false_checks"]
     )
 
 
@@ -462,6 +490,10 @@ def build_route(route: dict[str, Any]) -> tuple[dict[str, Any], dict[str, bool]]
             "current_state": route["current_state"],
             "source_package": reference(package_path, "source package or request manifest"),
             "audit_artifact": reference(audit_path, "route qualification audit"),
+            "additional_evidence": [
+                reference(ROOT / path, role)
+                for path, role in route.get("additional_evidence", ())
+            ],
             "package_status": package.get("status"),
             "audit_status": audit.get("status"),
             "field_coverage": coverage,
@@ -541,7 +573,7 @@ def main() -> int:
                 "The direct Ding author route is selected as priority 1 and is explicitly not sent or treated as received.",
                 "Numeric Calorine candidates are separated from Ding acceptance because material/state equivalence and source-grade uncertainty are missing.",
                 "QH-15 natural-graphite C_v rows are recorded as a numeric comparator but are not relabeled as mode-resolved Ding C_src.",
-                "Public OA, NIMS, Huang, and Huberman routes are bounded as non-productive for accepted numeric C_src under their captured payloads.",
+                "Public OA, Huang, and Huberman remain payload boundaries; NIMS MP-990448 is now a source-specific harmonic comparator with an AA-like unstable mode, still ineligible as Ding C_src.",
                 "The next action is an external input change or a genuinely qualifying same-regime reproduction, not another unchanged gate rerun.",
                 "The nine-route priority inventory is explicitly related to the ten-candidate reconciliation inventory; the count difference is scope, not silent route loss.",
             ],
@@ -577,7 +609,7 @@ def main() -> int:
         },
         "checks": global_checks,
         "route_checks": route_checks,
-        "what_changed": "Ranked and field-audited all currently captured C_src source routes without importing or synthesizing a numeric replacement; made the relationship to the broader reconciliation inventory explicit.",
+        "what_changed": "Ranked and field-audited captured C_src routes, linked the NIMS force-set reanalysis and structural limitation, and retained the distinction between a harmonic comparator and an accepted Ding-compatible C_src source.",
         "verification": "Every route package and audit is hash-referenced; expected statuses, field coverage, policy checks, fail-closed acceptance, holdout exclusion, and cross-inventory coverage are machine-checked.",
         "controlling_blocker": "ding_pbte_C_src_numeric_or_accepted_independent_reproduction_missing",
         "next_action": "Obtain authorization to send the prepared Ding request, or obtain a genuinely same-regime PBTE reproduction. Do not infer C_src from normalized TTG rows, incident fluence, comparator c_v, or an unchanged rerun.",

@@ -1,0 +1,405 @@
+{
+  "schema_version": "core-curved-3p1-gh-krsw-normal-incidence-energy-v1",
+  "artifact": "curved_3p1_gh_krsw_normal_incidence_energy",
+  "generated_at": "2026-09-25T18:51:06+00:00",
+  "status": "PASS_EXACT_ONE_FACE_NORMAL_INCIDENCE_BOUNDARY_FORM_IDENTITY",
+  "major_result_id": "CORE_CURVED_3P1_GH_KRSW_NORMAL_INCIDENCE_BOUNDARY_ENERGY_IDENTITY",
+  "major_result": {
+    "major_result_id": "CORE_CURVED_3P1_GH_KRSW_NORMAL_INCIDENCE_BOUNDARY_ENERGY_IDENTITY",
+    "topic": "core_curved_3p1",
+    "closure_level": "CLOSED_FOR_LANE",
+    "what_is_closed": [
+      "Exact rational reconstruction of the KRSW linearized harmonic plane-boundary hierarchy at normal incidence for each face orientation.",
+      "For each one-face map q=M p, an explicitly constructed positive quadratic form H satisfies the declared characteristic-form identity exactly.",
+      "The two-face algebraic composition has an exact fixed amplitude; this is a boundary-map composition result, not a slab evolution mode."
+    ],
+    "what_remains_open": [
+      "Tangential-frequency, glancing, imaginary/general complex-frequency and high-frequency domains are not covered.",
+      "The constructed H and chi-weighted quadratic form are an algebraic certificate, not yet identified with the energy norm of the evolving Core GH discretization.",
+      "No two-face slab evolution, corner treatment, variable-coefficient or nonlinear GH CPBC estimate is established.",
+      "The exact neutral boundary-map amplitude means the one-face estimate does not prove strict two-face dissipation."
+    ],
+    "equation_or_mapping": {
+      "linear_characteristics": "q=Pi-Phi_n=-a; p=Pi+Phi_n=-b; a=(partial_t+s partial_x)gamma; b=(partial_t-s partial_x)gamma",
+      "boundary_map": "A_s a + B_s b=0; q=M_s p; M_s=-A_s^{-1}B_s after exact trace reversal gamma_ab=-h_ab+(1/2)eta_ab eta^cd h_cd",
+      "quadratic_form": "H=W+r^-1 M^T W M+r^-2 (M^2)^T W M^2; W=diag(1 for diagonal, 2 for off-diagonal symmetric tensor slots); chi=1/4; r=(1-chi)/(1+chi)=3/5",
+      "exact_form_identity": "M^T H M=r(H-W)",
+      "declared_characteristic_flux_form": "F=(chi-1)p^T H p/2+(chi+1)q^T H q/2=-(1-chi)p^T W p/2=-3 p^T W p/8 for q=M p",
+      "two_face_composition": "M_left M_right v=v, v_(t,y)=v_(x,y)=1 and all other symmetric components zero"
+    },
+    "units": "Dimensionless amplitudes in a flat-background linearized standard-GR normal-incidence lane; no SI observable map.",
+    "derivation_class": "exact rational linear algebra over the published KRSW plane-boundary hierarchy",
+    "observable": "declared quadratic characteristic boundary form, not a physical detector observable",
+    "data_role": "published standard-GR equation comparator plus exact internal algebra; no empirical data, fit, or holdout",
+    "verification_status": "PASS_EXACT_ONE_FACE_NORMAL_INCIDENCE_BOUNDARY_FORM_IDENTITY",
+    "open_blockers": [
+      "identify a compatible energy norm and prove a two-face discrete slab estimate for the full GH evolution",
+      "extend the frequency analysis beyond normal incidence and connect the imported boundary theorem hypotheses to the Core GH system"
+    ],
+    "dependency_unlocked": "none",
+    "claim_boundary": "A CLOSED_FOR_LANE exact algebraic comparator only; not a Core curved 3+1 closure, full GH well-posedness proof, UET validation, Gravity compatibility, or evidence for Topic 13."
+  },
+  "source": {
+    "title": "Boundary conditions for coupled quasilinear wave equations with application to isolated systems",
+    "authors": [
+      "H.-O. Kreiss",
+      "O. Reula",
+      "O. Sarbach",
+      "J. Winicour"
+    ],
+    "locator": "Section IV.1, equations (55)-(67) and the harmonic constraints immediately following equation (67)",
+    "url": "https://arxiv.org/html/0807.3207",
+    "role": "imported standard-GR boundary hierarchy; not a UET derivation"
+  },
+  "scope": {
+    "background": "Minkowski",
+    "equations": "linearized vacuum Einstein in harmonic coordinates with four harmonic constraints",
+    "incidence": "normal only; tangential derivatives set to zero",
+    "faces": [
+      "outward normal +x",
+      "outward normal -x"
+    ],
+    "omitted_terms": [
+      "lower-order GH gamma2 contribution",
+      "curvature",
+      "variable coefficients",
+      "matter source",
+      "finite tangential frequency"
+    ],
+    "two_face_interpretation": "composition of algebraic face maps only; no spatial propagation or slab time evolution"
+  },
+  "component_order": [
+    [
+      0,
+      0
+    ],
+    [
+      0,
+      1
+    ],
+    [
+      0,
+      2
+    ],
+    [
+      0,
+      3
+    ],
+    [
+      1,
+      1
+    ],
+    [
+      1,
+      2
+    ],
+    [
+      1,
+      3
+    ],
+    [
+      2,
+      2
+    ],
+    [
+      2,
+      3
+    ],
+    [
+      3,
+      3
+    ]
+  ],
+  "face_maps": {
+    "right": {
+      "normal_sign": 1,
+      "boundary_matrix_rank": 10,
+      "trace_reversal_involution_exact": true,
+      "map_rank": 4,
+      "map_squared_rank": 1,
+      "map_cubed_is_exactly_zero": true,
+      "incoming_from_outgoing_map": [
+        [
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "-1/4",
+          "0",
+          "-1/4"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "1/4",
+          "0",
+          "1/4"
+        ],
+        [
+          "0",
+          "0",
+          "-1/2",
+          "0",
+          "0",
+          "-1/2",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "-1/2",
+          "0",
+          "0",
+          "-1/2",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "-1/4",
+          "0",
+          "-1/4"
+        ],
+        [
+          "0",
+          "0",
+          "1/2",
+          "0",
+          "0",
+          "1/2",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "1/2",
+          "0",
+          "0",
+          "1/2",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "-1/2",
+          "-1",
+          "0",
+          "0",
+          "-1/2",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "-1/2",
+          "-1",
+          "0",
+          "0",
+          "-1/2",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ]
+      ],
+      "quadratic_form_identity_exact": true,
+      "quadratic_flux_identity_exact": true
+    },
+    "left": {
+      "normal_sign": -1,
+      "boundary_matrix_rank": 10,
+      "trace_reversal_involution_exact": true,
+      "map_rank": 4,
+      "map_squared_rank": 1,
+      "map_cubed_is_exactly_zero": true,
+      "incoming_from_outgoing_map": [
+        [
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "-1/4",
+          "0",
+          "-1/4"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "-1/4",
+          "0",
+          "-1/4"
+        ],
+        [
+          "0",
+          "0",
+          "-1/2",
+          "0",
+          "0",
+          "1/2",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "-1/2",
+          "0",
+          "0",
+          "1/2",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "-1/4",
+          "0",
+          "-1/4"
+        ],
+        [
+          "0",
+          "0",
+          "-1/2",
+          "0",
+          "0",
+          "1/2",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "-1/2",
+          "0",
+          "0",
+          "1/2",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "-1/2",
+          "1",
+          "0",
+          "0",
+          "-1/2",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "-1/2",
+          "1",
+          "0",
+          "0",
+          "-1/2",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ]
+      ],
+      "quadratic_form_identity_exact": true,
+      "quadratic_flux_identity_exact": true
+    }
+  },
+  "two_face": {
+    "composition_rank": 4,
+    "fixed_vector_components": {
+      "h_02": "1",
+      "h_12": "1"
+    },
+    "fixed_vector_residual_exact": "0",
+    "interpretation": "neutral algebraic boundary-map amplitude; not a physical eigenmode or slab-instability proof"
+  },
+  "checks": {
+    "component_order_matches_core_symmetric_pairs": true,
+    "right_boundary_map_is_full_rank": true,
+    "left_boundary_map_is_full_rank": true,
+    "right_map_is_nilpotent_index_three": true,
+    "left_map_is_nilpotent_index_three": true,
+    "right_quadratic_identities_exact": true,
+    "left_quadratic_identities_exact": true,
+    "two_face_composition_has_exact_neutral_amplitude": true
+  },
+  "claim_promotion": false,
+  "dependency_unlocked": [],
+  "source_hashes": {
+    "docs/scripts/audit/audit_curved_3p1_gh_krsw_normal_incidence_energy.py": "434febb7aa4e216039093fc7b08debe5c014072a6ce988842293dd4f3b998062",
+    "docs/core/02_equations/covariant/uet_curved_3p1_gh_boundary_projectors.py": "2aa529e3a037a5ecff2c2a5a6d454ef7cf9822ca99371393d6614bfbc062362f",
+    "docs/core/02_equations/covariant/uet_curved_3p1_generalized_harmonic.py": "4f0c8ed0e5afe52e43cedefeb9c061e10dbd440fd20e8bc57a8aacfa43e76f92"
+  }
+}

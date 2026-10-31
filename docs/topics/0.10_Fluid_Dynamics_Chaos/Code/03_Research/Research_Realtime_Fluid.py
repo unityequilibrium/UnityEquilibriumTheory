@@ -43,7 +43,7 @@ import sys
 # Robust Root Finding (Standard 5x4 Grid Pattern)
 
 
-from docs.core.uet_glass_box import UETPathManager
+from docs.scripts.core.runners.uet_glass_box import UETPathManager
 
 # Add Topic Directory to sys.path to allow sibling imports (01_Engine)
 # Current: Code/03_Research/Script.py

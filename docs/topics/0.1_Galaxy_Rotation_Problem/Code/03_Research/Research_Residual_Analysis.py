@@ -38,7 +38,7 @@ from pathlib import Path
 
 
 try:
-    from docs.core.uet_glass_box import UETPathManager
+    from docs.scripts.core.runners.uet_glass_box import UETPathManager
 except ImportError as e:
     print(f"Import Error: {e}")
 

@@ -1,0 +1,2082 @@
+{
+  "schema_version": "core-curved-3p1-gh-rinne-high-frequency-transfer-endpoint-v1",
+  "artifact": "curved_3p1_gh_rinne_high_frequency_transfer_endpoint",
+  "generated_at": "2026-09-26T06:30:26+00:00",
+  "major_result_id": "CORE_CURVED_3P1_GH_RINNE_HIGH_FREQUENCY_TRANSFER_MATRIX_ENDPOINT",
+  "major_result": {
+    "major_result_id": "CORE_CURVED_3P1_GH_RINNE_HIGH_FREQUENCY_TRANSFER_MATRIX_ENDPOINT",
+    "topic": "core_curved_3p1",
+    "closure_level": "CLOSED_FOR_LANE",
+    "what_is_closed": [
+      "For every fixed beta in (-1,0), the normalized decaying modes have exact leading limits v1=(zeta/|zeta|)*(1,1,0,0)/sqrt(2), v2=(zeta/|zeta|)*(0,0,1,0), v3=(0,0,0,1), with lambda1/zeta -> -1/(1-beta) and lambda2/zeta=1/beta.",
+      "Substitution into the registered scaled GH boundary rows defines finite matrices C_infinity(beta) and W_infinity(beta); the common phase cancels in T_infinity=W_infinity*C_infinity^{-1}.",
+      "The exact determinant asymptote is |det C_infinity|=2^8/(|beta|^20*(1-beta)^6)>0 for each fixed beta in (-1,0), so the endpoint boundary matrix is invertible throughout that open lane.",
+      "Direct construction and finite-frequency convergence were checked on 12 beta values and 180 complex-frequency points. The operator norm matches 1-beta numerically on this grid, not as a proved identity."
+    ],
+    "what_remains_open": [
+      "A symbolic proof of ||T_infinity||_2=1-beta is open; the singular norm equality is only a numerical candidate.",
+      "The zeta->0 transfer extension and a uniform transfer bound over all finite frequencies for each fixed beta remain open.",
+      "No family-uniform Kreiss constant near beta endpoints, full variable-coefficient GH boundary evolution, tangential/corner treatment, observable mapping, or Core-parent closure is claimed."
+    ],
+    "equation_or_mapping": {
+      "lambda1_ratio_limit": "lambda1/zeta -> -1/(1-beta)",
+      "lambda2_ratio": "lambda2/zeta = 1/beta",
+      "normalized_mode_limits": [
+        "v1=(zeta/|zeta|)*(1,1,0,0)/sqrt(2)",
+        "v2=(zeta/|zeta|)*(0,0,1,0)",
+        "v3=(0,0,0,1)"
+      ],
+      "endpoint_transfer": "T_infinity(beta)=W_infinity(beta)*C_infinity(beta)^-1",
+      "endpoint_determinant": "|det C_infinity|=2^8/(|beta|^20*(1-beta)^6)",
+      "operator_norm_candidate": "||T_infinity||_2=1-beta; exploratory numerical check only"
+    },
+    "units": "Dimensionless frozen-coefficient Fourier-Laplace variables; tangential frequency normalized to one.",
+    "derivation_class": "analytic leading-mode and scaled-boundary-map limit; determinant inherited from source-matched Eq. (123); numerical matrix convergence cross-check",
+    "observable": "30x30 high-frequency boundary matrix, 40x30 state-transfer endpoint, determinant log error, singular norm, and finite-frequency matrix convergence",
+    "data_role": "internal standard-GR frozen-coefficient diagnostic; no empirical data, fitting, or holdout",
+    "evidence_artifacts": [
+      {
+        "path": "docs/scripts/audit/audit_curved_3p1_gh_rinne_high_frequency_transfer_endpoint.py",
+        "sha256": "e40a9806ee5687019d30a1a6587709c54a7abb62d5bbb5da11f3ae26805c9399"
+      },
+      {
+        "path": "docs/scripts/audit/audit_curved_3p1_gh_rinne_complex_frequency_screen.py",
+        "sha256": "2fb64eedd2a6be10985eafdacc2ce7125e082dd60625d004ecbb4ea379b0911b"
+      },
+      {
+        "path": "docs/core/07_artifacts/verification/curved_3p1_gh_rinne_negative_shift_kreiss_symbol.json",
+        "sha256": "5d48f6efe14f8c3501da5d8568544608fcc2d8fe7b24f798523ffdd919e39924"
+      }
+    ],
+    "verification_status": "PASS_EXACT_HIGH_FREQUENCY_TRANSFER_MATRIX_ENDPOINT",
+    "open_blockers": [
+      "zero_frequency_transfer_extension_and_compactified_continuous_transfer_bound_unproved",
+      "analytic_high_frequency_operator_norm_identity_unproved",
+      "full_variable_coefficient_GH_boundary_and_Core_parent_gates_remain_open"
+    ],
+    "dependency_unlocked": "none; Core parent remains PARTIAL and Gravity remains blocked",
+    "claim_boundary": "Exact source-matched high-frequency endpoint matrix construction for the frozen-coefficient standard-GR negative-normal-shift lane, with an analytic nonzero determinant limit. The norm identity ||T_infinity||_2=1-beta is only numerically checked on an exploratory beta grid; this is not a continuous all-frequency Kreiss proof or Core-parent closure."
+  },
+  "closure_level": "CLOSED_FOR_LANE",
+  "MAJOR_RESULT_CLOSURE": "CLOSED_FOR_LANE",
+  "WHAT_IS_ACTUALLY_CLOSED": [
+    "For every fixed beta in (-1,0), the normalized decaying modes have exact leading limits v1=(zeta/|zeta|)*(1,1,0,0)/sqrt(2), v2=(zeta/|zeta|)*(0,0,1,0), v3=(0,0,0,1), with lambda1/zeta -> -1/(1-beta) and lambda2/zeta=1/beta.",
+    "Substitution into the registered scaled GH boundary rows defines finite matrices C_infinity(beta) and W_infinity(beta); the common phase cancels in T_infinity=W_infinity*C_infinity^{-1}.",
+    "The exact determinant asymptote is |det C_infinity|=2^8/(|beta|^20*(1-beta)^6)>0 for each fixed beta in (-1,0), so the endpoint boundary matrix is invertible throughout that open lane.",
+    "Direct construction and finite-frequency convergence were checked on 12 beta values and 180 complex-frequency points. The operator norm matches 1-beta numerically on this grid, not as a proved identity."
+  ],
+  "WHAT_REMAINS_OPEN": [
+    "A symbolic proof of ||T_infinity||_2=1-beta is open; the singular norm equality is only a numerical candidate.",
+    "The zeta->0 transfer extension and a uniform transfer bound over all finite frequencies for each fixed beta remain open.",
+    "No family-uniform Kreiss constant near beta endpoints, full variable-coefficient GH boundary evolution, tangential/corner treatment, observable mapping, or Core-parent closure is claimed."
+  ],
+  "DEPENDENCY_UNLOCKED": "none; Core parent remains PARTIAL and Gravity remains blocked",
+  "STATUS": "PASS_EXACT_HIGH_FREQUENCY_TRANSFER_MATRIX_ENDPOINT",
+  "status": "PASS_EXACT_HIGH_FREQUENCY_TRANSFER_MATRIX_ENDPOINT",
+  "EQUATION_OR_MAPPING": {
+    "lambda1_ratio_limit": "lambda1/zeta -> -1/(1-beta)",
+    "lambda2_ratio": "lambda2/zeta = 1/beta",
+    "normalized_mode_limits": [
+      "v1=(zeta/|zeta|)*(1,1,0,0)/sqrt(2)",
+      "v2=(zeta/|zeta|)*(0,0,1,0)",
+      "v3=(0,0,0,1)"
+    ],
+    "endpoint_transfer": "T_infinity(beta)=W_infinity(beta)*C_infinity(beta)^-1",
+    "endpoint_determinant": "|det C_infinity|=2^8/(|beta|^20*(1-beta)^6)",
+    "operator_norm_candidate": "||T_infinity||_2=1-beta; exploratory numerical check only"
+  },
+  "VERIFICATION": {
+    "checks": {
+      "all_endpoint_matrices_are_finite_with_expected_shapes": true,
+      "analytic_eq123_endpoint_determinant_matches_direct_matrix": true,
+      "endpoint_matrices_are_nonsingular_on_sampled_beta_grid": true,
+      "candidate_norm_matches_on_exploratory_beta_grid": true,
+      "asymptotic_phase_cancels_from_the_state_transfer": true,
+      "finite_frequency_matrices_converge_to_endpoint_on_screen": true
+    },
+    "beta_values": [
+      -0.01,
+      -0.03,
+      -0.1,
+      -0.2,
+      -0.35,
+      -0.5,
+      -0.65,
+      -0.8,
+      -0.9,
+      -0.95,
+      -0.98,
+      -0.99
+    ],
+    "endpoint_cases": [
+      {
+        "beta": -0.01,
+        "boundary_shape": [
+          30,
+          30
+        ],
+        "state_operator_shape": [
+          40,
+          30
+        ],
+        "boundary_minimum_singular_value": 0.99009900990099,
+        "boundary_log_abs_determinant": 97.58887917912236,
+        "eq123_asymptotic_log_abs_determinant": 97.58887917912237,
+        "eq123_asymptotic_log_error": 1.4210854715202004e-14,
+        "state_operator_norm_2": 1.0100000000000005,
+        "candidate_norm_1_minus_beta": 1.01,
+        "candidate_norm_abs_error": 4.440892098500626e-16,
+        "boundary_determinant_nonzero": true,
+        "all_entries_finite": true
+      },
+      {
+        "beta": -0.03,
+        "boundary_shape": [
+          30,
+          30
+        ],
+        "state_operator_shape": [
+          40,
+          30
+        ],
+        "boundary_minimum_singular_value": 0.9708737864077676,
+        "boundary_log_abs_determinant": 75.49898257742991,
+        "eq123_asymptotic_log_abs_determinant": 75.49898257742994,
+        "eq123_asymptotic_log_error": 2.842170943040401e-14,
+        "state_operator_norm_2": 1.0300000000000002,
+        "candidate_norm_1_minus_beta": 1.03,
+        "candidate_norm_abs_error": 2.220446049250313e-16,
+        "boundary_determinant_nonzero": true,
+        "all_entries_finite": true
+      },
+      {
+        "beta": -0.1,
+        "boundary_shape": [
+          30,
+          30
+        ],
+        "state_operator_shape": [
+          40,
+          30
+        ],
+        "boundary_minimum_singular_value": 0.9090909090909095,
+        "boundary_log_abs_determinant": 51.02501822553452,
+        "eq123_asymptotic_log_abs_determinant": 51.025018225534524,
+        "eq123_asymptotic_log_error": 7.105427357601002e-15,
+        "state_operator_norm_2": 1.1000000000000003,
+        "candidate_norm_1_minus_beta": 1.1,
+        "candidate_norm_abs_error": 2.220446049250313e-16,
+        "boundary_determinant_nonzero": true,
+        "all_entries_finite": true
+      },
+      {
+        "beta": -0.2,
+        "boundary_shape": [
+          30,
+          30
+        ],
+        "state_operator_shape": [
+          40,
+          30
+        ],
+        "boundary_minimum_singular_value": 0.8333333333333338,
+        "boundary_log_abs_determinant": 36.64000635239783,
+        "eq123_asymptotic_log_abs_determinant": 36.64000635239784,
+        "eq123_asymptotic_log_error": 7.105427357601002e-15,
+        "state_operator_norm_2": 1.2000000000000002,
+        "candidate_norm_1_minus_beta": 1.2,
+        "candidate_norm_abs_error": 2.220446049250313e-16,
+        "boundary_determinant_nonzero": true,
+        "all_entries_finite": true
+      },
+      {
+        "beta": -0.35,
+        "boundary_shape": [
+          30,
+          30
+        ],
+        "state_operator_shape": [
+          40,
+          30
+        ],
+        "boundary_minimum_singular_value": 0.7407407407407406,
+        "boundary_log_abs_determinant": 24.74099237975109,
+        "eq123_asymptotic_log_abs_determinant": 24.74099237975109,
+        "eq123_asymptotic_log_error": 0.0,
+        "state_operator_norm_2": 1.35,
+        "candidate_norm_1_minus_beta": 1.35,
+        "candidate_norm_abs_error": 0.0,
+        "boundary_determinant_nonzero": true,
+        "all_entries_finite": true
+      },
+      {
+        "beta": -0.5,
+        "boundary_shape": [
+          30,
+          30
+        ],
+        "state_operator_shape": [
+          40,
+          30
+        ],
+        "boundary_minimum_singular_value": 0.6666666666666664,
+        "boundary_log_abs_determinant": 16.975330407029478,
+        "eq123_asymptotic_log_abs_determinant": 16.97533040702948,
+        "eq123_asymptotic_log_error": 3.552713678800501e-15,
+        "state_operator_norm_2": 1.5,
+        "candidate_norm_1_minus_beta": 1.5,
+        "candidate_norm_abs_error": 0.0,
+        "boundary_determinant_nonzero": true,
+        "all_entries_finite": true
+      },
+      {
+        "beta": -0.65,
+        "boundary_shape": [
+          30,
+          30
+        ],
+        "state_operator_shape": [
+          40,
+          30
+        ],
+        "boundary_minimum_singular_value": 0.606060606060606,
+        "boundary_log_abs_determinant": 11.156184038853706,
+        "eq123_asymptotic_log_abs_determinant": 11.156184038853711,
+        "eq123_asymptotic_log_error": 5.329070518200751e-15,
+        "state_operator_norm_2": 1.6500000000000001,
+        "candidate_norm_1_minus_beta": 1.65,
+        "candidate_norm_abs_error": 2.220446049250313e-16,
+        "boundary_determinant_nonzero": true,
+        "all_entries_finite": true
+      },
+      {
+        "beta": -0.8,
+        "boundary_shape": [
+          30,
+          30
+        ],
+        "state_operator_shape": [
+          40,
+          30
+        ],
+        "boundary_minimum_singular_value": 0.5555555555555556,
+        "boundary_log_abs_determinant": 6.481328481351041,
+        "eq123_asymptotic_log_abs_determinant": 6.481328481351043,
+        "eq123_asymptotic_log_error": 1.7763568394002505e-15,
+        "state_operator_norm_2": 1.8000000000000003,
+        "candidate_norm_1_minus_beta": 1.8,
+        "candidate_norm_abs_error": 2.220446049250313e-16,
+        "boundary_determinant_nonzero": true,
+        "all_entries_finite": true
+      },
+      {
+        "beta": -0.9,
+        "boundary_shape": [
+          30,
+          30
+        ],
+        "state_operator_shape": [
+          40,
+          30
+        ],
+        "boundary_minimum_singular_value": 0.5263157894736843,
+        "boundary_log_abs_determinant": 3.801264440601717,
+        "eq123_asymptotic_log_abs_determinant": 3.80126444060172,
+        "eq123_asymptotic_log_error": 3.1086244689504383e-15,
+        "state_operator_norm_2": 1.9,
+        "candidate_norm_1_minus_beta": 1.9,
+        "candidate_norm_abs_error": 0.0,
+        "boundary_determinant_nonzero": true,
+        "all_entries_finite": true
+      },
+      {
+        "beta": -0.95,
+        "boundary_shape": [
+          30,
+          30
+        ],
+        "state_operator_shape": [
+          40,
+          30
+        ],
+        "boundary_minimum_singular_value": 0.5128205128205126,
+        "boundary_log_abs_determinant": 2.5640670967766392,
+        "eq123_asymptotic_log_abs_determinant": 2.5640670967766415,
+        "eq123_asymptotic_log_error": 2.220446049250313e-15,
+        "state_operator_norm_2": 1.9499999999999997,
+        "candidate_norm_1_minus_beta": 1.95,
+        "candidate_norm_abs_error": 2.220446049250313e-16,
+        "boundary_determinant_nonzero": true,
+        "all_entries_finite": true
+      },
+      {
+        "beta": -0.98,
+        "boundary_shape": [
+          30,
+          30
+        ],
+        "state_operator_shape": [
+          40,
+          30
+        ],
+        "boundary_minimum_singular_value": 0.5050505050505051,
+        "boundary_log_abs_determinant": 1.8506505225912884,
+        "eq123_asymptotic_log_abs_determinant": 1.8506505225912884,
+        "eq123_asymptotic_log_error": 0.0,
+        "state_operator_norm_2": 1.9800000000000006,
+        "candidate_norm_1_minus_beta": 1.98,
+        "candidate_norm_abs_error": 6.661338147750939e-16,
+        "boundary_determinant_nonzero": true,
+        "all_entries_finite": true
+      },
+      {
+        "beta": -0.99,
+        "boundary_shape": [
+          30,
+          30
+        ],
+        "state_operator_shape": [
+          40,
+          30
+        ],
+        "boundary_minimum_singular_value": 0.5025125628140701,
+        "boundary_log_abs_determinant": 1.6173763291311847,
+        "eq123_asymptotic_log_abs_determinant": 1.6173763291311847,
+        "eq123_asymptotic_log_error": 0.0,
+        "state_operator_norm_2": 1.9899999999999998,
+        "candidate_norm_1_minus_beta": 1.99,
+        "candidate_norm_abs_error": 2.220446049250313e-16,
+        "boundary_determinant_nonzero": true,
+        "all_entries_finite": true
+      }
+    ],
+    "phase_independence_angles": [
+      0.0,
+      0.7853981633974483,
+      -0.7853981633974483,
+      1.5697963267948967,
+      -1.5697963267948967
+    ],
+    "phase_independence_cases": [
+      {
+        "beta": -0.01,
+        "angle": 0.0,
+        "relative_operator_error": 0.0
+      },
+      {
+        "beta": -0.01,
+        "angle": 0.7853981633974483,
+        "relative_operator_error": 8.225960890656407e-17
+      },
+      {
+        "beta": -0.01,
+        "angle": -0.7853981633974483,
+        "relative_operator_error": 8.225960890656407e-17
+      },
+      {
+        "beta": -0.01,
+        "angle": 1.5697963267948967,
+        "relative_operator_error": 1.8752076055871256e-16
+      },
+      {
+        "beta": -0.01,
+        "angle": -1.5697963267948967,
+        "relative_operator_error": 1.8752076055871256e-16
+      },
+      {
+        "beta": -0.03,
+        "angle": 0.0,
+        "relative_operator_error": 0.0
+      },
+      {
+        "beta": -0.03,
+        "angle": 0.7853981633974483,
+        "relative_operator_error": 9.468537955242899e-17
+      },
+      {
+        "beta": -0.03,
+        "angle": -0.7853981633974483,
+        "relative_operator_error": 9.468537955242899e-17
+      },
+      {
+        "beta": -0.03,
+        "angle": 1.5697963267948967,
+        "relative_operator_error": 1.0828295653819233e-16
+      },
+      {
+        "beta": -0.03,
+        "angle": -1.5697963267948967,
+        "relative_operator_error": 1.0828295653819233e-16
+      },
+      {
+        "beta": -0.1,
+        "angle": 0.0,
+        "relative_operator_error": 0.0
+      },
+      {
+        "beta": -0.1,
+        "angle": 0.7853981633974483,
+        "relative_operator_error": 7.711107198025912e-17
+      },
+      {
+        "beta": -0.1,
+        "angle": -0.7853981633974483,
+        "relative_operator_error": 7.711107198025912e-17
+      },
+      {
+        "beta": -0.1,
+        "angle": 1.5697963267948967,
+        "relative_operator_error": 2.358775161444786e-16
+      },
+      {
+        "beta": -0.1,
+        "angle": -1.5697963267948967,
+        "relative_operator_error": 2.358775161444786e-16
+      },
+      {
+        "beta": -0.2,
+        "angle": 0.0,
+        "relative_operator_error": 0.0
+      },
+      {
+        "beta": -0.2,
+        "angle": 0.7853981633974483,
+        "relative_operator_error": 8.81344937066143e-17
+      },
+      {
+        "beta": -0.2,
+        "angle": -0.7853981633974483,
+        "relative_operator_error": 8.81344937066143e-17
+      },
+      {
+        "beta": -0.2,
+        "angle": 1.5697963267948967,
+        "relative_operator_error": 1.3142197344834224e-16
+      },
+      {
+        "beta": -0.2,
+        "angle": -1.5697963267948967,
+        "relative_operator_error": 1.3142197344834224e-16
+      },
+      {
+        "beta": -0.35,
+        "angle": 0.0,
+        "relative_operator_error": 0.0
+      },
+      {
+        "beta": -0.35,
+        "angle": 0.7853981633974483,
+        "relative_operator_error": 5.92593210817087e-17
+      },
+      {
+        "beta": -0.35,
+        "angle": -0.7853981633974483,
+        "relative_operator_error": 5.92593210817087e-17
+      },
+      {
+        "beta": -0.35,
+        "angle": 1.5697963267948967,
+        "relative_operator_error": 1.7533544426271703e-16
+      },
+      {
+        "beta": -0.35,
+        "angle": -1.5697963267948967,
+        "relative_operator_error": 1.7533544426271703e-16
+      },
+      {
+        "beta": -0.5,
+        "angle": 0.0,
+        "relative_operator_error": 0.0
+      },
+      {
+        "beta": -0.5,
+        "angle": 0.7853981633974483,
+        "relative_operator_error": 5.327226186007249e-17
+      },
+      {
+        "beta": -0.5,
+        "angle": -0.7853981633974483,
+        "relative_operator_error": 5.327226186007249e-17
+      },
+      {
+        "beta": -0.5,
+        "angle": 1.5697963267948967,
+        "relative_operator_error": 1.5053633452615704e-16
+      },
+      {
+        "beta": -0.5,
+        "angle": -1.5697963267948967,
+        "relative_operator_error": 1.5053633452615704e-16
+      },
+      {
+        "beta": -0.65,
+        "angle": 0.0,
+        "relative_operator_error": 0.0
+      },
+      {
+        "beta": -0.65,
+        "angle": 0.7853981633974483,
+        "relative_operator_error": 1.210951424525019e-16
+      },
+      {
+        "beta": -0.65,
+        "angle": -0.7853981633974483,
+        "relative_operator_error": 1.210951424525019e-16
+      },
+      {
+        "beta": -0.65,
+        "angle": 1.5697963267948967,
+        "relative_operator_error": 1.0418465896536421e-16
+      },
+      {
+        "beta": -0.65,
+        "angle": -1.5697963267948967,
+        "relative_operator_error": 1.0418465896536421e-16
+      },
+      {
+        "beta": -0.8,
+        "angle": 0.0,
+        "relative_operator_error": 0.0
+      },
+      {
+        "beta": -0.8,
+        "angle": 0.7853981633974483,
+        "relative_operator_error": 1.0595370926282087e-16
+      },
+      {
+        "beta": -0.8,
+        "angle": -0.7853981633974483,
+        "relative_operator_error": 1.0595370926282087e-16
+      },
+      {
+        "beta": -0.8,
+        "angle": 1.5697963267948967,
+        "relative_operator_error": 1.258657725511967e-16
+      },
+      {
+        "beta": -0.8,
+        "angle": -1.5697963267948967,
+        "relative_operator_error": 1.258657725511967e-16
+      },
+      {
+        "beta": -0.9,
+        "angle": 0.0,
+        "relative_operator_error": 0.0
+      },
+      {
+        "beta": -0.9,
+        "angle": 0.7853981633974483,
+        "relative_operator_error": 7.155292678841463e-17
+      },
+      {
+        "beta": -0.9,
+        "angle": -0.7853981633974483,
+        "relative_operator_error": 7.155292678841463e-17
+      },
+      {
+        "beta": -0.9,
+        "angle": 1.5697963267948967,
+        "relative_operator_error": 9.121000388842042e-17
+      },
+      {
+        "beta": -0.9,
+        "angle": -1.5697963267948967,
+        "relative_operator_error": 9.121000388842042e-17
+      },
+      {
+        "beta": -0.95,
+        "angle": 0.0,
+        "relative_operator_error": 0.0
+      },
+      {
+        "beta": -0.95,
+        "angle": 0.7853981633974483,
+        "relative_operator_error": 5.618612654597128e-17
+      },
+      {
+        "beta": -0.95,
+        "angle": -0.7853981633974483,
+        "relative_operator_error": 5.618612654597128e-17
+      },
+      {
+        "beta": -0.95,
+        "angle": 1.5697963267948967,
+        "relative_operator_error": 1.2218727447920906e-16
+      },
+      {
+        "beta": -0.95,
+        "angle": -1.5697963267948967,
+        "relative_operator_error": 1.2218727447920906e-16
+      },
+      {
+        "beta": -0.98,
+        "angle": 0.0,
+        "relative_operator_error": 0.0
+      },
+      {
+        "beta": -0.98,
+        "angle": 0.7853981633974483,
+        "relative_operator_error": 1.26943379678305e-16
+      },
+      {
+        "beta": -0.98,
+        "angle": -0.7853981633974483,
+        "relative_operator_error": 1.26943379678305e-16
+      },
+      {
+        "beta": -0.98,
+        "angle": 1.5697963267948967,
+        "relative_operator_error": 9.062258942796364e-17
+      },
+      {
+        "beta": -0.98,
+        "angle": -1.5697963267948967,
+        "relative_operator_error": 9.062258942796364e-17
+      },
+      {
+        "beta": -0.99,
+        "angle": 0.0,
+        "relative_operator_error": 0.0
+      },
+      {
+        "beta": -0.99,
+        "angle": 0.7853981633974483,
+        "relative_operator_error": 4.027681797883673e-17
+      },
+      {
+        "beta": -0.99,
+        "angle": -0.7853981633974483,
+        "relative_operator_error": 4.027681797883673e-17
+      },
+      {
+        "beta": -0.99,
+        "angle": 1.5697963267948967,
+        "relative_operator_error": 4.516454938799087e-17
+      },
+      {
+        "beta": -0.99,
+        "angle": -1.5697963267948967,
+        "relative_operator_error": 4.516454938799087e-17
+      }
+    ],
+    "finite_frequency_radii": [
+      1000.0,
+      100000.0,
+      10000000.0
+    ],
+    "finite_frequency_angles": [
+      0.0,
+      0.7853981633974483,
+      -0.7853981633974483,
+      1.5697963267948967,
+      -1.5697963267948967
+    ],
+    "finite_frequency_matrix_convergence_cases": [
+      {
+        "beta": -0.01,
+        "radius": 1000.0,
+        "case_count": 5,
+        "maximum_relative_frobenius_error": 0.000962233135154498,
+        "direction_cases": [
+          {
+            "angle": 0.0,
+            "relative_frobenius_error_to_limit": 0.0009622324130202748,
+            "principal_mode_residual": 2.0413423555687427e-13,
+            "finite_matrix_eq123_log_error": 5.684341886080802e-14
+          },
+          {
+            "angle": 0.7853981633974483,
+            "relative_frobenius_error_to_limit": 0.0009622327740874094,
+            "principal_mode_residual": 1.6194418364521802e-13,
+            "finite_matrix_eq123_log_error": 0.0
+          },
+          {
+            "angle": -0.7853981633974483,
+            "relative_frobenius_error_to_limit": 0.0009622327740874094,
+            "principal_mode_residual": 1.6194418364521802e-13,
+            "finite_matrix_eq123_log_error": 0.0
+          },
+          {
+            "angle": 1.5697963267948967,
+            "relative_frobenius_error_to_limit": 0.000962233135154498,
+            "principal_mode_residual": 2.883853262257759e-13,
+            "finite_matrix_eq123_log_error": 0.0
+          },
+          {
+            "angle": -1.5697963267948967,
+            "relative_frobenius_error_to_limit": 0.000962233135154498,
+            "principal_mode_residual": 2.883853262257759e-13,
+            "finite_matrix_eq123_log_error": 0.0
+          }
+        ]
+      },
+      {
+        "beta": -0.01,
+        "radius": 100000.0,
+        "case_count": 5,
+        "maximum_relative_frobenius_error": 9.622325816459809e-06,
+        "direction_cases": [
+          {
+            "angle": 0.0,
+            "relative_frobenius_error_to_limit": 9.622325815737676e-06,
+            "principal_mode_residual": 1.4551915228366852e-11,
+            "finite_matrix_eq123_log_error": 2.842170943040401e-14
+          },
+          {
+            "angle": 0.7853981633974483,
+            "relative_frobenius_error_to_limit": 9.62232581609874e-06,
+            "principal_mode_residual": 1.5631760696365094e-11,
+            "finite_matrix_eq123_log_error": 2.842170943040401e-14
+          },
+          {
+            "angle": -0.7853981633974483,
+            "relative_frobenius_error_to_limit": 9.62232581609874e-06,
+            "principal_mode_residual": 1.5631760696365094e-11,
+            "finite_matrix_eq123_log_error": 2.842170943040401e-14
+          },
+          {
+            "angle": 1.5697963267948967,
+            "relative_frobenius_error_to_limit": 9.622325816459809e-06,
+            "principal_mode_residual": 2.5017777166572314e-11,
+            "finite_matrix_eq123_log_error": 2.842170943040401e-14
+          },
+          {
+            "angle": -1.5697963267948967,
+            "relative_frobenius_error_to_limit": 9.622325816459809e-06,
+            "principal_mode_residual": 2.5017777166572314e-11,
+            "finite_matrix_eq123_log_error": 2.842170943040401e-14
+          }
+        ]
+      },
+      {
+        "beta": -0.01,
+        "radius": 10000000.0,
+        "case_count": 5,
+        "maximum_relative_frobenius_error": 9.622325815906298e-08,
+        "direction_cases": [
+          {
+            "angle": 0.0,
+            "relative_frobenius_error_to_limit": 9.622325815906226e-08,
+            "principal_mode_residual": 3.4312369529110153e-09,
+            "finite_matrix_eq123_log_error": 8.526512829121202e-14
+          },
+          {
+            "angle": 0.7853981633974483,
+            "relative_frobenius_error_to_limit": 9.622325815906262e-08,
+            "principal_mode_residual": 1.3170890159654386e-09,
+            "finite_matrix_eq123_log_error": 9.947598300641403e-14
+          },
+          {
+            "angle": -0.7853981633974483,
+            "relative_frobenius_error_to_limit": 9.622325815906262e-08,
+            "principal_mode_residual": 1.3170890159654386e-09,
+            "finite_matrix_eq123_log_error": 9.947598300641403e-14
+          },
+          {
+            "angle": 1.5697963267948967,
+            "relative_frobenius_error_to_limit": 9.622325815906298e-08,
+            "principal_mode_residual": 2.1566984947815116e-09,
+            "finite_matrix_eq123_log_error": 1.8474111129762605e-13
+          },
+          {
+            "angle": -1.5697963267948967,
+            "relative_frobenius_error_to_limit": 9.622325815906298e-08,
+            "principal_mode_residual": 2.1566984947815116e-09,
+            "finite_matrix_eq123_log_error": 1.8474111129762605e-13
+          }
+        ]
+      },
+      {
+        "beta": -0.03,
+        "radius": 1000.0,
+        "case_count": 5,
+        "maximum_relative_frobenius_error": 0.0009784518830727792,
+        "direction_cases": [
+          {
+            "angle": 0.0,
+            "relative_frobenius_error_to_limit": 0.0009784511486646825,
+            "principal_mode_residual": 1.1368683772161603e-13,
+            "finite_matrix_eq123_log_error": 1.4210854715202004e-14
+          },
+          {
+            "angle": 0.7853981633974483,
+            "relative_frobenius_error_to_limit": 0.0009784515158687548,
+            "principal_mode_residual": 2.1952068656585437e-13,
+            "finite_matrix_eq123_log_error": 2.842170943040401e-14
+          },
+          {
+            "angle": -0.7853981633974483,
+            "relative_frobenius_error_to_limit": 0.0009784515158687548,
+            "principal_mode_residual": 2.1952068656585437e-13,
+            "finite_matrix_eq123_log_error": 2.842170943040401e-14
+          },
+          {
+            "angle": 1.5697963267948967,
+            "relative_frobenius_error_to_limit": 0.0009784518830727792,
+            "principal_mode_residual": 1.4917602743358405e-13,
+            "finite_matrix_eq123_log_error": 5.684341886080802e-14
+          },
+          {
+            "angle": -1.5697963267948967,
+            "relative_frobenius_error_to_limit": 0.0009784518830727792,
+            "principal_mode_residual": 1.4917602743358405e-13,
+            "finite_matrix_eq123_log_error": 5.684341886080802e-14
+          }
+        ]
+      },
+      {
+        "beta": -0.03,
+        "radius": 100000.0,
+        "case_count": 5,
+        "maximum_relative_frobenius_error": 9.78451313699203e-06,
+        "direction_cases": [
+          {
+            "angle": 0.0,
+            "relative_frobenius_error_to_limit": 9.784513136257625e-06,
+            "principal_mode_residual": 1.4551915228366852e-11,
+            "finite_matrix_eq123_log_error": 1.4210854715202004e-14
+          },
+          {
+            "angle": 0.7853981633974483,
+            "relative_frobenius_error_to_limit": 9.784513136624827e-06,
+            "principal_mode_residual": 2.0813480955479062e-11,
+            "finite_matrix_eq123_log_error": 5.684341886080802e-14
+          },
+          {
+            "angle": -0.7853981633974483,
+            "relative_frobenius_error_to_limit": 9.784513136624827e-06,
+            "principal_mode_residual": 2.0813480955479062e-11,
+            "finite_matrix_eq123_log_error": 5.684341886080802e-14
+          },
+          {
+            "angle": 1.5697963267948967,
+            "relative_frobenius_error_to_limit": 9.78451313699203e-06,
+            "principal_mode_residual": 1.917367219432287e-11,
+            "finite_matrix_eq123_log_error": 7.105427357601002e-14
+          },
+          {
+            "angle": -1.5697963267948967,
+            "relative_frobenius_error_to_limit": 9.78451313699203e-06,
+            "principal_mode_residual": 1.917367219432287e-11,
+            "finite_matrix_eq123_log_error": 7.105427357601002e-14
+          }
+        ]
+      },
+      {
+        "beta": -0.03,
+        "radius": 10000000.0,
+        "case_count": 5,
+        "maximum_relative_frobenius_error": 9.784513136422659e-08,
+        "direction_cases": [
+          {
+            "angle": 0.0,
+            "relative_frobenius_error_to_limit": 9.784513136422583e-08,
+            "principal_mode_residual": 1.2085809707638934e-09,
+            "finite_matrix_eq123_log_error": 0.0
+          },
+          {
+            "angle": 0.7853981633974483,
+            "relative_frobenius_error_to_limit": 9.784513136422622e-08,
+            "principal_mode_residual": 1.9133646820172613e-09,
+            "finite_matrix_eq123_log_error": 2.842170943040401e-14
+          },
+          {
+            "angle": -0.7853981633974483,
+            "relative_frobenius_error_to_limit": 9.784513136422622e-08,
+            "principal_mode_residual": 1.9133646820172613e-09,
+            "finite_matrix_eq123_log_error": 2.842170943040401e-14
+          },
+          {
+            "angle": 1.5697963267948967,
+            "relative_frobenius_error_to_limit": 9.784513136422659e-08,
+            "principal_mode_residual": 1.8626487019412477e-09,
+            "finite_matrix_eq123_log_error": 9.947598300641403e-14
+          },
+          {
+            "angle": -1.5697963267948967,
+            "relative_frobenius_error_to_limit": 9.784513136422659e-08,
+            "principal_mode_residual": 1.8626487019412477e-09,
+            "finite_matrix_eq123_log_error": 9.947598300641403e-14
+          }
+        ]
+      },
+      {
+        "beta": -0.1,
+        "radius": 1000.0,
+        "case_count": 5,
+        "maximum_relative_frobenius_error": 0.0010224898834032988,
+        "direction_cases": [
+          {
+            "angle": 0.0,
+            "relative_frobenius_error_to_limit": 0.0010224891238940477,
+            "principal_mode_residual": 1.1368683772161603e-13,
+            "finite_matrix_eq123_log_error": 1.4210854715202004e-14
+          },
+          {
+            "angle": 0.7853981633974483,
+            "relative_frobenius_error_to_limit": 0.0010224895036487051,
+            "principal_mode_residual": 1.6077746776921858e-13,
+            "finite_matrix_eq123_log_error": 0.0
+          },
+          {
+            "angle": -0.7853981633974483,
+            "relative_frobenius_error_to_limit": 0.0010224895036487051,
+            "principal_mode_residual": 1.6077746776921858e-13,
+            "finite_matrix_eq123_log_error": 0.0
+          },
+          {
+            "angle": 1.5697963267948967,
+            "relative_frobenius_error_to_limit": 0.0010224898834032988,
+            "principal_mode_residual": 1.1892598967195335e-13,
+            "finite_matrix_eq123_log_error": 0.0
+          },
+          {
+            "angle": -1.5697963267948967,
+            "relative_frobenius_error_to_limit": 0.0010224898834032988,
+            "principal_mode_residual": 1.1892598967195335e-13,
+            "finite_matrix_eq123_log_error": 0.0
+          }
+        ]
+      },
+      {
+        "beta": -0.1,
+        "radius": 100000.0,
+        "case_count": 5,
+        "maximum_relative_frobenius_error": 1.0224892656025282e-05,
+        "direction_cases": [
+          {
+            "angle": 0.0,
+            "relative_frobenius_error_to_limit": 1.0224892655265778e-05,
+            "principal_mode_residual": 1.4551915228366852e-11,
+            "finite_matrix_eq123_log_error": 1.4210854715202004e-14
+          },
+          {
+            "angle": 0.7853981633974483,
+            "relative_frobenius_error_to_limit": 1.0224892655645527e-05,
+            "principal_mode_residual": 2.8042186793664042e-11,
+            "finite_matrix_eq123_log_error": 3.552713678800501e-14
+          },
+          {
+            "angle": -0.7853981633974483,
+            "relative_frobenius_error_to_limit": 1.0224892655645527e-05,
+            "principal_mode_residual": 2.8042186793664042e-11,
+            "finite_matrix_eq123_log_error": 3.552713678800501e-14
+          },
+          {
+            "angle": 1.5697963267948967,
+            "relative_frobenius_error_to_limit": 1.0224892656025282e-05,
+            "principal_mode_residual": 2.310835474020024e-11,
+            "finite_matrix_eq123_log_error": 1.4210854715202004e-14
+          },
+          {
+            "angle": -1.5697963267948967,
+            "relative_frobenius_error_to_limit": 1.0224892656025282e-05,
+            "principal_mode_residual": 2.310835474020024e-11,
+            "finite_matrix_eq123_log_error": 1.4210854715202004e-14
+          }
+        ]
+      },
+      {
+        "beta": -0.1,
+        "radius": 10000000.0,
+        "case_count": 5,
+        "maximum_relative_frobenius_error": 1.0224892655407484e-07,
+        "direction_cases": [
+          {
+            "angle": 0.0,
+            "relative_frobenius_error_to_limit": 1.0224892655407414e-07,
+            "principal_mode_residual": 9.832906723019379e-10,
+            "finite_matrix_eq123_log_error": 5.684341886080802e-14
+          },
+          {
+            "angle": 0.7853981633974483,
+            "relative_frobenius_error_to_limit": 1.0224892655407449e-07,
+            "principal_mode_residual": 9.554469298719072e-10,
+            "finite_matrix_eq123_log_error": 7.105427357601002e-14
+          },
+          {
+            "angle": -0.7853981633974483,
+            "relative_frobenius_error_to_limit": 1.0224892655407449e-07,
+            "principal_mode_residual": 9.554469298719072e-10,
+            "finite_matrix_eq123_log_error": 7.105427357601002e-14
+          },
+          {
+            "angle": 1.5697963267948967,
+            "relative_frobenius_error_to_limit": 1.0224892655407484e-07,
+            "principal_mode_residual": 9.313243509706238e-10,
+            "finite_matrix_eq123_log_error": 1.1368683772161603e-13
+          },
+          {
+            "angle": -1.5697963267948967,
+            "relative_frobenius_error_to_limit": 1.0224892655407484e-07,
+            "principal_mode_residual": 9.313243509706238e-10,
+            "finite_matrix_eq123_log_error": 1.1368683772161603e-13
+          }
+        ]
+      },
+      {
+        "beta": -0.2,
+        "radius": 1000.0,
+        "case_count": 5,
+        "maximum_relative_frobenius_error": 0.0010599812002262577,
+        "direction_cases": [
+          {
+            "angle": 0.0,
+            "relative_frobenius_error_to_limit": 0.0010599804450014756,
+            "principal_mode_residual": 1.1368683772161603e-13,
+            "finite_matrix_eq123_log_error": 1.4210854715202004e-14
+          },
+          {
+            "angle": 0.7853981633974483,
+            "relative_frobenius_error_to_limit": 0.0010599808226139157,
+            "principal_mode_residual": 2.317788387666789e-13,
+            "finite_matrix_eq123_log_error": 4.973799150320701e-14
+          },
+          {
+            "angle": -0.7853981633974483,
+            "relative_frobenius_error_to_limit": 0.0010599808226139157,
+            "principal_mode_residual": 2.317788387666789e-13,
+            "finite_matrix_eq123_log_error": 4.973799150320701e-14
+          },
+          {
+            "angle": 1.5697963267948967,
+            "relative_frobenius_error_to_limit": 0.0010599812002262577,
+            "principal_mode_residual": 1.1368705456184373e-13,
+            "finite_matrix_eq123_log_error": 3.552713678800501e-14
+          },
+          {
+            "angle": -1.5697963267948967,
+            "relative_frobenius_error_to_limit": 0.0010599812002262577,
+            "principal_mode_residual": 1.1368705456184373e-13,
+            "finite_matrix_eq123_log_error": 3.552713678800501e-14
+          }
+        ]
+      },
+      {
+        "beta": -0.2,
+        "radius": 100000.0,
+        "case_count": 5,
+        "maximum_relative_frobenius_error": 1.0599805276531295e-05,
+        "direction_cases": [
+          {
+            "angle": 0.0,
+            "relative_frobenius_error_to_limit": 1.0599805275776074e-05,
+            "principal_mode_residual": 1.4551915228366852e-11,
+            "finite_matrix_eq123_log_error": 1.4210854715202004e-14
+          },
+          {
+            "angle": 0.7853981633974483,
+            "relative_frobenius_error_to_limit": 1.0599805276153683e-05,
+            "principal_mode_residual": 1.9642546605496162e-11,
+            "finite_matrix_eq123_log_error": 3.552713678800501e-14
+          },
+          {
+            "angle": -0.7853981633974483,
+            "relative_frobenius_error_to_limit": 1.0599805276153683e-05,
+            "principal_mode_residual": 1.9642546605496162e-11,
+            "finite_matrix_eq123_log_error": 3.552713678800501e-14
+          },
+          {
+            "angle": 1.5697963267948967,
+            "relative_frobenius_error_to_limit": 1.0599805276531295e-05,
+            "principal_mode_residual": 1.5948755674431255e-11,
+            "finite_matrix_eq123_log_error": 2.842170943040401e-14
+          },
+          {
+            "angle": -1.5697963267948967,
+            "relative_frobenius_error_to_limit": 1.0599805276531295e-05,
+            "principal_mode_residual": 1.5948755674431255e-11,
+            "finite_matrix_eq123_log_error": 2.842170943040401e-14
+          }
+        ]
+      },
+      {
+        "beta": -0.2,
+        "radius": 10000000.0,
+        "case_count": 5,
+        "maximum_relative_frobenius_error": 1.0599805275858725e-07,
+        "direction_cases": [
+          {
+            "angle": 0.0,
+            "relative_frobenius_error_to_limit": 1.0599805275858649e-07,
+            "principal_mode_residual": 1.862645149230957e-09,
+            "finite_matrix_eq123_log_error": 6.394884621840902e-14
+          },
+          {
+            "angle": 0.7853981633974483,
+            "relative_frobenius_error_to_limit": 1.0599805275858686e-07,
+            "principal_mode_residual": 1.886052000152719e-09,
+            "finite_matrix_eq123_log_error": 3.552713678800501e-14
+          },
+          {
+            "angle": -0.7853981633974483,
+            "relative_frobenius_error_to_limit": 1.0599805275858686e-07,
+            "principal_mode_residual": 1.886052000152719e-09,
+            "finite_matrix_eq123_log_error": 3.552713678800501e-14
+          },
+          {
+            "angle": 1.5697963267948967,
+            "relative_frobenius_error_to_limit": 1.0599805275858725e-07,
+            "principal_mode_residual": 1.0016435022448893e-09,
+            "finite_matrix_eq123_log_error": 7.105427357601002e-15
+          },
+          {
+            "angle": -1.5697963267948967,
+            "relative_frobenius_error_to_limit": 1.0599805275858725e-07,
+            "principal_mode_residual": 1.0016435022448893e-09,
+            "finite_matrix_eq123_log_error": 7.105427357601002e-15
+          }
+        ]
+      },
+      {
+        "beta": -0.35,
+        "radius": 1000.0,
+        "case_count": 5,
+        "maximum_relative_frobenius_error": 0.0010919704494382373,
+        "direction_cases": [
+          {
+            "angle": 0.0,
+            "relative_frobenius_error_to_limit": 0.0010919697613456342,
+            "principal_mode_residual": 1.1368683772161603e-13,
+            "finite_matrix_eq123_log_error": 1.4210854715202004e-14
+          },
+          {
+            "angle": 0.7853981633974483,
+            "relative_frobenius_error_to_limit": 0.0010919701053920179,
+            "principal_mode_residual": 2.2742696536678256e-13,
+            "finite_matrix_eq123_log_error": 1.0658141036401503e-14
+          },
+          {
+            "angle": -0.7853981633974483,
+            "relative_frobenius_error_to_limit": 0.0010919701053920179,
+            "principal_mode_residual": 2.2742696536678256e-13,
+            "finite_matrix_eq123_log_error": 1.0658141036401503e-14
+          },
+          {
+            "angle": 1.5697963267948967,
+            "relative_frobenius_error_to_limit": 0.0010919704494382373,
+            "principal_mode_residual": 2.9672302988709994e-13,
+            "finite_matrix_eq123_log_error": 3.552713678800501e-15
+          },
+          {
+            "angle": -1.5697963267948967,
+            "relative_frobenius_error_to_limit": 0.0010919704494382373,
+            "principal_mode_residual": 2.9672302988709994e-13,
+            "finite_matrix_eq123_log_error": 3.552713678800501e-15
+          }
+        ]
+      },
+      {
+        "beta": -0.35,
+        "radius": 100000.0,
+        "case_count": 5,
+        "maximum_relative_frobenius_error": 1.0919697103924324e-05,
+        "direction_cases": [
+          {
+            "angle": 0.0,
+            "relative_frobenius_error_to_limit": 1.0919697103236221e-05,
+            "principal_mode_residual": 5.705070401827109e-12,
+            "finite_matrix_eq123_log_error": 7.105427357601002e-15
+          },
+          {
+            "angle": 0.7853981633974483,
+            "relative_frobenius_error_to_limit": 1.0919697103580271e-05,
+            "principal_mode_residual": 2.8008603621891125e-11,
+            "finite_matrix_eq123_log_error": 3.552713678800501e-15
+          },
+          {
+            "angle": -0.7853981633974483,
+            "relative_frobenius_error_to_limit": 1.0919697103580271e-05,
+            "principal_mode_residual": 2.8008603621891125e-11,
+            "finite_matrix_eq123_log_error": 3.552713678800501e-15
+          },
+          {
+            "angle": 1.5697963267948967,
+            "relative_frobenius_error_to_limit": 1.0919697103924324e-05,
+            "principal_mode_residual": 2.2294159261443782e-11,
+            "finite_matrix_eq123_log_error": 2.1316282072803006e-14
+          },
+          {
+            "angle": -1.5697963267948967,
+            "relative_frobenius_error_to_limit": 1.0919697103924324e-05,
+            "principal_mode_residual": 2.2294159261443782e-11,
+            "finite_matrix_eq123_log_error": 2.1316282072803006e-14
+          }
+        ]
+      },
+      {
+        "beta": -0.35,
+        "radius": 10000000.0,
+        "case_count": 5,
+        "maximum_relative_frobenius_error": 1.0919697103185268e-07,
+        "direction_cases": [
+          {
+            "angle": 0.0,
+            "relative_frobenius_error_to_limit": 1.0919697103185203e-07,
+            "principal_mode_residual": 2.3271579986354256e-09,
+            "finite_matrix_eq123_log_error": 1.2079226507921703e-13
+          },
+          {
+            "angle": 0.7853981633974483,
+            "relative_frobenius_error_to_limit": 1.0919697103185237e-07,
+            "principal_mode_residual": 1.9161579108152747e-09,
+            "finite_matrix_eq123_log_error": 1.4921397450962104e-13
+          },
+          {
+            "angle": -0.7853981633974483,
+            "relative_frobenius_error_to_limit": 1.0919697103185237e-07,
+            "principal_mode_residual": 1.9161579108152747e-09,
+            "finite_matrix_eq123_log_error": 1.4921397450962104e-13
+          },
+          {
+            "angle": 1.5697963267948967,
+            "relative_frobenius_error_to_limit": 1.0919697103185268e-07,
+            "principal_mode_residual": 1.862645149230957e-09,
+            "finite_matrix_eq123_log_error": 6.394884621840902e-14
+          },
+          {
+            "angle": -1.5697963267948967,
+            "relative_frobenius_error_to_limit": 1.0919697103185268e-07,
+            "principal_mode_residual": 1.862645149230957e-09,
+            "finite_matrix_eq123_log_error": 6.394884621840902e-14
+          }
+        ]
+      },
+      {
+        "beta": -0.5,
+        "radius": 1000.0,
+        "case_count": 5,
+        "maximum_relative_frobenius_error": 0.0011220616789366649,
+        "direction_cases": [
+          {
+            "angle": 0.0,
+            "relative_frobenius_error_to_limit": 0.0011220611102974716,
+            "principal_mode_residual": 1.1368683772161603e-13,
+            "finite_matrix_eq123_log_error": 7.105427357601002e-15
+          },
+          {
+            "angle": 0.7853981633974483,
+            "relative_frobenius_error_to_limit": 0.0011220613946171813,
+            "principal_mode_residual": 2.464480437744891e-13,
+            "finite_matrix_eq123_log_error": 3.552713678800501e-14
+          },
+          {
+            "angle": -0.7853981633974483,
+            "relative_frobenius_error_to_limit": 0.0011220613946171813,
+            "principal_mode_residual": 2.464480437744891e-13,
+            "finite_matrix_eq123_log_error": 3.552713678800501e-14
+          },
+          {
+            "angle": 1.5697963267948967,
+            "relative_frobenius_error_to_limit": 0.0011220616789366649,
+            "principal_mode_residual": 3.0706738589222365e-13,
+            "finite_matrix_eq123_log_error": 7.105427357601002e-15
+          },
+          {
+            "angle": -1.5697963267948967,
+            "relative_frobenius_error_to_limit": 0.0011220616789366649,
+            "principal_mode_residual": 3.0706738589222365e-13,
+            "finite_matrix_eq123_log_error": 7.105427357601002e-15
+          }
+        ]
+      },
+      {
+        "beta": -0.5,
+        "radius": 100000.0,
+        "case_count": 5,
+        "maximum_relative_frobenius_error": 1.1220608801379629e-05,
+        "direction_cases": [
+          {
+            "angle": 0.0,
+            "relative_frobenius_error_to_limit": 1.1220608800810989e-05,
+            "principal_mode_residual": 1.4551915228366852e-11,
+            "finite_matrix_eq123_log_error": 3.552713678800501e-15
+          },
+          {
+            "angle": 0.7853981633974483,
+            "relative_frobenius_error_to_limit": 1.1220608801095309e-05,
+            "principal_mode_residual": 1.471645664566142e-11,
+            "finite_matrix_eq123_log_error": 3.197442310920451e-14
+          },
+          {
+            "angle": -0.7853981633974483,
+            "relative_frobenius_error_to_limit": 1.1220608801095309e-05,
+            "principal_mode_residual": 1.471645664566142e-11,
+            "finite_matrix_eq123_log_error": 3.197442310920451e-14
+          },
+          {
+            "angle": 1.5697963267948967,
+            "relative_frobenius_error_to_limit": 1.1220608801379629e-05,
+            "principal_mode_residual": 1.45519221672591e-11,
+            "finite_matrix_eq123_log_error": 1.7763568394002505e-14
+          },
+          {
+            "angle": -1.5697963267948967,
+            "relative_frobenius_error_to_limit": 1.1220608801379629e-05,
+            "principal_mode_residual": 1.45519221672591e-11,
+            "finite_matrix_eq123_log_error": 1.7763568394002505e-14
+          }
+        ]
+      },
+      {
+        "beta": -0.5,
+        "radius": 10000000.0,
+        "case_count": 5,
+        "maximum_relative_frobenius_error": 1.122060880058083e-07,
+        "direction_cases": [
+          {
+            "angle": 0.0,
+            "relative_frobenius_error_to_limit": 1.1220608800580774e-07,
+            "principal_mode_residual": 8.265662464322571e-10,
+            "finite_matrix_eq123_log_error": 7.105427357601002e-15
+          },
+          {
+            "angle": 0.7853981633974483,
+            "relative_frobenius_error_to_limit": 1.1220608800580799e-07,
+            "principal_mode_residual": 2.814304498669073e-09,
+            "finite_matrix_eq123_log_error": 1.7763568394002505e-14
+          },
+          {
+            "angle": -0.7853981633974483,
+            "relative_frobenius_error_to_limit": 1.1220608800580799e-07,
+            "principal_mode_residual": 2.814304498669073e-09,
+            "finite_matrix_eq123_log_error": 1.7763568394002505e-14
+          },
+          {
+            "angle": 1.5697963267948967,
+            "relative_frobenius_error_to_limit": 1.122060880058083e-07,
+            "principal_mode_residual": 1.967402318300042e-09,
+            "finite_matrix_eq123_log_error": 2.4868995751603507e-14
+          },
+          {
+            "angle": -1.5697963267948967,
+            "relative_frobenius_error_to_limit": 1.122060880058083e-07,
+            "principal_mode_residual": 1.967402318300042e-09,
+            "finite_matrix_eq123_log_error": 2.4868995751603507e-14
+          }
+        ]
+      },
+      {
+        "beta": -0.65,
+        "radius": 1000.0,
+        "case_count": 5,
+        "maximum_relative_frobenius_error": 0.001160677638142387,
+        "direction_cases": [
+          {
+            "angle": 0.0,
+            "relative_frobenius_error_to_limit": 0.0011606772404211358,
+            "principal_mode_residual": 3.574540836936979e-13,
+            "finite_matrix_eq123_log_error": 1.7763568394002505e-15
+          },
+          {
+            "angle": 0.7853981633974483,
+            "relative_frobenius_error_to_limit": 0.0011606774392818838,
+            "principal_mode_residual": 3.194369733270188e-13,
+            "finite_matrix_eq123_log_error": 1.4210854715202004e-14
+          },
+          {
+            "angle": -0.7853981633974483,
+            "relative_frobenius_error_to_limit": 0.0011606774392818838,
+            "principal_mode_residual": 3.194369733270188e-13,
+            "finite_matrix_eq123_log_error": 1.4210854715202004e-14
+          },
+          {
+            "angle": 1.5697963267948967,
+            "relative_frobenius_error_to_limit": 0.001160677638142387,
+            "principal_mode_residual": 1.1368705456184373e-13,
+            "finite_matrix_eq123_log_error": 1.2434497875801753e-14
+          },
+          {
+            "angle": -1.5697963267948967,
+            "relative_frobenius_error_to_limit": 0.001160677638142387,
+            "principal_mode_residual": 1.1368705456184373e-13,
+            "finite_matrix_eq123_log_error": 1.2434497875801753e-14
+          }
+        ]
+      },
+      {
+        "beta": -0.65,
+        "radius": 100000.0,
+        "case_count": 5,
+        "maximum_relative_frobenius_error": 1.1606767843548623e-05,
+        "direction_cases": [
+          {
+            "angle": 0.0,
+            "relative_frobenius_error_to_limit": 1.1606767843150906e-05,
+            "principal_mode_residual": 5.3561593619963445e-12,
+            "finite_matrix_eq123_log_error": 4.618527782440651e-14
+          },
+          {
+            "angle": 0.7853981633974483,
+            "relative_frobenius_error_to_limit": 1.1606767843349762e-05,
+            "principal_mode_residual": 3.803001539612428e-11,
+            "finite_matrix_eq123_log_error": 5.329070518200751e-15
+          },
+          {
+            "angle": -0.7853981633974483,
+            "relative_frobenius_error_to_limit": 1.1606767843349762e-05,
+            "principal_mode_residual": 3.803001539612428e-11,
+            "finite_matrix_eq123_log_error": 5.329070518200751e-15
+          },
+          {
+            "angle": 1.5697963267948967,
+            "relative_frobenius_error_to_limit": 1.1606767843548623e-05,
+            "principal_mode_residual": 1.9164278880899782e-11,
+            "finite_matrix_eq123_log_error": 5.5067062021407764e-14
+          },
+          {
+            "angle": -1.5697963267948967,
+            "relative_frobenius_error_to_limit": 1.1606767843548623e-05,
+            "principal_mode_residual": 1.9164278880899782e-11,
+            "finite_matrix_eq123_log_error": 5.5067062021407764e-14
+          }
+        ]
+      },
+      {
+        "beta": -0.65,
+        "radius": 10000000.0,
+        "case_count": 5,
+        "maximum_relative_frobenius_error": 1.1606767842694837e-07,
+        "direction_cases": [
+          {
+            "angle": 0.0,
+            "relative_frobenius_error_to_limit": 1.1606767842694798e-07,
+            "principal_mode_residual": 3.46799322961736e-09,
+            "finite_matrix_eq123_log_error": 3.375077994860476e-14
+          },
+          {
+            "angle": 0.7853981633974483,
+            "relative_frobenius_error_to_limit": 1.1606767842694815e-07,
+            "principal_mode_residual": 1.3996871656469655e-09,
+            "finite_matrix_eq123_log_error": 4.440892098500626e-14
+          },
+          {
+            "angle": -0.7853981633974483,
+            "relative_frobenius_error_to_limit": 1.1606767842694815e-07,
+            "principal_mode_residual": 1.3996871656469655e-09,
+            "finite_matrix_eq123_log_error": 4.440892098500626e-14
+          },
+          {
+            "angle": 1.5697963267948967,
+            "relative_frobenius_error_to_limit": 1.1606767842694837e-07,
+            "principal_mode_residual": 1.7846967105871678e-09,
+            "finite_matrix_eq123_log_error": 4.618527782440651e-14
+          },
+          {
+            "angle": -1.5697963267948967,
+            "relative_frobenius_error_to_limit": 1.1606767842694837e-07,
+            "principal_mode_residual": 1.7846967105871678e-09,
+            "finite_matrix_eq123_log_error": 4.618527782440651e-14
+          }
+        ]
+      },
+      {
+        "beta": -0.8,
+        "radius": 1000.0,
+        "case_count": 5,
+        "maximum_relative_frobenius_error": 0.001209157357486364,
+        "direction_cases": [
+          {
+            "angle": 0.0,
+            "relative_frobenius_error_to_limit": 0.001209157193066385,
+            "principal_mode_residual": 1.1368683772161603e-13,
+            "finite_matrix_eq123_log_error": 2.7533531010703882e-14
+          },
+          {
+            "angle": 0.7853981633974483,
+            "relative_frobenius_error_to_limit": 0.0012091572752764544,
+            "principal_mode_residual": 8.253318969330783e-13,
+            "finite_matrix_eq123_log_error": 1.2434497875801753e-14
+          },
+          {
+            "angle": -0.7853981633974483,
+            "relative_frobenius_error_to_limit": 0.0012091572752764544,
+            "principal_mode_residual": 8.253318969330783e-13,
+            "finite_matrix_eq123_log_error": 1.2434497875801753e-14
+          },
+          {
+            "angle": 1.5697963267948967,
+            "relative_frobenius_error_to_limit": 0.001209157357486364,
+            "principal_mode_residual": 4.3016414967849693e-13,
+            "finite_matrix_eq123_log_error": 1.7763568394002505e-15
+          },
+          {
+            "angle": -1.5697963267948967,
+            "relative_frobenius_error_to_limit": 0.001209157357486364,
+            "principal_mode_residual": 4.3016414967849693e-13,
+            "finite_matrix_eq123_log_error": 1.7763568394002505e-15
+          }
+        ]
+      },
+      {
+        "beta": -0.8,
+        "radius": 100000.0,
+        "case_count": 5,
+        "maximum_relative_frobenius_error": 1.209156456808452e-05,
+        "direction_cases": [
+          {
+            "angle": 0.0,
+            "relative_frobenius_error_to_limit": 1.2091564567920095e-05,
+            "principal_mode_residual": 4.1561515779845446e-11,
+            "finite_matrix_eq123_log_error": 8.881784197001252e-15
+          },
+          {
+            "angle": 0.7853981633974483,
+            "relative_frobenius_error_to_limit": 1.2091564568002298e-05,
+            "principal_mode_residual": 6.542264108018172e-11,
+            "finite_matrix_eq123_log_error": 3.8191672047105385e-14
+          },
+          {
+            "angle": -0.7853981633974483,
+            "relative_frobenius_error_to_limit": 1.2091564568002298e-05,
+            "principal_mode_residual": 6.542264108018172e-11,
+            "finite_matrix_eq123_log_error": 3.8191672047105385e-14
+          },
+          {
+            "angle": 1.5697963267948967,
+            "relative_frobenius_error_to_limit": 1.209156456808452e-05,
+            "principal_mode_residual": 5.611331707228734e-11,
+            "finite_matrix_eq123_log_error": 1.7763568394002505e-14
+          },
+          {
+            "angle": -1.5697963267948967,
+            "relative_frobenius_error_to_limit": 1.209156456808452e-05,
+            "principal_mode_residual": 5.611331707228734e-11,
+            "finite_matrix_eq123_log_error": 1.7763568394002505e-14
+          }
+        ]
+      },
+      {
+        "beta": -0.8,
+        "radius": 10000000.0,
+        "case_count": 5,
+        "maximum_relative_frobenius_error": 1.2091564567183837e-07,
+        "direction_cases": [
+          {
+            "angle": 0.0,
+            "relative_frobenius_error_to_limit": 1.2091564567183814e-07,
+            "principal_mode_residual": 9.159536567590182e-09,
+            "finite_matrix_eq123_log_error": 4.263256414560601e-14
+          },
+          {
+            "angle": 0.7853981633974483,
+            "relative_frobenius_error_to_limit": 1.2091564567183822e-07,
+            "principal_mode_residual": 6.983089351100675e-09,
+            "finite_matrix_eq123_log_error": 4.085620730620576e-14
+          },
+          {
+            "angle": -0.7853981633974483,
+            "relative_frobenius_error_to_limit": 1.2091564567183822e-07,
+            "principal_mode_residual": 6.983089351100675e-09,
+            "finite_matrix_eq123_log_error": 4.085620730620576e-14
+          },
+          {
+            "angle": 1.5697963267948967,
+            "relative_frobenius_error_to_limit": 1.2091564567183837e-07,
+            "principal_mode_residual": 4.502925164100843e-09,
+            "finite_matrix_eq123_log_error": 7.105427357601002e-15
+          },
+          {
+            "angle": -1.5697963267948967,
+            "relative_frobenius_error_to_limit": 1.2091564567183837e-07,
+            "principal_mode_residual": 4.502925164100843e-09,
+            "finite_matrix_eq123_log_error": 7.105427357601002e-15
+          }
+        ]
+      },
+      {
+        "beta": -0.9,
+        "radius": 1000.0,
+        "case_count": 5,
+        "maximum_relative_frobenius_error": 0.0012463975727260261,
+        "direction_cases": [
+          {
+            "angle": 0.0,
+            "relative_frobenius_error_to_limit": 0.0012463975727260261,
+            "principal_mode_residual": 2.0696400322706143e-13,
+            "finite_matrix_eq123_log_error": 7.549516567451064e-15
+          },
+          {
+            "angle": 0.7853981633974483,
+            "relative_frobenius_error_to_limit": 0.0012463975560339277,
+            "principal_mode_residual": 6.527739369450488e-13,
+            "finite_matrix_eq123_log_error": 4.884981308350689e-15
+          },
+          {
+            "angle": -0.7853981633974483,
+            "relative_frobenius_error_to_limit": 0.0012463975560339277,
+            "principal_mode_residual": 6.527739369450488e-13,
+            "finite_matrix_eq123_log_error": 4.884981308350689e-15
+          },
+          {
+            "angle": 1.5697963267948967,
+            "relative_frobenius_error_to_limit": 0.0012463975393418266,
+            "principal_mode_residual": 3.994889241711897e-13,
+            "finite_matrix_eq123_log_error": 1.3322676295501878e-15
+          },
+          {
+            "angle": -1.5697963267948967,
+            "relative_frobenius_error_to_limit": 0.0012463975393418266,
+            "principal_mode_residual": 3.994889241711897e-13,
+            "finite_matrix_eq123_log_error": 1.3322676295501878e-15
+          }
+        ]
+      },
+      {
+        "beta": -0.9,
+        "radius": 100000.0,
+        "case_count": 5,
+        "maximum_relative_frobenius_error": 1.2463966142633865e-05,
+        "direction_cases": [
+          {
+            "angle": 0.0,
+            "relative_frobenius_error_to_limit": 1.2463966142633865e-05,
+            "principal_mode_residual": 1.3603268583458911e-10,
+            "finite_matrix_eq123_log_error": 2.3092638912203256e-14
+          },
+          {
+            "angle": 0.7853981633974483,
+            "relative_frobenius_error_to_limit": 1.2463966142617184e-05,
+            "principal_mode_residual": 1.6297018321430095e-10,
+            "finite_matrix_eq123_log_error": 5.329070518200751e-15
+          },
+          {
+            "angle": -0.7853981633974483,
+            "relative_frobenius_error_to_limit": 1.2463966142617184e-05,
+            "principal_mode_residual": 1.6297018321430095e-10,
+            "finite_matrix_eq123_log_error": 5.329070518200751e-15
+          },
+          {
+            "angle": 1.5697963267948967,
+            "relative_frobenius_error_to_limit": 1.246396614260048e-05,
+            "principal_mode_residual": 1.2590194478087518e-10,
+            "finite_matrix_eq123_log_error": 3.774758283725532e-14
+          },
+          {
+            "angle": -1.5697963267948967,
+            "relative_frobenius_error_to_limit": 1.246396614260048e-05,
+            "principal_mode_residual": 1.2590194478087518e-10,
+            "finite_matrix_eq123_log_error": 3.774758283725532e-14
+          }
+        ]
+      },
+      {
+        "beta": -0.9,
+        "radius": 10000000.0,
+        "case_count": 5,
+        "maximum_relative_frobenius_error": 1.2463966141675424e-07,
+        "direction_cases": [
+          {
+            "angle": 0.0,
+            "relative_frobenius_error_to_limit": 1.2463966141675413e-07,
+            "principal_mode_residual": 1.862645149230957e-09,
+            "finite_matrix_eq123_log_error": 7.327471962526033e-14
+          },
+          {
+            "angle": 0.7853981633974483,
+            "relative_frobenius_error_to_limit": 1.2463966141675418e-07,
+            "principal_mode_residual": 7.869972098067195e-09,
+            "finite_matrix_eq123_log_error": 1.127986593019159e-13
+          },
+          {
+            "angle": -0.7853981633974483,
+            "relative_frobenius_error_to_limit": 1.2463966141675418e-07,
+            "principal_mode_residual": 7.869972098067195e-09,
+            "finite_matrix_eq123_log_error": 1.127986593019159e-13
+          },
+          {
+            "angle": 1.5697963267948967,
+            "relative_frobenius_error_to_limit": 1.2463966141675424e-07,
+            "principal_mode_residual": 6.2794204073587786e-09,
+            "finite_matrix_eq123_log_error": 6.350475700855895e-14
+          },
+          {
+            "angle": -1.5697963267948967,
+            "relative_frobenius_error_to_limit": 1.2463966141675424e-07,
+            "principal_mode_residual": 6.2794204073587786e-09,
+            "finite_matrix_eq123_log_error": 6.350475700855895e-14
+          }
+        ]
+      },
+      {
+        "beta": -0.95,
+        "radius": 1000.0,
+        "case_count": 5,
+        "maximum_relative_frobenius_error": 0.0012663148053674812,
+        "direction_cases": [
+          {
+            "angle": 0.0,
+            "relative_frobenius_error_to_limit": 0.0012663148053674812,
+            "principal_mode_residual": 1.6069515509919974e-12,
+            "finite_matrix_eq123_log_error": 3.552713678800501e-14
+          },
+          {
+            "angle": 0.7853981633974483,
+            "relative_frobenius_error_to_limit": 0.0012663147319335651,
+            "principal_mode_residual": 3.645112198607527e-12,
+            "finite_matrix_eq123_log_error": 6.217248937900877e-15
+          },
+          {
+            "angle": -0.7853981633974483,
+            "relative_frobenius_error_to_limit": 0.0012663147319335651,
+            "principal_mode_residual": 3.645112198607527e-12,
+            "finite_matrix_eq123_log_error": 6.217248937900877e-15
+          },
+          {
+            "angle": 1.5697963267948967,
+            "relative_frobenius_error_to_limit": 0.0012663146584997688,
+            "principal_mode_residual": 1.747545455467604e-13,
+            "finite_matrix_eq123_log_error": 3.241851231905457e-14
+          },
+          {
+            "angle": -1.5697963267948967,
+            "relative_frobenius_error_to_limit": 0.0012663146584997688,
+            "principal_mode_residual": 1.747545455467604e-13,
+            "finite_matrix_eq123_log_error": 3.241851231905457e-14
+          }
+        ]
+      },
+      {
+        "beta": -0.95,
+        "radius": 100000.0,
+        "case_count": 5,
+        "maximum_relative_frobenius_error": 1.2663137238480743e-05,
+        "direction_cases": [
+          {
+            "angle": 0.0,
+            "relative_frobenius_error_to_limit": 1.2663137238480743e-05,
+            "principal_mode_residual": 6.321497287660645e-11,
+            "finite_matrix_eq123_log_error": 2.042810365310288e-14
+          },
+          {
+            "angle": 0.7853981633974483,
+            "relative_frobenius_error_to_limit": 1.2663137238407318e-05,
+            "principal_mode_residual": 2.3816788840006165e-10,
+            "finite_matrix_eq123_log_error": 4.884981308350689e-14
+          },
+          {
+            "angle": -0.7853981633974483,
+            "relative_frobenius_error_to_limit": 1.2663137238407318e-05,
+            "principal_mode_residual": 2.3816788840006165e-10,
+            "finite_matrix_eq123_log_error": 4.884981308350689e-14
+          },
+          {
+            "angle": 1.5697963267948967,
+            "relative_frobenius_error_to_limit": 1.2663137238333872e-05,
+            "principal_mode_residual": 3.8649653089646846e-11,
+            "finite_matrix_eq123_log_error": 1.0658141036401503e-14
+          },
+          {
+            "angle": -1.5697963267948967,
+            "relative_frobenius_error_to_limit": 1.2663137238333872e-05,
+            "principal_mode_residual": 3.8649653089646846e-11,
+            "finite_matrix_eq123_log_error": 1.0658141036401503e-14
+          }
+        ]
+      },
+      {
+        "beta": -0.95,
+        "radius": 10000000.0,
+        "case_count": 5,
+        "maximum_relative_frobenius_error": 1.2663137237399254e-07,
+        "direction_cases": [
+          {
+            "angle": 0.0,
+            "relative_frobenius_error_to_limit": 1.2663137237399212e-07,
+            "principal_mode_residual": 1.5316741192870796e-08,
+            "finite_matrix_eq123_log_error": 6.616929226765933e-14
+          },
+          {
+            "angle": 0.7853981633974483,
+            "relative_frobenius_error_to_limit": 1.2663137237399188e-07,
+            "principal_mode_residual": 3.584614146947627e-08,
+            "finite_matrix_eq123_log_error": 8.615330671091215e-14
+          },
+          {
+            "angle": -0.7853981633974483,
+            "relative_frobenius_error_to_limit": 1.2663137237399188e-07,
+            "principal_mode_residual": 3.584614146947627e-08,
+            "finite_matrix_eq123_log_error": 8.615330671091215e-14
+          },
+          {
+            "angle": 1.5697963267948967,
+            "relative_frobenius_error_to_limit": 1.2663137237399254e-07,
+            "principal_mode_residual": 3.394319507339694e-08,
+            "finite_matrix_eq123_log_error": 1.4477308241112041e-13
+          },
+          {
+            "angle": -1.5697963267948967,
+            "relative_frobenius_error_to_limit": 1.2663137237399254e-07,
+            "principal_mode_residual": 3.394319507339694e-08,
+            "finite_matrix_eq123_log_error": 1.4477308241112041e-13
+          }
+        ]
+      },
+      {
+        "beta": -0.98,
+        "radius": 1000.0,
+        "case_count": 5,
+        "maximum_relative_frobenius_error": 0.0012786457253734426,
+        "direction_cases": [
+          {
+            "angle": 0.0,
+            "relative_frobenius_error_to_limit": 0.0012786457253734426,
+            "principal_mode_residual": 3.800340684506631e-12,
+            "finite_matrix_eq123_log_error": 1.2656542480726785e-14
+          },
+          {
+            "angle": 0.7853981633974483,
+            "relative_frobenius_error_to_limit": 0.0012786456153719445,
+            "principal_mode_residual": 4.910273442752926e-12,
+            "finite_matrix_eq123_log_error": 2.042810365310288e-14
+          },
+          {
+            "angle": -0.7853981633974483,
+            "relative_frobenius_error_to_limit": 0.0012786456153719445,
+            "principal_mode_residual": 4.910273442752926e-12,
+            "finite_matrix_eq123_log_error": 2.042810365310288e-14
+          },
+          {
+            "angle": 1.5697963267948967,
+            "relative_frobenius_error_to_limit": 0.0012786455053706552,
+            "principal_mode_residual": 4.2829658551451576e-13,
+            "finite_matrix_eq123_log_error": 6.217248937900877e-15
+          },
+          {
+            "angle": -1.5697963267948967,
+            "relative_frobenius_error_to_limit": 0.0012786455053706552,
+            "principal_mode_residual": 4.2829658551451576e-13,
+            "finite_matrix_eq123_log_error": 6.217248937900877e-15
+          }
+        ]
+      },
+      {
+        "beta": -0.98,
+        "radius": 100000.0,
+        "case_count": 5,
+        "maximum_relative_frobenius_error": 1.2786445659205853e-05,
+        "direction_cases": [
+          {
+            "angle": 0.0,
+            "relative_frobenius_error_to_limit": 1.2786445659205853e-05,
+            "principal_mode_residual": 2.727276709268376e-10,
+            "finite_matrix_eq123_log_error": 3.952393967665557e-14
+          },
+          {
+            "angle": 0.7853981633974483,
+            "relative_frobenius_error_to_limit": 1.278644565909584e-05,
+            "principal_mode_residual": 4.4734186617859146e-10,
+            "finite_matrix_eq123_log_error": 2.531308496145357e-14
+          },
+          {
+            "angle": -0.7853981633974483,
+            "relative_frobenius_error_to_limit": 1.278644565909584e-05,
+            "principal_mode_residual": 4.4734186617859146e-10,
+            "finite_matrix_eq123_log_error": 2.531308496145357e-14
+          },
+          {
+            "angle": 1.5697963267948967,
+            "relative_frobenius_error_to_limit": 1.2786445658985985e-05,
+            "principal_mode_residual": 8.548043261699575e-10,
+            "finite_matrix_eq123_log_error": 4.1300296516055823e-14
+          },
+          {
+            "angle": -1.5697963267948967,
+            "relative_frobenius_error_to_limit": 1.2786445658985985e-05,
+            "principal_mode_residual": 8.548043261699575e-10,
+            "finite_matrix_eq123_log_error": 4.1300296516055823e-14
+          }
+        ]
+      },
+      {
+        "beta": -0.98,
+        "radius": 10000000.0,
+        "case_count": 5,
+        "maximum_relative_frobenius_error": 1.2786445658046686e-07,
+        "direction_cases": [
+          {
+            "angle": 0.0,
+            "relative_frobenius_error_to_limit": 1.278644565804646e-07,
+            "principal_mode_residual": 3.6164675605309165e-08,
+            "finite_matrix_eq123_log_error": 4.218847493575595e-15
+          },
+          {
+            "angle": 0.7853981633974483,
+            "relative_frobenius_error_to_limit": 1.2786445658046408e-07,
+            "principal_mode_residual": 4.960029880838144e-08,
+            "finite_matrix_eq123_log_error": 9.325873406851315e-15
+          },
+          {
+            "angle": -0.7853981633974483,
+            "relative_frobenius_error_to_limit": 1.2786445658046408e-07,
+            "principal_mode_residual": 4.960029880838144e-08,
+            "finite_matrix_eq123_log_error": 9.325873406851315e-15
+          },
+          {
+            "angle": 1.5697963267948967,
+            "relative_frobenius_error_to_limit": 1.2786445658046686e-07,
+            "principal_mode_residual": 1.882840762643474e-07,
+            "finite_matrix_eq123_log_error": 9.370282327836321e-14
+          },
+          {
+            "angle": -1.5697963267948967,
+            "relative_frobenius_error_to_limit": 1.2786445658046686e-07,
+            "principal_mode_residual": 1.882840762643474e-07,
+            "finite_matrix_eq123_log_error": 9.370282327836321e-14
+          }
+        ]
+      },
+      {
+        "beta": -0.99,
+        "radius": 1000.0,
+        "case_count": 5,
+        "maximum_relative_frobenius_error": 0.0012828166928729272,
+        "direction_cases": [
+          {
+            "angle": 0.0,
+            "relative_frobenius_error_to_limit": 0.0012828166928729272,
+            "principal_mode_residual": 4.28658606006771e-12,
+            "finite_matrix_eq123_log_error": 2.6645352591003757e-14
+          },
+          {
+            "angle": 0.7853981633974483,
+            "relative_frobenius_error_to_limit": 0.001282816570245806,
+            "principal_mode_residual": 1.3860405085498263e-11,
+            "finite_matrix_eq123_log_error": 7.149836278586008e-14
+          },
+          {
+            "angle": -0.7853981633974483,
+            "relative_frobenius_error_to_limit": 0.001282816570245806,
+            "principal_mode_residual": 1.3860405085498263e-11,
+            "finite_matrix_eq123_log_error": 7.149836278586008e-14
+          },
+          {
+            "angle": 1.5697963267948967,
+            "relative_frobenius_error_to_limit": 0.001282816447618945,
+            "principal_mode_residual": 8.965290050454556e-12,
+            "finite_matrix_eq123_log_error": 5.839773109528323e-14
+          },
+          {
+            "angle": -1.5697963267948967,
+            "relative_frobenius_error_to_limit": 0.001282816447618945,
+            "principal_mode_residual": 8.965290050454556e-12,
+            "finite_matrix_eq123_log_error": 5.839773109528323e-14
+          }
+        ]
+      },
+      {
+        "beta": -0.99,
+        "radius": 100000.0,
+        "case_count": 5,
+        "maximum_relative_frobenius_error": 1.282815506735943e-05,
+        "direction_cases": [
+          {
+            "angle": 0.0,
+            "relative_frobenius_error_to_limit": 1.282815506735943e-05,
+            "principal_mode_residual": 1.4109405479328875e-09,
+            "finite_matrix_eq123_log_error": 5.617728504603292e-14
+          },
+          {
+            "angle": 0.7853981633974483,
+            "relative_frobenius_error_to_limit": 1.2828155067236622e-05,
+            "principal_mode_residual": 4.66981582897394e-10,
+            "finite_matrix_eq123_log_error": 2.7755575615628914e-14
+          },
+          {
+            "angle": -0.7853981633974483,
+            "relative_frobenius_error_to_limit": 1.2828155067236622e-05,
+            "principal_mode_residual": 4.66981582897394e-10,
+            "finite_matrix_eq123_log_error": 2.7755575615628914e-14
+          },
+          {
+            "angle": 1.5697963267948967,
+            "relative_frobenius_error_to_limit": 1.282815506711378e-05,
+            "principal_mode_residual": 2.0221210127610782e-09,
+            "finite_matrix_eq123_log_error": 8.260059303211165e-14
+          },
+          {
+            "angle": -1.5697963267948967,
+            "relative_frobenius_error_to_limit": 1.282815506711378e-05,
+            "principal_mode_residual": 2.0221210127610782e-09,
+            "finite_matrix_eq123_log_error": 8.260059303211165e-14
+          }
+        ]
+      },
+      {
+        "beta": -0.99,
+        "radius": 10000000.0,
+        "case_count": 5,
+        "maximum_relative_frobenius_error": 1.2828155066173342e-07,
+        "direction_cases": [
+          {
+            "angle": 0.0,
+            "relative_frobenius_error_to_limit": 1.2828155066173342e-07,
+            "principal_mode_residual": 1.6027202352304663e-07,
+            "finite_matrix_eq123_log_error": 1.2168044349891716e-13
+          },
+          {
+            "angle": 0.7853981633974483,
+            "relative_frobenius_error_to_limit": 1.2828155066173225e-07,
+            "principal_mode_residual": 1.5612734940024456e-07,
+            "finite_matrix_eq123_log_error": 9.57012247226885e-14
+          },
+          {
+            "angle": -0.7853981633974483,
+            "relative_frobenius_error_to_limit": 1.2828155066173225e-07,
+            "principal_mode_residual": 1.5612734940024456e-07,
+            "finite_matrix_eq123_log_error": 9.57012247226885e-14
+          },
+          {
+            "angle": 1.5697963267948967,
+            "relative_frobenius_error_to_limit": 1.282815506617319e-07,
+            "principal_mode_residual": 4.7878635792466536e-08,
+            "finite_matrix_eq123_log_error": 1.0347278589506459e-13
+          },
+          {
+            "angle": -1.5697963267948967,
+            "relative_frobenius_error_to_limit": 1.282815506617319e-07,
+            "principal_mode_residual": 4.7878635792466536e-08,
+            "finite_matrix_eq123_log_error": 1.0347278589506459e-13
+          }
+        ]
+      }
+    ],
+    "maximum_eq123_asymptotic_log_error": 2.842170943040401e-14,
+    "maximum_norm_candidate_abs_error": 6.661338147750939e-16,
+    "maximum_phase_relative_error": 2.358775161444786e-16,
+    "maximum_last_radius_relative_matrix_error": 1.2828155066173342e-07,
+    "exploratory_grid_design": {
+      "status": "EXPLORATORY_NOT_PREREGISTERED",
+      "grid_role": "finite matrix-convergence cross-check after preliminary diagnostic work",
+      "tolerance_origin": "numerical thresholds declared after preliminary preview; not an independent acceptance threshold"
+    },
+    "source_hashes": {
+      "docs/scripts/audit/audit_curved_3p1_gh_rinne_high_frequency_transfer_endpoint.py": "e40a9806ee5687019d30a1a6587709c54a7abb62d5bbb5da11f3ae26805c9399",
+      "docs/scripts/audit/audit_curved_3p1_gh_rinne_complex_frequency_screen.py": "2fb64eedd2a6be10985eafdacc2ce7125e082dd60625d004ecbb4ea379b0911b",
+      "docs/scripts/audit/audit_curved_3p1_gh_rinne_negative_shift_kreiss_symbol.py": "f482a1b1cb61480bfaa3cb27e5a2b7cdad65218fcc6521d0d587e742ffce3f2b",
+      "docs/scripts/audit/audit_curved_3p1_gh_rinne_joint_real_kreiss_operator.py": "e64e7fc41bd819f5605811f7f6af55a8c436d6f84cd93a77ee9db9b3098f01e1",
+      "docs/core/07_artifacts/verification/curved_3p1_gh_rinne_negative_shift_kreiss_symbol.json": "5d48f6efe14f8c3501da5d8568544608fcc2d8fe7b24f798523ffdd919e39924",
+      "docs/core/02_equations/covariant/uet_curved_3p1_gh_linear_boundary.py": "39bd0731a3ecdbb5c5185453e0908d198cba895ba5f29dafc6bb8f9c6a3b169c",
+      "docs/core/02_equations/covariant/uet_curved_3p1_gh_boundary_projectors.py": "2aa529e3a037a5ecff2c2a5a6d454ef7cf9822ca99371393d6614bfbc062362f"
+    },
+    "primary_source": {
+      "locator": "https://arxiv.org/abs/gr-qc/0606053",
+      "sections": [
+        "3.1",
+        "3.2"
+      ],
+      "equations": [
+        "(51)-(55)",
+        "(69)-(74)",
+        "(109)-(123)"
+      ],
+      "note": "The published Jordan normalization discrepancy remains separately visible; the exact endpoint construction here concerns |zeta|->infinity, not the Jordan point."
+    }
+  },
+  "CONTROLLING_BLOCKER": "zero_frequency_transfer_extension_and_compactified_continuous_transfer_bound_unproved",
+  "NEXT_ACTION": "Derive the zeta->0 transfer extension. Then reconcile the normalized source-matrix determinant condition with the Kreiss equivalence and prove or interval-certify the compactified finite-frequency bound for each fixed beta.",
+  "CLAIM_BOUNDARY": "Exact source-matched high-frequency endpoint matrix construction for the frozen-coefficient standard-GR negative-normal-shift lane, with an analytic nonzero determinant limit. The norm identity ||T_infinity||_2=1-beta is only numerically checked on an exploratory beta grid; this is not a continuous all-frequency Kreiss proof or Core-parent closure.",
+  "full_core_unlock": false,
+  "gravity_unlock": false,
+  "claim_promotion": false
+}

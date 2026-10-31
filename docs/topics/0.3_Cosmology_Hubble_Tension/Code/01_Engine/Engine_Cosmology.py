@@ -38,9 +38,9 @@ if str(project_root) not in sys.path:
     sys.path.insert(0, str(project_root))
 
 # Core Imports
-from docs.core.uet_base_solver import UETBaseSolver
+from docs.scripts.core.runners.uet_base_solver import UETBaseSolver
 from docs.core.uet_master_equation import UETParameters
-from docs.core.uet_glass_box import UETPathManager
+from docs.scripts.core.runners.uet_glass_box import UETPathManager
 from docs.core.uet_parameters import (
     C,
     ALPHA_EM,

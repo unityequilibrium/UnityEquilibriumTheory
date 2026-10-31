@@ -36,3 +36,12 @@ def test_track_split_does_not_promote_topic13_or_read_holdout() -> None:
     assert gate["closure_tracks"]["o2_he4_core_ready"]["status"] == "CLOSED_FOR_CORE"
     assert gate["closure_tracks"]["graphite_ttg_external_validation"]["status"] == "OPEN"
     assert gate["verification_status"]["holdout_integrity"]["status"] == "PASS"
+
+
+def test_next_action_points_to_unlocked_curved_parent_not_repeated_o2_handoff() -> None:
+    gate = load(GATE)
+    assert "CORE_CURVED_3P1_OBSERVABLE_PARENT_READY" in gate["next_action"]
+    assert "already CLOSED_FOR_CORE" in gate["next_action"]
+    assert "Hand the bounded O(2)/He-4 thermal bridge to Core integration" not in gate["next_action"]
+    assert gate["closure_tracks"]["o2_he4_core_ready"]["status"] == "CLOSED_FOR_CORE"
+    assert gate["closure_tracks"]["graphite_ttg_external_validation"]["status"] == "OPEN"

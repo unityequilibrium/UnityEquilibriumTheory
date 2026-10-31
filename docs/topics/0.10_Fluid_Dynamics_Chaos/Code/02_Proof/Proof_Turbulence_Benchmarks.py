@@ -30,7 +30,7 @@ if not ROOT:
     print("CRITICAL: UET docs root not found!")
     sys.exit(1)
 
-from docs.core.reproducibility import generate_artifact, hash_dataset, hash_file, save_artifact
+from docs.scripts.core.audit.reproducibility import generate_artifact, hash_dataset, hash_file, save_artifact
 from docs.core.uet_master_equation import UETMasterEquation, UETParameters
 
 

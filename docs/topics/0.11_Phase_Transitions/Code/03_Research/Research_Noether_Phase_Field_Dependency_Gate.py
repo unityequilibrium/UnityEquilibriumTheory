@@ -16,7 +16,6 @@ from datetime import UTC, datetime
 from pathlib import Path
 from typing import Any
 
-
 def _bootstrap() -> Path:
     current = Path(__file__).resolve()
     for parent in [current] + list(current.parents):
@@ -28,15 +27,23 @@ def _bootstrap() -> Path:
 
 
 ROOT = _bootstrap()
+from docs.core.core_paths import canonical_artifact_path  # noqa: E402
+
 TOPIC = "0.11_Phase_Transitions"
 TOPIC_DIR = ROOT / "docs" / "topics" / TOPIC
 DATA_DIR = TOPIC_DIR / "Data" / "03_Research"
 ARTIFACT_DIR = TOPIC_DIR / "Result" / "artifacts"
 
-CORE_STATE_MAP = ROOT / "docs" / "core" / "artifacts" / "noether_phase_field_state_map_verification.json"
-CORE_FORMULA_AUDIT = ROOT / "docs" / "core" / "artifacts" / "noether_phase_field_map_formula_audit.json"
-CORE_DEPENDENCY_GATE = ROOT / "docs" / "core" / "artifacts" / "noether_phase_field_dependency_gate.json"
-CORE_PROGRAM_GATE = ROOT / "docs" / "core" / "artifacts" / "uet_gr_research_program_gate.json"
+CORE_STATE_MAP = canonical_artifact_path(
+    "noether_phase_field_state_map_verification.json", "verification"
+)
+CORE_FORMULA_AUDIT = canonical_artifact_path(
+    "noether_phase_field_map_formula_audit.json", "correspondence"
+)
+CORE_DEPENDENCY_GATE = canonical_artifact_path(
+    "noether_phase_field_dependency_gate.json", "gates"
+)
+CORE_PROGRAM_GATE = canonical_artifact_path("uet_gr_research_program_gate.json", "gates")
 WAVE55_GATE = ARTIFACT_DIR / "0_11_structure_factor_ch_finite_k_next_path_decision_gate.json"
 MATTER_SPACE_PILOT = ARTIFACT_DIR / "0_11_matter_space_coupled_diagnostic.json"
 READINESS_METADATA = ROOT / "docs" / "meta" / "topic_readiness.json"

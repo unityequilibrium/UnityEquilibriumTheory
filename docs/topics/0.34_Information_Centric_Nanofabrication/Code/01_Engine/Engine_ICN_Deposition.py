@@ -39,7 +39,7 @@ project_root = current_file.parents[5]
 if str(project_root) not in sys.path:
     sys.path.insert(0, str(project_root))
 
-from docs.core.uet_base_solver import UETBaseSolver
+from docs.scripts.core.runners.uet_base_solver import UETBaseSolver
 from docs.core.uet_parameters import get_params, UETParameters, INTEGRITY_KILL_SWITCH
 from docs.core.uet_master_equation import UETMasterEquation, calculate_value
 

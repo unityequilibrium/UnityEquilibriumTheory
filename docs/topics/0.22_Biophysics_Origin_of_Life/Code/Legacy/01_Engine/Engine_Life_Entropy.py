@@ -38,7 +38,7 @@ from pathlib import Path
 
 # Base Solver & Parameter Imports
 try:
-    from docs.core.uet_base_solver import UETBaseSolver
+    from docs.scripts.core.runners.uet_base_solver import UETBaseSolver
     from docs.core.uet_parameters import get_params
 except ImportError:
     import sys
@@ -51,7 +51,7 @@ except ImportError:
             root = parent
             sys.path.insert(0, str(root))
             break
-    from docs.core.uet_base_solver import UETBaseSolver
+    from docs.scripts.core.runners.uet_base_solver import UETBaseSolver
 
 
 class LifeEngine(UETBaseSolver):

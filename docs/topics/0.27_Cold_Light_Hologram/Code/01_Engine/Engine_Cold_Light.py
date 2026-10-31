@@ -25,7 +25,7 @@ from pathlib import Path
 
 
 from docs.core.uet_parameters import get_params, C, HBAR
-from docs.core.uet_glass_box import UETPathManager
+from docs.scripts.core.runners.uet_glass_box import UETPathManager
 
 # --- UET CORE SETUP ---
 # Path logic is now handled by UETPathManager where possible.

@@ -46,9 +46,9 @@ else:
 
 TOPIC_DIR = ROOT / "docs" / "topics" / "0.4_Superconductivity_Superfluids"
 
-from docs.core.uet_base_solver import UETBaseSolver
+from docs.scripts.core.runners.uet_base_solver import UETBaseSolver
 from docs.core.uet_master_equation import UETParameters
-from docs.core.uet_glass_box import UETPathManager
+from docs.scripts.core.runners.uet_glass_box import UETPathManager
 from docs.core.uet_parameters import INTEGRITY_KILL_SWITCH
 
 

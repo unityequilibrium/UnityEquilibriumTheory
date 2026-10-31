@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import hashlib
+import importlib.util
 import json
 import sys
 from datetime import datetime, timezone
@@ -15,14 +16,32 @@ ROOT = Path(__file__).resolve().parents[3]
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
-from docs.core.uet_curved_3p1_constraints import (
-    ADMMatterProjection,
-    adm_constraint_contract,
-    evaluate_adm_constraints,
-    flat_flrw_adm_control,
-    minkowski_adm_control,
+
+def _load_local_module(module_name: str, path: Path):
+    """Load a leaf module without triggering the dependency-heavy core package init."""
+
+    spec = importlib.util.spec_from_file_location(module_name, path)
+    if spec is None or spec.loader is None:
+        raise ImportError(f"cannot load module from {path}")
+    module = importlib.util.module_from_spec(spec)
+    sys.modules[module_name] = module
+    spec.loader.exec_module(module)
+    return module
+
+
+_constraint_module = _load_local_module(
+    "_uet_curved_3p1_constraints_audit",
+    ROOT / "docs/core/02_equations/covariant/uet_curved_3p1_constraints.py",
 )
-from docs.core.core_paths import canonical_artifact_path
+_core_paths_module = _load_local_module(
+    "_uet_core_paths_audit", ROOT / "docs/core/core_paths.py"
+)
+ADMMatterProjection = _constraint_module.ADMMatterProjection
+adm_constraint_contract = _constraint_module.adm_constraint_contract
+evaluate_adm_constraints = _constraint_module.evaluate_adm_constraints
+flat_flrw_adm_control = _constraint_module.flat_flrw_adm_control
+minkowski_adm_control = _constraint_module.minkowski_adm_control
+canonical_artifact_path = _core_paths_module.canonical_artifact_path
 
 
 ARTIFACTS = ROOT / "docs/core/07_artifacts"
@@ -49,6 +68,27 @@ GH_TIME_GATE = canonical_artifact_path("curved_3p1_gh_time_evolution_gate.json",
 MATTER_VERIFY = canonical_artifact_path("curved_3p1_topic13_matter_wiring_verification.json", "verification")
 MATTER_FORMULA = canonical_artifact_path("curved_3p1_topic13_matter_wiring_formula_audit.json", "correspondence")
 MATTER_GATE = canonical_artifact_path("curved_3p1_topic13_matter_wiring_gate.json", "gates")
+GH_LINEAR_BOUNDARY_AUDIT = canonical_artifact_path(
+    "curved_3p1_gh_linear_boundary_residual_audit.json", "verification"
+)
+GH_GW_DETECTOR_RESPONSE_AUDIT = canonical_artifact_path(
+    "curved_3p1_gh_gw_detector_response_audit.json", "verification"
+)
+GH_GAUGE_WAVE_TT_NULL_AUDIT = canonical_artifact_path(
+    "curved_3p1_gh_gauge_wave_tt_null_audit.json", "verification"
+)
+GH_TT_SBP_SAT_BOUNDARY_AUDIT = canonical_artifact_path(
+    "curved_3p1_gh_tt_sbp_sat_boundary_pilot.json", "verification"
+)
+GH_FULL_U1_CPBC_SLAB_AUDIT = canonical_artifact_path(
+    "curved_3p1_gh_full_u1_cpbc_slab_pilot.json", "verification"
+)
+GH_REDUCED_WAVE_COMPARATOR_AUDIT = canonical_artifact_path(
+    "curved_3p1_gh_reduced_wave_boundary_comparator.json", "verification"
+)
+GH_REDUCED_WAVE_SBP_SAT_COMPARATOR_AUDIT = canonical_artifact_path(
+    "curved_3p1_gh_reduced_wave_sbp_sat_comparator.json", "verification"
+)
 
 
 def _sha256(path: Path) -> str:
@@ -80,6 +120,27 @@ def build_artifacts() -> tuple[dict, dict, dict, dict]:
     matter_verification = json.loads(MATTER_VERIFY.read_text(encoding="utf-8"))
     matter_formula = json.loads(MATTER_FORMULA.read_text(encoding="utf-8"))
     matter_gate = json.loads(MATTER_GATE.read_text(encoding="utf-8"))
+    gh_linear_boundary_audit = json.loads(
+        GH_LINEAR_BOUNDARY_AUDIT.read_text(encoding="utf-8")
+    )
+    gh_gw_detector_response_audit = json.loads(
+        GH_GW_DETECTOR_RESPONSE_AUDIT.read_text(encoding="utf-8")
+    )
+    gh_gauge_wave_tt_null_audit = json.loads(
+        GH_GAUGE_WAVE_TT_NULL_AUDIT.read_text(encoding="utf-8")
+    )
+    gh_tt_sbp_sat_boundary_audit = json.loads(
+        GH_TT_SBP_SAT_BOUNDARY_AUDIT.read_text(encoding="utf-8")
+    )
+    gh_full_u1_cpbc_slab_audit = json.loads(
+        GH_FULL_U1_CPBC_SLAB_AUDIT.read_text(encoding="utf-8")
+    )
+    gh_reduced_wave_comparator_audit = json.loads(
+        GH_REDUCED_WAVE_COMPARATOR_AUDIT.read_text(encoding="utf-8")
+    )
+    gh_reduced_wave_sbp_sat_comparator_audit = json.loads(
+        GH_REDUCED_WAVE_SBP_SAT_COMPARATOR_AUDIT.read_text(encoding="utf-8")
+    )
     geometry_passed = (
         geometry_verification.get("status") == "PASS_CURVED_3P1_GEOMETRY_OPERATOR"
         and geometry_verification.get("major_result", {}).get("closure_level")
@@ -136,6 +197,220 @@ def build_artifacts() -> tuple[dict, dict, dict, dict]:
         and matter_gate.get("status")
         == "PARTIAL_CURVED_3P1_PRESCRIBED_MATTER_SOURCE_READY"
         and all(matter_verification.get("checks", {}).values())
+    )
+    gh_linear_boundary_passed = (
+        gh_linear_boundary_audit.get("status")
+        == "PASS_GH_LINEAR_BOUNDARY_RESIDUAL_OPERATOR_AUDIT"
+        and gh_linear_boundary_audit.get("major_result", {}).get("closure_level")
+        == "CLOSED_FOR_LANE"
+        and all(gh_linear_boundary_audit.get("checks", {}).values())
+        and gh_linear_boundary_audit.get("scope", {}).get(
+            "boundary_operator_applied_to_evolution"
+        )
+        is False
+    )
+    gw_response_hashes = gh_gw_detector_response_audit.get("source_hashes", {})
+    gw_response_hashes_valid = bool(gw_response_hashes) and all(
+        (ROOT / source_path).is_file()
+        and _sha256(ROOT / source_path) == source_hash
+        for source_path, source_hash in gw_response_hashes.items()
+    )
+    gh_gw_detector_response_passed = (
+        gh_gw_detector_response_audit.get("status")
+        == "PASS_GH_LINEAR_GW_INTERFEROMETER_RESPONSE"
+        and gh_gw_detector_response_audit.get("major_result", {}).get(
+            "major_result_id"
+        )
+        == "CORE_CURVED_3P1_GW_DETECTOR_RESPONSE_LANE"
+        and gh_gw_detector_response_audit.get("major_result", {}).get(
+            "closure_level"
+        )
+        == "CLOSED_FOR_LANE"
+        and all(gh_gw_detector_response_audit.get("checks", {}).values())
+        and gh_gw_detector_response_audit.get("claim_promotion") is False
+        and gh_gw_detector_response_audit.get("input_identity", {}).get(
+            "detector_data_consumed"
+        )
+        is False
+        and gh_gw_detector_response_audit.get("input_identity", {}).get(
+            "holdout_consumed"
+        )
+        is False
+        and gh_gw_detector_response_audit.get("input_identity", {}).get(
+            "data_rows_consumed"
+        )
+        == 0
+        and gw_response_hashes_valid
+    )
+    gauge_wave_hashes = gh_gauge_wave_tt_null_audit.get("source_hashes", {})
+    gauge_wave_hashes_valid = bool(gauge_wave_hashes) and all(
+        (ROOT / source_path).is_file()
+        and _sha256(ROOT / source_path) == source_hash
+        for source_path, source_hash in gauge_wave_hashes.items()
+    )
+    gh_gauge_wave_tt_null_passed = (
+        gh_gauge_wave_tt_null_audit.get("status")
+        == "PASS_GH_HARMONIC_GAUGE_WAVE_TT_NULL_CONTROL"
+        and gh_gauge_wave_tt_null_audit.get("major_result", {}).get(
+            "major_result_id"
+        )
+        == "CORE_CURVED_3P1_GH_GAUGE_WAVE_TT_NULL_CONTROL"
+        and gh_gauge_wave_tt_null_audit.get("major_result", {}).get(
+            "closure_level"
+        )
+        == "CLOSED_FOR_LANE"
+        and all(gh_gauge_wave_tt_null_audit.get("checks", {}).values())
+        and gh_gauge_wave_tt_null_audit.get("claim_promotion") is False
+        and gh_gauge_wave_tt_null_audit.get("input_identity", {}).get(
+            "detector_data_consumed"
+        )
+        is False
+        and gh_gauge_wave_tt_null_audit.get("input_identity", {}).get(
+            "holdout_consumed"
+        )
+        is False
+        and gauge_wave_hashes_valid
+    )
+    gh_tt_boundary_hashes = gh_tt_sbp_sat_boundary_audit.get("source_hashes", {})
+    gh_tt_boundary_hashes_valid = bool(gh_tt_boundary_hashes) and all(
+        (ROOT / source_path).is_file()
+        and _sha256(ROOT / source_path) == source_hash
+        for source_path, source_hash in gh_tt_boundary_hashes.items()
+    )
+    gh_tt_sbp_sat_boundary_passed = (
+        gh_tt_sbp_sat_boundary_audit.get("status")
+        == "PASS_GH_LINEAR_TT_SBP_SAT_BOUNDARY_PILOT"
+        and gh_tt_sbp_sat_boundary_audit.get("major_result", {}).get(
+            "major_result_id"
+        )
+        == "CORE_CURVED_3P1_GH_LINEAR_TT_SBP_SAT_BOUNDARY_PILOT"
+        and gh_tt_sbp_sat_boundary_audit.get("major_result", {}).get(
+            "closure_level"
+        )
+        == "CLOSED_FOR_LANE"
+        and all(gh_tt_sbp_sat_boundary_audit.get("checks", {}).values())
+        and gh_tt_sbp_sat_boundary_audit.get("claim_promotion") is False
+        and gh_tt_sbp_sat_boundary_audit.get("scope", {}).get(
+            "full_rinne_cpbc_implemented"
+        )
+        is False
+        and gh_tt_sbp_sat_boundary_audit.get("scope", {}).get(
+            "periodic_gh_solver_modified"
+        )
+        is False
+        and gh_tt_sbp_sat_boundary_audit.get("scope", {}).get("filtering")
+        is False
+        and gh_tt_sbp_sat_boundary_audit.get("scope", {}).get("clipping") is False
+        and gh_tt_sbp_sat_boundary_audit.get("scope", {}).get(
+            "parameter_fitting"
+        )
+        is False
+        and gh_tt_sbp_sat_boundary_audit.get("major_result", {}).get("units", {}).get(
+            "UET_symbols_used"
+        )
+        == []
+        and gh_tt_boundary_hashes_valid
+    )
+    gh_full_u1_hashes = gh_full_u1_cpbc_slab_audit.get("source_hashes", {})
+    gh_full_u1_hashes_valid = bool(gh_full_u1_hashes) and all(
+        (ROOT / source_path).is_file()
+        and _sha256(ROOT / source_path) == source_hash
+        for source_path, source_hash in gh_full_u1_hashes.items()
+    )
+    gh_full_u1_mapping_partial = (
+        gh_full_u1_cpbc_slab_audit.get("status")
+        == "FAIL_GH_FULL_U1_CHEBYSHEV_SLAB_PILOT"
+        and gh_full_u1_cpbc_slab_audit.get("major_result", {}).get(
+            "major_result_id"
+        )
+        == "CORE_CURVED_3P1_GH_FULL_U1_CHEBYSHEV_SLAB_PILOT"
+        and gh_full_u1_cpbc_slab_audit.get("major_result", {}).get(
+            "closure_level"
+        )
+        == "PARTIAL"
+        and all(
+            gh_full_u1_cpbc_slab_audit.get("checks", {}).get(name) is True
+            for name in (
+                "projector_ranks_are_4_2_4",
+                "projector_algebra_is_orthogonal_and_complete",
+                "incoming_rhs_matches_all_three_projected_targets",
+                "rhs_targets_match_rinne_normal_incidence_residuals",
+                "constraint_compatible_lift_preserves_reduction_and_incoming_targets",
+            )
+        )
+        and gh_full_u1_cpbc_slab_audit.get("major_result", {}).get(
+            "dependency_unlocked"
+        )
+        == "none; the Core curved-3+1 CPBC parent and Gravity remain blocked"
+        and gh_full_u1_cpbc_slab_audit.get("claim_promotion") is False
+        and gh_full_u1_hashes_valid
+    )
+    gh_reduced_wave_hashes = gh_reduced_wave_comparator_audit.get(
+        "source_hashes", {}
+    )
+    gh_reduced_wave_hashes_valid = bool(gh_reduced_wave_hashes) and all(
+        (ROOT / source_path).is_file()
+        and _sha256(ROOT / source_path) == source_hash
+        for source_path, source_hash in gh_reduced_wave_hashes.items()
+    )
+    gh_reduced_wave_partial = (
+        gh_reduced_wave_comparator_audit.get("status")
+        == "PARTIAL_REDUCED_WAVE_BOUNDARY_COMPARATOR"
+        and gh_reduced_wave_comparator_audit.get("major_result", {}).get(
+            "major_result_id"
+        )
+        == "CORE_CURVED_3P1_GH_REDUCED_WAVE_BOUNDARY_COMPARATOR"
+        and gh_reduced_wave_comparator_audit.get("major_result", {}).get(
+            "closure_level"
+        )
+        == "PARTIAL"
+        and all(
+            gh_reduced_wave_comparator_audit.get("checks", {}).get(name) is True
+            for name in (
+                "no_resolved_growing_semidiscrete_mode",
+                "random_perturbation_stays_bounded",
+                "reduction_constraint_is_algebraic",
+            )
+        )
+        and gh_reduced_wave_comparator_audit.get("checks", {}).get(
+            "tt_packet_is_absorbed"
+        ) is False
+        and gh_reduced_wave_comparator_audit.get("claim_promotion") is False
+        and gh_reduced_wave_comparator_audit.get("major_result", {}).get(
+            "dependency_unlocked"
+        )
+        == "none; Core curved-3+1 parent and Gravity remain blocked"
+        and gh_reduced_wave_hashes_valid
+    )
+    gh_reduced_wave_sbp_sat_hashes = gh_reduced_wave_sbp_sat_comparator_audit.get(
+        "source_hashes", {}
+    )
+    gh_reduced_wave_sbp_sat_hashes_valid = bool(gh_reduced_wave_sbp_sat_hashes) and all(
+        (ROOT / source_path).is_file()
+        and _sha256(ROOT / source_path) == source_hash
+        for source_path, source_hash in gh_reduced_wave_sbp_sat_hashes.items()
+    )
+    gh_reduced_wave_sbp_sat_passed = (
+        gh_reduced_wave_sbp_sat_comparator_audit.get("status")
+        == "PASS_REDUCED_TT_SBP_SAT_COMPARATOR"
+        and gh_reduced_wave_sbp_sat_comparator_audit.get("major_result", {}).get(
+            "major_result_id"
+        )
+        == "CORE_CURVED_3P1_GH_REDUCED_TT_SBP_SAT_COMPARATOR"
+        and gh_reduced_wave_sbp_sat_comparator_audit.get("major_result", {}).get(
+            "closure_level"
+        )
+        == "CLOSED_FOR_LANE"
+        and all(gh_reduced_wave_sbp_sat_comparator_audit.get("checks", {}).values())
+        and gh_reduced_wave_sbp_sat_comparator_audit.get("claim_promotion") is False
+        and gh_reduced_wave_sbp_sat_comparator_audit.get("scope", {}).get(
+            "full_first_order_gh_cpbc"
+        )
+        is False
+        and gh_reduced_wave_sbp_sat_comparator_audit.get("major_result", {}).get(
+            "dependency_unlocked", ""
+        ).startswith("none;")
+        and gh_reduced_wave_sbp_sat_hashes_valid
     )
     threshold = 1e-12
 
@@ -341,6 +616,26 @@ def build_artifacts() -> tuple[dict, dict, dict, dict]:
         "characteristic_cfl_policy": "PASS" if gh_time_passed else "OPEN",
         "constraint_propagation": "PASS_PERIODIC_GAUGE_REDUCTION_CURL_CONVERGENCE" if gh_time_passed else ("PARTIAL_REDUCTION_AND_ALGEBRAIC_GAUGE_DAMPING_ONLY" if gh_nonlinear_passed else ("PARTIAL_REDUCTION_CONSTRAINT_DAMPING_ONLY" if gh_principal_passed else "OPEN")),
         "temporal_spatial_convergence": "PASS_RK4_TEMPORAL_AND_SECOND_ORDER_SPATIAL" if gh_time_passed else ("PARTIAL_SPATIAL_OPERATOR_CONVERGENCE_ONLY" if gh_principal_passed else "OPEN"),
+        "gh_linear_boundary_residuals": "PASS_DIAGNOSTIC_ONLY" if gh_linear_boundary_passed else "OPEN",
+        "linearized_gw_detector_response": "PASS_DIAGNOSTIC_ONLY"
+        if gh_gw_detector_response_passed
+        else "OPEN",
+        "gh_gauge_wave_tt_null_control": "PASS_DIAGNOSTIC_ONLY"
+        if gh_gauge_wave_tt_null_passed
+        else "OPEN",
+        "gh_tt_sbp_sat_boundary_pilot": "PASS_DIAGNOSTIC_ONLY"
+        if gh_tt_sbp_sat_boundary_passed
+        else "OPEN",
+        "gh_full_u1_cpbc_slab": "PARTIAL_MAPPING_ONLY_DISCRETIZATION_OPEN"
+        if gh_full_u1_mapping_partial
+        else "OPEN",
+        "gh_full_u1_slab_evolution": "OPEN_POINTWISE_REDUCTION_AND_LIFT_STABILITY_TRADEOFF",
+        "gh_reduced_wave_boundary_comparator": "PARTIAL_ALGEBRAIC_REDUCTION_AND_LOW_RESOLUTION_BOUNDEDNESS"
+        if gh_reduced_wave_partial
+        else "OPEN",
+        "gh_reduced_wave_sbp_sat_comparator": "PASS_DIAGNOSTIC_ONLY"
+        if gh_reduced_wave_sbp_sat_passed
+        else "OPEN",
         "constraint_preserving_boundaries": "OPEN",
         "topic13_stress_energy_projection": "PASS_PRESCRIBED_TOPIC13_HE4_SOURCE"
         if matter_passed
@@ -440,6 +735,30 @@ def build_artifacts() -> tuple[dict, dict, dict, dict]:
                 "natural-to-SI multiplicative stress-energy scaling control",
             ]
         )
+    if gh_linear_boundary_passed:
+        closed_components.append(
+            "source-matched linearized GH differential boundary residual evaluators (not applied to evolution)"
+        )
+    if gh_gw_detector_response_passed:
+        closed_components.append(
+            "source-matched finite-frequency linear TT-mode interferometer response diagnostic (not a UET prediction)"
+        )
+    if gh_gauge_wave_tt_null_passed:
+        closed_components.append(
+            "evolved periodic GH harmonic gauge-wave negative control rejected as TT detector strain"
+        )
+    if gh_tt_sbp_sat_boundary_passed:
+        closed_components.append(
+            "linearized standard-GR TT-sector non-periodic SBP-SAT boundary pilot only"
+        )
+    if gh_full_u1_mapping_partial:
+        closed_components.append(
+            "full ten-component normal-incidence u1-minus 4+2+4 target algebra and residual cross-check only; evolution discretization remains open"
+        )
+    if gh_reduced_wave_sbp_sat_passed:
+        closed_components.append(
+            "second-order reduced-TT SBP-SAT energy estimate and bidirectional outgoing-packet control only"
+        )
     open_parent_requirements = [
         key
         for key, value in parent_requirements.items()
@@ -458,14 +777,35 @@ def build_artifacts() -> tuple[dict, dict, dict, dict]:
             "equation_or_mapping": {
                 **contract["equations"],
                 **matter_verification["major_result"]["equation_or_mapping"],
+                "linearized_gw_detector_response": gh_gw_detector_response_audit[
+                    "major_result"
+                ]["equation_or_mapping"],
+                "gh_gauge_wave_tt_null_control": gh_gauge_wave_tt_null_audit[
+                    "major_result"
+                ]["equation_or_mapping"],
+                "gh_linear_boundary_residuals": gh_linear_boundary_audit[
+                    "major_result"
+                ]["equation_or_mapping"],
+                "gh_tt_sbp_sat_boundary_pilot": gh_tt_sbp_sat_boundary_audit[
+                    "major_result"
+                ]["equation_or_mapping"],
+                "gh_full_u1_cpbc_slab_pilot": gh_full_u1_cpbc_slab_audit[
+                    "major_result"
+                ]["equation_or_mapping"],
+                "gh_reduced_wave_boundary_comparator": gh_reduced_wave_comparator_audit[
+                    "major_result"
+                ]["equation_or_mapping"],
+                "gh_reduced_wave_sbp_sat_comparator": gh_reduced_wave_sbp_sat_comparator_audit[
+                    "major_result"
+                ]["equation_or_mapping"],
             },
-            "units": "geometric constraint lane; SI observable mapping open",
+            "units": "geometric constraints plus one bounded SI linear detector-response lane; general observable mapping open",
             "derivation_class": "incremental curved 3+1 parent construction",
-            "observable": "constraint residual diagnostics only",
+            "observable": "constraint residuals, ideal interferometer strain for one linearized TT plane-wave mode, and a GH pure-gauge null control; general mapping open",
             "data_role": "internal analytic controls",
             "verification_status": parent_status,
             "open_blockers": open_parent_requirements,
-            "dependency_unlocked": "constraint-preserving boundary and dimensional-observable waves only; GR_CLASSICAL_COMPATIBILITY_LANE remains blocked",
+            "dependency_unlocked": "bounded linear TT detector-response, GH gauge-false-positive, TT-sector SBP-SAT boundary, full-u1 boundary-mapping, and reduced-TT SBP-SAT energy diagnostic lanes only; full GH CPBC evolution and general observable mapping remain open, and GR_CLASSICAL_COMPATIBILITY_LANE remains blocked",
             "claim_boundary": "partial parent construction; not CLOSED_FOR_CORE and not Gravity/GR compatibility",
         },
         "requirements": parent_requirements,
@@ -493,6 +833,13 @@ def build_artifacts() -> tuple[dict, dict, dict, dict]:
             {"path": MATTER_VERIFY.relative_to(ROOT).as_posix(), "sha256": None},
             {"path": MATTER_FORMULA.relative_to(ROOT).as_posix(), "sha256": None},
             {"path": MATTER_GATE.relative_to(ROOT).as_posix(), "sha256": None},
+            {"path": GH_LINEAR_BOUNDARY_AUDIT.relative_to(ROOT).as_posix(), "sha256": None},
+            {"path": GH_GW_DETECTOR_RESPONSE_AUDIT.relative_to(ROOT).as_posix(), "sha256": None},
+            {"path": GH_GAUGE_WAVE_TT_NULL_AUDIT.relative_to(ROOT).as_posix(), "sha256": None},
+            {"path": GH_TT_SBP_SAT_BOUNDARY_AUDIT.relative_to(ROOT).as_posix(), "sha256": None},
+            {"path": GH_FULL_U1_CPBC_SLAB_AUDIT.relative_to(ROOT).as_posix(), "sha256": None},
+            {"path": GH_REDUCED_WAVE_COMPARATOR_AUDIT.relative_to(ROOT).as_posix(), "sha256": None},
+            {"path": GH_REDUCED_WAVE_SBP_SAT_COMPARATOR_AUDIT.relative_to(ROOT).as_posix(), "sha256": None},
         ],
         "claim_promotion": False,
     }
@@ -772,6 +1119,230 @@ def build_artifacts() -> tuple[dict, dict, dict, dict]:
                 "claim_boundary": matter_verification["major_result"]["claim_boundary"],
                 "failure_mode": "prescribed source wiring is overread as a self-consistent matter-coupled spacetime solution",
                 "next_hardening_step": "add constraint-preserving boundaries and a conservation-compatible matter evolution contract"
+            },
+            {
+                "equation_id": "uet.main_theory.curved_3p1.gh_linear_differential_boundary_residuals",
+                "version": "gh-linear-differential-boundary-residuals-v1",
+                "classification": "standard_physics_boundary_condition_diagnostic",
+                "relation_or_code_path": "docs/core/02_equations/covariant/uet_curved_3p1_gh_linear_boundary.py",
+                "formula_ids": [
+                    "GH-BC-CONSTRAINT-C0MINUS-027",
+                    "GH-BC-INCOMING-WEYL-030-033",
+                    "GH-BC-U2-CURL-029",
+                    "GH-BC-GAUGE-PROJECTION-035-036"
+                ],
+                "variables": {
+                    "delta_psi_ab": "linear spacetime-metric perturbation; not UET Phi",
+                    "delta_Pi_ab": "linear normal metric-derivative perturbation; not UET Pi",
+                    "delta_Phi_iab": "linear spatial metric-derivative perturbation; not UET Phi",
+                    "beta_n": "outward normal shift component",
+                    "gamma2": "first-order reduction-constraint damping parameter"
+                },
+                "mathematical_role": "evaluate incoming subsidiary-constraint, Weyl/Psi_0, gauge-data, and positive-shift u2_A definition-curl boundary residuals",
+                "standard_physics_counterpart": "linearized/frozen-background first-order generalized-harmonic boundary conditions of Rinne (2006), Eqs. 27-36",
+                "observable_mapping": {"status": "OPEN", "reason": "boundary residuals are numerical/formulation diagnostics, not gravitational detector observables"},
+                "unit_lane": "geometric c=1 local orthonormal frame",
+                "parameter_dimensions": {
+                    "delta_psi": "1",
+                    "delta_Pi_and_delta_Phi": "L^-1",
+                    "gamma2": "L^-1",
+                    "constraint_and_weyl_residuals": "L^-2",
+                    "gauge_residual": "L^-1"
+                },
+                "source_or_origin": {
+                    "formula_source": "https://arxiv.org/abs/gr-qc/0606053",
+                    "formula_locators": "Eqs. 27-33 and 35-36",
+                    "well_posedness_caution": "https://arxiv.org/abs/gr-qc/0303040"
+                },
+                "assumptions": ["linear perturbations about Minkowski", "local orthonormal frame", "fixed smooth face", "strictly subluminal normal shift", "source GH first-order variables and sign convention"],
+                "symmetry_and_conservation": "projected Weyl tensor is transverse and trace-free; subsidiary-constraint propagation under a discrete boundary scheme remains unverified",
+                "limiting_cases": ["nonpositive normal shift: u1_minus incoming", "positive subluminal normal shift: u1_minus and u2_A incoming", "zero perturbation with homogeneous data"],
+                "implementation_paths": ["docs/core/02_equations/covariant/uet_curved_3p1_gh_linear_boundary.py"],
+                "verifier_paths": ["docs/scripts/audit/audit_uet_curved_3p1_gh_linear_boundary.py", GH_LINEAR_BOUNDARY_AUDIT.relative_to(ROOT).as_posix(), "docs/core/05_tests/regression/root/test_uet_curved_3p1_gh_linear_boundary.py"],
+                "evidence_class": "INTERNAL_SOURCE_MATCHED_FORMULA_AND_ANALYTIC_CONTROL",
+                "proof_status": "linear boundary residual formulas and projector kernels pass deterministic controls; no evolution enforcement or IBVP stability result",
+                "downstream_dependencies": ["CORE_CURVED_3P1_OBSERVABLE_PARENT_READY"],
+                "claim_boundary": "frozen-background linear residual evaluator only; not implemented nonlinear CPBC or a well-posed repository IBVP",
+                "failure_mode": "correct residual evaluation is overread as a stable discrete boundary treatment",
+                "next_hardening_step": "apply to a non-periodic SBP/SAT GH boundary evolution and verify constraint energy, stability, convergence, and corners"
+            },
+            {
+                "equation_id": "uet.main_theory.curved_3p1.gh_full_u1_boundary_slab_pilot",
+                "version": "gh-full-u1-chebyshev-slab-pilot-v1",
+                "classification": "standard_physics_boundary_evolution_diagnostic",
+                "relation_or_code_path": "docs/core/02_equations/covariant/uet_curved_3p1_gh_full_u1_slab.py",
+                "formula_ids": [
+                    "GH-BC-U1-MINUS-4-2-4-PROJECTION-001",
+                    "GH-BC-U1-INCOMING-RHS-NORMAL-INCIDENCE-002",
+                    "GH-BC-U1-CONSTRAINT-COMPATIBLE-LIFT-EXPERIMENT-003"
+                ],
+                "variables": {
+                    "psi_ab": "linearized spacetime metric perturbation; not UET Phi",
+                    "Pi_ab": "normal time derivative variable; not UET Pi",
+                    "Phi_xab": "normal spatial derivative variable; not UET Phi",
+                    "q_ab": "incoming u1-minus characteristic field",
+                    "P_C_P_P_P_G": "source-defined constraint, physical, and gauge projectors"
+                },
+                "mathematical_role": "match the 4+2+4 incoming-u1 boundary RHS targets to the normal-incidence constraint, Weyl, and gauge residuals, then compare endpoint and reduction-compatible discretizations",
+                "standard_physics_counterpart": "frozen-background first-order GH differential boundary conditions of Rinne (2006), Eqs. 27-36 and Sec. 5.1",
+                "observable_mapping": {"status": "OPEN", "reason": "boundary residual, reduction constraint, and pulse energy are numerical diagnostics rather than gravitational observables"},
+                "unit_lane": "geometric c=1 with slab length scale L0=1",
+                "parameter_dimensions": gh_full_u1_cpbc_slab_audit["major_result"]["units"],
+                "source_or_origin": {
+                    "formula_source": "https://arxiv.org/abs/gr-qc/0606053",
+                    "formula_locators": "Eqs. 27-36 and Sec. 5.1",
+                    "local_evidence": GH_FULL_U1_CPBC_SLAB_AUDIT.relative_to(ROOT).as_posix(),
+                    "source_hashes": gh_full_u1_cpbc_slab_audit["source_hashes"]
+                },
+                "assumptions": ["linear perturbations about Minkowski", "zero shift", "one spatial normal with no tangential derivatives", "homogeneous constraint and Weyl data", "prescribed gauge-data rate", "gamma0 gauge-constraint damping excluded"],
+                "symmetry_and_conservation": "the 4+2+4 target algebra matches residual evaluation; pointwise replacement leaves a nonzero discrete reduction residual, while the cubic compatible lift is unstable",
+                "limiting_cases": ["homogeneous zero state", "normal-incidence incoming u1-minus only", "no positive-shift u2_A modes"],
+                "implementation_paths": ["docs/core/02_equations/covariant/uet_curved_3p1_gh_full_u1_slab.py"],
+                "verifier_paths": ["docs/scripts/audit/audit_curved_3p1_gh_full_u1_cpbc_slab.py", GH_FULL_U1_CPBC_SLAB_AUDIT.relative_to(ROOT).as_posix(), "docs/core/05_tests/regression/root/test_uet_curved_3p1_gh_full_u1_slab.py"],
+                "evidence_class": "INTERNAL_SOURCE_MATCHED_FORMULA_AND_PARTIAL_NUMERICAL_DIAGNOSTIC",
+                "proof_status": "4+2+4 projector and residual identities pass; pointwise Chebyshev spectrum/noise screens pass but pulse/reduction limits fail; the reduction-compatible lift preserves the identity but is spectrally unstable; no CPBC evolution closure",
+                "downstream_dependencies": [],
+                "claim_boundary": "partial full-u1 boundary-mapping diagnostic only; not stable full GH CPBC, nonlinear well-posedness, Gravity compatibility, or UET closure",
+                "failure_mode": "the pointwise incoming RHS and a reduction-compatible lift each solve only one side of the discrete trade-off; either is overread as a complete stable constraint-preserving evolution",
+                "next_hardening_step": "derive a boundary/SBP discretization that preserves the reduction constraint without the lift's growing modes, then rerun pulse reflection and convergence gates"
+            },
+            {
+                "equation_id": "uet.main_theory.curved_3p1.gh_reduced_wave_boundary_comparator",
+                "version": "gh-reduced-wave-algebraic-phi-boundary-comparator-v1",
+                "classification": "standard_physics_second_order_boundary_comparator",
+                "relation_or_code_path": "docs/core/02_equations/covariant/uet_curved_3p1_gh_full_u1_slab.py",
+                "formula_ids": ["GH-BC-U1-REDUCED-WAVE-ALGEBRAIC-PHI-COMPARATOR-001"],
+                "variables": {
+                    "psi_ab": "linearized spacetime metric perturbation; not UET Phi",
+                    "Pi_ab": "normal time derivative variable; not UET Pi",
+                    "Phi_xab": "spatial derivative variable constrained algebraically to D_x(psi_ab); not UET Phi",
+                    "q_ab": "incoming u1-minus characteristic field",
+                },
+                "mathematical_role": "compare a second-order algebraic-reduction wave formulation against the full-u1 boundary target without treating it as the independent-variable first-order GH CPBC system",
+                "standard_physics_counterpart": "frozen-background linear GH wave system with algebraic reduction Phi_xab=D_x(psi_ab)",
+                "observable_mapping": {"status": "OPEN", "reason": "spectrum and pulse energy are numerical diagnostics rather than gravitational observables"},
+                "unit_lane": "geometric c=1 with slab length scale L0=1",
+                "parameter_dimensions": gh_reduced_wave_comparator_audit["major_result"]["units"],
+                "source_or_origin": {
+                    "formula_source": "https://arxiv.org/abs/gr-qc/0606053",
+                    "formula_locators": "Eqs. 27-36 and Sec. 5.1",
+                    "local_evidence": GH_REDUCED_WAVE_COMPARATOR_AUDIT.relative_to(ROOT).as_posix(),
+                    "source_hashes": gh_reduced_wave_comparator_audit["source_hashes"],
+                },
+                "assumptions": ["linear perturbations about Minkowski", "zero shift", "one spatial normal with no tangential derivatives", "homogeneous constraint and Weyl data", "prescribed gauge-data rate", "Phi_xab=D_x(psi_ab) imposed algebraically"],
+                "symmetry_and_conservation": "algebraic reduction remains at roundoff in the declared pulse test; a semidiscrete energy estimate and spatial convergence are open",
+                "limiting_cases": ["homogeneous zero state", "normal-incidence incoming u1-minus only", "no positive-shift u2_A modes"],
+                "implementation_paths": ["docs/core/02_equations/covariant/uet_curved_3p1_gh_full_u1_slab.py"],
+                "verifier_paths": ["docs/scripts/audit/audit_curved_3p1_gh_full_u1_cpbc_slab.py", GH_REDUCED_WAVE_COMPARATOR_AUDIT.relative_to(ROOT).as_posix(), "docs/core/05_tests/regression/root/test_uet_curved_3p1_gh_full_u1_slab.py"],
+                "evidence_class": "INTERNAL_SYNTHETIC_SECOND_ORDER_COMPARATOR_PARTIAL",
+                "proof_status": "degree-8 algebraic reduction, spectrum, and noise screens pass; degree-12 integrated packet remainder exceeds the unchanged 0.05 limit, higher-resolution energy is non-monotone, and degree 20 has one eigenvalue above the unchanged 1e-6 tolerance",
+                "downstream_dependencies": [],
+                "claim_boundary": "partial second-order comparator only; not full first-order GH CPBC, continuum well-posedness, Gravity compatibility, or UET closure",
+                "failure_mode": "a discrete algebraic reduction or one passing low-resolution screen is overread as a converged stable full-GH boundary evolution",
+                "next_hardening_step": "derive a discrete energy estimate and establish spatial convergence and high-order spectral behavior without changing the declared thresholds",
+            },
+            {
+                "equation_id": "uet.main_theory.curved_3p1.gh_reduced_tt_sbp_sat_energy_comparator",
+                "version": "gh-reduced-tt-sbp-sat-energy-v1",
+                "classification": "standard_physics_reduced_tt_boundary_evolution_diagnostic",
+                "relation_or_code_path": "docs/scripts/audit/audit_curved_3p1_gh_reduced_wave_sbp_sat.py",
+                "formula_ids": [
+                    "GH-TT-REDUCED-ALGEBRAIC-GRADIENT-001",
+                    "GH-TT-REDUCED-SBP-SAT-RHS-002",
+                    "GH-TT-REDUCED-SEMIDISCRETE-ENERGY-003",
+                ],
+                "variables": {
+                    "h_A": "dimensionless standard-GR TT metric polarization, A in {+,x}",
+                    "Pi_A": "standard-GR normal time derivative variable; not UET Pi",
+                    "G_A": "spatial derivative D(h_A), reconstructed algebraically; not UET Phi",
+                    "H": "LGL diagonal SBP norm matrix",
+                    "e_L_e_R": "left/right endpoint basis vectors",
+                },
+                "mathematical_role": "test an energy-stable second-order TT outgoing-wave SAT comparator with no independent gradient state",
+                "standard_physics_counterpart": "one-dimensional standard linearized-GR TT wave equation with homogeneous outgoing characteristic penalties",
+                "observable_mapping": {
+                    "status": "OPEN",
+                    "reason": "discrete energy, characteristic, and packet diagnostics are not gravitational observables",
+                },
+                "unit_lane": "geometric c=1 with slab length scale L0=1",
+                "parameter_dimensions": gh_reduced_wave_sbp_sat_comparator_audit[
+                    "major_result"
+                ]["units"],
+                "source_or_origin": {
+                    "formula_source": "https://arxiv.org/abs/gr-qc/0606053",
+                    "formula_locator": "Rinne (2006), frozen-background linear GH boundary target; the reduced TT SAT energy identity is derived and tested in the local audit",
+                    "local_evidence": GH_REDUCED_WAVE_SBP_SAT_COMPARATOR_AUDIT.relative_to(
+                        ROOT
+                    ).as_posix(),
+                    "source_hashes": gh_reduced_wave_sbp_sat_comparator_audit[
+                        "source_hashes"
+                    ],
+                },
+                "assumptions": [
+                    "linear perturbations about Minkowski",
+                    "zero shift and one spatial normal",
+                    "two standard TT polarizations only",
+                    "LGL diagonal-norm SBP operator on a finite slab",
+                    "homogeneous no-incoming characteristic data",
+                    "G_A=D(h_A) reconstructed algebraically",
+                ],
+                "symmetry_and_conservation": "the exact SBP identity gives dE/dt=-sum_A(Pi_A,L^2+Pi_A,R^2)<=0; floating-point SBP defect is recorded separately",
+                "limiting_cases": [
+                    "zero state remains zero",
+                    "left- and right-going outgoing Gaussian packets",
+                    "first-order TT RHS agreement on G_A=D(h_A)",
+                ],
+                "implementation_paths": [
+                    "docs/scripts/audit/audit_curved_3p1_gh_reduced_wave_sbp_sat.py"
+                ],
+                "verifier_paths": [
+                    "docs/scripts/audit/audit_curved_3p1_gh_reduced_wave_sbp_sat.py",
+                    GH_REDUCED_WAVE_SBP_SAT_COMPARATOR_AUDIT.relative_to(ROOT).as_posix(),
+                    "docs/core/05_tests/regression/root/test_uet_curved_3p1_gh_reduced_wave_sbp_sat.py",
+                ],
+                "evidence_class": "INTERNAL_ANALYTIC_AND_SYNTHETIC_STANDARD_GR_CONTROL",
+                "proof_status": "declared semidiscrete energy identity, first/second-order reduction-subspace RHS equivalence, bounded spectrum, bidirectional packet absorption, and fourth-order temporal refinement pass; no spatial continuum or full GH CPBC closure",
+                "downstream_dependencies": [],
+                "claim_boundary": "second-order standard-GR TT comparator only; not full first-order GH CPBC, curved 3+1 parent closure, Gravity compatibility, or UET closure",
+                "failure_mode": "a TT-sector energy estimate is overread as stability or well-posedness of the coupled constraint/physical/gauge boundary system",
+                "next_hardening_step": "derive and verify a projector-aware SBP-SAT energy estimate for the full incoming GH constraint, physical, and gauge sectors without changing locked thresholds",
+            },
+            {
+                "equation_id": "uet.main_theory.curved_3p1.linear_gw_detector_response",
+                "version": "linear-gw-detector-response-v1",
+                "classification": "standard_physics_detector_response_mapping",
+                "relation_or_code_path": "docs/core/02_equations/covariant/uet_curved_3p1_gw_detector_response.py",
+                "variables": {
+                    "h_ij": "dimensionless spatial metric perturbation in the declared asymptotically flat wave zone",
+                    "h_TT_ij": "transverse-traceless plane-wave Fourier mode",
+                    "n_i": "dimensionless unit propagation direction",
+                    "u_i_v_i": "dimensionless equal-arm unit vectors",
+                    "f": "frequency in s^-1",
+                    "L": "arm length in m",
+                    "h_D": "dimensionless ideal detector strain response",
+                    "DeltaL_equiv": "equivalent differential length in m"
+                },
+                "mathematical_role": "map one linearized GH spatial-metric Fourier mode through TT projection and finite-frequency equal-arm interferometer response to strain and equivalent length",
+                "standard_physics_counterpart": "linearized-GR equal-arm Michelson single-round-trip response without optical cavities",
+                "observable_mapping": {
+                    "status": "CLOSED_FOR_LANE",
+                    "observable": "ideal equal-arm interferometer strain response to one TT plane-wave mode",
+                    "general_curved_space_mapping": "OPEN"
+                },
+                "unit_lane": "SI detector response; metric and strain dimensionless, frequency s^-1, arm length m",
+                "parameter_dimensions": gh_gw_detector_response_audit["units"],
+                "source_or_origin": gh_gw_detector_response_audit["literature_basis"],
+                "assumptions": gh_gw_detector_response_audit["assumptions"],
+                "symmetry_and_conservation": "TT projection is transverse and trace-free; this is a measurement operator, not an added dynamical source or conserved UET state",
+                "limiting_cases": ["zero-frequency arm transfer tends to one", "plus and cross polarization analytic controls", "negative-frequency transfer is the complex conjugate"],
+                "implementation_paths": ["docs/core/02_equations/covariant/uet_curved_3p1_gw_detector_response.py"],
+                "verifier_paths": ["docs/scripts/audit/audit_uet_curved_3p1_gh_gw_detector_response.py", GH_GW_DETECTOR_RESPONSE_AUDIT.relative_to(ROOT).as_posix(), "docs/core/05_tests/regression/root/test_uet_curved_3p1_gw_detector_response.py"],
+                "evidence_class": "SOURCE_MATCHED_STANDARD_FORMULA_WITH_ANALYTIC_INTERNAL_CONTROLS",
+                "proof_status": "bounded ideal detector response matches the declared finite-frequency source formula and analytic controls; no detector data or UET evolution prediction",
+                "downstream_dependencies": ["CORE_CURVED_3P1_OBSERVABLE_PARENT_READY"],
+                "claim_boundary": gh_gw_detector_response_audit["major_result"]["claim_boundary"],
+                "failure_mode": "ideal single-mode transfer is overread as detector calibration, strong-field radiation extraction, or a UET prediction",
+                "next_hardening_step": "connect a verified GH wave-zone extraction and temporal Fourier map, then add detector calibration, noise, and uncertainty only when source-backed inputs exist"
             }
         ],
     }
@@ -781,8 +1352,8 @@ def build_artifacts() -> tuple[dict, dict, dict, dict]:
 def main() -> int:
     ARTIFACTS.mkdir(parents=True, exist_ok=True)
     verification, formula, gate, addendum = build_artifacts()
-    VERIFY.write_text(json.dumps(verification, indent=2, ensure_ascii=True) + "\n", encoding="utf-8")
-    FORMULA.write_text(json.dumps(formula, indent=2, ensure_ascii=True) + "\n", encoding="utf-8")
+    VERIFY.write_text(json.dumps(verification, indent=2, ensure_ascii=True) + "\n", encoding="utf-8", newline="\n")
+    FORMULA.write_text(json.dumps(formula, indent=2, ensure_ascii=True) + "\n", encoding="utf-8", newline="\n")
     gate["evidence_artifacts"][0]["sha256"] = _sha256(VERIFY)
     gate["evidence_artifacts"][1]["sha256"] = _sha256(FORMULA)
     gate["evidence_artifacts"][2]["sha256"] = _sha256(GEOMETRY_VERIFY)
@@ -803,8 +1374,17 @@ def main() -> int:
     gate["evidence_artifacts"][17]["sha256"] = _sha256(MATTER_VERIFY)
     gate["evidence_artifacts"][18]["sha256"] = _sha256(MATTER_FORMULA)
     gate["evidence_artifacts"][19]["sha256"] = _sha256(MATTER_GATE)
-    GATE.write_text(json.dumps(gate, indent=2, ensure_ascii=True) + "\n", encoding="utf-8")
-    ADDENDUM.write_text(json.dumps(addendum, indent=2, ensure_ascii=True) + "\n", encoding="utf-8")
+    gate["evidence_artifacts"][20]["sha256"] = _sha256(GH_LINEAR_BOUNDARY_AUDIT)
+    gate["evidence_artifacts"][21]["sha256"] = _sha256(GH_GW_DETECTOR_RESPONSE_AUDIT)
+    gate["evidence_artifacts"][22]["sha256"] = _sha256(GH_GAUGE_WAVE_TT_NULL_AUDIT)
+    gate["evidence_artifacts"][23]["sha256"] = _sha256(GH_TT_SBP_SAT_BOUNDARY_AUDIT)
+    gate["evidence_artifacts"][24]["sha256"] = _sha256(GH_FULL_U1_CPBC_SLAB_AUDIT)
+    gate["evidence_artifacts"][25]["sha256"] = _sha256(GH_REDUCED_WAVE_COMPARATOR_AUDIT)
+    gate["evidence_artifacts"][26]["sha256"] = _sha256(
+        GH_REDUCED_WAVE_SBP_SAT_COMPARATOR_AUDIT
+    )
+    GATE.write_text(json.dumps(gate, indent=2, ensure_ascii=True) + "\n", encoding="utf-8", newline="\n")
+    ADDENDUM.write_text(json.dumps(addendum, indent=2, ensure_ascii=True) + "\n", encoding="utf-8", newline="\n")
     print(json.dumps({"status": verification["status"], "parent_status": gate["status"], "controlling_blocker": gate["controlling_blocker"]}, indent=2))
     return 0 if verification["status"].startswith("PASS") else 1
 

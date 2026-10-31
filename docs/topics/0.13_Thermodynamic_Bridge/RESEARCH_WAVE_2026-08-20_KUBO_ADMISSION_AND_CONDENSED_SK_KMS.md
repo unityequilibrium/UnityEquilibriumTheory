@@ -33,9 +33,9 @@ CLAIM_BOUNDARY: These are action-derived declared-channel Kubo/SK/KMS results. T
 
 EVIDENCE_HASHES:
 
-- Kubo module `docs/core/uet_o2_condensed_relative_flow_kubo_admission.py`: `92dea65cf85d2fc2054e4f5c0b293712d2ea0b8b0df65ffa5e4b95de9dd2df67`
+- Kubo module `docs/core/02_equations/o2/uet_o2_condensed_relative_flow_kubo_admission.py`: `92dea65cf85d2fc2054e4f5c0b293712d2ea0b8b0df65ffa5e4b95de9dd2df67`
 - Kubo audit `docs/core/07_artifacts/topic13/t13_uet_o2_condensed_relative_flow_kubo_admission_audit.json`: `5e909ff97aa0476619235460c012313f36b6065e642bbe4f7fba63f36bd8c7f6`
-- SK/KMS module `docs/core/uet_o2_condensed_sk_kms_kubo_match.py`: `ab6fabaca6d2a19f8185535928638ecf4f1581cd2ad89ada78ed89e5341aff72`
+- SK/KMS module `docs/core/02_equations/o2/uet_o2_condensed_sk_kms_kubo_match.py`: `ab6fabaca6d2a19f8185535928638ecf4f1581cd2ad89ada78ed89e5341aff72`
 - SK/KMS audit `docs/core/07_artifacts/topic13/t13_uet_o2_condensed_sk_kms_kubo_match_audit.json`: `d13d59760f9ebe0a3d2471ad984ec95c6729846d08b2b9ce011e2e8eb2fcaf1c`
 - equation registry `docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry.json`: `ae143f9bd06738ae777415b46d39752c8fbb4a96b17f31de94eac3e563a7be44`
 - full gate `docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json`: `4b69d2f13ef9827f11898edc63b254dd837943b3ccdf4b88f7fe52b2ea0d2415`

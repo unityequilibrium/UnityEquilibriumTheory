@@ -19,7 +19,7 @@ if not ROOT:
     sys.exit(1)
 
 
-from docs.core.uet_glass_box import UETPathManager
+from docs.scripts.core.runners.uet_glass_box import UETPathManager
 
 # URLs for Planck 2018 TT Power Spectrum (Binned)
 URLS = [

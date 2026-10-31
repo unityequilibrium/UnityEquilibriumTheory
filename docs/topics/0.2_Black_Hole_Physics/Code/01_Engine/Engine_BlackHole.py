@@ -38,8 +38,8 @@ from typing import Optional, Dict, Any
 # --- ROBUST PATH FINDER ---
 
 
-from docs.core.uet_base_solver import UETBaseSolver
-from docs.core.uet_lite_engine import UETLiteEngine
+from docs.scripts.core.runners.uet_base_solver import UETBaseSolver
+from docs.scripts.core.runners.uet_lite_engine import UETLiteEngine
 
 # Configuration Class
 from docs.core.uet_master_equation import UETParameters

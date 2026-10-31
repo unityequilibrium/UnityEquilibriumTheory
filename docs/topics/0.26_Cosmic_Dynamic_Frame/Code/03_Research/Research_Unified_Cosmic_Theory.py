@@ -50,7 +50,7 @@ if str(project_root) not in sys.path:
     sys.path.insert(0, str(project_root))
 
 try:
-    from docs.core.uet_glass_box import UETPathManager
+    from docs.scripts.core.runners.uet_glass_box import UETPathManager
     from docs.core.uet_parameters import RHO_COSMIC, G_GALACTIC, C_KM_S
 
     # Load References

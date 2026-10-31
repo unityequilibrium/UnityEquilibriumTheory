@@ -43,7 +43,7 @@ import importlib.util
 # --- ROBUST PATH FINDER (5x4 Grid Standard) ---
 
 
-from docs.core.uet_glass_box import UETPathManager
+from docs.scripts.core.runners.uet_glass_box import UETPathManager
 
 
 TOPIC_DIR = ROOT / "docs" / "topics" / "0.13_Thermodynamic_Bridge"

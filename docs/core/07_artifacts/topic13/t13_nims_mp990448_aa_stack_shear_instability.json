@@ -1,0 +1,450 @@
+{
+  "schema_version": "t13-nims-aa-stack-shear-instability-v1",
+  "artifact": "t13_nims_mp990448_aa_stack_shear_instability",
+  "generated_at": "2026-09-27",
+  "status": "WARN_SCOPED_NIMS_AA_STACK_SHEAR_MODE_ROBUST_MATERIAL_MAPPING_OPEN",
+  "major_result": {
+    "major_result_id": "T13_NIMS_MP990448_AA_STACK_SHEAR_MODE_DIAGNOSTIC",
+    "topic": "0.13_Thermodynamic_Bridge",
+    "closure_level": "CLOSED_FOR_LANE",
+    "what_is_closed": [
+      "The hash-locked source is a two-atom P6/mmm (No. 191) cell with both basis atoms in the same fractional-c layer; periodic repetition gives an AA-like stacking registry.",
+      "A pair of negative modes at q=(0,0,1/2), with basal-plane polarization, persists across five force-constant construction/symmetrization variants.",
+      "The negative branch persists after a traditional translation/permutation symmetrization reduces the acoustic sum-rule residual by many orders of magnitude.",
+      "The minimum remains on an unsymmetrized 12x12x6 reciprocal mesh; its interpretation is scoped to this deposited ideal structure and harmonic calculation."
+    ],
+    "what_remains_open": [
+      "The source does not establish that its P6/mmm structure represents natural ABAB graphite or Ding's TTG specimen.",
+      "A converged, independently relaxed conventional ABAB graphite calculation is not part of this source package.",
+      "The robustness checks do not quantify exchange-correlation, pseudopotential, finite-temperature, or anharmonic uncertainty.",
+      "No thermal-diffusivity, mode-resolved C_src, Phi-to-temperature map, or alpha_Phi_K calibration is supplied."
+    ],
+    "dependency_unlocked": "Close or downgrade the MP-990448 route as a Ding/natural-graphite substitute; no Topic 13 full bridge, alpha calibration, transport, Core, Gravity, or Galaxy unlock.",
+    "claim_boundary": "This closes only a source-specific structural and harmonic-mode diagnostic for NIMS MP-990448. It does not show that natural ABAB graphite is unstable, and it is not TTG validation or Full Topic 13 closure."
+  },
+  "ontology": {
+    "C": "UET collective system-behaviour coordinate; elemental carbon in the external source is unrelated.",
+    "Phi": "effective response variable; no Phi state or mapping is used.",
+    "R_gen": "derived history trace; not introduced as a state.",
+    "R_obs": "observer record kept separate; no observer data are consumed."
+  },
+  "equation_or_mapping": {
+    "harmonic_eigenproblem": "D(q)e_(q,nu)=omega_(q,nu)^2 e_(q,nu); reported negative Phonopy frequencies indicate negative eigenvalues of the mass-weighted dynamical matrix under the source harmonic model.",
+    "zone_boundary_interpretation": "q=(0,0,1/2) alternates the phase between adjacent c-periodic cells; the negative eigenspace is polarized in the basal plane, consistent with an alternating-layer shear mode.",
+    "asr_diagnostic": "R_ASR=max(abs(sum_j FC_ij)); translation/permutation symmetrization reduces R_ASR without removing the q-boundary negative mode."
+  },
+  "units": {
+    "qpoint": "reciprocal-lattice fractional coordinates",
+    "frequency": "THz",
+    "force_constants": "eV angstrom^-2",
+    "cell_vectors": "angstrom",
+    "scaled_positions": "dimensionless fractional coordinates",
+    "polarization_fraction": "dimensionless normalized eigenspace power"
+  },
+  "derivation_class": "EXTERNAL_FIRST_PRINCIPLES_FORCESET_REANALYSIS_AND_NUMERICAL_ROBUSTNESS_DIAGNOSTIC",
+  "observable": "harmonic phonon eigenfrequencies, eigenvector polarization, and acoustic sum-rule residual for the NIMS ideal P6/mmm structure",
+  "data_role": "EXTERNAL_SIMULATION_DIAGNOSTIC_NOT_DING_ACCEPTANCE",
+  "source": {
+    "title": "Ab-initio phonon calculation for C / P6/mmm (191) / materials id 990448",
+    "publisher": "NIMS Materials Data Repository",
+    "dataset_locator": "https://mdr.nims.go.jp/datasets/5383108b-180d-4eb0-a34f-b28ff9e430d7",
+    "source_origin": "first-principles simulation; NIMS says the initial structure came from Materials Project",
+    "archive_path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/nims_mdr_mp990448_graphite_phonon_dataset.zip",
+    "archive_sha256": "eea6ca7569c9442754ce5492ddb2f545186f97ad8b82b209d95f1a80b0158767",
+    "archive_sha256_expected": "eea6ca7569c9442754ce5492ddb2f545186f97ad8b82b209d95f1a80b0158767",
+    "archive_member": "phonopy_params.yaml.xz",
+    "member_sha256": "92bfbcaa4cec51cbdf85c0d5d167bb8a57718e4d5074ac100378250257007a70",
+    "member_sha256_expected": "92bfbcaa4cec51cbdf85c0d5d167bb8a57718e4d5074ac100378250257007a70",
+    "preprocessing": "Read the hash-locked ZIP member and LZMA-decompress the deposited Phonopy YAML; reconstruct force constants from deposited displacement-force records; no figure digitization, clipping, replacement of imaginary frequencies, or fitting.",
+    "structure": {
+      "spacegroup_number": 191,
+      "spacegroup_international": "P6/mmm",
+      "unitcell_atom_count": 2,
+      "unitcell_symbols": [
+        "C",
+        "C"
+      ],
+      "unitcell_cell_vectors_A": [
+        [
+          2.46143362,
+          0.0,
+          0.0
+        ],
+        [
+          -1.23071681,
+          2.13166405,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          3.77073204
+        ]
+      ],
+      "unitcell_scaled_positions": [
+        [
+          0.33333333,
+          0.66666667,
+          0.0
+        ],
+        [
+          0.66666667,
+          0.33333333,
+          0.0
+        ]
+      ],
+      "all_atoms_same_fractional_c_layer": true,
+      "stacking_interpretation": "AA-like repeated in-plane registry inferred from the deposited two-atom P6/mmm cell; not a direct experimental stacking measurement"
+    },
+    "comparison_reference": {
+      "title": "IUPAC Gold Book: hexagonal graphite",
+      "locator": "https://goldbook.iupac.org/terms/view/H02818",
+      "reported_structure": "thermodynamically stable ABAB stacking, space group P6_3/mmc (No. 194)",
+      "comparison_limit": "Crystallographic comparator only; not a same-method phonon calculation."
+    }
+  },
+  "reproduction": {
+    "phonopy_version": "4.4.0",
+    "spglib_version": "2.7.0",
+    "q_boundary_variants": [
+      {
+        "variant": "native_default",
+        "fc_calculator": "phonopy_default",
+        "additional_symmetrization": "none",
+        "force_constants_shape": [
+          2,
+          144,
+          3,
+          3
+        ],
+        "force_constants_finite": true,
+        "acoustic_sum_rule_max_residual_eV_A2": 7.109227391499662e-08,
+        "q_boundary_fractional": [
+          0.0,
+          0.0,
+          0.5
+        ],
+        "q_boundary_frequencies_THz": [
+          -0.7658899603667749,
+          -0.765889655649185,
+          1.623823811413243,
+          26.08983464350491,
+          45.217232084319676,
+          45.21723209064635
+        ],
+        "q_boundary_negative_mode_indices_zero_based": [
+          0,
+          1
+        ],
+        "negative_subspace_cartesian_polarization_fraction": {
+          "basal_x": 0.4999999999999999,
+          "basal_y": 0.5000000000000001,
+          "c_axis_z": 4.41687942491528e-29
+        },
+        "negative_subspace_primitive_atom_fraction": [
+          0.49999999999999967,
+          0.5000000000000003
+        ],
+        "mesh": [
+          12,
+          12,
+          6
+        ],
+        "mesh_symmetry_reduction": false,
+        "mesh_qpoint_count": 864,
+        "mesh_min_frequency_THz": -0.7658899603667749,
+        "mesh_min_qpoint_fractional": [
+          0.0,
+          0.0,
+          -0.5
+        ],
+        "mesh_min_band_index_zero_based": 0,
+        "negative_mesh_mode_count": 12
+      },
+      {
+        "variant": "traditional_raw",
+        "fc_calculator": "traditional",
+        "additional_symmetrization": "none",
+        "force_constants_shape": [
+          2,
+          144,
+          3,
+          3
+        ],
+        "force_constants_finite": true,
+        "acoustic_sum_rule_max_residual_eV_A2": 6.117328865684613e-14,
+        "q_boundary_fractional": [
+          0.0,
+          0.0,
+          0.5
+        ],
+        "q_boundary_frequencies_THz": [
+          -0.7658898088401374,
+          -0.7658898071746504,
+          1.6238238114133245,
+          26.08983464350488,
+          45.21723203833416,
+          45.217232136631836
+        ],
+        "q_boundary_negative_mode_indices_zero_based": [
+          0,
+          1
+        ],
+        "negative_subspace_cartesian_polarization_fraction": {
+          "basal_x": 0.5000000000000001,
+          "basal_y": 0.4999999999999999,
+          "c_axis_z": 1.5055406432989284e-27
+        },
+        "negative_subspace_primitive_atom_fraction": [
+          0.5,
+          0.5
+        ],
+        "mesh": [
+          12,
+          12,
+          6
+        ],
+        "mesh_symmetry_reduction": false,
+        "mesh_qpoint_count": 864,
+        "mesh_min_frequency_THz": -0.7658898088401374,
+        "mesh_min_qpoint_fractional": [
+          0.0,
+          0.0,
+          -0.5
+        ],
+        "mesh_min_band_index_zero_based": 0,
+        "negative_mesh_mode_count": 10
+      },
+      {
+        "variant": "traditional_translation_permutation_level_1",
+        "fc_calculator": "traditional",
+        "additional_symmetrization": "traditional_level_1",
+        "force_constants_shape": [
+          2,
+          144,
+          3,
+          3
+        ],
+        "force_constants_finite": true,
+        "acoustic_sum_rule_max_residual_eV_A2": 6.315781231336359e-14,
+        "q_boundary_fractional": [
+          0.0,
+          0.0,
+          0.5
+        ],
+        "q_boundary_frequencies_THz": [
+          -0.7658898088397402,
+          -0.7658898071744981,
+          1.6238238114134445,
+          26.089834643504886,
+          45.21723203833417,
+          45.21723213663184
+        ],
+        "q_boundary_negative_mode_indices_zero_based": [
+          0,
+          1
+        ],
+        "negative_subspace_cartesian_polarization_fraction": {
+          "basal_x": 0.5000000000000002,
+          "basal_y": 0.49999999999999967,
+          "c_axis_z": 1.0738926701372014e-28
+        },
+        "negative_subspace_primitive_atom_fraction": [
+          0.5000000000000001,
+          0.4999999999999998
+        ],
+        "mesh": [
+          12,
+          12,
+          6
+        ],
+        "mesh_symmetry_reduction": false,
+        "mesh_qpoint_count": 864,
+        "mesh_min_frequency_THz": -0.7658898088397402,
+        "mesh_min_qpoint_fractional": [
+          0.0,
+          0.0,
+          -0.5
+        ],
+        "mesh_min_band_index_zero_based": 0,
+        "negative_mesh_mode_count": 10
+      },
+      {
+        "variant": "traditional_translation_permutation_level_20",
+        "fc_calculator": "traditional",
+        "additional_symmetrization": "traditional_level_20",
+        "force_constants_shape": [
+          2,
+          144,
+          3,
+          3
+        ],
+        "force_constants_finite": true,
+        "acoustic_sum_rule_max_residual_eV_A2": 7.136305435473389e-14,
+        "q_boundary_fractional": [
+          0.0,
+          0.0,
+          0.5
+        ],
+        "q_boundary_frequencies_THz": [
+          -0.7658898088394893,
+          -0.7658898071744602,
+          1.6238238114132788,
+          26.089834643504883,
+          45.217232038334146,
+          45.21723213663184
+        ],
+        "q_boundary_negative_mode_indices_zero_based": [
+          0,
+          1
+        ],
+        "negative_subspace_cartesian_polarization_fraction": {
+          "basal_x": 0.5000000000000001,
+          "basal_y": 0.4999999999999998,
+          "c_axis_z": 5.217714659552073e-28
+        },
+        "negative_subspace_primitive_atom_fraction": [
+          0.4999999999999999,
+          0.5
+        ],
+        "mesh": [
+          12,
+          12,
+          6
+        ],
+        "mesh_symmetry_reduction": false,
+        "mesh_qpoint_count": 864,
+        "mesh_min_frequency_THz": -0.7658898088394893,
+        "mesh_min_qpoint_fractional": [
+          0.0,
+          0.0,
+          -0.5
+        ],
+        "mesh_min_band_index_zero_based": 0,
+        "negative_mesh_mode_count": 10
+      },
+      {
+        "variant": "symfc_projector",
+        "fc_calculator": "traditional",
+        "additional_symmetrization": "symfc_projector",
+        "force_constants_shape": [
+          2,
+          144,
+          3,
+          3
+        ],
+        "force_constants_finite": true,
+        "acoustic_sum_rule_max_residual_eV_A2": 7.109229096732839e-08,
+        "q_boundary_fractional": [
+          0.0,
+          0.0,
+          0.5
+        ],
+        "q_boundary_frequencies_THz": [
+          -0.7658899603661324,
+          -0.7658896556483916,
+          1.6238238114131813,
+          26.089834643504908,
+          45.21723208431965,
+          45.21723209064631
+        ],
+        "q_boundary_negative_mode_indices_zero_based": [
+          0,
+          1
+        ],
+        "negative_subspace_cartesian_polarization_fraction": {
+          "basal_x": 0.5000000000000001,
+          "basal_y": 0.5,
+          "c_axis_z": 7.703719777548943e-33
+        },
+        "negative_subspace_primitive_atom_fraction": [
+          0.49999999999999983,
+          0.5000000000000003
+        ],
+        "mesh": [
+          12,
+          12,
+          6
+        ],
+        "mesh_symmetry_reduction": false,
+        "mesh_qpoint_count": 864,
+        "mesh_min_frequency_THz": -0.7658899603661324,
+        "mesh_min_qpoint_fractional": [
+          0.0,
+          0.0,
+          -0.5
+        ],
+        "mesh_min_band_index_zero_based": 0,
+        "negative_mesh_mode_count": 12
+      }
+    ],
+    "negative_frequency_spread_THz": 3.0471838330381473e-07,
+    "negative_frequency_spread_tolerance_THz": 0.0001,
+    "asr_residual_tolerance_eV_A2": 1e-10,
+    "mesh_policy": "Full gamma-centered 12x12x6 grid with mesh symmetry reduction disabled for every variant.",
+    "symmetrization_policy": "Native Phonopy result, raw traditional force constants, traditional translation/permutation levels 1 and 20, and symfc projector are compared. Thresholds are fixed here as numerical robustness checks, not fitted to thermal target data."
+  },
+  "checks": {
+    "archive_exists": true,
+    "archive_hash_matches_locked_source": true,
+    "member_hash_matches_locked_source": true,
+    "source_structure_is_two_atom_p6_mmm_cell": true,
+    "source_atoms_repeat_at_one_fractional_c_layer": true,
+    "all_five_force_constant_variants_have_negative_q_boundary_modes": true,
+    "negative_mode_frequency_is_stable_across_variants": true,
+    "negative_subspace_is_in_basal_plane": true,
+    "translation_permutation_symmetrization_reduces_sum_rule_residual": true,
+    "full_unsymmetrized_reciprocal_mesh_is_recorded": true,
+    "no_mode_clipping_frequency_replacement_or_fit": true,
+    "xie_2026_not_accessed": true,
+    "no_holdout_access": true,
+    "claim_promotion_false": true
+  },
+  "scope_controls": {
+    "accepted_as_ding_csrc": false,
+    "alpha_phi_k_calibrated": false,
+    "claim_promotion": false
+  },
+  "verification_status": "PASS_SCOPED_STRUCTURE_AND_MODE_ROBUSTNESS",
+  "open_blockers": [
+    "NIMS_MP990448_structure_not_demonstrated_equivalent_to_Ding_natural_graphite",
+    "conventional_ABAB_same_method_phonon_comparator_absent",
+    "electronic_structure_and_anharmonic_uncertainty_open",
+    "Ding_mode_resolved_C_src_and_TTG_source_package_missing",
+    "independent_alpha_Phi_K_and_dimensional_Phi_mapping_missing"
+  ],
+  "controlling_blocker": "Material-state equivalence: MP-990448 is P6/mmm with an AA-like repeated registry, while the IUPAC hexagonal graphite reference is ABAB/P6_3/mmc; no source evidence bridges this difference to Ding's specimen.",
+  "next_action": "Do not spend further repair cycles trying to turn this source into Ding/natural-graphite acceptance. Keep it as a source-specific comparator; seek a permitted numeric dataset or a source-backed calculation of conventional ABAB graphite before making any C_src comparison.",
+  "claim_promotion": false,
+  "holdout_policy": {
+    "xie_2026_accessed": false,
+    "xie_2026_source_data_consumed": false,
+    "fit_or_tuning_used": false,
+    "calibration_path_may_read_holdout": false
+  },
+  "evidence_artifacts": [
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/nims_mdr_mp990448_graphite_phonon_dataset.zip",
+      "sha256": "eea6ca7569c9442754ce5492ddb2f545186f97ad8b82b209d95f1a80b0158767",
+      "role": "hash-locked NIMS simulation archive"
+    },
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/Research_T13_NIMS_AA_Stack_Shear_Instability.py",
+      "sha256": "95faa276a5dd98351401bcb4b106299990d8aa001abb87aebdf4a52edacadd22",
+      "role": "reproducible structural and harmonic-mode diagnostic"
+    },
+    {
+      "path": "docs/core/07_artifacts/topic13/t13_nims_mp990448_force_displacement_reanalysis.json",
+      "sha256": "7f9bcc88e1f32919392b7221836ebe2c8c90d008f3757b06cbe8bff3636e7ba8",
+      "role": "prior NIMS force-set thermal reanalysis"
+    },
+    {
+      "path": "https://phonopy.github.io/phonopy/phonopy-module.html",
+      "role": "official Phonopy force-constant and symmetrization API"
+    },
+    {
+      "path": "https://goldbook.iupac.org/terms/view/H02818",
+      "role": "IUPAC structural reference for stable hexagonal ABAB graphite"
+    }
+  ]
+}

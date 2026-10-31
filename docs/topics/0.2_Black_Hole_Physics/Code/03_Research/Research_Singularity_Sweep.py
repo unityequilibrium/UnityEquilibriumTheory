@@ -42,7 +42,7 @@ TOPIC_DIR = ROOT / "docs" / "topics" / "0.2_Black_Hole_Physics"
 # Engine Import (Dynamic)
 try:
     import importlib.util
-    from docs.core.uet_glass_box import UETPathManager
+    from docs.scripts.core.runners.uet_glass_box import UETPathManager
     from docs.core.uet_master_equation import UETParameters
 
     engine_file = TOPIC_DIR / "Code" / "01_Engine" / "Engine_BlackHole.py"

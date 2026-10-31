@@ -51,7 +51,7 @@ ROOT = ROOT_PATH
 # --- ROBUST PATH FINDER ---
 
 
-from docs.core.uet_glass_box import UETPathManager
+from docs.scripts.core.runners.uet_glass_box import UETPathManager
 
 
 def load_scaling_data():

@@ -35,7 +35,7 @@ DATA_ROLE: `ACTION_DERIVED_FINITE_T_ALL_ONSHELL_CUT_SPECTRAL_RESPONSE_NO_HOLDOUT
 
 EVIDENCE_PATHS:
 
-- `docs/core/uet_o2_finite_temperature_all_onshell_cut_response.py`
+- `docs/core/02_equations/o2/uet_o2_finite_temperature_all_onshell_cut_response.py`
 - `docs/scripts/audit/audit_topic13_uet_o2_finite_temperature_all_onshell_cut_response.py`
 - `docs/core/07_artifacts/topic13/t13_uet_o2_finite_temperature_all_onshell_cut_response_audit.json`
 - `docs/core/07_artifacts/topic13/t13_uet_o2_finite_temperature_sunset_cut_multiplicity_audit.json`

@@ -35,7 +35,7 @@ project_root = script_path.parents[5]
 if str(project_root) not in sys.path:
     sys.path.insert(0, str(project_root))
 
-from docs.core.uet_glass_box import UETPathManager
+from docs.scripts.core.runners.uet_glass_box import UETPathManager
 
 
 def run_high_fidelity_simulation():

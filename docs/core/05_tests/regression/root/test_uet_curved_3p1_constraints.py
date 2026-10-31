@@ -26,6 +26,10 @@ ARTIFACT = ROOT / "docs/core/07_artifacts/verification/curved_3p1_adm_constraint
 GATE = ROOT / "docs/core/07_artifacts/gates/core_curved_3p1_parent_gate.json"
 REGISTER = ROOT / "docs/core/07_artifacts/gates/uet_major_result_closure_register.json"
 DEPENDENCY = ROOT / "docs/core/07_artifacts/gates/uet_major_result_dependency_unlock_gate.json"
+REGISTRY_ADDENDUM = ROOT / "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry_curved_3p1_addendum.json"
+GH_BOUNDARY = ROOT / "docs/core/07_artifacts/verification/curved_3p1_gh_linear_boundary_residual_audit.json"
+GH_TT_SBP_SAT = ROOT / "docs/core/07_artifacts/verification/curved_3p1_gh_tt_sbp_sat_boundary_pilot.json"
+GH_REDUCED_TT_SBP_SAT = ROOT / "docs/core/07_artifacts/verification/curved_3p1_gh_reduced_wave_sbp_sat_comparator.json"
 
 
 def test_minkowski_vacuum_constraints_vanish() -> None:
@@ -107,6 +111,39 @@ def test_generated_artifacts_are_hash_linked_and_partial() -> None:
     assert gate["requirements"]["characteristic_cfl_policy"] == "PASS"
     assert gate["requirements"]["constraint_propagation"] == "PASS_PERIODIC_GAUGE_REDUCTION_CURL_CONVERGENCE"
     assert gate["requirements"]["temporal_spatial_convergence"] == "PASS_RK4_TEMPORAL_AND_SECOND_ORDER_SPATIAL"
+    assert gate["requirements"]["gh_linear_boundary_residuals"] == "PASS_DIAGNOSTIC_ONLY"
+    assert gate["requirements"]["gh_tt_sbp_sat_boundary_pilot"] == "PASS_DIAGNOSTIC_ONLY"
+    assert gate["requirements"]["gh_reduced_wave_sbp_sat_comparator"] == "PASS_DIAGNOSTIC_ONLY"
+    assert gate["requirements"]["constraint_preserving_boundaries"] == "OPEN"
+    assert any(
+        item.startswith("source-matched linearized GH differential boundary residual evaluators")
+        for item in gate["major_result"]["what_is_closed"]
+    )
+    boundary_artifact_ref = next(
+        item for item in gate["evidence_artifacts"]
+        if item["path"] == "docs/core/07_artifacts/verification/curved_3p1_gh_linear_boundary_residual_audit.json"
+    )
+    assert hashlib.sha256(GH_BOUNDARY.read_bytes()).hexdigest() == boundary_artifact_ref["sha256"]
+    tt_boundary_ref = next(
+        item for item in gate["evidence_artifacts"]
+        if item["path"] == "docs/core/07_artifacts/verification/curved_3p1_gh_tt_sbp_sat_boundary_pilot.json"
+    )
+    assert hashlib.sha256(GH_TT_SBP_SAT.read_bytes()).hexdigest() == tt_boundary_ref["sha256"]
+    reduced_tt_ref = next(
+        item for item in gate["evidence_artifacts"]
+        if item["path"] == "docs/core/07_artifacts/verification/curved_3p1_gh_reduced_wave_sbp_sat_comparator.json"
+    )
+    assert hashlib.sha256(GH_REDUCED_TT_SBP_SAT.read_bytes()).hexdigest() == reduced_tt_ref["sha256"]
+    reduced_tt_artifact = json.loads(GH_REDUCED_TT_SBP_SAT.read_text(encoding="utf-8"))
+    assert reduced_tt_artifact["status"] == "PASS_REDUCED_TT_SBP_SAT_COMPARATOR"
+    assert reduced_tt_artifact["major_result"]["closure_level"] == "CLOSED_FOR_LANE"
+    assert reduced_tt_artifact["claim_promotion"] is False
+    assert reduced_tt_artifact["major_result"]["dependency_unlocked"].startswith("none;")
+    tt_boundary_artifact = json.loads(GH_TT_SBP_SAT.read_text(encoding="utf-8"))
+    assert tt_boundary_artifact["scope"]["filtering"] is False
+    assert tt_boundary_artifact["scope"]["clipping"] is False
+    assert tt_boundary_artifact["scope"]["parameter_fitting"] is False
+    assert tt_boundary_artifact["major_result"]["units"]["UET_symbols_used"] == []
     assert (
         gate["requirements"]["topic13_stress_energy_projection"]
         == "PASS_PRESCRIBED_TOPIC13_HE4_SOURCE"
@@ -121,6 +158,7 @@ def test_generated_artifacts_are_hash_linked_and_partial() -> None:
 def test_register_and_dependency_gate_keep_gravity_blocked() -> None:
     register = json.loads(REGISTER.read_text(encoding="utf-8"))
     dependency = json.loads(DEPENDENCY.read_text(encoding="utf-8"))
+    addendum = json.loads(REGISTRY_ADDENDUM.read_text(encoding="utf-8"))
     levels = {
         entry["major_result_id"]: entry["closure_level"]
         for entry in register["entries"]
@@ -128,8 +166,24 @@ def test_register_and_dependency_gate_keep_gravity_blocked() -> None:
     assert levels["CORE_CURVED_3P1_ADM_CONSTRAINT_INTERFACE_READY"] == "CLOSED_FOR_LANE"
     assert levels["CORE_CURVED_3P1_GH_NONLINEAR_VACUUM_RHS_READY"] == "CLOSED_FOR_LANE"
     assert levels["CORE_CURVED_3P1_GH_PERIODIC_VACUUM_EVOLUTION_READY"] == "CLOSED_FOR_LANE"
+    assert levels["CORE_CURVED_3P1_GH_LINEAR_DIFFERENTIAL_BOUNDARY_RESIDUALS"] == "CLOSED_FOR_LANE"
+    assert levels["CORE_CURVED_3P1_GH_LINEAR_TT_SBP_SAT_BOUNDARY_PILOT"] == "CLOSED_FOR_LANE"
+    assert levels["CORE_CURVED_3P1_GH_REDUCED_TT_SBP_SAT_COMPARATOR"] == "CLOSED_FOR_LANE"
     assert levels["CORE_CURVED_3P1_OBSERVABLE_PARENT_READY"] == "PARTIAL"
+    assert any(
+        item["equation_id"] == "uet.main_theory.curved_3p1.gh_linear_differential_boundary_residuals"
+        for item in addendum["equation_entries"]
+    )
+    assert any(
+        item["equation_id"] == "uet.main_theory.curved_3p1.gh_reduced_tt_sbp_sat_energy_comparator"
+        for item in addendum["equation_entries"]
+    )
     gravity = dependency["decisions"]["GR_CLASSICAL_COMPATIBILITY_LANE"]
     assert gravity["status"] == "BLOCKED_DEPENDENCY"
     assert gravity["unmet_dependencies"][0]["current_level"] == "PARTIAL"
     assert dependency["curved_3p1_progress"]["gravity_unlock_status"] == "BLOCKED_DEPENDENCY"
+    tt_boundary_progress = dependency["curved_3p1_progress"][
+        "generalized_harmonic_tt_sbp_sat_boundary_pilot"
+    ]
+    assert tt_boundary_progress["closure_level"] == "CLOSED_FOR_LANE"
+    assert dependency["decisions"]["GR_CLASSICAL_COMPATIBILITY_LANE"]["status"] == "BLOCKED_DEPENDENCY"

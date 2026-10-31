@@ -33,7 +33,7 @@ if not ROOT:
     print("CRITICAL: UET docs root not found!")
     sys.exit(1)
 
-from docs.core.uet_glass_box import UETPathManager
+from docs.scripts.core.runners.uet_glass_box import UETPathManager
 
 
 TOPIC_DIR = ROOT / "docs" / "topics" / "0.26_Cosmic_Dynamic_Frame"

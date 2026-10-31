@@ -22,7 +22,7 @@ from pathlib import Path
 # --- ROBUST PATH FINDER (5x4 Grid Standard) ---
 
 
-from docs.core.uet_glass_box import UETPathManager
+from docs.scripts.core.runners.uet_glass_box import UETPathManager
 
 import numpy as np
 import time

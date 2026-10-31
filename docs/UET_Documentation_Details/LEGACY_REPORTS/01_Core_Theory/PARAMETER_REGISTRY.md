@@ -148,7 +148,7 @@ See: [`kappa_scale.py`](./kappa_scale.py) and [`SCALE_EQUATION.md`](./SCALE_EQUA
 
 ```python
 # Import from central location
-from docs.core.uet_parameters import get_params
+from docs.core.01_contracts.units.uet_parameters import get_params
 
 # Get parameters for a specific scale
 params = get_params(scale="electroweak")

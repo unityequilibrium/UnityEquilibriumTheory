@@ -49,7 +49,7 @@ except ImportError:
     sys.path.append(str(current_path.parent.parent / "01_Engine"))
     from Engine_Quantum_Logic import QuantumUnityEngine
 
-from docs.core.uet_glass_box import UETMetricLogger, UETPathManager
+from docs.scripts.core.runners.uet_glass_box import UETMetricLogger, UETPathManager
 
 
 def run_scaling_test(max_qubits=8):

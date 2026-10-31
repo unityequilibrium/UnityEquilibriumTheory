@@ -1,0 +1,230 @@
+{
+  "schema_version": "core-curved-3p1-gh-rinne-no-uniform-beta-kreiss-v1",
+  "artifact": "curved_3p1_gh_rinne_negative_shift_no_uniform_beta_kreiss",
+  "generated_at": "2026-09-25T10:05:02+00:00",
+  "major_result_id": "CORE_CURVED_3P1_GH_RINNE_NEGATIVE_SHIFT_NO_BETA_UNIFORM_KREISS_CONSTANT",
+  "major_result": {
+    "major_result_id": "CORE_CURVED_3P1_GH_RINNE_NEGATIVE_SHIFT_NO_BETA_UNIFORM_KREISS_CONSTANT",
+    "topic": "core_curved_3p1",
+    "closure_level": "CLOSED_FOR_LANE",
+    "what_is_closed": [
+      "A constructive source-normalized decaying-mode witness along beta=-1+epsilon and zeta=sqrt(epsilon) has unit amplitude and unit principal-mode norm, while its 30-component boundary-data vector has only two nonzero entries r with r=[(9*sqrt(2)+5*sqrt(6))/12]*epsilon+O(epsilon^2). Therefore the Kreiss constant cannot be bounded uniformly over the entire negative subluminal shift family as beta approaches -1; under the declared Euclidean source norms K_beta >= (9-5*sqrt(3))/epsilon+O(1).",
+      "The witness is non-degenerate for every epsilon>0 and is cross-checked against the registered source-basis boundary matrix. This is a family-uniformity no-go, not a failure of the fixed-beta Kreiss condition."
+    ],
+    "what_remains_open": [
+      "Rinne's per-fixed-shift, frequency-uniform Kreiss result is not refuted; the bound may depend on the fixed background shift. Uniform estimates on compact shift ranges and the beta-to-zero transition remain to be checked separately.",
+      "Closed frequency-boundary behavior, variable-coefficient/nonlinear GH, non-periodic full CPBC evolution, dimensional gravitational observables, and the curved 3+1 parent gate remain open."
+    ],
+    "dependency_unlocked": "none; no Core-parent or Gravity dependency is unlocked",
+    "equation_or_mapping": {
+      "epsilon_definition": "epsilon=t^2=1+beta, t>0",
+      "beta_path": "beta=-1+epsilon",
+      "zeta_path": "zeta=t=sqrt(epsilon)>0",
+      "lambda1_expression": "(-t**2 - sqrt(3 - t**2) + 1)/(t*(2 - t**2))",
+      "lambda1_asymptotic": "t*(-sqrt(3)/6 - 1/4) + (1/2 - sqrt(3)/2)/t",
+      "k1_asymptotic_leading": "(sqrt(6)-sqrt(2))/(2*t)",
+      "amplitude_witness": "sigma_1,ab has independent components (tt,tx,xx)=(1,1,1)/sqrt(3); sigma_2=sigma_3=0",
+      "source_boundary_data_witness": "C(beta,zeta)*sigma=(r,r,0,...,0), with only the first two constraint-data rows nonzero",
+      "r_expression": "-[1+2*lambda1*(zeta-(1+beta)*lambda1)]/(sqrt(3)*K1*zeta)",
+      "r_series_in_t": "t**2*(sqrt(2)/(2*(-1 + sqrt(3))) + sqrt(6)/(3*(-1 + sqrt(3)))) + t**4*(sqrt(6)*(-1/(2*(1 - sqrt(3))**2) - sqrt(3)/(6*(1 - sqrt(3))**2))/(3*(-1 + sqrt(3))) + sqrt(2)*(-1/(2*(1 - sqrt(3))**2) - sqrt(3)/(6*(1 - sqrt(3))**2))/(2*(-1 + sqrt(3))) + 5*sqrt(2)/(12*(-1 + sqrt(3))) + sqrt(6)/(4*(-1 + sqrt(3)))) + O(t**6)",
+      "r_over_epsilon_limit": "5*sqrt(6)/12 + 3*sqrt(2)/4",
+      "leading_coefficient_matches_exact_form": true,
+      "leading_boundary_data_norm": "sqrt(2)*(9*sqrt(2)+5*sqrt(6))/12 * epsilon + O(epsilon^2) = (9+5*sqrt(3))/6 * epsilon + O(epsilon^2)",
+      "source_amplitude_and_normalized_mode_norm": "||sigma||_2=1 and ||(zeta-beta*lambda1,-lambda1,-i,0)/K1||_2=1; hence ||v||_2=1 in the declared source component norm",
+      "kreiss_constant_lower_bound": "K_beta >= ||v||_2/||h||_2 = (9-5*sqrt(3))/epsilon + O(1)",
+      "kreiss_prefactor_matches_exact_form": true,
+      "numeric_values": {
+        "r_over_epsilon_limit": 2.081280897939479,
+        "epsilon_times_k_lower_bound_limit": 0.33974596215561353
+      }
+    },
+    "units": "Dimensionless frozen-coefficient Fourier-Laplace variables with omega=1; epsilon and zeta are dimensionless.",
+    "derivation_class": "constructive analytic asymptotic from Rinne Eqs. (69)-(71), (109)-(120), independently cross-checked against the registered Core boundary matrix",
+    "observable": "operator norm lower bound for the source boundary-to-decaying-mode solution map",
+    "data_role": "primary-literature formula reproduction and internal analytic/numerical verification; no empirical data, fit, or calibration",
+    "verification_status": "PASS_CONSTRUCTIVE_NO_UNIFORM_BETA_KREISS_BOUND",
+    "claim_boundary": "No finite Kreiss constant can be uniform over beta in (-1,0) on the declared joint path under the stated fixed Euclidean norms. This does not negate any finite K_beta at a fixed beta, contradict Rinne's per-background claim, prove a physical instability, or close the Core curved parent/Gravity."
+  },
+  "closure_level": "CLOSED_FOR_LANE",
+  "MAJOR_RESULT_CLOSURE": "CLOSED_FOR_LANE",
+  "WHAT_IS_ACTUALLY_CLOSED": [
+    "A constructive source-normalized decaying-mode witness along beta=-1+epsilon and zeta=sqrt(epsilon) has unit amplitude and unit principal-mode norm, while its 30-component boundary-data vector has only two nonzero entries r with r=[(9*sqrt(2)+5*sqrt(6))/12]*epsilon+O(epsilon^2). Therefore the Kreiss constant cannot be bounded uniformly over the entire negative subluminal shift family as beta approaches -1; under the declared Euclidean source norms K_beta >= (9-5*sqrt(3))/epsilon+O(1).",
+    "The witness is non-degenerate for every epsilon>0 and is cross-checked against the registered source-basis boundary matrix. This is a family-uniformity no-go, not a failure of the fixed-beta Kreiss condition."
+  ],
+  "WHAT_REMAINS_OPEN": [
+    "Rinne's per-fixed-shift, frequency-uniform Kreiss result is not refuted; the bound may depend on the fixed background shift. Uniform estimates on compact shift ranges and the beta-to-zero transition remain to be checked separately.",
+    "Closed frequency-boundary behavior, variable-coefficient/nonlinear GH, non-periodic full CPBC evolution, dimensional gravitational observables, and the curved 3+1 parent gate remain open."
+  ],
+  "DEPENDENCY_UNLOCKED": "none; no Core-parent or Gravity dependency is unlocked",
+  "STATUS": "PASS_CONSTRUCTIVE_NO_UNIFORM_BETA_KREISS_BOUND",
+  "EQUATION_OR_MAPPING": {
+    "epsilon_definition": "epsilon=t^2=1+beta, t>0",
+    "beta_path": "beta=-1+epsilon",
+    "zeta_path": "zeta=t=sqrt(epsilon)>0",
+    "lambda1_expression": "(-t**2 - sqrt(3 - t**2) + 1)/(t*(2 - t**2))",
+    "lambda1_asymptotic": "t*(-sqrt(3)/6 - 1/4) + (1/2 - sqrt(3)/2)/t",
+    "k1_asymptotic_leading": "(sqrt(6)-sqrt(2))/(2*t)",
+    "amplitude_witness": "sigma_1,ab has independent components (tt,tx,xx)=(1,1,1)/sqrt(3); sigma_2=sigma_3=0",
+    "source_boundary_data_witness": "C(beta,zeta)*sigma=(r,r,0,...,0), with only the first two constraint-data rows nonzero",
+    "r_expression": "-[1+2*lambda1*(zeta-(1+beta)*lambda1)]/(sqrt(3)*K1*zeta)",
+    "r_series_in_t": "t**2*(sqrt(2)/(2*(-1 + sqrt(3))) + sqrt(6)/(3*(-1 + sqrt(3)))) + t**4*(sqrt(6)*(-1/(2*(1 - sqrt(3))**2) - sqrt(3)/(6*(1 - sqrt(3))**2))/(3*(-1 + sqrt(3))) + sqrt(2)*(-1/(2*(1 - sqrt(3))**2) - sqrt(3)/(6*(1 - sqrt(3))**2))/(2*(-1 + sqrt(3))) + 5*sqrt(2)/(12*(-1 + sqrt(3))) + sqrt(6)/(4*(-1 + sqrt(3)))) + O(t**6)",
+    "r_over_epsilon_limit": "5*sqrt(6)/12 + 3*sqrt(2)/4",
+    "leading_coefficient_matches_exact_form": true,
+    "leading_boundary_data_norm": "sqrt(2)*(9*sqrt(2)+5*sqrt(6))/12 * epsilon + O(epsilon^2) = (9+5*sqrt(3))/6 * epsilon + O(epsilon^2)",
+    "source_amplitude_and_normalized_mode_norm": "||sigma||_2=1 and ||(zeta-beta*lambda1,-lambda1,-i,0)/K1||_2=1; hence ||v||_2=1 in the declared source component norm",
+    "kreiss_constant_lower_bound": "K_beta >= ||v||_2/||h||_2 = (9-5*sqrt(3))/epsilon + O(1)",
+    "kreiss_prefactor_matches_exact_form": true,
+    "numeric_values": {
+      "r_over_epsilon_limit": 2.081280897939479,
+      "epsilon_times_k_lower_bound_limit": 0.33974596215561353
+    }
+  },
+  "VERIFICATION": {
+    "checks": {
+      "witness_stays_in_negative_subluminal_domain": true,
+      "joint_frequency_path_avoids_exact_degeneracy": true,
+      "source_amplitude_is_unit_norm": true,
+      "principal_mode_is_unit_norm": true,
+      "registered_source_matrix_matches_symbolic_boundary_witness": true,
+      "boundary_data_only_has_two_declared_constraint_rows": true,
+      "sampled_kreiss_lower_bound_grows_toward_luminal_edge": true,
+      "symbolic_leading_coefficients_are_exact": true
+    },
+    "witness_path": [
+      {
+        "epsilon": 0.01,
+        "beta": -0.99,
+        "zeta_real": 0.1,
+        "lambda1_real": -3.7143801335631066,
+        "amplitude_norm": 1.0,
+        "normalized_mode_norm": 0.9999999999999999,
+        "state_norm": 0.9999999999999999,
+        "source_data_component_1": 0.02067237587874826,
+        "source_data_component_2": 0.02067237587874826,
+        "other_source_data_max_abs": 1.1102230246251565e-16,
+        "symbolic_component_prediction": 0.020672375878747297,
+        "maximum_source_matrix_row_error": 9.645062526431047e-16,
+        "boundary_data_norm": 0.02923515433420022,
+        "kreiss_constant_lower_bound_sample": 34.20539493544482,
+        "epsilon_times_lower_bound": 0.3420539493544482
+      },
+      {
+        "epsilon": 0.001,
+        "beta": -0.999,
+        "zeta_real": 0.03162277660168379,
+        "lambda1_real": -11.591782118703962,
+        "amplitude_norm": 1.0,
+        "normalized_mode_norm": 1.0,
+        "state_norm": 1.0,
+        "source_data_component_1": 0.0020798610916472615,
+        "source_data_component_2": 0.0020798610916472615,
+        "other_source_data_max_abs": 2.190088388420719e-17,
+        "symbolic_component_prediction": 0.0020798610917495226,
+        "maximum_source_matrix_row_error": 1.0226108154709479e-13,
+        "boundary_data_norm": 0.002941367763659668,
+        "kreiss_constant_lower_bound_sample": 339.9778879591017,
+        "epsilon_times_lower_bound": 0.33997788795910167
+      },
+      {
+        "epsilon": 0.0001,
+        "beta": -0.9999,
+        "zeta_real": 0.01,
+        "lambda1_real": -36.607927387113115,
+        "amplitude_norm": 1.0,
+        "normalized_mode_norm": 1.0,
+        "state_norm": 1.0,
+        "source_data_component_1": 0.00020811387635510936,
+        "source_data_component_2": 0.00020811387635510936,
+        "other_source_data_max_abs": 1.1102230246251565e-16,
+        "symbolic_component_prediction": 0.00020811387611739776,
+        "maximum_source_matrix_row_error": 2.3771159736798997e-13,
+        "boundary_data_norm": 0.00029431746645943303,
+        "kreiss_constant_lower_bound_sample": 3397.691655985473,
+        "epsilon_times_lower_bound": 0.33976916559854736
+      }
+    ],
+    "source_matrix_singular_values": [
+      {
+        "epsilon": 0.01,
+        "sigma_min": 1.1091010325251006e-05,
+        "sigma_max": 19.78092682998106,
+        "inverse_norm_diagnostic": 90163.1114456084,
+        "condition_number_diagnostic": 1783509.9102690078,
+        "role": "finite-precision source-matrix diagnostic only; not the analytic no-uniform-K proof"
+      },
+      {
+        "epsilon": 0.005,
+        "sigma_min": 1.5773892373242476e-06,
+        "sigma_max": 27.863842588654524,
+        "inverse_norm_diagnostic": 633958.9343821802,
+        "condition_number_diagnostic": 17664531.955296233,
+        "role": "finite-precision source-matrix diagnostic only; not the analytic no-uniform-K proof"
+      },
+      {
+        "epsilon": 0.002,
+        "sigma_min": 1.1119925876661021e-07,
+        "sigma_max": 43.9505097186155,
+        "inverse_norm_diagnostic": 8992865.699751139,
+        "condition_number_diagnostic": 395241031.3351164,
+        "role": "finite-precision source-matrix diagnostic only; not the analytic no-uniform-K proof"
+      },
+      {
+        "epsilon": 0.001,
+        "sigma_min": 1.4421135160201107e-08,
+        "sigma_max": 62.10510782959661,
+        "inverse_norm_diagnostic": 69342668.86006044,
+        "condition_number_diagnostic": 4306533926.746065,
+        "role": "finite-precision source-matrix diagnostic only; not the analytic no-uniform-K proof"
+      },
+      {
+        "epsilon": 0.0005,
+        "sigma_min": 1.8380834303886106e-09,
+        "sigma_max": 87.79424127737784,
+        "inverse_norm_diagnostic": 544044945.6576508,
+        "condition_number_diagnostic": 47764013224.80571,
+        "role": "finite-precision source-matrix diagnostic only; not the analytic no-uniform-K proof"
+      },
+      {
+        "epsilon": 0.0002,
+        "sigma_min": 1.1906373462251757e-10,
+        "sigma_max": 138.78102890474105,
+        "inverse_norm_diagnostic": 8398863038.946521,
+        "condition_number_diagnostic": 1165602854174.9983,
+        "role": "finite-precision source-matrix diagnostic only; not the analytic no-uniform-K proof"
+      },
+      {
+        "epsilon": 0.0001,
+        "sigma_min": 1.494421176945691e-11,
+        "sigma_max": 196.25004445975705,
+        "inverse_norm_diagnostic": 66915539971.38929,
+        "condition_number_diagnostic": 13132177694433.797,
+        "role": "finite-precision source-matrix diagnostic only; not the analytic no-uniform-K proof"
+      }
+    ],
+    "declared_norms": {
+      "amplitude": "Euclidean norm over the 30 independent source sigma_ab coefficients",
+      "boundary_data": "Euclidean norm over the 30 source boundary-data coefficients in C*sigma=h",
+      "stable_mode": "Euclidean norm of the four normalized principal variables times the independent tensor-amplitude norm"
+    },
+    "symbolic_checks": {
+      "leading_h_coefficient": true,
+      "kreiss_lower_bound_prefactor": true
+    },
+    "source_hashes": {
+      "docs/scripts/audit/audit_curved_3p1_gh_rinne_negative_shift_no_uniform_beta_kreiss.py": "f42ea7fc094f9f1ff45d3ec18c3d6ad2c6183b033d334a822b3d565002732103",
+      "docs/scripts/audit/audit_curved_3p1_gh_rinne_negative_shift_kreiss_symbol.py": "f482a1b1cb61480bfaa3cb27e5a2b7cdad65218fcc6521d0d587e742ffce3f2b",
+      "docs/core/07_artifacts/verification/curved_3p1_gh_rinne_negative_shift_kreiss_symbol.json": "5d48f6efe14f8c3501da5d8568544608fcc2d8fe7b24f798523ffdd919e39924",
+      "docs/scripts/audit/audit_curved_3p1_gh_rinne_negative_shift_joint_limit.py": "b3ad47c3c36015ed7d0f9f0afecc09d803974e6fbd9a2e8c14206468767f6170",
+      "docs/core/07_artifacts/verification/curved_3p1_gh_rinne_negative_shift_joint_limit.json": "94dae43a736a62099d217d0b939ee11dcf51eea07b495e27be3a0042e671fccf",
+      "docs/core/02_equations/covariant/uet_curved_3p1_gh_linear_boundary.py": "39bd0731a3ecdbb5c5185453e0908d198cba895ba5f29dafc6bb8f9c6a3b169c",
+      "docs/core/02_equations/covariant/uet_curved_3p1_gh_boundary_projectors.py": "2aa529e3a037a5ecff2c2a5a6d454ef7cf9822ca99371393d6614bfbc062362f"
+    },
+    "source_reference": "https://arxiv.org/abs/gr-qc/0606053"
+  },
+  "CONTROLLING_BLOCKER": "per_fixed_beta_closed_frequency_kreiss_bound_and_parent_cpbc_evolution_remain_separate_open_items",
+  "NEXT_ACTION": "Analyze beta-to-zero and closed-frequency limits under the correct per-background quantifiers; for Core parent integration, declare a compact subluminal shift envelope or derive a shift-weighted estimate rather than requiring one constant up to the luminal edge.",
+  "CLAIM_BOUNDARY": "No finite Kreiss constant can be uniform over beta in (-1,0) on the declared joint path under the stated fixed Euclidean norms. This does not negate any finite K_beta at a fixed beta, contradict Rinne's per-background claim, prove a physical instability, or close the Core curved parent/Gravity.",
+  "full_core_unlock": false,
+  "gravity_unlock": false,
+  "claim_promotion": false
+}

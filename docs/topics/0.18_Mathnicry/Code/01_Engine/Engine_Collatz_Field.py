@@ -29,7 +29,7 @@ import math
 
 # Base Solver Import
 try:
-    from docs.core.uet_base_solver import UETBaseSolver
+    from docs.scripts.core.runners.uet_base_solver import UETBaseSolver
 except ImportError:
     import sys
 
@@ -44,7 +44,7 @@ except ImportError:
             root = parent
             sys.path.insert(0, str(root))
             break
-    from docs.core.uet_base_solver import UETBaseSolver
+    from docs.scripts.core.runners.uet_base_solver import UETBaseSolver
 
 
 class CollatzFieldEngine(UETBaseSolver):

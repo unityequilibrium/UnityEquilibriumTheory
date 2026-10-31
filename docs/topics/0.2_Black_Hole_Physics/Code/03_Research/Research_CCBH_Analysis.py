@@ -66,7 +66,7 @@ else:
 TOPIC_DIR = ROOT / "docs" / "topics" / "0.2_Black_Hole_Physics"
 REPO_ROOT = ROOT  # Alias for compatibility
 
-from docs.core.uet_glass_box import UETPathManager
+from docs.scripts.core.runners.uet_glass_box import UETPathManager
 from docs.core.uet_master_equation import UETParameters
 from docs.core.uet_parameters import (
     G,

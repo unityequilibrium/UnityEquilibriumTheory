@@ -37,7 +37,7 @@ from typing import Optional
 
 # Repository path setup
 try:
-    from docs.core.uet_base_solver import UETBaseSolver
+    from docs.scripts.core.runners.uet_base_solver import UETBaseSolver
     from docs.core.uet_master_equation import UETParameters
     from docs.core.uet_parameters import INTEGRITY_KILL_SWITCH
 except ImportError:
@@ -49,7 +49,7 @@ except ImportError:
             break
     if str(_root) not in sys.path:
         sys.path.insert(0, str(_root))
-    from docs.core.uet_base_solver import UETBaseSolver
+    from docs.scripts.core.runners.uet_base_solver import UETBaseSolver
     from docs.core.uet_master_equation import UETParameters
     from docs.core.uet_parameters import INTEGRITY_KILL_SWITCH
 

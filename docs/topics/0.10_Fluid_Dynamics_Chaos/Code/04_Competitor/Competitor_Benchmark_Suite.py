@@ -42,7 +42,7 @@ root_path = ROOT_PATH
 # --- ROBUST PATH FINDER (5x4 Grid Standard) ---
 
 
-from docs.core.uet_glass_box import UETPathManager, UETMetricLogger
+from docs.scripts.core.runners.uet_glass_box import UETPathManager, UETMetricLogger
 
 
 # Import Engines
@@ -159,7 +159,7 @@ def run_benchmarks():
     """Run all benchmarks."""
     # Updated Path Management
     try:
-        from docs.core.uet_glass_box import UETPathManager
+        from docs.scripts.core.runners.uet_glass_box import UETPathManager
 
         output_dir = UETPathManager.get_result_dir(
             topic_id="0.10_Fluid_Dynamics_Chaos",

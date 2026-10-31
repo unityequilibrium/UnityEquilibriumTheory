@@ -35,4 +35,4 @@ No-fitting policy:
 
 - Verification runner now forces `PYTHONIOENCODING=utf-8` and `PYTHONUTF8=1` for child processes.
 - Verification runner prepends the repo root to `PYTHONPATH` so topic scripts can import the local `docs` package.
-- `0.24_Artificial_Intelligence` import path was fixed from `docs.core.test.scientific_validation` to `docs.core.scientific_validation`.
+- `0.24_Artificial_Intelligence` import path was fixed from `docs.core.test.scientific_validation` to `docs.scripts.core.audit.scientific_validation`.

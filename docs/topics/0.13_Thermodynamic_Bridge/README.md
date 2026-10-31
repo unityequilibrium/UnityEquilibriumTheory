@@ -6,6 +6,59 @@ description: "Research module for Thermodynamic Bridge within the Unity Equilibr
 
 # 0.13 Thermodynamic Bridge
 
+<!-- UET-RESEARCH-RETROSPECTIVE: 2026-10-19; navigation notice, not a physics gate -->
+> **ทบทวนก่อนวิจัยต่อ — 19 ต.ค. 2026:** bounded He-4 closure ไม่ปิด Full Topic 13; physical mapping, data admission และข้อจำกัด comparator ต้องตรวจแยกตามสาย อ่าน [รายงานข้อผิดพลาดและบทเรียน UET](../../meta/UET_RESEARCH_RETROSPECTIVE.md) โดยเฉพาะข้อ R01–R18 และลำดับแก้ใน §8 ก่อนขยายงาน สถานะจริงยังอ้างอิง artifact/gate ของเส้นทางนั้น
+
+## Latest NIMS Structural Diagnostic (2026-09-27)
+
+MAJOR_RESULT_CLOSURE: T13_NIMS_MP990448_AA_STACK_SHEAR_MODE_DIAGNOSTIC is CLOSED_FOR_LANE for a source-specific structural and harmonic-mode diagnostic only; Full Topic 13 remains BLOCKED_OPEN_T13_FULL_BRIDGE.
+
+WHAT_IS_ACTUALLY_CLOSED: The hash-locked NIMS structure is a two-atom P6/mmm cell with both atoms in one fractional-c layer, giving an AA-like repeated registry. A basal-plane negative mode pair at q=(0,0,1/2) persists across five force-constant/symmetrization variants; its frequency spread is 3.05e-7 THz.
+
+WHAT_REMAINS_OPEN: This ideal NIMS structure is not shown equivalent to stable ABAB graphite or Ding's TTG sample. Electronic-structure and anharmonic uncertainty, Ding-compatible mode-resolved C_src, source-grade uncertainty, independent alpha_Phi_K, and the physical thermal bridge remain open.
+
+DEPENDENCY_UNLOCKED: NIMS route classification only. It is not accepted as Ding C_src; no Topic 13, Core, calibration, transport, Gravity, or Galaxy dependency is unlocked.
+
+STATUS: WARN_SCOPED_NIMS_AA_STACK_SHEAR_MODE_ROBUST_MATERIAL_MAPPING_OPEN; Full Topic 13 remains blocked with seven open blocker groups.
+
+WHAT_CHANGED: The negative mode remains after translation/permutation symmetrization reduces the acoustic sum-rule residual from 7.11e-8 to 6.32e-14 eV/angstrom^2. The mode therefore is not explained by that residual alone. The source-priority projection now classifies MP-990448 as a harmonic comparator with an AA-like structure and unresolved mode, not as a Ding/natural-graphite substitute.
+
+EQUATION_OR_MAPPING: D(q)e_(q,nu)=omega_(q,nu)^2 e_(q,nu); the basal-plane polarization at the c-axis zone boundary is consistent with alternating-layer shear. This is an external harmonic diagnostic, not a UET mapping.
+
+VERIFICATION: Archive/member hashes match; all 14 diagnostic checks pass; frequency spread is below the fixed 1e-4 THz numerical robustness threshold; focused diagnostic tests pass 4/4. Source-route, Topic 13 gate, dependency, and register regressions pass. Xie 2026 was not accessed.
+
+CONTROLLING_BLOCKER: The NIMS-to-Ding material-state equivalence is absent. The aggregate Topic 13 controller remains dimensional_phi_energy_anchor_or_independent_alpha_calibration_missing.
+
+NEXT_ACTION: Stop rerunning this same NIMS source as a Ding substitute. Obtain an authorized Ding numeric package or a same-regime ABAB graphite PBTE reproduction with provenance and uncertainty; otherwise keep the C_src claim limited.
+
+CLAIM_BOUNDARY: The result does not show that natural ABAB graphite is unstable. It does not validate TTG, calibrate alpha_Phi_K, establish a UET thermal mechanism, or close Full Topic 13.
+
+See the [diagnostic report](Result/artifacts/T13_NIMS_AA_STACK_SHEAR_DIAGNOSTIC_2026-09-27.md), [machine-readable artifact](../../core/07_artifacts/topic13/t13_nims_mp990448_aa_stack_shear_instability.json), and [Core integration note](../../core/08_history/update_logs/UET_MAIN_CORE_TOPIC13_INTEGRATION_2026-09-27_NIMS_AA_SHEAR_DIAGNOSTIC.md).
+
+## NIMS Force-Set Thermal Reanalysis (2026-09-27)
+
+MAJOR_RESULT_CLOSURE: `T13_NIMS_MP990448_FORCE_DISPLACEMENT_REANALYSIS` is `CLOSED_FOR_LANE` for harmonic graphite heat-capacity reanalysis only; Full Topic 13 remains `PARTIAL` / blocked.
+
+WHAT_IS_ACTUALLY_CLOSED: The NIMS archive's deposited displacement-force data can reconstruct harmonic force constants and produce conditional `Cv`/`C_src` rows. This supersedes the earlier inference that absent precomputed force constants made numeric reanalysis impossible; it does not supply Ding-compatible PBTE/TTG data.
+
+WHAT_REMAINS_OPEN: A negative-frequency branch is present and omitted from the declared `Cv` sum; material/state equivalence, source-grade uncertainty, an SI `Phi` anchor, independent `alpha_Phi_K`, and physical transport/KMS/entropy closure remain open.
+
+DEPENDENCY_UNLOCKED: NIMS harmonic comparator lane only; `full_core_unlock=false`, no Topic 13 closure, and no downstream dependency is opened.
+
+STATUS: `WARN_SCOPED_NIMS_HARMONIC_CV_REANALYSIS_UNSTABLE_MODES_AND_UNCERTAINTY_OPEN`.
+
+WHAT_CHANGED: Reconstructed force constants using two Phonopy calculators, recorded row identities and hashes, and produced three-mesh unit-bearing harmonic heat-capacity candidates. No figure was digitized, no target fit was performed, and Xie 2026 was not accessed.
+
+EQUATION_OR_MAPPING: `Cv -> mass-specific Cv` and `Cv / primitive molar volume -> C_src` are standard harmonic comparator mappings. `Delta_Tq=alpha_Phi_K*Delta_Phi` remains uninstantiated.
+
+VERIFICATION: Source archive/member hashes match; force reconstruction and 10 scoped checks pass; focused regression tests pass 3/3. At 295.15 K the 12x12x6 results are `Cv=707.192/707.993 J kg^-1 K^-1` and `C_src=1.425779e6/1.427394e6 J m^-3 K^-1`; the negative branch is about `-0.766 THz`. See the [reanalysis report](Result/artifacts/T13_NIMS_MP990448_FORCESET_REANALYSIS_2026-09-27.md) and [machine-readable artifact](../../core/07_artifacts/topic13/t13_nims_mp990448_force_displacement_reanalysis.json).
+
+CONTROLLING_BLOCKER: Ding-compatible `C_src` or accepted same-regime reproduction with material/state mapping and source-grade uncertainty remains missing; independent `alpha_Phi_K` and physical bridge closure also remain open.
+
+NEXT_ACTION: Retain MP-990448 only as a source-specific harmonic comparator; it is not accepted as Ding/natural-graphite evidence. Do not rerun unchanged numerical repairs on this route.
+
+CLAIM_BOUNDARY: Not stable-phase acceptance, Ding-equivalent data, TTG validation, UET calibration, Full Topic 13 closure, or global UET closure.
+
 ## Raman Material-Deformation Constraint (2026-09-08)
 
 The [Raman result](../../core/artifacts/t13_raman_deformation_constraint_audit.json)
@@ -18,7 +71,7 @@ that scalar rank deficiency. Abstract/table uncertainty differences are retained
 The 44 cm^-1 interlayer mode has gap/k_B=63.31 K, versus 2271.83 K for the
 1579 cm^-1 mode. Fixed-frequency oscillator screening favors studying the low
 gap first; it does not identify a whole heat-carrying branch or TTG transport.
-[Source, derivation and limits](../../core/T13_RAMAN_DEFORMATION_CONSTRAINT.md).
+[Source, derivation and limits](../../core/03_lanes/topic13_support/T13_RAMAN_DEFORMATION_CONSTRAINT.md).
 
 ## Reciprocal Material/Response Dynamics (2026-09-08)
 
@@ -31,7 +84,7 @@ reduced frequency-domain solutions agree; supplied heat can generate a Phi
 response without a separately imposed response force in this synthetic lane.
 This closes a conditional reciprocal interface, not physical pump calibration,
 microscopic SK/KMS, total nonlinear energy or a continuum finite-cone proof.
-[Derivation](../../core/T13_RECIPROCAL_THERMAL_DYNAMICS.md).
+[Derivation](../../core/03_lanes/topic13_support/T13_RECIPROCAL_THERMAL_DYNAMICS.md).
 The older prescribed-Phi comparator is unchanged. Local unlock=false does not
 alter or independently verify the separately recorded O(2)/He-4 Core-ready
 claim; the graphite/TTG physical matching remains blocked.
@@ -44,7 +97,7 @@ interaction plus an explicitly declared external strain-dependent mass source:
 `G=-eta*D*F_xx`. It does not relabel the existing h as G. The same calculation
 also produces direct entropy coupling `r=eta*F_xT`, stiffness/curvature
 softening and caloric terms. Keeping only G is not the complete matching of
-this route. [Derivation and boundaries](../../core/T13_MATTER_STRAIN_SUSCEPTIBILITY_MATCH.md).
+this route. [Derivation and boundaries](../../core/03_lanes/topic13_support/T13_MATTER_STRAIN_SUSCEPTIBILITY_MATCH.md).
 Physical identification of the matter mode, D, Z_Phi and vacuum/subtraction
 matching remain open. The prescribed-Phi dynamic comparator is unchanged;
 the next handoff must carry G and r together. No physical alpha is emitted.
@@ -59,7 +112,7 @@ trace can exist with zero Phi drive in this comparator, so a sole proportional
 readout requires a further physical initialization/coupling equation. This is
 not a rejection of a fully coupled UET model that supplies that equation.
 The conducting DC Phi gain is zero; the earlier isentropic gain is a different
-limit. See [derivation](../../core/T13_DYNAMIC_THERMOELASTIC_RESPONSE.md).
+limit. See [derivation](../../core/03_lanes/topic13_support/T13_DYNAMIC_THERMOELASTIC_RESPONSE.md).
 Physical pump mapping, G/Z, transport provenance and detector/geometry remain
 open. No TTG data, calibration or physical Core unlock is supplied.
 
@@ -72,7 +125,7 @@ component. A synthetic isotropic witness gives absolute temperature gain
 0.5614 times the homogeneous value. Full rotations including shear and an
 independent fixed-entropy solve agree. Constant gain cancels in normalized
 TTG; this is not a measured discrepancy or a dynamic TTG prediction.
-See [derivation and limits](../../core/T13_THERMOELASTIC_SPATIAL_COMPATIBILITY.md).
+See [derivation and limits](../../core/03_lanes/topic13_support/T13_THERMOELASTIC_SPATIAL_COMPATIBILITY.md).
 Initial entropy, acoustic/thermal dynamics, physical G/Z and material
 calibration remain open; `full_core_unlock=false`.
 
@@ -382,7 +435,9 @@ NEXT_ACTION: Obtain an authorized Ding-compatible numeric package or accepted sa
 CLAIM_BOUNDARY: This is a source-pair correction-input lane only. It is not Ding `C_src`, independent `alpha_Phi_K`, a `Phi`-to-temperature prediction, Core closure, external validation, or global UET closure.
 
 
-## Latest Hardening Update (2026-08-23) - NIMS MP-990448
+## Historical NIMS Source-Boundary Snapshot (2026-08-23; inference superseded 2026-09-27)
+
+> The earlier inventory correctly found no precomputed force-constant matrix, frequency mesh, or numeric thermal-property rows. Its inference that the archive could not support numeric harmonic reanalysis is superseded by the force-displacement reconstruction documented above. The old snapshot remains relevant only as a record of the original payload inventory.
 
 MAJOR_RESULT_CLOSURE: CLOSED_FOR_LANE for T13_NIMS_MP990448_PHONON_PAYLOAD_BOUNDARY; Full Topic 13 remains PARTIAL / BLOCKED_OPEN_T13_FULL_BRIDGE.
 WHAT_IS_ACTUALLY_CLOSED: The public NIMS MP-990448 graphite phonon archive is hash-locked. It contains structural/displacement inputs, VASP settings, and figure outputs, but no machine-readable force constants, frequency mesh, or thermal-property rows; this route is a payload boundary, not numeric C_src evidence.
@@ -559,7 +614,7 @@ graph LR
 
 ## Spacetime trace lane (diagnostic)
 
-- Core contract: docs/core/TRACE_RESEARCH_SPEC.md
+- Core contract: docs/core/01_contracts/TRACE_RESEARCH_SPEC.md
 - Ontology and formula artifacts: docs/core/07_artifacts/correspondence/trace_ontology_contract.json and trace_kernel_formula_audit.json
 - Synthetic benchmark: Code/03_Research/Research_Spacetime_Trace.py
 - Benchmark artifact: Result/artifacts/cattaneo_benchmark_artifact.json

@@ -27,7 +27,7 @@ if not ROOT:
 
 import numpy as np
 from typing import Dict, Any, Optional
-from docs.core.uet_base_solver import UETBaseSolver
+from docs.scripts.core.runners.uet_base_solver import UETBaseSolver
 from docs.core.uet_parameters import UETParameters, get_params, R_GAS, F_FARADAY
 
 class UETBatteryEngine(UETBaseSolver):

@@ -60,7 +60,7 @@ class GalaxyParams:
 #    - Standard (The Rest): 4.5x Multiplier (Goldilocks Zone)
 # ==============================================================================
 
-from docs.core.uet_base_solver import UETBaseSolver
+from docs.scripts.core.runners.uet_base_solver import UETBaseSolver
 from docs.core.uet_parameters import (
     INTEGRITY_KILL_SWITCH,
     G_GALACTIC,

@@ -32,7 +32,7 @@ if str(engine_path) not in sys.path:
 
 try:
     from Engine_Cosmology import UETCosmologyEngine
-    from docs.core.uet_glass_box import UETPathManager
+    from docs.scripts.core.runners.uet_glass_box import UETPathManager
 except ImportError as e:
     print(f"CRITICAL SETUP ERROR: {e}")
     sys.exit(1)

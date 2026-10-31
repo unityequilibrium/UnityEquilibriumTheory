@@ -21,7 +21,7 @@ from pathlib import Path
 import sys
 
 try:
-    from docs.core.uet_glass_box import UETPathManager
+    from docs.scripts.core.runners.uet_glass_box import UETPathManager
 except ImportError:
     pass
 

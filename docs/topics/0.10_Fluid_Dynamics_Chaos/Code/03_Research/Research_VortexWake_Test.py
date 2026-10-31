@@ -19,7 +19,7 @@ if not ROOT:
 import unittest
 import numpy as np
 import sys
-from docs.core.uet_glass_box import UETPathManager
+from docs.scripts.core.runners.uet_glass_box import UETPathManager
 
 from pathlib import Path
 
@@ -35,7 +35,7 @@ except ImportError:
     repo_root = Path(__file__).resolve().parents[5]
     if str(repo_root) not in sys.path:
         sys.path.insert(0, str(repo_root))
-    from docs.core.uet_matrix_engine import UniverseState, MatrixEvolution
+    from docs.scripts.core.runners.uet_matrix_engine import UniverseState, MatrixEvolution
 
 # Inline fluid data to avoid import path issues
 # Source: CRC Handbook of Chemistry and Physics

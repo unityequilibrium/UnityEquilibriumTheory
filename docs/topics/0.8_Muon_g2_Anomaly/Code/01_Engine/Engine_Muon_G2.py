@@ -46,7 +46,7 @@ try:
         INTEGRITY_KILL_SWITCH,
         ALPHA_EM,
     )
-    from docs.core.uet_base_solver import UETBaseSolver
+    from docs.scripts.core.runners.uet_base_solver import UETBaseSolver
 
     UET_PARAMS = get_params("0.8")
 except ImportError as e:

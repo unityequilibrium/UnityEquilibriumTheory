@@ -32,7 +32,7 @@ These categories may co-exist in one topic, but they must not be conflated.
 
 ## Artifact schema
 
-The standard artifact generated via `docs.core.reproducibility.generate_artifact()` must
+The standard artifact generated via `docs.scripts.core.audit.reproducibility.generate_artifact()` must
 contain:
 
 - `timestamp_utc`

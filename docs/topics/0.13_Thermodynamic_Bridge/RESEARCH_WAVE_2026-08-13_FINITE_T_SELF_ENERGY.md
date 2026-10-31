@@ -34,7 +34,7 @@ external-validation dependencies remain locked.
 
 ## WHAT_CHANGED:
 
-Added `docs/core/uet_o2_finite_temperature_self_energy.py` and its audit
+Added `docs/core/02_equations/o2/uet_o2_finite_temperature_self_energy.py` and its audit
 `docs/core/07_artifacts/topic13/t13_uet_o2_finite_temperature_self_energy_audit.json`
 (`ACB61CB97087F66C97FC5E278F183F9CF6262FA633596C86DD910C190B545B18`). The
 lane is projected into the full gate and synchronized into the major-result

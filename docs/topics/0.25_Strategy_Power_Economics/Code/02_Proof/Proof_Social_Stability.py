@@ -34,7 +34,7 @@ sys.path.append(str(root))
 engine_dir = Path(__file__).resolve().parent.parent / "01_Engine"
 sys.path.append(str(engine_dir))
 
-from docs.core.uet_glass_box import UETMetricLogger
+from docs.scripts.core.runners.uet_glass_box import UETMetricLogger
 from Engine_Power_Dynamics import PowerDynamicsEngine, StrategicAgent
 
 

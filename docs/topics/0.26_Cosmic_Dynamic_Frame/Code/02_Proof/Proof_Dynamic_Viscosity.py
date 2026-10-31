@@ -42,7 +42,7 @@ project_root = script_path.parents[5]  # Adjust depth: 0.26/Code/02_Proof/ -> 5 
 if str(project_root) not in sys.path:
     sys.path.insert(0, str(project_root))
 
-from docs.core.uet_glass_box import UETPathManager
+from docs.scripts.core.runners.uet_glass_box import UETPathManager
 
 
 def prove_viscosity():

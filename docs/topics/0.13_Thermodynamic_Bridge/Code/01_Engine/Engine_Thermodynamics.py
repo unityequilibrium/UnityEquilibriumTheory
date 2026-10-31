@@ -46,7 +46,7 @@ from dataclasses import dataclass
 from typing import Optional, Dict, Any
 
 # Core Imports
-from docs.core.uet_base_solver import UETBaseSolver
+from docs.scripts.core.runners.uet_base_solver import UETBaseSolver
 from docs.core.uet_master_equation import UETParameters
 
 

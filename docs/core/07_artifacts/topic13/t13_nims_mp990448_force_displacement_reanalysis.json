@@ -1,0 +1,529 @@
+{
+  "schema_version": "t13-nims-force-displacement-reanalysis-v1",
+  "artifact": "t13_nims_mp990448_force_displacement_reanalysis",
+  "generated_at": "2026-09-27",
+  "status": "WARN_SCOPED_NIMS_HARMONIC_CV_REANALYSIS_UNSTABLE_MODES_AND_UNCERTAINTY_OPEN",
+  "major_result": {
+    "major_result_id": "T13_NIMS_MP990448_FORCE_DISPLACEMENT_REANALYSIS",
+    "topic": "0.13_Thermodynamic_Bridge",
+    "closure_level": "CLOSED_FOR_LANE",
+    "what_is_closed": [
+      "The hash-locked NIMS archive contains two displacement-force records with 144 force vectors each.",
+      "Phonopy reconstructs finite harmonic force constants from the deposited force-displacement data using both default and traditional calculators.",
+      "A reproducible, explicitly conditional harmonic C_v/C_src candidate is emitted at three gamma-centered q meshes.",
+      "The earlier source-boundary conclusion is narrowed: precomputed force constants and numeric thermal rows are absent, but the raw force sets do permit harmonic reanalysis."
+    ],
+    "what_remains_open": [
+      "A negative-frequency branch near the Gamma-A direction is present and omitted from C_v by the explicit zero cutoff.",
+      "Source-grade statistical/systematic uncertainty and material-state equivalence to Ding natural graphite are absent.",
+      "The harmonic C_v result is not a PBTE transport or TTG response package.",
+      "No base-Phi SI anchor, independent alpha_Phi_K, or physical UET thermal map is produced."
+    ],
+    "dependency_unlocked": "NIMS harmonic graphite C_v comparator/reanalysis lane only; no Ding C_src acceptance, alpha calibration, transport, Core, Gravity, or Galaxy unlock.",
+    "claim_boundary": "Source-backed harmonic comparator only; not Ding-equivalent, not stable-phase acceptance, not source-grade uncertainty, not alpha_Phi_K, not TTG validation, and not Full Topic 13 closure."
+  },
+  "ontology": {
+    "C": "UET collective system-behaviour coordinate; unrelated to elemental carbon in the NIMS label.",
+    "Phi": "effective response variable; no Phi values or map are present in this source calculation.",
+    "R_gen": "derived history trace; not added as a state variable.",
+    "R_obs": "observer record kept separate; none consumed."
+  },
+  "equation_or_mapping": {
+    "harmonic_heat_capacity": "Cv(T)=sum_(q,mu) k_B*x^2*exp(x)/(exp(x)-1)^2, x=hbar*omega_(q,mu)/(k_B*T)",
+    "molar_to_mass_specific": "Cv_J_kg_K = Cv_J_mol_primitive_cell_K / primitive_molar_mass_kg_mol",
+    "molar_to_volumetric": "C_src_J_m3_K = Cv_J_mol_primitive_cell_K / (primitive_volume_A3*1e-30*N_A)",
+    "uet_mapping": "Delta_Tq = alpha_Phi_K*Delta_Phi remains uninstantiated."
+  },
+  "units": {
+    "phonopy_heat_capacity": "J K^-1 mol^-1 of primitive cells",
+    "specific_heat": "J kg^-1 K^-1",
+    "C_src": "J m^-3 K^-1",
+    "temperature": "K",
+    "primitive_volume_input": "angstrom^3 per primitive cell"
+  },
+  "derivation_class": "EXTERNAL_SOURCE_FORCESET_REANALYSIS_HARMONIC_COMPARATOR_NO_UET_DERIVATION",
+  "observable": "harmonic constant-volume heat capacity of ideal C/P6/mmm primitive graphite structure",
+  "data_role": "EXTERNAL_HARMONIC_CV_COMPARATOR_NOT_DING_C_SRC_ACCEPTANCE",
+  "source": {
+    "title": "Ab-initio phonon calculation for C / P6/mmm (191) / materials id 990448",
+    "creator": "Atsushi Togo",
+    "publisher": "NIMS",
+    "license": "CC BY 4.0",
+    "dataset_locator": "https://mdr.nims.go.jp/datasets/5383108b-180d-4eb0-a34f-b28ff9e430d7",
+    "archive_path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/nims_mdr_mp990448_graphite_phonon_dataset.zip",
+    "archive_sha256": "eea6ca7569c9442754ce5492ddb2f545186f97ad8b82b209d95f1a80b0158767",
+    "archive_sha256_expected": "eea6ca7569c9442754ce5492ddb2f545186f97ad8b82b209d95f1a80b0158767",
+    "archive_member": "phonopy_params.yaml.xz",
+    "member_sha256": "92bfbcaa4cec51cbdf85c0d5d167bb8a57718e4d5074ac100378250257007a70",
+    "member_sha256_expected": "92bfbcaa4cec51cbdf85c0d5d167bb8a57718e4d5074ac100378250257007a70",
+    "decompressed_yaml_bytes": 43379,
+    "source_phonopy_version": "2.17.1",
+    "reanalysis_phonopy_version": "4.4.0",
+    "source_claim": "NIMS describes first-principles phonon bands, DOS, constant-volume thermal properties, and raw phonon data.",
+    "preprocessing": "Read hash-locked ZIP member; LZMA-decompress YAML; use deposited supercell displacements and forces; identify each displacement-force row by record index, displaced atom, displacement vector, and normalized force-array hash; no figure digitization or data fitting."
+  },
+  "reproduction": {
+    "solver_results": [
+      {
+        "solver": "symfc_default",
+        "fc_calculator": "Phonopy default",
+        "force_constants_shape": [
+          2,
+          144,
+          3,
+          3
+        ],
+        "force_constants_finite": true,
+        "displacement_record_count": 2,
+        "displacement_records": [
+          {
+            "record_index_zero_based": 0,
+            "displaced_atom_index_zero_based": 0,
+            "displacement_angstrom": [
+              0.01,
+              0.0,
+              0.0
+            ],
+            "force_array_shape": [
+              144,
+              3
+            ],
+            "normalized_float64_force_array_sha256": "8e6e5da49efac9b720bcec3e7ffa78d97ef5cfb2f069d9395f5acb8ce6287572"
+          },
+          {
+            "record_index_zero_based": 1,
+            "displaced_atom_index_zero_based": 0,
+            "displacement_angstrom": [
+              0.0,
+              0.0,
+              0.01
+            ],
+            "force_array_shape": [
+              144,
+              3
+            ],
+            "normalized_float64_force_array_sha256": "bf049b4486794062c976ed625cca9611e68e267ace482be16da1cb881d3caaa5"
+          }
+        ],
+        "force_shapes": [
+          [
+            144,
+            3
+          ],
+          [
+            144,
+            3
+          ]
+        ],
+        "primitive_volume_A3": 19.78484081519725,
+        "primitive_molar_mass_kg_mol": 0.024021400000000002,
+        "molar_volume_m3_mol": 1.19147096303311e-05,
+        "cutoff_frequency_THz": 0.0,
+        "pretend_real": false,
+        "imaginary_frequency_treatment": "negative frequencies below zero cutoff are omitted from C_v; not replaced by real frequencies",
+        "mesh_results": [
+          {
+            "mesh": [
+              8,
+              8,
+              4
+            ],
+            "gamma_centered": true,
+            "qpoint_weight_sum": 256,
+            "frequency_min_THz": -0.7658899603667749,
+            "frequency_min_qpoint": [
+              0.0,
+              0.0,
+              -0.5
+            ],
+            "frequency_min_band_index": 0,
+            "negative_mode_weight": 8,
+            "total_mode_weight": 1536,
+            "negative_mode_weight_fraction": 0.005208333333333333,
+            "rows": [
+              {
+                "temperature_K": 200.0,
+                "Cv_J_mol_primitive_cell_K": 10.066909404567301,
+                "Cv_J_kg_K": 419.08087807402154,
+                "C_src_J_m3_K": 844914.3719742963
+              },
+              {
+                "temperature_K": 295.15,
+                "Cv_J_mol_primitive_cell_K": 16.843322932435107,
+                "Cv_J_kg_K": 701.1799034375642,
+                "C_src_J_m3_K": 1413657.861166613
+              },
+              {
+                "temperature_K": 300.0,
+                "Cv_J_mol_primitive_cell_K": 17.175562196214166,
+                "Cv_J_kg_K": 715.0108734800705,
+                "C_src_J_m3_K": 1441542.6585378624
+              }
+            ]
+          },
+          {
+            "mesh": [
+              10,
+              10,
+              5
+            ],
+            "gamma_centered": true,
+            "qpoint_weight_sum": 500,
+            "frequency_min_THz": -0.7284046535853529,
+            "frequency_min_qpoint": [
+              0.0,
+              0.0,
+              0.4
+            ],
+            "frequency_min_band_index": 0,
+            "negative_mode_weight": 10,
+            "total_mode_weight": 3000,
+            "negative_mode_weight_fraction": 0.0033333333333333335,
+            "rows": [
+              {
+                "temperature_K": 200.0,
+                "Cv_J_mol_primitive_cell_K": 10.160124488443525,
+                "Cv_J_kg_K": 422.9613797881691,
+                "C_src_J_m3_K": 852737.9016085332
+              },
+              {
+                "temperature_K": 295.15,
+                "Cv_J_mol_primitive_cell_K": 16.936901431038006,
+                "Cv_J_kg_K": 705.0755339421518,
+                "C_src_J_m3_K": 1421511.8921506896
+              },
+              {
+                "temperature_K": 300.0,
+                "Cv_J_mol_primitive_cell_K": 17.269141637905914,
+                "Cv_J_kg_K": 718.9065432450195,
+                "C_src_J_m3_K": 1449396.7686752614
+              }
+            ],
+            "relative_change_from_previous_mesh": {
+              "200.0": 0.00925955326804992,
+              "295.15": 0.005555821673566175,
+              "300.0": 0.005448406324211989
+            }
+          },
+          {
+            "mesh": [
+              12,
+              12,
+              6
+            ],
+            "gamma_centered": true,
+            "qpoint_weight_sum": 864,
+            "frequency_min_THz": -0.7658899603667749,
+            "frequency_min_qpoint": [
+              0.0,
+              0.0,
+              -0.5
+            ],
+            "frequency_min_band_index": 0,
+            "negative_mode_weight": 12,
+            "total_mode_weight": 5184,
+            "negative_mode_weight_fraction": 0.0023148148148148147,
+            "rows": [
+              {
+                "temperature_K": 200.0,
+                "Cv_J_mol_primitive_cell_K": 10.210983152041095,
+                "Cv_J_kg_K": 425.07860291411384,
+                "C_src_J_m3_K": 857006.4625030514
+              },
+              {
+                "temperature_K": 295.15,
+                "Cv_J_mol_primitive_cell_K": 16.987744486052584,
+                "Cv_J_kg_K": 707.1921072898575,
+                "C_src_J_m3_K": 1425779.1430189062
+              },
+              {
+                "temperature_K": 300.0,
+                "Cv_J_mol_primitive_cell_K": 17.3199837179914,
+                "Cv_J_kg_K": 721.0230760068688,
+                "C_src_J_m3_K": 1453663.9377178082
+              }
+            ],
+            "relative_change_from_previous_mesh": {
+              "200.0": 0.005005712642145147,
+              "295.15": 0.0030019100731970986,
+              "300.0": 0.002944100010963134
+            }
+          }
+        ]
+      },
+      {
+        "solver": "traditional",
+        "fc_calculator": "traditional",
+        "force_constants_shape": [
+          2,
+          144,
+          3,
+          3
+        ],
+        "force_constants_finite": true,
+        "displacement_record_count": 2,
+        "displacement_records": [
+          {
+            "record_index_zero_based": 0,
+            "displaced_atom_index_zero_based": 0,
+            "displacement_angstrom": [
+              0.01,
+              0.0,
+              0.0
+            ],
+            "force_array_shape": [
+              144,
+              3
+            ],
+            "normalized_float64_force_array_sha256": "8e6e5da49efac9b720bcec3e7ffa78d97ef5cfb2f069d9395f5acb8ce6287572"
+          },
+          {
+            "record_index_zero_based": 1,
+            "displaced_atom_index_zero_based": 0,
+            "displacement_angstrom": [
+              0.0,
+              0.0,
+              0.01
+            ],
+            "force_array_shape": [
+              144,
+              3
+            ],
+            "normalized_float64_force_array_sha256": "bf049b4486794062c976ed625cca9611e68e267ace482be16da1cb881d3caaa5"
+          }
+        ],
+        "force_shapes": [
+          [
+            144,
+            3
+          ],
+          [
+            144,
+            3
+          ]
+        ],
+        "primitive_volume_A3": 19.78484081519725,
+        "primitive_molar_mass_kg_mol": 0.024021400000000002,
+        "molar_volume_m3_mol": 1.19147096303311e-05,
+        "cutoff_frequency_THz": 0.0,
+        "pretend_real": false,
+        "imaginary_frequency_treatment": "negative frequencies below zero cutoff are omitted from C_v; not replaced by real frequencies",
+        "mesh_results": [
+          {
+            "mesh": [
+              8,
+              8,
+              4
+            ],
+            "gamma_centered": true,
+            "qpoint_weight_sum": 256,
+            "frequency_min_THz": -0.7658898088401374,
+            "frequency_min_qpoint": [
+              0.0,
+              0.0,
+              -0.5
+            ],
+            "frequency_min_band_index": 0,
+            "negative_mode_weight": 6,
+            "total_mode_weight": 1536,
+            "negative_mode_weight_fraction": 0.00390625,
+            "rows": [
+              {
+                "temperature_K": 200.0,
+                "Cv_J_mol_primitive_cell_K": 10.13186622491333,
+                "Cv_J_kg_K": 421.7850010787601,
+                "C_src_J_m3_K": 850366.1892960267
+              },
+              {
+                "temperature_K": 295.15,
+                "Cv_J_mol_primitive_cell_K": 16.908279751420498,
+                "Cv_J_kg_K": 703.8840263856601,
+                "C_src_J_m3_K": 1419109.6783741452
+              },
+              {
+                "temperature_K": 300.0,
+                "Cv_J_mol_primitive_cell_K": 17.240519015089,
+                "Cv_J_kg_K": 717.7149964235639,
+                "C_src_J_m3_K": 1446994.4757361158
+              }
+            ]
+          },
+          {
+            "mesh": [
+              10,
+              10,
+              5
+            ],
+            "gamma_centered": true,
+            "qpoint_weight_sum": 500,
+            "frequency_min_THz": -0.7284044934615327,
+            "frequency_min_qpoint": [
+              0.0,
+              0.0,
+              0.4
+            ],
+            "frequency_min_band_index": 0,
+            "negative_mode_weight": 8,
+            "total_mode_weight": 3000,
+            "negative_mode_weight_fraction": 0.0026666666666666666,
+            "rows": [
+              {
+                "temperature_K": 200.0,
+                "Cv_J_mol_primitive_cell_K": 10.193382382518367,
+                "Cv_J_kg_K": 424.3458908522553,
+                "C_src_J_m3_K": 855529.2322499597
+              },
+              {
+                "temperature_K": 295.15,
+                "Cv_J_mol_primitive_cell_K": 16.970159323689252,
+                "Cv_J_kg_K": 706.4600449469744,
+                "C_src_J_m3_K": 1424303.2226726338
+              },
+              {
+                "temperature_K": 300.0,
+                "Cv_J_mol_primitive_cell_K": 17.302399530449172,
+                "Cv_J_kg_K": 720.2910542453467,
+                "C_src_J_m3_K": 1452188.0991881422
+              }
+            ],
+            "relative_change_from_previous_mesh": {
+              "200.0": 0.006071552489883467,
+              "295.15": 0.0036597201595008643,
+              "300.0": 0.003589248984094631
+            }
+          },
+          {
+            "mesh": [
+              12,
+              12,
+              6
+            ],
+            "gamma_centered": true,
+            "qpoint_weight_sum": 864,
+            "frequency_min_THz": -0.7658898088401374,
+            "frequency_min_qpoint": [
+              0.0,
+              0.0,
+              -0.5
+            ],
+            "frequency_min_band_index": 0,
+            "negative_mode_weight": 10,
+            "total_mode_weight": 5184,
+            "negative_mode_weight_fraction": 0.0019290123456790122,
+            "rows": [
+              {
+                "temperature_K": 200.0,
+                "Cv_J_mol_primitive_cell_K": 10.230229620320655,
+                "Cv_J_kg_K": 425.8798246696968,
+                "C_src_J_m3_K": 858621.8160346695
+              },
+              {
+                "temperature_K": 295.15,
+                "Cv_J_mol_primitive_cell_K": 17.006990952888348,
+                "Cv_J_kg_K": 707.9933289853359,
+                "C_src_J_m3_K": 1427394.4964293467
+              },
+              {
+                "temperature_K": 300.0,
+                "Cv_J_mol_primitive_cell_K": 17.33923018472012,
+                "Cv_J_kg_K": 721.824297697891,
+                "C_src_J_m3_K": 1455279.2911192647
+              }
+            ],
+            "relative_change_from_previous_mesh": {
+              "200.0": 0.003614819538751005,
+              "295.15": 0.0021703761583241293,
+              "300.0": 0.002128644307752284
+            }
+          }
+        ]
+      }
+    ],
+    "q_mesh_policy": "Exploratory gamma-centered q meshes; no preregistered acceptance threshold was set before this reanalysis.",
+    "cutoff_policy": "Explicit CUTOFF_FREQUENCY=0.0 THz and PRETEND_REAL=false; negative frequencies are not converted to real frequencies.",
+    "bipm_cross_check": {
+      "source_locator": "https://www.bipm.org/documents/20126/27085544/bipm%20publication-ID-1661.pdf/ecac54bb-1086-ac6c-46a3-6f986951a033?download=true&t=1598613830576&version=1.4",
+      "temperature_K": 295.15,
+      "reference_quantity": "c_p of a BIPM ultra-pure graphite sample",
+      "reference_value_J_kg_K": 710.6,
+      "combined_standard_uncertainty_J_kg_K": 0.7,
+      "source_temperature_range_C": [
+        19.0,
+        25.0
+      ],
+      "equation": "c_p,g(T)=710.6+3.0*(T_C-22) J kg^-1 K^-1",
+      "nims_symfc_default_Cv_J_kg_K": 707.1921072898575,
+      "nims_traditional_Cv_J_kg_K": 707.9933289853359,
+      "relative_difference_symfc_vs_BIPM_cp": -0.004795796102086247,
+      "relative_difference_traditional_vs_BIPM_cp": -0.003668267681767756,
+      "comparability": "NOT_EQUIVALENT: c_v versus c_p and different material states; numerical proximity is not validation or calibration"
+    }
+  },
+  "uncertainty": {
+    "source_statistical_or_systematic_uncertainty_present": false,
+    "q_mesh_differences_are_source_uncertainty": false,
+    "force_constant_method_spread_is_source_uncertainty": false,
+    "material_state_uncertainty": "OPEN; ideal P6/mmm cell is not mapped to Ding natural-graphite morphology/state.",
+    "harmonic_stability": "OPEN; a negative-frequency branch is present on each tested mesh."
+  },
+  "verification_status": "PASS_SCOPED_SOURCE_AND_HARMONIC_REANALYSIS_WITH_OPEN_PHYSICAL_LIMITS",
+  "checks": {
+    "source_archive_hash_matches": true,
+    "phonopy_member_hash_matches": true,
+    "source_deposits_complete_displacement_force_records": true,
+    "force_constants_reconstructed_with_two_methods": true,
+    "candidate_cv_rows_are_finite_positive": true,
+    "imaginary_modes_are_detected_and_reported": true,
+    "imaginary_modes_are_not_pretended_real": true,
+    "no_figure_digitization_or_target_fit": true,
+    "no_alpha_phi_k_emitted": true,
+    "xie_2026_not_accessed": true
+  },
+  "scope_controls": {
+    "accepted_for_full_topic13": false,
+    "claim_promotion": false
+  },
+  "open_blockers": [
+    "nims_harmonic_negative_frequency_branch_unresolved",
+    "source_grade_C_src_uncertainty_missing",
+    "material_regime_mapping_to_Ding_TTG_not_closed",
+    "Ding_PBTE_mode_resolved_response_not_present",
+    "alpha_Phi_K_independent_calibration_missing",
+    "dimensional_phi_to_thermal_observable_map_missing"
+  ],
+  "controlling_blocker": "Ding-compatible C_src or accepted same-regime reproduction with material/state mapping and source-grade uncertainty remains missing.",
+  "next_action": "Use this as a bounded harmonic comparator; resolve the negative mode and uncertainty only if the NIMS lane is retained, then regenerate the source-route priority projection. Full Topic 13 still requires Ding-compatible C_src, independent alpha_Phi_K, and physical transport/KMS/entropy inputs.",
+  "claim_promotion": false,
+  "holdout_policy": {
+    "xie_2026_accessed": false,
+    "xie_2026_source_data_consumed": false,
+    "target_curve_used": false,
+    "fit_or_tuning_used": false,
+    "calibration_path_may_read_holdout": false
+  },
+  "evidence_artifacts": [
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/nims_mdr_mp990448_graphite_phonon_dataset.zip",
+      "sha256": "eea6ca7569c9442754ce5492ddb2f545186f97ad8b82b209d95f1a80b0158767",
+      "role": "source archive"
+    },
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/Research_T13_NIMS_Force_Displacement_Reanalysis.py",
+      "sha256": "53d271a458e3cba425d13d315a8f1836285305e56403d5b6929bb75233db1171",
+      "role": "reanalysis implementation"
+    },
+    {
+      "path": "docs/core/07_artifacts/topic13/t13_nims_mp990448_phonon_source_boundary_audit.json",
+      "sha256": "2e9f93be5cf23c429d9d0b77f755efb074a44790483f0b635a62327d5025eda9",
+      "role": "prior payload inventory; its inference about reanalysis capability is superseded by this audit"
+    },
+    {
+      "path": "https://phonopy.github.io/phonopy/phonopy-module.html",
+      "role": "official Phonopy displacement-force to force-constants documentation"
+    },
+    {
+      "path": "https://www.bipm.org/documents/20126/27085544/bipm%20publication-ID-1661.pdf/ecac54bb-1086-ac6c-46a3-6f986951a033?download=true&t=1598613830576&version=1.4",
+      "role": "independent graphite c_p comparison; not equivalent to this harmonic c_v"
+    }
+  ]
+}

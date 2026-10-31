@@ -56,7 +56,7 @@ elif not project_root:
         # Try 4 levels just in case
         sys.path.insert(0, str(current_path.parents[4]))
 
-from docs.core.uet_glass_box import UETPathManager, UETMetricLogger
+from docs.scripts.core.runners.uet_glass_box import UETPathManager, UETMetricLogger
 
 
 def load_hydride_data():

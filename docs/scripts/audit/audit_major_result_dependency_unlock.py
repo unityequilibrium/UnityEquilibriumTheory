@@ -170,7 +170,70 @@ def main() -> int:
         ),
         None,
     )
-    if any((curved_parent, adm_interface, geometry_operator, adm_evolution_rhs, fixed_gauge_no_go, gh_principal_system, gh_nonlinear_vacuum_rhs, gh_periodic_vacuum_evolution, topic13_prescribed_matter)):
+    gh_boundary_characteristics = next(
+        (
+            entry
+            for entry in register["entries"]
+            if entry.get("major_result_id")
+            == "CORE_CURVED_3P1_GH_BOUNDARY_CHARACTERISTIC_CLASSIFICATION"
+        ),
+        None,
+    )
+    gh_boundary_projectors = next(
+        (
+            entry
+            for entry in register["entries"]
+            if entry.get("major_result_id")
+            == "CORE_CURVED_3P1_GH_BOUNDARY_PROJECTOR_DECOMPOSITION"
+        ),
+        None,
+    )
+    gh_linear_boundary_residuals = next(
+        (
+            entry
+            for entry in register["entries"]
+            if entry.get("major_result_id")
+            == "CORE_CURVED_3P1_GH_LINEAR_DIFFERENTIAL_BOUNDARY_RESIDUALS"
+        ),
+        None,
+    )
+    gw_detector_response_lane = next(
+        (
+            entry
+            for entry in register["entries"]
+            if entry.get("major_result_id")
+            == "CORE_CURVED_3P1_GW_DETECTOR_RESPONSE_LANE"
+        ),
+        None,
+    )
+    gh_gauge_wave_tt_null_control = next(
+        (
+            entry
+            for entry in register["entries"]
+            if entry.get("major_result_id")
+            == "CORE_CURVED_3P1_GH_GAUGE_WAVE_TT_NULL_CONTROL"
+        ),
+        None,
+    )
+    gh_tt_sbp_sat_boundary_pilot = next(
+        (
+            entry
+            for entry in register["entries"]
+            if entry.get("major_result_id")
+            == "CORE_CURVED_3P1_GH_LINEAR_TT_SBP_SAT_BOUNDARY_PILOT"
+        ),
+        None,
+    )
+    gh_reduced_tt_sbp_sat_comparator = next(
+        (
+            entry
+            for entry in register["entries"]
+            if entry.get("major_result_id")
+            == "CORE_CURVED_3P1_GH_REDUCED_TT_SBP_SAT_COMPARATOR"
+        ),
+        None,
+    )
+    if any((curved_parent, adm_interface, geometry_operator, adm_evolution_rhs, fixed_gauge_no_go, gh_principal_system, gh_nonlinear_vacuum_rhs, gh_periodic_vacuum_evolution, topic13_prescribed_matter, gh_boundary_characteristics, gh_boundary_projectors, gh_linear_boundary_residuals, gw_detector_response_lane, gh_gauge_wave_tt_null_control, gh_tt_sbp_sat_boundary_pilot, gh_reduced_tt_sbp_sat_comparator)):
         artifact["curved_3p1_progress"] = {
             "parent": curved_parent,
             "adm_constraint_interface": adm_interface,
@@ -180,13 +243,27 @@ def main() -> int:
             "generalized_harmonic_principal_system": gh_principal_system,
             "generalized_harmonic_nonlinear_vacuum_rhs": gh_nonlinear_vacuum_rhs,
             "generalized_harmonic_periodic_vacuum_evolution": gh_periodic_vacuum_evolution,
+            "generalized_harmonic_boundary_characteristics": gh_boundary_characteristics,
+            "generalized_harmonic_boundary_projectors": gh_boundary_projectors,
+            "generalized_harmonic_linear_boundary_residuals": gh_linear_boundary_residuals,
+            "linearized_gw_detector_response_lane": gw_detector_response_lane,
+            "gh_gauge_wave_tt_null_control": gh_gauge_wave_tt_null_control,
+            "generalized_harmonic_tt_sbp_sat_boundary_pilot": gh_tt_sbp_sat_boundary_pilot,
+            "generalized_harmonic_reduced_tt_sbp_sat_energy_comparator": gh_reduced_tt_sbp_sat_comparator,
             "topic13_prescribed_matter_wiring": topic13_prescribed_matter,
             "gravity_unlock_status": decisions["GR_CLASSICAL_COMPATIBILITY_LANE"]["status"],
             "controlling_blocker": "curved_3p1_constraint_preserving_boundaries_and_dimensional_observable_mapping_missing",
             "claim_boundary": (
-                "ADM constraint, periodic spatial geometry, RHS operator, and "
+                "ADM constraint, periodic spatial geometry, RHS operator, "
                 "fixed-gauge no-go, GH principal/nonlinear RHS, periodic vacuum evolution, "
-                "and prescribed Topic 13 matter-source progress only; "
+                "local GH boundary-mode/flux classification, 4/2/4 boundary-projector "
+                "decomposition, and frozen-background linear differential boundary residuals, "
+                "plus the bounded ideal linear TT-mode detector-response measurement lane, "
+                "the evolved harmonic-gauge-wave TT null control, and the standard-GR "
+                "linear TT-sector SBP-SAT boundary pilot and second-order reduced-TT "
+                "SBP-SAT energy comparator, "
+                "plus prescribed Topic 13 "
+                "matter-source progress only; "
                 "the parent is not CLOSED_FOR_CORE and Gravity remains blocked"
             ),
         }
@@ -242,7 +319,11 @@ def main() -> int:
                     "full_core_unlock": False,
                 },
             }
-    OUT.write_text(json.dumps(artifact, indent=2, ensure_ascii=True) + "\n", encoding="utf-8")
+    OUT.write_text(
+        json.dumps(artifact, indent=2, ensure_ascii=True) + "\n",
+        encoding="utf-8",
+        newline="\n",
+    )
     print(json.dumps({"status": artifact["status"], "decisions": decisions}, indent=2))
     return 0
 

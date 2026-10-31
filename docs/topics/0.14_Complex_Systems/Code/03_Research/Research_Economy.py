@@ -33,7 +33,7 @@ import pandas as pd
 
 # Import from UET V3.0 Master Equation
 import sys
-from docs.core.uet_glass_box import UETPathManager
+from docs.scripts.core.runners.uet_glass_box import UETPathManager
 
 from pathlib import Path
 

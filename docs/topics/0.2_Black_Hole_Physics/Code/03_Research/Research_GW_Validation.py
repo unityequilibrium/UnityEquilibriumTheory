@@ -50,7 +50,7 @@ else:
 # Core Imports
 import json
 import math
-from docs.core.uet_glass_box import UETPathManager
+from docs.scripts.core.runners.uet_glass_box import UETPathManager
 from docs.core.uet_parameters import G, C, M_SUN, K_B, HBAR
 
 c = C

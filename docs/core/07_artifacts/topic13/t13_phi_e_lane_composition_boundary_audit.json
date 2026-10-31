@@ -1,0 +1,181 @@
+{
+  "schema_version": "t13-phi-e-lane-composition-boundary-v1",
+  "artifact": "t13_phi_e_lane_composition_boundary_audit",
+  "generated_at": "2026-09-24",
+  "owner_topic": "0.13_Thermodynamic_Bridge",
+  "canonical_path": "docs/core/07_artifacts/topic13/t13_phi_e_lane_composition_boundary_audit.json",
+  "major_result_id": "T13_PHI_E_LANE_COMPOSITION_BOUNDARY",
+  "closure_level": "CLOSED_FOR_LANE",
+  "closure_disposition": "NO_GO_FOR_SILENT_CROSS_LANE_IDENTIFICATION",
+  "verification_status": "PASS_SCOPED_PHI_E_LANE_COMPOSITION_BOUNDARY",
+  "f0_inventory": {
+    "field_lane_definition": "Phi_E=Z_Phi*DeltaPhi",
+    "energy_lane_definition": "Phi_E := Delta_u / e0",
+    "thermoelastic_lane_equation_id": "uet.o2.thermal.scalar_thermoelastic_response_bridge",
+    "energy_lane_id": "T13-PHI-E-001"
+  },
+  "f1_ontology": {
+    "Phi_base": "normalized effective response coordinate; not temperature",
+    "Phi_E_field": "field-amplitude coordinate in the thermoelastic action lane",
+    "Phi_E_energy": "dimensionless Delta_u/e0 coordinate in the standard energy-response lane",
+    "theta": "external material volumetric strain div(u)",
+    "C": "unchanged collective coordinate; not heat capacity",
+    "R_gen": "derived history trace; excluded from state and backreaction"
+  },
+  "f2_physical_correspondence": {
+    "field_lane": "Phi_base -> Z_Phi*Phi_base -> conditional material strain response",
+    "energy_lane": "Delta_u -> Delta_u/e0 -> Delta_Tq=Delta_u/c_v",
+    "missing_cross_lane_map": "Phi_E_energy=kappa_E*Phi_E_field",
+    "map_status": "OPEN_DERIVATION_OR_INDEPENDENT_CALIBRATION",
+    "composition_condition": "same material/state, observable, and mechanical/thermal boundary conditions"
+  },
+  "f3_units": {
+    "unit_lane": "natural field-amplitude chart plus normalized energy-response chart",
+    "Phi_base": 0,
+    "Z_Phi": 1,
+    "Phi_E_field": 1,
+    "Phi_E_energy": 0,
+    "kappa_E_required": -1,
+    "delta_u_energy_density": 4,
+    "e0_energy_density": 4,
+    "c_v_volumetric_heat_capacity": 3,
+    "g_Phi_theta": 3,
+    "C_p_volumetric_heat_capacity": 3,
+    "alpha_Phi_base": 1,
+    "alpha_energy_composition": 1,
+    "unit_conclusion": "both alpha routes have the same final dimension only after kappa_E is declared; dimensional agreement does not determine its value"
+  },
+  "f4_derivation": {
+    "derived_within_energy_lane": "Delta_Tq = Delta_u / c_v = (e0 / c_v) * Phi_E",
+    "derived_within_conditional_thermoelastic_lane": "DeltaT=T*alpha_V*g_Phi_theta*Phi_E/(C_v^V+T*alpha_V^2*K_T)",
+    "not_derived": "kappa_E and equality between the two lane-specific coordinates",
+    "derivation_class": "standard_energy_to_temperature_identity plus conditional thermoelastic stationarity; cross-lane bridge remains open"
+  },
+  "equation_or_mapping": {
+    "field_amplitude": "Phi_E_field=Z_Phi*DeltaPhi_base",
+    "normalized_energy_coordinate": "Phi_E_energy=Delta_u/e0",
+    "required_conversion": "Phi_E_energy=kappa_E*Phi_E_field; [kappa_E]=E^-1",
+    "energy_route_alpha": "(e0/c_v)*kappa_E*Z_Phi",
+    "conditional_thermoelastic_route_alpha": "T*alpha_V*g_Phi_theta*Z_Phi/C_p^V",
+    "cross_route_equality": "not asserted; requires same state and matched boundary/observable maps"
+  },
+  "data_role": "INTERNAL_FORMULA_AND_LANE_TYPE_AUDIT_NO_SOURCE_ROWS",
+  "checks": {
+    "field_lane_declares_mass_dimension_one": true,
+    "named_energy_lane_is_dimensionless": true,
+    "base_phi_to_energy_lane_map_is_open": true,
+    "energy_lane_does_not_assert_base_phi_identity": true,
+    "field_to_energy_lane_map_requires_inverse_energy": true,
+    "thermoelastic_alpha_unit_closes_conditionally": true,
+    "energy_alpha_unit_closes_only_after_conversion": true,
+    "physical_field_residue_remains_open": true,
+    "physical_strain_coupling_is_absent_from_current_action": true,
+    "named_energy_alpha_is_not_emitted": true,
+    "dynamic_bridge_is_synthetic_comparator": true,
+    "full_topic_gate_remains_blocked_without_promotion": true,
+    "core_progress_separates_he4_from_graphite": true,
+    "audit_emits_no_numeric_physical_alpha": true,
+    "audit_performs_no_fit_or_target_calibration": true
+  },
+  "checks_passed": 15,
+  "checks_total": 15,
+  "what_is_closed": [
+    "The natural-unit thermoelastic lane types Phi_E as a field-amplitude coordinate with mass dimension one.",
+    "The named energy-response lane defines Phi_E=Delta_u/e0 as dimensionless; it does not identify that coordinate with base Phi.",
+    "An unqualified identity between the two Phi_E coordinates is dimensionally invalid. A cross-lane map kappa_E with mass dimension -1 is required before composing their alpha formulas.",
+    "Both candidate alpha formulas are dimensionally consistent only within their declared lanes and after the missing cross-lane map and physical inputs are supplied.",
+    "The scalar thermoelastic formula uses a zero-stress, adiabatic C_p^V response; the energy-source formula uses a fixed-volume c_v/C_src response. Their boundary and material roles cannot be silently substituted."
+  ],
+  "what_remains_open": [
+    "field_dimensional_Phi_E_to_dimensionless_energy_Phi_E_map_kappa_E_missing",
+    "base_Phi_to_energy_density_mapping_missing",
+    "physical_Z_Phi_and_g_Phi_theta_missing",
+    "source_locked_e0_c_v_and_same_state_material_package_missing",
+    "C_p_v_C_v_C_src_boundary_and_mode_correspondence_missing",
+    "TTG_finite_q_initialization_detector_and_uncertainty_map_missing"
+  ],
+  "controlling_blocker": "cross_lane_Phi_E_normalization_and_base_Phi_to_energy_density_map_missing",
+  "dependency_unlocked": "Explicit lane typing only; no physical or downstream dependency unlock.",
+  "physical_dependency_unlock": false,
+  "full_core_unlock": false,
+  "claim_promotion": false,
+  "numeric_alpha_Phi_K_emitted": false,
+  "parameter_fitting_performed": false,
+  "target_data_used": false,
+  "holdout_use": {
+    "numeric_payload_consumed_by_this_local_audit": false,
+    "blind_eligibility": "REVIEW_REQUIRED_AFTER_SESSION_EXPOSURE"
+  },
+  "source_hashes": {
+    "docs/core/03_lanes/thermal/thermal_energy_response_bridge.py": "ce64f2fc25fe6a96d60c63a5d581686dfa3af0ab751e70160482845ee889f1d2",
+    "docs/core/03_lanes/thermal/uet_scalar_thermoelastic_response_bridge.py": "f379f657c597b8e453388fa4e96d1dd88d8dae8d6fa8d8629a133350f086306b",
+    "docs/core/03_lanes/thermal/uet_material_lattice_interface_contract.py": "85be68b8054556b78378fb06b8a6e99c8f936063cab55c4359d86ff9f93b9ca3",
+    "docs/core/03_lanes/thermal/uet_dynamic_thermoelastic_response.py": "4d269836c5fcf0afb0d1c8b1833f6c9874b6957c55d0c075a16a25a79fd9cb24",
+    "docs/core/07_artifacts/topic13/t13_energy_response_bridge_audit.json": "1b3cf261f3e442513a88328d3271397b829fbc5aefdb7f9c0e8231767ae61e6e",
+    "docs/core/07_artifacts/topic13/t13_scalar_thermoelastic_response_bridge_audit.json": "980cbbfe4d9056fbcce1066f53b88d538184322dc220961932d837282811ba77",
+    "docs/core/07_artifacts/topic13/t13_material_interface_factor_resolution_audit.json": "3bb802c32d27275601584f4ce2a25b3fe28d187aefdb7eced2607938df0eb7be",
+    "docs/core/07_artifacts/topic13/t13_dynamic_thermoelastic_response_audit.json": "f9487355e178403f273e6bf3c9a85e160680eb04bb7797efce216745687eabde",
+    "docs/core/07_artifacts/topic13/t13_full_closure_progress.json": "1d3614914c9d19525b0a2622c29a8845945bab172f582374ca2ee6e052807df1",
+    "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json": "7df4ec9a05d1c858dfd3a43ac1a32bd677da6d57d30c20c502fdb27a8447ccc6"
+  },
+  "evidence_artifacts": [
+    {
+      "path": "docs/core/07_artifacts/topic13/t13_phi_e_lane_composition_boundary_audit.json",
+      "role": "generated scoped cross-lane type and composition audit"
+    },
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/T13_PHI_E_LANE_COMPOSITION_BOUNDARY.md",
+      "role": "human-readable F0-F4 handoff"
+    }
+  ],
+  "claim_boundary": "This closes only the no-go on silently identifying two lane-specific Phi_E coordinates. It does not prove that an explicit future bridge is impossible, emit alpha_Phi_K, validate graphite TTG, or close Full Topic 13.",
+  "report": {
+    "MAJOR_RESULT_CLOSURE": "CLOSED_FOR_LANE",
+    "WHAT_IS_ACTUALLY_CLOSED": [
+      "The natural-unit thermoelastic lane types Phi_E as a field-amplitude coordinate with mass dimension one.",
+      "The named energy-response lane defines Phi_E=Delta_u/e0 as dimensionless; it does not identify that coordinate with base Phi.",
+      "An unqualified identity between the two Phi_E coordinates is dimensionally invalid. A cross-lane map kappa_E with mass dimension -1 is required before composing their alpha formulas.",
+      "Both candidate alpha formulas are dimensionally consistent only within their declared lanes and after the missing cross-lane map and physical inputs are supplied.",
+      "The scalar thermoelastic formula uses a zero-stress, adiabatic C_p^V response; the energy-source formula uses a fixed-volume c_v/C_src response. Their boundary and material roles cannot be silently substituted."
+    ],
+    "WHAT_REMAINS_OPEN": [
+      "field_dimensional_Phi_E_to_dimensionless_energy_Phi_E_map_kappa_E_missing",
+      "base_Phi_to_energy_density_mapping_missing",
+      "physical_Z_Phi_and_g_Phi_theta_missing",
+      "source_locked_e0_c_v_and_same_state_material_package_missing",
+      "C_p_v_C_v_C_src_boundary_and_mode_correspondence_missing",
+      "TTG_finite_q_initialization_detector_and_uncertainty_map_missing"
+    ],
+    "DEPENDENCY_UNLOCKED": "Explicit lane typing only; no physical or downstream dependency unlock.",
+    "STATUS": "PASS_SCOPED_PHI_E_LANE_COMPOSITION_BOUNDARY",
+    "WHAT_CHANGED": "Added a fail-closed F0-F4 type/composition audit; no accepted equation, coefficient, registry entry, or dependency gate was changed.",
+    "EQUATION_OR_MAPPING": {
+      "field_amplitude": "Phi_E_field=Z_Phi*DeltaPhi_base",
+      "normalized_energy_coordinate": "Phi_E_energy=Delta_u/e0",
+      "required_conversion": "Phi_E_energy=kappa_E*Phi_E_field; [kappa_E]=E^-1",
+      "energy_route_alpha": "(e0/c_v)*kappa_E*Z_Phi",
+      "conditional_thermoelastic_route_alpha": "T*alpha_V*g_Phi_theta*Z_Phi/C_p^V",
+      "cross_route_equality": "not asserted; requires same state and matched boundary/observable maps"
+    },
+    "VERIFICATION": {
+      "field_lane_declares_mass_dimension_one": true,
+      "named_energy_lane_is_dimensionless": true,
+      "base_phi_to_energy_lane_map_is_open": true,
+      "energy_lane_does_not_assert_base_phi_identity": true,
+      "field_to_energy_lane_map_requires_inverse_energy": true,
+      "thermoelastic_alpha_unit_closes_conditionally": true,
+      "energy_alpha_unit_closes_only_after_conversion": true,
+      "physical_field_residue_remains_open": true,
+      "physical_strain_coupling_is_absent_from_current_action": true,
+      "named_energy_alpha_is_not_emitted": true,
+      "dynamic_bridge_is_synthetic_comparator": true,
+      "full_topic_gate_remains_blocked_without_promotion": true,
+      "core_progress_separates_he4_from_graphite": true,
+      "audit_emits_no_numeric_physical_alpha": true,
+      "audit_performs_no_fit_or_target_calibration": true
+    },
+    "CONTROLLING_BLOCKER": "cross_lane_Phi_E_normalization_and_base_Phi_to_energy_density_map_missing",
+    "NEXT_ACTION": "Derive or independently calibrate kappa_E and Z_Phi on one declared material/state, then map C_v/C_src and the actual TTG boundary/observable before comparing either alpha route.",
+    "CLAIM_BOUNDARY": "This closes only the no-go on silently identifying two lane-specific Phi_E coordinates. It does not prove that an explicit future bridge is impossible, emit alpha_Phi_K, validate graphite TTG, or close Full Topic 13."
+  }
+}

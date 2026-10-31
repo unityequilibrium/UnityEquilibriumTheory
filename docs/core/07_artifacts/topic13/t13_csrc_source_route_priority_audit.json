@@ -1,7 +1,7 @@
 {
   "schema_version": "t13-csrc-source-route-priority-v1",
   "artifact": "t13_csrc_source_route_priority_audit",
-  "generated_at": "2026-08-26",
+  "generated_at": "2026-09-27",
   "status": "PASS_SCOPED_C_SRC_SOURCE_ROUTE_PRIORITY_NO_ACCEPTED_ROUTE",
   "major_result": {
     "major_result_id": "T13_C_SRC_SOURCE_ROUTE_PRIORITY",
@@ -12,7 +12,7 @@
       "The direct Ding author route is selected as priority 1 and is explicitly not sent or treated as received.",
       "Numeric Calorine candidates are separated from Ding acceptance because material/state equivalence and source-grade uncertainty are missing.",
       "QH-15 natural-graphite C_v rows are recorded as a numeric comparator but are not relabeled as mode-resolved Ding C_src.",
-      "Public OA, NIMS, Huang, and Huberman routes are bounded as non-productive for accepted numeric C_src under their captured payloads.",
+      "Public OA, Huang, and Huberman remain payload boundaries; NIMS MP-990448 is now a source-specific harmonic comparator with an AA-like unstable mode, still ineligible as Ding C_src.",
       "The next action is an external input change or a genuinely qualifying same-regime reproduction, not another unchanged gate rerun.",
       "The nine-route priority inventory is explicitly related to the ten-candidate reconciliation inventory; the count difference is scope, not silent route loss."
     ],
@@ -32,7 +32,7 @@
     "data_role": "SOURCE_ACQUISITION_DECISION_NOT_CALIBRATION",
     "evidence_artifacts": [
       {
-        "path": "docs/core/artifacts/t13_independent_csrc_acceptance_contract.json",
+        "path": "docs/core/07_artifacts/topic13/t13_independent_csrc_acceptance_contract.json",
         "role": "independent C_src acceptance contract",
         "sha256": "880eb2cc94543f19fefae13ad8c64af820bb619d9c898cd4e1e710494519d281"
       },
@@ -42,7 +42,7 @@
         "sha256": "512127dd84d1f65905931d111cea5377b8f44ed8d2dd85a142c9dae9680358c5"
       },
       {
-        "path": "docs/core/artifacts/t13_ding_pbte_author_request_audit.json",
+        "path": "docs/core/07_artifacts/topic13/t13_ding_pbte_author_request_audit.json",
         "role": "route qualification audit",
         "sha256": "66679f962d0725455c73bfbc856f6c5722b039a3c15b16d4620081d89b4b892a"
       },
@@ -52,7 +52,7 @@
         "sha256": "b87680866ebed7ca25f27008f01e37dd47f0e6da54c3c1e27eb404e20fe600ad"
       },
       {
-        "path": "docs/core/artifacts/t13_ding_pbte_numeric_input_availability_audit.json",
+        "path": "docs/core/07_artifacts/topic13/t13_ding_pbte_numeric_input_availability_audit.json",
         "role": "route qualification audit",
         "sha256": "1828db74760ac53c73345d0e4a8adc8fc00fc16bb25e84809a73aaa3cd9b3d9a"
       },
@@ -62,7 +62,7 @@
         "sha256": "a82b25ed00f896b759d2b577bdd046faf1c1ef1399b6f5d12b71c8bd6318e5ed"
       },
       {
-        "path": "docs/core/artifacts/t13_calorine_zenodo_nep_bte_reproduction_audit.json",
+        "path": "docs/core/07_artifacts/topic13/t13_calorine_zenodo_nep_bte_reproduction_audit.json",
         "role": "route qualification audit",
         "sha256": "a2fb52533d768697950c49722e24e5de0d9d3381c24be6c5bf2e23f88a8957e0"
       },
@@ -72,7 +72,7 @@
         "sha256": "564606b5634d4cf1e87907da1598401b9f9ebcedacd0a41030b3766a774f84fc"
       },
       {
-        "path": "docs/core/artifacts/t13_calorine_legacy_nep2_pbte_reproduction_audit.json",
+        "path": "docs/core/07_artifacts/topic13/t13_calorine_legacy_nep2_pbte_reproduction_audit.json",
         "role": "route qualification audit",
         "sha256": "66e05c61250da9711d7d90f44cdd1297aa88e560d716984a1a8db143fa4e7af3"
       },
@@ -82,7 +82,7 @@
         "sha256": "86f5d5015b5bd0172bc2bfae64271955c56470650bdb6b8459bb1280e5dbc3cf"
       },
       {
-        "path": "docs/core/artifacts/t13_mp48_independent_graphite_cv_audit.json",
+        "path": "docs/core/07_artifacts/topic13/t13_mp48_independent_graphite_cv_audit.json",
         "role": "route qualification audit",
         "sha256": "56493e6d4883f3f78d24f630f5cdc6718eec350ce264152146979e3bb0ee39a9"
       },
@@ -92,9 +92,9 @@
         "sha256": "bbd4aee185a7c5a08b33f2f267e81a8b5274fa43b26eae1167966b4a5ec9a061"
       },
       {
-        "path": "docs/core/artifacts/t13_nims_mp990448_phonon_source_boundary_audit.json",
+        "path": "docs/core/07_artifacts/topic13/t13_nims_mp990448_aa_stack_shear_instability.json",
         "role": "route qualification audit",
-        "sha256": "2e9f93be5cf23c429d9d0b77f755efb074a44790483f0b635a62327d5025eda9"
+        "sha256": "6389321fdd634a6a9e36a228921be1fd4a790b462d143998403454422f65434b"
       },
       {
         "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/huang_2023_nims_mdr_payload_source_package.json",
@@ -102,7 +102,7 @@
         "sha256": "e7224f04f632e430782d8bbde4477e87d7f3d973bc62e176ceb48cccb31c6f36"
       },
       {
-        "path": "docs/core/artifacts/t13_huang_2023_nims_mdr_payload_boundary_audit.json",
+        "path": "docs/core/07_artifacts/topic13/t13_huang_2023_nims_mdr_payload_boundary_audit.json",
         "role": "route qualification audit",
         "sha256": "5a80347b4cc014e3c585fa9e3cff16d08834651d93db74c0478ce687156cac5c"
       },
@@ -112,7 +112,7 @@
         "sha256": "f70ff820ea3cb16023d23bb3fd7d36d6ed486357b8cbc6ceb81bf2fd35492844"
       },
       {
-        "path": "docs/core/artifacts/t13_huberman_2019_public_pbte_boundary_audit.json",
+        "path": "docs/core/07_artifacts/topic13/t13_huberman_2019_public_pbte_boundary_audit.json",
         "role": "route qualification audit",
         "sha256": "22b065abd8177a9b1f181e79761baadc0c5c6242d44bea74a8fd6022aafec3c4"
       },
@@ -122,14 +122,14 @@
         "sha256": "b30803d03435676fb30e0135601be7dd6be7e38824b688fb60d53cc75568fcbb"
       },
       {
-        "path": "docs/core/artifacts/t13_qh15_graphite_transport_boundary_audit.json",
+        "path": "docs/core/07_artifacts/topic13/t13_qh15_graphite_transport_boundary_audit.json",
         "role": "route qualification audit",
         "sha256": "51ddbb46b345233509c78cbb6575945017ddddf3fa14e3fcf233bbad5e9c1e11"
       },
       {
-        "path": "docs/core/artifacts/t13_csrc_reconciliation_audit.json",
+        "path": "docs/core/07_artifacts/topic13/t13_csrc_reconciliation_audit.json",
         "role": "broader C_src reconciliation inventory",
-        "sha256": "a551b12e0c19d3cbb85675de7143cd883e1a103f7a80bb706f84445fdd0a51c3"
+        "sha256": "5cd5789d9bc189fc6f84a9d8289f017064fa3f284ea55d9053d3575e4b4d1fa0"
       }
     ],
     "verification_status": "PASS_SCOPED_C_SRC_SOURCE_ROUTE_PRIORITY_NO_ACCEPTED_ROUTE",
@@ -142,7 +142,7 @@
     "claim_boundary": "This closes a source-acquisition decision lane only. It does not accept a C_src route, create data, calibrate alpha_Phi_K, validate TTG, or close Full Topic 13."
   },
   "acceptance_contract": {
-    "path": "docs/core/artifacts/t13_independent_csrc_acceptance_contract.json",
+    "path": "docs/core/07_artifacts/topic13/t13_independent_csrc_acceptance_contract.json",
     "sha256": "880eb2cc94543f19fefae13ad8c64af820bb619d9c898cd4e1e710494519d281",
     "required_fields": [
       "source_identity_and_locator",
@@ -221,10 +221,11 @@
         "sha256": "512127dd84d1f65905931d111cea5377b8f44ed8d2dd85a142c9dae9680358c5"
       },
       "audit_artifact": {
-        "path": "docs/core/artifacts/t13_ding_pbte_author_request_audit.json",
+        "path": "docs/core/07_artifacts/topic13/t13_ding_pbte_author_request_audit.json",
         "role": "route qualification audit",
         "sha256": "66679f962d0725455c73bfbc856f6c5722b039a3c15b16d4620081d89b4b892a"
       },
+      "additional_evidence": [],
       "package_status": "REQUEST_PACKAGE_READY_NOT_SENT",
       "audit_status": "PASS_REQUEST_SCHEMA_OPEN_EXTERNAL_RESPONSE",
       "field_coverage": {
@@ -305,10 +306,11 @@
         "sha256": "b87680866ebed7ca25f27008f01e37dd47f0e6da54c3c1e27eb404e20fe600ad"
       },
       "audit_artifact": {
-        "path": "docs/core/artifacts/t13_ding_pbte_numeric_input_availability_audit.json",
+        "path": "docs/core/07_artifacts/topic13/t13_ding_pbte_numeric_input_availability_audit.json",
         "role": "route qualification audit",
         "sha256": "1828db74760ac53c73345d0e4a8adc8fc00fc16bb25e84809a73aaa3cd9b3d9a"
       },
+      "additional_evidence": [],
       "package_status": "OFFICIAL_OA_INVENTORY_LOCKED_REPRODUCTION_INPUTS_ABSENT",
       "audit_status": "PASS_SCOPED_OA_NUMERIC_INPUT_AVAILABILITY_NO_GO",
       "field_coverage": {
@@ -388,10 +390,11 @@
         "sha256": "a82b25ed00f896b759d2b577bdd046faf1c1ef1399b6f5d12b71c8bd6318e5ed"
       },
       "audit_artifact": {
-        "path": "docs/core/artifacts/t13_calorine_zenodo_nep_bte_reproduction_audit.json",
+        "path": "docs/core/07_artifacts/topic13/t13_calorine_zenodo_nep_bte_reproduction_audit.json",
         "role": "route qualification audit",
         "sha256": "a2fb52533d768697950c49722e24e5de0d9d3381c24be6c5bf2e23f88a8957e0"
       },
+      "additional_evidence": [],
       "package_status": "PASS_SCOPED_CALORINE_NUMERIC_C_SRC_REPRODUCTION",
       "audit_status": "PASS_SCOPED_CALORINE_NUMERIC_C_SRC_REPRODUCTION",
       "field_coverage": {
@@ -472,10 +475,11 @@
         "sha256": "564606b5634d4cf1e87907da1598401b9f9ebcedacd0a41030b3766a774f84fc"
       },
       "audit_artifact": {
-        "path": "docs/core/artifacts/t13_calorine_legacy_nep2_pbte_reproduction_audit.json",
+        "path": "docs/core/07_artifacts/topic13/t13_calorine_legacy_nep2_pbte_reproduction_audit.json",
         "role": "route qualification audit",
         "sha256": "66e05c61250da9711d7d90f44cdd1297aa88e560d716984a1a8db143fa4e7af3"
       },
+      "additional_evidence": [],
       "package_status": "PASS_SCOPED_CALORINE_LEGACY_NEP2_PBTE_REPRODUCTION",
       "audit_status": "PASS_SCOPED_CALORINE_LEGACY_NEP2_PBTE_REPRODUCTION",
       "field_coverage": {
@@ -556,10 +560,11 @@
         "sha256": "86f5d5015b5bd0172bc2bfae64271955c56470650bdb6b8459bb1280e5dbc3cf"
       },
       "audit_artifact": {
-        "path": "docs/core/artifacts/t13_mp48_independent_graphite_cv_audit.json",
+        "path": "docs/core/07_artifacts/topic13/t13_mp48_independent_graphite_cv_audit.json",
         "role": "route qualification audit",
         "sha256": "56493e6d4883f3f78d24f630f5cdc6718eec350ce264152146979e3bb0ee39a9"
       },
+      "additional_evidence": [],
       "package_status": "SOURCE_LOCKED_INDEPENDENT_HARMONIC_CV_COMPARATOR",
       "audit_status": "PASS_INDEPENDENT_NUMERIC_CV_WITH_EPISTEMIC_ENVELOPE",
       "field_coverage": {
@@ -631,33 +636,40 @@
     {
       "route_id": "nims_mp990448",
       "priority": 6,
-      "route_class": "PUBLIC_SOURCE_BOUNDARY",
+      "route_class": "INDEPENDENT_HARMONIC_CV_COMPARATOR",
       "label": "NIMS MP-990448 graphite phonon archive",
-      "current_state": "ARCHIVE_BOUNDARY_NO_MACHINE_READABLE_C_SRC",
+      "current_state": "CONDITIONAL_HARMONIC_REANALYSIS_AA_LIKE_STRUCTURE_UNSTABLE_MODE",
       "source_package": {
         "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/nims_mdr_mp990448_phonon_source_package.json",
         "role": "source package or request manifest",
         "sha256": "bbd4aee185a7c5a08b33f2f267e81a8b5274fa43b26eae1167966b4a5ec9a061"
       },
       "audit_artifact": {
-        "path": "docs/core/artifacts/t13_nims_mp990448_phonon_source_boundary_audit.json",
+        "path": "docs/core/07_artifacts/topic13/t13_nims_mp990448_aa_stack_shear_instability.json",
         "role": "route qualification audit",
-        "sha256": "2e9f93be5cf23c429d9d0b77f755efb074a44790483f0b635a62327d5025eda9"
+        "sha256": "6389321fdd634a6a9e36a228921be1fd4a790b462d143998403454422f65434b"
       },
+      "additional_evidence": [
+        {
+          "path": "docs/core/07_artifacts/topic13/t13_nims_mp990448_phonon_source_boundary_audit.json",
+          "role": "original NIMS archive boundary audit",
+          "sha256": "2e9f93be5cf23c429d9d0b77f755efb074a44790483f0b635a62327d5025eda9"
+        }
+      ],
       "package_status": "PASS_SCOPED_NIMS_MP990448_PHONON_PAYLOAD_BOUNDARY",
-      "audit_status": "PASS_SCOPED_NIMS_MP990448_PHONON_PAYLOAD_BOUNDARY",
+      "audit_status": "WARN_SCOPED_NIMS_AA_STACK_SHEAR_MODE_ROBUST_MATERIAL_MAPPING_OPEN",
       "field_coverage": {
         "source_identity_and_locator": {
           "status": "PRESENT",
           "basis": "The NIMS collection, dataset, and material identity are source-locked."
         },
         "raw_numeric_or_reproduction_payload": {
-          "status": "MISSING",
-          "basis": "The required field is not present for this route under the current acceptance contract."
+          "status": "PRESENT",
+          "basis": "The hash-locked raw displacement-force rows support a reproducible harmonic comparator; they are not Ding PBTE data."
         },
         "source_hash": {
           "status": "PRESENT",
-          "basis": "The downloaded archive and members have SHA-256 identity."
+          "basis": "The deposited archive/member and reanalysis inputs have SHA-256 identities."
         },
         "material_identity_morphology_isotope_defect_state": {
           "status": "MISSING",
@@ -680,8 +692,8 @@
           "basis": "The required field is not present for this route under the current acceptance contract."
         },
         "mesh_or_numerical_convergence": {
-          "status": "MISSING",
-          "basis": "The required field is not present for this route under the current acceptance contract."
+          "status": "PRESENT",
+          "basis": "An unsymmetrized 12x12x6 mesh and five force-constant variants locate the same q-boundary negative mode."
         },
         "independence_statement": {
           "status": "MISSING",
@@ -689,18 +701,20 @@
         },
         "holdout_and_fit_audit": {
           "status": "PRESENT",
-          "basis": "The boundary audit records no holdout access and no claim promotion."
+          "basis": "The diagnostic records no fit, no Xie 2026 access, and no claim promotion."
         }
       },
-      "field_coverage_count": 3,
+      "field_coverage_count": 5,
       "required_field_count": 11,
-      "acceptance_decision": "CLOSED_PUBLIC_ROUTE_NO_MACHINE_READABLE_PAYLOAD",
+      "acceptance_decision": "COMPARATOR_REJECTED_AA_LIKE_STACK_AND_UNSTABLE_MODE_NOT_DING_PBTE",
       "accepted_for_full_topic13": false,
       "rejection_reasons": [
-        "archive contains figures and setup files but no force-constant data, frequency mesh, or machine-readable thermal rows",
-        "no Ding PBTE response, C_src uncertainty, or material/state acceptance package is available from this archive"
+        "the deposited two-atom P6/mmm cell is AA-like and is not demonstrated equivalent to stable ABAB graphite or Ding's TTG specimen",
+        "a basal-plane negative mode at q=(0,0,1/2) persists after acoustic sum-rule residual reduction and across five force-constant variants",
+        "the reanalysis is harmonic C_v comparison only, not Ding mode-resolved PBTE C_src with source-grade uncertainty",
+        "no independent alpha_Phi_K calibration or Phi-to-temperature mapping is supplied"
       ],
-      "next_action": "Do not digitize the thermal figure for C_src acceptance; obtain a permitted raw force-constant package or use the author/same-regime route.",
+      "next_action": "Keep MP-990448 as a source-specific harmonic diagnostic; do not spend further cycles trying to qualify it as Ding/natural-graphite evidence. Obtain an authorized Ding payload or a same-regime ABAB PBTE reproduction.",
       "holdout_policy": {
         "xie_2026_accessed": false,
         "target_curve_used": false,
@@ -723,10 +737,11 @@
         "sha256": "e7224f04f632e430782d8bbde4477e87d7f3d973bc62e176ceb48cccb31c6f36"
       },
       "audit_artifact": {
-        "path": "docs/core/artifacts/t13_huang_2023_nims_mdr_payload_boundary_audit.json",
+        "path": "docs/core/07_artifacts/topic13/t13_huang_2023_nims_mdr_payload_boundary_audit.json",
         "role": "route qualification audit",
         "sha256": "5a80347b4cc014e3c585fa9e3cff16d08834651d93db74c0478ce687156cac5c"
       },
+      "additional_evidence": [],
       "package_status": "PASS_SCOPED_HUANG_2023_NIMS_MDR_PAYLOAD_BOUNDARY",
       "audit_status": "PASS_SCOPED_HUANG_2023_NIMS_MDR_PAYLOAD_BOUNDARY",
       "field_coverage": {
@@ -806,10 +821,11 @@
         "sha256": "f70ff820ea3cb16023d23bb3fd7d36d6ed486357b8cbc6ceb81bf2fd35492844"
       },
       "audit_artifact": {
-        "path": "docs/core/artifacts/t13_huberman_2019_public_pbte_boundary_audit.json",
+        "path": "docs/core/07_artifacts/topic13/t13_huberman_2019_public_pbte_boundary_audit.json",
         "role": "route qualification audit",
         "sha256": "22b065abd8177a9b1f181e79761baadc0c5c6242d44bea74a8fd6022aafec3c4"
       },
+      "additional_evidence": [],
       "package_status": "PUBLIC_FORMULA_AND_SETUP_ONLY_NUMERIC_PAYLOAD_OPEN",
       "audit_status": "PASS_HUBERMAN_PUBLIC_PBTE_BOUNDARY_NO_ACCEPTED_NUMERIC_PAYLOAD",
       "field_coverage": {
@@ -889,10 +905,11 @@
         "sha256": "b30803d03435676fb30e0135601be7dd6be7e38824b688fb60d53cc75568fcbb"
       },
       "audit_artifact": {
-        "path": "docs/core/artifacts/t13_qh15_graphite_transport_boundary_audit.json",
+        "path": "docs/core/07_artifacts/topic13/t13_qh15_graphite_transport_boundary_audit.json",
         "role": "route qualification audit",
         "sha256": "51ddbb46b345233509c78cbb6575945017ddddf3fa14e3fcf233bbad5e9c1e11"
       },
+      "additional_evidence": [],
       "package_status": "SOURCE_LOCKED_COMPARATOR_ONLY",
       "audit_status": "PASS_SCOPED_QH15_CV_COMPARATOR_BOUNDARY",
       "field_coverage": {
@@ -1074,7 +1091,7 @@
       "claim_promotion_is_false": true
     }
   },
-  "what_changed": "Ranked and field-audited all currently captured C_src source routes without importing or synthesizing a numeric replacement; made the relationship to the broader reconciliation inventory explicit.",
+  "what_changed": "Ranked and field-audited captured C_src routes, linked the NIMS force-set reanalysis and structural limitation, and retained the distinction between a harmonic comparator and an accepted Ding-compatible C_src source.",
   "verification": "Every route package and audit is hash-referenced; expected statuses, field coverage, policy checks, fail-closed acceptance, holdout exclusion, and cross-inventory coverage are machine-checked.",
   "controlling_blocker": "ding_pbte_C_src_numeric_or_accepted_independent_reproduction_missing",
   "next_action": "Obtain authorization to send the prepared Ding request, or obtain a genuinely same-regime PBTE reproduction. Do not infer C_src from normalized TTG rows, incident fluence, comparator c_v, or an unchanged rerun.",

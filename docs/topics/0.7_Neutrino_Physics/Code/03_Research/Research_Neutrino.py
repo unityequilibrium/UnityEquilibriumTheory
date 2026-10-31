@@ -36,7 +36,7 @@ root_path = ROOT_PATH
 # --- ROBUST PATH FINDER (5x4 Grid Standard) ---
 
 
-from docs.core.uet_glass_box import UETPathManager, UETMetricLogger
+from docs.scripts.core.runners.uet_glass_box import UETPathManager, UETMetricLogger
 
 
 TOPIC_DIR = root_path / "docs" / "topics" / "0.7_Neutrino_Physics"

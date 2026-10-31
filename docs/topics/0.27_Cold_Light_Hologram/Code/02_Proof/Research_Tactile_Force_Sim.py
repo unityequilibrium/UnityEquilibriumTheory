@@ -24,7 +24,7 @@ from pathlib import Path
 
 
 from docs.core.uet_parameters import get_params, C
-from docs.core.uet_glass_box import UETPathManager
+from docs.scripts.core.runners.uet_glass_box import UETPathManager
 
 
 class TactileLightSim:
@@ -100,7 +100,7 @@ if __name__ == "__main__":
 
     # Save results
     import json
-    from docs.core.uet_glass_box import UETMetricLogger
+    from docs.scripts.core.runners.uet_glass_box import UETMetricLogger
 
     res_dir = UETPathManager.get_result_dir("0.27", "Tactile_Push_Sim", pillar="02_Proof", category="log")
     res_logger = UETMetricLogger("Tactile_Force", topic_id="0.27", category="log")

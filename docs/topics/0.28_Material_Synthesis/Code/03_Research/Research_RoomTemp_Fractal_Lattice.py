@@ -46,7 +46,7 @@ if str(root_dir) not in sys.path:
 
 # Core UET Imports
 from docs.core.uet_master_equation import UETParameters, UETMasterEquation
-from docs.core.uet_base_solver import UETBaseSolver
+from docs.scripts.core.runners.uet_base_solver import UETBaseSolver
 
 class SuperconductorSolver(UETBaseSolver):
     """

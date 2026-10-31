@@ -36,11 +36,11 @@ topic_dir = (
 if str(topic_dir) not in sys.path:
     sys.path.append(str(topic_dir))
 
-from docs.core.uet_glass_box import UETPathManager
+from docs.scripts.core.runners.uet_glass_box import UETPathManager
 
 # Use Centralized 3D Engine
 from Engine_UET_3D import UETFluid3D
-from docs.core.uet_glass_box import UETMetricLogger
+from docs.scripts.core.runners.uet_glass_box import UETMetricLogger
 
 
 # Standardized UET Root Path
@@ -78,7 +78,7 @@ class TestMatrixTurbulence(unittest.TestCase):
 
         # Glass Box Logging Setup
         try:
-            from docs.core.uet_glass_box import UETMetricLogger
+            from docs.scripts.core.runners.uet_glass_box import UETMetricLogger
         except ImportError:
             # Try to force find it via core dir
             sys.path.append(str(root_path / "docs" / "core"))
@@ -86,7 +86,7 @@ class TestMatrixTurbulence(unittest.TestCase):
 
         # Updated Path Management
         try:
-            from docs.core.uet_glass_box import UETPathManager
+            from docs.scripts.core.runners.uet_glass_box import UETPathManager
 
             output_dir = UETPathManager.get_result_dir(
                 topic_id="0.10_Fluid_Dynamics_Chaos",

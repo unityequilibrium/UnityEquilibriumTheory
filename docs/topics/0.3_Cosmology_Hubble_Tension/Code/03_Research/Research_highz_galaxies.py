@@ -109,7 +109,7 @@ def simulate_highz_prediction(z_target=5.0):
 
     # Updated to use UETPathManager for output
     try:
-        from docs.core.uet_glass_box import UETPathManager
+        from docs.scripts.core.runners.uet_glass_box import UETPathManager
 
         output_dir = UETPathManager.get_result_dir(
             topic_id="0.3_Cosmology_Hubble_Tension",

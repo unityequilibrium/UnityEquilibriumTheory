@@ -1,0 +1,169 @@
+{
+  "schema_version": "core-curved-3p1-gh-tt-sbp-sat-pilot-v1",
+  "artifact": "curved_3p1_gh_tt_sbp_sat_boundary_pilot",
+  "diagnostic_id": "uet.core.curved_3p1.gh.tt_sbp_sat_boundary_pilot",
+  "generated_at": "2026-09-25",
+  "status": "PASS_GH_LINEAR_TT_SBP_SAT_BOUNDARY_PILOT",
+  "claim_promotion": false,
+  "major_result": {
+    "major_result_id": "CORE_CURVED_3P1_GH_LINEAR_TT_SBP_SAT_BOUNDARY_PILOT",
+    "topic": "core",
+    "closure_level": "CLOSED_FOR_LANE",
+    "what_is_closed": [
+      "two linearized-GR transverse-traceless polarizations evolve on a finite non-periodic interval",
+      "Legendre-Gauss-Lobatto diagonal-norm SBP identity and polynomial derivative exactness pass",
+      "a constraint-compatible SAT penalty gives the exact semidiscrete energy rate minus the squared endpoint momenta",
+      "the TT reduction constraint is preserved and a right-going packet exits without a large reflected-energy remainder",
+      "a left-going analytic packet is independently absorbed at the opposite face"
+    ],
+    "equation_or_mapping": {
+      "tt_wave": "partial_t^2 h_A - partial_x^2 h_A = 0, A in {+,x}",
+      "first_order_state": "Pi_A=-partial_t h_A; G_A=partial_x h_A",
+      "incoming_left": "w_in,L=Pi+G",
+      "incoming_right": "w_in,R=Pi-G",
+      "sat": "Pi_dot=-D G-H^-1 e_L*(Pi+G)_L-H^-1 e_R*(Pi-G)_R; G_dot=-D Pi; h_dot=-Pi",
+      "semi_discrete_energy": "E=1/2 sum_A (Pi_A^T H Pi_A + G_A^T H G_A)",
+      "energy_rate": "dE/dt=-sum_A(Pi_A,left^2+Pi_A,right^2)<=0",
+      "reduction_constraint": "D h_A-G_A=0 is invariant under the semidiscrete evolution"
+    },
+    "units": {
+      "unit_lane": "geometric c=1, dimensionless metric perturbation",
+      "h_A": "dimensionless",
+      "Pi_A_and_G_A": "L^-1",
+      "energy": "L^-1 per unit transverse area",
+      "UET_symbols_used": []
+    },
+    "derivation_class": "standard linearized-GR TT wave equation plus directly verified SBP-SAT semidiscrete energy identity",
+    "observable": "boundary flux, semidiscrete energy, reduction-constraint residual, and pulse remainders at both faces",
+    "data_role": "manufactured analytic/synthetic numerical control; no source data, fitting, or holdout",
+    "evidence_artifacts": [],
+    "verification_status": "PASS_GH_LINEAR_TT_SBP_SAT_BOUNDARY_PILOT",
+    "open_blockers": [
+      "the 4+2+4 constraint/physical/gauge decomposition is not imposed on the full ten-component GH system",
+      "positive-normal-shift incoming u2_A constraint conditions are not evolved",
+      "variable-coefficient nonlinear GH, corners, matter boundary conditions, and full subsidiary-constraint propagation remain untested",
+      "this pilot does not implement the full differential Rinne CPBC and does not modify the periodic GH solver"
+    ],
+    "dependency_unlocked": "none; this validates one standard-GR physical TT boundary sector only",
+    "claim_boundary": "bounded linearized-GR TT-sector numerical control only; not full GH CPBC, nonlinear IBVP well-posedness, Einstein-equation derivation by UET, Gravity compatibility, or global UET closure"
+  },
+  "scope": {
+    "equation_class": "standard linearized-GR physical TT sector; not a new UET equation",
+    "state_variables": [
+      "h_plus",
+      "h_cross",
+      "Pi_plus",
+      "Pi_cross",
+      "G_plus",
+      "G_cross"
+    ],
+    "excluded_variables": [
+      "UET C",
+      "UET Phi",
+      "UET Pi",
+      "R_gen",
+      "R_obs"
+    ],
+    "domain": "finite one-dimensional slab [-1,1] with no periodic wraparound",
+    "method": "Legendre-Gauss-Lobatto collocation with diagonal-norm SBP and weak SAT boundary penalties",
+    "boundary_data": "homogeneous no-incoming TT characteristic data at both faces",
+    "filtering": false,
+    "clipping": false,
+    "parameter_fitting": false,
+    "full_rinne_cpbc_implemented": false,
+    "periodic_gh_solver_modified": false
+  },
+  "checks": {
+    "lgl_diagonal_norm_satisfies_sbp_identity": true,
+    "lgl_derivative_is_polynomial_exact_to_degree": true,
+    "semi_discrete_energy_rate_matches_boundary_flux": true,
+    "initial_tt_reduction_constraint_is_closed": true,
+    "tt_reduction_constraint_is_preserved_by_time_evolution": true,
+    "initial_packet_has_no_material_incoming_boundary_tail": true,
+    "rk4_temporal_refinement_is_fourth_order": true,
+    "right_going_packet_leaves_through_right_face": true,
+    "left_going_packet_leaves_through_left_face": true,
+    "linear_semidiscrete_operator_has_no_positive_real_eigenvalue": true,
+    "selected_timestep_is_inside_rk4_eigenvalue_stability_region": true,
+    "all_declared_local_sources_are_present": true
+  },
+  "metrics": {
+    "sbp_order_grid": [
+      4,
+      8,
+      12,
+      72
+    ],
+    "maximum_sbp_identity_residual": 1.4242673476093604e-12,
+    "maximum_polynomial_derivative_residual": 2.1373125491663814e-11,
+    "semi_discrete_energy_rate": -2.4567718287859988,
+    "maximum_energy_identity_residual": 5.375699885235008e-12,
+    "initial_reduction_constraint_linf": 0.0,
+    "final_reduction_constraint_linf": 3.001190717095405e-12,
+    "left_final_reduction_constraint_linf": 4.250329110583228e-12,
+    "initial_incoming_left_characteristic_linf": 4.960997009850061e-12,
+    "initial_incoming_right_characteristic_linf": 0.0,
+    "temporal_refinement_difference_ratio": 15.712341780764453,
+    "pulse_grid_order": 72,
+    "minimum_grid_spacing": 0.0013963616252676836,
+    "timestep_cap": 0.0006981808126338418,
+    "pulse_final_time": 2.4,
+    "pulse_steps": 3438,
+    "pulse_dt": 0.0006980802792321116,
+    "pulse_initial_energy": 8.28991436517269,
+    "pulse_final_energy": 7.882910227516862e-30,
+    "pulse_final_to_initial_energy_ratio": 9.509036981894866e-31,
+    "left_pulse_steps": 3438,
+    "left_pulse_dt": 0.0006980802792321116,
+    "left_pulse_initial_energy": 8.28991436517269,
+    "left_pulse_final_energy": 6.719786594004149e-30,
+    "left_pulse_final_to_initial_energy_ratio": 8.105978298443095e-31,
+    "maximum_semidiscrete_eigenvalue_real_part": 1.8899460732317327e-14,
+    "maximum_rk4_amplification_at_selected_dt": 1.0
+  },
+  "numerical_policy": {
+    "integrator": "classical RK4",
+    "timestep": "min(0.5 times minimum LGL spacing, 0.25 times the computed RK4 linear stability limit)",
+    "energy_identity_tolerance": 2e-11,
+    "constraint_tolerance": 2e-09,
+    "absorption_ratio_threshold": 2e-06,
+    "temporal_refinement_ratio_range": [
+      10.0,
+      22.0
+    ],
+    "random_seed_for_energy_identity_control": 20260925
+  },
+  "literature_route_screen": [
+    {
+      "source_id": "rinne_2006_first_order_gh_radiation_controlling_cpbc",
+      "url": "https://arxiv.org/html/gr-qc/0606053v2",
+      "locators": [
+        "Eqs. (9)-(11)",
+        "Secs. 2.2-2.4",
+        "Sec. 5.1"
+      ],
+      "finding": "same first-order GH characteristic variables; differential constraint and Weyl boundary conditions; spectral implementation prescribes time derivatives of incoming characteristic fields",
+      "route_role": "primary reference for the next full frozen-background GH CPBC implementation; this TT-only pilot does not reproduce that full system"
+    },
+    {
+      "source_id": "dailey_schnetter_afshordi_2025_covariant_sbp_sat_gh",
+      "url": "https://arxiv.org/html/2409.17970v2",
+      "locators": [
+        "Secs. II-III",
+        "Sec. V.4"
+      ],
+      "finding": "their SBP-SAT GH implementation requires critical changes to the evolved equations and chooses boundary data that can reflect constraint violations",
+      "route_role": "useful discrete-method comparison, but not a drop-in realization of transparent Rinne differential CPBC for the current branch"
+    }
+  ],
+  "source_hashes": {
+    "docs/scripts/audit/audit_curved_3p1_gh_tt_sbp_sat_boundary.py": "01e519a576bfebcb41222af81bfd6ed7a5f7bf0538cfc4c3e2cb51b5653d29df",
+    "docs/core/05_tests/regression/root/test_uet_curved_3p1_gh_tt_sbp_sat_boundary.py": "4f4a3791c533eb8c25e05ea9ece4e15b9ea73c1cf5a7a0c309935dd20e0f8ffa",
+    "docs/core/02_equations/covariant/uet_curved_3p1_gh_evolution.py": "c18f231375609cebb76d342ba7ad94471eb280089458ace85882ed2450f3581e",
+    "docs/core/02_equations/covariant/uet_curved_3p1_gh_linear_boundary.py": "39bd0731a3ecdbb5c5185453e0908d198cba895ba5f29dafc6bb8f9c6a3b169c",
+    "docs/core/02_equations/covariant/uet_curved_3p1_generalized_harmonic.py": "4f0c8ed0e5afe52e43cedefeb9c061e10dbd440fd20e8bc57a8aacfa43e76f92"
+  },
+  "controlling_blocker": "full_first_order_gh_differential_cpbc_not_yet_applied_to_nonperiodic_evolution",
+  "next_action": "extend the frozen-background slab pilot from the two physical TT modes to the full ten-component incoming u1-minus sector with separate constraint, Weyl, and gauge RHS conditions; then add positive-shift u2_A conditions and discrete subsidiary-constraint checks",
+  "claim_boundary": "No full CPBC, nonlinear GH evolution, physical data validation, Gravity unlock, or UET theory promotion is claimed."
+}

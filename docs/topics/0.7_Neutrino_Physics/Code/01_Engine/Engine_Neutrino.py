@@ -52,7 +52,7 @@ try:
         V_EW,
         ALPHA_EM_MZ
     )
-    from docs.core.uet_base_solver import UETBaseSolver
+    from docs.scripts.core.runners.uet_base_solver import UETBaseSolver
 except ImportError as e:
     print(f"CRITICAL: Could not import core dependencies ({e})")
     sys.exit(1)

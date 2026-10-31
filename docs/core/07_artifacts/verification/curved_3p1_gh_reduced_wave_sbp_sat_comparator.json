@@ -1,0 +1,175 @@
+{
+  "schema_version": "core-curved-3p1-gh-reduced-tt-sbp-sat-v1",
+  "artifact": "curved_3p1_gh_reduced_wave_sbp_sat_comparator",
+  "diagnostic_id": "uet.core.curved_3p1.gh.reduced_tt_sbp_sat_energy_comparator",
+  "generated_at": "2026-09-25",
+  "status": "PASS_REDUCED_TT_SBP_SAT_COMPARATOR",
+  "claim_promotion": false,
+  "major_result": {
+    "major_result_id": "CORE_CURVED_3P1_GH_REDUCED_TT_SBP_SAT_COMPARATOR",
+    "topic": "core",
+    "closure_level": "CLOSED_FOR_LANE",
+    "what_is_closed": [
+      "the two standard linearized-GR TT polarizations admit a second-order state (h,Pi) with G=D(h) imposed algebraically",
+      "on the LGL diagonal-norm SBP grid, the SAT scheme has the exact energy rate dE/dt=-sum_A(Pi_A,left^2+Pi_A,right^2)<=0",
+      "the second-order RHS is algebraically identical to the existing first-order TT SBP-SAT RHS on G=D(h)",
+      "right- and left-going Gaussian packets exit with a roundoff-scale energy remainder and RK4 temporal order is verified",
+      "the current strong differentiated-target replacement has positive energy-growth directions under both tested LGL-SBP and Chebyshev/Clenshaw-Curtis norms"
+    ],
+    "what_remains_open": [
+      "this is a physical TT-sector outgoing-wave control, not the full ten-component constraint/physical/gauge GH CPBC system",
+      "the constraint and gauge projector sectors, positive-shift u2_A fields, tangential derivatives, corners, variable coefficients, and nonlinear terms remain open",
+      "a SAT operator derived for all Rinne constraint/physical/gauge targets is still required before closing full-u1 GH evolution"
+    ],
+    "equation_or_mapping": {
+      "state": "(h_A,Pi_A), A in {+,x}; G_A=D(h_A) is reconstructed algebraically",
+      "evolution": "h_dot=-Pi; Pi_dot=-D G-H^-1 e_L*(Pi+G)_L-H^-1 e_R*(Pi-G)_R",
+      "incoming_left": "a_L=Pi_L+G_L",
+      "incoming_right": "a_R=Pi_R-G_R",
+      "energy": "E=1/2 sum_A(Pi_A^T H Pi_A+G_A^T H G_A)",
+      "energy_rate": "dE/dt=-sum_A(Pi_A,left^2+Pi_A,right^2)<=0",
+      "relation_to_Rinne_physical_target": "for q_A=a_A-gamma2*h_A and homogeneous physical data, q_dot=gamma2*Pi implies a_dot=0; the SAT weakly penalizes a_A, and does not implement the full Rinne CPBC"
+    },
+    "units": {
+      "unit_lane": "geometric c=1 with slab length scale L0=1",
+      "h": "dimensionless",
+      "Pi_and_G": "L0^-1",
+      "UET_symbols_used": []
+    },
+    "derivation_class": "standard linearized-GR TT wave equation plus an SBP-SAT semidiscrete energy identity",
+    "observable": "discrete energy rate, incoming characteristic, packet remainder, reduction identity, and temporal convergence",
+    "data_role": "analytic and synthetic numerical control; no external data, fitting, or holdout",
+    "evidence_artifacts": [
+      "docs/core/07_artifacts/verification/curved_3p1_gh_reduced_wave_sbp_sat_comparator.json"
+    ],
+    "verification_status": "PASS_REDUCED_TT_SBP_SAT_COMPARATOR",
+    "open_blockers": [
+      "full first-order GH CPBC energy estimate across constraint, physical, and gauge sectors",
+      "positive-shift u2_A, tangential derivatives, corners, variable coefficients, and nonlinear boundary evolution"
+    ],
+    "dependency_unlocked": "none; the Core curved-3+1 parent remains PARTIAL and Gravity remains blocked",
+    "claim_boundary": "a second-order reduced TT numerical lane only; not full GH CPBC, continuum well-posedness, Gravity compatibility, or UET closure"
+  },
+  "checks": {
+    "lgl_diagonal_norm_satisfies_sbp_identity": true,
+    "sat_energy_rate_matches_boundary_flux_plus_sbp_defect": true,
+    "sat_energy_is_nonincreasing_for_all_states": true,
+    "second_order_rhs_matches_first_order_sat_on_reduction_subspace": true,
+    "current_strong_differentiated_target_is_not_energy_contractive_on_both_grids": true,
+    "rk4_spectrum_has_no_resolved_growing_mode": true,
+    "selected_timestep_is_rk4_stable": true,
+    "right_going_packet_is_absorbed": true,
+    "left_going_packet_is_absorbed": true,
+    "rk4_temporal_refinement_is_fourth_order": true,
+    "algebraic_reduction_has_no_independent_gradient_state": true,
+    "all_declared_local_sources_are_hashed": true
+  },
+  "metrics": {
+    "order": 72,
+    "node_count": 73,
+    "sbp_identity_residual": 1.4242673476093604e-12,
+    "random_state_energy_rate": -2.456771827066234,
+    "random_state_expected_energy_rate": -2.4567718287913745,
+    "energy_identity_residual": 1.7251404749174526e-09,
+    "sbp_defect_energy_contribution": 1.7244925768974956e-09,
+    "energy_identity_decomposition_residual": 6.478980199570318e-13,
+    "maximum_sat_energy_growth_rate_per_unit_energy": 3.0165780838290774e-10,
+    "pointwise_strong_target_energy_growth_screens": [
+      {
+        "degree": 8,
+        "grid": "Legendre-Gauss-Lobatto diagonal-norm SBP",
+        "maximum_energy_growth_rate": 5.849668870541506
+      },
+      {
+        "degree": 8,
+        "grid": "Chebyshev-Lobatto with Clenshaw-Curtis energy norm",
+        "maximum_energy_growth_rate": 11.030506611081126
+      },
+      {
+        "degree": 12,
+        "grid": "Legendre-Gauss-Lobatto diagonal-norm SBP",
+        "maximum_energy_growth_rate": 12.499030993194346
+      },
+      {
+        "degree": 12,
+        "grid": "Chebyshev-Lobatto with Clenshaw-Curtis energy norm",
+        "maximum_energy_growth_rate": 24.474722162817876
+      },
+      {
+        "degree": 18,
+        "grid": "Legendre-Gauss-Lobatto diagonal-norm SBP",
+        "maximum_energy_growth_rate": 27.21751918146893
+      },
+      {
+        "degree": 18,
+        "grid": "Chebyshev-Lobatto with Clenshaw-Curtis energy norm",
+        "maximum_energy_growth_rate": 54.55453708667783
+      },
+      {
+        "degree": 20,
+        "grid": "Legendre-Gauss-Lobatto diagonal-norm SBP",
+        "maximum_energy_growth_rate": 33.38942186943356
+      },
+      {
+        "degree": 20,
+        "grid": "Chebyshev-Lobatto with Clenshaw-Curtis energy norm",
+        "maximum_energy_growth_rate": 67.23374338662138
+      }
+    ],
+    "second_order_first_order_rhs_equivalence_residual": 0.0,
+    "maximum_semidiscrete_eigenvalue_real_part": 3.1509261179943432e-12,
+    "stable_rk4_timestep_estimate": 0.013873214760022692,
+    "selected_timestep_cap": 0.0006981808126338418,
+    "selected_timestep_rk4_amplification": 1.0000000000000022,
+    "right_packet_final_to_initial_energy_ratio": 1.2226472609053223e-29,
+    "right_packet_steps": 3438,
+    "right_packet_dt": 0.0006980802792321116,
+    "left_packet_final_to_initial_energy_ratio": 1.568458502103542e-29,
+    "left_packet_steps": 3438,
+    "left_packet_dt": 0.0006980802792321116,
+    "temporal_refinement_difference_ratio": 13.961492552960568,
+    "temporal_refinement_differences": [
+      1.0696513900587387e-11,
+      7.66144010750424e-13
+    ],
+    "independent_spatial_gradient_state": false
+  },
+  "scope": {
+    "physics_lane": "standard linearized-GR transverse-traceless physical sector",
+    "domain": "finite one-dimensional flat slab [-1,1]",
+    "grid": "Legendre-Gauss-Lobatto diagonal-norm SBP",
+    "full_first_order_gh_cpbc": false,
+    "constraint_projector_evolved": false,
+    "gauge_projector_evolved": false,
+    "positive_shift_u2_A": false,
+    "tangential_derivatives": false,
+    "corners": false,
+    "nonlinear_evolution": false,
+    "parameter_fitting": false,
+    "filtering": false,
+    "clipping": false
+  },
+  "numerical_policy": {
+    "order": 72,
+    "final_time": 2.4,
+    "energy_identity_tolerance": 2e-11,
+    "sbp_identity_tolerance": 2e-12,
+    "packet_energy_ratio_threshold": 2e-06,
+    "temporal_refinement_ratio_range": [
+      10.0,
+      22.0
+    ],
+    "pointwise_energy_growth_screen_floor": 1e-06,
+    "random_seed": 20260925
+  },
+  "source_hashes": {
+    "docs/scripts/audit/audit_curved_3p1_gh_reduced_wave_sbp_sat.py": "c43b476adb226b8c9dec5e6d11b24310e9d4843871fd6e6f81d0daea754ca2f6",
+    "docs/core/05_tests/regression/root/test_uet_curved_3p1_gh_reduced_wave_sbp_sat.py": "28ba3fa95f492741f990cdbb8e98884d0e743ce5708e9b88adb955b91d84167c",
+    "docs/scripts/audit/audit_curved_3p1_gh_tt_sbp_sat_boundary.py": "01e519a576bfebcb41222af81bfd6ed7a5f7bf0538cfc4c3e2cb51b5653d29df",
+    "docs/scripts/audit/audit_curved_3p1_gh_full_u1_cpbc_slab.py": "2fa112eaf6a0f34ab7cccf2027e59f2294b34c22048384c0c4e601754dce4a9b",
+    "docs/core/02_equations/covariant/uet_curved_3p1_gh_full_u1_slab.py": "31618a664a0e339ef4746e2ef3992a44143d3fa0169e4f9909845cfc1d0d4146"
+  },
+  "controlling_blocker": "full_first_order_gh_cpbc_not_energy_closed_across_constraint_physical_and_gauge_sectors",
+  "next_action": "derive a projector-aware SBP-SAT penalty for all ten incoming u1-minus modes and prove its coupled constraint, Weyl, and gauge energy estimate before testing positive-shift u2_A or corners",
+  "claim_boundary": "This closes only a standard-GR second-order reduced TT control. It does not close the full first-order GH boundary evolution, curved 3+1 parent, Gravity, or UET."
+}

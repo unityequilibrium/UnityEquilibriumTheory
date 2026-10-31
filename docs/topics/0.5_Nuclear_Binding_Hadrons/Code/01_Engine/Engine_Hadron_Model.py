@@ -55,7 +55,7 @@ try:
         UETParameters,
         INTEGRITY_KILL_SWITCH,
     )
-    from docs.core.uet_base_solver import UETBaseSolver
+    from docs.scripts.core.runners.uet_base_solver import UETBaseSolver
 
     UET_PARAMS = UETParameters(scale="nuclear")
     KAPPA = UET_PARAMS.kappa

@@ -1,0 +1,704 @@
+{
+  "schema_version": "core-curved-3p1-gh-rinne-negative-shift-kreiss-symbol-v3",
+  "artifact": "curved_3p1_gh_rinne_negative_shift_kreiss_symbol",
+  "generated_at": "2026-09-25T09:29:37+00:00",
+  "major_result_id": "CORE_CURVED_3P1_GH_RINNE_NEGATIVE_SHIFT_SYMBOL",
+  "major_result": {
+    "major_result_id": "CORE_CURVED_3P1_GH_RINNE_NEGATIVE_SHIFT_SYMBOL",
+    "topic": "core_curved_3p1",
+    "closure_level": "CLOSED_FOR_LANE",
+    "subresult_closure": {
+      "preregistered_non_degenerate_grid": "CLOSED_FOR_LANE",
+      "exact_degenerate_source_mode": "CLOSED_FOR_LANE_WITH_ODE_CONSISTENT_JORDAN_CORRECTION"
+    },
+    "what_is_closed": [
+      "For beta={-0.1,-0.5,-0.9}, the preregistered 626-point nondegenerate Fourier-Laplace grid reproduces the 30-dimensional decaying subspace, all incoming boundary rows, principal modes, Eqs. (113)-(114), and Eq. (123) magnitude up to one global determinant-orientation sign.",
+      "At zeta=-beta, direct substitution shows the source-printed Eq. (74) normalization reproduces the printed Eq. (124) determinant but fails the principal ODE. Replacing the generalized xi*B/K2 term by xi*B/K1 gives a valid Jordan chain. Taking the confluent limit of Eq. (123) and applying the determinant of the explicit basis rescaling gives |det C|=4/(|beta|^26*(1+beta^2)^5); this matches the registered 30x30 determinant at the preregistered shifts and four off-grid beta checks. The exact sampled lane is therefore closed under this explicit correction, while the discrepancy with the source-printed Eq. (124) remains visible."
+    ],
+    "equation_or_mapping": {
+      "rinne_shift_to_core_normal_shift": "beta_Rinne=N^x in x>0; with outward normal n=-x, beta_n=-beta_Rinne",
+      "decaying_roots": "lambda1=gamma^2*(-beta*zeta-sqrt(zeta^2+1-beta^2)); lambda2=zeta/beta; gamma^2=(1-beta^2)^-1",
+      "generic_mode_families": "v1=K1^-1*(zeta-beta*lambda1,-lambda1,-i,0); v2=K2^-1*(0,-i*beta,zeta,0); v3=(0,0,0,1), with lambda2 for v2,v3",
+      "additional_source_rows": "c4_xy=partial_xi(Phi_y)-i*Phi_x; c4_xz=partial_xi(Phi_z); local tangents +y,-z map to source rows with signs (-,+)",
+      "source_eq_74_as_printed": "K1=norm(A), K2=norm(B); e^-xi*[sigma1*A/K1+(sigma1*xi+sigma2)*B/K2+sigma3*C]; reproduces printed Eq. (124) determinant but fails the principal ODE under the declared K norms.",
+      "ode_consistent_jordan_repair": "K1=norm(A)=sqrt(1+beta^2), K2=norm(B)=sqrt(2); e^-xi*[sigma1*(A+xi*B)/K1+sigma2*B/K2+sigma3*C]. Its confluent determinant is |det C|=4/(|beta|^26*(1+beta^2)^5), derived from Eq. (123) with the column transform (i/(lambda2-lambda1)) per tensor component.",
+      "printed_eq_124_to_corrected_determinant_ratio": "With source-declared K1=sqrt(1+beta^2), K2=sqrt(2), |det C_Eq124|/|det C_corrected|=(K1+K2)^10/(32*K2^20); sampled ratios are about 0.20954, 0.33084, 0.78158 for beta=-0.1,-0.5,-0.9.",
+      "generic_confluent_limit_basis": "KJ=sqrt(2); e^-xi*[sigma1*(A+B/2+xi*B)/KJ+sigma2*B/KJ+sigma3*C]; checked against the normalized generic-mode limit, not identified with source Eq. (124)."
+    },
+    "units": "Frozen local orthonormal geometric units; omega normalized to 1 and zeta=s/omega dimensionless.",
+    "derivation_class": "source-matched Fourier-Laplace mode, registered boundary-row reconstruction, finite complex-frequency sampling, and analytic confluent determinant limit",
+    "observable": "30x30 boundary-data symbol rank, equilibrated singular ratio, determinant, curl-row residual, and principal-mode residual",
+    "data_role": "primary-literature formula cross-check; no empirical data, fitting, or calibration",
+    "verification_status": "PASS_SOURCE_MATCHED_NEGATIVE_SHIFT_SAMPLE_WITH_EXACT_DEGENERACY_CORRECTION",
+    "open_blockers": [
+      "The arXiv/published source text's Eq. (74) normalization and Eq. (124) determinant are not mutually reproduced by an ODE-consistent exact Jordan chain. The corrected determinant closes the registered lane, but whether the discrepancy is a typographical error or reflects a different source convention requires an authoritative correction or independent source confirmation.",
+      "The finite frequency grid is not a uniform Kreiss bound over every beta and zeta; nonlinear/variable-coefficient GH, corners, matter boundaries, dimensional observables, and the Core curved-parent gate remain open."
+    ],
+    "dependency_unlocked": "none; Core curved 3+1 remains PARTIAL and Gravity remains blocked",
+    "claim_boundary": "Frozen-coefficient standard-GR boundary-symbol result for the preregistered finite grid at three negative shifts, including the exact degenerate point under an explicitly ODE-consistent Jordan correction with an analytically derived determinant. The correction does not silently rewrite Rinne's printed Eq. (74)/(124), and no independent uniform Kreiss theorem, nonlinear/variable-coefficient well-posedness result, UET physical result, curved-parent closure, or Gravity unlock is claimed."
+  },
+  "closure_level": "CLOSED_FOR_LANE",
+  "MAJOR_RESULT_CLOSURE": "CLOSED_FOR_LANE",
+  "WHAT_IS_ACTUALLY_CLOSED": [
+    "For beta={-0.1,-0.5,-0.9}, the preregistered 626-point nondegenerate Fourier-Laplace grid reproduces the 30-dimensional decaying subspace, all incoming boundary rows, principal modes, Eqs. (113)-(114), and Eq. (123) magnitude up to one global determinant-orientation sign.",
+    "At zeta=-beta, direct substitution shows the source-printed Eq. (74) normalization reproduces the printed Eq. (124) determinant but fails the principal ODE. Replacing the generalized xi*B/K2 term by xi*B/K1 gives a valid Jordan chain. Taking the confluent limit of Eq. (123) and applying the determinant of the explicit basis rescaling gives |det C|=4/(|beta|^26*(1+beta^2)^5); this matches the registered 30x30 determinant at the preregistered shifts and four off-grid beta checks. The exact sampled lane is therefore closed under this explicit correction, while the discrepancy with the source-printed Eq. (124) remains visible."
+  ],
+  "WHAT_REMAINS_OPEN": [
+    "The arXiv/published source text's Eq. (74) normalization and Eq. (124) determinant are not mutually reproduced by an ODE-consistent exact Jordan chain. The corrected determinant closes the registered lane, but whether the discrepancy is a typographical error or reflects a different source convention requires an authoritative correction or independent source confirmation.",
+    "The finite frequency grid is not a uniform Kreiss bound over every beta and zeta; nonlinear/variable-coefficient GH, corners, matter boundaries, dimensional observables, and the Core curved-parent gate remain open."
+  ],
+  "DEPENDENCY_UNLOCKED": "none; Core curved 3+1 remains PARTIAL and Gravity remains blocked",
+  "STATUS": "PASS_SOURCE_MATCHED_NEGATIVE_SHIFT_SAMPLE_WITH_EXACT_DEGENERACY_CORRECTION",
+  "WHAT_CHANGED": "Added an isolated beta<0 GH boundary-symbol audit. The nondegenerate grid passes, and the exact-degenerate Jordan chain now has an ODE-consistent normalization and determinant derived by confluence from Eq. (123). The distinct source-printed Eq. (74)/(124) discrepancy is retained explicitly. Frozen zero- and positive-shift artifacts, production equations, parent gate, and dependency gates were not modified.",
+  "EQUATION_OR_MAPPING": {
+    "rinne_shift_to_core_normal_shift": "beta_Rinne=N^x in x>0; with outward normal n=-x, beta_n=-beta_Rinne",
+    "decaying_roots": "lambda1=gamma^2*(-beta*zeta-sqrt(zeta^2+1-beta^2)); lambda2=zeta/beta; gamma^2=(1-beta^2)^-1",
+    "generic_mode_families": "v1=K1^-1*(zeta-beta*lambda1,-lambda1,-i,0); v2=K2^-1*(0,-i*beta,zeta,0); v3=(0,0,0,1), with lambda2 for v2,v3",
+    "additional_source_rows": "c4_xy=partial_xi(Phi_y)-i*Phi_x; c4_xz=partial_xi(Phi_z); local tangents +y,-z map to source rows with signs (-,+)",
+    "source_eq_74_as_printed": "K1=norm(A), K2=norm(B); e^-xi*[sigma1*A/K1+(sigma1*xi+sigma2)*B/K2+sigma3*C]; reproduces printed Eq. (124) determinant but fails the principal ODE under the declared K norms.",
+    "ode_consistent_jordan_repair": "K1=norm(A)=sqrt(1+beta^2), K2=norm(B)=sqrt(2); e^-xi*[sigma1*(A+xi*B)/K1+sigma2*B/K2+sigma3*C]. Its confluent determinant is |det C|=4/(|beta|^26*(1+beta^2)^5), derived from Eq. (123) with the column transform (i/(lambda2-lambda1)) per tensor component.",
+    "printed_eq_124_to_corrected_determinant_ratio": "With source-declared K1=sqrt(1+beta^2), K2=sqrt(2), |det C_Eq124|/|det C_corrected|=(K1+K2)^10/(32*K2^20); sampled ratios are about 0.20954, 0.33084, 0.78158 for beta=-0.1,-0.5,-0.9.",
+    "generic_confluent_limit_basis": "KJ=sqrt(2); e^-xi*[sigma1*(A+B/2+xi*B)/KJ+sigma2*B/KJ+sigma3*C]; checked against the normalized generic-mode limit, not identified with source Eq. (124)."
+  },
+  "VERIFICATION": {
+    "generic_checks": {
+      "three_preregistered_negative_sub_luminal_shifts": true,
+      "mapped_local_shift_is_minus_rinne_beta": true,
+      "u1_minus_and_both_u2_families_are_incoming": true,
+      "generic_grid_count_matches_preregistered_grid": true,
+      "generic_decaying_subspace_dimension_is_30": true,
+      "generic_boundary_matrices_have_rank_30": true,
+      "generic_principal_modes_pass": true,
+      "all_20_u2_rows_match_source_equations_113_114": true,
+      "generic_eq_123_determinant_log_passes": true,
+      "generic_eq_123_phase_is_one_global_orientation_sign": true,
+      "fixed_source_basis_map_identities_pass": true
+    },
+    "degenerate_findings": {
+      "printed_eq_74_basis_reproduces_printed_eq_124_determinant": true,
+      "printed_eq_74_basis_satisfies_principal_ode": false,
+      "ode_consistent_source_norm_jordan_repair_passes_principal_ode": true,
+      "ode_consistent_source_norm_jordan_repair_has_rank_30_and_finite_determinant": true,
+      "corrected_jordan_determinant_matches_analytic_confluent_limit": true,
+      "off_grid_corrected_jordan_cases_have_rank_30_and_pass_ode": true,
+      "generic_confluent_limit_basis_passes_principal_ode": true,
+      "near_degenerate_confluence_remains_full_rank": true,
+      "near_degenerate_determinant_converges_to_exact_generic_limit_basis": true
+    },
+    "subresult_closure": {
+      "preregistered_non_degenerate_grid": "CLOSED_FOR_LANE",
+      "exact_degenerate_source_mode": "CLOSED_FOR_LANE_WITH_ODE_CONSISTENT_JORDAN_CORRECTION"
+    },
+    "generic_grid_passed": true,
+    "source_exact_degeneracy_issue_confirmed": true,
+    "off_grid_corrected_jordan_cases": [
+      {
+        "beta": -0.01,
+        "rank": 30,
+        "principal_ode_residual": 0.0,
+        "determinant_log_offset": -4.263256414560601e-14
+      },
+      {
+        "beta": -0.25,
+        "rank": 30,
+        "principal_ode_residual": 0.0,
+        "determinant_log_offset": 0.0
+      },
+      {
+        "beta": -0.75,
+        "rank": 30,
+        "principal_ode_residual": 5.551115123125783e-17,
+        "determinant_log_offset": -3.552713678800501e-15
+      },
+      {
+        "beta": -0.99,
+        "rank": 30,
+        "principal_ode_residual": 5.551115123125783e-17,
+        "determinant_log_offset": -4.440892098500626e-16
+      }
+    ],
+    "generic_case_count": 626,
+    "degenerate_beta_count": 3,
+    "exact_degenerate_basis_cases": 12,
+    "near_degenerate_confluence_cases": 12,
+    "total_symbol_cases_including_basis_and_confluence_checks": 654,
+    "maximum_generic_principal_mode_residual": 5.357316577648759e-10,
+    "maximum_u2_source_row_map_residual": 0.0,
+    "maximum_generic_eq_123_log_offset": 1.3358203432289883e-12,
+    "maximum_generic_eq_123_phase_offset_radians": 3.141592653589793,
+    "generic_eq_123_global_orientation_sign": "-1",
+    "maximum_generic_eq_123_phase_deviation_from_global_sign": 2.422574669173285e-14,
+    "maximum_literal_norm_degenerate_principal_residual": 0.2879304090234418,
+    "maximum_common_jordan_degenerate_principal_residual": 5.551115123125783e-17,
+    "maximum_ode_consistent_source_norm_jordan_residual": 0.0,
+    "maximum_corrected_jordan_determinant_log_offset": 4.263256414560601e-14,
+    "maximum_confluent_limit_degenerate_principal_residual": 1.1102230246251565e-16,
+    "maximum_literal_norm_eq_124_log_offset": 3.552713678800501e-14,
+    "maximum_confluent_basis_reference_log_offset": 4.263256414560601e-14,
+    "maximum_near_confluent_reference_log_offset_at_smallest_epsilon": 1.4126449627838156e-06,
+    "maximum_near_to_exact_confluent_determinant_log_difference": 1.4126449201512514e-06,
+    "confluent_epsilon_values": [
+      0.01,
+      0.0001,
+      1e-06,
+      1e-08
+    ],
+    "per_beta": [
+      {
+        "rinne_beta": -0.1,
+        "local_normal_shift": 0.1,
+        "incoming_modes": [
+          "u1_minus",
+          "u2_tangent_1",
+          "u2_tangent_2"
+        ],
+        "generic_case_count": 208,
+        "generic_minimum_boundary_rank": 30,
+        "generic_minimum_row_equilibrated_singular_ratio": 0.019257942716930647,
+        "generic_maximum_principal_mode_residual": 3.5707072156572607e-10,
+        "generic_maximum_eq_123_log_offset": 1.7053025658242404e-13,
+        "generic_maximum_eq_123_phase_offset_radians": 3.141592653589793,
+        "source_eq_124_to_corrected_jordan_determinant_ratio": 0.20954139069171496,
+        "degenerate_literal_euclidean_norm_basis": {
+          "maximum_principal_mode_residual": 0.2879304090234418,
+          "boundary_matrix_rank": 30,
+          "boundary_relative_smallest_singular_value": 0.03383343586643395,
+          "source_eq_124_log_offset": -3.552713678800501e-14,
+          "source_eq_124_phase_offset_radians": -0.0
+        },
+        "degenerate_ode_consistent_source_norm_basis": {
+          "maximum_principal_mode_residual": 0.0,
+          "boundary_matrix_rank": 30,
+          "boundary_relative_smallest_singular_value": 0.031991644226547176,
+          "basis_determinant_log_abs": 61.20375512469921,
+          "corrected_jordan_determinant_log_offset": -2.1316282072803006e-14
+        },
+        "degenerate_source_common_normalization_basis": {
+          "maximum_principal_mode_residual": 6.938893903907228e-18,
+          "boundary_matrix_rank": 30,
+          "boundary_relative_smallest_singular_value": 0.036072076607547125,
+          "confluent_reference_log_offset": null,
+          "source_eq_124_phase_offset_radians": -0.0
+        },
+        "degenerate_confluent_limit_basis": {
+          "maximum_principal_mode_residual": 6.938893903907228e-18,
+          "boundary_matrix_rank": 30,
+          "boundary_relative_smallest_singular_value": 0.03668055901934047,
+          "basis_determinant_log_abs": 57.78777087616531,
+          "confluent_reference_log_offset": -4.263256414560601e-14,
+          "source_eq_124_phase_offset_radians": -0.0
+        },
+        "near_degenerate_confluence_sequence": [
+          {
+            "beta": -0.1,
+            "epsilon_from_degenerate_zeta": 0.01,
+            "zeta": [
+              0.11,
+              0.0
+            ],
+            "eigenvalue_gap": [
+              -0.09995005118378364,
+              -0.0
+            ],
+            "raw_generic_rank": 30,
+            "raw_generic_row_equilibrated_singular_ratio": 0.031092579754620004,
+            "confluent_rank": 30,
+            "confluent_row_equilibrated_singular_ratio": 0.03820388177176812,
+            "maximum_principal_mode_residual": 3.3306690738754696e-16,
+            "maximum_u2_source_row_map_residual": 0.0,
+            "confluent_determinant_log_abs": 56.415897039274,
+            "confluent_reference_log_offset": -1.3718738368913534,
+            "eq_124_phase_offset_radians": 0.0
+          },
+          {
+            "beta": -0.1,
+            "epsilon_from_degenerate_zeta": 0.0001,
+            "zeta": [
+              0.10010000000000001,
+              0.0
+            ],
+            "eigenvalue_gap": [
+              -0.0009999950000501023,
+              -0.0
+            ],
+            "raw_generic_rank": 30,
+            "raw_generic_row_equilibrated_singular_ratio": 0.030049649669676163,
+            "confluent_rank": 30,
+            "confluent_row_equilibrated_singular_ratio": 0.03669570288002491,
+            "maximum_principal_mode_residual": 1.1102230246251565e-16,
+            "maximum_u2_source_row_map_residual": 0.0,
+            "confluent_determinant_log_abs": 57.773427563707216,
+            "confluent_reference_log_offset": -0.014343312458137802,
+            "eq_124_phase_offset_radians": 0.0
+          },
+          {
+            "beta": -0.1,
+            "epsilon_from_degenerate_zeta": 1e-06,
+            "zeta": [
+              0.100001,
+              0.0
+            ],
+            "eigenvalue_gap": [
+              -9.999999500021062e-06,
+              -0.0
+            ],
+            "raw_generic_rank": 30,
+            "raw_generic_row_equilibrated_singular_ratio": 0.03003920132614521,
+            "confluent_rank": 30,
+            "confluent_row_equilibrated_singular_ratio": 0.036680710448242004,
+            "maximum_principal_mode_residual": 1.1102230246251565e-16,
+            "maximum_u2_source_row_map_residual": 0.0,
+            "confluent_determinant_log_abs": 57.78762737683028,
+            "confluent_reference_log_offset": -0.000143499335074182,
+            "eq_124_phase_offset_radians": 0.0
+          },
+          {
+            "beta": -0.1,
+            "epsilon_from_degenerate_zeta": 1e-08,
+            "zeta": [
+              0.10000001,
+              0.0
+            ],
+            "eigenvalue_gap": [
+              -9.999999961429751e-08,
+              -0.0
+            ],
+            "raw_generic_rank": 30,
+            "raw_generic_row_equilibrated_singular_ratio": 0.030039096839855773,
+            "confluent_rank": 30,
+            "confluent_row_equilibrated_singular_ratio": 0.0366805605190229,
+            "maximum_principal_mode_residual": 2.220446049250313e-16,
+            "maximum_u2_source_row_map_residual": 0.0,
+            "confluent_determinant_log_abs": 57.78776946352039,
+            "confluent_reference_log_offset": -1.4126449627838156e-06,
+            "eq_124_phase_offset_radians": 0.0
+          }
+        ]
+      },
+      {
+        "rinne_beta": -0.5,
+        "local_normal_shift": 0.5,
+        "incoming_modes": [
+          "u1_minus",
+          "u2_tangent_1",
+          "u2_tangent_2"
+        ],
+        "generic_case_count": 209,
+        "generic_minimum_boundary_rank": 30,
+        "generic_minimum_row_equilibrated_singular_ratio": 0.0032380345563819916,
+        "generic_maximum_principal_mode_residual": 2.6605239009291097e-10,
+        "generic_maximum_eq_123_log_offset": 7.460698725481052e-14,
+        "generic_maximum_eq_123_phase_offset_radians": 3.141592653589793,
+        "source_eq_124_to_corrected_jordan_determinant_ratio": 0.3308351634347655,
+        "degenerate_literal_euclidean_norm_basis": {
+          "maximum_principal_mode_residual": 0.1873204098133684,
+          "boundary_matrix_rank": 30,
+          "boundary_relative_smallest_singular_value": 0.03394203525156177,
+          "source_eq_124_log_offset": -7.105427357601002e-15,
+          "source_eq_124_phase_offset_radians": -0.0
+        },
+        "degenerate_ode_consistent_source_norm_basis": {
+          "maximum_principal_mode_residual": 0.0,
+          "boundary_matrix_rank": 30,
+          "boundary_relative_smallest_singular_value": 0.03309546395597872,
+          "basis_determinant_log_abs": 18.29240329910741,
+          "corrected_jordan_determinant_log_offset": -1.0658141036401503e-14
+        },
+        "degenerate_source_common_normalization_basis": {
+          "maximum_principal_mode_residual": 0.0,
+          "boundary_matrix_rank": 30,
+          "boundary_relative_smallest_singular_value": 0.03658188311248775,
+          "confluent_reference_log_offset": null,
+          "source_eq_124_phase_offset_radians": -0.0
+        },
+        "degenerate_confluent_limit_basis": {
+          "maximum_principal_mode_residual": 2.7755575615628914e-17,
+          "boundary_matrix_rank": 30,
+          "boundary_relative_smallest_singular_value": 0.033469092703221494,
+          "basis_determinant_log_abs": 15.942385152878733,
+          "confluent_reference_log_offset": -5.329070518200751e-15,
+          "source_eq_124_phase_offset_radians": -0.0
+        },
+        "near_degenerate_confluence_sequence": [
+          {
+            "beta": -0.5,
+            "epsilon_from_degenerate_zeta": 0.01,
+            "zeta": [
+              0.51,
+              0.0
+            ],
+            "eigenvalue_gap": [
+              -0.019950249679761667,
+              -0.0
+            ],
+            "raw_generic_rank": 30,
+            "raw_generic_row_equilibrated_singular_ratio": 0.03100964946991877,
+            "confluent_rank": 30,
+            "confluent_row_equilibrated_singular_ratio": 0.03457699983139581,
+            "maximum_principal_mode_residual": 1.1102230246251565e-16,
+            "maximum_u2_source_row_map_residual": 0.0,
+            "confluent_determinant_log_abs": 15.809061002252964,
+            "confluent_reference_log_offset": -0.13332415062577674,
+            "eq_124_phase_offset_radians": 0.0
+          },
+          {
+            "beta": -0.5,
+            "epsilon_from_degenerate_zeta": 0.0001,
+            "zeta": [
+              0.5001,
+              0.0
+            ],
+            "eigenvalue_gap": [
+              -0.00019999500025003059,
+              -0.0
+            ],
+            "raw_generic_rank": 30,
+            "raw_generic_row_equilibrated_singular_ratio": 0.030048715125149183,
+            "confluent_rank": 30,
+            "confluent_row_equilibrated_singular_ratio": 0.03348006213290081,
+            "maximum_principal_mode_residual": 5.551115123125783e-17,
+            "maximum_u2_source_row_map_residual": 0.0,
+            "confluent_determinant_log_abs": 15.941035323467275,
+            "confluent_reference_log_offset": -0.0013498294114651088,
+            "eq_124_phase_offset_radians": 0.0
+          },
+          {
+            "beta": -0.5,
+            "epsilon_from_degenerate_zeta": 1e-06,
+            "zeta": [
+              0.500001,
+              0.0
+            ],
+            "eigenvalue_gap": [
+              -1.999999500013061e-06,
+              -0.0
+            ],
+            "raw_generic_rank": 30,
+            "raw_generic_row_equilibrated_singular_ratio": 0.030039191969211298,
+            "confluent_rank": 30,
+            "confluent_row_equilibrated_singular_ratio": 0.03346920238568834,
+            "maximum_principal_mode_residual": 1.1102230246251565e-16,
+            "maximum_u2_source_row_map_residual": 0.0,
+            "confluent_determinant_log_abs": 15.942371653316641,
+            "confluent_reference_log_offset": -1.3499562099283935e-05,
+            "eq_124_phase_offset_radians": 0.0
+          },
+          {
+            "beta": -0.5,
+            "epsilon_from_degenerate_zeta": 1e-08,
+            "zeta": [
+              0.50000001,
+              0.0
+            ],
+            "eigenvalue_gap": [
+              -2.0000000100495186e-08,
+              -0.0
+            ],
+            "raw_generic_rank": 30,
+            "raw_generic_row_equilibrated_singular_ratio": 0.030039096746285177,
+            "confluent_rank": 30,
+            "confluent_row_equilibrated_singular_ratio": 0.03346909394414263,
+            "maximum_principal_mode_residual": 1.1102230246251565e-16,
+            "maximum_u2_source_row_map_residual": 0.0,
+            "confluent_determinant_log_abs": 15.942384973381186,
+            "confluent_reference_log_offset": -1.7949755459767402e-07,
+            "eq_124_phase_offset_radians": 0.0
+          }
+        ]
+      },
+      {
+        "rinne_beta": -0.9,
+        "local_normal_shift": 0.9,
+        "incoming_modes": [
+          "u1_minus",
+          "u2_tangent_1",
+          "u2_tangent_2"
+        ],
+        "generic_case_count": 209,
+        "generic_minimum_boundary_rank": 30,
+        "generic_minimum_row_equilibrated_singular_ratio": 2.826039592391439e-05,
+        "generic_maximum_principal_mode_residual": 5.357316577648759e-10,
+        "generic_maximum_eq_123_log_offset": 1.3358203432289883e-12,
+        "generic_maximum_eq_123_phase_offset_radians": 3.141592653589793,
+        "source_eq_124_to_corrected_jordan_determinant_ratio": 0.7815803023309381,
+        "degenerate_literal_euclidean_norm_basis": {
+          "maximum_principal_mode_residual": 0.036187365060618815,
+          "boundary_matrix_rank": 30,
+          "boundary_relative_smallest_singular_value": 0.03277585704066483,
+          "source_eq_124_log_offset": -1.1102230246251565e-16,
+          "source_eq_124_phase_offset_radians": -0.0
+        },
+        "degenerate_ode_consistent_source_norm_basis": {
+          "maximum_principal_mode_residual": 0.0,
+          "boundary_matrix_rank": 30,
+          "boundary_relative_smallest_singular_value": 0.0326995926414562,
+          "basis_determinant_log_abs": 1.1590335418347009,
+          "corrected_jordan_determinant_log_offset": -1.1102230246251565e-15
+        },
+        "degenerate_source_common_normalization_basis": {
+          "maximum_principal_mode_residual": 5.551115123125783e-17,
+          "boundary_matrix_rank": 30,
+          "boundary_relative_smallest_singular_value": 0.03356948559288182,
+          "confluent_reference_log_offset": null,
+          "source_eq_124_phase_offset_radians": -0.0
+        },
+        "degenerate_confluent_limit_basis": {
+          "maximum_principal_mode_residual": 1.1102230246251565e-16,
+          "boundary_matrix_rank": 30,
+          "boundary_relative_smallest_singular_value": 0.029475528616948136,
+          "basis_determinant_log_abs": 0.6599318654236445,
+          "confluent_reference_log_offset": -3.219646771412954e-15,
+          "source_eq_124_phase_offset_radians": -0.0
+        },
+        "near_degenerate_confluence_sequence": [
+          {
+            "beta": -0.9,
+            "epsilon_from_degenerate_zeta": 0.01,
+            "zeta": [
+              0.91,
+              0.0
+            ],
+            "eigenvalue_gap": [
+              -0.011061557328435612,
+              -0.0
+            ],
+            "raw_generic_rank": 30,
+            "raw_generic_row_equilibrated_singular_ratio": 0.030997596104452574,
+            "confluent_rank": 30,
+            "confluent_row_equilibrated_singular_ratio": 0.030411748119350518,
+            "maximum_principal_mode_residual": 8.881784197001252e-16,
+            "maximum_u2_source_row_map_residual": 0.0,
+            "confluent_determinant_log_abs": 0.6864682891986704,
+            "confluent_reference_log_offset": 0.026536423775022744,
+            "eq_124_phase_offset_radians": 0.0
+          },
+          {
+            "beta": -0.9,
+            "epsilon_from_degenerate_zeta": 0.0001,
+            "zeta": [
+              0.9001,
+              0.0
+            ],
+            "eigenvalue_gap": [
+              -0.00011110611156062156,
+              -0.0
+            ],
+            "raw_generic_rank": 30,
+            "raw_generic_row_equilibrated_singular_ratio": 0.030048610994206026,
+            "confluent_rank": 30,
+            "confluent_row_equilibrated_singular_ratio": 0.029484816986697804,
+            "maximum_principal_mode_residual": 7.771561172376096e-16,
+            "maximum_u2_source_row_map_residual": 0.0,
+            "confluent_determinant_log_abs": 0.6602040186575275,
+            "confluent_reference_log_offset": 0.0002721532338798571,
+            "eq_124_phase_offset_radians": 0.0
+          },
+          {
+            "beta": -0.9,
+            "epsilon_from_degenerate_zeta": 1e-06,
+            "zeta": [
+              0.900001,
+              0.0
+            ],
+            "eigenvalue_gap": [
+              -1.1111106104078061e-06,
+              -0.0
+            ],
+            "raw_generic_rank": 30,
+            "raw_generic_row_equilibrated_singular_ratio": 0.030039190929522796,
+            "confluent_rank": 30,
+            "confluent_row_equilibrated_singular_ratio": 0.029475621484672056,
+            "maximum_principal_mode_residual": 9.992007221626409e-16,
+            "maximum_u2_source_row_map_residual": 0.0,
+            "confluent_determinant_log_abs": 0.6599345939660327,
+            "confluent_reference_log_offset": 2.7285423850331725e-06,
+            "eq_124_phase_offset_radians": 0.0
+          },
+          {
+            "beta": -0.9,
+            "epsilon_from_degenerate_zeta": 1e-08,
+            "zeta": [
+              0.9000000100000001,
+              0.0
+            ],
+            "eigenvalue_gap": [
+              -1.1111111142270147e-08,
+              -0.0
+            ],
+            "raw_generic_rank": 30,
+            "raw_generic_row_equilibrated_singular_ratio": 0.03003909673588854,
+            "confluent_rank": 30,
+            "confluent_row_equilibrated_singular_ratio": 0.029475529716654503,
+            "maximum_principal_mode_residual": 1.1102230246251565e-16,
+            "maximum_u2_source_row_map_residual": 0.0,
+            "confluent_determinant_log_abs": 0.6599318773790962,
+            "confluent_reference_log_offset": 1.1955448520062362e-08,
+            "eq_124_phase_offset_radians": 0.0
+          }
+        ]
+      }
+    ],
+    "source_basis_map_audit": {
+      "relation": "C_source_components=T_rows*C_repository_boundary_data*T_columns",
+      "constraint_row_map": "identity on the four c0 components",
+      "physical_row_map": [
+        [
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          -1.0
+        ]
+      ],
+      "physical_coordinate_convention": "repository rows are (w_yy,-w_yz); source component rows are (w_yy,w_yz)",
+      "gauge_null_vector": [
+        0.7071067811865475,
+        -0.7071067811865475,
+        0.0,
+        0.0
+      ],
+      "gauge_row_map": [
+        [
+          1.154700538379252,
+          0.0,
+          0.7071067811865461,
+          0.0
+        ],
+        [
+          -1.1547005383792506,
+          0.0,
+          0.7071067811865489,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.4142135623730947
+        ],
+        [
+          0.0,
+          -1.4142135623730947,
+          0.0,
+          0.0
+        ]
+      ],
+      "gauge_row_map_source_convention": "sqrt(2) times the normalized l-contraction, matching source component equations (117)-(120)",
+      "column_tensor_component_rescaling": [
+        1.0,
+        1.4142135623730951,
+        1.4142135623730951,
+        1.4142135623730951,
+        1.0,
+        1.4142135623730951,
+        1.4142135623730951,
+        1.0,
+        1.4142135623730951,
+        1.0
+      ],
+      "column_rescaling_source_convention": "undo the repository Frobenius-normalized off-diagonal symmetric-tensor basis",
+      "projector_and_coordinate_identity_residuals": {
+        "gauge_covector_annihilates_constraint_sector": 2.299347170293092e-17,
+        "gauge_covector_annihilates_physical_sector": 0.0,
+        "gauge_covector_identity_on_gauge_sector": 3.3673159693837325e-18,
+        "gauge_basis_orthonormality": 5.551115123125783e-16,
+        "gauge_basis_spans_projector_image": 3.885780586188048e-16,
+        "physical_source_coordinate_map": 1.1102230246251565e-16
+      },
+      "maximum_identity_residual": 5.551115123125783e-16,
+      "identity_tolerance": 1e-12,
+      "gauge_row_map_singular_values": [
+        1.6329931618554516,
+        1.4142135623730947,
+        1.4142135623730947,
+        1.0
+      ],
+      "all_fixed_maps_invertible": true,
+      "all_projector_and_coordinate_identities_within_tolerance": true
+    },
+    "source_hashes": {
+      "docs/scripts/audit/audit_curved_3p1_gh_rinne_negative_shift_kreiss_symbol.py": "f482a1b1cb61480bfaa3cb27e5a2b7cdad65218fcc6521d0d587e742ffce3f2b",
+      "docs/scripts/audit/audit_curved_3p1_gh_rinne_zero_shift_kreiss_symbol.py": "c8d29b710c053ac0dee5a2d21714a63b99e8c749c8ac7c0ae892c7ffcae6460c",
+      "docs/core/07_artifacts/verification/curved_3p1_gh_rinne_zero_shift_kreiss_symbol.json": "b521608f31da55e435d5d2c736222ece29a572f8efede9992f263d3d0910f460",
+      "docs/scripts/audit/audit_curved_3p1_gh_rinne_positive_shift_kreiss_symbol.py": "603a5752c42b06bd001d358cc3ae69d206efc3be51af13b539f8be314ba14755",
+      "docs/core/07_artifacts/verification/curved_3p1_gh_rinne_positive_shift_kreiss_symbol.json": "e78536b21c0e42c6bed27f19f0743210df2859604ec3607b12387ebeaf7e3fdc",
+      "docs/scripts/audit/audit_curved_3p1_gh_tangential_cpbc_mode.py": "b8c46518d3bec50b7e5d91ded78dfe652f7e331e633c2b16112f1664ebdc1603",
+      "docs/core/02_equations/covariant/uet_curved_3p1_gh_linear_boundary.py": "39bd0731a3ecdbb5c5185453e0908d198cba895ba5f29dafc6bb8f9c6a3b169c",
+      "docs/core/02_equations/covariant/uet_curved_3p1_generalized_harmonic.py": "4f0c8ed0e5afe52e43cedefeb9c061e10dbd440fd20e8bc57a8aacfa43e76f92"
+    }
+  },
+  "PREREGISTRATION": {
+    "rinne_beta_values": [
+      -0.1,
+      -0.5,
+      -0.9
+    ],
+    "negative_shift_domain": "-1<beta<0; Rinne coordinate shift points toward decreasing x, outward from x>0",
+    "real_zeta_grid": [
+      1e-10,
+      1e-08,
+      1e-06,
+      0.0001,
+      0.01,
+      0.1,
+      1.0,
+      10.0,
+      100.0,
+      10000.0,
+      1000000.0
+    ],
+    "imaginary_zeta_grid": [
+      0.0,
+      0.5,
+      0.999999,
+      1.0,
+      1.000001,
+      2.0,
+      10.0,
+      100.0,
+      10000.0,
+      1000000.0,
+      -0.5,
+      -0.999999,
+      -1.0,
+      -1.000001,
+      -2.0,
+      -10.0,
+      -100.0,
+      -10000.0,
+      -1000000.0
+    ],
+    "exact_degenerate_points": "zeta=-beta evaluated under source-declared separate K norms, an explicitly ODE-consistent generalized-mode rescaling, a common-normalization control, and the normalized generic confluent basis; the corrected determinant is derived from Eq. (123) and compared with the registered boundary matrix",
+    "off_grid_corrected_jordan_beta_values": [
+      -0.01,
+      -0.25,
+      -0.75,
+      -0.99
+    ],
+    "off_grid_beta_role": "post-derivation implementation cross-check only; not part of the preregistered 626-point generic grid",
+    "confluent_epsilon_values": [
+      0.01,
+      0.0001,
+      1e-06,
+      1e-08
+    ],
+    "parameter_fitting": false,
+    "threshold_changes": false,
+    "clipping_or_cone_padding": false,
+    "basis_map_refit": false
+  },
+  "literature_basis": [
+    {
+      "source_id": "rinne_2006_first_order_gh_radiation_controlling_cpbc",
+      "url": "https://arxiv.org/abs/gr-qc/0606053",
+      "equations": "Eq. (73)-(74), Eqs. (113)-(114), Eq. (123)-(124) in arXiv HTML; corresponding PDF Eqs. (73)-(74), (75)-(86), and (89)-(90)",
+      "scope": "Specified frozen-coefficient first-order GH Fourier-Laplace system with subluminal normal shift; source result is imported only after basis correspondence"
+    }
+  ],
+  "CONTROLLING_BLOCKER": "uniform_negative_shift_kreiss_bound_over_beta_and_closed_frequency_domain_not_independently_established",
+  "NEXT_ACTION": "Derive uniform lower bounds from the corrected confluent determinant and normalized boundary map toward beta=0,-1, zeta->0, the imaginary axis, and |zeta|->infinity. Keep the source Eq. (74)/(124) discrepancy flagged pending authoritative correction; do not promote the Core parent.",
+  "CLAIM_BOUNDARY": "Frozen-coefficient standard-GR boundary-symbol result for the preregistered finite grid at three negative shifts, including the exact degenerate point under an explicitly ODE-consistent Jordan correction with an analytically derived determinant. The correction does not silently rewrite Rinne's printed Eq. (74)/(124), and no independent uniform Kreiss theorem, nonlinear/variable-coefficient well-posedness result, UET physical result, curved-parent closure, or Gravity unlock is claimed.",
+  "claim_promotion": false,
+  "full_core_unlock": false
+}

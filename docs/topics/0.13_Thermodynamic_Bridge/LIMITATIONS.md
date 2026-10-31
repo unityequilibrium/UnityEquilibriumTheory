@@ -56,7 +56,7 @@ nonzero-q bulk equilibrium are different boundary problems. This is not a
 causal-cone proof or a TTG time trace. Constant gain cancels under TTG
 normalization; the synthetic difference cannot identify alpha_Phi_K.
 Physical G/Z and same-state inputs/uncertainty remain open. Existing full
-closure gates are unchanged. See [scope](../../core/T13_THERMOELASTIC_SPATIAL_COMPATIBILITY.md).
+closure gates are unchanged. See [scope](../../core/03_lanes/topic13_support/T13_THERMOELASTIC_SPATIAL_COMPATIBILITY.md).
 
 ## Transition-Rate Dimension Boundary (2026-09-01)
 

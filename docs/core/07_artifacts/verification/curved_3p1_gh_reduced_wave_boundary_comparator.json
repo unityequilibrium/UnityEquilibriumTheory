@@ -1,0 +1,150 @@
+{
+  "schema_version": "core-curved-3p1-gh-reduced-wave-boundary-comparator-v1",
+  "artifact": "curved_3p1_gh_reduced_wave_boundary_comparator",
+  "generated_at": "2026-09-25",
+  "status": "PARTIAL_REDUCED_WAVE_BOUNDARY_COMPARATOR",
+  "claim_promotion": false,
+  "major_result": {
+    "major_result_id": "CORE_CURVED_3P1_GH_REDUCED_WAVE_BOUNDARY_COMPARATOR",
+    "topic": "core",
+    "closure_level": "PARTIAL",
+    "what_is_closed": [
+      "the reduced formulation enforces Phi_x=D(psi) algebraically, with the audited pulse residual at roundoff scale",
+      "the degree-8 spectrum and random-perturbation screens pass their declared limits"
+    ],
+    "what_remains_open": [
+      "spatial-resolution convergence and an independent semidiscrete energy estimate are not established",
+      "the degree-12 packet retains 0.1549867 of its Clenshaw-Curtis energy against the unchanged 0.05 threshold; higher-resolution remainders are non-monotone, and degree 20 has one eigenvalue above the unchanged 1e-6 tolerance",
+      "this comparator does not close the independent-variable first-order GH CPBC evolution",
+      "positive-shift u2_A, tangential derivatives, corners, variable coefficients, nonlinear terms, matter boundaries, and subsidiary-constraint propagation remain open"
+    ],
+    "equation_or_mapping": "Second-order algebraic reduced-wave evolution in (psi_ab,Pi_ab), with Phi_xab=D(psi_ab) enforced at every RHS evaluation; incoming u1-minus target is inherited from the 4+2+4 frozen-background GH projector algebra.",
+    "units": {
+      "unit_lane": "geometric units with slab length scale L0=1",
+      "psi": "dimensionless",
+      "Pi_and_Phi": "L0^-1",
+      "gamma2": "L0^-1",
+      "u1_minus_time_rhs": "L0^-2",
+      "UET_symbols_used": []
+    },
+    "derivation_class": "standard-GR second-order algebraic reduced-wave numerical comparator using source-matched frozen-background incoming-u1 boundary targets",
+    "observable": "semidiscrete spectrum, bounded perturbation growth, TT packet energy remainder, and algebraic reduction residual",
+    "data_role": "analytic and synthetic numerical control; no external data, fitting, or holdout",
+    "evidence_artifacts": [
+      "docs/core/07_artifacts/verification/curved_3p1_gh_full_u1_cpbc_slab_pilot.json",
+      "docs/core/07_artifacts/verification/curved_3p1_gh_reduced_wave_boundary_comparator.json"
+    ],
+    "verification_status": "PARTIAL_REDUCED_WAVE_BOUNDARY_COMPARATOR",
+    "open_blockers": [
+      "degree-12 TT-packet integrated-energy remainder 0.1549867 exceeds the unchanged 0.05 limit",
+      "degree-20 spectrum has one positive mode above the unchanged 1e-6 real-part tolerance",
+      "the degree-8-to-20 integrated-energy sweep is non-monotone and does not establish spatial convergence",
+      "an independent semidiscrete energy estimate is required before any broader numerical claim",
+      "the distinct reduced formulation cannot substitute for the full first-order GH CPBC parent"
+    ],
+    "dependency_unlocked": "none; Core curved-3+1 parent and Gravity remain blocked",
+    "claim_boundary": "A comparator formulation only; not the independent-variable first-order GH CPBC system, not a continuum/IBVP well-posedness proof, and no parent or Gravity dependency unlock."
+  },
+  "controlling_blocker": "reduced_wave_packet_absorption_and_high_order_spectrum_not_converged",
+  "next_action": "derive a discrete energy estimate, diagnose the degree-20 near-zero positive eigenvalue under the unchanged tolerance, and establish spatial convergence for the integrated pulse energy",
+  "checks": {
+    "no_resolved_growing_semidiscrete_mode": true,
+    "random_perturbation_stays_bounded": true,
+    "tt_packet_is_absorbed": false,
+    "reduction_constraint_is_algebraic": true
+  },
+  "metrics": {
+    "state_dimension": 180,
+    "maximum_eigenvalue_real_part": 1.5743544258148507e-07,
+    "positive_modes_above_1e-6": 0,
+    "random_perturbation_growth_factor": 1.004563256652657,
+    "random_perturbation_final_time": 4.0,
+    "random_perturbation_steps": 106,
+    "random_perturbation_dt": 0.03773584905660377,
+    "tt_packet_final_to_initial_energy_ratio": 0.15498673890947653,
+    "tt_packet_final_reduction_constraint_linf": 1.5314138845923253e-14,
+    "tt_packet_final_time": 2.4,
+    "tt_packet_steps": 141,
+    "tt_packet_dt": 0.01702127659574468,
+    "energy_functional": "Clenshaw-Curtis spatial quadrature over [-1,1]",
+    "resolution_screens": [
+      {
+        "degree": 8,
+        "node_count": 9,
+        "maximum_eigenvalue_real_part": 1.5743544258148507e-07,
+        "maximum_scaled_eigenvalue_real_part": 1.3171196346469757e-08,
+        "positive_modes_above_1e-6": 0,
+        "tt_packet_clenshaw_curtis_energy_ratio": 1.0281015190706144,
+        "tt_packet_reduction_constraint_linf": 2.7200464103316335e-15,
+        "tt_packet_steps": 64,
+        "tt_packet_dt": 0.0375
+      },
+      {
+        "degree": 12,
+        "node_count": 13,
+        "maximum_eigenvalue_real_part": 2.774160674310277e-07,
+        "maximum_scaled_eigenvalue_real_part": 1.2400479457906134e-08,
+        "positive_modes_above_1e-6": 0,
+        "tt_packet_clenshaw_curtis_energy_ratio": 0.15498673890947653,
+        "tt_packet_reduction_constraint_linf": 1.5314138845923253e-14,
+        "tt_packet_steps": 141,
+        "tt_packet_dt": 0.01702127659574468
+      },
+      {
+        "degree": 14,
+        "node_count": 15,
+        "maximum_eigenvalue_real_part": 6.32059908446746e-07,
+        "maximum_scaled_eigenvalue_real_part": 2.2109829650165612e-08,
+        "positive_modes_above_1e-6": 0,
+        "tt_packet_clenshaw_curtis_energy_ratio": 0.3371096034273316,
+        "tt_packet_reduction_constraint_linf": 2.2523649612082863e-14,
+        "tt_packet_steps": 192,
+        "tt_packet_dt": 0.012499999999999999
+      },
+      {
+        "degree": 16,
+        "node_count": 17,
+        "maximum_eigenvalue_real_part": 5.68729527577797e-07,
+        "maximum_scaled_eigenvalue_real_part": 1.6047667197953862e-08,
+        "positive_modes_above_1e-6": 0,
+        "tt_packet_clenshaw_curtis_energy_ratio": 0.2658606779857442,
+        "tt_packet_reduction_constraint_linf": 1.326716514427062e-14,
+        "tt_packet_steps": 250,
+        "tt_packet_dt": 0.0096
+      },
+      {
+        "degree": 18,
+        "node_count": 19,
+        "maximum_eigenvalue_real_part": 2.967429863149071e-07,
+        "maximum_scaled_eigenvalue_real_part": 6.915446151029385e-09,
+        "positive_modes_above_1e-6": 0,
+        "tt_packet_clenshaw_curtis_energy_ratio": 0.03366073275172558,
+        "tt_packet_reduction_constraint_linf": 1.7284784714632906e-14,
+        "tt_packet_steps": 316,
+        "tt_packet_dt": 0.007594936708860759
+      },
+      {
+        "degree": 20,
+        "node_count": 21,
+        "maximum_eigenvalue_real_part": 1.38726762259073e-06,
+        "maximum_scaled_eigenvalue_real_part": 2.72111807740876e-08,
+        "positive_modes_above_1e-6": 1,
+        "tt_packet_clenshaw_curtis_energy_ratio": 0.01990067916452227,
+        "tt_packet_reduction_constraint_linf": 1.1095291352347658e-14,
+        "tt_packet_steps": 390,
+        "tt_packet_dt": 0.006153846153846154
+      }
+    ]
+  },
+  "source_hashes": {
+    "docs/scripts/audit/audit_curved_3p1_gh_full_u1_cpbc_slab.py": "2fa112eaf6a0f34ab7cccf2027e59f2294b34c22048384c0c4e601754dce4a9b",
+    "docs/core/05_tests/regression/root/test_uet_curved_3p1_gh_full_u1_slab.py": "24b9a895e2b0717f41c82e8bae4c79770b711bf18a95ef2288397356971bd042",
+    "docs/core/02_equations/covariant/uet_curved_3p1_gh_full_u1_slab.py": "f36c80561a6aec8463f4ffc049ab496563955a391411ea0ec6f5dbf583be70b7",
+    "docs/core/02_equations/covariant/uet_curved_3p1_gh_boundary_projectors.py": "2aa529e3a037a5ecff2c2a5a6d454ef7cf9822ca99371393d6614bfbc062362f",
+    "docs/core/02_equations/covariant/uet_curved_3p1_gh_linear_boundary.py": "39bd0731a3ecdbb5c5185453e0908d198cba895ba5f29dafc6bb8f9c6a3b169c",
+    "docs/core/02_equations/covariant/uet_curved_3p1_generalized_harmonic.py": "4f0c8ed0e5afe52e43cedefeb9c061e10dbd440fd20e8bc57a8aacfa43e76f92",
+    "docs/scripts/audit/audit_curved_3p1_gh_tt_sbp_sat_boundary.py": "01e519a576bfebcb41222af81bfd6ed7a5f7bf0538cfc4c3e2cb51b5653d29df"
+  },
+  "parent_full_u1_status": "FAIL_GH_FULL_U1_CHEBYSHEV_SLAB_PILOT",
+  "parent_full_u1_dependency_unlocked": "none"
+}

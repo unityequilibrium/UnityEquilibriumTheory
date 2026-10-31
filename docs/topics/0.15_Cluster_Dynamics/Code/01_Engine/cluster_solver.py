@@ -40,7 +40,7 @@ from dataclasses import dataclass
 
 # Core Imports
 try:
-    from docs.core.uet_base_solver import UETBaseSolver
+    from docs.scripts.core.runners.uet_base_solver import UETBaseSolver
     from docs.core.uet_parameters import G, M_SUN, KPC
 
     # If UETParameters class is needed from master equation

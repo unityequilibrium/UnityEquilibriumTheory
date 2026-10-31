@@ -155,7 +155,7 @@ def run_test():
 
     # Updated Path Management
     try:
-        from docs.core.uet_glass_box import UETPathManager
+        from docs.scripts.core.runners.uet_glass_box import UETPathManager
 
         output_dir = UETPathManager.get_result_dir(
             topic_id="0.6_Electroweak_Physics",

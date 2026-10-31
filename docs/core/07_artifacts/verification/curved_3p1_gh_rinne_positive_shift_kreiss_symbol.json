@@ -1,0 +1,280 @@
+{
+  "schema_version": "core-curved-3p1-gh-rinne-positive-shift-kreiss-symbol-v1",
+  "artifact": "curved_3p1_gh_rinne_positive_shift_kreiss_symbol",
+  "generated_at": "2026-09-25T07:53:28+00:00",
+  "major_result_id": "CORE_CURVED_3P1_GH_RINNE_POSITIVE_SHIFT_KREISS_SYMBOL",
+  "major_result": {
+    "major_result_id": "CORE_CURVED_3P1_GH_RINNE_POSITIVE_SHIFT_KREISS_SYMBOL",
+    "topic": "core_curved_3p1",
+    "closure_level": "CLOSED_FOR_LANE",
+    "what_is_closed": [
+      "For Rinne's coordinate shift beta={0.1,0.5,0.9}, the registered Core residual map yields a 10-dimensional decaying boundary symbol whose source-basis determinant agrees with Rinne Eq. (122) on the preregistered complex-frequency grid.",
+      "The sign map is verified: Rinne's inward-pointing N^x=beta corresponds to local outward-normal shift beta_n=-beta; only u1_minus is incoming and u2_A is outgoing in these cases."
+    ],
+    "equation_or_mapping": {
+      "rinne_shift_to_core_normal_shift": "beta_Rinne=N^x in the x>0 half-space; with outward normal n=-x, beta_n=shift dot n=-beta_Rinne",
+      "decaying_root": "lambda_1_minus=(1-beta^2)^-1*(-beta*zeta-sqrt(zeta^2+1-beta^2)); choose sqrt with positive real part for Re(zeta)>0",
+      "mode_vector": "(Pi,Phi_x,Phi_y,Phi_z)=K1^-1*(zeta-beta*lambda_1_minus,-lambda_1_minus,-i,0); psi=0",
+      "source_determinant": "det(C)=-[zeta-(1+beta)*lambda_1_minus]^16/(8*zeta^6*K1^10)",
+      "repository_to_source_map": "C_source=T_rows*diag(zeta^-1*I6,I4)*C_residual*T_columns; fixed maps imported unchanged from the zero-shift audit"
+    },
+    "units": "Frozen local orthonormal geometric units; omega normalized to 1 and zeta=s/omega dimensionless.",
+    "derivation_class": "source-matched analytic Fourier-Laplace mode and determinant cross-check; finite numerical sampling",
+    "observable": "10x10 boundary-data symbol determinant, rank, characteristic incidence, and principal-mode residual",
+    "data_role": "primary-literature formula cross-check; no empirical data, fitting, or calibration",
+    "verification_status": "PASS_SOURCE_MATCHED_POSITIVE_SHIFT_KREISS_SAMPLE",
+    "open_blockers": [
+      "Rinne beta<0 requires the additional decaying u2_A modes and twenty extra incoming constraint-curl rows, including the degenerate zeta=-beta generalized mode; that lane is not covered here.",
+      "The sample does not independently prove a uniform bound over every beta in (0,1) or the closed half-plane in zeta; it relies on the fixed source correspondence and Rinne's theorem for the specified system.",
+      "Variable-coefficient/nonlinear GH evolution, corners, matter boundaries, dimensional observables, and Core curved-parent requirements remain open."
+    ],
+    "dependency_unlocked": "none; Core curved 3+1 remains PARTIAL and Gravity remains blocked",
+    "claim_boundary": "Source-matched, frozen-coefficient standard-GR boundary-symbol result for the preregistered Rinne inward-shift samples beta={0.1,0.5,0.9} only. It imports Rinne's specified Fourier-Laplace/Kreiss theorem after the fixed repository-to-source basis map; the finite sample is not a new continuum proof, does not cover all beta in (0,1), and does not close the nonlinear/variable-coefficient curved 3+1 parent, UET, or Gravity."
+  },
+  "closure_level": "CLOSED_FOR_LANE",
+  "MAJOR_RESULT_CLOSURE": "CLOSED_FOR_LANE",
+  "WHAT_IS_ACTUALLY_CLOSED": [
+    "For Rinne's coordinate shift beta={0.1,0.5,0.9}, the registered Core residual map yields a 10-dimensional decaying boundary symbol whose source-basis determinant agrees with Rinne Eq. (122) on the preregistered complex-frequency grid.",
+    "The sign map is verified: Rinne's inward-pointing N^x=beta corresponds to local outward-normal shift beta_n=-beta; only u1_minus is incoming and u2_A is outgoing in these cases."
+  ],
+  "WHAT_REMAINS_OPEN": [
+    "Rinne beta<0 requires the additional decaying u2_A modes and twenty extra incoming constraint-curl rows, including the degenerate zeta=-beta generalized mode; that lane is not covered here.",
+    "The sample does not independently prove a uniform bound over every beta in (0,1) or the closed half-plane in zeta; it relies on the fixed source correspondence and Rinne's theorem for the specified system.",
+    "Variable-coefficient/nonlinear GH evolution, corners, matter boundaries, dimensional observables, and Core curved-parent requirements remain open."
+  ],
+  "DEPENDENCY_UNLOCKED": "none; Core curved 3+1 remains PARTIAL and Gravity remains blocked",
+  "STATUS": "PASS_SOURCE_MATCHED_POSITIVE_SHIFT_KREISS_SAMPLE",
+  "WHAT_CHANGED": "Added a separate positive-Rinne-shift Fourier-Laplace audit using the frozen zero-shift basis map; the zero-shift artifact, production GH equations, boundary residual API, and parent/dependency gates were not modified.",
+  "EQUATION_OR_MAPPING": {
+    "rinne_shift_to_core_normal_shift": "beta_Rinne=N^x in the x>0 half-space; with outward normal n=-x, beta_n=shift dot n=-beta_Rinne",
+    "decaying_root": "lambda_1_minus=(1-beta^2)^-1*(-beta*zeta-sqrt(zeta^2+1-beta^2)); choose sqrt with positive real part for Re(zeta)>0",
+    "mode_vector": "(Pi,Phi_x,Phi_y,Phi_z)=K1^-1*(zeta-beta*lambda_1_minus,-lambda_1_minus,-i,0); psi=0",
+    "source_determinant": "det(C)=-[zeta-(1+beta)*lambda_1_minus]^16/(8*zeta^6*K1^10)",
+    "repository_to_source_map": "C_source=T_rows*diag(zeta^-1*I6,I4)*C_residual*T_columns; fixed maps imported unchanged from the zero-shift audit"
+  },
+  "VERIFICATION": {
+    "checks": {
+      "three_preregistered_strictly_subluminal_positive_shifts": true,
+      "mapped_local_shift_is_negative_rinne_beta": true,
+      "u1_minus_is_the_only_incoming_characteristic_family": true,
+      "u2_tangent_modes_are_outgoing_in_mapped_positive_shift_lane": true,
+      "ten_decaying_metric_amplitudes": true,
+      "source_basis_map_identities_pass": true,
+      "all_boundary_data_matrices_have_rank_10": true,
+      "principal_mode_equations_pass": true,
+      "eq_122_determinant_log_crosscheck_passes": true,
+      "eq_122_determinant_phase_crosscheck_passes": true
+    },
+    "case_count": 627,
+    "case_grid_per_beta": {
+      "real_zeta": [
+        1e-10,
+        1e-08,
+        1e-06,
+        0.0001,
+        0.01,
+        0.1,
+        1.0,
+        10.0,
+        100.0,
+        10000.0,
+        1000000.0
+      ],
+      "imag_zeta": [
+        0.0,
+        0.5,
+        0.999999,
+        1.0,
+        1.000001,
+        2.0,
+        10.0,
+        100.0,
+        10000.0,
+        1000000.0,
+        -0.5,
+        -0.999999,
+        -1.0,
+        -1.000001,
+        -2.0,
+        -10.0,
+        -100.0,
+        -10000.0,
+        -1000000.0
+      ],
+      "points_per_beta": 209,
+      "excluded": "Re(zeta)=0 and zeta=0 are not sampled; this is a finite Re(zeta)>0 grid"
+    },
+    "per_beta": [
+      {
+        "beta": 0.1,
+        "local_normal_shift": -0.1,
+        "incoming_modes": [
+          "u1_minus"
+        ],
+        "u2_modes_are_outgoing": true,
+        "case_count": 209,
+        "minimum_boundary_relative_smallest_singular_value": 0.06835542129923668,
+        "maximum_principal_mode_residual": 1.7805175552658218e-10,
+        "maximum_abs_eq_122_log_offset": 3.197442310920451e-14,
+        "maximum_abs_eq_122_phase_offset_radians": 4.287501758288913e-15,
+        "minimum_boundary_matrix_rank": 10,
+        "maximum_decaying_subspace_dimension": 10,
+        "boundary_regimes": [
+          "U1_ONLY_INCOMING_SUBLUMINAL"
+        ]
+      },
+      {
+        "beta": 0.5,
+        "local_normal_shift": -0.5,
+        "incoming_modes": [
+          "u1_minus"
+        ],
+        "u2_modes_are_outgoing": true,
+        "case_count": 209,
+        "minimum_boundary_relative_smallest_singular_value": 0.1767477197168087,
+        "maximum_principal_mode_residual": 5.821348140515832e-10,
+        "maximum_abs_eq_122_log_offset": 4.263256414560601e-14,
+        "maximum_abs_eq_122_phase_offset_radians": 4.287501758288913e-15,
+        "minimum_boundary_matrix_rank": 10,
+        "maximum_decaying_subspace_dimension": 10,
+        "boundary_regimes": [
+          "U1_ONLY_INCOMING_SUBLUMINAL"
+        ]
+      },
+      {
+        "beta": 0.9,
+        "local_normal_shift": -0.9,
+        "incoming_modes": [
+          "u1_minus"
+        ],
+        "u2_modes_are_outgoing": true,
+        "case_count": 209,
+        "minimum_boundary_relative_smallest_singular_value": 0.4966754355254515,
+        "maximum_principal_mode_residual": 3.1790247697642465e-09,
+        "maximum_abs_eq_122_log_offset": 3.197442310920451e-14,
+        "maximum_abs_eq_122_phase_offset_radians": 4.287501758288913e-15,
+        "minimum_boundary_matrix_rank": 10,
+        "maximum_decaying_subspace_dimension": 10,
+        "boundary_regimes": [
+          "U1_ONLY_INCOMING_SUBLUMINAL"
+        ]
+      }
+    ],
+    "maximum_principal_mode_residual": 3.1790247697642465e-09,
+    "maximum_abs_eq_122_determinant_log_offset": 4.263256414560601e-14,
+    "maximum_abs_eq_122_determinant_phase_offset_radians": 4.287501758288913e-15,
+    "source_basis_map_audit": {
+      "relation": "C_source_components=T_rows*C_repository_boundary_data*T_columns",
+      "constraint_row_map": "identity on the four c0 components",
+      "physical_row_map": [
+        [
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          -1.0
+        ]
+      ],
+      "physical_coordinate_convention": "repository rows are (w_yy,-w_yz); source component rows are (w_yy,w_yz)",
+      "gauge_null_vector": [
+        0.7071067811865475,
+        -0.7071067811865475,
+        0.0,
+        0.0
+      ],
+      "gauge_row_map": [
+        [
+          1.154700538379252,
+          0.0,
+          0.7071067811865461,
+          0.0
+        ],
+        [
+          -1.1547005383792506,
+          0.0,
+          0.7071067811865489,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.4142135623730947
+        ],
+        [
+          0.0,
+          -1.4142135623730947,
+          0.0,
+          0.0
+        ]
+      ],
+      "gauge_row_map_source_convention": "sqrt(2) times the normalized l-contraction, matching source component equations (117)-(120)",
+      "column_tensor_component_rescaling": [
+        1.0,
+        1.4142135623730951,
+        1.4142135623730951,
+        1.4142135623730951,
+        1.0,
+        1.4142135623730951,
+        1.4142135623730951,
+        1.0,
+        1.4142135623730951,
+        1.0
+      ],
+      "column_rescaling_source_convention": "undo the repository Frobenius-normalized off-diagonal symmetric-tensor basis",
+      "projector_and_coordinate_identity_residuals": {
+        "gauge_covector_annihilates_constraint_sector": 2.299347170293092e-17,
+        "gauge_covector_annihilates_physical_sector": 0.0,
+        "gauge_covector_identity_on_gauge_sector": 3.3673159693837325e-18,
+        "gauge_basis_orthonormality": 5.551115123125783e-16,
+        "gauge_basis_spans_projector_image": 3.885780586188048e-16,
+        "physical_source_coordinate_map": 1.1102230246251565e-16
+      },
+      "maximum_identity_residual": 5.551115123125783e-16,
+      "identity_tolerance": 1e-12,
+      "gauge_row_map_singular_values": [
+        1.6329931618554516,
+        1.4142135623730947,
+        1.4142135623730947,
+        1.0
+      ],
+      "all_fixed_maps_invertible": true,
+      "all_projector_and_coordinate_identities_within_tolerance": true
+    },
+    "source_hashes": {
+      "docs/scripts/audit/audit_curved_3p1_gh_rinne_positive_shift_kreiss_symbol.py": "603a5752c42b06bd001d358cc3ae69d206efc3be51af13b539f8be314ba14755",
+      "docs/scripts/audit/audit_curved_3p1_gh_rinne_zero_shift_kreiss_symbol.py": "c8d29b710c053ac0dee5a2d21714a63b99e8c749c8ac7c0ae892c7ffcae6460c",
+      "docs/core/07_artifacts/verification/curved_3p1_gh_rinne_zero_shift_kreiss_symbol.json": "b521608f31da55e435d5d2c736222ece29a572f8efede9992f263d3d0910f460",
+      "docs/scripts/audit/audit_curved_3p1_gh_tangential_cpbc_mode.py": "b8c46518d3bec50b7e5d91ded78dfe652f7e331e633c2b16112f1664ebdc1603",
+      "docs/core/02_equations/covariant/uet_curved_3p1_gh_linear_boundary.py": "39bd0731a3ecdbb5c5185453e0908d198cba895ba5f29dafc6bb8f9c6a3b169c",
+      "docs/core/02_equations/covariant/uet_curved_3p1_generalized_harmonic.py": "4f0c8ed0e5afe52e43cedefeb9c061e10dbd440fd20e8bc57a8aacfa43e76f92"
+    }
+  },
+  "PREREGISTRATION": {
+    "source_beta_values": [
+      0.1,
+      0.5,
+      0.9
+    ],
+    "source_beta_domain": "0 < beta < 1; Rinne coordinate shift points into x>0 domain",
+    "mapped_local_normal_shift": "normal_shift=-beta because repository outward normal is (-1,0,0)",
+    "frequency_grid_locked_before_run": true,
+    "parameter_fitting": false,
+    "threshold_changes": false,
+    "clipping_or_cone_padding": false,
+    "basis_map_refit": false
+  },
+  "literature_basis": [
+    {
+      "source_id": "rinne_2006_first_order_gh_radiation_controlling_cpbc",
+      "url": "https://arxiv.org/abs/gr-qc/0606053",
+      "equations": "Eq. (72) for beta>0 decaying mode; Eq. (122) for the boundary determinant; Eqs. (109)-(120) for constraint, physical, and gauge boundary rows",
+      "scope": "Rinne's frozen-coefficient high-frequency Fourier-Laplace/Kreiss result for the specified first-order GH system and subluminal normal shift; imported conditionally after source-basis correspondence"
+    }
+  ],
+  "CONTROLLING_BLOCKER": "negative_rinne_shift_u2_decaying_modes_and_zeta_equals_minus_beta_degenerate_basis_not_yet_reproduced",
+  "NEXT_ACTION": "Build the separate Rinne beta<0 symbol with both additional decaying u2_A families and the generalized zeta=-beta mode; reconstruct all 20 incoming definition-curl rows and compare with Eq. (123)-(124), without changing this positive-shift artifact.",
+  "CLAIM_BOUNDARY": "Source-matched, frozen-coefficient standard-GR boundary-symbol result for the preregistered Rinne inward-shift samples beta={0.1,0.5,0.9} only. It imports Rinne's specified Fourier-Laplace/Kreiss theorem after the fixed repository-to-source basis map; the finite sample is not a new continuum proof, does not cover all beta in (0,1), and does not close the nonlinear/variable-coefficient curved 3+1 parent, UET, or Gravity.",
+  "claim_promotion": false
+}

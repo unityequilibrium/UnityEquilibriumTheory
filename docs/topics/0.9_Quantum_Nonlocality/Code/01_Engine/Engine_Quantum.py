@@ -40,11 +40,11 @@ from pathlib import Path
 # =============================================================================
 # IMPORTS
 # =============================================================================
-from docs.core.uet_matrix_engine import (
+from docs.scripts.core.runners.uet_matrix_engine import (
 MatrixEvolution,
 UniverseState,
 )
-from docs.core.uet_base_solver import UETBaseSolver
+from docs.scripts.core.runners.uet_base_solver import UETBaseSolver
 from docs.core.uet_parameters import UETParameters, INTEGRITY_KILL_SWITCH
 
 

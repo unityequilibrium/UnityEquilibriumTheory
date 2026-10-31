@@ -35,7 +35,7 @@ if str(engine_path) not in sys.path:
 if str(competitor_path) not in sys.path:
     sys.path.insert(0, str(competitor_path))
 
-from docs.core.uet_glass_box import UETPathManager, UETMetricLogger
+from docs.scripts.core.runners.uet_glass_box import UETPathManager, UETMetricLogger
 from Competitor_NS_2D import NavierStokesSolver
 from Engine_UET_2D import UETFluidSolver
 from docs.core.uet_master_equation import UETParameters

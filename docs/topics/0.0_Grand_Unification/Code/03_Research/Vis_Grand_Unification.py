@@ -45,7 +45,7 @@ if root_path and str(root_path) not in sys.path:
     sys.path.append(str(root_path))
 
 try:
-    from docs.core.uet_glass_box import UETPathManager
+    from docs.scripts.core.runners.uet_glass_box import UETPathManager
 except ImportError as e:
     print(f"Setup Error: {e}")
     # Fallback for manual run

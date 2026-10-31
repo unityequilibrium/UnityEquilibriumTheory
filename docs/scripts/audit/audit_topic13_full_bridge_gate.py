@@ -26,6 +26,7 @@ LANE_KEY_BY_ID["T13_DING_C_SRC_FIXED_VOLUME_THERMODYNAMIC_IDENTITY"] = "ding_c_s
 LANE_KEY_BY_ID["T13_MP48_DING_C_SRC_MODE_SUM_RESPONSE_MAPPING"] = "mp48_ding_csrc_response_mapping"
 LANE_KEY_BY_ID["T13_C_SRC_EQUILIBRIUM_COMPONENT_QUALIFIED_SENSITIVITY"] = "csrc_equilibrium_component_acceptance"
 LANE_KEY_BY_ID["T13_NIMS_MP990448_PHONON_PAYLOAD_BOUNDARY"] = "nims_mp990448_phonon_payload_boundary"
+LANE_KEY_BY_ID["T13_NIMS_MP990448_AA_STACK_SHEAR_MODE_DIAGNOSTIC"] = "nims_mp990448_aa_stack_shear_mode_diagnostic"
 LANE_KEY_BY_ID["T13_C_SRC_THERMODYNAMIC_TRANSPORT_REGIME_DECOMPOSITION"] = "csrc_thermodynamic_transport_regime_decomposition"
 LANE_KEY_BY_ID["T13_HUBERMAN_2019_PUBLIC_PBTE_BOUNDARY"] = "huberman_2019_public_pbte_boundary"
 LANE_KEY_BY_ID["T13_IAEA_GR280_SAME_STATE_CP_COMPARATOR"] = "iaea_gr280_same_state_cp_comparator"
@@ -946,7 +947,7 @@ def main() -> int:
         },
         "verification_status": gates,
         "controlling_blocker": primary_blocker,
-        "next_action": "Hand the bounded O(2)/He-4 thermal bridge to Core integration. Keep Ding numeric C_src(T) acquisition, graphite TTG numeric validation, raw Landauer row parity, the original conserved-C baseline, curved 3+1, and external claims on their separate open tracks.",
+        "next_action": "The bounded O(2)/He-4 lane is already CLOSED_FOR_CORE and the curved 3+1 parent is unlocked; advance CORE_CURVED_3P1_OBSERVABLE_PARENT_READY. Keep graphite Ding C_src(T), independent graphite alpha_Phi_K, raw Landauer row parity, the original conserved-C baseline, and external claims on their separate open tracks.",
         "claim_boundary": "The O(2)/He-4 Topic 13 track is Core-ready when core_result_status passes. The legacy graphite/TTG aggregate remains blocked, Xie 2026 remains locked, and no external validation or global UET closure is claimed.",
         "evidence_artifacts": [
             evidence(rel(branch_path), branch, {"status": branch.get("status"), "controlling_blocker": branch.get("controlling_blocker")}),
@@ -1299,6 +1300,16 @@ def main() -> int:
         ] = nims_mp990448_lane
         artifact["verification_status"]["eos_transport_kms_entropy"].pop(
             "nims_mp990448_phonon_payload_boundary", None
+        )
+    nims_mp990448_shear_lane = discovered_lane_integrations.get(
+        "nims_mp990448_aa_stack_shear_mode_diagnostic"
+    )
+    if nims_mp990448_shear_lane:
+        artifact["verification_status"]["source_package"][
+            "nims_mp990448_aa_stack_shear_mode_diagnostic"
+        ] = nims_mp990448_shear_lane
+        artifact["verification_status"]["eos_transport_kms_entropy"].pop(
+            "nims_mp990448_aa_stack_shear_mode_diagnostic", None
         )
     aist_graphite_route_lane = discovered_lane_integrations.get(
         "aist_graphite_source_route_boundary"
@@ -3551,6 +3562,18 @@ def main() -> int:
     artifact["source_acquisition_controller"] = "ding_pbte_author_data_or_independent_reproduction_package_missing"
     artifact["source_acquisition_controller_detail"] = "Ding-specific C_src(T), mode-resolved c_mu, uncertainty/convergence, and the Phi energy anchor remain open; the independent mp-48 c_v route is comparator-only and closed for lane."
     artifact["claim_promotion"] = False
+    previous_eos = previous_gate.get("verification_status", {}).get(
+        "eos_transport_kms_entropy", {}
+    )
+    current_eos = artifact["verification_status"]["eos_transport_kms_entropy"]
+    for metadata_key in (
+        "controlling_blocker_detail",
+        "named_collective_response_eos_audit",
+        "named_collective_response_eos_physical_provenance",
+        "named_collective_response_eos_status",
+    ):
+        if metadata_key not in current_eos and metadata_key in previous_eos:
+            current_eos[metadata_key] = previous_eos[metadata_key]
     OUT.parent.mkdir(parents=True, exist_ok=True)
     OUT.write_text(json.dumps(artifact, indent=2, ensure_ascii=True) + "\n", encoding="utf-8")
     print(

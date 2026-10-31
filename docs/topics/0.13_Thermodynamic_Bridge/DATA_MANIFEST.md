@@ -8,6 +8,14 @@
 - Role: source-state spectral deformation constraint, not physical UET calibration, TTG source admission, or permission to use a holdout. Original fit coefficients stay labelled as source-reported fits.
 - Consumer: docs/scripts/audit/audit_topic13_raman_deformation_constraint.py; emits evidence/row hashes and keeps physical_D_tensor and alpha_Phi_K absent. Fixed-frequency oscillator screening is separate from material observations.
 
+## Sun 2015 Graphite Raman Strain DFT Comparator (2026-09-25)
+
+- Source: Sun, Holec and Dunstan, Physical Review B 92, 094108 (2015), DOI 10.1103/PhysRevB.92.094108; public author-version locator arXiv:1502.04323v3. No local article copy is redistributed.
+- Package: Data/03_Research/sun_2015_graphite_raman_strain_model_source_package.json; manually transcribed E2g(2) DFT values with equation/section locators. The paper reports no uncertainty for gamma-prime or model error.
+- State and preprocessing: 0 K computational graphite compared conditionally with 300 K Hanfland measurements; no digitization, refit, interpolation, or target-curve selection. State equivalence to TTG is not established.
+- Role: published DFT model comparator only, not an independent axial-strain measurement, UET D tensor, alpha_Phi_K calibration, or TTG input.
+- Consumer: docs/scripts/audit/audit_topic13_hanfland_sun2015_reconciliation.py; artifact docs/core/07_artifacts/topic13/t13_hanfland_sun2015_reconciliation.json, SHA-256 BC4E0671129ABC7291B161503FE857D74C1969B6F41350A2816067345090FFAD.
+
 ## Current Core-Ready Data Projection (2026-08-28)
 
 - He-4 SVP equilibrium anchor: source-locked density/superfluid-fraction grid with row identity and hashes; calibration role only, not holdout.
@@ -488,7 +496,7 @@ CLAIM_BOUNDARY: This closes only a public-source availability and scoped identif
 ## Action-Derived Finite-Temperature O(2) Hartree Self-Energy (2026-08-13)
 
 MAJOR_RESULT_CLOSURE: `CLOSED_FOR_LANE` for `T13_UET_O2_FINITE_T_SELF_ENERGY_HARTREE_LANE`.
-Source/data role: no external source rows. This is an action-derived natural-unit calculation from `docs/core/uet_o2_finite_temperature_self_energy.py` and the existing O(2) finite-density action configuration.
+Source/data role: no external source rows. This is an action-derived natural-unit calculation from `docs/core/02_equations/o2/uet_o2_finite_temperature_self_energy.py` and the existing O(2) finite-density action configuration.
 Audit artifact: `docs/core/07_artifacts/topic13/t13_uet_o2_finite_temperature_self_energy_audit.json` (SHA-256 `ACB61CB97087F66C97FC5E278F183F9CF6262FA633596C86DD910C190B545B18`).
 Required fields represented: declared equations, natural-unit lane, derivation class, observable, approximation boundary, convergence records, finite-difference check, analytic weak-coupling witness, source hashes, no-fit/no-holdout policy, and claim boundary.
 WHAT_IS_ACTUALLY_CLOSED: Hartree thermal tadpole, self-consistent normal-branch mass gap, and implicit response derivative with quadrature/cutoff convergence.
@@ -502,7 +510,7 @@ CLAIM_BOUNDARY: Natural-unit O(2) Hartree lane only. It is not a physical transp
 ## Hartree Equilibrium Thermodynamic Consistency (2026-08-13)
 
 MAJOR_RESULT_CLOSURE: `CLOSED_FOR_LANE` for `T13_UET_O2_HARTREE_EQUILIBRIUM_THERMODYNAMIC_LANE`.
-Source/data role: no external source rows. This is an action-derived natural-unit equilibrium calculation from `docs/core/uet_o2_finite_temperature_hartree_thermodynamics.py`, the Hartree self-energy lane, and the declared O(2) finite-density action configuration.
+Source/data role: no external source rows. This is an action-derived natural-unit equilibrium calculation from `docs/core/02_equations/o2/uet_o2_finite_temperature_hartree_thermodynamics.py`, the Hartree self-energy lane, and the declared O(2) finite-density action configuration.
 Audit artifact: `docs/core/07_artifacts/topic13/t13_uet_o2_hartree_thermodynamic_consistency_audit.json` (SHA-256 `C0845D9D7C088B6D5D16623376C215B00AAE2810B6524A1ECFE0D1564016B443`).
 Required fields represented: stationary functional, ontology, natural units, derivation class, equilibrium observables, approximation boundary, convergence records, pressure-derivative identities, Maxwell check, source hashes, no-fit/no-holdout policy, and claim boundary.
 WHAT_IS_ACTUALLY_CLOSED: Stationary Hartree pressure, charge, entropy, and energy identities on the homogeneous normal branch.
@@ -720,8 +728,8 @@ NEXT_ACTION: Obtain a state-matched physical normal-flow/retarded Kubo record wi
 CLAIM_BOUNDARY: Internal action-derived thermodynamic lane only; not a physical normal-fluid measurement, SI thermal observable, TTG prediction, external validation, or Full Topic 13 closure.
 
 EVIDENCE:
-- `docs/core/uet_o2_finite_temperature_normal_component.py`
-- `docs/core/uet_o2_finite_temperature_two_fluid_response.py`
+- `docs/core/02_equations/o2/uet_o2_finite_temperature_normal_component.py`
+- `docs/core/02_equations/o2/uet_o2_finite_temperature_two_fluid_response.py`
 - `docs/core/07_artifacts/topic13/t13_uet_o2_thermodynamic_normal_component_audit.json`
 - `docs/scripts/audit/audit_topic13_uet_o2_thermodynamic_normal_component.py`
 - `docs/core/test/test_topic13_uet_o2_thermodynamic_normal_component.py`
@@ -741,7 +749,7 @@ NEXT_ACTION: Complete microscopic condensed-channel and continuum matching, or s
 CLAIM_BOUNDARY: Internal natural-unit kernel only; not physical Kubo, SI calibration, TTG prediction, or Full Topic 13 closure.
 
 EVIDENCE:
-- `docs/core/uet_o2_condensed_relative_flow_collision.py` (SHA-256 `d311f7106787e92638ac6a8d3d48a5b4d0ea6dbd688d83a52b2be824dff82d21`)
+- `docs/core/02_equations/o2/uet_o2_condensed_relative_flow_collision.py` (SHA-256 `d311f7106787e92638ac6a8d3d48a5b4d0ea6dbd688d83a52b2be824dff82d21`)
 - `docs/core/07_artifacts/topic13/t13_uet_o2_condensed_relative_flow_collision_audit.json` (SHA-256 `87baac fcca4d df10be4c17d42c14a8ed98780eed340a0984294c3041bd18a369`)
 
 ## Continuum Relative-Flow Kubo Lane (2026-08-18)
@@ -757,7 +765,7 @@ VERIFICATION: Audit has zero failed checks; no source rows, target data, fitting
 CONTROLLING_BLOCKER: `loop_renormalized_condensed_vertex_and_physical_kubo_match_missing`.
 NEXT_ACTION: Add a source-locked or microscopically derived retarded correlator with state, units, uncertainty, locator, and hash; retain this lane as internal action-derived evidence.
 CLAIM_BOUNDARY: No external data provenance is claimed by this lane, and no physical transport coefficient or `alpha_Phi_K` is emitted.
-EVIDENCE_PATHS: `docs/core/uet_o2_continuum_relative_flow_kubo.py`; `docs/core/07_artifacts/topic13/t13_uet_o2_continuum_relative_flow_kubo_audit.json`; `docs/core/test/test_topic13_uet_o2_continuum_relative_flow_kubo.py`.
+EVIDENCE_PATHS: `docs/core/02_equations/o2/uet_o2_continuum_relative_flow_kubo.py`; `docs/core/07_artifacts/topic13/t13_uet_o2_continuum_relative_flow_kubo_audit.json`; `docs/core/test/test_topic13_uet_o2_continuum_relative_flow_kubo.py`.
 EVIDENCE_HASHES: module `70850509063f5adf4493a21ceea420c9f414e1605eea7220a00ce3549d0bca30`; audit `76b46ffe55399fa03b7ae0309352b1df5e6afb494397cecfa4b82a87e0d78813`.
 ## T13-114 - Condensed Loop-Renormalized Contact Vertex
 
@@ -766,7 +774,7 @@ WHAT_IS_ACTUALLY_CLOSED: An action-derived finite thermal loop/contact-channel r
 WHAT_REMAINS_OPEN: There is no external numeric source row, independent physical vertex/Kubo anchor, SI unit conversion, source-grade physical uncertainty, `alpha_Phi_K`, or Ding `C_src` payload in this lane.
 DEPENDENCY_UNLOCKED: Internal lane only; no physical Kubo, calibration, Core, Gravity, or external-validation dependency.
 STATUS: `PASS_ACTION_DERIVED_CONDENSED_LOOP_RENORMALIZED_CONTACT_VERTEX_LANE`.
-WHAT_CHANGED: Added `docs/core/uet_o2_condensed_loop_renormalized_vertex.py`, its audit artifact, focused test, and equation-registry addendum. The declared target/reference states and preprocessing are in the audit; no synthetic replacement data are used.
+WHAT_CHANGED: Added `docs/core/02_equations/o2/uet_o2_condensed_loop_renormalized_vertex.py`, its audit artifact, focused test, and equation-registry addendum. The declared target/reference states and preprocessing are in the audit; no synthetic replacement data are used.
 EQUATION_OR_MAPPING: `B_ab^R=B_ab^th(T,mu,Phi)-B_ab^th(T,mu,Phi_ref)`; `lambda_ab^R=lambda/(1+lambda*B_ab^R)`; `K_rel^natural=lim_(omega->0) Re G_R^rel(omega)`.
 VERIFICATION: Code and artifact hashes are recorded in `RESEARCH_WAVE_2026-08-20_CONDENSED_LOOP_RENORMALIZED_VERTEX.md`; numerical uncertainty is quadrature-only (`3.500054507989025e-06`). Holdout access audit remains clean.
 CONTROLLING_BLOCKER: `physical_Kubo_coefficient_record_missing` and `independent_physical_condensed_vertex_anchor_missing`.
@@ -788,7 +796,7 @@ CONTROLLING_BLOCKER: `full_finite_temperature_retarded_1PI_self_energy_missing`,
 NEXT_ACTION: Derive the full finite-temperature condensed retarded self-energy and all-channel SK/KMS kernel, or source-lock an independent physical condensed vertex anchor. Keep this coefficient scoped to the declared natural-unit lane and do not promote it to SI or Full Topic 13.
 CLAIM_BOUNDARY: Action-derived declared-channel result only; not an external measurement, complete interacting 1PI theory, SI thermal transport, alpha_Phi_K calibration, TTG prediction, external validation, or global UET closure.
 DATA_ROLE: `DERIVED_INTERNAL_NATURAL_UNIT`; the admitted coefficient is not a calibration, training, comparison, or holdout record. No external numeric source was consumed by these two lanes.
-EVIDENCE_PATHS: `docs/core/uet_o2_condensed_relative_flow_kubo_admission.py`; `docs/core/07_artifacts/topic13/t13_uet_o2_condensed_relative_flow_kubo_admission_audit.json`; `docs/core/uet_o2_condensed_sk_kms_kubo_match.py`; `docs/core/07_artifacts/topic13/t13_uet_o2_condensed_sk_kms_kubo_match_audit.json`.
+EVIDENCE_PATHS: `docs/core/02_equations/o2/uet_o2_condensed_relative_flow_kubo_admission.py`; `docs/core/07_artifacts/topic13/t13_uet_o2_condensed_relative_flow_kubo_admission_audit.json`; `docs/core/02_equations/o2/uet_o2_condensed_sk_kms_kubo_match.py`; `docs/core/07_artifacts/topic13/t13_uet_o2_condensed_sk_kms_kubo_match_audit.json`.
 EVIDENCE_HASHES: Kubo module `92dea65cf85d2fc2054e4f5c0b293712d2ea0b8b0df65ffa5e4b95de9dd2df67`; Kubo audit `5e909ff97aa0476619235460c012313f36b6065e642bbe4f7fba63f36bd8c7f6`; SK/KMS module `ab6fabaca6d2a19f8185535928638ecf4f1581cd2ad89ada78ed89e5341aff72`; SK/KMS audit `d13d59760f9ebe0a3d2471ad984ec95c6729846d08b2b9ce011e2e8eb2fcaf1c`; registry `ae143f9bd06738ae777415b46d39752c8fbb4a96b17f31de94eac3e563a7be44`; full gate `4b69d2f13ef9827f11898edc63b254dd837943b3ccdf4b88f7fe52b2ea0d2415`; register `6d41189d970ba4b17bb889176412fc66ed4b9cbcd02a8520d014ddc61800ddb0`; dependency `83f6351dc2ccee0f3ba80a593c2081ca82e04d0b0b9d5b69ec9ad91754bfff1d`.
 ## 2026-08-20 - Declared finite-temperature retarded 1PI response grid (T13-117)
 
@@ -932,7 +940,7 @@ CONTROLLING_BLOCKER: energy_reference_and_base_Phi_normalization_provenance_miss
 NEXT_ACTION: Locate an independent coefficient/provenance record for E_ref and Phi_scale.
 CLAIM_BOUNDARY: Derived symbolic contract, not SI calibration, prediction, or full bridge closure.
 DATA_ROLE: DERIVED_SYMBOLIC_CONTRACT.
-EVIDENCE_PATHS: docs/core/thermal_covariant_action_si_conversion.py; docs/core/07_artifacts/topic13/t13_covariant_action_symbolic_si_conversion_audit.json.
+EVIDENCE_PATHS: docs/core/03_lanes/thermal/thermal_covariant_action_si_conversion.py; docs/core/07_artifacts/topic13/t13_covariant_action_symbolic_si_conversion_audit.json.
 
 ## Huberman 2019 public PBTE source boundary (2026-08-20)
 
@@ -1311,6 +1319,16 @@ The nested audit confirms that the raw package has no force-constant data, frequ
 
 Artifact: docs/core/07_artifacts/topic13/t13_nims_mp990448_phonon_source_boundary_audit.json (SHA-256 af61412589e0c39fd5ca5f548e7870c718142579a581cc8853e9102de30a4571); source package docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/nims_mdr_mp990448_phonon_source_package.json (SHA-256 79b6a25119b334a449686c9c5dcb356901390375bba71464c62dda338838b47d). This closes only a source-payload boundary; it does not supply Ding C_src, an independent alpha, or Full Topic 13 closure.
 
+## NIMS MP-990448 AA-Like Stack Shear-Mode Diagnostic (2026-09-27)
+
+The deposited Phonopy YAML identifies a two-carbon P6/mmm (No. 191) cell whose basis atoms share fractional c-coordinate zero. Periodic repetition gives an AA-like in-plane registry. This is structurally distinct from the IUPAC stable hexagonal graphite reference, which is ABAB-stacked P6_3/mmc (No. 194); this is a crystallographic comparison, not a same-method phonon benchmark.
+
+At q=(0,0,1/2), the harmonic calculation reports two negative frequencies near -0.76589 THz with basal-plane polarization. The negative-frequency spread across five fixed force-constant/symmetrization variants is 3.0471838e-7 THz. A full symmetry-unreduced 12x12x6 mesh locates the minimum at the same zone boundary. Translation/permutation symmetrization reduces the acoustic sum-rule residual from 7.1092e-8 to 6.3158e-14 eV/angstrom^2 without removing the mode. These results do not quantify electronic-structure or anharmonic uncertainty and do not establish instability of natural ABAB graphite.
+
+Artifact: docs/core/07_artifacts/topic13/t13_nims_mp990448_aa_stack_shear_instability.json (SHA-256 6389321FDD634A6A9E36A228921BE1FD4A790B462D143998403454422F65434B); implementation SHA-256 95FAA276A5DD98351401BCB4B106299990D8AA001ABB87AEBDF4A52EDACADD22; focused regression SHA-256 1D22F36A2CD763500237AC1CA8394063650D7E00472F650213DE13894D1DD82B (4/4). The source-route projection now rejects MP-990448 as Ding PBTE evidence while retaining it as a scoped harmonic comparator. The closure register and dependency hash are synchronized; Full Topic 13 remains BLOCKED_OPEN_T13_FULL_BRIDGE and no dependency is unlocked.
+
+2026-09-27 control-plane update: the major-result closure register now contains this lane, and the NIMS source-priority projection reflects the harmonic reanalysis. This NIMS lane itself opens no dependency. Separately, the registered O(2)/He-4 Core-ready result allows Core curved 3+1 work to proceed; the curved parent remains PARTIAL and Gravity remains blocked. The earlier pending-sync note in the force-set entry is superseded.
+
 ## NIMS MP-990448 Legacy Route Alias (2026-08-23)
 
 The phononDB mapping in atztogo/phonondb points material 990448 to https://mdr.nims.go.jp/download_all/wd3761563.zip. The downloaded legacy archive is byte-identical to the current NIMS MP-990448 archive: SHA-256 eea6ca7569c9442754ce5492ddb2f545186f97ad8b82b209d95f1a80b0158767, size 133375 bytes. This closes the route-equivalence question only; it does not add machine-readable force constants, a frequency mesh, thermal-property rows, C_src, or alpha_Phi_K.
@@ -1412,3 +1430,13 @@ CONTROLLING_BLOCKER: `same_specimen_state_isothermal_stiffness_alpha_tensor_and_
 NEXT_ACTION: Acquire one permissioned tensor package or a documented conversion/material map with covariance; do not combine current comparator rows by assumption.
 
 CLAIM_BOUNDARY: Tensor source-role boundary only; not a graphite material model, Ding acceptance, UET calibration, TTG prediction or Full Topic 13 closure.
+
+## NIMS MP-990448 Force-Displacement Reanalysis (2026-09-27)
+
+The NIMS archive at `Data/03_Research/raw/nims_mdr_mp990448_graphite_phonon_dataset.zip` is locked at SHA-256 `eea6ca7569c9442754ce5492ddb2f545186f97ad8b82b209d95f1a80b0158767`; the `phonopy_params.yaml.xz` member is locked at SHA-256 `92bfbcaa4cec51cbdf85c0d5d167bb8a57718e4d5074ac100378250257007a70`. The public record identifies C / P6/mmm, materials id 990448, NIMS as publisher, and CC BY 4.0. The two deposited displacement-force rows are identified by displaced atom, displacement vector, force-array dimensions, and normalized force-array hash in the generated artifact.
+
+Using the bundled Phonopy 4.4.0 runtime, the artifact reconstructs finite harmonic force constants with the default and traditional calculators and emits `Cv` plus a primitive-volume-derived volumetric candidate for three gamma-centered q meshes and temperatures 200, 295.15, and 300 K. At 295.15 K on 12x12x6, the results are `Cv=707.192/707.993 J kg^-1 K^-1` and `C_src=1.425779e6/1.427394e6 J m^-3 K^-1`; the 10-to-12 mesh changes are 0.300%/0.217%. No preregistered convergence tolerance or source uncertainty is claimed.
+
+The minimum frequency is approximately -0.766 THz near Gamma-A. With explicit `CUTOFF_FREQUENCY=0.0` and `PRETEND_REAL=false`, negative modes are omitted rather than converted to real frequencies. This is a conditional harmonic comparator, not stable-phase acceptance, Ding-equivalent data, or a PBTE/TTG response. The prior 2026-08-23 payload inventory remains correct about the absence of precomputed force constants and numeric thermal rows; its conclusion that numeric harmonic reanalysis was unavailable is superseded.
+
+Artifact: `docs/core/07_artifacts/topic13/t13_nims_mp990448_force_displacement_reanalysis.json` (SHA-256 `7f9bcc88e1f32919392b7221836ebe2c8c90d008f3757b06cbe8bff3636e7ba8`; reanalysis script SHA-256 `53d271a458e3cba425d13d315a8f1836285305e56403d5b6929bb75233db1171`). It is linked to the source archive, Phonopy method documentation, and a non-equivalent BIPM `c_p` comparator. The BIPM value is not used for calibration. `alpha_Phi_K`, Ding-compatible `C_src` with source-grade uncertainty, material-state mapping, and physical transport/KMS/entropy remain open; Xie 2026 remains untouched. Follow-on structural-diagnostic work synchronized the major-result register and NIMS source-priority projection; the aggregate Full Topic 13 gate remains blocked.

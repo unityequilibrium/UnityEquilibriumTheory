@@ -55,7 +55,7 @@ if str(project_root) not in sys.path:
     sys.path.insert(0, str(project_root))
 
 try:
-    from docs.core.uet_glass_box import UETPathManager
+    from docs.scripts.core.runners.uet_glass_box import UETPathManager
 
     # Load References (Topic 0.26)
     ref_path = script_path.parents[2] / "Ref" / "REFERENCES.py"

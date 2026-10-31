@@ -60,14 +60,14 @@ try:
 
     # Import Core Utilities
     # The engine module typically imports UETPathManager, but to be safe we import from core
-    core_module = importlib.import_module("docs.core.uet_glass_box")
+    core_module = importlib.import_module("docs.scripts.core.runners.uet_glass_box")
     UETPathManager = core_module.UETPathManager
 
 except ImportError as e:
     print(f"CRITICAL IMPORT ERROR: {e}")
     # Fallback to direct import if docs is in path
     try:
-        from docs.core.uet_glass_box import UETPathManager
+        from docs.scripts.core.runners.uet_glass_box import UETPathManager
         from docs.topics.fluid_dynamics_chaos.code.engine.engine_uet_2d import (
             UETFluidSolver,
             UETParameters,

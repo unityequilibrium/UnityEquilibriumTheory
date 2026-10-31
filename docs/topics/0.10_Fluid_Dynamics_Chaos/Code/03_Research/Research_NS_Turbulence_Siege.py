@@ -52,7 +52,7 @@ root_dir = current_path.parents[5]
 if str(root_dir) not in sys.path:
     sys.path.append(str(root_dir))
 
-from docs.core.uet_glass_box import UETPathManager, UETMetricLogger
+from docs.scripts.core.runners.uet_glass_box import UETPathManager, UETMetricLogger
 from Engine_UET_3D import UETFluid3D
 
 

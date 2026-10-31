@@ -41,10 +41,10 @@ from typing import Dict, Any
 
 
 # --- UET CORE IMPORTS ---
-from docs.core.uet_base_solver import UETBaseSolver
-from docs.core.uet_data_orchestrator import orchestrator
+from docs.scripts.core.runners.uet_base_solver import UETBaseSolver
+from docs.scripts.core.data.uet_data_orchestrator import orchestrator
 from docs.core.uet_parameters import get_params
-from docs.core.scientific_validation import ScientificValidator
+from docs.scripts.core.audit.scientific_validation import ScientificValidator
 from docs import ROOT_PATH
 
 root_path = ROOT_PATH

@@ -290,3 +290,187 @@ result, not a mass derivation or galaxy-ready observable.
 ## 2026-08-08 dependency update - synthetic SI 3D density operator
 
 The C-density edge now has a checked synthetic 3D measurement/operator contract: `rho_3D=A_m*rho_hat/(L_x L_y L_z)` in `kg/m^3`, with finite-volume integral closure and explicit source metadata. This closes a unit/operator bookkeeping layer only. The shape is not derived from `C`, `A_m` is an explicit source input, and external source provenance, calibration, propagated uncertainty, and holdout remain open. The galaxy/dark-matter edges therefore remain blocked.
+
+## Latest plan update - 2026-09-25 Core GH boundary-characteristic preflight
+
+The bounded Topic 13 He-4/O(2) result is already integrated as
+`T13_FULL_THERMODYNAMIC_BRIDGE_CORE_READY / CLOSED_FOR_CORE` and unlocks work
+on the curved 3+1 parent. This does not close the separate graphite TTG
+aggregate: graphite `C_src(T)`, independent `alpha_Phi_K`, dimensional
+`Phi`-to-thermal mapping, and source/uncertainty requirements remain open.
+
+The new
+`CORE_CURVED_3P1_GH_BOUNDARY_CHARACTERISTIC_CLASSIFICATION` result is
+`CLOSED_FOR_LANE` for source-matched incoming/outgoing/glancing incidence and
+the frozen-principal energy-flux sign in the local GH block. It includes 28
+direction/normal-shift cases, including the sonic edges. It is a boundary
+design preflight only: no constraint-preserving operator or non-periodic
+evolution is implemented.
+
+`CORE_CURVED_3P1_OBSERVABLE_PARENT_READY` remains `PARTIAL`. Its controlling
+blocker is still
+`curved_3p1_constraint_preserving_boundaries_and_dimensional_observable_mapping_missing`.
+The next work is to implement separately specified constraint, physical
+radiation, and gauge boundary conditions, then test discrete constraint
+propagation and boundary convergence; dimensional gravitational-observable
+mapping remains a separate gate. Gravity, constitutive transport, and Galaxy
+remain blocked.
+
+Rinne's frozen-coefficient Fourier-Laplace boundary-stability analysis applies
+to its declared GH formulation and subluminal normal-shift regime; the local
+audit does not inherit that proof for its own discretization
+([Rinne 2006](https://arxiv.org/abs/gr-qc/0606053)). Constraint consistency
+alone is not a sufficient well-posedness criterion for arbitrary formulation
+parameters ([Calabrese and Sarbach 2003](https://arxiv.org/abs/gr-qc/0303040)).
+
+## Latest plan update - 2026-09-25 GH boundary projector decomposition
+
+`CORE_CURVED_3P1_GH_BOUNDARY_PROJECTOR_DECOMPOSITION` is
+`CLOSED_FOR_LANE` for the local symmetric-tensor projector algebra: the incoming
+GH tensor splits into constraint, physical-radiation, and gauge sectors with
+ranks 4/2/4. The decomposition is source-matched and verified across 26 face
+normals; its maximum algebraic residual is `3.33e-16`.
+
+This does not close CPBC. For `-alpha < beta_n <= 0`, the constraint and
+physical sectors require differential boundary conditions, while the gauge
+sector receives algebraic boundary data. If `beta_n > 0`, additional incoming
+`u2_A` modes require a separate constraint-compatible treatment. No such
+operator is yet applied to the periodic GH solver.
+
+Next: implement the differential residuals and gauge-data map on a non-periodic
+boundary discretization, verify the constraint subsystem and boundary energy
+estimate, and run spatial/temporal boundary convergence including box edges.
+The parent remains `PARTIAL` because constraint-preserving boundaries and the
+dimensional gravitational-observable map remain open; Gravity remains blocked.
+
+## Latest plan update - 2026-09-25 GH differential boundary residuals
+
+`CORE_CURVED_3P1_GH_LINEAR_DIFFERENTIAL_BOUNDARY_RESIDUALS` is now
+`CLOSED_FOR_LANE` for the source-matched linearized/frozen-background residual
+maps. It evaluates Rinne's incoming subsidiary-constraint and Weyl/Psi_0
+conditions, the algebraic gauge-data map, and the positive-normal-shift
+`u2_A` definition-curl residual. The normal maps have ranks 4 and 2 and their
+kernels match the source-defined constraint and physical projectors. Boundary
+mode counting closes at the symbol level: 10/10 conditions for nonpositive
+normal shift and 30/30 for positive subluminal shift; the added `u2_A`
+normal-derivative map has rank 20.
+
+The residual evaluators are not wired into a time-evolution boundary scheme.
+The Core parent remains `PARTIAL`: nonlinear variable-coefficient CPBC,
+non-periodic evolution and energy/stability/convergence checks, edge/corner
+compatibility, and dimensional observables remain open. Gravity,
+constitutive transport, and Galaxy remain blocked. The new result unlocks
+verification work on the boundary implementation only.
+
+## Latest plan update - 2026-09-25 linearized GW detector-response measurement lane
+
+`CORE_CURVED_3P1_GW_DETECTOR_RESPONSE_LANE` is `CLOSED_FOR_LANE` for a bounded
+standard-GR measurement operator: one linear TT plane-wave Fourier mode is
+mapped through the source-matched finite-frequency equal-arm, single-round-trip
+interferometer response to dimensionless strain and equivalent SI length. Ten
+analytic controls and 13 focused regression tests pass; the audit consumes no
+detector data, holdout, fitted parameter, or UET-specific metric prediction.
+
+This closes only the ideal measurement-operator sublane. It does not provide GH
+wave-zone extraction, a time-series Fourier map, detector calibration/noise,
+nonlinear or strong-field observables, or an applied CPBC evolution. The Core
+curved 3+1 parent remains `PARTIAL`; its general dimensional-observable map and
+constraint-preserving non-periodic boundary requirements remain open. Gravity,
+constitutive transport, and Galaxy remain blocked. The new lane is recorded in
+the result register and progress view but is not a dependency that unlocks any
+downstream topic.
+
+## Latest plan update - 2026-09-25 evolved GH harmonic gauge-wave TT-null control
+
+`CORE_CURVED_3P1_GH_GAUGE_WAVE_TT_NULL_CONTROL` is `CLOSED_FOR_LANE` as a
+false-positive exclusion test. The existing periodic vacuum GH harmonic
+gauge-wave control evolves for four RK4 steps to coordinate time `0.02`; its
+raw spatial metric perturbation is nonzero (`L_inf=0.049623581088992896`), but
+the TT projection along its longitudinal propagation direction and the ideal
+detector strain are both exactly zero. No projection, filtering, clipping, or
+fit is used.
+
+This is not a waveform-extraction result. The current evolution API returns a
+final state and scalar constraint diagnostics, not metric snapshots or a
+worldtube time series. Literature route screening finds distinct future
+requirements: gauge-invariant RWZ metric extraction uses a spherical background
+and extraction-sphere data ([Fontbuté et al.](https://arxiv.org/abs/2508.03799));
+finite-radius `Psi_4` extraction needs curvature/background/radius controls
+([Nakano et al.](https://arxiv.org/abs/1503.00718)); Cauchy-characteristic
+extraction needs worldtube data and characteristic evolution to null infinity
+([Reisswig et al.](https://arxiv.org/abs/0912.1285)). None is implemented here.
+
+The Core parent remains `PARTIAL`: CPBC and a general dimensional-observable
+map remain open, and Gravity, constitutive transport, and Galaxy remain blocked.
+This negative-control result is indexed for progress visibility only and is
+not a dependency-unlocking edge.
+
+## Full-U1 maximally dissipative SAT control - 2026-09-25
+
+`CORE_CURVED_3P1_GH_MAX_DISSIPATIVE_SAT_CONTROL` closes a separate full-u1
+standard-GR control lane: the LGL-SBP semidiscrete energy balance has a bounded
+lower-order Gronwall term and nonnegative incoming-boundary dissipation, while
+the definition constraint obeys `C_dot=-gamma2*C`. This is direct
+maximally-dissipative incoming-characteristic data, not the differential
+constraint/Weyl conditions of Rinne CPBC. The separate strong-Rinne comparison
+fails on tested LGL orders 8/12/16 (pulse ratios `3.529/1.267/1.833`, reduction
+residuals `0.249/0.384/0.00404`, and eight resolved positive modes at orders
+12/16); this is finite-grid evidence, not a continuum no-go. The result adds no
+dependency-unlock edge; existing Core-parent work authorization is unchanged.
+The actual parent remains `PARTIAL`, and Gravity remains blocked.
+
+## Latest plan update - 2026-09-25 reduced-TT SBP-SAT energy comparator
+
+`CORE_CURVED_3P1_GH_REDUCED_TT_SBP_SAT_COMPARATOR` is `CLOSED_FOR_LANE` for a
+second-order standard-GR TT comparator. With `G_A=D(h_A)` reconstructed
+algebraically, the LGL diagonal-norm SBP-SAT operator satisfies
+`dE/dt=-sum_A(Pi_A,L^2+Pi_A,R^2)<=0`; its RHS agrees exactly with the existing
+first-order TT SBP-SAT evolution on the reduction subspace. Both-direction
+packet, semidiscrete spectrum, SBP-defect decomposition, and RK4 temporal-order
+checks pass at the declared settings. The tested strong differentiated-target
+replacement has positive energy-growth directions on both tested norm families.
+
+This is a TT-sector comparator only. It does not establish a full first-order
+GH constraint/physical/gauge CPBC estimate, spatial/continuum convergence,
+positive-shift `u2_A`, corners, variable coefficients, nonlinear evolution, or
+general observables. The Core curved 3+1 parent remains `PARTIAL`; Gravity,
+constitutive transport, and Galaxy remain blocked. The result is visible in the
+parent gate, closure register, and progress view, but unlocks no dependency.
+
+## 2026-09-26 Core Rinne source/state norm interface
+
+`CORE_CURVED_3P1_GH_RINNE_NORM_INTERFACE` is `CLOSED_FOR_LANE` for the
+finite-dimensional coordinate and norm conversion used by the source-matched
+negative-normal-shift boundary symbol. The 30 boundary channels and 40 state
+components are expressed in independent tensor-component coordinates; the
+equation ordering differs only by a norm-preserving permutation. The normalized
+mode-column transform cancels from the state transfer operator. Independent-
+component Euclidean and full symmetric-tensor Frobenius norms are related by
+fixed Gram matrices with eigenvalues in `[1, 2]`, so the existing low-frequency
+bound transfers with at most a `sqrt(2)` factor.
+
+This does not establish the transfer bound on the imaginary-frequency
+boundary, the full closed right half-plane, or the high-frequency
+compactification. The prior positive-real bound remains extremely loose and is
+limited to `beta<0`, `zeta>0`, `max(abs(beta),zeta)<=1e-2`, with tangential
+frequency normalized to one. The Core curved 3+1 parent remains `PARTIAL`;
+Gravity, constitutive transport, and Galaxy remain blocked. No dependency is
+unlocked by this norm-interface result.
+
+The complex-frequency endpoint screen at
+curved_3p1_gh_rinne_complex_frequency_screen.json now checks 60 approaches to
+zeta=0, 30 glancing approaches, 45 high-frequency points, and 20 complex
+Jordan-chart approaches for beta={-0.1,-0.5,-0.9}. It verifies the generic
+source determinant against Eq. (123), the corrected exact Jordan determinant,
+and finite-grid convergence to the candidate ||T_infinity||_2=1-beta. An
+additional exploratory 120 high-frequency cases cover 12 fixed beta values from -0.01 to
+-0.99, five complex directions, and radii 1e3 and 1e5; the maximum norm error
+at 1e5 is about 1.15e-9. This narrows diagnostic uncertainty but does not
+constitute preregistered or independent validation, because this grid and its
+tolerance followed a preliminary diagnostic preview. A separate
+high-frequency endpoint artifact now constructs the exact matrix limit
+`T_infinity=W_infinity*C_infinity^-1`; its determinant matches the analytic
+Eq. (123) asymptote and is nonzero for each fixed `-1<beta<0`. The numerical
+candidate `||T_infinity||_2=1-beta` is not yet a proved norm identity. The
+zero-frequency extension and continuous finite-frequency transfer bound stay
+open; the Core parent and downstream dependencies are unchanged.

@@ -1,0 +1,670 @@
+{
+  "schema_version": "core-curved-3p1-gh-rinne-joint-real-glancing-scale-v1",
+  "artifact": "curved_3p1_gh_rinne_joint_real_glancing_scale",
+  "generated_at": "2026-09-25T10:39:49+00:00",
+  "major_result_id": "CORE_CURVED_3P1_GH_RINNE_JOINT_REAL_GLANCING_RESCALED_PATH_SCREEN",
+  "major_result": {
+    "major_result_id": "CORE_CURVED_3P1_GH_RINNE_JOINT_REAL_GLANCING_RESCALED_PATH_SCREEN",
+    "topic": "core_curved_3p1",
+    "closure_level": "PARTIAL",
+    "what_is_closed": [
+      "The determinant growth near beta=0,zeta=0 is separated into explicit source-row scale factors and a rescaled boundary matrix on the declared positive-real generic, exact-Jordan, and near-Jordan paths.",
+      "The apparent generic-basis singularity at zeta=-beta is treated with the ODE-consistent Jordan chain; all sampled rescaled matrices remain full rank with finite inverse norms."
+    ],
+    "what_remains_open": [
+      "The path grid is not a proof of a common positive singular-value floor over every beta/zeta ratio or the complex closed right half-plane; a uniform chart-compatible Kreiss estimate remains unproved.",
+      "The source mode-amplitude norm and normalization across generic/Jordan charts, imaginary-frequency glancing, high frequency, and full variable-coefficient CPBC evolution remain open."
+    ],
+    "dependency_unlocked": "none; Core curved 3+1 remains PARTIAL and Gravity remains blocked",
+    "equation_or_mapping": {
+      "source_matrix_factorization": "S=D(beta,zeta)*C; inverse C^-1=S^-1*D",
+      "row_scaling": "D=diag(zeta*I6, I4, min(abs(beta),zeta)*I10, abs(beta)*I10)",
+      "curl_block_identity": "beta*E=diag(((zeta^2-beta^2)/(zeta*sqrt(zeta^2+beta^2)))*I10, i*I10)",
+      "bounded_scaled_curl_factors": "min(abs(beta),zeta)*E_xy and abs(beta)*E_xz are bounded on positive-real beta<0,zeta>0 away from the coalesced generic basis; use the corrected Jordan/confluent chart at zeta=-beta",
+      "generic_fixed_ratio_determinant_limit": "abs(det S)->(1/256)*[min(1,r)*abs(1-r^2)/(r*sqrt(1+r^2))]^10, r=abs(beta)/zeta != 1; it tends to 1/256 as r->0 or infinity, while the generic eigenbasis determinant vanishes at r=1 because its columns coalesce",
+      "exact_jordan_determinant": "abs(det C_J)=4/(abs(beta)^26*(1+beta^2)^5); at zeta=abs(beta), abs(det S)=4/(1+beta^2)^5 -> 4 in the source ODE-consistent Jordan chart",
+      "claim_boundary": "finite positive-real path screen and exact row-factor analysis only; no uniform complex-frequency Kreiss estimate or full parent closure"
+    },
+    "units": "Dimensionless frozen-coefficient Fourier-Laplace variables with tangential omega=1.",
+    "derivation_class": "exact row-factor algebra and corrected Jordan determinant, cross-checked by finite positive-real path matrices",
+    "observable": "rescaled 30x30 source boundary matrix singular values, determinant, and inverse norm in separately declared mode-basis charts",
+    "data_role": "primary-literature formula reproduction and internal numerical path diagnostic; no empirical data or fitting",
+    "verification_status": "PASS_JOINT_REAL_PATH_SCREEN_ONLY",
+    "claim_boundary": "finite positive-real path screen and exact row-factor analysis only; no uniform complex-frequency Kreiss estimate or full parent closure"
+  },
+  "closure_level": "PARTIAL",
+  "MAJOR_RESULT_CLOSURE": "PARTIAL",
+  "WHAT_IS_ACTUALLY_CLOSED": [
+    "The determinant growth near beta=0,zeta=0 is separated into explicit source-row scale factors and a rescaled boundary matrix on the declared positive-real generic, exact-Jordan, and near-Jordan paths.",
+    "The apparent generic-basis singularity at zeta=-beta is treated with the ODE-consistent Jordan chain; all sampled rescaled matrices remain full rank with finite inverse norms."
+  ],
+  "WHAT_REMAINS_OPEN": [
+    "The path grid is not a proof of a common positive singular-value floor over every beta/zeta ratio or the complex closed right half-plane; a uniform chart-compatible Kreiss estimate remains unproved.",
+    "The source mode-amplitude norm and normalization across generic/Jordan charts, imaginary-frequency glancing, high frequency, and full variable-coefficient CPBC evolution remain open."
+  ],
+  "DEPENDENCY_UNLOCKED": "none; Core curved 3+1 remains PARTIAL and Gravity remains blocked",
+  "STATUS": "PASS_JOINT_REAL_PATH_SCREEN_ONLY",
+  "EQUATION_OR_MAPPING": {
+    "source_matrix_factorization": "S=D(beta,zeta)*C; inverse C^-1=S^-1*D",
+    "row_scaling": "D=diag(zeta*I6, I4, min(abs(beta),zeta)*I10, abs(beta)*I10)",
+    "curl_block_identity": "beta*E=diag(((zeta^2-beta^2)/(zeta*sqrt(zeta^2+beta^2)))*I10, i*I10)",
+    "bounded_scaled_curl_factors": "min(abs(beta),zeta)*E_xy and abs(beta)*E_xz are bounded on positive-real beta<0,zeta>0 away from the coalesced generic basis; use the corrected Jordan/confluent chart at zeta=-beta",
+    "generic_fixed_ratio_determinant_limit": "abs(det S)->(1/256)*[min(1,r)*abs(1-r^2)/(r*sqrt(1+r^2))]^10, r=abs(beta)/zeta != 1; it tends to 1/256 as r->0 or infinity, while the generic eigenbasis determinant vanishes at r=1 because its columns coalesce",
+    "exact_jordan_determinant": "abs(det C_J)=4/(abs(beta)^26*(1+beta^2)^5); at zeta=abs(beta), abs(det S)=4/(1+beta^2)^5 -> 4 in the source ODE-consistent Jordan chart",
+    "claim_boundary": "finite positive-real path screen and exact row-factor analysis only; no uniform complex-frequency Kreiss estimate or full parent closure"
+  },
+  "VERIFICATION": {
+    "checks": {
+      "generic_path_eq123_determinants_match": true,
+      "generic_scaled_maps_full_rank_and_bounded_on_declared_paths": true,
+      "exact_jordan_chain_matches_corrected_analytic_determinant": true,
+      "near_jordan_confluent_chart_remains_full_rank": true,
+      "near_jordan_determinant_converges_to_registered_confluent_limit": true
+    },
+    "zeta_values": [
+      0.01,
+      0.001,
+      0.0001,
+      1e-05
+    ],
+    "generic_paths": [
+      {
+        "zeta": 0.01,
+        "beta": -0.1,
+        "basis_chart": "unit_generic_eigenmodes",
+        "row_scale_blocks": [
+          0.01,
+          1.0,
+          0.01,
+          0.1
+        ],
+        "scaled_sigma_min": 0.04850384646838265,
+        "scaled_sigma_max": 2.7902647329699506,
+        "scaled_inverse_norm": 20.616921601297175,
+        "raw_inverse_norm_in_declared_basis": 5.283284016770726,
+        "scaled_log_abs_determinant": -7.180696457875204,
+        "scaled_determinant_sign": {
+          "real": 1.0,
+          "imag": 0.0
+        },
+        "matrix_rank": 30,
+        "path_id": "beta=-zeta^0.5",
+        "principal_mode_residual": 1.1102230246251565e-16,
+        "eq123_scaled_logdet_abs_error": 5.3290705182007514e-14
+      },
+      {
+        "zeta": 0.001,
+        "beta": -0.03162277660168379,
+        "basis_chart": "unit_generic_eigenmodes",
+        "row_scale_blocks": [
+          0.001,
+          1.0,
+          0.001,
+          0.03162277660168379
+        ],
+        "scaled_sigma_min": 0.058549700824843474,
+        "scaled_sigma_max": 2.8195266092585296,
+        "scaled_inverse_norm": 17.079506571546574,
+        "raw_inverse_norm_in_declared_basis": 4.4321226838954315,
+        "scaled_log_abs_determinant": -6.054996243672275,
+        "scaled_determinant_sign": {
+          "real": 1.0,
+          "imag": 0.0
+        },
+        "matrix_rank": 30,
+        "path_id": "beta=-zeta^0.5",
+        "principal_mode_residual": 2.220446049250313e-16,
+        "eq123_scaled_logdet_abs_error": 3.9968028886505635e-14
+      },
+      {
+        "zeta": 0.0001,
+        "beta": -0.01,
+        "basis_chart": "unit_generic_eigenmodes",
+        "row_scale_blocks": [
+          0.0001,
+          1.0,
+          0.0001,
+          0.01
+        ],
+        "scaled_sigma_min": 0.062383369749100186,
+        "scaled_sigma_max": 2.828776644962865,
+        "scaled_inverse_norm": 16.029913164708837,
+        "raw_inverse_norm_in_declared_basis": 4.190129053175722,
+        "scaled_log_abs_determinant": -5.705572797636265,
+        "scaled_determinant_sign": {
+          "real": 1.0,
+          "imag": 0.0
+        },
+        "matrix_rank": 30,
+        "path_id": "beta=-zeta^0.5",
+        "principal_mode_residual": 1.1102230246251565e-16,
+        "eq123_scaled_logdet_abs_error": 9.947598300641403e-14
+      },
+      {
+        "zeta": 1e-05,
+        "beta": -0.0031622776601683794,
+        "basis_chart": "unit_generic_eigenmodes",
+        "row_scale_blocks": [
+          1e-05,
+          1.0,
+          1e-05,
+          0.0031622776601683794
+        ],
+        "scaled_sigma_min": 0.06367013217091867,
+        "scaled_sigma_max": 2.8317125492095534,
+        "scaled_inverse_norm": 15.70595137631503,
+        "raw_inverse_norm_in_declared_basis": 4.1160988830127945,
+        "scaled_log_abs_determinant": -5.595813739668743,
+        "scaled_determinant_sign": {
+          "real": 1.0,
+          "imag": 0.0
+        },
+        "matrix_rank": 30,
+        "path_id": "beta=-zeta^0.5",
+        "principal_mode_residual": 2.220446049250313e-16,
+        "eq123_scaled_logdet_abs_error": 1.3322676295501878e-14
+      },
+      {
+        "zeta": 0.01,
+        "beta": -0.0001,
+        "basis_chart": "unit_generic_eigenmodes",
+        "row_scale_blocks": [
+          0.01,
+          1.0,
+          0.0001,
+          0.0001
+        ],
+        "scaled_sigma_min": 0.06476226726254393,
+        "scaled_sigma_max": 2.3170477434036076,
+        "scaled_inverse_norm": 15.441090040069714,
+        "raw_inverse_norm_in_declared_basis": 3.9791535040823325,
+        "scaled_log_abs_determinant": -5.388770160738185,
+        "scaled_determinant_sign": {
+          "real": 1.0,
+          "imag": 0.0
+        },
+        "matrix_rank": 30,
+        "path_id": "beta=-zeta^2",
+        "principal_mode_residual": 5.551115123125783e-17,
+        "eq123_scaled_logdet_abs_error": 6.572520305780927e-14
+      },
+      {
+        "zeta": 0.001,
+        "beta": -1e-06,
+        "basis_chart": "unit_generic_eigenmodes",
+        "row_scale_blocks": [
+          0.001,
+          1.0,
+          1e-06,
+          1e-06
+        ],
+        "scaled_sigma_min": 0.06273237960239382,
+        "scaled_sigma_max": 2.30657870788257,
+        "scaled_inverse_norm": 15.940731187596155,
+        "raw_inverse_norm_in_declared_basis": 4.0716317725273745,
+        "scaled_log_abs_determinant": -5.5292134371512285,
+        "scaled_determinant_sign": {
+          "real": 1.0,
+          "imag": 0.0
+        },
+        "matrix_rank": 30,
+        "path_id": "beta=-zeta^2",
+        "principal_mode_residual": 1.1102230246251565e-16,
+        "eq123_scaled_logdet_abs_error": 1.509903313490213e-14
+      },
+      {
+        "zeta": 0.0001,
+        "beta": -1e-08,
+        "basis_chart": "unit_generic_eigenmodes",
+        "row_scale_blocks": [
+          0.0001,
+          1.0,
+          1e-08,
+          1e-08
+        ],
+        "scaled_sigma_min": 0.0625301460102196,
+        "scaled_sigma_max": 2.305533265579882,
+        "scaled_inverse_norm": 15.992286341960009,
+        "raw_inverse_norm_in_declared_basis": 4.081192052335196,
+        "scaled_log_abs_determinant": -5.543577804472231,
+        "scaled_determinant_sign": {
+          "real": 1.0,
+          "imag": 0.0
+        },
+        "matrix_rank": 30,
+        "path_id": "beta=-zeta^2",
+        "principal_mode_residual": 1.1102230246251565e-16,
+        "eq123_scaled_logdet_abs_error": 2.0872192862952943e-13
+      },
+      {
+        "zeta": 1e-05,
+        "beta": -1.0000000000000002e-10,
+        "basis_chart": "unit_generic_eigenmodes",
+        "row_scale_blocks": [
+          1e-05,
+          1.0,
+          1.0000000000000002e-10,
+          1.0000000000000002e-10
+        ],
+        "scaled_sigma_min": 0.06250993065142424,
+        "scaled_sigma_max": 2.3054287383730014,
+        "scaled_inverse_norm": 15.997458157109886,
+        "raw_inverse_norm_in_declared_basis": 4.08214799293837,
+        "scaled_log_abs_determinant": -5.545017448079559,
+        "scaled_determinant_sign": {
+          "real": 1.0,
+          "imag": 0.0
+        },
+        "matrix_rank": 30,
+        "path_id": "beta=-zeta^2",
+        "principal_mode_residual": 1.1102230246251565e-16,
+        "eq123_scaled_logdet_abs_error": 8.881784197001252e-14
+      },
+      {
+        "zeta": 0.01,
+        "beta": -0.0025,
+        "basis_chart": "unit_generic_eigenmodes",
+        "row_scale_blocks": [
+          0.01,
+          1.0,
+          0.0025,
+          0.0025
+        ],
+        "scaled_sigma_min": 0.06793259397304753,
+        "scaled_sigma_max": 2.4331548997789585,
+        "scaled_inverse_norm": 14.720474245349045,
+        "raw_inverse_norm_in_declared_basis": 4.003993712519913,
+        "scaled_log_abs_determinant": -6.373969251657625,
+        "scaled_determinant_sign": {
+          "real": 1.0,
+          "imag": 0.0
+        },
+        "matrix_rank": 30,
+        "path_id": "abs(beta)/zeta=0.25",
+        "principal_mode_residual": 1.1102230246251565e-16,
+        "eq123_scaled_logdet_abs_error": 5.861977570020827e-14
+      },
+      {
+        "zeta": 0.001,
+        "beta": -0.00025,
+        "basis_chart": "unit_generic_eigenmodes",
+        "row_scale_blocks": [
+          0.001,
+          1.0,
+          0.00025,
+          0.00025
+        ],
+        "scaled_sigma_min": 0.06646114375529322,
+        "scaled_sigma_max": 2.4280698444414472,
+        "scaled_inverse_norm": 15.046385654781275,
+        "raw_inverse_norm_in_declared_basis": 4.074278620637467,
+        "scaled_log_abs_determinant": -6.481688579686136,
+        "scaled_determinant_sign": {
+          "real": 1.0,
+          "imag": 0.0
+        },
+        "matrix_rank": 30,
+        "path_id": "abs(beta)/zeta=0.25",
+        "principal_mode_residual": 1.1102230246251565e-16,
+        "eq123_scaled_logdet_abs_error": 5.684341886080802e-14
+      },
+      {
+        "zeta": 0.0001,
+        "beta": -2.5e-05,
+        "basis_chart": "unit_generic_eigenmodes",
+        "row_scale_blocks": [
+          0.0001,
+          1.0,
+          2.5e-05,
+          2.5e-05
+        ],
+        "scaled_sigma_min": 0.06631533490315486,
+        "scaled_sigma_max": 2.4275625124083757,
+        "scaled_inverse_norm": 15.079468443616747,
+        "raw_inverse_norm_in_declared_basis": 4.0814584162225795,
+        "scaled_log_abs_determinant": -6.4924857930647,
+        "scaled_determinant_sign": {
+          "real": 1.0,
+          "imag": 0.0
+        },
+        "matrix_rank": 30,
+        "path_id": "abs(beta)/zeta=0.25",
+        "principal_mode_residual": 1.1102230246251565e-16,
+        "eq123_scaled_logdet_abs_error": 1.7763568394002505e-15
+      },
+      {
+        "zeta": 1e-05,
+        "beta": -2.5e-06,
+        "basis_chart": "unit_generic_eigenmodes",
+        "row_scale_blocks": [
+          1e-05,
+          1.0,
+          2.5e-06,
+          2.5e-06
+        ],
+        "scaled_sigma_min": 0.06630076737003232,
+        "scaled_sigma_max": 2.427511791096296,
+        "scaled_inverse_norm": 15.082781688164834,
+        "raw_inverse_norm_in_declared_basis": 4.082177937577128,
+        "scaled_log_abs_determinant": -6.493565765218705,
+        "scaled_determinant_sign": {
+          "real": 1.0,
+          "imag": 0.0
+        },
+        "matrix_rank": 30,
+        "path_id": "abs(beta)/zeta=0.25",
+        "principal_mode_residual": 1.1102230246251565e-16,
+        "eq123_scaled_logdet_abs_error": 1.1368683772161603e-13
+      },
+      {
+        "zeta": 0.01,
+        "beta": -0.04,
+        "basis_chart": "unit_generic_eigenmodes",
+        "row_scale_blocks": [
+          0.01,
+          1.0,
+          0.01,
+          0.04
+        ],
+        "scaled_sigma_min": 0.06198433534023624,
+        "scaled_sigma_max": 2.8301910927967895,
+        "scaled_inverse_norm": 16.133108381511747,
+        "raw_inverse_norm_in_declared_basis": 4.428151185803774,
+        "scaled_log_abs_determinant": -6.978405323723175,
+        "scaled_determinant_sign": {
+          "real": 1.0,
+          "imag": 0.0
+        },
+        "matrix_rank": 30,
+        "path_id": "abs(beta)/zeta=4",
+        "principal_mode_residual": 1.1102230246251565e-16,
+        "eq123_scaled_logdet_abs_error": 6.217248937900877e-14
+      },
+      {
+        "zeta": 0.001,
+        "beta": -0.004,
+        "basis_chart": "unit_generic_eigenmodes",
+        "row_scale_blocks": [
+          0.001,
+          1.0,
+          0.001,
+          0.004
+        ],
+        "scaled_sigma_min": 0.06791152010092985,
+        "scaled_sigma_max": 2.849102279100461,
+        "scaled_inverse_norm": 14.725042209536817,
+        "raw_inverse_norm_in_declared_basis": 4.114487007916981,
+        "scaled_log_abs_determinant": -6.541730981276758,
+        "scaled_determinant_sign": {
+          "real": 1.0,
+          "imag": 0.0
+        },
+        "matrix_rank": 30,
+        "path_id": "abs(beta)/zeta=4",
+        "principal_mode_residual": 1.1102230246251565e-16,
+        "eq123_scaled_logdet_abs_error": 4.3520742565306136e-14
+      },
+      {
+        "zeta": 0.0001,
+        "beta": -0.0004,
+        "basis_chart": "unit_generic_eigenmodes",
+        "row_scale_blocks": [
+          0.0001,
+          1.0,
+          0.0001,
+          0.0004
+        ],
+        "scaled_sigma_min": 0.06852743046100959,
+        "scaled_sigma_max": 2.8510060876439467,
+        "scaled_inverse_norm": 14.592696578182297,
+        "raw_inverse_norm_in_declared_basis": 4.0854589480715715,
+        "scaled_log_abs_determinant": -6.498486215153489,
+        "scaled_determinant_sign": {
+          "real": 1.0,
+          "imag": 0.0
+        },
+        "matrix_rank": 30,
+        "path_id": "abs(beta)/zeta=4",
+        "principal_mode_residual": 1.1102230246251565e-16,
+        "eq123_scaled_logdet_abs_error": 1.3944401189291966e-13
+      },
+      {
+        "zeta": 1e-05,
+        "beta": -4e-05,
+        "basis_chart": "unit_generic_eigenmodes",
+        "row_scale_blocks": [
+          1e-05,
+          1.0,
+          1e-05,
+          4e-05
+        ],
+        "scaled_sigma_min": 0.06858925927542953,
+        "scaled_sigma_max": 2.8511965988591674,
+        "scaled_inverse_norm": 14.579542198937645,
+        "raw_inverse_norm_in_declared_basis": 4.082577789222952,
+        "scaled_log_abs_determinant": -6.494165769437669,
+        "scaled_determinant_sign": {
+          "real": 1.0,
+          "imag": 0.0
+        },
+        "matrix_rank": 30,
+        "path_id": "abs(beta)/zeta=4",
+        "principal_mode_residual": 1.1102230246251565e-16,
+        "eq123_scaled_logdet_abs_error": 3.108624468950438e-14
+      }
+    ],
+    "exact_jordan_path": [
+      {
+        "zeta": 0.01,
+        "beta": -0.01,
+        "basis_chart": "source_ode_consistent_jordan",
+        "row_scale_blocks": [
+          0.01,
+          1.0,
+          0.01,
+          0.01
+        ],
+        "scaled_sigma_min": 0.07276782434939072,
+        "scaled_sigma_max": 2.611707532245053,
+        "scaled_inverse_norm": 13.742337481447223,
+        "raw_inverse_norm_in_declared_basis": 4.083350310293382,
+        "scaled_log_abs_determinant": 1.385794386118223,
+        "scaled_determinant_sign": {
+          "real": 1.0,
+          "imag": -0.0
+        },
+        "matrix_rank": 30,
+        "path_id": "beta=-zeta; exact corrected Jordan chain",
+        "principal_mode_residual": 0.0,
+        "analytic_scaled_logdet_abs_error": 1.1102230246251565e-15
+      },
+      {
+        "zeta": 0.001,
+        "beta": -0.001,
+        "basis_chart": "source_ode_consistent_jordan",
+        "row_scale_blocks": [
+          0.001,
+          1.0,
+          0.001,
+          0.001
+        ],
+        "scaled_sigma_min": 0.07275639176401694,
+        "scaled_sigma_max": 2.6174483899126764,
+        "scaled_inverse_norm": 13.74449688548971,
+        "raw_inverse_norm_in_declared_basis": 4.082268817900956,
+        "scaled_log_abs_determinant": 1.3862893611223885,
+        "scaled_determinant_sign": {
+          "real": 1.0,
+          "imag": -0.0
+        },
+        "matrix_rank": 30,
+        "path_id": "beta=-zeta; exact corrected Jordan chain",
+        "principal_mode_residual": 0.0,
+        "analytic_scaled_logdet_abs_error": 2.4424906541753444e-15
+      },
+      {
+        "zeta": 0.0001,
+        "beta": -0.0001,
+        "basis_chart": "source_ode_consistent_jordan",
+        "row_scale_blocks": [
+          0.0001,
+          1.0,
+          0.0001,
+          0.0001
+        ],
+        "scaled_sigma_min": 0.07275522371487925,
+        "scaled_sigma_max": 2.618024545609406,
+        "scaled_inverse_norm": 13.744717546590252,
+        "raw_inverse_norm_in_declared_basis": 4.082258010842769,
+        "scaled_log_abs_determinant": 1.3862943111198895,
+        "scaled_determinant_sign": {
+          "real": 1.0,
+          "imag": -0.0
+        },
+        "matrix_rank": 30,
+        "path_id": "beta=-zeta; exact corrected Jordan chain",
+        "principal_mode_residual": 0.0,
+        "analytic_scaled_logdet_abs_error": 1.5543122344752192e-15
+      },
+      {
+        "zeta": 1e-05,
+        "beta": -1e-05,
+        "basis_chart": "source_ode_consistent_jordan",
+        "row_scale_blocks": [
+          1e-05,
+          1.0,
+          1e-05,
+          1e-05
+        ],
+        "scaled_sigma_min": 0.07275510666220723,
+        "scaled_sigma_max": 2.618082180778066,
+        "scaled_inverse_norm": 13.744739659895952,
+        "raw_inverse_norm_in_declared_basis": 4.082257902683097,
+        "scaled_log_abs_determinant": 1.3862943606198859,
+        "scaled_determinant_sign": {
+          "real": 1.0,
+          "imag": -0.0
+        },
+        "matrix_rank": 30,
+        "path_id": "beta=-zeta; exact corrected Jordan chain",
+        "principal_mode_residual": 0.0,
+        "analytic_scaled_logdet_abs_error": 4.6629367034256575e-15
+      }
+    ],
+    "near_jordan_confluent_path": [
+      {
+        "zeta": 0.011,
+        "beta": -0.01,
+        "basis_chart": "normalized_confluent_divided_difference",
+        "row_scale_blocks": [
+          0.011,
+          1.0,
+          0.01,
+          0.01
+        ],
+        "scaled_sigma_min": 0.07084318381470071,
+        "scaled_sigma_max": 2.185836649144864,
+        "scaled_inverse_norm": 14.11568405247887,
+        "raw_inverse_norm_in_declared_basis": 3.7418986632521123,
+        "scaled_log_abs_determinant": -3.027823455878174,
+        "scaled_determinant_sign": {
+          "real": 1.0,
+          "imag": 0.0
+        },
+        "matrix_rank": 30,
+        "path_id": "zeta=abs(beta)+abs(beta)^1.5; confluent chart",
+        "principal_mode_residual": 2.220446049250313e-16,
+        "confluent_reference_logdet_abs_offset": -1.520242993024283
+      },
+      {
+        "zeta": 0.0010316227766016838,
+        "beta": -0.001,
+        "basis_chart": "normalized_confluent_divided_difference",
+        "row_scale_blocks": [
+          0.0010316227766016838,
+          1.0,
+          0.001,
+          0.001
+        ],
+        "scaled_sigma_min": 0.07087839158848015,
+        "scaled_sigma_max": 2.2205401855200515,
+        "scaled_inverse_norm": 14.108672298970871,
+        "raw_inverse_norm_in_declared_basis": 3.7504149938135067,
+        "scaled_log_abs_determinant": -2.3914774039689926,
+        "scaled_determinant_sign": {
+          "real": 1.0,
+          "imag": 0.0
+        },
+        "matrix_rank": 30,
+        "path_id": "zeta=abs(beta)+abs(beta)^1.5; confluent chart",
+        "principal_mode_residual": 1.1102230246251565e-16,
+        "confluent_reference_logdet_abs_offset": -0.4988343044261683
+      },
+      {
+        "zeta": 0.000101,
+        "beta": -0.0001,
+        "basis_chart": "normalized_confluent_divided_difference",
+        "row_scale_blocks": [
+          0.000101,
+          1.0,
+          0.0001,
+          0.0001
+        ],
+        "scaled_sigma_min": 0.07095833537223843,
+        "scaled_sigma_max": 2.2396946109925704,
+        "scaled_inverse_norm": 14.092777046616536,
+        "raw_inverse_norm_in_declared_basis": 3.7507335553503913,
+        "scaled_log_abs_determinant": -2.1790526074975065,
+        "scaled_determinant_sign": {
+          "real": 1.0,
+          "imag": 0.0
+        },
+        "matrix_rank": 30,
+        "path_id": "zeta=abs(beta)+abs(beta)^1.5; confluent chart",
+        "principal_mode_residual": 3.3306690738754696e-16,
+        "confluent_reference_logdet_abs_offset": -0.15931305093667447
+      },
+      {
+        "zeta": 1.0031622776601684e-05,
+        "beta": -1e-05,
+        "basis_chart": "normalized_confluent_divided_difference",
+        "row_scale_blocks": [
+          1.0031622776601684e-05,
+          1.0,
+          1e-05,
+          1e-05
+        ],
+        "scaled_sigma_min": 0.07098604704381606,
+        "scaled_sigma_max": 2.24683289007036,
+        "scaled_inverse_norm": 14.08727548081035,
+        "raw_inverse_norm_in_declared_basis": 3.750744067848428,
+        "scaled_log_abs_determinant": -2.1110263780253,
+        "scaled_determinant_sign": {
+          "real": 1.0,
+          "imag": 0.0
+        },
+        "matrix_rank": 30,
+        "path_id": "zeta=abs(beta)+abs(beta)^1.5; confluent chart",
+        "principal_mode_residual": 5.551115123125783e-17,
+        "confluent_reference_logdet_abs_offset": -0.050528565402373715
+      }
+    ],
+    "source_hashes": {
+      "docs/scripts/audit/audit_curved_3p1_gh_rinne_joint_real_glancing_scale.py": "ddc05ce974644ed507dbf5aac62448bbafa25d63fa7b2eb94eac20d330ffeb1a",
+      "docs/scripts/audit/audit_curved_3p1_gh_rinne_negative_shift_zero_transition.py": "1a9d271ae0d9fd58e56809b722613057e9cbf1679eea9c6035f8451fccea5014",
+      "docs/scripts/audit/audit_curved_3p1_gh_rinne_negative_shift_kreiss_symbol.py": "f482a1b1cb61480bfaa3cb27e5a2b7cdad65218fcc6521d0d587e742ffce3f2b",
+      "docs/core/07_artifacts/verification/curved_3p1_gh_rinne_negative_shift_kreiss_symbol.json": "5d48f6efe14f8c3501da5d8568544608fcc2d8fe7b24f798523ffdd919e39924",
+      "docs/scripts/audit/audit_curved_3p1_gh_rinne_zero_shift_kreiss_symbol.py": "c8d29b710c053ac0dee5a2d21714a63b99e8c749c8ac7c0ae892c7ffcae6460c",
+      "docs/core/07_artifacts/verification/curved_3p1_gh_rinne_zero_shift_kreiss_symbol.json": "b521608f31da55e435d5d2c736222ece29a572f8efede9992f263d3d0910f460",
+      "docs/core/02_equations/covariant/uet_curved_3p1_gh_linear_boundary.py": "39bd0731a3ecdbb5c5185453e0908d198cba895ba5f29dafc6bb8f9c6a3b169c",
+      "docs/core/02_equations/covariant/uet_curved_3p1_gh_boundary_projectors.py": "2aa529e3a037a5ecff2c2a5a6d454ef7cf9822ca99371393d6614bfbc062362f"
+    },
+    "source_reference": "https://arxiv.org/abs/gr-qc/0606053"
+  },
+  "CONTROLLING_BLOCKER": "uniform_chart_compatible_kreiss_bound_over_joint_beta_zeta_and_complex_frequency_domain_missing",
+  "NEXT_ACTION": "Derive a chart-compatible lower bound for the rescaled matrix over the compactified positive-real ratio and then extend it to the imaginary-frequency boundary; do not infer Core-parent stability from path screens.",
+  "CLAIM_BOUNDARY": "finite positive-real path screen and exact row-factor analysis only; no uniform complex-frequency Kreiss estimate or full parent closure",
+  "full_core_unlock": false,
+  "gravity_unlock": false,
+  "claim_promotion": false
+}

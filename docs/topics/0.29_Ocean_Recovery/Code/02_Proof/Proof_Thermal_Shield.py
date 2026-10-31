@@ -29,7 +29,7 @@ sys.path.append(engine_dir)
 from Engine_Ocean_Cooling import OceanHeatSink
 
 # For standard path references if needed
-# from docs.core.uet_glass_box import UETPathManager
+# from docs.scripts.core.runners.uet_glass_box import UETPathManager
 
 
 def run_proof():

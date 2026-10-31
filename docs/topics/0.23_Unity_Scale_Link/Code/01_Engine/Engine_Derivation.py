@@ -54,9 +54,9 @@ from docs.core.uet_parameters import INTEGRITY_KILL_SWITCH
 
 # Base Solver Import
 try:
-    from docs.core.uet_base_solver import UETBaseSolver
+    from docs.scripts.core.runners.uet_base_solver import UETBaseSolver
 except ImportError:
-    from docs.core.uet_base_solver import UETBaseSolver
+    from docs.scripts.core.runners.uet_base_solver import UETBaseSolver
 
 
 class UETDerivationEngine(UETBaseSolver):

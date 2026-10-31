@@ -123,8 +123,8 @@ python Code/03_Research/test_cluster_virial.py
 ```
 
 ### Core Compliance ✅
-- Uses `UETParameters` from `docs.core.uet_master_equation`
-- Extends `UETBaseSolver` from `docs.core.uet_base_solver`
+- Uses `UETParameters` from `docs.core.02_equations.matter_space.uet_master_equation`
+- Extends `UETBaseSolver` from `docs.scripts.core.runners.uet_base_solver`
 - Uses `UETMetricLogger` for standardized output
 
 ---

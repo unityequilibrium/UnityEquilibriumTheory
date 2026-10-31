@@ -11,6 +11,17 @@ synthetic second-strain design. Two modes have four unknown scalar components.
 Reject missing source files, wrong units and invalid domains rather than
 substituting data. Preserve aggregate hashes and absent physical D/alpha fields.
 
+## Hanfland-Sun 2015 Conditional Raman Reconciliation (2026-09-25)
+
+Run py -m unittest discover -s docs/core/05_tests/regression/root -p
+test_topic13_hanfland_sun2015_reconciliation.py -v, then run
+py docs/scripts/audit/audit_topic13_hanfland_sun2015_reconciliation.py.
+Check the Hanfland PDF hash, source-row hashes, Sun DFT-only role, separate
+Table II and abstract slope routes, units/sign, and endpoint sensitivity
+interpretation. Require empirical rank gain zero, alpha_Phi_K absent, unchanged
+full-gate hash/status, no dependency unlock, and no holdout access. Do not treat
+endpoint rectangles as confidence intervals or DFT values as measurements.
+
 ## Reciprocal G/r Thermal Dynamics (2026-09-08)
 
 Run docs.scripts.audit.audit_topic13_reciprocal_thermal_dynamics and pytest

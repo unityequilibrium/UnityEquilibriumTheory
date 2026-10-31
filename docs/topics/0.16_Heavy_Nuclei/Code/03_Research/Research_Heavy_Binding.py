@@ -39,7 +39,7 @@ from pathlib import Path
 # --- ROBUST PATH FINDER (5x4 Grid Standard) ---
 
 
-from docs.core.uet_glass_box import UETPathManager
+from docs.scripts.core.runners.uet_glass_box import UETPathManager
 
 import json
 import numpy as np
@@ -182,7 +182,7 @@ def run_test():
     # VISUALIZATION INJECTION
     # ---------------------------------------------------------
     try:
-        import docs.core.uet_viz as viz
+        import docs.scripts.core.reporting.uet_viz as viz
         import plotly.graph_objects as go
 
         # Path: 3 levels up from script to topic root

@@ -80,7 +80,7 @@ EQUATION_OR_MAPPING:
 
 VERIFICATION:
 - Historical process holdout policy: `{'xie_2026_accessed': False, 'target_fit_performed': False, 'calibration_path_may_read_holdout': False}`.
-- Later agent-context exposure: `{'declaration_path': 'docs/core/T13_HOLDOUT_EXPOSURE_2026_09_10.json', 'incidental_public_summary_exposure': True, 'future_blind_holdout_eligibility': 'REVIEW_REQUIRED', 'scope': 'Later agent-context declaration; does not rewrite historical process audits'}`. Do not claim pristine blinding from historical no-access fields.
+- Later agent-context exposure: `{'declaration_path': 'docs/core/99_review/unresolved_assets/T13_HOLDOUT_EXPOSURE_2026_09_10.json', 'incidental_public_summary_exposure': True, 'future_blind_holdout_eligibility': 'REVIEW_REQUIRED', 'scope': 'Later agent-context declaration; does not rewrite historical process audits'}`. Do not claim pristine blinding from historical no-access fields.
 - No numeric alpha, physical UET Kubo coefficient, or accepted Ding C_src payload is emitted by this report.
 - Source hashes are recorded in `docs/core/07_artifacts/topic13/t13_full_closure_progress.json` for the matrix, gate, and input audit.
 

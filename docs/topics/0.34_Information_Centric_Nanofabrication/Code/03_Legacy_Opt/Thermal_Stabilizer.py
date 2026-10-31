@@ -35,7 +35,7 @@ import numpy as np
 import os
 from docs.core.uet_master_equation import UETMasterEquation
 from docs.core.uet_parameters import UETParameters
-from docs.core.uet_base_solver import UETBaseSolver
+from docs.scripts.core.runners.uet_base_solver import UETBaseSolver
 
 class ThermalStabilizer(UETBaseSolver):
     def __init__(self, nx=64, ny=128, dt=0.005, params=None):

@@ -61,7 +61,7 @@ graph TD
     *   `engine = UETGalaxyEngine(..., pillar="03_Research")`
 
 2.  **How is the Folder Created?**
-    *   **Level 1 (Topic):** [UETPathManager](file:///c:/Users/santa/Desktop/lad/Lab_uet_harness_v0.9.0/docs/core/uet_glass_box.py#27-95) finds `topics/0.1_Galaxy...` automatically.
+    *   **Level 1 (Topic):** [UETPathManager](file:///c:/Users/santa/Desktop/lad/Lab_uet_harness_v0.9.0/docs/scripts/core/runners/uet_glass_box.py#27-95) finds `topics/0.1_Galaxy...` automatically.
     *   **Level 2 (Result Root):** Enters `/Result`.
     *   **Level 3 (Pillar):** Uses the `pillar` argument (e.g., `03_Research`). **This is where the split happens.**
     *   **Level 4 (RunID):** Creates a unique folder `[Timestamp]_[ExperimentName]`.

@@ -37,8 +37,8 @@ DATA_ROLE: `ACTION_DERIVED_FINITE_T_SIGNED_CUT_KINEMATIC_TAXONOMY_NO_HOLDOUT`.
 
 EVIDENCE_PATHS:
 
-- `docs/core/uet_o2_finite_temperature_signed_cut_coverage.py`
+- `docs/core/02_equations/o2/uet_o2_finite_temperature_signed_cut_coverage.py`
 - `docs/scripts/audit/audit_topic13_uet_o2_finite_temperature_signed_cut_coverage.py`
 - `docs/core/07_artifacts/topic13/t13_uet_o2_finite_temperature_signed_cut_coverage_audit.json`
-- `docs/core/uet_o2_finite_temperature_full_sunset_sk_kms.py`
+- `docs/core/02_equations/o2/uet_o2_finite_temperature_full_sunset_sk_kms.py`
 - `docs/core/07_artifacts/topic13/t13_uet_o2_finite_temperature_full_sunset_sk_kms_audit.json`

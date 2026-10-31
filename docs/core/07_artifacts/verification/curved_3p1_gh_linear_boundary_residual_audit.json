@@ -1,0 +1,129 @@
+{
+  "schema_version": "core-curved-3p1-gh-linear-boundary-v1",
+  "diagnostic_id": "uet.curved_3p1.gh.linear_boundary_residuals",
+  "artifact": "curved_3p1_gh_linear_boundary_residual_audit",
+  "generated_at": "2026-09-25",
+  "status": "PASS_GH_LINEAR_BOUNDARY_RESIDUAL_OPERATOR_AUDIT",
+  "claim_promotion": false,
+  "major_result": {
+    "major_result_id": "CORE_CURVED_3P1_GH_LINEAR_DIFFERENTIAL_BOUNDARY_RESIDUALS",
+    "topic": "core",
+    "closure_level": "CLOSED_FOR_LANE",
+    "what_is_closed": [
+      "frozen-background linear GH residual evaluation for the incoming subsidiary constraint, Weyl/Psi_0 radiation, and gauge data",
+      "rank-4 and rank-2 normal-derivative maps match the complementary kernels of the source-defined constraint and physical projectors",
+      "incoming u2_A definition-curl residual evaluation for positive subluminal normal shift"
+    ],
+    "equation_or_mapping": {
+      "constraint": "c0_minus_a=0 using Rinne 2006 Eq. (27)",
+      "physical": "w_minus_ab=partial_t hP_ab using Rinne 2006 Eqs. (30)-(33)",
+      "gauge": "P_G u1_minus_ab=hG_ab using Rinne 2006 Eqs. (35)-(36)",
+      "positive_shift": "partial_n u2_Aab-partial_A Phi_nab=0 using Rinne 2006 Eq. (29)",
+      "incoming_u1": "u1_minus=delta_Pi-delta_Phi_n-gamma2*delta_psi",
+      "normal_maps": "rank(A_C)=4, rank(A_P)=2; A_C(I-P_C)=0 and A_P(I-P_P)=0",
+      "boundary_condition_count": {
+        "nonpositive_normal_shift": "10 incoming u1_minus fields = 4 constraint derivative + 2 physical derivative + 4 gauge data",
+        "zero_normal_shift": "10 incoming u1_minus fields; u2_A modes are glancing",
+        "positive_sub_luminal_normal_shift": "30 incoming fields = previous 10 + 20 u2_A definition-curl conditions",
+        "verification": "incoming characteristic counts compared with projector ranks and the measured rank-20 u2_A normal map over all 26 face normals"
+      }
+    },
+    "units": {
+      "unit_lane": "geometric c=1, local orthonormal frame",
+      "delta_psi": "dimensionless",
+      "delta_Pi_and_delta_Phi": "L^-1",
+      "gamma2": "L^-1",
+      "constraint_and_weyl_residuals": "L^-2",
+      "physical_boundary_data_partial_t_hP": "L^-2",
+      "gauge_residual": "L^-1",
+      "gauge_boundary_data_hG": "L^-1",
+      "u2_definition_curl_residual": "L^-2"
+    },
+    "derivation_class": "source-locked linearized/frozen-coefficient GH boundary formulas with local deterministic verification",
+    "observable": "boundary residual components and projector-kernel residuals; no gravitational observable",
+    "data_role": "manufactured analytic tensors only; no physical data, fitting, or holdout",
+    "evidence_artifacts": [],
+    "verification_status": "PASS_GH_LINEAR_BOUNDARY_RESIDUAL_OPERATOR_AUDIT",
+    "open_blockers": [
+      "no nonlinear variable-coefficient boundary operator",
+      "no SBP/SAT or other non-periodic initial-boundary evolution implementation",
+      "no boundary energy estimate or numerical stability/convergence result",
+      "no edge/corner compatibility analysis",
+      "no self-consistent matter boundary subsystem or dimensional gravitational-observable map"
+    ],
+    "dependency_unlocked": "local boundary-residual implementation and verification only; parent remains PARTIAL and Gravity remains blocked",
+    "claim_boundary": "This verifies source-matched frozen-background linear residual maps only; it does not implement CPBC on the nonlinear solver or prove a well-posed repository IBVP."
+  },
+  "scope": {
+    "normal_count": 26,
+    "normal_shift_regimes": [
+      "-lapse < beta_n <= 0: u1_minus incoming",
+      "0 < beta_n < lapse: u1_minus and u2_A incoming"
+    ],
+    "coefficient_background": "Minkowski local orthonormal frame",
+    "equation_approximation": "linearized principal/frozen-coefficient boundary residuals",
+    "boundary_operator_applied_to_evolution": false,
+    "periodic_solver_modified": false,
+    "UET_ontology_modified": false,
+    "excluded_variables": [
+      "UET C",
+      "UET Phi",
+      "R_gen",
+      "R_obs"
+    ]
+  },
+  "tolerance": 1e-10,
+  "checks": {
+    "constraint_normal_map_rank_four_and_projector_kernel": true,
+    "physical_normal_map_rank_two_and_projector_kernel": true,
+    "prescribed_physical_and_gauge_data_are_satisfied_in_their_sectors": true,
+    "mixed_derivative_compatibility_sets_incoming_u2_curl_to_zero": true,
+    "positive_shift_u2_normal_map_has_rank_twenty": true,
+    "boundary_condition_counts_match_gh_incoming_characteristics": true,
+    "homogeneous_zero_jet_and_shift_regime_classification": true
+  },
+  "metrics": {
+    "maximum_constraint_projector_kernel_residual": 4.163336342344337e-16,
+    "maximum_physical_projector_kernel_residual": 2.7575678366268356e-16,
+    "maximum_physical_prescribed_data_residual": 8.881784197001252e-15,
+    "maximum_gauge_prescribed_data_residual": 8.881784197001252e-15,
+    "maximum_u2_symmetric_hessian_curl_residual": 2.220446049250313e-16,
+    "u2_normal_map_rank": 20,
+    "maximum_u2_normal_map_identity_residual": 0.0,
+    "incoming_count_cases": 78,
+    "incoming_counts_by_shift": {
+      "negative": [
+        10
+      ],
+      "zero": [
+        10
+      ],
+      "positive": [
+        30
+      ]
+    },
+    "maximum_incoming_condition_count_mismatch": 0,
+    "maximum_homogeneous_zero_jet_residual": 0.0
+  },
+  "source_hashes": {
+    "docs/core/02_equations/covariant/uet_curved_3p1_gh_boundary_projectors.py": "2aa529e3a037a5ecff2c2a5a6d454ef7cf9822ca99371393d6614bfbc062362f",
+    "docs/core/02_equations/covariant/uet_curved_3p1_gh_linear_boundary.py": "39bd0731a3ecdbb5c5185453e0908d198cba895ba5f29dafc6bb8f9c6a3b169c",
+    "docs/core/02_equations/covariant/uet_curved_3p1_generalized_harmonic.py": "4f0c8ed0e5afe52e43cedefeb9c061e10dbd440fd20e8bc57a8aacfa43e76f92",
+    "docs/scripts/audit/audit_uet_curved_3p1_gh_linear_boundary.py": "7b31a90ea38769191f766da9ed5faebc6d243abe60f08ba5ac7f4657efa00c36",
+    "docs/core/05_tests/regression/root/test_uet_curved_3p1_gh_linear_boundary.py": "eeb41f59a1f6662ae83a4c145de23f87e8aa623a4fb9372120520f14173c02a9"
+  },
+  "literature_basis": [
+    {
+      "citation": "O. Rinne, Stable radiation-controlling boundary conditions for the generalized harmonic Einstein equations (2006)",
+      "url": "https://arxiv.org/abs/gr-qc/0606053",
+      "locators": "Eqs. (27)-(33), (35)-(36); subluminal normal-shift analysis",
+      "role": "source for the differential subsidiary-constraint and Weyl boundary conditions, algebraic gauge data, and incoming u2_A definition-constraint condition"
+    },
+    {
+      "citation": "G. Calabrese and O. Sarbach, Detecting ill posed boundary conditions in General Relativity (2003)",
+      "url": "https://arxiv.org/abs/gr-qc/0303040",
+      "role": "well-posedness caution; motivates keeping the IBVP and stability gates open"
+    }
+  ],
+  "claim_boundary": "No CPBC solver pass, nonlinear well-posedness claim, Einstein-equation derivation, external gravity test, or global UET closure."
+}

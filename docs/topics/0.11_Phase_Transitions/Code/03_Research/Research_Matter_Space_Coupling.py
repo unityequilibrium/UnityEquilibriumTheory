@@ -32,7 +32,11 @@ ROOT = _bootstrap()
 TOPIC = ROOT / "docs" / "topics" / "0.11_Phase_Transitions"
 PREREG_PATH = TOPIC / "Data" / "03_Research" / "matter_space_coupled_preregistration.json"
 AMENDMENT_PATH = TOPIC / "Data" / "03_Research" / "matter_space_coupled_numerical_amendment_001.json"
-CORE_PATH = ROOT / "docs" / "core" / "artifacts" / "matter_space_variational_verification.json"
+from docs.core.core_paths import canonical_artifact_path  # noqa: E402
+
+CORE_PATH = canonical_artifact_path(
+    "matter_space_variational_verification.json", "verification"
+)
 TOPIC_GATE_PATH = TOPIC / "Result" / "artifacts" / "0_11_closure_status_audit.json"
 ARTIFACT_PATH = TOPIC / "Result" / "artifacts" / "0_11_matter_space_coupled_diagnostic.json"
 RESULT_DIR = TOPIC / "Result" / "03_show_Result"

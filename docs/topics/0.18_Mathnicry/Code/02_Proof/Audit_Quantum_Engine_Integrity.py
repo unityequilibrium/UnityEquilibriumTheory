@@ -46,8 +46,8 @@ engine_dir = current_path.parent.parent / "01_Engine"
 if str(engine_dir) not in sys.path:
     sys.path.insert(0, str(engine_dir))
 
-from docs.core.uet_glass_box import UETMetricLogger
-from docs.core.uet_bug_hunter import UETBugHunter
+from docs.scripts.core.runners.uet_glass_box import UETMetricLogger
+from docs.scripts.core.audit.uet_bug_hunter import UETBugHunter
 from Engine_Quantum_Logic import QuantumUnityEngine
 
 

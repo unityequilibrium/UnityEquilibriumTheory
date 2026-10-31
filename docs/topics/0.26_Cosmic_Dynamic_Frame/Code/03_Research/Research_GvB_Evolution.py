@@ -63,7 +63,7 @@ for p in [topic_03, topic_02]:
 try:
     from Engine_Cosmology import UETCosmologyEngine
     from Engine_BlackHole import UETBlackHoleEngine
-    from docs.core.uet_glass_box import UETPathManager
+    from docs.scripts.core.runners.uet_glass_box import UETPathManager
 except ImportError as e:
     print(f"❌ SETUP ERROR: {e}")
     sys.exit(1)

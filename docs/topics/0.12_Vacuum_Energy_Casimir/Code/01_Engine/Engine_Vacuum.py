@@ -42,7 +42,7 @@ from typing import Dict, Any
 
 # Core Imports
 try:
-    from docs.core.uet_base_solver import UETBaseSolver
+    from docs.scripts.core.runners.uet_base_solver import UETBaseSolver
     from docs.core.uet_master_equation import UETParameters
 except ImportError as e:
     print(f"Error: {e}")

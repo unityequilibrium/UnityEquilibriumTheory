@@ -1,0 +1,87 @@
+{
+  "schema_version": "1.0",
+  "source_bundle_id": "gr_numeric_wave_extraction_route_screen_2026_09",
+  "screen_role": "primary-literature route screen for future GH-to-waveform extraction",
+  "references": [
+    {
+      "source_id": "fontbute_etal_2025_2026_gauge_invariant_metric_extraction",
+      "title": "Covariant and Gauge-invariant Metric-based Gravitational-waves Extraction in Numerical Relativity",
+      "authors": [
+        "Joan Fontbute",
+        "Sebastiano Bernuzzi",
+        "Simone Albanesi",
+        "David Radice",
+        "Alireza Rashti",
+        "William Cook",
+        "Boris Daszuta",
+        "Alessandro Nagar"
+      ],
+      "preprint": "arXiv:2508.03799",
+      "url": "https://arxiv.org/abs/2508.03799",
+      "publication": "Physical Review D 113, 064036 (2026)",
+      "doi": "10.1103/ndls-mfrn",
+      "locators": [
+        "Sec. I: extraction needs gauge-invariant radiative multipoles and finite-radius control",
+        "Secs. II-III: spherical-background perturbations, extraction sphere, areal radius, and projection of the 3+1 metric"
+      ],
+      "route_requirements": [
+        "identify a spherical background on an extraction sphere",
+        "decompose metric perturbations into angular multipoles",
+        "construct gauge-invariant even/odd master functions"
+      ],
+      "screen_finding": "candidate for a future finite-radius metric extraction lane; not directly implemented or validated on the current periodic flat harmonic gauge-wave control"
+    },
+    {
+      "source_id": "nakano_etal_2015_perturbative_finite_radius_waveform_extraction",
+      "title": "Perturbative extraction of gravitational waveforms generated with Numerical Relativity",
+      "authors": [
+        "Hiroyuki Nakano",
+        "James Healy",
+        "Carlos O. Lousto",
+        "Yosef Zlochower"
+      ],
+      "preprint": "arXiv:1503.00718",
+      "url": "https://arxiv.org/abs/1503.00718",
+      "publication": "Physical Review D 91, 104022 (2015)",
+      "doi": "10.1103/PhysRevD.91.104022",
+      "locators": [
+        "Abstract: finite-radius Psi_4 waveform corrections organized in inverse extraction radius and tested at multiple radii/resolutions"
+      ],
+      "route_requirements": [
+        "finite-radius curvature waveform data",
+        "a declared perturbative background and extraction radius",
+        "radius/resolution comparison for extraction uncertainty"
+      ],
+      "screen_finding": "not usable without a curvature extraction surface, finite-radius sequence, and declared background"
+    },
+    {
+      "source_id": "reisswig_etal_2009_cauchy_characteristic_extraction",
+      "title": "Characteristic extraction in numerical relativity: binary black hole merger waveforms at null infinity",
+      "authors": [
+        "Christian Reisswig",
+        "N. T. Bishop",
+        "D. Pollney",
+        "B. Szilagyi"
+      ],
+      "preprint": "arXiv:0912.1285",
+      "url": "https://arxiv.org/abs/0912.1285",
+      "locators": [
+        "Abstract: Cauchy-characteristic extraction propagates worldtube data to future null infinity"
+      ],
+      "route_requirements": [
+        "time-dependent metric/curvature data on a timelike worldtube",
+        "characteristic evolution to future null infinity",
+        "its own worldtube-radius and boundary-systematics controls"
+      ],
+      "screen_finding": "asymptotic route is not available in the current periodic GH solver"
+    }
+  ],
+  "not_used_for": [
+    "detector response coefficient fitting",
+    "external detector data or waveform validation",
+    "claim that UET derives Einstein equations",
+    "relabeling a coordinate/gauge mode as radiation"
+  ],
+  "data_role": "literature method screen only; no source waveform rows or detector data consumed",
+  "claim_boundary": "This screen compares published extraction route requirements; it implements none of the routes and supplies no UET or detector validation evidence."
+}

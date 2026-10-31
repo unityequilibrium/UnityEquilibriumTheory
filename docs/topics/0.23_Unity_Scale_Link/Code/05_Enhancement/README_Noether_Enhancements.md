@@ -112,7 +112,7 @@ cd c:\Users\santa\Desktop\uet_harness
 ### การใช้ในโค้ด
 
 ```python
-from docs.core.uet_parameters import UETParameters
+from docs.core.01_contracts.units.uet_parameters import UETParameters
 from docs.topics.0.23_Unity_Scale_Link.Code.Enhancement_Noether_U1_Gauge import U1GaugeEnhancement
 
 # สร้าง enhancement

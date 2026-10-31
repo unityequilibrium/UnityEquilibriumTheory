@@ -22,7 +22,7 @@ STATUS:
 `PASS_CONDITIONAL_FORMULA_OPEN_INPUTS`
 
 WHAT_CHANGED:
-Added `docs/core/thermal_dimensional_bridge.py` with explicit conditional
+Added `docs/core/03_lanes/thermal/thermal_dimensional_bridge.py` with explicit conditional
 formula and unit functions; added the audit artifact, gate/register sync, test
 coverage, and source-wave runner integration. The current Topic 13 record now
 separates formula closure from alpha calibration closure.

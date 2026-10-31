@@ -39,7 +39,7 @@ import sys
 # --- ROBUST PATH FINDING ---
 
 
-from docs.core.uet_glass_box import UETPathManager
+from docs.scripts.core.runners.uet_glass_box import UETPathManager
 
 
 

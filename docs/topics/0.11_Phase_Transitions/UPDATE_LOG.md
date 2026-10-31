@@ -575,13 +575,13 @@ CLAIM_BOUNDARY: Internal/provisional evidence only; no proof, prediction, extern
 ## Wave: Conserved-Order Spectral Core Candidate (Wave 16)
 
 **What changed:**
-- Added opt-in `conserved_order_spectral_v1` support in `docs/core/uet_master_equation.py` using a semi-implicit spectral conserved-order update that keeps the stiff `kappa*nabla^4` term in the denominator.
+- Added opt-in `conserved_order_spectral_v1` support in `docs/core/02_equations/matter_space/uet_master_equation.py` using a semi-implicit spectral conserved-order update that keeps the stiff `kappa*nabla^4` term in the denominator.
 - Added unit checks for Wave 13-like mass conservation and uniform-field stationarity without changing legacy defaults.
 - Added `Research_Conserved_Order_Spectral_Core_Candidate.py`, machine-readable artifact `Result/artifacts/0_11_conserved_order_spectral_core_candidate.json`, and CSV `Result/gl_conserved_order_spectral_core_candidate_stats.csv`.
 - Updated topic docs and the Wave 5 alignment audit to separate implementation bridge success from still-open finite-size/exponent claims.
 
 **Which verifier was run:**
-- `.\.venv\Scripts\python.exe -m py_compile docs/core/uet_master_equation.py docs/core/uet_parameters.py docs/core/test/test_spatial_coupling.py docs/topics/0.11_Phase_Transitions/Code/03_Research/Research_Conserved_Order_Spectral_Core_Candidate.py`
+- `.\.venv\Scripts\python.exe -m py_compile docs/core/02_equations/matter_space/uet_master_equation.py docs/core/01_contracts/units/uet_parameters.py docs/core/test/test_spatial_coupling.py docs/topics/0.11_Phase_Transitions/Code/03_Research/Research_Conserved_Order_Spectral_Core_Candidate.py`
 - `.\.venv\Scripts\python.exe docs/core/test/test_spatial_coupling.py`
 - `.\.venv\Scripts\python.exe docs/topics/0.11_Phase_Transitions/Code/03_Research/Research_Conserved_Order_Spectral_Core_Candidate.py`
 
@@ -625,8 +625,8 @@ CLAIM_BOUNDARY: Internal/provisional evidence only; no proof, prediction, extern
 ## Wave: Conserved-Order Core Candidate (Wave 14)
 
 **What changed:**
-- Added opt-in `conserved_order_v1` support in `docs/core/uet_master_equation.py` using a Model C-style conserved flow `dC/dt = -M nabla^2(force)` where `force` is the negative functional gradient already assembled by the core path.
-- Added `conserved_order_mobility` to `docs/core/uet_parameters.py` and unit checks for conserved mass, shape safety, uniform-field stationarity, and legacy compatibility.
+- Added opt-in `conserved_order_v1` support in `docs/core/02_equations/matter_space/uet_master_equation.py` using a Model C-style conserved flow `dC/dt = -M nabla^2(force)` where `force` is the negative functional gradient already assembled by the core path.
+- Added `conserved_order_mobility` to `docs/core/01_contracts/units/uet_parameters.py` and unit checks for conserved mass, shape safety, uniform-field stationarity, and legacy compatibility.
 - Added `Research_Conserved_Order_Core_Candidate.py`, machine-readable artifact `Result/artifacts/0_11_conserved_order_core_candidate.json`, and CSV `Result/gl_conserved_order_core_candidate_stats.csv`.
 - Updated topic docs to separate opt-in core exposure and mass conservation from the still-blocked mechanism response.
 
@@ -693,8 +693,8 @@ CLAIM_BOUNDARY: Internal/provisional evidence only; no proof, prediction, extern
 ## Wave: Spatial-Coupled V2 Candidate Diagnostic (Wave 11)
 
 **What changed:**
-- Added opt-in `spatial_coupled_v2` support in `docs/core/uet_master_equation.py` with screened nonlocal memory contrast and a conserved interface/game force.
-- Added v2 candidate controls to `docs/core/uet_parameters.py` without changing `legacy_local` defaults or `spatial_coupled_v1` behavior.
+- Added opt-in `spatial_coupled_v2` support in `docs/core/02_equations/matter_space/uet_master_equation.py` with screened nonlocal memory contrast and a conserved interface/game force.
+- Added v2 candidate controls to `docs/core/01_contracts/units/uet_parameters.py` without changing `legacy_local` defaults or `spatial_coupled_v1` behavior.
 - Added core unit checks for v2 zero/uniform gates, 1D/2D shape handling, conserved game-force sum, and explicit v2 dynamics shape preservation.
 - Added `Research_Spatial_Coupled_V2_Diagnostic.py`, machine-readable artifact `Result/artifacts/0_11_spatial_coupled_v2_diagnostic.json`, and CSV `Result/gl_spatial_coupled_v2_diagnostic_stats.csv`.
 
@@ -830,7 +830,7 @@ CLAIM_BOUNDARY: Internal/provisional evidence only; no proof, prediction, extern
 - Did not change the core dynamics operator or promote the spatial-coupled candidate claim.
 
 **Which verifier was run:**
-- `.\.venv\Scripts\python.exe docs/core/uet_master_equation.py`
+- `.\.venv\Scripts\python.exe docs/core/02_equations/matter_space/uet_master_equation.py`
 - `.\.venv\Scripts\python.exe docs/core/test/test_spatial_coupling.py`
 - `.\.venv\Scripts\python.exe docs/topics/0.11_Phase_Transitions/Code/03_Research/Research_Critical_Exponents.py`
 - `.\.venv\Scripts\python.exe docs/topics/0.11_Phase_Transitions/Code/03_Research/Research_Spatial_Coupling_Scaling.py`
@@ -852,11 +852,11 @@ CLAIM_BOUNDARY: Internal/provisional evidence only; no proof, prediction, extern
 - Added an opt-in `spatial_coupled_v1` operator mode to the core master equation while preserving `legacy_local` as the default.
 - Added candidate information coupling `0.5 beta C^2 I` and interface-sensitive game coupling through `|grad C|^2`.
 - Added `Research_Spatial_Coupling_Scaling.py` to compare baseline TDGL, historical local UET, and the new spatial-coupled candidate.
-- Added `docs/core/WAVE5_MASTER_EQUATION_ALIGNMENT_AUDIT.md` to map inbox claims to code behavior without treating inbox text as canonical proof.
+- Added `docs/core/08_history/research_notes/WAVE5_MASTER_EQUATION_ALIGNMENT_AUDIT.md` to map inbox claims to code behavior without treating inbox text as canonical proof.
 
 **Which verifier was run:**
 - `.\.venv\Scripts\python.exe docs/core/test/test_spatial_coupling.py`
-- `.\.venv\Scripts\python.exe docs/core/uet_master_equation.py`
+- `.\.venv\Scripts\python.exe docs/core/02_equations/matter_space/uet_master_equation.py`
 - `.\.venv\Scripts\python.exe docs/topics/0.11_Phase_Transitions/Code/03_Research/Research_Critical_Exponents.py`
 - `.\.venv\Scripts\python.exe docs/topics/0.11_Phase_Transitions/Code/03_Research/Research_Spatial_Coupling_Scaling.py`
 
@@ -938,7 +938,7 @@ CLAIM_BOUNDARY: Internal/provisional evidence only; no proof, prediction, extern
 ## Wave 39 & 40: Architectural Emergence Override
 
 **What changed:**
-- REFACTORED strategic_boost in docs/core/uet_master_equation.py.
+- REFACTORED strategic_boost in docs/core/02_equations/matter_space/uet_master_equation.py.
 - Removed the hardcoded if-else density thresholds (Axiom 8).
 - Transitioned to a true Non-linear Emergent model where C^2 directly couples to the Information Field (I), removing the artificial 'referee' mechanic.
 

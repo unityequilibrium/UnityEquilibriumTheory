@@ -58,9 +58,9 @@ else:
 TOPIC_DIR = ROOT / "docs" / "topics" / "0.22_Biophysics_Origin_of_Life"
 
 try:
-    from docs.core.uet_base_solver import UETBaseSolver
+    from docs.scripts.core.runners.uet_base_solver import UETBaseSolver
     from docs.core.uet_master_equation import UETParameters
-    from docs.core.scientific_validation import ScientificValidator
+    from docs.scripts.core.audit.scientific_validation import ScientificValidator
 except ImportError as e:
     print(f"IMPORT ERROR: {e}")
     UETBaseSolver = object

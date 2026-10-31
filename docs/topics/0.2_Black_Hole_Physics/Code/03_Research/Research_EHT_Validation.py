@@ -37,7 +37,7 @@ TOPIC_DIR = ROOT / "docs" / "topics" / "0.2_Black_Hole_Physics"
 DATA_PATH = TOPIC_DIR / "Data"
 
 # Core Imports
-from docs.core.uet_glass_box import UETPathManager, UETMetricLogger
+from docs.scripts.core.runners.uet_glass_box import UETPathManager, UETMetricLogger
 from docs.core.uet_parameters import G, C, M_SUN
 
 pc_to_m = 3.085677581e16

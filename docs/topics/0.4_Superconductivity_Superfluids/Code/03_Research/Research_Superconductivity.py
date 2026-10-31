@@ -35,10 +35,10 @@ from pathlib import Path
 # --- ROBUST PATH FINDER ---
 
 try:
-    from docs.core.uet_glass_box import UETPathManager, UETMetricLogger
+    from docs.scripts.core.runners.uet_glass_box import UETPathManager, UETMetricLogger
 except ImportError:
     print("Warning: Light import failed.")
-    from docs.core.uet_glass_box import UETPathManager, UETMetricLogger
+    from docs.scripts.core.runners.uet_glass_box import UETPathManager, UETMetricLogger
 
 
 import importlib.util

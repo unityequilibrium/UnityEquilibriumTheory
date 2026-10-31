@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "artifact": "uet_equation_correspondence_registry_curved_3p1_addendum",
-  "generated_at": "2026-09-16T10:25:14.691682+00:00",
+  "generated_at": "2026-09-25T00:18:04.502223+00:00",
   "extends": "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry.json",
   "status": "CANDIDATE_ENTRY_PENDING_MERGE",
   "equation_entries": [
@@ -9,7 +9,7 @@
       "equation_id": "uet.main_theory.curved_3p1.adm_constraints",
       "version": "adm-constraint-interface-v1",
       "classification": "standard_physics_constraint_interface",
-      "relation_or_code_path": "docs/core/uet_curved_3p1_constraints.py",
+      "relation_or_code_path": "docs/core/02_equations/covariant/uet_curved_3p1_constraints.py",
       "variables": {
         "gamma_ij": "positive-definite spatial metric",
         "K_ij": "extrinsic curvature",
@@ -72,7 +72,7 @@
         "spatially flat FLRW Friedmann control"
       ],
       "implementation_paths": [
-        "docs/core/uet_curved_3p1_constraints.py"
+        "docs/core/02_equations/covariant/uet_curved_3p1_constraints.py"
       ],
       "verifier_paths": [
         "docs/scripts/audit/audit_uet_curved_3p1_constraints.py",
@@ -92,7 +92,7 @@
       "equation_id": "uet.main_theory.curved_3p1.periodic_spatial_geometry",
       "version": "periodic-geometry-operator-v1",
       "classification": "numerical_implementation",
-      "relation_or_code_path": "docs/core/uet_curved_3p1_geometry.py",
+      "relation_or_code_path": "docs/core/02_equations/covariant/uet_curved_3p1_geometry.py",
       "variables": {
         "gamma_ij": "positive-definite spatial metric on a uniform periodic Cartesian chart",
         "Gamma^k_ij": "Levi-Civita connection",
@@ -158,7 +158,7 @@
         "manufactured off-diagonal K divergence control"
       ],
       "implementation_paths": [
-        "docs/core/uet_curved_3p1_geometry.py"
+        "docs/core/02_equations/covariant/uet_curved_3p1_geometry.py"
       ],
       "verifier_paths": [
         "docs/scripts/audit/audit_uet_curved_3p1_geometry.py",
@@ -178,7 +178,7 @@
       "equation_id": "uet.main_theory.curved_3p1.adm_evolution_rhs",
       "version": "adm-evolution-rhs-v1",
       "classification": "standard_physics_evolution_operator",
-      "relation_or_code_path": "docs/core/uet_curved_3p1_adm_evolution.py",
+      "relation_or_code_path": "docs/core/02_equations/covariant/uet_curved_3p1_adm_evolution.py",
       "variables": {
         "gamma_ij": "spatial metric; not Phi",
         "K_ij": "extrinsic curvature; not Pi",
@@ -311,7 +311,7 @@
         "spatially flat dust FLRW instantaneous control"
       ],
       "implementation_paths": [
-        "docs/core/uet_curved_3p1_adm_evolution.py"
+        "docs/core/02_equations/covariant/uet_curved_3p1_adm_evolution.py"
       ],
       "verifier_paths": [
         "docs/scripts/audit/audit_uet_curved_3p1_adm_evolution.py",
@@ -331,7 +331,7 @@
       "equation_id": "uet.main_theory.curved_3p1.fixed_gauge_adm_hyperbolicity_no_go",
       "version": "fixed-geodesic-adm-symbol-v1",
       "classification": "formulation_no_go",
-      "relation_or_code_path": "docs/core/uet_curved_3p1_adm_evolution.py",
+      "relation_or_code_path": "docs/core/02_equations/covariant/uet_curved_3p1_adm_evolution.py",
       "variables": {
         "P_n": "dimensionless principal symbol",
         "h_ij": "linear metric perturbation",
@@ -429,7 +429,7 @@
         "fixed oblique direction"
       ],
       "implementation_paths": [
-        "docs/core/uet_curved_3p1_adm_evolution.py"
+        "docs/core/02_equations/covariant/uet_curved_3p1_adm_evolution.py"
       ],
       "verifier_paths": [
         "docs/scripts/audit/audit_uet_curved_3p1_adm_evolution.py",
@@ -448,7 +448,7 @@
       "equation_id": "uet.main_theory.curved_3p1.generalized_harmonic_principal_system",
       "version": "gh-principal-system-v1",
       "classification": "standard_physics_hyperbolic_formulation",
-      "relation_or_code_path": "docs/core/uet_curved_3p1_generalized_harmonic.py",
+      "relation_or_code_path": "docs/core/02_equations/covariant/uet_curved_3p1_generalized_harmonic.py",
       "variables": {
         "psi_ab": "spacetime metric; not UET Phi",
         "Pi_ab": "minus normal metric derivative; not UET Pi",
@@ -523,7 +523,7 @@
         "sub/super-coordinate shift cases with normal-frame causal waves"
       ],
       "implementation_paths": [
-        "docs/core/uet_curved_3p1_generalized_harmonic.py"
+        "docs/core/02_equations/covariant/uet_curved_3p1_generalized_harmonic.py"
       ],
       "verifier_paths": [
         "docs/scripts/audit/audit_uet_curved_3p1_generalized_harmonic.py",
@@ -543,7 +543,7 @@
       "equation_id": "uet.main_theory.curved_3p1.generalized_harmonic_nonlinear_vacuum_rhs",
       "version": "gh-nonlinear-vacuum-rhs-v1",
       "classification": "standard_physics_vacuum_evolution_operator",
-      "relation_or_code_path": "docs/core/uet_curved_3p1_generalized_harmonic.py",
+      "relation_or_code_path": "docs/core/02_equations/covariant/uet_curved_3p1_generalized_harmonic.py",
       "formula_ids": [
         "UET-CURVED3P1-GH-PSI-RHS-014",
         "UET-CURVED3P1-GH-PI-RHS-015",
@@ -623,7 +623,7 @@
         "manufactured periodic variable state"
       ],
       "implementation_paths": [
-        "docs/core/uet_curved_3p1_generalized_harmonic.py"
+        "docs/core/02_equations/covariant/uet_curved_3p1_generalized_harmonic.py"
       ],
       "verifier_paths": [
         "docs/scripts/audit/audit_uet_curved_3p1_gh_nonlinear_vacuum.py",
@@ -643,7 +643,7 @@
       "equation_id": "uet.main_theory.curved_3p1.generalized_harmonic_periodic_vacuum_evolution",
       "version": "gh-periodic-vacuum-evolution-v1",
       "classification": "standard_physics_numerical_evolution_control",
-      "relation_or_code_path": "docs/core/uet_curved_3p1_gh_evolution.py",
+      "relation_or_code_path": "docs/core/02_equations/covariant/uet_curved_3p1_gh_evolution.py",
       "formula_ids": [
         "UET-CURVED3P1-GH-RK4-018",
         "UET-CURVED3P1-GH-CFL-019",
@@ -666,10 +666,10 @@
       "parameter_dimensions": "geometric c=1 periodic-coordinate lane",
       "source_or_origin": {
         "docs/data/external/gr_3p1/lindblom_et_al_2006_gh/source_record.json": "c3812246cabdc3e4de2cb266945a0355bc0d64b7ae1d041507e764fe0199d08a",
-        "docs/core/07_artifacts/verification/curved_3p1_gh_nonlinear_vacuum_rhs_verification.json": "7b6e7ae7ff020f60389323871f23468b7d607cc6c123f10057621c08a1d3f21e",
-        "docs/core/07_artifacts/correspondence/curved_3p1_gh_nonlinear_vacuum_formula_audit.json": "a7f53a0cc7ad1aeed666b6fd8cbd296b3f67c8e447f23e491551774349457c3a",
-        "docs/core/07_artifacts/gates/curved_3p1_gh_nonlinear_vacuum_gate.json": "34054008efffb5b1233320aae346ee6c7a4ed99a5bb4c9e8e8b4a3e9caf64640",
-        "docs/core/uet_curved_3p1_gh_evolution.py": "aeb9f24af11e2d7b45eed1db3132831135c8a17ff9f23ca62fd88e9e7ad857cc"
+        "docs/core/07_artifacts/verification/curved_3p1_gh_nonlinear_vacuum_rhs_verification.json": "85c1acb49a0c27bbba7c65e495bdfde5c758ceed0b1d202ec5d3641610d352a6",
+        "docs/core/07_artifacts/correspondence/curved_3p1_gh_nonlinear_vacuum_formula_audit.json": "23cca7db0428bfc76959ab4af22704a97e1aab4bb44119b3843ae0512bd6ae90",
+        "docs/core/07_artifacts/gates/curved_3p1_gh_nonlinear_vacuum_gate.json": "b0ed29977920fc17d7b99b973a4a738ac63b7b3e9f7c7284833a9fabf2c4bb5d",
+        "docs/core/02_equations/covariant/uet_curved_3p1_gh_evolution.py": "c18f231375609cebb76d342ba7ad94471eb280089458ace85882ed2450f3581e"
       },
       "assumptions": [
         "vacuum",
@@ -685,7 +685,7 @@
         "constant off-diagonal reduction violation"
       ],
       "implementation_paths": [
-        "docs/core/uet_curved_3p1_gh_evolution.py"
+        "docs/core/02_equations/covariant/uet_curved_3p1_gh_evolution.py"
       ],
       "verifier_paths": [
         "docs/scripts/audit/audit_uet_curved_3p1_gh_time_evolution.py",
@@ -705,7 +705,7 @@
       "equation_id": "uet.main_theory.curved_3p1.topic13_prescribed_matter_source",
       "version": "topic13-prescribed-matter-wiring-v1",
       "classification": "standard_physics_matter_source_interface",
-      "relation_or_code_path": "docs/core/uet_curved_3p1_matter_wiring.py",
+      "relation_or_code_path": "docs/core/02_equations/covariant/uet_curved_3p1_matter_wiring.py",
       "formula_ids": [
         "UET-CURVED3P1-MATTER-TAB-021",
         "UET-CURVED3P1-MATTER-ADM-022",
@@ -775,7 +775,7 @@
         "vacuum null source"
       ],
       "implementation_paths": [
-        "docs/core/uet_curved_3p1_matter_wiring.py"
+        "docs/core/02_equations/covariant/uet_curved_3p1_matter_wiring.py"
       ],
       "verifier_paths": [
         "docs/scripts/audit/audit_uet_curved_3p1_matter_wiring.py",
@@ -790,6 +790,368 @@
       "claim_boundary": "prescribed lane-specific stress-energy construction and projection only; not a self-consistent matter-coupled spacetime solution, Einstein-equation derivation, Gravity validation, or global UET closure",
       "failure_mode": "prescribed source wiring is overread as a self-consistent matter-coupled spacetime solution",
       "next_hardening_step": "add constraint-preserving boundaries and a conservation-compatible matter evolution contract"
+    },
+    {
+      "equation_id": "uet.main_theory.curved_3p1.gh_linear_differential_boundary_residuals",
+      "version": "gh-linear-differential-boundary-residuals-v1",
+      "classification": "standard_physics_boundary_condition_diagnostic",
+      "relation_or_code_path": "docs/core/02_equations/covariant/uet_curved_3p1_gh_linear_boundary.py",
+      "formula_ids": [
+        "GH-BC-CONSTRAINT-C0MINUS-027",
+        "GH-BC-INCOMING-WEYL-030-033",
+        "GH-BC-U2-CURL-029",
+        "GH-BC-GAUGE-PROJECTION-035-036"
+      ],
+      "variables": {
+        "delta_psi_ab": "linear spacetime-metric perturbation; not UET Phi",
+        "delta_Pi_ab": "linear normal metric-derivative perturbation; not UET Pi",
+        "delta_Phi_iab": "linear spatial metric-derivative perturbation; not UET Phi",
+        "beta_n": "outward normal shift component",
+        "gamma2": "first-order reduction-constraint damping parameter"
+      },
+      "mathematical_role": "evaluate incoming subsidiary-constraint, Weyl/Psi_0, gauge-data, and positive-shift u2_A definition-curl boundary residuals",
+      "standard_physics_counterpart": "linearized/frozen-background first-order generalized-harmonic boundary conditions of Rinne (2006), Eqs. 27-36",
+      "observable_mapping": {
+        "status": "OPEN",
+        "reason": "boundary residuals are numerical/formulation diagnostics, not gravitational detector observables"
+      },
+      "unit_lane": "geometric c=1 local orthonormal frame",
+      "parameter_dimensions": {
+        "delta_psi": "1",
+        "delta_Pi_and_delta_Phi": "L^-1",
+        "gamma2": "L^-1",
+        "constraint_and_weyl_residuals": "L^-2",
+        "gauge_residual": "L^-1"
+      },
+      "source_or_origin": {
+        "formula_source": "https://arxiv.org/abs/gr-qc/0606053",
+        "formula_locators": "Eqs. 27-33 and 35-36",
+        "well_posedness_caution": "https://arxiv.org/abs/gr-qc/0303040"
+      },
+      "assumptions": [
+        "linear perturbations about Minkowski",
+        "local orthonormal frame",
+        "fixed smooth face",
+        "strictly subluminal normal shift",
+        "source GH first-order variables and sign convention"
+      ],
+      "symmetry_and_conservation": "projected Weyl tensor is transverse and trace-free; subsidiary-constraint propagation under a discrete boundary scheme remains unverified",
+      "limiting_cases": [
+        "nonpositive normal shift: u1_minus incoming",
+        "positive subluminal normal shift: u1_minus and u2_A incoming",
+        "zero perturbation with homogeneous data"
+      ],
+      "implementation_paths": [
+        "docs/core/02_equations/covariant/uet_curved_3p1_gh_linear_boundary.py"
+      ],
+      "verifier_paths": [
+        "docs/scripts/audit/audit_uet_curved_3p1_gh_linear_boundary.py",
+        "docs/core/07_artifacts/verification/curved_3p1_gh_linear_boundary_residual_audit.json",
+        "docs/core/05_tests/regression/root/test_uet_curved_3p1_gh_linear_boundary.py"
+      ],
+      "evidence_class": "INTERNAL_SOURCE_MATCHED_FORMULA_AND_ANALYTIC_CONTROL",
+      "proof_status": "linear boundary residual formulas and projector kernels pass deterministic controls; no evolution enforcement or IBVP stability result",
+      "downstream_dependencies": [
+        "CORE_CURVED_3P1_OBSERVABLE_PARENT_READY"
+      ],
+      "claim_boundary": "frozen-background linear residual evaluator only; not implemented nonlinear CPBC or a well-posed repository IBVP",
+      "failure_mode": "correct residual evaluation is overread as a stable discrete boundary treatment",
+      "next_hardening_step": "apply to a non-periodic SBP/SAT GH boundary evolution and verify constraint energy, stability, convergence, and corners"
+    },
+    {
+      "equation_id": "uet.main_theory.curved_3p1.gh_full_u1_boundary_slab_pilot",
+      "version": "gh-full-u1-chebyshev-slab-pilot-v1",
+      "classification": "standard_physics_boundary_evolution_diagnostic",
+      "relation_or_code_path": "docs/core/02_equations/covariant/uet_curved_3p1_gh_full_u1_slab.py",
+      "formula_ids": [
+        "GH-BC-U1-MINUS-4-2-4-PROJECTION-001",
+        "GH-BC-U1-INCOMING-RHS-NORMAL-INCIDENCE-002",
+        "GH-BC-U1-CONSTRAINT-COMPATIBLE-LIFT-EXPERIMENT-003"
+      ],
+      "variables": {
+        "psi_ab": "linearized spacetime metric perturbation; not UET Phi",
+        "Pi_ab": "normal time derivative variable; not UET Pi",
+        "Phi_xab": "normal spatial derivative variable; not UET Phi",
+        "q_ab": "incoming u1-minus characteristic field",
+        "P_C_P_P_P_G": "source-defined constraint, physical, and gauge projectors"
+      },
+      "mathematical_role": "match the 4+2+4 incoming-u1 boundary RHS targets to the normal-incidence constraint, Weyl, and gauge residuals, then compare endpoint and reduction-compatible discretizations",
+      "standard_physics_counterpart": "frozen-background first-order GH differential boundary conditions of Rinne (2006), Eqs. 27-36 and Sec. 5.1",
+      "observable_mapping": {
+        "status": "OPEN",
+        "reason": "boundary residual, reduction constraint, and pulse energy are numerical diagnostics rather than gravitational observables"
+      },
+      "unit_lane": "geometric c=1 with slab length scale L0=1",
+      "parameter_dimensions": {
+        "unit_lane": "geometric units with slab length scale L0=1",
+        "psi": "dimensionless",
+        "Pi_and_Phi": "L0^-1",
+        "gamma2": "L0^-1",
+        "u1_minus_time_rhs": "L0^-2",
+        "UET_symbols_used": []
+      },
+      "source_or_origin": {
+        "formula_source": "https://arxiv.org/abs/gr-qc/0606053",
+        "formula_locators": "Eqs. 27-36 and Sec. 5.1",
+        "local_evidence": "docs/core/07_artifacts/verification/curved_3p1_gh_full_u1_cpbc_slab_pilot.json",
+        "source_hashes": {
+          "docs/scripts/audit/audit_curved_3p1_gh_full_u1_cpbc_slab.py": "2fa112eaf6a0f34ab7cccf2027e59f2294b34c22048384c0c4e601754dce4a9b",
+          "docs/core/05_tests/regression/root/test_uet_curved_3p1_gh_full_u1_slab.py": "04caabffaa760f58c8b5cdebd258dd162bc8079935d7500d0f081a7ac12f12a1",
+          "docs/core/02_equations/covariant/uet_curved_3p1_gh_full_u1_slab.py": "31618a664a0e339ef4746e2ef3992a44143d3fa0169e4f9909845cfc1d0d4146",
+          "docs/core/02_equations/covariant/uet_curved_3p1_gh_boundary_projectors.py": "2aa529e3a037a5ecff2c2a5a6d454ef7cf9822ca99371393d6614bfbc062362f",
+          "docs/core/02_equations/covariant/uet_curved_3p1_gh_linear_boundary.py": "39bd0731a3ecdbb5c5185453e0908d198cba895ba5f29dafc6bb8f9c6a3b169c",
+          "docs/core/02_equations/covariant/uet_curved_3p1_generalized_harmonic.py": "4f0c8ed0e5afe52e43cedefeb9c061e10dbd440fd20e8bc57a8aacfa43e76f92",
+          "docs/scripts/audit/audit_curved_3p1_gh_tt_sbp_sat_boundary.py": "01e519a576bfebcb41222af81bfd6ed7a5f7bf0538cfc4c3e2cb51b5653d29df"
+        }
+      },
+      "assumptions": [
+        "linear perturbations about Minkowski",
+        "zero shift",
+        "one spatial normal with no tangential derivatives",
+        "homogeneous constraint and Weyl data",
+        "prescribed gauge-data rate",
+        "gamma0 gauge-constraint damping excluded"
+      ],
+      "symmetry_and_conservation": "the 4+2+4 target algebra matches residual evaluation; pointwise replacement leaves a nonzero discrete reduction residual, while the cubic compatible lift is unstable",
+      "limiting_cases": [
+        "homogeneous zero state",
+        "normal-incidence incoming u1-minus only",
+        "no positive-shift u2_A modes"
+      ],
+      "implementation_paths": [
+        "docs/core/02_equations/covariant/uet_curved_3p1_gh_full_u1_slab.py"
+      ],
+      "verifier_paths": [
+        "docs/scripts/audit/audit_curved_3p1_gh_full_u1_cpbc_slab.py",
+        "docs/core/07_artifacts/verification/curved_3p1_gh_full_u1_cpbc_slab_pilot.json",
+        "docs/core/05_tests/regression/root/test_uet_curved_3p1_gh_full_u1_slab.py"
+      ],
+      "evidence_class": "INTERNAL_SOURCE_MATCHED_FORMULA_AND_PARTIAL_NUMERICAL_DIAGNOSTIC",
+      "proof_status": "4+2+4 projector and residual identities pass; pointwise Chebyshev spectrum/noise screens pass but pulse/reduction limits fail; the reduction-compatible lift preserves the identity but is spectrally unstable; no CPBC evolution closure",
+      "downstream_dependencies": [],
+      "claim_boundary": "partial full-u1 boundary-mapping diagnostic only; not stable full GH CPBC, nonlinear well-posedness, Gravity compatibility, or UET closure",
+      "failure_mode": "the pointwise incoming RHS and a reduction-compatible lift each solve only one side of the discrete trade-off; either is overread as a complete stable constraint-preserving evolution",
+      "next_hardening_step": "derive a boundary/SBP discretization that preserves the reduction constraint without the lift's growing modes, then rerun pulse reflection and convergence gates"
+    },
+    {
+      "equation_id": "uet.main_theory.curved_3p1.gh_reduced_wave_boundary_comparator",
+      "version": "gh-reduced-wave-algebraic-phi-boundary-comparator-v1",
+      "classification": "standard_physics_second_order_boundary_comparator",
+      "relation_or_code_path": "docs/core/02_equations/covariant/uet_curved_3p1_gh_full_u1_slab.py",
+      "formula_ids": [
+        "GH-BC-U1-REDUCED-WAVE-ALGEBRAIC-PHI-COMPARATOR-001"
+      ],
+      "variables": {
+        "psi_ab": "linearized spacetime metric perturbation; not UET Phi",
+        "Pi_ab": "normal time derivative variable; not UET Pi",
+        "Phi_xab": "spatial derivative variable constrained algebraically to D_x(psi_ab); not UET Phi",
+        "q_ab": "incoming u1-minus characteristic field"
+      },
+      "mathematical_role": "compare a second-order algebraic-reduction wave formulation against the full-u1 boundary target without treating it as the independent-variable first-order GH CPBC system",
+      "standard_physics_counterpart": "frozen-background linear GH wave system with algebraic reduction Phi_xab=D_x(psi_ab)",
+      "observable_mapping": {
+        "status": "OPEN",
+        "reason": "spectrum and pulse energy are numerical diagnostics rather than gravitational observables"
+      },
+      "unit_lane": "geometric c=1 with slab length scale L0=1",
+      "parameter_dimensions": {
+        "unit_lane": "geometric units with slab length scale L0=1",
+        "psi": "dimensionless",
+        "Pi_and_Phi": "L0^-1",
+        "gamma2": "L0^-1",
+        "u1_minus_time_rhs": "L0^-2",
+        "UET_symbols_used": []
+      },
+      "source_or_origin": {
+        "formula_source": "https://arxiv.org/abs/gr-qc/0606053",
+        "formula_locators": "Eqs. 27-36 and Sec. 5.1",
+        "local_evidence": "docs/core/07_artifacts/verification/curved_3p1_gh_reduced_wave_boundary_comparator.json",
+        "source_hashes": {
+          "docs/scripts/audit/audit_curved_3p1_gh_full_u1_cpbc_slab.py": "2fa112eaf6a0f34ab7cccf2027e59f2294b34c22048384c0c4e601754dce4a9b",
+          "docs/core/05_tests/regression/root/test_uet_curved_3p1_gh_full_u1_slab.py": "04caabffaa760f58c8b5cdebd258dd162bc8079935d7500d0f081a7ac12f12a1",
+          "docs/core/02_equations/covariant/uet_curved_3p1_gh_full_u1_slab.py": "31618a664a0e339ef4746e2ef3992a44143d3fa0169e4f9909845cfc1d0d4146",
+          "docs/core/02_equations/covariant/uet_curved_3p1_gh_boundary_projectors.py": "2aa529e3a037a5ecff2c2a5a6d454ef7cf9822ca99371393d6614bfbc062362f",
+          "docs/core/02_equations/covariant/uet_curved_3p1_gh_linear_boundary.py": "39bd0731a3ecdbb5c5185453e0908d198cba895ba5f29dafc6bb8f9c6a3b169c",
+          "docs/core/02_equations/covariant/uet_curved_3p1_generalized_harmonic.py": "4f0c8ed0e5afe52e43cedefeb9c061e10dbd440fd20e8bc57a8aacfa43e76f92",
+          "docs/scripts/audit/audit_curved_3p1_gh_tt_sbp_sat_boundary.py": "01e519a576bfebcb41222af81bfd6ed7a5f7bf0538cfc4c3e2cb51b5653d29df"
+        }
+      },
+      "assumptions": [
+        "linear perturbations about Minkowski",
+        "zero shift",
+        "one spatial normal with no tangential derivatives",
+        "homogeneous constraint and Weyl data",
+        "prescribed gauge-data rate",
+        "Phi_xab=D_x(psi_ab) imposed algebraically"
+      ],
+      "symmetry_and_conservation": "algebraic reduction remains at roundoff in the declared pulse test; a semidiscrete energy estimate and spatial convergence are open",
+      "limiting_cases": [
+        "homogeneous zero state",
+        "normal-incidence incoming u1-minus only",
+        "no positive-shift u2_A modes"
+      ],
+      "implementation_paths": [
+        "docs/core/02_equations/covariant/uet_curved_3p1_gh_full_u1_slab.py"
+      ],
+      "verifier_paths": [
+        "docs/scripts/audit/audit_curved_3p1_gh_full_u1_cpbc_slab.py",
+        "docs/core/07_artifacts/verification/curved_3p1_gh_reduced_wave_boundary_comparator.json",
+        "docs/core/05_tests/regression/root/test_uet_curved_3p1_gh_full_u1_slab.py"
+      ],
+      "evidence_class": "INTERNAL_SYNTHETIC_SECOND_ORDER_COMPARATOR_PARTIAL",
+      "proof_status": "degree-8 algebraic reduction, spectrum, and noise screens pass; degree-12 integrated packet remainder exceeds the unchanged 0.05 limit, higher-resolution energy is non-monotone, and degree 20 has one eigenvalue above the unchanged 1e-6 tolerance",
+      "downstream_dependencies": [],
+      "claim_boundary": "partial second-order comparator only; not full first-order GH CPBC, continuum well-posedness, Gravity compatibility, or UET closure",
+      "failure_mode": "a discrete algebraic reduction or one passing low-resolution screen is overread as a converged stable full-GH boundary evolution",
+      "next_hardening_step": "derive a discrete energy estimate and establish spatial convergence and high-order spectral behavior without changing the declared thresholds"
+    },
+    {
+      "equation_id": "uet.main_theory.curved_3p1.gh_reduced_tt_sbp_sat_energy_comparator",
+      "version": "gh-reduced-tt-sbp-sat-energy-v1",
+      "classification": "standard_physics_reduced_tt_boundary_evolution_diagnostic",
+      "relation_or_code_path": "docs/scripts/audit/audit_curved_3p1_gh_reduced_wave_sbp_sat.py",
+      "formula_ids": [
+        "GH-TT-REDUCED-ALGEBRAIC-GRADIENT-001",
+        "GH-TT-REDUCED-SBP-SAT-RHS-002",
+        "GH-TT-REDUCED-SEMIDISCRETE-ENERGY-003"
+      ],
+      "variables": {
+        "h_A": "dimensionless standard-GR TT metric polarization, A in {+,x}",
+        "Pi_A": "standard-GR normal time derivative variable; not UET Pi",
+        "G_A": "spatial derivative D(h_A), reconstructed algebraically; not UET Phi",
+        "H": "LGL diagonal SBP norm matrix",
+        "e_L_e_R": "left/right endpoint basis vectors"
+      },
+      "mathematical_role": "test an energy-stable second-order TT outgoing-wave SAT comparator with no independent gradient state",
+      "standard_physics_counterpart": "one-dimensional standard linearized-GR TT wave equation with homogeneous outgoing characteristic penalties",
+      "observable_mapping": {
+        "status": "OPEN",
+        "reason": "discrete energy, characteristic, and packet diagnostics are not gravitational observables"
+      },
+      "unit_lane": "geometric c=1 with slab length scale L0=1",
+      "parameter_dimensions": {
+        "unit_lane": "geometric c=1 with slab length scale L0=1",
+        "h": "dimensionless",
+        "Pi_and_G": "L0^-1",
+        "UET_symbols_used": []
+      },
+      "source_or_origin": {
+        "formula_source": "https://arxiv.org/abs/gr-qc/0606053",
+        "formula_locator": "Rinne (2006), frozen-background linear GH boundary target; the reduced TT SAT energy identity is derived and tested in the local audit",
+        "local_evidence": "docs/core/07_artifacts/verification/curved_3p1_gh_reduced_wave_sbp_sat_comparator.json",
+        "source_hashes": {
+          "docs/scripts/audit/audit_curved_3p1_gh_reduced_wave_sbp_sat.py": "c43b476adb226b8c9dec5e6d11b24310e9d4843871fd6e6f81d0daea754ca2f6",
+          "docs/core/05_tests/regression/root/test_uet_curved_3p1_gh_reduced_wave_sbp_sat.py": "28ba3fa95f492741f990cdbb8e98884d0e743ce5708e9b88adb955b91d84167c",
+          "docs/scripts/audit/audit_curved_3p1_gh_tt_sbp_sat_boundary.py": "01e519a576bfebcb41222af81bfd6ed7a5f7bf0538cfc4c3e2cb51b5653d29df",
+          "docs/scripts/audit/audit_curved_3p1_gh_full_u1_cpbc_slab.py": "2fa112eaf6a0f34ab7cccf2027e59f2294b34c22048384c0c4e601754dce4a9b",
+          "docs/core/02_equations/covariant/uet_curved_3p1_gh_full_u1_slab.py": "31618a664a0e339ef4746e2ef3992a44143d3fa0169e4f9909845cfc1d0d4146"
+        }
+      },
+      "assumptions": [
+        "linear perturbations about Minkowski",
+        "zero shift and one spatial normal",
+        "two standard TT polarizations only",
+        "LGL diagonal-norm SBP operator on a finite slab",
+        "homogeneous no-incoming characteristic data",
+        "G_A=D(h_A) reconstructed algebraically"
+      ],
+      "symmetry_and_conservation": "the exact SBP identity gives dE/dt=-sum_A(Pi_A,L^2+Pi_A,R^2)<=0; floating-point SBP defect is recorded separately",
+      "limiting_cases": [
+        "zero state remains zero",
+        "left- and right-going outgoing Gaussian packets",
+        "first-order TT RHS agreement on G_A=D(h_A)"
+      ],
+      "implementation_paths": [
+        "docs/scripts/audit/audit_curved_3p1_gh_reduced_wave_sbp_sat.py"
+      ],
+      "verifier_paths": [
+        "docs/scripts/audit/audit_curved_3p1_gh_reduced_wave_sbp_sat.py",
+        "docs/core/07_artifacts/verification/curved_3p1_gh_reduced_wave_sbp_sat_comparator.json",
+        "docs/core/05_tests/regression/root/test_uet_curved_3p1_gh_reduced_wave_sbp_sat.py"
+      ],
+      "evidence_class": "INTERNAL_ANALYTIC_AND_SYNTHETIC_STANDARD_GR_CONTROL",
+      "proof_status": "declared semidiscrete energy identity, first/second-order reduction-subspace RHS equivalence, bounded spectrum, bidirectional packet absorption, and fourth-order temporal refinement pass; no spatial continuum or full GH CPBC closure",
+      "downstream_dependencies": [],
+      "claim_boundary": "second-order standard-GR TT comparator only; not full first-order GH CPBC, curved 3+1 parent closure, Gravity compatibility, or UET closure",
+      "failure_mode": "a TT-sector energy estimate is overread as stability or well-posedness of the coupled constraint/physical/gauge boundary system",
+      "next_hardening_step": "derive and verify a projector-aware SBP-SAT energy estimate for the full incoming GH constraint, physical, and gauge sectors without changing locked thresholds"
+    },
+    {
+      "equation_id": "uet.main_theory.curved_3p1.linear_gw_detector_response",
+      "version": "linear-gw-detector-response-v1",
+      "classification": "standard_physics_detector_response_mapping",
+      "relation_or_code_path": "docs/core/02_equations/covariant/uet_curved_3p1_gw_detector_response.py",
+      "variables": {
+        "h_ij": "dimensionless spatial metric perturbation in the declared asymptotically flat wave zone",
+        "h_TT_ij": "transverse-traceless plane-wave Fourier mode",
+        "n_i": "dimensionless unit propagation direction",
+        "u_i_v_i": "dimensionless equal-arm unit vectors",
+        "f": "frequency in s^-1",
+        "L": "arm length in m",
+        "h_D": "dimensionless ideal detector strain response",
+        "DeltaL_equiv": "equivalent differential length in m"
+      },
+      "mathematical_role": "map one linearized GH spatial-metric Fourier mode through TT projection and finite-frequency equal-arm interferometer response to strain and equivalent length",
+      "standard_physics_counterpart": "linearized-GR equal-arm Michelson single-round-trip response without optical cavities",
+      "observable_mapping": {
+        "status": "CLOSED_FOR_LANE",
+        "observable": "ideal equal-arm interferometer strain response to one TT plane-wave mode",
+        "general_curved_space_mapping": "OPEN"
+      },
+      "unit_lane": "SI detector response; metric and strain dimensionless, frequency s^-1, arm length m",
+      "parameter_dimensions": {
+        "spacetime_metric_and_h_TT": "dimensionless",
+        "frequency_hz": "s^-1",
+        "arm_length_m": "m",
+        "speed_of_light": "m s^-1 (exact SI defining constant)",
+        "transfer_frequency_hz": "s^-1",
+        "arm_vectors_and_propagation_direction": "dimensionless unit vectors",
+        "detector_tensor_and_strain_response": "dimensionless",
+        "equivalent_differential_length_m": "m; literal arm displacement only in the low-frequency limit"
+      },
+      "source_or_origin": [
+        {
+          "source": "Liang et al. (2019), Phys. Rev. D 99, 104027",
+          "url": "https://arxiv.org/abs/1901.09624",
+          "locators": "Eqs. (2)-(6), Sec. II.3",
+          "used_for": "TT polarization tensors, equal-arm frequency response, and low-frequency limit"
+        },
+        {
+          "source": "BIPM SI definition of the metre",
+          "url": "https://www.bipm.org/en/si-base-units/metre",
+          "locator": "fixed exact value of c in m s^-1",
+          "used_for": "exact SI conversion constant c=299792458 m s^-1"
+        }
+      ],
+      "assumptions": [
+        "linearized plane-wave mode in an asymptotically Minkowski wave zone",
+        "spatial TT projection relative to the declared propagation direction",
+        "equal physical arm lengths and fixed arm directions",
+        "ideal Michelson single-round-trip response without optical cavities",
+        "frequency-domain mode supplied by caller; no time-series FFT is included"
+      ],
+      "symmetry_and_conservation": "TT projection is transverse and trace-free; this is a measurement operator, not an added dynamical source or conserved UET state",
+      "limiting_cases": [
+        "zero-frequency arm transfer tends to one",
+        "plus and cross polarization analytic controls",
+        "negative-frequency transfer is the complex conjugate"
+      ],
+      "implementation_paths": [
+        "docs/core/02_equations/covariant/uet_curved_3p1_gw_detector_response.py"
+      ],
+      "verifier_paths": [
+        "docs/scripts/audit/audit_uet_curved_3p1_gh_gw_detector_response.py",
+        "docs/core/07_artifacts/verification/curved_3p1_gh_gw_detector_response_audit.json",
+        "docs/core/05_tests/regression/root/test_uet_curved_3p1_gw_detector_response.py"
+      ],
+      "evidence_class": "SOURCE_MATCHED_STANDARD_FORMULA_WITH_ANALYTIC_INTERNAL_CONTROLS",
+      "proof_status": "bounded ideal detector response matches the declared finite-frequency source formula and analytic controls; no detector data or UET evolution prediction",
+      "downstream_dependencies": [
+        "CORE_CURVED_3P1_OBSERVABLE_PARENT_READY"
+      ],
+      "claim_boundary": "standard-GR detector measurement operator for a single TT plane-wave mode; not external validation or a detector calibration pipeline, and not a UET prediction",
+      "failure_mode": "ideal single-mode transfer is overread as detector calibration, strong-field radiation extraction, or a UET prediction",
+      "next_hardening_step": "connect a verified GH wave-zone extraction and temporal Fourier map, then add detector calibration, noise, and uncertainty only when source-backed inputs exist"
     }
   ]
 }

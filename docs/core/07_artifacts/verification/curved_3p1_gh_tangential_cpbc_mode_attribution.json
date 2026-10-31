@@ -1,0 +1,888 @@
+{
+  "CLAIM_BOUNDARY": "Finite-grid, frozen-background standard-GR linear-boundary mode attribution only; not continuum instability, nonlinear well-posedness, UET validation, curved 3+1 parent closure, or Gravity unlock.",
+  "CONTROLLING_BLOCKER": "full_first_order_gh_differential_cpbc_stability_and_resolution_convergence_missing",
+  "DEPENDENCY_UNLOCKED": "none; the Core curved-3+1 parent remains PARTIAL and Gravity remains blocked",
+  "EQUATION_OR_MAPPING": {
+    "boundary_characteristic": "q_in = Pi - n*Phi_x - gamma2*psi",
+    "energy": "E = 0.5*integral(4|psi|^2 - 2*gamma2*Re(conj(psi)*Pi) + |Pi|^2 + sum_i|Phi_i|^2) d(x/L0), with LGL norm and tensor Frobenius weights",
+    "harmonic_constraint": "C_a = eta^(bc)*partial_b h_ac - 0.5*eta^(bc)*partial_a h_bc using (Pi, Phi_i) in the registered first-order state",
+    "sector_map": "q_in = P_constraint*q_in + P_physical*q_in + P_gauge*q_in, evaluated independently on left and right",
+    "semidiscrete_system": "U_dot = A_h(k_y) U for the source-matched frozen-background linear GH slab"
+  },
+  "MAJOR_RESULT_CLOSURE": "PARTIAL",
+  "NEXT_ACTION": "Use the measured incoming-sector composition to target a projector-compatible SBP-SAT energy estimate; then test adjacent LGL orders at the same wavenumber without changing thresholds.",
+  "PREREGISTRATION": {
+    "control_cases": [
+      "full boundary RHS with gamma0=0",
+      "bulk RHS without boundary correction at gamma0=1"
+    ],
+    "decision_policy": "Post-observation structural attribution only; no fitting, no threshold changes, no dependency unlock",
+    "degree": 12,
+    "gamma0_L0": 1.0,
+    "gamma2_L0": 1.0,
+    "operator_family": "Legendre-Gauss-Lobatto diagonal-norm SBP",
+    "positive_real_part_reference_tolerance": 1e-06,
+    "tangential_wavenumber_over_L0": 3.141592653589793
+  },
+  "STATUS": "OPEN_EXPLORATORY_MODE_ATTRIBUTION",
+  "VERIFICATION": {
+    "baseline_case": {
+      "matrix_rhs_probe_relative_residual": 2.5116357984542233e-16,
+      "positive_mode_count_above_existing_1e-6_tolerance": 16,
+      "recomputed_positive_eigenvalue_count_matches_source_artifact": true,
+      "recomputed_spectral_abscissa_abs_difference": 6.217248937900877e-15,
+      "sbp_identity_relative_frobenius_residual": 1.3474152902343853e-14,
+      "spectral_abscissa_over_L0_inverse": 0.20059008508881382
+    },
+    "bulk_rhs_without_boundary_correction_control": {
+      "leading_eigenvalues_over_L0_inverse": [
+        {
+          "imag": -3.1505716649584863,
+          "real": 0.06989572489656512
+        },
+        {
+          "imag": 3.1505716649584863,
+          "real": 0.06989572489656512
+        },
+        {
+          "imag": -3.125566399582526,
+          "real": 0.06873287773680892
+        },
+        {
+          "imag": 3.125566399582526,
+          "real": 0.06873287773680892
+        },
+        {
+          "imag": -3.1610586005714594,
+          "real": 0.06798619240533355
+        },
+        {
+          "imag": 3.1610586005714594,
+          "real": 0.06798619240533355
+        },
+        {
+          "imag": -3.110869277878006,
+          "real": 0.06636587698494856
+        },
+        {
+          "imag": 3.110869277878006,
+          "real": 0.06636587698494856
+        }
+      ],
+      "positive_mode_count_above_existing_1e-6_tolerance": 158,
+      "spectral_abscissa_over_L0_inverse": 0.06989572489656512
+    },
+    "clipping": false,
+    "external_data": false,
+    "fitting": false,
+    "gamma0_zero_full_boundary_control": {
+      "leading_eigenvalues_over_L0_inverse": [
+        {
+          "imag": -13.949542608444322,
+          "real": 0.2008024788525179
+        },
+        {
+          "imag": 13.949542608444322,
+          "real": 0.2008024788525179
+        },
+        {
+          "imag": -13.949542608444263,
+          "real": 0.2008024788525069
+        },
+        {
+          "imag": 13.949542608444263,
+          "real": 0.2008024788525069
+        },
+        {
+          "imag": 13.949573440746754,
+          "real": 0.20064214000446376
+        },
+        {
+          "imag": -13.949573440746754,
+          "real": 0.20064214000446376
+        },
+        {
+          "imag": 13.9495734407467,
+          "real": 0.20064214000446112
+        },
+        {
+          "imag": -13.9495734407467,
+          "real": 0.20064214000446112
+        }
+      ],
+      "positive_mode_count_above_existing_1e-6_tolerance": 16,
+      "spectral_abscissa_over_L0_inverse": 0.2008024788525179
+    },
+    "holdout_access": false,
+    "maximum_projector_reconstruction_relative_residual": 9.06449574661895e-17,
+    "maximum_right_eigenvector_relative_residual": 1.5463901701473093e-14,
+    "positive_mode_count": 16,
+    "positive_mode_records": [
+      {
+        "eigenvalue_over_L0_inverse": {
+          "imag": 13.94948878971524,
+          "real": 0.20042420041756825
+        },
+        "harmonic_constraint_l2_over_slab": 0.0011796631889448154,
+        "incoming_sector_decomposition": {
+          "faces": {
+            "left": {
+              "incoming_characteristic_norm_squared": 0.006518885695305747,
+              "projected_sector_fractions": {
+                "constraint": 0.024822485255807394,
+                "gauge": 1.9887500632902782e-29,
+                "physical": 0.9751775147441926
+              },
+              "projected_sector_norm_squared": {
+                "constraint": 0.00016181494405602065,
+                "gauge": 1.2964434339121394e-31,
+                "physical": 0.006357070751249727
+              },
+              "projector_reconstruction_relative_residual": 2.1859817342600955e-17
+            },
+            "right": {
+              "incoming_characteristic_norm_squared": 0.0065188856952973365,
+              "projected_sector_fractions": {
+                "constraint": 0.02482248525580704,
+                "gauge": 1.0295926385554915e-29,
+                "physical": 0.9751775147441929
+              },
+              "projected_sector_norm_squared": {
+                "constraint": 0.00016181494405580958,
+                "gauge": 6.711796723462835e-32,
+                "physical": 0.006357070751241528
+              },
+              "projector_reconstruction_relative_residual": 8.737738298649938e-17
+            }
+          },
+          "two_face_projected_sector_fractions": {
+            "constraint": 0.024822485255807217,
+            "gauge": 1.509171350923194e-29,
+            "physical": 0.9751775147441928
+          }
+        },
+        "normalized_gh_energy": 0.06396145737514572,
+        "right_eigenvector_relative_residual": 1.1436179811900937e-14
+      },
+      {
+        "eigenvalue_over_L0_inverse": {
+          "imag": -13.94948878971524,
+          "real": 0.20042420041756825
+        },
+        "harmonic_constraint_l2_over_slab": 0.0011796631889448154,
+        "incoming_sector_decomposition": {
+          "faces": {
+            "left": {
+              "incoming_characteristic_norm_squared": 0.006518885695305747,
+              "projected_sector_fractions": {
+                "constraint": 0.024822485255807394,
+                "gauge": 1.9887500632902782e-29,
+                "physical": 0.9751775147441926
+              },
+              "projected_sector_norm_squared": {
+                "constraint": 0.00016181494405602065,
+                "gauge": 1.2964434339121394e-31,
+                "physical": 0.006357070751249727
+              },
+              "projector_reconstruction_relative_residual": 2.1859817342600955e-17
+            },
+            "right": {
+              "incoming_characteristic_norm_squared": 0.0065188856952973365,
+              "projected_sector_fractions": {
+                "constraint": 0.02482248525580704,
+                "gauge": 1.0295926385554915e-29,
+                "physical": 0.9751775147441929
+              },
+              "projected_sector_norm_squared": {
+                "constraint": 0.00016181494405580958,
+                "gauge": 6.711796723462835e-32,
+                "physical": 0.006357070751241528
+              },
+              "projector_reconstruction_relative_residual": 8.737738298649938e-17
+            }
+          },
+          "two_face_projected_sector_fractions": {
+            "constraint": 0.024822485255807217,
+            "gauge": 1.509171350923194e-29,
+            "physical": 0.9751775147441928
+          }
+        },
+        "normalized_gh_energy": 0.06396145737514572,
+        "right_eigenvector_relative_residual": 1.1436179811900937e-14
+      },
+      {
+        "eigenvalue_over_L0_inverse": {
+          "imag": 13.986607610300062,
+          "real": 0.17220565265566679
+        },
+        "harmonic_constraint_l2_over_slab": 0.0012477492726536575,
+        "incoming_sector_decomposition": {
+          "faces": {
+            "left": {
+              "incoming_characteristic_norm_squared": 0.006089201932801889,
+              "projected_sector_fractions": {
+                "constraint": 0.026477094784202206,
+                "gauge": 1.7833528338234665e-29,
+                "physical": 0.9735229052157979
+              },
+              "projected_sector_norm_squared": {
+                "constraint": 0.00016122437673494284,
+                "gauge": 1.0859195522585576e-31,
+                "physical": 0.005927977556066945
+              },
+              "projector_reconstruction_relative_residual": 4.4471939095051335e-17
+            },
+            "right": {
+              "incoming_characteristic_norm_squared": 0.006089201932813326,
+              "projected_sector_fractions": {
+                "constraint": 0.026477094784204555,
+                "gauge": 9.110084552597624e-30,
+                "physical": 0.9735229052157954
+              },
+              "projected_sector_norm_squared": {
+                "constraint": 0.00016122437673526003,
+                "gauge": 5.547314446577028e-32,
+                "physical": 0.0059279775560780665
+              },
+              "projector_reconstruction_relative_residual": 9.06449574661895e-17
+            }
+          },
+          "two_face_projected_sector_fractions": {
+            "constraint": 0.02647709478420338,
+            "gauge": 1.3471806445412048e-29,
+            "physical": 0.9735229052157967
+          }
+        },
+        "normalized_gh_energy": 0.06496671928246095,
+        "right_eigenvector_relative_residual": 1.0049997481576085e-14
+      },
+      {
+        "eigenvalue_over_L0_inverse": {
+          "imag": -13.986607610300062,
+          "real": 0.17220565265566679
+        },
+        "harmonic_constraint_l2_over_slab": 0.0012477492726536575,
+        "incoming_sector_decomposition": {
+          "faces": {
+            "left": {
+              "incoming_characteristic_norm_squared": 0.006089201932801889,
+              "projected_sector_fractions": {
+                "constraint": 0.026477094784202206,
+                "gauge": 1.7833528338234665e-29,
+                "physical": 0.9735229052157979
+              },
+              "projected_sector_norm_squared": {
+                "constraint": 0.00016122437673494284,
+                "gauge": 1.0859195522585576e-31,
+                "physical": 0.005927977556066945
+              },
+              "projector_reconstruction_relative_residual": 4.4471939095051335e-17
+            },
+            "right": {
+              "incoming_characteristic_norm_squared": 0.006089201932813326,
+              "projected_sector_fractions": {
+                "constraint": 0.026477094784204555,
+                "gauge": 9.110084552597624e-30,
+                "physical": 0.9735229052157954
+              },
+              "projected_sector_norm_squared": {
+                "constraint": 0.00016122437673526003,
+                "gauge": 5.547314446577028e-32,
+                "physical": 0.0059279775560780665
+              },
+              "projector_reconstruction_relative_residual": 9.06449574661895e-17
+            }
+          },
+          "two_face_projected_sector_fractions": {
+            "constraint": 0.02647709478420338,
+            "gauge": 1.3471806445412048e-29,
+            "physical": 0.9735229052157967
+          }
+        },
+        "normalized_gh_energy": 0.06496671928246095,
+        "right_eigenvector_relative_residual": 1.0049997481576085e-14
+      },
+      {
+        "eigenvalue_over_L0_inverse": {
+          "imag": 13.949488789715318,
+          "real": 0.20042420041757858
+        },
+        "harmonic_constraint_l2_over_slab": 0.0011796631889455262,
+        "incoming_sector_decomposition": {
+          "faces": {
+            "left": {
+              "incoming_characteristic_norm_squared": 0.006518885695304182,
+              "projected_sector_fractions": {
+                "constraint": 0.0248224852558089,
+                "gauge": 2.4312501504853063e-29,
+                "physical": 0.975177514744191
+              },
+              "projected_sector_norm_squared": {
+                "constraint": 0.00016181494405599162,
+                "gauge": 1.5849041827704804e-31,
+                "physical": 0.006357070751248191
+              },
+              "projector_reconstruction_relative_residual": 5.833555890456511e-19
+            },
+            "right": {
+              "incoming_characteristic_norm_squared": 0.006518885695299063,
+              "projected_sector_fractions": {
+                "constraint": 0.024822485255805014,
+                "gauge": 1.351452981475085e-29,
+                "physical": 0.975177514744195
+              },
+              "projected_sector_norm_squared": {
+                "constraint": 0.00016181494405583926,
+                "gauge": 8.809967508807205e-32,
+                "physical": 0.006357070751243226
+              },
+              "projector_reconstruction_relative_residual": 9.000270956721246e-17
+            }
+          },
+          "two_face_projected_sector_fractions": {
+            "constraint": 0.024822485255806957,
+            "gauge": 1.8913515659804076e-29,
+            "physical": 0.975177514744193
+          }
+        },
+        "normalized_gh_energy": 0.06396145737514579,
+        "right_eigenvector_relative_residual": 1.3311859378704525e-14
+      },
+      {
+        "eigenvalue_over_L0_inverse": {
+          "imag": -13.949488789715318,
+          "real": 0.20042420041757858
+        },
+        "harmonic_constraint_l2_over_slab": 0.0011796631889455262,
+        "incoming_sector_decomposition": {
+          "faces": {
+            "left": {
+              "incoming_characteristic_norm_squared": 0.006518885695304182,
+              "projected_sector_fractions": {
+                "constraint": 0.0248224852558089,
+                "gauge": 2.4312501504853063e-29,
+                "physical": 0.975177514744191
+              },
+              "projected_sector_norm_squared": {
+                "constraint": 0.00016181494405599162,
+                "gauge": 1.5849041827704804e-31,
+                "physical": 0.006357070751248191
+              },
+              "projector_reconstruction_relative_residual": 5.833555890456511e-19
+            },
+            "right": {
+              "incoming_characteristic_norm_squared": 0.006518885695299063,
+              "projected_sector_fractions": {
+                "constraint": 0.024822485255805014,
+                "gauge": 1.351452981475085e-29,
+                "physical": 0.975177514744195
+              },
+              "projected_sector_norm_squared": {
+                "constraint": 0.00016181494405583926,
+                "gauge": 8.809967508807205e-32,
+                "physical": 0.006357070751243226
+              },
+              "projector_reconstruction_relative_residual": 9.000270956721246e-17
+            }
+          },
+          "two_face_projected_sector_fractions": {
+            "constraint": 0.024822485255806957,
+            "gauge": 1.8913515659804076e-29,
+            "physical": 0.975177514744193
+          }
+        },
+        "normalized_gh_energy": 0.06396145737514579,
+        "right_eigenvector_relative_residual": 1.3311859378704525e-14
+      },
+      {
+        "eigenvalue_over_L0_inverse": {
+          "imag": 13.98660761030022,
+          "real": 0.17220565265565604
+        },
+        "harmonic_constraint_l2_over_slab": 0.0012477492726541376,
+        "incoming_sector_decomposition": {
+          "faces": {
+            "left": {
+              "incoming_characteristic_norm_squared": 0.006089201932812087,
+              "projected_sector_fractions": {
+                "constraint": 0.026477094784204108,
+                "gauge": 1.0735400467735456e-29,
+                "physical": 0.9735229052157959
+              },
+              "projected_sector_norm_squared": {
+                "constraint": 0.00016122437673522446,
+                "gauge": 6.537002127764651e-32,
+                "physical": 0.005927977556076862
+              },
+              "projector_reconstruction_relative_residual": 8.89630375629375e-17
+            },
+            "right": {
+              "incoming_characteristic_norm_squared": 0.0060892019328031895,
+              "projected_sector_fractions": {
+                "constraint": 0.02647709478420614,
+                "gauge": 1.2438365091257944e-29,
+                "physical": 0.9735229052157939
+              },
+              "projected_sector_norm_squared": {
+                "constraint": 0.0001612243767350013,
+                "gauge": 7.573971675459961e-32,
+                "physical": 0.005927977556068189
+              },
+              "projector_reconstruction_relative_residual": 1.7657437412986506e-17
+            }
+          },
+          "two_face_projected_sector_fractions": {
+            "constraint": 0.026477094784205124,
+            "gauge": 1.1586882779496075e-29,
+            "physical": 0.9735229052157948
+          }
+        },
+        "normalized_gh_energy": 0.06496671928246109,
+        "right_eigenvector_relative_residual": 1.5463901701473093e-14
+      },
+      {
+        "eigenvalue_over_L0_inverse": {
+          "imag": -13.98660761030022,
+          "real": 0.17220565265565604
+        },
+        "harmonic_constraint_l2_over_slab": 0.0012477492726541376,
+        "incoming_sector_decomposition": {
+          "faces": {
+            "left": {
+              "incoming_characteristic_norm_squared": 0.006089201932812087,
+              "projected_sector_fractions": {
+                "constraint": 0.026477094784204108,
+                "gauge": 1.0735400467735456e-29,
+                "physical": 0.9735229052157959
+              },
+              "projected_sector_norm_squared": {
+                "constraint": 0.00016122437673522446,
+                "gauge": 6.537002127764651e-32,
+                "physical": 0.005927977556076862
+              },
+              "projector_reconstruction_relative_residual": 8.89630375629375e-17
+            },
+            "right": {
+              "incoming_characteristic_norm_squared": 0.0060892019328031895,
+              "projected_sector_fractions": {
+                "constraint": 0.02647709478420614,
+                "gauge": 1.2438365091257944e-29,
+                "physical": 0.9735229052157939
+              },
+              "projected_sector_norm_squared": {
+                "constraint": 0.0001612243767350013,
+                "gauge": 7.573971675459961e-32,
+                "physical": 0.005927977556068189
+              },
+              "projector_reconstruction_relative_residual": 1.7657437412986506e-17
+            }
+          },
+          "two_face_projected_sector_fractions": {
+            "constraint": 0.026477094784205124,
+            "gauge": 1.1586882779496075e-29,
+            "physical": 0.9735229052157948
+          }
+        },
+        "normalized_gh_energy": 0.06496671928246109,
+        "right_eigenvector_relative_residual": 1.5463901701473093e-14
+      },
+      {
+        "eigenvalue_over_L0_inverse": {
+          "imag": 13.949458699953668,
+          "real": 0.20059008508881515
+        },
+        "harmonic_constraint_l2_over_slab": 0.0016290614314640546,
+        "incoming_sector_decomposition": {
+          "faces": {
+            "left": {
+              "incoming_characteristic_norm_squared": 0.012890489325181529,
+              "projected_sector_fractions": {
+                "constraint": 0.024508116531118108,
+                "gauge": 1.2795497802371511e-29,
+                "physical": 0.9754918834688818
+              },
+              "projected_sector_norm_squared": {
+                "constraint": 0.0003159216145246829,
+                "gauge": 1.6494022783185367e-31,
+                "physical": 0.012574567710656846
+              },
+              "projector_reconstruction_relative_residual": 1.0803900011769641e-17
+            },
+            "right": {
+              "incoming_characteristic_norm_squared": 0.012890489325175345,
+              "projected_sector_fractions": {
+                "constraint": 0.024508116531117948,
+                "gauge": 6.02453947468392e-30,
+                "physical": 0.975491883468882
+              },
+              "projected_sector_norm_squared": {
+                "constraint": 0.0003159216145245293,
+                "gauge": 7.765926178751054e-32,
+                "physical": 0.012574567710650814
+              },
+              "projector_reconstruction_relative_residual": 1.0803900011772234e-17
+            }
+          },
+          "two_face_projected_sector_fractions": {
+            "constraint": 0.024508116531118028,
+            "gauge": 9.410018638528527e-30,
+            "physical": 0.9754918834688819
+          }
+        },
+        "normalized_gh_energy": 0.12634306597492398,
+        "right_eigenvector_relative_residual": 1.1569516028035563e-14
+      },
+      {
+        "eigenvalue_over_L0_inverse": {
+          "imag": -13.949458699953668,
+          "real": 0.20059008508881515
+        },
+        "harmonic_constraint_l2_over_slab": 0.0016290614314640546,
+        "incoming_sector_decomposition": {
+          "faces": {
+            "left": {
+              "incoming_characteristic_norm_squared": 0.012890489325181529,
+              "projected_sector_fractions": {
+                "constraint": 0.024508116531118108,
+                "gauge": 1.2795497802371511e-29,
+                "physical": 0.9754918834688818
+              },
+              "projected_sector_norm_squared": {
+                "constraint": 0.0003159216145246829,
+                "gauge": 1.6494022783185367e-31,
+                "physical": 0.012574567710656846
+              },
+              "projector_reconstruction_relative_residual": 1.0803900011769641e-17
+            },
+            "right": {
+              "incoming_characteristic_norm_squared": 0.012890489325175345,
+              "projected_sector_fractions": {
+                "constraint": 0.024508116531117948,
+                "gauge": 6.02453947468392e-30,
+                "physical": 0.975491883468882
+              },
+              "projected_sector_norm_squared": {
+                "constraint": 0.0003159216145245293,
+                "gauge": 7.765926178751054e-32,
+                "physical": 0.012574567710650814
+              },
+              "projector_reconstruction_relative_residual": 1.0803900011772234e-17
+            }
+          },
+          "two_face_projected_sector_fractions": {
+            "constraint": 0.024508116531118028,
+            "gauge": 9.410018638528527e-30,
+            "physical": 0.9754918834688819
+          }
+        },
+        "normalized_gh_energy": 0.12634306597492398,
+        "right_eigenvector_relative_residual": 1.1569516028035563e-14
+      },
+      {
+        "eigenvalue_over_L0_inverse": {
+          "imag": 13.949458699953702,
+          "real": 0.20059008508882004
+        },
+        "harmonic_constraint_l2_over_slab": 0.0016290614314640793,
+        "incoming_sector_decomposition": {
+          "faces": {
+            "left": {
+              "incoming_characteristic_norm_squared": 0.012890489325197017,
+              "projected_sector_fractions": {
+                "constraint": 0.024508116531118906,
+                "gauge": 3.3580072336431045e-29,
+                "physical": 0.975491883468881
+              },
+              "projected_sector_norm_squared": {
+                "constraint": 0.0003159216145250728,
+                "gauge": 4.32863563992108e-31,
+                "physical": 0.012574567710671943
+              },
+              "projector_reconstruction_relative_residual": 3.6145223735217404e-27
+            },
+            "right": {
+              "incoming_characteristic_norm_squared": 0.012890489325159855,
+              "projected_sector_fractions": {
+                "constraint": 0.024508116531115336,
+                "gauge": 3.794833104818588e-30,
+                "physical": 0.9754918834688847
+              },
+              "projected_sector_norm_squared": {
+                "constraint": 0.00031592161452411604,
+                "gauge": 4.891725562842724e-32,
+                "physical": 0.01257456771063574
+              },
+              "projector_reconstruction_relative_residual": 1.5515920111148956e-17
+            }
+          },
+          "two_face_projected_sector_fractions": {
+            "constraint": 0.024508116531117122,
+            "gauge": 1.868745272064628e-29,
+            "physical": 0.9754918834688828
+          }
+        },
+        "normalized_gh_energy": 0.12634306597492403,
+        "right_eigenvector_relative_residual": 1.4661342591386644e-14
+      },
+      {
+        "eigenvalue_over_L0_inverse": {
+          "imag": -13.949458699953702,
+          "real": 0.20059008508882004
+        },
+        "harmonic_constraint_l2_over_slab": 0.0016290614314640793,
+        "incoming_sector_decomposition": {
+          "faces": {
+            "left": {
+              "incoming_characteristic_norm_squared": 0.012890489325197017,
+              "projected_sector_fractions": {
+                "constraint": 0.024508116531118906,
+                "gauge": 3.3580072336431045e-29,
+                "physical": 0.975491883468881
+              },
+              "projected_sector_norm_squared": {
+                "constraint": 0.0003159216145250728,
+                "gauge": 4.32863563992108e-31,
+                "physical": 0.012574567710671943
+              },
+              "projector_reconstruction_relative_residual": 3.6145223735217404e-27
+            },
+            "right": {
+              "incoming_characteristic_norm_squared": 0.012890489325159855,
+              "projected_sector_fractions": {
+                "constraint": 0.024508116531115336,
+                "gauge": 3.794833104818588e-30,
+                "physical": 0.9754918834688847
+              },
+              "projected_sector_norm_squared": {
+                "constraint": 0.00031592161452411604,
+                "gauge": 4.891725562842724e-32,
+                "physical": 0.01257456771063574
+              },
+              "projector_reconstruction_relative_residual": 1.5515920111148956e-17
+            }
+          },
+          "two_face_projected_sector_fractions": {
+            "constraint": 0.024508116531117122,
+            "gauge": 1.868745272064628e-29,
+            "physical": 0.9754918834688828
+          }
+        },
+        "normalized_gh_energy": 0.12634306597492403,
+        "right_eigenvector_relative_residual": 1.4661342591386644e-14
+      },
+      {
+        "eigenvalue_over_L0_inverse": {
+          "imag": 13.986650068903327,
+          "real": 0.17203089169332064
+        },
+        "harmonic_constraint_l2_over_slab": 0.0017166257702261763,
+        "incoming_sector_decomposition": {
+          "faces": {
+            "left": {
+              "incoming_characteristic_norm_squared": 0.012003260461249986,
+              "projected_sector_fractions": {
+                "constraint": 0.02614745910262132,
+                "gauge": 1.0956591829032975e-29,
+                "physical": 0.9738525408973786
+              },
+              "projected_sector_norm_squared": {
+                "constraint": 0.00031385476200864555,
+                "gauge": 1.315148254914862e-31,
+                "physical": 0.011689405699241342
+              },
+              "projector_reconstruction_relative_residual": 2.6281799162992007e-27
+            },
+            "right": {
+              "incoming_characteristic_norm_squared": 0.012003260461239047,
+              "projected_sector_fractions": {
+                "constraint": 0.026147459102625545,
+                "gauge": 8.789440233635131e-30,
+                "physical": 0.9738525408973745
+              },
+              "projected_sector_norm_squared": {
+                "constraint": 0.0003138547620084102,
+                "gauge": 1.0550194043281626e-31,
+                "physical": 0.011689405699230637
+              },
+              "projector_reconstruction_relative_residual": 3.701376361099514e-27
+            }
+          },
+          "two_face_projected_sector_fractions": {
+            "constraint": 0.026147459102623435,
+            "gauge": 9.873016031334548e-30,
+            "physical": 0.9738525408973766
+          }
+        },
+        "normalized_gh_energy": 0.1282066003161947,
+        "right_eigenvector_relative_residual": 1.538060451702835e-14
+      },
+      {
+        "eigenvalue_over_L0_inverse": {
+          "imag": -13.986650068903327,
+          "real": 0.17203089169332064
+        },
+        "harmonic_constraint_l2_over_slab": 0.0017166257702261763,
+        "incoming_sector_decomposition": {
+          "faces": {
+            "left": {
+              "incoming_characteristic_norm_squared": 0.012003260461249986,
+              "projected_sector_fractions": {
+                "constraint": 0.02614745910262132,
+                "gauge": 1.0956591829032975e-29,
+                "physical": 0.9738525408973786
+              },
+              "projected_sector_norm_squared": {
+                "constraint": 0.00031385476200864555,
+                "gauge": 1.315148254914862e-31,
+                "physical": 0.011689405699241342
+              },
+              "projector_reconstruction_relative_residual": 2.6281799162992007e-27
+            },
+            "right": {
+              "incoming_characteristic_norm_squared": 0.012003260461239047,
+              "projected_sector_fractions": {
+                "constraint": 0.026147459102625545,
+                "gauge": 8.789440233635131e-30,
+                "physical": 0.9738525408973745
+              },
+              "projected_sector_norm_squared": {
+                "constraint": 0.0003138547620084102,
+                "gauge": 1.0550194043281626e-31,
+                "physical": 0.011689405699230637
+              },
+              "projector_reconstruction_relative_residual": 3.701376361099514e-27
+            }
+          },
+          "two_face_projected_sector_fractions": {
+            "constraint": 0.026147459102623435,
+            "gauge": 9.873016031334548e-30,
+            "physical": 0.9738525408973766
+          }
+        },
+        "normalized_gh_energy": 0.1282066003161947,
+        "right_eigenvector_relative_residual": 1.538060451702835e-14
+      },
+      {
+        "eigenvalue_over_L0_inverse": {
+          "imag": 13.986650068903245,
+          "real": 0.1720308916933126
+        },
+        "harmonic_constraint_l2_over_slab": 0.0017166257702267596,
+        "incoming_sector_decomposition": {
+          "faces": {
+            "left": {
+              "incoming_characteristic_norm_squared": 0.012003260461241443,
+              "projected_sector_fractions": {
+                "constraint": 0.026147459102626468,
+                "gauge": 2.6296390179110346e-29,
+                "physical": 0.9738525408973735
+              },
+              "projected_sector_norm_squared": {
+                "constraint": 0.00031385476200848395,
+                "gauge": 3.1564242051029298e-31,
+                "physical": 0.011689405699232958
+              },
+              "projector_reconstruction_relative_residual": 1.2517587892049146e-17
+            },
+            "right": {
+              "incoming_characteristic_norm_squared": 0.012003260461247358,
+              "projected_sector_fractions": {
+                "constraint": 0.026147459102623782,
+                "gauge": 4.3450520129916024e-30,
+                "physical": 0.9738525408973763
+              },
+              "projected_sector_norm_squared": {
+                "constraint": 0.00031385476200860635,
+                "gauge": 5.215479102960534e-32,
+                "physical": 0.011689405699238752
+              },
+              "projector_reconstruction_relative_residual": 1.2826710683836799e-17
+            }
+          },
+          "two_face_projected_sector_fractions": {
+            "constraint": 0.026147459102625125,
+            "gauge": 1.532072109604827e-29,
+            "physical": 0.9738525408973748
+          }
+        },
+        "normalized_gh_energy": 0.12820660031619474,
+        "right_eigenvector_relative_residual": 1.1571106253125752e-14
+      },
+      {
+        "eigenvalue_over_L0_inverse": {
+          "imag": -13.986650068903245,
+          "real": 0.1720308916933126
+        },
+        "harmonic_constraint_l2_over_slab": 0.0017166257702267596,
+        "incoming_sector_decomposition": {
+          "faces": {
+            "left": {
+              "incoming_characteristic_norm_squared": 0.012003260461241443,
+              "projected_sector_fractions": {
+                "constraint": 0.026147459102626468,
+                "gauge": 2.6296390179110346e-29,
+                "physical": 0.9738525408973735
+              },
+              "projected_sector_norm_squared": {
+                "constraint": 0.00031385476200848395,
+                "gauge": 3.1564242051029298e-31,
+                "physical": 0.011689405699232958
+              },
+              "projector_reconstruction_relative_residual": 1.2517587892049146e-17
+            },
+            "right": {
+              "incoming_characteristic_norm_squared": 0.012003260461247358,
+              "projected_sector_fractions": {
+                "constraint": 0.026147459102623782,
+                "gauge": 4.3450520129916024e-30,
+                "physical": 0.9738525408973763
+              },
+              "projected_sector_norm_squared": {
+                "constraint": 0.00031385476200860635,
+                "gauge": 5.215479102960534e-32,
+                "physical": 0.011689405699238752
+              },
+              "projector_reconstruction_relative_residual": 1.2826710683836799e-17
+            }
+          },
+          "two_face_projected_sector_fractions": {
+            "constraint": 0.026147459102625125,
+            "gauge": 1.532072109604827e-29,
+            "physical": 0.9738525408973748
+          }
+        },
+        "normalized_gh_energy": 0.12820660031619474,
+        "right_eigenvector_relative_residual": 1.1571106253125752e-14
+      }
+    ],
+    "source_hashes_sha256": {
+      "docs/core/02_equations/covariant/uet_curved_3p1_generalized_harmonic.py": "4f0c8ed0e5afe52e43cedefeb9c061e10dbd440fd20e8bc57a8aacfa43e76f92",
+      "docs/core/02_equations/covariant/uet_curved_3p1_gh_boundary_projectors.py": "2aa529e3a037a5ecff2c2a5a6d454ef7cf9822ca99371393d6614bfbc062362f",
+      "docs/core/02_equations/covariant/uet_curved_3p1_gh_full_u1_slab.py": "f36c80561a6aec8463f4ffc049ab496563955a391411ea0ec6f5dbf583be70b7",
+      "docs/core/02_equations/covariant/uet_curved_3p1_gh_linear_boundary.py": "39bd0731a3ecdbb5c5185453e0908d198cba895ba5f29dafc6bb8f9c6a3b169c",
+      "docs/core/07_artifacts/verification/curved_3p1_gh_tangential_cpbc_spectrum.json": "2df98b02912c370fc9ce1f621b69879fc519861f5955cba7729a634f1692b80c",
+      "docs/scripts/audit/audit_curved_3p1_gh_tangential_cpbc_mode.py": "b8c46518d3bec50b7e5d91ded78dfe652f7e331e633c2b16112f1664ebdc1603",
+      "docs/scripts/audit/audit_curved_3p1_gh_tangential_cpbc_mode_attribution.py": "6d7a61ba522ffd21917267c6267eda14ae93ab4413de35d2c4c140450c8a9a18",
+      "docs/scripts/audit/audit_curved_3p1_gh_tangential_cpbc_spectrum.py": "6fc1af35060b557bb28cc1f93620b54e6cb47f577e60a0186455d7c12242e97d",
+      "docs/scripts/audit/audit_curved_3p1_gh_tt_sbp_sat_boundary.py": "01e519a576bfebcb41222af81bfd6ed7a5f7bf0538cfc4c3e2cb51b5653d29df"
+    }
+  },
+  "WHAT_CHANGED": "Added an eigenvector-level attribution screen for the isolated LGL tangential spectrum, including both-face characteristic projector fractions, a constraint-damping ablation, and a bulk-only reference control.",
+  "WHAT_IS_ACTUALLY_CLOSED": [
+    "The 16 positive-real-part modes in the declared LGL degree-12, k_y*L0=pi, gamma0*L0=gamma2*L0=1 finite operator are represented by right eigenvectors and checked against the assembled RHS.",
+    "The incoming constraint/physical/gauge projector content of those modes is measured separately at both slab faces.",
+    "A gamma0=0 structural control retains the growing-mode count and nearly the same spectral abscissa, so constraint damping alone does not explain this finite-grid growth.",
+    "The uncorrected bulk RHS has a broader positive spectrum; the registered boundary correction reduces, but does not eliminate, the positive-mode count in this finite-grid comparison."
+  ],
+  "WHAT_REMAINS_OPEN": [
+    "Mode-sector content is a finite-grid incoming-characteristic decomposition, not proof that the modes are pure constraint, physical, or gauge solutions in the continuum.",
+    "No spatial-resolution convergence study of this tangential growing spectrum has been completed.",
+    "The bulk-only control omits boundary closure and is not a well-posed initial-boundary evolution.",
+    "The result does not establish continuum or nonlinear GH initial-boundary instability, nor does it close the curved 3+1 parent."
+  ],
+  "artifact": "curved_3p1_gh_tangential_cpbc_mode_attribution",
+  "closure_level": "PARTIAL",
+  "generated_at": "2026-09-25T05:47:32+00:00",
+  "major_result_id": "CORE_CURVED_3P1_GH_TANGENTIAL_CPBC_POSITIVE_MODE_ATTRIBUTION",
+  "schema_version": "core-curved-3p1-gh-mode-attribution-v1"
+}

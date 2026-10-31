@@ -52,7 +52,7 @@ try:
     import docs
 
     print(f"DEBUG: docs imported from {docs.__file__}")
-    from docs.core.uet_glass_box import UETPathManager, UETMetricLogger
+    from docs.scripts.core.runners.uet_glass_box import UETPathManager, UETMetricLogger
     from docs.core.uet_parameters import UETParameters, get_params
 except ImportError as e:
     print(f"CRITICAL SETUP ERROR: {e}")

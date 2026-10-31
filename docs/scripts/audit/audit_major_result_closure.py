@@ -13,6 +13,7 @@ ROOT = Path(__file__).resolve().parents[3]
 CONTRACT = ROOT / "docs/core/07_artifacts/gates/uet_major_result_closure_contract.json"
 T13 = ROOT / "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json"
 MATRIX = ROOT / "docs/core/07_artifacts/topic13/t13_topic13_closure_matrix.json"
+RINNE_ZERO_SHIFT = ROOT / "docs/core/07_artifacts/verification/curved_3p1_gh_rinne_zero_shift_kreiss_symbol.json"
 OUT = ROOT / "docs/core/07_artifacts/gates/uet_major_result_closure_register.json"
 
 
@@ -40,6 +41,7 @@ def ref(rel_path: str, summary: dict[str, Any]) -> dict[str, Any]:
 def main() -> int:
     t13 = load(T13)
     matrix = load(MATRIX)
+    rinne_zero_shift = load(RINNE_ZERO_SHIFT)
     t13_evidence = [ref(rel(T13), {"status": t13["status"], "controlling_blocker": t13["controlling_blocker"]})]
     for item in t13.get("evidence_artifacts", []):
         if not isinstance(item, dict):
@@ -114,6 +116,31 @@ def main() -> int:
             "open_blockers": ["finite-temperature normal component", "physical Kubo coefficients", "full SK/KMS", "curved 3+1", "SI lane"],
             "dependency_unlocked": "formal O(2) constraint inheritance only",
             "claim_boundary": "no full two-fluid, physical transport, or GR closure",
+        },
+        {
+            "major_result_id": rinne_zero_shift["major_result_id"],
+            "topic": "core_curved_3p1",
+            "closure_level": rinne_zero_shift["closure_level"],
+            "claim_promotion": False,
+            "what_is_closed": rinne_zero_shift["WHAT_IS_ACTUALLY_CLOSED"],
+            "equation_or_mapping": rinne_zero_shift["EQUATION_OR_MAPPING"],
+            "units": "Dimensionless frozen-coefficient Fourier-Laplace variables in local orthonormal geometric units; omega is normalized to one.",
+            "derivation_class": "source-matched analytic basis equivalence and finite determinant cross-check; the formulation-specific Kreiss result is imported from the cited primary source",
+            "observable": "10x10 decaying-mode boundary-data symbol determinant, rank, and singular values",
+            "data_role": "primary-literature formula cross-check; no empirical data, fitting, calibration, or holdout",
+            "evidence_artifacts": [
+                ref(
+                    rel(RINNE_ZERO_SHIFT),
+                    {
+                        "status": rinne_zero_shift["STATUS"],
+                        "closure_level": rinne_zero_shift["closure_level"],
+                    },
+                )
+            ],
+            "verification_status": rinne_zero_shift["STATUS"],
+            "open_blockers": rinne_zero_shift["WHAT_REMAINS_OPEN"],
+            "dependency_unlocked": rinne_zero_shift["DEPENDENCY_UNLOCKED"],
+            "claim_boundary": rinne_zero_shift["CLAIM_BOUNDARY"],
         },
         {
             "major_result_id": "TOPIC_0_10_STANDARD_FLUID_COMPARATOR",
@@ -322,7 +349,11 @@ def main() -> int:
         "claim_boundary": "This register reports closed or partial research results; it never promotes the global UET claim.",
     }
     OUT.parent.mkdir(parents=True, exist_ok=True)
-    OUT.write_text(json.dumps(artifact, indent=2, ensure_ascii=True) + "\n", encoding="utf-8")
+    OUT.write_text(
+        json.dumps(artifact, indent=2, ensure_ascii=True) + "\n",
+        encoding="utf-8",
+        newline="\n",
+    )
     dependency_path = ROOT / "docs/core/07_artifacts/gates/uet_major_result_dependency_unlock_gate.json"
     if dependency_path.is_file():
         dependency = load(dependency_path)
@@ -332,6 +363,7 @@ def main() -> int:
         dependency_path.write_text(
             json.dumps(dependency, indent=2, ensure_ascii=True) + "\n",
             encoding="utf-8",
+            newline="\n",
         )
     print(json.dumps({"artifact": rel(OUT), "entries": len(entries), "next_major_result": artifact["next_major_result"]}, indent=2))
     return 0

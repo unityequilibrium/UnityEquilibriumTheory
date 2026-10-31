@@ -101,7 +101,7 @@ def run_sweep():
     plt.grid(True, alpha=0.3)
     # Save to Standardized Results via PathManager
     try:
-        from docs.core.uet_glass_box import UETPathManager
+        from docs.scripts.core.runners.uet_glass_box import UETPathManager
 
         output_dir = UETPathManager.get_result_dir(
             topic_id="0.28", experiment_name="Magic_Angle_Sweep", category="Research"

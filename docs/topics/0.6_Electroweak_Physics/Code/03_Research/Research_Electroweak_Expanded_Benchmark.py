@@ -27,7 +27,7 @@ if not ROOT:
 
 
 from docs import ROOT_PATH
-from docs.core.reproducibility import generate_artifact, hash_dataset, hash_file, save_artifact
+from docs.scripts.core.audit.reproducibility import generate_artifact, hash_dataset, hash_file, save_artifact
 
 
 root_path = ROOT_PATH

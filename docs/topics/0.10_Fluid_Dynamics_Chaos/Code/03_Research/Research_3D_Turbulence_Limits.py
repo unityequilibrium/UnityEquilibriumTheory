@@ -43,7 +43,7 @@ root_path = ROOT_PATH
 # Robust Root Finding (Standard 5x4 Grid Pattern)
 
 
-from docs.core.uet_glass_box import UETPathManager
+from docs.scripts.core.runners.uet_glass_box import UETPathManager
 from docs.core.uet_master_equation import UETParameters
 
 # We use the core UET Master Equation principles but implemented for 3D

@@ -44,7 +44,7 @@ from pathlib import Path
 # --- ROBUST PATH FINDER ---
 
 
-from docs.core.uet_glass_box import UETPathManager
+from docs.scripts.core.runners.uet_glass_box import UETPathManager
 
 
 def get_flow_velocity(x, y, z, R_major, r_minor):

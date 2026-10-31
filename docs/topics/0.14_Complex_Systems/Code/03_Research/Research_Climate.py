@@ -65,7 +65,7 @@ except Exception:
     UETComplexityEngine = None
 
 try:
-    from docs.core.uet_glass_box import UETPathManager
+    from docs.scripts.core.runners.uet_glass_box import UETPathManager
     from docs.core.uet_master_equation import (
         UETParameters,
         SIGMA_CRIT,

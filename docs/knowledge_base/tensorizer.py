@@ -46,7 +46,7 @@ import numpy as np
 # Import UET engine — the ONLY source of physics calculations
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent.parent))
 from docs.core.uet_parameters import get_params, UETParameters, _TOPIC_SCALE_MAP
-from docs.core.uet_lite_engine import UETLiteEngine
+from docs.scripts.core.runners.uet_lite_engine import UETLiteEngine
 
 
 # =============================================================================

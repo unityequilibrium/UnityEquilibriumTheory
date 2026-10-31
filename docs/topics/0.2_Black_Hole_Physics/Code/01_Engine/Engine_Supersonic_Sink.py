@@ -44,12 +44,12 @@ project_root = script_path.parents[5]
 if str(project_root) not in sys.path:
     sys.path.insert(0, str(project_root))
 
-from docs.core.uet_glass_box import UETPathManager
+from docs.scripts.core.runners.uet_glass_box import UETPathManager
 from docs.core.uet_parameters import C_KM_S, G_GALACTIC
 
 # Base Solver Import
 try:
-    from docs.core.uet_base_solver import UETBaseSolver
+    from docs.scripts.core.runners.uet_base_solver import UETBaseSolver
 except ImportError:
     import sys
     from pathlib import Path
@@ -61,7 +61,7 @@ except ImportError:
             root = parent
             sys.path.insert(0, str(root))
             break
-    from docs.core.uet_base_solver import UETBaseSolver
+    from docs.scripts.core.runners.uet_base_solver import UETBaseSolver
 
 
 class SupersonicSinkEngine(UETBaseSolver):

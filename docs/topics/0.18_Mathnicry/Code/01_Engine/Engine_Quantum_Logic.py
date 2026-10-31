@@ -37,7 +37,7 @@ from pathlib import Path
 # --- ROBUST PATH FINDER ---
 
 try:
-    from docs.core.uet_base_solver import UETBaseSolver
+    from docs.scripts.core.runners.uet_base_solver import UETBaseSolver
     from docs.core.uet_parameters import UETParameters, get_params
 except ImportError:
     # Fallback: Direct injection of core

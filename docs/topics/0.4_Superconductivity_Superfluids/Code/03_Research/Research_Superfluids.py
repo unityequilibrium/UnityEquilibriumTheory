@@ -64,7 +64,7 @@ try:
     spec_data.loader.exec_module(mod_data)
     HE4_DATA = mod_data.HELIUM_4_SUPERFLUID
 
-    from docs.core.uet_glass_box import UETPathManager
+    from docs.scripts.core.runners.uet_glass_box import UETPathManager
 except Exception as e:
     print(f"CRITICAL SETUP ERROR: {e}")
     sys.exit(1)

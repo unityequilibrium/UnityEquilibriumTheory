@@ -41,7 +41,7 @@ if not ROOT:
 # --- CORE IMPORTS ---
 try:
     from docs.core.uet_parameters import UETParameters, get_params
-    from docs.core.uet_base_solver import UETBaseSolver
+    from docs.scripts.core.runners.uet_base_solver import UETBaseSolver
 except ImportError as e:
     print(f"CRITICAL ERROR: Could not import core UET modules: {e}")
     sys.exit(1)

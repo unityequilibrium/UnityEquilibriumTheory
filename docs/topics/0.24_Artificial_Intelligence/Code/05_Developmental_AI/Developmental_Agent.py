@@ -42,7 +42,7 @@ from pathlib import Path
 # --- ROBUST PATH FINDER for Module Importing ---
 
 
-from docs.core.uet_base_solver import UETBaseSolver
+from docs.scripts.core.runners.uet_base_solver import UETBaseSolver
 from docs.core.uet_parameters import UETParameters
 from Stages import STAGES, get_stage_by_age
 from Data_Loader import DataLoader

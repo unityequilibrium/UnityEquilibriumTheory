@@ -42,7 +42,7 @@ if ROOT and str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
 try:
-    from docs.core.uet_glass_box import UETPathManager, UETMetricLogger
+    from docs.scripts.core.runners.uet_glass_box import UETPathManager, UETMetricLogger
 
     # Dynamic Engine Import
     topic_dir = ROOT / "docs" / "topics" / "0.19_Gravity_GR"

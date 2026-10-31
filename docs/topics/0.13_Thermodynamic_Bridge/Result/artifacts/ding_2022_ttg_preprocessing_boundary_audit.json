@@ -1,0 +1,79 @@
+{
+  "schema_version": "t13-ding-ttg-preprocessing-boundary-v1",
+  "artifact": "ding_2022_ttg_preprocessing_boundary_audit",
+  "generated_on": "2026-09-24",
+  "status": "PASS_SUPPLEMENTARY_METHOD_BOUNDARY",
+  "major_result": {
+    "major_result_id": "T13_DING_TTG_PREPROCESSING_UNCERTAINTY_BOUNDARY",
+    "topic": "0.13_Thermodynamic_Bridge",
+    "closure_level": "CLOSED_FOR_LANE",
+    "what_is_closed": [
+      "the archived Supplementary Information documents phase/amplitude grating separation and Savitzky-Golay smoothing to suppress acoustic oscillation",
+      "the authors estimate waveform error from negative-time-delay baseline variation and report a typical magnitude around 0.01",
+      "the reviewed supplementary package contains no machine-readable response rows, mode-resolved C_src payload, or pointwise uncertainty series"
+    ],
+    "equation_or_mapping": {
+      "author_error_method": "sigma_signal estimated from standard deviation of negative-time-delay waveform samples",
+      "reported_scale": "typical error around 0.01 in the reported waveform; units/covariance are not specified in the cited methods text",
+      "normalized_measurement": "y_TTG=Delta_Tq(t)/Delta_Tq(0)",
+      "uet_shape_operator": "y_TTG^UET=Delta_Phi(t)/Delta_Phi(0)"
+    },
+    "units": {
+      "reported_waveform_error": "about 0.01; signal-unit and pointwise covariance contract not supplied",
+      "digitization_error": "separate pixel-derived extraction bound; not combined with the reported waveform error"
+    },
+    "derivation_class": "archived-source methods and uncertainty-boundary audit",
+    "observable": "Ding 2022 phase-grating TTG waveform processing and reported baseline noise",
+    "data_role": "SUPPLEMENTARY_METHODS_CONTEXT_NOT_NUMERIC_TRAINING_OR_CALIBRATION",
+    "evidence_artifacts": [
+      "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/ding_2022_supplementary_content_review_package.json",
+      "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/ding_2022_supplementary_information.pdf",
+      "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/ding_2022_supplementary_materials_2.pdf",
+      "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/ding_2022_supplementary_materials_3.pdf"
+    ],
+    "verification_status": "PASS_SUPPLEMENTARY_METHOD_BOUNDARY",
+    "open_blockers": [
+      "the reviewed PDFs do not supply a numerical waveform, row-level error/covariance, or enough detail to reproduce the Savitzky-Golay filter window/order",
+      "measured markers and simulated curves remain mixed in the Fig. 1d digitization",
+      "independent alpha_Phi_K, physical Phi scale, Ding-compatible C_src, and physical transport remain open"
+    ],
+    "dependency_unlocked": "A source-grounded preprocessing and uncertainty contract for future figure-level comparison only; no numeric-source acceptance, calibration, prediction, or Core unlock",
+    "claim_boundary": "This closes the documentary methods boundary only. The approximate error is not a pointwise uncertainty series and is not combined with pixel uncertainty."
+  },
+  "verification": {
+    "checks": {
+      "all_archived_supplement_hashes_match_review_package": true,
+      "methods_and_noise_evidence_present": true,
+      "filter_parameter_search_reproduces_absence": true,
+      "review_package_reports_no_numeric_payload_or_rows": true,
+      "holdout_policy_remains_locked": true
+    },
+    "supplementary_source_hashes": {
+      "DING2022_MOESM1": "a50c1a6347775de72f705f4395507d3136cbf4e5cadfb6638caca2876c52b8f7",
+      "DING2022_MOESM2": "2f7d1d057df83b8d3408f65c833dad7542fca8b24aeec087e304842fa5aca6e7",
+      "DING2022_MOESM3": "4405683b720a24437d64fe3429d409503fcc91bd33c1e8616a3252cc50d94c5f"
+    },
+    "page_counts": {
+      "DING2022_MOESM1": 23,
+      "DING2022_MOESM2": 25,
+      "DING2022_MOESM3": 2
+    },
+    "method_evidence": {
+      "phase_and_amplitude_grating_distinguished": true,
+      "savitzky_golay_filter_named": true,
+      "filter_used_to_suppress_acoustic_oscillation": true,
+      "noise_estimated_from_negative_time_delay": true,
+      "author_reports_typical_error_about_0_01": true
+    },
+    "filter_parameter_search": {
+      "window_length_or_size_found": false,
+      "polynomial_order_or_degree_found": false
+    },
+    "numeric_rows_or_csrc_admitted": false,
+    "reported_error_used_for_calibration": false,
+    "pixel_and_waveform_uncertainty_combined": false,
+    "holdout_accessed": false,
+    "source_data_modified": false,
+    "claim_promotion": false
+  }
+}

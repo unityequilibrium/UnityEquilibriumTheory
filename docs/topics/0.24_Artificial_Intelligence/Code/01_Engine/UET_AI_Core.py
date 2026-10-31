@@ -46,14 +46,14 @@ for parent in [current_path] + list(current_path.parents):
 if ROOT and str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
-from docs.core.uet_base_solver import UETBaseSolver
+from docs.scripts.core.runners.uet_base_solver import UETBaseSolver
 from docs.core.uet_parameters import UETParameters, get_params
 
 
 try:
-    from docs.core.uet_base_solver import UETBaseSolver
+    from docs.scripts.core.runners.uet_base_solver import UETBaseSolver
     from docs.core.uet_parameters import UETParameters
-    from docs.core.scientific_validation import ScientificValidator
+    from docs.scripts.core.audit.scientific_validation import ScientificValidator
 except ImportError:
     pass
 

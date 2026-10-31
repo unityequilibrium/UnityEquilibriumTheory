@@ -57,7 +57,7 @@ elif not project_root:
     else:
         sys.path.insert(0, str(current_path.parents[4]))
 
-from docs.core.uet_glass_box import UETPathManager, UETMetricLogger
+from docs.scripts.core.runners.uet_glass_box import UETPathManager, UETMetricLogger
 
 
 TOPIC_DIR = project_root / "docs" / "topics" / "0.11_Phase_Transitions"

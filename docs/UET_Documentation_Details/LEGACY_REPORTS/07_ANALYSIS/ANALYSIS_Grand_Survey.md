@@ -5,7 +5,7 @@
 ## 1. 🏛️ System Architecture (The "Operating System")
 The project is not a collection of independent scripts, but a unified **"Physics Operating System"**.
 *   **Core Engine:** `UETMasterEquation.py` implements a single master functional $\Omega[C,I]$ that drives **all 27 topics**.
-*   **Integrity:** [scientific_validation.py](file:///c:/Users/santa/Desktop/lad/Lab_uet_harness_v0.8.7/docs/core/scientific_validation.py) enforces a "Sincerity Score", penalizing models that rely on parameter fitting instead of real data.
+*   **Integrity:** [scientific_validation.py](file:///c:/Users/santa/Desktop/lad/Lab_uet_harness_v0.8.7/docs/scripts/core/audit/scientific_validation.py) enforces a "Sincerity Score", penalizing models that rely on parameter fitting instead of real data.
 *   **Scale Link:** Topic 0.23 admits that physical constants ($\kappa, \beta$) scale with dimension, proving UET is a "Structural Unity" (renormalization group style) rather than a "Parameter Unity".
 
 ---

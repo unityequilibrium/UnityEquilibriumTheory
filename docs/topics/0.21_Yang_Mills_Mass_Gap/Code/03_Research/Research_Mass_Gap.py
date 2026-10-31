@@ -28,7 +28,7 @@ if not ROOT:
     print("CRITICAL: UET docs root not found!")
     sys.exit(1)
 
-from docs.core.reproducibility import generate_artifact, hash_dataset, hash_file, save_artifact
+from docs.scripts.core.audit.reproducibility import generate_artifact, hash_dataset, hash_file, save_artifact
 
 
 script_path = Path(__file__).resolve()
@@ -39,7 +39,7 @@ if str(project_root) not in sys.path:
     sys.path.insert(0, str(project_root))
 
 try:
-    from docs.core.uet_glass_box import UETMetricLogger, UETPathManager
+    from docs.scripts.core.runners.uet_glass_box import UETMetricLogger, UETPathManager
 
     engine_path = script_path.parents[1] / "01_Engine" / "Engine_Mass_Gap.py"
     spec = importlib.util.spec_from_file_location("Engine_Mass_Gap", engine_path)

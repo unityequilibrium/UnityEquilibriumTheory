@@ -36,7 +36,7 @@ STATUS:
 
 WHAT_CHANGED:
 
-- Added `docs/core/thermal_cp_cv_correction.py`.
+- Added `docs/core/03_lanes/thermal/thermal_cp_cv_correction.py`.
 - Added the machine-readable audit and test for the correction contract.
 - Connected the contract to the Topic 13 energy branch, full gate, major-result register, and source-wave runner.
 - The Georgia Tech graphite source anchor remains separate: raw workbook SHA-256 `baa7f6181fa3d5521fc594cb2c832308927bc77dbac89c43b373bc304eaa6900`; its `c_v` status remains `OPEN` and it was not used for calibration.

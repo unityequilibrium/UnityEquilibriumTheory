@@ -42,7 +42,7 @@ topic_dir = root_path / "docs" / "topics" / "0.10_Fluid_Dynamics_Chaos" / "Code"
 if str(topic_dir) not in sys.path:
     sys.path.append(str(topic_dir))
 
-from docs.core.uet_glass_box import UETPathManager
+from docs.scripts.core.runners.uet_glass_box import UETPathManager
 
 UETFluidSolver = importlib.import_module("01_Engine.Engine_UET_2D").UETFluidSolver
 PhysicalProperties = importlib.import_module("01_Engine.Engine_UET_2D").PhysicalProperties

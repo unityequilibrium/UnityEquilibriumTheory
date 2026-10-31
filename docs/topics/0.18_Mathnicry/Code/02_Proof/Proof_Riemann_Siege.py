@@ -64,7 +64,7 @@ spec.loader.exec_module(mod)
 RiemannFieldEngine = mod.RiemannFieldEngine
 
 
-from docs.core.uet_glass_box import UETMetricLogger
+from docs.scripts.core.runners.uet_glass_box import UETMetricLogger
 
 
 # Standardized UET Root Path

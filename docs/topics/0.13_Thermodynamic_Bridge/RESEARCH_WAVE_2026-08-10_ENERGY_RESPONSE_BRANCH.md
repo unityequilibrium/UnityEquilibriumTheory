@@ -26,7 +26,7 @@ Only the named energy-response formula/unit lane is unlocked. Full Topic 13 rema
 `PASS_NAMED_BRANCH_OPEN_INPUTS`; Full gate remains `BLOCKED_OPEN_T13_FULL_BRIDGE` with `claim_promotion=false`.
 
 ## WHAT_CHANGED:
-- Added `docs/core/thermal_energy_response_bridge.py`.
+- Added `docs/core/03_lanes/thermal/thermal_energy_response_bridge.py`.
 - Added the source package `Data/03_Research/graphite_heat_capacity_source_package.json`.
 - Added the audit artifact `docs/core/07_artifacts/topic13/t13_energy_response_bridge_audit.json`.
 - Attached the result to the Topic 13 gate and major-result register.

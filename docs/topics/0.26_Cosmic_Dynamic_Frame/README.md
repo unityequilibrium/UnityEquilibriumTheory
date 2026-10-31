@@ -85,7 +85,7 @@ This topic now routes the relevant mechanism as causal history-dependent
 response of the dynamic frame. The phrase dynamic information-fluid remains
 outside the current claim boundary.
 
-- Core spec: docs/core/TRACE_RESEARCH_SPEC.md
+- Core spec: docs/core/01_contracts/TRACE_RESEARCH_SPEC.md
 - Dependency artifact: docs/topics/0.1_Galaxy_Rotation_Problem/Result/artifacts/galaxy_history_comparison.json
 - Current status: candidate mechanism layer; raw flow/lensing/galaxy data and residual gates remain open
 - Dependency rule: WARN/FAIL from topic 0.1 is not evidence that this topic is confirmed

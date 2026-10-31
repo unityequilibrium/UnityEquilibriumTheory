@@ -277,7 +277,7 @@
   - `Result/artifacts/0_11_conserved_order_core_candidate.json`
   - `Result/gl_conserved_order_core_candidate_stats.csv`
 - Purpose:
-  - Verify that the Model C repair direction can be exposed through `docs/core/uet_master_equation.py` as opt-in `operator_mode="conserved_order_v1"` without changing legacy defaults.
+  - Verify that the Model C repair direction can be exposed through `docs/core/02_equations/matter_space/uet_master_equation.py` as opt-in `operator_mode="conserved_order_v1"` without changing legacy defaults.
   - Separate core integration, mass conservation, and mechanism response gates.
 - Required gates:
   - `core_conserved_alignment_gate.status == PASS`
@@ -334,7 +334,7 @@
   - `Result/artifacts/0_11_conserved_order_spectral_core_candidate.json`
   - `Result/gl_conserved_order_spectral_core_candidate_stats.csv`
 - Purpose:
-  - Verify that `operator_mode="conserved_order_spectral_v1"` is exposed through `docs/core/uet_master_equation.py` without changing legacy defaults.
+  - Verify that `operator_mode="conserved_order_spectral_v1"` is exposed through `docs/core/02_equations/matter_space/uet_master_equation.py` without changing legacy defaults.
   - Compare the opt-in core spectral lane against the existing topic spectral Cahn-Hilliard engine under Wave 13-like settings.
   - Confirm that the Wave 15 explicit-core stiffness blocker is repaired by a stable spectral/semi-implicit core path before rerunning scaling claims.
 - Required gates:

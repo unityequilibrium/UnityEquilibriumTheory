@@ -1,0 +1,829 @@
+{
+  "schema_version": "core-curved-3p1-gh-boundary-projectors-v1",
+  "diagnostic_id": "uet.curved_3p1.gh.boundary_projector_decomposition",
+  "artifact": "curved_3p1_gh_boundary_projector_audit",
+  "generated_at": "2026-09-25",
+  "status": "PASS_GH_BOUNDARY_PROJECTOR_DECOMPOSITION",
+  "claim_promotion": false,
+  "major_result": {
+    "major_result_id": "CORE_CURVED_3P1_GH_BOUNDARY_PROJECTOR_DECOMPOSITION",
+    "topic": "core",
+    "closure_level": "CLOSED_FOR_LANE",
+    "what_is_closed": [
+      "local constraint, physical-radiation, and gauge projector algebra on the ten-dimensional symmetric spacetime-tensor space",
+      "projector ranks 4/2/4, idempotence, completeness, and pairwise annihilation across 26 local face normals",
+      "physical projector transversality and trace-free properties on deterministic tensor controls"
+    ],
+    "equation_or_mapping": {
+      "equation_id": "uet.main_theory.curved_3p1.generalized_harmonic_principal_system",
+      "source_formula_locators": [
+        "Rinne 2006 Eqs. (27)-(28), (32)-(35)"
+      ],
+      "incoming_tensor_split": "u1_minus = P_C u1_minus + P_P u1_minus + P_G u1_minus; ranks 4 + 2 + 4",
+      "constraint_boundary_class": "differential normal-derivative condition on P_C u1_minus",
+      "physical_boundary_class": "differential Weyl/Psi_0 condition on P_P u1_minus",
+      "gauge_boundary_class": "algebraic prescription for P_G u1_minus",
+      "applicable_incoming_regime": "-alpha < beta_n <= 0; positive beta_n additionally admits incoming u2_A modes"
+    },
+    "units": "geometric c=1; local orthonormal frame",
+    "derivation_class": "imported GH boundary projectors plus deterministic finite-dimensional algebra verification",
+    "observable": "projector ranks, algebraic residuals, and tensor transversality/trace residuals",
+    "data_role": "internal analytic controls; no physical source data",
+    "verification_status": "PASS_GH_BOUNDARY_PROJECTOR_DECOMPOSITION",
+    "open_blockers": [
+      "differential CPBC residuals are not implemented",
+      "physical incoming Weyl data and gauge data are not applied to the periodic solver",
+      "positive-normal-shift incoming u2_A constraint boundary system is not implemented",
+      "no non-periodic SBP/SAT initial-boundary evolution or boundary-convergence result",
+      "no full variable-coefficient nonlinear GH boundary well-posedness proof"
+    ],
+    "dependency_unlocked": "projector/decomposition design only; curved 3+1 parent remains PARTIAL and Gravity remains blocked",
+    "claim_boundary": "This closes only the local 4/2/4 GH boundary-projector algebra. It is not an implemented CPBC, does not prove well-posedness for the repo solver, and does not validate a non-periodic evolution."
+  },
+  "scope": {
+    "state_variables": [
+      "symmetric u1_minus_ab tensor"
+    ],
+    "excluded_variables": [
+      "UET C",
+      "UET Phi",
+      "R_gen",
+      "R_obs"
+    ],
+    "notation_boundary": "GH Phi_iab is a spatial derivative variable, distinct from UET effective-response Phi.",
+    "local_frame_signature": "(-,+,+,+)",
+    "normal_count": 26,
+    "symmetric_tensor_dimension": 10,
+    "projector_rank_contract": {
+      "constraint": 4,
+      "physical": 2,
+      "gauge": 4
+    },
+    "boundary_operator_applied": false,
+    "periodic_solver_modified": false,
+    "holdout_or_external_data_used": false
+  },
+  "case_count": 26,
+  "random_symmetric_tensor_samples_per_case": 8,
+  "residual_tolerance": 1e-12,
+  "maximum_projector_residual": 3.3306690738754696e-16,
+  "maximum_reconstruction_residual": 4.440892098500626e-16,
+  "maximum_physical_transversality_residual": 9.159339953157541e-16,
+  "maximum_physical_trace_residual": 9.992007221626409e-16,
+  "checks": {
+    "all_26_cube_directions_have_rank_4_2_4": true,
+    "all_projector_idempotence_completeness_and_cross_products_below_tolerance": true,
+    "all_random_symmetric_inputs_reconstruct_below_tolerance": true,
+    "physical_projection_is_transverse_and_trace_free": true
+  },
+  "cases": [
+    {
+      "normal": [
+        -0.5773502691896258,
+        -0.5773502691896258,
+        -0.5773502691896258
+      ],
+      "ranks": {
+        "constraint": 4,
+        "physical": 2,
+        "gauge": 4
+      },
+      "projector_residuals": {
+        "constraint_idempotence": 2.220446049250313e-16,
+        "physical_idempotence": 2.7755575615628914e-16,
+        "gauge_idempotence": 3.3306690738754696e-16,
+        "constraint_physical_annihilation": 1.6863225493631332e-16,
+        "physical_constraint_annihilation": 1.042203674887798e-16,
+        "constraint_gauge_annihilation": 1.8409485184563745e-16,
+        "gauge_constraint_annihilation": 2.0897500793129282e-16,
+        "physical_gauge_annihilation": 1.6548405307250356e-16,
+        "gauge_physical_annihilation": 1.2254429295727519e-16,
+        "completeness": 0.0
+      },
+      "component_sample_count": 8,
+      "maximum_component_reconstruction_residual": 3.3306690738754696e-16,
+      "maximum_physical_transversality_residual": 4.440892098500626e-16,
+      "maximum_physical_trace_residual": 1.1102230246251565e-16
+    },
+    {
+      "normal": [
+        -0.7071067811865476,
+        -0.7071067811865476,
+        0.0
+      ],
+      "ranks": {
+        "constraint": 4,
+        "physical": 2,
+        "gauge": 4
+      },
+      "projector_residuals": {
+        "constraint_idempotence": 1.1102230246251565e-16,
+        "physical_idempotence": 1.6653345369377348e-16,
+        "gauge_idempotence": 2.220446049250313e-16,
+        "constraint_physical_annihilation": 1.1102230246251565e-16,
+        "physical_constraint_annihilation": 8.831770080096232e-17,
+        "constraint_gauge_annihilation": 1.393227569827064e-16,
+        "gauge_constraint_annihilation": 1.9934000326347797e-16,
+        "physical_gauge_annihilation": 9.020562075079397e-17,
+        "gauge_physical_annihilation": 7.979727989493315e-17,
+        "completeness": 0.0
+      },
+      "component_sample_count": 8,
+      "maximum_component_reconstruction_residual": 2.220446049250313e-16,
+      "maximum_physical_transversality_residual": 3.3306690738754696e-16,
+      "maximum_physical_trace_residual": 2.7755575615628914e-16
+    },
+    {
+      "normal": [
+        -0.5773502691896258,
+        -0.5773502691896258,
+        0.5773502691896258
+      ],
+      "ranks": {
+        "constraint": 4,
+        "physical": 2,
+        "gauge": 4
+      },
+      "projector_residuals": {
+        "constraint_idempotence": 2.220446049250313e-16,
+        "physical_idempotence": 2.7755575615628914e-16,
+        "gauge_idempotence": 3.3306690738754696e-16,
+        "constraint_physical_annihilation": 1.6863225493631332e-16,
+        "physical_constraint_annihilation": 1.042203674887798e-16,
+        "constraint_gauge_annihilation": 1.8409485184563745e-16,
+        "gauge_constraint_annihilation": 2.0897500793129282e-16,
+        "physical_gauge_annihilation": 1.6548405307250356e-16,
+        "gauge_physical_annihilation": 1.2254429295727519e-16,
+        "completeness": 0.0
+      },
+      "component_sample_count": 8,
+      "maximum_component_reconstruction_residual": 2.220446049250313e-16,
+      "maximum_physical_transversality_residual": 5.86770215749155e-16,
+      "maximum_physical_trace_residual": 4.996003610813204e-16
+    },
+    {
+      "normal": [
+        -0.7071067811865476,
+        0.0,
+        -0.7071067811865476
+      ],
+      "ranks": {
+        "constraint": 4,
+        "physical": 2,
+        "gauge": 4
+      },
+      "projector_residuals": {
+        "constraint_idempotence": 1.1102230246251565e-16,
+        "physical_idempotence": 1.6653345369377348e-16,
+        "gauge_idempotence": 2.220446049250313e-16,
+        "constraint_physical_annihilation": 1.249000902703301e-16,
+        "physical_constraint_annihilation": 8.831770080096232e-17,
+        "constraint_gauge_annihilation": 1.393227569827064e-16,
+        "gauge_constraint_annihilation": 1.9934000326347797e-16,
+        "physical_gauge_annihilation": 9.020562075079397e-17,
+        "gauge_physical_annihilation": 7.979727989493315e-17,
+        "completeness": 0.0
+      },
+      "component_sample_count": 8,
+      "maximum_component_reconstruction_residual": 3.3306690738754696e-16,
+      "maximum_physical_transversality_residual": 3.1404435568336957e-16,
+      "maximum_physical_trace_residual": 5.551115123125783e-16
+    },
+    {
+      "normal": [
+        -1.0,
+        0.0,
+        0.0
+      ],
+      "ranks": {
+        "constraint": 4,
+        "physical": 2,
+        "gauge": 4
+      },
+      "projector_residuals": {
+        "constraint_idempotence": 1.1102230246251565e-16,
+        "physical_idempotence": 0.0,
+        "gauge_idempotence": 2.7755575615628914e-16,
+        "constraint_physical_annihilation": 0.0,
+        "physical_constraint_annihilation": 0.0,
+        "constraint_gauge_annihilation": 1.9428902930940237e-16,
+        "gauge_constraint_annihilation": 1.9428902930940237e-16,
+        "physical_gauge_annihilation": 0.0,
+        "gauge_physical_annihilation": 0.0,
+        "completeness": 0.0
+      },
+      "component_sample_count": 8,
+      "maximum_component_reconstruction_residual": 4.440892098500626e-16,
+      "maximum_physical_transversality_residual": 0.0,
+      "maximum_physical_trace_residual": 0.0
+    },
+    {
+      "normal": [
+        -0.7071067811865476,
+        0.0,
+        0.7071067811865476
+      ],
+      "ranks": {
+        "constraint": 4,
+        "physical": 2,
+        "gauge": 4
+      },
+      "projector_residuals": {
+        "constraint_idempotence": 1.1102230246251565e-16,
+        "physical_idempotence": 1.6653345369377348e-16,
+        "gauge_idempotence": 2.220446049250313e-16,
+        "constraint_physical_annihilation": 1.249000902703301e-16,
+        "physical_constraint_annihilation": 8.831770080096232e-17,
+        "constraint_gauge_annihilation": 1.393227569827064e-16,
+        "gauge_constraint_annihilation": 1.9934000326347797e-16,
+        "physical_gauge_annihilation": 9.020562075079397e-17,
+        "gauge_physical_annihilation": 7.979727989493315e-17,
+        "completeness": 0.0
+      },
+      "component_sample_count": 8,
+      "maximum_component_reconstruction_residual": 2.220446049250313e-16,
+      "maximum_physical_transversality_residual": 2.591757084040553e-16,
+      "maximum_physical_trace_residual": 3.3306690738754696e-16
+    },
+    {
+      "normal": [
+        -0.5773502691896258,
+        0.5773502691896258,
+        -0.5773502691896258
+      ],
+      "ranks": {
+        "constraint": 4,
+        "physical": 2,
+        "gauge": 4
+      },
+      "projector_residuals": {
+        "constraint_idempotence": 2.220446049250313e-16,
+        "physical_idempotence": 2.7755575615628914e-16,
+        "gauge_idempotence": 3.3306690738754696e-16,
+        "constraint_physical_annihilation": 1.6863225493631332e-16,
+        "physical_constraint_annihilation": 1.042203674887798e-16,
+        "constraint_gauge_annihilation": 1.8409485184563745e-16,
+        "gauge_constraint_annihilation": 2.0897500793129282e-16,
+        "physical_gauge_annihilation": 1.6548405307250356e-16,
+        "gauge_physical_annihilation": 1.2254429295727519e-16,
+        "completeness": 0.0
+      },
+      "component_sample_count": 8,
+      "maximum_component_reconstruction_residual": 2.498001805406602e-16,
+      "maximum_physical_transversality_residual": 6.106226635438361e-16,
+      "maximum_physical_trace_residual": 9.992007221626409e-16
+    },
+    {
+      "normal": [
+        -0.7071067811865476,
+        0.7071067811865476,
+        0.0
+      ],
+      "ranks": {
+        "constraint": 4,
+        "physical": 2,
+        "gauge": 4
+      },
+      "projector_residuals": {
+        "constraint_idempotence": 1.1102230246251565e-16,
+        "physical_idempotence": 1.6653345369377348e-16,
+        "gauge_idempotence": 2.220446049250313e-16,
+        "constraint_physical_annihilation": 1.1102230246251565e-16,
+        "physical_constraint_annihilation": 8.831770080096232e-17,
+        "constraint_gauge_annihilation": 1.393227569827064e-16,
+        "gauge_constraint_annihilation": 1.9934000326347797e-16,
+        "physical_gauge_annihilation": 9.020562075079397e-17,
+        "gauge_physical_annihilation": 7.979727989493315e-17,
+        "completeness": 0.0
+      },
+      "component_sample_count": 8,
+      "maximum_component_reconstruction_residual": 2.220446049250313e-16,
+      "maximum_physical_transversality_residual": 2.7755575615628914e-16,
+      "maximum_physical_trace_residual": 5.551115123125783e-16
+    },
+    {
+      "normal": [
+        -0.5773502691896258,
+        0.5773502691896258,
+        0.5773502691896258
+      ],
+      "ranks": {
+        "constraint": 4,
+        "physical": 2,
+        "gauge": 4
+      },
+      "projector_residuals": {
+        "constraint_idempotence": 2.220446049250313e-16,
+        "physical_idempotence": 2.7755575615628914e-16,
+        "gauge_idempotence": 3.3306690738754696e-16,
+        "constraint_physical_annihilation": 1.6863225493631332e-16,
+        "physical_constraint_annihilation": 1.042203674887798e-16,
+        "constraint_gauge_annihilation": 1.8409485184563745e-16,
+        "gauge_constraint_annihilation": 2.0897500793129282e-16,
+        "physical_gauge_annihilation": 1.6548405307250356e-16,
+        "gauge_physical_annihilation": 1.2254429295727519e-16,
+        "completeness": 0.0
+      },
+      "component_sample_count": 8,
+      "maximum_component_reconstruction_residual": 4.440892098500626e-16,
+      "maximum_physical_transversality_residual": 6.106226635438361e-16,
+      "maximum_physical_trace_residual": 4.718447854656915e-16
+    },
+    {
+      "normal": [
+        0.0,
+        -0.7071067811865476,
+        -0.7071067811865476
+      ],
+      "ranks": {
+        "constraint": 4,
+        "physical": 2,
+        "gauge": 4
+      },
+      "projector_residuals": {
+        "constraint_idempotence": 1.1102230246251565e-16,
+        "physical_idempotence": 1.6653345369377348e-16,
+        "gauge_idempotence": 2.220446049250313e-16,
+        "constraint_physical_annihilation": 9.71445146547012e-17,
+        "physical_constraint_annihilation": 9.020562075079397e-17,
+        "constraint_gauge_annihilation": 1.393227569827064e-16,
+        "gauge_constraint_annihilation": 1.9934000326347797e-16,
+        "physical_gauge_annihilation": 9.020562075079397e-17,
+        "gauge_physical_annihilation": 7.979727989493315e-17,
+        "completeness": 0.0
+      },
+      "component_sample_count": 8,
+      "maximum_component_reconstruction_residual": 2.7755575615628914e-16,
+      "maximum_physical_transversality_residual": 3.8163916471489756e-16,
+      "maximum_physical_trace_residual": 3.0531133177191805e-16
+    },
+    {
+      "normal": [
+        0.0,
+        -1.0,
+        0.0
+      ],
+      "ranks": {
+        "constraint": 4,
+        "physical": 2,
+        "gauge": 4
+      },
+      "projector_residuals": {
+        "constraint_idempotence": 1.1102230246251565e-16,
+        "physical_idempotence": 0.0,
+        "gauge_idempotence": 2.7755575615628914e-16,
+        "constraint_physical_annihilation": 0.0,
+        "physical_constraint_annihilation": 0.0,
+        "constraint_gauge_annihilation": 1.9428902930940237e-16,
+        "gauge_constraint_annihilation": 1.9428902930940237e-16,
+        "physical_gauge_annihilation": 0.0,
+        "gauge_physical_annihilation": 0.0,
+        "completeness": 0.0
+      },
+      "component_sample_count": 8,
+      "maximum_component_reconstruction_residual": 2.220446049250313e-16,
+      "maximum_physical_transversality_residual": 0.0,
+      "maximum_physical_trace_residual": 0.0
+    },
+    {
+      "normal": [
+        0.0,
+        -0.7071067811865476,
+        0.7071067811865476
+      ],
+      "ranks": {
+        "constraint": 4,
+        "physical": 2,
+        "gauge": 4
+      },
+      "projector_residuals": {
+        "constraint_idempotence": 1.1102230246251565e-16,
+        "physical_idempotence": 1.6653345369377348e-16,
+        "gauge_idempotence": 2.220446049250313e-16,
+        "constraint_physical_annihilation": 9.71445146547012e-17,
+        "physical_constraint_annihilation": 9.020562075079397e-17,
+        "constraint_gauge_annihilation": 1.393227569827064e-16,
+        "gauge_constraint_annihilation": 1.9934000326347797e-16,
+        "physical_gauge_annihilation": 9.020562075079397e-17,
+        "gauge_physical_annihilation": 7.979727989493315e-17,
+        "completeness": 0.0
+      },
+      "component_sample_count": 8,
+      "maximum_component_reconstruction_residual": 2.220446049250313e-16,
+      "maximum_physical_transversality_residual": 2.220446049250313e-16,
+      "maximum_physical_trace_residual": 2.498001805406602e-16
+    },
+    {
+      "normal": [
+        0.0,
+        0.0,
+        -1.0
+      ],
+      "ranks": {
+        "constraint": 4,
+        "physical": 2,
+        "gauge": 4
+      },
+      "projector_residuals": {
+        "constraint_idempotence": 1.1102230246251565e-16,
+        "physical_idempotence": 0.0,
+        "gauge_idempotence": 2.7755575615628914e-16,
+        "constraint_physical_annihilation": 0.0,
+        "physical_constraint_annihilation": 0.0,
+        "constraint_gauge_annihilation": 1.9428902930940237e-16,
+        "gauge_constraint_annihilation": 1.9428902930940237e-16,
+        "physical_gauge_annihilation": 0.0,
+        "gauge_physical_annihilation": 0.0,
+        "completeness": 0.0
+      },
+      "component_sample_count": 8,
+      "maximum_component_reconstruction_residual": 1.1102230246251565e-16,
+      "maximum_physical_transversality_residual": 0.0,
+      "maximum_physical_trace_residual": 0.0
+    },
+    {
+      "normal": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "ranks": {
+        "constraint": 4,
+        "physical": 2,
+        "gauge": 4
+      },
+      "projector_residuals": {
+        "constraint_idempotence": 1.1102230246251565e-16,
+        "physical_idempotence": 0.0,
+        "gauge_idempotence": 2.7755575615628914e-16,
+        "constraint_physical_annihilation": 0.0,
+        "physical_constraint_annihilation": 0.0,
+        "constraint_gauge_annihilation": 1.9428902930940237e-16,
+        "gauge_constraint_annihilation": 1.9428902930940237e-16,
+        "physical_gauge_annihilation": 0.0,
+        "gauge_physical_annihilation": 0.0,
+        "completeness": 0.0
+      },
+      "component_sample_count": 8,
+      "maximum_component_reconstruction_residual": 2.220446049250313e-16,
+      "maximum_physical_transversality_residual": 0.0,
+      "maximum_physical_trace_residual": 0.0
+    },
+    {
+      "normal": [
+        0.0,
+        0.7071067811865476,
+        -0.7071067811865476
+      ],
+      "ranks": {
+        "constraint": 4,
+        "physical": 2,
+        "gauge": 4
+      },
+      "projector_residuals": {
+        "constraint_idempotence": 1.1102230246251565e-16,
+        "physical_idempotence": 1.6653345369377348e-16,
+        "gauge_idempotence": 2.220446049250313e-16,
+        "constraint_physical_annihilation": 9.71445146547012e-17,
+        "physical_constraint_annihilation": 9.020562075079397e-17,
+        "constraint_gauge_annihilation": 1.393227569827064e-16,
+        "gauge_constraint_annihilation": 1.9934000326347797e-16,
+        "physical_gauge_annihilation": 9.020562075079397e-17,
+        "gauge_physical_annihilation": 7.979727989493315e-17,
+        "completeness": 0.0
+      },
+      "component_sample_count": 8,
+      "maximum_component_reconstruction_residual": 2.220446049250313e-16,
+      "maximum_physical_transversality_residual": 4.440892098500626e-16,
+      "maximum_physical_trace_residual": 3.885780586188048e-16
+    },
+    {
+      "normal": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "ranks": {
+        "constraint": 4,
+        "physical": 2,
+        "gauge": 4
+      },
+      "projector_residuals": {
+        "constraint_idempotence": 1.1102230246251565e-16,
+        "physical_idempotence": 0.0,
+        "gauge_idempotence": 2.7755575615628914e-16,
+        "constraint_physical_annihilation": 0.0,
+        "physical_constraint_annihilation": 0.0,
+        "constraint_gauge_annihilation": 1.9428902930940237e-16,
+        "gauge_constraint_annihilation": 1.9428902930940237e-16,
+        "physical_gauge_annihilation": 0.0,
+        "gauge_physical_annihilation": 0.0,
+        "completeness": 0.0
+      },
+      "component_sample_count": 8,
+      "maximum_component_reconstruction_residual": 2.220446049250313e-16,
+      "maximum_physical_transversality_residual": 0.0,
+      "maximum_physical_trace_residual": 0.0
+    },
+    {
+      "normal": [
+        0.0,
+        0.7071067811865476,
+        0.7071067811865476
+      ],
+      "ranks": {
+        "constraint": 4,
+        "physical": 2,
+        "gauge": 4
+      },
+      "projector_residuals": {
+        "constraint_idempotence": 1.1102230246251565e-16,
+        "physical_idempotence": 1.6653345369377348e-16,
+        "gauge_idempotence": 2.220446049250313e-16,
+        "constraint_physical_annihilation": 9.71445146547012e-17,
+        "physical_constraint_annihilation": 9.020562075079397e-17,
+        "constraint_gauge_annihilation": 1.393227569827064e-16,
+        "gauge_constraint_annihilation": 1.9934000326347797e-16,
+        "physical_gauge_annihilation": 9.020562075079397e-17,
+        "gauge_physical_annihilation": 7.979727989493315e-17,
+        "completeness": 0.0
+      },
+      "component_sample_count": 8,
+      "maximum_component_reconstruction_residual": 2.220446049250313e-16,
+      "maximum_physical_transversality_residual": 3.3306690738754696e-16,
+      "maximum_physical_trace_residual": 3.3306690738754696e-16
+    },
+    {
+      "normal": [
+        0.5773502691896258,
+        -0.5773502691896258,
+        -0.5773502691896258
+      ],
+      "ranks": {
+        "constraint": 4,
+        "physical": 2,
+        "gauge": 4
+      },
+      "projector_residuals": {
+        "constraint_idempotence": 2.220446049250313e-16,
+        "physical_idempotence": 2.7755575615628914e-16,
+        "gauge_idempotence": 3.3306690738754696e-16,
+        "constraint_physical_annihilation": 1.6863225493631332e-16,
+        "physical_constraint_annihilation": 1.042203674887798e-16,
+        "constraint_gauge_annihilation": 1.8409485184563745e-16,
+        "gauge_constraint_annihilation": 2.0897500793129282e-16,
+        "physical_gauge_annihilation": 1.6548405307250356e-16,
+        "gauge_physical_annihilation": 1.2254429295727519e-16,
+        "completeness": 0.0
+      },
+      "component_sample_count": 8,
+      "maximum_component_reconstruction_residual": 1.942890293094024e-16,
+      "maximum_physical_transversality_residual": 5.828670879282072e-16,
+      "maximum_physical_trace_residual": 6.661338147750939e-16
+    },
+    {
+      "normal": [
+        0.7071067811865476,
+        -0.7071067811865476,
+        0.0
+      ],
+      "ranks": {
+        "constraint": 4,
+        "physical": 2,
+        "gauge": 4
+      },
+      "projector_residuals": {
+        "constraint_idempotence": 1.1102230246251565e-16,
+        "physical_idempotence": 1.6653345369377348e-16,
+        "gauge_idempotence": 2.220446049250313e-16,
+        "constraint_physical_annihilation": 1.1102230246251565e-16,
+        "physical_constraint_annihilation": 8.831770080096232e-17,
+        "constraint_gauge_annihilation": 1.393227569827064e-16,
+        "gauge_constraint_annihilation": 1.9934000326347797e-16,
+        "physical_gauge_annihilation": 9.020562075079397e-17,
+        "gauge_physical_annihilation": 7.979727989493315e-17,
+        "completeness": 0.0
+      },
+      "component_sample_count": 8,
+      "maximum_component_reconstruction_residual": 2.220446049250313e-16,
+      "maximum_physical_transversality_residual": 4.996003610813204e-16,
+      "maximum_physical_trace_residual": 4.996003610813204e-16
+    },
+    {
+      "normal": [
+        0.5773502691896258,
+        -0.5773502691896258,
+        0.5773502691896258
+      ],
+      "ranks": {
+        "constraint": 4,
+        "physical": 2,
+        "gauge": 4
+      },
+      "projector_residuals": {
+        "constraint_idempotence": 2.220446049250313e-16,
+        "physical_idempotence": 2.7755575615628914e-16,
+        "gauge_idempotence": 3.3306690738754696e-16,
+        "constraint_physical_annihilation": 1.6863225493631332e-16,
+        "physical_constraint_annihilation": 1.042203674887798e-16,
+        "constraint_gauge_annihilation": 1.8409485184563745e-16,
+        "gauge_constraint_annihilation": 2.0897500793129282e-16,
+        "physical_gauge_annihilation": 1.6548405307250356e-16,
+        "gauge_physical_annihilation": 1.2254429295727519e-16,
+        "completeness": 0.0
+      },
+      "component_sample_count": 8,
+      "maximum_component_reconstruction_residual": 3.3306690738754696e-16,
+      "maximum_physical_transversality_residual": 9.159339953157541e-16,
+      "maximum_physical_trace_residual": 4.996003610813204e-16
+    },
+    {
+      "normal": [
+        0.7071067811865476,
+        0.0,
+        -0.7071067811865476
+      ],
+      "ranks": {
+        "constraint": 4,
+        "physical": 2,
+        "gauge": 4
+      },
+      "projector_residuals": {
+        "constraint_idempotence": 1.1102230246251565e-16,
+        "physical_idempotence": 1.6653345369377348e-16,
+        "gauge_idempotence": 2.220446049250313e-16,
+        "constraint_physical_annihilation": 1.249000902703301e-16,
+        "physical_constraint_annihilation": 8.831770080096232e-17,
+        "constraint_gauge_annihilation": 1.393227569827064e-16,
+        "gauge_constraint_annihilation": 1.9934000326347797e-16,
+        "physical_gauge_annihilation": 9.020562075079397e-17,
+        "gauge_physical_annihilation": 7.979727989493315e-17,
+        "completeness": 0.0
+      },
+      "component_sample_count": 8,
+      "maximum_component_reconstruction_residual": 2.220446049250313e-16,
+      "maximum_physical_transversality_residual": 4.514768354404664e-16,
+      "maximum_physical_trace_residual": 2.220446049250313e-16
+    },
+    {
+      "normal": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "ranks": {
+        "constraint": 4,
+        "physical": 2,
+        "gauge": 4
+      },
+      "projector_residuals": {
+        "constraint_idempotence": 1.1102230246251565e-16,
+        "physical_idempotence": 0.0,
+        "gauge_idempotence": 2.7755575615628914e-16,
+        "constraint_physical_annihilation": 0.0,
+        "physical_constraint_annihilation": 0.0,
+        "constraint_gauge_annihilation": 1.9428902930940237e-16,
+        "gauge_constraint_annihilation": 1.9428902930940237e-16,
+        "physical_gauge_annihilation": 0.0,
+        "gauge_physical_annihilation": 0.0,
+        "completeness": 0.0
+      },
+      "component_sample_count": 8,
+      "maximum_component_reconstruction_residual": 2.220446049250313e-16,
+      "maximum_physical_transversality_residual": 0.0,
+      "maximum_physical_trace_residual": 0.0
+    },
+    {
+      "normal": [
+        0.7071067811865476,
+        0.0,
+        0.7071067811865476
+      ],
+      "ranks": {
+        "constraint": 4,
+        "physical": 2,
+        "gauge": 4
+      },
+      "projector_residuals": {
+        "constraint_idempotence": 1.1102230246251565e-16,
+        "physical_idempotence": 1.6653345369377348e-16,
+        "gauge_idempotence": 2.220446049250313e-16,
+        "constraint_physical_annihilation": 1.249000902703301e-16,
+        "physical_constraint_annihilation": 8.831770080096232e-17,
+        "constraint_gauge_annihilation": 1.393227569827064e-16,
+        "gauge_constraint_annihilation": 1.9934000326347797e-16,
+        "physical_gauge_annihilation": 9.020562075079397e-17,
+        "gauge_physical_annihilation": 7.979727989493315e-17,
+        "completeness": 0.0
+      },
+      "component_sample_count": 8,
+      "maximum_component_reconstruction_residual": 2.220446049250313e-16,
+      "maximum_physical_transversality_residual": 3.117657058328182e-16,
+      "maximum_physical_trace_residual": 4.718447854656915e-16
+    },
+    {
+      "normal": [
+        0.5773502691896258,
+        0.5773502691896258,
+        -0.5773502691896258
+      ],
+      "ranks": {
+        "constraint": 4,
+        "physical": 2,
+        "gauge": 4
+      },
+      "projector_residuals": {
+        "constraint_idempotence": 2.220446049250313e-16,
+        "physical_idempotence": 2.7755575615628914e-16,
+        "gauge_idempotence": 3.3306690738754696e-16,
+        "constraint_physical_annihilation": 1.6863225493631332e-16,
+        "physical_constraint_annihilation": 1.042203674887798e-16,
+        "constraint_gauge_annihilation": 1.8409485184563745e-16,
+        "gauge_constraint_annihilation": 2.0897500793129282e-16,
+        "physical_gauge_annihilation": 1.6548405307250356e-16,
+        "gauge_physical_annihilation": 1.2254429295727519e-16,
+        "completeness": 0.0
+      },
+      "component_sample_count": 8,
+      "maximum_component_reconstruction_residual": 4.440892098500626e-16,
+      "maximum_physical_transversality_residual": 5.134781488891349e-16,
+      "maximum_physical_trace_residual": 5.412337245047638e-16
+    },
+    {
+      "normal": [
+        0.7071067811865476,
+        0.7071067811865476,
+        0.0
+      ],
+      "ranks": {
+        "constraint": 4,
+        "physical": 2,
+        "gauge": 4
+      },
+      "projector_residuals": {
+        "constraint_idempotence": 1.1102230246251565e-16,
+        "physical_idempotence": 1.6653345369377348e-16,
+        "gauge_idempotence": 2.220446049250313e-16,
+        "constraint_physical_annihilation": 1.1102230246251565e-16,
+        "physical_constraint_annihilation": 8.831770080096232e-17,
+        "constraint_gauge_annihilation": 1.393227569827064e-16,
+        "gauge_constraint_annihilation": 1.9934000326347797e-16,
+        "physical_gauge_annihilation": 9.020562075079397e-17,
+        "gauge_physical_annihilation": 7.979727989493315e-17,
+        "completeness": 0.0
+      },
+      "component_sample_count": 8,
+      "maximum_component_reconstruction_residual": 2.220446049250313e-16,
+      "maximum_physical_transversality_residual": 3.8163916471489756e-16,
+      "maximum_physical_trace_residual": 7.771561172376096e-16
+    },
+    {
+      "normal": [
+        0.5773502691896258,
+        0.5773502691896258,
+        0.5773502691896258
+      ],
+      "ranks": {
+        "constraint": 4,
+        "physical": 2,
+        "gauge": 4
+      },
+      "projector_residuals": {
+        "constraint_idempotence": 2.220446049250313e-16,
+        "physical_idempotence": 2.7755575615628914e-16,
+        "gauge_idempotence": 3.3306690738754696e-16,
+        "constraint_physical_annihilation": 1.6863225493631332e-16,
+        "physical_constraint_annihilation": 1.042203674887798e-16,
+        "constraint_gauge_annihilation": 1.8409485184563745e-16,
+        "gauge_constraint_annihilation": 2.0897500793129282e-16,
+        "physical_gauge_annihilation": 1.6548405307250356e-16,
+        "gauge_physical_annihilation": 1.2254429295727519e-16,
+        "completeness": 0.0
+      },
+      "component_sample_count": 8,
+      "maximum_component_reconstruction_residual": 4.440892098500626e-16,
+      "maximum_physical_transversality_residual": 5.551115123125783e-16,
+      "maximum_physical_trace_residual": 6.661338147750939e-16
+    }
+  ],
+  "source_hashes": {
+    "docs/core/02_equations/covariant/uet_curved_3p1_gh_boundary_projectors.py": "2aa529e3a037a5ecff2c2a5a6d454ef7cf9822ca99371393d6614bfbc062362f",
+    "docs/scripts/audit/audit_uet_curved_3p1_gh_boundary_projectors.py": "b93b75348a475b4149fd9b3ffb7366314c50c63865424e2972eda1d1f33d9456",
+    "docs/core/02_equations/covariant/uet_curved_3p1_generalized_harmonic.py": "4f0c8ed0e5afe52e43cedefeb9c061e10dbd440fd20e8bc57a8aacfa43e76f92"
+  },
+  "literature_basis": [
+    {
+      "citation": "O. Rinne, Stable radiation-controlling boundary conditions for the generalized harmonic Einstein equations, Class. Quantum Grav. 23, 6275-6300 (2006)",
+      "doi": "10.1088/0264-9381/23/22/013",
+      "url": "https://arxiv.org/abs/gr-qc/0606053",
+      "role": "source for constraint, physical, and gauge projector decomposition and the distinct differential/algebraic boundary-condition classes"
+    },
+    {
+      "citation": "G. Calabrese and O. Sarbach, Detecting ill posed boundary conditions in General Relativity, J. Math. Phys. 44, 3888-3899 (2003)",
+      "doi": "10.1063/1.1599056",
+      "url": "https://arxiv.org/abs/gr-qc/0303040",
+      "role": "well-posedness caution: constraint-consistent prescriptions alone are insufficient for arbitrary formulation parameters"
+    }
+  ],
+  "claim_boundary": "Local projector algebra only. The source project's boundary-stability analysis is not inherited by this implementation; no CPBC, IBVP, Gravity, or global UET claim is promoted."
+}

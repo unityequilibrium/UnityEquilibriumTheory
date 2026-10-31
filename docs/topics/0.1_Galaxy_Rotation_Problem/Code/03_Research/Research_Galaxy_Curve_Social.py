@@ -57,7 +57,7 @@ try:
         )
     )
     from Engine_Galaxy_V3 import UETGalaxyEngine, GalaxyParams
-    from docs.core.uet_glass_box import UETPathManager
+    from docs.scripts.core.runners.uet_glass_box import UETPathManager
 except ImportError as e:
     print(f"CRITICAL SETUP ERROR: {e}")
     sys.exit(1)

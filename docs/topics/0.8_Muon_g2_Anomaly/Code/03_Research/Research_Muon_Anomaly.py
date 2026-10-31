@@ -38,7 +38,7 @@ import matplotlib.pyplot as plt
 
 
 try:
-    from docs.core.uet_glass_box import UETPathManager, UETMetricLogger
+    from docs.scripts.core.runners.uet_glass_box import UETPathManager, UETMetricLogger
 except Exception as e:
     print(f"CRITICAL SETUP ERROR: {e}")
     sys.exit(1)

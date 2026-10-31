@@ -48,7 +48,7 @@ if str(root_dir) not in sys.path:
 
 # Core UET Imports
 from docs.core.uet_master_equation import UETParameters
-from docs.core.uet_glass_box import UETPathManager
+from docs.scripts.core.runners.uet_glass_box import UETPathManager
 
 # Import Engine from Topic 0.15
 engine_path = root_dir / "docs" / "topics" / "0.15_Cluster_Dynamics" / "Code" / "01_Engine" / "Engine_Cluster_Dynamics.py"

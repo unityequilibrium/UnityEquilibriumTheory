@@ -1,6 +1,6 @@
 {
   "artifact": "uet_core_dependency_graph",
-  "edge_count": 10280,
+  "edge_count": 10293,
   "edges": [
     {
       "edge_type": "path_reference",
@@ -59224,6 +59224,30 @@
     },
     {
       "edge_type": "path_reference",
+      "from": "docs/core/01_contracts/CORE_CURVED_3P1_EVOLUTION_BRANCH_SPEC.md",
+      "reference": "docs/core/07_artifacts/verification/curved_3p1_gh_boundary_projector_audit.json",
+      "to": "docs/core/07_artifacts/verification/curved_3p1_gh_boundary_projector_audit.json"
+    },
+    {
+      "edge_type": "path_reference",
+      "from": "docs/core/01_contracts/CORE_CURVED_3P1_EVOLUTION_BRANCH_SPEC.md",
+      "reference": "docs/core/07_artifacts/verification/curved_3p1_gh_full_u1_max_diss_sat_control.json",
+      "to": "docs/core/07_artifacts/verification/curved_3p1_gh_full_u1_max_diss_sat_control.json"
+    },
+    {
+      "edge_type": "path_reference",
+      "from": "docs/core/01_contracts/CORE_CURVED_3P1_EVOLUTION_BRANCH_SPEC.md",
+      "reference": "docs/core/07_artifacts/verification/curved_3p1_gh_linear_boundary_residual_audit.json",
+      "to": "docs/core/07_artifacts/verification/curved_3p1_gh_linear_boundary_residual_audit.json"
+    },
+    {
+      "edge_type": "path_reference",
+      "from": "docs/core/01_contracts/CORE_CURVED_3P1_EVOLUTION_BRANCH_SPEC.md",
+      "reference": "docs/core/07_artifacts/verification/curved_3p1_gh_tt_sbp_sat_boundary_pilot.json",
+      "to": "docs/core/07_artifacts/verification/curved_3p1_gh_tt_sbp_sat_boundary_pilot.json"
+    },
+    {
+      "edge_type": "path_reference",
       "from": "docs/core/01_contracts/RESOURCE_PERSISTENCE_PRINCIPLE_SPEC.md",
       "reference": "docs/core/07_artifacts/provenance/resource_persistence_principle_contract.json",
       "to": "docs/core/07_artifacts/provenance/resource_persistence_principle_contract.json"
@@ -61301,6 +61325,12 @@
     {
       "edge_type": "path_reference",
       "from": "docs/core/05_tests/regression/root/test_uet_curved_3p1_constraints.py",
+      "reference": "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry_curved_3p1_addendum.json",
+      "to": "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry_curved_3p1_addendum.json"
+    },
+    {
+      "edge_type": "path_reference",
+      "from": "docs/core/05_tests/regression/root/test_uet_curved_3p1_constraints.py",
       "reference": "docs/core/07_artifacts/gates/core_curved_3p1_parent_gate.json",
       "to": "docs/core/07_artifacts/gates/core_curved_3p1_parent_gate.json"
     },
@@ -61321,6 +61351,24 @@
       "from": "docs/core/05_tests/regression/root/test_uet_curved_3p1_constraints.py",
       "reference": "docs/core/07_artifacts/verification/curved_3p1_adm_constraint_interface_audit.json",
       "to": "docs/core/07_artifacts/verification/curved_3p1_adm_constraint_interface_audit.json"
+    },
+    {
+      "edge_type": "path_reference",
+      "from": "docs/core/05_tests/regression/root/test_uet_curved_3p1_constraints.py",
+      "reference": "docs/core/07_artifacts/verification/curved_3p1_gh_linear_boundary_residual_audit.json",
+      "to": "docs/core/07_artifacts/verification/curved_3p1_gh_linear_boundary_residual_audit.json"
+    },
+    {
+      "edge_type": "path_reference",
+      "from": "docs/core/05_tests/regression/root/test_uet_curved_3p1_constraints.py",
+      "reference": "docs/core/07_artifacts/verification/curved_3p1_gh_reduced_wave_sbp_sat_comparator.json",
+      "to": "docs/core/07_artifacts/verification/curved_3p1_gh_reduced_wave_sbp_sat_comparator.json"
+    },
+    {
+      "edge_type": "path_reference",
+      "from": "docs/core/05_tests/regression/root/test_uet_curved_3p1_constraints.py",
+      "reference": "docs/core/07_artifacts/verification/curved_3p1_gh_tt_sbp_sat_boundary_pilot.json",
+      "to": "docs/core/07_artifacts/verification/curved_3p1_gh_tt_sbp_sat_boundary_pilot.json"
     },
     {
       "edge_type": "path_reference",
@@ -61372,6 +61420,18 @@
     },
     {
       "edge_type": "path_reference",
+      "from": "docs/core/05_tests/regression/root/test_uet_curved_3p1_gh_boundary_characteristics.py",
+      "reference": "docs/core/07_artifacts/verification/curved_3p1_gh_boundary_characteristic_audit.json",
+      "to": "docs/core/07_artifacts/verification/curved_3p1_gh_boundary_characteristic_audit.json"
+    },
+    {
+      "edge_type": "path_reference",
+      "from": "docs/core/05_tests/regression/root/test_uet_curved_3p1_gh_gauge_wave_tt_null.py",
+      "reference": "docs/core/07_artifacts/verification/curved_3p1_gh_gauge_wave_tt_null_audit.json",
+      "to": "docs/core/07_artifacts/verification/curved_3p1_gh_gauge_wave_tt_null_audit.json"
+    },
+    {
+      "edge_type": "path_reference",
       "from": "docs/core/05_tests/regression/root/test_uet_curved_3p1_gh_nonlinear_vacuum.py",
       "reference": "docs/core/07_artifacts/correspondence/curved_3p1_gh_nonlinear_vacuum_formula_audit.json",
       "to": "docs/core/07_artifacts/correspondence/curved_3p1_gh_nonlinear_vacuum_formula_audit.json"
@@ -61405,6 +61465,24 @@
       "from": "docs/core/05_tests/regression/root/test_uet_curved_3p1_gh_time_evolution.py",
       "reference": "docs/core/07_artifacts/verification/curved_3p1_gh_time_evolution_verification.json",
       "to": "docs/core/07_artifacts/verification/curved_3p1_gh_time_evolution_verification.json"
+    },
+    {
+      "edge_type": "path_reference",
+      "from": "docs/core/05_tests/regression/root/test_uet_curved_3p1_gw_detector_response.py",
+      "reference": "docs/core/07_artifacts/gates/uet_major_result_closure_register.json",
+      "to": "docs/core/07_artifacts/gates/uet_major_result_closure_register.json"
+    },
+    {
+      "edge_type": "path_reference",
+      "from": "docs/core/05_tests/regression/root/test_uet_curved_3p1_gw_detector_response.py",
+      "reference": "docs/core/07_artifacts/gates/uet_major_result_dependency_unlock_gate.json",
+      "to": "docs/core/07_artifacts/gates/uet_major_result_dependency_unlock_gate.json"
+    },
+    {
+      "edge_type": "path_reference",
+      "from": "docs/core/05_tests/regression/root/test_uet_curved_3p1_gw_detector_response.py",
+      "reference": "docs/core/07_artifacts/verification/curved_3p1_gh_gw_detector_response_audit.json",
+      "to": "docs/core/07_artifacts/verification/curved_3p1_gh_gw_detector_response_audit.json"
     },
     {
       "edge_type": "path_reference",
@@ -61683,9 +61761,9 @@
       "to": "docs/core/99_review/unresolved_assets/sandbox_emergent.py"
     }
   ],
-  "generated_at": "2026-09-16T18:37:42+00:00",
+  "generated_at": "2026-09-25T02:08:07+00:00",
   "generator": "docs/scripts/audit/reconcile_uet_core_registry_v4.py",
-  "node_count": 1973,
+  "node_count": 2015,
   "nodes": [
     {
       "canonical_path": "docs/core/00_governance/CORE_FILE_AND_RESEARCH_STANDARD.md",
@@ -63875,6 +63953,15 @@
       "path": "docs/core/02_equations/covariant/uet_curved_3p1_geometry.py"
     },
     {
+      "canonical_path": "docs/core/02_equations/covariant/uet_curved_3p1_gh_boundary_projectors.py",
+      "evidence_status": "BLOCKED",
+      "file_kind": "equation_module",
+      "logical_area": "02_equations",
+      "organization_status": "MIGRATED",
+      "owner_id": "EQUATION",
+      "path": "docs/core/02_equations/covariant/uet_curved_3p1_gh_boundary_projectors.py"
+    },
+    {
       "canonical_path": "docs/core/02_equations/covariant/uet_curved_3p1_gh_evolution.py",
       "evidence_status": "BLOCKED",
       "file_kind": "equation_module",
@@ -63882,6 +63969,42 @@
       "organization_status": "MIGRATED",
       "owner_id": "EQUATION",
       "path": "docs/core/02_equations/covariant/uet_curved_3p1_gh_evolution.py"
+    },
+    {
+      "canonical_path": "docs/core/02_equations/covariant/uet_curved_3p1_gh_full_u1_slab.py",
+      "evidence_status": "BLOCKED",
+      "file_kind": "equation_module",
+      "logical_area": "02_equations",
+      "organization_status": "MIGRATED",
+      "owner_id": "EQUATION",
+      "path": "docs/core/02_equations/covariant/uet_curved_3p1_gh_full_u1_slab.py"
+    },
+    {
+      "canonical_path": "docs/core/02_equations/covariant/uet_curved_3p1_gh_linear_boundary.py",
+      "evidence_status": "BLOCKED",
+      "file_kind": "equation_module",
+      "logical_area": "02_equations",
+      "organization_status": "MIGRATED",
+      "owner_id": "EQUATION",
+      "path": "docs/core/02_equations/covariant/uet_curved_3p1_gh_linear_boundary.py"
+    },
+    {
+      "canonical_path": "docs/core/02_equations/covariant/uet_curved_3p1_gh_max_dissipative_sat.py",
+      "evidence_status": "BLOCKED",
+      "file_kind": "equation_module",
+      "logical_area": "02_equations",
+      "organization_status": "MIGRATED",
+      "owner_id": "EQUATION",
+      "path": "docs/core/02_equations/covariant/uet_curved_3p1_gh_max_dissipative_sat.py"
+    },
+    {
+      "canonical_path": "docs/core/02_equations/covariant/uet_curved_3p1_gw_detector_response.py",
+      "evidence_status": "BLOCKED",
+      "file_kind": "equation_module",
+      "logical_area": "02_equations",
+      "organization_status": "MIGRATED",
+      "owner_id": "EQUATION",
+      "path": "docs/core/02_equations/covariant/uet_curved_3p1_gw_detector_response.py"
     },
     {
       "canonical_path": "docs/core/02_equations/covariant/uet_curved_3p1_matter_wiring.py",
@@ -67853,6 +67976,15 @@
       "path": "docs/core/05_tests/regression/root/test_topic13_anisotropic_thermoelastic_response_bridge.py"
     },
     {
+      "canonical_path": "docs/core/05_tests/regression/root/test_topic13_axial_raman_source_screen.py",
+      "evidence_status": "INTERNAL",
+      "file_kind": "verifier_or_regression_test",
+      "logical_area": "05_tests",
+      "organization_status": "MIGRATED",
+      "owner_id": "EVIDENCE",
+      "path": "docs/core/05_tests/regression/root/test_topic13_axial_raman_source_screen.py"
+    },
+    {
       "canonical_path": "docs/core/05_tests/regression/root/test_topic13_base_phi_independent_calibration_requirement.py",
       "evidence_status": "INTERNAL",
       "file_kind": "verifier_or_regression_test",
@@ -68823,6 +68955,15 @@
       "organization_status": "MIGRATED",
       "owner_id": "EVIDENCE",
       "path": "docs/core/05_tests/regression/root/test_topic13_graphite_isothermal_kt_source.py"
+    },
+    {
+      "canonical_path": "docs/core/05_tests/regression/root/test_topic13_hanfland_sun2015_reconciliation.py",
+      "evidence_status": "INTERNAL",
+      "file_kind": "verifier_or_regression_test",
+      "logical_area": "05_tests",
+      "organization_status": "MIGRATED",
+      "owner_id": "EVIDENCE",
+      "path": "docs/core/05_tests/regression/root/test_topic13_hanfland_sun2015_reconciliation.py"
     },
     {
       "canonical_path": "docs/core/05_tests/regression/root/test_topic13_he4_alpha_gate_integration.py",
@@ -70796,6 +70937,60 @@
       "path": "docs/core/05_tests/regression/root/test_uet_curved_3p1_geometry.py"
     },
     {
+      "canonical_path": "docs/core/05_tests/regression/root/test_uet_curved_3p1_gh_boundary_characteristics.py",
+      "evidence_status": "INTERNAL",
+      "file_kind": "verifier_or_regression_test",
+      "logical_area": "05_tests",
+      "organization_status": "MIGRATED",
+      "owner_id": "EVIDENCE",
+      "path": "docs/core/05_tests/regression/root/test_uet_curved_3p1_gh_boundary_characteristics.py"
+    },
+    {
+      "canonical_path": "docs/core/05_tests/regression/root/test_uet_curved_3p1_gh_boundary_projectors.py",
+      "evidence_status": "INTERNAL",
+      "file_kind": "verifier_or_regression_test",
+      "logical_area": "05_tests",
+      "organization_status": "MIGRATED",
+      "owner_id": "EVIDENCE",
+      "path": "docs/core/05_tests/regression/root/test_uet_curved_3p1_gh_boundary_projectors.py"
+    },
+    {
+      "canonical_path": "docs/core/05_tests/regression/root/test_uet_curved_3p1_gh_full_u1_slab.py",
+      "evidence_status": "INTERNAL",
+      "file_kind": "verifier_or_regression_test",
+      "logical_area": "05_tests",
+      "organization_status": "MIGRATED",
+      "owner_id": "EVIDENCE",
+      "path": "docs/core/05_tests/regression/root/test_uet_curved_3p1_gh_full_u1_slab.py"
+    },
+    {
+      "canonical_path": "docs/core/05_tests/regression/root/test_uet_curved_3p1_gh_gauge_wave_tt_null.py",
+      "evidence_status": "INTERNAL",
+      "file_kind": "verifier_or_regression_test",
+      "logical_area": "05_tests",
+      "organization_status": "MIGRATED",
+      "owner_id": "EVIDENCE",
+      "path": "docs/core/05_tests/regression/root/test_uet_curved_3p1_gh_gauge_wave_tt_null.py"
+    },
+    {
+      "canonical_path": "docs/core/05_tests/regression/root/test_uet_curved_3p1_gh_linear_boundary.py",
+      "evidence_status": "INTERNAL",
+      "file_kind": "verifier_or_regression_test",
+      "logical_area": "05_tests",
+      "organization_status": "MIGRATED",
+      "owner_id": "EVIDENCE",
+      "path": "docs/core/05_tests/regression/root/test_uet_curved_3p1_gh_linear_boundary.py"
+    },
+    {
+      "canonical_path": "docs/core/05_tests/regression/root/test_uet_curved_3p1_gh_max_dissipative_sat_control.py",
+      "evidence_status": "INTERNAL",
+      "file_kind": "verifier_or_regression_test",
+      "logical_area": "05_tests",
+      "organization_status": "MIGRATED",
+      "owner_id": "EVIDENCE",
+      "path": "docs/core/05_tests/regression/root/test_uet_curved_3p1_gh_max_dissipative_sat_control.py"
+    },
+    {
       "canonical_path": "docs/core/05_tests/regression/root/test_uet_curved_3p1_gh_nonlinear_vacuum.py",
       "evidence_status": "INTERNAL",
       "file_kind": "verifier_or_regression_test",
@@ -70805,6 +71000,24 @@
       "path": "docs/core/05_tests/regression/root/test_uet_curved_3p1_gh_nonlinear_vacuum.py"
     },
     {
+      "canonical_path": "docs/core/05_tests/regression/root/test_uet_curved_3p1_gh_reduced_wave_sbp_sat.py",
+      "evidence_status": "INTERNAL",
+      "file_kind": "verifier_or_regression_test",
+      "logical_area": "05_tests",
+      "organization_status": "MIGRATED",
+      "owner_id": "EVIDENCE",
+      "path": "docs/core/05_tests/regression/root/test_uet_curved_3p1_gh_reduced_wave_sbp_sat.py"
+    },
+    {
+      "canonical_path": "docs/core/05_tests/regression/root/test_uet_curved_3p1_gh_rinne_sat_penalty_screen.py",
+      "evidence_status": "INTERNAL",
+      "file_kind": "verifier_or_regression_test",
+      "logical_area": "05_tests",
+      "organization_status": "MIGRATED",
+      "owner_id": "EVIDENCE",
+      "path": "docs/core/05_tests/regression/root/test_uet_curved_3p1_gh_rinne_sat_penalty_screen.py"
+    },
+    {
       "canonical_path": "docs/core/05_tests/regression/root/test_uet_curved_3p1_gh_time_evolution.py",
       "evidence_status": "INTERNAL",
       "file_kind": "verifier_or_regression_test",
@@ -70812,6 +71025,24 @@
       "organization_status": "MIGRATED",
       "owner_id": "EVIDENCE",
       "path": "docs/core/05_tests/regression/root/test_uet_curved_3p1_gh_time_evolution.py"
+    },
+    {
+      "canonical_path": "docs/core/05_tests/regression/root/test_uet_curved_3p1_gh_tt_sbp_sat_boundary.py",
+      "evidence_status": "INTERNAL",
+      "file_kind": "verifier_or_regression_test",
+      "logical_area": "05_tests",
+      "organization_status": "MIGRATED",
+      "owner_id": "EVIDENCE",
+      "path": "docs/core/05_tests/regression/root/test_uet_curved_3p1_gh_tt_sbp_sat_boundary.py"
+    },
+    {
+      "canonical_path": "docs/core/05_tests/regression/root/test_uet_curved_3p1_gw_detector_response.py",
+      "evidence_status": "INTERNAL",
+      "file_kind": "verifier_or_regression_test",
+      "logical_area": "05_tests",
+      "organization_status": "MIGRATED",
+      "owner_id": "EVIDENCE",
+      "path": "docs/core/05_tests/regression/root/test_uet_curved_3p1_gw_detector_response.py"
     },
     {
       "canonical_path": "docs/core/05_tests/regression/root/test_uet_curved_3p1_matter_wiring.py",
@@ -73091,6 +73322,15 @@
       "path": "docs/core/07_artifacts/topic13/t13_anisotropic_thermoelastic_response_bridge_audit.json"
     },
     {
+      "canonical_path": "docs/core/07_artifacts/topic13/t13_axial_raman_source_screen.json",
+      "evidence_status": "INTERNAL",
+      "file_kind": "generated_artifact",
+      "logical_area": "07_artifacts",
+      "organization_status": "MIGRATED",
+      "owner_id": "EVIDENCE",
+      "path": "docs/core/07_artifacts/topic13/t13_axial_raman_source_screen.json"
+    },
+    {
       "canonical_path": "docs/core/07_artifacts/topic13/t13_basal_coverage_extension.json",
       "evidence_status": "INTERNAL",
       "file_kind": "generated_artifact",
@@ -74108,6 +74348,15 @@
       "path": "docs/core/07_artifacts/topic13/t13_graphite_isothermal_kt_source_audit.json"
     },
     {
+      "canonical_path": "docs/core/07_artifacts/topic13/t13_hanfland_sun2015_reconciliation.json",
+      "evidence_status": "INTERNAL",
+      "file_kind": "generated_artifact",
+      "logical_area": "07_artifacts",
+      "organization_status": "MIGRATED",
+      "owner_id": "EVIDENCE",
+      "path": "docs/core/07_artifacts/topic13/t13_hanfland_sun2015_reconciliation.json"
+    },
+    {
       "canonical_path": "docs/core/07_artifacts/topic13/t13_he4_core_thermodynamic_bridge_composition_audit.json",
       "evidence_status": "INTERNAL",
       "file_kind": "generated_artifact",
@@ -74783,6 +75032,15 @@
       "path": "docs/core/07_artifacts/topic13/t13_phase_space_measure_registry_addendum.json"
     },
     {
+      "canonical_path": "docs/core/07_artifacts/topic13/t13_phi_e_lane_composition_boundary_audit.json",
+      "evidence_status": "INTERNAL",
+      "file_kind": "generated_artifact",
+      "logical_area": "07_artifacts",
+      "organization_status": "MIGRATED",
+      "owner_id": "EVIDENCE",
+      "path": "docs/core/07_artifacts/topic13/t13_phi_e_lane_composition_boundary_audit.json"
+    },
+    {
       "canonical_path": "docs/core/07_artifacts/topic13/t13_phi_e_reference_normalization_audit.json",
       "evidence_status": "INTERNAL",
       "file_kind": "generated_artifact",
@@ -74988,6 +75246,15 @@
       "organization_status": "MIGRATED",
       "owner_id": "EVIDENCE",
       "path": "docs/core/07_artifacts/topic13/t13_shear_symmetry_audit.json"
+    },
+    {
+      "canonical_path": "docs/core/07_artifacts/topic13/t13_si_phi_normalization_jacobian_audit.json",
+      "evidence_status": "INTERNAL",
+      "file_kind": "generated_artifact",
+      "logical_area": "07_artifacts",
+      "organization_status": "MIGRATED",
+      "owner_id": "EVIDENCE",
+      "path": "docs/core/07_artifacts/topic13/t13_si_phi_normalization_jacobian_audit.json"
     },
     {
       "canonical_path": "docs/core/07_artifacts/topic13/t13_signed_moment_registry_addendum.json",
@@ -76295,6 +76562,69 @@
       "path": "docs/core/07_artifacts/verification/curved_3p1_geometry_operator_verification.json"
     },
     {
+      "canonical_path": "docs/core/07_artifacts/verification/curved_3p1_gh_boundary_characteristic_audit.json",
+      "evidence_status": "INTERNAL",
+      "file_kind": "generated_artifact",
+      "logical_area": "07_artifacts",
+      "organization_status": "MIGRATED",
+      "owner_id": "EVIDENCE",
+      "path": "docs/core/07_artifacts/verification/curved_3p1_gh_boundary_characteristic_audit.json"
+    },
+    {
+      "canonical_path": "docs/core/07_artifacts/verification/curved_3p1_gh_boundary_projector_audit.json",
+      "evidence_status": "INTERNAL",
+      "file_kind": "generated_artifact",
+      "logical_area": "07_artifacts",
+      "organization_status": "MIGRATED",
+      "owner_id": "EVIDENCE",
+      "path": "docs/core/07_artifacts/verification/curved_3p1_gh_boundary_projector_audit.json"
+    },
+    {
+      "canonical_path": "docs/core/07_artifacts/verification/curved_3p1_gh_full_u1_cpbc_slab_pilot.json",
+      "evidence_status": "INTERNAL",
+      "file_kind": "generated_artifact",
+      "logical_area": "07_artifacts",
+      "organization_status": "MIGRATED",
+      "owner_id": "EVIDENCE",
+      "path": "docs/core/07_artifacts/verification/curved_3p1_gh_full_u1_cpbc_slab_pilot.json"
+    },
+    {
+      "canonical_path": "docs/core/07_artifacts/verification/curved_3p1_gh_full_u1_max_diss_sat_control.json",
+      "evidence_status": "INTERNAL",
+      "file_kind": "generated_artifact",
+      "logical_area": "07_artifacts",
+      "organization_status": "MIGRATED",
+      "owner_id": "EVIDENCE",
+      "path": "docs/core/07_artifacts/verification/curved_3p1_gh_full_u1_max_diss_sat_control.json"
+    },
+    {
+      "canonical_path": "docs/core/07_artifacts/verification/curved_3p1_gh_gauge_wave_tt_null_audit.json",
+      "evidence_status": "INTERNAL",
+      "file_kind": "generated_artifact",
+      "logical_area": "07_artifacts",
+      "organization_status": "MIGRATED",
+      "owner_id": "EVIDENCE",
+      "path": "docs/core/07_artifacts/verification/curved_3p1_gh_gauge_wave_tt_null_audit.json"
+    },
+    {
+      "canonical_path": "docs/core/07_artifacts/verification/curved_3p1_gh_gw_detector_response_audit.json",
+      "evidence_status": "INTERNAL",
+      "file_kind": "generated_artifact",
+      "logical_area": "07_artifacts",
+      "organization_status": "MIGRATED",
+      "owner_id": "EVIDENCE",
+      "path": "docs/core/07_artifacts/verification/curved_3p1_gh_gw_detector_response_audit.json"
+    },
+    {
+      "canonical_path": "docs/core/07_artifacts/verification/curved_3p1_gh_linear_boundary_residual_audit.json",
+      "evidence_status": "INTERNAL",
+      "file_kind": "generated_artifact",
+      "logical_area": "07_artifacts",
+      "organization_status": "MIGRATED",
+      "owner_id": "EVIDENCE",
+      "path": "docs/core/07_artifacts/verification/curved_3p1_gh_linear_boundary_residual_audit.json"
+    },
+    {
       "canonical_path": "docs/core/07_artifacts/verification/curved_3p1_gh_nonlinear_vacuum_rhs_verification.json",
       "evidence_status": "INTERNAL",
       "file_kind": "generated_artifact",
@@ -76313,6 +76643,33 @@
       "path": "docs/core/07_artifacts/verification/curved_3p1_gh_principal_system_verification.json"
     },
     {
+      "canonical_path": "docs/core/07_artifacts/verification/curved_3p1_gh_reduced_wave_boundary_comparator.json",
+      "evidence_status": "INTERNAL",
+      "file_kind": "generated_artifact",
+      "logical_area": "07_artifacts",
+      "organization_status": "MIGRATED",
+      "owner_id": "EVIDENCE",
+      "path": "docs/core/07_artifacts/verification/curved_3p1_gh_reduced_wave_boundary_comparator.json"
+    },
+    {
+      "canonical_path": "docs/core/07_artifacts/verification/curved_3p1_gh_reduced_wave_sbp_sat_comparator.json",
+      "evidence_status": "INTERNAL",
+      "file_kind": "generated_artifact",
+      "logical_area": "07_artifacts",
+      "organization_status": "MIGRATED",
+      "owner_id": "EVIDENCE",
+      "path": "docs/core/07_artifacts/verification/curved_3p1_gh_reduced_wave_sbp_sat_comparator.json"
+    },
+    {
+      "canonical_path": "docs/core/07_artifacts/verification/curved_3p1_gh_rinne_sat_penalty_screen.json",
+      "evidence_status": "INTERNAL",
+      "file_kind": "generated_artifact",
+      "logical_area": "07_artifacts",
+      "organization_status": "MIGRATED",
+      "owner_id": "EVIDENCE",
+      "path": "docs/core/07_artifacts/verification/curved_3p1_gh_rinne_sat_penalty_screen.json"
+    },
+    {
       "canonical_path": "docs/core/07_artifacts/verification/curved_3p1_gh_time_evolution_verification.json",
       "evidence_status": "INTERNAL",
       "file_kind": "generated_artifact",
@@ -76320,6 +76677,15 @@
       "organization_status": "MIGRATED",
       "owner_id": "EVIDENCE",
       "path": "docs/core/07_artifacts/verification/curved_3p1_gh_time_evolution_verification.json"
+    },
+    {
+      "canonical_path": "docs/core/07_artifacts/verification/curved_3p1_gh_tt_sbp_sat_boundary_pilot.json",
+      "evidence_status": "INTERNAL",
+      "file_kind": "generated_artifact",
+      "logical_area": "07_artifacts",
+      "organization_status": "MIGRATED",
+      "owner_id": "EVIDENCE",
+      "path": "docs/core/07_artifacts/verification/curved_3p1_gh_tt_sbp_sat_boundary_pilot.json"
     },
     {
       "canonical_path": "docs/core/07_artifacts/verification/curved_3p1_topic13_matter_wiring_verification.json",
@@ -79211,6 +79577,42 @@
       "path": "docs/core/08_history/research_notes/WAVE5_MASTER_EQUATION_ALIGNMENT_AUDIT.md"
     },
     {
+      "canonical_path": "docs/core/08_history/update_logs/CORE_CURVED_3P1_GH_BOUNDARY_CHARACTERISTIC_2026-09-25.md",
+      "evidence_status": "INTERNAL",
+      "file_kind": "historical_research_note",
+      "logical_area": "08_history",
+      "organization_status": "MIGRATED",
+      "owner_id": "ORG",
+      "path": "docs/core/08_history/update_logs/CORE_CURVED_3P1_GH_BOUNDARY_CHARACTERISTIC_2026-09-25.md"
+    },
+    {
+      "canonical_path": "docs/core/08_history/update_logs/CORE_CURVED_3P1_GH_BOUNDARY_PROJECTORS_2026-09-25.md",
+      "evidence_status": "INTERNAL",
+      "file_kind": "historical_research_note",
+      "logical_area": "08_history",
+      "organization_status": "MIGRATED",
+      "owner_id": "ORG",
+      "path": "docs/core/08_history/update_logs/CORE_CURVED_3P1_GH_BOUNDARY_PROJECTORS_2026-09-25.md"
+    },
+    {
+      "canonical_path": "docs/core/08_history/update_logs/CORE_CURVED_3P1_GH_LINEAR_BOUNDARY_2026-09-25.md",
+      "evidence_status": "INTERNAL",
+      "file_kind": "historical_research_note",
+      "logical_area": "08_history",
+      "organization_status": "MIGRATED",
+      "owner_id": "ORG",
+      "path": "docs/core/08_history/update_logs/CORE_CURVED_3P1_GH_LINEAR_BOUNDARY_2026-09-25.md"
+    },
+    {
+      "canonical_path": "docs/core/08_history/update_logs/CORE_CURVED_3P1_GH_MAX_DISS_SAT_CONTROL_2026-09-25.md",
+      "evidence_status": "INTERNAL",
+      "file_kind": "historical_research_note",
+      "logical_area": "08_history",
+      "organization_status": "MIGRATED",
+      "owner_id": "ORG",
+      "path": "docs/core/08_history/update_logs/CORE_CURVED_3P1_GH_MAX_DISS_SAT_CONTROL_2026-09-25.md"
+    },
+    {
       "canonical_path": "docs/core/08_history/update_logs/CORE_FILE_ORGANIZATION_UPDATE_LOG.md",
       "evidence_status": "INTERNAL",
       "file_kind": "update_log",
@@ -79283,6 +79685,15 @@
       "path": "docs/core/08_history/update_logs/RELATIONAL_TWO_BODY_UPDATE_LOG.md"
     },
     {
+      "canonical_path": "docs/core/08_history/update_logs/T13_HOLDOUT_EXPOSURE_REVIEW_REQUIRED_2026-09-24.md",
+      "evidence_status": "INTERNAL",
+      "file_kind": "historical_research_note",
+      "logical_area": "08_history",
+      "organization_status": "MIGRATED",
+      "owner_id": "ORG",
+      "path": "docs/core/08_history/update_logs/T13_HOLDOUT_EXPOSURE_REVIEW_REQUIRED_2026-09-24.md"
+    },
+    {
       "canonical_path": "docs/core/08_history/update_logs/THERMAL_OBSERVABLE_BRIDGE_UPDATE_LOG.md",
       "evidence_status": "INTERNAL",
       "file_kind": "update_log",
@@ -79328,6 +79739,33 @@
       "path": "docs/core/08_history/update_logs/UET_GR_NONCLOSED_UPDATE_LOG.md"
     },
     {
+      "canonical_path": "docs/core/08_history/update_logs/UET_MAIN_CORE_TOPIC13_INTEGRATION_2026-09-24.md",
+      "evidence_status": "INTERNAL",
+      "file_kind": "historical_research_note",
+      "logical_area": "08_history",
+      "organization_status": "MIGRATED",
+      "owner_id": "ORG",
+      "path": "docs/core/08_history/update_logs/UET_MAIN_CORE_TOPIC13_INTEGRATION_2026-09-24.md"
+    },
+    {
+      "canonical_path": "docs/core/08_history/update_logs/UET_MAIN_CORE_TOPIC13_INTEGRATION_2026-09-25.md",
+      "evidence_status": "INTERNAL",
+      "file_kind": "historical_research_note",
+      "logical_area": "08_history",
+      "organization_status": "MIGRATED",
+      "owner_id": "ORG",
+      "path": "docs/core/08_history/update_logs/UET_MAIN_CORE_TOPIC13_INTEGRATION_2026-09-25.md"
+    },
+    {
+      "canonical_path": "docs/core/08_history/update_logs/UET_MAIN_CORE_TOPIC13_INTEGRATION_2026-09-25_AXIAL_RAMAN_SCREEN.md",
+      "evidence_status": "INTERNAL",
+      "file_kind": "historical_research_note",
+      "logical_area": "08_history",
+      "organization_status": "MIGRATED",
+      "owner_id": "ORG",
+      "path": "docs/core/08_history/update_logs/UET_MAIN_CORE_TOPIC13_INTEGRATION_2026-09-25_AXIAL_RAMAN_SCREEN.md"
+    },
+    {
       "canonical_path": "docs/core/08_history/update_logs/UET_MAIN_THEORY_UPDATE_LOG.md",
       "evidence_status": "INTERNAL",
       "file_kind": "update_log",
@@ -79344,6 +79782,24 @@
       "organization_status": "MIGRATED",
       "owner_id": "ORG",
       "path": "docs/core/08_history/update_logs/UET_RESEARCH_ROOM_WAVE1_UPDATE_LOG.md"
+    },
+    {
+      "canonical_path": "docs/core/08_history/update_logs/UET_TOPIC13_PROGRESS_HANDOFF_2026-09-24.md",
+      "evidence_status": "INTERNAL",
+      "file_kind": "historical_research_note",
+      "logical_area": "08_history",
+      "organization_status": "MIGRATED",
+      "owner_id": "ORG",
+      "path": "docs/core/08_history/update_logs/UET_TOPIC13_PROGRESS_HANDOFF_2026-09-24.md"
+    },
+    {
+      "canonical_path": "docs/core/08_history/update_logs/UET_TOPIC13_PROGRESS_HANDOFF_HASH_CORRECTION_2026-09-24.md",
+      "evidence_status": "INTERNAL",
+      "file_kind": "historical_research_note",
+      "logical_area": "08_history",
+      "organization_status": "MIGRATED",
+      "owner_id": "ORG",
+      "path": "docs/core/08_history/update_logs/UET_TOPIC13_PROGRESS_HANDOFF_HASH_CORRECTION_2026-09-24.md"
     },
     {
       "canonical_path": "docs/core/08_history/update_logs/UET_WAVE3_WAVE10_UPDATE_LOG.md",
@@ -87415,6 +87871,46 @@
     },
     {
       "edge_type": "python_import",
+      "from": "docs/core/05_tests/regression/root/test_uet_curved_3p1_gh_boundary_characteristics.py",
+      "reference": "docs/docs/core/core_paths.py"
+    },
+    {
+      "edge_type": "python_import",
+      "from": "docs/core/05_tests/regression/root/test_uet_curved_3p1_gh_boundary_characteristics.py",
+      "reference": "docs/docs/core/uet_curved_3p1_generalized_harmonic.py"
+    },
+    {
+      "edge_type": "path_reference",
+      "from": "docs/core/05_tests/regression/root/test_uet_curved_3p1_gh_boundary_projectors.py",
+      "reference": "docs/core/07_artifacts/verification/"
+    },
+    {
+      "edge_type": "python_import",
+      "from": "docs/core/05_tests/regression/root/test_uet_curved_3p1_gh_boundary_projectors.py",
+      "reference": "docs/docs/core/core_paths.py"
+    },
+    {
+      "edge_type": "path_reference",
+      "from": "docs/core/05_tests/regression/root/test_uet_curved_3p1_gh_full_u1_slab.py",
+      "reference": "docs/core/07_artifacts/verification/"
+    },
+    {
+      "edge_type": "path_reference",
+      "from": "docs/core/05_tests/regression/root/test_uet_curved_3p1_gh_linear_boundary.py",
+      "reference": "docs/core/07_artifacts/verification/"
+    },
+    {
+      "edge_type": "python_import",
+      "from": "docs/core/05_tests/regression/root/test_uet_curved_3p1_gh_linear_boundary.py",
+      "reference": "docs/docs/core/core_paths.py"
+    },
+    {
+      "edge_type": "path_reference",
+      "from": "docs/core/05_tests/regression/root/test_uet_curved_3p1_gh_max_dissipative_sat_control.py",
+      "reference": "docs/core/07_artifacts/verification/"
+    },
+    {
+      "edge_type": "python_import",
       "from": "docs/core/05_tests/regression/root/test_uet_curved_3p1_gh_nonlinear_vacuum.py",
       "reference": "docs/docs/core/core_paths.py"
     },
@@ -87422,6 +87918,16 @@
       "edge_type": "python_import",
       "from": "docs/core/05_tests/regression/root/test_uet_curved_3p1_gh_nonlinear_vacuum.py",
       "reference": "docs/docs/core/uet_curved_3p1_generalized_harmonic.py"
+    },
+    {
+      "edge_type": "path_reference",
+      "from": "docs/core/05_tests/regression/root/test_uet_curved_3p1_gh_reduced_wave_sbp_sat.py",
+      "reference": "docs/core/07_artifacts/verification/"
+    },
+    {
+      "edge_type": "path_reference",
+      "from": "docs/core/05_tests/regression/root/test_uet_curved_3p1_gh_rinne_sat_penalty_screen.py",
+      "reference": "docs/core/07_artifacts/verification/"
     },
     {
       "edge_type": "python_import",
@@ -87437,6 +87943,11 @@
       "edge_type": "python_import",
       "from": "docs/core/05_tests/regression/root/test_uet_curved_3p1_gh_time_evolution.py",
       "reference": "docs/docs/core/uet_curved_3p1_gh_evolution.py"
+    },
+    {
+      "edge_type": "path_reference",
+      "from": "docs/core/05_tests/regression/root/test_uet_curved_3p1_gh_tt_sbp_sat_boundary.py",
+      "reference": "docs/core/07_artifacts/verification/"
     },
     {
       "edge_type": "python_import",

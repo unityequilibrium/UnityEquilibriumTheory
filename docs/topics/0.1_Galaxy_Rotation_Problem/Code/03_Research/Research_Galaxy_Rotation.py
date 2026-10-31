@@ -13,7 +13,7 @@ from pathlib import Path
 import numpy as np
 
 from docs import ROOT_PATH
-from docs.core.reproducibility import generate_artifact, hash_dataset, save_artifact
+from docs.scripts.core.audit.reproducibility import generate_artifact, hash_dataset, save_artifact
 
 
 root_path = ROOT_PATH

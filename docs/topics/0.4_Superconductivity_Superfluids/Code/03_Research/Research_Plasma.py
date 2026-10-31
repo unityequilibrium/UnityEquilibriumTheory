@@ -43,7 +43,7 @@ from docs.core.uet_master_equation import (
     potential_V,
     KAPPA_BEKENSTEIN,
 )
-from docs.core.uet_glass_box import UETPathManager
+from docs.scripts.core.runners.uet_glass_box import UETPathManager
 
 
 # Use local data (5x4 Grid - Updated after migration)

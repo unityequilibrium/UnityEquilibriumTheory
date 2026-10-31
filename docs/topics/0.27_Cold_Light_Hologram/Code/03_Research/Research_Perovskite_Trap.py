@@ -24,7 +24,7 @@ from pathlib import Path
 
 
 from docs.core.uet_parameters import get_params, C
-from docs.core.uet_glass_box import UETPathManager, UETMetricLogger
+from docs.scripts.core.runners.uet_glass_box import UETPathManager, UETMetricLogger
 
 
 class PerovskiteLightTrap:

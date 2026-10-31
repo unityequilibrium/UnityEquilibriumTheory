@@ -10,7 +10,7 @@
 Add this to the top of every test file:
 
 ```python
-from docs.core.reproducibility import lock_all_seeds
+from docs.scripts.core.audit.reproducibility import lock_all_seeds
 lock_all_seeds(42)  # UET standard seed
 ```
 
@@ -34,7 +34,7 @@ Key packages:
 ### Verification Command
 ```bash
 pip install -r requirements_frozen.txt
-python -c "from docs.core.reproducibility import get_environment_info; print(get_environment_info())"
+python -c "from docs.scripts.core.audit.reproducibility import get_environment_info; print(get_environment_info())"
 ```
 
 ---
@@ -54,7 +54,7 @@ UET_SEED = 42
 
 ### Usage in Tests
 ```python
-from docs.core.reproducibility import lock_all_seeds, hash_dataset
+from docs.scripts.core.audit.reproducibility import lock_all_seeds, hash_dataset
 
 # Lock at start
 lock_all_seeds(42)
@@ -72,7 +72,7 @@ print(f"Dataset hash: {data_hash}")  # Should match expected
 Every dataset should have a verified hash:
 
 ```python
-from docs.core.reproducibility import hash_file
+from docs.scripts.core.audit.reproducibility import hash_file
 
 # Verify data file
 expected_hash = "a1b2c3d4e5f67890..."
@@ -87,7 +87,7 @@ assert actual_hash == expected_hash, "Data corruption detected!"
 Generate audit trails for test runs:
 
 ```python
-from docs.core.reproducibility import generate_artifact, save_artifact
+from docs.scripts.core.audit.reproducibility import generate_artifact, save_artifact
 
 results = {"rmse": 0.082, "r_squared": 0.97}
 artifact = generate_artifact(

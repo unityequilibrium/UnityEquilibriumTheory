@@ -39,7 +39,7 @@ from pathlib import Path
 from dataclasses import dataclass
 
 try:
-    from docs.core.uet_base_solver import UETBaseSolver
+    from docs.scripts.core.runners.uet_base_solver import UETBaseSolver
     from docs.core.uet_master_equation import UETParameters
 except ImportError:
     # Fallback for direct execution testing

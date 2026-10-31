@@ -23,7 +23,7 @@ Compare direct equation integration, a state exponential and an independently
 eliminated 2x2 transfer system. Thermal matching contributes G/r and all
 companion Hessian terms together, applied only to declared synthetic bare
 coefficients. Do not add them automatically to measured material totals.
-[Equations and scope](../../core/T13_RECIPROCAL_THERMAL_DYNAMICS.md).
+[Equations and scope](../../core/03_lanes/topic13_support/T13_RECIPROCAL_THERMAL_DYNAMICS.md).
 
 ## Thermal Mass-Source Matching (2026-09-08)
 
@@ -35,7 +35,7 @@ delta_K, delta_a, delta_beta and delta_c from the same free energy, rather
 than adding G alone. The complete local entropy perturbation contains
 `r*delta_phi`; the fixed-entropy temperature numerator becomes
 `T*(b^T*A^-1*h-r)`. Use explicitly declared total coefficients without adding
-loop terms twice to measured material data. [Method](../../core/T13_MATTER_STRAIN_SUSCEPTIBILITY_MATCH.md).
+loop terms twice to measured material data. [Method](../../core/03_lanes/topic13_support/T13_MATTER_STRAIN_SUSCEPTIBILITY_MATCH.md).
 
 ## Dynamic Material Comparator (2026-09-08)
 
@@ -47,7 +47,7 @@ Laplace elimination and analytic heat controls. The positive quadratic
 availability includes elastic, inertial, thermal and flux-storage terms;
 its change equals explicit source power minus nonnegative dissipation.
 This standard-material model has no reciprocal Phi equation or microscopic
-transport calibration. [Full equations](../../core/T13_DYNAMIC_THERMOELASTIC_RESPONSE.md).
+transport calibration. [Full equations](../../core/03_lanes/topic13_support/T13_DYNAMIC_THERMOELASTIC_RESPONSE.md).
 
 ## Finite-q Thermoelastic Compatibility (2026-09-07)
 
@@ -56,7 +56,7 @@ stress-free strain at each point. With `beta=K_el*alpha` and
 `R_n=B*(B^T*K_el*B)^-1*B^T`, fixed local entropy gives
 `dT=T*(beta^T*R_n*G)*phi_r/(c_eps+T*beta^T*R_n*beta)`.
 This uses full Mandel stiffness including shear; K_el is not UET C.
-The [derivation](../../core/T13_THERMOELASTIC_SPATIAL_COMPATIBILITY.md)
+The [derivation](../../core/03_lanes/topic13_support/T13_THERMOELASTIC_SPATIAL_COMPATIBILITY.md)
 declares the conditional interaction, natural units and independent
 elimination. No data or dynamics is an input. This is not TTG calibration.
 

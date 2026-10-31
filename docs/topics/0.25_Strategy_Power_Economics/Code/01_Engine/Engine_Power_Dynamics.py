@@ -37,11 +37,11 @@ from pathlib import Path
 
 # Core Imports
 try:
-    from docs.core.uet_base_solver import UETBaseSolver
+    from docs.scripts.core.runners.uet_base_solver import UETBaseSolver
     from docs.core.uet_master_equation import UETParameters
     from docs.core.uet_parameters import INTEGRITY_KILL_SWITCH, get_params
-    from docs.core.uet_data_orchestrator import orchestrator
-    from docs.core.scientific_validation import ScientificValidator
+    from docs.scripts.core.data.uet_data_orchestrator import orchestrator
+    from docs.scripts.core.audit.scientific_validation import ScientificValidator
 except ImportError as e:
     print(f"CRITICAL IMPORT ERROR in Topic 0.25: {e}")
     UETBaseSolver = object

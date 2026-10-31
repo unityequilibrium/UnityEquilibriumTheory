@@ -1,0 +1,108 @@
+{
+  "schema_version": "core-curved-3p1-gh-krsw-two-face-common-norm-v1",
+  "artifact": "curved_3p1_gh_krsw_two_face_common_norm",
+  "generated_at": "2026-09-25T19:07:16+00:00",
+  "status": "PASS_EXACT_NO_STRICT_COMMON_FACE_CONTRACTION; WEAK_COMMON_NORM_OPEN",
+  "major_result_id": "CORE_CURVED_3P1_GH_KRSW_NO_STRICT_COMMON_TWO_FACE_CONTRACTION",
+  "major_result": {
+    "major_result_id": "CORE_CURVED_3P1_GH_KRSW_NO_STRICT_COMMON_TWO_FACE_CONTRACTION",
+    "topic": "core_curved_3p1",
+    "closure_level": "CLOSED_FOR_LANE",
+    "what_is_closed": [
+      "The exact normal-incidence two-face boundary-map composition has a nonzero fixed amplitude.",
+      "Therefore no single positive-definite quadratic norm can make both face maps strict contractions on every nonzero amplitude.",
+      "This rules out strict per-face contraction in a common norm as a proof route for this algebraic lane."
+    ],
+    "what_remains_open": [
+      "Existence of a common positive-definite nonincreasing form with semidefinite defects is not decided.",
+      "The face-map composition is not a spatial propagation operator and does not establish a slab eigenmode or instability.",
+      "An evolution energy estimate for the full first-order GH system, tangential frequencies, variable coefficients, and corners remains open."
+    ],
+    "equation_or_mapping": {
+      "maps": "q=M_right p at the +x face; q=M_left p at the -x face, using the exact KRSW normal-incidence maps",
+      "fixed_vector": "M_left*M_right*v=v, with v_(t,y)=v_(x,y)=1 and all other components zero",
+      "strict_contraction_no_go": "If H is common and positive definite and both M_s^T H M_s < H, then v^T H v > (M_right*v)^T H(M_right*v) > (M_left*M_right*v)^T H(M_left*M_right*v)=v^T H v, a contradiction.",
+      "weak_form_obligation": "For H>0 and defects D_s=H-M_s^T H M_s >=0, the fixed cycle requires D_right*v=0 and D_left*(M_right*v)=0; these neutral-subspace equalities do not by themselves decide feasibility."
+    },
+    "units": "Dimensionless amplitudes in the flat-background linearized standard-GR normal-incidence lane.",
+    "derivation_class": "exact rational matrix composition and quadratic-form contradiction",
+    "observable": "spectral contraction property of the declared algebraic face maps; not a physical observable",
+    "data_role": "internal exact algebra based on a published standard-GR boundary comparator; no empirical data, fitting, or holdout",
+    "verification_status": "PASS_EXACT_NO_STRICT_COMMON_FACE_CONTRACTION",
+    "open_blockers": [
+      "common semidefinite quadratic-form feasibility or a full two-sided discrete energy estimate",
+      "mapping the one-face algebra to a spatially evolved GH slab with compatible corners"
+    ],
+    "dependency_unlocked": "none",
+    "claim_boundary": "No-go only for strict common contraction of these exact normal-incidence face maps; not a no-go for nonincreasing energy, slab stability, full GH CPBC, UET, or Gravity."
+  },
+  "source": {
+    "title": "Boundary conditions for coupled quasilinear wave equations with application to isolated systems",
+    "authors": [
+      "H.-O. Kreiss",
+      "O. Reula",
+      "O. Sarbach",
+      "J. Winicour"
+    ],
+    "locator": "Section IV.1, equations (55)-(67) and the harmonic constraints immediately following equation (67)",
+    "url": "https://arxiv.org/html/0807.3207"
+  },
+  "scope": {
+    "assumptions": [
+      "The two maps are the exact normal-incidence maps in the source-hashed one-face artifact.",
+      "A common norm means the same positive-definite H is used for both oriented faces.",
+      "Strict contraction is required for every nonzero input vector at each face."
+    ],
+    "not_assumed_or_proved": [
+      "No composition of face maps is identified with propagation through a finite-width slab.",
+      "No result is asserted for a common nonincreasing norm or the full evolved GH equations."
+    ]
+  },
+  "composition": {
+    "rank": 4,
+    "fixed_vector_components": {
+      "h_02": "1",
+      "h_12": "1"
+    },
+    "fixed_vector_exact": true,
+    "intermediate_nonzero": true,
+    "strict_common_contraction_is_impossible": true
+  },
+  "tested_candidate_forms": {
+    "right_face_form": {
+      "same_form_for_both_faces": false,
+      "right_defect_is_zero": false,
+      "left_defect_is_zero": false,
+      "form_on_fixed_vector": "32/3",
+      "form_on_right_image": "4"
+    },
+    "left_face_form": {
+      "same_form_for_both_faces": false,
+      "right_defect_is_zero": false,
+      "left_defect_is_zero": false,
+      "form_on_fixed_vector": "4",
+      "form_on_right_image": "32/3"
+    },
+    "arithmetic_mean_of_face_forms": {
+      "same_form_for_both_faces": true,
+      "right_defect_is_zero": false,
+      "left_defect_is_zero": false,
+      "form_on_fixed_vector": "22/3",
+      "form_on_right_image": "22/3"
+    }
+  },
+  "checks": {
+    "one_face_source_artifact_passes": true,
+    "round_trip_fixed_vector_exact": true,
+    "right_face_intermediate_nonzero": true,
+    "both_faces_are_nonzero_maps": true,
+    "strict_common_contraction_contradiction_exact": true
+  },
+  "claim_promotion": false,
+  "full_core_unlock": false,
+  "gravity_unlock": false,
+  "source_hashes": {
+    "docs/scripts/audit/audit_curved_3p1_gh_krsw_normal_incidence_energy.py": "434febb7aa4e216039093fc7b08debe5c014072a6ce988842293dd4f3b998062",
+    "docs/core/07_artifacts/verification/curved_3p1_gh_krsw_normal_incidence_energy.json": "38c1d3091a2d126506e5ed1a17351caae639b8b335ae868cdd4104d1b1b215d6"
+  }
+}

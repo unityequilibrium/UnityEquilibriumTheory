@@ -44,7 +44,7 @@ import math
 import json
 import hashlib
 from datetime import datetime, timezone
-from docs.core.uet_glass_box import UETPathManager
+from docs.scripts.core.runners.uet_glass_box import UETPathManager
 
 
 # Import from UET V3.0 Master Equation
