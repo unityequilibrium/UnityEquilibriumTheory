@@ -175,13 +175,20 @@ jobs:
           fi
           echo "Services remain optional; no research workflow depends on them."
       - name: Install Rust
-        if: hashFiles('services_and_experiments/uet_core/Cargo.toml') != ''
+        if: needs.detect.outputs.rust == 'true' && hashFiles('services_and_experiments/uet_core/Cargo.toml') != ''
         uses: dtolnay/rust-toolchain@stable
         with:
           toolchain: stable
           components: rustfmt, clippy
       - name: Rust format and compile
-        if: hashFiles('services_and_experiments/uet_core/Cargo.toml') != ''
+        if: needs.detect.outputs.rust == 'true' && hashFiles('services_and_experiments/uet_core/Cargo.toml') != ''
         run: |
           cargo fmt --manifest-path services_and_experiments/uet_core/Cargo.toml --all -- --check
           cargo check --manifest-path services_and_experiments/uet_core/Cargo.toml --all-targets
+      - uses: actions/setup-node@v4
+        if: hashFiles('services_and_experiments/plugins/uet-evidence/test/server.test.js') != ''
+        with:
+          node-version: '22'
+      - name: Test read-only evidence plugin
+        if: hashFiles('services_and_experiments/plugins/uet-evidence/test/server.test.js') != ''
+        run: node --test services_and_experiments/plugins/uet-evidence/test/server.test.js

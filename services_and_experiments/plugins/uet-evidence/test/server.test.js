@@ -11,7 +11,7 @@ const { once } = require('node:events');
 const { after, before, test } = require('node:test');
 
 const pluginRoot = path.resolve(__dirname, '..');
-const repoRoot = path.resolve(pluginRoot, '..', '..');
+const repoRoot = path.resolve(pluginRoot, '..', '..', '..');
 const serverPath = path.join(pluginRoot, 'server.js');
 const {
   handleMessage,
