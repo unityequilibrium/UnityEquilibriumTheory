@@ -68,45 +68,47 @@ fn compute_gradient_axis(data: &ArrayD<f64>, axis: usize, dx: f64) -> ArrayD<f64
 
     // Interior points: (f(x+h) - f(x-h)) / 2h
     // Boundary points: Forward/Backward difference
-    
-    // Note: This is an unoptimized implementation. 
+
+    // Note: This is an unoptimized implementation.
     // For production, we should slice operations.
     // Given the deadline, we iterate.
-    
+
     // Create Zip of indices? slice?
     // ndarray slicing is tricky for dynamic dims.
     // Simplified Loop:
     for (idx, val) in data.indexed_iter() {
         // Need to construct "prev" and "next" indices
         // ndarray::Index is usually [usize, usize...]
-        
+
         // Skip for now, implement 1D/2D specific optimizations later if needed.
         // Or strictly use slicing.
     }
-    
+
     // Better Approach: Use slicing with ndarray
     // grad[1..-1] = (data[2..] - data[0..-2]) / (2*dx)
-    
+
     let ax = Axis(axis);
     let n = data.len_of(ax);
-    
-    if n < 2 { return grad; }
-    
+
+    if n < 2 {
+        return grad;
+    }
+
     // Central difference
     let s_next = data.slice_axis(ax, ndarray::Slice::from(2..n));
-    let s_prev = data.slice_axis(ax, ndarray::Slice::from(0..n-2));
-    let mut s_mid = grad.slice_axis_mut(ax, ndarray::Slice::from(1..n-1));
-    
+    let s_prev = data.slice_axis(ax, ndarray::Slice::from(0..n - 2));
+    let mut s_mid = grad.slice_axis_mut(ax, ndarray::Slice::from(1..n - 1));
+
     // Assign: (next - prev) / 2dx
     // ndarray supports arithmetic on views
     // We need to match shapes.
     // s_next and s_prev have shape (n-2) on axis. s_mid has shape (n-2).
-    
+
     // Use `azip!` or `assign`
     // s_mid.assign(&((&s_next - &s_prev) / (2.0 * dx))); -> This consumes views? No.
     let diff = &s_next - &s_prev;
     s_mid.assign(&(diff / (2.0 * dx)));
-    
+
     // Boundaries
     // forward at 0: (f(1) - f(0)) / dx
     {
@@ -115,15 +117,15 @@ fn compute_gradient_axis(data: &ArrayD<f64>, axis: usize, dx: f64) -> ArrayD<f64
         let d0 = data.slice_axis(ax, ndarray::Slice::from(0..1));
         g0.assign(&((&d1 - &d0) / dx));
     }
-    
+
     // backward at -1: (f(n-1) - f(n-2)) / dx
     {
-        let mut g_end = grad.slice_axis_mut(ax, ndarray::Slice::from(n-1..n));
-        let d_last = data.slice_axis(ax, ndarray::Slice::from(n-1..n));
-        let d_prev = data.slice_axis(ax, ndarray::Slice::from(n-2..n-1));
+        let mut g_end = grad.slice_axis_mut(ax, ndarray::Slice::from(n - 1..n));
+        let d_last = data.slice_axis(ax, ndarray::Slice::from(n - 1..n));
+        let d_prev = data.slice_axis(ax, ndarray::Slice::from(n - 2..n - 1));
         g_end.assign(&((&d_last - &d_prev) / dx));
     }
-    
+
     grad
 }
 
@@ -131,43 +133,53 @@ fn compute_second_derivative(data: &ArrayD<f64>, axis: usize, dx: f64) -> ArrayD
     let mut d2 = ArrayD::zeros(data.raw_dim());
     let ax = Axis(axis);
     let n = data.len_of(ax);
-    
-    if n < 3 { return d2; }
-    
+
+    if n < 3 {
+        return d2;
+    }
+
     // Central: (f(x+h) - 2f(x) + f(x-h)) / dx^2
     let s_next = data.slice_axis(ax, ndarray::Slice::from(2..n));
-    let s_curr = data.slice_axis(ax, ndarray::Slice::from(1..n-1));
-    let s_prev = data.slice_axis(ax, ndarray::Slice::from(0..n-2));
-    let mut s_mid = d2.slice_axis_mut(ax, ndarray::Slice::from(1..n-1));
-    
+    let s_curr = data.slice_axis(ax, ndarray::Slice::from(1..n - 1));
+    let s_prev = data.slice_axis(ax, ndarray::Slice::from(0..n - 2));
+    let mut s_mid = d2.slice_axis_mut(ax, ndarray::Slice::from(1..n - 1));
+
     let term = &s_next - &(2.0 * &s_curr) + &s_prev;
     s_mid.assign(&(term / dx.powi(2)));
-    
+
     // Boundaries: Copy nearest neighbor (Neumann) or zero?
     // Python code uses: laplacian[0] = laplacian[1]
     {
         let l1 = d2.slice_axis(ax, ndarray::Slice::from(1..2)).to_owned();
         let mut l0 = d2.slice_axis_mut(ax, ndarray::Slice::from(0..1));
         l0.assign(&l1);
-        
-        let l_n2 = d2.slice_axis(ax, ndarray::Slice::from(n-2..n-1)).to_owned();
-        let mut l_end = d2.slice_axis_mut(ax, ndarray::Slice::from(n-1..n));
+
+        let l_n2 = d2
+            .slice_axis(ax, ndarray::Slice::from(n - 2..n - 1))
+            .to_owned();
+        let mut l_end = d2.slice_axis_mut(ax, ndarray::Slice::from(n - 1..n));
         l_end.assign(&l_n2);
     }
-    
+
     d2
 }
 
 // arithmetic ops for Field
 impl Add for Field {
     type Output = Self;
-    fn add(self, other: Self) -> Self { Self(self.0 + other.0) }
+    fn add(self, other: Self) -> Self {
+        Self(self.0 + other.0)
+    }
 }
 impl Sub for Field {
     type Output = Self;
-    fn sub(self, other: Self) -> Self { Self(self.0 - other.0) }
+    fn sub(self, other: Self) -> Self {
+        Self(self.0 - other.0)
+    }
 }
 impl Mul<f64> for Field {
     type Output = Self;
-    fn mul(self, scalar: f64) -> Self { Self(self.0 * scalar) }
+    fn mul(self, scalar: f64) -> Self {
+        Self(self.0 * scalar)
+    }
 }

@@ -215,7 +215,8 @@ mod tests {
         let J_in = Array1::ones(10) * 0.05;
         let J_out = Array1::ones(10) * 0.03;
 
-        let omega = eq.omega_functional(&C, Some(&I), Some(&J_in), Some(&J_out), None, 0.0, 1.0, 0.1);
+        let omega =
+            eq.omega_functional(&C, Some(&I), Some(&J_in), Some(&J_out), None, 0.0, 1.0, 0.1);
         assert!(omega >= 0.0);
     }
 }
