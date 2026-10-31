@@ -36,6 +36,7 @@ their own book blueprint, research, drafts, and review records. Stable
 manifests.
 
 Current Section parents:
+- `earth_terrain_migration/`
 - `biology_psychology_economics/`
 - `economics_ai_energy/`
 - `history_media_power/`
@@ -49,6 +50,24 @@ Current Section parents:
 
 One workflow applies to every book. A book-specific change must not create a
 book-specific directory convention.
+
+## Working order
+
+Use the same three-layer order for every Section and book:
+
+```text
+Section S00-S07 plan and lock
+  -> Book W00-W05 research and Blueprint lock
+    -> approved unit_id and Unit Execution Card
+      -> local writing pattern
+        -> W06-W10 draft, author review, integrity, and fact/citation audit
+          -> W11-W18 editorial, proof, release, and maintenance
+```
+
+Do not start a new writing request by asking the author to choose an episode.
+Read the Section and Book manifests first; if a plan or lock is missing, return
+the planning package or handoff list. The local eight-function structure is a
+Writing Unit template and does not replace the shared gates.
 
 The shared writing lifecycle, reference workflow, review gates, and versioning rules are defined in
 [uet_history/BOOK_WORKFLOW.md](../../BOOK_WORKFLOW.md). This file remains the source of truth for

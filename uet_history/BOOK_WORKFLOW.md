@@ -41,6 +41,67 @@ and handoff logic.
 6. Never let layout, a polished tone, or an AI draft upgrade the evidence status of a claim.
 7. Every gate must have an artifact, an owner, a pass condition, and a next controller.
 
+## Unified operating model (normative)
+
+The book workspace has three different layers. They work together, but one layer
+must never be used as a substitute for another.
+
+| Layer | What it controls | Canonical control | Normal output |
+| :-- | :-- | :-- | :-- |
+| **Section** | the shared promise, the three-book arc, ownership, dependencies, terminology, chronology, and handoffs | `S00-S09` | parent Section package |
+| **Book** | the individual book promise, research, evidence, claims, manuscript versions, review, and release | `W00-W18` | child Book package |
+| **Writing unit** | the local chapter/episode/section pattern and reader-facing rhythm | the book's approved local structure | one controlled unit draft |
+
+The Section and Book gates are the project control system. The local writing
+structure is a production template inside the Book workflow. It is not a
+replacement for the Section plan, the Book Blueprint, the literature review, or
+the claim map.
+
+The normal dependency is:
+
+```text
+Section plan and lock
+  -> Book plan, research, and claim/blueprint lock
+    -> approved unit execution packet
+      -> local unit draft and author review
+        -> manuscript integrity and fact/citation audit
+          -> editorial, proof, release, and maintenance gates
+```
+
+### Canonical state vocabulary
+
+Every Section and Book manifest must use the exact gate identifiers defined in
+this document. `current_gate` is a control field, not a free-form label.
+
+Use only these gate states:
+
+`NOT_STARTED`, `IN_PROGRESS`, `PASS`, `PASS_WITH_OPEN_ITEMS`, `BLOCKED`,
+`SUPERSEDED`.
+
+Human-friendly labels such as `BLUEPRINT_LOCKED`, `DRAFT_1_COMPLETE`, or
+`MASTER_LOCK` may appear as explanatory text or an optional `phase_label`, but
+they must not replace `current_gate` or `status`.
+
+`next_controller` must name the next canonical Section or Book gate. If a human
+decision is required, keep the current gate open, set the owner, and record the
+decision in `open_items`; do not invent a pseudo-gate.
+
+A child Book must always record the exact `section_blueprint_version` against
+which its local Blueprint was checked. A parent Section manifest must point to
+the child manifest and current Blueprint version it controls.
+
+### Staged package rule
+
+The minimum package is staged by gate. A new book does not need a directory full
+of empty files on its first day, but its manifest must expose the state of each
+required output as `NOT_STARTED`, `IN_PROGRESS`, or complete. A gate cannot pass
+because a filename exists alone, and a missing future artifact must not be
+hidden by a polished README.
+
+Use an existing equivalent filename when one already exists and record the
+mapping in the README or manifest. Do not create semantic aliases merely to
+make a checklist look complete.
+
 ## Section and volume architecture
 
 When a project contains a Section made of three books, use a parent-child workflow. The Section is the parent narrative and research architecture; each book is a child volume; chapters or episodes are the units inside a book.
@@ -229,6 +290,36 @@ Book Blueprint minimum fields:
 6. Run S08 after any change that may cross a book boundary and before declaring the Section coherent.
 7. Run S09 only when the Section version, all three book versions, registry records, and public boundaries agree.
 
+### Section status and handoff report
+
+When a Section is not complete, produce a handoff report before asking another
+agent to repair its books. The report is a coordination artifact, not a claim of
+completion.
+
+Use one block per Section with:
+
+1. parent `section_id`, canonical path, manifest version, status, `current_gate`,
+   controlling blocker, and `next_controller`;
+2. the state of the parent package: Blueprint, research design, literature
+   review, claim map, volume matrix, dependency map, shared terms, and update
+   log;
+3. one row for each child Book containing `book_id`, volume number, parent
+   Blueprint version, local Blueprint version, `current_gate`, status, canonical
+   draft path, missing or stale artifacts, and controlling blocker;
+4. explicit parent-child drift, such as a version mismatch, a non-canonical gate
+   name, an orphan claim, a duplicate owner, a missing handoff, or a draft count
+   that disagrees with the approved Blueprint;
+5. the repair order, with one next controller per item.
+
+Use these labels in the handoff:
+
+`COMPLETE`, `PARTIAL`, `BLOCKED`, `DRIFTED`, `NOT_STARTED`, and `NEEDS_HUMAN_DECISION`.
+
+Do not infer completion from file count or prose volume. A parent Section is not
+ready for child drafting when a parent-level blocker controls the child, and a
+Book is not ready for a later gate when its required evidence or review artifact
+is absent.
+
 ## Planning-first agent protocol
 
 The first interaction for a new book-writing task is a planning pass, not a request to choose an episode. The Section and book architecture must be visible before the manuscript is drafted.
@@ -247,6 +338,34 @@ When the user asks to start, write, or continue a book and no approved execution
 6. After the relevant Section/Book plan and blueprint lock are approved, select an execution unit only as a downstream writing task. Apply the local structure exactly, complete the required review, and split into page or layout units only at the local structure's approved stage.
 
 Do not open a new task with "which episode should I write?" or "write episode X" unless the parent plan and the book blueprint are already approved and the user explicitly wants execution of that unit. Use the existing S00-S09 and W00-W18 gates; this protocol changes the order of interaction, not the gate model.
+
+### Agent dispatch rule
+
+When a user asks to start or continue a book, the agent must read the current
+manifest state and choose the next allowed work package from the state. The
+agent must not ask the author to discover the workflow by choosing a random
+chapter or episode.
+
+| Current condition | Agent output | No prose drafting yet? |
+| :-- | :-- | :-- |
+| Section package or parent lock is missing or blocking | Section planning package and Section repair list | yes |
+| Book intake, Blueprint, research design, literature review, source digest, or claim map is incomplete | Book planning/research package with source and claim tasks | yes |
+| Section and Book locks pass for the relevant book | one approved unit execution packet | no, after the packet is accepted |
+| Draft exists and author review or integrity/fact audit is open | the named review or audit packet | only the work allowed by that gate |
+| Release or maintenance is open | the relevant release/maintenance checklist | no new structural drafting unless the gate allows it |
+
+Every unit execution packet must name:
+
+- `section_id`, `book_id`, `volume_number`, and `unit_id`
+- the current Section and Book gate and their versions
+- the unit purpose, reader outcome, and handoff
+- claim IDs, source IDs or source tasks, counter-evidence, and wording limits
+- the allowed edit scope and the expected artifact
+- the reviewer, pass condition, open items, and next controller
+
+If the required parent or Book artifact is missing, report that as a blocker and
+create the handoff list. Do not manufacture a passing status from the presence
+of a Blueprint, a bibliography, or a draft file.
 
 ### Reopen and drift rules
 
@@ -304,6 +423,30 @@ lock the local structure
 
 Page splitting must not become a second place where unsupported claims are
 introduced.
+
+### Local structure versus workflow gates
+
+The local structure may call a unit a chapter, episode, section, or another
+book-specific name. That name is not a workflow gate. The Book Blueprint owns
+the unit IDs and order; the local structure owns the writing rhythm; W00-W18
+owns the evidence and review state.
+
+For a unit-based book, use this practical loop inside the allowed Draft gate:
+
+```text
+approved unit_id
+  -> source and claim task
+  -> write the complete local structure
+  -> author reviews meaning, tone, and intent
+  -> revise the draft
+  -> split into page/layout units
+  -> run the required integrity and fact/citation checks
+```
+
+The eight-function pattern in `uet_history/3_publish/books/โครงสร้างหนังสือ.md`
+is one local writing pattern. It is not a ninth gate, it does not define the
+number of chapters in every book, and it does not authorize a new unit before
+the Book Blueprint does.
 
 ## Reference workflow
 
@@ -434,6 +577,12 @@ DEPENDENCY_MAP.md
 SHARED_TERMS.md
 SECTION_UPDATE_LOG.md
 ```
+
+Read these package lists cumulatively, not as a requirement to create empty
+documents on day one. The manifest must show future outputs as `NOT_STARTED` and
+the required artifact must exist before its gate can pass. The practical minimum
+for each stage is the output named by that gate plus the upstream records it
+depends on.
 
 Do not create semantic aliases merely to satisfy this list. If an existing book uses another filename or folder convention, record the mapping in its README or manifest.
 
@@ -681,6 +830,11 @@ For a new or existing book:
 5. if the Section/Book plan is not approved, produce the planning package first; do not begin by asking the author to select a chapter or episode
 6. after the plan and blueprint lock, run one approved chapter or episode as a controlled execution unit before applying the workflow to the whole book
 7. promote public files only after the registry and public manifest agree
+
+For a workflow-standard audit or repair, limit the change to the shared standard,
+agent instructions, templates, and the handoff report unless the user explicitly
+authorizes edits to a Section or Book package. Do not rewrite manuscript prose,
+move book folders, or mark a gate complete as a side effect of standardization.
 
 The workflow is reusable across books; the source register, claim map, and local
 chapter structure remain book-specific.

@@ -1,5 +1,8 @@
 # 🔬 Unity Equilibrium Theory (UET) v0.9.0: The "Thermodynamics of Ethics" Framework
 
+<!-- UET-RESEARCH-RETROSPECTIVE: 2026-10-19; navigation notice, not a physics gate -->
+> **ทบทวนก่อนวิจัยต่อ — 19 ต.ค. 2026:** ภาพรวมยังมีช่องว่างด้านนิยาม สายสืบทอดสมการ หน่วย และการทดสอบ ข้อความ/ป้ายผลเก่าต้องอ่านตามขอบเขตหลักฐาน อ่าน [รายงานข้อผิดพลาดและบทเรียน UET](docs/meta/UET_RESEARCH_RETROSPECTIVE.md) โดยเฉพาะข้อ R01–R18 และลำดับแก้ใน §8 ก่อนขยายงาน สถานะจริงยังอ้างอิง artifact/gate ของเส้นทางนั้น
+
 > **สถานะที่ตรวจ 23 ตุลาคม 2026:** งานล่าสุดแยกได้ว่าอะไรเป็นข้อเสนอ อะไรเป็นแบบจำลอง และรูปสมการใดใช้แทนกันได้ภายใต้เงื่อนไข ผลยังเป็น **FORMAL / normalized** ไม่ใช่การยืนยันฟิสิกส์ใหม่หรือแม่บทเดียวที่ปิดทุกสาขา อ่าน [อัปเดตงานวิจัยล่าสุด](#research-updates-2026-10-23) ก่อนใช้ป้ายและตารางประวัติด้านล่าง
 
 ![Tests](https://img.shields.io/badge/Tests-400+_Historical_snapshot-yellow)
@@ -61,18 +64,14 @@
 <a id="research-updates-2026-10-23"></a>
 ## อัปเดตงานวิจัยล่าสุด
 
-> **ขอบเขตชุดเผยแพร่:** รอบนี้เผยแพร่เฉพาะสาม README และ WORK_LEDGER ไม่รวมงานวิจัย/PR ค้าง การตรวจ availability อ้าง main `d0210c00b63398f70e1f8f285a6daf5169645933` ชื่อแหล่งที่กำกับ **working-only** เป็นหลักฐานใน workspace ไม่ใช่ลิงก์ที่เปิดได้จาก public main จึงแสดงเป็นชื่อแทน hyperlink; ไม่ได้ลบผลหรือยกระดับข้ออ้าง
->
-> แหล่งที่ยังไม่รวม: `docs/meta/UET_THEORY_ARGUMENT.md` (§§23–25), `docs/topics/0.13_Thermodynamic_Bridge/calculation_contracts/energy_memory_cycle.json` และ `docs/meta/UET_RESEARCH_RETROSPECTIVE.md` ชุด source/verifier ที่รายงานอ้างยังต้องมี publication review แยก ส่วน pending curved 3+1 narrative/artifacts คงไว้ใน workspace เดิม ไม่ถูกพามาในชุดนี้
-
-**วันตัดยอด: 23 ตุลาคม 2026** — สรุปจาก UET Theory Argument (working-only) โดยเฉพาะ §§23–25 ที่บันทึกใน **local source commit `1346edfc07c2d2f9eb2adbd5257e820fa186a37b`** บน branch `codex/research/source-backaction-discrimination` ข้อความใหม่นี้เป็น documentation update ไม่ใช่ release ใหม่ และไม่ได้ตรวจยืนยันว่า public `main` ตรงกับชุดนี้แล้ว
+**วันตัดยอด: 23 ตุลาคม 2026** — สรุปจาก [UET Theory Argument](docs/meta/UET_THEORY_ARGUMENT.md) โดยเฉพาะ §§23–25 ที่บันทึกใน **local source commit `1346edfc07c2d2f9eb2adbd5257e820fa186a37b`** บน branch `codex/research/source-backaction-discrimination` ข้อความใหม่นี้เป็น documentation update ไม่ใช่ release ใหม่ และไม่ได้ตรวจยืนยันว่า public `main` ตรงกับชุดนี้แล้ว
 
 <a id="research-author-intent"></a>
 ### 1. ข้อเสนอรวมและเจตนาของผู้เขียน
 
 ภาพรวมที่ต้องการศึกษาคือ **ระบบซ้อนระบบ → ปฏิสัมพันธ์และการแลกเปลี่ยนพลังงาน → ผลที่คงอยู่ในสถานะ/โครงสร้าง/ความสัมพันธ์ → การตอบสนองภายหลังที่เปลี่ยนไป** ไม่ใช่การเรียกทุกสิ่งว่า information ก้อนเดียว การสังเกตเป็นปฏิสัมพันธ์ของระบบผู้วัดอีกส่วนหนึ่ง จึงต้องแยก source, signal transport, detector state, readout และ backaction ตามขอบเขตจริง
 
-ข้อเสนอว่า **จักรวาลเป็นระบบเปิด มีการปรับตัวและ persistence** ยังเก็บไว้เป็นสมมติฐานระดับจักรวาลของผู้เขียน การตรวจ subsystem ที่เปิดไม่พิสูจน์สมมติฐานนี้ และเราไม่ลดความหมายของข้อเสนอให้เหลือเพียง subsystem โดยเงียบ ๆ ดูสายเหตุผลและการแยกที่มาใน รายงาน §3 (working-only)
+ข้อเสนอว่า **จักรวาลเป็นระบบเปิด มีการปรับตัวและ persistence** ยังเก็บไว้เป็นสมมติฐานระดับจักรวาลของผู้เขียน การตรวจ subsystem ที่เปิดไม่พิสูจน์สมมติฐานนี้ และเราไม่ลดความหมายของข้อเสนอให้เหลือเพียง subsystem โดยเงียบ ๆ ดูสายเหตุผลและการแยกที่มาใน [รายงาน §3](docs/meta/UET_THEORY_ARGUMENT.md#3-a1--ข้อเสนอรวมและที่มาของแต่ละส่วน)
 
 ต้องอ่านสามชั้นแยกกัน: **เจตนาผู้เขียน**, **ผลจากทฤษฎีภายนอกพร้อมเงื่อนไขที่นำเข้า** และ **constitutive/model choices ที่ AI เสนอหรือใส่ใน implementation** การเห็นด้วยกับคำอธิบายไม่ใช่การรับรองสมการ ส่วนรายชื่อ “เจ็ดฐาน” ที่ยังยืนยันต้นทางไม่ครบไม่ถูกแทนด้วยเจ็ดเทอมหรือจำนวน axioms
 
@@ -81,7 +80,7 @@
 
 สำหรับสายล่าสุด แกนคือ **functional `Omega[C,Phi]` ร่วมกับ complete state `(C,Phi,Pi)` และกฎวิวัฒน์/kinetics, sources, initial/boundary data และ readout** ไม่ใช่ Omega เพียงตัวเดียว `matter_space_coupled_v1` เป็น **opt-in normalized prototype**; ค่า default ยังเป็น `legacy_local` การรัน legacy entrypoint โดยไม่ล็อก mode จึงไม่เท่ากับทดสอบ realization ล่าสุด
 
-อ่านสูตรและความหมายใน [Core README](docs/core/README.md#current-response-realization), [spec](docs/core/01_contracts/MATTER_SPACE_RESEARCH_SPEC.md) และ relationship audit §25.2 (working-only) การเลือก functional และ kinetic law เป็นคนละขั้น: อนุพันธ์ของ functional ตามได้เมื่อเลือกมันแล้ว แต่ไม่ใช่หลักฐานว่าธรรมชาติบังคับให้เลือก polynomial หรือ coefficient เหล่านี้
+อ่านสูตรและความหมายใน [Core README](docs/core/README.md#current-response-realization), [spec](docs/core/01_contracts/MATTER_SPACE_RESEARCH_SPEC.md) และ [relationship audit §25.2](docs/meta/UET_THEORY_ARGUMENT.md#252-คำตอบเรื่อง-สมการหลัก-ต้องแยกสามระดับ) การเลือก functional และ kinetic law เป็นคนละขั้น: อนุพันธ์ของ functional ตามได้เมื่อเลือกมันแล้ว แต่ไม่ใช่หลักฐานว่าธรรมชาติบังคับให้เลือก polynomial หรือ coefficient เหล่านี้
 
 ยังไม่มี transformation/derivation ที่ปิดว่า legacy C/I, dissipative C/Phi/Pi, covariant parent และทุก topic เป็นกฎเดียวกัน [Compatibility decision](docs/core/07_artifacts/gates/uet_foundation_compatibility_decision.json) ยังคง `FOUNDATION_NOT_CLOSED`; ผลของสายนี้ไม่เปลี่ยน gate ของ curved 3+1 หรือ O(2) อีกสายหนึ่ง
 
@@ -99,7 +98,7 @@
 | Trace: R / I_trace | derived causal/history output จาก sigma; ไม่มี feedback ใน v1 | ไม่ใช่ independent state, แหล่งพลังงาน หรือข้อมูลทั้งหมดของระบบ |
 | Observer record | ค่าที่ได้จาก measurement/processing operator และสถานะผู้วัด | ไม่ใช่ตัวระบบต้นทาง และยังไม่ถือว่า internal states สังเกตได้ครบ |
 
-รายละเอียด/ต้นทางอยู่ใน §25.3 (working-only) ไม่ได้สร้างทะเบียนสมการซ้ำใน README
+รายละเอียด/ต้นทางอยู่ใน [§25.3](docs/meta/UET_THEORY_ARGUMENT.md#253-เทอมใดเป็น-state-เทอมใดเป็นกฎ-และเทอมใดเป็นผลที่คำนวณตามมา) ไม่ได้สร้างทะเบียนสมการซ้ำใน README
 
 <a id="research-equation-relations"></a>
 ### 4. ความสัมพันธ์ระหว่างรูปสมการ
@@ -112,16 +111,16 @@
 | Alternative model | conserved กับ nonconserved C; legacy C/I กับ response C/Phi/Pi | ต่าง operators, coupling และ admissible initial data ไม่ใช่แค่เปลี่ยนชื่อ |
 | Unresolved bridge | เชื่อมทุก family หรือแมป normalized state ไป observable/หน่วยจริง | ต้องมี correspondence และ error budget ไม่ใช้ชื่อ information เป็นหลักฐาน |
 
-ในตัวอย่าง C/I coupling เป็น `beta*C*I` แต่ C/Phi/Pi ใช้ `-g*C^2*Phi/2` การแทน I=r*Phi ด้วยค่าคงที่ไม่ทำให้สอง coupling เท่ากันทุก C เมื่อ couplings ไม่เป็นศูนย์ ส่วน static elimination ของ I ให้ quadratic correction ของ C แต่ response Phi ให้ leading quartic correction เฉพาะเงื่อนไขที่ระบุ นี่เป็นความต่างของ model choices ไม่ใช่ข้อสรุปว่าผู้เขียนต้องเลือกแบบใด ดู ข้ออนุมาน/ข้อจำกัด §25.4 (working-only) และ ตาราง §25.5 (working-only)
+ในตัวอย่าง C/I coupling เป็น `beta*C*I` แต่ C/Phi/Pi ใช้ `-g*C^2*Phi/2` การแทน I=r*Phi ด้วยค่าคงที่ไม่ทำให้สอง coupling เท่ากันทุก C เมื่อ couplings ไม่เป็นศูนย์ ส่วน static elimination ของ I ให้ quadratic correction ของ C แต่ response Phi ให้ leading quartic correction เฉพาะเงื่อนไขที่ระบุ นี่เป็นความต่างของ model choices ไม่ใช่ข้อสรุปว่าผู้เขียนต้องเลือกแบบใด ดู [ข้ออนุมาน/ข้อจำกัด §25.4](docs/meta/UET_THEORY_ARGUMENT.md#254-ตรวจการเชื่อม-ci-กับ-cphipi-ไม่ใช่แค่เปลี่ยนชื่อ) และ [ตาราง §25.5](docs/meta/UET_THEORY_ARGUMENT.md#255-รูปสมการที่ต่างกัน-ใช้แทนกันได้ระดับไหน)
 
 <a id="research-bounded-results"></a>
 ### 5. ผลล่าสุดทั้งด้านที่ผ่านและไม่ผ่าน
 
 | หลักฐาน | Comparator / protocol | ผลและขอบเขต |
 | --- | --- | --- |
-| §23.3 steady-response certificate (working-only) | raw first-mode approximation เทียบ full normalized linear rod–polarization reference; steady harmonic endpoint force F_b, f_P=0, omega/omega_0 ใน [0.99,1.01] และ fixed controls ตาม card | complex transfers p/F_b และ x/F_b มี uniform relative-error bound ≤18511/2066610 <0.9%<1% **เทียบแบบจำลองเต็ม ไม่ใช่ความแม่นยำกับธรรมชาติ** ไม่ครอบ arbitrary inputs, DC, finite settling/preparation หรือบัญชีพลังงานทุกชนิด |
-| §24.6 prepared-history limitation (working-only) | smooth finite-energy write + controlled wait + released read ใน reference เดิม; projected (p,q0,q0dot) เท่ากับ baseline แต่ higher modes ต่าง | state ย่อไม่พอสำหรับ preparation/read class นี้; normalized endpoint witness 0.002177<x(t_r)/epsilon<0.002187 พร้อม tail bound ไม่ใช่อนาคตต่างจาก complete state เดียวกัน ไม่ปฏิเสธทุก reduction และไม่ใช่ physical memory/learning validation |
-| §25 relationship audit (working-only) | ตรวจ source/registry, exact algebra 8 กลุ่ม และ default-mode AST; ใช้ผลเดิม ไม่รัน solver เก่าใหม่ | แยก generator/kinetics/state/ledger/output และข้อเชื่อม exact/conditional/alternative ได้ ยังไม่รวมทุก family เป็น universal master หรือพิสูจน์สูตรทั้ง registry |
+| [§23.3 steady-response certificate](docs/meta/UET_THEORY_ARGUMENT.md#233-uniform-certificate-ไม่ใช้กริดที่บังเอิญผ่านแทนทั้งช่วง) | raw first-mode approximation เทียบ full normalized linear rod–polarization reference; steady harmonic endpoint force F_b, f_P=0, omega/omega_0 ใน [0.99,1.01] และ fixed controls ตาม card | complex transfers p/F_b และ x/F_b มี uniform relative-error bound ≤18511/2066610 <0.9%<1% **เทียบแบบจำลองเต็ม ไม่ใช่ความแม่นยำกับธรรมชาติ** ไม่ครอบ arbitrary inputs, DC, finite settling/preparation หรือบัญชีพลังงานทุกชนิด |
+| [§24.6 prepared-history limitation](docs/meta/UET_THEORY_ARGUMENT.md#246-คำตัดสิน-ขอบเขต-และจุดหยุด) | smooth finite-energy write + controlled wait + released read ใน reference เดิม; projected (p,q0,q0dot) เท่ากับ baseline แต่ higher modes ต่าง | state ย่อไม่พอสำหรับ preparation/read class นี้; normalized endpoint witness 0.002177<x(t_r)/epsilon<0.002187 พร้อม tail bound ไม่ใช่อนาคตต่างจาก complete state เดียวกัน ไม่ปฏิเสธทุก reduction และไม่ใช่ physical memory/learning validation |
+| [§25 relationship audit](docs/meta/UET_THEORY_ARGUMENT.md#25-สมการรูปต่าง-ๆ-แทนกันอย่างไร-และอะไรเป็นแกนจริง) | ตรวจ source/registry, exact algebra 8 กลุ่ม และ default-mode AST; ใช้ผลเดิม ไม่รัน solver เก่าใหม่ | แยก generator/kinetics/state/ledger/output และข้อเชื่อม exact/conditional/alternative ได้ ยังไม่รวมทุก family เป็น universal master หรือพิสูจน์สูตรทั้ง registry |
 
 ผลผ่านของ §23 และข้อจำกัดของ §24 อยู่ร่วมกันได้เพราะคนละ protocol กลไก retained modes ใน comparator มาตรฐานอธิบายผลเหล่านี้ได้อยู่แล้ว จึงยังไม่ใช่หลักฐาน UET-specific new mechanics, global openness หรือการแปลงข้อมูลเป็นพลังงานจริง
 
@@ -130,14 +129,14 @@
 
 ยังต้องปิด **physical mapping/หน่วย, parameter origins, preparation, source/detector/measurement uncertainty และข้อจำกัดที่ UET เพิ่มเหนือ comparator** การมี audit เอกสารหรืออนุพันธ์ที่ถูกภายใน model ไม่ปิดช่องเหล่านี้ Thermal-ledger helper bug ที่รายงานเดิมพบยังต้องแยกซ่อมและตรวจ claims ที่พึ่งมัน ไม่ถือว่ารอบ README นี้ซ่อมแล้วหรือใช้ตัดสินงานที่ไม่พึ่งมัน
 
-โจทย์ถัดไปจาก §25.7 (working-only) คือระบุหนึ่งสถานการณ์ที่ตั้งใจศึกษา: **ผลคงอยู่ต้องจำเพียงขนาด หรือจำทิศ/เครื่องหมายด้วย และเข้าไปเปลี่ยนการตอบสนองผ่าน state/input ใด?** ใช้คำตอบตรวจ realization เดิมที่ตรง scope; ไม่เพิ่มเทอม รันวัสดุใหม่ หรือปรับ optimizer เพื่อหนี comparator คำตอบของผู้เขียนยืนยันเจตนา ไม่ใช่หลักฐานทางฟิสิกส์
+โจทย์ถัดไปจาก [§25.7](docs/meta/UET_THEORY_ARGUMENT.md#257-คำวินิจฉัยและโจทย์ถัดไปที่ไม่วนเพิ่มสมการ) คือระบุหนึ่งสถานการณ์ที่ตั้งใจศึกษา: **ผลคงอยู่ต้องจำเพียงขนาด หรือจำทิศ/เครื่องหมายด้วย และเข้าไปเปลี่ยนการตอบสนองผ่าน state/input ใด?** ใช้คำตอบตรวจ realization เดิมที่ตรง scope; ไม่เพิ่มเทอม รันวัสดุใหม่ หรือปรับ optimizer เพื่อหนี comparator คำตอบของผู้เขียนยืนยันเจตนา ไม่ใช่หลักฐานทางฟิสิกส์
 
 <a id="research-evidence-boundary"></a>
 ### 7. หลักฐานและการทำซ้ำ
 
-เริ่มจาก รายงานรวม (working-only), [Core spec](docs/core/01_contracts/MATTER_SPACE_RESEARCH_SPEC.md), [equation registry](docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry.json), [foundation gate](docs/core/07_artifacts/gates/uet_foundation_dependency_gate.json) และ [Topic 13 full bridge gate](docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json) gate สุดท้ายยังแยก legacy graphite/TTG ที่ `BLOCKED_OPEN_T13_FULL_BRIDGE` จาก O(2)/He-4 ที่ Core-ready; ไม่ใช่ external validation
+เริ่มจาก [รายงานรวม](docs/meta/UET_THEORY_ARGUMENT.md), [Core spec](docs/core/01_contracts/MATTER_SPACE_RESEARCH_SPEC.md), [equation registry](docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry.json), [foundation gate](docs/core/07_artifacts/gates/uet_foundation_dependency_gate.json) และ [Topic 13 full bridge gate](docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json) gate สุดท้ายยังแยก legacy graphite/TTG ที่ `BLOCKED_OPEN_T13_FULL_BRIDGE` จาก O(2)/He-4 ที่ Core-ready; ไม่ใช่ external validation
 
-เส้นทาง cycle ใช้ contract T13_ENERGY_MEMORY_CYCLE_FORMAL_V1 (working-only): review `INCOMPLETE`, physical correspondence `UNKNOWN` และรับรองเฉพาะ scope นั้น ไม่รับรองทุก family อ่านประวัติที่ [Topic 13 UPDATE_LOG](docs/topics/0.13_Thermodynamic_Bridge/UPDATE_LOG.md) และ [WORK_LEDGER วันที่ 23 ต.ค.](WORK_LEDGER/2026/2026-10-23.md)
+เส้นทาง cycle ใช้ [contract T13_ENERGY_MEMORY_CYCLE_FORMAL_V1](docs/topics/0.13_Thermodynamic_Bridge/calculation_contracts/energy_memory_cycle.json): review `INCOMPLETE`, physical correspondence `UNKNOWN` และรับรองเฉพาะ scope นั้น ไม่รับรองทุก family อ่านประวัติที่ [Topic 13 UPDATE_LOG](docs/topics/0.13_Thermodynamic_Bridge/UPDATE_LOG.md) และ [WORK_LEDGER วันที่ 23 ต.ค.](WORK_LEDGER/2026/2026-10-23.md)
 
 **Working evidence ≠ local commit ≠ public main:** ชุด source commit ที่ระบุมีรายงาน §§23–25 แต่ยังไม่ใช่ complete publication packet: retrospective และ source/verifier สามไฟล์ที่รายงานอ้างยังไม่อยู่ใน tree ของ commit นี้ แม้เปิดได้ในเครื่อง จึงไม่กล่าวว่าผู้อ่านภายนอกทำซ้ำงานเก่าทุกชิ้นได้ครบ และไม่ได้อนุมานสถานะ remote ล่าสุดโดยไม่ตรวจ ลิงก์ retrospective ที่คงจากประวัติต้องอ่านพร้อมข้อจำกัดนี้; ดูรายละเอียด source identity/publication gaps ในรายงานก่อนอ้างซ้ำ
 
@@ -620,7 +619,7 @@ python docs/topics/run_all_tests.py
 
 ## 🔍 10. Methodology
 
-> งานล่าสุดแยก author intent, imported theory, AI model choices และผลตรวจจริงตาม รายงาน (working-only) การทำซ้ำต้องใช้ source/config/input identity และ contract ที่ตรงรุ่น ไม่ใช้จำนวนไฟล์หรือผลผ่านแทนความก้าวหน้าทางทฤษฎี การศึกษาซ้ำเปิดเมื่อ evidence-producing state หรือ prerequisite เปลี่ยน ไม่ใช่เพียงเปลี่ยนคำอธิบาย
+> งานล่าสุดแยก author intent, imported theory, AI model choices และผลตรวจจริงตาม [รายงาน](docs/meta/UET_THEORY_ARGUMENT.md) การทำซ้ำต้องใช้ source/config/input identity และ contract ที่ตรงรุ่น ไม่ใช้จำนวนไฟล์หรือผลผ่านแทนความก้าวหน้าทางทฤษฎี การศึกษาซ้ำเปิดเมื่อ evidence-producing state หรือ prerequisite เปลี่ยน ไม่ใช่เพียงเปลี่ยนคำอธิบาย
 
 ### Human + AI Collaboration
 
@@ -649,9 +648,9 @@ python docs/topics/run_all_tests.py
 | `docs/topics/run_all_tests.py` | 🧪 Master test runner |
 | `docs/core/02_equations/matter_space/uet_master_equation.py` | 🔬 Legacy engine entry point; not a universal master law |
 | `docs/requirements_ingest.txt` | 📦 Research/data ingest dependencies |
-| UET_THEORY_ARGUMENT.md (working-only) | ข้อเสนอรวม ผล/ข้อคัดค้าน และสายเหตุผล §§23–25 |
+| [UET_THEORY_ARGUMENT.md](docs/meta/UET_THEORY_ARGUMENT.md) | ข้อเสนอรวม ผล/ข้อคัดค้าน และสายเหตุผล §§23–25 |
 | [Core README](docs/core/README.md#current-response-realization) | สูตร state/functional/kinetics ของ realization ล่าสุดและขอบเขต legacy |
-| Cycle calculation contract (working-only) | identities/ขอบเขต FORMAL ของ cycle; ไม่ใช่ใบรับรองทุก family |
+| [Cycle calculation contract](docs/topics/0.13_Thermodynamic_Bridge/calculation_contracts/energy_memory_cycle.json) | identities/ขอบเขต FORMAL ของ cycle; ไม่ใช่ใบรับรองทุก family |
 
 ---
 
@@ -774,7 +773,7 @@ Physics students and researchers often search for these questions. The table pre
 <a id="readme-wording-history"></a>
 ## ภาคผนวก: ถ้อยคำที่ปรับในรอบนี้
 
-ตรวจ 23 ตุลาคม 2026 — เก็บถ้อยคำที่แทนจาก public-main baseline ไม่ใช่รับรองข้ออ้างเก่า ตารางแสดงเฉพาะ cell ที่เปลี่ยนเมื่อเนื้อหาแถวอื่นคงเดิม สูตร/ตัวอย่าง/แผนภาพเดิมไม่ถูกเขียนใหม่
+ตรวจ 23 ตุลาคม 2026 — ตารางนี้เก็บข้อความที่ถูกแทนเพื่อการทบทวน ไม่ใช่การนำคำอ้างเก่ากลับมารับรอง ข้อความ/ตัวเลข/สูตรส่วนอื่นคงไว้พร้อมคำกำกับขอบเขต ตารางแสดงเฉพาะ cell ที่เปลี่ยนเมื่อเนื้อหาแถวอื่นไม่เปลี่ยน; ไม่อาศัย Git history เพียงอย่างเดียว
 
 | ตำแหน่ง | ข้อความเดิม | ข้อความใหม่ | เหตุผล | หลักฐาน/ขอบเขต |
 | --- | --- | --- | --- | --- |
@@ -783,11 +782,10 @@ Physics students and researchers often search for these questions. The table pre
 | Mathematical Breakthroughs introduction | <code>&#42;UET converts abstract math problems into physical manifold geometry.&#42;</code> | <code>&#42;Historical proposal: interpret abstract math problems through physical manifold geometry; no general proof is established by this dashboard.&#42;</code> | จัดเป็นข้อเสนอเชิงตีความ ไม่ใช้ dashboard แทน proof | [claim rubric](docs/topics/For%20Work/04_Claim_and_Evidence_Rubric.md) / [foundation gate](docs/core/07_artifacts/gates/uet_foundation_dependency_gate.json) |
 | Status ของ Navier–Stokes, Yang–Mills Gap และ P vs NP (สามตำแหน่ง) | <code>&#42;&#42;Solved&#42;&#42;</code> | <code>Historical claim / ยังไม่ทบทวนข้ออ้างนี้</code> | ไม่พบการตรวจรับ proof ของทั้งสามข้อใน scope นี้; ไม่สรุปว่าข้อเสนอผิด | [claim rubric](docs/topics/For%20Work/04_Claim_and_Evidence_Rubric.md) / [foundation gate](docs/core/07_artifacts/gates/uet_foundation_dependency_gate.json) |
 | Impossible Physics Anomalies introduction | <code>&#42;Standard Model said it was impossible. UET proved it necessary.&#42;</code> | <code>&#42;Historical anomaly interpretations follow; this page does not establish a proof or a replacement for the standard explanations.&#42;</code> | ไม่ยก analogy/ข้อเสนอเป็น proof หรือการแทน standard explanations | [claim rubric](docs/topics/For%20Work/04_Claim_and_Evidence_Rubric.md) / [foundation gate](docs/core/07_artifacts/gates/uet_foundation_dependency_gate.json) |
-| Dark Matter status cell | <code>✅ Solved</code> | <code>Historical claim / ยังไม่ทบทวนข้ออ้างนี้</code> | ไม่ใช้ผล normalized ของสายล่าสุดตัดสิน galaxy claim | §25.2–5 (working-only) / [compatibility decision](docs/core/07_artifacts/gates/uet_foundation_compatibility_decision.json) |
+| Dark Matter status cell | <code>✅ Solved</code> | <code>Historical claim / ยังไม่ทบทวนข้ออ้างนี้</code> | ไม่ใช้ผล normalized ของสายล่าสุดตัดสิน galaxy claim | [§25.2–5](docs/meta/UET_THEORY_ARGUMENT.md#252-คำตอบเรื่อง-สมการหลัก-ต้องแยกสามระดับ) / [compatibility decision](docs/core/07_artifacts/gates/uet_foundation_compatibility_decision.json) |
 | Bridging Theoretical Conflicts table heading | <code>UET Verification</code> | <code>Historical UET interpretation</code> | แยกตารางคำตีความจาก correspondence ที่ผ่านจริง | [claim rubric](docs/topics/For%20Work/04_Claim_and_Evidence_Rubric.md) / [foundation gate](docs/core/07_artifacts/gates/uet_foundation_dependency_gate.json) |
-| The Full Implementation introduction | <code>This is how we actually calculate physics:</code> | <code>Historical functional sketch retained below; current calculations require a declared equation family, full state, kinetics and unit/observable contract:</code> | functional sketch เก่าไม่ครอบ state/kinetics และทุก family; สูตรเดิมไม่ถูกแก้ | §25.2–5 (working-only) / [compatibility decision](docs/core/07_artifacts/gates/uet_foundation_compatibility_decision.json) |
+| The Full Implementation introduction | <code>This is how we actually calculate physics:</code> | <code>Historical functional sketch retained below; current calculations require a declared equation family, full state, kinetics and unit/observable contract:</code> | functional sketch เก่าไม่ครอบ state/kinetics และทุก family; สูตรเดิมไม่ถูกแก้ | [§25.2–5](docs/meta/UET_THEORY_ARGUMENT.md#252-คำตอบเรื่อง-สมการหลัก-ต้องแยกสามระดับ) / [compatibility decision](docs/core/07_artifacts/gates/uet_foundation_compatibility_decision.json) |
 | Test Results grade / note cells | <code>EXCELLENT / Platinum Standard</code> | <code>Historical self-assessment / Not a current evidence grade</code> | เก็บถ้อยคำ self-grade เก่าที่นี่; pass rate ไม่ใช่คะแนนความถูกต้องของทฤษฎี | [claim rubric](docs/topics/For%20Work/04_Claim_and_Evidence_Rubric.md) / [foundation gate](docs/core/07_artifacts/gates/uet_foundation_dependency_gate.json) |
-| Methodology / All Results cell | <code>Reproducible via Python scripts</code> | <code>Reproducibility is scoped by available source/config/verifier identities</code> | local source packet ยังขาด retrospective/สาม source-verifier targets | [ข้อจำกัดหลักฐาน](#research-evidence-boundary) / §25.2–5 (working-only) / [compatibility decision](docs/core/07_artifacts/gates/uet_foundation_compatibility_decision.json) |
-| Key Files / master entry point purpose | <code>🔬 Core UET equation</code> | <code>🔬 Legacy engine entry point; not a universal master law</code> | ชื่อ master ไม่เลือก universal generator; default ยัง legacy_local | §25.2–5 (working-only) / [compatibility decision](docs/core/07_artifacts/gates/uet_foundation_compatibility_decision.json) |
+| Methodology / All Results cell | <code>Reproducible via Python scripts</code> | <code>Reproducibility is scoped by available source/config/verifier identities</code> | local source packet ยังขาด retrospective/สาม source-verifier targets | [ข้อจำกัดหลักฐาน](#research-evidence-boundary) / [§25.2–5](docs/meta/UET_THEORY_ARGUMENT.md#252-คำตอบเรื่อง-สมการหลัก-ต้องแยกสามระดับ) / [compatibility decision](docs/core/07_artifacts/gates/uet_foundation_compatibility_decision.json) |
+| Key Files / master entry point purpose | <code>🔬 Core UET equation</code> | <code>🔬 Legacy engine entry point; not a universal master law</code> | ชื่อ master ไม่เลือก universal generator; default ยัง legacy_local | [§25.2–5](docs/meta/UET_THEORY_ARGUMENT.md#252-คำตอบเรื่อง-สมการหลัก-ต้องแยกสามระดับ) / [compatibility decision](docs/core/07_artifacts/gates/uet_foundation_compatibility_decision.json) |
 | Questions Answered introduction | <code>Physics students and researchers often search for these questions. UET provides Python-verified answers:</code> | <code>Physics students and researchers often search for these questions. The table preserves historical UET proposals, not currently verified answers; each requires its topic-specific evidence and claim review:</code> | คงคำถามและเนื้อหาทุกแถวเป็น historical proposals; ไม่อ้าง Python check เท่ากับ physical proof | [claim rubric](docs/topics/For%20Work/04_Claim_and_Evidence_Rubric.md) / [foundation gate](docs/core/07_artifacts/gates/uet_foundation_dependency_gate.json) |
-| Key Files / canonical implementation path | <code>docs/core/uet&#95;master&#95;equation.py</code> | <code>docs/core/02&#95;equations/matter&#95;space/uet&#95;master&#95;equation.py</code> | อ้าง canonical target ที่มีอยู่ใน public main แทน flat path เก่า; ไม่เปลี่ยน implementation | [canonical implementation](docs/core/02_equations/matter_space/uet_master_equation.py) |
