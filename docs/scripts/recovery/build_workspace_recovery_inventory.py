@@ -111,6 +111,17 @@ def inventory() -> dict:
             classification, disposition = "both_sides_changed", "blocked"
             blocker = "two_sided_source_or_provenance_conflict"
             action = "Compare source, producer and inputs; reconcile without overwriting public evidence."
+        if disposition == "blocked" and main is not None and path.endswith(".json"):
+            try:
+                local_obj, main_obj = json.loads(local), json.loads(main)
+                if isinstance(local_obj, dict) and isinstance(main_obj, dict):
+                    local_obj.pop("generated_at", None)
+                    main_obj.pop("generated_at", None)
+                    if json.dumps(local_obj, sort_keys=True) == json.dumps(main_obj, sort_keys=True):
+                        disposition, blocker = "superseded", None
+                        action = "Use baseline artifact; JSON matches except generated_at."
+            except (TypeError, ValueError, UnicodeDecodeError):
+                pass
         rows.append({
             "checkpoint_path": path, "canonical_path": RELOCATED.get(path, path),
             "source_commit": CHECKPOINT, "source_blob": ids[1], "parent_blob": ids[0],
@@ -118,7 +129,7 @@ def inventory() -> dict:
             "author": original[0],
             "author_date": original[1], "classification": classification,
             "disposition": disposition,
-            "verification": "relocated JSON structurally equal except generated_at" if disposition == "superseded" else "structural comparison only",
+            "verification": "baseline JSON structurally equal except generated_at" if disposition == "superseded" else "structural comparison only",
             "blocker": blocker, "next_action": action,
         })
     return {

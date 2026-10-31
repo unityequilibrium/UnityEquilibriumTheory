@@ -373,10 +373,10 @@
       "author": "santxkoz",
       "author_date": "2026-10-31T17:29:40+07:00",
       "classification": "both_sides_changed",
-      "disposition": "blocked",
-      "verification": "structural comparison only",
-      "blocker": "two_sided_source_or_provenance_conflict",
-      "next_action": "Compare source, producer and inputs; reconcile without overwriting public evidence."
+      "disposition": "superseded",
+      "verification": "baseline JSON structurally equal except generated_at",
+      "blocker": null,
+      "next_action": "Use baseline artifact; JSON matches except generated_at."
     },
     {
       "checkpoint_path": "docs/core/01_contracts/CORE_CURVED_3P1_EVOLUTION_BRANCH_SPEC.md",
@@ -1094,7 +1094,7 @@
       "author_date": "2026-10-31T17:29:40+07:00",
       "classification": "missing_on_main",
       "disposition": "superseded",
-      "verification": "relocated JSON structurally equal except generated_at",
+      "verification": "baseline JSON structurally equal except generated_at",
       "blocker": null,
       "next_action": "Use relocated baseline artifact; JSON matches except generated_at."
     },
@@ -1125,10 +1125,10 @@
       "author": "santxkoz",
       "author_date": "2026-10-31T17:29:40+07:00",
       "classification": "both_sides_changed",
-      "disposition": "blocked",
-      "verification": "structural comparison only",
-      "blocker": "two_sided_source_or_provenance_conflict",
-      "next_action": "Compare source, producer and inputs; reconcile without overwriting public evidence."
+      "disposition": "superseded",
+      "verification": "baseline JSON structurally equal except generated_at",
+      "blocker": null,
+      "next_action": "Use baseline artifact; JSON matches except generated_at."
     },
     {
       "checkpoint_path": "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry_curved_3p1_addendum.json",
@@ -1398,7 +1398,7 @@
       "author_date": "2026-10-31T17:29:40+07:00",
       "classification": "missing_on_main",
       "disposition": "superseded",
-      "verification": "relocated JSON structurally equal except generated_at",
+      "verification": "baseline JSON structurally equal except generated_at",
       "blocker": null,
       "next_action": "Use relocated baseline artifact; JSON matches except generated_at."
     },
@@ -1413,10 +1413,10 @@
       "author": "santxkoz",
       "author_date": "2026-10-31T17:29:40+07:00",
       "classification": "both_sides_changed",
-      "disposition": "blocked",
-      "verification": "structural comparison only",
-      "blocker": "two_sided_source_or_provenance_conflict",
-      "next_action": "Compare source, producer and inputs; reconcile without overwriting public evidence."
+      "disposition": "superseded",
+      "verification": "baseline JSON structurally equal except generated_at",
+      "blocker": null,
+      "next_action": "Use baseline artifact; JSON matches except generated_at."
     },
     {
       "checkpoint_path": "docs/core/07_artifacts/verification/curved_3p1_gh_boundary_characteristic_audit.json",
