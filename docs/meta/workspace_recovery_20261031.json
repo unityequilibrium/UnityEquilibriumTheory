@@ -1093,10 +1093,10 @@
       "author": "santxkoz",
       "author_date": "2026-10-31T17:29:40+07:00",
       "classification": "missing_on_main",
-      "disposition": "blocked",
-      "verification": "structural comparison only",
-      "blocker": "relocated_artifact_content_and_provenance_review",
-      "next_action": "Compare checkpoint content, generator and inputs with the recorded relocated artifact before integration."
+      "disposition": "superseded",
+      "verification": "relocated JSON structurally equal except generated_at",
+      "blocker": null,
+      "next_action": "Use relocated baseline artifact; JSON matches except generated_at."
     },
     {
       "checkpoint_path": "docs/core/07_artifacts/causal_nonclosed_kernel_verification.json",
@@ -1397,10 +1397,10 @@
       "author": "santxkoz",
       "author_date": "2026-10-31T17:29:40+07:00",
       "classification": "missing_on_main",
-      "disposition": "blocked",
-      "verification": "structural comparison only",
-      "blocker": "relocated_artifact_content_and_provenance_review",
-      "next_action": "Compare checkpoint content, generator and inputs with the recorded relocated artifact before integration."
+      "disposition": "superseded",
+      "verification": "relocated JSON structurally equal except generated_at",
+      "blocker": null,
+      "next_action": "Use relocated baseline artifact; JSON matches except generated_at."
     },
     {
       "checkpoint_path": "docs/core/07_artifacts/verification/curved_3p1_adm_constraint_interface_audit.json",

@@ -69,7 +69,9 @@ def inventory() -> dict:
     paths = [p.decode("utf-8") for p in git("diff-tree", "--no-commit-id", "--name-only", "-r", "-z", CHECKPOINT).split(b"\0") if p]
     refs = (CHECKPOINT + "^", CHECKPOINT, BASE)
     trees = [tree(ref) for ref in refs]
-    blobs = read_blobs({t[p] for t in trees for p in paths if p in t})
+    ids = {t[p] for t in trees for p in paths if p in t}
+    ids.update(trees[2][p] for p in RELOCATED.values() if p in trees[2])
+    blobs = read_blobs(ids)
     original = git("show", "-s", "--format=%an%x00%aI", CHECKPOINT).decode("utf-8").strip().split("\0")
     rows = []
     for path in paths:
@@ -85,6 +87,17 @@ def inventory() -> dict:
             if path in RELOCATED:
                 blocker = "relocated_artifact_content_and_provenance_review"
                 action = "Compare checkpoint content, generator and inputs with the recorded relocated artifact before integration."
+                canonical = blobs.get(trees[2].get(RELOCATED[path]))
+                try:
+                    local_obj, canonical_obj = json.loads(local), json.loads(canonical)
+                    if isinstance(local_obj, dict) and isinstance(canonical_obj, dict):
+                        local_obj.pop("generated_at", None)
+                        canonical_obj.pop("generated_at", None)
+                        if json.dumps(local_obj, sort_keys=True) == json.dumps(canonical_obj, sort_keys=True):
+                            disposition, blocker = "superseded", None
+                            action = "Use relocated baseline artifact; JSON matches except generated_at."
+                except (TypeError, ValueError, UnicodeDecodeError):
+                    pass
         elif same(parent, main, path):
             classification, disposition = "main_unchanged", "blocked"
             blocker = "local_delta_and_dependency_review"
@@ -99,7 +112,8 @@ def inventory() -> dict:
             "main_blob": ids[2], "canonical_baseline_blob": trees[2].get(RELOCATED.get(path, path)),
             "author": original[0],
             "author_date": original[1], "classification": classification,
-            "disposition": disposition, "verification": "structural comparison only",
+            "disposition": disposition,
+            "verification": "relocated JSON structurally equal except generated_at" if disposition == "superseded" else "structural comparison only",
             "blocker": blocker, "next_action": action,
         })
     return {

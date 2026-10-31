@@ -25,6 +25,8 @@ class WorkspaceRecoveryTests(unittest.TestCase):
         self.assertEqual(len({x["checkpoint_path"] for x in data["records"]}), 467)
         self.assertTrue(all(x["source_blob"] and x["source_commit"] == audit.CHECKPOINT for x in data["records"]))
         self.assertTrue(all(x["blocker"] and x["next_action"] for x in data["records"] if x["disposition"] == "blocked"))
+        self.assertEqual(sum(x["disposition"] == "superseded" for x in data["records"]), 2)
+        self.assertTrue(all(x["canonical_baseline_blob"] for x in data["records"] if x["disposition"] == "superseded"))
 
     def test_invalid_historical_outputs_round_trip_and_stay_invalid(self):
         audit = load("invalid_historical_json", "docs/scripts/recovery/repair_invalid_historical_json.py")
