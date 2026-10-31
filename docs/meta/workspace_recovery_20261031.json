@@ -1079,8 +1079,8 @@
       "classification": "missing_on_main",
       "disposition": "blocked",
       "verification": "structural comparison only",
-      "blocker": "relocated_artifact_content_and_provenance_review",
-      "next_action": "Compare checkpoint content, generator and inputs with the recorded relocated artifact before integration."
+      "blocker": "relocated_artifact_source_identity_mismatch",
+      "next_action": "Review canonical docs/core/01_contracts/UET_GR_NONCLOSED_RESEARCH_SPEC.md and docs/scripts/audit/audit_uet_gr_causal_nonclosed.py, then regenerate in isolation and verify input hashes and downstream gates."
     },
     {
       "checkpoint_path": "docs/core/07_artifacts/causal_nonclosed_contract.json",
@@ -1111,8 +1111,8 @@
       "classification": "missing_on_main",
       "disposition": "blocked",
       "verification": "structural comparison only",
-      "blocker": "relocated_artifact_content_and_provenance_review",
-      "next_action": "Compare checkpoint content, generator and inputs with the recorded relocated artifact before integration."
+      "blocker": "relocated_artifact_source_identity_mismatch",
+      "next_action": "Review canonical docs/core/01_contracts/UET_GR_NONCLOSED_RESEARCH_SPEC.md and docs/scripts/audit/audit_uet_gr_causal_nonclosed.py, then regenerate in isolation and verify input hashes and downstream gates."
     },
     {
       "checkpoint_path": "docs/core/07_artifacts/correspondence/curved_3p1_adm_constraint_formula_audit.json",

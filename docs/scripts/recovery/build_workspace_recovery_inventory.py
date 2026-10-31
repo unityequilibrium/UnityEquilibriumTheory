@@ -96,6 +96,11 @@ def inventory() -> dict:
                         if json.dumps(local_obj, sort_keys=True) == json.dumps(canonical_obj, sort_keys=True):
                             disposition, blocker = "superseded", None
                             action = "Use relocated baseline artifact; JSON matches except generated_at."
+                        elif local_obj.get("source_hashes") != canonical_obj.get("source_hashes"):
+                            blocker = "relocated_artifact_source_identity_mismatch"
+                            action = ("Review canonical docs/core/01_contracts/UET_GR_NONCLOSED_RESEARCH_SPEC.md "
+                                      "and docs/scripts/audit/audit_uet_gr_causal_nonclosed.py, then regenerate "
+                                      "in isolation and verify input hashes and downstream gates.")
                 except (TypeError, ValueError, UnicodeDecodeError):
                     pass
         elif same(parent, main, path):
