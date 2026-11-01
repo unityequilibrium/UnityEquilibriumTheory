@@ -1,0 +1,23 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "uet-evidence",
+  "version": "0.1.0",
+  "description": "Read-only search and source-verified retrieval for the local UET research repository.",
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "UET Evidence",
+        "shortDescription": "ค้นและเปิดหลักฐาน UET ในเครื่อง",
+        "longDescription": "ค้นดัชนี UET แบบอ่านอย่างเดียว ตรวจแฮชกับไฟล์ต้นฉบับ และเปิดช่วงบรรทัดอ้างอิงได้ ปลั๊กอินไม่เปลี่ยนสถานะวิจัยหรือสร้างข้อสรุปแทนหลักฐาน",
+        "developerName": "UET Research Tools",
+        "category": "Research",
+        "capabilities": ["Read"],
+        "defaultPrompt": [
+          "ค้นหลักฐานใน repository UET เรื่องที่ระบุ แล้วแสดงแหล่งและช่วงบรรทัด",
+          "เปิดช่วงต้นฉบับจาก locator นี้และตรวจแฮชก่อนอ้าง"
+        ]
+      },
+      "onboardingSkill": "./skills/setup/SKILL.md"
+    }
+  }
+}

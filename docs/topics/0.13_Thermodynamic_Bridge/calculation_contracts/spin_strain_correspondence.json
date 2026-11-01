@@ -1,0 +1,332 @@
+{
+  "claim_boundary": "Source-informed FORMAL spin-sector correspondence only. M remains valid under its own energy law; NN is not its exact microscopic rewrite. Phi-dependent eliminated-spin entropy is not total physical Phi entropy, a new information substance, kinetic/heat law, material calibration, UET novelty, learning/lifetime/cosmological proof or physics-gate promotion.",
+  "components": [
+    {
+      "disposition": "MODELED",
+      "evidence": [
+        "docs/meta/UET_SPIN_STRAIN_CORRESPONDENCE_AUDIT.md",
+        "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/Research_T13_Spin_Strain_Correspondence.py",
+        "https://arxiv.org/pdf/2003.12054"
+      ],
+      "group": "system_state",
+      "id": "nn-state",
+      "reason": "Imported NN law with explicit half-spin normalization, finite-ring boundary, micro/coarse partition and retained-spectator accounting."
+    },
+    {
+      "disposition": "MODELED",
+      "evidence": [
+        "docs/meta/UET_SPIN_STRAIN_CORRESPONDENCE_AUDIT.md",
+        "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/Research_T13_Spin_Strain_Correspondence.py"
+      ],
+      "group": "drive_environment",
+      "id": "static-conditioning",
+      "reason": "Conditional canonical equilibrium and fixed-coordinate T derivative, zero field and explicit constitutive source assumptions; no bath dynamics."
+    },
+    {
+      "disposition": "MODELED",
+      "evidence": [
+        "docs/meta/UET_SPIN_STRAIN_CORRESPONDENCE_AUDIT.md",
+        "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/Research_T13_Spin_Strain_Correspondence.py"
+      ],
+      "group": "processing",
+      "id": "conditional-entropy-force",
+      "reason": "Probability, entropy/KL, retained/intrinsic chain, conditional variance, Phi-dependent entropy and Maxwell force identity; spin contribution only."
+    },
+    {
+      "disposition": "UNKNOWN",
+      "evidence": [
+        "docs/meta/UET_SPIN_STRAIN_CORRESPONDENCE_AUDIT.md",
+        "docs/meta/UET_JOINT_STATE_MEASURE_CONSTRUCTION.md"
+      ],
+      "group": "system_state",
+      "id": "full-phi-pi-correspondence",
+      "next_action": "Review one full retained mechanical/lattice energy-state-measure/reference dictionary before any dynamics or material experiment; do not add terms, hidden states or data automatically.",
+      "owner": "theory author with statistical-mechanics and mechanical-mode specialist",
+      "reason": "The physical lattice/phonon potential, reference/zero, mode mass/Pi operator and fixed measure are not obtained from the spin-sector proof. No material/SI acceptance follows."
+    },
+    {
+      "disposition": "NOT_APPLICABLE",
+      "evidence": [
+        "docs/meta/UET_SPIN_STRAIN_CORRESPONDENCE_AUDIT.md"
+      ],
+      "group": "propagation",
+      "id": "signal",
+      "reason": "No spatial signal/detection claim. Ring interaction topology is modeled internally, not a transport-speed model."
+    },
+    {
+      "disposition": "MODELED",
+      "evidence": [
+        "docs/meta/UET_SPIN_STRAIN_CORRESPONDENCE_AUDIT.md",
+        "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/Research_T13_Spin_Strain_Correspondence.py"
+      ],
+      "group": "frame_time",
+      "id": "strain-frame",
+      "reason": "Dimensionless source strain and normalized compression map with sign/unit conventions; total/per-site and conditioned-domain restrictions explicit. No physical clock/momentum calibration."
+    },
+    {
+      "disposition": "NOT_APPLICABLE",
+      "evidence": [
+        "docs/meta/UET_SPIN_STRAIN_CORRESPONDENCE_AUDIT.md"
+      ],
+      "group": "detector",
+      "id": "detector",
+      "reason": "No apparatus/readout calibration or detector-backaction claim; actual receiver effects are outside scope, not zero."
+    },
+    {
+      "disposition": "MODELED",
+      "evidence": [
+        "docs/meta/UET_SPIN_STRAIN_CORRESPONDENCE_AUDIT.md",
+        "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/Research_T13_Spin_Strain_Correspondence.py"
+      ],
+      "group": "numerics",
+      "id": "exact-checks",
+      "reason": "Exact finite enumeration, symbolic derivatives, independent transfer trace and falsifying controls; general probability/Taylor/envelope proofs recorded in report."
+    }
+  ],
+  "contract_id": "T13_SPIN_STRAIN_CORRESPONDENCE_FORMAL_V1",
+  "data_policy": {
+    "calibration_ids": [],
+    "comparison_ids": [],
+    "holdout_policy": "Primary source Hamiltonian/conditions only; no source experimental tables/curves, datasets, fit or holdout. Finite enumeration and symbolic controls are not external physical replication.",
+    "independent_validation": false,
+    "uses_observations": false
+  },
+  "entrypoints": [
+    "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/Research_T13_Spin_Strain_Correspondence.py",
+    "docs/meta/UET_SPIN_STRAIN_CORRESPONDENCE_AUDIT.md"
+  ],
+  "error_budget": {
+    "acceptance": "Declared exact identities pass; fixed-C energy-splitting witness, unequal weights and falsifying convention controls detected; analytic domain/inequality arguments recorded. Difference/equivalence/unresolved outcomes acceptable, no physical promotion.",
+    "approximation": "Actual spin energy envelope delta_k=max|H_NN_spin-H_M_spin| gives |Delta F_spin|<=delta_k. Power-law affine remainder <=J0*nu*(nu+1)*epsilon^2/[8*(1-rho_epsilon)^(nu+2)] is a coefficient-energy bound only. Do not add it again if delta already includes exact/affine difference. Old M finite-N/quartic value bounds apply only after their own scale/domain map; no force/trajectory error inferred.",
+    "dependence": "Spin/strain dependence retained through conditional weights; no missing-covariance independence assumption. Error terms combine conservatively without duplicate inclusion.",
+    "measurement": "NOT_APPLICABLE: no measured data.",
+    "numerical": "Exact SymPy/integer/rational operations; no Monte Carlo, quadrature, fitted numerical tolerance or sweep.",
+    "omission_limit": null,
+    "omissions": "Full phonon/material dynamics, bath and detector omitted from claim, not bounded as negligible physical effects. Hret is a chosen common spectator, not proof those sectors have zero entropy.",
+    "systematic": "Physical lattice entropy, coefficient T laws, mechanical reference/inertia and real source/readout mapping UNKNOWN; formal source agreement is not material validation.",
+    "unit": "energy (J_0/E_star scales); k_B entropy; exact residuals"
+  },
+  "evidence": [
+    "docs/meta/UET_SPIN_STRAIN_CORRESPONDENCE_AUDIT.md",
+    "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/Research_T13_Spin_Strain_Correspondence.py",
+    "docs/meta/UET_JOINT_STATE_MEASURE_CONSTRUCTION.md",
+    "docs/meta/UET_THEORY_ARGUMENT.md",
+    "docs/meta/UET_THERMODYNAMIC_FOUNDATIONS_REVIEW.md",
+    "docs/topics/0.13_Thermodynamic_Bridge/calculation_contracts/joint_state_measure_construction.json",
+    "docs/topics/0.13_Thermodynamic_Bridge/calculation_contracts/joint_thermodynamic_completion.json",
+    "https://arxiv.org/pdf/2003.12054"
+  ],
+  "identities": [
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/meta/UET_SPIN_STRAIN_CORRESPONDENCE_AUDIT.md",
+      "role": "evidence",
+      "sha256": "21e73506d528b616fb8cd13750facd14a2d33a9886d5aadd0927c580c4aed736"
+    },
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/Research_T13_Spin_Strain_Correspondence.py",
+      "role": "code",
+      "sha256": "8d249e67e124c99b10dec41e3fd4da36ab4ef31d3c68802b1af2f2052412d9aa"
+    },
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/test_t13_spin_strain_correspondence.py",
+      "role": "code",
+      "sha256": "83798d99657805df89a8aa7072296e1576525c2bb0dd1f3b1ff2a2f115b120b7"
+    },
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/meta/UET_JOINT_STATE_MEASURE_CONSTRUCTION.md",
+      "role": "evidence",
+      "sha256": "f212977ad144349816c8952e3ad75261df9fea05c61dbf3dcc8048cf4913ba0d"
+    },
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/calculation_contracts/joint_state_measure_construction.json",
+      "role": "evidence",
+      "sha256": "966683ce539ee9e090a72300c0a3e7f42bbfa01a795bfbe444de621579ac5eb3"
+    },
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/t13_joint_state_measure_construction.json",
+      "role": "evidence",
+      "sha256": "2a31fb6f9d32abf94942b52bd9b43e5a68decb7a3ebb45d2f062722906e2cdff"
+    },
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/Research_T13_Joint_State_Measure_Construction.py",
+      "role": "evidence",
+      "sha256": "67f3895fa13aa1847f04c736012369addb225d3d6ec7405ef38e49079065f50d"
+    },
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/meta/UET_THEORY_ARGUMENT.md",
+      "role": "evidence",
+      "sha256": "d590b084fa85ed1e3133364a8b889b79ad5c3a901e3a8044ed4e00ae3d763d4a"
+    },
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/meta/UET_THERMODYNAMIC_FOUNDATIONS_REVIEW.md",
+      "role": "evidence",
+      "sha256": "c1cf629e5093d741a409d6c645fcd04f9b35bb64f1d29b7627f3e6736f6f5f69"
+    },
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/core/01_contracts/MATTER_SPACE_RESEARCH_SPEC.md",
+      "role": "input",
+      "sha256": "d178f1978c93a09350a4da6ea11153a93fbfb13ad12c9d390846f741ad5db848"
+    },
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/meta/schemas/calculation_contract_v1.schema.json",
+      "role": "config",
+      "sha256": "ec556052d755908a2ec7b3ec10b411839f4f0bee549fd902fb1f915f8475ebc3"
+    },
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/scripts/audit/audit_calculation_completeness.py",
+      "role": "code",
+      "sha256": "b406d31add9834d2cd1d9f3bb8d42724d26c390413710419313dd85cba7121ca"
+    },
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/calculation_contracts/joint_thermodynamic_completion.json",
+      "role": "evidence",
+      "sha256": "0a60129b9a303ad4fc1b3fbb6a06b6deec05ae45d78029cc0fce180fc60e7171"
+    }
+  ],
+  "model": {
+    "approximation": "Finite restricted sums and thermodynamic identities exact for this control. NN versus M squared-sum is DIFFERENT, not a coordinate rewrite. Candidate coordination-z=2 mean-field map j0=J0/(2*E_star), gamma_M=J0*nu*epsilon_star/(2*E_star) uses affine strain Taylor only. No automatic equality with source thermodynamic-limit/free-magnetization potential, all-R quartic or full lattice free energy.",
+    "assumptions": "Import NN half-spin Hamiltonian and distance exchange from Balcerzak et al. arXiv:2003.12054 rendered v2, II.A Eqs1-4. Normalize Jcal=Jpaper/4 and use a finite periodic ring with each bond once. Candidate epsilon=-epsilon_star*Phi; common Hret is the old M retained spectator only, not derived source lattice energy. Conditional canonical weights at fixed k are generally nonuniform. J_0,nu and normalization fixed under T derivative; actual material laws may differ.",
+    "drive_environment": "Static T family with zero magnetic field; no source-work protocol, heat trajectory, bath noise/rates, detector or fast-relaxation proof. Source compressive-force convention/Legendre potential and phonon free energy are audited, not simulated or added to M.",
+    "formula_ids": [
+      "docs/meta/UET_SPIN_STRAIN_CORRESPONDENCE_AUDIT.md#spin-strain-model",
+      "docs/meta/UET_SPIN_STRAIN_CORRESPONDENCE_AUDIT.md#restricted-spin-dictionary",
+      "docs/meta/UET_SPIN_STRAIN_CORRESPONDENCE_AUDIT.md#phi-entropy-force",
+      "docs/meta/UET_SPIN_STRAIN_CORRESPONDENCE_AUDIT.md#comparison-bounds"
+    ],
+    "initial_boundary": "Periodic finite ring N>=4 with no self/repeated bonds. Retained Phi/P are conditioned, not integrated into a new global stationary distribution; no initial-value problem. General entropy-chain statements require normalized retained densities/finite integrals and the stated conditional canonical law. Fixed-coefficient high/low T limits are model limits, not material protocols.",
+    "parameters": "No calibration, fitting or observational values. All parameters symbolic with stated domains. Source nu is exchange exponent, distinct from N and phonon Gruneisen gamma; gamma_M is a normalized candidate affine coupling. One exact rational unit control J=3/2,Jaff=5/4 tests energy envelopes, not a sweep/physical constant. N=4 central class is the minimal witness; N=6 adds regression only. Old M scales, kinetic storage and proof bounds reused within their scope, not independently rederived as physical values."
+  },
+  "next_action": "Round N ends with the scoped bridge verdict. One next prerequisite is a full physical retained mechanical/lattice state-energy-measure/reference dictionary; independent review not sent. No automatic new topology/term/sector, experiment, kinetics, data acquisition or publication.",
+  "observation": {
+    "backaction": "No detector is modeled. Phi/spin coupling is in one energy and conditional mean force; readout changes do not add source backaction. Real detector perturbations are unassessed outside scope.",
+    "carrier": "NOT_APPLICABLE: fixed-state FORMAL static comparator has no signal carrier.",
+    "corrections": [],
+    "frame": "Fixed normalized reference; epsilon is source dimensionless strain and J_0 an energy parameter, not an admitted SI sample normalization.",
+    "generated_trace": "No sigma/R dissipation trace, entropy-production dynamics or complete-information identification is produced.",
+    "observer_state": "NOT_APPLICABLE: no receiver apparatus or measurement claim.",
+    "product_level": "FORMAL source-informed finite comparator audit, not raw observations/full-paper reproduction.",
+    "readout": "Signed C or magnitude view, with global-flip equality and explicit folded conditional partition. Physical magnetization/strain observation is a candidate dictionary only; no operator calibration or full observability asserted.",
+    "source_state": "Independent microscopic s_i and retained Phi/P; k,m,C,B,Pi are projections/statistics, not new independent states.",
+    "system_partition": {
+      "accounting_component_id": "nn-state",
+      "boundary": "Finite source-inspired spin interaction with retained Phi/P fixed during conditioning. Hidden configurations are weighted within fixed-k classes. Full physical lattice/bath/detector and mechanical-mode map remain outside this partial calculation, not zero effects.",
+      "couplings": [
+        {
+          "component_id": "nn-state",
+          "id": "strain-to-spin",
+          "kind": "INTERNAL",
+          "map": "Jcal(epsilon=-epsilon_star*Phi) changes weights of the same configurations; no spin-flip law.",
+          "source": "response",
+          "target": "spins"
+        },
+        {
+          "component_id": "conditional-entropy-force",
+          "id": "spin-to-strain",
+          "kind": "INTERNAL",
+          "map": "Conditional force contribution Jcal_prime*<B> from the same F; not an additional interaction term or mechanical dynamics.",
+          "source": "spins",
+          "target": "response"
+        }
+      ],
+      "no_detector_reason": "No physical measurement or detector response needed for restricted canonical identities.",
+      "observables": [],
+      "role_mode": "RELATIONAL",
+      "systems": [
+        {
+          "id": "spins",
+          "state": "s_1,...,s_N",
+          "state_accounting": {
+            "kind": "INDEPENDENT",
+            "owner_ids": [],
+            "rule": "Own N binary microscopic coordinates. k,C and bond statistic B are derived; arrangements not new independent copies.",
+            "state_ids": [
+              "nref.spin_configuration"
+            ]
+          }
+        },
+        {
+          "id": "response",
+          "state": "Phi,P",
+          "state_accounting": {
+            "kind": "INDEPENDENT",
+            "owner_ids": [],
+            "rule": "Retained M spectator coordinates; common Hret counted once and not asserted to be source physical lattice energy. Pi is a coordinate convention, not a new state.",
+            "state_ids": [
+              "nref.Phi",
+              "nref.P"
+            ]
+          }
+        },
+        {
+          "id": "coarse-view",
+          "state": "k,C,B and signed/magnitude labels",
+          "state_accounting": {
+            "kind": "VIEW",
+            "owner_ids": [
+              "spins"
+            ],
+            "rule": "Alternative classifications/statistics of the same spin configurations; no additive energy or state is created by coarse labeling.",
+            "state_ids": []
+          }
+        },
+        {
+          "id": "joint",
+          "state": "Aggregate s,Phi,P",
+          "state_accounting": {
+            "kind": "AGGREGATE",
+            "owner_ids": [
+              "spins",
+              "response"
+            ],
+            "rule": "Hret-Jcal*B includes interaction once. Conditional entropy is a functional of weighted hidden configurations, not another substance.",
+            "state_ids": []
+          }
+        }
+      ]
+    },
+    "time_convention": "No trajectory or time variable. Existing Pi/P convention retained only as spectator; source static EOS does not derive physical mechanical inertia or rates.",
+    "trace_scope": "conditional_static_thermodynamic_functionals",
+    "trace_used_as_complete_state": false
+  },
+  "output": {
+    "accuracy": "Exact finite sums/symbolic residuals and explicit general analytic arguments. Energy envelope |Delta F_spin|<=delta_k in total energy, plus separate exchange Taylor bound and conditionally reused M value bounds. No fitted tolerance, random sample, force bound from value error or physical uncertainty acceptance.",
+    "claim_intent": "FORMAL_RESULT",
+    "domain": "Static periodic nearest-neighbor ring, integer N>=4, k=0..N, normalized s_i=2*S_i=+/-1. Zero external field; source J_0,nu,T,k_B,epsilon_star>0; strain epsilon=-epsilon_star*Phi with 1+epsilon>0. Exact algebra regression N=4,6. Fixed retained k,Phi,P and T-independent parameters/measure. Taylor comparison only |epsilon|<=rho_epsilon<1. No actual material data, full lattice/Pi realization, dynamics or thermodynamic-limit phase claim.",
+    "quantity": "Conditional fixed-k F/U/S, entropy/KL and fluctuation/force identities, a same-C energy-splitting witness and bounded value correspondence or counterexamples to M/Omega.",
+    "unit": "energy (J_0/E_star scales); k_B entropy; exact residuals"
+  },
+  "profile": "FORMAL",
+  "question": "When does M's uniform fixed-C counting survive a nearest-neighbor spin-strain Hamiltonian, how does the existing coupling produce Phi-dependent intrinsic entropy and force, and what exact/approximate/physical correspondence survives?",
+  "review": {
+    "rationale": "Restricted finite-ring thermodynamics and its comparison verdict are completed under explicit source/normalization/ensemble assumptions. Exact tests cover source half-spin factors, enumerated nonuniform configurations, conditional probability/entropy/KL and moments, generic and direct source-Q derivatives, variance/Maxwell relations, mean-field convention, value envelopes and signed folding. General finite-sum/Taylor/envelope arguments are analytic dependencies, not sample-inferred physical support. Full physical Phi/Pi/lattice/measure correspondence and independent specialist review remain unavailable; old M/R controllers and gates are not promoted.",
+    "reviewer": "agent:spin-strain-correspondence (construction and adversarial self-review; not independent specialist)",
+    "status": "INCOMPLETE"
+  },
+  "schema_version": "uet-calculation-contract-v1"
+}

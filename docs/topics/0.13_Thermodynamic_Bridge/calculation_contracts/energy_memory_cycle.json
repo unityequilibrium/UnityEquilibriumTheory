@@ -1,0 +1,718 @@
+{
+  "claim_boundary": "FORMAL finite-preparation counterexample to this first-mode state map only: an actual baseline projected triple can coexist with retained higher mechanical state and a certified nonzero endpoint/released initial-slope output. Not rejection of all reductions or causality, not same-write candidate endpoint equality, not a finite read-waveform or physical detector/controller certificate, and not new UET mechanics, learning, global openness, physical Phi or thermal Phi_E. Earlier steady narrow-band positive result remains separately scoped; no physics-gate promotion. Section 25 adds formal/source relationships only: no universal generator, I=Phi=entropy identity, whole-registry validation, standard-theory nesting or new physical-law claim. Section 26 rejects only sufficiency of energy descent plus retained feedback to select kinetics in this existing family. It preserves legitimate independent calibration for an effective model and all earlier conditional results. The causal reconciliation is source/evidence synthesis, not a new front-speed theorem or numerical repair. Section 27 is a separately declared finite-window conditional extension; no physical bandwidth, detector admission, new UET-specific law or universal history reduction follows. The section 27 predeclared finite-window FORMAL test passed; its positive pointwise and boxcar margins are not physical detectability, lifetime, total accuracy or UET-specific novelty. Magnitude-only readout distinguishes written from unwritten, not the two signs.",
+  "components": [
+    {
+      "disposition": "MODELED",
+      "evidence": [
+        "docs/meta/UET_THEORY_ARGUMENT.md",
+        "docs/core/02_equations/matter_space/uet_matter_space.py"
+      ],
+      "group": "system_state",
+      "id": "candidate-state",
+      "reason": "Earlier normalized C/Phi/Pi and retained feedback remain unchanged. The declared section 22 continuum reference has state p,u,u_t; matched-source/endpoint readout cannot reduce exactly to the first mechanical coordinate for the full response class. This is a comparator admission result, not new UET dynamics. Section 24 explicitly demonstrates failure of the first-mode read-state projection for one reachable smooth preparation class while retaining complete-state causality. Section 28 accounts for the joint source state once and a separately owned conditional receiver state; it does not assign physical energy to the receiver. Section 29 adds a disjoint prospective mechanical q,v and charge Q realization with joint storage once; alternative realizations are not one physical compound system."
+    },
+    {
+      "disposition": "MODELED",
+      "evidence": [
+        "docs/meta/UET_THEORY_ARGUMENT.md",
+        "docs/core/01_contracts/MATTER_SPACE_RESEARCH_SPEC.md"
+      ],
+      "group": "drive_environment",
+      "id": "write-drives",
+      "reason": "Existing normalized write controls reused. Section 22 explicitly declares conjugate electrical f_P and endpoint F_b ports; all mechanical modes receive the loaded boundary and reciprocal coupling. Formal port/input-power closure is not apparatus calibration. Section 24 supplies a smooth finite-energy two-pulse boundary source and prescribed nominal p clamp through the controlled wait; both inputs release at read. Port work does not measure total hardware cost."
+    },
+    {
+      "disposition": "MODELED",
+      "evidence": [
+        "docs/meta/UET_THEORY_ARGUMENT.md"
+      ],
+      "group": "propagation",
+      "id": "spatial-transport",
+      "reason": "Earlier homogeneous proofs keep zero gradients. Section 22 additionally models longitudinal elastic transport, clamp/load boundaries and modal source projection in a declared reference continuum. No physical UET finite-cone, real carrier or material admission follows. Section 26's new calculation is homogeneous only. Existing spatial causal artifacts are compared at source level; the changing-C high-k diagnostic and decoupled Phi pulse do not decide each other's scope."
+    },
+    {
+      "disposition": "MODELED",
+      "evidence": [
+        "docs/meta/UET_THEORY_ARGUMENT.md"
+      ],
+      "group": "frame_time",
+      "id": "time-frame",
+      "reason": "Earlier normalized time is retained; the rod reference has explicitly declared SI-unit time and rest-frame coordinates without experimental clock/frame calibration. Zero-initial harmonic transfers and ideal broadband steps are distinct protocols. Section 24 fixes write timing, controlled wait and release instant; there is no guaranteed finite read waveform or physical clock precision."
+    },
+    {
+      "disposition": "NOT_APPLICABLE",
+      "evidence": [
+        "docs/meta/UET_THEORY_ARGUMENT.md"
+      ],
+      "group": "detector",
+      "id": "no-physical-detector",
+      "reason": "Formal state-response output only, not physical observation; no invented detector to fill a form. This NOT_APPLICABLE disposition concerns earlier no-hardware FORMAL proofs, not section 28's conditional receiver map or actual apparatus admission."
+    },
+    {
+      "disposition": "MODELED",
+      "evidence": [
+        "docs/meta/UET_THEORY_ARGUMENT.md",
+        "docs/core/02_equations/matter_space/uet_trace.py"
+      ],
+      "group": "processing",
+      "id": "derived-trace",
+      "reason": "Identical sigma histories through the same fixed deterministic trace map; no trace-to-state feedback."
+    },
+    {
+      "disposition": "MODELED",
+      "evidence": [
+        "docs/meta/UET_THEORY_ARGUMENT.md",
+        "docs/core/02_equations/matter_space/uet_matter_space.py",
+        "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/Research_Energy_Memory_Retention.py",
+        "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/test_energy_memory_retention.py"
+      ],
+      "group": "numerics",
+      "id": "formal-controls",
+      "reason": "Nine exact structural/dual checks support section 24. The first helper failed a matrix-versus-scalar zero comparison; checking individual matrix entries repaired only the helper. A 60-digit closed modal sum was checked by mpmath 1.3.0 interval evaluation at 35 digits plus an analytic omitted tail <4.3e-6<1e-5; mode 0 is exactly zero from its shaper identity. No numerical integration, sample, fit, added candidate mode or old scientific rerun. Supporting section 25 uses SymPy 1.14.0 for eight exact derivative/coupling/map/static-series/invariance/rewrite groups and reads the parameter AST default without importing or running the engine. No previous numerical witness or comparator verifier rerun. Section 26 declares a new exact symbolic check of energy/kinetic non-selection using the existing vector field, and reads the pulse-producer AST to bind g=0 and C=0. No saved numerical scientific verifier is rerun. Section 27 declares a new output, the same-preparation retained-energy upper enclosure, with N=16 and an analytic tail. It reuses the prior endpoint lower bound rather than rerunning that verifier, and derives a coupled finite-window energy certificate without integrating a read trajectory. Eight symbolic/35-digit interval groups passed. The partial-plus-tail expression supplies an upper bound, while the nonnegative partial sum supplies a lower bound; no omitted tail is counted as measured energy."
+    },
+    {
+      "disposition": "UNKNOWN",
+      "evidence": [
+        "docs/meta/UET_THEORY_ARGUMENT.md"
+      ],
+      "group": "system_state",
+      "id": "physical-correspondence",
+      "next_action": "Section 27 finite-window card is closed for the unchanged known preparation and h=1/10000. Reuse it; do not rescan pulses, waits, N or h merely to grow evidence. Physical admission remains open: a same-regime source/clock/measurement model, independent coefficient policy and joint preparation/source/model/readout bounds must resolve actual detectability. Before any experiment select one system and observable/claim; no material substitution or data hunt is automatic. Signed and magnitude alternatives remain explicitly deferred by the author. The full changing-C/causal parent gates and global cosmology bridge remain open; no automatic code repair, external contact, push or merge.",
+      "owner": "Core/Topic13 physical correspondence reviewers",
+      "reason": "A reachable normalized smooth preparation now demonstrates that higher-mode retained state changes the release readout while the first-mode projected state matches baseline. It is a FORMAL projection/correspondence result, not physical Phi or measured memory/learning. Actual source timing/shaping/clamp performance, initial-state energy, nonlinear/material effects, detector bandwidth/loading/noise and slope estimation remain UNKNOWN. Conditional initial-energy and prior steady extra-error budgets are not evidence that hardware meets them. The cross-form audit supplies no physical identification of legacy I with Phi, a universal master equation or microscopic origin of the selected functional/kinetic coefficients."
+    },
+    {
+      "disposition": "MODELED",
+      "evidence": [
+        "docs/meta/UET_THEORY_ARGUMENT.md"
+      ],
+      "group": "detector",
+      "id": "receiver-reference",
+      "reason": "Conditional first-order receiver and mean/baseline processing, explicitly mathematical not calibrated hardware. Nontrivial initial state can mimic source memory."
+    },
+    {
+      "disposition": "UNKNOWN",
+      "evidence": [
+        "docs/meta/UET_THEORY_ARGUMENT.md"
+      ],
+      "group": "detector",
+      "id": "actual-receiver-calibration",
+      "next_action": "Identify one apparatus and independent transfer/reset/record uncertainty calibration before physical scoring.",
+      "owner": "physical-test-design",
+      "reason": "No actual positive kernel/gain/bandwidth, reset, offset or noise packet is supplied."
+    },
+    {
+      "disposition": "UNKNOWN",
+      "evidence": [
+        "docs/meta/UET_THEORY_ARGUMENT.md"
+      ],
+      "group": "detector",
+      "id": "physical-detector-backaction",
+      "next_action": "Declare carrier/circuit/mechanical connections and model or bound source changes jointly before physical acceptance.",
+      "owner": "physical-test-design",
+      "reason": "No bound on direct or mediated source loading from an actual sensor is supplied."
+    },
+    {
+      "disposition": "UNKNOWN",
+      "evidence": [
+        "docs/meta/UET_THEORY_ARGUMENT.md"
+      ],
+      "group": "drive_environment",
+      "id": "receiver-energy-ledger",
+      "next_action": "State the actual receiver energy/bath/source boundary and account for exchanged power if a physical test is selected.",
+      "owner": "physical-test-design",
+      "reason": "The conditional input-output filter does not specify physical detector work, storage, heat or entropy."
+    },
+    {
+      "disposition": "UNKNOWN",
+      "evidence": [
+        "docs/meta/UET_THEORY_ARGUMENT.md"
+      ],
+      "group": "propagation",
+      "id": "actual-signal-carrier",
+      "next_action": "Specify actual transducer/transport path, delay, spatial weighting and upstream corrections before observation comparison.",
+      "owner": "physical-test-design",
+      "reason": "An effective displacement input is not an identified optical/electrical/mechanical transport path."
+    },
+    {
+      "disposition": "MODELED",
+      "evidence": [
+        "docs/meta/UET_THEORY_ARGUMENT.md"
+      ],
+      "group": "system_state",
+      "id": "prospective-reciprocal-reference",
+      "reason": "FORMAL proposed reciprocal energy/equations, units, stiffness conventions and two-mode state/control identities. No actual material identification, simulator implementation or physical validity is claimed."
+    },
+    {
+      "disposition": "UNKNOWN",
+      "evidence": [
+        "docs/meta/UET_THEORY_ARGUMENT.md"
+      ],
+      "group": "system_state",
+      "id": "prospective-source-admission",
+      "next_action": "Review one apparatus; execute independent Stage C only with new authorization; reject admission if joint source/tail/safety bounds cannot be established.",
+      "owner": "prospective-physical-test reviewer",
+      "reason": "Proposed beam/patch geometry and linearity/multimode/parameter/source/error packet are not measured or admitted."
+    },
+    {
+      "disposition": "UNKNOWN",
+      "evidence": [
+        "docs/meta/UET_THEORY_ARGUMENT.md"
+      ],
+      "group": "detector",
+      "id": "prospective-observation-admission",
+      "next_action": "Populate Stage C and L with independent source/receiver/calibration identities and propagate joint errors before fresh V; do not infer no backaction or full observability.",
+      "owner": "prospective-physical-test metrology reviewer",
+      "reason": "No actual receiver transfer/reset/state-estimator/calibrated loading/record uncertainty or joint prediction sets."
+    },
+    {
+      "disposition": "UNKNOWN",
+      "evidence": [
+        "docs/meta/UET_THEORY_ARGUMENT.md"
+      ],
+      "group": "numerics",
+      "id": "prospective-protocol-numerics",
+      "next_action": "Implement and verify locked analysis only after one independently identified physical packet is authorized; enforce rank/limits and disjoint prediction sets, or stop.",
+      "owner": "prospective-physical-test analysis reviewer",
+      "reason": "Exact structural checks do not implement or certify a Gramian, interval prediction or physical scoring script for an actual beam."
+    }
+  ],
+  "contract_id": "T13_ENERGY_MEMORY_CYCLE_FORMAL_V1",
+  "data_policy": {
+    "calibration_ids": [],
+    "comparison_ids": [],
+    "holdout_policy": "No observed data, dataset, holdout, fitted parameter, physical label or random sample. The smooth two-pulse method card was locked before the new calculations and is transparently designed from the known damped fundamental, not blind preregistration. Closed modal expressions, interval arithmetic and analytic tail bounds create no physical measurement data. The earlier steady harmonic result is reused without rerunning its verifier. Neither physical source tracking nor initial preparation accuracy has been measured. Section 29 prospective C calibration and L lock precede fresh V records. No response figures become blind retrospectively. Calibration/identification may fit C only; prediction/model/state estimator and trial/invalid-run policy freeze before V. No experiment/data/contact/purchase is authorized by this plan.",
+    "independent_validation": false,
+    "uses_observations": false
+  },
+  "entrypoints": [
+    "docs/meta/UET_THEORY_ARGUMENT.md",
+    "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/Research_Energy_Memory_Retention.py",
+    "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/test_energy_memory_retention.py"
+  ],
+  "error_budget": {
+    "acceptance": "Section 24 closes one FORMAL witness: finite-energy reachable preparation, exact projected-state cancellation and nonzero whole-reference release readout including the omitted tail. First-mode prepared-state sufficiency for this class is rejected; complete-state causality and the prior steady positive certificate are preserved. This does not promote learning, physical acceptance, total SI accuracy, universal information/space/Phi identity, UET-specific novelty or parent gates. Stop pulse/time scans and further scope at the ten-entry checkpoint. Section 26 closes only if the common-state/energy/energy-rate and different response derivatives are verified for the two fixed positive mobilities, a common clock rescaling cannot remove the difference, and causal-record scopes are read correctly. No physical gate or all-family closure follows. Section 27 requires retained energy/epsilon^2<=1/1000, energy tail<=1e-8, exact joint-energy/trace reasoning and averaged margin>2177e-6/2 at the unchanged h=1/10000. Failure/inconclusive does not permit shortening h or changing pulse/mode count to claim this predeclared target passed. Section 28 closes only upon verifying scale invariants, source margin rescaling, exact receiver convolution, receiver-only-memory counterexample and the declared sufficient bandwidth condition. Failure cannot be hidden by changing the read window or fitting a sample. Section 29 completion is a reviewable prospective protocol with exact energy/stiffness/units/sign/projection/control-target/decision identities checked. It is not a completed numerical lock, physical PASS or guaranteed feasible apparatus; actual observation handling requires a PHYSICAL_COMPARISON contract and new authorization. Joint-set intersections classify full-compatible/reduced-rejected, the reverse, neither (packet/model failure), or both (inconclusive). Consistency is not proof. All 30 record uncertainties and shared calibration/baseline dependence must be covered by the frozen policy.",
+    "approximation": "Coarse single-pair affinity closure assumes complete effective free energy, fixed bath and prescribed Phi; it is not exact finite-N edge balance. Local equilibrium moment limit is not full stochastic/measurement closure. Finite-N binomial counting applies only when declared microscopic energy depends on count alone; spatial arrangements need a constrained sum. Previous quartic/mean-field and coordinate limits remain. Joint section 18 identities close only the normalized candidate functional; subsystem eta allocation is conventional and the force interpretation is conditional. A full internal-energy or stochastic-thermal model is not inferred. Source temperature conventions and decay/bare-rate clock factors are kept explicit rather than silently repaired. State-dependent local force and capped-MC comparisons retain declared domains. Channel-cut predictions depend on independently controllable channels and unchanged energy/bath/remaining rates. Section 20's homogeneous deterministic, fixed-coefficient, right-step and same-state baseline assumptions are explicit. Scalar occupation closure rejection does not rule out restricted/slaved/noisy models with different assumptions. Partial C-curvature is not a full joint-stability test. Section 21's single-mode, overdamped scalar, quartic free-energy and fixed-coefficient assumptions are not source-verified for a sample. Missing mode/field/thermal corrections are UNKNOWN, not bounded omissions. Static compliance identities hold locally at the identical stable state; Laplace reciprocity uses conjugate ports and zero initial perturbations. Section 22 specifies a separate linear rod reference, uniform scalar polarization, mass drag and zero initial perturbations. All-frequency first-mode closure is rejected. Static compliance missing fraction is 1-8/pi^2, not a fitted tolerance. B_N(Omega) bounds absolute mechanical compliance only; p error also needs |D_N|>G^2*B_N and input amplitudes. Initial higher-mode energy, nonlinear/spatial-polarization terms and physical detector/source errors need separate bounds. Ideal right-step limits are not bandlimited protocols or real infinite-band predictions. Protocol-specific raw first-mode relative complex error is bounded by 18511/2066610<0.009 for both outputs under endpoint forcing only. The 0.01 target is a new method budget. All-frequency/DC closure failures and excluded input/history classes remain. Full nonlinear/spatial-polarization validity and actual physical error sources are still not bounded by this modal certificate. Section 24's smooth pulse gives B_n=O(omega_n^-5),q_n=O(omega_n^-6),q_n_dot=O(omega_n^-5), hence finite storage energy. The controlled-preparation endpoint-tail bound is not a guarantee for the subsequently coupled read evolution. The first-mode state map omits retained modes even at identical projected state; no uniform finite read-window or arbitrary-history reduction follows. Same prescribed-input initial error is bounded by dual stiffness and joint dissipative energy, not assumed independent noise. Section 25's static local reductions omit gradients by declared homogeneous scope and do not claim full dynamic, adiabatic, spatial or physical equivalence. The Phi series is local near C=0 for a_Phi>0; extrapolating a negative truncated quartic to global instability is excluded. Registry/family counts describe source metadata only; most addendum proofs were not re-audited. Section 28 exact scaling only covers the declared scalar linear reference. Real parameter deviations, nonuniform polarization, elastic dispersion and boundary differences need output-unit bounds. A first-order positive receiver is an explicit conditional operator, not a universal detector model. Section 29 is a proposed two-mode control/reference with explicit multimode/tail and linear/electrical validity admission. Finite frequency samples or convergence in N are not by themselves an infinite-tail bound; compact pulses are not exactly bandlimited.",
+    "dependence": "Paired +/-epsilon writes share coefficients and shaping and give opposite full retained states with equal projected read states and equal quadratic storage/dissipation/port work by linear/quadratic structure, not independent samples. Initial-error energy bounds require identical prescribed histories; a feedback controller that changes with actual state requires a new error equation.",
+    "measurement": "No actual source timing/pulse amplitude/damping calibration, clamp tracking, finite-band endpoint sensor, derivative estimator, clock, gain, loading, noise or covariance is measured. The prescribed full-reference feed-forward is a method input, not hardware admission. Nominal cancellation and nonzero read margin alone do not certify experimental detectability. Section 28 retains unknown initial receiver contrast Delta_z0, transfer/gain/kernel and loading. Positive record contrast requires B_D*abs(Delta_z0)+B_other<g_D*M_x*A_D. All errors/baselines share record units and are combined jointly or conservatively. Section 29 requires same-apparatus independent calibration C, numerical lock L, then fresh V. Full/reference/reduced prediction sets and a joint observation bound in common record units must satisfy the declared >4*B_obs engineering guard before scoring; no measured bound exists now.",
+    "numerical": "Section 24 uses nine exact structural/dual-stiffness checks, a 60-digit closed-form partial-sum consistency calculation and mpmath 1.3.0 interval arithmetic at 35 digits for n=1..15 with exact n=0 cancellation. The interval finite sum is enclosed with a separate analytic infinite-tail bound <4.3e-6, below the predeclared 1e-5 method budget. Interval software remains experimental and internally checked, not independently verified. No time integrator, stochastic simulation or old research rerun. Section 26 uses exact local symbolic expressions only; ten symbolic/AST/saved-scope groups passed, with no integrated trajectory. Existing causal numeric records are not rerun. Section 27 evaluated a 35-digit mpmath 1.3.0 interval sum of prepared-state energy for n=1..15, exact mode-0 cancellation and a rational conservative n>=16 tail. Eight symbolic/interval groups passed; E_0/epsilon^2<115e-6. Acceptance, window and N were declared before evaluation and not retuned. Section 28 uses exact SymPy 1.14.0 expressions and the elementary positive exponential inequality for the sufficient receiver condition, with no sampled hardware values. Section 29 structural checks use exact SymPy 1.14.0 matrix/scalar identities and SI exponent algebra. Conditional control identities do not establish apparatus controllability, rank under uncertainty or numerical solver accuracy. Set-rule unit cases are not physical or stochastic simulations.",
+    "omission_limit": null,
+    "omissions": "For the declared compact smooth preparation only, analytic tail and interval evaluation bound all omitted mechanical contributions to x at release. Unknown initial joint energy would contribute |delta x|<=sqrt(42*E_init) and |delta p_dot|<=sqrt((21/10)*E_init) under matched prescribed sources; E_init<(677047/6000000000000)*epsilon^2 suffices for the stated sign margin if sources are exact and no other errors exist. Actual source/control/initial/material/detector effects have no established combined bound. No claim of a full finite read waveform, physical retention precision or bounded unknown hardware effects. Section 27's finite-window omission allocation is energy_tail/epsilon^2<=1e-8. Actual hardware/source/model errors remain UNKNOWN. Matched-input initial state error contributes at most sqrt(42*E_init) to the averaged endpoint; do not assume independent error components or a noise-free measured baseline.",
+    "systematic": "A narrow-band steady approximation can pass while a finite preparation exposes lost state. Do not transfer the section 23 1% result to section 24, use a relative error with a zero candidate denominator, confuse actual projected-state restart with same-input write reproduction, or call controlled waiting autonomous. f_P*p_dot=0 does not make controller energy free. Unknown effects are not zero. Do not mistake a change of M_C for identical fully specified dynamics, infer a universal information definition from a normalized witness, attribute a g=0 pulse tail to changing C, or equate unbounded group velocity with a completed nonlinear front-support proof. Section 29 no automatic replacement of invalid blocks, no optional stopping or re-tuning using future readout, and no sqrt(N) precision gain without a supported dependence model. SC/OC and loading boundaries are recorded. Future full-standard-model agreement cannot distinguish a UET label.",
+    "unit": "normalized endpoint x/epsilon, released p_dot/epsilon, time and quadratic availability/epsilon^2 in the declared FORMAL method control; the underlying polarization/displacement/force/time declarations retain section 22 units. No physical SI scale, sensor precision or total experimental error is admitted Section 27 adds endpoint boxcar y_h/epsilon and E_0/epsilon^2 in the same normalized reference; no SI detector precision or bandwidth is admitted. Section 28 preserves dimensional source displacement and arbitrary calibrated record units symbolically; no SI value is supplied. Section 29 formal source energy/power units are J/W with q in m, charge Q in coulombs, capacitance C_p in farads, voltage V_d and force F. Prospective statistics remain in independently calibrated detector record units; no numerical physical precision is admitted."
+  },
+  "evidence": [
+    "docs/meta/UET_THEORY_ARGUMENT.md",
+    "docs/core/01_contracts/MATTER_SPACE_RESEARCH_SPEC.md",
+    "docs/topics/0.11_Phase_Transitions/MATTER_SPACE_PHASE_PILOT_SPEC.md",
+    "docs/data/external/condensed_matter/phase_transitions/structure_factor_sources/longo_2021_cahn_hilliard_structure_factor/2110.00093.src",
+    "docs/core/03_lanes/thermal/uet_material_interface_factor_resolution.py",
+    "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/Research_T13_PhiE_Lane_Composition_Boundary.py",
+    "docs/core/02_equations/matter_space/uet_master_equation.py",
+    "docs/core/01_contracts/units/uet_parameters.py",
+    "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry.json",
+    "docs/core/07_artifacts/archive/uet_core_equation_family_contract.json",
+    "docs/core/07_artifacts/gates/uet_foundation_compatibility_decision.json",
+    "docs/core/08_history/research_notes/UET_FOUNDATION_COMPATIBILITY_AUDIT.md",
+    "docs/core/01_contracts/UET_CORE_EQUATION_FAMILY_CONTRACT.md",
+    "docs/core/02_equations/covariant/uet_covariant_parent.py",
+    "docs/scripts/audit/audit_matter_space_core.py",
+    "docs/core/07_artifacts/verification/matter_space_variational_verification.json",
+    "docs/core/07_artifacts/archive/matter_space_causal_discretization_diagnostic.json",
+    "docs/core/07_artifacts/verification/matter_space_causal_reference_verification.json",
+    "docs/core/07_artifacts/archive/matter_space_causal_cone_compatibility.json",
+    "docs/scripts/audit/audit_matter_space_causal_cone_compatibility.py",
+    "docs/core/07_artifacts/verification/matter_space_flux_phi_coupled_verification.json",
+    "https://arxiv.org/html/1205.4176",
+    "https://arxiv.org/pdf/1307.7886v1",
+    "https://arxiv.org/pdf/1607.05686",
+    "https://ntrs.nasa.gov/citations/19910051612",
+    "https://onlinelibrary.wiley.com/doi/10.1002/nme.2632",
+    "https://orbit.dtu.dk/en/publications/sensorless-calibration-of-piezoelectric-shunts-using-capacitance-"
+  ],
+  "identities": [
+    {
+      "kind": "working_file",
+      "path": "docs/meta/UET_THEORY_ARGUMENT.md",
+      "role": "evidence",
+      "sha256": "d590b084fa85ed1e3133364a8b889b79ad5c3a901e3a8044ed4e00ae3d763d4a"
+    },
+    {
+      "kind": "working_file",
+      "path": "docs/core/01_contracts/MATTER_SPACE_RESEARCH_SPEC.md",
+      "role": "evidence",
+      "sha256": "d178f1978c93a09350a4da6ea11153a93fbfb13ad12c9d390846f741ad5db848"
+    },
+    {
+      "kind": "working_file",
+      "path": "docs/core/02_equations/matter_space/uet_matter_space.py",
+      "role": "code",
+      "sha256": "488db6aa26b99856e2eb82a2f46a9857f623f418ef8e537498fa71d5e4f633aa"
+    },
+    {
+      "kind": "working_file",
+      "path": "docs/core/02_equations/matter_space/uet_spatial.py",
+      "role": "code",
+      "sha256": "2b7f93cbadeb0e7641a366fd88e18894013cacb3f41b832266e549e2a3221378"
+    },
+    {
+      "kind": "working_file",
+      "path": "docs/core/02_equations/matter_space/uet_trace.py",
+      "role": "code",
+      "sha256": "1ec92af5edba09f1a4352661c5489b371f89dcf72c223c2843ce694ee75f78fb"
+    },
+    {
+      "kind": "working_file",
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/T13_ACTION_DISCRIMINATION_2026-10-18.md",
+      "role": "evidence",
+      "sha256": "3f1638627b31ca7f4f3c61ce75a3b07ed3a530d1e951be2a348ec595544adb18"
+    },
+    {
+      "kind": "working_file",
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/Research_Energy_Memory_Retention.py",
+      "role": "code",
+      "sha256": "14db515ddb6889198d0f06505e3f4efe35b7cc50ded69c333cce44bd38ab2fc5"
+    },
+    {
+      "kind": "working_file",
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/test_energy_memory_retention.py",
+      "role": "code",
+      "sha256": "b2a941abe2701802091b09fff4c48ff12f01762967b7d0de2a91b1e56234cc45"
+    },
+    {
+      "kind": "working_file",
+      "path": "docs/core/01_contracts/UET_MAIN_THEORY_AXIOMS_SPEC.md",
+      "role": "evidence",
+      "sha256": "162b33c97ada9a89a5bd9b363bea0f536dab04f52f0d95967a7b3f36cf746355"
+    },
+    {
+      "kind": "working_file",
+      "path": "docs/core/02_equations/covariant/uet_covariant_matter.py",
+      "role": "code",
+      "sha256": "8a57d95e898a8ac962bbd749670ad0695b597281937da36496d2ec7e074f9c53"
+    },
+    {
+      "kind": "working_file",
+      "path": "docs/core/02_equations/lorentz_noether/uet_noether_phase_field_map.py",
+      "role": "code",
+      "sha256": "e992834d7d3ca90476202d849551ab16d1aba4bb1156b0519b3cd79e2566f9e8"
+    },
+    {
+      "kind": "working_file",
+      "path": "docs/core/01_contracts/O2_SUPERFLUID_EOS_TRANSPORT_SPEC.md",
+      "role": "evidence",
+      "sha256": "3210f45543dd90b42ef5593b6693a2348819b363a98cce3c66411378f0d6474d"
+    },
+    {
+      "kind": "working_file",
+      "path": "docs/core/01_contracts/UET_GR_NONCLOSED_RESEARCH_SPEC.md",
+      "role": "evidence",
+      "sha256": "a52cbdb0cb9dd2f65be4813fd7b57da9a995f4ab9039d4631f95928f0997a8bf"
+    },
+    {
+      "kind": "working_file",
+      "path": "docs/core/02_equations/o2/uet_o2_finite_density_eos.py",
+      "role": "code",
+      "sha256": "ea744a8645f993600300fa9fd99a764e1f07b30fb272b47399c34aa114152c6d"
+    },
+    {
+      "commit": "3739667ed25e3d90fc145cdce8018e1bd5ee23c7",
+      "kind": "git_blob",
+      "path": "docs/core/07_artifacts/verification/o2_finite_density_eos_verification.json",
+      "role": "evidence",
+      "sha256": "179d20100131a2567dd749801f9bcf0f3f938df6cfc01bc559a94ca658396dc5"
+    },
+    {
+      "commit": "3739667ed25e3d90fc145cdce8018e1bd5ee23c7",
+      "kind": "git_blob",
+      "path": "docs/core/07_artifacts/gates/noether_phase_field_dependency_gate.json",
+      "role": "evidence",
+      "sha256": "df676eb6cbfc5fd1113f442a3eeb75a02aed5a58458508db7624099adc1ee7c3"
+    },
+    {
+      "kind": "working_file",
+      "path": "docs/topics/0.11_Phase_Transitions/MATTER_SPACE_PHASE_PILOT_SPEC.md",
+      "role": "evidence",
+      "sha256": "ef17ea59e177d1ce98c8238feb578b53cb5c6c0d9feded5d6fa9033ac7dc9aaa"
+    },
+    {
+      "kind": "working_file",
+      "path": "docs/topics/0.11_Phase_Transitions/Data/03_Research/matter_space_phase_coupling.json",
+      "role": "evidence",
+      "sha256": "0d71745205648228e7f5d3b2f1372a36f37ccb4f4f719e2c2c8a976e9d6d97cf"
+    },
+    {
+      "kind": "working_file",
+      "path": "docs/topics/0.11_Phase_Transitions/Data/03_Research/matter_space_coupled_preregistration.json",
+      "role": "evidence",
+      "sha256": "85c459cf8580ee9d60ea962c118c1b52a612c9bb0200954767108cf3d36bae78"
+    },
+    {
+      "kind": "working_file",
+      "path": "docs/topics/0.11_Phase_Transitions/Code/03_Research/Research_Matter_Space_Phase_Coupling.py",
+      "role": "code",
+      "sha256": "9742d42f669077059377efd0e40e73b4cfcc9f9f16adaba81d961bb7d4ce349c"
+    },
+    {
+      "commit": "98892552fcafe32652ac1899ab3fe1f61e530e92",
+      "kind": "git_blob",
+      "path": "docs/topics/0.11_Phase_Transitions/Result/artifacts/0_11_matter_space_phase_coupling_diagnostic.json",
+      "role": "evidence",
+      "sha256": "415f315904117e8a864f4365b4483e58513422df441ab5fe5c753b94bcc51e5b"
+    },
+    {
+      "kind": "working_file",
+      "path": "docs/topics/0.11_Phase_Transitions/Result/artifacts/0_11_structure_factor_ch_finite_k_field_normalization_decision_gate.json",
+      "role": "evidence",
+      "sha256": "ef0c72496f2d7c8998489bf2e2e220f106b000dae363020fc4163455032d1de2"
+    },
+    {
+      "kind": "working_file",
+      "path": "docs/topics/0.11_Phase_Transitions/Result/artifacts/0_11_structure_factor_ch_finite_k_next_path_decision_gate.json",
+      "role": "evidence",
+      "sha256": "0d9b26badcb0852f85123189d425d83af2c9332577450a20296e01a312c03295"
+    },
+    {
+      "kind": "working_file",
+      "path": "docs/topics/0.11_Phase_Transitions/Data/03_Research/structure_factor_tex_formula_fragments.json",
+      "role": "evidence",
+      "sha256": "3116544f576f138dd23eb8d5c1a4ad8c96ae02cb5f60833d7626bfa8f7bf2094"
+    },
+    {
+      "kind": "working_file",
+      "path": "docs/data/external/condensed_matter/phase_transitions/structure_factor_sources/longo_2021_cahn_hilliard_structure_factor/2110.00093.src",
+      "role": "evidence",
+      "sha256": "0df7684f26deabcf71233be1b9d667c66f0f86bc48ab8294dd05de6ee348bc8c"
+    },
+    {
+      "kind": "working_file",
+      "path": "docs/core/03_lanes/thermal/uet_material_interface_factor_resolution.py",
+      "role": "evidence",
+      "sha256": "7ebcbed3f6c2056a06e393afd9cba2c81614237bf924da0dc4f54b42ee9b3ce1"
+    },
+    {
+      "kind": "working_file",
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/Research_T13_PhiE_Lane_Composition_Boundary.py",
+      "role": "evidence",
+      "sha256": "55ab362fc725b6940d6015389e7354461f892b6e436bcff4b49ee11972a13f68"
+    },
+    {
+      "kind": "working_file",
+      "path": "docs/core/02_equations/matter_space/uet_master_equation.py",
+      "role": "evidence",
+      "sha256": "4b8525d37f258352acca7c2cbc471e3f52384df599a45369fcc3f9231a91bd73"
+    },
+    {
+      "kind": "working_file",
+      "path": "docs/core/01_contracts/units/uet_parameters.py",
+      "role": "evidence",
+      "sha256": "6fd9a6fb99f0e62beec0f326d7931b50d147aa789201c641dec0430abb7342e7"
+    },
+    {
+      "kind": "working_file",
+      "path": "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry.json",
+      "role": "evidence",
+      "sha256": "089d918231c4255069b1f528ce5e7409856ed306a3c727bc36e8154868707a30"
+    },
+    {
+      "kind": "working_file",
+      "path": "docs/core/07_artifacts/archive/uet_core_equation_family_contract.json",
+      "role": "evidence",
+      "sha256": "97c8897e7da65b52ee112292d6e9defbe2b7302ab86f4853322c4c906a45f1ce"
+    },
+    {
+      "kind": "working_file",
+      "path": "docs/core/07_artifacts/gates/uet_foundation_compatibility_decision.json",
+      "role": "evidence",
+      "sha256": "bf0c9bb0e81361f1fb4c0cfb17d617c23d2fe5044bb4d762ddafec0a2c61e238"
+    },
+    {
+      "kind": "working_file",
+      "path": "docs/core/08_history/research_notes/UET_FOUNDATION_COMPATIBILITY_AUDIT.md",
+      "role": "evidence",
+      "sha256": "6346ab385da2dc64e395eaf87c9b75f085873627489b07f046c09c1a9420844c"
+    },
+    {
+      "kind": "working_file",
+      "path": "docs/core/01_contracts/UET_CORE_EQUATION_FAMILY_CONTRACT.md",
+      "role": "evidence",
+      "sha256": "0130717534f1c2d501a5390de5d3528a56e371853f9edc1e615f49bd91b60326"
+    },
+    {
+      "kind": "working_file",
+      "path": "docs/core/02_equations/covariant/uet_covariant_parent.py",
+      "role": "evidence",
+      "sha256": "9e17a88ef90313e689ee573d563bb893f7f6f297744506d1434617bc885c684d"
+    },
+    {
+      "kind": "working_file",
+      "path": "docs/scripts/audit/audit_matter_space_core.py",
+      "role": "code",
+      "sha256": "1f1af236be8cd2d9bf8002affb2f782a3d4ead0442f657f491f9be9d9f39b06a"
+    },
+    {
+      "commit": "3739667ed25e3d90fc145cdce8018e1bd5ee23c7",
+      "kind": "git_blob",
+      "path": "docs/core/07_artifacts/verification/matter_space_variational_verification.json",
+      "role": "evidence",
+      "sha256": "f34f6d8d9ffe33dd2d4769b0ae2e5611e445b39acdbf77c93ffe8c7e5ff2aee1"
+    },
+    {
+      "kind": "working_file",
+      "path": "docs/core/07_artifacts/archive/matter_space_causal_discretization_diagnostic.json",
+      "role": "evidence",
+      "sha256": "7f6f9287ccc1090a7939a37efeebcdae08f417d82ec98d36216dd0b335848aa0"
+    },
+    {
+      "commit": "fe9afba3e8d9bef69bfb763cdc929f32c86ca320",
+      "kind": "git_blob",
+      "path": "docs/core/07_artifacts/verification/matter_space_causal_reference_verification.json",
+      "role": "evidence",
+      "sha256": "948e830678d5b0cc5e09c3e45b96a515f81dcb12b0a748f36740d22c68671b0a"
+    },
+    {
+      "kind": "working_file",
+      "path": "docs/core/07_artifacts/archive/matter_space_causal_cone_compatibility.json",
+      "role": "evidence",
+      "sha256": "fb822fa325b748e9ae976a3649891ae886daf5874416efbf68869be8e8552b47"
+    },
+    {
+      "kind": "working_file",
+      "path": "docs/scripts/audit/audit_matter_space_causal_cone_compatibility.py",
+      "role": "code",
+      "sha256": "623d0ecc7a5e0152be778598db23752a2a870464ccf19a50ff0baa47eb72d1f9"
+    },
+    {
+      "kind": "working_file",
+      "path": "docs/core/07_artifacts/verification/matter_space_flux_phi_coupled_verification.json",
+      "role": "evidence",
+      "sha256": "5a2ce3e2021d70dccc200bc6d990c2a1487783e3cc6eb4193065b79f182609e1"
+    }
+  ],
+  "identity_refresh_note": "2026-10-24: report navigation and append-only section 30 start a separate joint-thermal FORMAL path with its own contract. Refreshing this report identity preserves sections 1-29 and does not extend this cycle contract to certify the new stochastic reference or rerun old scientific evidence.",
+  "model": {
+    "approximation": "Section 17's coarse affinity A=ln(f_+/f_-)=-2*s*mu_C/theta is an additional single-pair/complete-free-energy closure. It is not exact finite-N adjacent-edge local detailed balance, nor complete physical heat/bath closure. The finite-N Gibbs-compatible edge family is a separate formal comparator and does not guarantee the old drift at every count or endpoint. Force and injection ledger splits are algebraic alternatives, not identified physical sources. Prior entropy/quartic, coordinate, population and source-operator limitations remain. Section 18's homogeneous sector/total identities and polynomial write integrals are exact within that restriction, not a spatial-boundary or microscopic thermal closure. Inclusive external potential -f_C(t)*C-f_Phi(t)*Phi is restricted to prescribed state-independent forces. Work net of recovery is not gross supply or apparatus consumption. If Omega is already a free energy, its decay is not physical heat by itself. Section 19's conditional local restoring-potential rewrite is homogeneous; transferring it to the full diffusion/reaction operator introduces an extra spatial term. No general nonlocal representation claim follows. The capped-Metropolis calculation is a separate assumed reading, not source-code reproduction. The two-channel reference is standard thermodynamics, not a derived physical completion of C/Phi/Pi or an equation added to UET. Section 20 compares the actual local quadratic modulation -g*C^2*Phi/2 with a declared state-independent linear bias -h_C*C, not an identified chemical mechanism. Mean-field j(Phi) correspondence is reused from section 14 with its old approximation/domain limits. Third-order local Taylor behavior is not a global response theorem, physical bandwidth claim or a noise-free apparatus assumption. Section 21 primary models have different dynamics and boundaries; they are not silently assembled into an exact source-derived model. Higher polarization/strain terms, depolarization/electrostatics, noise, spatial/multiple modes and finite bandwidth need independent omission bounds. Uniform scalar polarization times longitudinal strain integrates to a boundary term: periodic or fixed-end displacements give zero overlap. A nonzero witness is not controlled single-mode closure. Quasistatic elimination discards the independent initial-state memory and is not the full prepared class. First-mode raw endpoint closure is rejected for all-frequency/same-port response: the continuum has infinitely many modes, all with nonzero overlap. Unrenormalized H_1(0)/H(0)=8/pi^2. Approximation needs the analytic tail B_N, a positive feedback-denominator margin, an admitted finite-band protocol and independent initial-mode-tail bounds. A physical single-mode spatial detector would not remove unobserved modes from polarization feedback. The quadratic rod reference does not derive the full quartic Phi model. Finite mode sums satisfy loaded traction weakly, not pointwise by differentiating at the end. The same first-mode model is adequate for the section 23 steady endpoint-force band by a uniform rational bound, despite failing the earlier all-frequency/static closure. The result is input/readout/band-specific and does not extend to f_P-only/arbitrary mixtures, broadband steps, finite settling or retained preparations. No additional mode/background term or coefficient renormalization is introduced. Rational pi guards support an analytic inequality; sampled points are not the proof. The kinetic witness is not a microscopic derivation, stability of every trajectory or a new UET mechanism. Positive energy descent does not choose M_C. The failed prearrival waveform is a g=0,C=0 Phi pulse; the separate changing-C Cattaneo high-k diagnostic is reused within its saved scope, not promoted from group velocity to a nonlinear front-speed theorem. The h=1/10000 boxcar mathematical readout is not a physically bandlimited detector, finite sampling guarantee or calibrated time unit. The section 27 certificate concerns this window/preparation only and cannot promote all-history first-mode closure, source cost or a material claim.",
+    "assumptions": "Positive mobilities, tau, quartics and gradient coefficients; allowed a_C<0 with c^2=-a_C/b_C. Shared coefficients and initial state, different prescribed write controls, identical zero read drives. Finite write duration T_write, smooth write path, continuous state and one-sided post-cutoff derivatives. No independent information-energy identity. Retention proof fixes the named unit-coefficient fixture; zero-drive wait and J_C=0, with C sign admissible. Persistent-basin reading requires signed C to be an admissible distinguishable coordinate. No dynamical noise is added to the old evolution and no all-parameter retention law is assumed. Section 14's conditional sampling law is a separate output assumption, not a microscopic bath/noise closure. Section 17 additionally tests a complete isothermal effective free-energy interpretation of Omega with symbolic E_* and theta=k_B*T/E_*. Entropy already integrated in Omega must not be counted again. Prescribed fixed Phi is not an invariant unforced state of the original coupled model; its controller/bath is outside this C-sector consistency test. Section 18 differentiates the full homogeneous nonconserved C/Phi/Pi functional at fixed coefficients. V_int is an interaction contribution, not another independent state. A constant eta in [0,1] is only a subsystem-accounting convention. J_C/M_C and J_Phi/M_Phi are conditional generalized-force identifications; effective inertia tau/M_Phi is not an admitted material mass. Complete physical controller/bath storage and heat are not supplied by algebraic closure. Section 19 uses a source-defined mixing free-energy functional; this does not identify the entire UET Omega or author-intended information with that entropy. K_decay has inverse-time units while parent K_eq is a dimensionless equilibrium ratio. Declared symmetric per-state rates k give m_dot=-2*k*m, so K_decay=2*k in the same clock. The source-work comparator uses fixed T, two microstates without intrinsic entropy and two explicitly labeled channels obeying signed local detailed balance. Channel cuts keep energy levels, bath and the other channel unchanged; actual apparatus admission is absent. Section 20 keeps the full formal state X=(C,Phi,Pi). Retained history can reside in C, Phi or Pi depending on protocol, not a single universal information variable. Scalar reduction is tested only with a well-posed occupation law and identical future input/generator. Reflection/input claims use J_C=0; a direct C-drive comparison is a separate symmetry-breaking protocol. Section 21's physical dictionary is a conditional comparator interpretation, not a universal C=polarization or Phi=strain identity. It assumes one compatible mechanical mode, scalar overdamped polarization, constant positive damping/inertia, a common finite-mode free-energy functional and conjugate force ports. Reference scales P_0,x_0,t_0,E_0 are symbolic. Same-state response comparison uses zero initial perturbations around stationary baseline forces. Section 22 selects a local quadratic reference, not the full nonlinear polynomial: p is a uniform polarization increment and u(X,t) is a longitudinal displacement increment about one stationary state. The left end is clamped; the right end is loaded by external F_b plus reciprocal G*p. E_2 contains coupling -G*p*u(L) once. Phenomenological body drag rho*gamma_b*u_t is declared, not sourced as a material result. Zero-initial-state transfer and K_P>G^2*L/(A_perp*Y) are required in their scopes. Section 23 fixes one normalized method protocol: steady harmonic F_b only, f_P=0, frequency ratio [99/100,101/100] around omega_0=pi/2; both p/F_b and x/F_b readouts. Gamma_P=1 is a new declared method-control value, not a fitted or experimentally supported parameter. Other reference controls and first-mode coefficients are unchanged. The method target is 1% relative complex error per channel, not an existing physics gate. Section 24's linear compact smooth two-pulse control cancels drive-induced mode 0 from declared rest, not all unknown initial states. Higher-mode finite-energy storage can remain with the same projected triple. Full-state sufficiency is not contradicted. The one-mode comparison restarts at the actual projected read state; it is not a claim of matched write-trajectory reproduction. The prescribed p clamp is maintained during wait and released at read. Endpoint/right-initial-slope discrimination is not a bound for an entire coupled read waveform. Under matched prescribed input histories, joint error availability is dissipative; a state-dependent controller needs a newly derived error system. Positive section 23 steady approximation and section 24 prepared-history failure cover different classes. Section 25 compares homogeneous normalized C/I and C/Phi polynomial sectors. Quadratic static I elimination assumes kappa_I>0; the actual quartic Phi stationary Taylor expansion assumes a_Phi>0,b_Phi>0 near C=0. It does not set b_Phi=0 in v1, cover a_Phi=0 or discard independent initial-state memory. The obstruction concerns constant I=r*Phi with C fixed and beta*g*r nonzero, not all nonlinear/history coordinate transformations. First/second-order rewriting keeps both Phi and Pi initial data; tau_Phi=0 alone is not algebraic stationary slaving. Conserved and nonconserved C operators remain distinct. Section 26 keeps the same polynomial vector field and full initial state while testing two positive choices of existing M_C. All other coefficients, input policy, clock and readout are fixed; homogeneous gradients vanish without setting the positive gradient coefficients to zero. Polynomial local well-posedness supports the Taylor witness only near the read origin. No global nonlinear existence or all-parameter memory theorem is asserted. Section 27 uses the same stable linear reference with p(t_r)=0. The jointly coupled release energy is nonincreasing. Displacement is H1 in space, velocity L2, and the declared finite-energy weak/classical solution has the usual continuous energy trace. The endpoint continuity bound uses displacement differences and Cauchy-Schwarz, not a nonexistent L2-to-pointwise velocity estimate. Positive and negative writes are related by linear reflection. Section 28: positive scales, scalar linear reference and calibrated positive-gain first-order receiver are explicit conditional assumptions. One-way filtering is a mathematical reference definition only; actual backaction and receiver thermodynamics remain UNKNOWN. Section 29 declares a proposed reciprocal linear small-deflection source with M,K_sc positive definite, D positive semidefinite, C_p,R positive; ideal equipotential/quasistatic electrical port and no unmodeled significant lead/dielectric effects are conditional. Prospective full/reference residuals, actual circuit/source/loading and observation operator require independent admission before experiments. Section 29 energy identity is a deterministic noiseless reference. Thermal resistor/mechanical/source fluctuations are not all detector noise and need separately justified propagation/coverage; no pathwise thermodynamic identity or entropy is inferred.",
+    "drive_environment": "Existing additive drives J_C=M_C*mu_C and J_Phi=tau*Phi_ddot+Phi_dot+M_Phi*mu_Phi realize the write path. They are manufactured normalized controls, not fitted physical sources. Dissipation recipients are not microscopically modeled. Retention waits 0,5,20,80 are frozen, then J_Phi=0.001 for 1 normalized time unit with J_C=0. Each probe-on run has its own zero-drive continuation from the same state to subtract spontaneous drift. No uncontrolled source fitting. Section 14 keeps T_bath fixed; comparator bias h maps to J_C=M_C*h/s_C only for the declared constant-mobility gradient comparison, not globally for the alternative heat-bath drift. Section 16 source K is a distinct forceful-interconversion term in the referenced theory, not an admitted J_C calibration or implemented added operator. Section 17 passive closure does not admit the old manufactured J_C silently: an active drive may need changed affinity/work or extra channels. Treating J_C/M_C as a generalized force gives a different work/dissipation split from the old source-injection interpretation; neither is selected as physical here. Section 18 closes joint generalized-force work only conditionally: P_force=(J_C/M_C)*C_dot+(J_Phi/M_Phi)*Pi and D_force=C_dot^2/M_C+Pi^2/M_Phi. The old P_old/D_old pair remains unchanged. Their C-sector differences agree algebraically but do not select one physical mechanism; do not mix the pairs. Controller input, recovery, storage, heat and possible chemical/material channels remain unknown. The old trace remains defined from old sigma, not relabeled heat. Section 19 distinguishes the source MC energy allowance from an admitted work-per-event operator. For J_C=-K*C the conditional conjugate force is state dependent; its potential is K*C^2/(2*M_C), not -f(C)*C. The toy chemical channel has explicitly signed work and fixed ideal chemostats; their hardware/regeneration costs are outside its convention. Actual source/controller channels remain UNKNOWN. Section 20 adds only analytic derivatives of the existing source operators. A J_Phi step epsilon at fixed initial state has Delta C_dot=Delta C_second=0 and Delta C_third=M_C*g*C(0)*epsilon/tau. A direct J_C step j has Delta C_dot=j. Actual source-channel labels from section 19 are not automatically identified with C and Phi subsystem coordinates or their input ports. Section 21's conditional force map retains section 18's force-work/dissipation convention, not the old injection split as measured physical work. Electrical force f_P and mechanical f_x require independent field/circuit and traction-to-mode projection. Raw command is not force at the state; detector loading and damping recipients remain unknown. Endpoint F_b and generalized f_P are independent formal ports. The shared boundary traction drives every q_n with endpoint sign (-1)^n; p receives their sum. The boundary G*p term is internal reciprocal interaction, not external input power. Source isolation, electric circuit and detector loading remain unknown. A broadband endpoint-force step is not the direct one-mode J_Phi step used earlier. The locked section 23 drive is a small endpoint-force sinusoid in the declared band with electrical drive zero. Actual command-to-force calibration and detector loading remain outside the method control. Changing which port is driven changes the relative-error expression; reciprocity does not transfer the accuracy certificate to every input. Section 24 declares smooth finite-duration endpoint pulse shaping and manufactured feed-forward f_P(t)=-G*x_write(t) as prescribed reference inputs, not observed/feedback-controlled apparatus. After T_s+1, F_b=0 but f_P generally remains nonzero during the one-unit controlled wait. Both inputs are zero after t_r. Nominal f_P*p_dot=0 is port bookkeeping, not zero controller/circuit cost. Source work, elastic/inertial storage and drag dissipation remain separated. Section 29 proposes fixed T_w=4*T_2 and h=T_2/4, with T_2=2*pi/omega_2 from calibration. Two physical input ports F,V_d use an envelope-weighted controllability construction and both are set to calibrated zero during read, without topology changes. No pulse scanning, experiment or control implementation is performed.",
+    "formula_ids": [
+      "uet.matter_space.omega",
+      "uet.matter_space.physical_dynamics",
+      "uet.matter_space.energy_ledger",
+      "uet.trace.derived_observable",
+      "uet.o2.finite_density_eos",
+      "uet.noether_mapping.affine_phase_coordinate",
+      "uet.noether_mapping.o2_polar_current",
+      "uet.legacy.master_functional",
+      "reference.prospective_piezo_rc.linear_energy_balance",
+      "reference.prospective_piezo_rc.weighted_gramian_preparation"
+    ],
+    "initial_boundary": "Uniform (c,0,0) at -T on periodic length L; Phi_q=q*v*T*s^2*(s-1), Pi_q=Phi_q_dot, C_q=c, s=(t+T)/T. At 0: (c,0,+/-v); after 0 drives zero for both. For retention wait start original endpoints (1,0,+/-1). Separately, stable-basin alternatives (+/-sqrt(1+r),r,0) use r^3+r/2-1/2=0 and a declared smooth manufactured write from the shared ideal saddle state; these are distinct protocols, not pooled experimental inputs. Section 16 is a local reaction-correspondence/moment construction, not a new integrated trajectory or claimed experimental preparation. Section 18 uses the same paired section 10 write path; no newly integrated trajectory. A separate instantaneous normalized control at (C,Phi,Pi)=(3/2,2,1) with old unit coefficients and no drives exposes interaction storage while both uncoupled contributions increase. It is not asserted to be an experimentally prepared state. Section 19's separate two-state reference is evaluated at stationary p=2/3. Ideal channel removal supplies initial derivatives only, without integrating a new trajectory or asserting that a physical switch leaves all other parameters fixed. Section 20 probes each complete prepared state with matched on/off continuations at t=0 and a right-constant source step. The hidden-state counterexample and +/-C preparation are old results, not new integrated or laboratory trajectories. Phi/Pi are not dropped when a scalar occupation value is equal. Section 21 defines no new integrated preparation/sample. The boundary witnesses w=sin(2*pi*X/L) and w=sin(pi*X/(2*L)) give overlaps zero and one for a uniform-polarization longitudinal rod. Prototype periodic C/Phi boundaries do not establish physical displacement or variable-cell-strain boundaries. Static free/clamped responses are constrained variations about the identical state, not different equilibria. Section 22: incremental u(0,t)=0 and A_perp*Y*u_X(L,t)=F_b+G*p. Mathematical initial perturbations p,u,u_t are zero for transfer and response-jet comparisons. Unloaded fixed-free basis w_n=sin((2*n+1)*pi*X/(2*L)) is projected with weak-form boundary forcing; no new experimental preparation is claimed. Nonzero unprepared higher modes lie outside the zero-initial transfer bound. Section 23 invokes mathematical steady harmonic response or the corresponding zero-initial transfer functions, not a finite-time laboratory settling certificate. Initial higher-mode/preparation effects are outside this card. The off-band F_b-driven DC evaluation uses the same transfer formula, distinct from the older electrical-drive static control. Section 24 starts p=u=u_t=0 as increments about the same stationary reference. The boundary pulse is C^3 at its finite support edges. With beta_n=sqrt(omega_n^2-a^2), beta_0*T_s=2*pi gives q_0=q_0_dot=0 after write. At t_r=T_s+2, actual projected p,q_0,q_0_dot all vanish while the full higher-mode state need not. Initial-error energy E_init is treated by a conditional same-input bound, not presumed physically zero or experimentally prepared. Section 29 targets rest -> +/- (q1=0,q2=delta,v1=v2=Q=0) or zero with fixed apparatus connections. Source and receiver resets/state bounds are separately required; actual projected states are measured with uncertainty before read, never fit from future reserved outputs.",
+    "parameters": "Old L=T_write=v=c=1, a_C=-1, b_C=a_Phi=b_Phi=M_C=M_Phi=tau=g=1, four uniform cells dx=1/4 and section 11 wait/probe/tolerances remain frozen. Section 14 method control s_C=2, theta=48,j0=52,gamma=4 is reused, not rescored or physical calibration. New ell>0 and q_ref>0 are symbolic coordinate/reference conventions, not fitted physical knobs; they become independent correspondence requirements when linked to actual units/readout. New force-closure example fixes a_C=-1,b_C=g=M_C=1,J_C=0 at (C,Phi,Pi)=(+/-1,0,1), not an integrated or experimentally prepared trajectory. Section 15 p is an output/ensemble-coordinate candidate, not the earlier write-label prior; n_s is a symbolic sample count distinct from N. E_*, T_bath, microscopic identity, response/kinetic clock and physical detector remain unadmitted. Section 16 introduces only symbolic s/lambda_F/L for coordinate-generator-reaction matching and fixed N, interior p, net flux v and free activity a>|v| for a local moment example; no values are fitted or new UET degrees of freedom implemented. lambda_F is not the trace-kernel lambda. New section 17 symbols: E_*>0, theta=k_B*T/E_*>0, x=s*mu_C/theta, a_0=M_C*theta/(2*s^2), and positive finite-edge prefactors nu_edge. All are declared symbolic controls/interpretations, not fitted material constants or added UET parameters. One forced sign counterexample fixes mu_C=M_C=s=theta=1 and J_C=2. F_n and N-site counting measure are comparator declarations; no finite-chain simulation or counts measured. Section 18 introduces only bookkeeping eta and the derived ports f_C=J_C/M_C, f_Phi=J_Phi/M_Phi; no new UET parameter/state. The instantaneous control fixes (3/2,2,1), and the unit write evaluation preserves L=T=v=c=M_C=M_Phi=tau=g=1. Conditional force net work is 19/30, old work 9/14, difference 1/105 in normalized units. Finite-T path amplitudes are not physical source calibration or an admissible T->0 optimization. Section 19 symbolic source coefficients a,K_decay,M_d,L_r, beta and E_MC do not add UET parameters. Conditional MC tests assume E_MC>=0, beta>0 and symmetric attempts. The standard two-state reference declares nu>0, rates (6*nu,3*nu/2) and (3*nu,3*nu), gap u_A-u_B=-k_B*T*ln(4), driven signed forward chemical work equal to that gap and reverse work opposite. These are explicit analytic controls, not fitted physical values. Its forced contrast coefficient is K_decay=6*nu. Section 20 uses symbolic epsilon and j as amplitudes of existing right-step controls, plus h_C only as the conjugate coefficient of a separate uniform-bias comparator. No coefficient is fitted or added to UET. C/Phi/Pi units and scale factors remain those of the existing formal lane, not physical calibration. Section 21 adds only symbolic comparator scales and dimensional coefficients A,B,K,D,Lambda,Gamma_P,Gamma_x,m_x,f_P,f_x as a dictionary for existing normalized coefficients. No values are fitted/implemented or adopted as UET constants. k_C,k_Phi and h=-g*C_bar are derived Hessian entries. Measured relaxed coefficients cannot be used as bare coefficients and have the same coupling added again without a subtraction prescription. Reference parameters Y,rho,A_perp,L,Gamma_P,K_P,G,gamma_b and projected m_n,K_n are symbolic declarations, not measured coefficients or new UET parameters. Numerical frequency checks use A_perp=Y=rho=L=1,gamma_b=1/5,N=1,2,4,8 and omega/omega_0=0,1/2,1,2,14/5 only as dimensionless method controls. A separate static infinitesimal control H(0)=G^2=1,K_P=21/20,F_b=0,f_P=epsilon gives p_full=20*epsilon and p_1=4.176576798300214...*epsilon. These controls do not set physical tolerances or fit data. Section 23's only added numerical control is Gamma_P=1. The target 1/100 is a newly declared method budget, not a relaxed project threshold. Rational proof guards are |H_1|>=311/50, |H-H_1|<=107/500, |a|<=1903/1000 and |D_1|>=757/100; their quotient is 18511/2066610<9/1000. The conservative extra-error allowance eta<=1/1010 is symbolic budget accounting, not a physical coefficient or individual-parameter precision claim. Section 24 reuses all section 23 numerical coefficients. New derived control times are T_s=2*pi/beta_0 and t_r=T_s+2, envelope duration=1 and infinitesimal amplitude epsilon. N=16 bounds the reference sum only; c_*=999/1000 and alpha_N are analytic tail guards. The absolute endpoint-tail method budget 1e-5 was declared before evaluation. No pulse/time/threshold optimization or fitted material constant. Initial-state sign protection E_init<(677047/6000000000000)*epsilon^2 is conditional on exact prescribed sources and no other errors. Section 26 changes only existing M_C between prescribed 1 and 2 in the same unit-coefficient homogeneous fixture with initial (1,0,1). This analytic comparison is not a parameter scan, clock change, fit, stochastic-noise model or added degree of freedom. Phi_dot(0)=1 fixes the common time-rescaling factor to one for the same readout. Section 27 adds only declared method targets h=1/10000, E_0/epsilon^2<=1/1000 and energy-tail budget 1e-8; N=16,c_*=999/1000,alpha_N and every source/time/coefficient are reused. K_*^2=4*(1+sqrt(21))<45/2 is a derived trace constant, not a tuned physical parameter. No pulse, wait, mode count or parameter scan. Section 28 physical source symbols K_b=A*Y/L, c_el=sqrt(Y/rho), K_P,Gamma_P,G and L are existing comparator coefficients; x_*,P_*,E_*,t_0 are scale factors. chi=G^2/(K_P*K_b), theta_P=Gamma_P/(K_P*t_0) and d=gamma_b*t_0 are derived invariants, not fitted values. tau_D,g_D and Delta_z0 are conditional receiver parameters/state contrast. The sufficient criterion tau_D<=h_ph/10 is declared before verification, not a project threshold or a universal necessity. Section 29 geometry is AI engineering starting design only: free steel beam 200x20x0.5 mm, one proposed 40x20x0.2 mm patch 5-45 mm from clamp. No manufacturer values or paper values are adopted as calibrated constants. M,D,K_sc,theta,C_p,R, modal/detector/source parameters and their joint sets must be identified independently. delta=delta_max/2 by predeclared safety/linearity/source/sensor limits; 10 balanced blocks/30 future preparations is a fixed design, not a power or accuracy claim. Prospective default joint coverage failure budget is 0.01: 0.005 calibration/admission and 0.005 for 30 future records, with union bound or a valid joint method. Finite calibration extrema do not certify hard noise bounds."
+  },
+  "next_action": "The requested proposition/causal-map/origins/decision packet and pre-registration-ready real-system test-plan deliverable are complete in sections 26-29. Twelve structural groups, targeted identity/schema review and both read-only completeness checks passed; physical review stays INCOMPLETE. Hand off finite Stage C/L prerequisites explicitly unfilled. Actual numerical lock, experiments and UET-specific physical validation are not complete. New work requires a direction for apparatus/domain review, prospective analysis implementation or independently authorized calibration; no automatic closed-algebra scans, contact, purchase, push or merge.",
+  "observation": {
+    "backaction": "Write drives act through the existing model source terms. No detector backaction claimed absent in a real system; no apparatus or physical test is modeled. In the screened physical class, source-system reciprocal coupling is not detector backaction. Sensing/circuit/mechanical loading must be modeled or bounded before physical use. Rod source/interaction forces are kept separate from detector loading. Formal sensors are not a claim that real detector backaction is zero. Section 28's conditional one-way reference is not a physical noninvasiveness result. Both direct mechanical/electrical loading and mediated source-state changes need assessment.",
+    "carrier": "Earlier homogeneous proofs have no propagation claim. Section 22 models internal one-dimensional elastic stress transport in a declared rod reference; this is not a physical UET causal-cone proof or an admitted detector signal carrier. Section 29 proposes optical and electrical observation paths; actual spatial/temporal transfer and carrier/backaction bounds are unmeasured, not absent.",
+    "corrections": [],
+    "frame": "Earlier normalized frame and section 22's declared one-dimensional rod rest/reference frame; no cosmological or relativistic frame identification.",
+    "generated_trace": "Same pointwise sigma history and same fixed trace kernel/initial history imply identical generated dissipation trace at cutoff. It is not all information and is not used as a state input.",
+    "observer_state": "No physical detector modeled or declared calibrated. The C response jet is a mathematical output, not an observed laboratory signal. The manufactured clamp and mathematical endpoint/slope readout are not a physical source controller or calibrated measuring apparatus; unknown hardware/estimation errors are not set to zero. Section 28 additionally defines conditional independent receiver state z. This is not an admitted physical sensor; initial record contrast, carrier, energy and loading remain UNKNOWN. Section 29 proposes simultaneous optical channels and voltage/current records, plus independent receiver reset/memory/cross-talk controls. No initial receiver state, transfer, actual apparatus or bound is supplied.",
+    "product_level": "FORMAL fixed-reference consequences and controlled comparisons; exact identities plus high-precision/interval finite sums with analytic omitted-tail bounds, not observations or independent validation",
+    "readout": "Prior signed/even and preparation-label information limits remain. Exact coordinate equivalence requires the same readout h(C(y),Phi,Pi), not an arbitrary new detector. Section 15 logistic p and conditional K~Binomial(n_s,p) give a local delta expression Var(C_hat|p) approximately ell^2/[4*n_s*p*(1-p)], not finite-sample endpoint closure: unregularized K=0/n_s estimates diverge and unbiasedness is not assumed. Actual population versus epistemic meaning, sampling, gain/offset, evolution, correlations and systematics require physical admission; no backaction absence asserted. Section 16 separates state C, preparation-relative C_phase summary and even Fourier morphology. Candidate p needs actual state-count/readout admission. Conditional jump quadratic-variation rate 4*s^2*a/N is an instantaneous generator moment under stated assumptions, not detector variance or a globally implemented stochastic law. Section 17's B_C limit 2*M_C*theta/N is a conditional instantaneous local jump moment under a specified closure, not detector variance, a full Langevin derivation or actual population-noise measurement. Neither microscopic traffic nor physical work/heat is read from the deterministic trajectory alone. Section 18 adds signed net force-port work as a formal output, not measured apparatus power. The paired write paths have equal net work and endpoint energy despite different signed Pi and prior post-cutoff responses. Neither scalar determines the complete state. Source/controller records and actual detector/backaction remain unadmitted. Section 19 distinguishes occupation readout from channel-resolved event counts/chemical input. At stationary p=2/3, ideal removal of driven versus natural channels gives p_dot=+nu versus -nu and C_dot=+/-2*s*nu. This is a formal intervention output; no actual separable switch, detector calibration, event record or reservoir consumption is observed. Merged-channel entropy production is not the resolved value, and neither is automatically the old UET trace. Section 20 requires explicit signed C for the order/parity discriminator. Under identical prepared state, J_Phi step epsilon gives initial third-derivative change M_C*g*C(0)*epsilon/tau; direct J_C step j changes the first derivative. Baseline subtraction excludes spontaneous drift. Even C^2 cannot distinguish +/-C under reflection-preserving J_Phi-only inputs; other controls can change observability. No actual pulse bandwidth, source isolation, detector calibration, frame correction or physical backaction bound is supplied. Section 21's reciprocal/free-clamped quantities are mathematical conjugate-port transfer functions. Actual signed polarization and mode-projected displacement records need independent gain, background/leakage, source transfer, bandwidth, loading and uncertainty admission. Raw voltage/current/strain readings are not these quantities by naming. Section 22's outputs p and x=u(L) are mathematical state readouts. Endpoint x=sum((-1)^n*q_n) differs from the weighted modal readout q_0=(2/L)*integral(u*w_0). Mode-selective sensing does not remove higher-mode feedback into p. Real sensor spatial weights, gain, leakage/circuit response, bandwidth, noise and loading remain unknown. Section 23 evaluates each of p/F_b and x/F_b as a complex transfer under F_b-only excitation. Their relative errors are analytically identical and uniformly below 0.9% in the fixed normalized band. Real source/detector corrected transfers, noise/offset/loading and clock uncertainty are not admitted. Phase is part of the complex error; the target is not 1% of an angle or an aggregate score hiding a channel. Section 24 reads the mathematical endpoint x(t_r) and right-side p_dot(t_r+) after release. Their normalized contrast has a nonzero enclosure including all omitted-mode tail. No actual endpoint sensor, derivative estimator, finite-band read protocol or whole read-waveform accuracy is admitted. Comparing a projected-state restart does not imply that a same-input candidate write trajectory shares the final projected state. Section 26 compares C_ddot at the fixed full initial state while Phi_dot remains the same; it is a mathematical response jet, not an admitted sensor or a derivative estimator. Signed-versus-redundant interpretation remains an author-scope alternative. Section 27 defines y_h=h^-1*integral_0^h x(t_r+s)ds and abs(y_h) as mathematical readouts. Mean-absolute and absolute-mean agreement is conditional on the certified fixed sign in this window, not a generic identity. No sensor/carrier/backaction absence is inferred. Section 28 mathematical output is receiver mean z_bar and baseline-subtracted signed/magnitude processing. The first-order kernel attenuates source contrast and retains initial receiver contrast. Raw absolute readings do not automatically preserve source sign/magnitude statements. Section 29 future outputs are forward-convolved receiver means y_+,y_-,y_0 and fixed S=(y_+-y_-)/2, M=(abs(y_+-y_0)+abs(y_--y_0))/2. Abs follows baseline subtraction. Full versus reduced prediction sets include actual projected-state/receiver errors; same full standard model remains label-equivalent. Primary summaries are arithmetic averages S_bar and M_bar over all 10 complete blocks; no post hoc change to pooling or abs order. Per-block error bounds are B_S<=(b_++b_-)/2 and B_M<=(b_++b_-)/2+b_0; no independence-based shrinkage by default.",
+    "source_state": "X=(C,Phi,Pi) is the full candidate state of this normalized prototype. Different preparations can retain effects in Pi or signed C; derived energy/entropy/trace do not generally replace X. The separate occupation/channel reference is a correspondence tool, not a physical identification of Phi or a lossless scalar reduction of the full prepared class. Section 21 introduces P=P_0*C, x=x_0*Phi and x_dot=x_0*Pi/t_0 only as a conditional physical dictionary; x is an internal mode state distinct from a detector record. No sample or full-universe correspondence is admitted. Section 22's reference state is (p,u(X),u_t(X)); q_0 alone does not replace it for the same ports/readouts. Physical parameter and uniform-polarization/detector admission remain absent. This continuum comparator is not silently added to the UET Core or substituted for the earlier normalized state. Section 23 assesses steady forced-response approximation only. Its passing result does not establish that one coordinate captures all prepared histories or unknown initial modal state. Section 24 retains the full mechanical modal state after reachable smooth preparation, despite an exactly baseline projected triple (p,q_0,q_0_dot). The projection loses state relevant to later output; this is not different futures from an identical complete state or a rejection of every possible reduced representation. Section 28 leaves the full joint reference unchanged and derives dimensional scaling constraints; no normalized prototype state is identified physically by changing units alone. Section 29 alternative formal state is piezoelectric cantilever q,v plus free electrode charge Q. Charge is not all information or the old polarization/legacy I. Two-mode projection (q1,v1,Q) deliberately omits q2/v2; source state-estimation audit may observe more than the reduced predictor receives.",
+    "system_partition": {
+      "accounting_component_id": "candidate-state",
+      "boundary": "Section 28 conditional measurement extension only: full joint rod/polarization source, an independent mathematical receiver state and a record. Earlier FORMAL proofs are not retroactively claimed to contain physical hardware or a receiver-energy closure. Section 29 adds a separate unexecuted prospective beam/charge/receiver reference. It is an alternative realization, not simultaneously coupled to the earlier rod/filter systems and not an admitted physical apparatus.",
+      "couplings": [
+        {
+          "component_id": "receiver-reference",
+          "id": "conditional_detection",
+          "kind": "DETECTION",
+          "map": "Conditional effective input tau_D*z_dot+z=g_D*u(L). This relation does not identify an actual signal carrier.",
+          "source": "source_joint",
+          "target": "conditional_receiver"
+        },
+        {
+          "component_id": "actual-signal-carrier",
+          "id": "actual_signal_assessment",
+          "kind": "SIGNAL",
+          "map": "UNKNOWN actual carrier/transducer path, spatial/temporal weighting and correction history.",
+          "source": "source_joint",
+          "target": "conditional_receiver"
+        },
+        {
+          "component_id": "physical-detector-backaction",
+          "id": "actual_backaction_assessment",
+          "kind": "BACKACTION",
+          "map": "UNKNOWN direct and mediated mechanical/electrical loading on joint source; the conditional one-way law is not evidence of absence.",
+          "source": "conditional_receiver",
+          "target": "source_joint"
+        },
+        {
+          "component_id": "prospective-reciprocal-reference",
+          "id": "plan_beam_to_charge",
+          "kind": "INTERNAL",
+          "map": "Formal R*Q_dot+(Q-theta^T*q)/C_p=V_d; actual transducer/circuit coefficients require calibration.",
+          "source": "prospective_beam",
+          "target": "prospective_charge"
+        },
+        {
+          "component_id": "prospective-reciprocal-reference",
+          "id": "plan_charge_to_beam",
+          "kind": "INTERNAL",
+          "map": "Formal M*v_dot+D*v+K_sc*q-theta*V=b*F; no new UET coupling or exact rod transformation.",
+          "source": "prospective_charge",
+          "target": "prospective_beam"
+        },
+        {
+          "component_id": "prospective-observation-admission",
+          "id": "plan_optical_detection",
+          "kind": "DETECTION",
+          "map": "Proposed optical carrier/transfer -> receiver raw displacement/velocity record with spatial/temporal weights, memory and noise UNKNOWN.",
+          "source": "prospective_beam",
+          "target": "prospective_receiver"
+        },
+        {
+          "component_id": "prospective-observation-admission",
+          "id": "plan_electrical_detection",
+          "kind": "DETECTION",
+          "map": "Proposed voltage/current measurement -> source-state estimate; input admittance and record transfer UNKNOWN.",
+          "source": "prospective_charge",
+          "target": "prospective_receiver"
+        },
+        {
+          "component_id": "physical-detector-backaction",
+          "id": "plan_backaction_beam",
+          "kind": "BACKACTION",
+          "map": "Optical force/heating and mediated support/actuator effects must be modeled or bounded before future lock.",
+          "source": "prospective_receiver",
+          "target": "prospective_beam"
+        },
+        {
+          "component_id": "physical-detector-backaction",
+          "id": "plan_backaction_charge",
+          "kind": "BACKACTION",
+          "map": "Electrical sensor loading, wiring and mediated optical/thermal effects must be admitted; high impedance/non-contact is not proof of zero.",
+          "source": "prospective_receiver",
+          "target": "prospective_charge"
+        }
+      ],
+      "observables": [
+        {
+          "backaction_scope_reason": "Assess receiver effects on all coupled source owners p,u,u_t, not only measured endpoint x. Actual paths and strengths remain UNKNOWN.",
+          "backaction_targets": [
+            "source_joint"
+          ],
+          "component_id": "receiver-reference",
+          "detector_id": "conditional_receiver",
+          "id": "receiver_average",
+          "quantity": "Signed mean receiver record contrast and magnitude of the calibrated baseline-subtracted record.",
+          "readout_map": "z_bar=h_ph^-1*integral_0^h_ph z(s) ds; use Delta_z_bar before optional abs. Include initial receiver-state contrast and all joint uncertainty.",
+          "target_systems": [
+            "source_joint"
+          ]
+        },
+        {
+          "backaction_scope_reason": "Assess optical/electrical detector effects on the entire coupled beam-charge source, including direct and mediated paths; no actual bounds available.",
+          "backaction_targets": [
+            "prospective_beam",
+            "prospective_charge"
+          ],
+          "component_id": "prospective-observation-admission",
+          "detector_id": "prospective_receiver",
+          "id": "prospective_history_statistics",
+          "quantity": "Future beam record contrasts plus pre-read projected state estimation; no actual observation today.",
+          "readout_map": "Forward-convolved mean records yield S and M. Frozen estimator uses only pre-read multi-point/voltage-current records, not future scored readout, for projected state uncertainties.",
+          "target_systems": [
+            "prospective_beam",
+            "prospective_charge"
+          ]
+        }
+      ],
+      "role_mode": "RELATIONAL",
+      "systems": [
+        {
+          "id": "source_joint",
+          "state": "Reference p,u(X),u_t(X). The old C/Phi/Pi lane is a separate comparator, not duplicate state in this partition.",
+          "state_accounting": {
+            "kind": "INDEPENDENT",
+            "owner_ids": [],
+            "rule": "Use the existing joint E2 once, including -G*p*x. No extra source interaction-energy copy or universal information substance.",
+            "state_ids": [
+              "reference.p",
+              "reference.u",
+              "reference.u_t"
+            ]
+          }
+        },
+        {
+          "id": "conditional_receiver",
+          "state": "Independent conditional filter state z; it can retain its own initial memory.",
+          "state_accounting": {
+            "kind": "INDEPENDENT",
+            "owner_ids": [],
+            "rule": "Mathematical readout state only. Actual receiver energy, carrier and loading are UNKNOWN; the filter law does not close physical energy/entropy.",
+            "state_ids": [
+              "receiver.z"
+            ]
+          }
+        },
+        {
+          "id": "prospective_beam",
+          "state": "Proposed cantilever modal q,v; two-mode preparation/control reference only, with actual residual modes requiring admission.",
+          "state_accounting": {
+            "kind": "INDEPENDENT",
+            "owner_ids": [],
+            "rule": "Count mechanical kinetic and K_sc storage once; joint (Q-theta^T*q)^2/(2*C_p) includes coupling once with charge. No energy coupling to the older alternative rod reference.",
+            "state_ids": [
+              "plan.q",
+              "plan.v"
+            ]
+          }
+        },
+        {
+          "id": "prospective_charge",
+          "state": "Electrode free charge Q under the proposed fixed RC/drive connection. Voltage is a conjugate quantity, not another independent ideal state.",
+          "state_accounting": {
+            "kind": "INDEPENDENT",
+            "owner_ids": [],
+            "rule": "Use the same joint capacitor/coupling storage once. R loss is a channel; source drives and receiver circuit admittance need physical admission.",
+            "state_ids": [
+              "plan.Q"
+            ]
+          }
+        },
+        {
+          "id": "prospective_receiver",
+          "state": "Proposed optical/electrical receiver and DAQ internal memory; actual dimension, transfer and bounds unknown.",
+          "state_accounting": {
+            "kind": "INDEPENDENT",
+            "owner_ids": [],
+            "rule": "Separate from source q,v,Q. This placeholder is not a complete physical detector/energy closure or evidence of no backaction.",
+            "state_ids": [
+              "plan.receiver_state"
+            ]
+          }
+        }
+      ]
+    },
+    "time_convention": "Shared normalized continuous time; original write t=-T..0, zero-drive wait followed by a fixed 1-unit probe. Infinite-time convergence theorem is distinct from finite numerical samples/tolerances. Section 22 uses a declared physical-unit time with no actual clock calibration. Harmonic-band admission is distinct from the ideal broadband right-step asymptotic. Section 23's steady frequency-domain limit is distinct from any finite-duration write/wait/read experiment or guaranteed settling time. Section 24 uses a compact finite write followed by one controlled-wait unit until t_r=T_s+2; f_P remains prescribed during wait. Read evaluation is the release instant and right-side initial slope, not a finite read-window or lifetime certificate. Section 27 fixes h=1/10000 in the normalized reference clock before evaluating stored energy.",
+    "trace_scope": "dissipation_history",
+    "trace_used_as_complete_state": false
+  },
+  "output": {
+    "accuracy": "Nine exact SymPy 1.14.0 structural/dual-stiffness checks pass. Mode-0 cancellation is exact, not numerical thresholding. A 60-digit mpmath 1.3.0 partial sum agrees with a 35-digit interval evaluation; the analytic omitted endpoint tail is <4.3e-6<1e-5 in x/epsilon. Combining both gives 0.002177<x(t_r)/epsilon<0.002187 and the same released p_dot/epsilon in normalized controls. mpmath interval support is experimental; no independent proof assistant or physical certification. Matched prescribed-source initial-error bounds are sqrt(42*E_init) for x and sqrt((21/10)*E_init) for released slope. Actual preparation/source/timing/detector/linearization errors remain UNKNOWN. No time integration, fit, observations or old scientific verifier rerun. Section 26 is an exact local-response implication with no numerical tolerance, probability claim or laboratory data. Ten symbolic/AST/saved-scope groups passed; source identities are bound separately. This is internal self-verification, not independent review. Section 27 passed the predeclared energy admission: the unchanged N=16 preparation expressions plus analytic tail certify E_0/epsilon^2<115e-6<1/1000, with tail<4.299e-9<1e-8. Eight exact/interval groups support x(s)/epsilon>677e-6 and y_h/epsilon>1177e-6 throughout the stated h=1/10000 protocol. These are absolute normalized margins, not a relative 1% physical claim. Section 28 passed nine exact symbolic groups; no actual material, apparatus bandwidth, noise or physical admission. Section 29 passed twelve exact structural groups with no physical parameter, Gramian, integration or prediction evaluation. Prospective model/safety/noise admission is unverified, not a numerical precision result.",
+    "claim_intent": "FORMAL_RESULT",
+    "domain": "Section 24 uses the unchanged linear rod/reference and first-mode projection with A_perp=Y=rho=L=G=Gamma_P=1,gamma_b=1/5,K_P=21/20. From perturbation rest, apply b(t)=sin^4(pi*t) on [0,1] and zero elsewhere, F_b=epsilon*(b(t)-exp(-a*T_s)*b(t-T_s)), a=1/10,T_s=2*pi/beta_0. Prescribed manufactured f_P=-G*x_write keeps nominal p=0 through write and a controlled wait to t_r=T_s+2; this is not undriven whole-system waiting or a calibrated feedback controller. Release both inputs at t_r. Compare x(t_r) and right-side p_dot(t_r+) with zero history and a predictor restarted from the actual projected (p,q_0,q_0_dot)=(0,0,0). This does not assert that the candidate under the same write feed-forward also ends at zero. N=16 is reference evaluation with bounded tail, not added candidate states. No finite read interval, real detector, nonlinear/material admission or generic unknown-state cancellation. Section 26 uses the earlier homogeneous nonconserved C/Phi/Pi family, unit-length periodic domain, zero drives, fixed coefficients a_C=-1,b_C=a_Phi=b_Phi=g=M_Phi=tau=1 and read initial state (1,0,1). M_C takes the two prescribed values 1 and 2. Different parameters mean different model specifications, not different futures under one fully identical law. The causal records are read only, not newly integrated or upgraded into a full-continuum proof. Section 27 read time s=0 is t_r. The full linear rod and polarization evolve together with zero f_P/F_b. h=1/10000 is fixed before evaluating E_0, and E_0/epsilon^2<=1/1000 is the predeclared sufficient acceptance. The first-mode comparator restarts at its actual zero projected state. No real source/detector is introduced. Section 28 uses the identical fixed source/reference. Symbolic positive scales and a first-order receiver tau_D*z_dot+z=g_D*x are conditional definitions, not a selected physical apparatus. Section 29 is an unexecuted linear piezoelectric-resistor cantilever plan. Proposed geometry, two-port drives, two-mode target and forward detector model are not an admitted sample. Calibration Stage C and numerical lock L must precede fresh scored set V. No physical run, calibrated coefficient or actual prediction set exists yet.",
+    "quantity": "One finite smooth-preparation state-sufficiency decision: exact mode-0 cancellation, finite-energy retained higher-mode state, endpoint and released initial-slope enclosure, source-work/storage account and conditional initial-state error bounds. Section 26: one fixed-state two-mobility counterexample to selection of kinetics by ledger plus feedback, and a source-scope reconciliation of existing causal records. Section 27: a conditional pointwise and time-averaged retained-history margin for signed and magnitude readouts under one fixed read window. Section 28 adds invariant scaling requirements and a finite-window conditional receiver-memory bound. Section 29 adds an explicit prospective apparatus/calibration/preparation/read/decision protocol and structural reciprocal-energy/control identities.",
+    "unit": "normalized endpoint x/epsilon, released p_dot/epsilon, time and quadratic availability/epsilon^2 in the declared FORMAL method control; the underlying polarization/displacement/force/time declarations retain section 22 units. No physical SI scale, sensor precision or total experimental error is admitted Section 27 adds endpoint boxcar y_h/epsilon and E_0/epsilon^2 in the same normalized reference; no SI detector precision or bandwidth is admitted. Section 28 preserves dimensional source displacement and arbitrary calibrated record units symbolically; no SI value is supplied. Section 29 formal source energy/power units are J/W with q in m, charge Q in coulombs, capacitance C_p in farads, voltage V_d and force F. Prospective statistics remain in independently calibrated detector record units; no numerical physical precision is admitted."
+  },
+  "profile": "FORMAL",
+  "question": "Can a smooth finite-energy write and controlled-wait preparation leave the actual first-mode projected state equal to baseline while omitted mechanical modes change endpoint readout and the initial released polarization response? Section 26 additionally asks whether the existing cycle's energy descent and retained-state feedback alone select the timed response, without choosing new terms or a physical realization. Section 27 tests the unchanged prepared state's endpoint averaged over h=1/10000 after full source release, using a declared joint-energy upper bound rather than an ideal initial slope.",
+  "review": {
+    "rationale": "Self-reviewed sections 12-24. Section 24 supplies one reachable FORMAL counterexample to first-mode prepared-state sufficiency, not to all reductions: prescribed compact smooth boundary pulses and nominal p=0 feed-forward, initial rest, one controlled-wait unit, then zero inputs at read. Exact mode-0 cancellation leaves a certified nonzero endpoint and released initial slope from higher modes. Nine exact structural/dual-stiffness checks, a 60-digit partial-sum consistency evaluation and 35-digit interval evaluation with an analytic omitted-tail bound were run. Initial helper matrix/scalar comparison was corrected without a physics/protocol change. No physical controller, uncertainty admission, finite read-waveform certificate, fit or specialist sign-off. The scoped steady certificate in section 23 remains valid; review INCOMPLETE and physical-correspondence UNKNOWN. Section 25 is a supporting source/formula relationship audit, not a new physical comparison or all-family acceptance. Eight exact normalized algebra groups plus an AST default-mode check distinguish generators, couplings, static eliminations, dynamics and outputs. Fourteen family groups and base/addendum metadata overlap are scoped inventories, not 111 validated equations. The cycle contract does not certify every mapped family. Section 26 is an authorized continuation of the retained-response argument, not a selected universal realization: a two-mobility witness tests kinetic underdetermination within the unchanged homogeneous nonconserved family. Source-level causal triage distinguishes the decoupled Phi pulse from the already recorded changing-C structural audit. Ten exact symbolic/AST/saved-scope groups passed, and 41 non-report source identities match. An initial check-only UTF-8 assumption for a binary archive was corrected using the canonical identity helper without scientific changes. The author explicitly deferred the sign choice and requested both classes be inspected. Review stays INCOMPLETE and no physics gate is promoted. Section 27 declares a finite read-window continuation before energy evaluation: unchanged section 24 preparation/full rod, all inputs released, h=1/10000, energy acceptance 1/1000 and analytic energy-tail budget 1e-8 with N=16. Eight symbolic/interval groups passed at 35 interval digits: energy_partial/epsilon^2 is about 0.00011412718245, conservative tail is below 4.299e-9 and total energy is below 115e-6, within the fixed 1/1000 budget. The coupled energy/trace bound certifies pointwise 677e-6 and averaged 1177e-6 normalized margins in the fixed window. Signed and magnitude readouts answer different questions. No physical clock, bandwidth, uncertainty or independent specialist admission. Earlier no-window statements describe section 24, not a prohibition on this explicitly bounded extension. Section 28 declares a FORMAL physical-scaling and conditional-receiver admission analysis before exact checks. No actual apparatus, measured material values or experimental data are admitted. A boundary-first relational partition applies only to this measurement extension; unknown carrier, loading, receiver calibration and energy are not set to zero. Nine SymPy 1.14.0 exact groups passed: clock/scaling invariants and sufficiency, bare/relaxed compliance and force, receiver convolution/weights/budget, bandwidth ratio and receiver-memory counterexample. All 42 identities matched before the result/footer update. No source verifier was rerun. Section 29 is a pre-registration-ready prospective physical-system design, not an actual comparison or completed numerical lock. The author selected a goal through a lockable real-system test plan and deferred the sign ontology. The AI proposes one piezoelectric-resistor cantilever as an alternative causal-loop realization; it is not an exact rod/C-Phi-Pi rewrite. Primary source abstracts support architecture/calibration precedent only; full source derivations/apparatus values are not claimed verified. Twelve exact SymPy 1.14.0 structural groups passed section 29's energy/ports, SC-versus-Q stiffness, voltage conjugacy, parity/target/projection, conditional Gramian/kernel, statistic/error/union-bound, SI and four-case decision identities. This is construction followed by adversarial self-review, not independent expert or physical verification. Actual model rank, coefficients, simulation, calibration and prediction sets remain unfilled.",
+    "reviewer": "agent:energy-memory-cycle (self-review, not independent specialist)",
+    "status": "INCOMPLETE"
+  },
+  "schema_version": "uet-calculation-contract-v1"
+}
