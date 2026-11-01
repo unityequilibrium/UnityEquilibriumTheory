@@ -1,0 +1,199 @@
+{
+  "schema_version": "uet-calculation-contract-v1",
+  "contract_id": "CORE_MATTER_SPACE_OBSERVER_V1",
+  "profile": "SYNTHETIC",
+  "review": {
+    "status": "INCOMPLETE",
+    "reviewer": "agent:calculation-observation-standard-v1",
+    "rationale": "Methodological source/claim review only. Scientific results are inherited with original scope, not newly rerun or promoted.",
+    "coverage_evidence": [
+      "docs/core/01_contracts/MATTER_SPACE_RESEARCH_SPEC.md",
+      "docs/core/02_equations/matter_space/uet_matter_space.py",
+      "docs/core/02_equations/matter_space/uet_trace.py",
+      "docs/core/03_lanes/carrier_observer/uet_impact_effect.py",
+      "docs/core/05_tests/regression/root/test_matter_space_core.py"
+    ]
+  },
+  "question": "Which state, drive, dissipation-history and receiver outputs are actually implemented?",
+  "output": {
+    "quantity": "declared scoped result",
+    "unit": "dimensionless",
+    "domain": "Only the approximation and input domain of the identified source evidence.",
+    "accuracy": "Inherit named source tolerances; no new physical accuracy claim.",
+    "claim_intent": "DIAGNOSTIC"
+  },
+  "model": {
+    "formula_ids": [
+      "uet.matter_space.physical_dynamics",
+      "uet.trace.derived_observable",
+      "uet.impact_effect.information_flow"
+    ],
+    "assumptions": "See identified source contract; symbols are lane-specific.",
+    "approximation": "Existing formal or normalized approximation, unchanged.",
+    "initial_boundary": "Source-defined initial state, boundary and reference; no inferred material state.",
+    "drive_environment": "Source-declared controls only; no acquired physical drive.",
+    "parameters": "Existing controls/calibration remain inputs; no fitting or new coefficient derivation."
+  },
+  "data_policy": {
+    "uses_observations": false,
+    "calibration_ids": [],
+    "comparison_ids": [],
+    "independent_validation": false,
+    "holdout_policy": "No holdout access, fitting, external validation or new blind-eligibility decision."
+  },
+  "observation": {
+    "system_partition": {
+      "boundary": "Normalized C and Phi/Pi dynamics plus a separately represented candidate receiver. Internal coupling is modeled; no physical carrier, detector mapping or source backaction is admitted.",
+      "systems": [
+        {"id": "C_system", "role": "SOURCE", "state": "C collective coordinate in the declared normalized lane"},
+        {"id": "response", "role": "SOURCE", "state": "Phi and Pi; physical memory state of this model, not a detector record"},
+        {"id": "D", "role": "DETECTOR", "state": "Candidate normalized receiver state; physical instrument realization UNKNOWN"}
+      ],
+      "couplings": [
+        {"id": "C_to_response", "source": "C_system", "target": "response", "kind": "INTERNAL", "component_id": "system_state", "map": "Paired variational coupling in Omega; see matter_space_rhs"},
+        {"id": "response_to_C", "source": "response", "target": "C_system", "kind": "INTERNAL", "component_id": "system_state", "map": "Response enters mu_C; this is not detector backaction"},
+        {"id": "candidate_detection", "source": "response", "target": "D", "kind": "DETECTION", "component_id": "detector", "map": "Candidate readout of a generated trace from C/Phi history; carrier and physical detector correspondence remain UNKNOWN"},
+        {"id": "D_to_C_assessment", "source": "D", "target": "C_system", "kind": "BACKACTION", "component_id": "detector", "map": "Physical source feedback unadmitted; not inferred from a recorded signal"},
+        {"id": "D_to_response_assessment", "source": "D", "target": "response", "kind": "BACKACTION", "component_id": "detector", "map": "Physical response-sector feedback unadmitted; existing no-trace-feedback implementation is not proof of physical isolation"}
+      ],
+      "observables": [
+        {"id": "candidate_receiver_readout", "detector_id": "D", "target_systems": ["C_system", "response"], "quantity": "Selected normalized receiver record, not the complete source state", "readout_map": "Existing toy gain/payload relation only; material detector correspondence UNKNOWN", "component_id": "detector"}
+      ]
+    },
+    "source_state": "Source-scoped state, not automatically a material state.",
+    "generated_trace": "R=G_ret*sigma; sigma is normalized dissipation, not an admitted physical entropy or full-state information measure.",
+    "carrier": "No physical carrier admitted by this metadata review.",
+    "observer_state": "receiver_state and fixed gains; no physical instrument trajectory, response time or noise completion.",
+    "readout": "observer_record=observer_gain*carrier_payload; optional receiver update is an explicit normalized linear law.",
+    "backaction": "No new source/receiver coupling; no claim of complete physical backaction.",
+    "frame": "declared source frame",
+    "time_convention": "declared source convention",
+    "product_level": "formal/synthetic evidence",
+    "trace_scope": "dissipation_history",
+    "trace_used_as_complete_state": false,
+    "corrections": []
+  },
+  "components": [
+    {
+      "id": "detector",
+      "group": "detector",
+      "disposition": "UNKNOWN",
+      "reason": "Physical receiver response/backaction and dimensional calibration remain unadmitted; retain synthetic scope.",
+      "evidence": [],
+      "owner": "EVIDENCE",
+      "next_action": "Physical receiver response/backaction and dimensional calibration remain unadmitted; retain synthetic scope."
+    },
+    {
+      "id": "drive_environment",
+      "group": "drive_environment",
+      "disposition": "NOT_APPLICABLE",
+      "reason": "Outside this bounded formal/synthetic result; no physical measurement claim.",
+      "evidence": [
+        "docs/core/01_contracts/MATTER_SPACE_RESEARCH_SPEC.md"
+      ]
+    },
+    {
+      "id": "frame_time",
+      "group": "frame_time",
+      "disposition": "NOT_APPLICABLE",
+      "reason": "Outside this bounded formal/synthetic result; no physical measurement claim.",
+      "evidence": [
+        "docs/core/01_contracts/MATTER_SPACE_RESEARCH_SPEC.md"
+      ]
+    },
+    {
+      "id": "numerics",
+      "group": "numerics",
+      "disposition": "MODELED",
+      "reason": "Declared implementation/formal scope in pinned evidence; no material interpretation.",
+      "evidence": [
+        "docs/core/01_contracts/MATTER_SPACE_RESEARCH_SPEC.md"
+      ]
+    },
+    {
+      "id": "processing",
+      "group": "processing",
+      "disposition": "MODELED",
+      "reason": "Declared implementation/formal scope in pinned evidence; no material interpretation.",
+      "evidence": [
+        "docs/core/01_contracts/MATTER_SPACE_RESEARCH_SPEC.md"
+      ]
+    },
+    {
+      "id": "propagation",
+      "group": "propagation",
+      "disposition": "NOT_APPLICABLE",
+      "reason": "Outside this bounded formal/synthetic result; no physical measurement claim.",
+      "evidence": [
+        "docs/core/01_contracts/MATTER_SPACE_RESEARCH_SPEC.md"
+      ]
+    },
+    {
+      "id": "system_state",
+      "group": "system_state",
+      "disposition": "MODELED",
+      "reason": "Declared implementation/formal scope in pinned evidence; no material interpretation.",
+      "evidence": [
+        "docs/core/01_contracts/MATTER_SPACE_RESEARCH_SPEC.md"
+      ]
+    }
+  ],
+  "error_budget": {
+    "unit": "dimensionless",
+    "numerical": "Existing saved verifier thresholds; not rerun here.",
+    "approximation": "Source approximation only; no physical extension.",
+    "measurement": "No independent physical acceptance in this review.",
+    "systematic": "Unadmitted physical effects remain limitations.",
+    "omissions": "No quantitative physical omission bound asserted.",
+    "dependence": "No independence or covariance invented.",
+    "acceptance": "Source-scoped formal/diagnostic conclusion only.",
+    "omission_limit": null
+  },
+  "identities": [
+    {
+      "path": "docs/core/01_contracts/MATTER_SPACE_RESEARCH_SPEC.md",
+      "kind": "working_file",
+      "role": "evidence",
+      "sha256": "d178f1978c93a09350a4da6ea11153a93fbfb13ad12c9d390846f741ad5db848"
+    },
+    {
+      "path": "docs/core/02_equations/matter_space/uet_matter_space.py",
+      "kind": "working_file",
+      "role": "code",
+      "sha256": "488db6aa26b99856e2eb82a2f46a9857f623f418ef8e537498fa71d5e4f633aa"
+    },
+    {
+      "path": "docs/core/02_equations/matter_space/uet_trace.py",
+      "kind": "working_file",
+      "role": "code",
+      "sha256": "1ec92af5edba09f1a4352661c5489b371f89dcf72c223c2843ce694ee75f78fb"
+    },
+    {
+      "path": "docs/core/03_lanes/carrier_observer/uet_impact_effect.py",
+      "kind": "working_file",
+      "role": "code",
+      "sha256": "2ef0cb0a0ac18c235329e35f308fe4cd2f3271d8765ef525bde60055f05eac1f"
+    },
+    {
+      "path": "docs/core/05_tests/regression/root/test_matter_space_core.py",
+      "kind": "working_file",
+      "role": "code",
+      "sha256": "347cb96ee44fec4d127556b1b4ca9af0d3d5243e9146a44f10923e299d965320"
+    }
+  ],
+  "entrypoints": [
+    "docs/core/02_equations/matter_space/uet_matter_space.py",
+    "docs/core/02_equations/matter_space/uet_trace.py",
+    "docs/core/03_lanes/carrier_observer/uet_impact_effect.py",
+    "docs/core/05_tests/regression/root/test_matter_space_core.py"
+  ],
+  "evidence": [
+    "docs/core/01_contracts/MATTER_SPACE_RESEARCH_SPEC.md",
+    "docs/core/02_equations/matter_space/uet_matter_space.py",
+    "docs/core/02_equations/matter_space/uet_trace.py",
+    "docs/core/03_lanes/carrier_observer/uet_impact_effect.py",
+    "docs/core/05_tests/regression/root/test_matter_space_core.py"
+  ],
+  "claim_boundary": "Methodological coverage only; no physical acceptance or change to existing scientific gates.",
+  "next_action": "Physical receiver response/backaction and dimensional calibration remain unadmitted; retain synthetic scope."
+}

@@ -1,5 +1,28 @@
 # UET Agent Operating Guide
 
+## Theory-development decision order
+
+For theory reconstruction, model design or repeated stalled research, apply
+`docs/topics/For Work/32_Theory_Development_and_Research_Sequencing_Standard.md`.
+Reconstruct author intent versus AI proposals and existing results before adding
+equations. Order work by proposition, minimal model, consistency, comparator,
+physical realization, locked test and generalization. These planning stages do
+not replace F0-F8, calculation contracts, claim classes or canonical physics gates.
+Use one bounded card in the existing research-design/METHOD/wave record: have,
+missing/disputed, current evidence/controller, next action and why, outcomes,
+stop/reopening condition and reviewer question. Reuse unchanged evidence; no new
+term/branch merely to escape a comparator or keep activity going. Human acceptance
+of intent is not physical proof; AI agreement or conversational grades are not
+validation. Preserve unrelated work and historical results. Request specialist
+review of a precise gap without automatic external contact.
+
+Before equation/observer design, apply standard 30's boundary-first system partition:
+internal impact, signal transport, receiver effect, detector state, observable and
+source backaction are separate. Do not infer full observability or significant
+reciprocal influence from an internal interaction or a detection. New/revised
+non-FORMAL calculation contracts declare observation.system_partition; legacy gaps
+remain visible without rewriting old scientific evidence.
+
 This file is the root entrypoint for AI agents and collaborators working in this repository.
 
 It does not replace the project standards. It tells an agent where truth lives, how to work
@@ -155,7 +178,7 @@ Then choose the next standard by task.
 ### If the task is topic building or refactoring
 
 1. [`docs/topics/For Work/02_Project_Workflow_and_Lifecycle.md`](./docs/topics/For%20Work/02_Project_Workflow_and_Lifecycle.md)
-2. [`docs/topics/For Work/10_Topic_Architecture_5x5(+1).md`](./docs/topics/For%20Work/10_Topic_Architecture_5x5(+1).md)
+2. [`docs/topics/For Work/10_Topic_Architecture_5x4.md`](./docs/topics/For%20Work/10_Topic_Architecture_5x4.md)
 3. the relevant standards in `11-18`
 
 ### If the task is book writing or history publishing
@@ -465,6 +488,10 @@ required to explain the same hardening wave.
   source digest/provenance, claim map/blueprint lock, Draft 1, Draft 2, integrity check,
   fact/citation audit, developmental review, line edit, copyedit, rights/ethics, proof,
   publish, and maintenance distinguishable. A planned source is not yet a verified citation.
+- Use the exact canonical gate identifiers in `uet_history/BOOK_WORKFLOW.md`; never put a
+  human-friendly label such as `W04_BLUEPRINT_LOCK` or `W05_DRAFT_1_PRODUCTION` in
+  `current_gate`. Keep `status` to `NOT_STARTED`, `IN_PROGRESS`, `PASS`,
+  `PASS_WITH_OPEN_ITEMS`, `BLOCKED`, or `SUPERSEDED`.
 - Start book-writing work with a planning pass, not with a request to choose or write an
   episode. For a three-book Section, first expose the Section arc, the role of all three
   books, the book-level plans, dependencies, handoffs, claim ownership, and reference tasks;
@@ -472,6 +499,10 @@ required to explain the same hardening wave.
 - Treat uet_history/3_publish/books/โครงสร้างหนังสือ.md as the authoritative local writing
   pattern. It controls the structure and citation surface of a chosen unit; it does not replace
   the Section/Book planning pass or authorize the agent to invent a chapter or episode.
+- Treat the local eight-function pattern and A/B/C split as a Writing Unit production template,
+  not as a new gate and not as the book's chapter-count rule. Start only from an approved
+  `unit_id` and a complete Unit Execution Card; do not make the author discover the next unit
+  by choosing an episode manually.
 - A literature review is not a source list: it must synthesize positions, uncertainty,
   contrary evidence, limitations, and gaps before the blueprint is locked.
 - For in-place manuscript edits, run the W09 integrity check and preserve original
@@ -479,6 +510,9 @@ required to explain the same hardening wave.
   merge, or reorder.
 - Preserve one canonical working draft and use a local `UPDATE_LOG.md` to record each completed
   writing wave when the book is developed across multiple passes.
+- For a workflow-only audit or standards repair, do not edit manuscript prose, move book folders,
+  or promote a gate. Return a Section-by-Section handoff listing the parent state, child state,
+  missing artifacts, version/gate drift, controlling blocker, and next canonical controller.
 - A book update is complete only when the canonical source, registry state, scoped commit, and public `main` path agree.
 - If a public copy differs from the canonical working file, stop and record the drift before publishing another copy.
 ## Agent behavior expectations
@@ -516,7 +550,7 @@ required to explain the same hardening wave.
 - AI-generated wording needs review: open
   [`03_AI_Usage_and_Governance.md`](./docs/topics/For%20Work/03_AI_Usage_and_Governance.md)
 - Topic structure is messy: open
-  [`10_Topic_Architecture_5x5(+1).md`](./docs/topics/For%20Work/10_Topic_Architecture_5x5(+1).md)
+  [`10_Topic_Architecture_5x4.md`](./docs/topics/For%20Work/10_Topic_Architecture_5x4.md)
 - Data provenance is weak: open
   [`12_Data_Standard.md`](./docs/topics/For%20Work/12_Data_Standard.md)
 - Result artifacts are unclear: open
@@ -569,3 +603,17 @@ The normal publish checkpoint is the same day as the completed section: commit
 the coherent unit, push the branch, and open or update a draft PR when it is
 not ready to merge. Use git fetch --prune origin during branch inventory so
 stale origin/codex/... references do not look like active remote branches.
+
+### Calculation and observation completeness
+
+Apply `docs/topics/For Work/30_Calculation_and_Observation_Completeness_Standard.md`
+to new or changed scientific calculation paths. Read the existing calculation
+contract first; declare input/model/observer/processing/output, applicability and
+error budgets. Unknown effects are not zero. Preserve distinctions between
+physical state, dissipation trace and observer record. Trace upstream corrections
+before applying any again. Run `docs/scripts/audit/audit_calculation_completeness.py
+--check` and the changed-path check before physical promotion or handoff. Review
+contract identity when code, data, configuration, model or observable changes.
+Formal and diagnostic work may continue within declared limits; contract coverage
+does not override physics gates. Gradually review legacy work, beginning with Core
+and Topic 13, without rerunning unchanged evidence or rewriting historical results.

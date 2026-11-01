@@ -1,11 +1,36 @@
 # Research Hardening Workflow
 
+Before choosing a wave, use [Theory Development and Research Sequencing v1](32_Theory_Development_and_Research_Sequencing_Standard.md).
+Put its bounded work card in the existing research-design/METHOD/wave record, linking
+the current contract and blocker rather than making another registry. Choose the
+earliest unresolved dependency of the intended claim. Reuse counterexamples and
+equivalences; after two no-evidence-change attempts, reassess instead of expanding.
+More documentation, cells or tests alone is not scientific progress.
+
+Before a new wave, consult [Calculation and Observation Completeness v1](30_Calculation_and_Observation_Completeness_Standard.md)
+and its existing contract. Review stale identities and unresolved components before
+expanding scope; reuse unchanged derivations and verifier evidence.
+
 This document defines the standard hardening workflow for moving a topic from
 loosely organized research into an auditable package with explicit blockers.
 
 It is not a promotion rule by itself. It is the step-by-step operating method
 used to make later readiness and claim decisions faster, clearer, and more
 repeatable.
+
+## Scope and applicability
+
+The [profile rules in 32](32_Theory_Development_and_Research_Sequencing_Standard.md#applicability-and-evidence-types)
+govern the sequences/checklists below. Source packaging means identifying necessary
+premises/inputs; a formal proof may use definitions and theorem references rather
+than a dataset. A proof/counterexample in its existing canonical record can be the
+stable evidence; no JSON, numerical harness, detector or new gate is mandatory just
+to perform analytical research. Reuse existing controllers and link evidence.
+
+Machine-readable state is required when existing automation or a physical-acceptance
+gate consumes it; extend that controller instead of inventing one per sub-result.
+For other formal/diagnostic decisions, record the proposition, decision and reopening
+condition in the existing study record. Formal completion does not close physical gates.
 
 ## Purpose
 
@@ -166,7 +191,7 @@ Use the following pattern for one hardening pass:
 1. pick one blocker that currently controls the topic-level state
 2. decide whether the pass is a source pass, artifact pass, gate pass, or
    claim-boundary pass
-3. add or tighten the minimum manifest, gate, or verifier logic needed
+3. change the minimum applicable proof, existing evidence/controller, or verifier logic needed
 4. rerun the relevant verifier only if the artifact-producing state changed
 5. sync `README.md`, `LIMITATIONS.md`, `VERIFICATION_SPEC.md`, and
    `FORMULA_AUDIT.md` if the boundary moved
@@ -183,9 +208,10 @@ exist.
 
 A wave is complete when all of these are true:
 
-1. the controlling blocker for that wave is narrower than before
-2. the narrower blocker is visible in a machine-readable artifact, gate, or
-   manifest
+1. the declared decision is answered, a route is excluded, or its prerequisite is
+   narrowed with evidence (merely renaming a blocker is not scientific progress)
+2. the decision is visible in the existing canonical evidence/controller; use
+   machine-readable state where required by the scope/automation rules above
 3. topic docs reflect the new blocker boundary
 4. the local `UPDATE_LOG.md` states what now controls the next wave
 
@@ -268,6 +294,10 @@ Trying to solve every weakness in one pass usually slows the topic down.
 
 Every topic being actively hardened should aim to maintain:
 
+Use existing equivalents and profile applicability. DATA_MANIFEST and computational
+artifacts below are required only for paths that actually use those inputs/methods;
+a formal proof may use a cited derivation record. No duplicate file per checklist row.
+
 - `README.md`
 - `METHOD.md`
 - `DATA_MANIFEST.md`
@@ -283,7 +313,7 @@ For repeated hardening, treat one completed wave as a small packet with all of
 these parts visible:
 
 1. one controlling blocker identified
-2. one artifact, gate, or manifest tightened
+2. one applicable evidence record or existing controller changed with decision-relevant content
 3. one verifier rerun if evidence-producing state changed
 4. one doc sync to the new blocker boundary
 5. one update-log entry naming the next controller
@@ -365,7 +395,7 @@ Before closing a hardening pass, ask:
 
 1. What ambiguity was removed?
 2. Which blocker is now machine-readable?
-3. Which artifact or manifest was added?
+3. Which existing proof, evidence record or controller changed, and why was it sufficient?
 4. Did any public wording change without stronger evidence?
 5. What exact next artifact would unlock the next step?
 
@@ -381,7 +411,7 @@ Before closing a hardening pass, ask:
 ## Checklist
 
 - [ ] source package is explicit enough for audit
-- [ ] at least one stable artifact exists
+- [ ] stable evidence exists in the appropriate proof or computational record
 - [ ] current blockers are machine-readable where practical
 - [ ] diagnostics and predictive candidates are not conflated
 - [ ] acceptance conditions are defined before strong promotion

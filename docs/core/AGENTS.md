@@ -131,11 +131,19 @@ do not push or open a pull request unless the user explicitly requests it.
 
 ## Foundation program extension: impact, effect, carrier, and persistence
 
-The foundation program adds one mandatory distinction to the core workflow:
+The foundation program distinguishes the following roles. This is one possible
+measurement-chain decomposition, NOT a mandatory universal serial pipeline:
 
 ```text
 physical impact -> generated trace R_gen -> declared carrier -> receiver/detector interaction -> effect -> observer record R_obs
 ```
+
+Apply standard 30's boundary-first RELATIONAL contract: source/receiver roles
+belong to specific couplings and observables, not exclusive system species.
+Nested systems reference existing state owners rather than duplicate energy.
+Do not invent a trace, carrier or apparatus for a formal scope, infer isolation
+from categories/distance, or equate weak response with a distinct kind of force.
+Absent/unresolved channels remain scoped omissions or unknowns, not automatic zero.
 
 - `impact` is a physical coupling or state change with a declared field, force, energy-momentum, mass-transfer, stress-energy, or other standard-physics counterpart.
 - `carrier` is a lane-specific physical excitation or signal. Photon, neutrino, gravitational-wave perturbation, and matter-antimatter products must not be identified with `I_trace` by name alone.

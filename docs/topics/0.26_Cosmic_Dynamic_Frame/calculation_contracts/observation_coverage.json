@@ -1,0 +1,270 @@
+{
+  "schema_version": "uet-calculation-contract-v1",
+  "contract_id": "DYNAMIC_FRAME_SOURCE_COVERAGE_V1",
+  "profile": "PHYSICAL_COMPARISON",
+  "review": {
+    "status": "INCOMPLETE",
+    "reviewer": "agent:calculation-observation-standard-v1",
+    "rationale": "W8 source/product admission review only. Scientific code evidence is pinned to public main 829c71502 after verifying all five hashes equal the original local f7ba82307 evidence; unrelated uncommitted producer work is not integrated or certified. Unchanged local input products are identified separately. Upstream observation and physical claims remain INCOMPLETE.",
+    "coverage_evidence": [
+      "docs/topics/0.26_Cosmic_Dynamic_Frame/DATA_MANIFEST.md",
+      "docs/topics/0.26_Cosmic_Dynamic_Frame/VERIFICATION_SPEC.md"
+    ]
+  },
+  "question": "Separate galaxy and spacecraft data/heuristic claim paths",
+  "output": {
+    "quantity": "Separate galaxy and spacecraft data/heuristic claim paths",
+    "unit": "declared per sub-observable",
+    "domain": "Only the approximation and input domain of the identified source evidence.",
+    "accuracy": "Inherit named source tolerances; no new physical accuracy claim.",
+    "claim_intent": "DIAGNOSTIC"
+  },
+  "model": {
+    "formula_ids": [
+      "DYNAMIC_FRAME_SOURCE_COVERAGE_V1"
+    ],
+    "assumptions": "Primary result is Laniakea working-landmark visualization/provenance; Cosmicflows and Pioneer inputs are separately hashed, not numeric model-acceptance residuals.",
+    "approximation": "Existing formal or normalized approximation, unchanged.",
+    "initial_boundary": "Source-defined initial state, boundary and reference; no inferred material state.",
+    "drive_environment": "Source-declared controls only; no acquired physical drive.",
+    "parameters": "Existing controls/calibration remain inputs; no fitting or new coefficient derivation."
+  },
+  "data_policy": {
+    "uses_observations": true,
+    "calibration_ids": [],
+    "comparison_ids": [],
+    "independent_validation": false,
+    "holdout_policy": "No holdout access, fitting, external validation or new blind-eligibility decision."
+  },
+  "observation": {
+    "source_state": "Source-scoped state, not automatically a material state.",
+    "generated_trace": "Derived record only; not the full observable state.",
+    "carrier": "No physical carrier admitted by this metadata review.",
+    "observer_state": "Formal readout or source-described instrument; unknowns are in component ledger.",
+    "readout": "Existing source output, no new measurement mapping.",
+    "backaction": "No new source/receiver coupling; no claim of complete physical backaction.",
+    "frame": "upstream reported frame; not independently verified",
+    "time_convention": "declared source convention",
+    "product_level": "catalog/working-copy summary",
+    "trace_scope": "not_used",
+    "trace_used_as_complete_state": false,
+    "corrections": [
+      {
+        "id": "upstream-frame-and-instrument-processing",
+        "state": "UNKNOWN",
+        "evidence": "docs/topics/0.26_Cosmic_Dynamic_Frame/DATA_MANIFEST.md"
+      }
+    ],
+    "system_partition": {
+      "role_mode": "RELATIONAL",
+      "accounting_component_id": "system_state",
+      "boundary": "Offline analysis of fixed published/catalog working products. Input numbers and analysis configuration are computational states, not a reconstruction of every cosmic or instrument degree of freedom. Upstream frame/correction/measurement uncertainty remains in the component ledger; no new raw telescope reduction or physical trajectory is performed.",
+      "systems": [
+        {
+          "id": "data_product",
+          "state": "Published estimates or catalog/landmark working inputs and recorded uncertainties",
+          "state_accounting": {
+            "kind": "INDEPENDENT",
+            "state_ids": [
+              "product.input_vector"
+            ],
+            "owner_ids": [],
+            "rule": "Input vector counted once as a statistical/computational object, not additional physical energy or a raw source state."
+          }
+        },
+        {
+          "id": "analysis",
+          "state": "Declared processing configuration excluding the already counted input vector",
+          "state_accounting": {
+            "kind": "INDEPENDENT",
+            "state_ids": [
+              "analysis.configuration"
+            ],
+            "owner_ids": [],
+            "rule": "Configuration is separate from source inputs; output is a derived record, not an independent physical substance."
+          }
+        }
+      ],
+      "couplings": [
+        {
+          "id": "product_readout",
+          "source": "data_product",
+          "target": "analysis",
+          "kind": "DETECTION",
+          "component_id": "processing",
+          "map": "Existing offline read/compare or visualization operator; upstream instrument response is not recreated"
+        },
+        {
+          "id": "offline_feedback",
+          "source": "analysis",
+          "target": "data_product",
+          "kind": "BACKACTION",
+          "component_id": "offline_read_only",
+          "map": "No source-input update or coupling to an observing spacecraft in the declared offline calculation"
+        }
+      ],
+      "observables": [
+        {
+          "id": "analysis_record",
+          "detector_id": "analysis",
+          "target_systems": [
+            "data_product"
+          ],
+          "quantity": "Separate galaxy and spacecraft data/heuristic claim paths",
+          "readout_map": "Primary verifier and product-level contract; no claim to recover raw astronomical state",
+          "component_id": "processing",
+          "backaction_targets": [
+            "data_product"
+          ],
+          "backaction_scope_reason": "Read-only offline product analysis; physical upstream response/corrections remain separate unknowns rather than a new spacecraft feedback simulation."
+        }
+      ]
+    }
+  },
+  "components": [
+    {
+      "id": "detector",
+      "group": "detector",
+      "disposition": "UNKNOWN",
+      "reason": "Do not infer raw instrument state from a compiled scalar/catalog.",
+      "evidence": [],
+      "owner": "EVIDENCE",
+      "next_action": "Do not infer raw instrument state from a compiled scalar/catalog."
+    },
+    {
+      "id": "drive_environment",
+      "group": "drive_environment",
+      "disposition": "UNKNOWN",
+      "reason": "Separate prescribed conditions from fitted/heuristic inputs.",
+      "evidence": [],
+      "owner": "EVIDENCE",
+      "next_action": "Separate prescribed conditions from fitted/heuristic inputs."
+    },
+    {
+      "id": "frame_time",
+      "group": "frame_time",
+      "disposition": "UNKNOWN",
+      "reason": "Upstream frame, epoch/time and correction lineage are not fully audited.",
+      "evidence": [],
+      "owner": "EVIDENCE",
+      "next_action": "Upstream frame, epoch/time and correction lineage are not fully audited."
+    },
+    {
+      "id": "numerics",
+      "group": "numerics",
+      "disposition": "MODELED",
+      "reason": "Declared implementation/formal scope in pinned evidence; no material interpretation.",
+      "evidence": [
+        "docs/topics/0.26_Cosmic_Dynamic_Frame/DATA_MANIFEST.md"
+      ]
+    },
+    {
+      "id": "processing",
+      "group": "processing",
+      "disposition": "UNKNOWN",
+      "reason": "Producer labels an internal visualization artifact claim_class D; external-replication meaning is unsupported by this run. Preserve unrelated dirty producer work and resolve its claim metadata before promotion.",
+      "evidence": [
+        "docs/topics/0.26_Cosmic_Dynamic_Frame/DATA_MANIFEST.md"
+      ],
+      "owner": "research-core",
+      "next_action": "Review and reconcile the existing producer's claim label in its owner wave; no source/data rewrite or physical acceptance here."
+    },
+    {
+      "id": "propagation",
+      "group": "propagation",
+      "disposition": "UNKNOWN",
+      "reason": "Upstream observation/propagation processing remains source-specific.",
+      "evidence": [],
+      "owner": "EVIDENCE",
+      "next_action": "Upstream observation/propagation processing remains source-specific."
+    },
+    {
+      "id": "system_state",
+      "group": "system_state",
+      "disposition": "UNKNOWN",
+      "reason": "Trace each published/catalog value to its actual upstream product and model role.",
+      "evidence": [],
+      "owner": "FOUNDATION",
+      "next_action": "Trace each published/catalog value to its actual upstream product and model role."
+    },
+    {
+      "id": "offline_read_only",
+      "group": "processing",
+      "disposition": "NOT_APPLICABLE",
+      "reason": "The declared offline calculation reads fixed products; source-input update/physical detector feedback is not part of this software protocol. This is not a universal physical-isolation claim.",
+      "evidence": [
+        "docs/topics/0.26_Cosmic_Dynamic_Frame/Code/03_Research/Research_Cosmic_Flows.py"
+      ]
+    }
+  ],
+  "error_budget": {
+    "unit": "declared per sub-observable",
+    "numerical": "Existing saved verifier thresholds; not rerun here.",
+    "approximation": "Source approximation only; no physical extension.",
+    "measurement": "No independent physical acceptance in this review.",
+    "systematic": "Unadmitted physical effects remain limitations.",
+    "omissions": "No quantitative physical omission bound asserted.",
+    "dependence": "No independence or covariance invented.",
+    "acceptance": "Source-scoped formal/diagnostic conclusion only.",
+    "omission_limit": null
+  },
+  "identities": [
+    {
+      "path": "docs/topics/0.26_Cosmic_Dynamic_Frame/DATA_MANIFEST.md",
+      "kind": "working_file",
+      "role": "evidence",
+      "sha256": "5269d4ce556c31923011b5f084912e237f8a91ba5ed15b816b7d38948c36839a"
+    },
+    {
+      "path": "docs/topics/0.26_Cosmic_Dynamic_Frame/VERIFICATION_SPEC.md",
+      "kind": "working_file",
+      "role": "evidence",
+      "sha256": "41b0fdd25190ce8715e7c50f5febc89468bcdc0bfdd9b32746343a0257ce7483"
+    },
+    {
+      "path": "docs/topics/0.26_Cosmic_Dynamic_Frame/Code/03_Research/Research_Cosmic_Flows.py",
+      "kind": "git_blob",
+      "role": "code",
+      "commit": "829c7150260452df186c46bdc653ad758983eaee",
+      "sha256": "38cfa9bb8c13e2080160b247cf36b9d50a4119d38ba469d8191b58fcd02bf932"
+    },
+    {
+      "path": "docs/topics/0.26_Cosmic_Dynamic_Frame/Data/03_Research/Laniakea_Flows.json",
+      "kind": "working_file",
+      "role": "input",
+      "availability": "LOCAL_ONLY",
+      "sha256": "9ca181a53efadfaf84147ac735d5a2914841cd628d6b9931c66f9ad602095b44"
+    },
+    {
+      "path": "docs/topics/0.26_Cosmic_Dynamic_Frame/Data/03_Research/source_lock_manifest.json",
+      "kind": "working_file",
+      "role": "input",
+      "availability": "LOCAL_ONLY",
+      "sha256": "eb6c07a3cc54ca8d6de672f63f8bcbb4d4a0c0fafb0139ef0bba7b7986478816"
+    },
+    {
+      "path": "docs/topics/0.26_Cosmic_Dynamic_Frame/Data/Cosmicflows_3_Subset.csv",
+      "kind": "working_file",
+      "role": "input",
+      "availability": "LOCAL_ONLY",
+      "sha256": "147cd04acc76adc9498d0ddbfcc1162580a8c0fd7b29db425ee039df122e5ec8"
+    },
+    {
+      "path": "docs/topics/0.26_Cosmic_Dynamic_Frame/Data/Pioneer_Anomaly_Data.csv",
+      "kind": "working_file",
+      "role": "input",
+      "availability": "LOCAL_ONLY",
+      "sha256": "4549b53a46d5541f732e920990c75644e918b798d0a112f4e8cad155812debd6"
+    }
+  ],
+  "entrypoints": [
+    "docs/topics/0.26_Cosmic_Dynamic_Frame/Code/03_Research/Research_Cosmic_Flows.py",
+    "docs/topics/0.26_Cosmic_Dynamic_Frame/DATA_MANIFEST.md"
+  ],
+  "evidence": [
+    "docs/topics/0.26_Cosmic_Dynamic_Frame/DATA_MANIFEST.md",
+    "docs/topics/0.26_Cosmic_Dynamic_Frame/VERIFICATION_SPEC.md"
+  ],
+  "claim_boundary": "Offline source/product coverage and diagnostic scope only; no raw HST reduction, upstream correction duplication, new cosmology/galaxy validation, external replication or promotion of heuristic fits. Code evidence is the named committed version, not unrelated dirty producer work.",
+  "next_action": "Separate landmark visualization from Cosmicflows frame/calibration analysis and Pioneer residual/thermal-recoil comparison. Reconcile the producer's unsupported external claim label before promotion; raw preprocessing and quantitative residual gates remain open."
+}

@@ -1,0 +1,174 @@
+{
+  "schema_version": "uet-calculation-contract-v1",
+  "contract_id": "T13_NONLINEAR_PHYSICAL_ADMISSION_V1",
+  "profile": "PHYSICAL_COMPARISON",
+  "review": {
+    "status": "INCOMPLETE",
+    "reviewer": "agent:calculation-observation-standard-v1",
+    "rationale": "Scoped methodological review; original results are pinned to a distinct local research commit, not integrated or independently rerun in this checkout.",
+    "coverage_evidence": [
+      "git:0f17012ffd6ad456c150b10e048efd868ce95588:docs/topics/0.13_Thermodynamic_Bridge/Result/T13_INVARIANT_POLE_DISCRIMINATION_2026-10-15.md",
+      "git:0f17012ffd6ad456c150b10e048efd868ce95588:docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/t13_invariant_pole_discrimination.json"
+    ]
+  },
+  "question": "Do existing records measure the independently driven mechanical kernel required by the invariant test?",
+  "output": {
+    "quantity": "declared scoped result",
+    "unit": "dimensionless",
+    "domain": "Only the approximation and input domain of the identified source evidence.",
+    "accuracy": "Inherit named source tolerances; no new physical accuracy claim.",
+    "claim_intent": "DIAGNOSTIC"
+  },
+  "model": {
+    "formula_ids": [
+      "T13_NONLINEAR_PHYSICAL_ADMISSION_V1"
+    ],
+    "assumptions": "See identified source contract; symbols are lane-specific.",
+    "approximation": "Existing formal or normalized approximation, unchanged.",
+    "initial_boundary": "Source-defined initial state, boundary and reference; no inferred material state.",
+    "drive_environment": "Source-declared controls only; no acquired physical drive.",
+    "parameters": "Existing controls/calibration remain inputs; no fitting or new coefficient derivation."
+  },
+  "data_policy": {
+    "uses_observations": true,
+    "calibration_ids": [],
+    "comparison_ids": [],
+    "independent_validation": false,
+    "holdout_policy": "No holdout access, fitting, external validation or new blind-eligibility decision."
+  },
+  "observation": {
+    "system_partition": {
+      "role_mode": "RELATIONAL", "accounting_component_id": "system_state",
+      "boundary": "Admission topology only: sample, drive and receiver are distinct candidate systems. Their state laws, applicable time protocol, physical units and error budget are not admitted by this graph. No missing coupling is set to zero.",
+      "systems": [
+        {"id": "sample", "state": "Unadmitted material mode/state and invariant-kernel matching; no absolute Phi amplitude inferred", "state_accounting": {"kind": "INDEPENDENT", "state_ids": ["candidate.sample_state"], "owner_ids": [], "rule": "Unadmitted state-vector placeholder, not an asserted number of physical degrees of freedom or an energy law; system_state/detector gaps remain open."}},
+        {"id": "drive", "state": "Unadmitted physical drive state/protocol", "state_accounting": {"kind": "INDEPENDENT", "state_ids": ["candidate.drive_state"], "owner_ids": [], "rule": "Unadmitted state-vector placeholder, not an asserted number of physical degrees of freedom or an energy law; system_state/detector gaps remain open."}},
+        {"id": "receiver", "state": "Unadmitted receiver state/readout calibration", "state_accounting": {"kind": "INDEPENDENT", "state_ids": ["candidate.receiver_state"], "owner_ids": [], "rule": "Unadmitted state-vector placeholder, not an asserted number of physical degrees of freedom or an energy law; system_state/detector gaps remain open."}}
+      ],
+      "couplings": [
+        {"id": "drive_to_sample", "source": "drive", "target": "sample", "kind": "SIGNAL", "component_id": "drive_environment", "map": "UNKNOWN source-to-state operator; no fitted target-derived input admitted"},
+        {"id": "sample_to_receiver", "source": "sample", "target": "receiver", "kind": "DETECTION", "component_id": "detector", "map": "UNKNOWN state-to-readout operator in the declared physical protocol"},
+        {"id": "receiver_to_sample", "source": "receiver", "target": "sample", "kind": "BACKACTION", "component_id": "detector", "map": "UNKNOWN feedback; no omission bound supplied"},
+        {"id": "receiver_to_drive", "source": "receiver", "target": "drive", "kind": "BACKACTION", "component_id": "detector", "map": "UNKNOWN direct/mediated feedback within the source-readout protocol"}
+      ],
+      "observables": [{"id": "candidate_reading", "detector_id": "receiver", "target_systems": ["sample"], "quantity": "Independently driven kernel response in an admitted instrument coordinate/time chart", "readout_map": "UNKNOWN physical operator, not a complete-state measurement", "component_id": "detector", "backaction_targets": ["sample", "drive"], "backaction_scope_reason": "Assess the sampled state and its drive separately; topology is provisional and additional coupled systems require substantive scope review."}]
+    },
+    "source_state": "Source-scoped state, not automatically a material state.",
+    "generated_trace": "Derived record only; not the full observable state.",
+    "carrier": "No physical carrier admitted by this metadata review.",
+    "observer_state": "Formal readout or source-described instrument; unknowns are in component ledger.",
+    "readout": "Existing source output, no new measurement mapping.",
+    "backaction": "No new source/receiver coupling; no claim of complete physical backaction.",
+    "frame": "declared source frame",
+    "time_convention": "declared source convention",
+    "product_level": "published/compiled observations",
+    "trace_scope": "not_used",
+    "trace_used_as_complete_state": false,
+    "corrections": []
+  },
+  "components": [
+    {
+      "id": "detector",
+      "group": "detector",
+      "disposition": "UNKNOWN",
+      "reason": "Source/readout gain, phase, mode and units are not admitted.",
+      "evidence": [],
+      "owner": "EVIDENCE",
+      "next_action": "Source/readout gain, phase, mode and units are not admitted."
+    },
+    {
+      "id": "drive_environment",
+      "group": "drive_environment",
+      "disposition": "UNKNOWN",
+      "reason": "Acquire an eligible independently characterized drive/kernel package before physical scoring.",
+      "evidence": [],
+      "owner": "EVIDENCE",
+      "next_action": "Acquire an eligible independently characterized drive/kernel package before physical scoring."
+    },
+    {
+      "id": "frame_time",
+      "group": "frame_time",
+      "disposition": "UNKNOWN",
+      "reason": "Lock physical frequency convention and coordinate conversion.",
+      "evidence": [],
+      "owner": "EVIDENCE",
+      "next_action": "Lock physical frequency convention and coordinate conversion."
+    },
+    {
+      "id": "numerics",
+      "group": "numerics",
+      "disposition": "MODELED",
+      "reason": "Declared implementation/formal scope in pinned evidence; no material interpretation.",
+      "evidence": [
+        "git:0f17012ffd6ad456c150b10e048efd868ce95588:docs/topics/0.13_Thermodynamic_Bridge/Result/T13_INVARIANT_POLE_DISCRIMINATION_2026-10-15.md"
+      ]
+    },
+    {
+      "id": "processing",
+      "group": "processing",
+      "disposition": "UNKNOWN",
+      "reason": "Clean public lineage integration of the pinned research commit remains open.",
+      "evidence": [
+        "git:0f17012ffd6ad456c150b10e048efd868ce95588:docs/topics/0.13_Thermodynamic_Bridge/Result/T13_INVARIANT_POLE_DISCRIMINATION_2026-10-15.md"
+      ],
+      "owner": "EVIDENCE",
+      "next_action": "Review/integrate the exact owner evidence or package an authorized portable source before promotion."
+    },
+    {
+      "id": "propagation",
+      "group": "propagation",
+      "disposition": "UNKNOWN",
+      "reason": "Instrument transfer and mode matching remain open.",
+      "evidence": [],
+      "owner": "EVIDENCE",
+      "next_action": "Instrument transfer and mode matching remain open."
+    },
+    {
+      "id": "system_state",
+      "group": "system_state",
+      "disposition": "UNKNOWN",
+      "reason": "Independent material mode/state and effective kernel correspondence missing; an absolute base-Phi scale is required only for claims that use that scale.",
+      "evidence": [],
+      "owner": "FOUNDATION",
+      "next_action": "Independent material mode/state and effective kernel correspondence missing; an absolute base-Phi scale is required only for claims that use that scale."
+    }
+  ],
+  "error_budget": {
+    "unit": "dimensionless",
+    "numerical": "Existing saved verifier thresholds; not rerun here.",
+    "approximation": "Source approximation only; no physical extension.",
+    "measurement": "No independent physical acceptance in this review.",
+    "systematic": "Unadmitted physical effects remain limitations.",
+    "omissions": "No quantitative physical omission bound asserted.",
+    "dependence": "No independence or covariance invented.",
+    "acceptance": "Source-scoped formal/diagnostic conclusion only.",
+    "omission_limit": null
+  },
+  "identities": [
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/T13_INVARIANT_POLE_DISCRIMINATION_2026-10-15.md",
+      "kind": "git_blob",
+      "role": "evidence",
+      "commit": "0f17012ffd6ad456c150b10e048efd868ce95588",
+      "sha256": "84bc32d4887b2639ea8921136a1fa269ce269b865d15549de55129696a05ec6b",
+      "availability": "LOCAL_ONLY"
+    },
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/t13_invariant_pole_discrimination.json",
+      "kind": "git_blob",
+      "role": "evidence",
+      "commit": "0f17012ffd6ad456c150b10e048efd868ce95588",
+      "sha256": "1ddbb24c126e48f40d6a7abdae765b4fabdced9547f8f07ad3319ec08388a985",
+      "availability": "LOCAL_ONLY"
+    }
+  ],
+  "entrypoints": [
+    "docs/topics/0.13_Thermodynamic_Bridge/Result/T13_INVARIANT_POLE_DISCRIMINATION_2026-10-15.md"
+  ],
+  "evidence": [
+    "git:0f17012ffd6ad456c150b10e048efd868ce95588:docs/topics/0.13_Thermodynamic_Bridge/Result/T13_INVARIANT_POLE_DISCRIMINATION_2026-10-15.md",
+    "git:0f17012ffd6ad456c150b10e048efd868ce95588:docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/t13_invariant_pole_discrimination.json"
+  ],
+  "claim_boundary": "No admitted physical kernel package. Reuse formal result without rerunning fixtures or treating a graphite inquiry as a helium prerequisite.",
+  "next_action": "Admit one actual same-state source/kernel/readout operator with units, gain/phase, frequency convention and joint uncertainty; use identifiable combinations where justified. Do not demand an absolute Phi scale for a scale-invariant test, and do not substitute a different native forcing protocol."
+}

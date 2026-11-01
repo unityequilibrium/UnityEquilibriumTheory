@@ -1,5 +1,9 @@
 # UET Equation Research and Physical Correspondence Standard
 
+The scoped [Calculation and Observation Completeness Standard](30_Calculation_and_Observation_Completeness_Standard.md)
+extends F0-F8 with component, observer, correction and error-budget contracts.
+It introduces no additional scientific PASS and never bypasses a required F gate.
+
 This is the canonical workflow for creating, reviewing, implementing, and promoting
 UET equations. It supplements the project constitution, lifecycle, formula-audit, and
 hardening standards; it does not replace them.
@@ -60,6 +64,15 @@ An initial inventory may be incomplete, but it must say so explicitly and keep t
 foundation gate `BLOCKED` until the missing scope is named.
 
 ## F1 — Ontology
+
+Before composing equations, declare the subsystem boundary and directed physical
+couplings under the boundary-first section of standard 30. Distinguish internal
+impact, receiver-side effect, detector state, observable/readout and source backaction.
+An internal interaction does not imply an observable external signal; a received
+signal does not imply significant reciprocal source disturbance. These are separate
+claims requiring separate models/bounds. A missing edge is unassessed, not zero.
+The same physical event may have an impact and a receiver-side effect; they are not
+two invented force species. Detector is a system; observable is a defined quantity.
 
 Every symbol must have a mathematical role and a physical interpretation status.
 
@@ -172,6 +185,14 @@ Synthetic work has status `SIMULATION_ONLY`; internal reruns have status `INTERN
 Neither is external validation.
 
 ## F7 — Observable mapping
+
+Use `observation.system_partition` in the existing calculation contract to connect
+each declared observable to its receiver and admitted input path. Do not require all
+internal states to be observable, insert a serial trace/carrier stage unsupported by
+the model, or silently add observation-derived feedback to the source. Assess detector
+backaction separately even when the source and detector are treated as subsystems.
+Changing a partition, readout, detector state law or omitted coupling requires scope
+review; source dynamics change only through the declared physical couplings.
 
 Before fitting or comparing data, define a measurement operator:
 

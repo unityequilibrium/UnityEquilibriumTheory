@@ -1,0 +1,126 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:uet:calculation-contract:v1",
+  "title": "UET Calculation Contract v1",
+  "type": "object",
+  "required": ["schema_version", "contract_id", "profile", "review", "question", "output", "model", "data_policy", "observation", "components", "error_budget", "identities", "entrypoints", "evidence", "claim_boundary", "next_action"],
+  "properties": {
+    "schema_version": {"const": "uet-calculation-contract-v1"},
+    "contract_id": {"type": "string", "minLength": 1},
+    "profile": {"enum": ["FORMAL", "SYNTHETIC", "PHYSICAL_COMPARISON"]},
+    "question": {"type": "string", "minLength": 1},
+    "claim_boundary": {"type": "string", "minLength": 1},
+    "next_action": {"type": "string", "minLength": 1},
+    "entrypoints": {"type": "array", "minItems": 1, "items": {"type": "string", "minLength": 1}},
+    "evidence": {"type": "array", "minItems": 1, "items": {"type": "string", "minLength": 1}},
+    "review": {
+      "type": "object", "required": ["status", "reviewer", "rationale"],
+      "properties": {
+        "status": {"enum": ["UNREVIEWED", "INCOMPLETE", "COMPLETE_FOR_SCOPE", "STALE"]},
+        "reviewer": {"type": "string", "minLength": 1},
+        "rationale": {"type": "string", "minLength": 1}
+      }
+    },
+    "output": {"type": "object", "required": ["quantity", "unit", "domain", "accuracy", "claim_intent"], "properties": {
+      "quantity": {"type": "string", "minLength": 1}, "unit": {"type": "string", "minLength": 1},
+      "domain": {"type": "string", "minLength": 1}, "accuracy": {"type": "string", "minLength": 1},
+      "claim_intent": {"enum": ["FORMAL_RESULT", "DIAGNOSTIC", "PHYSICAL_ACCEPTANCE"]}
+    }},
+    "model": {"type": "object", "required": ["formula_ids", "assumptions", "approximation", "initial_boundary", "drive_environment", "parameters"], "properties": {
+      "formula_ids": {"type": "array", "minItems": 1, "items": {"type": "string", "minLength": 1}},
+      "assumptions": {"type": "string", "minLength": 1}, "approximation": {"type": "string", "minLength": 1},
+      "initial_boundary": {"type": "string", "minLength": 1}, "drive_environment": {"type": "string", "minLength": 1},
+      "parameters": {"type": "string", "minLength": 1}
+    }},
+    "data_policy": {"type": "object", "required": ["uses_observations", "calibration_ids", "comparison_ids", "independent_validation", "holdout_policy"], "properties": {
+      "uses_observations": {"type": "boolean"}, "independent_validation": {"type": "boolean"},
+      "calibration_ids": {"type": "array", "items": {"type": "string"}},
+      "comparison_ids": {"type": "array", "items": {"type": "string"}},
+      "holdout_policy": {"type": "string", "minLength": 1}
+    }},
+    "observation": {"type": "object", "required": ["source_state", "generated_trace", "carrier", "observer_state", "readout", "backaction", "frame", "time_convention", "product_level", "corrections"], "properties": {
+      "system_partition": {"type": "object", "required": ["boundary", "systems", "couplings", "observables"], "properties": {
+        "boundary": {"type": "string", "minLength": 1},
+        "role_mode": {"enum": ["LEGACY_FIXED", "RELATIONAL"]},
+        "accounting_component_id": {"type": "string", "minLength": 1},
+        "boundary_change": {"type": "object", "required": ["baseline_identity", "baseline_contract_id", "baseline_contract_sha256", "component_id", "outcome", "explanation"], "properties": {
+          "baseline_identity": {"type": "string", "minLength": 1},
+          "baseline_contract_id": {"type": "string", "minLength": 1},
+          "baseline_contract_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+          "component_id": {"type": "string", "minLength": 1},
+          "outcome": {"enum": ["EQUIVALENT", "APPROXIMATE", "DIFFERENT", "UNRESOLVED"]},
+          "explanation": {"type": "string", "minLength": 1}
+        }},
+        "no_detector_reason": {"type": "string", "minLength": 1},
+        "systems": {"type": "array", "minItems": 1, "items": {"type": "object", "required": ["id", "state"], "properties": {
+          "id": {"type": "string", "minLength": 1},
+          "role": {"enum": ["SOURCE", "DETECTOR", "ENVIRONMENT", "CARRIER", "AUXILIARY"]},
+          "state": {"type": "string", "minLength": 1},
+          "parent_id": {"type": "string", "minLength": 1},
+          "categories": {"type": "array", "items": {"type": "string", "minLength": 1}},
+          "state_accounting": {"type": "object", "required": ["kind", "state_ids", "owner_ids", "rule"], "properties": {
+            "kind": {"enum": ["INDEPENDENT", "AGGREGATE", "VIEW"]},
+            "state_ids": {"type": "array", "items": {"type": "string", "minLength": 1}},
+            "owner_ids": {"type": "array", "items": {"type": "string", "minLength": 1}},
+            "rule": {"type": "string", "minLength": 1}
+          }}
+        }}},
+        "couplings": {"type": "array", "items": {"type": "object", "required": ["id", "source", "target", "kind", "component_id", "map"], "properties": {
+          "id": {"type": "string", "minLength": 1},
+          "source": {"type": "string", "minLength": 1}, "target": {"type": "string", "minLength": 1},
+          "kind": {"enum": ["INTERNAL", "SIGNAL", "DETECTION", "BACKACTION", "ENVIRONMENT", "RECEIVER_DYNAMICS"]},
+          "component_id": {"type": "string", "minLength": 1}, "map": {"type": "string", "minLength": 1}
+        }}},
+        "observables": {"type": "array", "items": {"type": "object", "required": ["id", "detector_id", "target_systems", "quantity", "readout_map", "component_id"], "properties": {
+          "id": {"type": "string", "minLength": 1}, "detector_id": {"type": "string", "minLength": 1},
+          "target_systems": {"type": "array", "minItems": 1, "items": {"type": "string", "minLength": 1}},
+          "backaction_targets": {"type": "array", "items": {"type": "string", "minLength": 1}},
+          "backaction_scope_reason": {"type": "string", "minLength": 1},
+          "quantity": {"type": "string", "minLength": 1}, "readout_map": {"type": "string", "minLength": 1},
+          "component_id": {"type": "string", "minLength": 1}
+        }}}
+      }},
+      "source_state": {"type": "string", "minLength": 1}, "generated_trace": {"type": "string", "minLength": 1},
+      "carrier": {"type": "string", "minLength": 1}, "observer_state": {"type": "string", "minLength": 1},
+      "readout": {"type": "string", "minLength": 1}, "backaction": {"type": "string", "minLength": 1},
+      "frame": {"type": "string", "minLength": 1}, "time_convention": {"type": "string", "minLength": 1},
+      "product_level": {"type": "string", "minLength": 1},
+      "corrections": {"type": "array", "items": {"type": "object", "required": ["id", "state", "evidence"], "properties": {
+        "id": {"type": "string", "minLength": 1}, "state": {"enum": ["APPLIED_UPSTREAM", "APPLY_HERE", "NOT_APPLICABLE", "UNKNOWN"]},
+        "evidence": {"type": "string", "minLength": 1}
+      }}}
+    }},
+    "components": {"type": "array", "minItems": 7, "items": {
+      "type": "object", "required": ["id", "group", "disposition", "reason", "evidence"],
+      "properties": {
+        "id": {"type": "string", "minLength": 1},
+        "group": {"enum": ["system_state", "drive_environment", "propagation", "frame_time", "detector", "processing", "numerics"]},
+        "disposition": {"enum": ["MODELED", "UPSTREAM_CORRECTED", "BOUNDED_OMISSION", "NOT_APPLICABLE", "UNKNOWN"]},
+        "reason": {"type": "string", "minLength": 1}, "evidence": {"type": "array", "items": {"type": "string", "minLength": 1}},
+        "owner": {"type": "string", "minLength": 1}, "next_action": {"type": "string", "minLength": 1},
+        "bound": {"type": "number", "minimum": 0}, "unit": {"type": "string", "minLength": 1},
+        "joint_group": {"type": "string", "minLength": 1}
+      }
+    }},
+    "error_budget": {"type": "object", "required": ["unit", "numerical", "approximation", "measurement", "systematic", "omissions", "dependence", "acceptance", "omission_limit"], "properties": {
+      "unit": {"type": "string", "minLength": 1}, "numerical": {"type": "string", "minLength": 1},
+      "approximation": {"type": "string", "minLength": 1}, "measurement": {"type": "string", "minLength": 1},
+      "systematic": {"type": "string", "minLength": 1}, "omissions": {"type": "string", "minLength": 1},
+      "dependence": {"type": "string", "minLength": 1}, "acceptance": {"type": "string", "minLength": 1},
+      "omission_limit": {"type": ["number", "null"], "minimum": 0}
+    }},
+    "identities": {"type": "array", "minItems": 1, "items": {
+      "type": "object", "required": ["path", "kind", "sha256", "role"], "properties": {
+        "path": {"type": "string", "minLength": 1}, "kind": {"enum": ["working_file", "git_blob"]},
+        "sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+        "role": {"enum": ["input", "config", "code", "evidence"]},
+        "availability": {"enum": ["REQUIRED", "LOCAL_ONLY"]},
+        "commit": {"type": "string", "pattern": "^[0-9a-f]{40}$"}
+      }
+    }},
+    "physical_gates": {"type": "array", "items": {"type": "object", "required": ["path", "field", "accepted"], "properties": {
+      "path": {"type": "string", "minLength": 1}, "field": {"type": "string", "minLength": 1},
+      "accepted": {"type": "array", "minItems": 1}
+    }}}
+  }
+}

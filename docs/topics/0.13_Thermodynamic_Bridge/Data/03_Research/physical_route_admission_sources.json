@@ -1,0 +1,40 @@
+{
+  "kind":"CURATED_PROTOCOL_REFERENCE_NOT_MEASUREMENT_DATA",
+  "review_date":"2026-10-18",
+  "owner":"Topic13",
+  "selected_route":"USHAPE_2022_NATIVE_MIMO",
+  "selection_reason":"Among the inspected candidates this provides two electrode inputs, two directional readouts and published full nonlinear equations; capability does not establish independent calibration or UET correspondence.",
+  "sources":[
+    {"id":"USHAPE_2022","doi":"10.1038/s41598-022-14657-1","url":"https://www.nature.com/articles/s41598-022-14657-1","locators":["Material and methods, Eqs. (1)-(2)","Experimental setup and characterization, Fig. 1 and Fig. 3","Results, Fig. 6 and Fig. 7","Supplementary Table S1 and sections on pressure and delta coefficients"],"role":"selected physical protocol/native-operator reference, not admitted validation rows","article_license":"CC-BY-4.0 subject to stated third-party exceptions","raw_record_access":"UNKNOWN; no numeric phase/time-record locator identified in inspected page and supplement","transcription_scope":"Model coefficients and reported protocol settings only; no measured response rows or figure digitization"},
+    {"id":"BEAM_2021","doi":"10.1038/s41378-020-00230-1","url":"https://www.nature.com/articles/s41378-020-00230-1","locators":["Materials and methods, Experimental process, Fig. 8"],"role":"alternative base-excited 1:2 platform","known_limit":"One point measures both spectral modes; independent modal normalization and source participation/calibration not admitted. Different frequency experiments might supply informative dynamics; lack of two actuators is not a universal no-go."},
+    {"id":"ARCH_2016","doi":"10.1038/srep34717","url":"https://www.nature.com/articles/srep34717","locators":["Devices and electrothermal frequency shifting, Fig. 1-2"],"role":"alternative tunable electrostatic platform","known_limit":"State-changing thermal tuning and electrode/readout matching need separate review; not an already admitted fixed-state source/observer package."},
+    {"id":"MEMS_2017","doi":"10.1038/ncomms15523","url":"https://www.nature.com/articles/ncomms15523","locators":["Transient characterizations","Self-sustaining oscillation and ringdown around internal resonance","Data availability"],"role":"alternative coherent-transfer observation","known_limit":"3:1 instead of current 2:1 operator; published readout caveat confounds torsional response with principal-mode third harmonic at resonance. Data are author-requested, not acquired here."}
+  ],
+  "supplement":{
+    "url":"https://media.springernature.com/original/springer-static/esm/art%3A10.1038%2Fs41598-022-14657-1/MediaObjects/41598_2022_14657_MOESM1_ESM.docx",
+    "sha256":"e8052811a90517d3bc3d3b264cb74598f90ecd23d40697e7b794b92196d265f4",
+    "bytes":6336789,
+    "acquisition":"Read in memory only; binary hash verified; no local raw-file copy retained",
+    "native_math_limit":"S16/S18 equation images exist but the available WMF renderer overlapped glyphs. Their SI/mass-normalization definitions were not admitted from that rendering. Native equations in the main article and plain-text Table S1 were readable.",
+    "sensitivity_boundary":"Supplement text reports delta1/delta2 sensitivity as small for its tested 54 V DC, 0.5 V AC internal-resonance configuration; this is model sensitivity evidence, not a supplied measurement uncertainty bound.",
+    "table_s1_model_values":{
+      "k31":"0.00176","k32":"0.00419","alpha1":"0.101","alpha2":"0.084",
+      "beta1":"0.0000222","beta2":"0.000106","delta1":"0.000348","delta2":"0.00271",
+      "mu1":"0.000184","mu2":"0.00114","wn2":"2.19"
+    },
+    "parameter_origin":"Upstream model values calculated after geometry/material adjustment to frequency data, not independently predicted UET constants or a covariance-bearing calibration package"
+  },
+  "reference_protocol":{"Vdc2_V":"54","Vac2_peak_V":"0.5","voltage_convention":"Coefficient of cosine in native force equation; not converted from RMS","scope":"Published operating-setting reference, not a measured-response comparison"},
+  "diagnostic_plan":{"branch":"Conditional zero-AC E2 DC-bias state, E1 DC/AC set to zero; not asserted to reconstruct an unspecified experimental E1 setting","bias_V":"54","root_bracket":["0","0.25"],"bisection_steps":48,"computational_scope":"One exact rational bracket computation, source-harmonic algebra and domain controls; no fit, trajectory or sweep"},
+  "admission_prerequisites":[
+    {"id":"material_projection","status":"NOT_ADMITTED","needed":"Named finite-mode projection of current UET lane or quantitatively bounded reduction to the selected native operator; a beam coordinate is not Phi by label"},
+    {"id":"biased_source_state","status":"INCOMPLETE","needed":"Both electrodes' DC/AC settings, equilibrium offsets and local linearization in the same material state; no pooling bias settings as one frozen kernel"},
+    {"id":"source_transfer","status":"INCOMPLETE","needed":"Calibrated electrode-to-modal generalized forces, voltage phase/time and gap dependence; retain or bound direct harmonic forcing"},
+    {"id":"readout_transfer","status":"INCOMPLETE","needed":"Signed complex two-axis records, timing/exposure and detector transfer; point A to generalized-coordinate mapping at point B and independent relative gain"},
+    {"id":"normalization_and_mass","status":"NOT_ADMITTED","needed":"Readable verified S16/S18 normalization plus independently supported modal masses/profiles and covariance or conservative bounds; do not set alpha1=2*alpha2 in published dimensionless coordinates"},
+    {"id":"error_budget","status":"NOT_ADMITTED","needed":"Joint uncertainties for geometry/frequency calibration, source/readout/noise, damping and omitted terms in the actual comparison output; no universal 10 percent bound inferred"},
+    {"id":"comparison_records","status":"NOT_ADMITTED","needed":"Exact eligible two-channel row/trajectory locator and usage terms, provenance, calibration partition and previous-exposure record; published curves already inspected are not blind holdout"}
+  ],
+  "bounded_locator_check":{"queries":["site.zenodo.org s41598-022-14657-1","site.figshare.com Nonlinear mode saturation","site.data.4tu.nl U-shaped resonator","Exact paper title plus dataset"],"result":"No exact qualifying numeric-record locator identified in this bounded pass; not a claim that no public data exist anywhere","restart_condition":"New exact record, verified normalization/source-operator package or separately authorized acquisition; no unchanged keyword loop"},
+  "constraints":{"new_contact":false,"raw_rows_scored":false,"holdout_accessed":false,"private_input":false,"large_archive_download":false,"new_UET_term":false,"physics_status_changed":false}
+}
