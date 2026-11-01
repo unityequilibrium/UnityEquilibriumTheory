@@ -1,57 +1,25 @@
+"""OpenRouter client with persistent, fail-closed cost accounting.
+
+chat() still returns str; embed() still returns vectors. No prompts or keys are logged.
+Reservations survive restarts; uncertain charges must be reconciled before another call.
 """
-OpenRouter API Client with Per-Agent Cost Tracking
-===================================================
-Unified client for all OpenRouter API calls (embeddings + chat).
-Each call is logged with agent_id, model, token counts, and cost.
-
-Usage:
-    from docs.knowledge_base.api_client import OpenRouterClient
-
-    client = OpenRouterClient.from_config("path/to/config.toml")
-
-    # Embeddings
-    vectors = client.embed(["Hello world", "UET physics"])
-
-    # Chat (agent-routed)
-    response = client.chat("orchestrator", [
-        {"role": "user", "content": "Find research on κ > 0.5"}
-    ])
-
-    # Check costs
-    client.cost_tracker.print_summary()
-
-Rust Compatibility:
-    - CostEntry is a simple dataclass → maps to Rust struct
-    - cost_log.jsonl is line-delimited JSON → serde-compatible
-"""
-
+from __future__ import annotations
 import json
-import time
-from dataclasses import dataclass, field, asdict
-from datetime import datetime, date
+import os
+import uuid
+from contextlib import contextmanager
+from dataclasses import dataclass, asdict
+from datetime import datetime, timezone
+from decimal import Decimal
 from pathlib import Path
 from typing import Optional
-
-try:
-    import tomllib
-except ImportError:
-    try:
-        import tomli as tomllib
-    except ImportError:
-        tomllib = None
-
+import tomllib
 try:
     import httpx
 except ImportError:
     httpx = None
 
-
-# =============================================================================
-# COST TRACKING
-# =============================================================================
-
-# OpenRouter pricing per 1M tokens (as of 2026-02)
-# Source: https://openrouter.ai/models
+# Historical estimates only. Live requests require a fresh price snapshot.
 _MODEL_PRICING = {
     # Embedding models
     "qwen/qwen3-embedding-8b": {"input": 0.01, "output": 0.0},
@@ -69,374 +37,318 @@ _MODEL_PRICING = {
     "google/gemini-2.0-flash-001": {"input": 0.10, "output": 0.40},
 }
 
+class BudgetExceeded(RuntimeError):
+    pass
+
+class UnresolvedCost(RuntimeError):
+    pass
 
 @dataclass
 class CostEntry:
-    """Single API call cost record. Rust-compatible (serde JSON)."""
-
     timestamp: str
     agent_id: str
     model: str
     input_tokens: int
     output_tokens: int
-    cost_usd: float
+    cost_usd: Optional[float]
     cumulative_daily_usd: float
-    endpoint: str  # "chat" or "embeddings"
+    endpoint: str
     success: bool = True
     error: Optional[str] = None
-
+    request_id: str = ''
+    experiment_id: str = 'default'
+    cost_status: str = 'unknown'
+    estimated_cost_usd: Optional[float] = None
+    reserved_usd: float = 0.0
+    state: str = 'settled'
+    usage: Optional[dict] = None
+    schema_version: int = 2
 
 class CostTracker:
-    """
-    Track API costs per agent, per model, per day.
-
-    Logs every call to a JSONL file for transparency.
-    Enforces daily budget limits per agent.
-    """
-
     def __init__(self, log_file: Path, alert_threshold: float = 1.0):
         self.log_file = Path(log_file)
         self.alert_threshold = alert_threshold
-        self._daily_totals: dict[str, float] = {}  # agent_id -> daily USD
-        self._today: str = ""
-        self._reset_if_new_day()
+        self._locked = False
 
-    def _reset_if_new_day(self):
-        """Reset daily totals at midnight."""
-        today = date.today().isoformat()
-        if today != self._today:
-            self._daily_totals = {}
-            self._today = today
+    def entries(self):
+        if not self.log_file.exists():
+            return []
+        entries = []
+        for line in self.log_file.read_text(encoding='utf-8').splitlines():
+            if not line.strip():
+                continue
+            try:
+                row = json.loads(line)
+                if not isinstance(row, dict):
+                    raise ValueError('Ledger entry is not an object')
+                entries.append(row)
+            except (ValueError,TypeError) as exc:
+                raise UnresolvedCost('Malformed cost ledger; reconcile before spending') from exc
+        return entries
 
-    def get_daily_total(self, agent_id: str) -> float:
-        """Get today's total cost for an agent."""
-        self._reset_if_new_day()
-        return self._daily_totals.get(agent_id, 0.0)
+    def effective_entries(self):
+        merged = {}
+        for index, entry in enumerate(self.entries()):
+            key = entry.get('request_id') or f'legacy-{index}'
+            merged[key] = entry
+        return list(merged.values())
 
-    def get_total_daily_cost(self) -> float:
-        """Get today's total cost across all agents."""
-        self._reset_if_new_day()
-        return sum(self._daily_totals.values())
+    @contextmanager
+    def exclusive(self):
+        if self._locked:
+            yield
+            return
+        self.log_file.parent.mkdir(parents=True, exist_ok=True)
+        lock = self.log_file.with_suffix(self.log_file.suffix + '.lock')
+        try:
+            fd = os.open(lock, os.O_CREAT | os.O_EXCL | os.O_WRONLY, 0o600)
+        except FileExistsError as exc:
+            raise UnresolvedCost('Ledger already locked; inspect pending calls before recovery') from exc
+        try:
+            os.write(fd, str(os.getpid()).encode())
+            self._locked = True
+            yield
+        finally:
+            self._locked = False
+            os.close(fd)
+            lock.unlink()
 
-    def check_budget(self, agent_id: str, budget_limit: float) -> bool:
-        """Check if agent is within daily budget. Raises if over."""
-        current = self.get_daily_total(agent_id)
-        if current >= budget_limit > 0:
-            raise BudgetExceeded(
-                f"Agent '{agent_id}' exceeded daily budget: "
-                f"${current:.4f} >= ${budget_limit:.2f}"
-            )
+    def _append(self, entry):
+        self.log_file.parent.mkdir(parents=True, exist_ok=True)
+        with self.log_file.open('a',encoding='utf-8') as stream:
+            stream.write(json.dumps(entry,ensure_ascii=False,allow_nan=False)+'\n')
+            stream.flush()
+            os.fsync(stream.fileno())
+
+    @staticmethod
+    def _amount(entry):
+        amount = entry.get('cost_usd')
+        if amount is None:
+            amount = entry.get('reserved_usd', 0)
+        value = Decimal(str(amount))
+        if not value.is_finite() or value < 0:
+            raise UnresolvedCost('Invalid amount in ledger')
+        return value
+
+    def get_daily_total(self, agent_id):
+        today = datetime.now(timezone.utc).date().isoformat()
+        return float(sum((self._amount(e) for e in self.effective_entries()
+            if e.get('agent_id') == agent_id and e.get('timestamp','')[:10] == today),Decimal(0)))
+
+    def get_total_daily_cost(self):
+        today = datetime.now(timezone.utc).date().isoformat()
+        return float(sum((self._amount(e) for e in self.effective_entries()
+            if e.get('timestamp','')[:10] == today),Decimal(0)))
+
+    def experiment_total(self, experiment_id):
+        return sum((self._amount(e) for e in self.effective_entries()
+            if e.get('experiment_id','default') == experiment_id),Decimal(0))
+
+    def check_budget(self, agent_id, budget_limit):
+        if budget_limit > 0 and self.get_daily_total(agent_id) >= budget_limit:
+            raise BudgetExceeded('Daily budget exhausted')
         return True
 
-    def log_call(
-        self,
-        agent_id: str,
-        model: str,
-        input_tokens: int,
-        output_tokens: int,
-        endpoint: str = "chat",
-        success: bool = True,
-        error: Optional[str] = None,
-    ) -> CostEntry:
-        """Log an API call and update daily totals."""
-        self._reset_if_new_day()
+    def reserve(self, agent_id, model, amount, experiment_id, experiment_limit, daily_limit=0):
+        if not self._locked:
+            raise RuntimeError('Reservation requires exclusive ledger lock')
+        amount = Decimal(str(amount))
+        if not amount.is_finite() or amount <= 0:
+            raise UnresolvedCost('A positive conservative reservation is required')
+        entries = self.effective_entries()
+        if any(e.get('state') in {'reserved','unresolved'} or
+               (e.get('cost_usd') is None and not e.get('request_id')) for e in entries):
+            raise UnresolvedCost('Pending cost must be reconciled before paid calls')
+        if experiment_limit <= 0 or self.experiment_total(experiment_id) + amount > Decimal(str(experiment_limit)):
+            raise BudgetExceeded('Experiment cap would be exceeded')
+        if daily_limit > 0 and Decimal(str(self.get_daily_total(agent_id))) + amount > Decimal(str(daily_limit)):
+            raise BudgetExceeded('Daily cap would be exceeded')
+        request_id = str(uuid.uuid4())
+        self._append({'schema_version':2,'timestamp':datetime.now(timezone.utc).isoformat(),
+            'request_id':request_id,'experiment_id':experiment_id,'agent_id':agent_id,
+            'model':model,'reserved_usd':float(amount),'cost_usd':None,
+            'state':'reserved','cost_status':'unknown'})
+        return request_id
 
-        # Calculate cost
-        pricing = _MODEL_PRICING.get(model, {"input": 0.0, "output": 0.0})
-        cost = (
-            input_tokens * pricing["input"] / 1_000_000
-            + output_tokens * pricing["output"] / 1_000_000
-        )
-
-        # Update daily total
-        self._daily_totals[agent_id] = self._daily_totals.get(agent_id, 0.0) + cost
-        cumulative = self._daily_totals[agent_id]
-
-        # Create entry
-        entry = CostEntry(
-            timestamp=datetime.now().isoformat(),
-            agent_id=agent_id,
-            model=model,
-            input_tokens=input_tokens,
-            output_tokens=output_tokens,
-            cost_usd=round(cost, 8),
-            cumulative_daily_usd=round(cumulative, 6),
-            endpoint=endpoint,
-            success=success,
-            error=error,
-        )
-
-        # Write to log file
-        self.log_file.parent.mkdir(parents=True, exist_ok=True)
-        with open(self.log_file, "a", encoding="utf-8") as f:
-            f.write(json.dumps(asdict(entry)) + "\n")
-
-        # Alert check
-        total = self.get_total_daily_cost()
-        if total > self.alert_threshold:
-            print(
-                f"⚠️  COST ALERT: Daily total ${total:.4f} "
-                f"exceeds threshold ${self.alert_threshold:.2f}"
-            )
-
-        return entry
+    def log_call(self, agent_id, model, input_tokens, output_tokens, endpoint='chat',
+                 success=True, error=None, *, request_id=None, experiment_id='default',
+                 provider_cost=None, usage=None, reservation=0):
+        with self.exclusive():
+            pricing = _MODEL_PRICING.get(model)
+            estimate = ((input_tokens*pricing['input'] + output_tokens*pricing['output'])/1_000_000) if pricing else None
+            cost = None
+            if provider_cost is not None:
+                parsed = Decimal(str(provider_cost))
+                if not parsed.is_finite() or parsed < 0:
+                    raise UnresolvedCost('Invalid provider-reported cost')
+                cost = float(parsed)
+            status = 'provider_reported' if cost is not None else ('estimated' if estimate is not None else 'unknown')
+            # Estimates are informational; they never settle an actual reservation.
+            state = 'settled' if cost is not None else 'unresolved'
+            entry = CostEntry(datetime.now(timezone.utc).isoformat(),agent_id,model,
+                input_tokens,output_tokens,cost,0.0,endpoint,success,error,
+                request_id or str(uuid.uuid4()),experiment_id,status,estimate,reservation,state,
+                {k:v for k,v in (usage or {}).items() if k in {'prompt_tokens','completion_tokens',
+                    'input_tokens','output_tokens','total_tokens','cost','prompt_tokens_details','completion_tokens_details'}})
+            other = sum((self._amount(e) for e in self.effective_entries()
+                if e.get('request_id') != entry.request_id and e.get('agent_id') == agent_id
+                and e.get('timestamp','')[:10] == entry.timestamp[:10]), Decimal(0))
+            entry.cumulative_daily_usd = float(other + Decimal(str(cost if cost is not None else reservation)))
+            self._append(asdict(entry))
+            return entry
 
     def print_summary(self):
-        """Print today's cost summary."""
-        self._reset_if_new_day()
-        print(f"\n{'='*60}")
-        print(f"  API Cost Summary — {self._today}")
-        print(f"{'='*60}")
-        print(f"  {'Agent':<20} {'Cost USD':>10}")
-        print(f"  {'-'*20} {'-'*10}")
-        for agent, cost in sorted(self._daily_totals.items()):
-            print(f"  {agent:<20} ${cost:>9.6f}")
-        print(f"  {'-'*20} {'-'*10}")
-        total = self.get_total_daily_cost()
-        print(f"  {'TOTAL':<20} ${total:>9.6f}")
-        print(f"{'='*60}\n")
-
-
-class BudgetExceeded(Exception):
-    """Raised when an agent exceeds its daily budget."""
-
-    pass
-
-
-# =============================================================================
-# OPENROUTER CLIENT
-# =============================================================================
-
+        print(json.dumps({'daily_accounted_usd':self.get_total_daily_cost(),
+            'unresolved':sum(e.get('state') in {'reserved','unresolved'} for e in self.effective_entries())}))
 
 class OpenRouterClient:
-    """
-    Unified OpenRouter API client with agent-aware routing.
-
-    Each agent uses its own model and has independent cost tracking.
-    All calls are logged to cost_log.jsonl for full transparency.
-    """
-
-    def __init__(
-        self,
-        base_url: str,
-        keys: dict[str, str],
-        agents: dict[str, dict],
-        cost_tracker: CostTracker,
-    ):
+    def __init__(self, base_url, keys, agents, cost_tracker):
         if httpx is None:
-            raise ImportError("httpx is required: pip install httpx")
-
-        self.base_url = base_url.rstrip("/")
-        self.keys = keys
-        self.agents = agents
-        self.cost_tracker = cost_tracker
+            raise ImportError('httpx is required')
+        self.base_url = base_url.rstrip('/')
+        self.keys, self.agents, self.cost_tracker = keys, agents, cost_tracker
         self._client = httpx.Client(timeout=120.0)
+        self.price_snapshot = {}
+        self.experiment_id = 'default'
+        self.experiment_limit = 0.0  # Explicit opt-in; no uncontrolled paid calls.
 
     @classmethod
-    def from_config(cls, config_path: str | Path) -> "OpenRouterClient":
-        """Create client from config.toml file."""
-        if tomllib is None:
-            raise ImportError("tomllib (Python 3.11+) or tomli is required: pip install tomli")
+    def from_config(cls, config_path):
+        path = Path(config_path)
+        config = tomllib.loads(path.read_text(encoding='utf-8-sig'))
+        cost = config['cost_tracking']
+        tracker = CostTracker(path.parent / cost['log_file'],cost.get('alert_threshold_usd',1))
+        return cls(config['openrouter']['base_url'],config['openrouter'].get('keys',{}),config['agents'],tracker)
 
-        config_path = Path(config_path)
-        with open(config_path, "rb") as f:
-            config = tomllib.load(f)
-
-        cost_log_path = config_path.parent / config["cost_tracking"]["log_file"]
-        tracker = CostTracker(
-            log_file=cost_log_path,
-            alert_threshold=config["cost_tracking"]["alert_threshold_usd"],
-        )
-
-        return cls(
-            base_url=config["openrouter"]["base_url"],
-            keys=config["openrouter"]["keys"],
-            agents=config["agents"],
-            cost_tracker=tracker,
-        )
-
-    def _get_key(self, agent_id: str) -> str:
-        """Get API key for an agent."""
-        agent_cfg = self.agents.get(agent_id, {})
-        key_name = agent_cfg.get("key_name", "default")
-        key = self.keys.get(key_name)
-        if not key or key == "sk-or-v1-CHANGEME":
-            raise ValueError(
-                f"API key '{key_name}' not configured. "
-                f"Edit config.toml [openrouter.keys].{key_name}"
-            )
+    def _get_key(self, agent_id):
+        name = self.agents.get(agent_id,{}).get('key_name','default')
+        key = (os.environ.get('OPENROUTER_KEY_'+name.upper()) or
+               os.environ.get('OPENROUTER_KEY_DEFAULT') or self.keys.get(name) or self.keys.get('default'))
+        if not key or key == 'sk-or-v1-CHANGEME':
+            raise ValueError('OpenRouter key is not configured')
         return key
 
-    def _get_model(self, agent_id: str) -> str:
-        """Get model for an agent."""
-        agent_cfg = self.agents.get(agent_id)
-        if not agent_cfg:
-            raise ValueError(
-                f"Unknown agent '{agent_id}'. " f"Available: {list(self.agents.keys())}"
-            )
-        return agent_cfg["model"]
+    def _get_model(self, agent_id):
+        return self.agents[agent_id]['model']
 
-    def _check_budget(self, agent_id: str):
-        """Check if agent is within budget."""
-        agent_cfg = self.agents.get(agent_id, {})
-        budget = agent_cfg.get("daily_budget_usd", 0.0)
-        if budget > 0:
-            self.cost_tracker.check_budget(agent_id, budget)
-
-    def embed(
-        self,
-        texts: list[str],
-        agent_id: str = "embedding",
-    ) -> list[list[float]]:
-        """
-        Generate embeddings via OpenRouter.
-
-        Args:
-            texts: List of strings to embed
-            agent_id: Agent for cost tracking (default: "embedding")
-
-        Returns:
-            List of embedding vectors
-        """
-        self._check_budget(agent_id)
-        model = self._get_model(agent_id)
+    def preflight(self, agent_id):
+        if self.base_url != 'https://openrouter.ai/api/v1':
+            raise ValueError('Pilot requires the official OpenRouter endpoint')
         key = self._get_key(agent_id)
-
-        response = self._client.post(
-            f"{self.base_url}/embeddings",
-            headers={
-                "Authorization": f"Bearer {key}",
-                "Content-Type": "application/json",
-            },
-            json={
-                "model": model,
-                "input": texts,
-            },
-        )
-        response.raise_for_status()
-        data = response.json()
-
-        # Extract token usage
-        usage = data.get("usage", {})
-        input_tokens = usage.get("prompt_tokens", 0)
-
-        # Log cost
-        self.cost_tracker.log_call(
-            agent_id=agent_id,
-            model=model,
-            input_tokens=input_tokens,
-            output_tokens=0,
-            endpoint="embeddings",
-        )
-
-        # Extract vectors
-        embeddings = [item["embedding"] for item in data["data"]]
-        return embeddings
-
-    def chat(
-        self,
-        agent_id: str,
-        messages: list[dict],
-        max_tokens: Optional[int] = None,
-        temperature: float = 0.7,
-    ) -> str:
-        """
-        Chat completion via OpenRouter with agent-specific routing.
-
-        Args:
-            agent_id: Which agent is making this call
-            messages: Chat messages [{"role": "user", "content": "..."}]
-            max_tokens: Override max tokens (default: from config)
-            temperature: Sampling temperature
-
-        Returns:
-            Assistant response text
-        """
-        self._check_budget(agent_id)
         model = self._get_model(agent_id)
+        decision_model = model == 'typesafe/jev-1.13'
+        models = self._client.get(self.base_url+'/models',
+            params={'output_modalities':'decisions'} if decision_model else None)
+        models.raise_for_status()
+        record = next((r for r in models.json()['data'] if r['id']==model),None)
+        if record is None:
+            raise ValueError('Configured model is unavailable; no substitute selected')
+        pricing = dict(record.get('pricing',{}))
+        if decision_model:
+            # Decisions model metadata declares only input/output token pricing.
+            pricing.setdefault('request','0')
+        required = ('prompt','completion','request')
+        if any(k not in pricing for k in required):
+            raise UnresolvedCost('Incomplete current price metadata')
+        parsed = {k:Decimal(str(pricing[k])) for k in required}
+        if any(not v.is_finite() or v < 0 for v in parsed.values()):
+            raise UnresolvedCost('Invalid price metadata')
+        if any(Decimal(str(v or 0)) != 0 for k,v in pricing.items() if k not in required):
+            raise UnresolvedCost('Additional pricing components require explicit review')
+        credit = self._client.get(self.base_url+'/key',headers={'Authorization':'Bearer '+key})
+        credit.raise_for_status()
+        data = credit.json()['data']
+        remaining = data.get('limit_remaining')
+        if remaining is not None and Decimal(str(remaining)) <= 0:
+            raise BudgetExceeded('Provider key limit exhausted')
+        balance = self._client.get(self.base_url+'/credits',headers={'Authorization':'Bearer '+key})
+        balance.raise_for_status()
+        credit_data = balance.json()['data']
+        available = Decimal(str(credit_data['total_credits'])) - Decimal(str(credit_data['total_usage']))
+        if available <= 0:
+            raise BudgetExceeded('Account balance exhausted')
+        self.price_snapshot[model] = {'pricing':parsed,'fetched_at':datetime.now(timezone.utc).isoformat(),
+                                      'record':record,'remaining':min(available,Decimal(str(remaining))) if remaining is not None else available}
+        return {'model':model,'pricing':{k:str(v) for k,v in parsed.items()},'available_usd':str(available)}
+
+    def reservation_for(self, agent_id, payload):
+        model = self._get_model(agent_id)
+        snapshot = self.price_snapshot.get(model)
+        if not snapshot:
+            raise UnresolvedCost('Run preflight before calling a model')
+        age = datetime.now(timezone.utc) - datetime.fromisoformat(snapshot['fetched_at'])
+        if age.total_seconds() > 900:
+            raise UnresolvedCost('Price snapshot expired; repeat preflight')
+        # UTF-8 byte count deliberately overestimates text tokens; include template overhead.
+        bound = len(json.dumps(payload,ensure_ascii=False).encode('utf-8')) + 4096
+        prices = snapshot['pricing']
+        amount = (Decimal(bound)*prices['prompt'] + Decimal(payload.get('max_tokens',0))*prices['completion'] + prices['request'])*Decimal('1.25')
+        amount = max(amount, Decimal('0.000001'))
+        if amount > snapshot['remaining']:
+            raise BudgetExceeded('Provider credit cannot cover the reservation')
+        return amount
+
+    def _request(self, agent_id, payload, endpoint):
         key = self._get_key(agent_id)
-        agent_cfg = self.agents.get(agent_id, {})
+        amount = self.reservation_for(agent_id,payload)
+        model = self._get_model(agent_id)
+        with self.cost_tracker.exclusive():
+            request_id = self.cost_tracker.reserve(agent_id,model,amount,self.experiment_id,
+                self.experiment_limit,self.agents[agent_id].get('daily_budget_usd',0))
+            try:
+                url = (self.base_url.removesuffix('/api/v1')+'/api/alpha/decisions'
+                       if endpoint == 'decisions' else self.base_url+'/'+endpoint)
+                response = self._client.post(url,
+                    headers={'Authorization':'Bearer '+key,'Content-Type':'application/json'},json=payload)
+                response.raise_for_status()
+                data = response.json()
+                usage = data.get('usage',{})
+                entry = self.cost_tracker.log_call(agent_id,model,usage.get('prompt_tokens',usage.get('input_tokens',0)),
+                    usage.get('completion_tokens',usage.get('output_tokens',0)),
+                    endpoint,request_id=request_id,experiment_id=self.experiment_id,
+                    provider_cost=usage.get('cost'),usage=usage,reservation=float(amount))
+                self.last_cost_entry = entry
+                if entry.state == 'unresolved':
+                    raise UnresolvedCost('Provider cost unavailable; reservation retained')
+                self.price_snapshot[model]['remaining'] -= Decimal(str(entry.cost_usd))
+                if Decimal(str(entry.cost_usd)) > amount:
+                    # Block subsequent calls if the provider exceeded the conservative bound.
+                    self.cost_tracker._append({**asdict(entry),'state':'unresolved','error':'reservation_exceeded'})
+                    raise UnresolvedCost('Actual cost exceeded reservation; spending stopped')
+                return data
+            except Exception as exc:
+                latest = next(e for e in self.cost_tracker.effective_entries() if e.get('request_id')==request_id)
+                if latest.get('state') == 'reserved':
+                    self.cost_tracker.log_call(agent_id,model,0,0,endpoint,False,type(exc).__name__,
+                        request_id=request_id,experiment_id=self.experiment_id,reservation=float(amount))
+                raise
 
-        if max_tokens is None:
-            max_tokens = agent_cfg.get("max_tokens_per_call", 4096)
+    def chat(self, agent_id, messages, max_tokens=None, temperature=0.7):
+        maximum = max_tokens if max_tokens is not None else self.agents[agent_id].get('max_tokens_per_call',4096)
+        if maximum <= 0:
+            raise ValueError('Positive max_tokens required')
+        payload = {'model':self._get_model(agent_id),'messages':messages,'max_tokens':maximum,
+                   'temperature':temperature,'provider':{'allow_fallbacks':False}}
+        data = self._request(agent_id,payload,'chat/completions')
+        return data['choices'][0]['message']['content']
 
-        response = self._client.post(
-            f"{self.base_url}/chat/completions",
-            headers={
-                "Authorization": f"Bearer {key}",
-                "Content-Type": "application/json",
-                "HTTP-Referer": "https://uet-research.local",
-                "X-Title": f"UET-Agent-{agent_id}",
-            },
-            json={
-                "model": model,
-                "messages": messages,
-                "max_tokens": max_tokens,
-                "temperature": temperature,
-            },
-        )
-        response.raise_for_status()
-        data = response.json()
+    def embed(self, texts, agent_id='embedding'):
+        data = self._request(agent_id,{'model':self._get_model(agent_id),'input':texts},'embeddings')
+        return [item['embedding'] for item in data['data']]
 
-        # Extract usage
-        usage = data.get("usage", {})
-        input_tokens = usage.get("prompt_tokens", 0)
-        output_tokens = usage.get("completion_tokens", 0)
-
-        # Log cost
-        self.cost_tracker.log_call(
-            agent_id=agent_id,
-            model=model,
-            input_tokens=input_tokens,
-            output_tokens=output_tokens,
-            endpoint="chat",
-        )
-
-        # Extract response
-        return data["choices"][0]["message"]["content"]
+    def decide(self, agent_id, state, questions):
+        """Experimental Decisions API; does not replace chat or scientific gates."""
+        if self._get_model(agent_id) != 'typesafe/jev-1.13':
+            raise ValueError('Pilot decisions are pinned to typesafe/jev-1.13')
+        return self._request(agent_id,{'model':self._get_model(agent_id),
+            'state':state,'questions':questions,
+            'provider':{'only':['typesafe'],'allow_fallbacks':False}},'decisions')
 
     def close(self):
-        """Close HTTP client."""
         self._client.close()
 
     def __enter__(self):
         return self
 
-    def __exit__(self, *args):
+    def __exit__(self,*args):
         self.close()
-
-
-# =============================================================================
-# STANDALONE TEST
-# =============================================================================
-
-if __name__ == "__main__":
-    # Quick self-test without API (tests CostTracker only)
-    import tempfile
-
-    with tempfile.NamedTemporaryFile(suffix=".jsonl", delete=False, mode="w") as tmp:
-        tmp_path = Path(tmp.name)
-
-    tracker = CostTracker(log_file=tmp_path)
-
-    # Simulate some calls
-    tracker.log_call("orchestrator", "qwen/qwen3-coder-next", 1000, 500, "chat")
-    tracker.log_call("embedding", "qwen/qwen3-embedding-8b", 5000, 0, "embeddings")
-    tracker.log_call("local_data", "zhipu/glm-4.7-flash", 800, 200, "chat")
-    tracker.log_call("web_research", "deepseek/deepseek-v3.2", 2000, 1000, "chat")
-
-    # Print summary
-    tracker.print_summary()
-
-    # Verify log file
-    with open(tmp_path) as f:
-        lines = f.readlines()
-    print(f"✅ Logged {len(lines)} entries to {tmp_path}")
-
-    for line in lines:
-        entry = json.loads(line)
-        print(f"  {entry['agent_id']:<16} {entry['model']:<30} ${entry['cost_usd']:.8f}")
-
-    # Cleanup
-    tmp_path.unlink()
-    print("\n✅ CostTracker self-test PASSED")
