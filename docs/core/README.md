@@ -1,5 +1,8 @@
 # ⚙️ Core — UET Mathematical Engine
 
+<!-- UET-RESEARCH-RETROSPECTIVE: 2026-10-19; navigation notice, not a physics gate -->
+> **ทบทวนก่อนวิจัยต่อ — 19 ต.ค. 2026:** ก่อนเพิ่มสมการ ให้ตรวจความหมาย หน่วย lineage และคู่เทียบ; foundation ยังมี blockers ตาม gates เฉพาะข้ออ้าง อ่าน [รายงานข้อผิดพลาดและบทเรียน UET](../meta/UET_RESEARCH_RETROSPECTIVE.md) โดยเฉพาะข้อ R01–R18 และลำดับแก้ใน §8 ก่อนขยายงาน สถานะจริงยังอ้างอิง artifact/gate ของเส้นทางนั้น
+
 > Foundation-first status: This README contains historical/legacy engine wording and is
 > not the controlling claim source. Current equation status is controlled by
 > [docs/core/AGENTS.md](./AGENTS.md), the equation registry, and the foundation dependency gate.

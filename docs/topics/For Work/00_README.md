@@ -1,5 +1,8 @@
 # UET Standards Workspace
 
+<!-- UET-RESEARCH-RETROSPECTIVE: 2026-10-19; navigation notice, not a physics gate -->
+> **ทบทวนก่อนวิจัยต่อ — 19 ต.ค. 2026:** ก่อนปรับวิธีวิจัยหรือเริ่ม wave ใหม่ ให้ทบทวนข้อผิดพลาดเดิมและเลือก action ที่เปลี่ยนข้อสรุปได้จริง อ่าน [รายงานข้อผิดพลาดและบทเรียน UET](../../meta/UET_RESEARCH_RETROSPECTIVE.md) โดยเฉพาะข้อ R01–R18 และลำดับแก้ใน §8 ก่อนขยายงาน สถานะจริงยังอ้างอิง artifact/gate ของเส้นทางนั้น
+
 For theory design or stalled multi-branch work, start with
 [Theory Development and Research Sequencing v1](32_Theory_Development_and_Research_Sequencing_Standard.md).
 Reconstruct accepted ideas and existing evidence, identify the earliest unresolved
