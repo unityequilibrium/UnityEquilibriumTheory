@@ -1,4 +1,4 @@
-use crate::parameters::{UETParameters, K_B, ParameterDeriver};
+use crate::parameters::{ParameterDeriver, UETParameters, K_B};
 use serde::{Deserialize, Serialize};
 
 /// Core engine for the Unity Equilibrium Theory.
@@ -7,9 +7,9 @@ use serde::{Deserialize, Serialize};
 /// 2. Kappa = Beta / InfoDensity
 #[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct UnityCalculator {
-    pub scale: f64,             // Characteristic length scale (m)
-    pub temperature: f64,       // System temperature (K)
-    pub info_density: f64,      // Information density (bits/m^3)
+    pub scale: f64,        // Characteristic length scale (m)
+    pub temperature: f64,  // System temperature (K)
+    pub info_density: f64, // Information density (bits/m^3)
 }
 
 impl ParameterDeriver for UnityCalculator {
@@ -31,13 +31,17 @@ impl UnityCalculator {
     /// Implements the universal scaling laws and Landauer coupling.
     pub fn derive_parameters(&self) -> UETParameters {
         let ln2 = 2.0f64.ln();
-        
+
         // 1. Beta derivation (Energy per bit)
         let beta = K_B * self.temperature * ln2;
-        
+
         // 2. Kappa derivation (Information Inertia)
         // If info_density is 0, we fallback to a safe small value to avoid NaN
-        let safe_density = if self.info_density > 0.0 { self.info_density } else { 1e-10 };
+        let safe_density = if self.info_density > 0.0 {
+            self.info_density
+        } else {
+            1e-10
+        };
         let mut kappa = beta / safe_density;
 
         // Apply Planck Boundary (The Universe's Floor)
@@ -53,7 +57,7 @@ impl UnityCalculator {
         params.temperature = self.temperature;
         params.scale = format!("{:.2e}m", self.scale);
         params.origin = "Unity First-Principles (Landauer)".to_string();
-        
+
         params
     }
 
@@ -75,7 +79,7 @@ mod tests {
         // At 300K, Beta should be ~0.0179 eV
         let calc = UnityCalculator::new(0.001, 300.0, 1e18);
         let params = calc.derive_parameters();
-        
+
         let beta_ev = params.beta / 1.602176634e-19;
         assert!((beta_ev - 0.0179).abs() < 0.001);
     }
@@ -89,6 +93,9 @@ mod tests {
         let params = calc.derive_parameters();
 
         // The Planck boundary safety must arrest the fall precisely at 0.5
-        assert_eq!(params.kappa, 0.5, "Planck boundary minimum of 0.5 not enforced!");
+        assert_eq!(
+            params.kappa, 0.5,
+            "Planck boundary minimum of 0.5 not enforced!"
+        );
     }
 }

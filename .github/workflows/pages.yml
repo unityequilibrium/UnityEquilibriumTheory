@@ -4,6 +4,8 @@ name: GitHub Pages
 on:
   push:
     branches: [main]
+  pull_request:
+    branches: [main]
   workflow_dispatch:
 
 permissions:
@@ -12,7 +14,7 @@ permissions:
   id-token: write
 
 concurrency:
-  group: pages
+  group: pages-${{ github.event.pull_request.number || github.ref }}
   cancel-in-progress: true
 
 jobs:
@@ -23,10 +25,14 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: actions/configure-pages@v5
+      - name: Prepare a disposable Pages source
+        run: |
+          cp -a docs _pages_source
+          python3 docs/scripts/recovery/prepare_pages_math.py _pages_source
       - name: Build with Jekyll
         uses: actions/jekyll-build-pages@v1
         with:
-          source: ./docs
+          source: ./_pages_source
           destination: ./_site
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
@@ -34,6 +40,7 @@ jobs:
   deploy:
     name: Deploy GitHub Pages
     needs: build
+    if: github.event_name != 'pull_request'
     runs-on: ubuntu-latest
     timeout-minutes: 10
     environment:
