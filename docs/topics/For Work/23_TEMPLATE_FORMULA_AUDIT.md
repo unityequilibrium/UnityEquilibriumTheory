@@ -1,5 +1,9 @@
 # Formula Audit Template
 
+Link the calculation contract (ID, profile, review state and locator) following
+[Calculation and Observation Completeness v1](30_Calculation_and_Observation_Completeness_Standard.md).
+State modeled/corrected/omitted/inapplicable/unknown components and error-budget evidence.
+
 Use this template to document important formulas in a topic.
 
 ## Formula Audit

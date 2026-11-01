@@ -1,0 +1,442 @@
+{
+  "claim_boundary": "DIAGNOSTIC screen of three source-defined systems only; none automatically parent-equivalent, no quantum-parent or UET validation/falsification, no physical gate/README/Core change.",
+  "components": [
+    {
+      "disposition": "UNKNOWN",
+      "evidence": [
+        "docs/meta/UET_PHYSICAL_PLATFORM_CORRESPONDENCE_SCREEN.md"
+      ],
+      "group": "system_state",
+      "id": "sample-correspondence",
+      "next_action": "Review native sign/projection/sector and boundary differences before any source-to-parent scale identification.",
+      "owner": "atomic-magnetism/lattice specialist",
+      "reason": "Native quantum spin law and mechanical state not equivalent to fixed-spin free parent; concrete mismatches derived without repairing them."
+    },
+    {
+      "disposition": "UNKNOWN",
+      "evidence": [
+        "docs/meta/UET_PHYSICAL_PLATFORM_CORRESPONDENCE_SCREEN.md"
+      ],
+      "group": "system_state",
+      "id": "physical-parent-preparation",
+      "next_action": "Decide which microscopic reference premise must be revisited before another physical-scale search; no new model or platform automatically.",
+      "owner": "author with specialist",
+      "reason": "None of the three sources supplies a parent-equivalent frozen alternating mechanical preparation and modal dictionary."
+    },
+    {
+      "disposition": "UNKNOWN",
+      "evidence": [
+        "docs/meta/UET_PHYSICAL_PLATFORM_CORRESPONDENCE_SCREEN.md"
+      ],
+      "group": "drive_environment",
+      "id": "environment-correspondence",
+      "next_action": "A future bridge needs an independently justified boundary/mode reduction or explicit model change, outside this wave.",
+      "owner": "lattice/boundary specialist",
+      "reason": "Substrate/apex/leads cannot be erased from source system or assigned zero effect."
+    },
+    {
+      "disposition": "UNKNOWN",
+      "evidence": [
+        "docs/meta/UET_PHYSICAL_PLATFORM_CORRESPONDENCE_SCREEN.md"
+      ],
+      "group": "drive_environment",
+      "id": "drive-protocol",
+      "next_action": "Recover source-specific preparation/operator evidence before a physical Phi protocol claim.",
+      "owner": "source-protocol specialist",
+      "reason": "Published drive identified qualitatively; no parent force-port or preparation calibration."
+    },
+    {
+      "disposition": "UNKNOWN",
+      "evidence": [
+        "docs/meta/UET_PHYSICAL_PLATFORM_CORRESPONDENCE_SCREEN.md"
+      ],
+      "group": "propagation",
+      "id": "transport",
+      "next_action": "Do not substitute current/conductance for Phi; require identified readout and sensitivity model.",
+      "owner": "spectroscopy/transport specialist",
+      "reason": "Electron transport observed but full sample-to-readout operator not reconstructed."
+    },
+    {
+      "disposition": "MODELED",
+      "evidence": [
+        "docs/meta/UET_PHYSICAL_PLATFORM_CORRESPONDENCE_SCREEN.md"
+      ],
+      "group": "frame_time",
+      "id": "frame-units",
+      "reason": "Exact unit conversions separated from source uncertainty; frame/mode correspondence remains explicit rather than assumed."
+    },
+    {
+      "disposition": "UNKNOWN",
+      "evidence": [
+        "docs/meta/UET_PHYSICAL_PLATFORM_CORRESPONDENCE_SCREEN.md"
+      ],
+      "group": "detector",
+      "id": "Phi-readout",
+      "next_action": "Specify observable operator/mode calibration and preparation before any physical Phi variance comparison.",
+      "owner": "measurement specialist",
+      "reason": "No calibrated Var(Phi), complete state inference or bounded backaction; Fe2012 main Methods unresolved."
+    },
+    {
+      "disposition": "MODELED",
+      "evidence": [
+        "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/physical_platform_correspondence_screen_sources.json"
+      ],
+      "group": "processing",
+      "id": "source-processing",
+      "reason": "Manual factual subset labels primary/partial/metadata access, origins, contexts and uncertainty; no data hidden in code."
+    },
+    {
+      "disposition": "UNKNOWN",
+      "evidence": [
+        "docs/meta/UET_PHI_VARIANCE_STATIC_ADMISSIBILITY.md"
+      ],
+      "group": "processing",
+      "id": "quantum-parent-correspondence",
+      "next_action": "A separate parent state/operator/anharmonic bound would be required; not started.",
+      "owner": "quantum-statistical specialist",
+      "reason": "Two old comparator bounds do not give an actual quantum anharmonic parent error."
+    },
+    {
+      "disposition": "MODELED",
+      "evidence": [
+        "docs/meta/UET_PHYSICAL_PLATFORM_CORRESPONDENCE_SCREEN.md",
+        "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/Research_T13_Physical_Platform_Correspondence_Screen.py",
+        "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/test_t13_physical_platform_correspondence_screen.py"
+      ],
+      "group": "numerics",
+      "id": "diagnostic-verification",
+      "reason": "Exact symbolic witnesses, rational unit conversions and adversarial guards only; no roots, fitting, sweeps, rates or trajectory."
+    }
+  ],
+  "contract_id": "T13_PHYSICAL_PLATFORM_CORRESPONDENCE_SCREEN_V1",
+  "data_policy": {
+    "calibration_ids": [],
+    "comparison_ids": [
+      "Mn_CuN",
+      "Fe_Neel",
+      "Pt_junction"
+    ],
+    "holdout_policy": "Published values and qualitative source facts only, already viewed; no fitting, digitization, raw trace acquisition or blind holdout. Different sources/contexts are not merged into one material tuple.",
+    "independent_validation": false,
+    "uses_observations": true
+  },
+  "entrypoints": [
+    "docs/meta/UET_PHYSICAL_PLATFORM_CORRESPONDENCE_SCREEN.md",
+    "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/Research_T13_Physical_Platform_Correspondence_Screen.py"
+  ],
+  "error_budget": {
+    "acceptance": "Three source-bound scoped verdicts plus explicit missing inputs and exact diagnostic witnesses; no candidate need pass and no claim promotion follows code/completeness checks.",
+    "approximation": "No Heisenberg projection closure or omitted support-force bound admitted; parent variance bounds not applied to mismatched systems.",
+    "dependence": "Source contexts and fit/model-choice provenance kept separate; no independent covariance assumed or cross-paper material tuple. Native-to-staggered transformation changes readout/sector.",
+    "measurement": "Unknown source error/confidence remains UNKNOWN. Reported standard uncertainties and error bars are not hard bounds or material tolerances.",
+    "numerical": "Exact Fraction/SymPy unit and algebraic identities. Reported decimals are point values, not zero-error observations.",
+    "omission_limit": null,
+    "omissions": "No raw traces, new fits, materials beyond three, physical error thresholds, new model, lifetime, spin law or experiment.",
+    "systematic": "Geometry/ensemble/source-model fits, unknown modes/inertia, source access gaps, detector/backaction and actual physical preparation remain open.",
+    "unit": "mixed declared SI context units and dimensionless correspondence identities; no physical theta,chi or Var(Phi)"
+  },
+  "evidence": [
+    "docs/meta/UET_PHYSICAL_PLATFORM_CORRESPONDENCE_SCREEN.md",
+    "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/physical_platform_correspondence_screen_sources.json",
+    "docs/meta/UET_PHI_VARIANCE_STATIC_ADMISSIBILITY.md",
+    "docs/meta/UET_PARENT_STATIC_REFERENCE_AUDIT.md"
+  ],
+  "identities": [
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/meta/UET_PHYSICAL_PLATFORM_CORRESPONDENCE_SCREEN.md",
+      "role": "evidence",
+      "sha256": "59165c429de0c25e2277a7ff673e0f812da5c7b442eb09642be9c659d2b292fa"
+    },
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/physical_platform_correspondence_screen_sources.json",
+      "role": "input",
+      "sha256": "ecd3d0bd90b0431b7e908edd88fe42217fe2f11b699ccf347d329163efcf70ac"
+    },
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/Research_T13_Physical_Platform_Correspondence_Screen.py",
+      "role": "code",
+      "sha256": "a113537afa15dd527640558e18926a40d57f05478f574e064f65fa991db72c02"
+    },
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/test_t13_physical_platform_correspondence_screen.py",
+      "role": "code",
+      "sha256": "443c1a57677fadaf50d35e2dd42f2c3b898a1217201e863783fd327d1fd59123"
+    },
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/meta/UET_PARENT_STATIC_REFERENCE_AUDIT.md",
+      "role": "evidence",
+      "sha256": "ec44dd5c50475d401a2f7828aae13b12f45154ab4474b30a42344aac8ba78b22"
+    },
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/calculation_contracts/parent_static_reference_audit.json",
+      "role": "evidence",
+      "sha256": "20385f0f068e36d1fe5e61ce3c8ccb59d25e2926f53db04d1adb44ca18bb8799"
+    },
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/t13_parent_static_reference_audit.json",
+      "role": "evidence",
+      "sha256": "df172ab9ec3dc602bd87a43b9751fdc5598764d342f5f80a9fc8601ccc880b28"
+    },
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/meta/UET_PHI_VARIANCE_STATIC_ADMISSIBILITY.md",
+      "role": "evidence",
+      "sha256": "fb64dc323e1750be0446a2a9e5b44a9c13a406a966cf1307a2f7ec73330d777f"
+    },
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/calculation_contracts/phi_variance_static_admissibility.json",
+      "role": "evidence",
+      "sha256": "a4d37c216394e44265834c179507795319382753012d6a3fd353cc152fe1a1c4"
+    },
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/t13_phi_variance_static_admissibility.json",
+      "role": "evidence",
+      "sha256": "c5cf9ea87ac292fd006b93c1a95f9b951d803543b6f5a811c49de84f5f739f97"
+    },
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/meta/schemas/calculation_contract_v1.schema.json",
+      "role": "evidence",
+      "sha256": "ec556052d755908a2ec7b3ec10b411839f4f0bee549fd902fb1f915f8475ebc3"
+    },
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/topics/For Work/12_Data_Standard.md",
+      "role": "evidence",
+      "sha256": "a1ecf6b048778cb6049480c166a7e287254503023301d13d69091f2d29e46bac"
+    },
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/topics/For Work/30_Calculation_and_Observation_Completeness_Standard.md",
+      "role": "evidence",
+      "sha256": "8fec4618c5e21c975c62b10902d969609808ab2c98e6c004a5c0ac9596c6f762"
+    },
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/topics/For Work/32_Theory_Development_and_Research_Sequencing_Standard.md",
+      "role": "evidence",
+      "sha256": "e796ba85860736e47bd14977923ab14ffde920c1715617d93725aca12788f3c2"
+    },
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/scripts/audit/audit_calculation_completeness.py",
+      "role": "code",
+      "sha256": "b406d31add9834d2cd1d9f3bb8d42724d26c390413710419313dd85cba7121ca"
+    }
+  ],
+  "model": {
+    "approximation": "Heisenberg collinear projection is a necessary-comparison diagnostic, not a derived closed two-state dynamics. Staggering changes the physical readout and prepared sector. No source approximation is used as a parent physical error certificate.",
+    "assumptions": "The free open N4 fixed-spin Morse/exchange parent/control and certified alternating sector remain unchanged. Source descriptions are alternatives, not added terms or a claimed microscopic UET realization.",
+    "drive_environment": "Only document published STM voltage/electron/field or MCBJ drive, carrier, supports, receiver and unknown backaction. No new experiment, bath, trajectory or rates.",
+    "formula_ids": [
+      "docs/meta/UET_PHYSICAL_PLATFORM_CORRESPONDENCE_SCREEN.md#spin-witnesses",
+      "docs/meta/UET_PHYSICAL_PLATFORM_CORRESPONDENCE_SCREEN.md#observation-and-scales"
+    ],
+    "initial_boundary": "Source-supported or lead-anchored geometry distinguished from free parent. Frozen labels, Gibbs mixture and driven preparation not identified. No substrate/lead potential, field or anisotropy inserted into parent.",
+    "parameters": "Small source-input subset in Data03; exact BIPM h,e,k_B for units. Literature J, site/nominal distances and atomic weights never become parent J_ref,d_ref,modal mass without correspondence. Budgets unchosen; no theta/chi or old variance bound evaluated for mismatched platforms."
+  },
+  "next_action": "Three-platform source screen and native spin/sector/readout witnesses completed. Stop source-to-parent scale substitution for this set. Review whether the free-chain/frozen-binary reference premise is required before any new model/physical dictionary; no automatic revision, new platform or experiment.",
+  "observation": {
+    "backaction": "Finite excitation/switching is described in source contexts; quantitative omission bounds UNKNOWN. No complete reciprocal influence inferred from detection.",
+    "carrier": "Tunnelling or transport electrons in the source protocols. Microscopic transport/gain not reconstructed and not assumed absent.",
+    "corrections": [],
+    "frame": "Source surface/lead coordinate chart and source units; not automatically parent's CM frame or muI mass metric.",
+    "generated_trace": "Published IETS, spin-sensor or MC records; no locally generated trajectory and no dissipation/information trace substituted for complete state.",
+    "observer_state": "Source STM tip/electronics or MCBJ cryoelectronics. Fe sensor is an additional responding spin system; original2012 and complete2017 protocols not fully accessed.",
+    "product_level": "Internal minimal extracted research subset/manifest-equivalent, not original upstream data or raw physical signals.",
+    "readout": "IETS dI/dV, spin-polarized/sensor contrast or magnetoconductance, not calibrated coherent-compression variance. Endpoint alone also has an inherited hidden-mode null direction.",
+    "source_state": "Per-row alternative sample: supported quantum spins or lead-anchored atomic contact. Their state is not the parent's three internal canonical pairs by declaration alone.",
+    "system_partition": {
+      "accounting_component_id": "sample-correspondence",
+      "boundary": "One candidate per row; sample, substrate/leads, drive, electron carrier and receiver are separate physical roles, not simultaneous copies of all three platforms. No complete physical state dimension is asserted where unavailable.",
+      "couplings": [
+        {
+          "component_id": "environment-correspondence",
+          "id": "support-sample",
+          "kind": "ENVIRONMENT",
+          "map": "Source support/lead interaction exists; its mechanical elimination/omission bound is UNKNOWN.",
+          "source": "support",
+          "target": "sample"
+        },
+        {
+          "component_id": "drive-protocol",
+          "id": "drive-sample",
+          "kind": "SIGNAL",
+          "map": "Source bias/field/stretch preparation, not an independently admitted Phi force-port calibration.",
+          "source": "drive",
+          "target": "sample"
+        },
+        {
+          "component_id": "transport",
+          "id": "sample-carrier",
+          "kind": "SIGNAL",
+          "map": "Source spin/electronic interaction influences transport; full operator/gain UNKNOWN.",
+          "source": "sample",
+          "target": "carrier"
+        },
+        {
+          "component_id": "Phi-readout",
+          "id": "carrier-receiver",
+          "kind": "DETECTION",
+          "map": "Source electronics/sensor yields reported observables; not Var(Phi).",
+          "source": "carrier",
+          "target": "receiver"
+        },
+        {
+          "component_id": "Phi-readout",
+          "id": "receiver-sample",
+          "kind": "BACKACTION",
+          "map": "Excitation/current/tip-field effects not assumed zero; source-specific quantitative bounds absent.",
+          "source": "receiver",
+          "target": "sample"
+        },
+        {
+          "component_id": "environment-correspondence",
+          "id": "receiver-support",
+          "kind": "BACKACTION",
+          "map": "Possible indirect thermal/mechanical/electronic effects UNKNOWN; no claim of complete support observability.",
+          "source": "receiver",
+          "target": "support"
+        }
+      ],
+      "observables": [
+        {
+          "backaction_scope_reason": "Assess sampled spins/mechanics and boundary environment separately; detection does not establish complete state or strong feedback.",
+          "backaction_targets": [
+            "sample",
+            "support"
+          ],
+          "component_id": "Phi-readout",
+          "detector_id": "receiver",
+          "id": "published_readout",
+          "quantity": "IETS/spin sensor/MC as actually reported",
+          "readout_map": "Source-defined output, no invertible parent Phi mapping admitted",
+          "target_systems": [
+            "sample"
+          ]
+        }
+      ],
+      "role_mode": "RELATIONAL",
+      "systems": [
+        {
+          "id": "sample",
+          "state": "Candidate spin/atomic sample as described by the particular source",
+          "state_accounting": {
+            "kind": "INDEPENDENT",
+            "owner_ids": [],
+            "rule": "Source-scoped state, not a claim of parent-equivalent coordinates or a new UET state.",
+            "state_ids": [
+              "screen.sample"
+            ]
+          }
+        },
+        {
+          "id": "support",
+          "state": "CuN/Cu substrate or Pt apex/leads and thermal surroundings",
+          "state_accounting": {
+            "kind": "INDEPENDENT",
+            "owner_ids": [],
+            "rule": "Boundary environment kept explicit; not silently integrated out or counted as sample inertia.",
+            "state_ids": [
+              "screen.support"
+            ]
+          }
+        },
+        {
+          "id": "drive",
+          "state": "Bias/field source and, for Pt, mechanical actuator",
+          "state_accounting": {
+            "kind": "INDEPENDENT",
+            "owner_ids": [],
+            "rule": "External preparation/drive, not an intrinsic source-free parent law.",
+            "state_ids": [
+              "screen.drive"
+            ]
+          }
+        },
+        {
+          "id": "carrier",
+          "state": "Source-described tunnelling/transport electrons",
+          "state_accounting": {
+            "kind": "INDEPENDENT",
+            "owner_ids": [],
+            "rule": "Carrier sector distinct from source spin and terminal electronic readout; microscopic closure not admitted.",
+            "state_ids": [
+              "screen.carrier"
+            ]
+          }
+        },
+        {
+          "id": "receiver",
+          "state": "STM tip/sensor/electronics or MCBJ cryoelectronic receiver",
+          "state_accounting": {
+            "kind": "INDEPENDENT",
+            "owner_ids": [],
+            "rule": "Receiver role may be composite; Fe sensor dynamics are not reduced to a passive record.",
+            "state_ids": [
+              "screen.receiver"
+            ]
+          }
+        },
+        {
+          "id": "record",
+          "state": "Published records and extracted source facts",
+          "state_accounting": {
+            "kind": "VIEW",
+            "owner_ids": [
+              "sample",
+              "support",
+              "drive",
+              "carrier",
+              "receiver"
+            ],
+            "rule": "Observation product, not complete physical state or additional information substance.",
+            "state_ids": []
+          }
+        }
+      ]
+    },
+    "time_convention": "Published static settings or reported spin-relaxation differences only. No new timescale/lifetime/thermalization calculation and no mechanical preparation duration inferred.",
+    "trace_scope": "published_source_context_not_parent_state",
+    "trace_used_as_complete_state": false
+  },
+  "output": {
+    "accuracy": "Exact rational SI conversions of reported point values, not physical accuracy. Unknown source errors retained; no material tolerance or omitted-force bound fabricated.",
+    "claim_intent": "DIAGNOSTIC",
+    "domain": "Mn/CuN2006, supported Fe Neel platform via explicitly bounded2013/2017 follow-ups, and Pt junction2015; no original2012 parameter evidence inferred from abstract",
+    "quantity": "source-bound three-platform correspondence screen, exact algebraic witnesses and unit-only context conversions",
+    "unit": "mixed declared SI context units and dimensionless correspondence identities; no physical theta,chi or Var(Phi)"
+  },
+  "profile": "PHYSICAL_COMPARISON",
+  "question": "Do the three specified physical platforms support the unchanged Q/variance parent state, energy, physical-scale dictionary and Phi readout, or expose a definite mismatch/prerequisite before scale substitution?",
+  "review": {
+    "rationale": "Published physical context is used diagnostically. Native state/energy/boundary/readout correspondence and physical Phi preparation are not admitted; Fe2012 main text and parts of Fe2017 remain inaccessible.",
+    "reviewer": "agent:physical-platform-screen (construction/adversarial self-review, not independent specialist)",
+    "status": "INCOMPLETE"
+  },
+  "schema_version": "uet-calculation-contract-v1"
+}

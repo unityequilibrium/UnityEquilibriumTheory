@@ -95,6 +95,13 @@ appropriate, and that document must itself pass human review.
 
 No public topic is allowed to exist without explicit answers to these questions:
 
+Apply [profile-specific evidence requirements](32_Theory_Development_and_Research_Sequencing_Standard.md#applicability-and-evidence-types).
+An answer may be not applicable with a scope-specific reason: a formal proof needs
+definitions, assumptions and a valid argument, not an invented dataset, instrument,
+numerical metric or runnable script. Do not confuse this with unknown evidence
+needed for a physical claim. These questions are an evidence review, not a demand
+for duplicate files or a numerical test for every statement.
+
 - What problem is being studied?
 - What assumptions are being made?
 - What data or references are being used?

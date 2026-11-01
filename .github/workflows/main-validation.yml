@@ -130,15 +130,11 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - run: python -m pip install --upgrade pytest
+      - run: python -m pip install -r .github/requirements-research.txt
       - name: Run repository research tests
         run: |
           set -euo pipefail
-          if find docs -type f \( -name 'test_*.py' -o -name '*_test.py' \) | grep -q .; then
-            python -m pytest docs/core -q --disable-warnings --maxfail=20
-          else
-            echo "No repository research tests found."
-          fi
+          python -m pytest docs/core/05_tests -q --disable-warnings --maxfail=20
       - name: Diagnostic baseline without legacy collection
         if: always()
         run: |

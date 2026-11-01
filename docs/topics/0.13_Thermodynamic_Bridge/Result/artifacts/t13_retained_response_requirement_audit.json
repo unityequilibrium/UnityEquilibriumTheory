@@ -1,0 +1,309 @@
+{
+  "checks": {
+    "all_eight_single_port_magnitude_relations": true,
+    "baseline_readout_derivative": true,
+    "branch_jacobian_conjugacy": true,
+    "canonical_source_matches_unit_rhs": true,
+    "common_characteristic_denominator": true,
+    "energy_matrix_and_loss_identity": true,
+    "equilibria_use_old_exact_relations": true,
+    "force_pair_from_same_potential": true,
+    "full_state_input_reflection": true,
+    "jacobian_from_drift_at_each_branch": true,
+    "local_absolute_readout_uses_branch_derivative": true,
+    "loss_and_one_derivative_have_no_hidden_mode": true,
+    "nonlinearity_not_removed_by_fixed_coefficients": true,
+    "positive_energy_principal_minors": true,
+    "readout_reflection_includes_C_squared_derivative": true,
+    "resolvent_equals_eliminated_response": true,
+    "source_port_reflection": true,
+    "source_ports_from_rhs": true,
+    "transfer_input_output_parity": true
+  },
+  "completed_sections": [
+    "U0",
+    "U1",
+    "U2",
+    "U3"
+  ],
+  "contract_id": "T13_RETAINED_RESPONSE_REQUIREMENT_AUDIT_FORMAL_V1",
+  "contract_review_status": "INCOMPLETE",
+  "contract_sha256": "e904f5af66cfa49fd2b0003658035f68bf326a7f1571fc2bdb8a6bd72de63b1b",
+  "exact_response": {
+    "denominator": "6*c**2*r**2 + 2*c**2*z**2 + 2*c**2*z + c**2 + 3*r**2*z + z**3 + z**2 + z",
+    "denominator_domain": "No poles in Re(z)>=0 by positive quadratic energy and full-rank loss/derivative witness; no floating eigenvalue proof.",
+    "magnitude_scope": "Each separate readout and one port at a time only; |T_minus_ij(iw)|=|T_plus_ij(iw)|. Not mixed ports/readouts or finite-amplitude switching.",
+    "negative_branch_signs": [
+      [
+        1,
+        -1
+      ],
+      [
+        -1,
+        1
+      ],
+      [
+        -1,
+        1
+      ],
+      [
+        -1,
+        1
+      ]
+    ],
+    "positive_branch": [
+      [
+        "(3*r**2 + z**2 + z + 1)/(-c**2 + (2*c**2 + z)*(3*r**2 + z**2 + z + 1))",
+        "c/(-c**2 + (2*c**2 + z)*(3*r**2 + z**2 + z + 1))"
+      ],
+      [
+        "2*c*(3*r**2 + z**2 + z + 1)/(-c**2 + (2*c**2 + z)*(3*r**2 + z**2 + z + 1))",
+        "2*c**2/(-c**2 + (2*c**2 + z)*(3*r**2 + z**2 + z + 1))"
+      ],
+      [
+        "c/(-c**2 + (2*c**2 + z)*(3*r**2 + z**2 + z + 1))",
+        "(2*c**2 + z)/(-c**2 + (2*c**2 + z)*(3*r**2 + z**2 + z + 1))"
+      ],
+      [
+        "c*z/(-c**2 + (2*c**2 + z)*(3*r**2 + z**2 + z + 1))",
+        "z*(2*c**2 + z)/(-c**2 + (2*c**2 + z)*(3*r**2 + z**2 + z + 1))"
+      ]
+    ],
+    "symbols": "c>0,r>0,c^2=1+r,2r^3+r-1=0,z=normalized Laplace frequency"
+  },
+  "history_dispositions": {
+    "hidden_arrangements_and_modes": "old N/O/P limitations reused; no new closure or physical preparation inferred",
+    "stable_basins": "prepared sign/basin memory; no gain-magnitude difference in declared eight linear channels",
+    "structural_matrix_update": "external fixed configuration in inspected resource lane, not internal A dynamics",
+    "within_basin_Pi_pair": "old asymptotic convergence to same state; finite wait not exact reset"
+  },
+  "identities": [
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/meta/UET_CORE_PROPOSITION_PREMISE_REVIEW.md",
+      "role": "evidence",
+      "sha256": "e85924a8cbd1bffce1384fa6d8c147523bd18b029c9f00d540f1592186a04635"
+    },
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/Research_T13_Retained_Response_Requirement_Audit.py",
+      "role": "code",
+      "sha256": "ece85e04207ea8dda8da7e57d63ecfd2e61554792dc2eeb11fc64824531a3014"
+    },
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/test_t13_retained_response_requirement_audit.py",
+      "role": "code",
+      "sha256": "f8a198b1b9c9440f0b0697832f3093c732bf0e126667c168a3e18f41cfa5b8db"
+    },
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/core/02_equations/matter_space/uet_matter_space.py",
+      "role": "input",
+      "sha256": "488db6aa26b99856e2eb82a2f46a9857f623f418ef8e537498fa71d5e4f633aa"
+    },
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/core/01_contracts/MATTER_SPACE_RESEARCH_SPEC.md",
+      "role": "input",
+      "sha256": "d178f1978c93a09350a4da6ea11153a93fbfb13ad12c9d390846f741ad5db848"
+    },
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/meta/UET_THEORY_ARGUMENT.md",
+      "role": "evidence",
+      "sha256": "d590b084fa85ed1e3133364a8b889b79ad5c3a901e3a8044ed4e00ae3d763d4a"
+    },
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/calculation_contracts/energy_memory_cycle.json",
+      "role": "evidence",
+      "sha256": "fabaadf5e788c1bebbb7841b3823ea0b99ee8e90b27b143d7d920cce3dd076d3"
+    },
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/core/03_lanes/persistence/uet_resource_selection.py",
+      "role": "input",
+      "sha256": "bc55c0a5b47e9980788e5c268c69c1dfeadcdf9dce7b540743d33a8f7a9a197f"
+    },
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/core/01_contracts/RESOURCE_SELECTION_DYNAMIC_GAME_SPEC.md",
+      "role": "input",
+      "sha256": "bbe67ade6f75fdae1f1cb9b5fce0589ac789495a3a253ee6096f9845c62439d5"
+    },
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/core/07_artifacts/provenance/resource_selection_dynamic_game_verification.json",
+      "role": "evidence",
+      "sha256": "b4c59a0cfb037fde910faf0412732c67dd800cff6425281f74150e4d81bb5d04"
+    },
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/core/07_artifacts/provenance/resource_selection_dynamic_game_contract.json",
+      "role": "evidence",
+      "sha256": "64a733b945af1806a701e22d4c372855ebb382a7caf399f23ab695cc68c00265"
+    },
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/t13_physical_platform_correspondence_screen.json",
+      "role": "evidence",
+      "sha256": "56eed42bfa4d792b8eb4d495856ba9008178e116a909d97d0859d7559480a4c2"
+    },
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/calculation_contracts/physical_platform_correspondence_screen.json",
+      "role": "evidence",
+      "sha256": "afd2b3adc90dfe762752c5f23ba69b380ca302bf3feed9dbedfd6341c1dd6754"
+    },
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/meta/UET_SPIN_STRAIN_CORRESPONDENCE_AUDIT.md",
+      "role": "evidence",
+      "sha256": "21e73506d528b616fb8cd13750facd14a2d33a9886d5aadd0927c580c4aed736"
+    },
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/meta/UET_LATTICE_MECHANICAL_STATE_CONSTRUCTION.md",
+      "role": "evidence",
+      "sha256": "f272760ad1e00c12d3fd0df2315d16355f60166c97ea19843c327fc39942e659"
+    },
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/meta/UET_LATTICE_BATH_REDUCTION_AUDIT.md",
+      "role": "evidence",
+      "sha256": "e65174b4d3e3182af317db6bfb6cb86e70ffa6718dfb0a1a6f29b3e94752a13e"
+    },
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/topics/For Work/17_Formula_Audit_Standard.md",
+      "role": "evidence",
+      "sha256": "e83007810b110723f3ebf6fec80120e877c895d2855ce01bba64a95499879e08"
+    },
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/topics/For Work/18_Research_Hardening_Workflow.md",
+      "role": "evidence",
+      "sha256": "2bbefc7a1a7d4f4cb692c770e5022db0f40d648978f46a83e58ea7dcce80c843"
+    },
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/topics/For Work/30_Calculation_and_Observation_Completeness_Standard.md",
+      "role": "evidence",
+      "sha256": "8fec4618c5e21c975c62b10902d969609808ab2c98e6c004a5c0ac9596c6f762"
+    },
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/topics/For Work/32_Theory_Development_and_Research_Sequencing_Standard.md",
+      "role": "evidence",
+      "sha256": "e796ba85860736e47bd14977923ab14ffde920c1715617d93725aca12788f3c2"
+    },
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/meta/schemas/calculation_contract_v1.schema.json",
+      "role": "config",
+      "sha256": "ec556052d755908a2ec7b3ec10b411839f4f0bee549fd902fb1f915f8475ebc3"
+    },
+    {
+      "availability": "REQUIRED",
+      "kind": "working_file",
+      "path": "docs/scripts/audit/audit_calculation_completeness.py",
+      "role": "code",
+      "sha256": "b406d31add9834d2cd1d9f3bb8d42724d26c390413710419313dd85cba7121ca"
+    }
+  ],
+  "inherited_controls": {
+    "original_scope": "declared interaction-versus-cost separation; not measured resource learning",
+    "path": "docs/core/07_artifacts/provenance/resource_selection_dynamic_game_verification.json",
+    "rerun": false,
+    "selected_gate_names": [
+      "costless_interaction_keeps_C_invariant",
+      "costless_resource_changes_with_declared_cost",
+      "same_cost_interaction_changes_C",
+      "same_cost_interaction_does_not_change_ledger"
+    ]
+  },
+  "negative_controls": {
+    "coefficient_retuning_rejected": true,
+    "different_baseline_does_not_imply_different_gain": true,
+    "finite_amplitude_has_nonzero_quadratic_readout_remainder": true,
+    "frozen_label_without_preparation_is_not_learned": true,
+    "ledger_is_not_resource_feedback": true,
+    "mixed_inputs_not_covered_by_single_port_magnitude": true,
+    "mixed_readout_not_covered_by_separate_channels": true,
+    "omitted_C_squared_derivative_detected": true,
+    "omitted_input_reflection_detected": true,
+    "physical_promotion_rejected": true
+  },
+  "new_UET_discriminator": false,
+  "new_model_terms": 0,
+  "next_controller": "physical-parent-preparation remains unchanged. Reopen a structural-response calculation only with a sourced missing requirement, independent restriction or admitted physical state/preparation/readout; no automatic new state/model/platform.",
+  "old_producers_rerun": false,
+  "parameter_sweeps": 0,
+  "physical_acceptance": false,
+  "protocol": {
+    "baseline_subtracted": true,
+    "fixture": {
+      "a_matter": -1,
+      "a_space": 1,
+      "b_matter": 1,
+      "b_space": 1,
+      "coupling_g": 1,
+      "kappa_matter": 1,
+      "kappa_space": 1,
+      "mobility_matter": 1,
+      "mobility_space": 1,
+      "tau_space": 1
+    },
+    "frozen_label_is_learned": false,
+    "physical_acceptance": false,
+    "ports": [
+      "J_C",
+      "J_Phi"
+    ],
+    "ports_applied_separately": true,
+    "readouts": [
+      "C",
+      "C_squared",
+      "Phi",
+      "Pi"
+    ],
+    "regime": "infinitesimal_response_at_equilibrium",
+    "source_of_history": "old_finite_preparation_not_rerun"
+  },
+  "quantum_parent_validated": false,
+  "resource_source_audit": {
+    "config_frozen": true,
+    "fitness_uses_interaction_and_probability": true,
+    "interaction_and_costs_are_config": true,
+    "internal_config_writes": [],
+    "probability_update_call_count": 2,
+    "resource_enters_probability_update": false,
+    "scope": "current source dependency audit; no simulation, physical topology identification or universal learning definition",
+    "threshold_changes_update_inside_loop": false
+  },
+  "source_baseline_commit": "8b2718bb1060463090393bdec44f5110f2c93549",
+  "sympy_version": "1.14.0",
+  "trajectories": 0
+}

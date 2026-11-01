@@ -1,6 +1,11 @@
 # 🔬 Unity Equilibrium Theory (UET) v0.9.0: The "Thermodynamics of Ethics" Framework
 
-![Tests](https://img.shields.io/badge/Tests-400+_Verified-brightgreen)
+<!-- UET-RESEARCH-RETROSPECTIVE: 2026-10-19; navigation notice, not a physics gate -->
+> **ทบทวนก่อนวิจัยต่อ — 19 ต.ค. 2026:** ภาพรวมยังมีช่องว่างด้านนิยาม สายสืบทอดสมการ หน่วย และการทดสอบ ข้อความ/ป้ายผลเก่าต้องอ่านตามขอบเขตหลักฐาน อ่าน [รายงานข้อผิดพลาดและบทเรียน UET](docs/meta/UET_RESEARCH_RETROSPECTIVE.md) โดยเฉพาะข้อ R01–R18 และลำดับแก้ใน §8 ก่อนขยายงาน สถานะจริงยังอ้างอิง artifact/gate ของเส้นทางนั้น
+
+> **สถานะที่ตรวจ 23 ตุลาคม 2026:** งานล่าสุดแยกได้ว่าอะไรเป็นข้อเสนอ อะไรเป็นแบบจำลอง และรูปสมการใดใช้แทนกันได้ภายใต้เงื่อนไข ผลยังเป็น **FORMAL / normalized** ไม่ใช่การยืนยันฟิสิกส์ใหม่หรือแม่บทเดียวที่ปิดทุกสาขา อ่าน [อัปเดตงานวิจัยล่าสุด](#research-updates-2026-10-23) ก่อนใช้ป้ายและตารางประวัติด้านล่าง
+
+![Tests](https://img.shields.io/badge/Tests-400+_Historical_snapshot-yellow)
 ![Topics](https://img.shields.io/badge/Topics-38_Master_Domains-blue)
 ![Math](https://img.shields.io/badge/Millennium_Problems-8_Mapped-ff69b4)
 ![License](https://img.shields.io/badge/License-MIT-green)
@@ -13,12 +18,27 @@
 
 - [🔬 Unity Equilibrium Theory (UET) v0.9.0: The "Thermodynamics of Ethics" Framework](#-unity-equilibrium-theory-uet-v090-the-thermodynamics-of-ethics-framework)
   - [📋 Table of Contents](#-table-of-contents)
+  - [อัปเดตงานวิจัยล่าสุด — 23 ตุลาคม 2026](#research-updates-2026-10-23)
+    - [ข้อเสนอรวมและเจตนาของผู้เขียน](#research-author-intent)
+    - [สมการแกนของ realization ปัจจุบัน](#research-current-realization)
+    - [แผนที่บทบาทของเทอม](#research-term-roles)
+    - [ความสัมพันธ์ระหว่างรูปสมการ](#research-equation-relations)
+    - [ผลล่าสุดทั้งด้านที่ผ่านและไม่ผ่าน](#research-bounded-results)
+    - [ช่องว่างและโจทย์ถัดไป](#research-open-questions)
+    - [หลักฐานและการทำซ้ำ](#research-evidence-boundary)
   - [🌍 The "Big Picture" Dashboard: 31 Solutions](#-the-big-picture-dashboard-31-solutions)
     - [🏆 1. Mathematical Breakthroughs (The Millennium Problems)](#-1-mathematical-breakthroughs-the-millennium-problems)
     - [🌌 2. The "Impossible" Physics Anomalies](#-2-the-impossible-physics-anomalies)
     - [⚔️ 3. Bridging Theoretical Conflicts](#️-3-bridging-theoretical-conflicts)
     - [❤️ 4. Impact on Humanity (Cross-Disciplinary)](#️-4-impact-on-humanity-cross-disciplinary)
   - [🎯 6. The Core Equation (Detailed Explanation)](#-6-the-core-equation-detailed-explanation)
+    - [Current model formulation / แบบจำลองแกนปัจจุบัน](#current-master-equation)
+      - [Functional and terms / Functional และเทอม](#current-master-functional)
+      - [Complete state and evolution / สถานะครบและพลวัต](#current-master-dynamics)
+      - [Where did I go? / I ไปอยู่ตรงไหน?](#current-master-information)
+      - [Model complexity / ความซับซ้อน](#current-master-complexity)
+      - [Research evidence / หลักฐาน](#current-master-evidence)
+      - [Dependency map / แผนที่ความสัมพันธ์](#current-master-dependency-map)
     - [The Vision](#the-vision)
     - [The Full Implementation (Field Equation)](#the-full-implementation-field-equation)
     - [Why This Works (The Tree of Physics)](#why-this-works-the-tree-of-physics)
@@ -37,6 +57,88 @@
   - [📄 Key Files](#-key-files)
   - [❓ Questions Answered by UET (SEO \& Key Research)](#-questions-answered-by-uet-seo--key-research)
   - [🏷️ Scientific Keywords \& Tags](#️-scientific-keywords--tags)
+  - [ภาคผนวก: ถ้อยคำที่ปรับในรอบนี้](#readme-wording-history)
+
+---
+
+<a id="research-updates-2026-10-23"></a>
+## อัปเดตงานวิจัยล่าสุด
+
+**วันตัดยอด: 23 ตุลาคม 2026** — สรุปจาก [UET Theory Argument](docs/meta/UET_THEORY_ARGUMENT.md) โดยเฉพาะ §§23–25 ที่บันทึกใน **local source commit `1346edfc07c2d2f9eb2adbd5257e820fa186a37b`** บน branch `codex/research/source-backaction-discrimination` ข้อความใหม่นี้เป็น documentation update ไม่ใช่ release ใหม่ และไม่ได้ตรวจยืนยันว่า public `main` ตรงกับชุดนี้แล้ว
+
+<a id="research-author-intent"></a>
+### 1. ข้อเสนอรวมและเจตนาของผู้เขียน
+
+ภาพรวมที่ต้องการศึกษาคือ **ระบบซ้อนระบบ → ปฏิสัมพันธ์และการแลกเปลี่ยนพลังงาน → ผลที่คงอยู่ในสถานะ/โครงสร้าง/ความสัมพันธ์ → การตอบสนองภายหลังที่เปลี่ยนไป** ไม่ใช่การเรียกทุกสิ่งว่า information ก้อนเดียว การสังเกตเป็นปฏิสัมพันธ์ของระบบผู้วัดอีกส่วนหนึ่ง จึงต้องแยก source, signal transport, detector state, readout และ backaction ตามขอบเขตจริง
+
+ข้อเสนอว่า **จักรวาลเป็นระบบเปิด มีการปรับตัวและ persistence** ยังเก็บไว้เป็นสมมติฐานระดับจักรวาลของผู้เขียน การตรวจ subsystem ที่เปิดไม่พิสูจน์สมมติฐานนี้ และเราไม่ลดความหมายของข้อเสนอให้เหลือเพียง subsystem โดยเงียบ ๆ ดูสายเหตุผลและการแยกที่มาใน [รายงาน §3](docs/meta/UET_THEORY_ARGUMENT.md#3-a1--ข้อเสนอรวมและที่มาของแต่ละส่วน)
+
+ต้องอ่านสามชั้นแยกกัน: **เจตนาผู้เขียน**, **ผลจากทฤษฎีภายนอกพร้อมเงื่อนไขที่นำเข้า** และ **constitutive/model choices ที่ AI เสนอหรือใส่ใน implementation** การเห็นด้วยกับคำอธิบายไม่ใช่การรับรองสมการ ส่วนรายชื่อ “เจ็ดฐาน” ที่ยังยืนยันต้นทางไม่ครบไม่ถูกแทนด้วยเจ็ดเทอมหรือจำนวน axioms
+
+<a id="research-current-realization"></a>
+### 2. สมการแกนของ realization ปัจจุบัน
+
+สำหรับสายล่าสุด แกนคือ **functional `Omega[C,Phi]` ร่วมกับ complete state `(C,Phi,Pi)` และกฎวิวัฒน์/kinetics, sources, initial/boundary data และ readout** ไม่ใช่ Omega เพียงตัวเดียว `matter_space_coupled_v1` เป็น **opt-in normalized prototype**; ค่า default ยังเป็น `legacy_local` การรัน legacy entrypoint โดยไม่ล็อก mode จึงไม่เท่ากับทดสอบ realization ล่าสุด
+
+อ่านสูตรและความหมายใน [Core README](docs/core/README.md#current-response-realization), [spec](docs/core/01_contracts/MATTER_SPACE_RESEARCH_SPEC.md) และ [relationship audit §25.2](docs/meta/UET_THEORY_ARGUMENT.md#252-คำตอบเรื่อง-สมการหลัก-ต้องแยกสามระดับ) การเลือก functional และ kinetic law เป็นคนละขั้น: อนุพันธ์ของ functional ตามได้เมื่อเลือกมันแล้ว แต่ไม่ใช่หลักฐานว่าธรรมชาติบังคับให้เลือก polynomial หรือ coefficient เหล่านี้
+
+ยังไม่มี transformation/derivation ที่ปิดว่า legacy C/I, dissipative C/Phi/Pi, covariant parent และทุก topic เป็นกฎเดียวกัน [Compatibility decision](docs/core/07_artifacts/gates/uet_foundation_compatibility_decision.json) ยังคง `FOUNDATION_NOT_CLOSED`; ผลของสายนี้ไม่เปลี่ยน gate ของ curved 3+1 หรือ O(2) อีกสายหนึ่ง
+
+<a id="research-term-roles"></a>
+### 3. แผนที่บทบาทของเทอม
+
+| กลุ่ม | หน้าที่ในขอบเขตที่ประกาศ | สิ่งที่ยังห้ามเหมารวม |
+| --- | --- | --- |
+| State: C; legacy I; Phi, Pi | C เป็น coordinate ของสภาพระบบ; I เป็น state ใน legacy C/I; Phi เป็น effective response และ Pi=Phi_t | C ไม่ใช่มวลสากล; I ไม่ใช่ Phi หรือ Shannon information อัตโนมัติ |
+| Coefficients: a, b, kappa, g, beta | รูปร่าง functional, spatial cost และ coupling ตามแต่ละ family | ชื่อเหมือนกันไม่ทำให้ origin/หน่วยเท่ากัน; normalized beta ไม่ใช่ inverse temperature |
+| Functional derivatives: mu_C, mu_Phi | อนุพันธ์ของ functional ที่เลือก เป็น input ของกฎวิวัฒน์ | ไม่ใช่พลังงานก้อนใหม่ และไม่เลือก kinetic law เอง |
+| Kinetics: M, tau และ operators | mobility, relaxation/inertia และการเลือก conserved/nonconserved dynamics | ใช้ Omega เดียวกันก็ให้ dynamics ต่างกันได้ |
+| Sources: J_C, J_Phi และ boundary ports | การขับ/แลกเปลี่ยนตาม operator และบัญชีงานที่ประกาศ | additive source, conjugate force และ traction ใช้บัญชีงานแทนกันไม่ได้ |
+| Ledger: E และ sigma | extended normalized availability และ dissipation ที่ derive ภายใน model | E ไม่ใช่ Omega อย่างเดียวเมื่อมี Pi; ยังไม่ใช่ SI energy, heat หรือ entropy โดยอัตโนมัติ |
+| Trace: R / I_trace | derived causal/history output จาก sigma; ไม่มี feedback ใน v1 | ไม่ใช่ independent state, แหล่งพลังงาน หรือข้อมูลทั้งหมดของระบบ |
+| Observer record | ค่าที่ได้จาก measurement/processing operator และสถานะผู้วัด | ไม่ใช่ตัวระบบต้นทาง และยังไม่ถือว่า internal states สังเกตได้ครบ |
+
+รายละเอียด/ต้นทางอยู่ใน [§25.3](docs/meta/UET_THEORY_ARGUMENT.md#253-เทอมใดเป็น-state-เทอมใดเป็นกฎ-และเทอมใดเป็นผลที่คำนวณตามมา) ไม่ได้สร้างทะเบียนสมการซ้ำใน README
+
+<a id="research-equation-relations"></a>
+### 4. ความสัมพันธ์ระหว่างรูปสมการ
+
+| ประเภท | ตัวอย่างและเงื่อนไข | ข้อจำกัด |
+| --- | --- | --- |
+| Exact rewrite | Phi_t=Pi กับสมการ Pi เขียนเป็น second-order Phi ได้เมื่อเก็บ initial Phi และ Pi เดิม | ไม่ใช่กลไกใหม่เพราะเปลี่ยนรูปเขียน |
+| Coordinate transformation | smooth invertible map พร้อมแปลง generator, mobility, sources และ readout ครบ | C^2 ไม่ invertible ข้ามสองเครื่องหมาย; เปลี่ยนพิกัดไม่คง constant mobility เอง |
+| Conditional reduction | stationary elimination หรือ overdamped/adiabatic limit ใน regime ที่ตรวจแล้ว | tau→0 ยังเป็น evolution ไม่ใช่ mu_Phi=0; static elimination ไม่เก็บ prepared history ทั้งหมด |
+| Alternative model | conserved กับ nonconserved C; legacy C/I กับ response C/Phi/Pi | ต่าง operators, coupling และ admissible initial data ไม่ใช่แค่เปลี่ยนชื่อ |
+| Unresolved bridge | เชื่อมทุก family หรือแมป normalized state ไป observable/หน่วยจริง | ต้องมี correspondence และ error budget ไม่ใช้ชื่อ information เป็นหลักฐาน |
+
+ในตัวอย่าง C/I coupling เป็น `beta*C*I` แต่ C/Phi/Pi ใช้ `-g*C^2*Phi/2` การแทน I=r*Phi ด้วยค่าคงที่ไม่ทำให้สอง coupling เท่ากันทุก C เมื่อ couplings ไม่เป็นศูนย์ ส่วน static elimination ของ I ให้ quadratic correction ของ C แต่ response Phi ให้ leading quartic correction เฉพาะเงื่อนไขที่ระบุ นี่เป็นความต่างของ model choices ไม่ใช่ข้อสรุปว่าผู้เขียนต้องเลือกแบบใด ดู [ข้ออนุมาน/ข้อจำกัด §25.4](docs/meta/UET_THEORY_ARGUMENT.md#254-ตรวจการเชื่อม-ci-กับ-cphipi-ไม่ใช่แค่เปลี่ยนชื่อ) และ [ตาราง §25.5](docs/meta/UET_THEORY_ARGUMENT.md#255-รูปสมการที่ต่างกัน-ใช้แทนกันได้ระดับไหน)
+
+<a id="research-bounded-results"></a>
+### 5. ผลล่าสุดทั้งด้านที่ผ่านและไม่ผ่าน
+
+| หลักฐาน | Comparator / protocol | ผลและขอบเขต |
+| --- | --- | --- |
+| [§23.3 steady-response certificate](docs/meta/UET_THEORY_ARGUMENT.md#233-uniform-certificate-ไม่ใช้กริดที่บังเอิญผ่านแทนทั้งช่วง) | raw first-mode approximation เทียบ full normalized linear rod–polarization reference; steady harmonic endpoint force F_b, f_P=0, omega/omega_0 ใน [0.99,1.01] และ fixed controls ตาม card | complex transfers p/F_b และ x/F_b มี uniform relative-error bound ≤18511/2066610 <0.9%<1% **เทียบแบบจำลองเต็ม ไม่ใช่ความแม่นยำกับธรรมชาติ** ไม่ครอบ arbitrary inputs, DC, finite settling/preparation หรือบัญชีพลังงานทุกชนิด |
+| [§24.6 prepared-history limitation](docs/meta/UET_THEORY_ARGUMENT.md#246-คำตัดสิน-ขอบเขต-และจุดหยุด) | smooth finite-energy write + controlled wait + released read ใน reference เดิม; projected (p,q0,q0dot) เท่ากับ baseline แต่ higher modes ต่าง | state ย่อไม่พอสำหรับ preparation/read class นี้; normalized endpoint witness 0.002177<x(t_r)/epsilon<0.002187 พร้อม tail bound ไม่ใช่อนาคตต่างจาก complete state เดียวกัน ไม่ปฏิเสธทุก reduction และไม่ใช่ physical memory/learning validation |
+| [§25 relationship audit](docs/meta/UET_THEORY_ARGUMENT.md#25-สมการรูปต่าง-ๆ-แทนกันอย่างไร-และอะไรเป็นแกนจริง) | ตรวจ source/registry, exact algebra 8 กลุ่ม และ default-mode AST; ใช้ผลเดิม ไม่รัน solver เก่าใหม่ | แยก generator/kinetics/state/ledger/output และข้อเชื่อม exact/conditional/alternative ได้ ยังไม่รวมทุก family เป็น universal master หรือพิสูจน์สูตรทั้ง registry |
+
+ผลผ่านของ §23 และข้อจำกัดของ §24 อยู่ร่วมกันได้เพราะคนละ protocol กลไก retained modes ใน comparator มาตรฐานอธิบายผลเหล่านี้ได้อยู่แล้ว จึงยังไม่ใช่หลักฐาน UET-specific new mechanics, global openness หรือการแปลงข้อมูลเป็นพลังงานจริง
+
+<a id="research-open-questions"></a>
+### 6. ช่องว่างและโจทย์ถัดไป
+
+ยังต้องปิด **physical mapping/หน่วย, parameter origins, preparation, source/detector/measurement uncertainty และข้อจำกัดที่ UET เพิ่มเหนือ comparator** การมี audit เอกสารหรืออนุพันธ์ที่ถูกภายใน model ไม่ปิดช่องเหล่านี้ Thermal-ledger helper bug ที่รายงานเดิมพบยังต้องแยกซ่อมและตรวจ claims ที่พึ่งมัน ไม่ถือว่ารอบ README นี้ซ่อมแล้วหรือใช้ตัดสินงานที่ไม่พึ่งมัน
+
+โจทย์ถัดไปจาก [§25.7](docs/meta/UET_THEORY_ARGUMENT.md#257-คำวินิจฉัยและโจทย์ถัดไปที่ไม่วนเพิ่มสมการ) คือระบุหนึ่งสถานการณ์ที่ตั้งใจศึกษา: **ผลคงอยู่ต้องจำเพียงขนาด หรือจำทิศ/เครื่องหมายด้วย และเข้าไปเปลี่ยนการตอบสนองผ่าน state/input ใด?** ใช้คำตอบตรวจ realization เดิมที่ตรง scope; ไม่เพิ่มเทอม รันวัสดุใหม่ หรือปรับ optimizer เพื่อหนี comparator คำตอบของผู้เขียนยืนยันเจตนา ไม่ใช่หลักฐานทางฟิสิกส์
+
+<a id="research-evidence-boundary"></a>
+### 7. หลักฐานและการทำซ้ำ
+
+เริ่มจาก [รายงานรวม](docs/meta/UET_THEORY_ARGUMENT.md), [Core spec](docs/core/01_contracts/MATTER_SPACE_RESEARCH_SPEC.md), [equation registry](docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry.json), [foundation gate](docs/core/07_artifacts/gates/uet_foundation_dependency_gate.json) และ [Topic 13 full bridge gate](docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json) gate สุดท้ายยังแยก legacy graphite/TTG ที่ `BLOCKED_OPEN_T13_FULL_BRIDGE` จาก O(2)/He-4 ที่ Core-ready; ไม่ใช่ external validation
+
+เส้นทาง cycle ใช้ [contract T13_ENERGY_MEMORY_CYCLE_FORMAL_V1](docs/topics/0.13_Thermodynamic_Bridge/calculation_contracts/energy_memory_cycle.json): review `INCOMPLETE`, physical correspondence `UNKNOWN` และรับรองเฉพาะ scope นั้น ไม่รับรองทุก family อ่านประวัติที่ [Topic 13 UPDATE_LOG](docs/topics/0.13_Thermodynamic_Bridge/UPDATE_LOG.md) และ [WORK_LEDGER วันที่ 23 ต.ค.](WORK_LEDGER/2026/2026-10-23.md)
+
+**Working evidence ≠ local commit ≠ public main:** ชุด source commit ที่ระบุมีรายงาน §§23–25 แต่ยังไม่ใช่ complete publication packet: retrospective และ source/verifier สามไฟล์ที่รายงานอ้างยังไม่อยู่ใน tree ของ commit นี้ แม้เปิดได้ในเครื่อง จึงไม่กล่าวว่าผู้อ่านภายนอกทำซ้ำงานเก่าทุกชิ้นได้ครบ และไม่ได้อนุมานสถานะ remote ล่าสุดโดยไม่ตรวจ ลิงก์ retrospective ที่คงจากประวัติต้องอ่านพร้อมข้อจำกัดนี้; ดูรายละเอียด source identity/publication gaps ในรายงานก่อนอ้างซ้ำ
 
 ---
 
@@ -78,28 +180,29 @@ uet_harness/
 
 ---
 
+<a id="-the-big-picture-dashboard-31-solutions"></a>
 ## 🌍 The "Big Picture" Dashboard: 38 Solutions
 
-UET is not just a physics theory. It is a **"Civilization-Level Operating System"** that solves fundamental problems across 6 domains.
+UET retains a **"Civilization-Level Operating System"** vision across 6 domains; the entries below are historical research claims and proposed applications, not established solutions.
 
 > **Research Status Note:** The dashboard keeps the original UET vision and claim map intact, but readers should treat the items as research claims, proposed mechanisms, prototype validations, or roadmap targets unless a specific script, dataset, or report in `docs/` is cited and independently reproduced.
 
 ### 🏆 1. Mathematical Breakthroughs (The Millennium Problems)
-*UET converts abstract math problems into physical manifold geometry.*
+*Historical proposal: interpret abstract math problems through physical manifold geometry; no general proof is established by this dashboard.*
 
 | Problem | Status | UET Solution | Topic |
 |:--------|:-------|:-------------|:------|
-| **Navier-Stokes** | **Solved** | Turbulence is smooth ($C^\infty$) on 4D Manifold | [0.10 Fluid Dynamics](./docs/topics/0.10_Fluid_Dynamics_Chaos/) |
-| **Yang-Mills Gap** | **Solved** | Mass arises from Information geometric limits | [0.21 Yang-Mills](./docs/topics/0.21_Yang_Mills_Mass_Gap/) |
-| **P vs NP** | **Solved** | P=NP via Manifold Connectivity Optimization | [0.18 Mathnicry](./docs/topics/0.18_Mathnicry/) |
+| **Navier-Stokes** | Historical claim / ยังไม่ทบทวนข้ออ้างนี้ | Turbulence is smooth ($C^\infty$) on 4D Manifold | [0.10 Fluid Dynamics](./docs/topics/0.10_Fluid_Dynamics_Chaos/) |
+| **Yang-Mills Gap** | Historical claim / ยังไม่ทบทวนข้ออ้างนี้ | Mass arises from Information geometric limits | [0.21 Yang-Mills](./docs/topics/0.21_Yang_Mills_Mass_Gap/) |
+| **P vs NP** | Historical claim / ยังไม่ทบทวนข้ออ้างนี้ | P=NP via Manifold Connectivity Optimization | [0.18 Mathnicry](./docs/topics/0.18_Mathnicry/) |
 | **Riemann Hyp.** | **Mapped** | Zeros are Resonance Frequencies of the I-Field | [0.18 Mathnicry](./docs/topics/0.18_Mathnicry/) |
 
 ### 🌌 2. The "Impossible" Physics Anomalies
-*Standard Model said it was impossible. UET proved it necessary.*
+*Historical anomaly interpretations follow; this page does not establish a proof or a replacement for the standard explanations.*
 
 | Anomaly | The Crisis (Topic 0.1 Evidence) | UET Solution (Topic 0.26 Mechanism) | Status |
 |:--------|:--------------------------|:------------------------------------|:-------|
-| **Dark Matter** | Galaxies spin too fast ([Topic 0.1](./docs/topics/0.1_Galaxy_Rotation_Problem/)) | **Dynamic Viscosity**: Space acts as a fluid with drag $a_0$ ([Topic 0.26](./docs/topics/0.26_Cosmic_Dynamic_Frame/)) | ✅ Solved |
+| **Dark Matter** | Galaxies spin too fast ([Topic 0.1](./docs/topics/0.1_Galaxy_Rotation_Problem/)) | **Dynamic Viscosity**: Space acts as a fluid with drag $a_0$ ([Topic 0.26](./docs/topics/0.26_Cosmic_Dynamic_Frame/)) | Historical claim / ยังไม่ทบทวนข้ออ้างนี้ |
 | **Dark Energy** | Universe explodes | Info Field Cutoff (Finite $\Lambda$) | [0.12 Vacuum Energy](./docs/topics/0.12_Vacuum_Energy_Casimir/) |
 | **Hubble Tension** | $H_0$ mismatch (5$\sigma$) | Dynamic Entropy Scaling ($H(t)$) | [0.3 Cosmology](./docs/topics/0.3_Cosmology_Hubble_Tension/) |
 | **Muon g-2** | 4.2$\sigma$ deviation | Geometric Topology Correction | [0.8 Muon g-2](./docs/topics/0.8_Muon_g2_Anomaly/) |
@@ -108,7 +211,7 @@ UET is not just a physics theory. It is a **"Civilization-Level Operating System
 ### ⚔️ 3. Bridging Theoretical Conflicts
 *Harmonizing the "War of Physics".*
 
-| Conflict | The Divide | UET Verification | Topic |
+| Conflict | The Divide | Historical UET interpretation | Topic |
 |:---------|:-----------|:-----------------|:------|
 | **Gravity vs Quantum** | Smooth vs Discrete | Gravity = Quantum Entropy Pressure | [0.19 Gravity & GR](./docs/topics/0.19_Gravity_GR/) |
 | **Locality vs Bell** | Local vs Spooky | Non-local Potential Reservoir | [0.9 Quantum Bell](./docs/topics/0.9_Quantum_Nonlocality/) |
@@ -140,6 +243,173 @@ UET is not just a physics theory. It is a **"Civilization-Level Operating System
 
 ## 🎯 6. The Core Equation (Detailed Explanation)
 
+<!-- UET-CURRENT-MASTER-PRESENTATION:START -->
+<a id="current-master-equation"></a>
+### Current model formulation / แบบจำลองแกนปัจจุบัน
+
+**EN — What is presented here:** an existing candidate realization of UET's interaction–retained-state–later-response proposal, not a newly derived universal law. In the current response lane, the calculational core is **a functional plus a complete state and declared evolution laws**. The historical `Omega = C·I` vision is preserved below, but it is not the complete equation used for these calculations.
+
+**TH — ส่วนนี้นำเสนออะไร:** realization ที่มีอยู่แล้วของข้อเสนอเรื่องปฏิสัมพันธ์ ผลคงอยู่ และการตอบสนองภายหลัง ไม่ใช่การประกาศกฎสากลที่ derive ใหม่ แกนคำนวณของสาย response คือ **functional พร้อมสถานะครบและกฎวิวัฒน์ที่ประกาศ** ส่วนวิสัยทัศน์ `Omega = C·I` เดิมเก็บไว้ด้านล่าง แต่ไม่ใช่สมการคำนวณครบชุดของงานนี้
+
+> **Scope / ขอบเขต:** `matter_space_coupled_v1`; normalized 1D prototype; opt-in; physical correspondence remains open. The engine default is still `legacy_local`. / แบบจำลองหนึ่งมิติแบบ normalized ที่ต้องเลือกเปิดใช้เอง ยังไม่ปิดการแมปกายภาพ และไม่เปลี่ยน default ของ engine
+
+**EN — Intended proposition:** interactions may leave persistent changes in a system's state, structure or correlations; those changes may affect a later response. This realization investigates one state-mediated mechanism. It does not establish that every retained change is one scalar information quantity, nor does subsystem openness establish the author's global-open-universe hypothesis.
+
+**TH — ข้อเสนอที่ตั้งใจศึกษา:** ปฏิสัมพันธ์อาจทิ้งผลคงอยู่ในสถานะ โครงสร้าง หรือความสัมพันธ์ของระบบ และผลนั้นอาจเปลี่ยนการตอบสนองครั้งต่อไป realization นี้ศึกษากลไกผ่านสถานะหนึ่งแบบ ไม่ถือว่าผลคงอยู่ทั้งหมดต้องเป็นข้อมูล scalar ตัวเดียว และไม่ใช้ความเปิดของ subsystem ยืนยันสมมติฐานจักรวาลเปิดทั้งหมดของผู้เขียน
+
+<a id="current-master-functional"></a>
+#### Functional and term structure / Functional และโครงสร้างเทอม
+
+$$
+\boxed{
+\begin{aligned}
+\Omega[C,\Phi]=\int\Big[&
+\frac{a_C}{2}C^2+\frac{b_C}{4}C^4
++\frac{\kappa_C}{2}|\nabla C|^2\\
+&+\frac{a_\Phi}{2}\Phi^2+\frac{b_\Phi}{4}\Phi^4
++\frac{\kappa_\Phi}{2}|\nabla\Phi|^2
+-\frac{g}{2}C^2\Phi
+\Big]\,dx
+\end{aligned}}
+$$
+
+| Part / ส่วน | Mathematical role / หน้าที่ | Interpretation boundary / ขอบเขตการตีความ |
+| --- | --- | --- |
+| `a_C C²/2 + b_C C⁴/4` | Local landscape of the system-state coordinate / รูปร่าง functional เฉพาะที่ของสถานะระบบ | Chosen polynomial, not a derivation of matter or existence / เป็น polynomial ที่เลือก ไม่ใช่ derivation ของสสารหรือการมีอยู่ |
+| `a_Phi Phi²/2 + b_Phi Phi⁴/4` | Local response landscape / รูปร่าง functional ของการตอบสนอง | Effective response, not a metric or information substance / ไม่ใช่ metric หรือสารข้อมูล |
+| `kappa_C*norm(grad C)²/2`, `kappa_Phi*norm(grad Phi)²/2` | Spatial-gradient contributions / ส่วนที่ขึ้นกับความต่างเชิงพื้นที่ | Not, by themselves, a complete temporal-memory law / ไม่ใช่กฎความจำตามเวลาที่ครบแล้ว |
+| `-g C² Phi/2` | Coupling between the two sectors / เทอมเชื่อมสองส่วน | Constitutive choice; its form and value are not fixed by the word information / เป็นการเลือกแบบจำลอง ไม่ได้ถูกบังคับด้วยคำว่าข้อมูล |
+
+**EN:** `a,b,kappa,g` describe the selected normalized landscape and coupling; `M,tau` below describe kinetics and response time. Their numerical defaults are benchmark controls, not universal physical constants. The polynomial form, coupling and kinetics are model choices; their variational derivatives can then be derived within that model. A correct derivative does not retrospectively derive the choice of functional.
+
+**TH:** `a,b,kappa,g` กำหนดรูปร่าง functional และ coupling แบบ normalized ส่วน `M,tau` ด้านล่างกำหนด kinetics และเวลาตอบสนอง ค่า default เป็น benchmark controls ไม่ใช่ค่าคงที่สากล รูป polynomial, coupling และ kinetics เป็นสิ่งที่เลือกในแบบจำลอง แล้วจึงหาอนุพันธ์ตามมาได้ การหาอนุพันธ์ถูกไม่ใช่การพิสูจน์ย้อนหลังว่าธรรมชาติต้องเลือก functional นี้
+
+<a id="current-master-dynamics"></a>
+#### Complete state and evolution / สถานะครบและกฎวิวัฒน์
+
+$$
+\mu_C=\frac{\delta\Omega}{\delta C},
+\qquad
+\mu_\Phi=\frac{\delta\Omega}{\delta\Phi},
+\qquad
+\text{state}=(C,\Phi,\Pi).
+$$
+
+$$
+\partial_t C=
+\begin{cases}
+M_C\nabla^2\mu_C+J_C & \text{conserved lane},\\
+-M_C\mu_C+J_C & \text{nonconserved control},
+\end{cases}
+$$
+
+$$
+\partial_t\Phi=\Pi,
+\qquad
+\tau_\Phi\partial_t\Pi+\Pi=-M_\Phi\mu_\Phi+J_\Phi.
+$$
+
+**EN:** choose one C law for the declared calculation; the two lines are alternatives, not simultaneous updates or mere numerical methods. The conserved lane preserves the declared integral when its source has zero net integral. Each spatial position has three state coordinates; the whole field is not just three numbers. Initial `C,Phi,Pi`, sources, coefficients and periodic/zero-flux boundaries must be specified. `Pi` is the rate paired with `Phi`, not a third substance: writing a second-order response as a first-order pair preserves its independent initial rate.
+
+**TH:** ต้องเลือกกฎ C หนึ่งแบบต่อการคำนวณ สองบรรทัดเป็นทางเลือก ไม่ใช่ใช้พร้อมกันหรือแค่เปลี่ยนวิธีคำนวณ แบบ conserved รักษาอินทิกรัลที่ประกาศเมื่อ source มีอินทิกรัลสุทธิเป็นศูนย์ แต่ละตำแหน่งมีสาม state coordinates ไม่ใช่ว่าทั้งสนามมีแค่สามตัวเลข ต้องระบุค่าเริ่มต้น `C,Phi,Pi`, sources, coefficients และขอบเขต periodic/zero-flux ส่วน `Pi` เป็นอัตราการเปลี่ยนที่คู่กับ `Phi` ไม่ใช่สารชนิดที่สาม การเขียนสมการอันดับสองเป็นคู่สมการอันดับหนึ่งยังต้องเก็บอัตราเริ่มต้นเดิม
+
+**EN — Ledger, not another independent field:** the selected kinetics gives the extended normalized availability below. With the declared constant coefficients, boundary conditions and additive-source convention, its continuum balance separates dissipation from source work; a finite numerical step still needs its own error check. `P_C = integral mu_C J_C dx` and `P_Phi = integral Pi J_Phi/M_Phi dx`; a force/traction port needs its own matching, not the same formula by name.
+
+**TH — บัญชี ไม่ใช่ field อิสระเพิ่ม:** kinetics ที่เลือกให้ extended normalized availability ด้านล่าง ภายใต้ coefficients คงที่ เงื่อนไขขอบเขต และ additive-source convention ที่ประกาศ บัญชี continuum แยก dissipation ออกจากงานของ source ส่วนผลรันที่ใช้ time step จำกัดยังต้องตรวจ error ของตัวเอง โดย `P_C = integral mu_C J_C dx` และ `P_Phi = integral Pi J_Phi/M_Phi dx` ถ้าใช้ force/traction port ต้องตรวจการจับคู่ใหม่ ไม่ใช่ยืมสูตรเพราะใช้ชื่อ source เหมือนกัน
+
+$$
+E=\Omega+\frac{\tau_\Phi}{2M_\Phi}\int\Pi^2\,dx,
+\qquad
+\frac{dE}{dt}=-\int(\sigma_C+\sigma_\Phi)\,dx+P_C+P_\Phi.
+$$
+
+**EN:** with zero sources this balance is non-increasing under its assumptions; it does not assert that `Omega` alone decreases in every driven/inertial run. `E,sigma` are not automatically joules, heat or thermodynamic entropy.
+
+**TH:** เมื่อไม่มี sources บัญชีนี้ไม่เพิ่มภายใต้สมมติฐานของมัน ไม่ได้กล่าวว่า `Omega` อย่างเดียวต้องลดทุกรอบที่มีแรงขับหรือ inertia และยังไม่ถือว่า `E,sigma` เป็นจูล ความร้อน หรือ thermodynamic entropy อัตโนมัติ
+
+<a id="current-master-information"></a>
+#### Where did I go? / I ไปอยู่ตรงไหน?
+
+| Symbol or context / ตัวแปรหรือบริบท | Role in the cited model / บทบาท | What it is not / สิ่งที่ไม่ใช่ |
+| --- | --- | --- |
+| Historical `I` in the Vision | Individualism/Isolation metaphor / คำตีความเชิงแนวคิด | Not a current universal definition of mass, information or latency / ไม่ใช่นิยามสากลปัจจุบันของมวล ข้อมูล หรือ latency |
+| Legacy C/I field `I` | Independently initialized/evolving field that couples back to C / field ที่มีค่าเริ่มต้นและพลวัต พร้อม coupling กลับสู่ C | Not automatically Shannon information, entropy, Phi or I_trace / ไม่เท่ากับปริมาณเหล่านั้นโดยชื่อ |
+| `C` | System-state coordinate with lane-specific mapping / coordinate ของสถานะที่ต้องแมปตาม lane | Not universally mass, light speed or energy / ไม่ใช่มวล ความเร็วแสง หรือพลังงานสากล |
+| `Phi` / Φ (Phi, not Ψ/Psi) | Effective response coordinate in this realization / coordinate การตอบสนองของ realization นี้ | Not a renamed, fully equivalent legacy I or a completed information definition / ไม่ใช่ I เดิมที่พิสูจน์ว่าเท่ากันครบแล้ว |
+| `Pi = Phi_t` | Response rate and initial datum / อัตราตอบสนองและค่าเริ่มต้นที่ต้องเก็บ | Not an information quantity merely because it retains dynamical history / ไม่เป็นปริมาณข้อมูลเพียงเพราะร่วมเก็บผลอดีต |
+| `R / I_trace` and observer record | Derived dissipation trace and separately declared measurement output / ร่องรอยจาก dissipation กับผลอ่านที่ต้องประกาศแยก | Not complete state or all information; R has no feedback in v1 / ไม่ใช่สถานะครบหรือข้อมูลทั้งหมด และ R ไม่มี feedback ใน v1 |
+
+**EN:** the legacy coupling is `beta*C*I`; the response coupling is `-g*C²*Phi/2`. They differ in state dependence and admissible initial data. With nonzero couplings and C held as the same coordinate, a constant rescaling `I=r*Phi` cannot make the full models identical. The C-to-Phi source uses C², so that source alone does not distinguish C's two signs; this is not a claim that every state or output loses sign. The information concept has not been disproved or silently moved into Phi: its mathematical correspondence remains a question to resolve.
+
+**TH:** coupling เก่าคือ `beta*C*I` ส่วน response คือ `-g*C²*Phi/2` ซึ่งขึ้นกับสถานะและต้องการค่าเริ่มต้นต่างกัน เมื่อ coupling ไม่เป็นศูนย์และคง C เป็น coordinate เดิม การแทน `I=r*Phi` ด้วยค่าคงที่ไม่ทำให้ทั้งแบบจำลองเท่ากัน แรงขับจาก C ไป Phi ใช้ C² จึงไม่แยกสองเครื่องหมายผ่านช่องทางนี้อย่างเดียว ไม่ได้หมายความว่าทุกสถานะหรือทุก output สูญเครื่องหมาย แนวคิดข้อมูลไม่ได้ถูกพิสูจน์ว่าผิดหรือถูกย้ายเข้า Phi เงียบ ๆ แต่ยังต้องปิดความสัมพันธ์ทางคณิตศาสตร์ให้ชัด
+
+
+**EN:** the historical three-term C/I sketch below is also shorter than the repaired legacy gradient-flow contract: that contract includes the I-gradient and quadratic I contributions. Its short display should not be mistaken for the full old model.
+
+**TH:** สูตร C/I สามเทอมที่เก็บไว้ด้านล่างก็สั้นกว่า legacy gradient-flow contract ที่ตรวจแก้แล้วเช่นกัน เพราะ contract นั้นยังมีส่วน gradient ของ I และส่วน quadratic ของ I ภาพสั้นเดิมจึงไม่ใช่รายละเอียดครบของแบบจำลองเก่า
+
+Sources / ต้นทาง: [response ontology and functional](docs/core/01_contracts/MATTER_SPACE_RESEARCH_SPEC.md), [implemented response operator](docs/core/02_equations/matter_space/uet_matter_space.py), [scoped legacy C/I compatibility audit](docs/core/08_history/research_notes/UET_FOUNDATION_COMPATIBILITY_AUDIT.md). The detailed relationship argument is working-only evidence at `docs/meta/UET_THEORY_ARGUMENT.md` §§25.2–5, local source commit `1346edfc07c2d2f9eb2adbd5257e820fa186a37b`; it is not included in the current public evidence packet. / รายงานความสัมพันธ์ละเอียดเป็นหลักฐานในเครื่องตาม path/commit นี้ ยังไม่รวมในชุดหลักฐานสาธารณะปัจจุบัน
+
+<a id="current-master-complexity"></a>
+#### Is it still simple? / ยังเรียบง่ายอยู่หรือไม่?
+
+**EN:** it is a small coupled-field model in architecture, but not the two-symbol slogan. Compared with the scoped two-field C/I gradient flow, the response realization genuinely includes an independently prepared response rate. Compared with the old multi-option master implementation, this declared lane excludes exchange/game/will/layer additions that do not belong to its contract. More displayed lines do not all represent new assumptions, but a new state, coupling or kinetic law is a real modeling choice.
+
+**TH:** โครงสร้างยังเป็นแบบจำลอง coupled fields ขนาดเล็ก แต่ไม่ใช่สโลแกนสองตัวอักษร เมื่อเทียบกับ scoped C/I gradient flow ที่มีสอง field สาย response เพิ่มอัตราตอบสนองที่เตรียมค่าเริ่มต้นได้อย่างอิสระจริง เมื่อเทียบกับ master implementation เก่าที่รวมหลาย options สายนี้ไม่เอา exchange/game/will/layer ที่อยู่นอก contract มาปน จำนวนบรรทัดที่มากขึ้นไม่ใช่สมมติฐานใหม่ทุกบรรทัด แต่การเพิ่ม state, coupling หรือ kinetic law คือการเลือกแบบจำลองเพิ่มจริง
+
+| Layer / ชั้น | What is chosen or follows / อะไรเลือก อะไรตามมา | Research role / หน้าที่ |
+| --- | --- | --- |
+| Model assumptions / สมมติฐานแบบจำลอง | State meanings, functional, coupling, conservation, kinetics and coefficient origins / ความหมายสถานะ functional coupling conservation kinetics และที่มา coefficients | Must be justified and compared; not derived merely by writing Omega / ต้องมีเหตุผลและคู่เทียบ ไม่ได้ derive ด้วยการเขียน Omega |
+| Mathematical consequences / ผลตามทางคณิตศาสตร์ | `mu_C,mu_Phi`, first/second-order rewrite and conditional ledger identities / อนุพันธ์ การเปลี่ยนรูปอันดับสมการ และบัญชีภายใต้เงื่อนไข | Supporting equations from selected premises, not independent new forces / สมการประกอบที่ตามจากฐานที่เลือก ไม่ใช่แรงใหม่ทุกตัว |
+| Preparation and realization / การเตรียมและ realization | Initial/boundary data, drives, dimensional map and measurement model / ค่าเริ่มต้น ขอบเขต แรงขับ การแมปหน่วย และแบบจำลองการวัด | Further physical/input choices; some remain open / เป็นการเลือกหรืออินพุตเพิ่ม บางส่วนยังเปิด |
+| Numerical and diagnostic layer / ชั้นคำนวณและ diagnostic | Discretization, solver, error checks, optional trace and protocol-specific projection / discretization solver error trace ทางเลือก และ projection ตาม protocol | Approximation/measurement choices must be assessed; they are not all automatic derivatives / ต้องตรวจความเหมาะสม ไม่ใช่ทั้งหมดตามมาอัตโนมัติ |
+| Other equation families / สมการสายอื่น | Covariant parent, O(2), transport and other lanes retain their own contracts / แต่ละสายคง contract ของตัวเอง | Not all established as child equations of this functional / ยังไม่พิสูจน์ว่าทั้งหมดเป็นสมการลูกของ functional นี้ |
+
+<a id="current-master-evidence"></a>
+#### What the research supports / งานวิจัยรองรับอะไร
+
+| Existing result / ผลเดิม | Decision within scope / สิ่งที่ตัดสินได้ | What does not follow / สิ่งที่ยังไม่ตามมา |
+| --- | --- | --- |
+| §23 steady-response comparison | A first-mode approximation has <0.9% relative-error bounds for complex `p/F_b` and `x/F_b` against the full normalized rod–polarization reference, for F_b-only steady forcing with f_P=0 and omega/omega_0 in [0.99,1.01] / ผ่านเกณฑ์เทียบแบบจำลองเต็มภายใต้แรงขับและย่านที่ตรึง | Not accuracy against nature, arbitrary inputs or preparation transients / ไม่ใช่ความแม่นยำกับธรรมชาติหรือทุกอินพุต |
+| §24 prepared-history counterexample | A smooth finite-energy write / controlled wait / released read leaves higher-mode history outside the tested projected state `(p,q0,q0dot)` / สถานะย่อที่ทดสอบเก็บประวัติใน higher modes ไม่ครบ | Not different futures from an identical complete state; not new mechanics or learning validation / ไม่ใช่อนาคตต่างจากสถานะครบเดียวกันหรือการยืนยัน learning |
+| §25 relationship audit | Exact rewrites, conditional reductions and alternative models are distinguished / แยกรูปเขียนเทียบเท่า การลดแบบมีเงื่อนไข และแบบจำลองทางเลือกได้ | Not a closed universal master or a proof that Phi equals all information / ไม่ใช่การปิดแม่บทสากลหรือพิสูจน์ว่า Phi คือข้อมูลทั้งหมด |
+
+**EN:** these results constrain different links, not one universal implication chain: the rod–polarization reference is a declared comparator, not an already-derived physical realization of the full quartic functional. See the [scoped latest-results summary](#research-bounded-results) and its working-evidence boundary. Physical units, parameter origins, preparation, observer uncertainty and any independently restrictive UET addition remain open. The [compatibility controller](docs/core/07_artifacts/gates/uet_foundation_compatibility_decision.json) still states `FOUNDATION_NOT_CLOSED`.
+
+**TH:** ผลเหล่านี้ตรวจคนละรอยต่อ ไม่ใช่สาย implication สากลเส้นเดียว โดย rod–polarization reference เป็นคู่เทียบที่ประกาศ ไม่ใช่ realization กายภาพที่ derive จาก quartic functional ครบแล้ว อ่าน [สรุปผลตามขอบเขต](#research-bounded-results) พร้อมข้อจำกัดหลักฐานในเครื่อง ช่องหน่วยจริง ที่มา parameters การเตรียมระบบ uncertainty ผู้วัด และข้อจำกัดที่ UET เพิ่มอย่างอิสระยังเปิดอยู่ controller ยังระบุ `FOUNDATION_NOT_CLOSED`
+
+<a id="current-master-dependency-map"></a>
+#### Research dependency map / แผนที่ความสัมพันธ์ที่ตรวจได้
+
+```mermaid
+graph TD
+    Intent["Author proposition<br/>Interaction, retained state, later response"]
+    Functional["Chosen functional<br/>Omega C,Phi"]
+    Derivatives["Variational derivatives<br/>mu_C, mu_Phi"]
+    Conditions["Declared kinetics and sources<br/>Complete initial state and boundaries"]
+    Evolution["Evolution of C, Phi, Pi"]
+    Ledger["Availability and dissipation ledger"]
+    Trace["Optional R / I_trace<br/>No feedback in v1"]
+    Readout["Declared readout / observer model<br/>Mapping may remain open"]
+
+    Intent -->|"one candidate realization"| Functional
+    Functional --> Derivatives
+    Derivatives --> Evolution
+    Conditions --> Evolution
+    Evolution --> Ledger
+    Ledger --> Trace
+    Evolution --> Readout
+```
+
+**EN:** this is a model-dependency diagram, not a mandatory physical detection pipeline. Observation roles belong to declared couplings and protocols; a detector/record is not another copy of the source state. Readout metadata alone must not change source evolution. Any actual detector backaction requires an explicit interaction or a justified omission bound. The [Core formulation](docs/core/README.md#current-response-realization) and [response specification](docs/core/01_contracts/MATTER_SPACE_RESEARCH_SPEC.md) carry the detailed equations and domains.
+
+**TH:** ผังนี้แสดง dependency ของแบบจำลอง ไม่บังคับว่าการตรวจจับจริงต้องเดินเป็นสายนี้ทุกกรณี บทบาทผู้วัดขึ้นกับ coupling และ protocol ที่ประกาศ detector/record ไม่ใช่สำเนาสถานะต้นทางอีกก้อน การเปลี่ยน metadata การอ่านอย่างเดียวต้องไม่เปลี่ยนพลวัตต้นทาง ส่วน backaction จริงต้องมีปฏิสัมพันธ์ชัดหรือมีขอบเขตที่รองรับการละ รายละเอียดสมการและ domain อ่านต่อใน Core/spec ที่ลิงก์ไว้
+
+**Historical material follows / เนื้อหาประวัติอยู่ถัดไป:** the original headings, formulas, tables and Tree of Physics remain intact. Their preservation records the development of the proposal; it does not make the old symbol dictionary or derivation arrows current physical results. / คงหัวข้อ สูตร ตาราง และ Tree of Physics เดิมไว้ครบ เพื่อรักษาประวัติ ไม่ใช่รับรองพจนานุกรมสัญลักษณ์หรือลูกศร derivation เดิมเป็นผลกายภาพปัจจุบัน
+<!-- UET-CURRENT-MASTER-PRESENTATION:END -->
+
+> **ขอบเขตของส่วนเดิม:** สูตรเชิงวิสัยทัศน์และตารางคำตีความด้านล่างคงไว้เป็นประวัติ/แนวคิด ไม่ใช่นิยามกายภาพปัจจุบันหรือ derivation ว่า standard physics ทุกสาขาตามจากสูตรเดียว ดู [แกน realization ล่าสุด](#research-current-realization) และ [บทบาทเทอม](#research-term-roles) ก่อนใช้ C/I/Omega ในการคำนวณ
+
 ### The Vision
 
 > **"Equality is the Law of Nature."**
@@ -157,7 +427,7 @@ $$\boxed{\Omega = C \cdot I}$$
 
 ### The Full Implementation (Field Equation)
 
-This is how we actually calculate physics:
+Historical functional sketch retained below; current calculations require a declared equation family, full state, kinetics and unit/observable contract:
 
 $$\Omega[C,I] = \int \left[ \underbrace{V(C)}_{\text{Cost of Becoming}} + \underbrace{\frac{\kappa}{2}|\nabla C|^2}_{\text{Cost of Change}} + \underbrace{\beta C I}_{\text{The Ethics of Connection}} \right] dx$$
 
@@ -171,6 +441,8 @@ $$\Omega[C,I] = \int \left[ \underbrace{V(C)}_{\text{Cost of Becoming}} + \under
     - **Equilibrium**: Life thrives where Connection matches Capacity.
 
 ### Why This Works (The Tree of Physics)
+
+> **Conceptual map / historical interpretation:** คง topology เดิมเพื่อให้ตามเจตนาได้ ลูกศรในรูปไม่ใช่หลักฐาน derivation ของ Newton, thermodynamics, Einstein หรือ quantum theory จาก Omega=C·I; gate ของแต่ละ correspondence ยังแยกกัน
 
 ```mermaid
 graph TD
@@ -203,6 +475,8 @@ graph TD
 
 ## 📊 7. Test Results (v0.9.0)
 
+> **Historical snapshot:** เก็บตัวเลขและรายการผลเดิมไว้ โดยรอบนี้ไม่ได้ยืนยัน run identity/วันตัดยอดของตารางนี้หรือรัน tests เก่าใหม่ 200+, 31, 98.4%, 23 และป้าย 400+/38/8 ไม่ใช่จำนวนผลที่รับรองปัจจุบันหรือคะแนนความถูกต้องของทฤษฎี ผลใหม่ที่ตามหลักฐานได้อยู่ใน [§23–25 summary](#research-bounded-results); `PASS` ทางเอกสารไม่ลบ `BLOCKED` ทางฟิสิกส์
+
 ### Summary
 
 | Metric | Value | Note |
@@ -211,9 +485,11 @@ graph TD
 | ✅ **Pass Rate** | 98.4% | Consistent across 31 topics |
 | 📚 **Topics** | 31 | All domains covered |
 | 📊 **Data Sources** | 23 | All with DOIs |
-| 🏆 **Grade** | EXCELLENT | Platinum Standard |
+| 🏆 **Grade** | Historical self-assessment | Not a current evidence grade |
 
 ### What We Validated
+
+> รายการใน block นี้เป็น **ถ้อยคำข้ออ้างเก่าที่เก็บครบเพื่อการทบทวน** ไม่ใช่ผลตรวจรับใหม่ รวมถึง “No dark matter needed”, “exact match” และ “derived” ต้องกลับไปตรวจ source, fit/holdout, comparator และ controller ของแต่ละ topic ก่อนอ้างปัจจุบัน
 
 ```
 ✅ Galaxy Rotation (SPARC 175 galaxies) → No dark matter needed
@@ -297,6 +573,8 @@ python docs/topics/run_all_tests.py
 
 ## 📚 9. Complete Topic Index (38+ Domains)
 
+> ตาราง/เครื่องหมายเดิมเป็น historical claim map ไม่ใช่ readiness ล่าสุด โดยเฉพาะคำว่า Solved, Derived และ Information = Energy ไม่ได้รับการยืนยันจากรอบเอกสารนี้ ดู [topic status entrypoint](docs/topics/README.md) และ gates เฉพาะเส้นทาง; จำนวน/ป้ายต่างยุคไม่ถูกเฉลี่ยเป็นสถานะใหม่
+
 | ID | Research Topic | Key Discovery | Status |
 |:---|:---------------|:--------------|:-------|
 | 0.1 | [Galaxy Rotation](./docs/topics/0.1_Galaxy_Rotation_Problem/) | Solved without Dark Matter | ✅ |
@@ -341,13 +619,15 @@ python docs/topics/run_all_tests.py
 
 ## 🔍 10. Methodology
 
+> งานล่าสุดแยก author intent, imported theory, AI model choices และผลตรวจจริงตาม [รายงาน](docs/meta/UET_THEORY_ARGUMENT.md) การทำซ้ำต้องใช้ source/config/input identity และ contract ที่ตรงรุ่น ไม่ใช้จำนวนไฟล์หรือผลผ่านแทนความก้าวหน้าทางทฤษฎี การศึกษาซ้ำเปิดเมื่อ evidence-producing state หรือ prerequisite เปลี่ยน ไม่ใช่เพียงเปลี่ยนคำอธิบาย
+
 ### Human + AI Collaboration
 
 | Component | Developed by |
 |:----------|:-------------|
 | **Conceptual Framework** | Human (Thermodynamics of Ethics) |
 | **Mathematical Derivations** | AI-assisted |
-| **All Results** | Reproducible via Python scripts |
+| **All Results** | Reproducibility is scoped by available source/config/verifier identities |
 
 ### Transparency
 
@@ -366,8 +646,11 @@ python docs/topics/run_all_tests.py
 | File | Purpose |
 |:-----|:--------|
 | `docs/topics/run_all_tests.py` | 🧪 Master test runner |
-| `docs/core/uet_master_equation.py` | 🔬 Core UET equation |
+| `docs/core/02_equations/matter_space/uet_master_equation.py` | 🔬 Legacy engine entry point; not a universal master law |
 | `docs/requirements_ingest.txt` | 📦 Research/data ingest dependencies |
+| [UET_THEORY_ARGUMENT.md](docs/meta/UET_THEORY_ARGUMENT.md) | ข้อเสนอรวม ผล/ข้อคัดค้าน และสายเหตุผล §§23–25 |
+| [Core README](docs/core/README.md#current-response-realization) | สูตร state/functional/kinetics ของ realization ล่าสุดและขอบเขต legacy |
+| [Cycle calculation contract](docs/topics/0.13_Thermodynamic_Bridge/calculation_contracts/energy_memory_cycle.json) | identities/ขอบเขต FORMAL ของ cycle; ไม่ใช่ใบรับรองทุก family |
 
 ---
 
@@ -458,7 +741,7 @@ if let Some(proof) = miner.mine(1000000, &signer) {
 
 ## ❓ Questions Answered by UET (SEO & Key Research)
 
-Physics students and researchers often search for these questions. UET provides Python-verified answers:
+Physics students and researchers often search for these questions. The table preserves historical UET proposals, not currently verified answers; each requires its topic-specific evidence and claim review:
 
 | Search Query | UET Answer / Solution | Topic ID |
 |:-------------|:----------------------|:---------|
@@ -479,6 +762,30 @@ Physics students and researchers often search for these questions. UET provides 
 
 ## 🏷️ Scientific Keywords & Tags
 
+> Keywords ด้านล่างเป็นคำค้น/ประวัติการจัดหมวด ไม่ใช่ scientific status หรือหลักฐานว่าโจทย์ที่มีคำว่า Solution ถูกแก้แล้ว
+
 `Unity Equilibrium Theory` `UET` `Unified Field Theory Alternative` `Quantum Gravity` `Dark Matter Alternative` `Navier-Stokes Solution` `Fluid Dynamics` `General Relativity` `Thermodynamics of Information` `Python Simulation` `Scientific Computing` `Physics Engine` `Hubble Tension Solution` `Muon g-2` `Neutrino Mass` `Galaxy Rotation Curves` `Bekenstein Bound` `Landauer Limit` `Information Theory` `Emergent Gravity` `Yang-Mills Mass Gap` `P vs NP` `Origin of Life` `AI Consciousness` `Economic Stability`
 
 ---
+
+---
+
+<a id="readme-wording-history"></a>
+## ภาคผนวก: ถ้อยคำที่ปรับในรอบนี้
+
+ตรวจ 23 ตุลาคม 2026 — ตารางนี้เก็บข้อความที่ถูกแทนเพื่อการทบทวน ไม่ใช่การนำคำอ้างเก่ากลับมารับรอง ข้อความ/ตัวเลข/สูตรส่วนอื่นคงไว้พร้อมคำกำกับขอบเขต ตารางแสดงเฉพาะ cell ที่เปลี่ยนเมื่อเนื้อหาแถวอื่นไม่เปลี่ยน; ไม่อาศัย Git history เพียงอย่างเดียว
+
+| ตำแหน่ง | ข้อความเดิม | ข้อความใหม่ | เหตุผล | หลักฐาน/ขอบเขต |
+| --- | --- | --- | --- | --- |
+| Tests badge | <code>&#33;&#91;Tests&#93;&#40;https://img.shields.io/badge/Tests-400+&#95;Verified-brightgreen&#41;</code> | <code>&#33;&#91;Tests&#93;&#40;https://img.shields.io/badge/Tests-400+&#95;Historical&#95;snapshot-yellow&#41;</code> | เก็บ 400+ เดิม แต่ไม่ใช้ป้ายเป็นหลักฐาน validation; ไม่ทราบ run identity ของตัวเลข | [claim rubric](docs/topics/For%20Work/04_Claim_and_Evidence_Rubric.md) / [foundation gate](docs/core/07_artifacts/gates/uet_foundation_dependency_gate.json) |
+| Big Picture introductory claim | <code>UET is not just a physics theory. It is a &#42;&#42;"Civilization-Level Operating System"&#42;&#42; that solves fundamental problems across 6 domains.</code> | <code>UET retains a &#42;&#42;"Civilization-Level Operating System"&#42;&#42; vision across 6 domains; the entries below are historical research claims and proposed applications, not established solutions.</code> | รักษาวิสัยทัศน์หก domains แยกจาก established solutions | [claim rubric](docs/topics/For%20Work/04_Claim_and_Evidence_Rubric.md) / [foundation gate](docs/core/07_artifacts/gates/uet_foundation_dependency_gate.json) |
+| Mathematical Breakthroughs introduction | <code>&#42;UET converts abstract math problems into physical manifold geometry.&#42;</code> | <code>&#42;Historical proposal: interpret abstract math problems through physical manifold geometry; no general proof is established by this dashboard.&#42;</code> | จัดเป็นข้อเสนอเชิงตีความ ไม่ใช้ dashboard แทน proof | [claim rubric](docs/topics/For%20Work/04_Claim_and_Evidence_Rubric.md) / [foundation gate](docs/core/07_artifacts/gates/uet_foundation_dependency_gate.json) |
+| Status ของ Navier–Stokes, Yang–Mills Gap และ P vs NP (สามตำแหน่ง) | <code>&#42;&#42;Solved&#42;&#42;</code> | <code>Historical claim / ยังไม่ทบทวนข้ออ้างนี้</code> | ไม่พบการตรวจรับ proof ของทั้งสามข้อใน scope นี้; ไม่สรุปว่าข้อเสนอผิด | [claim rubric](docs/topics/For%20Work/04_Claim_and_Evidence_Rubric.md) / [foundation gate](docs/core/07_artifacts/gates/uet_foundation_dependency_gate.json) |
+| Impossible Physics Anomalies introduction | <code>&#42;Standard Model said it was impossible. UET proved it necessary.&#42;</code> | <code>&#42;Historical anomaly interpretations follow; this page does not establish a proof or a replacement for the standard explanations.&#42;</code> | ไม่ยก analogy/ข้อเสนอเป็น proof หรือการแทน standard explanations | [claim rubric](docs/topics/For%20Work/04_Claim_and_Evidence_Rubric.md) / [foundation gate](docs/core/07_artifacts/gates/uet_foundation_dependency_gate.json) |
+| Dark Matter status cell | <code>✅ Solved</code> | <code>Historical claim / ยังไม่ทบทวนข้ออ้างนี้</code> | ไม่ใช้ผล normalized ของสายล่าสุดตัดสิน galaxy claim | [§25.2–5](docs/meta/UET_THEORY_ARGUMENT.md#252-คำตอบเรื่อง-สมการหลัก-ต้องแยกสามระดับ) / [compatibility decision](docs/core/07_artifacts/gates/uet_foundation_compatibility_decision.json) |
+| Bridging Theoretical Conflicts table heading | <code>UET Verification</code> | <code>Historical UET interpretation</code> | แยกตารางคำตีความจาก correspondence ที่ผ่านจริง | [claim rubric](docs/topics/For%20Work/04_Claim_and_Evidence_Rubric.md) / [foundation gate](docs/core/07_artifacts/gates/uet_foundation_dependency_gate.json) |
+| The Full Implementation introduction | <code>This is how we actually calculate physics:</code> | <code>Historical functional sketch retained below; current calculations require a declared equation family, full state, kinetics and unit/observable contract:</code> | functional sketch เก่าไม่ครอบ state/kinetics และทุก family; สูตรเดิมไม่ถูกแก้ | [§25.2–5](docs/meta/UET_THEORY_ARGUMENT.md#252-คำตอบเรื่อง-สมการหลัก-ต้องแยกสามระดับ) / [compatibility decision](docs/core/07_artifacts/gates/uet_foundation_compatibility_decision.json) |
+| Test Results grade / note cells | <code>EXCELLENT / Platinum Standard</code> | <code>Historical self-assessment / Not a current evidence grade</code> | เก็บถ้อยคำ self-grade เก่าที่นี่; pass rate ไม่ใช่คะแนนความถูกต้องของทฤษฎี | [claim rubric](docs/topics/For%20Work/04_Claim_and_Evidence_Rubric.md) / [foundation gate](docs/core/07_artifacts/gates/uet_foundation_dependency_gate.json) |
+| Methodology / All Results cell | <code>Reproducible via Python scripts</code> | <code>Reproducibility is scoped by available source/config/verifier identities</code> | local source packet ยังขาด retrospective/สาม source-verifier targets | [ข้อจำกัดหลักฐาน](#research-evidence-boundary) / [§25.2–5](docs/meta/UET_THEORY_ARGUMENT.md#252-คำตอบเรื่อง-สมการหลัก-ต้องแยกสามระดับ) / [compatibility decision](docs/core/07_artifacts/gates/uet_foundation_compatibility_decision.json) |
+| Key Files / master entry point purpose | <code>🔬 Core UET equation</code> | <code>🔬 Legacy engine entry point; not a universal master law</code> | ชื่อ master ไม่เลือก universal generator; default ยัง legacy_local | [§25.2–5](docs/meta/UET_THEORY_ARGUMENT.md#252-คำตอบเรื่อง-สมการหลัก-ต้องแยกสามระดับ) / [compatibility decision](docs/core/07_artifacts/gates/uet_foundation_compatibility_decision.json) |
+| Questions Answered introduction | <code>Physics students and researchers often search for these questions. UET provides Python-verified answers:</code> | <code>Physics students and researchers often search for these questions. The table preserves historical UET proposals, not currently verified answers; each requires its topic-specific evidence and claim review:</code> | คงคำถามและเนื้อหาทุกแถวเป็น historical proposals; ไม่อ้าง Python check เท่ากับ physical proof | [claim rubric](docs/topics/For%20Work/04_Claim_and_Evidence_Rubric.md) / [foundation gate](docs/core/07_artifacts/gates/uet_foundation_dependency_gate.json) |

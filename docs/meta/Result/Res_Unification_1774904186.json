@@ -1,28 +1,13 @@
 {
-    "metadata": {
-        "timestamp": "2026-03-31T03:56:26.772482",
-        "type": "Cross-Topic Meta-Analysis",
-        "topics": [
-            "0.28",
-            "0.31",
-            "0.32"
-        ],
-        "constants_source": "CODATA 2018",
-        "parameter_fitting": false,
-        "hypothesis": "Single κ_UET predicts all Plasma Sheath phenomena"
-    },
-    "calibration": {
-        "kappa_UET": 100000.0,
-        "calibration_domain": "0.32 Fusion Wall",
-        "erosion_baseline_nms": 2.422202491814516e+27,
-        "erosion_uet_nms": 1.456352117373936e+40,
-        "erosion_reduction_pct": -601251184529462.6
-    },
-    "predictions": [
-        {
-            "topic": "0.31",
-            "metric": "Drag Coefficient Reduction (%)",
-            "predicted": -1585.57,
-            "expected": 95.0,
-            "error_pct": 1769.02,
-            "pass": 
+  "status": "INVALID_HISTORICAL_OUTPUT",
+  "interpretation": "Incomplete historical output; no result or pass can be inferred.",
+  "original_commit": "d59d31b3c90388998e48d3149e17e606cf30fa29",
+  "original_path": "docs/meta/Result/Res_Unification_1774904186.json",
+  "original_sha256": "7ff1894a18c1d1c28014a3a1aec71b9ced54afb51b1f5f2b8b0cfbc2ded102c8",
+  "original_bytes_base64": "ewogICAgIm1ldGFkYXRhIjogewogICAgICAgICJ0aW1lc3RhbXAiOiAiMjAyNi0wMy0zMVQwMzo1NjoyNi43NzI0ODIiLAogICAgICAgICJ0eXBlIjogIkNyb3NzLVRvcGljIE1ldGEtQW5hbHlzaXMiLAogICAgICAgICJ0b3BpY3MiOiBbCiAgICAgICAgICAgICIwLjI4IiwKICAgICAgICAgICAgIjAuMzEiLAogICAgICAgICAgICAiMC4zMiIKICAgICAgICBdLAogICAgICAgICJjb25zdGFudHNfc291cmNlIjogIkNPREFUQSAyMDE4IiwKICAgICAgICAicGFyYW1ldGVyX2ZpdHRpbmciOiBmYWxzZSwKICAgICAgICAiaHlwb3RoZXNpcyI6ICJTaW5nbGUgzrpfVUVUIHByZWRpY3RzIGFsbCBQbGFzbWEgU2hlYXRoIHBoZW5vbWVuYSIKICAgIH0sCiAgICAiY2FsaWJyYXRpb24iOiB7CiAgICAgICAgImthcHBhX1VFVCI6IDEwMDAwMC4wLAogICAgICAgICJjYWxpYnJhdGlvbl9kb21haW4iOiAiMC4zMiBGdXNpb24gV2FsbCIsCiAgICAgICAgImVyb3Npb25fYmFzZWxpbmVfbm1zIjogMi40MjIyMDI0OTE4MTQ1MTZlKzI3LAogICAgICAgICJlcm9zaW9uX3VldF9ubXMiOiAxLjQ1NjM1MjExNzM3MzkzNmUrNDAsCiAgICAgICAgImVyb3Npb25fcmVkdWN0aW9uX3BjdCI6IC02MDEyNTExODQ1Mjk0NjIuNgogICAgfSwKICAgICJwcmVkaWN0aW9ucyI6IFsKICAgICAgICB7CiAgICAgICAgICAgICJ0b3BpYyI6ICIwLjMxIiwKICAgICAgICAgICAgIm1ldHJpYyI6ICJEcmFnIENvZWZmaWNpZW50IFJlZHVjdGlvbiAoJSkiLAogICAgICAgICAgICAicHJlZGljdGVkIjogLTE1ODUuNTcsCiAgICAgICAgICAgICJleHBlY3RlZCI6IDk1LjAsCiAgICAgICAgICAgICJlcnJvcl9wY3QiOiAxNzY5LjAyLAogICAgICAgICAgICAicGFzcyI6IA==",
+  "parse_error": {
+    "message": "Expecting value",
+    "line": 28,
+    "column": 21
+  }
+}

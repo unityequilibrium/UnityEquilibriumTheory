@@ -28,14 +28,14 @@ If the client does not support the plugin's local `stdio` MCP transport, do not 
 3. Start a new desktop chat and invoke the plugin's setup skill or `configure_repository` tool once with the absolute repository root.
 4. Search for a narrow question and fetch the cited source lines before relying on a claim.
 
-The plugin is stored under the repository's local `plugins/` folder and is not published by these files. ChatGPT installs a local copy in its plugin cache; after code changes, refresh/reinstall the local plugin and start a new conversation.
+The plugin is stored under `services_and_experiments/plugins/` in this repository and is not published by these files. ChatGPT installs a local copy in its plugin cache; after code changes, refresh/reinstall the local plugin and start a new conversation.
 
 ## Tests
 
 From the repository root, run:
 
 ```powershell
-node --test plugins/uet-evidence/test/server.test.js
+node --test services_and_experiments/plugins/uet-evidence/test/server.test.js
 ```
 
 Tests use temporary fixture repositories and never access the live local index or a paid provider.

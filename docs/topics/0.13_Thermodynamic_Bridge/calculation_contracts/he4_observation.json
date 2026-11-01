@@ -1,0 +1,188 @@
+{
+  "schema_version": "uet-calculation-contract-v1",
+  "contract_id": "T13_HE4_OBSERVATION_ADMISSION_V1",
+  "profile": "PHYSICAL_COMPARISON",
+  "review": {
+    "status": "INCOMPLETE",
+    "reviewer": "agent:calculation-observation-standard-v1",
+    "rationale": "Scoped methodological review; original results are pinned to a distinct local research commit, not integrated or independently rerun in this checkout.",
+    "coverage_evidence": [
+      "git:0f17012ffd6ad456c150b10e048efd868ce95588:docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/t13_funding_heii_operator_domain_decision.json",
+      "git:0f17012ffd6ad456c150b10e048efd868ce95588:docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/t13_twofluid_source_visibility.json",
+      "git:0f17012ffd6ad456c150b10e048efd868ce95588:docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/he4_svp_second_sound_response_source_package.json"
+    ]
+  },
+  "question": "Can the frozen calibration supply an admitted same-state He-II second-sound comparison?",
+  "output": {
+    "quantity": "He-II second-sound phase velocity",
+    "unit": "m s^-1",
+    "domain": "Only the approximation and input domain of the identified source evidence.",
+    "accuracy": "No quantitative physical acceptance criterion admitted.",
+    "claim_intent": "DIAGNOSTIC"
+  },
+  "model": {
+    "formula_ids": [
+      "T13_HE4_OBSERVATION_ADMISSION_V1"
+    ],
+    "assumptions": "See identified source contract; symbols are lane-specific.",
+    "approximation": "Existing formal or normalized approximation, unchanged.",
+    "initial_boundary": "Source-defined initial state, boundary and reference; no inferred material state.",
+    "drive_environment": "Source-declared controls only; no acquired physical drive.",
+    "parameters": "Existing controls/calibration remain inputs; no fitting or new coefficient derivation."
+  },
+  "data_policy": {
+    "uses_observations": true,
+    "calibration_ids": [
+      "Donnelly-Barenghi:superfluid-density:sound-derived"
+    ],
+    "comparison_ids": [
+      "Donnelly-Barenghi:second-sound:Table4.3"
+    ],
+    "independent_validation": false,
+    "holdout_policy": "Source ancestry overlaps; not independent or blind validation; no new data consumed."
+  },
+  "observation": {
+    "system_partition": {
+      "role_mode": "RELATIONAL", "accounting_component_id": "system_state",
+      "boundary": "Admission topology only: sample, drive and receiver are distinct candidate systems. Their state laws, applicable time protocol, physical units and error budget are not admitted by this graph. No missing coupling is set to zero.",
+      "systems": [
+        {"id": "sample", "state": "No selected Ward-consistent condensed finite-temperature state/material map; frozen normal calibration is not He-II", "state_accounting": {"kind": "INDEPENDENT", "state_ids": ["candidate.sample_state"], "owner_ids": [], "rule": "Unadmitted state-vector placeholder, not an asserted number of physical degrees of freedom or an energy law; system_state/detector gaps remain open."}},
+        {"id": "drive", "state": "Unadmitted physical drive state/protocol", "state_accounting": {"kind": "INDEPENDENT", "state_ids": ["candidate.drive_state"], "owner_ids": [], "rule": "Unadmitted state-vector placeholder, not an asserted number of physical degrees of freedom or an energy law; system_state/detector gaps remain open."}},
+        {"id": "receiver", "state": "Unadmitted receiver state/readout calibration", "state_accounting": {"kind": "INDEPENDENT", "state_ids": ["candidate.receiver_state"], "owner_ids": [], "rule": "Unadmitted state-vector placeholder, not an asserted number of physical degrees of freedom or an energy law; system_state/detector gaps remain open."}}
+      ],
+      "couplings": [
+        {"id": "drive_to_sample", "source": "drive", "target": "sample", "kind": "SIGNAL", "component_id": "drive_environment", "map": "UNKNOWN source-to-state operator; no fitted target-derived input admitted"},
+        {"id": "sample_to_receiver", "source": "sample", "target": "receiver", "kind": "DETECTION", "component_id": "detector", "map": "UNKNOWN state-to-readout operator in the declared physical protocol"},
+        {"id": "receiver_to_sample", "source": "receiver", "target": "sample", "kind": "BACKACTION", "component_id": "detector", "map": "UNKNOWN feedback; no omission bound supplied"},
+        {"id": "receiver_to_drive", "source": "receiver", "target": "drive", "kind": "BACKACTION", "component_id": "detector", "map": "UNKNOWN direct/mediated feedback within the source-readout protocol"}
+      ],
+      "observables": [{"id": "candidate_reading", "detector_id": "receiver", "target_systems": ["sample"], "quantity": "He-II second-sound phase velocity, conditional on same-state longitudinal mode identification", "readout_map": "UNKNOWN physical operator, not a complete-state measurement", "component_id": "detector", "backaction_targets": ["sample", "drive"], "backaction_scope_reason": "Assess the sampled state and its drive separately; topology is provisional and additional coupled systems require substantive scope review."}]
+    },
+    "source_state": "Source-scoped state, not automatically a material state.",
+    "generated_trace": "Derived record only; not the full observable state.",
+    "carrier": "No physical carrier admitted by this metadata review.",
+    "observer_state": "Formal readout or source-described instrument; unknowns are in component ledger.",
+    "readout": "Existing source output, no new measurement mapping.",
+    "backaction": "No new source/receiver coupling; no claim of complete physical backaction.",
+    "frame": "declared source frame",
+    "time_convention": "declared source convention",
+    "product_level": "published/compiled observations",
+    "trace_scope": "not_used",
+    "trace_used_as_complete_state": false,
+    "corrections": []
+  },
+  "components": [
+    {
+      "id": "detector",
+      "group": "detector",
+      "disposition": "UNKNOWN",
+      "reason": "Derive the relevant observable operator; full-amplitude claims additionally require source/readout projections.",
+      "evidence": [],
+      "owner": "EVIDENCE",
+      "next_action": "Derive the relevant observable operator; full-amplitude claims additionally require source/readout projections."
+    },
+    {
+      "id": "drive_environment",
+      "group": "drive_environment",
+      "disposition": "UNKNOWN",
+      "reason": "Specify actual protocol and justified perturbation constraints.",
+      "evidence": [],
+      "owner": "EVIDENCE",
+      "next_action": "Specify actual protocol and justified perturbation constraints."
+    },
+    {
+      "id": "frame_time",
+      "group": "frame_time",
+      "disposition": "UNKNOWN",
+      "reason": "Lock physical state, units and primary measurement frequency/time protocol.",
+      "evidence": [],
+      "owner": "EVIDENCE",
+      "next_action": "Lock physical state, units and primary measurement frequency/time protocol."
+    },
+    {
+      "id": "numerics",
+      "group": "numerics",
+      "disposition": "MODELED",
+      "reason": "Declared implementation/formal scope in pinned evidence; no material interpretation.",
+      "evidence": [
+        "git:0f17012ffd6ad456c150b10e048efd868ce95588:docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/t13_funding_heii_operator_domain_decision.json"
+      ]
+    },
+    {
+      "id": "processing",
+      "group": "processing",
+      "disposition": "UNKNOWN",
+      "reason": "Clean public lineage integration of the pinned research commit remains open.",
+      "evidence": [
+        "git:0f17012ffd6ad456c150b10e048efd868ce95588:docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/t13_funding_heii_operator_domain_decision.json"
+      ],
+      "owner": "EVIDENCE",
+      "next_action": "Review/integrate the exact owner evidence or package an authorized portable source before promotion."
+    },
+    {
+      "id": "propagation",
+      "group": "propagation",
+      "disposition": "UNKNOWN",
+      "reason": "Admit the longitudinal two-fluid mode on that same model domain.",
+      "evidence": [],
+      "owner": "EVIDENCE",
+      "next_action": "Admit the longitudinal two-fluid mode on that same model domain."
+    },
+    {
+      "id": "system_state",
+      "group": "system_state",
+      "disposition": "UNKNOWN",
+      "reason": "Select an admissible stationary condensed model and independent material state/current map; frozen normal calibration is not He-II.",
+      "evidence": [],
+      "owner": "FOUNDATION",
+      "next_action": "Select an admissible stationary condensed model and independent material state/current map; frozen normal calibration is not He-II."
+    }
+  ],
+  "error_budget": {
+    "unit": "m s^-1",
+    "numerical": "Existing saved verifier thresholds; not rerun here.",
+    "approximation": "Source approximation only; no physical extension.",
+    "measurement": "No independent physical acceptance in this review.",
+    "systematic": "Unadmitted physical effects remain limitations.",
+    "omissions": "No quantitative physical omission bound asserted.",
+    "dependence": "No independence or covariance invented.",
+    "acceptance": "Source-scoped formal/diagnostic conclusion only.",
+    "omission_limit": null
+  },
+  "identities": [
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/t13_funding_heii_operator_domain_decision.json",
+      "kind": "git_blob",
+      "role": "evidence",
+      "commit": "0f17012ffd6ad456c150b10e048efd868ce95588",
+      "sha256": "3602b86abc1a11b98faf54d90162453224f1b0aff058ea40d5a23df4e4753dae",
+      "availability": "LOCAL_ONLY"
+    },
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/t13_twofluid_source_visibility.json",
+      "kind": "git_blob",
+      "role": "evidence",
+      "commit": "0f17012ffd6ad456c150b10e048efd868ce95588",
+      "sha256": "7852b0000531c1b76a51da0c4c6b17b337ace39dc44d94b210abc792aae3df50",
+      "availability": "LOCAL_ONLY"
+    },
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/he4_svp_second_sound_response_source_package.json",
+      "kind": "git_blob",
+      "role": "evidence",
+      "commit": "0f17012ffd6ad456c150b10e048efd868ce95588",
+      "sha256": "8a924ebb1e7e0342bc69a954bbc9b19255eafda47f0650c3f64e458878ca7a94",
+      "availability": "LOCAL_ONLY"
+    }
+  ],
+  "entrypoints": [
+    "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/t13_funding_heii_operator_domain_decision.json"
+  ],
+  "evidence": [
+    "git:0f17012ffd6ad456c150b10e048efd868ce95588:docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/t13_funding_heii_operator_domain_decision.json",
+    "git:0f17012ffd6ad456c150b10e048efd868ce95588:docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/t13_twofluid_source_visibility.json",
+    "git:0f17012ffd6ad456c150b10e048efd868ce95588:docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/he4_svp_second_sound_response_source_package.json"
+  ],
+  "claim_boundary": "Frozen normal branch is not a condensed He-II prediction. Missing operator is not a global no-go or a proved rank/nonidentifiability result. Preserve existing BLOCKED physical gate.",
+  "next_action": "Specify one fixed Ward-consistent condensed finite-temperature completion and independent material state/current map; then derive its same-state longitudinal operator. Additional helium data or detector detail alone cannot repair the unselected model."
+}

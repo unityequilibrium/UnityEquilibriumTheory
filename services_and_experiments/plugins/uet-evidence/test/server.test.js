@@ -11,7 +11,7 @@ const { once } = require('node:events');
 const { after, before, test } = require('node:test');
 
 const pluginRoot = path.resolve(__dirname, '..');
-const repoRoot = path.resolve(pluginRoot, '..', '..');
+const repoRoot = path.resolve(pluginRoot, '..', '..', '..');
 const serverPath = path.join(pluginRoot, 'server.js');
 const {
   handleMessage,
@@ -123,7 +123,7 @@ test('plugin manifests bind the local stdio server and contain no credentials or
   const marketplace = JSON.parse(fs.readFileSync(path.join(repoRoot, '.agents', 'plugins', 'marketplace.json'), 'utf8'));
   assert.equal(marketplace.name, 'uet-research-tools');
   assert.deepEqual(marketplace.plugins.map((entry) => [entry.name, entry.source.source, entry.source.path]), [
-    ['uet-evidence', 'local', './plugins/uet-evidence']
+    ['uet-evidence', 'local', './services_and_experiments/plugins/uet-evidence']
   ]);
 
   const plugin = JSON.parse(fs.readFileSync(path.join(pluginRoot, 'plugin.json'), 'utf8'));
