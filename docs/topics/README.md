@@ -1,5 +1,8 @@
 # UET Research Topics Audit Index
 
+<!-- UET-RESEARCH-RETROSPECTIVE: 2026-10-19; navigation notice, not a physics gate -->
+> **ทบทวนก่อนวิจัยต่อ — 19 ต.ค. 2026:** Tier และผลเฉพาะสายไม่ปิดข้ออ้างของทั้งทฤษฎี รายงานทบทวนช่วยระบุข้อผิดพลาดเดิมและสิ่งที่ยังขาด อ่าน [รายงานข้อผิดพลาดและบทเรียน UET](../meta/UET_RESEARCH_RETROSPECTIVE.md) โดยเฉพาะข้อ R01–R18 และลำดับแก้ใน §8 ก่อนขยายงาน สถานะจริงยังอ้างอิง artifact/gate ของเส้นทางนั้น
+
 This page is the conservative entrypoint for `docs/topics`.
 
 It does not certify the theory. It reports how well each topic currently matches the
