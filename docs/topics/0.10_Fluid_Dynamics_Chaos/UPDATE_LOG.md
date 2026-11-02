@@ -1053,8 +1053,9 @@ CLAIM_BOUNDARY: Internal numerical-method validation only; not evidence that UET
 - Added read-only source/commit/input identity checks to research PR, main and
   nightly workflows. These checks do not regenerate or alter the five historical
   files, and main fetches their originating Git history before verification.
-- Five local lineage tests passed, including exact-byte comparison, changed
-  input/origin rejection, and checks that physical admissions remain false.
+- Six local lineage tests passed, including exact-byte comparison, changed
+  input/origin rejection, inaccessible ancestor rejection, and checks that
+  physical admissions remain false.
 - No output, prelocked contract, physics gate or claim changed. The same five
   embedded-metadata errors still block the separate changed-result audit; the
   preservation guard is not a replacement for that audit or permission to merge.

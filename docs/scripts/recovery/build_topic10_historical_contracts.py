@@ -57,6 +57,7 @@ def digest(data: bytes) -> str:
 
 
 def make_contract(wave: dict) -> dict:
+    git("merge-base", "--is-ancestor", wave["commit"], "HEAD")
     code = TOPIC + "Code/03_Research/" + wave["code"]
     doc = TOPIC + wave["doc"]
     configs = [TOPIC + "Data/03_Research/" + name for name in wave["configs"]]

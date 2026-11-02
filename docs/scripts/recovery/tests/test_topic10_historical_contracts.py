@@ -3,6 +3,7 @@ from __future__ import annotations
 
 import importlib.util
 import json
+import subprocess
 from pathlib import Path
 import unittest
 from unittest.mock import patch
@@ -51,6 +52,11 @@ class Topic10HistoricalContractTests(unittest.TestCase):
     def test_changed_origin_artifact_is_rejected(self):
         with patch.object(generator, "git", return_value=b"not the original artifact"):
             with self.assertRaisesRegex(ValueError, "differs from its originating commit"):
+                generator.make_contract(generator.WAVES[0])
+
+    def test_unreachable_origin_history_is_rejected(self):
+        with patch.object(generator, "git", side_effect=subprocess.CalledProcessError(1, "git")):
+            with self.assertRaises(subprocess.CalledProcessError):
                 generator.make_contract(generator.WAVES[0])
 
     def test_all_historical_inputs_are_bound_and_physical_claims_stay_blocked(self):
