@@ -32,6 +32,9 @@ jobs:
         # Contract coverage remains distinct from the scientific suite below.
         run: |
           set -euo pipefail
+          if test -f docs/scripts/recovery/build_topic10_historical_contracts.py || compgen -G 'docs/topics/0.10_Fluid_Dynamics_Chaos/calculation_contracts/historical_*.json' > /dev/null; then
+            python docs/scripts/recovery/build_topic10_historical_contracts.py --check
+          fi
           python docs/scripts/audit/audit_calculation_completeness.py --check
           python -m unittest discover -s docs/scripts/audit/tests -p test_calculation_completeness.py -v
       - name: Run scientific research tests

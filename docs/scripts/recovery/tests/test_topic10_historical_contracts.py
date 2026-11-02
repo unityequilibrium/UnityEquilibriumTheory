@@ -53,6 +53,35 @@ class Topic10HistoricalContractTests(unittest.TestCase):
             with self.assertRaisesRegex(ValueError, "differs from its originating commit"):
                 generator.make_contract(generator.WAVES[0])
 
+    def test_all_historical_inputs_are_bound_and_physical_claims_stay_blocked(self):
+        all_inputs = set()
+        for wave in generator.WAVES:
+            with self.subTest(wave=wave["name"]):
+                path = ROOT / generator.TOPIC / "Result/artifacts" / wave["result"]
+                data = json.loads(path.read_text(encoding="utf-8"))
+                contract = generator.make_contract(wave)
+                recorded = {p.replace("\\", "/") for p in data["input_hashes"]}
+                identities = {i["path"] for i in contract["identities"] if i["kind"] == "working_file"}
+                self.assertTrue(recorded <= identities)
+                all_inputs.update(recorded)
+                self.assertIs(data["claim_promotion"], False)
+                self.assertIs(data["dependency_unlock"], False)
+                self.assertTrue(data["admission"])
+                self.assertTrue(all(value is False for value in data["admission"].values()))
+        self.assertEqual(len(all_inputs), 123)
+
+    def test_original_registry_and_results_remain_byte_identical(self):
+        count = 0
+        for wave in generator.WAVES:
+            paths = [generator.TOPIC + "Result/artifacts/" + wave["result"]]
+            if wave["name"] == "gapless_functional":
+                paths.append(generator.REGISTRY)
+            for path in paths:
+                with self.subTest(path=path):
+                    self.assertEqual((ROOT / path).read_bytes(), generator.git("show", f"{wave['commit']}:{path}"))
+                    count += 1
+        self.assertEqual(count, 5)
+
 
 if __name__ == "__main__":
     unittest.main()

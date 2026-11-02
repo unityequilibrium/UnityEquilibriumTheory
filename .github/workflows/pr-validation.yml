@@ -113,6 +113,13 @@ jobs:
         with:
           python-version: '3.12'
       - run: python -m compileall -q docs
+      - name: Verify historical Topic 10 evidence
+        run: |
+          if test -f docs/scripts/recovery/build_topic10_historical_contracts.py || compgen -G 'docs/topics/0.10_Fluid_Dynamics_Chaos/calculation_contracts/historical_*.json' > /dev/null; then
+            python docs/scripts/recovery/build_topic10_historical_contracts.py --check
+          else
+            echo "No historical Topic 10 evidence contracts on this branch."
+          fi
       - name: Check scoped calculation and observation contracts
         env:
           BASE_SHA: ${{ github.event.pull_request.base.sha }}

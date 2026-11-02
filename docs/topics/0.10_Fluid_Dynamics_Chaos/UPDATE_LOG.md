@@ -1047,3 +1047,14 @@ CLAIM_BOUNDARY: Internal numerical-method validation only; not evidence that UET
   `finite_density_gHF_integral_state_renormalization_and_external_source_vertex_not_admitted`.
 - Claim boundary unchanged: conditional formal/synthetic controls, not an
   admitted physical state, material result or independent validation.
+
+## 2026-11-02 Historical evidence preservation guard
+
+- Added read-only source/commit/input identity checks to research PR, main and
+  nightly workflows. These checks do not regenerate or alter the five historical
+  files, and main fetches their originating Git history before verification.
+- Five local lineage tests passed, including exact-byte comparison, changed
+  input/origin rejection, and checks that physical admissions remain false.
+- No output, prelocked contract, physics gate or claim changed. The same five
+  embedded-metadata errors still block the separate changed-result audit; the
+  preservation guard is not a replacement for that audit or permission to merge.
