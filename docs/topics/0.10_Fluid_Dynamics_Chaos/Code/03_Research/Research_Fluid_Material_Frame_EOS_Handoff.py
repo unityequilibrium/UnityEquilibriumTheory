@@ -1,0 +1,259 @@
+"""SD03 exact material-frame/ensemble/unit handoff; no material state or benchmark."""
+import argparse
+import ast
+from fractions import Fraction as F
+import hashlib
+import json
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parents[5]
+TOPIC = Path('docs/topics/0.10_Fluid_Dynamics_Chaos')
+CONTRACT = ROOT/TOPIC/'Data/03_Research/fluid_material_frame_eos_handoff_contract.json'
+OUTPUT = ROOT/TOPIC/'Result/artifacts/fluid_material_frame_eos_handoff.json'
+LOCK = 'a0268c8beb968451cbc47a71944334146bb8d52e5753266cf80faa71799d8b19'
+
+
+class Jet:
+    """Exact value/first/second derivatives along one declared path."""
+    def __init__(self, value, first=0, second=0):
+        self.v, self.d, self.dd = F(value), F(first), F(second)
+    @staticmethod
+    def convert(value):
+        return value if isinstance(value, Jet) else Jet(value)
+    def __add__(self, other):
+        b = self.convert(other)
+        return Jet(self.v+b.v, self.d+b.d, self.dd+b.dd)
+    __radd__ = __add__
+    def __neg__(self):
+        return Jet(-self.v, -self.d, -self.dd)
+    def __sub__(self, other):
+        return self+-self.convert(other)
+    def __rsub__(self, other):
+        return self.convert(other)+-self
+    def __mul__(self, other):
+        b = self.convert(other)
+        return Jet(self.v*b.v, self.d*b.v+self.v*b.d,
+                   self.dd*b.v+2*self.d*b.d+self.v*b.dd)
+    __rmul__ = __mul__
+    def reciprocal(self):
+        if not self.v:
+            raise ValueError('zero density/denominator outside declared domain')
+        return Jet(1/self.v, -self.d/self.v**2, 2*self.d**2/self.v**3-self.dd/self.v**2)
+    def __truediv__(self, other):
+        return self*self.convert(other).reciprocal()
+    def __rtruediv__(self, other):
+        return self.convert(other)*self.reciprocal()
+
+
+def pressure(T, mu, cross=F(1,4)):
+    return (T*T+mu*mu)/2+cross*T*mu
+
+
+def heat_capacity(T, n, entropy, a, b, c):
+    if n <= 0:
+        raise ValueError('positive conserved particle density required')
+    sigma = entropy/n
+    return T/n*(a-2*sigma*b+sigma*sigma*c)
+
+
+def eos(T, mu, cross=F(1,4)):
+    n = mu+cross*T; entropy = T+cross*mu
+    if n <= 0:
+        raise ValueError('positive conserved particle density required')
+    sigma = entropy/n
+    return {'p': pressure(T, mu, cross), 'n': n, 'S': entropy, 'sigma': sigma,
+            'h': mu+T*sigma, 'w': mu*n+T*entropy,
+            'cp': heat_capacity(T, n, entropy, F(1), cross, F(1))}
+
+
+def heat_current(energy, particle, enthalpy):
+    return [e-enthalpy*j for e, j in zip(energy, particle)]
+
+
+def reduced_speed_squared(r, T, specific_entropy, cp):
+    if not 0 < r < 1 or T <= 0 or cp <= 0 or specific_entropy <= 0:
+        raise ValueError('strict positive two-component reduced-domain inputs required')
+    return r/(1-r)*T*specific_entropy**2/cp
+
+
+def relative_speed_variance(r, T, specific_entropy, cp, covariance):
+    reduced_speed_squared(r, T, specific_entropy, cp)
+    gradient = [1/(r*(1-r)), 1/T, 2/specific_entropy, -1/cp]
+    return sum(gradient[i]*covariance[i][j]*gradient[j] for i in range(4) for j in range(4))/4
+
+
+def sha(p):
+    return hashlib.sha256(p.read_bytes()).hexdigest()
+
+
+def encode(x):
+    if isinstance(x, F):
+        return str(x)
+    if isinstance(x, list):
+        return [encode(v) for v in x]
+    if isinstance(x, dict):
+        return {k: encode(v) for k, v in x.items()}
+    return x
+
+
+def audit(contract_path=CONTRACT):
+    c = json.loads(CONTRACT.read_text(encoding='utf-8'))
+    supplied = json.loads(Path(contract_path).read_text(encoding='utf-8'))
+    checks = []; values = {}
+    def check(name, passed):
+        checks.append({'name': name, 'passed': bool(passed)})
+    def finish():
+        inputs = dict(c['prelocked_input_hashes'])
+        for path in ['Result/previews/material_frame_eos_first_verifier.py.txt','Result/previews/fluid_material_frame_eos_first_failure.json']:
+            p = ROOT/TOPIC/path
+            inputs[p.relative_to(ROOT).as_posix()] = sha(p)
+        for p in [CONTRACT, Path(__file__)]:
+            inputs[p.relative_to(ROOT).as_posix()] = sha(p)
+        return encode({'schema_version': 't010-sd03-material-frame-audit-v1',
+          'date': '2026-10-05', 'date_role': 'wave_version_not_execution_timestamp',
+          'status': 'PASS_CONDITIONAL_MATERIAL_FRAME_EOS_HANDOFF_ONLY' if all(v['passed'] for v in checks) else 'MATERIAL_FRAME_HANDOFF_DIAGNOSTIC_FAIL',
+          'check_count': len(checks), 'passing_check_count': sum(v['passed'] for v in checks),
+          'checks': checks, 'input_hashes': inputs, 'evaluated_contract_hash': sha(Path(contract_path)),
+          'conditional_controls': values, 'method_gate': c['method_gate'], 'admission': c['admission'],
+          'physical_scales': c['physical_scales'], 'method_controller': c['method_controller'],
+          'physical_controller': c['physical_controller'],
+          'material_requirements_controller': 'docs/topics/0.10_Fluid_Dynamics_Chaos/Data/03_Research/he4_two_fluid_thermodynamic_input_requirements.json',
+          'material_input_values_assigned': False, 'physical_covariance_assigned': False,
+          'SI_calibration_performed': False, 'complex_material_mode_compared': False,
+          'thermal_integrals_executed': False, 'interacting_state_computed': False,
+          'full_external_vertex_computed': False, 'physical_heat_current_computed': False,
+          'Core_and_Topic13_source_edited': False, 'new_benchmark_expansion': False,
+          'physical_J04_executed': False, 'physical_J05_executed': False, 'physical_J06_executed': False,
+          'claim_promotion': False, 'dependency_unlock': False, 'parameters_fitted': False,
+          'thresholds_relaxed': False, 'formal_verification': False, 'external_replication': False,
+          'scope': 'exact synthetic linear frame,pressure-ensemble,entropy-coordinate,unit and covariance handoff;not SI/material or physical response'})
+    check('canonical_contract_locked', sha(CONTRACT) == LOCK)
+    check('supplied_contract_unchanged', supplied == c)
+    check('sixteen_admissions_false', len(c['admission']) == 16 and all(v is False for v in c['admission'].values()))
+    check('ten_method_gates_not_started', len(c['method_gate']) == 10 and all(v == 'NOT_STARTED' for v in c['method_gate'].values()))
+    check('physical_scales_unassigned', all(v is None for v in c['physical_scales'].values()))
+    check('no_benchmark_expansion_authorized', c['new_benchmark_expansions_authorized'] is False)
+    for path, expected in c['prelocked_input_hashes'].items():
+        check('prelocked_input:'+path, (ROOT/path).is_file() and sha(ROOT/path) == expected)
+    if not all(v['passed'] for v in checks):
+        return finish()
+    first = json.loads((ROOT/TOPIC/'Result/previews/fluid_material_frame_eos_first_failure.json').read_text(encoding='utf-8'))
+    check('first_failure_retained',first['status']=='MATERIAL_FRAME_HANDOFF_DIAGNOSTIC_FAIL' and first['check_count']==156 and first['passing_check_count']==154)
+    check('first_source_identity_retained',sha(ROOT/TOPIC/'Result/previews/material_frame_eos_first_verifier.py.txt')==first['input_hashes'][Path(__file__).relative_to(ROOT).as_posix()])
+    if not all(v['passed'] for v in checks):
+        return finish()
+    requirements = json.loads((ROOT/TOPIC/'Data/03_Research/he4_two_fluid_thermodynamic_input_requirements.json').read_text(encoding='utf-8'))
+    check('material_input_controller_unassigned', requirements['status'] == 'MATERIAL_INPUTS_UNASSIGNED_NOT_A_DATASET' and all(x['value'] is None and x['uncertainty'] is None for x in requirements['required_inputs']))
+    normal_path = ROOT/'docs/core/02_equations/o2/uet_o2_covariant_entropy_heat_flux_balance.py'
+    tree = ast.parse(normal_path.read_text(encoding='utf-8'))
+    fields = [n for n in ast.walk(tree) if isinstance(n, ast.AnnAssign) and isinstance(n.target, ast.Name) and n.target.id == 'physical_kubo_coefficient_emitted']
+    check('existing_normal_lane_physical_exclusion', any(isinstance(n.value, ast.Constant) and n.value.value is False for n in fields))
+    strings = [n.value for n in ast.walk(tree) if isinstance(n, ast.Constant) and isinstance(n.value, str)]
+    check('existing_charge_not_mass_boundary', any('Signed O(2) charge is not material mass' in x for x in strings))
+    f = c['pressure_fixture']; T, mu, cross = [F(f[k]) for k in ['T','mu','cross_coefficient']]
+    e = eos(T, mu, cross); n, S, sigma, w, h = [e[k] for k in ['n','S','sigma','w','h']]
+    check('Gibbs_enthalpy', w == n*h and w == mu*n+T*S)
+    mu1 = -sigma; mu2 = -(1+2*cross*mu1+mu1*mu1)/n
+    tj = Jet(T, 1); mj = Jet(mu, mu1, mu2); pj = pressure(tj, mj, cross)
+    sigma_jet = (tj+cross*mj)/(mj+cross*tj)
+    check('fixed_pressure_first_jet', pj.d == 0)
+    check('fixed_pressure_second_jet', pj.dd == 0)
+    check('specific_entropy_fixed_P_chain', T*sigma_jet.d == e['cp'])
+    check('fixture_cp_exact', e['cp'] == F(40,81))
+    fixed_mu_sigma = (tj+cross*mu)/(mu+cross*tj)
+    check('fixed_mu_as_cp_negative', T*fixed_mu_sigma.d != e['cp'])
+    slope = F(c['pressure_path_slope']); path_mu1 = (slope-S)/n
+    path_sigma = (tj+cross*Jet(mu,path_mu1))/(Jet(mu,path_mu1)+cross*tj)
+    path_extra = T/n*(slope/n)*(cross-sigma)
+    check('pressure_path_correction', T*path_sigma.d == e['cp']+path_extra)
+    check('SVP_as_fixed_P_negative', T*path_sigma.d != e['cp'])
+    ff = c['frame_fixture']; JN, JE, shift, bg = [[F(v) for v in ff[k]] for k in ['JN','JE','velocity_shift','background_velocity']]
+    q = heat_current(JE, JN, h); generator = heat_current(JE, JN, mu)
+    shifted_N = [j-n*v for j,v in zip(JN,shift)]; shifted_E = [j-w*v for j,v in zip(JE,shift)]
+    check('linear_frame_invariant_heat', heat_current(shifted_E, shifted_N, h) == q)
+    check('rotating_generator_not_heat_negative', generator != q)
+    check('generator_entropy_advection', [g-v for g,v in zip(generator,q)] == [T*sigma*j for j in JN])
+    check('generator_frame_shift_detected', heat_current(shifted_E, shifted_N, mu) == [g-T*S*v for g,v in zip(generator,shift)])
+    eckart_velocity = [u+j/n for u,j in zip(bg,JN)]
+    entropy_L = [S*u+g/T for u,g in zip(bg,generator)]
+    entropy_E = [S*u+v/T for u,v in zip(eckart_velocity,q)]
+    check('existing_Landau_Eckart_entropy_identity', entropy_L == entropy_E)
+    check('legacy_entropy_held_frame_negative', [S*u+v/T for u,v in zip(bg,q)] != entropy_L)
+    for token in c['entropy_offsets']:
+        offset = F(token); mu_prime = mu-offset*T; sigma_prime = sigma+offset
+        transformed_p = pressure(Jet(T,1), Jet(mu_prime)+offset*Jet(T,1), cross)
+        mixed = cross+offset; expected_a = 1+2*offset*cross+offset*offset
+        check('entropy_source_Hessian:'+token, transformed_p.dd == expected_a)
+        transformed_cp = heat_capacity(T,n,S+offset*n,transformed_p.dd,mixed,F(1))
+        check('cp_reference_covariance:'+token, transformed_cp == e['cp'])
+        check('Gibbs_reference_invariance:'+token, mu_prime+T*sigma_prime == h)
+        check('untransformed_Hessian_negative:'+token, heat_capacity(T,n,S+offset*n,F(1),cross,F(1)) != e['cp'])
+        # Entropy reference transforms the TOTAL particle current n*u+JN.
+        total_particle = [n*u+j for u,j in zip(bg,JN)]
+        shifted_entropy_flux = [v+offset*j for v,j in zip(entropy_L,total_particle)]
+        transformed_generator = heat_current(JE,JN,mu_prime)
+        check('entropy_current_reference_transform:'+token, [ (S+offset*n)*u+g/T for u,g in zip(bg,transformed_generator)] == shifted_entropy_flux)
+        check('omitted_convective_charge_negative:'+token, shifted_entropy_flux != [v+offset*j for v,j in zip(entropy_L,JN)])
+    tf = {k:F(v) for k,v in c['two_fluid_fixture'].items()}; rho,rhos,Sm,Tm,mum,vs,vn = [tf[k] for k in ['rho','rho_s','entropy_density','temperature','mu_mass','vs','vn']]
+    rhon = rho-rhos; jm = rhos*vs+rhon*vn; energy = mum*jm+Tm*Sm*vn; wm = mum*rho+Tm*Sm
+    qm = energy-wm/rho*jm
+    check('standard_twofluid_counterflow_heat', qm == Tm*Sm*rhos/rho*(vn-vs))
+    check('mass_convective_entropy_negative', energy-mum*jm != Tm*Sm*jm/rho)
+    sf = {k:F(v) for k,v in c['formal_scaling_fixture'].items() if k!='role'}; P0,E0,Th,V0,mass = [sf[k] for k in ['P0','E0','Theta0','V0','m_atom']]
+    Ts, mus = Th*T, E0*mu
+    def pressure_scaled(a,b):
+        return P0*pressure(a/Th,b/E0,cross)
+    scaled_T = pressure_scaled(Jet(Ts,1),Jet(mus)); scaled_mu = pressure_scaled(Jet(Ts),Jet(mus,1))
+    check('SI_source_density_Jacobian', scaled_mu.d == P0/E0*n)
+    check('SI_source_entropy_Jacobian', scaled_T.d == P0/Th*S)
+    scaled_cross = P0/(Th*E0)*cross
+    scaled_cp = heat_capacity(Ts,scaled_mu.d,scaled_T.d,scaled_T.dd,scaled_cross,scaled_mu.dd)
+    check('SI_particle_cp_Jacobian', scaled_cp == E0/Th*e['cp'])
+    check('SI_mass_cp_Jacobian', scaled_cp/mass == E0/(mass*Th)*e['cp'])
+    energy_SI = [P0*V0*x for x in JE]; particle_SI = [P0/E0*V0*x for x in JN]
+    check('SI_heat_flux_subtraction_Jacobian', heat_current(energy_SI,particle_SI,E0*h) == [P0*V0*x for x in q])
+    check('Kelvin_gain_only_density_negative', P0/Th*n != P0/E0*n)
+    cf = c['covariance_fixture']; r,tc,specific,cp = [F(cf[k]) for k in ['r','temperature','specific_entropy','cp']]
+    loading = [F(v) for v in cf['loading']]; diagonal = [F(v) for v in cf['diagonal']]
+    covariance = [[loading[i]*loading[j]+(diagonal[i] if i==j else 0) for j in range(4)] for i in range(4)]
+    gradient = [1/(r*(1-r)),1/tc,2/specific,-1/cp]
+    variance = relative_speed_variance(r,tc,specific,cp,covariance)
+    independent_outer = sum(a*b for a,b in zip(gradient,loading))**2/4+sum(g*g*d for g,d in zip(gradient,diagonal))/4
+    check('covariance_outer_product_budget', variance == independent_outer and all(d>0 for d in diagonal))
+    diag_only = [[covariance[i][i] if i==j else F(0) for j in range(4)] for i in range(4)]
+    check('diagonal_independence_negative', relative_speed_variance(r,tc,specific,cp,diag_only) != variance)
+    check('reduced_speed_fixture_only', reduced_speed_squared(r,tc,specific,cp) == F(27,40))
+    for name,args in [('zero_normal',(F(1),tc,specific,cp)),('zero_superfluid',(F(0),tc,specific,cp)),('negative_cp',(r,tc,specific,F(-1)))]:
+        try:
+            reduced_speed_squared(*args);check('invalid_domain:'+name,False)
+        except ValueError:
+            check('invalid_domain:'+name,True)
+    try:
+        eos(T,-cross*T,cross);check('zero_particle_density_rejected',False)
+    except ValueError:
+        check('zero_particle_density_rejected',True)
+    values.update({'pressure_fixture':e,'fixed_P_mu_first':mu1,'fixed_P_mu_second':mu2,
+                   'fixed_mu_specific_entropy_capacity':T*fixed_mu_sigma.d,
+                   'path_specific_entropy_capacity':T*path_sigma.d,'path_correction':path_extra,
+                   'invariant_heat_control':q,'rotating_generator_control':generator,
+                   'linear_entropy_current_control':entropy_L,'twofluid_heat_control':qm,
+                   'synthetic_covariance_relative_speed_variance':variance,
+                   'synthetic_reduced_speed_squared':F(27,40),
+                   'formal_scale_fixture_role':'algebra unit Jacobian only;physical scales stay null',
+                   'standard_sound_role':'existing comparator/reduced-domain differential,not new physical mode'})
+    return finish()
+
+
+def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--contract-json',type=Path,default=CONTRACT)
+    parser.add_argument('--output',type=Path,default=OUTPUT)
+    args = parser.parse_args();result = audit(args.contract_json)
+    args.output.parent.mkdir(parents=True,exist_ok=True)
+    args.output.write_text(json.dumps(result,indent=2)+'\n',encoding='utf-8',newline='\n')
+    print(result['status'],str(result['passing_check_count'])+'/'+str(result['check_count']))
+    return 0 if result['status'].startswith('PASS_') else 1
+
+
+if __name__ == '__main__':
+    raise SystemExit(main())

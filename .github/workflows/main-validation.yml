@@ -127,10 +127,19 @@ jobs:
     timeout-minutes: 45
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
       - run: python -m pip install -r .github/requirements-research.txt
+      - name: Verify historical Topic 10 evidence
+        run: |
+          if test -f docs/scripts/recovery/build_topic10_historical_contracts.py || compgen -G 'docs/topics/0.10_Fluid_Dynamics_Chaos/calculation_contracts/historical_*.json' > /dev/null; then
+            python docs/scripts/recovery/build_topic10_historical_contracts.py --check
+          else
+            echo "No historical Topic 10 evidence contracts on this branch."
+          fi
       - name: Run repository research tests
         run: |
           set -euo pipefail

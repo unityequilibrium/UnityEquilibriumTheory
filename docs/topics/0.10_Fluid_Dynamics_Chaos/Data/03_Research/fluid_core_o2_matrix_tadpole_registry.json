@@ -1,0 +1,61 @@
+{
+  "schema_version": "uet-topic-local-equation-contract-v1",
+  "owner_topic": "0.10_Fluid_Dynamics_Chaos",
+  "status": "CONDITIONAL_MATRIX_STATE_PREREQUISITE_NOT_CORE_PROMOTION",
+  "core_registry_modified": false,
+  "source": "docs/topics/0.10_Fluid_Dynamics_Chaos/CORE_O2_MATRIX_TADPOLE_CONTRACT.md",
+  "implementation": "docs/topics/0.10_Fluid_Dynamics_Chaos/Code/03_Research/Research_Fluid_Core_O2_Matrix_Tadpole.py",
+  "artifact": "docs/topics/0.10_Fluid_Dynamics_Chaos/Result/artifacts/fluid_core_o2_matrix_tadpole.json",
+  "claim_promotion": false,
+  "entries": [
+    {
+      "id": "candidate.topic10_13.matrix_tadpoles",
+      "equation": "Qii=int sum_j wij*coth(ej/(2T))/(2ej);2L_Y=I_plus;2L_D=I_minus",
+      "ontology": "phase-fixed rest O(2) matrix with antisymmetric frequency mixing",
+      "units": "K:E2,G:E-2,Q:E2,L:E4",
+      "derivation_class": "CONDITIONAL_MATRIX_MATSUBARA_CHAIN",
+      "assumptions": [
+        "positive nondegenerate poles",
+        "same fixed regulator/source",
+        "symmetric coincident sum"
+      ],
+      "observable_mapping": "NOT_ADMITTED",
+      "failure_mode": "dropped mixing or scalar tadpole reuse",
+      "constant_origin": "topic_derived_relation",
+      "proof_status": "PREREGISTERED_CONDITIONAL_DIAGNOSTIC"
+    },
+    {
+      "id": "candidate.topic10_13.matrix_subtraction",
+      "equation": "ell_R=ell-E0-(Y-Y0)/(2E0)+((Y-Y0)^2+D^2)/(8E0^3)",
+      "ontology": "one-loop finite subtraction candidate,not full 2PI proof",
+      "units": "ell:E1,Y0:E2,integral:E4",
+      "derivation_class": "CONDITIONAL_ZERO_FLOW_UV_CHAIN",
+      "assumptions": [
+        "fixed positive Y0",
+        "same subtraction differentiated for Q",
+        "full modified counterterms still required"
+      ],
+      "observable_mapping": "NOT_ADMITTED",
+      "failure_mode": "omitted traceless term or moving reference",
+      "constant_origin": "topic_derived_relation",
+      "proof_status": "PREREGISTERED_CONDITIONAL_DIAGNOSTIC"
+    },
+    {
+      "id": "candidate.topic10_13.modified_auxiliary_stationarity",
+      "equation": "Omega_g=U+L-AY^2/(8lambda)+AD^2/(4lambda);D=mu^2-m_squared-4lambda*Q11;x=D/lambda+I_minus",
+      "ontology": "declared gHF auxiliary stationary representation",
+      "units": "Omega:E4,x/Y/D:E2,n:E3",
+      "derivation_class": "CONDITIONAL_STATIONARY_SOURCE_CHAIN",
+      "assumptions": [
+        "lambda>0",
+        "x>0",
+        "same regulated functional",
+        "Ward restriction after variation"
+      ],
+      "observable_mapping": "NOT_ADMITTED",
+      "failure_mode": "old Hartree sign or missing x recovery or saddle-as-stability",
+      "constant_origin": "topic_derived_relation",
+      "proof_status": "PREREGISTERED_CONDITIONAL_DIAGNOSTIC"
+    }
+  ]
+}
