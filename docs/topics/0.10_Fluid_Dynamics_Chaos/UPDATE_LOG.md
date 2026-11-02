@@ -1025,3 +1025,25 @@ CLAIM_BOUNDARY: Internal numerical-method validation only; not evidence that UET
   physical scales/covariance, benchmark expansion, fit or threshold relaxation.
 - Next checkpoint: scoped hash/history/JSON/link/whitespace review, commit/push
   and dependent draft PR (SD01-SD03 remain drafts); exact-head CI. Stop this wave.
+
+## 2026-11-02 Historical calculation-contract reconciliation
+
+- Added four scoped, INCOMPLETE formal calculation contracts under
+  `calculation_contracts/`, one per SD01-SD04 wave. They bind the existing
+  source, historical commit, outputs and all 123 distinct prelocked inputs;
+  physical correspondence remains UNKNOWN and no claim is promoted.
+- Verified the five historical registry/result files against their original
+  commits and the four result files' recorded input hashes. The original
+  scientific outputs, their locked source contracts, equations and thresholds
+  were not edited or regenerated.
+- Verification: 16 existing Topic 10 tests and 3 lineage regression tests
+  passed. The read-only calculation completeness check against current main
+  narrowed from 22 errors to 5; the five results lack the embedded current
+  contract hash/identities required by the existing changed-result check.
+- Controller: these result files are themselves hashed into later locked
+  contracts. A preservation-aware producer/lineage migration is still needed;
+  do not insert metadata into them or bypass the check without preserving and
+  revalidating the dependent locks. Physical blocker remains
+  `finite_density_gHF_integral_state_renormalization_and_external_source_vertex_not_admitted`.
+- Claim boundary unchanged: conditional formal/synthetic controls, not an
+  admitted physical state, material result or independent validation.

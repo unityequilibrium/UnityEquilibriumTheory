@@ -1,0 +1,660 @@
+{
+  "schema_version": "uet-calculation-contract-v1",
+  "contract_id": "T10_HISTORICAL_GAPLESS_FUNCTIONAL",
+  "profile": "FORMAL",
+  "review": {
+    "status": "INCOMPLETE",
+    "reviewer": "agent:historical-lineage-reconciliation",
+    "rationale": "Historical source identity and stated scope only; no independent scientific review or physical acceptance."
+  },
+  "question": "Under the declared modified O(2) Hartree-Fock functional, which static algebra and Goldstone identities hold?",
+  "output": {
+    "quantity": "Conditional algebraic identities and recorded synthetic controls",
+    "unit": "natural source units or dimensionless residuals as defined per expression",
+    "domain": "Conditional static O(2) source algebra and declared synthetic controls; natural source units; no material or SI inference.",
+    "accuracy": "Exact symbolic checks and the original source-contract numerical tolerances; no empirical uncertainty.",
+    "claim_intent": "DIAGNOSTIC"
+  },
+  "model": {
+    "formula_ids": [
+      "CORE_O2_GAPLESS_FUNCTIONAL_CANDIDATE.md"
+    ],
+    "assumptions": "Symmetric coincident tadpole matrix and source-normalized modified gapless Hartree-Fock polynomial; no interacting thermal state is solved.",
+    "approximation": "Symmetric coincident tadpole matrix and source-normalized modified gapless Hartree-Fock polynomial; no interacting thermal state is solved.",
+    "initial_boundary": "Stationary or fixed controls only as stated in the cited source; no general dynamical initial-value claim.",
+    "drive_environment": "Declared fixed or stationary model controls; no physical bath or material protocol is inferred.",
+    "parameters": "Original source-contract synthetic controls; physical scales and material covariance remain unassigned."
+  },
+  "data_policy": {
+    "uses_observations": false,
+    "calibration_ids": [],
+    "comparison_ids": [],
+    "independent_validation": false,
+    "holdout_policy": "No observational fit or independent experimental validation is claimed."
+  },
+  "observation": {
+    "source_state": "Symmetric coincident tadpole matrix and source-normalized modified gapless Hartree-Fock polynomial; no interacting thermal state is solved.",
+    "generated_trace": "No physical dissipation trace is inferred.",
+    "carrier": "No physical signal transport is modeled.",
+    "observer_state": "No detector is modeled.",
+    "readout": "Symbolic identities and fixed synthetic controls only.",
+    "backaction": "No measurement is claimed; real detector backaction is not assumed zero.",
+    "frame": "Only the frame explicitly stated by the source calculation.",
+    "time_convention": "Stationary or fixed-control scope as stated; no general dynamics inferred.",
+    "product_level": "Historical formal/diagnostic artifact; not a material measurement.",
+    "corrections": []
+  },
+  "components": [
+    {
+      "id": "system_state",
+      "group": "system_state",
+      "disposition": "MODELED",
+      "reason": "The declared formal state and assumptions are limited to the source model.",
+      "evidence": [
+        "docs/topics/0.10_Fluid_Dynamics_Chaos/Code/03_Research/Research_Fluid_Core_O2_Gapless_Functional.py",
+        "docs/topics/0.10_Fluid_Dynamics_Chaos/CORE_O2_GAPLESS_FUNCTIONAL_CANDIDATE.md"
+      ]
+    },
+    {
+      "id": "drive_environment",
+      "group": "drive_environment",
+      "disposition": "MODELED",
+      "reason": "Only the stated stationary or fixed-control setup is assessed.",
+      "evidence": [
+        "docs/topics/0.10_Fluid_Dynamics_Chaos/Code/03_Research/Research_Fluid_Core_O2_Gapless_Functional.py",
+        "docs/topics/0.10_Fluid_Dynamics_Chaos/CORE_O2_GAPLESS_FUNCTIONAL_CANDIDATE.md"
+      ]
+    },
+    {
+      "id": "propagation",
+      "group": "propagation",
+      "disposition": "NOT_APPLICABLE",
+      "reason": "No physical signal transmission is measured in this formal calculation.",
+      "evidence": []
+    },
+    {
+      "id": "frame_time",
+      "group": "frame_time",
+      "disposition": "MODELED",
+      "reason": "Only the frame and time conventions in the named source calculation apply.",
+      "evidence": [
+        "docs/topics/0.10_Fluid_Dynamics_Chaos/Code/03_Research/Research_Fluid_Core_O2_Gapless_Functional.py",
+        "docs/topics/0.10_Fluid_Dynamics_Chaos/CORE_O2_GAPLESS_FUNCTIONAL_CANDIDATE.md"
+      ]
+    },
+    {
+      "id": "detector",
+      "group": "detector",
+      "disposition": "NOT_APPLICABLE",
+      "reason": "No physical detector or measurement outcome is claimed.",
+      "evidence": []
+    },
+    {
+      "id": "processing",
+      "group": "processing",
+      "disposition": "MODELED",
+      "reason": "Algebra and controls use the named frozen input and implementation.",
+      "evidence": [
+        "docs/topics/0.10_Fluid_Dynamics_Chaos/Code/03_Research/Research_Fluid_Core_O2_Gapless_Functional.py",
+        "docs/topics/0.10_Fluid_Dynamics_Chaos/CORE_O2_GAPLESS_FUNCTIONAL_CANDIDATE.md"
+      ]
+    },
+    {
+      "id": "numerics",
+      "group": "numerics",
+      "disposition": "MODELED",
+      "reason": "Numerical controls and tolerances are the ones recorded in the original source contract.",
+      "evidence": [
+        "docs/topics/0.10_Fluid_Dynamics_Chaos/Code/03_Research/Research_Fluid_Core_O2_Gapless_Functional.py",
+        "docs/topics/0.10_Fluid_Dynamics_Chaos/CORE_O2_GAPLESS_FUNCTIONAL_CANDIDATE.md"
+      ]
+    },
+    {
+      "id": "physical_correspondence",
+      "group": "system_state",
+      "disposition": "UNKNOWN",
+      "reason": "Material correspondence and the physical state are not admitted by this formal wave.",
+      "evidence": [
+        "docs/topics/0.10_Fluid_Dynamics_Chaos/CORE_O2_GAPLESS_FUNCTIONAL_CANDIDATE.md"
+      ],
+      "owner": "theory author and relevant domain reviewer",
+      "next_action": "Establish finite-density integral-state renormalization and an external source vertex before any physical promotion."
+    }
+  ],
+  "error_budget": {
+    "unit": "natural source units or dimensionless residuals as defined per expression",
+    "numerical": "Use original synthetic-control tolerances and exact symbolic identities.",
+    "approximation": "Symmetric coincident tadpole matrix and source-normalized modified gapless Hartree-Fock polynomial; no interacting thermal state is solved.",
+    "measurement": "No physical measurement is analyzed.",
+    "systematic": "Physical correspondence and full method error are not established.",
+    "omissions": "Unmodeled physical state, material mapping and empirical uncertainty remain open.",
+    "dependence": "No independence of unknown physical errors is assumed.",
+    "acceptance": "Historical diagnostic only; no physical acceptance threshold.",
+    "omission_limit": null
+  },
+  "identities": [
+    {
+      "path": "docs/topics/0.10_Fluid_Dynamics_Chaos/Code/03_Research/Research_Fluid_Core_O2_Gapless_Functional.py",
+      "kind": "working_file",
+      "role": "code",
+      "sha256": "caf086b327e6fee7dee2308a785dbdeb08edfc5bc7f094a829f7fece63437d0c"
+    },
+    {
+      "path": "docs/topics/0.10_Fluid_Dynamics_Chaos/CORE_O2_GAPLESS_FUNCTIONAL_CANDIDATE.md",
+      "kind": "working_file",
+      "role": "evidence",
+      "sha256": "cbd879aa6e0407613b2ff0b1fa4c97918db625b7e918eac5b6b662809a87f3ec"
+    },
+    {
+      "path": "docs/topics/0.10_Fluid_Dynamics_Chaos/Data/03_Research/fluid_thermal_joint_research_plan.json",
+      "kind": "working_file",
+      "role": "config",
+      "sha256": "e863fdeb5a8b8d9ab14677ed803259faf0ee10352fb1820f0f331b16359596bf"
+    },
+    {
+      "path": "docs/topics/0.10_Fluid_Dynamics_Chaos/Data/03_Research/fluid_core_o2_gapless_functional_contract.json",
+      "kind": "working_file",
+      "role": "config",
+      "sha256": "981d26cdb0d1d371d14401ed7f85ad4da04ea4b9bcdcede0c1f1ad757d229a20"
+    },
+    {
+      "path": "docs/topics/0.10_Fluid_Dynamics_Chaos/Result/artifacts/fluid_core_o2_gapless_functional_audit.json",
+      "kind": "working_file",
+      "role": "evidence",
+      "sha256": "c33e0ef355165820889affcd6bc25cd6a72ba76d40133a9714532f8a95a90673"
+    },
+    {
+      "path": "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry_topic10_o2_gapless_functional_addendum.json",
+      "kind": "working_file",
+      "role": "evidence",
+      "sha256": "05f950e82f7361bb1230b7bdedf3c1e98db85dc7d4aa648a97a50c36dda9d469"
+    },
+    {
+      "path": "docs/core/02_equations/covariant/uet_covariant_matter.py",
+      "kind": "working_file",
+      "role": "code",
+      "sha256": "8a57d95e898a8ac962bbd749670ad0695b597281937da36496d2ec7e074f9c53"
+    },
+    {
+      "path": "docs/core/02_equations/covariant/uet_covariant_response.py",
+      "kind": "working_file",
+      "role": "code",
+      "sha256": "7fb4b7228afb8ede0ac4f1664d634346ef46cc7678c94ed7b55d73645590c0c2"
+    },
+    {
+      "path": "docs/core/02_equations/o2/uet_o2_charge_conserving_ladder_response.py",
+      "kind": "working_file",
+      "role": "code",
+      "sha256": "d01d7d04bbdb2e86ac660c0e7fb18052e33b0efd75ccb6b8bc61c8649d452eea"
+    },
+    {
+      "path": "docs/core/02_equations/o2/uet_o2_energy_momentum_conserving_bethe_salpeter.py",
+      "kind": "working_file",
+      "role": "code",
+      "sha256": "98b43f2bde1bf335ed7296f51b253e707699e4052b0903d216ab5381eac5b835"
+    },
+    {
+      "path": "docs/core/02_equations/o2/uet_o2_finite_density_eos.py",
+      "kind": "working_file",
+      "role": "code",
+      "sha256": "ea744a8645f993600300fa9fd99a764e1f07b30fb272b47399c34aa114152c6d"
+    },
+    {
+      "path": "docs/core/02_equations/o2/uet_o2_finite_temperature_hartree_thermodynamics.py",
+      "kind": "working_file",
+      "role": "code",
+      "sha256": "476a91e839f0f32c8d7519fc5333e11aed3c59b4226db95284875cf8a248f471"
+    },
+    {
+      "path": "docs/core/02_equations/o2/uet_o2_finite_temperature_quasiparticle_eos.py",
+      "kind": "working_file",
+      "role": "code",
+      "sha256": "ba814f3aa02b5e31112a6595dac7727b7025b08e08f0631f50567f270cebbb7f"
+    },
+    {
+      "path": "docs/core/02_equations/o2/uet_o2_finite_temperature_renormalized_hartree.py",
+      "kind": "working_file",
+      "role": "code",
+      "sha256": "f63aabec987dc71b636722d7bbb74740233adebae1b3801e66a6e244444be471"
+    },
+    {
+      "path": "docs/core/02_equations/o2/uet_o2_finite_temperature_self_energy.py",
+      "kind": "working_file",
+      "role": "code",
+      "sha256": "d227b567a9ffa26af46e4563853afb584207d4e99279ad4be954b8aa91dc9210"
+    },
+    {
+      "path": "docs/core/02_equations/o2/uet_o2_formal_transverse_response.py",
+      "kind": "working_file",
+      "role": "code",
+      "sha256": "a8ee43c6fb6edb227476412cde6cc9b2d4a643fc42cca0fd2d438b343efad1ba"
+    },
+    {
+      "path": "docs/core/02_equations/o2/uet_o2_invariant_galerkin_collision_operator.py",
+      "kind": "working_file",
+      "role": "code",
+      "sha256": "278b168e5c3b444ac4df4b96b5a7d00410cd9485c511ab2a17aa4f11c6f6d94e"
+    },
+    {
+      "path": "docs/core/02_equations/o2/uet_o2_kinetic_collision_kubo.py",
+      "kind": "working_file",
+      "role": "code",
+      "sha256": "7892adc7b5a91fc2d229a47b868fe3b6c7054432a6b2743f10f5f3f232fd3a92"
+    },
+    {
+      "path": "docs/core/02_equations/o2/uet_o2_renormalized_normal_branch.py",
+      "kind": "working_file",
+      "role": "code",
+      "sha256": "cf536a7e04fe75f284c5c5078f5719276b2ca0459e84bbbb1dd027290c92537c"
+    },
+    {
+      "path": "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry_topic10_o2_continuum_form_addendum.json",
+      "kind": "working_file",
+      "role": "input",
+      "sha256": "1b1797573264b2210a0ce6bfaa1eec84d7827bc59c2677907c9af185e236ac13"
+    },
+    {
+      "path": "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry_topic10_o2_current_bound_addendum.json",
+      "kind": "working_file",
+      "role": "input",
+      "sha256": "e467f7e0a225429c1f833a42b81d67e1c0db9dc0f1347f556282fe9e5ddab5d8"
+    },
+    {
+      "path": "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry_topic10_o2_current_ward_addendum.json",
+      "kind": "working_file",
+      "role": "input",
+      "sha256": "4c31a8065e9317f5a15daefafd9e0b4a3fb44367eb24808e9e7863d95e08d4f8"
+    },
+    {
+      "path": "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry_topic10_o2_density_backreaction_addendum.json",
+      "kind": "working_file",
+      "role": "input",
+      "sha256": "524d1c3530ab3e875ad9aeac5a0227db7d3e6460197425fe19aea892b14315ef"
+    },
+    {
+      "path": "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry_topic10_o2_goldstone_galerkin_addendum.json",
+      "kind": "working_file",
+      "role": "input",
+      "sha256": "73bb37bd79dfc2bfde8231998db142d539db83a9b1186e1e23c1dff8dadd6fb8"
+    },
+    {
+      "path": "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry_topic10_o2_infrared_geometry_addendum.json",
+      "kind": "working_file",
+      "role": "input",
+      "sha256": "0af8e9ccfcc6de538e17e96448c47935b37177c5fee37599bd3f66d789288f22"
+    },
+    {
+      "path": "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry_topic10_o2_infrared_trials_addendum.json",
+      "kind": "working_file",
+      "role": "input",
+      "sha256": "1e3bf2adc560597f2acfac9cb511519f7b9d82e9ea882b8a5d5fd2cd2d555642"
+    },
+    {
+      "path": "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry_topic10_o2_interacting_method_addendum.json",
+      "kind": "working_file",
+      "role": "input",
+      "sha256": "7849faf7a3d4ed570f31b089c0c804312c1533f204023cf4e69b3b9e2b971301"
+    },
+    {
+      "path": "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry_topic10_o2_vector_refinement_addendum.json",
+      "kind": "working_file",
+      "role": "input",
+      "sha256": "9263469bc87c7bfaa47ce608adc1da710510885d003cf8a603e25605e06bfee1"
+    },
+    {
+      "path": "docs/core/07_artifacts/topic13/t13_collision_evidence_reconciliation.json",
+      "kind": "working_file",
+      "role": "input",
+      "sha256": "cad197d2635b08d3454cc49734b292b32971c2f18e3d3f1d2b2c0b5ca77c9bf6"
+    },
+    {
+      "path": "docs/core/07_artifacts/topic13/t13_invariant_galerkin_collision_operator_audit.json",
+      "kind": "working_file",
+      "role": "input",
+      "sha256": "433427f32612e478d71a1a4ff64f96e3d22da7fc33d3de0c10f3a0a480234011"
+    },
+    {
+      "path": "docs/topics/0.10_Fluid_Dynamics_Chaos/CORE_O2_DENSITY_BACKREACTION.md",
+      "kind": "working_file",
+      "role": "input",
+      "sha256": "be95e3f2131d08507afe4179514a4d63740f11b52a0440b8135caba917fc5171"
+    },
+    {
+      "path": "docs/topics/0.10_Fluid_Dynamics_Chaos/CORE_O2_DENSITY_DERIVATIVE_CENTER_REPAIR.md",
+      "kind": "working_file",
+      "role": "input",
+      "sha256": "f3ee71c8fbf0773f272823577aafcacbf0dd29d05b3d0d12acae96ad7de7780b"
+    },
+    {
+      "path": "docs/topics/0.10_Fluid_Dynamics_Chaos/CORE_O2_DENSITY_SOURCE_BINDING_REPAIR.md",
+      "kind": "working_file",
+      "role": "input",
+      "sha256": "6bb3ede2263c626f4fc2906d838ad6c61cc25033b742d731dc5109655900f1cc"
+    },
+    {
+      "path": "docs/topics/0.10_Fluid_Dynamics_Chaos/CORE_O2_GOLDSTONE_CONTINUUM_FORM.md",
+      "kind": "working_file",
+      "role": "input",
+      "sha256": "269bd387dde1ea664b7ab7935b96a35d6b1fa6175879f32ba6d913f46a7d0de9"
+    },
+    {
+      "path": "docs/topics/0.10_Fluid_Dynamics_Chaos/CORE_O2_GOLDSTONE_CURRENT_BOUND.md",
+      "kind": "working_file",
+      "role": "input",
+      "sha256": "5fccaf6def52afaf8d4c2615f1fb255507d542bdeab50687a59956748f79db2f"
+    },
+    {
+      "path": "docs/topics/0.10_Fluid_Dynamics_Chaos/CORE_O2_GOLDSTONE_GALERKIN_DERIVATION.md",
+      "kind": "working_file",
+      "role": "input",
+      "sha256": "5cd09900d57ae2d61c2007f6a0b2f7d565903894721c81b8b81b29257bccac90"
+    },
+    {
+      "path": "docs/topics/0.10_Fluid_Dynamics_Chaos/CORE_O2_GOLDSTONE_INFRARED_GEOMETRY_REPAIR.md",
+      "kind": "working_file",
+      "role": "input",
+      "sha256": "4143ea435c9ed16896775a4a23312325d0d48b59c6b248c31fefa1b25a485bbc"
+    },
+    {
+      "path": "docs/topics/0.10_Fluid_Dynamics_Chaos/CORE_O2_GOLDSTONE_INFRARED_TRIALS.md",
+      "kind": "working_file",
+      "role": "input",
+      "sha256": "ad908db9afc36d14102bbf18bba321795ec9b99a43abd4c2819ca49e61dfd97c"
+    },
+    {
+      "path": "docs/topics/0.10_Fluid_Dynamics_Chaos/CORE_O2_GOLDSTONE_VECTOR_REFINEMENT.md",
+      "kind": "working_file",
+      "role": "input",
+      "sha256": "5957e4f1373faea4e38036f040e4b84c611f11a52d8f5e3188b29e469ed2d4ef"
+    },
+    {
+      "path": "docs/topics/0.10_Fluid_Dynamics_Chaos/CORE_O2_INTERACTING_METHOD_ADMISSION.md",
+      "kind": "working_file",
+      "role": "input",
+      "sha256": "54df71448731c4d7d395a8b0845ef48f6096e8a5d292edb59dceb964e66dfa8d"
+    },
+    {
+      "path": "docs/topics/0.10_Fluid_Dynamics_Chaos/CORE_O2_MICROSCOPIC_CURRENT_WARD.md",
+      "kind": "working_file",
+      "role": "input",
+      "sha256": "2679190ef730d41212c570a3b962c351bc45f9eb3c879cf3a35617617a3bbc8a"
+    },
+    {
+      "path": "docs/topics/0.10_Fluid_Dynamics_Chaos/Code/03_Research/Research_Fluid_Core_O2_Common_Flow.py",
+      "kind": "working_file",
+      "role": "code",
+      "sha256": "b083323ad31df5527a94a888e8eae43984eb77698bda1c6c3d080e2ea940f5e2"
+    },
+    {
+      "path": "docs/topics/0.10_Fluid_Dynamics_Chaos/Code/03_Research/Research_Fluid_Core_O2_Continuum_Form.py",
+      "kind": "working_file",
+      "role": "code",
+      "sha256": "0f9db4ad112f01da8a00e57dbd4d842f3c2947f814e1ccf68e6d42af796c7ef8"
+    },
+    {
+      "path": "docs/topics/0.10_Fluid_Dynamics_Chaos/Code/03_Research/Research_Fluid_Core_O2_Current_Bound.py",
+      "kind": "working_file",
+      "role": "code",
+      "sha256": "a367217b1ff6a9fbfe2a714bb95776c3ca26633973a4f3cad0430411aac60e15"
+    },
+    {
+      "path": "docs/topics/0.10_Fluid_Dynamics_Chaos/Code/03_Research/Research_Fluid_Core_O2_Current_Ward.py",
+      "kind": "working_file",
+      "role": "code",
+      "sha256": "96f9fa56fe8e34483697b9b806b8a88eade492eced295dc6e92ebee439948722"
+    },
+    {
+      "path": "docs/topics/0.10_Fluid_Dynamics_Chaos/Code/03_Research/Research_Fluid_Core_O2_Density_Backreaction.py",
+      "kind": "working_file",
+      "role": "code",
+      "sha256": "ec40febd37f5ecfa22201796621a91fa4ff6cbb541a30888d7825fab970b61bd"
+    },
+    {
+      "path": "docs/topics/0.10_Fluid_Dynamics_Chaos/Code/03_Research/Research_Fluid_Core_O2_Flow_Hessian.py",
+      "kind": "working_file",
+      "role": "code",
+      "sha256": "d8ecff1e604f545d68ec03b5abf4a6cc53e3ea377cafee0c75762dd1c2ccbc62"
+    },
+    {
+      "path": "docs/topics/0.10_Fluid_Dynamics_Chaos/Code/03_Research/Research_Fluid_Core_O2_Goldstone_Collision.py",
+      "kind": "working_file",
+      "role": "code",
+      "sha256": "1b8cc6ff1782da5c5f01dcf4d95052871a4ea2c7a5e1aa967478e9f800cd3fe8"
+    },
+    {
+      "path": "docs/topics/0.10_Fluid_Dynamics_Chaos/Code/03_Research/Research_Fluid_Core_O2_Goldstone_Galerkin.py",
+      "kind": "working_file",
+      "role": "code",
+      "sha256": "f7caeae9655172514adc464723917a1a8e367a3a1832ada2938a2d44f1afdc74"
+    },
+    {
+      "path": "docs/topics/0.10_Fluid_Dynamics_Chaos/Code/03_Research/Research_Fluid_Core_O2_Infrared_Trials.py",
+      "kind": "working_file",
+      "role": "code",
+      "sha256": "d62ccc1853c0e02829f0b0a79d71bd1b43488c7b2d93a15d6c8e26f19157bcdf"
+    },
+    {
+      "path": "docs/topics/0.10_Fluid_Dynamics_Chaos/Code/03_Research/Research_Fluid_Core_O2_Interacting_Method.py",
+      "kind": "working_file",
+      "role": "code",
+      "sha256": "0bec7436b775f1fda36ccf862fa48da48c851bce1ba633fbee52d7f0c5855779"
+    },
+    {
+      "path": "docs/topics/0.10_Fluid_Dynamics_Chaos/Code/03_Research/Research_Fluid_Core_O2_Vector_Refinement.py",
+      "kind": "working_file",
+      "role": "code",
+      "sha256": "f73896652c997abdb17bd6d9b155e52c40722e36af70f703976b3b18dbe1d827"
+    },
+    {
+      "path": "docs/topics/0.10_Fluid_Dynamics_Chaos/Data/03_Research/fluid_core_o2_common_flow_contract.json",
+      "kind": "working_file",
+      "role": "input",
+      "sha256": "c9a190c89d682080a9a90254cfd205e606cd9063f9d34c68b00eeeef8634c75c"
+    },
+    {
+      "path": "docs/topics/0.10_Fluid_Dynamics_Chaos/Data/03_Research/fluid_core_o2_continuum_form_contract.json",
+      "kind": "working_file",
+      "role": "input",
+      "sha256": "2132f2adbc09082a5d4f991ddfcbcbb5133fe147e3bd521cc4fca1a952960609"
+    },
+    {
+      "path": "docs/topics/0.10_Fluid_Dynamics_Chaos/Data/03_Research/fluid_core_o2_current_bound_contract.json",
+      "kind": "working_file",
+      "role": "input",
+      "sha256": "dd7990f6da9b193d1fa087c26fd200ad5ee873f93f49ea5b70fd140edf77180e"
+    },
+    {
+      "path": "docs/topics/0.10_Fluid_Dynamics_Chaos/Data/03_Research/fluid_core_o2_current_ward_contract.json",
+      "kind": "working_file",
+      "role": "input",
+      "sha256": "1ece00c9a6cc45015a72c1de977f4474c877c7999a7ac44f24f45dd622b2bdd8"
+    },
+    {
+      "path": "docs/topics/0.10_Fluid_Dynamics_Chaos/Data/03_Research/fluid_core_o2_density_backreaction_contract.json",
+      "kind": "working_file",
+      "role": "input",
+      "sha256": "adfbee7be7611d072285b53189ad02022e2ace83a8661e54344a1233b3bf9949"
+    },
+    {
+      "path": "docs/topics/0.10_Fluid_Dynamics_Chaos/Data/03_Research/fluid_core_o2_goldstone_collision_contract.json",
+      "kind": "working_file",
+      "role": "input",
+      "sha256": "331535ea4a63e47e0d100c317511013605ab5044f1bdbff835ba48fbd3e6b912"
+    },
+    {
+      "path": "docs/topics/0.10_Fluid_Dynamics_Chaos/Data/03_Research/fluid_core_o2_goldstone_galerkin_contract.json",
+      "kind": "working_file",
+      "role": "input",
+      "sha256": "d36a29ef8524a9c839ba237ac7507ea6e8c217d777a8f9fcd87302e9b5b37fee"
+    },
+    {
+      "path": "docs/topics/0.10_Fluid_Dynamics_Chaos/Data/03_Research/fluid_core_o2_infrared_trials_contract.json",
+      "kind": "working_file",
+      "role": "input",
+      "sha256": "55fb10489110d257a897e0c41b95743ae502cef0130e856508ab7786c075f85d"
+    },
+    {
+      "path": "docs/topics/0.10_Fluid_Dynamics_Chaos/Data/03_Research/fluid_core_o2_interacting_method_contract.json",
+      "kind": "working_file",
+      "role": "input",
+      "sha256": "cfb4897d65ca0935eeffcecf710c29ca3c70ac60e591b85e8b7c95bf5ddca446"
+    },
+    {
+      "path": "docs/topics/0.10_Fluid_Dynamics_Chaos/Data/03_Research/fluid_core_o2_vector_refinement_contract.json",
+      "kind": "working_file",
+      "role": "input",
+      "sha256": "5216da4f2549980292cce50314361448456db01816e3a5dba8a3c00120c880f0"
+    },
+    {
+      "path": "docs/topics/0.10_Fluid_Dynamics_Chaos/Result/artifacts/fluid_core_o2_continuum_form_audit.json",
+      "kind": "working_file",
+      "role": "input",
+      "sha256": "22792c7ec7ab209ca5b23a870f2b72467feb482d4f89050925364c5ba40c932f"
+    },
+    {
+      "path": "docs/topics/0.10_Fluid_Dynamics_Chaos/Result/artifacts/fluid_core_o2_current_bound_audit.json",
+      "kind": "working_file",
+      "role": "input",
+      "sha256": "709bcdcc46f7291fcb028b93794ee533cbf271bfb1e98a2823192efe3c156d21"
+    },
+    {
+      "path": "docs/topics/0.10_Fluid_Dynamics_Chaos/Result/artifacts/fluid_core_o2_current_ward_audit.json",
+      "kind": "working_file",
+      "role": "input",
+      "sha256": "244b07dba91a8cfd40bb8f3f26922c73b7f6fc7d839f961f970ee6f87a24fbd4"
+    },
+    {
+      "path": "docs/topics/0.10_Fluid_Dynamics_Chaos/Result/artifacts/fluid_core_o2_density_backreaction_audit.json",
+      "kind": "working_file",
+      "role": "input",
+      "sha256": "1583089126fba0596eab63ec30faafd4f86df9211f30674753283620762887c3"
+    },
+    {
+      "path": "docs/topics/0.10_Fluid_Dynamics_Chaos/Result/artifacts/fluid_core_o2_goldstone_collision_audit.json",
+      "kind": "working_file",
+      "role": "input",
+      "sha256": "c130a512a015940ed5db9f2a181fa34731910fa17aa58c5c4e59e0cdb3dfe56b"
+    },
+    {
+      "path": "docs/topics/0.10_Fluid_Dynamics_Chaos/Result/artifacts/fluid_core_o2_goldstone_galerkin_audit.json",
+      "kind": "working_file",
+      "role": "input",
+      "sha256": "4b4c706aab168108e7d5829a6a0563eaf9f99c893afd2586020eb89b55e6d24b"
+    },
+    {
+      "path": "docs/topics/0.10_Fluid_Dynamics_Chaos/Result/artifacts/fluid_core_o2_ideal_modes_audit.json",
+      "kind": "working_file",
+      "role": "input",
+      "sha256": "b2e5d7fb5fff8f1a48148e1661bbf640027174b58b9fe765f53cded351c512f6"
+    },
+    {
+      "path": "docs/topics/0.10_Fluid_Dynamics_Chaos/Result/artifacts/fluid_core_o2_infrared_trials_audit.json",
+      "kind": "working_file",
+      "role": "input",
+      "sha256": "4b550b4f455c7b5e67dd64def2208c5729425d7c851050dcc65c31f0a1c048b2"
+    },
+    {
+      "path": "docs/topics/0.10_Fluid_Dynamics_Chaos/Result/artifacts/fluid_core_o2_interacting_method_audit.json",
+      "kind": "working_file",
+      "role": "input",
+      "sha256": "bf310edefb8cadd53f92066ed0e1434d16974b8543e91facd0c65b7af2457acf"
+    },
+    {
+      "path": "docs/topics/0.10_Fluid_Dynamics_Chaos/Result/artifacts/fluid_core_o2_vector_refinement_audit.json",
+      "kind": "working_file",
+      "role": "input",
+      "sha256": "4990aba84fe30276d7441bdca9567729a63797d5df0a0263d667f6df491f37f5"
+    },
+    {
+      "path": "docs/topics/0.10_Fluid_Dynamics_Chaos/Result/previews/core_o2_density_backreaction_first_verifier.py.txt",
+      "kind": "working_file",
+      "role": "input",
+      "sha256": "3458fbf3f9db4e58b65f3e6c6f44715bdc8f9458aa21e76b0f44f53d8ff8fe46"
+    },
+    {
+      "path": "docs/topics/0.10_Fluid_Dynamics_Chaos/Result/previews/core_o2_density_backreaction_uncentered_verifier.py.txt",
+      "kind": "working_file",
+      "role": "input",
+      "sha256": "a641ae467b13c7d40c0a091cdfeddf3f8ab4bae536e1242955bec2b72fec2cc7"
+    },
+    {
+      "path": "docs/topics/0.10_Fluid_Dynamics_Chaos/Result/previews/core_o2_gapless_functional_first_verifier.py.txt",
+      "kind": "working_file",
+      "role": "input",
+      "sha256": "7ed910ba9ef2514ee792beb71265f086bc9b2ccc2bbfa9e664ee6e93c2ad0561"
+    },
+    {
+      "path": "docs/topics/0.10_Fluid_Dynamics_Chaos/Result/previews/core_o2_goldstone_galerkin_first_execution_verifier.py.txt",
+      "kind": "working_file",
+      "role": "input",
+      "sha256": "0be34c2e579b4aaf44dae168c63a4b50276508759c6073751e9c2484c0439c81"
+    },
+    {
+      "path": "docs/topics/0.10_Fluid_Dynamics_Chaos/Result/previews/core_o2_infrared_trials_first_execution_verifier.py.txt",
+      "kind": "working_file",
+      "role": "input",
+      "sha256": "7525ab5686c248947ab87082e876e9ccb69471e30d38be6f6492429d8c972c74"
+    },
+    {
+      "path": "docs/topics/0.10_Fluid_Dynamics_Chaos/Result/previews/fluid_core_o2_density_backreaction_first_contract.json",
+      "kind": "working_file",
+      "role": "input",
+      "sha256": "60a4941244e4dcbaeb882f1fcf58034cf6b3ec040238ec180d578da42333d537"
+    },
+    {
+      "path": "docs/topics/0.10_Fluid_Dynamics_Chaos/Result/previews/fluid_core_o2_density_backreaction_first_failure.json",
+      "kind": "working_file",
+      "role": "input",
+      "sha256": "25a6a09a48977ed5bd1c00c61c15ce0eaf8e2a70dc707098dab21b18328868aa"
+    },
+    {
+      "path": "docs/topics/0.10_Fluid_Dynamics_Chaos/Result/previews/fluid_core_o2_density_backreaction_uncentered_failure.json",
+      "kind": "working_file",
+      "role": "input",
+      "sha256": "542dba0017723653e0bb6607c4e43e5f041da45d8eafca90f2a190e2b8600a0b"
+    },
+    {
+      "path": "docs/topics/0.10_Fluid_Dynamics_Chaos/Result/previews/fluid_core_o2_gapless_functional_first_execution.json",
+      "kind": "working_file",
+      "role": "input",
+      "sha256": "ed480f3c686c71899fe6a2fbe5510dc39e1aeda5e816ccc97b295f052952ee81"
+    },
+    {
+      "path": "docs/topics/0.10_Fluid_Dynamics_Chaos/Result/previews/fluid_core_o2_goldstone_galerkin_first_execution.json",
+      "kind": "working_file",
+      "role": "input",
+      "sha256": "18e4854a368c5b0d6860da12435bd8dae00d8d77302d66036c40972404ae710a"
+    },
+    {
+      "path": "docs/topics/0.10_Fluid_Dynamics_Chaos/Result/previews/fluid_core_o2_infrared_trials_first_execution.json",
+      "kind": "working_file",
+      "role": "input",
+      "sha256": "ec07cc39289b88ab60fb5d8b7e6fd419015056e9b012d30720a15e90d98fcea8"
+    },
+    {
+      "path": "docs/topics/0.10_Fluid_Dynamics_Chaos/Result/artifacts/fluid_core_o2_gapless_functional_audit.json",
+      "kind": "git_blob",
+      "role": "evidence",
+      "commit": "088c8b204dd2dff9f84a15ba1a3ca80b5c0468fb",
+      "sha256": "c33e0ef355165820889affcd6bc25cd6a72ba76d40133a9714532f8a95a90673"
+    },
+    {
+      "path": "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry_topic10_o2_gapless_functional_addendum.json",
+      "kind": "git_blob",
+      "role": "evidence",
+      "commit": "088c8b204dd2dff9f84a15ba1a3ca80b5c0468fb",
+      "sha256": "05f950e82f7361bb1230b7bdedf3c1e98db85dc7d4aa648a97a50c36dda9d469"
+    }
+  ],
+  "entrypoints": [
+    "docs/topics/0.10_Fluid_Dynamics_Chaos/Code/03_Research/Research_Fluid_Core_O2_Gapless_Functional.py"
+  ],
+  "evidence": [
+    "docs/topics/0.10_Fluid_Dynamics_Chaos/Code/03_Research/Research_Fluid_Core_O2_Gapless_Functional.py",
+    "docs/topics/0.10_Fluid_Dynamics_Chaos/CORE_O2_GAPLESS_FUNCTIONAL_CANDIDATE.md",
+    "docs/topics/0.10_Fluid_Dynamics_Chaos/Data/03_Research/fluid_core_o2_gapless_functional_contract.json",
+    "docs/topics/0.10_Fluid_Dynamics_Chaos/Result/artifacts/fluid_core_o2_gapless_functional_audit.json"
+  ],
+  "claim_boundary": "Conditional formal source algebra and synthetic controls only; all original physical and claim-promotion gates remain unchanged.",
+  "next_action": "Establish finite-density integral-state renormalization and an external source vertex before any physical promotion."
+}
