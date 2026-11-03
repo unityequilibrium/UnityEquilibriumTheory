@@ -47,6 +47,17 @@ day-to-day agent work.
 - Many files under `Result/`, `_Logs/`, generated reports, and audit outputs are artifacts,
   not the first place to make narrative decisions from memory.
 
+## Harness and Superapp boundary
+
+- Work performed in `uet_harness` must stay within the Harness workspace. Do not
+  inspect, edit, run commands in, change settings for, commit, push, or otherwise
+  operate on the separate `uet-superapp` project as part of Harness work.
+- `uet-superapp` may consume or read Harness sources as a downstream client;
+  this does not make Superapp a source of truth for Harness or authorize Harness
+  agents to modify or synchronize the Superapp project.
+- Preserve existing raw/private and publication boundaries. Downstream access is
+  not permission to publish private material or change its access settings.
+
 ## Default working style
 
 This repository is often used for:
