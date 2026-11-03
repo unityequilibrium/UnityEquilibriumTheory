@@ -2,6 +2,7 @@
 
 import contextlib
 import io
+import importlib.util
 import json
 from pathlib import Path
 import sys
@@ -9,7 +10,11 @@ import tempfile
 import unittest
 from unittest.mock import patch
 
-import build_work_ledger_index as ledger_index
+spec = importlib.util.spec_from_file_location(
+    "work_ledger_index_under_test", Path(__file__).with_name("build_work_ledger_index.py")
+)
+ledger_index = importlib.util.module_from_spec(spec)
+spec.loader.exec_module(ledger_index)
 
 
 class ClassificationTests(unittest.TestCase):
