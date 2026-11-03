@@ -5,7 +5,7 @@
 > layout, not a current Harness workspace. Do not recreate those paths or operate
 > on Superapp from Harness. Earlier published files remain in Git history.
 
-This repository contains research, theory history, book work, Thailand policy
+This repository contains research, historical work records, Thailand policy
 proposals, optional services, and repository operations. Contributions must keep
 each area understandable, traceable, and safe to publish.
 
@@ -175,6 +175,22 @@ These records are different:
 | artifact, gate, or manifest | what was measured, checked, or sourced |
 
 A ledger entry never replaces an artifact, manifest, or gate.
+
+Research and book history have separate views in
+[the ledger guide](WORK_LEDGER/README.md). Add `Stream` and a primary `Area` to
+new entries, keep book literature/writing work out of research result counts,
+and use Operations for cross-area repository or publishing work. After the
+owner's relocation, book records here are historical only; do not inspect or
+operate on Superapp to fill them in. Keep original daily sources intact and
+regenerate the derived views before commit:
+
+```text
+python docs/scripts/maintenance/build_work_ledger_index.py
+python docs/scripts/maintenance/build_work_ledger_index.py --check
+```
+
+The separate Work Ledger Separation workflow verifies view freshness and routing
+regressions without writing, committing or pushing changes automatically.
 
 ## Ledger checkpoint rule
 

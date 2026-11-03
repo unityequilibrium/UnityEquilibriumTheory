@@ -18,6 +18,20 @@ substantial section of work.
 
 ## Classification Rule
 
+`Stream` and `Area` answer different questions. Stream separates research,
+historical book work and supporting operations; Area identifies the primary
+workspace/responsibility. See [the stream views and source rules](README.md).
+
+- `research-core`, `research-standards` and legacy `data-provenance` map to
+  `research`; a topic result-artifact record may use its explicit research path.
+- Historical `book-writing` and `theory-history` map to `book-history`, even
+  when they contain literature review, science explanations or source audits.
+- Other primary areas map to `operations`. Secondary research/book areas explain
+  dependencies, not additional accomplishments or permission to cross projects.
+- For new Harness work, select research or operations. book-history is reserved
+  for archival/migration records; new manuscript production belongs outside
+  Harness and must not be initiated or inspected by a Harness agent.
+
 If a task touches more than one area, record the primary area first and list the
 secondary area in the entry body. If the work contains private or raw material,
 mark public safety as `partial`, `private`, or `blocked` even when some markdown
