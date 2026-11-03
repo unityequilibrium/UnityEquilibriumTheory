@@ -8,8 +8,8 @@ substantial section of work.
 | `research-core` | `docs/topics/`, `docs/meta/` | Numbered UET research topics, topic status, verifier artifacts, evidence gates |
 | `research-standards` | `docs/topics/For Work/`, `AGENTS.md` | Research workflow rules, claim discipline, AI-agent operating standards |
 | `documentation-system` | `docs/UET_Documentation_Details/`, `README.md`, `CONTRIBUTING.md` | Project documentation architecture, public explanation, style guidance |
-| `theory-history` | `uet_history/1_raw/`, `uet_history/theory/`, `uet_history/equations/` | Theory notes, historical source organization, recovered idea archives |
-| `book-writing` | `uet_history/BOOK_WORKFLOW.md`, `uet_history/3_publish/books/` | Long-form book workflow, structure, chapters, source tracking, and publishable narrative drafts |
+| `theory-history` | Removed from Harness on 2026-11-03 | Historical area id retained for earlier ledger entries; no destination access from Harness |
+| `book-writing` | Removed from Harness on 2026-11-03 | Historical area id retained; ongoing book work is outside this repository |
 | `thai-policy` | `thailand_proposals/` | Thailand proposal work, policy framing, public-project concepts, source manifests |
 | `services-tools` | `services_and_experiments/` | Local services, experiments, MCP, GraphQL, search, embeddings, automation tools |
 | `result-artifacts` | `Result/`, topic `Result/` folders | Small reproducible outputs, reports, figures, verifier outputs |

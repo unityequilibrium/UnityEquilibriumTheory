@@ -1,5 +1,20 @@
 # Local Recovery Manifest
 
+## 2026-11-03 owner-directed history workspace relocation
+
+The owner reports moving the complete `uet_history` workspace into the separate
+Superapp project and explicitly requests removing its former Harness files from
+main. This supersedes earlier recovery plans to keep that workspace here.
+
+- Scope: all 78 tracked paths under `uet_history/`; no research topic results,
+  raw data, cache, or other workspace is added or removed by this publication.
+- Evidence retained: the pre-removal Git parent contains the original 78 files
+  and their history. No history rewrite or force push is requested.
+- Destination: reported by the owner, not inspected or modified by Harness.
+- CI: removed JSON files are not parsed as live inputs. A missing book registry
+  is acceptable only when no tracked history/book workspace remains; a partial
+  removal still fails validation.
+
 **Date:** 2026-07-02
 **Branch:** `codex/recover-local-workspace-batch`
 **Purpose:** Recover important local workspace material into GitHub `main` in one auditable batch without importing build output, credentials, or large raw assets.

@@ -9,8 +9,8 @@ It is a routing map, not a second project standard.
 | :-- | :-- | :-- | :-- |
 | `research-core` | `docs/core/`, `docs/topics/` | equations, experiments, evidence, topic status | service runtime state |
 | `research-standards` | `docs/topics/For Work/`, `AGENTS.md` | shared research workflow and claim rules | topic-specific results |
-| `theory-history` | `uet_history/` | historical theory notes and archive structure | current topic gate decisions |
-| `book-writing` | `uet_history/3_publish/books/` | canonical book drafts, blueprints, registry | raw chat or unreviewed media |
+| `theory-history` | Removed from Harness on 2026-11-03 | earlier versions remain in Git history | recreating the moved workspace or accessing its destination |
+| `book-writing` | Removed from Harness on 2026-11-03 | maintained separately by the owner | operating on the separate Superapp project from Harness |
 | `thai-policy` | `thailand_proposals/` | policy and project proposals | research evidence status |
 | `services-tools` | `services_and_experiments/` | optional agents, KB, API, Rust experiments | canonical claims or topic readiness |
 | `repo-ops` | `.github/`, `WORK_LEDGER/`, manifests | CI, checkpoints, publishing, repository hygiene | scientific conclusions |
@@ -32,8 +32,8 @@ flowchart LR
 - Change a claim, formula, source, result, or topic status in the relevant
   canonical workspace first.
 - Change shared research behavior in `AGENTS.md` or `docs/topics/For Work/`.
-- Change book identity or public book paths through the book registry and
-  `uet_history/BOOK_WORKFLOW.md`.
+- History/book work was moved out by the owner. Do not use its removed registry
+  or workflow as a Harness controller, recreate its paths, or access Superapp.
 - Change service behavior only inside `services_and_experiments/`, with a
   service README and boundary status kept current.
 - Change retrieval/indexing code without changing canonical source files.
