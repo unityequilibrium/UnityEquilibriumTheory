@@ -126,7 +126,7 @@ jobs:
           HEAD_SHA: ${{ github.event.pull_request.head.sha }}
         run: |
           set -euo pipefail
-          git diff --name-only "$BASE_SHA" "$HEAD_SHA" | awk '/\.json$/ {print}' > changed-research-json.txt
+          git diff --diff-filter=ACMR --name-only "$BASE_SHA" "$HEAD_SHA" | awk '/\.json$/ {print}' > changed-research-json.txt
           if test -s changed-research-json.txt; then
             while IFS= read -r file; do
               python -m json.tool "$file" >/dev/null
@@ -148,10 +148,17 @@ jobs:
         run: |
           python - <<'PY'
           import json
+          import subprocess
           from pathlib import Path
           registry = Path("uet_history/3_publish/books/BOOK_REGISTRY.json")
           if not registry.exists():
-              raise SystemExit("BOOK_REGISTRY.json is required for book changes.")
+              tracked = subprocess.check_output(
+                  ["git", "ls-files", "--", "uet_history"], text=True
+              ).splitlines()
+              if tracked:
+                  raise SystemExit("BOOK_REGISTRY.json is required while history/book files remain.")
+              print("History/book workspace fully removed; book registry validation is not applicable.")
+              raise SystemExit(0)
           data = json.loads(registry.read_text(encoding="utf-8"))
           if not isinstance(data, (dict, list)):
               raise SystemExit("BOOK_REGISTRY.json must contain an object or list.")

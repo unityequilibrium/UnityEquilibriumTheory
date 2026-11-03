@@ -1,5 +1,7 @@
 # 🔬 Unity Equilibrium Theory (UET) v0.9.0: The "Thermodynamics of Ethics" Framework
 
+> **Workspace update (2026-11-03):** The owner moved `uet_history` out of Harness to the separate Superapp project. Earlier versions remain in Git history. References to its former paths are historical; do not recreate the workspace or access the destination from Harness.
+
 <!-- UET-RESEARCH-RETROSPECTIVE: 2026-10-19; navigation notice, not a physics gate -->
 > **ทบทวนก่อนวิจัยต่อ — 19 ต.ค. 2026:** ภาพรวมยังมีช่องว่างด้านนิยาม สายสืบทอดสมการ หน่วย และการทดสอบ ข้อความ/ป้ายผลเก่าต้องอ่านตามขอบเขตหลักฐาน อ่าน [รายงานข้อผิดพลาดและบทเรียน UET](docs/meta/UET_RESEARCH_RETROSPECTIVE.md) โดยเฉพาะข้อ R01–R18 และลำดับแก้ใน §8 ก่อนขยายงาน สถานะจริงยังอ้างอิง artifact/gate ของเส้นทางนั้น
 
