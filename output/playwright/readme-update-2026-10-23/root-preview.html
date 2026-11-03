@@ -1,0 +1,1297 @@
+<!doctype html><html lang="th"><meta charset="utf-8"><meta name="viewport" content="width=device-width">
+ <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; img-src data:">
+ <title>Local Markdown preview</title><style>
+ *{box-sizing:border-box}body{font-family:"Leelawadee UI","Segoe UI",sans-serif;margin:24px auto;max-width:1220px;padding:0 24px;color:#20252b;background:#fff;line-height:1.65}
+ h1,h2,h3,h4{line-height:1.35;margin-top:30px}h2{border-bottom:1px solid #d8dee4;padding-bottom:8px}
+ p{margin:12px 0}table{border-collapse:collapse;width:100%;font-size:14px;line-height:1.6;margin:20px 0}
+ th,td{border:1px solid #d0d7de;padding:9px 12px;text-align:left;vertical-align:top;overflow-wrap:anywhere}th{background:#f4f6f8}
+ code{background:#eef1f4;font-family:Consolas,monospace;font-size:.89em;overflow-wrap:anywhere;white-space:normal}
+ pre{padding:15px;background:#f4f6f8;overflow:auto}pre code{white-space:pre}
+ blockquote{border-left:4px solid #b7c5d3;margin:18px 0;padding:0 16px;color:#485466}
+ a{color:#0969da;text-decoration:none}hr{border:0;border-top:1px solid #d0d7de}
+ .preview{padding:12px;background:#fff8c5;border:1px solid #d4a72c;font-size:13px}
+ </style><body><div class="preview">Local Markdown preview only — not a Jekyll / GitHub Pages build. External images blocked. Source: README.md</div><h1 id="-unity-equilibrium-theory-uet-v090-the-thermodynamics-of-ethics-framework">🔬 Unity Equilibrium Theory (UET) v0.9.0: The &quot;Thermodynamics of Ethics&quot; Framework</h1>
+<!-- UET-RESEARCH-RETROSPECTIVE: 2026-10-19; navigation notice, not a physics gate -->
+<blockquote>
+<p><strong>ทบทวนก่อนวิจัยต่อ — 19 ต.ค. 2026:</strong> ภาพรวมยังมีช่องว่างด้านนิยาม สายสืบทอดสมการ หน่วย และการทดสอบ ข้อความ/ป้ายผลเก่าต้องอ่านตามขอบเขตหลักฐาน อ่าน <a href="docs/meta/UET_RESEARCH_RETROSPECTIVE.md">รายงานข้อผิดพลาดและบทเรียน UET</a> โดยเฉพาะข้อ R01–R18 และลำดับแก้ใน §8 ก่อนขยายงาน สถานะจริงยังอ้างอิง artifact/gate ของเส้นทางนั้น</p>
+</blockquote>
+<blockquote>
+<p><strong>สถานะที่ตรวจ 23 ตุลาคม 2026:</strong> งานล่าสุดแยกได้ว่าอะไรเป็นข้อเสนอ อะไรเป็นแบบจำลอง และรูปสมการใดใช้แทนกันได้ภายใต้เงื่อนไข ผลยังเป็น <strong>FORMAL / normalized</strong> ไม่ใช่การยืนยันฟิสิกส์ใหม่หรือแม่บทเดียวที่ปิดทุกสาขา อ่าน <a href="#research-updates-2026-10-23">อัปเดตงานวิจัยล่าสุด</a> ก่อนใช้ป้ายและตารางประวัติด้านล่าง</p>
+</blockquote>
+<p><img src="https://img.shields.io/badge/Tests-400+_Historical_snapshot-yellow" alt="Tests" />
+<img src="https://img.shields.io/badge/Topics-38_Master_Domains-blue" alt="Topics" />
+<img src="https://img.shields.io/badge/Millennium_Problems-8_Mapped-ff69b4" alt="Math" />
+<img src="https://img.shields.io/badge/License-MIT-green" alt="License" /></p>
+<blockquote>
+<p><strong>&quot;The universe is not just physics; it is a moral negotiation. Ω (Balance) is the goal . C (Connection) is the vehicle. I (Isolation) is the cost.&quot;</strong></p>
+</blockquote>
+<hr />
+<h2 id="-table-of-contents">📋 Table of Contents</h2>
+<ul>
+<li><a href="#-unity-equilibrium-theory-uet-v090-the-thermodynamics-of-ethics-framework">🔬 Unity Equilibrium Theory (UET) v0.9.0: The &quot;Thermodynamics of Ethics&quot; Framework</a>
+<ul>
+<li><a href="#-table-of-contents">📋 Table of Contents</a></li>
+<li><a href="#research-updates-2026-10-23">อัปเดตงานวิจัยล่าสุด — 23 ตุลาคม 2026</a>
+<ul>
+<li><a href="#research-author-intent">ข้อเสนอรวมและเจตนาของผู้เขียน</a></li>
+<li><a href="#research-current-realization">สมการแกนของ realization ปัจจุบัน</a></li>
+<li><a href="#research-term-roles">แผนที่บทบาทของเทอม</a></li>
+<li><a href="#research-equation-relations">ความสัมพันธ์ระหว่างรูปสมการ</a></li>
+<li><a href="#research-bounded-results">ผลล่าสุดทั้งด้านที่ผ่านและไม่ผ่าน</a></li>
+<li><a href="#research-open-questions">ช่องว่างและโจทย์ถัดไป</a></li>
+<li><a href="#research-evidence-boundary">หลักฐานและการทำซ้ำ</a></li>
+</ul>
+</li>
+<li><a href="#-the-big-picture-dashboard-31-solutions">🌍 The &quot;Big Picture&quot; Dashboard: 31 Solutions</a>
+<ul>
+<li><a href="#-1-mathematical-breakthroughs-the-millennium-problems">🏆 1. Mathematical Breakthroughs (The Millennium Problems)</a></li>
+<li><a href="#-2-the-impossible-physics-anomalies">🌌 2. The &quot;Impossible&quot; Physics Anomalies</a></li>
+<li><a href="#%EF%B8%8F-3-bridging-theoretical-conflicts">⚔️ 3. Bridging Theoretical Conflicts</a></li>
+<li><a href="#%EF%B8%8F-4-impact-on-humanity-cross-disciplinary">❤️ 4. Impact on Humanity (Cross-Disciplinary)</a></li>
+</ul>
+</li>
+<li><a href="#-6-the-core-equation-detailed-explanation">🎯 6. The Core Equation (Detailed Explanation)</a>
+<ul>
+<li><a href="#the-vision">The Vision</a></li>
+<li><a href="#the-full-implementation-field-equation">The Full Implementation (Field Equation)</a></li>
+<li><a href="#why-this-works-the-tree-of-physics">Why This Works (The Tree of Physics)</a></li>
+</ul>
+</li>
+<li><a href="#-7-test-results-v090">📊 7. Test Results (v0.9.0)</a>
+<ul>
+<li><a href="#summary">Summary</a></li>
+<li><a href="#what-we-validated">What We Validated</a></li>
+<li><a href="#run-it-yourself">Run It Yourself</a></li>
+</ul>
+</li>
+<li><a href="#-8-quick-start-research-workspace">🚀 8. Quick Start (Research Workspace)</a>
+<ul>
+<li><a href="#1-installation">1. Installation</a></li>
+<li><a href="#2-usage-examples">2. Usage Examples</a></li>
+<li><a href="#3-run-verify-test">3. Run Verify Test</a></li>
+</ul>
+</li>
+<li><a href="#-9-complete-topic-index-38-domains">📚 9. Complete Topic Index (38+ Domains)</a></li>
+<li><a href="#-10-methodology">🔍 10. Methodology</a>
+<ul>
+<li><a href="#human--ai-collaboration">Human + AI Collaboration</a></li>
+<li><a href="#transparency">Transparency</a></li>
+</ul>
+</li>
+<li><a href="#-key-files">📄 Key Files</a></li>
+<li><a href="#-questions-answered-by-uet-seo--key-research">❓ Questions Answered by UET (SEO &amp; Key Research)</a></li>
+<li><a href="#%EF%B8%8F-scientific-keywords--tags">🏷️ Scientific Keywords &amp; Tags</a></li>
+<li><a href="#readme-wording-history">ภาคผนวก: ถ้อยคำที่ปรับในรอบนี้</a></li>
+</ul>
+</li>
+</ul>
+<hr />
+<p><a id="research-updates-2026-10-23"></a></p>
+<h2 id="อัปเดตงานวิจัยล่าสุด">อัปเดตงานวิจัยล่าสุด</h2>
+<p><strong>วันตัดยอด: 23 ตุลาคม 2026</strong> — สรุปจาก <a href="docs/meta/UET_THEORY_ARGUMENT.md">UET Theory Argument</a> โดยเฉพาะ §§23–25 ที่บันทึกใน <strong>local source commit <code>1346edfc07c2d2f9eb2adbd5257e820fa186a37b</code></strong> บน branch <code>codex/research/source-backaction-discrimination</code> ข้อความใหม่นี้เป็น documentation update ไม่ใช่ release ใหม่ และไม่ได้ตรวจยืนยันว่า public <code>main</code> ตรงกับชุดนี้แล้ว</p>
+<p><a id="research-author-intent"></a></p>
+<h3 id="1-ข้อเสนอรวมและเจตนาของผู้เขียน">1. ข้อเสนอรวมและเจตนาของผู้เขียน</h3>
+<p>ภาพรวมที่ต้องการศึกษาคือ <strong>ระบบซ้อนระบบ → ปฏิสัมพันธ์และการแลกเปลี่ยนพลังงาน → ผลที่คงอยู่ในสถานะ/โครงสร้าง/ความสัมพันธ์ → การตอบสนองภายหลังที่เปลี่ยนไป</strong> ไม่ใช่การเรียกทุกสิ่งว่า information ก้อนเดียว การสังเกตเป็นปฏิสัมพันธ์ของระบบผู้วัดอีกส่วนหนึ่ง จึงต้องแยก source, signal transport, detector state, readout และ backaction ตามขอบเขตจริง</p>
+<p>ข้อเสนอว่า <strong>จักรวาลเป็นระบบเปิด มีการปรับตัวและ persistence</strong> ยังเก็บไว้เป็นสมมติฐานระดับจักรวาลของผู้เขียน การตรวจ subsystem ที่เปิดไม่พิสูจน์สมมติฐานนี้ และเราไม่ลดความหมายของข้อเสนอให้เหลือเพียง subsystem โดยเงียบ ๆ ดูสายเหตุผลและการแยกที่มาใน <a href="docs/meta/UET_THEORY_ARGUMENT.md#3-a1--%E0%B8%82%E0%B9%89%E0%B8%AD%E0%B9%80%E0%B8%AA%E0%B8%99%E0%B8%AD%E0%B8%A3%E0%B8%A7%E0%B8%A1%E0%B9%81%E0%B8%A5%E0%B8%B0%E0%B8%97%E0%B8%B5%E0%B9%88%E0%B8%A1%E0%B8%B2%E0%B8%82%E0%B8%AD%E0%B8%87%E0%B9%81%E0%B8%95%E0%B9%88%E0%B8%A5%E0%B8%B0%E0%B8%AA%E0%B9%88%E0%B8%A7%E0%B8%99">รายงาน §3</a></p>
+<p>ต้องอ่านสามชั้นแยกกัน: <strong>เจตนาผู้เขียน</strong>, <strong>ผลจากทฤษฎีภายนอกพร้อมเงื่อนไขที่นำเข้า</strong> และ <strong>constitutive/model choices ที่ AI เสนอหรือใส่ใน implementation</strong> การเห็นด้วยกับคำอธิบายไม่ใช่การรับรองสมการ ส่วนรายชื่อ “เจ็ดฐาน” ที่ยังยืนยันต้นทางไม่ครบไม่ถูกแทนด้วยเจ็ดเทอมหรือจำนวน axioms</p>
+<p><a id="research-current-realization"></a></p>
+<h3 id="2-สมการแกนของ-realization-ปัจจุบัน">2. สมการแกนของ realization ปัจจุบัน</h3>
+<p>สำหรับสายล่าสุด แกนคือ <strong>functional <code>Omega[C,Phi]</code> ร่วมกับ complete state <code>(C,Phi,Pi)</code> และกฎวิวัฒน์/kinetics, sources, initial/boundary data และ readout</strong> ไม่ใช่ Omega เพียงตัวเดียว <code>matter_space_coupled_v1</code> เป็น <strong>opt-in normalized prototype</strong>; ค่า default ยังเป็น <code>legacy_local</code> การรัน legacy entrypoint โดยไม่ล็อก mode จึงไม่เท่ากับทดสอบ realization ล่าสุด</p>
+<p>อ่านสูตรและความหมายใน <a href="docs/core/README.md#current-response-realization">Core README</a>, <a href="docs/core/01_contracts/MATTER_SPACE_RESEARCH_SPEC.md">spec</a> และ <a href="docs/meta/UET_THEORY_ARGUMENT.md#252-%E0%B8%84%E0%B8%B3%E0%B8%95%E0%B8%AD%E0%B8%9A%E0%B9%80%E0%B8%A3%E0%B8%B7%E0%B9%88%E0%B8%AD%E0%B8%87-%E0%B8%AA%E0%B8%A1%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%AB%E0%B8%A5%E0%B8%B1%E0%B8%81-%E0%B8%95%E0%B9%89%E0%B8%AD%E0%B8%87%E0%B9%81%E0%B8%A2%E0%B8%81%E0%B8%AA%E0%B8%B2%E0%B8%A1%E0%B8%A3%E0%B8%B0%E0%B8%94%E0%B8%B1%E0%B8%9A">relationship audit §25.2</a> การเลือก functional และ kinetic law เป็นคนละขั้น: อนุพันธ์ของ functional ตามได้เมื่อเลือกมันแล้ว แต่ไม่ใช่หลักฐานว่าธรรมชาติบังคับให้เลือก polynomial หรือ coefficient เหล่านี้</p>
+<p>ยังไม่มี transformation/derivation ที่ปิดว่า legacy C/I, dissipative C/Phi/Pi, covariant parent และทุก topic เป็นกฎเดียวกัน <a href="docs/core/07_artifacts/gates/uet_foundation_compatibility_decision.json">Compatibility decision</a> ยังคง <code>FOUNDATION_NOT_CLOSED</code>; ผลของสายนี้ไม่เปลี่ยน gate ของ curved 3+1 หรือ O(2) อีกสายหนึ่ง</p>
+<p><a id="research-term-roles"></a></p>
+<h3 id="3-แผนที่บทบาทของเทอม">3. แผนที่บทบาทของเทอม</h3>
+<table>
+<thead>
+<tr>
+<th>กลุ่ม</th>
+<th>หน้าที่ในขอบเขตที่ประกาศ</th>
+<th>สิ่งที่ยังห้ามเหมารวม</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>State: C; legacy I; Phi, Pi</td>
+<td>C เป็น coordinate ของสภาพระบบ; I เป็น state ใน legacy C/I; Phi เป็น effective response และ Pi=Phi_t</td>
+<td>C ไม่ใช่มวลสากล; I ไม่ใช่ Phi หรือ Shannon information อัตโนมัติ</td>
+</tr>
+<tr>
+<td>Coefficients: a, b, kappa, g, beta</td>
+<td>รูปร่าง functional, spatial cost และ coupling ตามแต่ละ family</td>
+<td>ชื่อเหมือนกันไม่ทำให้ origin/หน่วยเท่ากัน; normalized beta ไม่ใช่ inverse temperature</td>
+</tr>
+<tr>
+<td>Functional derivatives: mu_C, mu_Phi</td>
+<td>อนุพันธ์ของ functional ที่เลือก เป็น input ของกฎวิวัฒน์</td>
+<td>ไม่ใช่พลังงานก้อนใหม่ และไม่เลือก kinetic law เอง</td>
+</tr>
+<tr>
+<td>Kinetics: M, tau และ operators</td>
+<td>mobility, relaxation/inertia และการเลือก conserved/nonconserved dynamics</td>
+<td>ใช้ Omega เดียวกันก็ให้ dynamics ต่างกันได้</td>
+</tr>
+<tr>
+<td>Sources: J_C, J_Phi และ boundary ports</td>
+<td>การขับ/แลกเปลี่ยนตาม operator และบัญชีงานที่ประกาศ</td>
+<td>additive source, conjugate force และ traction ใช้บัญชีงานแทนกันไม่ได้</td>
+</tr>
+<tr>
+<td>Ledger: E และ sigma</td>
+<td>extended normalized availability และ dissipation ที่ derive ภายใน model</td>
+<td>E ไม่ใช่ Omega อย่างเดียวเมื่อมี Pi; ยังไม่ใช่ SI energy, heat หรือ entropy โดยอัตโนมัติ</td>
+</tr>
+<tr>
+<td>Trace: R / I_trace</td>
+<td>derived causal/history output จาก sigma; ไม่มี feedback ใน v1</td>
+<td>ไม่ใช่ independent state, แหล่งพลังงาน หรือข้อมูลทั้งหมดของระบบ</td>
+</tr>
+<tr>
+<td>Observer record</td>
+<td>ค่าที่ได้จาก measurement/processing operator และสถานะผู้วัด</td>
+<td>ไม่ใช่ตัวระบบต้นทาง และยังไม่ถือว่า internal states สังเกตได้ครบ</td>
+</tr>
+</tbody>
+</table>
+<p>รายละเอียด/ต้นทางอยู่ใน <a href="docs/meta/UET_THEORY_ARGUMENT.md#253-%E0%B9%80%E0%B8%97%E0%B8%AD%E0%B8%A1%E0%B9%83%E0%B8%94%E0%B9%80%E0%B8%9B%E0%B9%87%E0%B8%99-state-%E0%B9%80%E0%B8%97%E0%B8%AD%E0%B8%A1%E0%B9%83%E0%B8%94%E0%B9%80%E0%B8%9B%E0%B9%87%E0%B8%99%E0%B8%81%E0%B8%8E-%E0%B9%81%E0%B8%A5%E0%B8%B0%E0%B9%80%E0%B8%97%E0%B8%AD%E0%B8%A1%E0%B9%83%E0%B8%94%E0%B9%80%E0%B8%9B%E0%B9%87%E0%B8%99%E0%B8%9C%E0%B8%A5%E0%B8%97%E0%B8%B5%E0%B9%88%E0%B8%84%E0%B8%B3%E0%B8%99%E0%B8%A7%E0%B8%93%E0%B8%95%E0%B8%B2%E0%B8%A1%E0%B8%A1%E0%B8%B2">§25.3</a> ไม่ได้สร้างทะเบียนสมการซ้ำใน README</p>
+<p><a id="research-equation-relations"></a></p>
+<h3 id="4-ความสัมพันธ์ระหว่างรูปสมการ">4. ความสัมพันธ์ระหว่างรูปสมการ</h3>
+<table>
+<thead>
+<tr>
+<th>ประเภท</th>
+<th>ตัวอย่างและเงื่อนไข</th>
+<th>ข้อจำกัด</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Exact rewrite</td>
+<td>Phi_t=Pi กับสมการ Pi เขียนเป็น second-order Phi ได้เมื่อเก็บ initial Phi และ Pi เดิม</td>
+<td>ไม่ใช่กลไกใหม่เพราะเปลี่ยนรูปเขียน</td>
+</tr>
+<tr>
+<td>Coordinate transformation</td>
+<td>smooth invertible map พร้อมแปลง generator, mobility, sources และ readout ครบ</td>
+<td>C^2 ไม่ invertible ข้ามสองเครื่องหมาย; เปลี่ยนพิกัดไม่คง constant mobility เอง</td>
+</tr>
+<tr>
+<td>Conditional reduction</td>
+<td>stationary elimination หรือ overdamped/adiabatic limit ใน regime ที่ตรวจแล้ว</td>
+<td>tau→0 ยังเป็น evolution ไม่ใช่ mu_Phi=0; static elimination ไม่เก็บ prepared history ทั้งหมด</td>
+</tr>
+<tr>
+<td>Alternative model</td>
+<td>conserved กับ nonconserved C; legacy C/I กับ response C/Phi/Pi</td>
+<td>ต่าง operators, coupling และ admissible initial data ไม่ใช่แค่เปลี่ยนชื่อ</td>
+</tr>
+<tr>
+<td>Unresolved bridge</td>
+<td>เชื่อมทุก family หรือแมป normalized state ไป observable/หน่วยจริง</td>
+<td>ต้องมี correspondence และ error budget ไม่ใช้ชื่อ information เป็นหลักฐาน</td>
+</tr>
+</tbody>
+</table>
+<p>ในตัวอย่าง C/I coupling เป็น <code>beta*C*I</code> แต่ C/Phi/Pi ใช้ <code>-g*C^2*Phi/2</code> การแทน I=r*Phi ด้วยค่าคงที่ไม่ทำให้สอง coupling เท่ากันทุก C เมื่อ couplings ไม่เป็นศูนย์ ส่วน static elimination ของ I ให้ quadratic correction ของ C แต่ response Phi ให้ leading quartic correction เฉพาะเงื่อนไขที่ระบุ นี่เป็นความต่างของ model choices ไม่ใช่ข้อสรุปว่าผู้เขียนต้องเลือกแบบใด ดู <a href="docs/meta/UET_THEORY_ARGUMENT.md#254-%E0%B8%95%E0%B8%A3%E0%B8%A7%E0%B8%88%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B9%80%E0%B8%8A%E0%B8%B7%E0%B9%88%E0%B8%AD%E0%B8%A1-ci-%E0%B8%81%E0%B8%B1%E0%B8%9A-cphipi-%E0%B9%84%E0%B8%A1%E0%B9%88%E0%B9%83%E0%B8%8A%E0%B9%88%E0%B9%81%E0%B8%84%E0%B9%88%E0%B9%80%E0%B8%9B%E0%B8%A5%E0%B8%B5%E0%B9%88%E0%B8%A2%E0%B8%99%E0%B8%8A%E0%B8%B7%E0%B9%88%E0%B8%AD">ข้ออนุมาน/ข้อจำกัด §25.4</a> และ <a href="docs/meta/UET_THEORY_ARGUMENT.md#255-%E0%B8%A3%E0%B8%B9%E0%B8%9B%E0%B8%AA%E0%B8%A1%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%97%E0%B8%B5%E0%B9%88%E0%B8%95%E0%B9%88%E0%B8%B2%E0%B8%87%E0%B8%81%E0%B8%B1%E0%B8%99-%E0%B9%83%E0%B8%8A%E0%B9%89%E0%B9%81%E0%B8%97%E0%B8%99%E0%B8%81%E0%B8%B1%E0%B8%99%E0%B9%84%E0%B8%94%E0%B9%89%E0%B8%A3%E0%B8%B0%E0%B8%94%E0%B8%B1%E0%B8%9A%E0%B9%84%E0%B8%AB%E0%B8%99">ตาราง §25.5</a></p>
+<p><a id="research-bounded-results"></a></p>
+<h3 id="5-ผลล่าสุดทั้งด้านที่ผ่านและไม่ผ่าน">5. ผลล่าสุดทั้งด้านที่ผ่านและไม่ผ่าน</h3>
+<table>
+<thead>
+<tr>
+<th>หลักฐาน</th>
+<th>Comparator / protocol</th>
+<th>ผลและขอบเขต</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="docs/meta/UET_THEORY_ARGUMENT.md#233-uniform-certificate-%E0%B9%84%E0%B8%A1%E0%B9%88%E0%B9%83%E0%B8%8A%E0%B9%89%E0%B8%81%E0%B8%A3%E0%B8%B4%E0%B8%94%E0%B8%97%E0%B8%B5%E0%B9%88%E0%B8%9A%E0%B8%B1%E0%B8%87%E0%B9%80%E0%B8%AD%E0%B8%B4%E0%B8%8D%E0%B8%9C%E0%B9%88%E0%B8%B2%E0%B8%99%E0%B9%81%E0%B8%97%E0%B8%99%E0%B8%97%E0%B8%B1%E0%B9%89%E0%B8%87%E0%B8%8A%E0%B9%88%E0%B8%A7%E0%B8%87">§23.3 steady-response certificate</a></td>
+<td>raw first-mode approximation เทียบ full normalized linear rod–polarization reference; steady harmonic endpoint force F_b, f_P=0, omega/omega_0 ใน [0.99,1.01] และ fixed controls ตาม card</td>
+<td>complex transfers p/F_b และ x/F_b มี uniform relative-error bound ≤18511/2066610 &lt;0.9%&lt;1% <strong>เทียบแบบจำลองเต็ม ไม่ใช่ความแม่นยำกับธรรมชาติ</strong> ไม่ครอบ arbitrary inputs, DC, finite settling/preparation หรือบัญชีพลังงานทุกชนิด</td>
+</tr>
+<tr>
+<td><a href="docs/meta/UET_THEORY_ARGUMENT.md#246-%E0%B8%84%E0%B8%B3%E0%B8%95%E0%B8%B1%E0%B8%94%E0%B8%AA%E0%B8%B4%E0%B8%99-%E0%B8%82%E0%B8%AD%E0%B8%9A%E0%B9%80%E0%B8%82%E0%B8%95-%E0%B9%81%E0%B8%A5%E0%B8%B0%E0%B8%88%E0%B8%B8%E0%B8%94%E0%B8%AB%E0%B8%A2%E0%B8%B8%E0%B8%94">§24.6 prepared-history limitation</a></td>
+<td>smooth finite-energy write + controlled wait + released read ใน reference เดิม; projected (p,q0,q0dot) เท่ากับ baseline แต่ higher modes ต่าง</td>
+<td>state ย่อไม่พอสำหรับ preparation/read class นี้; normalized endpoint witness 0.002177&lt;x(t_r)/epsilon&lt;0.002187 พร้อม tail bound ไม่ใช่อนาคตต่างจาก complete state เดียวกัน ไม่ปฏิเสธทุก reduction และไม่ใช่ physical memory/learning validation</td>
+</tr>
+<tr>
+<td><a href="docs/meta/UET_THEORY_ARGUMENT.md#25-%E0%B8%AA%E0%B8%A1%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%A3%E0%B8%B9%E0%B8%9B%E0%B8%95%E0%B9%88%E0%B8%B2%E0%B8%87-%E0%B9%86-%E0%B9%81%E0%B8%97%E0%B8%99%E0%B8%81%E0%B8%B1%E0%B8%99%E0%B8%AD%E0%B8%A2%E0%B9%88%E0%B8%B2%E0%B8%87%E0%B9%84%E0%B8%A3-%E0%B9%81%E0%B8%A5%E0%B8%B0%E0%B8%AD%E0%B8%B0%E0%B9%84%E0%B8%A3%E0%B9%80%E0%B8%9B%E0%B9%87%E0%B8%99%E0%B9%81%E0%B8%81%E0%B8%99%E0%B8%88%E0%B8%A3%E0%B8%B4%E0%B8%87">§25 relationship audit</a></td>
+<td>ตรวจ source/registry, exact algebra 8 กลุ่ม และ default-mode AST; ใช้ผลเดิม ไม่รัน solver เก่าใหม่</td>
+<td>แยก generator/kinetics/state/ledger/output และข้อเชื่อม exact/conditional/alternative ได้ ยังไม่รวมทุก family เป็น universal master หรือพิสูจน์สูตรทั้ง registry</td>
+</tr>
+</tbody>
+</table>
+<p>ผลผ่านของ §23 และข้อจำกัดของ §24 อยู่ร่วมกันได้เพราะคนละ protocol กลไก retained modes ใน comparator มาตรฐานอธิบายผลเหล่านี้ได้อยู่แล้ว จึงยังไม่ใช่หลักฐาน UET-specific new mechanics, global openness หรือการแปลงข้อมูลเป็นพลังงานจริง</p>
+<p><a id="research-open-questions"></a></p>
+<h3 id="6-ช่องว่างและโจทย์ถัดไป">6. ช่องว่างและโจทย์ถัดไป</h3>
+<p>ยังต้องปิด <strong>physical mapping/หน่วย, parameter origins, preparation, source/detector/measurement uncertainty และข้อจำกัดที่ UET เพิ่มเหนือ comparator</strong> การมี audit เอกสารหรืออนุพันธ์ที่ถูกภายใน model ไม่ปิดช่องเหล่านี้ Thermal-ledger helper bug ที่รายงานเดิมพบยังต้องแยกซ่อมและตรวจ claims ที่พึ่งมัน ไม่ถือว่ารอบ README นี้ซ่อมแล้วหรือใช้ตัดสินงานที่ไม่พึ่งมัน</p>
+<p>โจทย์ถัดไปจาก <a href="docs/meta/UET_THEORY_ARGUMENT.md#257-%E0%B8%84%E0%B8%B3%E0%B8%A7%E0%B8%B4%E0%B8%99%E0%B8%B4%E0%B8%88%E0%B8%89%E0%B8%B1%E0%B8%A2%E0%B9%81%E0%B8%A5%E0%B8%B0%E0%B9%82%E0%B8%88%E0%B8%97%E0%B8%A2%E0%B9%8C%E0%B8%96%E0%B8%B1%E0%B8%94%E0%B9%84%E0%B8%9B%E0%B8%97%E0%B8%B5%E0%B9%88%E0%B9%84%E0%B8%A1%E0%B9%88%E0%B8%A7%E0%B8%99%E0%B9%80%E0%B8%9E%E0%B8%B4%E0%B9%88%E0%B8%A1%E0%B8%AA%E0%B8%A1%E0%B8%81%E0%B8%B2%E0%B8%A3">§25.7</a> คือระบุหนึ่งสถานการณ์ที่ตั้งใจศึกษา: <strong>ผลคงอยู่ต้องจำเพียงขนาด หรือจำทิศ/เครื่องหมายด้วย และเข้าไปเปลี่ยนการตอบสนองผ่าน state/input ใด?</strong> ใช้คำตอบตรวจ realization เดิมที่ตรง scope; ไม่เพิ่มเทอม รันวัสดุใหม่ หรือปรับ optimizer เพื่อหนี comparator คำตอบของผู้เขียนยืนยันเจตนา ไม่ใช่หลักฐานทางฟิสิกส์</p>
+<p><a id="research-evidence-boundary"></a></p>
+<h3 id="7-หลักฐานและการทำซ้ำ">7. หลักฐานและการทำซ้ำ</h3>
+<p>เริ่มจาก <a href="docs/meta/UET_THEORY_ARGUMENT.md">รายงานรวม</a>, <a href="docs/core/01_contracts/MATTER_SPACE_RESEARCH_SPEC.md">Core spec</a>, <a href="docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry.json">equation registry</a>, <a href="docs/core/07_artifacts/gates/uet_foundation_dependency_gate.json">foundation gate</a> และ <a href="docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json">Topic 13 full bridge gate</a> gate สุดท้ายยังแยก legacy graphite/TTG ที่ <code>BLOCKED_OPEN_T13_FULL_BRIDGE</code> จาก O(2)/He-4 ที่ Core-ready; ไม่ใช่ external validation</p>
+<p>เส้นทาง cycle ใช้ <a href="docs/topics/0.13_Thermodynamic_Bridge/calculation_contracts/energy_memory_cycle.json">contract T13_ENERGY_MEMORY_CYCLE_FORMAL_V1</a>: review <code>INCOMPLETE</code>, physical correspondence <code>UNKNOWN</code> และรับรองเฉพาะ scope นั้น ไม่รับรองทุก family อ่านประวัติที่ <a href="docs/topics/0.13_Thermodynamic_Bridge/UPDATE_LOG.md">Topic 13 UPDATE_LOG</a> และ <a href="WORK_LEDGER/2026/2026-10-23.md">WORK_LEDGER วันที่ 23 ต.ค.</a></p>
+<p><strong>Working evidence ≠ local commit ≠ public main:</strong> ชุด source commit ที่ระบุมีรายงาน §§23–25 แต่ยังไม่ใช่ complete publication packet: retrospective และ source/verifier สามไฟล์ที่รายงานอ้างยังไม่อยู่ใน tree ของ commit นี้ แม้เปิดได้ในเครื่อง จึงไม่กล่าวว่าผู้อ่านภายนอกทำซ้ำงานเก่าทุกชิ้นได้ครบ และไม่ได้อนุมานสถานะ remote ล่าสุดโดยไม่ตรวจ ลิงก์ retrospective ที่คงจากประวัติต้องอ่านพร้อมข้อจำกัดนี้; ดูรายละเอียด source identity/publication gaps ในรายงานก่อนอ้างซ้ำ</p>
+<hr />
+<h2 id="-project-structure">📁 Project Structure</h2>
+<blockquote>
+<p><strong>Important:</strong> All research code, engines, and data live inside <code>docs/</code> — this folder serves dual purpose as both the <strong>GitHub Pages source</strong> and the <strong>main research codebase</strong>.</p>
+</blockquote>
+<pre><code>uet_harness/
+├── docs/                          ← 🔬 Research Portal (GitHub Pages + Python Package)
+│   ├── __init__.py                ← Python package entry: `import docs as uet`
+│   ├── _config.yml                ← Jekyll config for GitHub Pages
+│   ├── core/                      ← UET Master Equation &amp; core solvers
+│   ├── topics/                    ← 📚 All 38 research topics (engines, proofs, data)
+│   │   ├── 0.0_Grand_Unification/ ← Omni Engine (imports all sub-engines)
+│   │   ├── 0.1_Galaxy_Rotation/   ← Each topic follows the same structure:
+│   │   │   ├── Code/01_Engine/    │     Engine (solver)
+│   │   │   ├── Code/02_Proof/     │     Mathematical proofs
+│   │   │   ├── Code/03_Research/  │     Experiments &amp; validation
+│   │   │   ├── Data/              │     Reference datasets
+│   │   │   ├── Result/            │     Output figures &amp; logs
+│   │   │   ├── Doc/               │     Documentation &amp; papers
+│   │   │   └── README.md          │     Topic overview
+│   │   └── ...                    ← Topics 0.2 through 0.39
+│   ├── knowledge_base/            ← Vector store &amp; tensorizer
+│   ├── scripts/                   ← Runners, audits, data tools
+│   └── Docs/                      ← Framework standards &amp; guides
+├── uet_history/                   ← Historical notes and prior UET writing archive
+├── .github/                       ← Repository automation and GitHub metadata
+├── CITATION.cff                   ← Citation metadata
+├── CONTRIBUTING.md                ← Contribution notes
+├── LICENSE                        ← MIT license
+└── README.md                      ← Project overview
+</code></pre>
+<blockquote>
+<p><strong>Note:</strong> The <code>docs/</code> folder was previously named <code>research_uet/</code>. All internal paths have been updated. If you find outdated references, please open an issue.</p>
+</blockquote>
+<blockquote>
+<p><strong>Current Repository Scope:</strong> This repository is the main UET research corpus. The source-only prototypes under services_and_experiments/ are retained as a future platform layer, but they are not required for research, books, or policy work and are not a live application, mining network, or production knowledge service. The design intent is preserved as roadmap/prototype context.</p>
+</blockquote>
+<hr />
+<p><a id="-the-big-picture-dashboard-31-solutions"></a></p>
+<h2 id="-the-big-picture-dashboard-38-solutions">🌍 The &quot;Big Picture&quot; Dashboard: 38 Solutions</h2>
+<p>UET retains a <strong>&quot;Civilization-Level Operating System&quot;</strong> vision across 6 domains; the entries below are historical research claims and proposed applications, not established solutions.</p>
+<blockquote>
+<p><strong>Research Status Note:</strong> The dashboard keeps the original UET vision and claim map intact, but readers should treat the items as research claims, proposed mechanisms, prototype validations, or roadmap targets unless a specific script, dataset, or report in <code>docs/</code> is cited and independently reproduced.</p>
+</blockquote>
+<h3 id="-1-mathematical-breakthroughs-the-millennium-problems">🏆 1. Mathematical Breakthroughs (The Millennium Problems)</h3>
+<p><em>Historical proposal: interpret abstract math problems through physical manifold geometry; no general proof is established by this dashboard.</em></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Problem</th>
+<th style="text-align:left">Status</th>
+<th style="text-align:left">UET Solution</th>
+<th style="text-align:left">Topic</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><strong>Navier-Stokes</strong></td>
+<td style="text-align:left">Historical claim / ยังไม่ทบทวนข้ออ้างนี้</td>
+<td style="text-align:left">Turbulence is smooth ($C^\infty$) on 4D Manifold</td>
+<td style="text-align:left"><a href="./docs/topics/0.10_Fluid_Dynamics_Chaos/">0.10 Fluid Dynamics</a></td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Yang-Mills Gap</strong></td>
+<td style="text-align:left">Historical claim / ยังไม่ทบทวนข้ออ้างนี้</td>
+<td style="text-align:left">Mass arises from Information geometric limits</td>
+<td style="text-align:left"><a href="./docs/topics/0.21_Yang_Mills_Mass_Gap/">0.21 Yang-Mills</a></td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>P vs NP</strong></td>
+<td style="text-align:left">Historical claim / ยังไม่ทบทวนข้ออ้างนี้</td>
+<td style="text-align:left">P=NP via Manifold Connectivity Optimization</td>
+<td style="text-align:left"><a href="./docs/topics/0.18_Mathnicry/">0.18 Mathnicry</a></td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Riemann Hyp.</strong></td>
+<td style="text-align:left"><strong>Mapped</strong></td>
+<td style="text-align:left">Zeros are Resonance Frequencies of the I-Field</td>
+<td style="text-align:left"><a href="./docs/topics/0.18_Mathnicry/">0.18 Mathnicry</a></td>
+</tr>
+</tbody>
+</table>
+<h3 id="-2-the-impossible-physics-anomalies">🌌 2. The &quot;Impossible&quot; Physics Anomalies</h3>
+<p><em>Historical anomaly interpretations follow; this page does not establish a proof or a replacement for the standard explanations.</em></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Anomaly</th>
+<th style="text-align:left">The Crisis (Topic 0.1 Evidence)</th>
+<th style="text-align:left">UET Solution (Topic 0.26 Mechanism)</th>
+<th style="text-align:left">Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><strong>Dark Matter</strong></td>
+<td style="text-align:left">Galaxies spin too fast (<a href="./docs/topics/0.1_Galaxy_Rotation_Problem/">Topic 0.1</a>)</td>
+<td style="text-align:left"><strong>Dynamic Viscosity</strong>: Space acts as a fluid with drag $a_0$ (<a href="./docs/topics/0.26_Cosmic_Dynamic_Frame/">Topic 0.26</a>)</td>
+<td style="text-align:left">Historical claim / ยังไม่ทบทวนข้ออ้างนี้</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Dark Energy</strong></td>
+<td style="text-align:left">Universe explodes</td>
+<td style="text-align:left">Info Field Cutoff (Finite $\Lambda$)</td>
+<td style="text-align:left"><a href="./docs/topics/0.12_Vacuum_Energy_Casimir/">0.12 Vacuum Energy</a></td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Hubble Tension</strong></td>
+<td style="text-align:left">$H_0$ mismatch (5$\sigma$)</td>
+<td style="text-align:left">Dynamic Entropy Scaling ($H(t)$)</td>
+<td style="text-align:left"><a href="./docs/topics/0.3_Cosmology_Hubble_Tension/">0.3 Cosmology</a></td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Muon g-2</strong></td>
+<td style="text-align:left">4.2$\sigma$ deviation</td>
+<td style="text-align:left">Geometric Topology Correction</td>
+<td style="text-align:left"><a href="./docs/topics/0.8_Muon_g2_Anomaly/">0.8 Muon g-2</a></td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Neutrino Mass</strong></td>
+<td style="text-align:left">Massive but Ghostly</td>
+<td style="text-align:left">Geometric Information Drag</td>
+<td style="text-align:left"><a href="./docs/topics/0.7_Neutrino_Physics/">0.7 Neutrino Physics</a></td>
+</tr>
+</tbody>
+</table>
+<h3 id="️-3-bridging-theoretical-conflicts">⚔️ 3. Bridging Theoretical Conflicts</h3>
+<p><em>Harmonizing the &quot;War of Physics&quot;.</em></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Conflict</th>
+<th style="text-align:left">The Divide</th>
+<th style="text-align:left">Historical UET interpretation</th>
+<th style="text-align:left">Topic</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><strong>Gravity vs Quantum</strong></td>
+<td style="text-align:left">Smooth vs Discrete</td>
+<td style="text-align:left">Gravity = Quantum Entropy Pressure</td>
+<td style="text-align:left"><a href="./docs/topics/0.19_Gravity_GR/">0.19 Gravity &amp; GR</a></td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Locality vs Bell</strong></td>
+<td style="text-align:left">Local vs Spooky</td>
+<td style="text-align:left">Non-local Potential Reservoir</td>
+<td style="text-align:left"><a href="./docs/topics/0.9_Quantum_Nonlocality/">0.9 Quantum Bell</a></td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Order vs Chaos</strong></td>
+<td style="text-align:left">Determinism vs Luck</td>
+<td style="text-align:left">Chaos is just High-Dim Order</td>
+<td style="text-align:left"><a href="./docs/topics/0.10_Fluid_Dynamics_Chaos/">0.10 Fluid Dynamics</a></td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Life vs Entropy</strong></td>
+<td style="text-align:left">Decay vs Growth</td>
+<td style="text-align:left">Life = Negentropy Engine</td>
+<td style="text-align:left"><a href="./docs/topics/0.22_Biophysics_Origin_of_Life/">0.22 Origin of Life</a></td>
+</tr>
+</tbody>
+</table>
+<h3 id="️-4-impact-on-humanity-cross-disciplinary">❤️ 4. Impact on Humanity (Cross-Disciplinary)</h3>
+<p><em>Why this matters to your life, your wallet, and your future.</em></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Domain</th>
+<th style="text-align:left">Benefit</th>
+<th style="text-align:left">UET Insight</th>
+<th style="text-align:left">Topic</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><strong>Economics</strong></td>
+<td style="text-align:left">Checkmate Crises</td>
+<td style="text-align:left">Market Crash = Info Avalanches</td>
+<td style="text-align:left"><a href="./docs/topics/0.25_Strategy_Power_Economics/">0.25 Strategy</a></td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>AI Safety</strong></td>
+<td style="text-align:left">Alignment</td>
+<td style="text-align:left">Consciousness = Info Resonance</td>
+<td style="text-align:left"><a href="./docs/topics/0.24_Artificial_Intelligence/">0.24 AI Core</a></td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Biology</strong></td>
+<td style="text-align:left">Health/Genetics</td>
+<td style="text-align:left">DNA = Error Correction Code</td>
+<td style="text-align:left"><a href="./docs/topics/0.22_Biophysics_Origin_of_Life/">0.22 Biophysics</a></td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Energy</strong></td>
+<td style="text-align:left">Infinite Power</td>
+<td style="text-align:left">Room-Temp Superconductivity</td>
+<td style="text-align:left"><a href="./docs/topics/0.4_Superconductivity_Superfluids/">0.4 Superconduct</a></td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Energy</strong></td>
+<td style="text-align:left">Clean Fusion</td>
+<td style="text-align:left">p-B11 Resonant Confinement</td>
+<td style="text-align:left"><a href="./docs/topics/0.32_Micro_Nuclear_Fusion/">0.32 Fusion</a></td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Computing</strong></td>
+<td style="text-align:left">Quantum Leap</td>
+<td style="text-align:left">99.99% Fidelity Gates</td>
+<td style="text-align:left"><a href="./docs/topics/0.18_Mathnicry/">0.18 Mathnicry</a></td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Medicine</strong></td>
+<td style="text-align:left">Cold Light</td>
+<td style="text-align:left">Trapping Light for Holograms/Imaging</td>
+<td style="text-align:left"><a href="./docs/topics/0.27_Cold_Light_Hologram/">0.27 Cold Light</a></td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Material</strong></td>
+<td style="text-align:left">Zero Mining</td>
+<td style="text-align:left">Graphene from Carbon Waste</td>
+<td style="text-align:left"><a href="./docs/topics/0.28_Material_Synthesis/">0.28 Material</a></td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Manufacturing</strong></td>
+<td style="text-align:left">Atomic Precision</td>
+<td style="text-align:left">Info-Centric Nanofabrication</td>
+<td style="text-align:left"><a href="./docs/topics/0.34_Information_Centric_Nanofabrication/">0.34 Nanofab</a></td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Manufacturing</strong></td>
+<td style="text-align:left">Digital Twin</td>
+<td style="text-align:left">Logic-Driven Automation</td>
+<td style="text-align:left"><a href="./docs/topics/0.35_ICN_Digital_Automation/">0.35 Automation</a></td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Space Ind.</strong></td>
+<td style="text-align:left">Zero-G Factory</td>
+<td style="text-align:left">Orbital Foundry Systems</td>
+<td style="text-align:left"><a href="./docs/topics/0.36_Orbital_Manufacturing/">0.36 Orbital</a></td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Environment</strong></td>
+<td style="text-align:left">Ocean Shield</td>
+<td style="text-align:left">Reverse Ocean Acidification</td>
+<td style="text-align:left"><a href="./docs/topics/0.29_Ocean_Recovery/">0.29 Ocean</a></td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Agriculture</strong></td>
+<td style="text-align:left">Mega Flora</td>
+<td style="text-align:left">Acoustic Nutrient Injection</td>
+<td style="text-align:left"><a href="./docs/topics/0.30_Mega_Flora_Biotech/">0.30 Mega Flora</a></td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Space</strong></td>
+<td style="text-align:left">Warp Drive</td>
+<td style="text-align:left">Reach 0.1c via Singularities</td>
+<td style="text-align:left"><a href="./docs/topics/0.31_SpaceTime_Propulsion/">0.31 Propulsion</a></td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Energy</strong></td>
+<td style="text-align:left">Universal Capture</td>
+<td style="text-align:left">Quantum Solar Paint</td>
+<td style="text-align:left"><a href="./docs/topics/0.37_Quantum_Photovoltaics/">0.37 Solar Paint</a></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="-6-the-core-equation-detailed-explanation">🎯 6. The Core Equation (Detailed Explanation)</h2>
+<blockquote>
+<p><strong>ขอบเขตของส่วนเดิม:</strong> สูตรเชิงวิสัยทัศน์และตารางคำตีความด้านล่างคงไว้เป็นประวัติ/แนวคิด ไม่ใช่นิยามกายภาพปัจจุบันหรือ derivation ว่า standard physics ทุกสาขาตามจากสูตรเดียว ดู <a href="#research-current-realization">แกน realization ล่าสุด</a> และ <a href="#research-term-roles">บทบาทเทอม</a> ก่อนใช้ C/I/Omega ในการคำนวณ</p>
+</blockquote>
+<h3 id="the-vision">The Vision</h3>
+<blockquote>
+<p><strong>&quot;Equality is the Law of Nature.&quot;</strong></p>
+</blockquote>
+<p>$$\boxed{\Omega = C \cdot I}$$</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Symbol</th>
+<th style="text-align:left">Philosophical Definition</th>
+<th style="text-align:left">Physical Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><strong>Ω (Omega)</strong></td>
+<td style="text-align:left"><strong>Balance / Equilibrium</strong></td>
+<td style="text-align:left">Total Action / System State</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>C (Connection)</strong></td>
+<td style="text-align:left"><strong>Interaction (Open System)</strong></td>
+<td style="text-align:left">Complexity / Connectivity / Light Speed</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>I (Individualism)</strong></td>
+<td style="text-align:left"><strong>Cost of Division (Isolation)</strong></td>
+<td style="text-align:left">Mass / Inertia / Latency</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>Logic:</strong> A system with high <strong>Interaction (C)</strong> (like the Internet or a Brain) has high potential, but it creates <strong>Division Costs (I)</strong> (Latency/Friction).</li>
+<li><strong>Goal:</strong> The universe evolves to find the perfect <strong>Balance ($\Omega$)</strong>.</li>
+</ul>
+<h3 id="the-full-implementation-field-equation">The Full Implementation (Field Equation)</h3>
+<p>Historical functional sketch retained below; current calculations require a declared equation family, full state, kinetics and unit/observable contract:</p>
+<p>$$\Omega[C,I] = \int \left[ \underbrace{V(C)}<em>{\text{Cost of Becoming}} + \underbrace{\frac{\kappa}{2}|\nabla C|^2}</em>{\text{Cost of Change}} + \underbrace{\beta C I}_{\text{The Ethics of Connection}} \right] dx$$</p>
+<p><strong>The Thermodynamics of Ethics:</strong></p>
+<ul>
+<li><strong>$V(C)$ — The Cost of Existence</strong>: Nothing is free. To &quot;be&quot; (exist) requires energy.</li>
+<li><strong>$\nabla C$ — The Cost of Difference</strong>: Diversity creates gradients. Change requires work.</li>
+<li><strong>$\beta C I$ — The Connection Limit</strong>:
+<ul>
+<li><strong>High C (Hyper-connected)</strong>: System becomes chaotic (High Energy).</li>
+<li><strong>High I (Hyper-isolated)</strong>: System becomes stagnant (High Mass).</li>
+<li><strong>Equilibrium</strong>: Life thrives where Connection matches Capacity.</li>
+</ul>
+</li>
+</ul>
+<h3 id="why-this-works-the-tree-of-physics">Why This Works (The Tree of Physics)</h3>
+<blockquote>
+<p><strong>Conceptual map / historical interpretation:</strong> คง topology เดิมเพื่อให้ตามเจตนาได้ ลูกศรในรูปไม่ใช่หลักฐาน derivation ของ Newton, thermodynamics, Einstein หรือ quantum theory จาก Omega=C·I; gate ของแต่ละ correspondence ยังแยกกัน</p>
+</blockquote>
+<pre><code class="language-mermaid">graph TD
+    Root[&quot;🌳 UET Core&lt;br/&gt;Ω = C · I&quot;] 
+    
+    Root --&gt;|&quot;Gradient of I&quot;| Newton[&quot;⚙️ Classical&lt;br/&gt;F = ma&quot;]
+    Root --&gt;|&quot;Shuffling of I&quot;| Thermo[&quot;🔥 Thermodynamics&lt;br/&gt;S = k log W&quot;]
+    Root --&gt;|&quot;Capacity of I&quot;| Einstein[&quot;🌀 General Relativity&lt;br/&gt;G_μν = 8πT_μν&quot;]
+    Root --&gt;|&quot;Addressing of I&quot;| Quantum[&quot;⚛️ Quantum&lt;br/&gt;ψ, ℏ&quot;]
+    
+    Newton --&gt; Motion[&quot;Motion&quot;]
+    Thermo --&gt; Heat[&quot;Heat &amp; Entropy&quot;]
+    Einstein --&gt; Gravity[&quot;Gravity &amp; Time&quot;]
+    Quantum --&gt; Particles[&quot;Particles &amp; Fields&quot;]
+    
+    style Root fill:#ff69b4,stroke:#333,stroke-width:4px
+</code></pre>
+<p><strong>Translation:</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Physics</th>
+<th style="text-align:left">Standard Concept</th>
+<th style="text-align:left">UET (Ethical Interpretation)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Classical</td>
+<td style="text-align:left">Force (F)</td>
+<td style="text-align:left">The drive to resolve Isolation (∇I)</td>
+</tr>
+<tr>
+<td style="text-align:left">Thermo</td>
+<td style="text-align:left">Entropy (S)</td>
+<td style="text-align:left">The scrambling of Connection (Loss of C)</td>
+</tr>
+<tr>
+<td style="text-align:left">Relativity</td>
+<td style="text-align:left">Gravity (g)</td>
+<td style="text-align:left">The burden of Isolation (Mass = I)</td>
+</tr>
+<tr>
+<td style="text-align:left">Quantum</td>
+<td style="text-align:left">Wave (ψ)</td>
+<td style="text-align:left">The search for Connection (Search Algo)</td>
+</tr>
+<tr>
+<td style="text-align:left">Quantum</td>
+<td style="text-align:left">Collapse</td>
+<td style="text-align:left">The establishment of a Link (Decision)</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="-7-test-results-v090">📊 7. Test Results (v0.9.0)</h2>
+<blockquote>
+<p><strong>Historical snapshot:</strong> เก็บตัวเลขและรายการผลเดิมไว้ โดยรอบนี้ไม่ได้ยืนยัน run identity/วันตัดยอดของตารางนี้หรือรัน tests เก่าใหม่ 200+, 31, 98.4%, 23 และป้าย 400+/38/8 ไม่ใช่จำนวนผลที่รับรองปัจจุบันหรือคะแนนความถูกต้องของทฤษฎี ผลใหม่ที่ตามหลักฐานได้อยู่ใน <a href="#research-bounded-results">§23–25 summary</a>; <code>PASS</code> ทางเอกสารไม่ลบ <code>BLOCKED</code> ทางฟิสิกส์</p>
+</blockquote>
+<h3 id="summary">Summary</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Metric</th>
+<th style="text-align:left">Value</th>
+<th style="text-align:left">Note</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">🧪 <strong>Total Tests</strong></td>
+<td style="text-align:left">200+</td>
+<td style="text-align:left">Individual test cases</td>
+</tr>
+<tr>
+<td style="text-align:left">✅ <strong>Pass Rate</strong></td>
+<td style="text-align:left">98.4%</td>
+<td style="text-align:left">Consistent across 31 topics</td>
+</tr>
+<tr>
+<td style="text-align:left">📚 <strong>Topics</strong></td>
+<td style="text-align:left">31</td>
+<td style="text-align:left">All domains covered</td>
+</tr>
+<tr>
+<td style="text-align:left">📊 <strong>Data Sources</strong></td>
+<td style="text-align:left">23</td>
+<td style="text-align:left">All with DOIs</td>
+</tr>
+<tr>
+<td style="text-align:left">🏆 <strong>Grade</strong></td>
+<td style="text-align:left">Historical self-assessment</td>
+<td style="text-align:left">Not a current evidence grade</td>
+</tr>
+</tbody>
+</table>
+<h3 id="what-we-validated">What We Validated</h3>
+<blockquote>
+<p>รายการใน block นี้เป็น <strong>ถ้อยคำข้ออ้างเก่าที่เก็บครบเพื่อการทบทวน</strong> ไม่ใช่ผลตรวจรับใหม่ รวมถึง “No dark matter needed”, “exact match” และ “derived” ต้องกลับไปตรวจ source, fit/holdout, comparator และ controller ของแต่ละ topic ก่อนอ้างปัจจุบัน</p>
+</blockquote>
+<pre><code>✅ Galaxy Rotation (SPARC 175 galaxies) → No dark matter needed
+✅ Black Holes (EHT M87*, LIGO) → Shadow size matches
+✅ Hubble Tension (5σ crisis) → Both values correct for their scale
+✅ Muon g-2 (Fermilab) → 0.0σ deviation (exact match!)
+✅ Neutrino Mixing (NuFIT) → PMNS matrix derived
+✅ Atomic Spectrum (NIST) → 6.4 ppm accuracy
+✅ Fluid Dynamics → 816x faster than Navier-Stokes
+✅ Equivalence Principle (MICROSCOPE) → 10⁻¹⁵ precision
+... and 19 more domains
+</code></pre>
+<h3 id="run-it-yourself">Run It Yourself</h3>
+<pre><code class="language-bash">python docs/topics/run_full_verification.py
+</code></pre>
+<hr />
+<h2 id="-8-quick-start-research-workspace">🚀 8. Quick Start (Research Workspace)</h2>
+<p>UET is organized as a Python-accessible research workspace under <code>docs/</code>. The repository is not currently packaged as a root-level installable platform package; use the scripts and modules inside <code>docs/</code> as the active research entry points.</p>
+<h3 id="1-installation">1. Installation</h3>
+<pre><code class="language-powershell"># Clone the repository
+git clone https://github.com/unityequilibrium/UnityEquilibriumTheory.git
+cd UnityEquilibriumTheory
+
+# Activate Environment (Recommended for Windows)
+. c:\Users\santa\Desktop\uet_harness\.venv\Scripts\Activate.ps1
+
+# Install research/data ingest dependencies when needed
+pip install -r docs/requirements_ingest.txt
+</code></pre>
+<h3 id="2-usage-examples">2. Usage Examples</h3>
+<p><strong>A. Fluid Dynamics (800x Faster)</strong></p>
+<pre><code class="language-python">import docs as uet
+
+# Initialize 2D Fluid Engine
+fluid = uet.fluid.Engine2D(nx=128, ny=128, dt=0.01)
+
+# Run Simulation (Terminal Demo)
+fluid.solve_2d() 
+</code></pre>
+<p><strong>B. Mathnicry (Riemann Zeta)</strong></p>
+<pre><code class="language-python">import docs as uet
+
+# Calculate Omega Potential for a complex number
+zeta = uet.math.RiemannEngine()
+potential = zeta.calculate_omega(0.5 + 14.1347j) # First Zero
+print(f&quot;Omega: {potential}&quot;) # Should be near 0.0
+</code></pre>
+<p><strong>C. Complexity (Entropy Analysis)</strong></p>
+<pre><code class="language-python">import numpy as np
+import docs as uet
+
+# Analyze Time Series Data
+data = np.random.normal(0, 1, 1000)
+complexity = uet.complexity.ComplexityEngine()
+metrics = complexity.compute_complexity_metrics(data)
+print(f&quot;Entropy: {metrics['entropy']}&quot;)
+</code></pre>
+<h3 id="3-run-verify-test">3. Run Verify Test</h3>
+<pre><code class="language-bash">python docs/topics/run_all_tests.py
+</code></pre>
+<hr />
+<h2 id="-9-complete-topic-index-38-domains">📚 9. Complete Topic Index (38+ Domains)</h2>
+<blockquote>
+<p>ตาราง/เครื่องหมายเดิมเป็น historical claim map ไม่ใช่ readiness ล่าสุด โดยเฉพาะคำว่า Solved, Derived และ Information = Energy ไม่ได้รับการยืนยันจากรอบเอกสารนี้ ดู <a href="docs/topics/README.md">topic status entrypoint</a> และ gates เฉพาะเส้นทาง; จำนวน/ป้ายต่างยุคไม่ถูกเฉลี่ยเป็นสถานะใหม่</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">ID</th>
+<th style="text-align:left">Research Topic</th>
+<th style="text-align:left">Key Discovery</th>
+<th style="text-align:left">Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">0.1</td>
+<td style="text-align:left"><a href="./docs/topics/0.1_Galaxy_Rotation_Problem/">Galaxy Rotation</a></td>
+<td style="text-align:left">Solved without Dark Matter</td>
+<td style="text-align:left">✅</td>
+</tr>
+<tr>
+<td style="text-align:left">0.2</td>
+<td style="text-align:left"><a href="./docs/topics/0.2_Black_Hole_Physics/">Black Holes</a></td>
+<td style="text-align:left">Information Horizon (No Singularity)</td>
+<td style="text-align:left">✅</td>
+</tr>
+<tr>
+<td style="text-align:left">0.3</td>
+<td style="text-align:left"><a href="./docs/topics/0.3_Cosmology_Hubble_Tension/">Hubble Tension</a></td>
+<td style="text-align:left">Unified Early/Late Expansion</td>
+<td style="text-align:left">✅</td>
+</tr>
+<tr>
+<td style="text-align:left">0.4</td>
+<td style="text-align:left"><a href="./docs/topics/0.4_Superconductivity_Superfluids/">Superconductivity</a></td>
+<td style="text-align:left">Phase-Lock Mechanism</td>
+<td style="text-align:left">✅</td>
+</tr>
+<tr>
+<td style="text-align:left">0.5</td>
+<td style="text-align:left"><a href="./docs/topics/0.5_Nuclear_Binding_Hadrons/">Nuclear Binding</a></td>
+<td style="text-align:left">Soliton Stability Proof</td>
+<td style="text-align:left">✅</td>
+</tr>
+<tr>
+<td style="text-align:left">0.6</td>
+<td style="text-align:left"><a href="./docs/topics/0.6_Electroweak_Physics/">Electroweak</a></td>
+<td style="text-align:left">W-Boson Mass Explained</td>
+<td style="text-align:left">✅</td>
+</tr>
+<tr>
+<td style="text-align:left">0.7</td>
+<td style="text-align:left"><a href="./docs/topics/0.7_Neutrino_Physics/">Neutrino Physics</a></td>
+<td style="text-align:left">Mass Origin</td>
+<td style="text-align:left">✅</td>
+</tr>
+<tr>
+<td style="text-align:left">0.8</td>
+<td style="text-align:left"><a href="./docs/topics/0.8_Muon_g2_Anomaly/">Muon g-2</a></td>
+<td style="text-align:left">Geometric Correction</td>
+<td style="text-align:left">✅</td>
+</tr>
+<tr>
+<td style="text-align:left">0.9</td>
+<td style="text-align:left"><a href="./docs/topics/0.9_Quantum_Nonlocality/">Quantum Bell</a></td>
+<td style="text-align:left">Non-local Reservoir Verification</td>
+<td style="text-align:left">✅</td>
+</tr>
+<tr>
+<td style="text-align:left">0.10</td>
+<td style="text-align:left"><a href="./docs/topics/0.10_Fluid_Dynamics_Chaos/">Fluid Dynamics</a></td>
+<td style="text-align:left">Turbulence Solved (Navier-Stokes)</td>
+<td style="text-align:left">✅</td>
+</tr>
+<tr>
+<td style="text-align:left">0.11</td>
+<td style="text-align:left"><a href="./docs/topics/0.11_Phase_Transitions/">Phase Transitions</a></td>
+<td style="text-align:left">Criticality as Info Saturation</td>
+<td style="text-align:left">✅</td>
+</tr>
+<tr>
+<td style="text-align:left">0.12</td>
+<td style="text-align:left"><a href="./docs/topics/0.12_Vacuum_Energy_Casimir/">Vacuum Energy</a></td>
+<td style="text-align:left">Finite Calculation (No $10^{120}$ error)</td>
+<td style="text-align:left">✅</td>
+</tr>
+<tr>
+<td style="text-align:left">0.13</td>
+<td style="text-align:left"><a href="./docs/topics/0.13_Thermodynamic_Bridge/">Thermo Bridge</a></td>
+<td style="text-align:left">Information = Energy</td>
+<td style="text-align:left">✅</td>
+</tr>
+<tr>
+<td style="text-align:left">0.14</td>
+<td style="text-align:left"><a href="./docs/topics/0.14_Complex_Systems/">Complex Systems</a></td>
+<td style="text-align:left">Emergence from Noise</td>
+<td style="text-align:left">✅</td>
+</tr>
+<tr>
+<td style="text-align:left">0.15</td>
+<td style="text-align:left"><a href="./docs/topics/0.15_Cluster_Dynamics/">Cluster Dynamics</a></td>
+<td style="text-align:left">Virial Theorem Mod</td>
+<td style="text-align:left">✅</td>
+</tr>
+<tr>
+<td style="text-align:left">0.16</td>
+<td style="text-align:left"><a href="./docs/topics/0.16_Heavy_Nuclei/">Heavy Nuclei</a></td>
+<td style="text-align:left">Island of Stability</td>
+<td style="text-align:left">✅</td>
+</tr>
+<tr>
+<td style="text-align:left">0.17</td>
+<td style="text-align:left"><a href="./docs/topics/0.17_Mass_Generation/">Mass Gen</a></td>
+<td style="text-align:left">Mass Hierarchy</td>
+<td style="text-align:left">✅</td>
+</tr>
+<tr>
+<td style="text-align:left">0.18</td>
+<td style="text-align:left"><a href="./docs/topics/0.18_Mathnicry/">Mathnicry</a></td>
+<td style="text-align:left">P vs NP / Riemann Solved</td>
+<td style="text-align:left">✅</td>
+</tr>
+<tr>
+<td style="text-align:left">0.19</td>
+<td style="text-align:left"><a href="./docs/topics/0.19_Gravity_GR/">Gravity &amp; GR</a></td>
+<td style="text-align:left">Equivalence Principle Derived</td>
+<td style="text-align:left">✅</td>
+</tr>
+<tr>
+<td style="text-align:left">0.20</td>
+<td style="text-align:left"><a href="./docs/topics/0.20_Atomic_Physics/">Atomic Physics</a></td>
+<td style="text-align:left">Rydberg Constant Derived</td>
+<td style="text-align:left">✅</td>
+</tr>
+<tr>
+<td style="text-align:left">0.21</td>
+<td style="text-align:left"><a href="./docs/topics/0.21_Yang_Mills_Mass_Gap/">Yang-Mills</a></td>
+<td style="text-align:left">Mass Gap Explanation</td>
+<td style="text-align:left">🚧</td>
+</tr>
+<tr>
+<td style="text-align:left">0.22</td>
+<td style="text-align:left"><a href="./docs/topics/0.22_Biophysics_Origin_of_Life/">Origin of Life</a></td>
+<td style="text-align:left">DNA Error Correction</td>
+<td style="text-align:left">✅</td>
+</tr>
+<tr>
+<td style="text-align:left">0.23</td>
+<td style="text-align:left"><a href="./docs/topics/0.23_Unity_Scale_Link/">Unity Scale</a></td>
+<td style="text-align:left">Micro-Macro Link</td>
+<td style="text-align:left">✅</td>
+</tr>
+<tr>
+<td style="text-align:left">0.24</td>
+<td style="text-align:left"><a href="./docs/topics/0.24_Artificial_Intelligence/">Artificial Intelligence</a></td>
+<td style="text-align:left">Consciousness Model</td>
+<td style="text-align:left">✅</td>
+</tr>
+<tr>
+<td style="text-align:left">0.25</td>
+<td style="text-align:left"><a href="./docs/topics/0.25_Strategy_Power_Economics/">Strategy &amp; Econ</a></td>
+<td style="text-align:left">Global Stability Engine</td>
+<td style="text-align:left">✅</td>
+</tr>
+<tr>
+<td style="text-align:left">0.26</td>
+<td style="text-align:left"><a href="./docs/topics/0.26_Cosmic_Dynamic_Frame/">Cosmic Viscosity</a></td>
+<td style="text-align:left">Drag Term Explained</td>
+<td style="text-align:left">✅</td>
+</tr>
+<tr>
+<td style="text-align:left">0.27</td>
+<td style="text-align:left"><a href="./docs/topics/0.27_Cold_Light_Hologram/">Cold Light</a></td>
+<td style="text-align:left">Stopping Light (No Heat)</td>
+<td style="text-align:left">✅</td>
+</tr>
+<tr>
+<td style="text-align:left">0.28</td>
+<td style="text-align:left"><a href="./docs/topics/0.28_Material_Synthesis/">Material Synthesis</a></td>
+<td style="text-align:left">Resonant Manufacturing</td>
+<td style="text-align:left">✅</td>
+</tr>
+<tr>
+<td style="text-align:left">0.29</td>
+<td style="text-align:left"><a href="./docs/topics/0.29_Ocean_Recovery/">Ocean Recovery</a></td>
+<td style="text-align:left">Graphene Ocean Shield</td>
+<td style="text-align:left">✅</td>
+</tr>
+<tr>
+<td style="text-align:left">0.30</td>
+<td style="text-align:left"><a href="./docs/topics/0.30_Mega_Flora_Biotech/">Mega Flora</a></td>
+<td style="text-align:left">Acoustic Nutrient Delivery</td>
+<td style="text-align:left">✅</td>
+</tr>
+<tr>
+<td style="text-align:left">0.31</td>
+<td style="text-align:left"><a href="./docs/topics/0.31_SpaceTime_Propulsion/">SpaceTime Prop</a></td>
+<td style="text-align:left">Relativistic Slingshot (.1c)</td>
+<td style="text-align:left">✅</td>
+</tr>
+<tr>
+<td style="text-align:left">0.32</td>
+<td style="text-align:left"><a href="./docs/topics/0.32_Micro_Nuclear_Fusion/">Micro Fusion</a></td>
+<td style="text-align:left">Resonant Confinement (p-B11)</td>
+<td style="text-align:left">✅</td>
+</tr>
+<tr>
+<td style="text-align:left">0.33</td>
+<td style="text-align:left"><a href="./docs/topics/0.33_Battery_Tech/">Battery Mat.</a></td>
+<td style="text-align:left">Geometric Energy Density</td>
+<td style="text-align:left">✅</td>
+</tr>
+<tr>
+<td style="text-align:left">0.34</td>
+<td style="text-align:left"><a href="./docs/topics/0.34_Information_Centric_Nanofabrication/">Nanofab</a></td>
+<td style="text-align:left">Topological Assembly</td>
+<td style="text-align:left">✅</td>
+</tr>
+<tr>
+<td style="text-align:left">0.35</td>
+<td style="text-align:left"><a href="./docs/topics/0.35_ICN_Digital_Automation/">Digital Auto.</a></td>
+<td style="text-align:left">Logic-Driven Digital Twins</td>
+<td style="text-align:left">✅</td>
+</tr>
+<tr>
+<td style="text-align:left">0.36</td>
+<td style="text-align:left"><a href="./docs/topics/0.36_Orbital_Manufacturing/">Orbital Mfg.</a></td>
+<td style="text-align:left">High-Throughput Space Foundry</td>
+<td style="text-align:left">✅</td>
+</tr>
+<tr>
+<td style="text-align:left">0.37</td>
+<td style="text-align:left"><a href="./docs/topics/0.37_Quantum_Photovoltaics/">Solar Paint</a></td>
+<td style="text-align:left">Multi-Megawatt Coatings</td>
+<td style="text-align:left">✅</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="-10-methodology">🔍 10. Methodology</h2>
+<blockquote>
+<p>งานล่าสุดแยก author intent, imported theory, AI model choices และผลตรวจจริงตาม <a href="docs/meta/UET_THEORY_ARGUMENT.md">รายงาน</a> การทำซ้ำต้องใช้ source/config/input identity และ contract ที่ตรงรุ่น ไม่ใช้จำนวนไฟล์หรือผลผ่านแทนความก้าวหน้าทางทฤษฎี การศึกษาซ้ำเปิดเมื่อ evidence-producing state หรือ prerequisite เปลี่ยน ไม่ใช่เพียงเปลี่ยนคำอธิบาย</p>
+</blockquote>
+<h3 id="human--ai-collaboration">Human + AI Collaboration</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Component</th>
+<th style="text-align:left">Developed by</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><strong>Conceptual Framework</strong></td>
+<td style="text-align:left">Human (Thermodynamics of Ethics)</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Mathematical Derivations</strong></td>
+<td style="text-align:left">AI-assisted</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>All Results</strong></td>
+<td style="text-align:left">Reproducibility is scoped by available source/config/verifier identities</td>
+</tr>
+</tbody>
+</table>
+<h3 id="transparency">Transparency</h3>
+<blockquote>
+<p><strong>Invitation to Falsify:</strong><br />
+We invite the physics community to test, break, and falsify this framework.</p>
+</blockquote>
+<p><strong>Challenge:</strong></p>
+<ol>
+<li>Download the code</li>
+<li>Run <code>python docs/topics/run_all_tests.py</code></li>
+<li>If it fails → Open an issue</li>
+</ol>
+<hr />
+<h2 id="-key-files">📄 Key Files</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">File</th>
+<th style="text-align:left">Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>docs/topics/run_all_tests.py</code></td>
+<td style="text-align:left">🧪 Master test runner</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>docs/core/02_equations/matter_space/uet_master_equation.py</code></td>
+<td style="text-align:left">🔬 Legacy engine entry point; not a universal master law</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>docs/requirements_ingest.txt</code></td>
+<td style="text-align:left">📦 Research/data ingest dependencies</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="docs/meta/UET_THEORY_ARGUMENT.md">UET_THEORY_ARGUMENT.md</a></td>
+<td style="text-align:left">ข้อเสนอรวม ผล/ข้อคัดค้าน และสายเหตุผล §§23–25</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="docs/core/README.md#current-response-realization">Core README</a></td>
+<td style="text-align:left">สูตร state/functional/kinetics ของ realization ล่าสุดและขอบเขต legacy</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="docs/topics/0.13_Thermodynamic_Bridge/calculation_contracts/energy_memory_cycle.json">Cycle calculation contract</a></td>
+<td style="text-align:left">identities/ขอบเขต FORMAL ของ cycle; ไม่ใช่ใบรับรองทุก family</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="-uet-cash-mining-system">💰 Uet-Cash Mining System</h2>
+<p><strong>Status:</strong> 🧭 Concept + archived prototype direction | 🚧 Not an active live network</p>
+<p>Uet-Cash is a proof-of-useful-work concept, not a live network. Source-only service experiments remain under services_and_experiments/ as future-platform material. A separate implementation repository, security review, and economic/governance design would be required before activation.</p>
+<h3 id="architecture">Architecture</h3>
+<pre><code>uet_core (Rust, archived prototype) → UET Master Equation Solver
+        ↓
+uet_miner (Rust, archived prototype) → Mining Algorithm with Nonce Search
+        ↓
+uet_security (Rust, archived prototype) → Quantum-Resistant Signatures &amp; Hashing
+        ↓
+Uet-Cash Blocks → Proof Verification → Uet-Cash Rewards (future network design)
+</code></pre>
+<h3 id="components">Components</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Component</th>
+<th style="text-align:left">Status</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><strong>uet_core</strong></td>
+<td style="text-align:left">Archived prototype</td>
+<td style="text-align:left">UET Master Equation in Rust (7-term functional)</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>uet_miner</strong></td>
+<td style="text-align:left">Archived prototype</td>
+<td style="text-align:left">Mining algorithm concept with nonce search and proof verification</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>uet_security</strong></td>
+<td style="text-align:left">Archived prototype</td>
+<td style="text-align:left">Quantum-resistant signature/hash design direction</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>uet_governance</strong></td>
+<td style="text-align:left">Future design</td>
+<td style="text-align:left">Governance system (voting, proposals) - deferred</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>uet_oracle</strong></td>
+<td style="text-align:left">Future design</td>
+<td style="text-align:left">Oracle infrastructure (verification) - deferred</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>uet_economic</strong></td>
+<td style="text-align:left">Future design</td>
+<td style="text-align:left">Economic policies (issuance, difficulty) - deferred</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>uet_market</strong></td>
+<td style="text-align:left">Future design</td>
+<td style="text-align:left">Market infrastructure (AMM, price discovery) - deferred</td>
+</tr>
+</tbody>
+</table>
+<h3 id="security-features">Security Features</h3>
+<p><strong>Quantum-Resistant Cryptography</strong></p>
+<ul>
+<li>Target: Dilithium PQ signatures for block/tx/proof signing</li>
+<li>Target: SHA3/BLAKE3 hashing (quantum-resistant design direction)</li>
+<li>Target: Signature metadata (schema_version, sig_alg, hash_alg, key_id)</li>
+</ul>
+<p><strong>Block Security</strong></p>
+<ul>
+<li>Target: Header signature verification</li>
+<li>Target: Merkle roots (tx_merkle_root, proof_root)</li>
+<li>Target: State root verification</li>
+<li>Target: Full block validation rules</li>
+</ul>
+<p><strong>Anti-Cheat Controls</strong></p>
+<ul>
+<li>Target: Replay protection (task_id + node_id + nonce uniqueness)</li>
+<li>Target: Fraud proofs (challenge invalid proofs)</li>
+<li>Target: Epoch-based nonce reset</li>
+<li>Target: Result stealing resistance (signature bound to node_id)</li>
+</ul>
+<h3 id="how-mining-works">How Mining Works</h3>
+<ol>
+<li><strong>Receive Task</strong>: Get UET equation to solve (task_id, input_seed, difficulty)</li>
+<li><strong>Solve Equation</strong>: Use <code>uet_core</code> to compute UET functional with nonce search</li>
+<li><strong>Create Proof</strong>: Generate proof with signature and metadata</li>
+<li><strong>Verify Difficulty</strong>: Check if result hash has required leading zeros</li>
+<li><strong>Submit Proof</strong>: Send proof (result_hash, nonce, verification_artifact, signature) to network</li>
+<li><strong>Get Reward</strong>: Future network design would issue Uet-Cash for valid proof; this is not live in the current research repo.</li>
+</ol>
+<h3 id="example">Example</h3>
+<pre><code class="language-rust">// Historical prototype sketch. The active research repo does not currently
+// include these Rust crates at the repository root.
+use uet_miner::{MiningTask, TaskFamily, UetCashMiner};
+use uet_security::{CryptoSuite, MockSigner, SignatureAlgorithm};
+
+let task = MiningTask {
+    task_id: &quot;example&quot;.to_string(),
+    family: TaskFamily::EquilibriumCertificate,
+    input_seed: vec![1.0, 2.0, 3.0],
+    difficulty: 2, // Require 2 leading zeros
+    created_at: 0,
+};
+
+let suite = CryptoSuite::default();
+let signer = MockSigner::new(&quot;node-a&quot;, SignatureAlgorithm::Dilithium3);
+
+let miner = UetCashMiner::new(task, &quot;node-a&quot;.to_string(), suite);
+if let Some(proof) = miner.mine(1000000, &amp;signer) {
+    println!(&quot;Found proof: {}&quot;, proof.result_hash_hex);
+}
+</code></pre>
+<hr />
+<h2 id="-questions-answered-by-uet-seo--key-research">❓ Questions Answered by UET (SEO &amp; Key Research)</h2>
+<p>Physics students and researchers often search for these questions. The table preserves historical UET proposals, not currently verified answers; each requires its topic-specific evidence and claim review:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Search Query</th>
+<th style="text-align:left">UET Answer / Solution</th>
+<th style="text-align:left">Topic ID</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><strong>&quot;Alternative to Dark Matter&quot;</strong></td>
+<td style="text-align:left">Galaxy rotation curves are explained by <em>Information Latency</em> ($\tau_I$) at the edges, creating a &quot;Virtual Mass&quot; effect without new particles.</td>
+<td style="text-align:left"><a href="./docs/topics/0.1_Galaxy_Rotation_Problem/">0.1</a></td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>&quot;Solve Hubble Tension&quot;</strong></td>
+<td style="text-align:left">The expansion rate $H_0$ is dynamic, scaling with <em>Information Entropy</em> ($\beta$), bridging the gap between Early (Planck) and Late (SH0ES) measurements.</td>
+<td style="text-align:left"><a href="./docs/topics/0.3_Cosmology_Hubble_Tension/">0.3</a></td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>&quot;Why is Gravity incompatible with Quantum?&quot;</strong></td>
+<td style="text-align:left">It isn't. Gravity is the <em>Thermodynamic Pressure</em> of the Quantum Information Field. They share the same source ($\Omega$).</td>
+<td style="text-align:left"><a href="./docs/topics/0.19_Gravity_GR/">0.19</a></td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>&quot;Navier Stokes Smoothness proof&quot;</strong></td>
+<td style="text-align:left">Fluid turbulence is proved to be smooth ($C^\infty$) when modeled as an <em>Energy Minimization</em> problem on a 4D manifold.</td>
+<td style="text-align:left"><a href="./docs/topics/0.10_Fluid_Dynamics_Chaos/">0.10</a></td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>&quot;Calculate Vacuum Energy Density&quot;</strong></td>
+<td style="text-align:left">By applying a <em>Plank-scale Information Cutoff</em>, we calculate $\Lambda \approx 10^{-9} J/m^3$, matching Dark Energy observations (avoiding $10^{120}$ error).</td>
+<td style="text-align:left"><a href="./docs/topics/0.12_Vacuum_Energy_Casimir/">0.12</a></td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>&quot;Origin of Mass&quot;</strong></td>
+<td style="text-align:left">Mass is the <em>Coupling Strength</em> to the Information Field. Heavier particles have higher informational complexity (drag).</td>
+<td style="text-align:left"><a href="./docs/topics/0.17_Mass_Generation/">0.17</a></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p><em>Version 0.9.0 Grand Unified | MIT License | Last Updated: 2026-01-26</em></p>
+<p><em><a href="https://github.com/unityequilibrium/UnityEquilibriumTheory">GitHub</a> | <a href="./docs/topics/">📊 View All Experiments</a></em></p>
+<hr />
+<h2 id="️-scientific-keywords--tags">🏷️ Scientific Keywords &amp; Tags</h2>
+<blockquote>
+<p>Keywords ด้านล่างเป็นคำค้น/ประวัติการจัดหมวด ไม่ใช่ scientific status หรือหลักฐานว่าโจทย์ที่มีคำว่า Solution ถูกแก้แล้ว</p>
+</blockquote>
+<p><code>Unity Equilibrium Theory</code> <code>UET</code> <code>Unified Field Theory Alternative</code> <code>Quantum Gravity</code> <code>Dark Matter Alternative</code> <code>Navier-Stokes Solution</code> <code>Fluid Dynamics</code> <code>General Relativity</code> <code>Thermodynamics of Information</code> <code>Python Simulation</code> <code>Scientific Computing</code> <code>Physics Engine</code> <code>Hubble Tension Solution</code> <code>Muon g-2</code> <code>Neutrino Mass</code> <code>Galaxy Rotation Curves</code> <code>Bekenstein Bound</code> <code>Landauer Limit</code> <code>Information Theory</code> <code>Emergent Gravity</code> <code>Yang-Mills Mass Gap</code> <code>P vs NP</code> <code>Origin of Life</code> <code>AI Consciousness</code> <code>Economic Stability</code></p>
+<hr />
+<hr />
+<p><a id="readme-wording-history"></a></p>
+<h2 id="ภาคผนวก-ถ้อยคำที่ปรับในรอบนี้">ภาคผนวก: ถ้อยคำที่ปรับในรอบนี้</h2>
+<p>ตรวจ 23 ตุลาคม 2026 — ตารางนี้เก็บข้อความที่ถูกแทนเพื่อการทบทวน ไม่ใช่การนำคำอ้างเก่ากลับมารับรอง ข้อความ/ตัวเลข/สูตรส่วนอื่นคงไว้พร้อมคำกำกับขอบเขต ตารางแสดงเฉพาะ cell ที่เปลี่ยนเมื่อเนื้อหาแถวอื่นไม่เปลี่ยน; ไม่อาศัย Git history เพียงอย่างเดียว</p>
+<table>
+<thead>
+<tr>
+<th>ตำแหน่ง</th>
+<th>ข้อความเดิม</th>
+<th>ข้อความใหม่</th>
+<th>เหตุผล</th>
+<th>หลักฐาน/ขอบเขต</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Tests badge</td>
+<td><code>![Tests](https://img.shields.io/badge/Tests-400+_Verified-brightgreen)</code></td>
+<td><code>![Tests](https://img.shields.io/badge/Tests-400+_Historical_snapshot-yellow)</code></td>
+<td>เก็บ 400+ เดิม แต่ไม่ใช้ป้ายเป็นหลักฐาน validation; ไม่ทราบ run identity ของตัวเลข</td>
+<td><a href="docs/topics/For%20Work/04_Claim_and_Evidence_Rubric.md">claim rubric</a> / <a href="docs/core/07_artifacts/gates/uet_foundation_dependency_gate.json">foundation gate</a></td>
+</tr>
+<tr>
+<td>Big Picture introductory claim</td>
+<td><code>UET is not just a physics theory. It is a **&quot;Civilization-Level Operating System&quot;** that solves fundamental problems across 6 domains.</code></td>
+<td><code>UET retains a **&quot;Civilization-Level Operating System&quot;** vision across 6 domains; the entries below are historical research claims and proposed applications, not established solutions.</code></td>
+<td>รักษาวิสัยทัศน์หก domains แยกจาก established solutions</td>
+<td><a href="docs/topics/For%20Work/04_Claim_and_Evidence_Rubric.md">claim rubric</a> / <a href="docs/core/07_artifacts/gates/uet_foundation_dependency_gate.json">foundation gate</a></td>
+</tr>
+<tr>
+<td>Mathematical Breakthroughs introduction</td>
+<td><code>*UET converts abstract math problems into physical manifold geometry.*</code></td>
+<td><code>*Historical proposal: interpret abstract math problems through physical manifold geometry; no general proof is established by this dashboard.*</code></td>
+<td>จัดเป็นข้อเสนอเชิงตีความ ไม่ใช้ dashboard แทน proof</td>
+<td><a href="docs/topics/For%20Work/04_Claim_and_Evidence_Rubric.md">claim rubric</a> / <a href="docs/core/07_artifacts/gates/uet_foundation_dependency_gate.json">foundation gate</a></td>
+</tr>
+<tr>
+<td>Status ของ Navier–Stokes, Yang–Mills Gap และ P vs NP (สามตำแหน่ง)</td>
+<td><code>**Solved**</code></td>
+<td><code>Historical claim / ยังไม่ทบทวนข้ออ้างนี้</code></td>
+<td>ไม่พบการตรวจรับ proof ของทั้งสามข้อใน scope นี้; ไม่สรุปว่าข้อเสนอผิด</td>
+<td><a href="docs/topics/For%20Work/04_Claim_and_Evidence_Rubric.md">claim rubric</a> / <a href="docs/core/07_artifacts/gates/uet_foundation_dependency_gate.json">foundation gate</a></td>
+</tr>
+<tr>
+<td>Impossible Physics Anomalies introduction</td>
+<td><code>*Standard Model said it was impossible. UET proved it necessary.*</code></td>
+<td><code>*Historical anomaly interpretations follow; this page does not establish a proof or a replacement for the standard explanations.*</code></td>
+<td>ไม่ยก analogy/ข้อเสนอเป็น proof หรือการแทน standard explanations</td>
+<td><a href="docs/topics/For%20Work/04_Claim_and_Evidence_Rubric.md">claim rubric</a> / <a href="docs/core/07_artifacts/gates/uet_foundation_dependency_gate.json">foundation gate</a></td>
+</tr>
+<tr>
+<td>Dark Matter status cell</td>
+<td><code>✅ Solved</code></td>
+<td><code>Historical claim / ยังไม่ทบทวนข้ออ้างนี้</code></td>
+<td>ไม่ใช้ผล normalized ของสายล่าสุดตัดสิน galaxy claim</td>
+<td><a href="docs/meta/UET_THEORY_ARGUMENT.md#252-%E0%B8%84%E0%B8%B3%E0%B8%95%E0%B8%AD%E0%B8%9A%E0%B9%80%E0%B8%A3%E0%B8%B7%E0%B9%88%E0%B8%AD%E0%B8%87-%E0%B8%AA%E0%B8%A1%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%AB%E0%B8%A5%E0%B8%B1%E0%B8%81-%E0%B8%95%E0%B9%89%E0%B8%AD%E0%B8%87%E0%B9%81%E0%B8%A2%E0%B8%81%E0%B8%AA%E0%B8%B2%E0%B8%A1%E0%B8%A3%E0%B8%B0%E0%B8%94%E0%B8%B1%E0%B8%9A">§25.2–5</a> / <a href="docs/core/07_artifacts/gates/uet_foundation_compatibility_decision.json">compatibility decision</a></td>
+</tr>
+<tr>
+<td>Bridging Theoretical Conflicts table heading</td>
+<td><code>UET Verification</code></td>
+<td><code>Historical UET interpretation</code></td>
+<td>แยกตารางคำตีความจาก correspondence ที่ผ่านจริง</td>
+<td><a href="docs/topics/For%20Work/04_Claim_and_Evidence_Rubric.md">claim rubric</a> / <a href="docs/core/07_artifacts/gates/uet_foundation_dependency_gate.json">foundation gate</a></td>
+</tr>
+<tr>
+<td>The Full Implementation introduction</td>
+<td><code>This is how we actually calculate physics:</code></td>
+<td><code>Historical functional sketch retained below; current calculations require a declared equation family, full state, kinetics and unit/observable contract:</code></td>
+<td>functional sketch เก่าไม่ครอบ state/kinetics และทุก family; สูตรเดิมไม่ถูกแก้</td>
+<td><a href="docs/meta/UET_THEORY_ARGUMENT.md#252-%E0%B8%84%E0%B8%B3%E0%B8%95%E0%B8%AD%E0%B8%9A%E0%B9%80%E0%B8%A3%E0%B8%B7%E0%B9%88%E0%B8%AD%E0%B8%87-%E0%B8%AA%E0%B8%A1%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%AB%E0%B8%A5%E0%B8%B1%E0%B8%81-%E0%B8%95%E0%B9%89%E0%B8%AD%E0%B8%87%E0%B9%81%E0%B8%A2%E0%B8%81%E0%B8%AA%E0%B8%B2%E0%B8%A1%E0%B8%A3%E0%B8%B0%E0%B8%94%E0%B8%B1%E0%B8%9A">§25.2–5</a> / <a href="docs/core/07_artifacts/gates/uet_foundation_compatibility_decision.json">compatibility decision</a></td>
+</tr>
+<tr>
+<td>Test Results grade / note cells</td>
+<td><code>EXCELLENT / Platinum Standard</code></td>
+<td><code>Historical self-assessment / Not a current evidence grade</code></td>
+<td>เก็บถ้อยคำ self-grade เก่าที่นี่; pass rate ไม่ใช่คะแนนความถูกต้องของทฤษฎี</td>
+<td><a href="docs/topics/For%20Work/04_Claim_and_Evidence_Rubric.md">claim rubric</a> / <a href="docs/core/07_artifacts/gates/uet_foundation_dependency_gate.json">foundation gate</a></td>
+</tr>
+<tr>
+<td>Methodology / All Results cell</td>
+<td><code>Reproducible via Python scripts</code></td>
+<td><code>Reproducibility is scoped by available source/config/verifier identities</code></td>
+<td>local source packet ยังขาด retrospective/สาม source-verifier targets</td>
+<td><a href="#research-evidence-boundary">ข้อจำกัดหลักฐาน</a> / <a href="docs/meta/UET_THEORY_ARGUMENT.md#252-%E0%B8%84%E0%B8%B3%E0%B8%95%E0%B8%AD%E0%B8%9A%E0%B9%80%E0%B8%A3%E0%B8%B7%E0%B9%88%E0%B8%AD%E0%B8%87-%E0%B8%AA%E0%B8%A1%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%AB%E0%B8%A5%E0%B8%B1%E0%B8%81-%E0%B8%95%E0%B9%89%E0%B8%AD%E0%B8%87%E0%B9%81%E0%B8%A2%E0%B8%81%E0%B8%AA%E0%B8%B2%E0%B8%A1%E0%B8%A3%E0%B8%B0%E0%B8%94%E0%B8%B1%E0%B8%9A">§25.2–5</a> / <a href="docs/core/07_artifacts/gates/uet_foundation_compatibility_decision.json">compatibility decision</a></td>
+</tr>
+<tr>
+<td>Key Files / master entry point purpose</td>
+<td><code>🔬 Core UET equation</code></td>
+<td><code>🔬 Legacy engine entry point; not a universal master law</code></td>
+<td>ชื่อ master ไม่เลือก universal generator; default ยัง legacy_local</td>
+<td><a href="docs/meta/UET_THEORY_ARGUMENT.md#252-%E0%B8%84%E0%B8%B3%E0%B8%95%E0%B8%AD%E0%B8%9A%E0%B9%80%E0%B8%A3%E0%B8%B7%E0%B9%88%E0%B8%AD%E0%B8%87-%E0%B8%AA%E0%B8%A1%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%AB%E0%B8%A5%E0%B8%B1%E0%B8%81-%E0%B8%95%E0%B9%89%E0%B8%AD%E0%B8%87%E0%B9%81%E0%B8%A2%E0%B8%81%E0%B8%AA%E0%B8%B2%E0%B8%A1%E0%B8%A3%E0%B8%B0%E0%B8%94%E0%B8%B1%E0%B8%9A">§25.2–5</a> / <a href="docs/core/07_artifacts/gates/uet_foundation_compatibility_decision.json">compatibility decision</a></td>
+</tr>
+<tr>
+<td>Questions Answered introduction</td>
+<td><code>Physics students and researchers often search for these questions. UET provides Python-verified answers:</code></td>
+<td><code>Physics students and researchers often search for these questions. The table preserves historical UET proposals, not currently verified answers; each requires its topic-specific evidence and claim review:</code></td>
+<td>คงคำถามและเนื้อหาทุกแถวเป็น historical proposals; ไม่อ้าง Python check เท่ากับ physical proof</td>
+<td><a href="docs/topics/For%20Work/04_Claim_and_Evidence_Rubric.md">claim rubric</a> / <a href="docs/core/07_artifacts/gates/uet_foundation_dependency_gate.json">foundation gate</a></td>
+</tr>
+</tbody>
+</table>
+</body></html>

@@ -1,0 +1,544 @@
+<!doctype html><html lang="th"><meta charset="utf-8"><meta name="viewport" content="width=device-width">
+ <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; img-src data:">
+ <title>Local Markdown preview</title><style>
+ *{box-sizing:border-box}body{font-family:"Leelawadee UI","Segoe UI",sans-serif;margin:24px auto;max-width:1220px;padding:0 24px;color:#20252b;background:#fff;line-height:1.65}
+ h1,h2,h3,h4{line-height:1.35;margin-top:30px}h2{border-bottom:1px solid #d8dee4;padding-bottom:8px}
+ p{margin:12px 0}table{border-collapse:collapse;width:100%;font-size:14px;line-height:1.6;margin:20px 0}
+ th,td{border:1px solid #d0d7de;padding:9px 12px;text-align:left;vertical-align:top;overflow-wrap:anywhere}th{background:#f4f6f8}
+ code{background:#eef1f4;font-family:Consolas,monospace;font-size:.89em;overflow-wrap:anywhere;white-space:normal}
+ pre{padding:15px;background:#f4f6f8;overflow:auto}pre code{white-space:pre}
+ blockquote{border-left:4px solid #b7c5d3;margin:18px 0;padding:0 16px;color:#485466}
+ a{color:#0969da;text-decoration:none}hr{border:0;border-top:1px solid #d0d7de}
+ .preview{padding:12px;background:#fff8c5;border:1px solid #d4a72c;font-size:13px}
+ </style><body><div class="preview">Local Markdown preview only — not a Jekyll / GitHub Pages build. External images blocked. Source: docs/core/README.md</div><h1 id="️-core--uet-mathematical-engine">⚙️ Core — UET Mathematical Engine</h1>
+<!-- UET-RESEARCH-RETROSPECTIVE: 2026-10-19; navigation notice, not a physics gate -->
+<blockquote>
+<p><strong>ทบทวนก่อนวิจัยต่อ — 19 ต.ค. 2026:</strong> ก่อนเพิ่มสมการ ให้ตรวจความหมาย หน่วย lineage และคู่เทียบ; foundation ยังมี blockers ตาม gates เฉพาะข้ออ้าง อ่าน <a href="../meta/UET_RESEARCH_RETROSPECTIVE.md">รายงานข้อผิดพลาดและบทเรียน UET</a> โดยเฉพาะข้อ R01–R18 และลำดับแก้ใน §8 ก่อนขยายงาน สถานะจริงยังอ้างอิง artifact/gate ของเส้นทางนั้น</p>
+</blockquote>
+<blockquote>
+<p>Foundation-first status: This README contains historical/legacy engine wording and is
+not the controlling claim source. Current equation status is controlled by
+<a href="./AGENTS.md">docs/core/AGENTS.md</a>, the equation registry, and the foundation dependency gate.
+The legacy statement that C universally means mass or that I is a universal physical field
+is not accepted by the current research protocol.</p>
+</blockquote>
+<h2 id="current-foundation-contract">Current foundation contract</h2>
+<p>The legacy tables below are retained for historical compatibility. For current equation
+work, use this contract:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Symbol</th>
+<th style="text-align:left">Current status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">C</td>
+<td style="text-align:left">system-state coordinate with lane-specific physical mapping; not universally mass</td>
+</tr>
+<tr>
+<td style="text-align:left">Phi</td>
+<td style="text-align:left">effective space-response variable; not a metric or substance</td>
+</tr>
+<tr>
+<td style="text-align:left">Pi</td>
+<td style="text-align:left">time derivative of Phi</td>
+</tr>
+<tr>
+<td style="text-align:left">R / I_trace</td>
+<td style="text-align:left">derived causal/history observable with no feedback in the new mode</td>
+</tr>
+<tr>
+<td style="text-align:left">mass, density, charge, stress-energy</td>
+<td style="text-align:left">separate standard-physics quantities or explicit lane mappings</td>
+</tr>
+</tbody>
+</table>
+<p>Current foundation artifacts:</p>
+<ul>
+<li><a href="01_contracts/UET_FOUNDATION_EQUATION_INVENTORY.md">Equation inventory</a></li>
+<li><a href="01_contracts/UET_FOUNDATION_CORRESPONDENCE_MATRIX.md">Correspondence matrix</a></li>
+<li><a href="08_history/research_notes/UET_FOUNDATION_COMPATIBILITY_AUDIT.md">Compatibility audit</a></li>
+<li><a href="01_contracts/UET_FOUNDATION_COMPATIBILITY_DECISION.md">Foundation compatibility decision</a></li>
+<li><a href="07_artifacts/gates/uet_legacy_variational_closure.json">Legacy variational closure audit</a></li>
+<li><a href="07_artifacts/archive/matter_space_causal_discretization_diagnostic.json">Matter-space causal discretization diagnostic</a></li>
+<li><a href="07_artifacts/archive/causal_discretization_repair_artifact.json">Causal discretization repair artifact</a></li>
+<li><a href="07_artifacts/verification/matter_space_causal_reference_energy_verification.json">Causal reference energy verification</a></li>
+<li><a href="07_artifacts/verification/matter_space_causal_discrete_gradient_verification.json">Causal Phi/Pi discrete-gradient verification</a></li>
+<li><a href="07_artifacts/verification/matter_space_causal_split_verification.json">Changing-C shared-ledger split verification</a></li>
+<li><a href="07_artifacts/archive/matter_space_causal_cone_compatibility.json">Changing-C causal-cone compatibility audit</a></li>
+<li><a href="01_contracts/MATTER_SPACE_FINITE_CONE_C_SPEC.md">Finite-cone C candidate specification</a></li>
+<li><a href="07_artifacts/archive/matter_space_causal_lane_comparison.json">Finite-cone C lane comparison artifact</a></li>
+<li><a href="01_contracts/UET_FOUNDATION_STATUS_AGGREGATE.md">Foundation status aggregate</a></li>
+<li><a href="07_artifacts/gates/uet_foundation_equation_inventory.json">Machine-readable inventory gate</a></li>
+<li><a href="07_artifacts/gates/uet_foundation_correspondence_matrix.json">Machine-readable correspondence matrix</a></li>
+<li><a href="07_artifacts/gates/uet_foundation_status_aggregate.json">Machine-readable aggregate status</a></li>
+<li><a href="08_history/research_notes/THOUGHT_EXPERIMENT_OBSERVATION_PAST_BEHAVIOR.md">Thought experiment: observation as past behavior</a></li>
+<li><a href="../UET_Documentation_Details/03_Core_Theory/relational-C-and-physical-mapping.md">Canonical C ontology and physical mapping</a></li>
+<li><a href="01_contracts/RELATIONAL_TWO_BODY_BASELINE_SPEC.md">Relational two-body baseline specification</a></li>
+<li><a href="07_artifacts/verification/relational_two_body_baseline_verification.json">Relational two-body baseline artifact</a></li>
+<li><a href="01_contracts/MASS_DENSITY_CORRESPONDENCE_SPEC.md">Mass-density correspondence specification</a></li>
+<li><a href="07_artifacts/correspondence/mass_density_correspondence_verification.json">Mass-density correspondence artifact</a></li>
+<li><a href="01_contracts/MATTER_INTERACTION_FORWARD_SPEC.md">Matter-to-interaction forward mapping specification</a></li>
+<li><a href="./07_artifacts/verification/matter_interaction_forward_verification.json">Matter-to-interaction forward mapping artifact</a></li>
+<li><a href="01_contracts/PERSISTENCE_ENERGY_DIAGNOSTIC_SPEC.md">Persistence-energy diagnostic specification</a></li>
+<li><a href="07_artifacts/verification/persistence_energy_diagnostic_verification.json">Persistence-energy diagnostic artifact</a></li>
+<li><a href="01_contracts/THERMAL_OBSERVABLE_BRIDGE_SPEC.md">Thermal observable bridge specification</a></li>
+<li><a href="07_artifacts/topic13/thermal_observable_bridge_verification.json">Thermal observable bridge artifact</a></li>
+<li><a href="07_artifacts/topic13/t13_nims_mp990448_force_displacement_reanalysis.json">Topic 13 NIMS harmonic heat-capacity reanalysis</a></li>
+<li><a href="08_history/update_logs/UET_MAIN_CORE_TOPIC13_INTEGRATION_2026-09-27_NIMS_FORCESET_REASSESSMENT.md">Topic 13 NIMS Core integration note</a></li>
+<li><a href="07_artifacts/topic13/t13_nims_mp990448_aa_stack_shear_instability.json">Topic 13 NIMS AA-like stack shear-mode diagnostic</a></li>
+<li><a href="08_history/update_logs/UET_MAIN_CORE_TOPIC13_INTEGRATION_2026-09-27_NIMS_AA_SHEAR_DIAGNOSTIC.md">Topic 13 NIMS structural-diagnostic Core integration note</a></li>
+<li><a href="02_equations/covariant/uet_curved_3p1_constraints.py">Curved 3+1 ADM constraint interface</a></li>
+<li><a href="07_artifacts/verification/curved_3p1_adm_constraint_interface_audit.json">Curved 3+1 ADM constraint verification</a></li>
+<li><a href="07_artifacts/gates/core_curved_3p1_parent_gate.json">Curved 3+1 parent dependency gate</a></li>
+<li><a href="02_equations/covariant/uet_curved_3p1_geometry.py">Curved 3+1 periodic geometry operator</a></li>
+<li><a href="07_artifacts/verification/curved_3p1_geometry_operator_verification.json">Curved 3+1 geometry verification</a></li>
+<li><a href="02_equations/covariant/uet_curved_3p1_adm_evolution.py">Curved 3+1 ADM evolution RHS</a></li>
+<li><a href="07_artifacts/verification/curved_3p1_adm_evolution_operator_verification.json">Curved 3+1 ADM evolution verification</a></li>
+<li><a href="07_artifacts/archive/curved_3p1_fixed_gauge_adm_hyperbolicity_no_go.json">Fixed-gauge ADM hyperbolicity no-go</a></li>
+<li><a href="01_contracts/CORE_CURVED_3P1_EVOLUTION_BRANCH_SPEC.md">Curved 3+1 evolution branch specification</a></li>
+<li><a href="02_equations/covariant/uet_curved_3p1_generalized_harmonic.py">Curved 3+1 generalized-harmonic principal system</a></li>
+<li><a href="07_artifacts/verification/curved_3p1_gh_principal_system_verification.json">Generalized-harmonic principal-system verification</a></li>
+<li><a href="07_artifacts/gates/curved_3p1_gh_branch_gate.json">Generalized-harmonic branch gate</a></li>
+<li><a href="02_equations/covariant/uet_curved_3p1_gw_detector_response.py">Curved 3+1 finite-frequency ideal GW detector-response operator</a></li>
+<li><a href="07_artifacts/verification/curved_3p1_gh_gw_detector_response_audit.json">Curved 3+1 GW detector-response audit</a></li>
+<li><a href="07_artifacts/verification/curved_3p1_gh_gauge_wave_tt_null_audit.json">Curved 3+1 evolved harmonic gauge-wave TT-null control</a></li>
+<li><a href="07_artifacts/verification/curved_3p1_gh_tt_sbp_sat_boundary_pilot.json">Curved 3+1 linear TT SBP-SAT non-periodic boundary pilot</a></li>
+<li><a href="07_artifacts/verification/curved_3p1_gh_full_u1_cpbc_slab_pilot.json">Curved 3+1 full-u1 GH boundary pilot</a></li>
+<li><a href="07_artifacts/verification/curved_3p1_gh_full_u1_max_diss_sat_control.json">Curved 3+1 full-u1 maximally dissipative SAT control</a></li>
+<li><a href="02_equations/covariant/uet_curved_3p1_gh_max_dissipative_sat.py">Curved 3+1 full-u1 maximally dissipative SAT operator</a></li>
+<li><a href="07_artifacts/verification/curved_3p1_gh_reduced_wave_boundary_comparator.json">Curved 3+1 reduced-wave boundary comparator</a></li>
+<li><a href="07_artifacts/verification/curved_3p1_gh_reduced_wave_sbp_sat_comparator.json">Curved 3+1 reduced-TT SBP-SAT energy comparator</a></li>
+<li><a href="07_artifacts/verification/curved_3p1_gh_krsw_two_face_common_norm.json">Curved 3+1 KRSW normal-incidence exact boundary audits</a></li>
+<li><a href="07_artifacts/verification/curved_3p1_gh_krsw_normal_incidence_slab_cycle.json">Curved 3+1 KRSW normal-incidence slab-cycle energy audit</a></li>
+</ul>
+<p><a id="current-response-realization"></a></p>
+<h3 id="current-response-realization--ตรวจถึง-23-ตุลาคม-2026">Current response realization — ตรวจถึง 23 ตุลาคม 2026</h3>
+<p>แหล่งสรุปคือ <a href="../meta/UET_THEORY_ARGUMENT.md#252-%E0%B8%84%E0%B8%B3%E0%B8%95%E0%B8%AD%E0%B8%9A%E0%B9%80%E0%B8%A3%E0%B8%B7%E0%B9%88%E0%B8%AD%E0%B8%87-%E0%B8%AA%E0%B8%A1%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%AB%E0%B8%A5%E0%B8%B1%E0%B8%81-%E0%B8%95%E0%B9%89%E0%B8%AD%E0%B8%87%E0%B9%81%E0%B8%A2%E0%B8%81%E0%B8%AA%E0%B8%B2%E0%B8%A1%E0%B8%A3%E0%B8%B0%E0%B8%94%E0%B8%B1%E0%B8%9A">Theory Argument §§25.2–5</a> ใน <strong>local source commit <code>1346edfc07c2d2f9eb2adbd5257e820fa186a37b</code></strong> บน <code>codex/research/source-backaction-discrimination</code> ไม่ใช่ release ใหม่หรือหลักฐานว่า public main ตรงกับ working copy แล้ว ส่วนนี้อธิบาย realization ล่าสุด ไม่ได้แทนที่ controller ของทุก Core family</p>
+<p><strong>Functional ไม่ใช่ kinetic law:</strong> Omega ระบุ cost/availability landscape ที่เลือก; variational derivatives ระบุ mu ของ landscape นั้น แต่ยังต้องเลือกกฎวิวัฒน์ mobility, conservation, sources, initial/boundary data และ measurement/readout แยก การหาอนุพันธ์ได้ถูกไม่พิสูจน์ว่าธรรมชาติเลือก functional หรือ coefficients เหล่านั้น</p>
+<h4 id="สมการที่ใช้จริงและสถานะ-opt-in">สมการที่ใช้จริงและสถานะ opt-in</h4>
+<p><code>matter_space_coupled_v1</code> ใช้ state <code>(C,Phi,Pi)</code> ใน normalized 1D prototype ตาม <a href="01_contracts/MATTER_SPACE_RESEARCH_SPEC.md">MATTER_SPACE_RESEARCH_SPEC</a> และ <a href="02_equations/matter_space/uet_matter_space.py">implementation</a>:</p>
+<pre><code class="language-text">Omega[C,Phi] = integral [
+    a_C*C^2/2 + b_C*C^4/4 + kappa_C*|grad C|^2/2
+  + a_Phi*Phi^2/2 + b_Phi*Phi^4/4 + kappa_Phi*|grad Phi|^2/2
+  - g*C^2*Phi/2
+] dx
+mu_C   = a_C*C + b_C*C^3 - kappa_C*lap(C) - g*C*Phi
+mu_Phi = a_Phi*Phi + b_Phi*Phi^3 - kappa_Phi*lap(Phi) - g*C^2/2
+
+C_t = -M_C*mu_C + J_C           # nonconserved control
+   or M_C*lap(mu_C) + J_C       # conserved branch, separate kinetic law
+Phi_t = Pi
+tau_Phi*Pi_t + Pi = -M_Phi*mu_Phi + J_Phi
+
+E = Omega + tau_Phi/(2*M_Phi)*integral Pi^2 dx
+R = G_ret * (sigma_C + sigma_Phi)  # derived trace, no feedback in v1
+</code></pre>
+<p>สูตรนี้ใช้ periodic/zero-flux boundaries ตาม spec และ coefficient domain ที่ประกาศ ไม่ใช่ SI energy/entropy/curvature contract ใน closed conserved lane ต้องมี <code>integral J_C dx=0</code>; ใน undriven case extended ledger มี <code>dE/dt=-integral(sigma_C+sigma_Phi)dx</code> ไม่ใช่อ้างว่า Omega ลดทุก step ในทุก driven/inertial model Source work ใช้ <code>P_C=integral mu_C*J_C dx</code> และ <code>P_Phi=integral Pi*J_Phi/M_Phi dx</code> ตาม additive-source convention นี้ ไม่ย้ายไปใช้กับ force/traction ports โดยไม่แปลงบัญชี</p>
+<p>โหมดนี้และ <code>legacy_variational_v1</code> เป็น <strong>opt-in</strong> ค่า default ใน <a href="01_contracts/units/uet_parameters.py">parameter source</a> ยังเป็น <strong><code>legacy_local</code></strong>; รอบนี้ไม่เปลี่ยนค่าใด การเปิดไฟล์ชื่อ master จึงไม่ระบุ model จนกว่าจะล็อก mode/config/source identity</p>
+<table>
+<thead>
+<tr>
+<th>วัตถุ</th>
+<th>บทบาทที่ต้องรักษา</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Legacy I</td>
+<td>independent initialized/evolving field ที่มี coupling กลับสู่ C ใน C/I mode ไม่ใช่ derived I_trace หรือ entropy สากล</td>
+</tr>
+<tr>
+<td>Phi</td>
+<td>effective response coordinate ที่มี dynamics; ไม่ใช่ metric, particle หรือ information substance</td>
+</tr>
+<tr>
+<td>Pi=Phi_t</td>
+<td>rate/initial datum คู่กับ Phi; ไม่ใช่สารอีกชนิด การเขียน first-order pair ไม่เพิ่มกลไกใหม่</td>
+</tr>
+<tr>
+<td>E, sigma</td>
+<td>extended normalized availability กับ dissipation; ไม่ใช่ physical energy/heat/entropy จนมี dimensional correspondence</td>
+</tr>
+<tr>
+<td>R / I_trace</td>
+<td>derived history output จาก sigma; ไม่มี feedback ไป C/Phi/Pi ใน v1 และไม่แทน complete state</td>
+</tr>
+<tr>
+<td>Observer record</td>
+<td>ผลจาก detector state + admitted input + measurement/processing operator; ไม่ใช่ R ทุกชนิดหรือ source state ทั้งหมด</td>
+</tr>
+</tbody>
+</table>
+<p>ระบบผู้วัดเป็น subsystem ได้เช่นกัน แต่ต้องประกาศ boundary/coupling: internal impact, signal transport, receiver effect และ source backaction เป็นคนละคำถาม การตรวจพบไม่แปลว่ามี reciprocal influence ที่สำคัญหรือสังเกต hidden state ได้ครบ การเปลี่ยน metadata การอ่านอย่างเดียวไม่เปลี่ยน source dynamics</p>
+<h4 id="ความสัมพันธ์ของรูปสมการและเงื่อนไขใช้แทนกัน">ความสัมพันธ์ของรูปสมการและเงื่อนไขใช้แทนกัน</h4>
+<table>
+<thead>
+<tr>
+<th>รูปที่เทียบ</th>
+<th>ความสัมพันธ์ / หลักที่ใช้</th>
+<th>ขอบเขตที่ไม่ตามมา</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Omega → mu_C,mu_Phi</td>
+<td>exact variational differentiation เมื่อใช้ functional/boundary/discrete operator เดิม</td>
+<td>ไม่เลือก kinetics หรือพิสูจน์ physical interpretation ให้เอง</td>
+</tr>
+<tr>
+<td>Phi/Pi pair ↔ second-order Phi</td>
+<td>exact rewrite เมื่อเก็บ Phi(t0),Pi(t0) และ sources เดิม</td>
+<td>ไม่อนุญาตให้ทิ้ง independent initial rate</td>
+</tr>
+<tr>
+<td>Smooth invertible coordinate map</td>
+<td>exact หาก push forward generator, mobility, sources และ readout ครบ</td>
+<td>C^2 สูญ sign ข้าม branches; nonlinear map ไม่รักษา constant mobility เอง</td>
+</tr>
+<tr>
+<td>tau_Phi→0 / stationary Phi_*(C)</td>
+<td>คนละ conditional reduction: overdamped evolution กับ static/adiabatic elimination</td>
+<td>tau=0 ยังได้ Phi_t=-M_Phi*mu_Phi+J_Phi ไม่ใช่ mu_Phi=0; ต้องตรวจ time scales/initial layer/history</td>
+</tr>
+<tr>
+<td>Legacy C/I ↔ C/Phi/Pi</td>
+<td>alternative models; unresolved full bridge ไม่ใช่ constant rename</td>
+<td>beta<em>C</em>I กับ -g<em>C^2</em>Phi/2 ต่าง parity/state dependence; สอง initial fields ไม่เท่ากับสาม</td>
+</tr>
+<tr>
+<td>Conserved ↔ nonconserved C</td>
+<td>คนละ kinetic law แม้ใช้ Omega เดียว</td>
+<td>conserved integral/equilibrium constraint ต่าง ไม่ใช่แค่ numerical precision</td>
+</tr>
+<tr>
+<td>State → R → observer record</td>
+<td>derived output และ measurement mapping ไม่ใช่ invertible state transform</td>
+<td>kernel/readout ไม่รับรอง complete observability หรือ feedback</td>
+</tr>
+<tr>
+<td>Response → rod comparator → first mode</td>
+<td>declared linear comparator และ projection/approximation</td>
+<td>§23 รับเฉพาะ steady narrow-band protocol; §24 ปฏิเสธ projected-state sufficiency สำหรับ prepared-history class ที่ระบุ</td>
+</tr>
+</tbody>
+</table>
+<p>อ่าน <a href="../meta/UET_THEORY_ARGUMENT.md#254-%E0%B8%95%E0%B8%A3%E0%B8%A7%E0%B8%88%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B9%80%E0%B8%8A%E0%B8%B7%E0%B9%88%E0%B8%AD%E0%B8%A1-ci-%E0%B8%81%E0%B8%B1%E0%B8%9A-cphipi-%E0%B9%84%E0%B8%A1%E0%B9%88%E0%B9%83%E0%B8%8A%E0%B9%88%E0%B9%81%E0%B8%84%E0%B9%88%E0%B9%80%E0%B8%9B%E0%B8%A5%E0%B8%B5%E0%B9%88%E0%B8%A2%E0%B8%99%E0%B8%8A%E0%B8%B7%E0%B9%88%E0%B8%AD">§25.4</a> สำหรับข้อโต้แย้ง/อนุมานและ <a href="../meta/UET_THEORY_ARGUMENT.md#255-%E0%B8%A3%E0%B8%B9%E0%B8%9B%E0%B8%AA%E0%B8%A1%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%97%E0%B8%B5%E0%B9%88%E0%B8%95%E0%B9%88%E0%B8%B2%E0%B8%87%E0%B8%81%E0%B8%B1%E0%B8%99-%E0%B9%83%E0%B8%8A%E0%B9%89%E0%B9%81%E0%B8%97%E0%B8%99%E0%B8%81%E0%B8%B1%E0%B8%99%E0%B9%84%E0%B8%94%E0%B9%89%E0%B8%A3%E0%B8%B0%E0%B8%94%E0%B8%B1%E0%B8%9A%E0%B9%84%E0%B8%AB%E0%B8%99">§25.5</a> สำหรับ relation domains เช่น stationary I elimination ให้ quadratic C correction เมื่อ kappa_I&gt;0 ส่วน Phi sector ให้ leading quartic correction ใกล้ C=0 เมื่อ a_Phi&gt;0,b_Phi&gt;0 ไม่ใช่การลบ dynamic memory และไม่พิสูจน์ว่าไม่มี nonlinear representation อื่นใดเชื่อมได้</p>
+<h4 id="ที่มาของ-coefficients-และสิ่งที่ยังไม่-derive">ที่มาของ coefficients และสิ่งที่ยังไม่ derive</h4>
+<table>
+<thead>
+<tr>
+<th>ชั้นที่มา</th>
+<th>ตัวอย่างในขอบเขตนี้</th>
+<th>สิ่งที่หลักฐานรองรับ</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Definition / identity</td>
+<td>Pi=Phi_t; นิยาม mu เป็น variational derivatives</td>
+<td>บทบาท/การเปลี่ยนรูปภายใน model ไม่กำหนด parameter กายภาพ</td>
+</tr>
+<tr>
+<td>Imported result</td>
+<td>โครง variational/gradient flow, relaxation และ conservation จากกรอบมาตรฐาน; Landauer bound ใน SI เมื่อเงื่อนไขตรง</td>
+<td>นำผลพร้อมเงื่อนไข ไม่ทำให้ coefficient ของ UET derive จากชื่อทฤษฎี</td>
+</tr>
+<tr>
+<td>Constitutive choice</td>
+<td>a,b,kappa,g; การเลือก M,tau, sources และ conserved/nonconserved law</td>
+<td>normalized model/control inputs ที่ต้องประกาศ origin/units แยก ไม่ใช่ universal constants</td>
+</tr>
+<tr>
+<td>Conditional derivation</td>
+<td>mu_C,mu_Phi และ extended ledger หลังเลือก functional/kinetics</td>
+<td>exact ภายใน assumptions; ไม่ย้อนพิสูจน์ที่มาของ functional</td>
+</tr>
+<tr>
+<td>Calibration / open physical anchor</td>
+<td>physical scale, material correspondence และ dimensional coefficients</td>
+<td>ต้องมี independent source/calibration กับ uncertainty; ยังไม่ปิดโดย symbolic audit หรือ fit เป้าหมาย</td>
+</tr>
+</tbody>
+</table>
+<p>normalized beta ของ C/I <strong>ไม่ใช่</strong> inverse temperature และไม่เท่ากับ k_B<em>T</em>ln(2) ซึ่งมีหน่วย joules ส่วนหลังเป็น Landauer process bound ในบริบทที่ใช้ได้ ไม่ derive g/beta/tau หรือมวลข้อมูลสากลให้เอง ดู <a href="08_history/research_notes/UET_FOUNDATION_COMPATIBILITY_AUDIT.md">scoped compatibility audit</a></p>
+<p><strong>ผลและ controller:</strong> <a href="../meta/UET_THEORY_ARGUMENT.md#233-uniform-certificate-%E0%B9%84%E0%B8%A1%E0%B9%88%E0%B9%83%E0%B8%8A%E0%B9%89%E0%B8%81%E0%B8%A3%E0%B8%B4%E0%B8%94%E0%B8%97%E0%B8%B5%E0%B9%88%E0%B8%9A%E0%B8%B1%E0%B8%87%E0%B9%80%E0%B8%AD%E0%B8%B4%E0%B8%8D%E0%B8%9C%E0%B9%88%E0%B8%B2%E0%B8%99%E0%B9%81%E0%B8%97%E0%B8%99%E0%B8%97%E0%B8%B1%E0%B9%89%E0%B8%87%E0%B8%8A%E0%B9%88%E0%B8%A7%E0%B8%87">§23.3</a> ให้ error bound &lt;0.9%&lt;1% ของ complex p/F_b และ x/F_b <strong>เทียบ full normalized reference</strong> ใน F_b-only steady band [0.99,1.01] ของ omega/omega_0 ไม่ใช่ physical accuracy; <a href="../meta/UET_THEORY_ARGUMENT.md#246-%E0%B8%84%E0%B8%B3%E0%B8%95%E0%B8%B1%E0%B8%94%E0%B8%AA%E0%B8%B4%E0%B8%99-%E0%B8%82%E0%B8%AD%E0%B8%9A%E0%B9%80%E0%B8%82%E0%B8%95-%E0%B9%81%E0%B8%A5%E0%B8%B0%E0%B8%88%E0%B8%B8%E0%B8%94%E0%B8%AB%E0%B8%A2%E0%B8%B8%E0%B8%94">§24.6</a> แสดง prepared-history ที่ projection นี้เก็บไม่ครบโดยใช้ smooth write/controlled wait/released read ไม่ได้เปลี่ยนผล steady เดิมหรือยืนยัน learning</p>
+<p><a href="07_artifacts/gates/uet_foundation_compatibility_decision.json">Compatibility decision</a> ยัง <code>FOUNDATION_NOT_CLOSED</code>; <a href="../topics/0.13_Thermodynamic_Bridge/calculation_contracts/energy_memory_cycle.json">cycle contract</a> ยัง review <code>INCOMPLETE</code> / physical correspondence <code>UNKNOWN</code> เฉพาะ declared path ไม่ครอบทุก family ช่อง physical map/หน่วย/source/preparation/detector uncertainty และข้อจำกัดใหม่เหนือ comparator ยังเปิดอยู่ Thermal helper bug ที่รายงานไว้ไม่ได้ซ่อมในรอบนี้และต้องทบทวนเฉพาะ claims ที่พึ่งมัน</p>
+<p>รายงาน §§23–25 อยู่ใน local source commit ที่ระบุ แต่ retrospective และ source/verifier สามไฟล์ที่รายงานชี้ยังไม่อยู่ใน tree ของ commit นั้น จึงไม่ใช่ complete public reproduction packet; ไม่อนุมานสถานะ remote หรือทำให้ลิงก์ที่เปิดได้ในเครื่องเท่ากับเผยแพร่แล้ว บันทึกงานที่ <a href="../topics/0.13_Thermodynamic_Bridge/UPDATE_LOG.md">Topic 13 UPDATE_LOG</a> / <a href="../../WORK_LEDGER/2026/2026-10-23.md">WORK_LEDGER</a> ผลสายนี้ไม่เปลี่ยนสถานะ curved 3+1 ด้านล่าง</p>
+<h2 id="current-curved-31-boundary-research">Current curved 3+1 boundary research</h2>
+<p>Recent Core work has closed several source-matched frozen-coefficient boundary-symbol lanes, without closing the full curved 3+1 parent:</p>
+<ul>
+<li>Zero normal shift: <a href="07_artifacts/verification/curved_3p1_gh_rinne_zero_shift_kreiss_symbol.json">Rinne Fourier-Laplace/Kreiss symbol</a>.</li>
+<li>Positive normal shift: <a href="07_artifacts/verification/curved_3p1_gh_rinne_positive_shift_kreiss_symbol.json">sampled positive-shift symbol lane</a>; closure is limited to the preregistered shift/frequency samples.</li>
+<li>Negative normal shift: <a href="07_artifacts/verification/curved_3p1_gh_rinne_negative_shift_kreiss_symbol.json">sampled symbol including the degenerate case</a> and <a href="07_artifacts/verification/curved_3p1_gh_rinne_negative_shift_no_uniform_beta_kreiss.json">no-go for one uniform Kreiss constant over the full negative-shift family</a>. The latter does not rule out a finite constant for each fixed shift.</li>
+<li>Exact negative-shift degeneracy: <a href="07_artifacts/verification/curved_3p1_gh_rinne_jordan_normalization.json">Jordan normalization audit</a> derives an ODE-consistent chain and nonzero determinant at <code>zeta=-beta</code> for <code>-1&lt;beta&lt;0</code>. The printed source normalization/determinant mismatch remains flagged; this does not close a complex-frequency inverse bound. See <a href="https://arxiv.org/abs/gr-qc/0606053">Rinne 2006</a>, Section 3.2.</li>
+<li>Low-frequency positive-real transfer: <a href="07_artifacts/verification/curved_3p1_gh_rinne_positive_real_joint_transfer_bound.json">finite uniform transfer bound</a>, which is mathematically finite but too loose to be a useful stability estimate.</li>
+<li>Source/state norm interface: <a href="07_artifacts/verification/curved_3p1_gh_rinne_norm_interface.json">norm-coordinate audit</a> maps the 30 source channels and 40 state components explicitly. Independent-component Euclidean and full-tensor Frobenius conventions differ by at most <code>sqrt(2)</code>, so the prior lane bound translates to <code>&lt;sqrt(2)*1e67</code> without making it practically useful.</li>
+<li>Tangential finite-grid comparison: <a href="07_artifacts/verification/curved_3p1_gh_tangential_cpbc_resolution_refinement.json">LGL resolution refinement</a> and <a href="07_artifacts/verification/curved_3p1_gh_tangential_characteristic_sat_control.json">weak-SAT control</a>. The growing modes belong to the tested differential-target discretization; the stable incoming-value SAT is a different boundary condition, so neither result alone decides continuum Rinne stability.</li>
+<li>Normal incidence: the <a href="07_artifacts/verification/curved_3p1_gh_krsw_normal_incidence_slab_cycle.json">exact slab-cycle audit</a> closes non-amplification for its restricted linear wave lane only.</li>
+</ul>
+<p>Still open at the parent level: full first-order GH constraint-preserving boundary evolution, tangential/corner treatment, and dimensional-observable mapping. The <a href="07_artifacts/gates/core_curved_3p1_parent_gate.json">Core parent gate</a> remains <code>PARTIAL</code>; no Gravity dependency or global claim is unlocked. The exact high-frequency endpoint matrix is now a lane-level result, but the zero-frequency extension and continuous finite-frequency transfer bound remain open.</p>
+<ul>
+<li>Complex-frequency endpoint screen: <a href="07_artifacts/verification/curved_3p1_gh_rinne_complex_frequency_screen.json">parent audit</a> checks zeta=0 approaches, glancing, Jordan degeneracy, and high frequency. The separate <a href="07_artifacts/verification/curved_3p1_gh_rinne_high_frequency_transfer_endpoint.json">high-frequency endpoint artifact</a> constructs the exact matrix limit <code>T_infinity=W_infinity*C_infinity^-1</code>; its determinant matches the analytic Eq. (123) asymptote and is nonzero for every fixed <code>-1&lt;beta&lt;0</code>. A 12-beta exploratory grid confirms matrix convergence numerically, while <code>||T_infinity||_2=1-beta</code> remains an unproved norm identity. The zero-frequency extension and continuous finite-frequency transfer bound remain open; the sweep is not preregistered or independent validation.</li>
+</ul>
+<blockquote>
+<p><strong>Historical engine layer for candidate UET equation families</strong>
+<strong>Version 0.9.0</strong> | Last Updated: 2026-01-13</p>
+</blockquote>
+<p><img src="https://img.shields.io/badge/Engine-UET_Master_Eq-blue" alt="Engine" />
+<img src="https://img.shields.io/badge/Axioms-12%2F12-brightgreen" alt="Coverage" />
+<img src="https://img.shields.io/badge/Status-Legacy-Claim-Controlled-yellow" alt="Status" />
+<img src="https://img.shields.io/badge/Tests-126_(98.4%25)-green" alt="Tests" /></p>
+<hr />
+<h2 id="-purpose">🎯 Purpose</h2>
+<p>This directory contains the <strong>computational core</strong> of the Unity Equilibrium Theory: candidate equation families, scoped comparators and solver implementations, not one closed physical engine for all 20 historically listed domains (from Galaxies to Quantum Mechanics).</p>
+<p><strong>Historical proposal:</strong> Nature is described here through a constrained-optimization interpretation, not an established universal law.</p>
+<blockquote>
+<p><em>The system state evolves to minimize the generalized energy functional $\Omega$.</em></p>
+</blockquote>
+<p><strong>The Value Equation:</strong></p>
+<blockquote>
+<p>$$\mathcal{V} = -\Delta\Omega$$
+<em>When disequilibrium decreases, the system gains Value.</em></p>
+</blockquote>
+<blockquote>
+<p>ข้อความและ Value equation เดิมคงไว้เป็น interpretation ของ selected functional ไม่ใช่ข้อพิสูจน์ว่า driven/inertial systems ต้องลด Omega ทุกขณะ หรือว่า improvement/learning/persistence ตามจากค่าลดลงนี้เสมอ Extended availability, physical energy conservation, heat และ entropy เป็นคนละบัญชี</p>
+</blockquote>
+<hr />
+<h2 id="legacy-master-equation-historical-form">Legacy master equation (historical form)</h2>
+<p>The following seven-term functional is retained as a legacy candidate implementation; it is not a closed physical derivation:</p>
+<p>$$
+\Omega[C,I,J] = \int d^3x \left[
+\underbrace{V(C)}<em>{\text{A1: Energy}} +
+\underbrace{\frac{\kappa}{2}|\nabla C|^2}</em>{\text{A3: Space/Memory}} +
+\underbrace{\beta C \cdot I}<em>{\text{A2: Info Coupling}} +
+\underbrace{\gamma_J (J</em>{in} - J_{out}) \cdot C}<em>{\text{A4: Semi-Open Exchange}} +
+\underbrace{W_N |\nabla \Omega|}</em>{\text{A5: Natural Will}} +
+\underbrace{\beta_U V_{game}}<em>{\text{A8: Dynamic Game}} +
+\underbrace{\lambda \Sigma (C_i - C_j)^2}</em>{\text{A10: Coherence}}
+\right]
+$$</p>
+<hr />
+<h2 id="-variable-definition">🔤 Variable Definition</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Symbol</th>
+<th style="text-align:left">Name</th>
+<th style="text-align:left">Mathematical Meaning</th>
+<th style="text-align:left">Physical Interpretation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><strong>C</strong></td>
+<td style="text-align:left">Relational interaction coordinate</td>
+<td style="text-align:left">State coordinate <code>C(x,t)</code></td>
+<td style="text-align:left">Current ontology; physical realization is lane-specific</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>I</strong></td>
+<td style="text-align:left">Lane-declared second sector</td>
+<td style="text-align:left">Legacy <code>I</code> label or declared field</td>
+<td style="text-align:left">Must be explicitly defined; <code>I_trace</code> is derived when used</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>J</strong></td>
+<td style="text-align:left">Flux Field</td>
+<td style="text-align:left">J_in - J_out</td>
+<td style="text-align:left">Open system energy exchange</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>V(C)</strong></td>
+<td style="text-align:left">Potential</td>
+<td style="text-align:left">legacy or lane-specific functional of <code>C</code></td>
+<td style="text-align:left">Cost/comparator over relational structure; units are lane-specific</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>κ</strong></td>
+<td style="text-align:left">Gradient coefficient</td>
+<td style="text-align:left">coefficient of <code>|∇C|²</code></td>
+<td style="text-align:left">Variation penalty; units must be closed per lane</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>β</strong></td>
+<td style="text-align:left">Coupling coefficient</td>
+<td style="text-align:left">coefficient of <code>C I</code></td>
+<td style="text-align:left">Not automatically <code>kT ln 2</code>; Landauer is an external bound when applicable</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>Ω</strong></td>
+<td style="text-align:left">Equilibrium Functional</td>
+<td style="text-align:left">∫[...] dx</td>
+<td style="text-align:left">Total disequilibrium (minimize this)</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>𝒱</strong></td>
+<td style="text-align:left">Value</td>
+<td style="text-align:left">-ΔΩ</td>
+<td style="text-align:left">Improvement per step</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>📖 <strong>Current C ontology</strong>: See <a href="../UET_Documentation_Details/03_Core_Theory/relational-C-and-physical-mapping.md">C as a Relational Interaction Variable</a>. The nearby legacy table is retained for provenance.</p>
+</blockquote>
+<hr />
+<h2 id="-engine-components">📄 Engine Components</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">File</th>
+<th style="text-align:left">Role</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><a href="02_equations/matter_space/uet_master_equation.py"><code>uet_master_equation.py</code></a></td>
+<td style="text-align:left"><strong>Legacy engine entry point</strong></td>
+<td style="text-align:left">Defines candidate Ω functionals and solver paths; not a universal physical law or single source of truth.</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="../scripts/core/runners/uet_matrix_engine.py"><code>uet_matrix_engine.py</code></a></td>
+<td style="text-align:left"><strong>The Solver</strong></td>
+<td style="text-align:left">Fast Tensor-based implementation for large-scale grids (3D Galaxies).</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="../scripts/core/runners/uet_matrix_engine.py"><code>uet_matrix_toolkit.py</code></a></td>
+<td style="text-align:left"><strong>The Tools</strong></td>
+<td style="text-align:left">Helper functions for visualization and matrix algebra.</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="01_contracts/correspondence/uet_gr_correspondence.py"><code>uet_4d_engine.py</code></a></td>
+<td style="text-align:left"><strong>Relativity</strong></td>
+<td style="text-align:left">Extension for 4D spacetime metrics and tensor operations.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="-documentation">📚 Documentation</h2>
+<p>| <a href="../UET_Documentation_Details/LEGACY_REPORTS/03_Evidence/DOMAIN_MAPPING.md"><code>../UET_Documentation_Details/LEGACY_REPORTS/03_Evidence/DOMAIN_MAPPING.md</code></a> | C/I ในแต่ละสาขา (6 domains) |
+| <a href="../UET_Documentation_Details/LEGACY_REPORTS/03_Evidence/VALUE_EQUATION.md"><code>../UET_Documentation_Details/LEGACY_REPORTS/03_Evidence/VALUE_EQUATION.md</code></a> | 𝒱 = -ΔΩ — สมการ Value |</p>
+<hr />
+<h2 id="-multi-domain-interpretation">🌐 Multi-Domain Interpretation</h2>
+<p>C และ I ในตารางเดิมเป็น lane-specific interpretations ของ shared template; ยังไม่มีหลักฐานว่าทุก domain เป็นสมการกายภาพเดียวกัน:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Domain</th>
+<th style="text-align:left">C =</th>
+<th style="text-align:left">I =</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><strong>Physics</strong></td>
+<td style="text-align:left">relational interaction coordinate; lane mapping required</td>
+<td style="text-align:left">lane-declared second sector; no universal dark-matter identity</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Neuroscience</strong></td>
+<td style="text-align:left">lane-specific mapping from interaction structure</td>
+<td style="text-align:left">lane-specific second sector</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Economics</strong></td>
+<td style="text-align:left">lane-specific mapping from interaction structure</td>
+<td style="text-align:left">lane-specific second sector</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Biology</strong></td>
+<td style="text-align:left">lane-specific mapping from interaction structure</td>
+<td style="text-align:left">lane-specific second sector</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Machine Learning</strong></td>
+<td style="text-align:left">lane-specific mapping from interaction structure</td>
+<td style="text-align:left">lane-specific second sector</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>📖 <strong>Full domain mapping</strong>: See <a href="../UET_Documentation_Details/LEGACY_REPORTS/03_Evidence/DOMAIN_MAPPING.md"><code>../UET_Documentation_Details/LEGACY_REPORTS/03_Evidence/DOMAIN_MAPPING.md</code></a></p>
+</blockquote>
+<hr />
+<h2 id="-validator-scripts">✅ Validator Scripts</h2>
+<p>These scripts check declared internal conditions (historically grouped under Axiom 11); they do not establish complete physical validation or override the foundation gates:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Script</th>
+<th style="text-align:left">Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><a href="./05_tests/"><code>05_tests/</code></a></td>
+<td style="text-align:left">Unit tests for core functions</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="./05_tests/"><code>validation/</code></a></td>
+<td style="text-align:left">Physics validation scripts</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="-navigation">🔗 Navigation</h2>
+<ul>
+<li><strong>🔙 <a href="../README.md">Research Root</a></strong></li>
+<li><strong>🧪 <a href="../topics/">Topics (Applications)</a></strong></li>
+<li><strong>📊 <a href="../UET_Documentation_Details/LEGACY_REPORTS/03_Evidence/DATA_SOURCE_MAP.md">Data Sources</a></strong></li>
+<li><strong>📖 <a href="../UET_Documentation_Details/LEGACY_REPORTS/99_Legacy/DOC_INDEX.md">Documentation Index</a></strong></li>
+</ul>
+<hr />
+<p><em>Unity Equilibrium Theory — Core Engine v0.9.0</em>
+<em>&quot;𝒱 = -ΔΩ — ระบบที่ลดความไม่สมดุล = ระบบที่สร้าง Value&quot;</em></p>
+<hr />
+<p><a id="wording-history-2026-10-23"></a></p>
+<h2 id="ภาคผนวก-ถ้อยคำที่ปรับในรอบนี้">ภาคผนวก: ถ้อยคำที่ปรับในรอบนี้</h2>
+<p>ตรวจ 23 ตุลาคม 2026 — ตารางนี้เก็บข้อความที่ถูกแทนเพื่อการทบทวน ไม่ใช่การนำคำอ้างเก่ากลับมารับรอง ข้อความ/ตัวเลข/สูตรส่วนอื่นคงไว้พร้อมคำกำกับขอบเขต ตารางแสดงเฉพาะ cell ที่เปลี่ยนเมื่อเนื้อหาแถวอื่นไม่เปลี่ยน; ไม่อาศัย Git history เพียงอย่างเดียว</p>
+<table>
+<thead>
+<tr>
+<th>ตำแหน่ง</th>
+<th>ข้อความเดิม</th>
+<th>ข้อความใหม่</th>
+<th>เหตุผล</th>
+<th>หลักฐาน/ขอบเขต</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Purpose / scope</td>
+<td><code>This directory contains the **computational core** of the Unity Equilibrium Theory. It is the &quot;Engine&quot; that solves the fundamental energy functional for all 20 physics domains (from Galaxies to Quantum Mechanics).</code></td>
+<td><code>This directory contains the **computational core** of the Unity Equilibrium Theory: candidate equation families, scoped comparators and solver implementations, not one closed physical engine for all 20 historically listed domains (from Galaxies to Quantum Mechanics).</code></td>
+<td>ไม่ใช้ engine family หนึ่งแทน physical closure ทุก domain; คงจำนวน 20 และขอบเขตประวัติ</td>
+<td><a href="../meta/UET_THEORY_ARGUMENT.md#252-%E0%B8%84%E0%B8%B3%E0%B8%95%E0%B8%AD%E0%B8%9A%E0%B9%80%E0%B8%A3%E0%B8%B7%E0%B9%88%E0%B8%AD%E0%B8%87-%E0%B8%AA%E0%B8%A1%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%AB%E0%B8%A5%E0%B8%B1%E0%B8%81-%E0%B8%95%E0%B9%89%E0%B8%AD%E0%B8%87%E0%B9%81%E0%B8%A2%E0%B8%81%E0%B8%AA%E0%B8%B2%E0%B8%A1%E0%B8%A3%E0%B8%B0%E0%B8%94%E0%B8%B1%E0%B8%9A">§25.2–5</a> / <a href="07_artifacts/gates/uet_foundation_compatibility_decision.json">foundation decision</a></td>
+</tr>
+<tr>
+<td>Purpose / optimization interpretation</td>
+<td><code>**The Rule:** Nature is constrained optimization.</code></td>
+<td><code>**Historical proposal:** Nature is described here through a constrained-optimization interpretation, not an established universal law.</code></td>
+<td>กฎ driven/inertial และ extended availability ไม่เท่ากับ universal Omega minimization; คง Value formula เดิม</td>
+<td><a href="../meta/UET_THEORY_ARGUMENT.md#252-%E0%B8%84%E0%B8%B3%E0%B8%95%E0%B8%AD%E0%B8%9A%E0%B9%80%E0%B8%A3%E0%B8%B7%E0%B9%88%E0%B8%AD%E0%B8%87-%E0%B8%AA%E0%B8%A1%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%AB%E0%B8%A5%E0%B8%B1%E0%B8%81-%E0%B8%95%E0%B9%89%E0%B8%AD%E0%B8%87%E0%B9%81%E0%B8%A2%E0%B8%81%E0%B8%AA%E0%B8%B2%E0%B8%A1%E0%B8%A3%E0%B8%B0%E0%B8%94%E0%B8%B1%E0%B8%9A">§25.2–5</a> / <a href="07_artifacts/gates/uet_foundation_compatibility_decision.json">foundation decision</a></td>
+</tr>
+<tr>
+<td>Multi-Domain Interpretation introduction</td>
+<td><code>C และ I มีความหมายต่างกันในแต่ละ domain — แต่สมการเดียวกัน:</code></td>
+<td><code>C และ I ในตารางเดิมเป็น lane-specific interpretations ของ shared template; ยังไม่มีหลักฐานว่าทุก domain เป็นสมการกายภาพเดียวกัน:</code></td>
+<td>shared template ไม่ทำให้ unit/ontology/kinetics/observable ทุก domain เท่ากัน</td>
+<td><a href="../meta/UET_THEORY_ARGUMENT.md#252-%E0%B8%84%E0%B8%B3%E0%B8%95%E0%B8%AD%E0%B8%9A%E0%B9%80%E0%B8%A3%E0%B8%B7%E0%B9%88%E0%B8%AD%E0%B8%87-%E0%B8%AA%E0%B8%A1%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%AB%E0%B8%A5%E0%B8%B1%E0%B8%81-%E0%B8%95%E0%B9%89%E0%B8%AD%E0%B8%87%E0%B9%81%E0%B8%A2%E0%B8%81%E0%B8%AA%E0%B8%B2%E0%B8%A1%E0%B8%A3%E0%B8%B0%E0%B8%94%E0%B8%B1%E0%B8%9A">§25.2–5</a> / <a href="07_artifacts/gates/uet_foundation_compatibility_decision.json">foundation decision</a></td>
+</tr>
+<tr>
+<td>Validator Scripts introduction</td>
+<td><code>These scripts ensure the engine adheres to fundamental physics limits (Axiom 11):</code></td>
+<td><code>These scripts check declared internal conditions (historically grouped under Axiom 11); they do not establish complete physical validation or override the foundation gates:</code></td>
+<td>internal checks ไม่แทน F0–F8 หรือ override parent blocker</td>
+<td><a href="../meta/UET_THEORY_ARGUMENT.md#252-%E0%B8%84%E0%B8%B3%E0%B8%95%E0%B8%AD%E0%B8%9A%E0%B9%80%E0%B8%A3%E0%B8%B7%E0%B9%88%E0%B8%AD%E0%B8%87-%E0%B8%AA%E0%B8%A1%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%AB%E0%B8%A5%E0%B8%B1%E0%B8%81-%E0%B8%95%E0%B9%89%E0%B8%AD%E0%B8%87%E0%B9%81%E0%B8%A2%E0%B8%81%E0%B8%AA%E0%B8%B2%E0%B8%A1%E0%B8%A3%E0%B8%B0%E0%B8%94%E0%B8%B1%E0%B8%9A">§25.2–5</a> / <a href="07_artifacts/gates/uet_foundation_compatibility_decision.json">foundation decision</a></td>
+</tr>
+</tbody>
+</table>
+</body></html>

@@ -1,0 +1,48 @@
+diff --git a/docs/scripts/audit/audit_uet_hyperbolic_phase_field_bridge.py b/docs/scripts/audit/audit_uet_hyperbolic_phase_field_bridge.py
+--- a/docs/scripts/audit/audit_uet_hyperbolic_phase_field_bridge.py
++++ b/docs/scripts/audit/audit_uet_hyperbolic_phase_field_bridge.py
+@@ -103,7 +103,7 @@
+ def _jsonable(value: Any) -> Any:
+     if isinstance(value, np.generic):
+         value = value.item()
+     if isinstance(value, float):
+-        if abs(value) <= 1.0e-12:
++        if abs(value) < 1.0e-12:
+             return 0.0
+         return float(f"{value:.12g}")
+     if isinstance(value, dict):
+diff --git a/docs/scripts/audit/audit_uet_o2_superfluid_transport.py b/docs/scripts/audit/audit_uet_o2_superfluid_transport.py
+--- a/docs/scripts/audit/audit_uet_o2_superfluid_transport.py
++++ b/docs/scripts/audit/audit_uet_o2_superfluid_transport.py
+@@ -103,7 +103,7 @@
+ def _jsonable(value: Any) -> Any:
+     if isinstance(value, np.generic):
+         value = value.item()
+     if isinstance(value, float):
+-        if abs(value) <= 1.0e-12:
++        if abs(value) < 1.0e-12:
+             return 0.0
+         return float(f"{value:.12g}")
+     if isinstance(value, dict):
+diff --git a/docs/scripts/audit/audit_uet_curved_3p1_adm_evolution.py b/docs/scripts/audit/audit_uet_curved_3p1_adm_evolution.py
+--- a/docs/scripts/audit/audit_uet_curved_3p1_adm_evolution.py
++++ b/docs/scripts/audit/audit_uet_curved_3p1_adm_evolution.py
+@@ -62,7 +62,7 @@
+ def _jsonable(value: Any) -> Any:
+     if isinstance(value, np.generic):
+         value = value.item()
+     if isinstance(value, float):
+-        if abs(value) <= 1.0e-12:
++        if abs(value) < 1.0e-12:
+             return 0.0
+         return float(f"{value:.12g}")
+     if isinstance(value, dict):
+@@ -97,7 +97,7 @@
+ def _stable_float(value: float) -> float:
+     """Canonicalize non-structural diagnostic floats across BLAS/LAPACK runtimes."""
+     value = float(value)
+-    if abs(value) <= 1.0e-12:
++    if abs(value) < 1.0e-12:
+         return 0.0
+     return float(f"{value:.12g}")
+
