@@ -5,6 +5,12 @@ replace research artifacts, proposal drafts, book manuscripts, or the daily work
 
 ## Core rule
 
+Keep research, supporting operations and historical book records distinct using
+the views in [README.md](README.md). Book literature reviews are not automatically
+research milestones. Since the 2026-11-03 relocation, this repository's book
+records describe history only; do not present them as current Superapp progress
+or access that separate project to assemble a Harness update.
+
 One source pack may produce many channel versions, but every version must point back to the
 same source pack and must preserve its process stage and claim boundary.
 

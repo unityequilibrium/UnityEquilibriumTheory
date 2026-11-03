@@ -9,8 +9,11 @@ book manuscripts.
 - Work may happen at any time and should be recorded in the relevant ledger or source file.
 - Research receives a short weekly pulse check; a public post is optional unless there is a
   meaningful artifact, finding, or blocker change.
-- The five streams are reviewed together once per month:
-  `R` research, `P` policy / mega project, `S` Section / three-book series, `T` core theory book, and `B` sub-book.
+- Review current Harness work as `R` research, `P` policy / mega project and `O`
+  operations/tooling. Use the separate ledger views in [README.md](README.md).
+- Legacy `S`, `T` and `B` book categories are historical appendices only after
+  the 2026-11-03 relocation. Do not collect current manuscript or Superapp
+  progress, recreate its workspace, or count historical book entries as research.
 - If nothing materially changed, write `No material change` and retain the current stage.
 - Remove completed items from the active plan if desired, but keep the pack and source record.
 
@@ -18,11 +21,11 @@ book manuscripts.
 
 `INBOX` → `FRAMING` → `BLUEPRINT` → `DRAFT / BUILD` → `REVIEW` → `READY` → `PUBLISHED` → `MAINTENANCE`
 
-For book streams (`T` and `B`), use the shared book workflow in `uet_history/BOOK_WORKFLOW.md`
-for detailed W00-W18 gates, including research design, literature review, claim map,
-manuscript integrity, fact/citation, rights, proof, and maintenance. The monthly pack records the high-level stage and next controller;
-it does not replace the source register, claim map, verification spec, or update log.
-For the Section stream (`S`), use S00-S09 before or alongside the W00-W18 workflow of each child book.
+W00-W18 book gates and S00-S09 Section gates in older packs describe the former
+workspace. They are not current Harness controllers. Any historical book appendix
+must state its source date and link to an existing historical ledger record;
+otherwise mark it `Not maintained in Harness`. Do not infer a present book stage
+or fetch the separate project to complete the pack.
 The stage describes where the work is in its process. It does not mean that the work is
 scientifically validated or publication-ready.
 
@@ -32,9 +35,13 @@ scientifically validated or publication-ready.
 | --- | --- | --- |
 | `R` | Research | `docs/topics/`, `docs/meta/` |
 | `P` | Policy / mega project | `thailand_proposals/` |
-| `S` | Section / three-book series | registered Section parent workspace |
-| `T` | Core theory book | `uet_history/3_publish/books/00_uet_core_theory/` |
-| `B` | Sub-book | `uet_history/3_publish/books/` other book folders |
+| `O` | Operations / tooling | `.github/`, `services_and_experiments/`, repo documentation |
+| `S` | Historical Section record only | `WORK_LEDGER/BOOK_HISTORY.md`; original record date required |
+| `T` | Historical core-theory book record only | `WORK_LEDGER/BOOK_HISTORY.md`; no current manuscript access |
+| `B` | Historical sub-book record only | `WORK_LEDGER/BOOK_HISTORY.md`; no current manuscript access |
+
+These presentation codes are not ledger `Stream` values. `R` maps to research;
+`P` and `O` map to operations; legacy `S`/`T`/`B` refer to book-history only.
 
 ## Monthly pack
 
@@ -66,7 +73,21 @@ Overall note: `[one sentence describing the month without inflating readiness]`
 - Claim boundary: `[concept / blueprint / draft proposal / ready for review]`
 - Tags: `#policy #[stage] #work-process`
 
-#### `S` Section / three-book series
+#### `O` Operations / tooling
+
+- Work item: `[repository, CI, service or documentation change]`
+- This month: `[one completed change]`
+- Evidence: `[commit, PR, test result or none]`
+- Still open: `[one concrete blocker]`
+- Next action: `[one exact action]`
+- Boundary: `supporting work; not a research result`
+
+### Optional Historical Appendix
+
+Use the following legacy categories only for a dated historical explanation.
+They are not active writing tasks or permission to inspect the relocated project.
+
+#### `S` Historical Section / three-book series
 
 - Work item: `[Section and its three volumes]`
 - Current stage: `[S00-S09 stage]`
@@ -77,7 +98,7 @@ Overall note: `[one sentence describing the month without inflating readiness]`
 - Claim boundary: `[Section concept / blueprint / reviewed architecture / publication coordination]`
 - Tags: `#section #[stage] #writing-process`
 
-#### `T` Core theory book
+#### `T` Historical core theory book
 
 - Work item: `[chapter, section, or manuscript]`
 - Current stage: `[stage]`
@@ -88,7 +109,7 @@ Overall note: `[one sentence describing the month without inflating readiness]`
 - Claim boundary: `[conceptual framework / draft manuscript / reviewed manuscript]`
 - Tags: `#core-theory #[stage] #writing-process`
 
-#### `B` Sub-book
+#### `B` Historical sub-book
 
 - Work item: `[book and chapter]`
 - Current stage: `[stage]`

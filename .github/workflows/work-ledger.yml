@@ -1,0 +1,36 @@
+name: Work Ledger Separation
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - 'WORK_LEDGER/**'
+      - 'docs/scripts/maintenance/build_work_ledger_index.py'
+      - 'docs/scripts/maintenance/test_work_ledger_index.py'
+      - '.github/workflows/work-ledger.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'WORK_LEDGER/**'
+      - 'docs/scripts/maintenance/build_work_ledger_index.py'
+      - 'docs/scripts/maintenance/test_work_ledger_index.py'
+      - '.github/workflows/work-ledger.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  ledger-separation:
+    name: Ledger source coverage and separation
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Test classification, preservation and read-only check
+        run: python -m unittest discover -s docs/scripts/maintenance -p test_work_ledger_index.py -v
+      - name: Verify generated views match every daily source
+        run: python docs/scripts/maintenance/build_work_ledger_index.py --check
