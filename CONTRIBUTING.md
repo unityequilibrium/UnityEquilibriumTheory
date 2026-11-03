@@ -1,5 +1,10 @@
 # Contributing to Unity Equilibrium Theory
 
+> Workspace update (2026-11-03): the owner moved `uet_history` to the separate
+> Superapp project. History/book routing and links below describe the previous
+> layout, not a current Harness workspace. Do not recreate those paths or operate
+> on Superapp from Harness. Earlier published files remain in Git history.
+
 This repository contains research, theory history, book work, Thailand policy
 proposals, optional services, and repository operations. Contributions must keep
 each area understandable, traceable, and safe to publish.

@@ -1,3 +1,8 @@
+> **Workspace update (2026-11-03):** The owner moved `uet_history` out of Harness to the separate Superapp project. History and book files are no longer maintained in this repository; earlier versions remain in Git history. Historical references below do not authorize recreating the directory or accessing the destination from Harness.
+
+Warning: truncated output (original token count: 21922)
+Total output lines: 791
+
 # 🔬 Unity Equilibrium Theory (UET) v0.9.0: The "Thermodynamics of Ethics" Framework
 
 <!-- UET-RESEARCH-RETROSPECTIVE: 2026-10-19; navigation notice, not a physics gate -->
@@ -166,7 +171,6 @@ uet_harness/
 │   ├── knowledge_base/            ← Vector store & tensorizer
 │   ├── scripts/                   ← Runners, audits, data tools
 │   └── Docs/                      ← Framework standards & guides
-├── uet_history/                   ← Historical notes and prior UET writing archive
 ├── .github/                       ← Repository automation and GitHub metadata
 ├── CITATION.cff                   ← Citation metadata
 ├── CONTRIBUTING.md                ← Contribution notes
@@ -311,44 +315,7 @@ $$
 
 **EN:** choose one C law for the declared calculation; the two lines are alternatives, not simultaneous updates or mere numerical methods. The conserved lane preserves the declared integral when its source has zero net integral. Each spatial position has three state coordinates; the whole field is not just three numbers. Initial `C,Phi,Pi`, sources, coefficients and periodic/zero-flux boundaries must be specified. `Pi` is the rate paired with `Phi`, not a third substance: writing a second-order response as a first-order pair preserves its independent initial rate.
 
-**TH:** ต้องเลือกกฎ C หนึ่งแบบต่อการคำนวณ สองบรรทัดเป็นทางเลือก ไม่ใช่ใช้พร้อมกันหรือแค่เปลี่ยนวิธีคำนวณ แบบ conserved รักษาอินทิกรัลที่ประกาศเมื่อ source มีอินทิกรัลสุทธิเป็นศูนย์ แต่ละตำแหน่งมีสาม state coordinates ไม่ใช่ว่าทั้งสนามมีแค่สามตัวเลข ต้องระบุค่าเริ่มต้น `C,Phi,Pi`, sources, coefficients และขอบเขต periodic/zero-flux ส่วน `Pi` เป็นอัตราการเปลี่ยนที่คู่กับ `Phi` ไม่ใช่สารชนิดที่สาม การเขียนสมการอันดับสองเป็นคู่สมการอันดับหนึ่งยังต้องเก็บอัตราเริ่มต้นเดิม
-
-**EN — Ledger, not another independent field:** the selected kinetics gives the extended normalized availability below. With the declared constant coefficients, boundary conditions and additive-source convention, its continuum balance separates dissipation from source work; a finite numerical step still needs its own error check. `P_C = integral mu_C J_C dx` and `P_Phi = integral Pi J_Phi/M_Phi dx`; a force/traction port needs its own matching, not the same formula by name.
-
-**TH — บัญชี ไม่ใช่ field อิสระเพิ่ม:** kinetics ที่เลือกให้ extended normalized availability ด้านล่าง ภายใต้ coefficients คงที่ เงื่อนไขขอบเขต และ additive-source convention ที่ประกาศ บัญชี continuum แยก dissipation ออกจากงานของ source ส่วนผลรันที่ใช้ time step จำกัดยังต้องตรวจ error ของตัวเอง โดย `P_C = integral mu_C J_C dx` และ `P_Phi = integral Pi J_Phi/M_Phi dx` ถ้าใช้ force/traction port ต้องตรวจการจับคู่ใหม่ ไม่ใช่ยืมสูตรเพราะใช้ชื่อ source เหมือนกัน
-
-$$
-E=\Omega+\frac{\tau_\Phi}{2M_\Phi}\int\Pi^2\,dx,
-\qquad
-\frac{dE}{dt}=-\int(\sigma_C+\sigma_\Phi)\,dx+P_C+P_\Phi.
-$$
-
-**EN:** with zero sources this balance is non-increasing under its assumptions; it does not assert that `Omega` alone decreases in every driven/inertial run. `E,sigma` are not automatically joules, heat or thermodynamic entropy.
-
-**TH:** เมื่อไม่มี sources บัญชีนี้ไม่เพิ่มภายใต้สมมติฐานของมัน ไม่ได้กล่าวว่า `Omega` อย่างเดียวต้องลดทุกรอบที่มีแรงขับหรือ inertia และยังไม่ถือว่า `E,sigma` เป็นจูล ความร้อน หรือ thermodynamic entropy อัตโนมัติ
-
-<a id="current-master-information"></a>
-#### Where did I go? / I ไปอยู่ตรงไหน?
-
-| Symbol or context / ตัวแปรหรือบริบท | Role in the cited model / บทบาท | What it is not / สิ่งที่ไม่ใช่ |
-| --- | --- | --- |
-| Historical `I` in the Vision | Individualism/Isolation metaphor / คำตีความเชิงแนวคิด | Not a current universal definition of mass, information or latency / ไม่ใช่นิยามสากลปัจจุบันของมวล ข้อมูล หรือ latency |
-| Legacy C/I field `I` | Independently initialized/evolving field that couples back to C / field ที่มีค่าเริ่มต้นและพลวัต พร้อม coupling กลับสู่ C | Not automatically Shannon information, entropy, Phi or I_trace / ไม่เท่ากับปริมาณเหล่านั้นโดยชื่อ |
-| `C` | System-state coordinate with lane-specific mapping / coordinate ของสถานะที่ต้องแมปตาม lane | Not universally mass, light speed or energy / ไม่ใช่มวล ความเร็วแสง หรือพลังงานสากล |
-| `Phi` / Φ (Phi, not Ψ/Psi) | Effective response coordinate in this realization / coordinate การตอบสนองของ realization นี้ | Not a renamed, fully equivalent legacy I or a completed information definition / ไม่ใช่ I เดิมที่พิสูจน์ว่าเท่ากันครบแล้ว |
-| `Pi = Phi_t` | Response rate and initial datum / อัตราตอบสนองและค่าเริ่มต้นที่ต้องเก็บ | Not an information quantity merely because it retains dynamical history / ไม่เป็นปริมาณข้อมูลเพียงเพราะร่วมเก็บผลอดีต |
-| `R / I_trace` and observer record | Derived dissipation trace and separately declared measurement output / ร่องรอยจาก dissipation กับผลอ่านที่ต้องประกาศแยก | Not complete state or all information; R has no feedback in v1 / ไม่ใช่สถานะครบหรือข้อมูลทั้งหมด และ R ไม่มี feedback ใน v1 |
-
-**EN:** the legacy coupling is `beta*C*I`; the response coupling is `-g*C²*Phi/2`. They differ in state dependence and admissible initial data. With nonzero couplings and C held as the same coordinate, a constant rescaling `I=r*Phi` cannot make the full models identical. The C-to-Phi source uses C², so that source alone does not distinguish C's two signs; this is not a claim that every state or output loses sign. The information concept has not been disproved or silently moved into Phi: its mathematical correspondence remains a question to resolve.
-
-**TH:** coupling เก่าคือ `beta*C*I` ส่วน response คือ `-g*C²*Phi/2` ซึ่งขึ้นกับสถานะและต้องการค่าเริ่มต้นต่างกัน เมื่อ coupling ไม่เป็นศูนย์และคง C เป็น coordinate เดิม การแทน `I=r*Phi` ด้วยค่าคงที่ไม่ทำให้ทั้งแบบจำลองเท่ากัน แรงขับจาก C ไป Phi ใช้ C² จึงไม่แยกสองเครื่องหมายผ่านช่องทางนี้อย่างเดียว ไม่ได้หมายความว่าทุกสถานะหรือทุก output สูญเครื่องหมาย แนวคิดข้อมูลไม่ได้ถูกพิสูจน์ว่าผิดหรือถูกย้ายเข้า Phi เงียบ ๆ แต่ยังต้องปิดความสัมพันธ์ทางคณิตศาสตร์ให้ชัด
-
-
-**EN:** the historical three-term C/I sketch below is also shorter than the repaired legacy gradient-flow contract: that contract includes the I-gradient and quadratic I contributions. Its short display should not be mistaken for the full old model.
-
-**TH:** สูตร C/I สามเทอมที่เก็บไว้ด้านล่างก็สั้นกว่า legacy gradient-flow contract ที่ตรวจแก้แล้วเช่นกัน เพราะ contract นั้นยังมีส่วน gradient ของ I และส่วน quadratic ของ I ภาพสั้นเดิมจึงไม่ใช่รายละเอียดครบของแบบจำลองเก่า
-
-Sources / ต้นทาง: [response ontology and functional](docs/core/01_contracts/MATTER_SPACE_RESEARCH_SPEC.md), [implemented response operator](docs/core/02_equations/matter_space/uet_matter_space.py), [scoped legacy C/I compatibility audit](docs/core/08_history/research_notes/UET_FOUNDATION_COMPATIBILITY_AUDIT.md). The detailed relationship argument is working-only evidence at `docs/meta/UET_THEORY_ARGUMENT.md` §§25.2–5, local source commit `1346edfc07c2d2f9eb2adbd5257e820fa186a37b`; it is not included in the current public evidence packet. / รายงานความสัมพันธ์ละเอียดเป็นหลักฐานในเครื่องตาม path/commit นี้ ยังไม่รวมในชุดหลักฐานสาธารณะปัจจุบัน
+**TH:** ต้องเลือกกฎ C หนึ่งแบบต่อการคำนวณ สองบรรทัดเป็นทางเลือก ไม่ใช่ใช้พร้อมกันหรือแค่เปลี่ยนวิธีคำนวณ แบบ conserved รักษาอินทิกรัลที่ประกาศเมื่อ source มีอินทิกรัลสุทธิเป็นศูนย์ แต่ละตำแหน่งมีสาม state coordinates ไม่ใช่ว่าทั้งสนามมีแค่สามตัวเลข ต้องระบุค่าเริ่มต้น `C,Phi,Pi`, sources, coefficients และขอบเข…1922 tokens truncated…r](docs/core/02_equations/matter_space/uet_matter_space.py), [scoped legacy C/I compatibility audit](docs/core/08_history/research_notes/UET_FOUNDATION_COMPATIBILITY_AUDIT.md). The detailed relationship argument is working-only evidence at `docs/meta/UET_THEORY_ARGUMENT.md` §§25.2–5, local source commit `1346edfc07c2d2f9eb2adbd5257e820fa186a37b`; it is not included in the current public evidence packet. / รายงานความสัมพันธ์ละเอียดเป็นหลักฐานในเครื่องตาม path/commit นี้ ยังไม่รวมในชุดหลักฐานสาธารณะปัจจุบัน
 
 <a id="current-master-complexity"></a>
 #### Is it still simple? / ยังเรียบง่ายอยู่หรือไม่?

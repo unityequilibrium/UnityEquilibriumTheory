@@ -49,6 +49,10 @@ day-to-day agent work.
 
 ## Harness and Superapp boundary
 
+- On 2026-11-03 the owner moved `uet_history` out of Harness into the separate
+  Superapp project. Its history/book workflow and registry are no longer local
+  Harness controllers. References to those paths below are historical routing,
+  not instructions to recreate the workspace or inspect the destination.
 - Work performed in `uet_harness` must stay within the Harness workspace. Do not
   inspect, edit, run commands in, change settings for, commit, push, or otherwise
   operate on the separate `uet-superapp` project as part of Harness work.
