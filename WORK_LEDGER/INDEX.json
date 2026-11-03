@@ -1,6 +1,7 @@
 {
   "schema_version": 1,
   "boundary_date": "2026-11-03",
+  "generator_sha256": "b32005e4bdbf59da6681ae630fa1d9d4415c361f7523be18c8b52a86dc8c93e9",
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
     "sources": 80,
@@ -19,7 +20,7 @@
       "2026-08-14.md"
     ]
   },
-  "override_sha256": "4443dda98810894520bf07d40ecca8d0c82af4c0ab6d874af2c5bba531de32d3",
+  "override_sha256": "711689a8e2f25f28c10a7536ae173f713a204015e6eb940c97b93b78dbf9a8f0",
   "sources": [
     {
       "path": "2026/2026-07-04.md",

@@ -58,6 +58,15 @@ class ClassificationTests(unittest.TestCase):
         body = '\n'.join(f'{f}: recorded' for f in ['MAJOR_RESULT_CLOSURE', 'CONTROLLING_BLOCKER', 'CLAIM_BOUNDARY', 'EVIDENCE_HASHES'])
         self.assertEqual(ledger_index.classify(body)['stream'], 'research')
         self.assertEqual(ledger_index.classify('MAJOR_RESULT_CLOSURE: recorded')['stream'], 'review')
+        self.assertEqual(ledger_index.classify('```text\n' + body + '\n```')['stream'], 'review')
+
+    def test_embedded_wave_area_is_metadata_not_narrative(self):
+        self.assertEqual(ledger_index.classify('MAJOR_RESULT_CLOSURE: named lane. Area research-core; secondary result-artifacts.')['stream'], 'research')
+        self.assertEqual(ledger_index.classify('MAJOR_RESULT_CLOSURE: planning. Area repo-ops; secondary research-standards.')['stream'], 'operations')
+        self.assertEqual(ledger_index.classify('Next: go to Area research-core')['stream'], 'review')
+        self.assertEqual(ledger_index.classify('Area research-core; secondary result-artifacts.')['stream'], 'research')
+        self.assertEqual(ledger_index.classify('MAJOR_RESULT_CLOSURE: one lane\nCLOSED_FOR_LANE. Area research-core; secondary result-artifacts.\n\nNext action: review')['stream'], 'research')
+        self.assertEqual(ledger_index.classify('```text\nMAJOR_RESULT_CLOSURE: example. Area book-writing\n```')['stream'], 'review')
 
 
 class SourceTests(unittest.TestCase):
@@ -137,6 +146,11 @@ class SourceTests(unittest.TestCase):
             record = ledger_index.build(root)['records'][0]
             self.assertEqual(record['stream'], 'review')
             self.assertIn('stale_classification_override', record['flags'])
+            override['additional_reviewed_sha256'] = [record['entry_sha256']]
+            path.write_text(json.dumps({'schema_version': 1, 'records': [override]}))
+            self.assertEqual(ledger_index.build(root)['records'][0]['stream'], 'operations')
+            source.write_text('# Day\n## One\nAnother unreviewed change\n')
+            self.assertEqual(ledger_index.build(root)['records'][0]['stream'], 'review')
             path.write_text(json.dumps({'schema_version': 1, 'records': [override, override]}))
             with self.assertRaises(ValueError):
                 ledger_index.build(root)

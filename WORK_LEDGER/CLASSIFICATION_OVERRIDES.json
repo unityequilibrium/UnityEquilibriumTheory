@@ -5,18 +5,21 @@
     {
       "id": "2026/2026-08-21.md#public-boundary-baseline-checkpoint",
       "entry_sha256": "6fbcb0231f6c7e5e40b84f36d750d6e6ed27abf0bc73dd575f3bc095aee7b8f9",
+      "additional_reviewed_sha256": ["2822a0fbffdc0a96f9339637b62d9ced41feaa7927edea1bb37a61b8740d1a1f"],
       "stream": "operations",
       "reason": "The Policy change and Follow-up fields explicitly concern PR public-boundary rules and repository cleanup, not a research or manuscript result."
     },
     {
       "id": "2026/2026-09-15.md#2026-09-15--core-physical-migration-v3--wave-6i-o2-equation-family",
       "entry_sha256": "1b24a8125ab6ab93052805a130b8e01f4cdd2010932774282316797851384cf5",
+      "additional_reviewed_sha256": ["2ab9dec6487e592a757e3e908183721675157361c9eb23b39dfde246203ff216"],
       "stream": "operations",
       "reason": "Scope states source migration, organization and compatibility only; Moved lists code relocation and the public boundary explicitly denies physics promotion."
     },
     {
       "id": "2026/2026-09-15.md#2026-09-15--wave-6i-post-commit-metadata-consistency-correction",
       "entry_sha256": "970eac467d73007401916fa0cb268636ec7fd80e622b355f292ce1fbf17a272a",
+      "additional_reviewed_sha256": ["48bc1c29c09964a43bc7cef6471eb8c84e4a4fbf2eef163381ac52bbb23c2828"],
       "stream": "operations",
       "reason": "Scope and Corrected fields explicitly record migration control-plane and index synchronization after a commit, not a new physics result."
     },
@@ -25,6 +28,18 @@
       "entry_sha256": "b90b23947c95685874212ea752d9616db80021886979ca50f830047db1405549",
       "stream": "operations",
       "reason": "The entry records PR42 publication, remote SHA verification and CI results across several work areas; it is a publishing checkpoint rather than a research or writing wave."
+    },
+    {
+      "id": "2026/2026-10-04.md#completed-local-reconciliation-verification",
+      "entry_sha256": "088260f5181932814904c924b07b468c463b8d57c1c6541378afc96004e978a1",
+      "stream": "operations",
+      "reason": "The record describes scoped regression reproduction, restoring source bytes, .gitattributes whitespace exceptions and reconciliation checks; it does not claim a new independently validated scientific result."
+    },
+    {
+      "id": "2026/2026-10-19.md#pr-37-dependency-and-portable-lineage-repair",
+      "entry_sha256": "56582588837c5b9c5e9416a5f5b325ce0004f29f4c314ed04e09ae42c9842201",
+      "stream": "operations",
+      "reason": "The Correction, Imported and Packaged fields describe sparse-checkout diagnosis, dependency packaging and portable provenance repair; the record explicitly excludes new physical results and promotion."
     }
   ]
 }

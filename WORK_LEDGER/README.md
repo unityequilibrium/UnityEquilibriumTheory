@@ -83,6 +83,8 @@ Rare reviewed exceptions live in `CLASSIFICATION_OVERRIDES.json`, with the exact
 entry id/hash and a factual reason. This is metadata review, not external or
 scientific validation. A changed source invalidates the decision and returns it
 to review; never change source bytes just to make an override match.
+An explicitly reviewed hash variant may cover the same old text with different
+line endings; it is an exact allow-list, never a wildcard for future edits.
 
 Regenerate after adding a daily entry, changing source metadata or reviewing a
 classification. Commit source, reviewed exception and derived views together:

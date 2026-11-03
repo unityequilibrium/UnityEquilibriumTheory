@@ -54,6 +54,7 @@ def slug(title: str) -> str:
 
 def classify(body: str, title: str = "") -> dict:
     fields: dict[str, list[str]] = {}
+    visible_lines = []
     fenced = False
     for line in body.splitlines():
         if re.match(r"^\s*(`{3,}|~{3,})", line):
@@ -62,11 +63,18 @@ def classify(body: str, title: str = "") -> dict:
         if fenced:
             continue
         line = line.replace("**", "")
-        line = re.sub(r"^(\s*[-*]?\s*Area(?: id)?)\s+(?=`)", r"\1: ", line, flags=re.I)
+        line = re.sub(r"^(\s*[-*]?\s*Area(?: id)?)\s+(?=[`a-z])", r"\1: ", line, flags=re.I)
+        visible_lines.append(line)
         match = FIELD.match(line)
         if match:
             fields.setdefault(match[1].lower(), []).append(match[2])
     area_fields = fields.get("area", []) + fields.get("area id", [])
+    if not area_fields:
+        header = re.search(r"^MAJOR_RESULT_CLOSURE:([\s\S]*?)(?:\n\s*\n|\Z)", "\n".join(visible_lines), re.M)
+        if header:
+            embedded = re.search(r"\barea\s*:?\s+([^\n]+)", header[1], re.I)
+            if embedded:
+                area_fields.append(embedded[1])
     heading_area = re.match(r"^([a-z-]+)\s*/", title.lower())
     if not area_fields and heading_area and heading_area[1] in AREA_STREAM:
         area_fields = [heading_area[1]]
@@ -100,7 +108,7 @@ def classify(body: str, title: str = "") -> dict:
         stream, basis = "review", "insufficient_structured_metadata"
         flags.append("missing_or_unknown_primary_area")
     if stream == "review" and not areas and all(
-        re.search(rf"^{field}:\s*\S", body, re.M)
+        re.search(rf"^{field}:\s*\S", "\n".join(visible_lines), re.M)
         for field in ("MAJOR_RESULT_CLOSURE", "CONTROLLING_BLOCKER", "CLAIM_BOUNDARY", "EVIDENCE_HASHES")
     ):
         stream, basis = "research", "legacy_research_wave_fields"
@@ -210,7 +218,8 @@ def build(ledger: Path) -> dict:
         record = by_id.get(key)
         if record is None:
             continue  # A historical override may refer to another source revision.
-        if override["entry_sha256"] != record["entry_sha256"]:
+        accepted_hashes = [override["entry_sha256"], *override.get("additional_reviewed_sha256", [])]
+        if record["entry_sha256"] not in accepted_hashes:
             record["stream"] = "review"
             record["flags"].append("stale_classification_override")
             continue
@@ -219,6 +228,7 @@ def build(ledger: Path) -> dict:
                       classification_review=override["reason"])
     counts = Counter(r["stream"] for r in records)
     return {"schema_version": 1, "boundary_date": "2026-11-03",
+            "generator_sha256": digest(Path(__file__).read_bytes()),
             "scope": "daily ledger metadata only; not scientific validation or verified publication status",
             "summary": {"sources": len(sources), "entries": len(records),
                         "by_stream": dict(sorted(counts.items())),
