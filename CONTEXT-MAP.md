@@ -37,8 +37,12 @@ flowchart LR
 - Change service behavior only inside `services_and_experiments/`, with a
   service README and boundary status kept current.
 - Change retrieval/indexing code without changing canonical source files.
-- Use `WORK_LEDGER/` for repo-wide history and local `UPDATE_LOG.md` files for
-  topic or book wave history.
+- Use `WORK_LEDGER/` for repo-wide history and local topic `UPDATE_LOG.md` files
+  for research wave history. Book-wave records in Harness are historical only.
+- Use `WORK_LEDGER/RESEARCH.md` for research records and `BOOK_HISTORY.md` under
+  that folder for retired book/theory records; `OPERATIONS.md` keeps supporting
+  work separate. These are derived views over unchanged daily sources, not new
+  canonical workspaces. See the ledger guide for classification and checks.
 
 ## Canonical versus derived
 

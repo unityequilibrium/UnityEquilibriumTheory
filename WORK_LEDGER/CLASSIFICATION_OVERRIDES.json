@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "scope": "Metadata routing review only; not scientific or publication verification. Original ledger text remains unchanged.",
+  "records": [
+    {
+      "id": "2026/2026-08-21.md#public-boundary-baseline-checkpoint",
+      "entry_sha256": "6fbcb0231f6c7e5e40b84f36d750d6e6ed27abf0bc73dd575f3bc095aee7b8f9",
+      "stream": "operations",
+      "reason": "The Policy change and Follow-up fields explicitly concern PR public-boundary rules and repository cleanup, not a research or manuscript result."
+    },
+    {
+      "id": "2026/2026-09-15.md#2026-09-15--core-physical-migration-v3--wave-6i-o2-equation-family",
+      "entry_sha256": "1b24a8125ab6ab93052805a130b8e01f4cdd2010932774282316797851384cf5",
+      "stream": "operations",
+      "reason": "Scope states source migration, organization and compatibility only; Moved lists code relocation and the public boundary explicitly denies physics promotion."
+    },
+    {
+      "id": "2026/2026-09-15.md#2026-09-15--wave-6i-post-commit-metadata-consistency-correction",
+      "entry_sha256": "970eac467d73007401916fa0cb268636ec7fd80e622b355f292ce1fbf17a272a",
+      "stream": "operations",
+      "reason": "Scope and Corrected fields explicitly record migration control-plane and index synchronization after a commit, not a new physics result."
+    },
+    {
+      "id": "2026/2026-10-31.md#publication-completion",
+      "entry_sha256": "b90b23947c95685874212ea752d9616db80021886979ca50f830047db1405549",
+      "stream": "operations",
+      "reason": "The entry records PR42 publication, remote SHA verification and CI results across several work areas; it is a publishing checkpoint rather than a research or writing wave."
+    }
+  ]
+}

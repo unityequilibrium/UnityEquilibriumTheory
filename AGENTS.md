@@ -414,6 +414,17 @@ Suggested commit cadence:
 
 ### Repo work ledger and push checkpoints
 
+Use `WORK_LEDGER/README.md` and its separate Research, Book History and Operations
+views before reporting progress. Keep one canonical daily source, with explicit
+`Stream` and primary `Area` per new entry; scientific writing for a book is not
+automatically research-core work. Historical book entries remain source-linked
+history after the owner's relocation, not current Harness work or permission to
+inspect Superapp. Regenerate ledger views with
+`docs/scripts/maintenance/build_work_ledger_index.py` and run its read-only
+`--check` when daily sources or classifications change. Keep mixed/ambiguous
+records and duplicate-date sources visible; do not rewrite or discard history
+to improve counts. Index counts never promote scientific or publication status.
+
 Use the repo work ledger for every major UET workspace, not only research. The
 ledger lives at `WORK_LEDGER/` because it records the operating history of the
 whole repository.
