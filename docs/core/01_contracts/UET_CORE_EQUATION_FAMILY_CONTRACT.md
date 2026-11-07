@@ -1,6 +1,6 @@
 # UET Core Equation-Family Contract
 
-เอกสารนี้เป็นการลด code surface จาก 1,450 จุดให้เป็นโครงสร้างที่ตรวจได้ระดับโมดูล
+เอกสารนี้จัด code surface ให้เป็นโครงสร้างที่ตรวจได้ระดับโมดูล
 โดยไม่ถือว่าทุกบรรทัดในโค้ดเป็นสมการฟิสิกส์
 
 ผล machine-readable อยู่ที่
@@ -10,20 +10,20 @@
 
 ## Coverage
 
-- core code-surface files: `32`
-- module paths ที่ถูก assign: `32/32`
-- equation families: `9`
+- core code-surface files: `51` (ไม่มีไฟล์ inventory ที่ขาด owner)
+- module paths ที่ถูก assign: `54`
+- equation families: `11`
 - support/contract families: `3`
 - contract status: `BLOCKED` เพราะ upstream compatibility และ causal gate ยังไม่ผ่าน
 
-การ assign ครบ 32 โมดูลหมายถึงไม่มี implementation module หลุดจาก ownership แล้ว
+การ assign ครบสำหรับ inventory นี้หมายถึงไม่มี implementation module ที่ถูกค้นพบหลุดจาก ownership
 แต่ไม่ได้หมายความว่าสมการในทุกโมดูลถูกพิสูจน์แล้ว
 
 ## Equation families
 
 | Family | Standard counterpart | Unit lane | Mathematical status | Special-case status |
 |---|---|---|---|---|
-| Legacy master | effective free-energy/gradient flow | normalized/open | contradiction + conflict | not established |
+| Legacy master | internal effective free-energy/gradient flow | normalized | `legacy_variational_v1` conditionally closed; `legacy_local` quarantined, non-variational comparator | not established |
 | Matter-space | Landau-Ginzburg + damped response | normalized v1 | internal gates pass, causal gate fails | conditional only |
 | Trace | causal memory convolution | normalized v1 | internal comparator | Markovian limit conditional |
 | Covariant response | covariant response/scalar-tensor parent | natural candidate | conditional, not full GR | algebraic/local GR null only |
@@ -35,7 +35,7 @@
 
 ## Non-equation contracts
 
-- `parameter_contract`: mixed normalized/natural/SI policy; beta/Landauer semantics remain open
+- `parameter_contract`: mixed normalized/natural/SI policy; normalized beta is separate from the SI Landauer lower bound, with no universal conversion established
 - `observable_contract`: measurement operator and physical unit mapping remain open
 - `support_and_adapters`: solver/proof/validation code cannot make an independent physics claim
 
@@ -53,7 +53,7 @@
 หลัง assign ครบทุก core module เราพูดได้แม่นขึ้นว่า UET ไม่ได้มี “สมการเดียว” ที่ครอบคลุม
 ทุก topic ใน implementation ปัจจุบัน แต่มีหลาย equation families ที่สถานะต่างกันมาก:
 
-- legacy family มี conflict จริง
+- legacy canonical lane ปิดแบบมีเงื่อนไขใน normalized C/I contract; historical comparator ยังไม่ใช่ variational
 - matter-space และ covariant/O(2) families เป็น candidate ที่มีบาง gate ผ่าน
 - standard formulas ใน topic อื่นเป็น baselines/comparators
 - observables และ SI mapping ยังไม่ปิด

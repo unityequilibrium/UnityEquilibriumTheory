@@ -4,12 +4,12 @@
   "generator_sha256": "b32005e4bdbf59da6681ae630fa1d9d4415c361f7523be18c8b52a86dc8c93e9",
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
-    "sources": 73,
-    "entries": 784,
+    "sources": 74,
+    "entries": 785,
     "by_stream": {
       "book-history": 94,
       "operations": 112,
-      "research": 578
+      "research": 579
     },
     "exact_duplicates": 0,
     "review_entries": 2
@@ -381,6 +381,11 @@
       "path": "2026/2026-11-03.md",
       "sha256": "1aa48c671eef120a40225343aee0cfc171c2e1ca5313e49eda99b67786bdb12f",
       "entries": 2
+    },
+    {
+      "path": "2026/2026-11-07.md",
+      "sha256": "aebf062081135a066a2b6b0c2f70c668313bf5bd162a2a688bf3c6b86fa02c4c",
+      "entries": 1
     },
     {
       "path": "2026-08-14.md",
@@ -16032,6 +16037,26 @@
       "basis": "explicit_stream_and_area",
       "flags": [],
       "date": "2026-11-03",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-07.md#foundation-gate-and-public-documentation-synchronization",
+      "source": "2026/2026-11-07.md",
+      "anchor": "foundation-gate-and-public-documentation-synchronization",
+      "start_line": 3,
+      "end_line": 18,
+      "title": "Foundation gate and public documentation synchronization",
+      "entry_sha256": "9b5dfc856ea04776d895e1a41290f593e4f841507f79697444ceb59a1f747e89",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-07",
       "legacy_root_path": false
     },
     {

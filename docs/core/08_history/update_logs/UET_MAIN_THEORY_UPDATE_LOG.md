@@ -1,5 +1,26 @@
 # UET Main-Theory Closure Update Log
 
+## 2026-11-07 - Foundation status synchronization
+
+- Scope: reconcile the focused correspondence matrix, equation-family contract and
+  F0-F8 aggregate; no change to equations, recorded results or thresholds.
+- Evidence identity: source revision `1569bb8e9753eabad90df848ad8a730bbb282701`.
+  Git blobs: master implementation `d97fa059fa47a2533780a995138cc39972aa0b24`;
+  unit parameters `d6b792a605420ff48e6b35b669cf0f083ea20359`;
+  compatibility gate `6bd3fc156920c1b6308a95c300542d54a1cc2cc1`;
+  legacy closure `66b892503e19a33a08e12e8c15ab15311351ed8a`.
+- Verification: 26 targeted tests passed. Read-only compatibility and closure
+  checks reproduced the conditional normalized result and preserved the
+  non-variational `legacy_local` comparator. JSON and Markdown agree on 3
+  conditional gates and 6 blocked gates. The repository-wide foundation audit
+  still reports legacy registry paths, and the scientific-link check reports
+  snapshot drift also reproduced with the baseline family contract.
+- Claim boundary: foundation stays `BLOCKED`; the frozen-C reference is not a
+  pass for coupled matter-space. O(2) reduction, correspondence, units,
+  observables and external-data promotion remain open.
+- Next: resolve the existing registry/link drift separately before merging this
+  repair, and do not advance physical claims without the controlling evidence.
+
 <!-- calculation-completeness-adoption-v1:start -->
 ## 2026-10-17 - Calculation/observer contract adoption (methodological only)
 

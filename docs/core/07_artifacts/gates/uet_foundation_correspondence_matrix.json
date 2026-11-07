@@ -1,13 +1,13 @@
 {
   "schema_version": "1.0",
   "artifact": "uet_foundation_correspondence_matrix",
-  "generated_at": "2026-08-01",
+  "generated_at": "2026-11-07",
   "audit_status": "PASS",
   "matrix_status": "BLOCKED",
   "coverage": {
     "role": "focused critical-row correspondence matrix, not exhaustive code inventory",
     "selected_row_count": 19,
-    "full_inventory_artifact": "docs/core/artifacts/uet_foundation_equation_inventory.json",
+    "full_inventory_artifact": "docs/core/07_artifacts/gates/uet_foundation_equation_inventory.json",
     "inventory_gate_status": "BLOCKED",
     "compatibility_gate_status": "BLOCKED"
   },
@@ -23,13 +23,12 @@
       "BLOCKED": 1,
       "BLOCKED_IMPLEMENTATION_ORIGIN": 1,
       "COMPATIBLE_BASELINE_WITH_OPEN_CORRECTION": 1,
-      "COMPATIBLE_CONDITIONAL": 1,
+      "COMPATIBLE_CONDITIONAL": 2,
       "COMPATIBLE_CONDITIONAL_BUT_BLOCKED_NUMERICALLY": 1,
       "COMPATIBLE_CONDITIONAL_NATURAL_UNITS": 1,
       "COMPATIBLE_EMPIRICAL_RELATION": 1,
       "COMPATIBLE_STANDARD_BASELINE": 3,
       "COMPATIBLE_STANDARD_IDENTITY": 1,
-      "CONTRADICTION": 1,
       "OPEN_HEURISTIC_ANCHOR": 1,
       "OPEN_HEURISTIC_BRIDGE": 4,
       "OPEN_UNIT_AND_CONSTITUTIVE_MAP": 1,
@@ -109,7 +108,7 @@
         "topic_id": "0.13",
         "source": {
           "path": "docs/topics/0.13_Thermodynamic_Bridge/FORMULA_AUDIT.md",
-          "line": 14
+          "line": 621
         },
         "evidence_class": "STANDARD_OR_BENCHMARK",
         "proof_status": "source-backed identity/lower-bound benchmark",
@@ -129,7 +128,7 @@
         "topic_id": "0.13",
         "source": {
           "path": "docs/topics/0.13_Thermodynamic_Bridge/FORMULA_AUDIT.md",
-          "line": 20
+          "line": 627
         },
         "evidence_class": "REVIEW_REQUIRED",
         "proof_status": "illustrative benchmark, not external validation",
@@ -359,16 +358,16 @@
     },
     {
       "matrix_id": "uet.legacy.master_potential",
-      "lane": "core legacy master equation",
-      "standard_counterpart": "effective free-energy potential only if derivative pair closes",
-      "compatibility_status": "CONTRADICTION",
-      "uet_derivation_status": "LEGACY_IMPLEMENTATION_CONFLICT",
-      "special_case_status": "NOT_A_VALID_VARIATIONAL_LIMIT",
-      "reason": "coded potential and coded derivative have a measured residual of 1.025",
+      "lane": "legacy_variational_v1 (normalized); legacy_local (comparator)",
+      "standard_counterpart": "internal effective free-energy potential and radial derivative",
+      "compatibility_status": "COMPATIBLE_CONDITIONAL",
+      "uet_derivation_status": "INTERNAL_NORMALIZED_CONDITIONAL",
+      "special_case_status": "NOT_ESTABLISHED",
+      "reason": "Normalized legacy_variational_v1 only; legacy_local remains a quarantined non-variational comparator. No SI mapping or standard-theory special case established.",
       "inventory_record": {
         "topic_id": "core",
         "source": {
-          "path": "docs/core/artifacts/uet_foundation_compatibility_gate.json"
+          "path": "docs/core/07_artifacts/gates/uet_foundation_compatibility_gate.json"
         },
         "evidence_class": null,
         "proof_status": null,
@@ -385,7 +384,7 @@
         "old_theory_relation": "The old implementation is not globally variational, but its default behavior is preserved and a separately named canonical lane is available for variational checks.",
         "evidence": [
           {
-            "path": "docs/core/uet_master_equation.py",
+            "path": "docs/core/02_equations/matter_space/uet_master_equation.py",
             "kind": "source_contract",
             "details": {
               "potential_uses_squared_state": true,
@@ -427,7 +426,7 @@
       "inventory_record": {
         "topic_id": "core",
         "source": {
-          "path": "docs/core/artifacts/uet_foundation_compatibility_gate.json"
+          "path": "docs/core/07_artifacts/gates/uet_foundation_compatibility_gate.json"
         },
         "evidence_class": null,
         "proof_status": null,
@@ -444,7 +443,7 @@
         "old_theory_relation": "The candidate can contain standard gradient-flow and damped-response limits under explicit assumptions; it is not yet a validated physical replacement for a standard theory.",
         "evidence": [
           {
-            "path": "docs/core/artifacts/matter_space_variational_verification.json",
+            "path": "docs/core/07_artifacts/verification/matter_space_variational_verification.json",
             "kind": "artifact",
             "details": {
               "schema_version": "1.0",
@@ -524,7 +523,7 @@
       "inventory_record": {
         "topic_id": "core",
         "source": {
-          "path": "docs/core/artifacts/uet_foundation_compatibility_gate.json"
+          "path": "docs/core/07_artifacts/gates/uet_foundation_compatibility_gate.json"
         },
         "evidence_class": null,
         "proof_status": null,
@@ -541,7 +540,7 @@
         "old_theory_relation": "The standard relativistic O(2) condensate is a valid counterpart for this lane. It does not validate the legacy double-well as its action-derived EOS.",
         "evidence": [
           {
-            "path": "docs/core/artifacts/o2_finite_density_eos_verification.json",
+            "path": "docs/core/07_artifacts/verification/o2_finite_density_eos_verification.json",
             "kind": "artifact",
             "details": {
               "gates": {
@@ -571,7 +570,7 @@
             }
           },
           {
-            "path": "docs/core/artifacts/o2_eos_formula_audit.json",
+            "path": "docs/core/07_artifacts/correspondence/o2_eos_formula_audit.json",
             "kind": "artifact",
             "details": {
               "status": "WARN",

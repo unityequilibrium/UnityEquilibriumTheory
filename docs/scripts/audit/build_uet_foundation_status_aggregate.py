@@ -12,6 +12,9 @@ from typing import Any
 
 ROOT = Path(__file__).resolve().parents[3]
 OUT = ROOT / "docs/core/07_artifacts/gates/uet_foundation_status_aggregate.json"
+SUMMARY_DOC = ROOT / "docs/core/01_contracts/UET_FOUNDATION_STATUS_AGGREGATE.md"
+SUMMARY_START = "<!-- foundation-summary:start -->"
+SUMMARY_END = "<!-- foundation-summary:end -->"
 
 INPUTS = {
     "foundation_gate": ROOT / "docs/core/07_artifacts/gates/uet_foundation_dependency_gate.json",
@@ -219,19 +222,58 @@ def build_aggregate() -> dict[str, Any]:
     }
 
 
+def sync_summary(markdown: str, aggregate: dict[str, Any]) -> str:
+    if markdown.count(SUMMARY_START) != 1 or markdown.count(SUMMARY_END) != 1:
+        raise ValueError("Expected one generated foundation summary block")
+    before, _, rest = markdown.partition(SUMMARY_START)
+    _, end, after = rest.partition(SUMMARY_END)
+    if not end:
+        raise ValueError("Foundation summary markers are out of order")
+    summary = aggregate["gate_summary"]
+    counts = ", ".join(f"`{summary['status_counts'].get(status, 0)} {status}`"
+                       for status in ("BLOCKED", "PASS_CONDITIONAL"))
+    lines = [
+        SUMMARY_START,
+        f"- `audit_status`: `{aggregate['audit_status']}` (artifact audit only)",
+        f"- `foundation_status`: `{aggregate['foundation_status']}` (scientific stopping boundary)",
+        f"- Gate counts: {counts}",
+        "",
+        "| Gate | Status |",
+        "| --- | --- |",
+        *(f"| {gate['id']} | `{gate['status']}` |" for gate in summary["gates"]),
+        SUMMARY_END,
+    ]
+    return before + "\n".join(lines) + after
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--json", action="store_true")
-    parser.add_argument("--no-write", action="store_true")
+    mode = parser.add_mutually_exclusive_group()
+    mode.add_argument("--no-write", action="store_true")
+    mode.add_argument("--check", action="store_true", help="check both outputs without writing")
     args = parser.parse_args()
     try:
         aggregate = build_aggregate()
+        if not args.no_write:
+            markdown = SUMMARY_DOC.read_text(encoding="utf-8")
+            synced = sync_summary(markdown, aggregate)
+        if args.check:
+            committed = load(OUT)
+            if synced != markdown or {
+                key: value for key, value in committed.items() if key != "generated_at"
+            } != {
+                key: value for key, value in aggregate.items() if key != "generated_at"
+            }:
+                raise ValueError("Foundation aggregate JSON or Markdown is stale")
     except (OSError, ValueError, json.JSONDecodeError) as exc:
         print(f"audit_status=FAIL\nERROR: {exc}")
         return 1
-    if not args.no_write:
+    if not args.no_write and not args.check:
         OUT.parent.mkdir(parents=True, exist_ok=True)
-        OUT.write_text(json.dumps(aggregate, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+        OUT.write_text(json.dumps(aggregate, indent=2, ensure_ascii=False) + "\n", encoding="utf-8", newline="\n")
+        if synced != markdown:
+            SUMMARY_DOC.write_text(synced, encoding="utf-8", newline="\n")
     if args.json:
         print(json.dumps(aggregate, indent=2, ensure_ascii=False))
     else:

@@ -48,10 +48,13 @@ derive สูตรนั้นจากสมการหลัก
 
 ### สิ่งที่เป็น blocker จริง
 
-- `uet.legacy.master_potential`: potential กับ derivative ขัดกันเชิงคณิตศาสตร์
 - `T01-001`: 0.1 ยังเป็น formula scaffold จึงทดสอบ special case ไม่ได้
 - `T05-QCD-010`: formula audit รายงาน implementation/data-shape issue และ origin ของ correction ยังเปิด
 - `uet.matter_space.candidate`: derivative/ledger ผ่านภายใน แต่ causal leakage ยังทำให้ physical promotion blocked
+
+`uet.legacy.master_potential` ปิดแบบมีเงื่อนไขเฉพาะคู่ potential/derivative ใน
+`legacy_variational_v1` (normalized) ตาม [legacy closure](../07_artifacts/gates/uet_legacy_variational_closure.json).
+`legacy_local` ยังเป็น comparator ที่ไม่ใช่ variational และไม่ใช่หลักฐานว่าเป็น special case ของฟิสิกส์มาตรฐาน
 
 ## คำตอบเชิงทฤษฎีจาก matrix
 

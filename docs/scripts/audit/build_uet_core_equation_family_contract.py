@@ -12,6 +12,11 @@ from typing import Any
 
 
 ROOT = Path(__file__).resolve().parents[3]
+if str(ROOT) not in sys.path:
+    sys.path.insert(0, str(ROOT))
+
+from docs.scripts.audit.legacy_foundation_evidence import BOUNDARY, CLOSURE, legacy_family_status
+
 CODE_SURFACE_PATH = ROOT / "docs/core/07_artifacts/archive/uet_code_surface_inventory.json"
 COMPATIBILITY_PATH = ROOT / "docs/core/07_artifacts/gates/uet_foundation_compatibility_gate.json"
 MATTER_VERIFY_PATH = ROOT / "docs/core/07_artifacts/verification/matter_space_variational_verification.json"
@@ -102,14 +107,14 @@ FAMILIES = [
         "Legacy master functional and dynamics",
         ["docs/core/02_equations/matter_space/uet_master_equation.py"],
         {"C": "legacy normalized state label", "I": "legacy information field label", "V": "legacy velocity/value tuple label", "beta": "normalized coupling"},
-        "effective free-energy/gradient-flow model only after exact functional-derivative closure",
-        "normalized_or_legacy_open",
+        "internal effective free-energy/gradient flow in legacy_variational_v1",
+        "normalized legacy_variational_v1; legacy_local comparator",
         "legacy implementation with heuristic constitutive bridges",
-        "CONTRADICTION_AND_CONFLICT",
+        "UNVERIFIED",
         "NOT_ESTABLISHED",
-        "legacy comparator only; no universal physical interpretation",
-        ["docs/core/07_artifacts/gates/uet_foundation_compatibility_gate.json", "docs/core/07_artifacts/gates/master_equation_alignment_gate_v2.json"],
-        "repair potential/derivative pair, information operator declaration, and beta unit surface",
+        BOUNDARY,
+        ["docs/core/07_artifacts/gates/uet_foundation_compatibility_gate.json", "docs/core/07_artifacts/gates/master_equation_alignment_gate_v2.json", CLOSURE],
+        "close standard correspondence, SI units and observable mapping independently",
     ),
     family(
         "core.matter_space",
@@ -387,6 +392,7 @@ FAMILIES = [
 def build_contract() -> dict[str, Any]:
     code_surface = load(CODE_SURFACE_PATH)
     compatibility = load(COMPATIBILITY_PATH)
+    legacy_status = legacy_family_status(compatibility, load(ROOT / CLOSURE))
     matter = load(MATTER_VERIFY_PATH)
     gr = load(GR_VERIFY_PATH)
     o2 = load(O2_VERIFY_PATH)
@@ -405,6 +411,8 @@ def build_contract() -> dict[str, Any]:
     enriched: list[dict[str, Any]] = []
     for item in FAMILIES:
         current = dict(item)
+        if current["family_id"] == "core.legacy_master":
+            current["mathematical_compatibility_status"] = legacy_status
         current["module_paths"] = [canonical_ref(path) for path in item["module_paths"]]
         current["candidate_surface_count"] = sum(count_by_path.get(path, 0) for path in current["module_paths"])
         current["module_paths_exist"] = all(p(path).exists() for path in current["module_paths"])
@@ -459,7 +467,7 @@ def main() -> int:
         return 1
     if not args.no_write:
         OUTPUT.parent.mkdir(parents=True, exist_ok=True)
-        OUTPUT.write_text(json.dumps(contract, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+        OUTPUT.write_text(json.dumps(contract, indent=2, ensure_ascii=False) + "\n", encoding="utf-8", newline="\n")
     if args.json:
         print(json.dumps(contract, indent=2, ensure_ascii=False))
     else:

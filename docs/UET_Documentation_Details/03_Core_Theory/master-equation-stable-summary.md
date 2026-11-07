@@ -1,6 +1,6 @@
 ---
 title: "Master Equation Stable Summary"
-description: "A stable summary of the UET master equation promoted from legacy theory notes."
+description: "A conservative reading of the historical seven-term candidate template."
 ---
 
 # Master Equation Stable Summary
@@ -24,9 +24,11 @@ the symbol itself.
 See [C as a Relational Interaction Variable](./relational-C-and-physical-mapping.md) for the
 current ontology, condition/constraint/necessity distinction, and physical-observable gates.
 
-## Current promoted equation form
+## Historical seven-term candidate template
 
-The legacy core-theory notes repeatedly present UET around the following 7-term functional:
+The following functional records the historical template, not a closed or validated
+universal equation. For active lane contracts and blockers, see the
+[Foundation Status Aggregate](../../core/01_contracts/UET_FOUNDATION_STATUS_AGGREGATE.md).
 
 $$
 \Omega[C,I,J] =
@@ -59,7 +61,7 @@ current repository.
 It means this is the stable legacy form that motivated many later topic-specific
 implementations.
 
-## The seven promoted terms
+## The seven historical terms
 
 | Term | Symbol | Intended role | Legacy source language |
 | :-- | :-- | :-- | :-- |

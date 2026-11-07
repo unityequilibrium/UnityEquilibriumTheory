@@ -19,6 +19,11 @@ from typing import Any
 
 
 ROOT = Path(__file__).resolve().parents[3]
+if str(ROOT) not in sys.path:
+    sys.path.insert(0, str(ROOT))
+
+from docs.scripts.audit.legacy_foundation_evidence import BOUNDARY, CLOSURE, legacy_potential_finding
+
 INVENTORY_PATH = ROOT / "docs/core/07_artifacts/gates/uet_foundation_equation_inventory.json"
 COMPATIBILITY_PATH = ROOT / "docs/core/07_artifacts/gates/uet_foundation_compatibility_gate.json"
 OUTPUT = ROOT / "docs/core/07_artifacts/gates/uet_foundation_correspondence_matrix.json"
@@ -154,12 +159,12 @@ SELECTED_ROWS: dict[str, dict[str, Any]] = {
         "reason": "rho_vac=5.38e-10*beta is an anchor near an observed scale, not a Casimir or vacuum derivation",
     },
     "uet.legacy.master_potential": {
-        "lane": "core legacy master equation",
-        "standard_counterpart": "effective free-energy potential only if derivative pair closes",
-        "compatibility_status": "CONTRADICTION",
-        "uet_derivation_status": "LEGACY_IMPLEMENTATION_CONFLICT",
-        "special_case_status": "NOT_A_VALID_VARIATIONAL_LIMIT",
-        "reason": "coded potential and coded derivative have a measured residual of 1.025",
+        "lane": "legacy_variational_v1 (normalized); legacy_local (comparator)",
+        "standard_counterpart": "internal effective free-energy potential and radial derivative",
+        "compatibility_status": "UNVERIFIED",
+        "uet_derivation_status": "INTERNAL_NORMALIZED_CONDITIONAL",
+        "special_case_status": "NOT_ESTABLISHED",
+        "reason": BOUNDARY,
     },
     "uet.matter_space.candidate": {
         "lane": "core matter-space operator",
@@ -191,6 +196,7 @@ def load(path: Path) -> dict[str, Any]:
 def build_matrix() -> dict[str, Any]:
     inventory = load(INVENTORY_PATH)
     compatibility = load(COMPATIBILITY_PATH)
+    legacy_pair = legacy_potential_finding(compatibility, load(ROOT / CLOSURE))
     records = {row["formula_id"]: row for row in inventory.get("records", [])}
     missing_rows = [key for key in SELECTED_ROWS if key not in records and not key.startswith("uet.")]
     if missing_rows:
@@ -203,6 +209,9 @@ def build_matrix() -> dict[str, Any]:
             (item for item in compatibility.get("findings", []) if item.get("equation_family") == key),
             None,
         )
+        if key == "uet.legacy.master_potential":
+            core_finding = legacy_pair
+            definition = {**definition, "compatibility_status": legacy_pair["status"]}
         matrix_rows.append(
             {
                 "matrix_id": key,
@@ -266,7 +275,7 @@ def main() -> int:
         return 1
     if not args.no_write:
         OUTPUT.parent.mkdir(parents=True, exist_ok=True)
-        OUTPUT.write_text(json.dumps(matrix, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+        OUTPUT.write_text(json.dumps(matrix, indent=2, ensure_ascii=False) + "\n", encoding="utf-8", newline="\n")
     if args.json:
         print(json.dumps(matrix, indent=2, ensure_ascii=False))
     else:
