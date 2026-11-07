@@ -15,7 +15,9 @@ description: "Historical seven-term UET candidate template with current ontology
 
 ---
 
-## 📐 สมการหลัก (The 7-Term Functional)
+## แบบจำลองผู้สมัคร 7 เทอมในประวัติการพัฒนา
+
+สถานะการตรวจของแต่ละ lane อยู่ใน [Foundation Status Aggregate](../../core/01_contracts/UET_FOUNDATION_STATUS_AGGREGATE.md).
 
 สมการนี้เขียนอยู่ในรูปของ Functional (ฟังก์ชันนัล) $\Omega$ ที่ขึ้นอยู่กับตัวแปรหลัก 3 ตัว คือ $C$ (relational interaction coordinate), $I$ (lane-declared second-sector variable), และ $J$ (exchange/flux when dimensionally defined)
 

@@ -5,6 +5,7 @@ from docs.core.core_paths import canonical_artifact_path, repo_root
 
 import importlib.util
 from pathlib import Path
+import pytest
 
 
 ROOT = (repo_root() / "docs")
@@ -28,8 +29,37 @@ def test_matrix_keeps_standard_baseline_open_bridge_and_conflict_distinct():
     assert matrix["matrix_status"] == "BLOCKED"
     assert rows["T13-004"]["compatibility_status"] == "COMPATIBLE_STANDARD_IDENTITY"
     assert rows["EW-01"]["uet_derivation_status"] == "NOT_ESTABLISHED"
-    assert rows["uet.legacy.master_potential"]["compatibility_status"] == "CONTRADICTION"
+    legacy = rows["uet.legacy.master_potential"]
+    assert legacy["compatibility_status"] == legacy["core_compatibility_finding"]["status"] == "COMPATIBLE_CONDITIONAL"
+    assert legacy["special_case_status"] == "NOT_ESTABLISHED"
+    assert "legacy_local" in legacy["reason"] and "non-variational comparator" in legacy["reason"]
     assert rows["T01-001"]["special_case_status"] == "NOT_TESTABLE"
+
+
+@pytest.mark.parametrize("change", ["missing", "residual", "mode", "comparator", "implementation"])
+def test_legacy_matrix_refuses_mismatched_evidence(monkeypatch, change):
+    module = load_matrix_module()
+    load = module.load
+
+    def changed_load(path):
+        data = load(path)
+        if path == module.ROOT / module.CLOSURE:
+            pair = next(item for item in data["findings"] if item["finding_id"] == "legacy_potential_derivative_pair")
+            if change == "missing":
+                data["findings"].remove(pair)
+            elif change == "residual":
+                pair["metrics"]["canonical_finite_difference_max_absolute_residual"] = 0.0
+            elif change == "mode":
+                data["canonical_mode"] = "legacy_local"
+            elif change == "comparator":
+                pair["legacy_comparator"]["status"] = "PASS"
+            else:
+                data["evidence_inputs"]["master_equation"] = "wrong.py"
+        return data
+
+    monkeypatch.setattr(module, "load", changed_load)
+    with pytest.raises(ValueError, match="[Ll]egacy"):
+        module.build_matrix()
 
 
 def test_foundation_gate_preserves_normalized_subgates_without_physical_promotion():

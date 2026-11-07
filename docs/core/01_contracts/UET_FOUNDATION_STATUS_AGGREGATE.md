@@ -8,9 +8,24 @@ Regenerator: [`build_uet_foundation_status_aggregate.py`](../../scripts/audit/bu
 
 ## Current result
 
-- `audit_status`: `PASS`
-- `foundation_status`: `BLOCKED`
-- Gate counts: `7 BLOCKED`, `2 PASS_CONDITIONAL`
+<!-- foundation-summary:start -->
+- `audit_status`: `PASS` (artifact audit only)
+- `foundation_status`: `BLOCKED` (scientific stopping boundary)
+- Gate counts: `6 BLOCKED`, `3 PASS_CONDITIONAL`
+
+| Gate | Status |
+| --- | --- |
+| F0 | `PASS_CONDITIONAL` |
+| F1 | `PASS_CONDITIONAL` |
+| F2 | `BLOCKED` |
+| F3 | `BLOCKED` |
+| F4 | `BLOCKED` |
+| F5 | `PASS_CONDITIONAL` |
+| F6 | `BLOCKED` |
+| F7 | `BLOCKED` |
+| F8 | `BLOCKED` |
+<!-- foundation-summary:end -->
+
 - Scoped legacy C/I operator and beta semantics: conditionally closed
 - Global foundation: not closed
 
@@ -18,7 +33,7 @@ Regenerator: [`build_uet_foundation_status_aggregate.py`](../../scripts/audit/bu
 
 1. Matter-space causal response fails the pre-arrival leakage gate.
 2. The O(2)-to-legacy-double-well reduction fails its residual gate.
-3. Topic and code equation inventories remain incomplete for correspondence purposes.
+3. F0 inventory coverage is conditional with explicit quarantines; open standard correspondence rows still block F2.
 4. Code-only equation surfaces still require F1-F3 ontology, counterpart, and unit review.
 5. Downstream observable and real-data gates remain blocked.
 

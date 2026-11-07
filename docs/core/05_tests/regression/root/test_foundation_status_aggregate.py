@@ -1,6 +1,10 @@
 from docs.core.core_paths import repo_root
 import json
+import sys
+from collections import Counter
 from pathlib import Path
+
+from docs.scripts.audit import build_uet_foundation_status_aggregate as builder
 
 
 ROOT = repo_root()
@@ -30,6 +34,29 @@ def test_all_f0_to_f8_gates_are_explicit():
     assert [gate["id"] for gate in gates] == [f"F{i}" for i in range(9)]
     assert all(gate["status"] in {"BLOCKED", "PASS_CONDITIONAL"} for gate in gates)
     assert all(gate["controller"] for gate in gates)
+    assert {gate["id"] for gate in gates if gate["status"] == "PASS_CONDITIONAL"} == {"F0", "F1", "F5"}
+    assert artifact["gate_summary"]["status_counts"] == Counter(gate["status"] for gate in gates)
+    assert artifact["gate_summary"]["status_counts"] == {"PASS_CONDITIONAL": 3, "BLOCKED": 6}
+    assert gates[6]["status"] == "BLOCKED"
+    assert "reference lane=PASS" in gates[6]["controller"]
+
+
+def test_aggregate_check_rejects_drift_without_writing(tmp_path, monkeypatch):
+    monkeypatch.setattr(sys, "argv", ["aggregate", "--check"])
+    json_before = builder.OUT.read_bytes()
+    markdown_before = builder.SUMMARY_DOC.read_bytes()
+    assert builder.main() == 0
+    assert builder.OUT.read_bytes() == json_before
+    assert builder.SUMMARY_DOC.read_bytes() == markdown_before
+
+    stale = tmp_path / "stale.md"
+    bad = markdown_before.replace(b"`6 BLOCKED`", b"`7 BLOCKED`")
+    assert bad != markdown_before
+    stale.write_bytes(bad)
+    monkeypatch.setattr(builder, "SUMMARY_DOC", stale)
+    assert builder.main() == 1
+    assert stale.read_bytes() == bad
+    assert builder.OUT.read_bytes() == json_before
 
 
 def test_conditional_special_cases_preserve_claim_boundary():

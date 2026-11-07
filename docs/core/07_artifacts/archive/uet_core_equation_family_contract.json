@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "artifact": "uet_core_equation_family_contract",
-  "generated_at": "2026-09-16",
+  "generated_at": "2026-11-07",
   "audit_status": "PASS",
   "contract_status": "BLOCKED",
   "controlling_blocker": "core_code_surface_classification_or_upstream_compatibility_incomplete",
@@ -36,20 +36,18 @@
         "V": "legacy velocity/value tuple label",
         "beta": "normalized coupling"
       },
-      "standard_physics_counterpart": "effective free-energy/gradient-flow model only after exact functional-derivative closure",
-      "unit_lane": "normalized_or_legacy_open",
+      "standard_physics_counterpart": "internal effective free-energy/gradient flow in legacy_variational_v1",
+      "unit_lane": "normalized legacy_variational_v1; legacy_local comparator",
       "derivation_class": "legacy implementation with heuristic constitutive bridges",
-      "mathematical_compatibility_status": "CONTRADICTION_AND_CONFLICT",
+      "mathematical_compatibility_status": "COMPATIBLE_CONDITIONAL",
       "old_theory_special_case_status": "NOT_ESTABLISHED",
-      "claim_ceiling": "legacy comparator only; no universal physical interpretation",
+      "claim_ceiling": "Normalized legacy_variational_v1 only; legacy_local remains a quarantined non-variational comparator. No SI mapping or standard-theory special case established.",
       "evidence_paths": [
         "docs/core/07_artifacts/gates/uet_foundation_compatibility_gate.json",
-        "docs/core/07_artifacts/gates/master_equation_alignment_gate_v2.json"
+        "docs/core/07_artifacts/gates/master_equation_alignment_gate_v2.json",
+        "docs/core/07_artifacts/gates/uet_legacy_variational_closure.json"
       ],
-      "next_gate": "repair potential/derivative pair, information operator declaration, and beta unit surface",
-      "compatibility_paths": [
-        "docs/core/uet_master_equation.py"
-      ],
+      "next_gate": "close standard correspondence, SI units and observable mapping independently",
       "candidate_surface_count": 274,
       "module_paths_exist": true
     },
@@ -83,14 +81,6 @@
         "docs/core/07_artifacts/gates/matter_space_dependency_gate.json"
       ],
       "next_gate": "repair pre-arrival leakage and then define dimensional observable map",
-      "compatibility_paths": [
-        "docs/core/uet_matter_space.py",
-        "docs/core/uet_matter_space_causal.py",
-        "docs/core/uet_matter_space_characteristic.py",
-        "docs/core/uet_matter_space_finite_cone.py",
-        "docs/core/uet_matter_space_split.py",
-        "docs/core/uet_spatial.py"
-      ],
       "candidate_surface_count": 231,
       "module_paths_exist": true
     },
@@ -120,10 +110,6 @@
         "docs/core/07_artifacts/verification/matter_space_flux_phi_coupled_verification.json"
       ],
       "next_gate": "complete dimensional observable mapping and independently locked external comparison",
-      "compatibility_paths": [
-        "docs/core/uet_matter_space_flux_phi.py",
-        "docs/core/uet_matter_space_flux_telegraph.py"
-      ],
       "formula_ids": [
         "uet.matter_space_flux.conservation",
         "uet.matter_space_flux.relaxation",
@@ -163,9 +149,6 @@
         "docs/core/07_artifacts/correspondence/trace_kernel_formula_audit.json"
       ],
       "next_gate": "close compact-support and dimensional measurement operator",
-      "compatibility_paths": [
-        "docs/core/uet_trace.py"
-      ],
       "formula_ids": [
         "uet.trace.derived_observable"
       ],
@@ -206,13 +189,6 @@
         "docs/core/01_contracts/UET_GR_NONCLOSED_RESEARCH_SPEC.md"
       ],
       "next_gate": "add field-equation, Bianchi/Noether, metric PDE and initial-value verification",
-      "compatibility_paths": [
-        "docs/core/uet_covariant_balance.py",
-        "docs/core/uet_covariant_matter.py",
-        "docs/core/uet_covariant_nonclosed.py",
-        "docs/core/uet_covariant_reduction.py",
-        "docs/core/uet_covariant_response.py"
-      ],
       "candidate_surface_count": 185,
       "module_paths_exist": true
     },
@@ -242,9 +218,6 @@
         "docs/core/07_artifacts/gates/uet_main_theory_wave2_gate.json"
       ],
       "next_gate": "close lane-specific covariant coarse-graining, then curved 3+1 initial-value/constraint evolution and dimensional observables",
-      "compatibility_paths": [
-        "docs/core/uet_covariant_parent.py"
-      ],
       "formula_ids": [
         "uet.main_theory.covariant_parent"
       ],
@@ -281,9 +254,6 @@
         "docs/core/07_artifacts/verification/covariant_diffusive_current_verification.json"
       ],
       "next_gate": "close coefficient origin, Kubo relation and dimensional observable lane",
-      "compatibility_paths": [
-        "docs/core/uet_covariant_diffusion.py"
-      ],
       "formula_ids": [
         "uet.covariant_diffusion.frame_decomposition",
         "uet.covariant_diffusion.finite_relaxation_current",
@@ -324,10 +294,6 @@
         "docs/core/07_artifacts/gates/hyperbolic_phase_field_covariant_mapping_gate.json"
       ],
       "next_gate": "derive from declared action or keep permanently as external comparator",
-      "compatibility_paths": [
-        "docs/core/uet_hyperbolic_phase_field.py",
-        "docs/core/uet_hyperbolic_phase_field_bridge.py"
-      ],
       "candidate_surface_count": 108,
       "module_paths_exist": true
     },
@@ -358,10 +324,6 @@
         "docs/core/07_artifacts/archive/covariant_superfluid_transport_contract.json"
       ],
       "next_gate": "complete Kubo provenance, finite-T normal component and SI/observable map",
-      "compatibility_paths": [
-        "docs/core/uet_covariant_superfluid_transport.py",
-        "docs/core/uet_o2_finite_density_eos.py"
-      ],
       "candidate_surface_count": 104,
       "module_paths_exist": true
     },
@@ -391,10 +353,6 @@
         "docs/core/07_artifacts/gates/noether_phase_field_dependency_gate.json"
       ],
       "next_gate": "derive coarse-graining/gradient EFT and prove observable map without many-to-one ambiguity",
-      "compatibility_paths": [
-        "docs/core/uet_noether.py",
-        "docs/core/uet_noether_phase_field_map.py"
-      ],
       "formula_ids": [
         "uet.noether_mapping.frame_projected_charge_density",
         "uet.noether_mapping.affine_phase_coordinate",
@@ -437,9 +395,6 @@
         "docs/core/01_contracts/UET_GR_NONCLOSED_RESEARCH_SPEC.md"
       ],
       "next_gate": "connect each physical operator to a covariant action and transformation residual",
-      "compatibility_paths": [
-        "docs/core/uet_lorentz.py"
-      ],
       "candidate_surface_count": 97,
       "module_paths_exist": true
     },
@@ -466,9 +421,6 @@
         "docs/core/01_contracts/units/uet_parameters.py"
       ],
       "next_gate": "split normalized/SI APIs and close provenance for every physical coefficient",
-      "compatibility_paths": [
-        "docs/core/uet_parameters.py"
-      ],
       "candidate_surface_count": 47,
       "module_paths_exist": true
     },
@@ -494,9 +446,6 @@
         "docs/core/08_history/research_notes/UET_FOUNDATION_COMPATIBILITY_AUDIT.md"
       ],
       "next_gate": "define O[C,Phi,Pi,R], units, uncertainty, resolution and nuisance parameters",
-      "compatibility_paths": [
-        "docs/core/uet_observables.py"
-      ],
       "candidate_surface_count": 15,
       "module_paths_exist": true
     },
@@ -545,34 +494,6 @@
         "docs/core/07_artifacts/archive/uet_code_surface_inventory.json"
       ],
       "next_gate": "link formula-bearing support paths to an owning equation family or quarantine as legacy",
-      "compatibility_paths": [
-        "docs/core/mass_density_3d.py",
-        "docs/core/mass_density_amplitude.py",
-        "docs/core/mass_density_correspondence.py",
-        "docs/core/mass_density_dimensional.py",
-        "docs/core/matter_interaction_forward.py",
-        "docs/core/persistence_energy_diagnostic.py",
-        "docs/core/photon_observer_baseline.py",
-        "docs/core/relational_two_body_baseline.py",
-        "docs/core/reproducibility.py",
-        "docs/core/resource_selection_physical_cost_map.py",
-        "docs/core/resource_selection_thermal_bridge.py",
-        "docs/core/scientific_validation.py",
-        "docs/core/thermal_observable_bridge.py",
-        "docs/core/thermal_source_observable_map.py",
-        "docs/core/truth_auditor.py",
-        "docs/core/uet_base_solver.py",
-        "docs/core/uet_bug_hunter.py",
-        "docs/core/uet_data_orchestrator.py",
-        "docs/core/uet_glass_box.py",
-        "docs/core/uet_impact_effect.py",
-        "docs/core/uet_lite_engine.py",
-        "docs/core/uet_matrix_engine.py",
-        "docs/core/uet_matter_space_observable.py",
-        "docs/core/uet_references.py",
-        "docs/core/uet_resource_selection.py",
-        "docs/core/uet_viz.py"
-      ],
       "candidate_surface_count": 544,
       "module_paths_exist": true
     }
