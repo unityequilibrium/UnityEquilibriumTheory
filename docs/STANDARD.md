@@ -1,9 +1,10 @@
 # UET Research Standard v2
 
-> **สถานะเอกสาร: DRAFT รออนุมัติจากผู้เขียน (W1, 2026-11-08)**
-> เมื่ออนุมัติแล้ว เอกสารนี้เป็นมาตรฐานควบคุม**ฉบับเดียว**ของงานวิจัยใน Harness
-> แทน `docs/topics/For Work/` ทั้ง 29 ไฟล์ ซึ่งจะย้ายไป `docs/archive/standards_v1/`
-> เป็นประวัติแบบอ่านอย่างเดียว ไม่ลบ ไม่เขียนทับ
+> **สถานะเอกสาร: APPROVED — อนุมัติโดยผู้เขียน 2026-11-08 (W2)**
+> เอกสารนี้เป็นมาตรฐานควบคุม**ฉบับเดียว**ของงานวิจัยใน Harness
+> แทน `docs/topics/For Work/` ทั้ง 29 ไฟล์ ซึ่ง**ถูกแช่แข็งไว้ที่เดิม**เป็นประวัติแบบอ่านอย่างเดียว
+> (ไม่ย้าย เพราะ calculation contract เดิม 6 ฉบับล็อก hash ของไฟล์เหล่านั้นเป็น REQUIRED;
+> ห้ามแก้ไฟล์ในโฟลเดอร์นั้นอีก ยกเว้นประกาศ superseded)
 > Schema ที่เครื่องตรวจ: [`docs/standard/schema.json`](standard/schema.json)
 
 ## 0. หลักการ 5 ข้อ
@@ -202,8 +203,8 @@ Gate และ audit script เดิม (inventory, compatibility, aggregate, r
 
 | Wave | งาน |
 |---|---|
-| W1 | ร่างเอกสารนี้และ `schema.json` แล้วรออนุมัติ (สถานะปัจจุบัน) |
-| W2 | ติดตั้ง CI 3 ตัว, `requirements-research.txt`, marker `physics`, ย้าย For Work ไป archive, ลด `AGENTS.md` และ `docs/core/AGENTS.md` |
+| W1 | ร่างเอกสารนี้และ `schema.json` (เสร็จ) |
+| W2 | อนุมัติ, ติดตั้ง CI 3 ตัว, `requirements-research.txt`, marker `physics`, แช่แข็ง For Work ไว้ที่เดิม, ลด `AGENTS.md` และ `docs/core/AGENTS.md` |
 | W3 | Theory Card v1 ของ parent action |
 | W4 | Derivation check ด้วย sympy ของ parent action (ยืนยันโค้ดเดิม) |
 | W5 | Weak-field module (PPN γ, Yukawa α, λ) + physics tests |

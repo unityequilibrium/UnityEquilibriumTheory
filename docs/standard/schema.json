@@ -2,7 +2,7 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "urn:uet:research-standard:v2",
   "title": "UET Research Standard v2 records",
-  "description": "Schemas for docs/STANDARD.md. Validate a record against #/$defs/<kind>. DRAFT pending author approval (W1).",
+  "description": "Schemas for docs/STANDARD.md. Validate a record against #/$defs/<kind>. Approved by the author 2026-11-08 (W2).",
   "$defs": {
     "level": {
       "enum": ["L0_SPECULATIVE", "L1_CONSISTENT", "L2_CONFRONTED", "L3_REPLICATED", "FAILED"]

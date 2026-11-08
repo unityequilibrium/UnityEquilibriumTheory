@@ -1,0 +1,7 @@
+# Research dependencies for docs/STANDARD.md checks and physics tests.
+# Local interpreter: .venv/Scripts/python.exe
+jsonschema>=4.20
+numpy>=1.26
+scipy>=1.11
+sympy>=1.12
+pytest>=8.0
