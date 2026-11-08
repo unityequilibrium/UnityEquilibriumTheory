@@ -5,14 +5,14 @@
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
     "sources": 80,
-    "entries": 868,
+    "entries": 777,
     "by_stream": {
-      "book-history": 98,
-      "operations": 97,
-      "research": 673
+      "operations": 96,
+      "research": 673,
+      "review": 8
     },
     "exact_duplicates": 0,
-    "review_entries": 4
+    "review_entries": 12
   },
   "duplicate_dates": {
     "2026-08-14": [
@@ -34,13 +34,13 @@
     },
     {
       "path": "2026/2026-07-07.md",
-      "sha256": "0a09d34e70fc0e2ac14602d56b60651fdb96e68792d917ca40915c7a21a2509c",
+      "sha256": "efa1e480d9b066ae3b0717679ad773cffcec73837b703ceb21e34cb5a578df07",
       "entries": 1
     },
     {
       "path": "2026/2026-07-08.md",
-      "sha256": "903aad9bd15835f2a8e4a29e15214b2f92e54b681fb4ddba065cc292939e4c08",
-      "entries": 4
+      "sha256": "494960effff58914fde7a590bf1376c6a481942aea6e563ef956854e849069ad",
+      "entries": 1
     },
     {
       "path": "2026/2026-07-10.md",
@@ -54,8 +54,8 @@
     },
     {
       "path": "2026/2026-07-13.md",
-      "sha256": "4aa503441e159cb27ebfe32e238e8cef4f3567b861bdb42c032972aeb4a134ab",
-      "entries": 3
+      "sha256": "bdccf1ba44d7483ee465d4363995928c91e85073ba548362bf53e32ce8e79d02",
+      "entries": 1
     },
     {
       "path": "2026/2026-07-15.md",
@@ -64,8 +64,8 @@
     },
     {
       "path": "2026/2026-07-16.md",
-      "sha256": "39b4cf4d4f7e51139996fbd3dcdea3b3e266c2a675fd18a954c16db60b26d92c",
-      "entries": 7
+      "sha256": "aa39ac8c8cb8abb927681f4d7ec73ab7a8e28a73e99e6d0ac2a182e6c8c2f09e",
+      "entries": 6
     },
     {
       "path": "2026/2026-07-20.md",
@@ -84,18 +84,18 @@
     },
     {
       "path": "2026/2026-07-23.md",
-      "sha256": "2a748e35724a559c30e975f86c9feb2135c03a312aca4cd932397035e619b638",
-      "entries": 11
+      "sha256": "831996e0ee23cfbdd3409a4f5cef358bb5dd2e200ee2292d7c8ad0227a4dc79e",
+      "entries": 2
     },
     {
       "path": "2026/2026-07-24.md",
-      "sha256": "ca34c9eb41ebaea826333c8d24025fdc026f73b348c0b017339b26eaf6952bf3",
-      "entries": 11
+      "sha256": "908e20894012d2812ba0033e9e70f0d616c27768b07b6db96272febe542cdf57",
+      "entries": 1
     },
     {
       "path": "2026/2026-07-25.md",
-      "sha256": "f95f085f79f14f0b970649ed51f59e0e8fdfab1f78e702a827966581fadd6171",
-      "entries": 2
+      "sha256": "d2d93391e03880ba4a578f67eecc867f214911d202646279b4b94c50cfa832b5",
+      "entries": 1
     },
     {
       "path": "2026/2026-07-26.md",
@@ -109,13 +109,13 @@
     },
     {
       "path": "2026/2026-07-29.md",
-      "sha256": "c10d34cfb3aad97d4c580d66030fa37c1b03727c2f33fef31b1e7018f21834ec",
-      "entries": 5
+      "sha256": "6ebabe27e958e76717bbd7dc8bb29d4f455d2b369dd76043c7d2e40ecb7d592b",
+      "entries": 4
     },
     {
       "path": "2026/2026-07-30.md",
-      "sha256": "cc4976a230f5de8373e1839fe206649f30c407af16edebf0bf777d6e8c5395cd",
-      "entries": 12
+      "sha256": "334fe99d9d0f59be97a2c87faab3992c12af97ecb85238199ef6579cca727848",
+      "entries": 9
     },
     {
       "path": "2026/2026-08-01.md",
@@ -124,13 +124,13 @@
     },
     {
       "path": "2026/2026-08-02.md",
-      "sha256": "8f5777d045ab3ba850addad480d0540139d978ef52dc985b2d7413742a44f7a8",
-      "entries": 18
+      "sha256": "bce0853ec8402306f6e8078a93a807a321b40d22f3497d570ce35caeb8ddce46",
+      "entries": 1
     },
     {
       "path": "2026/2026-08-04.md",
-      "sha256": "52871e896ec2ad6eb29f8e046b8d43acd50e5d3ac2bb093f624caddbb0c27cec",
-      "entries": 14
+      "sha256": "1d38025a6de5a9e9292e05b42c392132c06e7277d483c00e8ea9035e3391fc4c",
+      "entries": 1
     },
     {
       "path": "2026/2026-08-08.md",
@@ -159,8 +159,8 @@
     },
     {
       "path": "2026/2026-08-13.md",
-      "sha256": "3347157019b104d01f5f7fdb48634ff2932aabc2050e9fb9a3905006bad0b751",
-      "entries": 40
+      "sha256": "9be4f9d2966a45c3b963b3f8c5f265b4cede11c090d82fd189f2d604992f01a7",
+      "entries": 39
     },
     {
       "path": "2026/2026-08-14.md",
@@ -189,8 +189,8 @@
     },
     {
       "path": "2026/2026-08-20.md",
-      "sha256": "5858aa7012f78045f4c6f1f64c13529ab4282d151f8c4d80926771fb00f72866",
-      "entries": 37
+      "sha256": "f113f0a023c1f8bcef032c2e954df30ff6cbcaef8e758252b3f2fbcae5ed9e02",
+      "entries": 36
     },
     {
       "path": "2026/2026-08-21.md",
@@ -199,8 +199,8 @@
     },
     {
       "path": "2026/2026-08-22.md",
-      "sha256": "64ebf308e1fc8fb24db09da3e0318e709c4cebfd43cab875d2eb3023b15f80a5",
-      "entries": 30
+      "sha256": "d18259158799684729690518a3c10b90a3181a69c415a01bdc283e1acdfbcd93",
+      "entries": 25
     },
     {
       "path": "2026/2026-08-23.md",
@@ -209,23 +209,23 @@
     },
     {
       "path": "2026/2026-08-24.md",
-      "sha256": "dac506a83da18f4ed9648cc8ecb3a143f5313b8273daf34bae2367cd133f8c4c",
-      "entries": 25
+      "sha256": "1f11af51f8a9d0c30aa5f74de50fa898d914c62d3ff4f05cf0df8ed1b69b7dde",
+      "entries": 16
     },
     {
       "path": "2026/2026-08-25.md",
-      "sha256": "1486abbfed68a7473a87af758640109aa319264a931ef24294b0b085ace551d2",
-      "entries": 9
+      "sha256": "959bcb25bb81dbc880b962d7c013e9fd182903e2391ae7612e3e60a6df090c55",
+      "entries": 6
     },
     {
       "path": "2026/2026-08-26.md",
-      "sha256": "2aad505dc064e9827b78388db957ebc5df52d96530b77d9bbf755d362f9d2f74",
-      "entries": 10
+      "sha256": "c3eede9d7fd3b2e9000b559595dee452f17db15552544a749ff240b382edb362",
+      "entries": 5
     },
     {
       "path": "2026/2026-08-28.md",
-      "sha256": "1d96af59295143e025130ff7c9d026a4b36b24dc6214de6235e2a6c4ae8b0b61",
-      "entries": 4
+      "sha256": "f2f3b5a6035e57200a8ab6315b0bfb2898dfa1e3fb9ab17d60df5dcc88b912df",
+      "entries": 3
     },
     {
       "path": "2026/2026-08-29.md",
@@ -254,8 +254,8 @@
     },
     {
       "path": "2026/2026-09-07.md",
-      "sha256": "d483952a9bcc7fdb7456a876e1c172e2276d135e4da729e06e79042243687fdf",
-      "entries": 3
+      "sha256": "7c41bcb48380cb1ee0f0929921c135f5f059b0b4e895712928bc541f298c8d95",
+      "entries": 1
     },
     {
       "path": "2026/2026-09-08.md",
@@ -319,8 +319,8 @@
     },
     {
       "path": "2026/2026-09-26.md",
-      "sha256": "c1c27f24cc90516bf7f46e6ae3cdff0211a5f94aaa3980248e9088c78de8008b",
-      "entries": 10
+      "sha256": "f1626a66a98a357846c1ab970998e38aa72950c42eeb68d82f3190bc8e3b4f93",
+      "entries": 9
     },
     {
       "path": "2026/2026-09-27.md",
@@ -329,8 +329,8 @@
     },
     {
       "path": "2026/2026-09-28.md",
-      "sha256": "158bb3c1b5fae68c6d497f2f883f3737d0dfbc5371646d9cce6a29fa01357388",
-      "entries": 3
+      "sha256": "0f18590185f574dc20ebf3829c3794e24f4718f90d6d700c9db139b792ae512b",
+      "entries": 1
     },
     {
       "path": "2026/2026-10-04.md",
@@ -414,8 +414,8 @@
     },
     {
       "path": "2026/2026-11-03.md",
-      "sha256": "e1588d98c926b65a69be8be68f882f7c4ef1c2964dbf889358702cc6bc99485b",
-      "entries": 2
+      "sha256": "8c9cf799645bab6e1c29a5ce5a55f15e635c6b2c6cff21456b3152085155d35a",
+      "entries": 1
     },
     {
       "path": "2026-08-14.md",
@@ -525,102 +525,40 @@
       "legacy_root_path": false
     },
     {
-      "id": "2026/2026-07-07.md#thailand-energy-contract-reform-policy-proposal",
+      "id": "2026/2026-07-07.md#unsectioned-record",
       "source": "2026/2026-07-07.md",
-      "anchor": "thailand-energy-contract-reform-policy-proposal",
-      "start_line": 3,
-      "end_line": 11,
-      "title": "Thailand Energy Contract Reform Policy Proposal",
-      "entry_sha256": "4c6867ff029180b9ba59250dcfc07f3e4ab5641c494ffbeb6e5eaaca66eb10b3",
-      "stream": "operations",
-      "areas": [
-        "thai-policy"
+      "anchor": "",
+      "start_line": 1,
+      "end_line": 2,
+      "title": "Work Ledger - 2026-07-07",
+      "entry_sha256": "efa1e480d9b066ae3b0717679ad773cffcec73837b703ceb21e34cb5a578df07",
+      "stream": "review",
+      "areas": [],
+      "related_streams": [],
+      "basis": "insufficient_structured_metadata",
+      "flags": [
+        "missing_or_unknown_primary_area",
+        "unsectioned_source"
       ],
-      "related_streams": [
-        "operations"
-      ],
-      "basis": "explicit_primary_area",
-      "flags": [],
       "date": "2026-07-07",
       "legacy_root_path": false
     },
     {
-      "id": "2026/2026-07-08.md#uet-history-public-skeleton-update",
+      "id": "2026/2026-07-08.md#unsectioned-record",
       "source": "2026/2026-07-08.md",
-      "anchor": "uet-history-public-skeleton-update",
-      "start_line": 3,
-      "end_line": 16,
-      "title": "uet-history public skeleton update",
-      "entry_sha256": "441bb8e2cbc118213d6d198c0c5ca081d78fe4d4714cfbee0a67809152e8aab0",
-      "stream": "book-history",
-      "areas": [
-        "theory-history"
+      "anchor": "",
+      "start_line": 1,
+      "end_line": 2,
+      "title": "2026-07-08 Work Ledger",
+      "entry_sha256": "494960effff58914fde7a590bf1376c6a481942aea6e563ef956854e849069ad",
+      "stream": "review",
+      "areas": [],
+      "related_streams": [],
+      "basis": "insufficient_structured_metadata",
+      "flags": [
+        "missing_or_unknown_primary_area",
+        "unsectioned_source"
       ],
-      "related_streams": [
-        "book-history"
-      ],
-      "basis": "explicit_primary_area",
-      "flags": [],
-      "date": "2026-07-08",
-      "legacy_root_path": false
-    },
-    {
-      "id": "2026/2026-07-08.md#remove-empty-economics-placeholder",
-      "source": "2026/2026-07-08.md",
-      "anchor": "remove-empty-economics-placeholder",
-      "start_line": 17,
-      "end_line": 25,
-      "title": "remove empty economics placeholder",
-      "entry_sha256": "d193844ff42bd4324687c27775aa5d9f75af701594ef2f52bb0e3dda15786392",
-      "stream": "book-history",
-      "areas": [
-        "book-writing"
-      ],
-      "related_streams": [
-        "book-history"
-      ],
-      "basis": "explicit_primary_area",
-      "flags": [],
-      "date": "2026-07-08",
-      "legacy_root_path": false
-    },
-    {
-      "id": "2026/2026-07-08.md#publish-economics-book-outline",
-      "source": "2026/2026-07-08.md",
-      "anchor": "publish-economics-book-outline",
-      "start_line": 26,
-      "end_line": 35,
-      "title": "publish economics book outline",
-      "entry_sha256": "a25aabe595198f047b5745a3fc5871a205b61349e31a9bc2b1410ca7c1f5ba42",
-      "stream": "book-history",
-      "areas": [
-        "book-writing"
-      ],
-      "related_streams": [
-        "book-history"
-      ],
-      "basis": "explicit_primary_area",
-      "flags": [],
-      "date": "2026-07-08",
-      "legacy_root_path": false
-    },
-    {
-      "id": "2026/2026-07-08.md#publish-economics-blueprint-file",
-      "source": "2026/2026-07-08.md",
-      "anchor": "publish-economics-blueprint-file",
-      "start_line": 36,
-      "end_line": 44,
-      "title": "publish economics blueprint file",
-      "entry_sha256": "7ec38c8a071c4d419ad3a2b6d5420aa07272d4ec8a1fbf5fa830e6fbc602c805",
-      "stream": "book-history",
-      "areas": [
-        "book-writing"
-      ],
-      "related_streams": [
-        "book-history"
-      ],
-      "basis": "explicit_primary_area",
-      "flags": [],
       "date": "2026-07-08",
       "legacy_root_path": false
     },
@@ -685,62 +623,21 @@
       "legacy_root_path": false
     },
     {
-      "id": "2026/2026-07-13.md#0500---book-3-blueprint-creation-for-psy--econmi-project",
+      "id": "2026/2026-07-13.md#unsectioned-record",
       "source": "2026/2026-07-13.md",
-      "anchor": "0500---book-3-blueprint-creation-for-psy--econmi-project",
-      "start_line": 3,
-      "end_line": 12,
-      "title": "05:00 - Book 3 blueprint creation for psy + Econmi project",
-      "entry_sha256": "80fd1669c3026c732f1cf8f87121e4a5c898d5b5c3066bc7f4f14a8e48b55d7c",
-      "stream": "book-history",
-      "areas": [
-        "book-writing"
+      "anchor": "",
+      "start_line": 1,
+      "end_line": 2,
+      "title": "Work Ledger - 2026-07-13",
+      "entry_sha256": "bdccf1ba44d7483ee465d4363995928c91e85073ba548362bf53e32ce8e79d02",
+      "stream": "review",
+      "areas": [],
+      "related_streams": [],
+      "basis": "insufficient_structured_metadata",
+      "flags": [
+        "missing_or_unknown_primary_area",
+        "unsectioned_source"
       ],
-      "related_streams": [
-        "book-history"
-      ],
-      "basis": "explicit_primary_area",
-      "flags": [],
-      "date": "2026-07-13",
-      "legacy_root_path": false
-    },
-    {
-      "id": "2026/2026-07-13.md#0520---book-5-blueprint-creation-for-reformation_of_the_mind-project",
-      "source": "2026/2026-07-13.md",
-      "anchor": "0520---book-5-blueprint-creation-for-reformation_of_the_mind-project",
-      "start_line": 13,
-      "end_line": 22,
-      "title": "05:20 - Book 5 blueprint creation for reformation_of_the_mind project",
-      "entry_sha256": "b3e34d7bc5f30252c21cf539a69387c0de82789fe82553637aab63f65f17a23a",
-      "stream": "book-history",
-      "areas": [
-        "book-writing"
-      ],
-      "related_streams": [
-        "book-history"
-      ],
-      "basis": "explicit_primary_area",
-      "flags": [],
-      "date": "2026-07-13",
-      "legacy_root_path": false
-    },
-    {
-      "id": "2026/2026-07-13.md#0610---book-5-blueprint-expansion-with-cognitive-science-economic-critique-and-ai-bias",
-      "source": "2026/2026-07-13.md",
-      "anchor": "0610---book-5-blueprint-expansion-with-cognitive-science-economic-critique-and-ai-bias",
-      "start_line": 23,
-      "end_line": 31,
-      "title": "06:10 - Book 5 blueprint expansion with Cognitive Science, Economic critique, and AI Bias",
-      "entry_sha256": "14410725f71c206703c2f6221bfc49cee506ee04c81abdcf4e584c5644257326",
-      "stream": "book-history",
-      "areas": [
-        "book-writing"
-      ],
-      "related_streams": [
-        "book-history"
-      ],
-      "basis": "explicit_primary_area",
-      "flags": [],
       "date": "2026-07-13",
       "legacy_root_path": false
     },
@@ -805,31 +702,11 @@
       "legacy_root_path": false
     },
     {
-      "id": "2026/2026-07-16.md#1215---book-5-workspace-standardization",
-      "source": "2026/2026-07-16.md",
-      "anchor": "1215---book-5-workspace-standardization",
-      "start_line": 24,
-      "end_line": 32,
-      "title": "12:15 - Book 5 workspace standardization",
-      "entry_sha256": "629bf52b236dfcdea97d9db0d16b3c5a93caf24cae7c5d9fd810034565c6f6a9",
-      "stream": "book-history",
-      "areas": [
-        "book-writing"
-      ],
-      "related_streams": [
-        "book-history"
-      ],
-      "basis": "explicit_primary_area",
-      "flags": [],
-      "date": "2026-07-16",
-      "legacy_root_path": false
-    },
-    {
       "id": "2026/2026-07-16.md#topic-025-funding-provenance-hardening",
       "source": "2026/2026-07-16.md",
       "anchor": "topic-025-funding-provenance-hardening",
-      "start_line": 33,
-      "end_line": 41,
+      "start_line": 24,
+      "end_line": 32,
       "title": "Topic 0.25 funding provenance hardening",
       "entry_sha256": "49157579d564182798323e7ddba4c1b5e87f5bffcdacd401cb7eabd97df59270",
       "stream": "research",
@@ -848,8 +725,8 @@
       "id": "2026/2026-07-16.md#topic-025-payer-resource-join-readiness",
       "source": "2026/2026-07-16.md",
       "anchor": "topic-025-payer-resource-join-readiness",
-      "start_line": 42,
-      "end_line": 49,
+      "start_line": 33,
+      "end_line": 40,
       "title": "Topic 0.25 payer-resource join readiness",
       "entry_sha256": "e07492ba7b44715be04b39d9fe1418a61f09f1d4f7fc29f69c951dcb27619c94",
       "stream": "research",
@@ -868,8 +745,8 @@
       "id": "2026/2026-07-16.md#topic-025-bea-benchmark-structural-audit",
       "source": "2026/2026-07-16.md",
       "anchor": "topic-025-bea-benchmark-structural-audit",
-      "start_line": 50,
-      "end_line": 59,
+      "start_line": 41,
+      "end_line": 50,
       "title": "Topic 0.25 BEA benchmark structural audit",
       "entry_sha256": "8e1d79f9fc7abcbd68b21bebf5c549245d3238d7e9a85dae36f205e1b6ba06d0",
       "stream": "research",
@@ -888,8 +765,8 @@
       "id": "2026/2026-07-16.md#topic-025-labormaterialfunding-provenance-wave",
       "source": "2026/2026-07-16.md",
       "anchor": "topic-025-labormaterialfunding-provenance-wave",
-      "start_line": 60,
-      "end_line": 67,
+      "start_line": 51,
+      "end_line": 58,
       "title": "Topic 0.25 labor/material/funding provenance wave",
       "entry_sha256": "15ebd7bdfe0e6251d57135b51c2536d272e013fc20c7a26f050c98e9d187f917",
       "stream": "research",
@@ -1345,51 +1222,11 @@
       "legacy_root_path": false
     },
     {
-      "id": "2026/2026-07-23.md#0920---section-3-book-structure-reorganization-history--hegemony",
-      "source": "2026/2026-07-23.md",
-      "anchor": "0920---section-3-book-structure-reorganization-history--hegemony",
-      "start_line": 17,
-      "end_line": 29,
-      "title": "09:20 - Section 3 Book Structure Reorganization (History & Hegemony)",
-      "entry_sha256": "17611567cbb792cf7f1a15e0fcd93e58ea1b2aeebbb9eeb3903d9032df2dee12",
-      "stream": "book-history",
-      "areas": [
-        "book-writing"
-      ],
-      "related_streams": [
-        "book-history"
-      ],
-      "basis": "explicit_primary_area",
-      "flags": [],
-      "date": "2026-07-23",
-      "legacy_root_path": false
-    },
-    {
-      "id": "2026/2026-07-23.md#1306---section-3-book-33-blueprint-epistemology--buddha-history-clarification",
-      "source": "2026/2026-07-23.md",
-      "anchor": "1306---section-3-book-33-blueprint-epistemology--buddha-history-clarification",
-      "start_line": 30,
-      "end_line": 54,
-      "title": "13:06 - Section 3 Book 3.3 Blueprint Epistemology & Buddha History Clarification",
-      "entry_sha256": "e3b18bdf7813e64389e17955d2e8bf9530ed03c0d17dd94c711d710097ba0876",
-      "stream": "book-history",
-      "areas": [
-        "book-writing"
-      ],
-      "related_streams": [
-        "book-history"
-      ],
-      "basis": "explicit_primary_area",
-      "flags": [],
-      "date": "2026-07-23",
-      "legacy_root_path": false
-    },
-    {
       "id": "2026/2026-07-23.md#section-5---o2-finite-density-eos-and-covariant-superfluid-transport",
       "source": "2026/2026-07-23.md",
       "anchor": "section-5---o2-finite-density-eos-and-covariant-superfluid-transport",
-      "start_line": 55,
-      "end_line": 66,
+      "start_line": 17,
+      "end_line": 28,
       "title": "Section 5 - O(2) finite-density EOS and covariant superfluid transport",
       "entry_sha256": "d4934bb7f7dd3b1b2e50c58957512189b074292b0d204fdb22467fbe9557fa49",
       "stream": "research",
@@ -1405,402 +1242,40 @@
       "legacy_root_path": false
     },
     {
-      "id": "2026/2026-07-23.md#2128---biopsychoecon-trilogy-book-reorganization--book-1-research-citation-audit-matrix",
-      "source": "2026/2026-07-23.md",
-      "anchor": "2128---biopsychoecon-trilogy-book-reorganization--book-1-research-citation-audit-matrix",
-      "start_line": 67,
-      "end_line": 76,
-      "title": "21:28 - Bio/Psycho/Econ Trilogy Book Reorganization & Book 1 Research Citation Audit Matrix",
-      "entry_sha256": "708ab6168857a6fc2ff5b7419c064d36e3dba34b0a7b4b85e9febc58695b489b",
-      "stream": "book-history",
-      "areas": [
-        "book-writing"
-      ],
-      "related_streams": [
-        "book-history"
-      ],
-      "basis": "explicit_primary_area",
-      "flags": [],
-      "date": "2026-07-23",
-      "legacy_root_path": false
-    },
-    {
-      "id": "2026/2026-07-23.md#2200---book-1-draft-2-wave-1-refinement-intro--chapter-0-web-first-format--illustration-slots",
-      "source": "2026/2026-07-23.md",
-      "anchor": "2200---book-1-draft-2-wave-1-refinement-intro--chapter-0-web-first-format--illustration-slots",
-      "start_line": 77,
-      "end_line": 86,
-      "title": "22:00 - Book 1 Draft 2 Wave 1 Refinement (Intro & Chapter 0 Web-First Format & Illustration Slots)",
-      "entry_sha256": "549c0bf19a71b397b71ae55652365258fce16f6ed60ab39d60efe431a04bfcfc",
-      "stream": "book-history",
-      "areas": [
-        "book-writing"
-      ],
-      "related_streams": [
-        "book-history"
-      ],
-      "basis": "explicit_primary_area",
-      "flags": [],
-      "date": "2026-07-23",
-      "legacy_root_path": false
-    },
-    {
-      "id": "2026/2026-07-23.md#2330---book-1-chapter-0-ordering-repair-energy-flow-integration--citation-link-audit",
-      "source": "2026/2026-07-23.md",
-      "anchor": "2330---book-1-chapter-0-ordering-repair-energy-flow-integration--citation-link-audit",
-      "start_line": 87,
-      "end_line": 96,
-      "title": "23:30 - Book 1 Chapter 0 Ordering Repair, Energy Flow Integration & Citation Link Audit",
-      "entry_sha256": "2f1b5e8b0ec781d681e21be0040c9bf2a872573d2aa4851e3ae78563095c16fe",
-      "stream": "book-history",
-      "areas": [
-        "book-writing"
-      ],
-      "related_streams": [
-        "book-history"
-      ],
-      "basis": "explicit_primary_area",
-      "flags": [],
-      "date": "2026-07-23",
-      "legacy_root_path": false
-    },
-    {
-      "id": "2026/2026-07-23.md#2336---book-1-draft-2-wave-2-refinement-chapter-1-episodes-11-12-13-web-first-format--citation-links",
-      "source": "2026/2026-07-23.md",
-      "anchor": "2336---book-1-draft-2-wave-2-refinement-chapter-1-episodes-11-12-13-web-first-format--citation-links",
-      "start_line": 97,
-      "end_line": 106,
-      "title": "23:36 - Book 1 Draft 2 Wave 2 Refinement (Chapter 1: Episodes 1.1, 1.2, 1.3 Web-First Format & Citation Links)",
-      "entry_sha256": "8b351d197e3f9d459d843b6a2be3abcc1dbab381f1c5148cd41c49f98fb06d51",
-      "stream": "book-history",
-      "areas": [
-        "book-writing"
-      ],
-      "related_streams": [
-        "book-history"
-      ],
-      "basis": "explicit_primary_area",
-      "flags": [],
-      "date": "2026-07-23",
-      "legacy_root_path": false
-    },
-    {
-      "id": "2026/2026-07-23.md#2338---book-1-draft-2-wave-3-refinement-chapter-2-episodes-21-22-23-24-web-first-format--citation-links",
-      "source": "2026/2026-07-23.md",
-      "anchor": "2338---book-1-draft-2-wave-3-refinement-chapter-2-episodes-21-22-23-24-web-first-format--citation-links",
-      "start_line": 107,
-      "end_line": 116,
-      "title": "23:38 - Book 1 Draft 2 Wave 3 Refinement (Chapter 2: Episodes 2.1, 2.2, 2.3, 2.4 Web-First Format & Citation Links)",
-      "entry_sha256": "be397ee8e36785d34fb4a827e5bf522ab7805cd56aab468d595a7c6962fbc7d3",
-      "stream": "book-history",
-      "areas": [
-        "book-writing"
-      ],
-      "related_streams": [
-        "book-history"
-      ],
-      "basis": "explicit_primary_area",
-      "flags": [],
-      "date": "2026-07-23",
-      "legacy_root_path": false
-    },
-    {
-      "id": "2026/2026-07-23.md#2341---book-1-draft-2-wave-4-refinement-chapter-3-episodes-31-32-33-34-web-first-format--citation-links",
-      "source": "2026/2026-07-23.md",
-      "anchor": "2341---book-1-draft-2-wave-4-refinement-chapter-3-episodes-31-32-33-34-web-first-format--citation-links",
-      "start_line": 117,
-      "end_line": 126,
-      "title": "23:41 - Book 1 Draft 2 Wave 4 Refinement (Chapter 3: Episodes 3.1, 3.2, 3.3, 3.4 Web-First Format & Citation Links)",
-      "entry_sha256": "c2fce6c204260146d8e602959bbdb7bedf362dba4e17bd9357342dd6822a7b83",
-      "stream": "book-history",
-      "areas": [
-        "book-writing"
-      ],
-      "related_streams": [
-        "book-history"
-      ],
-      "basis": "explicit_primary_area",
-      "flags": [],
-      "date": "2026-07-23",
-      "legacy_root_path": false
-    },
-    {
-      "id": "2026/2026-07-23.md#2345---book-1-draft-full-manuscript-restoration--blueprint-structure-audit",
-      "source": "2026/2026-07-23.md",
-      "anchor": "2345---book-1-draft-full-manuscript-restoration--blueprint-structure-audit",
-      "start_line": 127,
-      "end_line": 135,
-      "title": "23:45 - Book 1 Draft Full Manuscript Restoration & Blueprint Structure Audit",
-      "entry_sha256": "97871453c624f1a2de6d51413fc088832bc6d162e7da4b7e93b70d78acd0d651",
-      "stream": "book-history",
-      "areas": [
-        "book-writing"
-      ],
-      "related_streams": [
-        "book-history"
-      ],
-      "basis": "explicit_primary_area",
-      "flags": [],
-      "date": "2026-07-23",
-      "legacy_root_path": false
-    },
-    {
-      "id": "2026/2026-07-24.md#0838---book-1-safeguard-verification-gate--chapter-4-pilot-proofing",
+      "id": "2026/2026-07-24.md#unsectioned-record",
       "source": "2026/2026-07-24.md",
-      "anchor": "0838---book-1-safeguard-verification-gate--chapter-4-pilot-proofing",
-      "start_line": 3,
-      "end_line": 12,
-      "title": "08:38 - Book 1 Safeguard Verification Gate & Chapter 4 Pilot Proofing",
-      "entry_sha256": "7f4f890365a0696b683f01d2fcbf5d2f5ed774766d8a5e840c3f020c8f16bf96",
-      "stream": "book-history",
-      "areas": [
-        "book-writing"
+      "anchor": "",
+      "start_line": 1,
+      "end_line": 2,
+      "title": "📒 Work Ledger - 2026-07-24",
+      "entry_sha256": "908e20894012d2812ba0033e9e70f0d616c27768b07b6db96272febe542cdf57",
+      "stream": "review",
+      "areas": [],
+      "related_streams": [],
+      "basis": "insufficient_structured_metadata",
+      "flags": [
+        "missing_or_unknown_primary_area",
+        "unsectioned_source"
       ],
-      "related_streams": [
-        "book-history"
-      ],
-      "basis": "explicit_primary_area",
-      "flags": [],
       "date": "2026-07-24",
       "legacy_root_path": false
     },
     {
-      "id": "2026/2026-07-24.md#0842---book-1-phase-1-in-place-enrichment-intro--chapter-0-episodes-01-02-03",
-      "source": "2026/2026-07-24.md",
-      "anchor": "0842---book-1-phase-1-in-place-enrichment-intro--chapter-0-episodes-01-02-03",
-      "start_line": 13,
-      "end_line": 22,
-      "title": "08:42 - Book 1 Phase 1 In-Place Enrichment (Intro & Chapter 0: Episodes 0.1, 0.2, 0.3)",
-      "entry_sha256": "06ea8d0c8c03ab2508979ed997d722a496e4638fbc8eb016c574bcfaa7232f95",
-      "stream": "book-history",
-      "areas": [
-        "book-writing"
-      ],
-      "related_streams": [
-        "book-history"
-      ],
-      "basis": "explicit_primary_area",
-      "flags": [],
-      "date": "2026-07-24",
-      "legacy_root_path": false
-    },
-    {
-      "id": "2026/2026-07-24.md#0844---book-1-phase-2-in-place-enrichment-chapter-1--chapter-2-episodes-11---24",
-      "source": "2026/2026-07-24.md",
-      "anchor": "0844---book-1-phase-2-in-place-enrichment-chapter-1--chapter-2-episodes-11---24",
-      "start_line": 23,
-      "end_line": 32,
-      "title": "08:44 - Book 1 Phase 2 In-Place Enrichment (Chapter 1 & Chapter 2: Episodes 1.1 - 2.4)",
-      "entry_sha256": "3c932baeb5d1ea469865bd9f206dd682d2b339125416d88bdcd5ea074c1d2af4",
-      "stream": "book-history",
-      "areas": [
-        "book-writing"
-      ],
-      "related_streams": [
-        "book-history"
-      ],
-      "basis": "explicit_primary_area",
-      "flags": [],
-      "date": "2026-07-24",
-      "legacy_root_path": false
-    },
-    {
-      "id": "2026/2026-07-24.md#0847---book-1-table-rendering-fix--gate-verification",
-      "source": "2026/2026-07-24.md",
-      "anchor": "0847---book-1-table-rendering-fix--gate-verification",
-      "start_line": 33,
-      "end_line": 40,
-      "title": "08:47 - Book 1 Table Rendering Fix & Gate Verification",
-      "entry_sha256": "a31e2ac6d6348b099f93dd8270a1193efa710292fe0994fba3989fa753565dfd",
-      "stream": "book-history",
-      "areas": [
-        "book-writing"
-      ],
-      "related_streams": [
-        "book-history"
-      ],
-      "basis": "explicit_primary_area",
-      "flags": [],
-      "date": "2026-07-24",
-      "legacy_root_path": false
-    },
-    {
-      "id": "2026/2026-07-24.md#0850---book-1-chapter-2-table-enrichment-completion",
-      "source": "2026/2026-07-24.md",
-      "anchor": "0850---book-1-chapter-2-table-enrichment-completion",
-      "start_line": 41,
-      "end_line": 49,
-      "title": "08:50 - Book 1 Chapter 2 Table Enrichment Completion",
-      "entry_sha256": "ac806ea0b6173ec6e3a4e5277ea0546c762f3239fdfa6f65c5babdb435a9ebe9",
-      "stream": "book-history",
-      "areas": [
-        "book-writing"
-      ],
-      "related_streams": [
-        "book-history"
-      ],
-      "basis": "explicit_primary_area",
-      "flags": [],
-      "date": "2026-07-24",
-      "legacy_root_path": false
-    },
-    {
-      "id": "2026/2026-07-24.md#0855---book-1-phase-3-in-place-enrichment-chapter-3-episodes-31---34",
-      "source": "2026/2026-07-24.md",
-      "anchor": "0855---book-1-phase-3-in-place-enrichment-chapter-3-episodes-31---34",
-      "start_line": 50,
-      "end_line": 58,
-      "title": "08:55 - Book 1 Phase 3 In-Place Enrichment (Chapter 3: Episodes 3.1 - 3.4)",
-      "entry_sha256": "84710d72a340d2962f8c3e230821f51929d74f30cdddcd884fc9e4dfbae90b34",
-      "stream": "book-history",
-      "areas": [
-        "book-writing"
-      ],
-      "related_streams": [
-        "book-history"
-      ],
-      "basis": "explicit_primary_area",
-      "flags": [],
-      "date": "2026-07-24",
-      "legacy_root_path": false
-    },
-    {
-      "id": "2026/2026-07-24.md#0900---book-1-phase-4-in-place-enrichment-chapter-4-episodes-41---45",
-      "source": "2026/2026-07-24.md",
-      "anchor": "0900---book-1-phase-4-in-place-enrichment-chapter-4-episodes-41---45",
-      "start_line": 59,
-      "end_line": 67,
-      "title": "09:00 - Book 1 Phase 4 In-Place Enrichment (Chapter 4: Episodes 4.1 - 4.5)",
-      "entry_sha256": "28621aa5948e08574065a086f0d21ab9ab53cc4732aa36bce227cf3d9e0cfd83",
-      "stream": "book-history",
-      "areas": [
-        "book-writing"
-      ],
-      "related_streams": [
-        "book-history"
-      ],
-      "basis": "explicit_primary_area",
-      "flags": [],
-      "date": "2026-07-24",
-      "legacy_root_path": false
-    },
-    {
-      "id": "2026/2026-07-24.md#0918---manuscript-wide-100-3-column-table--active-citation-link-standardization",
-      "source": "2026/2026-07-24.md",
-      "anchor": "0918---manuscript-wide-100-3-column-table--active-citation-link-standardization",
-      "start_line": 68,
-      "end_line": 76,
-      "title": "09:18 - Manuscript-Wide 100% 3-Column Table & Active Citation Link Standardization",
-      "entry_sha256": "b782e9372b322d8e1c9625ba0b79d9deb563fe383a44c9194d24ec6bdc313806",
-      "stream": "book-history",
-      "areas": [
-        "book-writing"
-      ],
-      "related_streams": [
-        "book-history"
-      ],
-      "basis": "explicit_primary_area",
-      "flags": [],
-      "date": "2026-07-24",
-      "legacy_root_path": false
-    },
-    {
-      "id": "2026/2026-07-24.md#0936---book-1-phase-5-in-place-enrichment-chapters-5-6-7--conclusion",
-      "source": "2026/2026-07-24.md",
-      "anchor": "0936---book-1-phase-5-in-place-enrichment-chapters-5-6-7--conclusion",
-      "start_line": 77,
-      "end_line": 85,
-      "title": "09:36 - Book 1 Phase 5 In-Place Enrichment (Chapters 5, 6, 7 & Conclusion)",
-      "entry_sha256": "d40f74c6f9ce500a149971ff9b873fd3df4a3426311e09177531f58bf1e8000b",
-      "stream": "book-history",
-      "areas": [
-        "book-writing"
-      ],
-      "related_streams": [
-        "book-history"
-      ],
-      "basis": "explicit_primary_area",
-      "flags": [],
-      "date": "2026-07-24",
-      "legacy_root_path": false
-    },
-    {
-      "id": "2026/2026-07-24.md#0951---episode-44-in-text-citation-link-enrichment--verification",
-      "source": "2026/2026-07-24.md",
-      "anchor": "0951---episode-44-in-text-citation-link-enrichment--verification",
-      "start_line": 86,
-      "end_line": 94,
-      "title": "09:51 - Episode 4.4 In-Text Citation Link Enrichment & Verification",
-      "entry_sha256": "ac5aeb3ac22124ea4f58b3d1c521d4428ed7cd19a9ebbeb496606c946716c2a2",
-      "stream": "book-history",
-      "areas": [
-        "book-writing"
-      ],
-      "related_streams": [
-        "book-history"
-      ],
-      "basis": "explicit_primary_area",
-      "flags": [],
-      "date": "2026-07-24",
-      "legacy_root_path": false
-    },
-    {
-      "id": "2026/2026-07-24.md#2320---book-2-master-blueprint-standardization",
-      "source": "2026/2026-07-24.md",
-      "anchor": "2320---book-2-master-blueprint-standardization",
-      "start_line": 95,
-      "end_line": 102,
-      "title": "23:20 - Book 2 Master Blueprint Standardization",
-      "entry_sha256": "e6f70e0ee2028b8626f70ab91b0cd4e876fb0c487bce00829e5691134b69c18d",
-      "stream": "book-history",
-      "areas": [
-        "book-writing"
-      ],
-      "related_streams": [
-        "book-history"
-      ],
-      "basis": "explicit_primary_area",
-      "flags": [],
-      "date": "2026-07-24",
-      "legacy_root_path": false
-    },
-    {
-      "id": "2026/2026-07-25.md#1155---book-2-w03-literature-review--chapter-5-deepening",
+      "id": "2026/2026-07-25.md#unsectioned-record",
       "source": "2026/2026-07-25.md",
-      "anchor": "1155---book-2-w03-literature-review--chapter-5-deepening",
-      "start_line": 3,
-      "end_line": 11,
-      "title": "11:55 - Book 2 W03 Literature Review & Chapter 5 Deepening",
-      "entry_sha256": "4fafb124938be7223e26a498913bfbb0dcc4fe4421b3f841bb37065787630771",
-      "stream": "book-history",
-      "areas": [
-        "book-writing"
+      "anchor": "",
+      "start_line": 1,
+      "end_line": 2,
+      "title": "📒 Work Ledger - 2026-07-25",
+      "entry_sha256": "d2d93391e03880ba4a578f67eecc867f214911d202646279b4b94c50cfa832b5",
+      "stream": "review",
+      "areas": [],
+      "related_streams": [],
+      "basis": "insufficient_structured_metadata",
+      "flags": [
+        "missing_or_unknown_primary_area",
+        "unsectioned_source"
       ],
-      "related_streams": [
-        "book-history"
-      ],
-      "basis": "explicit_primary_area",
-      "flags": [],
-      "date": "2026-07-25",
-      "legacy_root_path": false
-    },
-    {
-      "id": "2026/2026-07-25.md#section-to-three-book-blueprint-workflow-standard",
-      "source": "2026/2026-07-25.md",
-      "anchor": "section-to-three-book-blueprint-workflow-standard",
-      "start_line": 12,
-      "end_line": 19,
-      "title": "Section-to-three-book Blueprint Workflow Standard",
-      "entry_sha256": "e030094f381ff36bbf7e5a0170ef0635a6e67f3705b6198f84da33b634aacd4b",
-      "stream": "book-history",
-      "areas": [
-        "book-writing"
-      ],
-      "related_streams": [
-        "book-history"
-      ],
-      "basis": "explicit_primary_area",
-      "flags": [],
       "date": "2026-07-25",
       "legacy_root_path": false
     },
@@ -2350,31 +1825,11 @@
       "legacy_root_path": false
     },
     {
-      "id": "2026/2026-07-29.md#section-3-parent-folder-migration",
-      "source": "2026/2026-07-29.md",
-      "anchor": "section-3-parent-folder-migration",
-      "start_line": 30,
-      "end_line": 38,
-      "title": "Section 3 parent-folder migration",
-      "entry_sha256": "1b296bb9dacf4adbdc9422930ac08faae7da12b7a97618b8a70c2238afba8b7a",
-      "stream": "book-history",
-      "areas": [
-        "book-writing"
-      ],
-      "related_streams": [
-        "book-history"
-      ],
-      "basis": "explicit_primary_area",
-      "flags": [],
-      "date": "2026-07-29",
-      "legacy_root_path": false
-    },
-    {
       "id": "2026/2026-07-29.md#2026-07-29---separate-physical-impact-from-informational-effect",
       "source": "2026/2026-07-29.md",
       "anchor": "2026-07-29---separate-physical-impact-from-informational-effect",
-      "start_line": 39,
-      "end_line": 48,
+      "start_line": 30,
+      "end_line": 39,
       "title": "2026-07-29 - Separate physical impact from informational effect",
       "entry_sha256": "ec21b5bcae7a0d11be555a78ec05dd585714f31b35b0d2ef35c82bc0c7fdfefe",
       "stream": "research",
@@ -2393,8 +1848,8 @@
       "id": "2026/2026-07-29.md#uet-foundation-first-program--waves-0-4",
       "source": "2026/2026-07-29.md",
       "anchor": "uet-foundation-first-program--waves-0-4",
-      "start_line": 49,
-      "end_line": 57,
+      "start_line": 40,
+      "end_line": 48,
       "title": "UET Foundation-First Program — Waves 0-4",
       "entry_sha256": "4914e687f28fc47dd74bcad13979fcd8726acab51a3fb468f65f59763682a629",
       "stream": "research",
@@ -2417,7 +1872,7 @@
       "start_line": 3,
       "end_line": 12,
       "title": "Causal reference ledger closure packet",
-      "entry_sha256": "edf6dd70ed7cbebe023657fe46e163238acaee97feb70965640d5ad59b594452",
+      "entry_sha256": "4dd2cbc638159b7bfeca3d1fcab180f20542ffb697351cdabb2a093c534f3009",
       "stream": "research",
       "areas": [
         "research-core"
@@ -2437,7 +1892,7 @@
       "start_line": 13,
       "end_line": 21,
       "title": "Causal Phi/Pi discrete-gradient closure packet",
-      "entry_sha256": "4f3e404457bfa727180cfaae513432aa6c2e63ad9aebcc1ca1768df84051e716",
+      "entry_sha256": "89ae32472a7b80b8462ddf55d1a7bdec8158a548decc6d4e8da147c80ad0668f",
       "stream": "research",
       "areas": [
         "research-core"
@@ -2457,7 +1912,7 @@
       "start_line": 22,
       "end_line": 30,
       "title": "Changing-C split ledger packet",
-      "entry_sha256": "e17955ecc5ab898e6c25722063e9dffeb1b5429cb9e86cb716e745a5d789150b",
+      "entry_sha256": "e39facd17dce9e711338727cc80e9733033e78a27a212342b106205b538b85a0",
       "stream": "research",
       "areas": [
         "research-core"
@@ -2477,7 +1932,7 @@
       "start_line": 31,
       "end_line": 39,
       "title": "Changing-C causal-cone compatibility audit",
-      "entry_sha256": "d406e57323ee34554304217a84b6a5c8665ec3a11beb39235e81361e0718d54c",
+      "entry_sha256": "c9583bc85802b023d743723e1da40825180e87ebb86af126834a35c2feb8eca6",
       "stream": "research",
       "areas": [
         "research-core"
@@ -2497,7 +1952,7 @@
       "start_line": 40,
       "end_line": 48,
       "title": "Finite-cone C candidate lane",
-      "entry_sha256": "4b2b4e55ed96c5b45cc6a78e5fb924969a01ab4c9557272b9fa92336f10320d9",
+      "entry_sha256": "141d4185307172ffe62f27e901c3e033d1340f9471380bea90da078906dcb483",
       "stream": "research",
       "areas": [
         "research-core"
@@ -2537,7 +1992,7 @@
       "start_line": 59,
       "end_line": 68,
       "title": "Canonical artifact coverage for Waves 5 and 9",
-      "entry_sha256": "05eca2cd1ba243a556add2eb4540c298f5f1987ff32aed5822489560a6784d40",
+      "entry_sha256": "b1780bbee50646a6791e640299c395d7c71c46a43982a8165a7059109c9c2b2e",
       "stream": "research",
       "areas": [
         "research-core"
@@ -2557,7 +2012,7 @@
       "start_line": 69,
       "end_line": 77,
       "title": "Architecture boundary and future-platform classification",
-      "entry_sha256": "7c8b119ad5951108f4bd264dd4f866e799d96a177d5264e75da0159fc6511b1d",
+      "entry_sha256": "129c641c14f4d410f4344a1754faa33eca440e308cf08c20273d8d7c6ccf1898",
       "stream": "operations",
       "areas": [
         "repo-ops",
@@ -2572,79 +2027,13 @@
       "legacy_root_path": false
     },
     {
-      "id": "2026/2026-07-30.md#human-readable-sectionbook-path-normalization",
-      "source": "2026/2026-07-30.md",
-      "anchor": "human-readable-sectionbook-path-normalization",
-      "start_line": 78,
-      "end_line": 86,
-      "title": "Human-readable Section/book path normalization",
-      "entry_sha256": "141c12ea943d0ac0a67620c97c48ae776b4f2916766dc8a5b38b50834747c15d",
-      "stream": "book-history",
-      "areas": [
-        "book-writing",
-        "repo-ops"
-      ],
-      "related_streams": [
-        "book-history",
-        "operations"
-      ],
-      "basis": "explicit_primary_area",
-      "flags": [],
-      "date": "2026-07-30",
-      "legacy_root_path": false
-    },
-    {
-      "id": "2026/2026-07-30.md#book-folder-numbering-correction",
-      "source": "2026/2026-07-30.md",
-      "anchor": "book-folder-numbering-correction",
-      "start_line": 87,
-      "end_line": 94,
-      "title": "Book-folder numbering correction",
-      "entry_sha256": "1c984def04999bc9805a3238ed086fd8842c17609a9d79e0f373ec59b064f147",
-      "stream": "book-history",
-      "areas": [
-        "book-writing",
-        "repo-ops"
-      ],
-      "related_streams": [
-        "book-history",
-        "operations"
-      ],
-      "basis": "explicit_primary_area",
-      "flags": [],
-      "date": "2026-07-30",
-      "legacy_root_path": false
-    },
-    {
-      "id": "2026/2026-07-30.md#all-book-section-normalization",
-      "source": "2026/2026-07-30.md",
-      "anchor": "all-book-section-normalization",
-      "start_line": 95,
-      "end_line": 105,
-      "title": "All-book Section normalization",
-      "entry_sha256": "c2007a8b3bc67e3ff3f8aba23820561a3c7d959bf8c0e465ead28efe7a73f1b3",
-      "stream": "book-history",
-      "areas": [
-        "book-writing",
-        "repo-ops"
-      ],
-      "related_streams": [
-        "book-history",
-        "operations"
-      ],
-      "basis": "explicit_primary_area",
-      "flags": [],
-      "date": "2026-07-30",
-      "legacy_root_path": false
-    },
-    {
       "id": "2026/2026-07-30.md#contribution-guide-standardization",
       "source": "2026/2026-07-30.md",
       "anchor": "contribution-guide-standardization",
-      "start_line": 106,
-      "end_line": 114,
+      "start_line": 78,
+      "end_line": 86,
       "title": "Contribution-guide standardization",
-      "entry_sha256": "3f2698142d0719865b60bc06b8bcbdf747a86ab72f94a8105a497fb5378a4df9",
+      "entry_sha256": "c355bb3cac2ed559655d5e78a6aa62b99cd74c01d9e65e272bd0c33854e98de7",
       "stream": "research",
       "areas": [
         "research-standards",
@@ -3140,642 +2529,40 @@
       "legacy_root_path": false
     },
     {
-      "id": "2026/2026-08-02.md#1133---book-2-two-tier-developmental-architecture-standardization",
+      "id": "2026/2026-08-02.md#unsectioned-record",
       "source": "2026/2026-08-02.md",
-      "anchor": "1133---book-2-two-tier-developmental-architecture-standardization",
-      "start_line": 3,
-      "end_line": 11,
-      "title": "11:33 - Book 2 Two-Tier Developmental Architecture Standardization",
-      "entry_sha256": "ef00a924776b4e43fa1c21d1eb00932a51f98121a6a90ce09a77036840552398",
-      "stream": "book-history",
-      "areas": [
-        "book-writing"
+      "anchor": "",
+      "start_line": 1,
+      "end_line": 1,
+      "title": "📒 Work Ledger - 2026-08-02",
+      "entry_sha256": "bce0853ec8402306f6e8078a93a807a321b40d22f3497d570ce35caeb8ddce46",
+      "stream": "review",
+      "areas": [],
+      "related_streams": [],
+      "basis": "insufficient_structured_metadata",
+      "flags": [
+        "missing_or_unknown_primary_area",
+        "unsectioned_source"
       ],
-      "related_streams": [
-        "book-history"
-      ],
-      "basis": "explicit_primary_area",
-      "flags": [],
       "date": "2026-08-02",
       "legacy_root_path": false
     },
     {
-      "id": "2026/2026-08-02.md#1137---book-2-analytical-functional-position-terminology-standardization",
-      "source": "2026/2026-08-02.md",
-      "anchor": "1137---book-2-analytical-functional-position-terminology-standardization",
-      "start_line": 12,
-      "end_line": 20,
-      "title": "11:37 - Book 2 Analytical Functional Position Terminology Standardization",
-      "entry_sha256": "2025791ccb8ce6729f5a4eed7ff6f5d4681a6b4f015a9cd63cbc46c43fa74ccd",
-      "stream": "book-history",
-      "areas": [
-        "book-writing"
-      ],
-      "related_streams": [
-        "book-history"
-      ],
-      "basis": "explicit_primary_area",
-      "flags": [],
-      "date": "2026-08-02",
-      "legacy_root_path": false
-    },
-    {
-      "id": "2026/2026-08-02.md#1138---book-2-shadow-stack-integration",
-      "source": "2026/2026-08-02.md",
-      "anchor": "1138---book-2-shadow-stack-integration",
-      "start_line": 21,
-      "end_line": 29,
-      "title": "11:38 - Book 2 Shadow Stack Integration",
-      "entry_sha256": "51d61e7b259837df239c8ec6c45fec7e7953123f0ea0088ce24116202ef785f9",
-      "stream": "book-history",
-      "areas": [
-        "book-writing"
-      ],
-      "related_streams": [
-        "book-history"
-      ],
-      "basis": "explicit_primary_area",
-      "flags": [],
-      "date": "2026-08-02",
-      "legacy_root_path": false
-    },
-    {
-      "id": "2026/2026-08-02.md#1145---book-2-freud-psychoanalysis--identity-formation-integration",
-      "source": "2026/2026-08-02.md",
-      "anchor": "1145---book-2-freud-psychoanalysis--identity-formation-integration",
-      "start_line": 30,
-      "end_line": 38,
-      "title": "11:45 - Book 2 Freud Psychoanalysis & Identity Formation Integration",
-      "entry_sha256": "dae4261a80bf8a4ecc0a0aa782d4263432573a315c5d8fe465232982c838e9cc",
-      "stream": "book-history",
-      "areas": [
-        "book-writing"
-      ],
-      "related_streams": [
-        "book-history"
-      ],
-      "basis": "explicit_primary_area",
-      "flags": [],
-      "date": "2026-08-02",
-      "legacy_root_path": false
-    },
-    {
-      "id": "2026/2026-08-02.md#1200---book-2-neuro-efficiency--distance-latency-integration",
-      "source": "2026/2026-08-02.md",
-      "anchor": "1200---book-2-neuro-efficiency--distance-latency-integration",
-      "start_line": 39,
-      "end_line": 47,
-      "title": "12:00 - Book 2 Neuro-Efficiency & Distance Latency Integration",
-      "entry_sha256": "5c30a97d0168064bd21fc6d7ad0b4cfe31ccfa45ed56678f1374c4785e646ecc",
-      "stream": "book-history",
-      "areas": [
-        "book-writing"
-      ],
-      "related_streams": [
-        "book-history"
-      ],
-      "basis": "explicit_primary_area",
-      "flags": [],
-      "date": "2026-08-02",
-      "legacy_root_path": false
-    },
-    {
-      "id": "2026/2026-08-02.md#1204---book-2-myelin-gateway--micro-stress-signaling-integration",
-      "source": "2026/2026-08-02.md",
-      "anchor": "1204---book-2-myelin-gateway--micro-stress-signaling-integration",
-      "start_line": 48,
-      "end_line": 56,
-      "title": "12:04 - Book 2 Myelin Gateway & Micro-Stress Signaling Integration",
-      "entry_sha256": "8b5c0717a5618fb35d343072b801f0b66ae42efdab42b5d0bc1ee13c802f09cc",
-      "stream": "book-history",
-      "areas": [
-        "book-writing"
-      ],
-      "related_streams": [
-        "book-history"
-      ],
-      "basis": "explicit_primary_area",
-      "flags": [],
-      "date": "2026-08-02",
-      "legacy_root_path": false
-    },
-    {
-      "id": "2026/2026-08-02.md#1217---book-2-neural-patterning--egoshadow-duality-integration",
-      "source": "2026/2026-08-02.md",
-      "anchor": "1217---book-2-neural-patterning--egoshadow-duality-integration",
-      "start_line": 57,
-      "end_line": 65,
-      "title": "12:17 - Book 2 Neural Patterning & Ego/Shadow Duality Integration",
-      "entry_sha256": "373bf29b8e2864868dcfe1d684f62528332733a47bef462286d580bdab4948d6",
-      "stream": "book-history",
-      "areas": [
-        "book-writing"
-      ],
-      "related_streams": [
-        "book-history"
-      ],
-      "basis": "explicit_primary_area",
-      "flags": [],
-      "date": "2026-08-02",
-      "legacy_root_path": false
-    },
-    {
-      "id": "2026/2026-08-02.md#1222---book-2-2d-neuro-hemispheric-matrix--unified-system-integration",
-      "source": "2026/2026-08-02.md",
-      "anchor": "1222---book-2-2d-neuro-hemispheric-matrix--unified-system-integration",
-      "start_line": 66,
-      "end_line": 74,
-      "title": "12:22 - Book 2 2D Neuro-Hemispheric Matrix & Unified System Integration",
-      "entry_sha256": "36ce5cd4efdb6efabf41c1b5908c09ac3510c491d623b442a028b18bfedb0244",
-      "stream": "book-history",
-      "areas": [
-        "book-writing"
-      ],
-      "related_streams": [
-        "book-history"
-      ],
-      "basis": "explicit_primary_area",
-      "flags": [],
-      "date": "2026-08-02",
-      "legacy_root_path": false
-    },
-    {
-      "id": "2026/2026-08-02.md#1223---book-2-comprehensive-8-cognitive-functions--duality-integration",
-      "source": "2026/2026-08-02.md",
-      "anchor": "1223---book-2-comprehensive-8-cognitive-functions--duality-integration",
-      "start_line": 75,
-      "end_line": 83,
-      "title": "12:23 - Book 2 Comprehensive 8 Cognitive Functions & Duality Integration",
-      "entry_sha256": "073f30cc5929d4245f1c08fedc501c07a7f1cc89808e058ab1b13f7dab8466d9",
-      "stream": "book-history",
-      "areas": [
-        "book-writing"
-      ],
-      "related_streams": [
-        "book-history"
-      ],
-      "basis": "explicit_primary_area",
-      "flags": [],
-      "date": "2026-08-02",
-      "legacy_root_path": false
-    },
-    {
-      "id": "2026/2026-08-02.md#1225---book-2-blueprint-markdown-table-rendering-fix",
-      "source": "2026/2026-08-02.md",
-      "anchor": "1225---book-2-blueprint-markdown-table-rendering-fix",
-      "start_line": 84,
-      "end_line": 92,
-      "title": "12:25 - Book 2 Blueprint Markdown Table Rendering Fix",
-      "entry_sha256": "e82a95c6ed6867cbe5cc14982ed37418526ff40953812f9b984bc527e4b912d3",
-      "stream": "book-history",
-      "areas": [
-        "book-writing"
-      ],
-      "related_streams": [
-        "book-history"
-      ],
-      "basis": "explicit_primary_area",
-      "flags": [],
-      "date": "2026-08-02",
-      "legacy_root_path": false
-    },
-    {
-      "id": "2026/2026-08-02.md#1233---book-2-developmental-timelines--ego-balancer-integration",
-      "source": "2026/2026-08-02.md",
-      "anchor": "1233---book-2-developmental-timelines--ego-balancer-integration",
-      "start_line": 93,
-      "end_line": 101,
-      "title": "12:33 - Book 2 Developmental Timelines & Ego Balancer Integration",
-      "entry_sha256": "ba5e69237977b731c69230e7b6d510baeab789a7d36e3165f7085eb73337cef3",
-      "stream": "book-history",
-      "areas": [
-        "book-writing"
-      ],
-      "related_streams": [
-        "book-history"
-      ],
-      "basis": "explicit_primary_area",
-      "flags": [],
-      "date": "2026-08-02",
-      "legacy_root_path": false
-    },
-    {
-      "id": "2026/2026-08-02.md#1247---book-2-neuroscientific-drive-mechanics--chapter-4-expansion",
-      "source": "2026/2026-08-02.md",
-      "anchor": "1247---book-2-neuroscientific-drive-mechanics--chapter-4-expansion",
-      "start_line": 102,
-      "end_line": 110,
-      "title": "12:47 - Book 2 Neuroscientific Drive Mechanics & Chapter 4 Expansion",
-      "entry_sha256": "fdd33faeebcf3890ad74032292923026c65dfb6d66ae4215002e82b9d00794ee",
-      "stream": "book-history",
-      "areas": [
-        "book-writing"
-      ],
-      "related_streams": [
-        "book-history"
-      ],
-      "basis": "explicit_primary_area",
-      "flags": [],
-      "date": "2026-08-02",
-      "legacy_root_path": false
-    },
-    {
-      "id": "2026/2026-08-02.md#1250---book-2-shadow-stack-emergency-mechanics-5-8--daemon-8-unlocking-dominant-1",
-      "source": "2026/2026-08-02.md",
-      "anchor": "1250---book-2-shadow-stack-emergency-mechanics-5-8--daemon-8-unlocking-dominant-1",
-      "start_line": 111,
-      "end_line": 119,
-      "title": "12:50 - Book 2 Shadow Stack Emergency Mechanics (5-8) & Daemon #8 Unlocking Dominant #1",
-      "entry_sha256": "20f8abb4edcd8e606096e36169c3924afb2c1cbe452c877141bd90dd4d6015c4",
-      "stream": "book-history",
-      "areas": [
-        "book-writing"
-      ],
-      "related_streams": [
-        "book-history"
-      ],
-      "basis": "explicit_primary_area",
-      "flags": [],
-      "date": "2026-08-02",
-      "legacy_root_path": false
-    },
-    {
-      "id": "2026/2026-08-02.md#1251---book-2-universal-16-type-polarity-matrix--socialgender-conditioning",
-      "source": "2026/2026-08-02.md",
-      "anchor": "1251---book-2-universal-16-type-polarity-matrix--socialgender-conditioning",
-      "start_line": 120,
-      "end_line": 128,
-      "title": "12:51 - Book 2 Universal 16-Type Polarity Matrix & Social/Gender Conditioning",
-      "entry_sha256": "8aa742784f74cb53fae85fbcfcef7399edbd163cf3bc9496988537b3a0f75662",
-      "stream": "book-history",
-      "areas": [
-        "book-writing"
-      ],
-      "related_streams": [
-        "book-history"
-      ],
-      "basis": "explicit_primary_area",
-      "flags": [],
-      "date": "2026-08-02",
-      "legacy_root_path": false
-    },
-    {
-      "id": "2026/2026-08-02.md#1259---book-2-radical-self-acceptance-polarity-extremes--new-normal-rebirth-integration",
-      "source": "2026/2026-08-02.md",
-      "anchor": "1259---book-2-radical-self-acceptance-polarity-extremes--new-normal-rebirth-integration",
-      "start_line": 129,
-      "end_line": 137,
-      "title": "12:59 - Book 2 Radical Self-Acceptance, Polarity Extremes & New Normal Rebirth Integration",
-      "entry_sha256": "183f6a2af9f085b226f808c95237469a8c41a5095bd39979c741520b0d2b099a",
-      "stream": "book-history",
-      "areas": [
-        "book-writing"
-      ],
-      "related_streams": [
-        "book-history"
-      ],
-      "basis": "explicit_primary_area",
-      "flags": [],
-      "date": "2026-08-02",
-      "legacy_root_path": false
-    },
-    {
-      "id": "2026/2026-08-02.md#1306---book-2-evolutionary-short-term-vs-long-term-survival--game-theory-integration",
-      "source": "2026/2026-08-02.md",
-      "anchor": "1306---book-2-evolutionary-short-term-vs-long-term-survival--game-theory-integration",
-      "start_line": 138,
-      "end_line": 146,
-      "title": "13:06 - Book 2 Evolutionary Short-Term vs Long-Term Survival & Game Theory Integration",
-      "entry_sha256": "d7201b3ddab524ba3ba7aac6022376041e62d9eff6e926e08b5c5e3294362c54",
-      "stream": "book-history",
-      "areas": [
-        "book-writing"
-      ],
-      "related_streams": [
-        "book-history"
-      ],
-      "basis": "explicit_primary_area",
-      "flags": [],
-      "date": "2026-08-02",
-      "legacy_root_path": false
-    },
-    {
-      "id": "2026/2026-08-02.md#1325---book-2-cross-volume-intellectual-seeds--series-continuity-matrix",
-      "source": "2026/2026-08-02.md",
-      "anchor": "1325---book-2-cross-volume-intellectual-seeds--series-continuity-matrix",
-      "start_line": 147,
-      "end_line": 155,
-      "title": "13:25 - Book 2 Cross-Volume Intellectual Seeds & Series Continuity Matrix",
-      "entry_sha256": "8b538e83ddb7f3c256f2d31f40266419190bd341dc3feb8a9c6175043ab441dd",
-      "stream": "book-history",
-      "areas": [
-        "book-writing"
-      ],
-      "related_streams": [
-        "book-history"
-      ],
-      "basis": "explicit_primary_area",
-      "flags": [],
-      "date": "2026-08-02",
-      "legacy_root_path": false
-    },
-    {
-      "id": "2026/2026-08-02.md#1328---economics-book-1-food-surplus-to-firewood-accumulation-integration",
-      "source": "2026/2026-08-02.md",
-      "anchor": "1328---economics-book-1-food-surplus-to-firewood-accumulation-integration",
-      "start_line": 156,
-      "end_line": 180,
-      "title": "13:28 - Economics Book 1 Food Surplus to Firewood Accumulation Integration",
-      "entry_sha256": "1017eccbc725b53329eb031799a01d71f756fbae6e6da34086a3126796d26962",
-      "stream": "book-history",
-      "areas": [
-        "book-writing"
-      ],
-      "related_streams": [
-        "book-history"
-      ],
-      "basis": "explicit_primary_area",
-      "flags": [],
-      "date": "2026-08-02",
-      "legacy_root_path": false
-    },
-    {
-      "id": "2026/2026-08-04.md#1748---book-2-psychoneuroimmunology-pni-core-discipline-integration",
+      "id": "2026/2026-08-04.md#unsectioned-record",
       "source": "2026/2026-08-04.md",
-      "anchor": "1748---book-2-psychoneuroimmunology-pni-core-discipline-integration",
-      "start_line": 3,
-      "end_line": 11,
-      "title": "17:48 - Book 2 Psychoneuroimmunology (PNI) Core Discipline Integration",
-      "entry_sha256": "3cf37eb767c65ef1470caf4e7c1dbfba2d6322717c81b0f236e034d8ddc35135",
-      "stream": "book-history",
-      "areas": [
-        "book-writing"
+      "anchor": "",
+      "start_line": 1,
+      "end_line": 1,
+      "title": "📜 Repository Work Ledger Entry - 2026-08-04",
+      "entry_sha256": "1d38025a6de5a9e9292e05b42c392132c06e7277d483c00e8ea9035e3391fc4c",
+      "stream": "review",
+      "areas": [],
+      "related_streams": [],
+      "basis": "insufficient_structured_metadata",
+      "flags": [
+        "missing_or_unknown_primary_area",
+        "unsectioned_source"
       ],
-      "related_streams": [
-        "book-history"
-      ],
-      "basis": "explicit_primary_area",
-      "flags": [],
-      "date": "2026-08-04",
-      "legacy_root_path": false
-    },
-    {
-      "id": "2026/2026-08-04.md#1754---book-1-master-biological-mapping-diagram-conversion",
-      "source": "2026/2026-08-04.md",
-      "anchor": "1754---book-1-master-biological-mapping-diagram-conversion",
-      "start_line": 12,
-      "end_line": 20,
-      "title": "17:54 - Book 1 Master Biological Mapping Diagram Conversion",
-      "entry_sha256": "cb80a520e33ed9955d6255b1c526d516e6494f70f17dbe54611b6d2dfb2db7ea",
-      "stream": "book-history",
-      "areas": [
-        "book-writing"
-      ],
-      "related_streams": [
-        "book-history"
-      ],
-      "basis": "explicit_primary_area",
-      "flags": [],
-      "date": "2026-08-04",
-      "legacy_root_path": false
-    },
-    {
-      "id": "2026/2026-08-04.md#1811---book-2-chapter-1-full-prose-drafting--blueprint-synchronization",
-      "source": "2026/2026-08-04.md",
-      "anchor": "1811---book-2-chapter-1-full-prose-drafting--blueprint-synchronization",
-      "start_line": 21,
-      "end_line": 31,
-      "title": "18:11 - Book 2 Chapter 1 Full Prose Drafting & Blueprint Synchronization",
-      "entry_sha256": "f76c82d8023efe23cb641b35dc0a792d13ed6ab9680d07b7f784b070f6d10fd3",
-      "stream": "book-history",
-      "areas": [
-        "book-writing"
-      ],
-      "related_streams": [
-        "book-history"
-      ],
-      "basis": "explicit_primary_area",
-      "flags": [],
-      "date": "2026-08-04",
-      "legacy_root_path": false
-    },
-    {
-      "id": "2026/2026-08-04.md#1813---book-2-master-table-of-contents--research-roadmap-matrix-standardization",
-      "source": "2026/2026-08-04.md",
-      "anchor": "1813---book-2-master-table-of-contents--research-roadmap-matrix-standardization",
-      "start_line": 32,
-      "end_line": 40,
-      "title": "18:13 - Book 2 Master Table of Contents & Research Roadmap Matrix Standardization",
-      "entry_sha256": "d838e67f2fdb8f297715adbc03f9b06862fe277e337710c6c9e7f2d0847c09b3",
-      "stream": "book-history",
-      "areas": [
-        "book-writing"
-      ],
-      "related_streams": [
-        "book-history"
-      ],
-      "basis": "explicit_primary_area",
-      "flags": [],
-      "date": "2026-08-04",
-      "legacy_root_path": false
-    },
-    {
-      "id": "2026/2026-08-04.md#1815---book-2-audit--philosophical-enrichment-integration",
-      "source": "2026/2026-08-04.md",
-      "anchor": "1815---book-2-audit--philosophical-enrichment-integration",
-      "start_line": 41,
-      "end_line": 52,
-      "title": "18:15 - Book 2 Audit & Philosophical Enrichment Integration",
-      "entry_sha256": "11f41bd979707e4adbac4d42af38723ea9d3ea6c3383e23b5dd282bfda9a972e",
-      "stream": "book-history",
-      "areas": [
-        "book-writing"
-      ],
-      "related_streams": [
-        "book-history"
-      ],
-      "basis": "explicit_primary_area",
-      "flags": [],
-      "date": "2026-08-04",
-      "legacy_root_path": false
-    },
-    {
-      "id": "2026/2026-08-04.md#1822---self-awareness-vs-meta-cognition-distinction-refinement",
-      "source": "2026/2026-08-04.md",
-      "anchor": "1822---self-awareness-vs-meta-cognition-distinction-refinement",
-      "start_line": 53,
-      "end_line": 61,
-      "title": "18:22 - Self-Awareness vs Meta-Cognition Distinction Refinement",
-      "entry_sha256": "b52b26f7b0716e7153655c827f8df296ab81071f137edb10488c5f4037752cc0",
-      "stream": "book-history",
-      "areas": [
-        "book-writing"
-      ],
-      "related_streams": [
-        "book-history"
-      ],
-      "basis": "explicit_primary_area",
-      "flags": [],
-      "date": "2026-08-04",
-      "legacy_root_path": false
-    },
-    {
-      "id": "2026/2026-08-04.md#1827---book-2-chapter-2-full-prose-drafting--blueprint-linking",
-      "source": "2026/2026-08-04.md",
-      "anchor": "1827---book-2-chapter-2-full-prose-drafting--blueprint-linking",
-      "start_line": 62,
-      "end_line": 72,
-      "title": "18:27 - Book 2 Chapter 2 Full Prose Drafting & Blueprint Linking",
-      "entry_sha256": "3e3e0864e3631564d97838d6848b118966ad13d217c3889db624f99f4dc996e5",
-      "stream": "book-history",
-      "areas": [
-        "book-writing"
-      ],
-      "related_streams": [
-        "book-history"
-      ],
-      "basis": "explicit_primary_area",
-      "flags": [],
-      "date": "2026-08-04",
-      "legacy_root_path": false
-    },
-    {
-      "id": "2026/2026-08-04.md#2000---book-2-chapter-2-theoretical-corrections-dynamic-games--biological-fire-necessity",
-      "source": "2026/2026-08-04.md",
-      "anchor": "2000---book-2-chapter-2-theoretical-corrections-dynamic-games--biological-fire-necessity",
-      "start_line": 73,
-      "end_line": 85,
-      "title": "20:00 - Book 2 Chapter 2 Theoretical Corrections (Dynamic Games & Biological Fire Necessity)",
-      "entry_sha256": "9dac1ebdd7277d7896fda42a816a0c693245a2da6318e0d4c25759e75e50c242",
-      "stream": "book-history",
-      "areas": [
-        "book-writing"
-      ],
-      "related_streams": [
-        "book-history"
-      ],
-      "basis": "explicit_primary_area",
-      "flags": [],
-      "date": "2026-08-04",
-      "legacy_root_path": false
-    },
-    {
-      "id": "2026/2026-08-04.md#2034---completion-of-all-5-chapter-drafts--master-blueprint-linking-for-book-2",
-      "source": "2026/2026-08-04.md",
-      "anchor": "2034---completion-of-all-5-chapter-drafts--master-blueprint-linking-for-book-2",
-      "start_line": 86,
-      "end_line": 105,
-      "title": "20:34 - Completion of All 5 Chapter Drafts & Master Blueprint Linking for Book 2",
-      "entry_sha256": "d06f1ee66d3dc6b7171114a66b7e63af8ea75f42f2590991a1c410095a7f2a2d",
-      "stream": "book-history",
-      "areas": [
-        "book-writing"
-      ],
-      "related_streams": [
-        "book-history"
-      ],
-      "basis": "explicit_primary_area",
-      "flags": [],
-      "date": "2026-08-04",
-      "legacy_root_path": false
-    },
-    {
-      "id": "2026/2026-08-04.md#2049---book-1-style-full-prose-expansion-commitment-for-book-2",
-      "source": "2026/2026-08-04.md",
-      "anchor": "2049---book-1-style-full-prose-expansion-commitment-for-book-2",
-      "start_line": 106,
-      "end_line": 116,
-      "title": "20:49 - Book 1-Style Full Prose Expansion Commitment for Book 2",
-      "entry_sha256": "d85e19d3e7c35c392c6038cbe1a19ba6e67fddb1e6b10732df308f8237574ba2",
-      "stream": "book-history",
-      "areas": [
-        "book-writing"
-      ],
-      "related_streams": [
-        "book-history"
-      ],
-      "basis": "explicit_primary_area",
-      "flags": [],
-      "date": "2026-08-04",
-      "legacy_root_path": false
-    },
-    {
-      "id": "2026/2026-08-04.md#2056---book-2-chapter-1-full-8-part-prose-expansion-completion",
-      "source": "2026/2026-08-04.md",
-      "anchor": "2056---book-2-chapter-1-full-8-part-prose-expansion-completion",
-      "start_line": 117,
-      "end_line": 137,
-      "title": "20:56 - Book 2 Chapter 1 Full 8-Part Prose Expansion Completion",
-      "entry_sha256": "1a3935c4bf154f2e868c47b31adc9ce00ceb20e734f796584fdadb3fd4e2fb26",
-      "stream": "book-history",
-      "areas": [
-        "book-writing"
-      ],
-      "related_streams": [
-        "book-history"
-      ],
-      "basis": "explicit_primary_area",
-      "flags": [],
-      "date": "2026-08-04",
-      "legacy_root_path": false
-    },
-    {
-      "id": "2026/2026-08-04.md#2201---book-2-chapter-1--chapter-2-full-100-book-1-publication-grade-standardization",
-      "source": "2026/2026-08-04.md",
-      "anchor": "2201---book-2-chapter-1--chapter-2-full-100-book-1-publication-grade-standardization",
-      "start_line": 138,
-      "end_line": 152,
-      "title": "22:01 - Book 2 Chapter 1 & Chapter 2 Full 100% Book 1 Publication-Grade Standardization",
-      "entry_sha256": "30a386bde31a3e6068d9fbf36b8f58e963e9586e9d80b4926b58e9b60f513bfe",
-      "stream": "book-history",
-      "areas": [
-        "book-writing"
-      ],
-      "related_streams": [
-        "book-history"
-      ],
-      "basis": "explicit_primary_area",
-      "flags": [],
-      "date": "2026-08-04",
-      "legacy_root_path": false
-    },
-    {
-      "id": "2026/2026-08-04.md#0919---book-2-chapter-5-confirmation-bias-integration",
-      "source": "2026/2026-08-04.md",
-      "anchor": "0919---book-2-chapter-5-confirmation-bias-integration",
-      "start_line": 153,
-      "end_line": 163,
-      "title": "09:19 - Book 2 Chapter 5 Confirmation Bias Integration",
-      "entry_sha256": "81238cb27f6a24810b1fdd6df8ac855415248cf158be622ef0694b3ab163279f",
-      "stream": "book-history",
-      "areas": [
-        "book-writing"
-      ],
-      "related_streams": [
-        "book-history"
-      ],
-      "basis": "explicit_primary_area",
-      "flags": [],
-      "date": "2026-08-04",
-      "legacy_root_path": false
-    },
-    {
-      "id": "2026/2026-08-04.md#1824---external-scientific-references-vs-proprietary-uet-theory-boundary-specification",
-      "source": "2026/2026-08-04.md",
-      "anchor": "1824---external-scientific-references-vs-proprietary-uet-theory-boundary-specification",
-      "start_line": 164,
-      "end_line": 177,
-      "title": "18:24 - External Scientific References vs Proprietary UET Theory Boundary Specification",
-      "entry_sha256": "4225eb884f6c03399f7caa79721f3e62a0da07c9973a4cc41668c28049846778",
-      "stream": "book-history",
-      "areas": [
-        "book-writing"
-      ],
-      "related_streams": [
-        "book-history"
-      ],
-      "basis": "explicit_primary_area",
-      "flags": [],
       "date": "2026-08-04",
       "legacy_root_path": false
     },
@@ -5446,33 +4233,11 @@
       "legacy_root_path": false
     },
     {
-      "id": "2026/2026-08-13.md#book-writing-planning-first-workflow-standard",
-      "source": "2026/2026-08-13.md",
-      "anchor": "book-writing-planning-first-workflow-standard",
-      "start_line": 46,
-      "end_line": 56,
-      "title": "Book-writing planning-first workflow standard",
-      "entry_sha256": "d62e49fc842c10009b9e69cb312490dddd1fec1a23907732c3ede0c20cb1d4b9",
-      "stream": "book-history",
-      "areas": [
-        "book-writing",
-        "research-standards"
-      ],
-      "related_streams": [
-        "book-history",
-        "research"
-      ],
-      "basis": "explicit_primary_area",
-      "flags": [],
-      "date": "2026-08-13",
-      "legacy_root_path": false
-    },
-    {
       "id": "2026/2026-08-13.md#topic-13-nist-alpha_v-source-boundary-wave",
       "source": "2026/2026-08-13.md",
       "anchor": "topic-13-nist-alpha_v-source-boundary-wave",
-      "start_line": 57,
-      "end_line": 69,
+      "start_line": 46,
+      "end_line": 58,
       "title": "Topic 13 NIST alpha_V source-boundary wave",
       "entry_sha256": "7cd0f9d5abbbd885aa371e82523a208ab3ef37ea73614ad0ef7dca2ad40847e7",
       "stream": "research",
@@ -5493,8 +4258,8 @@
       "id": "2026/2026-08-13.md#topic-13-bosak-elastic-bulk-comparator-wave",
       "source": "2026/2026-08-13.md",
       "anchor": "topic-13-bosak-elastic-bulk-comparator-wave",
-      "start_line": 70,
-      "end_line": 82,
+      "start_line": 59,
+      "end_line": 71,
       "title": "Topic 13 Bosak elastic bulk comparator wave",
       "entry_sha256": "8ee63a9adb4e0dcb35a5d1747de620e3300a1065ba9f3d4969d02e8ee0119a6f",
       "stream": "research",
@@ -5515,8 +4280,8 @@
       "id": "2026/2026-08-13.md#topic-13-hanfland-isothermal-k_t-source-wave",
       "source": "2026/2026-08-13.md",
       "anchor": "topic-13-hanfland-isothermal-k_t-source-wave",
-      "start_line": 83,
-      "end_line": 95,
+      "start_line": 72,
+      "end_line": 84,
       "title": "Topic 13 Hanfland isothermal K_T source wave",
       "entry_sha256": "01272c0ce336ec296393e3bdd42a0ddc616e6a8e5b406ba93e81ad7879cb0940",
       "stream": "research",
@@ -5537,8 +4302,8 @@
       "id": "2026/2026-08-13.md#topic-13-ihep-tpg-alpha_v-comparator-wave",
       "source": "2026/2026-08-13.md",
       "anchor": "topic-13-ihep-tpg-alpha_v-comparator-wave",
-      "start_line": 96,
-      "end_line": 108,
+      "start_line": 85,
+      "end_line": 97,
       "title": "Topic 13 IHEP TPG alpha_V comparator wave",
       "entry_sha256": "0ba28f4acb8653915b202920633792ef221be3a5ae05acb5b62452dcf029ab8e",
       "stream": "research",
@@ -5559,8 +4324,8 @@
       "id": "2026/2026-08-13.md#topic-13-official-nelson-riley-alpha_v-comparator-wave",
       "source": "2026/2026-08-13.md",
       "anchor": "topic-13-official-nelson-riley-alpha_v-comparator-wave",
-      "start_line": 109,
-      "end_line": 121,
+      "start_line": 98,
+      "end_line": 110,
       "title": "Topic 13 official Nelson-Riley alpha_V comparator wave",
       "entry_sha256": "904b36ddb8e602a7a6aa0e68c2e32e424d9228edf9c38661851e9fb7c73cf412",
       "stream": "research",
@@ -5581,8 +4346,8 @@
       "id": "2026/2026-08-13.md#topic-13-major-result-register-synchronization-wave",
       "source": "2026/2026-08-13.md",
       "anchor": "topic-13-major-result-register-synchronization-wave",
-      "start_line": 122,
-      "end_line": 134,
+      "start_line": 111,
+      "end_line": 123,
       "title": "Topic 13 major-result register synchronization wave",
       "entry_sha256": "dc8d565a73498ac4c57786f28e55342cb60281b779d75e93f8ea0b9b05e4a84b",
       "stream": "research",
@@ -5603,8 +4368,8 @@
       "id": "2026/2026-08-13.md#topic-13-mp48-c_src-mesh-convergence-boundary-wave",
       "source": "2026/2026-08-13.md",
       "anchor": "topic-13-mp48-c_src-mesh-convergence-boundary-wave",
-      "start_line": 135,
-      "end_line": 147,
+      "start_line": 124,
+      "end_line": 136,
       "title": "Topic 13 MP48 C_src mesh-convergence boundary wave",
       "entry_sha256": "ba833a5b261b4962700fd7b03d8b02eae4389e86f5183118b3cbf34319967fdb",
       "stream": "research",
@@ -5625,8 +4390,8 @@
       "id": "2026/2026-08-13.md#topic-13-huang-2023-supplementary-boundary-wave",
       "source": "2026/2026-08-13.md",
       "anchor": "topic-13-huang-2023-supplementary-boundary-wave",
-      "start_line": 148,
-      "end_line": 160,
+      "start_line": 137,
+      "end_line": 149,
       "title": "Topic 13 Huang 2023 supplementary boundary wave",
       "entry_sha256": "4bea6084a858b6920529e72c819f8a71479d48849930ddf961bf893c6fa38249",
       "stream": "research",
@@ -5647,8 +4412,8 @@
       "id": "2026/2026-08-13.md#topic-13-mp48-finest-pair-convergence-refinement",
       "source": "2026/2026-08-13.md",
       "anchor": "topic-13-mp48-finest-pair-convergence-refinement",
-      "start_line": 161,
-      "end_line": 173,
+      "start_line": 150,
+      "end_line": 162,
       "title": "Topic 13 MP48 finest-pair convergence refinement",
       "entry_sha256": "e232cddc6aa6c9b97ec2113b81c5f46216b118b1bb1374f257d1687493d1c0be",
       "stream": "research",
@@ -5669,8 +4434,8 @@
       "id": "2026/2026-08-13.md#topic-13-nist-axm-5q1-same-grade-density-boundary-wave",
       "source": "2026/2026-08-13.md",
       "anchor": "topic-13-nist-axm-5q1-same-grade-density-boundary-wave",
-      "start_line": 174,
-      "end_line": 186,
+      "start_line": 163,
+      "end_line": 175,
       "title": "Topic 13 NIST AXM-5Q1 same-grade density boundary wave",
       "entry_sha256": "08cd72e3305a2b61c755fc1f6ffe05e144871352934bbbe444913c15699b3c8a",
       "stream": "research",
@@ -5691,8 +4456,8 @@
       "id": "2026/2026-08-13.md#topic-13-mp48-deep-fine-tail-convergence-refinement",
       "source": "2026/2026-08-13.md",
       "anchor": "topic-13-mp48-deep-fine-tail-convergence-refinement",
-      "start_line": 187,
-      "end_line": 199,
+      "start_line": 176,
+      "end_line": 188,
       "title": "Topic 13 MP48 deep fine-tail convergence refinement",
       "entry_sha256": "eee4e7678e68cfde34ae49e1ebd005992617595088f66d70719dfbf8ad461973",
       "stream": "research",
@@ -5713,8 +4478,8 @@
       "id": "2026/2026-08-13.md#topic-13-bipm-specific-heat-comparator-wave",
       "source": "2026/2026-08-13.md",
       "anchor": "topic-13-bipm-specific-heat-comparator-wave",
-      "start_line": 200,
-      "end_line": 212,
+      "start_line": 189,
+      "end_line": 201,
       "title": "Topic 13 BIPM specific-heat comparator wave",
       "entry_sha256": "588d0a469404f12916d7c4507464be3aa6d46c58015d6f1b45855046a7e0af6a",
       "stream": "research",
@@ -5735,8 +4500,8 @@
       "id": "2026/2026-08-13.md#topic-13-iaea-table-derived-c_v-comparator-wave",
       "source": "2026/2026-08-13.md",
       "anchor": "topic-13-iaea-table-derived-c_v-comparator-wave",
-      "start_line": 213,
-      "end_line": 225,
+      "start_line": 202,
+      "end_line": 214,
       "title": "Topic 13 IAEA table-derived c_v comparator wave",
       "entry_sha256": "54627a33825e5b5b307060f6a2b056b2a1e2d6ac74eb76f502b5a11902b84536",
       "stream": "research",
@@ -5757,8 +4522,8 @@
       "id": "2026/2026-08-13.md#topic-13-ding-material-regime-boundary-wave",
       "source": "2026/2026-08-13.md",
       "anchor": "topic-13-ding-material-regime-boundary-wave",
-      "start_line": 226,
-      "end_line": 238,
+      "start_line": 215,
+      "end_line": 227,
       "title": "Topic 13 Ding material-regime boundary wave",
       "entry_sha256": "831a49fdde244392782007117636d36c36bb33c498bbe1da454f6ff6c27f98be",
       "stream": "research",
@@ -5779,8 +4544,8 @@
       "id": "2026/2026-08-13.md#topic-13-iaea-c_v-uncertainty-boundary-wave",
       "source": "2026/2026-08-13.md",
       "anchor": "topic-13-iaea-c_v-uncertainty-boundary-wave",
-      "start_line": 239,
-      "end_line": 251,
+      "start_line": 228,
+      "end_line": 240,
       "title": "Topic 13 IAEA c_v uncertainty boundary wave",
       "entry_sha256": "00cf4d62b8017ef14f832f12b81b959fedc691083ffb7d963e64936f5c15c5dc",
       "stream": "research",
@@ -5801,8 +4566,8 @@
       "id": "2026/2026-08-13.md#topic-13-phonix-mp-47-harmonic-comparator-wave",
       "source": "2026/2026-08-13.md",
       "anchor": "topic-13-phonix-mp-47-harmonic-comparator-wave",
-      "start_line": 252,
-      "end_line": 264,
+      "start_line": 241,
+      "end_line": 253,
       "title": "Topic 13 Phonix mp-47 harmonic comparator wave",
       "entry_sha256": "38d11c0ee011864b540d84522ea025e5efc0f42bd1a938f2f409a7ff987db029",
       "stream": "research",
@@ -5823,8 +4588,8 @@
       "id": "2026/2026-08-13.md#topic-13-oxford-tgs-numeric-row-comparator-wave",
       "source": "2026/2026-08-13.md",
       "anchor": "topic-13-oxford-tgs-numeric-row-comparator-wave",
-      "start_line": 265,
-      "end_line": 277,
+      "start_line": 254,
+      "end_line": 266,
       "title": "Topic 13 Oxford TGS numeric-row comparator wave",
       "entry_sha256": "efe6b71e4b2a571719e5b4eea6e723b46f097604c851c4041ef96a7805304248",
       "stream": "research",
@@ -5845,8 +4610,8 @@
       "id": "2026/2026-08-13.md#topic-13-desorbo-ceylon-graphite-cp-comparator-wave",
       "source": "2026/2026-08-13.md",
       "anchor": "topic-13-desorbo-ceylon-graphite-cp-comparator-wave",
-      "start_line": 278,
-      "end_line": 289,
+      "start_line": 267,
+      "end_line": 278,
       "title": "Topic 13 DeSorbo Ceylon graphite Cp comparator wave",
       "entry_sha256": "a593694ec4e59b5497e9c5212784103e5dfb05c7aec547d5a0535785fc44a28c",
       "stream": "research",
@@ -5867,8 +4632,8 @@
       "id": "2026/2026-08-13.md#topic-13-equilibrium-kmsfdt-identity-wave",
       "source": "2026/2026-08-13.md",
       "anchor": "topic-13-equilibrium-kmsfdt-identity-wave",
-      "start_line": 290,
-      "end_line": 301,
+      "start_line": 279,
+      "end_line": 290,
       "title": "Topic 13 equilibrium KMS/FDT identity wave",
       "entry_sha256": "4133753736e8adedfba1660bfed31231dc6ae2c455e6646b2c398b5228030833",
       "stream": "research",
@@ -5889,8 +4654,8 @@
       "id": "2026/2026-08-13.md#topic-13-public-green-kubo-source-boundary-wave",
       "source": "2026/2026-08-13.md",
       "anchor": "topic-13-public-green-kubo-source-boundary-wave",
-      "start_line": 302,
-      "end_line": 314,
+      "start_line": 291,
+      "end_line": 303,
       "title": "Topic 13 public Green-Kubo source-boundary wave",
       "entry_sha256": "45a14000fa524680b2c39d0cca655770a5abf5f2a08ebdfbf35c5fb0fe2b82aa",
       "stream": "research",
@@ -5911,8 +4676,8 @@
       "id": "2026/2026-08-13.md#topic-13-formal-open-system-skkms-and-entropy-lane",
       "source": "2026/2026-08-13.md",
       "anchor": "topic-13-formal-open-system-skkms-and-entropy-lane",
-      "start_line": 315,
-      "end_line": 326,
+      "start_line": 304,
+      "end_line": 315,
       "title": "Topic 13 formal open-system SK/KMS and entropy lane",
       "entry_sha256": "ff574db2e945a67a1581083f8cd2abd8b782b6c10806eaa631d15a25ee6d3144",
       "stream": "research",
@@ -5933,8 +4698,8 @@
       "id": "2026/2026-08-13.md#topic-13-independent-c_src-acceptance-contract-wave",
       "source": "2026/2026-08-13.md",
       "anchor": "topic-13-independent-c_src-acceptance-contract-wave",
-      "start_line": 327,
-      "end_line": 338,
+      "start_line": 316,
+      "end_line": 327,
       "title": "Topic 13 independent C_src acceptance-contract wave",
       "entry_sha256": "9da8c62761ea6b4cf1d7167d99f2038050c8ea4f30e57d89c405d5eb94b867fa",
       "stream": "research",
@@ -5955,8 +4720,8 @@
       "id": "2026/2026-08-13.md#topic-13-calorinezenodo-nep-bte-candidate-boundary-wave",
       "source": "2026/2026-08-13.md",
       "anchor": "topic-13-calorinezenodo-nep-bte-candidate-boundary-wave",
-      "start_line": 339,
-      "end_line": 351,
+      "start_line": 328,
+      "end_line": 340,
       "title": "Topic 13 Calorine/Zenodo NEP BTE candidate-boundary wave",
       "entry_sha256": "3f220a6c831b3365e7f19e561ded6aaa7b41f72354ca0d11b1649ab3fdbd69a0",
       "stream": "research",
@@ -5977,8 +4742,8 @@
       "id": "2026/2026-08-13.md#topic-13-holdout-access-semantics-correction-wave",
       "source": "2026/2026-08-13.md",
       "anchor": "topic-13-holdout-access-semantics-correction-wave",
-      "start_line": 352,
-      "end_line": 364,
+      "start_line": 341,
+      "end_line": 353,
       "title": "Topic 13 holdout access-semantics correction wave",
       "entry_sha256": "d66a55a042d706fb1945822d5d20134e3f390d30265b1cc1c591ce33136f9819",
       "stream": "research",
@@ -6000,8 +4765,8 @@
       "id": "2026/2026-08-13.md#topic-13-nims-graphite-ltc-source-route-no-go-wave",
       "source": "2026/2026-08-13.md",
       "anchor": "topic-13-nims-graphite-ltc-source-route-no-go-wave",
-      "start_line": 365,
-      "end_line": 376,
+      "start_line": 354,
+      "end_line": 365,
       "title": "Topic 13 NIMS graphite LTC source-route no-go wave",
       "entry_sha256": "012b13a65c5c3f14d0a3a2cbd9a09976ff65b702e7034ba6f2016512fd8ddd99",
       "stream": "research",
@@ -6022,8 +4787,8 @@
       "id": "2026/2026-08-13.md#topic-13-ding-2017-acs-supplementary-payload-boundary-wave",
       "source": "2026/2026-08-13.md",
       "anchor": "topic-13-ding-2017-acs-supplementary-payload-boundary-wave",
-      "start_line": 377,
-      "end_line": 388,
+      "start_line": 366,
+      "end_line": 377,
       "title": "Topic 13 Ding 2017 ACS supplementary payload-boundary wave",
       "entry_sha256": "c689cce29ec687d4e458bbcbbb8301cfe68d5bf631992c25c23c767f373835ba",
       "stream": "research",
@@ -6044,8 +4809,8 @@
       "id": "2026/2026-08-13.md#topic-13-phi-si-anchor-public-source-boundary-wave",
       "source": "2026/2026-08-13.md",
       "anchor": "topic-13-phi-si-anchor-public-source-boundary-wave",
-      "start_line": 389,
-      "end_line": 400,
+      "start_line": 378,
+      "end_line": 389,
       "title": "Topic 13 Phi SI anchor public-source boundary wave",
       "entry_sha256": "3c774c1191b3d94b0455a11ada18f61d3b9ef8426808d38cc23947427e9a844b",
       "stream": "research",
@@ -6066,8 +4831,8 @@
       "id": "2026/2026-08-13.md#topic-13-finite-temperature-o2-hartree-self-energy-wave",
       "source": "2026/2026-08-13.md",
       "anchor": "topic-13-finite-temperature-o2-hartree-self-energy-wave",
-      "start_line": 401,
-      "end_line": 412,
+      "start_line": 390,
+      "end_line": 401,
       "title": "Topic 13 finite-temperature O(2) Hartree self-energy wave",
       "entry_sha256": "f1e32d654ba715bdaf8290ffc45346263179077ab5a7e21f61ef230bab601974",
       "stream": "research",
@@ -6089,8 +4854,8 @@
       "id": "2026/2026-08-13.md#topic-13-hartree-equilibrium-thermodynamic-consistency-wave",
       "source": "2026/2026-08-13.md",
       "anchor": "topic-13-hartree-equilibrium-thermodynamic-consistency-wave",
-      "start_line": 413,
-      "end_line": 425,
+      "start_line": 402,
+      "end_line": 414,
       "title": "Topic 13 Hartree equilibrium thermodynamic consistency wave",
       "entry_sha256": "8bee181f8494b590ea207259addf0f14350378f88e83e9475b6c7b29099eea71",
       "stream": "research",
@@ -6112,8 +4877,8 @@
       "id": "2026/2026-08-13.md#topic-13-finite-temperature-scheme-identifiability-no-go-wave",
       "source": "2026/2026-08-13.md",
       "anchor": "topic-13-finite-temperature-scheme-identifiability-no-go-wave",
-      "start_line": 426,
-      "end_line": 436,
+      "start_line": 415,
+      "end_line": 425,
       "title": "Topic 13 finite-temperature scheme identifiability no-go wave",
       "entry_sha256": "afa2affeec46329779edb9c7e1ba8c08f63ba6221b686ef4e3dc7229c875fd13",
       "stream": "research",
@@ -6135,8 +4900,8 @@
       "id": "2026/2026-08-13.md#topic-13-mp48-fine-tail-acceptance-policy-correction",
       "source": "2026/2026-08-13.md",
       "anchor": "topic-13-mp48-fine-tail-acceptance-policy-correction",
-      "start_line": 437,
-      "end_line": 449,
+      "start_line": 426,
+      "end_line": 438,
       "title": "Topic 13 MP48 fine-tail acceptance policy correction",
       "entry_sha256": "27a41c2e661f3dc903613ea613b06442580854d23fabc007305ac429a9a3b693",
       "stream": "research",
@@ -6157,8 +4922,8 @@
       "id": "2026/2026-08-13.md#topic-13-mp48-acceptance-controller-synchronization",
       "source": "2026/2026-08-13.md",
       "anchor": "topic-13-mp48-acceptance-controller-synchronization",
-      "start_line": 450,
-      "end_line": 462,
+      "start_line": 439,
+      "end_line": 451,
       "title": "Topic 13 MP48 acceptance-controller synchronization",
       "entry_sha256": "ae467b2d310d7fbd8c6feefef9926af8491924b7ec49ad121f8d28470508431b",
       "stream": "research",
@@ -6179,8 +4944,8 @@
       "id": "2026/2026-08-13.md#topic-13-mp48-full-gate-narrative-drift-repair",
       "source": "2026/2026-08-13.md",
       "anchor": "topic-13-mp48-full-gate-narrative-drift-repair",
-      "start_line": 463,
-      "end_line": 474,
+      "start_line": 452,
+      "end_line": 463,
       "title": "Topic 13 MP48 full-gate narrative drift repair",
       "entry_sha256": "ec8a0e918b3d71ea212c145c074ed1d8d92e97767341b5c5450e696530e24143",
       "stream": "research",
@@ -6201,8 +4966,8 @@
       "id": "2026/2026-08-13.md#topic-13-mp48-temperature-volume-uncertainty-boundary",
       "source": "2026/2026-08-13.md",
       "anchor": "topic-13-mp48-temperature-volume-uncertainty-boundary",
-      "start_line": 475,
-      "end_line": 486,
+      "start_line": 464,
+      "end_line": 475,
       "title": "Topic 13 MP48 temperature-volume uncertainty boundary",
       "entry_sha256": "9b213e0647022507ae76b618d7c569659fc1e7325772aa8f04f54defc4f84f31",
       "stream": "research",
@@ -6223,8 +4988,8 @@
       "id": "2026/2026-08-13.md#topic-13-graphite-alpha_vk_t-source-compatibility-boundary",
       "source": "2026/2026-08-13.md",
       "anchor": "topic-13-graphite-alpha_vk_t-source-compatibility-boundary",
-      "start_line": 487,
-      "end_line": 498,
+      "start_line": 476,
+      "end_line": 487,
       "title": "Topic 13 graphite alpha_V/K_T source compatibility boundary",
       "entry_sha256": "3122de512a1bb3b2059b56ab31b796d33afa19e1c495755070d6ce9f154036fd",
       "stream": "research",
@@ -6245,8 +5010,8 @@
       "id": "2026/2026-08-13.md#topic-13-ding-alternate-public-dataset-boundary",
       "source": "2026/2026-08-13.md",
       "anchor": "topic-13-ding-alternate-public-dataset-boundary",
-      "start_line": 499,
-      "end_line": 510,
+      "start_line": 488,
+      "end_line": 499,
       "title": "Topic 13 Ding alternate public dataset boundary",
       "entry_sha256": "7466043866ed72945d136c5ff2f965f52cc0169ee73d4af5408c6322c5a27964",
       "stream": "research",
@@ -7240,33 +6005,11 @@
       "legacy_root_path": false
     },
     {
-      "id": "2026/2026-08-20.md#book-2-02_biology_psychology-medical--physiological-psychology-deep-integration",
-      "source": "2026/2026-08-20.md",
-      "anchor": "book-2-02_biology_psychology-medical--physiological-psychology-deep-integration",
-      "start_line": 3,
-      "end_line": 18,
-      "title": "Book 2 (02_biology_psychology) Medical & Physiological Psychology Deep Integration",
-      "entry_sha256": "8a489b54bdc0d37742838906764c80a1efa785508dcf5b2ebc2bde070287a558",
-      "stream": "book-history",
-      "areas": [
-        "book-writing",
-        "research-standards"
-      ],
-      "related_streams": [
-        "book-history",
-        "research"
-      ],
-      "basis": "explicit_primary_area",
-      "flags": [],
-      "date": "2026-08-20",
-      "legacy_root_path": false
-    },
-    {
       "id": "2026/2026-08-20.md#topic-13-condensed-loop-renormalized-contact-vertex",
       "source": "2026/2026-08-20.md",
       "anchor": "topic-13-condensed-loop-renormalized-contact-vertex",
-      "start_line": 19,
-      "end_line": 26,
+      "start_line": 3,
+      "end_line": 10,
       "title": "Topic 13 condensed loop-renormalized contact vertex",
       "entry_sha256": "fe126d6587669ac39c47722b904a93b92cbc3e6758cea638f66c3bd5c7697bf6",
       "stream": "research",
@@ -7285,8 +6028,8 @@
       "id": "2026/2026-08-20.md#2026-08-20---state-matched-kubo-admission-and-condensed-skkms-match-t13-115t13-116",
       "source": "2026/2026-08-20.md",
       "anchor": "2026-08-20---state-matched-kubo-admission-and-condensed-skkms-match-t13-115t13-116",
-      "start_line": 27,
-      "end_line": 42,
+      "start_line": 11,
+      "end_line": 26,
       "title": "2026-08-20 - State-matched Kubo admission and condensed SK/KMS match (T13-115/T13-116)",
       "entry_sha256": "268549a8c9b83b51fa5ca770e3c0eff2a5dacf884ec0739c6ea63496ae64a20c",
       "stream": "research",
@@ -7301,8 +6044,8 @@
       "id": "2026/2026-08-20.md#2026-08-20---declared-finite-temperature-retarded-1pi-response-grid-t13-117",
       "source": "2026/2026-08-20.md",
       "anchor": "2026-08-20---declared-finite-temperature-retarded-1pi-response-grid-t13-117",
-      "start_line": 43,
-      "end_line": 57,
+      "start_line": 27,
+      "end_line": 41,
       "title": "2026-08-20 - Declared finite-temperature retarded 1PI response grid (T13-117)",
       "entry_sha256": "8bd1a66f294397c5759e815e8087bebcd44d4425c5781c91256307c5e903513c",
       "stream": "research",
@@ -7317,8 +6060,8 @@
       "id": "2026/2026-08-20.md#topic-13-signed-cut-kinematic-taxonomy-t13-118",
       "source": "2026/2026-08-20.md",
       "anchor": "topic-13-signed-cut-kinematic-taxonomy-t13-118",
-      "start_line": 58,
-      "end_line": 65,
+      "start_line": 42,
+      "end_line": 49,
       "title": "Topic 13 signed-cut kinematic taxonomy (T13-118)",
       "entry_sha256": "c3f83293c6d89725ef7722d8b389e8a7625dcf43aa439f63f8a20ae7cb562fbf",
       "stream": "research",
@@ -7337,8 +6080,8 @@
       "id": "2026/2026-08-20.md#topic-13-action-level-sunset-cut-multiplicity-t13-119",
       "source": "2026/2026-08-20.md",
       "anchor": "topic-13-action-level-sunset-cut-multiplicity-t13-119",
-      "start_line": 66,
-      "end_line": 73,
+      "start_line": 50,
+      "end_line": 57,
       "title": "Topic 13 action-level sunset cut multiplicity (T13-119)",
       "entry_sha256": "1b610ded17368f9a689928fb4fbcd6a487f15058e98ea0214162babadf986f76",
       "stream": "research",
@@ -7357,8 +6100,8 @@
       "id": "2026/2026-08-20.md#topic-13-all-positive-energy-on-shell-cut-response-t13-120",
       "source": "2026/2026-08-20.md",
       "anchor": "topic-13-all-positive-energy-on-shell-cut-response-t13-120",
-      "start_line": 74,
-      "end_line": 82,
+      "start_line": 58,
+      "end_line": 66,
       "title": "Topic 13 all positive-energy on-shell cut response (T13-120)",
       "entry_sha256": "7c286b605809d1387c87a962aee676e0856932b8c5a9257727be238d6a79247e",
       "stream": "research",
@@ -7377,8 +6120,8 @@
       "id": "2026/2026-08-20.md#topic-13-declared-channel-retardedadvancedkeldysh-1pi-t13-121",
       "source": "2026/2026-08-20.md",
       "anchor": "topic-13-declared-channel-retardedadvancedkeldysh-1pi-t13-121",
-      "start_line": 83,
-      "end_line": 91,
+      "start_line": 67,
+      "end_line": 75,
       "title": "Topic 13 declared-channel retarded/advanced/Keldysh 1PI (T13-121)",
       "entry_sha256": "177841d7ddf517ec331f84efd7f5277516d379c361d50f3845bdceabfc3823b9",
       "stream": "research",
@@ -7397,8 +6140,8 @@
       "id": "2026/2026-08-20.md#topic-13-t13-122-off-shell-threshold-crossing-lane",
       "source": "2026/2026-08-20.md",
       "anchor": "topic-13-t13-122-off-shell-threshold-crossing-lane",
-      "start_line": 92,
-      "end_line": 99,
+      "start_line": 76,
+      "end_line": 83,
       "title": "Topic 13 T13-122 off-shell threshold-crossing lane",
       "entry_sha256": "e24d2335050d40b39ffb450596340abad98b3781ca0035ceaac94c1848af683c",
       "stream": "research",
@@ -7417,8 +6160,8 @@
       "id": "2026/2026-08-20.md#topic-13-t13-123-all-2-to-2-permutation-identity",
       "source": "2026/2026-08-20.md",
       "anchor": "topic-13-t13-123-all-2-to-2-permutation-identity",
-      "start_line": 100,
-      "end_line": 107,
+      "start_line": 84,
+      "end_line": 91,
       "title": "Topic 13 T13-123 all 2-to-2 permutation identity",
       "entry_sha256": "d809783515b568a71341f7d6294c0682fc57f3bd7cf985d75091e7a508affa12",
       "stream": "research",
@@ -7437,8 +6180,8 @@
       "id": "2026/2026-08-20.md#topic-13-iaea-gr-280-same-state-cp-availability-comparator",
       "source": "2026/2026-08-20.md",
       "anchor": "topic-13-iaea-gr-280-same-state-cp-availability-comparator",
-      "start_line": 108,
-      "end_line": 115,
+      "start_line": 92,
+      "end_line": 99,
       "title": "Topic 13 IAEA GR-280 same-state Cp availability comparator",
       "entry_sha256": "b603bfc123aa914dcfb4214123e1b923b8d9d21d9dc74e7efeb4e52d466e8142",
       "stream": "research",
@@ -7457,8 +6200,8 @@
       "id": "2026/2026-08-20.md#2026-08-20---t13-125-zenodo-hi-trace-cp-comparator",
       "source": "2026/2026-08-20.md",
       "anchor": "2026-08-20---t13-125-zenodo-hi-trace-cp-comparator",
-      "start_line": 116,
-      "end_line": 124,
+      "start_line": 100,
+      "end_line": 108,
       "title": "2026-08-20 - T13-125 Zenodo Hi-Trace Cp comparator",
       "entry_sha256": "eb6ca4ae5e462ee541b2ff72fe4ce8972ea9781cf924aa6df6c3d808e128a3c4",
       "stream": "research",
@@ -7477,8 +6220,8 @@
       "id": "2026/2026-08-20.md#topic-13-t13-126-ig210-expansion-source-comparator",
       "source": "2026/2026-08-20.md",
       "anchor": "topic-13-t13-126-ig210-expansion-source-comparator",
-      "start_line": 125,
-      "end_line": 132,
+      "start_line": 109,
+      "end_line": 116,
       "title": "Topic 13 T13-126 IG210 expansion source comparator",
       "entry_sha256": "4b6cbd8a48325071c376cdb0965fcd6c44b5655fe596c41764a0a8b98330acc5",
       "stream": "research",
@@ -7497,8 +6240,8 @@
       "id": "2026/2026-08-20.md#topic-13-t13-127-material-regime-boundary-synchronization",
       "source": "2026/2026-08-20.md",
       "anchor": "topic-13-t13-127-material-regime-boundary-synchronization",
-      "start_line": 133,
-      "end_line": 140,
+      "start_line": 117,
+      "end_line": 124,
       "title": "Topic 13 T13-127 material-regime boundary synchronization",
       "entry_sha256": "8f1828fe2e3ae6e216c9ea821ad2b687c6a1b063ea7454e4f5c659c49281d333",
       "stream": "research",
@@ -7517,8 +6260,8 @@
       "id": "2026/2026-08-20.md#topic-13-t13-128-published-ig210-thermophysical-source",
       "source": "2026/2026-08-20.md",
       "anchor": "topic-13-t13-128-published-ig210-thermophysical-source",
-      "start_line": 141,
-      "end_line": 149,
+      "start_line": 125,
+      "end_line": 133,
       "title": "Topic 13 T13-128 published IG210 thermophysical source",
       "entry_sha256": "077227d8ac66deaada9bb2ffbb5992708950943f49605be9e859ca44b086ce74",
       "stream": "research",
@@ -7537,8 +6280,8 @@
       "id": "2026/2026-08-20.md#topic-13-t13-129-ig210-same-state-k_t-source-boundary",
       "source": "2026/2026-08-20.md",
       "anchor": "topic-13-t13-129-ig210-same-state-k_t-source-boundary",
-      "start_line": 150,
-      "end_line": 157,
+      "start_line": 134,
+      "end_line": 141,
       "title": "Topic 13 T13-129 IG210 same-state K_T source boundary",
       "entry_sha256": "2171c24ba494368517cff682f4e98a5e2682ef4a5fb8d6f9797abe1497c0576c",
       "stream": "research",
@@ -7557,8 +6300,8 @@
       "id": "2026/2026-08-20.md#topic-13-t13-130-covariant-action-symbolic-si-conversion-contract",
       "source": "2026/2026-08-20.md",
       "anchor": "topic-13-t13-130-covariant-action-symbolic-si-conversion-contract",
-      "start_line": 158,
-      "end_line": 166,
+      "start_line": 142,
+      "end_line": 150,
       "title": "Topic 13 T13-130 covariant action symbolic SI conversion contract",
       "entry_sha256": "594b2963cd0f49459e47f54bbe86f623697a53576caad56defac9aefac261b97",
       "stream": "research",
@@ -7577,8 +6320,8 @@
       "id": "2026/2026-08-20.md#topic-13-t13-131-huberman-public-pbte-source-boundary",
       "source": "2026/2026-08-20.md",
       "anchor": "topic-13-t13-131-huberman-public-pbte-source-boundary",
-      "start_line": 167,
-      "end_line": 175,
+      "start_line": 151,
+      "end_line": 159,
       "title": "Topic 13 T13-131 Huberman public PBTE source boundary",
       "entry_sha256": "0935bf4efbc282156dcad45ada6f485237f25090c01eb9b3574d56bec6c46fea",
       "stream": "research",
@@ -7597,8 +6340,8 @@
       "id": "2026/2026-08-20.md#topic-13-t13-132-full-gate-evidence-projection-and-lane-hash-refresh",
       "source": "2026/2026-08-20.md",
       "anchor": "topic-13-t13-132-full-gate-evidence-projection-and-lane-hash-refresh",
-      "start_line": 176,
-      "end_line": 183,
+      "start_line": 160,
+      "end_line": 167,
       "title": "Topic 13 T13-132 full-gate evidence projection and lane hash refresh",
       "entry_sha256": "00e49edb605ca1ee17c8f7e96334a7e1366e32a11ed4ef03d49787cbe5f44143",
       "stream": "research",
@@ -7617,8 +6360,8 @@
       "id": "2026/2026-08-20.md#topic-13-t13-133-beta-correspondence-blocker-classification",
       "source": "2026/2026-08-20.md",
       "anchor": "topic-13-t13-133-beta-correspondence-blocker-classification",
-      "start_line": 184,
-      "end_line": 191,
+      "start_line": 168,
+      "end_line": 175,
       "title": "Topic 13 T13-133 beta correspondence blocker classification",
       "entry_sha256": "a56793d8dfa1224acd86e4a0f1776c5bfea07d4d2ee8719f92a921b718613af9",
       "stream": "research",
@@ -7637,8 +6380,8 @@
       "id": "2026/2026-08-20.md#topic-13-t13-134-major-result-progress-synchronization",
       "source": "2026/2026-08-20.md",
       "anchor": "topic-13-t13-134-major-result-progress-synchronization",
-      "start_line": 192,
-      "end_line": 199,
+      "start_line": 176,
+      "end_line": 183,
       "title": "Topic 13 T13-134 major-result progress synchronization",
       "entry_sha256": "edc047cb7885038325aef2e88e94f2028db81bc23fc01b29d292ca344cc50164",
       "stream": "research",
@@ -7657,8 +6400,8 @@
       "id": "2026/2026-08-20.md#topic-13-t13-135-calorine-c_src-equilibriumunit-cross-check",
       "source": "2026/2026-08-20.md",
       "anchor": "topic-13-t13-135-calorine-c_src-equilibriumunit-cross-check",
-      "start_line": 200,
-      "end_line": 208,
+      "start_line": 184,
+      "end_line": 192,
       "title": "Topic 13 T13-135 Calorine C_src equilibrium/unit cross-check",
       "entry_sha256": "8868712ee5bb0d48933867235d5bcffa9ff39626c9cf64cfbd2745bd5146251b",
       "stream": "research",
@@ -7677,8 +6420,8 @@
       "id": "2026/2026-08-20.md#topic-13-t13-136-figshare-dft-force-data-capability-boundary",
       "source": "2026/2026-08-20.md",
       "anchor": "topic-13-t13-136-figshare-dft-force-data-capability-boundary",
-      "start_line": 209,
-      "end_line": 216,
+      "start_line": 193,
+      "end_line": 200,
       "title": "Topic 13 T13-136 Figshare DFT force-data capability boundary",
       "entry_sha256": "128271184b1d983017439edadf782d3b29df5c8afc0dcdda2d7734cbbc2d79a1",
       "stream": "research",
@@ -7697,8 +6440,8 @@
       "id": "2026/2026-08-20.md#topic-13-t13-137-huang-2023-nims-mdr-payload-boundary",
       "source": "2026/2026-08-20.md",
       "anchor": "topic-13-t13-137-huang-2023-nims-mdr-payload-boundary",
-      "start_line": 217,
-      "end_line": 225,
+      "start_line": 201,
+      "end_line": 209,
       "title": "Topic 13 T13-137 Huang 2023 NIMS MDR payload boundary",
       "entry_sha256": "8bd6b1518b4cd75c0e4d093ec75d71171366a760b6f97d96be581ddfa3529a75",
       "stream": "research",
@@ -7717,8 +6460,8 @@
       "id": "2026/2026-08-20.md#topic-13-t13-138-calorine-c-cx-model-variant-provenance-boundary",
       "source": "2026/2026-08-20.md",
       "anchor": "topic-13-t13-138-calorine-c-cx-model-variant-provenance-boundary",
-      "start_line": 226,
-      "end_line": 234,
+      "start_line": 210,
+      "end_line": 218,
       "title": "Topic 13 T13-138 Calorine C-CX model-variant provenance boundary",
       "entry_sha256": "7bc505897cb5b6c966f0938d437bd52a8ac0f1be31dbd79c4107097218eb9b94",
       "stream": "research",
@@ -7737,8 +6480,8 @@
       "id": "2026/2026-08-20.md#topic-13-t13-139-calorine-c-cx-legacy-nep1-backend-compatibility-boundary",
       "source": "2026/2026-08-20.md",
       "anchor": "topic-13-t13-139-calorine-c-cx-legacy-nep1-backend-compatibility-boundary",
-      "start_line": 235,
-      "end_line": 243,
+      "start_line": 219,
+      "end_line": 227,
       "title": "Topic 13 T13-139 Calorine C-CX legacy NEP1 backend compatibility boundary",
       "entry_sha256": "b38c760a5b6737ebf1f65dd32f2e3f506bb01dfd6a39f1d2e726ddd6e6dc2824",
       "stream": "research",
@@ -7757,8 +6500,8 @@
       "id": "2026/2026-08-20.md#topic-13-t13-140-calorine-c-cx-legacy-nep2-pbte-candidate-reproduction",
       "source": "2026/2026-08-20.md",
       "anchor": "topic-13-t13-140-calorine-c-cx-legacy-nep2-pbte-candidate-reproduction",
-      "start_line": 244,
-      "end_line": 252,
+      "start_line": 228,
+      "end_line": 236,
       "title": "Topic 13 T13-140 Calorine C-CX legacy NEP2 PBTE candidate reproduction",
       "entry_sha256": "0c2cdbe6fc90b2a21caab51d7d488d0363ae1306486de80d898e58a786ac80f5",
       "stream": "research",
@@ -7777,8 +6520,8 @@
       "id": "2026/2026-08-20.md#topic-13-t13-141-independent-alpha-candidate-inventory-expansion",
       "source": "2026/2026-08-20.md",
       "anchor": "topic-13-t13-141-independent-alpha-candidate-inventory-expansion",
-      "start_line": 253,
-      "end_line": 261,
+      "start_line": 237,
+      "end_line": 245,
       "title": "Topic 13 T13-141 independent alpha candidate inventory expansion",
       "entry_sha256": "41debc43a9f613aa7879c1d5970d30e7c8d99c11ba4bb620f801d964cabfb8fd",
       "stream": "research",
@@ -7797,8 +6540,8 @@
       "id": "2026/2026-08-20.md#topic-13-regularized-continuum-heat-current-lane",
       "source": "2026/2026-08-20.md",
       "anchor": "topic-13-regularized-continuum-heat-current-lane",
-      "start_line": 262,
-      "end_line": 272,
+      "start_line": 246,
+      "end_line": 256,
       "title": "Topic 13 Regularized Continuum Heat-Current Lane",
       "entry_sha256": "25bbbb5bf28d380459fe5fdc6ade479419208bb26ac397214e50bf5e01d6ea81",
       "stream": "research",
@@ -7819,8 +6562,8 @@
       "id": "2026/2026-08-20.md#topic-13core-hardening-audit-matcher-repair",
       "source": "2026/2026-08-20.md",
       "anchor": "topic-13core-hardening-audit-matcher-repair",
-      "start_line": 273,
-      "end_line": 281,
+      "start_line": 257,
+      "end_line": 265,
       "title": "Topic 13/Core hardening audit matcher repair",
       "entry_sha256": "6535a8cde0acd70f221815fb5f0921d4b32fcef0b95cd33acc61c50f0b29ad55",
       "stream": "research",
@@ -7840,8 +6583,8 @@
       "id": "2026/2026-08-20.md#topic-13-berut-figure-3-local-archive",
       "source": "2026/2026-08-20.md",
       "anchor": "topic-13-berut-figure-3-local-archive",
-      "start_line": 282,
-      "end_line": 290,
+      "start_line": 266,
+      "end_line": 274,
       "title": "Topic 13 Berut Figure 3 Local Archive",
       "entry_sha256": "04f79270445b37c3cff50df5e1e30d3fd7857351a8d2a9f66695aa4b579e0cf5",
       "stream": "research",
@@ -7861,8 +6604,8 @@
       "id": "2026/2026-08-20.md#topic-13-berut-source-package-availability-boundary",
       "source": "2026/2026-08-20.md",
       "anchor": "topic-13-berut-source-package-availability-boundary",
-      "start_line": 291,
-      "end_line": 301,
+      "start_line": 275,
+      "end_line": 285,
       "title": "Topic 13 Berut Source Package Availability Boundary",
       "entry_sha256": "5f063bc058fb9d430f8b20c07a03afe14c054bc34430917222d090605acb24fd",
       "stream": "research",
@@ -7882,8 +6625,8 @@
       "id": "2026/2026-08-20.md#topic-13-berut-controller-correction-and-constraint-gate-resync",
       "source": "2026/2026-08-20.md",
       "anchor": "topic-13-berut-controller-correction-and-constraint-gate-resync",
-      "start_line": 302,
-      "end_line": 309,
+      "start_line": 286,
+      "end_line": 293,
       "title": "Topic 13 Berut controller correction and constraint-gate resync",
       "entry_sha256": "86b925117add797e18e782531c3ab2359f1690a7bf88b55f0f66fec9051a0876",
       "stream": "research",
@@ -7903,8 +6646,8 @@
       "id": "2026/2026-08-20.md#topic-13-jun-final-source-provenance-boundary",
       "source": "2026/2026-08-20.md",
       "anchor": "topic-13-jun-final-source-provenance-boundary",
-      "start_line": 310,
-      "end_line": 317,
+      "start_line": 294,
+      "end_line": 301,
       "title": "Topic 13 Jun final-source provenance boundary",
       "entry_sha256": "6c7812fa4f6a9606e4ff5c2e3a5b20ef4512b5abc377728d4958cc3eea8b7e5e",
       "stream": "research",
@@ -7924,8 +6667,8 @@
       "id": "2026/2026-08-20.md#topic-13-hong-final-source-provenance-boundary",
       "source": "2026/2026-08-20.md",
       "anchor": "topic-13-hong-final-source-provenance-boundary",
-      "start_line": 318,
-      "end_line": 326,
+      "start_line": 302,
+      "end_line": 310,
       "title": "Topic 13 Hong final-source provenance boundary",
       "entry_sha256": "9b63ade3c944ae496f21db662156e6db21406bc61d9379a67e4aceee6c3351cb",
       "stream": "research",
@@ -7945,8 +6688,8 @@
       "id": "2026/2026-08-20.md#topic-13-peterson-source-identity-no-go-boundary",
       "source": "2026/2026-08-20.md",
       "anchor": "topic-13-peterson-source-identity-no-go-boundary",
-      "start_line": 327,
-      "end_line": 336,
+      "start_line": 311,
+      "end_line": 320,
       "title": "Topic 13 Peterson source-identity no-go boundary",
       "entry_sha256": "f35166eba3a338effd5ee4661cea79a8f8523bb59a9513cb6fb57c64e8c7cc6a",
       "stream": "research",
@@ -7966,8 +6709,8 @@
       "id": "2026/2026-08-20.md#topic-13-eos-audit-contract-drift-repair",
       "source": "2026/2026-08-20.md",
       "anchor": "topic-13-eos-audit-contract-drift-repair",
-      "start_line": 337,
-      "end_line": 345,
+      "start_line": 321,
+      "end_line": 329,
       "title": "Topic 13 EOS audit contract drift repair",
       "entry_sha256": "3f4dd9adbdfa2043e4abc565fe9ee65529d2321048b59e023ba2148a1f644f58",
       "stream": "research",
@@ -8223,7 +6966,7 @@
       "start_line": 2,
       "end_line": 12,
       "title": "Topic 13 MP48 Ding C_src response-mapping wave",
-      "entry_sha256": "d0b1793ce7169dfa1f7ffdb72cbaa857c8c5caf2d8e1e48d1abaab3eb6f7d8df",
+      "entry_sha256": "5ec3287ae713d8a2642f174d05cd8df6c20875fcc0c8b0d6ebb3fdb5b8f32c18",
       "stream": "research",
       "areas": [
         "research-core"
@@ -8257,111 +7000,11 @@
       "legacy_root_path": false
     },
     {
-      "id": "2026/2026-08-22.md#section-00-planetary-architecture--global-topographical-synthesis-v5-lock",
-      "source": "2026/2026-08-22.md",
-      "anchor": "section-00-planetary-architecture--global-topographical-synthesis-v5-lock",
-      "start_line": 26,
-      "end_line": 38,
-      "title": "Section 00 Planetary Architecture & Global Topographical Synthesis (v5 Lock)",
-      "entry_sha256": "9cc1f7d4df1c411fcd36dc1c07530049ff1f37f6d406342012808d0100b62d2c",
-      "stream": "book-history",
-      "areas": [
-        "book-writing"
-      ],
-      "related_streams": [
-        "book-history"
-      ],
-      "basis": "explicit_primary_area",
-      "flags": [],
-      "date": "2026-08-22",
-      "legacy_root_path": false
-    },
-    {
-      "id": "2026/2026-08-22.md#section-00-formulation-of-unified-physical-laws--chapter-drafting-v6-lock",
-      "source": "2026/2026-08-22.md",
-      "anchor": "section-00-formulation-of-unified-physical-laws--chapter-drafting-v6-lock",
-      "start_line": 39,
-      "end_line": 51,
-      "title": "Section 00 Formulation of Unified Physical Laws & Chapter Drafting (v6 Lock)",
-      "entry_sha256": "d175058faf4598d6252db1711e31751e4ffc9bc34a0834b17f1243e381889efb",
-      "stream": "book-history",
-      "areas": [
-        "book-writing"
-      ],
-      "related_streams": [
-        "book-history"
-      ],
-      "basis": "explicit_primary_area",
-      "flags": [],
-      "date": "2026-08-22",
-      "legacy_root_path": false
-    },
-    {
-      "id": "2026/2026-08-22.md#section-00-master-63-episode-production-architecture--citation-jigsaw-lock",
-      "source": "2026/2026-08-22.md",
-      "anchor": "section-00-master-63-episode-production-architecture--citation-jigsaw-lock",
-      "start_line": 52,
-      "end_line": 64,
-      "title": "Section 00 Master 63-Episode Production Architecture & Citation Jigsaw Lock",
-      "entry_sha256": "bb2790993b8a0333b753e7c7602530a324c9a5611a1e8832572b9a0f4fcd3114",
-      "stream": "book-history",
-      "areas": [
-        "book-writing"
-      ],
-      "related_streams": [
-        "book-history"
-      ],
-      "basis": "explicit_primary_area",
-      "flags": [],
-      "date": "2026-08-22",
-      "legacy_root_path": false
-    },
-    {
-      "id": "2026/2026-08-22.md#cross-sectional-synchronous-drafting-strategy-lock-wave-1-alignment",
-      "source": "2026/2026-08-22.md",
-      "anchor": "cross-sectional-synchronous-drafting-strategy-lock-wave-1-alignment",
-      "start_line": 65,
-      "end_line": 77,
-      "title": "Cross-Sectional Synchronous Drafting Strategy Lock (Wave 1 Alignment)",
-      "entry_sha256": "a3261945a6f8eea1a7721fde00ad209f25a117fc370aa61a913de2fb0e4c5c4e",
-      "stream": "book-history",
-      "areas": [
-        "book-writing"
-      ],
-      "related_streams": [
-        "book-history"
-      ],
-      "basis": "explicit_primary_area",
-      "flags": [],
-      "date": "2026-08-22",
-      "legacy_root_path": false
-    },
-    {
-      "id": "2026/2026-08-22.md#scientific-data-register--literature-differentiation-lock",
-      "source": "2026/2026-08-22.md",
-      "anchor": "scientific-data-register--literature-differentiation-lock",
-      "start_line": 78,
-      "end_line": 90,
-      "title": "Scientific Data Register & Literature Differentiation Lock",
-      "entry_sha256": "43360e45da651207004e03055c3f9d19cef0798fe54fe3eb168bdf2ec1729737",
-      "stream": "book-history",
-      "areas": [
-        "book-writing"
-      ],
-      "related_streams": [
-        "book-history"
-      ],
-      "basis": "explicit_primary_area",
-      "flags": [],
-      "date": "2026-08-22",
-      "legacy_root_path": false
-    },
-    {
       "id": "2026/2026-08-22.md#topic-13-covariant-matter-coupling-normalization-wave",
       "source": "2026/2026-08-22.md",
       "anchor": "topic-13-covariant-matter-coupling-normalization-wave",
-      "start_line": 91,
-      "end_line": 101,
+      "start_line": 26,
+      "end_line": 36,
       "title": "Topic 13 covariant matter-coupling normalization wave",
       "entry_sha256": "953c0fbaa5722615672e479176d64d583c6dbf4361dc95b7520ddc45b29610d5",
       "stream": "research",
@@ -8380,8 +7023,8 @@
       "id": "2026/2026-08-22.md#topic-13-ding-experimental-heating-input-boundary-wave",
       "source": "2026/2026-08-22.md",
       "anchor": "topic-13-ding-experimental-heating-input-boundary-wave",
-      "start_line": 102,
-      "end_line": 112,
+      "start_line": 37,
+      "end_line": 47,
       "title": "Topic 13 Ding experimental heating input boundary wave",
       "entry_sha256": "624f3a8567157447907afec19113908964cc9b5bf0db364d7b818286413cdc75",
       "stream": "research",
@@ -8400,8 +7043,8 @@
       "id": "2026/2026-08-22.md#topic-13-ding-c_src-fixed-volume-identity-wave",
       "source": "2026/2026-08-22.md",
       "anchor": "topic-13-ding-c_src-fixed-volume-identity-wave",
-      "start_line": 113,
-      "end_line": 123,
+      "start_line": 48,
+      "end_line": 58,
       "title": "Topic 13 Ding C_src fixed-volume identity wave",
       "entry_sha256": "a134df0b6b35d71b842f6b54ea68938d2f2d44fb97af561c9006106760963130",
       "stream": "research",
@@ -8420,8 +7063,8 @@
       "id": "2026/2026-08-22.md#topic-13-calorine-model-formstate-spread-comparison-wave",
       "source": "2026/2026-08-22.md",
       "anchor": "topic-13-calorine-model-formstate-spread-comparison-wave",
-      "start_line": 124,
-      "end_line": 134,
+      "start_line": 59,
+      "end_line": 69,
       "title": "Topic 13 Calorine model-form/state spread comparison wave",
       "entry_sha256": "52d71b6c17d25a8b05d50e99afbec3251e16c375f1a1725408e55182c75e4a9e",
       "stream": "research",
@@ -8440,8 +7083,8 @@
       "id": "2026/2026-08-22.md#topic-13-independent-alpha-candidate-search-rerun-wave",
       "source": "2026/2026-08-22.md",
       "anchor": "topic-13-independent-alpha-candidate-search-rerun-wave",
-      "start_line": 135,
-      "end_line": 144,
+      "start_line": 70,
+      "end_line": 79,
       "title": "Topic 13 independent alpha candidate search rerun wave",
       "entry_sha256": "243cf2868a531840ef073dd2ab2142b02c0f69824460346161da971445a0a154",
       "stream": "research",
@@ -8460,8 +7103,8 @@
       "id": "2026/2026-08-22.md#topic-13-core-anchor-boundary-and-causal-synchronization-wave",
       "source": "2026/2026-08-22.md",
       "anchor": "topic-13-core-anchor-boundary-and-causal-synchronization-wave",
-      "start_line": 145,
-      "end_line": 155,
+      "start_line": 80,
+      "end_line": 90,
       "title": "Topic 13 Core anchor boundary and causal synchronization wave",
       "entry_sha256": "acc22411ef46aa3e3552a49f4981f2c8547090f7d6ff7e2a76014579fa9df2fe",
       "stream": "research",
@@ -8480,8 +7123,8 @@
       "id": "2026/2026-08-22.md#topic-13-ig-210-volumetric-c_p-uncertainty-lane",
       "source": "2026/2026-08-22.md",
       "anchor": "topic-13-ig-210-volumetric-c_p-uncertainty-lane",
-      "start_line": 156,
-      "end_line": 166,
+      "start_line": 91,
+      "end_line": 101,
       "title": "Topic 13 IG-210 volumetric C_p uncertainty lane",
       "entry_sha256": "bde9fe57cc64d16824e07807e1f66a5006d083a58a1ee5a56a2a7c1f779193b3",
       "stream": "research",
@@ -8500,8 +7143,8 @@
       "id": "2026/2026-08-22.md#topic-13-density-uncertainty-blocker-closure-wave",
       "source": "2026/2026-08-22.md",
       "anchor": "topic-13-density-uncertainty-blocker-closure-wave",
-      "start_line": 167,
-      "end_line": 177,
+      "start_line": 102,
+      "end_line": 112,
       "title": "Topic 13 density-uncertainty blocker closure wave",
       "entry_sha256": "40e57d813afe7465dec4d8be84b0abdeec4c60082a1ebb48630a4ada96676d3b",
       "stream": "research",
@@ -8520,8 +7163,8 @@
       "id": "2026/2026-08-22.md#topic-13-scoped-closure-projection-wave",
       "source": "2026/2026-08-22.md",
       "anchor": "topic-13-scoped-closure-projection-wave",
-      "start_line": 178,
-      "end_line": 188,
+      "start_line": 113,
+      "end_line": 123,
       "title": "Topic 13 scoped closure projection wave",
       "entry_sha256": "096c039ad60f0d4eea3497ce9dc8c0359fd84c6570d45e681da29d61d17e24c8",
       "stream": "research",
@@ -8540,8 +7183,8 @@
       "id": "2026/2026-08-22.md#topic-13-scale-identifiability-no-go-projection-wave",
       "source": "2026/2026-08-22.md",
       "anchor": "topic-13-scale-identifiability-no-go-projection-wave",
-      "start_line": 189,
-      "end_line": 199,
+      "start_line": 124,
+      "end_line": 134,
       "title": "Topic 13 scale-identifiability no-go projection wave",
       "entry_sha256": "2e4fd1a1d4a5de1b17f37025cf03bddf77e5a381c8d0dbfc35938aa9a939f272",
       "stream": "research",
@@ -8560,8 +7203,8 @@
       "id": "2026/2026-08-22.md#topic-13-calorine-uncertainty-and-full-lbte-route-boundary-wave",
       "source": "2026/2026-08-22.md",
       "anchor": "topic-13-calorine-uncertainty-and-full-lbte-route-boundary-wave",
-      "start_line": 200,
-      "end_line": 211,
+      "start_line": 135,
+      "end_line": 146,
       "title": "Topic 13 Calorine uncertainty and full-LBTE route boundary wave",
       "entry_sha256": "ed8c44bf5e5c216f38d77aaa52f50dfaf2042cfaab398e1b1f87b3c6abee8848",
       "stream": "research",
@@ -8580,8 +7223,8 @@
       "id": "2026/2026-08-22.md#topic-13-current-status-readme-sync",
       "source": "2026/2026-08-22.md",
       "anchor": "topic-13-current-status-readme-sync",
-      "start_line": 212,
-      "end_line": 223,
+      "start_line": 147,
+      "end_line": 158,
       "title": "Topic 13 current-status README sync",
       "entry_sha256": "265fbc8dd493362cc61c4c4de2658f3b399a2090b750937dc33f4ae11e506ac7",
       "stream": "research",
@@ -8600,8 +7243,8 @@
       "id": "2026/2026-08-22.md#topic-13-formal-thermodynamic-bridge-integration-wave",
       "source": "2026/2026-08-22.md",
       "anchor": "topic-13-formal-thermodynamic-bridge-integration-wave",
-      "start_line": 224,
-      "end_line": 234,
+      "start_line": 159,
+      "end_line": 169,
       "title": "Topic 13 formal thermodynamic bridge integration wave",
       "entry_sha256": "3764afc01064f29af9f6e28a5e0fb10c97fbdd3bbc162c966777d38a7be21758",
       "stream": "research",
@@ -8620,8 +7263,8 @@
       "id": "2026/2026-08-22.md#topic-13-day-2012-preferred-thermodynamic-assessment-boundary-wave",
       "source": "2026/2026-08-22.md",
       "anchor": "topic-13-day-2012-preferred-thermodynamic-assessment-boundary-wave",
-      "start_line": 235,
-      "end_line": 245,
+      "start_line": 170,
+      "end_line": 180,
       "title": "Topic 13 Day 2012 preferred thermodynamic assessment boundary wave",
       "entry_sha256": "80ad65f35e58f544279090ad06293cc66ea18571e4a4333d938222204933a6a1",
       "stream": "research",
@@ -8640,8 +7283,8 @@
       "id": "2026/2026-08-22.md#topic-13-kim-2018-external-green-kubo-input-wave",
       "source": "2026/2026-08-22.md",
       "anchor": "topic-13-kim-2018-external-green-kubo-input-wave",
-      "start_line": 246,
-      "end_line": 256,
+      "start_line": 181,
+      "end_line": 191,
       "title": "Topic 13 Kim 2018 external Green-Kubo input wave",
       "entry_sha256": "67b16a83c4ffde6c0a896011ab20d8661c0274515706b057e7b8aeee076018eb",
       "stream": "research",
@@ -8660,8 +7303,8 @@
       "id": "2026/2026-08-22.md#topic-13-ding-supplementary-content-review-wave",
       "source": "2026/2026-08-22.md",
       "anchor": "topic-13-ding-supplementary-content-review-wave",
-      "start_line": 257,
-      "end_line": 267,
+      "start_line": 192,
+      "end_line": 202,
       "title": "Topic 13 Ding supplementary content review wave",
       "entry_sha256": "5b30e6aa35fb8f92c4feca8d25f6f87dcdf978d2716e6d30ce5ba38bcc2d27e3",
       "stream": "research",
@@ -8680,10 +7323,10 @@
       "id": "2026/2026-08-22.md#topic-13-npl-ig-11-c_p-uncertainty-comparator-wave",
       "source": "2026/2026-08-22.md",
       "anchor": "topic-13-npl-ig-11-c_p-uncertainty-comparator-wave",
-      "start_line": 268,
-      "end_line": 279,
+      "start_line": 203,
+      "end_line": 214,
       "title": "Topic 13 NPL IG-11 c_p uncertainty comparator wave",
-      "entry_sha256": "9cf61a5db4e95dac3eea4c64fc7cf81c78a07fec2c3d7b97e10884ae5e9aebe7",
+      "entry_sha256": "1f28de5918cb0d370ab823746b3f043bada71495fd17f385f912c541101f5d97",
       "stream": "research",
       "areas": [
         "research-core",
@@ -8702,10 +7345,10 @@
       "id": "2026/2026-08-22.md#topic-13-ding-pbte-payload-acceptance-controller",
       "source": "2026/2026-08-22.md",
       "anchor": "topic-13-ding-pbte-payload-acceptance-controller",
-      "start_line": 280,
-      "end_line": 289,
+      "start_line": 215,
+      "end_line": 224,
       "title": "Topic 13 Ding PBTE payload acceptance controller",
-      "entry_sha256": "bc4fd42f14adb750c8cbf0e4794c59366aeaef1c6e2ce426d379024ffc746f1a",
+      "entry_sha256": "dbede9836cfd1b742bff18398b747606cd06cc5d713594d48ac59872dbb0b391",
       "stream": "research",
       "areas": [
         "research-core"
@@ -8722,10 +7365,10 @@
       "id": "2026/2026-08-22.md#topic-13-ding-pbte-payload-controller-full-gate-projection",
       "source": "2026/2026-08-22.md",
       "anchor": "topic-13-ding-pbte-payload-controller-full-gate-projection",
-      "start_line": 290,
-      "end_line": 300,
+      "start_line": 225,
+      "end_line": 235,
       "title": "Topic 13 Ding PBTE payload controller full-gate projection",
-      "entry_sha256": "b665df670779471248d54c1f56068e61435c119bbe012cd7b9a4d7326ebb80e0",
+      "entry_sha256": "3f21129c4c4453c569387e8394c940b81b0c6f435b2e9c0efdec223493a198c3",
       "stream": "research",
       "areas": [
         "research-core"
@@ -8742,10 +7385,10 @@
       "id": "2026/2026-08-22.md#2026-08-22---topic-13-utokyo-graphite-ribbon-source-boundary-wave",
       "source": "2026/2026-08-22.md",
       "anchor": "2026-08-22---topic-13-utokyo-graphite-ribbon-source-boundary-wave",
-      "start_line": 301,
-      "end_line": 310,
+      "start_line": 236,
+      "end_line": 245,
       "title": "2026-08-22 - Topic 13 UTokyo graphite-ribbon source boundary wave",
-      "entry_sha256": "814c4c830400a9186c04e9c2c9865af2042287e102ca87741628363e0d976d6b",
+      "entry_sha256": "0b1c7476a7b7a09630cbd75a97219f4ea6009e9c21ee34d973ea640d3029493c",
       "stream": "research",
       "areas": [
         "research-core"
@@ -8762,10 +7405,10 @@
       "id": "2026/2026-08-22.md#2026-08-22---topic-13-canonical-status-synchronization",
       "source": "2026/2026-08-22.md",
       "anchor": "2026-08-22---topic-13-canonical-status-synchronization",
-      "start_line": 311,
-      "end_line": 319,
+      "start_line": 246,
+      "end_line": 254,
       "title": "2026-08-22 - Topic 13 canonical status synchronization",
-      "entry_sha256": "1a793f08d8fc102f87fc55e94fca803dd64debe6dcf9ce0412c03a122c339f7a",
+      "entry_sha256": "5b27ccb4375e4000acde77fa28f42a0f7e472186f1ba63b040e9dcc78d5c538e",
       "stream": "research",
       "areas": [
         "research-core"
@@ -8782,10 +7425,10 @@
       "id": "2026/2026-08-22.md#topic-13-closure-matrix-reporting-wave",
       "source": "2026/2026-08-22.md",
       "anchor": "topic-13-closure-matrix-reporting-wave",
-      "start_line": 320,
-      "end_line": 329,
+      "start_line": 255,
+      "end_line": 264,
       "title": "Topic 13 closure matrix reporting wave",
-      "entry_sha256": "7dfb3c40cd92f19a226a3f1266b03b79f7459e6ef5c05cdb8942343994b3006c",
+      "entry_sha256": "9d2c4294a36a5c53d85a643815dd89c97ad5b2a9b8031aed2a7d5c2fc00eb26e",
       "stream": "research",
       "areas": [
         "research-core",
@@ -8803,10 +7446,10 @@
       "id": "2026/2026-08-22.md#topic-13-hopgpbte-public-source-screening-wave",
       "source": "2026/2026-08-22.md",
       "anchor": "topic-13-hopgpbte-public-source-screening-wave",
-      "start_line": 330,
-      "end_line": 339,
+      "start_line": 265,
+      "end_line": 274,
       "title": "Topic 13 HOPG/PBTE public-source screening wave",
-      "entry_sha256": "7e970d63248489c213296db65d8e398726bee21fc861ec3d77cf23cd24bb4bb9",
+      "entry_sha256": "bd4dc09b7554f6574245bb70e19b709ce1b1ba88e8ee1a6fd130c4ff9a0a0e2a",
       "stream": "research",
       "areas": [
         "research-core"
@@ -9151,31 +7794,11 @@
       "legacy_root_path": false
     },
     {
-      "id": "2026/2026-08-24.md#section-00-spatial-logistics-transit-modes--vernacular-settlement-physics-v7-lock",
-      "source": "2026/2026-08-24.md",
-      "anchor": "section-00-spatial-logistics-transit-modes--vernacular-settlement-physics-v7-lock",
-      "start_line": 71,
-      "end_line": 81,
-      "title": "Section 00 Spatial Logistics, Transit Modes & Vernacular Settlement Physics (v7 Lock)",
-      "entry_sha256": "a31e69d489687b2f32c337b592a43f2dc22c71797eac66582eb799cc234f9cfa",
-      "stream": "book-history",
-      "areas": [
-        "book-writing"
-      ],
-      "related_streams": [
-        "book-history"
-      ],
-      "basis": "explicit_primary_area",
-      "flags": [],
-      "date": "2026-08-24",
-      "legacy_root_path": false
-    },
-    {
       "id": "2026/2026-08-24.md#topic-13-fail-closed-closure-record-contract-wave",
       "source": "2026/2026-08-24.md",
       "anchor": "topic-13-fail-closed-closure-record-contract-wave",
-      "start_line": 82,
-      "end_line": 94,
+      "start_line": 71,
+      "end_line": 83,
       "title": "Topic 13 Fail-Closed Closure Record Contract Wave",
       "entry_sha256": "98cea81774e29e2e38cc194f3ef8e157bf792a0072b64dd4c94091e7014a3c1f",
       "stream": "research",
@@ -9193,31 +7816,11 @@
       "legacy_root_path": false
     },
     {
-      "id": "2026/2026-08-24.md#section-00-least-action-corridors--sundaland-savanna-refuge-v8-lock",
-      "source": "2026/2026-08-24.md",
-      "anchor": "section-00-least-action-corridors--sundaland-savanna-refuge-v8-lock",
-      "start_line": 95,
-      "end_line": 105,
-      "title": "Section 00 Least-Action Corridors & Sundaland Savanna Refuge (v8 Lock)",
-      "entry_sha256": "baffa8deb660fc6838b9382a55f8887e64d1cc09846b5b8549884b1ffcc708be",
-      "stream": "book-history",
-      "areas": [
-        "book-writing"
-      ],
-      "related_streams": [
-        "book-history"
-      ],
-      "basis": "explicit_primary_area",
-      "flags": [],
-      "date": "2026-08-24",
-      "legacy_root_path": false
-    },
-    {
       "id": "2026/2026-08-24.md#topic-13-closure-summary-count-unit-alignment",
       "source": "2026/2026-08-24.md",
       "anchor": "topic-13-closure-summary-count-unit-alignment",
-      "start_line": 106,
-      "end_line": 116,
+      "start_line": 84,
+      "end_line": 94,
       "title": "Topic 13 Closure Summary Count-Unit Alignment",
       "entry_sha256": "93269768ee505954b7de62ad4be228c3e89ea602c75174b6aa7c336b175f79c1",
       "stream": "research",
@@ -9238,8 +7841,8 @@
       "id": "2026/2026-08-24.md#topic-13-huberman-2019-source-boundary-wave",
       "source": "2026/2026-08-24.md",
       "anchor": "topic-13-huberman-2019-source-boundary-wave",
-      "start_line": 117,
-      "end_line": 129,
+      "start_line": 95,
+      "end_line": 107,
       "title": "Topic 13 Huberman 2019 Source-Boundary Wave",
       "entry_sha256": "1814c3e21bc226f39516ce43ba666f8410796d393277fb450460237535d89db1",
       "stream": "research",
@@ -9260,8 +7863,8 @@
       "id": "2026/2026-08-24.md#topic-13-public-phonon-route-screening",
       "source": "2026/2026-08-24.md",
       "anchor": "topic-13-public-phonon-route-screening",
-      "start_line": 130,
-      "end_line": 141,
+      "start_line": 108,
+      "end_line": 119,
       "title": "Topic 13 Public Phonon Route Screening",
       "entry_sha256": "974a225b80165e9ac1018da08081b17b9c7cf2659c83f333bc02cdee3be19adc",
       "stream": "research",
@@ -9282,8 +7885,8 @@
       "id": "2026/2026-08-24.md#topic-13-candidate-core-compatibility-diagnostic",
       "source": "2026/2026-08-24.md",
       "anchor": "topic-13-candidate-core-compatibility-diagnostic",
-      "start_line": 142,
-      "end_line": 155,
+      "start_line": 120,
+      "end_line": 133,
       "title": "Topic 13 Candidate Core Compatibility Diagnostic",
       "entry_sha256": "31132ee2529adbc8c14120884e779d16cf6c960b6aa2cadb114e3e78c361ecb0",
       "stream": "research",
@@ -9301,31 +7904,11 @@
       "legacy_root_path": false
     },
     {
-      "id": "2026/2026-08-24.md#section-00-unified-physical-orbital-geography--market-vacuum-law-v9-lock",
-      "source": "2026/2026-08-24.md",
-      "anchor": "section-00-unified-physical-orbital-geography--market-vacuum-law-v9-lock",
-      "start_line": 156,
-      "end_line": 167,
-      "title": "Section 00 Unified Physical-Orbital Geography & Market Vacuum Law (v9 Lock)",
-      "entry_sha256": "122b080a9cb333d8663fcb89de210923795b15c85020cda0687c8e35283b09b0",
-      "stream": "book-history",
-      "areas": [
-        "book-writing"
-      ],
-      "related_streams": [
-        "book-history"
-      ],
-      "basis": "explicit_primary_area",
-      "flags": [],
-      "date": "2026-08-24",
-      "legacy_root_path": false
-    },
-    {
       "id": "2026/2026-08-24.md#topic-13-causal-core-handoff-and-mp48-mode-diagnostic",
       "source": "2026/2026-08-24.md",
       "anchor": "topic-13-causal-core-handoff-and-mp48-mode-diagnostic",
-      "start_line": 168,
-      "end_line": 180,
+      "start_line": 134,
+      "end_line": 146,
       "title": "Topic 13 Causal Core Handoff and MP48 Mode Diagnostic",
       "entry_sha256": "7d8d7de7ba66a66bee13f878836334ca7b9790789df234c8f0677b97bdc7b8f0",
       "stream": "research",
@@ -9343,31 +7926,11 @@
       "legacy_root_path": false
     },
     {
-      "id": "2026/2026-08-24.md#section-00-biomass-energy-ceiling--metallurgy-smelting-ratios-v10-lock",
-      "source": "2026/2026-08-24.md",
-      "anchor": "section-00-biomass-energy-ceiling--metallurgy-smelting-ratios-v10-lock",
-      "start_line": 181,
-      "end_line": 193,
-      "title": "Section 00 Biomass Energy Ceiling & Metallurgy Smelting Ratios (v10 Lock)",
-      "entry_sha256": "99f4136c9366c127b7afceea9ac7845205ed6370bb2ad37c9f58c9926599e94f",
-      "stream": "book-history",
-      "areas": [
-        "book-writing"
-      ],
-      "related_streams": [
-        "book-history"
-      ],
-      "basis": "explicit_primary_area",
-      "flags": [],
-      "date": "2026-08-24",
-      "legacy_root_path": false
-    },
-    {
       "id": "2026/2026-08-24.md#section-topic-13-external-input-recheck",
       "source": "2026/2026-08-24.md",
       "anchor": "section-topic-13-external-input-recheck",
-      "start_line": 194,
-      "end_line": 204,
+      "start_line": 147,
+      "end_line": 157,
       "title": "Section Topic 13 External-Input Recheck",
       "entry_sha256": "324ce3e84a53eb8ab8e268fa24e2b50daee26d6379dbbf8f48d4eb65ab618303",
       "stream": "research",
@@ -9386,8 +7949,8 @@
       "id": "2026/2026-08-24.md#topic-13-source-calibration-and-transport-triage",
       "source": "2026/2026-08-24.md",
       "anchor": "topic-13-source-calibration-and-transport-triage",
-      "start_line": 205,
-      "end_line": 215,
+      "start_line": 158,
+      "end_line": 168,
       "title": "Topic 13 Source, Calibration, and Transport Triage",
       "entry_sha256": "8c7c85c4581e2155dbdc4b3e8f061f2cb36a5c2aa6933b55a94a1f4ceae82d85",
       "stream": "research",
@@ -9408,8 +7971,8 @@
       "id": "2026/2026-08-24.md#topic-13-causal-branch-roadmap-synchronization",
       "source": "2026/2026-08-24.md",
       "anchor": "topic-13-causal-branch-roadmap-synchronization",
-      "start_line": 216,
-      "end_line": 225,
+      "start_line": 169,
+      "end_line": 178,
       "title": "Topic 13 Causal Branch Roadmap Synchronization",
       "entry_sha256": "5b2d1908d520a12801513454ef8aef7f9fa10bc4dd4cf7c5ba4c32212a9d9648",
       "stream": "research",
@@ -9428,8 +7991,8 @@
       "id": "2026/2026-08-24.md#topic-13-final-gate-snapshot",
       "source": "2026/2026-08-24.md",
       "anchor": "topic-13-final-gate-snapshot",
-      "start_line": 226,
-      "end_line": 237,
+      "start_line": 179,
+      "end_line": 190,
       "title": "Topic 13 Final Gate Snapshot",
       "entry_sha256": "3a693efd58ad29a5b15bf08a0eb33d0866e24147f41b6341d9b28766fed07515",
       "stream": "research",
@@ -9438,106 +8001,6 @@
       ],
       "related_streams": [
         "research"
-      ],
-      "basis": "explicit_primary_area",
-      "flags": [],
-      "date": "2026-08-24",
-      "legacy_root_path": false
-    },
-    {
-      "id": "2026/2026-08-24.md#section-0-master-package-v11--book-01-full-7-chapter-production-wave",
-      "source": "2026/2026-08-24.md",
-      "anchor": "section-0-master-package-v11--book-01-full-7-chapter-production-wave",
-      "start_line": 238,
-      "end_line": 257,
-      "title": "Section 0 Master Package v11 & Book 0.1 Full 7-Chapter Production Wave",
-      "entry_sha256": "49ebb2eeb54f74a9d7462cf5314a40ab647aaa85650208e723b62f565556e2af",
-      "stream": "book-history",
-      "areas": [
-        "book-writing"
-      ],
-      "related_streams": [
-        "book-history"
-      ],
-      "basis": "explicit_primary_area",
-      "flags": [],
-      "date": "2026-08-24",
-      "legacy_root_path": false
-    },
-    {
-      "id": "2026/2026-08-24.md#book-01-master-structural-draft--30-episode-architecture-lock",
-      "source": "2026/2026-08-24.md",
-      "anchor": "book-01-master-structural-draft--30-episode-architecture-lock",
-      "start_line": 258,
-      "end_line": 272,
-      "title": "Book 0.1 Master Structural Draft & 30-Episode Architecture Lock",
-      "entry_sha256": "dbe9fe84aa68ca676bcdfbcc5e35db28cfddd68123f1624696075ace82b2c7b6",
-      "stream": "book-history",
-      "areas": [
-        "book-writing"
-      ],
-      "related_streams": [
-        "book-history"
-      ],
-      "basis": "explicit_primary_area",
-      "flags": [],
-      "date": "2026-08-24",
-      "legacy_root_path": false
-    },
-    {
-      "id": "2026/2026-08-24.md#book-01-full-architecture-standardization-twin-of-bio-book-2",
-      "source": "2026/2026-08-24.md",
-      "anchor": "book-01-full-architecture-standardization-twin-of-bio-book-2",
-      "start_line": 273,
-      "end_line": 290,
-      "title": "Book 0.1 Full Architecture Standardization (Twin of Bio Book 2)",
-      "entry_sha256": "dbc28cdf31c7aebb68f041479718cb0d864f4c681546cf8a4b671fe57ecbc3f6",
-      "stream": "book-history",
-      "areas": [
-        "book-writing"
-      ],
-      "related_streams": [
-        "book-history"
-      ],
-      "basis": "explicit_primary_area",
-      "flags": [],
-      "date": "2026-08-24",
-      "legacy_root_path": false
-    },
-    {
-      "id": "2026/2026-08-24.md#book-01-full-30-episode-draft-1-production-wave-complete-9-chapters",
-      "source": "2026/2026-08-24.md",
-      "anchor": "book-01-full-30-episode-draft-1-production-wave-complete-9-chapters",
-      "start_line": 291,
-      "end_line": 313,
-      "title": "Book 0.1 Full 30-Episode Draft 1 Production Wave (Complete 9 Chapters)",
-      "entry_sha256": "0fcf6ffe28bd6714a3b7598fe7b105d4bd6a86b7ecd778220f356c72be40793e",
-      "stream": "book-history",
-      "areas": [
-        "book-writing"
-      ],
-      "related_streams": [
-        "book-history"
-      ],
-      "basis": "explicit_primary_area",
-      "flags": [],
-      "date": "2026-08-24",
-      "legacy_root_path": false
-    },
-    {
-      "id": "2026/2026-08-24.md#book-02-full-architecture-standardization-twin-of-book-01--bio-book-2",
-      "source": "2026/2026-08-24.md",
-      "anchor": "book-02-full-architecture-standardization-twin-of-book-01--bio-book-2",
-      "start_line": 314,
-      "end_line": 329,
-      "title": "Book 0.2 Full Architecture Standardization (Twin of Book 0.1 & Bio Book 2)",
-      "entry_sha256": "4f92353d5ba962c450eb08d43e7679510223f725298a2d43e1d370a0515aa1a6",
-      "stream": "book-history",
-      "areas": [
-        "book-writing"
-      ],
-      "related_streams": [
-        "book-history"
       ],
       "basis": "explicit_primary_area",
       "flags": [],
@@ -9659,9 +8122,9 @@
       "source": "2026/2026-08-25.md",
       "anchor": "topic-13-closure-artifact-hash-synchronization",
       "start_line": 51,
-      "end_line": 60,
+      "end_line": 59,
       "title": "Topic 13 closure artifact hash synchronization",
-      "entry_sha256": "ddd22e8916625553928ed70998c9ee8cd1cf8796a46c7f7bb1f9e1202f98d27c",
+      "entry_sha256": "526b0416e668704e75727e0abc040dc8824f798622eb0b7511179121dc11a53d",
       "stream": "research",
       "areas": [
         "research-core",
@@ -9670,70 +8133,6 @@
       "related_streams": [
         "operations",
         "research"
-      ],
-      "basis": "explicit_primary_area",
-      "flags": [],
-      "date": "2026-08-25",
-      "legacy_root_path": false
-    },
-    {
-      "id": "2026/2026-08-25.md#book-02-02_mobility_disasters-full-30-episode-draft-1-production-wave",
-      "source": "2026/2026-08-25.md",
-      "anchor": "book-02-02_mobility_disasters-full-30-episode-draft-1-production-wave",
-      "start_line": 61,
-      "end_line": 70,
-      "title": "Book 0.2 (02_mobility_disasters) Full 30-Episode Draft 1 Production Wave",
-      "entry_sha256": "f129dba7619c99d136fb119188a3705cd71fa1445ef0986002d5ca4f9d38feda",
-      "stream": "book-history",
-      "areas": [
-        "book-writing",
-        "theory-history"
-      ],
-      "related_streams": [
-        "book-history"
-      ],
-      "basis": "explicit_primary_area",
-      "flags": [],
-      "date": "2026-08-25",
-      "legacy_root_path": false
-    },
-    {
-      "id": "2026/2026-08-25.md#section-0-cosmic-geochemical-timeline--book-03-blueprint-lock",
-      "source": "2026/2026-08-25.md",
-      "anchor": "section-0-cosmic-geochemical-timeline--book-03-blueprint-lock",
-      "start_line": 71,
-      "end_line": 80,
-      "title": "Section 0 Cosmic-Geochemical Timeline & Book 0.3 Blueprint Lock",
-      "entry_sha256": "906d173bb9752c8441304b1362454dd47367d8db2e4a3139c4d423a9f38b2023",
-      "stream": "book-history",
-      "areas": [
-        "book-writing",
-        "research-standards"
-      ],
-      "related_streams": [
-        "book-history",
-        "research"
-      ],
-      "basis": "explicit_primary_area",
-      "flags": [],
-      "date": "2026-08-25",
-      "legacy_root_path": false
-    },
-    {
-      "id": "2026/2026-08-25.md#section-0-maritime-monsoon-navigation--khao-sam-kaeo-high-tin-bronze-metallurgy-wave",
-      "source": "2026/2026-08-25.md",
-      "anchor": "section-0-maritime-monsoon-navigation--khao-sam-kaeo-high-tin-bronze-metallurgy-wave",
-      "start_line": 81,
-      "end_line": 89,
-      "title": "Section 0 Maritime Monsoon Navigation & Khao Sam Kaeo High-Tin Bronze Metallurgy Wave",
-      "entry_sha256": "9532a2025eb09e8b1fa70d842d2c1fb2f2f5bf48a49c1b1589cc7934177f1dfa",
-      "stream": "book-history",
-      "areas": [
-        "book-writing",
-        "theory-history"
-      ],
-      "related_streams": [
-        "book-history"
       ],
       "basis": "explicit_primary_area",
       "flags": [],
@@ -9827,7 +8226,7 @@
       "start_line": 36,
       "end_line": 44,
       "title": "Topic 13 Ding heating back-calculation no-go",
-      "entry_sha256": "351732d5bf23765b992a415b83177499f6b73400c351572b7a6d43f689417a32",
+      "entry_sha256": "947c8b2818dc38b9b5c491e1ad04385c4fd96ee5d1ff66423e236a344dd138f3",
       "stream": "research",
       "areas": [
         "research-core"
@@ -9841,138 +8240,11 @@
       "legacy_root_path": false
     },
     {
-      "id": "2026/2026-08-26.md#section-0-grand-material-evolution-arcs--prehistoric-archaeological-synchronization",
-      "source": "2026/2026-08-26.md",
-      "anchor": "section-0-grand-material-evolution-arcs--prehistoric-archaeological-synchronization",
-      "start_line": 45,
-      "end_line": 55,
-      "title": "Section 0 Grand Material Evolution Arcs & Prehistoric Archaeological Synchronization",
-      "entry_sha256": "6707bdfe2ee934c6b24c16d678cc475c0d985fad844865b1a679eedce1f55922",
-      "stream": "book-history",
-      "areas": [
-        "book-writing",
-        "theory-history"
-      ],
-      "related_streams": [
-        "book-history"
-      ],
-      "basis": "explicit_primary_area",
-      "flags": [],
-      "date": "2026-08-26",
-      "legacy_root_path": false
-    },
-    {
-      "id": "2026/2026-08-26.md#section-0-global-biogeography-columbian-exchange-salt-geopolitics--enso-teleconnections",
-      "source": "2026/2026-08-26.md",
-      "anchor": "section-0-global-biogeography-columbian-exchange-salt-geopolitics--enso-teleconnections",
-      "start_line": 56,
-      "end_line": 66,
-      "title": "Section 0 Global Biogeography, Columbian Exchange, Salt Geopolitics & ENSO Teleconnections",
-      "entry_sha256": "9d54517dcd06512fbbec8c24231443f23aaed08afa71b000a957eec204e4c9dc",
-      "stream": "book-history",
-      "areas": [
-        "book-writing",
-        "theory-history"
-      ],
-      "related_streams": [
-        "book-history"
-      ],
-      "basis": "explicit_primary_area",
-      "flags": [],
-      "date": "2026-08-26",
-      "legacy_root_path": false
-    },
-    {
-      "id": "2026/2026-08-26.md#section-0-planetary-momentum-engine-drake-flywheel-dual-island-moats--microclimate-physics",
-      "source": "2026/2026-08-26.md",
-      "anchor": "section-0-planetary-momentum-engine-drake-flywheel-dual-island-moats--microclimate-physics",
-      "start_line": 67,
-      "end_line": 77,
-      "title": "Section 0 Planetary Momentum Engine, Drake Flywheel, Dual Island Moats & Microclimate Physics",
-      "entry_sha256": "3f156f9c6b89a8dbf3df626cd9231da76eafce524f2cfc8196f60c5d6d32a499",
-      "stream": "book-history",
-      "areas": [
-        "book-writing",
-        "theory-history"
-      ],
-      "related_streams": [
-        "book-history"
-      ],
-      "basis": "explicit_primary_area",
-      "flags": [],
-      "date": "2026-08-26",
-      "legacy_root_path": false
-    },
-    {
-      "id": "2026/2026-08-26.md#section-0-3d-universal-chokepoint-matrix-nile-pressure-cooker--section-2-boundary-lock",
-      "source": "2026/2026-08-26.md",
-      "anchor": "section-0-3d-universal-chokepoint-matrix-nile-pressure-cooker--section-2-boundary-lock",
-      "start_line": 78,
-      "end_line": 88,
-      "title": "Section 0 3D Universal Chokepoint Matrix, Nile Pressure Cooker & Section 2 Boundary Lock",
-      "entry_sha256": "2bb496de93c427addc13c592c4a8807f9539eeac0d4f64022db3bf4b3b11589c",
-      "stream": "book-history",
-      "areas": [
-        "book-writing",
-        "theory-history"
-      ],
-      "related_streams": [
-        "book-history"
-      ],
-      "basis": "explicit_primary_area",
-      "flags": [],
-      "date": "2026-08-26",
-      "legacy_root_path": false
-    },
-    {
-      "id": "2026/2026-08-26.md#section-0-book-01-chapter-0-reader-feedback-hardening--water-oxygen-chemistry",
-      "source": "2026/2026-08-26.md",
-      "anchor": "section-0-book-01-chapter-0-reader-feedback-hardening--water-oxygen-chemistry",
-      "start_line": 89,
-      "end_line": 98,
-      "title": "Section 0 Book 0.1 Chapter 0 Reader-Feedback Hardening & Water-Oxygen Chemistry",
-      "entry_sha256": "78b622da2b150a48fa30772cc71275c5b753fc212148341ecdd418073c4dddd9",
-      "stream": "book-history",
-      "areas": [
-        "book-writing",
-        "theory-history"
-      ],
-      "related_streams": [
-        "book-history"
-      ],
-      "basis": "explicit_primary_area",
-      "flags": [],
-      "date": "2026-08-26",
-      "legacy_root_path": false
-    },
-    {
-      "id": "2026/2026-08-28.md#section-1-contralateral-decussation--dual-layer-biophysical-recovery-integration",
-      "source": "2026/2026-08-28.md",
-      "anchor": "section-1-contralateral-decussation--dual-layer-biophysical-recovery-integration",
-      "start_line": 3,
-      "end_line": 14,
-      "title": "Section 1: Contralateral Decussation & Dual-Layer Biophysical Recovery Integration",
-      "entry_sha256": "60aaed087265c92680348d9952a643a858e5260770f3586dfc07002972118f05",
-      "stream": "book-history",
-      "areas": [
-        "book-writing",
-        "research-standards"
-      ],
-      "related_streams": [
-        "book-history",
-        "research"
-      ],
-      "basis": "explicit_primary_area",
-      "flags": [],
-      "date": "2026-08-28",
-      "legacy_root_path": false
-    },
-    {
       "id": "2026/2026-08-28.md#core-curved-31-periodic-spatial-geometry-operator",
       "source": "2026/2026-08-28.md",
       "anchor": "core-curved-31-periodic-spatial-geometry-operator",
-      "start_line": 15,
-      "end_line": 24,
+      "start_line": 3,
+      "end_line": 12,
       "title": "Core Curved 3+1 Periodic Spatial Geometry Operator",
       "entry_sha256": "4c334f5db3c04c6ebf9f0b5734dbef9671162e6adde393eadd45e36cea799a4a",
       "stream": "research",
@@ -9991,8 +8263,8 @@
       "id": "2026/2026-08-28.md#core-adm-evolution-rhs-and-fixed-gauge-hyperbolicity-no-go",
       "source": "2026/2026-08-28.md",
       "anchor": "core-adm-evolution-rhs-and-fixed-gauge-hyperbolicity-no-go",
-      "start_line": 25,
-      "end_line": 34,
+      "start_line": 13,
+      "end_line": 22,
       "title": "Core ADM Evolution RHS and Fixed-Gauge Hyperbolicity No-Go",
       "entry_sha256": "957061a7dc56a161d604af2f66d1ab7bca85ac712227f498bd24d6a7c7c648de",
       "stream": "research",
@@ -10011,8 +8283,8 @@
       "id": "2026/2026-08-28.md#core-generalized-harmonic-principal-system",
       "source": "2026/2026-08-28.md",
       "anchor": "core-generalized-harmonic-principal-system",
-      "start_line": 35,
-      "end_line": 44,
+      "start_line": 23,
+      "end_line": 32,
       "title": "Core Generalized-Harmonic Principal System",
       "entry_sha256": "ad86f9c2394b46f3be794a35f0c3865f5127b17547cb948a0dbbf3117938e1b6",
       "stream": "research",
@@ -10653,32 +8925,11 @@
       "legacy_root_path": false
     },
     {
-      "id": "2026/2026-09-07.md#section-0-natural-frontiers-french-rhine-dilemma--hydrographic-cartography",
-      "source": "2026/2026-09-07.md",
-      "anchor": "section-0-natural-frontiers-french-rhine-dilemma--hydrographic-cartography",
-      "start_line": 3,
-      "end_line": 15,
-      "title": "Section 0 Natural Frontiers, French Rhine Dilemma & Hydrographic Cartography",
-      "entry_sha256": "964a4cbb83fca43af0d6a41cfe915d5e173ddb6789d3791df111763fb8e3ce29",
-      "stream": "book-history",
-      "areas": [
-        "book-writing",
-        "theory-history"
-      ],
-      "related_streams": [
-        "book-history"
-      ],
-      "basis": "explicit_primary_area",
-      "flags": [],
-      "date": "2026-09-07",
-      "legacy_root_path": false
-    },
-    {
       "id": "2026/2026-09-07.md#topic-13-finite-q-thermoelastic-compatibility",
       "source": "2026/2026-09-07.md",
       "anchor": "topic-13-finite-q-thermoelastic-compatibility",
-      "start_line": 16,
-      "end_line": 26,
+      "start_line": 3,
+      "end_line": 13,
       "title": "Topic 13 finite-q thermoelastic compatibility",
       "entry_sha256": "7bd3e33ca8df21297c661f64c0c043f67d63272df1549c6d89aec9dce3728f0a",
       "stream": "research",
@@ -10686,28 +8937,6 @@
         "research-core"
       ],
       "related_streams": [
-        "research"
-      ],
-      "basis": "explicit_primary_area",
-      "flags": [],
-      "date": "2026-09-07",
-      "legacy_root_path": false
-    },
-    {
-      "id": "2026/2026-09-07.md#section-1-book-3-03_psychology_economics-master-blueprint-formulation",
-      "source": "2026/2026-09-07.md",
-      "anchor": "section-1-book-3-03_psychology_economics-master-blueprint-formulation",
-      "start_line": 27,
-      "end_line": 45,
-      "title": "Section 1: Book 3 (03_psychology_economics) Master Blueprint Formulation",
-      "entry_sha256": "168035bd219ef459ba33abe26194527435fac7d114858c1a28a1e42a69759cab",
-      "stream": "book-history",
-      "areas": [
-        "book-writing",
-        "research-standards"
-      ],
-      "related_streams": [
-        "book-history",
         "research"
       ],
       "basis": "explicit_primary_area",
@@ -14625,35 +12854,11 @@
       "legacy_root_path": false
     },
     {
-      "id": "2026/2026-09-26.md#book-1-economics-ai--energy-architecture-harmonization-and-chapter-1-drafting",
-      "source": "2026/2026-09-26.md",
-      "anchor": "book-1-economics-ai--energy-architecture-harmonization-and-chapter-1-drafting",
-      "start_line": 58,
-      "end_line": 71,
-      "title": "Book 1 (Economics, AI & Energy) Architecture Harmonization and Chapter 1 Drafting",
-      "entry_sha256": "643c2253b0deaa923219a4ad37faa417955ac4751ea93bfb8836381bf97aad3f",
-      "stream": "book-history",
-      "areas": [
-        "book-writing",
-        "research-standards",
-        "repo-ops"
-      ],
-      "related_streams": [
-        "book-history",
-        "operations",
-        "research"
-      ],
-      "basis": "explicit_primary_area",
-      "flags": [],
-      "date": "2026-09-26",
-      "legacy_root_path": false
-    },
-    {
       "id": "2026/2026-09-26.md#core-rinne-sourcestate-norm-interface",
       "source": "2026/2026-09-26.md",
       "anchor": "core-rinne-sourcestate-norm-interface",
-      "start_line": 72,
-      "end_line": 83,
+      "start_line": 58,
+      "end_line": 69,
       "title": "Core Rinne Source/State Norm Interface",
       "entry_sha256": "3d9d2c45cc8fa6deb9b77610dea2e5d102ac33d7a95e358e9a790766f50857be",
       "stream": "research",
@@ -14675,8 +12880,8 @@
       "id": "2026/2026-09-26.md#core-rinne-complex-frequency-endpoint-screen",
       "source": "2026/2026-09-26.md",
       "anchor": "core-rinne-complex-frequency-endpoint-screen",
-      "start_line": 84,
-      "end_line": 95,
+      "start_line": 70,
+      "end_line": 81,
       "title": "Core Rinne Complex-Frequency Endpoint Screen",
       "entry_sha256": "b1a8035c56c990d97863b06b1199400e8f05cc39a7eb390319f3db37819b89db",
       "stream": "research",
@@ -14698,8 +12903,8 @@
       "id": "2026/2026-09-26.md#core-rinne-exploratory-high-frequency-beta-sweep",
       "source": "2026/2026-09-26.md",
       "anchor": "core-rinne-exploratory-high-frequency-beta-sweep",
-      "start_line": 96,
-      "end_line": 107,
+      "start_line": 82,
+      "end_line": 93,
       "title": "Core Rinne Exploratory High-Frequency Beta Sweep",
       "entry_sha256": "148537f1fff655b69c4911679591b4ef20f9b58444733aeb2b47bae4936fb88d",
       "stream": "research",
@@ -14721,8 +12926,8 @@
       "id": "2026/2026-09-26.md#core-rinne-exact-high-frequency-transfer-endpoint",
       "source": "2026/2026-09-26.md",
       "anchor": "core-rinne-exact-high-frequency-transfer-endpoint",
-      "start_line": 108,
-      "end_line": 118,
+      "start_line": 94,
+      "end_line": 104,
       "title": "Core Rinne Exact High-Frequency Transfer Endpoint",
       "entry_sha256": "5ee5fda3592cb64da5a3b167612fb95764d2c004159b693f26efebffa1bbd3e1",
       "stream": "research",
@@ -14945,68 +13150,21 @@
       "legacy_root_path": false
     },
     {
-      "id": "2026/2026-09-28.md#section-4-space-civilization-architecture-and-3-tier-evolutionary-ladder-realignment",
+      "id": "2026/2026-09-28.md#unsectioned-record",
       "source": "2026/2026-09-28.md",
-      "anchor": "section-4-space-civilization-architecture-and-3-tier-evolutionary-ladder-realignment",
-      "start_line": 3,
-      "end_line": 13,
-      "title": "Section 4 space civilization architecture and 3-tier evolutionary ladder realignment",
-      "entry_sha256": "796a2d5d31b7f8015921b0389de21e502ba368cd84521c97d0c9a7a0fb5f3737",
-      "stream": "book-history",
-      "areas": [
-        "book-writing",
-        "research-standards"
+      "anchor": "",
+      "start_line": 1,
+      "end_line": 2,
+      "title": "Work Ledger - 2026-09-28",
+      "entry_sha256": "0f18590185f574dc20ebf3829c3794e24f4718f90d6d700c9db139b792ae512b",
+      "stream": "review",
+      "areas": [],
+      "related_streams": [],
+      "basis": "insufficient_structured_metadata",
+      "flags": [
+        "missing_or_unknown_primary_area",
+        "unsectioned_source"
       ],
-      "related_streams": [
-        "book-history",
-        "research"
-      ],
-      "basis": "explicit_primary_area",
-      "flags": [],
-      "date": "2026-09-28",
-      "legacy_root_path": false
-    },
-    {
-      "id": "2026/2026-09-28.md#section-4-complete-3-book-blueprint-suite-and-intertemporal-stewardship-integration",
-      "source": "2026/2026-09-28.md",
-      "anchor": "section-4-complete-3-book-blueprint-suite-and-intertemporal-stewardship-integration",
-      "start_line": 14,
-      "end_line": 24,
-      "title": "Section 4 complete 3-book blueprint suite and intertemporal stewardship integration",
-      "entry_sha256": "999f05f66749e03714430813be44537c71c15bfdb00565b5ac71f065f5f2afda",
-      "stream": "book-history",
-      "areas": [
-        "book-writing",
-        "research-core"
-      ],
-      "related_streams": [
-        "book-history",
-        "research"
-      ],
-      "basis": "explicit_primary_area",
-      "flags": [],
-      "date": "2026-09-28",
-      "legacy_root_path": false
-    },
-    {
-      "id": "2026/2026-09-28.md#section-4-dual-nature-of-type-ii-and-interstellar-distance-transit-barrier-integration",
-      "source": "2026/2026-09-28.md",
-      "anchor": "section-4-dual-nature-of-type-ii-and-interstellar-distance-transit-barrier-integration",
-      "start_line": 25,
-      "end_line": 36,
-      "title": "Section 4 dual nature of Type II and interstellar distance transit barrier integration",
-      "entry_sha256": "4afbd57c6424569bd8499d618f2762b19e4ab61aa6a6d565386355716d46982d",
-      "stream": "book-history",
-      "areas": [
-        "book-writing",
-        "research-standards"
-      ],
-      "related_streams": [
-        "book-history",
-        "research"
-      ],
-      "basis": "explicit_primary_area",
-      "flags": [],
       "date": "2026-09-28",
       "legacy_root_path": false
     },
@@ -17725,34 +15883,13 @@
       "legacy_root_path": false
     },
     {
-      "id": "2026/2026-11-03.md#section-0-hydrological-audit-flat-plain-moisture-paradox--global-water-rankings",
-      "source": "2026/2026-11-03.md",
-      "anchor": "section-0-hydrological-audit-flat-plain-moisture-paradox--global-water-rankings",
-      "start_line": 3,
-      "end_line": 16,
-      "title": "Section 0 Hydrological Audit: Flat Plain Moisture Paradox & Global Water Rankings",
-      "entry_sha256": "4c1d6f166a7f24e67362683e0b2e75d7943a3894bf15086f19315ae73fd88563",
-      "stream": "book-history",
-      "areas": [
-        "book-writing",
-        "theory-history"
-      ],
-      "related_streams": [
-        "book-history"
-      ],
-      "basis": "explicit_primary_area",
-      "flags": [],
-      "date": "2026-11-03",
-      "legacy_root_path": false
-    },
-    {
       "id": "2026/2026-11-03.md#ledger-research-and-book-history-separation",
       "source": "2026/2026-11-03.md",
       "anchor": "ledger-research-and-book-history-separation",
-      "start_line": 17,
-      "end_line": 38,
+      "start_line": 3,
+      "end_line": 24,
       "title": "Ledger research and book-history separation",
-      "entry_sha256": "e1527c326e99c0c70f8d051b4b32514b232e51c73efec5fcd58854e0edb6e80e",
+      "entry_sha256": "9b13bf37fa383a02a90a86731ff6121b691aa1ba669c743361145ca5c63181a6",
       "stream": "operations",
       "areas": [
         "repo-ops"

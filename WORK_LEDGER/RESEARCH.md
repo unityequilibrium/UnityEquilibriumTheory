@@ -131,10 +131,10 @@ Indexed entries: 673. Counts describe records, not accomplishments.
 | 2026-09-27 | [Topic 13 funding research plan and model/long-term strategy](2026/2026-09-27.md#topic-13-funding-research-plan-and-modellong-term-strategy) (L24) | research-core, result-artifacts | explicit_primary_area |
 | 2026-09-27 | [Topic 13 NIMS structure/shear diagnostic and Core control-plane sync](2026/2026-09-27.md#topic-13-nims-structureshear-diagnostic-and-core-control-plane-sync) (L14) | research-core | explicit_primary_area |
 | 2026-09-27 | [Topic 13 NIMS source reanalysis and Core integration](2026/2026-09-27.md#topic-13-nims-source-reanalysis-and-core-integration) (L3) | research-core, result-artifacts | explicit_primary_area |
-| 2026-09-26 | [Core Rinne Exact High-Frequency Transfer Endpoint](2026/2026-09-26.md#core-rinne-exact-high-frequency-transfer-endpoint) (L108) | research-core, result-artifacts, repo-ops | explicit_primary_area |
-| 2026-09-26 | [Core Rinne Exploratory High-Frequency Beta Sweep](2026/2026-09-26.md#core-rinne-exploratory-high-frequency-beta-sweep) (L96) | research-core, result-artifacts, repo-ops | explicit_primary_area |
-| 2026-09-26 | [Core Rinne Complex-Frequency Endpoint Screen](2026/2026-09-26.md#core-rinne-complex-frequency-endpoint-screen) (L84) | research-core, result-artifacts, repo-ops | explicit_primary_area |
-| 2026-09-26 | [Core Rinne Source/State Norm Interface](2026/2026-09-26.md#core-rinne-sourcestate-norm-interface) (L72) | research-core, result-artifacts, repo-ops | explicit_primary_area |
+| 2026-09-26 | [Core Rinne Exact High-Frequency Transfer Endpoint](2026/2026-09-26.md#core-rinne-exact-high-frequency-transfer-endpoint) (L94) | research-core, result-artifacts, repo-ops | explicit_primary_area |
+| 2026-09-26 | [Core Rinne Exploratory High-Frequency Beta Sweep](2026/2026-09-26.md#core-rinne-exploratory-high-frequency-beta-sweep) (L82) | research-core, result-artifacts, repo-ops | explicit_primary_area |
+| 2026-09-26 | [Core Rinne Complex-Frequency Endpoint Screen](2026/2026-09-26.md#core-rinne-complex-frequency-endpoint-screen) (L70) | research-core, result-artifacts, repo-ops | explicit_primary_area |
+| 2026-09-26 | [Core Rinne Source/State Norm Interface](2026/2026-09-26.md#core-rinne-sourcestate-norm-interface) (L58) | research-core, result-artifacts, repo-ops | explicit_primary_area |
 | 2026-09-26 | [Negative-Shift Jordan Degeneracy Audit](2026/2026-09-26.md#negative-shift-jordan-degeneracy-audit) (L47) | research-core, result-artifacts, repo-ops | explicit_primary_area |
 | 2026-09-26 | [Zero-Shift Lane Closure-Register Integration](2026/2026-09-26.md#zero-shift-lane-closure-register-integration) (L36) | research-core, result-artifacts, repo-ops | explicit_primary_area |
 | 2026-09-26 | [Core Boundary Evidence Index Sync](2026/2026-09-26.md#core-boundary-evidence-index-sync) (L25) | research-core, result-artifacts | explicit_primary_area |
@@ -248,7 +248,7 @@ Indexed entries: 673. Counts describe records, not accomplishments.
 | 2026-09-08 | [Topic 13 MP48 Gamma irrep](2026/2026-09-08.md#topic-13-mp48-gamma-irrep) (L23) | research-core | explicit_primary_area |
 | 2026-09-08 | [Topic 13 mode work/heat protocol](2026/2026-09-08.md#topic-13-mode-workheat-protocol) (L13) | research-core | explicit_primary_area |
 | 2026-09-08 | [Topic 13 experimental UED acquisition and tenth-section checkpoint](2026/2026-09-08.md#topic-13-experimental-ued-acquisition-and-tenth-section-checkpoint) (L3) | research-core | explicit_primary_area |
-| 2026-09-07 | [Topic 13 finite-q thermoelastic compatibility](2026/2026-09-07.md#topic-13-finite-q-thermoelastic-compatibility) (L16) | research-core | explicit_primary_area |
+| 2026-09-07 | [Topic 13 finite-q thermoelastic compatibility](2026/2026-09-07.md#topic-13-finite-q-thermoelastic-compatibility) (L3) | research-core | explicit_primary_area |
 | 2026-09-02 | [Topic 13 anisotropic thermoelastic response bridge](2026/2026-09-02.md#topic-13-anisotropic-thermoelastic-response-bridge) (L85) | research-core | explicit_primary_area |
 | 2026-09-02 | [Topic 13 scalar thermoelastic response bridge](2026/2026-09-02.md#topic-13-scalar-thermoelastic-response-bridge) (L75) | research-core | explicit_primary_area |
 | 2026-09-02 | [Topic 13 material-interface factor resolution](2026/2026-09-02.md#topic-13-material-interface-factor-resolution) (L64) | research-core | explicit_primary_area |
@@ -280,9 +280,9 @@ Indexed entries: 673. Counts describe records, not accomplishments.
 | 2026-08-29 | [Topic 13 status-semantics repair](2026/2026-08-29.md#topic-13-status-semantics-repair) (L27) | research-core, research-standards | explicit_primary_area |
 | 2026-08-29 | [Periodic GH time-evolution closure wave](2026/2026-08-29.md#periodic-gh-time-evolution-closure-wave) (L15) | research-core, result-artifacts | explicit_primary_area |
 | 2026-08-29 | [Topic 13/Core curved 3+1 hardening wave](2026/2026-08-29.md#topic-13core-curved-31-hardening-wave) (L3) | research-core, result-artifacts | explicit_primary_area |
-| 2026-08-28 | [Core Generalized-Harmonic Principal System](2026/2026-08-28.md#core-generalized-harmonic-principal-system) (L35) | research-core | explicit_primary_area |
-| 2026-08-28 | [Core ADM Evolution RHS and Fixed-Gauge Hyperbolicity No-Go](2026/2026-08-28.md#core-adm-evolution-rhs-and-fixed-gauge-hyperbolicity-no-go) (L25) | research-core | explicit_primary_area |
-| 2026-08-28 | [Core Curved 3+1 Periodic Spatial Geometry Operator](2026/2026-08-28.md#core-curved-31-periodic-spatial-geometry-operator) (L15) | research-core | explicit_primary_area |
+| 2026-08-28 | [Core Generalized-Harmonic Principal System](2026/2026-08-28.md#core-generalized-harmonic-principal-system) (L23) | research-core | explicit_primary_area |
+| 2026-08-28 | [Core ADM Evolution RHS and Fixed-Gauge Hyperbolicity No-Go](2026/2026-08-28.md#core-adm-evolution-rhs-and-fixed-gauge-hyperbolicity-no-go) (L13) | research-core | explicit_primary_area |
+| 2026-08-28 | [Core Curved 3+1 Periodic Spatial Geometry Operator](2026/2026-08-28.md#core-curved-31-periodic-spatial-geometry-operator) (L3) | research-core | explicit_primary_area |
 | 2026-08-26 | [Topic 13 Ding heating back-calculation no-go](2026/2026-08-26.md#topic-13-ding-heating-back-calculation-no-go) (L36) | research-core | explicit_primary_area |
 | 2026-08-26 | [Topic 13 covariant action coupling provenance boundary](2026/2026-08-26.md#topic-13-covariant-action-coupling-provenance-boundary) (L27) | research-core | explicit_primary_area |
 | 2026-08-26 | [Topic 13 C_src route-count regression repair](2026/2026-08-26.md#topic-13-c_src-route-count-regression-repair) (L21) | research-core | explicit_primary_area |
@@ -294,16 +294,16 @@ Indexed entries: 673. Counts describe records, not accomplishments.
 | 2026-08-25 | [Topic 13 Gatech heat-capacity route completeness](2026/2026-08-25.md#topic-13-gatech-heat-capacity-route-completeness) (L22) | research-core, result-artifacts | explicit_primary_area |
 | 2026-08-25 | [Topic 13 Ding and base-Phi external route boundary wave](2026/2026-08-25.md#topic-13-ding-and-base-phi-external-route-boundary-wave) (L10) | research-core, result-artifacts | explicit_primary_area |
 | 2026-08-25 | [Topic 13 closure arithmetic and package ownership](2026/2026-08-25.md#topic-13-closure-arithmetic-and-package-ownership) (L1) | research-core, result-artifacts | explicit_primary_area |
-| 2026-08-24 | [Topic 13 Final Gate Snapshot](2026/2026-08-24.md#topic-13-final-gate-snapshot) (L226) | research-core | explicit_primary_area |
-| 2026-08-24 | [Topic 13 Causal Branch Roadmap Synchronization](2026/2026-08-24.md#topic-13-causal-branch-roadmap-synchronization) (L216) | research-core | explicit_primary_area |
-| 2026-08-24 | [Topic 13 Source, Calibration, and Transport Triage](2026/2026-08-24.md#topic-13-source-calibration-and-transport-triage) (L205) | research-core, result-artifacts | explicit_primary_area |
-| 2026-08-24 | [Section Topic 13 External-Input Recheck](2026/2026-08-24.md#section-topic-13-external-input-recheck) (L194) | research-core | explicit_primary_area |
-| 2026-08-24 | [Topic 13 Causal Core Handoff and MP48 Mode Diagnostic](2026/2026-08-24.md#topic-13-causal-core-handoff-and-mp48-mode-diagnostic) (L168) | research-core, result-artifacts | explicit_primary_area |
-| 2026-08-24 | [Topic 13 Candidate Core Compatibility Diagnostic](2026/2026-08-24.md#topic-13-candidate-core-compatibility-diagnostic) (L142) | research-core, result-artifacts | explicit_primary_area |
-| 2026-08-24 | [Topic 13 Public Phonon Route Screening](2026/2026-08-24.md#topic-13-public-phonon-route-screening) (L130) | research-core, result-artifacts | explicit_primary_area |
-| 2026-08-24 | [Topic 13 Huberman 2019 Source-Boundary Wave](2026/2026-08-24.md#topic-13-huberman-2019-source-boundary-wave) (L117) | research-core, result-artifacts | explicit_primary_area |
-| 2026-08-24 | [Topic 13 Closure Summary Count-Unit Alignment](2026/2026-08-24.md#topic-13-closure-summary-count-unit-alignment) (L106) | research-core, result-artifacts | explicit_primary_area |
-| 2026-08-24 | [Topic 13 Fail-Closed Closure Record Contract Wave](2026/2026-08-24.md#topic-13-fail-closed-closure-record-contract-wave) (L82) | research-core, result-artifacts | explicit_primary_area |
+| 2026-08-24 | [Topic 13 Final Gate Snapshot](2026/2026-08-24.md#topic-13-final-gate-snapshot) (L179) | research-core | explicit_primary_area |
+| 2026-08-24 | [Topic 13 Causal Branch Roadmap Synchronization](2026/2026-08-24.md#topic-13-causal-branch-roadmap-synchronization) (L169) | research-core | explicit_primary_area |
+| 2026-08-24 | [Topic 13 Source, Calibration, and Transport Triage](2026/2026-08-24.md#topic-13-source-calibration-and-transport-triage) (L158) | research-core, result-artifacts | explicit_primary_area |
+| 2026-08-24 | [Section Topic 13 External-Input Recheck](2026/2026-08-24.md#section-topic-13-external-input-recheck) (L147) | research-core | explicit_primary_area |
+| 2026-08-24 | [Topic 13 Causal Core Handoff and MP48 Mode Diagnostic](2026/2026-08-24.md#topic-13-causal-core-handoff-and-mp48-mode-diagnostic) (L134) | research-core, result-artifacts | explicit_primary_area |
+| 2026-08-24 | [Topic 13 Candidate Core Compatibility Diagnostic](2026/2026-08-24.md#topic-13-candidate-core-compatibility-diagnostic) (L120) | research-core, result-artifacts | explicit_primary_area |
+| 2026-08-24 | [Topic 13 Public Phonon Route Screening](2026/2026-08-24.md#topic-13-public-phonon-route-screening) (L108) | research-core, result-artifacts | explicit_primary_area |
+| 2026-08-24 | [Topic 13 Huberman 2019 Source-Boundary Wave](2026/2026-08-24.md#topic-13-huberman-2019-source-boundary-wave) (L95) | research-core, result-artifacts | explicit_primary_area |
+| 2026-08-24 | [Topic 13 Closure Summary Count-Unit Alignment](2026/2026-08-24.md#topic-13-closure-summary-count-unit-alignment) (L84) | research-core, result-artifacts | explicit_primary_area |
+| 2026-08-24 | [Topic 13 Fail-Closed Closure Record Contract Wave](2026/2026-08-24.md#topic-13-fail-closed-closure-record-contract-wave) (L71) | research-core, result-artifacts | explicit_primary_area |
 | 2026-08-24 | [Topic 13 Roadmap Blocker-Count Sync](2026/2026-08-24.md#topic-13-roadmap-blocker-count-sync) (L58) | research-core, research-standards | explicit_primary_area |
 | 2026-08-24 | [Topic 13 Lowitzer Full P-V-T Pair Wave](2026/2026-08-24.md#topic-13-lowitzer-full-p-v-t-pair-wave) (L46) | research-core, result-artifacts | explicit_primary_area |
 | 2026-08-24 | [Topic 13 Full Closure Roadmap](2026/2026-08-24.md#topic-13-full-closure-roadmap) (L35) | research-core, research-standards | explicit_primary_area |
@@ -320,29 +320,29 @@ Indexed entries: 673. Counts describe records, not accomplishments.
 | 2026-08-23 | [Topic 13 C_src and transport regime decomposition](2026/2026-08-23.md#topic-13-c_src-and-transport-regime-decomposition) (L21) | research-core | explicit_primary_area |
 | 2026-08-23 | [Topic 13 causal no-go reporting projection](2026/2026-08-23.md#topic-13-causal-no-go-reporting-projection) (L12) | research-core | explicit_primary_area |
 | 2026-08-23 | [Topic 13 recursive alpha calibration inventory](2026/2026-08-23.md#topic-13-recursive-alpha-calibration-inventory) (L3) | research-core | explicit_primary_area |
-| 2026-08-22 | [Topic 13 HOPG/PBTE public-source screening wave](2026/2026-08-22.md#topic-13-hopgpbte-public-source-screening-wave) (L330) | research-core | explicit_primary_area |
-| 2026-08-22 | [Topic 13 closure matrix reporting wave](2026/2026-08-22.md#topic-13-closure-matrix-reporting-wave) (L320) | research-core, research-standards | explicit_primary_area |
-| 2026-08-22 | [2026-08-22 - Topic 13 canonical status synchronization](2026/2026-08-22.md#2026-08-22---topic-13-canonical-status-synchronization) (L311) | research-core | explicit_primary_area |
-| 2026-08-22 | [2026-08-22 - Topic 13 UTokyo graphite-ribbon source boundary wave](2026/2026-08-22.md#2026-08-22---topic-13-utokyo-graphite-ribbon-source-boundary-wave) (L301) | research-core | explicit_primary_area |
-| 2026-08-22 | [Topic 13 Ding PBTE payload controller full-gate projection](2026/2026-08-22.md#topic-13-ding-pbte-payload-controller-full-gate-projection) (L290) | research-core | explicit_primary_area |
-| 2026-08-22 | [Topic 13 Ding PBTE payload acceptance controller](2026/2026-08-22.md#topic-13-ding-pbte-payload-acceptance-controller) (L280) | research-core | explicit_primary_area |
-| 2026-08-22 | [Topic 13 NPL IG-11 c_p uncertainty comparator wave](2026/2026-08-22.md#topic-13-npl-ig-11-c_p-uncertainty-comparator-wave) (L268) | research-core, result-artifacts | explicit_primary_area |
-| 2026-08-22 | [Topic 13 Ding supplementary content review wave](2026/2026-08-22.md#topic-13-ding-supplementary-content-review-wave) (L257) | research-core | explicit_primary_area |
-| 2026-08-22 | [Topic 13 Kim 2018 external Green-Kubo input wave](2026/2026-08-22.md#topic-13-kim-2018-external-green-kubo-input-wave) (L246) | research-core | explicit_primary_area |
-| 2026-08-22 | [Topic 13 Day 2012 preferred thermodynamic assessment boundary wave](2026/2026-08-22.md#topic-13-day-2012-preferred-thermodynamic-assessment-boundary-wave) (L235) | research-core | explicit_primary_area |
-| 2026-08-22 | [Topic 13 formal thermodynamic bridge integration wave](2026/2026-08-22.md#topic-13-formal-thermodynamic-bridge-integration-wave) (L224) | research-core | explicit_primary_area |
-| 2026-08-22 | [Topic 13 current-status README sync](2026/2026-08-22.md#topic-13-current-status-readme-sync) (L212) | research-core | explicit_primary_area |
-| 2026-08-22 | [Topic 13 Calorine uncertainty and full-LBTE route boundary wave](2026/2026-08-22.md#topic-13-calorine-uncertainty-and-full-lbte-route-boundary-wave) (L200) | research-core | explicit_primary_area |
-| 2026-08-22 | [Topic 13 scale-identifiability no-go projection wave](2026/2026-08-22.md#topic-13-scale-identifiability-no-go-projection-wave) (L189) | research-core | explicit_primary_area |
-| 2026-08-22 | [Topic 13 scoped closure projection wave](2026/2026-08-22.md#topic-13-scoped-closure-projection-wave) (L178) | research-core | explicit_primary_area |
-| 2026-08-22 | [Topic 13 density-uncertainty blocker closure wave](2026/2026-08-22.md#topic-13-density-uncertainty-blocker-closure-wave) (L167) | research-core | explicit_primary_area |
-| 2026-08-22 | [Topic 13 IG-210 volumetric C_p uncertainty lane](2026/2026-08-22.md#topic-13-ig-210-volumetric-c_p-uncertainty-lane) (L156) | research-core | explicit_primary_area |
-| 2026-08-22 | [Topic 13 Core anchor boundary and causal synchronization wave](2026/2026-08-22.md#topic-13-core-anchor-boundary-and-causal-synchronization-wave) (L145) | research-core | explicit_primary_area |
-| 2026-08-22 | [Topic 13 independent alpha candidate search rerun wave](2026/2026-08-22.md#topic-13-independent-alpha-candidate-search-rerun-wave) (L135) | research-core | explicit_primary_area |
-| 2026-08-22 | [Topic 13 Calorine model-form/state spread comparison wave](2026/2026-08-22.md#topic-13-calorine-model-formstate-spread-comparison-wave) (L124) | research-core | explicit_primary_area |
-| 2026-08-22 | [Topic 13 Ding C_src fixed-volume identity wave](2026/2026-08-22.md#topic-13-ding-c_src-fixed-volume-identity-wave) (L113) | research-core | explicit_primary_area |
-| 2026-08-22 | [Topic 13 Ding experimental heating input boundary wave](2026/2026-08-22.md#topic-13-ding-experimental-heating-input-boundary-wave) (L102) | research-core | explicit_primary_area |
-| 2026-08-22 | [Topic 13 covariant matter-coupling normalization wave](2026/2026-08-22.md#topic-13-covariant-matter-coupling-normalization-wave) (L91) | research-core | explicit_primary_area |
+| 2026-08-22 | [Topic 13 HOPG/PBTE public-source screening wave](2026/2026-08-22.md#topic-13-hopgpbte-public-source-screening-wave) (L265) | research-core | explicit_primary_area |
+| 2026-08-22 | [Topic 13 closure matrix reporting wave](2026/2026-08-22.md#topic-13-closure-matrix-reporting-wave) (L255) | research-core, research-standards | explicit_primary_area |
+| 2026-08-22 | [2026-08-22 - Topic 13 canonical status synchronization](2026/2026-08-22.md#2026-08-22---topic-13-canonical-status-synchronization) (L246) | research-core | explicit_primary_area |
+| 2026-08-22 | [2026-08-22 - Topic 13 UTokyo graphite-ribbon source boundary wave](2026/2026-08-22.md#2026-08-22---topic-13-utokyo-graphite-ribbon-source-boundary-wave) (L236) | research-core | explicit_primary_area |
+| 2026-08-22 | [Topic 13 Ding PBTE payload controller full-gate projection](2026/2026-08-22.md#topic-13-ding-pbte-payload-controller-full-gate-projection) (L225) | research-core | explicit_primary_area |
+| 2026-08-22 | [Topic 13 Ding PBTE payload acceptance controller](2026/2026-08-22.md#topic-13-ding-pbte-payload-acceptance-controller) (L215) | research-core | explicit_primary_area |
+| 2026-08-22 | [Topic 13 NPL IG-11 c_p uncertainty comparator wave](2026/2026-08-22.md#topic-13-npl-ig-11-c_p-uncertainty-comparator-wave) (L203) | research-core, result-artifacts | explicit_primary_area |
+| 2026-08-22 | [Topic 13 Ding supplementary content review wave](2026/2026-08-22.md#topic-13-ding-supplementary-content-review-wave) (L192) | research-core | explicit_primary_area |
+| 2026-08-22 | [Topic 13 Kim 2018 external Green-Kubo input wave](2026/2026-08-22.md#topic-13-kim-2018-external-green-kubo-input-wave) (L181) | research-core | explicit_primary_area |
+| 2026-08-22 | [Topic 13 Day 2012 preferred thermodynamic assessment boundary wave](2026/2026-08-22.md#topic-13-day-2012-preferred-thermodynamic-assessment-boundary-wave) (L170) | research-core | explicit_primary_area |
+| 2026-08-22 | [Topic 13 formal thermodynamic bridge integration wave](2026/2026-08-22.md#topic-13-formal-thermodynamic-bridge-integration-wave) (L159) | research-core | explicit_primary_area |
+| 2026-08-22 | [Topic 13 current-status README sync](2026/2026-08-22.md#topic-13-current-status-readme-sync) (L147) | research-core | explicit_primary_area |
+| 2026-08-22 | [Topic 13 Calorine uncertainty and full-LBTE route boundary wave](2026/2026-08-22.md#topic-13-calorine-uncertainty-and-full-lbte-route-boundary-wave) (L135) | research-core | explicit_primary_area |
+| 2026-08-22 | [Topic 13 scale-identifiability no-go projection wave](2026/2026-08-22.md#topic-13-scale-identifiability-no-go-projection-wave) (L124) | research-core | explicit_primary_area |
+| 2026-08-22 | [Topic 13 scoped closure projection wave](2026/2026-08-22.md#topic-13-scoped-closure-projection-wave) (L113) | research-core | explicit_primary_area |
+| 2026-08-22 | [Topic 13 density-uncertainty blocker closure wave](2026/2026-08-22.md#topic-13-density-uncertainty-blocker-closure-wave) (L102) | research-core | explicit_primary_area |
+| 2026-08-22 | [Topic 13 IG-210 volumetric C_p uncertainty lane](2026/2026-08-22.md#topic-13-ig-210-volumetric-c_p-uncertainty-lane) (L91) | research-core | explicit_primary_area |
+| 2026-08-22 | [Topic 13 Core anchor boundary and causal synchronization wave](2026/2026-08-22.md#topic-13-core-anchor-boundary-and-causal-synchronization-wave) (L80) | research-core | explicit_primary_area |
+| 2026-08-22 | [Topic 13 independent alpha candidate search rerun wave](2026/2026-08-22.md#topic-13-independent-alpha-candidate-search-rerun-wave) (L70) | research-core | explicit_primary_area |
+| 2026-08-22 | [Topic 13 Calorine model-form/state spread comparison wave](2026/2026-08-22.md#topic-13-calorine-model-formstate-spread-comparison-wave) (L59) | research-core | explicit_primary_area |
+| 2026-08-22 | [Topic 13 Ding C_src fixed-volume identity wave](2026/2026-08-22.md#topic-13-ding-c_src-fixed-volume-identity-wave) (L48) | research-core | explicit_primary_area |
+| 2026-08-22 | [Topic 13 Ding experimental heating input boundary wave](2026/2026-08-22.md#topic-13-ding-experimental-heating-input-boundary-wave) (L37) | research-core | explicit_primary_area |
+| 2026-08-22 | [Topic 13 covariant matter-coupling normalization wave](2026/2026-08-22.md#topic-13-covariant-matter-coupling-normalization-wave) (L26) | research-core | explicit_primary_area |
 | 2026-08-22 | [Topic 13 publisher provenance wave](2026/2026-08-22.md#topic-13-publisher-provenance-wave) (L13) | research-core | explicit_primary_area |
 | 2026-08-22 | [Topic 13 MP48 Ding C_src response-mapping wave](2026/2026-08-22.md#topic-13-mp48-ding-c_src-response-mapping-wave) (L2) | research-core | explicit_primary_area |
 | 2026-08-21 | [T13-151 - Calorine full-LBTE numerical stability boundary](2026/2026-08-21.md#t13-151---calorine-full-lbte-numerical-stability-boundary) (L101) | research-core, result-artifacts | explicit_primary_area |
@@ -353,42 +353,42 @@ Indexed entries: 673. Counts describe records, not accomplishments.
 | 2026-08-21 | [Topic 13 major-result visibility synchronization](2026/2026-08-21.md#topic-13-major-result-visibility-synchronization) (L50) | research-core | explicit_primary_area |
 | 2026-08-21 | [Research CI baseline](2026/2026-08-21.md#research-ci-baseline) (L35) | research-core | explicit_primary_area |
 | 2026-08-21 | [Topic 13 major-result closure summary contract](2026/2026-08-21.md#topic-13-major-result-closure-summary-contract) (L2) | research-core, research-standards | explicit_primary_area |
-| 2026-08-20 | [Topic 13 EOS audit contract drift repair](2026/2026-08-20.md#topic-13-eos-audit-contract-drift-repair) (L337) | research-core, result-artifacts | explicit_primary_area |
-| 2026-08-20 | [Topic 13 Peterson source-identity no-go boundary](2026/2026-08-20.md#topic-13-peterson-source-identity-no-go-boundary) (L327) | research-core, data-provenance | explicit_primary_area |
-| 2026-08-20 | [Topic 13 Hong final-source provenance boundary](2026/2026-08-20.md#topic-13-hong-final-source-provenance-boundary) (L318) | research-core, data-provenance | explicit_primary_area |
-| 2026-08-20 | [Topic 13 Jun final-source provenance boundary](2026/2026-08-20.md#topic-13-jun-final-source-provenance-boundary) (L310) | research-core, data-provenance | explicit_primary_area |
-| 2026-08-20 | [Topic 13 Berut controller correction and constraint-gate resync](2026/2026-08-20.md#topic-13-berut-controller-correction-and-constraint-gate-resync) (L302) | research-core, research-standards | explicit_primary_area |
-| 2026-08-20 | [Topic 13 Berut Source Package Availability Boundary](2026/2026-08-20.md#topic-13-berut-source-package-availability-boundary) (L291) | research-core, data-provenance | explicit_primary_area |
-| 2026-08-20 | [Topic 13 Berut Figure 3 Local Archive](2026/2026-08-20.md#topic-13-berut-figure-3-local-archive) (L282) | research-core, data-provenance | explicit_primary_area |
-| 2026-08-20 | [Topic 13/Core hardening audit matcher repair](2026/2026-08-20.md#topic-13core-hardening-audit-matcher-repair) (L273) | research-standards, research-core | explicit_primary_area |
-| 2026-08-20 | [Topic 13 Regularized Continuum Heat-Current Lane](2026/2026-08-20.md#topic-13-regularized-continuum-heat-current-lane) (L262) | research-core, result-artifacts | explicit_primary_area |
-| 2026-08-20 | [Topic 13 T13-141 independent alpha candidate inventory expansion](2026/2026-08-20.md#topic-13-t13-141-independent-alpha-candidate-inventory-expansion) (L253) | research-core | explicit_primary_area |
-| 2026-08-20 | [Topic 13 T13-140 Calorine C-CX legacy NEP2 PBTE candidate reproduction](2026/2026-08-20.md#topic-13-t13-140-calorine-c-cx-legacy-nep2-pbte-candidate-reproduction) (L244) | research-core | explicit_primary_area |
-| 2026-08-20 | [Topic 13 T13-139 Calorine C-CX legacy NEP1 backend compatibility boundary](2026/2026-08-20.md#topic-13-t13-139-calorine-c-cx-legacy-nep1-backend-compatibility-boundary) (L235) | research-core | explicit_primary_area |
-| 2026-08-20 | [Topic 13 T13-138 Calorine C-CX model-variant provenance boundary](2026/2026-08-20.md#topic-13-t13-138-calorine-c-cx-model-variant-provenance-boundary) (L226) | research-core | explicit_primary_area |
-| 2026-08-20 | [Topic 13 T13-137 Huang 2023 NIMS MDR payload boundary](2026/2026-08-20.md#topic-13-t13-137-huang-2023-nims-mdr-payload-boundary) (L217) | research-core | explicit_primary_area |
-| 2026-08-20 | [Topic 13 T13-136 Figshare DFT force-data capability boundary](2026/2026-08-20.md#topic-13-t13-136-figshare-dft-force-data-capability-boundary) (L209) | research-core | explicit_primary_area |
-| 2026-08-20 | [Topic 13 T13-135 Calorine C_src equilibrium/unit cross-check](2026/2026-08-20.md#topic-13-t13-135-calorine-c_src-equilibriumunit-cross-check) (L200) | research-core | explicit_primary_area |
-| 2026-08-20 | [Topic 13 T13-134 major-result progress synchronization](2026/2026-08-20.md#topic-13-t13-134-major-result-progress-synchronization) (L192) | research-core | explicit_primary_area |
-| 2026-08-20 | [Topic 13 T13-133 beta correspondence blocker classification](2026/2026-08-20.md#topic-13-t13-133-beta-correspondence-blocker-classification) (L184) | research-core | explicit_primary_area |
-| 2026-08-20 | [Topic 13 T13-132 full-gate evidence projection and lane hash refresh](2026/2026-08-20.md#topic-13-t13-132-full-gate-evidence-projection-and-lane-hash-refresh) (L176) | research-core | explicit_primary_area |
-| 2026-08-20 | [Topic 13 T13-131 Huberman public PBTE source boundary](2026/2026-08-20.md#topic-13-t13-131-huberman-public-pbte-source-boundary) (L167) | research-core | explicit_primary_area |
-| 2026-08-20 | [Topic 13 T13-130 covariant action symbolic SI conversion contract](2026/2026-08-20.md#topic-13-t13-130-covariant-action-symbolic-si-conversion-contract) (L158) | research-core | explicit_primary_area |
-| 2026-08-20 | [Topic 13 T13-129 IG210 same-state K_T source boundary](2026/2026-08-20.md#topic-13-t13-129-ig210-same-state-k_t-source-boundary) (L150) | research-core | explicit_primary_area |
-| 2026-08-20 | [Topic 13 T13-128 published IG210 thermophysical source](2026/2026-08-20.md#topic-13-t13-128-published-ig210-thermophysical-source) (L141) | research-core | explicit_primary_area |
-| 2026-08-20 | [Topic 13 T13-127 material-regime boundary synchronization](2026/2026-08-20.md#topic-13-t13-127-material-regime-boundary-synchronization) (L133) | research-core | explicit_primary_area |
-| 2026-08-20 | [Topic 13 T13-126 IG210 expansion source comparator](2026/2026-08-20.md#topic-13-t13-126-ig210-expansion-source-comparator) (L125) | research-core | explicit_primary_area |
-| 2026-08-20 | [2026-08-20 - T13-125 Zenodo Hi-Trace Cp comparator](2026/2026-08-20.md#2026-08-20---t13-125-zenodo-hi-trace-cp-comparator) (L116) | research-core | explicit_primary_area |
-| 2026-08-20 | [Topic 13 IAEA GR-280 same-state Cp availability comparator](2026/2026-08-20.md#topic-13-iaea-gr-280-same-state-cp-availability-comparator) (L108) | research-core | explicit_primary_area |
-| 2026-08-20 | [Topic 13 T13-123 all 2-to-2 permutation identity](2026/2026-08-20.md#topic-13-t13-123-all-2-to-2-permutation-identity) (L100) | research-core | explicit_primary_area |
-| 2026-08-20 | [Topic 13 T13-122 off-shell threshold-crossing lane](2026/2026-08-20.md#topic-13-t13-122-off-shell-threshold-crossing-lane) (L92) | research-core | explicit_primary_area |
-| 2026-08-20 | [Topic 13 declared-channel retarded/advanced/Keldysh 1PI (T13-121)](2026/2026-08-20.md#topic-13-declared-channel-retardedadvancedkeldysh-1pi-t13-121) (L83) | research-core | explicit_primary_area |
-| 2026-08-20 | [Topic 13 all positive-energy on-shell cut response (T13-120)](2026/2026-08-20.md#topic-13-all-positive-energy-on-shell-cut-response-t13-120) (L74) | research-core | explicit_primary_area |
-| 2026-08-20 | [Topic 13 action-level sunset cut multiplicity (T13-119)](2026/2026-08-20.md#topic-13-action-level-sunset-cut-multiplicity-t13-119) (L66) | research-core | explicit_primary_area |
-| 2026-08-20 | [Topic 13 signed-cut kinematic taxonomy (T13-118)](2026/2026-08-20.md#topic-13-signed-cut-kinematic-taxonomy-t13-118) (L58) | research-core | explicit_primary_area |
-| 2026-08-20 | [2026-08-20 - Declared finite-temperature retarded 1PI response grid (T13-117)](2026/2026-08-20.md#2026-08-20---declared-finite-temperature-retarded-1pi-response-grid-t13-117) (L43) | unspecified | legacy_research_wave_fields |
-| 2026-08-20 | [2026-08-20 - State-matched Kubo admission and condensed SK/KMS match (T13-115/T13-116)](2026/2026-08-20.md#2026-08-20---state-matched-kubo-admission-and-condensed-skkms-match-t13-115t13-116) (L27) | unspecified | legacy_research_wave_fields |
-| 2026-08-20 | [Topic 13 condensed loop-renormalized contact vertex](2026/2026-08-20.md#topic-13-condensed-loop-renormalized-contact-vertex) (L19) | research-core | explicit_primary_area |
+| 2026-08-20 | [Topic 13 EOS audit contract drift repair](2026/2026-08-20.md#topic-13-eos-audit-contract-drift-repair) (L321) | research-core, result-artifacts | explicit_primary_area |
+| 2026-08-20 | [Topic 13 Peterson source-identity no-go boundary](2026/2026-08-20.md#topic-13-peterson-source-identity-no-go-boundary) (L311) | research-core, data-provenance | explicit_primary_area |
+| 2026-08-20 | [Topic 13 Hong final-source provenance boundary](2026/2026-08-20.md#topic-13-hong-final-source-provenance-boundary) (L302) | research-core, data-provenance | explicit_primary_area |
+| 2026-08-20 | [Topic 13 Jun final-source provenance boundary](2026/2026-08-20.md#topic-13-jun-final-source-provenance-boundary) (L294) | research-core, data-provenance | explicit_primary_area |
+| 2026-08-20 | [Topic 13 Berut controller correction and constraint-gate resync](2026/2026-08-20.md#topic-13-berut-controller-correction-and-constraint-gate-resync) (L286) | research-core, research-standards | explicit_primary_area |
+| 2026-08-20 | [Topic 13 Berut Source Package Availability Boundary](2026/2026-08-20.md#topic-13-berut-source-package-availability-boundary) (L275) | research-core, data-provenance | explicit_primary_area |
+| 2026-08-20 | [Topic 13 Berut Figure 3 Local Archive](2026/2026-08-20.md#topic-13-berut-figure-3-local-archive) (L266) | research-core, data-provenance | explicit_primary_area |
+| 2026-08-20 | [Topic 13/Core hardening audit matcher repair](2026/2026-08-20.md#topic-13core-hardening-audit-matcher-repair) (L257) | research-standards, research-core | explicit_primary_area |
+| 2026-08-20 | [Topic 13 Regularized Continuum Heat-Current Lane](2026/2026-08-20.md#topic-13-regularized-continuum-heat-current-lane) (L246) | research-core, result-artifacts | explicit_primary_area |
+| 2026-08-20 | [Topic 13 T13-141 independent alpha candidate inventory expansion](2026/2026-08-20.md#topic-13-t13-141-independent-alpha-candidate-inventory-expansion) (L237) | research-core | explicit_primary_area |
+| 2026-08-20 | [Topic 13 T13-140 Calorine C-CX legacy NEP2 PBTE candidate reproduction](2026/2026-08-20.md#topic-13-t13-140-calorine-c-cx-legacy-nep2-pbte-candidate-reproduction) (L228) | research-core | explicit_primary_area |
+| 2026-08-20 | [Topic 13 T13-139 Calorine C-CX legacy NEP1 backend compatibility boundary](2026/2026-08-20.md#topic-13-t13-139-calorine-c-cx-legacy-nep1-backend-compatibility-boundary) (L219) | research-core | explicit_primary_area |
+| 2026-08-20 | [Topic 13 T13-138 Calorine C-CX model-variant provenance boundary](2026/2026-08-20.md#topic-13-t13-138-calorine-c-cx-model-variant-provenance-boundary) (L210) | research-core | explicit_primary_area |
+| 2026-08-20 | [Topic 13 T13-137 Huang 2023 NIMS MDR payload boundary](2026/2026-08-20.md#topic-13-t13-137-huang-2023-nims-mdr-payload-boundary) (L201) | research-core | explicit_primary_area |
+| 2026-08-20 | [Topic 13 T13-136 Figshare DFT force-data capability boundary](2026/2026-08-20.md#topic-13-t13-136-figshare-dft-force-data-capability-boundary) (L193) | research-core | explicit_primary_area |
+| 2026-08-20 | [Topic 13 T13-135 Calorine C_src equilibrium/unit cross-check](2026/2026-08-20.md#topic-13-t13-135-calorine-c_src-equilibriumunit-cross-check) (L184) | research-core | explicit_primary_area |
+| 2026-08-20 | [Topic 13 T13-134 major-result progress synchronization](2026/2026-08-20.md#topic-13-t13-134-major-result-progress-synchronization) (L176) | research-core | explicit_primary_area |
+| 2026-08-20 | [Topic 13 T13-133 beta correspondence blocker classification](2026/2026-08-20.md#topic-13-t13-133-beta-correspondence-blocker-classification) (L168) | research-core | explicit_primary_area |
+| 2026-08-20 | [Topic 13 T13-132 full-gate evidence projection and lane hash refresh](2026/2026-08-20.md#topic-13-t13-132-full-gate-evidence-projection-and-lane-hash-refresh) (L160) | research-core | explicit_primary_area |
+| 2026-08-20 | [Topic 13 T13-131 Huberman public PBTE source boundary](2026/2026-08-20.md#topic-13-t13-131-huberman-public-pbte-source-boundary) (L151) | research-core | explicit_primary_area |
+| 2026-08-20 | [Topic 13 T13-130 covariant action symbolic SI conversion contract](2026/2026-08-20.md#topic-13-t13-130-covariant-action-symbolic-si-conversion-contract) (L142) | research-core | explicit_primary_area |
+| 2026-08-20 | [Topic 13 T13-129 IG210 same-state K_T source boundary](2026/2026-08-20.md#topic-13-t13-129-ig210-same-state-k_t-source-boundary) (L134) | research-core | explicit_primary_area |
+| 2026-08-20 | [Topic 13 T13-128 published IG210 thermophysical source](2026/2026-08-20.md#topic-13-t13-128-published-ig210-thermophysical-source) (L125) | research-core | explicit_primary_area |
+| 2026-08-20 | [Topic 13 T13-127 material-regime boundary synchronization](2026/2026-08-20.md#topic-13-t13-127-material-regime-boundary-synchronization) (L117) | research-core | explicit_primary_area |
+| 2026-08-20 | [Topic 13 T13-126 IG210 expansion source comparator](2026/2026-08-20.md#topic-13-t13-126-ig210-expansion-source-comparator) (L109) | research-core | explicit_primary_area |
+| 2026-08-20 | [2026-08-20 - T13-125 Zenodo Hi-Trace Cp comparator](2026/2026-08-20.md#2026-08-20---t13-125-zenodo-hi-trace-cp-comparator) (L100) | research-core | explicit_primary_area |
+| 2026-08-20 | [Topic 13 IAEA GR-280 same-state Cp availability comparator](2026/2026-08-20.md#topic-13-iaea-gr-280-same-state-cp-availability-comparator) (L92) | research-core | explicit_primary_area |
+| 2026-08-20 | [Topic 13 T13-123 all 2-to-2 permutation identity](2026/2026-08-20.md#topic-13-t13-123-all-2-to-2-permutation-identity) (L84) | research-core | explicit_primary_area |
+| 2026-08-20 | [Topic 13 T13-122 off-shell threshold-crossing lane](2026/2026-08-20.md#topic-13-t13-122-off-shell-threshold-crossing-lane) (L76) | research-core | explicit_primary_area |
+| 2026-08-20 | [Topic 13 declared-channel retarded/advanced/Keldysh 1PI (T13-121)](2026/2026-08-20.md#topic-13-declared-channel-retardedadvancedkeldysh-1pi-t13-121) (L67) | research-core | explicit_primary_area |
+| 2026-08-20 | [Topic 13 all positive-energy on-shell cut response (T13-120)](2026/2026-08-20.md#topic-13-all-positive-energy-on-shell-cut-response-t13-120) (L58) | research-core | explicit_primary_area |
+| 2026-08-20 | [Topic 13 action-level sunset cut multiplicity (T13-119)](2026/2026-08-20.md#topic-13-action-level-sunset-cut-multiplicity-t13-119) (L50) | research-core | explicit_primary_area |
+| 2026-08-20 | [Topic 13 signed-cut kinematic taxonomy (T13-118)](2026/2026-08-20.md#topic-13-signed-cut-kinematic-taxonomy-t13-118) (L42) | research-core | explicit_primary_area |
+| 2026-08-20 | [2026-08-20 - Declared finite-temperature retarded 1PI response grid (T13-117)](2026/2026-08-20.md#2026-08-20---declared-finite-temperature-retarded-1pi-response-grid-t13-117) (L27) | unspecified | legacy_research_wave_fields |
+| 2026-08-20 | [2026-08-20 - State-matched Kubo admission and condensed SK/KMS match (T13-115/T13-116)](2026/2026-08-20.md#2026-08-20---state-matched-kubo-admission-and-condensed-skkms-match-t13-115t13-116) (L11) | unspecified | legacy_research_wave_fields |
+| 2026-08-20 | [Topic 13 condensed loop-renormalized contact vertex](2026/2026-08-20.md#topic-13-condensed-loop-renormalized-contact-vertex) (L3) | research-core | explicit_primary_area |
 | 2026-08-18 | [Topic 13 continuum relative-flow Kubo lane](2026/2026-08-18.md#topic-13-continuum-relative-flow-kubo-lane) (L43) | research-core | explicit_primary_area |
 | 2026-08-18 | [Topic 13 condensed relative-flow collision kernel](2026/2026-08-18.md#topic-13-condensed-relative-flow-collision-kernel) (L33) | research-core | explicit_primary_area |
 | 2026-08-18 | [Topic 13 thermodynamic normal-component lane](2026/2026-08-18.md#topic-13-thermodynamic-normal-component-lane) (L24) | research-core | explicit_primary_area |
@@ -470,42 +470,42 @@ Indexed entries: 673. Counts describe records, not accomplishments.
 | 2026-08-14 | [2026-08-14 - Calorine evidence-chain resynchronization](2026-08-14.md#2026-08-14---calorine-evidence-chain-resynchronization) (L28) | unspecified | legacy root location |
 | 2026-08-14 | [2026-08-14 - Calorine provenance and state-uncertainty decomposition](2026-08-14.md#2026-08-14---calorine-provenance-and-state-uncertainty-decomposition) (L14) | unspecified | legacy root location |
 | 2026-08-14 | [Topic 13 Calorine/Zenodo PBTE numeric C_src reproduction](2026-08-14.md#topic-13-calorinezenodo-pbte-numeric-c_src-reproduction) (L2) | research-core | legacy root location |
-| 2026-08-13 | [Topic 13 Ding alternate public dataset boundary](2026/2026-08-13.md#topic-13-ding-alternate-public-dataset-boundary) (L499) | research-core, result-artifacts | explicit_primary_area |
-| 2026-08-13 | [Topic 13 graphite alpha_V/K_T source compatibility boundary](2026/2026-08-13.md#topic-13-graphite-alpha_vk_t-source-compatibility-boundary) (L487) | research-core, result-artifacts | explicit_primary_area |
-| 2026-08-13 | [Topic 13 MP48 temperature-volume uncertainty boundary](2026/2026-08-13.md#topic-13-mp48-temperature-volume-uncertainty-boundary) (L475) | research-core, result-artifacts | explicit_primary_area |
-| 2026-08-13 | [Topic 13 MP48 full-gate narrative drift repair](2026/2026-08-13.md#topic-13-mp48-full-gate-narrative-drift-repair) (L463) | research-core, result-artifacts | explicit_primary_area |
-| 2026-08-13 | [Topic 13 MP48 acceptance-controller synchronization](2026/2026-08-13.md#topic-13-mp48-acceptance-controller-synchronization) (L450) | research-core, result-artifacts | explicit_primary_area |
-| 2026-08-13 | [Topic 13 MP48 fine-tail acceptance policy correction](2026/2026-08-13.md#topic-13-mp48-fine-tail-acceptance-policy-correction) (L437) | research-core, result-artifacts | explicit_primary_area |
-| 2026-08-13 | [Topic 13 finite-temperature scheme identifiability no-go wave](2026/2026-08-13.md#topic-13-finite-temperature-scheme-identifiability-no-go-wave) (L426) | research-core, result-artifacts, research-standards | explicit_primary_area |
-| 2026-08-13 | [Topic 13 Hartree equilibrium thermodynamic consistency wave](2026/2026-08-13.md#topic-13-hartree-equilibrium-thermodynamic-consistency-wave) (L413) | research-core, result-artifacts, research-standards | explicit_primary_area |
-| 2026-08-13 | [Topic 13 finite-temperature O(2) Hartree self-energy wave](2026/2026-08-13.md#topic-13-finite-temperature-o2-hartree-self-energy-wave) (L401) | research-core, result-artifacts, research-standards | explicit_primary_area |
-| 2026-08-13 | [Topic 13 Phi SI anchor public-source boundary wave](2026/2026-08-13.md#topic-13-phi-si-anchor-public-source-boundary-wave) (L389) | research-core, result-artifacts | explicit_primary_area |
-| 2026-08-13 | [Topic 13 Ding 2017 ACS supplementary payload-boundary wave](2026/2026-08-13.md#topic-13-ding-2017-acs-supplementary-payload-boundary-wave) (L377) | research-core, result-artifacts | explicit_primary_area |
-| 2026-08-13 | [Topic 13 NIMS graphite LTC source-route no-go wave](2026/2026-08-13.md#topic-13-nims-graphite-ltc-source-route-no-go-wave) (L365) | research-core, result-artifacts | explicit_primary_area |
-| 2026-08-13 | [Topic 13 holdout access-semantics correction wave](2026/2026-08-13.md#topic-13-holdout-access-semantics-correction-wave) (L352) | research-core, research-standards, result-artifacts | explicit_primary_area |
-| 2026-08-13 | [Topic 13 Calorine/Zenodo NEP BTE candidate-boundary wave](2026/2026-08-13.md#topic-13-calorinezenodo-nep-bte-candidate-boundary-wave) (L339) | research-core, result-artifacts | explicit_primary_area |
-| 2026-08-13 | [Topic 13 independent C_src acceptance-contract wave](2026/2026-08-13.md#topic-13-independent-c_src-acceptance-contract-wave) (L327) | research-core, result-artifacts | explicit_primary_area |
-| 2026-08-13 | [Topic 13 formal open-system SK/KMS and entropy lane](2026/2026-08-13.md#topic-13-formal-open-system-skkms-and-entropy-lane) (L315) | research-core, result-artifacts | explicit_primary_area |
-| 2026-08-13 | [Topic 13 public Green-Kubo source-boundary wave](2026/2026-08-13.md#topic-13-public-green-kubo-source-boundary-wave) (L302) | research-core, result-artifacts | explicit_primary_area |
-| 2026-08-13 | [Topic 13 equilibrium KMS/FDT identity wave](2026/2026-08-13.md#topic-13-equilibrium-kmsfdt-identity-wave) (L290) | research-core, result-artifacts | explicit_primary_area |
-| 2026-08-13 | [Topic 13 DeSorbo Ceylon graphite Cp comparator wave](2026/2026-08-13.md#topic-13-desorbo-ceylon-graphite-cp-comparator-wave) (L278) | research-core, result-artifacts | explicit_primary_area |
-| 2026-08-13 | [Topic 13 Oxford TGS numeric-row comparator wave](2026/2026-08-13.md#topic-13-oxford-tgs-numeric-row-comparator-wave) (L265) | research-core, result-artifacts | explicit_primary_area |
-| 2026-08-13 | [Topic 13 Phonix mp-47 harmonic comparator wave](2026/2026-08-13.md#topic-13-phonix-mp-47-harmonic-comparator-wave) (L252) | research-core, result-artifacts | explicit_primary_area |
-| 2026-08-13 | [Topic 13 IAEA c_v uncertainty boundary wave](2026/2026-08-13.md#topic-13-iaea-c_v-uncertainty-boundary-wave) (L239) | research-core, result-artifacts | explicit_primary_area |
-| 2026-08-13 | [Topic 13 Ding material-regime boundary wave](2026/2026-08-13.md#topic-13-ding-material-regime-boundary-wave) (L226) | research-core, result-artifacts | explicit_primary_area |
-| 2026-08-13 | [Topic 13 IAEA table-derived c_v comparator wave](2026/2026-08-13.md#topic-13-iaea-table-derived-c_v-comparator-wave) (L213) | research-core, result-artifacts | explicit_primary_area |
-| 2026-08-13 | [Topic 13 BIPM specific-heat comparator wave](2026/2026-08-13.md#topic-13-bipm-specific-heat-comparator-wave) (L200) | research-core, result-artifacts | explicit_primary_area |
-| 2026-08-13 | [Topic 13 MP48 deep fine-tail convergence refinement](2026/2026-08-13.md#topic-13-mp48-deep-fine-tail-convergence-refinement) (L187) | research-core, result-artifacts | explicit_primary_area |
-| 2026-08-13 | [Topic 13 NIST AXM-5Q1 same-grade density boundary wave](2026/2026-08-13.md#topic-13-nist-axm-5q1-same-grade-density-boundary-wave) (L174) | research-core, result-artifacts | explicit_primary_area |
-| 2026-08-13 | [Topic 13 MP48 finest-pair convergence refinement](2026/2026-08-13.md#topic-13-mp48-finest-pair-convergence-refinement) (L161) | research-core, result-artifacts | explicit_primary_area |
-| 2026-08-13 | [Topic 13 Huang 2023 supplementary boundary wave](2026/2026-08-13.md#topic-13-huang-2023-supplementary-boundary-wave) (L148) | research-core, result-artifacts | explicit_primary_area |
-| 2026-08-13 | [Topic 13 MP48 C_src mesh-convergence boundary wave](2026/2026-08-13.md#topic-13-mp48-c_src-mesh-convergence-boundary-wave) (L135) | research-core, result-artifacts | explicit_primary_area |
-| 2026-08-13 | [Topic 13 major-result register synchronization wave](2026/2026-08-13.md#topic-13-major-result-register-synchronization-wave) (L122) | research-core, repo-ops | explicit_primary_area |
-| 2026-08-13 | [Topic 13 official Nelson-Riley alpha_V comparator wave](2026/2026-08-13.md#topic-13-official-nelson-riley-alpha_v-comparator-wave) (L109) | research-core, result-artifacts | explicit_primary_area |
-| 2026-08-13 | [Topic 13 IHEP TPG alpha_V comparator wave](2026/2026-08-13.md#topic-13-ihep-tpg-alpha_v-comparator-wave) (L96) | research-core, result-artifacts | explicit_primary_area |
-| 2026-08-13 | [Topic 13 Hanfland isothermal K_T source wave](2026/2026-08-13.md#topic-13-hanfland-isothermal-k_t-source-wave) (L83) | research-core, result-artifacts | explicit_primary_area |
-| 2026-08-13 | [Topic 13 Bosak elastic bulk comparator wave](2026/2026-08-13.md#topic-13-bosak-elastic-bulk-comparator-wave) (L70) | research-core, result-artifacts | explicit_primary_area |
-| 2026-08-13 | [Topic 13 NIST alpha_V source-boundary wave](2026/2026-08-13.md#topic-13-nist-alpha_v-source-boundary-wave) (L57) | research-core, result-artifacts | explicit_primary_area |
+| 2026-08-13 | [Topic 13 Ding alternate public dataset boundary](2026/2026-08-13.md#topic-13-ding-alternate-public-dataset-boundary) (L488) | research-core, result-artifacts | explicit_primary_area |
+| 2026-08-13 | [Topic 13 graphite alpha_V/K_T source compatibility boundary](2026/2026-08-13.md#topic-13-graphite-alpha_vk_t-source-compatibility-boundary) (L476) | research-core, result-artifacts | explicit_primary_area |
+| 2026-08-13 | [Topic 13 MP48 temperature-volume uncertainty boundary](2026/2026-08-13.md#topic-13-mp48-temperature-volume-uncertainty-boundary) (L464) | research-core, result-artifacts | explicit_primary_area |
+| 2026-08-13 | [Topic 13 MP48 full-gate narrative drift repair](2026/2026-08-13.md#topic-13-mp48-full-gate-narrative-drift-repair) (L452) | research-core, result-artifacts | explicit_primary_area |
+| 2026-08-13 | [Topic 13 MP48 acceptance-controller synchronization](2026/2026-08-13.md#topic-13-mp48-acceptance-controller-synchronization) (L439) | research-core, result-artifacts | explicit_primary_area |
+| 2026-08-13 | [Topic 13 MP48 fine-tail acceptance policy correction](2026/2026-08-13.md#topic-13-mp48-fine-tail-acceptance-policy-correction) (L426) | research-core, result-artifacts | explicit_primary_area |
+| 2026-08-13 | [Topic 13 finite-temperature scheme identifiability no-go wave](2026/2026-08-13.md#topic-13-finite-temperature-scheme-identifiability-no-go-wave) (L415) | research-core, result-artifacts, research-standards | explicit_primary_area |
+| 2026-08-13 | [Topic 13 Hartree equilibrium thermodynamic consistency wave](2026/2026-08-13.md#topic-13-hartree-equilibrium-thermodynamic-consistency-wave) (L402) | research-core, result-artifacts, research-standards | explicit_primary_area |
+| 2026-08-13 | [Topic 13 finite-temperature O(2) Hartree self-energy wave](2026/2026-08-13.md#topic-13-finite-temperature-o2-hartree-self-energy-wave) (L390) | research-core, result-artifacts, research-standards | explicit_primary_area |
+| 2026-08-13 | [Topic 13 Phi SI anchor public-source boundary wave](2026/2026-08-13.md#topic-13-phi-si-anchor-public-source-boundary-wave) (L378) | research-core, result-artifacts | explicit_primary_area |
+| 2026-08-13 | [Topic 13 Ding 2017 ACS supplementary payload-boundary wave](2026/2026-08-13.md#topic-13-ding-2017-acs-supplementary-payload-boundary-wave) (L366) | research-core, result-artifacts | explicit_primary_area |
+| 2026-08-13 | [Topic 13 NIMS graphite LTC source-route no-go wave](2026/2026-08-13.md#topic-13-nims-graphite-ltc-source-route-no-go-wave) (L354) | research-core, result-artifacts | explicit_primary_area |
+| 2026-08-13 | [Topic 13 holdout access-semantics correction wave](2026/2026-08-13.md#topic-13-holdout-access-semantics-correction-wave) (L341) | research-core, research-standards, result-artifacts | explicit_primary_area |
+| 2026-08-13 | [Topic 13 Calorine/Zenodo NEP BTE candidate-boundary wave](2026/2026-08-13.md#topic-13-calorinezenodo-nep-bte-candidate-boundary-wave) (L328) | research-core, result-artifacts | explicit_primary_area |
+| 2026-08-13 | [Topic 13 independent C_src acceptance-contract wave](2026/2026-08-13.md#topic-13-independent-c_src-acceptance-contract-wave) (L316) | research-core, result-artifacts | explicit_primary_area |
+| 2026-08-13 | [Topic 13 formal open-system SK/KMS and entropy lane](2026/2026-08-13.md#topic-13-formal-open-system-skkms-and-entropy-lane) (L304) | research-core, result-artifacts | explicit_primary_area |
+| 2026-08-13 | [Topic 13 public Green-Kubo source-boundary wave](2026/2026-08-13.md#topic-13-public-green-kubo-source-boundary-wave) (L291) | research-core, result-artifacts | explicit_primary_area |
+| 2026-08-13 | [Topic 13 equilibrium KMS/FDT identity wave](2026/2026-08-13.md#topic-13-equilibrium-kmsfdt-identity-wave) (L279) | research-core, result-artifacts | explicit_primary_area |
+| 2026-08-13 | [Topic 13 DeSorbo Ceylon graphite Cp comparator wave](2026/2026-08-13.md#topic-13-desorbo-ceylon-graphite-cp-comparator-wave) (L267) | research-core, result-artifacts | explicit_primary_area |
+| 2026-08-13 | [Topic 13 Oxford TGS numeric-row comparator wave](2026/2026-08-13.md#topic-13-oxford-tgs-numeric-row-comparator-wave) (L254) | research-core, result-artifacts | explicit_primary_area |
+| 2026-08-13 | [Topic 13 Phonix mp-47 harmonic comparator wave](2026/2026-08-13.md#topic-13-phonix-mp-47-harmonic-comparator-wave) (L241) | research-core, result-artifacts | explicit_primary_area |
+| 2026-08-13 | [Topic 13 IAEA c_v uncertainty boundary wave](2026/2026-08-13.md#topic-13-iaea-c_v-uncertainty-boundary-wave) (L228) | research-core, result-artifacts | explicit_primary_area |
+| 2026-08-13 | [Topic 13 Ding material-regime boundary wave](2026/2026-08-13.md#topic-13-ding-material-regime-boundary-wave) (L215) | research-core, result-artifacts | explicit_primary_area |
+| 2026-08-13 | [Topic 13 IAEA table-derived c_v comparator wave](2026/2026-08-13.md#topic-13-iaea-table-derived-c_v-comparator-wave) (L202) | research-core, result-artifacts | explicit_primary_area |
+| 2026-08-13 | [Topic 13 BIPM specific-heat comparator wave](2026/2026-08-13.md#topic-13-bipm-specific-heat-comparator-wave) (L189) | research-core, result-artifacts | explicit_primary_area |
+| 2026-08-13 | [Topic 13 MP48 deep fine-tail convergence refinement](2026/2026-08-13.md#topic-13-mp48-deep-fine-tail-convergence-refinement) (L176) | research-core, result-artifacts | explicit_primary_area |
+| 2026-08-13 | [Topic 13 NIST AXM-5Q1 same-grade density boundary wave](2026/2026-08-13.md#topic-13-nist-axm-5q1-same-grade-density-boundary-wave) (L163) | research-core, result-artifacts | explicit_primary_area |
+| 2026-08-13 | [Topic 13 MP48 finest-pair convergence refinement](2026/2026-08-13.md#topic-13-mp48-finest-pair-convergence-refinement) (L150) | research-core, result-artifacts | explicit_primary_area |
+| 2026-08-13 | [Topic 13 Huang 2023 supplementary boundary wave](2026/2026-08-13.md#topic-13-huang-2023-supplementary-boundary-wave) (L137) | research-core, result-artifacts | explicit_primary_area |
+| 2026-08-13 | [Topic 13 MP48 C_src mesh-convergence boundary wave](2026/2026-08-13.md#topic-13-mp48-c_src-mesh-convergence-boundary-wave) (L124) | research-core, result-artifacts | explicit_primary_area |
+| 2026-08-13 | [Topic 13 major-result register synchronization wave](2026/2026-08-13.md#topic-13-major-result-register-synchronization-wave) (L111) | research-core, repo-ops | explicit_primary_area |
+| 2026-08-13 | [Topic 13 official Nelson-Riley alpha_V comparator wave](2026/2026-08-13.md#topic-13-official-nelson-riley-alpha_v-comparator-wave) (L98) | research-core, result-artifacts | explicit_primary_area |
+| 2026-08-13 | [Topic 13 IHEP TPG alpha_V comparator wave](2026/2026-08-13.md#topic-13-ihep-tpg-alpha_v-comparator-wave) (L85) | research-core, result-artifacts | explicit_primary_area |
+| 2026-08-13 | [Topic 13 Hanfland isothermal K_T source wave](2026/2026-08-13.md#topic-13-hanfland-isothermal-k_t-source-wave) (L72) | research-core, result-artifacts | explicit_primary_area |
+| 2026-08-13 | [Topic 13 Bosak elastic bulk comparator wave](2026/2026-08-13.md#topic-13-bosak-elastic-bulk-comparator-wave) (L59) | research-core, result-artifacts | explicit_primary_area |
+| 2026-08-13 | [Topic 13 NIST alpha_V source-boundary wave](2026/2026-08-13.md#topic-13-nist-alpha_v-source-boundary-wave) (L46) | research-core, result-artifacts | explicit_primary_area |
 | 2026-08-13 | [Topic 13 MP48 force-constant harmonic reconstruction wave](2026/2026-08-13.md#topic-13-mp48-force-constant-harmonic-reconstruction-wave) (L31) | research-core, result-artifacts | explicit_primary_area |
 | 2026-08-13 | [Topic 13 Phi_E dimensional hardening wave](2026/2026-08-13.md#topic-13-phi_e-dimensional-hardening-wave) (L18) | research-core, result-artifacts | explicit_primary_area |
 | 2026-08-13 | [Topic 13 MP48 spectral hardening wave](2026/2026-08-13.md#topic-13-mp48-spectral-hardening-wave) (L5) | research-core, result-artifacts | explicit_primary_area |
@@ -609,7 +609,7 @@ Indexed entries: 673. Counts describe records, not accomplishments.
 | 2026-08-01 | [Topic 0.25 bounded BLS labor provenance refresh](2026/2026-08-01.md#topic-025-bounded-bls-labor-provenance-refresh) (L26) | research-core | explicit_primary_area |
 | 2026-08-01 | [Named persistence principle and operational diagnostic contract](2026/2026-08-01.md#named-persistence-principle-and-operational-diagnostic-contract) (L14) | research-core | explicit_primary_area |
 | 2026-08-01 | [Topic 0.25 SEC recipient funding concordance](2026/2026-08-01.md#topic-025-sec-recipient-funding-concordance) (L1) | research-core | explicit_primary_area |
-| 2026-07-30 | [Contribution-guide standardization](2026/2026-07-30.md#contribution-guide-standardization) (L106) | research-standards, repo-ops | explicit_primary_area |
+| 2026-07-30 | [Contribution-guide standardization](2026/2026-07-30.md#contribution-guide-standardization) (L78) | research-standards, repo-ops | explicit_primary_area |
 | 2026-07-30 | [Canonical artifact coverage for Waves 5 and 9](2026/2026-07-30.md#canonical-artifact-coverage-for-waves-5-and-9) (L59) | research-core | explicit_primary_area |
 | 2026-07-30 | [Foundation Wave 3–10 dependency package](2026/2026-07-30.md#foundation-wave-310-dependency-package) (L49) | research-core | explicit_primary_area |
 | 2026-07-30 | [Finite-cone C candidate lane](2026/2026-07-30.md#finite-cone-c-candidate-lane) (L40) | research-core | explicit_primary_area |
@@ -617,8 +617,8 @@ Indexed entries: 673. Counts describe records, not accomplishments.
 | 2026-07-30 | [Changing-C split ledger packet](2026/2026-07-30.md#changing-c-split-ledger-packet) (L22) | research-core | explicit_primary_area |
 | 2026-07-30 | [Causal Phi/Pi discrete-gradient closure packet](2026/2026-07-30.md#causal-phipi-discrete-gradient-closure-packet) (L13) | research-core | explicit_primary_area |
 | 2026-07-30 | [Causal reference ledger closure packet](2026/2026-07-30.md#causal-reference-ledger-closure-packet) (L3) | research-core | explicit_primary_area |
-| 2026-07-29 | [UET Foundation-First Program — Waves 0-4](2026/2026-07-29.md#uet-foundation-first-program--waves-0-4) (L49) | research-core, research-standards | explicit_primary_area |
-| 2026-07-29 | [2026-07-29 - Separate physical impact from informational effect](2026/2026-07-29.md#2026-07-29---separate-physical-impact-from-informational-effect) (L39) | research-core | explicit_primary_area |
+| 2026-07-29 | [UET Foundation-First Program — Waves 0-4](2026/2026-07-29.md#uet-foundation-first-program--waves-0-4) (L40) | research-core, research-standards | explicit_primary_area |
+| 2026-07-29 | [2026-07-29 - Separate physical impact from informational effect](2026/2026-07-29.md#2026-07-29---separate-physical-impact-from-informational-effect) (L30) | research-core | explicit_primary_area |
 | 2026-07-29 | [Cosmological open-system interpretation pass](2026/2026-07-29.md#cosmological-open-system-interpretation-pass) (L13) | research-core | explicit_primary_area |
 | 2026-07-29 | [Thermal source observable-map hardening](2026/2026-07-29.md#thermal-source-observable-map-hardening) (L3) | research-core, result-artifacts | explicit_primary_area |
 | 2026-07-27 | [C-to-thermal observable bridge wave](2026/2026-07-27.md#c-to-thermal-observable-bridge-wave) (L14) | research-core, research-standards | explicit_primary_area |
@@ -645,7 +645,7 @@ Indexed entries: 673. Counts describe records, not accomplishments.
 | 2026-07-26 | [F0 equation inventory and cross-topic correspondence matrix](2026/2026-07-26.md#f0-equation-inventory-and-cross-topic-correspondence-matrix) (L24) | research-standards, research-core | explicit_primary_area |
 | 2026-07-26 | [Foundation compatibility and limiting-case audit](2026/2026-07-26.md#foundation-compatibility-and-limiting-case-audit) (L14) | research-core, research-standards | explicit_primary_area |
 | 2026-07-26 | [Foundation-first equation research workflow repair](2026/2026-07-26.md#foundation-first-equation-research-workflow-repair) (L3) | research-standards, research-core | explicit_primary_area |
-| 2026-07-23 | [Section 5 - O(2) finite-density EOS and covariant superfluid transport](2026/2026-07-23.md#section-5---o2-finite-density-eos-and-covariant-superfluid-transport) (L55) | research-core | explicit_primary_area |
+| 2026-07-23 | [Section 5 - O(2) finite-density EOS and covariant superfluid transport](2026/2026-07-23.md#section-5---o2-finite-density-eos-and-covariant-superfluid-transport) (L17) | research-core | explicit_primary_area |
 | 2026-07-23 | [Section 1 - Post-Wave-9 matter-space report alignment](2026/2026-07-23.md#section-1---post-wave-9-matter-space-report-alignment) (L3) | research-core | explicit_primary_area |
 | 2026-07-22 | [Section 9 - Topic 0.13 thermodynamic constraint dependency alignment](2026/2026-07-22.md#section-9---topic-013-thermodynamic-constraint-dependency-alignment) (L104) | research-core | explicit_primary_area |
 | 2026-07-22 | [Section 8 - Topic 0.19 core GR program dependency alignment](2026/2026-07-22.md#section-8---topic-019-core-gr-program-dependency-alignment) (L91) | research-core | explicit_primary_area |
@@ -668,10 +668,10 @@ Indexed entries: 673. Counts describe records, not accomplishments.
 | 2026-07-20 | [21:10 - Matter-space core operator](2026/2026-07-20.md#2110---matter-space-core-operator) (L22) | research-core | explicit_primary_area |
 | 2026-07-20 | [20:41 - Matter-space ontology and formula contract](2026/2026-07-20.md#2041---matter-space-ontology-and-formula-contract) (L12) | research-core | explicit_primary_area |
 | 2026-07-20 | [20:31 - Trace checkpoint hardening](2026/2026-07-20.md#2031---trace-checkpoint-hardening) (L3) | research-core | explicit_primary_area |
-| 2026-07-16 | [Topic 0.25 labor/material/funding provenance wave](2026/2026-07-16.md#topic-025-labormaterialfunding-provenance-wave) (L60) | research-core | explicit_primary_area |
-| 2026-07-16 | [Topic 0.25 BEA benchmark structural audit](2026/2026-07-16.md#topic-025-bea-benchmark-structural-audit) (L50) | research-core | explicit_primary_area |
-| 2026-07-16 | [Topic 0.25 payer-resource join readiness](2026/2026-07-16.md#topic-025-payer-resource-join-readiness) (L42) | research-core | explicit_primary_area |
-| 2026-07-16 | [Topic 0.25 funding provenance hardening](2026/2026-07-16.md#topic-025-funding-provenance-hardening) (L33) | research-core | explicit_primary_area |
+| 2026-07-16 | [Topic 0.25 labor/material/funding provenance wave](2026/2026-07-16.md#topic-025-labormaterialfunding-provenance-wave) (L51) | research-core | explicit_primary_area |
+| 2026-07-16 | [Topic 0.25 BEA benchmark structural audit](2026/2026-07-16.md#topic-025-bea-benchmark-structural-audit) (L41) | research-core | explicit_primary_area |
+| 2026-07-16 | [Topic 0.25 payer-resource join readiness](2026/2026-07-16.md#topic-025-payer-resource-join-readiness) (L33) | research-core | explicit_primary_area |
+| 2026-07-16 | [Topic 0.25 funding provenance hardening](2026/2026-07-16.md#topic-025-funding-provenance-hardening) (L24) | research-core | explicit_primary_area |
 | 2026-07-16 | [Topic 0.25 Evidence Grade A roadmap architecture](2026/2026-07-16.md#topic-025-evidence-grade-a-roadmap-architecture) (L11) | research-core | explicit_primary_area |
 | 2026-07-16 | [Topic 0.25 claim-boundary completion audit](2026/2026-07-16.md#topic-025-claim-boundary-completion-audit) (L3) | research-core | explicit_primary_area |
 | 2026-07-15 | [Book 1 economics hardening closure](2026/2026-07-15.md#book-1-economics-hardening-closure) (L3) | research-core | explicit_primary_area |

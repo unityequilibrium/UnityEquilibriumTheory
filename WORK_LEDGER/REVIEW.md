@@ -10,11 +10,19 @@ Review all flagged entries, including provisional path-based classifications. Hi
 
 Multiple source files for 2026-08-14: [2026/2026-08-14.md](2026/2026-08-14.md), [2026-08-14.md](2026-08-14.md). Preserved separately; do not assume equal or delete either.
 
-Indexed entries: 4. Counts describe records, not accomplishments.
+Indexed entries: 12. Counts describe records, not accomplishments.
 
 | Date | Record | Area | Notes |
 | --- | --- | --- | --- |
 | 2026-10-04 | [2026-10-04 Core correspondence review](2026/2026-10-04.md) (L1) | research-core | unsectioned_source |
+| 2026-09-28 | [Work Ledger - 2026-09-28](2026/2026-09-28.md) (L1) | unspecified | missing_or_unknown_primary_area; unsectioned_source |
 | 2026-09-15 | [Core physical migration v3 — Wave 6za support/tooling migration](2026/2026-09-15.md#core-physical-migration-v3--wave-6za-supporttooling-migration) (L463) | repo-ops, research-standards | multiple_area_fields |
 | 2026-09-15 | [Core physical migration v3 — Wave 6v-a post-commit metadata consistency correction](2026/2026-09-15.md#core-physical-migration-v3--wave-6v-a-post-commit-metadata-consistency-correction) (L391) | repo-ops, research-standards, research-core | multiple_area_fields |
 | 2026-09-14 | [Core physical migration v3 — Wave 0–2](2026/2026-09-14.md#core-physical-migration-v3--wave-02) (L79) | unspecified | missing_primary_area |
+| 2026-08-04 | [📜 Repository Work Ledger Entry - 2026-08-04](2026/2026-08-04.md) (L1) | unspecified | missing_or_unknown_primary_area; unsectioned_source |
+| 2026-08-02 | [📒 Work Ledger - 2026-08-02](2026/2026-08-02.md) (L1) | unspecified | missing_or_unknown_primary_area; unsectioned_source |
+| 2026-07-25 | [📒 Work Ledger - 2026-07-25](2026/2026-07-25.md) (L1) | unspecified | missing_or_unknown_primary_area; unsectioned_source |
+| 2026-07-24 | [📒 Work Ledger - 2026-07-24](2026/2026-07-24.md) (L1) | unspecified | missing_or_unknown_primary_area; unsectioned_source |
+| 2026-07-13 | [Work Ledger - 2026-07-13](2026/2026-07-13.md) (L1) | unspecified | missing_or_unknown_primary_area; unsectioned_source |
+| 2026-07-08 | [2026-07-08 Work Ledger](2026/2026-07-08.md) (L1) | unspecified | missing_or_unknown_primary_area; unsectioned_source |
+| 2026-07-07 | [Work Ledger - 2026-07-07](2026/2026-07-07.md) (L1) | unspecified | missing_or_unknown_primary_area; unsectioned_source |

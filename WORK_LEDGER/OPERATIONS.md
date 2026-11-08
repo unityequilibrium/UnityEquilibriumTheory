@@ -6,11 +6,11 @@
 
 These are source-linked historical records, not proof of completed research, successful publication, or current scientific readiness.
 
-Indexed entries: 97. Counts describe records, not accomplishments.
+Indexed entries: 96. Counts describe records, not accomplishments.
 
 | Date | Record | Area | Notes |
 | --- | --- | --- | --- |
-| 2026-11-03 | [Ledger research and book-history separation](2026/2026-11-03.md#ledger-research-and-book-history-separation) (L17) | repo-ops | explicit_stream_and_area |
+| 2026-11-03 | [Ledger research and book-history separation](2026/2026-11-03.md#ledger-research-and-book-history-separation) (L3) | repo-ops | explicit_stream_and_area |
 | 2026-11-02 | [2026-11-03 owner-directed history relocation](2026/2026-11-02.md#2026-11-03-owner-directed-history-relocation) (L29) | repo-ops, theory-history, book-writing | explicit_primary_area |
 | 2026-11-02 | [2026-11-03 scoped publication checkpoint](2026/2026-11-02.md#2026-11-03-scoped-publication-checkpoint) (L13) | repo-ops | explicit_primary_area |
 | 2026-11-02 | [Harness and Superapp workspace boundary](2026/2026-11-02.md#harness-and-superapp-workspace-boundary) (L3) | repo-ops | explicit_primary_area |
@@ -106,4 +106,3 @@ Indexed entries: 97. Counts describe records, not accomplishments.
 | 2026-08-21 | [Branch inventory checkpoint](2026/2026-08-21.md#branch-inventory-checkpoint) (L20) | repo-ops | explicit_primary_area |
 | 2026-08-21 | [Repository workflow standardization](2026/2026-08-21.md#repository-workflow-standardization) (L10) | repo-ops, documentation-system | explicit_primary_area |
 | 2026-07-30 | [Architecture boundary and future-platform classification](2026/2026-07-30.md#architecture-boundary-and-future-platform-classification) (L69) | repo-ops, services-tools | explicit_primary_area |
-| 2026-07-07 | [Thailand Energy Contract Reform Policy Proposal](2026/2026-07-07.md#thailand-energy-contract-reform-policy-proposal) (L3) | thai-policy | explicit_primary_area |
