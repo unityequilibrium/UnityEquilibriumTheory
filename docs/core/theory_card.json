@@ -211,12 +211,14 @@
   ],
   "predictions": [
     {
-      "observable": "PPN gamma - 1 (expected 0 at linear order around psi = 0; non-discriminating)",
-      "system": "solar system (Cassini)"
+      "observable": "PPN gamma - 1 = 0 at psi0 = 0 (alpha0 = 0); non-discriminating sanity check",
+      "system": "solar system (Cassini)",
+      "claim_id": "C_UET_DEF_MAPPING"
     },
     {
-      "observable": "spontaneous scalarization and dipole radiation (DEF beta mapped from xi_c, with m_psi)",
-      "system": "neutron stars / binary pulsars"
+      "observable": "DEF beta0 = -2 xi_c: spontaneous scalarization and dipole radiation for xi_c of about 2 or more when m_psi is light",
+      "system": "neutron stars / binary pulsars (Test Card T001, W6)",
+      "claim_id": "C_UET_DEF_MAPPING"
     },
     {
       "observable": "time-varying G_eff and w(z) from displaced psi background",
