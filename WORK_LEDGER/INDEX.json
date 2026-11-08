@@ -5,10 +5,10 @@
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
     "sources": 81,
-    "entries": 779,
+    "entries": 780,
     "by_stream": {
       "operations": 97,
-      "research": 674,
+      "research": 675,
       "review": 8
     },
     "exact_duplicates": 0,
@@ -419,8 +419,8 @@
     },
     {
       "path": "2026/2026-11-08.md",
-      "sha256": "040bce78a930f4f106ad9e3d4c203fd0bd1fe41e443e543d106709f433c92b0b",
-      "entries": 2
+      "sha256": "606970e55664ad2326c2c4f29194169d8ad76004f3bc819f108b0fc1752a2050",
+      "entries": 3
     },
     {
       "path": "2026-08-14.md",
@@ -15932,9 +15932,29 @@
       "source": "2026/2026-11-08.md",
       "anchor": "standard-v2-w1--draft-single-research-standard-and-schema",
       "start_line": 27,
-      "end_line": 45,
+      "end_line": 46,
       "title": "Standard v2 W1 — draft single research standard and schema",
-      "entry_sha256": "32abd612c86e4c4339ebd0cef1b60b4079f9b391c10236bad1be613a0b8a393b",
+      "entry_sha256": "41a7a3612760cb003d2a4bbc3060865e71edf7f08661ffceb3c0f216cc71c640",
+      "stream": "research",
+      "areas": [
+        "research-standards"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-08",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-08.md#standard-v2-w2--approve-standard-ci-enforcement-freeze-for-work-slim-agent-guides",
+      "source": "2026/2026-11-08.md",
+      "anchor": "standard-v2-w2--approve-standard-ci-enforcement-freeze-for-work-slim-agent-guides",
+      "start_line": 47,
+      "end_line": 64,
+      "title": "Standard v2 W2 — approve standard, CI enforcement, freeze For Work, slim agent guides",
+      "entry_sha256": "74dbc5f6d142de50ed2aa23693a560ea49fee16dee64bcbaa31b71b8a9580576",
       "stream": "research",
       "areas": [
         "research-standards"
