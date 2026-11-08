@@ -6,10 +6,11 @@
 
 These are source-linked historical records, not proof of completed research, successful publication, or current scientific readiness.
 
-Indexed entries: 675. Counts describe records, not accomplishments.
+Indexed entries: 676. Counts describe records, not accomplishments.
 
 | Date | Record | Area | Notes |
 | --- | --- | --- | --- |
+| 2026-11-08 | [Standard v2 W3 — Theory Card v1 for the parent action](2026/2026-11-08.md#standard-v2-w3--theory-card-v1-for-the-parent-action) (L66) | research-core | explicit_stream_and_area |
 | 2026-11-08 | [Standard v2 W2 — approve standard, CI enforcement, freeze For Work, slim agent guides](2026/2026-11-08.md#standard-v2-w2--approve-standard-ci-enforcement-freeze-for-work-slim-agent-guides) (L47) | research-standards | explicit_stream_and_area |
 | 2026-11-08 | [Standard v2 W1 — draft single research standard and schema](2026/2026-11-08.md#standard-v2-w1--draft-single-research-standard-and-schema) (L27) | research-standards | explicit_stream_and_area |
 | 2026-10-26 | [BaTiO3 B1-B3 — Completed static correspondence diagnostic / local checkpoint](2026/2026-10-26.md#batio3-b1-b3--completed-static-correspondence-diagnostic--local-checkpoint) (L23) | research-core, result-artifacts | explicit_primary_area |
