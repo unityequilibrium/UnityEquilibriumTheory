@@ -4,10 +4,10 @@
   "generator_sha256": "b32005e4bdbf59da6681ae630fa1d9d4415c361f7523be18c8b52a86dc8c93e9",
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
-    "sources": 80,
-    "entries": 777,
+    "sources": 81,
+    "entries": 778,
     "by_stream": {
-      "operations": 96,
+      "operations": 97,
       "research": 673,
       "review": 8
     },
@@ -415,6 +415,11 @@
     {
       "path": "2026/2026-11-03.md",
       "sha256": "8c9cf799645bab6e1c29a5ce5a55f15e635c6b2c6cff21456b3152085155d35a",
+      "entries": 1
+    },
+    {
+      "path": "2026/2026-11-08.md",
+      "sha256": "4c2355fc1a32b13dec6612518478a7e26b1a5bc2ca30de2a497fe2dea95e1590",
       "entries": 1
     },
     {
@@ -15900,6 +15905,26 @@
       "basis": "explicit_stream_and_area",
       "flags": [],
       "date": "2026-11-03",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-08.md#standard-v2-w0--workspace-cleanup-before-standards-consolidation",
+      "source": "2026/2026-11-08.md",
+      "anchor": "standard-v2-w0--workspace-cleanup-before-standards-consolidation",
+      "start_line": 3,
+      "end_line": 25,
+      "title": "Standard v2 W0 — workspace cleanup before standards consolidation",
+      "entry_sha256": "da098c2bb07c451a30691a18f5adab89b8923fdbcbd6a2d7f3ed633d0b9a3d1b",
+      "stream": "operations",
+      "areas": [
+        "repo-ops"
+      ],
+      "related_streams": [
+        "operations"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-08",
       "legacy_root_path": false
     },
     {

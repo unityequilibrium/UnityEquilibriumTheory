@@ -410,3 +410,6 @@ docs/topics/**/Result/_Logs/
 /tmp/
 **/output.txt
 .playwright-cli/
+
+# Local linked git worktrees nested inside the checkout (never commit as gitlinks).
+/.publish-core-handoff/
