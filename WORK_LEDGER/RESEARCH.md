@@ -6,10 +6,11 @@
 
 These are source-linked historical records, not proof of completed research, successful publication, or current scientific readiness.
 
-Indexed entries: 679. Counts describe records, not accomplishments.
+Indexed entries: 680. Counts describe records, not accomplishments.
 
 | Date | Record | Area | Notes |
 | --- | --- | --- | --- |
+| 2026-11-09 | [Standard v2 W6 (draft) — Test Card T001 for the binary-pulsar constraint](2026/2026-11-09.md#standard-v2-w6-draft--test-card-t001-for-the-binary-pulsar-constraint) (L3) | research-core | explicit_stream_and_area |
 | 2026-11-08 | [Standard v2 W5 — DEF mapping of the parent action for the binary-pulsar pilot](2026/2026-11-08.md#standard-v2-w5--def-mapping-of-the-parent-action-for-the-binary-pulsar-pilot) (L113) | research-core | explicit_stream_and_area |
 | 2026-11-08 | [Standard v2 W4 — derivation checks promote the parent equations to L1](2026/2026-11-08.md#standard-v2-w4--derivation-checks-promote-the-parent-equations-to-l1) (L96) | research-core | explicit_stream_and_area |
 | 2026-11-08 | [Standard v2 — pilot decision: binary-pulsar scalarization](2026/2026-11-08.md#standard-v2--pilot-decision-binary-pulsar-scalarization) (L83) | research-core | explicit_stream_and_area |

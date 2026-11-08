@@ -4,11 +4,11 @@
   "generator_sha256": "b32005e4bdbf59da6681ae630fa1d9d4415c361f7523be18c8b52a86dc8c93e9",
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
-    "sources": 81,
-    "entries": 784,
+    "sources": 82,
+    "entries": 785,
     "by_stream": {
       "operations": 97,
-      "research": 679,
+      "research": 680,
       "review": 8
     },
     "exact_duplicates": 0,
@@ -421,6 +421,11 @@
       "path": "2026/2026-11-08.md",
       "sha256": "d97f220b54a3ee98fa13fcc941c21712c55d546f2446cde443e6a9e8f2f1cb39",
       "entries": 7
+    },
+    {
+      "path": "2026/2026-11-09.md",
+      "sha256": "df00eeac90fda4c3445f2f7d98ae417fa48d6e64ed0ee5446e523d961d023c64",
+      "entries": 1
     },
     {
       "path": "2026-08-14.md",
@@ -16045,6 +16050,26 @@
       "basis": "explicit_stream_and_area",
       "flags": [],
       "date": "2026-11-08",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-09.md#standard-v2-w6-draft--test-card-t001-for-the-binary-pulsar-constraint",
+      "source": "2026/2026-11-09.md",
+      "anchor": "standard-v2-w6-draft--test-card-t001-for-the-binary-pulsar-constraint",
+      "start_line": 3,
+      "end_line": 17,
+      "title": "Standard v2 W6 (draft) — Test Card T001 for the binary-pulsar constraint",
+      "entry_sha256": "81b111f97335563a667e86d7f67c7053bf42b9244ac91edbcef9761941f471fb",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-09",
       "legacy_root_path": false
     },
     {
