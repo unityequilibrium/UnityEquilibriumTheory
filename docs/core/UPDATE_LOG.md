@@ -15,3 +15,10 @@ commit: (this commit)
 ระดับ: C_PARENT_EOM_DERIVED, C_EPSILON_REDUNDANT → L1_CONSISTENT
 ถัดไป: W5 map ξ_c, m_ψ ไปยัง DEF β₀ และ scalarization ของดาวนิวตรอน
 commit: 689b56cef (tests) + this commit (records)
+
+## 2026-11-08 — What does the parent action predict for neutron stars?
+ทำ: map Jordan→Einstein frame ไปยังพารามิเตอร์ DEF (`uet_scalar_tensor_mapping.py`) + physics test 8 ตัว (Brans–Dicke limit, frame equivalence พร้อม negative control, เทียบ sympy) + รวบรวมแหล่งอ้างอิง binary pulsar
+ผล: β₀ = −2ξ_c, α₀ = 0, γ−1 = 0 ที่ ψ₀ = 0; m*² = m_ψ² − 2ξ_cΛ − 4κξ_cερ*; scalarization ต้องการ ξ_c ≳ 2 (m_ψ เบา); ZFKSW22 ตัด scalarization ทิ้งที่ β₀ ∈ [−4.8, −4.0] (|α_A| ≲ 6×10⁻³)
+ระดับ: C_UET_DEF_MAPPING → L1_CONSISTENT (ภายใต้สมมติฐานว่า matter ต่อแบบ minimal กับ Jordan metric)
+ถัดไป: W6 ร่าง Test Card T001 (CONSTRAINT) + data manifest แล้วรอผู้เขียนอนุมัติ ต้องตัดสินใจเรื่อง mass domain และว่า ξ_c ถูกกำหนดล่วงหน้าหรือไม่
+commit: 48ba3f9d4 (module+tests) + this commit

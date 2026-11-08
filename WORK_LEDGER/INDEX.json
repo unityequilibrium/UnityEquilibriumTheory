@@ -5,10 +5,10 @@
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
     "sources": 81,
-    "entries": 783,
+    "entries": 784,
     "by_stream": {
       "operations": 97,
-      "research": 678,
+      "research": 679,
       "review": 8
     },
     "exact_duplicates": 0,
@@ -419,8 +419,8 @@
     },
     {
       "path": "2026/2026-11-08.md",
-      "sha256": "60be34be815d3d96328d4e16f9affad2e827de44a07ee41dc05afa1be1240b85",
-      "entries": 6
+      "sha256": "d97f220b54a3ee98fa13fcc941c21712c55d546f2446cde443e6a9e8f2f1cb39",
+      "entries": 7
     },
     {
       "path": "2026-08-14.md",
@@ -16012,9 +16012,29 @@
       "source": "2026/2026-11-08.md",
       "anchor": "standard-v2-w4--derivation-checks-promote-the-parent-equations-to-l1",
       "start_line": 96,
-      "end_line": 111,
+      "end_line": 112,
       "title": "Standard v2 W4 — derivation checks promote the parent equations to L1",
-      "entry_sha256": "451f4538f92a4dac258c2a84da2df0d533edbc9335b779c2f2ad85b0dfdcf1bf",
+      "entry_sha256": "296e003426794f3d8de958c2327295dc7afc7d2d61c834eb87e607a90c2a8895",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-08",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-08.md#standard-v2-w5--def-mapping-of-the-parent-action-for-the-binary-pulsar-pilot",
+      "source": "2026/2026-11-08.md",
+      "anchor": "standard-v2-w5--def-mapping-of-the-parent-action-for-the-binary-pulsar-pilot",
+      "start_line": 113,
+      "end_line": 127,
+      "title": "Standard v2 W5 — DEF mapping of the parent action for the binary-pulsar pilot",
+      "entry_sha256": "2c79ad68e4b097ca7c0fa9fb844a4462c2a4e4021a90311059f4407a5de98b79",
       "stream": "research",
       "areas": [
         "research-core"

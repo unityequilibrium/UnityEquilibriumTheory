@@ -1,0 +1,19 @@
+{
+  "schema": "uet-result-v2",
+  "result_id": "R_W5_DEF_MAPPING",
+  "claim_id": "C_UET_DEF_MAPPING",
+  "level": "L1_CONSISTENT",
+  "outcome": "PASS",
+  "numbers": [
+    {"name": "beta0_over_xi_c_at_psi0_0", "value": -2, "uncertainty": null, "unit": "1"},
+    {"name": "alpha0_at_psi0_0", "value": 0, "uncertainty": null, "unit": "1"},
+    {"name": "gamma_ppn_minus_1_at_psi0_0", "value": 0, "uncertainty": null, "unit": "1"},
+    {"name": "brans_dicke_limit_cases_within_1e-10", "value": "4/4", "uncertainty": null, "unit": "count"},
+    {"name": "alpha_beta_random_points_within_1e-10", "value": "20/20", "uncertainty": null, "unit": "count"},
+    {"name": "frame_equivalence_negative_control_detected", "value": "1/1", "uncertainty": null, "unit": "count"}
+  ],
+  "producer": {"script": "docs/core/05_tests/physics/test_def_mapping.py", "commit": "48ba3f9d4"},
+  "artifacts": ["docs/core/02_equations/covariant/uet_scalar_tensor_mapping.py"],
+  "date": "2026-11-08",
+  "note": "Valid under the declared assumption that ordinary matter couples minimally to the Jordan metric. Massless-scalar PPN formulas; the scalar mass m_psi limits where DEF binary-pulsar bounds apply."
+}
