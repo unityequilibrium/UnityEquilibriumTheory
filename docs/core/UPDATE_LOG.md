@@ -22,3 +22,10 @@ commit: 689b56cef (tests) + this commit (records)
 ระดับ: C_UET_DEF_MAPPING → L1_CONSISTENT (ภายใต้สมมติฐานว่า matter ต่อแบบ minimal กับ Jordan metric)
 ถัดไป: W6 ร่าง Test Card T001 (CONSTRAINT) + data manifest แล้วรอผู้เขียนอนุมัติ ต้องตัดสินใจเรื่อง mass domain และว่า ξ_c ถูกกำหนดล่วงหน้าหรือไม่
 commit: 48ba3f9d4 (module+tests) + this commit
+
+## 2026-11-09 — What exactly will binary pulsars test? (T001 draft)
+ทำ: ลงทะเบียนข้อมูล ZFKSW22 (ขอบเขต DEF + P_b และมวลของ 7 ระบบ, sha256 ใน data manifest), เขียนสคริปต์วิธีคำนวณ, ร่าง Test Card T001 (CONSTRAINT) และ claim ระดับ L0; ยังไม่ได้รันการเทียบ
+ผล: ยังไม่มีผล (รออนุมัติ) — เกณฑ์ล็อกไว้ว่าช่วง ξ_c ที่ถูกตัด = [−β₀max/2, −β₀min/2] และ domain ของ scalar เบา m_ψc² ≤ ħc/(10 a_max); ผู้เขียนกำหนดให้ ξ_c เป็น free ดังนั้น T001 ทำให้ทฤษฎีตกไม่ได้ ทำได้แค่จำกัดพารามิเตอร์
+ระดับ: C_T001_BINARY_PULSAR_XI_C → L0_SPECULATIVE (การ์ด DRAFT)
+ถัดไป: ผู้เขียนตรวจตัวเลขเทียบกับฉบับตีพิมพ์ แล้วอนุมัติ T001 จากนั้นรันสคริปต์ใน commit แยก
+commit: this commit

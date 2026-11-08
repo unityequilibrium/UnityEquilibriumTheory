@@ -26,6 +26,13 @@
         "R_W5_DEF_MAPPING"
       ],
       "note": "Mathematical mapping only; confrontation with binary-pulsar data is W6 (Test Card T001)."
+    },
+    {
+      "claim_id": "C_T001_BINARY_PULSAR_XI_C",
+      "statement": "Binary-pulsar timing (ZFKSW22) excludes the UET non-minimal coupling interval that maps to the analysed DEF scalarization range, for a scalar light compared with the binary orbits; the parent action stays compatible for other xi_c.",
+      "level": "L0_SPECULATIVE",
+      "evidence": [],
+      "note": "Pending Test Card T001 approval and run."
     }
   ]
 }
