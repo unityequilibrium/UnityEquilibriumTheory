@@ -1,0 +1,17 @@
+{
+  "schema": "uet-result-v2",
+  "result_id": "R_W4_EPSILON_REDUNDANCY",
+  "claim_id": "C_EPSILON_REDUNDANT",
+  "level": "L1_CONSISTENT",
+  "outcome": "PASS",
+  "numbers": [
+    {"name": "canonical_map_symbolic_residual", "value": 0, "uncertainty": null, "unit": "1"},
+    {"name": "d_xi_c_d_epsilon", "value": 0, "uncertainty": null, "unit": "1"},
+    {"name": "d_m_psi2_d_epsilon", "value": 0, "uncertainty": null, "unit": "mass^2"},
+    {"name": "lambda_psi_limit_epsilon_to_0", "value": "+infinity", "uncertainty": null, "unit": "1"},
+    {"name": "g_c_limit_epsilon_to_0", "value": 0, "uncertainty": null, "unit": "mass"}
+  ],
+  "producer": {"script": "docs/core/05_tests/physics/test_parent_derivation.py::test_canonical_map_and_epsilon_redundancy", "commit": "689b56cef"},
+  "artifacts": [],
+  "date": "2026-11-08"
+}

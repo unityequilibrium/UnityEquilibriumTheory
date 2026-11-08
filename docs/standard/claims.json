@@ -1,4 +1,18 @@
 {
   "schema": "uet-claims-v2",
-  "claims": []
+  "claims": [
+    {
+      "claim_id": "C_PARENT_EOM_DERIVED",
+      "statement": "The implemented scalar, O(2) matter and (diagonal) metric field equations of the UET parent code follow from the Theory Card action UET-PARENT-ACTION-001.",
+      "level": "L1_CONSISTENT",
+      "evidence": ["R_W4_PARENT_EOM"],
+      "note": "Mathematical consistency only; says nothing about whether nature follows this action."
+    },
+    {
+      "claim_id": "C_EPSILON_REDUNDANT",
+      "statement": "epsilon is not an independent coupling of the parent action: in canonical variables xi_c and m_psi are epsilon-independent, lambda_psi ~ 1/epsilon and g_c ~ sqrt(epsilon), so epsilon = 0 is a degenerate point rather than a continuous GR limit.",
+      "level": "L1_CONSISTENT",
+      "evidence": ["R_W4_EPSILON_REDUNDANCY"]
+    }
+  ]
 }

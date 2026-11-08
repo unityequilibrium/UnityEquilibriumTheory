@@ -5,10 +5,10 @@
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
     "sources": 81,
-    "entries": 782,
+    "entries": 783,
     "by_stream": {
       "operations": 97,
-      "research": 677,
+      "research": 678,
       "review": 8
     },
     "exact_duplicates": 0,
@@ -419,8 +419,8 @@
     },
     {
       "path": "2026/2026-11-08.md",
-      "sha256": "ff37a0ac32728059e94af362feec227de6851e8e355409900bbe4cfd71e1cbd3",
-      "entries": 5
+      "sha256": "60be34be815d3d96328d4e16f9affad2e827de44a07ee41dc05afa1be1240b85",
+      "entries": 6
     },
     {
       "path": "2026-08-14.md",
@@ -15992,9 +15992,29 @@
       "source": "2026/2026-11-08.md",
       "anchor": "standard-v2--pilot-decision-binary-pulsar-scalarization",
       "start_line": 83,
-      "end_line": 94,
+      "end_line": 95,
       "title": "Standard v2 — pilot decision: binary-pulsar scalarization",
-      "entry_sha256": "b264e2cbcc1e3a3e8ec140f9c4fd8503fcacbf8c14a1dfee68bcdbb98a44a420",
+      "entry_sha256": "4e3e7223139a95a75ca2ba40d04ec55a46228019ba7cde890800d620cfefd959",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-08",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-08.md#standard-v2-w4--derivation-checks-promote-the-parent-equations-to-l1",
+      "source": "2026/2026-11-08.md",
+      "anchor": "standard-v2-w4--derivation-checks-promote-the-parent-equations-to-l1",
+      "start_line": 96,
+      "end_line": 111,
+      "title": "Standard v2 W4 — derivation checks promote the parent equations to L1",
+      "entry_sha256": "451f4538f92a4dac258c2a84da2df0d533edbc9335b779c2f2ad85b0dfdcf1bf",
       "stream": "research",
       "areas": [
         "research-core"
