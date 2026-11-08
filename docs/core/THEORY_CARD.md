@@ -1,6 +1,6 @@
 # UET Theory Card — `UET_PARENT` v1
 
-> **สถานะ: DRAFT รออนุมัติจากผู้เขียน** (W3, 2026-11-08; ร่างโดย Claude)
+> **สถานะ: APPROVED — อนุมัติโดยผู้เขียน (santxkoz) 2026-11-08** (ร่างโดย Claude ใน W3)
 > Machine-readable: [`theory_card.json`](theory_card.json) · Standard: [`docs/STANDARD.md`](../STANDARD.md) §3
 > ระดับของสมการทุกบรรทัดตอนนี้คือ `L0_SPECULATIVE` จนกว่า derivation check ของ W4 จะผ่าน
 
@@ -111,5 +111,5 @@ C ไม่ใช่มวลโดยทั่วไป และ Φ ไม่�
 
 ## 8. อนุมัติ
 
-ยังไม่อนุมัติ ถ้าผู้เขียนอนุมัติ ให้ใส่ `approval` ใน `theory_card.json` และเปลี่ยน `status` เป็น `APPROVED`
+อนุมัติโดยผู้เขียน (santxkoz) เมื่อ 2026-11-08 บันทึกไว้ใน `theory_card.json` ฟิลด์ `approval`
 การอนุมัติหมายถึงยอมรับ**ว่าการ์ดบรรยายทฤษฎีปัจจุบันถูกต้อง** ไม่ได้หมายความว่าทฤษฎีถูก
