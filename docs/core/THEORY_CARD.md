@@ -2,7 +2,7 @@
 
 > **สถานะ: APPROVED — อนุมัติโดยผู้เขียน (santxkoz) 2026-11-08** (ร่างโดย Claude ใน W3)
 > Machine-readable: [`theory_card.json`](theory_card.json) · Standard: [`docs/STANDARD.md`](../STANDARD.md) §3
-> ระดับของสมการทุกบรรทัดตอนนี้คือ `L0_SPECULATIVE` จนกว่า derivation check ของ W4 จะผ่าน
+> ระดับของสมการแกนทุกบรรทัด: `L1_CONSISTENT` (W4 derivation check ผ่าน 2026-11-08; ส่วนประกอบ off-diagonal ของ metric equation ยังไม่ได้ตรวจ — ดู `docs/standard/results/R_W4_PARENT_EOM.json`)
 
 ## 1. สมการแกน (conservative parent action)
 
@@ -26,7 +26,7 @@ W    = ½ m² |χ|² + ¼ λ_χ |χ|⁴
 | UET-PARENT-SCALAR-EOM | ε[k□φ − U′ + f′(R−2Λ)/(2κ)] + ½εh\|χ\|² = 0 | `uet_covariant_matter.py::coupled_response_scalar_equation_residual` |
 | UET-PARENT-MATTER-EOM | Z□χ_A − (m² + λ_χ\|χ\|² − εhδ)χ_A = 0 | `uet_covariant_matter.py::matter_eom_residual` |
 
-รีวิวด้วยมือ (W2–W3) ไม่พบความผิดพลาดของเครื่องหมายหรือ factor แต่ยังไม่นับเป็นหลักฐาน หลักฐานระดับ L1 ต้องรอ sympy derivation check ใน W4
+W4: sympy derivation check ผ่านแล้ว (`05_tests/physics/test_parent_derivation.py`, 28 test, tolerance 1e-10) สมการทั้งสี่บรรทัดจึงเป็น L1
 
 ## 2. ตาราง field และ parameter
 
