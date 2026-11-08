@@ -8,11 +8,11 @@
     "entries": 779,
     "by_stream": {
       "operations": 97,
-      "research": 673,
-      "review": 9
+      "research": 674,
+      "review": 8
     },
     "exact_duplicates": 0,
-    "review_entries": 13
+    "review_entries": 12
   },
   "duplicate_dates": {
     "2026-08-14": [
@@ -419,7 +419,7 @@
     },
     {
       "path": "2026/2026-11-08.md",
-      "sha256": "90033a5fbf7ca0e7e85f7f752cbe9a6a93d2b8610c9c09ae5d7892bfd88baebf",
+      "sha256": "040bce78a930f4f106ad9e3d4c203fd0bd1fe41e443e543d106709f433c92b0b",
       "entries": 2
     },
     {
@@ -15934,18 +15934,16 @@
       "start_line": 27,
       "end_line": 45,
       "title": "Standard v2 W1 — draft single research standard and schema",
-      "entry_sha256": "31292f874437c53a01f1a6931bff1abf125f13b40de6e8fa0ea62fe7e728d8d9",
-      "stream": "review",
+      "entry_sha256": "32abd612c86e4c4339ebd0cef1b60b4079f9b391c10236bad1be613a0b8a393b",
+      "stream": "research",
       "areas": [
         "research-standards"
       ],
       "related_streams": [
         "research"
       ],
-      "basis": "stream_area_conflict",
-      "flags": [
-        "stream_area_conflict"
-      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
       "date": "2026-11-08",
       "legacy_root_path": false
     },
