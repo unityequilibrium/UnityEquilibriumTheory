@@ -10,10 +10,11 @@ Review all flagged entries, including provisional path-based classifications. Hi
 
 Multiple source files for 2026-08-14: [2026/2026-08-14.md](2026/2026-08-14.md), [2026-08-14.md](2026-08-14.md). Preserved separately; do not assume equal or delete either.
 
-Indexed entries: 12. Counts describe records, not accomplishments.
+Indexed entries: 13. Counts describe records, not accomplishments.
 
 | Date | Record | Area | Notes |
 | --- | --- | --- | --- |
+| 2026-11-08 | [Standard v2 W1 — draft single research standard and schema](2026/2026-11-08.md#standard-v2-w1--draft-single-research-standard-and-schema) (L27) | research-standards | stream_area_conflict |
 | 2026-10-04 | [2026-10-04 Core correspondence review](2026/2026-10-04.md) (L1) | research-core | unsectioned_source |
 | 2026-09-28 | [Work Ledger - 2026-09-28](2026/2026-09-28.md) (L1) | unspecified | missing_or_unknown_primary_area; unsectioned_source |
 | 2026-09-15 | [Core physical migration v3 — Wave 6za support/tooling migration](2026/2026-09-15.md#core-physical-migration-v3--wave-6za-supporttooling-migration) (L463) | repo-ops, research-standards | multiple_area_fields |

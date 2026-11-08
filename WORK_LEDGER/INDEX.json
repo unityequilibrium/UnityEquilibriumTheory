@@ -5,14 +5,14 @@
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
     "sources": 81,
-    "entries": 778,
+    "entries": 779,
     "by_stream": {
       "operations": 97,
       "research": 673,
-      "review": 8
+      "review": 9
     },
     "exact_duplicates": 0,
-    "review_entries": 12
+    "review_entries": 13
   },
   "duplicate_dates": {
     "2026-08-14": [
@@ -419,8 +419,8 @@
     },
     {
       "path": "2026/2026-11-08.md",
-      "sha256": "4c2355fc1a32b13dec6612518478a7e26b1a5bc2ca30de2a497fe2dea95e1590",
-      "entries": 1
+      "sha256": "90033a5fbf7ca0e7e85f7f752cbe9a6a93d2b8610c9c09ae5d7892bfd88baebf",
+      "entries": 2
     },
     {
       "path": "2026-08-14.md",
@@ -15912,9 +15912,9 @@
       "source": "2026/2026-11-08.md",
       "anchor": "standard-v2-w0--workspace-cleanup-before-standards-consolidation",
       "start_line": 3,
-      "end_line": 25,
+      "end_line": 26,
       "title": "Standard v2 W0 — workspace cleanup before standards consolidation",
-      "entry_sha256": "da098c2bb07c451a30691a18f5adab89b8923fdbcbd6a2d7f3ed633d0b9a3d1b",
+      "entry_sha256": "b28df72f9fde2b2e248588b77ff0213ea8ae3b9f30ed1d0b926076d3715bf387",
       "stream": "operations",
       "areas": [
         "repo-ops"
@@ -15924,6 +15924,28 @@
       ],
       "basis": "explicit_stream_and_area",
       "flags": [],
+      "date": "2026-11-08",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-08.md#standard-v2-w1--draft-single-research-standard-and-schema",
+      "source": "2026/2026-11-08.md",
+      "anchor": "standard-v2-w1--draft-single-research-standard-and-schema",
+      "start_line": 27,
+      "end_line": 45,
+      "title": "Standard v2 W1 — draft single research standard and schema",
+      "entry_sha256": "31292f874437c53a01f1a6931bff1abf125f13b40de6e8fa0ea62fe7e728d8d9",
+      "stream": "review",
+      "areas": [
+        "research-standards"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "stream_area_conflict",
+      "flags": [
+        "stream_area_conflict"
+      ],
       "date": "2026-11-08",
       "legacy_root_path": false
     },
