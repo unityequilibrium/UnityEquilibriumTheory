@@ -1,5 +1,8 @@
 # UET Standards Workspace
 
+> **SUPERSEDED 2026-11-08:** This folder is frozen history. The controlling standard is
+> [docs/STANDARD.md](../../STANDARD.md). See [SUPERSEDED_BY_STANDARD_V2.md](SUPERSEDED_BY_STANDARD_V2.md).
+
 <!-- UET-RESEARCH-RETROSPECTIVE: 2026-10-19; navigation notice, not a physics gate -->
 > **ทบทวนก่อนวิจัยต่อ — 19 ต.ค. 2026:** ก่อนปรับวิธีวิจัยหรือเริ่ม wave ใหม่ ให้ทบทวนข้อผิดพลาดเดิมและเลือก action ที่เปลี่ยนข้อสรุปได้จริง อ่าน [รายงานข้อผิดพลาดและบทเรียน UET](../../meta/UET_RESEARCH_RETROSPECTIVE.md) โดยเฉพาะข้อ R01–R18 และลำดับแก้ใน §8 ก่อนขยายงาน สถานะจริงยังอ้างอิง artifact/gate ของเส้นทางนั้น
 
