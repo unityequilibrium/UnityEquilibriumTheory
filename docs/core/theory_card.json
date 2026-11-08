@@ -85,5 +85,5 @@
     {"lane": "response", "symbol": "Pi", "standard_quantity": "time derivative of phi"},
     {"lane": "He-4 (Topic 13)", "symbol": "O(2) sector", "standard_quantity": "superfluid order parameter, not admitted (charge-to-atom identity open)"}
   ],
-  "note": "Drafted by Claude in W3 from the existing code; pending author approval. All core equations stay L0 until the W4 sympy derivation check passes."
+  "note": "Drafted by Claude in W3 from the existing code; pending author approval. All core equations stay L0 until the W4 sympy derivation check passes. Author decision 2026-11-08: the W5-W6 pilot is binary-pulsar scalarization bounds; Cassini is a sanity check only."
 }

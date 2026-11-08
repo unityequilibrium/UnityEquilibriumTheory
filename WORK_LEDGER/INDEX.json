@@ -5,10 +5,10 @@
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
     "sources": 81,
-    "entries": 781,
+    "entries": 782,
     "by_stream": {
       "operations": 97,
-      "research": 676,
+      "research": 677,
       "review": 8
     },
     "exact_duplicates": 0,
@@ -419,8 +419,8 @@
     },
     {
       "path": "2026/2026-11-08.md",
-      "sha256": "ba87f70bc4cc71c67ee87dfde304eaf1926bc68f2ec074d8ab9711f78541114c",
-      "entries": 4
+      "sha256": "ff37a0ac32728059e94af362feec227de6851e8e355409900bbe4cfd71e1cbd3",
+      "entries": 5
     },
     {
       "path": "2026-08-14.md",
@@ -15972,9 +15972,29 @@
       "source": "2026/2026-11-08.md",
       "anchor": "standard-v2-w3--theory-card-v1-for-the-parent-action",
       "start_line": 66,
-      "end_line": 81,
+      "end_line": 82,
       "title": "Standard v2 W3 — Theory Card v1 for the parent action",
-      "entry_sha256": "c6c52b303be5b95ea5d4c8161a1790dee6dd3fe3dbe58347f236abc87038c204",
+      "entry_sha256": "7d42b5baf751dec076e66dc4974b29de202e30fe415f1044999affb07b79c21a",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-08",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-08.md#standard-v2--pilot-decision-binary-pulsar-scalarization",
+      "source": "2026/2026-11-08.md",
+      "anchor": "standard-v2--pilot-decision-binary-pulsar-scalarization",
+      "start_line": 83,
+      "end_line": 94,
+      "title": "Standard v2 — pilot decision: binary-pulsar scalarization",
+      "entry_sha256": "b264e2cbcc1e3a3e8ec140f9c4fd8503fcacbf8c14a1dfee68bcdbb98a44a420",
       "stream": "research",
       "areas": [
         "research-core"
