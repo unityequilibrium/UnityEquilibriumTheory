@@ -207,8 +207,8 @@ Gate และ audit script เดิม (inventory, compatibility, aggregate, r
 | W2 | อนุมัติ, ติดตั้ง CI 3 ตัว, `requirements-research.txt`, marker `physics`, แช่แข็ง For Work ไว้ที่เดิม, ลด `AGENTS.md` และ `docs/core/AGENTS.md` |
 | W3 | Theory Card v1 ของ parent action |
 | W4 | Derivation check ด้วย sympy ของ parent action (ยืนยันโค้ดเดิม) |
-| W5 | Weak-field module (PPN γ, Yukawa α, λ) + physics tests |
-| W6 | Test Card `T001` (Cassini + Eöt-Wash) → อนุมัติ → รัน → Result `L2` หรือ `FAILED` |
+| W5 | Strong-field module: map ξ_c, m_ψ ไปยัง DEF β₀ และ scalar charge ของดาวนิวตรอน + physics tests (เทียบกับผล DEF ที่ตีพิมพ์แล้ว) ส่วน PPN γ ใช้เป็น sanity check |
+| W6 | Test Card `T001` (binary-pulsar scalarization/dipole-radiation bounds; ผู้เขียนเลือก 2026-11-08) → อนุมัติ → รัน → Result `L2` หรือ `FAILED` |
 | W7 | ซิงค์ `docs/topics/README.md` และ `claims.json` |
 
 กฎที่ขัดกันระหว่างเอกสารนี้กับเอกสารเดิม: **เอกสารนี้ชนะ** ยกเว้นกฎขอบเขต Harness/Superapp, กฎ raw/private และกฎ publication ใน `AGENTS.md` ซึ่งยังมีผลเต็มที่

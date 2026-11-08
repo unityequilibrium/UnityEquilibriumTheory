@@ -95,7 +95,7 @@ m_χ² = m²/Z    λ_χ̃ = λ_χ/Z²  Λ_eff = Λ + κ ε ρ*
 | Fifth force ระยะสั้น (Eöt-Wash) | ห้องปฏิบัติการ | ไวเฉพาะเมื่อ background ψ ≠ 0 หรือ matter ปกติต่อกับ ψ ซึ่ง action นี้ไม่มี จึงคาดว่าไม่ได้ข้อจำกัด |
 | ความหนาแน่นพลังงานมืด / w(z) | cosmology | ψ ที่เลื่อนจาก 0 ทำให้ G_eff ขึ้นกับเวลา ต้องใช้ background FRW (Topic 0.3) |
 
-ข้อเสนอสำหรับ W5–W6: เปลี่ยน pilot หลักจาก Cassini/Eöt-Wash ไปเป็น **binary-pulsar scalarization bounds** (คงไว้ Cassini เป็น sanity check) เพราะอย่างหลังเป็นการทดสอบที่ทฤษฎีมีโอกาสตกจริง ต้องให้ผู้เขียนตัดสินใจ
+**ผู้เขียนตัดสินใจ (2026-11-08):** pilot หลักของ W5–W6 คือ **binary-pulsar scalarization bounds** ส่วน Cassini ใช้เป็น sanity check เท่านั้น เหตุผลคือในการทดสอบนี้ทฤษฎีมีโอกาสตกจริง
 
 ## 7. Lane mapping (ตามสัญญาเดิม ไม่เพิ่มใหม่)
 
