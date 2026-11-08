@@ -2,7 +2,8 @@
   "schema": "uet-theory-card-v2",
   "card_id": "UET_PARENT",
   "version": 1,
-  "status": "DRAFT",
+  "status": "APPROVED",
+  "approval": {"approved_by": "santxkoz", "date": "2026-11-08", "role": "AUTHOR"},
   "core_equations": [
     {
       "formula_id": "UET-PARENT-ACTION-001",
