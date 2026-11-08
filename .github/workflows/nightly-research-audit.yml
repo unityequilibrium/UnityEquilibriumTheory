@@ -34,6 +34,13 @@ jobs:
           set -euo pipefail
           python docs/scripts/audit/audit_calculation_completeness.py --check
           python -m unittest discover -s docs/scripts/audit/tests -p test_calculation_completeness.py -v
+      - name: Research Standard v2 checks and physics-test count
+        run: |
+          set -euo pipefail
+          python -m pip install -r requirements-research.txt
+          python docs/scripts/standard/check_schema.py
+          python docs/scripts/standard/check_preregistration.py
+          python docs/scripts/standard/check_physics_tests.py
       - name: Run scientific research tests
         run: |
           set -euo pipefail
