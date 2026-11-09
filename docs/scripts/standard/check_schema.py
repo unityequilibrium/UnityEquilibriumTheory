@@ -8,6 +8,8 @@ Checks (docs/STANDARD.md sections 1, 3, 4, 5, 7):
   a FAILED result); L0 claims need no evidence
 - Test Card data sources exist in the data manifest
 - PUBLIC data manifest files exist and match their sha256 (raw-data hash lock)
+- every referenced data file, Test Card script and Result producer exists and
+  is tracked by git (catches files hidden by .gitignore)
 
 Usage: python docs/scripts/standard/check_schema.py [--root PATH]
 Exit status 0 when clean, 1 when any error is found.
@@ -17,6 +19,7 @@ from __future__ import annotations
 
 import argparse
 import hashlib
+import subprocess
 import sys
 from pathlib import Path
 from typing import Any
@@ -163,8 +166,44 @@ class SchemaChecker:
             digest = hashlib.sha256(path.read_bytes()).hexdigest()
             if digest != entry["sha256"]:
                 self.errors.append(f"data {entry['data_id']}: sha256 mismatch for {entry['path']}")
+            self.require_tracked(entry["path"], f"data {entry['data_id']}")
+
+        for test_id, card in tests.items():
+            self.require_tracked(script_path(card["prediction_method"]["script"]), f"test {test_id} script")
+        for result_id, result in results.items():
+            self.require_tracked(script_path(result["producer"]["script"]), f"result {result_id} producer")
 
         return self.errors
+
+    def require_tracked(self, rel: str, label: str) -> None:
+        """A referenced file must exist and be in git (staged or committed).
+
+        Guards against files hidden by .gitignore (e.g. the global *.csv rule),
+        which pass every local check but are absent from the repository.
+        Skipped when the root is not a git work tree (unit-test fixtures).
+        """
+        if not (self.root / rel).is_file():
+            self.errors.append(f"{label}: file {rel} missing")
+            return
+        if not self.in_git:
+            return
+        proc = subprocess.run(["git", "-C", str(self.root), "ls-files", "--error-unmatch", "--", rel],
+                              capture_output=True, text=True)
+        if proc.returncode != 0:
+            self.errors.append(f"{label}: {rel} is not tracked by git (ignored or never added; use git add -f if it is public)")
+
+    @property
+    def in_git(self) -> bool:
+        if not hasattr(self, "_in_git"):
+            proc = subprocess.run(["git", "-C", str(self.root), "rev-parse", "--show-toplevel"],
+                                  capture_output=True, text=True)
+            self._in_git = proc.returncode == 0 and Path(proc.stdout.strip()).resolve() == self.root.resolve()
+        return self._in_git
+
+
+def script_path(text: str) -> str:
+    """Strip run notes and pytest node ids: 'a/b.py::test_x (run as ...)' -> 'a/b.py'."""
+    return text.split(" (", 1)[0].split("::", 1)[0].strip()
 
 
 def main(argv: list[str] | None = None) -> int:

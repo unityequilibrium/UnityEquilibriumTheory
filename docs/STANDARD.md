@@ -171,6 +171,8 @@ AI ต้องแยกให้ชัดว่าเป็น**เจตนา
 - หนึ่ง wave = หนึ่ง commit ที่ stage เฉพาะไฟล์ของ wave นั้น
 - Push หรือเปิด PR เมื่อผู้เขียนสั่ง ส่วน `main` เข้าได้ผ่าน PR เท่านั้น
 - Interpreter มาตรฐานในเครื่องคือ `.venv/Scripts/python.exe` และ dependency ด้านวิจัยอยู่ใน `.github/requirements-research.txt`
+- **หลาย agent พร้อมกัน:** แต่ละ agent (Codex, Claude ฯลฯ) ต้องทำงานใน git worktree ของตัวเอง ห้ามสลับ branch ของ checkout ที่คนอื่นใช้อยู่ และห้าม stage, revert หรือลบการแก้ไขที่ตัวเองไม่ได้ทำ (รายละเอียดใน `AGENTS.md` §6.1–6.2)
+- ก่อน push ทุกครั้งให้รัน `git diff --check origin/main HEAD` (จับ CRLF) และข้อมูลภายนอกที่ถูก `.gitignore` ต้อง `git add -f` ซึ่ง `check_schema.py` จะตรวจให้ว่าไฟล์ที่อ้างถึงอยู่ใน git จริง
 
 ## 12. การบังคับด้วย CI (จะติดตั้งใน W2)
 
@@ -237,5 +239,6 @@ Gate และ audit script เดิม (inventory, compatibility, aggregate, r
 2. ถ้าไฟล์ข้างบนกำหนดให้ hash-lock ไฟล์ที่ generate ซ้ำได้ (log, เอกสาร, artifact) ให้ทำตาม §7 แทน คือ hash เฉพาะข้อมูลดิบภายนอก
 3. การยกระดับ claim, Test Card และเกณฑ์ผ่าน/ตก ใช้เอกสารนี้เท่านั้น
 4. ข้อมูลภายนอกต้องเก็บและระบุที่มาตาม `12` **และ**ลงทะเบียนใน `docs/standard/data_manifest.json` ตาม §7 ส่วนการอ้างอิงในเอกสารให้ทำตาม `13` และระบุ DOI/URL ใน data manifest หรือ Test Card ด้วย
+5. calculation contract (`30`) ของโค้ดเชิงรูปนัย (สมการ, การ map, ตัวช่วย derivation ที่มี physics test) ให้ใช้ profile FORMAL ซึ่งสร้างได้ด้วย `docs/scripts/standard/new_formal_contract.py` ส่วนการเทียบกับข้อมูลให้ใช้ contract ของ T001 (`docs/core/00_governance/calculation_contracts/t001_binary_pulsar_def_constraint.json`) เป็นแม่แบบ
 
 **ไฟล์ที่ถูกแทนแล้ว** (เป็นประวัติเท่านั้น): `00_README.md` (index เดิม), `01`, `02`, `03`, `04`, `18`, `25`, `26`–`29`, `32`, `EQUATION_RESEARCH_AND_PHYSICAL_CORRESPONDENCE_STANDARD.md` และ `UPDATE_LOG.md` ของ For Work หน้าที่ของไฟล์เหล่านี้ถูกแทนด้วย §0–§14

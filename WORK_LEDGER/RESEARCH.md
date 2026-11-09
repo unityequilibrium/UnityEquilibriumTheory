@@ -6,15 +6,17 @@
 
 These are source-linked historical records, not proof of completed research, successful publication, or current scientific readiness.
 
-Indexed entries: 584. Counts describe records, not accomplishments.
+Indexed entries: 586. Counts describe records, not accomplishments.
 
 | Date | Record | Area | Notes |
 | --- | --- | --- | --- |
-| 2026-11-09 | [Change report for the author (8-9 Nov work)](2026/2026-11-09.md#change-report-for-the-author-8-9-nov-work) (L91) | research-standards | explicit_stream_and_area |
-| 2026-11-09 | [T002 run — layer-3 abundance law confronted with globular-cluster counts (L2, INCONCLUSIVE)](2026/2026-11-09.md#t002-run--layer-3-abundance-law-confronted-with-globular-cluster-counts-l2-inconclusive) (L76) | research-core | explicit_stream_and_area |
-| 2026-11-09 | [T002 (draft) — layer-3 abundance law vs globular-cluster star counts](2026/2026-11-09.md#t002-draft--layer-3-abundance-law-vs-globular-cluster-star-counts) (L59) | research-core | explicit_stream_and_area |
-| 2026-11-09 | [Layer 3 — persistence selection by free-energy exhaustion (formal, L1)](2026/2026-11-09.md#layer-3--persistence-selection-by-free-energy-exhaustion-formal-l1) (L43) | research-core | explicit_stream_and_area |
-| 2026-11-09 | [Author Proposition Card — author intent written down](2026/2026-11-09.md#author-proposition-card--author-intent-written-down) (L23) | research-core | explicit_stream_and_area |
+| 2026-11-09 | [Change report for the author (8-9 Nov work)](2026/2026-11-09.md#change-report-for-the-author-8-9-nov-work) (L123) | research-standards | explicit_stream_and_area |
+| 2026-11-09 | [T002 run — layer-3 abundance law confronted with globular-cluster counts (L2, INCONCLUSIVE)](2026/2026-11-09.md#t002-run--layer-3-abundance-law-confronted-with-globular-cluster-counts-l2-inconclusive) (L108) | research-core | explicit_stream_and_area |
+| 2026-11-09 | [T002 (draft) — layer-3 abundance law vs globular-cluster star counts](2026/2026-11-09.md#t002-draft--layer-3-abundance-law-vs-globular-cluster-star-counts) (L91) | research-core | explicit_stream_and_area |
+| 2026-11-09 | [Layer 3 — persistence selection by free-energy exhaustion (formal, L1)](2026/2026-11-09.md#layer-3--persistence-selection-by-free-energy-exhaustion-formal-l1) (L75) | research-core | explicit_stream_and_area |
+| 2026-11-09 | [Author Proposition Card — author intent written down](2026/2026-11-09.md#author-proposition-card--author-intent-written-down) (L55) | research-core | explicit_stream_and_area |
+| 2026-11-09 | [Standard v2 W7 — topic index synced to the claim register](2026/2026-11-09.md#standard-v2-w7--topic-index-synced-to-the-claim-register) (L40) | research-standards | explicit_stream_and_area |
+| 2026-11-09 | [Standard v2 hardening — close gaps found during the T001 port](2026/2026-11-09.md#standard-v2-hardening--close-gaps-found-during-the-t001-port) (L23) | research-standards | explicit_stream_and_area |
 | 2026-11-09 | [Research Standard v2 and T001 — clean-main port](2026/2026-11-09.md#research-standard-v2-and-t001--clean-main-port) (L3) | research-standards | explicit_stream_and_area |
 | 2026-10-26 | [BaTiO3 B1-B3 — Completed static correspondence diagnostic / local checkpoint](2026/2026-10-26.md#batio3-b1-b3--completed-static-correspondence-diagnostic--local-checkpoint) (L23) | research-core, result-artifacts | explicit_primary_area |
 | 2026-10-26 | [BaTiO3 B0 — Source scope and immutable baseline](2026/2026-10-26.md#batio3-b0--source-scope-and-immutable-baseline) (L3) | research-core, result-artifacts | explicit_primary_area |

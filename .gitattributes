@@ -16,3 +16,18 @@ uet_history/** linguist-documentation
 /docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/qh15_materialscloud/README.txt -text
 /docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/qh15_materialscloud/raw_data/*.csv -text
 /docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/qh15_materialscloud/fig1_temp_inversion/fig1_temp_inversion.nb -text
+
+# Research Standard v2: force LF for records, ledgers, standards and CI so
+# Windows checkouts (global core.autocrlf=true) hash and diff like CI.
+WORK_LEDGER/** text eol=lf
+AGENTS.md text eol=lf
+docs/STANDARD.md text eol=lf
+docs/standard/** text eol=lf
+docs/scripts/standard/** text eol=lf
+docs/core/AGENTS.md text eol=lf
+docs/core/THEORY_CARD.md text eol=lf
+docs/core/theory_card.json text eol=lf
+docs/core/UPDATE_LOG.md text eol=lf
+docs/core/05_tests/physics/** text eol=lf
+.github/** text eol=lf
+pytest.ini text eol=lf
