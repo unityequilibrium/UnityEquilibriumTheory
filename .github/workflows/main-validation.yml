@@ -90,7 +90,7 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - run: python -m compileall -q docs services_and_experiments
+      - run: python -m compileall -q docs topics services_and_experiments
 
   rust-validation:
     name: Optional Rust validation

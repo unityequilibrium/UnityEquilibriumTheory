@@ -150,7 +150,7 @@
       "kind": "working_file",
       "path": "docs/topics/0.13_Thermodynamic_Bridge/calculation_contracts/joint_state_measure_construction.json",
       "role": "evidence",
-      "sha256": "966683ce539ee9e090a72300c0a3e7f42bbfa01a795bfbe444de621579ac5eb3"
+      "sha256": "e5f822cddbebcfc91016d62689a242cb3290bfde8f9baa5303d67a048cb61d5b"
     },
     {
       "availability": "REQUIRED",
@@ -199,7 +199,7 @@
       "kind": "working_file",
       "path": "docs/scripts/audit/audit_calculation_completeness.py",
       "role": "code",
-      "sha256": "b406d31add9834d2cd1d9f3bb8d42724d26c390413710419313dd85cba7121ca"
+      "sha256": "dc2ae8ca88a5734eb20790d5687ce676a261046f031d89593e0719bb8b324cda"
     },
     {
       "availability": "REQUIRED",

@@ -5,7 +5,7 @@ It is deliberately short.
 
 **The controlling research standard is [`docs/STANDARD.md`](docs/STANDARD.md)** (Research Standard v2, approved by the author on 2026-11-08).
 When this guide and the standard disagree, the standard wins. The exceptions are the boundary, privacy and publication rules below, which stay in force.
-`docs/topics/For Work/` must not be edited or moved. Its operational standards (topic structure, code READMEs, data, references,
+`topics/For Work/` must not be edited. (On 2026-11-09 the owner approved moving it, with all of `docs/topics/`, to `topics/`; its content is unchanged.) Its operational standards (topic structure, code READMEs, data, references,
 results, formula audit, papers, visualization, templates and calculation contracts) are still in force under §15 of the standard.
 Its old status vocabularies and workflow ladders are replaced.
 
@@ -13,7 +13,7 @@ Its old status vocabularies and workflow ladders are replaced.
 
 - `docs/core/` holds the UET core equations, tests and artifacts.
   Core-specific rules are in [`docs/core/AGENTS.md`](docs/core/AGENTS.md).
-- `docs/topics/` holds the numbered research topics.
+- `topics/` holds the numbered research topics.
 - `docs/standard/` holds the machine-checked records: claims, Test Cards, results and the data manifest.
 - `WORK_LEDGER/` is the repository-wide daily work history. Topic `UPDATE_LOG.md` files record research waves.
 - Generated JSON under `07_artifacts/`, `Result/` and `_Logs/` is output. It is not where narrative decisions get made.
@@ -88,12 +88,10 @@ Its old status vocabularies and workflow ladders are replaced.
   - Python `write_text` on Windows writes CRLF, so write with `newline="\n"`.
   - `.gitattributes` forces LF for records, ledgers, standards and CI files.
   - Run `git diff --check origin/main HEAD` before every push.
-- **Ignored data.** `.gitignore` ignores `*.csv` outside `docs/topics` and `docs/core`. Add public data under `docs/data/external` with `git add -f`.
+- **Ignored data.** `.gitignore` ignores `*.csv` outside `topics` and `docs/core`. Add public data under `docs/data/external` with `git add -f`.
   `check_schema.py` fails if a registered data file, Test Card script or Result producer is not tracked by git.
 - **Hash-locked tooling.** Many calculation contracts lock the sha256 of shared scripts, including `audit_calculation_completeness.py`.
   Changing such a script makes those contracts STALE. Treat it as a separate, owner-approved wave.
-- **Do not hash-lock editable records.** A calculation contract must not list Test Cards, Result records, claims, Theory or
-  Author cards as identities. They change by design, and locking them makes the contract STALE on the next legitimate edit.
 
 ## 7. Work ledger
 

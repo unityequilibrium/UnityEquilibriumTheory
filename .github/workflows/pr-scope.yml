@@ -77,7 +77,7 @@ jobs:
       - name: Check path drift and workflow side effects
         run: |
           set -euo pipefail
-          if grep -Eq '^(docs/topics/For_Work/|uet_history/3_publish/books/origin_of_wealth_and_economics/)' changed-files.txt; then
+          if grep -Eq '^(topics/For_Work/|uet_history/3_publish/books/origin_of_wealth_and_economics/)' changed-files.txt; then
             echo "Known non-canonical path changed."
             exit 1
           fi

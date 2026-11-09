@@ -195,7 +195,7 @@
       "kind": "working_file",
       "path": "docs/topics/0.13_Thermodynamic_Bridge/calculation_contracts/retained_response_regime_classification.json",
       "role": "evidence",
-      "sha256": "c0d15cb3c240844056093610d756e4a5e97fd56dcd06203fd0701a5c07b140f3"
+      "sha256": "231658e67dadb7ab81f4deedbea3f2665672e5fd00ba182dac85250568c2ca7b"
     },
     {
       "availability": "REQUIRED",
@@ -272,7 +272,7 @@
       "kind": "working_file",
       "path": "docs/scripts/audit/audit_calculation_completeness.py",
       "role": "code",
-      "sha256": "b406d31add9834d2cd1d9f3bb8d42724d26c390413710419313dd85cba7121ca"
+      "sha256": "dc2ae8ca88a5734eb20790d5687ce676a261046f031d89593e0719bb8b324cda"
     },
     {
       "kind": "working_file",

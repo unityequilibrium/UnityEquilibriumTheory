@@ -46,7 +46,7 @@ jobs:
               echo "$key=false" >> "$GITHUB_OUTPUT"
             fi
           }
-          set_output research '^(docs/(core|topics|meta|scripts|data/external|standard)/|docs/STANDARD\.md$|docs/UET_Documentation_Details/|(\.github/)?requirements-research\.txt$|pytest\.ini$|\.github/workflows/(pr-validation|nightly-research-audit)\.yml$)'
+          set_output research '^(topics/|docs/(core|meta|scripts|data/external|standard)/|docs/STANDARD\.md$|docs/UET_Documentation_Details/|(\.github/)?requirements-research\.txt$|pytest\.ini$|\.github/workflows/(pr-validation|nightly-research-audit)\.yml$)'
           set_output books '^(uet_history/BOOK_WORKFLOW\.md|uet_history/3_publish/books/)'
           set_output services '^services_and_experiments/'
           set_output policy '^thailand_proposals/'
@@ -65,8 +65,8 @@ jobs:
       - run: git diff --check
       - name: Check canonical path guardrails
         run: |
-          test ! -d docs/topics/For_Work || {
-            echo "docs/topics/For_Work is a drifted path; use docs/topics/For Work/."
+          test ! -d topics/For_Work || {
+            echo "topics/For_Work is a drifted path; use topics/For Work/."
             exit 1
           }
 
@@ -84,7 +84,7 @@ jobs:
         with:
           python-version: '3.12'
       - run: python -m pip install -r .github/requirements-research.txt
-      - run: python -m compileall -q docs services_and_experiments
+      - run: python -m compileall -q docs topics services_and_experiments
       - name: Run changed Python tests
         env:
           BASE_SHA: ${{ github.event.pull_request.base.sha }}
@@ -112,7 +112,7 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - run: python -m compileall -q docs
+      - run: python -m compileall -q docs topics
       - name: Check scoped calculation and observation contracts
         env:
           BASE_SHA: ${{ github.event.pull_request.base.sha }}

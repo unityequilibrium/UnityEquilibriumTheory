@@ -50,10 +50,21 @@ def git(root: Path, *args: str) -> bytes:
     return result.stdout
 
 
+def logical_path(path: str) -> str:
+    """Topics moved from docs/topics to topics/ (2026-11-09); recorded contracts keep the old docs/topics/ names."""
+    return "docs/" + path if path.startswith("topics/") else path
+
+
+def physical_path(root: Path, path: str) -> str:
+    if path.startswith("docs/topics/") and not (root / path).exists() and (root / path[5:]).exists():
+        return path[5:]
+    return path
+
+
 def repo_path(root: Path, path: str) -> Path:
     if not path or "\\" in path or Path(path).is_absolute() or re.match(r"^[A-Za-z]:", path):
         raise ValueError(f"not a repository-relative POSIX path: {path}")
-    target = (root / path).resolve()
+    target = (root / physical_path(root, path)).resolve()
     if not target.is_relative_to(root.resolve()):
         raise ValueError(f"path escapes repository: {path}")
     return target
@@ -472,11 +483,11 @@ def scientific_path(path: str) -> bool:
 def discover_contracts(root: Path) -> list[tuple[str, dict]]:
     result = []
     # Bounded to research workspaces; do not walk caches, media, .git or books.
-    for base in (root / "docs/core", root / "docs/topics"):
+    for base in (root / "docs/core", root / "topics"):
         paths = set(base.rglob("CALCULATION_CONTRACT.json"))
         paths.update(p for d in base.rglob("calculation_contracts") if d.is_dir() for p in d.glob("*.json"))
         for path in sorted(paths):
-            result.append((path.relative_to(root).as_posix(), load_json(path)))
+            result.append((logical_path(path.relative_to(root).as_posix()), load_json(path)))
     # Existing manifests may embed the same contract; no competing duplicate IDs.
     baseline = load_json(root / BASELINE) if (root / BASELINE).exists() else {}
     for locator in baseline.get("embedded_contracts", []):
@@ -536,10 +547,10 @@ def adoption_inventory(root: Path, baseline: dict, contracts: list, reviews: lis
                          registry_classification=entry.get("classification"),
                          downstream_dependencies=entry.get("downstream_dependencies", []))
             route["discovery"].append(REGISTRY)
-    topics = sorted(p for p in (root / "docs/topics").glob("0.*") if p.is_dir() and re.match(r"^0\.\d+_", p.name))
+    topics = sorted(p for p in (root / "topics").glob("0.*") if p.is_dir() and re.match(r"^0\.\d+_", p.name))
     for folder in topics:
         owner = folder.name
-        prefix = folder.relative_to(root).as_posix() + "/"
+        prefix = logical_path(folder.relative_to(root).as_posix()) + "/"
         route = seeds.setdefault(owner, {"route_id": owner, "owner": owner, "kind": "TOPIC_PACKAGE", "paths": [],
             "claim_boundary": "Unreviewed topic package, not accepted from folder presence", "discovery": []})
         docs = [prefix + name for name in ("README.md", "METHOD.md", "LIMITATIONS.md", "FORMULA_AUDIT.md", "DATA_MANIFEST.md")
@@ -659,8 +670,8 @@ def build_report(root: Path, changed: list[str] | None = None) -> dict:
         discovered = git(root, "ls-files", "--cached", "--others", "--exclude-standard").decode().splitlines()
     except ValueError:
         # Non-Git fixture/workspace support, without treating missing Git history as evidence.
-        discovered = [p.relative_to(root).as_posix() for p in (root / "docs").rglob("*") if p.is_file()]
-    current = {p for p in discovered if scientific_path(p) and (root / p).is_file()}
+        discovered = [p.relative_to(root).as_posix() for base in ("docs", "topics") for p in (root / base).rglob("*") if p.is_file()]
+    current = {logical_path(p) for p in discovered if scientific_path(logical_path(p)) and (root / p).is_file()}
     formal_roots = ("docs/core/01_contracts/", "docs/core/03_lanes/", "docs/core/04_proofs/",
                     "docs/core/08_history/research_notes/")
     formal_documents = {p for p in discovered if p.startswith(formal_roots)
@@ -709,7 +720,7 @@ def main(argv: list[str] | None = None) -> int:
     if args.check and args.emit_report:
         parser.error("--check is read-only and cannot be combined with --emit-report")
     try:
-        changed = git(ROOT, "diff", "--name-only", "--diff-filter=ACMR", args.changed, "HEAD").decode().splitlines() if args.changed else []
+        changed = [logical_path(p) for p in git(ROOT, "diff", "--name-only", "--diff-filter=ACMR", args.changed, "HEAD").decode().splitlines()] if args.changed else []
         report = build_report(ROOT, changed)
         if args.emit_report:
             target = repo_path(ROOT, args.output)
