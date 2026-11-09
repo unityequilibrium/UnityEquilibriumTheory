@@ -9,8 +9,8 @@ import runpy
 import numpy as np
 import pytest
 
-ROOT = Path(__file__).resolve().parents[5]
-PREFIX = "docs/topics/0.13_Thermodynamic_Bridge/"
+ROOT = Path(__file__).resolve().parents[4]
+PREFIX = "topics/0.13_Thermodynamic_Bridge/"
 M = runpy.run_path(str(ROOT/(PREFIX+"Code/03_Research/Research_T13_Vacuum_Cut_Log.py")))
 
 

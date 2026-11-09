@@ -9,7 +9,7 @@ import unittest
 import numpy as np
 
 ROOT=next(p for p in Path(__file__).resolve().parents if (p/"docs/core").is_dir())
-TOPIC=ROOT/"docs/topics/0.10_Fluid_Dynamics_Chaos"
+TOPIC=ROOT/"topics/0.10_Fluid_Dynamics_Chaos"
 SCRIPT=TOPIC/"Code/03_Research/Research_Fluid_Core_O2_Vector_Refinement.py"
 CONTRACT=TOPIC/"Data/03_Research/fluid_core_o2_vector_refinement_contract.json"
 ARTIFACT=TOPIC/"Result/artifacts/fluid_core_o2_vector_refinement_audit.json"

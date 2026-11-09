@@ -24,7 +24,6 @@ try:
 
     engine_file = (
         repo_root
-        / "docs"
         / "topics"
         / "0.11_Phase_Transitions"
         / "Code"

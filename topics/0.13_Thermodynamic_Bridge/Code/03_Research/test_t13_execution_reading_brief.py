@@ -5,8 +5,8 @@ import json
 from pathlib import Path
 
 
-ROOT = Path(__file__).resolve().parents[5]
-TOPIC = ROOT / "docs/topics/0.13_Thermodynamic_Bridge"
+ROOT = Path(__file__).resolve().parents[4]
+TOPIC = ROOT / "topics/0.13_Thermodynamic_Bridge"
 PLAN = json.loads((TOPIC / "Data/03_Research/funding_portfolio_14d_plan.json").read_text(encoding="utf-8"))
 BRIEF = PLAN["execution_reading_brief_2026_10_03"]
 

@@ -5,9 +5,9 @@ import json
 from pathlib import Path
 
 
-ROOT = Path(__file__).resolve().parents[5]
+ROOT = Path(__file__).resolve().parents[4]
 DECISION = ROOT / (
-    "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/"
+    "topics/0.13_Thermodynamic_Bridge/Result/artifacts/"
     "t13_funding_condensed_scheme_selection_2026-09-28.json"
 )
 

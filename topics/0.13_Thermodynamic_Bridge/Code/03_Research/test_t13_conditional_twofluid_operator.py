@@ -105,7 +105,7 @@ def test_recorded_domain_rejection_and_physical_boundaries_are_preserved():
                 "data_role", "evidence_artifacts", "verification_status",
                 "open_blockers", "dependency_unlocked", "claim_boundary"}
     assert required <= record.keys()
-    plan = json.loads((ROOT / "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/funding_portfolio_14d_plan.json").read_text(encoding="utf-8"))
+    plan = json.loads((ROOT / "topics/0.13_Thermodynamic_Bridge/Data/03_Research/funding_portfolio_14d_plan.json").read_text(encoding="utf-8"))
     linked = plan["conditional_operator_evidence_2026_10_01"]
     assert hashlib.sha256((ROOT / linked["path"]).read_bytes()).hexdigest() == linked["sha256"]
     assert linked["verification_status"] == record["verification_status"]

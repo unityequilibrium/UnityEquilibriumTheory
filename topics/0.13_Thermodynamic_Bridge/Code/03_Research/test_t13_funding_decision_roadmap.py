@@ -6,8 +6,8 @@ import re
 from datetime import date
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parents[5]
-TOPIC = ROOT / "docs/topics/0.13_Thermodynamic_Bridge"
+ROOT = Path(__file__).resolve().parents[4]
+TOPIC = ROOT / "topics/0.13_Thermodynamic_Bridge"
 RECORD = json.loads(
     (TOPIC / "Data/03_Research/funding_decision_roadmap_2026_10_02.json").read_text(
         encoding="utf-8"

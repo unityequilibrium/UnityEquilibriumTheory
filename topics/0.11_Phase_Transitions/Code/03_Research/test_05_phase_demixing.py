@@ -56,7 +56,6 @@ except ImportError:
 # Import Data from local Data folder (path updated for 5x4 migration)
 data_dir = (
     root_path
-    / "docs"
     / "topics"
     / "0.11_Phase_Transitions"
     / "Data"

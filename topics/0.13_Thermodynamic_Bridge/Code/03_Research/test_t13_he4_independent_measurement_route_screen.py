@@ -5,8 +5,8 @@ import json
 from pathlib import Path
 
 
-ROOT = Path(__file__).resolve().parents[5]
-AUDIT = json.loads((ROOT / "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/t13_he4_independent_measurement_route_screen.json").read_text(encoding="utf-8"))
+ROOT = Path(__file__).resolve().parents[4]
+AUDIT = json.loads((ROOT / "topics/0.13_Thermodynamic_Bridge/Result/artifacts/t13_he4_independent_measurement_route_screen.json").read_text(encoding="utf-8"))
 
 
 def test_route_roles_do_not_promote_response_data():

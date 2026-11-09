@@ -7,7 +7,7 @@ from pathlib import Path
 
 
 TOPIC = Path(__file__).resolve().parents[2]
-ROOT = Path(__file__).resolve().parents[5]
+ROOT = Path(__file__).resolve().parents[4]
 PLAN = json.loads((TOPIC / "Data/03_Research/funding_portfolio_14d_plan.json").read_text(encoding="utf-8"))
 
 
@@ -398,7 +398,7 @@ def test_interaction_successor_narrows_controller_without_full_thermal_acceptanc
                 "independent_alpha_Phi_K_admitted", "physical_Kubo_emitted", "g1_physical_unlock", "g2_science_unlock",
                 "full_core_unlock", "core_composition_gate_overwritten"):
         assert evidence[key] is r[key] is False
-    note = ROOT/"docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/T13_LOW_T_INTERACTIONS_2026-10-02.md"
+    note = ROOT/"topics/0.13_Thermodynamic_Bridge/Result/artifacts/T13_LOW_T_INTERACTIONS_2026-10-02.md"
     content = note.read_text()
     assert evidence["sha256"] in content
     assert all(k+":" in content for k in r["report"])
@@ -419,7 +419,7 @@ def test_vacuum_cut_log_successor_is_not_full_matching_or_physical_acceptance():
     assert r["real_nonlocal_linear_loop_computed"] and r["four_subtracted_reconstruction_checked"]
     assert r["local_matching_information"]["leading_on_shell_rank"] == 1
     assert not r["local_matching_information"]["four_lab_measurements_required_claimed"]
-    note = ROOT/"docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/T13_VACUUM_CUT_LOG_2026-10-03.md"
+    note = ROOT/"topics/0.13_Thermodynamic_Bridge/Result/artifacts/T13_VACUUM_CUT_LOG_2026-10-03.md"
     content = note.read_text()
     assert evidence["sha256"] in content
     assert all(name+":" in content for name in r["report"])
@@ -448,7 +448,7 @@ def test_thermal_cut_successor_does_not_accept_full_collision_matching_or_goal()
     assert evidence["static_LO_thermal_coherence_checked"] is r["static_LO_thermal_coherence_checked"] is True
     for key in ("full_finite_T_collision_operator_computed", "higher_derivative_vertices_and_residues_matched", "full_real_self_energy_matched", "full_two_loop_pressure_computed", "full_SK_KMS_matching_closed", "controlled_full_action_truncation_error_established", "independent_alpha_Phi_K_admitted", "physical_Kubo_emitted", "g1_physical_unlock", "g2_science_unlock", "full_core_unlock", "core_composition_gate_overwritten"):
         assert evidence[key] is r[key] is False
-    content = (ROOT/"docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/T13_THERMAL_CUT_STIFFNESS_2026-10-03.md").read_text()
+    content = (ROOT/"topics/0.13_Thermodynamic_Bridge/Result/artifacts/T13_THERMAL_CUT_STIFFNESS_2026-10-03.md").read_text()
     assert evidence["sha256"] in content
     assert all(name+":" in content for name in r["report"])
     assert all(card["status"] == "PLANNED_NOT_ACCEPTED" for card in PLAN["result_level_execution_2026_10_01"]["result_cards"])
@@ -474,7 +474,7 @@ def test_acoustic_modal_matching_is_three_legs_not_full_response_or_goal():
                 "independent_alpha_Phi_K_admitted", "physical_Kubo_emitted", "g1_physical_unlock",
                 "g2_science_unlock", "full_core_unlock", "core_composition_gate_overwritten"):
         assert result[key] is evidence[key] is False
-    content = (ROOT/"docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/T13_ACOUSTIC_MODAL_CUTS_2026-10-03.md").read_text()
+    content = (ROOT/"topics/0.13_Thermodynamic_Bridge/Result/artifacts/T13_ACOUSTIC_MODAL_CUTS_2026-10-03.md").read_text()
     assert evidence["sha256"] in content and all(name+":" in content for name in result["report"])
     assert all(card["status"] == "PLANNED_NOT_ACCEPTED" for card in PLAN["result_level_execution_2026_10_01"]["result_cards"])
 
@@ -495,7 +495,7 @@ def test_pair_source_interface_is_not_complete_retarded_or_physical_response():
                 "all_parent_modes_and_quantum_Phi_loops_included", "full_SK_KMS_matching_closed", "physical_Kubo_emitted",
                 "independent_alpha_Phi_K_admitted", "full_core_unlock", "core_composition_gate_overwritten"):
         assert result[key] is evidence[key] is False
-    content = (ROOT/"docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/T13_ACOUSTIC_SOURCE_PAIR_2026-10-03.md").read_text()
+    content = (ROOT/"topics/0.13_Thermodynamic_Bridge/Result/artifacts/T13_ACOUSTIC_SOURCE_PAIR_2026-10-03.md").read_text()
     assert evidence["sha256"] in content and all(name+":" in content for name in result["report"])
     assert all(card["status"] == "PLANNED_NOT_ACCEPTED" for card in PLAN["result_level_execution_2026_10_01"]["result_cards"])
 
@@ -516,7 +516,7 @@ def test_Landau_source_and_support_bounds_are_not_complete_physical_response():
                 "all_parent_modes_and_quantum_Phi_loops_included", "full_SK_KMS_matching_closed", "physical_Kubo_emitted",
                 "independent_alpha_Phi_K_admitted", "controlled_full_action_truncation_error_established", "full_core_unlock", "core_composition_gate_overwritten"):
         assert result[key] is evidence[key] is False
-    content = (ROOT/"docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/T13_ACOUSTIC_SOURCE_LANDAU_2026-10-03.md").read_text()
+    content = (ROOT/"topics/0.13_Thermodynamic_Bridge/Result/artifacts/T13_ACOUSTIC_SOURCE_LANDAU_2026-10-03.md").read_text()
     assert evidence["sha256"] in content and all(name+":" in content for name in result["report"])
     assert result["prior_Xie_context_exposure_review"] == "REVIEW_REQUIRED"
     assert not result["xie_2026_accessed"] and not result["claim_promotion"]
@@ -540,7 +540,7 @@ def test_thermal_source_curvature_is_not_assigned_dynamic_contact_or_physics():
                 "physical_Kubo_emitted", "independent_alpha_Phi_K_admitted", "controlled_full_action_truncation_error_established",
                 "full_core_unlock", "core_composition_gate_overwritten"):
         assert result[key] is evidence[key] is False
-    content = (ROOT/"docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/T13_THERMAL_SOURCE_CURVATURE_2026-10-03.md").read_text()
+    content = (ROOT/"topics/0.13_Thermodynamic_Bridge/Result/artifacts/T13_THERMAL_SOURCE_CURVATURE_2026-10-03.md").read_text()
     assert evidence["sha256"] in content and all(name+":" in content for name in result["report"])
     assert result["prior_Xie_context_exposure_review"] == "REVIEW_REQUIRED" and not result["xie_2026_accessed"]
     assert not result["claim_promotion"]
@@ -567,7 +567,7 @@ def test_virtual_completion_is_named_and_does_not_unlock_physical_or_full_goal()
                 "physical_Kubo_emitted", "independent_alpha_Phi_K_admitted", "controlled_full_action_truncation_error_established",
                 "full_core_unlock", "core_composition_gate_overwritten"):
         assert evidence[key] is result[key] is False
-    content = (ROOT/"docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/T13_THERMAL_VIRTUAL_RESPONSE_2026-10-03.md").read_text()
+    content = (ROOT/"topics/0.13_Thermodynamic_Bridge/Result/artifacts/T13_THERMAL_VIRTUAL_RESPONSE_2026-10-03.md").read_text()
     assert evidence["sha256"] in content and all(name+":" in content for name in result["report"])
     assert not result["xie_2026_accessed"] and result["prior_Xie_context_exposure_review"] == "REVIEW_REQUIRED"
     assert all(card["status"] == "PLANNED_NOT_ACCEPTED" for card in PLAN["result_level_execution_2026_10_01"]["result_cards"])
@@ -593,7 +593,7 @@ def test_finite_q_static_population_is_not_assigned_collision_or_physical_transp
                 "full_two_loop_pressure_computed", "full_SK_KMS_matching_closed", "physical_Kubo_emitted", "independent_alpha_Phi_K_admitted",
                 "controlled_full_action_truncation_error_established", "full_core_unlock", "core_composition_gate_overwritten"):
         assert evidence[key] is result[key] is False
-    content = (ROOT/"docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/T13_FINITE_Q_THERMAL_SOURCE_2026-10-03.md").read_text()
+    content = (ROOT/"topics/0.13_Thermodynamic_Bridge/Result/artifacts/T13_FINITE_Q_THERMAL_SOURCE_2026-10-03.md").read_text()
     assert evidence["sha256"] in content and all(name+":" in content for name in result["report"])
     assert not result["xie_2026_accessed"] and result["prior_Xie_context_exposure_review"] == "REVIEW_REQUIRED"
     assert all(card["status"] == "PLANNED_NOT_ACCEPTED" for card in PLAN["result_level_execution_2026_10_01"]["result_cards"])
@@ -620,7 +620,7 @@ def test_noether_source_balance_is_first_order_gaussian_not_full_dissipation():
                 "full_two_loop_pressure_computed", "full_SK_KMS_matching_closed", "physical_Kubo_emitted", "independent_alpha_Phi_K_admitted",
                 "controlled_full_action_truncation_error_established", "full_core_unlock", "core_composition_gate_overwritten"):
         assert evidence[key] is result[key] is False
-    content = (ROOT/"docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/T13_THERMAL_NOETHER_RESPONSE_2026-10-03.md").read_text()
+    content = (ROOT/"topics/0.13_Thermodynamic_Bridge/Result/artifacts/T13_THERMAL_NOETHER_RESPONSE_2026-10-03.md").read_text()
     assert evidence["sha256"] in content and all(name+":" in content for name in result["report"])
     assert not result["xie_2026_accessed"] and result["prior_Xie_context_exposure_review"] == "REVIEW_REQUIRED"
     assert all(card["status"] == "PLANNED_NOT_ACCEPTED" for card in PLAN["result_level_execution_2026_10_01"]["result_cards"])
@@ -646,7 +646,7 @@ def test_collisionless_soft_ray_does_not_accept_physical_transport_or_full_goal(
                 "full_two_loop_pressure_computed", "full_SK_KMS_matching_closed", "physical_Kubo_emitted", "independent_alpha_Phi_K_admitted",
                 "controlled_full_action_truncation_error_established", "full_core_unlock", "core_composition_gate_overwritten"):
         assert evidence[key] is result[key] is False
-    content = (ROOT/"docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/T13_COLLISIONLESS_SOFT_SOURCE_2026-10-03.md").read_text()
+    content = (ROOT/"topics/0.13_Thermodynamic_Bridge/Result/artifacts/T13_COLLISIONLESS_SOFT_SOURCE_2026-10-03.md").read_text()
     assert evidence["sha256"] in content and all(name+":" in content for name in result["report"])
     assert result["numerical_repair"]["first_failure_preserved"] and result["numerical_repair"]["finite_truncated_tail_gate_still_fails"]
     assert not result["xie_2026_accessed"] and result["prior_Xie_context_exposure_review"] == "REVIEW_REQUIRED"
@@ -673,7 +673,7 @@ def test_gaussian_work_identity_does_not_relabel_failed_grid_or_unlock_full_goal
     for key in ("leading_finite_pair_source_work_closed", "primary_covariance_entropy_defined", "full_energy_exchange_ledger_closed", "full_collision_operator_computed", "full_SK_KMS_matching_closed", "physical_Kubo_emitted", "independent_alpha_Phi_K_admitted", "full_core_unlock", "core_composition_gate_overwritten"):
         assert evidence[key] is result[key] is False
     assert all(x["closure_level"] == "CLOSED_FOR_LANE" for x in result["subresults"])
-    content = (ROOT/"docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/T13_GAUSSIAN_SOURCE_WORK_2026-10-03.md").read_text()
+    content = (ROOT/"topics/0.13_Thermodynamic_Bridge/Result/artifacts/T13_GAUSSIAN_SOURCE_WORK_2026-10-03.md").read_text()
     assert evidence["sha256"] in content and all(name+":" in content for name in result["report"])
     assert all(card["status"] == "PLANNED_NOT_ACCEPTED" for card in PLAN["result_level_execution_2026_10_01"]["result_cards"])
 
@@ -699,7 +699,7 @@ def test_even_work_remainder_does_not_accept_parent_error_or_physical_input():
                 "full_SK_KMS_matching_closed", "physical_Kubo_emitted", "independent_alpha_Phi_K_admitted",
                 "controlled_full_action_truncation_error_established", "full_core_unlock", "core_composition_gate_overwritten"):
         assert evidence[key] is result[key] is False
-    content = (ROOT/"docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/T13_GAUSSIAN_WORK_REMAINDER_2026-10-03.md").read_text()
+    content = (ROOT/"topics/0.13_Thermodynamic_Bridge/Result/artifacts/T13_GAUSSIAN_WORK_REMAINDER_2026-10-03.md").read_text()
     assert evidence["sha256"] in content and all(name+":" in content for name in result["report"])
     assert all(card["status"] == "PLANNED_NOT_ACCEPTED" for card in PLAN["result_level_execution_2026_10_01"]["result_cards"])
 
@@ -727,7 +727,7 @@ def test_density_readout_closure_does_not_admit_physical_measurement_or_full_goa
                 "old_source_work_audit_promoted", "full_core_unlock", "core_composition_gate_overwritten"):
         assert evidence[key] is result[key] is False
     for note in ("T13_NOETHER_DENSITY_READOUT_2026-10-03.md", "T13_DENSITY_SPECTROSCOPY_MEASUREMENT_CARD_2026-10-03.md"):
-        content = (ROOT/"docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts"/note).read_text()
+        content = (ROOT/"topics/0.13_Thermodynamic_Bridge/Result/artifacts"/note).read_text()
         assert evidence["sha256"] in content and all(name+":" in content for name in result["report"])
     assert result["external_numeric_rows_admitted"] == 0
     assert not result["xie_2026_accessed"] and result["prior_Xie_context_exposure_review"] == "REVIEW_REQUIRED"
@@ -756,7 +756,7 @@ def test_q5_information_does_not_admit_physical_precision_or_full_goal():
                 "full_core_unlock", "core_composition_gate_overwritten", "old_source_work_audit_promoted"):
         assert evidence[key] is result[key] is False
     for note in ("T13_Q5_DISPERSION_INFORMATION_2026-10-03.md", "T13_Q5_MEASUREMENT_INFORMATION_CARD_2026-10-03.md"):
-        text = (ROOT/"docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts"/note).read_text()
+        text = (ROOT/"topics/0.13_Thermodynamic_Bridge/Result/artifacts"/note).read_text()
         assert evidence["sha256"] in text and all(name+":" in text for name in result["report"])
     assert not result["xie_2026_accessed"] and result["prior_Xie_context_exposure_review"] == "REVIEW_REQUIRED"
     assert result["external_numeric_rows_admitted"] == 0 and not result["claim_promotion"]
@@ -784,7 +784,7 @@ def test_multi_q_budget_does_not_admit_noise_measurement_or_full_goal():
                 "core_composition_gate_overwritten", "old_source_work_audit_promoted"):
         assert evidence[key] is result[key] is False
     for note in ("T13_MULTI_Q_ESTIMATOR_2026-10-03.md", "T13_MULTI_Q_MEASUREMENT_WINDOW_CARD_2026-10-03.md"):
-        content = (ROOT/"docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts"/note).read_text()
+        content = (ROOT/"topics/0.13_Thermodynamic_Bridge/Result/artifacts"/note).read_text()
         assert evidence["sha256"] in content and all(name+":" in content for name in result["report"])
     assert result["external_numeric_rows_admitted"] == 0 and not result["external_parameter_fitting"]
     assert not result["xie_2026_accessed"] and result["prior_Xie_context_exposure_review"] == "REVIEW_REQUIRED"
@@ -812,7 +812,7 @@ def test_low_q_source_archive_does_not_promote_partial_or_physical_result():
                 "controlled_full_action_truncation_error_established", "full_core_unlock", "core_composition_gate_overwritten", "old_source_work_audit_promoted"):
         assert evidence[key] is result[key] is False
     for note in ("T13_LOW_Q_SOURCE_BOUNDARY_2026-10-03.md", "T13_LOW_Q_ROUTE_DECISION_CARD_2026-10-03.md"):
-        content = (ROOT/"docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts"/note).read_text()
+        content = (ROOT/"topics/0.13_Thermodynamic_Bridge/Result/artifacts"/note).read_text()
         assert evidence["sha256"] in content and all(name+":" in content for name in result["report"])
     assert result["external_numeric_rows_admitted_to_UET_comparison"] == 0 and not result["external_UET_parameter_fitting"]
     assert not result["xie_2026_accessed"] and result["prior_Xie_context_exposure_review"] == "REVIEW_REQUIRED"

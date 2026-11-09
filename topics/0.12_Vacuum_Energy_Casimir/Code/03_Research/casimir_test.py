@@ -52,7 +52,7 @@ except ImportError:
 
 # Add Data Path
 data_dir = (
-    root_path / "docs" / "topics" / "0.12_Vacuum_Energy_Casimir" / "Data" / "03_Research"
+    root_path / "topics" / "0.12_Vacuum_Energy_Casimir" / "Data" / "03_Research"
 )
 if str(data_dir) not in sys.path:
     sys.path.insert(0, str(data_dir))
@@ -263,7 +263,6 @@ def run_test_with_real_data():
         else:
             result_dir = (
                 root_path
-                / "docs"
                 / "topics"
                 / "0.12_Vacuum_Energy_Casimir"
                 / "Result"

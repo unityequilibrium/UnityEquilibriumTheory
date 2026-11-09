@@ -5,8 +5,8 @@ import json
 from pathlib import Path
 
 
-ROOT = Path(__file__).resolve().parents[5]
-PLAN_PATH = ROOT / "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/funding_portfolio_14d_plan.json"
+ROOT = Path(__file__).resolve().parents[4]
+PLAN_PATH = ROOT / "topics/0.13_Thermodynamic_Bridge/Data/03_Research/funding_portfolio_14d_plan.json"
 PLAN = json.loads(PLAN_PATH.read_text(encoding="utf-8"))
 
 

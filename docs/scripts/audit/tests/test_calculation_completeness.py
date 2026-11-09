@@ -482,7 +482,7 @@ class ContractTests(unittest.TestCase):
         self.assertEqual(family["contract_ids"], [])
 
     def test_inventory_discovers_topic_without_verification_spec_and_loose_sources(self):
-        folder = self.root / "docs/topics/0.99_New_Topic"
+        folder = self.root / "topics/0.99_New_Topic"
         folder.mkdir(parents=True)
         (folder / "README.md").write_text("# provisional idea")
         formal = self.root / "docs/core/01_contracts/new_proposition.md"
@@ -547,7 +547,7 @@ class ContractTests(unittest.TestCase):
 class ObserverControls(unittest.TestCase):
     def test_admission_products_keep_physical_unknowns_after_relational_adoption(self):
         for name in ("physical_route_admission", "readout_admission"):
-            path = audit.ROOT / f"docs/topics/0.13_Thermodynamic_Bridge/calculation_contracts/{name}.json"
+            path = audit.ROOT / f"topics/0.13_Thermodynamic_Bridge/calculation_contracts/{name}.json"
             contract = audit.load_json(path)
             self.assertEqual(contract["review"]["status"], "INCOMPLETE")
             self.assertNotEqual(contract["output"]["claim_intent"], "PHYSICAL_ACCEPTANCE")
@@ -594,7 +594,7 @@ class ObserverControls(unittest.TestCase):
         builder = importlib.util.module_from_spec(spec)
         spec.loader.exec_module(builder)
         for name in ("he4_observation", "nonlinear_physical"):
-            saved = audit.load_json(audit.ROOT / f"docs/topics/0.13_Thermodynamic_Bridge/calculation_contracts/{name}.json")
+            saved = audit.load_json(audit.ROOT / f"topics/0.13_Thermodynamic_Bridge/calculation_contracts/{name}.json")
             graph = saved["observation"]["system_partition"]
             expected = builder.unadmitted_measurement_partition(graph["systems"][0]["state"], graph["observables"][0]["quantity"])
             self.assertEqual(graph, expected)
@@ -607,7 +607,7 @@ class ObserverControls(unittest.TestCase):
 
     def test_formal_invariant_and_graphite_design_do_not_invent_apparatus(self):
         for name in ("nonlinear_formal", "graphite_preparation_prediction"):
-            saved = audit.load_json(audit.ROOT / f"docs/topics/0.13_Thermodynamic_Bridge/calculation_contracts/{name}.json")
+            saved = audit.load_json(audit.ROOT / f"topics/0.13_Thermodynamic_Bridge/calculation_contracts/{name}.json")
             self.assertEqual(saved["profile"], "FORMAL")
             self.assertFalse(saved["data_policy"]["uses_observations"])
             result = audit.validate_contract(saved)
@@ -620,7 +620,7 @@ class ObserverControls(unittest.TestCase):
         builder = importlib.util.module_from_spec(spec)
         spec.loader.exec_module(builder)
         for topic in builder.ASTRONOMY_INPUTS:
-            saved = audit.load_json(audit.ROOT / f"docs/topics/{topic}/calculation_contracts/observation_coverage.json")
+            saved = audit.load_json(audit.ROOT / f"topics/{topic}/calculation_contracts/observation_coverage.json")
             self.assertEqual(builder.adopt_offline_product(copy.deepcopy(saved), topic), saved)
             graph = saved["observation"]["system_partition"]
             self.assertEqual({s["id"] for s in graph["systems"]}, {"data_product", "analysis"})

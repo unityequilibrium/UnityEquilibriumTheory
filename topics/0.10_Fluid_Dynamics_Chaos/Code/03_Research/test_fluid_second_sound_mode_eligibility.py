@@ -8,7 +8,7 @@ import tempfile
 import unittest
 
 ROOT=next(p for p in Path(__file__).resolve().parents if (p/"docs/core").is_dir())
-TOPIC=ROOT/"docs/topics/0.10_Fluid_Dynamics_Chaos"
+TOPIC=ROOT/"topics/0.10_Fluid_Dynamics_Chaos"
 SCRIPT=TOPIC/"Code/03_Research/Research_Fluid_Second_Sound_Mode_Eligibility.py"
 RESULT=TOPIC/"Result/artifacts/fluid_second_sound_mode_eligibility_audit.json"
 

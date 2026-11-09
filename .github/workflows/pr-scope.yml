@@ -37,7 +37,7 @@ jobs:
           BASE_SHA: ${{ github.event.pull_request.base.sha }}
           HEAD_SHA: ${{ github.event.pull_request.head.sha }}
         run: |
-          git diff --name-only "$BASE_SHA" "$HEAD_SHA" | sort -u > changed-files.txt
+          git diff --name-status -M "$BASE_SHA" "$HEAD_SHA" | awk -F"	" '$1=="R100"{next} {print $NF}' | sort -u > changed-files.txt
           test -s changed-files.txt
       - name: Check whitespace and JSON
         run: |
