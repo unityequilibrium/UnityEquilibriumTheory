@@ -5,10 +5,10 @@
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
     "sources": 82,
-    "entries": 787,
+    "entries": 788,
     "by_stream": {
       "operations": 98,
-      "research": 681,
+      "research": 682,
       "review": 8
     },
     "exact_duplicates": 0,
@@ -424,8 +424,8 @@
     },
     {
       "path": "2026/2026-11-09.md",
-      "sha256": "323cbc21a4ffc993363172c38430edb08c1bfe59514ca288b078882f6493deab",
-      "entries": 3
+      "sha256": "80c60429b862b6d5393a3294a4095353ffe1a1c4c4f6d3295f35a6e7a31ac657",
+      "entries": 4
     },
     {
       "path": "2026-08-14.md",
@@ -16097,15 +16097,35 @@
       "source": "2026/2026-11-09.md",
       "anchor": "checkpoint--push-research-standard-v2-and-open-draft-pr-48",
       "start_line": 34,
-      "end_line": 45,
+      "end_line": 46,
       "title": "Checkpoint — push research-standard-v2 and open draft PR #48",
-      "entry_sha256": "6b740901e0953ff1dee3840ee2d46c0c019b7827e95579ab8b18bb8b8c3a35e2",
+      "entry_sha256": "f48bc2af50ecb7155105415f82559dbd2410fc5682fd7a0071ea5e81e2dacd00",
       "stream": "operations",
       "areas": [
         "repo-ops"
       ],
       "related_streams": [
         "operations"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-09",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-09.md#standard-v2-15--restore-operational-standards-from-for-work",
+      "source": "2026/2026-11-09.md",
+      "anchor": "standard-v2-15--restore-operational-standards-from-for-work",
+      "start_line": 47,
+      "end_line": 61,
+      "title": "Standard v2 §15 — restore operational standards from For Work",
+      "entry_sha256": "b08939ff0d807141a13d6806def0a4eced8a046dea8e176694407bf39fa73c43",
+      "stream": "research",
+      "areas": [
+        "research-standards"
+      ],
+      "related_streams": [
+        "research"
       ],
       "basis": "explicit_stream_and_area",
       "flags": [],

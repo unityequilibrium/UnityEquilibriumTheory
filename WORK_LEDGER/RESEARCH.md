@@ -6,10 +6,11 @@
 
 These are source-linked historical records, not proof of completed research, successful publication, or current scientific readiness.
 
-Indexed entries: 681. Counts describe records, not accomplishments.
+Indexed entries: 682. Counts describe records, not accomplishments.
 
 | Date | Record | Area | Notes |
 | --- | --- | --- | --- |
+| 2026-11-09 | [Standard v2 §15 — restore operational standards from For Work](2026/2026-11-09.md#standard-v2-15--restore-operational-standards-from-for-work) (L47) | research-standards | explicit_stream_and_area |
 | 2026-11-09 | [Standard v2 W6 — T001 run: first external confrontation (L2 constraint)](2026/2026-11-09.md#standard-v2-w6--t001-run-first-external-confrontation-l2-constraint) (L19) | research-core | explicit_stream_and_area |
 | 2026-11-09 | [Standard v2 W6 (draft) — Test Card T001 for the binary-pulsar constraint](2026/2026-11-09.md#standard-v2-w6-draft--test-card-t001-for-the-binary-pulsar-constraint) (L3) | research-core | explicit_stream_and_area |
 | 2026-11-08 | [Standard v2 W5 — DEF mapping of the parent action for the binary-pulsar pilot](2026/2026-11-08.md#standard-v2-w5--def-mapping-of-the-parent-action-for-the-binary-pulsar-pilot) (L113) | research-core | explicit_stream_and_area |

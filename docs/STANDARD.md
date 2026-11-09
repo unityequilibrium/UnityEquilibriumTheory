@@ -1,10 +1,12 @@
 # UET Research Standard v2
 
-> **สถานะเอกสาร: APPROVED — อนุมัติโดยผู้เขียน 2026-11-08 (W2)**
-> เอกสารนี้เป็นมาตรฐานควบคุม**ฉบับเดียว**ของงานวิจัยใน Harness
-> แทน `docs/topics/For Work/` ทั้ง 29 ไฟล์ ซึ่ง**ถูกแช่แข็งไว้ที่เดิม**เป็นประวัติแบบอ่านอย่างเดียว
-> (ไม่ย้าย เพราะ calculation contract เดิม 6 ฉบับล็อก hash ของไฟล์เหล่านั้นเป็น REQUIRED;
-> ห้ามแก้ไฟล์ในโฟลเดอร์นั้นอีก ยกเว้นประกาศ superseded)
+> **สถานะเอกสาร: APPROVED — อนุมัติโดยผู้เขียน 2026-11-08 (W2); แก้ไข §15 อนุมัติ 2026-11-09**
+> เอกสารนี้เป็นมาตรฐานควบคุม**ฉบับเดียว**ด้านการยืนยันหลักฐานและสถานะ claim ของงานวิจัยใน Harness
+> มาตรฐานด้าน**ปฏิบัติงาน**ใน `docs/topics/For Work/` (โครงสร้าง topic, README โค้ด, data, reference,
+> result, formula audit, paper, visualization, template และ calculation contract) **ยังมีผลบังคับ** ตาม §15
+> ส่วนชุดคำศัพท์สถานะและบันไดขั้นตอนเดิมถูกแทนด้วยเอกสารนี้
+> ไฟล์ใน `For Work/` อยู่ที่เดิมและห้ามแก้ (calculation contract เดิม 6 ฉบับล็อก hash ไว้เป็น REQUIRED)
+> ยกเว้นประกาศ superseded
 > Schema ที่เครื่องตรวจ: [`docs/standard/schema.json`](standard/schema.json)
 
 ## 0. หลักการ 5 ข้อ
@@ -211,4 +213,30 @@ Gate และ audit script เดิม (inventory, compatibility, aggregate, r
 | W6 | Test Card `T001` (binary-pulsar scalarization/dipole-radiation bounds; ผู้เขียนเลือก 2026-11-08) → อนุมัติ → รัน → Result `L2` หรือ `FAILED` |
 | W7 | ซิงค์ `docs/topics/README.md` และ `claims.json` |
 
-กฎที่ขัดกันระหว่างเอกสารนี้กับเอกสารเดิม: **เอกสารนี้ชนะ** ยกเว้นกฎขอบเขต Harness/Superapp, กฎ raw/private และกฎ publication ใน `AGENTS.md` ซึ่งยังมีผลเต็มที่
+กฎที่ขัดกันระหว่างเอกสารนี้กับเอกสารเดิม: **เอกสารนี้ชนะ** ยกเว้นกฎขอบเขต Harness/Superapp, กฎ raw/private และกฎ publication ใน `AGENTS.md` ซึ่งยังมีผลเต็มที่ มาตรฐานด้านปฏิบัติงานที่ระบุใน §15 ยังใช้ต่อในส่วนที่ไม่ขัดกับเอกสารนี้
+
+## 15. มาตรฐานด้านปฏิบัติงานที่ยังมีผลบังคับ
+
+เอกสารนี้ไม่ได้เขียนกฎด้านการจัดไฟล์และการทำงานประจำวันซ้ำ ไฟล์ใน `docs/topics/For Work/` ต่อไปนี้**ยังเป็นมาตรฐานที่ต้องทำตาม** (ไฟล์อยู่ที่เดิมและห้ามแก้):
+
+| เรื่อง | ไฟล์ที่ยังใช้ |
+|---|---|
+| โครงสร้างและสถาปัตยกรรมของ topic | `10_Topic_Architecture_5x4.md`, `20_TEMPLATE_README.md` |
+| README ของโค้ด | `11_Code_README_Standard.md` |
+| การดึง เก็บ และระบุที่มาของข้อมูล | `12_Data_Standard.md` |
+| การอ้างอิงแหล่งที่มา | `13_Reference_Standard.md` |
+| ผลลัพธ์และ artifact | `14_Result_Standard.md`, `21_TEMPLATE_ANALYSIS.md` |
+| paper | `15_Paper_Standard.md`, `22_UET_PAPER_TEMPLATE.tex` |
+| visualization | `16_Cinematic_Viz_Standard.md` |
+| ที่มาของสูตร หน่วย และค่าคงที่ | `17_Formula_Audit_Standard.md`, `23_TEMPLATE_FORMULA_AUDIT.md` |
+| update log ของ topic | `24_TEMPLATE_UPDATE_LOG.md` (ใช้รูปแบบสั้นตาม §9 สำหรับ wave ใหม่) |
+| calculation contract | `30_Calculation_and_Observation_Completeness_Standard.md`, `31_TEMPLATE_CALCULATION_CONTRACT.md` |
+
+**กฎการใช้ร่วมกัน:**
+1. ถ้าไฟล์ข้างบนใช้คำศัพท์สถานะเดิม (เช่น claim class A–E, proof-status, `PASS`/`BLOCKED`, TD0–TD6, F0–F8) ให้แปลงเป็นระดับตาม §1 โดยใช้ตาราง §13 ห้ามสร้างค่าสถานะใหม่
+2. ถ้าไฟล์ข้างบนกำหนดให้ hash-lock ไฟล์ที่ generate ซ้ำได้ (log, เอกสาร, artifact) ให้ทำตาม §7 แทน คือ hash เฉพาะข้อมูลดิบภายนอก
+3. การยกระดับ claim, Test Card และเกณฑ์ผ่าน/ตก ใช้เอกสารนี้เท่านั้น
+4. ข้อมูลภายนอกต้องเก็บและระบุที่มาตาม `12` **และ**ลงทะเบียนใน `docs/standard/data_manifest.json` ตาม §7 ส่วนการอ้างอิงในเอกสารให้ทำตาม `13` และระบุ DOI/URL ใน data manifest หรือ Test Card ด้วย
+
+**ไฟล์ที่ถูกแทนแล้ว** (เป็นประวัติเท่านั้น): `00_README.md` (index เดิม), `01`, `02`, `03`, `04`, `18`, `25`, `26`–`29`, `32`, `EQUATION_RESEARCH_AND_PHYSICAL_CORRESPONDENCE_STANDARD.md` และ `UPDATE_LOG.md` ของ For Work หน้าที่ของไฟล์เหล่านี้ถูกแทนด้วย §0–§14
+
