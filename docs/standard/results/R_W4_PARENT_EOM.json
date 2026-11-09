@@ -5,13 +5,36 @@
   "level": "L1_CONSISTENT",
   "outcome": "PASS",
   "numbers": [
-    {"name": "scalar_equation_points_within_1e-10", "value": "20/20", "uncertainty": null, "unit": "count"},
-    {"name": "matter_equation_points_within_1e-10", "value": "40/40 (20 points x 2 components)", "uncertainty": null, "unit": "count"},
-    {"name": "metric_equation_samples_within_1e-10", "value": "20/20 (tt, xx, yy, zz each)", "uncertainty": null, "unit": "count"},
-    {"name": "negative_controls_detected", "value": "3/3", "uncertainty": null, "unit": "count"}
+    {
+      "name": "scalar_equation_points_within_1e-10",
+      "value": "20/20",
+      "uncertainty": null,
+      "unit": "count"
+    },
+    {
+      "name": "matter_equation_points_within_1e-10",
+      "value": "40/40 (20 points x 2 components)",
+      "uncertainty": null,
+      "unit": "count"
+    },
+    {
+      "name": "metric_equation_samples_within_1e-10",
+      "value": "20/20 (tt, xx, yy, zz each)",
+      "uncertainty": null,
+      "unit": "count"
+    },
+    {
+      "name": "negative_controls_detected",
+      "value": "3/3",
+      "uncertainty": null,
+      "unit": "count"
+    }
   ],
-  "producer": {"script": "docs/core/05_tests/physics/test_parent_derivation.py", "commit": "689b56cef"},
+  "producer": {
+    "script": "docs/core/05_tests/physics/test_parent_derivation.py",
+    "commit": "46e446b78"
+  },
   "artifacts": [],
   "date": "2026-11-08",
-  "note": "Scope: scalar and matter equations on a general inhomogeneous metric with an off-diagonal t-x term; metric equation only for diagonal components via Bianchi I minisuperspace (off-diagonal and inhomogeneous metric components not yet derivation-checked). epsilon > 0 in all samples."
+  "note": "Scope: scalar and matter equations on a general inhomogeneous metric with an off-diagonal t-x term; metric equation only for diagonal components via Bianchi I minisuperspace (off-diagonal and inhomogeneous metric components not yet derivation-checked). epsilon > 0 in all samples. Producer commit repointed 689b56cef -> 46e446b78 (same file blob; 689b56cef was on the pre-port branch)."
 }

@@ -7,8 +7,6 @@
     "reviewer": "agent:claude-standard-v2-w6",
     "rationale": "Methodological contract for Test Card T001. The evidence decision (L2 CONSTRAINT, author-approved) lives in docs/standard; this contract records inputs, model, observation chain and gaps. Timing, propagation and detector modelling are inherited from the published analysis, not reproduced.",
     "coverage_evidence": [
-      "docs/standard/tests/T001.json",
-      "docs/standard/results/R_T001_BINARY_PULSAR.json",
       "docs/core/01_contracts/BINARY_PULSAR_PILOT_SOURCES.md"
     ]
   },
@@ -312,20 +310,6 @@
       "role": "code",
       "sha256": "3af518667ccb444dda5e96471c83bf0107c8d5f5621bc17af986e7acd096b9ea",
       "availability": "REQUIRED"
-    },
-    {
-      "path": "docs/standard/tests/T001.json",
-      "kind": "working_file",
-      "role": "evidence",
-      "sha256": "dd263d2e44af270aaa228fe6e78f60449434d95a27f554b9d56261150a10cf49",
-      "availability": "REQUIRED"
-    },
-    {
-      "path": "docs/standard/results/R_T001_BINARY_PULSAR.json",
-      "kind": "working_file",
-      "role": "evidence",
-      "sha256": "91a06cdb1cab91b0667fc726a034f7055249f01b87a903d7626478dcf8db4376",
-      "availability": "REQUIRED"
     }
   ],
   "entrypoints": [
@@ -336,9 +320,7 @@
     "docs/core/03_lanes/scalar_tensor/t001_binary_pulsar_constraint.py",
     "docs/core/02_equations/covariant/uet_scalar_tensor_mapping.py",
     "docs/data/external/gravity/binary_pulsar_def/zfksw22_def_bounds.csv",
-    "docs/core/01_contracts/BINARY_PULSAR_PILOT_SOURCES.md",
-    "docs/standard/tests/T001.json",
-    "docs/standard/results/R_T001_BINARY_PULSAR.json"
+    "docs/core/01_contracts/BINARY_PULSAR_PILOT_SOURCES.md"
   ],
   "claim_boundary": "Methodological coverage of the T001 constraint calculation only. Evidence level is set in docs/standard (L2 CONSTRAINT). Not a prediction and not a falsification test while xi_c is free.",
   "next_action": "Cross-check transcribed values against the journal version; extend to beta0 < -4.8 only with an additional registered source."

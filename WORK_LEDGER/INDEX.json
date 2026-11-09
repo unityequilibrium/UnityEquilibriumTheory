@@ -5,11 +5,11 @@
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
     "sources": 74,
-    "entries": 792,
+    "entries": 793,
     "by_stream": {
       "book-history": 94,
       "operations": 112,
-      "research": 586
+      "research": 587
     },
     "exact_duplicates": 0,
     "review_entries": 2
@@ -384,8 +384,8 @@
     },
     {
       "path": "2026/2026-11-09.md",
-      "sha256": "a7630e7adc81d601c1b781daa070290f86bda9c506d3ddf5ae69447124bc9d59",
-      "entries": 8
+      "sha256": "972f736e30674fc8556b38845b19f5aad8d6f0043dc8e0bbf2218f141f85c068",
+      "entries": 9
     },
     {
       "path": "2026-08-14.md",
@@ -16184,9 +16184,29 @@
       "source": "2026/2026-11-09.md",
       "anchor": "change-report-for-the-author-8-9-nov-work",
       "start_line": 123,
-      "end_line": 136,
+      "end_line": 137,
       "title": "Change report for the author (8-9 Nov work)",
-      "entry_sha256": "6168e2edde7f2af8e16d7f6e7e252c81f5751212da2bce594c4e1dc19673b3c9",
+      "entry_sha256": "5a982901c98140b0a16465e952b8197c4dba92668aaeb6676b2383291f2bd45c",
+      "stream": "research",
+      "areas": [
+        "research-standards"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-09",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-09.md#repoint-producer-commits-to-main-and-retire-the-pre-port-branch",
+      "source": "2026/2026-11-09.md",
+      "anchor": "repoint-producer-commits-to-main-and-retire-the-pre-port-branch",
+      "start_line": 138,
+      "end_line": 153,
+      "title": "Repoint producer commits to main and retire the pre-port branch",
+      "entry_sha256": "32a389b3468504bd14ff4cc3a98ada8769594032c98b90dc50d0805bbb7f014f",
       "stream": "research",
       "areas": [
         "research-standards"
