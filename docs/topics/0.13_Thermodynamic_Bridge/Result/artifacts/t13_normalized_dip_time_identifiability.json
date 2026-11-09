@@ -1,0 +1,93 @@
+{
+  "schema_version": "t13-normalized-dip-time-identifiability-v1",
+  "artifact": "t13_normalized_dip_time_identifiability",
+  "generated_on": "2026-09-24",
+  "status": "PASS_CONDITIONAL_DIP_TIME_IDENTIFIABILITY",
+  "major_result": {
+    "major_result_id": "T13_NORMALIZED_TTG_DIP_TIME_INITIAL_STATE_CONTRACT",
+    "topic": "0.13_Thermodynamic_Bridge",
+    "closure_level": "CLOSED_FOR_LANE",
+    "what_is_closed": [
+      "a nonzero constant Phi-to-temperature scale cancels from the normalized TTG signal and cannot affect its dip time",
+      "for the same damped-mode poles, the first dip differs between a damped-cosine initial rate and a zero-initial-rate response",
+      "the source-defined dip speed is a half-period distance divided by dip time and is not generally the PDE front speed"
+    ],
+    "equation_or_mapping": {
+      "normalized_scale_invariance": "y(t)=alpha*x(t)/(alpha*x(0))=x(t)/x(0), alpha != 0 constant",
+      "source_damped_mode": "x(t)=exp(-gamma*t)*cos(omega*t); t_d=(pi-atan(gamma/omega))/omega",
+      "same_poles_zero_initial_rate": "x(t)=exp(-gamma*t)*(cos(omega*t)+(gamma/omega)*sin(omega*t)); t_d=pi/omega",
+      "source_speed": "v_p=Lambda/(2*t_d)",
+      "front_speed_warning": "sqrt(M_Phi*kappa_Phi/tau_Phi) is a characteristic front speed; equality to v_p requires a separately derived source/initial-state and dispersion mapping"
+    },
+    "units": {
+      "gamma": "s^-1 in dimensional lane; normalized audit uses arbitrary inverse-time units",
+      "omega": "s^-1 in dimensional lane; normalized audit uses arbitrary inverse-time units",
+      "dip_time": "s",
+      "grating_period": "m",
+      "dip_speed": "m s^-1",
+      "normalized_response": "dimensionless"
+    },
+    "derivation_class": "closed-form damped-mode derivation plus synthetic algebraic checks",
+    "observable": "normalized TTG first-dip time and source-defined propagation-speed diagnostic",
+    "data_role": "ANALYTIC_STRUCTURAL_COMPARATOR_NOT_TARGET_FIT_OR_CALIBRATION",
+    "evidence_artifacts": [
+      "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/thermal_no_fit_linearized_dispersion.json",
+      "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/matter_space_thermal_source_review.json",
+      "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/ding_2022_ttg_preprocessing_boundary_audit.json"
+    ],
+    "verification_status": "PASS_CONDITIONAL_DIP_TIME_IDENTIFIABILITY",
+    "open_blockers": [
+      "the physical pump-to-Phi/Pi initial-state map and dimensional coefficient provenance are not closed",
+      "the figure-derived experimental points remain mixed with simulated curves and author numeric rows are unavailable",
+      "the published smoothing/noise protocol is not sufficient to reconstruct pointwise uncertainty or filter transfer"
+    ],
+    "dependency_unlocked": "A preregistration contract for an alpha-independent normalized dip-time/velocity comparison; no physical prediction or Core/Full Topic 13 unlock",
+    "claim_boundary": "This is a conditional single-mode structural result. The synthetic sensitivity values are not Ding measurements or UET physical predictions."
+  },
+  "verification": {
+    "checks": {
+      "source_declares_dip_speed_relation": true,
+      "candidate_dispersion_contains_damping_and_oscillation": true,
+      "alpha_cancels_for_nonzero_constant_scale": true,
+      "both_initializations_have_distinct_first_dips": true,
+      "no_target_or_holdout_inputs_read": true
+    },
+    "input_hashes": {
+      "thermal_no_fit_linearized_dispersion_sha256": "a2b2e2b9bae0031f1c7c47ce8f88cc79ba428388100ef01530f735bd66ab9f2e",
+      "matter_space_thermal_source_review_sha256": "081dfda8f49939a4376d8cb27b05ed1500f39d8ead0b61e407d01c68049a3157"
+    },
+    "source_damped_cos": {
+      "gamma_over_omega": 0.5,
+      "damped_cos_dip_time_over_zero_rate_dip_time": 0.8524163823495667,
+      "damped_cos_dip_speed_over_zero_rate_dip_speed": 1.1731355951227025
+    },
+    "synthetic_initial_condition_sensitivity": [
+      {
+        "gamma_over_omega": 0.1,
+        "damped_cos_dip_time_over_zero_rate_dip_time": 0.9682744825694465,
+        "damped_cos_dip_speed_over_zero_rate_dip_speed": 1.0327650041405259
+      },
+      {
+        "gamma_over_omega": 0.25,
+        "damped_cos_dip_time_over_zero_rate_dip_time": 0.9220208696226306,
+        "damped_cos_dip_speed_over_zero_rate_dip_speed": 1.0845741489661562
+      },
+      {
+        "gamma_over_omega": 0.5,
+        "damped_cos_dip_time_over_zero_rate_dip_time": 0.8524163823495667,
+        "damped_cos_dip_speed_over_zero_rate_dip_speed": 1.1731355951227025
+      },
+      {
+        "gamma_over_omega": 1.0,
+        "damped_cos_dip_time_over_zero_rate_dip_time": 0.75,
+        "damped_cos_dip_speed_over_zero_rate_dip_speed": 1.3333333333333333
+      }
+    ],
+    "source_backed_relation_id": "TTG-SPEED-001",
+    "front_speed_identified_with_dip_speed": false,
+    "alpha_calibrated": false,
+    "target_data_used": false,
+    "holdout_accessed": false,
+    "claim_promotion": false
+  }
+}

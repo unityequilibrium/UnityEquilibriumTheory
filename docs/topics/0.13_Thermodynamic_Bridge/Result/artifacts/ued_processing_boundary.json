@@ -1,0 +1,148 @@
+{
+  "schema_version": "t13-ued-processing-boundary-v1",
+  "generated_at": "2026-09-24T08:10:21.432432+00:00",
+  "major_result_id": "T13_UED_PREPROCESSING_OPERATOR_BOUNDARY",
+  "topic": "0.13",
+  "owner_topic": "0.13_Thermodynamic_Bridge",
+  "closure_level": "PARTIAL",
+  "what_is_closed": [
+    "Pinned notebook uses five rotations before paired masking and saved averages",
+    "Ideal unmasked five/six harmonic response and paired-ratio identity checked"
+  ],
+  "equation_or_mapping": {
+    "ideal_harmonic_gain": "H_m(N)=sum_i exp(i*m*i*pi/3)/N; N=5 or 6",
+    "processed_ratio": "sum_i M_i ON_i / sum_i M_i OFF_i = sum_i w_i (ON_i/OFF_i)",
+    "weights": "w_i=M_i OFF_i/sum_j M_j OFF_j",
+    "frozen_support_forward_contract": "I_processed=W I_raw; covariance=W Sigma_raw W^T",
+    "boundary": "W depends on geometry and masks; signal-dependent masks preclude a global fixed linear operator"
+  },
+  "units": {
+    "angle": "degrees in notebook; radians in ideal harmonic diagnostic",
+    "threshold": "100 in source image-intensity units, not SI energy",
+    "gain_and_ratio": "dimensionless"
+  },
+  "derivation_class": "STATIC_SOURCE_AUDIT_AND_FINITE_SUM_IDENTITIES_NOT_UET_PHYSICS",
+  "observable": "processed paired diffraction intensity",
+  "data_role": "SOURCE_METHOD_DIAGNOSTIC",
+  "source": {
+    "commit": "7f7036bfda28f9330f19b40e57f4edf464b67d64",
+    "repository": "https://github.com/remiclaude/UED_processing",
+    "notebook_executed": false,
+    "pickle_loaded": false,
+    "source_redistribution": "not included; license not established",
+    "archive_execution_lineage": "UNVERIFIED",
+    "cell_locators": [
+      {
+        "zero_based_cell": 19,
+        "source_sha256": "c4e9b5dfe2d53fafe8a20aa6ce27ad78867a10197d182050bc3bb652aca181df"
+      },
+      {
+        "zero_based_cell": 20,
+        "source_sha256": "f00bdd064ef26455a8b45edaef022ca0b04db87f8b585030226d56677694d629"
+      },
+      {
+        "zero_based_cell": 24,
+        "source_sha256": "3b54299873ed6e5c858de46816109d8d173f0bd11ebdabe55b8fe10fe5873ac1"
+      }
+    ]
+  },
+  "source_checks": {
+    "rotation_count_five": true,
+    "comment_six_fold": true,
+    "angle_step_60_degrees": true,
+    "bilinear_interpolation": true,
+    "paired_nan_mask": true,
+    "threshold_100_both_channels": true,
+    "rotation_axis_mean": true,
+    "save_uses_averages": true,
+    "declared_gaussian_sigma_zero": true,
+    "save_call_present": true
+  },
+  "ideal_unmasked_gains": [
+    {
+      "harmonic": 0,
+      "five_magnitude": 1.0,
+      "six_magnitude": 1.0
+    },
+    {
+      "harmonic": 1,
+      "five_magnitude": 0.20000000000000007,
+      "six_magnitude": 1.4918173637706032e-16
+    },
+    {
+      "harmonic": 2,
+      "five_magnitude": 0.20000000000000015,
+      "six_magnitude": 2.570618530900423e-16
+    },
+    {
+      "harmonic": 3,
+      "five_magnitude": 0.2,
+      "six_magnitude": 3.572918131907427e-16
+    },
+    {
+      "harmonic": 4,
+      "five_magnitude": 0.1999999999999997,
+      "six_magnitude": 5.394714207615781e-16
+    },
+    {
+      "harmonic": 5,
+      "five_magnitude": 0.19999999999999918,
+      "six_magnitude": 6.965365404720337e-16
+    },
+    {
+      "harmonic": 6,
+      "five_magnitude": 1.0,
+      "six_magnitude": 1.0
+    }
+  ],
+  "manufactured_witnesses": {
+    "ratio_of_averages": 1.6,
+    "weighted_ratio": 1.6,
+    "unweighted_mean_ratio": 1.5,
+    "threshold_crossing": [
+      {
+        "first_on": 99.999,
+        "retained_count": 1,
+        "ratio": 2.0
+      },
+      {
+        "first_on": 100.001,
+        "retained_count": 2,
+        "ratio": 1.400002
+      }
+    ],
+    "role": "synthetic algebra tests, not experimental findings"
+  },
+  "verification_status": "SOURCE_PATH_VERIFIED_PUBLISHED_ARRAY_LINEAGE_OPEN",
+  "controlling_blocker": "published_array_processing_lineage_and_detector_operator",
+  "open_blockers": [
+    "exact raw-cut pooling and processing revision for published arrays",
+    "rotation/interpolation masks and detector covariance for forward response",
+    "registration and finite-patch response uncertainty",
+    "independent physical Phi normalization and transport matching"
+  ],
+  "next_action": "Replay declared raw-cut processing with source-locked parameters and compare saved arrays; no best-fit rotation selection",
+  "dependency_unlocked": [],
+  "full_core_unlock": false,
+  "global_claim_promotion": false,
+  "claim_boundary": "Does not establish that the archive used this revision or explain measured residuals. No correction, fitted alpha, TTG validation or change to separate He-4 acceptance.",
+  "closure_controls_unchanged": {
+    "docs/core/07_artifacts/topic13/t13_topic13_closure_matrix.json": "9545138da34726bba60c3e8af29714d577f6579b2cb0489bbba94834f4cb45e5",
+    "docs/core/07_artifacts/topic13/t13_full_core_ready_acceptance_audit.json": "139896bc6a5146e11e03ad456d2cb402b1b18da7403cf988b79d2428990dc01c"
+  },
+  "holdout_access": "This runner reads only the explicitly hashed notebook, two status controls and its own code/tests; not a repository-wide audit.",
+  "evidence_artifacts": [
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/ued_treat_pickle_7f7036b.ipynb",
+      "sha256": "1492289fde53f4cadeacb7e4132344c899a660c31fad23a305f4024b1c2c7b52"
+    },
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/Research_UED_Processing_Boundary.py",
+      "sha256": "f952f630042a4a0d0ac17afefb9fcb3ab1fbb7e0b2e88b8fd5f21b25f1892f10"
+    },
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/test_ued_processing_boundary.py",
+      "sha256": "6a3b372454dad180de1c102bb918f20a4993f52d7406c6d42751e9f76d6692d1"
+    }
+  ]
+}

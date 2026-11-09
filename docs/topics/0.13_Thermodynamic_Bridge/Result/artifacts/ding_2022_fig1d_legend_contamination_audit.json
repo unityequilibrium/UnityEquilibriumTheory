@@ -1,0 +1,215 @@
+{
+  "schema_version": "t13-ding-fig1d-legend-audit-v1",
+  "artifact": "ding_2022_fig1d_legend_contamination_audit",
+  "generated_on": "2026-09-24",
+  "status": "PASS_LEGEND_CONTAMINATION_DIAGNOSTIC_ONLY",
+  "major_result": {
+    "major_result_id": "T13_DING_FIG1D_BLUE_LEGEND_CONTAMINATION",
+    "topic": "0.13_Thermodynamic_Bridge",
+    "closure_level": "PARTIAL",
+    "what_is_closed": [
+      "all 10 prior large adjacent blue-mask jumps disappear in a separate challenger extraction after exclusion of the visually located blue legend swatch/line",
+      "the declared diagnostic threshold and source image are unchanged"
+    ],
+    "equation_or_mapping": {
+      "axis_map": "time_ps=(pixel_x-left)/(right-left)*1200",
+      "signal_map": "normalized_signal=1-(pixel_y-top)/(bottom-top)*1.2",
+      "baseline_extractor": "median blue-mask y pixel per x column",
+      "challenger_only_change": "exclude blue-mask pixels inside the manually inspected legend ROI; do not interpolate missing columns"
+    },
+    "units": {
+      "pixel_x": "pixel",
+      "pixel_y": "pixel",
+      "time": "ps",
+      "normalized_signal": "dimensionless"
+    },
+    "derivation_class": "read-only source-pixel extraction sensitivity audit",
+    "observable": "Ding 2022 Fig. 1d blue figure-derived normalized response mask",
+    "data_role": "FIGURE_DERIVED_NORMALIZED_COMPARISON_NOT_RAW_SOURCE",
+    "evidence_artifacts": [
+      "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/ding_2022_fig1d_pixel_quality_audit.json",
+      "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/ding_2022_fig1d_digitized_manifest.json",
+      "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/ding_2022_fig1.png"
+    ],
+    "verification_status": "PASS_LEGEND_CONTAMINATION_DIAGNOSTIC_ONLY",
+    "open_blockers": [
+      "the published figure combines measured points and simulated curves; the blue mask has not separated these roles",
+      "the challenger trace is not raw author data and is not qualified for dip-time or velocity inference",
+      "authorized raw response rows, graphite Phi normalization, independent alpha_Phi_K, and physical transport remain open"
+    ],
+    "dependency_unlocked": "No physical dependency; permits a separate marker-versus-curve extraction study only",
+    "claim_boundary": "The prior pixel jumps are attributable to legend contamination under this figure-mask diagnostic. This does not identify a physical discontinuity or validate UET."
+  },
+  "verification": {
+    "checks": {
+      "source_png_hash_matches_manifest": true,
+      "source_csv_hash_matches_manifest": true,
+      "baseline_replay_matches_stored_blue_rows": true,
+      "baseline_jump_count_matches_prior_audit": true,
+      "legend_roi_contains_expected_blue_pixels": true,
+      "challenger_has_no_large_adjacent_jump": true
+    },
+    "input_hashes": {
+      "source_png_sha256": "d88faf2f5d7050c07a2c1bd820a16bdffa836d3d887b4d88b6be7634eed36ac4",
+      "source_csv_sha256": "6f468401d1f911e327b5e51f19f454cecdd0c2ecff933ef9522e67baae14a3a9",
+      "source_manifest_sha256": "a645f158a9d3c408ed9aa9f15ca368ac2df562f9e7be9b2fd65ac64c45412ed8",
+      "source_digitizer_sha256": "92aa1e064e07b550cf8a54170e982d55eebfd71277f7ee76bda41325628a685e",
+      "prior_pixel_audit_sha256": "35181c33ff270faba65e39532025acd37992872da360afff6b8baf303a2f15c8"
+    },
+    "legend_roi_pixels": {
+      "x_min": 560,
+      "x_max": 597,
+      "y_min": 296,
+      "y_max": 307
+    },
+    "legend_roi_selection": "manually inspected against the archived Fig. 1d raster after the prior audit flagged the same columns; post hoc sensitivity check, not preregistered",
+    "uncertainty_and_threshold": {
+      "single_row_normalized_half_width": 0.011428571428571429,
+      "pairwise_bound": 0.022857142857142857,
+      "gross_jump_triage_threshold": 0.22857142857142856,
+      "threshold_changed": false
+    },
+    "baseline": {
+      "blue_row_count": 172,
+      "large_adjacent_jump_count": 10,
+      "large_adjacent_jumps": [
+        {
+          "pixel_x_from": 562,
+          "pixel_x_to": 563,
+          "absolute_step": 0.6885714285714286
+        },
+        {
+          "pixel_x_from": 563,
+          "pixel_x_to": 564,
+          "absolute_step": 0.23999999999999988
+        },
+        {
+          "pixel_x_from": 583,
+          "pixel_x_to": 584,
+          "absolute_step": 0.48571428571428577
+        },
+        {
+          "pixel_x_from": 584,
+          "pixel_x_to": 585,
+          "absolute_step": 0.47999999999999987
+        },
+        {
+          "pixel_x_from": 586,
+          "pixel_x_to": 587,
+          "absolute_step": 0.48285714285714276
+        },
+        {
+          "pixel_x_from": 587,
+          "pixel_x_to": 588,
+          "absolute_step": 0.4828571428571429
+        },
+        {
+          "pixel_x_from": 590,
+          "pixel_x_to": 591,
+          "absolute_step": 0.942857142857143
+        },
+        {
+          "pixel_x_from": 591,
+          "pixel_x_to": 592,
+          "absolute_step": 0.47142857142857153
+        },
+        {
+          "pixel_x_from": 592,
+          "pixel_x_to": 593,
+          "absolute_step": 0.46571428571428575
+        },
+        {
+          "pixel_x_from": 594,
+          "pixel_x_to": 595,
+          "absolute_step": 0.9371428571428572
+        }
+      ]
+    },
+    "challenger": {
+      "blue_row_count": 159,
+      "large_adjacent_jump_count": 0,
+      "large_adjacent_jumps": [],
+      "legend_blue_pixels_excluded": 30,
+      "columns_without_nonlegend_blue_pixel": [
+        566,
+        578,
+        579,
+        580,
+        581,
+        582,
+        583,
+        588,
+        589,
+        590,
+        595,
+        596,
+        597
+      ],
+      "columns_with_changed_median": [
+        {
+          "pixel_x": 563,
+          "baseline_pixel_y": 344.0,
+          "challenger_pixel_y": 464.0
+        },
+        {
+          "pixel_x": 564,
+          "baseline_pixel_y": 302.0,
+          "challenger_pixel_y": 464.5
+        },
+        {
+          "pixel_x": 565,
+          "baseline_pixel_y": 301.5,
+          "challenger_pixel_y": 464.0
+        },
+        {
+          "pixel_x": 584,
+          "baseline_pixel_y": 386.0,
+          "challenger_pixel_y": 471.0
+        },
+        {
+          "pixel_x": 585,
+          "baseline_pixel_y": 470.0,
+          "challenger_pixel_y": 470.5
+        },
+        {
+          "pixel_x": 586,
+          "baseline_pixel_y": 470.0,
+          "challenger_pixel_y": 470.5
+        },
+        {
+          "pixel_x": 587,
+          "baseline_pixel_y": 385.5,
+          "challenger_pixel_y": 470.0
+        },
+        {
+          "pixel_x": 591,
+          "baseline_pixel_y": 466.0,
+          "challenger_pixel_y": 466.5
+        },
+        {
+          "pixel_x": 592,
+          "baseline_pixel_y": 383.5,
+          "challenger_pixel_y": 466.0
+        },
+        {
+          "pixel_x": 593,
+          "baseline_pixel_y": 465.0,
+          "challenger_pixel_y": 465.5
+        },
+        {
+          "pixel_x": 594,
+          "baseline_pixel_y": 465.0,
+          "challenger_pixel_y": 465.5
+        }
+      ],
+      "interpolation_or_smoothing": false,
+      "fit_or_parameter_tuning": false,
+      "written_over_source_csv": false
+    },
+    "measured_points_separated_from_simulation": false,
+    "dip_time_or_velocity_inferred": false,
+    "holdout_accessed": false,
+    "source_data_modified": false,
+    "claim_promotion": false
+  }
+}

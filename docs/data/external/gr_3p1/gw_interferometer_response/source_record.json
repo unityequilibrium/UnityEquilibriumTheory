@@ -1,0 +1,48 @@
+{
+  "schema_version": "1.0",
+  "source_id": "liang_gong_weinstein_zhang_zhang_2019_interferometer_response",
+  "title": "Frequency response of space-based interferometric gravitational-wave detectors",
+  "authors": [
+    "Dicong Liang",
+    "Yungui Gong",
+    "Alan J. Weinstein",
+    "Chao Zhang",
+    "Chunyu Zhang"
+  ],
+  "year": 2019,
+  "journal": "Physical Review D 99, 104027",
+  "doi": "10.1103/PhysRevD.99.104027",
+  "arxiv_id": "1901.09624",
+  "url": "https://arxiv.org/abs/1901.09624",
+  "source_role": "primary standard-physics formula reference",
+  "used_scope": [
+    "plane-wave plus/cross polarization tensors",
+    "equal-arm interferometer frequency-dependent transfer tensor",
+    "single-round-trip antenna response for equal arms without optical cavities",
+    "low-frequency limit of the arm transfer function"
+  ],
+  "formula_locators": [
+    "Eqs. (2)-(6): polarization tensors, response function, detector tensor, and arm transfer function",
+    "Eq. (6): sinc/exponential equal-arm transfer with f*=c/(2*pi*L)",
+    "Sec. II.3: low-frequency limit T -> 1"
+  ],
+  "not_used_for": [
+    "UET coefficient derivation or fitting",
+    "external detector data or calibration",
+    "nonlinear radiation extraction",
+    "optical-cavity or detector-control response",
+    "claim that UET derives Einstein equations"
+  ],
+  "local_payload": "metadata-only source record; no article payload redistributed",
+  "accessed_on": "2026-09-25",
+  "supplementary_constants": [
+    {
+      "constant": "speed of light in vacuum",
+      "value": 299792458,
+      "unit": "m s^-1",
+      "origin": "exact SI defining constant",
+      "source": "https://www.bipm.org/en/si-base-units/metre"
+    }
+  ],
+  "claim_boundary": "This source supports the standard equal-arm antenna response only; it provides no UET physics evidence or detector-specific calibration."
+}

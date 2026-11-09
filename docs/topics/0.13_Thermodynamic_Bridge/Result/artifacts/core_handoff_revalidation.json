@@ -1,0 +1,307 @@
+{
+  "schema_version": "t13-core-handoff-revalidation-v1",
+  "generated_at": "2026-09-24T08:33:07.409350+00:00",
+  "major_result_id": "T13_CORE_HANDOFF_REVALIDATION",
+  "topic": "0.13",
+  "closure_level": "PARTIAL",
+  "what_is_closed": "Current focused test outcomes and stale evidence links measured; prescribed-matter scope separated from self-consistent evolution",
+  "equation_or_mapping": "Prescribed T_ab -> ADM projections -> GH RHS; not an evolved conserved matter solution",
+  "units": "Existing geometric/natural/SI-projection lanes unchanged",
+  "derivation_class": "READ_ONLY_INTEGRATION_REVALIDATION",
+  "observable": "numerical constraint/source diagnostics, not a detector observable",
+  "data_role": "INTERNAL_NO_NEW_EXPERIMENTAL_INPUT",
+  "verification_status": "BLOCKED_HANDOFF_REVALIDATION",
+  "current_parent_status": "PARTIAL_CURVED_3P1_GH_PERIODIC_PRESCRIBED_MATTER_READY",
+  "current_parent_open_blockers": [
+    "constraint_preserving_boundaries",
+    "dimensional_observable_mapping"
+  ],
+  "t13_acceptance_record_status": "PASS_T13_FULL_CORE_READY_ACCEPTANCE",
+  "t13_acceptance_scope": "Acceptance is limited to the bounded internal O(2)/He-4 Core bridge. Ding figure-derived TTG rows remain comparison-only, raw-author/graphite external validation remains open, the original conserved-gradient baseline remains blocked, and global UET closure remains false.",
+  "t13_acceptance_reverified": false,
+  "parent_evidence": [
+    {
+      "path": "docs/core/07_artifacts/verification/curved_3p1_adm_constraint_interface_audit.json",
+      "sha256": "2e9a6dc853b3740925d027c2c5ecbdbcf42606cff9c323e6e14bef330b2cd9c1",
+      "actual_sha256": "2e9a6dc853b3740925d027c2c5ecbdbcf42606cff9c323e6e14bef330b2cd9c1",
+      "hash_matches": true
+    },
+    {
+      "path": "docs/core/07_artifacts/correspondence/curved_3p1_adm_constraint_formula_audit.json",
+      "sha256": "82fc6d2a0fe51455500fee001f99bd64a1a9ba5f962181e457542b03f6236301",
+      "actual_sha256": "82fc6d2a0fe51455500fee001f99bd64a1a9ba5f962181e457542b03f6236301",
+      "hash_matches": true
+    },
+    {
+      "path": "docs/core/07_artifacts/verification/curved_3p1_geometry_operator_verification.json",
+      "sha256": "f9c695ce884895e40c22ab186bca690dbc8c7e1b7a8ee9b523b0ed38101c5074",
+      "actual_sha256": "200d35e27e19cf421bf08d16da643c2935e70df50a4daa17a4f4e61d77a7a69a",
+      "hash_matches": false
+    },
+    {
+      "path": "docs/core/07_artifacts/correspondence/curved_3p1_geometry_operator_formula_audit.json",
+      "sha256": "90075accbbb0926943a4871f5345b7ec734c1ab8b4ffe2d2290d91b8319c6f32",
+      "actual_sha256": "359f58dff90e0e17529a855ff557c38abeb4ac1a2f86b897c93456cb7def7744",
+      "hash_matches": false
+    },
+    {
+      "path": "docs/core/07_artifacts/verification/curved_3p1_adm_evolution_operator_verification.json",
+      "sha256": "374ec8c32e3f6ef8c1a94b0f2f279a759bdc5e9d20fdf4157f4486764eb1ce48",
+      "actual_sha256": "374ec8c32e3f6ef8c1a94b0f2f279a759bdc5e9d20fdf4157f4486764eb1ce48",
+      "hash_matches": true
+    },
+    {
+      "path": "docs/core/07_artifacts/archive/curved_3p1_fixed_gauge_adm_hyperbolicity_no_go.json",
+      "sha256": "ae9cd0c7c1b952ef2afea9d32a249b1f21aec27be82701efa945ab7623804ca8",
+      "actual_sha256": "ae9cd0c7c1b952ef2afea9d32a249b1f21aec27be82701efa945ab7623804ca8",
+      "hash_matches": true
+    },
+    {
+      "path": "docs/core/07_artifacts/correspondence/curved_3p1_adm_evolution_formula_audit.json",
+      "sha256": "1dd8a5d83248dfec0df506249d0180a832a770ca742d823223ca5d504502c681",
+      "actual_sha256": "1dd8a5d83248dfec0df506249d0180a832a770ca742d823223ca5d504502c681",
+      "hash_matches": true
+    },
+    {
+      "path": "docs/core/07_artifacts/gates/curved_3p1_formulation_selection_gate.json",
+      "sha256": "b17314415cfc5c227739e6b728f7e3a82d23bbc6d26173862598b0cc276caee1",
+      "actual_sha256": "b17314415cfc5c227739e6b728f7e3a82d23bbc6d26173862598b0cc276caee1",
+      "hash_matches": true
+    },
+    {
+      "path": "docs/core/07_artifacts/verification/curved_3p1_gh_principal_system_verification.json",
+      "sha256": "df85f18aa30e14f65f59584e4d4602c30adfe4b5942c0a9657084593fe3f1ef6",
+      "actual_sha256": "c2fd2dd9dced796fad21d544b5eef248b3da1e1f09c33dc240532ef2eae567a1",
+      "hash_matches": false
+    },
+    {
+      "path": "docs/core/07_artifacts/correspondence/curved_3p1_gh_principal_system_formula_audit.json",
+      "sha256": "d729c95fbf543af9bd835606843ffc196f0595e89f9416816d4d85d6ea0cab41",
+      "actual_sha256": "c56ec9f86673a50069b3ed4252da6a93e125dcc127c5dd9433ebe10e878b6f64",
+      "hash_matches": false
+    },
+    {
+      "path": "docs/core/07_artifacts/gates/curved_3p1_gh_branch_gate.json",
+      "sha256": "4c91c7c712c71fd0be31dcbbd17fa78472e55e527803da2a1b2e9b8210cc0c1b",
+      "actual_sha256": "c19794ae143f8c3f8338c53d82063752762aa80225f89fb3aae2f71bf7f74fca",
+      "hash_matches": false
+    },
+    {
+      "path": "docs/core/07_artifacts/verification/curved_3p1_gh_nonlinear_vacuum_rhs_verification.json",
+      "sha256": "7b6e7ae7ff020f60389323871f23468b7d607cc6c123f10057621c08a1d3f21e",
+      "actual_sha256": "85c1acb49a0c27bbba7c65e495bdfde5c758ceed0b1d202ec5d3641610d352a6",
+      "hash_matches": false
+    },
+    {
+      "path": "docs/core/07_artifacts/correspondence/curved_3p1_gh_nonlinear_vacuum_formula_audit.json",
+      "sha256": "a7f53a0cc7ad1aeed666b6fd8cbd296b3f67c8e447f23e491551774349457c3a",
+      "actual_sha256": "23cca7db0428bfc76959ab4af22704a97e1aab4bb44119b3843ae0512bd6ae90",
+      "hash_matches": false
+    },
+    {
+      "path": "docs/core/07_artifacts/gates/curved_3p1_gh_nonlinear_vacuum_gate.json",
+      "sha256": "34054008efffb5b1233320aae346ee6c7a4ed99a5bb4c9e8e8b4a3e9caf64640",
+      "actual_sha256": "b0ed29977920fc17d7b99b973a4a738ac63b7b3e9f7c7284833a9fabf2c4bb5d",
+      "hash_matches": false
+    },
+    {
+      "path": "docs/core/07_artifacts/verification/curved_3p1_gh_time_evolution_verification.json",
+      "sha256": "003545922ce8306b00d1f63504c7286f2b8e096770e9eed997e12268b4bd2d7e",
+      "actual_sha256": "e0a1c00213e4277498c43d7c7088a1c6d557720e041e0a84a2fc07bce675586d",
+      "hash_matches": false
+    },
+    {
+      "path": "docs/core/07_artifacts/correspondence/curved_3p1_gh_time_evolution_formula_audit.json",
+      "sha256": "81cb7eb59480903a720ec9a3a789cfc54a791586056bca25700cf7c4793ff97a",
+      "actual_sha256": "af7089f4d5112bd769435d277d5ffd07749745abe88564860c292f8989731b95",
+      "hash_matches": false
+    },
+    {
+      "path": "docs/core/07_artifacts/gates/curved_3p1_gh_time_evolution_gate.json",
+      "sha256": "2796271840f1fb3c902f7f9c356ca72ebb2543f650ed32ffdc4e982fe7dc418b",
+      "actual_sha256": "e0826da6f2bb8e212845950c8c752f39e8449754739e73b5736d31d1503d27b8",
+      "hash_matches": false
+    },
+    {
+      "path": "docs/core/07_artifacts/verification/curved_3p1_topic13_matter_wiring_verification.json",
+      "sha256": "9f7bef2168ad55ce087ffa905ac99453f5666e54e580b4c7aa1f6e132902b3fa",
+      "actual_sha256": "9f7bef2168ad55ce087ffa905ac99453f5666e54e580b4c7aa1f6e132902b3fa",
+      "hash_matches": true
+    },
+    {
+      "path": "docs/core/07_artifacts/correspondence/curved_3p1_topic13_matter_wiring_formula_audit.json",
+      "sha256": "c7a47bbfb0b230577812db94bf55178488edafb3b8d53787f296800211e8ca27",
+      "actual_sha256": "c7a47bbfb0b230577812db94bf55178488edafb3b8d53787f296800211e8ca27",
+      "hash_matches": true
+    },
+    {
+      "path": "docs/core/07_artifacts/gates/curved_3p1_topic13_matter_wiring_gate.json",
+      "sha256": "5a41fda247597bde8ce6ba1ee7580749b5f038c6c70c87d2280d9f60aacd0ac9",
+      "actual_sha256": "5a41fda247597bde8ce6ba1ee7580749b5f038c6c70c87d2280d9f60aacd0ac9",
+      "hash_matches": true
+    }
+  ],
+  "focused_tests": {
+    "command": [
+      "<REPO>\\.venv\\Scripts\\python.exe",
+      "-B",
+      "-m",
+      "pytest",
+      "<REPO>\\docs\\core\\05_tests\\regression\\root\\test_uet_curved_3p1_constraints.py",
+      "<REPO>\\docs\\core\\05_tests\\regression\\root\\test_uet_curved_3p1_geometry.py",
+      "<REPO>\\docs\\core\\05_tests\\regression\\root\\test_uet_curved_3p1_adm_evolution.py",
+      "<REPO>\\docs\\core\\05_tests\\regression\\root\\test_uet_curved_3p1_generalized_harmonic.py",
+      "<REPO>\\docs\\core\\05_tests\\regression\\root\\test_uet_curved_3p1_gh_nonlinear_vacuum.py",
+      "<REPO>\\docs\\core\\05_tests\\regression\\root\\test_uet_curved_3p1_gh_time_evolution.py",
+      "<REPO>\\docs\\core\\05_tests\\regression\\root\\test_uet_curved_3p1_matter_wiring.py",
+      "-q",
+      "-p",
+      "no:cacheprovider"
+    ],
+    "returncode": 1,
+    "stdout": "......................F................................                  [100%]\n================================== FAILURES ===================================\n___ test_artifacts_are_stable_hash_linked_and_select_gh_without_claiming_it ___\n\n    def test_artifacts_are_stable_hash_linked_and_select_gh_without_claiming_it() -> None:\n        names = (\"curved_3p1_adm_evolution_operator_verification.json\", \"curved_3p1_fixed_gauge_adm_hyperbolicity_no_go.json\", \"curved_3p1_adm_evolution_formula_audit.json\", \"curved_3p1_formulation_selection_gate.json\")\n        generated = build_artifacts()\n        persisted = tuple(\n            json.loads(canonical_artifact_path(name).read_text(encoding=\"utf-8\"))\n            for name in names\n        )\n        for live, stored in zip(generated, persisted):\n            live.pop(\"generated_at\", None)\n            stored.pop(\"generated_at\", None)\n>           assert live == stored\nE           AssertionError: assert {'artifact': ...': False, ...} == {'artifact': ...': False, ...}\nE             \nE             Omitting 17 identical items, use -vv to show\nE             Differing items:\nE             {'source_hashes': {'docs/core/02_equations/covariant/uet_curved_3p1_adm_evolution.py': 'c841d2f1b014ecea3b4355dad3cf31...1/lindblom_et_al_2006_gh/source_record.json': 'c3812246cabdc3e4de2cb266945a0355bc0d64b7ae1d041507e764fe0199d08a', ...}} != {'source_hashes': {'docs/core/02_equations/covariant/uet_curved_3p1_adm_evolution.py': '257fdbc032fac4a4402307c68d2bf4...1/lindblom_et_al_2006_gh/source_record.json': 'c3812246cabdc3e4de2cb266945a0355bc0d64b7ae1d041507e764fe0199d08a', ...}}\nE             Use -v to get more diff\n\ndocs\\core\\05_tests\\regression\\root\\test_uet_curved_3p1_adm_evolution.py:112: AssertionError\n=========================== short test summary info ===========================\nFAILED docs/core/05_tests/regression/root/test_uet_curved_3p1_adm_evolution.py::test_artifacts_are_stable_hash_linked_and_select_gh_without_claiming_it\n1 failed, 54 passed in 12.49s\n",
+    "stderr": ""
+  },
+  "fresh_adm_comparisons": [
+    {
+      "artifact": "curved_3p1_adm_evolution_operator_verification.json",
+      "differences": [
+        {
+          "path": "/source_hashes/docs~1core~102_equations~1covariant~1uet_curved_3p1_adm_evolution.py",
+          "before": "257fdbc032fac4a4402307c68d2bf4ddec81162b5d3a051e234e445e6c539c20",
+          "after": "c841d2f1b014ecea3b4355dad3cf31bb840eae3374b0834b7e000e6739313bcb"
+        },
+        {
+          "path": "/source_hashes/docs~1scripts~1audit~1audit_uet_curved_3p1_adm_evolution.py",
+          "before": "e49e1c2060492e1e410447f71e838a430162aa15970ef2016c606b3c4c42f586",
+          "after": "d67d982904d4719bcfc4e3adeea58871b6167843b8b539dafd2405a5981cba0f"
+        }
+      ],
+      "exact_payload_match_except_generated_at": false
+    },
+    {
+      "artifact": "curved_3p1_fixed_gauge_adm_hyperbolicity_no_go.json",
+      "differences": [
+        {
+          "path": "/source_hashes/docs~1core~102_equations~1covariant~1uet_curved_3p1_adm_evolution.py",
+          "before": "257fdbc032fac4a4402307c68d2bf4ddec81162b5d3a051e234e445e6c539c20",
+          "after": "c841d2f1b014ecea3b4355dad3cf31bb840eae3374b0834b7e000e6739313bcb"
+        },
+        {
+          "path": "/source_hashes/docs~1scripts~1audit~1audit_uet_curved_3p1_adm_evolution.py",
+          "before": "e49e1c2060492e1e410447f71e838a430162aa15970ef2016c606b3c4c42f586",
+          "after": "d67d982904d4719bcfc4e3adeea58871b6167843b8b539dafd2405a5981cba0f"
+        }
+      ],
+      "exact_payload_match_except_generated_at": false
+    },
+    {
+      "artifact": "curved_3p1_adm_evolution_formula_audit.json",
+      "differences": [
+        {
+          "path": "/source_hashes/docs~1core~102_equations~1covariant~1uet_curved_3p1_adm_evolution.py",
+          "before": "257fdbc032fac4a4402307c68d2bf4ddec81162b5d3a051e234e445e6c539c20",
+          "after": "c841d2f1b014ecea3b4355dad3cf31bb840eae3374b0834b7e000e6739313bcb"
+        },
+        {
+          "path": "/source_hashes/docs~1scripts~1audit~1audit_uet_curved_3p1_adm_evolution.py",
+          "before": "e49e1c2060492e1e410447f71e838a430162aa15970ef2016c606b3c4c42f586",
+          "after": "d67d982904d4719bcfc4e3adeea58871b6167843b8b539dafd2405a5981cba0f"
+        }
+      ],
+      "exact_payload_match_except_generated_at": false
+    },
+    {
+      "artifact": "curved_3p1_formulation_selection_gate.json",
+      "differences": [],
+      "exact_payload_match_except_generated_at": true
+    }
+  ],
+  "adm_module_history": {
+    "git_locator": "1fd96a48ed977a473688ae8301e6e6768b14c712^:docs/core/uet_curved_3p1_adm_evolution.py",
+    "historical_sha256": "257fdbc032fac4a4402307c68d2bf4ddec81162b5d3a051e234e445e6c539c20",
+    "stored_expected_sha256": "257fdbc032fac4a4402307c68d2bf4ddec81162b5d3a051e234e445e6c539c20",
+    "historical_hash_matches_stored": true,
+    "current_sha256": "c841d2f1b014ecea3b4355dad3cf31bb840eae3374b0834b7e000e6739313bcb",
+    "complete_ast_equal": true,
+    "scope": "Text/AST comparison of one module, not proof of whole-program equivalence or license to ignore hashes"
+  },
+  "matter_contract_open_items": [
+    "matter-state time evolution",
+    "stress-energy conservation propagation",
+    "self-consistent two-fluid curved transport",
+    "numerical SI Einstein coupling provenance",
+    "constraint-preserving non-periodic boundaries",
+    "detector observable mapping"
+  ],
+  "parent_requirement_coverage": [
+    {
+      "requirement": "matter_state_time_evolution",
+      "explicitly_open_in_matter_contract": true,
+      "explicit_parent_requirement": "NOT_LISTED"
+    },
+    {
+      "requirement": "stress_energy_conservation_propagation",
+      "explicitly_open_in_matter_contract": true,
+      "explicit_parent_requirement": "NOT_LISTED"
+    },
+    {
+      "requirement": "self_consistent_two_fluid_curved_transport",
+      "explicitly_open_in_matter_contract": true,
+      "explicit_parent_requirement": "NOT_LISTED"
+    },
+    {
+      "requirement": "numerical_si_einstein_coupling_provenance",
+      "explicitly_open_in_matter_contract": true,
+      "explicit_parent_requirement": "NOT_LISTED"
+    }
+  ],
+  "controlling_blocker": "stale_core_provenance_and_prescribed_vs_conserved_matter_handoff",
+  "open_blockers": [
+    "review and regenerate ADM/source provenance plus downstream parent links",
+    "make matter evolution/conservation requirements explicit in parent acceptance",
+    "constraint-preserving boundaries and dimensional observable mapping remain open"
+  ],
+  "next_action": "Core owner reviews exact differences and refreshes evidence in dependency order; do not bypass hash checks or relabel prescribed matter as evolved matter",
+  "dependency_unlocked": [],
+  "full_core_unlock": false,
+  "global_claim_promotion": false,
+  "core_artifacts_modified": false,
+  "claim_boundary": "Revalidates selected implementations and evidence links only. Does not withdraw the bounded He-4 record or certify full Core/GR/graphite readiness.",
+  "evidence_hashes": {
+    "docs/core/07_artifacts/gates/core_curved_3p1_parent_gate.json": "fc6fa64408d1cc0446fada2ba773c379cfb20ba1effc798587d3d089350d1969",
+    "docs/core/07_artifacts/topic13/t13_full_core_ready_acceptance_audit.json": "139896bc6a5146e11e03ad456d2cb402b1b18da7403cf988b79d2428990dc01c",
+    "docs/core/05_tests/regression/root/test_uet_curved_3p1_constraints.py": "e81a4b47992494f126636ee6bd505fcb7f950254f38b7df74d5cfc45b5f3d647",
+    "docs/core/05_tests/regression/root/test_uet_curved_3p1_geometry.py": "b9776709aeab5b0aad90b361ce5b96e1c7dd74072934c65f557cfb7001b1c14a",
+    "docs/core/05_tests/regression/root/test_uet_curved_3p1_adm_evolution.py": "82d28c5dcdaf1b140de9fcbee0b6822e9695d264a2964091f7b1f55af727b1f8",
+    "docs/core/05_tests/regression/root/test_uet_curved_3p1_generalized_harmonic.py": "0d4a3fba404b2e675fad55f53d692af545f46ad37d7ed7d7bc110b81c519357e",
+    "docs/core/05_tests/regression/root/test_uet_curved_3p1_gh_nonlinear_vacuum.py": "568cf3aff74d33383d3f501a2be7edf461b6b6adbe0c27c660c5c6081f6547e7",
+    "docs/core/05_tests/regression/root/test_uet_curved_3p1_gh_time_evolution.py": "8210bc044e8d4d7c60c8b2a9207302cce1a3a75797c9a2505eee0a317049cb45",
+    "docs/core/05_tests/regression/root/test_uet_curved_3p1_matter_wiring.py": "c86a6460c0dd4ed9e966be4452330e3d633d33e3b749d2e8731f079e38bba7f3",
+    "docs/core/07_artifacts/verification/curved_3p1_adm_constraint_interface_audit.json": "2e9a6dc853b3740925d027c2c5ecbdbcf42606cff9c323e6e14bef330b2cd9c1",
+    "docs/core/07_artifacts/correspondence/curved_3p1_adm_constraint_formula_audit.json": "82fc6d2a0fe51455500fee001f99bd64a1a9ba5f962181e457542b03f6236301",
+    "docs/core/07_artifacts/verification/curved_3p1_geometry_operator_verification.json": "200d35e27e19cf421bf08d16da643c2935e70df50a4daa17a4f4e61d77a7a69a",
+    "docs/core/07_artifacts/correspondence/curved_3p1_geometry_operator_formula_audit.json": "359f58dff90e0e17529a855ff557c38abeb4ac1a2f86b897c93456cb7def7744",
+    "docs/core/07_artifacts/verification/curved_3p1_adm_evolution_operator_verification.json": "374ec8c32e3f6ef8c1a94b0f2f279a759bdc5e9d20fdf4157f4486764eb1ce48",
+    "docs/core/07_artifacts/archive/curved_3p1_fixed_gauge_adm_hyperbolicity_no_go.json": "ae9cd0c7c1b952ef2afea9d32a249b1f21aec27be82701efa945ab7623804ca8",
+    "docs/core/07_artifacts/correspondence/curved_3p1_adm_evolution_formula_audit.json": "1dd8a5d83248dfec0df506249d0180a832a770ca742d823223ca5d504502c681",
+    "docs/core/07_artifacts/gates/curved_3p1_formulation_selection_gate.json": "b17314415cfc5c227739e6b728f7e3a82d23bbc6d26173862598b0cc276caee1",
+    "docs/core/07_artifacts/verification/curved_3p1_gh_principal_system_verification.json": "c2fd2dd9dced796fad21d544b5eef248b3da1e1f09c33dc240532ef2eae567a1",
+    "docs/core/07_artifacts/correspondence/curved_3p1_gh_principal_system_formula_audit.json": "c56ec9f86673a50069b3ed4252da6a93e125dcc127c5dd9433ebe10e878b6f64",
+    "docs/core/07_artifacts/gates/curved_3p1_gh_branch_gate.json": "c19794ae143f8c3f8338c53d82063752762aa80225f89fb3aae2f71bf7f74fca",
+    "docs/core/07_artifacts/verification/curved_3p1_gh_nonlinear_vacuum_rhs_verification.json": "85c1acb49a0c27bbba7c65e495bdfde5c758ceed0b1d202ec5d3641610d352a6",
+    "docs/core/07_artifacts/correspondence/curved_3p1_gh_nonlinear_vacuum_formula_audit.json": "23cca7db0428bfc76959ab4af22704a97e1aab4bb44119b3843ae0512bd6ae90",
+    "docs/core/07_artifacts/gates/curved_3p1_gh_nonlinear_vacuum_gate.json": "b0ed29977920fc17d7b99b973a4a738ac63b7b3e9f7c7284833a9fabf2c4bb5d",
+    "docs/core/07_artifacts/verification/curved_3p1_gh_time_evolution_verification.json": "e0a1c00213e4277498c43d7c7088a1c6d557720e041e0a84a2fc07bce675586d",
+    "docs/core/07_artifacts/correspondence/curved_3p1_gh_time_evolution_formula_audit.json": "af7089f4d5112bd769435d277d5ffd07749745abe88564860c292f8989731b95",
+    "docs/core/07_artifacts/gates/curved_3p1_gh_time_evolution_gate.json": "e0826da6f2bb8e212845950c8c752f39e8449754739e73b5736d31d1503d27b8",
+    "docs/core/07_artifacts/verification/curved_3p1_topic13_matter_wiring_verification.json": "9f7bef2168ad55ce087ffa905ac99453f5666e54e580b4c7aa1f6e132902b3fa",
+    "docs/core/07_artifacts/correspondence/curved_3p1_topic13_matter_wiring_formula_audit.json": "c7a47bbfb0b230577812db94bf55178488edafb3b8d53787f296800211e8ca27",
+    "docs/core/07_artifacts/gates/curved_3p1_topic13_matter_wiring_gate.json": "5a41fda247597bde8ce6ba1ee7580749b5f038c6c70c87d2280d9f60aacd0ac9",
+    "docs/core/02_equations/covariant/uet_curved_3p1_adm_evolution.py": "c841d2f1b014ecea3b4355dad3cf31bb840eae3374b0834b7e000e6739313bcb",
+    "docs/core/02_equations/covariant/uet_curved_3p1_matter_wiring.py": "91381c3b8d1afc286b3760f95f16f1b04a81bf784bb326c6dc052368614a5f31",
+    "docs/scripts/audit/audit_uet_curved_3p1_adm_evolution.py": "d67d982904d4719bcfc4e3adeea58871b6167843b8b539dafd2405a5981cba0f",
+    "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/Research_Core_Handoff_Revalidation.py": "4b1557911d464d0c70185edc03d4349b1a765f2f03373427f161f5ca26a023d9",
+    "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/test_core_handoff_revalidation.py": "f414163d922997d1c5a16158c8195439a43425d87c41e1b44498cec105ecc8fe"
+  }
+}

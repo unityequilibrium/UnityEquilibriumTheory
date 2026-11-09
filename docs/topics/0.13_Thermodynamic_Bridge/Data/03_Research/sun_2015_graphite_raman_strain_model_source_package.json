@@ -1,0 +1,59 @@
+{
+  "schema_version": "t13-published-raman-model-v1",
+  "source_id": "sun_holec_dunstan_2015_graphite_e2g2_strain_dft",
+  "status": "PUBLISHED_DFT_MODEL_COMPARATOR_NOT_EXPERIMENTAL_CALIBRATION",
+  "source": {
+    "title": "Graphite under uniaxial compression along the c axis: A parameter to relate out-of-plane strain to in-plane phonon frequency",
+    "authors": "Y. W. Sun, D. Holec, and D. J. Dunstan",
+    "publication": "Physical Review B 92, 094108 (2015)",
+    "doi": "10.1103/PhysRevB.92.094108",
+    "arxiv_version": "1502.04323v3",
+    "publisher_url": "https://journals.aps.org/prb/abstract/10.1103/PhysRevB.92.094108",
+    "full_text_url": "https://arxiv.org/html/1502.04323v3",
+    "retrieved_on": "2026-09-25",
+    "local_full_text_copy": false,
+    "license_or_terms": "Publisher article is copyrighted. Public arXiv author version used as a locator; no article copy is redistributed."
+  },
+  "material_state": {
+    "material": "hexagonal graphite computational model",
+    "calculation_temperature_K": 0,
+    "experimental_target_temperature_K": 300,
+    "same_state_as_hanfland": false,
+    "mode": "Gamma-point in-plane E2g(2)",
+    "mode_identity_as_uet_observable": "NOT_ESTABLISHED",
+    "linear_fit_range_GPa": [0, 10],
+    "state_equivalence_to_ttg": "NOT_ESTABLISHED"
+  },
+  "method": {
+    "electronic_structure": "DFT, PBE, PAW carbon potentials, Grimme van der Waals correction, VASP",
+    "plane_wave_cutoff_eV": 900,
+    "k_mesh": [18, 18, 9],
+    "phonon_method": "2x2x2 finite-displacement supercell, Phonopy, Gamma point",
+    "reference_bond_length_angstrom": 1.42,
+    "reference_interlayer_spacing_angstrom": 3.20,
+    "reference_geometry_error_vs_experiment_percent": {"bond_length": 0.06, "interlayer_spacing": 4.6},
+    "preprocessing": "Manual transcription from published article text and model results; no curve digitization, refit, interpolation, or target-data selection."
+  },
+  "rows": {
+    "e2g2_axial_gruneisen_prime": {"value": -0.0131, "uncertainty": null, "unit": "1", "source_notation": "gamma_prime_E2g(2) = -0.0131", "locator": "arXiv v3, Eq. (7), Sec. III.3, Fig. 5(a), Sec. III.4"},
+    "e2g2_axial_frequency_shift_per_percent_strain": {"value": 0.204, "uncertainty": null, "unit": "cm^-1 per 1% epsilon_zz", "source_notation": "partial omega_E2g(2) / partial epsilon = 0.204 cm^-1/%", "locator": "arXiv v3, Sec. III.3, Fig. 5(a), compression up to about 10 GPa"},
+    "e2g2_unstrained_frequency": {"value": 1559.1, "uncertainty": null, "unit": "cm^-1", "source_notation": "E2g(2) = 1559.1 cm^-1", "locator": "arXiv v3, Sec. III.2"},
+    "e2g2_hydrostatic_frequency_shift": {"value": 4.3, "uncertainty": null, "unit": "cm^-1 GPa^-1", "source_notation": "linear least-square fit up to 10 GPa", "locator": "arXiv v3, Sec. III.2"},
+    "e2g2_refined_hydrostatic_gruneisen": {"value": 1.90, "uncertainty": null, "unit": "1", "source_notation": "gamma_E2g(2) = 1.90", "locator": "arXiv v3, Sec. III.3-Sec. III.4; compared with experiments"}
+  },
+  "source_relationship": {
+    "hanfland_1989_cited": true,
+    "relationship": "Sun et al. cite Hanfland et al. as Ref. 19 and state that the selected hydrostatic-model gamma was validated by comparison with experiments.",
+    "independent_experimental_row": false
+  },
+  "uncertainty_policy": {
+    "gamma_prime_uncertainty": "NOT_REPORTED",
+    "model_error": "NOT_REPORTED",
+    "fit_covariance": "NOT_REPORTED",
+    "reported_values_are_confidence_intervals": false,
+    "allowed_propagation": "Propagate Hanfland parenthetic errors as endpoint rectangles while holding rounded DFT gamma_prime fixed; not a statistical confidence interval and omits model uncertainty."
+  },
+  "data_role": "PUBLISHED_DFT_MODEL_COMPARISON_NOT_EXPERIMENTAL_CALIBRATION",
+  "excluded_uses": ["independent experimental axial-strain row", "physical UET D tensor", "Phi normalization or alpha_Phi_K", "graphite TTG validation", "C_src/EOS/thermal-transport calibration", "holdout fitting or tuning"],
+  "holdout_role": "NONE"
+}

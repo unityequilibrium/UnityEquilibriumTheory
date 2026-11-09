@@ -1,0 +1,732 @@
+{
+  "schema_version": "t13-ding-fig1d-pixel-quality-v1",
+  "artifact": "ding_2022_fig1d_pixel_quality_audit",
+  "generated_on": "2026-09-24",
+  "status": "PASS_SOURCE_IDENTITY_AND_REPLAY_WITH_LOCALIZED_PIXEL_MASK_WARNING",
+  "major_result": {
+    "major_result_id": "T13_DING_FIG1D_LOCALIZED_PIXEL_MASK_QUALITY",
+    "topic": "0.13_Thermodynamic_Bridge",
+    "closure_level": "PARTIAL",
+    "what_is_closed": [
+      "pixel-level replay of the existing deterministic Fig. 1d extraction against its archived PNG and CSV",
+      "localized identification of large blue-mask discontinuities and competing pixel components"
+    ],
+    "equation_or_mapping": {
+      "axis_map": "time_ps=(pixel_x-left)/(right-left)*1200",
+      "signal_map": "normalized_signal=1-(pixel_y-top)/(bottom-top)*1.2",
+      "extractor": "median selected y pixel per x column",
+      "TTG_observable": "y_TTG=Delta_Tq(t)/Delta_Tq(0); dimensionless digitized trace only"
+    },
+    "units": {
+      "pixel_x": "pixel",
+      "pixel_y": "pixel",
+      "time": "ps",
+      "normalized_signal": "dimensionless"
+    },
+    "derivation_class": "read-only source-pixel replay and numerical quality diagnostic",
+    "observable": "Ding 2022 Fig. 1d figure-derived normalized response traces",
+    "data_role": "FIGURE_DERIVED_NORMALIZED_COMPARISON_NOT_RAW_SOURCE",
+    "evidence_artifacts": [
+      "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/ding_2022_fig1d_digitized.csv",
+      "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/ding_2022_fig1d_digitized_manifest.json",
+      "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/ding_2022_fig1.png"
+    ],
+    "verification_status": "PASS_SOURCE_IDENTITY_AND_REPLAY_WITH_LOCALIZED_PIXEL_MASK_WARNING",
+    "open_blockers": [
+      "the blue-trace region containing gross mask discontinuities is not qualified for derivative, dip-time, or velocity inference",
+      "pixel-derived uncertainty remains an extraction bound, not experimental uncertainty",
+      "raw author numeric response, graphite Phi normalization, independent alpha_Phi_K, and physical transport remain separate blockers"
+    ],
+    "dependency_unlocked": "localized exclusion boundary for derivative-like use only; no source-lane promotion, alpha, TTG prediction, Core, or Full Topic 13 unlock",
+    "claim_boundary": "This is a digitization quality finding, not evidence of physical discontinuity or validation of UET. No CSV values were changed."
+  },
+  "verification": {
+    "checks": {
+      "source_png_hash_matches_manifest": true,
+      "source_csv_hash_matches_manifest": true,
+      "csv_row_count_matches_manifest": true,
+      "pixel_digitization_replay_matches_existing_csv": true,
+      "blue_trace_has_no_gross_discontinuity": false
+    },
+    "input_hashes": {
+      "source_png_sha256": "d88faf2f5d7050c07a2c1bd820a16bdffa836d3d887b4d88b6be7634eed36ac4",
+      "source_csv_sha256": "6f468401d1f911e327b5e51f19f454cecdd0c2ecff933ef9522e67baae14a3a9",
+      "source_manifest_sha256": "a645f158a9d3c408ed9aa9f15ca368ac2df562f9e7be9b2fd65ac64c45412ed8",
+      "digitizer_script_sha256": "92aa1e064e07b550cf8a54170e982d55eebfd71277f7ee76bda41325628a685e"
+    },
+    "uncertainty_policy": {
+      "single_row_normalized_half_width": 0.011428571428571429,
+      "pairwise_worst_case_bound": 0.022857142857142857,
+      "gross_jump_triage_threshold": 0.22857142857142856,
+      "gross_jump_threshold_definition": "10 times the sum of two declared pixel-extraction half-widths; diagnostic triage only, not an acceptance gate"
+    },
+    "series": {
+      "blue_trace": {
+        "row_count": 172,
+        "adjacent_pair_count": 147,
+        "pixel_gaps": [
+          {
+            "pixel_x_from": 437,
+            "pixel_x_to": 441,
+            "missing_columns": 3
+          },
+          {
+            "pixel_x_from": 443,
+            "pixel_x_to": 447,
+            "missing_columns": 3
+          },
+          {
+            "pixel_x_from": 449,
+            "pixel_x_to": 451,
+            "missing_columns": 1
+          },
+          {
+            "pixel_x_from": 454,
+            "pixel_x_to": 458,
+            "missing_columns": 3
+          },
+          {
+            "pixel_x_from": 470,
+            "pixel_x_to": 472,
+            "missing_columns": 1
+          },
+          {
+            "pixel_x_from": 473,
+            "pixel_x_to": 477,
+            "missing_columns": 3
+          },
+          {
+            "pixel_x_from": 478,
+            "pixel_x_to": 495,
+            "missing_columns": 16
+          },
+          {
+            "pixel_x_from": 503,
+            "pixel_x_to": 505,
+            "missing_columns": 1
+          },
+          {
+            "pixel_x_from": 508,
+            "pixel_x_to": 511,
+            "missing_columns": 2
+          },
+          {
+            "pixel_x_from": 514,
+            "pixel_x_to": 519,
+            "missing_columns": 4
+          },
+          {
+            "pixel_x_from": 522,
+            "pixel_x_to": 525,
+            "missing_columns": 2
+          },
+          {
+            "pixel_x_from": 528,
+            "pixel_x_to": 531,
+            "missing_columns": 2
+          },
+          {
+            "pixel_x_from": 534,
+            "pixel_x_to": 538,
+            "missing_columns": 3
+          },
+          {
+            "pixel_x_from": 542,
+            "pixel_x_to": 545,
+            "missing_columns": 2
+          },
+          {
+            "pixel_x_from": 547,
+            "pixel_x_to": 554,
+            "missing_columns": 6
+          },
+          {
+            "pixel_x_from": 557,
+            "pixel_x_to": 561,
+            "missing_columns": 3
+          },
+          {
+            "pixel_x_from": 566,
+            "pixel_x_to": 569,
+            "missing_columns": 2
+          },
+          {
+            "pixel_x_from": 572,
+            "pixel_x_to": 578,
+            "missing_columns": 5
+          },
+          {
+            "pixel_x_from": 597,
+            "pixel_x_to": 599,
+            "missing_columns": 1
+          },
+          {
+            "pixel_x_from": 603,
+            "pixel_x_to": 608,
+            "missing_columns": 4
+          },
+          {
+            "pixel_x_from": 611,
+            "pixel_x_to": 615,
+            "missing_columns": 3
+          },
+          {
+            "pixel_x_from": 619,
+            "pixel_x_to": 623,
+            "missing_columns": 3
+          },
+          {
+            "pixel_x_from": 626,
+            "pixel_x_to": 631,
+            "missing_columns": 4
+          },
+          {
+            "pixel_x_from": 634,
+            "pixel_x_to": 639,
+            "missing_columns": 4
+          }
+        ],
+        "max_adjacent_absolute_step": 0.94285714,
+        "gross_discontinuity_count": 10,
+        "gross_discontinuities": [
+          {
+            "pixel_x_from": 562,
+            "pixel_x_to": 563,
+            "time_ps_from": 759.861592,
+            "time_ps_to": 764.013841,
+            "normalized_signal_from": -0.10571429,
+            "normalized_signal_to": 0.58285714,
+            "absolute_step": 0.68857143,
+            "step_over_pairwise_uncertainty_bound": 30.1250000625
+          },
+          {
+            "pixel_x_from": 563,
+            "pixel_x_to": 564,
+            "time_ps_from": 764.013841,
+            "time_ps_to": 768.16609,
+            "normalized_signal_from": 0.58285714,
+            "normalized_signal_to": 0.82285714,
+            "absolute_step": 0.24,
+            "step_over_pairwise_uncertainty_bound": 10.5
+          },
+          {
+            "pixel_x_from": 583,
+            "pixel_x_to": 584,
+            "time_ps_from": 847.058824,
+            "time_ps_to": 851.211073,
+            "normalized_signal_from": 0.82857143,
+            "normalized_signal_to": 0.34285714,
+            "absolute_step": 0.48571429,
+            "step_over_pairwise_uncertainty_bound": 21.2500001875
+          },
+          {
+            "pixel_x_from": 584,
+            "pixel_x_to": 585,
+            "time_ps_from": 851.211073,
+            "time_ps_to": 855.363322,
+            "normalized_signal_from": 0.34285714,
+            "normalized_signal_to": -0.13714286,
+            "absolute_step": 0.48,
+            "step_over_pairwise_uncertainty_bound": 21.0
+          },
+          {
+            "pixel_x_from": 586,
+            "pixel_x_to": 587,
+            "time_ps_from": 859.515571,
+            "time_ps_to": 863.66782,
+            "normalized_signal_from": -0.13714286,
+            "normalized_signal_to": 0.34571429,
+            "absolute_step": 0.48285714999999996,
+            "step_over_pairwise_uncertainty_bound": 21.1250003125
+          },
+          {
+            "pixel_x_from": 587,
+            "pixel_x_to": 588,
+            "time_ps_from": 863.66782,
+            "time_ps_to": 867.820069,
+            "normalized_signal_from": 0.34571429,
+            "normalized_signal_to": 0.82857143,
+            "absolute_step": 0.48285714,
+            "step_over_pairwise_uncertainty_bound": 21.124999875
+          },
+          {
+            "pixel_x_from": 590,
+            "pixel_x_to": 591,
+            "time_ps_from": 876.124567,
+            "time_ps_to": 880.276817,
+            "normalized_signal_from": 0.82857143,
+            "normalized_signal_to": -0.11428571,
+            "absolute_step": 0.94285714,
+            "step_over_pairwise_uncertainty_bound": 41.249999875
+          },
+          {
+            "pixel_x_from": 591,
+            "pixel_x_to": 592,
+            "time_ps_from": 880.276817,
+            "time_ps_to": 884.429066,
+            "normalized_signal_from": -0.11428571,
+            "normalized_signal_to": 0.35714286,
+            "absolute_step": 0.47142857,
+            "step_over_pairwise_uncertainty_bound": 20.6249999375
+          },
+          {
+            "pixel_x_from": 592,
+            "pixel_x_to": 593,
+            "time_ps_from": 884.429066,
+            "time_ps_to": 888.581315,
+            "normalized_signal_from": 0.35714286,
+            "normalized_signal_to": -0.10857143,
+            "absolute_step": 0.46571429,
+            "step_over_pairwise_uncertainty_bound": 20.3750001875
+          },
+          {
+            "pixel_x_from": 594,
+            "pixel_x_to": 595,
+            "time_ps_from": 892.733564,
+            "time_ps_to": 896.885813,
+            "normalized_signal_from": -0.10857143,
+            "normalized_signal_to": 0.82857143,
+            "absolute_step": 0.93714286,
+            "step_over_pairwise_uncertainty_bound": 41.000000125
+          }
+        ]
+      },
+      "green_trace": {
+        "row_count": 156,
+        "adjacent_pair_count": 151,
+        "pixel_gaps": [
+          {
+            "pixel_x_from": 517,
+            "pixel_x_to": 522,
+            "missing_columns": 4
+          },
+          {
+            "pixel_x_from": 522,
+            "pixel_x_to": 545,
+            "missing_columns": 22
+          },
+          {
+            "pixel_x_from": 548,
+            "pixel_x_to": 563,
+            "missing_columns": 14
+          },
+          {
+            "pixel_x_from": 566,
+            "pixel_x_to": 578,
+            "missing_columns": 11
+          }
+        ],
+        "max_adjacent_absolute_step": 0.02571429,
+        "gross_discontinuity_count": 0,
+        "gross_discontinuities": []
+      },
+      "red_trace": {
+        "row_count": 104,
+        "adjacent_pair_count": 100,
+        "pixel_gaps": [
+          {
+            "pixel_x_from": 467,
+            "pixel_x_to": 545,
+            "missing_columns": 77
+          },
+          {
+            "pixel_x_from": 547,
+            "pixel_x_to": 563,
+            "missing_columns": 15
+          },
+          {
+            "pixel_x_from": 566,
+            "pixel_x_to": 578,
+            "missing_columns": 11
+          }
+        ],
+        "max_adjacent_absolute_step": 0.02571429,
+        "gross_discontinuity_count": 0,
+        "gross_discontinuities": []
+      }
+    },
+    "pixel_components": {
+      "red_trace": {
+        "multi_component_column_count": 38,
+        "multi_component_pixel_x_ranges": [
+          [
+            391,
+            392
+          ],
+          [
+            398,
+            400
+          ],
+          [
+            405,
+            407
+          ],
+          [
+            409,
+            409
+          ],
+          [
+            413,
+            416
+          ],
+          [
+            420,
+            421
+          ],
+          [
+            425,
+            426
+          ],
+          [
+            431,
+            431
+          ],
+          [
+            435,
+            435
+          ],
+          [
+            438,
+            438
+          ],
+          [
+            440,
+            456
+          ],
+          [
+            458,
+            458
+          ]
+        ],
+        "ambiguous_median_count": 2,
+        "ambiguous_medians": [
+          {
+            "pixel_x": 440,
+            "median_y": 440.0,
+            "median_component_pixel_count": 0,
+            "largest_component_pixel_count": 4,
+            "clusters": [
+              {
+                "y_min": 435,
+                "y_max": 438,
+                "pixel_count": 4
+              },
+              {
+                "y_min": 442,
+                "y_max": 445,
+                "pixel_count": 4
+              }
+            ]
+          },
+          {
+            "pixel_x": 444,
+            "median_y": 447.5,
+            "median_component_pixel_count": 0,
+            "largest_component_pixel_count": 4,
+            "clusters": [
+              {
+                "y_min": 442,
+                "y_max": 445,
+                "pixel_count": 4
+              },
+              {
+                "y_min": 450,
+                "y_max": 453,
+                "pixel_count": 4
+              }
+            ]
+          }
+        ]
+      },
+      "green_trace": {
+        "multi_component_column_count": 62,
+        "multi_component_pixel_x_ranges": [
+          [
+            392,
+            392
+          ],
+          [
+            394,
+            394
+          ],
+          [
+            396,
+            397
+          ],
+          [
+            399,
+            411
+          ],
+          [
+            414,
+            416
+          ],
+          [
+            419,
+            420
+          ],
+          [
+            424,
+            424
+          ],
+          [
+            431,
+            431
+          ],
+          [
+            438,
+            438
+          ],
+          [
+            440,
+            440
+          ],
+          [
+            444,
+            444
+          ],
+          [
+            446,
+            446
+          ],
+          [
+            452,
+            452
+          ],
+          [
+            454,
+            454
+          ],
+          [
+            460,
+            460
+          ],
+          [
+            463,
+            490
+          ],
+          [
+            494,
+            494
+          ],
+          [
+            499,
+            500
+          ]
+        ],
+        "ambiguous_median_count": 4,
+        "ambiguous_medians": [
+          {
+            "pixel_x": 396,
+            "median_y": 301.5,
+            "median_component_pixel_count": 0,
+            "largest_component_pixel_count": 4,
+            "clusters": [
+              {
+                "y_min": 297,
+                "y_max": 300,
+                "pixel_count": 4
+              },
+              {
+                "y_min": 303,
+                "y_max": 306,
+                "pixel_count": 4
+              }
+            ]
+          },
+          {
+            "pixel_x": 401,
+            "median_y": 312.0,
+            "median_component_pixel_count": 0,
+            "largest_component_pixel_count": 6,
+            "clusters": [
+              {
+                "y_min": 306,
+                "y_max": 311,
+                "pixel_count": 6
+              },
+              {
+                "y_min": 313,
+                "y_max": 318,
+                "pixel_count": 6
+              }
+            ]
+          },
+          {
+            "pixel_x": 408,
+            "median_y": 326.5,
+            "median_component_pixel_count": 0,
+            "largest_component_pixel_count": 6,
+            "clusters": [
+              {
+                "y_min": 320,
+                "y_max": 325,
+                "pixel_count": 6
+              },
+              {
+                "y_min": 328,
+                "y_max": 333,
+                "pixel_count": 6
+              }
+            ]
+          },
+          {
+            "pixel_x": 414,
+            "median_y": 339.5,
+            "median_component_pixel_count": 0,
+            "largest_component_pixel_count": 5,
+            "clusters": [
+              {
+                "y_min": 334,
+                "y_max": 338,
+                "pixel_count": 5
+              },
+              {
+                "y_min": 341,
+                "y_max": 345,
+                "pixel_count": 5
+              }
+            ]
+          }
+        ]
+      },
+      "blue_trace": {
+        "multi_component_column_count": 41,
+        "multi_component_pixel_x_ranges": [
+          [
+            391,
+            409
+          ],
+          [
+            412,
+            413
+          ],
+          [
+            415,
+            418
+          ],
+          [
+            421,
+            421
+          ],
+          [
+            424,
+            424
+          ],
+          [
+            427,
+            427
+          ],
+          [
+            431,
+            432
+          ],
+          [
+            563,
+            565
+          ],
+          [
+            584,
+            587
+          ],
+          [
+            591,
+            594
+          ]
+        ],
+        "ambiguous_median_count": 4,
+        "ambiguous_medians": [
+          {
+            "pixel_x": 563,
+            "median_y": 344.0,
+            "median_component_pixel_count": 1,
+            "largest_component_pixel_count": 2,
+            "clusters": [
+              {
+                "y_min": 301,
+                "y_max": 302,
+                "pixel_count": 2
+              },
+              {
+                "y_min": 344,
+                "y_max": 344,
+                "pixel_count": 1
+              },
+              {
+                "y_min": 464,
+                "y_max": 465,
+                "pixel_count": 2
+              }
+            ]
+          },
+          {
+            "pixel_x": 584,
+            "median_y": 386.0,
+            "median_component_pixel_count": 0,
+            "largest_component_pixel_count": 1,
+            "clusters": [
+              {
+                "y_min": 301,
+                "y_max": 301,
+                "pixel_count": 1
+              },
+              {
+                "y_min": 471,
+                "y_max": 471,
+                "pixel_count": 1
+              }
+            ]
+          },
+          {
+            "pixel_x": 587,
+            "median_y": 385.5,
+            "median_component_pixel_count": 0,
+            "largest_component_pixel_count": 1,
+            "clusters": [
+              {
+                "y_min": 301,
+                "y_max": 301,
+                "pixel_count": 1
+              },
+              {
+                "y_min": 470,
+                "y_max": 470,
+                "pixel_count": 1
+              }
+            ]
+          },
+          {
+            "pixel_x": 592,
+            "median_y": 383.5,
+            "median_component_pixel_count": 0,
+            "largest_component_pixel_count": 1,
+            "clusters": [
+              {
+                "y_min": 301,
+                "y_max": 301,
+                "pixel_count": 1
+              },
+              {
+                "y_min": 466,
+                "y_max": 466,
+                "pixel_count": 1
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "blue_trace_suspect_pixel_x_range": [
+      562,
+      595
+    ],
+    "blue_trace_suspect_time_ps_range": [
+      759.8615916955018,
+      896.885813148789
+    ],
+    "holdout_accessed": false,
+    "source_data_modified": false,
+    "source_lane_status_changed": false,
+    "claim_promotion": false
+  }
+}

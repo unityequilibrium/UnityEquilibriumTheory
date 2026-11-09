@@ -1,0 +1,54 @@
+{
+  "schema_version": "t13-raman-deformation-source-v1",
+  "source_id": "hanfland_beister_syassen_1989_graphite_raman",
+  "reviewed_on": "2026-09-08",
+  "status": "EXTRACTED_SPECTROSCOPIC_CONSTRAINT_NOT_UET_CALIBRATION",
+  "source": {
+    "title": "Graphite under pressure: Equation of state and first-order Raman modes",
+    "authors": "M. Hanfland, H. Beister, K. Syassen",
+    "publication": "Physical Review B 39, 12598-12603 (1989)",
+    "doi": "10.1103/PhysRevB.39.12598",
+    "url": "https://harvest.aps.org/v2/journals/articles/10.1103/PhysRevB.39.12598/fulltext",
+    "local_path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/hanfland_1989_graphite_raman.pdf",
+    "sha256": "300a6b03af667f71a27fc7c269e7a928af57d4b846bded25feaefa0e37b1089e",
+    "license_or_terms": "APS copyrighted article, accessible public endpoint. Numeric facts transcribed for research with citation; no permission to redistribute full article asserted. Raw PDF and renderings remain local-only.",
+    "preprocessing": "Manual numeric transcription, visually checked PDF Tables I and II. No curve digitization, refit, smoothing, interpolation or target-curve selection. Parenthesized uncertainties converted to absolute last-digit increments."
+  },
+  "material_state": {
+    "material": "hexagonal single-crystalline graphite",
+    "reference_temperature_K": 300,
+    "reference_pressure_Pa": 0,
+    "pressure_fit_range_GPa": [0, 14],
+    "low_mode_caveat": "Pressure-cell low-frequency spectra visible only above about 4.5 GPa, with a separate free-standing zero-pressure frequency; delta0 is a fitted zero-pressure derivative, not a direct infinitesimal measurement.",
+    "axial_modulus_caveat": "a-axis fit uses fixed beta_prime=1; modulus represents a weak-compression average over the measured pressure range.",
+    "TTG_state_equivalence": "NOT_ESTABLISHED"
+  },
+  "uncertainty_policy": {
+    "kind": "source_reported_parenthetic_uncertainty",
+    "confidence_level": "NOT_IDENTIFIED",
+    "covariance": "NOT_REPORTED",
+    "propagation": "Rectangle sensitivity envelope only, not a statistical confidence interval or an independence assumption.",
+    "source_precision_discrepancy": "Abstract absolute pressure-slope uncertainties are broader than those implied by Table II logarithmic slopes, especially E2g(2). Preserve both routes and their union sensitivity envelope; do not silently select the tighter table errors.",
+    "full_uncertainty_closure": false
+  },
+  "rows": [
+    {"row_id": "E2g1_absolute_pressure_slope", "mode": "E2g(1)_interlayer_shear", "quantity": "d_wavenumber_dP_at_zero", "value": 4.8, "uncertainty": 0.5, "unit": "cm^-1 GPa^-1", "source_notation": "4.8(5)", "locator": "PDF page 1, printed 12598, abstract, initial pressure coefficients"},
+    {"row_id": "E2g2_absolute_pressure_slope", "mode": "E2g(2)_intralayer", "quantity": "d_wavenumber_dP_at_zero", "value": 4.7, "uncertainty": 0.3, "unit": "cm^-1 GPa^-1", "source_notation": "4.7(3)", "locator": "PDF page 1, printed 12598, abstract, initial pressure coefficients"},
+    {"row_id": "E2g1_frequency", "mode": "E2g(1)_interlayer_shear", "quantity": "raman_wavenumber", "value": 44.0, "uncertainty": 1.0, "unit": "cm^-1", "source_notation": "44(1)", "locator": "PDF page 5, printed 12602, Table II, E2g(1), omega0"},
+    {"row_id": "E2g1_pressure_log_slope", "mode": "E2g(1)_interlayer_shear", "quantity": "d_ln_wavenumber_dP_at_zero", "value": 0.110, "uncertainty": 0.008, "unit": "GPa^-1", "source_notation": "0.110(8)", "locator": "PDF page 5, printed 12602, Table II, E2g(1), delta0"},
+    {"row_id": "E2g2_frequency", "mode": "E2g(2)_intralayer", "quantity": "raman_wavenumber", "value": 1579.0, "uncertainty": 1.0, "unit": "cm^-1", "source_notation": "1579(1)", "locator": "PDF page 5, printed 12602, Table II, E2g(2), omega0"},
+    {"row_id": "E2g2_pressure_log_slope", "mode": "E2g(2)_intralayer", "quantity": "d_ln_wavenumber_dP_at_zero", "value": 0.00296, "uncertainty": 0.00002, "unit": "GPa^-1", "source_notation": "2.96(2) x 10^-3", "locator": "PDF page 5, printed 12602, Table II, E2g(2), delta0"},
+    {"row_id": "axial_modulus_a", "quantity": "inverse_axial_compressibility", "value": 1250.0, "uncertainty": 70.0, "unit": "GPa", "source_notation": "1250(70)", "locator": "PDF page 2, printed 12599, Table I, a axis, present work, beta0"},
+    {"row_id": "axial_modulus_c", "quantity": "inverse_axial_compressibility", "value": 35.7, "uncertainty": 2.5, "unit": "GPa", "source_notation": "35.7(25)", "locator": "PDF page 2, printed 12599, Table I, c axis, present work, beta0"}
+  ],
+  "data_role": "EXTERNAL_SPECTROSCOPIC_CONSTRAINT_NOT_UET_CALIBRATION",
+  "excluded_uses": ["physical alpha_Phi_K", "TTG source substitution", "full strain tensor identification", "unqualified low-temperature extrapolation", "physical heat capacity or transport from Gamma-point frequencies alone"],
+  "constants": {
+    "source": "https://www.bipm.org/en/measurement-units/si-defining-constants",
+    "h_J_s": 6.62607015e-34,
+    "c_m_per_s": 299792458.0,
+    "k_B_J_per_K": 1.380649e-23,
+    "uncertainty": 0,
+    "origin": "exact SI defining constants"
+  }
+}
