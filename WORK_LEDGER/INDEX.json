@@ -5,10 +5,10 @@
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
     "sources": 82,
-    "entries": 785,
+    "entries": 786,
     "by_stream": {
       "operations": 97,
-      "research": 680,
+      "research": 681,
       "review": 8
     },
     "exact_duplicates": 0,
@@ -424,8 +424,8 @@
     },
     {
       "path": "2026/2026-11-09.md",
-      "sha256": "df00eeac90fda4c3445f2f7d98ae417fa48d6e64ed0ee5446e523d961d023c64",
-      "entries": 1
+      "sha256": "7c95715d954c3228747bbabfc7bf0216b5d0ce9c094198f52a9869a662303e6f",
+      "entries": 2
     },
     {
       "path": "2026-08-14.md",
@@ -16057,9 +16057,29 @@
       "source": "2026/2026-11-09.md",
       "anchor": "standard-v2-w6-draft--test-card-t001-for-the-binary-pulsar-constraint",
       "start_line": 3,
-      "end_line": 17,
+      "end_line": 18,
       "title": "Standard v2 W6 (draft) — Test Card T001 for the binary-pulsar constraint",
-      "entry_sha256": "81b111f97335563a667e86d7f67c7053bf42b9244ac91edbcef9761941f471fb",
+      "entry_sha256": "35f9b523294ddc81c2b7e03c0befad58a5b0dddca85cf22fcf6368cf42af8345",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-09",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-09.md#standard-v2-w6--t001-run-first-external-confrontation-l2-constraint",
+      "source": "2026/2026-11-09.md",
+      "anchor": "standard-v2-w6--t001-run-first-external-confrontation-l2-constraint",
+      "start_line": 19,
+      "end_line": 32,
+      "title": "Standard v2 W6 — T001 run: first external confrontation (L2 constraint)",
+      "entry_sha256": "a614958b4be346770ae2bafcf53a947bac6e389f64b4939be8be177f68f80059",
       "stream": "research",
       "areas": [
         "research-core"

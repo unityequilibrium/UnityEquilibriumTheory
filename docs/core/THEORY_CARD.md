@@ -91,7 +91,7 @@ m_χ² = m²/Z    λ_χ̃ = λ_χ/Z²  Λ_eff = Λ + κ ε ρ*
 | observable | ระบบ | หมายเหตุ |
 |---|---|---|
 | PPN γ − 1 | ระบบสุริยะ (Cassini) | รอบ vacuum ที่ ψ = 0 จะได้ F′ = 0 scalar จึงไม่ต่อกับ T ในอันดับเชิงเส้น ดังนั้น **γ = 1 ในอันดับแรก** (W5 ยืนยันแล้ว: α₀ = 0 จึงได้ γ − 1 = 0, ระดับ L1) เป็นการทดสอบที่ผ่านแต่ไม่ได้แยกแยะอะไร ใช้เป็น sanity check เท่านั้น |
-| Spontaneous scalarization ของดาวนิวตรอน, dipole radiation ใน binary pulsar | 7 binary pulsar (ZFKSW22) | **ช่องทดสอบที่คมที่สุดของคลาส DEF** W5 map ได้ **β₀ = −2ξ_c** และ α₀ = 0 (L1, `C_UET_DEF_MAPPING`) scalarization ต้องการ β₀ ≲ −4 คือ ξ_c ≳ 2 เมื่อ m_ψ เบาพอ ดูแหล่งอ้างอิงใน [`01_contracts/BINARY_PULSAR_PILOT_SOURCES.md`](01_contracts/BINARY_PULSAR_PILOT_SOURCES.md) |
+| Spontaneous scalarization ของดาวนิวตรอน, dipole radiation ใน binary pulsar | 7 binary pulsar (ZFKSW22) | **ช่องทดสอบที่คมที่สุดของคลาส DEF** W5 map ได้ **β₀ = −2ξ_c** และ α₀ = 0 (L1, `C_UET_DEF_MAPPING`) scalarization ต้องการ β₀ ≲ −4 คือ ξ_c ≳ 2 เมื่อ m_ψ เบาพอ ดูแหล่งอ้างอิงใน [`01_contracts/BINARY_PULSAR_PILOT_SOURCES.md`](01_contracts/BINARY_PULSAR_PILOT_SOURCES.md) **T001 (L2, CONSTRAINT, 2026-11-09): ξ_c ∈ [2.0, 2.4] ถูกตัดทิ้งเมื่อ m_ψ ≤ 2.5×10⁻¹⁸ eV** |
 | Fifth force ระยะสั้น (Eöt-Wash) | ห้องปฏิบัติการ | ไวเฉพาะเมื่อ background ψ ≠ 0 หรือ matter ปกติต่อกับ ψ ซึ่ง action นี้ไม่มี จึงคาดว่าไม่ได้ข้อจำกัด |
 | ความหนาแน่นพลังงานมืด / w(z) | cosmology | ψ ที่เลื่อนจาก 0 ทำให้ G_eff ขึ้นกับเวลา ต้องใช้ background FRW (Topic 0.3) |
 
