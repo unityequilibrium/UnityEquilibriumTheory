@@ -1,7 +1,7 @@
 {
   "schema": "uet-test-card-v2",
   "test_id": "T002",
-  "status": "DRAFT",
+  "status": "APPROVED",
   "claim_id": "C_T002_STELLAR_PHASE_ABUNDANCE",
   "theory_card": {
     "card_id": "UET_PARENT",
@@ -35,5 +35,10 @@
   "pass_criterion": "z <= 2 with the primary helium input",
   "fail_criterion": "z > 3 with the primary helium input -> FAILED; 2 < z <= 3 -> INCONCLUSIVE (reported as tension, not pass)",
   "drafted_by": "claude",
-  "note": "Disclosure: drafted after reading the source, which itself reports that standard models (no axions) need Y = 0.241 +/- 0.005, compatible with the measured Y at about 2 sigma; the outcome is therefore close to the PASS/INCONCLUSIVE boundary and was effectively known before drafting. With the SBBN helium value the deviation would be smaller. T002 tests that layer 3 reproduces the established fuel-consumption reasoning (number in a phase proportional to its lifetime); it cannot distinguish UET from standard stellar astrophysics. Any residual tension corresponds, in layer-3 language, to an unmodelled extra burn channel shortening tau_HB (the source interprets it as possible axion cooling). Re-check transcribed numbers against the journal version before approval."
+  "note": "Disclosure: drafted after reading the source, which itself reports that standard models (no axions) need Y = 0.241 +/- 0.005, compatible with the measured Y at about 2 sigma; the outcome is therefore close to the PASS/INCONCLUSIVE boundary and was effectively known before drafting. With the SBBN helium value the deviation would be smaller. T002 tests that layer 3 reproduces the established fuel-consumption reasoning (number in a phase proportional to its lifetime); it cannot distinguish UET from standard stellar astrophysics. Any residual tension corresponds, in layer-3 language, to an unmodelled extra burn channel shortening tau_HB (the source interprets it as possible axion cooling). Re-check transcribed numbers against the journal version before approval. Approved by the author on 2026-11-09 without a journal cross-check.",
+  "approval": {
+    "approved_by": "santxkoz",
+    "date": "2026-11-09",
+    "role": "AUTHOR"
+  }
 }
