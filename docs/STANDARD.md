@@ -170,7 +170,7 @@ AI ต้องแยกให้ชัดว่าเป็น**เจตนา
 - **Working tree ต้องสะอาดก่อนจบวัน** commit สิ่งที่เสร็จ ไฟล์ที่ไม่ใช่งานของเรา**ห้ามแบกข้าม wave** ให้บันทึกแล้วแยกออก
 - หนึ่ง wave = หนึ่ง commit ที่ stage เฉพาะไฟล์ของ wave นั้น
 - Push หรือเปิด PR เมื่อผู้เขียนสั่ง ส่วน `main` เข้าได้ผ่าน PR เท่านั้น
-- Interpreter มาตรฐานในเครื่องคือ `.venv/Scripts/python.exe` และ dependency ด้านวิจัยอยู่ใน `requirements-research.txt` (จะเพิ่มใน W2)
+- Interpreter มาตรฐานในเครื่องคือ `.venv/Scripts/python.exe` และ dependency ด้านวิจัยอยู่ใน `.github/requirements-research.txt`
 
 ## 12. การบังคับด้วย CI (จะติดตั้งใน W2)
 

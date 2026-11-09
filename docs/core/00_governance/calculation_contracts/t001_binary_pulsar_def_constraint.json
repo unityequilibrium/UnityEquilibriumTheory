@@ -1,0 +1,345 @@
+{
+  "schema_version": "uet-calculation-contract-v1",
+  "contract_id": "CORE_T001_BINARY_PULSAR_DEF_CONSTRAINT_V1",
+  "profile": "PHYSICAL_COMPARISON",
+  "review": {
+    "status": "INCOMPLETE",
+    "reviewer": "agent:claude-standard-v2-w6",
+    "rationale": "Methodological contract for Test Card T001. The evidence decision (L2 CONSTRAINT, author-approved) lives in docs/standard; this contract records inputs, model, observation chain and gaps. Timing, propagation and detector modelling are inherited from the published analysis, not reproduced.",
+    "coverage_evidence": [
+      "docs/standard/tests/T001.json",
+      "docs/standard/results/R_T001_BINARY_PULSAR.json",
+      "docs/core/01_contracts/BINARY_PULSAR_PILOT_SOURCES.md"
+    ]
+  },
+  "question": "Which interval of the UET non-minimal coupling xi_c is excluded by published binary-pulsar DEF bounds, and in which scalar-mass domain does that exclusion apply?",
+  "output": {
+    "quantity": "excluded xi_c interval (light-scalar domain bound on m_psi reported separately in eV)",
+    "unit": "dimensionless",
+    "domain": "beta0 in [-4.8, -4.0] analysed by ZFKSW22; neutron stars 1.25-2.0 Msun; m_psi c^2 <= hbar c/(10 a_max)",
+    "accuracy": "Interval endpoints are exact maps of the published prior range through beta0 = -2 xi_c; no statistical re-analysis.",
+    "claim_intent": "DIAGNOSTIC"
+  },
+  "model": {
+    "formula_ids": [
+      "UET-PARENT-ACTION-001",
+      "UET_DEF_MAP_BETA0_EQ_MINUS_2_XI_C",
+      "KEPLER_THIRD_LAW_SEPARATION"
+    ],
+    "assumptions": "Ordinary matter couples minimally to the Jordan metric; psi0 = 0 background (alpha0 = 0); the massless-scalar DEF analysis applies when the scalar Compton wavelength exceeds 10 times the widest orbit.",
+    "approximation": "Exact Jordan-to-Einstein map; Newtonian Kepler separation with GR masses for the domain bound only.",
+    "initial_boundary": "Asymptotic scalar value psi0 = 0; isolated binaries as analysed upstream.",
+    "drive_environment": "None beyond the published systems.",
+    "parameters": "xi_c and m_psi free; no fitting; registered data used exactly as transcribed."
+  },
+  "data_policy": {
+    "uses_observations": true,
+    "calibration_ids": [],
+    "comparison_ids": [
+      "ZFKSW22_DEF_BOUNDS"
+    ],
+    "independent_validation": false,
+    "holdout_policy": "No holdout. Published constraint with exposure SEEN_SUMMARY under Test Card T001 (CONSTRAINT, not a blind prediction)."
+  },
+  "observation": {
+    "system_partition": {
+      "role_mode": "RELATIONAL",
+      "accounting_component_id": "system_state",
+      "boundary": "Seven published pulsar binaries (neutron star plus white-dwarf or neutron-star companion) observed by radio timing; the comparison uses the published DEF posterior bound, not raw timing data.",
+      "systems": [
+        {
+          "id": "binary",
+          "state": "Joint description of each binary, not an extra state",
+          "state_accounting": {
+            "kind": "AGGREGATE",
+            "state_ids": [],
+            "owner_ids": [
+              "pulsar_ns",
+              "companion"
+            ],
+            "rule": "Orbit energy and scalar dipole loss are counted once in the published post-Keplerian model."
+          }
+        },
+        {
+          "id": "pulsar_ns",
+          "parent_id": "binary",
+          "state": "Neutron-star matter and effective scalar coupling alpha_A",
+          "state_accounting": {
+            "kind": "INDEPENDENT",
+            "state_ids": [
+              "ns.matter",
+              "ns.alpha_A"
+            ],
+            "owner_ids": [],
+            "rule": "alpha_A is the published effective coupling; not recomputed here."
+          }
+        },
+        {
+          "id": "companion",
+          "parent_id": "binary",
+          "state": "Companion star matter and its effective coupling",
+          "state_accounting": {
+            "kind": "INDEPENDENT",
+            "state_ids": [
+              "companion.matter",
+              "companion.alpha"
+            ],
+            "owner_ids": [],
+            "rule": "Masses from published tables (GR values)."
+          }
+        },
+        {
+          "id": "timing_observer",
+          "state": "Radio telescope timing record and published fit",
+          "state_accounting": {
+            "kind": "INDEPENDENT",
+            "state_ids": [
+              "timing.record"
+            ],
+            "owner_ids": [],
+            "rule": "Observer record only; carries no source energy."
+          }
+        }
+      ],
+      "couplings": [
+        {
+          "id": "orbit_ns_to_companion",
+          "source": "pulsar_ns",
+          "target": "companion",
+          "kind": "INTERNAL",
+          "component_id": "system_state",
+          "map": "Gravitational and scalar interaction in the binary (published DEF dynamics)"
+        },
+        {
+          "id": "orbit_companion_to_ns",
+          "source": "companion",
+          "target": "pulsar_ns",
+          "kind": "INTERNAL",
+          "component_id": "system_state",
+          "map": "Reciprocal orbital interaction"
+        },
+        {
+          "id": "pulse_propagation",
+          "source": "pulsar_ns",
+          "target": "timing_observer",
+          "kind": "SIGNAL",
+          "component_id": "propagation",
+          "map": "Radio pulses through the interstellar medium; dispersion and Shapiro delay modelled upstream"
+        },
+        {
+          "id": "pulse_detection",
+          "source": "pulsar_ns",
+          "target": "timing_observer",
+          "kind": "DETECTION",
+          "component_id": "detector",
+          "map": "Times of arrival fitted upstream to post-Keplerian parameters"
+        },
+        {
+          "id": "observer_to_ns_assessment",
+          "source": "timing_observer",
+          "target": "pulsar_ns",
+          "kind": "BACKACTION",
+          "component_id": "detector",
+          "map": "Radio reception exerts no admitted backaction on the neutron star"
+        },
+        {
+          "id": "observer_to_companion_assessment",
+          "source": "timing_observer",
+          "target": "companion",
+          "kind": "BACKACTION",
+          "component_id": "detector",
+          "map": "No admitted backaction on the companion"
+        }
+      ],
+      "observables": [
+        {
+          "id": "def_bound_from_timing",
+          "detector_id": "timing_observer",
+          "target_systems": [
+            "pulsar_ns",
+            "companion"
+          ],
+          "backaction_targets": [
+            "pulsar_ns",
+            "companion"
+          ],
+          "backaction_scope_reason": "Both binary owners are assessed; the binary aggregate is a nonadditive view. Passive radio reception is not admitted as feedback.",
+          "quantity": "Published |alpha_A| upper limit over the beta0 prior range, and orbital periods and masses",
+          "readout_map": "Published combined Bayesian analysis (ZFKSW22); transcribed values only",
+          "component_id": "detector"
+        }
+      ]
+    },
+    "source_state": "Neutron-star and companion states as modelled by the published analysis.",
+    "generated_trace": "Pulse arrival times; not a UET trace variable.",
+    "carrier": "Radio pulses (photons); not identified with any UET field.",
+    "observer_state": "Telescope timing record and published fit.",
+    "readout": "Published post-Keplerian parameters and DEF bound.",
+    "backaction": "None admitted from passive radio reception.",
+    "frame": "Solar-system barycentric frame of the published timing solutions",
+    "time_convention": "Published timing conventions (barycentric)",
+    "product_level": "published derived constraint (not raw data)",
+    "corrections": [
+      {
+        "id": "timing_model_upstream",
+        "state": "APPLIED_UPSTREAM",
+        "evidence": "docs/data/external/gravity/binary_pulsar_def/zfksw22_def_bounds.csv"
+      },
+      {
+        "id": "kinematic_pbdot_upstream",
+        "state": "APPLIED_UPSTREAM",
+        "evidence": "docs/data/external/gravity/binary_pulsar_def/zfksw22_def_bounds.csv"
+      }
+    ]
+  },
+  "components": [
+    {
+      "id": "system_state",
+      "group": "system_state",
+      "disposition": "MODELED",
+      "reason": "Binary systems, masses and DEF coupling as registered from the published tables and bound.",
+      "evidence": [
+        "docs/data/external/gravity/binary_pulsar_def/zfksw22_def_bounds.csv",
+        "docs/core/01_contracts/BINARY_PULSAR_PILOT_SOURCES.md"
+      ]
+    },
+    {
+      "id": "drive_environment",
+      "group": "drive_environment",
+      "disposition": "NOT_APPLICABLE",
+      "reason": "No external drive beyond the published isolated binaries.",
+      "evidence": []
+    },
+    {
+      "id": "propagation",
+      "group": "propagation",
+      "disposition": "UPSTREAM_CORRECTED",
+      "reason": "Applied upstream in the published timing analysis (ZFKSW22); not recomputed here.",
+      "evidence": [
+        "docs/data/external/gravity/binary_pulsar_def/zfksw22_def_bounds.csv"
+      ]
+    },
+    {
+      "id": "frame_time",
+      "group": "frame_time",
+      "disposition": "UPSTREAM_CORRECTED",
+      "reason": "Galactic acceleration and proper-motion corrections to Pb_dot. Applied upstream in the published timing analysis (ZFKSW22); not recomputed here.",
+      "evidence": [
+        "docs/data/external/gravity/binary_pulsar_def/zfksw22_def_bounds.csv"
+      ]
+    },
+    {
+      "id": "detector",
+      "group": "detector",
+      "disposition": "UPSTREAM_CORRECTED",
+      "reason": "Timing fit and Bayesian DEF bound. Applied upstream in the published timing analysis (ZFKSW22); not recomputed here.",
+      "evidence": [
+        "docs/data/external/gravity/binary_pulsar_def/zfksw22_def_bounds.csv",
+        "docs/core/01_contracts/BINARY_PULSAR_PILOT_SOURCES.md"
+      ]
+    },
+    {
+      "id": "processing",
+      "group": "processing",
+      "disposition": "MODELED",
+      "reason": "Map of the published beta0 range through beta0 = -2 xi_c and Kepler separation for the domain bound.",
+      "evidence": [
+        "docs/core/03_lanes/scalar_tensor/t001_binary_pulsar_constraint.py",
+        "docs/core/02_equations/covariant/uet_scalar_tensor_mapping.py"
+      ]
+    },
+    {
+      "id": "numerics",
+      "group": "numerics",
+      "disposition": "MODELED",
+      "reason": "Closed-form arithmetic; Kepler and mapping functions covered by physics tests.",
+      "evidence": [
+        "docs/core/05_tests/physics/test_t001_method.py",
+        "docs/core/05_tests/physics/test_def_mapping.py"
+      ]
+    }
+  ],
+  "error_budget": {
+    "unit": "dimensionless",
+    "numerical": "Floating-point only; interval endpoints exact.",
+    "approximation": "Massless-scalar DEF bound applied only inside the declared light-scalar domain.",
+    "measurement": "Inherited from the published 90% CL analysis; not re-derived.",
+    "systematic": "EOS dependence handled upstream over 13 EOSs; journal-version cross-check of transcribed values not done.",
+    "omissions": "xi_c outside [2.0, 2.4] and heavier scalars are not constrained by this contract.",
+    "dependence": "Single published analysis; no independent combination.",
+    "acceptance": "Constraint report only (Standard v2 T001); no physical acceptance claim in this contract.",
+    "omission_limit": null
+  },
+  "identities": [
+    {
+      "path": "docs/data/external/gravity/binary_pulsar_def/zfksw22_def_bounds.csv",
+      "kind": "working_file",
+      "role": "input",
+      "sha256": "b1c832bc82ff3a79700706131915c8057bc33e9b490608aab40b58098396c5ce",
+      "availability": "REQUIRED"
+    },
+    {
+      "path": "docs/core/01_contracts/BINARY_PULSAR_PILOT_SOURCES.md",
+      "kind": "working_file",
+      "role": "evidence",
+      "sha256": "ef54f9113cafbc6d2cafcdbd385bd9ae8007d84746212fccdd19e8197fa0e0ea",
+      "availability": "REQUIRED"
+    },
+    {
+      "path": "docs/core/02_equations/covariant/uet_scalar_tensor_mapping.py",
+      "kind": "working_file",
+      "role": "code",
+      "sha256": "7a3044d7eb303628a1b4b0d08b5b3c6d53c466ba26b7b6192b0fc432c99d282f",
+      "availability": "REQUIRED"
+    },
+    {
+      "path": "docs/core/03_lanes/scalar_tensor/t001_binary_pulsar_constraint.py",
+      "kind": "working_file",
+      "role": "code",
+      "sha256": "4ea7953f10d55beb2bb066a0203f3768a93b2b0dbea8e9492439d08e4ad4e856",
+      "availability": "REQUIRED"
+    },
+    {
+      "path": "docs/core/05_tests/physics/test_t001_method.py",
+      "kind": "working_file",
+      "role": "code",
+      "sha256": "2872476dec146a290d4f72f66bcd6c976b9c5dd0b0627af385d28812ae3602de",
+      "availability": "REQUIRED"
+    },
+    {
+      "path": "docs/core/05_tests/physics/test_def_mapping.py",
+      "kind": "working_file",
+      "role": "code",
+      "sha256": "3af518667ccb444dda5e96471c83bf0107c8d5f5621bc17af986e7acd096b9ea",
+      "availability": "REQUIRED"
+    },
+    {
+      "path": "docs/standard/tests/T001.json",
+      "kind": "working_file",
+      "role": "evidence",
+      "sha256": "dd263d2e44af270aaa228fe6e78f60449434d95a27f554b9d56261150a10cf49",
+      "availability": "REQUIRED"
+    },
+    {
+      "path": "docs/standard/results/R_T001_BINARY_PULSAR.json",
+      "kind": "working_file",
+      "role": "evidence",
+      "sha256": "91a06cdb1cab91b0667fc726a034f7055249f01b87a903d7626478dcf8db4376",
+      "availability": "REQUIRED"
+    }
+  ],
+  "entrypoints": [
+    "docs/core/03_lanes/scalar_tensor/t001_binary_pulsar_constraint.py",
+    "docs/core/02_equations/covariant/uet_scalar_tensor_mapping.py"
+  ],
+  "evidence": [
+    "docs/core/03_lanes/scalar_tensor/t001_binary_pulsar_constraint.py",
+    "docs/core/02_equations/covariant/uet_scalar_tensor_mapping.py",
+    "docs/data/external/gravity/binary_pulsar_def/zfksw22_def_bounds.csv",
+    "docs/core/01_contracts/BINARY_PULSAR_PILOT_SOURCES.md",
+    "docs/standard/tests/T001.json",
+    "docs/standard/results/R_T001_BINARY_PULSAR.json"
+  ],
+  "claim_boundary": "Methodological coverage of the T001 constraint calculation only. Evidence level is set in docs/standard (L2 CONSTRAINT). Not a prediction and not a falsification test while xi_c is free.",
+  "next_action": "Cross-check transcribed values against the journal version; extend to beta0 < -4.8 only with an additional registered source."
+}

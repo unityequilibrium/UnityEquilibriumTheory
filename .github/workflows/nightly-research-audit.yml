@@ -37,7 +37,6 @@ jobs:
       - name: Research Standard v2 checks and physics-test count
         run: |
           set -euo pipefail
-          python -m pip install -r requirements-research.txt
           python docs/scripts/standard/check_schema.py
           python docs/scripts/standard/check_preregistration.py
           python docs/scripts/standard/check_physics_tests.py

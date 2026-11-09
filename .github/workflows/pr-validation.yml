@@ -46,7 +46,7 @@ jobs:
               echo "$key=false" >> "$GITHUB_OUTPUT"
             fi
           }
-          set_output research '^(docs/(core|topics|meta|scripts|standard|data/external)/|docs/STANDARD\.md$|docs/UET_Documentation_Details/|requirements-research\.txt$|pytest\.ini$|\.github/workflows/(pr-validation|nightly-research-audit)\.yml$)'
+          set_output research '^(docs/(core|topics|meta|scripts|standard|data/external)/|docs/STANDARD\.md$|docs/UET_Documentation_Details/|(\.github/)?requirements-research\.txt$|pytest\.ini$|\.github/workflows/(pr-validation|nightly-research-audit)\.yml$)'
           set_output books '^(uet_history/BOOK_WORKFLOW\.md|uet_history/3_publish/books/)'
           set_output services '^services_and_experiments/'
           set_output policy '^thailand_proposals/'
@@ -121,7 +121,7 @@ jobs:
           python docs/scripts/audit/audit_calculation_completeness.py --changed "$BASE_SHA" --check
           python -m unittest discover -s docs/scripts/audit/tests -p test_calculation_completeness.py -v
       - name: Install research requirements
-        run: python -m pip install -r requirements-research.txt
+        run: python -m pip install -r .github/requirements-research.txt
       - name: Research Standard v2 checks (docs/STANDARD.md)
         run: |
           set -euo pipefail
