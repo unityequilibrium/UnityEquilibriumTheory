@@ -92,6 +92,8 @@ Its old status vocabularies and workflow ladders are replaced.
   `check_schema.py` fails if a registered data file, Test Card script or Result producer is not tracked by git.
 - **Hash-locked tooling.** Many calculation contracts lock the sha256 of shared scripts, including `audit_calculation_completeness.py`.
   Changing such a script makes those contracts STALE. Treat it as a separate, owner-approved wave.
+- **Do not hash-lock editable records.** A calculation contract must not list Test Cards, Result records, claims, Theory or
+  Author cards as identities. They change by design, and locking them makes the contract STALE on the next legitimate edit.
 
 ## 7. Work ledger
 

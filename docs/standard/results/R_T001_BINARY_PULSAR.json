@@ -6,15 +6,47 @@
   "test_card_id": "T001",
   "outcome": "PASS",
   "numbers": [
-    {"name": "excluded_xi_c_min", "value": 2.0, "uncertainty": null, "unit": "1"},
-    {"name": "excluded_xi_c_max", "value": 2.4, "uncertainty": null, "unit": "1"},
-    {"name": "light_domain_max_m_psi", "value": 2.53e-18, "uncertainty": null, "unit": "eV"},
-    {"name": "a_max_J2222-0137", "value": 7.79e9, "uncertainty": null, "unit": "m"},
-    {"name": "neutron_star_alpha_A_limit_90cl", "value": 0.006, "uncertainty": null, "unit": "1"}
+    {
+      "name": "excluded_xi_c_min",
+      "value": 2.0,
+      "uncertainty": null,
+      "unit": "1"
+    },
+    {
+      "name": "excluded_xi_c_max",
+      "value": 2.4,
+      "uncertainty": null,
+      "unit": "1"
+    },
+    {
+      "name": "light_domain_max_m_psi",
+      "value": 2.53e-18,
+      "uncertainty": null,
+      "unit": "eV"
+    },
+    {
+      "name": "a_max_J2222-0137",
+      "value": 7790000000.0,
+      "uncertainty": null,
+      "unit": "m"
+    },
+    {
+      "name": "neutron_star_alpha_A_limit_90cl",
+      "value": 0.006,
+      "uncertainty": null,
+      "unit": "1"
+    }
   ],
-  "producer": {"script": "docs/core/03_lanes/scalar_tensor/t001_binary_pulsar_constraint.py (run as python -m docs.core.03_lanes.scalar_tensor.t001_binary_pulsar_constraint)", "commit": "70e5b9d35"},
+  "producer": {
+    "script": "docs/core/03_lanes/scalar_tensor/t001_binary_pulsar_constraint.py (run as python -m docs.core.03_lanes.scalar_tensor.t001_binary_pulsar_constraint)",
+    "commit": "82d2dae56"
+  },
   "artifacts": [],
   "date": "2026-11-09",
-  "approval": {"approved_by": "santxkoz", "date": "2026-11-09", "role": "AUTHOR"},
-  "note": "CONSTRAINT result. For m_psi c^2 <= 2.5e-18 eV, xi_c in [2.0, 2.4] is excluded (spontaneous scalarization ruled out by ZFKSW22); xi_c outside [2.0, 2.4] is not constrained by T001, and heavier scalars are outside the test scope. Requires minimal coupling of ordinary matter to the Jordan metric. Registered values are from arXiv v2 and were not cross-checked against the journal version. The theory was not falsified because xi_c is free."
+  "approval": {
+    "approved_by": "santxkoz",
+    "date": "2026-11-09",
+    "role": "AUTHOR"
+  },
+  "note": "CONSTRAINT result. For m_psi c^2 <= 2.5e-18 eV, xi_c in [2.0, 2.4] is excluded (spontaneous scalarization ruled out by ZFKSW22); xi_c outside [2.0, 2.4] is not constrained by T001, and heavier scalars are outside the test scope. Requires minimal coupling of ordinary matter to the Jordan metric. Registered values are from arXiv v2 and were not cross-checked against the journal version. The theory was not falsified because xi_c is free. Producer commit repointed 70e5b9d35 -> 82d2dae56 (same file blob; 70e5b9d35 was on the pre-port branch)."
 }
