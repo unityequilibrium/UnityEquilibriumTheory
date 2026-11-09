@@ -5,11 +5,11 @@
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
     "sources": 74,
-    "entries": 785,
+    "entries": 786,
     "by_stream": {
       "book-history": 94,
       "operations": 112,
-      "research": 579
+      "research": 580
     },
     "exact_duplicates": 0,
     "review_entries": 2
@@ -384,8 +384,8 @@
     },
     {
       "path": "2026/2026-11-09.md",
-      "sha256": "999af613f7da9789d8ba3c318d6360eb40c11d363c766fd2271a25365833c2c2",
-      "entries": 1
+      "sha256": "e50cb6b10438e8664830a3833b292cc33e00674c713d4082d4f7c5ca2223739c",
+      "entries": 2
     },
     {
       "path": "2026-08-14.md",
@@ -16044,12 +16044,32 @@
       "source": "2026/2026-11-09.md",
       "anchor": "research-standard-v2-and-t001--clean-main-port",
       "start_line": 3,
-      "end_line": 21,
+      "end_line": 22,
       "title": "Research Standard v2 and T001 — clean-main port",
-      "entry_sha256": "19705aff4d0e6937f5f30943ae94ef2ad9a98ecc7deb74f94ccb00e701146b61",
+      "entry_sha256": "69259e22e7266c6b04efedec019de470048c4176e8d9feff7a7be380fde94778",
       "stream": "research",
       "areas": [
         "research-standards"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-09",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-09.md#author-proposition-card--author-intent-written-down",
+      "source": "2026/2026-11-09.md",
+      "anchor": "author-proposition-card--author-intent-written-down",
+      "start_line": 23,
+      "end_line": 41,
+      "title": "Author Proposition Card — author intent written down",
+      "entry_sha256": "df383561e3461fc2f8d3af496c2793b646f34d01fd90e9cdd06c25737a4a106d",
+      "stream": "research",
+      "areas": [
+        "research-core"
       ],
       "related_streams": [
         "research"

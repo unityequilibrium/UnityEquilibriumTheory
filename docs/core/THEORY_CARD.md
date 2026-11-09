@@ -2,6 +2,7 @@
 
 > **สถานะ: APPROVED — อนุมัติโดยผู้เขียน (santxkoz) 2026-11-08** (ร่างโดย Claude ใน W3)
 > Machine-readable: [`theory_card.json`](theory_card.json) · Standard: [`docs/STANDARD.md`](../STANDARD.md) §3
+> **เจตนาผู้เขียน:** [`AUTHOR_PROPOSITION.md`](AUTHOR_PROPOSITION.md) — การ์ดนี้ครอบคลุมเฉพาะ**ชั้น 1** (สสารแลกเปลี่ยนกับโครงสร้างของ space) ส่วนชั้น 2 (เทอร์โมของระบบเปิด + การเขียนข้อมูล) และชั้น 3 (การคัดสรรด้วยการบริหารทรัพยากร) ยังไม่มีสมการ
 > ระดับของสมการแกนทุกบรรทัด: `L1_CONSISTENT` (W4 derivation check ผ่าน 2026-11-08; ส่วนประกอบ off-diagonal ของ metric equation ยังไม่ได้ตรวจ — ดู `docs/standard/results/R_W4_PARENT_EOM.json`)
 
 ## 1. สมการแกน (conservative parent action)
@@ -69,6 +70,7 @@ m_χ² = m²/Z    λ_χ̃ = λ_χ/Z²  Λ_eff = Λ + κ ε ρ*
 ## 4. สิ่งที่ต่างจากคลาสนั้น
 
 **ยังไม่มี (none yet)** ที่ระดับ action
+- ความต่างที่ผู้เขียนตั้งใจอยู่ในชั้น 2–3 ของ [`AUTHOR_PROPOSITION.md`](AUTHOR_PROPOSITION.md) ซึ่งยังไม่ได้แปลงเป็นสมการ
 - ส่วน UET ที่เพิ่มเข้ามาอีก ได้แก่ R_gen, R_obs, trace และ observer record ถูกประกาศไว้ว่า **ไม่มี feedback** เข้า dynamics จึงไม่เปลี่ยน prediction ใด ๆ ของ action นี้
 - Dissipative sector (SK/KMS) ยังไม่ได้อยู่ใน action
 - ความต่างจากคลาสมาตรฐาน ถ้ามีจริง ต้องมาจาก (ก) dissipative/open-system sector หรือ (ข) lane mapping ที่ให้ observable ใหม่ ทั้งสองอย่างยังเป็น L0
