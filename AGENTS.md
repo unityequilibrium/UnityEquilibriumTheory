@@ -72,6 +72,24 @@ Its old status vocabularies and workflow ladders are replaced.
   Required checks must fail visibly; do not use `continue-on-error`.
 - Write commit messages that describe the real change plainly.
 
+### 6.1 Several agents at once (Codex, Claude, others)
+
+- Each agent works in **its own git worktree** (`git worktree add ../<name> <branch>`). Two agents never share one checkout.
+- Never switch the branch of a checkout that another agent or the owner is using.
+- Before committing, read `git status`. Changes you did not make belong to someone else: never stage, revert, delete or "clean" them. Name them in your report instead.
+- If you find another agent writing into your checkout, stop and tell the owner before continuing.
+
+### 6.2 Files that git or Windows can silently get wrong
+
+- **Line endings.** The global git config uses `core.autocrlf=true`, while this repository is LF.
+  - Python `write_text` on Windows writes CRLF, so write with `newline="\n"`.
+  - `.gitattributes` forces LF for records, ledgers, standards and CI files.
+  - Run `git diff --check origin/main HEAD` before every push.
+- **Ignored data.** `.gitignore` ignores `*.csv` outside `docs/topics` and `docs/core`. Add public data under `docs/data/external` with `git add -f`.
+  `check_schema.py` fails if a registered data file, Test Card script or Result producer is not tracked by git.
+- **Hash-locked tooling.** Many calculation contracts lock the sha256 of shared scripts, including `audit_calculation_completeness.py`.
+  Changing such a script makes those contracts STALE. Treat it as a separate, owner-approved wave.
+
 ## 7. Work ledger
 
 - After each completed section, add a short entry (about 12 lines or fewer) to `WORK_LEDGER/YYYY/YYYY-MM-DD.md`.
@@ -93,7 +111,11 @@ python docs/scripts/standard/check_preregistration.py
 python docs/scripts/standard/check_physics_tests.py
 ```
 
-Run the same commands locally with `.venv/Scripts/python.exe` before handing off work.
+Run the same commands locally with `.venv/Scripts/python.exe` before handing off work. Also run `git diff --check origin/main HEAD`.
+
+When a new or changed scientific code path needs a calculation contract:
+- For formal derivation code checked by physics tests, generate the short FORMAL contract with `docs/scripts/standard/new_formal_contract.py`.
+- For comparisons with observations, use `docs/core/00_governance/calculation_contracts/t001_binary_pulsar_def_constraint.json` as the template.
 
 ## One-line principle
 

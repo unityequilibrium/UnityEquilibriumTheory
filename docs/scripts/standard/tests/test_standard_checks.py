@@ -90,6 +90,7 @@ def full_set(root: Path) -> None:
     write(root, "docs/standard/claims.json", CLAIMS)
     write(root, "docs/standard/tests/T001.json", CARD)
     write(root, "docs/standard/results/R001.json", RESULT)
+    write(root, "p.py", b"print(1)\n")
 
 
 def schema_errors(root: Path) -> list[str]:
@@ -207,3 +208,27 @@ def test_uncommitted_approval_blocks_result(repo: Path) -> None:
     write(repo, "docs/standard/tests/T001.json", CARD)
     write(repo, "docs/standard/results/R001.json", RESULT)
     assert any("not committed yet" in e for e in prereg_errors(repo))
+
+
+def test_data_hidden_by_gitignore_is_rejected(repo: Path) -> None:
+    full_set(repo)
+    init_git(repo)
+    (repo / ".gitignore").write_text("*.csv\n", encoding="utf-8")
+    commit_all(repo, "csv silently ignored")
+    errors = schema_errors(repo)
+    assert any("not tracked by git" in e and "cassini.csv" in e for e in errors)
+
+
+def test_force_added_data_is_accepted(repo: Path) -> None:
+    full_set(repo)
+    init_git(repo)
+    (repo / ".gitignore").write_text("*.csv\n", encoding="utf-8")
+    git(repo, "add", "-f", "data/cassini.csv")
+    commit_all(repo, "csv force-added")
+    assert schema_errors(repo) == []
+
+
+def test_missing_producer_script_is_rejected(repo: Path) -> None:
+    full_set(repo)
+    (repo / "p.py").unlink()
+    assert any("p.py missing" in e for e in schema_errors(repo))
