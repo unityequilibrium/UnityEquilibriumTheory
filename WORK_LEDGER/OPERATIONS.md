@@ -6,10 +6,11 @@
 
 These are source-linked historical records, not proof of completed research, successful publication, or current scientific readiness.
 
-Indexed entries: 97. Counts describe records, not accomplishments.
+Indexed entries: 98. Counts describe records, not accomplishments.
 
 | Date | Record | Area | Notes |
 | --- | --- | --- | --- |
+| 2026-11-09 | [Checkpoint — push research-standard-v2 and open draft PR #48](2026/2026-11-09.md#checkpoint--push-research-standard-v2-and-open-draft-pr-48) (L34) | repo-ops | explicit_stream_and_area |
 | 2026-11-08 | [Standard v2 W0 — workspace cleanup before standards consolidation](2026/2026-11-08.md#standard-v2-w0--workspace-cleanup-before-standards-consolidation) (L3) | repo-ops | explicit_stream_and_area |
 | 2026-11-03 | [Ledger research and book-history separation](2026/2026-11-03.md#ledger-research-and-book-history-separation) (L3) | repo-ops | explicit_stream_and_area |
 | 2026-11-02 | [2026-11-03 owner-directed history relocation](2026/2026-11-02.md#2026-11-03-owner-directed-history-relocation) (L29) | repo-ops, theory-history, book-writing | explicit_primary_area |

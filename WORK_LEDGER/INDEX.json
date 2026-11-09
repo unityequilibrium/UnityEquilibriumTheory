@@ -5,9 +5,9 @@
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
     "sources": 82,
-    "entries": 786,
+    "entries": 787,
     "by_stream": {
-      "operations": 97,
+      "operations": 98,
       "research": 681,
       "review": 8
     },
@@ -424,8 +424,8 @@
     },
     {
       "path": "2026/2026-11-09.md",
-      "sha256": "7c95715d954c3228747bbabfc7bf0216b5d0ce9c094198f52a9869a662303e6f",
-      "entries": 2
+      "sha256": "323cbc21a4ffc993363172c38430edb08c1bfe59514ca288b078882f6493deab",
+      "entries": 3
     },
     {
       "path": "2026-08-14.md",
@@ -16077,15 +16077,35 @@
       "source": "2026/2026-11-09.md",
       "anchor": "standard-v2-w6--t001-run-first-external-confrontation-l2-constraint",
       "start_line": 19,
-      "end_line": 32,
+      "end_line": 33,
       "title": "Standard v2 W6 — T001 run: first external confrontation (L2 constraint)",
-      "entry_sha256": "a614958b4be346770ae2bafcf53a947bac6e389f64b4939be8be177f68f80059",
+      "entry_sha256": "bae71ce2457740bf543a2758728cee98cbec709ac023363c688846dba4d5207c",
       "stream": "research",
       "areas": [
         "research-core"
       ],
       "related_streams": [
         "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-09",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-09.md#checkpoint--push-research-standard-v2-and-open-draft-pr-48",
+      "source": "2026/2026-11-09.md",
+      "anchor": "checkpoint--push-research-standard-v2-and-open-draft-pr-48",
+      "start_line": 34,
+      "end_line": 45,
+      "title": "Checkpoint — push research-standard-v2 and open draft PR #48",
+      "entry_sha256": "6b740901e0953ff1dee3840ee2d46c0c019b7827e95579ab8b18bb8b8c3a35e2",
+      "stream": "operations",
+      "areas": [
+        "repo-ops"
+      ],
+      "related_streams": [
+        "operations"
       ],
       "basis": "explicit_stream_and_area",
       "flags": [],
