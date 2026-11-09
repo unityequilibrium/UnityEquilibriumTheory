@@ -7,7 +7,7 @@
     "reviewer": "agent:claude-layer3-t002",
     "rationale": "Methodological contract for Test Card T002. The evidence decision lives in docs/standard. Photometry, membership, completeness and stellar-model physics are inherited from the published analyses.",
     "coverage_evidence": [
-      "docs/core/AUTHOR_PROPOSITION.md"
+      "docs/data/external/astronomy/globular_cluster_r_parameter/ayala2014_r_parameter.csv"
     ]
   },
   "question": "Does the layer-3 abundance law N = b F/P (Little's law with exhaustion lifetimes) reproduce the observed globular-cluster ratio R = N_HB/N_RGB?",
@@ -195,8 +195,7 @@
       "disposition": "MODELED",
       "reason": "Phase populations and lifetimes as registered from published counts and stellar models.",
       "evidence": [
-        "docs/data/external/astronomy/globular_cluster_r_parameter/ayala2014_r_parameter.csv",
-        "docs/core/AUTHOR_PROPOSITION.md"
+        "docs/data/external/astronomy/globular_cluster_r_parameter/ayala2014_r_parameter.csv"
       ]
     },
     {
@@ -273,13 +272,6 @@
       "availability": "REQUIRED"
     },
     {
-      "path": "docs/core/AUTHOR_PROPOSITION.md",
-      "kind": "working_file",
-      "role": "evidence",
-      "sha256": "38076d7722bd5c3035ebfc9e2205e5537c8dbd3108bc11dd1f232de5e4ce75ba",
-      "availability": "REQUIRED"
-    },
-    {
       "path": "docs/core/03_lanes/persistence/uet_persistence_selection.py",
       "kind": "working_file",
       "role": "code",
@@ -308,8 +300,7 @@
   "evidence": [
     "docs/core/03_lanes/persistence/t002_stellar_phase_fractions.py",
     "docs/core/03_lanes/persistence/uet_persistence_selection.py",
-    "docs/data/external/astronomy/globular_cluster_r_parameter/ayala2014_r_parameter.csv",
-    "docs/core/AUTHOR_PROPOSITION.md"
+    "docs/data/external/astronomy/globular_cluster_r_parameter/ayala2014_r_parameter.csv"
   ],
   "claim_boundary": "Methodological coverage of the T002 comparison only. The evidence level is set in docs/standard. The comparison cannot distinguish UET layer 3 from the standard fuel-consumption reasoning it reproduces.",
   "next_action": "Cross-check transcribed values against the journal version; add a stellar-model systematic if a quoted value is found."
