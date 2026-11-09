@@ -239,4 +239,3 @@ Gate และ audit script เดิม (inventory, compatibility, aggregate, r
 4. ข้อมูลภายนอกต้องเก็บและระบุที่มาตาม `12` **และ**ลงทะเบียนใน `docs/standard/data_manifest.json` ตาม §7 ส่วนการอ้างอิงในเอกสารให้ทำตาม `13` และระบุ DOI/URL ใน data manifest หรือ Test Card ด้วย
 
 **ไฟล์ที่ถูกแทนแล้ว** (เป็นประวัติเท่านั้น): `00_README.md` (index เดิม), `01`, `02`, `03`, `04`, `18`, `25`, `26`–`29`, `32`, `EQUATION_RESEARCH_AND_PHYSICAL_CORRESPONDENCE_STANDARD.md` และ `UPDATE_LOG.md` ของ For Work หน้าที่ของไฟล์เหล่านี้ถูกแทนด้วย §0–§14
-
