@@ -6,10 +6,11 @@
 
 These are source-linked historical records, not proof of completed research, successful publication, or current scientific readiness.
 
-Indexed entries: 583. Counts describe records, not accomplishments.
+Indexed entries: 584. Counts describe records, not accomplishments.
 
 | Date | Record | Area | Notes |
 | --- | --- | --- | --- |
+| 2026-11-09 | [Change report for the author (8-9 Nov work)](2026/2026-11-09.md#change-report-for-the-author-8-9-nov-work) (L91) | research-standards | explicit_stream_and_area |
 | 2026-11-09 | [T002 run — layer-3 abundance law confronted with globular-cluster counts (L2, INCONCLUSIVE)](2026/2026-11-09.md#t002-run--layer-3-abundance-law-confronted-with-globular-cluster-counts-l2-inconclusive) (L76) | research-core | explicit_stream_and_area |
 | 2026-11-09 | [T002 (draft) — layer-3 abundance law vs globular-cluster star counts](2026/2026-11-09.md#t002-draft--layer-3-abundance-law-vs-globular-cluster-star-counts) (L59) | research-core | explicit_stream_and_area |
 | 2026-11-09 | [Layer 3 — persistence selection by free-energy exhaustion (formal, L1)](2026/2026-11-09.md#layer-3--persistence-selection-by-free-energy-exhaustion-formal-l1) (L43) | research-core | explicit_stream_and_area |

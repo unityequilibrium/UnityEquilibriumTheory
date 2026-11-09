@@ -5,11 +5,11 @@
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
     "sources": 74,
-    "entries": 789,
+    "entries": 790,
     "by_stream": {
       "book-history": 94,
       "operations": 112,
-      "research": 583
+      "research": 584
     },
     "exact_duplicates": 0,
     "review_entries": 2
@@ -384,8 +384,8 @@
     },
     {
       "path": "2026/2026-11-09.md",
-      "sha256": "5cbd6c177c020b319eeef032027cae755ae89c11adf184fb7907f0c5e55caf70",
-      "entries": 5
+      "sha256": "e106a1833513c126091ab36d78a78e2e9bb984d0a709583aca5acc6e5801a569",
+      "entries": 6
     },
     {
       "path": "2026-08-14.md",
@@ -16124,12 +16124,32 @@
       "source": "2026/2026-11-09.md",
       "anchor": "t002-run--layer-3-abundance-law-confronted-with-globular-cluster-counts-l2-inconclusive",
       "start_line": 76,
-      "end_line": 89,
+      "end_line": 90,
       "title": "T002 run — layer-3 abundance law confronted with globular-cluster counts (L2, INCONCLUSIVE)",
-      "entry_sha256": "762fbed24ab5567afacd0ff8a21688d216cb80fded1412fbe2d3146181449833",
+      "entry_sha256": "2555fa015f6502b23ff6c5ea08d768cb17f93a6c1c2ec66ef644cc2be2c2716d",
       "stream": "research",
       "areas": [
         "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-09",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-09.md#change-report-for-the-author-8-9-nov-work",
+      "source": "2026/2026-11-09.md",
+      "anchor": "change-report-for-the-author-8-9-nov-work",
+      "start_line": 91,
+      "end_line": 104,
+      "title": "Change report for the author (8-9 Nov work)",
+      "entry_sha256": "6168e2edde7f2af8e16d7f6e7e252c81f5751212da2bce594c4e1dc19673b3c9",
+      "stream": "research",
+      "areas": [
+        "research-standards"
       ],
       "related_streams": [
         "research"
