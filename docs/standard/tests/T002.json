@@ -1,7 +1,7 @@
 {
   "schema": "uet-test-card-v2",
   "test_id": "T002",
-  "status": "APPROVED",
+  "status": "CLOSED",
   "claim_id": "C_T002_STELLAR_PHASE_ABUNDANCE",
   "theory_card": {
     "card_id": "UET_PARENT",

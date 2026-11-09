@@ -1,0 +1,19 @@
+{
+  "schema": "uet-result-v2",
+  "result_id": "R_T002_STELLAR_PHASES",
+  "claim_id": "C_T002_STELLAR_PHASE_ABUNDANCE",
+  "level": "L2_CONFRONTED",
+  "test_card_id": "T002",
+  "outcome": "INCONCLUSIVE",
+  "numbers": [
+    {"name": "R_pred_Y_HII", "value": 1.4669, "uncertainty": 0.0225, "unit": "1"},
+    {"name": "R_obs", "value": 1.39, "uncertainty": 0.03, "unit": "1"},
+    {"name": "z_primary", "value": 2.05, "uncertainty": null, "unit": "1"},
+    {"name": "z_sensitivity_Y_SBBN_not_decisive", "value": 1.25, "uncertainty": null, "unit": "1"}
+  ],
+  "producer": {"script": "docs/core/03_lanes/persistence/t002_stellar_phase_fractions.py (run as python -m docs.core.03_lanes.persistence.t002_stellar_phase_fractions)", "commit": "50c483c4d"},
+  "artifacts": [],
+  "date": "2026-11-09",
+  "approval": {"approved_by": "santxkoz", "date": "2026-11-09", "role": "AUTHOR"},
+  "note": "INCONCLUSIVE by the preregistered rule (2 < z <= 3): the layer-3 abundance law with stellar-model lifetimes predicts more horizontal-branch stars than observed, at 2.05 sigma with the primary helium input; with the SBBN helium value (sensitivity only) z = 1.25. Not a falsification. In layer-3 terms the tension corresponds to an unmodelled extra burn channel shortening the horizontal-branch lifetime (the source discusses axion cooling). The test cannot distinguish UET layer 3 from standard fuel-consumption reasoning. Stellar-model fit uncertainty not included; journal cross-check not done."
+}

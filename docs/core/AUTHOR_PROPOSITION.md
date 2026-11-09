@@ -79,7 +79,8 @@
 - **งานที่ใกล้เคียงซึ่งต้องเทียบ:** Schrödinger, *What is Life?* (1944); Lotka maximum power (1922); England, dissipative adaptation (2013); r/K selection; Maynard Smith และ Price, ESS (1973)
 
 ใน repo: [`03_lanes/persistence/uet_persistence_selection.py`](03_lanes/persistence/uet_persistence_selection.py) (claim `C_L3_SELECTION_FORMAL`, **L1**, 2026-11-09) ระบบหายไปเมื่อพลังงานอิสระหมด แล้วได้ผลสามข้อโดยไม่ต้องตั้ง payoff ด้วยมือ: Little's law `N* = b·τ`, replicator dynamics ที่ออกมาเป็น identity และผู้ชนะคือระบบที่มี `R* = P/(aF)` ต่ำสุด ซึ่งเป็น ESS ของเกม "เผาเร็ว vs เผาช้า"
-ยังไม่ได้ derive จาก parent action และยังไม่ได้เทียบกับข้อมูลประชากรจริง
+ยังไม่ได้ derive จาก parent action
+**T002 (L2, 2026-11-09):** เทียบกับกระจุกดาวทรงกลม 39 กระจุก ทำนายสัดส่วนดาว HB/RGB ได้ 1.467 ± 0.023 เทียบกับที่นับได้จริง 1.39 ± 0.03 ห่าง z = 2.05 จึงได้ผล **INCONCLUSIVE** (ไม่ใช่การตก) ในภาษาชั้น 3 ความตึงนี้หมายถึงช่องเผาพลังงานที่ยังไม่อยู่ในแบบจำลอง ซึ่งทำให้ τ_HB สั้นลง การทดสอบนี้แยก UET ออกจาก fuel-consumption reasoning มาตรฐานไม่ได้
 
 ---
 

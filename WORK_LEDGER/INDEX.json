@@ -5,11 +5,11 @@
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
     "sources": 74,
-    "entries": 788,
+    "entries": 789,
     "by_stream": {
       "book-history": 94,
       "operations": 112,
-      "research": 582
+      "research": 583
     },
     "exact_duplicates": 0,
     "review_entries": 2
@@ -384,8 +384,8 @@
     },
     {
       "path": "2026/2026-11-09.md",
-      "sha256": "9bf4a8e5dffe2f045dd6985caf04ee28a6b57a2ab0b35eba38796161ad80d563",
-      "entries": 4
+      "sha256": "5cbd6c177c020b319eeef032027cae755ae89c11adf184fb7907f0c5e55caf70",
+      "entries": 5
     },
     {
       "path": "2026-08-14.md",
@@ -16104,9 +16104,29 @@
       "source": "2026/2026-11-09.md",
       "anchor": "t002-draft--layer-3-abundance-law-vs-globular-cluster-star-counts",
       "start_line": 59,
-      "end_line": 74,
+      "end_line": 75,
       "title": "T002 (draft) — layer-3 abundance law vs globular-cluster star counts",
-      "entry_sha256": "d14ac42c6fdf8889feca53c020526bea4d7cad0515202aa201f0289965ba1eed",
+      "entry_sha256": "0cfce9b902014d2ca03452ce25b67d1beff221628a176f2dbcc135254b64cb76",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-09",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-09.md#t002-run--layer-3-abundance-law-confronted-with-globular-cluster-counts-l2-inconclusive",
+      "source": "2026/2026-11-09.md",
+      "anchor": "t002-run--layer-3-abundance-law-confronted-with-globular-cluster-counts-l2-inconclusive",
+      "start_line": 76,
+      "end_line": 89,
+      "title": "T002 run — layer-3 abundance law confronted with globular-cluster counts (L2, INCONCLUSIVE)",
+      "entry_sha256": "762fbed24ab5567afacd0ff8a21688d216cb80fded1412fbe2d3146181449833",
       "stream": "research",
       "areas": [
         "research-core"

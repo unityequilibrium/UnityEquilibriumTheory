@@ -47,10 +47,12 @@
     },
     {
       "claim_id": "C_T002_STELLAR_PHASE_ABUNDANCE",
-      "statement": "The layer-3 abundance law N = b F/P reproduces the observed ratio of horizontal-branch to red-giant-branch stars in old globular clusters when phase lifetimes come from stellar models and helium from independent measurements.",
-      "level": "L0_SPECULATIVE",
-      "evidence": [],
-      "note": "Pending Test Card T002 approval and run."
+      "statement": "The layer-3 abundance law N = b F/P, with stellar-model lifetimes and independently measured helium, predicts the horizontal-to-red-giant-branch star ratio in old globular clusters to within about 5 percent (R_pred = 1.467 +/- 0.023 vs R_obs = 1.39 +/- 0.03), a 2.05 sigma tension.",
+      "level": "L2_CONFRONTED",
+      "evidence": [
+        "R_T002_STELLAR_PHASES"
+      ],
+      "note": "CONSTRAINT, outcome INCONCLUSIVE by the preregistered rule (2 < z <= 3). Not a falsification and not a pass. L2 recording approved by the author 2026-11-09."
     }
   ]
 }
