@@ -6,10 +6,12 @@
 
 These are source-linked historical records, not proof of completed research, successful publication, or current scientific readiness.
 
-Indexed entries: 579. Counts describe records, not accomplishments.
+Indexed entries: 581. Counts describe records, not accomplishments.
 
 | Date | Record | Area | Notes |
 | --- | --- | --- | --- |
+| 2026-11-09 | [Standard v2 W7 — topic index synced to the claim register](2026/2026-11-09.md#standard-v2-w7--topic-index-synced-to-the-claim-register) (L40) | research-standards | explicit_stream_and_area |
+| 2026-11-09 | [Standard v2 hardening — close gaps found during the T001 port](2026/2026-11-09.md#standard-v2-hardening--close-gaps-found-during-the-t001-port) (L23) | research-standards | explicit_stream_and_area |
 | 2026-11-09 | [Research Standard v2 and T001 — clean-main port](2026/2026-11-09.md#research-standard-v2-and-t001--clean-main-port) (L3) | research-standards | explicit_stream_and_area |
 | 2026-10-26 | [BaTiO3 B1-B3 — Completed static correspondence diagnostic / local checkpoint](2026/2026-10-26.md#batio3-b1-b3--completed-static-correspondence-diagnostic--local-checkpoint) (L23) | research-core, result-artifacts | explicit_primary_area |
 | 2026-10-26 | [BaTiO3 B0 — Source scope and immutable baseline](2026/2026-10-26.md#batio3-b0--source-scope-and-immutable-baseline) (L3) | research-core, result-artifacts | explicit_primary_area |
