@@ -36,3 +36,10 @@ commit: this commit
 ระดับ: C_T001_BINARY_PULSAR_XI_C → L2_CONFRONTED (ผู้เขียนอนุมัติ 2026-11-09)
 ถัดไป: หา observable ที่ UET ต่างจาก DEF (ส่วน "differences" ใน Theory Card ยังว่าง) หรือหาสิ่งที่กำหนด ξ_c ได้จาก lane อื่น
 commit: this commit
+
+## 2026-11-09 — Does selection follow from free-energy exhaustion alone? (layer 3)
+ทำ: เขียน `03_lanes/persistence/uet_persistence_selection.py` ระบบหายไปเมื่อพลังงานอิสระหมด (τ = F/P) ไม่มี payoff ที่ตั้งด้วยมือ + physics test 12 ตัว
+ผล: Little's law N* = bτ (ลู่เข้าอันดับ 1), replicator dynamics เป็น identity, ผู้ชนะคือ R* = P/(aF) ต่ำสุด, บิตต่อชีวิต F/(kT ln2) ไม่ขึ้นกับ P; negative control: ไม่มีการหมดทรัพยากร = ไม่มี steady state
+ระดับ: C_L3_SELECTION_FORMAL → L1_CONSISTENT
+ถัดไป: Test Card เทียบกับประชากรดาวฤกษ์ (สัดส่วนต่อช่วงวิวัฒนาการ ∝ อายุช่วงนั้น)
+commit: cbebc3fad (model+tests) + this commit

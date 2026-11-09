@@ -6,10 +6,11 @@
 
 These are source-linked historical records, not proof of completed research, successful publication, or current scientific readiness.
 
-Indexed entries: 580. Counts describe records, not accomplishments.
+Indexed entries: 581. Counts describe records, not accomplishments.
 
 | Date | Record | Area | Notes |
 | --- | --- | --- | --- |
+| 2026-11-09 | [Layer 3 — persistence selection by free-energy exhaustion (formal, L1)](2026/2026-11-09.md#layer-3--persistence-selection-by-free-energy-exhaustion-formal-l1) (L43) | research-core | explicit_stream_and_area |
 | 2026-11-09 | [Author Proposition Card — author intent written down](2026/2026-11-09.md#author-proposition-card--author-intent-written-down) (L23) | research-core | explicit_stream_and_area |
 | 2026-11-09 | [Research Standard v2 and T001 — clean-main port](2026/2026-11-09.md#research-standard-v2-and-t001--clean-main-port) (L3) | research-standards | explicit_stream_and_area |
 | 2026-10-26 | [BaTiO3 B1-B3 — Completed static correspondence diagnostic / local checkpoint](2026/2026-10-26.md#batio3-b1-b3--completed-static-correspondence-diagnostic--local-checkpoint) (L23) | research-core, result-artifacts | explicit_primary_area |

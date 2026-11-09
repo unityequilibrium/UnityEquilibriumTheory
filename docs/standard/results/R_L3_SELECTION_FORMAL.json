@@ -1,0 +1,48 @@
+{
+  "schema": "uet-result-v2",
+  "result_id": "R_L3_SELECTION_FORMAL",
+  "claim_id": "C_L3_SELECTION_FORMAL",
+  "level": "L1_CONSISTENT",
+  "outcome": "PASS",
+  "numbers": [
+    {
+      "name": "littles_law_convergence_order",
+      "value": "1.0 +/- 0.2 on 3 grids",
+      "uncertainty": null,
+      "unit": "1"
+    },
+    {
+      "name": "abundance_ratio_slow_over_fast_vs_lifetime_ratio",
+      "value": "4.00 vs 4 (within 0.01)",
+      "uncertainty": null,
+      "unit": "1"
+    },
+    {
+      "name": "consumer_resource_equilibrium_relative_error",
+      "value": "< 1e-8",
+      "uncertainty": null,
+      "unit": "1"
+    },
+    {
+      "name": "rstar_exclusion_random_seeds",
+      "value": "4/4 resolved (1 near-tie skipped)",
+      "uncertainty": null,
+      "unit": "count"
+    },
+    {
+      "name": "replicator_identity_symbolic_residual",
+      "value": 0,
+      "uncertainty": null,
+      "unit": "1"
+    }
+  ],
+  "producer": {
+    "script": "docs/core/05_tests/physics/test_persistence_selection.py",
+    "commit": "cbebc3fad"
+  },
+  "artifacts": [
+    "docs/core/03_lanes/persistence/uet_persistence_selection.py"
+  ],
+  "date": "2026-11-09",
+  "note": "Formal layer-3 model only: selection arises from free-energy exhaustion without hand-set payoffs. Not yet derived from the parent action and not yet confronted with population data (planned: stellar populations)."
+}

@@ -5,11 +5,11 @@
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
     "sources": 74,
-    "entries": 786,
+    "entries": 787,
     "by_stream": {
       "book-history": 94,
       "operations": 112,
-      "research": 580
+      "research": 581
     },
     "exact_duplicates": 0,
     "review_entries": 2
@@ -384,8 +384,8 @@
     },
     {
       "path": "2026/2026-11-09.md",
-      "sha256": "e50cb6b10438e8664830a3833b292cc33e00674c713d4082d4f7c5ca2223739c",
-      "entries": 2
+      "sha256": "f86797644039f1e377aafd31a1dff64320eec59a84c037df9e5f5715deba19ba",
+      "entries": 3
     },
     {
       "path": "2026-08-14.md",
@@ -16064,9 +16064,29 @@
       "source": "2026/2026-11-09.md",
       "anchor": "author-proposition-card--author-intent-written-down",
       "start_line": 23,
-      "end_line": 41,
+      "end_line": 42,
       "title": "Author Proposition Card — author intent written down",
-      "entry_sha256": "df383561e3461fc2f8d3af496c2793b646f34d01fd90e9cdd06c25737a4a106d",
+      "entry_sha256": "79ec116f2153d298663db00545d7babe5eebcec4a1e02a1ee51edbb7c9f7ec08",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-09",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-09.md#layer-3--persistence-selection-by-free-energy-exhaustion-formal-l1",
+      "source": "2026/2026-11-09.md",
+      "anchor": "layer-3--persistence-selection-by-free-energy-exhaustion-formal-l1",
+      "start_line": 43,
+      "end_line": 57,
+      "title": "Layer 3 — persistence selection by free-energy exhaustion (formal, L1)",
+      "entry_sha256": "156d38ddfdf82bddec4edac3ad7bffd5292a75572eafac49b57780e063d7c0a8",
       "stream": "research",
       "areas": [
         "research-core"
