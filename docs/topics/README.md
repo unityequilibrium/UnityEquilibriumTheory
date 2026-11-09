@@ -9,6 +9,31 @@ It does not certify the theory. It reports how well each topic currently matches
 repository standards for structure, data provenance, verification, mathematical framing,
 physical framing, and public claim discipline.
 
+## Research Standard v2 status (2026-11-09)
+
+Evidence is now tracked **per claim**, not per topic. The controlling standard is
+[docs/STANDARD.md](../STANDARD.md), and the claim register is
+[docs/standard/claims.json](../standard/claims.json). There are five levels:
+`L0_SPECULATIVE`, `L1_CONSISTENT`, `L2_CONFRONTED`, `L3_REPLICATED` and `FAILED`.
+
+| Claim | Level | What it says | Evidence |
+| :-- | :-- | :-- | :-- |
+| `C_PARENT_EOM_DERIVED` | `L1_CONSISTENT` | The implemented scalar, O(2) matter and (diagonal) metric equations follow from the parent action | [R_W4_PARENT_EOM](../standard/results/R_W4_PARENT_EOM.json) |
+| `C_EPSILON_REDUNDANT` | `L1_CONSISTENT` | epsilon is not an independent coupling; epsilon = 0 is a degenerate point, not a GR limit | [R_W4_EPSILON_REDUNDANCY](../standard/results/R_W4_EPSILON_REDUNDANCY.json) |
+| `C_UET_DEF_MAPPING` | `L1_CONSISTENT` | With minimal matter coupling, the parent action maps onto Damour-Esposito-Farese with beta0 = -2 xi_c and alpha0 = 0 | [R_W5_DEF_MAPPING](../standard/results/R_W5_DEF_MAPPING.json) |
+| `C_T001_BINARY_PULSAR_XI_C` | `L2_CONFRONTED` (constraint) | Binary pulsars exclude xi_c in [2.0, 2.4] when m_psi <= 2.5e-18 eV; this is not a prediction, and xi_c remains free | [R_T001_BINARY_PULSAR](../standard/results/R_T001_BINARY_PULSAR.json), [Test Card T001](../standard/tests/T001.json) |
+
+The core theory card is [docs/core/THEORY_CARD.md](../core/THEORY_CARD.md). In the action
+itself, UET does not yet differ from the known scalar-tensor class.
+
+How to read the rest of this page:
+- Tier `A`-`D`, `Structured` and `Draft` measure how complete a topic's
+  documentation package is. They are not evidence levels (STANDARD.md §13).
+- Status words from older waves, such as `PASS`, `CLOSED_FOR_CORE`, `CLOSED_FOR_LANE`,
+  `BLOCKED` and `*_NO_GO`, are `LEGACY_UNREVIEWED`. At most they count as candidates for `L1`,
+  and only after the physics tests of STANDARD.md §6 have been run. `*_NO_GO` maps to `FAILED`
+  for its stated scope. No topic result below has been promoted under v2 yet.
+
 ## Current baseline
 
 - Canonical numbered topics in scope: `41` directories (`0.0` through `0.39`, with one canonical `0.33` future-topic directory)
@@ -67,13 +92,13 @@ These topics determine the current scientific credibility of the repo.
 | [0.10](./0.10_Fluid_Dynamics_Chaos/) | `Structured` | `B` | structured package exists and latest run passed, but repeated-run speed-threshold stability is not yet demonstrated |
 | [0.11](./0.11_Phase_Transitions/) | `Structured` | `B` | Wave 55 replicate/temporal acquisition remains controlling; core Wave 9 adds only conditional charge-coordinate compatibility, with Topic C identity, EOS, transport, estimator acceptance, and exponent rerun blocked |
 | [0.12](./0.12_Vacuum_Energy_Casimir/) | `Draft` | `B` | topic has research assets, yet audit-grade verification remains absent |
-| [0.13](./0.13_Thermodynamic_Bridge/) | `Draft` | `B` | bounded O(2)/He-4 thermal bridge is `CLOSED_FOR_CORE` with 13/13 acceptance; graphite external validation, complete two-fluid transport, curved 3+1, Gravity, and global UET closure remain open |
+| [0.13](./0.13_Thermodynamic_Bridge/) | `Draft` | `B` | bounded O(2)/He-4 thermal bridge is `CLOSED_FOR_CORE` with 13/13 acceptance; graphite external validation, complete two-fluid transport, curved 3+1, Gravity, and global UET closure remain open; under v2 this is `LEGACY_UNREVIEWED` (13/13 includes non-evidence criteria) |
 | [0.14](./0.14_Complex_Systems/) | `Draft` | `B` | substantial local material exists, but standards migration has not happened |
 | [0.15](./0.15_Cluster_Dynamics/) | `Draft` | `B` | real-source references are visible, but verification specs are missing |
 | [0.16](./0.16_Heavy_Nuclei/) | `Draft` | `B` | technically active topic, not yet packaged for auditability |
 | [0.17](./0.17_Mass_Generation/) | `Draft` | `B` | evidence exists, but claim wording is stronger than the current standards package |
 | [0.18](./0.18_Mathnicry/) | `Draft` | `B` | proof-focused foldering exists, but the proof boundary is undocumented |
-| [0.19](./0.19_Gravity_GR/) | `Draft` | `B` | CODATA checkpoint remains primary; core candidate GR program adds an exact response-null and bounded local covariant infrastructure, while physical GR benchmarks and completion remain blocked |
+| [0.19](./0.19_Gravity_GR/) | `Draft` | `B` | CODATA checkpoint remains primary; core candidate GR program adds an exact response-null and bounded local covariant infrastructure, while physical GR benchmarks and completion remain blocked; v2: binary-pulsar constraint on the core parent action is `L2` (`C_T001_BINARY_PULSAR_XI_C`) |
 | [0.20](./0.20_Atomic_Physics/) | `Draft` | `B` | code/data exist, but verification and limitations are not normalized |
 | [0.21](./0.21_Yang_Mills_Mass_Gap/) | `Structured` | `A` | strongest math-facing standards candidate, but public wording still needs restraint |
 | [0.22](./0.22_Biophysics_Origin_of_Life/) | `Draft` | `B` | source-referenced context with synthetic primary WARN plus a separate class-C finite HP benchmark; raw-data, biological-correspondence, and external-replication blockers remain explicit |

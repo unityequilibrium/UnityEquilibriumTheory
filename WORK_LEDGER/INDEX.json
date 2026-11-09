@@ -5,11 +5,11 @@
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
     "sources": 74,
-    "entries": 786,
+    "entries": 787,
     "by_stream": {
       "book-history": 94,
       "operations": 112,
-      "research": 580
+      "research": 581
     },
     "exact_duplicates": 0,
     "review_entries": 2
@@ -384,8 +384,8 @@
     },
     {
       "path": "2026/2026-11-09.md",
-      "sha256": "f57562eb582a80d6975db0425a23100fd9eb3d5db2dc737e9948c6dfbc846ff8",
-      "entries": 2
+      "sha256": "2beebaeeee1747e9eba1af2d1c652ea4c4c1ef2dca01dbbfa36ebb84e1b36ab2",
+      "entries": 3
     },
     {
       "path": "2026-08-14.md",
@@ -16064,9 +16064,29 @@
       "source": "2026/2026-11-09.md",
       "anchor": "standard-v2-hardening--close-gaps-found-during-the-t001-port",
       "start_line": 23,
-      "end_line": 38,
+      "end_line": 39,
       "title": "Standard v2 hardening — close gaps found during the T001 port",
-      "entry_sha256": "e4b72c84beeffb120b1e060f7f2af328c871d28b2d05a61235ff30db6681995e",
+      "entry_sha256": "3cffabe38942e1200975a34f86c24a1d7ff61921823c92fc708a3c51ac3d40d9",
+      "stream": "research",
+      "areas": [
+        "research-standards"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-09",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-09.md#standard-v2-w7--topic-index-synced-to-the-claim-register",
+      "source": "2026/2026-11-09.md",
+      "anchor": "standard-v2-w7--topic-index-synced-to-the-claim-register",
+      "start_line": 40,
+      "end_line": 53,
+      "title": "Standard v2 W7 — topic index synced to the claim register",
+      "entry_sha256": "681e47407302b7f3198ce3d0322ab9c3ce074dfdc614f73529f81e09f5fdd2b0",
       "stream": "research",
       "areas": [
         "research-standards"
