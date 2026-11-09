@@ -1,0 +1,605 @@
+{
+  "schema_version": "core-curved-3p1-gh-krsw-normal-incidence-slab-cycle-v1",
+  "artifact": "curved_3p1_gh_krsw_normal_incidence_slab_cycle",
+  "generated_at": "2026-09-25T19:16:32+00:00",
+  "status": "PASS_EXACT_NORMAL_INCIDENCE_SLAB_CYCLE_NONAMPLIFICATION",
+  "major_result_id": "CORE_CURVED_3P1_GH_KRSW_NORMAL_INCIDENCE_SLAB_CYCLE",
+  "major_result": {
+    "major_result_id": "CORE_CURVED_3P1_GH_KRSW_NORMAL_INCIDENCE_SLAB_CYCLE",
+    "topic": "core_curved_3p1",
+    "closure_level": "CLOSED_FOR_LANE",
+    "what_is_closed": [
+      "For the source-free flat linearized wave system at normal incidence, characteristic amplitudes propagate unchanged between two parallel faces, up to travel-time delay.",
+      "Both possible two-face reflection-cycle maps are exact rank-4 orthogonal projections in the Frobenius tensor weight W.",
+      "The W-weighted pulse energy after a full round trip is no larger than before it; the exact loss is the squared W norm of the projected-out component.",
+      "Since each cycle map is idempotent, repeated complete cycles have no cumulative amplitude or pulse-energy growth in this restricted lane."
+    ],
+    "what_remains_open": [
+      "This is the constrained second-order linear wave sector with gamma2=0, not the full first-order GH evolution or its SAT discretization.",
+      "Tangential frequencies, glancing modes, complex-frequency uniform estimates, curved/variable-coefficient backgrounds, matter sources, nonlinear terms, and corners remain open.",
+      "The result does not prove the full 3D Core parent or Gravity compatibility."
+    ],
+    "equation_or_mapping": {
+      "flat_wave_solution": "gamma(t,x)=F(t-x)+G(t+x), componentwise, with zero tangential derivatives",
+      "characteristics": "a_s=(partial_t+s*partial_x)gamma; b_s=(partial_t-s*partial_x)gamma; q_s=-a_s; p_s=-b_s",
+      "boundary_maps": "q_right=M_right*p_right; q_left=M_left*p_left",
+      "propagation": "p_left(t+L)=q_right(t); p_right(t+2L)=q_left(t+L)=P_right*p_right(t), P_right=M_left*M_right; the reverse cycle uses P_left=M_right*M_left",
+      "weighted_projector": "P^2=P; P^T W=W P; rank(P)=4; W=diag(1 for diagonal,2 for off-diagonal symmetric tensor slots)",
+      "pulse_energy": "E[p]=(1/4)*integral(p(t)^T W p(t) dt); E[Pp]=E[p]-(1/4)*integral(((I-P)p)^T W((I-P)p) dt)<=E[p]",
+      "physical_cycle_time": "2L/c; the audit uses geometric units c=1"
+    },
+    "units": "Geometric units c=1; tensor derivative amplitudes and W-weighted linear wave pulse flux. Physical round-trip time is 2L/c.",
+    "derivation_class": "exact rational face-map algebra plus exact normal-incidence d'Alembert propagation",
+    "observable": "positive componentwise wave-system flux in the declared symmetric-tensor norm; not a physical gravitational-energy observable",
+    "data_role": "published standard-GR boundary hierarchy plus exact internal analytic construction; no empirical data, fitting, or holdout",
+    "verification_status": "PASS_EXACT_NORMAL_INCIDENCE_SLAB_CYCLE_NONAMPLIFICATION",
+    "open_blockers": [
+      "extend the cycle-energy argument to nonzero tangential Fourier modes and the full 4+2+4 first-order GH characteristic system",
+      "prove an SBP-SAT energy estimate for the actual spatial discretization, including edges and corners"
+    ],
+    "dependency_unlocked": "none",
+    "claim_boundary": "Exact non-amplification for source-free, flat, linearized, normal-incidence slab reflection cycles only; this is not Bondi/ADM energy, full GH stability, curved 3+1 closure, UET validation, or Gravity compatibility."
+  },
+  "source": {
+    "title": "Boundary conditions for coupled quasilinear wave equations with application to isolated systems",
+    "authors": [
+      "H.-O. Kreiss",
+      "O. Reula",
+      "O. Sarbach",
+      "J. Winicour"
+    ],
+    "locator": "Section IV.1, equations (55)-(67) and harmonic constraints immediately following equation (67)",
+    "url": "https://arxiv.org/html/0807.3207",
+    "role": "imported standard-GR linearized harmonic boundary hierarchy; the finite-slab propagation argument is the present exact specialization"
+  },
+  "scope": {
+    "domain": "0<=x<=L, two plane faces, Minkowski background",
+    "field_equation": "(partial_t^2-partial_x^2)gamma_ab=0, for ten symmetric tensor components",
+    "boundary_conditions": "homogeneous KRSW plane hierarchy plus harmonic constraints, specialized to normal incidence",
+    "characteristic_convention": "principal characteristic variables; lower-order gamma2*psi term omitted",
+    "excluded": [
+      "tangential derivatives",
+      "curvature",
+      "variable lapse or shift",
+      "matter",
+      "nonlinear terms",
+      "discrete SAT evolution",
+      "edge and corner conditions"
+    ]
+  },
+  "cycles": {
+    "right_then_left": {
+      "composition": "M_left*M_right",
+      "rank": 4,
+      "energy_defect_rank": 6,
+      "checks": {
+        "idempotent": true,
+        "weighted_self_adjoint": true,
+        "energy_defect_is_weighted_complement": true,
+        "complement_gram_equals_weighted_complement": true,
+        "rank_four_projection": true,
+        "rank_six_energy_defect": true
+      },
+      "matrix_exact": [
+        [
+          "1/4",
+          "1/2",
+          "0",
+          "0",
+          "1/4",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "1/4",
+          "1/2",
+          "0",
+          "0",
+          "1/4",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "1/2",
+          "0",
+          "0",
+          "1/2",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "1/2",
+          "0",
+          "0",
+          "1/2",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "1/4",
+          "1/2",
+          "0",
+          "0",
+          "1/4",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "1/2",
+          "0",
+          "0",
+          "1/2",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "1/2",
+          "0",
+          "0",
+          "1/2",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "1/2",
+          "0",
+          "1/2"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "1/2",
+          "0",
+          "1/2"
+        ]
+      ],
+      "energy_defect_exact": [
+        [
+          "3/4",
+          "-1/2",
+          "0",
+          "0",
+          "-1/4",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "-1/2",
+          "1",
+          "0",
+          "0",
+          "-1/2",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "1",
+          "0",
+          "0",
+          "-1",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "1",
+          "0",
+          "0",
+          "-1",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "-1/4",
+          "-1/2",
+          "0",
+          "0",
+          "3/4",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "-1",
+          "0",
+          "0",
+          "1",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "-1",
+          "0",
+          "0",
+          "1",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "1/2",
+          "0",
+          "-1/2"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "2",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "-1/2",
+          "0",
+          "1/2"
+        ]
+      ]
+    },
+    "left_then_right": {
+      "composition": "M_right*M_left",
+      "rank": 4,
+      "energy_defect_rank": 6,
+      "checks": {
+        "idempotent": true,
+        "weighted_self_adjoint": true,
+        "energy_defect_is_weighted_complement": true,
+        "complement_gram_equals_weighted_complement": true,
+        "rank_four_projection": true,
+        "rank_six_energy_defect": true
+      },
+      "matrix_exact": [
+        [
+          "1/4",
+          "-1/2",
+          "0",
+          "0",
+          "1/4",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "-1/4",
+          "1/2",
+          "0",
+          "0",
+          "-1/4",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "1/2",
+          "0",
+          "0",
+          "-1/2",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "1/2",
+          "0",
+          "0",
+          "-1/2",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "1/4",
+          "-1/2",
+          "0",
+          "0",
+          "1/4",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "-1/2",
+          "0",
+          "0",
+          "1/2",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "-1/2",
+          "0",
+          "0",
+          "1/2",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "1/2",
+          "0",
+          "1/2"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "1/2",
+          "0",
+          "1/2"
+        ]
+      ],
+      "energy_defect_exact": [
+        [
+          "3/4",
+          "1/2",
+          "0",
+          "0",
+          "-1/4",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "1/2",
+          "1",
+          "0",
+          "0",
+          "1/2",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "1",
+          "0",
+          "0",
+          "1",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "1",
+          "0",
+          "0",
+          "1",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "-1/4",
+          "1/2",
+          "0",
+          "0",
+          "3/4",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "1",
+          "0",
+          "0",
+          "1",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "1",
+          "0",
+          "0",
+          "1",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "1/2",
+          "0",
+          "-1/2"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "2",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "-1/2",
+          "0",
+          "1/2"
+        ]
+      ]
+    }
+  },
+  "checks": {
+    "one_face_source_audit_passes": true,
+    "right_cycle_is_W_orthogonal_projection": true,
+    "left_cycle_is_W_orthogonal_projection": true,
+    "right_outgoing_F_has_a_zero_b_two": true,
+    "right_incoming_G_has_a_two_b_zero": true,
+    "left_outgoing_G_has_a_zero_b_two": true,
+    "left_incoming_F_has_a_two_b_zero": true,
+    "right_then_left_propagation_preserves_profile_phase": true,
+    "left_then_right_propagation_preserves_profile_phase": true
+  },
+  "claim_promotion": false,
+  "full_core_unlock": false,
+  "gravity_unlock": false,
+  "source_hashes": {
+    "docs/scripts/audit/audit_curved_3p1_gh_krsw_normal_incidence_energy.py": "434febb7aa4e216039093fc7b08debe5c014072a6ce988842293dd4f3b998062",
+    "docs/core/07_artifacts/verification/curved_3p1_gh_krsw_normal_incidence_energy.json": "38c1d3091a2d126506e5ed1a17351caae639b8b335ae868cdd4104d1b1b215d6",
+    "docs/scripts/audit/audit_curved_3p1_gh_krsw_normal_incidence_slab_cycle.py": "4323e61c951bc5c49a47d3158ac5480a0cf675f1b9fc1f1878aa444970e82184"
+  }
+}

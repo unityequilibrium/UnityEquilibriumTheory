@@ -1,0 +1,1038 @@
+{
+  "schema_version": "core-curved-3p1-gh-rinne-sat-penalty-screen-v1",
+  "artifact": "curved_3p1_gh_rinne_sat_penalty_screen",
+  "generated_at": "2026-09-25",
+  "status": "PASS_BASELINE_REPRODUCTION_AND_SCREEN",
+  "claim_promotion": false,
+  "diagnostic_id": "uet.core.curved_3p1.gh.rinne_scalar_sat_gain_grid",
+  "major_result": {
+    "major_result_id": "CORE_CURVED_3P1_GH_RINNE_SCALAR_SAT_GAIN_GRID",
+    "topic": "core",
+    "closure_level": "CLOSED_FOR_LANE",
+    "what_is_closed": [
+      "the frozen strong-Rinne operator is reproduced exactly by the independent assembly at LGL orders 8, 12, and 16",
+      "none of the 13 declared normalized scalar gains passes the semidiscrete spectral screen for either tested weak penalty direction at any declared order",
+      "the declared direct strong-correction amplitude grid has sampled passes only at LGL order 8, with no sampled pass at orders 12 or 16 and no common gain across all orders",
+      "the direct Pi-only residual correction preserves the reduction constraint to roundoff but fails the declared pulse-absorption and spectrum screens"
+    ],
+    "equation_or_mapping": {
+      "residual": "r = target(q_dot) - q_dot_raw",
+      "pi_only_exact": "delta(Pi_dot) = r at each boundary node",
+      "weak_pi": "delta(Pi_dot) = sigma_hat * H_hat^-1 * r",
+      "weak_incoming_characteristic": "delta(Pi_dot) = sigma_hat*H_hat^-1*r/2; delta(Phi_dot) = -n*sigma_hat*H_hat^-1*r/2",
+      "reduction_constraint": "C = D(psi) - Phi; Pi-only RHS correction leaves C_dot unchanged"
+    },
+    "units": {
+      "unit_lane": "normalized geometric coordinate xi=x/L0 on [-1,1], with L0=1 in the computation",
+      "psi": "dimensionless perturbation",
+      "Pi_Phi_gamma2": "L0^-1",
+      "q_dot_residual": "L0^-2",
+      "H_hat": "dimensionless SBP norm weights H/L0",
+      "sigma_hat": "dimensionless; sigma_hat*H_hat^-1*r has units L0^-2",
+      "energy": "normalized linear-wave diagnostic; not SI energy"
+    },
+    "derivation_class": "standard-GR frozen-background numerical-method screen; no new physical equation",
+    "observable": "semidiscrete spectral abscissa, positive eigenvalue count, TT-pulse energy ratio, and reduction-constraint residual",
+    "data_role": "analytic and synthetic numerical control; no physical data, fitting, or holdout",
+    "evidence_artifacts": [
+      "docs/core/07_artifacts/verification/curved_3p1_gh_rinne_sat_penalty_screen.json"
+    ],
+    "verification_status": "PASS_BASELINE_REPRODUCTION_AND_SCREEN",
+    "open_blockers": [
+      "the finite gain grid does not prove that every continuous scalar gain fails",
+      "a source-matched two-face projector-compatible penalty with a discrete energy estimate remains to be derived",
+      "positive-shift u2_A, tangential derivatives, edges/corners, variable coefficients, and nonlinear GH remain open",
+      "the general curved 3+1 dimensional observable map remains independently open"
+    ],
+    "dependency_unlocked": "none; Core curved 3+1 remains PARTIAL and Gravity remains blocked",
+    "claim_boundary": "Only the declared finite zero-shift LGL scalar-gain screen (weak-penalty and direct-strength grids) is closed. The order-8 direct-strength pass is not resolution robust. This is not a continuum no-go for scalar penalties, not Rinne CPBC closure, and not a UET physical or Gravity result."
+  },
+  "scope": {
+    "state_variables": [
+      "psi_ab",
+      "Pi_ab",
+      "Phi_xab"
+    ],
+    "excluded_variables": [
+      "UET C",
+      "UET Phi",
+      "UET Pi",
+      "R_gen",
+      "R_obs"
+    ],
+    "domain": "finite one-dimensional slab [-1,1], zero shift, normal incidence",
+    "space_discretization": "Legendre-Gauss-Lobatto diagonal-norm SBP at orders 8, 12, and 16",
+    "time_discretization": "RK4 with dt <= 0.25 times minimum node spacing for the pulse screen",
+    "filtering": false,
+    "clipping": false,
+    "parameter_fitting": false,
+    "holdout_access": false,
+    "nonlinear_evolution": false
+  },
+  "numerical_policy": {
+    "gamma2": 0.7,
+    "sigma_hat_grid": [
+      -4.0,
+      -2.0,
+      -1.0,
+      -0.5,
+      -0.25,
+      -0.125,
+      0.0,
+      0.125,
+      0.25,
+      0.5,
+      1.0,
+      2.0,
+      4.0
+    ],
+    "direct_strong_rinne_amplitude_grid": [
+      -1.0,
+      -0.5,
+      -0.25,
+      -0.125,
+      0.0,
+      0.125,
+      0.25,
+      0.5,
+      0.75,
+      1.0,
+      1.25,
+      1.5,
+      2.0,
+      4.0
+    ],
+    "eigenvalue_real_part_tolerance": 1e-06,
+    "pulse_energy_ratio_limit": 0.05,
+    "pulse_final_time": 2.4,
+    "unit_normalization": "xi=x/L0; H_hat=H/L0; L0=1",
+    "grid_role": "finite sensitivity screen; no continuum or all-parameter no-go claim; direct-strength pass at order 8 alone is not convergence"
+  },
+  "checks": {
+    "strong_rinne_operator_reproduced_at_every_order": true,
+    "pi_only_reduction_constraint_preserved_at_every_order": true,
+    "pi_only_pulse_absorption_fails_at_every_order": true,
+    "no_sampled_weak_pi_gain_passes_at_any_order": true,
+    "no_sampled_weak_characteristic_gain_passes_at_any_order": true,
+    "direct_strength_scan_has_order8_passes": true,
+    "direct_strength_scan_has_no_pass_at_orders12_and16": true,
+    "direct_strength_scan_has_no_common_gain_across_all_orders": true
+  },
+  "order_results": [
+    {
+      "lgl_order": 8,
+      "node_count": 9,
+      "state_dimension": 270,
+      "strong_rinne_matrix_match_residual": 0.0,
+      "pi_only_exact_correction": {
+        "maximum_eigenvalue_real_part": 0.08711663011836457,
+        "positive_modes_above_1e-6": 20,
+        "spectral_screen_pass": false,
+        "pulse_energy_ratio": 2.422473332235347,
+        "pulse_energy_ratio_limit": 0.05,
+        "pulse_absorption_pass": false,
+        "pulse_final_time": 2.4,
+        "rk4_steps": 96,
+        "dt": 0.024999999999999998,
+        "reduction_constraint_linf": 2.1649348980190553e-15
+      },
+      "weak_pi_residual_gain_scan": {
+        "points": [
+          {
+            "sigma_hat": -4.0,
+            "maximum_eigenvalue_real_part": 2776.6392520828176,
+            "positive_modes_above_1e-6": 40,
+            "spectral_screen_pass": false
+          },
+          {
+            "sigma_hat": -2.0,
+            "maximum_eigenvalue_real_part": 1394.2295427994836,
+            "positive_modes_above_1e-6": 41,
+            "spectral_screen_pass": false
+          },
+          {
+            "sigma_hat": -1.0,
+            "maximum_eigenvalue_real_part": 703.0101215250832,
+            "positive_modes_above_1e-6": 40,
+            "spectral_screen_pass": false
+          },
+          {
+            "sigma_hat": -0.5,
+            "maximum_eigenvalue_real_part": 357.3713088479822,
+            "positive_modes_above_1e-6": 40,
+            "spectral_screen_pass": false
+          },
+          {
+            "sigma_hat": -0.25,
+            "maximum_eigenvalue_real_part": 184.4940760754184,
+            "positive_modes_above_1e-6": 40,
+            "spectral_screen_pass": false
+          },
+          {
+            "sigma_hat": -0.125,
+            "maximum_eigenvalue_real_part": 97.9427196479008,
+            "positive_modes_above_1e-6": 40,
+            "spectral_screen_pass": false
+          },
+          {
+            "sigma_hat": 0.0,
+            "maximum_eigenvalue_real_part": 0.1313551921296004,
+            "positive_modes_above_1e-6": 91,
+            "spectral_screen_pass": false
+          },
+          {
+            "sigma_hat": 0.125,
+            "maximum_eigenvalue_real_part": 0.37495078817022054,
+            "positive_modes_above_1e-6": 20,
+            "spectral_screen_pass": false
+          },
+          {
+            "sigma_hat": 0.25,
+            "maximum_eigenvalue_real_part": 0.4205707293588694,
+            "positive_modes_above_1e-6": 20,
+            "spectral_screen_pass": false
+          },
+          {
+            "sigma_hat": 0.5,
+            "maximum_eigenvalue_real_part": 0.44272315982698607,
+            "positive_modes_above_1e-6": 20,
+            "spectral_screen_pass": false
+          },
+          {
+            "sigma_hat": 1.0,
+            "maximum_eigenvalue_real_part": 0.453926708691186,
+            "positive_modes_above_1e-6": 20,
+            "spectral_screen_pass": false
+          },
+          {
+            "sigma_hat": 2.0,
+            "maximum_eigenvalue_real_part": 0.4594145666899039,
+            "positive_modes_above_1e-6": 20,
+            "spectral_screen_pass": false
+          },
+          {
+            "sigma_hat": 4.0,
+            "maximum_eigenvalue_real_part": 0.4621307314370313,
+            "positive_modes_above_1e-6": 20,
+            "spectral_screen_pass": false
+          }
+        ],
+        "passing_sigma_hat_values": [],
+        "best_sampled_point": {
+          "sigma_hat": 0.0,
+          "maximum_eigenvalue_real_part": 0.1313551921296004,
+          "positive_modes_above_1e-6": 91,
+          "spectral_screen_pass": false
+        },
+        "classification": "NO_SAMPLED_GAIN_PASSES"
+      },
+      "weak_incoming_characteristic_gain_scan": {
+        "points": [
+          {
+            "sigma_hat": -4.0,
+            "maximum_eigenvalue_real_part": 2603.6707082075004,
+            "positive_modes_above_1e-6": 61,
+            "spectral_screen_pass": false
+          },
+          {
+            "sigma_hat": -2.0,
+            "maximum_eigenvalue_real_part": 1307.655421957165,
+            "positive_modes_above_1e-6": 60,
+            "spectral_screen_pass": false
+          },
+          {
+            "sigma_hat": -1.0,
+            "maximum_eigenvalue_real_part": 659.6251926752166,
+            "positive_modes_above_1e-6": 60,
+            "spectral_screen_pass": false
+          },
+          {
+            "sigma_hat": -0.5,
+            "maximum_eigenvalue_real_part": 335.5660618591262,
+            "positive_modes_above_1e-6": 60,
+            "spectral_screen_pass": false
+          },
+          {
+            "sigma_hat": -0.25,
+            "maximum_eigenvalue_real_part": 173.45277823811477,
+            "positive_modes_above_1e-6": 60,
+            "spectral_screen_pass": false
+          },
+          {
+            "sigma_hat": -0.125,
+            "maximum_eigenvalue_real_part": 92.24383486547214,
+            "positive_modes_above_1e-6": 60,
+            "spectral_screen_pass": false
+          },
+          {
+            "sigma_hat": 0.0,
+            "maximum_eigenvalue_real_part": 0.1313551921296004,
+            "positive_modes_above_1e-6": 91,
+            "spectral_screen_pass": false
+          },
+          {
+            "sigma_hat": 0.125,
+            "maximum_eigenvalue_real_part": 0.12990315885347117,
+            "positive_modes_above_1e-6": 40,
+            "spectral_screen_pass": false
+          },
+          {
+            "sigma_hat": 0.25,
+            "maximum_eigenvalue_real_part": 0.18574304144427278,
+            "positive_modes_above_1e-6": 40,
+            "spectral_screen_pass": false
+          },
+          {
+            "sigma_hat": 0.5,
+            "maximum_eigenvalue_real_part": 0.21099827990285402,
+            "positive_modes_above_1e-6": 40,
+            "spectral_screen_pass": false
+          },
+          {
+            "sigma_hat": 1.0,
+            "maximum_eigenvalue_real_part": 0.22304538682689257,
+            "positive_modes_above_1e-6": 40,
+            "spectral_screen_pass": false
+          },
+          {
+            "sigma_hat": 2.0,
+            "maximum_eigenvalue_real_part": 0.22893295197182545,
+            "positive_modes_above_1e-6": 40,
+            "spectral_screen_pass": false
+          },
+          {
+            "sigma_hat": 4.0,
+            "maximum_eigenvalue_real_part": 0.23184379704289126,
+            "positive_modes_above_1e-6": 41,
+            "spectral_screen_pass": false
+          }
+        ],
+        "passing_sigma_hat_values": [],
+        "best_sampled_point": {
+          "sigma_hat": 0.125,
+          "maximum_eigenvalue_real_part": 0.12990315885347117,
+          "positive_modes_above_1e-6": 40,
+          "spectral_screen_pass": false
+        },
+        "classification": "NO_SAMPLED_GAIN_PASSES"
+      },
+      "direct_strong_rinne_amplitude_scan": {
+        "points": [
+          {
+            "sigma_hat": -1.0,
+            "maximum_eigenvalue_real_part": 28.198374727604676,
+            "positive_modes_above_1e-6": 60,
+            "spectral_screen_pass": false
+          },
+          {
+            "sigma_hat": -0.5,
+            "maximum_eigenvalue_real_part": 18.382925173347534,
+            "positive_modes_above_1e-6": 60,
+            "spectral_screen_pass": false
+          },
+          {
+            "sigma_hat": -0.25,
+            "maximum_eigenvalue_real_part": 12.922819513749552,
+            "positive_modes_above_1e-6": 60,
+            "spectral_screen_pass": false
+          },
+          {
+            "sigma_hat": -0.125,
+            "maximum_eigenvalue_real_part": 9.669729585926381,
+            "positive_modes_above_1e-6": 60,
+            "spectral_screen_pass": false
+          },
+          {
+            "sigma_hat": 0.0,
+            "maximum_eigenvalue_real_part": 0.1313551921296004,
+            "positive_modes_above_1e-6": 91,
+            "spectral_screen_pass": false
+          },
+          {
+            "sigma_hat": 0.125,
+            "maximum_eigenvalue_real_part": 3.6737637271334576,
+            "positive_modes_above_1e-6": 40,
+            "spectral_screen_pass": false
+          },
+          {
+            "sigma_hat": 0.25,
+            "maximum_eigenvalue_real_part": 3.1653391483688784,
+            "positive_modes_above_1e-6": 40,
+            "spectral_screen_pass": false
+          },
+          {
+            "sigma_hat": 0.5,
+            "maximum_eigenvalue_real_part": 1.7880377937908967,
+            "positive_modes_above_1e-6": 40,
+            "spectral_screen_pass": false
+          },
+          {
+            "sigma_hat": 0.75,
+            "maximum_eigenvalue_real_part": 0.5073027212774678,
+            "positive_modes_above_1e-6": 40,
+            "spectral_screen_pass": false
+          },
+          {
+            "sigma_hat": 1.0,
+            "maximum_eigenvalue_real_part": 7.903463625444811e-08,
+            "positive_modes_above_1e-6": 0,
+            "spectral_screen_pass": true
+          },
+          {
+            "sigma_hat": 1.25,
+            "maximum_eigenvalue_real_part": 1.1972552013162813e-07,
+            "positive_modes_above_1e-6": 0,
+            "spectral_screen_pass": true
+          },
+          {
+            "sigma_hat": 1.5,
+            "maximum_eigenvalue_real_part": 1.437750912732757e-07,
+            "positive_modes_above_1e-6": 0,
+            "spectral_screen_pass": true
+          },
+          {
+            "sigma_hat": 2.0,
+            "maximum_eigenvalue_real_part": 6.45571743520375e-08,
+            "positive_modes_above_1e-6": 0,
+            "spectral_screen_pass": true
+          },
+          {
+            "sigma_hat": 4.0,
+            "maximum_eigenvalue_real_part": 0.11466327383572139,
+            "positive_modes_above_1e-6": 40,
+            "spectral_screen_pass": false
+          }
+        ],
+        "passing_sigma_hat_values": [
+          1.0,
+          1.25,
+          1.5,
+          2.0
+        ],
+        "best_sampled_point": {
+          "sigma_hat": 2.0,
+          "maximum_eigenvalue_real_part": 6.45571743520375e-08,
+          "positive_modes_above_1e-6": 0,
+          "spectral_screen_pass": true
+        },
+        "classification": "SAMPLED_GAIN_PASS_FOUND"
+      }
+    },
+    {
+      "lgl_order": 12,
+      "node_count": 13,
+      "state_dimension": 390,
+      "strong_rinne_matrix_match_residual": 0.0,
+      "pi_only_exact_correction": {
+        "maximum_eigenvalue_real_part": 0.5510513889838369,
+        "positive_modes_above_1e-6": 20,
+        "spectral_screen_pass": false,
+        "pulse_energy_ratio": 1.1328142677289885,
+        "pulse_energy_ratio_limit": 0.05,
+        "pulse_absorption_pass": false,
+        "pulse_final_time": 2.4,
+        "rk4_steps": 206,
+        "dt": 0.011650485436893204,
+        "reduction_constraint_linf": 1.5543122344752192e-15
+      },
+      "weak_pi_residual_gain_scan": {
+        "points": [
+          {
+            "sigma_hat": -4.0,
+            "maximum_eigenvalue_real_part": 12568.246440269631,
+            "positive_modes_above_1e-6": 62,
+            "spectral_screen_pass": false
+          },
+          {
+            "sigma_hat": -2.0,
+            "maximum_eigenvalue_real_part": 6297.034693963718,
+            "positive_modes_above_1e-6": 61,
+            "spectral_screen_pass": false
+          },
+          {
+            "sigma_hat": -1.0,
+            "maximum_eigenvalue_real_part": 3161.4112686705785,
+            "positive_modes_above_1e-6": 60,
+            "spectral_screen_pass": false
+          },
+          {
+            "sigma_hat": -0.5,
+            "maximum_eigenvalue_real_part": 1593.5646884369698,
+            "positive_modes_above_1e-6": 60,
+            "spectral_screen_pass": false
+          },
+          {
+            "sigma_hat": -0.25,
+            "maximum_eigenvalue_real_part": 809.5726156960359,
+            "positive_modes_above_1e-6": 60,
+            "spectral_screen_pass": false
+          },
+          {
+            "sigma_hat": -0.125,
+            "maximum_eigenvalue_real_part": 417.4428403619876,
+            "positive_modes_above_1e-6": 60,
+            "spectral_screen_pass": false
+          },
+          {
+            "sigma_hat": 0.0,
+            "maximum_eigenvalue_real_part": 0.6345697889402468,
+            "positive_modes_above_1e-6": 128,
+            "spectral_screen_pass": false
+          },
+          {
+            "sigma_hat": 0.125,
+            "maximum_eigenvalue_real_part": 2.27147916350252,
+            "positive_modes_above_1e-6": 40,
+            "spectral_screen_pass": false
+          },
+          {
+            "sigma_hat": 0.25,
+            "maximum_eigenvalue_real_part": 2.3192292196317377,
+            "positive_modes_above_1e-6": 41,
+            "spectral_screen_pass": false
+          },
+          {
+            "sigma_hat": 0.5,
+            "maximum_eigenvalue_real_part": 2.342113333686881,
+            "positive_modes_above_1e-6": 41,
+            "spectral_screen_pass": false
+          },
+          {
+            "sigma_hat": 1.0,
+            "maximum_eigenvalue_real_part": 2.3533216420114087,
+            "positive_modes_above_1e-6": 41,
+            "spectral_screen_pass": false
+          },
+          {
+            "sigma_hat": 2.0,
+            "maximum_eigenvalue_real_part": 2.3588689924946014,
+            "positive_modes_above_1e-6": 42,
+            "spectral_screen_pass": false
+          },
+          {
+            "sigma_hat": 4.0,
+            "maximum_eigenvalue_real_part": 2.361628664377822,
+            "positive_modes_above_1e-6": 42,
+            "spectral_screen_pass": false
+          }
+        ],
+        "passing_sigma_hat_values": [],
+        "best_sampled_point": {
+          "sigma_hat": 0.0,
+          "maximum_eigenvalue_real_part": 0.6345697889402468,
+          "positive_modes_above_1e-6": 128,
+          "spectral_screen_pass": false
+        },
+        "classification": "NO_SAMPLED_GAIN_PASSES"
+      },
+      "weak_incoming_characteristic_gain_scan": {
+        "points": [
+          {
+            "sigma_hat": -4.0,
+            "maximum_eigenvalue_real_part": 12193.661058385347,
+            "positive_modes_above_1e-6": 62,
+            "spectral_screen_pass": false
+          },
+          {
+            "sigma_hat": -2.0,
+            "maximum_eigenvalue_real_part": 6109.646525677996,
+            "positive_modes_above_1e-6": 63,
+            "spectral_screen_pass": false
+          },
+          {
+            "sigma_hat": -1.0,
+            "maximum_eigenvalue_real_part": 3067.617608778076,
+            "positive_modes_above_1e-6": 60,
+            "spectral_screen_pass": false
+          },
+          {
+            "sigma_hat": -0.5,
+            "maximum_eigenvalue_real_part": 1546.5603602061694,
+            "positive_modes_above_1e-6": 60,
+            "spectral_screen_pass": false
+          },
+          {
+            "sigma_hat": -0.25,
+            "maximum_eigenvalue_real_part": 785.948135808819,
+            "positive_modes_above_1e-6": 61,
+            "spectral_screen_pass": false
+          },
+          {
+            "sigma_hat": -0.125,
+            "maximum_eigenvalue_real_part": 405.48226929706465,
+            "positive_modes_above_1e-6": 60,
+            "spectral_screen_pass": false
+          },
+          {
+            "sigma_hat": 0.0,
+            "maximum_eigenvalue_real_part": 0.6345697889402468,
+            "positive_modes_above_1e-6": 128,
+            "spectral_screen_pass": false
+          },
+          {
+            "sigma_hat": 0.125,
+            "maximum_eigenvalue_real_part": 1.7769352753040502,
+            "positive_modes_above_1e-6": 40,
+            "spectral_screen_pass": false
+          },
+          {
+            "sigma_hat": 0.25,
+            "maximum_eigenvalue_real_part": 1.8280953498761439,
+            "positive_modes_above_1e-6": 40,
+            "spectral_screen_pass": false
+          },
+          {
+            "sigma_hat": 0.5,
+            "maximum_eigenvalue_real_part": 1.853069676376086,
+            "positive_modes_above_1e-6": 42,
+            "spectral_screen_pass": false
+          },
+          {
+            "sigma_hat": 1.0,
+            "maximum_eigenvalue_real_part": 1.8653055587006804,
+            "positive_modes_above_1e-6": 42,
+            "spectral_screen_pass": false
+          },
+          {
+            "sigma_hat": 2.0,
+            "maximum_eigenvalue_real_part": 1.8713590568322975,
+            "positive_modes_above_1e-6": 42,
+            "spectral_screen_pass": false
+          },
+          {
+            "sigma_hat": 4.0,
+            "maximum_eigenvalue_real_part": 1.874369929613106,
+            "positive_modes_above_1e-6": 43,
+            "spectral_screen_pass": false
+          }
+        ],
+        "passing_sigma_hat_values": [],
+        "best_sampled_point": {
+          "sigma_hat": 0.0,
+          "maximum_eigenvalue_real_part": 0.6345697889402468,
+          "positive_modes_above_1e-6": 128,
+          "spectral_screen_pass": false
+        },
+        "classification": "NO_SAMPLED_GAIN_PASSES"
+      },
+      "direct_strong_rinne_amplitude_scan": {
+        "points": [
+          {
+            "sigma_hat": -1.0,
+            "maximum_eigenvalue_real_part": 61.60942788042054,
+            "positive_modes_above_1e-6": 60,
+            "spectral_screen_pass": false
+          },
+          {
+            "sigma_hat": -0.5,
+            "maximum_eigenvalue_real_part": 40.41929837320046,
+            "positive_modes_above_1e-6": 60,
+            "spectral_screen_pass": false
+          },
+          {
+            "sigma_hat": -0.25,
+            "maximum_eigenvalue_real_part": 28.673056630672153,
+            "positive_modes_above_1e-6": 60,
+            "spectral_screen_pass": false
+          },
+          {
+            "sigma_hat": -0.125,
+            "maximum_eigenvalue_real_part": 21.7054740117945,
+            "positive_modes_above_1e-6": 60,
+            "spectral_screen_pass": false
+          },
+          {
+            "sigma_hat": 0.0,
+            "maximum_eigenvalue_real_part": 0.6345697889402468,
+            "positive_modes_above_1e-6": 128,
+            "spectral_screen_pass": false
+          },
+          {
+            "sigma_hat": 0.125,
+            "maximum_eigenvalue_real_part": 8.887235400227922,
+            "positive_modes_above_1e-6": 80,
+            "spectral_screen_pass": false
+          },
+          {
+            "sigma_hat": 0.25,
+            "maximum_eigenvalue_real_part": 7.709116748539534,
+            "positive_modes_above_1e-6": 80,
+            "spectral_screen_pass": false
+          },
+          {
+            "sigma_hat": 0.5,
+            "maximum_eigenvalue_real_part": 4.604757787475094,
+            "positive_modes_above_1e-6": 74,
+            "spectral_screen_pass": false
+          },
+          {
+            "sigma_hat": 0.75,
+            "maximum_eigenvalue_real_part": 1.6531511044795195,
+            "positive_modes_above_1e-6": 40,
+            "spectral_screen_pass": false
+          },
+          {
+            "sigma_hat": 1.0,
+            "maximum_eigenvalue_real_part": 0.11320689124830838,
+            "positive_modes_above_1e-6": 8,
+            "spectral_screen_pass": false
+          },
+          {
+            "sigma_hat": 1.25,
+            "maximum_eigenvalue_real_part": 0.5189953284105804,
+            "positive_modes_above_1e-6": 40,
+            "spectral_screen_pass": false
+          },
+          {
+            "sigma_hat": 1.5,
+            "maximum_eigenvalue_real_part": 0.8890002708829238,
+            "positive_modes_above_1e-6": 40,
+            "spectral_screen_pass": false
+          },
+          {
+            "sigma_hat": 2.0,
+            "maximum_eigenvalue_real_part": 1.2402229681857415,
+            "positive_modes_above_1e-6": 40,
+            "spectral_screen_pass": false
+          },
+          {
+            "sigma_hat": 4.0,
+            "maximum_eigenvalue_real_part": 1.6115439590686371,
+            "positive_modes_above_1e-6": 40,
+            "spectral_screen_pass": false
+          }
+        ],
+        "passing_sigma_hat_values": [],
+        "best_sampled_point": {
+          "sigma_hat": 1.0,
+          "maximum_eigenvalue_real_part": 0.11320689124830838,
+          "positive_modes_above_1e-6": 8,
+          "spectral_screen_pass": false
+        },
+        "classification": "NO_SAMPLED_GAIN_PASSES"
+      }
+    },
+    {
+      "lgl_order": 16,
+      "node_count": 17,
+      "state_dimension": 510,
+      "strong_rinne_matrix_match_residual": 0.0,
+      "pi_only_exact_correction": {
+        "maximum_eigenvalue_real_part": 0.5780565445038963,
+        "positive_modes_above_1e-6": 20,
+        "spectral_screen_pass": false,
+        "pulse_energy_ratio": 1.3601592244312117,
+        "pulse_energy_ratio_limit": 0.05,
+        "pulse_absorption_pass": false,
+        "pulse_final_time": 2.4,
+        "rk4_steps": 358,
+        "dt": 0.0067039106145251395,
+        "reduction_constraint_linf": 3.905209489118988e-14
+      },
+      "weak_pi_residual_gain_scan": {
+        "points": [
+          {
+            "sigma_hat": -4.0,
+            "maximum_eigenvalue_real_part": 37689.98245711926,
+            "positive_modes_above_1e-6": 80,
+            "spectral_screen_pass": false
+          },
+          {
+            "sigma_hat": -2.0,
+            "maximum_eigenvalue_real_part": 18867.56984618296,
+            "positive_modes_above_1e-6": 82,
+            "spectral_screen_pass": false
+          },
+          {
+            "sigma_hat": -1.0,
+            "maximum_eigenvalue_real_part": 9456.344680127231,
+            "positive_modes_above_1e-6": 81,
+            "spectral_screen_pass": false
+          },
+          {
+            "sigma_hat": -0.5,
+            "maximum_eigenvalue_real_part": 4750.6945704335885,
+            "positive_modes_above_1e-6": 81,
+            "spectral_screen_pass": false
+          },
+          {
+            "sigma_hat": -0.25,
+            "maximum_eigenvalue_real_part": 2397.7952337585302,
+            "positive_modes_above_1e-6": 80,
+            "spectral_screen_pass": false
+          },
+          {
+            "sigma_hat": -0.125,
+            "maximum_eigenvalue_real_part": 1221.200033976163,
+            "positive_modes_above_1e-6": 81,
+            "spectral_screen_pass": false
+          },
+          {
+            "sigma_hat": 0.0,
+            "maximum_eigenvalue_real_part": 1.772012001005404,
+            "positive_modes_above_1e-6": 172,
+            "spectral_screen_pass": false
+          },
+          {
+            "sigma_hat": 0.125,
+            "maximum_eigenvalue_real_part": 4.503708991637163,
+            "positive_modes_above_1e-6": 61,
+            "spectral_screen_pass": false
+          },
+          {
+            "sigma_hat": 0.25,
+            "maximum_eigenvalue_real_part": 4.555534530629076,
+            "positive_modes_above_1e-6": 62,
+            "spectral_screen_pass": false
+          },
+          {
+            "sigma_hat": 0.5,
+            "maximum_eigenvalue_real_part": 4.580807730854852,
+            "positive_modes_above_1e-6": 60,
+            "spectral_screen_pass": false
+          },
+          {
+            "sigma_hat": 1.0,
+            "maximum_eigenvalue_real_part": 4.593289884389256,
+            "positive_modes_above_1e-6": 61,
+            "spectral_screen_pass": false
+          },
+          {
+            "sigma_hat": 2.0,
+            "maximum_eigenvalue_real_part": 4.599493003148892,
+            "positive_modes_above_1e-6": 62,
+            "spectral_screen_pass": false
+          },
+          {
+            "sigma_hat": 4.0,
+            "maximum_eigenvalue_real_part": 4.60258515311196,
+            "positive_modes_above_1e-6": 62,
+            "spectral_screen_pass": false
+          }
+        ],
+        "passing_sigma_hat_values": [],
+        "best_sampled_point": {
+          "sigma_hat": 0.0,
+          "maximum_eigenvalue_real_part": 1.772012001005404,
+          "positive_modes_above_1e-6": 172,
+          "spectral_screen_pass": false
+        },
+        "classification": "NO_SAMPLED_GAIN_PASSES"
+      },
+      "weak_incoming_characteristic_gain_scan": {
+        "points": [
+          {
+            "sigma_hat": -4.0,
+            "maximum_eigenvalue_real_part": 37036.990861498554,
+            "positive_modes_above_1e-6": 102,
+            "spectral_screen_pass": false
+          },
+          {
+            "sigma_hat": -2.0,
+            "maximum_eigenvalue_real_part": 18540.976603916803,
+            "positive_modes_above_1e-6": 101,
+            "spectral_screen_pass": false
+          },
+          {
+            "sigma_hat": -1.0,
+            "maximum_eigenvalue_real_part": 9292.94817226594,
+            "positive_modes_above_1e-6": 102,
+            "spectral_screen_pass": false
+          },
+          {
+            "sigma_hat": -0.5,
+            "maximum_eigenvalue_real_part": 4668.891640176762,
+            "positive_modes_above_1e-6": 101,
+            "spectral_screen_pass": false
+          },
+          {
+            "sigma_hat": -0.25,
+            "maximum_eigenvalue_real_part": 2356.7798785516593,
+            "positive_modes_above_1e-6": 102,
+            "spectral_screen_pass": false
+          },
+          {
+            "sigma_hat": -0.125,
+            "maximum_eigenvalue_real_part": 1200.5613941070094,
+            "positive_modes_above_1e-6": 103,
+            "spectral_screen_pass": false
+          },
+          {
+            "sigma_hat": 0.0,
+            "maximum_eigenvalue_real_part": 1.772012001005404,
+            "positive_modes_above_1e-6": 172,
+            "spectral_screen_pass": false
+          },
+          {
+            "sigma_hat": 0.125,
+            "maximum_eigenvalue_real_part": 3.9265118578723603,
+            "positive_modes_above_1e-6": 74,
+            "spectral_screen_pass": false
+          },
+          {
+            "sigma_hat": 0.25,
+            "maximum_eigenvalue_real_part": 3.9800428377689108,
+            "positive_modes_above_1e-6": 79,
+            "spectral_screen_pass": false
+          },
+          {
+            "sigma_hat": 0.5,
+            "maximum_eigenvalue_real_part": 4.006247150885914,
+            "positive_modes_above_1e-6": 80,
+            "spectral_screen_pass": false
+          },
+          {
+            "sigma_hat": 1.0,
+            "maximum_eigenvalue_real_part": 4.019188052110652,
+            "positive_modes_above_1e-6": 82,
+            "spectral_screen_pass": false
+          },
+          {
+            "sigma_hat": 2.0,
+            "maximum_eigenvalue_real_part": 4.025618807222279,
+            "positive_modes_above_1e-6": 80,
+            "spectral_screen_pass": false
+          },
+          {
+            "sigma_hat": 4.0,
+            "maximum_eigenvalue_real_part": 4.028824345385326,
+            "positive_modes_above_1e-6": 82,
+            "spectral_screen_pass": false
+          }
+        ],
+        "passing_sigma_hat_values": [],
+        "best_sampled_point": {
+          "sigma_hat": 0.0,
+          "maximum_eigenvalue_real_part": 1.772012001005404,
+          "positive_modes_above_1e-6": 172,
+          "spectral_screen_pass": false
+        },
+        "classification": "NO_SAMPLED_GAIN_PASSES"
+      },
+      "direct_strong_rinne_amplitude_scan": {
+        "points": [
+          {
+            "sigma_hat": -1.0,
+            "maximum_eigenvalue_real_part": 107.76555953299008,
+            "positive_modes_above_1e-6": 100,
+            "spectral_screen_pass": false
+          },
+          {
+            "sigma_hat": -0.5,
+            "maximum_eigenvalue_real_part": 70.87498739054317,
+            "positive_modes_above_1e-6": 100,
+            "spectral_screen_pass": false
+          },
+          {
+            "sigma_hat": -0.25,
+            "maximum_eigenvalue_real_part": 50.45955829168796,
+            "positive_modes_above_1e-6": 100,
+            "spectral_screen_pass": false
+          },
+          {
+            "sigma_hat": -0.125,
+            "maximum_eigenvalue_real_part": 38.37829253696689,
+            "positive_modes_above_1e-6": 100,
+            "spectral_screen_pass": false
+          },
+          {
+            "sigma_hat": 0.0,
+            "maximum_eigenvalue_real_part": 1.772012001005404,
+            "positive_modes_above_1e-6": 172,
+            "spectral_screen_pass": false
+          },
+          {
+            "sigma_hat": 0.125,
+            "maximum_eigenvalue_real_part": 16.110193094719513,
+            "positive_modes_above_1e-6": 80,
+            "spectral_screen_pass": false
+          },
+          {
+            "sigma_hat": 0.25,
+            "maximum_eigenvalue_real_part": 13.969278174899106,
+            "positive_modes_above_1e-6": 80,
+            "spectral_screen_pass": false
+          },
+          {
+            "sigma_hat": 0.5,
+            "maximum_eigenvalue_real_part": 8.426163526438696,
+            "positive_modes_above_1e-6": 80,
+            "spectral_screen_pass": false
+          },
+          {
+            "sigma_hat": 0.75,
+            "maximum_eigenvalue_real_part": 3.0751816347966514,
+            "positive_modes_above_1e-6": 80,
+            "spectral_screen_pass": false
+          },
+          {
+            "sigma_hat": 1.0,
+            "maximum_eigenvalue_real_part": 0.2307289617585706,
+            "positive_modes_above_1e-6": 8,
+            "spectral_screen_pass": false
+          },
+          {
+            "sigma_hat": 1.25,
+            "maximum_eigenvalue_real_part": 1.3166740721404775,
+            "positive_modes_above_1e-6": 40,
+            "spectral_screen_pass": false
+          },
+          {
+            "sigma_hat": 1.5,
+            "maximum_eigenvalue_real_part": 2.1085583333554907,
+            "positive_modes_above_1e-6": 40,
+            "spectral_screen_pass": false
+          },
+          {
+            "sigma_hat": 2.0,
+            "maximum_eigenvalue_real_part": 2.811915234722572,
+            "positive_modes_above_1e-6": 40,
+            "spectral_screen_pass": false
+          },
+          {
+            "sigma_hat": 4.0,
+            "maximum_eigenvalue_real_part": 3.52950813001689,
+            "positive_modes_above_1e-6": 40,
+            "spectral_screen_pass": false
+          }
+        ],
+        "passing_sigma_hat_values": [],
+        "best_sampled_point": {
+          "sigma_hat": 1.0,
+          "maximum_eigenvalue_real_part": 0.2307289617585706,
+          "positive_modes_above_1e-6": 8,
+          "spectral_screen_pass": false
+        },
+        "classification": "NO_SAMPLED_GAIN_PASSES"
+      }
+    }
+  ],
+  "source_hashes": {
+    "docs/scripts/audit/audit_curved_3p1_gh_rinne_sat_penalty_screen.py": "fb5adc7283e61ffe2766f1c1ebd3ac034216d0d4dde95cf822903b3ed3da4e11",
+    "docs/scripts/audit/audit_curved_3p1_gh_full_u1_cpbc_slab.py": "2fa112eaf6a0f34ab7cccf2027e59f2294b34c22048384c0c4e601754dce4a9b",
+    "docs/core/02_equations/covariant/uet_curved_3p1_gh_full_u1_slab.py": "31618a664a0e339ef4746e2ef3992a44143d3fa0169e4f9909845cfc1d0d4146",
+    "docs/core/02_equations/covariant/uet_curved_3p1_gh_boundary_projectors.py": "2aa529e3a037a5ecff2c2a5a6d454ef7cf9822ca99371393d6614bfbc062362f",
+    "docs/core/02_equations/covariant/uet_curved_3p1_gh_max_dissipative_sat.py": "147f2d438f83eac750894462662953cd97512760736cd5e593e49948b1e98175",
+    "docs/scripts/audit/audit_curved_3p1_gh_tt_sbp_sat_boundary.py": "01e519a576bfebcb41222af81bfd6ed7a5f7bf0538cfc4c3e2cb51b5653d29df",
+    "docs/core/07_artifacts/verification/curved_3p1_gh_full_u1_max_diss_sat_control.json": "f6d154a4d437dc4bc37069f39151261ff7ac2f3317e7892c7ec23702a49acd87"
+  },
+  "literature_basis": [
+    {
+      "source_id": "rinne_2006_first_order_gh_radiation_controlling_cpbc",
+      "url": "https://arxiv.org/abs/gr-qc/0606053",
+      "locator": "Sec. 3 Fourier-Laplace boundary-stability analysis; conclusion on differential boundary conditions",
+      "role": "source formulation for first-order GH constraint/Weyl boundary conditions",
+      "limit": "the source's boundary-stability analysis is not automatically inherited by this discrete SAT implementation; the paper notes the open sufficiency question for differential boundary conditions with nontrivial data"
+    },
+    {
+      "source_id": "seiler_etal_2008_second_order_harmonic_cp_sat",
+      "url": "https://arxiv.org/abs/0802.3341",
+      "locator": "Secs. 2-3 and Appendix",
+      "role": "separate first-order-in-time, second-order-in-space harmonic CP-SAT comparator route",
+      "limit": "different evolution variables and formulation; cannot replace the first-order GH branch without an explicit correspondence"
+    }
+  ],
+  "controlling_blocker": "rinne_differential_constraint_and_weyl_residuals_not_yet_imposed_in_a_full_u1_sbp_sat_evolution",
+  "next_action": "Derive a two-face projector-compatible energy estimate for the differential constraint and Weyl residuals; do not continue scalar coefficient sweeps or promote the comparator formulation as a substitute.",
+  "claim_boundary": "Finite-grid standard-GR numerical-method diagnostic only; no continuum no-go, full CPBC, curved-parent closure, Gravity compatibility, UET prediction, or global UET closure is claimed."
+}

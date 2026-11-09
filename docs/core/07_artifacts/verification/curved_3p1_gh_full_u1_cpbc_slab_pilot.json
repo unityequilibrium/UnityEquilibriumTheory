@@ -1,0 +1,438 @@
+{
+  "schema_version": "core-curved-3p1-gh-full-u1-slab-pilot-v1",
+  "artifact": "curved_3p1_gh_full_u1_cpbc_slab_pilot",
+  "diagnostic_id": "uet.core.curved_3p1.gh.full_u1_cpbc_chebyshev_slab_pilot",
+  "generated_at": "2026-09-25",
+  "status": "FAIL_GH_FULL_U1_CHEBYSHEV_SLAB_PILOT",
+  "claim_promotion": false,
+  "major_result": {
+    "major_result_id": "CORE_CURVED_3P1_GH_FULL_U1_CHEBYSHEV_SLAB_PILOT",
+    "topic": "core",
+    "closure_level": "PARTIAL",
+    "what_is_closed": [
+      "all ten incoming u1-minus tensor components are decomposed into the source-defined 4+2+4 constraint, physical, and gauge sectors",
+      "the normal-incidence boundary RHS replacement matches the separately implemented Rinne residual equations"
+    ],
+    "what_remains_open": [
+      "the source-matched pointwise method passes the spectrum/noise screens but fails the TT pulse remainder and reduction-constraint limits",
+      "the alternative cubic lift preserves the reduction identity but develops resolved growing modes and large perturbation amplification",
+      "the separate reduced-wave comparator does not pass its degree-12 baseline absorption threshold; the exploratory degree-8-to-20 sweep is non-monotone in energy remainder and degree 20 has one mode above the locked 1e-6 eigenvalue tolerance",
+      "the reduced-wave comparator is a different second-order formulation and cannot stand in for the independent-variable first-order GH CPBC system",
+      "the full numerical boundary lane is therefore partial and cannot be integrated into the Core parent as a passed CPBC solver"
+    ],
+    "equation_or_mapping": {
+      "state": "(psi_ab, Pi_ab, Phi_xab), with ten symmetric components per field",
+      "u1_minus": "q_ab = Pi_ab - n*Phi_xab - gamma2*psi_ab",
+      "q_time_rhs": "qdot = D_n(q) + gamma2*(Pi + Phi_n)",
+      "constraint_target": "P_C*qdot = P_C*gamma2*(Pi + Phi_n)",
+      "physical_target": "P_P*qdot = P_P*gamma2*(Pi + Phi_n - D_n(psi)) for homogeneous incoming Weyl data",
+      "gauge_target": "P_G*qdot = d_t(h_G)",
+      "pointwise_method": "replace the incoming characteristic RHS only at the two endpoints",
+      "compatible_lift_method": "cubic metric-RHS lift with D(delta_psi_dot)=delta_Phi_dot; exploratory and spectrally unstable",
+      "reduced_wave_method": "evolve only (psi,Pi), impose Phi_x=D(psi) algebraically, and use the same projected incoming-u1-minus target; this is a distinct second-order comparator, not full first-order GH",
+      "projector_ranks": {
+        "constraint": 4,
+        "physical": 2,
+        "gauge": 4
+      },
+      "boundary_scope": "zero shift, fixed flat background, one spatial normal, homogeneous constraint and Weyl data, prescribed gauge-data rate"
+    },
+    "units": {
+      "unit_lane": "geometric units with slab length scale L0=1",
+      "psi": "dimensionless",
+      "Pi_and_Phi": "L0^-1",
+      "gamma2": "L0^-1",
+      "u1_minus_time_rhs": "L0^-2",
+      "UET_symbols_used": []
+    },
+    "derivation_class": "source-matched frozen-background generalized-harmonic boundary conditions plus direct algebraic and numerical controls",
+    "observable": "projected boundary residuals, characteristic RHS, semidiscrete eigenvalues, TT energy remainder, and GH reduction-constraint residual",
+    "data_role": "analytic and synthetic numerical control; no external data, fitting, or holdout",
+    "evidence_artifacts": [
+      "docs/core/07_artifacts/verification/curved_3p1_gh_full_u1_cpbc_slab_pilot.json"
+    ],
+    "verification_status": "FAIL_GH_FULL_U1_CHEBYSHEV_SLAB_PILOT",
+    "open_blockers": [
+      "positive-normal-shift incoming u2_A boundary conditions are not evolved",
+      "tangential derivatives, corners, variable coefficients, nonlinear GH, matter, and full subsidiary-constraint propagation are out of scope",
+      "the pilot is not a proof of continuum or discrete IBVP well-posedness",
+      "gamma0 gauge-constraint damping is absent from the linear reduction-damped RHS used here"
+    ],
+    "dependency_unlocked": "none; the Core curved-3+1 CPBC parent and Gravity remain blocked",
+    "claim_boundary": "at most a frozen-background, normal-incidence, zero-shift, full-u1-minus Chebyshev numerical lane; not full GH CPBC, nonlinear well-posedness, Einstein-equation derivation by UET, Gravity compatibility, or global UET closure"
+  },
+  "scope": {
+    "equation_class": "standard linear generalized-harmonic reduction-damped equations",
+    "state_variables": [
+      "psi_ab",
+      "Pi_ab",
+      "Phi_xab"
+    ],
+    "excluded_variables": [
+      "UET C",
+      "UET Phi",
+      "UET Pi",
+      "R_gen",
+      "R_obs"
+    ],
+    "domain": "finite one-dimensional slab [-1,1], non-periodic, no tangential dependence",
+    "method": "Chebyshev-Lobatto collocation and classical RK4; pointwise Rinne-style RHS replacement is primary; cubic compatible lift is a rejected alternative",
+    "boundary_conditions": "incoming-u1-minus RHS decomposed into separate constraint, Weyl, and gauge projections",
+    "shift": 0.0,
+    "lapse": 1.0,
+    "gamma1": -1.0,
+    "gamma2": 0.7,
+    "gamma0": 0.0,
+    "full_rinne_cpbc": false,
+    "positive_shift_u2_conditions": false,
+    "variable_coefficients": false,
+    "nonlinear_evolution": false,
+    "matter_source": false,
+    "filtering": false,
+    "clipping": false,
+    "parameter_fitting": false
+  },
+  "checks": {
+    "projector_ranks_are_4_2_4": true,
+    "projector_algebra_is_orthogonal_and_complete": true,
+    "incoming_rhs_matches_all_three_projected_targets": true,
+    "rhs_targets_match_rinne_normal_incidence_residuals": true,
+    "chebyshev_semidiscrete_spectrum_has_no_resolved_growing_mode": true,
+    "chebyshev_spectrum_has_no_mode_above_growth_tolerance": true,
+    "rk4_temporal_refinement_is_fourth_order": true,
+    "right_going_tt_packet_is_absorbed_without_large_remainder": false,
+    "tt_reduction_constraint_remains_bounded": false,
+    "small_random_perturbation_stays_bounded_over_two_domain_crossing_times": true,
+    "constraint_compatible_lift_preserves_reduction_and_incoming_targets": true,
+    "constraint_compatible_lift_has_no_resolved_growing_mode": false,
+    "constraint_compatible_lift_noise_stays_bounded": false,
+    "reduced_wave_has_no_resolved_growing_mode": true,
+    "reduced_wave_random_perturbation_stays_bounded": true,
+    "reduced_wave_tt_packet_is_absorbed": false,
+    "reduced_wave_reduction_constraint_is_algebraic": true,
+    "clenshaw_curtis_energy_weights_integrate_constant": true,
+    "all_declared_local_sources_are_hashed": true
+  },
+  "metrics": {
+    "projector_ranks": {
+      "constraint": 4,
+      "physical": 2,
+      "gauge": 4
+    },
+    "maximum_projector_algebra_residual": 2.7755575615628914e-16,
+    "maximum_projected_rhs_target_residual": 1.7985612998927536e-14,
+    "projected_rhs_target_residuals": {
+      "constraint": 1.2656542480726785e-14,
+      "physical": 7.105427357601002e-15,
+      "gauge": 1.7985612998927536e-14
+    },
+    "maximum_rinne_formula_crosscheck_residual": 4.263256414560601e-14,
+    "rinne_formula_crosscheck_residuals": {
+      "constraint": 4.263256414560601e-14,
+      "physical": 1.4210854715202004e-14,
+      "gauge": 0.0
+    },
+    "chebyshev_eigenvalue_screens": [
+      {
+        "degree": 4,
+        "node_count": 5,
+        "maximum_real_part": 5.644385394709014e-08,
+        "maximum_absolute_eigenvalue": 3.2049724296714768,
+        "maximum_scaled_real_part": 1.7611338376747245e-08,
+        "positive_modes_above_1e-6": 0
+      },
+      {
+        "degree": 8,
+        "node_count": 9,
+        "maximum_real_part": 9.187595443894094e-08,
+        "maximum_absolute_eigenvalue": 8.354882834975001,
+        "maximum_scaled_real_part": 1.0996677781564109e-08,
+        "positive_modes_above_1e-6": 0
+      },
+      {
+        "degree": 12,
+        "node_count": 13,
+        "maximum_real_part": 2.0538183283237375e-07,
+        "maximum_absolute_eigenvalue": 15.406316137084097,
+        "maximum_scaled_real_part": 1.3331015085300313e-08,
+        "positive_modes_above_1e-6": 0
+      }
+    ],
+    "maximum_chebyshev_eigenvalue_real_part": 2.0538183283237375e-07,
+    "maximum_scaled_chebyshev_eigenvalue_real_part": 1.7611338376747245e-08,
+    "lgl_sensitivity_screen": {
+      "degree": 10,
+      "maximum_real_part": 8.783435788129444e-08,
+      "positive_modes_above_1e-6": 0,
+      "role": "discretization sensitivity only; not the source-matched primary screen"
+    },
+    "tt_pulse_degree": 12,
+    "tt_pulse_initial_energy": 0.08398252355901842,
+    "tt_pulse_final_energy": 0.01789572545127608,
+    "tt_pulse_final_to_initial_energy_ratio": 0.21308868432251768,
+    "clenshaw_curtis_weight_sum": 2.0,
+    "energy_functional": "E=1/2 sum_j w_j (Pi_j^2 + Phi_j^2), with Clenshaw-Curtis weights on [-1,1]",
+    "tt_pulse_steps": 141,
+    "tt_pulse_dt": 0.01702127659574468,
+    "tt_pulse_final_reduction_constraint_linf": 0.0035489513702043757,
+    "small_noise_initial_norm": 1.7117517018694265e-10,
+    "small_noise_final_norm": 7.094388700097165e-10,
+    "small_noise_growth_factor": 4.144519729321309,
+    "small_noise_steps": 106,
+    "small_noise_dt": 0.03773584905660377,
+    "small_noise_final_time": 4.0,
+    "small_noise_domain_crossing_times": 2.0,
+    "constraint_lift_identity_residuals": {
+      "reduction_identity": 0.0,
+      "left_incoming_target": 1.1102230246251565e-15,
+      "right_incoming_target": 2.220446049250313e-16,
+      "left_outgoing_unchanged": 9.992007221626409e-16,
+      "right_outgoing_unchanged": 3.3306690738754696e-16,
+      "metric_endpoint_values": 0.0
+    },
+    "constraint_lift_maximum_eigenvalue_real_part": 0.09222978193582891,
+    "constraint_lift_positive_modes_above_1e-6": 59,
+    "constraint_lift_noise_growth_factor": 2715812.534481727,
+    "constraint_lift_noise_steps": 106,
+    "constraint_lift_noise_dt": 0.03773584905660377,
+    "constraint_lift_pulse_final_reduction_constraint_linf": 9.604264050722122e-10,
+    "constraint_lift_pulse_steps": 106,
+    "constraint_lift_pulse_dt": 0.03773584905660377,
+    "reduced_wave_state_dimension": 180,
+    "reduced_wave_maximum_eigenvalue_real_part": 1.5743544258148507e-07,
+    "reduced_wave_positive_modes_above_1e-6": 0,
+    "reduced_wave_noise_growth_factor": 1.004563256652657,
+    "reduced_wave_noise_steps": 106,
+    "reduced_wave_noise_dt": 0.03773584905660377,
+    "reduced_wave_pulse_final_to_initial_energy_ratio": 0.15498673890947653,
+    "reduced_wave_pulse_final_reduction_constraint_linf": 1.5314138845923253e-14,
+    "reduced_wave_pulse_steps": 141,
+    "reduced_wave_pulse_dt": 0.01702127659574468,
+    "reduced_wave_resolution_screens": [
+      {
+        "degree": 8,
+        "node_count": 9,
+        "maximum_eigenvalue_real_part": 1.5743544258148507e-07,
+        "maximum_scaled_eigenvalue_real_part": 1.3171196346469757e-08,
+        "positive_modes_above_1e-6": 0,
+        "tt_packet_clenshaw_curtis_energy_ratio": 1.0281015190706144,
+        "tt_packet_reduction_constraint_linf": 2.7200464103316335e-15,
+        "tt_packet_steps": 64,
+        "tt_packet_dt": 0.0375
+      },
+      {
+        "degree": 12,
+        "node_count": 13,
+        "maximum_eigenvalue_real_part": 2.774160674310277e-07,
+        "maximum_scaled_eigenvalue_real_part": 1.2400479457906134e-08,
+        "positive_modes_above_1e-6": 0,
+        "tt_packet_clenshaw_curtis_energy_ratio": 0.15498673890947653,
+        "tt_packet_reduction_constraint_linf": 1.5314138845923253e-14,
+        "tt_packet_steps": 141,
+        "tt_packet_dt": 0.01702127659574468
+      },
+      {
+        "degree": 14,
+        "node_count": 15,
+        "maximum_eigenvalue_real_part": 6.32059908446746e-07,
+        "maximum_scaled_eigenvalue_real_part": 2.2109829650165612e-08,
+        "positive_modes_above_1e-6": 0,
+        "tt_packet_clenshaw_curtis_energy_ratio": 0.3371096034273316,
+        "tt_packet_reduction_constraint_linf": 2.2523649612082863e-14,
+        "tt_packet_steps": 192,
+        "tt_packet_dt": 0.012499999999999999
+      },
+      {
+        "degree": 16,
+        "node_count": 17,
+        "maximum_eigenvalue_real_part": 5.68729527577797e-07,
+        "maximum_scaled_eigenvalue_real_part": 1.6047667197953862e-08,
+        "positive_modes_above_1e-6": 0,
+        "tt_packet_clenshaw_curtis_energy_ratio": 0.2658606779857442,
+        "tt_packet_reduction_constraint_linf": 1.326716514427062e-14,
+        "tt_packet_steps": 250,
+        "tt_packet_dt": 0.0096
+      },
+      {
+        "degree": 18,
+        "node_count": 19,
+        "maximum_eigenvalue_real_part": 2.967429863149071e-07,
+        "maximum_scaled_eigenvalue_real_part": 6.915446151029385e-09,
+        "positive_modes_above_1e-6": 0,
+        "tt_packet_clenshaw_curtis_energy_ratio": 0.03366073275172558,
+        "tt_packet_reduction_constraint_linf": 1.7284784714632906e-14,
+        "tt_packet_steps": 316,
+        "tt_packet_dt": 0.007594936708860759
+      },
+      {
+        "degree": 20,
+        "node_count": 21,
+        "maximum_eigenvalue_real_part": 1.38726762259073e-06,
+        "maximum_scaled_eigenvalue_real_part": 2.72111807740876e-08,
+        "positive_modes_above_1e-6": 1,
+        "tt_packet_clenshaw_curtis_energy_ratio": 0.01990067916452227,
+        "tt_packet_reduction_constraint_linf": 1.1095291352347658e-14,
+        "tt_packet_steps": 390,
+        "tt_packet_dt": 0.006153846153846154
+      }
+    ],
+    "temporal_refinement_difference_ratio": 10.860087711745576,
+    "temporal_refinement_differences": [
+      6.920847881505001e-06,
+      6.372736634548407e-07
+    ]
+  },
+  "numerical_policy": {
+    "gamma2": 0.7,
+    "chebyshev_degrees": [
+      4,
+      8,
+      12
+    ],
+    "lgl_sensitivity_degree": 10,
+    "lgl_sensitivity_is_not_a_closure_gate": true,
+    "temporal_refinement_final_time": 0.2,
+    "temporal_refinement_ratio_range": [
+      10.0,
+      22.0
+    ],
+    "eigenvalue_real_part_absolute_tolerance": 1e-06,
+    "eigenvalue_real_part_scaled_tolerance": 1e-07,
+    "tt_final_energy_ratio_threshold": 0.05,
+    "energy_functional": "E=1/2 sum_j w_j (Pi_j^2 + Phi_j^2), with Clenshaw-Curtis weights on [-1,1]",
+    "reduction_constraint_linf_threshold": 2e-06,
+    "small_noise_growth_factor_threshold": 1000.0,
+    "constraint_lift_growth_factor_threshold": 1000.0,
+    "reduced_wave_growth_factor_threshold": 1000.0,
+    "reduced_wave_tt_final_energy_ratio_threshold": 0.05,
+    "reduced_wave_reduction_constraint_linf_threshold": 2e-10,
+    "reduced_wave_resolution_sweep_degrees": [
+      8,
+      12,
+      14,
+      16,
+      18,
+      20
+    ],
+    "reduced_wave_resolution_sweep_role": "exploratory sensitivity; not a closure gate",
+    "random_seed": 20260925
+  },
+  "reduced_wave_comparator": {
+    "status": "PARTIAL_REDUCED_WAVE_BOUNDARY_COMPARATOR",
+    "checks": {
+      "no_resolved_growing_semidiscrete_mode": true,
+      "random_perturbation_stays_bounded": true,
+      "tt_packet_is_absorbed": false,
+      "reduction_constraint_is_algebraic": true
+    },
+    "metrics": {
+      "state_dimension": 180,
+      "maximum_eigenvalue_real_part": 1.5743544258148507e-07,
+      "positive_modes_above_1e-6": 0,
+      "random_perturbation_growth_factor": 1.004563256652657,
+      "random_perturbation_final_time": 4.0,
+      "random_perturbation_steps": 106,
+      "random_perturbation_dt": 0.03773584905660377,
+      "tt_packet_final_to_initial_energy_ratio": 0.15498673890947653,
+      "tt_packet_final_reduction_constraint_linf": 1.5314138845923253e-14,
+      "tt_packet_final_time": 2.4,
+      "tt_packet_steps": 141,
+      "tt_packet_dt": 0.01702127659574468,
+      "energy_functional": "Clenshaw-Curtis spatial quadrature over [-1,1]",
+      "resolution_screens": [
+        {
+          "degree": 8,
+          "node_count": 9,
+          "maximum_eigenvalue_real_part": 1.5743544258148507e-07,
+          "maximum_scaled_eigenvalue_real_part": 1.3171196346469757e-08,
+          "positive_modes_above_1e-6": 0,
+          "tt_packet_clenshaw_curtis_energy_ratio": 1.0281015190706144,
+          "tt_packet_reduction_constraint_linf": 2.7200464103316335e-15,
+          "tt_packet_steps": 64,
+          "tt_packet_dt": 0.0375
+        },
+        {
+          "degree": 12,
+          "node_count": 13,
+          "maximum_eigenvalue_real_part": 2.774160674310277e-07,
+          "maximum_scaled_eigenvalue_real_part": 1.2400479457906134e-08,
+          "positive_modes_above_1e-6": 0,
+          "tt_packet_clenshaw_curtis_energy_ratio": 0.15498673890947653,
+          "tt_packet_reduction_constraint_linf": 1.5314138845923253e-14,
+          "tt_packet_steps": 141,
+          "tt_packet_dt": 0.01702127659574468
+        },
+        {
+          "degree": 14,
+          "node_count": 15,
+          "maximum_eigenvalue_real_part": 6.32059908446746e-07,
+          "maximum_scaled_eigenvalue_real_part": 2.2109829650165612e-08,
+          "positive_modes_above_1e-6": 0,
+          "tt_packet_clenshaw_curtis_energy_ratio": 0.3371096034273316,
+          "tt_packet_reduction_constraint_linf": 2.2523649612082863e-14,
+          "tt_packet_steps": 192,
+          "tt_packet_dt": 0.012499999999999999
+        },
+        {
+          "degree": 16,
+          "node_count": 17,
+          "maximum_eigenvalue_real_part": 5.68729527577797e-07,
+          "maximum_scaled_eigenvalue_real_part": 1.6047667197953862e-08,
+          "positive_modes_above_1e-6": 0,
+          "tt_packet_clenshaw_curtis_energy_ratio": 0.2658606779857442,
+          "tt_packet_reduction_constraint_linf": 1.326716514427062e-14,
+          "tt_packet_steps": 250,
+          "tt_packet_dt": 0.0096
+        },
+        {
+          "degree": 18,
+          "node_count": 19,
+          "maximum_eigenvalue_real_part": 2.967429863149071e-07,
+          "maximum_scaled_eigenvalue_real_part": 6.915446151029385e-09,
+          "positive_modes_above_1e-6": 0,
+          "tt_packet_clenshaw_curtis_energy_ratio": 0.03366073275172558,
+          "tt_packet_reduction_constraint_linf": 1.7284784714632906e-14,
+          "tt_packet_steps": 316,
+          "tt_packet_dt": 0.007594936708860759
+        },
+        {
+          "degree": 20,
+          "node_count": 21,
+          "maximum_eigenvalue_real_part": 1.38726762259073e-06,
+          "maximum_scaled_eigenvalue_real_part": 2.72111807740876e-08,
+          "positive_modes_above_1e-6": 1,
+          "tt_packet_clenshaw_curtis_energy_ratio": 0.01990067916452227,
+          "tt_packet_reduction_constraint_linf": 1.1095291352347658e-14,
+          "tt_packet_steps": 390,
+          "tt_packet_dt": 0.006153846153846154
+        }
+      ]
+    },
+    "equation_or_mapping": "Second-order algebraic reduced-wave evolution in (psi_ab,Pi_ab), with Phi_xab=D(psi_ab) enforced at every RHS evaluation; incoming u1-minus target is inherited from the 4+2+4 frozen-background GH projector algebra.",
+    "claim_boundary": "A comparator formulation only; not the independent-variable first-order GH CPBC system, not a continuum/IBVP well-posedness proof, and no parent or Gravity dependency unlock."
+  },
+  "source_hashes": {
+    "docs/scripts/audit/audit_curved_3p1_gh_full_u1_cpbc_slab.py": "2fa112eaf6a0f34ab7cccf2027e59f2294b34c22048384c0c4e601754dce4a9b",
+    "docs/core/05_tests/regression/root/test_uet_curved_3p1_gh_full_u1_slab.py": "24b9a895e2b0717f41c82e8bae4c79770b711bf18a95ef2288397356971bd042",
+    "docs/core/02_equations/covariant/uet_curved_3p1_gh_full_u1_slab.py": "f36c80561a6aec8463f4ffc049ab496563955a391411ea0ec6f5dbf583be70b7",
+    "docs/core/02_equations/covariant/uet_curved_3p1_gh_boundary_projectors.py": "2aa529e3a037a5ecff2c2a5a6d454ef7cf9822ca99371393d6614bfbc062362f",
+    "docs/core/02_equations/covariant/uet_curved_3p1_gh_linear_boundary.py": "39bd0731a3ecdbb5c5185453e0908d198cba895ba5f29dafc6bb8f9c6a3b169c",
+    "docs/core/02_equations/covariant/uet_curved_3p1_generalized_harmonic.py": "4f0c8ed0e5afe52e43cedefeb9c061e10dbd440fd20e8bc57a8aacfa43e76f92",
+    "docs/scripts/audit/audit_curved_3p1_gh_tt_sbp_sat_boundary.py": "01e519a576bfebcb41222af81bfd6ed7a5f7bf0538cfc4c3e2cb51b5653d29df"
+  },
+  "literature_basis": [
+    {
+      "source_id": "rinne_2006_first_order_gh_radiation_controlling_cpbc",
+      "url": "https://arxiv.org/abs/gr-qc/0606053",
+      "locators": [
+        "Eqs. (27)-(36)",
+        "Sec. 5.1, Eqs. (150)-(152)"
+      ],
+      "role": "source for differential constraint/Weyl/gauge conditions and spectral incoming-characteristic RHS prescription",
+      "limitation": "the paper's continuum boundary-stability analysis and 3D robust stability results are not inherited by this 1D implementation"
+    }
+  ],
+  "controlling_blocker": "full_u1_chebyshev_slab_pilot_has_failed_declared_numerical_screens",
+  "next_action": "diagnose the failed target, spectral, pulse, or random-perturbation check without relaxing its preregistered tolerance",
+  "claim_boundary": "This is a standard-GR numerical boundary-method diagnostic only. No UET equation, physical prediction, full CPBC, or parent dependency unlock is claimed."
+}

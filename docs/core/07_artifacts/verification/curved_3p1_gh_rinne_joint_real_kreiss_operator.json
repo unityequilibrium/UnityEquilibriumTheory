@@ -1,0 +1,1710 @@
+{
+  "schema_version": "core-curved-3p1-gh-rinne-joint-real-kreiss-operator-v1",
+  "artifact": "curved_3p1_gh_rinne_joint_real_kreiss_operator",
+  "generated_at": "2026-09-25T11:24:32+00:00",
+  "major_result_id": "CORE_CURVED_3P1_GH_RINNE_JOINT_REAL_STATE_TRANSFER_LIMIT",
+  "major_result": {
+    "major_result_id": "CORE_CURVED_3P1_GH_RINNE_JOINT_REAL_STATE_TRANSFER_LIMIT",
+    "topic": "core_curved_3p1",
+    "closure_level": "PARTIAL",
+    "what_is_closed": [
+      "The quantity required by the Kreiss inequality is now evaluated as the 40x30 boundary-state transfer T=W*C^-1, rather than inferring it from det(C) or coefficient norms alone.",
+      "The zero-shift endpoint transfer has four surviving gauge-source directions; its six constraint and two physical source columns vanish. The gauge-sector Gram eigenvalues are {12-4*sqrt(7),8,8,12+4*sqrt(7)}, and this is also the full endpoint operator norm 2*sqrt(3+sqrt(7)). The corrected negative-shift Jordan chart converges to the same endpoint Gram matrix.",
+      "Across 100 positive-real beta/zeta grid points, the Kreiss-norm interval contracts toward this endpoint value, while T converges to the embedded zero-shift reference; generic and confluent charts give the same operator in nine cross-checks."
+    ],
+    "what_remains_open": [
+      "The 2D log grids do not prove a uniform remainder bound over every positive-real ratio; an analytic chart-compatible bound for T-T0 is still needed.",
+      "The imaginary-frequency boundary, high-frequency compactification, uniformity over a full shift interval, beta->-1 loss, and full variable-coefficient CPBC evolution remain open.",
+      "The state/source norms are explicitly declared internal orthonormal coordinates; comparison with every convention in the imported Kreiss theorem remains an interface check, not a physical UET claim."
+    ],
+    "dependency_unlocked": "none; Core curved 3+1 remains PARTIAL and Gravity remains blocked",
+    "evidence_artifacts": [
+      {
+        "path": "docs/scripts/audit/audit_curved_3p1_gh_rinne_joint_real_kreiss_operator.py",
+        "sha256": "e64e7fc41bd819f5605811f7f6af55a8c436d6f84cd93a77ee9db9b3098f01e1"
+      },
+      {
+        "path": "docs/core/07_artifacts/verification/curved_3p1_gh_rinne_joint_real_glancing_scale.json",
+        "sha256": "d81672d60aa43907ff1f47330b9c85c8299583914b55d5caff968064191128bd"
+      },
+      {
+        "path": "docs/core/07_artifacts/verification/curved_3p1_gh_rinne_negative_shift_kreiss_symbol.json",
+        "sha256": "5d48f6efe14f8c3501da5d8568544608fcc2d8fe7b24f798523ffdd919e39924"
+      },
+      {
+        "path": "docs/core/07_artifacts/verification/curved_3p1_gh_rinne_zero_shift_kreiss_symbol.json",
+        "sha256": "b521608f31da55e435d5d2c736222ece29a572f8efede9992f263d3d0910f460"
+      }
+    ],
+    "open_blockers": [
+      "uniform remainder bound over all positive-real beta/zeta ratios",
+      "imaginary-frequency boundary and high-frequency compactification",
+      "fixed-background norm-interface comparison and full variable-coefficient CPBC evolution"
+    ],
+    "controlling_blocker": "analytic_uniform_remainder_bound_for_full_state_transfer_operator_over_joint_beta_zeta_domain_missing",
+    "equation_or_mapping": {
+      "kreiss_operator": "T(beta,zeta)=W(beta,zeta)*C(beta,zeta)^-1",
+      "W": "40x30 boundary-state matrix for (Pi,Phi_x,Phi_y,Phi_z) in a Frobenius-orthonormal symmetric-tensor component basis",
+      "C": "registered 30x30 source boundary matrix in the transformed constraint/physical/gauge/curl data basis",
+      "state_norm": "Euclidean norm on the 40 orthonormal field/tensor coordinates",
+      "source_norm": "Euclidean norm on the 30 registered transformed boundary-data coordinates",
+      "endpoint": {
+        "definition": "T0=lim_(zeta->0+) W0(zeta)*C0(zeta)^-1, embedded in the 30-source negative-shift coordinates with the 20 extra curl-source columns zero",
+        "input_columns": "the four gauge-source coordinates survive; the six constraint and two physical source coordinates vanish in the state-map limit",
+        "gram_matrix_real_imag_pairs": [
+          [
+            [
+              16.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              8.0
+            ],
+            [
+              0.0,
+              0.0
+            ]
+          ],
+          [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              4.0,
+              0.0
+            ],
+            [
+              -0.0,
+              -4.0
+            ],
+            [
+              0.0,
+              0.0
+            ]
+          ],
+          [
+            [
+              -0.0,
+              -8.0
+            ],
+            [
+              0.0,
+              4.0
+            ],
+            [
+              12.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0
+            ]
+          ],
+          [
+            [
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              0.0
+            ],
+            [
+              8.0,
+              0.0
+            ]
+          ]
+        ],
+        "gram_eigenvalues": [
+          1.4169947557416371,
+          8.0,
+          8.0,
+          22.583005244258363
+        ],
+        "largest_eigenvalue": 22.583005244258363,
+        "kreiss_operator_norm": 4.752157956577029,
+        "closed_form_norm": "2*sqrt(3+sqrt(7))",
+        "zero_shift_reference_zeta": 1e-08,
+        "zero_shift_full_operator_norm_at_reference": 4.752157825610943,
+        "zero_shift_non_gauge_max_column_norm_at_reference": 8.944271623782474e-08,
+        "corrected_jordan_non_gauge_max_column_norm_at_reference": 8.944271909999167e-08,
+        "zero_shift_gram_max_abs_error": 9.59999916005927e-07,
+        "corrected_jordan_gram_max_abs_error": 3.552713678800501e-14
+      },
+      "claim_boundary": "exact zero-shift endpoint Gram result plus a finite positive-real joint-neighborhood screen; no continuous all-ratio or complex-frequency uniform Kreiss proof"
+    },
+    "units": "Dimensionless frozen-coefficient Fourier-Laplace variables, tangential omega=1, local orthonormal GH state coordinates.",
+    "derivation_class": "exact zero-shift endpoint Gram reduction with negative-shift generic/Jordan/confluent source-map reconstruction and finite 2D path verification",
+    "observable": "operator norm of the boundary-state response per unit transformed boundary data",
+    "data_role": "primary-literature formula reproduction and internal numerical verification; no empirical data, fitting, or holdout",
+    "verification_status": "PASS_JOINT_REAL_KREISS_OPERATOR_SCREEN",
+    "claim_boundary": "exact zero-shift endpoint Gram result plus a finite positive-real joint-neighborhood screen; no continuous all-ratio or complex-frequency uniform Kreiss proof"
+  },
+  "closure_level": "PARTIAL",
+  "MAJOR_RESULT_CLOSURE": "PARTIAL",
+  "WHAT_IS_ACTUALLY_CLOSED": [
+    "The quantity required by the Kreiss inequality is now evaluated as the 40x30 boundary-state transfer T=W*C^-1, rather than inferring it from det(C) or coefficient norms alone.",
+    "The zero-shift endpoint transfer has four surviving gauge-source directions; its six constraint and two physical source columns vanish. The gauge-sector Gram eigenvalues are {12-4*sqrt(7),8,8,12+4*sqrt(7)}, and this is also the full endpoint operator norm 2*sqrt(3+sqrt(7)). The corrected negative-shift Jordan chart converges to the same endpoint Gram matrix.",
+    "Across 100 positive-real beta/zeta grid points, the Kreiss-norm interval contracts toward this endpoint value, while T converges to the embedded zero-shift reference; generic and confluent charts give the same operator in nine cross-checks."
+  ],
+  "WHAT_REMAINS_OPEN": [
+    "The 2D log grids do not prove a uniform remainder bound over every positive-real ratio; an analytic chart-compatible bound for T-T0 is still needed.",
+    "The imaginary-frequency boundary, high-frequency compactification, uniformity over a full shift interval, beta->-1 loss, and full variable-coefficient CPBC evolution remain open.",
+    "The state/source norms are explicitly declared internal orthonormal coordinates; comparison with every convention in the imported Kreiss theorem remains an interface check, not a physical UET claim."
+  ],
+  "DEPENDENCY_UNLOCKED": "none; Core curved 3+1 remains PARTIAL and Gravity remains blocked",
+  "STATUS": "PASS_JOINT_REAL_KREISS_OPERATOR_SCREEN",
+  "EQUATION_OR_MAPPING": {
+    "kreiss_operator": "T(beta,zeta)=W(beta,zeta)*C(beta,zeta)^-1",
+    "W": "40x30 boundary-state matrix for (Pi,Phi_x,Phi_y,Phi_z) in a Frobenius-orthonormal symmetric-tensor component basis",
+    "C": "registered 30x30 source boundary matrix in the transformed constraint/physical/gauge/curl data basis",
+    "state_norm": "Euclidean norm on the 40 orthonormal field/tensor coordinates",
+    "source_norm": "Euclidean norm on the 30 registered transformed boundary-data coordinates",
+    "endpoint": {
+      "definition": "T0=lim_(zeta->0+) W0(zeta)*C0(zeta)^-1, embedded in the 30-source negative-shift coordinates with the 20 extra curl-source columns zero",
+      "input_columns": "the four gauge-source coordinates survive; the six constraint and two physical source coordinates vanish in the state-map limit",
+      "gram_matrix_real_imag_pairs": [
+        [
+          [
+            16.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            8.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            4.0,
+            0.0
+          ],
+          [
+            -0.0,
+            -4.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        [
+          [
+            -0.0,
+            -8.0
+          ],
+          [
+            0.0,
+            4.0
+          ],
+          [
+            12.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ]
+        ],
+        [
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0
+          ],
+          [
+            8.0,
+            0.0
+          ]
+        ]
+      ],
+      "gram_eigenvalues": [
+        1.4169947557416371,
+        8.0,
+        8.0,
+        22.583005244258363
+      ],
+      "largest_eigenvalue": 22.583005244258363,
+      "kreiss_operator_norm": 4.752157956577029,
+      "closed_form_norm": "2*sqrt(3+sqrt(7))",
+      "zero_shift_reference_zeta": 1e-08,
+      "zero_shift_full_operator_norm_at_reference": 4.752157825610943,
+      "zero_shift_non_gauge_max_column_norm_at_reference": 8.944271623782474e-08,
+      "corrected_jordan_non_gauge_max_column_norm_at_reference": 8.944271909999167e-08,
+      "zero_shift_gram_max_abs_error": 9.59999916005927e-07,
+      "corrected_jordan_gram_max_abs_error": 3.552713678800501e-14
+    },
+    "claim_boundary": "exact zero-shift endpoint Gram result plus a finite positive-real joint-neighborhood screen; no continuous all-ratio or complex-frequency uniform Kreiss proof"
+  },
+  "VERIFICATION": {
+    "checks": {
+      "zero_shift_endpoint_gram_matches_exact_matrix": true,
+      "corrected_jordan_endpoint_gram_matches_exact_matrix": true,
+      "constraint_and_physical_source_columns_vanish_at_endpoint": true,
+      "full_endpoint_norm_matches_gauge_gram_norm": true,
+      "endpoint_norm_matches_exact_largest_eigenvalue": true,
+      "generic_and_confluent_charts_give_same_state_operator": true,
+      "joint_neighborhood_kreiss_norm_envelopes_contract": true,
+      "full_state_operator_converges_to_zero_shift_reference_on_grids": true,
+      "all_grid_operators_are_finite_and_modes_satisfy_the_principal_system": true
+    },
+    "scales": [
+      0.01,
+      0.001,
+      0.0001,
+      1e-05
+    ],
+    "grid_points_per_axis": 5,
+    "grid_summaries": [
+      {
+        "scale": 0.01,
+        "sample_count": 25,
+        "kreiss_norm_min": 4.624628372284898,
+        "kreiss_norm_max": 4.8862432332325305,
+        "max_frobenius_distance_to_zero_shift_reference": 0.22615664456656248,
+        "min_frobenius_distance_to_zero_shift_reference": 2.1002228111531993e-05,
+        "basis_chart_counts": {
+          "unit_generic_eigenmodes": 20,
+          "source_ode_consistent_jordan": 5,
+          "normalized_confluent_divided_difference": 0
+        }
+      },
+      {
+        "scale": 0.001,
+        "sample_count": 25,
+        "kreiss_norm_min": 4.739097589526707,
+        "kreiss_norm_max": 4.76528398728389,
+        "max_frobenius_distance_to_zero_shift_reference": 0.023095876899626548,
+        "min_frobenius_distance_to_zero_shift_reference": 2.0043951700537437e-06,
+        "basis_chart_counts": {
+          "unit_generic_eigenmodes": 20,
+          "source_ode_consistent_jordan": 5,
+          "normalized_confluent_divided_difference": 0
+        }
+      },
+      {
+        "scale": 0.0001,
+        "sample_count": 25,
+        "kreiss_norm_min": 4.750848776618592,
+        "kreiss_norm_max": 4.753467793303286,
+        "max_frobenius_distance_to_zero_shift_reference": 0.0023142674035347404,
+        "min_frobenius_distance_to_zero_shift_reference": 2.2045407245598372e-07,
+        "basis_chart_counts": {
+          "unit_generic_eigenmodes": 20,
+          "source_ode_consistent_jordan": 5,
+          "normalized_confluent_divided_difference": 0
+        }
+      },
+      {
+        "scale": 1e-05,
+        "sample_count": 25,
+        "kreiss_norm_min": 4.752027007078097,
+        "kreiss_norm_max": 4.752288912643791,
+        "max_frobenius_distance_to_zero_shift_reference": 0.0002312673410858564,
+        "min_frobenius_distance_to_zero_shift_reference": 2.470854529751065e-08,
+        "basis_chart_counts": {
+          "unit_generic_eigenmodes": 20,
+          "source_ode_consistent_jordan": 5,
+          "normalized_confluent_divided_difference": 0
+        }
+      }
+    ],
+    "grid_cases": [
+      {
+        "scale": 0.01,
+        "zeta": 1e-06,
+        "beta": -1e-06,
+        "basis_chart": "source_ode_consistent_jordan",
+        "state_operator_shape": [
+          40,
+          30
+        ],
+        "kreiss_state_to_data_norm": 4.752157956594825,
+        "frobenius_distance_to_embedded_zero_shift_reference": 2.1002228111531993e-05,
+        "principal_mode_residual": 1.0587911840678754e-22
+      },
+      {
+        "scale": 0.01,
+        "zeta": 1e-06,
+        "beta": -1e-05,
+        "basis_chart": "unit_generic_eigenmodes",
+        "state_operator_shape": [
+          40,
+          30
+        ],
+        "kreiss_state_to_data_norm": 4.752275828671744,
+        "frobenius_distance_to_embedded_zero_shift_reference": 0.0001954555666177962,
+        "principal_mode_residual": 1.1102230246251565e-16
+      },
+      {
+        "scale": 0.01,
+        "zeta": 1e-06,
+        "beta": -0.0001,
+        "basis_chart": "unit_generic_eigenmodes",
+        "state_operator_shape": [
+          40,
+          30
+        ],
+        "kreiss_state_to_data_norm": 4.753454822731053,
+        "frobenius_distance_to_embedded_zero_shift_reference": 0.0020652915098146223,
+        "principal_mode_residual": 5.551115123125783e-17
+      },
+      {
+        "scale": 0.01,
+        "zeta": 1e-06,
+        "beta": -0.001,
+        "basis_chart": "unit_generic_eigenmodes",
+        "state_operator_shape": [
+          40,
+          30
+        ],
+        "kreiss_state_to_data_norm": 4.765272155058194,
+        "frobenius_distance_to_embedded_zero_shift_reference": 0.020813065809612383,
+        "principal_mode_residual": 2.220446049250313e-16
+      },
+      {
+        "scale": 0.01,
+        "zeta": 1e-06,
+        "beta": -0.01,
+        "basis_chart": "unit_generic_eigenmodes",
+        "state_operator_shape": [
+          40,
+          30
+        ],
+        "kreiss_state_to_data_norm": 4.8862432332325305,
+        "frobenius_distance_to_embedded_zero_shift_reference": 0.2121230799272678,
+        "principal_mode_residual": 5.551115123125783e-17
+      },
+      {
+        "scale": 0.01,
+        "zeta": 1e-05,
+        "beta": -1e-06,
+        "basis_chart": "unit_generic_eigenmodes",
+        "state_operator_shape": [
+          40,
+          30
+        ],
+        "kreiss_state_to_data_norm": 4.752040090127852,
+        "frobenius_distance_to_embedded_zero_shift_reference": 0.00021987953881738868,
+        "principal_mode_residual": 1.1102230246251565e-16
+      },
+      {
+        "scale": 0.01,
+        "zeta": 1e-05,
+        "beta": -1e-05,
+        "basis_chart": "source_ode_consistent_jordan",
+        "state_operator_shape": [
+          40,
+          30
+        ],
+        "kreiss_state_to_data_norm": 4.7521579583565705,
+        "frobenius_distance_to_embedded_zero_shift_reference": 0.00021106974937688515,
+        "principal_mode_residual": 0.0
+      },
+      {
+        "scale": 0.01,
+        "zeta": 1e-05,
+        "beta": -0.0001,
+        "basis_chart": "unit_generic_eigenmodes",
+        "state_operator_shape": [
+          40,
+          30
+        ],
+        "kreiss_state_to_data_norm": 4.753336912264181,
+        "frobenius_distance_to_embedded_zero_shift_reference": 0.0019538045867590853,
+        "principal_mode_residual": 1.1102230246251565e-16
+      },
+      {
+        "scale": 0.01,
+        "zeta": 1e-05,
+        "beta": -0.001,
+        "basis_chart": "unit_generic_eigenmodes",
+        "state_operator_shape": [
+          40,
+          30
+        ],
+        "kreiss_state_to_data_norm": 4.765153836748811,
+        "frobenius_distance_to_embedded_zero_shift_reference": 0.02068914191037252,
+        "principal_mode_residual": 1.1102230246251565e-16
+      },
+      {
+        "scale": 0.01,
+        "zeta": 1e-05,
+        "beta": -0.01,
+        "basis_chart": "unit_generic_eigenmodes",
+        "state_operator_shape": [
+          40,
+          30
+        ],
+        "kreiss_state_to_data_norm": 4.886120719865308,
+        "frobenius_distance_to_embedded_zero_shift_reference": 0.21199283301416205,
+        "principal_mode_residual": 5.551115123125783e-17
+      },
+      {
+        "scale": 0.01,
+        "zeta": 0.0001,
+        "beta": -1e-06,
+        "basis_chart": "unit_generic_eigenmodes",
+        "state_operator_shape": [
+          40,
+          30
+        ],
+        "kreiss_state_to_data_norm": 4.750861737332044,
+        "frobenius_distance_to_embedded_zero_shift_reference": 0.0023020649220863187,
+        "principal_mode_residual": 1.1102230246251565e-16
+      },
+      {
+        "scale": 0.01,
+        "zeta": 0.0001,
+        "beta": -1e-05,
+        "basis_chart": "unit_generic_eigenmodes",
+        "state_operator_shape": [
+          40,
+          30
+        ],
+        "kreiss_state_to_data_norm": 4.7509795654321065,
+        "frobenius_distance_to_embedded_zero_shift_reference": 0.0022004365550521332,
+        "principal_mode_residual": 1.6653345369377348e-16
+      },
+      {
+        "scale": 0.01,
+        "zeta": 0.0001,
+        "beta": -0.0001,
+        "basis_chart": "source_ode_consistent_jordan",
+        "state_operator_shape": [
+          40,
+          30
+        ],
+        "kreiss_state_to_data_norm": 4.75215813453157,
+        "frobenius_distance_to_embedded_zero_shift_reference": 0.0021117503542122024,
+        "principal_mode_residual": 0.0
+      },
+      {
+        "scale": 0.01,
+        "zeta": 0.0001,
+        "beta": -0.001,
+        "basis_chart": "unit_generic_eigenmodes",
+        "state_operator_shape": [
+          40,
+          30
+        ],
+        "kreiss_state_to_data_norm": 4.763971034119482,
+        "frobenius_distance_to_embedded_zero_shift_reference": 0.019570012066510812,
+        "principal_mode_residual": 1.1102230246251565e-16
+      },
+      {
+        "scale": 0.01,
+        "zeta": 0.0001,
+        "beta": -0.01,
+        "basis_chart": "unit_generic_eigenmodes",
+        "state_operator_shape": [
+          40,
+          30
+        ],
+        "kreiss_state_to_data_norm": 4.884895997164914,
+        "frobenius_distance_to_embedded_zero_shift_reference": 0.21070299602020198,
+        "principal_mode_residual": 1.1102230246251565e-16
+      },
+      {
+        "scale": 0.01,
+        "zeta": 0.001,
+        "beta": -1e-06,
+        "basis_chart": "unit_generic_eigenmodes",
+        "state_operator_shape": [
+          40,
+          30
+        ],
+        "kreiss_state_to_data_norm": 4.7391093314592325,
+        "frobenius_distance_to_embedded_zero_shift_reference": 0.023084752392080937,
+        "principal_mode_residual": 1.1102230246251565e-16
+      },
+      {
+        "scale": 0.01,
+        "zeta": 0.001,
+        "beta": -1e-05,
+        "basis_chart": "unit_generic_eigenmodes",
+        "state_operator_shape": [
+          40,
+          30
+        ],
+        "kreiss_state_to_data_norm": 4.739226754311198,
+        "frobenius_distance_to_embedded_zero_shift_reference": 0.02297444881882454,
+        "principal_mode_residual": 1.1102230246251565e-16
+      },
+      {
+        "scale": 0.01,
+        "zeta": 0.001,
+        "beta": -0.0001,
+        "basis_chart": "unit_generic_eigenmodes",
+        "state_operator_shape": [
+          40,
+          30
+        ],
+        "kreiss_state_to_data_norm": 4.740401321539903,
+        "frobenius_distance_to_embedded_zero_shift_reference": 0.021963242919266046,
+        "principal_mode_residual": 1.1102230246251565e-16
+      },
+      {
+        "scale": 0.01,
+        "zeta": 0.001,
+        "beta": -0.001,
+        "basis_chart": "source_ode_consistent_jordan",
+        "state_operator_shape": [
+          40,
+          30
+        ],
+        "kreiss_state_to_data_norm": 4.75217575226724,
+        "frobenius_distance_to_embedded_zero_shift_reference": 0.02111825250947042,
+        "principal_mode_residual": 0.0
+      },
+      {
+        "scale": 0.01,
+        "zeta": 0.001,
+        "beta": -0.01,
+        "basis_chart": "unit_generic_eigenmodes",
+        "state_operator_shape": [
+          40,
+          30
+        ],
+        "kreiss_state_to_data_norm": 4.87268828244429,
+        "frobenius_distance_to_embedded_zero_shift_reference": 0.19905857545056374,
+        "principal_mode_residual": 2.220446049250313e-16
+      },
+      {
+        "scale": 0.01,
+        "zeta": 0.01,
+        "beta": -1e-06,
+        "basis_chart": "unit_generic_eigenmodes",
+        "state_operator_shape": [
+          40,
+          30
+        ],
+        "kreiss_state_to_data_norm": 4.624628372284898,
+        "frobenius_distance_to_embedded_zero_shift_reference": 0.22615664456656248,
+        "principal_mode_residual": 2.220446049250313e-16
+      },
+      {
+        "scale": 0.01,
+        "zeta": 0.01,
+        "beta": -1e-05,
+        "basis_chart": "unit_generic_eigenmodes",
+        "state_operator_shape": [
+          40,
+          30
+        ],
+        "kreiss_state_to_data_norm": 4.624741862205148,
+        "frobenius_distance_to_embedded_zero_shift_reference": 0.22605069965308705,
+        "principal_mode_residual": 2.220446049250313e-16
+      },
+      {
+        "scale": 0.01,
+        "zeta": 0.01,
+        "beta": -0.0001,
+        "basis_chart": "unit_generic_eigenmodes",
+        "state_operator_shape": [
+          40,
+          30
+        ],
+        "kreiss_state_to_data_norm": 4.625877100120189,
+        "frobenius_distance_to_embedded_zero_shift_reference": 0.22500030345925182,
+        "principal_mode_residual": 5.551115123125783e-17
+      },
+      {
+        "scale": 0.01,
+        "zeta": 0.01,
+        "beta": -0.001,
+        "basis_chart": "unit_generic_eigenmodes",
+        "state_operator_shape": [
+          40,
+          30
+        ],
+        "kreiss_state_to_data_norm": 4.637262085826371,
+        "frobenius_distance_to_embedded_zero_shift_reference": 0.21538247666023197,
+        "principal_mode_residual": 2.220446049250313e-16
+      },
+      {
+        "scale": 0.01,
+        "zeta": 0.01,
+        "beta": -0.01,
+        "basis_chart": "source_ode_consistent_jordan",
+        "state_operator_shape": [
+          40,
+          30
+        ],
+        "kreiss_state_to_data_norm": 4.753938237062179,
+        "frobenius_distance_to_embedded_zero_shift_reference": 0.21115383112805503,
+        "principal_mode_residual": 0.0
+      },
+      {
+        "scale": 0.001,
+        "zeta": 1e-07,
+        "beta": -1e-07,
+        "basis_chart": "source_ode_consistent_jordan",
+        "state_operator_shape": [
+          40,
+          30
+        ],
+        "kreiss_state_to_data_norm": 4.7521579565772125,
+        "frobenius_distance_to_embedded_zero_shift_reference": 2.0043951700537437e-06,
+        "principal_mode_residual": 0.0
+      },
+      {
+        "scale": 0.001,
+        "zeta": 1e-07,
+        "beta": -1e-06,
+        "basis_chart": "unit_generic_eigenmodes",
+        "state_operator_shape": [
+          40,
+          30
+        ],
+        "kreiss_state_to_data_norm": 4.752169743551808,
+        "frobenius_distance_to_embedded_zero_shift_reference": 1.96542148686143e-05,
+        "principal_mode_residual": 1.1102230246251565e-16
+      },
+      {
+        "scale": 0.001,
+        "zeta": 1e-07,
+        "beta": -1e-05,
+        "basis_chart": "unit_generic_eigenmodes",
+        "state_operator_shape": [
+          40,
+          30
+        ],
+        "kreiss_state_to_data_norm": 4.75228761603015,
+        "frobenius_distance_to_embedded_zero_shift_reference": 0.00020661504157204553,
+        "principal_mode_residual": 1.1102230246251565e-16
+      },
+      {
+        "scale": 0.001,
+        "zeta": 1e-07,
+        "beta": -0.0001,
+        "basis_chart": "unit_generic_eigenmodes",
+        "state_operator_shape": [
+          40,
+          30
+        ],
+        "kreiss_state_to_data_norm": 4.7534666141567765,
+        "frobenius_distance_to_embedded_zero_shift_reference": 0.002077636005483494,
+        "principal_mode_residual": 6.776263578034403e-21
+      },
+      {
+        "scale": 0.001,
+        "zeta": 1e-07,
+        "beta": -0.001,
+        "basis_chart": "unit_generic_eigenmodes",
+        "state_operator_shape": [
+          40,
+          30
+        ],
+        "kreiss_state_to_data_norm": 4.76528398728389,
+        "frobenius_distance_to_embedded_zero_shift_reference": 0.02082557872330201,
+        "principal_mode_residual": 1.1102230246251565e-16
+      },
+      {
+        "scale": 0.001,
+        "zeta": 1e-06,
+        "beta": -1e-07,
+        "basis_chart": "unit_generic_eigenmodes",
+        "state_operator_shape": [
+          40,
+          30
+        ],
+        "kreiss_state_to_data_norm": 4.7521461696587,
+        "frobenius_distance_to_embedded_zero_shift_reference": 2.1781015352357305e-05,
+        "principal_mode_residual": 1.1102230246251565e-16
+      },
+      {
+        "scale": 0.001,
+        "zeta": 1e-06,
+        "beta": -1e-06,
+        "basis_chart": "source_ode_consistent_jordan",
+        "state_operator_shape": [
+          40,
+          30
+        ],
+        "kreiss_state_to_data_norm": 4.752157956594825,
+        "frobenius_distance_to_embedded_zero_shift_reference": 2.1002228111531993e-05,
+        "principal_mode_residual": 1.0587911840678754e-22
+      },
+      {
+        "scale": 0.001,
+        "zeta": 1e-06,
+        "beta": -1e-05,
+        "basis_chart": "unit_generic_eigenmodes",
+        "state_operator_shape": [
+          40,
+          30
+        ],
+        "kreiss_state_to_data_norm": 4.752275828671744,
+        "frobenius_distance_to_embedded_zero_shift_reference": 0.0001954555666177962,
+        "principal_mode_residual": 1.1102230246251565e-16
+      },
+      {
+        "scale": 0.001,
+        "zeta": 1e-06,
+        "beta": -0.0001,
+        "basis_chart": "unit_generic_eigenmodes",
+        "state_operator_shape": [
+          40,
+          30
+        ],
+        "kreiss_state_to_data_norm": 4.753454822731053,
+        "frobenius_distance_to_embedded_zero_shift_reference": 0.0020652915098146223,
+        "principal_mode_residual": 5.551115123125783e-17
+      },
+      {
+        "scale": 0.001,
+        "zeta": 1e-06,
+        "beta": -0.001,
+        "basis_chart": "unit_generic_eigenmodes",
+        "state_operator_shape": [
+          40,
+          30
+        ],
+        "kreiss_state_to_data_norm": 4.765272155058194,
+        "frobenius_distance_to_embedded_zero_shift_reference": 0.020813065809612383,
+        "principal_mode_residual": 2.220446049250313e-16
+      },
+      {
+        "scale": 0.001,
+        "zeta": 1e-05,
+        "beta": -1e-07,
+        "basis_chart": "unit_generic_eigenmodes",
+        "state_operator_shape": [
+          40,
+          30
+        ],
+        "kreiss_state_to_data_norm": 4.752028303593145,
+        "frobenius_distance_to_embedded_zero_shift_reference": 0.00023004650394354553,
+        "principal_mode_residual": 3.3306690738754696e-16
+      },
+      {
+        "scale": 0.001,
+        "zeta": 1e-05,
+        "beta": -1e-06,
+        "basis_chart": "unit_generic_eigenmodes",
+        "state_operator_shape": [
+          40,
+          30
+        ],
+        "kreiss_state_to_data_norm": 4.752040090127852,
+        "frobenius_distance_to_embedded_zero_shift_reference": 0.00021987953881738868,
+        "principal_mode_residual": 1.1102230246251565e-16
+      },
+      {
+        "scale": 0.001,
+        "zeta": 1e-05,
+        "beta": -1e-05,
+        "basis_chart": "source_ode_consistent_jordan",
+        "state_operator_shape": [
+          40,
+          30
+        ],
+        "kreiss_state_to_data_norm": 4.7521579583565705,
+        "frobenius_distance_to_embedded_zero_shift_reference": 0.00021106974937688515,
+        "principal_mode_residual": 0.0
+      },
+      {
+        "scale": 0.001,
+        "zeta": 1e-05,
+        "beta": -0.0001,
+        "basis_chart": "unit_generic_eigenmodes",
+        "state_operator_shape": [
+          40,
+          30
+        ],
+        "kreiss_state_to_data_norm": 4.753336912264181,
+        "frobenius_distance_to_embedded_zero_shift_reference": 0.0019538045867590853,
+        "principal_mode_residual": 1.1102230246251565e-16
+      },
+      {
+        "scale": 0.001,
+        "zeta": 1e-05,
+        "beta": -0.001,
+        "basis_chart": "unit_generic_eigenmodes",
+        "state_operator_shape": [
+          40,
+          30
+        ],
+        "kreiss_state_to_data_norm": 4.765153836748811,
+        "frobenius_distance_to_embedded_zero_shift_reference": 0.02068914191037252,
+        "principal_mode_residual": 1.1102230246251565e-16
+      },
+      {
+        "scale": 0.001,
+        "zeta": 0.0001,
+        "beta": -1e-07,
+        "basis_chart": "unit_generic_eigenmodes",
+        "state_operator_shape": [
+          40,
+          30
+        ],
+        "kreiss_state_to_data_norm": 4.750849954862056,
+        "frobenius_distance_to_embedded_zero_shift_reference": 0.002313149492896009,
+        "principal_mode_residual": 1.1102230246251565e-16
+      },
+      {
+        "scale": 0.001,
+        "zeta": 0.0001,
+        "beta": -1e-06,
+        "basis_chart": "unit_generic_eigenmodes",
+        "state_operator_shape": [
+          40,
+          30
+        ],
+        "kreiss_state_to_data_norm": 4.750861737332044,
+        "frobenius_distance_to_embedded_zero_shift_reference": 0.0023020649220863187,
+        "principal_mode_residual": 1.1102230246251565e-16
+      },
+      {
+        "scale": 0.001,
+        "zeta": 0.0001,
+        "beta": -1e-05,
+        "basis_chart": "unit_generic_eigenmodes",
+        "state_operator_shape": [
+          40,
+          30
+        ],
+        "kreiss_state_to_data_norm": 4.7509795654321065,
+        "frobenius_distance_to_embedded_zero_shift_reference": 0.0022004365550521332,
+        "principal_mode_residual": 1.6653345369377348e-16
+      },
+      {
+        "scale": 0.001,
+        "zeta": 0.0001,
+        "beta": -0.0001,
+        "basis_chart": "source_ode_consistent_jordan",
+        "state_operator_shape": [
+          40,
+          30
+        ],
+        "kreiss_state_to_data_norm": 4.75215813453157,
+        "frobenius_distance_to_embedded_zero_shift_reference": 0.0021117503542122024,
+        "principal_mode_residual": 0.0
+      },
+      {
+        "scale": 0.001,
+        "zeta": 0.0001,
+        "beta": -0.001,
+        "basis_chart": "unit_generic_eigenmodes",
+        "state_operator_shape": [
+          40,
+          30
+        ],
+        "kreiss_state_to_data_norm": 4.763971034119482,
+        "frobenius_distance_to_embedded_zero_shift_reference": 0.019570012066510812,
+        "principal_mode_residual": 1.1102230246251565e-16
+      },
+      {
+        "scale": 0.001,
+        "zeta": 0.001,
+        "beta": -1e-07,
+        "basis_chart": "unit_generic_eigenmodes",
+        "state_operator_shape": [
+          40,
+          30
+        ],
+        "kreiss_state_to_data_norm": 4.739097589526707,
+        "frobenius_distance_to_embedded_zero_shift_reference": 0.023095876899626548,
+        "principal_mode_residual": 1.1102230246251565e-16
+      },
+      {
+        "scale": 0.001,
+        "zeta": 0.001,
+        "beta": -1e-06,
+        "basis_chart": "unit_generic_eigenmodes",
+        "state_operator_shape": [
+          40,
+          30
+        ],
+        "kreiss_state_to_data_norm": 4.7391093314592325,
+        "frobenius_distance_to_embedded_zero_shift_reference": 0.023084752392080937,
+        "principal_mode_residual": 1.1102230246251565e-16
+      },
+      {
+        "scale": 0.001,
+        "zeta": 0.001,
+        "beta": -1e-05,
+        "basis_chart": "unit_generic_eigenmodes",
+        "state_operator_shape": [
+          40,
+          30
+        ],
+        "kreiss_state_to_data_norm": 4.739226754311198,
+        "frobenius_distance_to_embedded_zero_shift_reference": 0.02297444881882454,
+        "principal_mode_residual": 1.1102230246251565e-16
+      },
+      {
+        "scale": 0.001,
+        "zeta": 0.001,
+        "beta": -0.0001,
+        "basis_chart": "unit_generic_eigenmodes",
+        "state_operator_shape": [
+          40,
+          30
+        ],
+        "kreiss_state_to_data_norm": 4.740401321539903,
+        "frobenius_distance_to_embedded_zero_shift_reference": 0.021963242919266046,
+        "principal_mode_residual": 1.1102230246251565e-16
+      },
+      {
+        "scale": 0.001,
+        "zeta": 0.001,
+        "beta": -0.001,
+        "basis_chart": "source_ode_consistent_jordan",
+        "state_operator_shape": [
+          40,
+          30
+        ],
+        "kreiss_state_to_data_norm": 4.75217575226724,
+        "frobenius_distance_to_embedded_zero_shift_reference": 0.02111825250947042,
+        "principal_mode_residual": 0.0
+      },
+      {
+        "scale": 0.0001,
+        "zeta": 1e-08,
+        "beta": -1e-08,
+        "basis_chart": "source_ode_consistent_jordan",
+        "state_operator_shape": [
+          40,
+          30
+        ],
+        "kreiss_state_to_data_norm": 4.752157956577036,
+        "frobenius_distance_to_embedded_zero_shift_reference": 2.2045407245598372e-07,
+        "principal_mode_residual": 0.0
+      },
+      {
+        "scale": 0.0001,
+        "zeta": 1e-08,
+        "beta": -1e-07,
+        "basis_chart": "unit_generic_eigenmodes",
+        "state_operator_shape": [
+          40,
+          30
+        ],
+        "kreiss_state_to_data_norm": 4.75215913527217,
+        "frobenius_distance_to_embedded_zero_shift_reference": 2.0827512438203947e-06,
+        "principal_mode_residual": 2.220446049250313e-16
+      },
+      {
+        "scale": 0.0001,
+        "zeta": 1e-08,
+        "beta": -1e-06,
+        "basis_chart": "unit_generic_eigenmodes",
+        "state_operator_shape": [
+          40,
+          30
+        ],
+        "kreiss_state_to_data_norm": 4.752170922250775,
+        "frobenius_distance_to_embedded_zero_shift_reference": 2.07851605487374e-05,
+        "principal_mode_residual": 5.551115123125783e-17
+      },
+      {
+        "scale": 0.0001,
+        "zeta": 1e-08,
+        "beta": -1e-05,
+        "basis_chart": "unit_generic_eigenmodes",
+        "state_operator_shape": [
+          40,
+          30
+        ],
+        "kreiss_state_to_data_norm": 4.752288794769785,
+        "frobenius_distance_to_embedded_zero_shift_reference": 0.0002078503569202649,
+        "principal_mode_residual": 2.220446049250313e-16
+      },
+      {
+        "scale": 0.0001,
+        "zeta": 1e-08,
+        "beta": -0.0001,
+        "basis_chart": "unit_generic_eigenmodes",
+        "state_operator_shape": [
+          40,
+          30
+        ],
+        "kreiss_state_to_data_norm": 4.753467793303286,
+        "frobenius_distance_to_embedded_zero_shift_reference": 0.002078882449657733,
+        "principal_mode_residual": 5.551115123125783e-17
+      },
+      {
+        "scale": 0.0001,
+        "zeta": 1e-07,
+        "beta": -1e-08,
+        "basis_chart": "unit_generic_eigenmodes",
+        "state_operator_shape": [
+          40,
+          30
+        ],
+        "kreiss_state_to_data_norm": 4.752156777882461,
+        "frobenius_distance_to_embedded_zero_shift_reference": 1.970849913032998e-06,
+        "principal_mode_residual": 2.220446049250313e-16
+      },
+      {
+        "scale": 0.0001,
+        "zeta": 1e-07,
+        "beta": -1e-07,
+        "basis_chart": "source_ode_consistent_jordan",
+        "state_operator_shape": [
+          40,
+          30
+        ],
+        "kreiss_state_to_data_norm": 4.7521579565772125,
+        "frobenius_distance_to_embedded_zero_shift_reference": 2.0043951700537437e-06,
+        "principal_mode_residual": 0.0
+      },
+      {
+        "scale": 0.0001,
+        "zeta": 1e-07,
+        "beta": -1e-06,
+        "basis_chart": "unit_generic_eigenmodes",
+        "state_operator_shape": [
+          40,
+          30
+        ],
+        "kreiss_state_to_data_norm": 4.752169743551808,
+        "frobenius_distance_to_embedded_zero_shift_reference": 1.96542148686143e-05,
+        "principal_mode_residual": 1.1102230246251565e-16
+      },
+      {
+        "scale": 0.0001,
+        "zeta": 1e-07,
+        "beta": -1e-05,
+        "basis_chart": "unit_generic_eigenmodes",
+        "state_operator_shape": [
+          40,
+          30
+        ],
+        "kreiss_state_to_data_norm": 4.75228761603015,
+        "frobenius_distance_to_embedded_zero_shift_reference": 0.00020661504157204553,
+        "principal_mode_residual": 1.1102230246251565e-16
+      },
+      {
+        "scale": 0.0001,
+        "zeta": 1e-07,
+        "beta": -0.0001,
+        "basis_chart": "unit_generic_eigenmodes",
+        "state_operator_shape": [
+          40,
+          30
+        ],
+        "kreiss_state_to_data_norm": 4.7534666141567765,
+        "frobenius_distance_to_embedded_zero_shift_reference": 0.002077636005483494,
+        "principal_mode_residual": 6.776263578034403e-21
+      },
+      {
+        "scale": 0.0001,
+        "zeta": 1e-06,
+        "beta": -1e-08,
+        "basis_chart": "unit_generic_eigenmodes",
+        "state_operator_shape": [
+          40,
+          30
+        ],
+        "kreiss_state_to_data_norm": 4.752144990967969,
+        "frobenius_distance_to_embedded_zero_shift_reference": 2.279677881360392e-05,
+        "principal_mode_residual": 4.440892098500626e-16
+      },
+      {
+        "scale": 0.0001,
+        "zeta": 1e-06,
+        "beta": -1e-07,
+        "basis_chart": "unit_generic_eigenmodes",
+        "state_operator_shape": [
+          40,
+          30
+        ],
+        "kreiss_state_to_data_norm": 4.7521461696587,
+        "frobenius_distance_to_embedded_zero_shift_reference": 2.1781015352357305e-05,
+        "principal_mode_residual": 1.1102230246251565e-16
+      },
+      {
+        "scale": 0.0001,
+        "zeta": 1e-06,
+        "beta": -1e-06,
+        "basis_chart": "source_ode_consistent_jordan",
+        "state_operator_shape": [
+          40,
+          30
+        ],
+        "kreiss_state_to_data_norm": 4.752157956594825,
+        "frobenius_distance_to_embedded_zero_shift_reference": 2.1002228111531993e-05,
+        "principal_mode_residual": 1.0587911840678754e-22
+      },
+      {
+        "scale": 0.0001,
+        "zeta": 1e-06,
+        "beta": -1e-05,
+        "basis_chart": "unit_generic_eigenmodes",
+        "state_operator_shape": [
+          40,
+          30
+        ],
+        "kreiss_state_to_data_norm": 4.752275828671744,
+        "frobenius_distance_to_embedded_zero_shift_reference": 0.0001954555666177962,
+        "principal_mode_residual": 1.1102230246251565e-16
+      },
+      {
+        "scale": 0.0001,
+        "zeta": 1e-06,
+        "beta": -0.0001,
+        "basis_chart": "unit_generic_eigenmodes",
+        "state_operator_shape": [
+          40,
+          30
+        ],
+        "kreiss_state_to_data_norm": 4.753454822731053,
+        "frobenius_distance_to_embedded_zero_shift_reference": 0.0020652915098146223,
+        "principal_mode_residual": 5.551115123125783e-17
+      },
+      {
+        "scale": 0.0001,
+        "zeta": 1e-05,
+        "beta": -1e-08,
+        "basis_chart": "unit_generic_eigenmodes",
+        "state_operator_shape": [
+          40,
+          30
+        ],
+        "kreiss_state_to_data_norm": 4.7520271249430595,
+        "frobenius_distance_to_embedded_zero_shift_reference": 0.00023115549536320188,
+        "principal_mode_residual": 4.440892098500626e-16
+      },
+      {
+        "scale": 0.0001,
+        "zeta": 1e-05,
+        "beta": -1e-07,
+        "basis_chart": "unit_generic_eigenmodes",
+        "state_operator_shape": [
+          40,
+          30
+        ],
+        "kreiss_state_to_data_norm": 4.752028303593145,
+        "frobenius_distance_to_embedded_zero_shift_reference": 0.00023004650394354553,
+        "principal_mode_residual": 3.3306690738754696e-16
+      },
+      {
+        "scale": 0.0001,
+        "zeta": 1e-05,
+        "beta": -1e-06,
+        "basis_chart": "unit_generic_eigenmodes",
+        "state_operator_shape": [
+          40,
+          30
+        ],
+        "kreiss_state_to_data_norm": 4.752040090127852,
+        "frobenius_distance_to_embedded_zero_shift_reference": 0.00021987953881738868,
+        "principal_mode_residual": 1.1102230246251565e-16
+      },
+      {
+        "scale": 0.0001,
+        "zeta": 1e-05,
+        "beta": -1e-05,
+        "basis_chart": "source_ode_consistent_jordan",
+        "state_operator_shape": [
+          40,
+          30
+        ],
+        "kreiss_state_to_data_norm": 4.7521579583565705,
+        "frobenius_distance_to_embedded_zero_shift_reference": 0.00021106974937688515,
+        "principal_mode_residual": 0.0
+      },
+      {
+        "scale": 0.0001,
+        "zeta": 1e-05,
+        "beta": -0.0001,
+        "basis_chart": "unit_generic_eigenmodes",
+        "state_operator_shape": [
+          40,
+          30
+        ],
+        "kreiss_state_to_data_norm": 4.753336912264181,
+        "frobenius_distance_to_embedded_zero_shift_reference": 0.0019538045867590853,
+        "principal_mode_residual": 1.1102230246251565e-16
+      },
+      {
+        "scale": 0.0001,
+        "zeta": 0.0001,
+        "beta": -1e-08,
+        "basis_chart": "unit_generic_eigenmodes",
+        "state_operator_shape": [
+          40,
+          30
+        ],
+        "kreiss_state_to_data_norm": 4.750848776618592,
+        "frobenius_distance_to_embedded_zero_shift_reference": 0.0023142674035347404,
+        "principal_mode_residual": 1.1102230246251565e-16
+      },
+      {
+        "scale": 0.0001,
+        "zeta": 0.0001,
+        "beta": -1e-07,
+        "basis_chart": "unit_generic_eigenmodes",
+        "state_operator_shape": [
+          40,
+          30
+        ],
+        "kreiss_state_to_data_norm": 4.750849954862056,
+        "frobenius_distance_to_embedded_zero_shift_reference": 0.002313149492896009,
+        "principal_mode_residual": 1.1102230246251565e-16
+      },
+      {
+        "scale": 0.0001,
+        "zeta": 0.0001,
+        "beta": -1e-06,
+        "basis_chart": "unit_generic_eigenmodes",
+        "state_operator_shape": [
+          40,
+          30
+        ],
+        "kreiss_state_to_data_norm": 4.750861737332044,
+        "frobenius_distance_to_embedded_zero_shift_reference": 0.0023020649220863187,
+        "principal_mode_residual": 1.1102230246251565e-16
+      },
+      {
+        "scale": 0.0001,
+        "zeta": 0.0001,
+        "beta": -1e-05,
+        "basis_chart": "unit_generic_eigenmodes",
+        "state_operator_shape": [
+          40,
+          30
+        ],
+        "kreiss_state_to_data_norm": 4.7509795654321065,
+        "frobenius_distance_to_embedded_zero_shift_reference": 0.0022004365550521332,
+        "principal_mode_residual": 1.6653345369377348e-16
+      },
+      {
+        "scale": 0.0001,
+        "zeta": 0.0001,
+        "beta": -0.0001,
+        "basis_chart": "source_ode_consistent_jordan",
+        "state_operator_shape": [
+          40,
+          30
+        ],
+        "kreiss_state_to_data_norm": 4.75215813453157,
+        "frobenius_distance_to_embedded_zero_shift_reference": 0.0021117503542122024,
+        "principal_mode_residual": 0.0
+      },
+      {
+        "scale": 1e-05,
+        "zeta": 1e-09,
+        "beta": -1e-09,
+        "basis_chart": "source_ode_consistent_jordan",
+        "state_operator_shape": [
+          40,
+          30
+        ],
+        "kreiss_state_to_data_norm": 4.752157956577031,
+        "frobenius_distance_to_embedded_zero_shift_reference": 2.2155359662918993e-07,
+        "principal_mode_residual": 0.0
+      },
+      {
+        "scale": 1e-05,
+        "zeta": 1e-09,
+        "beta": -1e-08,
+        "basis_chart": "unit_generic_eigenmodes",
+        "state_operator_shape": [
+          40,
+          30
+        ],
+        "kreiss_state_to_data_norm": 4.75215807444652,
+        "frobenius_distance_to_embedded_zero_shift_reference": 3.723365527273009e-07,
+        "principal_mode_residual": 1.1102230246251565e-16
+      },
+      {
+        "scale": 1e-05,
+        "zeta": 1e-09,
+        "beta": -1e-07,
+        "basis_chart": "unit_generic_eigenmodes",
+        "state_operator_shape": [
+          40,
+          30
+        ],
+        "kreiss_state_to_data_norm": 4.752159253141697,
+        "frobenius_distance_to_embedded_zero_shift_reference": 2.2095315238324715e-06,
+        "principal_mode_residual": 5.551115123125783e-17
+      },
+      {
+        "scale": 1e-05,
+        "zeta": 1e-09,
+        "beta": -1e-06,
+        "basis_chart": "unit_generic_eigenmodes",
+        "state_operator_shape": [
+          40,
+          30
+        ],
+        "kreiss_state_to_data_norm": 4.752171040120716,
+        "frobenius_distance_to_embedded_zero_shift_reference": 2.091003083675551e-05,
+        "principal_mode_residual": 1.0587911840678754e-22
+      },
+      {
+        "scale": 1e-05,
+        "zeta": 1e-09,
+        "beta": -1e-05,
+        "basis_chart": "unit_generic_eigenmodes",
+        "state_operator_shape": [
+          40,
+          30
+        ],
+        "kreiss_state_to_data_norm": 4.752288912643791,
+        "frobenius_distance_to_embedded_zero_shift_reference": 0.00020797508575087374,
+        "principal_mode_residual": 1.3552527156068805e-20
+      },
+      {
+        "scale": 1e-05,
+        "zeta": 1e-08,
+        "beta": -1e-09,
+        "basis_chart": "unit_generic_eigenmodes",
+        "state_operator_shape": [
+          40,
+          30
+        ],
+        "kreiss_state_to_data_norm": 4.752157838707547,
+        "frobenius_distance_to_embedded_zero_shift_reference": 2.470854529751065e-08,
+        "principal_mode_residual": 1.1102230246251565e-16
+      },
+      {
+        "scale": 1e-05,
+        "zeta": 1e-08,
+        "beta": -1e-08,
+        "basis_chart": "source_ode_consistent_jordan",
+        "state_operator_shape": [
+          40,
+          30
+        ],
+        "kreiss_state_to_data_norm": 4.752157956577036,
+        "frobenius_distance_to_embedded_zero_shift_reference": 2.2045407245598372e-07,
+        "principal_mode_residual": 0.0
+      },
+      {
+        "scale": 1e-05,
+        "zeta": 1e-08,
+        "beta": -1e-07,
+        "basis_chart": "unit_generic_eigenmodes",
+        "state_operator_shape": [
+          40,
+          30
+        ],
+        "kreiss_state_to_data_norm": 4.75215913527217,
+        "frobenius_distance_to_embedded_zero_shift_reference": 2.0827512438203947e-06,
+        "principal_mode_residual": 2.220446049250313e-16
+      },
+      {
+        "scale": 1e-05,
+        "zeta": 1e-08,
+        "beta": -1e-06,
+        "basis_chart": "unit_generic_eigenmodes",
+        "state_operator_shape": [
+          40,
+          30
+        ],
+        "kreiss_state_to_data_norm": 4.752170922250775,
+        "frobenius_distance_to_embedded_zero_shift_reference": 2.07851605487374e-05,
+        "principal_mode_residual": 5.551115123125783e-17
+      },
+      {
+        "scale": 1e-05,
+        "zeta": 1e-08,
+        "beta": -1e-05,
+        "basis_chart": "unit_generic_eigenmodes",
+        "state_operator_shape": [
+          40,
+          30
+        ],
+        "kreiss_state_to_data_norm": 4.752288794769785,
+        "frobenius_distance_to_embedded_zero_shift_reference": 0.0002078503569202649,
+        "principal_mode_residual": 2.220446049250313e-16
+      },
+      {
+        "scale": 1e-05,
+        "zeta": 1e-07,
+        "beta": -1e-09,
+        "basis_chart": "unit_generic_eigenmodes",
+        "state_operator_shape": [
+          40,
+          30
+        ],
+        "kreiss_state_to_data_norm": 4.7521566600130205,
+        "frobenius_distance_to_embedded_zero_shift_reference": 2.071328450657194e-06,
+        "principal_mode_residual": 5.551115123125783e-17
+      },
+      {
+        "scale": 1e-05,
+        "zeta": 1e-07,
+        "beta": -1e-08,
+        "basis_chart": "unit_generic_eigenmodes",
+        "state_operator_shape": [
+          40,
+          30
+        ],
+        "kreiss_state_to_data_norm": 4.752156777882461,
+        "frobenius_distance_to_embedded_zero_shift_reference": 1.970849913032998e-06,
+        "principal_mode_residual": 2.220446049250313e-16
+      },
+      {
+        "scale": 1e-05,
+        "zeta": 1e-07,
+        "beta": -1e-07,
+        "basis_chart": "source_ode_consistent_jordan",
+        "state_operator_shape": [
+          40,
+          30
+        ],
+        "kreiss_state_to_data_norm": 4.7521579565772125,
+        "frobenius_distance_to_embedded_zero_shift_reference": 2.0043951700537437e-06,
+        "principal_mode_residual": 0.0
+      },
+      {
+        "scale": 1e-05,
+        "zeta": 1e-07,
+        "beta": -1e-06,
+        "basis_chart": "unit_generic_eigenmodes",
+        "state_operator_shape": [
+          40,
+          30
+        ],
+        "kreiss_state_to_data_norm": 4.752169743551808,
+        "frobenius_distance_to_embedded_zero_shift_reference": 1.96542148686143e-05,
+        "principal_mode_residual": 1.1102230246251565e-16
+      },
+      {
+        "scale": 1e-05,
+        "zeta": 1e-07,
+        "beta": -1e-05,
+        "basis_chart": "unit_generic_eigenmodes",
+        "state_operator_shape": [
+          40,
+          30
+        ],
+        "kreiss_state_to_data_norm": 4.75228761603015,
+        "frobenius_distance_to_embedded_zero_shift_reference": 0.00020661504157204553,
+        "principal_mode_residual": 1.1102230246251565e-16
+      },
+      {
+        "scale": 1e-05,
+        "zeta": 1e-06,
+        "beta": -1e-09,
+        "basis_chart": "unit_generic_eigenmodes",
+        "state_operator_shape": [
+          40,
+          30
+        ],
+        "kreiss_state_to_data_norm": 4.752144873098938,
+        "frobenius_distance_to_embedded_zero_shift_reference": 2.2907673771570898e-05,
+        "principal_mode_residual": 1.0587911840678754e-22
+      },
+      {
+        "scale": 1e-05,
+        "zeta": 1e-06,
+        "beta": -1e-08,
+        "basis_chart": "unit_generic_eigenmodes",
+        "state_operator_shape": [
+          40,
+          30
+        ],
+        "kreiss_state_to_data_norm": 4.752144990967969,
+        "frobenius_distance_to_embedded_zero_shift_reference": 2.279677881360392e-05,
+        "principal_mode_residual": 4.440892098500626e-16
+      },
+      {
+        "scale": 1e-05,
+        "zeta": 1e-06,
+        "beta": -1e-07,
+        "basis_chart": "unit_generic_eigenmodes",
+        "state_operator_shape": [
+          40,
+          30
+        ],
+        "kreiss_state_to_data_norm": 4.7521461696587,
+        "frobenius_distance_to_embedded_zero_shift_reference": 2.1781015352357305e-05,
+        "principal_mode_residual": 1.1102230246251565e-16
+      },
+      {
+        "scale": 1e-05,
+        "zeta": 1e-06,
+        "beta": -1e-06,
+        "basis_chart": "source_ode_consistent_jordan",
+        "state_operator_shape": [
+          40,
+          30
+        ],
+        "kreiss_state_to_data_norm": 4.752157956594825,
+        "frobenius_distance_to_embedded_zero_shift_reference": 2.1002228111531993e-05,
+        "principal_mode_residual": 1.0587911840678754e-22
+      },
+      {
+        "scale": 1e-05,
+        "zeta": 1e-06,
+        "beta": -1e-05,
+        "basis_chart": "unit_generic_eigenmodes",
+        "state_operator_shape": [
+          40,
+          30
+        ],
+        "kreiss_state_to_data_norm": 4.752275828671744,
+        "frobenius_distance_to_embedded_zero_shift_reference": 0.0001954555666177962,
+        "principal_mode_residual": 1.1102230246251565e-16
+      },
+      {
+        "scale": 1e-05,
+        "zeta": 1e-05,
+        "beta": -1e-09,
+        "basis_chart": "unit_generic_eigenmodes",
+        "state_operator_shape": [
+          40,
+          30
+        ],
+        "kreiss_state_to_data_norm": 4.752027007078097,
+        "frobenius_distance_to_embedded_zero_shift_reference": 0.0002312673410858564,
+        "principal_mode_residual": 1.1102230246251565e-16
+      },
+      {
+        "scale": 1e-05,
+        "zeta": 1e-05,
+        "beta": -1e-08,
+        "basis_chart": "unit_generic_eigenmodes",
+        "state_operator_shape": [
+          40,
+          30
+        ],
+        "kreiss_state_to_data_norm": 4.7520271249430595,
+        "frobenius_distance_to_embedded_zero_shift_reference": 0.00023115549536320188,
+        "principal_mode_residual": 4.440892098500626e-16
+      },
+      {
+        "scale": 1e-05,
+        "zeta": 1e-05,
+        "beta": -1e-07,
+        "basis_chart": "unit_generic_eigenmodes",
+        "state_operator_shape": [
+          40,
+          30
+        ],
+        "kreiss_state_to_data_norm": 4.752028303593145,
+        "frobenius_distance_to_embedded_zero_shift_reference": 0.00023004650394354553,
+        "principal_mode_residual": 3.3306690738754696e-16
+      },
+      {
+        "scale": 1e-05,
+        "zeta": 1e-05,
+        "beta": -1e-06,
+        "basis_chart": "unit_generic_eigenmodes",
+        "state_operator_shape": [
+          40,
+          30
+        ],
+        "kreiss_state_to_data_norm": 4.752040090127852,
+        "frobenius_distance_to_embedded_zero_shift_reference": 0.00021987953881738868,
+        "principal_mode_residual": 1.1102230246251565e-16
+      },
+      {
+        "scale": 1e-05,
+        "zeta": 1e-05,
+        "beta": -1e-05,
+        "basis_chart": "source_ode_consistent_jordan",
+        "state_operator_shape": [
+          40,
+          30
+        ],
+        "kreiss_state_to_data_norm": 4.7521579583565705,
+        "frobenius_distance_to_embedded_zero_shift_reference": 0.00021106974937688515,
+        "principal_mode_residual": 0.0
+      }
+    ],
+    "basis_invariance_cases": [
+      {
+        "scale": 0.01,
+        "relative_offset": 0.1,
+        "max_abs_operator_difference": 1.3322676295501878e-15
+      },
+      {
+        "scale": 0.01,
+        "relative_offset": 0.01,
+        "max_abs_operator_difference": 8.944274233272192e-16
+      },
+      {
+        "scale": 0.01,
+        "relative_offset": 0.001,
+        "max_abs_operator_difference": 3.202299536653186e-15
+      },
+      {
+        "scale": 0.001,
+        "relative_offset": 0.1,
+        "max_abs_operator_difference": 8.881784197001252e-16
+      },
+      {
+        "scale": 0.001,
+        "relative_offset": 0.01,
+        "max_abs_operator_difference": 1.3322676295501878e-15
+      },
+      {
+        "scale": 0.001,
+        "relative_offset": 0.001,
+        "max_abs_operator_difference": 1.1102230246251565e-15
+      },
+      {
+        "scale": 0.0001,
+        "relative_offset": 0.1,
+        "max_abs_operator_difference": 6.661338147750939e-16
+      },
+      {
+        "scale": 0.0001,
+        "relative_offset": 0.01,
+        "max_abs_operator_difference": 6.661338147750939e-16
+      },
+      {
+        "scale": 0.0001,
+        "relative_offset": 0.001,
+        "max_abs_operator_difference": 8.881784197001252e-16
+      }
+    ],
+    "source_hashes": {
+      "docs/scripts/audit/audit_curved_3p1_gh_rinne_joint_real_kreiss_operator.py": "e64e7fc41bd819f5605811f7f6af55a8c436d6f84cd93a77ee9db9b3098f01e1",
+      "docs/scripts/audit/audit_curved_3p1_gh_rinne_joint_real_glancing_scale.py": "ddc05ce974644ed507dbf5aac62448bbafa25d63fa7b2eb94eac20d330ffeb1a",
+      "docs/core/07_artifacts/verification/curved_3p1_gh_rinne_joint_real_glancing_scale.json": "d81672d60aa43907ff1f47330b9c85c8299583914b55d5caff968064191128bd",
+      "docs/scripts/audit/audit_curved_3p1_gh_rinne_negative_shift_zero_transition.py": "1a9d271ae0d9fd58e56809b722613057e9cbf1679eea9c6035f8451fccea5014",
+      "docs/scripts/audit/audit_curved_3p1_gh_rinne_negative_shift_kreiss_symbol.py": "f482a1b1cb61480bfaa3cb27e5a2b7cdad65218fcc6521d0d587e742ffce3f2b",
+      "docs/core/07_artifacts/verification/curved_3p1_gh_rinne_negative_shift_kreiss_symbol.json": "5d48f6efe14f8c3501da5d8568544608fcc2d8fe7b24f798523ffdd919e39924",
+      "docs/scripts/audit/audit_curved_3p1_gh_rinne_zero_shift_kreiss_symbol.py": "c8d29b710c053ac0dee5a2d21714a63b99e8c749c8ac7c0ae892c7ffcae6460c",
+      "docs/core/07_artifacts/verification/curved_3p1_gh_rinne_zero_shift_kreiss_symbol.json": "b521608f31da55e435d5d2c736222ece29a572f8efede9992f263d3d0910f460",
+      "docs/core/02_equations/covariant/uet_curved_3p1_gh_linear_boundary.py": "39bd0731a3ecdbb5c5185453e0908d198cba895ba5f29dafc6bb8f9c6a3b169c",
+      "docs/core/02_equations/covariant/uet_curved_3p1_gh_boundary_projectors.py": "2aa529e3a037a5ecff2c2a5a6d454ef7cf9822ca99371393d6614bfbc062362f"
+    },
+    "source_reference": "https://arxiv.org/abs/gr-qc/0606053"
+  },
+  "CONTROLLING_BLOCKER": "analytic_uniform_remainder_bound_for_full_state_transfer_operator_over_joint_beta_zeta_domain_missing",
+  "NEXT_ACTION": "Derive a continuous estimate for ||T(beta,zeta)-T0|| across the compactified positive-real ratio using the generic/Jordan chart transition; then extend the state-transfer bound to the imaginary-frequency boundary and high frequencies.",
+  "CLAIM_BOUNDARY": "exact zero-shift endpoint Gram result plus a finite positive-real joint-neighborhood screen; no continuous all-ratio or complex-frequency uniform Kreiss proof",
+  "full_core_unlock": false,
+  "gravity_unlock": false,
+  "claim_promotion": false
+}

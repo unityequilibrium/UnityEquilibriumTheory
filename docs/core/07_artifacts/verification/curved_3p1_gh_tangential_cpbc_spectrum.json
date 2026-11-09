@@ -1,0 +1,888 @@
+{
+  "CLAIM_BOUNDARY": "Finite-dimensional, frozen-background standard-GR linear boundary diagnostic only; not continuum well-posedness, full Rinne CPBC reproduction, curved 3+1 parent closure, UET validation, or Gravity unlock.",
+  "CONTROLLING_BLOCKER": "full_first_order_gh_differential_cpbc_energy_stability_and_resolution_convergence_missing",
+  "DEPENDENCY_UNLOCKED": "none; Core curved-3+1 parent remains PARTIAL and Gravity remains blocked",
+  "EQUATION_OR_MAPPING": {
+    "energy": "E = 0.5 U^T M_h U, using the positive GH symmetrizer, the declared normal quadrature/norm, and tensor Frobenius weights",
+    "energy_logarithmic_norm": "mu_E = lambda_max(M_h^(-1/2) sym(M_h A_h) M_h^(-1/2)); dE/dt <= 2*mu_E*E",
+    "operator_probe": "Compare A_h*v with direct RHS(v) for a deterministic random vector",
+    "sbp_identity": "H D + D^T H = diag(-1, 0, ..., 0, +1); residual recorded for every normal operator/norm pairing",
+    "semidiscrete_system": "U_dot = A_h(k_y) U, with the registered linear bulk GH equations and projected differential boundary targets"
+  },
+  "MAJOR_RESULT_CLOSURE": "PARTIAL",
+  "NEXT_ACTION": "Interpret the matched LGL-SBP finite-grid spectrum and energy rates first; then derive a projector-aware boundary energy estimate and broaden the resolution/mode screen before positive-shift u2_A or corners.",
+  "PREREGISTRATION": {
+    "cases_degree_wavenumber_over_L0": [
+      {
+        "degree": 4,
+        "k_y_L0": 3.141592653589793
+      },
+      {
+        "degree": 8,
+        "k_y_L0": 3.141592653589793
+      },
+      {
+        "degree": 12,
+        "k_y_L0": 3.141592653589793
+      },
+      {
+        "degree": 8,
+        "k_y_L0": 1.5707963267948966
+      },
+      {
+        "degree": 8,
+        "k_y_L0": 6.283185307179586
+      }
+    ],
+    "decision_thresholds": "Report only; do not promote status or unlock dependencies",
+    "existing_positive_eigenvalue_reference_tolerance": 1e-06,
+    "gamma0_L0": 1.0,
+    "gamma2_L0": 1.0,
+    "normal_operator_families": [
+      "chebyshev_clenshaw_curtis",
+      "legendre_gauss_lobatto_sbp"
+    ]
+  },
+  "STATUS": "OPEN_MATCHED_OPERATOR_NORM_COMPARISON",
+  "VERIFICATION": {
+    "all_energy_matrices_positive_definite": true,
+    "cases": [
+      {
+        "degree": 4,
+        "eigenvalue_count_real_part_above_existing_1e-6_tolerance": 0,
+        "gamma0_L0": 1.0,
+        "gamma2_L0": 1.0,
+        "leading_eigenvalues_over_L0_inverse": [
+          {
+            "imag": 0.0,
+            "real": 2.314350114306297e-15
+          },
+          {
+            "imag": 4.194086192936807e-16,
+            "real": 1.6815189035350726e-15
+          },
+          {
+            "imag": -4.194086192936807e-16,
+            "real": 1.6815189035350726e-15
+          },
+          {
+            "imag": -2.459897729113004e-15,
+            "real": 1.2313173482937236e-15
+          },
+          {
+            "imag": 2.459897729113004e-15,
+            "real": 1.2313173482937236e-15
+          },
+          {
+            "imag": 7.758046139771257e-16,
+            "real": 8.845820378449261e-16
+          },
+          {
+            "imag": -7.758046139771257e-16,
+            "real": 8.845820378449261e-16
+          },
+          {
+            "imag": 0.0,
+            "real": 4.266861435427367e-16
+          }
+        ],
+        "maximum_energy_norm_log_growth_rate_over_L0_inverse": 4.18442743666487,
+        "maximum_energy_relative_growth_rate_over_L0_inverse": 8.36885487332974,
+        "minimum_energy_matrix_eigenvalue": 0.04648162415119922,
+        "node_count": 5,
+        "normal_norm_family": "clenshaw_curtis_diagonal_quadrature",
+        "normal_operator_family": "chebyshev_clenshaw_curtis",
+        "normal_operator_norm_sbp_compatible_at_roundoff": false,
+        "operator_assembly_probe_relative_residual": 1.9452982173942596e-16,
+        "optimal_direction_boundary_correction_relative_energy_rate_over_L0_inverse": -1.389360432447431,
+        "optimal_direction_boundary_projector_fractions": {
+          "left": {
+            "projected_incoming_norm_squared": 10.224195159145392,
+            "sector_fractions": {
+              "constraint": 0.26150837783644804,
+              "gauge": 0.21047616325212581,
+              "physical": 0.5280154589114262
+            }
+          },
+          "right": {
+            "projected_incoming_norm_squared": 10.224195159149527,
+            "sector_fractions": {
+              "constraint": 0.26150837783645314,
+              "gauge": 0.2104761632521289,
+              "physical": 0.5280154589114181
+            }
+          }
+        },
+        "optimal_direction_bulk_boundary_rate_balance_abs_residual": 2.220446049250313e-16,
+        "optimal_direction_bulk_relative_energy_rate_over_L0_inverse": 9.758215305777169,
+        "optimal_direction_direct_relative_energy_growth_rate_over_L0_inverse": 8.368854873329738,
+        "optimal_direction_endpoint_energy_fraction": 0.7537635150859738,
+        "optimal_direction_energy_rate_check_abs_residual": 1.7763568394002505e-15,
+        "sbp_identity_max_abs_residual": 0.7542472332656512,
+        "sbp_identity_relative_frobenius_residual": 0.6519566230434128,
+        "sbp_identity_spectral_norm_residual": 1.222020185321558,
+        "spectral_abscissa_over_L0_inverse": 2.314350114306297e-15,
+        "state_dimension": 500,
+        "tangential_wavenumber_over_L0": 3.141592653589793
+      },
+      {
+        "degree": 8,
+        "eigenvalue_count_real_part_above_existing_1e-6_tolerance": 0,
+        "gamma0_L0": 1.0,
+        "gamma2_L0": 1.0,
+        "leading_eigenvalues_over_L0_inverse": [
+          {
+            "imag": 1.1138844062291442e-15,
+            "real": 1.4544869724514718e-14
+          },
+          {
+            "imag": -1.1138844062291442e-15,
+            "real": 1.4544869724514718e-14
+          },
+          {
+            "imag": 0.0,
+            "real": 4.016032509638909e-15
+          },
+          {
+            "imag": -2.488432925569179e-15,
+            "real": 2.932298722413334e-15
+          },
+          {
+            "imag": 2.488432925569179e-15,
+            "real": 2.932298722413334e-15
+          },
+          {
+            "imag": -1.6387683651302434e-15,
+            "real": 4.446343961988612e-16
+          },
+          {
+            "imag": 1.6387683651302434e-15,
+            "real": 4.446343961988612e-16
+          },
+          {
+            "imag": 0.0,
+            "real": -1.428222548955594e-15
+          }
+        ],
+        "maximum_energy_norm_log_growth_rate_over_L0_inverse": 11.35635885481341,
+        "maximum_energy_relative_growth_rate_over_L0_inverse": 22.71271770962682,
+        "minimum_energy_matrix_eigenvalue": 0.011067053369332204,
+        "node_count": 9,
+        "normal_norm_family": "clenshaw_curtis_diagonal_quadrature",
+        "normal_operator_family": "chebyshev_clenshaw_curtis",
+        "normal_operator_norm_sbp_compatible_at_roundoff": false,
+        "operator_assembly_probe_relative_residual": 3.053420681028711e-16,
+        "optimal_direction_boundary_correction_relative_energy_rate_over_L0_inverse": -12.128724471192582,
+        "optimal_direction_boundary_projector_fractions": {
+          "left": {
+            "projected_incoming_norm_squared": 37.396231422185046,
+            "sector_fractions": {
+              "constraint": 0.15162766559042776,
+              "gauge": 0.11044218557960579,
+              "physical": 0.7379301488299663
+            }
+          },
+          "right": {
+            "projected_incoming_norm_squared": 37.39623142218676,
+            "sector_fractions": {
+              "constraint": 0.1516276655904289,
+              "gauge": 0.11044218557960649,
+              "physical": 0.7379301488299647
+            }
+          }
+        },
+        "optimal_direction_bulk_boundary_rate_balance_abs_residual": 5.329070518200751e-15,
+        "optimal_direction_bulk_relative_energy_rate_over_L0_inverse": 34.841442180819406,
+        "optimal_direction_direct_relative_energy_growth_rate_over_L0_inverse": 22.71271770962682,
+        "optimal_direction_endpoint_energy_fraction": 0.6685879959263231,
+        "optimal_direction_energy_rate_check_abs_residual": 0.0,
+        "sbp_identity_max_abs_residual": 0.9224414128083055,
+        "sbp_identity_relative_frobenius_residual": 0.6173057616322288,
+        "sbp_identity_spectral_norm_residual": 1.9204564763071839,
+        "spectral_abscissa_over_L0_inverse": 1.4544869724514718e-14,
+        "state_dimension": 900,
+        "tangential_wavenumber_over_L0": 3.141592653589793
+      },
+      {
+        "degree": 12,
+        "eigenvalue_count_real_part_above_existing_1e-6_tolerance": 0,
+        "gamma0_L0": 1.0,
+        "gamma2_L0": 1.0,
+        "leading_eigenvalues_over_L0_inverse": [
+          {
+            "imag": 1.0493651951040457e-14,
+            "real": 2.182871472677087e-14
+          },
+          {
+            "imag": -1.0493651951040457e-14,
+            "real": 2.182871472677087e-14
+          },
+          {
+            "imag": 7.451289197516059e-15,
+            "real": 1.2006820824815534e-14
+          },
+          {
+            "imag": -7.451289197516059e-15,
+            "real": 1.2006820824815534e-14
+          },
+          {
+            "imag": 0.0,
+            "real": 7.626505064943128e-15
+          },
+          {
+            "imag": -5.496387539034605e-15,
+            "real": 1.6620924134561437e-15
+          },
+          {
+            "imag": 5.496387539034605e-15,
+            "real": 1.6620924134561437e-15
+          },
+          {
+            "imag": 1.0591359704230095e-14,
+            "real": -1.845203643711833e-15
+          }
+        ],
+        "maximum_energy_norm_log_growth_rate_over_L0_inverse": 23.926053975290266,
+        "maximum_energy_relative_growth_rate_over_L0_inverse": 47.85210795058053,
+        "minimum_energy_matrix_eigenvalue": 0.004875694841034327,
+        "node_count": 13,
+        "normal_norm_family": "clenshaw_curtis_diagonal_quadrature",
+        "normal_operator_family": "chebyshev_clenshaw_curtis",
+        "normal_operator_norm_sbp_compatible_at_roundoff": false,
+        "operator_assembly_probe_relative_residual": 2.913260649825984e-16,
+        "optimal_direction_boundary_correction_relative_energy_rate_over_L0_inverse": -27.841879160736532,
+        "optimal_direction_boundary_projector_fractions": {
+          "left": {
+            "projected_incoming_norm_squared": 82.3254010535954,
+            "sector_fractions": {
+              "constraint": 0.06620246971469962,
+              "gauge": 0.0406750465721762,
+              "physical": 0.8931224837131241
+            }
+          },
+          "right": {
+            "projected_incoming_norm_squared": 82.32540105366883,
+            "sector_fractions": {
+              "constraint": 0.06620246971470402,
+              "gauge": 0.04067504657217839,
+              "physical": 0.8931224837131176
+            }
+          }
+        },
+        "optimal_direction_bulk_boundary_rate_balance_abs_residual": 7.105427357601002e-15,
+        "optimal_direction_bulk_relative_energy_rate_over_L0_inverse": 75.69398711131706,
+        "optimal_direction_direct_relative_energy_growth_rate_over_L0_inverse": 47.85210795058053,
+        "optimal_direction_endpoint_energy_fraction": 0.6660783860952953,
+        "optimal_direction_energy_rate_check_abs_residual": 0.0,
+        "sbp_identity_max_abs_residual": 0.9525174858776623,
+        "sbp_identity_relative_frobenius_residual": 0.5631747886461489,
+        "sbp_identity_spectral_norm_residual": 2.2592696925590214,
+        "spectral_abscissa_over_L0_inverse": 2.182871472677087e-14,
+        "state_dimension": 1300,
+        "tangential_wavenumber_over_L0": 3.141592653589793
+      },
+      {
+        "degree": 8,
+        "eigenvalue_count_real_part_above_existing_1e-6_tolerance": 0,
+        "gamma0_L0": 1.0,
+        "gamma2_L0": 1.0,
+        "leading_eigenvalues_over_L0_inverse": [
+          {
+            "imag": -1.0803389780308163e-14,
+            "real": 7.396308761598687e-15
+          },
+          {
+            "imag": 1.0803389780308163e-14,
+            "real": 7.396308761598687e-15
+          },
+          {
+            "imag": -2.0844605300826342e-15,
+            "real": 5.361424729749371e-15
+          },
+          {
+            "imag": 2.0844605300826342e-15,
+            "real": 5.361424729749371e-15
+          },
+          {
+            "imag": -6.3636818282396835e-15,
+            "real": 3.932181172357434e-15
+          },
+          {
+            "imag": 6.3636818282396835e-15,
+            "real": 3.932181172357434e-15
+          },
+          {
+            "imag": 1.1658305518933916e-15,
+            "real": 4.0766135399463775e-16
+          },
+          {
+            "imag": -1.1658305518933916e-15,
+            "real": 4.0766135399463775e-16
+          }
+        ],
+        "maximum_energy_norm_log_growth_rate_over_L0_inverse": 10.840676694485982,
+        "maximum_energy_relative_growth_rate_over_L0_inverse": 21.681353388971964,
+        "minimum_energy_matrix_eigenvalue": 0.011067053369332204,
+        "node_count": 9,
+        "normal_norm_family": "clenshaw_curtis_diagonal_quadrature",
+        "normal_operator_family": "chebyshev_clenshaw_curtis",
+        "normal_operator_norm_sbp_compatible_at_roundoff": false,
+        "operator_assembly_probe_relative_residual": 2.5585193344534527e-16,
+        "optimal_direction_boundary_correction_relative_energy_rate_over_L0_inverse": -11.83217205566013,
+        "optimal_direction_boundary_projector_fractions": {
+          "left": {
+            "projected_incoming_norm_squared": 35.3893363305867,
+            "sector_fractions": {
+              "constraint": 0.05499745231260987,
+              "gauge": 0.04465833867889568,
+              "physical": 0.9003442090084945
+            }
+          },
+          "right": {
+            "projected_incoming_norm_squared": 35.389336330585415,
+            "sector_fractions": {
+              "constraint": 0.05499745231260827,
+              "gauge": 0.04465833867889571,
+              "physical": 0.9003442090084961
+            }
+          }
+        },
+        "optimal_direction_bulk_boundary_rate_balance_abs_residual": 3.552713678800501e-15,
+        "optimal_direction_bulk_relative_energy_rate_over_L0_inverse": 33.51352544463211,
+        "optimal_direction_direct_relative_energy_growth_rate_over_L0_inverse": 21.681353388971974,
+        "optimal_direction_endpoint_energy_fraction": 0.6502887156647205,
+        "optimal_direction_energy_rate_check_abs_residual": 1.0658141036401503e-14,
+        "sbp_identity_max_abs_residual": 0.9224414128083055,
+        "sbp_identity_relative_frobenius_residual": 0.6173057616322288,
+        "sbp_identity_spectral_norm_residual": 1.9204564763071839,
+        "spectral_abscissa_over_L0_inverse": 7.396308761598687e-15,
+        "state_dimension": 900,
+        "tangential_wavenumber_over_L0": 1.5707963267948966
+      },
+      {
+        "degree": 8,
+        "eigenvalue_count_real_part_above_existing_1e-6_tolerance": 0,
+        "gamma0_L0": 1.0,
+        "gamma2_L0": 1.0,
+        "leading_eigenvalues_over_L0_inverse": [
+          {
+            "imag": 0.0,
+            "real": 1.1710344087420978e-14
+          },
+          {
+            "imag": -2.9964561369970283e-15,
+            "real": 4.012430003748482e-15
+          },
+          {
+            "imag": 2.9964561369970283e-15,
+            "real": 4.012430003748482e-15
+          },
+          {
+            "imag": 9.29247497877019e-16,
+            "real": 1.837722561087712e-15
+          },
+          {
+            "imag": -9.29247497877019e-16,
+            "real": 1.837722561087712e-15
+          },
+          {
+            "imag": 6.7416500063497065e-15,
+            "real": 1.096038529628776e-15
+          },
+          {
+            "imag": -6.7416500063497065e-15,
+            "real": 1.096038529628776e-15
+          },
+          {
+            "imag": 7.698386471850441e-16,
+            "real": -5.299516490119215e-16
+          }
+        ],
+        "maximum_energy_norm_log_growth_rate_over_L0_inverse": 12.861216142626485,
+        "maximum_energy_relative_growth_rate_over_L0_inverse": 25.72243228525297,
+        "minimum_energy_matrix_eigenvalue": 0.011067053369332204,
+        "node_count": 9,
+        "normal_norm_family": "clenshaw_curtis_diagonal_quadrature",
+        "normal_operator_family": "chebyshev_clenshaw_curtis",
+        "normal_operator_norm_sbp_compatible_at_roundoff": false,
+        "operator_assembly_probe_relative_residual": 2.564384788243411e-16,
+        "optimal_direction_boundary_correction_relative_energy_rate_over_L0_inverse": -11.261030398036935,
+        "optimal_direction_boundary_projector_fractions": {
+          "left": {
+            "projected_incoming_norm_squared": 40.89464360200405,
+            "sector_fractions": {
+              "constraint": 0.26391081297615243,
+              "gauge": 0.1666156240268744,
+              "physical": 0.5694735629969733
+            }
+          },
+          "right": {
+            "projected_incoming_norm_squared": 40.89464360204068,
+            "sector_fractions": {
+              "constraint": 0.2639108129761613,
+              "gauge": 0.16661562402687813,
+              "physical": 0.5694735629969606
+            }
+          }
+        },
+        "optimal_direction_bulk_boundary_rate_balance_abs_residual": 1.2434497875801753e-14,
+        "optimal_direction_bulk_relative_energy_rate_over_L0_inverse": 36.9834626832899,
+        "optimal_direction_direct_relative_energy_growth_rate_over_L0_inverse": 25.722432285252953,
+        "optimal_direction_endpoint_energy_fraction": 0.7136353184129968,
+        "optimal_direction_energy_rate_check_abs_residual": 1.7763568394002505e-14,
+        "sbp_identity_max_abs_residual": 0.9224414128083055,
+        "sbp_identity_relative_frobenius_residual": 0.6173057616322288,
+        "sbp_identity_spectral_norm_residual": 1.9204564763071839,
+        "spectral_abscissa_over_L0_inverse": 1.1710344087420978e-14,
+        "state_dimension": 900,
+        "tangential_wavenumber_over_L0": 6.283185307179586
+      },
+      {
+        "degree": 4,
+        "eigenvalue_count_real_part_above_existing_1e-6_tolerance": 0,
+        "gamma0_L0": 1.0,
+        "gamma2_L0": 1.0,
+        "leading_eigenvalues_over_L0_inverse": [
+          {
+            "imag": -1.735109000883912e-15,
+            "real": 2.243273873274738e-15
+          },
+          {
+            "imag": 1.735109000883912e-15,
+            "real": 2.243273873274738e-15
+          },
+          {
+            "imag": 4.0757158946431576e-16,
+            "real": 1.6401674766428553e-15
+          },
+          {
+            "imag": -4.0757158946431576e-16,
+            "real": 1.6401674766428553e-15
+          },
+          {
+            "imag": 0.0,
+            "real": 6.243857775766145e-16
+          },
+          {
+            "imag": -5.403632381600146e-16,
+            "real": 3.75408193484758e-16
+          },
+          {
+            "imag": 5.403632381600146e-16,
+            "real": 3.75408193484758e-16
+          },
+          {
+            "imag": 0.0,
+            "real": 1.4615353691968408e-17
+          }
+        ],
+        "maximum_energy_norm_log_growth_rate_over_L0_inverse": 3.543872081024389,
+        "maximum_energy_relative_growth_rate_over_L0_inverse": 7.087744162048778,
+        "minimum_energy_matrix_eigenvalue": 0.06972243622679736,
+        "node_count": 5,
+        "normal_norm_family": "legendre_gauss_lobatto_diagonal_sbp_norm",
+        "normal_operator_family": "legendre_gauss_lobatto_sbp",
+        "normal_operator_norm_sbp_compatible_at_roundoff": true,
+        "operator_assembly_probe_relative_residual": 2.1247402717061628e-16,
+        "optimal_direction_boundary_correction_relative_energy_rate_over_L0_inverse": -0.46963473624760227,
+        "optimal_direction_boundary_projector_fractions": {
+          "left": {
+            "projected_incoming_norm_squared": 7.164725943818361,
+            "sector_fractions": {
+              "constraint": 0.26043940739847987,
+              "gauge": 0.199694178743364,
+              "physical": 0.5398664138581561
+            }
+          },
+          "right": {
+            "projected_incoming_norm_squared": 7.164725943817796,
+            "sector_fractions": {
+              "constraint": 0.26043940739847893,
+              "gauge": 0.19969417874336326,
+              "physical": 0.5398664138581579
+            }
+          }
+        },
+        "optimal_direction_bulk_boundary_rate_balance_abs_residual": 6.106226635438361e-16,
+        "optimal_direction_bulk_relative_energy_rate_over_L0_inverse": 7.557378898296378,
+        "optimal_direction_direct_relative_energy_growth_rate_over_L0_inverse": 7.087744162048776,
+        "optimal_direction_endpoint_energy_fraction": 0.8158940881033657,
+        "optimal_direction_energy_rate_check_abs_residual": 1.7763568394002505e-15,
+        "sbp_identity_max_abs_residual": 1.0275730883475063e-15,
+        "sbp_identity_relative_frobenius_residual": 4.982603917865932e-16,
+        "sbp_identity_spectral_norm_residual": 1.0624309507947894e-15,
+        "spectral_abscissa_over_L0_inverse": 2.243273873274738e-15,
+        "state_dimension": 500,
+        "tangential_wavenumber_over_L0": 3.141592653589793
+      },
+      {
+        "degree": 8,
+        "eigenvalue_count_real_part_above_existing_1e-6_tolerance": 0,
+        "gamma0_L0": 1.0,
+        "gamma2_L0": 1.0,
+        "leading_eigenvalues_over_L0_inverse": [
+          {
+            "imag": 0.0,
+            "real": 7.901547258646134e-15
+          },
+          {
+            "imag": 0.0,
+            "real": 3.99848343004486e-15
+          },
+          {
+            "imag": -3.248340774961873e-15,
+            "real": 3.0815010612038143e-15
+          },
+          {
+            "imag": 3.248340774961873e-15,
+            "real": 3.0815010612038143e-15
+          },
+          {
+            "imag": 5.869416162369996e-15,
+            "real": 1.6645980067119006e-15
+          },
+          {
+            "imag": -5.869416162369996e-15,
+            "real": 1.6645980067119006e-15
+          },
+          {
+            "imag": -3.2997065865139743e-15,
+            "real": -4.61662098989118e-16
+          },
+          {
+            "imag": 3.2997065865139743e-15,
+            "real": -4.61662098989118e-16
+          }
+        ],
+        "maximum_energy_norm_log_growth_rate_over_L0_inverse": 7.646796588245032,
+        "maximum_energy_relative_growth_rate_over_L0_inverse": 15.293593176490065,
+        "minimum_energy_matrix_eigenvalue": 0.019367343396330502,
+        "node_count": 9,
+        "normal_norm_family": "legendre_gauss_lobatto_diagonal_sbp_norm",
+        "normal_operator_family": "legendre_gauss_lobatto_sbp",
+        "normal_operator_norm_sbp_compatible_at_roundoff": true,
+        "operator_assembly_probe_relative_residual": 2.0920909809769145e-16,
+        "optimal_direction_boundary_correction_relative_energy_rate_over_L0_inverse": -5.428978740660289,
+        "optimal_direction_boundary_projector_fractions": {
+          "left": {
+            "projected_incoming_norm_squared": 20.57107399071234,
+            "sector_fractions": {
+              "constraint": 0.13580641234898952,
+              "gauge": 0.0938000787879189,
+              "physical": 0.7703935088630917
+            }
+          },
+          "right": {
+            "projected_incoming_norm_squared": 20.571073990697997,
+            "sector_fractions": {
+              "constraint": 0.13580641234898455,
+              "gauge": 0.09380007878791528,
+              "physical": 0.7703935088631001
+            }
+          }
+        },
+        "optimal_direction_bulk_boundary_rate_balance_abs_residual": 3.552713678800501e-15,
+        "optimal_direction_bulk_relative_energy_rate_over_L0_inverse": 20.722571917150344,
+        "optimal_direction_direct_relative_energy_growth_rate_over_L0_inverse": 15.293593176490058,
+        "optimal_direction_endpoint_energy_fraction": 0.6879599298366683,
+        "optimal_direction_energy_rate_check_abs_residual": 7.105427357601002e-15,
+        "sbp_identity_max_abs_residual": 1.6113713928603456e-14,
+        "sbp_identity_relative_frobenius_residual": 6.208080482514591e-15,
+        "sbp_identity_spectral_norm_residual": 1.6116206489793213e-14,
+        "spectral_abscissa_over_L0_inverse": 7.901547258646134e-15,
+        "state_dimension": 900,
+        "tangential_wavenumber_over_L0": 3.141592653589793
+      },
+      {
+        "degree": 12,
+        "eigenvalue_count_real_part_above_existing_1e-6_tolerance": 16,
+        "gamma0_L0": 1.0,
+        "gamma2_L0": 1.0,
+        "leading_eigenvalues_over_L0_inverse": [
+          {
+            "imag": 13.949458699953642,
+            "real": 0.20059008508881382
+          },
+          {
+            "imag": -13.949458699953642,
+            "real": 0.20059008508881382
+          },
+          {
+            "imag": 13.949458699953736,
+            "real": 0.2005900850887956
+          },
+          {
+            "imag": -13.949458699953736,
+            "real": 0.2005900850887956
+          },
+          {
+            "imag": 13.949488789715332,
+            "real": 0.20042420041757875
+          },
+          {
+            "imag": -13.949488789715332,
+            "real": 0.20042420041757875
+          },
+          {
+            "imag": -13.94948878971521,
+            "real": 0.20042420041754716
+          },
+          {
+            "imag": 13.94948878971521,
+            "real": 0.20042420041754716
+          }
+        ],
+        "maximum_energy_norm_log_growth_rate_over_L0_inverse": 15.120070994417594,
+        "maximum_energy_relative_growth_rate_over_L0_inverse": 30.240141988835187,
+        "minimum_energy_matrix_eigenvalue": 0.008938773875228262,
+        "node_count": 13,
+        "normal_norm_family": "legendre_gauss_lobatto_diagonal_sbp_norm",
+        "normal_operator_family": "legendre_gauss_lobatto_sbp",
+        "normal_operator_norm_sbp_compatible_at_roundoff": true,
+        "operator_assembly_probe_relative_residual": 2.5116357984542233e-16,
+        "optimal_direction_boundary_correction_relative_energy_rate_over_L0_inverse": -10.819343820720448,
+        "optimal_direction_boundary_projector_fractions": {
+          "left": {
+            "projected_incoming_norm_squared": 41.05651352505974,
+            "sector_fractions": {
+              "constraint": 0.05313039134940568,
+              "gauge": 0.03126836934253108,
+              "physical": 0.9156012393080633
+            }
+          },
+          "right": {
+            "projected_incoming_norm_squared": 41.05651352493016,
+            "sector_fractions": {
+              "constraint": 0.05313039134939859,
+              "gauge": 0.03126836934252663,
+              "physical": 0.9156012393080748
+            }
+          }
+        },
+        "optimal_direction_bulk_boundary_rate_balance_abs_residual": 0.0,
+        "optimal_direction_bulk_relative_energy_rate_over_L0_inverse": 41.0594858095556,
+        "optimal_direction_direct_relative_energy_growth_rate_over_L0_inverse": 30.240141988835155,
+        "optimal_direction_endpoint_energy_fraction": 0.6636427575840625,
+        "optimal_direction_energy_rate_check_abs_residual": 3.197442310920451e-14,
+        "sbp_identity_max_abs_residual": 4.6855325148489274e-14,
+        "sbp_identity_relative_frobenius_residual": 1.3474152902343853e-14,
+        "sbp_identity_spectral_norm_residual": 4.6855922158595276e-14,
+        "spectral_abscissa_over_L0_inverse": 0.20059008508881382,
+        "state_dimension": 1300,
+        "tangential_wavenumber_over_L0": 3.141592653589793
+      },
+      {
+        "degree": 8,
+        "eigenvalue_count_real_part_above_existing_1e-6_tolerance": 0,
+        "gamma0_L0": 1.0,
+        "gamma2_L0": 1.0,
+        "leading_eigenvalues_over_L0_inverse": [
+          {
+            "imag": 0.0,
+            "real": 1.1332157018441211e-14
+          },
+          {
+            "imag": 5.345151066179596e-15,
+            "real": 8.881979537139915e-15
+          },
+          {
+            "imag": -5.345151066179596e-15,
+            "real": 8.881979537139915e-15
+          },
+          {
+            "imag": 0.0,
+            "real": 7.95107988267378e-15
+          },
+          {
+            "imag": 0.0,
+            "real": 2.9329155867623594e-15
+          },
+          {
+            "imag": 1.5702964766518449e-15,
+            "real": 1.970746021044155e-15
+          },
+          {
+            "imag": -1.5702964766518449e-15,
+            "real": 1.970746021044155e-15
+          },
+          {
+            "imag": -1.0739042280064654e-14,
+            "real": -6.395838052982674e-16
+          }
+        ],
+        "maximum_energy_norm_log_growth_rate_over_L0_inverse": 7.153246816418603,
+        "maximum_energy_relative_growth_rate_over_L0_inverse": 14.306493632837206,
+        "minimum_energy_matrix_eigenvalue": 0.019367343396330502,
+        "node_count": 9,
+        "normal_norm_family": "legendre_gauss_lobatto_diagonal_sbp_norm",
+        "normal_operator_family": "legendre_gauss_lobatto_sbp",
+        "normal_operator_norm_sbp_compatible_at_roundoff": true,
+        "operator_assembly_probe_relative_residual": 2.323059787697627e-16,
+        "optimal_direction_boundary_correction_relative_energy_rate_over_L0_inverse": -4.957272295339938,
+        "optimal_direction_boundary_projector_fractions": {
+          "left": {
+            "projected_incoming_norm_squared": 19.063065843713353,
+            "sector_fractions": {
+              "constraint": 0.04737926633434724,
+              "gauge": 0.03552193583205049,
+              "physical": 0.9170987978336023
+            }
+          },
+          "right": {
+            "projected_incoming_norm_squared": 19.0630658437024,
+            "sector_fractions": {
+              "constraint": 0.04737926633434491,
+              "gauge": 0.035521935832048594,
+              "physical": 0.9170987978336065
+            }
+          }
+        },
+        "optimal_direction_bulk_boundary_rate_balance_abs_residual": 2.6645352591003757e-15,
+        "optimal_direction_bulk_relative_energy_rate_over_L0_inverse": 19.263765928177143,
+        "optimal_direction_direct_relative_energy_growth_rate_over_L0_inverse": 14.306493632837203,
+        "optimal_direction_endpoint_energy_fraction": 0.6625643625229539,
+        "optimal_direction_energy_rate_check_abs_residual": 3.552713678800501e-15,
+        "sbp_identity_max_abs_residual": 1.6113713928603456e-14,
+        "sbp_identity_relative_frobenius_residual": 6.208080482514591e-15,
+        "sbp_identity_spectral_norm_residual": 1.6116206489793213e-14,
+        "spectral_abscissa_over_L0_inverse": 1.1332157018441211e-14,
+        "state_dimension": 900,
+        "tangential_wavenumber_over_L0": 1.5707963267948966
+      },
+      {
+        "degree": 8,
+        "eigenvalue_count_real_part_above_existing_1e-6_tolerance": 0,
+        "gamma0_L0": 1.0,
+        "gamma2_L0": 1.0,
+        "leading_eigenvalues_over_L0_inverse": [
+          {
+            "imag": 0.0,
+            "real": 1.2343265788730194e-14
+          },
+          {
+            "imag": 6.99042788912479e-16,
+            "real": 7.017235559556821e-15
+          },
+          {
+            "imag": -6.99042788912479e-16,
+            "real": 7.017235559556821e-15
+          },
+          {
+            "imag": 2.385544178744039e-15,
+            "real": 4.37224008248187e-15
+          },
+          {
+            "imag": -2.385544178744039e-15,
+            "real": 4.37224008248187e-15
+          },
+          {
+            "imag": 6.60626540881132e-16,
+            "real": 3.0905029626425573e-15
+          },
+          {
+            "imag": -6.60626540881132e-16,
+            "real": 3.0905029626425573e-15
+          },
+          {
+            "imag": 1.2093636191425766e-15,
+            "real": -5.944789924887656e-16
+          }
+        ],
+        "maximum_energy_norm_log_growth_rate_over_L0_inverse": 9.197211162410829,
+        "maximum_energy_relative_growth_rate_over_L0_inverse": 18.394422324821658,
+        "minimum_energy_matrix_eigenvalue": 0.019367343396330502,
+        "node_count": 9,
+        "normal_norm_family": "legendre_gauss_lobatto_diagonal_sbp_norm",
+        "normal_operator_family": "legendre_gauss_lobatto_sbp",
+        "normal_operator_norm_sbp_compatible_at_roundoff": true,
+        "operator_assembly_probe_relative_residual": 2.1882263265975298e-16,
+        "optimal_direction_boundary_correction_relative_energy_rate_over_L0_inverse": -5.244326804280313,
+        "optimal_direction_boundary_projector_fractions": {
+          "left": {
+            "projected_incoming_norm_squared": 23.630143724069367,
+            "sector_fractions": {
+              "constraint": 0.24918994522842067,
+              "gauge": 0.15404042030604762,
+              "physical": 0.5967696344655317
+            }
+          },
+          "right": {
+            "projected_incoming_norm_squared": 23.630143724044814,
+            "sector_fractions": {
+              "constraint": 0.24918994522841492,
+              "gauge": 0.15404042030604465,
+              "physical": 0.5967696344655403
+            }
+          }
+        },
+        "optimal_direction_bulk_boundary_rate_balance_abs_residual": 7.105427357601002e-15,
+        "optimal_direction_bulk_relative_energy_rate_over_L0_inverse": 23.638749129101964,
+        "optimal_direction_direct_relative_energy_growth_rate_over_L0_inverse": 18.394422324821658,
+        "optimal_direction_endpoint_energy_fraction": 0.7594683519355927,
+        "optimal_direction_energy_rate_check_abs_residual": 0.0,
+        "sbp_identity_max_abs_residual": 1.6113713928603456e-14,
+        "sbp_identity_relative_frobenius_residual": 6.208080482514591e-15,
+        "sbp_identity_spectral_norm_residual": 1.6116206489793213e-14,
+        "spectral_abscissa_over_L0_inverse": 1.2343265788730194e-14,
+        "state_dimension": 900,
+        "tangential_wavenumber_over_L0": 6.283185307179586
+      }
+    ],
+    "clipping": false,
+    "external_data": false,
+    "fitting": false,
+    "holdout_access": false,
+    "lgl_sbp_identity_verified_at_floating_point_roundoff": true,
+    "maximum_bulk_boundary_rate_balance_abs_residual": 1.2434497875801753e-14,
+    "maximum_operator_assembly_probe_relative_residual": 3.053420681028711e-16,
+    "maximum_optimal_direction_energy_rate_check_abs_residual": 3.197442310920451e-14,
+    "operator_family_summaries": {
+      "chebyshev_clenshaw_curtis": {
+        "all_cases_sbp_compatible_at_roundoff": false,
+        "case_count": 5,
+        "maximum_energy_norm_log_growth_rate_over_L0_inverse": 23.926053975290266,
+        "maximum_sbp_identity_relative_frobenius_residual": 0.6519566230434128,
+        "maximum_spectral_abscissa_over_L0_inverse": 2.182871472677087e-14
+      },
+      "legendre_gauss_lobatto_sbp": {
+        "all_cases_sbp_compatible_at_roundoff": true,
+        "case_count": 5,
+        "maximum_energy_norm_log_growth_rate_over_L0_inverse": 15.120070994417594,
+        "maximum_sbp_identity_relative_frobenius_residual": 1.3474152902343853e-14,
+        "maximum_spectral_abscissa_over_L0_inverse": 0.20059008508881382
+      }
+    },
+    "source_hashes_sha256": {
+      "docs/core/02_equations/covariant/uet_curved_3p1_generalized_harmonic.py": "4f0c8ed0e5afe52e43cedefeb9c061e10dbd440fd20e8bc57a8aacfa43e76f92",
+      "docs/core/02_equations/covariant/uet_curved_3p1_gh_boundary_projectors.py": "2aa529e3a037a5ecff2c2a5a6d454ef7cf9822ca99371393d6614bfbc062362f",
+      "docs/core/02_equations/covariant/uet_curved_3p1_gh_full_u1_slab.py": "f36c80561a6aec8463f4ffc049ab496563955a391411ea0ec6f5dbf583be70b7",
+      "docs/core/02_equations/covariant/uet_curved_3p1_gh_linear_boundary.py": "39bd0731a3ecdbb5c5185453e0908d198cba895ba5f29dafc6bb8f9c6a3b169c",
+      "docs/scripts/audit/audit_curved_3p1_gh_full_u1_cpbc_slab.py": "2fa112eaf6a0f34ab7cccf2027e59f2294b34c22048384c0c4e601754dce4a9b",
+      "docs/scripts/audit/audit_curved_3p1_gh_tangential_cpbc_mode.py": "b8c46518d3bec50b7e5d91ded78dfe652f7e331e633c2b16112f1664ebdc1603",
+      "docs/scripts/audit/audit_curved_3p1_gh_tangential_cpbc_spectrum.py": "6fc1af35060b557bb28cc1f93620b54e6cb47f577e60a0186455d7c12242e97d",
+      "docs/scripts/audit/audit_curved_3p1_gh_tt_sbp_sat_boundary.py": "01e519a576bfebcb41222af81bfd6ed7a5f7bf0538cfc4c3e2cb51b5653d29df"
+    }
+  },
+  "WHAT_CHANGED": "Extended the finite-matrix audit to compare Chebyshev/Clenshaw-Curtis against the registered LGL-SBP derivative/norm pair, recording SBP identity defects with spectrum and energy growth.",
+  "WHAT_IS_ACTUALLY_CLOSED": [
+    "The exact finite-dimensional matrix of the registered linear one-mode RHS is assembled for the declared degree/wavenumber cases under both normal operator/norm pairings.",
+    "The SBP identity residual is measured for each derivative/norm pairing, distinguishing SBP-compatible energy estimates from a quadrature-only diagnostic.",
+    "The GH symmetrizer energy matrix is positive definite and its finite-grid logarithmic norm is computed for every assembled case.",
+    "A random-vector matrix-application check independently matches each assembled matrix to the direct RHS evaluator.",
+    "The maximizing energy-growth direction's instantaneous rate is checked again using the direct RHS rather than only the assembled matrix.",
+    "The same directional energy rate is decomposed into the bulk GH RHS and its registered boundary correction, with a closure residual recorded."
+  ],
+  "WHAT_REMAINS_OPEN": [
+    "The Chebyshev/Clenshaw-Curtis pairing is not SBP-compatible under the diagonal quadrature norm used here; its energy logarithmic norm is only a numerical comparator and cannot support an SBP energy-stability conclusion.",
+    "The LGL-SBP results are finite-grid statements for this frozen-background one-mode operator, not continuum or nonlinear initial-boundary well-posedness proofs.",
+    "These finite matrices do not prove continuum or nonlinear initial-boundary well-posedness.",
+    "The cases omit positive normal shift, incoming u2_A, multiple simultaneous tangential modes, edges/corners, variable coefficients, and matter boundaries.",
+    "A positive logarithmic norm is an instantaneous growth direction, not by itself an unstable eigenmode; its degree dependence and any boundary localization require an energy estimate and further resolution studies."
+  ],
+  "artifact": "curved_3p1_gh_tangential_cpbc_spectrum",
+  "closure_level": "PARTIAL",
+  "diagnostic_id": "uet.core.curved_3p1.gh.rinne_tangential_semidiscrete_spectrum",
+  "generated_at": "2026-09-25T05:36:15+00:00",
+  "major_result_id": "CORE_CURVED_3P1_GH_TANGENTIAL_CPBC_SPECTRAL_ENERGY_SCREEN",
+  "schema_version": "core-curved-3p1-gh-tangential-cpbc-spectrum-v2"
+}

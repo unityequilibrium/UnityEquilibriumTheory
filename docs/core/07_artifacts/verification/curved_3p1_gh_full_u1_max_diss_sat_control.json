@@ -1,0 +1,254 @@
+{
+  "schema_version": "core-curved-3p1-gh-max-diss-sat-control-v1",
+  "artifact": "curved_3p1_gh_full_u1_max_diss_sat_control",
+  "generated_at": "2026-09-25",
+  "status": "PASS_FULL_U1_MAX_DISS_SAT_CONTROL",
+  "claim_promotion": false,
+  "major_result": {
+    "major_result_id": "CORE_CURVED_3P1_GH_MAX_DISSIPATIVE_SAT_CONTROL",
+    "topic": "core",
+    "closure_level": "CLOSED_FOR_LANE",
+    "what_is_closed": [
+      "a full ten-component frozen-background GH slab has a weak incoming-u1 maximally dissipative SAT control",
+      "the packed symmetric-tensor Frobenius metric makes the 4+2+4 boundary projectors self-adjoint and mutually orthogonal on the declared normal set",
+      "the LGL-SBP semidiscrete energy balance includes an explicit lower-order Gronwall term and nonnegative boundary dissipation",
+      "the definition/reduction constraint obeys Cdot=-gamma2*C under the Pi-only SAT"
+    ],
+    "equation_or_mapping": {
+      "incoming_u1_minus": "q_n=Pi-n*Phi_n-gamma2*psi",
+      "sat": "Pi_dot=-D(Phi)-H^-1 e_L*(q_L-g_L)-H^-1 e_R*(q_R-g_R); psi_dot=-Pi; Phi_dot=-D(Pi)+gamma2*D(psi)-gamma2*Phi",
+      "tensor_metric": "G_ab,cd induces sum_ab T_ab^2; in packed symmetric coordinates diag(G) is 1 on diagonal entries and 2 on off-diagonal entries",
+      "energy": "E=1/2 sum_j w_j[lambda^2||psi||_G^2-2*gamma2<psi,Pi>_G+||Pi||_G^2+||Phi||_G^2]",
+      "energy_rate": "dE/dt=R_lower-sum_faces||Pi-gamma2*psi||_G^2 for homogeneous incoming data",
+      "lower_order_bound": "R_lower<=2*mu*E; mu=lambda_max(S^-1/2*K0*S^-1/2), K0=(S*L0+L0^T*S)/2",
+      "reduction_constraint": "C=D(psi)-Phi; Cdot=-gamma2*C"
+    },
+    "units": {
+      "unit_lane": "geometric units with slab length L0=1",
+      "psi": "dimensionless",
+      "Pi_Phi_gamma2": "L0^-1",
+      "time_rhs": "L0^-2",
+      "energy": "positive mathematical GH symmetrizer; not SI energy"
+    },
+    "derivation_class": "standard linear generalized-harmonic system with an SBP-SAT energy identity and synthetic numerical controls",
+    "observable": "semidiscrete energy balance, reduction-constraint RHS, projector metric residuals, and eigenvalue screens",
+    "data_role": "ANALYTIC_AND_SYNTHETIC_NUMERICAL_CONTROL; no external source rows, fitting, or holdout",
+    "evidence_artifacts": [
+      "docs/core/07_artifacts/verification/curved_3p1_gh_full_u1_max_diss_sat_control.json"
+    ],
+    "verification_status": "PASS_FULL_U1_MAX_DISS_SAT_CONTROL",
+    "open_blockers": [
+      "this direct characteristic control does not impose Rinne differential constraint or Weyl/Psi_0 residuals",
+      "the strong pointwise Rinne RHS replacement also fails the declared LGL pulse/reduction screens at orders 8, 12, and 16; this finite comparison does not establish a continuum no-go",
+      "positive-normal-shift incoming u2_A conditions, tangential derivatives, edges/corners, variable coefficients, and nonlinear GH remain open",
+      "the curved 3+1 dimensional observable parent remains independently open"
+    ],
+    "dependency_unlocked": "none; Core curved 3+1 remains PARTIAL and Gravity remains blocked",
+    "claim_boundary": "A full-u1 standard-GR numerical control for direct incoming characteristic data only; not the differential Rinne CPBC, a continuum nonlinear IBVP proof, Gravity compatibility, Einstein-equation derivation by UET, or global UET closure."
+  },
+  "scope": {
+    "state_variables": [
+      "psi_ab",
+      "Pi_ab",
+      "Phi_xab"
+    ],
+    "excluded_variables": [
+      "UET C",
+      "UET Phi",
+      "UET Pi",
+      "R_gen",
+      "R_obs"
+    ],
+    "domain": "finite one-dimensional slab [-1,1], zero shift, normal incidence",
+    "boundary_condition": "weak homogeneous maximally dissipative incoming u1-minus data; not Rinne differential CPBC",
+    "space_discretization": "Legendre-Gauss-Lobatto diagonal-norm SBP",
+    "filtering": false,
+    "clipping": false,
+    "parameter_fitting": false,
+    "nonlinear_evolution": false,
+    "positive_shift_u2_A": false,
+    "tangential_derivatives": false
+  },
+  "checks": {
+    "common_positive_tensor_metric": true,
+    "projector_ranks_are_4_2_4": true,
+    "projectors_are_self_adjoint_and_orthogonal": true,
+    "lower_order_energy_bound_is_finite": true,
+    "sbp_identity_passes_all_orders": true,
+    "polynomial_derivatives_pass_all_orders": true,
+    "energy_balance_identity_passes_all_orders": true,
+    "gronwall_bound_holds_all_orders": true,
+    "reduction_constraint_damping_identity_passes": true,
+    "spectrum_has_no_resolved_growing_modes": true
+  },
+  "parameters": {
+    "gamma2": 0.7,
+    "symmetrizer_lambda": 2.0,
+    "lgl_orders": [
+      4,
+      8,
+      12
+    ],
+    "eigenvalue_real_part_tolerance": 1e-06,
+    "random_seed": 20260925,
+    "lower_order_growth_mu": 1.0675210253672476,
+    "energy_growth_constant_2mu": 2.135042050734495,
+    "lower_order_generalized_eigenvalues": [
+      -1.0675210253672476,
+      -0.7,
+      1.0675210253672476
+    ]
+  },
+  "metrics": {
+    "projector_metric_audit": {
+      "normal_count": 26,
+      "projector_ranks": {
+        "constraint": 4,
+        "physical": 2,
+        "gauge": 4
+      },
+      "tensor_metric_min_eigenvalue": 1.0,
+      "max_self_adjoint_residual": 5.551115123125783e-17,
+      "max_sector_orthogonality_residual": 3.8857805861880474e-16,
+      "max_norm_decomposition_residual": 1.0658141036401503e-14
+    },
+    "lgl_order_screens": [
+      {
+        "order": 4,
+        "node_count": 5,
+        "state_dimension": 150,
+        "sbp_identity_residual": 1.0275730883475063e-15,
+        "polynomial_derivative_residual": 3.552713678800501e-15,
+        "energy_balance": {
+          "observed_energy_rate": -48.18006759870469,
+          "lower_order_rate": 5.310948094890525,
+          "boundary_dissipation": 53.4910156935952,
+          "identity_residual": 1.4210854715202004e-14,
+          "energy": 70.55865299168848,
+          "gronwall_slack": 145.33474308554767
+        },
+        "reduction_rhs_identity_residual": 1.7763568394002505e-15,
+        "maximum_eigenvalue_real_part": -0.38842814562955186,
+        "positive_modes_above_1e-6": 0
+      },
+      {
+        "order": 8,
+        "node_count": 9,
+        "state_dimension": 270,
+        "sbp_identity_residual": 1.6113713928603456e-14,
+        "polynomial_derivative_residual": 6.217248937900877e-14,
+        "energy_balance": {
+          "observed_energy_rate": -57.18313408702153,
+          "lower_order_rate": -18.19778117305523,
+          "boundary_dissipation": 38.985352913966494,
+          "identity_residual": 1.9895196601282805e-13,
+          "energy": 90.3362853337229,
+          "gronwall_slack": 211.06954906770326
+        },
+        "reduction_rhs_identity_residual": 7.105427357601002e-15,
+        "maximum_eigenvalue_real_part": -0.38842566586567695,
+        "positive_modes_above_1e-6": 0
+      },
+      {
+        "order": 12,
+        "node_count": 13,
+        "state_dimension": 390,
+        "sbp_identity_residual": 4.6855325148489274e-14,
+        "polynomial_derivative_residual": 1.3855583347321954e-13,
+        "energy_balance": {
+          "observed_energy_rate": -32.886007959388664,
+          "lower_order_rate": 6.8216325135787255,
+          "boundary_dissipation": 39.7076404729676,
+          "identity_residual": 2.0605739337042905e-13,
+          "energy": 85.06157234298895,
+          "gronwall_slack": 174.78840134029684
+        },
+        "reduction_rhs_identity_residual": 1.4210854715202004e-14,
+        "maximum_eigenvalue_real_part": -0.388425665865675,
+        "positive_modes_above_1e-6": 0
+      }
+    ]
+  },
+  "method_comparison": {
+    "diagnostic_id": "uet.core.curved_3p1.gh.strong_rinne_lgl_sensitivity",
+    "status": "FAIL_STRONG_RINNE_LGL_SENSITIVITY",
+    "claim_promotion": false,
+    "purpose": "Determine whether changing the strong pointwise Rinne RHS replacement from Chebyshev to LGL alone rescues its declared full-u1 screens.",
+    "thresholds": {
+      "pulse_energy_ratio_max": 0.05,
+      "reduction_constraint_linf_max": 2e-06,
+      "positive_eigenvalue_real_part_max": 1e-06,
+      "pulse_final_time": 2.4,
+      "dt_cap": "0.25*minimum_LGL_node_spacing"
+    },
+    "screens": [
+      {
+        "lgl_order": 8,
+        "node_count": 9,
+        "pulse_energy_ratio": 3.528539192633439,
+        "pulse_absorption_pass": false,
+        "final_reduction_constraint_linf": 0.2487467574944316,
+        "reduction_constraint_pass": false,
+        "maximum_eigenvalue_real_part": 9.805618093542922e-08,
+        "positive_modes_above_1e-6": 0,
+        "spectral_screen_pass": true,
+        "steps": 96,
+        "dt": 0.024999999999999998
+      },
+      {
+        "lgl_order": 12,
+        "node_count": 13,
+        "pulse_energy_ratio": 1.2666928297809041,
+        "pulse_absorption_pass": false,
+        "final_reduction_constraint_linf": 0.3838070143927037,
+        "reduction_constraint_pass": false,
+        "maximum_eigenvalue_real_part": 0.1132068912483093,
+        "positive_modes_above_1e-6": 8,
+        "spectral_screen_pass": false,
+        "steps": 206,
+        "dt": 0.011650485436893204
+      },
+      {
+        "lgl_order": 16,
+        "node_count": 17,
+        "pulse_energy_ratio": 1.8332511496326214,
+        "pulse_absorption_pass": false,
+        "final_reduction_constraint_linf": 0.0040364064891070806,
+        "reduction_constraint_pass": false,
+        "maximum_eigenvalue_real_part": 0.23072896175856572,
+        "positive_modes_above_1e-6": 8,
+        "spectral_screen_pass": false,
+        "steps": 358,
+        "dt": 0.0067039106145251395
+      }
+    ],
+    "interpretation": "The tested LGL strong-RHS replacement fails at every tested order; a grid change alone does not resolve the full-u1 pulse/reduction boundary defect. This finite zero-shift slab screen does not establish a continuum no-go.",
+    "claim_boundary": "Sensitivity comparison only; not an alternative CPBC implementation or proof that all LGL/SAT discretizations fail."
+  },
+  "source_hashes": {
+    "docs/scripts/audit/audit_curved_3p1_gh_max_dissipative_sat_control.py": "0739da9c3715676242cdb88a4423938c34fe1bf1c75c9181a8ea3aa9b8caec20",
+    "docs/core/02_equations/covariant/uet_curved_3p1_gh_max_dissipative_sat.py": "147f2d438f83eac750894462662953cd97512760736cd5e593e49948b1e98175",
+    "docs/core/02_equations/covariant/uet_curved_3p1_gh_full_u1_slab.py": "31618a664a0e339ef4746e2ef3992a44143d3fa0169e4f9909845cfc1d0d4146",
+    "docs/core/02_equations/covariant/uet_curved_3p1_gh_boundary_projectors.py": "2aa529e3a037a5ecff2c2a5a6d454ef7cf9822ca99371393d6614bfbc062362f",
+    "docs/scripts/audit/audit_curved_3p1_gh_tt_sbp_sat_boundary.py": "01e519a576bfebcb41222af81bfd6ed7a5f7bf0538cfc4c3e2cb51b5653d29df",
+    "docs/core/05_tests/regression/root/test_uet_curved_3p1_gh_tt_sbp_sat_boundary.py": "4f4a3791c533eb8c25e05ea9ece4e15b9ea73c1cf5a7a0c309935dd20e0f8ffa",
+    "docs/core/05_tests/regression/root/test_uet_curved_3p1_gh_max_dissipative_sat_control.py": "184443152a3c84e641b68db08ec7eb9a52c219391f258156aad20e91baf0e1eb",
+    "docs/scripts/audit/audit_curved_3p1_gh_full_u1_cpbc_slab.py": "2fa112eaf6a0f34ab7cccf2027e59f2294b34c22048384c0c4e601754dce4a9b",
+    "docs/core/07_artifacts/verification/curved_3p1_gh_full_u1_cpbc_slab_pilot.json": "0086c88e18bc8da13c442a4b7dc9c322addfb1a2bc116313bbc7e982e7a7fbc3"
+  },
+  "literature_basis": [
+    {
+      "source_id": "rinne_2006_first_order_gh_radiation_controlling_cpbc",
+      "url": "https://arxiv.org/abs/gr-qc/0606053",
+      "locators": [
+        "Eqs. (9)-(11)",
+        "Secs. 2.2-2.4"
+      ],
+      "role": "source for GH characteristic fields and the differential constraint, Weyl, and gauge boundary conditions",
+      "limitation": "this control imposes direct incoming characteristic data and does not implement the differential Rinne conditions"
+    }
+  ],
+  "controlling_blocker": "rinne_differential_constraint_and_weyl_residuals_not_yet_imposed_in_a_full_u1_sbp_sat_evolution",
+  "next_action": "Use this uniform-in-grid energy estimate as the control baseline; derive a projector-compatible penalty for the differential constraint and Weyl residuals, then repeat the energy and subsidiary-constraint analysis without relaxing the source conditions.",
+  "claim_boundary": "No Rinne differential CPBC, nonlinear GH boundary evolution, curved-parent closure, Gravity unlock, physical observable validation, or UET claim promotion is claimed."
+}

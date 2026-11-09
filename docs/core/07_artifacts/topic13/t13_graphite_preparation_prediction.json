@@ -1,0 +1,454 @@
+{
+  "status": "PREFIX_PREPARATION_CONDITIONALLY_POSSIBLE_PHYSICAL_PACKET_NOT_ADMITTED",
+  "observer_rank": 2,
+  "observer_closure": "sum(y)=0",
+  "full_collinear_state": [
+    "q",
+    "q_dot",
+    "delta_phi",
+    "delta_phi_dot"
+  ],
+  "hidden_state_identity_control": [
+    "3/5",
+    "-2/7"
+  ],
+  "finite_layer_material_projection": [
+    {
+      "layers": 2,
+      "profile": [
+        0.7071067811865476,
+        -0.7071067811865475
+      ],
+      "eigenpair_roundoff": 4.440892098500626e-16,
+      "centroid_projection": 1.414213562373095,
+      "rigid_mass_per_layer_mass": 0.5,
+      "pole_mass_per_layer_mass": 0.5000000000000001,
+      "rigid_overlap_fraction": 0.9999999999999998,
+      "frequency_over_bulk": 0.7071067811865476,
+      "conditional_equal_layer_basal_observer_ratio": "1",
+      "observer_admitted": false,
+      "uet_field_map_admitted": false
+    },
+    {
+      "layers": 3,
+      "profile": [
+        0.5000000000000001,
+        -1.0,
+        0.5000000000000001
+      ],
+      "eigenpair_roundoff": 6.661338147750939e-16,
+      "centroid_projection": 1.5,
+      "rigid_mass_per_layer_mass": 0.6666666666666666,
+      "pole_mass_per_layer_mass": 0.6666666666666666,
+      "rigid_overlap_fraction": 1.0,
+      "frequency_over_bulk": 0.8660254037844387,
+      "conditional_equal_layer_basal_observer_ratio": "2/3",
+      "observer_admitted": false,
+      "uet_field_map_admitted": false
+    },
+    {
+      "layers": 4,
+      "profile": [
+        0.38268343236508984,
+        -0.9238795325112868,
+        0.9238795325112865,
+        -0.3826834323650899
+      ],
+      "eigenpair_roundoff": 8.881784197001252e-16,
+      "centroid_projection": 1.3065629648763766,
+      "rigid_mass_per_layer_mass": 1.0,
+      "pole_mass_per_layer_mass": 1.1715728752538097,
+      "rigid_overlap_fraction": 0.853553390593274,
+      "frequency_over_bulk": 0.9238795325112867,
+      "conditional_equal_layer_basal_observer_ratio": "1",
+      "observer_admitted": false,
+      "uet_field_map_admitted": false
+    },
+    {
+      "layers": 9,
+      "profile": [
+        0.17364817766693041,
+        -0.5000000000000004,
+        0.7660444431189781,
+        -0.9396926207859086,
+        1.0,
+        -0.9396926207859078,
+        0.7660444431189781,
+        -0.4999999999999972,
+        0.173648177666931
+      ],
+      "eigenpair_roundoff": 5.995204332975845e-15,
+      "centroid_projection": 1.2957233587073171,
+      "rigid_mass_per_layer_mass": 2.2222222222222223,
+      "pole_mass_per_layer_mass": 2.6803279650707386,
+      "rigid_overlap_fraction": 0.8290859369381588,
+      "frequency_over_bulk": 0.984807753012208,
+      "conditional_equal_layer_basal_observer_ratio": "20/21",
+      "observer_admitted": false,
+      "uet_field_map_admitted": false
+    }
+  ],
+  "full_observer_controls": [
+    {
+      "layers": 9,
+      "t": 0.0,
+      "intensity": 1.0,
+      "derivatives_at_zero": [
+        1.6495721976846442,
+        0.8379439698346893,
+        -2.1253897907889385
+      ],
+      "linear_error": 0.0,
+      "linear_bound_coefficient": 1.1487119850303162,
+      "cubic_error": 0.0,
+      "cubic_bound_coefficient": 0.12828853572036153,
+      "leading_detector_cubic_ratio": -0.019729376633005925,
+      "physical_displacement_or_error_budget_assigned": false
+    },
+    {
+      "layers": 9,
+      "t": -0.001,
+      "intensity": 0.9983508471284713,
+      "derivatives_at_zero": [
+        1.6495721976846442,
+        0.8379439698346893,
+        -2.1253897907889385
+      ],
+      "linear_error": 4.1932615602036094e-07,
+      "linear_bound_coefficient": 1.1487119850303162,
+      "cubic_error": 6.050715484207103e-14,
+      "cubic_bound_coefficient": 0.12828853572036153,
+      "leading_detector_cubic_ratio": -0.019729376633005925,
+      "physical_displacement_or_error_budget_assigned": false
+    },
+    {
+      "layers": 9,
+      "t": 0.001,
+      "intensity": 1.0016499908153775,
+      "derivatives_at_zero": [
+        1.6495721976846442,
+        0.8379439698346893,
+        -2.1253897907889385
+      ],
+      "linear_error": 4.1861769295437057e-07,
+      "linear_bound_coefficient": 1.1487119850303162,
+      "cubic_error": 6.039613253960852e-14,
+      "cubic_bound_coefficient": 0.12828853572036153,
+      "leading_detector_cubic_ratio": -0.019729376633005925,
+      "physical_displacement_or_error_budget_assigned": false
+    },
+    {
+      "layers": 9,
+      "t": -0.01,
+      "intensity": 0.9835465288424278,
+      "derivatives_at_zero": [
+        1.6495721976846442,
+        0.8379439698346893,
+        -2.1253897907889385
+      ],
+      "linear_error": 4.225081927422547e-05,
+      "linear_bound_coefficient": 1.1487119850303162,
+      "cubic_error": 6.108492600631621e-10,
+      "cubic_bound_coefficient": 0.12828853572036153,
+      "leading_detector_cubic_ratio": -0.019729376633005925,
+      "physical_displacement_or_error_budget_assigned": false
+    },
+    {
+      "layers": 9,
+      "t": 0.01,
+      "intensity": 1.016537264338438,
+      "derivatives_at_zero": [
+        1.6495721976846442,
+        0.8379439698346893,
+        -2.1253897907889385
+      ],
+      "linear_error": 4.154236159159552e-05,
+      "linear_bound_coefficient": 1.1487119850303162,
+      "cubic_error": 6.052682799406739e-10,
+      "cubic_bound_coefficient": 0.12828853572036153,
+      "leading_detector_cubic_ratio": -0.019729376633005925,
+      "physical_displacement_or_error_budget_assigned": false
+    },
+    {
+      "layers": 9,
+      "t": -0.1,
+      "intensity": 0.8395803756772876,
+      "derivatives_at_zero": [
+        1.6495721976846442,
+        0.8379439698346893,
+        -2.1253897907889385
+      ],
+      "linear_error": 0.004537595445752052,
+      "linear_bound_coefficient": 1.1487119850303162,
+      "cubic_error": 6.3560352195901615e-06,
+      "cubic_bound_coefficient": 0.12828853572036153,
+      "leading_detector_cubic_ratio": -0.019729376633005925,
+      "physical_displacement_or_error_budget_assigned": false
+    },
+    {
+      "layers": 9,
+      "t": 0.1,
+      "intensity": 1.168786909778239,
+      "derivatives_at_zero": [
+        1.6495721976846442,
+        0.8379439698346893,
+        -2.1253897907889385
+      ],
+      "linear_error": 0.0038296900097745112,
+      "linear_bound_coefficient": 1.1487119850303162,
+      "cubic_error": 5.798207600715699e-06,
+      "cubic_bound_coefficient": 0.12828853572036153,
+      "leading_detector_cubic_ratio": -0.019729376633005925,
+      "physical_displacement_or_error_budget_assigned": false
+    }
+  ],
+  "source_geometry_checks": [
+    {
+      "hk": [
+        1,
+        0
+      ],
+      "layers": 9,
+      "layer_phase": -2.0943951023931957,
+      "layer_factor_ratio_abs": 0.9999999999999994,
+      "G_times_a": [
+        6.283185307179586,
+        3.6275987284684357
+      ],
+      "linear_row_wrt_article_P": [
+        10.364567795624106,
+        5.983986006837704
+      ],
+      "coherent_reference_second_derivative": 0.8379439698346909,
+      "sample_geometry_measured": false
+    },
+    {
+      "hk": [
+        0,
+        1
+      ],
+      "layers": 9,
+      "layer_phase": 2.0943951023931957,
+      "layer_factor_ratio_abs": 1.0000000000000004,
+      "G_times_a": [
+        0.0,
+        7.255197456936871
+      ],
+      "linear_row_wrt_article_P": [
+        -0.0,
+        -11.967972013675409
+      ],
+      "coherent_reference_second_derivative": 0.8379439698346909,
+      "sample_geometry_measured": false
+    },
+    {
+      "hk": [
+        -1,
+        1
+      ],
+      "layers": 9,
+      "layer_phase": -2.0943951023931953,
+      "layer_factor_ratio_abs": 0.9999999999999999,
+      "G_times_a": [
+        -6.283185307179586,
+        3.6275987284684357
+      ],
+      "linear_row_wrt_article_P": [
+        -10.364567795624097,
+        5.983986006837698
+      ],
+      "coherent_reference_second_derivative": 0.8379439698346893,
+      "sample_geometry_measured": false
+    },
+    {
+      "hk": [
+        2,
+        0
+      ],
+      "layers": 9,
+      "layer_phase": 2.0943951023931953,
+      "layer_factor_ratio_abs": 1.000000000000001,
+      "G_times_a": [
+        12.566370614359172,
+        7.255197456936871
+      ],
+      "linear_row_wrt_article_P": [
+        -20.729135591248195,
+        -11.967972013675396
+      ],
+      "coherent_reference_second_derivative": 0.8379439698346893,
+      "sample_geometry_measured": false
+    },
+    {
+      "hk": [
+        1,
+        1
+      ],
+      "layers": 9,
+      "layer_phase": -0.0,
+      "layer_factor_ratio_abs": 1.0,
+      "G_times_a": [
+        6.283185307179586,
+        10.882796185405308
+      ],
+      "linear_row_wrt_article_P": [
+        -0.0,
+        -0.0
+      ],
+      "coherent_reference_second_derivative": -0.5956284366823863,
+      "sample_geometry_measured": false
+    }
+  ],
+  "full_record_invariant_controls": [
+    {
+      "layers": 9,
+      "P": [
+        0.0,
+        0.0
+      ],
+      "intensities": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "ratios": [
+        1.0,
+        1.0
+      ],
+      "baseline_ratio_jacobian_determinant": 372.12857193561194,
+      "common_applied_divisor_cancels": true,
+      "actual_processing_identity_admitted": false
+    },
+    {
+      "layers": 9,
+      "P": [
+        0.0001,
+        -0.0002
+      ],
+      "intensities": [
+        0.9998396635369998,
+        1.002394475472275,
+        0.9977675148224298
+      ],
+      "ratios": [
+        0.9974512908861839,
+        0.9953840920285747
+      ],
+      "baseline_ratio_jacobian_determinant": 372.12857193561194,
+      "common_applied_divisor_cancels": true,
+      "actual_processing_identity_admitted": false
+    },
+    {
+      "layers": 9,
+      "P": [
+        -0.0001,
+        0.0002
+      ],
+      "intensities": [
+        1.0001603443799594,
+        0.9976072888312912,
+        1.002234021026295
+      ],
+      "ratios": [
+        1.002559178924664,
+        1.004637829180683
+      ],
+      "baseline_ratio_jacobian_determinant": 372.12857193561194,
+      "common_applied_divisor_cancels": true,
+      "actual_processing_identity_admitted": false
+    }
+  ],
+  "shared_reference_cubic_ambiguity": {
+    "true_material_third": "0",
+    "inferred_third_with_unmodeled_divisor": "-3/1000000",
+    "role": "rational counterexample, not physical bias estimate",
+    "requires_undivided_reference_and_correction_bound": true,
+    "requirement_scope": "processed-third-only inference; full-trace common-divisor invariant is an alternative sufficient observer packet"
+  },
+  "processed_third_only_null_direction": {
+    "variables": [
+      "B",
+      "C",
+      "E=b2*C"
+    ],
+    "null_vector": [
+      3,
+      0,
+      1
+    ],
+    "scope": "cubic processed third amplitudes, uncalibrated common divisor and free C; not full-record no-go",
+    "more_same_processed_orders_sufficient": false
+  },
+  "two_order_candidate": {
+    "orders": [
+      1,
+      2
+    ],
+    "phase_pair": "plus/minus 2*pi/3",
+    "material_third_formula": "(8*Y3_first+Y3_second)/(6*K1)",
+    "joint_error_bound": "(8*E_first+E_second)/(6*abs(K1)) plus coefficient uncertainty",
+    "physical_geometry_or_records_admitted": false
+  },
+  "uncertainty_policy": "joint state/parameter/observer sets; no unmeasured effects assigned zero",
+  "old_four_frequency_kernel_evaluated": false,
+  "physical_forecast_run": false,
+  "physical_acceptance": false,
+  "new_core_term": false,
+  "numeric_records_acquired": false,
+  "reopen": "same-state correspondence, frozen coefficients, eligible split records, full state and joint source/damping/observer bounds",
+  "boundary": "prefix model-conditioned state calibration is not independent Phi observation or unique UET discrimination",
+  "contract_id": "T13_GRAPHITE_PREPARATION_PREDICTION_V1",
+  "contract_sha256": "7a1e0986fef13bdf87c01f00ad64ee7299827f08f874148aeac306f5cb87e69c",
+  "contract_review_status": "INCOMPLETE",
+  "identities": [
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/Research_T13_Graphite_Preparation.py",
+      "sha256": "122efa9b7e694583002ae2137ad096103826fba6e4c5ba72f29092f547bc67fb",
+      "kind": "working_file",
+      "role": "code"
+    },
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/test_t13_graphite_preparation.py",
+      "sha256": "97a068ec5bf94c698b20f996eae0d4ff23db842e1865fa91e18513e7f0c13c34",
+      "kind": "working_file",
+      "role": "code"
+    },
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/T13_GRAPHITE_PREPARATION_PREDICTION_2026-10-18.md",
+      "sha256": "8d14fb9f154129cae5778ffca3dafbf890fa29d19908884b3de59f0097a4e223",
+      "kind": "working_file",
+      "role": "evidence"
+    },
+    {
+      "path": "docs/core/03_lanes/topic13_support/T13_MP48_INTERLAYER_MODE_RESIDUE.md",
+      "sha256": "9d0c66f4248d6b24fe8d980efa558d0dbb51cb1a621f0841cfd060d65e086698",
+      "kind": "working_file",
+      "role": "evidence"
+    },
+    {
+      "path": "docs/core/03_lanes/topic13_support/T13_MP48_SHEAR_IRREP.md",
+      "sha256": "b9fa07807606082ef23716e9ed16e4d5a7401ec1ba3cf14bcfb6bbd7ffcc5da5",
+      "kind": "working_file",
+      "role": "evidence"
+    },
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/T13_MECHANICAL_SOURCE_BRIDGE_2026-10-18.md",
+      "sha256": "eb3f60743ec5a04415eb4b301f873506f048c51729b7b10f452d250f301f7126",
+      "kind": "working_file",
+      "role": "evidence"
+    },
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/T13_ACTION_DISCRIMINATION_2026-10-18.md",
+      "sha256": "3f1638627b31ca7f4f3c61ce75a3b07ed3a530d1e951be2a348ec595544adb18",
+      "kind": "working_file",
+      "role": "evidence"
+    },
+    {
+      "path": "docs/core/02_equations/covariant/uet_covariant_matter.py",
+      "sha256": "8a57d95e898a8ac962bbd749670ad0695b597281937da36496d2ec7e074f9c53",
+      "kind": "working_file",
+      "role": "code"
+    }
+  ],
+  "generator_path": "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/Research_T13_Graphite_Preparation.py"
+}

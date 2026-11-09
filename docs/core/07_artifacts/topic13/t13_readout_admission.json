@@ -1,0 +1,81 @@
+{
+  "status": "PROCESSED_MAGNITUDE_NOT_ADMITTED_FOR_POINTWISE_STATIC_INVERSE",
+  "profile": {
+    "rows": 1001,
+    "columns": 2,
+    "missing_fields": 0,
+    "duplicate_detuning_count": 0,
+    "exact_duplicate_row_count": 0,
+    "magnitude_min": "755940597110101/5000000000000000",
+    "magnitude_max": "13560283853074373/10000000000000000",
+    "central_ideal_minimum_magnitude": "17/58",
+    "central_ideal_minimum_squared": "289/3364",
+    "domain_counts": {
+      "below_central_ideal_minimum": 9,
+      "inside_central_ideal_domain": 589,
+      "at_or_above_unit_magnitude": 403
+    },
+    "clipped_or_dropped_rows": 0,
+    "global_gain_enclosure": {
+      "closed_envelope_gain_only_possible": false,
+      "noiseless_gain_lower_bound": "13560283853074373/10000000000000000",
+      "noiseless_gain_upper_bound": "1289545724481937/2500000000000000",
+      "largest_lower_ratio_allowing_noiseless_gain": "1511881194220202/13560283853074373",
+      "unit_gain_minimum_uniform_amplitude_error": "3560283853074373/10000000000000000",
+      "optimistic_minimum_uniform_amplitude_error": "1142685729899941/6000000000000000",
+      "envelope_optimizer_NOT_adopted_gain": "17483711454861707/15000000000000000",
+      "applied_gain_correction": false,
+      "estimated_noise_distribution": false,
+      "boundary": "necessary closed-envelope compatibility, not a fit, physical uncertainty estimate or sufficient detuning/stability test"
+    },
+    "boundary": "central rounded calibration domain only; inside-domain is not physical admission, outside-domain is not theory rejection"
+  },
+  "source_member_sha256": "4303b1e7493456ac6cc5eaf6f263cb125ab5588cb98087545d34c04dc9157db2",
+  "normalized_working_copy_sha256": "361312be67c6bca19506299c7f7ede6dfd6824a3d803893e7f318b7158260948",
+  "input_crc_reconstruction_verified": true,
+  "source_working_point": "Set III, linked to Fig3c by main caption",
+  "physical_acceptance": false,
+  "theory_rejection": false,
+  "physical_residual_rows_scored": 0,
+  "new_held_out_rows": false,
+  "unknown_effects_assigned_zero": false,
+  "controller": "admit gain/mismatch and correlated noise/calibration/averaging error model before any physical residual; do not clip or select rows to pass",
+  "claim_boundary": "exploratory data/readout-domain diagnostic, not bad-data finding, measured rejection, UET identification or external validation",
+  "contract_id": "T13_ACTUAL_READOUT_ADMISSION_V1",
+  "contract_sha256": "612540d4151215b8693bef0264f7f9e5cfe0ae3c6d0d33dcfe56c65064300915",
+  "contract_review_status": "INCOMPLETE",
+  "identities": [
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/dhiman_2026_fig3c_experiment.csv",
+      "sha256": "361312be67c6bca19506299c7f7ede6dfd6824a3d803893e7f318b7158260948",
+      "kind": "working_file",
+      "role": "input"
+    },
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/dhiman_2026_fig3c_readout_manifest.json",
+      "sha256": "5ec4f362804c96494b5039bb5a9fa92cf1f2710a8e22044839c58ecef3b2798c",
+      "kind": "working_file",
+      "role": "input"
+    },
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/Research_T13_Readout_Admission.py",
+      "sha256": "51578a9580251465bc5469a48a4c72e173b74a82ae0eba940ef051506d491b41",
+      "kind": "working_file",
+      "role": "code"
+    },
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/test_t13_readout_admission.py",
+      "sha256": "7eb26e2a128eee5b58fcc42f8a73fc4b57a00f1566562a26c45a361cb835ece4",
+      "kind": "working_file",
+      "role": "code"
+    },
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/T13_READOUT_ADMISSION_2026-10-18.md",
+      "sha256": "246186ce102aaf63a3f825b81fdbe24b0209b982839d0a75461400d2a777d684",
+      "kind": "working_file",
+      "role": "evidence"
+    }
+  ],
+  "generator_path": "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/Research_T13_Readout_Admission.py",
+  "evidence_class": "EXPOSED_PROCESSED_DATA_READOUT_DIAGNOSTIC"
+}

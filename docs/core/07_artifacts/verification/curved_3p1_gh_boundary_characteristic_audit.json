@@ -1,0 +1,1279 @@
+{
+  "schema_version": "core-curved-3p1-gh-boundary-characteristics-v1",
+  "diagnostic_id": "uet.curved_3p1.gh.boundary_characteristics",
+  "artifact": "curved_3p1_gh_boundary_characteristic_audit",
+  "generated_at": "2026-09-25",
+  "status": "PASS_GH_BOUNDARY_CHARACTERISTIC_CLASSIFICATION",
+  "claim_promotion": false,
+  "major_result": {
+    "major_result_id": "CORE_CURVED_3P1_GH_BOUNDARY_CHARACTERISTIC_CLASSIFICATION",
+    "topic": "core",
+    "closure_level": "CLOSED_FOR_LANE",
+    "what_is_closed": [
+      "source-matched incoming, outgoing, and glancing principal-characteristic classification for the implemented GH block",
+      "normal-shift sign dependence of the additional incoming u2_A modes",
+      "outgoing-principal-subspace energy-flux sign under the implemented symmetrizer for the declared subluminal controls"
+    ],
+    "equation_or_mapping": {
+      "equation_id": "uet.main_theory.curved_3p1.generalized_harmonic_principal_system",
+      "formula_ids": [
+        "UET-CURVED3P1-GH-CHARACTERISTICS-012",
+        "UET-CURVED3P1-GH-SYMMETRIZER-011"
+      ],
+      "characteristics": "u0=psi; u1pm=Pi +/- Phi_n - gamma2*psi; u2_A=Phi_A",
+      "speeds": "0; -beta_n +/- alpha; -beta_n",
+      "principal_energy_flux": "F_n = 0.5 * U^T S A_n U for d_t U + A_n d_n U = 0"
+    },
+    "units": "geometric c=1; one local orthonormal GH principal block",
+    "derivation_class": "source-matched characteristic algebra plus deterministic principal-symbol verification",
+    "observable": "incoming/outgoing/glancing mode sets and normal principal energy flux",
+    "data_role": "internal analytic control; no physical source data",
+    "verification_status": "PASS_GH_BOUNDARY_CHARACTERISTIC_CLASSIFICATION",
+    "open_blockers": [
+      "constraint-projector differential boundary operator is not implemented",
+      "incoming Weyl/radiation and four gauge boundary conditions are not implemented",
+      "no non-periodic SBP/SAT evolution, boundary convergence, or discrete Kreiss/robust-stability audit",
+      "dimensional observable mapping remains open"
+    ],
+    "dependency_unlocked": "boundary design preflight only; the curved 3+1 parent remains PARTIAL and Gravity remains blocked",
+    "claim_boundary": "This closes only the local principal-characteristic and energy-flux classification lane. It is not a constraint-preserving boundary implementation, a well-posed nonlinear IBVP proof, a production numerical-relativity solver, an Einstein-equation derivation, or Gravity compatibility."
+  },
+  "scope": {
+    "state_variables": [
+      "psi_ab",
+      "Pi_ab",
+      "Phi_iab_GH"
+    ],
+    "excluded_variables": [
+      "UET C",
+      "UET Phi",
+      "R_gen",
+      "R_obs"
+    ],
+    "notation_boundary": "GH Phi_iab is the first-order spatial derivative field; it is distinct from the UET effective response Phi.",
+    "forcing_class": "frozen-coefficient principal system; vacuum; no matter evolution",
+    "reference_shift_domain": "abs(beta_n) < alpha",
+    "boundary_operator_applied": false,
+    "xie_2026_accessed": false
+  },
+  "case_count": 28,
+  "subluminal_flux_case_count": 12,
+  "flux_samples_per_subluminal_case": 64,
+  "checks": {
+    "all_characteristic_partitions_match_analytic_shift_cases": true,
+    "all_characteristic_bases_have_full_rank": true,
+    "all_characteristic_residuals_below_1e-12": true,
+    "all_symmetrizers_positive_and_symmetric_compatible": true,
+    "all_subluminal_outgoing_subspaces_have_nonnegative_flux": true,
+    "sonic_and_superluminal_cases_are_flagged_outside_reference_domain": true
+  },
+  "cases": [
+    {
+      "direction": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "normal_shift_over_lapse": -1.25,
+      "normal": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "normal_shift": -1.0,
+      "lapse": 0.8,
+      "characteristic_speeds": [
+        0.0,
+        1.8,
+        0.19999999999999996,
+        1.0,
+        1.0
+      ],
+      "incoming_modes": [],
+      "outgoing_modes": [
+        "u1_plus",
+        "u1_minus",
+        "u2_tangent_1",
+        "u2_tangent_2"
+      ],
+      "glancing_modes": [
+        "u0"
+      ],
+      "reference_shift_domain": "OUTSIDE_SUBLUMINAL_SHIFT_ASSUMPTIONS",
+      "characteristic_rank": 5,
+      "characteristic_residual": 2.7755575615628914e-17,
+      "symmetrizer_residual": 0.0,
+      "minimum_symmetrizer_eigenvalue": 0.4,
+      "expected_partition_matches": true,
+      "incoming_free_energy_flux_samples": 0,
+      "minimum_flux_after_zeroing_incoming_modes": null,
+      "maximum_inward_flux_magnitude": 0.0,
+      "outgoing_subspace_flux_nonnegative": null
+    },
+    {
+      "direction": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "normal_shift_over_lapse": -1.0,
+      "normal": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "normal_shift": -0.8,
+      "lapse": 0.8,
+      "characteristic_speeds": [
+        0.0,
+        1.6,
+        0.0,
+        0.8,
+        0.8
+      ],
+      "incoming_modes": [],
+      "outgoing_modes": [
+        "u1_plus",
+        "u2_tangent_1",
+        "u2_tangent_2"
+      ],
+      "glancing_modes": [
+        "u0",
+        "u1_minus"
+      ],
+      "reference_shift_domain": "OUTSIDE_SUBLUMINAL_SHIFT_ASSUMPTIONS",
+      "characteristic_rank": 5,
+      "characteristic_residual": 0.0,
+      "symmetrizer_residual": 0.0,
+      "minimum_symmetrizer_eigenvalue": 0.4,
+      "expected_partition_matches": true,
+      "incoming_free_energy_flux_samples": 0,
+      "minimum_flux_after_zeroing_incoming_modes": null,
+      "maximum_inward_flux_magnitude": 0.0,
+      "outgoing_subspace_flux_nonnegative": null
+    },
+    {
+      "direction": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "normal_shift_over_lapse": -0.5,
+      "normal": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "normal_shift": -0.4,
+      "lapse": 0.8,
+      "characteristic_speeds": [
+        0.0,
+        1.2000000000000002,
+        -0.4,
+        0.4,
+        0.4
+      ],
+      "incoming_modes": [
+        "u1_minus"
+      ],
+      "outgoing_modes": [
+        "u1_plus",
+        "u2_tangent_1",
+        "u2_tangent_2"
+      ],
+      "glancing_modes": [
+        "u0"
+      ],
+      "reference_shift_domain": "SUBLUMINAL_SHIFT",
+      "characteristic_rank": 5,
+      "characteristic_residual": 1.1102230246251565e-16,
+      "symmetrizer_residual": 0.0,
+      "minimum_symmetrizer_eigenvalue": 0.4,
+      "expected_partition_matches": true,
+      "incoming_free_energy_flux_samples": 64,
+      "minimum_flux_after_zeroing_incoming_modes": 0.03541928830579955,
+      "maximum_inward_flux_magnitude": 0.0,
+      "outgoing_subspace_flux_nonnegative": true
+    },
+    {
+      "direction": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "normal_shift_over_lapse": 0.0,
+      "normal": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "normal_shift": 0.0,
+      "lapse": 0.8,
+      "characteristic_speeds": [
+        -0.0,
+        0.8,
+        -0.8,
+        -0.0,
+        -0.0
+      ],
+      "incoming_modes": [
+        "u1_minus"
+      ],
+      "outgoing_modes": [
+        "u1_plus"
+      ],
+      "glancing_modes": [
+        "u0",
+        "u2_tangent_1",
+        "u2_tangent_2"
+      ],
+      "reference_shift_domain": "SUBLUMINAL_SHIFT",
+      "characteristic_rank": 5,
+      "characteristic_residual": 0.0,
+      "symmetrizer_residual": 0.0,
+      "minimum_symmetrizer_eigenvalue": 0.4,
+      "expected_partition_matches": true,
+      "incoming_free_energy_flux_samples": 64,
+      "minimum_flux_after_zeroing_incoming_modes": 6.0796098432608004e-05,
+      "maximum_inward_flux_magnitude": 0.0,
+      "outgoing_subspace_flux_nonnegative": true
+    },
+    {
+      "direction": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "normal_shift_over_lapse": 0.5,
+      "normal": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "normal_shift": 0.4,
+      "lapse": 0.8,
+      "characteristic_speeds": [
+        -0.0,
+        0.4,
+        -1.2000000000000002,
+        -0.4,
+        -0.4
+      ],
+      "incoming_modes": [
+        "u1_minus",
+        "u2_tangent_1",
+        "u2_tangent_2"
+      ],
+      "outgoing_modes": [
+        "u1_plus"
+      ],
+      "glancing_modes": [
+        "u0"
+      ],
+      "reference_shift_domain": "SUBLUMINAL_SHIFT",
+      "characteristic_rank": 5,
+      "characteristic_residual": 1.1102230246251565e-16,
+      "symmetrizer_residual": 0.0,
+      "minimum_symmetrizer_eigenvalue": 0.4,
+      "expected_partition_matches": true,
+      "incoming_free_energy_flux_samples": 64,
+      "minimum_flux_after_zeroing_incoming_modes": 7.600671652770917e-06,
+      "maximum_inward_flux_magnitude": 0.0,
+      "outgoing_subspace_flux_nonnegative": true
+    },
+    {
+      "direction": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "normal_shift_over_lapse": 1.0,
+      "normal": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "normal_shift": 0.8,
+      "lapse": 0.8,
+      "characteristic_speeds": [
+        -0.0,
+        0.0,
+        -1.6,
+        -0.8,
+        -0.8
+      ],
+      "incoming_modes": [
+        "u1_minus",
+        "u2_tangent_1",
+        "u2_tangent_2"
+      ],
+      "outgoing_modes": [],
+      "glancing_modes": [
+        "u0",
+        "u1_plus"
+      ],
+      "reference_shift_domain": "OUTSIDE_SUBLUMINAL_SHIFT_ASSUMPTIONS",
+      "characteristic_rank": 5,
+      "characteristic_residual": 0.0,
+      "symmetrizer_residual": 0.0,
+      "minimum_symmetrizer_eigenvalue": 0.4,
+      "expected_partition_matches": true,
+      "incoming_free_energy_flux_samples": 0,
+      "minimum_flux_after_zeroing_incoming_modes": null,
+      "maximum_inward_flux_magnitude": 0.0,
+      "outgoing_subspace_flux_nonnegative": null
+    },
+    {
+      "direction": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "normal_shift_over_lapse": 1.25,
+      "normal": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "normal_shift": 1.0,
+      "lapse": 0.8,
+      "characteristic_speeds": [
+        -0.0,
+        -0.19999999999999996,
+        -1.8,
+        -1.0,
+        -1.0
+      ],
+      "incoming_modes": [
+        "u1_plus",
+        "u1_minus",
+        "u2_tangent_1",
+        "u2_tangent_2"
+      ],
+      "outgoing_modes": [],
+      "glancing_modes": [
+        "u0"
+      ],
+      "reference_shift_domain": "OUTSIDE_SUBLUMINAL_SHIFT_ASSUMPTIONS",
+      "characteristic_rank": 5,
+      "characteristic_residual": 2.7755575615628914e-17,
+      "symmetrizer_residual": 0.0,
+      "minimum_symmetrizer_eigenvalue": 0.4,
+      "expected_partition_matches": true,
+      "incoming_free_energy_flux_samples": 0,
+      "minimum_flux_after_zeroing_incoming_modes": null,
+      "maximum_inward_flux_magnitude": 0.0,
+      "outgoing_subspace_flux_nonnegative": null
+    },
+    {
+      "direction": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "normal_shift_over_lapse": -1.25,
+      "normal": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "normal_shift": -1.0,
+      "lapse": 0.8,
+      "characteristic_speeds": [
+        0.0,
+        1.8,
+        0.19999999999999996,
+        1.0,
+        1.0
+      ],
+      "incoming_modes": [],
+      "outgoing_modes": [
+        "u1_plus",
+        "u1_minus",
+        "u2_tangent_1",
+        "u2_tangent_2"
+      ],
+      "glancing_modes": [
+        "u0"
+      ],
+      "reference_shift_domain": "OUTSIDE_SUBLUMINAL_SHIFT_ASSUMPTIONS",
+      "characteristic_rank": 5,
+      "characteristic_residual": 2.7755575615628914e-17,
+      "symmetrizer_residual": 0.0,
+      "minimum_symmetrizer_eigenvalue": 0.4,
+      "expected_partition_matches": true,
+      "incoming_free_energy_flux_samples": 0,
+      "minimum_flux_after_zeroing_incoming_modes": null,
+      "maximum_inward_flux_magnitude": 0.0,
+      "outgoing_subspace_flux_nonnegative": null
+    },
+    {
+      "direction": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "normal_shift_over_lapse": -1.0,
+      "normal": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "normal_shift": -0.8,
+      "lapse": 0.8,
+      "characteristic_speeds": [
+        0.0,
+        1.6,
+        0.0,
+        0.8,
+        0.8
+      ],
+      "incoming_modes": [],
+      "outgoing_modes": [
+        "u1_plus",
+        "u2_tangent_1",
+        "u2_tangent_2"
+      ],
+      "glancing_modes": [
+        "u0",
+        "u1_minus"
+      ],
+      "reference_shift_domain": "OUTSIDE_SUBLUMINAL_SHIFT_ASSUMPTIONS",
+      "characteristic_rank": 5,
+      "characteristic_residual": 0.0,
+      "symmetrizer_residual": 0.0,
+      "minimum_symmetrizer_eigenvalue": 0.4,
+      "expected_partition_matches": true,
+      "incoming_free_energy_flux_samples": 0,
+      "minimum_flux_after_zeroing_incoming_modes": null,
+      "maximum_inward_flux_magnitude": 0.0,
+      "outgoing_subspace_flux_nonnegative": null
+    },
+    {
+      "direction": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "normal_shift_over_lapse": -0.5,
+      "normal": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "normal_shift": -0.4,
+      "lapse": 0.8,
+      "characteristic_speeds": [
+        0.0,
+        1.2000000000000002,
+        -0.4,
+        0.4,
+        0.4
+      ],
+      "incoming_modes": [
+        "u1_minus"
+      ],
+      "outgoing_modes": [
+        "u1_plus",
+        "u2_tangent_1",
+        "u2_tangent_2"
+      ],
+      "glancing_modes": [
+        "u0"
+      ],
+      "reference_shift_domain": "SUBLUMINAL_SHIFT",
+      "characteristic_rank": 5,
+      "characteristic_residual": 1.1102230246251565e-16,
+      "symmetrizer_residual": 0.0,
+      "minimum_symmetrizer_eigenvalue": 0.4,
+      "expected_partition_matches": true,
+      "incoming_free_energy_flux_samples": 64,
+      "minimum_flux_after_zeroing_incoming_modes": 0.00620449068758078,
+      "maximum_inward_flux_magnitude": 0.0,
+      "outgoing_subspace_flux_nonnegative": true
+    },
+    {
+      "direction": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "normal_shift_over_lapse": 0.0,
+      "normal": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "normal_shift": 0.0,
+      "lapse": 0.8,
+      "characteristic_speeds": [
+        -0.0,
+        0.8,
+        -0.8,
+        -0.0,
+        -0.0
+      ],
+      "incoming_modes": [
+        "u1_minus"
+      ],
+      "outgoing_modes": [
+        "u1_plus"
+      ],
+      "glancing_modes": [
+        "u0",
+        "u2_tangent_1",
+        "u2_tangent_2"
+      ],
+      "reference_shift_domain": "SUBLUMINAL_SHIFT",
+      "characteristic_rank": 5,
+      "characteristic_residual": 0.0,
+      "symmetrizer_residual": 0.0,
+      "minimum_symmetrizer_eigenvalue": 0.4,
+      "expected_partition_matches": true,
+      "incoming_free_energy_flux_samples": 64,
+      "minimum_flux_after_zeroing_incoming_modes": 6.265870519546644e-05,
+      "maximum_inward_flux_magnitude": 0.0,
+      "outgoing_subspace_flux_nonnegative": true
+    },
+    {
+      "direction": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "normal_shift_over_lapse": 0.5,
+      "normal": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "normal_shift": 0.4,
+      "lapse": 0.8,
+      "characteristic_speeds": [
+        -0.0,
+        0.4,
+        -1.2000000000000002,
+        -0.4,
+        -0.4
+      ],
+      "incoming_modes": [
+        "u1_minus",
+        "u2_tangent_1",
+        "u2_tangent_2"
+      ],
+      "outgoing_modes": [
+        "u1_plus"
+      ],
+      "glancing_modes": [
+        "u0"
+      ],
+      "reference_shift_domain": "SUBLUMINAL_SHIFT",
+      "characteristic_rank": 5,
+      "characteristic_residual": 1.1102230246251565e-16,
+      "symmetrizer_residual": 0.0,
+      "minimum_symmetrizer_eigenvalue": 0.4,
+      "expected_partition_matches": true,
+      "incoming_free_energy_flux_samples": 64,
+      "minimum_flux_after_zeroing_incoming_modes": 5.344603165860454e-05,
+      "maximum_inward_flux_magnitude": 0.0,
+      "outgoing_subspace_flux_nonnegative": true
+    },
+    {
+      "direction": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "normal_shift_over_lapse": 1.0,
+      "normal": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "normal_shift": 0.8,
+      "lapse": 0.8,
+      "characteristic_speeds": [
+        -0.0,
+        0.0,
+        -1.6,
+        -0.8,
+        -0.8
+      ],
+      "incoming_modes": [
+        "u1_minus",
+        "u2_tangent_1",
+        "u2_tangent_2"
+      ],
+      "outgoing_modes": [],
+      "glancing_modes": [
+        "u0",
+        "u1_plus"
+      ],
+      "reference_shift_domain": "OUTSIDE_SUBLUMINAL_SHIFT_ASSUMPTIONS",
+      "characteristic_rank": 5,
+      "characteristic_residual": 0.0,
+      "symmetrizer_residual": 0.0,
+      "minimum_symmetrizer_eigenvalue": 0.4,
+      "expected_partition_matches": true,
+      "incoming_free_energy_flux_samples": 0,
+      "minimum_flux_after_zeroing_incoming_modes": null,
+      "maximum_inward_flux_magnitude": 0.0,
+      "outgoing_subspace_flux_nonnegative": null
+    },
+    {
+      "direction": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "normal_shift_over_lapse": 1.25,
+      "normal": [
+        0.0,
+        1.0,
+        0.0
+      ],
+      "normal_shift": 1.0,
+      "lapse": 0.8,
+      "characteristic_speeds": [
+        -0.0,
+        -0.19999999999999996,
+        -1.8,
+        -1.0,
+        -1.0
+      ],
+      "incoming_modes": [
+        "u1_plus",
+        "u1_minus",
+        "u2_tangent_1",
+        "u2_tangent_2"
+      ],
+      "outgoing_modes": [],
+      "glancing_modes": [
+        "u0"
+      ],
+      "reference_shift_domain": "OUTSIDE_SUBLUMINAL_SHIFT_ASSUMPTIONS",
+      "characteristic_rank": 5,
+      "characteristic_residual": 2.7755575615628914e-17,
+      "symmetrizer_residual": 0.0,
+      "minimum_symmetrizer_eigenvalue": 0.4,
+      "expected_partition_matches": true,
+      "incoming_free_energy_flux_samples": 0,
+      "minimum_flux_after_zeroing_incoming_modes": null,
+      "maximum_inward_flux_magnitude": 0.0,
+      "outgoing_subspace_flux_nonnegative": null
+    },
+    {
+      "direction": [
+        0.3333333333333333,
+        0.6666666666666666,
+        0.6666666666666666
+      ],
+      "normal_shift_over_lapse": -1.25,
+      "normal": [
+        0.3333333333333333,
+        0.6666666666666666,
+        0.6666666666666666
+      ],
+      "normal_shift": -1.0,
+      "lapse": 0.8,
+      "characteristic_speeds": [
+        0.0,
+        1.8,
+        0.19999999999999996,
+        1.0,
+        1.0
+      ],
+      "incoming_modes": [],
+      "outgoing_modes": [
+        "u1_plus",
+        "u1_minus",
+        "u2_tangent_1",
+        "u2_tangent_2"
+      ],
+      "glancing_modes": [
+        "u0"
+      ],
+      "reference_shift_domain": "OUTSIDE_SUBLUMINAL_SHIFT_ASSUMPTIONS",
+      "characteristic_rank": 5,
+      "characteristic_residual": 2.220446049250313e-16,
+      "symmetrizer_residual": 5.551115123125783e-17,
+      "minimum_symmetrizer_eigenvalue": 0.4,
+      "expected_partition_matches": true,
+      "incoming_free_energy_flux_samples": 0,
+      "minimum_flux_after_zeroing_incoming_modes": null,
+      "maximum_inward_flux_magnitude": 0.0,
+      "outgoing_subspace_flux_nonnegative": null
+    },
+    {
+      "direction": [
+        0.3333333333333333,
+        0.6666666666666666,
+        0.6666666666666666
+      ],
+      "normal_shift_over_lapse": -1.0,
+      "normal": [
+        0.3333333333333333,
+        0.6666666666666666,
+        0.6666666666666666
+      ],
+      "normal_shift": -0.7999999999999999,
+      "lapse": 0.8,
+      "characteristic_speeds": [
+        0.0,
+        1.6,
+        -1.1102230246251565e-16,
+        0.7999999999999999,
+        0.7999999999999999
+      ],
+      "incoming_modes": [],
+      "outgoing_modes": [
+        "u1_plus",
+        "u2_tangent_1",
+        "u2_tangent_2"
+      ],
+      "glancing_modes": [
+        "u0",
+        "u1_minus"
+      ],
+      "reference_shift_domain": "OUTSIDE_SUBLUMINAL_SHIFT_ASSUMPTIONS",
+      "characteristic_rank": 5,
+      "characteristic_residual": 2.220446049250313e-16,
+      "symmetrizer_residual": 5.551115123125783e-17,
+      "minimum_symmetrizer_eigenvalue": 0.4,
+      "expected_partition_matches": true,
+      "incoming_free_energy_flux_samples": 0,
+      "minimum_flux_after_zeroing_incoming_modes": null,
+      "maximum_inward_flux_magnitude": 0.0,
+      "outgoing_subspace_flux_nonnegative": null
+    },
+    {
+      "direction": [
+        0.3333333333333333,
+        0.6666666666666666,
+        0.6666666666666666
+      ],
+      "normal_shift_over_lapse": -0.5,
+      "normal": [
+        0.3333333333333333,
+        0.6666666666666666,
+        0.6666666666666666
+      ],
+      "normal_shift": -0.4,
+      "lapse": 0.8,
+      "characteristic_speeds": [
+        0.0,
+        1.2000000000000002,
+        -0.4,
+        0.4,
+        0.4
+      ],
+      "incoming_modes": [
+        "u1_minus"
+      ],
+      "outgoing_modes": [
+        "u1_plus",
+        "u2_tangent_1",
+        "u2_tangent_2"
+      ],
+      "glancing_modes": [
+        "u0"
+      ],
+      "reference_shift_domain": "SUBLUMINAL_SHIFT",
+      "characteristic_rank": 5,
+      "characteristic_residual": 2.220446049250313e-16,
+      "symmetrizer_residual": 5.551115123125783e-17,
+      "minimum_symmetrizer_eigenvalue": 0.4,
+      "expected_partition_matches": true,
+      "incoming_free_energy_flux_samples": 64,
+      "minimum_flux_after_zeroing_incoming_modes": 0.04765887522050951,
+      "maximum_inward_flux_magnitude": 0.0,
+      "outgoing_subspace_flux_nonnegative": true
+    },
+    {
+      "direction": [
+        0.3333333333333333,
+        0.6666666666666666,
+        0.6666666666666666
+      ],
+      "normal_shift_over_lapse": 0.0,
+      "normal": [
+        0.3333333333333333,
+        0.6666666666666666,
+        0.6666666666666666
+      ],
+      "normal_shift": 0.0,
+      "lapse": 0.8,
+      "characteristic_speeds": [
+        -0.0,
+        0.8,
+        -0.8,
+        -0.0,
+        -0.0
+      ],
+      "incoming_modes": [
+        "u1_minus"
+      ],
+      "outgoing_modes": [
+        "u1_plus"
+      ],
+      "glancing_modes": [
+        "u0",
+        "u2_tangent_1",
+        "u2_tangent_2"
+      ],
+      "reference_shift_domain": "SUBLUMINAL_SHIFT",
+      "characteristic_rank": 5,
+      "characteristic_residual": 1.1102230246251565e-16,
+      "symmetrizer_residual": 5.551115123125783e-17,
+      "minimum_symmetrizer_eigenvalue": 0.4,
+      "expected_partition_matches": true,
+      "incoming_free_energy_flux_samples": 64,
+      "minimum_flux_after_zeroing_incoming_modes": 4.904047688565356e-06,
+      "maximum_inward_flux_magnitude": 0.0,
+      "outgoing_subspace_flux_nonnegative": true
+    },
+    {
+      "direction": [
+        0.3333333333333333,
+        0.6666666666666666,
+        0.6666666666666666
+      ],
+      "normal_shift_over_lapse": 0.5,
+      "normal": [
+        0.3333333333333333,
+        0.6666666666666666,
+        0.6666666666666666
+      ],
+      "normal_shift": 0.4,
+      "lapse": 0.8,
+      "characteristic_speeds": [
+        -0.0,
+        0.4,
+        -1.2000000000000002,
+        -0.4,
+        -0.4
+      ],
+      "incoming_modes": [
+        "u1_minus",
+        "u2_tangent_1",
+        "u2_tangent_2"
+      ],
+      "outgoing_modes": [
+        "u1_plus"
+      ],
+      "glancing_modes": [
+        "u0"
+      ],
+      "reference_shift_domain": "SUBLUMINAL_SHIFT",
+      "characteristic_rank": 5,
+      "characteristic_residual": 2.220446049250313e-16,
+      "symmetrizer_residual": 5.551115123125783e-17,
+      "minimum_symmetrizer_eigenvalue": 0.4,
+      "expected_partition_matches": true,
+      "incoming_free_energy_flux_samples": 64,
+      "minimum_flux_after_zeroing_incoming_modes": 3.422126450785582e-05,
+      "maximum_inward_flux_magnitude": 0.0,
+      "outgoing_subspace_flux_nonnegative": true
+    },
+    {
+      "direction": [
+        0.3333333333333333,
+        0.6666666666666666,
+        0.6666666666666666
+      ],
+      "normal_shift_over_lapse": 1.0,
+      "normal": [
+        0.3333333333333333,
+        0.6666666666666666,
+        0.6666666666666666
+      ],
+      "normal_shift": 0.7999999999999999,
+      "lapse": 0.8,
+      "characteristic_speeds": [
+        -0.0,
+        1.1102230246251565e-16,
+        -1.6,
+        -0.7999999999999999,
+        -0.7999999999999999
+      ],
+      "incoming_modes": [
+        "u1_minus",
+        "u2_tangent_1",
+        "u2_tangent_2"
+      ],
+      "outgoing_modes": [],
+      "glancing_modes": [
+        "u0",
+        "u1_plus"
+      ],
+      "reference_shift_domain": "OUTSIDE_SUBLUMINAL_SHIFT_ASSUMPTIONS",
+      "characteristic_rank": 5,
+      "characteristic_residual": 2.220446049250313e-16,
+      "symmetrizer_residual": 5.551115123125783e-17,
+      "minimum_symmetrizer_eigenvalue": 0.4,
+      "expected_partition_matches": true,
+      "incoming_free_energy_flux_samples": 0,
+      "minimum_flux_after_zeroing_incoming_modes": null,
+      "maximum_inward_flux_magnitude": 0.0,
+      "outgoing_subspace_flux_nonnegative": null
+    },
+    {
+      "direction": [
+        0.3333333333333333,
+        0.6666666666666666,
+        0.6666666666666666
+      ],
+      "normal_shift_over_lapse": 1.25,
+      "normal": [
+        0.3333333333333333,
+        0.6666666666666666,
+        0.6666666666666666
+      ],
+      "normal_shift": 1.0,
+      "lapse": 0.8,
+      "characteristic_speeds": [
+        -0.0,
+        -0.19999999999999996,
+        -1.8,
+        -1.0,
+        -1.0
+      ],
+      "incoming_modes": [
+        "u1_plus",
+        "u1_minus",
+        "u2_tangent_1",
+        "u2_tangent_2"
+      ],
+      "outgoing_modes": [],
+      "glancing_modes": [
+        "u0"
+      ],
+      "reference_shift_domain": "OUTSIDE_SUBLUMINAL_SHIFT_ASSUMPTIONS",
+      "characteristic_rank": 5,
+      "characteristic_residual": 2.220446049250313e-16,
+      "symmetrizer_residual": 5.551115123125783e-17,
+      "minimum_symmetrizer_eigenvalue": 0.4,
+      "expected_partition_matches": true,
+      "incoming_free_energy_flux_samples": 0,
+      "minimum_flux_after_zeroing_incoming_modes": null,
+      "maximum_inward_flux_magnitude": 0.0,
+      "outgoing_subspace_flux_nonnegative": null
+    },
+    {
+      "direction": [
+        -0.6666666666666666,
+        0.3333333333333333,
+        -0.6666666666666666
+      ],
+      "normal_shift_over_lapse": -1.25,
+      "normal": [
+        -0.6666666666666666,
+        0.3333333333333333,
+        -0.6666666666666666
+      ],
+      "normal_shift": -1.0,
+      "lapse": 0.8,
+      "characteristic_speeds": [
+        0.0,
+        1.8,
+        0.19999999999999996,
+        1.0,
+        1.0
+      ],
+      "incoming_modes": [],
+      "outgoing_modes": [
+        "u1_plus",
+        "u1_minus",
+        "u2_tangent_1",
+        "u2_tangent_2"
+      ],
+      "glancing_modes": [
+        "u0"
+      ],
+      "reference_shift_domain": "OUTSIDE_SUBLUMINAL_SHIFT_ASSUMPTIONS",
+      "characteristic_rank": 5,
+      "characteristic_residual": 2.220446049250313e-16,
+      "symmetrizer_residual": 5.551115123125783e-17,
+      "minimum_symmetrizer_eigenvalue": 0.4,
+      "expected_partition_matches": true,
+      "incoming_free_energy_flux_samples": 0,
+      "minimum_flux_after_zeroing_incoming_modes": null,
+      "maximum_inward_flux_magnitude": 0.0,
+      "outgoing_subspace_flux_nonnegative": null
+    },
+    {
+      "direction": [
+        -0.6666666666666666,
+        0.3333333333333333,
+        -0.6666666666666666
+      ],
+      "normal_shift_over_lapse": -1.0,
+      "normal": [
+        -0.6666666666666666,
+        0.3333333333333333,
+        -0.6666666666666666
+      ],
+      "normal_shift": -0.7999999999999999,
+      "lapse": 0.8,
+      "characteristic_speeds": [
+        0.0,
+        1.6,
+        -1.1102230246251565e-16,
+        0.7999999999999999,
+        0.7999999999999999
+      ],
+      "incoming_modes": [],
+      "outgoing_modes": [
+        "u1_plus",
+        "u2_tangent_1",
+        "u2_tangent_2"
+      ],
+      "glancing_modes": [
+        "u0",
+        "u1_minus"
+      ],
+      "reference_shift_domain": "OUTSIDE_SUBLUMINAL_SHIFT_ASSUMPTIONS",
+      "characteristic_rank": 5,
+      "characteristic_residual": 2.220446049250313e-16,
+      "symmetrizer_residual": 5.551115123125783e-17,
+      "minimum_symmetrizer_eigenvalue": 0.4,
+      "expected_partition_matches": true,
+      "incoming_free_energy_flux_samples": 0,
+      "minimum_flux_after_zeroing_incoming_modes": null,
+      "maximum_inward_flux_magnitude": 0.0,
+      "outgoing_subspace_flux_nonnegative": null
+    },
+    {
+      "direction": [
+        -0.6666666666666666,
+        0.3333333333333333,
+        -0.6666666666666666
+      ],
+      "normal_shift_over_lapse": -0.5,
+      "normal": [
+        -0.6666666666666666,
+        0.3333333333333333,
+        -0.6666666666666666
+      ],
+      "normal_shift": -0.4,
+      "lapse": 0.8,
+      "characteristic_speeds": [
+        0.0,
+        1.2000000000000002,
+        -0.4,
+        0.4,
+        0.4
+      ],
+      "incoming_modes": [
+        "u1_minus"
+      ],
+      "outgoing_modes": [
+        "u1_plus",
+        "u2_tangent_1",
+        "u2_tangent_2"
+      ],
+      "glancing_modes": [
+        "u0"
+      ],
+      "reference_shift_domain": "SUBLUMINAL_SHIFT",
+      "characteristic_rank": 5,
+      "characteristic_residual": 2.220446049250313e-16,
+      "symmetrizer_residual": 5.551115123125783e-17,
+      "minimum_symmetrizer_eigenvalue": 0.4,
+      "expected_partition_matches": true,
+      "incoming_free_energy_flux_samples": 64,
+      "minimum_flux_after_zeroing_incoming_modes": 0.058662864471534376,
+      "maximum_inward_flux_magnitude": 0.0,
+      "outgoing_subspace_flux_nonnegative": true
+    },
+    {
+      "direction": [
+        -0.6666666666666666,
+        0.3333333333333333,
+        -0.6666666666666666
+      ],
+      "normal_shift_over_lapse": 0.0,
+      "normal": [
+        -0.6666666666666666,
+        0.3333333333333333,
+        -0.6666666666666666
+      ],
+      "normal_shift": 0.0,
+      "lapse": 0.8,
+      "characteristic_speeds": [
+        -0.0,
+        0.8,
+        -0.8,
+        -0.0,
+        -0.0
+      ],
+      "incoming_modes": [
+        "u1_minus"
+      ],
+      "outgoing_modes": [
+        "u1_plus"
+      ],
+      "glancing_modes": [
+        "u0",
+        "u2_tangent_1",
+        "u2_tangent_2"
+      ],
+      "reference_shift_domain": "SUBLUMINAL_SHIFT",
+      "characteristic_rank": 5,
+      "characteristic_residual": 1.1102230246251565e-16,
+      "symmetrizer_residual": 5.551115123125783e-17,
+      "minimum_symmetrizer_eigenvalue": 0.4,
+      "expected_partition_matches": true,
+      "incoming_free_energy_flux_samples": 64,
+      "minimum_flux_after_zeroing_incoming_modes": 3.4141011198579076e-05,
+      "maximum_inward_flux_magnitude": 0.0,
+      "outgoing_subspace_flux_nonnegative": true
+    },
+    {
+      "direction": [
+        -0.6666666666666666,
+        0.3333333333333333,
+        -0.6666666666666666
+      ],
+      "normal_shift_over_lapse": 0.5,
+      "normal": [
+        -0.6666666666666666,
+        0.3333333333333333,
+        -0.6666666666666666
+      ],
+      "normal_shift": 0.4,
+      "lapse": 0.8,
+      "characteristic_speeds": [
+        -0.0,
+        0.4,
+        -1.2000000000000002,
+        -0.4,
+        -0.4
+      ],
+      "incoming_modes": [
+        "u1_minus",
+        "u2_tangent_1",
+        "u2_tangent_2"
+      ],
+      "outgoing_modes": [
+        "u1_plus"
+      ],
+      "glancing_modes": [
+        "u0"
+      ],
+      "reference_shift_domain": "SUBLUMINAL_SHIFT",
+      "characteristic_rank": 5,
+      "characteristic_residual": 2.220446049250313e-16,
+      "symmetrizer_residual": 5.551115123125783e-17,
+      "minimum_symmetrizer_eigenvalue": 0.4,
+      "expected_partition_matches": true,
+      "incoming_free_energy_flux_samples": 64,
+      "minimum_flux_after_zeroing_incoming_modes": 5.7989859081262606e-05,
+      "maximum_inward_flux_magnitude": 0.0,
+      "outgoing_subspace_flux_nonnegative": true
+    },
+    {
+      "direction": [
+        -0.6666666666666666,
+        0.3333333333333333,
+        -0.6666666666666666
+      ],
+      "normal_shift_over_lapse": 1.0,
+      "normal": [
+        -0.6666666666666666,
+        0.3333333333333333,
+        -0.6666666666666666
+      ],
+      "normal_shift": 0.7999999999999999,
+      "lapse": 0.8,
+      "characteristic_speeds": [
+        -0.0,
+        1.1102230246251565e-16,
+        -1.6,
+        -0.7999999999999999,
+        -0.7999999999999999
+      ],
+      "incoming_modes": [
+        "u1_minus",
+        "u2_tangent_1",
+        "u2_tangent_2"
+      ],
+      "outgoing_modes": [],
+      "glancing_modes": [
+        "u0",
+        "u1_plus"
+      ],
+      "reference_shift_domain": "OUTSIDE_SUBLUMINAL_SHIFT_ASSUMPTIONS",
+      "characteristic_rank": 5,
+      "characteristic_residual": 2.220446049250313e-16,
+      "symmetrizer_residual": 5.551115123125783e-17,
+      "minimum_symmetrizer_eigenvalue": 0.4,
+      "expected_partition_matches": true,
+      "incoming_free_energy_flux_samples": 0,
+      "minimum_flux_after_zeroing_incoming_modes": null,
+      "maximum_inward_flux_magnitude": 0.0,
+      "outgoing_subspace_flux_nonnegative": null
+    },
+    {
+      "direction": [
+        -0.6666666666666666,
+        0.3333333333333333,
+        -0.6666666666666666
+      ],
+      "normal_shift_over_lapse": 1.25,
+      "normal": [
+        -0.6666666666666666,
+        0.3333333333333333,
+        -0.6666666666666666
+      ],
+      "normal_shift": 1.0,
+      "lapse": 0.8,
+      "characteristic_speeds": [
+        -0.0,
+        -0.19999999999999996,
+        -1.8,
+        -1.0,
+        -1.0
+      ],
+      "incoming_modes": [
+        "u1_plus",
+        "u1_minus",
+        "u2_tangent_1",
+        "u2_tangent_2"
+      ],
+      "outgoing_modes": [],
+      "glancing_modes": [
+        "u0"
+      ],
+      "reference_shift_domain": "OUTSIDE_SUBLUMINAL_SHIFT_ASSUMPTIONS",
+      "characteristic_rank": 5,
+      "characteristic_residual": 2.220446049250313e-16,
+      "symmetrizer_residual": 5.551115123125783e-17,
+      "minimum_symmetrizer_eigenvalue": 0.4,
+      "expected_partition_matches": true,
+      "incoming_free_energy_flux_samples": 0,
+      "minimum_flux_after_zeroing_incoming_modes": null,
+      "maximum_inward_flux_magnitude": 0.0,
+      "outgoing_subspace_flux_nonnegative": null
+    }
+  ],
+  "source_hashes": {
+    "docs/core/02_equations/covariant/uet_curved_3p1_generalized_harmonic.py": "4f0c8ed0e5afe52e43cedefeb9c061e10dbd440fd20e8bc57a8aacfa43e76f92",
+    "docs/scripts/audit/audit_curved_3p1_gh_boundary_characteristics.py": "a59e08cfa96d08db6efc10818afe615de44fc49e14d9eb357b4113256949bf17"
+  },
+  "literature_basis": [
+    {
+      "citation": "O. Rinne, Stable radiation-controlling boundary conditions for the generalized harmonic Einstein equations, Class. Quantum Grav. 23, 6275-6300 (2006)",
+      "doi": "10.1088/0264-9381/23/22/013",
+      "url": "https://arxiv.org/abs/gr-qc/0606053",
+      "role": "source for GH characteristic speeds, projected constraint/physical/gauge boundary decomposition, subluminal normal-shift domain, and frozen-coefficient boundary-stability analysis"
+    },
+    {
+      "citation": "G. Calabrese and O. Sarbach, Detecting ill posed boundary conditions in general relativity, J. Math. Phys. 44, 3888-3899 (2003)",
+      "doi": "10.1063/1.1599056",
+      "url": "https://eprints.soton.ac.uk/40856/",
+      "role": "caution that constraint consistency or setting incoming constraint modes to zero alone does not guarantee well-posedness for arbitrary formulation parameters"
+    }
+  ],
+  "claim_boundary": "Classification and frozen-principal energy-flux controls only. The existing periodic solver and parent gate are unchanged; no physical dependency, Gravity lane, or global UET claim is unlocked."
+}

@@ -1,0 +1,235 @@
+{
+  "schema_version": "core-curved-3p1-rinne-jordan-normalization-v1",
+  "artifact": "curved_3p1_gh_rinne_jordan_normalization",
+  "generated_at": "2026-09-25T20:08:01Z",
+  "major_result_id": "CORE_CURVED_3P1_GH_RINNE_NEGATIVE_SHIFT_JORDAN_DEGENERACY",
+  "major_result": {
+    "major_result_id": "CORE_CURVED_3P1_GH_RINNE_NEGATIVE_SHIFT_JORDAN_DEGENERACY",
+    "topic": "core_curved_3p1",
+    "closure_level": "CLOSED_FOR_LANE",
+    "what_is_closed": [
+      "At zeta=-beta, -1<beta<0, the exact Jordan identities are M*A=-A+B, M*B=-B, M*C=-C.",
+      "For K_A=sqrt(1+beta^2), K_B=sqrt(2), the printed Eq. (74) generalized-mode coefficient has ODE residual exp(-xi)*sigma1*(1/K_B-1/K_A)*B.",
+      "Replacing only xi*B/K_B by xi*B/K_A gives an ODE-consistent chain with exact 30x30 determinant 4/(abs(beta)^26*(1+beta^2)^5)>1/8 throughout -1<beta<0.",
+      "The printed Eq. (90) determinant and corrected determinant have a closed-form ratio, reproduced independently by the registered full boundary matrix."
+    ],
+    "equation_or_mapping": {
+      "vectors": "A=(-beta,0,i,0), B=(0,1,-i,0), C=(0,0,0,1)",
+      "jordan_identities": "M*A=-A+B; M*B=-B; M*C=-C",
+      "printed_mode_residual": "exp(-xi)*sigma1*(1/K_B-1/K_A)*B",
+      "corrected_mode": "exp(-xi)[sigma1*(A+xi*B)/K_A+sigma2*B/K_B+sigma3*C]",
+      "corrected_determinant": "abs(det(C_boundary))=4/(abs(beta)^26*(1+beta^2)^5)>1/8 for -1<beta<0",
+      "printed_to_corrected_ratio": "(K_A+K_B)^10/(32*K_B^20)<1 for -1<beta<0",
+      "confluent_derivation": "lim(abs(det(C_generic))/abs(lambda_2-lambda_1)^10)=1/(8*abs(beta)^26); the normalized generalized mode tends to (A+B/2)/sqrt(2), while the companion mode tends to B/sqrt(2). Transforming this pair to (A/K_A,B/K_B) multiplies the determinant by (sqrt(2)/K_A)^10, giving 4/(abs(beta)^26*(1+beta^2)^5).",
+      "strict_lower_bound": "For a=abs(beta) in (0,1), a^26*(1+a^2)^5<32, hence the corrected determinant is strictly greater than 1/8."
+    },
+    "units": "Dimensionless frozen-coefficient Fourier-Laplace variables; no SI observable mapping.",
+    "derivation_class": "Exact Jordan-chain algebra and confluent determinant, cross-checked against the registered 30x30 boundary matrix.",
+    "observable": "Principal-ODE residual and absolute boundary-symbol determinant at zeta=-beta.",
+    "data_role": "Primary-source formula audit and internal matrix cross-check; no empirical data or fitting.",
+    "evidence_artifacts": [
+      {
+        "path": "docs/core/07_artifacts/verification/curved_3p1_gh_rinne_negative_shift_kreiss_symbol.json",
+        "sha256": "5d48f6efe14f8c3501da5d8568544608fcc2d8fe7b24f798523ffdd919e39924"
+      }
+    ],
+    "verification_status": "PASS_EXACT_NEGATIVE_SHIFT_JORDAN_DEGENERACY_LANE",
+    "open_blockers": [
+      "The source normalization/determinant discrepancy has no authoritative correction or independently confirmed alternate convention.",
+      "A continuous complex-frequency transfer/inverse bound and imported Kreiss norm interface remain open.",
+      "Variable-coefficient/nonlinear GH evolution, tangential/corner completion, dimensional-observable mapping, and Core curved 3+1 remain open."
+    ],
+    "dependency_unlocked": "none; Core curved 3+1 remains PARTIAL and Gravity remains blocked",
+    "claim_boundary": "Exact Jordan-chain and determinant result only at zeta=-beta for the frozen-coefficient standard-GR GH boundary-symbol lane with -1<beta<0 and the declared Euclidean normalization. Not a full complex-frequency transfer estimate, nonlinear well-posedness proof, UET validation, or Core-parent closure."
+  },
+  "closure_level": "CLOSED_FOR_LANE",
+  "MAJOR_RESULT_CLOSURE": "CLOSED_FOR_LANE",
+  "WHAT_IS_ACTUALLY_CLOSED": [
+    "At zeta=-beta, -1<beta<0, the exact Jordan identities are M*A=-A+B, M*B=-B, M*C=-C.",
+    "For K_A=sqrt(1+beta^2), K_B=sqrt(2), the printed Eq. (74) generalized-mode coefficient has ODE residual exp(-xi)*sigma1*(1/K_B-1/K_A)*B.",
+    "Replacing only xi*B/K_B by xi*B/K_A gives an ODE-consistent chain with exact 30x30 determinant 4/(abs(beta)^26*(1+beta^2)^5)>1/8 throughout -1<beta<0.",
+    "The printed Eq. (90) determinant and corrected determinant have a closed-form ratio, reproduced independently by the registered full boundary matrix."
+  ],
+  "WHAT_REMAINS_OPEN": [
+    "The source normalization/determinant discrepancy has no authoritative correction or independently confirmed alternate convention.",
+    "A continuous complex-frequency transfer/inverse bound and imported Kreiss norm interface remain open.",
+    "Variable-coefficient/nonlinear GH evolution, tangential/corner completion, dimensional-observable mapping, and Core curved 3+1 remain open."
+  ],
+  "DEPENDENCY_UNLOCKED": "none; Core curved 3+1 remains PARTIAL and Gravity remains blocked",
+  "STATUS": "PASS_EXACT_NEGATIVE_SHIFT_JORDAN_DEGENERACY_LANE",
+  "WHAT_CHANGED": "Added an isolated exact audit of the negative-shift Jordan degeneracy; the source convention remains unchanged and visible.",
+  "EQUATION_OR_MAPPING": {
+    "vectors": "A=(-beta,0,i,0), B=(0,1,-i,0), C=(0,0,0,1)",
+    "jordan_identities": "M*A=-A+B; M*B=-B; M*C=-C",
+    "printed_mode_residual": "exp(-xi)*sigma1*(1/K_B-1/K_A)*B",
+    "corrected_mode": "exp(-xi)[sigma1*(A+xi*B)/K_A+sigma2*B/K_B+sigma3*C]",
+    "corrected_determinant": "abs(det(C_boundary))=4/(abs(beta)^26*(1+beta^2)^5)>1/8 for -1<beta<0",
+    "printed_to_corrected_ratio": "(K_A+K_B)^10/(32*K_B^20)<1 for -1<beta<0",
+    "confluent_derivation": "lim(abs(det(C_generic))/abs(lambda_2-lambda_1)^10)=1/(8*abs(beta)^26); the normalized generalized mode tends to (A+B/2)/sqrt(2), while the companion mode tends to B/sqrt(2). Transforming this pair to (A/K_A,B/K_B) multiplies the determinant by (sqrt(2)/K_A)^10, giving 4/(abs(beta)^26*(1+beta^2)^5).",
+    "strict_lower_bound": "For a=abs(beta) in (0,1), a^26*(1+a^2)^5<32, hence the corrected determinant is strictly greater than 1/8."
+  },
+  "VERIFICATION": {
+    "checks": {
+      "exact_jordan_vector_identities": true,
+      "printed_eq74_residual_matches_norm_mismatch": true,
+      "corrected_jordan_chain_satisfies_ode": true,
+      "corrected_determinant_matches_full_30x30_matrix": true,
+      "source_to_corrected_determinant_ratio_matches_full_matrix": true,
+      "corrected_determinant_above_one_eighth_on_samples": true
+    },
+    "samples": [
+      {
+        "beta": -0.1,
+        "jordan_identity_residuals": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "K_A": 1.004987562112089,
+        "K_B": 1.4142135623730951,
+        "printed_eq74_ode_residual": 0.4071950894605841,
+        "printed_residual_formula": 0.407195089460584,
+        "corrected_ode_residual": 1.1188630228279524e-16,
+        "full_matrix_printed_eq124_log_offset": -3.552713678800501e-14,
+        "full_matrix_corrected_det_log_offset": -2.1316282072803006e-14,
+        "full_matrix_printed_mode_residual": 0.2879304090234418,
+        "full_matrix_corrected_mode_residual": 0.0,
+        "corrected_det_formula": 3.805862750426989e+26,
+        "printed_det_formula": 7.974857735062672e+25,
+        "printed_to_corrected_ratio": 0.20954139069171496,
+        "full_matrix_ratio_log_offset": -3.774758283725532e-15
+      },
+      {
+        "beta": -0.25,
+        "jordan_identity_residuals": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "K_A": 1.0307764064044151,
+        "K_B": 1.4142135623730951,
+        "printed_eq74_ode_residual": 0.37198868114007066,
+        "printed_residual_formula": 0.3719886811400708,
+        "corrected_ode_residual": 1.1443916996305594e-16,
+        "full_matrix_printed_eq124_log_offset": -1.4210854715202004e-14,
+        "full_matrix_corrected_det_log_offset": 0.0,
+        "full_matrix_printed_mode_residual": 0.2630357189587844,
+        "full_matrix_corrected_mode_residual": 0.0,
+        "corrected_det_formula": 1.3303780543729812e+16,
+        "printed_det_formula": 3099530782448162.5,
+        "printed_to_corrected_ratio": 0.23298120201697092,
+        "full_matrix_ratio_log_offset": -1.1324274851176597e-14
+      },
+      {
+        "beta": -0.5,
+        "jordan_identity_residuals": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "K_A": 1.118033988749895,
+        "K_B": 1.4142135623730951,
+        "printed_eq74_ode_residual": 0.26491106406735176,
+        "printed_residual_formula": 0.2649110640673518,
+        "corrected_ode_residual": 1.2412670766236366e-16,
+        "full_matrix_printed_eq124_log_offset": -7.105427357601002e-15,
+        "full_matrix_corrected_det_log_offset": -1.0658141036401503e-14,
+        "full_matrix_printed_mode_residual": 0.1873204098133684,
+        "full_matrix_corrected_mode_residual": 0.0,
+        "corrected_det_formula": 87960930.22208,
+        "printed_det_formula": 29100568.72589583,
+        "printed_to_corrected_ratio": 0.3308351634347655,
+        "full_matrix_ratio_log_offset": 3.552713678800501e-15
+      },
+      {
+        "beta": -0.75,
+        "jordan_identity_residuals": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "K_A": 1.25,
+        "K_B": 1.4142135623730951,
+        "printed_eq74_ode_residual": 0.13137084989847603,
+        "printed_residual_formula": 0.1313708498984762,
+        "corrected_ode_residual": 2.482534153247273e-16,
+        "full_matrix_printed_eq124_log_offset": -5.329070518200751e-15,
+        "full_matrix_corrected_det_log_offset": -3.552713678800501e-15,
+        "full_matrix_printed_mode_residual": 0.09289321881345258,
+        "full_matrix_corrected_mode_residual": 5.551115123125783e-17,
+        "corrected_det_formula": 760.9690841372953,
+        "printed_det_formula": 418.4151738791829,
+        "printed_to_corrected_ratio": 0.5498451679591384,
+        "full_matrix_ratio_log_offset": 4.440892098500626e-16
+      },
+      {
+        "beta": -0.9,
+        "jordan_identity_residuals": [
+          3.3306690738754696e-16,
+          0.0,
+          0.0
+        ],
+        "K_A": 1.3453624047073711,
+        "K_B": 1.4142135623730951,
+        "printed_eq74_ode_residual": 0.05117666245527356,
+        "printed_residual_formula": 0.05117666245527341,
+        "corrected_ode_residual": 4.965068306494546e-16,
+        "full_matrix_printed_eq124_log_offset": -1.1102230246251565e-16,
+        "full_matrix_corrected_det_log_offset": -1.1102230246251565e-15,
+        "full_matrix_printed_mode_residual": 0.036187365060618815,
+        "full_matrix_corrected_mode_residual": 0.0,
+        "corrected_det_formula": 3.1868518283397576,
+        "printed_det_formula": 2.4907806154776893,
+        "printed_to_corrected_ratio": 0.7815803023309381,
+        "full_matrix_ratio_log_offset": 9.71445146547012e-16
+      },
+      {
+        "beta": -0.99,
+        "jordan_identity_residuals": [
+          1.9984014443252818e-15,
+          0.0,
+          0.0
+        ],
+        "K_A": 1.4071602609511114,
+        "K_B": 1.4142135623730951,
+        "printed_eq74_ode_residual": 0.005012436477711088,
+        "printed_residual_formula": 0.005012436477716113,
+        "corrected_ode_residual": 7.244577427323518e-15,
+        "full_matrix_printed_eq124_log_offset": 6.661338147750939e-16,
+        "full_matrix_corrected_det_log_offset": -4.440892098500626e-16,
+        "full_matrix_printed_mode_residual": 0.0035443278236598763,
+        "full_matrix_corrected_mode_residual": 5.551115123125783e-17,
+        "corrected_det_formula": 0.17065118679506217,
+        "printed_det_formula": 0.16644306493633124,
+        "printed_to_corrected_ratio": 0.9753407993359894,
+        "full_matrix_ratio_log_offset": 1.994931997373328e-15
+      }
+    ],
+    "analytic_derivation": {
+      "eigenvalue_gap": "lambda_2-lambda_1=(zeta+beta)/beta+O((zeta+beta)^2) as zeta approaches -beta",
+      "generic_determinant_confluent_limit": "lim(abs(det(C_generic))/abs(lambda_2-lambda_1)^10)=1/(8*abs(beta)^26)",
+      "normalized_confluent_basis": "g=(A+B/2)/sqrt(2), v=B/sqrt(2)",
+      "basis_change_determinant_per_tensor_component": "sqrt(2)/K_A; adding a multiple of v to g does not change the determinant",
+      "corrected_determinant": "1/(8*abs(beta)^26)*(sqrt(2)/K_A)^10=4/(abs(beta)^26*(1+beta^2)^5)",
+      "uniform_pointwise_lower_bound": "a^26*(1+a^2)^5<32 for a=abs(beta) in (0,1), so determinant>1/8",
+      "normalization_mismatch": "K_A=sqrt(1+beta^2)<sqrt(2)=K_B for every -1<beta<0"
+    },
+    "source_hashes": {
+      "docs/scripts/audit/audit_curved_3p1_gh_rinne_jordan_normalization.py": "3b49d6c684801e9a3c38843df58cd7c08f36e5fbab2d1bb49aaaf3af4901f0d2",
+      "docs/scripts/audit/audit_curved_3p1_gh_rinne_negative_shift_kreiss_symbol.py": "f482a1b1cb61480bfaa3cb27e5a2b7cdad65218fcc6521d0d587e742ffce3f2b",
+      "docs/core/07_artifacts/verification/curved_3p1_gh_rinne_negative_shift_kreiss_symbol.json": "5d48f6efe14f8c3501da5d8568544608fcc2d8fe7b24f798523ffdd919e39924"
+    },
+    "primary_source": {
+      "title": "Stable radiation-controlling boundary conditions for the generalized harmonic Einstein equations",
+      "author": "Oliver Rinne",
+      "publication": "Classical and Quantum Gravity 23 (2006), 6275-6300",
+      "doi": "10.1088/0264-9381/23/22/013",
+      "arxiv": "https://arxiv.org/abs/gr-qc/0606053",
+      "scope": "Section 3.2, Eqs. (70)-(74), (89)-(90)"
+    }
+  },
+  "CONTROLLING_BLOCKER": "complex_frequency_transfer_bound_and_imported_kreiss_norm_interface_missing",
+  "NEXT_ACTION": "Extend the boundary-map inverse/transfer estimate over complex zeta and high-frequency compactification; keep this exact degenerate-point result separate.",
+  "CLAIM_BOUNDARY": "Exact Jordan-chain and determinant result only at zeta=-beta for the frozen-coefficient standard-GR GH boundary-symbol lane with -1<beta<0 and the declared Euclidean normalization. Not a full complex-frequency transfer estimate, nonlinear well-posedness proof, UET validation, or Core-parent closure.",
+  "claim_promotion": false
+}

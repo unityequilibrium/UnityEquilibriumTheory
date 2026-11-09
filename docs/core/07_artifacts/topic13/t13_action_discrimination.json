@@ -1,0 +1,148 @@
+{
+  "status": "FORMAL_ACTION_CLASS_EQUIVALENCE_WITH_CONDITIONAL_STATIC_FALSIFIER",
+  "coefficient_identity": true,
+  "surjectivity_witness": "e=Zp=Zc=1; parent coefficients equal canonical comparator coefficients",
+  "epsilon_zero_chart": "SINGULAR; original action boundary handled separately",
+  "production_action_control": {
+    "relative_scaled_residual": 0.0,
+    "tolerance": 1e-12,
+    "scope": "pointwise evaluator consistency only; not physical uncertainty"
+  },
+  "phase_field_operator_controls": {
+    "conserved": 0.0,
+    "nonconserved": 0.0
+  },
+  "open_system_operator_controls": {
+    "retarded_memory_rate": 1.3877787807814457e-17,
+    "state_update": 0.0,
+    "classical_covariance": 0.0,
+    "local_inverse_oscillator_kernel": 0.0
+  },
+  "canonical_fixture": {
+    "M2": "5",
+    "m2": "7/9",
+    "ls": "11/4",
+    "lm": "13/81",
+    "g": "2/3",
+    "X": "17/100",
+    "r0": "76"
+  },
+  "static_derivative_control": {
+    "s": "23/8",
+    "D": "29/4",
+    "dpsi_ds": "4/29",
+    "effective_second": "54/29",
+    "effective_third": "576/24389"
+  },
+  "calibrated_instrument_law": "u=A*z+B*z^3, A>=0, B>0 with declared static preparation and positive gains",
+  "synthetic_fixture": {
+    "A": "2",
+    "B": "3",
+    "reserved_source": "105/8",
+    "predicted_response_bracket": [
+      "824633720831/549755813888",
+      "3/2"
+    ],
+    "synthetic_joint_outer_enclosure": [
+      "822579295339/549755813888",
+      "206676410401/137438953472"
+    ]
+  },
+  "falsification": "Predeclare joint calibration/source and output measurement sets; disjointness rejects specified model/protocol, not all UET or a shared ordinary comparator",
+  "unique_UET_discriminator_against_constructed_scalar_comparator": false,
+  "physical_acceptance": false,
+  "experimental_rows_scored": 0,
+  "new_core_terms": 0,
+  "null_member": "e>0,h=xi=rho=0,d=initial_d_dot=0; no extra response sector signal",
+  "alternatives_reviewed": [
+    "full nonminimal curvature action",
+    "prior two-mode/pole and MEMS",
+    "static quartic response",
+    "normalized conserved/nonconserved phase field",
+    "retarded trace postprocessor",
+    "tree-level O2/current symmetry",
+    "linear physical-memory and formal SK/KMS operators"
+  ],
+  "scope_limit": "Audited existing action and connected observer routes, not every UET topic or any possible future physical theory",
+  "next_for_effective_test": "Admit prepared matter-invariant source, zero offsets, common linear readout and joint omission/calibration sets; freeze A,B before held-out source",
+  "next_for_unique_test": "An independently justified cross-system coefficient lock or physical source/detector relation outside comparator image; not a newly fitted term",
+  "contract_id": "T13_ACTION_DISCRIMINATION_V1",
+  "contract_sha256": "d2ad309cd44a39cca04cc5339e38cbfbbfbc51234646ff707dcac82e8a45e2c6",
+  "contract_review_status": "INCOMPLETE",
+  "identities": [
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/Research_T13_Action_Discrimination.py",
+      "kind": "working_file",
+      "role": "code",
+      "sha256": "bd1e106a926c67bc6604ce061ea1049b616bff82130d5aca0244a3d4d024da44"
+    },
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/test_t13_action_discrimination.py",
+      "kind": "working_file",
+      "role": "code",
+      "sha256": "aaac60184755d5bfa3e668f8b8495531930efc3ec4f360be090376474f8e21c1"
+    },
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/T13_ACTION_DISCRIMINATION_2026-10-18.md",
+      "kind": "working_file",
+      "role": "evidence",
+      "sha256": "3f1638627b31ca7f4f3c61ce75a3b07ed3a530d1e951be2a348ec595544adb18"
+    },
+    {
+      "path": "docs/core/02_equations/covariant/uet_covariant_response.py",
+      "kind": "working_file",
+      "role": "evidence",
+      "sha256": "7fb4b7228afb8ede0ac4f1664d634346ef46cc7678c94ed7b55d73645590c0c2"
+    },
+    {
+      "path": "docs/core/02_equations/covariant/uet_covariant_matter.py",
+      "kind": "working_file",
+      "role": "evidence",
+      "sha256": "8a57d95e898a8ac962bbd749670ad0695b597281937da36496d2ec7e074f9c53"
+    },
+    {
+      "path": "docs/core/02_equations/covariant/uet_covariant_parent.py",
+      "kind": "working_file",
+      "role": "evidence",
+      "sha256": "9e17a88ef90313e689ee573d563bb893f7f6f297744506d1434617bc885c684d"
+    },
+    {
+      "path": "docs/core/02_equations/matter_space/uet_matter_space.py",
+      "kind": "working_file",
+      "role": "evidence",
+      "sha256": "488db6aa26b99856e2eb82a2f46a9857f623f418ef8e537498fa71d5e4f633aa"
+    },
+    {
+      "path": "docs/core/02_equations/matter_space/uet_spatial.py",
+      "kind": "working_file",
+      "role": "evidence",
+      "sha256": "2b7f93cbadeb0e7641a366fd88e18894013cacb3f41b832266e549e2a3221378"
+    },
+    {
+      "path": "docs/core/02_equations/matter_space/uet_trace.py",
+      "kind": "working_file",
+      "role": "evidence",
+      "sha256": "1ec92af5edba09f1a4352661c5489b371f89dcf72c223c2843ce694ee75f78fb"
+    },
+    {
+      "path": "docs/core/02_equations/o2/uet_o2_finite_density_eos.py",
+      "kind": "working_file",
+      "role": "evidence",
+      "sha256": "ea744a8645f993600300fa9fd99a764e1f07b30fb272b47399c34aa114152c6d"
+    },
+    {
+      "path": "docs/core/02_equations/covariant/uet_covariant_open_system.py",
+      "kind": "working_file",
+      "role": "evidence",
+      "sha256": "652ae33f742e3b32f44734ee35258a758460888d93cc9bedbd8a604ed89b6f4a"
+    },
+    {
+      "path": "docs/core/02_equations/o2/uet_o2_open_system_sk_kms.py",
+      "kind": "working_file",
+      "role": "evidence",
+      "sha256": "92b2beb2d531d2c907953b42e4a381f1442dc035ab0cdebd7edf8a5ed0a9b063"
+    }
+  ],
+  "generator_path": "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/Research_T13_Action_Discrimination.py",
+  "evidence_class": "FORMAL_CONDITIONAL_NOT_PHYSICAL_VALIDATION"
+}

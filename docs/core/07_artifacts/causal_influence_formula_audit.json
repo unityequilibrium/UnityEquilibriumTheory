@@ -1,0 +1,49 @@
+{
+  "schema_version": "1.0",
+  "artifact": "causal_influence_formula_audit",
+  "generated_at": "2026-09-16T09:16:43.114835+00:00",
+  "status": "WARN",
+  "implementation_status": "PRESENT",
+  "derivation_status": "phenomenological retarded constitutive ansatz",
+  "operator": "tau(u.nabla)^2 + (u.nabla) - D(e.nabla)^2 + lambda",
+  "unit_lane": "natural",
+  "spatial_dimension": 1,
+  "coefficient_policy": {
+    "tau_positive": true,
+    "diffusivity_positive": true,
+    "decay_nonnegative": true,
+    "speed_not_above_c": true,
+    "defaults_are_physical_constants": false
+  },
+  "open_formula_gates": [
+    "closed_time_path_derivation_missing",
+    "curved_spacetime_green_function_missing",
+    "three_spatial_dimension_kernel_missing",
+    "observable_source_mapping_missing",
+    "ghost_analysis_of_parent_action_missing"
+  ],
+  "source_hashes": {
+    "docs\\core\\02_equations\\covariant\\uet_covariant_nonclosed.py": "eec206167657218b7ad093ca346290383ed43bac31f3a5b478c8fa3f30c857ff",
+    "docs\\core\\01_contracts\\UET_GR_NONCLOSED_RESEARCH_SPEC.md": "1609cfdada2ad9e67ebcb8e9ae53f2f3f035fdc70469424e486eb3f7e53c1f86"
+  },
+  "downstream_hyperbolic_phase_field": {
+    "artifact": "hyperbolic_phase_field_external_comparator_verification.json",
+    "audit_status": "PASS",
+    "evidence_status": "PARTIAL_EXTERNAL_COMPARATOR",
+    "role": "external_fixed_parameter_formula_comparator",
+    "causal_feasibility_artifact": "hyperbolic_phase_field_causal_feasibility.json",
+    "causal_feasibility_status": "PASS",
+    "fixed_light_cone_parameter_domain": "PASS_NORMALIZED_ANALYTIC",
+    "uniform_subluminal_limit": "NO_GO_EXACT_PARABOLIC_LIMIT",
+    "uet_derivation": "BLOCKED"
+  },
+  "downstream_noether_phase_field_state_map": {
+    "artifact": "noether_phase_field_state_map_verification.json",
+    "audit_status": "PASS",
+    "evidence_status": "PARTIAL_HYDRODYNAMIC_STATE_COORDINATE_MAP",
+    "role": "hydrodynamic_state_coordinate_map_not_microscopic_derivation",
+    "affine_fixed_scale_layer": "PASS",
+    "microscopic_reconstruction": "NO_GO_MANY_TO_ONE",
+    "equation_of_state_and_transport": "BLOCKED"
+  }
+}

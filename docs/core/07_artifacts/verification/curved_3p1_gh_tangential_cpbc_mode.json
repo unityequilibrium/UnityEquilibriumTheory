@@ -1,0 +1,302 @@
+{
+  "CLAIM_BOUNDARY": "Finite-grid, frozen-background standard-GR boundary-method diagnostic only; not a full Rinne CPBC reproduction, continuum well-posedness proof, curved 3+1 parent closure, UET validation, or Gravity unlock.",
+  "CONTROLLING_BLOCKER": "full_first_order_gh_differential_cpbc_stability_and_resolution_convergence_missing",
+  "DEPENDENCY_UNLOCKED": "none; Core curved-3+1 parent remains PARTIAL and Gravity remains blocked",
+  "EQUATION_OR_MAPPING": {
+    "bulk_qdot_source": "S = gamma2(Pi + Phi_n) - div_tangent(Phi_tangent) + gamma0 damping source",
+    "constraint_target": "A_C P_C qdot = A_C(S) - T_C, where T_C is the tangential remainder of the incoming subsidiary-constraint residual",
+    "gauge_target": "P_G qdot = 0 for homogeneous gauge-rate data",
+    "initial_profile": "Same seed-900 random Chebyshev coefficients through degree 4, sampled on both LGL grids",
+    "physical_target": "A_P P_P qdot = A_P(S - gamma2 D_n psi) - T_P, where T_P is the tangential remainder of the incoming Psi0 residual",
+    "reduction_constraint": "D_x psi - Phi_x = 0; K_y psi - Phi_y = 0; Phi_z = 0 for this one-mode slab",
+    "tensor_metric": "Frobenius weights 1 for diagonal and 2 for off-diagonal packed symmetric components"
+  },
+  "MAJOR_RESULT_CLOSURE": "PARTIAL",
+  "NEXT_ACTION": "Derive semidiscrete spectra and a projector-aware energy estimate over the preregistered matched-profile sweep; only after that, evaluate positive-shift u2_A and multidimensional corner compatibility. Preserve the frozen full-u1 baseline and do not relax thresholds.",
+  "PREREGISTRATION": {
+    "decision_thresholds": "No new pass threshold; report diagnostics only and do not unlock dependencies",
+    "final_time_over_L0": 8.0,
+    "gamma0_over_L0_inverse": 1.0,
+    "gamma2_over_L0_inverse": 1.0,
+    "initial_profile": "shared seed-900 Chebyshev coefficients through degree 4, sampled on every grid",
+    "reported_metrics": [
+      "state norm peak and final ratios",
+      "GH energy peak and final ratios",
+      "harmonic constraint and reduction-constraint residuals"
+    ],
+    "spatial_degrees": [
+      4,
+      8,
+      12
+    ],
+    "tangential_wavenumbers_over_L0": [
+      1.5707963267948966,
+      3.141592653589793,
+      6.283185307179586
+    ]
+  },
+  "STATUS": "OPEN_EXPLORATORY_SCREEN",
+  "VERIFICATION": {
+    "canonical_gh_formula_max_abs_residuals": {
+      "gamma0_damping": 4.440892098500626e-16,
+      "harmonic_constraint": 4.440892098500626e-16,
+      "slab_helper_harmonic_constraint": 4.440892098500626e-16
+    },
+    "clipping": false,
+    "external_data": false,
+    "filtering": false,
+    "holdout_access": false,
+    "mapping_algebra_max_abs": 2.220446049250313e-15,
+    "mapping_max_abs_residuals": {
+      "constraint_reconstruction": 2.220446049250313e-15,
+      "gauge_rate": 8.881784197001252e-16,
+      "normal_only_target_reduction": 8.881784197001252e-16,
+      "physical_reconstruction": 4.440892098500626e-16
+    },
+    "parameter_fitting": false,
+    "source_hashes_sha256": {
+      "docs/core/02_equations/covariant/uet_curved_3p1_generalized_harmonic.py": "4f0c8ed0e5afe52e43cedefeb9c061e10dbd440fd20e8bc57a8aacfa43e76f92",
+      "docs/core/02_equations/covariant/uet_curved_3p1_gh_boundary_projectors.py": "2aa529e3a037a5ecff2c2a5a6d454ef7cf9822ca99371393d6614bfbc062362f",
+      "docs/core/02_equations/covariant/uet_curved_3p1_gh_full_u1_slab.py": "f36c80561a6aec8463f4ffc049ab496563955a391411ea0ec6f5dbf583be70b7",
+      "docs/core/02_equations/covariant/uet_curved_3p1_gh_linear_boundary.py": "39bd0731a3ecdbb5c5185453e0908d198cba895ba5f29dafc6bb8f9c6a3b169c",
+      "docs/scripts/audit/audit_curved_3p1_gh_full_u1_cpbc_slab.py": "2fa112eaf6a0f34ab7cccf2027e59f2294b34c22048384c0c4e601754dce4a9b",
+      "docs/scripts/audit/audit_curved_3p1_gh_tangential_cpbc_mode.py": "b8c46518d3bec50b7e5d91ded78dfe652f7e331e633c2b16112f1664ebdc1603"
+    },
+    "tangential_mode_runs": [
+      {
+        "degree": 4,
+        "dt_over_L0": 0.08333333333333333,
+        "final_harmonic_constraint_linf": 1.782793968022601e-10,
+        "final_reduction_linf": 4.3903216086861325e-11,
+        "final_time_over_L0": 8.0,
+        "gamma0_L0": 1.0,
+        "gamma2_L0": 1.0,
+        "gh_energy_final_ratio": 0.7655072206684992,
+        "gh_energy_peak_ratio": 4.392385585350149,
+        "initial_chebyshev_degree": 4,
+        "initial_coefficient_scale": 1e-10,
+        "initial_profile_shared_across_degrees": true,
+        "initial_seed": 900,
+        "node_count": 5,
+        "phase_components": [
+          "cos",
+          "sin"
+        ],
+        "state_norm_final_growth": 0.8930358043313962,
+        "state_norm_peak_growth": 2.0607075086937523,
+        "tangential_wave_number_over_L0": 1.5707963267948966,
+        "time_steps": 96
+      },
+      {
+        "degree": 8,
+        "dt_over_L0": 0.022727272727272728,
+        "final_harmonic_constraint_linf": 1.9550522620774406e-10,
+        "final_reduction_linf": 1.41295409976059e-12,
+        "final_time_over_L0": 8.0,
+        "gamma0_L0": 1.0,
+        "gamma2_L0": 1.0,
+        "gh_energy_final_ratio": 0.7378207305981717,
+        "gh_energy_peak_ratio": 4.5002072345401105,
+        "initial_chebyshev_degree": 4,
+        "initial_coefficient_scale": 1e-10,
+        "initial_profile_shared_across_degrees": true,
+        "initial_seed": 900,
+        "node_count": 9,
+        "phase_components": [
+          "cos",
+          "sin"
+        ],
+        "state_norm_final_growth": 0.8739342794265477,
+        "state_norm_peak_growth": 2.1032630022356993,
+        "tangential_wave_number_over_L0": 1.5707963267948966,
+        "time_steps": 352
+      },
+      {
+        "degree": 12,
+        "dt_over_L0": 0.01020408163265306,
+        "final_harmonic_constraint_linf": 1.9550713426946744e-10,
+        "final_reduction_linf": 1.394899470426208e-12,
+        "final_time_over_L0": 8.0,
+        "gamma0_L0": 1.0,
+        "gamma2_L0": 1.0,
+        "gh_energy_final_ratio": 0.7378192403524748,
+        "gh_energy_peak_ratio": 4.5002181187664485,
+        "initial_chebyshev_degree": 4,
+        "initial_coefficient_scale": 1e-10,
+        "initial_profile_shared_across_degrees": true,
+        "initial_seed": 900,
+        "node_count": 13,
+        "phase_components": [
+          "cos",
+          "sin"
+        ],
+        "state_norm_final_growth": 0.8748578501659953,
+        "state_norm_peak_growth": 2.1054360209411884,
+        "tangential_wave_number_over_L0": 1.5707963267948966,
+        "time_steps": 784
+      },
+      {
+        "degree": 4,
+        "dt_over_L0": 0.07142857142857142,
+        "final_harmonic_constraint_linf": 1.070961393450721e-10,
+        "final_reduction_linf": 2.5562616416998604e-10,
+        "final_time_over_L0": 8.0,
+        "gamma0_L0": 1.0,
+        "gamma2_L0": 1.0,
+        "gh_energy_final_ratio": 0.17689199332843847,
+        "gh_energy_peak_ratio": 1.547363961319546,
+        "initial_chebyshev_degree": 4,
+        "initial_coefficient_scale": 1e-10,
+        "initial_profile_shared_across_degrees": true,
+        "initial_seed": 900,
+        "node_count": 5,
+        "phase_components": [
+          "cos",
+          "sin"
+        ],
+        "state_norm_final_growth": 0.4998267146940876,
+        "state_norm_peak_growth": 1.4621443532317693,
+        "tangential_wave_number_over_L0": 3.141592653589793,
+        "time_steps": 112
+      },
+      {
+        "degree": 8,
+        "dt_over_L0": 0.022727272727272728,
+        "final_harmonic_constraint_linf": 1.2179106950183118e-10,
+        "final_reduction_linf": 2.038446876357193e-12,
+        "final_time_over_L0": 8.0,
+        "gamma0_L0": 1.0,
+        "gamma2_L0": 1.0,
+        "gh_energy_final_ratio": 0.1823395787347255,
+        "gh_energy_peak_ratio": 1.5906743436064343,
+        "initial_chebyshev_degree": 4,
+        "initial_coefficient_scale": 1e-10,
+        "initial_profile_shared_across_degrees": true,
+        "initial_seed": 900,
+        "node_count": 9,
+        "phase_components": [
+          "cos",
+          "sin"
+        ],
+        "state_norm_final_growth": 0.5169996147630193,
+        "state_norm_peak_growth": 1.5049358213028554,
+        "tangential_wave_number_over_L0": 3.141592653589793,
+        "time_steps": 352
+      },
+      {
+        "degree": 12,
+        "dt_over_L0": 0.01020408163265306,
+        "final_harmonic_constraint_linf": 1.218198190276555e-10,
+        "final_reduction_linf": 1.3917209510981754e-12,
+        "final_time_over_L0": 8.0,
+        "gamma0_L0": 1.0,
+        "gamma2_L0": 1.0,
+        "gh_energy_final_ratio": 0.18251534933748095,
+        "gh_energy_peak_ratio": 1.5977608026357437,
+        "initial_chebyshev_degree": 4,
+        "initial_coefficient_scale": 1e-10,
+        "initial_profile_shared_across_degrees": true,
+        "initial_seed": 900,
+        "node_count": 13,
+        "phase_components": [
+          "cos",
+          "sin"
+        ],
+        "state_norm_final_growth": 0.5177344485400048,
+        "state_norm_peak_growth": 1.5105052199425408,
+        "tangential_wave_number_over_L0": 3.141592653589793,
+        "time_steps": 784
+      },
+      {
+        "degree": 4,
+        "dt_over_L0": 0.04,
+        "final_harmonic_constraint_linf": 3.028311346179583e-10,
+        "final_reduction_linf": 1.0035700670817142e-09,
+        "final_time_over_L0": 8.0,
+        "gamma0_L0": 1.0,
+        "gamma2_L0": 1.0,
+        "gh_energy_final_ratio": 0.25528333626618704,
+        "gh_energy_peak_ratio": 1.0,
+        "initial_chebyshev_degree": 4,
+        "initial_coefficient_scale": 1e-10,
+        "initial_profile_shared_across_degrees": true,
+        "initial_seed": 900,
+        "node_count": 5,
+        "phase_components": [
+          "cos",
+          "sin"
+        ],
+        "state_norm_final_growth": 0.6313317618674612,
+        "state_norm_peak_growth": 1.245229082725792,
+        "tangential_wave_number_over_L0": 6.283185307179586,
+        "time_steps": 200
+      },
+      {
+        "degree": 8,
+        "dt_over_L0": 0.022727272727272728,
+        "final_harmonic_constraint_linf": 9.858177289072134e-11,
+        "final_reduction_linf": 5.486746321683705e-11,
+        "final_time_over_L0": 8.0,
+        "gamma0_L0": 1.0,
+        "gamma2_L0": 1.0,
+        "gh_energy_final_ratio": 0.137991416345039,
+        "gh_energy_peak_ratio": 1.0,
+        "initial_chebyshev_degree": 4,
+        "initial_coefficient_scale": 1e-10,
+        "initial_profile_shared_across_degrees": true,
+        "initial_seed": 900,
+        "node_count": 9,
+        "phase_components": [
+          "cos",
+          "sin"
+        ],
+        "state_norm_final_growth": 0.4712260165754726,
+        "state_norm_peak_growth": 1.1972628398720562,
+        "tangential_wave_number_over_L0": 6.283185307179586,
+        "time_steps": 352
+      },
+      {
+        "degree": 12,
+        "dt_over_L0": 0.01020408163265306,
+        "final_harmonic_constraint_linf": 1.0069766670450338e-10,
+        "final_reduction_linf": 1.4103073085414633e-12,
+        "final_time_over_L0": 8.0,
+        "gamma0_L0": 1.0,
+        "gamma2_L0": 1.0,
+        "gh_energy_final_ratio": 0.13826651099908135,
+        "gh_energy_peak_ratio": 1.0,
+        "initial_chebyshev_degree": 4,
+        "initial_coefficient_scale": 1e-10,
+        "initial_profile_shared_across_degrees": true,
+        "initial_seed": 900,
+        "node_count": 13,
+        "phase_components": [
+          "cos",
+          "sin"
+        ],
+        "state_norm_final_growth": 0.47219086269357896,
+        "state_norm_peak_growth": 1.2015930788202234,
+        "tangential_wave_number_over_L0": 6.283185307179586,
+        "time_steps": 784
+      }
+    ]
+  },
+  "WHAT_CHANGED": "Corrected the slab helper's trace contraction to match the canonical GH equation, added its regression, and added a source-hashed 2D slab screen with one exact tangential Fourier mode and direct canonical constraint/gamma0 checks.",
+  "WHAT_IS_ACTUALLY_CLOSED": [
+    "The 3D normal-map reconstruction of constraint, Psi0, and gauge-rate targets closes algebraically against the local Core residual evaluator at both x faces.",
+    "With tangential derivatives set to zero, the reconstructed target reduces to the normal-incidence 4+2+4 formula, including the declared linear gamma0 source contribution.",
+    "The flat-space harmonic constraint, gamma0 damping, and slab helper agree with the canonical Core GH functions to the recorded floating-point residuals.",
+    "Both spatial degrees sample the same seed-locked Chebyshev initial profile, so their finite-time responses use matched initial data."
+  ],
+  "WHAT_REMAINS_OPEN": [
+    "The one-Fourier-mode screen is only run to t/L0=4 on two spatial degrees; it is not a long-time, multi-wavenumber, spatial-convergence, or energy-stability result.",
+    "The two matched-grid responses remain exploratory; the differential-CPBC lane and its stability classification are unresolved.",
+    "Positive normal shift, incoming u2_A, multiple tangential modes, edges/corners, variable coefficients, nonlinear GH, and continuum well-posedness remain open."
+  ],
+  "artifact": "curved_3p1_gh_tangential_cpbc_mode",
+  "closure_level": "PARTIAL",
+  "diagnostic_id": "uet.core.curved_3p1.gh.rinne_tangential_mode_screen",
+  "generated_at": "2026-09-25T05:03:29+00:00",
+  "major_result_id": "CORE_CURVED_3P1_GH_RINNE_TANGENTIAL_MODE_SCREEN",
+  "schema_version": "core-curved-3p1-gh-tangential-cpbc-mode-v1"
+}

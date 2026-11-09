@@ -1,0 +1,149 @@
+{
+  "schema_version": "core-curved-3p1-gh-rinne-joint-limit-v1",
+  "artifact": "curved_3p1_gh_rinne_negative_shift_joint_limit",
+  "generated_at": "2026-09-25T09:40:14+00:00",
+  "major_result_id": "CORE_CURVED_3P1_GH_RINNE_NEGATIVE_SHIFT_JOINT_LUMINAL_LOW_FREQUENCY_LIMIT",
+  "major_result": {
+    "major_result_id": "CORE_CURVED_3P1_GH_RINNE_NEGATIVE_SHIFT_JOINT_LUMINAL_LOW_FREQUENCY_LIMIT",
+    "topic": "core_curved_3p1",
+    "closure_level": "CLOSED_FOR_LANE",
+    "what_is_closed": [
+      "Along beta=-1+epsilon and zeta=sqrt(epsilon), source Eq. (123) gives |det C|~C*epsilon^5 with C=4/(sqrt(3)-1)^26. Thus the source-normalized boundary determinant has no positive parameter-uniform lower bound over the entire open subluminal negative-shift domain as beta approaches -1 and zeta approaches 0.",
+      "The registered row-equilibrated boundary-symbol sample has rank 30 at four moderate epsilon values while sigma_min/sigma_max decreases monotonically from about 1.48e-6 to 1.53e-9. This is a finite conditioning diagnostic consistent with loss of uniform conditioning, not a proof of the exact singular-value exponent."
+    ],
+    "what_remains_open": [
+      "A direct asymptotic derivation of the minimum singular value or inverse boundary-map norm along the joint path is still needed before claiming a uniform Kreiss estimate fails in the full operator norm.",
+      "Per-fixed-beta Kreiss stability, compact beta intervals bounded away from -1 and 0, the beta=0 lane transition, variable-coefficient/nonlinear GH, corners, matter boundaries, and the Core curved-parent gate remain separate questions."
+    ],
+    "dependency_unlocked": "none; this closes only the full-domain uniform determinant-floor question and unlocks no Core-parent or Gravity dependency",
+    "equation_or_mapping": {
+      "joint_limit_path": "epsilon=1+beta -> 0+, beta=-1+epsilon, zeta=sqrt(epsilon)>0",
+      "asymptotic_modes": "lambda1^-~(1-sqrt(3))/(2*sqrt(epsilon)); lambda2=zeta/beta~ -sqrt(epsilon)",
+      "asymptotic_normalizations": "K1~(sqrt(6)-sqrt(2))/(2*sqrt(epsilon)); K2->1",
+      "source_eq123_result": "|det C|~[(1+sqrt(3))/2]^16/[8*((sqrt(6)-sqrt(2))/2)^10]*epsilon^5 = [4/(sqrt(3)-1)^26]*epsilon^5",
+      "interpretation": "No parameter-uniform positive determinant floor exists over all -1<beta<0 and Re(zeta)>0 in this source-normalized boundary-data basis; this does not contradict a Kreiss bound for each fixed beta."
+    },
+    "units": "Frozen local orthonormal geometric units; zeta=s/omega and epsilon are dimensionless.",
+    "derivation_class": "analytic asymptotic of source Eq. (123), with finite registered boundary-symbol singular-value cross-check",
+    "observable": "source-normalized boundary determinant and row-equilibrated sigma_min/sigma_max diagnostic",
+    "data_role": "primary-literature formula cross-check; no empirical data, fitting, or calibration",
+    "verification_status": "PASS_NO_UNIFORM_DETERMINANT_FLOOR_JOINT_LIMIT_IDENTIFIED",
+    "claim_boundary": "The asymptotic determinant-floor result is analytic for the declared joint path. The observed singular-value trend is finite-precision numerical evidence only; it is not a complete inverse-map/Kreiss failure proof, does not negate per-background stability for fixed beta, and does not close the Core curved parent or Gravity."
+  },
+  "closure_level": "CLOSED_FOR_LANE",
+  "STATUS": "PASS_NO_UNIFORM_DETERMINANT_FLOOR_JOINT_LIMIT_IDENTIFIED",
+  "MAJOR_RESULT_CLOSURE": "CLOSED_FOR_LANE",
+  "WHAT_IS_ACTUALLY_CLOSED": [
+    "Along beta=-1+epsilon and zeta=sqrt(epsilon), source Eq. (123) gives |det C|~C*epsilon^5 with C=4/(sqrt(3)-1)^26. Thus the source-normalized boundary determinant has no positive parameter-uniform lower bound over the entire open subluminal negative-shift domain as beta approaches -1 and zeta approaches 0.",
+    "The registered row-equilibrated boundary-symbol sample has rank 30 at four moderate epsilon values while sigma_min/sigma_max decreases monotonically from about 1.48e-6 to 1.53e-9. This is a finite conditioning diagnostic consistent with loss of uniform conditioning, not a proof of the exact singular-value exponent."
+  ],
+  "WHAT_REMAINS_OPEN": [
+    "A direct asymptotic derivation of the minimum singular value or inverse boundary-map norm along the joint path is still needed before claiming a uniform Kreiss estimate fails in the full operator norm.",
+    "Per-fixed-beta Kreiss stability, compact beta intervals bounded away from -1 and 0, the beta=0 lane transition, variable-coefficient/nonlinear GH, corners, matter boundaries, and the Core curved-parent gate remain separate questions."
+  ],
+  "DEPENDENCY_UNLOCKED": "none; this closes only the full-domain uniform determinant-floor question and unlocks no Core-parent or Gravity dependency",
+  "EQUATION_OR_MAPPING": {
+    "joint_limit_path": "epsilon=1+beta -> 0+, beta=-1+epsilon, zeta=sqrt(epsilon)>0",
+    "asymptotic_modes": "lambda1^-~(1-sqrt(3))/(2*sqrt(epsilon)); lambda2=zeta/beta~ -sqrt(epsilon)",
+    "asymptotic_normalizations": "K1~(sqrt(6)-sqrt(2))/(2*sqrt(epsilon)); K2->1",
+    "source_eq123_result": "|det C|~[(1+sqrt(3))/2]^16/[8*((sqrt(6)-sqrt(2))/2)^10]*epsilon^5 = [4/(sqrt(3)-1)^26]*epsilon^5",
+    "interpretation": "No parameter-uniform positive determinant floor exists over all -1<beta<0 and Re(zeta)>0 in this source-normalized boundary-data basis; this does not contradict a Kreiss bound for each fixed beta."
+  },
+  "VERIFICATION": {
+    "determinant_checks": {
+      "epsilon_values_are_in_sub_luminal_negative_shift_domain": true,
+      "joint_path_avoids_exact_degenerate_root": true,
+      "source_eq123_determinant_converges_to_C_epsilon5": true,
+      "determinant_tends_to_zero_on_joint_path": true
+    },
+    "matrix_checks": {
+      "moderate_epsilon_matrices_retain_rank_30": true,
+      "row_equilibrated_singular_ratio_decreases_along_sampled_path": true,
+      "matrix_diagnostic_remains_above_double_precision_rank_floor": true
+    },
+    "joint_path_determinant": [
+      {
+        "epsilon": 0.01,
+        "rinne_beta": -0.99,
+        "zeta_real": 0.1,
+        "eq123_log_abs_determinant": -13.66634601932766,
+        "asymptotic_log_abs_determinant": -13.530017256077231,
+        "ratio_to_C_epsilon5": 0.8725557210732985
+      },
+      {
+        "epsilon": 0.0001,
+        "rinne_beta": -0.9999,
+        "zeta_real": 0.01,
+        "eq123_log_abs_determinant": -36.55720915311396,
+        "asymptotic_log_abs_determinant": -36.55586818601768,
+        "ratio_to_C_epsilon5": 0.9986599315983493
+      },
+      {
+        "epsilon": 1e-06,
+        "rinne_beta": -0.999999,
+        "zeta_real": 0.001,
+        "eq123_log_abs_determinant": -59.58173252310069,
+        "asymptotic_log_abs_determinant": -59.581719115958144,
+        "ratio_to_C_epsilon5": 0.999986592947329
+      },
+      {
+        "epsilon": 1e-08,
+        "rinne_beta": -0.99999999,
+        "zeta_real": 0.0001,
+        "eq123_log_abs_determinant": -82.6075701393393,
+        "asymptotic_log_abs_determinant": -82.60757004589863,
+        "ratio_to_C_epsilon5": 0.9999999065593287
+      }
+    ],
+    "registered_matrix_path": [
+      {
+        "epsilon": 0.01,
+        "rinne_beta": -0.99,
+        "zeta_real": 0.1,
+        "boundary_matrix_rank": 30,
+        "row_equilibrated_sigma_min_over_sigma_max": 1.4828041845110994e-06,
+        "sigma_ratio_over_epsilon_cubed": 1.482804184511099,
+        "eq123_numeric_log_offset": 4.094502514817577e-12
+      },
+      {
+        "epsilon": 0.005,
+        "rinne_beta": -0.995,
+        "zeta_real": 0.07071067811865475,
+        "boundary_matrix_rank": 30,
+        "row_equilibrated_sigma_min_over_sigma_max": 1.887094164215578e-07,
+        "sigma_ratio_over_epsilon_cubed": 1.509675331372462,
+        "eq123_numeric_log_offset": -2.661195708242303e-10
+      },
+      {
+        "epsilon": 0.002,
+        "rinne_beta": -0.998,
+        "zeta_real": 0.044721359549995794,
+        "boundary_matrix_rank": 30,
+        "row_equilibrated_sigma_min_over_sigma_max": 1.220884750687179e-08,
+        "sigma_ratio_over_epsilon_cubed": 1.5261059383589737,
+        "eq123_numeric_log_offset": -5.642483813517174e-09
+      },
+      {
+        "epsilon": 0.001,
+        "rinne_beta": -0.999,
+        "zeta_real": 0.03162277660168379,
+        "boundary_matrix_rank": 30,
+        "row_equilibrated_sigma_min_over_sigma_max": 1.5316343400270022e-09,
+        "sigma_ratio_over_epsilon_cubed": 1.531634340027002,
+        "eq123_numeric_log_offset": -5.147484571921268e-08
+      }
+    ],
+    "asymptotic_coefficient": 13304.18164062503,
+    "double_precision_rank_relative_tolerance": 1e-10,
+    "source_hashes": {
+      "docs/scripts/audit/audit_curved_3p1_gh_rinne_negative_shift_joint_limit.py": "b3ad47c3c36015ed7d0f9f0afecc09d803974e6fbd9a2e8c14206468767f6170",
+      "docs/scripts/audit/audit_curved_3p1_gh_rinne_negative_shift_kreiss_symbol.py": "f482a1b1cb61480bfaa3cb27e5a2b7cdad65218fcc6521d0d587e742ffce3f2b",
+      "docs/core/07_artifacts/verification/curved_3p1_gh_rinne_negative_shift_kreiss_symbol.json": "5d48f6efe14f8c3501da5d8568544608fcc2d8fe7b24f798523ffdd919e39924"
+    }
+  },
+  "CONTROLLING_BLOCKER": "uniform_inverse_boundary_map_asymptotic_not_yet_derived_even_though_uniform_determinant_floor_is_absent",
+  "NEXT_ACTION": "Derive the normalized smallest-singular-value asymptotic along beta=-1+epsilon,zeta=sqrt(epsilon), then analyze compact shift intervals and the separate beta=0 transition; do not conflate this joint limit with fixed-beta Kreiss stability.",
+  "CLAIM_BOUNDARY": "The asymptotic determinant-floor result is analytic for the declared joint path. The observed singular-value trend is finite-precision numerical evidence only; it is not a complete inverse-map/Kreiss failure proof, does not negate per-background stability for fixed beta, and does not close the Core curved parent or Gravity.",
+  "full_core_unlock": false,
+  "gravity_unlock": false
+}

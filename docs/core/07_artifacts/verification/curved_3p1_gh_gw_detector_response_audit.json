@@ -1,0 +1,144 @@
+{
+  "schema_version": "uet-curved-3p1-gw-detector-response-v1",
+  "diagnostic_id": "uet.main_theory.curved_3p1.linear_gw_detector_response",
+  "artifact": "curved_3p1_gh_gw_detector_response_audit",
+  "generated_at": "2026-09-24T21:17:16.036184+00:00",
+  "status": "PASS_GH_LINEAR_GW_INTERFEROMETER_RESPONSE",
+  "claim_promotion": false,
+  "checks": {
+    "gh_spatial_metric_extracts_dimensionless_mode": true,
+    "tt_projection_is_transverse_and_tracefree": true,
+    "low_frequency_plus_response_matches_analytic_strain": true,
+    "finite_frequency_transfer_matches_closed_form_control": true,
+    "cross_polarization_matches_rotated_arm_control": true,
+    "plane_wave_spatial_gauge_mode_is_removed_by_tt_projection": true,
+    "detector_response_is_rotation_covariant": true,
+    "negative_frequency_transfer_is_complex_conjugate": true,
+    "equivalent_length_scales_with_si_arm_length": true,
+    "source_record_and_code_hashes_are_available": true
+  },
+  "metrics": {
+    "tt_trace_abs": 0.0,
+    "tt_transverse_linf": 0.0,
+    "low_frequency_strain": [
+      2.499999999960867e-06,
+      0.0
+    ],
+    "finite_frequency_strain": [
+      2.4999839642352804e-06,
+      -7.7546017109318e-09
+    ],
+    "finite_frequency_expected": [
+      2.4999839642352804e-06,
+      -7.754601710931802e-09
+    ],
+    "transfer_frequency_hz_for_4000m": 11928.362898092357,
+    "maximum_rotation_response_difference": 3.9132686904389e-17
+  },
+  "equation_or_mapping": {
+    "gh_metric_to_spatial_mode": "h_ij = gamma_ij - delta_ij",
+    "tt_projection": "h_TT = P h P - 1/2 P tr(P h P), P_ij=delta_ij-n_i n_j",
+    "transfer_frequency": "f_star = c/(2*pi*L)",
+    "arm_transfer": "T(f,mu)=1/2*[sinc(q*(1-mu))*exp(-i*q*(3+mu)) + sinc(q*(1+mu))*exp(-i*q*(1+mu))], q=pi*f*L/c",
+    "detector_tensor": "D_ij(f)=1/2*(u_i*u_j*T_u-v_i*v_j*T_v)",
+    "measured_strain_mode": "h_D(f)=D_ij(f)*h_TT_ij(f)",
+    "low_frequency_limit": "T_u,T_v -> 1 as f*L/c -> 0",
+    "equivalent_length": "DeltaL_equiv(f)=L*h_D(f)"
+  },
+  "units": {
+    "spacetime_metric_and_h_TT": "dimensionless",
+    "frequency_hz": "s^-1",
+    "arm_length_m": "m",
+    "speed_of_light": "m s^-1 (exact SI defining constant)",
+    "transfer_frequency_hz": "s^-1",
+    "arm_vectors_and_propagation_direction": "dimensionless unit vectors",
+    "detector_tensor_and_strain_response": "dimensionless",
+    "equivalent_differential_length_m": "m; literal arm displacement only in the low-frequency limit"
+  },
+  "assumptions": [
+    "linearized plane-wave mode in an asymptotically Minkowski wave zone",
+    "spatial TT projection relative to the declared propagation direction",
+    "equal physical arm lengths and fixed arm directions",
+    "ideal Michelson single-round-trip response without optical cavities",
+    "frequency-domain mode supplied by caller; no time-series FFT is included"
+  ],
+  "excluded": [
+    "nonlinear or strong-field radiation extraction",
+    "finite-control-loop and optical-cavity response",
+    "noise, calibration uncertainty, or detector data",
+    "self-consistent UET metric generation or Einstein-equation derivation",
+    "UET Phi, C, R_gen, and R_obs as inputs or state variables"
+  ],
+  "constant_origin": {
+    "speed_of_light_m_s": "299792458 exactly by the SI definition of the metre"
+  },
+  "input_identity": {
+    "source_record_path": "docs/data/external/gr_3p1/gw_interferometer_response/source_record.json",
+    "source_record_sha256": "27e3976651c2a4bdd5d6a261da15ef136ef6dc751dca798d5570f21bee482f21",
+    "data_rows_consumed": 0,
+    "detector_data_consumed": false,
+    "holdout_consumed": false
+  },
+  "source_hashes": {
+    "docs/data/external/gr_3p1/gw_interferometer_response/source_record.json": "27e3976651c2a4bdd5d6a261da15ef136ef6dc751dca798d5570f21bee482f21",
+    "docs/core/02_equations/covariant/uet_curved_3p1_gw_detector_response.py": "7400631226146f0e528ae81c65b45a4190aa3d0935463c5c5f7982d75814054c",
+    "docs/core/05_tests/regression/root/test_uet_curved_3p1_gw_detector_response.py": "4b297ce9783f09216b4d7febbfd774365b9f2fcf852cdac35f1fa879c7a4533c"
+  },
+  "literature_basis": [
+    {
+      "source": "Liang et al. (2019), Phys. Rev. D 99, 104027",
+      "url": "https://arxiv.org/abs/1901.09624",
+      "locators": "Eqs. (2)-(6), Sec. II.3",
+      "used_for": "TT polarization tensors, equal-arm frequency response, and low-frequency limit"
+    },
+    {
+      "source": "BIPM SI definition of the metre",
+      "url": "https://www.bipm.org/en/si-base-units/metre",
+      "locator": "fixed exact value of c in m s^-1",
+      "used_for": "exact SI conversion constant c=299792458 m s^-1"
+    }
+  ],
+  "major_result": {
+    "major_result_id": "CORE_CURVED_3P1_GW_DETECTOR_RESPONSE_LANE",
+    "topic": "core",
+    "closure_level": "CLOSED_FOR_LANE",
+    "what_is_closed": [
+      "spatial metric perturbation to plane-wave TT projection in the declared flat wave-zone lane",
+      "source-matched finite-frequency equal-arm interferometer response without optical cavities",
+      "SI frequency, arm-length, exact-c, dimensionless strain, and equivalent-length contract",
+      "analytic plus/cross, pure-gauge, rotational-covariance, and frequency-conjugacy controls"
+    ],
+    "equation_or_mapping": {
+      "gh_metric_to_spatial_mode": "h_ij = gamma_ij - delta_ij",
+      "tt_projection": "h_TT = P h P - 1/2 P tr(P h P), P_ij=delta_ij-n_i n_j",
+      "transfer_frequency": "f_star = c/(2*pi*L)",
+      "arm_transfer": "T(f,mu)=1/2*[sinc(q*(1-mu))*exp(-i*q*(3+mu)) + sinc(q*(1+mu))*exp(-i*q*(1+mu))], q=pi*f*L/c",
+      "detector_tensor": "D_ij(f)=1/2*(u_i*u_j*T_u-v_i*v_j*T_v)",
+      "measured_strain_mode": "h_D(f)=D_ij(f)*h_TT_ij(f)",
+      "low_frequency_limit": "T_u,T_v -> 1 as f*L/c -> 0",
+      "equivalent_length": "DeltaL_equiv(f)=L*h_D(f)"
+    },
+    "units": {
+      "spacetime_metric_and_h_TT": "dimensionless",
+      "frequency_hz": "s^-1",
+      "arm_length_m": "m",
+      "speed_of_light": "m s^-1 (exact SI defining constant)",
+      "transfer_frequency_hz": "s^-1",
+      "arm_vectors_and_propagation_direction": "dimensionless unit vectors",
+      "detector_tensor_and_strain_response": "dimensionless",
+      "equivalent_differential_length_m": "m; literal arm displacement only in the low-frequency limit"
+    },
+    "derivation_class": "standard-GR detector response formula with analytic tensor projection and internal controls",
+    "observable": "ideal equal-arm interferometer frequency-domain strain response to one TT plane-wave mode",
+    "data_role": "synthetic analytic control only; no detector data or parameter fit",
+    "verification_status": "PASS_GH_LINEAR_GW_INTERFEROMETER_RESPONSE",
+    "open_blockers": [
+      "GH evolution wave-zone extraction and temporal Fourier map not integrated",
+      "detector calibration, optical cavities/control loops, noise, and uncertainty package absent",
+      "non-periodic CPBC evolution and nonlinear/strong-field mapping remain open"
+    ],
+    "dependency_unlocked": "bounded linearized TT-mode observable mapping only; Core parent and Gravity remain blocked",
+    "claim_boundary": "standard-GR detector measurement operator for a single TT plane-wave mode; not external validation or a detector calibration pipeline, and not a UET prediction"
+  },
+  "claim_boundary": "standard-GR detector measurement operator for a single TT plane-wave mode; not external validation or a detector calibration pipeline, and not a UET prediction"
+}

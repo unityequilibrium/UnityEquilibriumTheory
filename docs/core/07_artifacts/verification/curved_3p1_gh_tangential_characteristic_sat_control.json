@@ -1,0 +1,827 @@
+{
+  "CLAIM_BOUNDARY": "Finite-grid, frozen-background standard-GR numerical-method control only; not the differential Rinne CPBC, continuum stability proof, UET validation, curved 3+1 parent closure, or Gravity unlock.",
+  "CONTROLLING_BLOCKER": "source_matched_fourier_laplace_kreiss_boundary_symbol_audit_for_registered_differential_cpbc_missing",
+  "DEPENDENCY_UNLOCKED": "none; Core curved 3+1 remains PARTIAL and Gravity remains blocked",
+  "EQUATION_OR_MAPPING": {
+    "differential_rinne_target": "target is a prescribed value for d(q_in)/dt from the constraint/physical/gauge residual maps; it is not q_in boundary data",
+    "direct_sat": "delta(Pi_dot)_face=-H_face^-1*q_in; delta(psi_dot)=delta(Phi_dot)=0",
+    "energy": "E_h=1/2 sum_x,phase w_x [4||psi||_G^2-2*gamma2<psi,Pi>_G+||Pi||_G^2+sum_i||Phi_i||_G^2]",
+    "energy_identity": "dE_h/dt=R_lower-sum_faces||Pi-gamma2*psi||_G^2 for homogeneous q_in=0; tangential periodic-mode flux cancels",
+    "energy_logarithmic_norm": "mu_E=lambda_max(H_E^(-1/2)*sym(H_E*A_h)*H_E^(-1/2)); dE_h/dt<=2*mu_E*E_h; evaluated for each semidiscrete matrix",
+    "energy_method_scope": "The analytic 2*mu bound applies to the direct homogeneous max-dissipative SAT control in this audit, not as a required acceptance condition for the differential-type Rinne CPBC.",
+    "incoming_characteristic": "q_in=Pi-n*Phi_x-gamma2*psi",
+    "lower_order_rate": "R_lower=sum w[-4<psi,Pi>_G+gamma2||Pi||_G^2-gamma2*sum_i||Phi_i||_G^2]",
+    "projector_contract": "P_C+P_P+P_G=I, with G-self-adjoint, mutually orthogonal projectors; the identity SAT penalty is sectorwise compatible"
+  },
+  "MAJOR_RESULT_CLOSURE": "PARTIAL",
+  "NEXT_ACTION": "Build the frozen-coefficient Fourier-Laplace boundary symbol for the registered constraint, Weyl/physical, and gauge residuals; verify decay-subspace dimensions, determinant/smallest-singular-value behavior for Re(s)>=0 including generalized-eigenvalue limits, then compare the semidiscrete LGL boundary operator without using its spectrum as a continuum no-go.",
+  "PREREGISTRATION": {
+    "gamma0_L0": 0.0,
+    "gamma2_L0": 1.0,
+    "operator_family": "Legendre-Gauss-Lobatto diagonal-norm SBP",
+    "orders": [
+      8,
+      10,
+      12,
+      14,
+      16
+    ],
+    "parameter_fitting": false,
+    "positive_real_part_reference_tolerance": 1e-06,
+    "symmetrizer_lambda_squared": 4.0,
+    "tangential_wavenumber_over_L0": 3.141592653589793,
+    "threshold_changes": false
+  },
+  "SECONDARY_OPEN_QUESTION": "Whether an energy-compatible weak discretization of the registered differential targets exists is a numerical-method question, not a continuum prerequisite; do not equate q_in_dot with q_in or posit boundary storage without a physical derivation.",
+  "STATUS": "OPEN_TANGENTIAL_CHARACTERISTIC_SAT_CONTROL",
+  "VERIFICATION": {
+    "all_direct_sat_energy_growth_rates_within_2mu_bound": true,
+    "all_source_hashes_match_at_generation": true,
+    "case_count": 5,
+    "cases": [
+      {
+        "gamma0_L0": 0.0,
+        "gamma2_L0": 1.0,
+        "lgl_order": 8,
+        "node_count": 9,
+        "operator_application_relative_residuals": {
+          "direct_sat": 1.6698666935229756e-16,
+          "rinne_strong": 2.4072785609866513e-16
+        },
+        "random_state_direct_sat_energy_balance": {
+          "absolute_identity_residual": 5.684341886080802e-14,
+          "boundary_dissipation": 133.01271163301888,
+          "energy": 241.38550598348593,
+          "lower_order_rate": -144.67651626064162,
+          "observed_dE_dt": -277.6892278936604,
+          "predicted_dE_dt": -277.6892278936605
+        },
+        "reduction_constraint_rhs_identity_residual": 7.105427357601002e-15,
+        "sbp_identity_max_abs_residual": 1.6113713928603456e-14,
+        "spectra": {
+          "differential_rinne_strong_target": {
+            "energy_matrix_positive_definite_by_cholesky": true,
+            "leading_eigenvalues_over_L0_inverse": [
+              {
+                "imag": -5.009177136655872e-15,
+                "real": 8.03473065942123e-15
+              },
+              {
+                "imag": 5.009177136655872e-15,
+                "real": 8.03473065942123e-15
+              },
+              {
+                "imag": 0.0,
+                "real": 5.766186483841862e-15
+              },
+              {
+                "imag": -9.57874993810822e-15,
+                "real": 3.483076072577541e-15
+              },
+              {
+                "imag": 9.57874993810822e-15,
+                "real": 3.483076072577541e-15
+              },
+              {
+                "imag": 2.021904160586804e-15,
+                "real": 3.054307020591299e-15
+              }
+            ],
+            "maximum_energy_norm_log_growth_rate_over_L0_inverse": 7.714991335238229,
+            "maximum_energy_relative_growth_rate_over_L0_inverse": 15.429982670476457,
+            "optimal_direction_boundary_relative_energy_rate_over_L0_inverse": -5.54473577021303,
+            "optimal_direction_bulk_boundary_balance_abs_residual": 0.0,
+            "optimal_direction_bulk_relative_energy_rate_over_L0_inverse": 20.974718440689482,
+            "optimal_direction_endpoint_energy_fraction": 0.6903637463331393,
+            "optimal_direction_energy_rate_check_abs_residual": 5.329070518200751e-15,
+            "optimal_direction_incoming_sector_fractions": {
+              "left": {
+                "projected_incoming_norm_squared": 20.79887554824637,
+                "sector_fractions": {
+                  "constraint": 0.1834095423567734,
+                  "gauge": 0.08003668750632392,
+                  "physical": 0.7365537701369027
+                }
+              },
+              "right": {
+                "projected_incoming_norm_squared": 20.798875548229105,
+                "sector_fractions": {
+                  "constraint": 0.18340954235676526,
+                  "gauge": 0.08003668750631916,
+                  "physical": 0.7365537701369156
+                }
+              }
+            },
+            "optimal_direction_relative_energy_rate_over_L0_inverse": 15.429982670476452,
+            "positive_mode_count_above_existing_1e-6_tolerance": 0,
+            "spectral_abscissa_over_L0_inverse": 8.03473065942123e-15
+          },
+          "direct_incoming_characteristic_weak_sat": {
+            "energy_matrix_positive_definite_by_cholesky": true,
+            "leading_eigenvalues_over_L0_inverse": [
+              {
+                "imag": -3.4072584466550286,
+                "real": -0.13937273042918896
+              },
+              {
+                "imag": 3.4072584466550286,
+                "real": -0.13937273042918896
+              },
+              {
+                "imag": -3.4072584466550335,
+                "real": -0.13937273042919054
+              },
+              {
+                "imag": 3.4072584466550335,
+                "real": -0.13937273042919054
+              },
+              {
+                "imag": -3.407258446655045,
+                "real": -0.13937273042919296
+              },
+              {
+                "imag": 3.407258446655045,
+                "real": -0.13937273042919296
+              }
+            ],
+            "maximum_energy_norm_log_growth_rate_over_L0_inverse": 1.1547005383792637,
+            "maximum_energy_relative_growth_rate_over_L0_inverse": 2.3094010767585273,
+            "optimal_direction_boundary_relative_energy_rate_over_L0_inverse": -1.5878285811055417e-30,
+            "optimal_direction_bulk_boundary_balance_abs_residual": 1.5878285811055417e-30,
+            "optimal_direction_bulk_relative_energy_rate_over_L0_inverse": 2.309401076758503,
+            "optimal_direction_endpoint_energy_fraction": 1.3106306848442914e-30,
+            "optimal_direction_energy_rate_check_abs_residual": 2.4424906541753444e-14,
+            "optimal_direction_incoming_sector_fractions": {
+              "left": {
+                "projected_incoming_norm_squared": 7.256673684065023e-30,
+                "sector_fractions": {
+                  "constraint": 0.5651219850692902,
+                  "gauge": 0.32759661027875403,
+                  "physical": 0.10728140465195582
+                }
+              },
+              "right": {
+                "projected_incoming_norm_squared": 3.0537890617123283e-31,
+                "sector_fractions": {
+                  "constraint": 0.09027509065052843,
+                  "gauge": 0.10637687671082234,
+                  "physical": 0.8033480326386493
+                }
+              }
+            },
+            "optimal_direction_relative_energy_rate_over_L0_inverse": 2.309401076758503,
+            "positive_mode_count_above_existing_1e-6_tolerance": 0,
+            "spectral_abscissa_over_L0_inverse": -0.13937273042918896
+          }
+        },
+        "state_dimension": 900,
+        "tangential_wavenumber_over_L0": 3.141592653589793
+      },
+      {
+        "gamma0_L0": 0.0,
+        "gamma2_L0": 1.0,
+        "lgl_order": 10,
+        "node_count": 11,
+        "operator_application_relative_residuals": {
+          "direct_sat": 2.136205678570572e-16,
+          "rinne_strong": 2.408306005934355e-16
+        },
+        "random_state_direct_sat_energy_balance": {
+          "absolute_identity_residual": 3.410605131648481e-13,
+          "boundary_dissipation": 103.0405281147141,
+          "energy": 273.1639396381944,
+          "lower_order_rate": -124.66869570373501,
+          "observed_dE_dt": -227.70922381844946,
+          "predicted_dE_dt": -227.70922381844912
+        },
+        "reduction_constraint_rhs_identity_residual": 1.4210854715202004e-14,
+        "sbp_identity_max_abs_residual": 2.0426349576069357e-14,
+        "spectra": {
+          "differential_rinne_strong_target": {
+            "energy_matrix_positive_definite_by_cholesky": true,
+            "leading_eigenvalues_over_L0_inverse": [
+              {
+                "imag": 10.426409352209683,
+                "real": 0.06576277384982379
+              },
+              {
+                "imag": -10.426409352209683,
+                "real": 0.06576277384982379
+              },
+              {
+                "imag": -10.426409352209795,
+                "real": 0.0657627738498126
+              },
+              {
+                "imag": 10.426409352209795,
+                "real": 0.0657627738498126
+              },
+              {
+                "imag": -10.426760898232104,
+                "real": 0.06529840795511066
+              },
+              {
+                "imag": 10.426760898232104,
+                "real": 0.06529840795511066
+              }
+            ],
+            "maximum_energy_norm_log_growth_rate_over_L0_inverse": 11.018141419878722,
+            "maximum_energy_relative_growth_rate_over_L0_inverse": 22.036282839757444,
+            "optimal_direction_boundary_relative_energy_rate_over_L0_inverse": -8.050045545207539,
+            "optimal_direction_bulk_boundary_balance_abs_residual": 3.552713678800501e-15,
+            "optimal_direction_bulk_relative_energy_rate_over_L0_inverse": 30.086328384964993,
+            "optimal_direction_endpoint_energy_fraction": 0.672369748546889,
+            "optimal_direction_energy_rate_check_abs_residual": 1.4210854715202004e-14,
+            "optimal_direction_incoming_sector_fractions": {
+              "left": {
+                "projected_incoming_norm_squared": 30.005858391090257,
+                "sector_fractions": {
+                  "constraint": 0.11163566657286333,
+                  "gauge": 0.04885603509165639,
+                  "physical": 0.8395082983354804
+                }
+              },
+              "right": {
+                "projected_incoming_norm_squared": 30.005858391078373,
+                "sector_fractions": {
+                  "constraint": 0.11163566657286332,
+                  "gauge": 0.04885603509165562,
+                  "physical": 0.839508298335481
+                }
+              }
+            },
+            "optimal_direction_relative_energy_rate_over_L0_inverse": 22.036282839757458,
+            "positive_mode_count_above_existing_1e-6_tolerance": 16,
+            "spectral_abscissa_over_L0_inverse": 0.06576277384982379
+          },
+          "direct_incoming_characteristic_weak_sat": {
+            "energy_matrix_positive_definite_by_cholesky": true,
+            "leading_eigenvalues_over_L0_inverse": [
+              {
+                "imag": -3.4072584466550224,
+                "real": -0.13937273042747816
+              },
+              {
+                "imag": 3.4072584466550224,
+                "real": -0.13937273042747816
+              },
+              {
+                "imag": 3.4072584466550104,
+                "real": -0.13937273042749115
+              },
+              {
+                "imag": -3.4072584466550104,
+                "real": -0.13937273042749115
+              },
+              {
+                "imag": -3.4072584466549976,
+                "real": -0.13937273042749665
+              },
+              {
+                "imag": 3.4072584466549976,
+                "real": -0.13937273042749665
+              }
+            ],
+            "maximum_energy_norm_log_growth_rate_over_L0_inverse": 1.1547005383792877,
+            "maximum_energy_relative_growth_rate_over_L0_inverse": 2.3094010767585753,
+            "optimal_direction_boundary_relative_energy_rate_over_L0_inverse": -3.5029533175550404e-30,
+            "optimal_direction_bulk_boundary_balance_abs_residual": 3.5029533175550404e-30,
+            "optimal_direction_bulk_relative_energy_rate_over_L0_inverse": 2.3094010767585034,
+            "optimal_direction_endpoint_energy_fraction": 2.5968692595347164e-30,
+            "optimal_direction_energy_rate_check_abs_residual": 7.194245199571014e-14,
+            "optimal_direction_incoming_sector_fractions": {
+              "left": {
+                "projected_incoming_norm_squared": 1.8350891793670445e-29,
+                "sector_fractions": {
+                  "constraint": 0.28628901247304284,
+                  "gauge": 0.5494168593149485,
+                  "physical": 0.16429412821200862
+                }
+              },
+              "right": {
+                "projected_incoming_norm_squared": 8.6851764022976e-31,
+                "sector_fractions": {
+                  "constraint": 0.55252513474862,
+                  "gauge": 0.4446091352899906,
+                  "physical": 0.0028657299613893926
+                }
+              }
+            },
+            "optimal_direction_relative_energy_rate_over_L0_inverse": 2.3094010767585034,
+            "positive_mode_count_above_existing_1e-6_tolerance": 0,
+            "spectral_abscissa_over_L0_inverse": -0.13937273042747816
+          }
+        },
+        "state_dimension": 1100,
+        "tangential_wavenumber_over_L0": 3.141592653589793
+      },
+      {
+        "gamma0_L0": 0.0,
+        "gamma2_L0": 1.0,
+        "lgl_order": 12,
+        "node_count": 13,
+        "operator_application_relative_residuals": {
+          "direct_sat": 1.6409503404842495e-16,
+          "rinne_strong": 3.0966141566369617e-16
+        },
+        "random_state_direct_sat_energy_balance": {
+          "absolute_identity_residual": 1.3926637620897964e-12,
+          "boundary_dissipation": 123.02650237684719,
+          "energy": 255.82206661542617,
+          "lower_order_rate": -96.9267803965196,
+          "observed_dE_dt": -219.9532827733654,
+          "predicted_dE_dt": -219.9532827733668
+        },
+        "reduction_constraint_rhs_identity_residual": 2.842170943040401e-14,
+        "sbp_identity_max_abs_residual": 4.6855325148489274e-14,
+        "spectra": {
+          "differential_rinne_strong_target": {
+            "energy_matrix_positive_definite_by_cholesky": true,
+            "leading_eigenvalues_over_L0_inverse": [
+              {
+                "imag": -13.949542608444322,
+                "real": 0.2008024788525179
+              },
+              {
+                "imag": 13.949542608444322,
+                "real": 0.2008024788525179
+              },
+              {
+                "imag": -13.949542608444263,
+                "real": 0.2008024788525069
+              },
+              {
+                "imag": 13.949542608444263,
+                "real": 0.2008024788525069
+              },
+              {
+                "imag": 13.949573440746754,
+                "real": 0.20064214000446376
+              },
+              {
+                "imag": -13.949573440746754,
+                "real": 0.20064214000446376
+              }
+            ],
+            "maximum_energy_norm_log_growth_rate_over_L0_inverse": 15.144995147326098,
+            "maximum_energy_relative_growth_rate_over_L0_inverse": 30.289990294652196,
+            "optimal_direction_boundary_relative_energy_rate_over_L0_inverse": -10.90262189200716,
+            "optimal_direction_bulk_boundary_balance_abs_residual": 1.7763568394002505e-15,
+            "optimal_direction_bulk_relative_energy_rate_over_L0_inverse": 41.19261218665935,
+            "optimal_direction_endpoint_energy_fraction": 0.6639274269959118,
+            "optimal_direction_energy_rate_check_abs_residual": 3.552713678800501e-15,
+            "optimal_direction_incoming_sector_fractions": {
+              "left": {
+                "projected_incoming_norm_squared": 41.17655529708786,
+                "sector_fractions": {
+                  "constraint": 0.06603812787688189,
+                  "gauge": 0.028986440085681946,
+                  "physical": 0.9049754320374362
+                }
+              },
+              "right": {
+                "projected_incoming_norm_squared": 41.17655529695895,
+                "sector_fractions": {
+                  "constraint": 0.06603812787687316,
+                  "gauge": 0.02898644008567748,
+                  "physical": 0.9049754320374493
+                }
+              }
+            },
+            "optimal_direction_relative_energy_rate_over_L0_inverse": 30.289990294652192,
+            "positive_mode_count_above_existing_1e-6_tolerance": 16,
+            "spectral_abscissa_over_L0_inverse": 0.2008024788525179
+          },
+          "direct_incoming_characteristic_weak_sat": {
+            "energy_matrix_positive_definite_by_cholesky": true,
+            "leading_eigenvalues_over_L0_inverse": [
+              {
+                "imag": -3.407258446655013,
+                "real": -0.13937273042749143
+              },
+              {
+                "imag": 3.407258446655013,
+                "real": -0.13937273042749143
+              },
+              {
+                "imag": 3.4072584466549993,
+                "real": -0.139372730427492
+              },
+              {
+                "imag": -3.4072584466549993,
+                "real": -0.139372730427492
+              },
+              {
+                "imag": -3.407258446654987,
+                "real": -0.1393727304275002
+              },
+              {
+                "imag": 3.407258446654987,
+                "real": -0.1393727304275002
+              }
+            ],
+            "maximum_energy_norm_log_growth_rate_over_L0_inverse": 1.1547005383792828,
+            "maximum_energy_relative_growth_rate_over_L0_inverse": 2.3094010767585655,
+            "optimal_direction_boundary_relative_energy_rate_over_L0_inverse": -1.6580999630819735e-30,
+            "optimal_direction_bulk_boundary_balance_abs_residual": 1.6580999630819735e-30,
+            "optimal_direction_bulk_relative_energy_rate_over_L0_inverse": 2.309401076758503,
+            "optimal_direction_endpoint_energy_fraction": 1.5447875835378867e-29,
+            "optimal_direction_energy_rate_check_abs_residual": 6.261657858885883e-14,
+            "optimal_direction_incoming_sector_fractions": {
+              "left": {
+                "projected_incoming_norm_squared": 1.2753689033310057e-30,
+                "sector_fractions": {
+                  "constraint": 0.0738209436852326,
+                  "gauge": 0.30154601119907787,
+                  "physical": 0.6246330451156896
+                }
+              },
+              "right": {
+                "projected_incoming_norm_squared": 5.467112210591022e-32,
+                "sector_fractions": {
+                  "constraint": 0.24999999999999986,
+                  "gauge": 0.7500000000000002,
+                  "physical": 3.5161401466921465e-40
+                }
+              }
+            },
+            "optimal_direction_relative_energy_rate_over_L0_inverse": 2.309401076758503,
+            "positive_mode_count_above_existing_1e-6_tolerance": 0,
+            "spectral_abscissa_over_L0_inverse": -0.13937273042749143
+          }
+        },
+        "state_dimension": 1300,
+        "tangential_wavenumber_over_L0": 3.141592653589793
+      },
+      {
+        "gamma0_L0": 0.0,
+        "gamma2_L0": 1.0,
+        "lgl_order": 14,
+        "node_count": 15,
+        "operator_application_relative_residuals": {
+          "direct_sat": 2.476257806406215e-16,
+          "rinne_strong": 2.9012867748910577e-16
+        },
+        "random_state_direct_sat_energy_balance": {
+          "absolute_identity_residual": 2.1600499167107046e-12,
+          "boundary_dissipation": 148.34821557191555,
+          "energy": 217.94505750103008,
+          "lower_order_rate": -131.59437693802525,
+          "observed_dE_dt": -279.942592509943,
+          "predicted_dE_dt": -279.9425925099408
+        },
+        "reduction_constraint_rhs_identity_residual": 5.684341886080802e-14,
+        "sbp_identity_max_abs_residual": 1.0279187981591461e-13,
+        "spectra": {
+          "differential_rinne_strong_target": {
+            "energy_matrix_positive_definite_by_cholesky": true,
+            "leading_eigenvalues_over_L0_inverse": [
+              {
+                "imag": -18.138884026729723,
+                "real": 0.28627026040437764
+              },
+              {
+                "imag": 18.138884026729723,
+                "real": 0.28627026040437764
+              },
+              {
+                "imag": -18.13888402672947,
+                "real": 0.2862702604043236
+              },
+              {
+                "imag": 18.13888402672947,
+                "real": 0.2862702604043236
+              },
+              {
+                "imag": -18.1388859459569,
+                "real": 0.28621619757936845
+              },
+              {
+                "imag": 18.1388859459569,
+                "real": 0.28621619757936845
+              }
+            ],
+            "maximum_energy_norm_log_growth_rate_over_L0_inverse": 20.06913382754457,
+            "maximum_energy_relative_growth_rate_over_L0_inverse": 40.13826765508914,
+            "optimal_direction_boundary_relative_energy_rate_over_L0_inverse": -14.234020147094089,
+            "optimal_direction_bulk_boundary_balance_abs_residual": 3.552713678800501e-15,
+            "optimal_direction_bulk_relative_energy_rate_over_L0_inverse": 54.37228780218322,
+            "optimal_direction_endpoint_energy_fraction": 0.6594446436506252,
+            "optimal_direction_energy_rate_check_abs_residual": 0.0,
+            "optimal_direction_incoming_sector_fractions": {
+              "left": {
+                "projected_incoming_norm_squared": 54.39890941397438,
+                "sector_fractions": {
+                  "constraint": 0.03980997953771053,
+                  "gauge": 0.01751736847583082,
+                  "physical": 0.9426726519864586
+                }
+              },
+              "right": {
+                "projected_incoming_norm_squared": 54.39890941430835,
+                "sector_fractions": {
+                  "constraint": 0.03980997953771602,
+                  "gauge": 0.01751736847583339,
+                  "physical": 0.9426726519864506
+                }
+              }
+            },
+            "optimal_direction_relative_energy_rate_over_L0_inverse": 40.13826765508914,
+            "positive_mode_count_above_existing_1e-6_tolerance": 16,
+            "spectral_abscissa_over_L0_inverse": 0.28627026040437764
+          },
+          "direct_incoming_characteristic_weak_sat": {
+            "energy_matrix_positive_definite_by_cholesky": true,
+            "leading_eigenvalues_over_L0_inverse": [
+              {
+                "imag": 3.4072584466549705,
+                "real": -0.13937273042749385
+              },
+              {
+                "imag": -3.4072584466549705,
+                "real": -0.13937273042749385
+              },
+              {
+                "imag": -3.4072584466550286,
+                "real": -0.13937273042749443
+              },
+              {
+                "imag": 3.4072584466550286,
+                "real": -0.13937273042749443
+              },
+              {
+                "imag": 3.407258446655023,
+                "real": -0.13937273042750087
+              },
+              {
+                "imag": -3.407258446655023,
+                "real": -0.13937273042750087
+              }
+            ],
+            "maximum_energy_norm_log_growth_rate_over_L0_inverse": 1.1547005383793325,
+            "maximum_energy_relative_growth_rate_over_L0_inverse": 2.309401076758665,
+            "optimal_direction_boundary_relative_energy_rate_over_L0_inverse": -1.1252206438288098e-30,
+            "optimal_direction_bulk_boundary_balance_abs_residual": 1.1252206438288098e-30,
+            "optimal_direction_bulk_relative_energy_rate_over_L0_inverse": 2.3094010767585034,
+            "optimal_direction_endpoint_energy_fraction": 1.558806067667008e-29,
+            "optimal_direction_energy_rate_check_abs_residual": 1.616484723854228e-13,
+            "optimal_direction_incoming_sector_fractions": {
+              "left": {
+                "projected_incoming_norm_squared": 5.774580292799625e-31,
+                "sector_fractions": {
+                  "constraint": 0.49079186252359985,
+                  "gauge": 0.5087397613814877,
+                  "physical": 0.0004683760949124995
+                }
+              },
+              "right": {
+                "projected_incoming_norm_squared": 4.1812077112554105e-30,
+                "sector_fractions": {
+                  "constraint": 0.24999999999999986,
+                  "gauge": 0.7500000000000002,
+                  "physical": 4.6207175937291406e-42
+                }
+              }
+            },
+            "optimal_direction_relative_energy_rate_over_L0_inverse": 2.3094010767585034,
+            "positive_mode_count_above_existing_1e-6_tolerance": 0,
+            "spectral_abscissa_over_L0_inverse": -0.13937273042749385
+          }
+        },
+        "state_dimension": 1500,
+        "tangential_wavenumber_over_L0": 3.141592653589793
+      },
+      {
+        "gamma0_L0": 0.0,
+        "gamma2_L0": 1.0,
+        "lgl_order": 16,
+        "node_count": 17,
+        "operator_application_relative_residuals": {
+          "direct_sat": 2.3254323724898953e-16,
+          "rinne_strong": 3.420145469333041e-16
+        },
+        "random_state_direct_sat_energy_balance": {
+          "absolute_identity_residual": 9.379164112033322e-13,
+          "boundary_dissipation": 108.86020233347048,
+          "energy": 262.2476921886774,
+          "lower_order_rate": -93.87200910941942,
+          "observed_dE_dt": -202.73221144288897,
+          "predicted_dE_dt": -202.7322114428899
+        },
+        "reduction_constraint_rhs_identity_residual": 5.684341886080802e-14,
+        "sbp_identity_max_abs_residual": 1.7922495214177465e-13,
+        "spectra": {
+          "differential_rinne_strong_target": {
+            "energy_matrix_positive_definite_by_cholesky": true,
+            "leading_eigenvalues_over_L0_inverse": [
+              {
+                "imag": 22.99327317152424,
+                "real": 0.33992393678027355
+              },
+              {
+                "imag": -22.99327317152424,
+                "real": 0.33992393678027355
+              },
+              {
+                "imag": 22.993273171524425,
+                "real": 0.3399239367802469
+              },
+              {
+                "imag": -22.993273171524425,
+                "real": 0.3399239367802469
+              },
+              {
+                "imag": -22.993272849319233,
+                "real": 0.3399033804717392
+              },
+              {
+                "imag": 22.993272849319233,
+                "real": 0.3399033804717392
+              }
+            ],
+            "maximum_energy_norm_log_growth_rate_over_L0_inverse": 25.771774069702065,
+            "maximum_energy_relative_growth_rate_over_L0_inverse": 51.54354813940413,
+            "optimal_direction_boundary_relative_energy_rate_over_L0_inverse": -18.08519473005179,
+            "optimal_direction_bulk_boundary_balance_abs_residual": 7.105427357601002e-15,
+            "optimal_direction_bulk_relative_energy_rate_over_L0_inverse": 69.62874286945592,
+            "optimal_direction_endpoint_energy_fraction": 0.6568093601913735,
+            "optimal_direction_energy_rate_check_abs_residual": 7.105427357601002e-15,
+            "optimal_direction_incoming_sector_fractions": {
+              "left": {
+                "projected_incoming_norm_squared": 69.68423824016804,
+                "sector_fractions": {
+                  "constraint": 0.02488656839154869,
+                  "gauge": 0.010971818985039296,
+                  "physical": 0.964141612623412
+                }
+              },
+              "right": {
+                "projected_incoming_norm_squared": 69.68423823945898,
+                "sector_fractions": {
+                  "constraint": 0.02488656839154439,
+                  "gauge": 0.010971818985037036,
+                  "physical": 0.9641416126234185
+                }
+              }
+            },
+            "optimal_direction_relative_energy_rate_over_L0_inverse": 51.54354813940412,
+            "positive_mode_count_above_existing_1e-6_tolerance": 16,
+            "spectral_abscissa_over_L0_inverse": 0.33992393678027355
+          },
+          "direct_incoming_characteristic_weak_sat": {
+            "energy_matrix_positive_definite_by_cholesky": true,
+            "leading_eigenvalues_over_L0_inverse": [
+              {
+                "imag": -3.4072584466550166,
+                "real": -0.13937273042750065
+              },
+              {
+                "imag": 3.4072584466550166,
+                "real": -0.13937273042750065
+              },
+              {
+                "imag": 3.4072584466549944,
+                "real": -0.13937273042750115
+              },
+              {
+                "imag": -3.4072584466549944,
+                "real": -0.13937273042750115
+              },
+              {
+                "imag": -3.407258446654986,
+                "real": -0.1393727304275013
+              },
+              {
+                "imag": 3.407258446654986,
+                "real": -0.1393727304275013
+              }
+            ],
+            "maximum_energy_norm_log_growth_rate_over_L0_inverse": 1.1547005383793147,
+            "maximum_energy_relative_growth_rate_over_L0_inverse": 2.3094010767586295,
+            "optimal_direction_boundary_relative_energy_rate_over_L0_inverse": 3.447352489529868e-30,
+            "optimal_direction_bulk_boundary_balance_abs_residual": 3.447352489529868e-30,
+            "optimal_direction_bulk_relative_energy_rate_over_L0_inverse": 2.309401076758503,
+            "optimal_direction_endpoint_energy_fraction": 4.5787806622342324e-29,
+            "optimal_direction_energy_rate_check_abs_residual": 1.2656542480726785e-13,
+            "optimal_direction_incoming_sector_fractions": {
+              "left": {
+                "projected_incoming_norm_squared": 1.1017952499921894e-28,
+                "sector_fractions": {
+                  "constraint": 0.566263468879901,
+                  "gauge": 0.30293277477483693,
+                  "physical": 0.1308037563452622
+                }
+              },
+              "right": {
+                "projected_incoming_norm_squared": 6.471438646679361e-31,
+                "sector_fractions": {
+                  "constraint": 0.40261443018383697,
+                  "gauge": 0.5714008490898103,
+                  "physical": 0.02598472072635279
+                }
+              }
+            },
+            "optimal_direction_relative_energy_rate_over_L0_inverse": 2.309401076758503,
+            "positive_mode_count_above_existing_1e-6_tolerance": 0,
+            "spectral_abscissa_over_L0_inverse": -0.13937273042750065
+          }
+        },
+        "state_dimension": 1700,
+        "tangential_wavenumber_over_L0": 3.141592653589793
+      }
+    ],
+    "clipping": false,
+    "external_data": false,
+    "fitting": false,
+    "holdout_access": false,
+    "lower_order_growth_bound": {
+      "2mu_over_L0_inverse": 2.3094010767585034,
+      "generalized_eigenvalues_over_L0_inverse": [
+        -1.1547005383792517,
+        -1.0,
+        1.1547005383792517
+      ],
+      "mu_over_L0_inverse": 1.1547005383792517
+    },
+    "maximum_differential_rinne_energy_relative_growth_rate_over_L0_inverse": 51.54354813940413,
+    "maximum_direct_sat_energy_relative_growth_rate_over_L0_inverse": 2.309401076758665,
+    "maximum_direct_sat_matrix_application_relative_residual": 2.476257806406215e-16,
+    "maximum_optimal_direction_bulk_boundary_balance_abs_residual": 7.105427357601002e-15,
+    "maximum_optimal_direction_energy_rate_check_abs_residual": 1.616484723854228e-13,
+    "maximum_projector_G_self_adjoint_residual": 0.0,
+    "maximum_projector_cross_orthogonality_residual": 3.8857805861880474e-16,
+    "maximum_projector_sum_identity_residual": 0.0,
+    "maximum_random_state_energy_identity_residual": 2.1600499167107046e-12,
+    "maximum_reduction_constraint_rhs_identity_residual": 5.684341886080802e-14,
+    "maximum_rinne_strong_matrix_application_relative_residual": 3.420145469333041e-16,
+    "maximum_sbp_identity_abs_residual": 1.7922495214177465e-13,
+    "projector_audit": {
+      "maximum_G_self_adjoint_residual": 0.0,
+      "maximum_cross_sector_orthogonality_residual": 3.8857805861880474e-16,
+      "maximum_projector_sum_identity_residual": 0.0,
+      "metric_minimum_eigenvalue": 1.0,
+      "normal_count": 2,
+      "projector_ranks": {
+        "constraint": 4,
+        "gauge": 4,
+        "physical": 2
+      }
+    },
+    "rinne_strong_positive_mode_counts": [
+      0,
+      16,
+      16,
+      16,
+      16
+    ],
+    "source_hashes_sha256": {
+      "docs/core/02_equations/covariant/uet_curved_3p1_gh_boundary_projectors.py": "2aa529e3a037a5ecff2c2a5a6d454ef7cf9822ca99371393d6614bfbc062362f",
+      "docs/core/02_equations/covariant/uet_curved_3p1_gh_full_u1_slab.py": "f36c80561a6aec8463f4ffc049ab496563955a391411ea0ec6f5dbf583be70b7",
+      "docs/core/02_equations/covariant/uet_curved_3p1_gh_linear_boundary.py": "39bd0731a3ecdbb5c5185453e0908d198cba895ba5f29dafc6bb8f9c6a3b169c",
+      "docs/core/02_equations/covariant/uet_curved_3p1_gh_max_dissipative_sat.py": "147f2d438f83eac750894462662953cd97512760736cd5e593e49948b1e98175",
+      "docs/core/07_artifacts/verification/curved_3p1_gh_tangential_cpbc_spectrum.json": "2df98b02912c370fc9ce1f621b69879fc519861f5955cba7729a634f1692b80c",
+      "docs/scripts/audit/audit_curved_3p1_gh_tangential_characteristic_sat_control.py": "a4be213ac9a70d90183505f1ef6bda44efd00a43bc4baab9cad64e07cc855fe2",
+      "docs/scripts/audit/audit_curved_3p1_gh_tangential_cpbc_mode.py": "b8c46518d3bec50b7e5d91ded78dfe652f7e331e633c2b16112f1664ebdc1603",
+      "docs/scripts/audit/audit_curved_3p1_gh_tangential_cpbc_spectrum.py": "6fc1af35060b557bb28cc1f93620b54e6cb47f577e60a0186455d7c12242e97d",
+      "docs/scripts/audit/audit_curved_3p1_gh_tt_sbp_sat_boundary.py": "01e519a576bfebcb41222af81bfd6ed7a5f7bf0538cfc4c3e2cb51b5653d29df"
+    },
+    "weak_sat_positive_mode_counts": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  "WHAT_CHANGED": "Added a source-hashed tangential-mode weak-SAT control, same-grid spectra, and GH-energy logarithmic-norm/bulk-boundary-work diagnostics against the differential-Rinne strong replacement, using the existing LGL orders and unchanged eigenvalue tolerance.",
+  "WHAT_IS_ACTUALLY_CLOSED": [
+    "For the same LGL-SBP tangential-mode bulk operator, direct homogeneous incoming-characteristic SAT obeys the GH symmetrizer energy identity at every declared order.",
+    "The identity penalty is componentwise and therefore commutes with the registered constraint/physical/gauge projector decomposition in the packed tensor metric.",
+    "At the same zero-shift orders, tangential wavenumber, gamma0=0, and gamma2=1, the direct incoming-value control and the differential-Rinne-target strong replacement are assembled and spectrally compared.",
+    "The direct SAT's maximum relative energy-growth rate equals the analytic 2*mu bulk bound within numerical tolerance at every order; the differential-target strong replacement has much larger endpoint-localized energy-growth directions in this sampled discretization.",
+    "The experiment keeps the boundary data types distinct: the direct SAT prescribes q_in, while the differential target computes q_in_dot; the audit does not identify these quantities."
+  ],
+  "WHAT_REMAINS_OPEN": [
+    "The direct characteristic SAT is a stable control boundary, not the differential Rinne constraint/Weyl boundary condition.",
+    "The differential Rinne conditions are of differential type and are assessed in the continuum by a Fourier-Laplace/Kreiss boundary-stability analysis, not by assuming a maximally dissipative energy inequality. A source-matched boundary-symbol/Kreiss audit of the local exact branch is still missing.",
+    "The large finite-grid energy-log norms and positive modes characterize this strong endpoint replacement only; they do not prove that the continuum Rinne CPBC is ill-posed.",
+    "The finite-grid comparison is not a continuum proof, a nonlinear GH result, or a curved-parent closure; strong well-posedness with general nonzero initial/source data remains outside this audit."
+  ],
+  "artifact": "curved_3p1_gh_tangential_characteristic_sat_control",
+  "closure_level": "PARTIAL",
+  "generated_at": "2026-09-25T06:37:38+00:00",
+  "literature_basis": [
+    {
+      "role": "The paper identifies these as differential-type boundary conditions, for which maximally dissipative energy theorems do not directly apply; it establishes boundary stability for its specified frozen-coefficient GH problem using Fourier-Laplace/Kreiss analysis. This does not validate the local discrete strong-replacement implementation or establish general strong well-posedness with arbitrary initial/source data.",
+      "source_id": "rinne_2006_first_order_gh_radiation_controlling_cpbc",
+      "url": "https://arxiv.org/abs/gr-qc/0606053"
+    },
+    {
+      "role": "Primary reference for frozen-coefficient well-posedness of a class of constraint-preserving harmonic boundary conditions.",
+      "source_id": "ruiz_rinne_sarbach_2007_harmonic_outer_boundary_conditions",
+      "url": "https://arxiv.org/abs/0707.2797"
+    }
+  ],
+  "major_result_id": "CORE_CURVED_3P1_GH_TANGENTIAL_CHARACTERISTIC_SAT_CONTROL",
+  "schema_version": "core-curved-3p1-gh-tangential-characteristic-sat-control-v2"
+}
