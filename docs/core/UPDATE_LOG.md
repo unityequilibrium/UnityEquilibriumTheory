@@ -29,3 +29,10 @@ commit: 48ba3f9d4 (module+tests) + this commit
 ระดับ: C_T001_BINARY_PULSAR_XI_C → L0_SPECULATIVE (การ์ด DRAFT)
 ถัดไป: ผู้เขียนตรวจตัวเลขเทียบกับฉบับตีพิมพ์ แล้วอนุมัติ T001 จากนั้นรันสคริปต์ใน commit แยก
 commit: this commit
+
+## 2026-11-09 — Does binary-pulsar timing allow the parent action? (T001 run)
+ทำ: รันวิธีของ T001 หลังผู้เขียนอนุมัติการ์ด (70e5b9d35) กับข้อมูล ZFKSW22 ที่ล็อก hash ไว้
+ผล: PASS แบบ CONSTRAINT — ξ_c ∈ [2.0, 2.4] ถูกตัดทิ้งเมื่อ m_ψ ≤ 2.5×10⁻¹⁸ eV (a_max = 7.8×10⁹ m, J2222−0137); ξ_c > 2.4 และ scalar ที่หนักกว่านี้ไม่ถูกจำกัดโดย T001; ใช้ค่าจาก arXiv v2 ยังไม่ได้เทียบกับฉบับวารสาร
+ระดับ: C_T001_BINARY_PULSAR_XI_C → L2_CONFRONTED (ผู้เขียนอนุมัติ 2026-11-09)
+ถัดไป: หา observable ที่ UET ต่างจาก DEF (ส่วน "differences" ใน Theory Card ยังว่าง) หรือหาสิ่งที่กำหนด ξ_c ได้จาก lane อื่น
+commit: this commit
