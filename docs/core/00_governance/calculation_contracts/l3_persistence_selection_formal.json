@@ -1,0 +1,142 @@
+{
+  "schema_version": "uet-calculation-contract-v1",
+  "contract_id": "CORE_L3_PERSISTENCE_SELECTION_FORMAL_V1",
+  "profile": "FORMAL",
+  "review": {
+    "status": "INCOMPLETE",
+    "reviewer": "tool:new_formal_contract",
+    "rationale": "Formal coverage generated from Standard v2 records; evidence level is set in docs/standard, not here."
+  },
+  "question": "Does persistence selection by free-energy exhaustion give Little's law, the R* exclusion rule and replicator dynamics without imposed payoffs?",
+  "output": {
+    "quantity": "steady abundance, equilibrium resource level and selected type",
+    "unit": "dimensionless",
+    "domain": "declared formal domain of the code",
+    "accuracy": "exact or as asserted by the listed physics tests",
+    "claim_intent": "FORMAL_RESULT"
+  },
+  "model": {
+    "formula_ids": [
+      "UET_L3_LIFETIME_F_OVER_P",
+      "UET_L3_LITTLE_LAW",
+      "UET_L3_RSTAR_EXCLUSION"
+    ],
+    "assumptions": "as declared in the code and Theory Card",
+    "approximation": "none beyond the code",
+    "initial_boundary": "algebraic",
+    "drive_environment": "not relevant to a formal derivation",
+    "parameters": "symbolic or test-sampled"
+  },
+  "data_policy": {
+    "uses_observations": false,
+    "calibration_ids": [],
+    "comparison_ids": [],
+    "independent_validation": false,
+    "holdout_policy": "none"
+  },
+  "observation": {
+    "source_state": "not applicable to this formal derivation",
+    "generated_trace": "not applicable to this formal derivation",
+    "carrier": "not applicable to this formal derivation",
+    "observer_state": "not applicable to this formal derivation",
+    "readout": "not applicable to this formal derivation",
+    "backaction": "not applicable to this formal derivation",
+    "frame": "not applicable to this formal derivation",
+    "time_convention": "not applicable to this formal derivation",
+    "product_level": "not applicable to this formal derivation",
+    "corrections": []
+  },
+  "components": [
+    {
+      "id": "system_state",
+      "group": "system_state",
+      "disposition": "MODELED",
+      "reason": "Declared formal expressions in the code under contract.",
+      "evidence": [
+        "docs/core/03_lanes/persistence/uet_persistence_selection.py"
+      ]
+    },
+    {
+      "id": "drive_environment",
+      "group": "drive_environment",
+      "disposition": "NOT_APPLICABLE",
+      "reason": "Formal derivation; no physical measurement chain.",
+      "evidence": []
+    },
+    {
+      "id": "propagation",
+      "group": "propagation",
+      "disposition": "NOT_APPLICABLE",
+      "reason": "Formal derivation; no physical measurement chain.",
+      "evidence": []
+    },
+    {
+      "id": "frame_time",
+      "group": "frame_time",
+      "disposition": "NOT_APPLICABLE",
+      "reason": "Formal derivation; no physical measurement chain.",
+      "evidence": []
+    },
+    {
+      "id": "detector",
+      "group": "detector",
+      "disposition": "NOT_APPLICABLE",
+      "reason": "Formal derivation; no physical measurement chain.",
+      "evidence": []
+    },
+    {
+      "id": "processing",
+      "group": "processing",
+      "disposition": "MODELED",
+      "reason": "Declared formal expressions in the code under contract.",
+      "evidence": [
+        "docs/core/03_lanes/persistence/uet_persistence_selection.py"
+      ]
+    },
+    {
+      "id": "numerics",
+      "group": "numerics",
+      "disposition": "MODELED",
+      "reason": "Checked by the listed physics tests (docs/STANDARD.md section 6).",
+      "evidence": [
+        "docs/core/05_tests/physics/test_persistence_selection.py"
+      ]
+    }
+  ],
+  "error_budget": {
+    "unit": "dimensionless",
+    "numerical": "test tolerances",
+    "approximation": "none declared",
+    "measurement": "not applicable",
+    "systematic": "not applicable",
+    "omissions": "none declared",
+    "dependence": "not applicable",
+    "acceptance": "formal coverage only",
+    "omission_limit": null
+  },
+  "identities": [
+    {
+      "path": "docs/core/03_lanes/persistence/uet_persistence_selection.py",
+      "kind": "working_file",
+      "role": "code",
+      "sha256": "d838cf1a441d3753f8eac09b916b0a005e6867f08261a83b96412dbe0f1e2246",
+      "availability": "REQUIRED"
+    },
+    {
+      "path": "docs/core/05_tests/physics/test_persistence_selection.py",
+      "kind": "working_file",
+      "role": "code",
+      "sha256": "bbe4b287d6929a165eafe288cf0fa63ecaa446eaae4403d6193a47b5103e3a68",
+      "availability": "REQUIRED"
+    }
+  ],
+  "entrypoints": [
+    "docs/core/03_lanes/persistence/uet_persistence_selection.py"
+  ],
+  "evidence": [
+    "docs/core/03_lanes/persistence/uet_persistence_selection.py",
+    "docs/core/05_tests/physics/test_persistence_selection.py"
+  ],
+  "claim_boundary": "Formal coverage only; no physical acceptance or status change.",
+  "next_action": "Refresh identities with this tool when the code or tests change."
+}
