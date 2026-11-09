@@ -5,11 +5,11 @@
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
     "sources": 74,
-    "entries": 787,
+    "entries": 792,
     "by_stream": {
       "book-history": 94,
       "operations": 112,
-      "research": 581
+      "research": 586
     },
     "exact_duplicates": 0,
     "review_entries": 2
@@ -384,8 +384,8 @@
     },
     {
       "path": "2026/2026-11-09.md",
-      "sha256": "2beebaeeee1747e9eba1af2d1c652ea4c4c1ef2dca01dbbfa36ebb84e1b36ab2",
-      "entries": 3
+      "sha256": "a7630e7adc81d601c1b781daa070290f86bda9c506d3ddf5ae69447124bc9d59",
+      "entries": 8
     },
     {
       "path": "2026-08-14.md",
@@ -16084,9 +16084,109 @@
       "source": "2026/2026-11-09.md",
       "anchor": "standard-v2-w7--topic-index-synced-to-the-claim-register",
       "start_line": 40,
-      "end_line": 53,
+      "end_line": 54,
       "title": "Standard v2 W7 — topic index synced to the claim register",
-      "entry_sha256": "681e47407302b7f3198ce3d0322ab9c3ce074dfdc614f73529f81e09f5fdd2b0",
+      "entry_sha256": "475e5e6d6d944374bdb04a89cdd633480e1e4fa00bdb2bbc41cea6d74969ed0c",
+      "stream": "research",
+      "areas": [
+        "research-standards"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-09",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-09.md#author-proposition-card--author-intent-written-down",
+      "source": "2026/2026-11-09.md",
+      "anchor": "author-proposition-card--author-intent-written-down",
+      "start_line": 55,
+      "end_line": 74,
+      "title": "Author Proposition Card — author intent written down",
+      "entry_sha256": "79ec116f2153d298663db00545d7babe5eebcec4a1e02a1ee51edbb7c9f7ec08",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-09",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-09.md#layer-3--persistence-selection-by-free-energy-exhaustion-formal-l1",
+      "source": "2026/2026-11-09.md",
+      "anchor": "layer-3--persistence-selection-by-free-energy-exhaustion-formal-l1",
+      "start_line": 75,
+      "end_line": 90,
+      "title": "Layer 3 — persistence selection by free-energy exhaustion (formal, L1)",
+      "entry_sha256": "272e43dc32720eafc505256d4b7ae603c099103e6842746ead2e68a2d2a402b9",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-09",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-09.md#t002-draft--layer-3-abundance-law-vs-globular-cluster-star-counts",
+      "source": "2026/2026-11-09.md",
+      "anchor": "t002-draft--layer-3-abundance-law-vs-globular-cluster-star-counts",
+      "start_line": 91,
+      "end_line": 107,
+      "title": "T002 (draft) — layer-3 abundance law vs globular-cluster star counts",
+      "entry_sha256": "0cfce9b902014d2ca03452ce25b67d1beff221628a176f2dbcc135254b64cb76",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-09",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-09.md#t002-run--layer-3-abundance-law-confronted-with-globular-cluster-counts-l2-inconclusive",
+      "source": "2026/2026-11-09.md",
+      "anchor": "t002-run--layer-3-abundance-law-confronted-with-globular-cluster-counts-l2-inconclusive",
+      "start_line": 108,
+      "end_line": 122,
+      "title": "T002 run — layer-3 abundance law confronted with globular-cluster counts (L2, INCONCLUSIVE)",
+      "entry_sha256": "2555fa015f6502b23ff6c5ea08d768cb17f93a6c1c2ec66ef644cc2be2c2716d",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-09",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-09.md#change-report-for-the-author-8-9-nov-work",
+      "source": "2026/2026-11-09.md",
+      "anchor": "change-report-for-the-author-8-9-nov-work",
+      "start_line": 123,
+      "end_line": 136,
+      "title": "Change report for the author (8-9 Nov work)",
+      "entry_sha256": "6168e2edde7f2af8e16d7f6e7e252c81f5751212da2bce594c4e1dc19673b3c9",
       "stream": "research",
       "areas": [
         "research-standards"

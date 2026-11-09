@@ -1,0 +1,307 @@
+{
+  "schema_version": "uet-calculation-contract-v1",
+  "contract_id": "CORE_T002_STELLAR_PHASE_FRACTIONS_V1",
+  "profile": "PHYSICAL_COMPARISON",
+  "review": {
+    "status": "INCOMPLETE",
+    "reviewer": "agent:claude-layer3-t002",
+    "rationale": "Methodological contract for Test Card T002. The evidence decision lives in docs/standard. Photometry, membership, completeness and stellar-model physics are inherited from the published analyses.",
+    "coverage_evidence": [
+      "docs/data/external/astronomy/globular_cluster_r_parameter/ayala2014_r_parameter.csv"
+    ]
+  },
+  "question": "Does the layer-3 abundance law N = b F/P (Little's law with exhaustion lifetimes) reproduce the observed globular-cluster ratio R = N_HB/N_RGB?",
+  "output": {
+    "quantity": "R = N_HB / N_RGB(upper) and its standardized deviation z",
+    "unit": "dimensionless",
+    "domain": "39 Galactic globular clusters with [M/H] < -1.1; stars of 0.82-0.84 Msun",
+    "accuracy": "Combined 1-sigma from the observed mean and the helium input; stellar-model fit uncertainty not quoted and not included.",
+    "claim_intent": "DIAGNOSTIC"
+  },
+  "model": {
+    "formula_ids": [
+      "UET_L3_LITTLE_LAW",
+      "UET_L3_LIFETIME_F_OVER_P",
+      "AYALA14_R_TH_FIT"
+    ],
+    "assumptions": "Common formation rate through RGB and HB; phase lifetimes from published stellar models (fuel/luminosity); a single He abundance per cluster sample.",
+    "approximation": "Linear fit R_th(Y) = 6.26 Y - 0.12 from stellar models without extra energy sinks.",
+    "initial_boundary": "Old clusters; steady flow through post-main-sequence phases.",
+    "drive_environment": "None beyond the published cluster populations.",
+    "parameters": "No fitting; Y from independent H II regions (primary) and SBBN (sensitivity only)."
+  },
+  "data_policy": {
+    "uses_observations": true,
+    "calibration_ids": [],
+    "comparison_ids": [
+      "AYALA14_GC_R_PARAMETER"
+    ],
+    "independent_validation": false,
+    "holdout_policy": "No holdout. Published comparison seen before drafting (exposure SEEN_FULL), declared in Test Card T002."
+  },
+  "observation": {
+    "system_partition": {
+      "role_mode": "RELATIONAL",
+      "accounting_component_id": "system_state",
+      "boundary": "Published star counts in 39 globular clusters, observed photometrically; the comparison uses the published mean R and model fit, not raw photometry.",
+      "systems": [
+        {
+          "id": "cluster",
+          "state": "Joint description of a cluster population, not an extra state",
+          "state_accounting": {
+            "kind": "AGGREGATE",
+            "state_ids": [],
+            "owner_ids": [
+              "rgb_stars",
+              "hb_stars"
+            ],
+            "rule": "Each star is counted once, in the phase it occupies."
+          }
+        },
+        {
+          "id": "rgb_stars",
+          "parent_id": "cluster",
+          "state": "Stars on the upper red giant branch (H-shell burning)",
+          "state_accounting": {
+            "kind": "INDEPENDENT",
+            "state_ids": [
+              "rgb.count"
+            ],
+            "owner_ids": [],
+            "rule": "Counts from Salaris et al. 2004."
+          }
+        },
+        {
+          "id": "hb_stars",
+          "parent_id": "cluster",
+          "state": "Stars on the horizontal branch (core He burning)",
+          "state_accounting": {
+            "kind": "INDEPENDENT",
+            "state_ids": [
+              "hb.count"
+            ],
+            "owner_ids": [],
+            "rule": "Counts from Salaris et al. 2004."
+          }
+        },
+        {
+          "id": "photometry",
+          "state": "HST photometric catalogue and published counts",
+          "state_accounting": {
+            "kind": "INDEPENDENT",
+            "state_ids": [
+              "photometry.record"
+            ],
+            "owner_ids": [],
+            "rule": "Observer record only; carries no stellar energy."
+          }
+        }
+      ],
+      "couplings": [
+        {
+          "id": "rgb_to_hb_evolution",
+          "source": "rgb_stars",
+          "target": "hb_stars",
+          "kind": "INTERNAL",
+          "component_id": "system_state",
+          "map": "Each star leaves the RGB tip and enters the HB (helium flash); common flow rate b"
+        },
+        {
+          "id": "light_propagation",
+          "source": "hb_stars",
+          "target": "photometry",
+          "kind": "SIGNAL",
+          "component_id": "propagation",
+          "map": "Starlight with reddening and distance handled upstream"
+        },
+        {
+          "id": "hb_detection",
+          "source": "hb_stars",
+          "target": "photometry",
+          "kind": "DETECTION",
+          "component_id": "detector",
+          "map": "Colour-magnitude classification and counts upstream"
+        },
+        {
+          "id": "rgb_detection",
+          "source": "rgb_stars",
+          "target": "photometry",
+          "kind": "DETECTION",
+          "component_id": "detector",
+          "map": "Colour-magnitude classification and counts upstream"
+        },
+        {
+          "id": "photometry_to_rgb_assessment",
+          "source": "photometry",
+          "target": "rgb_stars",
+          "kind": "BACKACTION",
+          "component_id": "detector",
+          "map": "Passive photometry exerts no admitted backaction"
+        },
+        {
+          "id": "photometry_to_hb_assessment",
+          "source": "photometry",
+          "target": "hb_stars",
+          "kind": "BACKACTION",
+          "component_id": "detector",
+          "map": "Passive photometry exerts no admitted backaction"
+        }
+      ],
+      "observables": [
+        {
+          "id": "r_parameter",
+          "detector_id": "photometry",
+          "target_systems": [
+            "rgb_stars",
+            "hb_stars"
+          ],
+          "backaction_targets": [
+            "rgb_stars",
+            "hb_stars"
+          ],
+          "backaction_scope_reason": "Both counted owners are assessed; the cluster aggregate is a nonadditive view.",
+          "quantity": "Weighted mean N_HB/N_RGB(upper) over 39 clusters",
+          "readout_map": "Published counts (Salaris et al. 2004) averaged by Ayala et al. 2014; transcribed only",
+          "component_id": "detector"
+        }
+      ]
+    },
+    "source_state": "Stellar populations as modelled by the published analyses.",
+    "generated_trace": "Starlight; not a UET trace variable.",
+    "carrier": "Photons; not identified with any UET field.",
+    "observer_state": "Photometric catalogue and published counts.",
+    "readout": "Published mean R and stellar-model fit.",
+    "backaction": "None admitted from passive photometry.",
+    "frame": "Cluster rest frame of the published analysis",
+    "time_convention": "Stellar-evolution time of the published models",
+    "product_level": "published derived quantities (not raw data)",
+    "corrections": [
+      {
+        "id": "photometric_reduction_upstream",
+        "state": "APPLIED_UPSTREAM",
+        "evidence": "docs/data/external/astronomy/globular_cluster_r_parameter/ayala2014_r_parameter.csv"
+      },
+      {
+        "id": "membership_completeness_upstream",
+        "state": "APPLIED_UPSTREAM",
+        "evidence": "docs/data/external/astronomy/globular_cluster_r_parameter/ayala2014_r_parameter.csv"
+      }
+    ]
+  },
+  "components": [
+    {
+      "id": "system_state",
+      "group": "system_state",
+      "disposition": "MODELED",
+      "reason": "Phase populations and lifetimes as registered from published counts and stellar models.",
+      "evidence": [
+        "docs/data/external/astronomy/globular_cluster_r_parameter/ayala2014_r_parameter.csv"
+      ]
+    },
+    {
+      "id": "drive_environment",
+      "group": "drive_environment",
+      "disposition": "NOT_APPLICABLE",
+      "reason": "No external drive in the comparison.",
+      "evidence": []
+    },
+    {
+      "id": "propagation",
+      "group": "propagation",
+      "disposition": "UPSTREAM_CORRECTED",
+      "reason": "Applied upstream in the published star counts and stellar models (Salaris et al. 2004; Ayala et al. 2014); not recomputed here.",
+      "evidence": [
+        "docs/data/external/astronomy/globular_cluster_r_parameter/ayala2014_r_parameter.csv"
+      ]
+    },
+    {
+      "id": "frame_time",
+      "group": "frame_time",
+      "disposition": "UPSTREAM_CORRECTED",
+      "reason": "Cluster ages and metallicities handled upstream. Applied upstream in the published star counts and stellar models (Salaris et al. 2004; Ayala et al. 2014); not recomputed here.",
+      "evidence": [
+        "docs/data/external/astronomy/globular_cluster_r_parameter/ayala2014_r_parameter.csv"
+      ]
+    },
+    {
+      "id": "detector",
+      "group": "detector",
+      "disposition": "UPSTREAM_CORRECTED",
+      "reason": "Star classification and counting. Applied upstream in the published star counts and stellar models (Salaris et al. 2004; Ayala et al. 2014); not recomputed here.",
+      "evidence": [
+        "docs/data/external/astronomy/globular_cluster_r_parameter/ayala2014_r_parameter.csv"
+      ]
+    },
+    {
+      "id": "processing",
+      "group": "processing",
+      "disposition": "MODELED",
+      "reason": "Little's law ratio with a common formation rate; R_pred from the model fit; z-score against the observed mean.",
+      "evidence": [
+        "docs/core/03_lanes/persistence/t002_stellar_phase_fractions.py",
+        "docs/core/03_lanes/persistence/uet_persistence_selection.py"
+      ]
+    },
+    {
+      "id": "numerics",
+      "group": "numerics",
+      "disposition": "MODELED",
+      "reason": "Closed-form arithmetic; Little's law covered by physics tests.",
+      "evidence": [
+        "docs/core/05_tests/physics/test_persistence_selection.py"
+      ]
+    }
+  ],
+  "error_budget": {
+    "unit": "dimensionless",
+    "numerical": "Floating point only.",
+    "approximation": "Linear R_th(Y) fit; validity range declared by the source.",
+    "measurement": "Observed mean R 1-sigma and helium 1-sigma propagated in quadrature.",
+    "systematic": "Stellar-model fit uncertainty not quoted by the source and not included; journal cross-check not done.",
+    "omissions": "Possible He-enhanced subpopulations and extra energy sinks (for example axions) are not modelled.",
+    "dependence": "Observed counts and helium measurements are independent datasets.",
+    "acceptance": "Outcome categories fixed in Test Card T002 (z <= 2 PASS, 2 < z <= 3 INCONCLUSIVE, z > 3 FAIL).",
+    "omission_limit": null
+  },
+  "identities": [
+    {
+      "path": "docs/data/external/astronomy/globular_cluster_r_parameter/ayala2014_r_parameter.csv",
+      "kind": "working_file",
+      "role": "input",
+      "sha256": "c32ddcd06923a77c657c470a0a7d8ab0fdd36ea1f4b3a1482d96aa7b090d1e38",
+      "availability": "REQUIRED"
+    },
+    {
+      "path": "docs/core/03_lanes/persistence/uet_persistence_selection.py",
+      "kind": "working_file",
+      "role": "code",
+      "sha256": "d838cf1a441d3753f8eac09b916b0a005e6867f08261a83b96412dbe0f1e2246",
+      "availability": "REQUIRED"
+    },
+    {
+      "path": "docs/core/03_lanes/persistence/t002_stellar_phase_fractions.py",
+      "kind": "working_file",
+      "role": "code",
+      "sha256": "8db700e4aa1d1d59844f73bce64738d34349625895547341c13af44bd82a80c1",
+      "availability": "REQUIRED"
+    },
+    {
+      "path": "docs/core/05_tests/physics/test_persistence_selection.py",
+      "kind": "working_file",
+      "role": "code",
+      "sha256": "bbe4b287d6929a165eafe288cf0fa63ecaa446eaae4403d6193a47b5103e3a68",
+      "availability": "REQUIRED"
+    }
+  ],
+  "entrypoints": [
+    "docs/core/03_lanes/persistence/t002_stellar_phase_fractions.py",
+    "docs/core/03_lanes/persistence/uet_persistence_selection.py"
+  ],
+  "evidence": [
+    "docs/core/03_lanes/persistence/t002_stellar_phase_fractions.py",
+    "docs/core/03_lanes/persistence/uet_persistence_selection.py",
+    "docs/data/external/astronomy/globular_cluster_r_parameter/ayala2014_r_parameter.csv"
+  ],
+  "claim_boundary": "Methodological coverage of the T002 comparison only. The evidence level is set in docs/standard. The comparison cannot distinguish UET layer 3 from the standard fuel-consumption reasoning it reproduces.",
+  "next_action": "Cross-check transcribed values against the journal version; add a stellar-model systematic if a quoted value is found."
+}

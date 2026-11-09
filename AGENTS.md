@@ -29,6 +29,9 @@ Its old status vocabularies and workflow ladders are replaced.
 
 ## 3. How to do research (summary of docs/STANDARD.md)
 
+0. **Author intent first:** read [`docs/core/AUTHOR_PROPOSITION.md`](docs/core/AUTHOR_PROPOSITION.md) before you interpret UET.
+   It replaces earlier AI reconstructions of the author's meaning (for example "open universe" and "learning").
+   Label your own interpretations as AI interpretations.
 1. **Evidence levels** (§1): `L0_SPECULATIVE`, `L1_CONSISTENT`, `L2_CONFRONTED`, `L3_REPLICATED`, `FAILED`.
    Do not invent any other status value in new records.
 2. **Zones** (§2): sandbox work is free. Claims must be registered in `docs/standard/claims.json`.

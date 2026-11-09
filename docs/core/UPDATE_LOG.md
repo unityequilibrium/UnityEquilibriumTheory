@@ -36,3 +36,17 @@ commit: this commit
 ระดับ: C_T001_BINARY_PULSAR_XI_C → L2_CONFRONTED (ผู้เขียนอนุมัติ 2026-11-09)
 ถัดไป: หา observable ที่ UET ต่างจาก DEF (ส่วน "differences" ใน Theory Card ยังว่าง) หรือหาสิ่งที่กำหนด ξ_c ได้จาก lane อื่น
 commit: this commit
+
+## 2026-11-09 — Does selection follow from free-energy exhaustion alone? (layer 3)
+ทำ: เขียน `03_lanes/persistence/uet_persistence_selection.py` ระบบหายไปเมื่อพลังงานอิสระหมด (τ = F/P) ไม่มี payoff ที่ตั้งด้วยมือ + physics test 12 ตัว
+ผล: Little's law N* = bτ (ลู่เข้าอันดับ 1), replicator dynamics เป็น identity, ผู้ชนะคือ R* = P/(aF) ต่ำสุด, บิตต่อชีวิต F/(kT ln2) ไม่ขึ้นกับ P; negative control: ไม่มีการหมดทรัพยากร = ไม่มี steady state
+ระดับ: C_L3_SELECTION_FORMAL → L1_CONSISTENT
+ถัดไป: Test Card เทียบกับประชากรดาวฤกษ์ (สัดส่วนต่อช่วงวิวัฒนาการ ∝ อายุช่วงนั้น)
+commit: cbebc3fad (model+tests) + this commit
+
+## 2026-11-09 — Does N = b·F/P match real star counts? (T002 run)
+ทำ: รันวิธีของ T002 หลังผู้เขียนอนุมัติการ์ด (50c483c4d) กับข้อมูล AYALA14_GC_R_PARAMETER ที่ล็อก hash ไว้
+ผล: R_pred = 1.467 ± 0.023 (Y_HII) เทียบกับ R_obs = 1.39 ± 0.03, z = 2.05 → INCONCLUSIVE ตามเกณฑ์ที่ล็อกไว้ (ใช้ SBBN แทนได้ z = 1.25 แต่ไม่ใช้ตัดสิน) ไม่ได้รวมความคลาดเคลื่อนของแบบจำลองดาว
+ระดับ: C_T002_STELLAR_PHASE_ABUNDANCE → L2_CONFRONTED (INCONCLUSIVE; ผู้เขียนอนุมัติ)
+ถัดไป: หาค่าความคลาดเคลื่อนของแบบจำลองดาวที่ตีพิมพ์แล้ว หรือหาประชากรอื่นที่เป็นอิสระ ก่อนสรุปเรื่องช่องเผาพลังงานที่ซ่อนอยู่
+commit: this commit

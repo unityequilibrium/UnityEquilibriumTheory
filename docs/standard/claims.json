@@ -35,6 +35,24 @@
         "R_T001_BINARY_PULSAR"
       ],
       "note": "CONSTRAINT (not a prediction): xi_c in [2.0, 2.4] excluded for m_psi <= 2.5e-18 eV; L2 promotion approved by the author 2026-11-09."
+    },
+    {
+      "claim_id": "C_L3_SELECTION_FORMAL",
+      "statement": "In the layer-3 model, systems that disappear when their free-energy store F is exhausted at burn power P give steady abundance N* = b F/P (Little's law), replicator dynamics with fitness aR - P/F as an identity, and selection of the lowest R* = P/(a F) under a shared resource, without imposed payoffs.",
+      "level": "L1_CONSISTENT",
+      "evidence": [
+        "R_L3_SELECTION_FORMAL"
+      ],
+      "note": "Mathematical consistency of the author's persistence-selection logic; no empirical confrontation yet."
+    },
+    {
+      "claim_id": "C_T002_STELLAR_PHASE_ABUNDANCE",
+      "statement": "The layer-3 abundance law N = b F/P, with stellar-model lifetimes and independently measured helium, predicts the horizontal-to-red-giant-branch star ratio in old globular clusters to within about 5 percent (R_pred = 1.467 +/- 0.023 vs R_obs = 1.39 +/- 0.03), a 2.05 sigma tension.",
+      "level": "L2_CONFRONTED",
+      "evidence": [
+        "R_T002_STELLAR_PHASES"
+      ],
+      "note": "CONSTRAINT, outcome INCONCLUSIVE by the preregistered rule (2 < z <= 3). Not a falsification and not a pass. L2 recording approved by the author 2026-11-09."
     }
   ]
 }
