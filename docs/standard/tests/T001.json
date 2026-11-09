@@ -1,0 +1,47 @@
+{
+  "schema": "uet-test-card-v2",
+  "test_id": "T001",
+  "status": "CLOSED",
+  "claim_id": "C_T001_BINARY_PULSAR_XI_C",
+  "theory_card": {
+    "card_id": "UET_PARENT",
+    "version": 1
+  },
+  "hypothesis": "With xi_c a free parameter and ordinary matter coupled minimally to the Jordan metric, the UET parent action (DEF map beta0 = -2 xi_c, alpha0 = 0 at psi0 = 0) remains compatible with binary-pulsar timing for a non-empty set of xi_c values; the published bound excludes the xi_c values that would spontaneously scalarize neutron stars inside the analysed beta0 range, provided the scalar is light compared with the binary orbits.",
+  "observable": {
+    "quantity": "excluded interval of the canonical non-minimal coupling xi_c, and the light-scalar domain bound on m_psi",
+    "unit": "xi_c dimensionless; m_psi in eV",
+    "domain": "neutron stars of 1.25-2.0 Msun in 7 binary pulsars (ZFKSW22), massless-scalar DEF analysis, beta0 in [-4.8, -4.0]"
+  },
+  "test_kind": "CONSTRAINT",
+  "data_sources": [
+    {
+      "data_id": "ZFKSW22_DEF_BOUNDS",
+      "role": "COMPARISON",
+      "exposure": "SEEN_SUMMARY"
+    }
+  ],
+  "prediction_method": {
+    "script": "docs/core/03_lanes/scalar_tensor/t001_binary_pulsar_constraint.py",
+    "description": "excluded xi_c = [-beta0_max/2, -beta0_min/2] from beta0 = -2 xi_c (C_UET_DEF_MAPPING); light-scalar domain m_psi c^2 <= hbar c / (10 a_max) with a from Kepler's law using the published P_b and GR masses; constants GM_sun = 1.3271244e20 m^3 s^-2, hbar c = 1.973269804e-7 eV m"
+  },
+  "free_parameters": [
+    "xi_c",
+    "m_psi"
+  ],
+  "fixed_parameters": [
+    "beta0 = -2 xi_c and alpha0 = 0 (psi0 = 0), from claim C_UET_DEF_MAPPING",
+    "ordinary matter couples minimally to the Jordan metric",
+    "published DEF bound and orbital data exactly as registered under ZFKSW22_DEF_BOUNDS (no refit)",
+    "domain margin factor 10"
+  ],
+  "pass_criterion": "PASS if, for m_psi c^2 <= hbar c / (10 a_max), the set {xi_c real : 1 + kappa xi_c psi^2 > 0 near psi0 = 0} minus the excluded interval [-beta0_max/2, -beta0_min/2] is non-empty. The Result must report the excluded interval and the light-domain mass bound as numbers.",
+  "fail_criterion": "FAILED if every admissible xi_c lies inside the excluded interval in the light-scalar domain. Because xi_c is free (author decision 2026-11-08) and xi_c = 0 is admissible, this outcome is not reachable: T001 constrains parameters and cannot falsify the theory. INCONCLUSIVE if the registered values disagree with the journal version, or if the minimal-coupling assumption is withdrawn.",
+  "drafted_by": "claude",
+  "note": "Values outside the analysed beta0 range (xi_c > 2.4 or xi_c < 2.0) are reported as not constrained by T001. Heavy scalars (m_psi above the domain bound) are outside the test scope, which is not a pass. Before approval, re-check the registered numbers against the published journal version. Approved by the author on 2026-11-09 without a journal cross-check; values are from arXiv:2201.03771v2.",
+  "approval": {
+    "approved_by": "santxkoz",
+    "date": "2026-11-09",
+    "role": "AUTHOR"
+  }
+}

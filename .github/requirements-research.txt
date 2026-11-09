@@ -9,3 +9,4 @@ sympy==1.14.0
 PyYAML==6.0.3
 httpx==0.28.1
 phonopy==4.4.0
+jsonschema==4.26.0

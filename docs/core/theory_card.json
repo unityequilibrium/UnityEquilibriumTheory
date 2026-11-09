@@ -1,0 +1,256 @@
+{
+  "schema": "uet-theory-card-v2",
+  "card_id": "UET_PARENT",
+  "version": 1,
+  "status": "APPROVED",
+  "approval": {
+    "approved_by": "santxkoz",
+    "date": "2026-11-08",
+    "role": "AUTHOR"
+  },
+  "core_equations": [
+    {
+      "formula_id": "UET-PARENT-ACTION-001",
+      "expression": "S = int d^4x sqrt(-g) [ F(phi)(R-2Lambda)/(2kappa) - epsilon(k(grad phi)^2/2 + U(phi)) - Z(grad chi_A)^2/2 - W(|chi|^2) + epsilon h delta |chi|^2/2 ], F = 1 + epsilon xi delta^2, U = rho_star + mu2 delta^2/2 + lambda_phi delta^4/4, W = m2|chi|^2/2 + lambda_chi|chi|^4/4, delta = phi - phi_star",
+      "code_path": "docs/core/02_equations/covariant/uet_covariant_matter.py::coupled_conservative_action_density",
+      "level": "L1_CONSISTENT"
+    },
+    {
+      "formula_id": "UET-PARENT-METRIC-EOM",
+      "expression": "F(G + Lambda g) + epsilon(g box f - nabla nabla f) = kappa(T_chi + T_int + epsilon T_phi), f = xi delta^2",
+      "code_path": "docs/core/02_equations/covariant/uet_covariant_response.py::uet_metric_residual",
+      "level": "L1_CONSISTENT"
+    },
+    {
+      "formula_id": "UET-PARENT-SCALAR-EOM",
+      "expression": "epsilon[k box phi - U'(phi) + f'(phi)(R - 2Lambda)/(2kappa)] + epsilon h |chi|^2/2 = 0",
+      "code_path": "docs/core/02_equations/covariant/uet_covariant_matter.py::coupled_response_scalar_equation_residual",
+      "level": "L1_CONSISTENT"
+    },
+    {
+      "formula_id": "UET-PARENT-MATTER-EOM",
+      "expression": "Z box chi_A - (m2 + lambda_chi|chi|^2 - epsilon h delta) chi_A = 0",
+      "code_path": "docs/core/02_equations/covariant/uet_covariant_matter.py::matter_eom_residual",
+      "level": "L1_CONSISTENT"
+    }
+  ],
+  "unit_system": "natural units hbar = c = 1; mass dimensions per NATURAL_UNIT_MASS_DIMENSIONS in uet_covariant_response.py",
+  "sign_convention": "metric signature (-,+,+,+); L contains +F R/(2kappa)",
+  "fields_parameters": [
+    {
+      "symbol": "g_mn",
+      "meaning": "spacetime metric",
+      "mass_dimension": 0,
+      "independent": true
+    },
+    {
+      "symbol": "phi",
+      "meaning": "response scalar (UET Phi)",
+      "mass_dimension": 1,
+      "independent": true
+    },
+    {
+      "symbol": "chi_A",
+      "meaning": "O(2) matter doublet (UET C in phase/charge lanes)",
+      "mass_dimension": 1,
+      "independent": true
+    },
+    {
+      "symbol": "kappa",
+      "meaning": "8 pi G",
+      "mass_dimension": -2,
+      "independent": true
+    },
+    {
+      "symbol": "Lambda",
+      "meaning": "cosmological constant",
+      "mass_dimension": 2,
+      "independent": false
+    },
+    {
+      "symbol": "epsilon",
+      "meaning": "non-closure nesting parameter",
+      "mass_dimension": 0,
+      "allowed_range": ">= 0",
+      "independent": false
+    },
+    {
+      "symbol": "k",
+      "meaning": "phi kinetic normalization",
+      "mass_dimension": 0,
+      "independent": false
+    },
+    {
+      "symbol": "xi",
+      "meaning": "curvature coupling",
+      "mass_dimension": -2,
+      "independent": false
+    },
+    {
+      "symbol": "phi_star",
+      "meaning": "equilibrium value of phi",
+      "mass_dimension": 1,
+      "independent": false
+    },
+    {
+      "symbol": "rho_star",
+      "meaning": "equilibrium energy density",
+      "mass_dimension": 4,
+      "independent": false
+    },
+    {
+      "symbol": "mu2",
+      "meaning": "phi mass parameter",
+      "mass_dimension": 2,
+      "independent": false
+    },
+    {
+      "symbol": "lambda_phi",
+      "meaning": "phi quartic",
+      "mass_dimension": 0,
+      "independent": false
+    },
+    {
+      "symbol": "Z",
+      "meaning": "chi kinetic normalization",
+      "mass_dimension": 0,
+      "independent": false
+    },
+    {
+      "symbol": "m2",
+      "meaning": "chi mass parameter",
+      "mass_dimension": 2,
+      "independent": false
+    },
+    {
+      "symbol": "lambda_chi",
+      "meaning": "chi quartic",
+      "mass_dimension": 0,
+      "independent": false
+    },
+    {
+      "symbol": "h",
+      "meaning": "portal coupling",
+      "mass_dimension": 1,
+      "independent": false
+    },
+    {
+      "symbol": "xi_c",
+      "meaning": "canonical non-minimal coupling xi/(kappa k)",
+      "mass_dimension": 0,
+      "independent": true
+    },
+    {
+      "symbol": "m_psi2",
+      "meaning": "canonical scalar mass squared mu2/k",
+      "mass_dimension": 2,
+      "independent": true
+    },
+    {
+      "symbol": "lambda_psi",
+      "meaning": "canonical scalar quartic lambda_phi/(epsilon k^2)",
+      "mass_dimension": 0,
+      "independent": true
+    },
+    {
+      "symbol": "g_c",
+      "meaning": "canonical trilinear portal h sqrt(epsilon/k)/Z",
+      "mass_dimension": 1,
+      "independent": true
+    },
+    {
+      "symbol": "m_chi2",
+      "meaning": "canonical chi mass squared m2/Z",
+      "mass_dimension": 2,
+      "independent": true
+    },
+    {
+      "symbol": "lambda_chit",
+      "meaning": "canonical chi quartic lambda_chi/Z^2",
+      "mass_dimension": 0,
+      "independent": true
+    },
+    {
+      "symbol": "Lambda_eff",
+      "meaning": "Lambda + kappa epsilon rho_star",
+      "mass_dimension": 2,
+      "independent": true
+    }
+  ],
+  "nearest_known_class": {
+    "name": "scalar-tensor gravity with quadratic non-minimal coupling (xi psi^2 R; Damour-Esposito-Farese class) plus an O(2) scalar sector with a trilinear scalar portal",
+    "references": [
+      "T. Damour and G. Esposito-Farese, Phys. Rev. Lett. 70, 2220 (1993)",
+      "Y. Fujii and K. Maeda, The Scalar-Tensor Theory of Gravitation (Cambridge, 2003)",
+      "C. M. Will, Living Rev. Relativ. 17, 4 (2014)"
+    ],
+    "variable_map": "psi = sqrt(epsilon k)(phi - phi_star); chi_tilde = sqrt(Z) chi; F = 1 + kappa xi_c psi^2 (sympy residual 0, scratch check W3)"
+  },
+  "differences_from_known_class": [],
+  "redundant_parameters": [
+    {
+      "parameter": "k",
+      "absorbed_by": "canonical normalization of phi"
+    },
+    {
+      "parameter": "Z",
+      "absorbed_by": "canonical normalization of chi"
+    },
+    {
+      "parameter": "phi_star",
+      "absorbed_by": "field shift"
+    },
+    {
+      "parameter": "rho_star",
+      "absorbed_by": "Lambda_eff"
+    },
+    {
+      "parameter": "epsilon",
+      "absorbed_by": "lambda_psi, g_c and Lambda_eff; xi_c and m_psi2 are epsilon-independent, so epsilon -> 0+ is a strong-coupling limit with a propagating scalar, and epsilon = 0 is a degenerate point (vanishing phi kinetic term), not a continuous GR limit"
+    }
+  ],
+  "predictions": [
+    {
+      "observable": "PPN gamma - 1 = 0 at psi0 = 0 (alpha0 = 0); non-discriminating sanity check",
+      "system": "solar system (Cassini)",
+      "claim_id": "C_UET_DEF_MAPPING"
+    },
+    {
+      "observable": "DEF beta0 = -2 xi_c: spontaneous scalarization and dipole radiation for xi_c of about 2 or more when m_psi is light",
+      "system": "neutron stars / binary pulsars (Test Card T001, W6)",
+      "claim_id": "C_UET_DEF_MAPPING"
+    },
+    {
+      "observable": "time-varying G_eff and w(z) from displaced psi background",
+      "system": "cosmology (Topic 0.3)"
+    }
+  ],
+  "lane_mappings": [
+    {
+      "lane": "phase",
+      "symbol": "C",
+      "standard_quantity": "O(2) order-parameter amplitude |chi| (conditional)"
+    },
+    {
+      "lane": "charge",
+      "symbol": "C",
+      "standard_quantity": "global O(2) Noether charge density N^0 (conditional)"
+    },
+    {
+      "lane": "response",
+      "symbol": "Phi",
+      "standard_quantity": "scalar phi (canonical psi), candidate"
+    },
+    {
+      "lane": "response",
+      "symbol": "Pi",
+      "standard_quantity": "time derivative of phi"
+    },
+    {
+      "lane": "He-4 (Topic 13)",
+      "symbol": "O(2) sector",
+      "standard_quantity": "superfluid order parameter, not admitted (charge-to-atom identity open)"
+    }
+  ],
+  "note": "Drafted by Claude in W3 from the existing code; pending author approval. All core equations stay L0 until the W4 sympy derivation check passes. Author decision 2026-11-08: the W5-W6 pilot is binary-pulsar scalarization bounds; Cassini is a sanity check only."
+}

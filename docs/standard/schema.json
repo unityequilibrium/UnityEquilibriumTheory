@@ -1,0 +1,228 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:uet:research-standard:v2",
+  "title": "UET Research Standard v2 records",
+  "description": "Schemas for docs/STANDARD.md. Validate a record against #/$defs/<kind>. Approved by the author 2026-11-08 (W2).",
+  "$defs": {
+    "level": {
+      "enum": ["L0_SPECULATIVE", "L1_CONSISTENT", "L2_CONFRONTED", "L3_REPLICATED", "FAILED"]
+    },
+    "id": {"type": "string", "pattern": "^[A-Z][A-Z0-9_-]{1,63}$"},
+    "date": {"type": "string", "pattern": "^\\d{4}-\\d{2}-\\d{2}$"},
+    "sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "nonempty": {"type": "string", "minLength": 1},
+    "approval": {
+      "type": "object",
+      "required": ["approved_by", "date", "role"],
+      "additionalProperties": false,
+      "properties": {
+        "approved_by": {"$ref": "#/$defs/nonempty"},
+        "date": {"$ref": "#/$defs/date"},
+        "role": {"enum": ["AUTHOR"]}
+      }
+    },
+
+    "theory_card": {
+      "type": "object",
+      "required": ["schema", "card_id", "version", "status", "core_equations", "unit_system", "sign_convention", "fields_parameters", "nearest_known_class", "differences_from_known_class", "redundant_parameters", "predictions", "lane_mappings"],
+      "additionalProperties": false,
+      "properties": {
+        "schema": {"const": "uet-theory-card-v2"},
+        "card_id": {"$ref": "#/$defs/id"},
+        "version": {"type": "integer", "minimum": 1},
+        "status": {"enum": ["DRAFT", "APPROVED", "SUPERSEDED"]},
+        "core_equations": {"type": "array", "minItems": 1, "items": {
+          "type": "object", "required": ["formula_id", "expression", "code_path"], "additionalProperties": false,
+          "properties": {
+            "formula_id": {"$ref": "#/$defs/nonempty"},
+            "expression": {"$ref": "#/$defs/nonempty"},
+            "code_path": {"$ref": "#/$defs/nonempty"},
+            "level": {"$ref": "#/$defs/level"}
+          }
+        }},
+        "unit_system": {"$ref": "#/$defs/nonempty"},
+        "sign_convention": {"$ref": "#/$defs/nonempty"},
+        "fields_parameters": {"type": "array", "minItems": 1, "items": {
+          "type": "object", "required": ["symbol", "meaning", "mass_dimension"], "additionalProperties": false,
+          "properties": {
+            "symbol": {"$ref": "#/$defs/nonempty"},
+            "meaning": {"$ref": "#/$defs/nonempty"},
+            "mass_dimension": {"type": "number"},
+            "allowed_range": {"type": "string"},
+            "independent": {"type": "boolean"}
+          }
+        }},
+        "nearest_known_class": {
+          "type": "object", "required": ["name", "references", "variable_map"], "additionalProperties": false,
+          "properties": {
+            "name": {"$ref": "#/$defs/nonempty"},
+            "references": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/nonempty"}},
+            "variable_map": {"$ref": "#/$defs/nonempty"}
+          }
+        },
+        "differences_from_known_class": {"type": "array", "items": {"$ref": "#/$defs/nonempty"},
+          "description": "Empty array is allowed and means 'none yet'; it must be stated, not omitted."},
+        "redundant_parameters": {"type": "array", "items": {
+          "type": "object", "required": ["parameter", "absorbed_by"], "additionalProperties": false,
+          "properties": {"parameter": {"$ref": "#/$defs/nonempty"}, "absorbed_by": {"$ref": "#/$defs/nonempty"}}
+        }},
+        "predictions": {"type": "array", "items": {
+          "type": "object", "required": ["observable", "system"], "additionalProperties": false,
+          "properties": {
+            "observable": {"$ref": "#/$defs/nonempty"},
+            "system": {"$ref": "#/$defs/nonempty"},
+            "claim_id": {"$ref": "#/$defs/id"}
+          }
+        }},
+        "lane_mappings": {"type": "array", "items": {
+          "type": "object", "required": ["lane", "symbol", "standard_quantity"], "additionalProperties": false,
+          "properties": {
+            "lane": {"$ref": "#/$defs/nonempty"},
+            "symbol": {"$ref": "#/$defs/nonempty"},
+            "standard_quantity": {"$ref": "#/$defs/nonempty"}
+          }
+        }},
+        "approval": {"$ref": "#/$defs/approval"},
+        "note": {"type": "string"}
+      },
+      "if": {"properties": {"status": {"const": "APPROVED"}}},
+      "then": {"required": ["approval"]}
+    },
+
+    "test_card": {
+      "type": "object",
+      "required": ["schema", "test_id", "status", "claim_id", "theory_card", "hypothesis", "observable", "test_kind", "data_sources", "prediction_method", "free_parameters", "fixed_parameters", "pass_criterion", "fail_criterion", "drafted_by"],
+      "additionalProperties": false,
+      "properties": {
+        "schema": {"const": "uet-test-card-v2"},
+        "test_id": {"$ref": "#/$defs/id"},
+        "status": {"enum": ["DRAFT", "APPROVED", "CLOSED"]},
+        "claim_id": {"$ref": "#/$defs/id"},
+        "theory_card": {
+          "type": "object", "required": ["card_id", "version"], "additionalProperties": false,
+          "properties": {"card_id": {"$ref": "#/$defs/id"}, "version": {"type": "integer", "minimum": 1}}
+        },
+        "hypothesis": {"$ref": "#/$defs/nonempty"},
+        "observable": {
+          "type": "object", "required": ["quantity", "unit", "domain"], "additionalProperties": false,
+          "properties": {"quantity": {"$ref": "#/$defs/nonempty"}, "unit": {"$ref": "#/$defs/nonempty"}, "domain": {"$ref": "#/$defs/nonempty"}}
+        },
+        "test_kind": {"enum": ["CONSTRAINT", "BLIND_PREDICTION"]},
+        "data_sources": {"type": "array", "minItems": 1, "items": {
+          "type": "object", "required": ["data_id", "role", "exposure"], "additionalProperties": false,
+          "properties": {
+            "data_id": {"$ref": "#/$defs/id"},
+            "role": {"enum": ["COMPARISON", "HOLDOUT", "CALIBRATION"]},
+            "exposure": {"enum": ["UNSEEN", "SEEN_SUMMARY", "SEEN_FULL"]}
+          }
+        }},
+        "prediction_method": {
+          "type": "object", "required": ["script", "description"], "additionalProperties": false,
+          "properties": {"script": {"$ref": "#/$defs/nonempty"}, "description": {"$ref": "#/$defs/nonempty"}}
+        },
+        "free_parameters": {"type": "array", "items": {"$ref": "#/$defs/nonempty"}},
+        "fixed_parameters": {"type": "array", "items": {"$ref": "#/$defs/nonempty"}},
+        "pass_criterion": {"$ref": "#/$defs/nonempty"},
+        "fail_criterion": {"$ref": "#/$defs/nonempty"},
+        "drafted_by": {"$ref": "#/$defs/nonempty"},
+        "approval": {"$ref": "#/$defs/approval"},
+        "note": {"type": "string"}
+      },
+      "allOf": [
+        {"if": {"properties": {"status": {"enum": ["APPROVED", "CLOSED"]}}}, "then": {"required": ["approval"]}},
+        {"if": {"properties": {"test_kind": {"const": "BLIND_PREDICTION"}}},
+         "then": {"properties": {"data_sources": {"contains": {"properties": {"role": {"const": "HOLDOUT"}, "exposure": {"const": "UNSEEN"}}, "required": ["role", "exposure"]}}}}}
+      ]
+    },
+
+    "result": {
+      "type": "object",
+      "required": ["schema", "result_id", "claim_id", "level", "outcome", "numbers", "producer", "artifacts", "date"],
+      "additionalProperties": false,
+      "properties": {
+        "schema": {"const": "uet-result-v2"},
+        "result_id": {"$ref": "#/$defs/id"},
+        "claim_id": {"$ref": "#/$defs/id"},
+        "level": {"$ref": "#/$defs/level"},
+        "test_card_id": {"$ref": "#/$defs/id"},
+        "calculation_contract_id": {"$ref": "#/$defs/nonempty"},
+        "outcome": {"enum": ["PASS", "FAIL", "INCONCLUSIVE"]},
+        "numbers": {"type": "array", "minItems": 1, "items": {
+          "type": "object", "required": ["name", "value", "unit"], "additionalProperties": false,
+          "properties": {
+            "name": {"$ref": "#/$defs/nonempty"},
+            "value": {"type": ["number", "string"]},
+            "uncertainty": {"type": ["number", "string", "null"]},
+            "unit": {"$ref": "#/$defs/nonempty"}
+          }
+        }},
+        "producer": {
+          "type": "object", "required": ["script", "commit"], "additionalProperties": false,
+          "properties": {"script": {"$ref": "#/$defs/nonempty"}, "commit": {"type": "string", "pattern": "^[0-9a-f]{7,40}$"}}
+        },
+        "artifacts": {"type": "array", "items": {"$ref": "#/$defs/nonempty"}},
+        "date": {"$ref": "#/$defs/date"},
+        "approval": {"$ref": "#/$defs/approval"},
+        "note": {"type": "string"}
+      },
+      "allOf": [
+        {"if": {"properties": {"level": {"enum": ["L2_CONFRONTED", "L3_REPLICATED"]}}},
+         "then": {"required": ["test_card_id", "approval"]}},
+        {"if": {"properties": {"outcome": {"const": "FAIL"}}},
+         "then": {"properties": {"level": {"const": "FAILED"}}}}
+      ]
+    },
+
+    "claim": {
+      "type": "object",
+      "required": ["claim_id", "statement", "level", "evidence"],
+      "additionalProperties": false,
+      "properties": {
+        "claim_id": {"$ref": "#/$defs/id"},
+        "statement": {"$ref": "#/$defs/nonempty"},
+        "level": {"$ref": "#/$defs/level"},
+        "evidence": {"type": "array", "items": {"$ref": "#/$defs/id"}, "description": "result_id values"},
+        "superseded_by": {"$ref": "#/$defs/id"},
+        "note": {"type": "string"}
+      }
+    },
+
+    "claims_registry": {
+      "type": "object",
+      "required": ["schema", "claims"],
+      "additionalProperties": false,
+      "properties": {
+        "schema": {"const": "uet-claims-v2"},
+        "claims": {"type": "array", "items": {"$ref": "#/$defs/claim"}}
+      }
+    },
+
+    "data_entry": {
+      "type": "object",
+      "required": ["data_id", "description", "source", "retrieved", "path", "sha256", "license", "visibility"],
+      "additionalProperties": false,
+      "properties": {
+        "data_id": {"$ref": "#/$defs/id"},
+        "description": {"$ref": "#/$defs/nonempty"},
+        "source": {"$ref": "#/$defs/nonempty"},
+        "doi_or_url": {"type": "string"},
+        "retrieved": {"$ref": "#/$defs/date"},
+        "path": {"$ref": "#/$defs/nonempty"},
+        "sha256": {"$ref": "#/$defs/sha256"},
+        "license": {"$ref": "#/$defs/nonempty"},
+        "visibility": {"enum": ["PUBLIC", "PRIVATE_LOCAL"]},
+        "note": {"type": "string"}
+      }
+    },
+
+    "data_manifest": {
+      "type": "object",
+      "required": ["schema", "entries"],
+      "additionalProperties": false,
+      "properties": {
+        "schema": {"const": "uet-data-manifest-v2"},
+        "entries": {"type": "array", "items": {"$ref": "#/$defs/data_entry"}}
+      }
+    }
+  }
+}

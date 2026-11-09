@@ -4,12 +4,12 @@
   "generator_sha256": "b32005e4bdbf59da6681ae630fa1d9d4415c361f7523be18c8b52a86dc8c93e9",
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
-    "sources": 73,
-    "entries": 784,
+    "sources": 74,
+    "entries": 785,
     "by_stream": {
       "book-history": 94,
       "operations": 112,
-      "research": 578
+      "research": 579
     },
     "exact_duplicates": 0,
     "review_entries": 2
@@ -381,6 +381,11 @@
       "path": "2026/2026-11-03.md",
       "sha256": "1aa48c671eef120a40225343aee0cfc171c2e1ca5313e49eda99b67786bdb12f",
       "entries": 2
+    },
+    {
+      "path": "2026/2026-11-09.md",
+      "sha256": "999af613f7da9789d8ba3c318d6360eb40c11d363c766fd2271a25365833c2c2",
+      "entries": 1
     },
     {
       "path": "2026-08-14.md",
@@ -16032,6 +16037,26 @@
       "basis": "explicit_stream_and_area",
       "flags": [],
       "date": "2026-11-03",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-09.md#research-standard-v2-and-t001--clean-main-port",
+      "source": "2026/2026-11-09.md",
+      "anchor": "research-standard-v2-and-t001--clean-main-port",
+      "start_line": 3,
+      "end_line": 21,
+      "title": "Research Standard v2 and T001 — clean-main port",
+      "entry_sha256": "19705aff4d0e6937f5f30943ae94ef2ad9a98ecc7deb74f94ccb00e701146b61",
+      "stream": "research",
+      "areas": [
+        "research-standards"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-09",
       "legacy_root_path": false
     },
     {

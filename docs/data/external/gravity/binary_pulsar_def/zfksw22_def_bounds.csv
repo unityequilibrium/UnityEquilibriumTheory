@@ -1,0 +1,17 @@
+# Source: J. Zhao, P. C. C. Freire, M. Kramer, L. Shao, N. Wex, "Closing a spontaneous-scalarization window with binary pulsars", arXiv:2201.03771v2 (2022), Sec. 3-5 and Tables 1-3.
+# Numerical facts transcribed on 2026-11-09 for UET Test Card T001; verify against the journal version before approval.
+# Section A: DEF bound (massless scalar, 13 EOSs with M_max > 2 Msun, 7 pulsars combined, 90% CL).
+record,quantity,value,unit,note
+bound,beta0_prior_min,-4.8,1,uniform prior on -beta0 in [4.0,4.8]
+bound,beta0_prior_max,-4.0,1,uniform prior on -beta0 in [4.0,4.8]
+bound,log10_abs_alpha0_prior_min,-5.3,1,flat prior
+bound,log10_abs_alpha0_prior_max,-2.5,1,flat prior
+bound,abs_alpha_A_upper_limit,6e-3,1,"90% CL, all observed NS masses (about 1.25-2.0 Msun), all 13 EOSs; excludes spontaneous scalarization in DEF gravity"
+# Section B: orbital period and GR masses (Tables 1-3), used only to compute orbital separations.
+orbit,J0348+0432,0.102424062722,d,mp=2.01;mc=0.172
+orbit,J1012+5307,0.604672722901,d,mp=1.72;mc=0.165
+orbit,J1738+0333,0.3547907398724,d,mp=1.47;mc=0.181
+orbit,J1909-3744,1.533449474305,d,mp=1.492;mc=0.209
+orbit,J2222-0137,2.44576437,d,mp=1.831;mc=1.3194
+orbit,J1913+1102,0.2062523345,d,mp=1.62;mc=1.27
+orbit,J0737-3039A,0.1022515592973,d,mp=1.33818;mc=1.24887

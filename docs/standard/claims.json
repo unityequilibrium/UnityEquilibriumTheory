@@ -1,0 +1,40 @@
+{
+  "schema": "uet-claims-v2",
+  "claims": [
+    {
+      "claim_id": "C_PARENT_EOM_DERIVED",
+      "statement": "The implemented scalar, O(2) matter and (diagonal) metric field equations of the UET parent code follow from the Theory Card action UET-PARENT-ACTION-001.",
+      "level": "L1_CONSISTENT",
+      "evidence": [
+        "R_W4_PARENT_EOM"
+      ],
+      "note": "Mathematical consistency only; says nothing about whether nature follows this action."
+    },
+    {
+      "claim_id": "C_EPSILON_REDUNDANT",
+      "statement": "epsilon is not an independent coupling of the parent action: in canonical variables xi_c and m_psi are epsilon-independent, lambda_psi ~ 1/epsilon and g_c ~ sqrt(epsilon), so epsilon = 0 is a degenerate point rather than a continuous GR limit.",
+      "level": "L1_CONSISTENT",
+      "evidence": [
+        "R_W4_EPSILON_REDUNDANCY"
+      ]
+    },
+    {
+      "claim_id": "C_UET_DEF_MAPPING",
+      "statement": "Assuming ordinary matter couples minimally to the Jordan metric, the UET parent action maps onto the Damour-Esposito-Farese class with alpha0 = 0 and beta0 = -2 xi_c around psi0 = 0, so PPN gamma - 1 = 0 at that background.",
+      "level": "L1_CONSISTENT",
+      "evidence": [
+        "R_W5_DEF_MAPPING"
+      ],
+      "note": "Mathematical mapping only; confrontation with binary-pulsar data is W6 (Test Card T001)."
+    },
+    {
+      "claim_id": "C_T001_BINARY_PULSAR_XI_C",
+      "statement": "Binary-pulsar timing (ZFKSW22) excludes the UET non-minimal coupling interval that maps to the analysed DEF scalarization range, for a scalar light compared with the binary orbits; the parent action stays compatible for other xi_c.",
+      "level": "L2_CONFRONTED",
+      "evidence": [
+        "R_T001_BINARY_PULSAR"
+      ],
+      "note": "CONSTRAINT (not a prediction): xi_c in [2.0, 2.4] excluded for m_psi <= 2.5e-18 eV; L2 promotion approved by the author 2026-11-09."
+    }
+  ]
+}
