@@ -29,7 +29,7 @@
     },
     {
       "path": "2026/2026-07-06.md",
-      "sha256": "f696d845ca2dab673fb27261aa457cba9df231e8179cb9eac15ec1e758a00fdc",
+      "sha256": "ef934047a4cf403cb7efeb8fe68fc214b942fffa936d86f9cb65ae5669fb2dcb",
       "entries": 4
     },
     {
@@ -44,12 +44,12 @@
     },
     {
       "path": "2026/2026-07-10.md",
-      "sha256": "66600545a4cef6ee643aff582f1b2103285c595f21cbe86a0363b5afcf8a3d06",
+      "sha256": "ab78743559b94a0d3b612ec532570d134959739e255f41fc8b7e7d79a8335ff1",
       "entries": 1
     },
     {
       "path": "2026/2026-07-12.md",
-      "sha256": "aa161012861ff3875c342804e45f9084319e19c8d715233dcb0279eb2269ca41",
+      "sha256": "3cdbdb5b85024773fdf5d2679bf1e5e4a138c3fb6b2ce6a2f904671346ce8ffe",
       "entries": 2
     },
     {
@@ -59,7 +59,7 @@
     },
     {
       "path": "2026/2026-07-15.md",
-      "sha256": "4647b95233c29f62e57dd157ef9e0d9f9357f0235af2d60fa60ae112d98ea6e3",
+      "sha256": "a00fd921e6d2a37e5eea45012547e7c2de57fb9ae552c610d1b2c077dbbb00e9",
       "entries": 1
     },
     {
@@ -69,12 +69,12 @@
     },
     {
       "path": "2026/2026-07-20.md",
-      "sha256": "1b906b8a3a6e6b00aa0d6e5b4b738d7ca6d3493a51494e0af5e6de9a082f5d78",
+      "sha256": "d6b8a879d42d2f4876f79a9f027e41d24a7fc9c5474303cd55d9d9a59e1c9004",
       "entries": 4
     },
     {
       "path": "2026/2026-07-21.md",
-      "sha256": "68dad0f6080cfd2c6db8de85a43fe0e7ba6160a00d0843d48322ad4d038349b6",
+      "sha256": "8f3eb220f1dfaf5d999967499b8a9494783ed6348aeda4f9add8feb4f401263f",
       "entries": 8
     },
     {
@@ -99,7 +99,7 @@
     },
     {
       "path": "2026/2026-07-26.md",
-      "sha256": "120fef586e3af510e154040a5b238311955f22cfa007edcc25cb160e50519d1d",
+      "sha256": "bbaa505fc16b8d76e281838ea0b01ae6314258f10f04acabde5001d655df5b65",
       "entries": 22
     },
     {
@@ -119,7 +119,7 @@
     },
     {
       "path": "2026/2026-08-01.md",
-      "sha256": "46db78a49ecdd2ca2fc243b197cad4793a22016169702a588bd85f992ec6a708",
+      "sha256": "d8ef30208df0c91d6e52fa2332f30e3674d1b0406b21627f741058fa666ba5fb",
       "entries": 24
     },
     {
@@ -134,12 +134,12 @@
     },
     {
       "path": "2026/2026-08-08.md",
-      "sha256": "a3d92b62fef41713410be297e1c8ba50cb9ab69ba3a9ebb0eaa7b00f43dec645",
+      "sha256": "7e834f5e885d034b7f8d048aec1dbb420708d0c44e3efb40b7b11c402c22d91c",
       "entries": 24
     },
     {
       "path": "2026/2026-08-09.md",
-      "sha256": "0429188792ba2aaaaad8c845e5701f1d7fa0a7af0d242ea759596468fa12b99c",
+      "sha256": "3c7ddb15ac74a8d9b9f9c71e43ff686ad7277652fc9852ed4d33a028ed09fa1e",
       "entries": 13
     },
     {
@@ -149,12 +149,12 @@
     },
     {
       "path": "2026/2026-08-11.md",
-      "sha256": "647f2d0e0185fb98b3c409e418a7b4f6922d7fdfea1fa24bc86bda734d62c41f",
+      "sha256": "be5e6b4c7a79d5563386415a730f4a61772c4ec26cd5d55ae5bb7eb103c247a6",
       "entries": 15
     },
     {
       "path": "2026/2026-08-12.md",
-      "sha256": "1152a1900f344eff64be85af97069c4339aa997e9a92b8ebb0419d9ae9ada23e",
+      "sha256": "4abaee7d6bb733c90335cbeb0baf620ace4aaeb48f57d226f71e9de08e573ca0",
       "entries": 22
     },
     {
@@ -164,27 +164,27 @@
     },
     {
       "path": "2026/2026-08-14.md",
-      "sha256": "6e2e7bd1cde3d41dd93775a908e2fec63c35601db5b8163818d2a16653d255b0",
+      "sha256": "e42e4f84146c72794dd9424337a87edb843714c1e07fdc532f3722e7eac2c219",
       "entries": 14
     },
     {
       "path": "2026/2026-08-15.md",
-      "sha256": "c86b421846508eac587ae3658113a9215709756e3adc3de9d059d541d1064fd8",
+      "sha256": "cf26712a1bac8013f4977c380a381c5ae0a2239aaa9e6501cf9072866a7cd525",
       "entries": 10
     },
     {
       "path": "2026/2026-08-16.md",
-      "sha256": "5408dda6faafa0d79f0ae16c0153ead0527014fd39d0e37d2f1dae4f4a2d512c",
+      "sha256": "96134ca1b57853c3d224e0e60f4a7f1dd2d4678ad540fa873ada1bfb7b519cbe",
       "entries": 5
     },
     {
       "path": "2026/2026-08-17.md",
-      "sha256": "798e05b7e7ae90fa01aaba4e6b930d1b0e8955663aaf80bd9023754603e0f608",
+      "sha256": "640ef8a235f5a181be1ed6f8d602135f1d6effd3b99ddba56c607b455647ddd8",
       "entries": 14
     },
     {
       "path": "2026/2026-08-18.md",
-      "sha256": "cacf68d23ffc1b0fdc5ab94b1e0f979e28c3b0eac49f9ea7d599eaa5a066f0ef",
+      "sha256": "c8e1df1fe892ca56c9578bd2363ee31f1e67ad74882921f240eeb1d80fd13d30",
       "entries": 5
     },
     {
@@ -194,7 +194,7 @@
     },
     {
       "path": "2026/2026-08-21.md",
-      "sha256": "b973b8a5969ecffe492c359114ff56b561c7e17fdc352142a5cfa8b872ed1a99",
+      "sha256": "d050dcf2d3c79f69c440c8b7580bce5a8e52e57b2a5c252ac949ed9175a66458",
       "entries": 11
     },
     {
@@ -204,7 +204,7 @@
     },
     {
       "path": "2026/2026-08-23.md",
-      "sha256": "d6a139a5e68fc4e815d83e75e1625ff4bcae063ae21487cc2a2cf40f0052de54",
+      "sha256": "eb2d6d536fa74142a62d26de34be6772a0dea1466f88c53ffc4d6f571345708f",
       "entries": 10
     },
     {
@@ -264,7 +264,7 @@
     },
     {
       "path": "2026/2026-09-15.md",
-      "sha256": "ea48389fd2ae6c4b1fc0b8968fbef73ab0f9526f2ed30c6bcc1e80911d9ed27a",
+      "sha256": "799b0bcff5f1d7857105daccf24cebe21c061f7063397df0c46c1d8cf0ace4df",
       "entries": 55
     },
     {
@@ -389,7 +389,7 @@
     },
     {
       "path": "2026-08-14.md",
-      "sha256": "e486135dc1cdf06898c4e01731551d6459c9fe8f8e6c40e62aabc04c4ef0b4e5",
+      "sha256": "d12c10616376b8cd58c38a5d5963a2441c8f2c77d46953eb40777359b93c60d8",
       "entries": 33
     }
   ],
@@ -421,7 +421,7 @@
       "start_line": 3,
       "end_line": 12,
       "title": "Wave 51 CH finite-k field/coefficient policy gate",
-      "entry_sha256": "8bfdbbebbc7da101d704b4ecae9b6169fe9b260f5bfb45f6f38ccd21edd2ef53",
+      "entry_sha256": "b0ffa050b477954a28375272ead3f160d151ba2fe56e30c5daf86d59ba1bd119",
       "stream": "research",
       "areas": [
         "research-core"
@@ -441,7 +441,7 @@
       "start_line": 13,
       "end_line": 22,
       "title": "Wave 52 CH finite-k field-normalization decision gate",
-      "entry_sha256": "2e4318581bb3640388fbaf7dae06f1b7c21ee471b274471c1a678776676bc66a",
+      "entry_sha256": "fb5c43ebce94dc03ee42560d47bb4cade28fd6d90bc5d033bed36b4fb3fccdff",
       "stream": "research",
       "areas": [
         "research-core"
@@ -461,7 +461,7 @@
       "start_line": 23,
       "end_line": 32,
       "title": "Wave 53 CH finite-k shape-only normalization policy gate",
-      "entry_sha256": "627a2b6a5226e528203ebd0817a7a07b9d890658cba98176fe51bfdea3d4950b",
+      "entry_sha256": "7722ec463ccfe540477c834ace1d346cb4b2148ff7b3fda7c696cab824a44d60",
       "stream": "research",
       "areas": [
         "research-core"
@@ -481,7 +481,7 @@
       "start_line": 33,
       "end_line": 42,
       "title": "Wave 54 CH finite-k source averaging/uncertainty policy gate",
-      "entry_sha256": "05e563bb5c2623ea455b74bbf41b72481604924279d8b80132e1c0dddebd5c23",
+      "entry_sha256": "28e0da27602be9722701743156e4ef31fcbfd0e80a71b99b5c48c4ed4a7d4365",
       "stream": "research",
       "areas": [
         "research-core"
@@ -601,7 +601,7 @@
       "start_line": 3,
       "end_line": 12,
       "title": "Wave 55 CH finite-k next-path closure",
-      "entry_sha256": "31c93a0da9a8b0d6a2f9832731253d56fc4987f45484fa31f2d0e7ec2761bed3",
+      "entry_sha256": "5ea6568c7bad4425aac6ed7d50feab44d5782f14dbaa583ecee0e436a7ff34e7",
       "stream": "research",
       "areas": [
         "research-core"
@@ -621,7 +621,7 @@
       "start_line": 3,
       "end_line": 13,
       "title": "Topic 0.25 Book 1 economics hardening package",
-      "entry_sha256": "6405c4df17819d115f8347ccf77d61fe178daf593f9e2e96c0724404e58d9699",
+      "entry_sha256": "ef037847f585f1ae315e2c9f1ccdcc8959f4db4128dc1e98dce00d7560589e75",
       "stream": "research",
       "areas": [
         "research-core"
@@ -641,7 +641,7 @@
       "start_line": 14,
       "end_line": 24,
       "title": "Topic 5 Book blueprint expansion",
-      "entry_sha256": "4772178a7f98c94ba41cabf44fce9a19c6f6e36938fffe21e4a8969a4b80618c",
+      "entry_sha256": "f58c441a151e74b0fa55a335e1aec0e6a29422e4b4c0462d9f6e9cfa6fc52c26",
       "stream": "research",
       "areas": [
         "research-core"
@@ -721,7 +721,7 @@
       "start_line": 3,
       "end_line": 10,
       "title": "Book 1 economics hardening closure",
-      "entry_sha256": "ff64680132eb9340dda9740622eba06acbffac4045e42db24068c9f5bd74807e",
+      "entry_sha256": "2439b04838e7b922bee25921bbe434a6decfeb6a8aac4e0e8f3cda1dfbc70dc6",
       "stream": "research",
       "areas": [
         "research-core"
@@ -881,7 +881,7 @@
       "start_line": 3,
       "end_line": 11,
       "title": "20:31 - Trace checkpoint hardening",
-      "entry_sha256": "9392bd75fc9dfa8bd4694429140f6a9526f0856232cafc45ac959dc6e2265bb6",
+      "entry_sha256": "acf7a9f2f9fd51c2b4dfbfb2c0e2b5063fbffb38e017bb70702aed571575f7f6",
       "stream": "research",
       "areas": [
         "research-core"
@@ -901,7 +901,7 @@
       "start_line": 12,
       "end_line": 21,
       "title": "20:41 - Matter-space ontology and formula contract",
-      "entry_sha256": "fdff1a163544c29f114f84879270fcf8216389f4e560ad8697b1e510247a7bad",
+      "entry_sha256": "dcfef47d855aae4765890ee0d7f31a25fcd809eb7a8d40e16cd88c09b05ebefa",
       "stream": "research",
       "areas": [
         "research-core"
@@ -921,7 +921,7 @@
       "start_line": 22,
       "end_line": 31,
       "title": "21:10 - Matter-space core operator",
-      "entry_sha256": "4429a2a2170d7228a81d5d2939b1c085b49506b27efa0a3c70f058b2d1b67e33",
+      "entry_sha256": "606529cbb0791d02d073f968733f774830e31b10db8e21f1ce54fa30250b2123",
       "stream": "research",
       "areas": [
         "research-core"
@@ -941,7 +941,7 @@
       "start_line": 32,
       "end_line": 40,
       "title": "21:35 - Matter-space core verification",
-      "entry_sha256": "110fe2924dc04de749aca6a5250f068b55b8f0afbb7a592f9beef1e504827ff2",
+      "entry_sha256": "d470139ec0d113f15cdfd80b64c558e7898b4240675e908406605efcd12c1dab",
       "stream": "research",
       "areas": [
         "research-core"
@@ -1101,7 +1101,7 @@
       "start_line": 85,
       "end_line": 94,
       "title": "Section 8 - Restricted causal non-closed constitutive kernel",
-      "entry_sha256": "54a8b1d2810900cf092aa66273822d3b5250c24e231152cefd08a7079c9bf460",
+      "entry_sha256": "ff686076afd9d2db8a8c716885ab6548352b7d48c684cb37b083dedfd2dc97d8",
       "stream": "research",
       "areas": [
         "research-core"
@@ -1781,7 +1781,7 @@
       "start_line": 3,
       "end_line": 13,
       "title": "Foundation-first equation research workflow repair",
-      "entry_sha256": "4f8eac4064f1c331abf46d4daf84729368b4372aef96a71ae1ca2b8f382a5bc4",
+      "entry_sha256": "a19c1ca74a741b4917c650c33f97c2f02553b8a54dfb452091033ed605feee9e",
       "stream": "research",
       "areas": [
         "research-standards",
@@ -1802,7 +1802,7 @@
       "start_line": 14,
       "end_line": 23,
       "title": "Foundation compatibility and limiting-case audit",
-      "entry_sha256": "2f64004e8f16df3d500fd91ff55ca5443212642d44c4000800cd9107ff8be233",
+      "entry_sha256": "c8413f579432a30d5cb96cac3580eb1fc71e2cb41c4dcd9ea8869c8ded058db3",
       "stream": "research",
       "areas": [
         "research-core",
@@ -1823,7 +1823,7 @@
       "start_line": 24,
       "end_line": 33,
       "title": "F0 equation inventory and cross-topic correspondence matrix",
-      "entry_sha256": "940daeecfb3ba776be925f7cd136f8fe36a89956d95051f53d103d185775df65",
+      "entry_sha256": "c41375fbdbd4b7142ce85fbbd38f014330bcb73e3b27ec64451d67567937758a",
       "stream": "research",
       "areas": [
         "research-standards",
@@ -1844,7 +1844,7 @@
       "start_line": 34,
       "end_line": 43,
       "title": "Special-case reproducibility repair",
-      "entry_sha256": "0c0e087853d07864d2b67ab072777043c5a82d5a77fd9c6b4bba0a26c160c542",
+      "entry_sha256": "bb2b23e5d728cfce044334605e1085f0f40e0675e716018f5ec3cc8d2c9ba0b5",
       "stream": "research",
       "areas": [
         "research-core"
@@ -1864,7 +1864,7 @@
       "start_line": 44,
       "end_line": 53,
       "title": "Code-only equation surface inventory",
-      "entry_sha256": "97d02d185c56b9a34f47532d75df8ad553acd511937b30808a6123fc016aab2b",
+      "entry_sha256": "7be14ac7d59d2e9c4c1a8038eff16005d39ba21d17e627204ba8cef1f090ebce",
       "stream": "research",
       "areas": [
         "research-core",
@@ -1885,7 +1885,7 @@
       "start_line": 54,
       "end_line": 63,
       "title": "Core equation-family ownership contract",
-      "entry_sha256": "7bcfd29858227d84fd7ef9ad2dfeee5bebf2629b31c95ec6f28dc84c0b84d2c7",
+      "entry_sha256": "20f0a78b3453a72c5cd19c6404edfc7b1c2d890efa6f6c0d3b36c87cf7aa9e4a",
       "stream": "research",
       "areas": [
         "research-core",
@@ -1906,7 +1906,7 @@
       "start_line": 64,
       "end_line": 74,
       "title": "Foundation status aggregate and stopping boundary",
-      "entry_sha256": "7f40e286b221b5246df92e9d5d565cc39cf25d12f6ffbe575910f5ca877c8bb1",
+      "entry_sha256": "8fc582718bd2001d12f0e562dde6acb36993d38fa3061699e4c9fb208f47d10e",
       "stream": "research",
       "areas": [
         "research-standards",
@@ -1927,7 +1927,7 @@
       "start_line": 75,
       "end_line": 84,
       "title": "Legacy variational closure audit",
-      "entry_sha256": "7906b827ec34bbaeeed6a674481e90155d7be98c65a0079c4af7bb0b3b9e617f",
+      "entry_sha256": "c53fe8ac754b25a298413cc3a0af13d52006e3d49b4d27105b07e68c002a2d9a",
       "stream": "research",
       "areas": [
         "research-core",
@@ -1948,7 +1948,7 @@
       "start_line": 85,
       "end_line": 94,
       "title": "Special-case limit and provenance revalidation",
-      "entry_sha256": "0fe6a5489d20beca00a24d670509ca4e3beaf44fe6a2ad6930bbb0b0b532f804",
+      "entry_sha256": "69c7140c16af9048f12479bb1481c062b30f4ac9f2d6c5d30e5d02c4fca97904",
       "stream": "research",
       "areas": [
         "research-core",
@@ -1969,7 +1969,7 @@
       "start_line": 95,
       "end_line": 104,
       "title": "Correspondence matrix provenance refresh",
-      "entry_sha256": "0c12b394c133e98c35ddbf5083240e4bae3b6a6c126958bae2bd03b45b2a2503",
+      "entry_sha256": "8ae56425cc2fa15de3cfabeee79135c80e46fa8e0e481cae6edcfc265da74c11",
       "stream": "research",
       "areas": [
         "research-standards",
@@ -1990,7 +1990,7 @@
       "start_line": 105,
       "end_line": 114,
       "title": "Causal discretization classification",
-      "entry_sha256": "61ce55f20d0e90cda892aaf688a87152457197c264197667577618a9eab352e0",
+      "entry_sha256": "63540a1a0b0ff0205df5d26b3db6f6065a91021fd67a11c6f9a9e6734968e616",
       "stream": "research",
       "areas": [
         "research-core",
@@ -2011,7 +2011,7 @@
       "start_line": 115,
       "end_line": 124,
       "title": "Strict-CFL causal reference lane",
-      "entry_sha256": "8ff04d4e7d62505d843a52324aacdc055c165b0e47f59bc469a3db2507f22036",
+      "entry_sha256": "75ea058548f3ff078e00b4658633fe5bbdc801597dac9b35d8dcf565fefe7426",
       "stream": "research",
       "areas": [
         "research-core",
@@ -2032,7 +2032,7 @@
       "start_line": 125,
       "end_line": 134,
       "title": "Foundation compatibility decision matrix",
-      "entry_sha256": "379e6bbad6cb7b61e1b25a82a2e17f146942b811f2c0e3e5004256dfb4c12fa6",
+      "entry_sha256": "1f68941d1b87b28a257880bfd1581d51aa20989df7a4e442cf03b1d134a44c8e",
       "stream": "research",
       "areas": [
         "research-standards",
@@ -2053,7 +2053,7 @@
       "start_line": 135,
       "end_line": 145,
       "title": "Canonical legacy variational lane closure",
-      "entry_sha256": "9aeb1cfa1858e0dc1a575765c50f5098844ea7c87310f5b5d0fe5753de691751",
+      "entry_sha256": "119842c9a1c382a94f9d497582b61eac6e42ec33c049ca6dcd8bc6577f6991bc",
       "stream": "research",
       "areas": [
         "research-core",
@@ -2074,7 +2074,7 @@
       "start_line": 146,
       "end_line": 155,
       "title": "Canonical C-I operator and beta semantics closure",
-      "entry_sha256": "fadb2934b966288a57cdf6d70973cbdf9d27299170d7630272f36c1527c186dc",
+      "entry_sha256": "fd6cf7a5104c972b831c938eec7e88fc1442ed42226531b9b4d9f4a64f997bf0",
       "stream": "research",
       "areas": [
         "research-core",
@@ -2095,7 +2095,7 @@
       "start_line": 156,
       "end_line": 165,
       "title": "Thought experiment source note: observation as past behavior",
-      "entry_sha256": "b7403de356af738eca4bcc23e011b145e731dd1a40a915385dc13ed8690bc81b",
+      "entry_sha256": "7c6d8313a553d585d90685110c12fe90e66cd6b53a9fe095b9dcdbd041427eb0",
       "stream": "research",
       "areas": [
         "research-core",
@@ -2116,7 +2116,7 @@
       "start_line": 166,
       "end_line": 175,
       "title": "Einstein correspondence: behavior limit as a special case",
-      "entry_sha256": "791946a5a8a43cd7e35bf15a4535f5a994cb69a1aff6d4b3b44d2d88b96c2950",
+      "entry_sha256": "78a769abb9ff616cfea41b8a57a18a227f229f3e1f16acd27c8014817b32b3c2",
       "stream": "research",
       "areas": [
         "research-core",
@@ -2137,7 +2137,7 @@
       "start_line": 176,
       "end_line": 185,
       "title": "Relational Newtonian baseline for observer information",
-      "entry_sha256": "61581a51d8d1b69faae81526a7215fcdb935b3b2f8c22b461542390d6df9f8c2",
+      "entry_sha256": "aadb0b1383d1e64b3b5fddadb946192e62b33476d1ef4835916afbe36ffdec2c",
       "stream": "research",
       "areas": [
         "research-core",
@@ -2158,7 +2158,7 @@
       "start_line": 186,
       "end_line": 195,
       "title": "Canonical C interaction ontology and physical mapping",
-      "entry_sha256": "b27c9f246e27c634a6084aa554cc1b3653ab048be64bdc4160ab076545696b4a",
+      "entry_sha256": "27130c86cbbe6aed9db4697da2d8b0b4e83fdafe3461f2f42330bdf2fdbaff22",
       "stream": "research",
       "areas": [
         "research-standards",
@@ -2179,7 +2179,7 @@
       "start_line": 196,
       "end_line": 206,
       "title": "Relational two-body baseline correspondence wave",
-      "entry_sha256": "65eda9781274fceb5cfb9a2d6bb24be32f11da8f31270fbdfc7372d25b7aa7e5",
+      "entry_sha256": "dc23dc16e6fc6604b38c0c3a152b5b30fafe462523442e8e50c4cb4a35f12d3c",
       "stream": "research",
       "areas": [
         "research-core",
@@ -2200,7 +2200,7 @@
       "start_line": 207,
       "end_line": 217,
       "title": "Direct C-to-mass-density identifiability wave",
-      "entry_sha256": "8b6468120ba7d09e22b5aae788cb518b302f3de0747b6fa931067bf04dfcf707",
+      "entry_sha256": "868293858f76bfb2e83b11fd9290537372c399e9b28ac8b60bca6dc4c51f1349",
       "stream": "research",
       "areas": [
         "research-core",
@@ -2221,7 +2221,7 @@
       "start_line": 218,
       "end_line": 227,
       "title": "Matter-to-interaction forward correspondence wave",
-      "entry_sha256": "f0ff7030bca80a585a13e2c7bce3b98dbb3bc11df5447a6f35a25c59f4fb061d",
+      "entry_sha256": "e28b76d550a0a8076487e8fde8e6870a69b8424fe1da70c11a5e6acc1ced2183",
       "stream": "research",
       "areas": [
         "research-core",
@@ -2636,7 +2636,7 @@
       "start_line": 1,
       "end_line": 11,
       "title": "Topic 0.25 SEC recipient funding concordance",
-      "entry_sha256": "48425881ee07f2d152bea19bc6b258f01f0f8c80436d1e3e14c9515a4a0c88de",
+      "entry_sha256": "3a7b7a531a13638e226c2f3a14167ad6f74011cb384b1ebb613ed2293b7703b9",
       "stream": "research",
       "areas": [
         "research-core"
@@ -2656,7 +2656,7 @@
       "start_line": 14,
       "end_line": 25,
       "title": "Named persistence principle and operational diagnostic contract",
-      "entry_sha256": "6c55a8ff5f65b0ab424d1c07b05b4c810d32755c4e5c1c4f6ec3ebebaa67b053",
+      "entry_sha256": "1cf366dc7f632e5414281a5c31d7118cd59c6461dbcdbe317adc7cc847039ee1",
       "stream": "research",
       "areas": [
         "research-core"
@@ -2676,7 +2676,7 @@
       "start_line": 26,
       "end_line": 37,
       "title": "Topic 0.25 bounded BLS labor provenance refresh",
-      "entry_sha256": "02b3eba00e2fd2c9c637526eeddcff499f553d050264491c2cfed65d98d008c1",
+      "entry_sha256": "aa8e669cb070a92d43a8e84da39a708afbd5322fae2ca4a62a2c2b4524d54d95",
       "stream": "research",
       "areas": [
         "research-core"
@@ -2696,7 +2696,7 @@
       "start_line": 38,
       "end_line": 49,
       "title": "Topic 0.25 public federal-award ledger lane",
-      "entry_sha256": "93553a6e434a40c6b8dab63eb020cee74023f7182cf98db38fedf14017d93b12",
+      "entry_sha256": "4d808334eb3e665c7474a62d72ec573c61be8a35049109ee381fb6acb7ceabfa",
       "stream": "research",
       "areas": [
         "research-core"
@@ -2716,7 +2716,7 @@
       "start_line": 50,
       "end_line": 61,
       "title": "Topic 0.25 Treasury aggregate funding-source lane",
-      "entry_sha256": "a0ed007466825d0efb886b5c8675ee3e3861db607594ceb6f23ef85dbabb0295",
+      "entry_sha256": "335b7807c073a4f2c43636ccddf41ef7ee7681df2632efa257c6b757c3061c14",
       "stream": "research",
       "areas": [
         "research-core"
@@ -2736,7 +2736,7 @@
       "start_line": 62,
       "end_line": 73,
       "title": "Topic 0.25 award-to-outlay reconciliation",
-      "entry_sha256": "0e092bf3cd8dd076ad8d40c5257d3c816e705ea8b8c9036706d57daa8647651b",
+      "entry_sha256": "c29710a54097a631d4fafec858d1e3894315a2ca4d427df9a4a5676585f9d2e9",
       "stream": "research",
       "areas": [
         "research-core"
@@ -2756,7 +2756,7 @@
       "start_line": 74,
       "end_line": 85,
       "title": "Topic 0.25 award-level account-outlay audit",
-      "entry_sha256": "342a2eeeced2fb492a6e277f65ee29af07b3935ee3f8ae66ed2b4f1c4230bb1e",
+      "entry_sha256": "5f2523f426f7298e8fa5f1a8303ac9f73020853e0207b6158fd7c769e68d4321",
       "stream": "research",
       "areas": [
         "research-core"
@@ -2776,7 +2776,7 @@
       "start_line": 86,
       "end_line": 97,
       "title": "Topic 0.25 award federal-account linkage",
-      "entry_sha256": "41e838e4002f71aad55fa0b425401fcc5450be270e3b536bd8e1fdd56377321d",
+      "entry_sha256": "2bc80ba68574aedace73d58f32ec043bbce70eeb4029592b3df6bff1c72ce839",
       "stream": "research",
       "areas": [
         "research-core"
@@ -2796,7 +2796,7 @@
       "start_line": 98,
       "end_line": 109,
       "title": "Topic 0.25 federal-account budget-resource audit",
-      "entry_sha256": "4406cd9e6a2e940a0b0d79be852be13f49116eef0c2db290f6df5f73b3fc02bb",
+      "entry_sha256": "65495a2aa61cc6a574581f2d0e47a57edef7eda606bf908e9ec41bb26b098341",
       "stream": "research",
       "areas": [
         "research-core"
@@ -2816,7 +2816,7 @@
       "start_line": 110,
       "end_line": 120,
       "title": "Topic 0.25 downstream subaward-recipient audit",
-      "entry_sha256": "b478c5dc62ea846d78ae530804c8fefc4860277de588d623402ea4c7e68ecdab",
+      "entry_sha256": "f75907d5b2727d0e0d82dea8f638d902a87fcef499f713f6db222ca3d96d9341",
       "stream": "research",
       "areas": [
         "research-core"
@@ -3756,7 +3756,7 @@
       "start_line": 3,
       "end_line": 10,
       "title": "research-core / 0.19 dependency artifact repair",
-      "entry_sha256": "83cfb3d0d191afab97ab42c4a6b14ce2fd348bd3a03a91924fd456c9df3e2494",
+      "entry_sha256": "036cebbd7563f1044c56c0931329d21b9effcef322f4b7aa21c81ce83b841921",
       "stream": "research",
       "areas": [
         "research-core"
@@ -3776,7 +3776,7 @@
       "start_line": 11,
       "end_line": 18,
       "title": "research-core / Wave 10 payload consistency repair",
-      "entry_sha256": "09153bd2f70205cca26d567e13d145e49999c610acc31bd4871559a57f72809a",
+      "entry_sha256": "a1b7fcb3a29dddb09ecdd73f9528e3d0f4ddbefbe194347e9fa514e8a7d90fb9",
       "stream": "research",
       "areas": [
         "research-core"
@@ -3796,7 +3796,7 @@
       "start_line": 19,
       "end_line": 26,
       "title": "research-standards / F2 explicit row-disposition closure",
-      "entry_sha256": "4bfc818868135ba6be1b920253de1697414949bbf78ab0beb09def385fb7d6c0",
+      "entry_sha256": "edd5cb12bb9f609a15340d43c7d9424fb83a39d5c0e689682eaf75178abff86d",
       "stream": "research",
       "areas": [
         "research-standards",
@@ -3817,7 +3817,7 @@
       "start_line": 27,
       "end_line": 34,
       "title": "research-standards / F2 standard-counterpart contract mapping",
-      "entry_sha256": "40c7f44e1b19a2504da99c640eeb00b8857280a49881cff61b1fb82e810db04d",
+      "entry_sha256": "3e6966effa0689e8e9110a6f962d8143368eaaec6c238e6a91b94b6ed90f9f7c",
       "stream": "research",
       "areas": [
         "research-standards",
@@ -3838,7 +3838,7 @@
       "start_line": 35,
       "end_line": 41,
       "title": "research-standards / F3-F7 normalized subgate closure",
-      "entry_sha256": "5396d773ff827e76026ebc4960677026f8372a68d7967987453af938502dd4e7",
+      "entry_sha256": "8b7c5c4d902b00fc4c79e6e2d9a2acfc36e8fa28e84da6876ec98383da4f7493",
       "stream": "research",
       "areas": [
         "research-standards",
@@ -3859,7 +3859,7 @@
       "start_line": 42,
       "end_line": 48,
       "title": "research-standards / F4 derivation-origin audit",
-      "entry_sha256": "56429d54550da5bd2ab7cda19a6308f634004a0fac4a2b6524431fc0a0182abc",
+      "entry_sha256": "3130dca7c1c4f3285f675326d92e47cdd601e702f5fae2974e53bdd6682ec858",
       "stream": "research",
       "areas": [
         "research-standards",
@@ -3880,7 +3880,7 @@
       "start_line": 49,
       "end_line": 55,
       "title": "research-core / 0.13 quasi-temperature source review",
-      "entry_sha256": "dc586ab3f0350f4e5d19aac32a1753244af6ddeac7a41e833d35fd06434682c2",
+      "entry_sha256": "62ee3cbcc0dc6cae1ac313b9a5065fb48b4890ef5fde10525e7229d8b5a177b1",
       "stream": "research",
       "areas": [
         "research-core"
@@ -3900,7 +3900,7 @@
       "start_line": 56,
       "end_line": 63,
       "title": "research-core / C-to-mass-density identifiability boundary",
-      "entry_sha256": "c4d1b45460a5c616c0c51d8f7ec9a74cb7b6b48904140a1b7d72b59f356b0658",
+      "entry_sha256": "06e66d538238166e35751b0f638fc8a96ce87aae8355437a70571cbed4a25f1a",
       "stream": "research",
       "areas": [
         "research-core"
@@ -3920,7 +3920,7 @@
       "start_line": 64,
       "end_line": 71,
       "title": "research-core / augmented C-density amplitude/source contract",
-      "entry_sha256": "1652fa9a28a585e035600928f50dd41c50911dc8e5c95c196866d46117e61e44",
+      "entry_sha256": "b43a56ba3556fe2c70627c13ac4a9050fc3b1b122bf1abac089f9d7d28403ed5",
       "stream": "research",
       "areas": [
         "research-core"
@@ -3940,7 +3940,7 @@
       "start_line": 72,
       "end_line": 79,
       "title": "research-core / synthetic SI 1D C-density unit contract",
-      "entry_sha256": "1855ed0767ca5588b33a67421d21c98302c41914a336e4d518fe08f527708ef9",
+      "entry_sha256": "626d73e36efc9afbcd13187b7417d85a378624083ae8a01a94479f498fdde49d",
       "stream": "research",
       "areas": [
         "research-core"
@@ -3960,7 +3960,7 @@
       "start_line": 80,
       "end_line": 86,
       "title": "research-core / 0.13 constraint provenance repair",
-      "entry_sha256": "ff51f97a5b3fb4a2fac6ca10165926462854e30c0e0e0784874fb12083a7b7ef",
+      "entry_sha256": "d254bcce196af1a67089d9ebb8e49a49b72042989fa74969567196a57a18ed2e",
       "stream": "research",
       "areas": [
         "research-core"
@@ -3980,7 +3980,7 @@
       "start_line": 87,
       "end_line": 94,
       "title": "research-core / legacy Noether shape-contract repair",
-      "entry_sha256": "2e59753d1837f8e3168ffb4dab941b42b71d3ece80ef0a4e3a223a31d3d2b92c",
+      "entry_sha256": "2fe085545b6c3cd9992c9bc7d35025d6af381b2fc91a91a2ee8a1d2c81b991c0",
       "stream": "research",
       "areas": [
         "research-core"
@@ -4000,7 +4000,7 @@
       "start_line": 95,
       "end_line": 102,
       "title": "research-core / synthetic SI 3D density-operator contract",
-      "entry_sha256": "717b72f10a8f6bcfc235069bf15f943f38c1d5c6f6555205a304373e1aa0cbaf",
+      "entry_sha256": "eaa3f3e5e1895cdd89080467ceda135c5d3663ebde4cc96b47f7ca583f42452e",
       "stream": "research",
       "areas": [
         "research-core"
@@ -4020,7 +4020,7 @@
       "start_line": 103,
       "end_line": 111,
       "title": "research-standards / F0 inventory coverage closure",
-      "entry_sha256": "b95e5383cb079371e6e587588437eb8d5c6c19b185674b82962624b3596e1305",
+      "entry_sha256": "b194901801e05d79f11df3fee21febb99161fce64bb28cafaffc4506315b0b6a",
       "stream": "research",
       "areas": [
         "research-standards"
@@ -4040,7 +4040,7 @@
       "start_line": 112,
       "end_line": 120,
       "title": "research-core / external 3D density source-package gate",
-      "entry_sha256": "73dff8173cedb20a50c771ece42e976f31aec70717029fddf407d83fd899ea22",
+      "entry_sha256": "46949e76f20d8e1b417401f37c39260178d77d21eee362247dd8fb9d4e8a0258",
       "stream": "research",
       "areas": [
         "research-core"
@@ -4060,7 +4060,7 @@
       "start_line": 121,
       "end_line": 129,
       "title": "research-core / thermal dimensional calibration contract",
-      "entry_sha256": "b906e2298a0a429eee02116ed8bb001dd69dfcef8ddbc9191f76fb5186bcbce6",
+      "entry_sha256": "3724ca7f0f12becdd89dae4a1e3bfb539ce947fc6238106a1851f5212e5aca5e",
       "stream": "research",
       "areas": [
         "research-core"
@@ -4080,7 +4080,7 @@
       "start_line": 130,
       "end_line": 137,
       "title": "research-standards / canonical controller synchronization",
-      "entry_sha256": "d1c10198f019e948a9e37fdfc290b05391cfad6a567bf737d02f9794d50fe936",
+      "entry_sha256": "c6b2388b756ff9299523af69b579111e9455dc716d9f5e3dbb0a55129924c8f6",
       "stream": "research",
       "areas": [
         "research-standards"
@@ -4100,7 +4100,7 @@
       "start_line": 138,
       "end_line": 145,
       "title": "research-core / Gaia 3D query and holdout preregistration",
-      "entry_sha256": "d7c09fc945fd028c92fa4469db6393ddd2dda9b94a6ceec6b4879466fce44844",
+      "entry_sha256": "18ddb97753cda85935b31510abe75686a7dccc544929b0e2677f09fa40e61ab6",
       "stream": "research",
       "areas": [
         "research-core"
@@ -4120,7 +4120,7 @@
       "start_line": 146,
       "end_line": 153,
       "title": "research-core / Phi-to-kelvin structural identifiability",
-      "entry_sha256": "0a30cf9305b8194f0e544a80f669c7e2575fe0210270d8581c988af14f24602d",
+      "entry_sha256": "0d793eec2f78a0c8f1de737dc74553c338526e40087e9e3d59b987eebe30384a",
       "stream": "research",
       "areas": [
         "research-core"
@@ -4140,7 +4140,7 @@
       "start_line": 154,
       "end_line": 169,
       "title": "research-core / dynamic-game cost/C separation",
-      "entry_sha256": "5f77b9808dbabc99c7e3005afa3db504d4d83e839ee258a0d5192be9a6833b0c",
+      "entry_sha256": "28e5d3828e04ea67743286cca55b263f2fc7454f95d930ee38253fb21bf5d228",
       "stream": "research",
       "areas": [
         "research-core"
@@ -4160,7 +4160,7 @@
       "start_line": 170,
       "end_line": 183,
       "title": "research-core / physical cost-map contract",
-      "entry_sha256": "6077c3b4fe19f4669ac12c85b67ab31c81933757c26e54647f8ea3dcf4260142",
+      "entry_sha256": "8693bee15c63ed10c5907fae63cf5f34ebd9411777b25bf7b6530d40e446daf9",
       "stream": "research",
       "areas": [
         "research-core"
@@ -4180,7 +4180,7 @@
       "start_line": 184,
       "end_line": 197,
       "title": "research-standards / physical-cost F0/F4 ownership sync",
-      "entry_sha256": "0528b50d74aa59d0bc7035ba17aaaec9129d0ebf80a49b0229c90f0597c0c42b",
+      "entry_sha256": "60e068f35c66daaabe3c29fd1e4ab568093cd4e190ed3f0c66d647e31f60837d",
       "stream": "research",
       "areas": [
         "research-standards",
@@ -4201,7 +4201,7 @@
       "start_line": 198,
       "end_line": 210,
       "title": "research-core / mapped dynamic-game control",
-      "entry_sha256": "89655c0598b965bcb3c3057c23672c2503c98898bfd9061b9d979faf63784e21",
+      "entry_sha256": "cafcd4915fd9f8d0ddd1ac7c82059e16fb1ed20e8f00a41e0f6bfd5a04072c79",
       "stream": "research",
       "areas": [
         "research-core"
@@ -4221,7 +4221,7 @@
       "start_line": 211,
       "end_line": 223,
       "title": "research-standards / strict all-wave completion audit",
-      "entry_sha256": "54d0843373d113ebdd8813a565cbbd7215bc848625e5bceffb44ac44674ec6af",
+      "entry_sha256": "94ef1387f3c16e53fe50f727969698a50e1c0683714220f68be164d97b31eaa1",
       "stream": "research",
       "areas": [
         "research-standards"
@@ -4481,7 +4481,7 @@
       "start_line": 125,
       "end_line": 133,
       "title": "Main-theory Wave 12",
-      "entry_sha256": "e4979cc82687706d581aebb16e80411b349115e8bb0b61aada80921f69eb004f",
+      "entry_sha256": "e7a245e8c23ab21eb2c0a4ccb85268c77ddd55dcbeeadd91ecfc5f1e97d1b426",
       "stream": "research",
       "areas": [
         "research-core"
@@ -4541,7 +4541,7 @@
       "start_line": 3,
       "end_line": 13,
       "title": "Topic 13 Cp-Cv Correction Contract",
-      "entry_sha256": "fa56021a8bd248d7c92f6cc5132ca09bad2248b4ed62767e5e415431381ddd8d",
+      "entry_sha256": "c13e83607904f257b16ac10995a3d1e1f58298d270845e0752ca3e88c855ecb0",
       "stream": "research",
       "areas": [
         "research-core",
@@ -4564,7 +4564,7 @@
       "start_line": 14,
       "end_line": 23,
       "title": "Topic 13 Georgia Tech Source-Independence No-Go",
-      "entry_sha256": "a26684021410670e71dc5ebc73fb08a85ff31b5cccb8d69ec16840705ffeaa6b",
+      "entry_sha256": "b8ad0b74b82755b15459cffa27088888d7b16e73334d816c3564faa193f311f2",
       "stream": "research",
       "areas": [
         "research-core",
@@ -4586,7 +4586,7 @@
       "start_line": 24,
       "end_line": 34,
       "title": "Topic 0.25 Book 1 Economics Research Reset",
-      "entry_sha256": "0a3a103ee32b3b25da6f8f02b8ba26182049faf80ba20995f195b1d0086ea30a",
+      "entry_sha256": "5398116ec20bb12cde993e7310c478eb1b2a5437dbf6fc13633c70d6b1c73ce4",
       "stream": "research",
       "areas": [
         "research-core",
@@ -4610,7 +4610,7 @@
       "start_line": 35,
       "end_line": 45,
       "title": "Topic 13 Ding PBTE Source Mapping",
-      "entry_sha256": "6ab36ceea8ee04f67aa8241f6b988066d5bb345352af49c2a2706dd763d05bd0",
+      "entry_sha256": "e4647c32f2eb17a816c6ff3ff860e0ded5fa3c1aa2a0420b65b12705b4e197dd",
       "stream": "research",
       "areas": [
         "research-core",
@@ -4632,7 +4632,7 @@
       "start_line": 46,
       "end_line": 57,
       "title": "Topic 13 Ding OA Numeric-Input No-Go",
-      "entry_sha256": "480ef024b80dbbff1c53689f288d014c52403b5e73f6dd0fd24bc411a31bb8db",
+      "entry_sha256": "15480160e1d9d5162c58f59a457273a80efdab7a6367018a8c563c9965a4040f",
       "stream": "research",
       "areas": [
         "research-core",
@@ -4654,7 +4654,7 @@
       "start_line": 58,
       "end_line": 69,
       "title": "Topic 13 Independent mp-48 Graphite Heat Capacity",
-      "entry_sha256": "10c880844b4a728831c2ae84bf63750f3869f7b376d05be0713d2e552a084bfc",
+      "entry_sha256": "d5908aa13805cd854073cebe389b7baca73c968a405f4dacaacddcffc4a8d7fd",
       "stream": "research",
       "areas": [
         "research-core",
@@ -4677,7 +4677,7 @@
       "start_line": 70,
       "end_line": 81,
       "title": "Topic 13 Phi Energy Anchor Identifiability No-Go",
-      "entry_sha256": "76f3e9716efd7ca71adadd6799aa9fc7909c1cbfc2f73aec4c46b57f38f72987",
+      "entry_sha256": "156636d72eaff65b67dcfd8b4f6d1bf6b12aec4ac0b73731b1306c8700863d64",
       "stream": "research",
       "areas": [
         "research-core",
@@ -4699,7 +4699,7 @@
       "start_line": 82,
       "end_line": 93,
       "title": "Topic 13 Covariant Action SI Anchor Route",
-      "entry_sha256": "08d937a123b36d8dba1b2149e3ee1686d1acf5aa4f405a2ce277001da9a09038",
+      "entry_sha256": "4370140f529277b35361c1f3d618c7e83a1e933881b143d3d5bfcf6fd1ef5f5c",
       "stream": "research",
       "areas": [
         "research-core",
@@ -4721,7 +4721,7 @@
       "start_line": 94,
       "end_line": 105,
       "title": "Topic 13 Covariant Field-Normalization No-Go",
-      "entry_sha256": "7fd2c10f78cadfdb37df578e436577bcf8a0aeeb1559a1a475bf0ba2c0b8a6e2",
+      "entry_sha256": "7dbeab0c7d671ec81e29f2dc380c538d7a60a349615d18dffa467a6ba3c6bf58",
       "stream": "research",
       "areas": [
         "research-core",
@@ -4743,7 +4743,7 @@
       "start_line": 106,
       "end_line": 117,
       "title": "Topic 13 Causal Branch Selection",
-      "entry_sha256": "9dfb805cdcf435fd509be8f165f9c00dc7c17829684be357af9f0a0d4a0d6dd3",
+      "entry_sha256": "87166c45364cdc16e69366bbe15d2ddf237e0613c768996602a0476f8dfb7c0e",
       "stream": "research",
       "areas": [
         "research-core",
@@ -4765,7 +4765,7 @@
       "start_line": 118,
       "end_line": 129,
       "title": "Topic 13 Beta Symbol Separation",
-      "entry_sha256": "35258b91711dd5e867f0fb82e3ee60b3705d40342fde44c58c2ef968b5c753b0",
+      "entry_sha256": "ad5b8effa9429fae4282e83ef33a26c0766ea5c549774b4bc29b9ba5b9efbd73",
       "stream": "research",
       "areas": [
         "research-core",
@@ -4787,7 +4787,7 @@
       "start_line": 130,
       "end_line": 141,
       "title": "Topic 13 Named Finite-Temperature beta_T13 Contract",
-      "entry_sha256": "4baa559c01f4176bd42ad903aad60c731cb1ad2a5c6272fff2b92a635038f2ca",
+      "entry_sha256": "61c966734cadedecdcb288e3ee9dfea8a94265443538609e7ab95ca711b6f498",
       "stream": "research",
       "areas": [
         "research-core",
@@ -4809,7 +4809,7 @@
       "start_line": 142,
       "end_line": 152,
       "title": "Topic 13 Named Collective-Response EOS Contract",
-      "entry_sha256": "cd67619f1173a9a1e6b94f18dd0cc8cd56897fb519acebe7ed4ae5f72d486aa0",
+      "entry_sha256": "a37bcdd1059ea48c1c38877723aa176025869cbfe2de3ec6f9e8a9c155227633",
       "stream": "research",
       "areas": [
         "research-core",
@@ -4831,7 +4831,7 @@
       "start_line": 153,
       "end_line": 163,
       "title": "Topic 13 Base-Phi Calibration Requirement",
-      "entry_sha256": "253fdc1938e104743d00df45f3e3f84bf554958a68bcbf2d5193b5b5b81b5bdc",
+      "entry_sha256": "d0e0b9200fa6335119ee5c2fe0d2bb14e64cdf94cda1eb6288431bdb4992c08e",
       "stream": "research",
       "areas": [
         "research-core",
@@ -4853,7 +4853,7 @@
       "start_line": 164,
       "end_line": 173,
       "title": "Topic 13 Formal SK KMS Entropy Interface",
-      "entry_sha256": "5de8c71f13dc0037de4598a0a153177185062c47f8ffdc522e055ac24d01e72b",
+      "entry_sha256": "ecfaa6b606b438fd47d3e3fa4d7a969139229280b77353c5312f44464564ce6b",
       "stream": "research",
       "areas": [
         "research-core",
@@ -4875,7 +4875,7 @@
       "start_line": 3,
       "end_line": 13,
       "title": "Topic 13 Ding PBTE Author-Request Package",
-      "entry_sha256": "877b2845a49411a9f284c5d48da2f052779b8d103fad47a16d644ea35d336640",
+      "entry_sha256": "faceca83287efd5b05947f77766f3b06f7ab599a666d120c3a8aa1c878d1b006",
       "stream": "research",
       "areas": [
         "research-core",
@@ -4897,7 +4897,7 @@
       "start_line": 14,
       "end_line": 24,
       "title": "Topic 13 Physical Kubo Provenance Gate",
-      "entry_sha256": "bb8409c80552c8590ae0558d50e1fb29b49ebbdfafaa55aab417266f3e79848d",
+      "entry_sha256": "d330acf18c9ff93aee18b7a4563687c39827012f0635bd9573a56c5dc3e693f9",
       "stream": "research",
       "areas": [
         "research-core",
@@ -4919,7 +4919,7 @@
       "start_line": 25,
       "end_line": 35,
       "title": "Topic 13 Standard Graphite Transport Comparator",
-      "entry_sha256": "7df3eeed650eaf4af4cc34b672e205689d1c464e09b0928bdb7e2e3aa67daf17",
+      "entry_sha256": "e72e9fbc40404064f34e5b22e270a0ac9e5f8af4ed90f34df5ff4d91d762c2a8",
       "stream": "research",
       "areas": [
         "research-core",
@@ -4941,7 +4941,7 @@
       "start_line": 36,
       "end_line": 46,
       "title": "Topic 13 Covariant Transport Implementation Boundary",
-      "entry_sha256": "53055a8af0584505b8b288c7e66c87a2397bcce74ad4145e8be65b76c1045188",
+      "entry_sha256": "0eaa276ae465c32dd10658e55b31ab255014cc75c61b62c24f7abdde437dc12d",
       "stream": "research",
       "areas": [
         "research-core",
@@ -4963,7 +4963,7 @@
       "start_line": 47,
       "end_line": 57,
       "title": "Topic 13 Standard Finite-Temperature O(2) Comparator",
-      "entry_sha256": "b22d116f6e9562c69fd2c79179705cf142c0959f0adeca0874ec395363dce091",
+      "entry_sha256": "77b6aa4bc8ba6e213d4863c903096839457ae58f0c4719705f1283f08563d0da",
       "stream": "research",
       "areas": [
         "research-core",
@@ -4985,7 +4985,7 @@
       "start_line": 58,
       "end_line": 68,
       "title": "Topic 13 Action-Derived O(2) One-Loop Normal Branch",
-      "entry_sha256": "866fcb030e853b0c0205d2d776ee43b1f0ea7730bb7cc3bd2a571ef02c12b9d2",
+      "entry_sha256": "518253ee18a4afda135d6a577b2e8575ab963ddebd29ed20489572db33174676",
       "stream": "research",
       "areas": [
         "research-core",
@@ -5007,7 +5007,7 @@
       "start_line": 69,
       "end_line": 79,
       "title": "Topic 13 One-Loop Normal Branch Convergence",
-      "entry_sha256": "406b1342a5facc7754cdaa39c7aa8705b05e53bae08d178dbbaa609b29cf4366",
+      "entry_sha256": "8b924261fa249de80d141e8df70e34fd6306e5363a3579828c479f1ebe9598df",
       "stream": "research",
       "areas": [
         "research-core",
@@ -5029,7 +5029,7 @@
       "start_line": 80,
       "end_line": 90,
       "title": "Topic 13 One-Loop Thermal UV Boundary",
-      "entry_sha256": "8b651ddc1aaca800106706bdba522eb8dbd195ea740b767d27b1553db0049626",
+      "entry_sha256": "c6a5d3521110a0cc3dbcd361337f2aeadaccdff7ae270799fc261f0495e51feb",
       "stream": "research",
       "areas": [
         "research-core",
@@ -5051,7 +5051,7 @@
       "start_line": 91,
       "end_line": 101,
       "title": "Topic 13 T=0 Condensate and Goldstone Ideal Lane",
-      "entry_sha256": "3789bd5e86a60dedf8f5d257e5a507172802c15e368259a7149b471e9a49f378",
+      "entry_sha256": "e83eb6dbe5fdb3c95b580d14ef112d00610169c0eb8ed8e40aabd974aac99024",
       "stream": "research",
       "areas": [
         "research-core",
@@ -5073,7 +5073,7 @@
       "start_line": 102,
       "end_line": 112,
       "title": "Topic 13 T=0 Condensate Fluctuation Spectrum",
-      "entry_sha256": "8e01c86fe7dfffdb2f0850590dc00402e77789de6bef7dc3d95477c7c237a1df",
+      "entry_sha256": "e7016da09640f7894104278f77f577b5029d5667f060872dfea5deaf927725b8",
       "stream": "research",
       "areas": [
         "research-core",
@@ -5095,7 +5095,7 @@
       "start_line": 113,
       "end_line": 123,
       "title": "Topic 13 O(2) Normal-Lane Thermodynamic Consistency",
-      "entry_sha256": "c8761beb9e737debdc4698dcf591dd9b4182a08c2390b259bb1bfd7c60989f2a",
+      "entry_sha256": "a760bf8e1fe12c2e1066e77cc1a9c145843354d12dd34ebedbc1d8c1f017727c",
       "stream": "research",
       "areas": [
         "research-core",
@@ -5117,7 +5117,7 @@
       "start_line": 124,
       "end_line": 134,
       "title": "Topic 13 Berut Source Package Availability Boundary",
-      "entry_sha256": "2bde204f1c04cd8b6c075ce6c4b592d736019157b94aac86b3492b5422d781e8",
+      "entry_sha256": "385a2b584d4d6579b402866b561386ce23d4a47a167e3b4a65477956ef2d87ac",
       "stream": "research",
       "areas": [
         "research-core",
@@ -5138,7 +5138,7 @@
       "start_line": 135,
       "end_line": 143,
       "title": "Topic 13 Berut Figure 3 Remote Binary Identity",
-      "entry_sha256": "3fb3f76a869b7aa1b58cda3f81f1961ce99f28dc03f99f54e90f3bef51743c79",
+      "entry_sha256": "f3fd74152fce00eae713a4532b9105de3386c4dc0e75052e430ca1cd74705429",
       "stream": "research",
       "areas": [
         "research-core",
@@ -5159,7 +5159,7 @@
       "start_line": 144,
       "end_line": 154,
       "title": "Topic 13 Fixed-Background Gaussian Finite-Temperature O(2) Lane",
-      "entry_sha256": "bde15fa87aba0c8ef00b9f2fb597b6e8330134aa846c4c7ef85f39c21757e611",
+      "entry_sha256": "32d5c5fde2f34620a49d3a6935078c731ff55816c8c4b7669dd3734910ca531e",
       "stream": "research",
       "areas": [
         "research-core",
@@ -5181,7 +5181,7 @@
       "start_line": 155,
       "end_line": 165,
       "title": "Topic 13 Off-Shell Gaussian O(2) Thermal Background Boundary",
-      "entry_sha256": "2665aa1ab86e6a00ec2a78ee534e44ffa1665af3a5f2bd5348aef90e223808bd",
+      "entry_sha256": "5462818d89f639556f147cbd0dcb579920f5a78652cbf9e88d64454d73e97195",
       "stream": "research",
       "areas": [
         "research-core",
@@ -5203,7 +5203,7 @@
       "start_line": 166,
       "end_line": 176,
       "title": "Topic 13 Conservative-Action Kubo Identifiability Boundary",
-      "entry_sha256": "bc5abd7727fc4185908cf7e093075095f5f89f3e453fe709159737d956135a56",
+      "entry_sha256": "40ff99c1e7b8fc74a35da586d6b39e7602ca19708a5db17fc2366e86ac827f1e",
       "stream": "research",
       "areas": [
         "research-core",
@@ -5225,7 +5225,7 @@
       "start_line": 177,
       "end_line": 187,
       "title": "Topic 13 Action-Derived Normal Thermal Response Curvature",
-      "entry_sha256": "e885bc3d5269b7c05a1efafe8fb5236551333c4c9b5c06b45331b8d64942a0ab",
+      "entry_sha256": "0a067355e2957c6c0fd23b52e33934d1bf46bdfa3e09cfca1d387219edf3982c",
       "stream": "research",
       "areas": [
         "research-core",
@@ -5247,7 +5247,7 @@
       "start_line": 188,
       "end_line": 198,
       "title": "Topic 13 Action-Beta to Normalized beta_T13 Correspondence No-Go",
-      "entry_sha256": "90a2fc4aa119a84cf9c6abdbf589d8263d2a748157e2d29ddede0e17d82b55ee",
+      "entry_sha256": "12987f8b18158a05885b07ca248c1d28d9644d6d63c48b4b5a50b102cf4a086a",
       "stream": "research",
       "areas": [
         "research-core",
@@ -5269,7 +5269,7 @@
       "start_line": 199,
       "end_line": 209,
       "title": "Topic 13 Renormalized Normal One-Loop Scheme Lane",
-      "entry_sha256": "ad3d2c5014532ddf7757590e8f7f5c46d6313e7996888d8d0cc01f49b3ed2100",
+      "entry_sha256": "5953b0e43afe5bd68a45384c2966904e43b13d54e7abe7787857d4994f05b06d",
       "stream": "research",
       "areas": [
         "research-core",
@@ -5291,7 +5291,7 @@
       "start_line": 210,
       "end_line": 220,
       "title": "Topic 13 Thermal-Only Quadratic Condensed Stability Boundary",
-      "entry_sha256": "f9866dae14da36627450afbff1b55c8c02103d53b10ee07930478d058eae57eb",
+      "entry_sha256": "76f22dc70d1e8be4aa2758085fc8cdb8c6328da0e36f0a1ab194c19432c65191",
       "stream": "research",
       "areas": [
         "research-core",
@@ -5313,7 +5313,7 @@
       "start_line": 221,
       "end_line": 231,
       "title": "Topic 13 Thermal Gaussian Condensate Stationarity No-Go",
-      "entry_sha256": "2a2072c6c80c31fff9319f880145a4d92637be73635275ec2c71a31d4c6a9e9c",
+      "entry_sha256": "128dc9b43b8fe9b160f13a94873ec91f85478597df39fb60bffc54f99ae25bd4",
       "stream": "research",
       "areas": [
         "research-core",
@@ -5335,7 +5335,7 @@
       "start_line": 232,
       "end_line": 241,
       "title": "Topic 13 Ding Public Supplementary Payload Boundary",
-      "entry_sha256": "15dc494eadc1120f082ff8547eaf7e6db283867b06d485072d516b3618358a7c",
+      "entry_sha256": "e66b2cdbd46c52afc90870d39906c28f7b425237296a833f65737605b084ae51",
       "stream": "research",
       "areas": [
         "research-core",
@@ -6440,7 +6440,7 @@
       "start_line": 112,
       "end_line": 122,
       "title": "Finite-temperature labeled 2<->2 scattering sunset wave",
-      "entry_sha256": "4f3a161a7f3e6d92eeea770a5f66bb81eb117579eee293039f4a1c80a3041044",
+      "entry_sha256": "f8cc599711963647fe494f9230e65dbbf46cc66f87c24a630be1c98df5783774",
       "stream": "research",
       "areas": [
         "research-core"
@@ -6460,7 +6460,7 @@
       "start_line": 123,
       "end_line": 133,
       "title": "Declared full finite-temperature sunset composition wave (T13-085)",
-      "entry_sha256": "973ff2a29b6ca3c5fdae7f053e903e2ccdd13483692e46455e217db78556f148",
+      "entry_sha256": "da106721bfabaf49817e3d0edb5a9c37c8173eb673018d36d73c9e6823455f57",
       "stream": "research",
       "areas": [
         "research-core"
@@ -6480,7 +6480,7 @@
       "start_line": 134,
       "end_line": 144,
       "title": "Finite-temperature sunset vacuum-limit matching wave (T13-086)",
-      "entry_sha256": "f1cc6402dcbf5f4230904ac4c83f029de87055fa5e50f84219684e5d652bde15",
+      "entry_sha256": "cc56d27577d18b05f9478e8c8769238c3e991c83ec298663d669ea160278c1bd",
       "stream": "research",
       "areas": [
         "research-core"
@@ -6500,7 +6500,7 @@
       "start_line": 145,
       "end_line": 154,
       "title": "Finite-temperature sunset renormalization identifiability no-go wave (T13-087)",
-      "entry_sha256": "41fd4bf6464068489fbdd5fe317bca994013b0656f114a2c36ccb7d789b7322c",
+      "entry_sha256": "19ceb7a068f5e40eda2142cb5f73f20583d4f8d9f359fa0938a0e8f6fed8e7db",
       "stream": "research",
       "areas": [
         "research-core"
@@ -6520,7 +6520,7 @@
       "start_line": 3,
       "end_line": 13,
       "title": "Topic 13 condensed dissipative transport identifiability boundary",
-      "entry_sha256": "6c19776182b1333da452bbaf46f044fb2760d213eb10c78572a120cc5eb8dc00",
+      "entry_sha256": "fb53051c003f6dd7ba5e4ab2436c6f1760846501835aa8a36f4e54f3da8e3074",
       "stream": "research",
       "areas": [
         "research-core"
@@ -6540,7 +6540,7 @@
       "start_line": 14,
       "end_line": 23,
       "title": "Topic 13 Ding figure-derived comparator route repair",
-      "entry_sha256": "6bc89090073c453594b0295daee59de16d3ceecfcc73a17e88f55863ef292239",
+      "entry_sha256": "78ad3dd4a0419e1e652fe8cec7f90407afde10d75950a587d4614bf5c5347c99",
       "stream": "research",
       "areas": [
         "research-core"
@@ -6560,7 +6560,7 @@
       "start_line": 24,
       "end_line": 34,
       "title": "Topic 13 current continuum-limit boundary",
-      "entry_sha256": "7b4e037d13f083639a03689e86cb8b0b3046c996bd370a96cde141215bc5eb3b",
+      "entry_sha256": "9f8fdab021d03647a8732dfe0123387d20cff5e1c893113bf370bd7269573f9b",
       "stream": "research",
       "areas": [
         "research-core"
@@ -6580,7 +6580,7 @@
       "start_line": 35,
       "end_line": 45,
       "title": "Topic 13 finite-temperature two-fluid static response",
-      "entry_sha256": "477cfeb1a98dd1c92914fc1a6f24d9febd08b776afe231bd80f6f33d8ed065a7",
+      "entry_sha256": "f6537f8fdc31d2ba323d76b129f10e0292cedba6c246ae1ef2efa860b7096573",
       "stream": "research",
       "areas": [
         "research-core"
@@ -6600,7 +6600,7 @@
       "start_line": 46,
       "end_line": 56,
       "title": "Topic 13 action-derived natural Phi-to-thermal bridge",
-      "entry_sha256": "2d8988238da4cf59c3657f2189acda1f68d3d2814ea423dfde5c9cb10888fe97",
+      "entry_sha256": "a51e7db9b20c7b48f713252d26102939accebe40ac72deef0b79768be30ee778",
       "stream": "research",
       "areas": [
         "research-core"
@@ -6620,7 +6620,7 @@
       "start_line": 57,
       "end_line": 67,
       "title": "Topic 13 physical renormalization-condition contract",
-      "entry_sha256": "7ccbc1f6a4517e9b7ae1739ecd70ca3124e9806d8a5588146c93e33998f8a3f7",
+      "entry_sha256": "eea0aec84ef270b342cc6f62165bf515117f652f36ea257a9283691296523c1b",
       "stream": "research",
       "areas": [
         "research-core"
@@ -6640,7 +6640,7 @@
       "start_line": 68,
       "end_line": 78,
       "title": "Topic 13 covariant entropy and heat-flux balance",
-      "entry_sha256": "5c31b0870549adf5cf84ff7a6988d8dd543e15f7b0b19b050c99263e46d92f51",
+      "entry_sha256": "5e35a1a147bcaafb8cab8a7d76fbb2dba4527defe1b14c334cd2682069842451",
       "stream": "research",
       "areas": [
         "research-core"
@@ -6660,7 +6660,7 @@
       "start_line": 79,
       "end_line": 89,
       "title": "Topic 13 action-derived thermal stiffness beta",
-      "entry_sha256": "7b92266437e6eddd145c9ecaf30d9f81c8ba20a8a07e40252c5ef730ba31f94d",
+      "entry_sha256": "37eb2ec47eab505a240b67ebdff5190489289ed77618b962760e393ed4a38129",
       "stream": "research",
       "areas": [
         "research-core"
@@ -6680,7 +6680,7 @@
       "start_line": 90,
       "end_line": 99,
       "title": "Topic 13 Ding supplementary archive completeness",
-      "entry_sha256": "ad68b39d1a9509980fc44c8d3ef4b9d6e80c4af2dff7bbfaf43ea80108371546",
+      "entry_sha256": "241cced5d4e140933a03459276353cb74ac0d0a517a8547c534f28be1d0f3229",
       "stream": "research",
       "areas": [
         "research-core"
@@ -6700,7 +6700,7 @@
       "start_line": 100,
       "end_line": 109,
       "title": "Topic 13 total-state finite-temperature EOS stability boundary",
-      "entry_sha256": "d07f6bb3197545270eccc2114a84d22c3d22e7daae635c08743ace9519a805f5",
+      "entry_sha256": "eaa342bdb68e8ae0fbdceadc6da1c8e57f5711798b1cd45f6e7c9bdff473e0cf",
       "stream": "research",
       "areas": [
         "research-core"
@@ -6720,7 +6720,7 @@
       "start_line": 2,
       "end_line": 10,
       "title": "Topic 13 quantum kinetic collision enhancement wave",
-      "entry_sha256": "7985aab0bbb901f9210ae08cb14f7f7546ccdf4dfc572b10832fc07d319b63d6",
+      "entry_sha256": "3b698187c9624210a4d769ea43e0e854747b87c89d062bfd48c9e6c5943e0250",
       "stream": "research",
       "areas": [
         "research-core"
@@ -6740,7 +6740,7 @@
       "start_line": 11,
       "end_line": 19,
       "title": "Topic 13 tree-level charged Ward vertex wave",
-      "entry_sha256": "cb992870ab2b145e0e883f2174ac8b21ba3c9217f67044acc1888728057751c7",
+      "entry_sha256": "2e936cb029fb0d3179404f139b6a3a264da4201b8e481f1c6c025145e9b38f49",
       "stream": "research",
       "areas": [
         "research-core"
@@ -6760,7 +6760,7 @@
       "start_line": 20,
       "end_line": 28,
       "title": "Topic 13 charged current-correlator interface wave",
-      "entry_sha256": "c45dccb3858b1752a3a8436247221c2af2c13528cc9434f7194ce92e0ad135cc",
+      "entry_sha256": "ac01c1164d32ecb91164117972908c0b389e8bc84238aa9d883107acd17bddbe",
       "stream": "research",
       "areas": [
         "research-core"
@@ -6780,7 +6780,7 @@
       "start_line": 29,
       "end_line": 37,
       "title": "Topic 13 on-shell sunset collision-width wave",
-      "entry_sha256": "93649954031b8b83212cc6bddea2c5e7ce616b9df92143bd8fc59f8e8e4f85a8",
+      "entry_sha256": "692e642ddc98130e02bab814f3550be87f72f0ed67a2e830493177096a631e08",
       "stream": "research",
       "areas": [
         "research-core"
@@ -6800,7 +6800,7 @@
       "start_line": 38,
       "end_line": 45,
       "title": "Topic 13 contact SK-to-transition vertex wave",
-      "entry_sha256": "b22b5fb022dd53651bf1663bc4a5c4acffa73ca4354ef7bdfd6eef2cc5421ff3",
+      "entry_sha256": "16697e512edc2dd3c55c6a569ea561b2ab294d532546d6502614fd6e8593f7fe",
       "stream": "research",
       "areas": [
         "research-core"
@@ -6820,7 +6820,7 @@
       "start_line": 3,
       "end_line": 11,
       "title": "Topic 13 causal baseline/lane status boundary",
-      "entry_sha256": "b8362091c411413aacaa2cc38ef41a4e8e6b513a7455ca1e0f8f5a67e8aea8b0",
+      "entry_sha256": "5c6f26f4d593f21befb8fdd4f68d34729bbc800c6b7ecfe38a7b58f1a864b51f",
       "stream": "research",
       "areas": [
         "research-core",
@@ -6841,7 +6841,7 @@
       "start_line": 12,
       "end_line": 20,
       "title": "Topic 13 condensed retarded-dissipation no-go wave",
-      "entry_sha256": "8484b65121ba9e4c3ccbfc0a06fd3828193e672f5164eaf0e151da2ca22b7dbf",
+      "entry_sha256": "cbea2e09569e62792cdcb0f1ed548c5ad46069a0ef65a38af6e86e9e0e220248",
       "stream": "research",
       "areas": [
         "research-core"
@@ -6861,7 +6861,7 @@
       "start_line": 21,
       "end_line": 29,
       "title": "Topic 13 formal finite-temperature off-shell 1PI wave",
-      "entry_sha256": "da3ff7557c26b3656a05124d499acde8037efdf5db3aae4ef819aac0e1b3471a",
+      "entry_sha256": "49e0b176a41545c03d782554ef9e7377e18bbc7ac81ae1ae2f8afa9a6eecfea9",
       "stream": "research",
       "areas": [
         "research-core"
@@ -6881,7 +6881,7 @@
       "start_line": 30,
       "end_line": 38,
       "title": "Topic 13 fixed-channel continuum boundary wave",
-      "entry_sha256": "c8ac08d4ec3486d57f93fd84daaffa0b508a4a82d3d7bb7ae7e9bcbaddcecd46",
+      "entry_sha256": "33a792a8718f14ed8740cf13cabb649ac00aaf1c9261e7c19ef333e24971205d",
       "stream": "research",
       "areas": [
         "research-core"
@@ -6901,7 +6901,7 @@
       "start_line": 39,
       "end_line": 47,
       "title": "Topic 13 action-coordinate normalization identifiability wave",
-      "entry_sha256": "2daa2f3fdfa89a4f9e662a635a24e7c8f5a5e835a611180a95635f3ee60d373e",
+      "entry_sha256": "7e9723f611abe5cf248bfcdee058122b85aad1ee2281104cb7695e74e4184f51",
       "stream": "research",
       "areas": [
         "research-core"
@@ -6921,7 +6921,7 @@
       "start_line": 48,
       "end_line": 56,
       "title": "Topic 13 Berut Figure 3c Figure-Derived Digitization",
-      "entry_sha256": "621136d6b3bb0bd9ab86d78c529bbefc48f006eaaa4e581935d8736735b97a37",
+      "entry_sha256": "97aaac06732be0cb2510db2d2666980406042f3740473fbd921db3f13690cb76",
       "stream": "research",
       "areas": [
         "research-core",
@@ -6942,7 +6942,7 @@
       "start_line": 57,
       "end_line": 65,
       "title": "Topic 13 Ding Fig. 1d Holdout-Guard Status Repair",
-      "entry_sha256": "7ef52c6fd65d32872a6d76892579e5c0b74b1eeca26e100d4eb83451e60093a1",
+      "entry_sha256": "55f892c8fa2927ec7dcb1f90359ef7ff3373c2bb1096e41e1daa81d76b6b87c8",
       "stream": "research",
       "areas": [
         "research-core",
@@ -6963,7 +6963,7 @@
       "start_line": 66,
       "end_line": 73,
       "title": "Topic 13 Ding source-readiness semantics repair",
-      "entry_sha256": "35f6fd2d4ecf0aebe0dc60d9b2231173a85a4c98040be535dc19c4a6e97ec6ed",
+      "entry_sha256": "abea5e46d9098b9e77c835155f8c3875d9a5b9ed23cfc5793c0374e0ab8b0c9d",
       "stream": "research",
       "areas": [
         "research-core",
@@ -6984,7 +6984,7 @@
       "start_line": 74,
       "end_line": 82,
       "title": "Topic 13 canonical current-report status alignment",
-      "entry_sha256": "0e06dcad9a5f96ffdaffba22a238aa5c4399da7a7467be009372c28f7c35448e",
+      "entry_sha256": "39329f2fca643fd38c9a09f4a9d29750c5a9cf823821c9b84467c955528b22bd",
       "stream": "research",
       "areas": [
         "research-core",
@@ -7005,7 +7005,7 @@
       "start_line": 83,
       "end_line": 93,
       "title": "Topic 13 Transport/KMS/Entropy Status Boundary",
-      "entry_sha256": "32b66a00d674fdb909e26e8a637ae64e5ae23bc19335fda38ec956138769c1db",
+      "entry_sha256": "e94a99ee84d8037f85004794d3e5b8ec313e92b845492136b15730da2f78fc0a",
       "stream": "research",
       "areas": [
         "research-core",
@@ -7027,7 +7027,7 @@
       "start_line": 94,
       "end_line": 104,
       "title": "Topic 13 Microscopic Finite-Cutoff Kubo Match",
-      "entry_sha256": "f6231bca64089e945c992d066f3f7e551bdde67b8f4557f5d6eb21fa71d4d27c",
+      "entry_sha256": "c4fcf5046fda3acc540dcd65b7ac1fe5fdc0aebf053c93684df168860a84a265",
       "stream": "research",
       "areas": [
         "research-core",
@@ -7049,7 +7049,7 @@
       "start_line": 105,
       "end_line": 115,
       "title": "Topic 13 State-Matched Heat-Current Kubo",
-      "entry_sha256": "ae67195917c48e041ccb591e680f7600454bebf4981193e0f96e73dc753c988e",
+      "entry_sha256": "23c29cbf6ef55712130a53627b363bba7b7fd8e8ef2d1d663b0e0c40c0d2e9c3",
       "stream": "research",
       "areas": [
         "research-core",
@@ -7071,7 +7071,7 @@
       "start_line": 116,
       "end_line": 125,
       "title": "Topic 13 Heat-Current Kubo Continuum Boundary",
-      "entry_sha256": "6a5aafe06d58beb3788c748e8a3e80ea96ebae59285fdd3d3a139750480dcec0",
+      "entry_sha256": "45fc9908ef74d74e9c5da1b617d0968de0f16601936f68af18b91e89cb877d6d",
       "stream": "research",
       "areas": [
         "research-core",
@@ -7093,7 +7093,7 @@
       "start_line": 126,
       "end_line": 137,
       "title": "Topic 13 Lowitzer graphite P-V-T candidate source boundary",
-      "entry_sha256": "cefde37a761d59b625effb87deadba2a77ffb9705dc30a2b3c48e9343b5653d5",
+      "entry_sha256": "f7c47d9e2bb39ac05168a10319a8ee8a13ee610a908ff2ffed4b51527fd83da4",
       "stream": "research",
       "areas": [
         "research-core",
@@ -7114,7 +7114,7 @@
       "start_line": 3,
       "end_line": 12,
       "title": "Topic 13 Calorine-to-Ding material-state admission boundary",
-      "entry_sha256": "16a1df9bfa197e1b2068e1347c0790f51f8f421d3e342764e63a49a5731e11d2",
+      "entry_sha256": "92d95c41ea524d1f28907e750b28688cc49e62ab5b4c493a85eca4fa4ecae94f",
       "stream": "research",
       "areas": [
         "research-core",
@@ -7135,7 +7135,7 @@
       "start_line": 13,
       "end_line": 23,
       "title": "Topic 13 Tohei alpha_V/B0 table comparator boundary",
-      "entry_sha256": "c947421f3cb7e535c5d8c232ad00306fa67ec8b9a17a6dd3558ed6f00168fccf",
+      "entry_sha256": "afc4485fee83395858331adef1698d9880961632b326df7b27b264100b7c01aa",
       "stream": "research",
       "areas": [
         "research-core",
@@ -7156,7 +7156,7 @@
       "start_line": 24,
       "end_line": 32,
       "title": "Topic 13 thermodynamic normal-component lane",
-      "entry_sha256": "1883cc248b7edd9b728a167392f67290df7711a16f9d734c879319651945aa29",
+      "entry_sha256": "de4981dfdc0e9bdbb3b2312054ff38b5c5ce18789400b3d98d733a9514ab9e6c",
       "stream": "research",
       "areas": [
         "research-core"
@@ -7176,7 +7176,7 @@
       "start_line": 33,
       "end_line": 42,
       "title": "Topic 13 condensed relative-flow collision kernel",
-      "entry_sha256": "3516db7c7d08c937c1d31d4ee0cf313c29bf680a23ad88ce5a742b079a45628a",
+      "entry_sha256": "463a0249466f03fb7c1eaaf3c09c655cbd28729466a7c9d7b6fb0c3c0ea7e30c",
       "stream": "research",
       "areas": [
         "research-core"
@@ -7961,7 +7961,7 @@
       "start_line": 2,
       "end_line": 9,
       "title": "Topic 13 major-result closure summary contract",
-      "entry_sha256": "f86ff415e2a625be7b9e62be7d3decd71ede214f605c44bc9e36a855b9c582a5",
+      "entry_sha256": "519f49a0bfce99b5602b4b4e8513991b69ca10bb258f956c0629fd0008f13b4b",
       "stream": "research",
       "areas": [
         "research-core",
@@ -7982,7 +7982,7 @@
       "start_line": 10,
       "end_line": 19,
       "title": "Repository workflow standardization",
-      "entry_sha256": "06d8026abad4857541f5a0d535a08e6827350dfcf402101f4d75b5d6138df3f4",
+      "entry_sha256": "5caea96f97f3228eb1e9fc5c721731df25eb4eb5fed31db3c7774c8c9589b61a",
       "stream": "operations",
       "areas": [
         "repo-ops",
@@ -8003,7 +8003,7 @@
       "start_line": 20,
       "end_line": 28,
       "title": "Branch inventory checkpoint",
-      "entry_sha256": "85109be0ad87115806c30d8c4d95812ad6f466cf4bf1ab47e016f6e0aea70871",
+      "entry_sha256": "d93e1a71b530b803adc4e49e6198f0b18db273d48c2f57c59a6ddcd90ba5629a",
       "stream": "operations",
       "areas": [
         "repo-ops"
@@ -8023,7 +8023,7 @@
       "start_line": 29,
       "end_line": 34,
       "title": "Public-boundary baseline checkpoint",
-      "entry_sha256": "6fbcb0231f6c7e5e40b84f36d750d6e6ed27abf0bc73dd575f3bc095aee7b8f9",
+      "entry_sha256": "2822a0fbffdc0a96f9339637b62d9ced41feaa7927edea1bb37a61b8740d1a1f",
       "stream": "operations",
       "areas": [],
       "related_streams": [],
@@ -8043,7 +8043,7 @@
       "start_line": 35,
       "end_line": 49,
       "title": "Research CI baseline",
-      "entry_sha256": "31d1bde45766b97ac670af69349100cd8af30423afee970c3d0d7dab856c2ae0",
+      "entry_sha256": "95fe2c9a1675d4818807a34505254f7f765723290eb5296b2d54c183a370a3ce",
       "stream": "research",
       "areas": [
         "research-core"
@@ -8063,7 +8063,7 @@
       "start_line": 50,
       "end_line": 57,
       "title": "Topic 13 major-result visibility synchronization",
-      "entry_sha256": "9513dfe51d95e44164d277cc968435c75d6cf525629f6ef73779cc9856e0f426",
+      "entry_sha256": "089a56e233d163c7fa013f28918c3ad78c6c6cc072d5fe9865608c7954787019",
       "stream": "research",
       "areas": [
         "research-core"
@@ -8083,7 +8083,7 @@
       "start_line": 58,
       "end_line": 66,
       "title": "Topic 13 joint thermal-bridge scale-dependency no-go",
-      "entry_sha256": "20ad2f02ddaf0bda222e01e4e99724367d42a97f5df65d1a68f38782ab5aa856",
+      "entry_sha256": "bdd6d372b7c7ef0e27461b6711c16b07d4ba16545bab3cc041c77e70b2fced1f",
       "stream": "research",
       "areas": [
         "research-core"
@@ -8103,7 +8103,7 @@
       "start_line": 67,
       "end_line": 78,
       "title": "Topic 13 AIST graphite source-route public-reproducibility boundary",
-      "entry_sha256": "9939cea50bd2b18e27bed75642bdc3e1de2cb096e4a17474e0fbafe9b354d75e",
+      "entry_sha256": "cb5bf62df44b9d61eb42ba1220e9ef0807e8761522a7cfcaae98f7c7abc7aff0",
       "stream": "research",
       "areas": [
         "research-core",
@@ -8125,7 +8125,7 @@
       "start_line": 79,
       "end_line": 88,
       "title": "Topic 13 NIST SRM 3600 heat-capacity comparator boundary",
-      "entry_sha256": "5418af4cf48a047a5182b111cd8bf9f9c2908ddfa7366f67ade8567460ee3689",
+      "entry_sha256": "b35ffa12936d636e01c6616449aa7d6c582e21245b4eed84971f2a2d94f35d11",
       "stream": "research",
       "areas": [
         "research-core",
@@ -8148,7 +8148,7 @@
       "start_line": 89,
       "end_line": 100,
       "title": "Topic 13 Perez-Castaneda HOPG specific-heat source boundary",
-      "entry_sha256": "1353e3096f09f49642803e99cbb7d1012511099a30653a85c7e34f0141ed2cfb",
+      "entry_sha256": "61e9eaf2d4a409425056851ed4098d64b8baf64ea16a6ea25d052347a173a237",
       "stream": "research",
       "areas": [
         "research-core",
@@ -8171,7 +8171,7 @@
       "start_line": 101,
       "end_line": 110,
       "title": "T13-151 - Calorine full-LBTE numerical stability boundary",
-      "entry_sha256": "04e5a87c6ea14825e59c0049a3ca6e7a58ae5885bb17b4473ce15b4696a3dc13",
+      "entry_sha256": "d4da65911c1e417f633dbdd08ec3197d52a876dec8008225aca6ddc7a4174bf9",
       "stream": "research",
       "areas": [
         "research-core",
@@ -8956,7 +8956,7 @@
       "start_line": 85,
       "end_line": 95,
       "title": "Topic 13 NIMS MP-990448 legacy route alias audit",
-      "entry_sha256": "e2f03c7e814812f332d92bc64ef297815b31d4592b6b22d6f11025145f6c4cc0",
+      "entry_sha256": "b5d3e520e73b101a34eba45f4636b8888fce3fbbf55d2c36882fc50f1c7a4e74",
       "stream": "research",
       "areas": [
         "research-core"
@@ -8976,7 +8976,7 @@
       "start_line": 96,
       "end_line": 107,
       "title": "Topic 13 Ding repository registry search boundary",
-      "entry_sha256": "e76486c45fa20a40d42457d3602e4e419fcf88705d325d37624bdc22125dcde9",
+      "entry_sha256": "0c0f4170e964148ac471ba146bf6ac82fccce26bec4a235504b864dadc9bf2e8",
       "stream": "research",
       "areas": [
         "research-core",
@@ -11468,7 +11468,7 @@
       "start_line": 119,
       "end_line": 125,
       "title": "Wave 6h post-commit metadata consistency correction",
-      "entry_sha256": "c37428784ec398794ed96186614819d1be0bfbe38b816334672d5ccf144c6ef5",
+      "entry_sha256": "1dc1ed16464f683935fc0964d2ada178907820ce770222495e44f08fe369c253",
       "stream": "operations",
       "areas": [
         "repo-ops",
@@ -11490,7 +11490,7 @@
       "start_line": 126,
       "end_line": 136,
       "title": "2026-09-15 — Core physical migration v3 — Wave 6i O(2) equation family",
-      "entry_sha256": "1b24a8125ab6ab93052805a130b8e01f4cdd2010932774282316797851384cf5",
+      "entry_sha256": "2ab9dec6487e592a757e3e908183721675157361c9eb23b39dfde246203ff216",
       "stream": "operations",
       "areas": [],
       "related_streams": [],
@@ -11510,7 +11510,7 @@
       "start_line": 137,
       "end_line": 144,
       "title": "2026-09-15 — Wave 6i post-commit metadata consistency correction",
-      "entry_sha256": "970eac467d73007401916fa0cb268636ec7fd80e622b355f292ce1fbf17a272a",
+      "entry_sha256": "48bc1c29c09964a43bc7cef6471eb8c84e4a4fbf2eef163381ac52bbb23c2828",
       "stream": "operations",
       "areas": [],
       "related_streams": [],
@@ -11552,7 +11552,7 @@
       "start_line": 153,
       "end_line": 161,
       "title": "Wave 6j post-commit metadata consistency correction",
-      "entry_sha256": "c12a42bd2c645803216f32c3564776a9b42c313830d1be7b7ddb2a2da58fcab8",
+      "entry_sha256": "b27f342d09c63348a4d531592ba9dde6feba02c37d21ee7641281cfc33da7dde",
       "stream": "operations",
       "areas": [
         "repo-ops",
@@ -11574,7 +11574,7 @@
       "start_line": 162,
       "end_line": 169,
       "title": "Core physical migration v3 — Wave 6k hyperbolic phase comparator",
-      "entry_sha256": "4a83b46e9290625503333e9ce116f8ee33d817b465ec0fd8c564c4e9e2ff4161",
+      "entry_sha256": "2e412f4d4c4244fe3956d043d4954ddbc329c363610ff6d4a91b79e9c3dff3c8",
       "stream": "operations",
       "areas": [
         "repo-ops",
@@ -11596,7 +11596,7 @@
       "start_line": 170,
       "end_line": 178,
       "title": "Wave 6k post-commit metadata consistency correction",
-      "entry_sha256": "5f02c2102ab23830cab1feda6d293403cc384ea59a2be2caa5e1bc0450e88ac2",
+      "entry_sha256": "3266b9f3d872aaf8c699a3961275bd48190134cf5ef9d681754a4aa96ddc9980",
       "stream": "operations",
       "areas": [
         "repo-ops",
@@ -11618,7 +11618,7 @@
       "start_line": 179,
       "end_line": 186,
       "title": "Core physical migration v3 — Wave 6l coarse-graining ontology contract",
-      "entry_sha256": "12d1b926c6317d65b91d336b85a1e65c1a6a70f0a0c4784b586f9fb5bb66b237",
+      "entry_sha256": "0f6bfee63de574e5cb081550f1f7feca4dc9042af03cc05a7e69a051c4474b8e",
       "stream": "operations",
       "areas": [
         "repo-ops",
@@ -11640,7 +11640,7 @@
       "start_line": 187,
       "end_line": 195,
       "title": "Wave 6l post-commit metadata consistency correction",
-      "entry_sha256": "943ad32bdda13619ad7cee0f99d190b62df219981a5e0072f8f42af952b29e24",
+      "entry_sha256": "58ba483f7a14de747e306f9fd8477271750fc598b36281cae52025cdd93ae9eb",
       "stream": "operations",
       "areas": [
         "repo-ops",
@@ -11662,7 +11662,7 @@
       "start_line": 196,
       "end_line": 203,
       "title": "Core physical migration v3 — Wave 6m GR correspondence contract",
-      "entry_sha256": "efef708856595286ccde05ccb923e3d3ea115f9e5ebc1351bcb830b633cd118b",
+      "entry_sha256": "575fda005860d83e4b9fb73ca19ecf0706df296c2058faa7eeeb30e5a4b1e914",
       "stream": "operations",
       "areas": [
         "repo-ops",
@@ -11684,7 +11684,7 @@
       "start_line": 204,
       "end_line": 212,
       "title": "Wave 6m post-commit metadata consistency correction",
-      "entry_sha256": "67f82d4724c10a4dfc9d0b77bffd799df44d169115d333d20bc6923d5e6402d0",
+      "entry_sha256": "e5e82fb94421e94be0a1a674a3b9f50392afef1c26cf1f43f0cd974fdfaaee53",
       "stream": "operations",
       "areas": [
         "repo-ops",
@@ -11706,7 +11706,7 @@
       "start_line": 213,
       "end_line": 220,
       "title": "Core physical migration v3 — Wave 6n operational quantum and interpretation lane",
-      "entry_sha256": "5ffe633f9c798166d7342b6a4ca21b4830ed6556d4489d995716a954f68f1e8a",
+      "entry_sha256": "20778a53b67b31938b23c77182857ca58886db690db52614dcb2b4c475ac6540",
       "stream": "operations",
       "areas": [
         "repo-ops",
@@ -11838,7 +11838,7 @@
       "start_line": 264,
       "end_line": 271,
       "title": "Core physical migration v3 — Wave 6q persistence/resource-selection family",
-      "entry_sha256": "8e6a202d0552feadc5dfe441faed9f3b7c20858b66a2afd10419f02a63ac8658",
+      "entry_sha256": "e119a384f5a16385d642cfff2abf22c539fdf1d3a47dd441051179c1cce7afad",
       "stream": "operations",
       "areas": [
         "repo-ops",
@@ -11860,7 +11860,7 @@
       "start_line": 272,
       "end_line": 281,
       "title": "Core physical migration v3 — Wave 6q post-commit metadata consistency correction",
-      "entry_sha256": "1d3092347bf4de0bb1422d231f9d5ff2c12c939cbb1acfc6ad7da4c8c65c8f18",
+      "entry_sha256": "ffde5b9bcdf210c3863429f24e02937e52d890359cbd60864d8cc6048a01f6e9",
       "stream": "operations",
       "areas": [
         "repo-ops",
@@ -11882,7 +11882,7 @@
       "start_line": 282,
       "end_line": 290,
       "title": "Core physical migration v3 — Wave 6r carrier/observer baseline family",
-      "entry_sha256": "9bd4a07a708e182c0acbcd08174b690a6c51622f48bb4109c1cb1a959111ae63",
+      "entry_sha256": "b12dc1262e4f24ea62db32d1d6d68963627638a32308ea0024dd52b5abdf3a45",
       "stream": "operations",
       "areas": [
         "repo-ops",
@@ -11904,7 +11904,7 @@
       "start_line": 291,
       "end_line": 300,
       "title": "Core physical migration v3 — Wave 6r post-commit metadata consistency correction",
-      "entry_sha256": "bd8089a590432d997cda107008a55e69c9edc2602443f294132fb43c8884ff4e",
+      "entry_sha256": "dd9249c6a5f20c0c28c5b4927a5591a198f6e04db6274e6a9df64f57e87909da",
       "stream": "operations",
       "areas": [
         "repo-ops",
@@ -11926,7 +11926,7 @@
       "start_line": 301,
       "end_line": 309,
       "title": "Core physical migration v3 — Wave 6s impact/effect family",
-      "entry_sha256": "6881b039288fc31eb53929774a52abc27bb13314fbdbf492f649a58928372214",
+      "entry_sha256": "260d8a33bf9156cc9441a5c1b9925a6451c48fe0105dfeee47df39c26666c247",
       "stream": "operations",
       "areas": [
         "repo-ops",
@@ -11948,7 +11948,7 @@
       "start_line": 310,
       "end_line": 319,
       "title": "Core physical migration v3 — Wave 6s post-commit metadata consistency correction",
-      "entry_sha256": "12c8783a9a4fa0032647c08721935b77d2b17c1bdd366c7d8fd8264d39888d59",
+      "entry_sha256": "9f7995ef31bfe6fbc864e1be746ed52276a2df290dc2d632c279332a0e85e424",
       "stream": "operations",
       "areas": [
         "repo-ops",
@@ -11970,7 +11970,7 @@
       "start_line": 320,
       "end_line": 328,
       "title": "Core physical migration v3 — Wave 6t matter-interaction forward family",
-      "entry_sha256": "0bf45ebe679ea5d60b38137d1d30108292ea22b9fefb19d4a6688bf42bec1734",
+      "entry_sha256": "a99aa758bd690924bd2a509e9f8f685aaaa8ba33c82b133c4b3d79056d1ef1af",
       "stream": "operations",
       "areas": [
         "repo-ops",
@@ -11992,7 +11992,7 @@
       "start_line": 329,
       "end_line": 338,
       "title": "Core physical migration v3 — Wave 6t post-commit metadata consistency correction",
-      "entry_sha256": "c9bf85b605985fd6315323293c6f1b081f99ec86c523ceab93b14368e23fc133",
+      "entry_sha256": "1ff7682858b14464ecab1042e07ac6fc54180a443a2c6167287828229413a740",
       "stream": "operations",
       "areas": [
         "repo-ops",
@@ -12257,7 +12257,7 @@
       "start_line": 463,
       "end_line": 491,
       "title": "Core physical migration v3 — Wave 6za support/tooling migration",
-      "entry_sha256": "c5b0160578b3257f822b7ee121e5ba3dac726b37e4c258e76b9df5e3db3d9a98",
+      "entry_sha256": "75e842b328cbdf0649bb11a1ae5370b7d9400dad1913dbb9f8ba28ff09378251",
       "stream": "operations",
       "areas": [
         "repo-ops",
@@ -12281,7 +12281,7 @@
       "start_line": 492,
       "end_line": 501,
       "title": "Core physical migration v3 — Wave 6ze physical test-surface migration",
-      "entry_sha256": "7c6d04b7a3e628f71fbd1e9d6e41e62a67fa31ce78d0259fa5fbe85ff2e21fb0",
+      "entry_sha256": "8b09fa583e08f047a3942bbf807e8c9581578adad6043644031787aa00d60bc6",
       "stream": "operations",
       "areas": [
         "repo-ops",
@@ -12303,7 +12303,7 @@
       "start_line": 502,
       "end_line": 511,
       "title": "Core physical migration v3 — Wave 6zf remaining test assets",
-      "entry_sha256": "9ff8154c21b4c781fc28f71df9cb5374797f6f8191b65d36814e625f2856d45b",
+      "entry_sha256": "47ba2dd149e0080b4c5bb1ffc9959cbb4681cd0c525bbfcbca24b7d998c2064f",
       "stream": "operations",
       "areas": [
         "repo-ops",
@@ -16700,7 +16700,7 @@
       "start_line": 404,
       "end_line": 414,
       "title": "Topic 13 finite-channel entropy-balance wave",
-      "entry_sha256": "caa5b5ca5a5ec4907f287bce0f55fc6c9e46795df3bcdeeefc15b3408029fc5c",
+      "entry_sha256": "0364bf303b5547e9b820e3ea0ddfb23eefecb59ba13c85af270e68141dd25722",
       "stream": "research",
       "areas": [
         "research-core"
