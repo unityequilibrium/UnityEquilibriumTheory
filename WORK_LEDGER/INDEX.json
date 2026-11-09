@@ -5,11 +5,11 @@
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
     "sources": 74,
-    "entries": 787,
+    "entries": 788,
     "by_stream": {
       "book-history": 94,
       "operations": 112,
-      "research": 581
+      "research": 582
     },
     "exact_duplicates": 0,
     "review_entries": 2
@@ -384,8 +384,8 @@
     },
     {
       "path": "2026/2026-11-09.md",
-      "sha256": "f86797644039f1e377aafd31a1dff64320eec59a84c037df9e5f5715deba19ba",
-      "entries": 3
+      "sha256": "9bf4a8e5dffe2f045dd6985caf04ee28a6b57a2ab0b35eba38796161ad80d563",
+      "entries": 4
     },
     {
       "path": "2026-08-14.md",
@@ -16084,9 +16084,29 @@
       "source": "2026/2026-11-09.md",
       "anchor": "layer-3--persistence-selection-by-free-energy-exhaustion-formal-l1",
       "start_line": 43,
-      "end_line": 57,
+      "end_line": 58,
       "title": "Layer 3 — persistence selection by free-energy exhaustion (formal, L1)",
-      "entry_sha256": "156d38ddfdf82bddec4edac3ad7bffd5292a75572eafac49b57780e063d7c0a8",
+      "entry_sha256": "272e43dc32720eafc505256d4b7ae603c099103e6842746ead2e68a2d2a402b9",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-09",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-09.md#t002-draft--layer-3-abundance-law-vs-globular-cluster-star-counts",
+      "source": "2026/2026-11-09.md",
+      "anchor": "t002-draft--layer-3-abundance-law-vs-globular-cluster-star-counts",
+      "start_line": 59,
+      "end_line": 74,
+      "title": "T002 (draft) — layer-3 abundance law vs globular-cluster star counts",
+      "entry_sha256": "d14ac42c6fdf8889feca53c020526bea4d7cad0515202aa201f0289965ba1eed",
       "stream": "research",
       "areas": [
         "research-core"

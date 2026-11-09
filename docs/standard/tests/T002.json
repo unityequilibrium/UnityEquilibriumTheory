@@ -1,0 +1,39 @@
+{
+  "schema": "uet-test-card-v2",
+  "test_id": "T002",
+  "status": "DRAFT",
+  "claim_id": "C_T002_STELLAR_PHASE_ABUNDANCE",
+  "theory_card": {
+    "card_id": "UET_PARENT",
+    "version": 1
+  },
+  "hypothesis": "Layer 3 of the Author Proposition: systems disappear when their free-energy store F is exhausted at power P, so the steady number in a phase is N = b F/P (Little's law). For globular-cluster stars, which pass through the upper red giant branch and the horizontal branch once each (common b), R = N_HB/N_RGB equals the ratio of phase lifetimes from stellar models.",
+  "observable": {
+    "quantity": "R = N_HB / N_RGB(upper), weighted mean over 39 clusters",
+    "unit": "1",
+    "domain": "Galactic globular clusters with [M/H] < -1.1; 0.82-0.84 Msun stellar models"
+  },
+  "test_kind": "CONSTRAINT",
+  "data_sources": [
+    {
+      "data_id": "AYALA14_GC_R_PARAMETER",
+      "role": "COMPARISON",
+      "exposure": "SEEN_FULL"
+    }
+  ],
+  "prediction_method": {
+    "script": "docs/core/03_lanes/persistence/t002_stellar_phase_fractions.py",
+    "description": "R_pred = 6.26 Y - 0.12 (stellar-model lifetime ratio) with Y = Y_HII_Aver; sigma_pred = 6.26 sigma_Y; z = |R_pred - R_obs| / sqrt(sigma_pred^2 + sigma_obs^2). Y_SBBN_as_used is reported as sensitivity only."
+  },
+  "free_parameters": [],
+  "fixed_parameters": [
+    "common formation rate b for RGB and HB",
+    "R_th(Y) = 6.26 Y - 0.12 as published",
+    "primary helium input Y_HII_Aver = 0.2535 +/- 0.0036",
+    "no stellar-model systematic added (none quoted)"
+  ],
+  "pass_criterion": "z <= 2 with the primary helium input",
+  "fail_criterion": "z > 3 with the primary helium input -> FAILED; 2 < z <= 3 -> INCONCLUSIVE (reported as tension, not pass)",
+  "drafted_by": "claude",
+  "note": "Disclosure: drafted after reading the source, which itself reports that standard models (no axions) need Y = 0.241 +/- 0.005, compatible with the measured Y at about 2 sigma; the outcome is therefore close to the PASS/INCONCLUSIVE boundary and was effectively known before drafting. With the SBBN helium value the deviation would be smaller. T002 tests that layer 3 reproduces the established fuel-consumption reasoning (number in a phase proportional to its lifetime); it cannot distinguish UET from standard stellar astrophysics. Any residual tension corresponds, in layer-3 language, to an unmodelled extra burn channel shortening tau_HB (the source interprets it as possible axion cooling). Re-check transcribed numbers against the journal version before approval."
+}

@@ -44,6 +44,13 @@
         "R_L3_SELECTION_FORMAL"
       ],
       "note": "Mathematical consistency of the author's persistence-selection logic; no empirical confrontation yet."
+    },
+    {
+      "claim_id": "C_T002_STELLAR_PHASE_ABUNDANCE",
+      "statement": "The layer-3 abundance law N = b F/P reproduces the observed ratio of horizontal-branch to red-giant-branch stars in old globular clusters when phase lifetimes come from stellar models and helium from independent measurements.",
+      "level": "L0_SPECULATIVE",
+      "evidence": [],
+      "note": "Pending Test Card T002 approval and run."
     }
   ]
 }

@@ -1,0 +1,9 @@
+# Source: A. Ayala, I. Dominguez, M. Giannotti, A. Mirizzi, O. Straniero, "Revisiting the bound on axion-photon coupling from Globular Clusters", arXiv:1406.6053v2 (2014), Secs. II-III, Eq. (1), Table 1.
+# Star counts originally from M. Salaris, M. Riello, S. Cassisi, G. Piotto (2004), arXiv:astro-ph/0403600. Helium from E. Aver et al. (low-metallicity H II regions) as quoted by Ayala et al.
+# Numerical facts transcribed 2026-11-09 for UET Test Card T002; verify against the journal version before approval.
+record,quantity,value,uncertainty,unit,note
+observed,R_ave,1.39,0.03,1,"weighted mean N_HB/N_RGB(upper) over 39 Galactic globular clusters with [M/H] < -1.1"
+model,R_th_slope_Y,6.26,,1,"FUNS stellar models, no axions: R_th = 6.26 Y - 0.12 (Eq. 1 with g10 = 0); valid 0.82-0.84 Msun, 0.0002 <= Z <= 0.001"
+model,R_th_intercept,-0.12,,1,"same fit; no uncertainty quoted for the fit"
+helium,Y_HII_Aver,0.2535,0.0036,1,"weighted average He mass fraction, 16 low-metallicity H II regions, O/H range matching the clusters"
+helium,Y_SBBN_as_used,0.2472,,1,"central Y in Table 1 'bounds from SBBN' rows; sensitivity input only"

@@ -12,6 +12,18 @@
       "license": "numerical facts transcribed from an arXiv paper (arXiv non-exclusive license); no figures or text redistributed",
       "visibility": "PUBLIC",
       "note": "Transcribed values must be re-checked against the journal version before T001 is approved."
+    },
+    {
+      "data_id": "AYALA14_GC_R_PARAMETER",
+      "description": "Globular-cluster R = N_HB/N_RGB (39 clusters), stellar-model lifetime-ratio fit R_th(Y), and independent helium abundances",
+      "source": "A. Ayala et al., Revisiting the bound on axion-photon coupling from Globular Clusters (2014), Secs. II-III, Eq. (1), Table 1; counts from Salaris et al. (2004); He from Aver et al.",
+      "doi_or_url": "https://arxiv.org/abs/1406.6053",
+      "retrieved": "2026-11-09",
+      "path": "docs/data/external/astronomy/globular_cluster_r_parameter/ayala2014_r_parameter.csv",
+      "sha256": "c32ddcd06923a77c657c470a0a7d8ab0fdd36ea1f4b3a1482d96aa7b090d1e38",
+      "license": "numerical facts transcribed from an arXiv paper (arXiv non-exclusive license); no figures or text redistributed",
+      "visibility": "PUBLIC",
+      "note": "Transcribed values must be re-checked against the journal version (PRL 113, 191302) before T002 is approved."
     }
   ]
 }
