@@ -5,11 +5,11 @@
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
     "sources": 75,
-    "entries": 804,
+    "entries": 805,
     "by_stream": {
       "book-history": 94,
       "operations": 112,
-      "research": 598
+      "research": 599
     },
     "exact_duplicates": 0,
     "review_entries": 2
@@ -389,8 +389,8 @@
     },
     {
       "path": "2026/2026-11-10.md",
-      "sha256": "0872c3ac24b596cdd6706f61d5376d3f028b4247661609da34e710453ef71322",
-      "entries": 11
+      "sha256": "c046f20a7495cd3f2acf5cfb79cc14b7eaf9646e7fde134691aea6503a75b1b2",
+      "entries": 12
     },
     {
       "path": "2026-08-14.md",
@@ -16429,12 +16429,32 @@
       "source": "2026/2026-11-10.md",
       "anchor": "t006-result-energy-use-written-into-the-suns-gravity-at-l2",
       "start_line": 145,
-      "end_line": 157,
+      "end_line": 158,
       "title": "T006 result: energy use written into the Sun's gravity at L2",
-      "entry_sha256": "4d37a7891c5169e0bf292767ab8962ce06dd3d7689577a718327ea1966dda4b7",
+      "entry_sha256": "ba78c4a4c1a230b61333956ef4d5415f2c1edae4632e05166c5fa032c79876f3",
       "stream": "research",
       "areas": [
         "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-10",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-10.md#journal-cross-check-of-registered-external-numbers",
+      "source": "2026/2026-11-10.md",
+      "anchor": "journal-cross-check-of-registered-external-numbers",
+      "start_line": 159,
+      "end_line": 171,
+      "title": "Journal cross-check of registered external numbers",
+      "entry_sha256": "355cd85079966f9b6670187c64ef4e62c3aa7b28b87206370cdf4c25c6430c79",
+      "stream": "research",
+      "areas": [
+        "research-standards"
       ],
       "related_streams": [
         "research"

@@ -127,3 +127,10 @@ commit: this commit + records commit
 ระดับ: C_T006_ENERGY_USE_GRAVITY_TRACE → L2_CONFRONTED (PASS; ผู้เขียนอนุมัติ)
 ถัดไป: B5 red-team; ตรวจตัวเลข T001/T002/T005/T006 กับฉบับวารสาร
 commit: this commit
+
+## 2026-11-10 — Do the registered numbers match the published papers? (journal cross-check)
+ทำ: เทียบตัวเลขภายนอกทุกตัวของ T001, T002, T005, T006 กับฉบับวารสาร/ฉบับ arXiv สุดท้ายก่อนตีพิมพ์ และตรวจการอ้างอิงงานคลาสสิก (docs/core/01_contracts/JOURNAL_CROSSCHECK_2026-11-10.md)
+ผล: ไม่พบตัวเลขผิดแม้แต่ตัวเดียว ผลของ Test Card ทั้งสี่ไม่เปลี่ยน; ข้อจำกัด: CQG/PRL ฉบับเต็มติด paywall (ใช้ arXiv ฉบับก่อนตีพิมพ์), ค่าลมสุริยะเป็นค่าจากบทความทบทวนช่วง solar minimum, Statz–deMars ยังไม่ได้ตรวจ
+ระดับ: ไม่เปลี่ยน claim ใด
+ถัดไป: หาค่าลมสุริยะช่วง 2011–2015 ที่ตีพิมพ์แล้ว; B5 red-team; owner ตัดสินเรื่อง push
+commit: this commit
