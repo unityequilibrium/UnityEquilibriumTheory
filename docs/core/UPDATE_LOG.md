@@ -183,3 +183,10 @@ commit: this commit
 ระดับ: C_T008_*, C_T009_* → L2_CONFRONTED (PASS; ผู้เขียนอนุมัติ); ตารางรวมผลทาง ก อยู่ใน SYNTHESIS_AUDIT ส่วนที่ 5
 ถัดไป: หาข้อมูล T013/T014/T016; push ครั้งเดียวเมื่อผู้เขียนสั่ง
 commit: this commit
+
+## 2026-11-10 — T016 dropped (star-mass negative control)
+ทำ: หาข้อมูล PDMF (Bovy 2017: ความชัน 4.7 สำหรับ M > 1 M☉) และ IMF จากกระจุกอายุน้อย (Kroupa 2001)
+ผล: ตัด T016 ก่อนร่างการ์ด เพราะผลแกว่งตามเลขชี้กำลัง mass–luminosity (4.8–5.9) และความไม่แน่นอนของ IMF กว้างจนการทดสอบไม่ไม่ผ่านเลย; ผู้เขียนเห็นชอบ
+ระดับ: ไม่เปลี่ยน claim
+ถัดไป: negative control ที่คมกว่า; หาข้อมูล T013/T014
+commit: this commit
