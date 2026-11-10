@@ -108,6 +108,15 @@
         "R_A4_BURN_LAW_SELECTION"
       ],
       "note": "Supports author points 4 and 10 at model level. Ecology analogue: Tilman resource-ratio theory; not new physics by itself."
+    },
+    {
+      "claim_id": "C_B4_DISTINCTNESS_AUDIT",
+      "statement": "Each UET layer reduces to an established theory (layer 1: DEF scalar-tensor with a Yukawa portal; layer 2: Caldeira-Leggett open systems; layer 3: exactly the Tilman chemostat consumer-resource model). The only cross-layer effect found, a preferred-frame portal drag F = Gamma v q^2/(12 pi R), depends on three free parameters, so UET currently makes no numerical prediction that differs from standard physics.",
+      "level": "L1_CONSISTENT",
+      "evidence": [
+        "R_B4_DISTINCTNESS_AUDIT"
+      ],
+      "note": "A negative result: the Theory Card's 'differences' field stays 'none yet', now with evidence."
     }
   ]
 }

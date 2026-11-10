@@ -1,0 +1,40 @@
+{
+  "schema": "uet-result-v2",
+  "result_id": "R_B4_DISTINCTNESS_AUDIT",
+  "claim_id": "C_B4_DISTINCTNESS_AUDIT",
+  "level": "L1_CONSISTENT",
+  "outcome": "PASS",
+  "numbers": [
+    {
+      "name": "layers_reducing_to_known_theory",
+      "value": "3/3 (DEF + Yukawa portal; Caldeira-Leggett; Tilman chemostat, exact identity)",
+      "uncertainty": null,
+      "unit": "dimensionless"
+    },
+    {
+      "name": "portal_drag_light_limit_vs_quadrature",
+      "value": "agreement < 1e-6 at R = 0.5, 2, 7",
+      "uncertainty": null,
+      "unit": "dimensionless"
+    },
+    {
+      "name": "portal_drag_suppression_m_psi_20_vs_light",
+      "value": "< 0.05",
+      "uncertainty": null,
+      "unit": "dimensionless"
+    },
+    {
+      "name": "numerical_uet_distinct_predictions",
+      "value": "0",
+      "uncertainty": null,
+      "unit": "dimensionless"
+    }
+  ],
+  "producer": {
+    "script": "docs/core/05_tests/physics/test_distinctness.py",
+    "commit": "1af41959c"
+  },
+  "artifacts": [],
+  "date": "2026-11-10",
+  "note": "Portal drag is the only cross-layer effect without a standard counterpart; it depends on three free parameters (g_c, Gamma, m_psi) and is therefore not yet a prediction."
+}
