@@ -135,6 +135,15 @@
         "R_R2_LASER_LAYER3"
       ],
       "note": "Shows author point 5 (selection by resource use, without learning) in a non-living physical system. Standard laser physics."
+    },
+    {
+      "claim_id": "C_R3_TRACE_RECORD_PLUS_POTENTIAL",
+      "statement": "The trace that energy use leaves in the environment is the entropy production Sigma, which splits exactly into a readable record I(S:R) and a potential difference D (free energy T*D left in the environment); at long times D dominates, and the number of bits written is Sigma/ln 2, not Q/(kT ln 2).",
+      "level": "L1_CONSISTENT",
+      "evidence": [
+        "R_R3_TRACE_DECOMPOSITION"
+      ],
+      "note": "Author clarification 2026-11-10: the trace is a number or potential difference, not a new thing in the universe. Standard non-equilibrium physics."
     }
   ]
 }
