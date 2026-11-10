@@ -90,6 +90,15 @@
         "R_T005_FIFTH_FORCE"
       ],
       "note": "CONSTRAINT, not a prediction; g_c remains free. L2 approved by the author on 2026-11-10."
+    },
+    {
+      "claim_id": "C_LAYER2_OPEN_FROM_CLOSED",
+      "statement": "For a mode that is part of a closed Hamiltonian system with an ohmic environment, the open-system layer-2 laws emerge without being assumed: friction, burn power P = gamma x'^2, noise obeying the KMS/equipartition relation, heat flow from hot to cold, and exponential free-energy decay (P proportional to F).",
+      "level": "L1_CONSISTENT",
+      "evidence": [
+        "R_A3_LAYER2_OPEN_FROM_CLOSED"
+      ],
+      "note": "Supports author points 1, 4 and 8 at model level. Standard open-system physics (Caldeira-Leggett 1983); not yet tied to the parent-action fields."
     }
   ]
 }
