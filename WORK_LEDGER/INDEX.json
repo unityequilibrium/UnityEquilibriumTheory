@@ -5,11 +5,11 @@
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
     "sources": 75,
-    "entries": 805,
+    "entries": 806,
     "by_stream": {
       "book-history": 94,
       "operations": 112,
-      "research": 599
+      "research": 600
     },
     "exact_duplicates": 0,
     "review_entries": 2
@@ -389,8 +389,8 @@
     },
     {
       "path": "2026/2026-11-10.md",
-      "sha256": "c046f20a7495cd3f2acf5cfb79cc14b7eaf9646e7fde134691aea6503a75b1b2",
-      "entries": 12
+      "sha256": "968acbfb9c53ac0d7214bedbceeb76065fc04f14c9999606fe2cd9bcbf6357f5",
+      "entries": 13
     },
     {
       "path": "2026-08-14.md",
@@ -16449,12 +16449,32 @@
       "source": "2026/2026-11-10.md",
       "anchor": "journal-cross-check-of-registered-external-numbers",
       "start_line": 159,
-      "end_line": 171,
+      "end_line": 172,
       "title": "Journal cross-check of registered external numbers",
-      "entry_sha256": "355cd85079966f9b6670187c64ef4e62c3aa7b28b87206370cdf4c25c6430c79",
+      "entry_sha256": "255bef0040c05236ad6fe1d88e8c140e5cfe6e0a8332829a10b23ce6928ffe48",
       "stream": "research",
       "areas": [
         "research-standards"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-10",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-10.md#r3-the-trace-of-energy-use-is-a-record-plus-a-potential-difference",
+      "source": "2026/2026-11-10.md",
+      "anchor": "r3-the-trace-of-energy-use-is-a-record-plus-a-potential-difference",
+      "start_line": 173,
+      "end_line": 185,
+      "title": "R3: the trace of energy use is a record plus a potential difference",
+      "entry_sha256": "74a633ef7893270ac2c808e2f905e2d449225562fd78581fa8af64b7013e4a60",
+      "stream": "research",
+      "areas": [
+        "research-core"
       ],
       "related_streams": [
         "research"

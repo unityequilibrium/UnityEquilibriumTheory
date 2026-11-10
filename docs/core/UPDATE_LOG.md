@@ -134,3 +134,10 @@ commit: this commit
 ระดับ: ไม่เปลี่ยน claim ใด
 ถัดไป: หาค่าลมสุริยะช่วง 2011–2015 ที่ตีพิมพ์แล้ว; B5 red-team; owner ตัดสินเรื่อง push
 commit: this commit
+
+## 2026-11-10 — What is the trace that energy use leaves? (R3)
+ทำ: ผู้เขียนอธิบายว่าร่องรอยอาจเป็นแค่ตัวเลข/ความต่างศักย์; คำนวณแม่นตรงในระบบปิดของ A3 ว่า Σ = I(S:R) + D(R‖eq) (Esposito et al. 2010) (5 physics test)
+ผล: เอกลักษณ์ถูกต้องถึง 10⁻¹⁰; ระยะยาว D (ความต่างศักย์ในสิ่งแวดล้อม) > 90% ของ Σ; สสารที่เย็นกว่าให้ Q < 0 แต่ I > 0 จึงต้องใช้ บิต = Σ/ln2 แทน Q/(kT ln2); ลู่เข้าสูตร x − 1 − ln x แบบอันดับ 1
+ระดับ: claim ใหม่ C_R3_TRACE_RECORD_PLUS_POTENTIAL (L1); ข้อ 8 และ 9 → MATCH
+ถัดไป: B5 red-team; owner ตัดสินเรื่อง push/merge
+commit: this commit + records commit
