@@ -5,11 +5,11 @@
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
     "sources": 75,
-    "entries": 802,
+    "entries": 803,
     "by_stream": {
       "book-history": 94,
       "operations": 112,
-      "research": 596
+      "research": 597
     },
     "exact_duplicates": 0,
     "review_entries": 2
@@ -389,8 +389,8 @@
     },
     {
       "path": "2026/2026-11-10.md",
-      "sha256": "55ee0b8ec0e3e0428f936719eeafb751cb6e2ea62398f8a3affba7e3b0ccb1aa",
-      "entries": 9
+      "sha256": "33b350433bc54e266ebc07a481638f39bba3eeeef661181db6226b6f842b12b0",
+      "entries": 10
     },
     {
       "path": "2026-08-14.md",
@@ -16389,9 +16389,29 @@
       "source": "2026/2026-11-10.md",
       "anchor": "r1-channels-by-which-energy-use-writes-onto-space-t006-draft",
       "start_line": 117,
-      "end_line": 130,
+      "end_line": 131,
       "title": "R1: channels by which energy use writes onto space; T006 draft",
-      "entry_sha256": "27635e5a173f7cc7fe19bf619e17d014b27e9e399e93c891f53cd012abea1e99",
+      "entry_sha256": "e444d48264af65500a97cec79415aca8cb6f4eedbefcf04dc48ea401d316b278",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-10",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-10.md#r2-laser-mode-competition-is-layer-3-term-for-term",
+      "source": "2026/2026-11-10.md",
+      "anchor": "r2-laser-mode-competition-is-layer-3-term-for-term",
+      "start_line": 132,
+      "end_line": 143,
+      "title": "R2: laser mode competition is layer 3 term for term",
+      "entry_sha256": "f9fcbf3dbeed464ae102608e8ba3dc52cf01c47b258be8dfa0f0235d116d50e4",
       "stream": "research",
       "areas": [
         "research-core"

@@ -113,3 +113,10 @@ commit: this commit + records commit
 ระดับ: claim C_T006_ENERGY_USE_GRAVITY_TRACE ที่ L0 (DRAFT)
 ถัดไป: ผู้เขียนอนุมัติ T006; ทำ R2
 commit: this commit
+
+## 2026-11-10 — Is there a non-living physical system that layer 3 governs? (R2)
+ทำ: เทียบสมการอัตราของเลเซอร์หลาย mode กับชั้น 3 (sympy) และจำลองแบบโฟตอนรั่วออกแบบ exponential (3 physics test)
+ผล: ตรงทุกเทอม (a = B, τ = อายุโฟตอน, F = 1, R = inversion); R* = threshold inversion; inversion ก้อนเดียว → mode threshold ต่ำสุดชนะและ gain clamping; สองบริเวณ → สอง mode อยู่ร่วมกัน
+ระดับ: claim ใหม่ C_R2_LASER_LAYER3 (L1)
+ถัดไป: ผู้เขียนอนุมัติ T006; B5 red-team
+commit: this commit + records commit
