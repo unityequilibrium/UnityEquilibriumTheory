@@ -6,10 +6,11 @@
 
 These are source-linked historical records, not proof of completed research, successful publication, or current scientific readiness.
 
-Indexed entries: 600. Counts describe records, not accomplishments.
+Indexed entries: 601. Counts describe records, not accomplishments.
 
 | Date | Record | Area | Notes |
 | --- | --- | --- | --- |
+| 2026-11-10 | [Synthesis audit: borrowed principles and their composition](2026/2026-11-10.md#synthesis-audit-borrowed-principles-and-their-composition) (L187) | research-core | explicit_stream_and_area |
 | 2026-11-10 | [R3: the trace of energy use is a record plus a potential difference](2026/2026-11-10.md#r3-the-trace-of-energy-use-is-a-record-plus-a-potential-difference) (L173) | research-core | explicit_stream_and_area |
 | 2026-11-10 | [Journal cross-check of registered external numbers](2026/2026-11-10.md#journal-cross-check-of-registered-external-numbers) (L159) | research-standards | explicit_stream_and_area |
 | 2026-11-10 | [T006 result: energy use written into the Sun's gravity at L2](2026/2026-11-10.md#t006-result-energy-use-written-into-the-suns-gravity-at-l2) (L145) | research-core | explicit_stream_and_area |

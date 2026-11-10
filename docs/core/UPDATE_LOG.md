@@ -141,3 +141,10 @@ commit: this commit
 ระดับ: claim ใหม่ C_R3_TRACE_RECORD_PLUS_POTENTIAL (L1); ข้อ 8 และ 9 → MATCH
 ถัดไป: B5 red-team; owner ตัดสินเรื่อง push/merge
 commit: this commit + records commit
+
+## 2026-11-10 — Are the borrowed principles used correctly, and do they compose? (synthesis audit)
+ทำ: ตรวจหลักการ 9 ข้อที่ UET ยืมมา เทียบเงื่อนไขของต้นฉบับกับวิธีที่ UET ใช้ และตรวจการต่อกัน 4 คู่ (docs/core/SYNTHESIS_AUDIT.md)
+ผล: ใช้ถูก 4, ต้องแก้ 2 (กฎข้อ 2 ของข้อ 1; สูตร Landauer กลับด้าน), จำกัดขอบเขต 3 (τ = F/P, R*, Nash); ขัดกันหนึ่งคู่: ระบบที่มีแรงโน้มถ่วงสร้างโครงสร้างเพิ่มในระบบปิด (Lynden-Bell & Wood 1968)
+ระดับ: ไม่เปลี่ยน claim (เป็นงานตรวจตรรกะ)
+ถัดไป: ทาง ก — Test Card ต่อสาขา (เลเซอร์, เคมี, chemostat, ดาวแคระขาว) ให้ผู้เขียนอนุมัติทีละใบ
+commit: this commit
