@@ -1,7 +1,7 @@
 {
   "schema": "uet-test-card-v2",
   "test_id": "T008",
-  "status": "APPROVED",
+  "status": "CLOSED",
   "claim_id": "C_T008_WHITE_DWARF_COOLING_ABUNDANCE",
   "theory_card": {
     "card_id": "UET_PARENT",

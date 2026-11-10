@@ -1,0 +1,46 @@
+{
+  "schema": "uet-result-v2",
+  "result_id": "R_T008_WHITE_DWARF_LF",
+  "claim_id": "C_T008_WHITE_DWARF_COOLING_ABUNDANCE",
+  "test_card_id": "T008",
+  "level": "L2_CONFRONTED",
+  "outcome": "PASS",
+  "numbers": [
+    {
+      "name": "predicted_slope",
+      "value": "0.2857 (2/7, burn exponent n = 3.5)",
+      "uncertainty": null,
+      "unit": "dex/mag"
+    },
+    {
+      "name": "observed_slope",
+      "value": "0.3195 (Mbol 6.0-13.5)",
+      "uncertainty": null,
+      "unit": "dex/mag"
+    },
+    {
+      "name": "log10_deviation",
+      "value": "0.049",
+      "uncertainty": null,
+      "unit": "dimensionless"
+    },
+    {
+      "name": "relative_difference",
+      "value": "+0.118",
+      "uncertainty": null,
+      "unit": "dimensionless"
+    }
+  ],
+  "producer": {
+    "script": "docs/core/03_lanes/persistence/t008_white_dwarf_lf.py",
+    "commit": "411341022"
+  },
+  "artifacts": [],
+  "date": "2026-11-10",
+  "approval": {
+    "approved_by": "santxkoz",
+    "date": "2026-11-10",
+    "role": "AUTHOR"
+  },
+  "note": "PASS under Test Card T008 (approved 8eefb40c1). Reproduces the Mestel cooling law through the UET burn-law lifetime; no slope uncertainty quoted by the source. L2 approved by the author on 2026-11-10."
+}

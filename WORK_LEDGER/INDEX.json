@@ -5,11 +5,11 @@
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
     "sources": 75,
-    "entries": 810,
+    "entries": 811,
     "by_stream": {
       "book-history": 94,
       "operations": 112,
-      "research": 604
+      "research": 605
     },
     "exact_duplicates": 0,
     "review_entries": 2
@@ -389,8 +389,8 @@
     },
     {
       "path": "2026/2026-11-10.md",
-      "sha256": "7ea95cf5418b6134ac520b86ab26f6f2c8f4df8917298c349072cba0ceca68d6",
-      "entries": 17
+      "sha256": "b434ce5a43b724677f35fde1d8a38c1eae125d424986fb6bb3aa164f5174425c",
+      "entries": 18
     },
     {
       "path": "2026-08-14.md",
@@ -16549,9 +16549,29 @@
       "source": "2026/2026-11-10.md",
       "anchor": "path-a-batch-feasibility-new-models-t008-and-t009-drafts",
       "start_line": 229,
-      "end_line": 243,
+      "end_line": 244,
       "title": "Path-A batch: feasibility, new models, T008 and T009 drafts",
-      "entry_sha256": "c3a9359edc03e1deb9c1a93e0697cbd880d0eda641ec3dd34ba4750beaaa4dee",
+      "entry_sha256": "11928b6e455707b6d1956ecd5f6f82ff1380504909760d733d0812e44109eda1",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-10",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-10.md#t008-and-t009-results-at-l2-path-a-summary-table",
+      "source": "2026/2026-11-10.md",
+      "anchor": "t008-and-t009-results-at-l2-path-a-summary-table",
+      "start_line": 245,
+      "end_line": 257,
+      "title": "T008 and T009 results at L2; path-A summary table",
+      "entry_sha256": "fa3d2d20532cfaa4e0d85d40070dd3c5e8b73e8c345553fba8569397af6a9843",
       "stream": "research",
       "areas": [
         "research-core"

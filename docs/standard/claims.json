@@ -156,17 +156,21 @@
     },
     {
       "claim_id": "C_T008_WHITE_DWARF_COOLING_ABUNDANCE",
-      "statement": "The burn-law lifetime of a passive burner (P ~ F^(7/2), Mestel cooling) plus the abundance law reproduces the slope of the white dwarf luminosity function.",
-      "level": "L0_SPECULATIVE",
-      "evidence": [],
-      "note": "Test Card T008 is a DRAFT awaiting author approval."
+      "statement": "The burn-law lifetime of a passive burner (P ~ F^(7/2), Mestel cooling) plus the abundance law reproduces the slope of the SDSS white dwarf luminosity function: predicted 2/7 = 0.286 against observed 0.320 per magnitude (|log10| = 0.049).",
+      "level": "L2_CONFRONTED",
+      "evidence": [
+        "R_T008_WHITE_DWARF_LF"
+      ],
+      "note": "Path-A test in astronomy. L2 approved by the author on 2026-11-10."
     },
     {
       "claim_id": "C_T009_DECAY_CHAIN_ABUNDANCE",
-      "statement": "The abundance law N = b tau holds for the 238U-234U decay chain: the half-life inferred from secular-equilibrium abundances matches one measured without equilibrium.",
-      "level": "L0_SPECULATIVE",
-      "evidence": [],
-      "note": "Test Card T009 is a DRAFT awaiting author approval."
+      "statement": "The abundance law N = b tau holds for the 238U-234U decay chain: the half-life inferred from secular-equilibrium abundances (245,670 +/- 260 yr) matches one measured without equilibrium (244,900 +/- 1340 yr), z = 0.56.",
+      "level": "L2_CONFRONTED",
+      "evidence": [
+        "R_T009_U234_SECULAR_EQUILIBRIUM"
+      ],
+      "note": "Path-A test in nuclear physics. L2 approved by the author on 2026-11-10."
     }
   ]
 }
