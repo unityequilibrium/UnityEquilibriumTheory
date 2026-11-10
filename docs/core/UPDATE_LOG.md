@@ -57,3 +57,10 @@ commit: this commit
 ระดับ: ไม่เปลี่ยน claim ใด (เป็นงานตรวจ ไม่ใช่ข้ออ้างใหม่)
 ถัดไป: ผู้เขียนเลือกความหมายของข้อ 3; ต่อด้วย A2+B1 (off-diagonal, reduction, stability, ψ₀ ในสสาร)
 commit: this commit
+
+## 2026-11-10 — Is layer 1 complete, and can it break from inside? (A2 + B1)
+ทำ: derive metric equation ส่วน off-diagonal (13 test), derive การแลกเปลี่ยนสสาร ⇄ φ (10 test), โจมตี vacuum/ghost/ขอบล่าง (32 test), mutation test 8 ตัว
+ผล: Q = ½εh|χ|²∇φ ผ่าน portal เท่านั้น; vacuum เลื่อนไปที่ ψ₀ ≈ g_c X_c/(2m_ψ²) ≠ 0 ได้เมื่อ χ condense หรือเมื่อ λ_χ เล็ก ทำให้ γ ≠ 1; จับ mutant จริงได้ 7/7; ผู้เขียนเลือกความหมายข้อ 3 = Λ_eff > 0
+ระดับ: C_PARENT_EOM_DERIVED ครอบคลุม off-diagonal แล้ว (L1); claim ใหม่ C_EXCHANGE_DERIVED, C_VACUUM_SHIFT_ROUTE (L1)
+ถัดไป: ผู้เขียนตอบว่า χ คือสสารธรรมดาหรือไม่; A3 สมการชั้น 2
+commit: this commit + records commit

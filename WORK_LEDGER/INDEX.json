@@ -5,11 +5,11 @@
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
     "sources": 75,
-    "entries": 794,
+    "entries": 795,
     "by_stream": {
       "book-history": 94,
       "operations": 112,
-      "research": 588
+      "research": 589
     },
     "exact_duplicates": 0,
     "review_entries": 2
@@ -389,8 +389,8 @@
     },
     {
       "path": "2026/2026-11-10.md",
-      "sha256": "f18222ae141e672c32eba9a0a18b37b960f2b5ee54a3f5d3d2ba0680342bdc70",
-      "entries": 1
+      "sha256": "301859394afe510518041e178a0a820407d7d60181e56a1130107a28f1c70d46",
+      "entries": 2
     },
     {
       "path": "2026-08-14.md",
@@ -16229,9 +16229,29 @@
       "source": "2026/2026-11-10.md",
       "anchor": "a1-fidelity-matrix-author-logic-versus-core-equations",
       "start_line": 3,
-      "end_line": 15,
+      "end_line": 16,
       "title": "A1 fidelity matrix: author logic versus core equations",
-      "entry_sha256": "52430f29d3139984fd27fdd994a1ef899bfce6f4118105eb45e99d2ad7b6b99b",
+      "entry_sha256": "a2224a1b8416907e2d49339d6c1f27f40af2426c0fc31341f9346c4f5ca2bc8f",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-10",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-10.md#a2--b1-layer-1-off-diagonal-check-exchange-derivation-stability-attacks",
+      "source": "2026/2026-11-10.md",
+      "anchor": "a2--b1-layer-1-off-diagonal-check-exchange-derivation-stability-attacks",
+      "start_line": 17,
+      "end_line": 30,
+      "title": "A2 + B1: layer 1 off-diagonal check, exchange derivation, stability attacks",
+      "entry_sha256": "64732bdc18e78608627edbddbcead9d9f3bac6d3f900f21bfce52412dd5496c1",
       "stream": "research",
       "areas": [
         "research-core"
