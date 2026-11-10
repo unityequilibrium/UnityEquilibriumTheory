@@ -6,10 +6,11 @@
 
 These are source-linked historical records, not proof of completed research, successful publication, or current scientific readiness.
 
-Indexed entries: 589. Counts describe records, not accomplishments.
+Indexed entries: 590. Counts describe records, not accomplishments.
 
 | Date | Record | Area | Notes |
 | --- | --- | --- | --- |
+| 2026-11-10 | [B1b: portal fifth force with chi as ordinary matter](2026/2026-11-10.md#b1b-portal-fifth-force-with-chi-as-ordinary-matter) (L32) | research-core | explicit_stream_and_area |
 | 2026-11-10 | [A2 + B1: layer 1 off-diagonal check, exchange derivation, stability attacks](2026/2026-11-10.md#a2--b1-layer-1-off-diagonal-check-exchange-derivation-stability-attacks) (L17) | research-core | explicit_stream_and_area |
 | 2026-11-10 | [A1 fidelity matrix: author logic versus core equations](2026/2026-11-10.md#a1-fidelity-matrix-author-logic-versus-core-equations) (L3) | research-core | explicit_stream_and_area |
 | 2026-11-09 | [Repoint producer commits to main and retire the pre-port branch](2026/2026-11-09.md#repoint-producer-commits-to-main-and-retire-the-pre-port-branch) (L138) | research-standards | explicit_stream_and_area |

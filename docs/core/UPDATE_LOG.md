@@ -64,3 +64,10 @@ commit: this commit
 ระดับ: C_PARENT_EOM_DERIVED ครอบคลุม off-diagonal แล้ว (L1); claim ใหม่ C_EXCHANGE_DERIVED, C_VACUUM_SHIFT_ROUTE (L1)
 ถัดไป: ผู้เขียนตอบว่า χ คือสสารธรรมดาหรือไม่; A3 สมการชั้น 2
 commit: this commit + records commit
+
+## 2026-11-10 — If χ is ordinary matter, what force does the portal make? (B1b)
+ทำ: ผู้เขียนตัดสินว่า χ = สสารธรรมดา จึง derive แรงที่ portal สร้างระหว่างมวล (5 physics test: NR limit, sphere ODE ลู่เข้าอันดับ 2, อัตราส่วนต่อแรงโน้มถ่วง)
+ผล: Yukawa α = g_c²/(2κm_χ⁴), λ = 1/m_ψ ไม่ขึ้นกับชนิดสาร; α = 1 ต้องการแค่ g_c ≈ 5×10⁻¹⁰ eV; ทาง χ condense ถูกตัด; T001 ใช้ได้เมื่อ portal α ≪ 1 เท่านั้น
+ระดับ: claim ใหม่ C_PORTAL_FIFTH_FORCE (L1)
+ถัดไป: ร่าง Test Card T005 (inverse-square law, LLR, ดาวเคราะห์) ให้ผู้เขียนอนุมัติก่อนรัน
+commit: this commit + records commit

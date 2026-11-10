@@ -5,11 +5,11 @@
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
     "sources": 75,
-    "entries": 795,
+    "entries": 796,
     "by_stream": {
       "book-history": 94,
       "operations": 112,
-      "research": 589
+      "research": 590
     },
     "exact_duplicates": 0,
     "review_entries": 2
@@ -389,8 +389,8 @@
     },
     {
       "path": "2026/2026-11-10.md",
-      "sha256": "301859394afe510518041e178a0a820407d7d60181e56a1130107a28f1c70d46",
-      "entries": 2
+      "sha256": "baac3e325e8be8bb85f1b3ceb174ff7b2f15a7720b99b38208c0f0991005d45c",
+      "entries": 3
     },
     {
       "path": "2026-08-14.md",
@@ -16249,9 +16249,29 @@
       "source": "2026/2026-11-10.md",
       "anchor": "a2--b1-layer-1-off-diagonal-check-exchange-derivation-stability-attacks",
       "start_line": 17,
-      "end_line": 30,
+      "end_line": 31,
       "title": "A2 + B1: layer 1 off-diagonal check, exchange derivation, stability attacks",
-      "entry_sha256": "64732bdc18e78608627edbddbcead9d9f3bac6d3f900f21bfce52412dd5496c1",
+      "entry_sha256": "8660ca20dc3636eaa0219046122c9e2adbb60603187c0cf62b271acafb43eda1",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-10",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-10.md#b1b-portal-fifth-force-with-chi-as-ordinary-matter",
+      "source": "2026/2026-11-10.md",
+      "anchor": "b1b-portal-fifth-force-with-chi-as-ordinary-matter",
+      "start_line": 32,
+      "end_line": 44,
+      "title": "B1b: portal fifth force with chi as ordinary matter",
+      "entry_sha256": "0d24c9daf652e73c0bcb23bcffa723d1d9f546fcdf3bea6fa0ebc1f9c39abb2d",
       "stream": "research",
       "areas": [
         "research-core"
