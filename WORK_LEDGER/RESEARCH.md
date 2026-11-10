@@ -6,10 +6,11 @@
 
 These are source-linked historical records, not proof of completed research, successful publication, or current scientific readiness.
 
-Indexed entries: 602. Counts describe records, not accomplishments.
+Indexed entries: 603. Counts describe records, not accomplishments.
 
 | Date | Record | Area | Notes |
 | --- | --- | --- | --- |
+| 2026-11-10 | [T007 result: layer-3 selection versus Tilman chemostats at L2](2026/2026-11-10.md#t007-result-layer-3-selection-versus-tilman-chemostats-at-l2) (L215) | research-core | explicit_stream_and_area |
 | 2026-11-10 | [T007 draft: layer-3 selection versus Tilman (1977) chemostat competition](2026/2026-11-10.md#t007-draft-layer-3-selection-versus-tilman-1977-chemostat-competition) (L201) | research-core | explicit_stream_and_area |
 | 2026-11-10 | [Synthesis audit: borrowed principles and their composition](2026/2026-11-10.md#synthesis-audit-borrowed-principles-and-their-composition) (L187) | research-core | explicit_stream_and_area |
 | 2026-11-10 | [R3: the trace of energy use is a record plus a potential difference](2026/2026-11-10.md#r3-the-trace-of-energy-use-is-a-record-plus-a-potential-difference) (L173) | research-core | explicit_stream_and_area |

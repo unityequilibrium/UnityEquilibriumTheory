@@ -5,11 +5,11 @@
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
     "sources": 75,
-    "entries": 808,
+    "entries": 809,
     "by_stream": {
       "book-history": 94,
       "operations": 112,
-      "research": 602
+      "research": 603
     },
     "exact_duplicates": 0,
     "review_entries": 2
@@ -389,8 +389,8 @@
     },
     {
       "path": "2026/2026-11-10.md",
-      "sha256": "bdf32a0b5ad76190ff47b95f355f2b1c24dcf36d03c1358a8d15190dfa0b04c8",
-      "entries": 15
+      "sha256": "7325895a6c9d6b7a773824fb7028d2a4498f1750f1ae5749078d5fee97adf164",
+      "entries": 16
     },
     {
       "path": "2026-08-14.md",
@@ -16509,9 +16509,29 @@
       "source": "2026/2026-11-10.md",
       "anchor": "t007-draft-layer-3-selection-versus-tilman-1977-chemostat-competition",
       "start_line": 201,
-      "end_line": 213,
+      "end_line": 214,
       "title": "T007 draft: layer-3 selection versus Tilman (1977) chemostat competition",
-      "entry_sha256": "7929ef65c7bf3b2ec953a5e2fb84d200752a2882ce1f964c81f05a93a2bbe2dd",
+      "entry_sha256": "0393e6815d2c1b00809705159c217da91620d5faaa19b98961e70c11a21de79b",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-10",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-10.md#t007-result-layer-3-selection-versus-tilman-chemostats-at-l2",
+      "source": "2026/2026-11-10.md",
+      "anchor": "t007-result-layer-3-selection-versus-tilman-chemostats-at-l2",
+      "start_line": 215,
+      "end_line": 227,
+      "title": "T007 result: layer-3 selection versus Tilman chemostats at L2",
+      "entry_sha256": "7bfc7a6db1e83b79b8c8446cbfe711ac7b79c151e8ca9d8d306b01cb45a4e379",
       "stream": "research",
       "areas": [
         "research-core"

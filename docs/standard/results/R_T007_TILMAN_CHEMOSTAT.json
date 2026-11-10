@@ -1,0 +1,52 @@
+{
+  "schema": "uet-result-v2",
+  "result_id": "R_T007_TILMAN_CHEMOSTAT",
+  "claim_id": "C_T007_RESOURCE_SELECTION_CHEMOSTAT",
+  "test_card_id": "T007",
+  "level": "L2_CONFRONTED",
+  "outcome": "PASS",
+  "numbers": [
+    {
+      "name": "r_star_PO4_Asterionella_Cyclotella",
+      "value": "0.0134, 0.205 at f = 0.25/day",
+      "uncertainty": null,
+      "unit": "uM"
+    },
+    {
+      "name": "r_star_SiO2_Asterionella_Cyclotella",
+      "value": "1.92, 0.553 at f = 0.25/day",
+      "uncertainty": null,
+      "unit": "uM"
+    },
+    {
+      "name": "predicted_upper_boundary_si_p",
+      "value": "86.9 vs observed about 80 (|log10| = 0.036)",
+      "uncertainty": null,
+      "unit": "uM/uM"
+    },
+    {
+      "name": "predicted_lower_boundary_si_p",
+      "value": "6.17 vs observed about 6 (|log10| = 0.012)",
+      "uncertainty": null,
+      "unit": "uM/uM"
+    },
+    {
+      "name": "ratio_groups_fully_matching",
+      "value": "2 of 3 (Si/P >= 100: Asterionella; 0.6: Cyclotella); Si/P = 38 partly (coexistence at intermediate flow, Asterionella at 0.05 and 0.5/day)",
+      "uncertainty": null,
+      "unit": "dimensionless"
+    }
+  ],
+  "producer": {
+    "script": "docs/core/03_lanes/persistence/t007_tilman_chemostat.py",
+    "commit": "9277ea095"
+  },
+  "artifacts": [],
+  "date": "2026-11-10",
+  "approval": {
+    "approved_by": "santxkoz",
+    "date": "2026-11-10",
+    "role": "AUTHOR"
+  },
+  "note": "PASS under Test Card T007 (approved 5d23822e4). Re-analysis of Tilman's own data with the same model he used; prediction uses only separately measured monoculture physiology. Figure point data not scored individually. L2 approved by the author on 2026-11-10."
+}

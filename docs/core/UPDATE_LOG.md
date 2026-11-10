@@ -162,3 +162,10 @@ commit: this commit
 ระดับ: claim C_T007_RESOURCE_SELECTION_CHEMOSTAT ที่ L0 (DRAFT)
 ถัดไป: ผู้เขียนอนุมัติ T007; Test Card สาขาถัดไป (เลเซอร์, เคมี, ดาวแคระขาว)
 commit: this commit
+
+## 2026-11-10 — T007 run: layer 3 predicts Tilman's chemostat regions
+ทำ: รันวิธีของ T007 หลังผู้เขียนอนุมัติการ์ด (5d23822e4) กับข้อมูล TILMAN1977_CHEMOSTAT ที่ล็อก hash ไว้
+ผล: มี trade-off (Asterionella เก่งฟอสเฟต, Cyclotella เก่งซิลิกา); ขอบที่ทำนาย 86.9 และ 6.2 เทียบที่วัดได้ราว 80 และ 6 (|log10| 0.036, 0.012) → PASS; ตรงเต็มที่ 2 ใน 3 กลุ่ม, Si/P = 38 ตรงบางส่วน
+ระดับ: C_T007_RESOURCE_SELECTION_CHEMOSTAT → L2_CONFRONTED (PASS; ผู้เขียนอนุมัติ)
+ถัดไป: Test Card สาขาถัดไปของทาง ก (เลเซอร์จริง, เคมี, ดาวแคระขาว)
+commit: this commit

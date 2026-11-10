@@ -147,10 +147,12 @@
     },
     {
       "claim_id": "C_T007_RESOURCE_SELECTION_CHEMOSTAT",
-      "statement": "Layer-3 resource selection with two essential resources predicts, from monoculture physiology alone, the dominance and coexistence regions of Tilman's (1977) diatom chemostat competition.",
-      "level": "L0_SPECULATIVE",
-      "evidence": [],
-      "note": "Test Card T007 is a DRAFT awaiting author approval."
+      "statement": "Layer-3 resource selection with two essential resources predicts, from monoculture physiology alone, the dominance and coexistence regions of Tilman's (1977) diatom chemostats: predicted Si/P boundaries 86.9 and 6.2 against observed about 80 and 6; 2 of 3 ratio groups match fully and the Si/P = 38 group partly.",
+      "level": "L2_CONFRONTED",
+      "evidence": [
+        "R_T007_TILMAN_CHEMOSTAT"
+      ],
+      "note": "Path-A test outside physics. Re-analysis with the same model Tilman used, not an independent experiment. L2 approved by the author on 2026-11-10."
     }
   ]
 }
