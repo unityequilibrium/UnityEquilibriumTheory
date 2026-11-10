@@ -5,11 +5,11 @@
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
     "sources": 75,
-    "entries": 803,
+    "entries": 804,
     "by_stream": {
       "book-history": 94,
       "operations": 112,
-      "research": 597
+      "research": 598
     },
     "exact_duplicates": 0,
     "review_entries": 2
@@ -389,8 +389,8 @@
     },
     {
       "path": "2026/2026-11-10.md",
-      "sha256": "33b350433bc54e266ebc07a481638f39bba3eeeef661181db6226b6f842b12b0",
-      "entries": 10
+      "sha256": "0872c3ac24b596cdd6706f61d5376d3f028b4247661609da34e710453ef71322",
+      "entries": 11
     },
     {
       "path": "2026-08-14.md",
@@ -16409,9 +16409,29 @@
       "source": "2026/2026-11-10.md",
       "anchor": "r2-laser-mode-competition-is-layer-3-term-for-term",
       "start_line": 132,
-      "end_line": 143,
+      "end_line": 144,
       "title": "R2: laser mode competition is layer 3 term for term",
-      "entry_sha256": "f9fcbf3dbeed464ae102608e8ba3dc52cf01c47b258be8dfa0f0235d116d50e4",
+      "entry_sha256": "b6a1d1289ac9baaa3c30e2e91ff4054d79914c55708fb5e7bd3f23d98a33ff32",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-10",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-10.md#t006-result-energy-use-written-into-the-suns-gravity-at-l2",
+      "source": "2026/2026-11-10.md",
+      "anchor": "t006-result-energy-use-written-into-the-suns-gravity-at-l2",
+      "start_line": 145,
+      "end_line": 157,
+      "title": "T006 result: energy use written into the Sun's gravity at L2",
+      "entry_sha256": "4d37a7891c5169e0bf292767ab8962ce06dd3d7689577a718327ea1966dda4b7",
       "stream": "research",
       "areas": [
         "research-core"

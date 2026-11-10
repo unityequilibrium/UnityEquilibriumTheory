@@ -120,3 +120,10 @@ commit: this commit
 ระดับ: claim ใหม่ C_R2_LASER_LAYER3 (L1)
 ถัดไป: ผู้เขียนอนุมัติ T006; B5 red-team
 commit: this commit + records commit
+
+## 2026-11-10 — T006 run: the Sun's energy use in its gravity
+ทำ: รันวิธีของ T006 หลังผู้เขียนอนุมัติการ์ด (72d072c86) กับข้อมูล T006_SOLAR_MASS_LOSS ที่ล็อก hash ไว้
+ผล: คำนวณ −8.76×10⁻¹⁴/ปี เทียบวัด −6.13×10⁻¹⁴/ปี, z = 1.48 → PASS; "ไม่ทิ้งร่องรอยทางแรงโน้มถ่วง" ถูกปฏิเสธที่ 4.2σ
+ระดับ: C_T006_ENERGY_USE_GRAVITY_TRACE → L2_CONFRONTED (PASS; ผู้เขียนอนุมัติ)
+ถัดไป: B5 red-team; ตรวจตัวเลข T001/T002/T005/T006 กับฉบับวารสาร
+commit: this commit

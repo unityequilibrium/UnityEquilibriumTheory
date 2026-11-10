@@ -6,10 +6,11 @@
 
 These are source-linked historical records, not proof of completed research, successful publication, or current scientific readiness.
 
-Indexed entries: 597. Counts describe records, not accomplishments.
+Indexed entries: 598. Counts describe records, not accomplishments.
 
 | Date | Record | Area | Notes |
 | --- | --- | --- | --- |
+| 2026-11-10 | [T006 result: energy use written into the Sun's gravity at L2](2026/2026-11-10.md#t006-result-energy-use-written-into-the-suns-gravity-at-l2) (L145) | research-core | explicit_stream_and_area |
 | 2026-11-10 | [R2: laser mode competition is layer 3 term for term](2026/2026-11-10.md#r2-laser-mode-competition-is-layer-3-term-for-term) (L132) | research-core | explicit_stream_and_area |
 | 2026-11-10 | [R1: channels by which energy use writes onto space; T006 draft](2026/2026-11-10.md#r1-channels-by-which-energy-use-writes-onto-space-t006-draft) (L117) | research-core | explicit_stream_and_area |
 | 2026-11-10 | [B4: distinctness audit and portal drag](2026/2026-11-10.md#b4-distinctness-audit-and-portal-drag) (L103) | research-core | explicit_stream_and_area |

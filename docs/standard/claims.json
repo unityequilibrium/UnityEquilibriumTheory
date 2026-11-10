@@ -120,10 +120,12 @@
     },
     {
       "claim_id": "C_T006_ENERGY_USE_GRAVITY_TRACE",
-      "statement": "The Sun's energy use (luminosity plus solar wind) is written into its gravitational parameter at the rate general relativity gives, as recorded by planetary orbits.",
-      "level": "L0_SPECULATIVE",
-      "evidence": [],
-      "note": "Test Card T006 is a DRAFT awaiting author approval."
+      "statement": "The Sun's energy use (luminosity plus solar wind) is written into its gravitational parameter at the rate general relativity gives: predicted -8.76e-14 +/- 1.0e-14 per year against the MESSENGER measurement -6.13e-14 +/- 1.47e-14 (z = 1.48); no gravitational trace at all is disfavoured at 4.2 sigma.",
+      "level": "L2_CONFRONTED",
+      "evidence": [
+        "R_T006_SOLAR_MASS_LOSS"
+      ],
+      "note": "Supports author point 7 through standard physics; does not distinguish UET from GR. L2 approved by the author on 2026-11-10."
     },
     {
       "claim_id": "C_R2_LASER_LAYER3",
