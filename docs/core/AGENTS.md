@@ -4,6 +4,7 @@ These instructions apply under `docs/core/`. They add to the root [`AGENTS.md`](
 
 ## Before changing an equation or operator
 
+0. Read `docs/core/CORE_MAP.md` first. It says which files are the live equations for each layer, which are legacy, and what is still open.
 1. Read `docs/core/THEORY_CARD.md` once it exists (W3). It holds the core equations, the nearest known theory class, the redundant parameters and the planned predictions.
 2. Change the equation's code under `02_equations/` and the card together. Bump the card `version` whenever a core equation changes.
 3. Add or update physics tests under `05_tests/physics/` marked `@pytest.mark.physics`, following §6 of the standard:

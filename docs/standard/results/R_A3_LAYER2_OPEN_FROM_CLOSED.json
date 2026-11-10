@@ -1,0 +1,70 @@
+{
+  "schema": "uet-result-v2",
+  "result_id": "R_A3_LAYER2_OPEN_FROM_CLOSED",
+  "claim_id": "C_LAYER2_OPEN_FROM_CLOSED",
+  "level": "L1_CONSISTENT",
+  "outcome": "PASS",
+  "numbers": [
+    {
+      "name": "total_energy_drift",
+      "value": "9.2e-14",
+      "uncertainty": null,
+      "unit": "dimensionless"
+    },
+    {
+      "name": "mode_energy_remaining_after_3_relaxation_times",
+      "value": "0.045",
+      "uncertainty": null,
+      "unit": "dimensionless"
+    },
+    {
+      "name": "friction_max_error_by_cutoff",
+      "value": "0.048, 0.023, 0.012 at omega_max = 5, 10, 20 (first order)",
+      "uncertainty": null,
+      "unit": "dimensionless"
+    },
+    {
+      "name": "lost_over_burned_energy",
+      "value": "1.0002",
+      "uncertainty": null,
+      "unit": "dimensionless"
+    },
+    {
+      "name": "equipartition_v2_over_T",
+      "value": "0.97 (400 samples)",
+      "uncertainty": null,
+      "unit": "dimensionless"
+    },
+    {
+      "name": "equipartition_x2_w0sq_over_T",
+      "value": "0.98 (400 samples)",
+      "uncertainty": null,
+      "unit": "dimensionless"
+    },
+    {
+      "name": "heat_to_environment_T_sys_3_T_bath_1",
+      "value": "+1.85",
+      "uncertainty": null,
+      "unit": "dimensionless"
+    },
+    {
+      "name": "heat_to_environment_T_sys_0.2_T_bath_1",
+      "value": "-0.83",
+      "uncertainty": null,
+      "unit": "dimensionless"
+    },
+    {
+      "name": "free_energy_decay_rate_over_gamma",
+      "value": "1.009, within 5% over three periods",
+      "uncertainty": null,
+      "unit": "dimensionless"
+    }
+  ],
+  "producer": {
+    "script": "docs/core/05_tests/physics/test_layer2_dissipation.py",
+    "commit": "4c2fea315"
+  },
+  "artifacts": [],
+  "date": "2026-11-10",
+  "note": "Caldeira-Leggett ohmic environment, classical, one harmonic mode, w0 = 1. The environment is generic; it is not yet identified with a field of the parent action. Finding: passive linear friction gives P proportional to F, so the layer-3 lifetime tau = F/P holds only for regulated burners."
+}

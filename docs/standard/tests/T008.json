@@ -1,0 +1,43 @@
+{
+  "schema": "uet-test-card-v2",
+  "test_id": "T008",
+  "status": "CLOSED",
+  "claim_id": "C_T008_WHITE_DWARF_COOLING_ABUNDANCE",
+  "theory_card": {
+    "card_id": "UET_PARENT",
+    "version": 1
+  },
+  "hypothesis": "White dwarfs are passive burners: Mestel cooling L ~ T^(7/2) with stored energy F ~ T gives the burn law P ~ F^(7/2). The A4 lifetime tau = integral dF/P(F) and the abundance law N ~ b tau then predict the luminosity-function slope d log10 N / d Mbol = 2/7 in the Mestel range. Path-A test of the abundance law for a passive burner in astronomy.",
+  "observable": {
+    "quantity": "slope of log10 Phi versus Mbol",
+    "unit": "dex per magnitude",
+    "domain": "SDSS DA white dwarfs, Mbol 6.0-13.5 (Hu, Wu and Wu 2007)"
+  },
+  "test_kind": "CONSTRAINT",
+  "data_sources": [
+    {
+      "data_id": "HU2007_SDSS_DA_WD_LF",
+      "role": "COMPARISON",
+      "exposure": "SEEN_FULL"
+    }
+  ],
+  "prediction_method": {
+    "script": "docs/core/03_lanes/persistence/t008_white_dwarf_lf.py",
+    "description": "n = 3.5 from L ~ T^(7/2) and F ~ T; slope = 0.4 (n-1)/n; compared with the observed linear-fit slope using the path-A ratio rule"
+  },
+  "free_parameters": [],
+  "fixed_parameters": [
+    "Mestel exponent 7/2 as published",
+    "constant formation rate over the cooling times concerned",
+    "observed slope exactly as registered"
+  ],
+  "pass_criterion": "PASS if |log10(predicted/observed)| <= 0.1.",
+  "fail_criterion": "FAILED if |log10(predicted/observed)| > 0.3; INCONCLUSIVE between 0.1 and 0.3 or if the registered value disagrees with the journal text.",
+  "drafted_by": "claude",
+  "note": "Disclosure: drafted after reading the source, which itself states that the fitted slope 0.32 is almost identical to the Mestel slope 2/7; the outcome is effectively known. The Mestel law is borrowed physics (synthesis audit); this card tests that the UET burn-law lifetime plus abundance law reproduce it, not a new prediction. No slope uncertainty is quoted. The path-A ratio rule (|log10| <= 0.1 PASS, <= 0.3 INCONCLUSIVE) was fixed for T007 before this card was drafted. Approved by the author on 2026-11-10 as drafted.",
+  "approval": {
+    "approved_by": "santxkoz",
+    "date": "2026-11-10",
+    "role": "AUTHOR"
+  }
+}

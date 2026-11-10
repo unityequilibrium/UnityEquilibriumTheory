@@ -1,0 +1,46 @@
+{
+  "schema": "uet-result-v2",
+  "result_id": "R_T009_U234_SECULAR_EQUILIBRIUM",
+  "claim_id": "C_T009_DECAY_CHAIN_ABUNDANCE",
+  "test_card_id": "T009",
+  "level": "L2_CONFRONTED",
+  "outcome": "PASS",
+  "numbers": [
+    {
+      "name": "t_half_equilibrium",
+      "value": "245670",
+      "uncertainty": "260",
+      "unit": "yr"
+    },
+    {
+      "name": "t_half_direct",
+      "value": "244900",
+      "uncertainty": "1340",
+      "unit": "yr"
+    },
+    {
+      "name": "z",
+      "value": "0.56",
+      "uncertainty": null,
+      "unit": "dimensionless"
+    },
+    {
+      "name": "relative_difference",
+      "value": "+0.0031",
+      "uncertainty": null,
+      "unit": "dimensionless"
+    }
+  ],
+  "producer": {
+    "script": "docs/core/03_lanes/persistence/t009_u234_secular_equilibrium.py",
+    "commit": "411341022"
+  },
+  "artifacts": [],
+  "date": "2026-11-10",
+  "approval": {
+    "approved_by": "santxkoz",
+    "date": "2026-11-10",
+    "role": "AUTHOR"
+  },
+  "note": "PASS under Test Card T009 (approved 8eefb40c1). The abundance law holds in the 238U-234U chain within 0.3%. Direct value as quoted by Hu et al. 2025. L2 approved by the author on 2026-11-10."
+}

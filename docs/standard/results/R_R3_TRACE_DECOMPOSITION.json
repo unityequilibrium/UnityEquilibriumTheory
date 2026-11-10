@@ -1,0 +1,46 @@
+{
+  "schema": "uet-result-v2",
+  "result_id": "R_R3_TRACE_DECOMPOSITION",
+  "claim_id": "C_R3_TRACE_RECORD_PLUS_POTENTIAL",
+  "level": "L1_CONSISTENT",
+  "outcome": "PASS",
+  "numbers": [
+    {
+      "name": "identity_residual_sigma_minus_I_minus_D",
+      "value": "< 1e-8 (observed ~1e-10)",
+      "uncertainty": null,
+      "unit": "nats"
+    },
+    {
+      "name": "hot_system_t40_sigma_I_D",
+      "value": "1.93, 0.24, 1.69 (T_sys = 3, T = 1, gamma = 0.1, omega_max = 8)",
+      "uncertainty": null,
+      "unit": "nats"
+    },
+    {
+      "name": "cold_system_t40_Q_I",
+      "value": "Q = -0.36 (energy units), I = 0.23 (T_sys = 0.3)",
+      "uncertainty": null,
+      "unit": "nats"
+    },
+    {
+      "name": "long_time_potential_share_of_sigma",
+      "value": "> 0.9 (gamma = 0.025, omega_max = 4)",
+      "uncertainty": null,
+      "unit": "dimensionless"
+    },
+    {
+      "name": "excess_over_weak_coupling_limit",
+      "value": "0.51, 0.26, 0.13 for gamma*omega_max = 0.4, 0.2, 0.1 (first order)",
+      "uncertainty": null,
+      "unit": "nats"
+    }
+  ],
+  "producer": {
+    "script": "docs/core/05_tests/physics/test_r3_trace_decomposition.py",
+    "commit": "8ddb82eeb"
+  },
+  "artifacts": [],
+  "date": "2026-11-10",
+  "note": "Classical Gaussian states, Caldeira-Leggett environment, initial product state. Identity from Esposito, Lindenberg and Van den Broeck, New J. Phys. 12, 013013 (2010). Standard physics; makes author points 8 and 9 precise, not a new prediction."
+}

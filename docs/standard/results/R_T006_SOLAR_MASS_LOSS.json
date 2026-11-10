@@ -1,0 +1,58 @@
+{
+  "schema": "uet-result-v2",
+  "result_id": "R_T006_SOLAR_MASS_LOSS",
+  "claim_id": "C_T006_ENERGY_USE_GRAVITY_TRACE",
+  "test_card_id": "T006",
+  "level": "L2_CONFRONTED",
+  "outcome": "PASS",
+  "numbers": [
+    {
+      "name": "predicted_gm_rate",
+      "value": "-8.76e-14",
+      "uncertainty": "1.0e-14",
+      "unit": "per_year"
+    },
+    {
+      "name": "measured_gm_rate",
+      "value": "-6.13e-14",
+      "uncertainty": "1.47e-14",
+      "unit": "per_year"
+    },
+    {
+      "name": "z",
+      "value": "1.48",
+      "uncertainty": null,
+      "unit": "dimensionless"
+    },
+    {
+      "name": "radiative_fraction",
+      "value": "6.76e-14",
+      "uncertainty": null,
+      "unit": "per_year"
+    },
+    {
+      "name": "z_null_no_gravitational_trace",
+      "value": "4.17",
+      "uncertainty": null,
+      "unit": "dimensionless"
+    },
+    {
+      "name": "z_radiation_only",
+      "value": "0.43",
+      "uncertainty": null,
+      "unit": "dimensionless"
+    }
+  ],
+  "producer": {
+    "script": "docs/core/03_lanes/open_system/t006_solar_mass_loss.py",
+    "commit": "94afc0547"
+  },
+  "artifacts": [],
+  "date": "2026-11-10",
+  "approval": {
+    "approved_by": "santxkoz",
+    "date": "2026-11-10",
+    "role": "AUTHOR"
+  },
+  "note": "PASS under Test Card T006 (approved 72d072c86). The hypothesis that energy use leaves no gravitational trace is disfavoured at 4.2 sigma. Confirms author point 7 through general relativity; does not distinguish UET from GR. Wind sigma assumed by the card; journal cross-check not done. L2 approved by the author on 2026-11-10."
+}

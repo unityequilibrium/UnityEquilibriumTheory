@@ -3,10 +3,11 @@
   "claims": [
     {
       "claim_id": "C_PARENT_EOM_DERIVED",
-      "statement": "The implemented scalar, O(2) matter and (diagonal) metric field equations of the UET parent code follow from the Theory Card action UET-PARENT-ACTION-001.",
+      "statement": "The implemented scalar, O(2) matter and metric field equations (diagonal and t-x off-diagonal components) of the UET parent code follow from the Theory Card action UET-PARENT-ACTION-001.",
       "level": "L1_CONSISTENT",
       "evidence": [
-        "R_W4_PARENT_EOM"
+        "R_W4_PARENT_EOM",
+        "R_A2_OFFDIAGONAL_METRIC"
       ],
       "note": "Mathematical consistency only; says nothing about whether nature follows this action."
     },
@@ -53,6 +54,123 @@
         "R_T002_STELLAR_PHASES"
       ],
       "note": "CONSTRAINT, outcome INCONCLUSIVE by the preregistered rule (2 < z <= 3). Not a falsification and not a pass. L2 recording approved by the author 2026-11-09."
+    },
+    {
+      "claim_id": "C_EXCHANGE_DERIVED",
+      "statement": "In the parent action, matter (the O(2) field) exchanges energy-momentum only with the response field, at the derived rate d^mu T_mu_nu = (1/2) eps h |chi|^2 d_nu phi on the matter shell; with h = 0 matter is separately conserved.",
+      "level": "L1_CONSISTENT",
+      "evidence": [
+        "R_A2_EXCHANGE_IDENTITY"
+      ],
+      "note": "Supports author point 2 mathematically. Calling the response field 'structure of space' is an interpretation."
+    },
+    {
+      "claim_id": "C_VACUUM_SHIFT_ROUTE",
+      "statement": "The canonical UET potential has a true vacuum with psi0 != 0 when chi condenses (m2_chi < 0), and can have one with all masses positive when lam_chi is small (explicit example); then alpha0 != 0 and gamma_PPN != 1. A sufficient condition for psi0 = 0 is m2_chi > 0 and g_c^2 <= 2 lam_chi m2_psi.",
+      "level": "L1_CONSISTENT",
+      "evidence": [
+        "R_B1_VACUUM_STRUCTURE"
+      ],
+      "note": "A falsification route for a future Test Card (Cassini); not yet confronted with data. With chi = ordinary matter (author 2026-11-10) the condensate branch m2_chi < 0 is excluded; only the metastable branch remains."
+    },
+    {
+      "claim_id": "C_PORTAL_FIFTH_FORCE",
+      "statement": "With chi identified as ordinary matter, the UET portal produces a composition-independent Yukawa force V = -G M m/r [1 + alpha exp(-r/lambda)] with alpha = g_c^2/(2 kappa m_chi^4) and lambda = 1/m_psi.",
+      "level": "L1_CONSISTENT",
+      "evidence": [
+        "R_B1B_PORTAL_FIFTH_FORCE"
+      ],
+      "note": "Derived relation; not yet confronted with inverse-square-law, lunar or planetary data (planned Test Card T005)."
+    },
+    {
+      "claim_id": "C_T005_PORTAL_G_C",
+      "statement": "With chi as ordinary matter, published fifth-force bounds limit the UET portal coupling: g_c < 5.1e-10 eV for m_psi <= 5.1e-3 eV (torsion balance) and g_c < 3.9e-15 eV at m_psi = 1.0e-15 eV (lunar laser ranging).",
+      "level": "L2_CONFRONTED",
+      "evidence": [
+        "R_T005_FIFTH_FORCE"
+      ],
+      "note": "CONSTRAINT, not a prediction; g_c remains free. L2 approved by the author on 2026-11-10."
+    },
+    {
+      "claim_id": "C_LAYER2_OPEN_FROM_CLOSED",
+      "statement": "For a mode that is part of a closed Hamiltonian system with an ohmic environment, the open-system layer-2 laws emerge without being assumed: friction, burn power P = gamma x'^2, noise obeying the KMS/equipartition relation, heat flow from hot to cold, and exponential free-energy decay (P proportional to F).",
+      "level": "L1_CONSISTENT",
+      "evidence": [
+        "R_A3_LAYER2_OPEN_FROM_CLOSED"
+      ],
+      "note": "Supports author points 1, 4 and 8 at model level. Standard open-system physics (Caldeira-Leggett 1983); not yet tied to the parent-action fields."
+    },
+    {
+      "claim_id": "C_L3_BURN_LAW_SELECTION",
+      "statement": "With lifetimes derived from the layer-2 burn law, tau = integral dF/P(F), selection still favours the lowest R* = 1/(a tau), but tau = F0/P0 holds only for regulated burners; with two resources a mixed equilibrium exists and is Nash-stable against rare invaders.",
+      "level": "L1_CONSISTENT",
+      "evidence": [
+        "R_A4_BURN_LAW_SELECTION"
+      ],
+      "note": "Supports author points 4 and 10 at model level. Ecology analogue: Tilman resource-ratio theory; not new physics by itself."
+    },
+    {
+      "claim_id": "C_B4_DISTINCTNESS_AUDIT",
+      "statement": "Each UET layer reduces to an established theory (layer 1: DEF scalar-tensor with a Yukawa portal; layer 2: Caldeira-Leggett open systems; layer 3: exactly the Tilman chemostat consumer-resource model). The only cross-layer effect found, a preferred-frame portal drag F = Gamma v q^2/(12 pi R), depends on three free parameters, so UET currently makes no numerical prediction that differs from standard physics.",
+      "level": "L1_CONSISTENT",
+      "evidence": [
+        "R_B4_DISTINCTNESS_AUDIT"
+      ],
+      "note": "A negative result: the Theory Card's 'differences' field stays 'none yet', now with evidence."
+    },
+    {
+      "claim_id": "C_T006_ENERGY_USE_GRAVITY_TRACE",
+      "statement": "The Sun's energy use (luminosity plus solar wind) is written into its gravitational parameter at the rate general relativity gives: predicted -8.76e-14 +/- 1.0e-14 per year against the MESSENGER measurement -6.13e-14 +/- 1.47e-14 (z = 1.48); no gravitational trace at all is disfavoured at 4.2 sigma.",
+      "level": "L2_CONFRONTED",
+      "evidence": [
+        "R_T006_SOLAR_MASS_LOSS"
+      ],
+      "note": "Supports author point 7 through standard physics; does not distinguish UET from GR. L2 approved by the author on 2026-11-10."
+    },
+    {
+      "claim_id": "C_R2_LASER_LAYER3",
+      "statement": "Multimode laser rate equations are the layer-3 selection model term for term (a = stimulated-emission coefficient, tau = photon lifetime, F = 1, R = inversion); R* is the threshold inversion, one shared inversion gives single-mode lasing with gain clamping, and two inversion pools give two-mode coexistence.",
+      "level": "L1_CONSISTENT",
+      "evidence": [
+        "R_R2_LASER_LAYER3"
+      ],
+      "note": "Shows author point 5 (selection by resource use, without learning) in a non-living physical system. Standard laser physics."
+    },
+    {
+      "claim_id": "C_R3_TRACE_RECORD_PLUS_POTENTIAL",
+      "statement": "The trace that energy use leaves in the environment is the entropy production Sigma, which splits exactly into a readable record I(S:R) and a potential difference D (free energy T*D left in the environment); at long times D dominates, and the number of bits written is Sigma/ln 2, not Q/(kT ln 2).",
+      "level": "L1_CONSISTENT",
+      "evidence": [
+        "R_R3_TRACE_DECOMPOSITION"
+      ],
+      "note": "Author clarification 2026-11-10: the trace is a number or potential difference, not a new thing in the universe. Standard non-equilibrium physics."
+    },
+    {
+      "claim_id": "C_T007_RESOURCE_SELECTION_CHEMOSTAT",
+      "statement": "Layer-3 resource selection with two essential resources predicts, from monoculture physiology alone, the dominance and coexistence regions of Tilman's (1977) diatom chemostats: predicted Si/P boundaries 86.9 and 6.2 against observed about 80 and 6; 2 of 3 ratio groups match fully and the Si/P = 38 group partly.",
+      "level": "L2_CONFRONTED",
+      "evidence": [
+        "R_T007_TILMAN_CHEMOSTAT"
+      ],
+      "note": "Path-A test outside physics. Re-analysis with the same model Tilman used, not an independent experiment. L2 approved by the author on 2026-11-10."
+    },
+    {
+      "claim_id": "C_T008_WHITE_DWARF_COOLING_ABUNDANCE",
+      "statement": "The burn-law lifetime of a passive burner (P ~ F^(7/2), Mestel cooling) plus the abundance law reproduces the slope of the SDSS white dwarf luminosity function: predicted 2/7 = 0.286 against observed 0.320 per magnitude (|log10| = 0.049).",
+      "level": "L2_CONFRONTED",
+      "evidence": [
+        "R_T008_WHITE_DWARF_LF"
+      ],
+      "note": "Path-A test in astronomy. L2 approved by the author on 2026-11-10."
+    },
+    {
+      "claim_id": "C_T009_DECAY_CHAIN_ABUNDANCE",
+      "statement": "The abundance law N = b tau holds for the 238U-234U decay chain: the half-life inferred from secular-equilibrium abundances (245,670 +/- 260 yr) matches one measured without equilibrium (244,900 +/- 1340 yr), z = 0.56.",
+      "level": "L2_CONFRONTED",
+      "evidence": [
+        "R_T009_U234_SECULAR_EQUILIBRIUM"
+      ],
+      "note": "Path-A test in nuclear physics. L2 approved by the author on 2026-11-10."
     }
   ]
 }

@@ -6,10 +6,29 @@
 
 These are source-linked historical records, not proof of completed research, successful publication, or current scientific readiness.
 
-Indexed entries: 587. Counts describe records, not accomplishments.
+Indexed entries: 606. Counts describe records, not accomplishments.
 
 | Date | Record | Area | Notes |
 | --- | --- | --- | --- |
+| 2026-11-10 | [CORE_MAP: single map of the core equation files](2026/2026-11-10.md#core_map-single-map-of-the-core-equation-files) (L259) | research-standards | explicit_stream_and_area |
+| 2026-11-10 | [T008 and T009 results at L2; path-A summary table](2026/2026-11-10.md#t008-and-t009-results-at-l2-path-a-summary-table) (L245) | research-core | explicit_stream_and_area |
+| 2026-11-10 | [Path-A batch: feasibility, new models, T008 and T009 drafts](2026/2026-11-10.md#path-a-batch-feasibility-new-models-t008-and-t009-drafts) (L229) | research-core | explicit_stream_and_area |
+| 2026-11-10 | [T007 result: layer-3 selection versus Tilman chemostats at L2](2026/2026-11-10.md#t007-result-layer-3-selection-versus-tilman-chemostats-at-l2) (L215) | research-core | explicit_stream_and_area |
+| 2026-11-10 | [T007 draft: layer-3 selection versus Tilman (1977) chemostat competition](2026/2026-11-10.md#t007-draft-layer-3-selection-versus-tilman-1977-chemostat-competition) (L201) | research-core | explicit_stream_and_area |
+| 2026-11-10 | [Synthesis audit: borrowed principles and their composition](2026/2026-11-10.md#synthesis-audit-borrowed-principles-and-their-composition) (L187) | research-core | explicit_stream_and_area |
+| 2026-11-10 | [R3: the trace of energy use is a record plus a potential difference](2026/2026-11-10.md#r3-the-trace-of-energy-use-is-a-record-plus-a-potential-difference) (L173) | research-core | explicit_stream_and_area |
+| 2026-11-10 | [Journal cross-check of registered external numbers](2026/2026-11-10.md#journal-cross-check-of-registered-external-numbers) (L159) | research-standards | explicit_stream_and_area |
+| 2026-11-10 | [T006 result: energy use written into the Sun's gravity at L2](2026/2026-11-10.md#t006-result-energy-use-written-into-the-suns-gravity-at-l2) (L145) | research-core | explicit_stream_and_area |
+| 2026-11-10 | [R2: laser mode competition is layer 3 term for term](2026/2026-11-10.md#r2-laser-mode-competition-is-layer-3-term-for-term) (L132) | research-core | explicit_stream_and_area |
+| 2026-11-10 | [R1: channels by which energy use writes onto space; T006 draft](2026/2026-11-10.md#r1-channels-by-which-energy-use-writes-onto-space-t006-draft) (L117) | research-core | explicit_stream_and_area |
+| 2026-11-10 | [B4: distinctness audit and portal drag](2026/2026-11-10.md#b4-distinctness-audit-and-portal-drag) (L103) | research-core | explicit_stream_and_area |
+| 2026-11-10 | [A4: lifetime from the burn law, selection and mixed equilibria](2026/2026-11-10.md#a4-lifetime-from-the-burn-law-selection-and-mixed-equilibria) (L89) | research-core | explicit_stream_and_area |
+| 2026-11-10 | [A3: layer-2 open-system laws from a closed Hamiltonian](2026/2026-11-10.md#a3-layer-2-open-system-laws-from-a-closed-hamiltonian) (L74) | research-core | explicit_stream_and_area |
+| 2026-11-10 | [T005 result: portal coupling at L2 (constraint)](2026/2026-11-10.md#t005-result-portal-coupling-at-l2-constraint) (L61) | research-core | explicit_stream_and_area |
+| 2026-11-10 | [T005 draft: portal fifth force versus published Yukawa bounds](2026/2026-11-10.md#t005-draft-portal-fifth-force-versus-published-yukawa-bounds) (L46) | research-core | explicit_stream_and_area |
+| 2026-11-10 | [B1b: portal fifth force with chi as ordinary matter](2026/2026-11-10.md#b1b-portal-fifth-force-with-chi-as-ordinary-matter) (L32) | research-core | explicit_stream_and_area |
+| 2026-11-10 | [A2 + B1: layer 1 off-diagonal check, exchange derivation, stability attacks](2026/2026-11-10.md#a2--b1-layer-1-off-diagonal-check-exchange-derivation-stability-attacks) (L17) | research-core | explicit_stream_and_area |
+| 2026-11-10 | [A1 fidelity matrix: author logic versus core equations](2026/2026-11-10.md#a1-fidelity-matrix-author-logic-versus-core-equations) (L3) | research-core | explicit_stream_and_area |
 | 2026-11-09 | [Repoint producer commits to main and retire the pre-port branch](2026/2026-11-09.md#repoint-producer-commits-to-main-and-retire-the-pre-port-branch) (L138) | research-standards | explicit_stream_and_area |
 | 2026-11-09 | [Change report for the author (8-9 Nov work)](2026/2026-11-09.md#change-report-for-the-author-8-9-nov-work) (L123) | research-standards | explicit_stream_and_area |
 | 2026-11-09 | [T002 run — layer-3 abundance law confronted with globular-cluster counts (L2, INCONCLUSIVE)](2026/2026-11-09.md#t002-run--layer-3-abundance-law-confronted-with-globular-cluster-counts-l2-inconclusive) (L108) | research-core | explicit_stream_and_area |

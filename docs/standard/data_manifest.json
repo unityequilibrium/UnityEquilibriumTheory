@@ -24,6 +24,66 @@
       "license": "numerical facts transcribed from an arXiv paper (arXiv non-exclusive license); no figures or text redistributed",
       "visibility": "PUBLIC",
       "note": "Transcribed values must be re-checked against the journal version (PRL 113, 191302) before T002 is approved."
+    },
+    {
+      "data_id": "T005_YUKAWA_BOUNDS",
+      "description": "Published Yukawa-strength bounds alpha(lambda) on deviations from the Newtonian 1/r^2 law: torsion balance at short range and lunar laser ranging at the Earth-Moon scale",
+      "source": "J. G. Lee et al., Phys. Rev. Lett. 124, 101101 (2020), abstract; S. M. Merkowitz, Living Rev. Relativity 13, 7 (2010), inverse-square-law section",
+      "doi_or_url": "https://arxiv.org/abs/2002.11761 ; https://doi.org/10.12942/lrr-2010-7",
+      "retrieved": "2026-11-10",
+      "path": "docs/data/external/gravity/yukawa_fifth_force/t005_yukawa_bounds.csv",
+      "sha256": "326c0a618d2c25dd7ce064f0a6bdc7d85c3ab154f24555e4cb57e2d2fcb6b82c",
+      "license": "numerical facts transcribed from an article abstract and a review; no figures or text redistributed",
+      "visibility": "PUBLIC",
+      "note": "Two anchor points only, not the full exclusion curves. Re-check against the journal texts before approval."
+    },
+    {
+      "data_id": "T006_SOLAR_MASS_LOSS",
+      "description": "Measured rate of change of the Sun's gravitational parameter from MESSENGER ranging, published solar-wind mass-loss estimate, and IAU nominal solar luminosity and GM",
+      "source": "A. Genova et al., Nature Communications 9, 289 (2018), abstract; S. R. Cranmer, Solar Wind Origin, arXiv:2507.13460 (2025); IAU 2015 Resolution B3",
+      "doi_or_url": "https://doi.org/10.1038/s41467-017-02558-1 ; https://arxiv.org/abs/2507.13460",
+      "retrieved": "2026-11-10",
+      "path": "docs/data/external/gravity/solar_mass_loss/t006_solar_mass_loss.csv",
+      "sha256": "aa7d91a34de52b9ca73df7dc63b648b1a76d8e4ce651369c3adc49f81035a42b",
+      "license": "numerical facts transcribed from article abstracts and IAU nominal values; no figures or text redistributed",
+      "visibility": "PUBLIC",
+      "note": "The solar-wind 1-sigma is an assumption of Test Card T006, not a published value. Re-check against the journal texts before approval."
+    },
+    {
+      "data_id": "TILMAN1977_CHEMOSTAT",
+      "description": "Monoculture physiology (half-saturation constants, maximal growth rates, yields for phosphate and silicate) of Asterionella formosa and Cyclotella meneghiniana, and the reported outcomes of 76 two-species chemostat competition experiments",
+      "source": "D. Tilman, Resource competition between planktonic algae: an experimental and theoretical approach, Ecology 58, 338-348 (1977), Table 1 and Results text",
+      "doi_or_url": "https://doi.org/10.2307/1935608 ; full text read at https://hahana.soest.hawaii.edu/cmoreserver/summercourse/2015/documents/Follows_05-30/Tilman-1977.pdf",
+      "retrieved": "2026-11-10",
+      "path": "docs/data/external/ecology/tilman1977_chemostat/tilman1977_chemostat.csv",
+      "sha256": "265d9138b70fba2ca3456ea9808696568424f11942c1a0fe57c6dec8ea840a1f",
+      "license": "numerical facts transcribed from a journal article; no figures or text redistributed",
+      "visibility": "PUBLIC",
+      "note": "Figure 12/13 point data were not transcribed (the text extraction was unreliable). DOI confirmed (10.2307/1935608)."
+    },
+    {
+      "data_id": "HU2007_SDSS_DA_WD_LF",
+      "description": "Slope of the SDSS DA white dwarf luminosity function over Mbol 6.0-13.5 and the Mestel luminosity-temperature exponent",
+      "source": "Hu, Wu and Wu, The mass and luminosity functions and the formation rate of DA white dwarfs in the Sloan Digital Sky Survey, Astron. Astrophys. (accepted 5 January 2007), Sect. 4; Mestel 1952 for L ~ T^(7/2)",
+      "doi_or_url": "https://scispace.com/pdf/the-mass-and-luminosity-functions-and-the-formation-rate-of-4j14wwray8.pdf",
+      "retrieved": "2026-11-10",
+      "path": "docs/data/external/astronomy/white_dwarf_lf/hu2007_sdss_da_wd_lf.csv",
+      "sha256": "3291fddbfff6d73f3dbf2f0f691ff2bd2784ea7d0df6ae814b5fd201267104d3",
+      "license": "numerical facts transcribed from a journal article; no figures or text redistributed",
+      "visibility": "PUBLIC",
+      "note": "Journal volume/pages and DOI not yet confirmed; the source quotes no slope uncertainty."
+    },
+    {
+      "data_id": "U234_HALF_LIFE_EQ_VS_DIRECT",
+      "description": "234U half-life inferred from secular-equilibrium abundances versus one measured without secular equilibrium",
+      "source": "H.-M. Hu et al., Science Advances 11, eadu8117 (2025); Z. Varga et al., Anal. Chem. 88, 2763-2769 (2016), as quoted by Hu et al.",
+      "doi_or_url": "https://doi.org/10.1126/sciadv.adu8117 ; https://doi.org/10.1021/acs.analchem.5b04370",
+      "retrieved": "2026-11-10",
+      "path": "docs/data/external/nuclear/u234_half_life/u234_half_life.csv",
+      "sha256": "8dffcf0efd56f49a790f10483239e9ee976adbedff069d942229d4cecfc737c2",
+      "license": "numerical facts transcribed from article text; no figures or text redistributed",
+      "visibility": "PUBLIC",
+      "note": "The direct value is taken as quoted by Hu et al. 2025; the Varga et al. 2016 text was not opened."
     }
   ]
 }

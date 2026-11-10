@@ -1,0 +1,140 @@
+{
+  "schema_version": "uet-calculation-contract-v1",
+  "contract_id": "CORE_B1_VACUUM_STRUCTURE_FORMAL_V1",
+  "profile": "FORMAL",
+  "review": {
+    "status": "INCOMPLETE",
+    "reviewer": "tool:new_formal_contract",
+    "rationale": "Formal coverage generated from Standard v2 records; evidence level is set in docs/standard, not here."
+  },
+  "question": "Where is the true vacuum of the canonical UET potential, and does it shift psi0 away from zero (alpha0 != 0) or cross the ghost boundary F = 0?",
+  "output": {
+    "quantity": "global vacuum (psi0, X0), gamma_PPN - 1 at psi0, strong-coupling field",
+    "unit": "natural",
+    "domain": "declared formal domain of the code",
+    "accuracy": "exact or as asserted by the listed physics tests",
+    "claim_intent": "FORMAL_RESULT"
+  },
+  "model": {
+    "formula_ids": [
+      "UET_B1_VACUUM_STRUCTURE"
+    ],
+    "assumptions": "as declared in the code and Theory Card",
+    "approximation": "none beyond the code",
+    "initial_boundary": "algebraic",
+    "drive_environment": "not relevant to a formal derivation",
+    "parameters": "symbolic or test-sampled"
+  },
+  "data_policy": {
+    "uses_observations": false,
+    "calibration_ids": [],
+    "comparison_ids": [],
+    "independent_validation": false,
+    "holdout_policy": "none"
+  },
+  "observation": {
+    "source_state": "not applicable to this formal derivation",
+    "generated_trace": "not applicable to this formal derivation",
+    "carrier": "not applicable to this formal derivation",
+    "observer_state": "not applicable to this formal derivation",
+    "readout": "not applicable to this formal derivation",
+    "backaction": "not applicable to this formal derivation",
+    "frame": "not applicable to this formal derivation",
+    "time_convention": "not applicable to this formal derivation",
+    "product_level": "not applicable to this formal derivation",
+    "corrections": []
+  },
+  "components": [
+    {
+      "id": "system_state",
+      "group": "system_state",
+      "disposition": "MODELED",
+      "reason": "Declared formal expressions in the code under contract.",
+      "evidence": [
+        "docs/core/03_lanes/scalar_tensor/uet_vacuum_structure.py"
+      ]
+    },
+    {
+      "id": "drive_environment",
+      "group": "drive_environment",
+      "disposition": "NOT_APPLICABLE",
+      "reason": "Formal derivation; no physical measurement chain.",
+      "evidence": []
+    },
+    {
+      "id": "propagation",
+      "group": "propagation",
+      "disposition": "NOT_APPLICABLE",
+      "reason": "Formal derivation; no physical measurement chain.",
+      "evidence": []
+    },
+    {
+      "id": "frame_time",
+      "group": "frame_time",
+      "disposition": "NOT_APPLICABLE",
+      "reason": "Formal derivation; no physical measurement chain.",
+      "evidence": []
+    },
+    {
+      "id": "detector",
+      "group": "detector",
+      "disposition": "NOT_APPLICABLE",
+      "reason": "Formal derivation; no physical measurement chain.",
+      "evidence": []
+    },
+    {
+      "id": "processing",
+      "group": "processing",
+      "disposition": "MODELED",
+      "reason": "Declared formal expressions in the code under contract.",
+      "evidence": [
+        "docs/core/03_lanes/scalar_tensor/uet_vacuum_structure.py"
+      ]
+    },
+    {
+      "id": "numerics",
+      "group": "numerics",
+      "disposition": "MODELED",
+      "reason": "Checked by the listed physics tests (docs/STANDARD.md section 6).",
+      "evidence": [
+        "docs/core/05_tests/physics/test_stability_attacks.py"
+      ]
+    }
+  ],
+  "error_budget": {
+    "unit": "natural",
+    "numerical": "test tolerances",
+    "approximation": "none declared",
+    "measurement": "not applicable",
+    "systematic": "not applicable",
+    "omissions": "none declared",
+    "dependence": "not applicable",
+    "acceptance": "formal coverage only",
+    "omission_limit": null
+  },
+  "identities": [
+    {
+      "path": "docs/core/03_lanes/scalar_tensor/uet_vacuum_structure.py",
+      "kind": "working_file",
+      "role": "code",
+      "sha256": "0e804b28f567456db1b5393cd60b3aabc37b603d1e6a4b523a4b50c802d34822",
+      "availability": "REQUIRED"
+    },
+    {
+      "path": "docs/core/05_tests/physics/test_stability_attacks.py",
+      "kind": "working_file",
+      "role": "code",
+      "sha256": "7494e8aefd10a3b4f42c261356d63d93eb082b3f5833feef21bbb2ab6f13e8fc",
+      "availability": "REQUIRED"
+    }
+  ],
+  "entrypoints": [
+    "docs/core/03_lanes/scalar_tensor/uet_vacuum_structure.py"
+  ],
+  "evidence": [
+    "docs/core/03_lanes/scalar_tensor/uet_vacuum_structure.py",
+    "docs/core/05_tests/physics/test_stability_attacks.py"
+  ],
+  "claim_boundary": "Formal coverage only; no physical acceptance or status change.",
+  "next_action": "Refresh identities with this tool when the code or tests change."
+}

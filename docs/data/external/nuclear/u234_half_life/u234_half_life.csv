@@ -1,0 +1,7 @@
+# Input for UET Test Card T009: does the abundance law (secular equilibrium, N = b tau) reproduce an independently measured half-life?
+# equilibrium value: H.-M. Hu et al., Science Advances 11, eadu8117 (2025), doi:10.1126/sciadv.adu8117: 234U half-life from sub-epsilon 234U/238U in secular-equilibrium samples.
+# direct value: Z. Varga, A. Nicholl, M. Wallenius, K. Mayer, Anal. Chem. 88, 2763-2769 (2016), doi:10.1021/acs.analchem.5b04370, a determination that did not rely on secular-equilibrium samples (value as quoted by Hu et al. 2025).
+# Transcribed on 2026-11-10; numerical facts only.
+record,quantity,value,sigma,unit,note
+equilibrium,t_half_u234,245670,260,yr,"from equilibrium abundance ratio, assuming N234/N238 = T234/T238"
+direct,t_half_u234,244900,1340,yr,"independent of secular equilibrium (Varga et al. 2016)"

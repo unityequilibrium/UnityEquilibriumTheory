@@ -1,0 +1,52 @@
+{
+  "schema": "uet-result-v2",
+  "result_id": "R_A4_BURN_LAW_SELECTION",
+  "claim_id": "C_L3_BURN_LAW_SELECTION",
+  "level": "L1_CONSISTENT",
+  "outcome": "PASS",
+  "numbers": [
+    {
+      "name": "lifetime_integral_vs_closed_form",
+      "value": "< 1e-4 relative for n = 0, 0.5, 1, 1.5",
+      "uncertainty": null,
+      "unit": "dimensionless"
+    },
+    {
+      "name": "winner_pool_level_vs_r_star",
+      "value": "0.2674 vs 0.2670 (0.12%, step rounding of tau)",
+      "uncertainty": null,
+      "unit": "dimensionless"
+    },
+    {
+      "name": "passive_type_lifetime_vs_naive_F0_over_P0",
+      "value": "3.74 vs 1.25",
+      "uncertainty": null,
+      "unit": "dimensionless"
+    },
+    {
+      "name": "two_resource_coexistence_levels",
+      "value": "(0.4375, 0.3125), matched within 0.5%",
+      "uncertainty": null,
+      "unit": "dimensionless"
+    },
+    {
+      "name": "invasion_outcomes_matching_fitness_sign",
+      "value": "4/4 (fitness +0.31, +0.35 invade; -0.06, -0.15 die out)",
+      "uncertainty": null,
+      "unit": "dimensionless"
+    },
+    {
+      "name": "blackbody_bits_ratio_16x_slower_burn",
+      "value": "2.0",
+      "uncertainty": null,
+      "unit": "dimensionless"
+    }
+  ],
+  "producer": {
+    "script": "docs/core/05_tests/physics/test_layer2_to_3.py",
+    "commit": "239dc8f30"
+  },
+  "artifacts": [],
+  "date": "2026-11-10",
+  "note": "Fixed-lifetime delay model (explicit Euler, tau rounded to whole steps). Burn laws P = P0 (F/F0)^n. The death threshold F_min of passive burners is a new parameter that must be measured independently."
+}

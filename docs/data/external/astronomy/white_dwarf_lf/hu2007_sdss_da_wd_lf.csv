@@ -1,0 +1,8 @@
+# Input for UET Test Card T008: white dwarf luminosity function slope in the Mestel cooling range.
+# Source: Hu, Wu & Wu, "The mass and luminosity functions and the formation rate of DA white dwarfs in the Sloan Digital Sky Survey", A&A (accepted 5 Jan 2007), Sect. 4 and Fig. caption.
+# Transcribed on 2026-11-10; numerical facts only. No slope uncertainty is quoted by the source.
+record,quantity,value,unit,note
+observed,lf_slope_per_mag,0.3195,dex_per_mag,"linear fit log Phi = 0.3195 Mbol - 7.660 to the SDSS DA white dwarf luminosity function"
+observed,fit_range_min_mbol,6.0,mag,"fit range where the LF is approximately a straight line"
+observed,fit_range_max_mbol,13.5,mag,"same range in which Lamb and van Horn (1975) tracks agree with the Mestel law"
+model,luminosity_power_of_core_temperature,3.5,1,"Mestel (1952): L proportional to T_c^(7/2) (radiative envelope with Kramers opacity); thermal energy proportional to T_c"

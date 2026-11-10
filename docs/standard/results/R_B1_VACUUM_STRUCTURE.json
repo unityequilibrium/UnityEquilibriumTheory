@@ -1,0 +1,46 @@
+{
+  "schema": "uet-result-v2",
+  "result_id": "R_B1_VACUUM_STRUCTURE",
+  "claim_id": "C_VACUUM_SHIFT_ROUTE",
+  "level": "L1_CONSISTENT",
+  "outcome": "PASS",
+  "numbers": [
+    {
+      "name": "vacuum_vs_independent_2d_minimization",
+      "value": "15/15",
+      "uncertainty": null,
+      "unit": "count"
+    },
+    {
+      "name": "sufficient_origin_bound_checks",
+      "value": "10/10 (g_c^2 <= 2 lam_chi m2_psi)",
+      "uncertainty": null,
+      "unit": "count"
+    },
+    {
+      "name": "linear_response_convergence_order",
+      "value": "2.0 (bands 1.7-2.3)",
+      "uncertainty": null,
+      "unit": "dimensionless"
+    },
+    {
+      "name": "metastable_origin_example_V0",
+      "value": "< -1 at m2_psi=1, lam_psi=1, m2_chi=0.1, lam_chi=0.01, g_c=1",
+      "uncertainty": null,
+      "unit": "natural"
+    },
+    {
+      "name": "mutation_test_effective_mutants_caught",
+      "value": "7/7 (8 mutants; 1 equivalent: unused function)",
+      "uncertainty": null,
+      "unit": "count"
+    }
+  ],
+  "producer": {
+    "script": "docs/core/05_tests/physics/test_stability_attacks.py",
+    "commit": "ee1abc3f1"
+  },
+  "artifacts": [],
+  "date": "2026-11-10",
+  "note": "Flat vacuum with Lambda_eff = 0; m2_psi absorbs the Lambda and rho_star curvature terms. Mutation script: docs/core/05_tests/mutation/run_parent_mutations.py."
+}

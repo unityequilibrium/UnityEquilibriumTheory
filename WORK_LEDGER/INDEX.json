@@ -4,12 +4,12 @@
   "generator_sha256": "b32005e4bdbf59da6681ae630fa1d9d4415c361f7523be18c8b52a86dc8c93e9",
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
-    "sources": 74,
-    "entries": 793,
+    "sources": 75,
+    "entries": 812,
     "by_stream": {
       "book-history": 94,
       "operations": 112,
-      "research": 587
+      "research": 606
     },
     "exact_duplicates": 0,
     "review_entries": 2
@@ -386,6 +386,11 @@
       "path": "2026/2026-11-09.md",
       "sha256": "972f736e30674fc8556b38845b19f5aad8d6f0043dc8e0bbf2218f141f85c068",
       "entries": 9
+    },
+    {
+      "path": "2026/2026-11-10.md",
+      "sha256": "8b88209a4f51d8cd92e0443d78f3b6153ec1d7724ec25bb37ce03f365e575bc3",
+      "entries": 19
     },
     {
       "path": "2026-08-14.md",
@@ -16217,6 +16222,386 @@
       "basis": "explicit_stream_and_area",
       "flags": [],
       "date": "2026-11-09",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-10.md#a1-fidelity-matrix-author-logic-versus-core-equations",
+      "source": "2026/2026-11-10.md",
+      "anchor": "a1-fidelity-matrix-author-logic-versus-core-equations",
+      "start_line": 3,
+      "end_line": 16,
+      "title": "A1 fidelity matrix: author logic versus core equations",
+      "entry_sha256": "a2224a1b8416907e2d49339d6c1f27f40af2426c0fc31341f9346c4f5ca2bc8f",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-10",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-10.md#a2--b1-layer-1-off-diagonal-check-exchange-derivation-stability-attacks",
+      "source": "2026/2026-11-10.md",
+      "anchor": "a2--b1-layer-1-off-diagonal-check-exchange-derivation-stability-attacks",
+      "start_line": 17,
+      "end_line": 31,
+      "title": "A2 + B1: layer 1 off-diagonal check, exchange derivation, stability attacks",
+      "entry_sha256": "8660ca20dc3636eaa0219046122c9e2adbb60603187c0cf62b271acafb43eda1",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-10",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-10.md#b1b-portal-fifth-force-with-chi-as-ordinary-matter",
+      "source": "2026/2026-11-10.md",
+      "anchor": "b1b-portal-fifth-force-with-chi-as-ordinary-matter",
+      "start_line": 32,
+      "end_line": 45,
+      "title": "B1b: portal fifth force with chi as ordinary matter",
+      "entry_sha256": "456163eede36da0bb1c3c0bb84e80b7f99633f80d533f0dda129d4c80cd4449c",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-10",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-10.md#t005-draft-portal-fifth-force-versus-published-yukawa-bounds",
+      "source": "2026/2026-11-10.md",
+      "anchor": "t005-draft-portal-fifth-force-versus-published-yukawa-bounds",
+      "start_line": 46,
+      "end_line": 60,
+      "title": "T005 draft: portal fifth force versus published Yukawa bounds",
+      "entry_sha256": "b8d9b3285cb4f0eedecdb8b38fbf907007b6192d2af826c458bb733bde442477",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-10",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-10.md#t005-result-portal-coupling-at-l2-constraint",
+      "source": "2026/2026-11-10.md",
+      "anchor": "t005-result-portal-coupling-at-l2-constraint",
+      "start_line": 61,
+      "end_line": 73,
+      "title": "T005 result: portal coupling at L2 (constraint)",
+      "entry_sha256": "7ca306ea7778cd54a0270a0218e334d24b5a33a79630ef098e560aebd37cb536",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-10",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-10.md#a3-layer-2-open-system-laws-from-a-closed-hamiltonian",
+      "source": "2026/2026-11-10.md",
+      "anchor": "a3-layer-2-open-system-laws-from-a-closed-hamiltonian",
+      "start_line": 74,
+      "end_line": 88,
+      "title": "A3: layer-2 open-system laws from a closed Hamiltonian",
+      "entry_sha256": "b28883a72497a406359e11591d312e46ab7483193bf1682132e83897e0271f60",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-10",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-10.md#a4-lifetime-from-the-burn-law-selection-and-mixed-equilibria",
+      "source": "2026/2026-11-10.md",
+      "anchor": "a4-lifetime-from-the-burn-law-selection-and-mixed-equilibria",
+      "start_line": 89,
+      "end_line": 102,
+      "title": "A4: lifetime from the burn law, selection and mixed equilibria",
+      "entry_sha256": "e4c11f95dada0822b40dd6ff9f7fdfdabcca2bb60d7c563ef17108e63a362a80",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-10",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-10.md#b4-distinctness-audit-and-portal-drag",
+      "source": "2026/2026-11-10.md",
+      "anchor": "b4-distinctness-audit-and-portal-drag",
+      "start_line": 103,
+      "end_line": 116,
+      "title": "B4: distinctness audit and portal drag",
+      "entry_sha256": "9bae06b2b542b478e518bc45d95e217973b1ac0a82b822a1bc726584a151088a",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-10",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-10.md#r1-channels-by-which-energy-use-writes-onto-space-t006-draft",
+      "source": "2026/2026-11-10.md",
+      "anchor": "r1-channels-by-which-energy-use-writes-onto-space-t006-draft",
+      "start_line": 117,
+      "end_line": 131,
+      "title": "R1: channels by which energy use writes onto space; T006 draft",
+      "entry_sha256": "e444d48264af65500a97cec79415aca8cb6f4eedbefcf04dc48ea401d316b278",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-10",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-10.md#r2-laser-mode-competition-is-layer-3-term-for-term",
+      "source": "2026/2026-11-10.md",
+      "anchor": "r2-laser-mode-competition-is-layer-3-term-for-term",
+      "start_line": 132,
+      "end_line": 144,
+      "title": "R2: laser mode competition is layer 3 term for term",
+      "entry_sha256": "b6a1d1289ac9baaa3c30e2e91ff4054d79914c55708fb5e7bd3f23d98a33ff32",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-10",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-10.md#t006-result-energy-use-written-into-the-suns-gravity-at-l2",
+      "source": "2026/2026-11-10.md",
+      "anchor": "t006-result-energy-use-written-into-the-suns-gravity-at-l2",
+      "start_line": 145,
+      "end_line": 158,
+      "title": "T006 result: energy use written into the Sun's gravity at L2",
+      "entry_sha256": "ba78c4a4c1a230b61333956ef4d5415f2c1edae4632e05166c5fa032c79876f3",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-10",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-10.md#journal-cross-check-of-registered-external-numbers",
+      "source": "2026/2026-11-10.md",
+      "anchor": "journal-cross-check-of-registered-external-numbers",
+      "start_line": 159,
+      "end_line": 172,
+      "title": "Journal cross-check of registered external numbers",
+      "entry_sha256": "255bef0040c05236ad6fe1d88e8c140e5cfe6e0a8332829a10b23ce6928ffe48",
+      "stream": "research",
+      "areas": [
+        "research-standards"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-10",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-10.md#r3-the-trace-of-energy-use-is-a-record-plus-a-potential-difference",
+      "source": "2026/2026-11-10.md",
+      "anchor": "r3-the-trace-of-energy-use-is-a-record-plus-a-potential-difference",
+      "start_line": 173,
+      "end_line": 186,
+      "title": "R3: the trace of energy use is a record plus a potential difference",
+      "entry_sha256": "941959ec8e54e0ab7d68757e1310a7d7d08914129ae8218c6eac237dcd4b18ef",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-10",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-10.md#synthesis-audit-borrowed-principles-and-their-composition",
+      "source": "2026/2026-11-10.md",
+      "anchor": "synthesis-audit-borrowed-principles-and-their-composition",
+      "start_line": 187,
+      "end_line": 200,
+      "title": "Synthesis audit: borrowed principles and their composition",
+      "entry_sha256": "4ec74a0c62d39f9f7b94bf32f5da8efc8ff2ed3a2d21802cce992e1b8c768894",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-10",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-10.md#t007-draft-layer-3-selection-versus-tilman-1977-chemostat-competition",
+      "source": "2026/2026-11-10.md",
+      "anchor": "t007-draft-layer-3-selection-versus-tilman-1977-chemostat-competition",
+      "start_line": 201,
+      "end_line": 214,
+      "title": "T007 draft: layer-3 selection versus Tilman (1977) chemostat competition",
+      "entry_sha256": "0393e6815d2c1b00809705159c217da91620d5faaa19b98961e70c11a21de79b",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-10",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-10.md#t007-result-layer-3-selection-versus-tilman-chemostats-at-l2",
+      "source": "2026/2026-11-10.md",
+      "anchor": "t007-result-layer-3-selection-versus-tilman-chemostats-at-l2",
+      "start_line": 215,
+      "end_line": 228,
+      "title": "T007 result: layer-3 selection versus Tilman chemostats at L2",
+      "entry_sha256": "ff257a3d6039ede45e028fc2b77dded389e11d16ab7bec0009c8d63348a8ec58",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-10",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-10.md#path-a-batch-feasibility-new-models-t008-and-t009-drafts",
+      "source": "2026/2026-11-10.md",
+      "anchor": "path-a-batch-feasibility-new-models-t008-and-t009-drafts",
+      "start_line": 229,
+      "end_line": 244,
+      "title": "Path-A batch: feasibility, new models, T008 and T009 drafts",
+      "entry_sha256": "11928b6e455707b6d1956ecd5f6f82ff1380504909760d733d0812e44109eda1",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-10",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-10.md#t008-and-t009-results-at-l2-path-a-summary-table",
+      "source": "2026/2026-11-10.md",
+      "anchor": "t008-and-t009-results-at-l2-path-a-summary-table",
+      "start_line": 245,
+      "end_line": 258,
+      "title": "T008 and T009 results at L2; path-A summary table",
+      "entry_sha256": "5e29e705ba0f00505b419e0ca67d5399f51ccf92820038ff6e3cf9ffbadcf55e",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-10",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-10.md#core_map-single-map-of-the-core-equation-files",
+      "source": "2026/2026-11-10.md",
+      "anchor": "core_map-single-map-of-the-core-equation-files",
+      "start_line": 259,
+      "end_line": 268,
+      "title": "CORE_MAP: single map of the core equation files",
+      "entry_sha256": "ce34ffd2a641d3a2ec7112a6a1173124a3f42d9445fbfc48da9b41e01aa0e8aa",
+      "stream": "research",
+      "areas": [
+        "research-standards"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-10",
       "legacy_root_path": false
     },
     {
