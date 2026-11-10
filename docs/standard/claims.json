@@ -3,10 +3,11 @@
   "claims": [
     {
       "claim_id": "C_PARENT_EOM_DERIVED",
-      "statement": "The implemented scalar, O(2) matter and (diagonal) metric field equations of the UET parent code follow from the Theory Card action UET-PARENT-ACTION-001.",
+      "statement": "The implemented scalar, O(2) matter and metric field equations (diagonal and t-x off-diagonal components) of the UET parent code follow from the Theory Card action UET-PARENT-ACTION-001.",
       "level": "L1_CONSISTENT",
       "evidence": [
-        "R_W4_PARENT_EOM"
+        "R_W4_PARENT_EOM",
+        "R_A2_OFFDIAGONAL_METRIC"
       ],
       "note": "Mathematical consistency only; says nothing about whether nature follows this action."
     },
@@ -53,6 +54,24 @@
         "R_T002_STELLAR_PHASES"
       ],
       "note": "CONSTRAINT, outcome INCONCLUSIVE by the preregistered rule (2 < z <= 3). Not a falsification and not a pass. L2 recording approved by the author 2026-11-09."
+    },
+    {
+      "claim_id": "C_EXCHANGE_DERIVED",
+      "statement": "In the parent action, matter (the O(2) field) exchanges energy-momentum only with the response field, at the derived rate d^mu T_mu_nu = (1/2) eps h |chi|^2 d_nu phi on the matter shell; with h = 0 matter is separately conserved.",
+      "level": "L1_CONSISTENT",
+      "evidence": [
+        "R_A2_EXCHANGE_IDENTITY"
+      ],
+      "note": "Supports author point 2 mathematically. Calling the response field 'structure of space' is an interpretation."
+    },
+    {
+      "claim_id": "C_VACUUM_SHIFT_ROUTE",
+      "statement": "The canonical UET potential has a true vacuum with psi0 != 0 when chi condenses (m2_chi < 0), and can have one with all masses positive when lam_chi is small (explicit example); then alpha0 != 0 and gamma_PPN != 1. A sufficient condition for psi0 = 0 is m2_chi > 0 and g_c^2 <= 2 lam_chi m2_psi.",
+      "level": "L1_CONSISTENT",
+      "evidence": [
+        "R_B1_VACUUM_STRUCTURE"
+      ],
+      "note": "A falsification route for a future Test Card (Cassini); not yet confronted with data."
     }
   ]
 }

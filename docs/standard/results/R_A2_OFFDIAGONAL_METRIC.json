@@ -1,0 +1,28 @@
+{
+  "schema": "uet-result-v2",
+  "result_id": "R_A2_OFFDIAGONAL_METRIC",
+  "claim_id": "C_PARENT_EOM_DERIVED",
+  "level": "L1_CONSISTENT",
+  "outcome": "PASS",
+  "numbers": [
+    {
+      "name": "metric_samples_within_1e-10",
+      "value": "12/12 (N, s, a, b, c Euler-Lagrange each)",
+      "uncertainty": null,
+      "unit": "count"
+    },
+    {
+      "name": "negative_controls_detected",
+      "value": "1/1",
+      "uncertainty": null,
+      "unit": "count"
+    }
+  ],
+  "producer": {
+    "script": "docs/core/05_tests/physics/test_parent_offdiagonal.py",
+    "commit": "ee1abc3f1"
+  },
+  "artifacts": [],
+  "date": "2026-11-10",
+  "note": "Minisuperspace with off-diagonal g_tx = s(t); the s equation tests E^{tx}. Fields depend on t only; spatially inhomogeneous metric components remain unchecked."
+}

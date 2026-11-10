@@ -18,12 +18,16 @@ Evidence is now tracked **per claim**, not per topic. The controlling standard i
 
 | Claim | Level | What it says | Evidence |
 | :-- | :-- | :-- | :-- |
-| `C_PARENT_EOM_DERIVED` | `L1_CONSISTENT` | The implemented scalar, O(2) matter and (diagonal) metric equations follow from the parent action | [R_W4_PARENT_EOM](../standard/results/R_W4_PARENT_EOM.json) |
+| `C_PARENT_EOM_DERIVED` | `L1_CONSISTENT` | The implemented scalar, O(2) matter and metric equations (diagonal and t-x off-diagonal) follow from the parent action | [R_W4_PARENT_EOM](../standard/results/R_W4_PARENT_EOM.json), [R_A2_OFFDIAGONAL_METRIC](../standard/results/R_A2_OFFDIAGONAL_METRIC.json) |
 | `C_EPSILON_REDUNDANT` | `L1_CONSISTENT` | epsilon is not an independent coupling; epsilon = 0 is a degenerate point, not a GR limit | [R_W4_EPSILON_REDUNDANCY](../standard/results/R_W4_EPSILON_REDUNDANCY.json) |
 | `C_UET_DEF_MAPPING` | `L1_CONSISTENT` | With minimal matter coupling, the parent action maps onto Damour-Esposito-Farese with beta0 = -2 xi_c and alpha0 = 0 | [R_W5_DEF_MAPPING](../standard/results/R_W5_DEF_MAPPING.json) |
 | `C_T001_BINARY_PULSAR_XI_C` | `L2_CONFRONTED` (constraint) | Binary pulsars exclude xi_c in [2.0, 2.4] when m_psi <= 2.5e-18 eV; this is not a prediction, and xi_c remains free | [R_T001_BINARY_PULSAR](../standard/results/R_T001_BINARY_PULSAR.json), [Test Card T001](../standard/tests/T001.json) |
+| `C_EXCHANGE_DERIVED` | `L1_CONSISTENT` | Matter exchanges energy-momentum with the response field only through the portal: Q = (1/2) eps h \|chi\|^2 grad phi | [R_A2_EXCHANGE_IDENTITY](../standard/results/R_A2_EXCHANGE_IDENTITY.json) |
+| `C_VACUUM_SHIFT_ROUTE` | `L1_CONSISTENT` | The true vacuum can sit at psi0 != 0 (chi condensate or small lam_chi), which gives gamma_PPN != 1: a falsification route | [R_B1_VACUUM_STRUCTURE](../standard/results/R_B1_VACUUM_STRUCTURE.json) |
+| `C_L3_SELECTION_FORMAL` | `L1_CONSISTENT` | Selection by free-energy exhaustion gives Little's law, replicator dynamics and lowest-R* exclusion | [R_L3_SELECTION_FORMAL](../standard/results/R_L3_SELECTION_FORMAL.json) |
+| `C_T002_STELLAR_PHASE_ABUNDANCE` | `L2_CONFRONTED` (INCONCLUSIVE) | Globular-cluster R = N_HB/N_RGB: predicted 1.467 +/- 0.023 against 1.39 +/- 0.03, z = 2.05 | [R_T002_STELLAR_PHASES](../standard/results/R_T002_STELLAR_PHASES.json), [Test Card T002](../standard/tests/T002.json) |
 
-The core theory card is [docs/core/THEORY_CARD.md](../core/THEORY_CARD.md). In the action
+The core theory card is [docs/core/THEORY_CARD.md](../core/THEORY_CARD.md); the fidelity of the equations to the author's logic is tracked in [docs/core/FIDELITY_MATRIX.md](../core/FIDELITY_MATRIX.md). In the action
 itself, UET does not yet differ from the known scalar-tensor class.
 
 How to read the rest of this page:
