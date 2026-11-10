@@ -1,7 +1,7 @@
 {
   "schema": "uet-test-card-v2",
   "test_id": "T005",
-  "status": "DRAFT",
+  "status": "APPROVED",
   "claim_id": "C_T005_PORTAL_G_C",
   "theory_card": {
     "card_id": "UET_PARENT",
@@ -37,5 +37,10 @@
   "pass_criterion": "PASS if, at each registered bound, the set of admissible g_c (|g_c| < g_c_max) is non-empty. The Result must report g_c_max and m_psi for each bound as numbers, and the same bound in the parent form h sqrt(eps/k)/Z.",
   "fail_criterion": "Because g_c is free and g_c = 0 is admissible, FAILED is not reachable unless the author fixes a lower bound g_c >= g_min before approval; in that case FAILED if g_min > g_c_max at any registered bound where m_psi applies. INCONCLUSIVE if the registered values disagree with the journal texts, or if the chi = ordinary matter decision is withdrawn.",
   "drafted_by": "claude",
-  "note": "Disclosure: drafted after reading both source statements, and the conversion is simple enough that the outcome is effectively known: about g_c < 5e-10 eV for m_psi <= 5e-3 eV, and about g_c < 4e-15 eV at m_psi near 1e-15 eV. The script was not run. Consequence for author point 2: unless psi is heavier than about 5e-3 eV, the portal exchange channel is limited to below gravitational strength. Only two anchor points of the exclusion curves are used; planetary and other ranges are not tested. With g_c not small, neutron stars would carry extra scalar charge and T001 (which assumed alpha0 = 0) would need revisiting."
+  "note": "Disclosure: drafted after reading both source statements, and the conversion is simple enough that the outcome is effectively known: about g_c < 5e-10 eV for m_psi <= 5e-3 eV, and about g_c < 4e-15 eV at m_psi near 1e-15 eV. The script was not run. Consequence for author point 2: unless psi is heavier than about 5e-3 eV, the portal exchange channel is limited to below gravitational strength. Only two anchor points of the exclusion curves are used; planetary and other ranges are not tested. With g_c not small, neutron stars would carry extra scalar charge and T001 (which assumed alpha0 = 0) would need revisiting. Approved by the author on 2026-11-10 as drafted (no g_min, CONSTRAINT only), without a journal cross-check.",
+  "approval": {
+    "approved_by": "santxkoz",
+    "date": "2026-11-10",
+    "role": "AUTHOR"
+  }
 }
