@@ -1,7 +1,7 @@
 {
   "schema": "uet-test-card-v2",
   "test_id": "T005",
-  "status": "APPROVED",
+  "status": "CLOSED",
   "claim_id": "C_T005_PORTAL_G_C",
   "theory_card": {
     "card_id": "UET_PARENT",

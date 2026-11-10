@@ -5,11 +5,11 @@
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
     "sources": 75,
-    "entries": 797,
+    "entries": 798,
     "by_stream": {
       "book-history": 94,
       "operations": 112,
-      "research": 591
+      "research": 592
     },
     "exact_duplicates": 0,
     "review_entries": 2
@@ -389,8 +389,8 @@
     },
     {
       "path": "2026/2026-11-10.md",
-      "sha256": "4ffd1059f1e7e6742f9deba1a9ab9c94691946922293b00f6107a7c0f180dfb2",
-      "entries": 4
+      "sha256": "bf2481280e7aa1bf0e5ab1e60ab38d163ac5448f9918906346931cc7f0c325e4",
+      "entries": 5
     },
     {
       "path": "2026-08-14.md",
@@ -16289,9 +16289,29 @@
       "source": "2026/2026-11-10.md",
       "anchor": "t005-draft-portal-fifth-force-versus-published-yukawa-bounds",
       "start_line": 46,
-      "end_line": 59,
+      "end_line": 60,
       "title": "T005 draft: portal fifth force versus published Yukawa bounds",
-      "entry_sha256": "7f1c4ccd80222d856edc98d51a20cae0b8121cbcb87cdaef22fb3a3fc5599ce4",
+      "entry_sha256": "b8d9b3285cb4f0eedecdb8b38fbf907007b6192d2af826c458bb733bde442477",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-10",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-10.md#t005-result-portal-coupling-at-l2-constraint",
+      "source": "2026/2026-11-10.md",
+      "anchor": "t005-result-portal-coupling-at-l2-constraint",
+      "start_line": 61,
+      "end_line": 72,
+      "title": "T005 result: portal coupling at L2 (constraint)",
+      "entry_sha256": "c4d226c8bbf99dbb4af2ead75b06317ab90cc343d292fdaf5ce673d937c5eac3",
       "stream": "research",
       "areas": [
         "research-core"

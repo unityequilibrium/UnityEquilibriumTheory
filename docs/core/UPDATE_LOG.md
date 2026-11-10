@@ -78,3 +78,10 @@ commit: this commit + records commit
 ระดับ: claim C_T005_PORTAL_G_C ที่ L0 (DRAFT)
 ถัดไป: ผู้เขียนอนุมัติ หรือกำหนด g_min เพื่อให้ T005 ฆ่าทฤษฎีได้จริง; ตรวจตัวเลขกับฉบับวารสาร
 commit: this commit
+
+## 2026-11-10 — T005 run: portal coupling versus fifth-force data
+ทำ: รันวิธีของ T005 หลังผู้เขียนอนุมัติการ์ด (2b4985485) กับข้อมูล T005_YUKAWA_BOUNDS ที่ล็อก hash ไว้
+ผล: PASS แบบ CONSTRAINT: g_c < 5.1×10⁻¹⁰ eV (m_ψ ≤ 5.1×10⁻³ eV), g_c < 3.9×10⁻¹⁵ eV (m_ψ ≈ 1.0×10⁻¹⁵ eV); ช่องแลกเปลี่ยนของข้อ 2 แรงได้เฉพาะเมื่อ ψ หนัก
+ระดับ: C_T005_PORTAL_G_C → L2_CONFRONTED (CONSTRAINT; ผู้เขียนอนุมัติ)
+ถัดไป: A3 สมการชั้น 2; ตรวจตัวเลข T001/T002/T005 กับฉบับวารสาร
+commit: this commit
