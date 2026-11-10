@@ -2,6 +2,7 @@
   "schema": "uet-result-v2",
   "result_id": "R_T005_FIFTH_FORCE",
   "claim_id": "C_T005_PORTAL_G_C",
+  "test_card_id": "T005",
   "level": "L2_CONFRONTED",
   "outcome": "PASS",
   "numbers": [
@@ -42,5 +43,10 @@
   },
   "artifacts": [],
   "date": "2026-11-10",
-  "note": "CONSTRAINT outcome under Test Card T005 (approved 2b4985485): admissible g_c remain at both registered bounds; FAILED was not reachable because no g_min was set. Parent form: h sqrt(eps/k)/Z < the same values. Journal cross-check not done. L2 approved by the author on 2026-11-10."
+  "note": "CONSTRAINT outcome under Test Card T005 (approved 2b4985485): admissible g_c remain at both registered bounds; FAILED was not reachable because no g_min was set. Parent form: h sqrt(eps/k)/Z < the same values. Journal cross-check not done. L2 approved by the author on 2026-11-10.",
+  "approval": {
+    "approved_by": "santxkoz",
+    "date": "2026-11-10",
+    "role": "AUTHOR"
+  }
 }
