@@ -1,0 +1,40 @@
+{
+  "schema": "uet-result-v2",
+  "result_id": "R_R2_LASER_LAYER3",
+  "claim_id": "C_R2_LASER_LAYER3",
+  "level": "L1_CONSISTENT",
+  "outcome": "PASS",
+  "numbers": [
+    {
+      "name": "symbolic_identity_laser_vs_layer3",
+      "value": "exact (sympy)",
+      "uncertainty": null,
+      "unit": "dimensionless"
+    },
+    {
+      "name": "threshold_equals_r_star",
+      "value": "N_th = 1/(B tau), solved symbolically",
+      "uncertainty": null,
+      "unit": "dimensionless"
+    },
+    {
+      "name": "single_pool_gain_clamping",
+      "value": "inversion / N_th - 1 < 1e-6; losing modes < 1e-6 photons",
+      "uncertainty": null,
+      "unit": "dimensionless"
+    },
+    {
+      "name": "two_pool_coexistence_levels",
+      "value": "within 1e-6 of the predicted levels",
+      "uncertainty": null,
+      "unit": "dimensionless"
+    }
+  ],
+  "producer": {
+    "script": "docs/core/05_tests/physics/test_r2_laser_selection.py",
+    "commit": "7caa1c562"
+  },
+  "artifacts": [],
+  "date": "2026-11-10",
+  "note": "Statz-deMars rate equations without spontaneous emission into the modes; photons leak exponentially. Standard laser physics (Lamb 1964); confirms layer 3 in a non-living physical system, not a new prediction."
+}

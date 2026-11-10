@@ -124,6 +124,15 @@
       "level": "L0_SPECULATIVE",
       "evidence": [],
       "note": "Test Card T006 is a DRAFT awaiting author approval."
+    },
+    {
+      "claim_id": "C_R2_LASER_LAYER3",
+      "statement": "Multimode laser rate equations are the layer-3 selection model term for term (a = stimulated-emission coefficient, tau = photon lifetime, F = 1, R = inversion); R* is the threshold inversion, one shared inversion gives single-mode lasing with gain clamping, and two inversion pools give two-mode coexistence.",
+      "level": "L1_CONSISTENT",
+      "evidence": [
+        "R_R2_LASER_LAYER3"
+      ],
+      "note": "Shows author point 5 (selection by resource use, without learning) in a non-living physical system. Standard laser physics."
     }
   ]
 }
