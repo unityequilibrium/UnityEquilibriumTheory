@@ -50,3 +50,10 @@ commit: cbebc3fad (model+tests) + this commit
 ระดับ: C_T002_STELLAR_PHASE_ABUNDANCE → L2_CONFRONTED (INCONCLUSIVE; ผู้เขียนอนุมัติ)
 ถัดไป: หาค่าความคลาดเคลื่อนของแบบจำลองดาวที่ตีพิมพ์แล้ว หรือหาประชากรอื่นที่เป็นอิสระ ก่อนสรุปเรื่องช่องเผาพลังงานที่ซ่อนอยู่
 commit: this commit
+
+## 2026-11-10 — Do the equations say what the author means? (A1 fidelity matrix)
+ทำ: จับคู่ตรรกะ 10 ข้อใน AUTHOR_PROPOSITION กับสมการและโค้ด ให้คำตัดสินข้อละหนึ่งค่า (docs/core/FIDELITY_MATRIX.md)
+ผล: MATCH 1, PARTIAL 4, ASSUMED 2, MISSING 1, CONTRADICTS 1 (ข้อ 3: vacuum สถิตเป็นคำตอบเมื่อ Λ_eff = 0; test_fidelity_static_vacuum.py 40 ผ่าน) เจอ residual ที่เป็น 0 โดยนิยาม 2 จุด (KMS noise, exchange ledger)
+ระดับ: ไม่เปลี่ยน claim ใด (เป็นงานตรวจ ไม่ใช่ข้ออ้างใหม่)
+ถัดไป: ผู้เขียนเลือกความหมายของข้อ 3; ต่อด้วย A2+B1 (off-diagonal, reduction, stability, ψ₀ ในสสาร)
+commit: this commit

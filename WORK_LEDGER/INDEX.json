@@ -4,12 +4,12 @@
   "generator_sha256": "b32005e4bdbf59da6681ae630fa1d9d4415c361f7523be18c8b52a86dc8c93e9",
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
-    "sources": 74,
-    "entries": 793,
+    "sources": 75,
+    "entries": 794,
     "by_stream": {
       "book-history": 94,
       "operations": 112,
-      "research": 587
+      "research": 588
     },
     "exact_duplicates": 0,
     "review_entries": 2
@@ -386,6 +386,11 @@
       "path": "2026/2026-11-09.md",
       "sha256": "972f736e30674fc8556b38845b19f5aad8d6f0043dc8e0bbf2218f141f85c068",
       "entries": 9
+    },
+    {
+      "path": "2026/2026-11-10.md",
+      "sha256": "f18222ae141e672c32eba9a0a18b37b960f2b5ee54a3f5d3d2ba0680342bdc70",
+      "entries": 1
     },
     {
       "path": "2026-08-14.md",
@@ -16217,6 +16222,26 @@
       "basis": "explicit_stream_and_area",
       "flags": [],
       "date": "2026-11-09",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-10.md#a1-fidelity-matrix-author-logic-versus-core-equations",
+      "source": "2026/2026-11-10.md",
+      "anchor": "a1-fidelity-matrix-author-logic-versus-core-equations",
+      "start_line": 3,
+      "end_line": 15,
+      "title": "A1 fidelity matrix: author logic versus core equations",
+      "entry_sha256": "52430f29d3139984fd27fdd994a1ef899bfce6f4118105eb45e99d2ad7b6b99b",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-10",
       "legacy_root_path": false
     },
     {
