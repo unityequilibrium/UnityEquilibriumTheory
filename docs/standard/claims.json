@@ -99,6 +99,15 @@
         "R_A3_LAYER2_OPEN_FROM_CLOSED"
       ],
       "note": "Supports author points 1, 4 and 8 at model level. Standard open-system physics (Caldeira-Leggett 1983); not yet tied to the parent-action fields."
+    },
+    {
+      "claim_id": "C_L3_BURN_LAW_SELECTION",
+      "statement": "With lifetimes derived from the layer-2 burn law, tau = integral dF/P(F), selection still favours the lowest R* = 1/(a tau), but tau = F0/P0 holds only for regulated burners; with two resources a mixed equilibrium exists and is Nash-stable against rare invaders.",
+      "level": "L1_CONSISTENT",
+      "evidence": [
+        "R_A4_BURN_LAW_SELECTION"
+      ],
+      "note": "Supports author points 4 and 10 at model level. Ecology analogue: Tilman resource-ratio theory; not new physics by itself."
     }
   ]
 }
