@@ -1,0 +1,40 @@
+{
+  "schema": "uet-result-v2",
+  "result_id": "R_B1B_PORTAL_FIFTH_FORCE",
+  "claim_id": "C_PORTAL_FIFTH_FORCE",
+  "level": "L1_CONSISTENT",
+  "outcome": "PASS",
+  "numbers": [
+    {
+      "name": "nonrelativistic_limit_convergence_order",
+      "value": "2.0 (band 1.9-2.1)",
+      "uncertainty": null,
+      "unit": "dimensionless"
+    },
+    {
+      "name": "sphere_field_convergence_order",
+      "value": ">1.7 at m_psi = 0.3 and 1.5; final relative error < 1e-5",
+      "uncertainty": null,
+      "unit": "dimensionless"
+    },
+    {
+      "name": "portal_to_gravity_ratio_over_alpha",
+      "value": "1 within 1e-5",
+      "uncertainty": null,
+      "unit": "dimensionless"
+    },
+    {
+      "name": "g_c_for_alpha_1_nucleon_matter",
+      "value": "5.1e-10",
+      "uncertainty": null,
+      "unit": "eV"
+    }
+  ],
+  "producer": {
+    "script": "docs/core/05_tests/physics/test_portal_fifth_force.py",
+    "commit": "6dc154d5c"
+  },
+  "artifacts": [],
+  "date": "2026-11-10",
+  "note": "Author decision 2026-11-10: chi is ordinary matter. Single-species idealization; flat space; static sources."
+}

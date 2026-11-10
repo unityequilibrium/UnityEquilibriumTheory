@@ -71,7 +71,16 @@
       "evidence": [
         "R_B1_VACUUM_STRUCTURE"
       ],
-      "note": "A falsification route for a future Test Card (Cassini); not yet confronted with data."
+      "note": "A falsification route for a future Test Card (Cassini); not yet confronted with data. With chi = ordinary matter (author 2026-11-10) the condensate branch m2_chi < 0 is excluded; only the metastable branch remains."
+    },
+    {
+      "claim_id": "C_PORTAL_FIFTH_FORCE",
+      "statement": "With chi identified as ordinary matter, the UET portal produces a composition-independent Yukawa force V = -G M m/r [1 + alpha exp(-r/lambda)] with alpha = g_c^2/(2 kappa m_chi^4) and lambda = 1/m_psi.",
+      "level": "L1_CONSISTENT",
+      "evidence": [
+        "R_B1B_PORTAL_FIFTH_FORCE"
+      ],
+      "note": "Derived relation; not yet confronted with inverse-square-law, lunar or planetary data (planned Test Card T005)."
     }
   ]
 }
