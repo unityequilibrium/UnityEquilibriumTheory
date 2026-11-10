@@ -81,6 +81,13 @@
         "R_B1B_PORTAL_FIFTH_FORCE"
       ],
       "note": "Derived relation; not yet confronted with inverse-square-law, lunar or planetary data (planned Test Card T005)."
+    },
+    {
+      "claim_id": "C_T005_PORTAL_G_C",
+      "statement": "Published fifth-force bounds limit the UET portal coupling g_c as a function of m_psi when chi is ordinary matter.",
+      "level": "L0_SPECULATIVE",
+      "evidence": [],
+      "note": "Test Card T005 is a DRAFT awaiting author approval."
     }
   ]
 }

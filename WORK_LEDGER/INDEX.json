@@ -5,11 +5,11 @@
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
     "sources": 75,
-    "entries": 796,
+    "entries": 797,
     "by_stream": {
       "book-history": 94,
       "operations": 112,
-      "research": 590
+      "research": 591
     },
     "exact_duplicates": 0,
     "review_entries": 2
@@ -389,8 +389,8 @@
     },
     {
       "path": "2026/2026-11-10.md",
-      "sha256": "baac3e325e8be8bb85f1b3ceb174ff7b2f15a7720b99b38208c0f0991005d45c",
-      "entries": 3
+      "sha256": "4ffd1059f1e7e6742f9deba1a9ab9c94691946922293b00f6107a7c0f180dfb2",
+      "entries": 4
     },
     {
       "path": "2026-08-14.md",
@@ -16269,9 +16269,29 @@
       "source": "2026/2026-11-10.md",
       "anchor": "b1b-portal-fifth-force-with-chi-as-ordinary-matter",
       "start_line": 32,
-      "end_line": 44,
+      "end_line": 45,
       "title": "B1b: portal fifth force with chi as ordinary matter",
-      "entry_sha256": "0d24c9daf652e73c0bcb23bcffa723d1d9f546fcdf3bea6fa0ebc1f9c39abb2d",
+      "entry_sha256": "456163eede36da0bb1c3c0bb84e80b7f99633f80d533f0dda129d4c80cd4449c",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-10",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-10.md#t005-draft-portal-fifth-force-versus-published-yukawa-bounds",
+      "source": "2026/2026-11-10.md",
+      "anchor": "t005-draft-portal-fifth-force-versus-published-yukawa-bounds",
+      "start_line": 46,
+      "end_line": 59,
+      "title": "T005 draft: portal fifth force versus published Yukawa bounds",
+      "entry_sha256": "7f1c4ccd80222d856edc98d51a20cae0b8121cbcb87cdaef22fb3a3fc5599ce4",
       "stream": "research",
       "areas": [
         "research-core"

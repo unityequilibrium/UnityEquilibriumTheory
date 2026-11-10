@@ -71,3 +71,10 @@ commit: this commit + records commit
 ระดับ: claim ใหม่ C_PORTAL_FIFTH_FORCE (L1)
 ถัดไป: ร่าง Test Card T005 (inverse-square law, LLR, ดาวเคราะห์) ให้ผู้เขียนอนุมัติก่อนรัน
 commit: this commit + records commit
+
+## 2026-11-10 — How strongly do fifth-force data limit the portal? (T005 draft)
+ทำ: ร่าง Test Card T005 (CONSTRAINT) พร้อมข้อมูลสองจุดที่ล็อก hash แล้ว (Lee et al. 2020: |α| = 1 ถูกตัดที่ λ ≥ 38.6 μm; Merkowitz 2010 LLR: α < 5.9×10⁻¹¹ ที่ λ = a/2) และสคริปต์แปลงเป็น g_c_max
+ผล: ยังไม่รัน; เปิดเผยแล้วว่าผลประมาณรู้ล่วงหน้า (g_c ≲ 5×10⁻¹⁰ eV ระยะสั้น, ≲ 4×10⁻¹⁵ eV ที่ระยะดวงจันทร์)
+ระดับ: claim C_T005_PORTAL_G_C ที่ L0 (DRAFT)
+ถัดไป: ผู้เขียนอนุมัติ หรือกำหนด g_min เพื่อให้ T005 ฆ่าทฤษฎีได้จริง; ตรวจตัวเลขกับฉบับวารสาร
+commit: this commit

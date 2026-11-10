@@ -24,6 +24,18 @@
       "license": "numerical facts transcribed from an arXiv paper (arXiv non-exclusive license); no figures or text redistributed",
       "visibility": "PUBLIC",
       "note": "Transcribed values must be re-checked against the journal version (PRL 113, 191302) before T002 is approved."
+    },
+    {
+      "data_id": "T005_YUKAWA_BOUNDS",
+      "description": "Published Yukawa-strength bounds alpha(lambda) on deviations from the Newtonian 1/r^2 law: torsion balance at short range and lunar laser ranging at the Earth-Moon scale",
+      "source": "J. G. Lee et al., Phys. Rev. Lett. 124, 101101 (2020), abstract; S. M. Merkowitz, Living Rev. Relativity 13, 7 (2010), inverse-square-law section",
+      "doi_or_url": "https://arxiv.org/abs/2002.11761 ; https://doi.org/10.12942/lrr-2010-7",
+      "retrieved": "2026-11-10",
+      "path": "docs/data/external/gravity/yukawa_fifth_force/t005_yukawa_bounds.csv",
+      "sha256": "326c0a618d2c25dd7ce064f0a6bdc7d85c3ab154f24555e4cb57e2d2fcb6b82c",
+      "license": "numerical facts transcribed from an article abstract and a review; no figures or text redistributed",
+      "visibility": "PUBLIC",
+      "note": "Two anchor points only, not the full exclusion curves. Re-check against the journal texts before approval."
     }
   ]
 }

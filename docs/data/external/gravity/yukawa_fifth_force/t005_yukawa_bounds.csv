@@ -1,0 +1,9 @@
+# Published bounds on a Yukawa addition V = -G M m / r * [1 + alpha exp(-r/lambda)] to Newtonian gravity.
+# Transcribed on 2026-11-10 for UET Test Card T005 from the article abstract and review text; numerical facts only.
+# Row lee2020: J. G. Lee, E. G. Adelberger, T. S. Cook, S. M. Fleischer, B. R. Heckel, Phys. Rev. Lett. 124, 101101 (2020), arXiv:2002.11761, abstract.
+#   Statement: gravitational-strength (|alpha| = 1) Yukawa interactions limited to ranges below 38.6 micrometres at 95% CL; data at separations 52 um to 3.0 mm.
+# Row merkowitz2010_llr: S. M. Merkowitz, Living Rev. Relativity 13, 7 (2010), doi:10.12942/lrr-2010-7, section on inverse-square law.
+#   Statement: lunar laser ranging limits a new Yukawa potential to alpha < 5.9e-11 at lambda = a/2, where a is the Earth-Moon distance.
+record,alpha_upper,lambda_rule,lambda_value,lambda_unit,confidence,note
+lee2020,1.0,lambda_min_excluded,38.6e-6,m,0.95,"|alpha| = 1 excluded for every lambda >= 38.6 um (torsion balance, separations 52 um - 3.0 mm)"
+merkowitz2010_llr,5.9e-11,lambda_point_fraction_of_earth_moon_distance,0.5,1,not stated,"alpha < 5.9e-11 at lambda = a/2 only; weaker at other lambda"
