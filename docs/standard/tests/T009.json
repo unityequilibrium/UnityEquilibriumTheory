@@ -1,7 +1,7 @@
 {
   "schema": "uet-test-card-v2",
   "test_id": "T009",
-  "status": "DRAFT",
+  "status": "APPROVED",
   "claim_id": "C_T009_DECAY_CHAIN_ABUNDANCE",
   "theory_card": {
     "card_id": "UET_PARENT",
@@ -32,5 +32,10 @@
   "pass_criterion": "PASS if z <= 2.",
   "fail_criterion": "FAILED if z > 3; INCONCLUSIVE if 2 < z <= 3 or if the registered values disagree with the source texts.",
   "drafted_by": "claude",
-  "note": "Disclosure: drafted after reading both values (245,670 +/- 260 and 244,900 +/- 1340 yr); a hand estimate gives z near 0.6, so the outcome is effectively known. Secular equilibrium is textbook physics; the test checks that the UET abundance law carries over to nuclear decay. The direct value is taken as quoted by Hu et al. 2025."
+  "note": "Disclosure: drafted after reading both values (245,670 +/- 260 and 244,900 +/- 1340 yr); a hand estimate gives z near 0.6, so the outcome is effectively known. Secular equilibrium is textbook physics; the test checks that the UET abundance law carries over to nuclear decay. The direct value is taken as quoted by Hu et al. 2025. Approved by the author on 2026-11-10 as drafted.",
+  "approval": {
+    "approved_by": "santxkoz",
+    "date": "2026-11-10",
+    "role": "AUTHOR"
+  }
 }
