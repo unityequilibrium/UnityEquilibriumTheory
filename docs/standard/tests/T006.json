@@ -1,7 +1,7 @@
 {
   "schema": "uet-test-card-v2",
   "test_id": "T006",
-  "status": "DRAFT",
+  "status": "APPROVED",
   "claim_id": "C_T006_ENERGY_USE_GRAVITY_TRACE",
   "theory_card": {
     "card_id": "UET_PARENT",
@@ -34,5 +34,10 @@
   "pass_criterion": "PASS if z <= 2. The Result must also report z for the null hypothesis 'energy use leaves no gravitational trace' (prediction 0) and for radiation alone.",
   "fail_criterion": "FAILED if z > 3; INCONCLUSIVE if 2 < z <= 3, or if the registered values disagree with the journal texts.",
   "drafted_by": "claude",
-  "note": "Disclosure: drafted after reading the measured value and the inputs; a rough hand estimate puts z near 1.5 (PASS), so the outcome is effectively known. The script was not run. This test checks author points 7-8 through standard physics and cannot distinguish UET from general relativity. The wind uncertainty is the card's own assumption; the measurement window (2011-2015) is near solar maximum, while the wind value is quoted for solar minimum."
+  "note": "Disclosure: drafted after reading the measured value and the inputs; a rough hand estimate puts z near 1.5 (PASS), so the outcome is effectively known. The script was not run. This test checks author points 7-8 through standard physics and cannot distinguish UET from general relativity. The wind uncertainty is the card's own assumption; the measurement window (2011-2015) is near solar maximum, while the wind value is quoted for solar minimum. Approved by the author on 2026-11-10 as drafted, without a journal cross-check.",
+  "approval": {
+    "approved_by": "santxkoz",
+    "date": "2026-11-10",
+    "role": "AUTHOR"
+  }
 }
