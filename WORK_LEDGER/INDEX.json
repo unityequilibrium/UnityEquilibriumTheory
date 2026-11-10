@@ -5,11 +5,11 @@
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
     "sources": 75,
-    "entries": 799,
+    "entries": 800,
     "by_stream": {
       "book-history": 94,
       "operations": 112,
-      "research": 593
+      "research": 594
     },
     "exact_duplicates": 0,
     "review_entries": 2
@@ -389,8 +389,8 @@
     },
     {
       "path": "2026/2026-11-10.md",
-      "sha256": "315e1c00c9068b7170d05d0062165129346248aa0c86042295afdf7e599a247f",
-      "entries": 6
+      "sha256": "e79bba0e8f60c9818fa62a552e3c441d2353a11586ddea69fa63ee90115ad882",
+      "entries": 7
     },
     {
       "path": "2026-08-14.md",
@@ -16329,9 +16329,29 @@
       "source": "2026/2026-11-10.md",
       "anchor": "a3-layer-2-open-system-laws-from-a-closed-hamiltonian",
       "start_line": 74,
-      "end_line": 87,
+      "end_line": 88,
       "title": "A3: layer-2 open-system laws from a closed Hamiltonian",
-      "entry_sha256": "2a11792aa69afb97329956a955b0355807849437caad1d34736966c9adbc72f3",
+      "entry_sha256": "b28883a72497a406359e11591d312e46ab7483193bf1682132e83897e0271f60",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-10",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-10.md#a4-lifetime-from-the-burn-law-selection-and-mixed-equilibria",
+      "source": "2026/2026-11-10.md",
+      "anchor": "a4-lifetime-from-the-burn-law-selection-and-mixed-equilibria",
+      "start_line": 89,
+      "end_line": 101,
+      "title": "A4: lifetime from the burn law, selection and mixed equilibria",
+      "entry_sha256": "6ccfdb6b44697a9037aa2403b01b36e2b310d00b04127185771dd816b20eecbe",
       "stream": "research",
       "areas": [
         "research-core"

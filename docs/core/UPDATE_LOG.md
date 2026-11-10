@@ -92,3 +92,10 @@ commit: this commit
 ระดับ: claim ใหม่ C_LAYER2_OPEN_FROM_CLOSED (L1)
 ถัดไป: A4 แก้ τ = F/P ให้ครอบคลุมทั้งแบบคุมอัตราเผาและแบบ passive; ระบุว่าสิ่งแวดล้อมคือสนามไหนใน parent action
 commit: this commit + records commit
+
+## 2026-11-10 — Does selection survive the real burn law, and is there a Nash equilibrium? (A4)
+ทำ: แทน τ = F/P ด้วย τ = ∫dF/P(F) จากชั้น 2; จำลองการแข่งขันด้วยอายุคงที่จริงข้ามกฎการเผา 3 แบบ; ทรัพยากรสองชนิด + ผู้บุกรุก 4 แบบ (13 physics test)
+ผล: R* ต่ำสุดยังชนะ (R = 0.2674 เทียบ 0.2670) แต่กฎ F₀/P₀ เดิมทำนายผู้ชนะผิดเมื่อมีระบบ passive; สองทรัพยากรให้ดุลยภาพผสม R* = (0.4375, 0.3125) ที่เป็น Nash (4/4); บิต ∝ F·P^(−1/4) สำหรับวัตถุดำ
+ระดับ: claim ใหม่ C_L3_BURN_LAW_SELECTION (L1)
+ถัดไป: B4 หาข้อทำนายที่ต่างจากฟิสิกส์มาตรฐาน; B5 red-team
+commit: this commit + records commit
