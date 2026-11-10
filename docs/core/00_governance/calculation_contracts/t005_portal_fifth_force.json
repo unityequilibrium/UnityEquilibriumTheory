@@ -1,0 +1,253 @@
+{
+  "schema_version": "uet-calculation-contract-v1",
+  "contract_id": "CORE_T005_PORTAL_FIFTH_FORCE_V1",
+  "profile": "PHYSICAL_COMPARISON",
+  "review": {
+    "status": "INCOMPLETE",
+    "reviewer": "agent:claude-t005",
+    "rationale": "Methodological contract for Test Card T005. The evidence decision lives in docs/standard. Torsion-balance metrology and lunar-orbit modelling are inherited from the published analyses.",
+    "coverage_evidence": [
+      "docs/core/03_lanes/scalar_tensor/uet_portal_fifth_force.py"
+    ]
+  },
+  "question": "How strongly do published inverse-square-law bounds limit the UET portal coupling g_c when chi is ordinary matter?",
+  "output": {
+    "quantity": "upper bound g_c_max at each registered Yukawa bound, with the corresponding m_psi",
+    "unit": "eV",
+    "domain": "torsion balance: lambda >= 38.6 um; lunar laser ranging: lambda = a/2 only",
+    "accuracy": "Inherits the published confidence levels (95% for the torsion balance; not stated for LLR).",
+    "claim_intent": "DIAGNOSTIC"
+  },
+  "model": {
+    "formula_ids": [
+      "UET_B1B_PORTAL_YUKAWA"
+    ],
+    "assumptions": "chi is ordinary matter with a single species of mass m_chi = mean nucleon mass; static, non-relativistic sources; flat space.",
+    "approximation": "Point-mass Yukawa potential; finite-size effects of the test bodies are handled upstream by the experiments.",
+    "initial_boundary": "Static sources.",
+    "drive_environment": "None.",
+    "parameters": "No fitting; the bounds are used as published."
+  },
+  "data_policy": {
+    "uses_observations": true,
+    "calibration_ids": [],
+    "comparison_ids": [
+      "T005_YUKAWA_BOUNDS"
+    ],
+    "independent_validation": false,
+    "holdout_policy": "No holdout. Published bounds seen before drafting (exposure SEEN_SUMMARY), declared in Test Card T005."
+  },
+  "observation": {
+    "system_partition": {
+      "role_mode": "RELATIONAL",
+      "accounting_component_id": "system_state",
+      "boundary": "Two published bounds on a Yukawa addition to Newtonian gravity; the comparison uses the published (alpha, lambda) statements, not raw data.",
+      "systems": [
+        {
+          "id": "test_masses",
+          "state": "Attracting bodies (torsion-balance attractor and detector; Earth and Moon)",
+          "state_accounting": {
+            "kind": "INDEPENDENT",
+            "state_ids": [
+              "masses.state"
+            ],
+            "owner_ids": [],
+            "rule": "Masses as modelled by the published analyses."
+          }
+        },
+        {
+          "id": "detector",
+          "state": "Torsion balance readout and lunar laser ranging timing",
+          "state_accounting": {
+            "kind": "INDEPENDENT",
+            "state_ids": [
+              "detector.record"
+            ],
+            "owner_ids": [],
+            "rule": "Observer record only; carries no field energy."
+          }
+        }
+      ],
+      "couplings": [
+        {
+          "id": "mass_to_detector_signal",
+          "source": "test_masses",
+          "target": "detector",
+          "kind": "SIGNAL",
+          "component_id": "propagation",
+          "map": "Gravitational torque or range residuals, handled upstream"
+        },
+        {
+          "id": "mass_detection",
+          "source": "test_masses",
+          "target": "detector",
+          "kind": "DETECTION",
+          "component_id": "detector",
+          "map": "Published fits of the Yukawa amplitude"
+        },
+        {
+          "id": "detector_backaction",
+          "source": "detector",
+          "target": "test_masses",
+          "kind": "BACKACTION",
+          "component_id": "detector",
+          "map": "No admitted backaction on the bodies"
+        }
+      ],
+      "observables": [
+        {
+          "id": "yukawa_bound",
+          "detector_id": "detector",
+          "target_systems": [
+            "test_masses"
+          ],
+          "backaction_targets": [
+            "test_masses"
+          ],
+          "backaction_scope_reason": "The only assessed owner is the set of attracting bodies.",
+          "quantity": "Upper bound on the Yukawa strength alpha at range lambda",
+          "readout_map": "Published statements transcribed only",
+          "component_id": "detector"
+        }
+      ]
+    },
+    "source_state": "Bodies as modelled by the published analyses.",
+    "generated_trace": "Gravitational field; not a UET trace variable.",
+    "carrier": "Static gravitational and scalar fields.",
+    "observer_state": "Published bounds.",
+    "readout": "alpha_max at the registered lambda.",
+    "backaction": "None admitted.",
+    "frame": "Laboratory and Earth-Moon frames of the published analyses",
+    "time_convention": "Static",
+    "product_level": "published derived quantities (not raw data)",
+    "corrections": [
+      {
+        "id": "metrology_upstream",
+        "state": "APPLIED_UPSTREAM",
+        "evidence": "docs/data/external/gravity/yukawa_fifth_force/t005_yukawa_bounds.csv"
+      },
+      {
+        "id": "orbit_model_upstream",
+        "state": "APPLIED_UPSTREAM",
+        "evidence": "docs/data/external/gravity/yukawa_fifth_force/t005_yukawa_bounds.csv"
+      }
+    ]
+  },
+  "components": [
+    {
+      "id": "system_state",
+      "group": "system_state",
+      "disposition": "MODELED",
+      "reason": "Point-mass Yukawa force from the portal with chi as ordinary matter.",
+      "evidence": [
+        "docs/core/03_lanes/scalar_tensor/uet_portal_fifth_force.py",
+        "docs/data/external/gravity/yukawa_fifth_force/t005_yukawa_bounds.csv"
+      ]
+    },
+    {
+      "id": "drive_environment",
+      "group": "drive_environment",
+      "disposition": "NOT_APPLICABLE",
+      "reason": "No external drive in the comparison.",
+      "evidence": []
+    },
+    {
+      "id": "propagation",
+      "group": "propagation",
+      "disposition": "UPSTREAM_CORRECTED",
+      "reason": "Applied upstream in the published analyses (Lee et al. 2020; lunar laser ranging fits reviewed by Merkowitz 2010); not recomputed here.",
+      "evidence": [
+        "docs/data/external/gravity/yukawa_fifth_force/t005_yukawa_bounds.csv"
+      ]
+    },
+    {
+      "id": "frame_time",
+      "group": "frame_time",
+      "disposition": "UPSTREAM_CORRECTED",
+      "reason": "Static comparison. Applied upstream in the published analyses (Lee et al. 2020; lunar laser ranging fits reviewed by Merkowitz 2010); not recomputed here.",
+      "evidence": [
+        "docs/data/external/gravity/yukawa_fifth_force/t005_yukawa_bounds.csv"
+      ]
+    },
+    {
+      "id": "detector",
+      "group": "detector",
+      "disposition": "UPSTREAM_CORRECTED",
+      "reason": "Applied upstream in the published analyses (Lee et al. 2020; lunar laser ranging fits reviewed by Merkowitz 2010); not recomputed here.",
+      "evidence": [
+        "docs/data/external/gravity/yukawa_fifth_force/t005_yukawa_bounds.csv"
+      ]
+    },
+    {
+      "id": "processing",
+      "group": "processing",
+      "disposition": "MODELED",
+      "reason": "g_c_max = m_chi^2 sqrt(2 kappa alpha_max); m_psi = hbar c / lambda.",
+      "evidence": [
+        "docs/core/03_lanes/scalar_tensor/t005_fifth_force_constraint.py",
+        "docs/core/03_lanes/scalar_tensor/uet_portal_fifth_force.py"
+      ]
+    },
+    {
+      "id": "numerics",
+      "group": "numerics",
+      "disposition": "MODELED",
+      "reason": "Closed-form arithmetic; the Yukawa strength formula is covered by physics tests.",
+      "evidence": [
+        "docs/core/05_tests/physics/test_portal_fifth_force.py"
+      ]
+    }
+  ],
+  "error_budget": {
+    "unit": "eV",
+    "numerical": "Floating point only.",
+    "approximation": "Single-species, point-mass, flat-space Yukawa force.",
+    "measurement": "Published confidence levels inherited; not propagated further.",
+    "systematic": "Journal cross-check not done; only two anchor points of the exclusion curves are used.",
+    "omissions": "Planetary and other ranges are not tested; composition dependence from several matter species is not modelled.",
+    "dependence": "The two bounds come from independent experiments.",
+    "acceptance": "Outcome categories fixed in Test Card T005 (CONSTRAINT; FAILED unreachable without g_min).",
+    "omission_limit": null
+  },
+  "identities": [
+    {
+      "path": "docs/data/external/gravity/yukawa_fifth_force/t005_yukawa_bounds.csv",
+      "kind": "working_file",
+      "role": "input",
+      "sha256": "326c0a618d2c25dd7ce064f0a6bdc7d85c3ab154f24555e4cb57e2d2fcb6b82c",
+      "availability": "REQUIRED"
+    },
+    {
+      "path": "docs/core/03_lanes/scalar_tensor/uet_portal_fifth_force.py",
+      "kind": "working_file",
+      "role": "code",
+      "sha256": "1b148b606a9a38be40661d1a9f2584ca9a72c3632f2a5fb004437c28ba44390b",
+      "availability": "REQUIRED"
+    },
+    {
+      "path": "docs/core/03_lanes/scalar_tensor/t005_fifth_force_constraint.py",
+      "kind": "working_file",
+      "role": "code",
+      "sha256": "e9f9c8b682500cb564a6f7ce058907b9554cdbd31d432d74e4ef8465070f17fa",
+      "availability": "REQUIRED"
+    },
+    {
+      "path": "docs/core/05_tests/physics/test_portal_fifth_force.py",
+      "kind": "working_file",
+      "role": "code",
+      "sha256": "dcd037d77e3cbafd7c20fc529add27ccbc06576244500c03707857d14f161947",
+      "availability": "REQUIRED"
+    }
+  ],
+  "entrypoints": [
+    "docs/core/03_lanes/scalar_tensor/t005_fifth_force_constraint.py",
+    "docs/core/03_lanes/scalar_tensor/uet_portal_fifth_force.py"
+  ],
+  "evidence": [
+    "docs/core/03_lanes/scalar_tensor/t005_fifth_force_constraint.py",
+    "docs/core/03_lanes/scalar_tensor/uet_portal_fifth_force.py",
+    "docs/data/external/gravity/yukawa_fifth_force/t005_yukawa_bounds.csv"
+  ],
+  "claim_boundary": "Methodological coverage of the T005 comparison only. The evidence level is set in docs/standard.",
+  "next_action": "Cross-check transcribed values against the journal texts; add planetary-range bounds if a further card is approved."
+}

@@ -6,10 +6,11 @@
 
 These are source-linked historical records, not proof of completed research, successful publication, or current scientific readiness.
 
-Indexed entries: 592. Counts describe records, not accomplishments.
+Indexed entries: 593. Counts describe records, not accomplishments.
 
 | Date | Record | Area | Notes |
 | --- | --- | --- | --- |
+| 2026-11-10 | [A3: layer-2 open-system laws from a closed Hamiltonian](2026/2026-11-10.md#a3-layer-2-open-system-laws-from-a-closed-hamiltonian) (L74) | research-core | explicit_stream_and_area |
 | 2026-11-10 | [T005 result: portal coupling at L2 (constraint)](2026/2026-11-10.md#t005-result-portal-coupling-at-l2-constraint) (L61) | research-core | explicit_stream_and_area |
 | 2026-11-10 | [T005 draft: portal fifth force versus published Yukawa bounds](2026/2026-11-10.md#t005-draft-portal-fifth-force-versus-published-yukawa-bounds) (L46) | research-core | explicit_stream_and_area |
 | 2026-11-10 | [B1b: portal fifth force with chi as ordinary matter](2026/2026-11-10.md#b1b-portal-fifth-force-with-chi-as-ordinary-matter) (L32) | research-core | explicit_stream_and_area |

@@ -85,3 +85,10 @@ commit: this commit
 ระดับ: C_T005_PORTAL_G_C → L2_CONFRONTED (CONSTRAINT; ผู้เขียนอนุมัติ)
 ถัดไป: A3 สมการชั้น 2; ตรวจตัวเลข T001/T002/T005 กับฉบับวารสาร
 commit: this commit
+
+## 2026-11-10 — Does an open system emerge from a closed one? (A3 layer 2)
+ทำ: mode + สิ่งแวดล้อม 150–600 oscillator เป็นระบบปิดทั้งก้อน (Caldeira–Leggett) แล้วดูเฉพาะ mode (8 physics test)
+ผล: แรงเสียดทาน ลู่เข้าอันดับ 1; พลังงานที่เสีย/∫P dt = 1.0002; noise+KMS เกิดเอง ⟨v²⟩/T = 0.97; ความร้อนไหลร้อน→เย็น; F ลดแบบ exponential (P ∝ F) ซึ่งขัดกับ P คงที่ของชั้น 3
+ระดับ: claim ใหม่ C_LAYER2_OPEN_FROM_CLOSED (L1)
+ถัดไป: A4 แก้ τ = F/P ให้ครอบคลุมทั้งแบบคุมอัตราเผาและแบบ passive; ระบุว่าสิ่งแวดล้อมคือสนามไหนใน parent action
+commit: this commit + records commit

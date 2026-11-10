@@ -5,11 +5,11 @@
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
     "sources": 75,
-    "entries": 798,
+    "entries": 799,
     "by_stream": {
       "book-history": 94,
       "operations": 112,
-      "research": 592
+      "research": 593
     },
     "exact_duplicates": 0,
     "review_entries": 2
@@ -389,8 +389,8 @@
     },
     {
       "path": "2026/2026-11-10.md",
-      "sha256": "bf2481280e7aa1bf0e5ab1e60ab38d163ac5448f9918906346931cc7f0c325e4",
-      "entries": 5
+      "sha256": "315e1c00c9068b7170d05d0062165129346248aa0c86042295afdf7e599a247f",
+      "entries": 6
     },
     {
       "path": "2026-08-14.md",
@@ -16309,9 +16309,29 @@
       "source": "2026/2026-11-10.md",
       "anchor": "t005-result-portal-coupling-at-l2-constraint",
       "start_line": 61,
-      "end_line": 72,
+      "end_line": 73,
       "title": "T005 result: portal coupling at L2 (constraint)",
-      "entry_sha256": "c4d226c8bbf99dbb4af2ead75b06317ab90cc343d292fdaf5ce673d937c5eac3",
+      "entry_sha256": "7ca306ea7778cd54a0270a0218e334d24b5a33a79630ef098e560aebd37cb536",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-10",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-10.md#a3-layer-2-open-system-laws-from-a-closed-hamiltonian",
+      "source": "2026/2026-11-10.md",
+      "anchor": "a3-layer-2-open-system-laws-from-a-closed-hamiltonian",
+      "start_line": 74,
+      "end_line": 87,
+      "title": "A3: layer-2 open-system laws from a closed Hamiltonian",
+      "entry_sha256": "2a11792aa69afb97329956a955b0355807849437caad1d34736966c9adbc72f3",
       "stream": "research",
       "areas": [
         "research-core"
