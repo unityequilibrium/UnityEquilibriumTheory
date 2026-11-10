@@ -5,11 +5,11 @@
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
     "sources": 75,
-    "entries": 800,
+    "entries": 801,
     "by_stream": {
       "book-history": 94,
       "operations": 112,
-      "research": 594
+      "research": 595
     },
     "exact_duplicates": 0,
     "review_entries": 2
@@ -389,8 +389,8 @@
     },
     {
       "path": "2026/2026-11-10.md",
-      "sha256": "e79bba0e8f60c9818fa62a552e3c441d2353a11586ddea69fa63ee90115ad882",
-      "entries": 7
+      "sha256": "a6d451d561fcc11ed4f68e910b0e5d748aa369b85cd24e0f86b57b5de91f63f8",
+      "entries": 8
     },
     {
       "path": "2026-08-14.md",
@@ -16349,9 +16349,29 @@
       "source": "2026/2026-11-10.md",
       "anchor": "a4-lifetime-from-the-burn-law-selection-and-mixed-equilibria",
       "start_line": 89,
-      "end_line": 101,
+      "end_line": 102,
       "title": "A4: lifetime from the burn law, selection and mixed equilibria",
-      "entry_sha256": "6ccfdb6b44697a9037aa2403b01b36e2b310d00b04127185771dd816b20eecbe",
+      "entry_sha256": "e4c11f95dada0822b40dd6ff9f7fdfdabcca2bb60d7c563ef17108e63a362a80",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-10",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-10.md#b4-distinctness-audit-and-portal-drag",
+      "source": "2026/2026-11-10.md",
+      "anchor": "b4-distinctness-audit-and-portal-drag",
+      "start_line": 103,
+      "end_line": 115,
+      "title": "B4: distinctness audit and portal drag",
+      "entry_sha256": "72f4400b7a18fea5419c2695e7b822568cec95de1c2e581ba6360201dc714e2e",
       "stream": "research",
       "areas": [
         "research-core"

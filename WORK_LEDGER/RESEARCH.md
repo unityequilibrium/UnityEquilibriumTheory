@@ -6,10 +6,11 @@
 
 These are source-linked historical records, not proof of completed research, successful publication, or current scientific readiness.
 
-Indexed entries: 594. Counts describe records, not accomplishments.
+Indexed entries: 595. Counts describe records, not accomplishments.
 
 | Date | Record | Area | Notes |
 | --- | --- | --- | --- |
+| 2026-11-10 | [B4: distinctness audit and portal drag](2026/2026-11-10.md#b4-distinctness-audit-and-portal-drag) (L103) | research-core | explicit_stream_and_area |
 | 2026-11-10 | [A4: lifetime from the burn law, selection and mixed equilibria](2026/2026-11-10.md#a4-lifetime-from-the-burn-law-selection-and-mixed-equilibria) (L89) | research-core | explicit_stream_and_area |
 | 2026-11-10 | [A3: layer-2 open-system laws from a closed Hamiltonian](2026/2026-11-10.md#a3-layer-2-open-system-laws-from-a-closed-hamiltonian) (L74) | research-core | explicit_stream_and_area |
 | 2026-11-10 | [T005 result: portal coupling at L2 (constraint)](2026/2026-11-10.md#t005-result-portal-coupling-at-l2-constraint) (L61) | research-core | explicit_stream_and_area |

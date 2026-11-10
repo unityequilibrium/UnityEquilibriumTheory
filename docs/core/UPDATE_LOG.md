@@ -99,3 +99,10 @@ commit: this commit + records commit
 ระดับ: claim ใหม่ C_L3_BURN_LAW_SELECTION (L1)
 ถัดไป: B4 หาข้อทำนายที่ต่างจากฟิสิกส์มาตรฐาน; B5 red-team
 commit: this commit + records commit
+
+## 2026-11-10 — Does UET predict anything standard physics does not? (B4)
+ทำ: เทียบทุกชั้นกับทฤษฎีที่มีอยู่ (ชั้น 3 = chemostat consumer–resource ของ Tilman ตรงตัว, sympy) แล้ว derive ผลที่เกิดเฉพาะเมื่อรวมชั้น 1+2 (6 physics test)
+ผล: แต่ละชั้นลดรูปเป็นทฤษฎีมาตรฐาน; ผลข้ามชั้นเดียวที่หาได้คือ portal drag F = Γvq²/(12πR) เทียบกับ frame พิเศษ แต่มีพารามิเตอร์อิสระ 3 ตัว จึงยังไม่มีการทำนายเชิงตัวเลขที่ต่าง
+ระดับ: claim ใหม่ C_B4_DISTINCTNESS_AUDIT (L1)
+ถัดไป: ผู้เขียนผูกค่าต่ำสุดของ g_c หรือ Γ จากตรรกะ หรือระบุระบบ autocatalytic; B5 red-team
+commit: this commit + records commit
