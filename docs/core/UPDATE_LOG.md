@@ -148,3 +148,10 @@ commit: this commit + records commit
 ระดับ: ไม่เปลี่ยน claim (เป็นงานตรวจตรรกะ)
 ถัดไป: ทาง ก — Test Card ต่อสาขา (เลเซอร์, เคมี, chemostat, ดาวแคระขาว) ให้ผู้เขียนอนุมัติทีละใบ
 commit: this commit
+
+## 2026-11-10 — Author accepts the point-1 fix
+ทำ: ผู้เขียนรับการแก้ข้อ 1 ตาม SYNTHESIS_AUDIT C1
+ผล: ข้อ 1 กลายเป็น "โครงสร้างที่ต้องเผาพลังงานเพื่อคงอยู่ต้องเปิด" (แรงโน้มถ่วงสร้างโครงสร้างในระบบปิดได้เอง) บันทึกใน AUTHOR_PROPOSITION ข้อ 1
+ระดับ: ไม่เปลี่ยน claim
+ถัดไป: Test Card แรกของทาง ก
+commit: this commit
