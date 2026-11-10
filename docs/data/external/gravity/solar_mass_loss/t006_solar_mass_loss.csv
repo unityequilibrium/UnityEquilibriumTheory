@@ -1,0 +1,11 @@
+# Inputs for UET Test Card T006: does the Sun's energy use leave a measurable trace in its gravity?
+# Transcribed on 2026-11-10; numerical facts only.
+# measured_gm_rate: A. Genova et al., Nature Communications 9, 289 (2018), doi:10.1038/s41467-017-02558-1, abstract (MESSENGER ranging, 2011-2015).
+# wind_fraction: S. R. Cranmer, "Solar Wind Origin", arXiv:2507.13460 (2025): the full Sun emits roughly 2e-14 solar masses per year in the solar wind at sunspot minimum.
+#   The 1-sigma of 1.0e-14 is an assumption of the card (cycle variation and the word "roughly"), not a published uncertainty.
+# luminosity and GM_sun: IAU 2015 Resolution B3 nominal values.
+record,value,sigma,unit,note
+measured_gm_rate,-6.13e-14,1.47e-14,per_year,"d(GM_sun)/dt / GM_sun from Mercury ranging (Genova et al. 2018)"
+wind_fraction,2.0e-14,1.0e-14,per_year,"-Mdot_wind/M_sun (Cranmer 2025, roughly, at minimum); sigma assumed"
+luminosity,3.828e26,0,W,"IAU 2015 B3 nominal solar luminosity"
+gm_sun,1.3271244e20,0,m3_s-2,"IAU 2015 B3 nominal solar mass parameter"

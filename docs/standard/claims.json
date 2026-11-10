@@ -117,6 +117,13 @@
         "R_B4_DISTINCTNESS_AUDIT"
       ],
       "note": "A negative result: the Theory Card's 'differences' field stays 'none yet', now with evidence."
+    },
+    {
+      "claim_id": "C_T006_ENERGY_USE_GRAVITY_TRACE",
+      "statement": "The Sun's energy use (luminosity plus solar wind) is written into its gravitational parameter at the rate general relativity gives, as recorded by planetary orbits.",
+      "level": "L0_SPECULATIVE",
+      "evidence": [],
+      "note": "Test Card T006 is a DRAFT awaiting author approval."
     }
   ]
 }

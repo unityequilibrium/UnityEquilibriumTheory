@@ -106,3 +106,10 @@ commit: this commit + records commit
 ระดับ: claim ใหม่ C_B4_DISTINCTNESS_AUDIT (L1)
 ถัดไป: ผู้เขียนผูกค่าต่ำสุดของ g_c หรือ Γ จากตรรกะ หรือระบุระบบ autocatalytic; B5 red-team
 commit: this commit + records commit
+
+## 2026-11-10 — How strongly does energy use write onto space? (R1 + T006 draft)
+ทำ: คำนวณสองช่องที่ฟิสิกส์มาตรฐานมีอยู่แล้ว: แรงโน้มถ่วง (มวลที่เผาไปทำให้ GM ลดและวงโคจรขยาย) และ entropy ของรังสี (4L/3T); 5 physics test (Planck → s/u = 4/3T, วงโคจรขยายแบบ 1/GM); ร่าง Test Card T006 เทียบกับการวัด d(GM☉)/dt จาก MESSENGER
+ผล: ดวงอาทิตย์เขียนบิตผ่านรังสีราว 9×10⁴⁵ บิต/วินาทีที่ผิว; T006 ยังไม่รัน เปิดเผยแล้วว่าประมาณการด้วยมือได้ z ราว 1.5
+ระดับ: claim C_T006_ENERGY_USE_GRAVITY_TRACE ที่ L0 (DRAFT)
+ถัดไป: ผู้เขียนอนุมัติ T006; ทำ R2
+commit: this commit

@@ -5,11 +5,11 @@
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
     "sources": 75,
-    "entries": 801,
+    "entries": 802,
     "by_stream": {
       "book-history": 94,
       "operations": 112,
-      "research": 595
+      "research": 596
     },
     "exact_duplicates": 0,
     "review_entries": 2
@@ -389,8 +389,8 @@
     },
     {
       "path": "2026/2026-11-10.md",
-      "sha256": "a6d451d561fcc11ed4f68e910b0e5d748aa369b85cd24e0f86b57b5de91f63f8",
-      "entries": 8
+      "sha256": "55ee0b8ec0e3e0428f936719eeafb751cb6e2ea62398f8a3affba7e3b0ccb1aa",
+      "entries": 9
     },
     {
       "path": "2026-08-14.md",
@@ -16369,9 +16369,29 @@
       "source": "2026/2026-11-10.md",
       "anchor": "b4-distinctness-audit-and-portal-drag",
       "start_line": 103,
-      "end_line": 115,
+      "end_line": 116,
       "title": "B4: distinctness audit and portal drag",
-      "entry_sha256": "72f4400b7a18fea5419c2695e7b822568cec95de1c2e581ba6360201dc714e2e",
+      "entry_sha256": "9bae06b2b542b478e518bc45d95e217973b1ac0a82b822a1bc726584a151088a",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-10",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-10.md#r1-channels-by-which-energy-use-writes-onto-space-t006-draft",
+      "source": "2026/2026-11-10.md",
+      "anchor": "r1-channels-by-which-energy-use-writes-onto-space-t006-draft",
+      "start_line": 117,
+      "end_line": 130,
+      "title": "R1: channels by which energy use writes onto space; T006 draft",
+      "entry_sha256": "27635e5a173f7cc7fe19bf619e17d014b27e9e399e93c891f53cd012abea1e99",
       "stream": "research",
       "areas": [
         "research-core"

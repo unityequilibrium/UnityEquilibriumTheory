@@ -1,0 +1,38 @@
+{
+  "schema": "uet-test-card-v2",
+  "test_id": "T006",
+  "status": "DRAFT",
+  "claim_id": "C_T006_ENERGY_USE_GRAVITY_TRACE",
+  "theory_card": {
+    "card_id": "UET_PARENT",
+    "version": 1
+  },
+  "hypothesis": "Author points 7-8: energy use writes a trace onto space that is readable later. Through the established gravity channel (G = kappa T, Gdot = 0), the Sun's energy use (luminosity plus solar wind) lowers its gravitational parameter at d(GM)/dt / GM = -(L/(c^2 M) + wind fraction), and the planetary orbits record it. No UET-specific parameter enters; the psi channel is bounded separately (T005).",
+  "observable": {
+    "quantity": "d(GM_sun)/dt / GM_sun",
+    "unit": "per year",
+    "domain": "Sun, 2011-2015 (MESSENGER ranging of Mercury)"
+  },
+  "test_kind": "CONSTRAINT",
+  "data_sources": [
+    {
+      "data_id": "T006_SOLAR_MASS_LOSS",
+      "role": "COMPARISON",
+      "exposure": "SEEN_SUMMARY"
+    }
+  ],
+  "prediction_method": {
+    "script": "docs/core/03_lanes/open_system/t006_solar_mass_loss.py",
+    "description": "predicted = -(L/(c^2 M) + wind fraction) with L and GM from IAU 2015 B3, M = GM/G (CODATA 2018 G), Julian year; sigma_pred = wind sigma; z = |measured - predicted| / sqrt(sigma_meas^2 + sigma_pred^2)"
+  },
+  "free_parameters": [],
+  "fixed_parameters": [
+    "Gdot/G = 0 (general relativity)",
+    "solar wind fraction 2.0e-14 per year with assumed 1-sigma 1.0e-14",
+    "IAU 2015 nominal L and GM; measured value exactly as registered"
+  ],
+  "pass_criterion": "PASS if z <= 2. The Result must also report z for the null hypothesis 'energy use leaves no gravitational trace' (prediction 0) and for radiation alone.",
+  "fail_criterion": "FAILED if z > 3; INCONCLUSIVE if 2 < z <= 3, or if the registered values disagree with the journal texts.",
+  "drafted_by": "claude",
+  "note": "Disclosure: drafted after reading the measured value and the inputs; a rough hand estimate puts z near 1.5 (PASS), so the outcome is effectively known. The script was not run. This test checks author points 7-8 through standard physics and cannot distinguish UET from general relativity. The wind uncertainty is the card's own assumption; the measurement window (2011-2015) is near solar maximum, while the wind value is quoted for solar minimum."
+}

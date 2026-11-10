@@ -36,6 +36,18 @@
       "license": "numerical facts transcribed from an article abstract and a review; no figures or text redistributed",
       "visibility": "PUBLIC",
       "note": "Two anchor points only, not the full exclusion curves. Re-check against the journal texts before approval."
+    },
+    {
+      "data_id": "T006_SOLAR_MASS_LOSS",
+      "description": "Measured rate of change of the Sun's gravitational parameter from MESSENGER ranging, published solar-wind mass-loss estimate, and IAU nominal solar luminosity and GM",
+      "source": "A. Genova et al., Nature Communications 9, 289 (2018), abstract; S. R. Cranmer, Solar Wind Origin, arXiv:2507.13460 (2025); IAU 2015 Resolution B3",
+      "doi_or_url": "https://doi.org/10.1038/s41467-017-02558-1 ; https://arxiv.org/abs/2507.13460",
+      "retrieved": "2026-11-10",
+      "path": "docs/data/external/gravity/solar_mass_loss/t006_solar_mass_loss.csv",
+      "sha256": "aa7d91a34de52b9ca73df7dc63b648b1a76d8e4ce651369c3adc49f81035a42b",
+      "license": "numerical facts transcribed from article abstracts and IAU nominal values; no figures or text redistributed",
+      "visibility": "PUBLIC",
+      "note": "The solar-wind 1-sigma is an assumption of Test Card T006, not a published value. Re-check against the journal texts before approval."
     }
   ]
 }

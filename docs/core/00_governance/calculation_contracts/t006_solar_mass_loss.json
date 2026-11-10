@@ -1,0 +1,253 @@
+{
+  "schema_version": "uet-calculation-contract-v1",
+  "contract_id": "CORE_T006_SOLAR_MASS_LOSS_V1",
+  "profile": "PHYSICAL_COMPARISON",
+  "review": {
+    "status": "INCOMPLETE",
+    "reviewer": "agent:claude-t006",
+    "rationale": "Methodological contract for Test Card T006. The evidence decision lives in docs/standard. Orbit determination and solar-wind measurement are inherited from the published analyses.",
+    "coverage_evidence": [
+      "docs/core/03_lanes/open_system/uet_r1_writing_channels.py"
+    ]
+  },
+  "question": "Does the Sun's energy use (luminosity plus wind) predict the measured rate of change of its gravitational parameter?",
+  "output": {
+    "quantity": "d(GM_sun)/dt / GM_sun and its standardized deviation z",
+    "unit": "per year",
+    "domain": "Sun, 2011-2015",
+    "accuracy": "Measured 1-sigma and assumed wind 1-sigma combined in quadrature.",
+    "claim_intent": "DIAGNOSTIC"
+  },
+  "model": {
+    "formula_ids": [
+      "UET_R1_GRAVITY_CHANNEL"
+    ],
+    "assumptions": "General relativity with constant G; energy leaving the Sun as light and wind lowers its mass-energy.",
+    "approximation": "Nominal constant luminosity; wind fraction from a published solar-minimum estimate.",
+    "initial_boundary": "Present-day Sun.",
+    "drive_environment": "None.",
+    "parameters": "No fitting; Gdot = 0 fixed."
+  },
+  "data_policy": {
+    "uses_observations": true,
+    "calibration_ids": [],
+    "comparison_ids": [
+      "T006_SOLAR_MASS_LOSS"
+    ],
+    "independent_validation": false,
+    "holdout_policy": "No holdout. Measured value seen before drafting (exposure SEEN_SUMMARY), declared in Test Card T006."
+  },
+  "observation": {
+    "system_partition": {
+      "role_mode": "RELATIONAL",
+      "accounting_component_id": "system_state",
+      "boundary": "The Sun and Mercury's orbit as determined from spacecraft ranging; the comparison uses the published rate, not raw ranging data.",
+      "systems": [
+        {
+          "id": "sun",
+          "state": "Solar mass-energy and its loss by radiation and wind",
+          "state_accounting": {
+            "kind": "INDEPENDENT",
+            "state_ids": [
+              "sun.mass"
+            ],
+            "owner_ids": [],
+            "rule": "Mass-energy of the Sun."
+          }
+        },
+        {
+          "id": "ephemeris",
+          "state": "Orbit determination from MESSENGER ranging",
+          "state_accounting": {
+            "kind": "INDEPENDENT",
+            "state_ids": [
+              "ephemeris.record"
+            ],
+            "owner_ids": [],
+            "rule": "Observer record only; carries no solar mass-energy."
+          }
+        }
+      ],
+      "couplings": [
+        {
+          "id": "sun_gravity_signal",
+          "source": "sun",
+          "target": "ephemeris",
+          "kind": "SIGNAL",
+          "component_id": "propagation",
+          "map": "Solar gravity acting on Mercury and the spacecraft; light-time handled upstream"
+        },
+        {
+          "id": "sun_detection",
+          "source": "sun",
+          "target": "ephemeris",
+          "kind": "DETECTION",
+          "component_id": "detector",
+          "map": "Published fit of d(GM)/dt"
+        },
+        {
+          "id": "ephemeris_backaction",
+          "source": "ephemeris",
+          "target": "sun",
+          "kind": "BACKACTION",
+          "component_id": "detector",
+          "map": "No admitted backaction on the Sun"
+        }
+      ],
+      "observables": [
+        {
+          "id": "gm_rate",
+          "detector_id": "ephemeris",
+          "target_systems": [
+            "sun"
+          ],
+          "backaction_targets": [
+            "sun"
+          ],
+          "backaction_scope_reason": "The Sun is the only assessed owner.",
+          "quantity": "d(GM_sun)/dt / GM_sun",
+          "readout_map": "Published value transcribed only",
+          "component_id": "detector"
+        }
+      ]
+    },
+    "source_state": "The Sun as described by IAU nominal values.",
+    "generated_trace": "Change of solar gravity recorded in planetary orbits.",
+    "carrier": "Gravitational field.",
+    "observer_state": "Published ephemeris solution.",
+    "readout": "d(GM_sun)/dt / GM_sun.",
+    "backaction": "None admitted.",
+    "frame": "Solar-system barycentric frame of the published analysis",
+    "time_convention": "TDB of the published analysis; Julian year",
+    "product_level": "published derived quantities (not raw data)",
+    "corrections": [
+      {
+        "id": "orbit_determination_upstream",
+        "state": "APPLIED_UPSTREAM",
+        "evidence": "docs/data/external/gravity/solar_mass_loss/t006_solar_mass_loss.csv"
+      },
+      {
+        "id": "wind_flux_upstream",
+        "state": "APPLIED_UPSTREAM",
+        "evidence": "docs/data/external/gravity/solar_mass_loss/t006_solar_mass_loss.csv"
+      }
+    ]
+  },
+  "components": [
+    {
+      "id": "system_state",
+      "group": "system_state",
+      "disposition": "MODELED",
+      "reason": "Mass loss from nominal luminosity and the published wind estimate.",
+      "evidence": [
+        "docs/core/03_lanes/open_system/uet_r1_writing_channels.py",
+        "docs/data/external/gravity/solar_mass_loss/t006_solar_mass_loss.csv"
+      ]
+    },
+    {
+      "id": "drive_environment",
+      "group": "drive_environment",
+      "disposition": "NOT_APPLICABLE",
+      "reason": "No external drive.",
+      "evidence": []
+    },
+    {
+      "id": "propagation",
+      "group": "propagation",
+      "disposition": "UPSTREAM_CORRECTED",
+      "reason": "Applied upstream in the published analyses (MESSENGER orbit determination, Genova et al. 2018; solar-wind mass flux, Cranmer 2025); not recomputed here.",
+      "evidence": [
+        "docs/data/external/gravity/solar_mass_loss/t006_solar_mass_loss.csv"
+      ]
+    },
+    {
+      "id": "frame_time",
+      "group": "frame_time",
+      "disposition": "UPSTREAM_CORRECTED",
+      "reason": "Applied upstream in the published analyses (MESSENGER orbit determination, Genova et al. 2018; solar-wind mass flux, Cranmer 2025); not recomputed here.",
+      "evidence": [
+        "docs/data/external/gravity/solar_mass_loss/t006_solar_mass_loss.csv"
+      ]
+    },
+    {
+      "id": "detector",
+      "group": "detector",
+      "disposition": "UPSTREAM_CORRECTED",
+      "reason": "Applied upstream in the published analyses (MESSENGER orbit determination, Genova et al. 2018; solar-wind mass flux, Cranmer 2025); not recomputed here.",
+      "evidence": [
+        "docs/data/external/gravity/solar_mass_loss/t006_solar_mass_loss.csv"
+      ]
+    },
+    {
+      "id": "processing",
+      "group": "processing",
+      "disposition": "MODELED",
+      "reason": "Prediction -(L/(c^2 M) + wind); z against the measured value.",
+      "evidence": [
+        "docs/core/03_lanes/open_system/t006_solar_mass_loss.py",
+        "docs/core/03_lanes/open_system/uet_r1_writing_channels.py"
+      ]
+    },
+    {
+      "id": "numerics",
+      "group": "numerics",
+      "disposition": "MODELED",
+      "reason": "Closed-form arithmetic; orbit response and radiation entropy covered by physics tests.",
+      "evidence": [
+        "docs/core/05_tests/physics/test_r1_writing_channels.py"
+      ]
+    }
+  ],
+  "error_budget": {
+    "unit": "per year",
+    "numerical": "Floating point only.",
+    "approximation": "Constant luminosity; solar-minimum wind value applied to a solar-maximum window.",
+    "measurement": "Published 1-sigma of the GM rate.",
+    "systematic": "Wind 1-sigma is the card's own assumption; journal cross-check not done.",
+    "omissions": "Coronal mass ejections and the infalling dust and comet mass are not modelled separately.",
+    "dependence": "Measured rate and wind estimate are independent.",
+    "acceptance": "Outcome categories fixed in Test Card T006 (z <= 2 PASS, 2 < z <= 3 INCONCLUSIVE, z > 3 FAIL).",
+    "omission_limit": null
+  },
+  "identities": [
+    {
+      "path": "docs/data/external/gravity/solar_mass_loss/t006_solar_mass_loss.csv",
+      "kind": "working_file",
+      "role": "input",
+      "sha256": "aa7d91a34de52b9ca73df7dc63b648b1a76d8e4ce651369c3adc49f81035a42b",
+      "availability": "REQUIRED"
+    },
+    {
+      "path": "docs/core/03_lanes/open_system/uet_r1_writing_channels.py",
+      "kind": "working_file",
+      "role": "code",
+      "sha256": "484a5a1e6321ef4f9d90f5c5574b4e576623b7ecd0bc62664dddb0caa3b5bc25",
+      "availability": "REQUIRED"
+    },
+    {
+      "path": "docs/core/03_lanes/open_system/t006_solar_mass_loss.py",
+      "kind": "working_file",
+      "role": "code",
+      "sha256": "07a5a014f1dbd788bdf9404fc89c02ae9989ddbfb1ac9ba70e018f98b1cd170d",
+      "availability": "REQUIRED"
+    },
+    {
+      "path": "docs/core/05_tests/physics/test_r1_writing_channels.py",
+      "kind": "working_file",
+      "role": "code",
+      "sha256": "1d5fa74e0777587c6bf8faaa57acfa0bbe580a3b6b7d5053a01603e668c5d2dd",
+      "availability": "REQUIRED"
+    }
+  ],
+  "entrypoints": [
+    "docs/core/03_lanes/open_system/t006_solar_mass_loss.py",
+    "docs/core/03_lanes/open_system/uet_r1_writing_channels.py"
+  ],
+  "evidence": [
+    "docs/core/03_lanes/open_system/t006_solar_mass_loss.py",
+    "docs/core/03_lanes/open_system/uet_r1_writing_channels.py",
+    "docs/data/external/gravity/solar_mass_loss/t006_solar_mass_loss.csv"
+  ],
+  "claim_boundary": "Methodological coverage of the T006 comparison only. The evidence level is set in docs/standard. The test cannot distinguish UET from general relativity.",
+  "next_action": "Cross-check transcribed values against the journal texts; use a wind value for the measurement window if a published one is found."
+}
