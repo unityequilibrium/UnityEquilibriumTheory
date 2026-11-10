@@ -169,3 +169,10 @@ commit: this commit
 ระดับ: C_T007_RESOURCE_SELECTION_CHEMOSTAT → L2_CONFRONTED (PASS; ผู้เขียนอนุมัติ)
 ถัดไป: Test Card สาขาถัดไปของทาง ก (เลเซอร์จริง, เคมี, ดาวแคระขาว)
 commit: this commit
+
+## 2026-11-10 — Path-ก batch: feasibility of all planned systems; T008 and T009 drafted
+ทำ: ค้นข้อมูลระบบ T008–T018 ตามแผน; เขียนโมเดล uet_path_a_models.py (Mestel cooling เป็น passive burner n = 7/2, secular equilibrium, negative control ปฏิกิริยาขนานไม่ autocatalytic) พร้อม 3 physics test; ร่าง T008 (ดาวแคระขาว) และ T009 (U-234) พร้อมข้อมูลล็อก hash
+ผล: ยังไม่รัน; T013/T014 (เลเซอร์ clamping, chemostat ขาเข้า) ยังหาข้อมูลตัวเลขเปิดไม่ได้; negative control ส่วนเคมีผ่านระดับ L1 (ไม่มีผู้ชนะเมื่อไม่ autocatalytic)
+ระดับ: claim ใหม่ C_T008_*, C_T009_* ที่ L0 (DRAFT)
+ถัดไป: ผู้เขียนอนุมัติ T008/T009 พร้อมกัน; หาข้อมูล T013/T014/T016 ต่อ
+commit: this commit

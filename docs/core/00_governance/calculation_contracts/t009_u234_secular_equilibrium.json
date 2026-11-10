@@ -1,0 +1,253 @@
+{
+  "schema_version": "uet-calculation-contract-v1",
+  "contract_id": "CORE_T009_U234_SECULAR_EQUILIBRIUM_V1",
+  "profile": "PHYSICAL_COMPARISON",
+  "review": {
+    "status": "INCOMPLETE",
+    "reviewer": "agent:claude-t009",
+    "rationale": "Methodological contract for Test Card T009. The evidence decision lives in docs/standard. Measurements are inherited from the published analyses.",
+    "coverage_evidence": [
+      "docs/core/03_lanes/persistence/uet_path_a_models.py"
+    ]
+  },
+  "question": "Does the abundance law N = b tau, applied to a decay chain in secular equilibrium, reproduce an independently measured 234U half-life?",
+  "output": {
+    "quantity": "difference of the equilibrium-inferred and direct 234U half-lives and its z",
+    "unit": "yr",
+    "domain": "natural secular-equilibrium samples and a direct determination",
+    "accuracy": "Published uncertainties inherited; see the Test Card.",
+    "claim_intent": "DIAGNOSTIC"
+  },
+  "model": {
+    "formula_ids": [
+      "UET_PATH_A_MODELS"
+    ],
+    "assumptions": "Abundance law N = b tau with the A4 burn-law lifetime; constant formation rate.",
+    "approximation": "Power-law burn law (white dwarfs) or exact exponential decay (decay chain).",
+    "initial_boundary": "Steady populations.",
+    "drive_environment": "None.",
+    "parameters": "No fitting."
+  },
+  "data_policy": {
+    "uses_observations": true,
+    "calibration_ids": [],
+    "comparison_ids": [
+      "U234_HALF_LIFE_EQ_VS_DIRECT"
+    ],
+    "independent_validation": false,
+    "holdout_policy": "No holdout. Published values seen before drafting (exposure SEEN_FULL), declared in Test Card T009."
+  },
+  "observation": {
+    "system_partition": {
+      "role_mode": "RELATIONAL",
+      "accounting_component_id": "system_state",
+      "boundary": "Published values only; no raw data.",
+      "systems": [
+        {
+          "id": "populations",
+          "state": "Uranium atoms in closed natural samples",
+          "state_accounting": {
+            "kind": "INDEPENDENT",
+            "state_ids": [
+              "populations.state"
+            ],
+            "owner_ids": [],
+            "rule": "Uranium atoms in each closed sample."
+          }
+        },
+        {
+          "id": "counts",
+          "state": "Mass spectrometry of 234U/238U and direct half-life determination",
+          "state_accounting": {
+            "kind": "INDEPENDENT",
+            "state_ids": [
+              "counts.record"
+            ],
+            "owner_ids": [],
+            "rule": "Observer record only."
+          }
+        }
+      ],
+      "couplings": [
+        {
+          "id": "population_signal",
+          "source": "populations",
+          "target": "counts",
+          "kind": "SIGNAL",
+          "component_id": "propagation",
+          "map": "Measurement chain handled upstream"
+        },
+        {
+          "id": "population_detection",
+          "source": "populations",
+          "target": "counts",
+          "kind": "DETECTION",
+          "component_id": "detector",
+          "map": "Published values"
+        },
+        {
+          "id": "counts_backaction",
+          "source": "counts",
+          "target": "populations",
+          "kind": "BACKACTION",
+          "component_id": "detector",
+          "map": "No admitted backaction"
+        }
+      ],
+      "observables": [
+        {
+          "id": "outcome",
+          "detector_id": "counts",
+          "target_systems": [
+            "populations"
+          ],
+          "backaction_targets": [
+            "populations"
+          ],
+          "backaction_scope_reason": "The populations are the only assessed owner.",
+          "quantity": "difference of the equilibrium-inferred and direct 234U half-lives and its z",
+          "readout_map": "Published values transcribed only",
+          "component_id": "detector"
+        }
+      ]
+    },
+    "source_state": "As described by the published analyses.",
+    "generated_trace": "Decay products; not a UET trace variable.",
+    "carrier": "Alpha decays and ions in the mass spectrometer.",
+    "observer_state": "Published half-life values",
+    "readout": "234U half-life values.",
+    "backaction": "None admitted.",
+    "frame": "Laboratory",
+    "time_convention": "Years",
+    "product_level": "published derived quantities (not raw data)",
+    "corrections": [
+      {
+        "id": "selection_upstream",
+        "state": "APPLIED_UPSTREAM",
+        "evidence": "docs/data/external/nuclear/u234_half_life/u234_half_life.csv"
+      },
+      {
+        "id": "measurement_upstream",
+        "state": "APPLIED_UPSTREAM",
+        "evidence": "docs/data/external/nuclear/u234_half_life/u234_half_life.csv"
+      }
+    ]
+  },
+  "components": [
+    {
+      "id": "system_state",
+      "group": "system_state",
+      "disposition": "MODELED",
+      "reason": "Abundance law with burn-law lifetime.",
+      "evidence": [
+        "docs/data/external/nuclear/u234_half_life/u234_half_life.csv",
+        "docs/core/03_lanes/persistence/uet_path_a_models.py"
+      ]
+    },
+    {
+      "id": "drive_environment",
+      "group": "drive_environment",
+      "disposition": "NOT_APPLICABLE",
+      "reason": "No external drive.",
+      "evidence": []
+    },
+    {
+      "id": "propagation",
+      "group": "propagation",
+      "disposition": "UPSTREAM_CORRECTED",
+      "reason": "Applied upstream in the published analyses (mass spectrometry, sample selection; Hu et al. 2025; Varga et al. 2016); not recomputed here.",
+      "evidence": [
+        "docs/data/external/nuclear/u234_half_life/u234_half_life.csv"
+      ]
+    },
+    {
+      "id": "frame_time",
+      "group": "frame_time",
+      "disposition": "UPSTREAM_CORRECTED",
+      "reason": "Applied upstream in the published analyses (mass spectrometry, sample selection; Hu et al. 2025; Varga et al. 2016); not recomputed here.",
+      "evidence": [
+        "docs/data/external/nuclear/u234_half_life/u234_half_life.csv"
+      ]
+    },
+    {
+      "id": "detector",
+      "group": "detector",
+      "disposition": "UPSTREAM_CORRECTED",
+      "reason": "Applied upstream in the published analyses (mass spectrometry, sample selection; Hu et al. 2025; Varga et al. 2016); not recomputed here.",
+      "evidence": [
+        "docs/data/external/nuclear/u234_half_life/u234_half_life.csv"
+      ]
+    },
+    {
+      "id": "processing",
+      "group": "processing",
+      "disposition": "MODELED",
+      "reason": "Closed-form comparison defined in the Test Card.",
+      "evidence": [
+        "docs/core/03_lanes/persistence/t009_u234_secular_equilibrium.py",
+        "docs/core/03_lanes/persistence/uet_path_a_models.py"
+      ]
+    },
+    {
+      "id": "numerics",
+      "group": "numerics",
+      "disposition": "MODELED",
+      "reason": "Closed-form arithmetic; the selection model is covered by physics tests.",
+      "evidence": [
+        "docs/core/05_tests/physics/test_path_a_models.py"
+      ]
+    }
+  ],
+  "error_budget": {
+    "unit": "yr",
+    "numerical": "Floating point only.",
+    "approximation": "See the Test Card.",
+    "measurement": "Published uncertainties as registered.",
+    "systematic": "Journal cross-check of the transcribed values pending.",
+    "omissions": "See the Test Card note.",
+    "dependence": "Independent published sources.",
+    "acceptance": "Outcome categories fixed in Test Card T009.",
+    "omission_limit": null
+  },
+  "identities": [
+    {
+      "path": "docs/data/external/nuclear/u234_half_life/u234_half_life.csv",
+      "kind": "working_file",
+      "role": "input",
+      "sha256": "8dffcf0efd56f49a790f10483239e9ee976adbedff069d942229d4cecfc737c2",
+      "availability": "REQUIRED"
+    },
+    {
+      "path": "docs/core/03_lanes/persistence/uet_path_a_models.py",
+      "kind": "working_file",
+      "role": "code",
+      "sha256": "4eca7ad0f450e71d0fff06e564bc892794deea8014463ddfeca18f25b54871ae",
+      "availability": "REQUIRED"
+    },
+    {
+      "path": "docs/core/03_lanes/persistence/t009_u234_secular_equilibrium.py",
+      "kind": "working_file",
+      "role": "code",
+      "sha256": "3d05cde07cff713aa55a3117ac6f8173218d71d666ea12773af95cbf979af235",
+      "availability": "REQUIRED"
+    },
+    {
+      "path": "docs/core/05_tests/physics/test_path_a_models.py",
+      "kind": "working_file",
+      "role": "code",
+      "sha256": "c25dba8cc8e355c1b23ecdd7df6978d953b4383bfd38661405ef5bbe0e8cbccc",
+      "availability": "REQUIRED"
+    }
+  ],
+  "entrypoints": [
+    "docs/core/03_lanes/persistence/t009_u234_secular_equilibrium.py",
+    "docs/core/03_lanes/persistence/uet_path_a_models.py"
+  ],
+  "evidence": [
+    "docs/core/03_lanes/persistence/t009_u234_secular_equilibrium.py",
+    "docs/core/03_lanes/persistence/uet_path_a_models.py",
+    "docs/data/external/nuclear/u234_half_life/u234_half_life.csv"
+  ],
+  "claim_boundary": "Methodological coverage of the T009 comparison only. The evidence level is set in docs/standard.",
+  "next_action": "Cross-check the transcribed values against the journal texts."
+}

@@ -1,0 +1,253 @@
+{
+  "schema_version": "uet-calculation-contract-v1",
+  "contract_id": "CORE_T008_WHITE_DWARF_LF_V1",
+  "profile": "PHYSICAL_COMPARISON",
+  "review": {
+    "status": "INCOMPLETE",
+    "reviewer": "agent:claude-t008",
+    "rationale": "Methodological contract for Test Card T008. The evidence decision lives in docs/standard. Measurements are inherited from the published analyses.",
+    "coverage_evidence": [
+      "docs/core/03_lanes/persistence/uet_path_a_models.py"
+    ]
+  },
+  "question": "Does the UET burn-law lifetime with Mestel cooling predict the slope of the white dwarf luminosity function?",
+  "output": {
+    "quantity": "slope d log10 N / d Mbol and its log10 deviation from the observed slope",
+    "unit": "dex/mag",
+    "domain": "SDSS DA white dwarfs, Mbol 6.0-13.5",
+    "accuracy": "Published uncertainties inherited; see the Test Card.",
+    "claim_intent": "DIAGNOSTIC"
+  },
+  "model": {
+    "formula_ids": [
+      "UET_PATH_A_MODELS"
+    ],
+    "assumptions": "Abundance law N = b tau with the A4 burn-law lifetime; constant formation rate.",
+    "approximation": "Power-law burn law (white dwarfs) or exact exponential decay (decay chain).",
+    "initial_boundary": "Steady populations.",
+    "drive_environment": "None.",
+    "parameters": "No fitting."
+  },
+  "data_policy": {
+    "uses_observations": true,
+    "calibration_ids": [],
+    "comparison_ids": [
+      "HU2007_SDSS_DA_WD_LF"
+    ],
+    "independent_validation": false,
+    "holdout_policy": "No holdout. Published values seen before drafting (exposure SEEN_FULL), declared in Test Card T008."
+  },
+  "observation": {
+    "system_partition": {
+      "role_mode": "RELATIONAL",
+      "accounting_component_id": "system_state",
+      "boundary": "Published values only; no raw data.",
+      "systems": [
+        {
+          "id": "populations",
+          "state": "White dwarf population in the SDSS footprint",
+          "state_accounting": {
+            "kind": "INDEPENDENT",
+            "state_ids": [
+              "populations.state"
+            ],
+            "owner_ids": [],
+            "rule": "White dwarfs counted in each luminosity bin."
+          }
+        },
+        {
+          "id": "counts",
+          "state": "SDSS photometry and spectroscopy with completeness corrections",
+          "state_accounting": {
+            "kind": "INDEPENDENT",
+            "state_ids": [
+              "counts.record"
+            ],
+            "owner_ids": [],
+            "rule": "Observer record only."
+          }
+        }
+      ],
+      "couplings": [
+        {
+          "id": "population_signal",
+          "source": "populations",
+          "target": "counts",
+          "kind": "SIGNAL",
+          "component_id": "propagation",
+          "map": "Measurement chain handled upstream"
+        },
+        {
+          "id": "population_detection",
+          "source": "populations",
+          "target": "counts",
+          "kind": "DETECTION",
+          "component_id": "detector",
+          "map": "Published values"
+        },
+        {
+          "id": "counts_backaction",
+          "source": "counts",
+          "target": "populations",
+          "kind": "BACKACTION",
+          "component_id": "detector",
+          "map": "No admitted backaction"
+        }
+      ],
+      "observables": [
+        {
+          "id": "outcome",
+          "detector_id": "counts",
+          "target_systems": [
+            "populations"
+          ],
+          "backaction_targets": [
+            "populations"
+          ],
+          "backaction_scope_reason": "The populations are the only assessed owner.",
+          "quantity": "slope d log10 N / d Mbol and its log10 deviation from the observed slope",
+          "readout_map": "Published values transcribed only",
+          "component_id": "detector"
+        }
+      ]
+    },
+    "source_state": "As described by the published analyses.",
+    "generated_trace": "Starlight; not a UET trace variable.",
+    "carrier": "Photons.",
+    "observer_state": "Published luminosity function",
+    "readout": "Luminosity-function slope over Mbol 6.0-13.5.",
+    "backaction": "None admitted.",
+    "frame": "Solar neighbourhood (survey frame)",
+    "time_convention": "Cooling time of the published models",
+    "product_level": "published derived quantities (not raw data)",
+    "corrections": [
+      {
+        "id": "selection_upstream",
+        "state": "APPLIED_UPSTREAM",
+        "evidence": "docs/data/external/astronomy/white_dwarf_lf/hu2007_sdss_da_wd_lf.csv"
+      },
+      {
+        "id": "measurement_upstream",
+        "state": "APPLIED_UPSTREAM",
+        "evidence": "docs/data/external/astronomy/white_dwarf_lf/hu2007_sdss_da_wd_lf.csv"
+      }
+    ]
+  },
+  "components": [
+    {
+      "id": "system_state",
+      "group": "system_state",
+      "disposition": "MODELED",
+      "reason": "Abundance law with burn-law lifetime.",
+      "evidence": [
+        "docs/data/external/astronomy/white_dwarf_lf/hu2007_sdss_da_wd_lf.csv",
+        "docs/core/03_lanes/persistence/uet_path_a_models.py"
+      ]
+    },
+    {
+      "id": "drive_environment",
+      "group": "drive_environment",
+      "disposition": "NOT_APPLICABLE",
+      "reason": "No external drive.",
+      "evidence": []
+    },
+    {
+      "id": "propagation",
+      "group": "propagation",
+      "disposition": "UPSTREAM_CORRECTED",
+      "reason": "Applied upstream in the published analysis (photometry, completeness correction, bolometric magnitudes; Hu, Wu and Wu 2007); not recomputed here.",
+      "evidence": [
+        "docs/data/external/astronomy/white_dwarf_lf/hu2007_sdss_da_wd_lf.csv"
+      ]
+    },
+    {
+      "id": "frame_time",
+      "group": "frame_time",
+      "disposition": "UPSTREAM_CORRECTED",
+      "reason": "Applied upstream in the published analysis (photometry, completeness correction, bolometric magnitudes; Hu, Wu and Wu 2007); not recomputed here.",
+      "evidence": [
+        "docs/data/external/astronomy/white_dwarf_lf/hu2007_sdss_da_wd_lf.csv"
+      ]
+    },
+    {
+      "id": "detector",
+      "group": "detector",
+      "disposition": "UPSTREAM_CORRECTED",
+      "reason": "Applied upstream in the published analysis (photometry, completeness correction, bolometric magnitudes; Hu, Wu and Wu 2007); not recomputed here.",
+      "evidence": [
+        "docs/data/external/astronomy/white_dwarf_lf/hu2007_sdss_da_wd_lf.csv"
+      ]
+    },
+    {
+      "id": "processing",
+      "group": "processing",
+      "disposition": "MODELED",
+      "reason": "Closed-form comparison defined in the Test Card.",
+      "evidence": [
+        "docs/core/03_lanes/persistence/t008_white_dwarf_lf.py",
+        "docs/core/03_lanes/persistence/uet_path_a_models.py"
+      ]
+    },
+    {
+      "id": "numerics",
+      "group": "numerics",
+      "disposition": "MODELED",
+      "reason": "Closed-form arithmetic; the selection model is covered by physics tests.",
+      "evidence": [
+        "docs/core/05_tests/physics/test_path_a_models.py"
+      ]
+    }
+  ],
+  "error_budget": {
+    "unit": "dex/mag",
+    "numerical": "Floating point only.",
+    "approximation": "See the Test Card.",
+    "measurement": "Published uncertainties as registered.",
+    "systematic": "Journal cross-check of the transcribed values pending.",
+    "omissions": "See the Test Card note.",
+    "dependence": "Independent published sources.",
+    "acceptance": "Outcome categories fixed in Test Card T008.",
+    "omission_limit": null
+  },
+  "identities": [
+    {
+      "path": "docs/data/external/astronomy/white_dwarf_lf/hu2007_sdss_da_wd_lf.csv",
+      "kind": "working_file",
+      "role": "input",
+      "sha256": "3291fddbfff6d73f3dbf2f0f691ff2bd2784ea7d0df6ae814b5fd201267104d3",
+      "availability": "REQUIRED"
+    },
+    {
+      "path": "docs/core/03_lanes/persistence/uet_path_a_models.py",
+      "kind": "working_file",
+      "role": "code",
+      "sha256": "4eca7ad0f450e71d0fff06e564bc892794deea8014463ddfeca18f25b54871ae",
+      "availability": "REQUIRED"
+    },
+    {
+      "path": "docs/core/03_lanes/persistence/t008_white_dwarf_lf.py",
+      "kind": "working_file",
+      "role": "code",
+      "sha256": "dd7816c208488e5545731d20eee168b7b76ef58e67c8ba840d330dd2886d2ba3",
+      "availability": "REQUIRED"
+    },
+    {
+      "path": "docs/core/05_tests/physics/test_path_a_models.py",
+      "kind": "working_file",
+      "role": "code",
+      "sha256": "c25dba8cc8e355c1b23ecdd7df6978d953b4383bfd38661405ef5bbe0e8cbccc",
+      "availability": "REQUIRED"
+    }
+  ],
+  "entrypoints": [
+    "docs/core/03_lanes/persistence/t008_white_dwarf_lf.py",
+    "docs/core/03_lanes/persistence/uet_path_a_models.py"
+  ],
+  "evidence": [
+    "docs/core/03_lanes/persistence/t008_white_dwarf_lf.py",
+    "docs/core/03_lanes/persistence/uet_path_a_models.py",
+    "docs/data/external/astronomy/white_dwarf_lf/hu2007_sdss_da_wd_lf.csv"
+  ],
+  "claim_boundary": "Methodological coverage of the T008 comparison only. The evidence level is set in docs/standard.",
+  "next_action": "Cross-check the transcribed values against the journal texts."
+}

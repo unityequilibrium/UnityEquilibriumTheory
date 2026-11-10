@@ -153,6 +153,20 @@
         "R_T007_TILMAN_CHEMOSTAT"
       ],
       "note": "Path-A test outside physics. Re-analysis with the same model Tilman used, not an independent experiment. L2 approved by the author on 2026-11-10."
+    },
+    {
+      "claim_id": "C_T008_WHITE_DWARF_COOLING_ABUNDANCE",
+      "statement": "The burn-law lifetime of a passive burner (P ~ F^(7/2), Mestel cooling) plus the abundance law reproduces the slope of the white dwarf luminosity function.",
+      "level": "L0_SPECULATIVE",
+      "evidence": [],
+      "note": "Test Card T008 is a DRAFT awaiting author approval."
+    },
+    {
+      "claim_id": "C_T009_DECAY_CHAIN_ABUNDANCE",
+      "statement": "The abundance law N = b tau holds for the 238U-234U decay chain: the half-life inferred from secular-equilibrium abundances matches one measured without equilibrium.",
+      "level": "L0_SPECULATIVE",
+      "evidence": [],
+      "note": "Test Card T009 is a DRAFT awaiting author approval."
     }
   ]
 }

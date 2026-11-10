@@ -60,6 +60,30 @@
       "license": "numerical facts transcribed from a journal article; no figures or text redistributed",
       "visibility": "PUBLIC",
       "note": "Figure 12/13 point data were not transcribed (the text extraction was unreliable). DOI confirmed (10.2307/1935608)."
+    },
+    {
+      "data_id": "HU2007_SDSS_DA_WD_LF",
+      "description": "Slope of the SDSS DA white dwarf luminosity function over Mbol 6.0-13.5 and the Mestel luminosity-temperature exponent",
+      "source": "Hu, Wu and Wu, The mass and luminosity functions and the formation rate of DA white dwarfs in the Sloan Digital Sky Survey, Astron. Astrophys. (accepted 5 January 2007), Sect. 4; Mestel 1952 for L ~ T^(7/2)",
+      "doi_or_url": "https://scispace.com/pdf/the-mass-and-luminosity-functions-and-the-formation-rate-of-4j14wwray8.pdf",
+      "retrieved": "2026-11-10",
+      "path": "docs/data/external/astronomy/white_dwarf_lf/hu2007_sdss_da_wd_lf.csv",
+      "sha256": "3291fddbfff6d73f3dbf2f0f691ff2bd2784ea7d0df6ae814b5fd201267104d3",
+      "license": "numerical facts transcribed from a journal article; no figures or text redistributed",
+      "visibility": "PUBLIC",
+      "note": "Journal volume/pages and DOI not yet confirmed; the source quotes no slope uncertainty."
+    },
+    {
+      "data_id": "U234_HALF_LIFE_EQ_VS_DIRECT",
+      "description": "234U half-life inferred from secular-equilibrium abundances versus one measured without secular equilibrium",
+      "source": "H.-M. Hu et al., Science Advances 11, eadu8117 (2025); Z. Varga et al., Anal. Chem. 88, 2763-2769 (2016), as quoted by Hu et al.",
+      "doi_or_url": "https://doi.org/10.1126/sciadv.adu8117 ; https://doi.org/10.1021/acs.analchem.5b04370",
+      "retrieved": "2026-11-10",
+      "path": "docs/data/external/nuclear/u234_half_life/u234_half_life.csv",
+      "sha256": "8dffcf0efd56f49a790f10483239e9ee976adbedff069d942229d4cecfc737c2",
+      "license": "numerical facts transcribed from article text; no figures or text redistributed",
+      "visibility": "PUBLIC",
+      "note": "The direct value is taken as quoted by Hu et al. 2025; the Varga et al. 2016 text was not opened."
     }
   ]
 }

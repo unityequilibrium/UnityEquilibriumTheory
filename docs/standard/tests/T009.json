@@ -1,0 +1,36 @@
+{
+  "schema": "uet-test-card-v2",
+  "test_id": "T009",
+  "status": "DRAFT",
+  "claim_id": "C_T009_DECAY_CHAIN_ABUNDANCE",
+  "theory_card": {
+    "card_id": "UET_PARENT",
+    "version": 1
+  },
+  "hypothesis": "The abundance law N = b tau (layer 3, Little's law) holds for a nuclear decay chain (passive burner with P ~ F): in secular equilibrium N(234U)/N(238U) = T(234U)/T(238U). If so, the 234U half-life inferred from equilibrium abundances must equal one measured without assuming equilibrium. Path-A test in nuclear physics.",
+  "observable": {
+    "quantity": "234U half-life: equilibrium-inferred minus directly measured",
+    "unit": "yr",
+    "domain": "secular-equilibrium natural samples (Hu et al. 2025) and a direct determination (Varga et al. 2016)"
+  },
+  "test_kind": "CONSTRAINT",
+  "data_sources": [
+    {
+      "data_id": "U234_HALF_LIFE_EQ_VS_DIRECT",
+      "role": "COMPARISON",
+      "exposure": "SEEN_FULL"
+    }
+  ],
+  "prediction_method": {
+    "script": "docs/core/03_lanes/persistence/t009_u234_secular_equilibrium.py",
+    "description": "z = |T_eq - T_direct| / sqrt(sigma_eq^2 + sigma_direct^2)"
+  },
+  "free_parameters": [],
+  "fixed_parameters": [
+    "both half-lives exactly as registered"
+  ],
+  "pass_criterion": "PASS if z <= 2.",
+  "fail_criterion": "FAILED if z > 3; INCONCLUSIVE if 2 < z <= 3 or if the registered values disagree with the source texts.",
+  "drafted_by": "claude",
+  "note": "Disclosure: drafted after reading both values (245,670 +/- 260 and 244,900 +/- 1340 yr); a hand estimate gives z near 0.6, so the outcome is effectively known. Secular equilibrium is textbook physics; the test checks that the UET abundance law carries over to nuclear decay. The direct value is taken as quoted by Hu et al. 2025."
+}
