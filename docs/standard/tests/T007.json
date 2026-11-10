@@ -1,7 +1,7 @@
 {
   "schema": "uet-test-card-v2",
   "test_id": "T007",
-  "status": "DRAFT",
+  "status": "APPROVED",
   "claim_id": "C_T007_RESOURCE_SELECTION_CHEMOSTAT",
   "theory_card": {
     "card_id": "UET_PARENT",
@@ -34,5 +34,10 @@
   "pass_criterion": "PASS if a resource trade-off exists (the P-better species is not the Si-better species) and both predicted boundaries lie within |log10(predicted/observed)| <= 0.1 of the observed boundaries (about 80 and 6). The Result must also report predicted and observed outcomes of each ratio group, including the mixed Si/P = 38 group.",
   "fail_criterion": "FAILED if no trade-off exists, or if either boundary deviates by |log10| > 0.3 (more than a factor of 2). INCONCLUSIVE if the worst deviation lies between 0.1 and 0.3, or if the registered values disagree with the journal text.",
   "drafted_by": "claude",
-  "note": "Disclosure: drafted after reading the full results, and the boundary arithmetic (86.9 and 6.2 against about 80 and 6) was done by hand while reading, so the outcome is effectively known. The script was not run. Layer 3 is mathematically the same model Tilman used (B4), so this re-analysis confirms layer 3 with Tilman's own data; it is not an independent experiment. Monoculture physiology was measured separately from the competition runs, which keeps the prediction non-circular. The Si/P = 38 group does not fully match a pure coexistence prediction (Asterionella won at the lowest and highest flow rates); Tilman attributes this to luxury phosphate consumption and boundary curvature, which the ratio-only prediction does not model."
+  "note": "Disclosure: drafted after reading the full results, and the boundary arithmetic (86.9 and 6.2 against about 80 and 6) was done by hand while reading, so the outcome is effectively known. The script was not run. Layer 3 is mathematically the same model Tilman used (B4), so this re-analysis confirms layer 3 with Tilman's own data; it is not an independent experiment. Monoculture physiology was measured separately from the competition runs, which keeps the prediction non-circular. The Si/P = 38 group does not fully match a pure coexistence prediction (Asterionella won at the lowest and highest flow rates); Tilman attributes this to luxury phosphate consumption and boundary curvature, which the ratio-only prediction does not model. Approved by the author on 2026-11-10 as drafted.",
+  "approval": {
+    "approved_by": "santxkoz",
+    "date": "2026-11-10",
+    "role": "AUTHOR"
+  }
 }
