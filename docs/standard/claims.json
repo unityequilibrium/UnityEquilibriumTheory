@@ -144,6 +144,13 @@
         "R_R3_TRACE_DECOMPOSITION"
       ],
       "note": "Author clarification 2026-11-10: the trace is a number or potential difference, not a new thing in the universe. Standard non-equilibrium physics."
+    },
+    {
+      "claim_id": "C_T007_RESOURCE_SELECTION_CHEMOSTAT",
+      "statement": "Layer-3 resource selection with two essential resources predicts, from monoculture physiology alone, the dominance and coexistence regions of Tilman's (1977) diatom chemostat competition.",
+      "level": "L0_SPECULATIVE",
+      "evidence": [],
+      "note": "Test Card T007 is a DRAFT awaiting author approval."
     }
   ]
 }

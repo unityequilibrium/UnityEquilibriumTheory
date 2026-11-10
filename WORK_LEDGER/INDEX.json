@@ -5,11 +5,11 @@
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
     "sources": 75,
-    "entries": 807,
+    "entries": 808,
     "by_stream": {
       "book-history": 94,
       "operations": 112,
-      "research": 601
+      "research": 602
     },
     "exact_duplicates": 0,
     "review_entries": 2
@@ -389,8 +389,8 @@
     },
     {
       "path": "2026/2026-11-10.md",
-      "sha256": "5355b284c46b6c5adaba1f90eaa8c3212601a155118d0ebf4b7a71dcb1b75d06",
-      "entries": 14
+      "sha256": "bdf32a0b5ad76190ff47b95f355f2b1c24dcf36d03c1358a8d15190dfa0b04c8",
+      "entries": 15
     },
     {
       "path": "2026-08-14.md",
@@ -16489,9 +16489,29 @@
       "source": "2026/2026-11-10.md",
       "anchor": "synthesis-audit-borrowed-principles-and-their-composition",
       "start_line": 187,
-      "end_line": 199,
+      "end_line": 200,
       "title": "Synthesis audit: borrowed principles and their composition",
-      "entry_sha256": "b04a5510fc4a72230905d61ff489f56670c7cba717936d73742cd8c015a3933e",
+      "entry_sha256": "4ec74a0c62d39f9f7b94bf32f5da8efc8ff2ed3a2d21802cce992e1b8c768894",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-10",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-10.md#t007-draft-layer-3-selection-versus-tilman-1977-chemostat-competition",
+      "source": "2026/2026-11-10.md",
+      "anchor": "t007-draft-layer-3-selection-versus-tilman-1977-chemostat-competition",
+      "start_line": 201,
+      "end_line": 213,
+      "title": "T007 draft: layer-3 selection versus Tilman (1977) chemostat competition",
+      "entry_sha256": "7929ef65c7bf3b2ec953a5e2fb84d200752a2882ce1f964c81f05a93a2bbe2dd",
       "stream": "research",
       "areas": [
         "research-core"

@@ -1,0 +1,38 @@
+{
+  "schema": "uet-test-card-v2",
+  "test_id": "T007",
+  "status": "DRAFT",
+  "claim_id": "C_T007_RESOURCE_SELECTION_CHEMOSTAT",
+  "theory_card": {
+    "card_id": "UET_PARENT",
+    "version": 1
+  },
+  "hypothesis": "Layer 3 (selection by resource use; claims C_L3_SELECTION_FORMAL, C_L3_BURN_LAW_SELECTION) applied to two self-replicating species with two essential resources predicts, from monoculture physiology alone, the supply-ratio regions in which each species wins or both coexist. This is the first path-A test of the combined law outside physics (synthesis audit, principles P7 and P8).",
+  "observable": {
+    "quantity": "Si/P supply-ratio boundaries of the dominance regions; predicted versus observed outcome of each reported ratio group",
+    "unit": "uM/uM",
+    "domain": "Asterionella formosa and Cyclotella meneghiniana in chemostats, Tilman (1977), 76 experiments"
+  },
+  "test_kind": "CONSTRAINT",
+  "data_sources": [
+    {
+      "data_id": "TILMAN1977_CHEMOSTAT",
+      "role": "COMPARISON",
+      "exposure": "SEEN_FULL"
+    }
+  ],
+  "prediction_method": {
+    "script": "docs/core/03_lanes/persistence/t007_tilman_chemostat.py",
+    "description": "R*_ij = K_ij f/(r_ij ln2 - f) at f = 0.25/day for the trade-off check; consumption ratio c_i = Y_iP/Y_iSi; predicted boundaries = c of the P-better species (upper) and of the Si-better species (lower), valid for supply concentrations well above R*; group predictions from the stated Si/P ratios"
+  },
+  "free_parameters": [],
+  "fixed_parameters": [
+    "Table 1 values exactly as registered (no refit)",
+    "Liebig law of the minimum for essential resources",
+    "supply concentrations taken as well above R* (ratio-only prediction)"
+  ],
+  "pass_criterion": "PASS if a resource trade-off exists (the P-better species is not the Si-better species) and both predicted boundaries lie within |log10(predicted/observed)| <= 0.1 of the observed boundaries (about 80 and 6). The Result must also report predicted and observed outcomes of each ratio group, including the mixed Si/P = 38 group.",
+  "fail_criterion": "FAILED if no trade-off exists, or if either boundary deviates by |log10| > 0.3 (more than a factor of 2). INCONCLUSIVE if the worst deviation lies between 0.1 and 0.3, or if the registered values disagree with the journal text.",
+  "drafted_by": "claude",
+  "note": "Disclosure: drafted after reading the full results, and the boundary arithmetic (86.9 and 6.2 against about 80 and 6) was done by hand while reading, so the outcome is effectively known. The script was not run. Layer 3 is mathematically the same model Tilman used (B4), so this re-analysis confirms layer 3 with Tilman's own data; it is not an independent experiment. Monoculture physiology was measured separately from the competition runs, which keeps the prediction non-circular. The Si/P = 38 group does not fully match a pure coexistence prediction (Asterionella won at the lowest and highest flow rates); Tilman attributes this to luxury phosphate consumption and boundary curvature, which the ratio-only prediction does not model."
+}

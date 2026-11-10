@@ -48,6 +48,18 @@
       "license": "numerical facts transcribed from article abstracts and IAU nominal values; no figures or text redistributed",
       "visibility": "PUBLIC",
       "note": "The solar-wind 1-sigma is an assumption of Test Card T006, not a published value. Re-check against the journal texts before approval."
+    },
+    {
+      "data_id": "TILMAN1977_CHEMOSTAT",
+      "description": "Monoculture physiology (half-saturation constants, maximal growth rates, yields for phosphate and silicate) of Asterionella formosa and Cyclotella meneghiniana, and the reported outcomes of 76 two-species chemostat competition experiments",
+      "source": "D. Tilman, Resource competition between planktonic algae: an experimental and theoretical approach, Ecology 58, 338-348 (1977), Table 1 and Results text",
+      "doi_or_url": "https://doi.org/10.2307/1935608 ; full text read at https://hahana.soest.hawaii.edu/cmoreserver/summercourse/2015/documents/Follows_05-30/Tilman-1977.pdf",
+      "retrieved": "2026-11-10",
+      "path": "docs/data/external/ecology/tilman1977_chemostat/tilman1977_chemostat.csv",
+      "sha256": "265d9138b70fba2ca3456ea9808696568424f11942c1a0fe57c6dec8ea840a1f",
+      "license": "numerical facts transcribed from a journal article; no figures or text redistributed",
+      "visibility": "PUBLIC",
+      "note": "Figure 12/13 point data were not transcribed (the text extraction was unreliable). DOI confirmed (10.2307/1935608)."
     }
   ]
 }

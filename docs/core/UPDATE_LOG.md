@@ -155,3 +155,10 @@ commit: this commit
 ระดับ: ไม่เปลี่ยน claim
 ถัดไป: Test Card แรกของทาง ก
 commit: this commit
+
+## 2026-11-10 — Does layer 3 predict real two-resource competition? (T007 draft, path ก)
+ทำ: ร่าง Test Card T007 เทียบการคัดสรรของชั้น 3 กับการทดลอง chemostat ของ Tilman (1977): ทำนายจากสรีรวิทยาตอนเลี้ยงเดี่ยวเท่านั้น (Table 1) ล็อก hash ข้อมูลแล้ว
+ผล: ยังไม่รัน; เปิดเผยแล้วว่าเลขขอบเขตที่คำนวณด้วยมือ (86.9 และ 6.2 เทียบกับที่วัดได้ราว 80 และ 6) ทำให้รู้ผลล่วงหน้า; กลุ่ม Si/P = 38 ตรงไม่หมด
+ระดับ: claim C_T007_RESOURCE_SELECTION_CHEMOSTAT ที่ L0 (DRAFT)
+ถัดไป: ผู้เขียนอนุมัติ T007; Test Card สาขาถัดไป (เลเซอร์, เคมี, ดาวแคระขาว)
+commit: this commit

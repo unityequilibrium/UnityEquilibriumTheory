@@ -1,0 +1,22 @@
+# Inputs for UET Test Card T007: layer-3 resource selection versus two-resource chemostat competition.
+# Source: D. Tilman, "Resource competition between planktonic algae: an experimental and theoretical approach", Ecology 58, 338-348 (1977).
+# Table 1 (monoculture physiology, measured separately by Tilman and Kilham in batch and semi-continuous culture) and the competition results stated in the text.
+# Transcribed on 2026-11-10; numerical facts only. Figure 12/13 point data were not transcribed.
+record,species,nutrient,quantity,value,unit,note
+physiology,Asterionella formosa,PO4,K,0.02,uM,"half-saturation constant, Table 1"
+physiology,Asterionella formosa,PO4,r,0.9,doublings_per_day,"maximal growth rate, Table 1"
+physiology,Asterionella formosa,PO4,Y,2.18e8,cells_per_umol,"yield, Table 1"
+physiology,Asterionella formosa,SiO2,K,3.94,uM,"Table 1"
+physiology,Asterionella formosa,SiO2,r,1.1,doublings_per_day,"Table 1"
+physiology,Asterionella formosa,SiO2,Y,2.51e6,cells_per_umol,"Table 1"
+physiology,Cyclotella meneghiniana,PO4,K,0.25,uM,"Table 1"
+physiology,Cyclotella meneghiniana,PO4,r,0.8,doublings_per_day,"Table 1"
+physiology,Cyclotella meneghiniana,PO4,Y,2.59e7,cells_per_umol,"Table 1"
+physiology,Cyclotella meneghiniana,SiO2,K,1.44,uM,"Table 1"
+physiology,Cyclotella meneghiniana,SiO2,r,1.3,doublings_per_day,"Table 1"
+physiology,Cyclotella meneghiniana,SiO2,Y,4.20e6,cells_per_umol,"Table 1"
+outcome,Asterionella formosa,,observed_dominance_lower_si_p_boundary,80,uM_per_uM,"text: Asterionella dominant for Si/P generally greater than about 80 (76 experiments)"
+outcome,Cyclotella meneghiniana,,observed_dominance_upper_si_p_boundary,6,uM_per_uM,"text: Cyclotella dominant for Si/P generally less than about 6"
+group,,,si_p_1000_455_100,A,outcome,"Asterionella dominant at all flow rates tested"
+group,,,si_p_38,mixed,outcome,"Asterionella dominant at f = 0.05/day (3 of 3) and f = 0.5/day (2 of 3); coexistence in the other triplicates at intermediate flow rates"
+group,,,si_p_0.6,C,outcome,"Cyclotella dominant at all flow rates tested"
