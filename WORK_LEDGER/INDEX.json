@@ -5,11 +5,11 @@
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
     "sources": 75,
-    "entries": 811,
+    "entries": 812,
     "by_stream": {
       "book-history": 94,
       "operations": 112,
-      "research": 605
+      "research": 606
     },
     "exact_duplicates": 0,
     "review_entries": 2
@@ -389,8 +389,8 @@
     },
     {
       "path": "2026/2026-11-10.md",
-      "sha256": "b434ce5a43b724677f35fde1d8a38c1eae125d424986fb6bb3aa164f5174425c",
-      "entries": 18
+      "sha256": "8b88209a4f51d8cd92e0443d78f3b6153ec1d7724ec25bb37ce03f365e575bc3",
+      "entries": 19
     },
     {
       "path": "2026-08-14.md",
@@ -16569,12 +16569,32 @@
       "source": "2026/2026-11-10.md",
       "anchor": "t008-and-t009-results-at-l2-path-a-summary-table",
       "start_line": 245,
-      "end_line": 257,
+      "end_line": 258,
       "title": "T008 and T009 results at L2; path-A summary table",
-      "entry_sha256": "fa3d2d20532cfaa4e0d85d40070dd3c5e8b73e8c345553fba8569397af6a9843",
+      "entry_sha256": "5e29e705ba0f00505b419e0ca67d5399f51ccf92820038ff6e3cf9ffbadcf55e",
       "stream": "research",
       "areas": [
         "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-10",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-10.md#core_map-single-map-of-the-core-equation-files",
+      "source": "2026/2026-11-10.md",
+      "anchor": "core_map-single-map-of-the-core-equation-files",
+      "start_line": 259,
+      "end_line": 268,
+      "title": "CORE_MAP: single map of the core equation files",
+      "entry_sha256": "ce34ffd2a641d3a2ec7112a6a1173124a3f42d9445fbfc48da9b41e01aa0e8aa",
+      "stream": "research",
+      "areas": [
+        "research-standards"
       ],
       "related_streams": [
         "research"

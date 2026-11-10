@@ -190,3 +190,10 @@ commit: this commit
 ระดับ: ไม่เปลี่ยน claim
 ถัดไป: negative control ที่คมกว่า; หาข้อมูล T013/T014
 commit: this commit
+
+## 2026-11-10 — One map of where the core equations live (CORE_MAP)
+ทำ: เขียน docs/core/CORE_MAP.md ไฟล์เดียว บอกว่าสมการหลักแต่ละชั้น โค้ด test ข้อมูล และของเก่าอยู่ที่ไหน ตรวจพาธทุกตัวแล้ว
+ผล: ชี้ชัดว่าสมการหลักชั้น 1 อยู่ใน THEORY_CARD + 02_equations/covariant, ชั้น 2–3 อยู่ใน 03_lanes และยังไม่ได้ derive จากชั้น 1; Master Equation 7 เทอมและ For Work เป็นของเก่า
+ระดับ: ไม่เปลี่ยน claim
+ถัดไป: merge PR #57
+commit: this commit
