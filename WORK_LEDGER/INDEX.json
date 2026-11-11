@@ -5,11 +5,11 @@
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
     "sources": 76,
-    "entries": 826,
+    "entries": 827,
     "by_stream": {
       "book-history": 94,
       "operations": 112,
-      "research": 620
+      "research": 621
     },
     "exact_duplicates": 0,
     "review_entries": 2
@@ -394,8 +394,8 @@
     },
     {
       "path": "2026/2026-11-11.md",
-      "sha256": "51ad33aee865ebc90a47537e253aa564259e905c7dca13d51671ca7b860e6f48",
-      "entries": 14
+      "sha256": "ba92497387807004a6a82611031abee5b7bebaca235db32b06e3f5ebc8e2cbe5",
+      "entries": 15
     },
     {
       "path": "2026-08-14.md",
@@ -16874,12 +16874,32 @@
       "source": "2026/2026-11-11.md",
       "anchor": "t013-result-at-l2-p3-through-the-ives-stilwell-observable",
       "start_line": 186,
-      "end_line": 198,
+      "end_line": 199,
       "title": "T013 result at L2: P3 through the Ives-Stilwell observable",
-      "entry_sha256": "35c78c862d1f59832e81bfac6fd27e4dc7489ea374104c8a4d11bf640e217305",
+      "entry_sha256": "bbf300e09d191c0e4af7e50a575dbd2c7f94a3e41bb18830257f4064290099a4",
       "stream": "research",
       "areas": [
         "research-standards"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-11",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-11.md#b5-search-for-a-uet-distinct-prediction-and-the-bound-on-portal-drag",
+      "source": "2026/2026-11-11.md",
+      "anchor": "b5-search-for-a-uet-distinct-prediction-and-the-bound-on-portal-drag",
+      "start_line": 200,
+      "end_line": 213,
+      "title": "B5: search for a UET-distinct prediction and the bound on portal drag",
+      "entry_sha256": "494b0accdef26d798f098402e1854643ad2f2a0a54cf3dd31293af020ed6d5ff",
+      "stream": "research",
+      "areas": [
+        "research-core"
       ],
       "related_streams": [
         "research"

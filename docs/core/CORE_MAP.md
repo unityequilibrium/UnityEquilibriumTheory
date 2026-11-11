@@ -35,7 +35,7 @@
 
 | อะไร | ไฟล์ |
 |---|---|
-| สมการและโมเดล | `03_lanes/open_system/uet_layer2_dissipation.py` (ระบบปิดให้ระบบเปิดเอง), `uet_r3_trace_decomposition.py` (ร่องรอย = บันทึก + ความต่างศักย์), `uet_r1_writing_channels.py`, `uet_portal_drag.py` |
+| สมการและโมเดล | `03_lanes/open_system/uet_layer2_dissipation.py` (ระบบปิดให้ระบบเปิดเอง), `uet_r3_trace_decomposition.py` (ร่องรอย = บันทึก + ความต่างศักย์), `uet_r1_writing_channels.py`, `uet_portal_drag.py`, `uet_portal_drag_bound.py` (ขอบเขตของแรงลาก portal จากการที่วงโคจรอยู่รอด) |
 | ตัวตรวจ | `05_tests/physics/test_layer2_dissipation.py`, `test_r3_trace_decomposition.py`, `test_r1_writing_channels.py`, `test_distinctness.py` |
 | เทียบข้อมูลจริง | T006 ดวงอาทิตย์ (`t006_solar_mass_loss.py`) |
 | ของเก่าที่ยังอยู่ | `02_equations/covariant/uet_covariant_open_system.py` (ระบบเปิดแบบเชิงเส้น ค่า `kms_residual` เป็น 0 เสมอโดยนิยาม จึงไม่ใช่ตัวตรวจจริง ดู FIDELITY_MATRIX) |

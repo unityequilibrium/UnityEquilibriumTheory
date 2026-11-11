@@ -243,6 +243,15 @@
         "R_T013_IVES_STILWELL_LORENTZ_TIME"
       ],
       "note": "Tests P3 only as part of the Lorentz time transformation, not relative simultaneity in isolation. Not UET-distinct: special relativity passes. L2 approved by the author on 2026-11-11."
+    },
+    {
+      "claim_id": "C_B5_PORTAL_DRAG_BOUND",
+      "statement": "The portal drag, the only cross-layer UET effect found, must satisfy Gamma g_c^2 <= 9.1e-44 eV^3 for the planets to have survived 4.5672 Gyr in the Sun's rest frame; at the T005 bound on g_c the friction time of the response scalar exceeds about 60 years.",
+      "level": "L1_CONSISTENT",
+      "evidence": [
+        "R_B5_PORTAL_DRAG_BOUND"
+      ],
+      "note": "A derived bound, not a prediction. Assumes the Sun's rest frame as the environment frame; a different environment frame (for example the CMB frame) needs its own analysis."
     }
   ]
 }
