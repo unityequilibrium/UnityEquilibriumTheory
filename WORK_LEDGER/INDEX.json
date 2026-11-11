@@ -5,11 +5,11 @@
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
     "sources": 76,
-    "entries": 813,
+    "entries": 814,
     "by_stream": {
       "book-history": 94,
       "operations": 112,
-      "research": 607
+      "research": 608
     },
     "exact_duplicates": 0,
     "review_entries": 2
@@ -394,8 +394,8 @@
     },
     {
       "path": "2026/2026-11-11.md",
-      "sha256": "5c2d78ec5b817ecd80da0ce7d921a80fe89ff934765f26e5856feacd9d9c14b6",
-      "entries": 1
+      "sha256": "3a69d49b87ec698c5216f8ea49da3b43578a62ac9e6d43021a6c2bf8dc839aca",
+      "entries": 2
     },
     {
       "path": "2026-08-14.md",
@@ -16614,9 +16614,29 @@
       "source": "2026/2026-11-11.md",
       "anchor": "thought-experiment-v3-remove-the-being-and-eternity-claims",
       "start_line": 3,
-      "end_line": 16,
+      "end_line": 17,
       "title": "Thought experiment v3: remove the being and eternity claims",
-      "entry_sha256": "ada1f8fa649e19963f95b1ca9d4bf5ed9b4ccb78d9edea61a29f42eb7983cdb1",
+      "entry_sha256": "da2b458a983cf4c3d24a7a6724ae069f13368bed9fb993556fc2391098c9b816",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-11",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-11.md#o1-delayed-observation-and-gap--rate-x-record-age",
+      "source": "2026/2026-11-11.md",
+      "anchor": "o1-delayed-observation-and-gap--rate-x-record-age",
+      "start_line": 18,
+      "end_line": 30,
+      "title": "O1: delayed observation and gap = rate x record age",
+      "entry_sha256": "57aad75f0b920121cb396b0170a674424761b58334802f8c12cb94a9b593dd68",
       "stream": "research",
       "areas": [
         "research-core"

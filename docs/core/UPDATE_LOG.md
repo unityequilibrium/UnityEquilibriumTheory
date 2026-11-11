@@ -204,3 +204,10 @@ commit: this commit
 ระดับ: ไม่เปลี่ยน claim (เป็นงานเขียนเจตนา); P2 และ P4 ยังไม่มี physics test
 ถัดไป: test P2 (light-time) และ P4 (light cone); ต่อชั้นสังเกตเข้าสมการหลัก
 commit: this commit
+
+## 2026-11-11 — Is the gap between record and present equal to rate x record age? (O1)
+ทำ: หา retarded time ด้วย root search แล้วตรวจกับคำตอบปิดของการเคลื่อนที่สม่ำเสมอใน 3-D; ตรวจ Delta ≈ Xdot(t_e)·a ว่าลู่เข้าอันดับ 1; negative control ไม่คิดเวลาหน่วง (16 physics test)
+ผล: root search ตรงคำตอบปิดที่ 1e-10 (10/10); อัตราส่วน error ของการประมาณอันดับ 1 ระหว่างการลดอายุลงครึ่งหนึ่ง 2.42, 2.17, 2.08 → 2; ไม่คิดเวลาหน่วงผิดพอดี rate × age
+ระดับ: P2 ของ thought experiment v3 → L1 (บันทึกผลตอนท้าย)
+ถัดไป: O2 บันทึกร่วมเกิดภายใน light cone เท่านั้น
+commit: this commit
