@@ -5,11 +5,11 @@
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
     "sources": 76,
-    "entries": 825,
+    "entries": 826,
     "by_stream": {
       "book-history": 94,
       "operations": 112,
-      "research": 619
+      "research": 620
     },
     "exact_duplicates": 0,
     "review_entries": 2
@@ -394,8 +394,8 @@
     },
     {
       "path": "2026/2026-11-11.md",
-      "sha256": "401c9c17c8377b921d664cde896df6bd2a318d3426976d5a942d6653753b96cd",
-      "entries": 13
+      "sha256": "51ad33aee865ebc90a47537e253aa564259e905c7dca13d51671ca7b860e6f48",
+      "entries": 14
     },
     {
       "path": "2026-08-14.md",
@@ -16854,9 +16854,29 @@
       "source": "2026/2026-11-11.md",
       "anchor": "o7-model-and-t013-draft-p3-through-the-ives-stilwell-observable",
       "start_line": 171,
-      "end_line": 184,
+      "end_line": 185,
       "title": "O7 model and T013 draft: P3 through the Ives-Stilwell observable",
-      "entry_sha256": "39578dee6f5bc3d00dfd4d265756ce9083536cc156083da31fc641e34e66e30b",
+      "entry_sha256": "1fe777e715945fa7b2a2f81509c03809f728ccd8356475d232bad8512389b7c6",
+      "stream": "research",
+      "areas": [
+        "research-standards"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-11",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-11.md#t013-result-at-l2-p3-through-the-ives-stilwell-observable",
+      "source": "2026/2026-11-11.md",
+      "anchor": "t013-result-at-l2-p3-through-the-ives-stilwell-observable",
+      "start_line": 186,
+      "end_line": 198,
+      "title": "T013 result at L2: P3 through the Ives-Stilwell observable",
+      "entry_sha256": "35c78c862d1f59832e81bfac6fd27e4dc7489ea374104c8a4d11bf640e217305",
       "stream": "research",
       "areas": [
         "research-standards"

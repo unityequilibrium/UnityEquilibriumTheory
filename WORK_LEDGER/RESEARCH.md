@@ -6,10 +6,11 @@
 
 These are source-linked historical records, not proof of completed research, successful publication, or current scientific readiness.
 
-Indexed entries: 619. Counts describe records, not accomplishments.
+Indexed entries: 620. Counts describe records, not accomplishments.
 
 | Date | Record | Area | Notes |
 | --- | --- | --- | --- |
+| 2026-11-11 | [T013 result at L2: P3 through the Ives-Stilwell observable](2026/2026-11-11.md#t013-result-at-l2-p3-through-the-ives-stilwell-observable) (L186) | research-standards | explicit_stream_and_area |
 | 2026-11-11 | [O7 model and T013 draft: P3 through the Ives-Stilwell observable](2026/2026-11-11.md#o7-model-and-t013-draft-p3-through-the-ives-stilwell-observable) (L171) | research-standards | explicit_stream_and_area |
 | 2026-11-11 | [T012 result at L2: P4 with a Bose-Hubbard quench](2026/2026-11-11.md#t012-result-at-l2-p4-with-a-bose-hubbard-quench) (L157) | research-standards | explicit_stream_and_area |
 | 2026-11-11 | [O6 model and T012 draft: P4 with a quenched quantum chain](2026/2026-11-11.md#o6-model-and-t012-draft-p4-with-a-quenched-quantum-chain) (L143) | research-standards | explicit_stream_and_area |

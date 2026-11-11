@@ -237,10 +237,12 @@
     },
     {
       "claim_id": "C_T013_LORENTZ_TIME_STRUCTURE",
-      "statement": "Principle P3 holds as part of the Lorentz time transformation: the Ives-Stilwell observable of 7Li+ ions at beta = 0.338 is zero as the boost of the parent action's local frame requires.",
-      "level": "L0_SPECULATIVE",
-      "evidence": [],
-      "note": "Test Card T013 is a DRAFT awaiting author approval."
+      "statement": "Principle P3 holds as part of the Lorentz time transformation: the Ives-Stilwell observable of 7Li+ ions at beta = 0.338 is (1.47 +- 2.30)e-9, consistent with the zero the boost of the parent action's local frame requires (z = 0.64); absolute time is excluded.",
+      "level": "L2_CONFRONTED",
+      "evidence": [
+        "R_T013_IVES_STILWELL_LORENTZ_TIME"
+      ],
+      "note": "Tests P3 only as part of the Lorentz time transformation, not relative simultaneity in isolation. Not UET-distinct: special relativity passes. L2 approved by the author on 2026-11-11."
     }
   ]
 }
