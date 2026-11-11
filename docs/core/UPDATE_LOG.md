@@ -281,3 +281,10 @@ commit: this commit
 ระดับ: C_T012_COMMON_PAST_CONTACT → L2_CONFRONTED (ผู้เขียนอนุมัติ 2026-11-11) ไม่ใช่ข้อทำนายเฉพาะของ UET
 ถัดไป: P3 (ความพร้อมกันไม่เป็นสากล) ยังไม่ทดสอบกับข้อมูลจริง; ยังไม่มีข้อทำนายที่ UET ต่างจากฟิสิกส์มาตรฐาน
 commit: this commit
+
+## 2026-11-11 — O7 and T013 draft: P3 through the Ives–Stilwell observable
+ทำ: โมเดล uet_lorentz_time.py (boost, ความพร้อมกันสัมพัทธ์ dt' = −γβdx, ค่า ε ของ Ives–Stilwell จากการ boost เวกเตอร์สี่มิติของโฟตอนด้วยการหารากสมการ) physics test 26 ข้อ รวมถึง Green function ของสนามตอบสนองใน parent action ไม่เปลี่ยนภายใต้ boost และ negative control (Doppler แบบเวลาสัมบูรณ์ให้ ε = γ − 1); ร่าง Test Card T013 เทียบกับ Botermann et al. 2014 (ε = (1.5 ± 2.3)×10⁻⁹ ที่ β = 0.338)
+ผล: ยังไม่รัน รอผู้เขียนอนุมัติ; เห็นผลที่ตีพิมพ์และคำนวณ ε จากความถี่ทั้งสี่ได้ 1.47×10⁻⁹ ± 2.30×10⁻⁹ ตรงกับเปเปอร์แล้วก่อนร่าง; ขอบเขตที่ซื่อตรง: Ives–Stilwell ทดสอบ γ ร่วมกับหลักสัมพัทธภาพ การแยกความพร้อมกันสัมพัทธ์ต้องใช้ Michelson–Morley และ Kennedy–Thorndike ด้วย ซึ่งไม่ได้ทดสอบที่นี่
+ระดับ: C_T013_LORENTZ_TIME_STRUCTURE → L0_SPECULATIVE
+ถัดไป: ผู้เขียนอนุมัติ T013 แล้วรัน
+commit: this commit

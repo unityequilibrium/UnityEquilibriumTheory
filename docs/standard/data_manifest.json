@@ -120,6 +120,18 @@
       "license": "numerical facts transcribed from the arXiv HTML version; no figures or text redistributed",
       "visibility": "PUBLIC",
       "note": "v is in units of J a_lat/hbar, from weighted linear fits of the correlation peak time against distance over 2 <= d <= 6."
+    },
+    {
+      "data_id": "BOTERMANN2014_LI_DOPPLER_FREQUENCIES",
+      "description": "Rest-frame and Doppler-shifted laser frequencies of 7Li+ ions stored at beta = 0.338, with their uncertainty budget, from an Ives-Stilwell-type experiment",
+      "source": "B. Botermann et al., Test of time dilation using stored Li+ ions as clocks at relativistic speed, Phys. Rev. Lett. 113, 120405 (2014), Table 1",
+      "doi_or_url": "https://doi.org/10.1103/PhysRevLett.113.120405 ; https://arxiv.org/abs/1409.7951",
+      "retrieved": "2026-11-11",
+      "path": "docs/data/external/atomic/ives_stilwell/botermann2014_li_doppler_frequencies.csv",
+      "sha256": "500f933f0d8c02c9c111424d8f9bca172c3e1c9b0e19b6aa1862db62375c5275",
+      "license": "numerical facts transcribed from the arXiv HTML version; no figures or text redistributed",
+      "visibility": "PUBLIC",
+      "note": "Frequencies in MHz, 1-sigma totals as in Table 1. The registered values reproduce the published epsilon = (1.5 +- 2.3)e-9 (checked before registration)."
     }
   ]
 }

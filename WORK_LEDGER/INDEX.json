@@ -5,11 +5,11 @@
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
     "sources": 76,
-    "entries": 824,
+    "entries": 825,
     "by_stream": {
       "book-history": 94,
       "operations": 112,
-      "research": 618
+      "research": 619
     },
     "exact_duplicates": 0,
     "review_entries": 2
@@ -394,8 +394,8 @@
     },
     {
       "path": "2026/2026-11-11.md",
-      "sha256": "4ed20295f5d6662e147632dcffc17aefe89bba909d7804fe7cdc1c4fe893e8e9",
-      "entries": 12
+      "sha256": "401c9c17c8377b921d664cde896df6bd2a318d3426976d5a942d6653753b96cd",
+      "entries": 13
     },
     {
       "path": "2026-08-14.md",
@@ -16834,9 +16834,29 @@
       "source": "2026/2026-11-11.md",
       "anchor": "t012-result-at-l2-p4-with-a-bose-hubbard-quench",
       "start_line": 157,
-      "end_line": 169,
+      "end_line": 170,
       "title": "T012 result at L2: P4 with a Bose-Hubbard quench",
-      "entry_sha256": "8d4cf243fed8d6d274e82c97009becfd18be6e459249534f02b78fe40990dea6",
+      "entry_sha256": "5b64212a4cfcee7557af4d3e63942d2f45d4fcfb454d32b456c8b178c89affd8",
+      "stream": "research",
+      "areas": [
+        "research-standards"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-11",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-11.md#o7-model-and-t013-draft-p3-through-the-ives-stilwell-observable",
+      "source": "2026/2026-11-11.md",
+      "anchor": "o7-model-and-t013-draft-p3-through-the-ives-stilwell-observable",
+      "start_line": 171,
+      "end_line": 184,
+      "title": "O7 model and T013 draft: P3 through the Ives-Stilwell observable",
+      "entry_sha256": "39578dee6f5bc3d00dfd4d265756ce9083536cc156083da31fc641e34e66e30b",
       "stream": "research",
       "areas": [
         "research-standards"

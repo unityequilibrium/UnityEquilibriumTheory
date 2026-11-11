@@ -234,6 +234,13 @@
         "R_T012_CORRELATION_FRONT_BOUND"
       ],
       "note": "First real-data test of P4. The one-sided bound is weak by itself; the direct-contact diagnostic carries the content. Not UET-distinct: standard quasiparticle picture passes. L2 approved by the author on 2026-11-11."
+    },
+    {
+      "claim_id": "C_T013_LORENTZ_TIME_STRUCTURE",
+      "statement": "Principle P3 holds as part of the Lorentz time transformation: the Ives-Stilwell observable of 7Li+ ions at beta = 0.338 is zero as the boost of the parent action's local frame requires.",
+      "level": "L0_SPECULATIVE",
+      "evidence": [],
+      "note": "Test Card T013 is a DRAFT awaiting author approval."
     }
   ]
 }
