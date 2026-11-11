@@ -1,7 +1,7 @@
 {
   "schema": "uet-test-card-v2",
   "test_id": "T012",
-  "status": "DRAFT",
+  "status": "APPROVED",
   "claim_id": "C_T012_COMMON_PAST_CONTACT",
   "theory_card": {
     "card_id": "UET_PARENT",
@@ -34,5 +34,10 @@
   "pass_criterion": "PASS if excess <= 2 for every system with U/J >= 6 (here U/J = 7 and 9).",
   "fail_criterion": "FAILED if excess > 3 for any system with U/J >= 6; INCONCLUSIVE if 2 < excess <= 3 for any such system and none exceeds 3, or if the registered values disagree with the source text.",
   "drafted_by": "claude",
-  "note": "Disclosure: drafted after reading all three measured velocities (5.0 +- 0.2, 5.6 +- 0.5, 5.0 +- 0.2) and after computing the model bound (4.73, 5.76, 5.86 at U/J = 5, 7, 9; the source's closed form gives 5.57, 5.78, 5.87), so the outcome for U/J = 7 and 9 is effectively known; at U/J = 5 the measured front is above the Eq. 17 value by about 1.3 sigma, which is why the validity rule from the source is registered now, before the run. The bound is one-sided and weak by itself: any theory with a finite signal speed passes, and the measured peak velocity is expected below the onset-front bound. The discriminating diagnostic is the direct-contact-only bound (3.6 and 3.8 at U/J = 7 and 9): the measured fronts exceed it by several sigma, which is reported but not part of the outcome. v_bound uses the inherited dispersions of the source's effective model (upstream); the three-state truncation is its own approximation. The physics behind P4 here is standard (Lieb-Robinson, quasiparticle pairs); not UET-distinct. The geometry t = d/(c_a + c_b) and the limits of the dispersions are checked in docs/core/05_tests/physics/test_two_signal_contact.py."
+  "note": "Disclosure: drafted after reading all three measured velocities (5.0 +- 0.2, 5.6 +- 0.5, 5.0 +- 0.2) and after computing the model bound (4.73, 5.76, 5.86 at U/J = 5, 7, 9; the source's closed form gives 5.57, 5.78, 5.87), so the outcome for U/J = 7 and 9 is effectively known; at U/J = 5 the measured front is above the Eq. 17 value by about 1.3 sigma, which is why the validity rule from the source is registered now, before the run. The bound is one-sided and weak by itself: any theory with a finite signal speed passes, and the measured peak velocity is expected below the onset-front bound. The discriminating diagnostic is the direct-contact-only bound (3.6 and 3.8 at U/J = 7 and 9): the measured fronts exceed it by several sigma, which is reported but not part of the outcome. v_bound uses the inherited dispersions of the source's effective model (upstream); the three-state truncation is its own approximation. The physics behind P4 here is standard (Lieb-Robinson, quasiparticle pairs); not UET-distinct. The geometry t = d/(c_a + c_b) and the limits of the dispersions are checked in docs/core/05_tests/physics/test_two_signal_contact.py. Approved by the author on 2026-11-11 as drafted.",
+  "approval": {
+    "approved_by": "santxkoz",
+    "date": "2026-11-11",
+    "role": "AUTHOR"
+  }
 }
