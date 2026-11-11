@@ -96,6 +96,18 @@
       "license": "numerical facts transcribed from the publisher page; no figures or text redistributed",
       "visibility": "PUBLIC",
       "note": "Values read from the publisher abstract and section 4.1 on 2026-11-11."
+    },
+    {
+      "data_id": "MURPHY2016_PM_VS_RV",
+      "description": "Binary orbits of two Kepler pulsators solved separately from pulsation time delays (PM only) and from radial velocities (RV only)",
+      "source": "S. J. Murphy, H. Shibahashi, T. R. Bedding, MNRAS (2016), Table 2",
+      "doi_or_url": "https://doi.org/10.1093/mnras/stw1622 ; https://arxiv.org/abs/1607.07879",
+      "retrieved": "2026-11-11",
+      "path": "docs/data/external/stellar/phase_modulation/murphy2016_pm_vs_rv.csv",
+      "sha256": "ba31c4620e350d900b751e835d7d7078cd5b428daf909ba0289925e638d11553",
+      "license": "numerical facts transcribed from the arXiv HTML version; no figures or text redistributed",
+      "visibility": "PUBLIC",
+      "note": "KIC 5705575 RV-only solution fixed P and e to the PM values (stated in the source table caption)."
     }
   ]
 }

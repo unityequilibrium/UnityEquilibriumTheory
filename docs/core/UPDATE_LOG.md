@@ -253,3 +253,10 @@ commit: this commit
 ระดับ: C_T010_TWO_CARRIER_RECORDS → L2_CONFRONTED (ผู้เขียนอนุมัติ 2026-11-11) การทดสอบแรกของชั้นสังเกตกับข้อมูลจริง
 ถัดไป: หาการทดสอบ P2 ที่ไม่วนกลับ (light-time ที่มีวงโคจรจากแหล่งอิสระ)
 commit: this commit
+
+## 2026-11-11 — O5 and T011 draft: P2 with pulsating stars in binaries
+ทำ: โมเดล uet_pulsation_timing.py; physics test 16 ข้อ: dτ/dt = −v_r/c, ช่องว่างเฟสจากตัวแก้ retarded time = อัตรา × อายุบันทึก, negative control สัญญาณทันทีไม่มีการกระเพื่อม; ร่าง Test Card T011 เทียบ a sin i/c จากจังหวะการเต้น (PM) กับจากความเร็วแนวเล็ง (RV) ที่แก้แยกกัน (Murphy et al. 2016)
+ผล: ยังไม่รัน รอผู้เขียนอนุมัติ; เห็นตารางเต็มก่อนร่าง ความแม่นราว 10%
+ระดับ: C_T011_PULSATION_RECORD_AGE → L0_SPECULATIVE
+ถัดไป: ผู้เขียนอนุมัติ T011 แล้วรัน
+commit: this commit

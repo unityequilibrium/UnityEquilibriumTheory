@@ -5,11 +5,11 @@
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
     "sources": 76,
-    "entries": 820,
+    "entries": 821,
     "by_stream": {
       "book-history": 94,
       "operations": 112,
-      "research": 614
+      "research": 615
     },
     "exact_duplicates": 0,
     "review_entries": 2
@@ -394,8 +394,8 @@
     },
     {
       "path": "2026/2026-11-11.md",
-      "sha256": "8bda383cc2910386ef7817bb0a6b45c723b7549bf2fc99393fc9dc2b24a0b0b4",
-      "entries": 8
+      "sha256": "f2335a9c86a717548a942f94555a3e9ab08c12a75b8e6e0ab9dca1dce1facb87",
+      "entries": 9
     },
     {
       "path": "2026-08-14.md",
@@ -16754,9 +16754,29 @@
       "source": "2026/2026-11-11.md",
       "anchor": "t010-result-at-l2-gw170817-carrier-speed",
       "start_line": 103,
-      "end_line": 114,
+      "end_line": 115,
       "title": "T010 result at L2: GW170817 carrier speed",
-      "entry_sha256": "77204a8a785abaa33e62faefadb9ed5e57f7293a599f6d6edb72f22d3742cf38",
+      "entry_sha256": "9e4f71bbd2fd06dedb860321cf9f289116990702c41a6607a3d68feb4307addb",
+      "stream": "research",
+      "areas": [
+        "research-standards"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-11",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-11.md#o5-model-and-t011-draft-p2-with-pulsating-binaries",
+      "source": "2026/2026-11-11.md",
+      "anchor": "o5-model-and-t011-draft-p2-with-pulsating-binaries",
+      "start_line": 116,
+      "end_line": 128,
+      "title": "O5 model and T011 draft: P2 with pulsating binaries",
+      "entry_sha256": "914f069b41458ee9cb34676951cb3d6f66f95290244bb522331429e4b95429cb",
       "stream": "research",
       "areas": [
         "research-standards"

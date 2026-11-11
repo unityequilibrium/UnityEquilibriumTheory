@@ -1,0 +1,37 @@
+{
+  "schema": "uet-test-card-v2",
+  "test_id": "T011",
+  "status": "DRAFT",
+  "claim_id": "C_T011_PULSATION_RECORD_AGE",
+  "theory_card": {
+    "card_id": "UET_PARENT",
+    "version": 1
+  },
+  "hypothesis": "Principle P2 of the thought experiment v3: what an observer receives differs from the source's present by the rate of change times the record age. For a pulsating star in a binary, the received pulsation phase lags by nu * tau(t), where tau is the light-travel time across the orbit. The amplitude of tau predicted from a spectroscopic (RV-only) orbit, a1 sin i / c = K1 P sqrt(1 - e^2)/(2 pi c), must equal the amplitude measured from pulsation timing (PM only). Predicted ratio PM/RV = 1 for each system. The no-delay alternative predicts a PM amplitude of 0.",
+  "observable": {
+    "quantity": "a1 sin i / c from pulsation time delays versus from radial velocities",
+    "unit": "s",
+    "domain": "two Kepler delta Scuti / SX Phe binaries, KIC 5705575 (537.5 d) and KIC 6780873 (9.15 d)"
+  },
+  "test_kind": "CONSTRAINT",
+  "data_sources": [
+    {
+      "data_id": "MURPHY2016_PM_VS_RV",
+      "role": "COMPARISON",
+      "exposure": "SEEN_FULL"
+    }
+  ],
+  "prediction_method": {
+    "script": "docs/core/03_lanes/observation/t011_pulsation_delay_vs_rv.py",
+    "description": "z = |PM - RV| / sqrt(sigma_PM^2 + sigma_RV^2) per system, each sigma on the side facing the other value"
+  },
+  "free_parameters": [],
+  "fixed_parameters": [
+    "both published solutions exactly as registered",
+    "systems fixed in advance: KIC 5705575 and KIC 6780873 (the only two with separate PM-only and RV-only columns in the source)"
+  ],
+  "pass_criterion": "PASS if z <= 2 for both systems.",
+  "fail_criterion": "FAILED if z > 3 for either system; INCONCLUSIVE if 2 < z <= 3 for any system and none exceeds 3, or if the registered values disagree with the source text.",
+  "drafted_by": "claude",
+  "note": "Disclosure: drafted after reading the full table (exposure SEEN_FULL); a hand estimate gives z near 0.2 and 0.04, so the outcome is effectively known. The source authors already reported agreement. The comparison has about 10% precision (PM errors), so it checks P2 at that level, not finer. Independence: KIC 6780873 is fully independent; for KIC 5705575 the RV-only solution borrowed P and e from PM, so only K1 is independent there. The physics behind P2 here is standard light-travel time; any theory with retarded observation passes. Derivation identity d tau/dt = -v_r/c and the retarded-time phase gap are checked in docs/core/05_tests/physics/test_pulsation_timing.py."
+}

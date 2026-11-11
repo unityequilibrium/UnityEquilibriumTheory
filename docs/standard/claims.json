@@ -216,6 +216,13 @@
         "R_T010_GW170817_CARRIER_SPEED"
       ],
       "note": "First real-data test of the observation layer (principle P1) together with layer 1. Not UET-distinct: any c_T = 1 theory passes. L2 approved by the author on 2026-11-11."
+    },
+    {
+      "claim_id": "C_T011_PULSATION_RECORD_AGE",
+      "statement": "Principle P2 holds for pulsating stars in binaries: the pulsation phase gap equals the rate times the light-travel record age, with the age fixed by an independent spectroscopic orbit.",
+      "level": "L0_SPECULATIVE",
+      "evidence": [],
+      "note": "Test Card T011 is a DRAFT awaiting author approval."
     }
   ]
 }
