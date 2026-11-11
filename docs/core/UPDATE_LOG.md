@@ -239,3 +239,10 @@ commit: this commit
 ระดับ: C_OBS_DELAY_GAP, C_OBS_SHARED_RECORD_CONTACT, C_OBS_MEMORY_VS_MARKOV, C_OBS_FIELD_CAUSAL → L1_CONSISTENT
 ถัดไป: ทดสอบ P2/P4 กับข้อมูลจริง (light-time ในตำแหน่งดาวเคราะห์) และขยายไปควอนตัม
 commit: this commit
+
+## 2026-11-11 — T010 draft: two carriers of one event's records (GW170817)
+ทำ: derive c_T = 1 จาก parent action (test_tensor_speed.py 7 ข้อ, negative control v = 0.9 ไม่ผ่าน); ร่าง Test Card T010 เทียบกับขอบเขต (v_GW − v_EM)/v_EM ∈ [−3e-15, +7e-16] ของ Abbott et al. 2017
+ผล: ยังไม่รัน การ์ดเป็น DRAFT รอผู้เขียนอนุมัติ; เปิดเผยแล้วว่าทฤษฎีใดที่มี c_T = 1 ก็ผ่าน
+ระดับ: C_T010_TWO_CARRIER_RECORDS → L0_SPECULATIVE
+ถัดไป: ผู้เขียนอนุมัติ T010 แล้วรัน; หาการทดสอบ P2 ที่ไม่วนกลับ
+commit: this commit

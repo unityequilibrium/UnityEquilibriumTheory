@@ -5,11 +5,11 @@
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
     "sources": 76,
-    "entries": 818,
+    "entries": 819,
     "by_stream": {
       "book-history": 94,
       "operations": 112,
-      "research": 612
+      "research": 613
     },
     "exact_duplicates": 0,
     "review_entries": 2
@@ -394,8 +394,8 @@
     },
     {
       "path": "2026/2026-11-11.md",
-      "sha256": "b8a380cf5b23b60ca5a459137127540c69f2ca42121f0bff10f0ae46401a5ba1",
-      "entries": 6
+      "sha256": "6976ea46afc4fcfe0abbecdd3ee9a0ebb8fbaf4287be5512d355cc4b1735be3e",
+      "entries": 7
     },
     {
       "path": "2026-08-14.md",
@@ -16714,9 +16714,29 @@
       "source": "2026/2026-11-11.md",
       "anchor": "records-and-corrections-for-the-observation-layer",
       "start_line": 76,
-      "end_line": 88,
+      "end_line": 89,
       "title": "Records and corrections for the observation layer",
-      "entry_sha256": "b94bb96af2af766b3d8383046256211970d53856d135a158a5a7f4026bab5840",
+      "entry_sha256": "5917c1acc2c1972486e055495bf2bb25525f0b3f4352e8d05c7c82d21d652f34",
+      "stream": "research",
+      "areas": [
+        "research-standards"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-11",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-11.md#t010-draft-gw170817-carrier-speed",
+      "source": "2026/2026-11-11.md",
+      "anchor": "t010-draft-gw170817-carrier-speed",
+      "start_line": 90,
+      "end_line": 101,
+      "title": "T010 draft: GW170817 carrier speed",
+      "entry_sha256": "7ac05287d4eea82bd200e9e5e0a13e3db1154e41de7bc973b74191a2bb3a8ba3",
       "stream": "research",
       "areas": [
         "research-standards"

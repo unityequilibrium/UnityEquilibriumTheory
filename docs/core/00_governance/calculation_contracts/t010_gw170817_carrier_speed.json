@@ -1,0 +1,253 @@
+{
+  "schema_version": "uet-calculation-contract-v1",
+  "contract_id": "CORE_T010_GW170817_CARRIER_SPEED_V1",
+  "profile": "PHYSICAL_COMPARISON",
+  "review": {
+    "status": "INCOMPLETE",
+    "reviewer": "agent:claude-t010",
+    "rationale": "Methodological contract for Test Card T010. The evidence decision lives in docs/standard. Detection, timing and distance are inherited from the published analysis.",
+    "coverage_evidence": [
+      "docs/core/05_tests/physics/test_tensor_speed.py"
+    ]
+  },
+  "question": "Do the two records of GW170817 (gravitational waves and gamma rays) travel at the same speed, as c_T = 1 of the parent action requires?",
+  "output": {
+    "quantity": "(v_GW - v_EM)/v_EM against the published interval",
+    "unit": "fraction of c",
+    "domain": "GW170817 / GRB 170817A",
+    "accuracy": "Published interval inherited.",
+    "claim_intent": "DIAGNOSTIC"
+  },
+  "model": {
+    "formula_ids": [
+      "UET_O1_RETARDED_TIME_GAP"
+    ],
+    "assumptions": "Parent action with c_T = 1; both carriers obey the retarded-time relation of principle P1.",
+    "approximation": "Propagation through a nearly flat background; Shapiro delays treated upstream.",
+    "initial_boundary": "Single merger event.",
+    "drive_environment": "None.",
+    "parameters": "No fitting."
+  },
+  "data_policy": {
+    "uses_observations": true,
+    "calibration_ids": [],
+    "comparison_ids": [
+      "ABBOTT2017_GW170817_GRB"
+    ],
+    "independent_validation": false,
+    "holdout_policy": "No holdout. Published bound seen before drafting (exposure SEEN_SUMMARY), declared in Test Card T010."
+  },
+  "observation": {
+    "system_partition": {
+      "role_mode": "RELATIONAL",
+      "accounting_component_id": "system_state",
+      "boundary": "Published arrival delay and speed bound only.",
+      "systems": [
+        {
+          "id": "populations",
+          "state": "Binary neutron star merger emitting gravitational waves and gamma rays",
+          "state_accounting": {
+            "kind": "INDEPENDENT",
+            "state_ids": [
+              "populations.state"
+            ],
+            "owner_ids": [],
+            "rule": "One event, two carriers."
+          }
+        },
+        {
+          "id": "counts",
+          "state": "LIGO-Virgo detectors and Fermi GBM / INTEGRAL",
+          "state_accounting": {
+            "kind": "INDEPENDENT",
+            "state_ids": [
+              "counts.record"
+            ],
+            "owner_ids": [],
+            "rule": "Observer record only."
+          }
+        }
+      ],
+      "couplings": [
+        {
+          "id": "population_signal",
+          "source": "populations",
+          "target": "counts",
+          "kind": "SIGNAL",
+          "component_id": "propagation",
+          "map": "Measurement chain handled upstream"
+        },
+        {
+          "id": "population_detection",
+          "source": "populations",
+          "target": "counts",
+          "kind": "DETECTION",
+          "component_id": "detector",
+          "map": "Published values"
+        },
+        {
+          "id": "counts_backaction",
+          "source": "counts",
+          "target": "populations",
+          "kind": "BACKACTION",
+          "component_id": "detector",
+          "map": "No admitted backaction"
+        }
+      ],
+      "observables": [
+        {
+          "id": "outcome",
+          "detector_id": "counts",
+          "target_systems": [
+            "populations"
+          ],
+          "backaction_targets": [
+            "populations"
+          ],
+          "backaction_scope_reason": "The populations are the only assessed owner.",
+          "quantity": "(v_GW - v_EM)/v_EM against the published interval",
+          "readout_map": "Published values transcribed only",
+          "component_id": "detector"
+        }
+      ]
+    },
+    "source_state": "As described by the published analyses.",
+    "generated_trace": "Gravitational waves and gamma rays.",
+    "carrier": "Tensor metric perturbations and photons.",
+    "observer_state": "Published values",
+    "readout": "Arrival delay and speed-difference interval.",
+    "backaction": "None admitted.",
+    "frame": "Solar-system barycentre",
+    "time_convention": "Seconds",
+    "product_level": "published derived quantities (not raw data)",
+    "corrections": [
+      {
+        "id": "selection_upstream",
+        "state": "APPLIED_UPSTREAM",
+        "evidence": "docs/data/external/gravity/gw170817/abbott2017_gw170817_grb.csv"
+      },
+      {
+        "id": "measurement_upstream",
+        "state": "APPLIED_UPSTREAM",
+        "evidence": "docs/data/external/gravity/gw170817/abbott2017_gw170817_grb.csv"
+      }
+    ]
+  },
+  "components": [
+    {
+      "id": "system_state",
+      "group": "system_state",
+      "disposition": "MODELED",
+      "reason": "Two carriers from one event with c_T = 1.",
+      "evidence": [
+        "docs/data/external/gravity/gw170817/abbott2017_gw170817_grb.csv",
+        "docs/core/05_tests/physics/test_tensor_speed.py"
+      ]
+    },
+    {
+      "id": "drive_environment",
+      "group": "drive_environment",
+      "disposition": "NOT_APPLICABLE",
+      "reason": "No external drive.",
+      "evidence": []
+    },
+    {
+      "id": "propagation",
+      "group": "propagation",
+      "disposition": "UPSTREAM_CORRECTED",
+      "reason": "Applied upstream in the published analysis (Abbott et al. 2017); not recomputed here.",
+      "evidence": [
+        "docs/data/external/gravity/gw170817/abbott2017_gw170817_grb.csv"
+      ]
+    },
+    {
+      "id": "frame_time",
+      "group": "frame_time",
+      "disposition": "UPSTREAM_CORRECTED",
+      "reason": "Applied upstream in the published analysis (Abbott et al. 2017); not recomputed here.",
+      "evidence": [
+        "docs/data/external/gravity/gw170817/abbott2017_gw170817_grb.csv"
+      ]
+    },
+    {
+      "id": "detector",
+      "group": "detector",
+      "disposition": "UPSTREAM_CORRECTED",
+      "reason": "Applied upstream in the published analysis (Abbott et al. 2017); not recomputed here.",
+      "evidence": [
+        "docs/data/external/gravity/gw170817/abbott2017_gw170817_grb.csv"
+      ]
+    },
+    {
+      "id": "processing",
+      "group": "processing",
+      "disposition": "MODELED",
+      "reason": "Interval check defined in the Test Card.",
+      "evidence": [
+        "docs/core/03_lanes/observation/t010_gw170817_carrier_speed.py",
+        "docs/core/03_lanes/observation/uet_observation_layer.py"
+      ]
+    },
+    {
+      "id": "numerics",
+      "group": "numerics",
+      "disposition": "MODELED",
+      "reason": "Closed-form arithmetic; the selection model is covered by physics tests.",
+      "evidence": [
+        "docs/core/05_tests/physics/test_tensor_speed.py"
+      ]
+    }
+  ],
+  "error_budget": {
+    "unit": "fraction of c",
+    "numerical": "Floating point only.",
+    "approximation": "See the Test Card.",
+    "measurement": "Published interval as registered.",
+    "systematic": "Emission-time offset modelled upstream by the source.",
+    "omissions": "See the Test Card note.",
+    "dependence": "Single published analysis.",
+    "acceptance": "Outcome categories fixed in Test Card T010.",
+    "omission_limit": null
+  },
+  "identities": [
+    {
+      "path": "docs/data/external/gravity/gw170817/abbott2017_gw170817_grb.csv",
+      "kind": "working_file",
+      "role": "input",
+      "sha256": "6cfb6e16a4316ed4627a398c45269123fcd7443c9d90803788db13fd43d5d4ba",
+      "availability": "REQUIRED"
+    },
+    {
+      "path": "docs/core/03_lanes/observation/t010_gw170817_carrier_speed.py",
+      "kind": "working_file",
+      "role": "code",
+      "sha256": "79468428876e10483c831e0e53cb922800d81761f59cf22aea92e2a0778e9c2e",
+      "availability": "REQUIRED"
+    },
+    {
+      "path": "docs/core/05_tests/physics/test_tensor_speed.py",
+      "kind": "working_file",
+      "role": "code",
+      "sha256": "ffb53972b95999991431b236c260cdf88bbb989c2fea612b532fb9dfd9c4f474",
+      "availability": "REQUIRED"
+    },
+    {
+      "path": "docs/core/03_lanes/observation/uet_observation_layer.py",
+      "kind": "working_file",
+      "role": "code",
+      "sha256": "ee5cb9de3f1e2daa032512554cf85e5ec9deb03e90ae47036b1f43745d7873b4",
+      "availability": "REQUIRED"
+    }
+  ],
+  "entrypoints": [
+    "docs/core/03_lanes/observation/t010_gw170817_carrier_speed.py",
+    "docs/core/03_lanes/observation/uet_observation_layer.py"
+  ],
+  "evidence": [
+    "docs/core/03_lanes/observation/t010_gw170817_carrier_speed.py",
+    "docs/core/03_lanes/observation/uet_observation_layer.py",
+    "docs/data/external/gravity/gw170817/abbott2017_gw170817_grb.csv"
+  ],
+  "claim_boundary": "Methodological coverage of the T010 comparison only. The evidence level is set in docs/standard.",
+  "next_action": "Cross-check the transcribed interval against the journal text."
+}

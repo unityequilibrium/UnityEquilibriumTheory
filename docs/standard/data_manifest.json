@@ -84,6 +84,18 @@
       "license": "numerical facts transcribed from article text; no figures or text redistributed",
       "visibility": "PUBLIC",
       "note": "The direct value is taken as quoted by Hu et al. 2025; the Varga et al. 2016 text was not opened."
+    },
+    {
+      "data_id": "ABBOTT2017_GW170817_GRB",
+      "description": "Arrival delay of GRB 170817A after GW170817 and the resulting bound on the speed difference of gravitational waves and light",
+      "source": "B. P. Abbott et al. (LIGO, Virgo, Fermi GBM, INTEGRAL), Astrophys. J. Lett. 848, L13 (2017), abstract and Sect. 4.1",
+      "doi_or_url": "https://doi.org/10.3847/2041-8213/aa920c ; https://arxiv.org/abs/1710.05834",
+      "retrieved": "2026-11-11",
+      "path": "docs/data/external/gravity/gw170817/abbott2017_gw170817_grb.csv",
+      "sha256": "6cfb6e16a4316ed4627a398c45269123fcd7443c9d90803788db13fd43d5d4ba",
+      "license": "numerical facts transcribed from the publisher page; no figures or text redistributed",
+      "visibility": "PUBLIC",
+      "note": "Values read from the publisher abstract and section 4.1 on 2026-11-11."
     }
   ]
 }

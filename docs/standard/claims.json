@@ -207,6 +207,13 @@
         "R_O4_FIELD_CAUSALITY"
       ],
       "note": "Links the observation layer to the core equation at linear order, flat background, 1+1D only; the full nonlinear curved-space statement is open."
+    },
+    {
+      "claim_id": "C_T010_TWO_CARRIER_RECORDS",
+      "statement": "Records of one event carried by gravitational waves and by light travel at the same speed, as the parent action (c_T = 1) and principle P1 require.",
+      "level": "L0_SPECULATIVE",
+      "evidence": [],
+      "note": "Test Card T010 is a DRAFT awaiting author approval."
     }
   ]
 }
