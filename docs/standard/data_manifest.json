@@ -108,6 +108,18 @@
       "license": "numerical facts transcribed from the arXiv HTML version; no figures or text redistributed",
       "visibility": "PUBLIC",
       "note": "KIC 5705575 RV-only solution fixed P and e to the PM values (stated in the source table caption)."
+    },
+    {
+      "data_id": "CHENEAU2012_FRONT_VELOCITY",
+      "description": "Measured velocity of the two-point parity-correlation front after a quench of a one-dimensional Bose-Hubbard chain from the Mott insulator, at three final interaction strengths",
+      "source": "M. Cheneau et al., Light-cone-like spreading of correlations in a quantum many-body system, Nature 481, 484 (2012), appendix text and Fig. 3a",
+      "doi_or_url": "https://doi.org/10.1038/nature10748 ; https://arxiv.org/abs/1111.0776",
+      "retrieved": "2026-11-11",
+      "path": "docs/data/external/quantum_many_body/correlation_front/cheneau2012_front_velocity.csv",
+      "sha256": "3346093917ce0945dafd30643736f6edca7528516369872179c75b623d9fb698",
+      "license": "numerical facts transcribed from the arXiv HTML version; no figures or text redistributed",
+      "visibility": "PUBLIC",
+      "note": "v is in units of J a_lat/hbar, from weighted linear fits of the correlation peak time against distance over 2 <= d <= 6."
     }
   ]
 }

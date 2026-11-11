@@ -1,0 +1,38 @@
+{
+  "schema": "uet-test-card-v2",
+  "test_id": "T012",
+  "status": "DRAFT",
+  "claim_id": "C_T012_COMMON_PAST_CONTACT",
+  "theory_card": {
+    "card_id": "UET_PARENT",
+    "version": 1
+  },
+  "hypothesis": "Principle P4 of the thought experiment v3, as corrected by wave O2: two sites share a record only through causal contact, and the earliest contact is through a common past, at t = d/(c_a + c_b) for a pair emitted from one event with maximal speeds c_a and c_b. So the front of correlations after a quench cannot move faster than c_a + c_b = max_k d(e_d + e_h)/dk, the maximal relative group velocity of the pair, computed from the dispersions of the source's quasiparticle model with the lattice parameters J and U fixed by calibration, not by the correlation data. The direct-contact-only reading of P4 (the version before O2) would bound the front by the largest single-quasiparticle speed instead.",
+  "observable": {
+    "quantity": "velocity of the two-point parity-correlation front, compared with the common-past bound",
+    "unit": "J a_lat / hbar",
+    "domain": "1D Bose-Hubbard chain quenched from U/J = 40 to U/J = 5, 7 and 9 (Cheneau et al. 2012)"
+  },
+  "test_kind": "CONSTRAINT",
+  "data_sources": [
+    {
+      "data_id": "CHENEAU2012_FRONT_VELOCITY",
+      "role": "COMPARISON",
+      "exposure": "SEEN_FULL"
+    }
+  ],
+  "prediction_method": {
+    "script": "docs/core/03_lanes/observation/t012_correlation_front_bound.py",
+    "description": "excess = (v_front - v_bound)/sigma_v per system, v_bound from Eq. 17 of the source evaluated at the largest value over U/J +- its calibration uncertainty; systems with U/J < 6 are reported but do not decide"
+  },
+  "free_parameters": [],
+  "fixed_parameters": [
+    "bound computed from the published dispersions with the calibrated J and U, no fitting",
+    "validity rule U/J >= 6, taken from the source statement that the three-state truncation is reasonable down to U/J ~ 6",
+    "systems fixed in advance: all three quenches in the source"
+  ],
+  "pass_criterion": "PASS if excess <= 2 for every system with U/J >= 6 (here U/J = 7 and 9).",
+  "fail_criterion": "FAILED if excess > 3 for any system with U/J >= 6; INCONCLUSIVE if 2 < excess <= 3 for any such system and none exceeds 3, or if the registered values disagree with the source text.",
+  "drafted_by": "claude",
+  "note": "Disclosure: drafted after reading all three measured velocities (5.0 +- 0.2, 5.6 +- 0.5, 5.0 +- 0.2) and after computing the model bound (4.73, 5.76, 5.86 at U/J = 5, 7, 9; the source's closed form gives 5.57, 5.78, 5.87), so the outcome for U/J = 7 and 9 is effectively known; at U/J = 5 the measured front is above the Eq. 17 value by about 1.3 sigma, which is why the validity rule from the source is registered now, before the run. The bound is one-sided and weak by itself: any theory with a finite signal speed passes, and the measured peak velocity is expected below the onset-front bound. The discriminating diagnostic is the direct-contact-only bound (3.6 and 3.8 at U/J = 7 and 9): the measured fronts exceed it by several sigma, which is reported but not part of the outcome. v_bound uses the inherited dispersions of the source's effective model (upstream); the three-state truncation is its own approximation. The physics behind P4 here is standard (Lieb-Robinson, quasiparticle pairs); not UET-distinct. The geometry t = d/(c_a + c_b) and the limits of the dispersions are checked in docs/core/05_tests/physics/test_two_signal_contact.py."
+}

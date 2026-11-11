@@ -53,8 +53,8 @@
 | อะไร | ไฟล์ |
 |---|---|
 | คำอธิบายและหลักการ P1–P4 | [`THOUGHT_EXPERIMENT.md`](THOUGHT_EXPERIMENT.md) |
-| โมเดล | `03_lanes/observation/uet_observation_layer.py` (เวลาหน่วง, ช่องว่าง), `uet_shared_record.py` (บันทึกร่วมต้องมีการสัมผัสเชิงเหตุผล), `uet_estimators.py` (Markov กับ history), `uet_field_causality.py` (สนาม ψ แพร่ใน light cone), `uet_pulsation_timing.py` (P2 กับดาวเต้นในระบบดาวคู่) |
-| ตัวตรวจ | `05_tests/physics/test_observation_delay.py`, `test_shared_record_cone.py`, `test_markov_vs_history.py`, `test_field_causality.py`, `test_pulsation_timing.py` |
+| โมเดล | `03_lanes/observation/uet_observation_layer.py` (เวลาหน่วง, ช่องว่าง), `uet_shared_record.py` (บันทึกร่วมต้องมีการสัมผัสเชิงเหตุผล), `uet_estimators.py` (Markov กับ history), `uet_field_causality.py` (สนาม ψ แพร่ใน light cone), `uet_pulsation_timing.py` (P2 กับดาวเต้นในระบบดาวคู่), `uet_two_signal_contact.py` (P4 เมื่อสัญญาณสองตัวมีความเร็วต่างกัน: t = d/(c_a + c_b)) |
+| ตัวตรวจ | `05_tests/physics/test_observation_delay.py`, `test_shared_record_cone.py`, `test_markov_vs_history.py`, `test_field_causality.py`, `test_pulsation_timing.py`, `test_two_signal_contact.py` |
 | เทียบข้อมูลจริง | T010 GW170817 (`t010_gw170817_carrier_speed.py`): คลื่นความโน้มถ่วงกับแสงวิ่งเร็วเท่ากัน ตามที่ c_T = 1 กำหนด (derive ใน `05_tests/physics/test_tensor_speed.py`); T011 ดาวเต้นในระบบดาวคู่ (`t011_pulsation_delay_vs_rv.py`): ช่องว่างเฟส = อัตรา × อายุบันทึก (P2) |
 
 ## 3. ผลการทดสอบกับข้อมูลจริงทั้งหมด (`docs/standard/`)

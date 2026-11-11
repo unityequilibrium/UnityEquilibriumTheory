@@ -5,11 +5,11 @@
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
     "sources": 76,
-    "entries": 822,
+    "entries": 823,
     "by_stream": {
       "book-history": 94,
       "operations": 112,
-      "research": 616
+      "research": 617
     },
     "exact_duplicates": 0,
     "review_entries": 2
@@ -394,8 +394,8 @@
     },
     {
       "path": "2026/2026-11-11.md",
-      "sha256": "6a65a9b9b7a68dc6e691dd4b40e9602b121a63140fb62c13750b149d5cad964a",
-      "entries": 10
+      "sha256": "fc4ad29e32d9872ee4423230e43b5768063d830a779b7ca23a985e0b075c39cb",
+      "entries": 11
     },
     {
       "path": "2026-08-14.md",
@@ -16794,9 +16794,29 @@
       "source": "2026/2026-11-11.md",
       "anchor": "t011-result-at-l2-p2-with-pulsating-binaries",
       "start_line": 130,
-      "end_line": 141,
+      "end_line": 142,
       "title": "T011 result at L2: P2 with pulsating binaries",
-      "entry_sha256": "db89e53fad855d2a2ec041f083542f2174a6918048023daef76587df51d9431a",
+      "entry_sha256": "bfbc75af8e165ee234ad85b5f256d3c4e7c531bd3e78aeac3eaff6e1dde1f0b1",
+      "stream": "research",
+      "areas": [
+        "research-standards"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-11",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-11.md#o6-model-and-t012-draft-p4-with-a-quenched-quantum-chain",
+      "source": "2026/2026-11-11.md",
+      "anchor": "o6-model-and-t012-draft-p4-with-a-quenched-quantum-chain",
+      "start_line": 143,
+      "end_line": 155,
+      "title": "O6 model and T012 draft: P4 with a quenched quantum chain",
+      "entry_sha256": "1eaf962c0d1ce2452da5a7558927e020423535e9fd394ce1f0d58c3bd6c05300",
       "stream": "research",
       "areas": [
         "research-standards"
