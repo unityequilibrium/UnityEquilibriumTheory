@@ -228,10 +228,12 @@
     },
     {
       "claim_id": "C_T012_COMMON_PAST_CONTACT",
-      "statement": "Principle P4 as corrected by O2 holds in a quenched quantum many-body chain: the correlation front moves no faster than the maximal relative speed c_a + c_b of the pair emitted from a common event.",
-      "level": "L0_SPECULATIVE",
-      "evidence": [],
-      "note": "Test Card T012 is a DRAFT awaiting author approval."
+      "statement": "Principle P4 as corrected by O2 holds in a quenched quantum many-body chain: the correlation front stays below the common-past bound c_a + c_b (excess -0.36 and -4.35 sigma at U/J = 7 and 9) and exceeds the direct-contact-only bound by 3.9 and 6.0 sigma, so contact through a common past is required.",
+      "level": "L2_CONFRONTED",
+      "evidence": [
+        "R_T012_CORRELATION_FRONT_BOUND"
+      ],
+      "note": "First real-data test of P4. The one-sided bound is weak by itself; the direct-contact diagnostic carries the content. Not UET-distinct: standard quasiparticle picture passes. L2 approved by the author on 2026-11-11."
     }
   ]
 }
