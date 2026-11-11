@@ -4,12 +4,12 @@
   "generator_sha256": "b32005e4bdbf59da6681ae630fa1d9d4415c361f7523be18c8b52a86dc8c93e9",
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
-    "sources": 75,
-    "entries": 812,
+    "sources": 76,
+    "entries": 813,
     "by_stream": {
       "book-history": 94,
       "operations": 112,
-      "research": 606
+      "research": 607
     },
     "exact_duplicates": 0,
     "review_entries": 2
@@ -391,6 +391,11 @@
       "path": "2026/2026-11-10.md",
       "sha256": "8b88209a4f51d8cd92e0443d78f3b6153ec1d7724ec25bb37ce03f365e575bc3",
       "entries": 19
+    },
+    {
+      "path": "2026/2026-11-11.md",
+      "sha256": "5c2d78ec5b817ecd80da0ce7d921a80fe89ff934765f26e5856feacd9d9c14b6",
+      "entries": 1
     },
     {
       "path": "2026-08-14.md",
@@ -16602,6 +16607,26 @@
       "basis": "explicit_stream_and_area",
       "flags": [],
       "date": "2026-11-10",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-11.md#thought-experiment-v3-remove-the-being-and-eternity-claims",
+      "source": "2026/2026-11-11.md",
+      "anchor": "thought-experiment-v3-remove-the-being-and-eternity-claims",
+      "start_line": 3,
+      "end_line": 16,
+      "title": "Thought experiment v3: remove the being and eternity claims",
+      "entry_sha256": "ada1f8fa649e19963f95b1ca9d4bf5ed9b4ccb78d9edea61a29f42eb7983cdb1",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-11",
       "legacy_root_path": false
     },
     {

@@ -9,6 +9,7 @@
 | ลำดับ | ไฟล์ | บอกอะไร |
 |---|---|---|
 | 1 | [`AUTHOR_PROPOSITION.md`](AUTHOR_PROPOSITION.md) | เจตนาและตรรกะ 10 ข้อของผู้เขียน (แหล่งเดียวของเจตนา) |
+| 1b | [`THOUGHT_EXPERIMENT.md`](THOUGHT_EXPERIMENT.md) | thought experiment "สิ่งที่เห็นคือบันทึกของอดีต" เวอร์ชัน 3 (ฉบับเดิมอยู่ `08_history/research_notes/` เก็บเป็นประวัติ) |
 | 2 | [`THEORY_CARD.md`](THEORY_CARD.md) | **สมการหลักของชั้น 1** (parent action) พร้อมสถานะและพารามิเตอร์ที่ซ้ำซ้อน |
 | 3 | [`FIDELITY_MATRIX.md`](FIDELITY_MATRIX.md) | ตรรกะแต่ละข้อของผู้เขียนตรงกับสมการไหม (ตรง 8 ข้อ) |
 | 4 | [`SYNTHESIS_AUDIT.md`](SYNTHESIS_AUDIT.md) | หลักการที่ยืมจากทฤษฎีอื่นใช้ถูกเงื่อนไขไหม และขอบเขตของกฎรวม |
@@ -68,6 +69,7 @@
 | `02_equations/matter_space/uet_master_equation.py` (Master Equation 7 เทอม) | **ไม่ใช่สมการหลักปัจจุบัน** AUTHOR_PROPOSITION §5 ระบุว่าเทอม Natural Will / Game ไม่ได้ implement ตรรกะของผู้เขียน | contract และ test เก่าอ้างถึง |
 | `docs/topics/For Work/` (30 ไฟล์) | แทนที่แล้วบางส่วนโดย `docs/STANDARD.md` ดู `SUPERSEDED_BY_STANDARD_V2.md` ในโฟลเดอร์นั้น: ไฟล์โครงสร้าง topic, README โค้ด, ข้อมูล, template **ยังใช้** (§15 ของ STANDARD); คำสถานะและลำดับขั้นงานเดิม**ถูกแทนที่** | contract 6 ฉบับล็อก hash ของไฟล์เหล่านี้ ถ้าย้ายหรือแก้จะพัง |
 | `docs/core/00_governance/`, `07_artifacts/`, audit script จำนวนมาก | ผลิตภัณฑ์ของระบบ gate เดิม (`LEGACY_UNREVIEWED`) | ใช้เป็นเครื่องมือวินิจฉัยได้ ไม่ควบคุมสถานะ |
+| `08_history/research_notes/THOUGHT_EXPERIMENT_OBSERVATION_PAST_BEHAVIOR.md` | v2 ของ thought experiment ใช้คำว่า being ซึ่งผู้เขียนถอนแล้ว ใช้ [`THOUGHT_EXPERIMENT.md`](THOUGHT_EXPERIMENT.md) แทน | manifest และ inventory หลายไฟล์ล็อก hash ไว้ |
 | `docs/core/README.md` | มีถ้อยคำเก่า ไม่ใช่แหล่งควบคุมข้ออ้าง | ประวัติ |
 
 ## 5. กฎการแก้ไฟล์

@@ -6,10 +6,11 @@
 
 These are source-linked historical records, not proof of completed research, successful publication, or current scientific readiness.
 
-Indexed entries: 606. Counts describe records, not accomplishments.
+Indexed entries: 607. Counts describe records, not accomplishments.
 
 | Date | Record | Area | Notes |
 | --- | --- | --- | --- |
+| 2026-11-11 | [Thought experiment v3: remove the being and eternity claims](2026/2026-11-11.md#thought-experiment-v3-remove-the-being-and-eternity-claims) (L3) | research-core | explicit_stream_and_area |
 | 2026-11-10 | [CORE_MAP: single map of the core equation files](2026/2026-11-10.md#core_map-single-map-of-the-core-equation-files) (L259) | research-standards | explicit_stream_and_area |
 | 2026-11-10 | [T008 and T009 results at L2; path-A summary table](2026/2026-11-10.md#t008-and-t009-results-at-l2-path-a-summary-table) (L245) | research-core | explicit_stream_and_area |
 | 2026-11-10 | [Path-A batch: feasibility, new models, T008 and T009 drafts](2026/2026-11-10.md#path-a-batch-feasibility-new-models-t008-and-t009-drafts) (L229) | research-core | explicit_stream_and_area |
