@@ -5,11 +5,11 @@
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
     "sources": 76,
-    "entries": 814,
+    "entries": 815,
     "by_stream": {
       "book-history": 94,
       "operations": 112,
-      "research": 608
+      "research": 609
     },
     "exact_duplicates": 0,
     "review_entries": 2
@@ -394,8 +394,8 @@
     },
     {
       "path": "2026/2026-11-11.md",
-      "sha256": "3a69d49b87ec698c5216f8ea49da3b43578a62ac9e6d43021a6c2bf8dc839aca",
-      "entries": 2
+      "sha256": "d3b5dd7537acb6a46a9db4cabe712c8f19d8f208ffa82d37d909f6f573d0837d",
+      "entries": 3
     },
     {
       "path": "2026-08-14.md",
@@ -16634,9 +16634,29 @@
       "source": "2026/2026-11-11.md",
       "anchor": "o1-delayed-observation-and-gap--rate-x-record-age",
       "start_line": 18,
-      "end_line": 30,
+      "end_line": 31,
       "title": "O1: delayed observation and gap = rate x record age",
-      "entry_sha256": "57aad75f0b920121cb396b0170a674424761b58334802f8c12cb94a9b593dd68",
+      "entry_sha256": "b5e44852a0d06871e1653264f0826e4d9d2c6d32bb87c46d4529ca86dd566c1d",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-11",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-11.md#o2-a-shared-record-exists-only-after-causal-contact",
+      "source": "2026/2026-11-11.md",
+      "anchor": "o2-a-shared-record-exists-only-after-causal-contact",
+      "start_line": 32,
+      "end_line": 45,
+      "title": "O2: a shared record exists only after causal contact",
+      "entry_sha256": "ef00f8682a9778e3e2549c65afa1b6fa2e17ed0c299a61bb40ae0fe4945b8c77",
       "stream": "research",
       "areas": [
         "research-core"

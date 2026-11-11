@@ -6,10 +6,11 @@
 
 These are source-linked historical records, not proof of completed research, successful publication, or current scientific readiness.
 
-Indexed entries: 608. Counts describe records, not accomplishments.
+Indexed entries: 609. Counts describe records, not accomplishments.
 
 | Date | Record | Area | Notes |
 | --- | --- | --- | --- |
+| 2026-11-11 | [O2: a shared record exists only after causal contact](2026/2026-11-11.md#o2-a-shared-record-exists-only-after-causal-contact) (L32) | research-core | explicit_stream_and_area |
 | 2026-11-11 | [O1: delayed observation and gap = rate x record age](2026/2026-11-11.md#o1-delayed-observation-and-gap--rate-x-record-age) (L18) | research-core | explicit_stream_and_area |
 | 2026-11-11 | [Thought experiment v3: remove the being and eternity claims](2026/2026-11-11.md#thought-experiment-v3-remove-the-being-and-eternity-claims) (L3) | research-core | explicit_stream_and_area |
 | 2026-11-10 | [CORE_MAP: single map of the core equation files](2026/2026-11-10.md#core_map-single-map-of-the-core-equation-files) (L259) | research-standards | explicit_stream_and_area |

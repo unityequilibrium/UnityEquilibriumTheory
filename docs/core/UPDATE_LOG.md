@@ -211,3 +211,10 @@ commit: this commit
 ระดับ: P2 ของ thought experiment v3 → L1 (บันทึกผลตอนท้าย)
 ถัดไป: O2 บันทึกร่วมเกิดภายใน light cone เท่านั้น
 commit: this commit
+
+## 2026-11-11 — Do two systems share a record only after causal contact? (O2)
+ทำ: โซ่ oscillator 121 ตัว เริ่มจาก product state (I = 0) แล้ววัด mutual information ของสองตำแหน่งตามเวลาและระยะ d; ตรวจ group velocity ≤ c = √κ; negative control สมมติความเร็วสัญญาณผิด (5 physics test)
+ผล: ก่อนสัมผัส (0.6·d/2c) I = 1.5e-7, 2.7e-13, 0 ที่ d = 10, 20, 30 (ลดแบบ super-exponential); หลังสัมผัส (1.2·d/2c) I = 6.5e-3, 2.6e-3, 1.4e-3; ที่ t = 0.75 d/c ซึ่งสัญญาณตรงยังมาไม่ถึง I = 1.4e-2 แล้ว → สัมผัสเกิดผ่าน common past ที่ d/2c ไม่ใช่เฉพาะสัญญาณตรง ที่ d/c
+ระดับ: P4 → L1 และ **ต้องแก้ถ้อยคำ P4**: contact = past cone ซ้อนกัน ไม่ใช่เฉพาะอยู่ใน cone ของกันและกัน
+ถัดไป: O3 Markov กับ history-dependent
+commit: this commit
