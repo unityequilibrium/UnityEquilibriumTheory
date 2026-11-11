@@ -218,3 +218,10 @@ commit: this commit
 ระดับ: P4 → L1 และ **ต้องแก้ถ้อยคำ P4**: contact = past cone ซ้อนกัน ไม่ใช่เฉพาะอยู่ใน cone ของกันและกัน
 ถัดไป: O3 Markov กับ history-dependent
 commit: this commit
+
+## 2026-11-11 — When does a history of records beat treating the newest record as the present? (O3)
+ทำ: เทียบตัวประมาณสถานะปัจจุบันสองแบบ ไม่มีความจำ (ใช้บันทึกล่าสุด) กับขึ้นกับประวัติ (ขยายจากบันทึกสองตัว) หาโมเมนต์แม่นตรง แล้วตรวจด้วย Monte Carlo 400k ตัวอย่าง (6 physics test)
+ผล: error ลู่เข้าอันดับ 1 (อัตราส่วน 1.64, 1.84, 1.93 → 2) กับอันดับ 2 (3.93, 3.98, 3.996 → 4); การเคลื่อนที่สม่ำเสมอ: แบบประวัติแม่นพอดี แบบไม่มีความจำพลาด rate × age; ความแปรปรวนตรงสูตรภายใน 2%; ความจำชนะเมื่อ noise ต่ำกว่า σ* = 0.10 (แอมพลิจูด 1) และแพ้เมื่อสูงกว่า ทั้งในสูตรและการจำลอง
+ระดับ: ข้อ 5 ของงานต่อใน thought experiment (Markov กับ history) → L1 ในโมเดลง่าย
+ถัดไป: O4 สนามสเกลาร์ของ parent action เป็น causal
+commit: this commit

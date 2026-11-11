@@ -5,11 +5,11 @@
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
     "sources": 76,
-    "entries": 815,
+    "entries": 816,
     "by_stream": {
       "book-history": 94,
       "operations": 112,
-      "research": 609
+      "research": 610
     },
     "exact_duplicates": 0,
     "review_entries": 2
@@ -394,8 +394,8 @@
     },
     {
       "path": "2026/2026-11-11.md",
-      "sha256": "d3b5dd7537acb6a46a9db4cabe712c8f19d8f208ffa82d37d909f6f573d0837d",
-      "entries": 3
+      "sha256": "d39a80d607852df6ae3cf426873ad5bd1d5d0ecc17fc12e2c8d6e12f82d62cfb",
+      "entries": 4
     },
     {
       "path": "2026-08-14.md",
@@ -16654,9 +16654,29 @@
       "source": "2026/2026-11-11.md",
       "anchor": "o2-a-shared-record-exists-only-after-causal-contact",
       "start_line": 32,
-      "end_line": 45,
+      "end_line": 46,
       "title": "O2: a shared record exists only after causal contact",
-      "entry_sha256": "ef00f8682a9778e3e2549c65afa1b6fa2e17ed0c299a61bb40ae0fe4945b8c77",
+      "entry_sha256": "1b3bada324d58df8861544c5dd0fe59a25a2d5f56f6ab86b362211836c306193",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-11",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-11.md#o3-markov-versus-history-dependent-estimators",
+      "source": "2026/2026-11-11.md",
+      "anchor": "o3-markov-versus-history-dependent-estimators",
+      "start_line": 47,
+      "end_line": 59,
+      "title": "O3: Markov versus history-dependent estimators",
+      "entry_sha256": "80ba9c97241af005d86d68ac97ea3e3aeb377a9cd4a3cf454afa2d88c9e1bd83",
       "stream": "research",
       "areas": [
         "research-core"
