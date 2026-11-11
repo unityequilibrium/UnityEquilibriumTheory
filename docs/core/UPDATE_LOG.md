@@ -246,3 +246,10 @@ commit: this commit
 ระดับ: C_T010_TWO_CARRIER_RECORDS → L0_SPECULATIVE
 ถัดไป: ผู้เขียนอนุมัติ T010 แล้วรัน; หาการทดสอบ P2 ที่ไม่วนกลับ
 commit: this commit
+
+## 2026-11-11 — T010 GW170817: two carriers of one event's records
+ทำ: รัน Test Card T010 (อนุมัติ d2dc61506) เทียบ c_T = 1 ของ parent action กับขอบเขต GW170817
+ผล: PASS: ทำนาย 0 อยู่ในช่วง [−3e-15, +7e-16]; ตรวจตัวเลขกับ abstract arXiv:1710.05834 แล้วตรง; ทฤษฎีใดที่มี c_T = 1 ก็ผ่าน จึงไม่ใช่ข้อทำนายเฉพาะของ UET
+ระดับ: C_T010_TWO_CARRIER_RECORDS → L2_CONFRONTED (ผู้เขียนอนุมัติ 2026-11-11) การทดสอบแรกของชั้นสังเกตกับข้อมูลจริง
+ถัดไป: หาการทดสอบ P2 ที่ไม่วนกลับ (light-time ที่มีวงโคจรจากแหล่งอิสระ)
+commit: this commit

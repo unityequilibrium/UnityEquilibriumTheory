@@ -210,10 +210,12 @@
     },
     {
       "claim_id": "C_T010_TWO_CARRIER_RECORDS",
-      "statement": "Records of one event carried by gravitational waves and by light travel at the same speed, as the parent action (c_T = 1) and principle P1 require.",
-      "level": "L0_SPECULATIVE",
-      "evidence": [],
-      "note": "Test Card T010 is a DRAFT awaiting author approval."
+      "statement": "Records of one event carried by gravitational waves and by light travel at the same speed: c_T = 1 of the parent action lies inside the GW170817 bound (v_GW - v_EM)/v_EM in [-3e-15, +7e-16].",
+      "level": "L2_CONFRONTED",
+      "evidence": [
+        "R_T010_GW170817_CARRIER_SPEED"
+      ],
+      "note": "First real-data test of the observation layer (principle P1) together with layer 1. Not UET-distinct: any c_T = 1 theory passes. L2 approved by the author on 2026-11-11."
     }
   ]
 }

@@ -6,10 +6,11 @@
 
 These are source-linked historical records, not proof of completed research, successful publication, or current scientific readiness.
 
-Indexed entries: 613. Counts describe records, not accomplishments.
+Indexed entries: 614. Counts describe records, not accomplishments.
 
 | Date | Record | Area | Notes |
 | --- | --- | --- | --- |
+| 2026-11-11 | [T010 result at L2: GW170817 carrier speed](2026/2026-11-11.md#t010-result-at-l2-gw170817-carrier-speed) (L103) | research-standards | explicit_stream_and_area |
 | 2026-11-11 | [T010 draft: GW170817 carrier speed](2026/2026-11-11.md#t010-draft-gw170817-carrier-speed) (L90) | research-standards | explicit_stream_and_area |
 | 2026-11-11 | [Records and corrections for the observation layer](2026/2026-11-11.md#records-and-corrections-for-the-observation-layer) (L76) | research-standards | explicit_stream_and_area |
 | 2026-11-11 | [O4: the parent-action scalar field propagates inside the light cone](2026/2026-11-11.md#o4-the-parent-action-scalar-field-propagates-inside-the-light-cone) (L61) | research-core | explicit_stream_and_area |
