@@ -1,7 +1,7 @@
 {
   "schema": "uet-test-card-v2",
   "test_id": "T011",
-  "status": "DRAFT",
+  "status": "APPROVED",
   "claim_id": "C_T011_PULSATION_RECORD_AGE",
   "theory_card": {
     "card_id": "UET_PARENT",
@@ -33,5 +33,10 @@
   "pass_criterion": "PASS if z <= 2 for both systems.",
   "fail_criterion": "FAILED if z > 3 for either system; INCONCLUSIVE if 2 < z <= 3 for any system and none exceeds 3, or if the registered values disagree with the source text.",
   "drafted_by": "claude",
-  "note": "Disclosure: drafted after reading the full table (exposure SEEN_FULL); a hand estimate gives z near 0.2 and 0.04, so the outcome is effectively known. The source authors already reported agreement. The comparison has about 10% precision (PM errors), so it checks P2 at that level, not finer. Independence: KIC 6780873 is fully independent; for KIC 5705575 the RV-only solution borrowed P and e from PM, so only K1 is independent there. The physics behind P2 here is standard light-travel time; any theory with retarded observation passes. Derivation identity d tau/dt = -v_r/c and the retarded-time phase gap are checked in docs/core/05_tests/physics/test_pulsation_timing.py."
+  "note": "Disclosure: drafted after reading the full table (exposure SEEN_FULL); a hand estimate gives z near 0.2 and 0.04, so the outcome is effectively known. The source authors already reported agreement. The comparison has about 10% precision (PM errors), so it checks P2 at that level, not finer. Independence: KIC 6780873 is fully independent; for KIC 5705575 the RV-only solution borrowed P and e from PM, so only K1 is independent there. The physics behind P2 here is standard light-travel time; any theory with retarded observation passes. Derivation identity d tau/dt = -v_r/c and the retarded-time phase gap are checked in docs/core/05_tests/physics/test_pulsation_timing.py. Approved by the author on 2026-11-11 as drafted.",
+  "approval": {
+    "approved_by": "santxkoz",
+    "date": "2026-11-11",
+    "role": "AUTHOR"
+  }
 }
