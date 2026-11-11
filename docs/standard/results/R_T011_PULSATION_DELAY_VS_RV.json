@@ -1,0 +1,58 @@
+{
+  "schema": "uet-result-v2",
+  "result_id": "R_T011_PULSATION_DELAY_VS_RV",
+  "claim_id": "C_T011_PULSATION_RECORD_AGE",
+  "test_card_id": "T011",
+  "level": "L2_CONFRONTED",
+  "outcome": "PASS",
+  "numbers": [
+    {
+      "name": "KIC6780873_ratio_pm_over_rv",
+      "value": "1.006",
+      "uncertainty": null,
+      "unit": "dimensionless"
+    },
+    {
+      "name": "KIC6780873_z",
+      "value": "0.04",
+      "uncertainty": null,
+      "unit": "dimensionless"
+    },
+    {
+      "name": "KIC6780873_z_no_delay",
+      "value": "6.4",
+      "uncertainty": null,
+      "unit": "dimensionless"
+    },
+    {
+      "name": "KIC5705575_ratio_pm_over_rv",
+      "value": "1.021",
+      "uncertainty": null,
+      "unit": "dimensionless"
+    },
+    {
+      "name": "KIC5705575_z",
+      "value": "0.17",
+      "uncertainty": null,
+      "unit": "dimensionless"
+    },
+    {
+      "name": "KIC5705575_z_no_delay",
+      "value": "127",
+      "uncertainty": null,
+      "unit": "dimensionless"
+    }
+  ],
+  "producer": {
+    "script": "docs/core/03_lanes/observation/t011_pulsation_delay_vs_rv.py",
+    "commit": "4ab60d3db"
+  },
+  "artifacts": [],
+  "date": "2026-11-11",
+  "approval": {
+    "approved_by": "santxkoz",
+    "date": "2026-11-11",
+    "role": "AUTHOR"
+  },
+  "note": "PASS under Test Card T011 (approved 4ab60d3db). The light-travel delay amplitude from pulsation timing equals the one predicted from an independent RV orbit within about 10%; the no-delay model is excluded. All ten registered values re-checked against Table 2 of the source before the run. Standard light-travel time passes equally; not UET-distinct. L2 approved by the author on 2026-11-11."
+}

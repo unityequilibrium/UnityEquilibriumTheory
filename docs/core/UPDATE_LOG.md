@@ -260,3 +260,10 @@ commit: this commit
 ระดับ: C_T011_PULSATION_RECORD_AGE → L0_SPECULATIVE
 ถัดไป: ผู้เขียนอนุมัติ T011 แล้วรัน
 commit: this commit
+
+## 2026-11-11 — T011 pulsating binaries: P2 against real data
+ทำ: รัน Test Card T011 (อนุมัติ 4ab60d3db) เทียบ a sin i/c จากจังหวะการเต้น (PM) กับจากวงโคจร RV อิสระ (Murphy et al. 2016)
+ผล: PASS: PM/RV = 1.006 (z = 0.04) KIC 6780873, 1.021 (z = 0.17) KIC 5705575; แบบไม่มีเวลาหน่วงถูกตัดที่ 6.4σ และ 127σ; ตรวจตัวเลข 10 ค่ากับ Table 2 แล้วตรง
+ระดับ: C_T011_PULSATION_RECORD_AGE → L2_CONFRONTED (ผู้เขียนอนุมัติ 2026-11-11) ไม่ใช่ข้อทำนายเฉพาะของ UET
+ถัดไป: ทดสอบ P4 (บันทึกร่วมต้องมีการสัมผัสเชิงเหตุผล) กับข้อมูลจริง
+commit: this commit

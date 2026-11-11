@@ -5,11 +5,11 @@
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
     "sources": 76,
-    "entries": 821,
+    "entries": 822,
     "by_stream": {
       "book-history": 94,
       "operations": 112,
-      "research": 615
+      "research": 616
     },
     "exact_duplicates": 0,
     "review_entries": 2
@@ -394,8 +394,8 @@
     },
     {
       "path": "2026/2026-11-11.md",
-      "sha256": "f2335a9c86a717548a942f94555a3e9ab08c12a75b8e6e0ab9dca1dce1facb87",
-      "entries": 9
+      "sha256": "6a65a9b9b7a68dc6e691dd4b40e9602b121a63140fb62c13750b149d5cad964a",
+      "entries": 10
     },
     {
       "path": "2026-08-14.md",
@@ -16774,9 +16774,29 @@
       "source": "2026/2026-11-11.md",
       "anchor": "o5-model-and-t011-draft-p2-with-pulsating-binaries",
       "start_line": 116,
-      "end_line": 128,
+      "end_line": 129,
       "title": "O5 model and T011 draft: P2 with pulsating binaries",
-      "entry_sha256": "914f069b41458ee9cb34676951cb3d6f66f95290244bb522331429e4b95429cb",
+      "entry_sha256": "0cb90df509e50bea6523807d99ad1aae896ece8e3144a65b3124a07690dc5fe3",
+      "stream": "research",
+      "areas": [
+        "research-standards"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-11",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-11.md#t011-result-at-l2-p2-with-pulsating-binaries",
+      "source": "2026/2026-11-11.md",
+      "anchor": "t011-result-at-l2-p2-with-pulsating-binaries",
+      "start_line": 130,
+      "end_line": 141,
+      "title": "T011 result at L2: P2 with pulsating binaries",
+      "entry_sha256": "db89e53fad855d2a2ec041f083542f2174a6918048023daef76587df51d9431a",
       "stream": "research",
       "areas": [
         "research-standards"

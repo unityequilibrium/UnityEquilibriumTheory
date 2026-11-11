@@ -219,10 +219,12 @@
     },
     {
       "claim_id": "C_T011_PULSATION_RECORD_AGE",
-      "statement": "Principle P2 holds for pulsating stars in binaries: the pulsation phase gap equals the rate times the light-travel record age, with the age fixed by an independent spectroscopic orbit.",
-      "level": "L0_SPECULATIVE",
-      "evidence": [],
-      "note": "Test Card T011 is a DRAFT awaiting author approval."
+      "statement": "Principle P2 holds for pulsating stars in binaries: the pulsation-timing delay amplitude equals the light-travel record age predicted from an independent RV orbit (PM/RV = 1.006, z = 0.04 for KIC 6780873; 1.021, z = 0.17 for KIC 5705575).",
+      "level": "L2_CONFRONTED",
+      "evidence": [
+        "R_T011_PULSATION_DELAY_VS_RV"
+      ],
+      "note": "First non-circular real-data test of P2 (about 10% precision). Not UET-distinct: standard light-travel time passes. L2 approved by the author on 2026-11-11."
     }
   ]
 }

@@ -6,10 +6,11 @@
 
 These are source-linked historical records, not proof of completed research, successful publication, or current scientific readiness.
 
-Indexed entries: 615. Counts describe records, not accomplishments.
+Indexed entries: 616. Counts describe records, not accomplishments.
 
 | Date | Record | Area | Notes |
 | --- | --- | --- | --- |
+| 2026-11-11 | [T011 result at L2: P2 with pulsating binaries](2026/2026-11-11.md#t011-result-at-l2-p2-with-pulsating-binaries) (L130) | research-standards | explicit_stream_and_area |
 | 2026-11-11 | [O5 model and T011 draft: P2 with pulsating binaries](2026/2026-11-11.md#o5-model-and-t011-draft-p2-with-pulsating-binaries) (L116) | research-standards | explicit_stream_and_area |
 | 2026-11-11 | [T010 result at L2: GW170817 carrier speed](2026/2026-11-11.md#t010-result-at-l2-gw170817-carrier-speed) (L103) | research-standards | explicit_stream_and_area |
 | 2026-11-11 | [T010 draft: GW170817 carrier speed](2026/2026-11-11.md#t010-draft-gw170817-carrier-speed) (L90) | research-standards | explicit_stream_and_area |
