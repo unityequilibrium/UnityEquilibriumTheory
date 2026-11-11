@@ -232,3 +232,10 @@ commit: this commit
 ระดับ: ชั้นสังเกตเชื่อมกับสนาม ψ ของสมการหลักได้ (L1, เชิงเส้น, flat, 1+1D)
 ถัดไป: บันทึกผล claim และปรับ thought experiment v3 (P4 = common past)
 commit: this commit
+
+## 2026-11-11 — Records and corrections for the observation layer (O1–O4)
+ทำ: บันทึกผล O1–O4 เป็น result และ claim ระดับ L1 สี่ข้อ (C_OBS_*); แก้ THOUGHT_EXPERIMENT v3 ตามผลทดสอบ; อัปเดต CORE_MAP และ FIDELITY_MATRIX
+ผล: P4 ถูกแก้: บันทึกร่วมเกิดผ่านต้นเหตุร่วมที่ t ≥ d/(2c) เร็วกว่าสัญญาณตรง d/c; ข้อ 7 ในตรรกะผู้เขียน PARTIAL → MATCH ตรงรวม 9 ใน 10 ข้อ
+ระดับ: C_OBS_DELAY_GAP, C_OBS_SHARED_RECORD_CONTACT, C_OBS_MEMORY_VS_MARKOV, C_OBS_FIELD_CAUSAL → L1_CONSISTENT
+ถัดไป: ทดสอบ P2/P4 กับข้อมูลจริง (light-time ในตำแหน่งดาวเคราะห์) และขยายไปควอนตัม
+commit: this commit

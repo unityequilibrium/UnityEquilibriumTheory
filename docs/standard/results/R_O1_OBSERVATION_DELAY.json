@@ -1,0 +1,34 @@
+{
+  "schema": "uet-result-v2",
+  "result_id": "R_O1_OBSERVATION_DELAY",
+  "claim_id": "C_OBS_DELAY_GAP",
+  "level": "L1_CONSISTENT",
+  "outcome": "PASS",
+  "numbers": [
+    {
+      "name": "retarded_time_vs_closed_form_3d_uniform_motion",
+      "value": "< 1e-10, 10/10 random cases",
+      "uncertainty": null,
+      "unit": "dimensionless"
+    },
+    {
+      "name": "first_order_gap_error_ratio_per_halving_of_age",
+      "value": "2.42, 2.17, 2.08 (tends to 2: first order)",
+      "uncertainty": null,
+      "unit": "dimensionless"
+    },
+    {
+      "name": "ignoring_delay_error_uniform_motion",
+      "value": "exactly rate x age (relative 1e-12)",
+      "uncertainty": null,
+      "unit": "dimensionless"
+    }
+  ],
+  "producer": {
+    "script": "docs/core/05_tests/physics/test_observation_delay.py",
+    "commit": "99f7400b8"
+  },
+  "artifacts": [],
+  "date": "2026-11-11",
+  "note": "Finite-speed signal, source slower than the signal; 3-D; no noise. Principle P2 of docs/core/THOUGHT_EXPERIMENT.md."
+}

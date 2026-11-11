@@ -5,11 +5,11 @@
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
     "sources": 76,
-    "entries": 817,
+    "entries": 818,
     "by_stream": {
       "book-history": 94,
       "operations": 112,
-      "research": 611
+      "research": 612
     },
     "exact_duplicates": 0,
     "review_entries": 2
@@ -394,8 +394,8 @@
     },
     {
       "path": "2026/2026-11-11.md",
-      "sha256": "b3876a4163877996563d0fa915cf051544a335daa0bd0b2e84c8f6c21b55cbc3",
-      "entries": 5
+      "sha256": "b8a380cf5b23b60ca5a459137127540c69f2ca42121f0bff10f0ae46401a5ba1",
+      "entries": 6
     },
     {
       "path": "2026-08-14.md",
@@ -16694,12 +16694,32 @@
       "source": "2026/2026-11-11.md",
       "anchor": "o4-the-parent-action-scalar-field-propagates-inside-the-light-cone",
       "start_line": 61,
-      "end_line": 74,
+      "end_line": 75,
       "title": "O4: the parent-action scalar field propagates inside the light cone",
-      "entry_sha256": "a285f7082a56fa82e00f0175b3234ccf5a16bc9218c1f559a93ec6ef065d957b",
+      "entry_sha256": "a625a866cd6aa2270801f9e0d6779c12d47d4eab09ace38c3c0d82abd95adae6",
       "stream": "research",
       "areas": [
         "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-11",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-11.md#records-and-corrections-for-the-observation-layer",
+      "source": "2026/2026-11-11.md",
+      "anchor": "records-and-corrections-for-the-observation-layer",
+      "start_line": 76,
+      "end_line": 88,
+      "title": "Records and corrections for the observation layer",
+      "entry_sha256": "b94bb96af2af766b3d8383046256211970d53856d135a158a5a7f4026bab5840",
+      "stream": "research",
+      "areas": [
+        "research-standards"
       ],
       "related_streams": [
         "research"

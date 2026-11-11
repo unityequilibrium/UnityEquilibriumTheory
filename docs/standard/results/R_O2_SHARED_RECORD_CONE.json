@@ -1,0 +1,40 @@
+{
+  "schema": "uet-result-v2",
+  "result_id": "R_O2_SHARED_RECORD_CONE",
+  "claim_id": "C_OBS_SHARED_RECORD_CONTACT",
+  "level": "L1_CONSISTENT",
+  "outcome": "PASS",
+  "numbers": [
+    {
+      "name": "mutual_information_before_contact_0.6_tcontact",
+      "value": "1.5e-7, 2.7e-13, 0 at d = 10, 20, 30",
+      "uncertainty": null,
+      "unit": "nats"
+    },
+    {
+      "name": "mutual_information_after_contact_1.2_tcontact",
+      "value": "6.5e-3, 2.6e-3, 1.4e-3 at d = 10, 20, 30",
+      "uncertainty": null,
+      "unit": "nats"
+    },
+    {
+      "name": "mutual_information_at_0.75_d_over_c_before_direct_signal",
+      "value": "1.35e-2 at d = 20",
+      "uncertainty": null,
+      "unit": "nats"
+    },
+    {
+      "name": "group_velocity_supremum_over_c",
+      "value": "> 0.99 and <= 1 (c = sqrt(kappa))",
+      "uncertainty": null,
+      "unit": "dimensionless"
+    }
+  ],
+  "producer": {
+    "script": "docs/core/05_tests/physics/test_shared_record_cone.py",
+    "commit": "285ba41f3"
+  },
+  "artifacts": [],
+  "date": "2026-11-11",
+  "note": "Classical Gaussian harmonic chain (121 sites) from a product state; contact time d/(2c) from overlapping past cones, earlier than the direct signal d/c. Corrects the wording of principle P4. Wrong-speed negative control fails as it should."
+}

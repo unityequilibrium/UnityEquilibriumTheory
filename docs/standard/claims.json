@@ -171,6 +171,42 @@
         "R_T009_U234_SECULAR_EQUILIBRIUM"
       ],
       "note": "Path-A test in nuclear physics. L2 approved by the author on 2026-11-10."
+    },
+    {
+      "claim_id": "C_OBS_DELAY_GAP",
+      "statement": "A source observed through a finite-speed signal is recorded at its retarded time, and the error of treating the record as the present equals the rate of change times the record age at first order.",
+      "level": "L1_CONSISTENT",
+      "evidence": [
+        "R_O1_OBSERVATION_DELAY"
+      ],
+      "note": "Principle P2 of the thought experiment v3. Standard physics; model-level check."
+    },
+    {
+      "claim_id": "C_OBS_SHARED_RECORD_CONTACT",
+      "statement": "Two systems share a record (mutual information) only after causal contact by overlapping past cones, t >= d/(2c), earlier than the direct signal d/c; before contact the shared record is super-exponentially small.",
+      "level": "L1_CONSISTENT",
+      "evidence": [
+        "R_O2_SHARED_RECORD_CONE"
+      ],
+      "note": "Principle P4 of the thought experiment v3, corrected by this test (common past). Classical Gaussian toy model."
+    },
+    {
+      "claim_id": "C_OBS_MEMORY_VS_MARKOV",
+      "statement": "An observer that keeps a history of records estimates the present with a bias one order lower than one that treats the newest record as the present, but amplifies measurement noise, so memory helps only below a crossover noise level.",
+      "level": "L1_CONSISTENT",
+      "evidence": [
+        "R_O3_MARKOV_VS_HISTORY"
+      ],
+      "note": "Research item 5 of the thought experiment: Markov versus history-dependent model, in a linear-Gaussian toy."
+    },
+    {
+      "claim_id": "C_OBS_FIELD_CAUSAL",
+      "statement": "The canonical response scalar of the parent action propagates only inside the light cone: the PDE solution converges at second order to the exact retarded solution and the field vanishes outside the cone.",
+      "level": "L1_CONSISTENT",
+      "evidence": [
+        "R_O4_FIELD_CAUSALITY"
+      ],
+      "note": "Links the observation layer to the core equation at linear order, flat background, 1+1D only; the full nonlinear curved-space statement is open."
     }
   ]
 }
