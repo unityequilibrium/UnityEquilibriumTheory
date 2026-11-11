@@ -5,11 +5,11 @@
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
     "sources": 76,
-    "entries": 816,
+    "entries": 817,
     "by_stream": {
       "book-history": 94,
       "operations": 112,
-      "research": 610
+      "research": 611
     },
     "exact_duplicates": 0,
     "review_entries": 2
@@ -394,8 +394,8 @@
     },
     {
       "path": "2026/2026-11-11.md",
-      "sha256": "d39a80d607852df6ae3cf426873ad5bd1d5d0ecc17fc12e2c8d6e12f82d62cfb",
-      "entries": 4
+      "sha256": "b3876a4163877996563d0fa915cf051544a335daa0bd0b2e84c8f6c21b55cbc3",
+      "entries": 5
     },
     {
       "path": "2026-08-14.md",
@@ -16674,9 +16674,29 @@
       "source": "2026/2026-11-11.md",
       "anchor": "o3-markov-versus-history-dependent-estimators",
       "start_line": 47,
-      "end_line": 59,
+      "end_line": 60,
       "title": "O3: Markov versus history-dependent estimators",
-      "entry_sha256": "80ba9c97241af005d86d68ac97ea3e3aeb377a9cd4a3cf454afa2d88c9e1bd83",
+      "entry_sha256": "3ca91b5d80467d0e12dac129e97bbcdfd777c35e769ec6e986c006bc2a3e0d80",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-11",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-11.md#o4-the-parent-action-scalar-field-propagates-inside-the-light-cone",
+      "source": "2026/2026-11-11.md",
+      "anchor": "o4-the-parent-action-scalar-field-propagates-inside-the-light-cone",
+      "start_line": 61,
+      "end_line": 74,
+      "title": "O4: the parent-action scalar field propagates inside the light cone",
+      "entry_sha256": "a285f7082a56fa82e00f0175b3234ccf5a16bc9218c1f559a93ec6ef065d957b",
       "stream": "research",
       "areas": [
         "research-core"

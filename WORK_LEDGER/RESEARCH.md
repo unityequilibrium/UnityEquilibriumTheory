@@ -6,10 +6,11 @@
 
 These are source-linked historical records, not proof of completed research, successful publication, or current scientific readiness.
 
-Indexed entries: 610. Counts describe records, not accomplishments.
+Indexed entries: 611. Counts describe records, not accomplishments.
 
 | Date | Record | Area | Notes |
 | --- | --- | --- | --- |
+| 2026-11-11 | [O4: the parent-action scalar field propagates inside the light cone](2026/2026-11-11.md#o4-the-parent-action-scalar-field-propagates-inside-the-light-cone) (L61) | research-core | explicit_stream_and_area |
 | 2026-11-11 | [O3: Markov versus history-dependent estimators](2026/2026-11-11.md#o3-markov-versus-history-dependent-estimators) (L47) | research-core | explicit_stream_and_area |
 | 2026-11-11 | [O2: a shared record exists only after causal contact](2026/2026-11-11.md#o2-a-shared-record-exists-only-after-causal-contact) (L32) | research-core | explicit_stream_and_area |
 | 2026-11-11 | [O1: delayed observation and gap = rate x record age](2026/2026-11-11.md#o1-delayed-observation-and-gap--rate-x-record-age) (L18) | research-core | explicit_stream_and_area |

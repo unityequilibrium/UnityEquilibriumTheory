@@ -225,3 +225,10 @@ commit: this commit
 ระดับ: ข้อ 5 ของงานต่อใน thought experiment (Markov กับ history) → L1 ในโมเดลง่าย
 ถัดไป: O4 สนามสเกลาร์ของ parent action เป็น causal
 commit: this commit
+
+## 2026-11-11 — Is the parent-action scalar field causal? (O4)
+ทำ: แก้สมการ Klein–Gordon 1+1D ของสนาม ψ (รูป canonical ของ THEORY_CARD) ด้วย leapfrog แล้วเทียบกับคำตอบ retarded แม่นตรง G_R = ½θ(t−|x|)J0(m√(t²−x²)) และกับ d'Alembert (m = 0) ที่เป็นคำตอบปิดอิสระ; negative control การตอบสนองแบบทันที (5 physics test)
+ผล: error ลู่เข้าอันดับ 2 (6.8e-3, 1.7e-3, 4.3e-4 ที่ dx = 0.1, 0.05, 0.025; ลำดับ 1.97, 2.00); m = 0 ตรง d'Alembert (4.0e-3, 1.0e-3, 2.5e-4); นอก cone (|x| > t + 8σ) น้อยกว่า 1e-10 ของค่าสูงสุด; การตอบสนองทันทีที่ |x| = 6, t = 1 ให้ 1.4e-3 เทียบกับ 4e-24 ของคำตอบเชิงเหตุผล
+ระดับ: ชั้นสังเกตเชื่อมกับสนาม ψ ของสมการหลักได้ (L1, เชิงเส้น, flat, 1+1D)
+ถัดไป: บันทึกผล claim และปรับ thought experiment v3 (P4 = common past)
+commit: this commit
