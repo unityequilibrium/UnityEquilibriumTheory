@@ -5,10 +5,10 @@
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
     "sources": 77,
-    "entries": 818,
+    "entries": 819,
     "by_stream": {
       "book-history": 94,
-      "operations": 117,
+      "operations": 118,
       "research": 606,
       "review": 1
     },
@@ -400,8 +400,8 @@
     },
     {
       "path": "2026/2026-11-15.md",
-      "sha256": "cfe530b198758eee4cba370613466a1e9280e25f70df272c6f04d30202fa76cd",
-      "entries": 5
+      "sha256": "e80725fc6be66f97723525f040216496ca0215ebcbd87e3f9ba504e15c68843c",
+      "entries": 6
     },
     {
       "path": "2026-08-14.md",
@@ -16719,9 +16719,29 @@
       "source": "2026/2026-11-15.md",
       "anchor": "topic-04-negative-result-reporting-integration",
       "start_line": 46,
-      "end_line": 54,
+      "end_line": 55,
       "title": "Topic 0.4 negative-result reporting integration",
-      "entry_sha256": "de5a36cc625d490d9a9a7ff6c92de0db8ae95338d7a46625417fa777a557c9ed",
+      "entry_sha256": "996fce22e4798f16e27076631f6f538c371cf9c7c1e27a9a2688fc1731991360",
+      "stream": "operations",
+      "areas": [
+        "repo-ops"
+      ],
+      "related_streams": [
+        "operations"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-15",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-15.md#gravity-failure-reporting-and-exact-stale-identity-triage",
+      "source": "2026/2026-11-15.md",
+      "anchor": "gravity-failure-reporting-and-exact-stale-identity-triage",
+      "start_line": 56,
+      "end_line": 64,
+      "title": "Gravity failure reporting and exact stale-identity triage",
+      "entry_sha256": "ac34aec515214042bd95c221168e18be610e2e264c403e41149805fd6ec48bbe",
       "stream": "operations",
       "areas": [
         "repo-ops"

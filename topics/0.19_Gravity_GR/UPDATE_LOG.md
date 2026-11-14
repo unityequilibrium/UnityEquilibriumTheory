@@ -42,3 +42,11 @@
 
 **Claim impact:**
 - No promotion. Topic 0.19 remains `Draft / Tier B`; this is an artifact/provenance repair wave only.
+
+## 2026-11-15 — Constant-checkpoint failure-path repair (software only)
+- Restored root-level Topic paths and added `UET_OUTPUT_ROOT`; no Core equation, physical constant or existing threshold was changed.
+- Fixed the None-formatting crash after an invalid G result; nonfinite G is reported as null/unknown in JSON with FAIL, never as zero or a successful comparison.
+- Six synthetic-fixture tests cover matching/mismatching, zero/nonfinite G and output isolation; no real gravity engine or CODATA comparison was executed.
+- Shared runner reports this limited scope as INCOMPLETE (exit 2), while copying the saved legacy source-constant checkpoint PASS separately; this is not a new gravity result or v2 registration.
+- Verification: 6/6 Topic tests and 28/28 runner tests passed; the real outside-repository entrypoint recorded 6 passed with the explicit coverage gap.
+- Remaining: real-engine/source correspondence and all other gravity paths are not admitted by these fixture tests; prior scientific limitations remain in force.

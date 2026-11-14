@@ -130,6 +130,23 @@ def test_pytest_success_without_outcomes_and_all_xfail_are_incomplete() -> None:
         assert status == "INCOMPLETE"
 
 
+def test_pytest_uses_final_summary_not_traceback_or_captured_fixture_text() -> None:
+    output = ('assert "999 passed, 77 failed" in fixture\n'
+              '999 passed\n'
+              '== 1 failed, 2 passed, 8 subtests passed, 1 warning in 2.5s ==\n')
+    counts = runner._pytest_counts(output)
+    assert counts["passed"] == 2
+    assert counts["failed"] == 1
+    assert sum(counts.values()) == 3
+
+
+def test_pytest_success_cannot_hide_unaccounted_collected_tests() -> None:
+    suite = runner.Suite("fixture", "pytest", ["pytest"], ["tests"])
+    status, counts = runner._classify(suite, 0, "2 passed in 1.0s", collected=3)
+    assert status == "INCOMPLETE"
+    assert counts["passed"] == 2
+
+
 def test_deferred_tests_remain_visible_without_automatic_execution(tmp_path: Path) -> None:
     topic = tmp_path / "0.40_Example"
     for relative in ("legacy/test_previous.py", "archive/test_previous.py", "Code/check_custom.py"):

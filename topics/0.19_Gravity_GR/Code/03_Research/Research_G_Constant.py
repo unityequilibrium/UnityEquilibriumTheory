@@ -10,6 +10,7 @@ derivation of G, Einstein equations, light bending, or singularity avoidance.
 
 import importlib.util
 import json
+import os
 import platform
 import sys
 from datetime import datetime, timezone
@@ -22,7 +23,7 @@ import numpy as np
 def _bootstrap():
     curr = Path(__file__).resolve()
     for parent in [curr] + list(curr.parents):
-        if (parent / "docs").exists() and (parent / "docs" / "core").exists():
+        if (parent / "core" / "core_paths.py").is_file() and (parent / "topics").is_dir():
             if str(parent) not in sys.path:
                 sys.path.insert(0, str(parent))
             return parent
@@ -34,9 +35,9 @@ if ROOT is None:
     print("CRITICAL: UET docs root not found")
     sys.exit(1)
 
-TOPIC_DIR = ROOT / "docs" / "topics" / "0.19_Gravity_GR"
+TOPIC_DIR = ROOT / "topics" / "0.19_Gravity_GR"
 DATA_PATH = TOPIC_DIR / "Data" / "03_Research" / "codata_2018_gravity.json"
-ARTIFACT_PATH = TOPIC_DIR / "Result" / "artifacts" / "0_19_gravity_gr_verification.json"
+ARTIFACT_PATH = Path(os.environ.get("UET_OUTPUT_ROOT", ROOT)) / "topics/0.19_Gravity_GR/Result/artifacts/0_19_gravity_gr_verification.json"
 
 
 def file_sha256(path):
@@ -80,10 +81,10 @@ def test_gravitational_constant():
     rel_uncertainty_percent = constants["G"]["relative_uncertainty"] * 100
     threshold_percent = max(rel_uncertainty_percent, 0.0001)
 
-    if np.isnan(g_engine) or g_engine == 0:
+    if not np.isfinite(g_engine) or g_engine == 0:
         error_percent = None
         status = "FAIL"
-        failure_reason = "Engine returned NaN or zero for G."
+        failure_reason = "Engine returned a nonfinite value or zero for G."
     else:
         error_percent = abs(g_engine - g_codata) / g_codata * 100
         status = "PASS" if error_percent <= threshold_percent else "FAIL"
@@ -91,7 +92,8 @@ def test_gravitational_constant():
 
     print(f"CODATA 2018: G = {g_codata:.5e}")
     print(f"Engine value: G = {g_engine:.5e}")
-    print(f"Error: {error_percent:.8f}%")
+    print("Error: unavailable (invalid engine G)" if error_percent is None
+          else f"Error: {error_percent:.8f}%")
     print(f"Artifact status: {status}")
 
     artifact = {
@@ -124,7 +126,7 @@ def test_gravitational_constant():
         },
         "metrics": {
             "G_codata": g_codata,
-            "G_engine": g_engine,
+            "G_engine": g_engine if np.isfinite(g_engine) else None,
             "relative_error_percent": error_percent,
             "planck_length_m": planck["length"],
             "planck_time_s": planck["time"],

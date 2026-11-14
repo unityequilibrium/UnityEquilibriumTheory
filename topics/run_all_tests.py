@@ -39,6 +39,11 @@ COLLECTION_ERROR = re.compile(r"ERROR collecting|errors? during collection|Impor
 GRID_PHASES = {"01_Engine", "02_Proof", "03_Research", "04_Competitor"}
 # Reviewed readout configuration, not a new research-status registry.
 LEGACY_RESULT_READOUTS = {
+    "0.19_Gravity_GR": {
+        "path": "topics/0.19_Gravity_GR/Result/artifacts/0_19_gravity_gr_verification.json",
+        "outcome_field": "status",
+        "suite_scope": "synthetic constant-checkpoint failure/reporting tests only; real engine/CODATA comparison and other gravity paths remain unreviewed",
+    },
     "0.4_Superconductivity_Superfluids": {
         "path": "topics/0.4_Superconductivity_Superfluids/Result/artifacts/0_4_superconductivity_superfluids_verification.json",
         "outcome_field": "model_gate_status",
@@ -440,9 +445,19 @@ def _pytest_count(output: str) -> int | None:
 
 def _pytest_counts(output: str) -> dict[str, int]:
     counts = {key: 0 for key in ("passed", "failed", "errors", "skipped", "xfailed", "xpassed")}
-    # Pytest summary wording varies with the outcomes present; parse each count
-    # independently so a partial summary cannot shift fields positionally.
-    for number, label in re.findall(r"\b(\d+)\s+(passed|failed|errors?|skipped|xfailed|xpassed)\b", output):
+    # Tracebacks and captured stdout can contain fixture text like "999 passed".
+    # Only the last complete framework summary is an outcome source; subtest
+    # counts and warnings are not additional top-level test outcomes.
+    label = r"(?:passed|failed|errors?|skipped|xfailed|xpassed|deselected|warnings?|subtests? (?:passed|failed|skipped))"
+    summary = re.compile(
+        rf"\s*=*\s*(\d+\s+{label}(?:,\s*\d+\s+{label})*)"
+        r"(?:\s+in\s+[\d.]+s(?:\s+\([\d:]+\))?)?\s*=*\s*"
+    )
+    summaries = [match.group(1) for line in output.splitlines()
+                 if (match := summary.fullmatch(line))]
+    if not summaries:
+        return counts
+    for number, label in re.findall(r"\b(\d+)\s+(passed|failed|errors?|skipped|xfailed|xpassed)\b", summaries[-1]):
         counts["errors" if label.startswith("error") else label] += int(number)
     return counts
 
@@ -477,6 +492,8 @@ def _classify(suite: Suite, returncode: int, output: str, collected: int | None 
         if returncode != 0 or counts.get("failed", 0) or counts.get("errors", 0) or counts.get("xpassed", 0):
             return "FAIL", counts
         if counts.get("skipped", 0) or counts.get("xfailed", 0) or not counts.get("passed", 0):
+            return "INCOMPLETE", counts
+        if collected is not None and sum(counts.values()) != collected:
             return "INCOMPLETE", counts
         return "PASS", counts
 
