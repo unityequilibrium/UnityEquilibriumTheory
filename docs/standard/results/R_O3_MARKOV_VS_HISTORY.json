@@ -1,0 +1,40 @@
+{
+  "schema": "uet-result-v2",
+  "result_id": "R_O3_MARKOV_VS_HISTORY",
+  "claim_id": "C_OBS_MEMORY_VS_MARKOV",
+  "level": "L1_CONSISTENT",
+  "outcome": "PASS",
+  "numbers": [
+    {
+      "name": "markov_error_ratio_per_halving",
+      "value": "1.64, 1.84, 1.93 (tends to 2)",
+      "uncertainty": null,
+      "unit": "dimensionless"
+    },
+    {
+      "name": "history_error_ratio_per_halving",
+      "value": "3.93, 3.98, 3.996 (tends to 4)",
+      "uncertainty": null,
+      "unit": "dimensionless"
+    },
+    {
+      "name": "variance_vs_monte_carlo",
+      "value": "within 2% (400k samples)",
+      "uncertainty": null,
+      "unit": "dimensionless"
+    },
+    {
+      "name": "crossover_noise_sigma_star",
+      "value": "0.10 for unit amplitude, age = spacing = 0.3",
+      "uncertainty": null,
+      "unit": "source units"
+    }
+  ],
+  "producer": {
+    "script": "docs/core/05_tests/physics/test_markov_vs_history.py",
+    "commit": "fb7190d72"
+  },
+  "artifacts": [],
+  "date": "2026-11-11",
+  "note": "Two-record linear extrapolation versus newest-record estimate; Gaussian measurement noise. Memory helps only below sigma*."
+}

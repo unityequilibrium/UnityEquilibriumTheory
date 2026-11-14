@@ -9,6 +9,7 @@
 | ลำดับ | ไฟล์ | บอกอะไร |
 |---|---|---|
 | 1 | [`AUTHOR_PROPOSITION.md`](AUTHOR_PROPOSITION.md) | เจตนาและตรรกะ 10 ข้อของผู้เขียน (แหล่งเดียวของเจตนา) |
+| 1b | [`THOUGHT_EXPERIMENT.md`](THOUGHT_EXPERIMENT.md) | thought experiment "สิ่งที่เห็นคือบันทึกของอดีต" เวอร์ชัน 3 (ฉบับเดิมอยู่ `08_history/research_notes/` เก็บเป็นประวัติ) |
 | 2 | [`THEORY_CARD.md`](THEORY_CARD.md) | **สมการหลักของชั้น 1** (parent action) พร้อมสถานะและพารามิเตอร์ที่ซ้ำซ้อน |
 | 3 | [`FIDELITY_MATRIX.md`](FIDELITY_MATRIX.md) | ตรรกะแต่ละข้อของผู้เขียนตรงกับสมการไหม (ตรง 8 ข้อ) |
 | 4 | [`SYNTHESIS_AUDIT.md`](SYNTHESIS_AUDIT.md) | หลักการที่ยืมจากทฤษฎีอื่นใช้ถูกเงื่อนไขไหม และขอบเขตของกฎรวม |
@@ -34,7 +35,7 @@
 
 | อะไร | ไฟล์ |
 |---|---|
-| สมการและโมเดล | `03_lanes/open_system/uet_layer2_dissipation.py` (ระบบปิดให้ระบบเปิดเอง), `uet_r3_trace_decomposition.py` (ร่องรอย = บันทึก + ความต่างศักย์), `uet_r1_writing_channels.py`, `uet_portal_drag.py` |
+| สมการและโมเดล | `03_lanes/open_system/uet_layer2_dissipation.py` (ระบบปิดให้ระบบเปิดเอง), `uet_r3_trace_decomposition.py` (ร่องรอย = บันทึก + ความต่างศักย์), `uet_r1_writing_channels.py`, `uet_portal_drag.py`, `uet_portal_drag_bound.py` (ขอบเขตของแรงลาก portal จากการที่วงโคจรอยู่รอด) |
 | ตัวตรวจ | `05_tests/physics/test_layer2_dissipation.py`, `test_r3_trace_decomposition.py`, `test_r1_writing_channels.py`, `test_distinctness.py` |
 | เทียบข้อมูลจริง | T006 ดวงอาทิตย์ (`t006_solar_mass_loss.py`) |
 | ของเก่าที่ยังอยู่ | `02_equations/covariant/uet_covariant_open_system.py` (ระบบเปิดแบบเชิงเส้น ค่า `kms_residual` เป็น 0 เสมอโดยนิยาม จึงไม่ใช่ตัวตรวจจริง ดู FIDELITY_MATRIX) |
@@ -47,6 +48,15 @@
 | ตัวตรวจ | `05_tests/physics/test_persistence_selection.py`, `test_layer2_to_3.py`, `test_r2_laser_selection.py`, `test_path_a_models.py` |
 | เทียบข้อมูลจริง | T002 กระจุกดาว, T007 สาหร่าย, T008 ดาวแคระขาว, T009 ยูเรเนียม-234 (`t002_*`, `t007_*`, `t008_*`, `t009_*` ในโฟลเดอร์เดียวกัน) |
 
+### ชั้นสังเกต (thought experiment v3)
+
+| อะไร | ไฟล์ |
+|---|---|
+| คำอธิบายและหลักการ P1–P4 | [`THOUGHT_EXPERIMENT.md`](THOUGHT_EXPERIMENT.md) |
+| โมเดล | `03_lanes/observation/uet_observation_layer.py` (เวลาหน่วง, ช่องว่าง), `uet_shared_record.py` (บันทึกร่วมต้องมีการสัมผัสเชิงเหตุผล), `uet_estimators.py` (Markov กับ history), `uet_field_causality.py` (สนาม ψ แพร่ใน light cone), `uet_pulsation_timing.py` (P2 กับดาวเต้นในระบบดาวคู่), `uet_two_signal_contact.py` (P4 เมื่อสัญญาณสองตัวมีความเร็วต่างกัน: t = d/(c_a + c_b)), `uet_lorentz_time.py` (P3: boost, ความพร้อมกันสัมพัทธ์ dt' = −γβdx, ค่า Ives–Stilwell) |
+| ตัวตรวจ | `05_tests/physics/test_observation_delay.py`, `test_shared_record_cone.py`, `test_markov_vs_history.py`, `test_field_causality.py`, `test_pulsation_timing.py`, `test_two_signal_contact.py`, `test_lorentz_time.py` |
+| เทียบข้อมูลจริง | T010 GW170817 (`t010_gw170817_carrier_speed.py`): คลื่นความโน้มถ่วงกับแสงวิ่งเร็วเท่ากัน ตามที่ c_T = 1 กำหนด (derive ใน `05_tests/physics/test_tensor_speed.py`); T011 ดาวเต้นในระบบดาวคู่ (`t011_pulsation_delay_vs_rv.py`): ช่องว่างเฟส = อัตรา × อายุบันทึก (P2); T012 หน้าคลื่นสหสัมพันธ์ใน Bose–Hubbard quench (`t012_correlation_front_bound.py`): บันทึกร่วมต้องผ่านอดีตร่วม (P4); T013 Ives–Stilwell (`t013_ives_stilwell_lorentz_time.py`): การแปลงเวลาเป็นแบบลอเรนซ์ (P3 ในฐานะส่วนหนึ่งของการแปลงลอเรนซ์) |
+
 ## 3. ผลการทดสอบกับข้อมูลจริงทั้งหมด (`docs/standard/`)
 
 | Card | สรุป | ผล |
@@ -58,6 +68,10 @@
 | T007 | สาหร่ายแข่งกันใน chemostat | L2 PASS |
 | T008 | ความชัน luminosity function ของดาวแคระขาว | L2 PASS |
 | T009 | ครึ่งชีวิต U-234 จากสมดุล เทียบกับวัดตรง | L2 PASS |
+| T010 | บันทึกของเหตุการณ์เดียวผ่านคลื่นความโน้มถ่วงกับแสง (GW170817) วิ่งเร็วเท่ากัน | L2 PASS (ทฤษฎีใดที่มี c_T = 1 ก็ผ่าน) |
+| T011 | เวลาหน่วงจากจังหวะการเต้นเท่ากับอายุบันทึกที่คำนวณจากวงโคจร RV อิสระ (P2) | L2 PASS (z = 0.04, 0.17; เวลาเดินทางของแสงมาตรฐานก็ผ่าน) |
+| T012 | หน้าคลื่นสหสัมพันธ์หลัง quench ไม่เร็วกว่าขอบเขตอดีตร่วม c_a + c_b และเร็วกว่าขอบเขตสัมผัสตรง 3.9σ และ 6.0σ (P4) | L2 PASS (ฟิสิกส์ควาซิพาร์ติเคิลมาตรฐานก็ผ่าน) |
+| T013 | ค่า Ives–Stilwell ของ ⁷Li⁺ ที่ β = 0.338 เป็น (1.47 ± 2.30)×10⁻⁹ ตรงกับศูนย์ที่การแปลงลอเรนซ์ต้องการ (P3) | L2 PASS (สัมพัทธภาพพิเศษมาตรฐานก็ผ่าน; ไม่แยกความพร้อมกันเดี่ยวๆ) |
 
 การ์ดอยู่ที่ `docs/standard/tests/` ผลอยู่ที่ `docs/standard/results/` ระดับของทุกข้ออ้างอยู่ที่ `docs/standard/claims.json`
 
@@ -68,6 +82,7 @@
 | `02_equations/matter_space/uet_master_equation.py` (Master Equation 7 เทอม) | **ไม่ใช่สมการหลักปัจจุบัน** AUTHOR_PROPOSITION §5 ระบุว่าเทอม Natural Will / Game ไม่ได้ implement ตรรกะของผู้เขียน | contract และ test เก่าอ้างถึง |
 | `docs/topics/For Work/` (30 ไฟล์) | แทนที่แล้วบางส่วนโดย `docs/STANDARD.md` ดู `SUPERSEDED_BY_STANDARD_V2.md` ในโฟลเดอร์นั้น: ไฟล์โครงสร้าง topic, README โค้ด, ข้อมูล, template **ยังใช้** (§15 ของ STANDARD); คำสถานะและลำดับขั้นงานเดิม**ถูกแทนที่** | contract 6 ฉบับล็อก hash ของไฟล์เหล่านี้ ถ้าย้ายหรือแก้จะพัง |
 | `docs/core/00_governance/`, `07_artifacts/`, audit script จำนวนมาก | ผลิตภัณฑ์ของระบบ gate เดิม (`LEGACY_UNREVIEWED`) | ใช้เป็นเครื่องมือวินิจฉัยได้ ไม่ควบคุมสถานะ |
+| `08_history/research_notes/THOUGHT_EXPERIMENT_OBSERVATION_PAST_BEHAVIOR.md` | v2 ของ thought experiment ใช้คำว่า being ซึ่งผู้เขียนถอนแล้ว ใช้ [`THOUGHT_EXPERIMENT.md`](THOUGHT_EXPERIMENT.md) แทน | manifest และ inventory หลายไฟล์ล็อก hash ไว้ |
 | `docs/core/README.md` | มีถ้อยคำเก่า ไม่ใช่แหล่งควบคุมข้ออ้าง | ประวัติ |
 
 ## 5. กฎการแก้ไฟล์
@@ -81,4 +96,5 @@
 1. **ชั้น 2 และ 3 ยังไม่ได้ derive จาก parent action ของชั้น 1** ตอนนี้ต่อกันด้วยตรรกะและตัวเลข ไม่ได้ต่อกันด้วยสมการเดียว
 2. **ยังไม่มีข้อทำนายเชิงตัวเลขที่ UET ต่างจากฟิสิกส์มาตรฐาน** (`C_B4_DISTINCTNESS_AUDIT`) ทุกชั้นลดรูปเป็นทฤษฎีที่มีอยู่แล้ว ส่วนที่เป็นของ UET คือการรวมสามสาขาและแผนที่ขอบเขต
 3. ข้อ 7 ในตรรกะของผู้เขียน (ร่องรอยบน space) ตรงบางส่วน: ช่องแรงโน้มถ่วงมีหลักฐาน L2 (T006) แต่ยังไม่ได้ระบุว่าส่วนไหนเป็นของ UET เอง
-4. ยังขาดการทดสอบกับข้อมูลจริงในเรื่อง "ทรัพยากรถูกตรึงที่ R*" (เลเซอร์, chemostat) และ negative control ที่คมพอ
+4. **ชั้นสังเกตเชื่อมกับสมการหลักแค่เชิงเส้น** (สนาม ψ แบน 1+1D, O4) P1–P4 ทดสอบกับข้อมูลจริงครบแล้ว (T010–T013) โดย P3 ผ่านในฐานะส่วนหนึ่งของการแปลงเวลาลอเรนซ์ ไม่ใช่ความพร้อมกันเดี่ยวๆ
+5. ยังขาดการทดสอบกับข้อมูลจริงในเรื่อง "ทรัพยากรถูกตรึงที่ R*" (เลเซอร์, chemostat) และ negative control ที่คมพอ

@@ -1,0 +1,42 @@
+{
+  "schema": "uet-test-card-v2",
+  "test_id": "T013",
+  "status": "CLOSED",
+  "claim_id": "C_T013_LORENTZ_TIME_STRUCTURE",
+  "theory_card": {
+    "card_id": "UET_PARENT",
+    "version": 1
+  },
+  "hypothesis": "Principle P3 of the thought experiment v3: the 'now' of distant events is not universal; two inertial observers are related by the Lorentz boost of the parent action's local frame, so the offset of 'now' is dt' = -gamma beta dx and the Doppler shifts of co- and counter-propagating resonant lasers obey nu_a nu_p / (nu_1 nu_2) = 1 exactly (derived in wave O7 by boosting the photon four-vector, with a negative control). Predicted epsilon = sqrt(nu_a nu_p / (nu_1 nu_2)) - 1 = 0 for 7Li+ ions at beta = 0.338. An absolute-time alternative (no relativity of simultaneity, no time dilation) predicts epsilon = gamma - 1 = 0.0625.",
+  "observable": {
+    "quantity": "epsilon = sqrt(nu_a nu_p / (nu_1 nu_2)) - 1",
+    "unit": "dimensionless",
+    "domain": "7Li+ ions stored at beta = 0.338 (Botermann et al. 2014), laser frequencies near 384 and 777 THz"
+  },
+  "test_kind": "CONSTRAINT",
+  "data_sources": [
+    {
+      "data_id": "BOTERMANN2014_LI_DOPPLER_FREQUENCIES",
+      "role": "COMPARISON",
+      "exposure": "SEEN_FULL"
+    }
+  ],
+  "prediction_method": {
+    "script": "docs/core/03_lanes/observation/t013_ives_stilwell_lorentz_time.py",
+    "description": "epsilon and sigma_epsilon from the four registered frequencies (independent errors); z = |epsilon|/sigma_epsilon; the registered frequencies must also reproduce the published (1.5 +- 2.3)e-9 within 0.1e-9, otherwise INCONCLUSIVE"
+  },
+  "free_parameters": [],
+  "fixed_parameters": [
+    "frequencies and uncertainties exactly as registered",
+    "error propagation as independent errors, as in the source"
+  ],
+  "pass_criterion": "PASS if z <= 2 and the registered frequencies reproduce the published epsilon and its uncertainty.",
+  "fail_criterion": "FAILED if z > 3; INCONCLUSIVE if 2 < z <= 3, or if the registered frequencies do not reproduce the published epsilon.",
+  "drafted_by": "claude",
+  "note": "Disclosure: drafted after reading the published result epsilon = (1.5 +- 2.3)e-9 and after recomputing it from the four frequencies (1.47e-9 +- 2.30e-9, z = 0.64), so the outcome is effectively known. Scope, stated plainly: an Ives-Stilwell observable tests the time-dilation factor gamma together with the relativity principle (invariance of atomic frequencies and of the light phase velocity under the boost); relative simultaneity is the other half of the same Lorentz time transformation, and in the Robertson-Mansouri-Sexl framework it is separated only with Michelson-Morley and Kennedy-Thorndike results, which are not tested here. So this card tests P3 only as part of the Lorentz time transformation, not as an isolated statement about simultaneity. The rest-frame frequencies nu_1 and nu_2 come from earlier independent measurements; the Doppler-shifted ones from this experiment. The physics is standard special relativity; any Lorentz-invariant theory passes; not UET-distinct. The boost, the offset -gamma beta dx, the boost invariance of the parent-action response Green function and the negative controls (absolute-time Doppler shift, Galilean cone) are checked in docs/core/05_tests/physics/test_lorentz_time.py. Approved by the author on 2026-11-11 as drafted.",
+  "approval": {
+    "approved_by": "santxkoz",
+    "date": "2026-11-11",
+    "role": "AUTHOR"
+  }
+}

@@ -1,0 +1,7 @@
+# Inputs for UET Test Card T010: two records of one event (gravitational waves and light) from GW170817 / GRB 170817A.
+# Source: B. P. Abbott et al. (LIGO, Virgo, Fermi GBM, INTEGRAL), Astrophys. J. Lett. 848, L13 (2017), doi:10.3847/2041-8213/aa920c, arXiv:1710.05834, abstract and Sect. 4.1.
+# Transcribed on 2026-11-11; numerical facts only.
+record,quantity,value,sigma,unit,note
+observed,arrival_delay_grb_after_gw,1.74,0.05,s,"GRB 170817A observed after the GW170817 merger time"
+bound,speed_difference_lower,-3e-15,,fraction_of_c,"(v_GW - v_EM)/v_EM lower bound"
+bound,speed_difference_upper,7e-16,,fraction_of_c,"(v_GW - v_EM)/v_EM upper bound"

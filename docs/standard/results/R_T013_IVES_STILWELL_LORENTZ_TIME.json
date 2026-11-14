@@ -1,0 +1,52 @@
+{
+  "schema": "uet-result-v2",
+  "result_id": "R_T013_IVES_STILWELL_LORENTZ_TIME",
+  "claim_id": "C_T013_LORENTZ_TIME_STRUCTURE",
+  "test_card_id": "T013",
+  "level": "L2_CONFRONTED",
+  "outcome": "PASS",
+  "numbers": [
+    {
+      "name": "epsilon",
+      "value": "1.47e-9",
+      "uncertainty": "2.30e-9",
+      "unit": "dimensionless"
+    },
+    {
+      "name": "z",
+      "value": "0.64",
+      "uncertainty": null,
+      "unit": "dimensionless"
+    },
+    {
+      "name": "alpha_reduced",
+      "value": "1.29e-8",
+      "uncertainty": "2.01e-8",
+      "unit": "dimensionless"
+    },
+    {
+      "name": "absolute_time_epsilon",
+      "value": "0.0625",
+      "uncertainty": null,
+      "unit": "dimensionless"
+    },
+    {
+      "name": "absolute_time_z",
+      "value": "2.7e7",
+      "uncertainty": null,
+      "unit": "dimensionless"
+    }
+  ],
+  "producer": {
+    "script": "docs/core/03_lanes/observation/t013_ives_stilwell_lorentz_time.py",
+    "commit": "f8c0e2ff6"
+  },
+  "artifacts": [],
+  "date": "2026-11-11",
+  "approval": {
+    "approved_by": "santxkoz",
+    "date": "2026-11-11",
+    "role": "AUTHOR"
+  },
+  "note": "PASS under Test Card T013 (approved f8c0e2ff6). The Ives-Stilwell observable of 7Li+ ions at beta = 0.338 is consistent with zero, as the Lorentz boost of the parent action's local frame requires; the recomputed epsilon reproduces the published (1.5 +- 2.3)e-9. The absolute-time alternative is excluded (diagnostic). Registered frequencies re-checked against Table 1 of the source before the run. Scope: this tests P3 only as part of the Lorentz time transformation (time dilation with the relativity principle); relative simultaneity alone needs Michelson-Morley and Kennedy-Thorndike, not tested. Standard special relativity passes equally; not UET-distinct. L2 approved by the author on 2026-11-11."
+}

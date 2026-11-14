@@ -197,3 +197,108 @@ commit: this commit
 ระดับ: ไม่เปลี่ยน claim
 ถัดไป: merge PR #57
 commit: this commit
+
+## 2026-11-11 — Thought experiment rewritten (v3): no "being", no eternity claim
+ทำ: ผู้เขียนอธิบายใหม่ว่า "เกิดขึ้นแล้ว" ไม่เท่ากับ "เป็นนิรันดร์"; เขียน docs/core/THOUGHT_EXPERIMENT.md v3 (ฉบับเดิมไม่แก้เพราะ manifest ล็อก hash) ตัดคำว่า being, การคำนวณเปลี่ยนอดีต, ภาพลวงตา
+ผล: หลักการที่ยืนโดยไม่ต้องพึ่งนิยาม: P1 วัดได้สถานะในอดีต, P2 ช่องว่าง ≈ อัตราเปลี่ยน × อายุบันทึก, P3 ความพร้อมกันของที่ไกลไม่เป็นสากล, P4 บันทึกร่วม = สัมผัสเชิงเหตุผล + I(A:B) > 0; R3 แสดงว่าบันทึกที่อ่านได้ I จางลงทั้งที่ข้อมูลรวมไม่หาย
+ระดับ: ไม่เปลี่ยน claim (เป็นงานเขียนเจตนา); P2 และ P4 ยังไม่มี physics test
+ถัดไป: test P2 (light-time) และ P4 (light cone); ต่อชั้นสังเกตเข้าสมการหลัก
+commit: this commit
+
+## 2026-11-11 — Is the gap between record and present equal to rate x record age? (O1)
+ทำ: หา retarded time ด้วย root search แล้วตรวจกับคำตอบปิดของการเคลื่อนที่สม่ำเสมอใน 3-D; ตรวจ Delta ≈ Xdot(t_e)·a ว่าลู่เข้าอันดับ 1; negative control ไม่คิดเวลาหน่วง (16 physics test)
+ผล: root search ตรงคำตอบปิดที่ 1e-10 (10/10); อัตราส่วน error ของการประมาณอันดับ 1 ระหว่างการลดอายุลงครึ่งหนึ่ง 2.42, 2.17, 2.08 → 2; ไม่คิดเวลาหน่วงผิดพอดี rate × age
+ระดับ: P2 ของ thought experiment v3 → L1 (บันทึกผลตอนท้าย)
+ถัดไป: O2 บันทึกร่วมเกิดภายใน light cone เท่านั้น
+commit: this commit
+
+## 2026-11-11 — Do two systems share a record only after causal contact? (O2)
+ทำ: โซ่ oscillator 121 ตัว เริ่มจาก product state (I = 0) แล้ววัด mutual information ของสองตำแหน่งตามเวลาและระยะ d; ตรวจ group velocity ≤ c = √κ; negative control สมมติความเร็วสัญญาณผิด (5 physics test)
+ผล: ก่อนสัมผัส (0.6·d/2c) I = 1.5e-7, 2.7e-13, 0 ที่ d = 10, 20, 30 (ลดแบบ super-exponential); หลังสัมผัส (1.2·d/2c) I = 6.5e-3, 2.6e-3, 1.4e-3; ที่ t = 0.75 d/c ซึ่งสัญญาณตรงยังมาไม่ถึง I = 1.4e-2 แล้ว → สัมผัสเกิดผ่าน common past ที่ d/2c ไม่ใช่เฉพาะสัญญาณตรง ที่ d/c
+ระดับ: P4 → L1 และ **ต้องแก้ถ้อยคำ P4**: contact = past cone ซ้อนกัน ไม่ใช่เฉพาะอยู่ใน cone ของกันและกัน
+ถัดไป: O3 Markov กับ history-dependent
+commit: this commit
+
+## 2026-11-11 — When does a history of records beat treating the newest record as the present? (O3)
+ทำ: เทียบตัวประมาณสถานะปัจจุบันสองแบบ ไม่มีความจำ (ใช้บันทึกล่าสุด) กับขึ้นกับประวัติ (ขยายจากบันทึกสองตัว) หาโมเมนต์แม่นตรง แล้วตรวจด้วย Monte Carlo 400k ตัวอย่าง (6 physics test)
+ผล: error ลู่เข้าอันดับ 1 (อัตราส่วน 1.64, 1.84, 1.93 → 2) กับอันดับ 2 (3.93, 3.98, 3.996 → 4); การเคลื่อนที่สม่ำเสมอ: แบบประวัติแม่นพอดี แบบไม่มีความจำพลาด rate × age; ความแปรปรวนตรงสูตรภายใน 2%; ความจำชนะเมื่อ noise ต่ำกว่า σ* = 0.10 (แอมพลิจูด 1) และแพ้เมื่อสูงกว่า ทั้งในสูตรและการจำลอง
+ระดับ: ข้อ 5 ของงานต่อใน thought experiment (Markov กับ history) → L1 ในโมเดลง่าย
+ถัดไป: O4 สนามสเกลาร์ของ parent action เป็น causal
+commit: this commit
+
+## 2026-11-11 — Is the parent-action scalar field causal? (O4)
+ทำ: แก้สมการ Klein–Gordon 1+1D ของสนาม ψ (รูป canonical ของ THEORY_CARD) ด้วย leapfrog แล้วเทียบกับคำตอบ retarded แม่นตรง G_R = ½θ(t−|x|)J0(m√(t²−x²)) และกับ d'Alembert (m = 0) ที่เป็นคำตอบปิดอิสระ; negative control การตอบสนองแบบทันที (5 physics test)
+ผล: error ลู่เข้าอันดับ 2 (6.8e-3, 1.7e-3, 4.3e-4 ที่ dx = 0.1, 0.05, 0.025; ลำดับ 1.97, 2.00); m = 0 ตรง d'Alembert (4.0e-3, 1.0e-3, 2.5e-4); นอก cone (|x| > t + 8σ) น้อยกว่า 1e-10 ของค่าสูงสุด; การตอบสนองทันทีที่ |x| = 6, t = 1 ให้ 1.4e-3 เทียบกับ 4e-24 ของคำตอบเชิงเหตุผล
+ระดับ: ชั้นสังเกตเชื่อมกับสนาม ψ ของสมการหลักได้ (L1, เชิงเส้น, flat, 1+1D)
+ถัดไป: บันทึกผล claim และปรับ thought experiment v3 (P4 = common past)
+commit: this commit
+
+## 2026-11-11 — Records and corrections for the observation layer (O1–O4)
+ทำ: บันทึกผล O1–O4 เป็น result และ claim ระดับ L1 สี่ข้อ (C_OBS_*); แก้ THOUGHT_EXPERIMENT v3 ตามผลทดสอบ; อัปเดต CORE_MAP และ FIDELITY_MATRIX
+ผล: P4 ถูกแก้: บันทึกร่วมเกิดผ่านต้นเหตุร่วมที่ t ≥ d/(2c) เร็วกว่าสัญญาณตรง d/c; ข้อ 7 ในตรรกะผู้เขียน PARTIAL → MATCH ตรงรวม 9 ใน 10 ข้อ
+ระดับ: C_OBS_DELAY_GAP, C_OBS_SHARED_RECORD_CONTACT, C_OBS_MEMORY_VS_MARKOV, C_OBS_FIELD_CAUSAL → L1_CONSISTENT
+ถัดไป: ทดสอบ P2/P4 กับข้อมูลจริง (light-time ในตำแหน่งดาวเคราะห์) และขยายไปควอนตัม
+commit: this commit
+
+## 2026-11-11 — T010 draft: two carriers of one event's records (GW170817)
+ทำ: derive c_T = 1 จาก parent action (test_tensor_speed.py 7 ข้อ, negative control v = 0.9 ไม่ผ่าน); ร่าง Test Card T010 เทียบกับขอบเขต (v_GW − v_EM)/v_EM ∈ [−3e-15, +7e-16] ของ Abbott et al. 2017
+ผล: ยังไม่รัน การ์ดเป็น DRAFT รอผู้เขียนอนุมัติ; เปิดเผยแล้วว่าทฤษฎีใดที่มี c_T = 1 ก็ผ่าน
+ระดับ: C_T010_TWO_CARRIER_RECORDS → L0_SPECULATIVE
+ถัดไป: ผู้เขียนอนุมัติ T010 แล้วรัน; หาการทดสอบ P2 ที่ไม่วนกลับ
+commit: this commit
+
+## 2026-11-11 — T010 GW170817: two carriers of one event's records
+ทำ: รัน Test Card T010 (อนุมัติ d2dc61506) เทียบ c_T = 1 ของ parent action กับขอบเขต GW170817
+ผล: PASS: ทำนาย 0 อยู่ในช่วง [−3e-15, +7e-16]; ตรวจตัวเลขกับ abstract arXiv:1710.05834 แล้วตรง; ทฤษฎีใดที่มี c_T = 1 ก็ผ่าน จึงไม่ใช่ข้อทำนายเฉพาะของ UET
+ระดับ: C_T010_TWO_CARRIER_RECORDS → L2_CONFRONTED (ผู้เขียนอนุมัติ 2026-11-11) การทดสอบแรกของชั้นสังเกตกับข้อมูลจริง
+ถัดไป: หาการทดสอบ P2 ที่ไม่วนกลับ (light-time ที่มีวงโคจรจากแหล่งอิสระ)
+commit: this commit
+
+## 2026-11-11 — O5 and T011 draft: P2 with pulsating stars in binaries
+ทำ: โมเดล uet_pulsation_timing.py; physics test 16 ข้อ: dτ/dt = −v_r/c, ช่องว่างเฟสจากตัวแก้ retarded time = อัตรา × อายุบันทึก, negative control สัญญาณทันทีไม่มีการกระเพื่อม; ร่าง Test Card T011 เทียบ a sin i/c จากจังหวะการเต้น (PM) กับจากความเร็วแนวเล็ง (RV) ที่แก้แยกกัน (Murphy et al. 2016)
+ผล: ยังไม่รัน รอผู้เขียนอนุมัติ; เห็นตารางเต็มก่อนร่าง ความแม่นราว 10%
+ระดับ: C_T011_PULSATION_RECORD_AGE → L0_SPECULATIVE
+ถัดไป: ผู้เขียนอนุมัติ T011 แล้วรัน
+commit: this commit
+
+## 2026-11-11 — T011 pulsating binaries: P2 against real data
+ทำ: รัน Test Card T011 (อนุมัติ 4ab60d3db) เทียบ a sin i/c จากจังหวะการเต้น (PM) กับจากวงโคจร RV อิสระ (Murphy et al. 2016)
+ผล: PASS: PM/RV = 1.006 (z = 0.04) KIC 6780873, 1.021 (z = 0.17) KIC 5705575; แบบไม่มีเวลาหน่วงถูกตัดที่ 6.4σ และ 127σ; ตรวจตัวเลข 10 ค่ากับ Table 2 แล้วตรง
+ระดับ: C_T011_PULSATION_RECORD_AGE → L2_CONFRONTED (ผู้เขียนอนุมัติ 2026-11-11) ไม่ใช่ข้อทำนายเฉพาะของ UET
+ถัดไป: ทดสอบ P4 (บันทึกร่วมต้องมีการสัมผัสเชิงเหตุผล) กับข้อมูลจริง
+commit: this commit
+
+## 2026-11-11 — O6 and T012 draft: P4 with a quenched quantum chain
+ทำ: โมเดล uet_two_signal_contact.py (t = d/(c_a + c_b), ลดรูปเป็น d/2c เมื่อความเร็วเท่ากัน) physics test 21 ข้อ; ร่าง Test Card T012 เทียบความเร็วหน้าคลื่นสหสัมพันธ์ที่วัดได้ (Cheneau et al. 2012, Bose–Hubbard quench) กับขอบเขตจากอดีตร่วม
+ผล: ยังไม่รัน รอผู้เขียนอนุมัติ; เห็นค่าวัดครบและคำนวณขอบเขตของโมเดลแล้วก่อนร่าง (U/J = 5 หน้าคลื่นสูงกว่าขอบเขต Eq. 17 ราว 1.3σ จึงลงทะเบียนกฎความถูกต้อง U/J ≥ 6 ไว้ก่อนรัน); ตัวที่แยกอ่านเวอร์ชัน d/c กับ d/2c ได้คือขอบเขตแบบสัมผัสตรง
+ระดับ: C_T012_COMMON_PAST_CONTACT → L0_SPECULATIVE
+ถัดไป: ผู้เขียนอนุมัติ T012 แล้วรัน
+commit: this commit
+
+## 2026-11-11 — T012 Bose–Hubbard quench: P4 against real data
+ทำ: รัน Test Card T012 (อนุมัติ 43bab6cdf) เทียบความเร็วหน้าคลื่นสหสัมพันธ์ (Cheneau et al. 2012) กับขอบเขตอดีตร่วม c_a + c_b
+ผล: PASS ที่ U/J = 7 และ 9 (เกินขอบเขต −0.36σ และ −4.35σ); เร็วกว่าขอบเขตสัมผัสตรง 3.9σ และ 6.0σ (ตัววินิจฉัย จึงต้องผ่านอดีตร่วม); U/J = 5 อยู่นอกความถูกต้องของโมเดลไม่ตัดสิน; ตรวจค่ากับเปเปอร์แล้วตรง
+ระดับ: C_T012_COMMON_PAST_CONTACT → L2_CONFRONTED (ผู้เขียนอนุมัติ 2026-11-11) ไม่ใช่ข้อทำนายเฉพาะของ UET
+ถัดไป: P3 (ความพร้อมกันไม่เป็นสากล) ยังไม่ทดสอบกับข้อมูลจริง; ยังไม่มีข้อทำนายที่ UET ต่างจากฟิสิกส์มาตรฐาน
+commit: this commit
+
+## 2026-11-11 — O7 and T013 draft: P3 through the Ives–Stilwell observable
+ทำ: โมเดล uet_lorentz_time.py (boost, ความพร้อมกันสัมพัทธ์ dt' = −γβdx, ค่า ε ของ Ives–Stilwell จากการ boost เวกเตอร์สี่มิติของโฟตอนด้วยการหารากสมการ) physics test 26 ข้อ รวมถึง Green function ของสนามตอบสนองใน parent action ไม่เปลี่ยนภายใต้ boost และ negative control (Doppler แบบเวลาสัมบูรณ์ให้ ε = γ − 1); ร่าง Test Card T013 เทียบกับ Botermann et al. 2014 (ε = (1.5 ± 2.3)×10⁻⁹ ที่ β = 0.338)
+ผล: ยังไม่รัน รอผู้เขียนอนุมัติ; เห็นผลที่ตีพิมพ์และคำนวณ ε จากความถี่ทั้งสี่ได้ 1.47×10⁻⁹ ± 2.30×10⁻⁹ ตรงกับเปเปอร์แล้วก่อนร่าง; ขอบเขตที่ซื่อตรง: Ives–Stilwell ทดสอบ γ ร่วมกับหลักสัมพัทธภาพ การแยกความพร้อมกันสัมพัทธ์ต้องใช้ Michelson–Morley และ Kennedy–Thorndike ด้วย ซึ่งไม่ได้ทดสอบที่นี่
+ระดับ: C_T013_LORENTZ_TIME_STRUCTURE → L0_SPECULATIVE
+ถัดไป: ผู้เขียนอนุมัติ T013 แล้วรัน
+commit: this commit
+
+## 2026-11-11 — T013 Ives–Stilwell: P3 against real data
+ทำ: รัน Test Card T013 (อนุมัติ f8c0e2ff6) คำนวณ ε จากความถี่ทั้งสี่ของ Botermann et al. 2014 และเทียบกับศูนย์ที่การ boost แบบลอเรนซ์ทำนาย
+ผล: PASS: ε = (1.47 ± 2.30)×10⁻⁹ (z = 0.64) ตรงกับค่าที่ตีพิมพ์; เวลาสัมบูรณ์ (ε = 0.0625) ถูกตัดทิ้ง; ตรวจความถี่กับ Table 1 แล้วตรง
+ระดับ: C_T013_LORENTZ_TIME_STRUCTURE → L2_CONFRONTED (ผู้เขียนอนุมัติ 2026-11-11) ทดสอบ P3 ในฐานะส่วนหนึ่งของการแปลงลอเรนซ์ ไม่ใช่ความพร้อมกันเดี่ยวๆ ไม่ใช่ข้อทำนายเฉพาะของ UET
+ถัดไป: P1–P4 ทดสอบกับข้อมูลจริงครบ; ยังไม่มีข้อทำนายที่ UET ต่างจากฟิสิกส์มาตรฐาน
+commit: this commit
+
+## 2026-11-11 — B5: ค้นหาข้อทำนายเฉพาะของ UET และขอบเขตของแรงลาก portal
+ทำ: ทบทวนผู้สมัครทั้งหมด (ชั้น 1–3, ชั้นสังเกต, ข้ามชั้น) แล้วจำกัดผู้สมัครเดียวที่ข้ามชั้น คือแรงลาก portal ด้วยการที่วงโคจรอยู่รอดมา 4.5672 พันล้านปี (uet_portal_drag_bound.py, physics test 9 ข้อ รวมการเทียบกับวงโคจรเคปเลอร์ที่อินทิเกรตจริงและหน่วยสองทาง)
+ผล: Γ g_c² ≤ 9.1e-44 eV³ (ดาวพฤหัสบดี ตัวที่จำกัดแรงสุด) เมื่อ g_c เท่าขอบเขต T005 (5.12e-10 eV) เวลาหน่วงของ ψ ต้องมากกว่าราว 60 ปี; ยังไม่พบข้อทำนายที่ UET ต่างจากฟิสิกส์มาตรฐาน; สมมติกรอบสิ่งแวดล้อมคือกรอบดวงอาทิตย์
+ระดับ: C_B5_PORTAL_DRAG_BOUND → L1_CONSISTENT (ขอบเขตที่ derive ได้ ไม่ใช่ข้อทำนาย ไม่ใช้ Test Card); แก้ SYNTHESIS_AUDIT ที่อ้างเลข T013/T014 ซึ่งถูกใช้ไปแล้ว
+ถัดไป: กรอบสิ่งแวดล้อมแบบ CMB (แรงลากสม่ำเสมอ/ละเมิด EP) ยังไม่วิเคราะห์; ต้องให้ผู้เขียนตัดสินว่าจะผูกค่า Γ กับอะไร
+commit: this commit

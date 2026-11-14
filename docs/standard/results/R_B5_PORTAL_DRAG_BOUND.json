@@ -1,0 +1,70 @@
+{
+  "schema": "uet-result-v2",
+  "result_id": "R_B5_PORTAL_DRAG_BOUND",
+  "claim_id": "C_B5_PORTAL_DRAG_BOUND",
+  "level": "L1_CONSISTENT",
+  "outcome": "PASS",
+  "numbers": [
+    {
+      "name": "gamma_gc2_max_jupiter",
+      "value": "9.1e-44",
+      "uncertainty": null,
+      "unit": "eV^3"
+    },
+    {
+      "name": "gamma_gc2_max_saturn",
+      "value": "2.6e-43",
+      "uncertainty": null,
+      "unit": "eV^3"
+    },
+    {
+      "name": "gamma_gc2_max_earth",
+      "value": "2.6e-42",
+      "uncertainty": null,
+      "unit": "eV^3"
+    },
+    {
+      "name": "gamma_gc2_max_mars",
+      "value": "1.3e-41",
+      "uncertainty": null,
+      "unit": "eV^3"
+    },
+    {
+      "name": "gamma_gc2_max_mercury",
+      "value": "1.8e-41",
+      "uncertainty": null,
+      "unit": "eV^3"
+    },
+    {
+      "name": "gamma_max_at_g_c_5.12e-10_eV_jupiter",
+      "value": "3.5e-25",
+      "uncertainty": null,
+      "unit": "eV"
+    },
+    {
+      "name": "psi_damping_time_min_at_g_c_5.12e-10_eV_jupiter",
+      "value": "60",
+      "uncertainty": null,
+      "unit": "yr"
+    },
+    {
+      "name": "semi_major_axis_decay_rate_check_vs_integrated_kepler_orbit",
+      "value": "within 2e-2 + 5 lambda",
+      "uncertainty": null,
+      "unit": "relative"
+    },
+    {
+      "name": "negative_control_100x_bound_efolds_over_solar_system_age",
+      "value": "100",
+      "uncertainty": null,
+      "unit": "dimensionless"
+    }
+  ],
+  "producer": {
+    "script": "docs/core/05_tests/physics/test_portal_drag_bound.py",
+    "commit": "48ede404b"
+  },
+  "artifacts": [],
+  "date": "2026-11-11",
+  "note": "Wave B5 (derivation, no external comparison data). The portal drag of wave B4, the only cross-layer UET effect, is bounded by orbit survival: for a body in the Sun's rest frame d ln a/dt = -Gamma q^2/(6 pi R M), which must not exceed 1/T with T = 4.5672 Gyr (Pb-Pb age, Connelly et al. 2012). The strongest body is Jupiter (largest M/R). With g_c at the T005 bound the friction time of psi must exceed about 60 years. The drag law is checked against an integrated Kepler orbit and in two unit systems. Assumptions: environment rest frame = the Sun's frame, circular orbit, first order in Gamma, chi = nucleons, light field. This bounds the effect; it is not a prediction, and no test card applies."
+}

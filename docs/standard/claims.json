@@ -171,6 +171,87 @@
         "R_T009_U234_SECULAR_EQUILIBRIUM"
       ],
       "note": "Path-A test in nuclear physics. L2 approved by the author on 2026-11-10."
+    },
+    {
+      "claim_id": "C_OBS_DELAY_GAP",
+      "statement": "A source observed through a finite-speed signal is recorded at its retarded time, and the error of treating the record as the present equals the rate of change times the record age at first order.",
+      "level": "L1_CONSISTENT",
+      "evidence": [
+        "R_O1_OBSERVATION_DELAY"
+      ],
+      "note": "Principle P2 of the thought experiment v3. Standard physics; model-level check."
+    },
+    {
+      "claim_id": "C_OBS_SHARED_RECORD_CONTACT",
+      "statement": "Two systems share a record (mutual information) only after causal contact by overlapping past cones, t >= d/(2c), earlier than the direct signal d/c; before contact the shared record is super-exponentially small.",
+      "level": "L1_CONSISTENT",
+      "evidence": [
+        "R_O2_SHARED_RECORD_CONE"
+      ],
+      "note": "Principle P4 of the thought experiment v3, corrected by this test (common past). Classical Gaussian toy model."
+    },
+    {
+      "claim_id": "C_OBS_MEMORY_VS_MARKOV",
+      "statement": "An observer that keeps a history of records estimates the present with a bias one order lower than one that treats the newest record as the present, but amplifies measurement noise, so memory helps only below a crossover noise level.",
+      "level": "L1_CONSISTENT",
+      "evidence": [
+        "R_O3_MARKOV_VS_HISTORY"
+      ],
+      "note": "Research item 5 of the thought experiment: Markov versus history-dependent model, in a linear-Gaussian toy."
+    },
+    {
+      "claim_id": "C_OBS_FIELD_CAUSAL",
+      "statement": "The canonical response scalar of the parent action propagates only inside the light cone: the PDE solution converges at second order to the exact retarded solution and the field vanishes outside the cone.",
+      "level": "L1_CONSISTENT",
+      "evidence": [
+        "R_O4_FIELD_CAUSALITY"
+      ],
+      "note": "Links the observation layer to the core equation at linear order, flat background, 1+1D only; the full nonlinear curved-space statement is open."
+    },
+    {
+      "claim_id": "C_T010_TWO_CARRIER_RECORDS",
+      "statement": "Records of one event carried by gravitational waves and by light travel at the same speed: c_T = 1 of the parent action lies inside the GW170817 bound (v_GW - v_EM)/v_EM in [-3e-15, +7e-16].",
+      "level": "L2_CONFRONTED",
+      "evidence": [
+        "R_T010_GW170817_CARRIER_SPEED"
+      ],
+      "note": "First real-data test of the observation layer (principle P1) together with layer 1. Not UET-distinct: any c_T = 1 theory passes. L2 approved by the author on 2026-11-11."
+    },
+    {
+      "claim_id": "C_T011_PULSATION_RECORD_AGE",
+      "statement": "Principle P2 holds for pulsating stars in binaries: the pulsation-timing delay amplitude equals the light-travel record age predicted from an independent RV orbit (PM/RV = 1.006, z = 0.04 for KIC 6780873; 1.021, z = 0.17 for KIC 5705575).",
+      "level": "L2_CONFRONTED",
+      "evidence": [
+        "R_T011_PULSATION_DELAY_VS_RV"
+      ],
+      "note": "First non-circular real-data test of P2 (about 10% precision). Not UET-distinct: standard light-travel time passes. L2 approved by the author on 2026-11-11."
+    },
+    {
+      "claim_id": "C_T012_COMMON_PAST_CONTACT",
+      "statement": "Principle P4 as corrected by O2 holds in a quenched quantum many-body chain: the correlation front stays below the common-past bound c_a + c_b (excess -0.36 and -4.35 sigma at U/J = 7 and 9) and exceeds the direct-contact-only bound by 3.9 and 6.0 sigma, so contact through a common past is required.",
+      "level": "L2_CONFRONTED",
+      "evidence": [
+        "R_T012_CORRELATION_FRONT_BOUND"
+      ],
+      "note": "First real-data test of P4. The one-sided bound is weak by itself; the direct-contact diagnostic carries the content. Not UET-distinct: standard quasiparticle picture passes. L2 approved by the author on 2026-11-11."
+    },
+    {
+      "claim_id": "C_T013_LORENTZ_TIME_STRUCTURE",
+      "statement": "Principle P3 holds as part of the Lorentz time transformation: the Ives-Stilwell observable of 7Li+ ions at beta = 0.338 is (1.47 +- 2.30)e-9, consistent with the zero the boost of the parent action's local frame requires (z = 0.64); absolute time is excluded.",
+      "level": "L2_CONFRONTED",
+      "evidence": [
+        "R_T013_IVES_STILWELL_LORENTZ_TIME"
+      ],
+      "note": "Tests P3 only as part of the Lorentz time transformation, not relative simultaneity in isolation. Not UET-distinct: special relativity passes. L2 approved by the author on 2026-11-11."
+    },
+    {
+      "claim_id": "C_B5_PORTAL_DRAG_BOUND",
+      "statement": "The portal drag, the only cross-layer UET effect found, must satisfy Gamma g_c^2 <= 9.1e-44 eV^3 for the planets to have survived 4.5672 Gyr in the Sun's rest frame; at the T005 bound on g_c the friction time of the response scalar exceeds about 60 years.",
+      "level": "L1_CONSISTENT",
+      "evidence": [
+        "R_B5_PORTAL_DRAG_BOUND"
+      ],
+      "note": "A derived bound, not a prediction. Assumes the Sun's rest frame as the environment frame; a different environment frame (for example the CMB frame) needs its own analysis."
     }
   ]
 }

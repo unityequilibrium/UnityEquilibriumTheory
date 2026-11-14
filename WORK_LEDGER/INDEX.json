@@ -4,12 +4,12 @@
   "generator_sha256": "b32005e4bdbf59da6681ae630fa1d9d4415c361f7523be18c8b52a86dc8c93e9",
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
-    "sources": 76,
-    "entries": 813,
+    "sources": 77,
+    "entries": 829,
     "by_stream": {
       "book-history": 94,
-      "operations": 113,
-      "research": 606
+      "operations": 114,
+      "research": 621
     },
     "exact_duplicates": 0,
     "review_entries": 2
@@ -393,9 +393,14 @@
       "entries": 19
     },
     {
+      "path": "2026/2026-11-11.md",
+      "sha256": "ba92497387807004a6a82611031abee5b7bebaca235db32b06e3f5ebc8e2cbe5",
+      "entries": 15
+    },
+    {
       "path": "2026/2026-11-14.md",
-      "sha256": "12c5cef3aa05605b9c3bd8a180c695b7dcaa8738d3bcfc2ccbe677a3eb58a810",
-      "entries": 1
+      "sha256": "a7d9c5d30419f6b772ac37f9f82069b9ae4d52be8c1da878f40a7c01fabc8574",
+      "entries": 2
     },
     {
       "path": "2026-08-14.md",
@@ -16610,13 +16615,333 @@
       "legacy_root_path": false
     },
     {
+      "id": "2026/2026-11-11.md#thought-experiment-v3-remove-the-being-and-eternity-claims",
+      "source": "2026/2026-11-11.md",
+      "anchor": "thought-experiment-v3-remove-the-being-and-eternity-claims",
+      "start_line": 3,
+      "end_line": 17,
+      "title": "Thought experiment v3: remove the being and eternity claims",
+      "entry_sha256": "da2b458a983cf4c3d24a7a6724ae069f13368bed9fb993556fc2391098c9b816",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-11",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-11.md#o1-delayed-observation-and-gap--rate-x-record-age",
+      "source": "2026/2026-11-11.md",
+      "anchor": "o1-delayed-observation-and-gap--rate-x-record-age",
+      "start_line": 18,
+      "end_line": 31,
+      "title": "O1: delayed observation and gap = rate x record age",
+      "entry_sha256": "b5e44852a0d06871e1653264f0826e4d9d2c6d32bb87c46d4529ca86dd566c1d",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-11",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-11.md#o2-a-shared-record-exists-only-after-causal-contact",
+      "source": "2026/2026-11-11.md",
+      "anchor": "o2-a-shared-record-exists-only-after-causal-contact",
+      "start_line": 32,
+      "end_line": 46,
+      "title": "O2: a shared record exists only after causal contact",
+      "entry_sha256": "1b3bada324d58df8861544c5dd0fe59a25a2d5f56f6ab86b362211836c306193",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-11",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-11.md#o3-markov-versus-history-dependent-estimators",
+      "source": "2026/2026-11-11.md",
+      "anchor": "o3-markov-versus-history-dependent-estimators",
+      "start_line": 47,
+      "end_line": 60,
+      "title": "O3: Markov versus history-dependent estimators",
+      "entry_sha256": "3ca91b5d80467d0e12dac129e97bbcdfd777c35e769ec6e986c006bc2a3e0d80",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-11",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-11.md#o4-the-parent-action-scalar-field-propagates-inside-the-light-cone",
+      "source": "2026/2026-11-11.md",
+      "anchor": "o4-the-parent-action-scalar-field-propagates-inside-the-light-cone",
+      "start_line": 61,
+      "end_line": 75,
+      "title": "O4: the parent-action scalar field propagates inside the light cone",
+      "entry_sha256": "a625a866cd6aa2270801f9e0d6779c12d47d4eab09ace38c3c0d82abd95adae6",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-11",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-11.md#records-and-corrections-for-the-observation-layer",
+      "source": "2026/2026-11-11.md",
+      "anchor": "records-and-corrections-for-the-observation-layer",
+      "start_line": 76,
+      "end_line": 89,
+      "title": "Records and corrections for the observation layer",
+      "entry_sha256": "5917c1acc2c1972486e055495bf2bb25525f0b3f4352e8d05c7c82d21d652f34",
+      "stream": "research",
+      "areas": [
+        "research-standards"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-11",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-11.md#t010-draft-gw170817-carrier-speed",
+      "source": "2026/2026-11-11.md",
+      "anchor": "t010-draft-gw170817-carrier-speed",
+      "start_line": 90,
+      "end_line": 102,
+      "title": "T010 draft: GW170817 carrier speed",
+      "entry_sha256": "2ee2496a78defaef9fdc700674835c064ca9f8e365f223480808b90db0d72578",
+      "stream": "research",
+      "areas": [
+        "research-standards"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-11",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-11.md#t010-result-at-l2-gw170817-carrier-speed",
+      "source": "2026/2026-11-11.md",
+      "anchor": "t010-result-at-l2-gw170817-carrier-speed",
+      "start_line": 103,
+      "end_line": 115,
+      "title": "T010 result at L2: GW170817 carrier speed",
+      "entry_sha256": "9e4f71bbd2fd06dedb860321cf9f289116990702c41a6607a3d68feb4307addb",
+      "stream": "research",
+      "areas": [
+        "research-standards"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-11",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-11.md#o5-model-and-t011-draft-p2-with-pulsating-binaries",
+      "source": "2026/2026-11-11.md",
+      "anchor": "o5-model-and-t011-draft-p2-with-pulsating-binaries",
+      "start_line": 116,
+      "end_line": 129,
+      "title": "O5 model and T011 draft: P2 with pulsating binaries",
+      "entry_sha256": "0cb90df509e50bea6523807d99ad1aae896ece8e3144a65b3124a07690dc5fe3",
+      "stream": "research",
+      "areas": [
+        "research-standards"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-11",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-11.md#t011-result-at-l2-p2-with-pulsating-binaries",
+      "source": "2026/2026-11-11.md",
+      "anchor": "t011-result-at-l2-p2-with-pulsating-binaries",
+      "start_line": 130,
+      "end_line": 142,
+      "title": "T011 result at L2: P2 with pulsating binaries",
+      "entry_sha256": "bfbc75af8e165ee234ad85b5f256d3c4e7c531bd3e78aeac3eaff6e1dde1f0b1",
+      "stream": "research",
+      "areas": [
+        "research-standards"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-11",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-11.md#o6-model-and-t012-draft-p4-with-a-quenched-quantum-chain",
+      "source": "2026/2026-11-11.md",
+      "anchor": "o6-model-and-t012-draft-p4-with-a-quenched-quantum-chain",
+      "start_line": 143,
+      "end_line": 156,
+      "title": "O6 model and T012 draft: P4 with a quenched quantum chain",
+      "entry_sha256": "95aa1fe79f217e5081118bbf2641a61e9db2f220e9223b155c2f0489624c2e39",
+      "stream": "research",
+      "areas": [
+        "research-standards"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-11",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-11.md#t012-result-at-l2-p4-with-a-bose-hubbard-quench",
+      "source": "2026/2026-11-11.md",
+      "anchor": "t012-result-at-l2-p4-with-a-bose-hubbard-quench",
+      "start_line": 157,
+      "end_line": 170,
+      "title": "T012 result at L2: P4 with a Bose-Hubbard quench",
+      "entry_sha256": "5b64212a4cfcee7557af4d3e63942d2f45d4fcfb454d32b456c8b178c89affd8",
+      "stream": "research",
+      "areas": [
+        "research-standards"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-11",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-11.md#o7-model-and-t013-draft-p3-through-the-ives-stilwell-observable",
+      "source": "2026/2026-11-11.md",
+      "anchor": "o7-model-and-t013-draft-p3-through-the-ives-stilwell-observable",
+      "start_line": 171,
+      "end_line": 185,
+      "title": "O7 model and T013 draft: P3 through the Ives-Stilwell observable",
+      "entry_sha256": "1fe777e715945fa7b2a2f81509c03809f728ccd8356475d232bad8512389b7c6",
+      "stream": "research",
+      "areas": [
+        "research-standards"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-11",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-11.md#t013-result-at-l2-p3-through-the-ives-stilwell-observable",
+      "source": "2026/2026-11-11.md",
+      "anchor": "t013-result-at-l2-p3-through-the-ives-stilwell-observable",
+      "start_line": 186,
+      "end_line": 199,
+      "title": "T013 result at L2: P3 through the Ives-Stilwell observable",
+      "entry_sha256": "bbf300e09d191c0e4af7e50a575dbd2c7f94a3e41bb18830257f4064290099a4",
+      "stream": "research",
+      "areas": [
+        "research-standards"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-11",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-11.md#b5-search-for-a-uet-distinct-prediction-and-the-bound-on-portal-drag",
+      "source": "2026/2026-11-11.md",
+      "anchor": "b5-search-for-a-uet-distinct-prediction-and-the-bound-on-portal-drag",
+      "start_line": 200,
+      "end_line": 213,
+      "title": "B5: search for a UET-distinct prediction and the bound on portal drag",
+      "entry_sha256": "494b0accdef26d798f098402e1854643ad2f2a0a54cf3dd31293af020ed6d5ff",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-11",
+      "legacy_root_path": false
+    },
+    {
       "id": "2026/2026-11-14.md#root-core-and-topics-move-first-repair-separately",
       "source": "2026/2026-11-14.md",
       "anchor": "root-core-and-topics-move-first-repair-separately",
       "start_line": 3,
-      "end_line": 14,
+      "end_line": 15,
       "title": "Root Core and topics: move first, repair separately",
-      "entry_sha256": "4e450e229fe2d3557c509a86d743da8b8aa5f863eeab349f89bc9d3df8c5080d",
+      "entry_sha256": "3ec636fafe9e33e16c8123d50817ca75e2dbc567388bd5e311dda147ce5376b6",
+      "stream": "operations",
+      "areas": [
+        "repo-ops"
+      ],
+      "related_streams": [
+        "operations"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-14",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-14.md#pr-59-merged-with-main-after-the-root-core-and-topics-move",
+      "source": "2026/2026-11-14.md",
+      "anchor": "pr-59-merged-with-main-after-the-root-core-and-topics-move",
+      "start_line": 16,
+      "end_line": 24,
+      "title": "PR 59 merged with main after the root Core and topics move",
+      "entry_sha256": "219653745785a7de213c7c97408a553fcf7150ccff11e7a4a720a1db90e56f1e",
       "stream": "operations",
       "areas": [
         "repo-ops"

@@ -6,10 +6,25 @@
 
 These are source-linked historical records, not proof of completed research, successful publication, or current scientific readiness.
 
-Indexed entries: 606. Counts describe records, not accomplishments.
+Indexed entries: 621. Counts describe records, not accomplishments.
 
 | Date | Record | Area | Notes |
 | --- | --- | --- | --- |
+| 2026-11-11 | [B5: search for a UET-distinct prediction and the bound on portal drag](2026/2026-11-11.md#b5-search-for-a-uet-distinct-prediction-and-the-bound-on-portal-drag) (L200) | research-core | explicit_stream_and_area |
+| 2026-11-11 | [T013 result at L2: P3 through the Ives-Stilwell observable](2026/2026-11-11.md#t013-result-at-l2-p3-through-the-ives-stilwell-observable) (L186) | research-standards | explicit_stream_and_area |
+| 2026-11-11 | [O7 model and T013 draft: P3 through the Ives-Stilwell observable](2026/2026-11-11.md#o7-model-and-t013-draft-p3-through-the-ives-stilwell-observable) (L171) | research-standards | explicit_stream_and_area |
+| 2026-11-11 | [T012 result at L2: P4 with a Bose-Hubbard quench](2026/2026-11-11.md#t012-result-at-l2-p4-with-a-bose-hubbard-quench) (L157) | research-standards | explicit_stream_and_area |
+| 2026-11-11 | [O6 model and T012 draft: P4 with a quenched quantum chain](2026/2026-11-11.md#o6-model-and-t012-draft-p4-with-a-quenched-quantum-chain) (L143) | research-standards | explicit_stream_and_area |
+| 2026-11-11 | [T011 result at L2: P2 with pulsating binaries](2026/2026-11-11.md#t011-result-at-l2-p2-with-pulsating-binaries) (L130) | research-standards | explicit_stream_and_area |
+| 2026-11-11 | [O5 model and T011 draft: P2 with pulsating binaries](2026/2026-11-11.md#o5-model-and-t011-draft-p2-with-pulsating-binaries) (L116) | research-standards | explicit_stream_and_area |
+| 2026-11-11 | [T010 result at L2: GW170817 carrier speed](2026/2026-11-11.md#t010-result-at-l2-gw170817-carrier-speed) (L103) | research-standards | explicit_stream_and_area |
+| 2026-11-11 | [T010 draft: GW170817 carrier speed](2026/2026-11-11.md#t010-draft-gw170817-carrier-speed) (L90) | research-standards | explicit_stream_and_area |
+| 2026-11-11 | [Records and corrections for the observation layer](2026/2026-11-11.md#records-and-corrections-for-the-observation-layer) (L76) | research-standards | explicit_stream_and_area |
+| 2026-11-11 | [O4: the parent-action scalar field propagates inside the light cone](2026/2026-11-11.md#o4-the-parent-action-scalar-field-propagates-inside-the-light-cone) (L61) | research-core | explicit_stream_and_area |
+| 2026-11-11 | [O3: Markov versus history-dependent estimators](2026/2026-11-11.md#o3-markov-versus-history-dependent-estimators) (L47) | research-core | explicit_stream_and_area |
+| 2026-11-11 | [O2: a shared record exists only after causal contact](2026/2026-11-11.md#o2-a-shared-record-exists-only-after-causal-contact) (L32) | research-core | explicit_stream_and_area |
+| 2026-11-11 | [O1: delayed observation and gap = rate x record age](2026/2026-11-11.md#o1-delayed-observation-and-gap--rate-x-record-age) (L18) | research-core | explicit_stream_and_area |
+| 2026-11-11 | [Thought experiment v3: remove the being and eternity claims](2026/2026-11-11.md#thought-experiment-v3-remove-the-being-and-eternity-claims) (L3) | research-core | explicit_stream_and_area |
 | 2026-11-10 | [CORE_MAP: single map of the core equation files](2026/2026-11-10.md#core_map-single-map-of-the-core-equation-files) (L259) | research-standards | explicit_stream_and_area |
 | 2026-11-10 | [T008 and T009 results at L2; path-A summary table](2026/2026-11-10.md#t008-and-t009-results-at-l2-path-a-summary-table) (L245) | research-core | explicit_stream_and_area |
 | 2026-11-10 | [Path-A batch: feasibility, new models, T008 and T009 drafts](2026/2026-11-10.md#path-a-batch-feasibility-new-models-t008-and-t009-drafts) (L229) | research-core | explicit_stream_and_area |

@@ -1,0 +1,8 @@
+# Cheneau et al., Nature 481, 484 (2012), doi:10.1038/nature10748, arXiv:1111.0776, appendix text and Fig. 3a.
+# Velocity of the two-point parity-correlation peak after a quench of a 1D Bose-Hubbard chain from U/J = 40,
+# from a weighted linear fit of peak time versus distance over 2 <= d <= 6.
+# v is in units of J a_lat / hbar. U/J is the final interaction strength, with the lattice-calibration uncertainty.
+u_over_j,u_over_j_err,v_front,v_front_err
+5.0,0.2,5.0,0.2
+7.0,0.3,5.6,0.5
+9.0,0.3,5.0,0.2

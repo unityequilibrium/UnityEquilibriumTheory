@@ -84,6 +84,54 @@
       "license": "numerical facts transcribed from article text; no figures or text redistributed",
       "visibility": "PUBLIC",
       "note": "The direct value is taken as quoted by Hu et al. 2025; the Varga et al. 2016 text was not opened."
+    },
+    {
+      "data_id": "ABBOTT2017_GW170817_GRB",
+      "description": "Arrival delay of GRB 170817A after GW170817 and the resulting bound on the speed difference of gravitational waves and light",
+      "source": "B. P. Abbott et al. (LIGO, Virgo, Fermi GBM, INTEGRAL), Astrophys. J. Lett. 848, L13 (2017), abstract and Sect. 4.1",
+      "doi_or_url": "https://doi.org/10.3847/2041-8213/aa920c ; https://arxiv.org/abs/1710.05834",
+      "retrieved": "2026-11-11",
+      "path": "docs/data/external/gravity/gw170817/abbott2017_gw170817_grb.csv",
+      "sha256": "6cfb6e16a4316ed4627a398c45269123fcd7443c9d90803788db13fd43d5d4ba",
+      "license": "numerical facts transcribed from the publisher page; no figures or text redistributed",
+      "visibility": "PUBLIC",
+      "note": "Values read from the publisher abstract and section 4.1 on 2026-11-11."
+    },
+    {
+      "data_id": "MURPHY2016_PM_VS_RV",
+      "description": "Binary orbits of two Kepler pulsators solved separately from pulsation time delays (PM only) and from radial velocities (RV only)",
+      "source": "S. J. Murphy, H. Shibahashi, T. R. Bedding, MNRAS (2016), Table 2",
+      "doi_or_url": "https://doi.org/10.1093/mnras/stw1622 ; https://arxiv.org/abs/1607.07879",
+      "retrieved": "2026-11-11",
+      "path": "docs/data/external/stellar/phase_modulation/murphy2016_pm_vs_rv.csv",
+      "sha256": "ba31c4620e350d900b751e835d7d7078cd5b428daf909ba0289925e638d11553",
+      "license": "numerical facts transcribed from the arXiv HTML version; no figures or text redistributed",
+      "visibility": "PUBLIC",
+      "note": "KIC 5705575 RV-only solution fixed P and e to the PM values (stated in the source table caption)."
+    },
+    {
+      "data_id": "CHENEAU2012_FRONT_VELOCITY",
+      "description": "Measured velocity of the two-point parity-correlation front after a quench of a one-dimensional Bose-Hubbard chain from the Mott insulator, at three final interaction strengths",
+      "source": "M. Cheneau et al., Light-cone-like spreading of correlations in a quantum many-body system, Nature 481, 484 (2012), appendix text and Fig. 3a",
+      "doi_or_url": "https://doi.org/10.1038/nature10748 ; https://arxiv.org/abs/1111.0776",
+      "retrieved": "2026-11-11",
+      "path": "docs/data/external/quantum_many_body/correlation_front/cheneau2012_front_velocity.csv",
+      "sha256": "3346093917ce0945dafd30643736f6edca7528516369872179c75b623d9fb698",
+      "license": "numerical facts transcribed from the arXiv HTML version; no figures or text redistributed",
+      "visibility": "PUBLIC",
+      "note": "v is in units of J a_lat/hbar, from weighted linear fits of the correlation peak time against distance over 2 <= d <= 6."
+    },
+    {
+      "data_id": "BOTERMANN2014_LI_DOPPLER_FREQUENCIES",
+      "description": "Rest-frame and Doppler-shifted laser frequencies of 7Li+ ions stored at beta = 0.338, with their uncertainty budget, from an Ives-Stilwell-type experiment",
+      "source": "B. Botermann et al., Test of time dilation using stored Li+ ions as clocks at relativistic speed, Phys. Rev. Lett. 113, 120405 (2014), Table 1",
+      "doi_or_url": "https://doi.org/10.1103/PhysRevLett.113.120405 ; https://arxiv.org/abs/1409.7951",
+      "retrieved": "2026-11-11",
+      "path": "docs/data/external/atomic/ives_stilwell/botermann2014_li_doppler_frequencies.csv",
+      "sha256": "500f933f0d8c02c9c111424d8f9bca172c3e1c9b0e19b6aa1862db62375c5275",
+      "license": "numerical facts transcribed from the arXiv HTML version; no figures or text redistributed",
+      "visibility": "PUBLIC",
+      "note": "Frequencies in MHz, 1-sigma totals as in Table 1. The registered values reproduce the published epsilon = (1.5 +- 2.3)e-9 (checked before registration)."
     }
   ]
 }
