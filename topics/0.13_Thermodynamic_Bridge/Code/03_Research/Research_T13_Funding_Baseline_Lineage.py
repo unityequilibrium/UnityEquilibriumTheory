@@ -7,14 +7,21 @@ import json
 from math import isclose
 from pathlib import Path
 
+from core.core_paths import canonical_existing_path
 
-ROOT = Path(__file__).resolve().parents[5]
-PLAN_PATH = ROOT / "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/funding_portfolio_14d_plan.json"
-OUTPUT = ROOT / "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/t13_funding_baseline_lineage_audit.json"
-J02_SOURCE = ROOT / "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/he4_svp_second_sound_response_source_package.json"
-CORE_CALIBRATION = ROOT / "docs/core/07_artifacts/topic13/t13_he4_o2_response_calibration_audit.json"
-CORE_SI = ROOT / "docs/core/07_artifacts/topic13/t13_he4_o2_si_beta_mapping_audit.json"
-CORE_ETA = ROOT / "docs/core/07_artifacts/topic13/t13_he4_normal_viscosity_kubo_audit.json"
+ROOT = Path(__file__).resolve().parents[4]
+
+import sys as _sys
+if str(ROOT) not in _sys.path:
+    _sys.path.insert(0, str(ROOT))
+from core.core_paths import canonical_existing_path
+TOPIC = ROOT / "topics/0.13_Thermodynamic_Bridge"
+PLAN_PATH = TOPIC / "Data/03_Research/funding_portfolio_14d_plan.json"
+OUTPUT = TOPIC / "Result/artifacts/t13_funding_baseline_lineage_audit.json"
+J02_SOURCE = TOPIC / "Data/03_Research/he4_svp_second_sound_response_source_package.json"
+CORE_CALIBRATION = ROOT / "core/07_artifacts/topic13/t13_he4_o2_response_calibration_audit.json"
+CORE_SI = ROOT / "core/07_artifacts/topic13/t13_he4_o2_si_beta_mapping_audit.json"
+CORE_ETA = ROOT / "core/07_artifacts/topic13/t13_he4_normal_viscosity_kubo_audit.json"
 
 
 def _sha256(path: Path) -> str:
@@ -22,7 +29,7 @@ def _sha256(path: Path) -> str:
 
 
 def _inspect(record: dict) -> dict:
-    path = ROOT / record["path"]
+    path = canonical_existing_path(canonical_existing_path(ROOT / record["path"]))
     actual = _sha256(path) if path.is_file() else None
     return {
         "path": record["path"],
@@ -111,7 +118,7 @@ def audit() -> dict:
     pre_sprint = [_inspect(item) for item in plan["pre_sprint_evidence"]["results"]]
     route = _inspect(plan["source_route_screen"])
     protocol = plan["baseline"]["existing_protocol"]
-    protocol_path = ROOT / protocol["path"]
+    protocol_path = canonical_existing_path(canonical_existing_path(ROOT / protocol["path"]))
     protocol_present = protocol_path.is_file()
     j02 = _j02_review(protocol_path, protocol["commit"]) if protocol_present and J02_SOURCE.is_file() else None
     counts = {state: sum(row["state"] == state for row in historical) for state in ("MATCH", "DRIFT", "MISSING")}

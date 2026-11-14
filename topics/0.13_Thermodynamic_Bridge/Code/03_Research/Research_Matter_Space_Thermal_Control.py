@@ -25,6 +25,11 @@ def _bootstrap() -> Path:
 
 
 ROOT = _bootstrap()
+
+import sys as _sys
+if str(ROOT) not in _sys.path:
+    _sys.path.insert(0, str(ROOT))
+from core.core_paths import canonical_existing_path
 TOPIC = ROOT / "docs" / "topics" / "0.13_Thermodynamic_Bridge"
 PREREG_PATH = TOPIC / "Data" / "03_Research" / "matter_space_thermal_preregistration.json"
 SOURCE_PATH = TOPIC / "Data" / "03_Research" / "matter_space_second_sound_source_package.json"
@@ -454,7 +459,7 @@ def main() -> int:
     write_timeseries(primary, fourier, reference, numeric, linear_phi, trace)
     figures = create_figures(prereg, primary, fourier, reference, linear_phi, trace, causal)
     for entry in figures:
-        entry["sha256"] = sha256_file(ROOT / entry["path"])
+        entry["sha256"] = sha256_file(canonical_existing_path(ROOT / entry["path"]))
 
     thresholds = prereg["thresholds"]
     core_leakage = float(core["metrics"]["prearrival_leakage"]["value"])

@@ -8,10 +8,15 @@ from pathlib import Path
 import numpy as np
 
 ROOT=next(p for p in Path(__file__).resolve().parents if (p/"docs/core").is_dir())
-TOPIC=ROOT/"docs/topics/0.10_Fluid_Dynamics_Chaos"
+
+import sys as _sys
+if str(ROOT) not in _sys.path:
+    _sys.path.insert(0, str(ROOT))
+from core.core_paths import canonical_existing_path
+TOPIC=ROOT/"topics/0.10_Fluid_Dynamics_Chaos"
 CONTRACT=TOPIC/"Data/03_Research/fluid_core_o2_goldstone_collision_contract.json"
 OUTPUT=TOPIC/"Result/artifacts/fluid_core_o2_goldstone_collision_audit.json"
-REGISTRY=ROOT/"docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry_topic10_o2_goldstone_collision_addendum.json"
+REGISTRY=canonical_existing_path(ROOT/"docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry_topic10_o2_goldstone_collision_addendum.json")
 
 
 def relative(a,b):
@@ -101,9 +106,9 @@ def balance(row,T):
 
 
 def audit(p,path):
-    spec=importlib.util.spec_from_file_location("goldstone_base",ROOT/p["source_adapter"])
+    spec=importlib.util.spec_from_file_location("goldstone_base",canonical_existing_path(ROOT/p["source_adapter"]))
     base=importlib.util.module_from_spec(spec);spec.loader.exec_module(base)
-    original=json.loads((ROOT/p["source_contract"]).read_text(encoding="utf-8"))
+    original=json.loads((canonical_existing_path(ROOT/p["source_contract"])).read_text(encoding="utf-8"))
     ns,AST=base.source_functions(original);rules=p["verification"];checks={}
     def flag(name,v):checks[name]={"pass":bool(v)}
     def close(name,v,t):checks[name]={"metric":float(v),"threshold":t,"pass":bool(np.isfinite(v) and v<=t)}
@@ -190,8 +195,8 @@ def audit(p,path):
             "connected_continuum":False,"transport_time":None}
     else:
         graph=None;flag("nonempty_triad_graph",False)
-    paths=[path,ROOT/p["card"],REGISTRY,Path(__file__).resolve(),ROOT/p["source_adapter"],ROOT/p["source_contract"]]+[
-      ROOT/v for v in original["core_sources"].values()]+[ROOT/v for v in p["reused_inputs"]]
+    paths=[path,canonical_existing_path(ROOT/p["card"]),REGISTRY,Path(__file__).resolve(),canonical_existing_path(ROOT/p["source_adapter"]),canonical_existing_path(ROOT/p["source_contract"])]+[
+      canonical_existing_path(ROOT/v) for v in original["core_sources"].values()]+[canonical_existing_path(ROOT/v) for v in p["reused_inputs"]]
     archive=TOPIC/"Result/previews/fluid_core_o2_goldstone_collision_first_execution.json"
     archive_source=TOPIC/"Result/previews/core_o2_goldstone_collision_first_execution_verifier.py.txt"
     paths.extend([archive,archive_source])

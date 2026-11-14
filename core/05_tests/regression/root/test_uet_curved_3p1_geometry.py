@@ -1,7 +1,7 @@
 """Tests for periodic curved 3+1 differential-geometry operators."""
 
 from __future__ import annotations
-from docs.core.core_paths import repo_root
+from docs.core.core_paths import canonical_existing_path, repo_root
 
 import hashlib
 import json
@@ -23,11 +23,11 @@ from docs.scripts.audit.audit_uet_curved_3p1_geometry import build_artifacts
 
 
 ROOT = repo_root()
-VERIFY = ROOT / "docs/core/07_artifacts/verification/curved_3p1_geometry_operator_verification.json"
-FORMULA = ROOT / "docs/core/07_artifacts/correspondence/curved_3p1_geometry_operator_formula_audit.json"
-GATE = ROOT / "docs/core/07_artifacts/gates/core_curved_3p1_parent_gate.json"
-REGISTER = ROOT / "docs/core/07_artifacts/gates/uet_major_result_closure_register.json"
-DEPENDENCY = ROOT / "docs/core/07_artifacts/gates/uet_major_result_dependency_unlock_gate.json"
+VERIFY = ROOT / 'core/07_artifacts/verification/curved_3p1_geometry_operator_verification.json'
+FORMULA = ROOT / 'core/07_artifacts/correspondence/curved_3p1_geometry_operator_formula_audit.json'
+GATE = ROOT / 'core/07_artifacts/gates/core_curved_3p1_parent_gate.json'
+REGISTER = ROOT / 'core/07_artifacts/gates/uet_major_result_closure_register.json'
+DEPENDENCY = ROOT / 'core/07_artifacts/gates/uet_major_result_dependency_unlock_gate.json'
 
 
 def _flat_metric(resolution: int) -> np.ndarray:
@@ -126,10 +126,10 @@ def test_generated_geometry_artifacts_are_stable_and_source_linked() -> None:
         persisted.pop("generated_at", None)
         assert live == persisted
     verification = json.loads(VERIFY.read_text(encoding="utf-8"))
-    source = ROOT / verification["source"]["path"]
+    source = canonical_existing_path(ROOT / verification["source"]["path"])
     assert hashlib.sha256(source.read_bytes()).hexdigest() == verification["source"]["sha256"]
     for relative_path, expected_hash in verification["source_hashes"].items():
-        path = ROOT / relative_path
+        path = canonical_existing_path(ROOT / relative_path)
         assert hashlib.sha256(path.read_bytes()).hexdigest() == expected_hash
     assert verification["status"] == "PASS_CURVED_3P1_GEOMETRY_OPERATOR"
     assert verification["major_result"]["closure_level"] == "CLOSED_FOR_LANE"

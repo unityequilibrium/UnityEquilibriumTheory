@@ -73,7 +73,7 @@ class WorkspaceRecoveryTests(unittest.TestCase):
         self.assertEqual(formula["status"], "WARN")
         self.assertEqual(program["status"], "BLOCKED")
         self.assertEqual(program["claim_promotion"], "BLOCKED")
-        spec = ROOT / "docs/core/01_contracts/UET_GR_NONCLOSED_RESEARCH_SPEC.md"
+        spec = ROOT / "core/01_contracts/UET_GR_NONCLOSED_RESEARCH_SPEC.md"
         spec_hash = hashlib.sha256(spec.read_bytes()).hexdigest()
         self.assertIn(spec_hash, verification["source_hashes"].values())
 

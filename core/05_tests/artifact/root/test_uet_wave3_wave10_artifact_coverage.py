@@ -1,6 +1,7 @@
 """Completion-audit coverage for the named Wave 3--10 deliverables."""
 
 from __future__ import annotations
+from core.core_paths import canonical_existing_path
 
 import json
 from pathlib import Path
@@ -9,7 +10,7 @@ from docs.core.core_paths import canonical_artifact_path, repo_root
 
 
 ROOT = repo_root()
-PROGRAM = ROOT / "docs/core/07_artifacts/archive/uet_wave3_wave10_research_program.json"
+PROGRAM = ROOT / 'core/07_artifacts/archive/uet_wave3_wave10_research_program.json'
 
 
 REQUIRED = (
@@ -32,7 +33,7 @@ def read() -> dict:
 
 
 def test_named_wave_deliverables_exist() -> None:
-    missing = [path for path in REQUIRED if not (ROOT / path).exists()]
+    missing = [path for path in REQUIRED if not (canonical_existing_path(ROOT / path)).exists()]
     assert missing == []
 
 

@@ -5,6 +5,7 @@ import importlib.util
 import json
 from pathlib import Path
 
+from core.core_paths import canonical_existing_path
 
 SOURCE = Path(__file__).with_name("Research_T13_Funding_HeII_Operator_Domain.py")
 SPEC = importlib.util.spec_from_file_location("t13_funding_heii_operator_domain", SOURCE)
@@ -29,5 +30,5 @@ def test_scoped_decision_is_reproducible_from_hashed_inputs():
     assert AUDIT["closure_level"] == "CLOSED_FOR_LANE"
     assert AUDIT["verification_status"] == "PASS_SCOPED_OPERATOR_DOMAIN_BOUNDARY"
     for item in AUDIT["evidence_artifacts"]:
-        source = MODULE.ROOT / item["path"]
+        source = canonical_existing_path(MODULE.ROOT / item["path"])
         assert hashlib.sha256(source.read_bytes()).hexdigest() == item["sha256"]

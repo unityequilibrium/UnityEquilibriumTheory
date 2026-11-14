@@ -19,8 +19,8 @@ ROOT = Path(__file__).resolve().parents[3]
 SCHEMA = "docs/meta/schemas/calculation_contract_v1.schema.json"
 BASELINE = "docs/meta/calculation_completeness_baseline.json"
 REPORT = "docs/meta/calculation_completeness_inventory.json"
-REGISTRY = "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry.json"
-MIGRATION_MAP = "docs/core/07_artifacts/archive/uet_core_file_migration_map.json"
+REGISTRY = "core/07_artifacts/correspondence/uet_equation_correspondence_registry.json"
+MIGRATION_MAP = "core/00_governance/uet_core_physical_migration_manifest.json"
 GROUPS = {"system_state", "drive_environment", "propagation", "frame_time", "detector", "processing", "numerics"}
 TEXT = {".py", ".md", ".json", ".yaml", ".yml", ".csv", ".tsv", ".txt", ".toml"}
 SUPPORT = {
@@ -31,6 +31,17 @@ SUPPORT = {
 
 
 def load_json(path: Path):
+    path = Path(path)
+    if path.is_absolute():
+        try:
+            relative = path.resolve().relative_to(ROOT.resolve()).as_posix()
+        except ValueError:
+            relative = None
+    else:
+        relative = path.as_posix()
+    if relative and relative.startswith(("docs/core/", "docs/topics/")):
+        path = repo_path(ROOT, relative)
+
     def pairs(items):
         result = {}
         for k, v in items:
@@ -56,6 +67,18 @@ def repo_path(root: Path, path: str) -> Path:
     target = (root / path).resolve()
     if not target.is_relative_to(root.resolve()):
         raise ValueError(f"path escapes repository: {path}")
+    if target.exists():
+        return target
+    # Historical contract locators survive the directory move. Resolve only
+    # these explicit relocations; never search by basename or infer hash identity.
+    relative = Path(path).as_posix()
+    relocated = None
+    if relative.startswith("docs/core/"):
+        relocated = root / "core" / relative[len("docs/core/") :]
+    elif relative.startswith("docs/topics/"):
+        relocated = root / "topics" / relative[len("docs/topics/") :]
+    if relocated is not None and relocated.exists():
+        return relocated.resolve()
     return target
 
 
@@ -452,7 +475,10 @@ def artifact_metadata(contract: dict, root: Path = ROOT) -> dict:
 
 
 def result_path(path: str) -> bool:
-    return path.endswith(".json") and ("/Result/artifacts/" in path or path.startswith("docs/core/07_artifacts/"))
+    return path.endswith(".json") and (
+        "/Result/artifacts/" in path
+        or path.startswith(("docs/core/07_artifacts/", "core/07_artifacts/"))
+    )
 
 
 def scientific_path(path: str) -> bool:
@@ -461,18 +487,21 @@ def scientific_path(path: str) -> bool:
         return False
     if p.name.startswith("test_") or "05_tests" in p.parts or "test" in p.parts or p.name == "__init__.py":
         return False
-    data_input = (path.startswith("docs/data/external/") or path.startswith("docs/core/06_data/")
-                  or (path.startswith("docs/topics/0.") and "/Data/" in path))
+    data_input = (
+        path.startswith(("docs/data/external/", "core/06_data/", "docs/core/06_data/"))
+        or (path.startswith(("topics/0.", "docs/topics/0.")) and "/Data/" in path)
+    )
     if p.suffix != ".py":
         return result_path(path) or data_input
-    return (path.startswith("docs/core/") or path.startswith("docs/scripts/audit/")
-            or (path.startswith("docs/topics/0.") and "/Code/" in path) or data_input)
+    return (path.startswith(("core/", "docs/core/", "docs/scripts/audit/"))
+            or (path.startswith(("topics/0.", "docs/topics/0.")) and "/Code/" in path)
+            or data_input)
 
 
 def discover_contracts(root: Path) -> list[tuple[str, dict]]:
     result = []
     # Bounded to research workspaces; do not walk caches, media, .git or books.
-    for base in (root / "docs/core", root / "docs/topics"):
+    for base in (root / "core", root / "topics"):
         paths = set(base.rglob("CALCULATION_CONTRACT.json"))
         paths.update(p for d in base.rglob("calculation_contracts") if d.is_dir() for p in d.glob("*.json"))
         for path in sorted(paths):
@@ -492,7 +521,8 @@ def adoption_inventory(root: Path, baseline: dict, contracts: list, reviews: lis
         if repo_path(root, path).is_file():
             sources.append({"path": path, "sha256": identity_hash(root, {"path": path, "kind": "working_file"})})
     if repo_path(root, MIGRATION_MAP).is_file():
-        for row in load_json(repo_path(root, MIGRATION_MAP)).get("files", []):
+        migration = load_json(repo_path(root, MIGRATION_MAP))
+        for row in migration.get("files", migration.get("records", [])):
             target = row["canonical_path"]
             for alias in [target, row.get("current_path", target), *row.get("legacy_paths", [])]:
                 if alias in ambiguous:
@@ -511,9 +541,10 @@ def adoption_inventory(root: Path, baseline: dict, contracts: list, reviews: lis
             return resolved_cache[path]
         target = aliases.get(path, path)
         # Never guess by basename or accept a mapping outside this repository.
-        repo_path(root, target)
-        resolved_cache[path] = target
-        return target
+        resolved = repo_path(root, target)
+        canonical = resolved.relative_to(root.resolve()).as_posix() if resolved.exists() else target
+        resolved_cache[path] = canonical
+        return canonical
 
     def exists(path):
         if path not in existence:
@@ -536,7 +567,7 @@ def adoption_inventory(root: Path, baseline: dict, contracts: list, reviews: lis
                          registry_classification=entry.get("classification"),
                          downstream_dependencies=entry.get("downstream_dependencies", []))
             route["discovery"].append(REGISTRY)
-    topics = sorted(p for p in (root / "docs/topics").glob("0.*") if p.is_dir() and re.match(r"^0\.\d+_", p.name))
+    topics = sorted(p for p in (root / "topics").glob("0.*") if p.is_dir() and re.match(r"^0\.\d+_", p.name))
     for folder in topics:
         owner = folder.name
         prefix = folder.relative_to(root).as_posix() + "/"
@@ -556,7 +587,7 @@ def adoption_inventory(root: Path, baseline: dict, contracts: list, reviews: lis
         paths = sorted({i["path"] for i in contract["identities"] if i["kind"] == "working_file"})
         for path in paths:
             coverage.setdefault(resolve(path), set()).add(cid)
-        owner = locator.split("/")[2] if locator.startswith("docs/topics/") else "CORE"
+        owner = locator.split("/")[1] if locator.startswith("topics/") else "CORE"
         seeds["contract:" + cid] = {"route_id": "contract:" + cid, "owner": owner,
             "kind": "CONTRACT_PATH", "paths": paths, "contract_id": cid,
             "claim_boundary": contract["claim_boundary"], "discovery": [locator]}
@@ -568,7 +599,7 @@ def adoption_inventory(root: Path, baseline: dict, contracts: list, reviews: lis
         canonical = resolve(path)
         if canonical in named:
             continue
-        bucket = "CORE" if path.startswith("docs/core/") else "AUDIT_TOOLS" if path.startswith("docs/scripts/") else "OTHER_RESEARCH"
+        bucket = "CORE" if path.startswith("core/") else "AUDIT_TOOLS" if path.startswith("docs/scripts/") else "OTHER_RESEARCH"
         groups.setdefault(bucket, set()).add(canonical)
     for owner, paths in sorted(groups.items()):
         seeds["unassigned:" + owner] = {"route_id": "unassigned:" + owner, "owner": owner,
@@ -581,7 +612,7 @@ def adoption_inventory(root: Path, baseline: dict, contracts: list, reviews: lis
         formula_ids = {c["contract_id"] for _, c in contracts if rid in c["model"]["formula_ids"]}
         ids |= formula_ids
         if seed["kind"] == "TOPIC_PACKAGE":
-            ids |= {cid for cid, (loc, _) in contract_by_id.items() if loc.startswith(f"docs/topics/{seed['owner']}/")}
+            ids |= {cid for cid, (loc, _) in contract_by_id.items() if loc.startswith(f"topics/{seed['owner']}/")}
         if seed.get("contract_id"):
             ids = {seed["contract_id"]}
         missing = [p for p in paths if not exists(p)]
@@ -652,17 +683,22 @@ def build_report(root: Path, changed: list[str] | None = None) -> dict:
         errors.extend(f"{locator}: {e}" for e in review["errors"])
         for identity in contract.get("identities", []):
             if identity.get("kind") == "working_file":
-                coverage.setdefault(identity["path"], []).append(review["contract_id"])
+                resolved_identity = repo_path(root, identity["path"]).relative_to(root.resolve()).as_posix()
+                coverage.setdefault(resolved_identity, []).append(review["contract_id"])
     baseline = load_json(root / BASELINE) if (root / BASELINE).exists() else {"routes": [], "legacy_paths": []}
     # Explicit legacy path queue prevents registry seed coverage being mistaken for completeness.
     try:
         discovered = git(root, "ls-files", "--cached", "--others", "--exclude-standard").decode().splitlines()
     except ValueError:
         # Non-Git fixture/workspace support, without treating missing Git history as evidence.
-        discovered = [p.relative_to(root).as_posix() for p in (root / "docs").rglob("*") if p.is_file()]
-    current = {p for p in discovered if scientific_path(p) and (root / p).is_file()}
-    formal_roots = ("docs/core/01_contracts/", "docs/core/03_lanes/", "docs/core/04_proofs/",
-                    "docs/core/08_history/research_notes/")
+        discovered = [
+            p.relative_to(root).as_posix()
+            for base in (root / "core", root / "topics", root / "docs")
+            for p in base.rglob("*") if p.is_file()
+        ]
+    current = {p for p in discovered if scientific_path(p) and repo_path(root, p).is_file()}
+    formal_roots = ("core/01_contracts/", "core/03_lanes/", "core/04_proofs/",
+                    "core/08_history/research_notes/")
     formal_documents = {p for p in discovered if p.startswith(formal_roots)
                         and Path(p).suffix in {".md", ".tex"} and repo_path(root, p).is_file()}
     current |= formal_documents
@@ -670,13 +706,14 @@ def build_report(root: Path, changed: list[str] | None = None) -> dict:
     inventory_scope["formal_document_surfaces"] = len(formal_documents)
     errors.extend(inventory_errors)
     unreviewed = sorted(p for p in current if p not in coverage)
-    missing = sorted(p for p in baseline["legacy_paths"] if not (root / p).is_file())
+    missing = sorted(p for p in baseline["legacy_paths"] if not repo_path(root, p).is_file())
     changed = sorted(set(changed or []))
     for p in changed:
         covered = p in coverage or p in baseline.get("support_paths", [])
-        if result_path(p) and (root / p).is_file():
+        resolved_changed = repo_path(root, p)
+        if result_path(p) and resolved_changed.is_file():
             try:
-                obj = load_json(root / p)
+                obj = load_json(resolved_changed)
                 matched = next((c for _, c in contracts if isinstance(obj, dict) and c["contract_id"] == obj.get("contract_id")), None)
                 if matched is None or obj.get("contract_sha256") != contract_hash(matched) or obj.get("identities") != matched["identities"]:
                     errors.append(f"changed result lacks exact contract hash/input lineage: {p}")
@@ -684,7 +721,7 @@ def build_report(root: Path, changed: list[str] | None = None) -> dict:
                     covered = True
             except (OSError, ValueError) as exc:
                 errors.append(f"invalid changed result {p}: {exc}")
-        if scientific_path(p) and (root / p).is_file() and not covered:
+        if scientific_path(p) and resolved_changed.is_file() and not covered:
             errors.append(f"changed scientific path needs classification/contract: {p}")
     return {"schema_version": "uet-calculation-coverage-v1", "kind": "METHODOLOGICAL_NOT_PHYSICS_GATE",
             "baseline_lineage": baseline.get("lineage", {}),

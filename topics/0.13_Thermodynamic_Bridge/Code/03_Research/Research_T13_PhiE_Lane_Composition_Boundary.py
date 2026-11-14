@@ -8,8 +8,13 @@ from pathlib import Path
 import sys
 
 
-ROOT = Path(__file__).resolve().parents[5]
-THERMAL_MODULES = ROOT / "docs/core/03_lanes/thermal"
+ROOT = Path(__file__).resolve().parents[4]
+
+import sys as _sys
+if str(ROOT) not in _sys.path:
+    _sys.path.insert(0, str(ROOT))
+from core.core_paths import canonical_existing_path
+THERMAL_MODULES = ROOT / "core/03_lanes/thermal"
 if str(THERMAL_MODULES) not in sys.path:
     sys.path.insert(0, str(THERMAL_MODULES))
 
@@ -19,13 +24,13 @@ from uet_scalar_thermoelastic_response_bridge import scalar_thermoelastic_bridge
 
 
 ARTIFACT_PATH = (
-    ROOT
-    / "docs/core/07_artifacts/topic13/t13_phi_e_lane_composition_boundary_audit.json"
+    canonical_existing_path(ROOT
+    / "docs/core/07_artifacts/topic13/t13_phi_e_lane_composition_boundary_audit.json")
 )
 NOTE_PATH = (
-    ROOT
+    canonical_existing_path(ROOT
     / "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/"
-    "T13_PHI_E_LANE_COMPOSITION_BOUNDARY.md"
+    "T13_PHI_E_LANE_COMPOSITION_BOUNDARY.md")
 )
 
 INPUT_PATHS = (
@@ -44,11 +49,11 @@ INPUT_PATHS = (
 
 
 def _read_json(relative_path: str) -> dict[str, object]:
-    return json.loads((ROOT / relative_path).read_text(encoding="utf-8"))
+    return json.loads((canonical_existing_path(ROOT / relative_path)).read_text(encoding="utf-8"))
 
 
 def _sha256(relative_path: str) -> str:
-    return hashlib.sha256((ROOT / relative_path).read_bytes()).hexdigest()
+    return hashlib.sha256((canonical_existing_path(ROOT / relative_path)).read_bytes()).hexdigest()
 
 
 def build_audit() -> dict[str, object]:

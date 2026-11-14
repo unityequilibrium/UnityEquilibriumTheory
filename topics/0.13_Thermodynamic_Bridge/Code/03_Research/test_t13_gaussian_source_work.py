@@ -1,4 +1,5 @@
 """Finite-pair work checks; no physical thermal or entropy admission."""
+from core.core_paths import canonical_existing_path
 
 import hashlib
 import json
@@ -109,7 +110,7 @@ def test_absorption_is_not_primary_covariance_entropy(artifact):
 
 def test_protected_sources_and_evidence_hashes_are_current(artifact):
     for item in artifact["evidence_artifacts"]+artifact["protected_evidence_hashes"]:
-        assert hashlib.sha256((W.ROOT/item["path"]).read_bytes()).hexdigest() == item["sha256"]
+        assert hashlib.sha256((canonical_existing_path(W.ROOT/item["path"])).read_bytes()).hexdigest() == item["sha256"]
 
 
 def test_registry_units_ontology_and_reporting(artifact):
@@ -143,7 +144,7 @@ def test_extended_zero_amplitude_coefficient_is_not_a_fit(setup):
 
 
 def test_audit_reads_only_declared_evidence_not_holdout(monkeypatch, artifact):
-    allowed = {W.ROOT/x["path"] for x in artifact["evidence_artifacts"]+artifact["protected_evidence_hashes"]+artifact["preserved_first_failure_identity"]}
+    allowed = {canonical_existing_path(W.ROOT/x["path"]) for x in artifact["evidence_artifacts"]+artifact["protected_evidence_hashes"]+artifact["preserved_first_failure_identity"]}
     seen = set()
     original_bytes, original_text = Path.read_bytes, Path.read_text
 

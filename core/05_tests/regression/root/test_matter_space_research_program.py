@@ -1,6 +1,7 @@
 """Cross-topic status, provenance, and claim-boundary tests for Wave 6."""
 
 from __future__ import annotations
+from core.core_paths import canonical_existing_path
 from docs.core.core_paths import repo_root
 
 import json
@@ -98,4 +99,4 @@ def test_artifact_hashes_pass_while_legacy_figure_layout_is_warned() -> None:
     assert layout["status"] == "WARN"
     assert layout["legacy_figure_count"] == 8
     assert layout["required_canonical_location"] == "Result/02_Figures"
-    assert all((ROOT / path).is_file() for path in layout["legacy_figure_paths"])
+    assert all((canonical_existing_path(ROOT / path)).is_file() for path in layout["legacy_figure_paths"])

@@ -12,7 +12,7 @@ from pathlib import Path
 import sys
 
 
-ROOT = Path(__file__).resolve().parents[5]
+ROOT = Path(__file__).resolve().parents[4]
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
@@ -22,7 +22,7 @@ from docs.core.uet_o2_finite_temperature_quasiparticle_eos import (  # noqa: E40
 )
 
 
-DOCS = ROOT / "docs"
+DOCS = ROOT
 CHARGE_AUDIT = DOCS / "topics/0.13_Thermodynamic_Bridge/Result/artifacts/t13_he4_conditional_charge_map_circularity.json"
 SI_SOURCE = DOCS / "topics/0.13_Thermodynamic_Bridge/Data/03_Research/he4_o2_si_beta_mapping_source_package.json"
 

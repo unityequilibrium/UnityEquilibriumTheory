@@ -8,7 +8,12 @@ import tempfile
 import unittest
 
 ROOT = next(p for p in Path(__file__).resolve().parents if (p / "docs/core").is_dir())
-TOPIC = ROOT / "docs/topics/0.10_Fluid_Dynamics_Chaos"
+
+import sys as _sys
+if str(ROOT) not in _sys.path:
+    _sys.path.insert(0, str(ROOT))
+from core.core_paths import canonical_existing_path
+TOPIC = ROOT / "topics/0.10_Fluid_Dynamics_Chaos"
 SCRIPT = TOPIC / "Code/03_Research/Research_He4_Entropy_Source_Reference.py"
 CONTRACT = TOPIC / "Data/03_Research/he4_entropy_source_and_reference_contract.json"
 RESULT = TOPIC / "Result/artifacts/he4_entropy_source_reference_audit.json"
@@ -28,7 +33,7 @@ class He4EntropySourceReferenceTests(unittest.TestCase):
 
     def test_source_fresh_checks_preserve_physical_admission_boundary(self):
         for path, expected in self.published["input_hashes"].items():
-            self.assertEqual(hashlib.sha256((ROOT / path).read_bytes()).hexdigest(), expected, path)
+            self.assertEqual(hashlib.sha256((canonical_existing_path(ROOT / path)).read_bytes()).hexdigest(), expected, path)
         a = self.fresh
         self.assertEqual(a["input_hashes"], self.published["input_hashes"])
         self.assertEqual(a["locked_tolerances"], self.published["locked_tolerances"])

@@ -1,4 +1,5 @@
 """Regression checks for the scoped condensed-state selection boundary."""
+from core.core_paths import canonical_existing_path
 
 import hashlib
 import importlib.util
@@ -52,6 +53,6 @@ def test_charge_monotonicity_identity_on_condensed_witnesses():
 
 def test_embedded_evidence_hashes_match_current_sources():
     for entry in AUDIT["evidence_artifacts"]:
-        path = MODULE.ROOT / entry["path"]
+        path = canonical_existing_path(MODULE.ROOT / entry["path"])
         assert path.is_file()
         assert hashlib.sha256(path.read_bytes()).hexdigest() == entry["sha256"]

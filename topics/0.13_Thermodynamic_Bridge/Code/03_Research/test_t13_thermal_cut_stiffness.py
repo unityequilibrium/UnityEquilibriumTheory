@@ -11,7 +11,12 @@ import pytest
 from scipy.optimize import brentq
 
 LOCAL = Path(__file__).resolve().parent
-ROOT = LOCAL.parents[4]
+ROOT = LOCAL.parents[3]
+
+import sys as _sys
+if str(ROOT) not in _sys.path:
+    _sys.path.insert(0, str(ROOT))
+from core.core_paths import canonical_existing_path
 M = runpy.run_path(str(LOCAL/"Research_T13_Thermal_Cut_Stiffness.py"))
 EFT, INT, PREFIX = M["EFT"], M["INT"], M["PREFIX"]
 
@@ -130,7 +135,7 @@ def test_invalid_inputs_rejected(example, k, t, order, tail):
 
 
 def test_artifact_scope_and_hashes():
-    record = json.loads((ROOT/(PREFIX+"Result/artifacts/t13_thermal_cut_stiffness.json")).read_text())
+    record = json.loads((canonical_existing_path(ROOT/(PREFIX+"Result/artifacts/t13_thermal_cut_stiffness.json"))).read_text())
     assert record["verification_status"] == "PASS_SCOPED_THERMAL_CUT_STIFFNESS"
     assert all(record["checks"].values()) and len(record["report"]) == 11
     assert record["closure_level"] == "CLOSED_FOR_LANE"
@@ -140,7 +145,7 @@ def test_artifact_scope_and_hashes():
     assert record["thresholds"]["original_causal_leakage"] == 1e-6
     assert "R_gen" in record["ontology"]["excluded_state_variables"]
     for item in record["evidence_artifacts"]+record["protected_evidence_hashes"]:
-        assert hashlib.sha256((ROOT/item["path"]).read_bytes()).hexdigest() == item["sha256"]
+        assert hashlib.sha256(M["canonical_existing_path"](canonical_existing_path(ROOT/item["path"])).read_bytes()).hexdigest() == item["sha256"]
 
 
 def test_runtime_read_allowlist_excludes_holdout(monkeypatch):
@@ -155,7 +160,7 @@ def test_runtime_read_allowlist_excludes_holdout(monkeypatch):
     monkeypatch.setattr(Path, "read_bytes", read_bytes)
     monkeypatch.setattr(Path, "read_text", read_text)
     record = M["audit"]()
-    allowed = {(ROOT/item["path"]).resolve() for item in record["evidence_artifacts"]+record["protected_evidence_hashes"]}
+    allowed = {M["canonical_existing_path"](canonical_existing_path(ROOT/item["path"])).resolve() for item in record["evidence_artifacts"]+record["protected_evidence_hashes"]}
     assert accessed and set(accessed) <= allowed
     assert all("xie" not in path.name.lower() for path in accessed)
     assert all(record["checks"].values())

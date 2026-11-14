@@ -11,12 +11,17 @@ from pathlib import Path
 import shutil
 import sys
 
-ROOT=Path(__file__).resolve().parents[5]
+ROOT=Path(__file__).resolve().parents[4]
+
+import sys as _sys
+if str(ROOT) not in _sys.path:
+    _sys.path.insert(0, str(ROOT))
+from core.core_paths import canonical_existing_path
 sys.path.insert(0,str(ROOT))
 from docs.scripts.audit.audit_calculation_completeness import artifact_metadata,load_json
 
-CONTRACT="docs/topics/0.13_Thermodynamic_Bridge/calculation_contracts/action_discrimination.json"
-OUTPUT="docs/core/07_artifacts/topic13/t13_action_discrimination.json"
+CONTRACT="topics/0.13_Thermodynamic_Bridge/calculation_contracts/action_discrimination.json"
+OUTPUT="core/07_artifacts/topic13/t13_action_discrimination.json"
 
 
 def canonical_coefficients(e,zp,zc,mp2,mc2,lp,lc,h,xi,rho,p,c):
@@ -241,7 +246,7 @@ def calculate():
 
 
 def record():
-    return {**calculate(),**artifact_metadata(load_json(ROOT/CONTRACT),ROOT),
+    return {**calculate(),**artifact_metadata(load_json(canonical_existing_path(ROOT/CONTRACT)),ROOT),
             "generator_path":Path(__file__).relative_to(ROOT).as_posix(),"evidence_class":"FORMAL_CONDITIONAL_NOT_PHYSICAL_VALIDATION"}
 
 
@@ -251,7 +256,7 @@ def main():
     mode.add_argument('--emit',action='store_true'); mode.add_argument('--check',action='store_true')
     args=p.parse_args()
     text=json.dumps(record(),ensure_ascii=False,indent=2,allow_nan=False)+'\n'
-    path=ROOT/OUTPUT
+    path=canonical_existing_path(ROOT/OUTPUT)
     if args.emit:
         if shutil.disk_usage(ROOT).free<100*1024*1024:
             raise SystemExit('Insufficient free space')

@@ -4,11 +4,11 @@
   "generator_sha256": "b32005e4bdbf59da6681ae630fa1d9d4415c361f7523be18c8b52a86dc8c93e9",
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
-    "sources": 76,
-    "entries": 813,
+    "sources": 77,
+    "entries": 814,
     "by_stream": {
       "book-history": 94,
-      "operations": 113,
+      "operations": 114,
       "research": 606
     },
     "exact_duplicates": 0,
@@ -395,6 +395,11 @@
     {
       "path": "2026/2026-11-14.md",
       "sha256": "12c5cef3aa05605b9c3bd8a180c695b7dcaa8738d3bcfc2ccbe677a3eb58a810",
+      "entries": 1
+    },
+    {
+      "path": "2026/2026-11-15.md",
+      "sha256": "ff6256e9b91c36e4c5109b541305a722e164cc10b037174c8ef10c37b2051f92",
       "entries": 1
     },
     {
@@ -16627,6 +16632,26 @@
       "basis": "explicit_stream_and_area",
       "flags": [],
       "date": "2026-11-14",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-15.md#root-coretopics-post-move-repair",
+      "source": "2026/2026-11-15.md",
+      "anchor": "root-coretopics-post-move-repair",
+      "start_line": 3,
+      "end_line": 15,
+      "title": "Root Core–Topics post-move repair",
+      "entry_sha256": "6c8fd01179a9b62fa08e8b51f456fb6240fa275fb529e767f34af2495a69d569",
+      "stream": "operations",
+      "areas": [
+        "repo-ops"
+      ],
+      "related_streams": [
+        "operations"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-15",
       "legacy_root_path": false
     },
     {

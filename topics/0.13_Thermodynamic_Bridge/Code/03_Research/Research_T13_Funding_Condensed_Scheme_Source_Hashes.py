@@ -7,11 +7,16 @@ import json
 from pathlib import Path
 
 
-ROOT = Path(__file__).resolve().parents[5]
-OUTPUT = ROOT / (
+ROOT = Path(__file__).resolve().parents[4]
+
+import sys as _sys
+if str(ROOT) not in _sys.path:
+    _sys.path.insert(0, str(ROOT))
+from core.core_paths import canonical_existing_path
+OUTPUT = canonical_existing_path(ROOT / (
     "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/"
     "t13_funding_condensed_scheme_selection_2026-09-28.json"
-)
+))
 
 
 def refresh_source_hashes() -> dict:
@@ -19,7 +24,7 @@ def refresh_source_hashes() -> dict:
     if decision["full_core_unlock"] or decision["g1_physical_unlock"] or decision["g2_science_unlock"]:
         raise ValueError("A source-hash refresh cannot promote the route decision")
     decision["source_hashes"] = {
-        path: hashlib.sha256((ROOT / path).read_bytes()).hexdigest()
+        path: hashlib.sha256((canonical_existing_path(ROOT / path)).read_bytes()).hexdigest()
         for path in decision["source_hashes"]
     }
     return decision

@@ -13,7 +13,12 @@ import sys
 
 import numpy as np
 
-ROOT = Path(__file__).resolve().parents[5]
+ROOT = Path(__file__).resolve().parents[4]
+
+import sys as _sys
+if str(ROOT) not in _sys.path:
+    _sys.path.insert(0, str(ROOT))
+from core.core_paths import canonical_existing_path
 LOCAL = Path(__file__).resolve().parent
 if str(LOCAL) not in sys.path:
     sys.path.insert(0, str(LOCAL))
@@ -21,7 +26,7 @@ import Research_T13_Acoustic_Source_Landau as LAND
 
 PAIR, MOD, TH, EFT, INT, PREFIX = LAND.PAIR, LAND.MOD, LAND.TH, LAND.EFT, LAND.INT, LAND.PREFIX
 REGISTRY = PREFIX+"Data/03_Research/t13_thermal_source_curvature_registry.json"
-OUTPUT = ROOT/(PREFIX+"Result/artifacts/t13_thermal_source_curvature.json")
+OUTPUT = canonical_existing_path(ROOT/(PREFIX+"Result/artifacts/t13_thermal_source_curvature.json"))
 MU_GRID, TEMPERATURE_DIVISORS = (1.05, 1.2), (256, 512)
 ORDERS, TAILS, SOURCE_STEPS = (24, 48, 96), (32., 40.), (1e-4, 5e-5, 2.5e-5)
 MOMENTA = (.005, .02, .04)
@@ -201,7 +206,7 @@ def audit():
               "derivation_class": "SAME_TREE_ACTION_SOURCE_EIGENVALUE_VARIATION_AND_ONE_ACOUSTIC_THERMAL_DETERMINANT",
               "observable": "Conditional equilibrium h susceptibility and static source matching target, not material heat/calibration",
               "data_role": "DERIVED_NOT_CALIBRATION", "action_controls": action, "checks": checks, "examples": examples,
-              "equation_registry_ids": [x["id"] for x in json.loads((ROOT/REGISTRY).read_text())["entries"]],
+              "equation_registry_ids": [x["id"] for x in json.loads((canonical_existing_path(ROOT/REGISTRY)).read_text())["entries"]],
               "declared_grids": {"mu": MU_GRID, "T_divisors": TEMPERATURE_DIVISORS, "momenta": MOMENTA, "orders": ORDERS, "tails": TAILS, "source_steps": SOURCE_STEPS, "locked_before_first_audit": True},
               "thresholds": GATES, "evidence_artifacts": TH.identities(paths), "protected_evidence_hashes": TH.identities(protected),
               "controlling_blocker": "dynamic_source_contact_virtual_mode_and_full_thermal_matching_open",

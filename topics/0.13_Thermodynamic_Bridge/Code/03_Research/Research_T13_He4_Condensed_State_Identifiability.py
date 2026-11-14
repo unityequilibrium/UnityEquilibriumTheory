@@ -14,7 +14,7 @@ from pathlib import Path
 import sys
 
 
-ROOT = Path(__file__).resolve().parents[5]
+ROOT = Path(__file__).resolve().parents[4]
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
@@ -28,7 +28,7 @@ from docs.core.uet_o2_finite_temperature_quasiparticle_eos import (  # noqa: E40
 )
 
 
-DOCS = ROOT / "docs"
+DOCS = ROOT
 COMPOSITION = DOCS / "core/07_artifacts/topic13/t13_he4_core_thermodynamic_bridge_composition_audit.json"
 CALIBRATION = DOCS / "core/07_artifacts/topic13/t13_he4_o2_response_calibration_audit.json"
 SI_SCALE = DOCS / "core/07_artifacts/topic13/t13_he4_o2_si_beta_mapping_audit.json"

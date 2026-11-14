@@ -1,4 +1,5 @@
 """Author table identity and omitted-basis separation, not calibration."""
+from core.core_paths import canonical_existing_path
 
 import hashlib
 import json
@@ -43,8 +44,8 @@ def test_generalized_determinant_and_matrix_inverse(qs):
 
 def test_numeric_source_parsing_preserves_missing_and_ancestry(artifact):
     registry = json.loads((S.ROOT/S.REGISTRY).read_text())
-    rows = S.parse_all((S.ROOT/registry["raw_files"][0]["path"]).read_bytes(), [S.F(str(p)) for p in registry["protocol"]["pressures_bar"]])
-    p0, separators = S.parse_p0((S.ROOT/registry["raw_files"][1]["path"]).read_bytes())
+    rows = S.parse_all((canonical_existing_path(S.ROOT/registry["raw_files"][0]["path"])).read_bytes(), [S.F(str(p)) for p in registry["protocol"]["pressures_bar"]])
+    p0, separators = S.parse_p0((canonical_existing_path(S.ROOT/registry["raw_files"][1]["path"])).read_bytes())
     assert len(rows) == 1050*7 and len({r["row_id"] for r in rows}) == len(rows)
     assert any(r["energy_lexical"] is None for r in rows)
     assert any(r["error_lexical"] is None for r in p0) and separators
@@ -117,11 +118,11 @@ def test_no_physical_promotion(artifact, flag):
 
 def test_current_and_protected_hashes(artifact):
     for item in artifact["evidence_artifacts"]+artifact["protected_evidence_hashes"]:
-        assert hashlib.sha256((S.ROOT/item["path"]).read_bytes()).hexdigest() == item["sha256"]
+        assert hashlib.sha256((canonical_existing_path(S.ROOT/item["path"])).read_bytes()).hexdigest() == item["sha256"]
 
 
 def test_runtime_path_read_allowlist(monkeypatch, artifact):
-    allowed = {str((S.ROOT/item["path"]).resolve()).casefold() for item in artifact["evidence_artifacts"]+artifact["protected_evidence_hashes"]}
+    allowed = {str((canonical_existing_path(S.ROOT/item["path"])).resolve()).casefold() for item in artifact["evidence_artifacts"]+artifact["protected_evidence_hashes"]}
     old_bytes, old_text, observed = Path.read_bytes, Path.read_text, set()
 
     def guard(path):

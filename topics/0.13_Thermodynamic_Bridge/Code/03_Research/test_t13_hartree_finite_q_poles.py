@@ -1,4 +1,5 @@
 """Actual finite-q poles, independent moment algebra and bounded claims."""
+from core.core_paths import canonical_existing_path
 
 import ast
 import hashlib
@@ -252,7 +253,7 @@ def test_finite_q_result_cannot_promote_material_or_core_closure():
 def test_evidence_and_protected_core_hashes_unchanged():
     record = artifact()
     for item in record["evidence_artifacts"]+record["protected_evidence_hashes"]:
-        assert hashlib.sha256((N["ROOT"]/item["path"]).read_bytes()).hexdigest() == item["sha256"]
+        assert hashlib.sha256((canonical_existing_path(N["ROOT"]/item["path"])).read_bytes()).hexdigest() == item["sha256"]
     predecessor = json.loads((N["ROOT"]/N["PREVIOUS_ARTIFACT"]).read_text(encoding="utf-8"))
     assert N["R"]["predecessor_hashes_match"](predecessor)
     predecessor["evidence_artifacts"][0]["sha256"] = "0"*64

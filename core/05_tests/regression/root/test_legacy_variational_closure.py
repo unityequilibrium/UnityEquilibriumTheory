@@ -4,7 +4,7 @@ from pathlib import Path
 
 
 ROOT = repo_root()
-ARTIFACT = ROOT / "docs/core/07_artifacts/gates/uet_legacy_variational_closure.json"
+ARTIFACT = ROOT / 'core/07_artifacts/gates/uet_legacy_variational_closure.json'
 
 
 def load_artifact():

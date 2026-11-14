@@ -9,14 +9,19 @@ from pathlib import Path
 import sys
 import sympy as s
 
-ROOT=Path(__file__).resolve().parents[5]
+ROOT=Path(__file__).resolve().parents[4]
+
+import sys as _sys
+if str(ROOT) not in _sys.path:
+    _sys.path.insert(0, str(ROOT))
+from core.core_paths import canonical_existing_path
 sys.path.insert(0,str(ROOT))
 sys.path.insert(0,str(Path(__file__).resolve().parent))
 from docs.scripts.audit.audit_calculation_completeness import artifact_metadata,load_json
 
 # Reuse only restricted source-AST utilities, not old calculate/algebra/main.
 old=importlib.import_module("Research_T13_Retained_Response_Regime_Classification")
-T="docs/topics/0.13_Thermodynamic_Bridge"
+T="topics/0.13_Thermodynamic_Bridge"
 STEM="batio3_static_correspondence_audit"
 CONTRACT=f"{T}/calculation_contracts/{STEM}.json"
 INPUT=f"{T}/Data/03_Research/{STEM}_sources.json"
@@ -185,7 +190,7 @@ def negative_controls(data):
 
 
 def calculate():
-    data=load_json(ROOT/INPUT);src,facts=validate_subset(data)
+    data=load_json(canonical_existing_path(ROOT/INPUT));src,facts=validate_subset(data)
     old.source_domain();reduction_scope()
     c,n=checks(),negative_controls(data)
     if not all(c.values()) or not all(n.values()):raise ValueError("exact/source diagnostic checks failed")
@@ -240,15 +245,15 @@ def calculate():
 
 
 def record():
-    return {**artifact_metadata(load_json(ROOT/CONTRACT),ROOT),**calculate()}
+    return {**artifact_metadata(load_json(canonical_existing_path(ROOT/CONTRACT)),ROOT),**calculate()}
 
 
 def main(argv=None):
     p=argparse.ArgumentParser(description=__doc__);m=p.add_mutually_exclusive_group()
     m.add_argument("--check",action="store_true");m.add_argument("--emit-report",action="store_true")
     args=p.parse_args(argv);r=record();text=json.dumps(r,ensure_ascii=False,sort_keys=True,indent=2)+"\n"
-    if args.emit_report:(ROOT/OUTPUT).write_text(text,encoding="utf-8",newline="\n")
-    elif not (ROOT/OUTPUT).is_file() or (ROOT/OUTPUT).read_bytes()!=text.encode("utf-8"):
+    if args.emit_report:(canonical_existing_path(ROOT/OUTPUT)).write_text(text,encoding="utf-8",newline="\n")
+    elif not (canonical_existing_path(ROOT/OUTPUT)).is_file() or (canonical_existing_path(ROOT/OUTPUT)).read_bytes()!=text.encode("utf-8"):
         raise ValueError("artifact absent/stale; explicit emit only after review")
     print(json.dumps({"checks":len(r["checks"]),"negative_controls":len(r["negative_controls"]),
                       "review":r["contract_review_status"],"physical_acceptance":False}))

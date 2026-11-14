@@ -1,4 +1,5 @@
 """Independent action, counterterm, joint-response and claim-boundary checks."""
+from core.core_paths import canonical_existing_path
 
 import ast
 import hashlib
@@ -232,7 +233,7 @@ def test_read_path_does_not_import_old_poles_as_answers_or_read_empirical_source
 def test_artifact_source_and_protected_core_hashes_are_current():
     record = artifact()
     for item in record["evidence_artifacts"]+record["protected_evidence_hashes"]:
-        assert hashlib.sha256((M["ROOT"]/item["path"]).read_bytes()).hexdigest() == item["sha256"]
+        assert hashlib.sha256((canonical_existing_path(M["ROOT"]/item["path"])).read_bytes()).hexdigest() == item["sha256"]
 
 
 def test_scoped_joint_response_does_not_close_quantum_material_or_full_topic():

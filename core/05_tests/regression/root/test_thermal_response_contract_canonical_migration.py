@@ -6,7 +6,7 @@ from importlib import import_module
 from pathlib import Path
 
 
-ROOT = Path(__file__).resolve().parents[5]
+ROOT = Path(__file__).resolve().parents[4]
 
 
 def test_phi_e_reference_legacy_import_is_a_facade() -> None:
@@ -24,7 +24,7 @@ def test_phi_e_reference_legacy_import_is_a_facade() -> None:
     assert legacy.__canonical_module__ == canonical.__name__
     assert (
         ROOT
-        / "docs/core/03_lanes/thermal/thermal_phi_e_reference_normalization.py"
+        / 'core/03_lanes/thermal/thermal_phi_e_reference_normalization.py'
     ).is_file()
 
 
@@ -39,7 +39,7 @@ def test_response_beta_legacy_import_is_a_facade() -> None:
     assert legacy.thermal_response_beta_contract is canonical.thermal_response_beta_contract
     assert legacy.__canonical_module__ == canonical.__name__
     assert (
-        ROOT / "docs/core/03_lanes/thermal/thermal_response_beta_contract.py"
+        ROOT / 'core/03_lanes/thermal/thermal_response_beta_contract.py'
     ).is_file()
 
 

@@ -18,14 +18,19 @@ import numpy as np
 from scipy.integrate import quad
 from scipy.optimize import brentq
 
-ROOT = Path(__file__).resolve().parents[5]
+ROOT = Path(__file__).resolve().parents[4]
+
+import sys as _sys
+if str(ROOT) not in _sys.path:
+    _sys.path.insert(0, str(ROOT))
+from core.core_paths import canonical_existing_path
 LOCAL = Path(__file__).resolve().parent
 if str(LOCAL) not in sys.path:
     sys.path.insert(0, str(LOCAL))
 import Research_T13_Low_T_Phase_EFT as EFT
 
 PREFIX = EFT.PREFIX
-OUTPUT = ROOT/(PREFIX+"Result/artifacts/t13_low_T_interactions.json")
+OUTPUT = canonical_existing_path(ROOT/(PREFIX+"Result/artifacts/t13_low_T_interactions.json"))
 REGISTRY = PREFIX+"Data/03_Research/t13_low_T_interaction_registry.json"
 MU_GRID = (1.05, 1.2)
 DISPERSION_Q_GRID = (.04, .02, .01)
@@ -273,7 +278,7 @@ def audit():
                       PREFIX+"Code/03_Research/Research_T13_Low_T_Phase_EFT.py", REGISTRY]
     protected_paths = [PREFIX+"Result/artifacts/t13_low_T_phase_eft.json"]+list(EFT.ACTION_PATHS)
     def identities(paths):
-        return [{"path": p, "sha256": hashlib.sha256((ROOT/p).read_bytes()).hexdigest()} for p in paths]
+        return [{"path": p, "sha256": hashlib.sha256((canonical_existing_path(ROOT/p)).read_bytes()).hexdigest()} for p in paths]
     record = {
         "major_result_id": "T13_LOW_T_PHASE_INTERACTION_AND_DECAY_KERNEL",
         "topic": "0.13_Thermodynamic_Bridge", "branch_id": EFT.BRANCH,
@@ -282,7 +287,7 @@ def audit():
         "created_at": datetime.now(timezone.utc).isoformat(),
         "what_is_closed": "Tree P3/P4 canonical vertices, tree-dispersion one-phase-loop T8, one subtracted quartic thermal-thermal diagram and derived leading T=0 Beliaev cut with independent phase-space convergence",
         "equation_or_mapping": "Gamma_occupation=3(g_t+g_s/c^2)^2 c^2 q^5/(80pi); gamma_pole=Gamma_occupation/2; C8_disp=4pi^6(4eta^2-c*zeta)/(15c^9)",
-        "equation_registry_ids": [e["id"] for e in json.loads((ROOT/REGISTRY).read_text())["entries"]],
+        "equation_registry_ids": [e["id"] for e in json.loads((canonical_existing_path(ROOT/REGISTRY)).read_text())["entries"]],
         "units": {"canonical_phase": "E", "cubic_vertices": "E^-2", "quartic_vertices": "E^-4", "zeta_C8_and_quartic_coefficient": "E^-4", "rates": "E", "rate_q5_coefficient": "E^-4"},
         "derivation_class": "TREE_MATCHED_PHASE_LOOP_AND_LEADING_ON_SHELL_CUT",
         "observable": "Conditional acoustic thermal difference and T=0 attenuation, not TTG/He-II detector output",

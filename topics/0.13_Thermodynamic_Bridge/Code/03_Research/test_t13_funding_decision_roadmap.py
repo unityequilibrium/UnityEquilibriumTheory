@@ -5,16 +5,22 @@ import json
 import re
 from datetime import date
 from pathlib import Path
+from core.core_paths import canonical_existing_path
 
-ROOT = Path(__file__).resolve().parents[5]
-TOPIC = ROOT / "docs/topics/0.13_Thermodynamic_Bridge"
+ROOT = Path(__file__).resolve().parents[4]
+
+import sys as _sys
+if str(ROOT) not in _sys.path:
+    _sys.path.insert(0, str(ROOT))
+from core.core_paths import canonical_existing_path
+TOPIC = ROOT / "topics/0.13_Thermodynamic_Bridge"
 RECORD = json.loads(
     (TOPIC / "Data/03_Research/funding_decision_roadmap_2026_10_02.json").read_text(
         encoding="utf-8"
     )
 )
 CANONICAL = json.loads(
-    (ROOT / RECORD["canonical_acceptance_contract"]).read_text(encoding="utf-8")
+    canonical_existing_path(canonical_existing_path(ROOT / RECORD["canonical_acceptance_contract"])).read_text(encoding="utf-8")
 )
 
 
@@ -29,7 +35,7 @@ def test_planning_does_not_accept_scientific_work():
 
 def test_baseline_hash_and_blocker_match_evidence():
     baseline = RECORD["baseline"]
-    payload = (ROOT / baseline["artifact"]).read_bytes()
+    payload = (canonical_existing_path(ROOT / baseline["artifact"])).read_bytes()
     assert hashlib.sha256(payload).hexdigest() == baseline["sha256"]
     assert baseline["controlling_blocker"] == (
         CANONICAL["hartree_low_T_validity_evidence_2026_10_02"]["controlling_blocker"]
@@ -96,7 +102,7 @@ def test_protected_physical_and_holdout_boundaries():
 
 
 def test_roadmap_links_and_reports_are_present():
-    document = ROOT / RECORD["decision_document"]
+    document = canonical_existing_path(ROOT / RECORD["decision_document"])
     content = document.read_text(encoding="utf-8")
     for field in CANONICAL["report_fields"]:
         assert f"{field}:" in content

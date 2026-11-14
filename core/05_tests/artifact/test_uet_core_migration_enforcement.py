@@ -5,10 +5,11 @@ from __future__ import annotations
 import importlib.util
 import json
 from pathlib import Path
+from docs.core.core_paths import canonical_existing_path
 
 
-ROOT = Path(__file__).resolve().parents[4]
-GOVERNANCE = ROOT / "docs/core/00_governance"
+ROOT = Path(__file__).resolve().parents[3]
+GOVERNANCE = ROOT / 'core/00_governance'
 
 
 def load(name: str) -> dict:
@@ -37,7 +38,7 @@ def test_physical_planner_models_canonical_source_and_archived_alias_without_col
     records, summary = planner.build_records()
     canonical = next(
         item for item in records
-        if item["current_path"] == "docs/core/02_equations/covariant/uet_covariant_response.py"
+        if item["current_path"] == "core/02_equations/covariant/uet_covariant_response.py"
     )
     assert canonical["migration_state"] == "MIGRATED"
     aliases = load("uet_core_legacy_module_aliases.json")
@@ -47,5 +48,5 @@ def test_physical_planner_models_canonical_source_and_archived_alias_without_col
     )
     assert alias["canonical_path"] == canonical["canonical_path"]
     assert alias["status"] == "ARCHIVED_ROOT_SHIM"
-    assert (ROOT / alias["archive_path"]).exists()
+    assert canonical_existing_path(ROOT / alias["archive_path"]).exists()
     assert not summary["duplicate_targets"]

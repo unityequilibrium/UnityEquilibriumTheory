@@ -7,8 +7,10 @@ import re
 from pathlib import Path
 
 
-REPO_ROOT = Path(__file__).resolve().parents[2]
-CORE_ROOT = REPO_ROOT / "docs" / "core"
+REPO_ROOT = Path(__file__).resolve().parents[1]
+CORE_ROOT = REPO_ROOT / "core"
+LEGACY_CORE_ROOT = REPO_ROOT / "docs" / "core"
+TOPICS_ROOT = REPO_ROOT / "topics"
 LEGACY_ARTIFACT_ROOT = CORE_ROOT / "artifacts"
 CANONICAL_ARTIFACT_ROOT = CORE_ROOT / "07_artifacts"
 
@@ -213,12 +215,18 @@ def canonical_path_for(legacy_path: str | Path) -> str:
     """Resolve one current path to its deterministic canonical target."""
 
     relative = normalize_relative(legacy_path)
+    if relative.startswith(("core/", "topics/")):
+        return relative
+    if relative.startswith("docs/topics/"):
+        return "topics/" + relative[len("docs/topics/") :]
     prefix = "docs/core/"
     if not relative.startswith(prefix):
         return relative
     tail = relative[len(prefix) :]
-    if "/" not in tail and tail in PROTECTED_CORE_ROOT_FILES:
+    if Path(tail).suffix.lower() in NON_PUBLIC_BINARY_SUFFIXES:
         return relative
+    if "/" not in tail and tail in PROTECTED_CORE_ROOT_FILES:
+        return "core/" + tail
     if tail.startswith((
         "00_governance/",
         "01_contracts/",
@@ -231,16 +239,16 @@ def canonical_path_for(legacy_path: str | Path) -> str:
         "08_history/",
         "99_review/",
     )):
-        return relative
+        return "core/" + tail
     if tail.startswith("02_Proof/"):
         if tail == "02_Proof/README.md":
-            return "docs/core/04_proofs/README.md"
-        return "docs/core/04_proofs/" + tail[len("02_Proof/") :]
+            return "core/04_proofs/README.md"
+        return "core/04_proofs/" + tail[len("02_Proof/") :]
     if tail == "artifacts/README.md":
-        return relative
+        return "core/" + tail
     if tail.startswith("artifacts/"):
         name = Path(tail).name
-        return f"docs/core/07_artifacts/{_artifact_domain(name)}/{name}"
+        return f"core/07_artifacts/{_artifact_domain(name)}/{name}"
     if tail == "data/scripts/README.md":
         return "docs/scripts/core/legacy/UET_SCRIPT_UTILITY_HUB.md"
     if tail.startswith("data/scripts/"):
@@ -250,11 +258,9 @@ def canonical_path_for(legacy_path: str | Path) -> str:
             parts[0] = _TOOLING_DIRS.get(parts[0], parts[0].lower())
         return "docs/scripts/core/" + "/".join(parts)
     if tail == "data/README.md":
-        return "docs/core/06_data/README.md"
+        return "core/06_data/README.md"
     if tail.startswith("data/external/"):
-        if Path(tail).suffix.lower() in NON_PUBLIC_BINARY_SUFFIXES:
-            return relative
-        return "docs/core/06_data/source_packages/" + tail[len("data/external/") :]
+        return "core/06_data/source_packages/" + tail[len("data/external/") :]
     if tail.startswith("data/"):
         rest = tail[len("data/") :]
         lower = rest.lower()
@@ -264,30 +270,30 @@ def canonical_path_for(legacy_path: str | Path) -> str:
             area = "manifests"
         else:
             area = "source_packages"
-        return f"docs/core/06_data/{area}/{rest}"
+        return f"core/06_data/{area}/{rest}"
     if tail == "test/__init__.py":
-        return "docs/core/08_history/legacy/core_test_package_marker.py"
+        return "core/08_history/legacy/core_test_package_marker.py"
     if tail == "test/sandbox_emergent.py":
-        return "docs/core/99_review/unresolved_assets/sandbox_emergent.py"
+        return "core/99_review/unresolved_assets/sandbox_emergent.py"
     if tail.startswith("test/"):
         rest = Path(tail[len("test/") :])
         role = _test_role(rest.name, str(rest))
         if rest.parts and rest.parts[0].lower() == "validation":
-            return f"docs/core/05_tests/{role}/validation/{rest.name}"
+            return f"core/05_tests/{role}/validation/{rest.name}"
         if len(rest.parts) == 1:
-            return f"docs/core/05_tests/{role}/root/{rest.name}"
-        return f"docs/core/05_tests/{role}/{rest.as_posix()}"
+            return f"core/05_tests/{role}/root/{rest.name}"
+        return f"core/05_tests/{role}/{rest.as_posix()}"
     path = Path(tail)
     if path.suffix.lower() == ".py":
         area = _python_area(path.stem)
         if area.startswith("../scripts/core/"):
             return "docs/scripts/core/" + area[len("../scripts/core/"):] + "/" + path.name
-        return "docs/core/" + area + "/" + path.name
+        return "core/" + area + "/" + path.name
     if path.suffix.lower() == ".md":
-        return f"docs/core/{_markdown_area(path.name)}/{path.name}"
+        return f"core/{_markdown_area(path.name)}/{path.name}"
     if path.suffix.lower() in {".json", ".npz", ".csv", ".tsv", ".sqlite", ".pdf", ".html"}:
-        return f"docs/core/99_review/unresolved_assets/{path.name}"
-    return f"docs/core/99_review/unresolved_assets/{path.name}"
+        return f"core/99_review/unresolved_assets/{path.name}"
+    return f"core/99_review/unresolved_assets/{path.name}"
 
 
 def canonical_module_name(canonical_path: str | Path) -> str:
@@ -325,7 +331,7 @@ def canonical_existing_path(path: str | Path) -> Path:
         relative = candidate.relative_to(REPO_ROOT).as_posix()
     except ValueError:
         return candidate
-    if not relative.startswith("docs/core/"):
+    if not relative.startswith(("docs/core/", "docs/topics/")):
         return candidate
     canonical = REPO_ROOT / canonical_path_for(relative)
     if canonical.resolve() != candidate and canonical.exists():
@@ -374,8 +380,10 @@ def is_compatibility_asset(path: str | Path) -> bool:
 
     value = Path(path)
     relative = normalize_relative(value)
-    if relative.startswith("docs/core/"):
-        tail = relative[len("docs/core/") :]
+    for prefix in ("docs/core/", "core/"):
+        if not relative.startswith(prefix):
+            continue
+        tail = relative[len(prefix) :]
         if tail.startswith(("artifacts/", "data/", "test/", "02_Proof/")):
             return True
     return is_markdown_redirect(value) or is_python_shim(value)

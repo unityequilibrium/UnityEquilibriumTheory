@@ -9,9 +9,14 @@ import runpy
 import numpy as np
 import pytest
 
-ROOT = Path(__file__).resolve().parents[5]
-PREFIX = "docs/topics/0.13_Thermodynamic_Bridge/"
-M = runpy.run_path(str(ROOT/(PREFIX+"Code/03_Research/Research_T13_Low_T_Interactions.py")))
+ROOT = Path(__file__).resolve().parents[4]
+
+import sys as _sys
+if str(ROOT) not in _sys.path:
+    _sys.path.insert(0, str(ROOT))
+from core.core_paths import canonical_existing_path
+PREFIX = "topics/0.13_Thermodynamic_Bridge/"
+M = runpy.run_path(str(canonical_existing_path(ROOT/(PREFIX+"Code/03_Research/Research_T13_Low_T_Interactions.py"))))
 EFT = M["EFT"]
 
 
@@ -107,7 +112,7 @@ def test_invalid_decay_arguments_rejected(example, k, order):
 
 
 def test_new_artifact_hashes_and_full_scope_boundary():
-    r = json.loads((ROOT/(PREFIX+"Result/artifacts/t13_low_T_interactions.json")).read_text())
+    r = json.loads((canonical_existing_path(ROOT/(PREFIX+"Result/artifacts/t13_low_T_interactions.json"))).read_text())
     assert r["verification_status"] == "PASS_SCOPED_INTERACTION_KERNEL"
     assert r["closure_level"] == "CLOSED_FOR_LANE"
     assert all(r["checks"].values())
@@ -122,10 +127,10 @@ def test_new_artifact_hashes_and_full_scope_boundary():
     assert r["prior_Xie_context_exposure_review"] == "REVIEW_REQUIRED"
     assert r["thresholds"]["original_causal_leakage"] == 1e-6
     for e in r["evidence_artifacts"]+r["protected_evidence_hashes"]:
-        assert hashlib.sha256((ROOT/e["path"]).read_bytes()).hexdigest() == e["sha256"]
+        assert hashlib.sha256((canonical_existing_path(ROOT/e["path"])).read_bytes()).hexdigest() == e["sha256"]
     previous = r["protected_evidence_hashes"][0]
     assert previous["sha256"] == "050aceb4f94f3534929d8c59c75da4dda8efe16ce7aec250a34f6f8b5868dcb7"
-    registry = json.loads((ROOT/M["REGISTRY"]).read_text())
+    registry = json.loads((canonical_existing_path(ROOT/M["REGISTRY"])).read_text())
     assert r["equation_registry_ids"] == [e["id"] for e in registry["entries"]]
     assert registry["core_registry_modified"] is False
 
@@ -144,6 +149,6 @@ def test_audit_file_access_excludes_holdout_and_external_numeric_source(monkeypa
     monkeypatch.setattr(Path, "read_bytes", checked_bytes)
     monkeypatch.setattr(Path, "read_text", checked_text)
     r = M["audit"]()
-    allowed = {(ROOT/e["path"]).resolve() for e in r["evidence_artifacts"]+r["protected_evidence_hashes"]}
+    allowed = {(canonical_existing_path(ROOT/e["path"])).resolve() for e in r["evidence_artifacts"]+r["protected_evidence_hashes"]}
     assert accessed and set(accessed) <= allowed
     assert all(r["checks"].values())

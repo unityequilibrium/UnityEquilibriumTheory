@@ -17,15 +17,20 @@ import runpy
 import numpy as np
 from scipy.special import zeta
 
-ROOT = Path(__file__).resolve().parents[5]
-PREFIX = "docs/topics/0.13_Thermodynamic_Bridge/"
+ROOT = Path(__file__).resolve().parents[4]
+
+import sys as _sys
+if str(ROOT) not in _sys.path:
+    _sys.path.insert(0, str(ROOT))
+from core.core_paths import canonical_existing_path
+PREFIX = "topics/0.13_Thermodynamic_Bridge/"
 BACKGROUND_CODE = PREFIX+"Code/03_Research/Research_T13_Renormalized_Hartree_Background.py"
 BACKGROUND_ARTIFACT = PREFIX+"Result/artifacts/t13_renormalized_hartree_background.json"
 MATCH_CODE = PREFIX+"Code/03_Research/Research_T13_Hartree_Counterterm_Matching.py"
 MATCH_ARTIFACT = PREFIX+"Result/artifacts/t13_hartree_counterterm_matching.json"
-H = runpy.run_path(str(ROOT/BACKGROUND_CODE))
-CT = runpy.run_path(str(ROOT/MATCH_CODE))
-OUTPUT = ROOT/(PREFIX+"Result/artifacts/t13_hartree_external_response.json")
+H = runpy.run_path(str(canonical_existing_path(ROOT/BACKGROUND_CODE)))
+CT = runpy.run_path(str(canonical_existing_path(ROOT/MATCH_CODE)))
+OUTPUT = canonical_existing_path(ROOT/(PREFIX+"Result/artifacts/t13_hartree_external_response.json"))
 BASIS = np.array([[[1., 0.], [0., 1.]], [[1., 0.], [0., -1.]],
                   [[0., 1.], [1., 0.]]])/sqrt(2.)
 ORDERS = ((64, 32), (96, 48), (144, 72))
@@ -252,8 +257,8 @@ def complex_matrix(value):
 
 
 def audit():
-    old = json.loads((ROOT/BACKGROUND_ARTIFACT).read_text(encoding="utf-8"))
-    matching = json.loads((ROOT/MATCH_ARTIFACT).read_text(encoding="utf-8"))
+    old = json.loads((canonical_existing_path(ROOT/BACKGROUND_ARTIFACT)).read_text(encoding="utf-8"))
+    matching = json.loads((canonical_existing_path(ROOT/MATCH_ARTIFACT)).read_text(encoding="utf-8"))
     examples = []
     for e in old["examples"]:
         t, mu, u = e["T"], e["mu"], e["u_canonical"]
@@ -335,8 +340,8 @@ def audit():
         "equation_registry_ids": ["t13.diagnostic.hartree_covariance_bubble", "t13.diagnostic.hartree_external_BSE"],
         "examples": examples, "vacuum_Feynman_parameter_reference": vacuum_reference, "checks": checks,
         "thresholds": {"point_frequency": POINT_TOLERANCE, "quadrature_and_routing_absolute": QUADRATURE_TOLERANCE, "static_radial_relative": STATIC_TOLERANCE, "static_Ward_and_source_algebra": IDENTITY_TOLERANCE},
-        "evidence_artifacts": [{"path": p, "sha256": hashlib.sha256((ROOT/p).read_bytes()).hexdigest()} for p in paths],
-        "protected_evidence_hashes": [{"path": p, "sha256": hashlib.sha256((ROOT/p).read_bytes()).hexdigest()} for p in protected],
+        "evidence_artifacts": [{"path": p, "sha256": hashlib.sha256((canonical_existing_path(ROOT/p)).read_bytes()).hexdigest()} for p in paths],
+        "protected_evidence_hashes": [{"path": p, "sha256": hashlib.sha256((canonical_existing_path(ROOT/p)).read_bytes()).hexdigest()} for p in protected],
         "method_references": [{"url": "https://arxiv.org/pdf/hep-ph/0203008", "locator": "III, external effective action and Bethe-Salpeter response", "role": "established_method_not_UET_novelty"}, {"url": "https://arxiv.org/abs/1410.1337", "locator": "renormalization requires symmetry/translation preserving regulators", "role": "full_regulator_obligation_retained"}],
         "open_blockers": ["gauge_current_vertices_and_nonzero_Q_Ward_contact", "full_covariant_regulator_and_RG_action_input_match", "real_axis_spectral_and_IR_truncation_control", "joint_Phi_global_state_material_source_detector_admission", "normal_component_SK_KMS_collision_transport_and_independent_measurement"],
         "controlling_blocker": "gauge_current_real_axis_and_regulator_material_matching_not_closed",

@@ -13,11 +13,16 @@ from math import isclose, sqrt
 from pathlib import Path
 
 
-ROOT = Path(__file__).resolve().parents[5]
-OUTPUT = ROOT / (
+ROOT = Path(__file__).resolve().parents[4]
+
+import sys as _sys
+if str(ROOT) not in _sys.path:
+    _sys.path.insert(0, str(ROOT))
+from core.core_paths import canonical_existing_path
+OUTPUT = canonical_existing_path(ROOT / (
     "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/"
     "t13_funding_rest_eos_dynamic_degeneracy.json"
-)
+))
 SOURCE_PATHS = (
     "docs/core/02_equations/o2/uet_o2_finite_temperature_two_fluid_response.py",
     "docs/core/02_equations/o2/uet_o2_formal_transverse_response.py",
@@ -93,7 +98,7 @@ def longitudinal_state(b: float, y: float, zeta: float) -> dict[str, object]:
 def conditional_core_tree_mapping() -> dict[str, object]:
     """Compare tree phase-gradient coefficients without a material transfer."""
 
-    artifact_dir = ROOT / "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts"
+    artifact_dir = ROOT / "topics/0.13_Thermodynamic_Bridge/Result/artifacts"
     frozen = json.loads(
         (artifact_dir / "t13_he4_frozen_branch_compatibility.json").read_text(
             encoding="utf-8"
@@ -223,7 +228,7 @@ def audit() -> dict[str, object]:
         "evidence_artifacts": [
             {
                 "path": path,
-                "sha256": hashlib.sha256((ROOT / path).read_bytes()).hexdigest(),
+                "sha256": hashlib.sha256((canonical_existing_path(ROOT / path)).read_bytes()).hexdigest(),
             }
             for path in SOURCE_PATHS
         ],

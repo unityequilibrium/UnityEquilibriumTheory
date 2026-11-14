@@ -20,7 +20,7 @@ from typing import Any
 import numpy as np
 
 
-TOPIC = Path("docs/topics/0.10_Fluid_Dynamics_Chaos")
+TOPIC = Path(__file__).resolve().parents[2]
 ENGINE_2D = TOPIC / "Code/01_Engine/Engine_UET_2D.py"
 ENGINE_3D = TOPIC / "Code/01_Engine/Engine_UET_3D.py"
 CORE_PARAMETERS = Path("docs/core/01_contracts/units/uet_parameters.py")

@@ -9,9 +9,14 @@ import subprocess
 from pathlib import Path
 
 
-ROOT = Path(__file__).resolve().parents[5]
-LINEAGE = ROOT / "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/t13_he4_composition_reference_lineage.json"
-RECORD = ROOT / "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/t13_funding_nested_reference_recovery.json"
+ROOT = Path(__file__).resolve().parents[4]
+
+import sys as _sys
+if str(ROOT) not in _sys.path:
+    _sys.path.insert(0, str(ROOT))
+from core.core_paths import canonical_existing_path
+LINEAGE = ROOT / "topics/0.13_Thermodynamic_Bridge/Result/artifacts/t13_he4_composition_reference_lineage.json"
+RECORD = ROOT / "topics/0.13_Thermodynamic_Bridge/Result/artifacts/t13_funding_nested_reference_recovery.json"
 
 
 def sha256(path: Path) -> str:
@@ -55,7 +60,7 @@ def audit(source_root: Path) -> dict:
             raise ValueError(f"Expected one relocated candidate: {record['recorded_path']}")
         candidate = candidates[0]["path"]
         source_file = source_root / candidate
-        clean_file = ROOT / candidate
+        clean_file = canonical_existing_path(ROOT / candidate)
         if not source_file.is_file() or not clean_file.is_file():
             raise FileNotFoundError(candidate)
         source_json = json.loads(source_file.read_text(encoding="utf-8"))
@@ -65,7 +70,7 @@ def audit(source_root: Path) -> dict:
         rows.append({
             "recorded_path": record["recorded_path"],
             "recorded_path_missing_in_both_worktrees": not (source_root / record["recorded_path"]).exists()
-            and not (ROOT / record["recorded_path"]).exists(),
+            and not (canonical_existing_path(ROOT / record["recorded_path"])).exists(),
             "relocated_path": candidate,
             "recorded_sha256": record["recorded_sha256"],
             "recorded_status": record["recorded_status"],

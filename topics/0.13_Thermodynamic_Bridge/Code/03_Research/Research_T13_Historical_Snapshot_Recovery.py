@@ -9,9 +9,9 @@ import subprocess
 from pathlib import Path
 
 
-ROOT = Path(__file__).resolve().parents[5]
-PLAN = ROOT / "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/funding_portfolio_14d_plan.json"
-RECORD = ROOT / "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/t13_funding_historical_snapshot_recovery.json"
+ROOT = Path(__file__).resolve().parents[4]
+PLAN = ROOT / "topics/0.13_Thermodynamic_Bridge/Data/03_Research/funding_portfolio_14d_plan.json"
+RECORD = ROOT / "topics/0.13_Thermodynamic_Bridge/Result/artifacts/t13_funding_historical_snapshot_recovery.json"
 
 
 def sha256(path: Path) -> str:

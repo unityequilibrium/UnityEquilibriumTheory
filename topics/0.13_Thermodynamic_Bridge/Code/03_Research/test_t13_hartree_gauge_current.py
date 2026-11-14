@@ -1,4 +1,5 @@
 """Actual source vertices, independent loops, contact controls and scope tests."""
+from core.core_paths import canonical_existing_path
 
 import hashlib
 import json
@@ -177,7 +178,7 @@ def test_artifact_reports_actual_current_not_physical_heat_or_full_closure():
                  "C_relabelled_as_charge_or_mass", "R_gen_added_as_state"):
         assert record[flag] is False
     for item in record["evidence_artifacts"]+record["protected_evidence_hashes"]:
-        assert hashlib.sha256((M["ROOT"]/item["path"]).read_bytes()).hexdigest() == item["sha256"]
+        assert hashlib.sha256((canonical_existing_path(M["ROOT"]/item["path"])).read_bytes()).hexdigest() == item["sha256"]
 
 
 def test_audit_only_reads_predecessor_artifacts_not_numeric_or_holdout_sources(monkeypatch):

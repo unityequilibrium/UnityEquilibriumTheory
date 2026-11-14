@@ -12,11 +12,16 @@ import numpy as np
 
 
 ROOT = Path(__file__).resolve().parents[5]
+
+import sys as _sys
+if str(ROOT) not in _sys.path:
+    _sys.path.insert(0, str(ROOT))
+from core.core_paths import canonical_existing_path
 OUT = (
     ROOT
-    / "docs/topics/0.10_Fluid_Dynamics_Chaos/Result/artifacts/chaos_method_validation.json"
+    / "topics/0.10_Fluid_Dynamics_Chaos/Result/artifacts/chaos_method_validation.json"
 )
-CORE_MODULE = ROOT / "docs/core/uet_dynamical_stability.py"
+CORE_MODULE = canonical_existing_path(ROOT / "docs/core/uet_dynamical_stability.py")
 
 if str(ROOT) not in __import__("sys").path:
     __import__("sys").path.insert(0, str(ROOT))

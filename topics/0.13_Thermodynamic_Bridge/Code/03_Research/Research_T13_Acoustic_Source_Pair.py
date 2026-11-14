@@ -14,7 +14,12 @@ import sys
 import numpy as np
 from scipy.optimize import brentq
 
-ROOT = Path(__file__).resolve().parents[5]
+ROOT = Path(__file__).resolve().parents[4]
+
+import sys as _sys
+if str(ROOT) not in _sys.path:
+    _sys.path.insert(0, str(ROOT))
+from core.core_paths import canonical_existing_path
 LOCAL = Path(__file__).resolve().parent
 if str(LOCAL) not in sys.path:
     sys.path.insert(0, str(LOCAL))
@@ -22,7 +27,7 @@ import Research_T13_Acoustic_Modal_Cuts as MOD
 
 TH, EFT, INT, PREFIX = MOD.TH, MOD.EFT, MOD.INT, MOD.PREFIX
 REGISTRY = PREFIX+"Data/03_Research/t13_acoustic_source_pair_registry.json"
-OUTPUT = ROOT/(PREFIX+"Result/artifacts/t13_acoustic_source_pair.json")
+OUTPUT = canonical_existing_path(ROOT/(PREFIX+"Result/artifacts/t13_acoustic_source_pair.json"))
 MU_GRID, Q_GRID, FREQUENCY_RATIOS = (1.05, 1.2), (.04, .02), (1.1, 1.5)
 ORDERS, SOURCE_STEPS, RESIDUE_OFFSETS = (24, 48, 96), (1e-4, 5e-5, 2.5e-5), (.01, .001, .0001)
 GATES = {"identity_relative": 1e-9, "static_derivative_relative": 1e-5,
@@ -195,7 +200,7 @@ def audit():
               "derivation_class": "TREE_SOURCE_SCHUR_AND_ACOUSTIC_PAIR_CUT",
               "observable": "Conditional response to declared action source h, not temperature/detector data",
               "data_role": "DERIVED_NOT_CALIBRATION", "action_controls": action,
-              "equation_registry_ids": [e["id"] for e in json.loads((ROOT/REGISTRY).read_text())["entries"]],
+              "equation_registry_ids": [e["id"] for e in json.loads((canonical_existing_path(ROOT/REGISTRY)).read_text())["entries"]],
               "checks": checks, "examples": examples, "thresholds": GATES,
               "precision_policy": "50-decimal-digit accumulation/contraction of the same binary64 quadrature samples; not full high-precision roots, vertices or physical uncertainty",
               "declared_grids": {"mu": MU_GRID, "q": Q_GRID, "omega_over_Eq": FREQUENCY_RATIOS,

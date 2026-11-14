@@ -15,7 +15,12 @@ import sys
 import numpy as np
 from scipy.optimize import brentq
 
-ROOT = Path(__file__).resolve().parents[5]
+ROOT = Path(__file__).resolve().parents[4]
+
+import sys as _sys
+if str(ROOT) not in _sys.path:
+    _sys.path.insert(0, str(ROOT))
+from core.core_paths import canonical_existing_path
 LOCAL = Path(__file__).resolve().parent
 if str(LOCAL) not in sys.path:
     sys.path.insert(0, str(LOCAL))
@@ -23,7 +28,7 @@ import Research_T13_Thermal_Cut_Stiffness as TH
 
 EFT, INT, PREFIX = TH.EFT, TH.INT, TH.PREFIX
 REGISTRY = PREFIX+"Data/03_Research/t13_acoustic_modal_cut_registry.json"
-OUTPUT = ROOT/(PREFIX+"Result/artifacts/t13_acoustic_modal_cuts.json")
+OUTPUT = canonical_existing_path(ROOT/(PREFIX+"Result/artifacts/t13_acoustic_modal_cuts.json"))
 Q_GRID = (.04, .02, .01, .005)
 MU_GRID = (1.05, 1.2)
 FD_STEPS = (.01, .005, .0025)
@@ -253,7 +258,7 @@ def audit():
               "units": {"q_omega_T": "E", "kernel": "E^2", "Z_pi_polarization": "1", "cubic_tensor_amplitude": "E", "gamma_pole": "E"},
               "derivation_class": "TREE_PARENT_SPECTRAL_RESIDUE_AND_ACOUSTIC_CUBIC_MATCHING",
               "observable": "Conditional acoustic three-wave attenuation, not material/source response", "data_role": "DERIVED_NOT_CALIBRATION",
-              "equation_registry_ids": [x["id"] for x in json.loads((ROOT/REGISTRY).read_text())["entries"]],
+              "equation_registry_ids": [x["id"] for x in json.loads((canonical_existing_path(ROOT/REGISTRY)).read_text())["entries"]],
               "checks": checks, "thresholds": GATES, "examples": rows,
               "declared_grids": {"mu": MU_GRID, "q": Q_GRID, "FD_steps": FD_STEPS, "residue_offsets": RESIDUE_OFFSETS,
                                  "temperature_divisors": TH.TEMPERATURE_DIVISORS, "cq_over_T": TH.SOFT_RATIOS,

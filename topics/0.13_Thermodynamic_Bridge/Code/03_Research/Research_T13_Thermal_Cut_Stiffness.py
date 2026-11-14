@@ -18,15 +18,23 @@ import numpy as np
 from scipy.integrate import quad
 from scipy.optimize import brentq
 
-ROOT = Path(__file__).resolve().parents[5]
+ROOT = Path(__file__).resolve().parents[4]
+
+import sys as _sys
+if str(ROOT) not in _sys.path:
+    _sys.path.insert(0, str(ROOT))
+from core.core_paths import canonical_existing_path
 LOCAL = Path(__file__).resolve().parent
+if str(ROOT) not in sys.path:
+    sys.path.insert(0, str(ROOT))
 if str(LOCAL) not in sys.path:
     sys.path.insert(0, str(LOCAL))
+from core.core_paths import canonical_existing_path
 import Research_T13_Low_T_Interactions as INT
 
 EFT, PREFIX = INT.EFT, INT.PREFIX
 REGISTRY = PREFIX+"Data/03_Research/t13_thermal_cut_stiffness_registry.json"
-OUTPUT = ROOT/(PREFIX+"Result/artifacts/t13_thermal_cut_stiffness.json")
+OUTPUT = canonical_existing_path(ROOT/(PREFIX+"Result/artifacts/t13_thermal_cut_stiffness.json"))
 MU_GRID = (1.05, 1.2)
 TEMPERATURE_DIVISORS = (128, 256, 512)
 SOFT_RATIOS = (.1, .05, .025)
@@ -252,7 +260,7 @@ def static_pressure_analytic(state, vv):
 
 
 def identities(paths):
-    return [{"path": p, "sha256": hashlib.sha256((ROOT/p).read_bytes()).hexdigest()} for p in paths]
+    return [{"path": p, "sha256": hashlib.sha256(canonical_existing_path(canonical_existing_path(ROOT/p)).read_bytes()).hexdigest()} for p in paths]
 
 
 def audit():
@@ -324,7 +332,7 @@ def audit():
               "derivation_class": "DERIVED_LO_VERTICES_TREE_CURVATURE_CUT_AND_STATIC_ONE_PHASE_LOOP",
               "observable": "Conditional phase attenuation and static inverse response, not a detector/material prediction",
               "data_role": "DERIVED_NOT_CALIBRATION", "checks": checks, "thresholds": GATES,
-              "equation_registry_ids": [x["id"] for x in json.loads((ROOT/REGISTRY).read_text())["entries"]],
+              "equation_registry_ids": [x["id"] for x in json.loads((canonical_existing_path(ROOT/REGISTRY)).read_text())["entries"]],
               "ontology": {"Sigma_is_Phi": False, "phase_is_UET_Pi": False, "C_is_charge_or_radial_amplitude": False, "excluded_state_variables": ["C", "R_gen", "R_obs"]},
               "declared_grids": {"mu": MU_GRID, "temperature_divisors": TEMPERATURE_DIVISORS,
                                  "cq_over_T": SOFT_RATIOS, "orders": ORDERS, "thermal_tails": TAILS,

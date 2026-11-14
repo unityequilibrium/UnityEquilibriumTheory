@@ -5,8 +5,13 @@ import json
 from pathlib import Path
 
 
-ROOT = Path(__file__).resolve().parents[5]
-TOPIC = ROOT / "docs/topics/0.13_Thermodynamic_Bridge"
+ROOT = Path(__file__).resolve().parents[4]
+
+import sys as _sys
+if str(ROOT) not in _sys.path:
+    _sys.path.insert(0, str(ROOT))
+from core.core_paths import canonical_existing_path
+TOPIC = ROOT / "topics/0.13_Thermodynamic_Bridge"
 PLAN = json.loads((TOPIC / "Data/03_Research/funding_portfolio_14d_plan.json").read_text(encoding="utf-8"))
 BRIEF = PLAN["execution_reading_brief_2026_10_03"]
 
@@ -35,7 +40,7 @@ def test_brief_is_not_science_or_goal_acceptance():
 
 def test_brief_snapshot_is_hash_identified_preliminary_evidence():
     evidence = PLAN[BRIEF["snapshot_evidence_field"]]
-    assert hashlib.sha256((ROOT / evidence["path"]).read_bytes()).hexdigest() == evidence["sha256"]
+    assert hashlib.sha256((canonical_existing_path(ROOT / evidence["path"])).read_bytes()).hexdigest() == evidence["sha256"]
     assert evidence["closure_level"] == "CLOSED_FOR_LANE"
     assert not evidence["full_core_unlock"]
     assert not evidence["independent_alpha_Phi_K_admitted"]
@@ -51,7 +56,7 @@ def test_funding_and_model_uncertainty_remain_explicit():
 
 
 def test_reading_brief_connects_deliverables_and_report_fields():
-    content = (ROOT / BRIEF["document"]).read_text(encoding="utf-8")
+    content = (canonical_existing_path(ROOT / BRIEF["document"])).read_text(encoding="utf-8")
     for token in (
         "T13_HE4_PREDICTIVE_CONTENT_AND_MEASUREMENT_DESIGN", "G2/G3", "G4", "G5",
         "R1", "R2-R3", "R4", "R5", "GPT-6 Astra / high", "GPT-6.1 Sol / high",

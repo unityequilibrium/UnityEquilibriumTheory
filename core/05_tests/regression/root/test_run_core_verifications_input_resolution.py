@@ -22,7 +22,7 @@ def _module():
 def test_topic_relative_input_is_preferred(tmp_path: Path) -> None:
     module = _module()
     repo_root = tmp_path / "repo"
-    topic_dir = repo_root / "docs" / "topics" / "topic"
+    topic_dir = repo_root / "topics" / "topic"
     topic_dir.mkdir(parents=True)
     target = topic_dir / "data" / "sample.txt"
     target.parent.mkdir(parents=True)
@@ -32,7 +32,7 @@ def test_topic_relative_input_is_preferred(tmp_path: Path) -> None:
 
     assert record["status"] == "present"
     assert record["resolution_base"] == "topic_dir"
-    assert record["resolved_path"] == "docs/topics/topic/data/sample.txt"
+    assert record["resolved_path"] == "topics/topic/data/sample.txt"
 
 
 def test_repository_relative_input_is_resolved_when_topic_candidate_is_absent(
@@ -40,7 +40,7 @@ def test_repository_relative_input_is_resolved_when_topic_candidate_is_absent(
 ) -> None:
     module = _module()
     repo_root = tmp_path / "repo"
-    topic_dir = repo_root / "docs" / "topics" / "topic"
+    topic_dir = repo_root / "topics" / "topic"
     topic_dir.mkdir(parents=True)
     target = repo_root / "docs" / "data" / "external" / "source.json"
     target.parent.mkdir(parents=True)
@@ -58,7 +58,7 @@ def test_repository_relative_input_is_resolved_when_topic_candidate_is_absent(
 def test_missing_input_is_explicitly_recorded(tmp_path: Path) -> None:
     module = _module()
     repo_root = tmp_path / "repo"
-    topic_dir = repo_root / "docs" / "topics" / "topic"
+    topic_dir = repo_root / "topics" / "topic"
     topic_dir.mkdir(parents=True)
 
     record = module.resolve_input_path(topic_dir, "data/missing.txt", repo_root)
@@ -73,7 +73,7 @@ def test_conflicting_topic_and_repository_candidates_are_ambiguous(
 ) -> None:
     module = _module()
     repo_root = tmp_path / "repo"
-    topic_dir = repo_root / "docs" / "topics" / "topic"
+    topic_dir = repo_root / "topics" / "topic"
     topic_dir.mkdir(parents=True)
     topic_target = topic_dir / "shared.txt"
     repo_target = repo_root / "shared.txt"

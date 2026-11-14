@@ -11,7 +11,12 @@ import tempfile
 import unittest
 
 ROOT=next(p for p in Path(__file__).resolve().parents if (p/"docs/core").is_dir())
-TOPIC=ROOT/"docs/topics/0.10_Fluid_Dynamics_Chaos"
+
+import sys as _sys
+if str(ROOT) not in _sys.path:
+    _sys.path.insert(0, str(ROOT))
+from core.core_paths import canonical_existing_path
+TOPIC=ROOT/"topics/0.10_Fluid_Dynamics_Chaos"
 SCRIPT=TOPIC/"Code/03_Research/Research_Fluid_Core_O2_Density_Backreaction.py"
 CONTRACT=TOPIC/"Data/03_Research/fluid_core_o2_density_backreaction_contract.json"
 ARTIFACT=TOPIC/"Result/artifacts/fluid_core_o2_density_backreaction_audit.json"
@@ -38,9 +43,9 @@ class DensityBackreactionTests(unittest.TestCase):
         for name in ("input_hashes","source_AST_definition_hashes","locked_verification"):
             self.assertEqual(a[name],self.published[name])
         self.assertEqual(list(a["checks"]),list(self.published["checks"]))
-        for path,sha in a["input_hashes"].items():self.assertEqual(hashlib.sha256((ROOT/path).read_bytes()).hexdigest(),sha)
+        for path,sha in a["input_hashes"].items():self.assertEqual(hashlib.sha256((canonical_existing_path(ROOT/path)).read_bytes()).hexdigest(),sha)
         for field,status in (("first_binding_failure","INPUT_SOURCE_BINDING_FAILURE"),("uncentered_failure","UNCENTERED_SOURCE_VARIATION_FAILURE")):
-            old=json.loads((ROOT/self.p[field]).read_text(encoding="utf-8"))
+            old=json.loads((canonical_existing_path(ROOT/self.p[field])).read_text(encoding="utf-8"))
             self.assertEqual(old["status"],status);self.assertEqual(old["completed_scientific_states"],0)
             self.assertFalse(old["artifact_produced"])
         self.assertTrue(a["leading_mean_density_backreaction_supported"])
@@ -98,7 +103,7 @@ class DensityBackreactionTests(unittest.TestCase):
         for field,value in (("source_conditioned_tolerance",1e-6),("derivative_domain","moving_cutoff")):
             p=copy.deepcopy(self.p);p["verification"][field]=value;mutations.append(p)
         with tempfile.TemporaryDirectory(dir=ROOT,prefix=".density-test-") as folder:
-            old=json.loads((ROOT/self.p["prior_ward_artifact"]).read_text(encoding="utf-8"))
+            old=json.loads((canonical_existing_path(ROOT/self.p["prior_ward_artifact"])).read_text(encoding="utf-8"))
             old["input_hashes"][next(iter(old["input_hashes"]))]="0"*64
             path=Path(folder)/"stale.json";path.write_text(json.dumps(old),encoding="utf-8")
             p=copy.deepcopy(self.p);p["prior_ward_artifact"]=path.relative_to(ROOT).as_posix();mutations.append(p)

@@ -84,7 +84,7 @@ def repo(tmp_path: Path) -> Path:
 
 
 def full_set(root: Path) -> None:
-    write(root, "docs/core/theory_card.json", THEORY)
+    write(root, "core/theory_card.json", THEORY)
     write(root, "docs/standard/data_manifest.json", manifest())
     write(root, "data/cassini.csv", DATA_BYTES)
     write(root, "docs/standard/claims.json", CLAIMS)

@@ -1,7 +1,7 @@
 """Regression tests for the Topic 0.13 core constraint-export gate."""
 
 from __future__ import annotations
-from docs.core.core_paths import repo_root
+from docs.core.core_paths import canonical_existing_path, canonical_path_for, repo_root
 
 import importlib.util
 import json
@@ -11,12 +11,12 @@ from pathlib import Path
 ROOT = repo_root()
 SCRIPT = (
     ROOT
-    / "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research"
+    / 'topics/0.13_Thermodynamic_Bridge/Code/03_Research'
     / "Research_Core_Thermodynamic_Constraint_Gate.py"
 )
 ARTIFACT = (
     ROOT
-    / "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts"
+    / 'topics/0.13_Thermodynamic_Bridge/Result/artifacts'
     / "0_13_core_thermodynamic_constraint_gate.json"
 )
 
@@ -37,6 +37,20 @@ def _stable(payload: dict) -> dict:
     value = json.loads(json.dumps(payload))
     value.pop("generated_at", None)
     value.pop("environment", None)
+    return _canonicalize_paths(value)
+
+
+def _canonicalize_paths(value):
+    if isinstance(value, dict):
+        return {
+            canonical_path_for(key) if key.startswith(("docs/core/", "docs/topics/")) else key:
+            _canonicalize_paths(item)
+            for key, item in value.items()
+        }
+    if isinstance(value, list):
+        return [_canonicalize_paths(item) for item in value]
+    if isinstance(value, str) and value.startswith(("docs/core/", "docs/topics/")):
+        return canonical_path_for(value)
     return value
 
 
@@ -140,7 +154,7 @@ def test_scientific_input_hashes_ignore_declared_volatile_metadata_only() -> Non
     module = _module()
     artifact = _artifact()
     for record in artifact["scientific_inputs"]:
-        path = ROOT / record["path"]
+        path = canonical_existing_path(ROOT / record["path"])
         assert path.exists()
         assert module.scientific_payload_sha256(path) == record[
             "scientific_payload_sha256"

@@ -11,10 +11,15 @@ from pathlib import Path
 import numpy as np
 
 ROOT = next(p for p in Path(__file__).resolve().parents if (p / "docs/core").is_dir())
-TOPIC = ROOT / "docs/topics/0.10_Fluid_Dynamics_Chaos"
+
+import sys as _sys
+if str(ROOT) not in _sys.path:
+    _sys.path.insert(0, str(ROOT))
+from core.core_paths import canonical_existing_path
+TOPIC = ROOT / "topics/0.10_Fluid_Dynamics_Chaos"
 CONTRACT = TOPIC / "Data/03_Research/fluid_core_o2_continuum_form_contract.json"
 OUTPUT = TOPIC / "Result/artifacts/fluid_core_o2_continuum_form_audit.json"
-REGISTRY = ROOT / "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry_topic10_o2_continuum_form_addendum.json"
+REGISTRY = canonical_existing_path(ROOT / "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry_topic10_o2_continuum_form_addendum.json")
 
 
 def load(path, name):
@@ -255,26 +260,27 @@ def audit(p, path):
     flag("exact_polynomial_unit_closure", algebra["original_all_monomial_energy_powers"] == [3] and
          algebra["rewritten_all_monomial_energy_powers"] == [3])
 
-    prior = json.loads((ROOT / p["infrared_artifact"]).read_text(encoding="utf-8"))
+    prior = json.loads((canonical_existing_path(ROOT / p["infrared_artifact"])).read_text(encoding="utf-8"))
     flag("immutable_prior_source_hashes", all(
-        hashlib.sha256((ROOT / name).read_bytes()).hexdigest() == value
+        hashlib.sha256((canonical_existing_path(ROOT / name)).read_bytes()).hexdigest() == value
         for name, value in prior["input_hashes"].items()))
     flag("prior_finite_targets_pass_without_continuum_admission",
          prior["refinement_gate"]["target_pass"] is True and
          prior["continuum_collision_form_domain_established"] is False and
          prior["continuum_current_upper_bound_established"] is False)
-    infrared_contract = json.loads((ROOT / p["infrared_contract"]).read_text(encoding="utf-8"))
+    infrared_contract = json.loads((canonical_existing_path(ROOT / p["infrared_contract"])).read_text(encoding="utf-8"))
     flag("same_kernel_and_states", p["mu"] == infrared_contract["mu"] and
          p["lambda_exploratory"] == infrared_contract["lambda_exploratory"] and
          p["temperatures"] == infrared_contract["temperatures"])
 
     def finish():
-        paths = [path, ROOT / p["card"], REGISTRY, Path(__file__).resolve(),
-                 ROOT / p["infrared_contract"], ROOT / p["infrared_verifier"], ROOT / p["infrared_artifact"]]
-        paths += [ROOT / name for name in prior["input_hashes"]]
+        paths = [path, canonical_existing_path(ROOT / p["card"]), REGISTRY, Path(__file__).resolve(),
+                 canonical_existing_path(ROOT / p["infrared_contract"]), canonical_existing_path(ROOT / p["infrared_verifier"]), canonical_existing_path(ROOT / p["infrared_artifact"])]
+        paths += [canonical_existing_path(ROOT / name) for name in prior["input_hashes"]]
         hashes = {f.relative_to(ROOT).as_posix() if f.is_relative_to(ROOT) else f.name:
                   hashlib.sha256(f.read_bytes()).hexdigest() for f in paths}
         passed = bool(rows) and all(c["pass"] for c in checks.values()) and not errors
+        infrared_artifact = canonical_existing_path(ROOT / p["infrared_artifact"])
         return {
             "schema_version": "t010-core-o2-continuum-form-audit-v1", "date": p["date"],
             "status": "PASS_CONDITIONAL_CONTINUUM_FORM_DIAGNOSTIC_ONLY" if passed else "CONTINUUM_FORM_DIAGNOSTIC_FAIL",
@@ -299,8 +305,9 @@ def audit(p, path):
             "no_uniform_vector_gap_internal_derivation_supported": passed,
             "candidate_controller": p["candidate_controller"], "physical_controller": p["physical_controller"],
             "controlling_measured_blocker": p["candidate_controller"] if passed else p["previous_measured_controller"],
-            "previous_package": {"artifact": p["infrared_artifact"], "sha256": hashes[p["infrared_artifact"]],
-                                 "status": prior["status"], "refinement_gate": prior["refinement_gate"]},
+            "previous_package": {"artifact": p["infrared_artifact"],
+                                  "sha256": hashes[infrared_artifact.relative_to(ROOT).as_posix()],
+                                  "status": prior["status"], "refinement_gate": prior["refinement_gate"]},
             "continuum_current_upper_bound_established": False, "current_response_divergence_established": False,
             "unbounded_K_domain_established": False, "full_interacting_collision_completed": False,
             "positive_uniform_vector_gap_admitted": False, "physical_relaxation_time": None,
@@ -320,14 +327,14 @@ def audit(p, path):
 
     if not all(c["pass"] for c in checks.values()):
         return finish()
-    source = json.loads((ROOT / infrared_contract["vector_contract"]).read_text(encoding="utf-8"))
-    gal = json.loads((ROOT / source["galerkin_contract"]).read_text(encoding="utf-8"))
-    core = json.loads((ROOT / gal["core_source_contract"]).read_text(encoding="utf-8"))
+    source = json.loads((canonical_existing_path(ROOT / infrared_contract["vector_contract"])).read_text(encoding="utf-8"))
+    gal = json.loads((canonical_existing_path(ROOT / source["galerkin_contract"])).read_text(encoding="utf-8"))
+    core = json.loads((canonical_existing_path(ROOT / gal["core_source_contract"])).read_text(encoding="utf-8"))
     cfg = core["configuration"]
     m2 = cfg["mass_squared"] / cfg["Z"]
     lam = p["lambda_exploratory"] / cfg["Z"] ** 2
-    g = load(ROOT / source["galerkin_verifier"], "continuum_source_galerkin")
-    infrared = load(ROOT / p["infrared_verifier"], "continuum_source_infrared")
+    g = load(canonical_existing_path(ROOT / source["galerkin_verifier"]), "continuum_source_galerkin")
+    infrared = load(canonical_existing_path(ROOT / p["infrared_verifier"]), "continuum_source_infrared")
     tol = rules["algebra_relative_tolerance"]
     try:
         for T in p["temperatures"]:

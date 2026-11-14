@@ -7,9 +7,9 @@ import json
 from pathlib import Path
 
 
-ROOT = Path(__file__).resolve().parents[4]
-GOVERNANCE = ROOT / "docs" / "core" / "00_governance"
-QUEUE = ROOT / "docs" / "core" / "07_artifacts" / "gates" / "uet_core_artifact_generator_review_queue.json"
+ROOT = Path(__file__).resolve().parents[3]
+GOVERNANCE = ROOT / "core" / "00_governance"
+QUEUE = ROOT / "core" / "07_artifacts" / "gates" / "uet_core_artifact_generator_review_queue.json"
 
 
 def load_json(path: Path) -> dict:

@@ -1,6 +1,7 @@
 """Regression checks for the bounded derived-trace family link."""
 
 from __future__ import annotations
+from core.core_paths import canonical_existing_path
 from docs.core.core_paths import canonical_artifact_path, repo_root
 
 import json
@@ -28,8 +29,8 @@ def test_trace_family_has_explicit_scientific_chain() -> None:
     assert family["module_paths"] == ["docs/core/02_equations/matter_space/uet_trace.py"]
     assert family["unit_lane"] == "normalized_v1"
     assert family["formula_ids"] == FORMULA_IDS
-    assert all((ROOT / path).exists() for path in family["verifier_paths"])
-    assert all((ROOT / path).exists() for path in family["evidence_paths"])
+    assert all((canonical_existing_path(ROOT / path)).exists() for path in family["verifier_paths"])
+    assert all((canonical_existing_path(ROOT / path)).exists() for path in family["evidence_paths"])
     assert family["organization_review_required"] is True
     assert "derived observable" in family["claim_ceiling"]
 

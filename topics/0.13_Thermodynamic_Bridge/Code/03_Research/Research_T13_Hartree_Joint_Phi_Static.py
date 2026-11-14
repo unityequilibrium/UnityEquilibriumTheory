@@ -17,10 +17,15 @@ import sys
 import numpy as np
 from scipy.optimize import root
 
-ROOT = Path(__file__).resolve().parents[5]
-PREFIX = "docs/topics/0.13_Thermodynamic_Bridge/"
+ROOT = Path(__file__).resolve().parents[4]
+
+import sys as _sys
+if str(ROOT) not in _sys.path:
+    _sys.path.insert(0, str(ROOT))
+from core.core_paths import canonical_existing_path
+PREFIX = "topics/0.13_Thermodynamic_Bridge/"
 FIELD_CODE = PREFIX+"Code/03_Research/Research_T13_Hartree_External_Response.py"
-F = runpy.run_path(str(ROOT/FIELD_CODE))
+F = runpy.run_path(str(canonical_existing_path(ROOT/FIELD_CODE)))
 H, CT = F["H"], F["CT"]
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
@@ -29,7 +34,7 @@ from docs.core.uet_o2_action_thermal_observable_bridge import natural_bridge_con
 BACKGROUND = F["BACKGROUND_ARTIFACT"]
 COUNTERTERM = F["MATCH_ARTIFACT"]
 POLES = PREFIX+"Result/artifacts/t13_hartree_finite_q_poles.json"
-OUTPUT = ROOT/(PREFIX+"Result/artifacts/t13_hartree_joint_phi_static.json")
+OUTPUT = canonical_existing_path(ROOT/(PREFIX+"Result/artifacts/t13_hartree_joint_phi_static.json"))
 ACTION_PATHS = (
     "docs/core/02_equations/o2/uet_o2_action_thermal_observable_bridge.py",
     "docs/core/02_equations/o2/uet_o2_action_thermal_stiffness_beta.py",
@@ -245,7 +250,7 @@ def relaxed_phi_derivative_check(state, t, mu, controls):
 
 
 def audit(progress=None):
-    previous = {path: json.loads((ROOT/path).read_text(encoding="utf-8")) for path in (BACKGROUND, COUNTERTERM, POLES)}
+    previous = {path: json.loads((canonical_existing_path(ROOT/path)).read_text(encoding="utf-8")) for path in (BACKGROUND, COUNTERTERM, POLES)}
     controls = action_controls()
     formal = [force_match(phi, s, tadpoles, .85, controls, D, D2)
               | {"Phi": phi, "s": s, "finite_tadpoles": list(tadpoles), "D": D, "D2": D2}
@@ -292,7 +297,7 @@ def audit(progress=None):
         "radial_relaxed_Phi_force_curvature_agreement": all(e["radial_relaxed_Phi_force_derivative"][-1]["absolute_disagreement"] < HESSIAN_TOLERANCE for e in examples),
         "local_static_positive_amplitude_Phi_block": all(min(e["static_covariance_hessian"]["eigenvalues"]) > 0 and e["static_covariance_hessian"]["radial_relaxed_Phi_curvature"] > 0 for e in examples),
         "joint_state_counterterm_replay": all(abs(row["force_match_residual"]) < IDENTITY_TOLERANCE for e in examples for row in e["formal_counterterm_replay_at_joint_state"]),
-        "protected_Core_and_failed_baseline_hashes_unchanged": all(hashlib.sha256((ROOT/item["path"]).read_bytes()).hexdigest() == item["sha256"] for item in previous[POLES]["protected_evidence_hashes"]),
+        "protected_Core_and_failed_baseline_hashes_unchanged": all(hashlib.sha256((canonical_existing_path(ROOT/item["path"])).read_bytes()).hexdigest() == item["sha256"] for item in previous[POLES]["protected_evidence_hashes"]),
     }
     passed = all(checks.values())
     paths = (BACKGROUND, COUNTERTERM, POLES, FIELD_CODE, *ACTION_PATHS, Path(__file__).relative_to(ROOT).as_posix())
@@ -309,7 +314,7 @@ def audit(progress=None):
               "action_controls": controls, "examples": examples, "formal_counterterm_probes": formal, "checks": checks,
               "config": {"orders_and_vacuum_splits": ORDERS, "potential_difference_steps_in_MS_units": PHI_STEPS, "source_loop_orders": LOOP_ORDERS, "MS_scale": MS_SCALE, "MS_scale_units": "E", "force_residual_scale": "epsilon*MS_scale^3 (E^3)", "numerical_seed_factors": [.8, 1.2]},
               "thresholds": {"algebraic_identity": IDENTITY_TOLERANCE, "scaled_root": ROOT_TOLERANCE, "state_refinement": REFINEMENT_TOLERANCE, "static_Hessian_absolute": HESSIAN_TOLERANCE, "causal_leakage_unchanged": 1e-6},
-              "evidence_artifacts": [{"path": path, "sha256": hashlib.sha256((ROOT/path).read_bytes()).hexdigest()} for path in paths],
+              "evidence_artifacts": [{"path": path, "sha256": hashlib.sha256((canonical_existing_path(ROOT/path)).read_bytes()).hexdigest()} for path in paths],
               "protected_evidence_hashes": previous[POLES]["protected_evidence_hashes"],
               "open_blockers": ["joint_finite_q_retarded_response_and_validity_domain", "regulator_RG_and_controlled_Hartree_action_remainder", "response_field_quantum_fluctuation_and_kinetic_counterterm_if_required", "independent_material_state_source_detector_thermal_input_and_physical_transport"],
               "controlling_blocker": "joint_dynamic_validity_regulator_remainder_material_transport_not_closed",

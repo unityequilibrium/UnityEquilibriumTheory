@@ -17,13 +17,18 @@ import numpy as np
 from scipy.integrate import quad
 from scipy.special import i0e
 
-ROOT = Path(__file__).resolve().parents[5]
-PREFIX = "docs/topics/0.13_Thermodynamic_Bridge/"
+ROOT = Path(__file__).resolve().parents[4]
+
+import sys as _sys
+if str(ROOT) not in _sys.path:
+    _sys.path.insert(0, str(ROOT))
+from core.core_paths import canonical_existing_path
+PREFIX = "topics/0.13_Thermodynamic_Bridge/"
 FINITE_SCRIPT = PREFIX+"Code/03_Research/Research_T13_Finite_Momentum_Thermal_1PI.py"
 FINITE_ARTIFACT = PREFIX+"Result/artifacts/t13_finite_momentum_thermal_1pi.json"
 WARD_ARTIFACT = PREFIX+"Result/artifacts/t13_thermal_oneloop_ward_current.json"
-FINITE = runpy.run_path(str(ROOT/FINITE_SCRIPT))
-OUTPUT = ROOT/(PREFIX+"Result/artifacts/t13_polar_static_ir_observable.json")
+FINITE = runpy.run_path(str(canonical_existing_path(ROOT/FINITE_SCRIPT)))
+OUTPUT = canonical_existing_path(ROOT/(PREFIX+"Result/artifacts/t13_polar_static_ir_observable.json"))
 Q_REFINEMENT = (.005, .0025, .00125)
 ALGEBRA_TOLERANCE = 1e-10
 SOURCE_DIFFERENCE_TOLERANCE = 1e-5
@@ -209,8 +214,8 @@ def measure_integral(a, source):
 
 
 def audit():
-    previous = json.loads((ROOT/FINITE_ARTIFACT).read_text(encoding="utf-8"))
-    ward = json.loads((ROOT/WARD_ARTIFACT).read_text(encoding="utf-8"))
+    previous = json.loads((canonical_existing_path(ROOT/FINITE_ARTIFACT)).read_text(encoding="utf-8"))
+    ward = json.loads((canonical_existing_path(ROOT/WARD_ARTIFACT)).read_text(encoding="utf-8"))
     examples = []
     for anchor, zero in zip(previous["examples"], ward["examples"]):
         t, mu, r, Z, lam = (anchor[key] for key in ("T", "mu", "r", "Z", "lambda"))
@@ -295,8 +300,8 @@ def audit():
         "assumptions": ["three_spatial_dimensions", "ordered_long_wavelength_phase_with_positive_stiffness", "fixed_Phi", "tree_parameter_matching_for_one_loop_IR_coefficient", "Gaussian_leading_phase_correlations", "q_much_less_than_sqrt_2r", "T_positive_for_thermal_IR_asymptote"],
         "Q_refinement": Q_REFINEMENT, "checks": checks, "examples": examples,
         "Gaussian_source_check": source, "finite_dimensional_measure_checks": measure,
-        "evidence_artifacts": [{"path": p, "sha256": hashlib.sha256((ROOT/p).read_bytes()).hexdigest()} for p in paths],
-        "protected_evidence_hashes": [{"path": p, "sha256": hashlib.sha256((ROOT/p).read_bytes()).hexdigest()} for p in protected],
+        "evidence_artifacts": [{"path": p, "sha256": hashlib.sha256((canonical_existing_path(ROOT/p)).read_bytes()).hexdigest()} for p in paths],
+        "protected_evidence_hashes": [{"path": p, "sha256": hashlib.sha256((canonical_existing_path(ROOT/p)).read_bytes()).hexdigest()} for p in protected],
         "open_blockers": ["renormalized_order_parameter_and_Phi_stationarity_with_UV_measure_matching", "finite_frequency_composite_current_and_real_axis_response", "controlled_IR_matching_remainder", "physical_material_normal_component_and_independent_measurements"],
         "controlling_blocker": "microscopic_polar_background_and_dynamical_observable_matching_not_closed",
         "dependency_unlocked": ["same_action_static_IR_completion_design_only"],

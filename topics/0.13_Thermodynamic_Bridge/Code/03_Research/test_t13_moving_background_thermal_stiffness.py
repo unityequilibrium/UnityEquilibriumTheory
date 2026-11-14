@@ -1,4 +1,5 @@
 """Moving-spectrum derivative checks and preservation of stationarity limits."""
+from core.core_paths import canonical_existing_path
 
 import hashlib
 import json
@@ -65,7 +66,7 @@ def test_recorded_two_method_curvature_and_tadpole_chain_rule():
                 "parameter_fitting", "xie_2026_accessed"):
         assert record[key] is False
     for item in record["evidence_artifacts"]:
-        assert hashlib.sha256((MODULE["ROOT"]/item["path"]).read_bytes()).hexdigest() == item["sha256"]
+        assert hashlib.sha256((canonical_existing_path(MODULE["ROOT"]/item["path"])).read_bytes()).hexdigest() == item["sha256"]
 
 
 def test_live_static_curvature_reproduces_record_without_bitwise_float_assumption():

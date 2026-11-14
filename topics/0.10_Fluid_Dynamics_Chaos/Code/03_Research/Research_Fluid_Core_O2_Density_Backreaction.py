@@ -9,10 +9,15 @@ from types import SimpleNamespace
 import numpy as np
 
 ROOT=next(p for p in Path(__file__).resolve().parents if (p/"docs/core").is_dir())
-TOPIC=ROOT/"docs/topics/0.10_Fluid_Dynamics_Chaos"
+
+import sys as _sys
+if str(ROOT) not in _sys.path:
+    _sys.path.insert(0, str(ROOT))
+from core.core_paths import canonical_existing_path
+TOPIC=ROOT/"topics/0.10_Fluid_Dynamics_Chaos"
 CONTRACT=TOPIC/"Data/03_Research/fluid_core_o2_density_backreaction_contract.json"
 OUTPUT=TOPIC/"Result/artifacts/fluid_core_o2_density_backreaction_audit.json"
-REGISTRY=ROOT/"docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry_topic10_o2_density_backreaction_addendum.json"
+REGISTRY=canonical_existing_path(ROOT/"docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry_topic10_o2_density_backreaction_addendum.json")
 
 def load(path,name):
     import importlib.util
@@ -117,21 +122,21 @@ def audit(p,path):
     required={"full_nonlinear_wave","full_interacting_density_backreaction","interacting_Noether_current","self_consistent_thermal_gap","paper_low_T_accuracy","physical_heat_current","physical_material_frame","SI_charge_atom_mapping","all_channel_collision","physical_frequency_window","physical_UET_operator","physical_HeII_state","physical_J04_executed","physical_J05_executed","physical_J06_executed","formal_verification","external_math_review","interval_certificate","useful_relative_error_certificate","claim_promotion","dependency_unlock"}
     flag("boundary_fields",set(p["admission"])==required)
     for n in sorted(required):flag("boundary/"+n,p["admission"].get(n) is False)
-    prior=json.loads((ROOT/p["prior_ward_artifact"]).read_text(encoding="utf-8"))
-    flag("prior_source_fresh",all(hashlib.sha256((ROOT/n).read_bytes()).hexdigest()==s for n,s in prior["input_hashes"].items()))
+    prior=json.loads((canonical_existing_path(ROOT/p["prior_ward_artifact"])).read_text(encoding="utf-8"))
+    flag("prior_source_fresh",all(hashlib.sha256((canonical_existing_path(ROOT/n)).read_bytes()).hexdigest()==s for n,s in prior["input_hashes"].items()))
     flag("prior_scope",prior["status"]=="PASS_TREE_SPATIAL_CURRENT_WARD_REFERENCE_ONLY" and not prior["charge_density_backreaction_completed"] and not prior["physical_heat_current_matched"])
-    flag("card_locked",hashlib.sha256((ROOT/p["card"]).read_bytes()).hexdigest()=="be95e3f2131d08507afe4179514a4d63740f11b52a0440b8135caba917fc5171")
+    flag("card_locked",hashlib.sha256((canonical_existing_path(ROOT/p["card"])).read_bytes()).hexdigest()=="be95e3f2131d08507afe4179514a4d63740f11b52a0440b8135caba917fc5171")
     flag("registry_locked",hashlib.sha256(REGISTRY.read_bytes()).hexdigest()=="524d1c3530ab3e875ad9aeac5a0227db7d3e6460197425fe19aea892b14315ef")
     flag("source_binding_name",p["AST_selected_matter_definitions"][-2:]==["coupled_matter_lagrangian_scalar","matter_eom_residual"])
-    flag("binding_repair_card_identity",hashlib.sha256((ROOT/p["binding_repair_card"]).read_bytes()).hexdigest()=="6bb3ede2263c626f4fc2906d838ad6c61cc25033b742d731dc5109655900f1cc")
-    flag("first_binding_failure_identity",hashlib.sha256((ROOT/p["first_binding_failure"]).read_bytes()).hexdigest()=="25a6a09a48977ed5bd1c00c61c15ce0eaf8e2a70dc707098dab21b18328868aa")
-    flag("first_contract_archive_identity",hashlib.sha256((ROOT/p["first_contract_archive"]).read_bytes()).hexdigest()=="60a4941244e4dcbaeb882f1fcf58034cf6b3ec040238ec180d578da42333d537")
-    flag("first_verifier_archive_identity",hashlib.sha256((ROOT/p["first_verifier_archive"]).read_bytes()).hexdigest()=="3458fbf3f9db4e58b65f3e6c6f44715bdc8f9458aa21e76b0f44f53d8ff8fe46")
-    flag("derivative_center_repair_card_identity",hashlib.sha256((ROOT/p["derivative_center_repair_card"]).read_bytes()).hexdigest()=="f3ee71c8fbf0773f272823577aafcacbf0dd29d05b3d0d12acae96ad7de7780b")
-    flag("uncentered_verifier_archive_identity",hashlib.sha256((ROOT/p["uncentered_verifier_archive"]).read_bytes()).hexdigest()=="a641ae467b13c7d40c0a091cdfeddf3f8ab4bae536e1242955bec2b72fec2cc7")
-    flag("uncentered_failure_identity",hashlib.sha256((ROOT/p["uncentered_failure"]).read_bytes()).hexdigest()=="542dba0017723653e0bb6607c4e43e5f041da45d8eafca90f2a190e2b8600a0b")
+    flag("binding_repair_card_identity",hashlib.sha256((canonical_existing_path(ROOT/p["binding_repair_card"])).read_bytes()).hexdigest()=="6bb3ede2263c626f4fc2906d838ad6c61cc25033b742d731dc5109655900f1cc")
+    flag("first_binding_failure_identity",hashlib.sha256((canonical_existing_path(ROOT/p["first_binding_failure"])).read_bytes()).hexdigest()=="25a6a09a48977ed5bd1c00c61c15ce0eaf8e2a70dc707098dab21b18328868aa")
+    flag("first_contract_archive_identity",hashlib.sha256((canonical_existing_path(ROOT/p["first_contract_archive"])).read_bytes()).hexdigest()=="60a4941244e4dcbaeb882f1fcf58034cf6b3ec040238ec180d578da42333d537")
+    flag("first_verifier_archive_identity",hashlib.sha256((canonical_existing_path(ROOT/p["first_verifier_archive"])).read_bytes()).hexdigest()=="3458fbf3f9db4e58b65f3e6c6f44715bdc8f9458aa21e76b0f44f53d8ff8fe46")
+    flag("derivative_center_repair_card_identity",hashlib.sha256((canonical_existing_path(ROOT/p["derivative_center_repair_card"])).read_bytes()).hexdigest()=="f3ee71c8fbf0773f272823577aafcacbf0dd29d05b3d0d12acae96ad7de7780b")
+    flag("uncentered_verifier_archive_identity",hashlib.sha256((canonical_existing_path(ROOT/p["uncentered_verifier_archive"])).read_bytes()).hexdigest()=="a641ae467b13c7d40c0a091cdfeddf3f8ab4bae536e1242955bec2b72fec2cc7")
+    flag("uncentered_failure_identity",hashlib.sha256((canonical_existing_path(ROOT/p["uncentered_failure"])).read_bytes()).hexdigest()=="542dba0017723653e0bb6607c4e43e5f041da45d8eafca90f2a190e2b8600a0b")
     def finish():
-        paths=[path,Path(__file__).resolve(),REGISTRY,ROOT/p["card"]]+[ROOT/p[k] for k in ("prior_ward_contract","prior_ward_verifier","prior_ward_artifact","source_adapter","core_matter_source","core_response_source","binding_repair_card","first_binding_failure","first_contract_archive","first_verifier_archive","derivative_center_repair_card","uncentered_verifier_archive","uncentered_failure")]+[ROOT/n for n in prior["input_hashes"]]
+        paths=[path,Path(__file__).resolve(),REGISTRY,canonical_existing_path(ROOT/p["card"])]+[canonical_existing_path(ROOT/p[k]) for k in ("prior_ward_contract","prior_ward_verifier","prior_ward_artifact","source_adapter","core_matter_source","core_response_source","binding_repair_card","first_binding_failure","first_contract_archive","first_verifier_archive","derivative_center_repair_card","uncentered_verifier_archive","uncentered_failure")]+[canonical_existing_path(ROOT/n) for n in prior["input_hashes"]]
         hashes={f.relative_to(ROOT).as_posix() if f.is_relative_to(ROOT) else f.name:hashlib.sha256(f.read_bytes()).hexdigest() for f in paths}
         passed=len(rows)==2 and all(c["pass"] for c in checks.values()) and not errors
         return {"schema_version":"t010-density-backreaction-audit-v1","date":p["date"],"status":"PASS_LEADING_MEAN_DENSITY_GAUSSIAN_SUBSET_ONLY" if passed else "LEADING_MEAN_DENSITY_DIAGNOSTIC_FAIL",
@@ -149,13 +154,13 @@ def audit(p,path):
             "physical_controller":p["physical_controller"],"controlling_measured_blocker":p["candidate_controller"],
             "notes":["Mean radial response is order-A^2 only; no full nonlinear wave or interacting EOS.","Source errors report cancellation conditioning; no interval certification.","Thermal derivatives hold the central physical K fixed.","Paper T^2>>lambda*mu^2 regime is not admitted for the selected states."]}
     if not all(v["pass"] for v in checks.values()):return finish()
-    ward=load(ROOT/p["prior_ward_verifier"],"density_ward_source")
-    base=load(ROOT/p["source_adapter"],"density_ast_adapter")
-    response,h=base.selected_namespace(ROOT/p["core_response_source"],p["AST_selected_response_definitions"]);ids["response"]=h
-    ns,h=base.selected_namespace(ROOT/p["core_matter_source"],p["AST_selected_matter_definitions"],{n:response[n] for n in ("response_displacement","validate_lorentz_metric")});ids["matter"]=h
-    wc=json.loads((ROOT/p["prior_ward_contract"]).read_text(encoding="utf-8"))
-    bc=json.loads((ROOT/wc["current_bound_contract"]).read_text(encoding="utf-8"))
-    continuum=load(ROOT/bc["continuum_verifier"],"density_continuum_source")
+    ward=load(canonical_existing_path(ROOT/p["prior_ward_verifier"]),"density_ward_source")
+    base=load(canonical_existing_path(ROOT/p["source_adapter"]),"density_ast_adapter")
+    response,h=base.selected_namespace(canonical_existing_path(ROOT/p["core_response_source"]),p["AST_selected_response_definitions"]);ids["response"]=h
+    ns,h=base.selected_namespace(canonical_existing_path(ROOT/p["core_matter_source"]),p["AST_selected_matter_definitions"],{n:response[n] for n in ("response_displacement","validate_lorentz_metric")});ids["matter"]=h
+    wc=json.loads((canonical_existing_path(ROOT/p["prior_ward_contract"])).read_text(encoding="utf-8"))
+    bc=json.loads((canonical_existing_path(ROOT/wc["current_bound_contract"])).read_text(encoding="utf-8"))
+    continuum=load(canonical_existing_path(ROOT/bc["continuum_verifier"]),"density_continuum_source")
     cc=p["configuration"];tol=rules["source_conditioned_tolerance"]
     try:
         for T in p["temperatures"]:

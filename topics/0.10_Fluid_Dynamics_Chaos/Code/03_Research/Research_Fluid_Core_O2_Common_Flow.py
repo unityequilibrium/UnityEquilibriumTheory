@@ -12,10 +12,15 @@ from types import SimpleNamespace
 import numpy as np
 
 ROOT = next(p for p in Path(__file__).resolve().parents if (p / "docs/core").is_dir())
-TOPIC = ROOT / "docs/topics/0.10_Fluid_Dynamics_Chaos"
+
+import sys as _sys
+if str(ROOT) not in _sys.path:
+    _sys.path.insert(0, str(ROOT))
+from core.core_paths import canonical_existing_path
+TOPIC = ROOT / "topics/0.10_Fluid_Dynamics_Chaos"
 CONTRACT = TOPIC / "Data/03_Research/fluid_core_o2_common_flow_contract.json"
 CARD = TOPIC / "CORE_O2_COMMON_FLOW_COMPOSITION_CONTRACT.md"
-REGISTRY = ROOT / "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry_topic10_o2_common_flow_addendum.json"
+REGISTRY = canonical_existing_path(ROOT / "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry_topic10_o2_common_flow_addendum.json")
 OUTPUT = TOPIC / "Result/artifacts/fluid_core_o2_common_flow_composition_audit.json"
 
 
@@ -53,7 +58,7 @@ def source_functions(package):
         elif name == "transverse":
             extra.update({n: ns["finite_density"][n] for n in ("effective_mass_sq", "condensate_control")})
             extra["condensed_quasiparticle_energies"] = ns["EOS"]["condensed_quasiparticle_energies"]
-        ns[name], identities[name] = selected_namespace(ROOT / path, package["AST_selected_definitions"][name], extra)
+        ns[name], identities[name] = selected_namespace(canonical_existing_path(ROOT / path), package["AST_selected_definitions"][name], extra)
         if "_quadrature" in ns[name]:
             ns[name]["_quadrature"] = lru_cache(maxsize=None)(ns[name]["_quadrature"])
     return ns, identities
@@ -193,7 +198,7 @@ def audit(package, path):
     condensed = [row for row in rows if row["point"]["branch"] == "condensed"]
     composition_ok = all(row["composition_target"]["pass"] for row in condensed)
     passed = all(c["pass"] for c in checks.values())
-    paths=[path,CARD,REGISTRY,Path(__file__).resolve()]+[ROOT/v for v in package["core_sources"].values()]+[ROOT/v for v in package["reused_inputs"]]
+    paths=[path,CARD,REGISTRY,Path(__file__).resolve()]+[canonical_existing_path(ROOT/v) for v in package["core_sources"].values()]+[canonical_existing_path(ROOT/v) for v in package["reused_inputs"]]
     hashes={p.relative_to(ROOT).as_posix() if p.is_relative_to(ROOT) else p.name:hashlib.sha256(p.read_bytes()).hexdigest() for p in paths}
     return {"schema_version":"t010-core-o2-common-flow-composition-audit-v1","date":package["date"],
             "status":"PASS_SOURCE_COMPOSITION_DIAGNOSTIC_ONLY" if passed else "SOURCE_COMPOSITION_DIAGNOSTIC_FAIL",

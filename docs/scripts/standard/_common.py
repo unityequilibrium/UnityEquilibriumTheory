@@ -13,7 +13,7 @@ CLAIMS_PATH = STANDARD_DIR / "claims.json"
 DATA_MANIFEST_PATH = STANDARD_DIR / "data_manifest.json"
 TESTS_DIR = STANDARD_DIR / "tests"
 RESULTS_DIR = STANDARD_DIR / "results"
-THEORY_CARD_PATH = Path("docs/core/theory_card.json")
+THEORY_CARD_PATH = Path("core/theory_card.json")
 
 LEVEL_ORDER = {
     "L0_SPECULATIVE": 0,
@@ -32,3 +32,20 @@ def record_files(root: Path, directory: Path) -> list[Path]:
     if not folder.is_dir():
         return []
     return sorted(p for p in folder.glob("*.json") if p.is_file())
+
+
+def current_record_path(root: Path, relative: str | Path) -> Path:
+    """Resolve stored pre-move locators to the explicit current root paths."""
+    value = Path(relative)
+    target = (root / value).resolve()
+    if target.is_relative_to(root.resolve()) and target.exists():
+        return target
+    normalized = value.as_posix()
+    if normalized.startswith("docs/core/"):
+        moved = root / "core" / normalized[len("docs/core/") :]
+    elif normalized.startswith("docs/topics/"):
+        moved = root / "topics" / normalized[len("docs/topics/") :]
+    else:
+        return target
+    moved = moved.resolve()
+    return moved if moved.is_relative_to(root.resolve()) and moved.exists() else target

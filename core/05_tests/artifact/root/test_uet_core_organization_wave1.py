@@ -8,7 +8,7 @@ from pathlib import Path
 
 
 ROOT = repo_root()
-ARTIFACTS = ROOT / "docs" / "core" / "07_artifacts"
+ARTIFACTS = ROOT / "core" / "07_artifacts"
 
 
 def load_json(name: str) -> dict:

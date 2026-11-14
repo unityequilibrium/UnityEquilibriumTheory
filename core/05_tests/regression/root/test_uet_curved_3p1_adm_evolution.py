@@ -1,6 +1,7 @@
 """Tests for the ADM RHS and fixed-gauge hyperbolicity no-go wave."""
 
 from __future__ import annotations
+from core.core_paths import canonical_existing_path
 from docs.core.core_paths import canonical_artifact_path, repo_root
 
 import hashlib
@@ -112,7 +113,7 @@ def test_artifacts_are_stable_hash_linked_and_select_gh_without_claiming_it() ->
         assert live == stored
     verification, no_go, _, selection = persisted
     for relative_path, expected_hash in verification["source_hashes"].items():
-        assert hashlib.sha256((ROOT / relative_path).read_bytes()).hexdigest() == expected_hash
+        assert hashlib.sha256((canonical_existing_path(ROOT / relative_path)).read_bytes()).hexdigest() == expected_hash
     assert verification["major_result"]["closure_level"] == "CLOSED_FOR_LANE"
     assert no_go["major_result"]["closure_level"] == "CLOSED_FOR_LANE"
     assert selection["selected_next_branch"] == "first_order_generalized_harmonic"

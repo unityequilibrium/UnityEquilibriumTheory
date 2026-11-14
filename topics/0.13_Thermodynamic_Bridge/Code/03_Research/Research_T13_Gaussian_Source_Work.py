@@ -16,7 +16,12 @@ import numpy as np
 from scipy.integrate import solve_ivp
 from scipy.linalg import block_diag
 
-ROOT = Path(__file__).resolve().parents[5]
+ROOT = Path(__file__).resolve().parents[4]
+
+import sys as _sys
+if str(ROOT) not in _sys.path:
+    _sys.path.insert(0, str(ROOT))
+from core.core_paths import canonical_existing_path
 LOCAL = Path(__file__).resolve().parent
 if str(LOCAL) not in sys.path:
     sys.path.insert(0, str(LOCAL))
@@ -25,8 +30,8 @@ import Research_T13_Collisionless_Soft_Source as SOFT
 
 FQ, VIRT, EFT, TH, MOD, PREFIX = NOE.FQ, NOE.VIRT, NOE.EFT, NOE.TH, NOE.MOD, NOE.PREFIX
 REGISTRY = PREFIX+"Data/03_Research/t13_gaussian_source_work_registry.json"
-OUTPUT = ROOT/(PREFIX+"Result/artifacts/t13_gaussian_source_work.json")
-FIRST_FAILURE = ROOT/(PREFIX+"Result/artifacts/t13_gaussian_source_work_first_failure.json")
+OUTPUT = canonical_existing_path(ROOT/(PREFIX+"Result/artifacts/t13_gaussian_source_work.json"))
+FIRST_FAILURE = canonical_existing_path(ROOT/(PREFIX+"Result/artifacts/t13_gaussian_source_work_first_failure.json"))
 # Frozen before the first audit; all scales are conditional natural units.
 MU_GRID = (1.05, 1.2)
 MOMENTUM_TRIPLES = ((.02, .031, .02), (.04, .037, .02), (.02, .02, 0.))
@@ -388,7 +393,7 @@ def audit():
               "zero_drive_control": zero_drive, "zero_drive_drift_subtracted_from_work": False,
               "maximum_source_equation_relative": max(source_errors), "maximum_fourier_scaled_error": max(fourier_errors),
               "evidence_artifacts": TH.identities(paths), "protected_evidence_hashes": TH.identities(protected),
-              "equation_registry_ids": [x["id"] for x in json.loads((ROOT/REGISTRY).read_text())["entries"]],
+              "equation_registry_ids": [x["id"] for x in json.loads((canonical_existing_path(ROOT/REGISTRY)).read_text())["entries"]],
               "energy_frame": "rotating_Gaussian_Hamiltonian_not_full_physical_Noether_energy",
               "raw_audit_preserved": str(FIRST_FAILURE.relative_to(ROOT)).replace("\\", "/"),
               "preserved_first_failure_identity": TH.identities([str(FIRST_FAILURE.relative_to(ROOT)).replace("\\", "/")]) if FIRST_FAILURE.exists() else [],

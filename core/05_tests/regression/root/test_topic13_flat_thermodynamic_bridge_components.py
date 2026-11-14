@@ -9,9 +9,9 @@ from pathlib import Path
 
 
 ROOT = repo_root()
-ARTIFACT = ROOT / "docs/core/07_artifacts/topic13/t13_flat_thermodynamic_bridge_components_gate.json"
-FULL = ROOT / "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json"
-REGISTER = ROOT / "docs/core/07_artifacts/gates/uet_major_result_closure_register.json"
+ARTIFACT = ROOT / 'core/07_artifacts/topic13/t13_flat_thermodynamic_bridge_components_gate.json'
+FULL = ROOT / 'topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json'
+REGISTER = ROOT / 'core/07_artifacts/gates/uet_major_result_closure_register.json'
 
 
 def load(path: Path) -> dict:

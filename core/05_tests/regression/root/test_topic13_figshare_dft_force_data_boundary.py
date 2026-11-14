@@ -4,10 +4,9 @@ from pathlib import Path
 
 
 ROOT = repo_root()
-ARTIFACT = ROOT / "docs/core/07_artifacts/topic13/t13_figshare_dft_force_data_boundary_audit.json"
+ARTIFACT = ROOT / 'core/07_artifacts/topic13/t13_figshare_dft_force_data_boundary_audit.json'
 PACKAGE = ROOT / (
-    "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/"
-    "t13_figshare_dft_force_data_source_package.json"
+    'topics/0.13_Thermodynamic_Bridge/Data/03_Research/t13_figshare_dft_force_data_source_package.json'
 )
 
 

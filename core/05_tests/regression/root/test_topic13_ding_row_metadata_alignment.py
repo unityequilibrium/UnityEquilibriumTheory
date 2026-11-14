@@ -7,8 +7,8 @@ from pathlib import Path
 
 
 ROOT = repo_root()
-CSV = ROOT / "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/ding_2022_fig1d_digitized.csv"
-MANIFEST = ROOT / "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/ding_2022_fig1d_digitized_manifest.json"
+CSV = ROOT / 'topics/0.13_Thermodynamic_Bridge/Data/03_Research/ding_2022_fig1d_digitized.csv'
+MANIFEST = ROOT / 'topics/0.13_Thermodynamic_Bridge/Data/03_Research/ding_2022_fig1d_digitized_manifest.json'
 
 
 def test_ding_rows_match_closed_mapping_without_becoming_raw_source() -> None:

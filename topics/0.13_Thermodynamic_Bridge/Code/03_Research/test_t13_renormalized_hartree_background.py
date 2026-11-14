@@ -1,4 +1,5 @@
 """Finite-potential stationarity is not a physical internal Goldstone pole."""
+from core.core_paths import canonical_existing_path
 
 import hashlib
 import json
@@ -167,7 +168,7 @@ def test_artifact_hashes_and_physical_boundaries_are_preserved():
     for flag in ("full_covariant_counterterm_match", "renormalization_scheme_material_match", "joint_Phi_stationarity_derived", "exact_microscopic_stationarity", "external_finite_frequency_response_derived", "microscopic_IR_matching_established", "physical_Kubo_emitted", "g1_physical_unlock", "g2_science_unlock", "full_core_unlock", "core_composition_gate_overwritten", "claim_promotion", "parameter_fitting", "xie_2026_accessed", "IR_filter", "clipping", "C_relabelled_as_charge_or_mass", "R_gen_added_as_state"):
         assert record[flag] is False
     for item in record["evidence_artifacts"]+record["protected_evidence_hashes"]:
-        assert hashlib.sha256((M["ROOT"]/item["path"]).read_bytes()).hexdigest() == item["sha256"]
+        assert hashlib.sha256((canonical_existing_path(M["ROOT"]/item["path"])).read_bytes()).hexdigest() == item["sha256"]
     assert len(record["report"]) == 11
 
 

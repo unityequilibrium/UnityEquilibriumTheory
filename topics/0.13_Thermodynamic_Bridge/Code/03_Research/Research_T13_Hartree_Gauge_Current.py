@@ -16,15 +16,20 @@ import runpy
 import numpy as np
 from scipy.special import zeta
 
-ROOT = Path(__file__).resolve().parents[5]
-PREFIX = "docs/topics/0.13_Thermodynamic_Bridge/"
+ROOT = Path(__file__).resolve().parents[4]
+
+import sys as _sys
+if str(ROOT) not in _sys.path:
+    _sys.path.insert(0, str(ROOT))
+from core.core_paths import canonical_existing_path
+PREFIX = "topics/0.13_Thermodynamic_Bridge/"
 FIELD_CODE = PREFIX+"Code/03_Research/Research_T13_Hartree_External_Response.py"
 FIELD_ARTIFACT = PREFIX+"Result/artifacts/t13_hartree_external_response.json"
-F = runpy.run_path(str(ROOT/FIELD_CODE))
+F = runpy.run_path(str(canonical_existing_path(ROOT/FIELD_CODE)))
 H = F["H"]
 BASIS = F["BASIS"]
 ROTATION = np.array([[0., -1.], [1., 0.]])
-OUTPUT = ROOT/(PREFIX+"Result/artifacts/t13_hartree_gauge_current.json")
+OUTPUT = canonical_existing_path(ROOT/(PREFIX+"Result/artifacts/t13_hartree_gauge_current.json"))
 ORDERS = ((48, 24), (72, 36), (96, 48))
 POINT_TOLERANCE = 1e-7
 QUADRATURE_TOLERANCE = 2e-5
@@ -335,8 +340,8 @@ def ward_residuals(q, frequency, s, hessians):
 
 
 def audit():
-    old = json.loads((ROOT/F["BACKGROUND_ARTIFACT"]).read_text(encoding="utf-8"))
-    field_record = json.loads((ROOT/FIELD_ARTIFACT).read_text(encoding="utf-8"))
+    old = json.loads((canonical_existing_path(ROOT/F["BACKGROUND_ARTIFACT"])).read_text(encoding="utf-8"))
+    field_record = json.loads((canonical_existing_path(ROOT/FIELD_ARTIFACT)).read_text(encoding="utf-8"))
     examples = []
     for e, prior in zip(old["examples"], field_record["examples"]):
         t, mu, coupling = e["T"], e["mu"], e["u_canonical"]
@@ -431,8 +436,8 @@ def audit():
         "thresholds": {"direct_frequency_and_vacuum": POINT_TOLERANCE, "quadrature": QUADRATURE_TOLERANCE, "Ward": WARD_TOLERANCE},
         "numerical_arithmetic": {"longdouble_mantissa_bits": int(np.finfo(np.longdouble).nmant), "numerical_errors_are_not_physical_uncertainties": True},
         "source_contact_convention": {"renormalization_scale": 1., "finite_F_A_squared_coefficient_at_scale": 0., "role": "DECLARED_SUBTRACTION_CONVENTION_NOT_MICROSCOPIC_INPUT", "scale_change": "d(loop_Pi)/d(log Qren)=(Q_E^2*I-Q_E*Q_E^T)/(24*pi^2); compensating source-contact running is not full UET RG matching", "spatial_surface": "[Tr(M)-2*M0^2]/(24*pi^2) from the UV IBP boundary, not fitted to Ward residuals"},
-        "evidence_artifacts": [{"path": p, "sha256": hashlib.sha256((ROOT/p).read_bytes()).hexdigest()} for p in evidence],
-        "protected_evidence_hashes": [{"path": p, "sha256": hashlib.sha256((ROOT/p).read_bytes()).hexdigest()} for p in protected],
+        "evidence_artifacts": [{"path": p, "sha256": hashlib.sha256((canonical_existing_path(ROOT/p)).read_bytes()).hexdigest()} for p in evidence],
+        "protected_evidence_hashes": [{"path": p, "sha256": hashlib.sha256((canonical_existing_path(ROOT/p)).read_bytes()).hexdigest()} for p in protected],
         "method_references": [{"url": "https://arxiv.org/pdf/hep-ph/0203008", "locator": "II/III local source Ward and external effective action", "role": "established_method_not_UET_novelty"}, {"url": "https://arxiv.org/pdf/1410.1337", "locator": "symmetry and translation preserving regularization", "role": "regulator_obligation_not_full_match"}],
         "open_blockers": ["real_axis_spectral_IR_and_truncation_control", "full_covariant_nonuniform_regulator_RG_and_action_input", "joint_Phi_global_state_and_material_source_detector_map", "normal_component_heat_current_SK_KMS_and_collision_transport", "independent_measurement_and_source_uncertainty"],
         "controlling_blocker": "real_axis_regulator_joint_Phi_material_and_transport_matching_not_closed",

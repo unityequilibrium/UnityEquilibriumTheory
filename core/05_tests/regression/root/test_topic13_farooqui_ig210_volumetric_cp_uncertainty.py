@@ -8,8 +8,7 @@ from pathlib import Path
 
 ROOT = repo_root()
 PACKAGE_PATH = ROOT / (
-    "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/"
-    "farooqui_2022_ig210_thermophysical_source_package.json"
+    'topics/0.13_Thermodynamic_Bridge/Data/03_Research/farooqui_2022_ig210_thermophysical_source_package.json'
 )
 ARTIFACT_PATH = canonical_artifact_path(
     "t13_farooqui_ig210_volumetric_cp_uncertainty_audit.json"

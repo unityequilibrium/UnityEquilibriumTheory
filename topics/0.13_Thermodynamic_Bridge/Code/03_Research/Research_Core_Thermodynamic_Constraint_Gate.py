@@ -18,7 +18,7 @@ from typing import Any
 def _bootstrap() -> Path:
     current = Path(__file__).resolve()
     for parent in [current] + list(current.parents):
-        if (parent / "docs").exists() and (parent / "docs" / "core").exists():
+        if (parent / "docs").exists() and (parent / "core").exists():
             if str(parent) not in sys.path:
                 sys.path.insert(0, str(parent))
             return parent
@@ -27,7 +27,7 @@ def _bootstrap() -> Path:
 
 ROOT = _bootstrap()
 TOPIC = "0.13_Thermodynamic_Bridge"
-TOPIC_DIR = ROOT / "docs" / "topics" / TOPIC
+TOPIC_DIR = ROOT / "topics" / TOPIC
 ARTIFACT_DIR = TOPIC_DIR / "Result" / "artifacts"
 DATA_DIR = TOPIC_DIR / "Data" / "03_Research"
 
@@ -35,8 +35,8 @@ TOPIC_PRIMARY = ARTIFACT_DIR / "0_13_thermodynamic_bridge_verification.json"
 FOUNDATION_GATE = DATA_DIR / "thermodynamic_bridge_foundation_claim_gate.json"
 CATTANEO_ARTIFACT = ARTIFACT_DIR / "cattaneo_benchmark_artifact.json"
 THERMAL_PILOT = ARTIFACT_DIR / "matter_space_thermal_control.json"
-CORE_PROGRAM = ROOT / "docs/core/07_artifacts/gates/uet_gr_research_program_gate.json"
-CORE_STATE_MAP = ROOT / "docs/core/07_artifacts/gates/noether_phase_field_dependency_gate.json"
+CORE_PROGRAM = ROOT / "core/07_artifacts/gates/uet_gr_research_program_gate.json"
+CORE_STATE_MAP = ROOT / "core/07_artifacts/gates/noether_phase_field_dependency_gate.json"
 READINESS_METADATA = ROOT / "docs/meta/topic_readiness.json"
 
 ARTIFACT_PATH = ARTIFACT_DIR / "0_13_core_thermodynamic_constraint_gate.json"

@@ -6,10 +6,9 @@ from pathlib import Path
 
 
 ROOT = repo_root()
-LANE = ROOT / "docs/core/07_artifacts/topic13/t13_ding_public_supplementary_payload_boundary_audit.json"
+LANE = ROOT / 'core/07_artifacts/topic13/t13_ding_public_supplementary_payload_boundary_audit.json'
 FULL = ROOT / (
-    "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/"
-    "topic13_full_thermodynamic_bridge_core_ready_gate.json"
+    'topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json'
 )
 
 

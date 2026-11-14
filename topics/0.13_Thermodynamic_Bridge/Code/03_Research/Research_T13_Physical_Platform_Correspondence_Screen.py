@@ -16,13 +16,18 @@ import sys
 
 import sympy as s
 
-ROOT = Path(__file__).resolve().parents[5]
+ROOT = Path(__file__).resolve().parents[4]
+
+import sys as _sys
+if str(ROOT) not in _sys.path:
+    _sys.path.insert(0, str(ROOT))
+from core.core_paths import canonical_existing_path
 sys.path.insert(0, str(ROOT))
 from docs.scripts.audit.audit_calculation_completeness import (
     artifact_metadata, contract_hash, load_json, validate_contract,
 )
 
-TOPIC = "docs/topics/0.13_Thermodynamic_Bridge"
+TOPIC = "topics/0.13_Thermodynamic_Bridge"
 STEM = "physical_platform_correspondence_screen"
 CONTRACT = f"{TOPIC}/calculation_contracts/{STEM}.json"
 INPUT = f"{TOPIC}/Data/03_Research/{STEM}_sources.json"
@@ -229,11 +234,11 @@ def inherited_evidence():
     summaries = {}
     for stem in ("parent_static_reference_audit", "phi_variance_static_admissibility"):
         path = f"{TOPIC}/calculation_contracts/{stem}.json"
-        contract = load_json(ROOT/path)
+        contract = load_json(canonical_existing_path(ROOT/path))
         check = validate_contract(contract, ROOT)
         if check["errors"]:
             raise ValueError("inherited source identity changed: "+"; ".join(check["errors"]))
-        artifact = load_json(ROOT/f"{TOPIC}/Result/artifacts/t13_{stem}.json")
+        artifact = load_json(canonical_existing_path(ROOT/f"{TOPIC}/Result/artifacts/t13_{stem}.json"))
         if artifact["contract_sha256"] != contract_hash(contract) or artifact["identities"] != contract["identities"]:
             raise ValueError("inherited artifact/contract binding changed")
         summaries[stem] = {"contract_sha256": contract_hash(contract), "identities": len(contract["identities"])}
@@ -280,7 +285,7 @@ def negative_controls(data):
 
 
 def calculate():
-    data = load_json(ROOT/INPUT)
+    data = load_json(canonical_existing_path(ROOT/INPUT))
     sources, facts = validate_subset(data)
     c = constants(data)
     checks, controls = symbolic_checks(), negative_controls(data)
@@ -322,7 +327,7 @@ def calculate():
 
 
 def record():
-    return {**artifact_metadata(load_json(ROOT/CONTRACT), ROOT), **calculate()}
+    return {**artifact_metadata(load_json(canonical_existing_path(ROOT/CONTRACT)), ROOT), **calculate()}
 
 
 def main(argv=None):
@@ -334,8 +339,8 @@ def main(argv=None):
     result = record()
     payload = json.dumps(result, ensure_ascii=False, sort_keys=True, indent=2)+"\n"
     if args.emit_report:
-        (ROOT/OUTPUT).write_text(payload, encoding="utf-8", newline="\n")
-    elif not (ROOT/OUTPUT).is_file() or (ROOT/OUTPUT).read_bytes() != payload.encode("utf-8"):
+        (canonical_existing_path(ROOT/OUTPUT)).write_text(payload, encoding="utf-8", newline="\n")
+    elif not (canonical_existing_path(ROOT/OUTPUT)).is_file() or (canonical_existing_path(ROOT/OUTPUT)).read_bytes() != payload.encode("utf-8"):
         raise ValueError("artifact missing/stale; inspect before explicit --emit-report")
     print(json.dumps(dict(platforms=len(result["platforms"]), checks=len(result["checks"]), negative_controls=len(result["negative_controls"]),
                           physical_acceptance=False, review=result["contract_review_status"])))

@@ -9,10 +9,15 @@ from pathlib import Path
 import numpy as np
 
 ROOT = next(p for p in Path(__file__).resolve().parents if (p / "docs/core").is_dir())
-TOPIC = ROOT / "docs/topics/0.10_Fluid_Dynamics_Chaos"
+
+import sys as _sys
+if str(ROOT) not in _sys.path:
+    _sys.path.insert(0, str(ROOT))
+from core.core_paths import canonical_existing_path
+TOPIC = ROOT / "topics/0.10_Fluid_Dynamics_Chaos"
 CONTRACT = TOPIC / "Data/03_Research/fluid_core_o2_current_bound_contract.json"
 OUTPUT = TOPIC / "Result/artifacts/fluid_core_o2_current_bound_audit.json"
-REGISTRY = ROOT / "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry_topic10_o2_current_bound_addendum.json"
+REGISTRY = canonical_existing_path(ROOT / "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry_topic10_o2_current_bound_addendum.json")
 
 
 def load(path, name):
@@ -170,20 +175,20 @@ def audit(p, path):
     flag("admission_fields", set(p["admission"]) == required)
     for name in sorted(required):
         flag("boundary/" + name, p["admission"].get(name) is False)
-    card = ROOT / p["card"]
+    card = canonical_existing_path(ROOT / p["card"])
     flag("preregistered_card", hashlib.sha256(card.read_bytes()).hexdigest() ==
          "5fccaf6def52afaf8d4c2615f1fb255507d542bdeab50687a59956748f79db2f")
     flag("preregistered_registry", hashlib.sha256(REGISTRY.read_bytes()).hexdigest() ==
          "e467f7e0a225429c1f833a42b81d67e1c0db9dc0f1347f556282fe9e5ddab5d8")
-    prior = json.loads((ROOT / p["continuum_artifact"]).read_text(encoding="utf-8"))
-    flag("prior_sources_fresh", all(hashlib.sha256((ROOT / name).read_bytes()).hexdigest() == value
+    prior = json.loads((canonical_existing_path(ROOT / p["continuum_artifact"])).read_text(encoding="utf-8"))
+    flag("prior_sources_fresh", all(hashlib.sha256((canonical_existing_path(ROOT / name)).read_bytes()).hexdigest() == value
                                   for name, value in prior["input_hashes"].items()))
     flag("prior_conditional_domain_and_no_gap", prior["status"] == "PASS_CONDITIONAL_CONTINUUM_FORM_DIAGNOSTIC_ONLY"
          and prior["selected_finite_cutoff_domain_internal_derivation_supported"]
          and prior["no_uniform_vector_gap_internal_derivation_supported"] and not prior["physical_heat_current_matched"])
     def finish():
-        paths = [path, card, REGISTRY, Path(__file__).resolve(), ROOT / p["continuum_contract"],
-                 ROOT / p["continuum_verifier"], ROOT / p["continuum_artifact"]] + [ROOT / n for n in prior["input_hashes"]]
+        paths = [path, card, REGISTRY, Path(__file__).resolve(), canonical_existing_path(ROOT / p["continuum_contract"]),
+                 canonical_existing_path(ROOT / p["continuum_verifier"]), canonical_existing_path(ROOT / p["continuum_artifact"])] + [canonical_existing_path(ROOT / n) for n in prior["input_hashes"]]
         hashes = {f.relative_to(ROOT).as_posix() if f.is_relative_to(ROOT) else f.name:
                   hashlib.sha256(f.read_bytes()).hexdigest() for f in paths}
         passed = len(rows) == 2 and all(c["pass"] for c in checks.values()) and not errors
@@ -211,15 +216,15 @@ def audit(p, path):
                 "No formal, independent, interval, infinite-cutoff/all-channel or physical admission."]}
     if not all(c["pass"] for c in checks.values()):
         return finish()
-    c = load(ROOT / p["continuum_verifier"], "current_bound_continuum")
-    ic = json.loads((ROOT / p["continuum_contract"]).read_text(encoding="utf-8"))
-    ir = json.loads((ROOT / ic["infrared_contract"]).read_text(encoding="utf-8"))
-    vc = json.loads((ROOT / ir["vector_contract"]).read_text(encoding="utf-8"))
-    gc = json.loads((ROOT / vc["galerkin_contract"]).read_text(encoding="utf-8"))
-    cc = json.loads((ROOT / gc["core_source_contract"]).read_text(encoding="utf-8"))["configuration"]
+    c = load(canonical_existing_path(ROOT / p["continuum_verifier"]), "current_bound_continuum")
+    ic = json.loads((canonical_existing_path(ROOT / p["continuum_contract"])).read_text(encoding="utf-8"))
+    ir = json.loads((canonical_existing_path(ROOT / ic["infrared_contract"])).read_text(encoding="utf-8"))
+    vc = json.loads((canonical_existing_path(ROOT / ir["vector_contract"])).read_text(encoding="utf-8"))
+    gc = json.loads((canonical_existing_path(ROOT / vc["galerkin_contract"])).read_text(encoding="utf-8"))
+    cc = json.loads((canonical_existing_path(ROOT / gc["core_source_contract"])).read_text(encoding="utf-8"))["configuration"]
     m2, lam = cc["mass_squared"] / cc["Z"], p["lambda_exploratory"] / cc["Z"] ** 2
-    g = load(ROOT / vc["galerkin_verifier"], "current_bound_galerkin")
-    ir_module = load(ROOT / ic["infrared_verifier"], "current_bound_infrared")
+    g = load(canonical_existing_path(ROOT / vc["galerkin_verifier"]), "current_bound_galerkin")
+    ir_module = load(canonical_existing_path(ROOT / ic["infrared_verifier"]), "current_bound_infrared")
     identity = exact_gap_identity(c)
     flag("exact_gap_polynomial_identity", identity["identity"])
     flag("wrong_factor_negative_control", identity["negative_control_detected"])

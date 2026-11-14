@@ -1,4 +1,5 @@
 """Independent checks and physical-admission boundaries for dynamic IR work."""
+from core.core_paths import canonical_existing_path
 
 import hashlib
 import json
@@ -148,7 +149,7 @@ def test_artifact_preserves_physical_and_background_blockers():
     for field in ("microscopic_real_axis_response_admitted", "joint_Phi_stationarity_derived", "renormalized_order_parameter_matched", "microscopic_IR_resummation_derived", "controlled_truncation_error_established", "microscopic_SK_KMS_matched", "physical_Kubo_emitted", "g1_physical_unlock", "g2_science_unlock", "full_core_unlock", "core_composition_gate_overwritten", "claim_promotion", "parameter_fitting", "xie_2026_accessed", "phase_mass_added", "IR_filter", "clipping", "threshold_broadening", "C_relabelled_as_charge_or_mass", "R_gen_added_as_state"):
         assert record[field] is False
     for item in record["evidence_artifacts"]+record["protected_evidence_hashes"]:
-        assert hashlib.sha256((M["ROOT"]/item["path"]).read_bytes()).hexdigest() == item["sha256"]
+        assert hashlib.sha256((canonical_existing_path(M["ROOT"]/item["path"])).read_bytes()).hexdigest() == item["sha256"]
     assert record["examples"][0]["T_over_linear_phase_energy_domain"] > 1
     assert set(record["report"]) == {"MAJOR_RESULT_CLOSURE", "WHAT_IS_ACTUALLY_CLOSED", "WHAT_REMAINS_OPEN", "DEPENDENCY_UNLOCKED", "STATUS", "WHAT_CHANGED", "EQUATION_OR_MAPPING", "VERIFICATION", "CONTROLLING_BLOCKER", "NEXT_ACTION", "CLAIM_BOUNDARY"}
 

@@ -11,6 +11,7 @@ env/
 
 # Large data files (not for GitHub)
 runs_*/
+.uet-run-reports/
 *.h5
 *.hdf5
 *.fit
@@ -18,6 +19,8 @@ runs_*/
 *.csv
 !docs/topics/**/*.csv
 !docs/core/**/*.csv
+!topics/**/*.csv
+!core/**/*.csv
 timeseries*.csv
 research_uet/zip/
 /research_uet/lab/outputs/

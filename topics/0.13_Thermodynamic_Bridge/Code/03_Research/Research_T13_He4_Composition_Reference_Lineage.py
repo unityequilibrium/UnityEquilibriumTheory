@@ -8,11 +8,16 @@ import subprocess
 from pathlib import Path
 
 
-ROOT = Path(__file__).resolve().parents[5]
-COMPOSITION = ROOT / "docs/core/07_artifacts/topic13/t13_he4_core_thermodynamic_bridge_composition_audit.json"
-CURRENT_ARTIFACTS = ROOT / "docs/core/07_artifacts"
-PLAN = ROOT / "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/funding_portfolio_14d_plan.json"
-OUTPUT = ROOT / "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/t13_he4_composition_reference_lineage.json"
+ROOT = Path(__file__).resolve().parents[4]
+
+import sys as _sys
+if str(ROOT) not in _sys.path:
+    _sys.path.insert(0, str(ROOT))
+from core.core_paths import canonical_existing_path
+COMPOSITION = ROOT / "core/07_artifacts/topic13/t13_he4_core_thermodynamic_bridge_composition_audit.json"
+CURRENT_ARTIFACTS = ROOT / "core/07_artifacts"
+PLAN = ROOT / "topics/0.13_Thermodynamic_Bridge/Data/03_Research/funding_portfolio_14d_plan.json"
+OUTPUT = ROOT / "topics/0.13_Thermodynamic_Bridge/Result/artifacts/t13_he4_composition_reference_lineage.json"
 
 
 def _sha256(path: Path) -> str:
@@ -94,7 +99,7 @@ def _committed_comparison(commit: str, records: list[dict]) -> dict:
         prior_sha = hashlib.sha256(historical.stdout).hexdigest()
         current_sha = current["sha256"]
         old_data = json.loads(historical.stdout)
-        new_data = json.loads((ROOT / path).read_text(encoding="utf-8"))
+        new_data = json.loads((canonical_existing_path(ROOT / path)).read_text(encoding="utf-8"))
         compared.append({
             "path": path,
             "state": "BYTE_IDENTICAL_TO_COMMIT" if prior_sha == current_sha else "CHANGED_SINCE_COMMIT",

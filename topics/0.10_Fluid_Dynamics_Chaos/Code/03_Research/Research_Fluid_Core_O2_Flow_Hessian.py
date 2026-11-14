@@ -9,10 +9,15 @@ from pathlib import Path
 import numpy as np
 
 ROOT=next(p for p in Path(__file__).resolve().parents if (p/"docs/core").is_dir())
-TOPIC=ROOT/"docs/topics/0.10_Fluid_Dynamics_Chaos"
+
+import sys as _sys
+if str(ROOT) not in _sys.path:
+    _sys.path.insert(0, str(ROOT))
+from core.core_paths import canonical_existing_path
+TOPIC=ROOT/"topics/0.10_Fluid_Dynamics_Chaos"
 CONTRACT=TOPIC/"Data/03_Research/fluid_core_o2_flow_hessian_contract.json"
 OUTPUT=TOPIC/"Result/artifacts/fluid_core_o2_flow_hessian_audit.json"
-REGISTRY=ROOT/"docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry_topic10_o2_flow_hessian_addendum.json"
+REGISTRY=canonical_existing_path(ROOT/"docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry_topic10_o2_flow_hessian_addendum.json")
 
 
 def load_adapter(path):
@@ -150,8 +155,8 @@ def implicit_phase(p,base,ns,T,mu,order,factor):
 
 
 def audit(p,path):
-    base=load_adapter(ROOT/p["source_adapter"])
-    original=json.loads((ROOT/p["source_contract"]).read_text(encoding="utf-8"))
+    base=load_adapter(canonical_existing_path(ROOT/p["source_adapter"]))
+    original=json.loads((canonical_existing_path(ROOT/p["source_contract"])).read_text(encoding="utf-8"))
     ns,source_id=base.source_functions(original)
     rules=p["verification"]
     checks={}
@@ -236,8 +241,8 @@ def audit(p,path):
     flag("first_execution_source_archive_matches",initial_source_hash==initial["input_hashes"][Path(__file__).relative_to(ROOT).as_posix()])
     # Archive integrity is a diagnostic control; never let it silently bypass a failure.
     control_pass=all(q["pass"] for q in checks.values())
-    hashes_paths=[path,ROOT/p["card"],REGISTRY,Path(__file__).resolve(),preview,preview_source,ROOT/p["source_adapter"],
-                  ROOT/p["source_contract"]]+[ROOT/f for f in original["core_sources"].values()]+[ROOT/f for f in p["reused_inputs"]]
+    hashes_paths=[path,canonical_existing_path(ROOT/p["card"]),REGISTRY,Path(__file__).resolve(),preview,preview_source,canonical_existing_path(ROOT/p["source_adapter"]),
+                  canonical_existing_path(ROOT/p["source_contract"])]+[canonical_existing_path(ROOT/f) for f in original["core_sources"].values()]+[canonical_existing_path(ROOT/f) for f in p["reused_inputs"]]
     hashes={f.relative_to(ROOT).as_posix() if f.is_relative_to(ROOT) else f.name:hashlib.sha256(f.read_bytes()).hexdigest() for f in hashes_paths}
     return {"schema_version":"t010-core-o2-flow-hessian-audit-v1","date":p["date"],
       "status":"PASS_APPROXIMATE_FLOW_HESSIAN_REFERENCE_ONLY" if control_pass else "FLOW_HESSIAN_REFERENCE_FAIL",

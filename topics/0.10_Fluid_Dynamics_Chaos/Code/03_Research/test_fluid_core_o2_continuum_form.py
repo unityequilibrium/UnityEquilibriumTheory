@@ -10,7 +10,12 @@ import tempfile
 import unittest
 
 ROOT = next(p for p in Path(__file__).resolve().parents if (p / "docs/core").is_dir())
-TOPIC = ROOT / "docs/topics/0.10_Fluid_Dynamics_Chaos"
+
+import sys as _sys
+if str(ROOT) not in _sys.path:
+    _sys.path.insert(0, str(ROOT))
+from core.core_paths import canonical_existing_path
+TOPIC = ROOT / "topics/0.10_Fluid_Dynamics_Chaos"
 SCRIPT = TOPIC / "Code/03_Research/Research_Fluid_Core_O2_Continuum_Form.py"
 CONTRACT = TOPIC / "Data/03_Research/fluid_core_o2_continuum_form_contract.json"
 ARTIFACT = TOPIC / "Result/artifacts/fluid_core_o2_continuum_form_audit.json"
@@ -78,7 +83,7 @@ class ContinuumFormTests(unittest.TestCase):
         self.assertEqual(a["status"], "PASS_CONDITIONAL_CONTINUUM_FORM_DIAGNOSTIC_ONLY")
         self.assertTrue(all(v["pass"] for v in a["checks"].values()))
         for path, value in self.published["input_hashes"].items():
-            self.assertEqual(hashlib.sha256((ROOT / path).read_bytes()).hexdigest(), value, path)
+            self.assertEqual(hashlib.sha256((canonical_existing_path(ROOT / path)).read_bytes()).hexdigest(), value, path)
         identity = a["exact_cubic_polynomial_identity"]
         self.assertEqual(identity["difference_monomial_count"], 0)
         self.assertGreater(identity["missing_parent_pressure_negative_control_monomial_count"], 0)
@@ -163,7 +168,7 @@ class ContinuumFormTests(unittest.TestCase):
             with tempfile.TemporaryDirectory(dir=ROOT, prefix=".continuum-audit-test-") as folder:
                 source, output = Path(folder) / "bad.json", Path(folder) / "audit.json"
                 if mutation == "stale_source":
-                    prior = json.loads((ROOT / p["infrared_artifact"]).read_text(encoding="utf-8"))
+                    prior = json.loads((canonical_existing_path(ROOT / p["infrared_artifact"])).read_text(encoding="utf-8"))
                     prior["input_hashes"][next(iter(prior["input_hashes"]))] = "0" * 64
                     stale = Path(folder) / "stale.json"
                     stale.write_text(json.dumps(prior), encoding="utf-8")

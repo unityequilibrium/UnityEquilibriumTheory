@@ -6,8 +6,8 @@ from pathlib import Path
 
 
 ROOT = repo_root()
-ARTIFACT = ROOT / "docs/core/07_artifacts/topic13/t13_nist_axm5q1_density_source_boundary_audit.json"
-PACKAGE = ROOT / "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/nist_axm5q1_density_source_package.json"
+ARTIFACT = ROOT / 'core/07_artifacts/topic13/t13_nist_axm5q1_density_source_boundary_audit.json'
+PACKAGE = ROOT / 'topics/0.13_Thermodynamic_Bridge/Data/03_Research/nist_axm5q1_density_source_package.json'
 
 
 def test_nist_axm5q1_density_boundary_is_source_locked_without_cv_promotion() -> None:

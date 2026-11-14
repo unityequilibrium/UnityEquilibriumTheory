@@ -1,4 +1,5 @@
 """Independent finite-q shell, cut, continuation and non-promotion checks."""
+from core.core_paths import canonical_existing_path
 
 import ast
 import hashlib
@@ -174,7 +175,7 @@ def test_artifact_is_discontinuity_not_claimed_finite_q_pole_or_physical_closure
 def test_evidence_hashes_preserve_predecessor_and_protected_core():
     record = artifact()
     for item in record["evidence_artifacts"]+record["protected_evidence_hashes"]:
-        assert hashlib.sha256((D["ROOT"]/item["path"]).read_bytes()).hexdigest() == item["sha256"]
+        assert hashlib.sha256((canonical_existing_path(D["ROOT"]/item["path"])).read_bytes()).hexdigest() == item["sha256"]
     predecessor = json.loads((D["ROOT"]/D["PREVIOUS_ARTIFACT"]).read_text(encoding="utf-8"))
     assert D["R"]["predecessor_hashes_match"](predecessor)
     predecessor["evidence_artifacts"][0]["sha256"] = "0"*64

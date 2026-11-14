@@ -8,10 +8,15 @@ from types import SimpleNamespace
 import numpy as np
 
 ROOT = next(p for p in Path(__file__).resolve().parents if (p / "docs/core").is_dir())
-TOPIC = ROOT / "docs/topics/0.10_Fluid_Dynamics_Chaos"
+
+import sys as _sys
+if str(ROOT) not in _sys.path:
+    _sys.path.insert(0, str(ROOT))
+from core.core_paths import canonical_existing_path
+TOPIC = ROOT / "topics/0.10_Fluid_Dynamics_Chaos"
 CONTRACT = TOPIC / "Data/03_Research/fluid_core_o2_current_ward_contract.json"
 OUTPUT = TOPIC / "Result/artifacts/fluid_core_o2_current_ward_audit.json"
-REGISTRY = ROOT / "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry_topic10_o2_current_ward_addendum.json"
+REGISTRY = canonical_existing_path(ROOT / "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry_topic10_o2_current_ward_addendum.json")
 
 def load(path, name):
     import importlib.util
@@ -119,16 +124,16 @@ def audit(p,path):
         "interval_certificate","useful_relative_error_certificate","claim_promotion","dependency_unlock"}
     flag("boundary_fields",set(p["admission"])==required)
     for key in sorted(required):flag("boundary/"+key,p["admission"].get(key) is False)
-    prior=json.loads((ROOT/p["current_bound_artifact"]).read_text(encoding="utf-8"))
-    flag("prior_sources_fresh",all(hashlib.sha256((ROOT/n).read_bytes()).hexdigest()==s for n,s in prior["input_hashes"].items()))
+    prior=json.loads((canonical_existing_path(ROOT/p["current_bound_artifact"])).read_text(encoding="utf-8"))
+    flag("prior_sources_fresh",all(hashlib.sha256((canonical_existing_path(ROOT/n)).read_bytes()).hexdigest()==s for n,s in prior["input_hashes"].items()))
     flag("prior_conditional_bound_only",prior["status"]=="PASS_CONDITIONAL_SELECTED_CURRENT_BOUND_ONLY" and
          prior["selected_current_finiteness_internal_derivation_supported"] and not prior["physical_heat_current_matched"])
-    flag("preregistered_card",hashlib.sha256((ROOT/p["card"]).read_bytes()).hexdigest()=="2679190ef730d41212c570a3b962c351bc45f9eb3c879cf3a35617617a3bbc8a")
+    flag("preregistered_card",hashlib.sha256((canonical_existing_path(ROOT/p["card"])).read_bytes()).hexdigest()=="2679190ef730d41212c570a3b962c351bc45f9eb3c879cf3a35617617a3bbc8a")
     flag("preregistered_registry",hashlib.sha256(REGISTRY.read_bytes()).hexdigest()=="4c31a8065e9317f5a15daefafd9e0b4a3fb44367eb24808e9e7863d95e08d4f8")
     def finish():
-        paths=[path,ROOT/p["card"],REGISTRY,Path(__file__).resolve()]+[ROOT/p[k] for k in
+        paths=[path,canonical_existing_path(ROOT/p["card"]),REGISTRY,Path(__file__).resolve()]+[canonical_existing_path(ROOT/p[k]) for k in
                ("current_bound_contract","current_bound_verifier","current_bound_artifact","flow_verifier","source_adapter","core_matter_source","core_response_source")]
-        paths.extend(ROOT/n for n in prior["input_hashes"])
+        paths.extend(canonical_existing_path(ROOT/n) for n in prior["input_hashes"])
         hashes={f.relative_to(ROOT).as_posix() if f.is_relative_to(ROOT) else f.name:hashlib.sha256(f.read_bytes()).hexdigest() for f in paths}
         passed=len(rows)==2 and all(c["pass"] for c in checks.values()) and not errors
         return {"schema_version":"t010-current-ward-audit-v1","date":p["date"],
@@ -149,16 +154,16 @@ def audit(p,path):
                 "J_G is H-mu Q energy flux; omitting mu*J_N misidentifies it as total energy flux.",
                 "Momentum projection does not select zero material mass/charge flow or an experimental He-II frame."]}
     if not all(c["pass"] for c in checks.values()):return finish()
-    base=load(ROOT/p["source_adapter"],"ward_source_adapter")
-    response,ids=base.selected_namespace(ROOT/p["core_response_source"],p["AST_selected_response_definitions"])
+    base=load(canonical_existing_path(ROOT/p["source_adapter"]),"ward_source_adapter")
+    response,ids=base.selected_namespace(canonical_existing_path(ROOT/p["core_response_source"]),p["AST_selected_response_definitions"])
     identities["response"]=ids
-    matter,ids=base.selected_namespace(ROOT/p["core_matter_source"],p["AST_selected_matter_definitions"],
+    matter,ids=base.selected_namespace(canonical_existing_path(ROOT/p["core_matter_source"]),p["AST_selected_matter_definitions"],
                                      {"response_displacement":response["response_displacement"],"validate_lorentz_metric":response["validate_lorentz_metric"]})
     identities["matter"]=ids
-    flow=load(ROOT/p["flow_verifier"],"ward_flow_source")
-    bound=load(ROOT/p["current_bound_verifier"],"ward_bound_source")
-    bc=json.loads((ROOT/p["current_bound_contract"]).read_text(encoding="utf-8"))
-    continuum=load(ROOT/bc["continuum_verifier"],"ward_continuum_source")
+    flow=load(canonical_existing_path(ROOT/p["flow_verifier"]),"ward_flow_source")
+    bound=load(canonical_existing_path(ROOT/p["current_bound_verifier"]),"ward_bound_source")
+    bc=json.loads((canonical_existing_path(ROOT/p["current_bound_contract"])).read_text(encoding="utf-8"))
+    continuum=load(canonical_existing_path(ROOT/bc["continuum_verifier"]),"ward_continuum_source")
     cc=p["configuration"];tol=rules["algebra_relative_tolerance"]
     try:
         for T in p["temperatures"]:

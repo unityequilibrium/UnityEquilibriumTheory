@@ -4,7 +4,7 @@ from importlib import import_module
 from pathlib import Path
 
 
-ROOT = Path(__file__).resolve().parents[5]
+ROOT = Path(__file__).resolve().parents[4]
 
 
 def test_matter_interaction_legacy_import_is_a_facade() -> None:
@@ -17,7 +17,7 @@ def test_matter_interaction_legacy_import_is_a_facade() -> None:
     assert legacy.MatterInteractionForwardResult is canonical.MatterInteractionForwardResult
     assert legacy.__canonical_module__ == canonical.__name__
     assert (
-        ROOT / "docs/core/03_lanes/mass_density/matter_interaction_forward.py"
+        ROOT / 'core/03_lanes/mass_density/matter_interaction_forward.py'
     ).is_file()
 
 

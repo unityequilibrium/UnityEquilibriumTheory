@@ -6,10 +6,9 @@ from pathlib import Path
 
 
 ROOT = repo_root()
-ARTIFACT = ROOT / "docs/core/07_artifacts/topic13/t13_causal_named_branch_core_compatibility.json"
+ARTIFACT = ROOT / 'core/07_artifacts/topic13/t13_causal_named_branch_core_compatibility.json'
 GATE = ROOT / (
-    "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/"
-    "topic13_full_thermodynamic_bridge_core_ready_gate.json"
+    'topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json'
 )
 
 

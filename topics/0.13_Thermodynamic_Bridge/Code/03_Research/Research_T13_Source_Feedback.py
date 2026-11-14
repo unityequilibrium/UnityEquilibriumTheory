@@ -13,13 +13,18 @@ import re
 import shutil
 import sys
 
-ROOT=Path(__file__).resolve().parents[5]
+ROOT=Path(__file__).resolve().parents[4]
+
+import sys as _sys
+if str(ROOT) not in _sys.path:
+    _sys.path.insert(0, str(ROOT))
+from core.core_paths import canonical_existing_path
 sys.path.insert(0,str(ROOT))
 from docs.scripts.audit.audit_calculation_completeness import artifact_metadata,load_json
 
-SOURCE="docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/source_feedback_protocol_references.json"
-CONTRACT="docs/topics/0.13_Thermodynamic_Bridge/calculation_contracts/source_feedback.json"
-OUTPUT="docs/core/07_artifacts/topic13/t13_source_feedback.json"
+SOURCE="topics/0.13_Thermodynamic_Bridge/Data/03_Research/source_feedback_protocol_references.json"
+CONTRACT="topics/0.13_Thermodynamic_Bridge/calculation_contracts/source_feedback.json"
+OUTPUT="core/07_artifacts/topic13/t13_source_feedback.json"
 
 
 def incident_source_coefficients(k,beta,a,detuning,g):
@@ -325,7 +330,7 @@ def calculate(source):
 
 
 def record():
-    return {**calculate(load_json(ROOT/SOURCE)),**artifact_metadata(load_json(ROOT/CONTRACT),ROOT),
+    return {**calculate(load_json(canonical_existing_path(ROOT/SOURCE))),**artifact_metadata(load_json(canonical_existing_path(ROOT/CONTRACT)),ROOT),
             'generator_path':Path(__file__).relative_to(ROOT).as_posix(),'evidence_class':'FORMAL_PROTOCOL_AND_HEADER_METADATA_ONLY'}
 
 
@@ -333,7 +338,7 @@ def main():
     p=argparse.ArgumentParser(description=__doc__)
     mode=p.add_mutually_exclusive_group(required=True)
     mode.add_argument('--emit',action='store_true'); mode.add_argument('--check',action='store_true')
-    args=p.parse_args(); text=json.dumps(record(),ensure_ascii=False,indent=2,allow_nan=False)+'\n'; path=ROOT/OUTPUT
+    args=p.parse_args(); text=json.dumps(record(),ensure_ascii=False,indent=2,allow_nan=False)+'\n'; path=canonical_existing_path(ROOT/OUTPUT)
     if args.emit:
         if shutil.disk_usage(ROOT).free<100*1024*1024:
             raise SystemExit('Insufficient free space')

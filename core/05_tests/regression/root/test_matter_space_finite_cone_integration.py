@@ -8,7 +8,7 @@ from pathlib import Path
 
 
 ROOT = repo_root()
-ARTIFACT = ROOT / "docs/core/07_artifacts/archive/matter_space_finite_cone_shared_ledger_integration.json"
+ARTIFACT = ROOT / 'core/07_artifacts/archive/matter_space_finite_cone_shared_ledger_integration.json'
 
 
 def load() -> dict:

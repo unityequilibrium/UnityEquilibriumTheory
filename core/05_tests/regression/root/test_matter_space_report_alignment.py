@@ -1,7 +1,7 @@
 """Artifact-boundary tests for the post-Wave-9 report addendum."""
 
 from __future__ import annotations
-from docs.core.core_paths import repo_root
+from docs.core.core_paths import canonical_existing_path, canonical_path_for, repo_root
 
 import hashlib
 import json
@@ -32,9 +32,25 @@ def _sha256(path: Path) -> str:
     return digest.hexdigest()
 
 
+def _canonicalize_paths(value):
+    if isinstance(value, dict):
+        return {
+            canonical_path_for(key) if key.startswith(("docs/core/", "docs/topics/")) else key:
+            _canonicalize_paths(item)
+            for key, item in value.items()
+        }
+    if isinstance(value, list):
+        return [_canonicalize_paths(item) for item in value]
+    if isinstance(value, str) and value.startswith(("docs/core/", "docs/topics/")):
+        return canonical_path_for(value)
+    return value
+
+
 def test_generated_alignment_gate_matches_current_inputs() -> None:
     artifact = _read(OUTPUT_PATH)
-    assert artifact == build_alignment_gate(generated_at=artifact["generated_at"])
+    assert _canonicalize_paths(artifact) == _canonicalize_paths(
+        build_alignment_gate(generated_at=artifact["generated_at"])
+    )
     assert artifact["source_snapshot_at"] <= artifact["generated_at"]
 
 
@@ -121,7 +137,7 @@ def test_all_recorded_input_hashes_match_current_files() -> None:
     )
     assert len(records) == 9
     for record in records:
-        path = ROOT / record["path"]
+        path = canonical_existing_path(ROOT / record["path"])
         assert path.is_file()
         assert _sha256(path) == record["sha256"]
 

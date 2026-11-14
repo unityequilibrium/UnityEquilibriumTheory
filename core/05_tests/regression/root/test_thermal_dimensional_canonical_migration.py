@@ -32,7 +32,7 @@ def test_energy_response_bridge_legacy_and_canonical_exports_are_identical() -> 
 
 
 def test_canonical_thermal_files_and_package_exports_exist() -> None:
-    root = Path(__file__).resolve().parents[5]
+    root = Path(__file__).resolve().parents[4]
     assert (
         root
         / "docs"

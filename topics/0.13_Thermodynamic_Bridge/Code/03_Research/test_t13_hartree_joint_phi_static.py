@@ -1,4 +1,5 @@
 """Counterterm, actual joint-state, reciprocal-source and boundary tests."""
+from core.core_paths import canonical_existing_path
 
 import ast
 from fractions import Fraction as Q
@@ -196,7 +197,7 @@ def test_static_result_cannot_close_full_quantum_Phi_or_material_transport():
 def test_evidence_source_and_protected_core_hashes_are_current():
     record = artifact()
     for item in record["evidence_artifacts"]+record["protected_evidence_hashes"]:
-        assert hashlib.sha256((M["ROOT"]/item["path"]).read_bytes()).hexdigest() == item["sha256"]
+        assert hashlib.sha256((canonical_existing_path(M["ROOT"]/item["path"])).read_bytes()).hexdigest() == item["sha256"]
 
 
 def test_audit_reads_only_derived_predecessors_not_empirical_holdout():

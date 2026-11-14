@@ -79,7 +79,7 @@ def run_seismic_research():
     print("="*74)
 
     # 1. LOAD BENCHMARK DATA
-    data_path = root_dir / "docs/topics/0.10_Fluid_Dynamics_Chaos/Data/03_Research/tohoku_precursor_tec.json"
+    data_path = root_dir / "topics/0.10_Fluid_Dynamics_Chaos/Data/03_Research/tohoku_precursor_tec.json"
     if not data_path.exists():
         print("❌ Error: Benchmark data not found. Run Download_Seismic_Precursors.py first.")
         return

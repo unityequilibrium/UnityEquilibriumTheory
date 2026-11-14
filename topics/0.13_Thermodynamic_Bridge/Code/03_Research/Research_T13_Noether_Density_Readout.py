@@ -14,7 +14,12 @@ import sys
 
 import numpy as np
 
-ROOT = Path(__file__).resolve().parents[5]
+ROOT = Path(__file__).resolve().parents[4]
+
+import sys as _sys
+if str(ROOT) not in _sys.path:
+    _sys.path.insert(0, str(ROOT))
+from core.core_paths import canonical_existing_path
 LOCAL = Path(__file__).resolve().parent
 sys.path.insert(0, str(LOCAL))
 import Research_T13_Gaussian_Work_Remainder as REM
@@ -24,7 +29,7 @@ PREDECESSOR = PREFIX+"Result/artifacts/t13_gaussian_work_remainder.json"
 PREDECESSOR_SHA = "0bff6697f0c94f749cbaf2134c3e78ae36de40c66783a7303e8c5f5aadf307b1"
 REGISTRY = PREFIX+"Data/03_Research/t13_noether_density_readout_registry.json"
 PROTOCOL = PREFIX+"Data/03_Research/t13_density_spectroscopy_protocol_screen.json"
-OUTPUT = ROOT/(PREFIX+"Result/artifacts/t13_noether_density_readout.json")
+OUTPUT = canonical_existing_path(ROOT/(PREFIX+"Result/artifacts/t13_noether_density_readout.json"))
 FIRST_FAILURE = OUTPUT.with_name("t13_noether_density_readout_first_failure.json")
 # Density and unit-family subprotocols were fixed before their respective first audits.
 MU_GRID, Q_GRID = (1.05, 1.2), (.002, .01, .04)
@@ -37,7 +42,7 @@ GATES = {"identity_relative": 1e-8, "static_derivative_relative": 1e-6,
 
 
 def load_predecessor():
-    raw = (ROOT/PREDECESSOR).read_bytes()
+    raw = (canonical_existing_path(ROOT/PREDECESSOR)).read_bytes()
     if hashlib.sha256(raw).hexdigest() != PREDECESSOR_SHA:
         raise ValueError("predecessor changed; revalidate its identity")
     record = json.loads(raw)
@@ -267,7 +272,7 @@ def audit():
         "gain_map_constructive_nonidentifiability": information["null_residual"] < GATES["gain_null_absolute"] and information["amplitude_only_rank"] == 1 and information["plus_independent_gain_rank"] == 2 and all(x["same_intensity_product"] == 1 for x in information["witnesses"]),
         "conditional_unit_kinetic_information_and_inverse": all(u["dispersion_only_rank"] == 2 and u["plus_independent_volumetric_scale_rank"] == 3 and u["null_residual"] < GATES["gain_null_absolute"] and WORK.relative(u["augmented_determinant"], u["analytic_determinant"]) < GATES["identity_relative"] and u["inverse_reference_error"] < GATES["identity_relative"] and all(max(r["same_linear_coefficient_error"], r["same_cubic_coefficient_error"], r["static_native_pressure_error"], r["independent_scale_inverse_error"]) < GATES["identity_relative"] for r in u["witnesses"]) for u in (e["unit_information"] for e in examples))}
     passed = all(checks.values())
-    source_record = json.loads((ROOT/PROTOCOL).read_text())
+    source_record = json.loads((canonical_existing_path(ROOT/PROTOCOL)).read_text())
     paths = [Path(__file__).relative_to(ROOT).as_posix(), REGISTRY, PROTOCOL, PREFIX+"Code/03_Research/test_t13_noether_density_readout.py"]
     protected = [PREDECESSOR, REM.PREDECESSOR, PREFIX+"Result/artifacts/t13_gaussian_source_work_first_failure.json", PREFIX+"Result/artifacts/t13_thermal_noether_response.json", PREFIX+"Result/artifacts/t13_low_T_phase_eft.json"]+list(EFT.ACTION_PATHS)
     record = {"major_result_id": "T13_NOETHER_DENSITY_READOUT_AND_CALIBRATION_BOUNDARY", "topic": "0.13_Thermodynamic_Bridge", "branch_id": VIRT.BRANCH,
@@ -282,7 +287,7 @@ def audit():
               "instrument_gain_boundary": information, "decoupled_h_to_density_max": dark,
               "protocol_screen_status": source_record["status"], "external_numeric_rows_admitted": 0,
               "evidence_artifacts": TH.identities(paths), "protected_evidence_hashes": TH.identities(protected),
-              "equation_registry_ids": [e["id"] for e in json.loads((ROOT/REGISTRY).read_text())["entries"]],
+              "equation_registry_ids": [e["id"] for e in json.loads((canonical_existing_path(ROOT/REGISTRY)).read_text())["entries"]],
               "controlling_blocker": "Noether_to_atomic_density_SI_state_resolution_and_independent_gain_not_admitted" if passed else "tree_density_source_readout_verification_open",
               "open_blockers": ["Noether_charge_to_He4_number_density_and_action_unit_state_match", "independent_Q_energy_temperature_gain_and_joint_resolution_covariance", "permitted_primary_low_q_numeric_rows_uncertainty_and_source_ancestry", "nonlinear_parent_interaction_and_physical_heat_entropy_KMS"],
               "dependency_unlocked": ["same_state_density_protocol_information_gap_research_only"] if passed else [],

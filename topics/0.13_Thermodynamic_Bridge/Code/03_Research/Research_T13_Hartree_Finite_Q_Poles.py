@@ -18,13 +18,18 @@ import runpy
 import numpy as np
 from scipy.optimize import root
 
-ROOT = Path(__file__).resolve().parents[5]
-PREFIX = "docs/topics/0.13_Thermodynamic_Bridge/"
+ROOT = Path(__file__).resolve().parents[4]
+
+import sys as _sys
+if str(ROOT) not in _sys.path:
+    _sys.path.insert(0, str(ROOT))
+from core.core_paths import canonical_existing_path
+PREFIX = "topics/0.13_Thermodynamic_Bridge/"
 PREVIOUS_CODE = PREFIX+"Code/03_Research/Research_T13_Hartree_Finite_Q_Discontinuity.py"
 PREVIOUS_ARTIFACT = PREFIX+"Result/artifacts/t13_hartree_finite_q_discontinuity.json"
-D = runpy.run_path(str(ROOT/PREVIOUS_CODE))
+D = runpy.run_path(str(canonical_existing_path(ROOT/PREVIOUS_CODE)))
 P, R, G, F = D["P"], D["R"], D["G"], D["F"]
-OUTPUT = ROOT/(PREFIX+"Result/artifacts/t13_hartree_finite_q_poles.json")
+OUTPUT = canonical_existing_path(ROOT/(PREFIX+"Result/artifacts/t13_hartree_finite_q_poles.json"))
 SIGNATURE = np.diag([-1., 1., 1., 1.])
 SPLIT_RAYS = (.19, .2, .3, .4, .45)
 ALTERNATE_RAYS = (.21, .25, .35, .43)
@@ -394,7 +399,7 @@ def angular_audit(example):
 
 
 def audit(progress=None):
-    predecessor = json.loads((ROOT/PREVIOUS_ARTIFACT).read_text(encoding="utf-8"))
+    predecessor = json.loads((canonical_existing_path(ROOT/PREVIOUS_ARTIFACT)).read_text(encoding="utf-8"))
     examples = []
     for e in predecessor["examples"]:
         example = {key: e[key] for key in ("T", "mu", "Phi_fixed", "a", "b", "s", "u_canonical")}
@@ -472,7 +477,7 @@ def audit(progress=None):
         "principal_lower_is_not_retarded_pole": all(row["principal_lower_negative_control_residual"] > 1e-3 for e in examples for row in e["finite_q_runs"]),
         "finite_q_pole_approaches_soft_without_being_substituted": all(e["finite_q_runs"][2]["difference_from_soft_pole"] < e["finite_q_runs"][1]["difference_from_soft_pole"] < e["finite_q_runs"][0]["difference_from_soft_pole"] and e["finite_q_runs"][0]["difference_from_soft_pole"] > 1e-6 for e in examples),
         "actual_pole_sampled_density_domain": all(c["shell_root_residual"] < 1e-11 and c["minimum_outgoing_energy_real"] > 0 and c["minimum_Bose_denominator"] > .01 for e in examples for row in e["finite_q_runs"] for c in row["local_density_domain_checks_at_actual_pole"]),
-        "protected_evidence_hashes_unchanged": all(hashlib.sha256((ROOT/item["path"]).read_bytes()).hexdigest() == item["sha256"] for item in predecessor["protected_evidence_hashes"])}
+        "protected_evidence_hashes_unchanged": all(hashlib.sha256((canonical_existing_path(ROOT/item["path"])).read_bytes()).hexdigest() == item["sha256"] for item in predecessor["protected_evidence_hashes"])}
     passed = all(checks.values())
     record = {"schema_version": "t13-hartree-finite-q-poles-v1", "generated_at": datetime.now(timezone.utc).isoformat(),
               "major_result_id": "T13_FIXED_PHI_HARTREE_FINITE_Q_LANDAU_POLES", "topic": "0.13", "branch_id": predecessor["branch_id"],
@@ -489,7 +494,7 @@ def audit(progress=None):
                          "upper_reference_velocity": F["complex_matrix"](np.asarray(UPPER_REFERENCE_V)), "lower_domain": D["LOCAL_DOMAIN"],
                          "radial_domain": "0<=k<infinity", "assigned_output_width": None, "vacuum_centered_series_terms": 16, "vacuum_max_ratio_required": .05},
               "thresholds": {"root_absolute": ROOT_TOLERANCE, "refinement_absolute": REFINEMENT_TOLERANCE, "phase_current_Ward_absolute": PHASE_WARD_TOLERANCE, "causal_leakage_unchanged": 1e-6},
-              "evidence_artifacts": [{"path": path, "sha256": hashlib.sha256((ROOT/path).read_bytes()).hexdigest()} for path in (PREVIOUS_ARTIFACT, PREVIOUS_CODE, Path(__file__).relative_to(ROOT).as_posix())],
+              "evidence_artifacts": [{"path": path, "sha256": hashlib.sha256((canonical_existing_path(ROOT/path)).read_bytes()).hexdigest()} for path in (PREVIOUS_ARTIFACT, PREVIOUS_CODE, Path(__file__).relative_to(ROOT).as_posix())],
               "protected_evidence_hashes": predecessor["protected_evidence_hashes"],
               "open_blockers": ["certified_global_complex_domain_and_stability", "controlled_Hartree_truncation_and_regulator_RG_full_action", "joint_Phi_stationarity_and_material_source_detector", "independent_thermal_scale_and_physical_heat_collision_KMS_entropy_transport"],
               "controlling_blocker": "global_domain_Hartree_remainder_joint_Phi_material_transport_not_closed",

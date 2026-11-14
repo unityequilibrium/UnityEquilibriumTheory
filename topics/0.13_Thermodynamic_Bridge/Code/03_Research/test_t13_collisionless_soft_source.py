@@ -1,4 +1,5 @@
 """Independent soft-ray, exact streaming, static and protected-input checks."""
+from core.core_paths import canonical_existing_path
 
 import hashlib
 import importlib.util
@@ -185,7 +186,7 @@ def test_artifact_registry_hashes_and_unpromoted_physical_boundaries():
     assert record["prior_Xie_context_exposure_review"] == "REVIEW_REQUIRED"
     assert "R_gen" in record["excluded_variables"]
     for item in record["evidence_artifacts"]+record["protected_evidence_hashes"]:
-        assert hashlib.sha256((ROOT/item["path"]).read_bytes()).hexdigest() == item["sha256"]
+        assert hashlib.sha256((canonical_existing_path(ROOT/item["path"])).read_bytes()).hexdigest() == item["sha256"]
     registry = json.loads((ROOT/M.REGISTRY).read_text())
     assert all(x["verification_status"] == record["verification_status"] and x["controlling_blocker"] == record["controlling_blocker"] for x in registry["entries"])
 
@@ -202,6 +203,6 @@ def test_audit_runtime_path_allowlist_excludes_numeric_holdout(monkeypatch):
     monkeypatch.setattr(Path, "read_bytes", tracked_bytes)
     monkeypatch.setattr(Path, "read_text", tracked_text)
     record = M.audit()
-    allowed = {(ROOT/x["path"]).resolve() for x in record["evidence_artifacts"]+record["protected_evidence_hashes"]}
+    allowed = {(canonical_existing_path(ROOT/x["path"])).resolve() for x in record["evidence_artifacts"]+record["protected_evidence_hashes"]}
     assert accessed and set(accessed) <= allowed and all(record["checks"].values())
     assert all("xie" not in x.name.lower() for x in accessed)

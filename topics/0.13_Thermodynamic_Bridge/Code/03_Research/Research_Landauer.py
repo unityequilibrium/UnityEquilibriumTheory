@@ -170,7 +170,7 @@ def _write_verification_artifact(test_results, plot_paths, metrics):
 try:
     engine_path = (
         root_path
-        / "docs/topics/0.13_Thermodynamic_Bridge/Code/01_Engine/Engine_Thermodynamics.py"
+        / "topics/0.13_Thermodynamic_Bridge/Code/01_Engine/Engine_Thermodynamics.py"
     )
     spec = importlib.util.spec_from_file_location("Engine_Thermodynamics", engine_path)
     module = importlib.util.module_from_spec(spec)

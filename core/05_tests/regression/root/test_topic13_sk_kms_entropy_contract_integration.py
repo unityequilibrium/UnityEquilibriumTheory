@@ -1,6 +1,7 @@
 """Integration checks for the formal Topic 13 SK/KMS/entropy result."""
 
 from __future__ import annotations
+from core.core_paths import canonical_existing_path
 from docs.core.core_paths import repo_root
 
 import hashlib
@@ -16,11 +17,11 @@ DEPENDENCY = "docs/core/07_artifacts/gates/uet_major_result_dependency_unlock_ga
 
 
 def load(rel: str) -> dict:
-    return json.loads((ROOT / rel).read_text(encoding="utf-8-sig"))
+    return json.loads((canonical_existing_path(ROOT / rel)).read_text(encoding="utf-8-sig"))
 
 
 def digest(rel: str) -> str:
-    return hashlib.sha256((ROOT / rel).read_bytes()).hexdigest()
+    return hashlib.sha256((canonical_existing_path(ROOT / rel)).read_bytes()).hexdigest()
 
 
 def test_formal_interface_is_closed_for_lane_only() -> None:
