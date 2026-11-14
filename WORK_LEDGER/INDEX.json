@@ -4,11 +4,11 @@
   "generator_sha256": "b32005e4bdbf59da6681ae630fa1d9d4415c361f7523be18c8b52a86dc8c93e9",
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
-    "sources": 75,
-    "entries": 812,
+    "sources": 76,
+    "entries": 813,
     "by_stream": {
       "book-history": 94,
-      "operations": 112,
+      "operations": 113,
       "research": 606
     },
     "exact_duplicates": 0,
@@ -391,6 +391,11 @@
       "path": "2026/2026-11-10.md",
       "sha256": "8b88209a4f51d8cd92e0443d78f3b6153ec1d7724ec25bb37ce03f365e575bc3",
       "entries": 19
+    },
+    {
+      "path": "2026/2026-11-14.md",
+      "sha256": "12c5cef3aa05605b9c3bd8a180c695b7dcaa8738d3bcfc2ccbe677a3eb58a810",
+      "entries": 1
     },
     {
       "path": "2026-08-14.md",
@@ -16602,6 +16607,26 @@
       "basis": "explicit_stream_and_area",
       "flags": [],
       "date": "2026-11-10",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-14.md#root-core-and-topics-move-first-repair-separately",
+      "source": "2026/2026-11-14.md",
+      "anchor": "root-core-and-topics-move-first-repair-separately",
+      "start_line": 3,
+      "end_line": 14,
+      "title": "Root Core and topics: move first, repair separately",
+      "entry_sha256": "4e450e229fe2d3557c509a86d743da8b8aa5f863eeab349f89bc9d3df8c5080d",
+      "stream": "operations",
+      "areas": [
+        "repo-ops"
+      ],
+      "related_streams": [
+        "operations"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-14",
       "legacy_root_path": false
     },
     {
