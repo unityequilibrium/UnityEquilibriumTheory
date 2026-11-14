@@ -4,20 +4,30 @@ from __future__ import annotations
 
 import hashlib
 import json
+import os
 from datetime import date
 from pathlib import Path
+import sys
 
 
 ROOT = Path(__file__).resolve().parents[3]
+if str(ROOT) not in sys.path:
+    sys.path.insert(0, str(ROOT))
+
+from core.core_paths import canonical_existing_path  # noqa: E402
+from core.core_paths import canonical_path_for  # noqa: E402
+
 PACKAGE = ROOT / (
     "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/"
     "oxford_tgs_figure1_source_package.json"
 )
-OUT = ROOT / "docs/core/07_artifacts/topic13/t13_oxford_tgs_comparator_provenance_audit.json"
+OUTPUT_ROOT = Path(os.environ.get("UET_OUTPUT_ROOT", ROOT)).resolve()
+OUT_REL = "core/07_artifacts/topic13/t13_oxford_tgs_comparator_provenance_audit.json"
+OUT = OUTPUT_ROOT / OUT_REL
 
 
 def load_json(path: Path) -> dict:
-    with path.open("r", encoding="utf-8-sig") as handle:
+    with canonical_existing_path(path).open("r", encoding="utf-8-sig") as handle:
         value = json.load(handle)
     if not isinstance(value, dict):
         raise ValueError(f"expected JSON object: {path}")
@@ -26,7 +36,7 @@ def load_json(path: Path) -> dict:
 
 def sha256(path: Path) -> str:
     digest = hashlib.sha256()
-    with path.open("rb") as handle:
+    with canonical_existing_path(path).open("rb") as handle:
         for chunk in iter(lambda: handle.read(1024 * 1024), b""):
             digest.update(chunk)
     return digest.hexdigest()
@@ -34,7 +44,7 @@ def sha256(path: Path) -> str:
 
 def read_text(relative: str) -> str:
     path = ROOT / relative
-    return path.read_text(encoding="utf-8", errors="replace") if path.is_file() else ""
+    return canonical_existing_path(path).read_text(encoding="utf-8", errors="replace") if canonical_existing_path(path).is_file() else ""
 
 
 def main() -> int:
@@ -54,7 +64,7 @@ def main() -> int:
     raw_payload_available = True
     for record in package["raw_files"]:
         path = ROOT / record["local_path"]
-        exists = path.is_file()
+        exists = canonical_existing_path(path).is_file()
         declared_identity = bool(
             record.get("local_path")
             and isinstance(record.get("bytes"), int)
@@ -100,7 +110,7 @@ def main() -> int:
         "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/"
         "oxford_tgs_figure1/helsinki_unimp1_vacmod_map1.mat"
     )
-    mat_header = mat_path.read_bytes()[512:520] if mat_path.is_file() else b""
+    mat_header = canonical_existing_path(mat_path).read_bytes()[512:520] if canonical_existing_path(mat_path).is_file() else b""
 
     declared_labels = set(package["source_observation"].get("declared_script_labels", []))
     declared_variables = set(package["source_observation"].get("raw_signal_variables", []))
@@ -180,8 +190,8 @@ def main() -> int:
             "observable": package["major_result"]["observable"],
             "data_role": package["major_result"]["data_role"],
             "evidence_artifacts": [
-                {"path": PACKAGE.relative_to(ROOT).as_posix(), "sha256": sha256(PACKAGE)},
-                {"path": OUT.relative_to(ROOT).as_posix()},
+                {"path": canonical_path_for(PACKAGE.relative_to(ROOT).as_posix()), "sha256": sha256(PACKAGE)},
+                {"path": OUT_REL},
             ],
             "verification_status": status,
             "open_blockers": blockers,

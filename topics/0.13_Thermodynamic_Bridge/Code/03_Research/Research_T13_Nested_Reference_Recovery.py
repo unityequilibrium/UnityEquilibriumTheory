@@ -20,7 +20,7 @@ RECORD = ROOT / "topics/0.13_Thermodynamic_Bridge/Result/artifacts/t13_funding_n
 
 
 def sha256(path: Path) -> str:
-    return hashlib.sha256(path.read_bytes()).hexdigest()
+    return hashlib.sha256(canonical_existing_path(path).read_bytes()).hexdigest()
 
 
 def git_value(root: Path, *args: str) -> str:
@@ -52,7 +52,7 @@ def _changes(before: object, after: object, prefix: str = "") -> list[str]:
 
 
 def audit(source_root: Path) -> dict:
-    lineage = json.loads(LINEAGE.read_text(encoding="utf-8"))
+    lineage = json.loads(canonical_existing_path(LINEAGE).read_text(encoding="utf-8"))
     rows = []
     for record in lineage["records"]:
         candidates = record["candidates"]
@@ -61,15 +61,15 @@ def audit(source_root: Path) -> dict:
         candidate = candidates[0]["path"]
         source_file = source_root / candidate
         clean_file = canonical_existing_path(ROOT / candidate)
-        if not source_file.is_file() or not clean_file.is_file():
+        if not canonical_existing_path(source_file).is_file() or not canonical_existing_path(clean_file).is_file():
             raise FileNotFoundError(candidate)
-        source_json = json.loads(source_file.read_text(encoding="utf-8"))
-        clean_json = json.loads(clean_file.read_text(encoding="utf-8"))
+        source_json = json.loads(canonical_existing_path(source_file).read_text(encoding="utf-8"))
+        clean_json = json.loads(canonical_existing_path(clean_file).read_text(encoding="utf-8"))
         source_hash = sha256(source_file)
         clean_hash = sha256(clean_file)
         rows.append({
             "recorded_path": record["recorded_path"],
-            "recorded_path_missing_in_both_worktrees": not (source_root / record["recorded_path"]).exists()
+            "recorded_path_missing_in_both_worktrees": not (canonical_existing_path(source_root / record["recorded_path"])).exists()
             and not (canonical_existing_path(ROOT / record["recorded_path"])).exists(),
             "relocated_path": candidate,
             "recorded_sha256": record["recorded_sha256"],
@@ -122,7 +122,7 @@ def main() -> None:
     args = parser.parse_args()
     result = audit(args.source_root)
     if args.verify_saved:
-        saved = json.loads(RECORD.read_text(encoding="utf-8"))
+        saved = json.loads(canonical_existing_path(RECORD).read_text(encoding="utf-8"))
         head_keys = {"source_head_at_observation", "clean_head_at_observation"}
         match = ({key: value for key, value in result.items() if key not in head_keys}
                  == {key: value for key, value in saved.items() if key not in head_keys})

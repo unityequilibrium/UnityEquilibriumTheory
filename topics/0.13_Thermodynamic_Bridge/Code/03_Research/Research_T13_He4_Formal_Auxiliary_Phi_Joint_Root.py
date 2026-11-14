@@ -14,6 +14,7 @@ ROOT = Path(__file__).resolve().parents[4]
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
+from core.core_paths import canonical_existing_path
 from docs.core.uet_covariant_response import (  # noqa: E402
     response_potential,
     response_potential_derivative,
@@ -42,7 +43,7 @@ ORDERS = (128, REFERENCE_ORDER)
 
 
 def _sha(path: Path) -> str:
-    return hashlib.sha256(path.read_bytes()).hexdigest()
+    return hashlib.sha256(canonical_existing_path(path).read_bytes()).hexdigest()
 
 
 def _phi_residual(phi: float, mu: float, config) -> float:
@@ -70,8 +71,8 @@ def _profile_total_potential(phi: float, t: float, mu: float, config, order: int
 
 
 def audit() -> dict:
-    auxiliary = json.loads(AUXILIARY_AUDIT.read_text(encoding="utf-8"))
-    gaussian = json.loads(GAUSSIAN_BOUNDARY.read_text(encoding="utf-8"))
+    auxiliary = json.loads(canonical_existing_path(AUXILIARY_AUDIT).read_text(encoding="utf-8"))
+    gaussian = json.loads(canonical_existing_path(GAUSSIAN_BOUNDARY).read_text(encoding="utf-8"))
     config = formal_auxiliary_config()
     normalized_config = natural_bridge_config().eos
     mu = CHEMICAL_POTENTIAL

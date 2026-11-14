@@ -11,10 +11,16 @@ import hashlib
 import json
 from datetime import date
 from pathlib import Path
+import sys
 from typing import Any
 
 
 ROOT = Path(__file__).resolve().parents[3]
+if str(ROOT) not in sys.path:
+    sys.path.insert(0, str(ROOT))
+
+from core.core_paths import canonical_existing_path  # noqa: E402
+
 PROTOCOL_REL = "docs/topics/0.13_Thermodynamic_Bridge/BASE_PHI_INDEPENDENT_CALIBRATION_PROTOCOL.md"
 OUT_REL = "docs/core/07_artifacts/topic13/t13_base_phi_independent_calibration_requirement.json"
 
@@ -39,15 +45,15 @@ REQUIRED_SNIPPETS = (
 
 
 def sha256(rel: str) -> str:
-    return hashlib.sha256((ROOT / rel).read_bytes()).hexdigest()
+    return hashlib.sha256((canonical_existing_path(ROOT / rel)).read_bytes()).hexdigest()
 
 
 def build_artifact(protocol_text: str | None = None) -> dict[str, Any]:
     if protocol_text is None:
-        protocol_text = (ROOT / PROTOCOL_REL).read_text(encoding="utf-8-sig")
+        protocol_text = (canonical_existing_path(ROOT / PROTOCOL_REL)).read_text(encoding="utf-8-sig")
 
     checks = {snippet: snippet in protocol_text for snippet in REQUIRED_SNIPPETS}
-    protocol_present = (ROOT / PROTOCOL_REL).is_file()
+    protocol_present = (canonical_existing_path(ROOT / PROTOCOL_REL)).is_file()
     passed = protocol_present and all(checks.values())
     status = "PASS_OPEN_CALIBRATION_REQUIREMENT" if passed else "FAIL_CALIBRATION_PROTOCOL_CONTRACT"
     major_result = {

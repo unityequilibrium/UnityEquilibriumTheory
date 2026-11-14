@@ -4,12 +4,18 @@ from __future__ import annotations
 from pathlib import Path
 import hashlib
 import json
+import sys
 
 import h5py
 import numpy as np
 
 
 ROOT = Path(__file__).resolve().parents[3]
+if str(ROOT) not in sys.path:
+    sys.path.insert(0, str(ROOT))
+
+from core.core_paths import canonical_existing_path  # noqa: E402
+
 BASE = ROOT / "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research"
 SUMMARY = BASE / "t13_calorine_zenodo_pbte_run_m12x12x6_summary.json"
 KAPPA = BASE / "reproduction/t13_calorine_pbte/mesh_12x12x6/kappa-m12126.hdf5"
@@ -41,14 +47,14 @@ def _sha(path: str | Path) -> str:
     candidate = Path(path)
     if not candidate.is_absolute():
         candidate = ROOT / candidate
-    return hashlib.sha256(candidate.read_bytes()).hexdigest()
+    return hashlib.sha256(canonical_existing_path(candidate).read_bytes()).hexdigest()
 
 
 def inspect_local_inputs() -> dict[str, object]:
-    summary = json.loads(SUMMARY.read_text(encoding="utf-8"))
+    summary = json.loads(canonical_existing_path(SUMMARY).read_text(encoding="utf-8"))
     expected = summary["output_artifacts"]["kappa_hdf5"]
-    full_lbte = json.loads(FULL_LBTE.read_text(encoding="utf-8"))
-    if not KAPPA.is_file():
+    full_lbte = json.loads(canonical_existing_path(FULL_LBTE).read_text(encoding="utf-8"))
+    if not canonical_existing_path(KAPPA).is_file():
         declared_keys = sorted(REQUIRED_COMPARATOR_KEYS)
         return {
             "input_mode": "METADATA_ONLY_PUBLIC_BOUNDARY",
@@ -92,7 +98,7 @@ def inspect_local_inputs() -> dict[str, object]:
         }
         for name, values in arrays.items()
     }
-    hdf5_paths = sorted((BASE / "reproduction").rglob("*.hdf5"))
+    hdf5_paths = sorted((canonical_existing_path(BASE / "reproduction")).rglob("*.hdf5"))
     matching_fields: dict[str, list[str]] = {}
     collision_eigenvalue_files: list[str] = []
     for path in hdf5_paths:

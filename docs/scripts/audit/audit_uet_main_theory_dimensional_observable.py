@@ -11,6 +11,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[3]
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
+from core.core_paths import canonical_existing_path
 from docs.core.core_paths import canonical_artifact_path
 
 ARTIFACTS = ROOT / "docs/core/07_artifacts"
@@ -23,11 +24,11 @@ T13_HE4_COMPOSITION = canonical_artifact_path(
 
 
 def _read(path: Path) -> dict:
-    return json.loads(path.read_text(encoding="utf-8-sig"))
+    return json.loads(canonical_existing_path(path).read_text(encoding="utf-8-sig"))
 
 
 def _sha(path: Path) -> str:
-    return hashlib.sha256(path.read_bytes()).hexdigest()
+    return hashlib.sha256(canonical_existing_path(path).read_bytes()).hexdigest()
 
 
 def build_artifacts() -> tuple[dict, dict]:

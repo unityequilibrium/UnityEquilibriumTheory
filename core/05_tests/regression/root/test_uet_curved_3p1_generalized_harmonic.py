@@ -139,9 +139,9 @@ def test_contract_preserves_uet_ontology_and_open_evolution_boundary() -> None:
 
 
 def test_generated_artifacts_are_hash_linked_and_keep_parent_work_partial() -> None:
-    verification = json.loads(VERIFY.read_text(encoding="utf-8"))
-    formula = json.loads(FORMULA.read_text(encoding="utf-8"))
-    gate = json.loads(GATE.read_text(encoding="utf-8"))
+    verification = json.loads(canonical_existing_path(VERIFY).read_text(encoding="utf-8"))
+    formula = json.loads(canonical_existing_path(FORMULA).read_text(encoding="utf-8"))
+    gate = json.loads(canonical_existing_path(GATE).read_text(encoding="utf-8"))
     assert verification["status"] == "PASS_GH_PRINCIPAL_CHARACTERISTIC_SYSTEM"
     assert verification["major_result"]["closure_level"] == "CLOSED_FOR_LANE"
     assert formula["status"] == "PASS_SOURCE_LOCKED_GH_PRINCIPAL_FORMULAS"

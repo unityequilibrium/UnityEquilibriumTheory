@@ -16,6 +16,11 @@ import subprocess
 import sys
 
 ROOT = Path(__file__).resolve().parents[3]
+if str(ROOT) not in sys.path:
+    sys.path.insert(0, str(ROOT))
+
+from core.core_paths import canonical_existing_path  # noqa: E402
+
 SCHEMA = "docs/meta/schemas/calculation_contract_v1.schema.json"
 BASELINE = "docs/meta/calculation_completeness_baseline.json"
 REPORT = "docs/meta/calculation_completeness_inventory.json"
@@ -49,7 +54,7 @@ def load_json(path: Path):
                 raise ValueError(f"duplicate JSON key: {k}")
             result[k] = v
         return result
-    return json.loads(path.read_text(encoding="utf-8-sig"), object_pairs_hook=pairs,
+    return json.loads(canonical_existing_path(path).read_text(encoding="utf-8-sig"), object_pairs_hook=pairs,
                       parse_constant=lambda x: (_ for _ in ()).throw(ValueError(x)))
 
 
@@ -67,7 +72,7 @@ def repo_path(root: Path, path: str) -> Path:
     target = (root / path).resolve()
     if not target.is_relative_to(root.resolve()):
         raise ValueError(f"path escapes repository: {path}")
-    if target.exists():
+    if canonical_existing_path(target).exists():
         return target
     # Historical contract locators survive the directory move. Resolve only
     # these explicit relocations; never search by basename or infer hash identity.
@@ -77,7 +82,7 @@ def repo_path(root: Path, path: str) -> Path:
         relocated = root / "core" / relative[len("docs/core/") :]
     elif relative.startswith("docs/topics/"):
         relocated = root / "topics" / relative[len("docs/topics/") :]
-    if relocated is not None and relocated.exists():
+    if relocated is not None and canonical_existing_path(relocated).exists():
         return relocated.resolve()
     return target
 
@@ -91,7 +96,7 @@ def identity_bytes(root: Path, item: dict) -> bytes:
             raise ValueError("git_blob needs an immutable 40-character commit")
         data = git(root, "show", f"{commit}:{path}")
     else:
-        data = repo_path(root, path).read_bytes()
+        data = canonical_existing_path(repo_path(root, path)).read_bytes()
     if Path(path).suffix.lower() in TEXT:
         data = data.replace(b"\r\n", b"\n").replace(b"\r", b"\n")
     return data
@@ -502,12 +507,12 @@ def discover_contracts(root: Path) -> list[tuple[str, dict]]:
     result = []
     # Bounded to research workspaces; do not walk caches, media, .git or books.
     for base in (root / "core", root / "topics"):
-        paths = set(base.rglob("CALCULATION_CONTRACT.json"))
-        paths.update(p for d in base.rglob("calculation_contracts") if d.is_dir() for p in d.glob("*.json"))
+        paths = set(canonical_existing_path(base).rglob("CALCULATION_CONTRACT.json"))
+        paths.update(p for d in canonical_existing_path(base).rglob("calculation_contracts") if canonical_existing_path(d).is_dir() for p in canonical_existing_path(d).glob("*.json"))
         for path in sorted(paths):
             result.append((path.relative_to(root).as_posix(), load_json(path)))
     # Existing manifests may embed the same contract; no competing duplicate IDs.
-    baseline = load_json(root / BASELINE) if (root / BASELINE).exists() else {}
+    baseline = load_json(root / BASELINE) if (canonical_existing_path(root / BASELINE)).exists() else {}
     for locator in baseline.get("embedded_contracts", []):
         result.append((locator, load_json(repo_path(root, locator))["calculation_contract"]))
     return result
@@ -518,9 +523,9 @@ def adoption_inventory(root: Path, baseline: dict, contracts: list, reviews: lis
     """Triage declared routes, not individual files as experiments or scientific grades."""
     aliases, errors, sources, ambiguous = {}, [], [], set()
     for path in (BASELINE, REGISTRY, MIGRATION_MAP, SCHEMA, "docs/scripts/audit/audit_calculation_completeness.py"):
-        if repo_path(root, path).is_file():
+        if canonical_existing_path(repo_path(root, path)).is_file():
             sources.append({"path": path, "sha256": identity_hash(root, {"path": path, "kind": "working_file"})})
-    if repo_path(root, MIGRATION_MAP).is_file():
+    if canonical_existing_path(repo_path(root, MIGRATION_MAP)).is_file():
         migration = load_json(repo_path(root, MIGRATION_MAP))
         for row in migration.get("files", migration.get("records", [])):
             target = row["canonical_path"]
@@ -542,13 +547,13 @@ def adoption_inventory(root: Path, baseline: dict, contracts: list, reviews: lis
         target = aliases.get(path, path)
         # Never guess by basename or accept a mapping outside this repository.
         resolved = repo_path(root, target)
-        canonical = resolved.relative_to(root.resolve()).as_posix() if resolved.exists() else target
+        canonical = resolved.relative_to(root.resolve()).as_posix() if canonical_existing_path(resolved).exists() else target
         resolved_cache[path] = canonical
         return canonical
 
     def exists(path):
         if path not in existence:
-            existence[path] = repo_path(root, path).is_file()
+            existence[path] = canonical_existing_path(repo_path(root, path)).is_file()
         return existence[path]
 
     seeds = {}
@@ -558,7 +563,7 @@ def adoption_inventory(root: Path, baseline: dict, contracts: list, reviews: lis
             errors.append(f"duplicate baseline route_id: {rid}")
         seeds[rid] = {**route, "kind": "EQUATION_FAMILY" if route["owner"] == "CORE" else "TOPIC_PACKAGE",
                       "baseline_paths": route["paths"], "discovery": [BASELINE]}
-    if repo_path(root, REGISTRY).is_file():
+    if canonical_existing_path(repo_path(root, REGISTRY)).is_file():
         for entry in load_json(repo_path(root, REGISTRY)).get("entries", []):
             rid = entry["equation_id"]
             route = seeds.setdefault(rid, {"route_id": rid, "owner": "CORE", "kind": "EQUATION_FAMILY", "paths": [], "discovery": []})
@@ -567,14 +572,14 @@ def adoption_inventory(root: Path, baseline: dict, contracts: list, reviews: lis
                          registry_classification=entry.get("classification"),
                          downstream_dependencies=entry.get("downstream_dependencies", []))
             route["discovery"].append(REGISTRY)
-    topics = sorted(p for p in (root / "topics").glob("0.*") if p.is_dir() and re.match(r"^0\.\d+_", p.name))
+    topics = sorted(p for p in (canonical_existing_path(root / "topics")).glob("0.*") if canonical_existing_path(p).is_dir() and re.match(r"^0\.\d+_", p.name))
     for folder in topics:
         owner = folder.name
         prefix = folder.relative_to(root).as_posix() + "/"
         route = seeds.setdefault(owner, {"route_id": owner, "owner": owner, "kind": "TOPIC_PACKAGE", "paths": [],
             "claim_boundary": "Unreviewed topic package, not accepted from folder presence", "discovery": []})
         docs = [prefix + name for name in ("README.md", "METHOD.md", "LIMITATIONS.md", "FORMULA_AUDIT.md", "DATA_MANIFEST.md")
-                if repo_path(root, prefix + name).is_file()]
+                if canonical_existing_path(repo_path(root, prefix + name)).is_file()]
         # A missing verification spec remains a named gap, not a reason to omit a topic.
         route["paths"] = sorted(set(route["paths"] + docs + [prefix + "VERIFICATION_SPEC.md"]
                                     + [p for p in current if p.startswith(prefix)]))
@@ -685,7 +690,7 @@ def build_report(root: Path, changed: list[str] | None = None) -> dict:
             if identity.get("kind") == "working_file":
                 resolved_identity = repo_path(root, identity["path"]).relative_to(root.resolve()).as_posix()
                 coverage.setdefault(resolved_identity, []).append(review["contract_id"])
-    baseline = load_json(root / BASELINE) if (root / BASELINE).exists() else {"routes": [], "legacy_paths": []}
+    baseline = load_json(root / BASELINE) if (canonical_existing_path(root / BASELINE)).exists() else {"routes": [], "legacy_paths": []}
     # Explicit legacy path queue prevents registry seed coverage being mistaken for completeness.
     try:
         discovered = git(root, "ls-files", "--cached", "--others", "--exclude-standard").decode().splitlines()
@@ -694,24 +699,24 @@ def build_report(root: Path, changed: list[str] | None = None) -> dict:
         discovered = [
             p.relative_to(root).as_posix()
             for base in (root / "core", root / "topics", root / "docs")
-            for p in base.rglob("*") if p.is_file()
+            for p in canonical_existing_path(base).rglob("*") if canonical_existing_path(p).is_file()
         ]
-    current = {p for p in discovered if scientific_path(p) and repo_path(root, p).is_file()}
+    current = {p for p in discovered if scientific_path(p) and canonical_existing_path(repo_path(root, p)).is_file()}
     formal_roots = ("core/01_contracts/", "core/03_lanes/", "core/04_proofs/",
                     "core/08_history/research_notes/")
     formal_documents = {p for p in discovered if p.startswith(formal_roots)
-                        and Path(p).suffix in {".md", ".tex"} and repo_path(root, p).is_file()}
+                        and Path(p).suffix in {".md", ".tex"} and canonical_existing_path(repo_path(root, p)).is_file()}
     current |= formal_documents
     routes, inventory_scope, inventory_errors = adoption_inventory(root, baseline, contracts, reviews, current)
     inventory_scope["formal_document_surfaces"] = len(formal_documents)
     errors.extend(inventory_errors)
     unreviewed = sorted(p for p in current if p not in coverage)
-    missing = sorted(p for p in baseline["legacy_paths"] if not repo_path(root, p).is_file())
+    missing = sorted(p for p in baseline["legacy_paths"] if not canonical_existing_path(repo_path(root, p)).is_file())
     changed = sorted(set(changed or []))
     for p in changed:
         covered = p in coverage or p in baseline.get("support_paths", [])
         resolved_changed = repo_path(root, p)
-        if result_path(p) and resolved_changed.is_file():
+        if result_path(p) and canonical_existing_path(resolved_changed).is_file():
             try:
                 obj = load_json(resolved_changed)
                 matched = next((c for _, c in contracts if isinstance(obj, dict) and c["contract_id"] == obj.get("contract_id")), None)
@@ -721,7 +726,7 @@ def build_report(root: Path, changed: list[str] | None = None) -> dict:
                     covered = True
             except (OSError, ValueError) as exc:
                 errors.append(f"invalid changed result {p}: {exc}")
-        if scientific_path(p) and resolved_changed.is_file() and not covered:
+        if scientific_path(p) and canonical_existing_path(resolved_changed).is_file() and not covered:
             errors.append(f"changed scientific path needs classification/contract: {p}")
     return {"schema_version": "uet-calculation-coverage-v1", "kind": "METHODOLOGICAL_NOT_PHYSICS_GATE",
             "baseline_lineage": baseline.get("lineage", {}),

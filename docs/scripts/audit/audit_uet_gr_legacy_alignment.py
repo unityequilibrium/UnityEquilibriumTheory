@@ -20,6 +20,7 @@ REPO_ROOT = Path(__file__).resolve().parents[3]
 if str(REPO_ROOT) not in sys.path:
     sys.path.insert(0, str(REPO_ROOT))
 
+from core.core_paths import canonical_existing_path
 from docs.core.core_paths import canonical_artifact_path  # noqa: E402
 
 LEGACY_LORENTZ_PATH = REPO_ROOT / "docs" / "core" / "uet_lorentz.py"
@@ -46,11 +47,11 @@ ARTIFACT_PATH = canonical_artifact_path("legacy_covariance_alignment_gate.json")
 def _source_path(legacy: Path, canonical: Path) -> Path:
     """Read the canonical implementation while a legacy path is a shim."""
 
-    return canonical if canonical.exists() else legacy
+    return canonical if canonical_existing_path(canonical).exists() else legacy
 
 
 def _sha256(path: Path) -> str:
-    return hashlib.sha256(path.read_bytes()).hexdigest()
+    return hashlib.sha256(canonical_existing_path(path).read_bytes()).hexdigest()
 
 
 def _class_method(tree: ast.AST, class_name: str, method_name: str) -> ast.FunctionDef:
@@ -138,8 +139,8 @@ def _legacy_noether_findings(source: str) -> dict[str, Any]:
 def build_gate() -> dict[str, Any]:
     lorentz_path = _source_path(LEGACY_LORENTZ_PATH, CANONICAL_LORENTZ_PATH)
     noether_path = _source_path(LEGACY_NOETHER_PATH, CANONICAL_NOETHER_PATH)
-    lorentz_source = lorentz_path.read_text(encoding="utf-8")
-    noether_source = noether_path.read_text(encoding="utf-8")
+    lorentz_source = canonical_existing_path(lorentz_path).read_text(encoding="utf-8")
+    noether_source = canonical_existing_path(noether_path).read_text(encoding="utf-8")
     lorentz = _legacy_lorentz_findings(lorentz_source)
     noether = _legacy_noether_findings(noether_source)
 

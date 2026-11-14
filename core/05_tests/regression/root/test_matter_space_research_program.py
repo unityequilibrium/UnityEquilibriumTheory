@@ -17,7 +17,7 @@ ROOT = repo_root()
 
 
 def _read(path: Path) -> dict:
-    return json.loads(path.read_text(encoding="utf-8"))
+    return json.loads(canonical_existing_path(path).read_text(encoding="utf-8"))
 
 
 def test_generated_program_gate_matches_current_inputs() -> None:

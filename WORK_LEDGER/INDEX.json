@@ -5,14 +5,15 @@
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
     "sources": 77,
-    "entries": 814,
+    "entries": 815,
     "by_stream": {
       "book-history": 94,
       "operations": 114,
-      "research": 606
+      "research": 606,
+      "review": 1
     },
     "exact_duplicates": 0,
-    "review_entries": 2
+    "review_entries": 3
   },
   "duplicate_dates": {
     "2026-08-14": [
@@ -399,8 +400,8 @@
     },
     {
       "path": "2026/2026-11-15.md",
-      "sha256": "ff6256e9b91c36e4c5109b541305a722e164cc10b037174c8ef10c37b2051f92",
-      "entries": 1
+      "sha256": "2ad3f261fb715e8ac638283cbddc4469f6a93b445c4d9135ef018f56d4f9be40",
+      "entries": 2
     },
     {
       "path": "2026-08-14.md",
@@ -16639,9 +16640,9 @@
       "source": "2026/2026-11-15.md",
       "anchor": "root-coretopics-post-move-repair",
       "start_line": 3,
-      "end_line": 15,
+      "end_line": 16,
       "title": "Root Core–Topics post-move repair",
-      "entry_sha256": "6c8fd01179a9b62fa08e8b51f456fb6240fa275fb529e767f34af2495a69d569",
+      "entry_sha256": "d8ccececcea3151bd8c5e1c9966b20fce80896fbe36f68c26ca73f94e8c29b00",
       "stream": "operations",
       "areas": [
         "repo-ops"
@@ -16651,6 +16652,25 @@
       ],
       "basis": "explicit_stream_and_area",
       "flags": [],
+      "date": "2026-11-15",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-15.md#addendum--full-run-result-and-output-isolation-follow-up",
+      "source": "2026/2026-11-15.md",
+      "anchor": "addendum--full-run-result-and-output-isolation-follow-up",
+      "start_line": 17,
+      "end_line": 23,
+      "title": "Addendum — full-run result and output-isolation follow-up",
+      "entry_sha256": "c5476224840c9ad50bcf4b7fbc5e9a75826484f6b25e000e4dc8930be38cef6a",
+      "stream": "review",
+      "areas": [],
+      "related_streams": [],
+      "basis": "invalid_stream_declaration",
+      "flags": [
+        "missing_or_unknown_primary_area",
+        "invalid_stream"
+      ],
       "date": "2026-11-15",
       "legacy_root_path": false
     },

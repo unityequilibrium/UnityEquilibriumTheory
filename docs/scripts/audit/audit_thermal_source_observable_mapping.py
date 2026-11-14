@@ -12,6 +12,7 @@ ROOT = Path(__file__).resolve().parents[2]
 if str(ROOT.parent) not in sys.path:
     sys.path.insert(0, str(ROOT.parent))
 
+from core.core_paths import canonical_existing_path
 from docs.core.thermal_source_observable_map import (  # noqa: E402
     NORMALIZED_TTG_OBSERVABLE,
     THERMAL_SOURCE_MAP_SCHEMA_VERSION,
@@ -30,7 +31,7 @@ OUTPUT_PATH = TOPIC / "Result" / "artifacts" / "matter_space_thermal_observable_
 
 
 def _sha256(path: Path) -> str:
-    return hashlib.sha256(path.read_bytes()).hexdigest()
+    return hashlib.sha256(canonical_existing_path(path).read_bytes()).hexdigest()
 
 
 def _local_numeric_exists(source: dict) -> bool:
@@ -38,12 +39,12 @@ def _local_numeric_exists(source: dict) -> bool:
     if not local_path:
         return False
     candidate = TOPIC / local_path
-    return candidate.is_file()
+    return canonical_existing_path(candidate).is_file()
 
 
 def build_artifact() -> dict:
-    source_package = json.loads(SOURCE_PACKAGE_PATH.read_text(encoding="utf-8"))
-    source_review = json.loads(SOURCE_REVIEW_PATH.read_text(encoding="utf-8"))
+    source_package = json.loads(canonical_existing_path(SOURCE_PACKAGE_PATH).read_text(encoding="utf-8"))
+    source_review = json.loads(canonical_existing_path(SOURCE_REVIEW_PATH).read_text(encoding="utf-8"))
     sources = source_package.get("sources", [])
     source_rows = []
     for source in sources:

@@ -1,6 +1,7 @@
 """Regression gates for legacy covariance and conservation claim quarantine."""
 
 from __future__ import annotations
+from core.core_paths import canonical_existing_path
 from docs.core.core_paths import canonical_artifact_path
 
 import json
@@ -40,7 +41,7 @@ def test_audit_detects_non_covariant_noether_diagnostic() -> None:
 
 def test_generated_gate_quarantines_claims_without_pretending_physics_passes() -> None:
     path = canonical_artifact_path("legacy_covariance_alignment_gate.json")
-    artifact = json.loads(path.read_text(encoding="utf-8"))
+    artifact = json.loads(canonical_existing_path(path).read_text(encoding="utf-8"))
     assert artifact["audit_status"] == "PASS"
     assert artifact["evidence_status"] == "BLOCKED"
     assert artifact["gates"]["legacy_claim_quarantine"]["status"] == "PASS"
@@ -58,7 +59,7 @@ def test_generated_gate_quarantines_claims_without_pretending_physics_passes() -
 
 def test_claim_gate_keeps_lorentz_and_einstein_exports_blocked() -> None:
     path = canonical_artifact_path("gr_correspondence_claim_gate.json")
-    artifact = json.loads(path.read_text(encoding="utf-8"))
+    artifact = json.loads(canonical_existing_path(path).read_text(encoding="utf-8"))
     blocked = {entry["claim"] for entry in artifact["blocked_claims"]}
     assert "UET is Lorentz invariant." in blocked
     assert "UET derives Einstein's equations." in blocked

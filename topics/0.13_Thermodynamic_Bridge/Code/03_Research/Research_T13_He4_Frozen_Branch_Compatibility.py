@@ -48,15 +48,15 @@ NATURAL_BRIDGE = DOCS / "core/07_artifacts/topic13/t13_uet_o2_action_thermal_obs
 def _evidence(paths: tuple[Path, ...]) -> list[dict[str, str]]:
     return [
         {"path": path.relative_to(ROOT).as_posix(),
-         "sha256": hashlib.sha256(path.read_bytes()).hexdigest()}
+         "sha256": hashlib.sha256(canonical_existing_path(path).read_bytes()).hexdigest()}
         for path in paths
     ]
 
 
 def audit() -> dict:
-    composition = json.loads(COMPOSITION.read_text(encoding="utf-8"))
-    calibration = json.loads(CALIBRATION.read_text(encoding="utf-8"))
-    natural_bridge = json.loads(NATURAL_BRIDGE.read_text(encoding="utf-8"))
+    composition = json.loads(canonical_existing_path(COMPOSITION).read_text(encoding="utf-8"))
+    calibration = json.loads(canonical_existing_path(CALIBRATION).read_text(encoding="utf-8"))
+    natural_bridge = json.loads(canonical_existing_path(NATURAL_BRIDGE).read_text(encoding="utf-8"))
     frozen = composition["state_interface"]["natural_action_state"]
     physical = composition["state_interface"]["physical_he4_state"]
     t, mu, phi = (float(frozen[key]) for key in

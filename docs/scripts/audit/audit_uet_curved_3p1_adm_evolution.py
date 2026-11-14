@@ -17,6 +17,7 @@ ROOT = Path(__file__).resolve().parents[3]
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
+from core.core_paths import canonical_existing_path
 from docs.core.uet_curved_3p1_adm_evolution import (
     ADMStressProjection,
     adm_evolution_contract,
@@ -51,7 +52,7 @@ SELECTION = canonical_artifact_path(
 
 
 def _sha256(path: Path) -> str:
-    return hashlib.sha256(path.read_bytes()).hexdigest()
+    return hashlib.sha256(canonical_existing_path(path).read_bytes()).hexdigest()
 
 
 def _json_ready(value: Any) -> Any:
@@ -128,9 +129,9 @@ def _stable_principal_residual(value: float) -> float:
 def build_artifacts() -> tuple[dict, dict, dict, dict]:
     now = datetime.now(timezone.utc).isoformat()
     sources = {
-        "adm_equations": json.loads(GOURGOULHON.read_text(encoding="utf-8")),
-        "hyperbolicity_boundary": json.loads(GUNDLACH.read_text(encoding="utf-8")),
-        "next_generalized_harmonic_branch": json.loads(LINDBLOM.read_text(encoding="utf-8")),
+        "adm_equations": json.loads(canonical_existing_path(GOURGOULHON).read_text(encoding="utf-8")),
+        "hyperbolicity_boundary": json.loads(canonical_existing_path(GUNDLACH).read_text(encoding="utf-8")),
+        "next_generalized_harmonic_branch": json.loads(canonical_existing_path(LINDBLOM).read_text(encoding="utf-8")),
     }
     contract = adm_evolution_contract()
     resolution = 6

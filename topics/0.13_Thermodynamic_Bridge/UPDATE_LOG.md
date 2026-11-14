@@ -7440,3 +7440,10 @@ EVIDENCE_PATHS:
 - `docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/test_ding2022_fig1d_pixel_quality_audit.py`
 - `docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/ding_2022_fig1d_pixel_quality_audit.json`
 - `docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/DING_FIG1D_PIXEL_QUALITY_AUDIT.md`
+
+## 2026-11-15 — Post-move routing and output isolation (software-only)
+- Broad shared run on the pre-follow-up tree: Topic 13 collected 1,406 tests (1,314 passed, 66 failed, 26 errors); see `.uet-run-reports/20261114T191254764386Z-1153050a9d/report.md`.
+- Updated legacy-path resolution and isolated three audit-test outputs under temporary roots; metadata-only Oxford extraction now reports absent CSV explicitly rather than requiring a file it does not emit.
+- Focused post-fix tests: 3 passed; changed Python sources compile. No equation, scientific artifact, hash, or research status was changed.
+- This is a software-path correction only, not a new scientific result or validation; old identity mismatches remain visible.
+- Next: classify the remaining Topic 13 failures by stale identity versus implementation issue from the saved run; do not rerun producers or refresh hashes by default.

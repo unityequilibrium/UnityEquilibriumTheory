@@ -1,4 +1,5 @@
 """Tests for the conditional UET-material lattice interface."""
+from core.core_paths import canonical_existing_path
 from docs.core.core_paths import repo_root
 import hashlib
 import json
@@ -63,8 +64,8 @@ def test_generated_interface_artifact_is_scoped_and_hash_linked():
     root = repo_root()
     artifact_path = root / 'core/07_artifacts/topic13/t13_uet_material_lattice_interface_contract_audit.json'
     registry_path = root / 'core/07_artifacts/correspondence/uet_equation_correspondence_registry_topic13_material_lattice_interface_addendum.json'
-    artifact = json.loads(artifact_path.read_text(encoding="utf-8"))
-    registry = json.loads(registry_path.read_text(encoding="utf-8"))
+    artifact = json.loads(canonical_existing_path(artifact_path).read_text(encoding="utf-8"))
+    registry = json.loads(canonical_existing_path(registry_path).read_text(encoding="utf-8"))
     json.dumps(artifact, allow_nan=False)
     json.dumps(registry, allow_nan=False)
     assert artifact["closure_level"] == "CLOSED_FOR_LANE"
@@ -74,7 +75,7 @@ def test_generated_interface_artifact_is_scoped_and_hash_linked():
     assert artifact["xie_2026_accessed"] is False
     assert artifact["parameter_fitting_performed"] is False
     for relative, digest in artifact["source_hashes"].items():
-        assert hashlib.sha256((root / relative).read_bytes()).hexdigest() == digest
+        assert hashlib.sha256((canonical_existing_path(root / relative)).read_bytes()).hexdigest() == digest
     evidence = registry["equation_entries"][0]["evidence_artifacts"][0]
     assert evidence["path"] == artifact_path.relative_to(root).as_posix()
-    assert hashlib.sha256(artifact_path.read_bytes()).hexdigest() == evidence["sha256"]
+    assert hashlib.sha256(canonical_existing_path(artifact_path).read_bytes()).hexdigest() == evidence["sha256"]
