@@ -4,11 +4,11 @@
   "generator_sha256": "b32005e4bdbf59da6681ae630fa1d9d4415c361f7523be18c8b52a86dc8c93e9",
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
-    "sources": 76,
-    "entries": 827,
+    "sources": 77,
+    "entries": 829,
     "by_stream": {
       "book-history": 94,
-      "operations": 112,
+      "operations": 114,
       "research": 621
     },
     "exact_duplicates": 0,
@@ -396,6 +396,11 @@
       "path": "2026/2026-11-11.md",
       "sha256": "ba92497387807004a6a82611031abee5b7bebaca235db32b06e3f5ebc8e2cbe5",
       "entries": 15
+    },
+    {
+      "path": "2026/2026-11-14.md",
+      "sha256": "a7d9c5d30419f6b772ac37f9f82069b9ae4d52be8c1da878f40a7c01fabc8574",
+      "entries": 2
     },
     {
       "path": "2026-08-14.md",
@@ -16907,6 +16912,46 @@
       "basis": "explicit_stream_and_area",
       "flags": [],
       "date": "2026-11-11",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-14.md#root-core-and-topics-move-first-repair-separately",
+      "source": "2026/2026-11-14.md",
+      "anchor": "root-core-and-topics-move-first-repair-separately",
+      "start_line": 3,
+      "end_line": 15,
+      "title": "Root Core and topics: move first, repair separately",
+      "entry_sha256": "3ec636fafe9e33e16c8123d50817ca75e2dbc567388bd5e311dda147ce5376b6",
+      "stream": "operations",
+      "areas": [
+        "repo-ops"
+      ],
+      "related_streams": [
+        "operations"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-14",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-14.md#pr-59-merged-with-main-after-the-root-core-and-topics-move",
+      "source": "2026/2026-11-14.md",
+      "anchor": "pr-59-merged-with-main-after-the-root-core-and-topics-move",
+      "start_line": 16,
+      "end_line": 24,
+      "title": "PR 59 merged with main after the root Core and topics move",
+      "entry_sha256": "219653745785a7de213c7c97408a553fcf7150ccff11e7a4a720a1db90e56f1e",
+      "stream": "operations",
+      "areas": [
+        "repo-ops"
+      ],
+      "related_streams": [
+        "operations"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-14",
       "legacy_root_path": false
     },
     {
