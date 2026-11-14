@@ -10,6 +10,10 @@ The runner discovers pytest test modules only. Engine, Research, Proof and
 Competitor scripts are inventoried but are not executed automatically because
 many are producers or write result files. Their classification is not implied
 by their filename.
+
+test_suite_config.json records source-bound non-admission reviews. It cannot
+enable commands or certify research; reviewed sources remain visible, including
+when they disappear or change. New safe adapters require their own tests.
 """
 
 from __future__ import annotations
@@ -122,15 +126,57 @@ def _module_defines_tests(path: Path) -> bool:
 def pytest_files(directory: Path) -> list[Path]:
     if not directory.is_dir():
         return []
+    reviews, _ = load_suite_reviews(directory.parent.parent)
+    denied = {directory.parent / locator for locator in reviews
+              if locator.startswith(directory.name + "/")}
+    denied_digests = {review["source_sha256_lf"] for review in reviews.values()}
     return sorted(
         path for path in directory.rglob("*.py")
         if PYTEST_FILE.match(path.name)
+        and path not in denied
         and not any(part in {"__pycache__", ".venv", "archive", "legacy"} for part in path.parts)
         and _module_defines_tests(path)
+        and hashlib.sha256(path.read_bytes().replace(b"\r\n", b"\n")).hexdigest() not in denied_digests
     )
 
 
-def deferred_test_candidates(directory: Path) -> list[dict[str, str]]:
+def load_suite_reviews(root: Path) -> tuple[dict[str, Any], list[str]]:
+    """Read denial/review metadata; configuration cannot enable execution."""
+    path = root / "topics/test_suite_config.json"
+    if not path.exists():
+        return {}, (["topics/test_suite_config.json: required admission configuration missing"]
+                    if root.resolve() == REPO_ROOT.resolve() else [])
+    def unique_pairs(pairs):
+        result = {}
+        for key, value in pairs:
+            if key in result:
+                raise ValueError(f"duplicate configuration key: {key}")
+            result[key] = value
+        return result
+    try:
+        config = json.loads(path.read_text(encoding="utf-8"), object_pairs_hook=unique_pairs)
+        if type(config.get("version")) is not int or config["version"] != 1 or not isinstance(config.get("reviews"), dict):
+            raise ValueError("unsupported version or invalid reviews")
+        for locator, review in config["reviews"].items():
+            parts = Path(locator).parts
+            if (Path(locator).is_absolute() or ".." in parts or "\\" in locator
+                    or len(parts) < 2 or not TOPIC_PATTERN.match(parts[0]) or not locator.endswith(".py")
+                    or not (root / "topics" / locator).resolve().is_relative_to((root / "topics").resolve())):
+                raise ValueError(f"invalid source locator: {locator}")
+            if (not isinstance(review, dict) or review.get("decision") != "NOT_ADMITTED"
+                    or not re.fullmatch(r"[0-9a-f]{64}", review.get("source_sha256_lf", ""))
+                    or any(not isinstance(review.get(key), str) or not review[key].strip()
+                           for key in ("role", "reason", "reopen_when"))
+                    or not isinstance(review.get("evidence_symbols"), list)
+                    or not review["evidence_symbols"]
+                    or any(not isinstance(symbol, str) or not symbol for symbol in review["evidence_symbols"])):
+                raise ValueError(f"invalid or execution-enabling review: {locator}")
+        return config["reviews"], []
+    except (OSError, ValueError, TypeError, AttributeError) as exc:
+        return {}, [f"topics/test_suite_config.json: {exc}"]
+
+
+def deferred_test_candidates(directory: Path) -> list[dict[str, Any]]:
     """Expose historical/custom-name tests without executing unreviewed code."""
     selected = set(pytest_files(directory))
     candidates = []
@@ -144,6 +190,32 @@ def deferred_test_candidates(directory: Path) -> list[dict[str, str]]:
                 "source_sha256": hashlib.sha256(path.read_bytes()).hexdigest(),
                 "reason": "test-like AST; execution safety and invocation require review, not exempt by folder name",
             })
+    reviews, _ = load_suite_reviews(directory.parent.parent)
+    by_path = {item["path"]: item for item in candidates}
+    for locator, review in reviews.items():
+        if not locator.startswith(directory.name + "/"):
+            continue
+        local = locator.split("/", 1)[1]
+        source = directory / local
+        found = local in by_path
+        item = by_path.setdefault(local, {
+            "path": local, "source_sha256": None,
+            "reason": "previously reviewed source remains in the queue even when missing or relabeled",
+        })
+        try:
+            digest = hashlib.sha256(source.read_bytes().replace(b"\r\n", b"\n")).hexdigest()
+            status = ("STALE_REVIEW" if digest != review["source_sha256_lf"] else
+                      "CURRENT_REVIEW" if found else "NO_LONGER_DISCOVERED")
+        except OSError:
+            digest, status = None, "MISSING_SOURCE"
+        item["admission_review"] = {**review, "status": status, "current_sha256_lf": digest}
+    return sorted(by_path.values(), key=lambda item: item["path"])
+
+
+def admission_review_gaps(candidates: list[dict[str, Any]], topic: str) -> list[str]:
+    return [f"{topic}/{item['path']}: admission review {item['admission_review']['status']}"
+            for item in candidates if item.get("admission_review", {}).get("status")
+            not in (None, "CURRENT_REVIEW")]
     return candidates
 
 
@@ -183,6 +255,7 @@ def code_file_inventory(topic: Path, root: Path = REPO_ROOT) -> list[dict[str, A
         return []
     tests = set(pytest_files(topic))
     stdlib = getattr(sys, "stdlib_module_names", set())
+    reviews, _ = load_suite_reviews(root)
     inventory: list[dict[str, Any]] = []
     for path in sorted(code.rglob("*.py")):
         try:
@@ -237,6 +310,14 @@ def code_file_inventory(topic: Path, root: Path = REPO_ROOT) -> list[dict[str, A
             invocation = f"python {relative}" if main_guard else None
             invocation_status = "candidate only; not executed, arguments and safety unreviewed" if main_guard else "no safe invocation declared"
             classification = "UNCLASSIFIED_NON_TEST_CODE"
+        admission = reviews.get(relative.removeprefix("topics/"))
+        admission_summary = None
+        if admission:
+            digest = hashlib.sha256(path.read_bytes().replace(b"\r\n", b"\n")).hexdigest()
+            admission_summary = {**admission, "status": (
+                "CURRENT_REVIEW" if digest == admission["source_sha256_lf"] else "STALE_REVIEW")}
+            classification = "REVIEWED_NOT_ADMITTED"
+            invocation_status = f"not admitted: {admission_summary['status']}; {admission['reason']}"
         role_hints = []
         if phase:
             role_hints.append(f"directory:{phase}")
@@ -251,6 +332,7 @@ def code_file_inventory(topic: Path, root: Path = REPO_ROOT) -> list[dict[str, A
             "path": relative,
             "source_sha256": hashlib.sha256(path.read_bytes()).hexdigest() if path.is_file() else None,
             "classification": classification,
+            "admission_review": admission_summary,
             "role_hints_not_verified": role_hints,
             "invocation": invocation,
             "invocation_status": invocation_status,
@@ -281,7 +363,7 @@ def topic_inventory_record(topic: Path, root: Path = REPO_ROOT, coverage_note: s
         "pytest_modules": len(test_files),
         "grid_scripts_not_auto_run": phase_counts,
         "grid_script_count_not_auto_run": sum(
-            item["classification"] == "UNCLASSIFIED_NON_TEST_CODE" for item in scripts
+            item["classification"] != "PYTEST_TEST_MODULE" for item in scripts
         ),
         "code_file_inventory": scripts,
         "coverage_note": coverage_note or (
@@ -311,7 +393,8 @@ def all_suites(root: Path = REPO_ROOT) -> tuple[list[Suite], list[dict[str, Any]
     topics = topic_directories(root)
     suites: list[Suite] = []
     uncovered: list[dict[str, Any]] = []
-    missing: list[str] = []
+    _, config_errors = load_suite_reviews(root)
+    missing = list(config_errors)
 
     core_tests = pytest_files(root / "core" / "05_tests")
     if core_tests:
@@ -344,7 +427,13 @@ def all_suites(root: Path = REPO_ROOT) -> tuple[list[Suite], list[dict[str, Any]
 
     for topic in topics:
         files = pytest_files(topic)
-        uncovered.append(topic_inventory_record(topic, root))
+        record = topic_inventory_record(topic, root)
+        uncovered.append(record)
+        review_gaps = admission_review_gaps(record["deferred_test_candidates"], topic.name)
+        missing.extend(review_gaps)
+        if config_errors or review_gaps:
+            missing.append(f"{topic.name}: Topic execution withheld pending admission-review repair")
+            continue
         if files:
             relative = [path.relative_to(root).as_posix() for path in files]
             suites.append(_pytest_suite(f"topic:{topic.name}", relative, topic.name))
@@ -370,10 +459,14 @@ def all_suites(root: Path = REPO_ROOT) -> tuple[list[Suite], list[dict[str, Any]
 
 def topic_suite(topic: Path, root: Path = REPO_ROOT) -> tuple[list[Suite], list[str]]:
     files = pytest_files(topic)
+    _, review_errors = load_suite_reviews(root)
+    review_errors.extend(admission_review_gaps(deferred_test_candidates(topic), topic.name))
+    if review_errors:
+        return [], review_errors + [f"{topic.name}: Topic execution withheld pending admission-review repair"]
     if not files:
-        return [], [f"{topic.name}: no pytest regression suite discovered"]
+        return [], review_errors + [f"{topic.name}: no pytest regression suite discovered"]
     relative = [path.relative_to(root).as_posix() for path in files]
-    gaps = []
+    gaps = review_errors
     if topic.name in LEGACY_RESULT_READOUTS:
         gaps.append(f"{topic.name}: limited suite: {LEGACY_RESULT_READOUTS[topic.name]['suite_scope']}")
     return [_pytest_suite(f"topic:{topic.name}", relative, topic.name)], gaps
@@ -403,7 +496,7 @@ def changed_suites(base: str, root: Path = REPO_ROOT) -> tuple[list[Suite], list
             "core/", "docs/core/", "docs/scripts/core/", "docs/scripts/standard/",
             "docs/scripts/audit/", "docs/meta/", "docs/standard/", "docs/repo_paths.py",
         ))
-        or path in {"docs/STANDARD.md", "topics/run_all_tests.py", "topics/run_full_verification.py"}
+        or path in {"docs/STANDARD.md", "topics/run_all_tests.py", "topics/run_full_verification.py", "topics/test_suite_config.json"}
         for path in changed
     )
 
@@ -651,6 +744,8 @@ def _render_markdown_report(report: dict[str, Any]) -> str:
     for topic in report["topic_inventory"]:
         for candidate in topic.get("deferred_test_candidates", []):
             lines.append(f"- `{topic['topic']}/{candidate['path']}`: {candidate['reason']}; source `{candidate['source_sha256']}`")
+            if review := candidate.get("admission_review"):
+                lines.append(f"  - {review['status']}; {review['decision']}; role: {review['role']}. {review['reason']} Reopen: {review['reopen_when']} Evidence symbols: {', '.join(review['evidence_symbols'])}.")
     other_gaps = [entry for entry in report["uncovered_or_missing"] if entry not in gaps]
     if other_gaps:
         lines.extend(["", "## Other coverage gaps", ""])
@@ -703,6 +798,8 @@ def _print_inventory(inventory: list[dict[str, Any]], verbose: bool = False) -> 
         )
         for candidate in item.get("deferred_test_candidates", []):
             print(f"    DEFERRED: {candidate['path']}; {candidate['reason']}")
+            if review := candidate.get("admission_review"):
+                print(f"      {review['status']} / {review['decision']}: {review['role']}; {review['reason']}")
         if not verbose:
             continue
         for source in item.get("code_file_inventory", []):

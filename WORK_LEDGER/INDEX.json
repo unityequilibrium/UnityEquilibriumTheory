@@ -5,10 +5,10 @@
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
     "sources": 77,
-    "entries": 819,
+    "entries": 820,
     "by_stream": {
       "book-history": 94,
-      "operations": 118,
+      "operations": 119,
       "research": 606,
       "review": 1
     },
@@ -400,8 +400,8 @@
     },
     {
       "path": "2026/2026-11-15.md",
-      "sha256": "e80725fc6be66f97723525f040216496ca0215ebcbd87e3f9ba504e15c68843c",
-      "entries": 6
+      "sha256": "4281619961f2c53f1b1f30600f234c0606d086f223b60dd967a523b06f427925",
+      "entries": 7
     },
     {
       "path": "2026-08-14.md",
@@ -16739,9 +16739,29 @@
       "source": "2026/2026-11-15.md",
       "anchor": "gravity-failure-reporting-and-exact-stale-identity-triage",
       "start_line": 56,
-      "end_line": 64,
+      "end_line": 65,
       "title": "Gravity failure reporting and exact stale-identity triage",
-      "entry_sha256": "ac34aec515214042bd95c221168e18be610e2e264c403e41149805fd6ec48bbe",
+      "entry_sha256": "479c2c7831fb13d7286a6b8dd1e6471d3ed8a018b422fc68eb6a2ef8db3eb6de",
+      "stream": "operations",
+      "areas": [
+        "repo-ops"
+      ],
+      "related_streams": [
+        "operations"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-15",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-15.md#complete-the-38-candidate-admission-review",
+      "source": "2026/2026-11-15.md",
+      "anchor": "complete-the-38-candidate-admission-review",
+      "start_line": 66,
+      "end_line": 74,
+      "title": "Complete the 38-candidate admission review",
+      "entry_sha256": "0a4cf91b67ba054c855cf0ea163ed80031cac9447c37709663380f2735faca0f",
       "stream": "operations",
       "areas": [
         "repo-ops"

@@ -6,10 +6,11 @@
 
 These are source-linked historical records, not proof of completed research, successful publication, or current scientific readiness.
 
-Indexed entries: 118. Counts describe records, not accomplishments.
+Indexed entries: 119. Counts describe records, not accomplishments.
 
 | Date | Record | Area | Notes |
 | --- | --- | --- | --- |
+| 2026-11-15 | [Complete the 38-candidate admission review](2026/2026-11-15.md#complete-the-38-candidate-admission-review) (L66) | repo-ops | explicit_stream_and_area |
 | 2026-11-15 | [Gravity failure reporting and exact stale-identity triage](2026/2026-11-15.md#gravity-failure-reporting-and-exact-stale-identity-triage) (L56) | repo-ops | explicit_stream_and_area |
 | 2026-11-15 | [Topic 0.4 negative-result reporting integration](2026/2026-11-15.md#topic-04-negative-result-reporting-integration) (L46) | repo-ops | explicit_stream_and_area |
 | 2026-11-15 | [Restore byte-locked public CSV checkout fidelity](2026/2026-11-15.md#restore-byte-locked-public-csv-checkout-fidelity) (L38) | repo-ops | explicit_stream_and_area |
