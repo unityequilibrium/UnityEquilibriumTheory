@@ -5,10 +5,10 @@
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
     "sources": 77,
-    "entries": 817,
+    "entries": 818,
     "by_stream": {
       "book-history": 94,
-      "operations": 116,
+      "operations": 117,
       "research": 606,
       "review": 1
     },
@@ -400,8 +400,8 @@
     },
     {
       "path": "2026/2026-11-15.md",
-      "sha256": "4d92a6f697760f1be2c1981aa9878d463f32966431d6171a0dbbcfd2d21728e4",
-      "entries": 4
+      "sha256": "cfe530b198758eee4cba370613466a1e9280e25f70df272c6f04d30202fa76cd",
+      "entries": 5
     },
     {
       "path": "2026-08-14.md",
@@ -16699,9 +16699,29 @@
       "source": "2026/2026-11-15.md",
       "anchor": "restore-byte-locked-public-csv-checkout-fidelity",
       "start_line": 38,
-      "end_line": 44,
+      "end_line": 45,
       "title": "Restore byte-locked public CSV checkout fidelity",
-      "entry_sha256": "aee379b59188fa0192f9584a354bee1bad981f112999115ab385736532917443",
+      "entry_sha256": "c06455087ba2057c964961bc8d2bd233ceb3e30e7bb599abde344e7f09559c31",
+      "stream": "operations",
+      "areas": [
+        "repo-ops"
+      ],
+      "related_streams": [
+        "operations"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-15",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-15.md#topic-04-negative-result-reporting-integration",
+      "source": "2026/2026-11-15.md",
+      "anchor": "topic-04-negative-result-reporting-integration",
+      "start_line": 46,
+      "end_line": 54,
+      "title": "Topic 0.4 negative-result reporting integration",
+      "entry_sha256": "de5a36cc625d490d9a9a7ff6c92de0db8ae95338d7a46625417fa777a557c9ed",
       "stream": "operations",
       "areas": [
         "repo-ops"

@@ -37,6 +37,14 @@ PYTEST_SUMMARY = re.compile(r"(?:(\d+)(?:/\d+)?\s+tests?\s+collected|no tests co
 PYTEST_COUNTS = re.compile(r"(?:(\d+) passed)?(?:,?\s*(\d+) failed)?(?:,?\s*(\d+) errors?)?(?:,?\s*(\d+) skipped)?(?:,?\s*(\d+) xfailed)?(?:,?\s*(\d+) xpassed)?")
 COLLECTION_ERROR = re.compile(r"ERROR collecting|errors? during collection|ImportError while importing|no tests ran", re.I)
 GRID_PHASES = {"01_Engine", "02_Proof", "03_Research", "04_Competitor"}
+# Reviewed readout configuration, not a new research-status registry.
+LEGACY_RESULT_READOUTS = {
+    "0.4_Superconductivity_Superfluids": {
+        "path": "topics/0.4_Superconductivity_Superfluids/Result/artifacts/0_4_superconductivity_superfluids_verification.json",
+        "outcome_field": "model_gate_status",
+        "suite_scope": "decision-helper and saved-result reporting only; benchmark, input provenance and other Topic paths remain unreviewed",
+    },
+}
 READ_CALLS = {"open", "read", "read_text", "read_bytes", "read_csv", "read_excel", "read_json", "load", "loadtxt", "genfromtxt", "glob", "rglob", "iterdir"}
 WRITE_CALLS = {"write", "write_text", "write_bytes", "to_csv", "to_excel", "to_json", "save", "savefig", "dump", "mkdir", "unlink", "rename", "replace"}
 
@@ -275,6 +283,7 @@ def topic_inventory_record(topic: Path, root: Path = REPO_ROOT, coverage_note: s
             "declared pytest regression suite discovered" if test_files
             else "no pytest regression suite; non-test files inventoried but not executed"
         ),
+        "suite_scope_limit": LEGACY_RESULT_READOUTS.get(topic.name, {}).get("suite_scope"),
     }
 
 
@@ -334,6 +343,8 @@ def all_suites(root: Path = REPO_ROOT) -> tuple[list[Suite], list[dict[str, Any]
         if files:
             relative = [path.relative_to(root).as_posix() for path in files]
             suites.append(_pytest_suite(f"topic:{topic.name}", relative, topic.name))
+            if topic.name in LEGACY_RESULT_READOUTS:
+                missing.append(f"{topic.name}: limited suite: {LEGACY_RESULT_READOUTS[topic.name]['suite_scope']}")
         else:
             missing.append(f"{topic.name}: no pytest regression suite discovered")
 
@@ -357,7 +368,10 @@ def topic_suite(topic: Path, root: Path = REPO_ROOT) -> tuple[list[Suite], list[
     if not files:
         return [], [f"{topic.name}: no pytest regression suite discovered"]
     relative = [path.relative_to(root).as_posix() for path in files]
-    return [_pytest_suite(f"topic:{topic.name}", relative, topic.name)], []
+    gaps = []
+    if topic.name in LEGACY_RESULT_READOUTS:
+        gaps.append(f"{topic.name}: limited suite: {LEGACY_RESULT_READOUTS[topic.name]['suite_scope']}")
+    return [_pytest_suite(f"topic:{topic.name}", relative, topic.name)], gaps
 
 
 def changed_suites(base: str, root: Path = REPO_ROOT) -> tuple[list[Suite], list[dict[str, Any]], list[str]]:
@@ -634,6 +648,9 @@ def _render_markdown_report(report: dict[str, Any]) -> str:
         "|---|---:|",
     ])
     lines.extend(f"| {key} | {value} |" for key, value in research["counts"].items())
+    lines.extend(["", "## Legacy Topic result readouts (not v2 registration or a rerun)", ""])
+    for item in report.get("legacy_topic_results", {}).get("items", []):
+        lines.append(f"- `{item['topic']}`: **{item['outcome']}**, copied from `{item['path']}` field `{item['outcome_field']}`. Scope: {item['suite_scope']}")
     lines.extend([
         "",
         "## Overall interpretation",
@@ -718,6 +735,25 @@ def _program_exit_code(failed: int, incomplete: bool) -> int:
     return 1 if failed else 0
 
 
+def legacy_topic_results(inventory: list[dict[str, Any]], root: Path = REPO_ROOT) -> dict[str, Any]:
+    items, errors = [], []
+    for topic in inventory:
+        config = LEGACY_RESULT_READOUTS.get(topic["topic"])
+        if config is None:
+            continue
+        try:
+            path = root / config["path"]
+            payload = json.loads(path.read_text(encoding="utf-8-sig"))
+            outcome = payload[config["outcome_field"]]
+            if outcome not in {"PASS", "FAIL", "INCONCLUSIVE"}:
+                raise ValueError("unknown outcome; no implicit conversion permitted")
+            items.append({"topic": topic["topic"], **config, "outcome": outcome,
+                          "source_sha256": hashlib.sha256(path.read_bytes()).hexdigest()})
+        except (OSError, ValueError, KeyError, TypeError) as exc:
+            errors.append(f"{topic['topic']}: legacy result readout unavailable: {exc}")
+    return {"records_read_not_rerun": True, "items": items, "errors": errors}
+
+
 def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(description="Run safe, discovered UET regression suites with explicit coverage.")
     modes = parser.add_mutually_exclusive_group(required=True)
@@ -779,6 +815,8 @@ def main(argv: list[str] | None = None) -> int:
         results.append(result)
         print(f"{result.status:10} {result.suite_id} ({result.duration_seconds:.1f}s)", flush=True)
 
+    legacy_readouts = legacy_topic_results(inventory)
+    missing.extend(legacy_readouts["errors"])
     failed = sum(result.status == "FAIL" for result in results)
     incomplete = bool(missing) or any(result.status == "INCOMPLETE" for result in results)
     program_exit_code = _program_exit_code(failed, incomplete)
@@ -795,6 +833,7 @@ def main(argv: list[str] | None = None) -> int:
         "results": [asdict(result) for result in results],
         "uncovered_or_missing": missing,
         "registered_research_results": registered_research_results(),
+        "legacy_topic_results": legacy_readouts,
         "scientific_claim_outcomes": "registered outcomes are copied verbatim above and were not rerun or inferred from software tests",
         "exit_semantics": {"0": "all requested suites completed with no software failures or omissions",
                            "1": "one or more tests/checks failed, with no incomplete suite",
@@ -823,6 +862,8 @@ def main(argv: list[str] | None = None) -> int:
     print("  registered research outcomes (read only, not rerun): " + ", ".join(
         f"{key}={value}" for key, value in research_counts.items()))
     print("  Research PASS/FAIL/INCONCLUSIVE is not derived from test process status.")
+    for item in legacy_readouts["items"]:
+        print(f"  legacy result (read only, not v2 registration): {item['topic']} = {item['outcome']}; {item['path']}#{item['outcome_field']}")
 
     return program_exit_code
 

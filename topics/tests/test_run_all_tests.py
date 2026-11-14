@@ -83,6 +83,30 @@ def test_registered_research_outcome_is_copied_without_reclassification(tmp_path
     assert inventory["items"][0]["level"] == "FAILED"
 
 
+def test_legacy_model_failure_readout_never_uses_run_status(tmp_path: Path, monkeypatch) -> None:
+    monkeypatch.setattr(runner, "LEGACY_RESULT_READOUTS", {"example": {
+        "path": "result.json", "outcome_field": "model_gate_status", "suite_scope": "fixture"}})
+    path = tmp_path / "result.json"
+    path.write_text('{"run_status":"PASS","model_gate_status":"FAIL"}', encoding="utf-8")
+    result = runner.legacy_topic_results([{"topic": "example"}], tmp_path)
+    assert result["items"][0]["outcome"] == "FAIL"
+    assert result["errors"] == []
+    path.write_text('{"run_status":"PASS"}', encoding="utf-8")
+    result = runner.legacy_topic_results([{"topic": "example"}], tmp_path)
+    assert result["items"] == []
+    assert result["errors"]
+
+
+def test_limited_result_reporting_suite_does_not_close_whole_topic(tmp_path: Path, monkeypatch) -> None:
+    topic = tmp_path / "topics" / "example"
+    topic.mkdir(parents=True)
+    (topic / "test_report.py").write_text("def test_report(): assert True\n", encoding="utf-8")
+    monkeypatch.setattr(runner, "LEGACY_RESULT_READOUTS", {"example": {"suite_scope": "reporting only"}})
+    suites, gaps = runner.topic_suite(topic, tmp_path)
+    assert len(suites) == 1
+    assert gaps == ["example: limited suite: reporting only"]
+
+
 def test_pytest_nonzero_cannot_be_overridden_by_pass_text() -> None:
     suite = runner.Suite("fixture", "pytest", ["pytest"], ["tests"])
 
