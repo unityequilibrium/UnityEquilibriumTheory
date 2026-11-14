@@ -6,10 +6,11 @@
 
 These are source-linked historical records, not proof of completed research, successful publication, or current scientific readiness.
 
-Indexed entries: 112. Counts describe records, not accomplishments.
+Indexed entries: 113. Counts describe records, not accomplishments.
 
 | Date | Record | Area | Notes |
 | --- | --- | --- | --- |
+| 2026-11-14 | [Root Core and topics: move first, repair separately](2026/2026-11-14.md#root-core-and-topics-move-first-repair-separately) (L3) | repo-ops | explicit_stream_and_area |
 | 2026-11-03 | [Ledger research and book-history separation](2026/2026-11-03.md#ledger-research-and-book-history-separation) (L17) | repo-ops | explicit_stream_and_area |
 | 2026-11-02 | [2026-11-03 owner-directed history relocation](2026/2026-11-02.md#2026-11-03-owner-directed-history-relocation) (L29) | repo-ops, theory-history, book-writing | explicit_primary_area |
 | 2026-11-02 | [2026-11-03 scoped publication checkpoint](2026/2026-11-02.md#2026-11-03-scoped-publication-checkpoint) (L13) | repo-ops | explicit_primary_area |
