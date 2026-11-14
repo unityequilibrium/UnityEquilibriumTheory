@@ -1,10 +1,20 @@
 # Fix GitHub language statistics
+.gitattributes text eol=lf
 # Mark research notebooks/docs as non-code so linguist shows real code ratio
 research_uet/** linguist-documentation
 uet_history/** linguist-documentation
 
 # Mark generated/vendored files
 *.lock linguist-generated
+
+# Byte-locked public inputs: HEAD blobs already match the data manifest.
+# Do not convert LF to CRLF in Windows working trees.
+/docs/data/external/astronomy/globular_cluster_r_parameter/ayala2014_r_parameter.csv -text
+/docs/data/external/gravity/yukawa_fifth_force/t005_yukawa_bounds.csv -text
+/docs/data/external/gravity/solar_mass_loss/t006_solar_mass_loss.csv -text
+/docs/data/external/ecology/tilman1977_chemostat/tilman1977_chemostat.csv -text
+/docs/data/external/astronomy/white_dwarf_lf/hu2007_sdss_da_wd_lf.csv -text
+/docs/data/external/nuclear/u234_half_life/u234_half_life.csv -text
 
 # Immutable attributed author archives: retain upstream whitespace and bytes.
 # Integrity is enforced by Topic13 source SHA-256 and parser regression tests.

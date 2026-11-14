@@ -5,10 +5,10 @@
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
     "sources": 77,
-    "entries": 816,
+    "entries": 817,
     "by_stream": {
       "book-history": 94,
-      "operations": 115,
+      "operations": 116,
       "research": 606,
       "review": 1
     },
@@ -400,8 +400,8 @@
     },
     {
       "path": "2026/2026-11-15.md",
-      "sha256": "d1d78481808ae03b8fd455f271e2449e9b3c903d2a62cd074890df76b0530ccb",
-      "entries": 3
+      "sha256": "4d92a6f697760f1be2c1981aa9878d463f32966431d6171a0dbbcfd2d21728e4",
+      "entries": 4
     },
     {
       "path": "2026-08-14.md",
@@ -16679,9 +16679,29 @@
       "source": "2026/2026-11-15.md",
       "anchor": "nested-import-identity-and-deferred-test-discovery",
       "start_line": 25,
-      "end_line": 36,
+      "end_line": 37,
       "title": "Nested import identity and deferred-test discovery",
-      "entry_sha256": "53e6d3adc3a8e9064dd40cbe6493646f2838cd738b37d5449d2ab36120503ca0",
+      "entry_sha256": "a3ad3a6eb0be73120eb7a3e570a5cc63eab62003756146dd1b521240fc4124e7",
+      "stream": "operations",
+      "areas": [
+        "repo-ops"
+      ],
+      "related_streams": [
+        "operations"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-15",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-15.md#restore-byte-locked-public-csv-checkout-fidelity",
+      "source": "2026/2026-11-15.md",
+      "anchor": "restore-byte-locked-public-csv-checkout-fidelity",
+      "start_line": 38,
+      "end_line": 44,
+      "title": "Restore byte-locked public CSV checkout fidelity",
+      "entry_sha256": "aee379b59188fa0192f9584a354bee1bad981f112999115ab385736532917443",
       "stream": "operations",
       "areas": [
         "repo-ops"

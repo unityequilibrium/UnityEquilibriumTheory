@@ -128,6 +128,12 @@ def test_raw_data_hash_lock(repo: Path) -> None:
     assert any("sha256 mismatch" in e for e in schema_errors(repo))
 
 
+def test_raw_data_line_endings_are_not_silently_normalized(repo: Path) -> None:
+    full_set(repo)
+    write(repo, "data/cassini.csv", DATA_BYTES.replace(b"\n", b"\r\n"))
+    assert any("sha256 mismatch" in e for e in schema_errors(repo))
+
+
 def test_drafter_cannot_approve_own_card(repo: Path) -> None:
     full_set(repo)
     card = copy.deepcopy(CARD)
