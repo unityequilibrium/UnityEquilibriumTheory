@@ -6,10 +6,11 @@
 
 These are source-linked historical records, not proof of completed research, successful publication, or current scientific readiness.
 
-Indexed entries: 114. Counts describe records, not accomplishments.
+Indexed entries: 115. Counts describe records, not accomplishments.
 
 | Date | Record | Area | Notes |
 | --- | --- | --- | --- |
+| 2026-11-15 | [Nested import identity and deferred-test discovery](2026/2026-11-15.md#nested-import-identity-and-deferred-test-discovery) (L25) | repo-ops | explicit_stream_and_area |
 | 2026-11-15 | [Root Core–Topics post-move repair](2026/2026-11-15.md#root-coretopics-post-move-repair) (L3) | repo-ops | explicit_stream_and_area |
 | 2026-11-14 | [Root Core and topics: move first, repair separately](2026/2026-11-14.md#root-core-and-topics-move-first-repair-separately) (L3) | repo-ops | explicit_stream_and_area |
 | 2026-11-03 | [Ledger research and book-history separation](2026/2026-11-03.md#ledger-research-and-book-history-separation) (L17) | repo-ops | explicit_stream_and_area |

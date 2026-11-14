@@ -12,10 +12,10 @@ from docs.core import mass_density_dimensional as legacy_dimensional
 
 def test_mass_density_root_modules_forward_to_canonical_sources() -> None:
     names = {
-        "correspondence": "docs.core.03_lanes.mass_density.mass_density_correspondence",
-        "amplitude": "docs.core.03_lanes.mass_density.mass_density_amplitude",
-        "dimensional": "docs.core.03_lanes.mass_density.mass_density_dimensional",
-        "three_d": "docs.core.03_lanes.mass_density.mass_density_3d",
+        "correspondence": "core.03_lanes.mass_density.mass_density_correspondence",
+        "amplitude": "core.03_lanes.mass_density.mass_density_amplitude",
+        "dimensional": "core.03_lanes.mass_density.mass_density_dimensional",
+        "three_d": "core.03_lanes.mass_density.mass_density_3d",
     }
     canonical = {key: importlib.import_module(name) for key, name in names.items()}
 
@@ -30,7 +30,7 @@ def test_mass_density_root_modules_forward_to_canonical_sources() -> None:
 
 
 def test_mass_density_package_exports_declared_surface() -> None:
-    package = importlib.import_module("docs.core.03_lanes.mass_density")
+    package = importlib.import_module("core.03_lanes.mass_density")
 
     for name in (
         "MassDensityLaneConfig",

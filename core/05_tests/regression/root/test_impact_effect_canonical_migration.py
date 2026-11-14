@@ -10,7 +10,7 @@ ROOT = Path(__file__).resolve().parents[4]
 def test_impact_effect_legacy_import_is_a_facade() -> None:
     legacy = import_module("docs.core.uet_impact_effect")
     canonical = import_module(
-        "docs.core.03_lanes.carrier_observer.uet_impact_effect"
+        "core.03_lanes.carrier_observer.uet_impact_effect"
     )
 
     assert legacy.ImpactRecord is canonical.ImpactRecord
@@ -22,7 +22,7 @@ def test_impact_effect_legacy_import_is_a_facade() -> None:
 
 
 def test_carrier_observer_package_exports_impact_effect_contract() -> None:
-    lane = import_module("docs.core.03_lanes.carrier_observer")
+    lane = import_module("core.03_lanes.carrier_observer")
 
     assert lane.ImpactRecord is not None
     assert lane.CarrierRecord is not None

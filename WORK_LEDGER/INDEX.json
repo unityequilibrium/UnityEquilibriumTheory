@@ -5,10 +5,10 @@
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
     "sources": 77,
-    "entries": 815,
+    "entries": 816,
     "by_stream": {
       "book-history": 94,
-      "operations": 114,
+      "operations": 115,
       "research": 606,
       "review": 1
     },
@@ -400,8 +400,8 @@
     },
     {
       "path": "2026/2026-11-15.md",
-      "sha256": "2ad3f261fb715e8ac638283cbddc4469f6a93b445c4d9135ef018f56d4f9be40",
-      "entries": 2
+      "sha256": "d1d78481808ae03b8fd455f271e2449e9b3c903d2a62cd074890df76b0530ccb",
+      "entries": 3
     },
     {
       "path": "2026-08-14.md",
@@ -16660,9 +16660,9 @@
       "source": "2026/2026-11-15.md",
       "anchor": "addendum--full-run-result-and-output-isolation-follow-up",
       "start_line": 17,
-      "end_line": 23,
+      "end_line": 24,
       "title": "Addendum — full-run result and output-isolation follow-up",
-      "entry_sha256": "c5476224840c9ad50bcf4b7fbc5e9a75826484f6b25e000e4dc8930be38cef6a",
+      "entry_sha256": "3be7b7a227f2eab861883c3001d4558dfbfbc7a919232759df4e163432b4c907",
       "stream": "review",
       "areas": [],
       "related_streams": [],
@@ -16671,6 +16671,26 @@
         "missing_or_unknown_primary_area",
         "invalid_stream"
       ],
+      "date": "2026-11-15",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-15.md#nested-import-identity-and-deferred-test-discovery",
+      "source": "2026/2026-11-15.md",
+      "anchor": "nested-import-identity-and-deferred-test-discovery",
+      "start_line": 25,
+      "end_line": 36,
+      "title": "Nested import identity and deferred-test discovery",
+      "entry_sha256": "53e6d3adc3a8e9064dd40cbe6493646f2838cd738b37d5449d2ab36120503ca0",
+      "stream": "operations",
+      "areas": [
+        "repo-ops"
+      ],
+      "related_streams": [
+        "operations"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
       "date": "2026-11-15",
       "legacy_root_path": false
     },

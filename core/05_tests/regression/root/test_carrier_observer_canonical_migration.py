@@ -10,7 +10,7 @@ ROOT = Path(__file__).resolve().parents[4]
 def test_photon_baseline_legacy_import_is_a_facade() -> None:
     legacy = import_module("docs.core.photon_observer_baseline")
     canonical = import_module(
-        "docs.core.03_lanes.carrier_observer.photon_observer_baseline"
+        "core.03_lanes.carrier_observer.photon_observer_baseline"
     )
 
     assert legacy.PhotonBaselineConfig is canonical.PhotonBaselineConfig
@@ -23,7 +23,7 @@ def test_photon_baseline_legacy_import_is_a_facade() -> None:
 def test_relational_baseline_legacy_import_is_a_facade() -> None:
     legacy = import_module("docs.core.relational_two_body_baseline")
     canonical = import_module(
-        "docs.core.03_lanes.carrier_observer.relational_two_body_baseline"
+        "core.03_lanes.carrier_observer.relational_two_body_baseline"
     )
 
     assert legacy.TwoBodyState is canonical.TwoBodyState
@@ -34,7 +34,7 @@ def test_relational_baseline_legacy_import_is_a_facade() -> None:
 
 
 def test_carrier_observer_package_exports_both_comparators() -> None:
-    lane = import_module("docs.core.03_lanes.carrier_observer")
+    lane = import_module("core.03_lanes.carrier_observer")
 
     assert lane.PhotonBaselineConfig is not None
     assert lane.RelationalBaselineConfig is not None

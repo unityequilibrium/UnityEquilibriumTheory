@@ -119,13 +119,23 @@ class _LegacyAliasFinder(importlib.abc.MetaPathFinder):
         target: ModuleType | None = None,
     ) -> importlib.machinery.ModuleSpec | None:
         canonical = self.aliases.get(fullname)
+        if canonical is None and fullname.startswith("docs.core."):
+            # Numbered packages are historical locators too, not just the
+            # removed root facades in the registry. Never execute a source
+            # twice under the old and new namespaces.
+            candidate = "core." + fullname[len("docs.core."):]
+            candidate_spec = importlib.util.find_spec(candidate)
+            if candidate_spec is not None:
+                canonical = candidate
         if canonical is None or fullname in sys.modules:
             return None
         loader = _LegacyAliasLoader(canonical)
+        canonical_spec = importlib.util.find_spec(canonical)
         return importlib.util.spec_from_loader(
             fullname,
             loader,
             origin=str(_ALIAS_REGISTRY),
+            is_package=canonical_spec is not None and canonical_spec.submodule_search_locations is not None,
         )
 
 

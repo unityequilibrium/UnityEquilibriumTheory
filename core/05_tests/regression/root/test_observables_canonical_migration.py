@@ -7,7 +7,7 @@ import importlib
 import docs.core.uet_observables as legacy
 
 
-CANONICAL_NAME = "docs.core.03_lanes.review.uet_observables"
+CANONICAL_NAME = "core.03_lanes.review.uet_observables"
 
 
 def test_observable_root_shim_forwards_public_helpers() -> None:

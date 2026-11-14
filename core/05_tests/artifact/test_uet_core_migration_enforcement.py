@@ -5,7 +5,7 @@ from __future__ import annotations
 import importlib.util
 import json
 from pathlib import Path
-from docs.core.core_paths import canonical_existing_path
+from docs.core.core_paths import canonical_existing_path, canonical_path_for
 
 
 ROOT = Path(__file__).resolve().parents[3]
@@ -46,7 +46,7 @@ def test_physical_planner_models_canonical_source_and_archived_alias_without_col
         item for item in aliases["aliases"]
         if item["legacy_module"] == "docs.core.uet_covariant_response"
     )
-    assert alias["canonical_path"] == canonical["canonical_path"]
+    assert canonical_path_for(alias["canonical_path"]) == canonical["canonical_path"]
     assert alias["status"] == "ARCHIVED_ROOT_SHIM"
     assert canonical_existing_path(ROOT / alias["archive_path"]).exists()
     assert not summary["duplicate_targets"]

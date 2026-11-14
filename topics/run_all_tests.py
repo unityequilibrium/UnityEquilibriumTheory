@@ -117,6 +117,23 @@ def pytest_files(directory: Path) -> list[Path]:
     )
 
 
+def deferred_test_candidates(directory: Path) -> list[dict[str, str]]:
+    """Expose historical/custom-name tests without executing unreviewed code."""
+    selected = set(pytest_files(directory))
+    candidates = []
+    for path in sorted(directory.rglob("*.py")):
+        if path in selected or any(part in {"__pycache__", ".venv", "raw", "1_raw", "private"}
+                                   for part in path.relative_to(directory).parts):
+            continue
+        if _module_defines_tests(path):
+            candidates.append({
+                "path": path.relative_to(directory).as_posix(),
+                "source_sha256": hashlib.sha256(path.read_bytes()).hexdigest(),
+                "reason": "test-like AST; execution safety and invocation require review, not exempt by folder name",
+            })
+    return candidates
+
+
 def grid_script_inventory(topic: Path) -> dict[str, int]:
     counts = {phase: 0 for phase in sorted(GRID_PHASES)}
     tests = set(pytest_files(topic))
@@ -247,6 +264,7 @@ def topic_inventory_record(topic: Path, root: Path = REPO_ROOT, coverage_note: s
             phase_counts[phase] += 1
     return {
         "topic": topic.name,
+        "deferred_test_candidates": deferred_test_candidates(topic),
         "pytest_modules": len(test_files),
         "grid_scripts_not_auto_run": phase_counts,
         "grid_script_count_not_auto_run": sum(
@@ -326,7 +344,7 @@ def all_suites(root: Path = REPO_ROOT) -> tuple[list[Suite], list[dict[str, Any]
         ("physics-tests", "docs/scripts/standard/check_physics_tests.py", ["core/05_tests/physics", "--min-physics", "1"], r"^check_physics_tests: physics=[1-9]\d* "),
     ):
         if (root / script).is_file():
-            suites.append(Suite(suite_id, "check", [sys.executable, script, *args], [script, *args],
+            suites.append(Suite(suite_id, "physics" if suite_id == "physics-tests" else "check", [sys.executable, script, *args], [script, *args],
                                 success_pattern=success_pattern))
         else:
             missing.append(f"{script}: required checker missing")
@@ -444,7 +462,7 @@ def _classify(suite: Suite, returncode: int, output: str, collected: int | None 
             return "INCOMPLETE", counts
         if returncode != 0 or counts.get("failed", 0) or counts.get("errors", 0) or counts.get("xpassed", 0):
             return "FAIL", counts
-        if counts.get("skipped", 0):
+        if counts.get("skipped", 0) or counts.get("xfailed", 0) or not counts.get("passed", 0):
             return "INCOMPLETE", counts
         return "PASS", counts
 
@@ -462,6 +480,15 @@ def _classify(suite: Suite, returncode: int, output: str, collected: int | None 
         return "FAIL", {}
     if suite.success_pattern is None or not re.search(suite.success_pattern, output, re.M):
         return "INCOMPLETE", {}
+    if suite.kind == "physics":
+        # This checker runs pytest internally; its zero exit does not mean
+        # every requested physical test executed (pytest permits skips).
+        counts = _pytest_counts(output)
+        if counts["failed"] or counts["errors"] or counts["xpassed"]:
+            return "FAIL", counts
+        if counts["skipped"] or counts["xfailed"] or not counts["passed"]:
+            return "INCOMPLETE", counts
+        return "PASS", counts
     return "PASS", {}
 
 
@@ -589,6 +616,10 @@ def _render_markdown_report(report: dict[str, Any]) -> str:
         lines.extend(f"- INCOMPLETE: {entry}" for entry in gaps)
     else:
         lines.append("None in the requested scope.")
+    lines.extend(["", "## Deferred test candidates (not executed)", ""])
+    for topic in report["topic_inventory"]:
+        for candidate in topic.get("deferred_test_candidates", []):
+            lines.append(f"- `{topic['topic']}/{candidate['path']}`: {candidate['reason']}; source `{candidate['source_sha256']}`")
     other_gaps = [entry for entry in report["uncovered_or_missing"] if entry not in gaps]
     if other_gaps:
         lines.extend(["", "## Other coverage gaps", ""])
@@ -625,7 +656,7 @@ def _dirty(root: Path) -> bool:
     return bool(proc.stdout.strip()) if proc.returncode == 0 else True
 
 
-def _print_inventory(inventory: list[dict[str, Any]]) -> None:
+def _print_inventory(inventory: list[dict[str, Any]], verbose: bool = False) -> None:
     for item in inventory:
         phase_counts = item.get("grid_scripts_not_auto_run", {})
         phase_summary = ", ".join(f"{phase}={count}" for phase, count in phase_counts.items() if count)
@@ -636,6 +667,10 @@ def _print_inventory(inventory: list[dict[str, Any]]) -> None:
             f"non-automatic Code scripts={item.get('grid_script_count_not_auto_run', 0)} ({phase_summary}); "
             f"{item['coverage_note']}"
         )
+        for candidate in item.get("deferred_test_candidates", []):
+            print(f"    DEFERRED: {candidate['path']}; {candidate['reason']}")
+        if not verbose:
+            continue
         for source in item.get("code_file_inventory", []):
             hints = ",".join(source["role_hints_not_verified"]) or "none"
             imports = ",".join(source["static_imports_not_guaranteed_available"]) or "none detected"
@@ -690,6 +725,7 @@ def build_parser() -> argparse.ArgumentParser:
     modes.add_argument("--topic", metavar="ID_OR_NAME", help="Only the selected Topic's pytest suite")
     modes.add_argument("--changed", metavar="BASE_REF", help="Affected Core/shared checks and Topic suites")
     parser.add_argument("--list", action="store_true", help="List planned commands without executing them")
+    parser.add_argument("--verbose", action="store_true", help="Include per-file static inventory in --list output")
     parser.add_argument("--report-dir", type=Path, help="Directory for the JSON report and command logs")
     return parser
 
@@ -712,7 +748,7 @@ def main(argv: list[str] | None = None) -> int:
 
     if args.list:
         print("Discovered topics and suite inventory:")
-        _print_inventory(inventory)
+        _print_inventory(inventory, verbose=args.verbose)
         print("Planned commands:")
         for suite in suites:
             print(f"  [{suite.suite_id}] ({suite.kind}) {' '.join(suite.command)}")

@@ -10,7 +10,7 @@ ROOT = Path(__file__).resolve().parents[4]
 def test_matter_interaction_legacy_import_is_a_facade() -> None:
     legacy = import_module("docs.core.matter_interaction_forward")
     canonical = import_module(
-        "docs.core.03_lanes.mass_density.matter_interaction_forward"
+        "core.03_lanes.mass_density.matter_interaction_forward"
     )
 
     assert legacy.MatterSource is canonical.MatterSource
@@ -22,7 +22,7 @@ def test_matter_interaction_legacy_import_is_a_facade() -> None:
 
 
 def test_mass_density_package_exports_forward_interaction_contract() -> None:
-    lane = import_module("docs.core.03_lanes.mass_density")
+    lane = import_module("core.03_lanes.mass_density")
 
     assert lane.MatterSource is not None
     assert lane.MatterInteractionForwardConfig is not None

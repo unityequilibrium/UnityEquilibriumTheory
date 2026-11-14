@@ -7,7 +7,7 @@ import importlib
 import docs.core.uet_lorentz as legacy
 
 
-CANONICAL_NAME = "docs.core.02_equations.lorentz_noether.uet_lorentz"
+CANONICAL_NAME = "core.02_equations.lorentz_noether.uet_lorentz"
 
 
 def test_lorentz_root_shim_forwards_public_api() -> None:

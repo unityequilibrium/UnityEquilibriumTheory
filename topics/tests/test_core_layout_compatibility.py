@@ -41,3 +41,21 @@ def test_legacy_and_current_core_import_orders_share_one_module_object() -> None
             [sys.executable, "-c", snippet], cwd=ROOT, capture_output=True, text=True,
         )
         assert completed.returncode == 0, completed.stdout + completed.stderr
+
+
+def test_numbered_packages_share_implementation_in_both_import_orders() -> None:
+    for old_first in (True, False):
+        names = ["docs.core.03_lanes.carrier_observer.photon_observer_baseline",
+                 "core.03_lanes.carrier_observer.photon_observer_baseline"]
+        if not old_first:
+            names.reverse()
+        snippet = (
+            "import importlib; "
+            f"a=importlib.import_module({names[0]!r}); "
+            f"b=importlib.import_module({names[1]!r}); "
+            "assert a is b; assert a.PhotonBaselineConfig is b.PhotonBaselineConfig; "
+            "a._layout_test_state=object(); assert b._layout_test_state is a._layout_test_state"
+        )
+        completed = subprocess.run([sys.executable, "-c", snippet], cwd=ROOT,
+                                   capture_output=True, text=True)
+        assert completed.returncode == 0, completed.stdout + completed.stderr

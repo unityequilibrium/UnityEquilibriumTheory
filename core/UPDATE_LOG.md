@@ -197,3 +197,10 @@ commit: this commit
 ระดับ: ไม่เปลี่ยน claim
 ถัดไป: merge PR #57
 commit: this commit
+
+## 2026-11-15 — Root-layout import identity repair
+- Repaired nested `docs.core.*` aliases to share canonical `core.*` objects; no equation or scientific threshold changed.
+- Updated migration locators and the diagnostic planner scan root; old registry bytes remain unchanged.
+- Verification: canonical migration 50/50, planner 3/3, runner/layout 24/24; physics directory and standard physics checker each recorded 193 passed / 1 skipped. The runner now preserves that skip as INCOMPLETE; targeted results do not replace the full-run report.
+- Remaining: legacy identity mismatches and deferred Topic test admission; no physics claim or evidence level promoted.
+- Commit: this scoped local repair; no publication.

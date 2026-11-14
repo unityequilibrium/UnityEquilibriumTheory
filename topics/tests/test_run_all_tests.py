@@ -99,6 +99,35 @@ def test_pytest_empty_collection_is_incomplete() -> None:
     assert status == "INCOMPLETE"
 
 
+def test_pytest_success_without_outcomes_and_all_xfail_are_incomplete() -> None:
+    suite = runner.Suite("fixture", "pytest", ["pytest"], ["tests"])
+    for output in ("SUCCESS", "", "2 xfailed"):
+        status, _ = runner._classify(suite, 0, output, collected=2)
+        assert status == "INCOMPLETE"
+
+
+def test_deferred_tests_remain_visible_without_automatic_execution(tmp_path: Path) -> None:
+    topic = tmp_path / "0.40_Example"
+    for relative in ("legacy/test_previous.py", "archive/test_previous.py", "Code/check_custom.py"):
+        path = topic / relative
+        path.parent.mkdir(parents=True, exist_ok=True)
+        path.write_text("def test_contract(): assert True\n", encoding="utf-8")
+    assert runner.pytest_files(topic) == []
+    candidates = runner.deferred_test_candidates(topic)
+    assert len(candidates) == 3
+    assert all("require review" in item["reason"] for item in candidates)
+
+
+def test_physics_checker_zero_exit_does_not_hide_skipped_tests() -> None:
+    suite = runner.Suite("physics-tests", "physics", ["checker"], [],
+                         success_pattern=r"check_physics_tests: physics=\d+")
+    status, counts = runner._classify(suite, 0,
+        "check_physics_tests: physics=194 bookkeeping=0\n193 passed, 1 skipped")
+    assert status == "INCOMPLETE"
+    assert counts["skipped"] == 1
+    assert runner._classify(suite, 0, "check_physics_tests: physics=194")[0] == "INCOMPLETE"
+
+
 def test_pytest_skip_is_visible_and_prevents_full_pass() -> None:
     suite = runner.Suite("fixture", "pytest", ["pytest"], ["tests"])
 

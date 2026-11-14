@@ -12,7 +12,7 @@ ROOT = Path(__file__).resolve().parents[4]
 def test_phi_e_reference_legacy_import_is_a_facade() -> None:
     legacy = import_module("docs.core.thermal_phi_e_reference_normalization")
     canonical = import_module(
-        "docs.core.03_lanes.thermal.thermal_phi_e_reference_normalization"
+        "core.03_lanes.thermal.thermal_phi_e_reference_normalization"
     )
 
     assert legacy.PhiEReferenceInputs is canonical.PhiEReferenceInputs
@@ -31,7 +31,7 @@ def test_phi_e_reference_legacy_import_is_a_facade() -> None:
 def test_response_beta_legacy_import_is_a_facade() -> None:
     legacy = import_module("docs.core.thermal_response_beta_contract")
     canonical = import_module(
-        "docs.core.03_lanes.thermal.thermal_response_beta_contract"
+        "core.03_lanes.thermal.thermal_response_beta_contract"
     )
 
     assert legacy.ThermalResponseBetaInputs is canonical.ThermalResponseBetaInputs
@@ -44,7 +44,7 @@ def test_response_beta_legacy_import_is_a_facade() -> None:
 
 
 def test_thermal_package_exports_the_two_contract_lanes_without_alias_collision() -> None:
-    package = import_module("docs.core.03_lanes.thermal")
+    package = import_module("core.03_lanes.thermal")
 
     for name in (
         "PhiEReferenceInputs",

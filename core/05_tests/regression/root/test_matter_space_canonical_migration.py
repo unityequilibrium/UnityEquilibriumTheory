@@ -20,7 +20,7 @@ def test_root_module_forwards_to_one_canonical_implementation(
     module_name: str, public_names: tuple[str, ...]
 ) -> None:
     legacy = importlib.import_module(f"docs.core.{module_name}")
-    canonical_name = f"docs.core.02_equations.matter_space.{module_name}"
+    canonical_name = f"core.02_equations.matter_space.{module_name}"
     canonical = importlib.import_module(canonical_name)
 
     assert legacy.__canonical_module__ == canonical_name
@@ -29,5 +29,5 @@ def test_root_module_forwards_to_one_canonical_implementation(
 
 
 def test_matter_space_family_package_is_importable_without_root_aliases() -> None:
-    package = importlib.import_module("docs.core.02_equations.matter_space")
+    package = importlib.import_module("core.02_equations.matter_space")
     assert package.__all__ == []
