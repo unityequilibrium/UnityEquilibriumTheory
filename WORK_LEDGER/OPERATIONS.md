@@ -6,10 +6,11 @@
 
 These are source-linked historical records, not proof of completed research, successful publication, or current scientific readiness.
 
-Indexed entries: 120. Counts describe records, not accomplishments.
+Indexed entries: 121. Counts describe records, not accomplishments.
 
 | Date | Record | Area | Notes |
 | --- | --- | --- | --- |
+| 2026-11-15 | [Moved raw-source metadata, checkout protection and CI selection](2026/2026-11-15.md#moved-raw-source-metadata-checkout-protection-and-ci-selection) (L86) | repo-ops | explicit_stream_and_area |
 | 2026-11-15 | [Repair foundation inventory and compatibility readers](2026/2026-11-15.md#repair-foundation-inventory-and-compatibility-readers) (L76) | repo-ops | explicit_stream_and_area |
 | 2026-11-15 | [Complete the 38-candidate admission review](2026/2026-11-15.md#complete-the-38-candidate-admission-review) (L66) | repo-ops | explicit_stream_and_area |
 | 2026-11-15 | [Gravity failure reporting and exact stale-identity triage](2026/2026-11-15.md#gravity-failure-reporting-and-exact-stale-identity-triage) (L56) | repo-ops | explicit_stream_and_area |

@@ -120,10 +120,11 @@ def test_duplicate_configuration_keys_are_rejected(tmp_path):
     assert runner.load_suite_reviews(tmp_path)[1]
 
 
-def test_configuration_change_selects_shared_consumers(tmp_path, monkeypatch):
+@pytest.mark.parametrize("changed_path", ["topics/test_suite_config.json", ".gitattributes", ".gitignore"])
+def test_configuration_change_selects_shared_consumers(tmp_path, monkeypatch, changed_path):
     from types import SimpleNamespace
     monkeypatch.setattr(runner.subprocess, "run", lambda *args, **kwargs:
-                        SimpleNamespace(returncode=0, stdout="topics/test_suite_config.json\n", stderr=""))
+                        SimpleNamespace(returncode=0, stdout=f"{changed_path}\n", stderr=""))
     monkeypatch.setattr(runner, "topic_directories", lambda root: [])
     shared = runner.Suite("fixture-shared", "pytest", ["pytest"], ["tests"])
     monkeypatch.setattr(runner, "all_suites", lambda root: ([shared], [], []))

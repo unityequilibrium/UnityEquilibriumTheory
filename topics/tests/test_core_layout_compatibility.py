@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import subprocess
+import re
 import sys
 from pathlib import Path
 
@@ -59,3 +60,39 @@ def test_numbered_packages_share_implementation_in_both_import_orders() -> None:
         completed = subprocess.run([sys.executable, "-c", snippet], cwd=ROOT,
                                    capture_output=True, text=True)
         assert completed.returncode == 0, completed.stdout + completed.stderr
+
+
+def test_absent_raw_source_locator_can_be_mapped_without_fabricating_presence(tmp_path) -> None:
+    legacy = "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/missing_fixture.pdf"
+    current = canonical_path_for(legacy)
+    assert current == legacy.removeprefix("docs/")
+    assert not (tmp_path / current).exists()
+    assert legacy.startswith("docs/topics/")
+
+
+def test_moved_raw_and_core_standard_paths_keep_checkout_protections() -> None:
+    paths = [
+        "topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/qh15_materialscloud/README.txt",
+        "topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/qh15_materialscloud/raw_data/fixture.csv",
+        "topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/qh15_materialscloud/fig1_temp_inversion/fig1_temp_inversion.nb",
+        "core/AGENTS.md", "core/THEORY_CARD.md", "core/theory_card.json",
+        "core/UPDATE_LOG.md", "core/05_tests/physics/fixture.py",
+    ]
+    completed = subprocess.run(["git", "check-attr", "-z", "text", "eol", "--", *paths],
+                               cwd=ROOT, capture_output=True, check=True)
+    fields = completed.stdout.decode("utf-8").rstrip("\0").split("\0")
+    attrs = {(fields[i], fields[i + 1]): fields[i + 2] for i in range(0, len(fields), 3)}
+    for path in paths[:3]:
+        assert attrs[path, "text"] == "unset"
+    for path in paths[3:]:
+        assert attrs[path, "text"] == "set"
+        assert attrs[path, "eol"] == "lf"
+
+
+def test_ci_research_detection_includes_checkout_and_ignore_rules() -> None:
+    workflow = (ROOT / ".github/workflows/pr-validation.yml").read_text(encoding="utf-8")
+    match = re.search(r"set_output research '([^']+)'", workflow)
+    assert match is not None
+    pattern = re.compile(match.group(1))
+    for path in (".gitattributes", ".gitignore", "core/02_equations/example.py", "topics/0.13_Thermodynamic_Bridge/Code/example.py"):
+        assert pattern.search(path), path

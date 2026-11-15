@@ -5,10 +5,10 @@
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
     "sources": 77,
-    "entries": 821,
+    "entries": 822,
     "by_stream": {
       "book-history": 94,
-      "operations": 120,
+      "operations": 121,
       "research": 606,
       "review": 1
     },
@@ -400,8 +400,8 @@
     },
     {
       "path": "2026/2026-11-15.md",
-      "sha256": "bc00d5744502a186ccda607e56cdf7afc3d3117ddba852407a18cfaf8176c109",
-      "entries": 8
+      "sha256": "d8f5e622bea359fe6b28d5cf5561cf9a34593a1369017387be66aac78fbe5d19",
+      "entries": 9
     },
     {
       "path": "2026-08-14.md",
@@ -16779,9 +16779,29 @@
       "source": "2026/2026-11-15.md",
       "anchor": "repair-foundation-inventory-and-compatibility-readers",
       "start_line": 76,
-      "end_line": 84,
+      "end_line": 85,
       "title": "Repair foundation inventory and compatibility readers",
-      "entry_sha256": "e3aebeb3a0043156e352537eb4b9769303b2ed77c8e4e38cfe551624dfafb18c",
+      "entry_sha256": "421b7219c5bfcd41ef76bf3bd942f5467ce8e9e07e6ffc06e219a3e80fb587f7",
+      "stream": "operations",
+      "areas": [
+        "repo-ops"
+      ],
+      "related_streams": [
+        "operations"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-15",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-15.md#moved-raw-source-metadata-checkout-protection-and-ci-selection",
+      "source": "2026/2026-11-15.md",
+      "anchor": "moved-raw-source-metadata-checkout-protection-and-ci-selection",
+      "start_line": 86,
+      "end_line": 95,
+      "title": "Moved raw-source metadata, checkout protection and CI selection",
+      "entry_sha256": "1b22cc5a258e8a82d34e06c295821fde848c87e57b55d1ffb28bc980e687b210",
       "stream": "operations",
       "areas": [
         "repo-ops"

@@ -496,7 +496,7 @@ def changed_suites(base: str, root: Path = REPO_ROOT) -> tuple[list[Suite], list
             "core/", "docs/core/", "docs/scripts/core/", "docs/scripts/standard/",
             "docs/scripts/audit/", "docs/meta/", "docs/standard/", "docs/repo_paths.py",
         ))
-        or path in {"docs/STANDARD.md", "topics/run_all_tests.py", "topics/run_full_verification.py", "topics/test_suite_config.json"}
+        or path in {".gitattributes", ".gitignore", "docs/STANDARD.md", "topics/run_all_tests.py", "topics/run_full_verification.py", "topics/test_suite_config.json"}
         for path in changed
     )
 

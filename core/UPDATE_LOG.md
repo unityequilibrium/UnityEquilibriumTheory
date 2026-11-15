@@ -211,3 +211,10 @@ commit: this commit
 - Inventory now discloses 40 Topics, 39 audit files, 27 files with rows / 412 rows, 12 unsupported/prose-only audit files and one missing audit; foundation remains BLOCKED.
 - Focused checks passed 73/73; physics checker recorded 193 passed / 1 skipped (not complete coverage). No-write CLI checks preserve historical artifacts and work outside the repository.
 - No equation, threshold, formula audit or old artifact/hash changed; remaining stale lineage is not refreshed. Local commit only.
+
+## 2026-11-15 — Preserve moved raw-source locators and checkout rules
+- Fixed the Farooqui metadata-only branch to compare its historical locator through the central logical path map; present-file size/MD5/SHA-256 checks are unchanged.
+- Mirrored QH-15 byte-preservation and Core LF checkout attributes at their current root locations; protected historical rules remain in place. No raw data was fetched, normalized or checked as present.
+- Connected attribute/ignore-only changes to existing shared-runner and PR research checks; no new physics criterion or gate introduced.
+- Verification: 69 affected software tests passed; workflow YAML parses. Prior physics evidence is reused, not rerun: equation/physics-test tree identities remain unchanged, with prior 193 passed / 1 skipped.
+- No physical acceptance, equation/parameter change or old artifact/hash refresh; local commit only.

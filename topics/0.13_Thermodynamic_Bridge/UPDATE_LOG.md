@@ -7447,3 +7447,10 @@ EVIDENCE_PATHS:
 - Focused post-fix tests: 3 passed; changed Python sources compile. No equation, scientific artifact, hash, or research status was changed.
 - This is a software-path correction only, not a new scientific result or validation; old identity mismatches remain visible.
 - Next: classify the remaining Topic 13 failures by stale identity versus implementation issue from the saved run; do not rerun producers or refresh hashes by default.
+
+## 2026-11-15 — Raw-source locator and byte-preservation rules
+- Corrected Farooqui's metadata-only legacy/current path comparison without rewriting its source package, declared size or hashes; actual PDF identity checks are unchanged.
+- Farooqui PDF and QH-15 raw directory are absent in this checkout. No raw source identity or measurement was freshly verified, downloaded or fabricated.
+- Current-root QH-15 paths now inherit the original no-text-conversion policy; this does not unignore or publish raw files, and protected historical-source rules remain unchanged.
+- Affected regression/runner/standard checks passed 69/69. The QH-15 regression reads its historical artifact only; it is not a new raw-data replay or physical validation.
+- Source-version STALE blockers remain a separate prerequisite; no Core law, parameter, source package or scientific artifact changed.
