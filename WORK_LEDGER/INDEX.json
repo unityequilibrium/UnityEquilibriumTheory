@@ -5,10 +5,10 @@
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
     "sources": 77,
-    "entries": 820,
+    "entries": 821,
     "by_stream": {
       "book-history": 94,
-      "operations": 119,
+      "operations": 120,
       "research": 606,
       "review": 1
     },
@@ -400,8 +400,8 @@
     },
     {
       "path": "2026/2026-11-15.md",
-      "sha256": "4281619961f2c53f1b1f30600f234c0606d086f223b60dd967a523b06f427925",
-      "entries": 7
+      "sha256": "bc00d5744502a186ccda607e56cdf7afc3d3117ddba852407a18cfaf8176c109",
+      "entries": 8
     },
     {
       "path": "2026-08-14.md",
@@ -16759,9 +16759,29 @@
       "source": "2026/2026-11-15.md",
       "anchor": "complete-the-38-candidate-admission-review",
       "start_line": 66,
-      "end_line": 74,
+      "end_line": 75,
       "title": "Complete the 38-candidate admission review",
-      "entry_sha256": "0a4cf91b67ba054c855cf0ea163ed80031cac9447c37709663380f2735faca0f",
+      "entry_sha256": "6cf08a17ee69196ccc88cd2d89d8d038b583c6bc49033cd0924c0a66979611b3",
+      "stream": "operations",
+      "areas": [
+        "repo-ops"
+      ],
+      "related_streams": [
+        "operations"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-15",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-15.md#repair-foundation-inventory-and-compatibility-readers",
+      "source": "2026/2026-11-15.md",
+      "anchor": "repair-foundation-inventory-and-compatibility-readers",
+      "start_line": 76,
+      "end_line": 84,
+      "title": "Repair foundation inventory and compatibility readers",
+      "entry_sha256": "e3aebeb3a0043156e352537eb4b9769303b2ed77c8e4e38cfe551624dfafb18c",
       "stream": "operations",
       "areas": [
         "repo-ops"

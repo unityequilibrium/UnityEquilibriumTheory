@@ -204,3 +204,10 @@ commit: this commit
 - Verification: canonical migration 50/50, planner 3/3, runner/layout 24/24; physics directory and standard physics checker each recorded 193 passed / 1 skipped. The runner now preserves that skip as INCOMPLETE; targeted results do not replace the full-run report.
 - Remaining: legacy identity mismatches and deferred Topic test admission; no physics claim or evidence level promoted.
 - Commit: this scoped local repair; no publication.
+
+## 2026-11-15 — Restore post-move foundation inventory readers
+- Fixed canonical Topic discovery and the nine relocated compatibility inputs; existing classification/compatibility criteria are unchanged.
+- Read the existing Topic 0.22 ontology-table headers without inventing formula IDs or treating its combined status/failure column as proof; retain original source fields.
+- Inventory now discloses 40 Topics, 39 audit files, 27 files with rows / 412 rows, 12 unsupported/prose-only audit files and one missing audit; foundation remains BLOCKED.
+- Focused checks passed 73/73; physics checker recorded 193 passed / 1 skipped (not complete coverage). No-write CLI checks preserve historical artifacts and work outside the repository.
+- No equation, threshold, formula audit or old artifact/hash changed; remaining stale lineage is not refreshed. Local commit only.
