@@ -5,10 +5,10 @@
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
     "sources": 77,
-    "entries": 822,
+    "entries": 823,
     "by_stream": {
       "book-history": 94,
-      "operations": 121,
+      "operations": 122,
       "research": 606,
       "review": 1
     },
@@ -400,8 +400,8 @@
     },
     {
       "path": "2026/2026-11-15.md",
-      "sha256": "d8f5e622bea359fe6b28d5cf5561cf9a34593a1369017387be66aac78fbe5d19",
-      "entries": 9
+      "sha256": "85338a2c9b870cd6710a64dd1d4b344495ccdb4fcc24fb847ba5988a74e0e5bc",
+      "entries": 10
     },
     {
       "path": "2026-08-14.md",
@@ -16799,9 +16799,29 @@
       "source": "2026/2026-11-15.md",
       "anchor": "moved-raw-source-metadata-checkout-protection-and-ci-selection",
       "start_line": 86,
-      "end_line": 95,
+      "end_line": 96,
       "title": "Moved raw-source metadata, checkout protection and CI selection",
-      "entry_sha256": "1b22cc5a258e8a82d34e06c295821fde848c87e57b55d1ffb28bc980e687b210",
+      "entry_sha256": "5ec4fc7ead23b5a072845faf2709d898de53e9b2ce517d7656bdedafc497a49f",
+      "stream": "operations",
+      "areas": [
+        "repo-ops"
+      ],
+      "related_streams": [
+        "operations"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-15",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-15.md#full-post-repair-verification-checkpoint",
+      "source": "2026/2026-11-15.md",
+      "anchor": "full-post-repair-verification-checkpoint",
+      "start_line": 97,
+      "end_line": 107,
+      "title": "Full post-repair verification checkpoint",
+      "entry_sha256": "d8610d1d4e7e392dc365e7e00cbacd6c1abc71e4e5b46028a7225c541cf6a694",
       "stream": "operations",
       "areas": [
         "repo-ops"
