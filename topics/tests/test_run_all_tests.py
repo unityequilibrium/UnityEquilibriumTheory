@@ -24,6 +24,49 @@ def test_incomplete_coverage_exit_code_takes_precedence_over_failures() -> None:
     assert runner._program_exit_code(failed=1, incomplete=True) == 2
 
 
+def test_profile_software_tests_do_not_close_topic_coverage(tmp_path: Path) -> None:
+    root = tmp_path / "repo"
+    topic = root / "topics" / runner.PROFILE_CHECK_TOPICS[0]
+    topic.mkdir(parents=True)
+    (topic / "test_profile.py").write_text("def test_profile(): assert True\n", encoding="utf-8")
+    suites, missing = runner.topic_suite(topic, root)
+    assert len(suites) == 1
+    assert any("limited suite" in message and "engine/research" in message for message in missing)
+    assert any("thermal-stability" in message for message in missing)
+    assert runner._program_exit_code(failed=0, incomplete=bool(missing)) == 2
+
+
+def test_nested_profile_outcome_is_read_without_becoming_physical_validation(tmp_path: Path) -> None:
+    name = runner.PROFILE_CHECK_TOPICS[0]
+    path = tmp_path / runner.LEGACY_RESULT_READOUTS[name]["path"]
+    path.parent.mkdir(parents=True)
+    path.write_text('{"metadata":{"status":"FAIL"}}', encoding="utf-8")
+    result = runner.legacy_topic_results([{"topic": name}], tmp_path)
+    assert result["errors"] == []
+    assert result["items"][0]["outcome"] == "FAIL"
+    assert result["records_read_not_rerun"] is True
+    path.write_text('{"metadata":{}}', encoding="utf-8")
+    assert runner.legacy_topic_results([{"topic": name}], tmp_path)["errors"]
+
+
+def test_profile_shared_change_selects_all_consumers_without_core_rerun(tmp_path: Path, monkeypatch) -> None:
+    from types import SimpleNamespace
+
+    root = tmp_path / "repo"
+    for name in runner.PROFILE_CHECK_TOPICS:
+        topic = root / "topics" / name
+        topic.mkdir(parents=True)
+        (topic / "test_profile.py").write_text("def test_profile(): assert True\n", encoding="utf-8")
+    monkeypatch.setattr(runner.subprocess, "run", lambda *a, **k: SimpleNamespace(
+        returncode=0, stdout="topics/_profile_thresholds.py\n", stderr=""))
+    suites, inventory, missing = runner.changed_suites("BASE", root)
+    assert {item["topic"] for item in inventory} == set(runner.PROFILE_CHECK_TOPICS)
+    assert {suite.suite_id for suite in suites} == {
+        "runner-tests", *(f"topic:{name}" for name in runner.PROFILE_CHECK_TOPICS)}
+    assert "core-tests" not in {suite.suite_id for suite in suites}
+    assert len(missing) == len(runner.PROFILE_CHECK_TOPICS)
+
+
 def test_test_filename_discovery_is_narrow(tmp_path: Path) -> None:
     topic = tmp_path / "topic"
     (topic / "Code" / "03_Research").mkdir(parents=True)

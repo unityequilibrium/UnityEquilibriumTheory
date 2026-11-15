@@ -54,6 +54,23 @@ LEGACY_RESULT_READOUTS = {
         "suite_scope": "decision-helper and saved-result reporting only; benchmark, input provenance and other Topic paths remain unreviewed",
     },
 }
+# These scripts compare supplied profile values; their tests do not cover the
+# Topic's engines, research or physical engineering requirements.
+PROFILE_CHECK_TOPICS = (
+    "0.28_Material_Synthesis", "0.29_Ocean_Recovery", "0.30_Mega_Flora_Biotech",
+    "0.31_SpaceTime_Propulsion", "0.32_Micro_Nuclear_Fusion", "0.33_Battery_Tech",
+)
+for _topic in PROFILE_CHECK_TOPICS:
+    LEGACY_RESULT_READOUTS[_topic] = {
+        "path": f"topics/{_topic}/Result/artifacts/rd_sim_artifact.json",
+        "outcome_field": "metadata.status",
+        "suite_scope": (
+            "profile min/max comparison, input rejection and isolated-output software regression only; "
+            "engine/research paths, provenance, units and engineering claims remain unreviewed"
+            + ("; thermal-stability >=500 K in VERIFICATION_SPEC conflicts with the profile's max_thermal_decay_k"
+               if _topic == "0.28_Material_Synthesis" else "")
+        ),
+    }
 READ_CALLS = {"open", "read", "read_text", "read_bytes", "read_csv", "read_excel", "read_json", "load", "loadtxt", "genfromtxt", "glob", "rglob", "iterdir"}
 WRITE_CALLS = {"write", "write_text", "write_bytes", "to_csv", "to_excel", "to_json", "save", "savefig", "dump", "mkdir", "unlink", "rename", "replace"}
 
@@ -491,6 +508,10 @@ def changed_suites(base: str, root: Path = REPO_ROOT) -> tuple[list[Suite], list
         topic.name for topic in topics
         if any(path.startswith((f"topics/{topic.name}/", f"docs/topics/{topic.name}/")) for path in changed)
     }
+    profile_shared = any(path in {"topics/_profile_thresholds.py", "topics/tests/profile_contract_cases.py"}
+                         for path in changed)
+    if profile_shared:
+        changed_topic_names.update(name for name in PROFILE_CHECK_TOPICS if name in topic_paths)
     core_or_shared = any(
         path.startswith((
             "core/", "docs/core/", "docs/scripts/core/", "docs/scripts/standard/",
@@ -511,6 +532,8 @@ def changed_suites(base: str, root: Path = REPO_ROOT) -> tuple[list[Suite], list
         selected, gaps = topic_suite(topic, root)
         suites.update({suite.suite_id: suite for suite in selected})
         missing.extend(gaps)
+    if profile_shared:
+        suites["runner-tests"] = _pytest_suite("runner-tests", ["topics/tests"])
     if not changed_topic_names:
         missing.append("changed files do not map to a Core/shared test suite or numbered Topic")
     inventory = [topic_inventory_record(topic, root, "affected topic")
@@ -858,7 +881,9 @@ def legacy_topic_results(inventory: list[dict[str, Any]], root: Path = REPO_ROOT
         try:
             path = root / config["path"]
             payload = json.loads(path.read_text(encoding="utf-8-sig"))
-            outcome = payload[config["outcome_field"]]
+            outcome = payload
+            for component in config["outcome_field"].split("."):
+                outcome = outcome[component]
             if outcome not in {"PASS", "FAIL", "INCONCLUSIVE"}:
                 raise ValueError("unknown outcome; no implicit conversion permitted")
             items.append({"topic": topic["topic"], **config, "outcome": outcome,
