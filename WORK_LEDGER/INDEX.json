@@ -5,10 +5,10 @@
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
     "sources": 77,
-    "entries": 824,
+    "entries": 825,
     "by_stream": {
       "book-history": 94,
-      "operations": 123,
+      "operations": 124,
       "research": 606,
       "review": 1
     },
@@ -400,8 +400,8 @@
     },
     {
       "path": "2026/2026-11-15.md",
-      "sha256": "9555707e6eeffa64989edc570368402542ed6dbba1d1d16f412edb4e21ffcb2b",
-      "entries": 11
+      "sha256": "ff585cab5b98a7a82ab306e32682588def5fe6de5ad731552c19ee5cfbe101ba",
+      "entries": 12
     },
     {
       "path": "2026-08-14.md",
@@ -16839,9 +16839,29 @@
       "source": "2026/2026-11-15.md",
       "anchor": "profile-comparison-coverage-topics-028033",
       "start_line": 109,
-      "end_line": 118,
+      "end_line": 119,
       "title": "Profile-comparison coverage, Topics 0.28–0.33",
-      "entry_sha256": "71621c158dac427b0fdcbc8ed752424fb27a8ffd9eb36f5a3178cb4024fbb47d",
+      "entry_sha256": "f351bb5a17bf423c859903091042fbe762c51c22ac1d031df51c67898139e740",
+      "stream": "operations",
+      "areas": [
+        "repo-ops"
+      ],
+      "related_streams": [
+        "operations"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-15",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-15.md#profile-comparison-coverage-topics-034039",
+      "source": "2026/2026-11-15.md",
+      "anchor": "profile-comparison-coverage-topics-034039",
+      "start_line": 120,
+      "end_line": 129,
+      "title": "Profile-comparison coverage, Topics 0.34–0.39",
+      "entry_sha256": "45f2e5e7067c415130d083a7b052525c289003656cdb33af295f6e6e85abb4fa",
       "stream": "operations",
       "areas": [
         "repo-ops"

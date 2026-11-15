@@ -6,10 +6,11 @@
 
 These are source-linked historical records, not proof of completed research, successful publication, or current scientific readiness.
 
-Indexed entries: 123. Counts describe records, not accomplishments.
+Indexed entries: 124. Counts describe records, not accomplishments.
 
 | Date | Record | Area | Notes |
 | --- | --- | --- | --- |
+| 2026-11-15 | [Profile-comparison coverage, Topics 0.34–0.39](2026/2026-11-15.md#profile-comparison-coverage-topics-034039) (L120) | repo-ops | explicit_stream_and_area |
 | 2026-11-15 | [Profile-comparison coverage, Topics 0.28–0.33](2026/2026-11-15.md#profile-comparison-coverage-topics-028033) (L109) | repo-ops | explicit_stream_and_area |
 | 2026-11-15 | [Full post-repair verification checkpoint](2026/2026-11-15.md#full-post-repair-verification-checkpoint) (L97) | repo-ops | explicit_stream_and_area |
 | 2026-11-15 | [Moved raw-source metadata, checkout protection and CI selection](2026/2026-11-15.md#moved-raw-source-metadata-checkout-protection-and-ci-selection) (L86) | repo-ops | explicit_stream_and_area |

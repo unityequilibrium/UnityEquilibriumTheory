@@ -59,18 +59,42 @@ LEGACY_RESULT_READOUTS = {
 PROFILE_CHECK_TOPICS = (
     "0.28_Material_Synthesis", "0.29_Ocean_Recovery", "0.30_Mega_Flora_Biotech",
     "0.31_SpaceTime_Propulsion", "0.32_Micro_Nuclear_Fusion", "0.33_Battery_Tech",
+    "0.34_Information_Centric_Nanofabrication", "0.35_ICN_Digital_Automation",
+    "0.36_Orbital_Manufacturing", "0.37_Quantum_Photovoltaics",
+    "0.38_Bio_Synthetic_Integration", "0.39_Bio_Smart_City",
 )
+PROFILE_ONLY_CODE = {
+    "0.36_Orbital_Manufacturing": "Code/05_Simulation/Sim_Orbital_Crystallization.py",
+    "0.39_Bio_Smart_City": "Code/05_Simulation/Sim_Bio_City.py",
+}
 for _topic in PROFILE_CHECK_TOPICS:
     LEGACY_RESULT_READOUTS[_topic] = {
         "path": f"topics/{_topic}/Result/artifacts/rd_sim_artifact.json",
         "outcome_field": "metadata.status",
         "suite_scope": (
+            "current Code surface is a supplied-profile comparator only, not a physical model or engineering validation"
+            if _topic in PROFILE_ONLY_CODE else
             "profile min/max comparison, input rejection and isolated-output software regression only; "
             "engine/research paths, provenance, units and engineering claims remain unreviewed"
             + ("; thermal-stability >=500 K in VERIFICATION_SPEC conflicts with the profile's max_thermal_decay_k"
                if _topic == "0.28_Material_Synthesis" else "")
         ),
     }
+
+
+def topic_scope_gap(topic: Path) -> str | None:
+    """Close only the reviewed software surface, never the engineering claim.
+
+Two proposal Topics contain only the profile checker under Code/. Additional
+code reopens their coverage automatically; a folder/label is not an exemption.
+"""
+    if topic.name in PROFILE_ONLY_CODE:
+        actual = {path.relative_to(topic).as_posix() for path in (topic / "Code").rglob("*")
+                  if path.is_file() and "__pycache__" not in path.parts}
+        if actual == {PROFILE_ONLY_CODE[topic.name]}:
+            return None
+        return "profile-only software scope changed or is missing; additional Code paths need review"
+    return LEGACY_RESULT_READOUTS.get(topic.name, {}).get("suite_scope")
 READ_CALLS = {"open", "read", "read_text", "read_bytes", "read_csv", "read_excel", "read_json", "load", "loadtxt", "genfromtxt", "glob", "rglob", "iterdir"}
 WRITE_CALLS = {"write", "write_text", "write_bytes", "to_csv", "to_excel", "to_json", "save", "savefig", "dump", "mkdir", "unlink", "rename", "replace"}
 
@@ -387,7 +411,7 @@ def topic_inventory_record(topic: Path, root: Path = REPO_ROOT, coverage_note: s
             "declared pytest regression suite discovered" if test_files
             else "no pytest regression suite; non-test files inventoried but not executed"
         ),
-        "suite_scope_limit": LEGACY_RESULT_READOUTS.get(topic.name, {}).get("suite_scope"),
+        "suite_scope_limit": topic_scope_gap(topic),
     }
 
 
@@ -454,8 +478,8 @@ def all_suites(root: Path = REPO_ROOT) -> tuple[list[Suite], list[dict[str, Any]
         if files:
             relative = [path.relative_to(root).as_posix() for path in files]
             suites.append(_pytest_suite(f"topic:{topic.name}", relative, topic.name))
-            if topic.name in LEGACY_RESULT_READOUTS:
-                missing.append(f"{topic.name}: limited suite: {LEGACY_RESULT_READOUTS[topic.name]['suite_scope']}")
+            if scope_gap := topic_scope_gap(topic):
+                missing.append(f"{topic.name}: limited suite: {scope_gap}")
         else:
             missing.append(f"{topic.name}: no pytest regression suite discovered")
 
@@ -484,8 +508,8 @@ def topic_suite(topic: Path, root: Path = REPO_ROOT) -> tuple[list[Suite], list[
         return [], review_errors + [f"{topic.name}: no pytest regression suite discovered"]
     relative = [path.relative_to(root).as_posix() for path in files]
     gaps = review_errors
-    if topic.name in LEGACY_RESULT_READOUTS:
-        gaps.append(f"{topic.name}: limited suite: {LEGACY_RESULT_READOUTS[topic.name]['suite_scope']}")
+    if scope_gap := topic_scope_gap(topic):
+        gaps.append(f"{topic.name}: limited suite: {scope_gap}")
     return [_pytest_suite(f"topic:{topic.name}", relative, topic.name)], gaps
 
 

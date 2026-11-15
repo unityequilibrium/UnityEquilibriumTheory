@@ -49,6 +49,25 @@ def test_nested_profile_outcome_is_read_without_becoming_physical_validation(tmp
     assert runner.legacy_topic_results([{"topic": name}], tmp_path)["errors"]
 
 
+def test_profile_only_scope_reopens_if_code_is_added_or_missing(tmp_path: Path) -> None:
+    for name, locator in runner.PROFILE_ONLY_CODE.items():
+        topic = tmp_path / name
+        source = topic / locator
+        source.parent.mkdir(parents=True)
+        assert runner.topic_scope_gap(topic) is not None
+        source.write_text("def run_simulation(): pass\n", encoding="utf-8")
+        assert runner.topic_scope_gap(topic) is None
+        unreviewed = topic / "Code/new_engine.py"
+        unreviewed.write_text("def evolve(): pass\n", encoding="utf-8")
+        assert "need review" in runner.topic_scope_gap(topic)
+        unreviewed.unlink()
+        assert runner.topic_scope_gap(topic) is None
+        (topic / "Code/new_engine.js").write_text("evolve();\n", encoding="utf-8")
+        assert "need review" in runner.topic_scope_gap(topic)
+        source.unlink()
+        assert runner.topic_scope_gap(topic) is not None
+
+
 def test_profile_shared_change_selects_all_consumers_without_core_rerun(tmp_path: Path, monkeypatch) -> None:
     from types import SimpleNamespace
 
@@ -57,6 +76,10 @@ def test_profile_shared_change_selects_all_consumers_without_core_rerun(tmp_path
         topic = root / "topics" / name
         topic.mkdir(parents=True)
         (topic / "test_profile.py").write_text("def test_profile(): assert True\n", encoding="utf-8")
+        if name in runner.PROFILE_ONLY_CODE:
+            source = topic / runner.PROFILE_ONLY_CODE[name]
+            source.parent.mkdir(parents=True)
+            source.write_text("def run_simulation(): pass\n", encoding="utf-8")
     monkeypatch.setattr(runner.subprocess, "run", lambda *a, **k: SimpleNamespace(
         returncode=0, stdout="topics/_profile_thresholds.py\n", stderr=""))
     suites, inventory, missing = runner.changed_suites("BASE", root)
@@ -64,7 +87,7 @@ def test_profile_shared_change_selects_all_consumers_without_core_rerun(tmp_path
     assert {suite.suite_id for suite in suites} == {
         "runner-tests", *(f"topic:{name}" for name in runner.PROFILE_CHECK_TOPICS)}
     assert "core-tests" not in {suite.suite_id for suite in suites}
-    assert len(missing) == len(runner.PROFILE_CHECK_TOPICS)
+    assert len(missing) == len(runner.PROFILE_CHECK_TOPICS) - len(runner.PROFILE_ONLY_CODE)
 
 
 def test_test_filename_discovery_is_narrow(tmp_path: Path) -> None:
