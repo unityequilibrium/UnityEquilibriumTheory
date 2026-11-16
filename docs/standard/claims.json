@@ -289,6 +289,13 @@
         "R_SI1_PARENT_ACTION_SI"
       ],
       "note": "Tree level, uniform fluid, chi = nucleon lane as in T005. Liquid He II is outside the tree-level GP class (n a^3 >= 0.38), so the legacy Topic 13 identification of Phi with the superfluid fraction is not obtained from the action. Standard physics, not UET-distinct."
+    },
+    {
+      "claim_id": "C_T015_HE_II_TREE_LEVEL_LANE",
+      "statement": "Lane hypothesis assumed by Topic 13: with chi as the He-4 atom, superfluid He II is the condensed phase of the parent action's O(2) sector, so at tree level with lam = 8 pi a m from the measured He-He scattering length its first sound equals the Bogoliubov speed.",
+      "level": "L0_SPECULATIVE",
+      "evidence": [],
+      "note": "Under test by draft Test Card T015. The lane conflicts with the chi = nucleon lane used by T005 (SI-1 note); a failure removes only this lane, not the parent action."
     }
   ]
 }

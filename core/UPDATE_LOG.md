@@ -372,3 +372,10 @@ commit: this commit
 ความหมาย: lane Φ ของ topic 13 (Φ = superfluid fraction, e0 จาก convention) ไม่ได้มาจาก action; ช่อง "action origin" ตอบได้แต่ไม่ปลดล็อก
 ระดับ: R_SI1_PARENT_ACTION_SI → L1; ร่าง Test Card S1–S3 รอผู้เขียน (docs/meta/SI1_PARENT_ACTION_SI_DRAFT_2026-11-16.md)
 commit: this commit
+
+## 2026-11-16 — T015 (ร่าง): He II อธิบายได้ด้วยภาค O(2) ของ action ที่ tree level หรือไม่
+ทำ: ผู้เขียนเลือก S2; ร่าง Test Card T015 (DRAFT) เทียบความเร็วเสียง tree level (λ = 8πam, a = 104 Å จาก Grisenti 2000) กับ first sound 233.1 m/s ที่ 1.70 K (Donnelly & Barenghi 1998)
+เกณฑ์: D ≤ 0.10 PASS, D > 0.30 FAILED (AI เสนอ); ไม่ blind เพราะรู้แล้วว่าได้ราว 850 m/s; ล้มเหลวจะตัดเฉพาะ lane χ = อะตอม
+แก้: ค่า first sound ใน SI-1 ที่เขียนจากความจำ (238) เป็น 233.1 m/s ตามตาราง
+ถัดไป: ผู้เขียนตรวจเกณฑ์และค่า ρ แล้วอนุมัติหรือแก้การ์ด; ยังไม่รัน
+commit: this commit

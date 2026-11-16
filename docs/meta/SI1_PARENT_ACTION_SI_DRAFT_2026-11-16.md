@@ -24,7 +24,7 @@
    `δa = −α G M³ / m_ψ²`
    ที่ขอบ T005 (α ≈ 1, m_ψ = 5.1e-3 eV): Rb-87 `δa/a = −5e-18`, He-4 `δa = −2.6e-30 m` วัดไม่ได้
 4. **He II อยู่นอกขอบเขตของ action ที่ tree level** แม้ใช้ hard core 2.6 Å ก็ได้ `n a³ = 0.38` (ด้วย scattering length จริงราว 100 Å ได้ราว 10⁴)
-   GP ให้ความเร็วเสียง 134 m/s ขณะที่ first sound ที่วัดได้ราว 238 m/s ดังนั้น**action ไม่ได้ให้การจับคู่ Φ = superfluid fraction ของ lane He-4 เดิม**
+   GP ให้ความเร็วเสียง 134 m/s ขณะที่ first sound ที่วัดได้ที่ 1.70 K คือ 233.1 m/s (Donnelly & Barenghi 1998; เดิมเขียนราว 238 จากความจำ แก้แล้ว) ดังนั้น**action ไม่ได้ให้การจับคู่ Φ = superfluid fraction ของ lane He-4 เดิม**
    ของไหล He II เป็นระบบ strongly correlated ต้องใช้ closure แยก (Landau two-fluid) ซึ่งไม่ได้มาจาก action
 
 ข้อสังเกตเรื่อง lane (AI inference): T005 ใช้ χ = nucleon ถ้าให้ χ = อะตอมทั้งตัวแทน แรงจาก ψ จะไม่แปรตามมวล
@@ -51,3 +51,7 @@
 
 ข้อเสนอ: S2 ตรงกับปัญหา topic 13 ที่สุด ส่วน S1 เป็น sanity check ของชั้น SI
 ก่อนอนุมัติต้องตกลงกันว่าจะใช้ค่าตัวเลขไหนและตัวเลขเกณฑ์ pass/fail เท่าไร และผู้เขียนเป็นคนอนุมัติ
+
+## 5. ผู้เขียนเลือก S2 (2026-11-16)
+
+ร่าง Test Card อยู่ที่ `docs/standard/tests/T015.json` (DRAFT ยังไม่ได้รัน) ข้อมูลอยู่ที่ `docs/data/external/condensed_matter/helium4/he_ii_tree_level_inputs.csv`

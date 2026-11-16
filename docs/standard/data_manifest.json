@@ -144,6 +144,18 @@
       "license": "numerical facts transcribed from an arXiv paper (arXiv non-exclusive license); no figures or text redistributed",
       "visibility": "PUBLIC",
       "note": "Independent of the Salaris et al. 2004 counts used in T002 (different telescopes, membership and ZAHB cut). Re-check against the journal version before T014 is approved."
+    },
+    {
+      "data_id": "HE_II_TREE_LEVEL_INPUTS",
+      "description": "He II first sound and total density at 1.70 K SVP, and the He-He s-wave scattering length",
+      "source": "Donnelly and Barenghi, J. Phys. Chem. Ref. Data 27, 1217 (1998) first-sound table and density formula; Grisenti et al., Phys. Rev. Lett. 85, 2284 (2000)",
+      "doi_or_url": "https://doi.org/10.1063/1.556028; https://doi.org/10.1103/PhysRevLett.85.2284",
+      "retrieved": "2026-11-16",
+      "path": "docs/data/external/condensed_matter/helium4/he_ii_tree_level_inputs.csv",
+      "sha256": "5223b13e54e1c6448501c2f219b08fa6641b8acbe42a32410e37ca6de96cc6bf",
+      "license": "numerical facts transcribed from published papers; no figures or text redistributed",
+      "visibility": "PUBLIC",
+      "note": "u1 read from the NIST SRD reprint table (T90 = 1.7000 K, 233.1 m/s); a from the PRL abstract (104 +8/-18 angstrom); rho reused from the Topic 13 record evaluated with the same source's density formula. Re-check rho against the printed table before T015 is approved."
     }
   ]
 }

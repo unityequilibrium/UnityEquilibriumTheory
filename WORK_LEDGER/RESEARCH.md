@@ -6,10 +6,11 @@
 
 These are source-linked historical records, not proof of completed research, successful publication, or current scientific readiness.
 
-Indexed entries: 628. Counts describe records, not accomplishments.
+Indexed entries: 629. Counts describe records, not accomplishments.
 
 | Date | Record | Area | Notes |
 | --- | --- | --- | --- |
+| 2026-11-16 | [T015 draft: He II at tree level from the parent action](2026/2026-11-16.md#t015-draft-he-ii-at-tree-level-from-the-parent-action) (L142) | research-core | explicit_stream_and_area |
 | 2026-11-16 | [SI-1: parent action in SI units for a Bose fluid](2026/2026-11-16.md#si-1-parent-action-in-si-units-for-a-bose-fluid) (L132) | research-core | explicit_stream_and_area |
 | 2026-11-16 | [Topic screen for UET-distinct candidates](2026/2026-11-16.md#topic-screen-for-uet-distinct-candidates) (L122) | research-core | explicit_stream_and_area |
 | 2026-11-16 | [T014 run and L2 record](2026/2026-11-16.md#t014-run-and-l2-record) (L112) | research-standards | explicit_stream_and_area |
