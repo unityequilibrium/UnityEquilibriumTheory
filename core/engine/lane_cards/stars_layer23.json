@@ -1,0 +1,57 @@
+{
+  "schema": "uet-lane-card-v1",
+  "topic": "core:stellar_populations (no numbered topic folder; closed Test Cards T002, T008, T014)",
+  "reach": "LAYER23",
+  "system": "Low-mass stars in old globular clusters passing once through the red giant branch and the horizontal branch, and cooling white dwarfs in the Galactic disk.",
+  "mapping": {
+    "chi": "none (layer 2-3 only)",
+    "psi": "none",
+    "F": "nuclear fuel available in a phase (H shell on the RGB, core He on the HB) or the thermal energy of a white dwarf, F ~ T_c",
+    "P": "luminosity; regulated burner n = 0 for RGB and HB (lifetime = fuel / luminosity from stellar models), Mestel cooling L ~ T_c^(7/2) so n = 7/2 for white dwarfs",
+    "b": "common formation rate for RGB and HB (cancels in the ratio); constant birth rate of white dwarfs over the fitted range"
+  },
+  "engine_functions": [
+    "layer23.abundance_ratio",
+    "layer23.burn_exponent",
+    "layer23.luminosity_function_slope_per_mag",
+    "layer23.lifetime"
+  ],
+  "parameters": [
+    {
+      "name": "tau_HB_over_tau_RGB",
+      "value": "6.26 Y - 0.12",
+      "unit": "1",
+      "origin": "MEASURED_INDEPENDENT",
+      "source": "Ayala et al. 2014 stellar-model fit, with Y from low-metallicity H II regions",
+      "data_id": "AYALA14_GC_R_PARAMETER"
+    },
+    {
+      "name": "sigma_model_R",
+      "value": 0.0294,
+      "unit": "1",
+      "origin": "DERIVED",
+      "source": "Cassisi et al. 2003 physics ranges (core/03_lanes/persistence/t002_model_systematics.py)"
+    },
+    {
+      "name": "luminosity_power_of_core_temperature",
+      "value": 3.5,
+      "unit": "1",
+      "origin": "DERIVED",
+      "source": "Mestel 1952 cooling law, registered with HU2007_SDSS_DA_WD_LF",
+      "data_id": "HU2007_SDSS_DA_WD_LF"
+    }
+  ],
+  "observable": {
+    "quantity": "R = N_HB/N_RGB in globular clusters; slope d log10 N / d M_bol of the white dwarf luminosity function",
+    "unit": "1 and per magnitude",
+    "comparison_data_ids": ["AYALA14_GC_R_PARAMETER", "GONTCHAROV26_GC_R_PARAMETER", "HU2007_SDSS_DA_WD_LF"],
+    "test_card": "T002, T014, T008 (closed; the engine pilot reproduces them and does not re-decide them)"
+  },
+  "legacy": {
+    "engine": "core/03_lanes/persistence/t002_stellar_phase_fractions.py, t008_white_dwarf_lf.py, t014_r_parameter_independent.py",
+    "status": "T002 and T008 producers do not run after the root relocation (ROOT and docs.core import); their recorded numbers are reproduced by core/03_lanes/persistence/engine_pilot_stars.py"
+  },
+  "drafted_by": "claude",
+  "approval": null,
+  "note": "The AYALA14 data are both the source of tau_HB/tau_RGB (model fit and Y) and of the T002 comparison value R_ave; they are different rows of one registered file, as fixed in Test Card T002."
+}

@@ -16,6 +16,13 @@ def test_template_is_valid():
     assert lanes.validate_lane_card(lanes.load_lane_card(TEMPLATE)) == []
 
 
+def test_registered_lane_cards_are_valid():
+    cards = sorted((TEMPLATE.parent / "lane_cards").glob("*.json"))
+    assert cards
+    for path in cards:
+        assert lanes.validate_lane_card(lanes.load_lane_card(path)) == [], path.name
+
+
 def test_rejects_topic_local_fit_and_unknown_function():
     card = copy.deepcopy(lanes.load_lane_card(TEMPLATE))
     card["parameters"][0]["origin"] = "FITTED"

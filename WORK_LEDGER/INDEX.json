@@ -5,11 +5,11 @@
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
     "sources": 79,
-    "entries": 858,
+    "entries": 859,
     "by_stream": {
       "book-history": 94,
       "operations": 131,
-      "research": 632,
+      "research": 633,
       "review": 1
     },
     "exact_duplicates": 0,
@@ -410,8 +410,8 @@
     },
     {
       "path": "2026/2026-11-16.md",
-      "sha256": "960856e17150bd40189f312ef3448f1b57e30e3351e37c80614fa23644ac0f79",
-      "entries": 17
+      "sha256": "5d4635ac3bbb5ae7e179561706067dc15a4b7989d39848c577ef837acab059fc",
+      "entries": 18
     },
     {
       "path": "2026-08-14.md",
@@ -17529,9 +17529,29 @@
       "source": "2026/2026-11-16.md",
       "anchor": "uet-engine-draft-coreengine",
       "start_line": 172,
-      "end_line": 180,
+      "end_line": 181,
       "title": "UET engine draft (core/engine)",
-      "entry_sha256": "8c6186fa67f1607ef9d36a9f27e227818d02ac24523bb5acb0ddef7b50fe7ede",
+      "entry_sha256": "7650e29379cb83079f11b89ce7288149681941b2ba46fe8377b2fc4f07a55412",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-16",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-16.md#engine-pilot-stars-layers-2-3",
+      "source": "2026/2026-11-16.md",
+      "anchor": "engine-pilot-stars-layers-2-3",
+      "start_line": 182,
+      "end_line": 190,
+      "title": "Engine pilot: stars (layers 2-3)",
+      "entry_sha256": "c9d5277bc2fcf25309b4c05877acf6a81e422c228c070eeafdd4197f3421bee0",
       "stream": "research",
       "areas": [
         "research-core"

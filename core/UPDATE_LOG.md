@@ -399,3 +399,10 @@ commit: this commit
 ตรวจ: 8 physics test ผ่าน (สองเส้นทางโค้ดตรงกัน, known limits, abundance law เทียบ ODE ของ decay chain); 4 test ของ lane card
 ถัดไป: ผู้เขียนตรวจ API แล้วเลือก topic นำร่อง; การบังคับ lane card เป็น gate ใหม่ ต้องอนุมัติก่อน
 commit: this commit
+
+## 2026-11-16 — นำร่อง engine กับดาว (ชั้น 2–3)
+ทำ: lane card ของดาว และคำนวณผลของ T002, T014, T008 ใหม่ผ่าน core/engine (engine_pilot_stars.py)
+ผล: ตรงกับที่บันทึกไว้ทุกตัว (R = 1.4669, z = 2.05/2.22, slope 2/7, log dev 0.049); slope จาก lifetime ของ engine ตรง closed form ถึง 1e-6 (เส้นทางคำนวณใหม่)
+พบ: สคริปต์ผลิตผลของ T002, T008, T009 รันไม่ได้หลังย้าย root (ROOT ผิดระดับ, import docs.core) ผลที่บันทึกไว้ไม่เปลี่ยน แต่ทำซ้ำด้วยสคริปต์เดิมไม่ได้
+ถัดไป: ตัดสินว่าจะซ่อมสคริปต์เดิมหรือให้ pilot เป็นทางทำซ้ำ; topic ถัดไปที่มีโฟลเดอร์จริง
+commit: this commit

@@ -126,7 +126,7 @@
       "path": "core/05_tests/physics/test_engine.py",
       "kind": "working_file",
       "role": "code",
-      "sha256": "2706e5d1855f224a1d6c14303e9a0e4844a0e859cf621932b6fa80141b9ee9eb",
+      "sha256": "60c7513b45c5c27c7275a5948a64505d43d9f74e16227a84ba2ff25102369ed9",
       "availability": "REQUIRED"
     },
     {
@@ -142,18 +142,51 @@
       "role": "code",
       "sha256": "c96f4e86d9875c9dc77ed2329b85d4e22b33e6b323f276a988322c82313db35c",
       "availability": "REQUIRED"
+    },
+    {
+      "path": "core/03_lanes/persistence/engine_pilot_stars.py",
+      "kind": "working_file",
+      "role": "code",
+      "sha256": "2431632fc45c91d94a5571694d7b70553f23c685821f61880c4427b740986b21",
+      "availability": "REQUIRED"
+    },
+    {
+      "path": "core/engine/lanes.py",
+      "kind": "working_file",
+      "role": "code",
+      "sha256": "fdcef9ca3142ed55eb3a16baa548c8ea321a08c9e8451cf4c00677ef75f6ba92",
+      "availability": "REQUIRED"
+    },
+    {
+      "path": "core/engine/__init__.py",
+      "kind": "working_file",
+      "role": "code",
+      "sha256": "348b8a36e8e4adc9b20ff5ad263bf95cbe34c82df5384687bf7faa31e6411b12",
+      "availability": "REQUIRED"
+    },
+    {
+      "path": "core/05_tests/regression/test_engine_lane_cards.py",
+      "kind": "working_file",
+      "role": "code",
+      "sha256": "0376a8659feaabf86fd32b92f3f37ba341740a0e6b4a8b33d8f12e6d34b2aeec",
+      "availability": "REQUIRED"
     }
   ],
   "entrypoints": [
     "core/engine/layer1.py",
     "core/engine/layer23.py",
-    "core/engine/_load.py"
+    "core/engine/_load.py",
+    "core/03_lanes/persistence/engine_pilot_stars.py"
   ],
   "evidence": [
     "core/engine/layer1.py",
     "core/05_tests/physics/test_engine.py",
     "core/engine/layer23.py",
-    "core/engine/_load.py"
+    "core/engine/_load.py",
+    "core/03_lanes/persistence/engine_pilot_stars.py",
+    "core/engine/lanes.py",
+    "core/engine/__init__.py",
+    "core/05_tests/regression/test_engine_lane_cards.py"
   ],
   "claim_boundary": "Formal coverage only; no physical acceptance or status change.",
   "next_action": "Refresh identities with this tool when the code or tests change."

@@ -55,5 +55,8 @@ layer23.abundance_ratio(tau_a, tau_b)       # N_a/N_b = τ_a/τ_b
 ## ถัดไป
 
 1. ผู้เขียนตรวจ API และรูปแบบ lane card
-2. นำร่องหนึ่ง topic: เขียน lane card แล้วคำนวณผลหลักของ topic ด้วย engine เทียบกับผลเดิม ผลที่เปลี่ยนหรือตกต้องบันทึกตรง ๆ
+2. นำร่อง **ดาว (ชั้น 2–3) เสร็จแล้ว 2026-11-16**: lane card [`lane_cards/stars_layer23.json`](lane_cards/stars_layer23.json),
+   สคริปต์ `core/03_lanes/persistence/engine_pilot_stars.py` ให้ผลตรงกับที่บันทึกไว้ทุกตัว (R = 1.4669, z = 2.05 และ 2.22, slope ดาวแคระขาว 2/7)
+   และ slope ที่คำนวณจาก lifetime ของ engine ตรงกับ closed form ถึง 1e-6; สคริปต์เดิมของ T002 และ T008 รันไม่ได้หลังย้าย root (ยังไม่ได้แก้)
+   ต่อไป: topic ที่มีโฟลเดอร์จริง เช่น 0.19 (ชั้น 1) หรือ 0.22 (ชั้น 2–3)
 3. ฟังก์ชันใหม่ใน engine ต้อง derive และมี physics test ใน `core/03_lanes` ก่อนเสมอ engine เป็นแค่ทางเข้า

@@ -68,6 +68,16 @@ def test_abundance_law_matches_decay_chain_dynamics():
     assert ratio_engine == pytest.approx(ratio_dynamics, rel=2e-4)
 
 
+@pytest.mark.parametrize("n", [2.0, 3.5, 5.0])
+def test_cooling_luminosity_function_from_engine_lifetimes(n):
+    """Known limit: the faint-end slope from engine lifetimes tends to 0.4 (n - 1)/n (Mestel-type cooling)."""
+    pilot = load("03_lanes/persistence/engine_pilot_stars.py")
+    closed = layer23.luminosity_function_slope_per_mag(n)
+    errs = [abs(pilot.wd_slope_numerical(n, l_ratio) / closed - 1.0) for l_ratio in (1e-2, 1e-4, 1e-8)]
+    assert errs[0] > errs[1] > errs[2]
+    assert errs[2] < 1e-4
+
+
 def test_bit_rate_two_paths():
     b8 = load("03_lanes/open_system/uet_psi_matter_burn.py")
     assert layer23.bit_rate(9.3e-12, 1.2e5) == pytest.approx(b8.bits_per_second(9.3e-12, 1.2e5), rel=1e-6)
