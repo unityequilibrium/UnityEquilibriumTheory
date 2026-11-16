@@ -132,6 +132,18 @@
       "license": "numerical facts transcribed from the arXiv HTML version; no figures or text redistributed",
       "visibility": "PUBLIC",
       "note": "Frequencies in MHz, 1-sigma totals as in Table 1. The registered values reproduce the published epsilon = (1.5 +- 2.3)e-9 (checked before registration)."
+    },
+    {
+      "data_id": "GONTCHAROV26_GC_R_PARAMETER",
+      "description": "Globular-cluster R = N_HB/N_RGB(above ZAHB) from HST ACS + Gaia DR3 counts; constant value for 8 in-situ clusters",
+      "source": "G. A. Gontcharov et al., Isochrone Fitting of Galactic Globular Clusters VIII (2026), Sect. 5 and Conclusions",
+      "doi_or_url": "https://arxiv.org/abs/2605.28505",
+      "retrieved": "2026-11-16",
+      "path": "docs/data/external/astronomy/globular_cluster_r_parameter/gontcharov2026_r_parameter.csv",
+      "sha256": "46736ce95eb228f5d330860513645029b59935248e601c84113858ce739c9e59",
+      "license": "numerical facts transcribed from an arXiv paper (arXiv non-exclusive license); no figures or text redistributed",
+      "visibility": "PUBLIC",
+      "note": "Independent of the Salaris et al. 2004 counts used in T002 (different telescopes, membership and ZAHB cut). Re-check against the journal version before T014 is approved."
     }
   ]
 }

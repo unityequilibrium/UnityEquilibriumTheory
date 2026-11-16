@@ -1,0 +1,45 @@
+{
+  "schema": "uet-test-card-v2",
+  "test_id": "T014",
+  "status": "DRAFT",
+  "claim_id": "C_T002_STELLAR_PHASE_ABUNDANCE",
+  "theory_card": {
+    "card_id": "UET_PARENT",
+    "version": 1
+  },
+  "hypothesis": "Layer 3 (Little's law with tau = F/P): stars that pass once through the upper red giant branch and the horizontal branch have a common formation rate, so R = N_HB/N_RGB(above ZAHB) = tau_HB/tau_RGB from stellar models. Second test of the T002 claim with independent star counts and a stellar-model error fixed in advance.",
+  "observable": {
+    "quantity": "R = N_HB / N_RGB(above ZAHB), constant value for the 8 in-situ Galactic globular clusters",
+    "unit": "1",
+    "domain": "Gontcharov et al. 2026 sample (HST ACS + Gaia DR3, entire cluster fields)"
+  },
+  "test_kind": "CONSTRAINT",
+  "data_sources": [
+    {
+      "data_id": "GONTCHAROV26_GC_R_PARAMETER",
+      "role": "COMPARISON",
+      "exposure": "SEEN_FULL"
+    },
+    {
+      "data_id": "AYALA14_GC_R_PARAMETER",
+      "role": "CALIBRATION",
+      "exposure": "SEEN_FULL"
+    }
+  ],
+  "prediction_method": {
+    "script": "core/03_lanes/persistence/t014_r_parameter_independent.py",
+    "description": "R_pred = 6.26 Y - 0.12 with Y = Y_HII_Aver (from the Ayala record, as in T002); sigma_tot^2 = (6.26 sigma_Y)^2 + sigma_model^2 + sigma_obs^2 with sigma_model = 0.029 from Cassisi et al. 2003 ranges (t002_model_systematics.py) and sigma_obs the observed error on the side facing R_pred; z = |R_pred - R_obs| / sigma_tot."
+  },
+  "free_parameters": [],
+  "fixed_parameters": [
+    "R_th(Y) = 6.26 Y - 0.12 as published",
+    "Y_HII_Aver = 0.2535 +/- 0.0036",
+    "sigma_model = 0.0294 (12C(alpha,gamma) and breathing-pulse ranges of Cassisi et al. 2003, uniform, in quadrature)",
+    "R_obs = 1.31 +0.06/-0.05 (in-situ constant)",
+    "common formation rate b for RGB and HB"
+  ],
+  "pass_criterion": "z <= 2",
+  "fail_criterion": "z > 3 -> FAILED; 2 < z <= 3 -> INCONCLUSIVE (reported as tension, not pass)",
+  "drafted_by": "claude",
+  "note": "Disclosure: drafted after reading the source abstract and conclusions, which state R = 1.31 for in-situ clusters and interpret it as anomalous HB energy loss; the outcome is therefore effectively computable before approval and this is not blind. The comparison script has not been run. Independence: different telescopes (HST ACS and Gaia, not WFPC2), membership cleaning and ZAHB cut from the Salaris et al. 2004 counts behind T002. Caveats that the author should weigh before approving: (1) the source warns that R_th(Y) of Ayala et al. may be incomplete and that R differs between cluster centres and peripheries (HB depleted after disk crossings, recovering in 60-80 Myr); in layer-3 terms that is a breakdown of the steady state that Little's law needs, so the test also probes the steady-state assumption; (2) only 8 clusters; (3) sigma_model comes from 2003 models and may be smaller with newer 12C(alpha,gamma) rates (Ayala et al. argue a white-dwarf compensation limits it). Not UET-distinct: standard stellar evolution passes or fails in the same way. Re-check transcribed numbers against the journal version before approval."
+}
