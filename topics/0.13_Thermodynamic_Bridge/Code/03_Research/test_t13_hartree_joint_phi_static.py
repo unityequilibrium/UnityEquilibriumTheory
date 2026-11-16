@@ -204,6 +204,7 @@ def test_audit_reads_only_derived_predecessors_not_empirical_holdout():
     code = Path(__file__).with_name("Research_T13_Hartree_Joint_Phi_Static.py").read_text(encoding="utf-8")
     reads = [node for node in ast.walk(ast.parse(code)) if isinstance(node, ast.Call) and isinstance(node.func, ast.Attribute) and node.func.attr == "read_text"]
     assert len(reads) == 1
-    assert ast.unparse(reads[0].func.value) == "ROOT / path"
+    # Keep the read restricted to the declared predecessor through the path-only adapter.
+    assert ast.unparse(reads[0].func.value) == "canonical_existing_path(ROOT / path)"
     assert all("/Result/artifacts/" in M[key] for key in ("BACKGROUND", "COUNTERTERM", "POLES"))
     assert "Landauer" not in code

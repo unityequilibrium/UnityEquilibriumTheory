@@ -5,10 +5,10 @@
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
     "sources": 78,
-    "entries": 828,
+    "entries": 829,
     "by_stream": {
       "book-history": 94,
-      "operations": 127,
+      "operations": 128,
       "research": 606,
       "review": 1
     },
@@ -405,8 +405,8 @@
     },
     {
       "path": "2026/2026-11-16.md",
-      "sha256": "ac15ec188c21874849964bc13d0031f103ea77dfa258accea310ccfad946adcf",
-      "entries": 3
+      "sha256": "302eb13c1f379257d5113edb1807adcf22c25475e71df344171e450e4f0c4a11",
+      "entries": 4
     },
     {
       "path": "2026-08-14.md",
@@ -16924,9 +16924,29 @@
       "source": "2026/2026-11-16.md",
       "anchor": "post-move-byte-fidelity-payload-ownership-and-ai-audit-repair",
       "start_line": 27,
-      "end_line": 37,
+      "end_line": 38,
       "title": "Post-move byte fidelity, payload ownership and AI audit repair",
-      "entry_sha256": "4bdec3237416db0e7f42c1f20ec7a3d13db94d6946349a3ffd04d5d331f27595",
+      "entry_sha256": "0e1c35006aa1e0e9f9f407158a1ae0b22299cb9cb107ebea3ae457e8920b1e9b",
+      "stream": "operations",
+      "areas": [
+        "repo-ops"
+      ],
+      "related_streams": [
+        "operations"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-16",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-16.md#full-desktop-regression-checkpoint-and-declared-predecessor-guard-repair",
+      "source": "2026/2026-11-16.md",
+      "anchor": "full-desktop-regression-checkpoint-and-declared-predecessor-guard-repair",
+      "start_line": 39,
+      "end_line": 49,
+      "title": "Full Desktop regression checkpoint and declared-predecessor guard repair",
+      "entry_sha256": "24e5ef91a6d55c6e0734ceb9217b22b10446d6489119cb3f4891aab65b07c9b2",
       "stream": "operations",
       "areas": [
         "repo-ops"

@@ -7454,3 +7454,10 @@ EVIDENCE_PATHS:
 - Current-root QH-15 paths now inherit the original no-text-conversion policy; this does not unignore or publish raw files, and protected historical-source rules remain unchanged.
 - Affected regression/runner/standard checks passed 69/69. The QH-15 regression reads its historical artifact only; it is not a new raw-data replay or physical validation.
 - Source-version STALE blockers remain a separate prerequisite; no Core law, parameter, source package or scientific artifact changed.
+
+## 2026-11-16 — Declared-predecessor read guards after root migration
+- Software-only repair: five Hartree test guards now require exactly `canonical_existing_path(ROOT / <declared predecessor>)`; read count, predecessor identity and empirical/holdout exclusions remain unchanged. No scientific producer or saved artifact changed.
+- Full Desktop checkpoint before this follow-up: Topic 13 had 1314 passed / 66 failed / 26 errors at `3f9270ab0`; the whole run reports 4394 passed / 90 failed / 56 errors / 2 skipped, with 34 coverage gaps.
+- Affected-module run after the repair: 91 passed / 5 source-identity failures; 20/20 unsafe source mutations rejected. Saved log: local `tmp/delivery-recovery/hartree-path-guards-20261116.log`. No all-suite rerun or whole-Topic closure is claimed from this selected set.
+- Completeness remains 43 STALE errors in both full and changed-path checks; no recorded hashes, Core law, parameters, scientific thresholds or evidence levels were changed.
+- Next: inspect archived locator-key/version prerequisites in the next bounded repair; do not relabel stale evidence or missing physical inputs as a pass.

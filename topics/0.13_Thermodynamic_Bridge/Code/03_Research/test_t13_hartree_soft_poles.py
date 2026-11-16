@@ -208,5 +208,6 @@ def test_audit_reads_only_declared_derived_predecessor_not_numeric_holdout():
     tree = ast.parse(code)
     reads = [node for node in ast.walk(tree) if isinstance(node, ast.Call) and isinstance(node.func, ast.Attribute) and node.func.attr == "read_text"]
     assert len(reads) == 1
-    assert ast.unparse(reads[0].func.value) == "ROOT / PREVIOUS_ARTIFACT"
+    # Keep the read restricted to the declared predecessor through the path-only adapter.
+    assert ast.unparse(reads[0].func.value) == "canonical_existing_path(ROOT / PREVIOUS_ARTIFACT)"
     assert P["PREVIOUS_ARTIFACT"].endswith("/t13_hartree_soft_collective.json")

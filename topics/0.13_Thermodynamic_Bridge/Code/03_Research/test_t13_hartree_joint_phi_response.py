@@ -224,7 +224,8 @@ def test_read_path_does_not_import_old_poles_as_answers_or_read_empirical_source
     code = Path(__file__).with_name("Research_T13_Hartree_Joint_Phi_Response.py").read_text(encoding="utf-8")
     reads = [node for node in ast.walk(ast.parse(code)) if isinstance(node, ast.Call) and isinstance(node.func, ast.Attribute) and node.func.attr == "read_text"]
     assert len(reads) == 1
-    assert ast.unparse(reads[0].func.value) == "ROOT / STATIC_ARTIFACT"
+    # Keep the read restricted to the declared predecessor through the path-only adapter.
+    assert ast.unparse(reads[0].func.value) == "canonical_existing_path(ROOT / STATIC_ARTIFACT)"
     assert "/Result/artifacts/" in M["STATIC_ARTIFACT"]
     assert M["SEEDS"] == (.2-.01j, .4-.005j)
     assert "Landauer" not in code
