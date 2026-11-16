@@ -1,7 +1,7 @@
 {
   "schema": "uet-test-card-v2",
   "test_id": "T016",
-  "status": "DRAFT",
+  "status": "APPROVED",
   "claim_id": "C_T016_MICROSCOPE_G_C",
   "theory_card": {
     "card_id": "UET_PARENT",
@@ -38,5 +38,10 @@
   "pass_criterion": "PASS if alpha_max is positive and finite at every listed lambda (g_c = 0 admissible); the Result reports alpha_max, g_c_max and m_psi at each lambda.",
   "fail_criterion": "FAILED only if the data required eta > 0 at more than 2 sigma while the lane fixes eta = 0, or eta < 0 at more than 2 sigma (the portal cannot give negative eta for TA6V-PtRh10); with eta_obs = -1.5e-15 and sigma 2.75e-15 neither applies. INCONCLUSIVE if the composition rows disagree with CIAAW or the instrument papers by more than 20 percent in d_eps.",
   "drafted_by": "claude",
-  "note": "Disclosure: not blind. The bound was estimated while drafting: alpha_max about 5.0e-12 and g_c_max about 1.15e-15 eV for lambda >= 1e8 m, about 12 times tighter in alpha than the lunar bound used in T005. The lane choice (portal charge = nucleon number, binding energy not a source) is an AI interpretation, because the action has no nuclear forces; with the other reading eta = 0 and MICROSCOPE says nothing about the portal. Composition rows were transcribed from memory and need checking before approval. Earth's density profile is ignored (uniform sphere). Not UET-distinct: any scalar coupled to baryon number gives the same bound. Closes the open topic 0.19 item 'equivalence-principle script asserts eta = 0 without comparing MICROSCOPE'."
+  "note": "Disclosure: not blind. The bound was estimated while drafting: alpha_max about 5.0e-12 and g_c_max about 1.15e-15 eV for lambda >= 1e8 m, about 12 times tighter in alpha than the lunar bound used in T005. The lane choice (portal charge = nucleon number, binding energy not a source) is an AI interpretation, because the action has no nuclear forces; with the other reading eta = 0 and MICROSCOPE says nothing about the portal. Composition rows were transcribed from memory and need checking before approval. Earth's density profile is ignored (uniform sphere). Not UET-distinct: any scalar coupled to baryon number gives the same bound. Closes the open topic 0.19 item 'equivalence-principle script asserts eta = 0 without comparing MICROSCOPE'. Approved by the author on 2026-11-17 as drafted, including the nucleon-number lane choice, without a CIAAW cross-check of the composition rows.",
+  "approval": {
+    "approved_by": "santxkoz",
+    "date": "2026-11-17",
+    "role": "AUTHOR"
+  }
 }
