@@ -1,7 +1,7 @@
 {
   "schema": "uet-test-card-v2",
   "test_id": "T014",
-  "status": "DRAFT",
+  "status": "APPROVED",
   "claim_id": "C_T002_STELLAR_PHASE_ABUNDANCE",
   "theory_card": {
     "card_id": "UET_PARENT",
@@ -41,5 +41,10 @@
   "pass_criterion": "z <= 2",
   "fail_criterion": "z > 3 -> FAILED; 2 < z <= 3 -> INCONCLUSIVE (reported as tension, not pass)",
   "drafted_by": "claude",
-  "note": "Disclosure: drafted after reading the source abstract and conclusions, which state R = 1.31 for in-situ clusters and interpret it as anomalous HB energy loss; the outcome is therefore effectively computable before approval and this is not blind. The comparison script has not been run. Independence: different telescopes (HST ACS and Gaia, not WFPC2), membership cleaning and ZAHB cut from the Salaris et al. 2004 counts behind T002. Caveats that the author should weigh before approving: (1) the source warns that R_th(Y) of Ayala et al. may be incomplete and that R differs between cluster centres and peripheries (HB depleted after disk crossings, recovering in 60-80 Myr); in layer-3 terms that is a breakdown of the steady state that Little's law needs, so the test also probes the steady-state assumption; (2) only 8 clusters; (3) sigma_model comes from 2003 models and may be smaller with newer 12C(alpha,gamma) rates (Ayala et al. argue a white-dwarf compensation limits it). Not UET-distinct: standard stellar evolution passes or fails in the same way. Re-check transcribed numbers against the journal version before approval."
+  "note": "Disclosure: drafted after reading the source abstract and conclusions, which state R = 1.31 for in-situ clusters and interpret it as anomalous HB energy loss; the outcome is therefore effectively computable before approval and this is not blind. The comparison script has not been run. Independence: different telescopes (HST ACS and Gaia, not WFPC2), membership cleaning and ZAHB cut from the Salaris et al. 2004 counts behind T002. Caveats that the author should weigh before approving: (1) the source warns that R_th(Y) of Ayala et al. may be incomplete and that R differs between cluster centres and peripheries (HB depleted after disk crossings, recovering in 60-80 Myr); in layer-3 terms that is a breakdown of the steady state that Little's law needs, so the test also probes the steady-state assumption; (2) only 8 clusters; (3) sigma_model comes from 2003 models and may be smaller with newer 12C(alpha,gamma) rates (Ayala et al. argue a white-dwarf compensation limits it). Not UET-distinct: standard stellar evolution passes or fails in the same way. Re-check transcribed numbers against the journal version before approval. Approved by the author on 2026-11-16 as drafted, without a journal cross-check.",
+  "approval": {
+    "approved_by": "santxkoz",
+    "date": "2026-11-16",
+    "role": "AUTHOR"
+  }
 }
