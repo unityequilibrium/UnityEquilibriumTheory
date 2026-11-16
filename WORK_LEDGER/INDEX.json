@@ -4,12 +4,12 @@
   "generator_sha256": "b32005e4bdbf59da6681ae630fa1d9d4415c361f7523be18c8b52a86dc8c93e9",
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
-    "sources": 79,
-    "entries": 862,
+    "sources": 80,
+    "entries": 863,
     "by_stream": {
       "book-history": 94,
       "operations": 131,
-      "research": 636,
+      "research": 637,
       "review": 1
     },
     "exact_duplicates": 0,
@@ -412,6 +412,11 @@
       "path": "2026/2026-11-16.md",
       "sha256": "d84d9efd5b29005b64e1146113759c54ce06cf6690783e46a7d449e2c0416ffc",
       "entries": 21
+    },
+    {
+      "path": "2026/2026-11-17.md",
+      "sha256": "648c93fe1727c9dcd6ea9c47afff19099eb622172ef9aaaa76694463ee194f3c",
+      "entries": 1
     },
     {
       "path": "2026-08-14.md",
@@ -17622,6 +17627,26 @@
       "basis": "explicit_stream_and_area",
       "flags": [],
       "date": "2026-11-16",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-17.md#t016-run-microscope-bound-on-the-portal",
+      "source": "2026/2026-11-17.md",
+      "anchor": "t016-run-microscope-bound-on-the-portal",
+      "start_line": 3,
+      "end_line": 11,
+      "title": "T016 run: MICROSCOPE bound on the portal",
+      "entry_sha256": "5472a73373fd19fa7f93ce327c45a995dce7ed03ada5f4bc26966ec5dbba6ddb",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-17",
       "legacy_root_path": false
     },
     {

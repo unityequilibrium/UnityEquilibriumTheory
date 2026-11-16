@@ -418,3 +418,9 @@ commit: this commit
 derive: ถ้า portal ต้นทางคือจำนวน nucleon (AI ตีความ) แรงจะขึ้นกับชนิดสสาร η = α ε_S Δε Φ; Δε(TA6V−PtRh10) ≈ 8e-4; สูตรทรงกลมตรงกับ integral 1e-6 (L1)
 ร่าง: T016 (DRAFT) คาดว่า α < 5.0e-12, g_c < 1.15e-15 eV เมื่อ λ ≥ 1e8 m แน่นกว่า LLR ใน T005 ราว 12 เท่าใน α; ข้อมูลองค์ประกอบโลหะต้องตรวจก่อนอนุมัติ
 commit: this commit
+
+## 2026-11-17 — T016: MICROSCOPE จำกัด portal (lane จำนวน nucleon)
+ทำ: รัน Test Card T016 (อนุมัติ efa09c6f4) Δε(TA6V−PtRh10) = 7.8e-4, η ที่ยอมให้ ≤ 4.0e-15 (2σ ด้านเดียว)
+ผล: PASS (constraint) α < 5.1e-12, g_c < 1.16e-15 eV ที่ λ = 1.922e8 m แน่นกว่า LLR ใน T005 ราว 11.6 เท่าใน α; λ = 1e6 m: α < 4.1e-11
+ระดับ: รอผู้เขียนอนุมัติ L2 ก่อนบันทึก result; ใช้ได้เฉพาะ lane ที่ portal ดึงตามจำนวน nucleon
+commit: this commit
