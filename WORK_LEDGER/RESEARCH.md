@@ -6,10 +6,11 @@
 
 These are source-linked historical records, not proof of completed research, successful publication, or current scientific readiness.
 
-Indexed entries: 630. Counts describe records, not accomplishments.
+Indexed entries: 631. Counts describe records, not accomplishments.
 
 | Date | Record | Area | Notes |
 | --- | --- | --- | --- |
+| 2026-11-16 | [Decision: Topic 13 He-4 Phi is a phenomenological closure](2026/2026-11-16.md#decision-topic-13-he-4-phi-is-a-phenomenological-closure) (L162) | research-core | explicit_stream_and_area |
 | 2026-11-16 | [T015 run: He II at tree level, FAILED](2026/2026-11-16.md#t015-run-he-ii-at-tree-level-failed) (L152) | research-core | explicit_stream_and_area |
 | 2026-11-16 | [T015 draft: He II at tree level from the parent action](2026/2026-11-16.md#t015-draft-he-ii-at-tree-level-from-the-parent-action) (L142) | research-core | explicit_stream_and_area |
 | 2026-11-16 | [SI-1: parent action in SI units for a Bose fluid](2026/2026-11-16.md#si-1-parent-action-in-si-units-for-a-bose-fluid) (L132) | research-core | explicit_stream_and_area |

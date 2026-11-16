@@ -57,3 +57,13 @@
 ร่าง Test Card อยู่ที่ `docs/standard/tests/T015.json` (DRAFT ยังไม่ได้รัน) ข้อมูลอยู่ที่ `docs/data/external/condensed_matter/helium4/he_ii_tree_level_inputs.csv`
 
 ผลการรัน (2026-11-16): ทำนาย 848 m/s เทียบ 233.1 m/s, D = 2.31 → **FAILED** (`R_T015_HE_II_TREE_LEVEL`) ตัดเฉพาะ lane χ = อะตอม He-4 ที่ tree level
+
+## 6. ผู้เขียนตัดสินใจทาง (ก) (2026-11-16)
+
+- Φ ของ topic 13 lane He-4 (superfluid fraction, e0 = n k_B T0, Z_Φ จากการ calibrate) เป็น **phenomenological closure นอก action**
+  ไม่ใช่ตัวแปรของ action บันทึกแล้วใน `core/THEORY_CARD.md` §7 และ `core/theory_card.json`
+- ชั้น SI ของ action ถือว่าตอบแล้วที่ระดับ L1 (`R_SI1_PARENT_ACTION_SI`) ไม่ต้องใช้ E_ref
+- **หยุดไล่** input package `T13_INPUT_BASE_PHI_SI_ALPHA_BETA` และ `T13_INPUT_DING_TTG_SOURCE` เพื่อปิด SI anchor ของ topic 13
+  ผลเดิมของ topic 13 ยังเก็บไว้ไม่แก้ (`LEGACY_UNREVIEWED`) ใช้เป็นแบบจำลอง phenomenological ได้ แต่ไม่ใช้เป็นหลักฐานของ action
+- สิ่งที่ยังไม่ได้ทำ (ตั้งใจรอ): แก้สถานะใน README และไฟล์ status ของ topic 13 จะทำหลังงานซ่อม path ของ Codex ใน checkout หลัก merge แล้ว เพื่อไม่ให้ทับไฟล์เดียวกัน
+- ถ้าวันหลังต้องการให้ Φ เป็น "response ของ space" จริง ให้เปิดเป็นสมมติฐานใหม่ที่ L0 (ทาง (ข): เทอมชั้น 2 ใน action)

@@ -5,11 +5,11 @@
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
     "sources": 79,
-    "entries": 856,
+    "entries": 857,
     "by_stream": {
       "book-history": 94,
       "operations": 131,
-      "research": 630,
+      "research": 631,
       "review": 1
     },
     "exact_duplicates": 0,
@@ -410,8 +410,8 @@
     },
     {
       "path": "2026/2026-11-16.md",
-      "sha256": "692cf0ccd9a8a9087082b571a0f7217ae1b2953f8270cc8b77d0bd432a6b15dc",
-      "entries": 15
+      "sha256": "31885dcf99e55bbe2ba2d11769a64581b648085bfdb1cf81463763b1b93fd29a",
+      "entries": 16
     },
     {
       "path": "2026-08-14.md",
@@ -17489,9 +17489,29 @@
       "source": "2026/2026-11-16.md",
       "anchor": "t015-run-he-ii-at-tree-level-failed",
       "start_line": 152,
-      "end_line": 160,
+      "end_line": 161,
       "title": "T015 run: He II at tree level, FAILED",
-      "entry_sha256": "542bf460195de52f936794859dd52e4ef03a2144d167d045dd6b0f1ab75acd28",
+      "entry_sha256": "a823b1346f32ffe0f334e7bb09b49a810b9aa1bbc7b78b1f70d05a7e2c1b482f",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-16",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-16.md#decision-topic-13-he-4-phi-is-a-phenomenological-closure",
+      "source": "2026/2026-11-16.md",
+      "anchor": "decision-topic-13-he-4-phi-is-a-phenomenological-closure",
+      "start_line": 162,
+      "end_line": 170,
+      "title": "Decision: Topic 13 He-4 Phi is a phenomenological closure",
+      "entry_sha256": "ff3e31dd1c8a13539a905344d8ff9616caa8d652913b14789705e2e9d61b1329",
       "stream": "research",
       "areas": [
         "research-core"

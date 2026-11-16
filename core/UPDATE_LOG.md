@@ -386,3 +386,9 @@ commit: this commit
 ความหมาย: lane Φ = superfluid fraction ของ topic 13 ไม่ได้มาจาก action เป็น closure แบบ phenomenological; lane χ = nucleon ของ T005 ไม่กระทบ
 ถัดไป: ผู้เขียนเลือกทาง (ก) บันทึก Φ ของ topic 13 เป็น phenomenological หรือ (ข) เพิ่มเทอมชั้น 2 ใน action
 commit: this commit
+
+## 2026-11-16 — ตัดสินใจ: Φ ของ topic 13 เป็น phenomenological closure นอก action
+ทำ: ผู้เขียนเลือกทาง (ก) หลัง T015 FAILED; แก้ lane He-4 ใน THEORY_CARD §7 และ theory_card.json
+ผล: ชั้น SI ของ action ตอบแล้วที่ L1 โดยไม่ต้องใช้ E_ref; หยุดไล่ data package ของ graphite เพื่อปิด SI anchor ของ topic 13
+ค้าง: แก้สถานะในไฟล์ของ topic 13 หลังงานซ่อม path ของ Codex merge
+commit: this commit
