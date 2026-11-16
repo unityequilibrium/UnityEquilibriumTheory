@@ -4,11 +4,11 @@
   "generator_sha256": "b32005e4bdbf59da6681ae630fa1d9d4415c361f7523be18c8b52a86dc8c93e9",
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
-    "sources": 77,
-    "entries": 825,
+    "sources": 78,
+    "entries": 828,
     "by_stream": {
       "book-history": 94,
-      "operations": 124,
+      "operations": 127,
       "research": 606,
       "review": 1
     },
@@ -402,6 +402,11 @@
       "path": "2026/2026-11-15.md",
       "sha256": "ff585cab5b98a7a82ab306e32682588def5fe6de5ad731552c19ee5cfbe101ba",
       "entries": 12
+    },
+    {
+      "path": "2026/2026-11-16.md",
+      "sha256": "ac15ec188c21874849964bc13d0031f103ea77dfa258accea310ccfad946adcf",
+      "entries": 3
     },
     {
       "path": "2026-08-14.md",
@@ -16872,6 +16877,66 @@
       "basis": "explicit_stream_and_area",
       "flags": [],
       "date": "2026-11-15",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-16.md#independent-full-verification-in-the-actual-desktop-checkout",
+      "source": "2026/2026-11-16.md",
+      "anchor": "independent-full-verification-in-the-actual-desktop-checkout",
+      "start_line": 3,
+      "end_line": 14,
+      "title": "Independent full verification in the actual Desktop checkout",
+      "entry_sha256": "652004e054b02d4aa92e14802796638e6218f4952dbd0b7c210d9a34735b29c2",
+      "stream": "operations",
+      "areas": [
+        "repo-ops"
+      ],
+      "related_streams": [
+        "operations"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-16",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-16.md#desktop-delivery-from-the-frozen-root-layout-repair-revision",
+      "source": "2026/2026-11-16.md",
+      "anchor": "desktop-delivery-from-the-frozen-root-layout-repair-revision",
+      "start_line": 15,
+      "end_line": 26,
+      "title": "Desktop delivery from the frozen root-layout repair revision",
+      "entry_sha256": "c8ef5b8c2d55e053fd02ce706622242791dfc08c30c3b13905e6d7d3b3d31d2a",
+      "stream": "operations",
+      "areas": [
+        "repo-ops"
+      ],
+      "related_streams": [
+        "operations"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-16",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-16.md#post-move-byte-fidelity-payload-ownership-and-ai-audit-repair",
+      "source": "2026/2026-11-16.md",
+      "anchor": "post-move-byte-fidelity-payload-ownership-and-ai-audit-repair",
+      "start_line": 27,
+      "end_line": 37,
+      "title": "Post-move byte fidelity, payload ownership and AI audit repair",
+      "entry_sha256": "4bdec3237416db0e7f42c1f20ec7a3d13db94d6946349a3ffd04d5d331f27595",
+      "stream": "operations",
+      "areas": [
+        "repo-ops"
+      ],
+      "related_streams": [
+        "operations"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-16",
       "legacy_root_path": false
     },
     {

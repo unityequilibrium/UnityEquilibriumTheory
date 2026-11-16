@@ -67,6 +67,12 @@ PROFILE_ONLY_CODE = {
     "0.36_Orbital_Manufacturing": "Code/05_Simulation/Sim_Orbital_Crystallization.py",
     "0.39_Bio_Smart_City": "Code/05_Simulation/Sim_Bio_City.py",
 }
+SOFTWARE_SCOPE_LIMITS = {
+    "0.24_Artificial_Intelligence": (
+        "synthetic scaling/sparsity audit, invalid-input and isolated-output software tests only; "
+        "live benchmark inputs, AI engine paths and physical/theory correspondence remain unreviewed"
+    ),
+}
 for _topic in PROFILE_CHECK_TOPICS:
     LEGACY_RESULT_READOUTS[_topic] = {
         "path": f"topics/{_topic}/Result/artifacts/rd_sim_artifact.json",
@@ -94,7 +100,7 @@ code reopens their coverage automatically; a folder/label is not an exemption.
         if actual == {PROFILE_ONLY_CODE[topic.name]}:
             return None
         return "profile-only software scope changed or is missing; additional Code paths need review"
-    return LEGACY_RESULT_READOUTS.get(topic.name, {}).get("suite_scope")
+    return LEGACY_RESULT_READOUTS.get(topic.name, {}).get("suite_scope") or SOFTWARE_SCOPE_LIMITS.get(topic.name)
 READ_CALLS = {"open", "read", "read_text", "read_bytes", "read_csv", "read_excel", "read_json", "load", "loadtxt", "genfromtxt", "glob", "rglob", "iterdir"}
 WRITE_CALLS = {"write", "write_text", "write_bytes", "to_csv", "to_excel", "to_json", "save", "savefig", "dump", "mkdir", "unlink", "rename", "replace"}
 

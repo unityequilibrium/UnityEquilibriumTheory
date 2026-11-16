@@ -10,6 +10,68 @@ from docs.scripts.audit.audit_topic13_calorine_lattice_interface_inputs import (
 )
 
 
+def test_payload_and_collision_scan_share_one_physical_tree(tmp_path, monkeypatch):
+    """A migrated directory must not hide an available legacy payload tree."""
+    import h5py
+    import numpy as np
+    from docs.scripts.audit import audit_topic13_calorine_lattice_interface_inputs as audit
+
+    for selected in ("legacy", "current"):
+        root = tmp_path / selected
+        legacy = root / "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research"
+        current = root / "topics/0.13_Thermodynamic_Bridge/Data/03_Research"
+        for base in (legacy, current):
+            (base / "reproduction").mkdir(parents=True)
+        physical = legacy if selected == "legacy" else current
+        suffix = Path("reproduction/t13_calorine_pbte/mesh_12x12x6/kappa-m12126.hdf5")
+        payload = physical / suffix
+        payload.parent.mkdir(parents=True)
+        with h5py.File(payload, "w") as handle:
+            for key in audit.REQUIRED_COMPARATOR_KEYS:
+                handle.create_dataset(key, data=np.ones(1))
+        collision = physical / "reproduction/other_run/collision.hdf5"
+        collision.parent.mkdir()
+        with h5py.File(collision, "w") as handle:
+            handle.create_dataset("collision_eigenvalues", data=np.ones(2))
+        summary = {
+            "output_artifacts": {"kappa_hdf5": {
+                "size_bytes": payload.stat().st_size,
+                "sha256": hashlib.sha256(payload.read_bytes()).hexdigest(),
+            }},
+            "source": {"structure": {"path": "synthetic_fixture"}},
+            "run": {"transport_solver": "fixture", "holdout_accessed": False, "fit_performed": False},
+        }
+        (current / "summary.json").write_text(json.dumps(summary), encoding="utf-8")
+        full = root / "full.json"
+        full.write_text(json.dumps({
+            "status": "WARN_FULL_LBTE_NUMERICAL_STABILITY_OPEN",
+            "major_result": {"open_blockers": ["synthetic_fixture_not_physical_validation"]},
+        }), encoding="utf-8")
+
+        def resolve(path):
+            path = Path(path)
+            try:
+                relocated = root / "topics" / path.relative_to(root / "docs/topics")
+            except ValueError:
+                return path
+            return relocated if relocated.exists() else path
+
+        with monkeypatch.context() as mp:
+            mp.setattr(audit, "ROOT", root)
+            mp.setattr(audit, "BASE", legacy)
+            mp.setattr(audit, "KAPPA", legacy / suffix)
+            mp.setattr(audit, "SUMMARY", legacy / "summary.json")
+            mp.setattr(audit, "FULL_LBTE", full)
+            mp.setattr(audit, "canonical_existing_path", resolve)
+            witness = audit.inspect_local_inputs()
+        assert witness["raw_payload_available"] is True
+        assert witness["hdf5_file_count_scanned"] == 2
+        assert witness["collision_eigenvalue_files"] == [collision.relative_to(root).as_posix()]
+        assert witness["kappa_sha256"] == summary["output_artifacts"]["kappa_hdf5"]["sha256"]
+        assert witness["collision_matrix_available"] is False
+        assert witness["collision_eigenvectors_available"] is False
+
+
 def test_source_locked_mode_fields_are_present_and_finite():
     witness = inspect_local_inputs()
     if witness["raw_payload_available"]:

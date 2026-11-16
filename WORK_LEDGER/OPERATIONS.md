@@ -6,10 +6,13 @@
 
 These are source-linked historical records, not proof of completed research, successful publication, or current scientific readiness.
 
-Indexed entries: 124. Counts describe records, not accomplishments.
+Indexed entries: 127. Counts describe records, not accomplishments.
 
 | Date | Record | Area | Notes |
 | --- | --- | --- | --- |
+| 2026-11-16 | [Post-move byte fidelity, payload ownership and AI audit repair](2026/2026-11-16.md#post-move-byte-fidelity-payload-ownership-and-ai-audit-repair) (L27) | repo-ops | explicit_stream_and_area |
+| 2026-11-16 | [Desktop delivery from the frozen root-layout repair revision](2026/2026-11-16.md#desktop-delivery-from-the-frozen-root-layout-repair-revision) (L15) | repo-ops | explicit_stream_and_area |
+| 2026-11-16 | [Independent full verification in the actual Desktop checkout](2026/2026-11-16.md#independent-full-verification-in-the-actual-desktop-checkout) (L3) | repo-ops | explicit_stream_and_area |
 | 2026-11-15 | [Profile-comparison coverage, Topics 0.34–0.39](2026/2026-11-15.md#profile-comparison-coverage-topics-034039) (L120) | repo-ops | explicit_stream_and_area |
 | 2026-11-15 | [Profile-comparison coverage, Topics 0.28–0.33](2026/2026-11-15.md#profile-comparison-coverage-topics-028033) (L109) | repo-ops | explicit_stream_and_area |
 | 2026-11-15 | [Full post-repair verification checkpoint](2026/2026-11-15.md#full-post-repair-verification-checkpoint) (L97) | repo-ops | explicit_stream_and_area |

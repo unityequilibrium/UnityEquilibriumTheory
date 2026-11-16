@@ -1,5 +1,17 @@
 # Fix GitHub language statistics
 .gitattributes text eol=lf
+# Code, specifications and generated records must have the same checkout bytes
+# on Windows and Linux. This changes checkout policy, not scientific hashes.
+/core/** text=auto eol=lf
+/topics/** text=auto eol=lf
+/docs/scripts/** text=auto eol=lf
+# Scientific inputs and reference archives retain their committed bytes,
+# including deliberate CRLF. Never normalize raw inputs to satisfy a checker.
+/core/06_data/** -text
+/topics/**/Data/** -text
+/topics/**/Ref/** -text
+/docs/data/external/** -text
+*.pdf -text
 # Mark research notebooks/docs as non-code so linguist shows real code ratio
 research_uet/** linguist-documentation
 uet_history/** linguist-documentation

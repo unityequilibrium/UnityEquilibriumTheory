@@ -2,6 +2,13 @@
 
 Format: docs/STANDARD.md section 9. Earlier Core history stays in `08_history/update_logs/`.
 
+## 2026-11-16 — Do migrated checkouts preserve byte and payload-tree identity?
+ทำ: กติกา LF สำหรับโค้ด/records พร้อมเก็บ input/ref bytes; ซ่อม Calorine ให้ payload และ sibling scan ใช้ physical tree เดียวกัน
+ผล: 83/83 กรณีที่ล้มเพิ่มบน Desktop ผ่าน; 132 focused software tests ผ่าน; physics 193 ผ่าน / 1 skipped
+ระดับ: ไม่เปลี่ยน claim; software/identity checks ไม่ใช่ physical validation และเก็บ STALE เดิม
+ถัดไป: ตรวจรวม revision ที่ซ่อมแล้ว และแยก legacy source-version blockers จากข้อผิดจริงต่อ
+commit: this commit
+
 ## 2026-11-08 — What is the parent action, and what known theory is it?
 ทำ: เขียน Theory Card v1 (THEORY_CARD.md + theory_card.json) จากโค้ดเดิม พร้อม map ไปเป็นตัวแปร canonical
 ผล: เป็น DEF-class scalar-tensor (ξ_c ψ² R) + O(2) portal; ε ซ้ำซ้อน; ε→0⁺ คือ strong coupling (λ_ψ→∞) โดย ξ_c และ m_ψ ไม่เปลี่ยน, ε=0 เป็นจุดเสื่อม ไม่ใช่ GR limit; sympy ยืนยัน map ได้ residual 0 (scratch, จะเข้า test ใน W4)

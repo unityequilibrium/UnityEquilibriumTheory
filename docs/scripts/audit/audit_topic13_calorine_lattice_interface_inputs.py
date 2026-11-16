@@ -54,7 +54,8 @@ def inspect_local_inputs() -> dict[str, object]:
     summary = json.loads(canonical_existing_path(SUMMARY).read_text(encoding="utf-8"))
     expected = summary["output_artifacts"]["kappa_hdf5"]
     full_lbte = json.loads(canonical_existing_path(FULL_LBTE).read_text(encoding="utf-8"))
-    if not canonical_existing_path(KAPPA).is_file():
+    resolved_kappa = canonical_existing_path(KAPPA)
+    if not resolved_kappa.is_file():
         declared_keys = sorted(REQUIRED_COMPARATOR_KEYS)
         return {
             "input_mode": "METADATA_ONLY_PUBLIC_BOUNDARY",
@@ -82,7 +83,7 @@ def inspect_local_inputs() -> dict[str, object]:
             "fit_performed": summary["run"]["fit_performed"],
         }
 
-    with h5py.File(KAPPA, "r") as handle:
+    with h5py.File(resolved_kappa, "r") as handle:
         keys = sorted(handle.keys())
         arrays = {
             name: np.asarray(handle[name])
@@ -98,7 +99,12 @@ def inspect_local_inputs() -> dict[str, object]:
         }
         for name, values in arrays.items()
     }
-    hdf5_paths = sorted((canonical_existing_path(BASE / "reproduction")).rglob("*.hdf5"))
+    # Resolve the concrete payload first, then scan its own reproduction tree.
+    # A migrated placeholder directory must not redirect a legacy payload's
+    # sibling search into an empty current-layout directory.
+    declared_tail = KAPPA.relative_to(BASE / "reproduction")
+    reproduction_root = resolved_kappa.parents[len(declared_tail.parts) - 1]
+    hdf5_paths = sorted(reproduction_root.rglob("*.hdf5"))
     matching_fields: dict[str, list[str]] = {}
     collision_eigenvalue_files: list[str] = []
     for path in hdf5_paths:
@@ -119,8 +125,8 @@ def inspect_local_inputs() -> dict[str, object]:
         "raw_payload_available": True,
         "summary_path": SUMMARY.relative_to(ROOT).as_posix(),
         "kappa_path": KAPPA.relative_to(ROOT).as_posix(),
-        "kappa_size_bytes": KAPPA.stat().st_size,
-        "kappa_sha256": _sha(KAPPA),
+        "kappa_size_bytes": resolved_kappa.stat().st_size,
+        "kappa_sha256": _sha(resolved_kappa),
         "expected_kappa_size_bytes": expected["size_bytes"],
         "expected_kappa_sha256": expected["sha256"],
         "available_keys": keys,
