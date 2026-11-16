@@ -5,10 +5,10 @@
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
     "sources": 78,
-    "entries": 830,
+    "entries": 831,
     "by_stream": {
       "book-history": 94,
-      "operations": 129,
+      "operations": 130,
       "research": 606,
       "review": 1
     },
@@ -405,8 +405,8 @@
     },
     {
       "path": "2026/2026-11-16.md",
-      "sha256": "c6ddf273df570e3a32a139bd43f5ffce5525023d16f444120e9c4dcdffaae96b",
-      "entries": 5
+      "sha256": "c2b1fb2f1c0a6ae077174e93df02c4fe55f8b83cdd606663c158e6256b5c2ef6",
+      "entries": 6
     },
     {
       "path": "2026-08-14.md",
@@ -16964,9 +16964,29 @@
       "source": "2026/2026-11-16.md",
       "anchor": "topic-10-archived-source-locator-recovery",
       "start_line": 51,
-      "end_line": 61,
+      "end_line": 62,
       "title": "Topic 10 archived-source locator recovery",
-      "entry_sha256": "f2f97cb3cfc4bf540d7bf7aaf95585882102dd410f985e8d16e96cabe1de52b2",
+      "entry_sha256": "11587401bb502bd36ae99e443259c09810a02caf032513e818b539947ff11662",
+      "stream": "operations",
+      "areas": [
+        "repo-ops"
+      ],
+      "related_streams": [
+        "operations"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-16",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-16.md#owner-requested-publication-of-the-root-layout-repair-branch",
+      "source": "2026/2026-11-16.md",
+      "anchor": "owner-requested-publication-of-the-root-layout-repair-branch",
+      "start_line": 63,
+      "end_line": 70,
+      "title": "Owner-requested publication of the root-layout repair branch",
+      "entry_sha256": "b9472edd8452a4ad90f77433a1b928605e3cec70e75eb82dff5c9139e2df4304",
       "stream": "operations",
       "areas": [
         "repo-ops"
