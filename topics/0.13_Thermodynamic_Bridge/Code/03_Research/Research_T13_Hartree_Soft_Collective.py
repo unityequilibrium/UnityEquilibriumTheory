@@ -17,13 +17,18 @@ import numpy as np
 from scipy.integrate import quad
 from scipy.optimize import brentq
 
-ROOT = Path(__file__).resolve().parents[5]
-PREFIX = "docs/topics/0.13_Thermodynamic_Bridge/"
+ROOT = Path(__file__).resolve().parents[4]
+
+import sys as _sys
+if str(ROOT) not in _sys.path:
+    _sys.path.insert(0, str(ROOT))
+from core.core_paths import canonical_existing_path
+PREFIX = "topics/0.13_Thermodynamic_Bridge/"
 PREVIOUS_CODE = PREFIX+"Code/03_Research/Research_T13_Hartree_Real_Axis.py"
 PREVIOUS_ARTIFACT = PREFIX+"Result/artifacts/t13_hartree_real_axis.json"
-R = runpy.run_path(str(ROOT/PREVIOUS_CODE))
+R = runpy.run_path(str(canonical_existing_path(ROOT/PREVIOUS_CODE)))
 G, F, H = R["G"], R["F"], R["H"]
-OUTPUT = ROOT/(PREFIX+"Result/artifacts/t13_hartree_soft_collective.json")
+OUTPUT = canonical_existing_path(ROOT/(PREFIX+"Result/artifacts/t13_hartree_soft_collective.json"))
 RAYS = (.1, .3, .6, 1.2)
 Q_GRID = (.04, .02, .01)
 SOFT_ORDERS = (64, 96, 128)
@@ -225,7 +230,7 @@ def reactive_zero(example, anchor, order=128):
 
 
 def audit():
-    predecessor = json.loads((ROOT/PREVIOUS_ARTIFACT).read_text(encoding="utf-8"))
+    predecessor = json.loads((canonical_existing_path(ROOT/PREVIOUS_ARTIFACT)).read_text(encoding="utf-8"))
     lineage = R["predecessor_hashes_match"](predecessor)
     examples = []
     for example in predecessor["examples"]:
@@ -279,7 +284,7 @@ def audit():
               "reactive_zero_is_absorptive_not_an_undamped_pole": all(abs(e["reactive_zero"]["phase_inverse_at_reactive_zero"]["real"]) < 1e-8 and e["reactive_zero"]["phase_inverse_at_reactive_zero"]["imaginary"] < -1e-3 for e in examples),
               "reactive_zero_quadrature_refinement": all(e["reactive_zero"]["quadrature_ray_difference"] < 1e-5 for e in examples),
               "cold_equal_branch_correction_absent": not np.any(soft_difference(.3, 0., 1.05, .2, .01)["bubble"]),
-              "protected_hashes_unchanged": all(hashlib.sha256((ROOT/item["path"]).read_bytes()).hexdigest() == item["sha256"] for item in predecessor["protected_evidence_hashes"])}
+              "protected_hashes_unchanged": all(hashlib.sha256((canonical_existing_path(ROOT/item["path"])).read_bytes()).hexdigest() == item["sha256"] for item in predecessor["protected_evidence_hashes"])}
     passed = all(checks.values())
     record = {"schema_version": "t13-hartree-soft-collective-v1", "generated_at": datetime.now(timezone.utc).isoformat(),
               "major_result_id": "T13_FIXED_PHI_HARTREE_COLLISIONLESS_SOFT_PHASE_RESPONSE", "topic": "0.13", "branch_id": predecessor["branch_id"],
@@ -292,7 +297,7 @@ def audit():
               "equation_registry_ids": ["t13.diagnostic.hartree_soft_ray", "t13.diagnostic.hartree_radial_source_phase_Ward"],
               "examples": examples, "checks": checks, "config": {"rays": RAYS, "finite_q_grid": Q_GRID, "soft_orders": SOFT_ORDERS, "finite_q_orders": [64, 80], "output_width": 0., "radial_domain": "0<=k<infinity"},
               "thresholds": {"soft_loop_absolute": LOOP_TOLERANCE, "phase_current_Ward_scaled_absolute": 1e-3, "phase_refinement_scaled_absolute": 1e-3, "static_phase_Ward_absolute": WARD_TOLERANCE},
-              "evidence_artifacts": [{"path": path, "sha256": hashlib.sha256((ROOT/path).read_bytes()).hexdigest()} for path in (PREVIOUS_ARTIFACT, PREVIOUS_CODE, R["CURRENT_ARTIFACT"], R["CURRENT_CODE"], Path(__file__).relative_to(ROOT).as_posix())],
+              "evidence_artifacts": [{"path": path, "sha256": hashlib.sha256((canonical_existing_path(ROOT/path)).read_bytes()).hexdigest()} for path in (PREVIOUS_ARTIFACT, PREVIOUS_CODE, R["CURRENT_ARTIFACT"], R["CURRENT_CODE"], Path(__file__).relative_to(ROOT).as_posix())],
               "protected_evidence_hashes": predecessor["protected_evidence_hashes"],
               "open_blockers": ["collective_complex_poles_and_global_validity_domain", "controlled_truncation_error_and_regulator_RG_action", "joint_Phi_and_material_source_detector_admission", "normal_heat_collision_KMS_entropy_transport", "independent_measurement_input"],
               "controlling_blocker": "collective_pole_domain_truncation_joint_Phi_material_transport_not_closed",

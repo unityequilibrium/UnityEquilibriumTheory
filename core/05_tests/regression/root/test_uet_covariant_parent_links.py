@@ -1,6 +1,7 @@
 """Regression checks for the bounded covariant-parent scientific-link package."""
 
 from __future__ import annotations
+from core.core_paths import canonical_existing_path
 from docs.core.core_paths import canonical_artifact_path, repo_root
 
 import json
@@ -25,8 +26,8 @@ def test_covariant_parent_family_has_explicit_scientific_chain() -> None:
     ]
     assert family["unit_lane"] == "natural_only_v1"
     assert family["formula_ids"] == ["uet.main_theory.covariant_parent"]
-    assert all((ROOT / path).exists() for path in family["verifier_paths"])
-    assert all((ROOT / path).exists() for path in family["evidence_paths"])
+    assert all((canonical_existing_path(ROOT / path)).exists() for path in family["verifier_paths"])
+    assert all((canonical_existing_path(ROOT / path)).exists() for path in family["evidence_paths"])
     assert family["organization_review_required"] is True
     assert "not a metric PDE solver" in family["claim_ceiling"]
 

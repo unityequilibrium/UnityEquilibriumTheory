@@ -8,8 +8,7 @@ from pathlib import Path
 
 
 SCRIPT_PATH = (
-    (repo_root() / "docs")
-    / "topics"
+    (repo_root() / "topics")
     / "0.22_Biophysics_Origin_of_Life"
     / "Code"
     / "03_Research"

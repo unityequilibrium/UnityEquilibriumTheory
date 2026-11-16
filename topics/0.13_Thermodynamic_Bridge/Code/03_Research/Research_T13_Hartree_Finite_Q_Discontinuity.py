@@ -16,13 +16,18 @@ import runpy
 import numpy as np
 from scipy.optimize import brentq, root
 
-ROOT = Path(__file__).resolve().parents[5]
-PREFIX = "docs/topics/0.13_Thermodynamic_Bridge/"
+ROOT = Path(__file__).resolve().parents[4]
+
+import sys as _sys
+if str(ROOT) not in _sys.path:
+    _sys.path.insert(0, str(ROOT))
+from core.core_paths import canonical_existing_path
+PREFIX = "topics/0.13_Thermodynamic_Bridge/"
 PREVIOUS_CODE = PREFIX+"Code/03_Research/Research_T13_Hartree_Soft_Poles.py"
 PREVIOUS_ARTIFACT = PREFIX+"Result/artifacts/t13_hartree_soft_poles.json"
-P = runpy.run_path(str(ROOT/PREVIOUS_CODE))
+P = runpy.run_path(str(canonical_existing_path(ROOT/PREVIOUS_CODE)))
 R, G, F = P["R"], P["G"], P["F"]
-OUTPUT = ROOT/(PREFIX+"Result/artifacts/t13_hartree_finite_q_discontinuity.json")
+OUTPUT = canonical_existing_path(ROOT/(PREFIX+"Result/artifacts/t13_hartree_finite_q_discontinuity.json"))
 Q_GRID = (.04, .02, .01)
 REAL_RAYS = (.2, .3, .4)
 ORDERS = (64, 96, 128)
@@ -195,7 +200,7 @@ def independent_forward_shell_check(q, v, example):
 
 
 def audit(progress=None):
-    predecessor = json.loads((ROOT/PREVIOUS_ARTIFACT).read_text(encoding="utf-8"))
+    predecessor = json.loads((canonical_existing_path(ROOT/PREVIOUS_ARTIFACT)).read_text(encoding="utf-8"))
     examples = []
     for e in predecessor["examples"]:
         example = {key: e[key] for key in ("T", "mu", "Phi_fixed", "a", "b", "s", "u_canonical")}
@@ -226,7 +231,7 @@ def audit(progress=None):
         "two_local_tail_paths_agree": all(max(row["tail_path_disagreement"].values()) < TAIL_TOLERANCE for e in examples for row in e["complex_density_runs"]),
         "finite_q_density_approaches_original_soft_density": all(all(e["complex_density_runs"][i]["difference_from_soft_density"][key] < e["complex_density_runs"][i-1]["difference_from_soft_density"][key] for i in (1, 2)) for e in examples for key in ("bubble", "mixed", "reverse", "loop_current")),
         "finite_q_density_is_not_soft_substitution": all(max(e["complex_density_runs"][0]["difference_from_soft_density"].values()) > 1e-5 for e in examples),
-        "protected_evidence_hashes_unchanged": all(hashlib.sha256((ROOT/item["path"]).read_bytes()).hexdigest() == item["sha256"] for item in predecessor["protected_evidence_hashes"])}
+        "protected_evidence_hashes_unchanged": all(hashlib.sha256((canonical_existing_path(ROOT/item["path"])).read_bytes()).hexdigest() == item["sha256"] for item in predecessor["protected_evidence_hashes"])}
     passed = all(checks.values())
     record = {"schema_version": "t13-hartree-finite-q-discontinuity-v1", "generated_at": datetime.now(timezone.utc).isoformat(),
               "major_result_id": "T13_FIXED_PHI_HARTREE_FINITE_Q_LANDAU_DISCONTINUITY", "topic": "0.13", "branch_id": predecessor["branch_id"],
@@ -241,7 +246,7 @@ def audit(progress=None):
                          "original_full_radial_orders": ORIGINAL_ORDERS, "local_domain": LOCAL_DOMAIN, "tail_paths": ["horizontal", "return_to_real"],
                          "radial_domain": "0<=k<infinity", "assigned_output_width": None},
               "thresholds": {"original_cut_absolute": CUT_TOLERANCE, "tail_refinement_absolute": TAIL_TOLERANCE, "causal_leakage_unchanged": 1e-6},
-              "evidence_artifacts": [{"path": path, "sha256": hashlib.sha256((ROOT/path).read_bytes()).hexdigest()} for path in (PREVIOUS_ARTIFACT, PREVIOUS_CODE, Path(__file__).relative_to(ROOT).as_posix())],
+              "evidence_artifacts": [{"path": path, "sha256": hashlib.sha256((canonical_existing_path(ROOT/path)).read_bytes()).hexdigest()} for path in (PREVIOUS_ARTIFACT, PREVIOUS_CODE, Path(__file__).relative_to(ROOT).as_posix())],
               "protected_evidence_hashes": predecessor["protected_evidence_hashes"],
               "open_blockers": ["actual_finite_q_principal_kernel_and_pole_root_not_computed", "certified_global_complex_domain", "Hartree_truncation_and_regulator_RG_full_action", "joint_Phi_material_source_detector_and_heat_transport"],
               "controlling_blocker": "finite_q_principal_kernel_and_actual_pole_not_computed",

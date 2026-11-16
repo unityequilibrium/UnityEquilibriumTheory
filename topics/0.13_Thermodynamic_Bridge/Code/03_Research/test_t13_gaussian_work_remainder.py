@@ -1,4 +1,5 @@
 """Scope, parity, known-tail and provenance checks for the finite-pair result."""
+from core.core_paths import canonical_existing_path
 
 import hashlib
 import json
@@ -128,7 +129,7 @@ def test_frozen_grid_and_higher_order_diagnostics(artifact):
 
 def test_evidence_hashes_and_registry(artifact):
     for item in artifact["evidence_artifacts"]+artifact["protected_evidence_hashes"]:
-        assert hashlib.sha256((R.ROOT/item["path"]).read_bytes()).hexdigest() == item["sha256"]
+        assert hashlib.sha256((canonical_existing_path(R.ROOT/item["path"])).read_bytes()).hexdigest() == item["sha256"]
     registry = json.loads((R.ROOT/R.REGISTRY).read_text())
     assert artifact["equation_registry_ids"] == [x["id"] for x in registry["entries"]]
     assert not registry["core_registry_modified"]
@@ -146,7 +147,7 @@ def test_report_scope_and_holdout(artifact):
 
 
 def test_runtime_read_allowlist(monkeypatch, artifact):
-    allowed = {str((R.ROOT/x["path"]).resolve()).casefold() for x in artifact["evidence_artifacts"]+artifact["protected_evidence_hashes"]}
+    allowed = {str((canonical_existing_path(R.ROOT/x["path"])).resolve()).casefold() for x in artifact["evidence_artifacts"]+artifact["protected_evidence_hashes"]}
     raw_read, text_read = Path.read_bytes, Path.read_text
     reads = set()
 

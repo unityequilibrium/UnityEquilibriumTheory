@@ -9,7 +9,12 @@ import numpy as np
 import pytest
 
 LOCAL = Path(__file__).resolve().parent
-ROOT = LOCAL.parents[4]
+ROOT = LOCAL.parents[3]
+
+import sys as _sys
+if str(ROOT) not in _sys.path:
+    _sys.path.insert(0, str(ROOT))
+from core.core_paths import canonical_existing_path
 M = runpy.run_path(str(LOCAL/"Research_T13_Acoustic_Source_Landau.py"))
 MOD, TH, EFT, PAIR, PREFIX = M["MOD"], M["TH"], M["EFT"], M["PAIR"], M["PREFIX"]
 
@@ -98,7 +103,7 @@ def test_sound_lower_bound_is_consistent_with_the_same_schur_root(example):
 
 
 def test_combined_window_does_not_invent_pair_support_or_full_retarded_acceptance():
-    record = json.loads((ROOT/(PREFIX+"Result/artifacts/t13_acoustic_source_Landau.json")).read_text())
+    record = json.loads((canonical_existing_path(ROOT/(PREFIX+"Result/artifacts/t13_acoustic_source_Landau.json"))).read_text())
     for example in record["examples"]:
         for row in example["off_shell_Landau_rows"]:
             assert not row["combined_window_is_full_retarded_response"]
@@ -120,7 +125,7 @@ def test_invalid_inputs_or_false_support_claim_rejected(example, case):
 
 
 def test_artifact_and_hashes_do_not_promote_full_matching_or_physics():
-    record = json.loads((ROOT/(PREFIX+"Result/artifacts/t13_acoustic_source_Landau.json")).read_text())
+    record = json.loads((canonical_existing_path(ROOT/(PREFIX+"Result/artifacts/t13_acoustic_source_Landau.json"))).read_text())
     assert all(record["checks"].values()) and record["verification_status"] == "PASS_SCOPED_LANDAU_SOURCE_INTERFACE"
     assert len(record["report"]) == 11 and record["thresholds"]["original_causal_leakage"] == 1e-6
     for key in ("full_off_shell_source_matching_closed", "full_real_self_energy_matched", "full_two_loop_pressure_computed",
@@ -131,7 +136,7 @@ def test_artifact_and_hashes_do_not_promote_full_matching_or_physics():
         assert record[key] is False
     assert record["prior_Xie_context_exposure_review"] == "REVIEW_REQUIRED"
     for item in record["evidence_artifacts"]+record["protected_evidence_hashes"]:
-        assert hashlib.sha256((ROOT/item["path"]).read_bytes()).hexdigest() == item["sha256"]
+        assert hashlib.sha256(TH.canonical_existing_path(canonical_existing_path(ROOT/item["path"])).read_bytes()).hexdigest() == item["sha256"]
 
 
 def test_runtime_read_allowlist_excludes_holdout(monkeypatch):
@@ -146,6 +151,6 @@ def test_runtime_read_allowlist_excludes_holdout(monkeypatch):
     monkeypatch.setattr(Path, "read_bytes", read_bytes)
     monkeypatch.setattr(Path, "read_text", read_text)
     result = M["audit"]()
-    allowed = {(ROOT/x["path"]).resolve() for x in result["evidence_artifacts"]+result["protected_evidence_hashes"]}
+    allowed = {TH.canonical_existing_path(canonical_existing_path(ROOT/x["path"])).resolve() for x in result["evidence_artifacts"]+result["protected_evidence_hashes"]}
     assert accessed and set(accessed) <= allowed and all("xie" not in p.name.lower() for p in accessed)
     assert all(result["checks"].values())

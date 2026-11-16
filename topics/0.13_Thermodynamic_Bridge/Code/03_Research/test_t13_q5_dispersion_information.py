@@ -1,4 +1,5 @@
 """Tree q5 information, exact witness envelope and conservative admission."""
+from core.core_paths import canonical_existing_path
 
 import hashlib
 import json
@@ -144,12 +145,12 @@ def test_no_physical_admission_from_q5(artifact, flag):
 
 def test_protected_and_current_hashes(artifact):
     for item in artifact["evidence_artifacts"]+artifact["protected_evidence_hashes"]:
-        assert hashlib.sha256((Q.ROOT/item["path"]).read_bytes()).hexdigest() == item["sha256"]
+        assert hashlib.sha256((canonical_existing_path(Q.ROOT/item["path"])).read_bytes()).hexdigest() == item["sha256"]
     Q.load_predecessor()
 
 
 def test_audit_runtime_path_read_allowlist(monkeypatch, artifact):
-    allowed = {str((Q.ROOT/x["path"]).resolve()).casefold() for x in artifact["evidence_artifacts"]+artifact["protected_evidence_hashes"]}
+    allowed = {str((canonical_existing_path(Q.ROOT/x["path"])).resolve()).casefold() for x in artifact["evidence_artifacts"]+artifact["protected_evidence_hashes"]}
     old_bytes, old_text, observed = Path.read_bytes, Path.read_text, set()
 
     def guard(path):

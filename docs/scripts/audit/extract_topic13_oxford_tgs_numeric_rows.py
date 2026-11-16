@@ -11,21 +11,32 @@ import io
 import gzip
 import hashlib
 import json
+import os
 from datetime import date
 from pathlib import Path
+import sys
 
 import h5py
 import numpy as np
 
 
 ROOT = Path(__file__).resolve().parents[3]
-BASE = ROOT / "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research"
+if str(ROOT) not in sys.path:
+    sys.path.insert(0, str(ROOT))
+
+from core.core_paths import canonical_existing_path, canonical_path_for  # noqa: E402
+
+BASE = ROOT / "topics/0.13_Thermodynamic_Bridge/Data/03_Research"
 RAW_DIR = BASE / "raw/oxford_tgs_figure1"
 MAT = RAW_DIR / "helsinki_unimp1_vacmod_map1.mat"
 PROCESSING = RAW_DIR / "map_fitting_2d_supplementary_plots.m"
 PACKAGE = BASE / "oxford_tgs_figure1_source_package.json"
-CSV_GZ = BASE / "oxford_tgs_figure1_numeric_rows.csv.gz"
-MANIFEST = BASE / "oxford_tgs_figure1_numeric_rows_manifest.json"
+OUTPUT_ROOT = Path(os.environ.get("UET_OUTPUT_ROOT", ROOT)).resolve()
+OUTPUT_BASE = OUTPUT_ROOT / "topics/0.13_Thermodynamic_Bridge/Data/03_Research"
+CSV_OUTPUT_REL = "topics/0.13_Thermodynamic_Bridge/Data/03_Research/oxford_tgs_figure1_numeric_rows.csv.gz"
+MANIFEST_OUTPUT_REL = "topics/0.13_Thermodynamic_Bridge/Data/03_Research/oxford_tgs_figure1_numeric_rows_manifest.json"
+CSV_GZ = OUTPUT_BASE / "oxford_tgs_figure1_numeric_rows.csv.gz"
+MANIFEST = OUTPUT_BASE / "oxford_tgs_figure1_numeric_rows_manifest.json"
 
 MATLAB_MAP_HORIZONTAL_INDEX = 1
 MATLAB_MAP_VERTICAL_INDEX = 2
@@ -34,14 +45,14 @@ EXPECTED_SHAPE_HDF5 = (2002, 10, 4, 7)
 
 def sha256(path: Path) -> str:
     digest = hashlib.sha256()
-    with path.open("rb") as handle:
+    with canonical_existing_path(path).open("rb") as handle:
         for chunk in iter(lambda: handle.read(1024 * 1024), b""):
             digest.update(chunk)
     return digest.hexdigest()
 
 
 def load_json(path: Path) -> dict:
-    with path.open("r", encoding="utf-8-sig") as handle:
+    with canonical_existing_path(path).open("r", encoding="utf-8-sig") as handle:
         value = json.load(handle)
     if not isinstance(value, dict):
         raise ValueError(f"expected JSON object: {path}")
@@ -52,7 +63,7 @@ def build_metadata_only_manifest(package: dict) -> dict:
     records = {record["archive_file"]: record for record in package["raw_files"]}
     mat_record = records["helsinki_unimp1_vacmod_map1.mat"]
     processing_record = records["map_fitting_2d_supplementary_plots.m"]
-    output_present = CSV_GZ.is_file()
+    output_present = canonical_existing_path(CSV_GZ).is_file()
     return {
         "schema_version": "t13-oxford-tgs-numeric-rows-manifest-v1",
         "artifact": "oxford_tgs_figure1_numeric_rows_manifest",
@@ -89,7 +100,7 @@ def build_metadata_only_manifest(package: dict) -> dict:
             "row_count": 0,
             "raw_variables": ["xx", "xx1", "yy", "yy1"],
             "derived_column": "y_delta_yy1_minus_yy_au = yy1_signal_au - yy_signal_au",
-            "output_path": CSV_GZ.relative_to(ROOT).as_posix(),
+            "output_path": CSV_OUTPUT_REL,
             "output_sha256": None,
             "output_present_but_unverified": output_present,
         },
@@ -127,8 +138,9 @@ def build_metadata_only_manifest(package: dict) -> dict:
 
 def main() -> int:
     package = load_json(PACKAGE)
-    if not MAT.is_file() or not PROCESSING.is_file():
+    if not canonical_existing_path(MAT).is_file() or not canonical_existing_path(PROCESSING).is_file():
         manifest = build_metadata_only_manifest(package)
+        MANIFEST.parent.mkdir(parents=True, exist_ok=True)
         MANIFEST.write_text(
             json.dumps(manifest, indent=2, ensure_ascii=True) + "\n",
             encoding="utf-8",
@@ -139,7 +151,7 @@ def main() -> int:
                     "status": manifest["status"],
                     "rows": 0,
                     "raw_payload_available": False,
-                    "manifest": MANIFEST.relative_to(ROOT).as_posix(),
+                    "manifest": MANIFEST_OUTPUT_REL,
                 },
                 indent=2,
             )
@@ -235,12 +247,12 @@ def main() -> int:
             "source_id": package["source"]["source_id"],
             "doi": package["source"]["doi"],
             "record_url": package["source"]["record_url"],
-            "raw_mat_path": MAT.relative_to(ROOT).as_posix(),
+            "raw_mat_path": canonical_path_for(MAT.relative_to(ROOT).as_posix()),
             "raw_mat_sha256": sha256(MAT),
             "raw_mat_expected_sha256": raw_record["sha256"],
             "raw_mat_hash_match": sha256(MAT) == raw_record["sha256"],
             "source_filename_variable": filename,
-            "processing_script_path": PROCESSING.relative_to(ROOT).as_posix(),
+            "processing_script_path": canonical_path_for(PROCESSING.relative_to(ROOT).as_posix()),
             "processing_script_sha256": sha256(PROCESSING),
         },
         "extraction": {
@@ -257,7 +269,7 @@ def main() -> int:
             "row_count": row_count,
             "raw_variables": ["xx", "xx1", "yy", "yy1"],
             "derived_column": "y_delta_yy1_minus_yy_au = yy1_signal_au - yy_signal_au",
-            "output_path": CSV_GZ.relative_to(ROOT).as_posix(),
+            "output_path": CSV_OUTPUT_REL,
             "output_sha256": sha256(CSV_GZ),
         },
         "units": {
@@ -304,7 +316,7 @@ def main() -> int:
                 "traces": trace_count,
                 "samples_per_trace": sample_count,
                 "csv_sha256": manifest["extraction"]["output_sha256"],
-                "manifest": MANIFEST.relative_to(ROOT).as_posix(),
+                "manifest": MANIFEST_OUTPUT_REL,
             },
             indent=2,
         )

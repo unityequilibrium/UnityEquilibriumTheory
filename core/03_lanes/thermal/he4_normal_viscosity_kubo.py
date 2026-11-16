@@ -5,6 +5,7 @@ from __future__ import annotations
 import hashlib
 from pathlib import Path
 
+from core.core_paths import canonical_existing_path
 from docs.core.core_paths import repo_root
 
 from .he4_o2_response_calibration import calibration_record
@@ -18,7 +19,7 @@ PACKAGE = ROOT / (
 
 
 def source_hash() -> str:
-    return hashlib.sha256(PACKAGE.read_bytes()).hexdigest()
+    return hashlib.sha256(canonical_existing_path(PACKAGE).read_bytes()).hexdigest()
 
 
 def physical_transport_record() -> dict:

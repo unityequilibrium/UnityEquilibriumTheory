@@ -8,11 +8,16 @@ from pathlib import Path
 import numpy as np
 
 ROOT=next(p for p in Path(__file__).resolve().parents if (p/"docs/core").is_dir())
-TOPIC=ROOT/"docs/topics/0.10_Fluid_Dynamics_Chaos"
+
+import sys as _sys
+if str(ROOT) not in _sys.path:
+    _sys.path.insert(0, str(ROOT))
+from core.core_paths import canonical_existing_path
+TOPIC=ROOT/"topics/0.10_Fluid_Dynamics_Chaos"
 CONTRACT=TOPIC/"Data/03_Research/fluid_two_fluid_eos_reference_contract.json"
 INPUTS=TOPIC/"Data/03_Research/he4_two_fluid_thermodynamic_input_requirements.json"
 CARD=TOPIC/"TWO_FLUID_STATE_EOS_REFERENCE.md"
-REGISTRY=ROOT/"docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry_topic10_two_fluid_eos_reference.json"
+REGISTRY=canonical_existing_path(ROOT/"docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry_topic10_two_fluid_eos_reference.json")
 OUTPUT=TOPIC/"Result/artifacts/fluid_two_fluid_eos_reference_audit.json"
 
 
@@ -220,7 +225,7 @@ def main():
     paths=[Path(__file__),CONTRACT,INPUTS,CARD,REGISTRY,
            TOPIC/"Data/03_Research/fluid_second_sound_mode_eligibility_contract.json",
            TOPIC/"Result/artifacts/fluid_second_sound_mode_eligibility_audit.json",
-           ROOT/"docs/topics/0.13_Thermodynamic_Bridge/HE4_SECOND_SOUND_PROTOCOL_CARD.md"]
+           canonical_existing_path(ROOT/"docs/topics/0.13_Thermodynamic_Bridge/HE4_SECOND_SOUND_PROTOCOL_CARD.md")]
     result.update(schema_version="t10-two-fluid-EOS-reference-audit-v1",pass_=ok,
                   status="PASS_STANDARD_TWO_FLUID_AND_PATH_UNDERDETERMINATION_REFERENCE_ONLY" if ok else "FAIL_TWO_FLUID_EOS_REFERENCE",
                   controlling_blocker=contract["controlling_blocker"],

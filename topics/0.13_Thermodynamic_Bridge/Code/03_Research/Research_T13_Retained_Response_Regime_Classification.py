@@ -16,14 +16,20 @@ import sys
 
 import sympy as s
 
-ROOT = Path(__file__).resolve().parents[5]
+ROOT = Path(__file__).resolve().parents[4]
+
+import sys as _sys
+if str(ROOT) not in _sys.path:
+    _sys.path.insert(0, str(ROOT))
+from core.core_paths import canonical_existing_path
 sys.path.insert(0, str(ROOT))
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from docs.scripts.audit.audit_calculation_completeness import artifact_metadata, load_json
+from core.core_paths import canonical_existing_path
 
 # Pure restricted AST utilities only; never call U's algebra/calculate/main.
 u = importlib.import_module("Research_T13_Retained_Response_Requirement_Audit")
-TOPIC = "docs/topics/0.13_Thermodynamic_Bridge"
+TOPIC = "topics/0.13_Thermodynamic_Bridge"
 STEM = "retained_response_regime_classification"
 CONTRACT = f"{TOPIC}/calculation_contracts/{STEM}.json"
 OUTPUT = f"{TOPIC}/Result/artifacts/t13_{STEM}.json"
@@ -55,7 +61,7 @@ def equal(left, right):
 
 def source_domain(text=None):
     """Pin the relevant config checks, fail closed instead of widening a_space."""
-    text = text if text is not None else (ROOT/CORE).read_text(encoding="utf-8")
+    text = text if text is not None else canonical_existing_path(canonical_existing_path(ROOT/CORE)).read_text(encoding="utf-8")
     tree = ast.parse(text)
     cls = next(n for n in tree.body if isinstance(n, ast.ClassDef) and n.name == "MatterSpaceConfig")
     post = next(n for n in cls.body if isinstance(n, ast.FunctionDef) and n.name == "__post_init__")
@@ -79,7 +85,7 @@ def source_domain(text=None):
 
 
 def source_law(text=None):
-    text = text if text is not None else (ROOT/CORE).read_text(encoding="utf-8")
+    text = text if text is not None else canonical_existing_path(canonical_existing_path(ROOT/CORE)).read_text(encoding="utf-8")
     f = u.functions(text)
     env = {"C": C, "Phi": Phi, "lap_C": 0, "lap_Phi": 0,
            "state.space_rate": Pi, "matter_drive": JC, "space_drive": JP}
@@ -222,7 +228,7 @@ def controls():
 
 
 def inherited_u_check():
-    old=load_json(ROOT/U_ARTIFACT)
+    old=load_json(canonical_existing_path(ROOT/U_ARTIFACT))
     if old.get("old_producers_rerun") is not False or old.get("physical_acceptance") is not False:
         raise ValueError("U scope changed; review before reuse")
     aa=algebra(); cc, rr=s.symbols("c r", positive=True)
@@ -414,7 +420,7 @@ def calculate():
 
 
 def record():
-    return {**artifact_metadata(load_json(ROOT/CONTRACT),ROOT),**calculate()}
+    return {**artifact_metadata(load_json(canonical_existing_path(ROOT/CONTRACT)),ROOT),**calculate()}
 
 
 def main(argv=None):
@@ -425,8 +431,8 @@ def main(argv=None):
     args=parser.parse_args(argv)
     result=record();payload=json.dumps(result,ensure_ascii=False,sort_keys=True,indent=2)+"\n"
     if args.emit_report:
-        (ROOT/OUTPUT).write_text(payload,encoding="utf-8",newline="\n")
-    elif not (ROOT/OUTPUT).is_file() or (ROOT/OUTPUT).read_bytes()!=payload.encode("utf-8"):
+        (canonical_existing_path(ROOT/OUTPUT)).write_text(payload,encoding="utf-8",newline="\n")
+    elif not (canonical_existing_path(ROOT/OUTPUT)).is_file() or (canonical_existing_path(ROOT/OUTPUT)).read_bytes()!=payload.encode("utf-8"):
         raise ValueError("artifact missing/stale; review before explicit --emit-report")
     print(json.dumps({"checks":len(result["checks"]),"negative_controls":len(result["negative_controls"]),
                       "review":result["contract_review_status"],"physical_acceptance":False}))

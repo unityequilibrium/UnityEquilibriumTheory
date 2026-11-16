@@ -195,13 +195,13 @@ def encode_row(row):
 
 
 def audit():
-    previous = (ROOT/PREDECESSOR).read_bytes()
+    previous = TH.canonical_existing_path(ROOT/PREDECESSOR).read_bytes()
     if hashlib.sha256(previous).hexdigest() != PREDECESSOR_SHA:
         raise ValueError("estimator predecessor identity changed")
-    manifest = json.loads((ROOT/REGISTRY).read_text())
+    manifest = json.loads(TH.canonical_existing_path(ROOT/REGISTRY).read_text())
     raw = []
     for item in manifest["raw_files"]:
-        content = (ROOT/item["path"]).read_bytes()
+        content = TH.canonical_existing_path(ROOT/item["path"]).read_bytes()
         if hashlib.sha256(content).hexdigest() != item["sha256"]:
             raise ValueError("raw source identity changed")
         raw.append(content)

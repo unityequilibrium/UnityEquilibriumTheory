@@ -16,11 +16,16 @@ import sys
 
 import sympy as s
 
-ROOT = Path(__file__).resolve().parents[5]
+ROOT = Path(__file__).resolve().parents[4]
+
+import sys as _sys
+if str(ROOT) not in _sys.path:
+    _sys.path.insert(0, str(ROOT))
+from core.core_paths import canonical_existing_path
 sys.path.insert(0, str(ROOT))
 from docs.scripts.audit.audit_calculation_completeness import artifact_metadata, load_json
 
-TOPIC = "docs/topics/0.13_Thermodynamic_Bridge"
+TOPIC = "topics/0.13_Thermodynamic_Bridge"
 CONTRACT = f"{TOPIC}/calculation_contracts/lattice_bath_reduction_audit.json"
 OUTPUT = f"{TOPIC}/Result/artifacts/t13_lattice_bath_reduction_audit.json"
 REPORT = "docs/meta/UET_LATTICE_BATH_REDUCTION_AUDIT.md"
@@ -461,7 +466,7 @@ def calculate():
 
 
 def record():
-    return {**artifact_metadata(load_json(ROOT/CONTRACT),ROOT),**calculate()}
+    return {**artifact_metadata(load_json(canonical_existing_path(ROOT/CONTRACT)),ROOT),**calculate()}
 
 
 def main(argv=None):
@@ -473,8 +478,8 @@ def main(argv=None):
     result=record()
     payload=json.dumps(result,ensure_ascii=False,sort_keys=True,indent=2)+"\n"
     if args.emit_report:
-        (ROOT/OUTPUT).write_text(payload,encoding="utf-8",newline="\n")
-    elif not (ROOT/OUTPUT).is_file() or (ROOT/OUTPUT).read_bytes()!=payload.encode("utf-8"):
+        (canonical_existing_path(ROOT/OUTPUT)).write_text(payload,encoding="utf-8",newline="\n")
+    elif not (canonical_existing_path(ROOT/OUTPUT)).is_file() or (canonical_existing_path(ROOT/OUTPUT)).read_bytes()!=payload.encode("utf-8"):
         raise ValueError("artifact absent/stale; inspect before explicit --emit-report")
     print(json.dumps(dict(rounds=result["completed_rounds"],exact_groups=len(result["checks"]),
                           spin_configurations=len(result["spin_controls"]),

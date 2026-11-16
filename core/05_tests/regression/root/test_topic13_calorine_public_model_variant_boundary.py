@@ -4,10 +4,9 @@ from pathlib import Path
 
 
 ROOT = repo_root()
-ARTIFACT = ROOT / "docs/core/07_artifacts/topic13/t13_calorine_public_model_variant_boundary_audit.json"
+ARTIFACT = ROOT / 'core/07_artifacts/topic13/t13_calorine_public_model_variant_boundary_audit.json'
 PACKAGE = ROOT / (
-    "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/"
-    "calorine_zenodo_7811021_nep_cx_model_variant_source_package.json"
+    'topics/0.13_Thermodynamic_Bridge/Data/03_Research/calorine_zenodo_7811021_nep_cx_model_variant_source_package.json'
 )
 
 

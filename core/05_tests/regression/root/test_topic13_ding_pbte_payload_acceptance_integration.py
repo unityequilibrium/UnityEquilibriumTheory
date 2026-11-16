@@ -1,4 +1,5 @@
 from __future__ import annotations
+from core.core_paths import canonical_existing_path
 from docs.core.core_paths import repo_root
 
 import json
@@ -13,7 +14,7 @@ GATE = ROOT / (
 
 
 def test_payload_acceptance_controller_is_projected_into_full_gate() -> None:
-    gate = json.loads(GATE.read_text(encoding="utf-8-sig"))
+    gate = json.loads(canonical_existing_path(GATE).read_text(encoding="utf-8-sig"))
     controller = gate["verification_status"]["source_package"][
         "ding_pbte_payload_acceptance_controller"
     ]

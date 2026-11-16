@@ -1,4 +1,5 @@
 from __future__ import annotations
+from core.core_paths import canonical_existing_path
 from docs.core.core_paths import canonical_artifact_path, repo_root
 
 import json
@@ -18,7 +19,7 @@ DEPENDENCY = canonical_artifact_path("uet_major_result_dependency_unlock_gate.js
 
 
 def load(path: Path) -> dict:
-    return json.loads(path.read_text(encoding="utf-8-sig"))
+    return json.loads(canonical_existing_path(path).read_text(encoding="utf-8-sig"))
 
 
 def test_fixed_volume_identity_audit_passes_without_numeric_C_src() -> None:

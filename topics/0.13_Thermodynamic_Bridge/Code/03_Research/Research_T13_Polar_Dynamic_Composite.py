@@ -17,12 +17,17 @@ import numpy as np
 from scipy.integrate import quad
 from scipy.special import zeta
 
-ROOT = Path(__file__).resolve().parents[5]
-PREFIX = "docs/topics/0.13_Thermodynamic_Bridge/"
+ROOT = Path(__file__).resolve().parents[4]
+
+import sys as _sys
+if str(ROOT) not in _sys.path:
+    _sys.path.insert(0, str(ROOT))
+from core.core_paths import canonical_existing_path
+PREFIX = "topics/0.13_Thermodynamic_Bridge/"
 POLAR_PATH = PREFIX+"Code/03_Research/Research_T13_Polar_Static_IR_Observable.py"
 POLAR_ARTIFACT = PREFIX+"Result/artifacts/t13_polar_static_ir_observable.json"
-POLAR = runpy.run_path(str(ROOT/POLAR_PATH))
-OUTPUT = ROOT/(PREFIX+"Result/artifacts/t13_polar_dynamic_composite.json")
+POLAR = runpy.run_path(str(canonical_existing_path(ROOT/POLAR_PATH)))
+OUTPUT = canonical_existing_path(ROOT/(PREFIX+"Result/artifacts/t13_polar_dynamic_composite.json"))
 
 # Fixed before running; scales are the previous witnesses, not material fits.
 Q_REFINEMENT = (.005, .0025, .00125)
@@ -252,7 +257,7 @@ def detailed_balance_check(e, f, t, pair=True):
 
 
 def audit():
-    prior = json.loads((ROOT/POLAR_ARTIFACT).read_text(encoding="utf-8"))
+    prior = json.loads((canonical_existing_path(ROOT/POLAR_ARTIFACT)).read_text(encoding="utf-8"))
     examples = []
     for anchor in prior["examples"]:
         t, mu, r, Z, lam = (anchor[k] for k in ("T", "mu", "r", "Z", "lambda"))
@@ -321,8 +326,8 @@ def audit():
         "thresholds": {"algebra": ALGEBRA_TOLERANCE, "independent_integrals": INTEGRAL_TOLERANCE, "thermal_to_classical_IR_relative": CLASSICAL_LIMIT_TOLERANCE},
         "Q_refinement": Q_REFINEMENT, "frequency_ratios": [[v.real, v.imag] for v in FREQUENCY_RATIOS],
         "checks": checks, "examples": examples, "point_Matsubara_checks": matsubara, "detailed_balance_checks": balance,
-        "evidence_artifacts": [{"path": p, "sha256": hashlib.sha256((ROOT/p).read_bytes()).hexdigest()} for p in paths],
-        "protected_evidence_hashes": [{"path": p, "sha256": hashlib.sha256((ROOT/p).read_bytes()).hexdigest()} for p in protected],
+        "evidence_artifacts": [{"path": p, "sha256": hashlib.sha256((canonical_existing_path(ROOT/p)).read_bytes()).hexdigest()} for p in paths],
+        "protected_evidence_hashes": [{"path": p, "sha256": hashlib.sha256((canonical_existing_path(ROOT/p)).read_bytes()).hexdigest()} for p in protected],
         "open_blockers": ["source_complete_renormalized_interacting_background_and_joint_Phi_stationarity", "dynamic_current_vertices_beyond_leading_phase_lane_and_controlled_remainder", "material_source_detector_and_independent_parameter_inputs", "finiteT_normal_component_transport_and_microscopic_SK_KMS_matching"],
         "controlling_blocker": "renormalized_stationary_background_and_dynamic_matching_remainder_not_closed",
         "dependency_unlocked": ["same_lane_dynamic_source_and_measurement_design_only"],

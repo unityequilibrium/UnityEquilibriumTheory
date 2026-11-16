@@ -14,7 +14,12 @@ import sys
 
 import sympy as s
 
-ROOT = Path(__file__).resolve().parents[5]
+ROOT = Path(__file__).resolve().parents[4]
+
+import sys as _sys
+if str(ROOT) not in _sys.path:
+    _sys.path.insert(0, str(ROOT))
+from core.core_paths import canonical_existing_path
 sys.path.insert(0, str(ROOT))
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from docs.scripts.audit.audit_calculation_completeness import (
@@ -22,7 +27,7 @@ from docs.scripts.audit.audit_calculation_completeness import (
 )
 import Research_T13_Parent_Static_Reference_Audit as q
 
-TOPIC = "docs/topics/0.13_Thermodynamic_Bridge"
+TOPIC = "topics/0.13_Thermodynamic_Bridge"
 CONTRACT = f"{TOPIC}/calculation_contracts/phi_variance_static_admissibility.json"
 OUTPUT = f"{TOPIC}/Result/artifacts/t13_phi_variance_static_admissibility.json"
 REPORT = "docs/meta/UET_PHI_VARIANCE_STATIC_ADMISSIBILITY.md"
@@ -104,11 +109,11 @@ def select_reference(artifact):
 
 
 def load_reference():
-    contract = load_json(ROOT/QCONTRACT)
+    contract = load_json(canonical_existing_path(ROOT/QCONTRACT))
     review = validate_contract(contract, ROOT)
     if review["errors"]:
         raise ValueError("Q identity errors: "+"; ".join(review["errors"]))
-    artifact = load_json(ROOT/QOUTPUT)
+    artifact = load_json(canonical_existing_path(ROOT/QOUTPUT))
     if artifact.get("contract_sha256") != contract_hash(contract) or artifact.get("identities") != contract["identities"]:
         raise ValueError("Q artifact/contract binding changed")
     return select_reference(artifact)
@@ -362,7 +367,7 @@ def calculate():
 
 
 def record():
-    return {**artifact_metadata(load_json(ROOT/CONTRACT), ROOT), **calculate()}
+    return {**artifact_metadata(load_json(canonical_existing_path(ROOT/CONTRACT)), ROOT), **calculate()}
 
 
 def main(argv=None):
@@ -374,8 +379,8 @@ def main(argv=None):
     result = record()
     payload = json.dumps(result, ensure_ascii=False, sort_keys=True, indent=2)+"\n"
     if args.emit_report:
-        (ROOT/OUTPUT).write_text(payload, encoding="utf-8", newline="\n")
-    elif not (ROOT/OUTPUT).is_file() or (ROOT/OUTPUT).read_bytes() != payload.encode("utf-8"):
+        (canonical_existing_path(ROOT/OUTPUT)).write_text(payload, encoding="utf-8", newline="\n")
+    elif not (canonical_existing_path(ROOT/OUTPUT)).is_file() or (canonical_existing_path(ROOT/OUTPUT)).read_bytes() != payload.encode("utf-8"):
         raise ValueError("artifact absent/stale; inspect before explicit --emit-report")
     print(json.dumps({"new_checks": len(result["checks"]), "negative_controls": len(result["negative_controls"]),
                       "inherited_radii": len(result["inherited_radii"]), "physical_acceptance": False,

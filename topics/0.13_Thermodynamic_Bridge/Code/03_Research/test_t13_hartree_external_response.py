@@ -1,4 +1,5 @@
 """Independent full-loop, source-response and protected-scope checks."""
+from core.core_paths import canonical_existing_path
 
 import hashlib
 import json
@@ -154,7 +155,7 @@ def test_artifact_reports_scope_and_protected_evidence_hashes():
                  "real_axis_limit_admitted", "physical_Kubo_emitted", "xie_2026_accessed", "IR_filter", "clipping"):
         assert record[flag] is False
     for source in record["evidence_artifacts"]+record["protected_evidence_hashes"]:
-        assert hashlib.sha256((M["ROOT"]/source["path"]).read_bytes()).hexdigest() == source["sha256"]
+        assert hashlib.sha256((canonical_existing_path(M["ROOT"]/source["path"])).read_bytes()).hexdigest() == source["sha256"]
 
 
 def test_audit_only_reads_declared_artifacts_and_does_not_mutate_them(monkeypatch):

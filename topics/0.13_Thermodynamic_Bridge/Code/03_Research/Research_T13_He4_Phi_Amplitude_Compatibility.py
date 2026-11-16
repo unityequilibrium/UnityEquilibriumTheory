@@ -9,10 +9,11 @@ from pathlib import Path
 import sys
 
 
-ROOT = Path(__file__).resolve().parents[5]
+ROOT = Path(__file__).resolve().parents[4]
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
+from core.core_paths import canonical_existing_path
 from docs.core.uet_o2_action_thermal_observable_bridge import natural_bridge_config  # noqa: E402
 from docs.core.uet_o2_gaussian_offshell_background import off_shell_gaussian_thermal_state  # noqa: E402
 from docs.core.uet_o2_gaussian_thermal_stationarity_no_go import (  # noqa: E402
@@ -31,13 +32,13 @@ OUTPUT = DOCS / "topics/0.13_Thermodynamic_Bridge/Result/artifacts/t13_he4_phi_a
 
 
 def _sha(path: Path) -> str:
-    return hashlib.sha256(path.read_bytes()).hexdigest()
+    return hashlib.sha256(canonical_existing_path(path).read_bytes()).hexdigest()
 
 
 def audit() -> dict:
-    root = json.loads(ROOT_AUDIT.read_text(encoding="utf-8"))
-    no_go = json.loads(NO_GO.read_text(encoding="utf-8"))
-    ward = json.loads(FORMAL_WARD.read_text(encoding="utf-8"))
+    root = json.loads(canonical_existing_path(ROOT_AUDIT).read_text(encoding="utf-8"))
+    no_go = json.loads(canonical_existing_path(NO_GO).read_text(encoding="utf-8"))
+    ward = json.loads(canonical_existing_path(FORMAL_WARD).read_text(encoding="utf-8"))
     t = float(root["prior_anchor"]["T_natural"])
     state = root["runs"][1]
     mu = float(state["joint_mu"])

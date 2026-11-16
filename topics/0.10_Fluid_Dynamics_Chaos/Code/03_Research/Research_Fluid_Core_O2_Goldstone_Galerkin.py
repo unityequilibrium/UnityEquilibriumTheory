@@ -9,10 +9,15 @@ from pathlib import Path
 import numpy as np
 
 ROOT=next(p for p in Path(__file__).resolve().parents if (p/"docs/core").is_dir())
-TOPIC=ROOT/"docs/topics/0.10_Fluid_Dynamics_Chaos"
+
+import sys as _sys
+if str(ROOT) not in _sys.path:
+    _sys.path.insert(0, str(ROOT))
+from core.core_paths import canonical_existing_path
+TOPIC=ROOT/"topics/0.10_Fluid_Dynamics_Chaos"
 CONTRACT=TOPIC/"Data/03_Research/fluid_core_o2_goldstone_galerkin_contract.json"
 OUTPUT=TOPIC/"Result/artifacts/fluid_core_o2_goldstone_galerkin_audit.json"
-REGISTRY=ROOT/"docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry_topic10_o2_goldstone_galerkin_addendum.json"
+REGISTRY=canonical_existing_path(ROOT/"docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry_topic10_o2_goldstone_galerkin_addendum.json")
 
 
 def load(path,name):
@@ -166,12 +171,12 @@ def audit(p,path):
       and rules["cutoff_factors"]==[20,30,40] and rules["feature_orders"]==[2,3,4,5] and
       rules["basis_response_refinement_relative_tolerance"]==.01 and rules["cutoff_refinement_relative_tolerance"]==.01)
     for name,value in p["admission"].items():flag("boundary/"+name,value is False)
-    base=load(ROOT/p["source_adapter"],"galerkin_base")
-    original=json.loads((ROOT/p["core_source_contract"]).read_text(encoding="utf-8"))
+    base=load(canonical_existing_path(ROOT/p["source_adapter"]),"galerkin_base")
+    original=json.loads((canonical_existing_path(ROOT/p["core_source_contract"])).read_text(encoding="utf-8"))
     ns,AST=base.source_functions(original)
-    old=json.loads((ROOT/p["collision_artifact"]).read_text(encoding="utf-8"))
+    old=json.loads((canonical_existing_path(ROOT/p["collision_artifact"])).read_text(encoding="utf-8"))
     flag("leading_channel_prior_passed",old["status"]=="PASS_LEADING_GOLDSTONE_CHANNEL_ONLY")
-    collision_contract=json.loads((ROOT/p["source_contract"]).read_text(encoding="utf-8"))
+    collision_contract=json.loads((canonical_existing_path(ROOT/p["source_contract"])).read_text(encoding="utf-8"))
     flag("same_fixed_Phi_configuration",original["configuration"]==collision_contract["configuration"])
     c=original["configuration"];m2=c["mass_squared"]/c["Z"];mu=p["mu"];lam=p["lambda_exploratory"]/c["Z"]**2
     cfg=base.configuration(original,128,70);a={"B":3*mu*mu-m2,"r":mu*mu-m2,"mu":mu}
@@ -233,9 +238,9 @@ def audit(p,path):
             close("whole_action_scaling/"+name,relative(np.asarray(scaled[name]),np.asarray(ref[name])*scale**exponent),tol)
         scale_record={"factor":scale,"state":scaled,"dimension_exponents":{"Gram":5,"Q":6,"R":4,"tau_basis":-1,"rate":1}}
     else:scale_record=None;flag("nonempty_current_response",False)
-    paths=[path,ROOT/p["card"],REGISTRY,Path(__file__).resolve(),ROOT/p["source_adapter"],
-      ROOT/p["core_source_contract"],ROOT/p["source_contract"],ROOT/p["collision_verifier"],ROOT/p["collision_artifact"]]+[
-      ROOT/f for f in original["core_sources"].values()]+[ROOT/f for f in p["reused_inputs"]]
+    paths=[path,canonical_existing_path(ROOT/p["card"]),REGISTRY,Path(__file__).resolve(),canonical_existing_path(ROOT/p["source_adapter"]),
+      canonical_existing_path(ROOT/p["core_source_contract"]),canonical_existing_path(ROOT/p["source_contract"]),canonical_existing_path(ROOT/p["collision_verifier"]),canonical_existing_path(ROOT/p["collision_artifact"])]+[
+      canonical_existing_path(ROOT/f) for f in original["core_sources"].values()]+[canonical_existing_path(ROOT/f) for f in p["reused_inputs"]]
     archive=TOPIC/"Result/previews/fluid_core_o2_goldstone_galerkin_first_execution.json"
     archive_source=TOPIC/"Result/previews/core_o2_goldstone_galerkin_first_execution_verifier.py.txt"
     paths.extend([archive,archive_source])

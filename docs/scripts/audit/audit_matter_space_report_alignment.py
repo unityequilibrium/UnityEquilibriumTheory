@@ -28,7 +28,7 @@ from docs.core.core_paths import canonical_existing_path
 
 OUTPUT_PATH = (
     REPO_ROOT
-    / "docs/core/07_artifacts/gates/matter_space_report_alignment_gate.json"
+    / "core/07_artifacts/gates/matter_space_report_alignment_gate.json"
 )
 BASE_REPORT_PATH = canonical_existing_path(
     REPO_ROOT / "docs/core/08_history/research_notes/MATTER_SPACE_RESEARCH_REPORT.md"
@@ -40,16 +40,16 @@ TOPIC_READINESS_PATH = REPO_ROOT / "docs/meta/topic_readiness.json"
 
 INPUT_PATHS = {
     "matter_space_program": REPO_ROOT
-    / "docs/core/07_artifacts/gates/matter_space_research_program_gate.json",
-    "gr_program": REPO_ROOT / "docs/core/07_artifacts/gates/uet_gr_research_program_gate.json",
+    / "core/07_artifacts/gates/matter_space_research_program_gate.json",
+    "gr_program": REPO_ROOT / "core/07_artifacts/gates/uet_gr_research_program_gate.json",
     "noether_dependency": REPO_ROOT
-    / "docs/core/07_artifacts/gates/noether_phase_field_dependency_gate.json",
+    / "core/07_artifacts/gates/noether_phase_field_dependency_gate.json",
     "topic_0_11_dependency": REPO_ROOT
-    / "docs/topics/0.11_Phase_Transitions/Result/artifacts/0_11_noether_phase_field_dependency_gate.json",
+    / "topics/0.11_Phase_Transitions/Result/artifacts/0_11_noether_phase_field_dependency_gate.json",
     "topic_0_19_dependency": REPO_ROOT
-    / "docs/topics/0.19_Gravity_GR/Result/artifacts/0_19_core_gr_program_dependency_gate.json",
+    / "topics/0.19_Gravity_GR/Result/artifacts/0_19_core_gr_program_dependency_gate.json",
     "topic_0_13_constraint": REPO_ROOT
-    / "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/0_13_core_thermodynamic_constraint_gate.json",
+    / "topics/0.13_Thermodynamic_Bridge/Result/artifacts/0_13_core_thermodynamic_constraint_gate.json",
 }
 
 BASE_MATTER_CONTROLLER = "core_prearrival_leakage"

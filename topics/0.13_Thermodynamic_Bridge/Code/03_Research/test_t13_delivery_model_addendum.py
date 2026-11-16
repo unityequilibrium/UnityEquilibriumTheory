@@ -6,8 +6,13 @@ from datetime import date
 from pathlib import Path
 
 
-ROOT = Path(__file__).resolve().parents[5]
-TOPIC = ROOT / "docs/topics/0.13_Thermodynamic_Bridge"
+ROOT = Path(__file__).resolve().parents[4]
+
+import sys as _sys
+if str(ROOT) not in _sys.path:
+    _sys.path.insert(0, str(ROOT))
+from core.core_paths import canonical_existing_path
+TOPIC = ROOT / "topics/0.13_Thermodynamic_Bridge"
 PLAN = json.loads(
     (TOPIC / "Data/03_Research/funding_portfolio_14d_plan.json").read_text(
         encoding="utf-8"
@@ -33,7 +38,7 @@ def test_plan_does_not_accept_pending_science_or_restart_sprint():
 def test_existing_scientific_baseline_is_hash_identified_not_promoted():
     field = ADDENDUM["scientific_baseline_evidence_field"]
     baseline = PLAN[field]
-    assert hashlib.sha256((ROOT / baseline["path"]).read_bytes()).hexdigest() == (
+    assert hashlib.sha256((canonical_existing_path(ROOT / baseline["path"])).read_bytes()).hexdigest() == (
         baseline["sha256"]
     )
     assert baseline["closure_level"] == "CLOSED_FOR_LANE"
@@ -123,7 +128,7 @@ def test_long_term_results_and_unknown_calls_are_not_replaced():
 
 
 def test_readable_plan_covers_model_results_and_unknown_funder():
-    content = (ROOT / ADDENDUM["document"]).read_text(encoding="utf-8")
+    content = (canonical_existing_path(ROOT / ADDENDUM["document"])).read_text(encoding="utf-8")
     for token in (
         "GPT-6 Astra / high", "GPT-6.1 Sol / high", "R1", "R2", "R3", "R4", "R5",
         "REVIEW_REQUIRED", "NOT_RUN", "11 ม.ค. 2027", "ยังไม่เลือกทุน",

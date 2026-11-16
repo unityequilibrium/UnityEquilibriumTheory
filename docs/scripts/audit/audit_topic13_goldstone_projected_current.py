@@ -19,6 +19,7 @@ from numpy.polynomial.legendre import leggauss
 ROOT = Path(__file__).resolve().parents[3]
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
+from core.core_paths import canonical_existing_path
 mu = math.sqrt(5.0)
 V = np.array([[[12, 0, -1], [0, 4, 0], [-1, 0, 0]], [[0, 4, 0], [4, 0, -1], [0, -1, 0]], [[-1, 0, 0], [0, -1, 0], [0, 0, 6]]], complex)
 V4 = np.array([np.diag([6, 2, 0]), np.diag([2, 6, 0]), np.diag([0, 0, 6])])
@@ -286,7 +287,7 @@ def build_report(*, quick=False):
         "state_variables": ["sigma", "pi", "deltaPhi"],
         "excluded_variables": ["R_gen", "R_obs"],
         "source_hashes": {
-            p: hashlib.sha256((ROOT/p).read_bytes()).hexdigest() for p in paths
+            p: hashlib.sha256((canonical_existing_path(ROOT/p)).read_bytes()).hexdigest() for p in paths
         },
         "evidence_artifacts": [{"path": paths[-1], "role": "standalone reproducer"}],
         "checks": checks,

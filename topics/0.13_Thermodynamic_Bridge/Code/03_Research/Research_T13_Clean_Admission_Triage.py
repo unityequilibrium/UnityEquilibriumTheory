@@ -9,9 +9,14 @@ import subprocess
 from pathlib import Path
 
 
-ROOT = Path(__file__).resolve().parents[5]
-RECOVERY = ROOT / "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/t13_funding_historical_snapshot_recovery.json"
-RECORD = ROOT / "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/t13_funding_clean_admission_triage.json"
+ROOT = Path(__file__).resolve().parents[4]
+
+import sys as _sys
+if str(ROOT) not in _sys.path:
+    _sys.path.insert(0, str(ROOT))
+from core.core_paths import canonical_existing_path
+RECOVERY = ROOT / "topics/0.13_Thermodynamic_Bridge/Result/artifacts/t13_funding_historical_snapshot_recovery.json"
+RECORD = ROOT / "topics/0.13_Thermodynamic_Bridge/Result/artifacts/t13_funding_clean_admission_triage.json"
 
 
 def sha256(path: Path) -> str:
@@ -74,7 +79,7 @@ def triage(source_root: Path) -> dict:
     for item in record["records"]:
         relative_path = item["path"]
         source = source_root / relative_path
-        clean = ROOT / relative_path
+        clean = canonical_existing_path(ROOT / relative_path)
         source_digest = sha256(source) if source.is_file() else None
         if source_digest != item["observed_sha256"]:
             raise ValueError(f"Historical source changed or disappeared: {relative_path}")
@@ -131,8 +136,8 @@ def verify_saved(record: dict, source_root: Path | None = None) -> dict[str, boo
             for row in rows if row["path"] in old_by_path
         ),
         "clean_hashes_current": all(
-            row["clean_sha256"] == (sha256(ROOT / row["path"])
-                                     if (ROOT / row["path"]).is_file() else None)
+            row["clean_sha256"] == (sha256(canonical_existing_path(ROOT / row["path"]))
+                                     if (canonical_existing_path(ROOT / row["path"])).is_file() else None)
             for row in rows
         ),
         "counts_match_rows": all(
@@ -167,7 +172,7 @@ def verify_saved(record: dict, source_root: Path | None = None) -> dict[str, boo
         )
         source_route = next(row for row in rows if row["path"].endswith("t13_csrc_source_route_priority_audit.json"))
         source_data = json.loads((source_root / source_route["path"]).read_text(encoding="utf-8"))["routes"][5]
-        clean_data = json.loads((ROOT / source_route["path"]).read_text(encoding="utf-8"))["routes"][5]
+        clean_data = json.loads((canonical_existing_path(ROOT / source_route["path"])).read_text(encoding="utf-8"))["routes"][5]
         delta = source_route["decision_delta"]
         checks["source_route_decision_delta_checked"] = (
             delta["source_route_class"] == source_data["route_class"]
@@ -179,7 +184,7 @@ def verify_saved(record: dict, source_root: Path | None = None) -> dict[str, boo
         )
         curved = next(row for row in rows if row["path"].endswith("core_curved_3p1_parent_gate.json"))
         source_gate = json.loads((source_root / curved["path"]).read_text(encoding="utf-8"))
-        clean_gate = json.loads((ROOT / curved["path"]).read_text(encoding="utf-8"))
+        clean_gate = json.loads((canonical_existing_path(ROOT / curved["path"])).read_text(encoding="utf-8"))
         delta = curved["decision_delta"]
         checks["curved_gate_decision_delta_checked"] = (
             delta["source_status"] == source_gate["status"]

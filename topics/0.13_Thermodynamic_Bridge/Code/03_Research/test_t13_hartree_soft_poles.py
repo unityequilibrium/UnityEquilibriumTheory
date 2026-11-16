@@ -1,4 +1,5 @@
 """Independent discontinuity, continuation, pole and non-promotion checks."""
+from core.core_paths import canonical_existing_path
 
 import ast
 import hashlib
@@ -195,7 +196,7 @@ def test_artifact_preserves_ontology_empirical_and_approximation_boundaries():
 def test_upstream_protected_hashes_and_tampered_lineage():
     record = artifact()
     for item in record["evidence_artifacts"]+record["protected_evidence_hashes"]:
-        assert hashlib.sha256((P["ROOT"]/item["path"]).read_bytes()).hexdigest() == item["sha256"]
+        assert hashlib.sha256((canonical_existing_path(P["ROOT"]/item["path"])).read_bytes()).hexdigest() == item["sha256"]
     predecessor = json.loads((P["ROOT"]/P["PREVIOUS_ARTIFACT"]).read_text(encoding="utf-8"))
     assert P["R"]["predecessor_hashes_match"](predecessor)
     predecessor["evidence_artifacts"][0]["sha256"] = "0"*64
@@ -207,5 +208,6 @@ def test_audit_reads_only_declared_derived_predecessor_not_numeric_holdout():
     tree = ast.parse(code)
     reads = [node for node in ast.walk(tree) if isinstance(node, ast.Call) and isinstance(node.func, ast.Attribute) and node.func.attr == "read_text"]
     assert len(reads) == 1
-    assert ast.unparse(reads[0].func.value) == "ROOT / PREVIOUS_ARTIFACT"
+    # Keep the read restricted to the declared predecessor through the path-only adapter.
+    assert ast.unparse(reads[0].func.value) == "canonical_existing_path(ROOT / PREVIOUS_ARTIFACT)"
     assert P["PREVIOUS_ARTIFACT"].endswith("/t13_hartree_soft_collective.json")

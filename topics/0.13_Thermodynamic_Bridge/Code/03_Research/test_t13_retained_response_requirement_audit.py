@@ -11,6 +11,7 @@ from unittest.mock import patch
 import sympy as s
 
 sys.path.insert(0,str(Path(__file__).resolve().parent))
+from core.core_paths import canonical_existing_path
 a=importlib.import_module("Research_T13_Retained_Response_Requirement_Audit")
 
 
@@ -31,7 +32,7 @@ class RetainedResponseTests(unittest.TestCase):
         self.assertTrue(a.equal(a.source_drift(),self.math['drift']))
 
     def test_wrong_source_port_detected(self):
-        text=(a.ROOT/a.CORE).read_text(encoding='utf-8')
+        text=(canonical_existing_path(a.ROOT/a.CORE)).read_text(encoding='utf-8')
         text=text.replace('dC = -config.mobility_matter * mu_matter + matter_drive',
                           'dC = -config.mobility_matter * mu_matter - matter_drive')
         self.assertFalse(a.equal(a.source_drift(text),self.math['drift']))
@@ -100,13 +101,13 @@ class RetainedResponseTests(unittest.TestCase):
         self.assertFalse(d['threshold_changes_update_inside_loop'])
 
     def test_new_resource_feedback_would_be_noticed(self):
-        text=(a.ROOT/a.RESOURCE).read_text(encoding='utf-8').replace(
+        text=(canonical_existing_path(a.ROOT/a.RESOURCE)).read_text(encoding='utf-8').replace(
             'config.selection_weight * interaction[i]',
             'config.initial_available_resource * config.selection_weight * interaction[i]')
         self.assertTrue(a.resource_source_audit(text)['resource_enters_probability_update'])
 
     def test_dynamic_dependency_requires_renewed_review(self):
-        text=(a.ROOT/a.RESOURCE).read_text(encoding='utf-8').replace(
+        text=(canonical_existing_path(a.ROOT/a.RESOURCE)).read_text(encoding='utf-8').replace(
             'resource = float(config.initial_available_resource)',
             'resource = getattr(config, "initial_available_resource")')
         with self.assertRaises(ValueError):a.resource_source_audit(text)

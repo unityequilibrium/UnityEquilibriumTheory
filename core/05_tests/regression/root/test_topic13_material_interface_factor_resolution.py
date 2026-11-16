@@ -114,11 +114,10 @@ def test_missing_uncertainty_factor_fails_closed():
 def test_generated_factor_artifact_is_scoped_and_hash_linked():
     root = repo_root()
     artifact_path = (
-        root / "docs/core/07_artifacts/topic13/t13_material_interface_factor_resolution_audit.json"
+        root / 'core/07_artifacts/topic13/t13_material_interface_factor_resolution_audit.json'
     )
     registry_path = root / (
-        "docs/core/07_artifacts/correspondence/"
-        "uet_equation_correspondence_registry_topic13_material_interface_factor_resolution_addendum.json"
+        'core/07_artifacts/correspondence/uet_equation_correspondence_registry_topic13_material_interface_factor_resolution_addendum.json'
     )
     artifact = json.loads(artifact_path.read_text(encoding="utf-8"))
     registry = json.loads(registry_path.read_text(encoding="utf-8"))

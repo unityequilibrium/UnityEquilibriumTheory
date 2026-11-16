@@ -4,7 +4,7 @@ UET Core Module
 Central module for UET theory, parameters, and equations.
 
 Usage:
-    from docs.core import get_params, UETParams, HBAR, C, G
+    from core import get_params, UETParams, HBAR, C, G
 
     # Get parameters for a scale
     params = get_params("electroweak")

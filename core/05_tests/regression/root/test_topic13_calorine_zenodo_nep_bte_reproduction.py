@@ -1,4 +1,5 @@
 from __future__ import annotations
+from core.core_paths import canonical_existing_path
 from docs.core.core_paths import repo_root
 
 import hashlib
@@ -13,11 +14,11 @@ REGISTER_REL = "docs/core/07_artifacts/gates/uet_major_result_closure_register.j
 
 
 def load(relative: str) -> dict:
-    return json.loads((ROOT / relative).read_text(encoding="utf-8-sig"))
+    return json.loads((canonical_existing_path(ROOT / relative)).read_text(encoding="utf-8-sig"))
 
 
 def sha256(relative: str) -> str:
-    return hashlib.sha256((ROOT / relative).read_bytes()).hexdigest()
+    return hashlib.sha256((canonical_existing_path(ROOT / relative)).read_bytes()).hexdigest()
 
 
 def test_candidate_reproduction_closes_only_the_numeric_lane() -> None:

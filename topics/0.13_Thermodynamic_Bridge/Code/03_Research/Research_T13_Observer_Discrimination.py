@@ -12,16 +12,21 @@ from pathlib import Path
 import shutil
 import sys
 
-ROOT = Path(__file__).resolve().parents[5]
+ROOT = Path(__file__).resolve().parents[4]
+
+import sys as _sys
+if str(ROOT) not in _sys.path:
+    _sys.path.insert(0, str(ROOT))
+from core.core_paths import canonical_existing_path
 sys.path.insert(0, str(ROOT))
 from docs.scripts.audit.audit_calculation_completeness import (  # noqa: E402
     artifact_metadata, identity_bytes, load_json,
 )
 
-CONTRACT = "docs/topics/0.13_Thermodynamic_Bridge/calculation_contracts/observer_discrimination.json"
-OUT = "docs/core/07_artifacts/topic13"
+CONTRACT = "topics/0.13_Thermodynamic_Bridge/calculation_contracts/observer_discrimination.json"
+OUT = "core/07_artifacts/topic13"
 OWNER = "0f17012ffd6ad456c150b10e048efd868ce95588"
-SOURCE = "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/graphite_nonlinear_response_source_fit.json"
+SOURCE = "topics/0.13_Thermodynamic_Bridge/Data/03_Research/graphite_nonlinear_response_source_fit.json"
 
 
 def pole(z, a0, residue, location):
@@ -181,7 +186,7 @@ def w3(contract):
 
 
 def records():
-    contract = load_json(ROOT / CONTRACT)
+    contract = load_json(canonical_existing_path(ROOT / CONTRACT))
     metadata = artifact_metadata(contract, ROOT)  # verifies pinned/local identities
     return {wave: {**payload, **metadata, "wave": wave,
                    "generator_path": Path(__file__).relative_to(ROOT).as_posix(),
@@ -199,7 +204,7 @@ def main():
         raise SystemExit("Insufficient free space for safe evidence writing")
     result = records()
     for wave, record in result.items():
-        target = ROOT / OUT / f"t13_observer_discrimination_{wave}.json"
+        target = canonical_existing_path(ROOT / OUT) / f"t13_observer_discrimination_{wave}.json"
         content = json.dumps(record, ensure_ascii=False, indent=2, allow_nan=False) + "\n"
         if args.emit:
             target.write_text(content, encoding="utf-8", newline="\n")

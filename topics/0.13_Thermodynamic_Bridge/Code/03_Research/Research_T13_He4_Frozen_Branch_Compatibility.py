@@ -13,7 +13,12 @@ from pathlib import Path
 import sys
 
 
-ROOT = Path(__file__).resolve().parents[5]
+ROOT = Path(__file__).resolve().parents[4]
+
+import sys as _sys
+if str(ROOT) not in _sys.path:
+    _sys.path.insert(0, str(ROOT))
+from core.core_paths import canonical_existing_path
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
@@ -43,15 +48,15 @@ NATURAL_BRIDGE = DOCS / "core/07_artifacts/topic13/t13_uet_o2_action_thermal_obs
 def _evidence(paths: tuple[Path, ...]) -> list[dict[str, str]]:
     return [
         {"path": path.relative_to(ROOT).as_posix(),
-         "sha256": hashlib.sha256(path.read_bytes()).hexdigest()}
+         "sha256": hashlib.sha256(canonical_existing_path(path).read_bytes()).hexdigest()}
         for path in paths
     ]
 
 
 def audit() -> dict:
-    composition = json.loads(COMPOSITION.read_text(encoding="utf-8"))
-    calibration = json.loads(CALIBRATION.read_text(encoding="utf-8"))
-    natural_bridge = json.loads(NATURAL_BRIDGE.read_text(encoding="utf-8"))
+    composition = json.loads(canonical_existing_path(COMPOSITION).read_text(encoding="utf-8"))
+    calibration = json.loads(canonical_existing_path(CALIBRATION).read_text(encoding="utf-8"))
+    natural_bridge = json.loads(canonical_existing_path(NATURAL_BRIDGE).read_text(encoding="utf-8"))
     frozen = composition["state_interface"]["natural_action_state"]
     physical = composition["state_interface"]["physical_he4_state"]
     t, mu, phi = (float(frozen[key]) for key in
@@ -101,7 +106,7 @@ def audit() -> dict:
     status = "PASS_SCOPED_FROZEN_STATE_BRANCH_MISMATCH" if all(checks.values()) else "REVIEW_REQUIRED"
     sources = (
         COMPOSITION, CALIBRATION, NATURAL_BRIDGE,
-        ROOT / calibration["source_identity"]["source_row_package"],
+        canonical_existing_path(ROOT / calibration["source_identity"]["source_row_package"]),
         DOCS / "core/02_equations/o2/uet_o2_action_thermal_stiffness_beta.py",
         DOCS / "core/02_equations/o2/uet_o2_finite_density_eos.py",
         DOCS / "core/02_equations/o2/uet_o2_finite_temperature_two_fluid_response.py",

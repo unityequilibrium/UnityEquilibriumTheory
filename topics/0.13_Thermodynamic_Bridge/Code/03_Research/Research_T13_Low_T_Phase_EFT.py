@@ -18,15 +18,20 @@ import numpy as np
 from scipy.integrate import quad
 from scipy.optimize import brentq
 
-ROOT = Path(__file__).resolve().parents[5]
+ROOT = Path(__file__).resolve().parents[4]
+
+import sys as _sys
+if str(ROOT) not in _sys.path:
+    _sys.path.insert(0, str(ROOT))
+from core.core_paths import canonical_existing_path
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
 from docs.core.uet_o2_action_thermal_observable_bridge import natural_bridge_config
 
-PREFIX = "docs/topics/0.13_Thermodynamic_Bridge/"
+PREFIX = "topics/0.13_Thermodynamic_Bridge/"
 PREDECESSOR = PREFIX+"Result/artifacts/t13_hartree_low_T_validity.json"
-OUTPUT = ROOT/(PREFIX+"Result/artifacts/t13_low_T_phase_eft.json")
+OUTPUT = canonical_existing_path(ROOT/(PREFIX+"Result/artifacts/t13_low_T_phase_eft.json"))
 BRANCH = "t13.candidate.tree_matched_classical_phi_low_T_phase_EFT_v1"
 MU_GRID = (1.05, 1.2)
 Q_GRID = (.008, .004, .002)
@@ -227,7 +232,7 @@ def rescale_Phi_coordinate(action, scale):
 
 def audit():
     action = controls()
-    previous = json.loads((ROOT/PREDECESSOR).read_text(encoding="utf-8"))
+    previous = json.loads((canonical_existing_path(ROOT/PREDECESSOR)).read_text(encoding="utf-8"))
     examples = []
     for mu in MU_GRID:
         state = tree_state(mu, action=action)
@@ -329,7 +334,7 @@ def audit():
         "tree_static_and_T4_inputs_do_not_identify_kinetic_dispersion": all(all(r[k] == e["kinetic_nonidentifiability_witnesses"][0][k] for r in e["kinetic_nonidentifiability_witnesses"] for k in ("pressure_tree", "c", "A4")) and e["eta_response_kinetic_slope"] > 0 and abs((e["kinetic_nonidentifiability_witnesses"][-1]["eta"]-e["kinetic_nonidentifiability_witnesses"][0]["eta"])/1.5/e["eta_response_kinetic_slope"]-1) < IDENTITY_TOLERANCE for e in examples),
         "independent_parent_energy_and_all_six_modes": all(all(r["first_order_frequency_relative_error"] < DERIVATIVE_TOLERANCE for r in e["parent_dispersion_checks"]) and all(c["energy_conservation_residual"] < IDENTITY_TOLERANCE and c["potential_min_eigenvalue"] > 0 and c["kinetic_min_eigenvalue"] > 0 and c["mode_real_growth_max"] < IDENTITY_TOLERANCE and len(c["positive_mode_frequencies"]) == 3 for r in e["kinetic_nonidentifiability_witnesses"] for c in r["parent_energy_checks"]) for e in examples),
         "physical_kinetic_ambiguity_not_Phi_coordinate_redundancy": all(all(r[k] < IDENTITY_TOLERANCE for r in e["Phi_coordinate_redundancy_controls"] for k in ("Phi_scaling_error", "pressure_relative_error", "eta_relative_error", "A4_relative_error")) for e in examples),
-        "protected_Core_and_old_failed_branches_unchanged": all(hashlib.sha256((ROOT/r["path"]).read_bytes()).hexdigest() == r["sha256"] for r in previous["protected_evidence_hashes"]),
+        "protected_Core_and_old_failed_branches_unchanged": all(hashlib.sha256((canonical_existing_path(ROOT/r["path"])).read_bytes()).hexdigest() == r["sha256"] for r in previous["protected_evidence_hashes"]),
     }
     passed = all(checks.values())
     paths = (*ACTION_PATHS, PREDECESSOR, Path(__file__).relative_to(ROOT).as_posix())
@@ -350,7 +355,7 @@ def audit():
               "loop_ordering": {"zero_T_coefficients": "TREE_MATCHED_WILSON_INPUTS_NOT_VACUUM_LOOP_MATCHED", "thermal_difference": "PHASE_ONE_LOOP_T4_AND_TREE_DISPERSION_T6", "classical_heavy_shift_changes_stationary_pressure": "Second loop order after consistent tree elimination; source derivatives include tree elimination chain", "full_one_loop_quantum_pressure_computed": False, "normal_component_finite_T_dynamic_response_computed": False},
               "config": {"mu_grid": MU_GRID, "q_grid": Q_GRID, "T_equals_c_dispersion_scale_divided_by": TEMPERATURE_DIVISORS, "finite_difference_steps": FD_STEPS, "flow_grid": FLOW_GRID, "quadrature_tolerances": QUADRATURE_TOLERANCES, "design_note": "Declared before first audit; trial inputs and gates are internal, not an external preregistration"},
               "thresholds": {"identity": IDENTITY_TOLERANCE, "derivative": DERIVATIVE_TOLERANCE, "finest_eta_expansion": DISPERSION_TOLERANCE, "finest_T6_pressure": THERMAL_T6_TOLERANCE, "original_causal_leakage": 1e-6},
-              "evidence_artifacts": [{"path": p, "sha256": hashlib.sha256((ROOT/p).read_bytes()).hexdigest()} for p in paths],
+              "evidence_artifacts": [{"path": p, "sha256": hashlib.sha256((canonical_existing_path(ROOT/p)).read_bytes()).hexdigest()} for p in paths],
               "protected_evidence_hashes": previous["protected_evidence_hashes"],
               "open_blockers": ["vacuum_Wilson_matching_and_phonon_interaction_remainder", "finite_T_normal_component_dynamic_and_heat_collision_Kubo_SK_KMS_entropy_transport", "independent_material_source_readout_and_temperature_scale", "full_original_causal_branch_and_Core_admission"],
               "controlling_blocker": "low_T_EFT_vacuum_Wilson_and_interaction_remainder_not_matched",

@@ -1,4 +1,5 @@
 """Independent dispersion, envelope, asymptotic and claim-boundary checks."""
+from core.core_paths import canonical_existing_path
 
 import ast
 import hashlib
@@ -151,7 +152,7 @@ def test_deep_low_T_entropy_has_positive_gap_asymptotic_not_T_cubed():
 def test_predecessor_and_source_hashes_are_current():
     r = artifact()
     for item in r["evidence_artifacts"]+r["protected_evidence_hashes"]:
-        assert hashlib.sha256((M["ROOT"]/item["path"]).read_bytes()).hexdigest() == item["sha256"]
+        assert hashlib.sha256((canonical_existing_path(M["ROOT"]/item["path"])).read_bytes()).hexdigest() == item["sha256"]
     previous = json.loads((M["ROOT"]/M["JOINT_ARTIFACT"]).read_text(encoding="utf-8"))
     assert previous["verification_status"] == "PASS_SCOPED_JOINT_PHI_RESPONSE"
     assert previous["joint_finite_q_complex_pole_computed"] is True

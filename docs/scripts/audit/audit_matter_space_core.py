@@ -34,7 +34,7 @@ from docs.core.uet_spatial import integral_1d, laplacian_1d  # noqa: E402
 from docs.core.uet_trace import TraceKernelConfig  # noqa: E402
 from docs.core.core_paths import canonical_artifact_path  # noqa: E402
 
-ARTIFACT_DIR = REPO_ROOT / "docs" / "core" / "07_artifacts"
+ARTIFACT_DIR = REPO_ROOT / "core" / "07_artifacts"
 VERIFICATION_PATH = canonical_artifact_path("matter_space_variational_verification.json", "verification")
 DEPENDENCY_PATH = canonical_artifact_path("matter_space_dependency_gate.json", "gates")
 ALIGNMENT_PATH = canonical_artifact_path("master_equation_alignment_gate_v2.json", "gates")

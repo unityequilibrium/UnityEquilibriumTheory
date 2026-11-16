@@ -4,10 +4,11 @@ from __future__ import annotations
 
 import json
 from pathlib import Path
+from docs.core.core_paths import canonical_existing_path
 
 
-ROOT = Path(__file__).resolve().parents[4]
-GOVERNANCE = ROOT / "docs" / "core" / "00_governance"
+ROOT = Path(__file__).resolve().parents[3]
+GOVERNANCE = ROOT / "core" / "00_governance"
 
 
 def load_json(path: Path) -> dict:
@@ -25,7 +26,7 @@ def test_bounded_artifact_move_has_one_canonical_copy_and_history() -> None:
     assert row["migration_state"] == "MIGRATED"
     assert history_row["migration_state"] == "MIGRATED"
     assert not (ROOT / row["legacy_path"]).exists()
-    target = ROOT / row["canonical_path"]
+    target = canonical_existing_path(ROOT / row["canonical_path"])
     assert target.exists()
     assert target.read_bytes()
     assert row["sha256_after"] == history_row["sha256_after"]
@@ -87,7 +88,7 @@ def test_dynamic_game_contract_move_has_exact_payload_and_no_legacy_copy() -> No
     assert row["migration_state"] == "MIGRATED"
     assert history_row["migration_state"] == "MIGRATED"
     assert not (ROOT / row["legacy_path"]).exists()
-    target = ROOT / row["canonical_path"]
+    target = canonical_existing_path(ROOT / row["canonical_path"])
     assert target.exists()
     assert target.read_bytes()
     assert row["sha256_before"] == row["sha256_after"]

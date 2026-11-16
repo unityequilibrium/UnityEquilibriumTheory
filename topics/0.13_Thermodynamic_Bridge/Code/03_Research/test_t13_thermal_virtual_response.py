@@ -9,7 +9,12 @@ import numpy as np
 import pytest
 
 LOCAL = Path(__file__).resolve().parent
-ROOT = LOCAL.parents[4]
+ROOT = LOCAL.parents[3]
+
+import sys as _sys
+if str(ROOT) not in _sys.path:
+    _sys.path.insert(0, str(ROOT))
+from core.core_paths import canonical_existing_path
 M = runpy.run_path(str(LOCAL/"Research_T13_Thermal_Virtual_Response.py"))
 EFT, CURV, PREFIX = M["EFT"], M["CURV"], M["PREFIX"]
 
@@ -136,7 +141,7 @@ def test_unadmitted_domain_rejected_not_repaired(example, case):
 
 
 def test_artifact_and_hashes_keep_full_physical_gates_closed():
-    record = json.loads((ROOT/(PREFIX+"Result/artifacts/t13_thermal_virtual_response.json")).read_text())
+    record = json.loads((canonical_existing_path(ROOT/(PREFIX+"Result/artifacts/t13_thermal_virtual_response.json"))).read_text())
     assert record["verification_status"] == "PASS_SCOPED_THERMAL_VIRTUAL_RESPONSE"
     assert all(record["checks"].values()) and len(record["report"]) == 11
     assert record["branch_id"] != record["parent_branch_id"]
@@ -150,7 +155,7 @@ def test_artifact_and_hashes_keep_full_physical_gates_closed():
     assert record["thresholds"]["original_causal_leakage"] == 1e-6
     assert record["prior_Xie_context_exposure_review"] == "REVIEW_REQUIRED"
     for item in record["evidence_artifacts"]+record["protected_evidence_hashes"]:
-        assert hashlib.sha256((ROOT/item["path"]).read_bytes()).hexdigest() == item["sha256"]
+        assert hashlib.sha256(M["TH"].canonical_existing_path(canonical_existing_path(ROOT/item["path"])).read_bytes()).hexdigest() == item["sha256"]
 
 
 def test_audit_runtime_path_allowlist_does_not_read_holdout(monkeypatch):
@@ -165,6 +170,6 @@ def test_audit_runtime_path_allowlist_does_not_read_holdout(monkeypatch):
     monkeypatch.setattr(Path, "read_bytes", tracked_bytes)
     monkeypatch.setattr(Path, "read_text", tracked_text)
     record = M["audit"]()
-    allowed = {(ROOT/x["path"]).resolve() for x in record["evidence_artifacts"]+record["protected_evidence_hashes"]}
+    allowed = {M["TH"].canonical_existing_path(canonical_existing_path(ROOT/x["path"])).resolve() for x in record["evidence_artifacts"]+record["protected_evidence_hashes"]}
     assert accessed and set(accessed) <= allowed and all(record["checks"].values())
     assert all("xie" not in x.name.lower() for x in accessed)

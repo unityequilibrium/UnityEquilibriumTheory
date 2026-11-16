@@ -12,7 +12,12 @@ import tempfile
 import unittest
 
 ROOT=next(p for p in Path(__file__).resolve().parents if (p/"docs/core").is_dir())
-TOPIC=ROOT/"docs/topics/0.10_Fluid_Dynamics_Chaos"
+
+import sys as _sys
+if str(ROOT) not in _sys.path:
+    _sys.path.insert(0, str(ROOT))
+from core.core_paths import canonical_existing_path
+TOPIC=ROOT/"topics/0.10_Fluid_Dynamics_Chaos"
 SCRIPT=TOPIC/"Code/03_Research/Research_Fluid_Core_O2_Interacting_Method.py"
 CONTRACT=TOPIC/"Data/03_Research/fluid_core_o2_interacting_method_contract.json"
 ARTIFACT=TOPIC/"Result/artifacts/fluid_core_o2_interacting_method_audit.json"
@@ -43,7 +48,7 @@ class InteractingMethodTests(unittest.TestCase):
             self.assertEqual(a[field],self.published[field])
         self.assertEqual(list(a["checks"]),list(self.published["checks"]))
         for path,h in a["input_hashes"].items():
-            self.assertEqual(hashlib.sha256((ROOT/path).read_bytes()).hexdigest(),h)
+            self.assertEqual(hashlib.sha256((canonical_existing_path(ROOT/path)).read_bytes()).hexdigest(),h)
         self.assertEqual(set(a["source_AST_definition_hashes"]),set(self.p["core_sources"]))
         self.assertTrue(a["normal_branch_and_conditional_algebra_supported"])
         self.assertEqual(set(a["method_gate"].values()),{"NOT_STARTED"})
@@ -116,7 +121,7 @@ class InteractingMethodTests(unittest.TestCase):
         p=copy.deepcopy(self.p);p["selected_states"][0]["mu"]=.3;mutations.append(p)
         p=copy.deepcopy(self.p);p["normal_control"]["T"]=.4;mutations.append(p)
         with tempfile.TemporaryDirectory(dir=ROOT,prefix=".interacting-test-") as folder:
-            old=json.loads((ROOT/self.p["prior_density_artifact"]).read_text(encoding="utf-8"))
+            old=json.loads((canonical_existing_path(ROOT/self.p["prior_density_artifact"])).read_text(encoding="utf-8"))
             old["input_hashes"][next(iter(old["input_hashes"]))]="0"*64
             path=Path(folder)/"stale.json";path.write_text(json.dumps(old),encoding="utf-8")
             p=copy.deepcopy(self.p);p["prior_density_artifact"]=path.relative_to(ROOT).as_posix();mutations.append(p)

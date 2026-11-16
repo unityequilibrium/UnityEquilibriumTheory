@@ -12,7 +12,12 @@ import sys
 
 import numpy as np
 
-ROOT = Path(__file__).resolve().parents[5]
+ROOT = Path(__file__).resolve().parents[4]
+
+import sys as _sys
+if str(ROOT) not in _sys.path:
+    _sys.path.insert(0, str(ROOT))
+from core.core_paths import canonical_existing_path
 LOCAL = Path(__file__).resolve().parent
 if str(LOCAL) not in sys.path:
     sys.path.insert(0, str(LOCAL))
@@ -21,7 +26,7 @@ import Research_T13_Thermal_Mode_Quadrature as QUAD
 
 EFT, TH, INT, MOD, CURV, PREFIX = VIRT.EFT, VIRT.TH, VIRT.INT, VIRT.MOD, VIRT.CURV, VIRT.PREFIX
 REGISTRY = PREFIX+"Data/03_Research/t13_finite_q_thermal_source_registry.json"
-OUTPUT = ROOT/(PREFIX+"Result/artifacts/t13_finite_q_thermal_source.json")
+OUTPUT = canonical_existing_path(ROOT/(PREFIX+"Result/artifacts/t13_finite_q_thermal_source.json"))
 MU_GRID, MOMENTUM_TRIPLES = (1.05, 1.2), ((.005, .011, .008), (.02, .031, .02), (.04, .037, .02))
 COVARIANCE_TEMPERATURE = .004
 TEMPERATURE_DIVISORS = (256, 512)
@@ -291,7 +296,7 @@ def audit():
         "excluded_variables": ["C", "UET_Pi", "R_gen", "R_obs"],
         "execution_note": "Initial scalar-only audit deliberately stopped before artifact after an independently verified batched-equivalence check; no failure/completion inferred from timeout. Same declared grids/gates retained.",
         "primary_references": ["https://arxiv.org/abs/cond-mat/0307246", "https://arxiv.org/abs/2310.01988"],
-        "equation_registry_ids": [r["id"] for r in json.loads((ROOT/REGISTRY).read_text())["entries"]],
+        "equation_registry_ids": [r["id"] for r in json.loads((canonical_existing_path(ROOT/REGISTRY)).read_text())["entries"]],
         "declared_grids": {"mu": MU_GRID, "momentum_triples": MOMENTUM_TRIPLES, "cross_covariance_T": COVARIANCE_TEMPERATURE, "T_divisors": TEMPERATURE_DIVISORS, "orders": ORDERS, "angular_orders": ANGULAR_ORDERS, "tails": TAILS, "static_q_ratios": STATIC_Q_RATIOS, "dynamic_q": DYNAMIC_Q_GRID, "frequencies": [VIRT.encode_complex(z) for z in FREQUENCIES], "locked_before_first_audit": True}, "thresholds": GATES,
         "evidence_artifacts": TH.identities(paths), "protected_evidence_hashes": TH.identities(protected),
         "controlling_blocker": "collisionless_soft_limit_full_interacting_matching_and_physical_transport_open",

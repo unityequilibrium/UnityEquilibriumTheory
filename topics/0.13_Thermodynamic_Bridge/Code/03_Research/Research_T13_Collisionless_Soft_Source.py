@@ -13,7 +13,12 @@ import sys
 import numpy as np
 import mpmath as mp
 
-ROOT = Path(__file__).resolve().parents[5]
+ROOT = Path(__file__).resolve().parents[4]
+
+import sys as _sys
+if str(ROOT) not in _sys.path:
+    _sys.path.insert(0, str(ROOT))
+from core.core_paths import canonical_existing_path
 LOCAL = Path(__file__).resolve().parent
 if str(LOCAL) not in sys.path:
     sys.path.insert(0, str(LOCAL))
@@ -21,7 +26,7 @@ import Research_T13_Thermal_Noether_Response as NOE
 
 FQ, VIRT, EFT, TH, INT, MOD, CURV, PREFIX = NOE.FQ, NOE.VIRT, NOE.EFT, NOE.TH, NOE.INT, NOE.MOD, NOE.CURV, NOE.PREFIX
 REGISTRY = PREFIX+"Data/03_Research/t13_collisionless_soft_source_registry.json"
-OUTPUT = ROOT/(PREFIX+"Result/artifacts/t13_collisionless_soft_source.json")
+OUTPUT = canonical_existing_path(ROOT/(PREFIX+"Result/artifacts/t13_collisionless_soft_source.json"))
 ROTATION = np.array([[0., -1., 0.], [1., 0., 0.], [0., 0., 0.]])
 MATTER_PROJECTOR = np.diag([1., 1., 0.])
 MU_GRID, MOMENTA, COSINES = (1.05, 1.2), (.005, .02, .04), (-.6, .3, .8)
@@ -652,7 +657,7 @@ def audit():
             "momentum_integral": "Full [0,infinity) Bose domain; 32/40 are numerical split positions with explicit rational-map tail complement, not causal cone padding",
             "precision_digits": 50, "precision_control_digits": 35, "precision_is_not_physical_input_accuracy": True},
         "angular_evaluation": "Logarithmic moments or convergent fixed 64-term series when abs(b/a)<1/4; static removable numerator resolved analytically, no filter",
-        "equation_registry_ids": [x["id"] for x in json.loads((ROOT/REGISTRY).read_text())["entries"]],
+        "equation_registry_ids": [x["id"] for x in json.loads((canonical_existing_path(ROOT/REGISTRY)).read_text())["entries"]],
         "evidence_artifacts": TH.identities(paths), "protected_evidence_hashes": TH.identities(protected),
         "controlling_blocker": "full_interacting_work_entropy_and_physical_heat_source_transport_open",
         "open_blockers": ["full_interacting_vacuum_thermal_matching_and_truncation_control", "second_order_source_work_entropy_and_dissipative_balance",

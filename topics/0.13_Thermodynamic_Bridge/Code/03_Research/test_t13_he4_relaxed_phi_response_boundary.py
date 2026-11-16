@@ -1,4 +1,5 @@
 """Tests for the conditional relaxed-Phi response boundary."""
+from core.core_paths import canonical_existing_path
 
 import importlib.util
 import json
@@ -15,7 +16,7 @@ SPEC.loader.exec_module(AUDIT)
 
 def test_saved_local_response_witness_is_non_promoting():
     result = AUDIT.audit()
-    assert json.loads(AUDIT.OUTPUT.read_text(encoding="utf-8")) == result
+    assert json.loads(canonical_existing_path(AUDIT.OUTPUT).read_text(encoding="utf-8")) == result
     assert result["verification_status"] == "PASS_SCOPED_RELAXED_RESPONSE_NONIDENTIFIABILITY"
     assert result["full_core_unlock"] is False
     assert result["dependency_unlocked"] == []

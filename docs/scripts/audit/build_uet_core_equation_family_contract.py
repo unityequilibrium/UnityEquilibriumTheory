@@ -12,23 +12,27 @@ from typing import Any
 
 
 ROOT = Path(__file__).resolve().parents[3]
-CODE_SURFACE_PATH = ROOT / "docs/core/07_artifacts/archive/uet_code_surface_inventory.json"
-COMPATIBILITY_PATH = ROOT / "docs/core/07_artifacts/gates/uet_foundation_compatibility_gate.json"
-MATTER_VERIFY_PATH = ROOT / "docs/core/07_artifacts/verification/matter_space_variational_verification.json"
-GR_VERIFY_PATH = ROOT / "docs/core/07_artifacts/verification/gr_closed_limit_verification.json"
-O2_VERIFY_PATH = ROOT / "docs/core/07_artifacts/verification/o2_finite_density_eos_verification.json"
-O2_FORMULA_PATH = ROOT / "docs/core/07_artifacts/correspondence/o2_eos_formula_audit.json"
-TRACE_VERIFY_PATH = ROOT / "docs/core/07_artifacts/verification/spacetime_trace_verification.json"
-OUTPUT = ROOT / "docs/core/07_artifacts/archive/uet_core_equation_family_contract.json"
+CORE_ROOT = ROOT / "core"
+CODE_SURFACE_PATH = CORE_ROOT / "07_artifacts/archive/uet_code_surface_inventory.json"
+COMPATIBILITY_PATH = CORE_ROOT / "07_artifacts/gates/uet_foundation_compatibility_gate.json"
+MATTER_VERIFY_PATH = CORE_ROOT / "07_artifacts/verification/matter_space_variational_verification.json"
+GR_VERIFY_PATH = CORE_ROOT / "07_artifacts/verification/gr_closed_limit_verification.json"
+O2_VERIFY_PATH = CORE_ROOT / "07_artifacts/verification/o2_finite_density_eos_verification.json"
+O2_FORMULA_PATH = CORE_ROOT / "07_artifacts/correspondence/o2_eos_formula_audit.json"
+TRACE_VERIFY_PATH = CORE_ROOT / "07_artifacts/verification/spacetime_trace_verification.json"
+OUTPUT = CORE_ROOT / "07_artifacts/archive/uet_core_equation_family_contract.json"
 
 
 def p(relative: str) -> Path:
-    return ROOT / relative
+    normalized = str(relative).replace("\\", "/")
+    if normalized.startswith(("docs/core/", "docs/topics/")):
+        normalized = _CORE_PATHS.canonical_path_for(normalized)
+    return ROOT / normalized
 
 
-_CORE_PATHS_SPEC = importlib.util.spec_from_file_location("uet_core_paths_family_contract", ROOT / "docs" / "core" / "core_paths.py")
+_CORE_PATHS_SPEC = importlib.util.spec_from_file_location("uet_core_paths_family_contract", CORE_ROOT / "core_paths.py")
 if _CORE_PATHS_SPEC is None or _CORE_PATHS_SPEC.loader is None:
-    raise RuntimeError("cannot load docs/core/core_paths.py")
+    raise RuntimeError("cannot load core/core_paths.py")
 _CORE_PATHS = importlib.util.module_from_spec(_CORE_PATHS_SPEC)
 _CORE_PATHS_SPEC.loader.exec_module(_CORE_PATHS)
 

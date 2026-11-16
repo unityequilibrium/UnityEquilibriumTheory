@@ -14,7 +14,12 @@ import sys
 
 import numpy as np
 
-ROOT = Path(__file__).resolve().parents[5]
+ROOT = Path(__file__).resolve().parents[4]
+
+import sys as _sys
+if str(ROOT) not in _sys.path:
+    _sys.path.insert(0, str(ROOT))
+from core.core_paths import canonical_existing_path
 LOCAL = Path(__file__).resolve().parent
 if str(LOCAL) not in sys.path:
     sys.path.insert(0, str(LOCAL))
@@ -23,7 +28,7 @@ import Research_T13_Thermal_Source_Curvature as CURV
 EFT, TH, INT, MOD, LAND, PREFIX = CURV.EFT, CURV.TH, CURV.INT, CURV.MOD, CURV.LAND, CURV.PREFIX
 BRANCH = "t13.candidate.acoustic_thermal_insertion_tree_virtual_response_v1"
 REGISTRY = PREFIX+"Data/03_Research/t13_thermal_virtual_response_registry.json"
-OUTPUT = ROOT/(PREFIX+"Result/artifacts/t13_thermal_virtual_response.json")
+OUTPUT = canonical_existing_path(ROOT/(PREFIX+"Result/artifacts/t13_thermal_virtual_response.json"))
 MU_GRID, MOMENTA = (1.05, 1.2), (.005, .02, .04)
 TEMPERATURE_DIVISORS, ORDERS, TAILS = (256, 512), (24, 48, 96), (32., 40.)
 FREQUENCIES = (.02j, .05j, .1j, .03+.02j)
@@ -326,7 +331,7 @@ def audit():
         "action_controls": action, "checks": checks, "examples": examples,
         "state_variables": ["radial_fluctuation", "phase_fluctuation", "Phi_fluctuation", "their_time_derivatives_for_covariance_only"],
         "excluded_variables": ["C", "UET_Pi", "R_gen", "R_obs"],
-        "equation_registry_ids": [r["id"] for r in json.loads((ROOT/REGISTRY).read_text())["entries"]],
+        "equation_registry_ids": [r["id"] for r in json.loads((canonical_existing_path(ROOT/REGISTRY)).read_text())["entries"]],
         "declared_grids": {"mu": MU_GRID, "momenta": MOMENTA, "T_divisors": TEMPERATURE_DIVISORS, "orders": ORDERS, "tails": TAILS, "frequencies": [encode_complex(z) for z in FREQUENCIES], "locked_before_first_audit": True}, "thresholds": GATES,
         "evidence_artifacts": TH.identities(paths), "protected_evidence_hashes": TH.identities(protected),
         "prescription": {"thermal_population": "acoustic only", "heavy_modes": "virtual classical tree propagation; zero assigned thermal occupations", "vacuum": "not included", "dynamic_population_relaxation": "not included", "static_population": "grand canonical equilibrium variance, not a q0 dynamical term", "new_named_extension": True},

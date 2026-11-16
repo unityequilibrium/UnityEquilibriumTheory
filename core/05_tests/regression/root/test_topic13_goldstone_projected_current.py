@@ -1,4 +1,5 @@
 """Independent checks for the projected-current research candidate."""
+from core.core_paths import canonical_existing_path
 import hashlib
 import json
 from pathlib import Path
@@ -81,4 +82,4 @@ def test_report_reads_only_declared_code_hashes_and_never_promotes(monkeypatch):
     for key in ('full_core_unlock', 'claim_promotion', 'holdout_access', 'parameter_fitting'):
         assert report[key] is False
     for path, digest in report['source_hashes'].items():
-        assert hashlib.sha256(original(audit.ROOT/path)).hexdigest() == digest
+        assert hashlib.sha256(original(canonical_existing_path(audit.ROOT/path))).hexdigest() == digest

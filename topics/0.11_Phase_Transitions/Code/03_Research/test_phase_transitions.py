@@ -11,9 +11,11 @@ import math
 current_path = Path(__file__).resolve()
 repo_root = current_path
 for _ in range(8):
-    if (repo_root / "docs").exists():
+    if (repo_root / "core").is_dir() and (repo_root / "topics").is_dir():
         break
     repo_root = repo_root.parent
+else:
+    raise RuntimeError(f"could not find repository root from {current_path}")
 
 if str(repo_root) not in sys.path:
     sys.path.insert(0, str(repo_root))
@@ -24,7 +26,6 @@ try:
 
     engine_file = (
         repo_root
-        / "docs"
         / "topics"
         / "0.11_Phase_Transitions"
         / "Code"
@@ -36,8 +37,7 @@ try:
     spec.loader.exec_module(mod)
     UETPhaseEngine = mod.UETPhaseEngine
 except Exception as e:
-    print(f"Error loading Engine: {e}")
-    sys.exit(1)
+    raise RuntimeError(f"Error loading Engine from the current Topic path: {e}") from e
 
 engine = UETPhaseEngine()
 

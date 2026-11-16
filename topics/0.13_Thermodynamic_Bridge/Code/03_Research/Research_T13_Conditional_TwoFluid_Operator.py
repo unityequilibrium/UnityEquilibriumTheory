@@ -16,7 +16,12 @@ import sys
 
 import numpy as np
 
-ROOT = Path(__file__).resolve().parents[5]
+ROOT = Path(__file__).resolve().parents[4]
+
+import sys as _sys
+if str(ROOT) not in _sys.path:
+    _sys.path.insert(0, str(ROOT))
+from core.core_paths import canonical_existing_path
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
@@ -24,7 +29,7 @@ from docs.core.uet_o2_action_thermal_observable_bridge import natural_bridge_con
 from docs.core.uet_o2_finite_density_eos import condensate_control
 from docs.core.uet_o2_finite_temperature_quasiparticle_eos import quasiparticle_pressure
 
-OUTPUT = ROOT / "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/t13_conditional_twofluid_operator.json"
+OUTPUT = ROOT / "topics/0.13_Thermodynamic_Bridge/Result/artifacts/t13_conditional_twofluid_operator.json"
 INPUT_PATHS = (
     "docs/core/02_equations/o2/uet_o2_finite_temperature_quasiparticle_eos.py",
     "docs/core/02_equations/o2/uet_o2_action_thermal_observable_bridge.py",
@@ -125,7 +130,7 @@ def causal_stiffness_interval(t: float, mu: float, jet: dict) -> dict:
 
 def audit() -> dict:
     config = natural_bridge_config()
-    source = json.loads((ROOT / INPUT_PATHS[-1]).read_text(encoding="utf-8"))
+    source = json.loads((canonical_existing_path(ROOT / INPUT_PATHS[-1])).read_text(encoding="utf-8"))
     examples = []
     for witness in source["witnesses"]:
         t, mu, phi = (float(witness[k]) for k in
@@ -179,7 +184,7 @@ def audit() -> dict:
         "independent_eigensolver": all(e["independent_eigensolver_agreement"] for e in examples),
         "analytic_causal_bounds_match_roots": all(e["causal_stiffness_interval"]["root_classification_agrees"] for e in examples),
     }
-    evidence = [{"path": p, "sha256": hashlib.sha256((ROOT / p).read_bytes()).hexdigest()}
+    evidence = [{"path": p, "sha256": hashlib.sha256((canonical_existing_path(ROOT / p)).read_bytes()).hexdigest()}
                 for p in (*INPUT_PATHS, Path(__file__).relative_to(ROOT).as_posix())]
     return {
         "major_result_id": "T13_CONDITIONAL_PRESSURE_HESSIAN_TWOFLUID_OPERATOR",

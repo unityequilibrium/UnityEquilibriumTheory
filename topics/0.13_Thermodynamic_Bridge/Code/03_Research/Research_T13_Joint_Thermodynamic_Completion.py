@@ -14,14 +14,19 @@ import sys
 
 import sympy as s
 
-ROOT = Path(__file__).resolve().parents[5]
+ROOT = Path(__file__).resolve().parents[4]
+
+import sys as _sys
+if str(ROOT) not in _sys.path:
+    _sys.path.insert(0, str(ROOT))
+from core.core_paths import canonical_existing_path
 sys.path.insert(0, str(ROOT))
 from docs.scripts.audit.audit_calculation_completeness import artifact_metadata, load_json
 
-TOPIC = "docs/topics/0.13_Thermodynamic_Bridge"
+TOPIC = "topics/0.13_Thermodynamic_Bridge"
 CONTRACT = f"{TOPIC}/calculation_contracts/joint_thermodynamic_completion.json"
 OUTPUT = f"{TOPIC}/Result/artifacts/t13_joint_thermodynamic_completion.json"
-CORE = "docs/core/02_equations/matter_space/uet_matter_space.py"
+CORE = "core/02_equations/matter_space/uet_matter_space.py"
 
 
 def reference():
@@ -65,7 +70,7 @@ def core_projection_residuals(source_text=None):
     Unsupported source changes fail closed instead of silently accepting a mirror.
     """
     r = reference()
-    source_text = source_text if source_text is not None else (ROOT/CORE).read_text(encoding="utf-8-sig")
+    source_text = source_text if source_text is not None else (canonical_existing_path(ROOT/CORE)).read_text(encoding="utf-8-sig")
     tree = ast.parse(source_text)
     functions = {n.name: n for n in tree.body if isinstance(n, ast.FunctionDef)}
     values = {
@@ -455,7 +460,7 @@ def calculate():
 
 
 def record():
-    return {**artifact_metadata(load_json(ROOT/CONTRACT), ROOT), **calculate()}
+    return {**artifact_metadata(load_json(canonical_existing_path(ROOT/CONTRACT)), ROOT), **calculate()}
 
 
 def main(argv=None):
@@ -467,8 +472,8 @@ def main(argv=None):
     result = record()
     serialized = json.dumps(result, ensure_ascii=False, sort_keys=True, indent=2)+"\n"
     if args.emit_report:
-        (ROOT/OUTPUT).write_text(serialized, encoding="utf-8", newline="\n")
-    elif not (ROOT/OUTPUT).is_file() or (ROOT/OUTPUT).read_bytes() != serialized.encode("utf-8"):
+        (canonical_existing_path(ROOT/OUTPUT)).write_text(serialized, encoding="utf-8", newline="\n")
+    elif not (canonical_existing_path(ROOT/OUTPUT)).is_file() or (canonical_existing_path(ROOT/OUTPUT)).read_bytes() != serialized.encode("utf-8"):
         raise ValueError("artifact absent/stale; review changed evidence before explicit --emit-report")
     print(json.dumps({"rounds": result["completed_rounds"], "exact_groups": len(result["checks"]),
                       "contract_review": result["contract_review_status"],

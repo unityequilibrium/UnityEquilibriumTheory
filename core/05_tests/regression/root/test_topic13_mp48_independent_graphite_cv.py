@@ -1,6 +1,7 @@
 """Regression checks for the independent Topic 13 mp-48 source lane."""
 
 from __future__ import annotations
+from core.core_paths import canonical_existing_path
 from docs.core.core_paths import repo_root
 
 import hashlib
@@ -17,11 +18,11 @@ DEPENDENCY_REL = "docs/core/07_artifacts/gates/uet_major_result_dependency_unloc
 
 
 def load(rel: str) -> dict:
-    return json.loads((ROOT / rel).read_text(encoding="utf-8-sig"))
+    return json.loads((canonical_existing_path(ROOT / rel)).read_text(encoding="utf-8-sig"))
 
 
 def sha256(rel: str) -> str:
-    return hashlib.sha256((ROOT / rel).read_bytes()).hexdigest()
+    return hashlib.sha256((canonical_existing_path(ROOT / rel)).read_bytes()).hexdigest()
 
 
 def test_mp48_audit_is_passing_and_holdout_is_locked() -> None:
@@ -43,13 +44,13 @@ def test_mp48_audit_is_passing_and_holdout_is_locked() -> None:
 def test_all_archived_members_match_package_hashes() -> None:
     package = load(PACKAGE_REL)
     raw_payload_available = all(
-        (ROOT / member["local_path"]).is_file()
+        (canonical_existing_path(ROOT / member["local_path"])).is_file()
         for member in package["archive_members"]
     )
     if raw_payload_available:
         for member in package["archive_members"]:
             path = member["local_path"]
-            assert (ROOT / path).stat().st_size == member["size_bytes"]
+            assert (canonical_existing_path(ROOT / path)).stat().st_size == member["size_bytes"]
             assert sha256(path) == member["sha256"]
     else:
         audit = load(AUDIT_REL)

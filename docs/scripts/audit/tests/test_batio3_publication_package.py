@@ -7,6 +7,8 @@ import io
 from pathlib import Path
 import unittest
 
+from core.core_paths import canonical_existing_path
+
 ROOT = Path(__file__).resolve().parents[4]
 P = ROOT / "docs/scripts/audit/prepare_batio3_publication.py"
 spec = importlib.util.spec_from_file_location("batio3_publication", P)
@@ -102,8 +104,8 @@ class PublicationTests(unittest.TestCase):
 
     def test_check_mode_is_read_only(self):
         data = m.load_json(ROOT / m.MANIFEST)
-        paths = [ROOT / r["path"] for r in data["files"]]
-        paths += [ROOT / m.MANIFEST, ROOT / m.SCRIPT, ROOT / m.TESTS]
+        paths = [canonical_existing_path(ROOT / r["path"]) for r in data["files"]]
+        paths += [canonical_existing_path(ROOT / value) for value in (m.MANIFEST, m.SCRIPT, m.TESTS)]
         before = {str(p): hashlib.sha256(p.read_bytes()).hexdigest() for p in paths}
         with contextlib.redirect_stdout(io.StringIO()):
             self.assertEqual(m.main(["--check"]), 0)

@@ -19,7 +19,7 @@ from pathlib import Path
 def _bootstrap():
     curr = Path(__file__).resolve()
     for parent in [curr] + list(curr.parents):
-        if (parent / "docs").exists() and (parent / "docs" / "core").exists():
+        if (parent / "core").is_dir() and (parent / "topics").is_dir():
             if str(parent) not in sys.path:
                 sys.path.insert(0, str(parent))
             return parent
@@ -56,7 +56,6 @@ except ImportError:
 # Import Data from local Data folder (path updated for 5x4 migration)
 data_dir = (
     root_path
-    / "docs"
     / "topics"
     / "0.11_Phase_Transitions"
     / "Data"

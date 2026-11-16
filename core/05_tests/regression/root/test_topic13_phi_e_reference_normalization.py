@@ -8,7 +8,7 @@ from pathlib import Path
 
 
 ROOT = repo_root()
-ARTIFACT = ROOT / "docs/core/07_artifacts/topic13/t13_phi_e_reference_normalization_audit.json"
+ARTIFACT = ROOT / 'core/07_artifacts/topic13/t13_phi_e_reference_normalization_audit.json'
 
 
 def test_phi_e_reference_normalization_stays_separate_from_base_phi() -> None:

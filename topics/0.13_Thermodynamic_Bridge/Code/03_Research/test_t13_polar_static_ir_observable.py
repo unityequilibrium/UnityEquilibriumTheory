@@ -1,4 +1,5 @@
 """Same-field source/current/measure identities and the static IR claim boundary."""
+from core.core_paths import canonical_existing_path
 
 import hashlib
 import json
@@ -149,7 +150,7 @@ def test_record_and_evidence_preserve_microscopic_and_physical_open_gates():
         "DEPENDENCY_UNLOCKED", "STATUS", "WHAT_CHANGED", "EQUATION_OR_MAPPING", "VERIFICATION",
         "CONTROLLING_BLOCKER", "NEXT_ACTION", "CLAIM_BOUNDARY"}
     for item in record["evidence_artifacts"]+record["protected_evidence_hashes"]:
-        assert hashlib.sha256((M["ROOT"]/item["path"]).read_bytes()).hexdigest() == item["sha256"]
+        assert hashlib.sha256((canonical_existing_path(M["ROOT"]/item["path"])).read_bytes()).hexdigest() == item["sha256"]
 
 
 def test_live_reconstruction_reproduces_record_without_reading_measured_rows():

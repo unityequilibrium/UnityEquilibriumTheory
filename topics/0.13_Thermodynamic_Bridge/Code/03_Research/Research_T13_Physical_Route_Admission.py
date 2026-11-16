@@ -12,13 +12,18 @@ import urllib.request
 import xml.etree.ElementTree as ET
 import zipfile
 
-ROOT=Path(__file__).resolve().parents[5]
+ROOT=Path(__file__).resolve().parents[4]
+
+import sys as _sys
+if str(ROOT) not in _sys.path:
+    _sys.path.insert(0, str(ROOT))
+from core.core_paths import canonical_existing_path
 sys.path.insert(0,str(ROOT))
 from docs.scripts.audit.audit_calculation_completeness import artifact_metadata,load_json
 
-SOURCE="docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/physical_route_admission_sources.json"
-CONTRACT="docs/topics/0.13_Thermodynamic_Bridge/calculation_contracts/physical_route_admission.json"
-OUTPUT="docs/core/07_artifacts/topic13/t13_physical_route_admission.json"
+SOURCE="topics/0.13_Thermodynamic_Bridge/Data/03_Research/physical_route_admission_sources.json"
+CONTRACT="topics/0.13_Thermodynamic_Bridge/calculation_contracts/physical_route_admission.json"
+OUTPUT="core/07_artifacts/topic13/t13_physical_route_admission.json"
 
 
 def voltage_harmonics(dc,ac):
@@ -130,8 +135,8 @@ def calculate(source):
 
 
 def record():
-    metadata=artifact_metadata(load_json(ROOT/CONTRACT),ROOT)
-    return {**calculate(load_json(ROOT/SOURCE)),**metadata,
+    metadata=artifact_metadata(load_json(canonical_existing_path(ROOT/CONTRACT)),ROOT)
+    return {**calculate(load_json(canonical_existing_path(ROOT/SOURCE))),**metadata,
             "generator_path":Path(__file__).relative_to(ROOT).as_posix(),
             "evidence_class":"SOURCE_MODEL_DIAGNOSTIC_AND_PHYSICAL_ROUTE_LIMITATION"}
 
@@ -144,10 +149,10 @@ def main():
     mode.add_argument("--verify-supplement",action="store_true")
     args=p.parse_args()
     if args.verify_supplement:
-        print(json.dumps(verify_supplement(load_json(ROOT/SOURCE))))
+        print(json.dumps(verify_supplement(load_json(canonical_existing_path(ROOT/SOURCE)))))
         return
     content=json.dumps(record(),ensure_ascii=False,indent=2,allow_nan=False)+"\n"
-    path=ROOT/OUTPUT
+    path=canonical_existing_path(ROOT/OUTPUT)
     if args.emit:
         if shutil.disk_usage(ROOT).free<100*1024*1024:
             raise SystemExit("Insufficient disk space")

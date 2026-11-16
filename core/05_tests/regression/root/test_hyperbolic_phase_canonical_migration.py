@@ -10,10 +10,10 @@ from docs.core import uet_hyperbolic_phase_field_bridge as legacy_bridge
 
 def test_hyperbolic_phase_root_modules_forward_to_canonical_implementations() -> None:
     canonical_phase_name = (
-        "docs.core.02_equations.matter_space.uet_hyperbolic_phase_field"
+        "core.02_equations.matter_space.uet_hyperbolic_phase_field"
     )
     canonical_bridge_name = (
-        "docs.core.02_equations.matter_space.uet_hyperbolic_phase_field_bridge"
+        "core.02_equations.matter_space.uet_hyperbolic_phase_field_bridge"
     )
     canonical_phase = importlib.import_module(canonical_phase_name)
     canonical_bridge = importlib.import_module(canonical_bridge_name)

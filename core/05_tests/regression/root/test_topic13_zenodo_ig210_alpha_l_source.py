@@ -5,10 +5,9 @@ from pathlib import Path
 
 
 ROOT = repo_root()
-ARTIFACT = ROOT / "docs/core/07_artifacts/topic13/t13_zenodo_ig210_alpha_l_source_audit.json"
+ARTIFACT = ROOT / 'core/07_artifacts/topic13/t13_zenodo_ig210_alpha_l_source_audit.json'
 PACKAGE = ROOT / (
-    "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/"
-    "zenodo_5799133_ig210_alpha_l_source_package.json"
+    'topics/0.13_Thermodynamic_Bridge/Data/03_Research/zenodo_5799133_ig210_alpha_l_source_package.json'
 )
 
 

@@ -11,10 +11,11 @@ import sys
 from scipy.optimize import brentq
 
 
-ROOT = Path(__file__).resolve().parents[5]
+ROOT = Path(__file__).resolve().parents[4]
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
+from core.core_paths import canonical_existing_path
 from docs.core.uet_o2_action_thermal_observable_bridge import natural_bridge_config  # noqa: E402
 from docs.core.uet_o2_finite_density_eos import condensate_control  # noqa: E402
 from docs.core.uet_o2_finite_temperature_quasiparticle_eos import (  # noqa: E402
@@ -41,7 +42,7 @@ MU_BRACKET = (1.85, 1.855)
 
 
 def _sha(path: Path) -> str:
-    return hashlib.sha256(path.read_bytes()).hexdigest()
+    return hashlib.sha256(canonical_existing_path(path).read_bytes()).hexdigest()
 
 
 def _pressure(t: float, mu: float, phi: float, config) -> float:
@@ -105,8 +106,8 @@ def _root(t: float, target_n: float, old_mu: float, h: float, config) -> dict:
 
 
 def audit() -> dict:
-    charge = json.loads(CHARGE_AUDIT.read_text(encoding="utf-8"))
-    response = json.loads(RESPONSE_AUDIT.read_text(encoding="utf-8"))
+    charge = json.loads(canonical_existing_path(CHARGE_AUDIT).read_text(encoding="utf-8"))
+    response = json.loads(canonical_existing_path(RESPONSE_AUDIT).read_text(encoding="utf-8"))
     t = float(charge["inputs"]["temperature_natural"])
     target_n = float(charge["inputs"]["derived_natural_charge_target"])
     old_mu = float(charge["conditional_internal_root"]["mu_natural"])
@@ -168,7 +169,7 @@ def audit() -> dict:
         "assumption_boundary": "Flat homogeneous partial action holds the tree-condensate quasiparticle background fixed while solving Phi; it does not solve finite-T amplitude stationarity or Ward identity. Curved terms, vacuum counterterms and microscopic completion are omitted; density target reuses the physical density used to define e0",
         "known_finite_temperature_boundaries": [
             {"path": path.relative_to(ROOT).as_posix(), "sha256": _sha(path),
-             "status": json.loads(path.read_text(encoding="utf-8"))["status"]}
+             "status": json.loads(canonical_existing_path(path).read_text(encoding="utf-8"))["status"]}
             for path in WARD_BOUNDARIES
         ],
         "prior_anchor": {"T_natural": t, "mu_natural": old_mu, "Phi_natural": old_phi, "target_natural_charge": target_n},

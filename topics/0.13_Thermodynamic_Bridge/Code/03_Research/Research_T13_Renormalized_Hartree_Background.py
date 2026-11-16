@@ -15,10 +15,15 @@ from pathlib import Path
 import numpy as np
 from scipy.optimize import root
 
-ROOT = Path(__file__).resolve().parents[5]
-PREFIX = "docs/topics/0.13_Thermodynamic_Bridge/"
+ROOT = Path(__file__).resolve().parents[4]
+
+import sys as _sys
+if str(ROOT) not in _sys.path:
+    _sys.path.insert(0, str(ROOT))
+from core.core_paths import canonical_existing_path
+PREFIX = "topics/0.13_Thermodynamic_Bridge/"
 PREVIOUS = PREFIX+"Result/artifacts/t13_polar_dynamic_composite.json"
-OUTPUT = ROOT/(PREFIX+"Result/artifacts/t13_renormalized_hartree_background.json")
+OUTPUT = canonical_existing_path(ROOT/(PREFIX+"Result/artifacts/t13_renormalized_hartree_background.json"))
 ORDERS = (128, 192, 256)
 VACUUM_SPLITS = (20., 40., 64.)
 MS_SCALE = 1.
@@ -271,7 +276,7 @@ def thermodynamic_envelope_check(background, t, mu, r, coupling, **kwargs):
 
 
 def audit():
-    previous = json.loads((ROOT/PREVIOUS).read_text(encoding="utf-8"))
+    previous = json.loads((canonical_existing_path(ROOT/PREVIOUS)).read_text(encoding="utf-8"))
     examples = []
     for anchor in previous["examples"]:
         t, mu, r, Z, lam = (anchor[k] for k in ("T", "mu", "r", "Z", "lambda"))
@@ -329,8 +334,8 @@ def audit():
         "method_references": [{"url": "https://arxiv.org/pdf/1410.1337", "locator": "II-IV, finite gap/field/potential and counterterm distinction", "role": "standard_Hartree_renormalization_context_no_material_data"}, {"url": "https://arxiv.org/abs/1509.07847", "locator": "abstract; external source and symmetry-preserving reorganizations", "role": "method_context_not_implementation_of_symmetry_improved_2PI"}],
         "checks": checks, "examples": examples, "symmetric_vacuum_reference": vacuum_reference,
         "thresholds": {"identity": IDENTITY_TOLERANCE, "refinement": REFINEMENT_TOLERANCE, "source_thermo_derivative": DERIVATIVE_TOLERANCE},
-        "evidence_artifacts": [{"path": p, "sha256": hashlib.sha256((ROOT/p).read_bytes()).hexdigest()} for p in paths],
-        "protected_evidence_hashes": [{"path": p, "sha256": hashlib.sha256((ROOT/p).read_bytes()).hexdigest()} for p in protected],
+        "evidence_artifacts": [{"path": p, "sha256": hashlib.sha256((canonical_existing_path(ROOT/p)).read_bytes()).hexdigest()} for p in paths],
+        "protected_evidence_hashes": [{"path": p, "sha256": hashlib.sha256((canonical_existing_path(ROOT/p)).read_bytes()).hexdigest()} for p in protected],
         "open_blockers": ["covariant_counterterm_tensor_and_RG_matching_to_original_action_inputs", "joint_Phi_stationarity_and_material_matching", "external_finite_q_frequency_vertex_equations_not_internal_propagator_substitution", "IR_dynamic_matching_remainder_normal_component_and_SK_KMS_transport"],
         "controlling_blocker": "finite_potential_candidate_counterterm_and_external_dynamic_matching_not_closed",
         "dependency_unlocked": ["fixed_Phi_Hartree_external_vertex_and_counterterm_matching_design_only"],

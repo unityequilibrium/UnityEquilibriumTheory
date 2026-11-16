@@ -21,7 +21,7 @@ from typing import Any
 
 
 ROOT = Path(__file__).resolve().parents[3]
-CORE = ROOT / "docs" / "core"
+CORE = ROOT / "core"
 GOVERNANCE = CORE / "00_governance"
 MANIFEST_PATH = GOVERNANCE / "uet_core_physical_migration_manifest.json"
 REPORT_PATH = GOVERNANCE / "UET_CORE_PHYSICAL_MIGRATION_REPORT.md"
@@ -131,7 +131,7 @@ def existing_metadata() -> dict[str, dict[str, Any]]:
 def _organization_defaults(relative: str) -> dict[str, Any]:
     """Provide a conservative owner for newly created canonical support files."""
 
-    tail = relative.removeprefix("docs/core/")
+    tail = relative.removeprefix("docs/core/").removeprefix("core/")
     parts = Path(tail).parts
     area = parts[0] if parts else "99_review"
     owner_by_area = {

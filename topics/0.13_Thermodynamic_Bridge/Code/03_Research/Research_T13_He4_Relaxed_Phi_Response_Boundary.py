@@ -8,10 +8,11 @@ from pathlib import Path
 import sys
 
 
-ROOT = Path(__file__).resolve().parents[5]
+ROOT = Path(__file__).resolve().parents[4]
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
+from core.core_paths import canonical_existing_path
 from docs.core.uet_o2_action_thermal_observable_bridge import natural_bridge_config  # noqa: E402
 from docs.core.uet_o2_finite_temperature_quasiparticle_eos import quasiparticle_pressure  # noqa: E402
 from docs.core.uet_covariant_response import (  # noqa: E402
@@ -27,7 +28,7 @@ OUTPUT = DOCS / "topics/0.13_Thermodynamic_Bridge/Result/artifacts/t13_he4_relax
 
 
 def _sha(path: Path) -> str:
-    return hashlib.sha256(path.read_bytes()).hexdigest()
+    return hashlib.sha256(canonical_existing_path(path).read_bytes()).hexdigest()
 
 
 def _derivatives(t: float, mu: float, phi: float, h: float, config) -> dict[str, float]:
@@ -69,8 +70,8 @@ def _completion(derivatives: dict[str, float], k: float, quartic: float) -> dict
 
 
 def audit() -> dict:
-    charge = json.loads(CHARGE_AUDIT.read_text(encoding="utf-8"))
-    clamped = json.loads(CLAMPED_AUDIT.read_text(encoding="utf-8"))
+    charge = json.loads(canonical_existing_path(CHARGE_AUDIT).read_text(encoding="utf-8"))
+    clamped = json.loads(canonical_existing_path(CLAMPED_AUDIT).read_text(encoding="utf-8"))
     inputs = charge["inputs"]
     root = charge["conditional_internal_root"]
     t = float(inputs["temperature_natural"])

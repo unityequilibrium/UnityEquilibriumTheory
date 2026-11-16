@@ -9,7 +9,12 @@ import unittest
 import numpy as np
 
 ROOT=next(p for p in Path(__file__).resolve().parents if (p/"docs/core").is_dir())
-TOPIC=ROOT/"docs/topics/0.10_Fluid_Dynamics_Chaos"
+
+import sys as _sys
+if str(ROOT) not in _sys.path:
+    _sys.path.insert(0, str(ROOT))
+from core.core_paths import canonical_existing_path
+TOPIC=ROOT/"topics/0.10_Fluid_Dynamics_Chaos"
 SCRIPT=TOPIC/"Code/03_Research/Research_Fluid_Core_O2_Ideal_Modes.py"
 CONTRACT=TOPIC/"Data/03_Research/fluid_core_o2_ideal_modes_contract.json"
 ARTIFACT=TOPIC/"Result/artifacts/fluid_core_o2_ideal_modes_audit.json"
@@ -29,7 +34,7 @@ class LocalIdealModesTests(unittest.TestCase):
     def test_source_fresh_local_reference_keeps_microphysics_and_material_admission_open(self):
         a=self.fresh
         for f,h in self.published["input_hashes"].items():
-            self.assertEqual(hashlib.sha256((ROOT/f).read_bytes()).hexdigest(),h,f)
+            self.assertEqual(hashlib.sha256((canonical_existing_path(ROOT/f)).read_bytes()).hexdigest(),h,f)
         self.assertEqual(a["input_hashes"],self.published["input_hashes"])
         self.assertEqual(a["source_AST_definition_hashes"],self.published["source_AST_definition_hashes"])
         self.assertEqual(a["locked_verification"],self.published["locked_verification"])

@@ -21,6 +21,7 @@ REPO_ROOT = Path(__file__).resolve().parents[3]
 if str(REPO_ROOT) not in sys.path:
     sys.path.insert(0, str(REPO_ROOT))
 
+from core.core_paths import canonical_existing_path
 from docs.core.core_paths import canonical_artifact_path  # noqa: E402
 
 OUTPUT_PATH = canonical_artifact_path("matter_space_research_program_gate.json", "gates")
@@ -43,12 +44,12 @@ INPUT_PATHS = {
 
 
 def _read_json(path: Path) -> dict[str, Any]:
-    return json.loads(path.read_text(encoding="utf-8"))
+    return json.loads(canonical_existing_path(path).read_text(encoding="utf-8"))
 
 
 def _sha256(path: Path) -> str:
     digest = hashlib.sha256()
-    with path.open("rb") as stream:
+    with canonical_existing_path(path).open("rb") as stream:
         for block in iter(lambda: stream.read(1024 * 1024), b""):
             digest.update(block)
     return digest.hexdigest()
@@ -104,7 +105,7 @@ def _artifact_integrity(
     checks: list[dict[str, Any]] = []
     for record in records:
         path = REPO_ROOT / record["path"]
-        exists = path.is_file()
+        exists = canonical_existing_path(path).is_file()
         actual = _sha256(path) if exists else None
         checks.append(
             {
@@ -134,7 +135,7 @@ def _artifact_integrity(
     ]
     for check in linked_checks:
         path = REPO_ROOT / check["path"]
-        exists = path.is_file()
+        exists = canonical_existing_path(path).is_file()
         actual = _sha256(path) if exists else None
         check.update(
             {

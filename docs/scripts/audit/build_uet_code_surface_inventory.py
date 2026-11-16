@@ -18,9 +18,10 @@ from typing import Any
 
 
 ROOT = Path(__file__).resolve().parents[3]
-INVENTORY_PATH = ROOT / "docs/core/07_artifacts/gates/uet_foundation_equation_inventory.json"
-REGISTRY_PATH = ROOT / "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry.json"
-OUTPUT = ROOT / "docs/core/07_artifacts/archive/uet_code_surface_inventory.json"
+CORE_ROOT = ROOT / "core"
+INVENTORY_PATH = CORE_ROOT / "07_artifacts/gates/uet_foundation_equation_inventory.json"
+REGISTRY_PATH = CORE_ROOT / "07_artifacts/correspondence/uet_equation_correspondence_registry.json"
+OUTPUT = CORE_ROOT / "07_artifacts/archive/uet_code_surface_inventory.json"
 
 
 MATH_TOKENS = (
@@ -54,6 +55,13 @@ def rel(path: Path) -> str:
     return str(path.relative_to(ROOT)).replace("\\", "/")
 
 
+def current_core_reference(value: object) -> str:
+    normalized = str(value).replace("\\", "/").lower()
+    if normalized.startswith("docs/core/"):
+        return "core/" + normalized[len("docs/core/") :]
+    return normalized
+
+
 def load(path: Path) -> dict[str, Any]:
     with path.open("r", encoding="utf-8-sig") as handle:
         value = json.load(handle)
@@ -84,17 +92,17 @@ def build_inventory() -> dict[str, Any]:
     registry = load(REGISTRY_PATH)
     formula_records = formula_inventory.get("records", [])
     referenced_surfaces = " ".join(
-        str(record.get("code_surface", "")) for record in formula_records
-    ).lower()
+        current_core_reference(record.get("code_surface", "")) for record in formula_records
+    )
     referenced_core_paths = " ".join(
-        str(path)
+        current_core_reference(path)
         for entry in registry.get("entries", [])
         for path in entry.get("implementation_paths", [])
-    ).lower()
+    )
 
     python_paths = sorted(
         path
-        for path in (ROOT / "docs/core").rglob("*.py")
+        for path in CORE_ROOT.rglob("*.py")
         if not (set(part.lower() for part in path.relative_to(ROOT).parts[:-1]) & {"data", "test", "scripts", "__pycache__"})
     )
     records: list[dict[str, Any]] = []
@@ -151,7 +159,7 @@ def build_inventory() -> dict[str, Any]:
             "core_python_file_count": len(python_paths),
             "candidate_surface_count": len(records),
             "unlinked_core_file_count": len(unlinked_files),
-            "scope": "docs/core Python implementation surfaces excluding tests",
+            "scope": "core Python implementation surfaces excluding tests",
             "limitation": "static candidate scan; not a parser or equation proof",
         },
         "summary": {

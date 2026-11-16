@@ -9,7 +9,12 @@ import tempfile
 import unittest
 
 ROOT=next(p for p in Path(__file__).resolve().parents if (p/"docs/core").is_dir())
-TOPIC=ROOT/"docs/topics/0.10_Fluid_Dynamics_Chaos"
+
+import sys as _sys
+if str(ROOT) not in _sys.path:
+    _sys.path.insert(0, str(ROOT))
+from core.core_paths import canonical_existing_path
+TOPIC=ROOT/"topics/0.10_Fluid_Dynamics_Chaos"
 SCRIPT=TOPIC/"Code/03_Research/Research_Fluid_Core_O2_Flow_Hessian.py"
 CONTRACT=TOPIC/"Data/03_Research/fluid_core_o2_flow_hessian_contract.json"
 ARTIFACT=TOPIC/"Result/artifacts/fluid_core_o2_flow_hessian_audit.json"
@@ -29,7 +34,7 @@ class FlowHessianTests(unittest.TestCase):
     def test_source_fresh_independent_curvature_pass_does_not_admit_material_operator(self):
         a=self.fresh
         for p,h in self.published["input_hashes"].items():
-            self.assertEqual(hashlib.sha256((ROOT/p).read_bytes()).hexdigest(),h,p)
+            self.assertEqual(hashlib.sha256((canonical_existing_path(ROOT/p)).read_bytes()).hexdigest(),h,p)
         self.assertEqual(a["input_hashes"],self.published["input_hashes"])
         self.assertEqual(a["source_AST_definition_hashes"],self.published["source_AST_definition_hashes"])
         self.assertEqual(a["locked_verification"],self.published["locked_verification"])
@@ -47,15 +52,15 @@ class FlowHessianTests(unittest.TestCase):
             self.assertIs(a[key],False,key)
         initial=a["initial_execution_record"]
         self.assertEqual(initial["check_count"],96)
-        self.assertEqual(hashlib.sha256((ROOT/initial["verifier_source_archive"]).read_bytes()).hexdigest(),
+        self.assertEqual(hashlib.sha256((canonical_existing_path(ROOT/initial["verifier_source_archive"])).read_bytes()).hexdigest(),
                          initial["original_verifier_sha256"])
 
     def test_phase_correction_has_no_enthalpy_or_static_proxy_dependency(self):
         spec=importlib.util.spec_from_file_location("flow_hessian_independence_probe",SCRIPT)
         module=importlib.util.module_from_spec(spec);spec.loader.exec_module(module)
         p=json.loads(CONTRACT.read_text(encoding="utf-8"))
-        base=module.load_adapter(ROOT/p["source_adapter"])
-        original=json.loads((ROOT/p["source_contract"]).read_text(encoding="utf-8"))
+        base=module.load_adapter(canonical_existing_path(ROOT/p["source_adapter"]))
+        original=json.loads((canonical_existing_path(ROOT/p["source_contract"])).read_text(encoding="utf-8"))
         ns,_=base.source_functions(original)
         args=(p,base,ns,.08,1.28,128,70)
         expected=module.implicit_phase(*args)

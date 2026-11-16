@@ -14,7 +14,12 @@ import sys
 import numpy as np
 from scipy.optimize import brentq
 
-ROOT = Path(__file__).resolve().parents[5]
+ROOT = Path(__file__).resolve().parents[4]
+
+import sys as _sys
+if str(ROOT) not in _sys.path:
+    _sys.path.insert(0, str(ROOT))
+from core.core_paths import canonical_existing_path
 LOCAL = Path(__file__).resolve().parent
 if str(LOCAL) not in sys.path:
     sys.path.insert(0, str(LOCAL))
@@ -22,7 +27,7 @@ import Research_T13_Acoustic_Source_Pair as PAIR
 
 MOD, TH, EFT, INT, PREFIX = PAIR.MOD, PAIR.TH, PAIR.EFT, PAIR.INT, PAIR.PREFIX
 REGISTRY = PREFIX+"Data/03_Research/t13_acoustic_source_Landau_registry.json"
-OUTPUT = ROOT/(PREFIX+"Result/artifacts/t13_acoustic_source_Landau.json")
+OUTPUT = canonical_existing_path(ROOT/(PREFIX+"Result/artifacts/t13_acoustic_source_Landau.json"))
 MU_GRID, Q_GRID, FREQUENCY_RATIOS = (1.05, 1.2), (.04, .02), (.5, .9, 1.001)
 TEMPERATURE_DIVISORS, ORDERS, TAILS = (256, 512), (24, 48, 96), (32., 40.)
 GATES = {"identity_relative": 1e-9, "velocity_FD_relative": 1e-6,
@@ -232,7 +237,7 @@ def audit():
               "units": {"q_omega_T_h": "E/E/E/E^3", "Phi": "E", "R_L": "E^2", "source_chi": "E^-2", "group_velocity_front_speed": "1"},
               "derivation_class": "TREE_ENERGY_FLUX_IDENTITY_AND_OFF_SHELL_ACOUSTIC_LANDAU_CUT",
               "observable": "Conditional source absorption, not physical heat/Kubo or Kelvin calibration", "data_role": "DERIVED_NOT_CALIBRATION",
-              "equation_registry_ids": [x["id"] for x in json.loads((ROOT/REGISTRY).read_text())["entries"]],
+              "equation_registry_ids": [x["id"] for x in json.loads((canonical_existing_path(ROOT/REGISTRY)).read_text())["entries"]],
               "action_controls": action, "checks": checks, "examples": examples, "thresholds": GATES,
               "declared_grids": {"mu": MU_GRID, "q": Q_GRID, "omega_over_Eq": FREQUENCY_RATIOS,
                                  "T_divisors": TEMPERATURE_DIVISORS, "orders": ORDERS, "thermal_tails": TAILS, "locked_before_first_audit": True},

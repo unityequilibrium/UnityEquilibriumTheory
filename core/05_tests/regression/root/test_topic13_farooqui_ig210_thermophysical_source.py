@@ -1,5 +1,5 @@
 from __future__ import annotations
-from docs.core.core_paths import repo_root
+from docs.core.core_paths import canonical_path_for, repo_root
 
 import hashlib
 import json
@@ -8,12 +8,10 @@ from pathlib import Path
 
 ROOT = repo_root()
 PACKAGE_PATH = ROOT / (
-    "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/"
-    "farooqui_2022_ig210_thermophysical_source_package.json"
+    'topics/0.13_Thermodynamic_Bridge/Data/03_Research/farooqui_2022_ig210_thermophysical_source_package.json'
 )
 RAW_PATH = ROOT / (
-    "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/"
-    "farooqui_2022_ig210_thermophysical_table.pdf"
+    'topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/farooqui_2022_ig210_thermophysical_table.pdf'
 )
 
 
@@ -31,7 +29,9 @@ def test_farooqui_raw_source_identity_is_locked() -> None:
     else:
         # The public checkout carries the source package, not the raw PDF.
         # Keep the expected identity visible without fabricating local bytes.
-        assert source["local_raw_path"] == RAW_PATH.relative_to(ROOT).as_posix()
+        # Compare the historical locator's current logical location without
+        # editing the package or asserting that absent PDF bytes were checked.
+        assert canonical_path_for(source["local_raw_path"]) == RAW_PATH.relative_to(ROOT).as_posix()
         assert len(source["local_raw_md5"]) == 32
         assert len(source["local_raw_sha256"]) == 64
         assert source["local_raw_size_bytes"] > 0

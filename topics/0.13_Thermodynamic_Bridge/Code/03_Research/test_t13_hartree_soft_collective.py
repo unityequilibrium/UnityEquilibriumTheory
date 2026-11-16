@@ -1,4 +1,5 @@
 """Independent soft moments, full-response convergence and closure boundaries."""
+from core.core_paths import canonical_existing_path
 
 import ast
 import hashlib
@@ -145,7 +146,7 @@ def test_artifact_preserves_physical_and_global_proof_boundaries_and_hashes():
     assert "R_gen" in record["excluded_variables"]
     assert record["prior_Xie_context_exposure_review"] == "REVIEW_REQUIRED"
     for item in record["evidence_artifacts"]+record["protected_evidence_hashes"]:
-        assert hashlib.sha256((M["ROOT"]/item["path"]).read_bytes()).hexdigest() == item["sha256"]
+        assert hashlib.sha256((canonical_existing_path(M["ROOT"]/item["path"])).read_bytes()).hexdigest() == item["sha256"]
 
 
 def test_changed_upstream_hash_stays_detectable():

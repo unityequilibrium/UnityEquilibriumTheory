@@ -18,6 +18,7 @@ ROOT = Path(__file__).resolve().parents[2]
 if str(ROOT.parent) not in sys.path:
     sys.path.insert(0, str(ROOT.parent))
 
+from core.core_paths import canonical_existing_path
 from docs.core.thermal_source_observable_map import (  # noqa: E402
     ThermalPhiCalibration,
     normalized_ttg_signal,
@@ -30,7 +31,7 @@ OUTPUT_PATH = ROOT / "core/artifacts/thermal_dimensional_calibration_contract.js
 
 
 def _sha256(path: Path) -> str:
-    return hashlib.sha256(path.read_bytes()).hexdigest()
+    return hashlib.sha256(canonical_existing_path(path).read_bytes()).hexdigest()
 
 
 def _relative(path: Path) -> str:
@@ -51,7 +52,7 @@ def _open_record() -> ThermalPhiCalibration:
 
 
 def build_artifact() -> dict[str, Any]:
-    source_review = json.loads(SOURCE_REVIEW_PATH.read_text(encoding="utf-8-sig"))
+    source_review = json.loads(canonical_existing_path(SOURCE_REVIEW_PATH).read_text(encoding="utf-8-sig"))
     open_record = _open_record()
     open_record.validate()
     open_mapping = quasi_temperature_difference_from_calibration(0.25, -0.25, open_record)

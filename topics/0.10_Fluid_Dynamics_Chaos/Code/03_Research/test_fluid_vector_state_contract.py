@@ -8,7 +8,12 @@ import tempfile
 import unittest
 
 ROOT = next(p for p in Path(__file__).resolve().parents if (p / "docs/core").is_dir())
-TOPIC = ROOT / "docs/topics/0.10_Fluid_Dynamics_Chaos"
+
+import sys as _sys
+if str(ROOT) not in _sys.path:
+    _sys.path.insert(0, str(ROOT))
+from core.core_paths import canonical_existing_path
+TOPIC = ROOT / "topics/0.10_Fluid_Dynamics_Chaos"
 SCRIPT = TOPIC / "Code/03_Research/Research_Fluid_Vector_State_Contract.py"
 RESULT = TOPIC / "Result/artifacts/fluid_vector_state_contract_audit.json"
 
@@ -21,7 +26,7 @@ class VectorReferenceEvidenceTests(unittest.TestCase):
         self.assertFalse(artifact["dependency_unlock"])
         self.assertFalse(artifact["physical_uet_operator_admitted"])
         for path, expected in artifact["input_hashes"].items():
-            self.assertEqual(hashlib.sha256((ROOT/path).read_bytes()).hexdigest(), expected, path)
+            self.assertEqual(hashlib.sha256((canonical_existing_path(ROOT/path)).read_bytes()).hexdigest(), expected, path)
         with tempfile.TemporaryDirectory() as scratch:
             output = Path(scratch)/"current.json"
             run = subprocess.run([sys.executable, str(SCRIPT), "--output", str(output)],

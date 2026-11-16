@@ -5,8 +5,13 @@ import json
 from pathlib import Path
 
 
-ROOT = Path(__file__).resolve().parents[5]
-AUDIT = json.loads((ROOT / "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/t13_he4_independent_measurement_route_screen.json").read_text(encoding="utf-8"))
+ROOT = Path(__file__).resolve().parents[4]
+
+import sys as _sys
+if str(ROOT) not in _sys.path:
+    _sys.path.insert(0, str(ROOT))
+from core.core_paths import canonical_existing_path
+AUDIT = json.loads((ROOT / "topics/0.13_Thermodynamic_Bridge/Result/artifacts/t13_he4_independent_measurement_route_screen.json").read_text(encoding="utf-8"))
 
 
 def test_route_roles_do_not_promote_response_data():
@@ -28,6 +33,6 @@ def test_route_roles_do_not_promote_response_data():
 
 def test_local_evidence_hashes_match():
     for item in AUDIT["evidence_artifacts"]:
-        path = ROOT / item["path"]
+        path = canonical_existing_path(ROOT / item["path"])
         assert path.is_file()
         assert hashlib.sha256(path.read_bytes()).hexdigest() == item["sha256"]

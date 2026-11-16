@@ -20,13 +20,9 @@ from types import ModuleType
 from typing import Any
 
 
-_REPO_ROOT = Path(__file__).resolve().parents[2]
+_REPO_ROOT = Path(__file__).resolve().parents[1]
 _ALIAS_REGISTRY = (
-    _REPO_ROOT
-    / "docs"
-    / "core"
-    / "00_governance"
-    / "uet_core_legacy_module_aliases.json"
+    _REPO_ROOT / "core" / "00_governance" / "uet_core_legacy_module_aliases.json"
 )
 
 
@@ -76,7 +72,18 @@ def _load_aliases() -> dict[str, str]:
         legacy = record.get("legacy_module")
         canonical = record.get("canonical_module")
         if isinstance(legacy, str) and isinstance(canonical, str):
+            # The registry preserves its historical module locators. Resolve
+            # that namespace to the same root-level package after the layout
+            # move, rather than loading a second copy of a Core module.
+            if canonical.startswith("docs.core."):
+                canonical = "core." + canonical[len("docs.core.") :]
             aliases[legacy] = canonical
+            if legacy.startswith("docs.core."):
+                aliases["core." + legacy[len("docs.core.") :]] = canonical
+    # The migration registry predates the small root-level path helpers.
+    # Keep their old import names on the same module objects as the new package.
+    for module in ("core_paths", "core_compat"):
+        aliases[f"docs.core.{module}"] = f"core.{module}"
     return aliases
 
 
@@ -112,13 +119,23 @@ class _LegacyAliasFinder(importlib.abc.MetaPathFinder):
         target: ModuleType | None = None,
     ) -> importlib.machinery.ModuleSpec | None:
         canonical = self.aliases.get(fullname)
+        if canonical is None and fullname.startswith("docs.core."):
+            # Numbered packages are historical locators too, not just the
+            # removed root facades in the registry. Never execute a source
+            # twice under the old and new namespaces.
+            candidate = "core." + fullname[len("docs.core."):]
+            candidate_spec = importlib.util.find_spec(candidate)
+            if candidate_spec is not None:
+                canonical = candidate
         if canonical is None or fullname in sys.modules:
             return None
         loader = _LegacyAliasLoader(canonical)
+        canonical_spec = importlib.util.find_spec(canonical)
         return importlib.util.spec_from_loader(
             fullname,
             loader,
             origin=str(_ALIAS_REGISTRY),
+            is_package=canonical_spec is not None and canonical_spec.submodule_search_locations is not None,
         )
 
 

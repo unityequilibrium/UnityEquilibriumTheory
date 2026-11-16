@@ -1,6 +1,7 @@
 """Regression checks for the bounded covariant-diffusion scientific-link package."""
 
 from __future__ import annotations
+from core.core_paths import canonical_existing_path
 from docs.core.core_paths import canonical_artifact_path, repo_root
 
 import json
@@ -33,8 +34,8 @@ def test_covariant_diffusion_family_has_explicit_scientific_chain() -> None:
     ]
     assert family["unit_lane"] == "natural_or_normalized_control"
     assert family["formula_ids"] == FORMULA_IDS
-    assert all((ROOT / path).exists() for path in family["verifier_paths"])
-    assert all((ROOT / path).exists() for path in family["evidence_paths"])
+    assert all((canonical_existing_path(ROOT / path)).exists() for path in family["verifier_paths"])
+    assert all((canonical_existing_path(ROOT / path)).exists() for path in family["evidence_paths"])
     assert family["organization_review_required"] is True
     assert "coefficient provenance" in family["claim_ceiling"]
 

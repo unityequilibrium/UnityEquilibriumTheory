@@ -18,7 +18,13 @@ from typing import Any
 
 
 ROOT = Path(__file__).resolve().parents[3]
-OUT = ROOT / "docs/core/07_artifacts/gates/uet_all_waves_closure.json"
+if str(ROOT) not in sys.path:
+    sys.path.insert(0, str(ROOT))
+
+from docs.core.core_paths import canonical_existing_path
+
+
+OUT = ROOT / "core/07_artifacts/gates/uet_all_waves_closure.json"
 
 
 def rel(path: Path) -> str:
@@ -26,6 +32,7 @@ def rel(path: Path) -> str:
 
 
 def load(path: Path) -> dict[str, Any]:
+    path = canonical_existing_path(path)
     with path.open("r", encoding="utf-8-sig") as handle:
         value = json.load(handle)
     if not isinstance(value, dict):
@@ -34,11 +41,11 @@ def load(path: Path) -> dict[str, Any]:
 
 
 def sha256(path: Path) -> str:
-    return hashlib.sha256(path.read_bytes()).hexdigest()
+    return hashlib.sha256(canonical_existing_path(path).read_bytes()).hexdigest()
 
 
 def evidence(path_text: str) -> dict[str, Any]:
-    path = ROOT / path_text
+    path = canonical_existing_path(ROOT / path_text)
     return {"path": path_text, "exists": path.exists(), "sha256": sha256(path) if path.exists() else None}
 
 

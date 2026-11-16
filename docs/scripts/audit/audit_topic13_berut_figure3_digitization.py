@@ -6,10 +6,16 @@ import hashlib
 import json
 from datetime import date
 from pathlib import Path
+import sys
 from typing import Any
 
 
 ROOT = Path(__file__).resolve().parents[3]
+if str(ROOT) not in sys.path:
+    sys.path.insert(0, str(ROOT))
+
+from core.core_paths import canonical_existing_path  # noqa: E402
+
 DATA_REL = "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/berut_2012_figure3_panel_c_digitized.json"
 BINARY_REL = "docs/core/07_artifacts/topic13/t13_berut_figure3_remote_binary_identity.json"
 OUT = ROOT / "docs/core/07_artifacts/topic13/t13_berut_figure3_digitization.json"
@@ -20,14 +26,14 @@ EXPECTED_SERIES = {"r_ge_0.90": "plus", "r_ge_0.85": "cross", "r_ge_0.75": "circ
 
 
 def load(relative: str) -> dict[str, Any]:
-    value = json.loads((ROOT / relative).read_text(encoding="utf-8-sig"))
+    value = json.loads((canonical_existing_path(ROOT / relative)).read_text(encoding="utf-8-sig"))
     if not isinstance(value, dict):
         raise ValueError(f"expected JSON object: {relative}")
     return value
 
 
 def sha256(relative: str) -> str:
-    return hashlib.sha256((ROOT / relative).read_bytes()).hexdigest()
+    return hashlib.sha256((canonical_existing_path(ROOT / relative)).read_bytes()).hexdigest()
 
 
 def canonical_payload(data: dict[str, Any]) -> str:

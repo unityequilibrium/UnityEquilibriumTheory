@@ -10,12 +10,12 @@ Indexed entries: 627. Counts describe records, not accomplishments.
 
 | Date | Record | Area | Notes |
 | --- | --- | --- | --- |
-| 2026-11-16 | [Topic screen for UET-distinct candidates](2026/2026-11-16.md#topic-screen-for-uet-distinct-candidates) (L53) | research-core | explicit_stream_and_area |
-| 2026-11-16 | [T014 run and L2 record](2026/2026-11-16.md#t014-run-and-l2-record) (L43) | research-standards | explicit_stream_and_area |
-| 2026-11-16 | [T002 stellar-model systematic and draft T014](2026/2026-11-16.md#t002-stellar-model-systematic-and-draft-t014) (L33) | research-core | explicit_stream_and_area |
-| 2026-11-16 | [B8: layers 2-3 for psi with matter as its bath](2026/2026-11-16.md#b8-layers-2-3-for-psi-with-matter-as-its-bath) (L23) | research-core | explicit_stream_and_area |
-| 2026-11-16 | [B7: layer-3 burn power from the closed system](2026/2026-11-16.md#b7-layer-3-burn-power-from-the-closed-system) (L13) | research-core | explicit_stream_and_area |
-| 2026-11-16 | [B6: psi friction derived from the parent action](2026/2026-11-16.md#b6-psi-friction-derived-from-the-parent-action) (L3) | research-core | explicit_stream_and_area |
+| 2026-11-16 | [Topic screen for UET-distinct candidates](2026/2026-11-16.md#topic-screen-for-uet-distinct-candidates) (L122) | research-core | explicit_stream_and_area |
+| 2026-11-16 | [T014 run and L2 record](2026/2026-11-16.md#t014-run-and-l2-record) (L112) | research-standards | explicit_stream_and_area |
+| 2026-11-16 | [T002 stellar-model systematic and draft T014](2026/2026-11-16.md#t002-stellar-model-systematic-and-draft-t014) (L102) | research-core | explicit_stream_and_area |
+| 2026-11-16 | [B8: layers 2-3 for psi with matter as its bath](2026/2026-11-16.md#b8-layers-2-3-for-psi-with-matter-as-its-bath) (L92) | research-core | explicit_stream_and_area |
+| 2026-11-16 | [B7: layer-3 burn power from the closed system](2026/2026-11-16.md#b7-layer-3-burn-power-from-the-closed-system) (L82) | research-core | explicit_stream_and_area |
+| 2026-11-16 | [B6: psi friction derived from the parent action](2026/2026-11-16.md#b6-psi-friction-derived-from-the-parent-action) (L72) | research-core | explicit_stream_and_area |
 | 2026-11-11 | [B5: search for a UET-distinct prediction and the bound on portal drag](2026/2026-11-11.md#b5-search-for-a-uet-distinct-prediction-and-the-bound-on-portal-drag) (L200) | research-core | explicit_stream_and_area |
 | 2026-11-11 | [T013 result at L2: P3 through the Ives-Stilwell observable](2026/2026-11-11.md#t013-result-at-l2-p3-through-the-ives-stilwell-observable) (L186) | research-standards | explicit_stream_and_area |
 | 2026-11-11 | [O7 model and T013 draft: P3 through the Ives-Stilwell observable](2026/2026-11-11.md#o7-model-and-t013-draft-p3-through-the-ives-stilwell-observable) (L171) | research-standards | explicit_stream_and_area |

@@ -8,10 +8,10 @@ from docs.core import standard_o2_finite_temperature_comparator as legacy_compar
 
 def test_o2_implementations_have_one_canonical_module() -> None:
     canonical_eos = importlib.import_module(
-        "docs.core.02_equations.o2.uet_o2_finite_density_eos"
+        "core.02_equations.o2.uet_o2_finite_density_eos"
     )
     canonical_comparator = importlib.import_module(
-        "docs.core.02_equations.o2.standard_o2_finite_temperature_comparator"
+        "core.02_equations.o2.standard_o2_finite_temperature_comparator"
     )
 
     assert legacy_eos.__canonical_module__ == canonical_eos.__name__
@@ -24,7 +24,7 @@ def test_o2_implementations_have_one_canonical_module() -> None:
 
 
 def test_o2_canonical_package_exports_both_declared_roles() -> None:
-    package = importlib.import_module("docs.core.02_equations.o2")
+    package = importlib.import_module("core.02_equations.o2")
 
     assert "O2FiniteDensityEOSConfig" in package.__all__
     assert "StandardO2ThermalNormalState" in package.__all__

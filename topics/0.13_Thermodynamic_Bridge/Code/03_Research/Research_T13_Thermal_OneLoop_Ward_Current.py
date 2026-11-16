@@ -17,7 +17,12 @@ import numpy as np
 from scipy.integrate import quad
 from scipy.special import zeta
 
-ROOT = Path(__file__).resolve().parents[5]
+ROOT = Path(__file__).resolve().parents[4]
+
+import sys as _sys
+if str(ROOT) not in _sys.path:
+    _sys.path.insert(0, str(ROOT))
+from core.core_paths import canonical_existing_path
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
@@ -25,10 +30,10 @@ from docs.core.uet_o2_action_thermal_observable_bridge import natural_bridge_con
 from docs.core.uet_o2_finite_density_eos import effective_mass_sq
 from docs.core.uet_o2_gaussian_offshell_background import off_shell_mode_omega_sq
 
-PREFIX = "docs/topics/0.13_Thermodynamic_Bridge/"
+PREFIX = "topics/0.13_Thermodynamic_Bridge/"
 CURVATURE_SCRIPT = PREFIX + "Code/03_Research/Research_T13_Moving_Background_Thermal_Stiffness.py"
 CURVATURE_ARTIFACT = PREFIX + "Result/artifacts/t13_moving_background_thermal_stiffness.json"
-OUTPUT = ROOT / (PREFIX + "Result/artifacts/t13_thermal_oneloop_ward_current.json")
+OUTPUT = canonical_existing_path(ROOT / (PREFIX + "Result/artifacts/t13_thermal_oneloop_ward_current.json"))
 RADIAL_ORDERS = (128, 192, 256)
 CUTOFF_FACTORS = (50., 70., 90.)
 MATSUBARA_TERMS = (128, 256, 512)
@@ -182,7 +187,7 @@ def amplitude_hessian_integrand(k: float, t: float, mu: float, r: float,
 
 
 def audit() -> dict:
-    old = json.loads((ROOT/CURVATURE_ARTIFACT).read_text(encoding="utf-8"))
+    old = json.loads((canonical_existing_path(ROOT/CURVATURE_ARTIFACT)).read_text(encoding="utf-8"))
     config = natural_bridge_config()
     z, lam = config.eos.matter.matter_kinetic, config.eos.matter.matter_quartic
     examples, direct_checks = [], []
@@ -251,8 +256,8 @@ def audit() -> dict:
         "primary_reference": {"url": "https://arxiv.org/abs/1212.0670", "scope": "method context and low_T_weak_coupling caveat; not material admission or an error bound"},
         "tolerances": {"algebra": ALGEBRA_TOLERANCE, "Matsubara_relative": MATSUBARA_TOLERANCE, "quadrature_relative": CONVERGENCE_TOLERANCE},
         "checks": checks, "examples": examples, "Matsubara_checks": direct_checks,
-        "evidence_artifacts": [{"path": p, "sha256": hashlib.sha256((ROOT/p).read_bytes()).hexdigest()} for p in paths],
-        "protected_evidence_hashes": [{"path": p, "sha256": hashlib.sha256((ROOT/p).read_bytes()).hexdigest()} for p in protected_paths],
+        "evidence_artifacts": [{"path": p, "sha256": hashlib.sha256((canonical_existing_path(ROOT/p)).read_bytes()).hexdigest()} for p in paths],
+        "protected_evidence_hashes": [{"path": p, "sha256": hashlib.sha256((canonical_existing_path(ROOT/p)).read_bytes()).hexdigest()} for p in protected_paths],
         "open_blockers": ["finite_frequency_and_momentum_retarded_Ward_response_and_IR_resummation",
                           "joint_Phi_and_amplitude_renormalized_finite_T_background",
                           "physical_material_normal_component_and_source_detector_matching",

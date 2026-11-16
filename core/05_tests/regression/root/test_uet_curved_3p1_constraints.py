@@ -1,7 +1,7 @@
 """Tests for the curved 3+1 ADM constraint-interface wave."""
 
 from __future__ import annotations
-from docs.core.core_paths import repo_root
+from docs.core.core_paths import canonical_existing_path, repo_root
 
 import hashlib
 import json
@@ -22,10 +22,10 @@ from docs.core.uet_curved_3p1_constraints import (
 
 
 ROOT = repo_root()
-ARTIFACT = ROOT / "docs/core/07_artifacts/verification/curved_3p1_adm_constraint_interface_audit.json"
-GATE = ROOT / "docs/core/07_artifacts/gates/core_curved_3p1_parent_gate.json"
-REGISTER = ROOT / "docs/core/07_artifacts/gates/uet_major_result_closure_register.json"
-DEPENDENCY = ROOT / "docs/core/07_artifacts/gates/uet_major_result_dependency_unlock_gate.json"
+ARTIFACT = ROOT / 'core/07_artifacts/verification/curved_3p1_adm_constraint_interface_audit.json'
+GATE = ROOT / 'core/07_artifacts/gates/core_curved_3p1_parent_gate.json'
+REGISTER = ROOT / 'core/07_artifacts/gates/uet_major_result_closure_register.json'
+DEPENDENCY = ROOT / 'core/07_artifacts/gates/uet_major_result_dependency_unlock_gate.json'
 
 
 def test_minkowski_vacuum_constraints_vanish() -> None:
@@ -89,7 +89,7 @@ def test_contract_preserves_ontology_and_blocks_solver_claim() -> None:
 def test_generated_artifacts_are_hash_linked_and_partial() -> None:
     audit = json.loads(ARTIFACT.read_text(encoding="utf-8"))
     gate = json.loads(GATE.read_text(encoding="utf-8"))
-    source = ROOT / audit["source"]["path"]
+    source = canonical_existing_path(ROOT / audit["source"]["path"])
     assert audit["status"] == "PASS_CURVED_3P1_ADM_CONSTRAINT_INTERFACE"
     assert audit["major_result"]["closure_level"] == "CLOSED_FOR_LANE"
     assert hashlib.sha256(source.read_bytes()).hexdigest() == audit["source"]["sha256"]

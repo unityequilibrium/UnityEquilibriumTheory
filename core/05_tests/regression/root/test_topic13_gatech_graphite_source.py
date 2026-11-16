@@ -6,13 +6,12 @@ from pathlib import Path
 
 
 ROOT = repo_root()
-AUDIT = ROOT / "docs/core/07_artifacts/topic13/t13_gatech_graphite_source_audit.json"
+AUDIT = ROOT / 'core/07_artifacts/topic13/t13_gatech_graphite_source_audit.json'
 PACKAGE = ROOT / (
-    "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/"
-    "gatech_gen3csp_graphite_source_package.json"
+    'topics/0.13_Thermodynamic_Bridge/Data/03_Research/gatech_gen3csp_graphite_source_package.json'
 )
-RAW = ROOT / "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/gen3csp_graphite.xlsx"
-GATE = ROOT / "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json"
+RAW = ROOT / 'topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/gen3csp_graphite.xlsx'
+GATE = ROOT / 'topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json'
 
 
 def load(path: Path) -> dict:

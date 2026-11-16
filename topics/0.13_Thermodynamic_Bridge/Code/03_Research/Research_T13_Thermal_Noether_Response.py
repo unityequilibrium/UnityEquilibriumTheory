@@ -13,7 +13,12 @@ import sys
 
 import numpy as np
 
-ROOT = Path(__file__).resolve().parents[5]
+ROOT = Path(__file__).resolve().parents[4]
+
+import sys as _sys
+if str(ROOT) not in _sys.path:
+    _sys.path.insert(0, str(ROOT))
+from core.core_paths import canonical_existing_path
 LOCAL = Path(__file__).resolve().parent
 if str(LOCAL) not in sys.path:
     sys.path.insert(0, str(LOCAL))
@@ -21,7 +26,7 @@ import Research_T13_Finite_Q_Thermal_Source as FQ
 
 VIRT, EFT, TH, INT, MOD, CURV, PREFIX = FQ.VIRT, FQ.EFT, FQ.TH, FQ.INT, FQ.MOD, FQ.CURV, FQ.PREFIX
 REGISTRY = PREFIX+"Data/03_Research/t13_thermal_noether_response_registry.json"
-OUTPUT = ROOT/(PREFIX+"Result/artifacts/t13_thermal_noether_response.json")
+OUTPUT = canonical_existing_path(ROOT/(PREFIX+"Result/artifacts/t13_thermal_noether_response.json"))
 MU_GRID = (1.05, 1.2)
 MOMENTUM_TRIPLES = ((.005, .011, .008), (.02, .031, .02), (.04, .037, .02), (.02, .02, 0.))
 TEMPERATURES = (.002, .004)
@@ -168,7 +173,7 @@ def audit():
         "derivation_class": "DERIVED_NOETHER_MOMENTS_OF_NAMED_ONE_THERMAL_INSERTION", "observable": "conditional natural-energy charge/energy source response, not calibrated heat flux", "data_role": "DERIVED_NOT_CALIBRATION",
         "action_controls": action, "checks": checks, "examples": rows,
         "declared_grids": {"mu": MU_GRID, "T": TEMPERATURES, "momentum_triples": MOMENTUM_TRIPLES, "frequencies": [VIRT.encode_complex(z) for z in FREQUENCIES], "locked_before_first_audit": True}, "thresholds": GATES,
-        "equation_registry_ids": [x["id"] for x in json.loads((ROOT/REGISTRY).read_text())["entries"]],
+        "equation_registry_ids": [x["id"] for x in json.loads((canonical_existing_path(ROOT/REGISTRY)).read_text())["entries"]],
         "evidence_artifacts": TH.identities(paths), "protected_evidence_hashes": TH.identities(protected),
         "controlling_blocker": "collisionless_soft_limit_full_interacting_energy_and_physical_transport_open",
         "open_blockers": ["collisionless_soft_frequency_and_collision_operator", "full_interacting_vacuum_thermal_matching_and_truncation_control", "second_order_source_work_entropy_and_dissipative_balance", "independent_material_source_readout_scale_and_uncertainty"],

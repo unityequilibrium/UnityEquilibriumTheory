@@ -9,7 +9,7 @@ from pathlib import Path
 def test_dimensional_bridge_legacy_and_canonical_exports_are_identical() -> None:
     legacy = import_module("docs.core.thermal_dimensional_bridge")
     canonical = import_module(
-        "docs.core.03_lanes.thermal.thermal_dimensional_bridge"
+        "core.03_lanes.thermal.thermal_dimensional_bridge"
     )
 
     assert legacy.ConditionalThermalInputs is canonical.ConditionalThermalInputs
@@ -23,7 +23,7 @@ def test_dimensional_bridge_legacy_and_canonical_exports_are_identical() -> None
 def test_energy_response_bridge_legacy_and_canonical_exports_are_identical() -> None:
     legacy = import_module("docs.core.thermal_energy_response_bridge")
     canonical = import_module(
-        "docs.core.03_lanes.thermal.thermal_energy_response_bridge"
+        "core.03_lanes.thermal.thermal_energy_response_bridge"
     )
 
     assert legacy.EnergyResponseInputs is canonical.EnergyResponseInputs
@@ -32,10 +32,9 @@ def test_energy_response_bridge_legacy_and_canonical_exports_are_identical() -> 
 
 
 def test_canonical_thermal_files_and_package_exports_exist() -> None:
-    root = Path(__file__).resolve().parents[5]
+    root = Path(__file__).resolve().parents[4]
     assert (
         root
-        / "docs"
         / "core"
         / "03_lanes"
         / "thermal"
@@ -43,14 +42,13 @@ def test_canonical_thermal_files_and_package_exports_exist() -> None:
     ).is_file()
     assert (
         root
-        / "docs"
         / "core"
         / "03_lanes"
         / "thermal"
         / "thermal_energy_response_bridge.py"
     ).is_file()
 
-    package = import_module("docs.core.03_lanes.thermal")
+    package = import_module("core.03_lanes.thermal")
     for name in (
         "ConditionalThermalInputs",
         "alpha_phi_k_from_local_equilibrium",

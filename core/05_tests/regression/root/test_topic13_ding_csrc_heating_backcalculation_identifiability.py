@@ -8,8 +8,8 @@ import pytest
 
 
 ROOT = repo_root()
-AUDIT = ROOT / "docs/core/07_artifacts/topic13/t13_ding_csrc_heating_backcalculation_identifiability_no_go.json"
-MATRIX = ROOT / "docs/core/07_artifacts/topic13/t13_topic13_closure_matrix.json"
+AUDIT = ROOT / 'core/07_artifacts/topic13/t13_ding_csrc_heating_backcalculation_identifiability_no_go.json'
+MATRIX = ROOT / 'core/07_artifacts/topic13/t13_topic13_closure_matrix.json'
 
 
 def load(path: Path) -> dict:

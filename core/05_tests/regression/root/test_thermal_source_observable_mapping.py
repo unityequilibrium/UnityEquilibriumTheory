@@ -1,5 +1,6 @@
 import json
 from pathlib import Path
+from core.core_paths import canonical_existing_path
 from docs.core.core_paths import repo_root
 
 import pytest
@@ -55,8 +56,8 @@ def test_source_readiness_artifact_exposes_blocked_lanes() -> None:
 
 
 def test_source_review_records_external_identity_and_local_gap() -> None:
-    path = repo_root() / "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/matter_space_thermal_source_review.json"
-    payload = json.loads(path.read_text(encoding="utf-8"))
+    path = repo_root() / 'topics/0.13_Thermodynamic_Bridge/Data/03_Research/matter_space_thermal_source_review.json'
+    payload = json.loads(canonical_existing_path(path).read_text(encoding="utf-8"))
     assert payload["numeric_fitting_allowed"] is False
     assert payload["holdout_consumed"] is False
     assert all(row["doi"] and row["url"] for row in payload["sources"])

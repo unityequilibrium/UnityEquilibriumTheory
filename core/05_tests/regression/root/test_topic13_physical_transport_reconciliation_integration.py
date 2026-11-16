@@ -6,7 +6,7 @@ from pathlib import Path
 
 
 ROOT = repo_root()
-INPUT_AUDIT = ROOT / "docs/core/07_artifacts/topic13/t13_closure_input_package_audit.json"
+INPUT_AUDIT = ROOT / 'core/07_artifacts/topic13/t13_closure_input_package_audit.json'
 RECONCILIATION = "docs/core/07_artifacts/topic13/t13_physical_transport_reconciliation_audit.json"
 
 

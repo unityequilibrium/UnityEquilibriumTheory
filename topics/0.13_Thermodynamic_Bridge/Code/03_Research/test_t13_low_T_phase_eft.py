@@ -10,9 +10,14 @@ import runpy
 import numpy as np
 import pytest
 
-ROOT = Path(__file__).resolve().parents[5]
-PREFIX = "docs/topics/0.13_Thermodynamic_Bridge/"
-M = runpy.run_path(str(ROOT/(PREFIX+"Code/03_Research/Research_T13_Low_T_Phase_EFT.py")))
+ROOT = Path(__file__).resolve().parents[4]
+
+import sys as _sys
+if str(ROOT) not in _sys.path:
+    _sys.path.insert(0, str(ROOT))
+from core.core_paths import canonical_existing_path
+PREFIX = "topics/0.13_Thermodynamic_Bridge/"
+M = runpy.run_path(str(canonical_existing_path(ROOT/(PREFIX+"Code/03_Research/Research_T13_Low_T_Phase_EFT.py"))))
 
 
 @pytest.fixture
@@ -153,7 +158,7 @@ def test_noncondensed_nontimelike_and_negative_energy_flow_rejected(example, arg
 
 
 def test_artifact_does_not_promote_physics_or_repair_old_branch():
-    record = json.loads((ROOT/(PREFIX+"Result/artifacts/t13_low_T_phase_eft.json")).read_text(encoding="utf-8"))
+    record = json.loads((canonical_existing_path(ROOT/(PREFIX+"Result/artifacts/t13_low_T_phase_eft.json"))).read_text(encoding="utf-8"))
     assert all(record["checks"].values())
     assert record["closure_level"] == "CLOSED_FOR_LANE"
     for key in ("old_Hartree_branch_repaired", "Hartree_internal_mass_reused",
@@ -167,16 +172,16 @@ def test_artifact_does_not_promote_physics_or_repair_old_branch():
     assert record["prior_Xie_context_exposure_review"] == "REVIEW_REQUIRED"
     assert record["thresholds"]["original_causal_leakage"] == 1e-6
     for item in record["evidence_artifacts"]+record["protected_evidence_hashes"]:
-        assert hashlib.sha256((ROOT/item["path"]).read_bytes()).hexdigest() == item["sha256"]
+        assert hashlib.sha256((canonical_existing_path(ROOT/item["path"])).read_bytes()).hexdigest() == item["sha256"]
     assert len(record["report"]) == 11
 
 
 @pytest.mark.parametrize("name", ["T13_LOW_T_PHASE_EFT_2026-10-02.md",
                                   "T13_LOW_T_PHASE_EFT_MEASUREMENT_CARD_2026-10-02.md"])
 def test_result_notes_match_artifact_and_reporting_contract(name):
-    path = ROOT/(PREFIX+"Result/artifacts/"+name)
+    path = canonical_existing_path(ROOT/(PREFIX+"Result/artifacts/"+name))
     content = path.read_text(encoding="utf-8")
-    artifact = ROOT/(PREFIX+"Result/artifacts/t13_low_T_phase_eft.json")
+    artifact = canonical_existing_path(ROOT/(PREFIX+"Result/artifacts/t13_low_T_phase_eft.json"))
     record = json.loads(artifact.read_text(encoding="utf-8"))
     assert hashlib.sha256(artifact.read_bytes()).hexdigest() in content
     for field in record["report"]:

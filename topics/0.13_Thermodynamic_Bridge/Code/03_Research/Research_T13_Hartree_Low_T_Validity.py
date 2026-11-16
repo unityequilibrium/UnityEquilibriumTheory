@@ -16,12 +16,17 @@ import runpy
 import numpy as np
 from scipy.integrate import quad
 
-ROOT = Path(__file__).resolve().parents[5]
-PREFIX = "docs/topics/0.13_Thermodynamic_Bridge/"
+ROOT = Path(__file__).resolve().parents[4]
+
+import sys as _sys
+if str(ROOT) not in _sys.path:
+    _sys.path.insert(0, str(ROOT))
+from core.core_paths import canonical_existing_path
+PREFIX = "topics/0.13_Thermodynamic_Bridge/"
 JOINT_CODE = PREFIX+"Code/03_Research/Research_T13_Hartree_Joint_Phi_Response.py"
 JOINT_ARTIFACT = PREFIX+"Result/artifacts/t13_hartree_joint_phi_response.json"
-OUTPUT = ROOT/(PREFIX+"Result/artifacts/t13_hartree_low_T_validity.json")
-M = runpy.run_path(str(ROOT/JOINT_CODE))
+OUTPUT = canonical_existing_path(ROOT/(PREFIX+"Result/artifacts/t13_hartree_low_T_validity.json"))
+M = runpy.run_path(str(canonical_existing_path(ROOT/JOINT_CODE)))
 S, H, F, G = M["S"], M["S"]["H"], M["F"], M["G"]
 STATE_ORDERS = ((128, 20.), (192, 40.), (256, 64.))
 SOURCE_ORDERS = (96, 144, 192)
@@ -156,7 +161,7 @@ def entropy_envelope(state, t, mu, action):
 
 
 def audit(progress=None):
-    previous = json.loads((ROOT/JOINT_ARTIFACT).read_text(encoding="utf-8"))
+    previous = json.loads((canonical_existing_path(ROOT/JOINT_ARTIFACT)).read_text(encoding="utf-8"))
     action = M["controls"]()
     examples = []
     for row in previous["examples"]:
@@ -210,7 +215,7 @@ def audit(progress=None):
         "joint_and_frozen_entropy_envelope": all(r["runs"][-1]["joint_relative_disagreement"] < ENVELOPE_TOLERANCE and r["runs"][-1]["fixed_relative_disagreement"] < ENVELOPE_TOLERANCE for e in examples for r in e["entropy_envelope_checks"]),
         "Boltzmann_asymptotic_approach": all(e["low_T_runs"][-1]["Boltzmann_asymptotic_relative_difference"] < ASYMPTOTIC_DIAGNOSTIC_TOLERANCE and e["low_T_runs"][-1]["Boltzmann_asymptotic_relative_difference"] < e["low_T_runs"][-2]["Boltzmann_asymptotic_relative_difference"] for e in examples),
         "entropy_over_T_cubed_decreases_in_deep_gapped_window": all(e["low_T_runs"][-1]["entropy_over_T_cubed"] < e["low_T_runs"][-2]["entropy_over_T_cubed"] < e["low_T_runs"][-3]["entropy_over_T_cubed"] for e in examples),
-        "protected_Core_and_baseline_hashes_unchanged": all(hashlib.sha256((ROOT/item["path"]).read_bytes()).hexdigest() == item["sha256"] for item in previous["protected_evidence_hashes"]),
+        "protected_Core_and_baseline_hashes_unchanged": all(hashlib.sha256((canonical_existing_path(ROOT/item["path"])).read_bytes()).hexdigest() == item["sha256"] for item in previous["protected_evidence_hashes"]),
     }
     passed = all(checks.values())
     paths = (JOINT_ARTIFACT, JOINT_CODE, M["STATIC_CODE"], F["BACKGROUND_CODE"], G["FIELD_CODE"], PREFIX+"Code/03_Research/Research_T13_Hartree_Gauge_Current.py", *S["ACTION_PATHS"], Path(__file__).relative_to(ROOT).as_posix())
@@ -226,7 +231,7 @@ def audit(progress=None):
               "action_controls": action, "examples": examples, "checks": checks,
               "config": {"zero_T_state_orders": STATE_ORDERS, "source_orders": SOURCE_ORDERS, "T_equals_zero_T_gap_divided_by": TEMPERATURE_DIVISORS, "envelope_T": ENVELOPE_T, "envelope_steps": ENVELOPE_STEPS, "upper_q_grid": Q_GRID, "upper_imaginary_velocities": IMAGINARY_VELOCITIES, "design_note": "Grid and gates locked in verifier after exploratory zero-T/entropy trend; not preregistered against external data"},
               "thresholds": {"scaled_root": ROOT_TOLERANCE, "state_refinement_and_resolved_entropy": REFINEMENT_TOLERANCE, "entropy_envelope": ENVELOPE_TOLERANCE, "phase_Ward": WARD_TOLERANCE, "upper_quadratic_expansion": EXPANSION_TOLERANCE, "Boltzmann_finite_T_diagnostic": ASYMPTOTIC_DIAGNOSTIC_TOLERANCE, "causal_leakage_unchanged": 1e-6},
-              "evidence_artifacts": [{"path": p, "sha256": hashlib.sha256((ROOT/p).read_bytes()).hexdigest()} for p in dict.fromkeys(paths)],
+              "evidence_artifacts": [{"path": p, "sha256": hashlib.sha256((canonical_existing_path(ROOT/p)).read_bytes()).hexdigest()} for p in dict.fromkeys(paths)],
               "protected_evidence_hashes": previous["protected_evidence_hashes"],
               "compatibility_assumptions": ["smooth_noncritical_joint_zero_T_stationary_branch_with_positive_internal_gaps", "nonsingular_local_stationary_Jacobian", "external_derivative_expansion_admitted_as_one_physical_equilibrium_bosonic_mode", "unamended_internal_Hartree_trace_log_is_claimed_as_asymptotically_complete_thermal_EOS"],
               "physical_low_T_EOS_admission": "BLOCKED_ASYMPTOTIC_SPECTRUM_THERMODYNAMICS_MISMATCH" if passed else "UNRESOLVED",

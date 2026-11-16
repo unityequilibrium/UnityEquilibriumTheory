@@ -1,7 +1,7 @@
 """Regression tests for the all-wave closure evidence snapshot."""
 
 from __future__ import annotations
-from docs.core.core_paths import repo_root
+from docs.core.core_paths import canonical_existing_path, repo_root
 
 import hashlib
 import importlib.util
@@ -33,7 +33,7 @@ def test_all_wave_evidence_hashes_are_current_and_complete():
     for wave in report["waves"]:
         assert wave["evidence"], wave["wave"]
         for item in wave["evidence"]:
-            path = ROOT / item["path"]
+            path = canonical_existing_path(ROOT / item["path"])
             assert item["exists"] is True, (wave["wave"], item["path"])
             assert item["sha256"] == hashlib.sha256(path.read_bytes()).hexdigest(), (
                 wave["wave"],

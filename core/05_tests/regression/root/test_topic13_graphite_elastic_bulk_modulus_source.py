@@ -6,10 +6,9 @@ from pathlib import Path
 
 
 ROOT = repo_root()
-LANE = ROOT / "docs/core/07_artifacts/topic13/t13_graphite_elastic_bulk_modulus_source_audit.json"
+LANE = ROOT / 'core/07_artifacts/topic13/t13_graphite_elastic_bulk_modulus_source_audit.json'
 PACKAGE = ROOT / (
-    "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/"
-    "bosak_2007_graphite_elastic_bulk_source_package.json"
+    'topics/0.13_Thermodynamic_Bridge/Data/03_Research/bosak_2007_graphite_elastic_bulk_source_package.json'
 )
 
 

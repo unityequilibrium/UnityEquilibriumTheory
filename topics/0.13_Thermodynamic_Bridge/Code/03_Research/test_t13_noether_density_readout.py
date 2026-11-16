@@ -1,4 +1,5 @@
 """Conservation, source/readout, restricted ambiguity and evidence scope."""
+from core.core_paths import canonical_existing_path
 
 import hashlib
 import json
@@ -175,7 +176,7 @@ def test_protocol_has_no_numeric_data_or_blindness_claim(artifact):
 
 def test_current_and_protected_hashes_and_registry_fields(artifact):
     for item in artifact["evidence_artifacts"]+artifact["protected_evidence_hashes"]:
-        assert hashlib.sha256((D.ROOT/item["path"]).read_bytes()).hexdigest() == item["sha256"]
+        assert hashlib.sha256((canonical_existing_path(D.ROOT/item["path"])).read_bytes()).hexdigest() == item["sha256"]
     registry = json.loads((D.ROOT/D.REGISTRY).read_text())
     assert not registry["core_registry_modified"]
     required = {"ontology", "units", "derivation_class", "observable", "data_role", "verification_status", "controlling_blocker", "claim_boundary"}
@@ -186,7 +187,7 @@ def test_current_and_protected_hashes_and_registry_fields(artifact):
 
 
 def test_audit_runtime_read_allowlist(monkeypatch, artifact):
-    allowed = {str((D.ROOT/x["path"]).resolve()).casefold() for x in artifact["evidence_artifacts"]+artifact["protected_evidence_hashes"]}
+    allowed = {str((canonical_existing_path(D.ROOT/x["path"])).resolve()).casefold() for x in artifact["evidence_artifacts"]+artifact["protected_evidence_hashes"]}
     original_bytes, original_text = Path.read_bytes, Path.read_text
     observed = set()
 

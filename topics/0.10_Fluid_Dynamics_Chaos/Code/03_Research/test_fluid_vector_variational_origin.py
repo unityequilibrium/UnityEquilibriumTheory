@@ -8,7 +8,12 @@ import tempfile
 import unittest
 
 ROOT = next(p for p in Path(__file__).resolve().parents if (p / "docs/core").is_dir())
-TOPIC = ROOT / "docs/topics/0.10_Fluid_Dynamics_Chaos"
+
+import sys as _sys
+if str(ROOT) not in _sys.path:
+    _sys.path.insert(0, str(ROOT))
+from core.core_paths import canonical_existing_path
+TOPIC = ROOT / "topics/0.10_Fluid_Dynamics_Chaos"
 SCRIPT = TOPIC / "Code/03_Research/Research_Fluid_Vector_Variational_Origin.py"
 RESULT = TOPIC / "Result/artifacts/fluid_vector_variational_origin_audit.json"
 
@@ -27,7 +32,7 @@ class VariationalOriginEvidenceTests(unittest.TestCase):
 
     def test_source_fresh_action_audit_preserves_admission_boundary(self):
         for path,expected in self.published["input_hashes"].items():
-            self.assertEqual(hashlib.sha256((ROOT/path).read_bytes()).hexdigest(),expected,path)
+            self.assertEqual(hashlib.sha256((canonical_existing_path(ROOT/path)).read_bytes()).hexdigest(),expected,path)
         self.assertEqual(self.fresh["input_hashes"],self.published["input_hashes"])
         self.assertEqual(self.fresh["status"],"PASS_CONDITIONAL_VARIATIONAL_REFERENCE_ONLY")
         self.assertEqual(self.fresh["reference_check_count"],72)

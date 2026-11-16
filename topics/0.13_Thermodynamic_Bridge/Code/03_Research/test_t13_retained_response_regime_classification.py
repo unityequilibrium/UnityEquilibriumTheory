@@ -11,6 +11,7 @@ from unittest.mock import patch
 import sympy as s
 
 sys.path.insert(0,str(Path(__file__).resolve().parent))
+from core.core_paths import canonical_existing_path
 a=importlib.import_module("Research_T13_Retained_Response_Regime_Classification")
 
 
@@ -34,15 +35,15 @@ class RegimeTests(unittest.TestCase):
         self.assertIn('finite real',a.source_domain()['a_matter'])
 
     def test_source_domain_widening_detected(self):
-        text=(a.ROOT/a.CORE).read_text(encoding='utf-8')
+        text=(canonical_existing_path(a.ROOT/a.CORE)).read_text(encoding='utf-8')
         with self.assertRaises(ValueError):a.source_domain(text.replace('self.a_space < 0.0','self.a_space < -1.0'))
 
     def test_positive_parameter_check_change_detected(self):
-        text=(a.ROOT/a.CORE).read_text(encoding='utf-8')
+        text=(canonical_existing_path(a.ROOT/a.CORE)).read_text(encoding='utf-8')
         with self.assertRaises(ValueError):a.source_domain(text.replace('<= 0.0', '< 0.0',1))
 
     def test_rhs_source_sign_change_detected(self):
-        text=(a.ROOT/a.CORE).read_text(encoding='utf-8').replace(
+        text=(canonical_existing_path(a.ROOT/a.CORE)).read_text(encoding='utf-8').replace(
             'dC = -config.mobility_matter * mu_matter + matter_drive',
             'dC = -config.mobility_matter * mu_matter - matter_drive')
         self.assertFalse(a.equal(a.source_law(text)[2],self.math['drift']))

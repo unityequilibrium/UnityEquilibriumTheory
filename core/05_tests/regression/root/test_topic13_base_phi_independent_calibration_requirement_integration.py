@@ -1,6 +1,7 @@
 """Integration checks for the Topic 13 open calibration controller."""
 
 from __future__ import annotations
+from core.core_paths import canonical_existing_path
 from docs.core.core_paths import repo_root
 
 import hashlib
@@ -17,11 +18,11 @@ FORMULA = "docs/topics/0.13_Thermodynamic_Bridge/FORMULA_AUDIT.md"
 
 
 def load(rel: str) -> dict:
-    return json.loads((ROOT / rel).read_text(encoding="utf-8-sig"))
+    return json.loads((canonical_existing_path(ROOT / rel)).read_text(encoding="utf-8-sig"))
 
 
 def digest(rel: str) -> str:
-    return hashlib.sha256((ROOT / rel).read_bytes()).hexdigest()
+    return hashlib.sha256((canonical_existing_path(ROOT / rel)).read_bytes()).hexdigest()
 
 
 def test_open_requirement_is_linked_without_unlock() -> None:
@@ -47,4 +48,4 @@ def test_register_dependency_and_formula_hashes_are_current() -> None:
     assert route["sha256"] == digest(ACTION)
     assert route["summary"]["full_core_unlock"] is False
     assert dependency["register"]["sha256"] == digest(REGISTER)
-    assert "T13-020" in (ROOT / FORMULA).read_text(encoding="utf-8-sig")
+    assert "T13-020" in (canonical_existing_path(ROOT / FORMULA)).read_text(encoding="utf-8-sig")

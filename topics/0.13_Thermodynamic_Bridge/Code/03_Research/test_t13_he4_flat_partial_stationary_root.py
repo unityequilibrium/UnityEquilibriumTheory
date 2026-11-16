@@ -1,4 +1,5 @@
 """Tests for the conditional flat partial-action stationary root."""
+from core.core_paths import canonical_existing_path
 
 import importlib.util
 import json
@@ -15,7 +16,7 @@ SPEC.loader.exec_module(AUDIT)
 
 def test_saved_stationary_root_is_conditional_and_non_promoting():
     result = AUDIT.audit()
-    assert json.loads(AUDIT.OUTPUT.read_text(encoding="utf-8")) == result
+    assert json.loads(canonical_existing_path(AUDIT.OUTPUT).read_text(encoding="utf-8")) == result
     assert result["verification_status"] == "PASS_CONDITIONAL_FLAT_PARTIAL_STATIONARY_ROOT"
     assert result["full_core_unlock"] is False
     assert result["dependency_unlocked"] == []
@@ -30,7 +31,7 @@ def test_saved_stationary_root_is_conditional_and_non_promoting():
 
 
 def test_new_root_does_not_validate_recycled_density():
-    result = json.loads(AUDIT.OUTPUT.read_text(encoding="utf-8"))
+    result = json.loads(canonical_existing_path(AUDIT.OUTPUT).read_text(encoding="utf-8"))
     fine = result["runs"][1]
     assert fine["joint_phi"] != result["prior_anchor"]["Phi_natural"]
     assert fine["old_mu_fixed_stationary_density"] != result["prior_anchor"]["target_natural_charge"]

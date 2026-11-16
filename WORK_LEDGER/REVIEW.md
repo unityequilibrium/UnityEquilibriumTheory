@@ -10,9 +10,10 @@ Review all flagged entries, including provisional path-based classifications. Hi
 
 Multiple source files for 2026-08-14: [2026/2026-08-14.md](2026/2026-08-14.md), [2026-08-14.md](2026-08-14.md). Preserved separately; do not assume equal or delete either.
 
-Indexed entries: 2. Counts describe records, not accomplishments.
+Indexed entries: 3. Counts describe records, not accomplishments.
 
 | Date | Record | Area | Notes |
 | --- | --- | --- | --- |
+| 2026-11-15 | [Addendum — full-run result and output-isolation follow-up](2026/2026-11-15.md#addendum--full-run-result-and-output-isolation-follow-up) (L17) | unspecified | missing_or_unknown_primary_area; invalid_stream |
 | 2026-09-15 | [Core physical migration v3 — Wave 6za support/tooling migration](2026/2026-09-15.md#core-physical-migration-v3--wave-6za-supporttooling-migration) (L463) | repo-ops, research-standards | multiple_area_fields |
 | 2026-09-15 | [Core physical migration v3 — Wave 6v-a post-commit metadata consistency correction](2026/2026-09-15.md#core-physical-migration-v3--wave-6v-a-post-commit-metadata-consistency-correction) (L391) | repo-ops, research-standards, research-core | multiple_area_fields |

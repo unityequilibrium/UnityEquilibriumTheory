@@ -1,6 +1,7 @@
 """Regression checks for the bounded matter-space flux scientific-link package."""
 
 from __future__ import annotations
+from core.core_paths import canonical_existing_path
 from docs.core.core_paths import canonical_artifact_path, repo_root
 
 import json
@@ -30,8 +31,8 @@ def test_flux_family_contract_has_explicit_scientific_chain() -> None:
         "uet.matter_space_flux.phi_response",
         "uet.matter_space_flux.shared_energy_ledger",
     ]
-    assert all((ROOT / path).exists() for path in family["verifier_paths"])
-    assert all((ROOT / path).exists() for path in family["evidence_paths"])
+    assert all((canonical_existing_path(ROOT / path)).exists() for path in family["verifier_paths"])
+    assert all((canonical_existing_path(ROOT / path)).exists() for path in family["evidence_paths"])
     assert family["organization_review_required"] is True
     assert "not SI" in family["claim_ceiling"]
 

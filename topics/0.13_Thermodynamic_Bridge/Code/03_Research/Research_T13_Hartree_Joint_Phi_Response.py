@@ -17,13 +17,18 @@ import runpy
 import numpy as np
 from scipy.optimize import root
 
-ROOT = Path(__file__).resolve().parents[5]
-PREFIX = "docs/topics/0.13_Thermodynamic_Bridge/"
+ROOT = Path(__file__).resolve().parents[4]
+
+import sys as _sys
+if str(ROOT) not in _sys.path:
+    _sys.path.insert(0, str(ROOT))
+from core.core_paths import canonical_existing_path
+PREFIX = "topics/0.13_Thermodynamic_Bridge/"
 STATIC_CODE = PREFIX+"Code/03_Research/Research_T13_Hartree_Joint_Phi_Static.py"
 POLE_CODE = PREFIX+"Code/03_Research/Research_T13_Hartree_Finite_Q_Poles.py"
 STATIC_ARTIFACT = PREFIX+"Result/artifacts/t13_hartree_joint_phi_static.json"
-OUTPUT = ROOT/(PREFIX+"Result/artifacts/t13_hartree_joint_phi_response.json")
-S, Q = runpy.run_path(str(ROOT/STATIC_CODE)), runpy.run_path(str(ROOT/POLE_CODE))
+OUTPUT = canonical_existing_path(ROOT/(PREFIX+"Result/artifacts/t13_hartree_joint_phi_response.json"))
+S, Q = runpy.run_path(str(canonical_existing_path(ROOT/STATIC_CODE))), runpy.run_path(str(canonical_existing_path(ROOT/POLE_CODE)))
 F, G, R, D = (Q[name] for name in ("F", "G", "R", "D"))
 Q_GRID = (.04, .02, .01)
 ORDERS = ((64, 24), (96, 32), (128, 40))
@@ -176,7 +181,7 @@ def static_response(row, action):
 
 
 def audit(progress=None):
-    previous = json.loads((ROOT/STATIC_ARTIFACT).read_text(encoding="utf-8"))
+    previous = json.loads((canonical_existing_path(ROOT/STATIC_ARTIFACT)).read_text(encoding="utf-8"))
     action = controls()
     examples = []
     for row in previous["examples"]:
@@ -243,7 +248,7 @@ def audit(progress=None):
         "frozen_Phi_counterterm_and_clamped_answer_rejected": all(max(q["frozen_Phi_counterterm_negative_control"].values()) > 1e-5 and abs(G["unpack"](q["clamped_Phi_inverse_at_joint_pole"])) > 1e-5 for q in rows),
         "correct_local_sheet_and_tail": all(q["wrong_principal_sheet_residual"] > 1e-4 and q["alternate_tail_inverse_residual"] < ROOT_TOLERANCE for q in rows),
         "simple_local_analytic_poles": all(q["local_derivative_check"]["derivative_modulus"] > .01 and q["local_derivative_check"]["runs"][-1]["Cauchy_Riemann_disagreement"] < 2e-5 for q in rows),
-        "protected_Core_and_baseline_hashes_unchanged": all(hashlib.sha256((ROOT/item["path"]).read_bytes()).hexdigest() == item["sha256"] for item in previous["protected_evidence_hashes"]),
+        "protected_Core_and_baseline_hashes_unchanged": all(hashlib.sha256((canonical_existing_path(ROOT/item["path"])).read_bytes()).hexdigest() == item["sha256"] for item in previous["protected_evidence_hashes"]),
     }
     passed = all(checks.values())
     paths = list(dict.fromkeys([STATIC_ARTIFACT, STATIC_CODE, POLE_CODE, Q["PREVIOUS_CODE"], G["FIELD_CODE"], PREFIX+"Code/03_Research/Research_T13_Hartree_Gauge_Current.py", *S["ACTION_PATHS"], Path(__file__).relative_to(ROOT).as_posix()]))
@@ -260,7 +265,7 @@ def audit(progress=None):
               "action_controls": action, "examples": examples, "checks": checks,
               "config": {"q_grid": Q_GRID, "orders": ORDERS, "seeds": [[z.real, z.imag] for z in SEEDS], "upper_reference_velocity": [UPPER_V.real, UPPER_V.imag], "local_continuation_domain": D["LOCAL_DOMAIN"], "MS_scale": 1., "gauge_contact_convention": "inherited_frequency_first_MS_contact_not_material_input"},
               "thresholds": {"scaled_root": ROOT_TOLERANCE, "refinement_and_independent_check": REFINEMENT_TOLERANCE, "phase_current_Ward": WARD_TOLERANCE, "algebra_identity": IDENTITY_TOLERANCE, "causal_leakage_unchanged": 1e-6},
-              "evidence_artifacts": [{"path": path, "sha256": hashlib.sha256((ROOT/path).read_bytes()).hexdigest()} for path in paths],
+              "evidence_artifacts": [{"path": path, "sha256": hashlib.sha256((canonical_existing_path(ROOT/path)).read_bytes()).hexdigest()} for path in paths],
               "protected_evidence_hashes": previous["protected_evidence_hashes"],
               "open_blockers": ["global_validity_domain_and_regulator_RG_Hartree_remainder", "quantum_Phi_and_kinetic_counterterms_if_required", "independent_material_state_source_detector_thermal_mapping", "physical_heat_collision_Kubo_SK_KMS_entropy_transport"],
               "controlling_blocker": "joint_global_validity_Hartree_remainder_material_thermal_transport_not_closed",

@@ -1,4 +1,5 @@
 """Independent kernel checks and boundaries of thermal one-loop matching."""
+from core.core_paths import canonical_existing_path
 
 import hashlib
 import json
@@ -92,7 +93,7 @@ def test_record_has_computed_loop_but_no_full_stationary_or_physical_unlock():
         assert example["bare_shifted_low_mode_sq_at_k_zero"] < 0
         assert example["bare_shifted_Gaussian_not_evaluated_as_equilibrium"] is True
     for item in record["evidence_artifacts"]+record["protected_evidence_hashes"]:
-        assert hashlib.sha256((MODULE["ROOT"]/item["path"]).read_bytes()).hexdigest() == item["sha256"]
+        assert hashlib.sha256((canonical_existing_path(MODULE["ROOT"]/item["path"])).read_bytes()).hexdigest() == item["sha256"]
 
 
 def test_live_thermal_diagrams_reproduce_the_record_across_float_libraries():

@@ -26,9 +26,9 @@ from docs.core.uet_curved_3p1_generalized_harmonic import (
 from docs.core.core_paths import canonical_artifact_path
 
 
-ARTIFACTS = ROOT / "docs/core/07_artifacts"
+ARTIFACTS = ROOT / "core/07_artifacts"
 SOURCE = ROOT / "docs/data/external/gr_3p1/lindblom_et_al_2006_gh/source_record.json"
-MODULE = ROOT / "docs/core/02_equations/covariant/uet_curved_3p1_generalized_harmonic.py"
+MODULE = ROOT / "core/02_equations/covariant/uet_curved_3p1_generalized_harmonic.py"
 AUDIT = ROOT / "docs/scripts/audit/audit_uet_curved_3p1_gh_nonlinear_vacuum.py"
 PRINCIPAL = canonical_artifact_path("curved_3p1_gh_principal_system_verification.json", "verification")
 VERIFY = canonical_artifact_path("curved_3p1_gh_nonlinear_vacuum_rhs_verification.json", "verification")

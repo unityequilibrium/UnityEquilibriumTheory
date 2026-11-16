@@ -1,6 +1,7 @@
 """Integration checks for the Topic 13 matter-coupling normalization no-go."""
 
 from __future__ import annotations
+from core.core_paths import canonical_existing_path
 from docs.core.core_paths import repo_root
 
 import hashlib
@@ -16,11 +17,11 @@ DEPENDENCY_REL = "docs/core/07_artifacts/gates/uet_major_result_dependency_unloc
 
 
 def load(rel: str) -> dict:
-    return json.loads((ROOT / rel).read_text(encoding="utf-8-sig"))
+    return json.loads((canonical_existing_path(ROOT / rel)).read_text(encoding="utf-8-sig"))
 
 
 def sha256(rel: str) -> str:
-    return hashlib.sha256((ROOT / rel).read_bytes()).hexdigest()
+    return hashlib.sha256((canonical_existing_path(ROOT / rel)).read_bytes()).hexdigest()
 
 
 def test_matter_coupling_no_go_stays_in_dimensional_lane() -> None:

@@ -11,10 +11,16 @@ import json
 from collections import Counter
 from datetime import datetime, timezone
 from pathlib import Path
+import sys
 from typing import Any
 
 
 ROOT = Path(__file__).resolve().parents[3]
+if str(ROOT) not in sys.path:
+    sys.path.insert(0, str(ROOT))
+
+from core.core_paths import canonical_existing_path  # noqa: E402
+
 MATRIX_REL = "docs/core/07_artifacts/topic13/t13_topic13_closure_matrix.json"
 GATE_REL = (
     "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/"
@@ -51,14 +57,14 @@ PACKAGE_IDS = (
 
 
 def load(relative: str) -> dict[str, Any]:
-    value = json.loads((ROOT / relative).read_text(encoding="utf-8-sig"))
+    value = json.loads((canonical_existing_path(ROOT / relative)).read_text(encoding="utf-8-sig"))
     if not isinstance(value, dict):
         raise ValueError(f"expected JSON object: {relative}")
     return value
 
 
 def digest(relative: str) -> str:
-    return hashlib.sha256((ROOT / relative).read_bytes()).hexdigest()
+    return hashlib.sha256((canonical_existing_path(ROOT / relative)).read_bytes()).hexdigest()
 
 
 def subresult_record(major: dict[str, Any], subresult: dict[str, Any]) -> dict[str, Any]:

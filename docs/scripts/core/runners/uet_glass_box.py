@@ -25,28 +25,14 @@ class UETPathManager:
     def get_root() -> Path:
         if UETPathManager._ROOT:
             return UETPathManager._ROOT
-        
-        # 1. Check current working directory (Priority for Source Code)
-        cwd = Path.cwd()
-        if (cwd / "docs").exists():
-            UETPathManager._ROOT = cwd / "docs"
-            return UETPathManager._ROOT
-            
-        # 2. Check parent directories of CWD
-        for parent in cwd.parents:
-            if (parent / "docs").exists():
-                UETPathManager._ROOT = parent / "docs"
-                return UETPathManager._ROOT
 
-        # 3. Fallback to __file__ resolution (for installed pkgs)
-        current = Path(__file__).resolve()
-        for _ in range(6):
-            if (current / "core").exists() and current.name == "docs":
-                UETPathManager._ROOT = current
+        # Anchor paths to the repository containing this implementation, not
+        # to the caller's working directory (which may be a topic subfolder).
+        for parent in Path(__file__).resolve().parents:
+            if (parent / "core").is_dir() and (parent / "topics").is_dir():
+                UETPathManager._ROOT = parent
                 return UETPathManager._ROOT
-            current = current.parent
-            
-        raise FileNotFoundError("Could not find 'docs' root directory.")
+        raise FileNotFoundError("Could not find repository root containing core/ and topics/.")
 
     TOPIC_MAP = {
         "0.1": "0.1_Galaxy_Rotation_Problem",
@@ -88,7 +74,15 @@ class UETPathManager:
         if "_" in topic_id and topic_id in UETPathManager.TOPIC_MAP.values():
             return topic_id
         clean_id = topic_id.split("_")[0]
-        return UETPathManager.TOPIC_MAP.get(clean_id, topic_id)
+        mapped = UETPathManager.TOPIC_MAP.get(clean_id)
+        if mapped:
+            return mapped
+        matches = sorted(
+            path.name
+            for path in (UETPathManager.get_root() / "topics").glob(f"{clean_id}_*")
+            if path.is_dir()
+        )
+        return matches[0] if len(matches) == 1 else topic_id
 
     @staticmethod
     def get_result_dir(
@@ -259,7 +253,7 @@ class UETMetricLogger:
             self.run_id = self.run_dir.name
         else:
             # Legacy Fallback
-            base_path = root.parent / "data_logs"
+            base_path = root / "data_logs"
             self.timestamp_str = f"{int(time.time())}"
             self.run_id = (
                 simulation_name if self.flat_mode else f"{self.timestamp_str}_{simulation_name}"
