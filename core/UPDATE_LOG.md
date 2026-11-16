@@ -424,3 +424,8 @@ commit: this commit
 ผล: PASS (constraint) α < 5.1e-12, g_c < 1.16e-15 eV ที่ λ = 1.922e8 m แน่นกว่า LLR ใน T005 ราว 11.6 เท่าใน α; λ = 1e6 m: α < 4.1e-11
 ระดับ: รอผู้เขียนอนุมัติ L2 ก่อนบันทึก result; ใช้ได้เฉพาะ lane ที่ portal ดึงตามจำนวน nucleon
 commit: this commit
+
+## 2026-11-17 — T016 ได้ L2
+ผู้เขียนอนุมัติ L2: R_T016_MICROSCOPE_PORTAL (PASS, constraint) α < 5.1e-12, g_c < 1.16e-15 eV ที่ λ ≥ 1e8 m; C_T016_MICROSCOPE_G_C → L2; T016 → CLOSED
+ขอบเขต: เฉพาะ lane ที่ portal ดึงตามจำนวน nucleon; ไม่ใช่ UET-distinct
+commit: this commit

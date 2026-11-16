@@ -6,10 +6,11 @@
 
 These are source-linked historical records, not proof of completed research, successful publication, or current scientific readiness.
 
-Indexed entries: 637. Counts describe records, not accomplishments.
+Indexed entries: 638. Counts describe records, not accomplishments.
 
 | Date | Record | Area | Notes |
 | --- | --- | --- | --- |
+| 2026-11-17 | [T016 result at L2](2026/2026-11-17.md#t016-result-at-l2) (L13) | research-core | explicit_stream_and_area |
 | 2026-11-17 | [T016 run: MICROSCOPE bound on the portal](2026/2026-11-17.md#t016-run-microscope-bound-on-the-portal) (L3) | research-core | explicit_stream_and_area |
 | 2026-11-16 | [Topic 0.19 through the engine; draft T016 (MICROSCOPE)](2026/2026-11-16.md#topic-019-through-the-engine-draft-t016-microscope) (L212) | research-core | explicit_stream_and_area |
 | 2026-11-16 | [Repair Test Card producers T001-T013 after root relocation](2026/2026-11-16.md#repair-test-card-producers-t001-t013-after-root-relocation) (L202) | research-core | explicit_stream_and_area |

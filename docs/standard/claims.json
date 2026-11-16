@@ -310,10 +310,12 @@
     },
     {
       "claim_id": "C_T016_MICROSCOPE_G_C",
-      "statement": "With the nucleon-number portal lane, MICROSCOPE's eta(Ti, Pt) limits the portal coupling to about g_c < 1.1e-15 eV for m_psi below about 3e-14 eV (lambda above about 7000 km), roughly ten times tighter in alpha than lunar laser ranging (T005).",
-      "level": "L0_SPECULATIVE",
-      "evidence": [],
-      "note": "Under draft Test Card T016; numbers are the AI estimate made while drafting, not a Result."
+      "statement": "With the nucleon-number portal lane, MICROSCOPE's eta(Ti, Pt) limits the portal to alpha < 5.1e-12 and g_c < 1.16e-15 eV for lambda >= 1e8 m (m_psi <= 2e-15 eV), 11.6 times tighter in alpha than lunar laser ranging (T005).",
+      "level": "L2_CONFRONTED",
+      "evidence": [
+        "R_T016_MICROSCOPE_PORTAL"
+      ],
+      "note": "Constraint, not a prediction. Valid only if binding energy does not source the portal (AI lane choice, C_PORTAL_COMPOSITION_EP). L2 approved by the author 2026-11-17."
     }
   ]
 }

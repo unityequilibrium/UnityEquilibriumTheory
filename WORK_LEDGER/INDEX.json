@@ -5,11 +5,11 @@
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
     "sources": 80,
-    "entries": 863,
+    "entries": 864,
     "by_stream": {
       "book-history": 94,
       "operations": 131,
-      "research": 637,
+      "research": 638,
       "review": 1
     },
     "exact_duplicates": 0,
@@ -415,8 +415,8 @@
     },
     {
       "path": "2026/2026-11-17.md",
-      "sha256": "648c93fe1727c9dcd6ea9c47afff19099eb622172ef9aaaa76694463ee194f3c",
-      "entries": 1
+      "sha256": "f0a703f6500da152bde7393d353d3def6741d893d3da962bc71019fcad3ef23e",
+      "entries": 2
     },
     {
       "path": "2026-08-14.md",
@@ -17634,9 +17634,29 @@
       "source": "2026/2026-11-17.md",
       "anchor": "t016-run-microscope-bound-on-the-portal",
       "start_line": 3,
-      "end_line": 11,
+      "end_line": 12,
       "title": "T016 run: MICROSCOPE bound on the portal",
-      "entry_sha256": "5472a73373fd19fa7f93ce327c45a995dce7ed03ada5f4bc26966ec5dbba6ddb",
+      "entry_sha256": "7739d242b3636d5a21caf32cad7fc28cf13cca484008e191259bed1af0d26201",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-17",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-17.md#t016-result-at-l2",
+      "source": "2026/2026-11-17.md",
+      "anchor": "t016-result-at-l2",
+      "start_line": 13,
+      "end_line": 21,
+      "title": "T016 result at L2",
+      "entry_sha256": "bf26ba093be13d2a68a230c621a17689fb4f456fd348463bee9982d2d192dfb2",
       "stream": "research",
       "areas": [
         "research-core"
