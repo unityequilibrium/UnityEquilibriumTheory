@@ -5,11 +5,11 @@
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
     "sources": 78,
-    "entries": 833,
+    "entries": 834,
     "by_stream": {
       "book-history": 94,
       "operations": 114,
-      "research": 625
+      "research": 626
     },
     "exact_duplicates": 0,
     "review_entries": 2
@@ -404,8 +404,8 @@
     },
     {
       "path": "2026/2026-11-16.md",
-      "sha256": "8202e71bb88c32464d38442c55794531a4103b9d552c086f17f540d1266205ed",
-      "entries": 4
+      "sha256": "b8c5bef39e40fb7be4a4f207384725c827cc4365d3648ea470db74b216169482",
+      "entries": 5
     },
     {
       "path": "2026-08-14.md",
@@ -17024,12 +17024,32 @@
       "source": "2026/2026-11-16.md",
       "anchor": "t002-stellar-model-systematic-and-draft-t014",
       "start_line": 33,
-      "end_line": 41,
+      "end_line": 42,
       "title": "T002 stellar-model systematic and draft T014",
-      "entry_sha256": "13cc3f6c84bfede4a63e994b61d60aaebeb4f47d73594ca8f0799612e934f625",
+      "entry_sha256": "05ec37d613b91a7d34c0382c651a432a0ff5b4114d5bcc00eda835497db1196d",
       "stream": "research",
       "areas": [
         "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-16",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-16.md#t014-run-and-l2-record",
+      "source": "2026/2026-11-16.md",
+      "anchor": "t014-run-and-l2-record",
+      "start_line": 43,
+      "end_line": 51,
+      "title": "T014 run and L2 record",
+      "entry_sha256": "d50a75776be4fb63172f6a077a4f318b24c0aaa5e846acd327bec97b3012ebd1",
+      "stream": "research",
+      "areas": [
+        "research-standards"
       ],
       "related_streams": [
         "research"
