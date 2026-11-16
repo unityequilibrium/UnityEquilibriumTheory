@@ -5,11 +5,11 @@
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
     "sources": 79,
-    "entries": 859,
+    "entries": 860,
     "by_stream": {
       "book-history": 94,
       "operations": 131,
-      "research": 633,
+      "research": 634,
       "review": 1
     },
     "exact_duplicates": 0,
@@ -410,8 +410,8 @@
     },
     {
       "path": "2026/2026-11-16.md",
-      "sha256": "5d4635ac3bbb5ae7e179561706067dc15a4b7989d39848c577ef837acab059fc",
-      "entries": 18
+      "sha256": "bd28ad2f5e233fb5c75bc12d8093f2531e3520b5ec57035a2f10d1395aad8027",
+      "entries": 19
     },
     {
       "path": "2026-08-14.md",
@@ -17549,9 +17549,29 @@
       "source": "2026/2026-11-16.md",
       "anchor": "engine-pilot-stars-layers-2-3",
       "start_line": 182,
-      "end_line": 190,
+      "end_line": 191,
       "title": "Engine pilot: stars (layers 2-3)",
-      "entry_sha256": "c9d5277bc2fcf25309b4c05877acf6a81e422c228c070eeafdd4197f3421bee0",
+      "entry_sha256": "d0375343f0834ae60ba3c4f48faba4d15a00369335568168e8ce9cb6ecf33724",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-16",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-16.md#interim-research-report-2026-11-09-to-2026-11-16",
+      "source": "2026/2026-11-16.md",
+      "anchor": "interim-research-report-2026-11-09-to-2026-11-16",
+      "start_line": 192,
+      "end_line": 200,
+      "title": "Interim research report 2026-11-09 to 2026-11-16",
+      "entry_sha256": "ffd85c26a02aa2a9257f4633ee4d4a2f969f5bc6243a88d9c86d29ce7ddb3e68",
       "stream": "research",
       "areas": [
         "research-core"

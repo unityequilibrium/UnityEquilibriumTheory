@@ -6,10 +6,11 @@
 
 These are source-linked historical records, not proof of completed research, successful publication, or current scientific readiness.
 
-Indexed entries: 633. Counts describe records, not accomplishments.
+Indexed entries: 634. Counts describe records, not accomplishments.
 
 | Date | Record | Area | Notes |
 | --- | --- | --- | --- |
+| 2026-11-16 | [Interim research report 2026-11-09 to 2026-11-16](2026/2026-11-16.md#interim-research-report-2026-11-09-to-2026-11-16) (L192) | research-core | explicit_stream_and_area |
 | 2026-11-16 | [Engine pilot: stars (layers 2-3)](2026/2026-11-16.md#engine-pilot-stars-layers-2-3) (L182) | research-core | explicit_stream_and_area |
 | 2026-11-16 | [UET engine draft (core/engine)](2026/2026-11-16.md#uet-engine-draft-coreengine) (L172) | research-core | explicit_stream_and_area |
 | 2026-11-16 | [Decision: Topic 13 He-4 Phi is a phenomenological closure](2026/2026-11-16.md#decision-topic-13-he-4-phi-is-a-phenomenological-closure) (L162) | research-core | explicit_stream_and_area |
