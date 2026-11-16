@@ -365,3 +365,10 @@ commit: this commit
 ระดับ: R_T014 → L2_CONFRONTED (ผู้เขียนอนุมัติ 2026-11-16) เป็นหลักฐานเพิ่มของ C_T002_STELLAR_PHASE_ABUNDANCE; ไม่ใช่ข้อทำนายเฉพาะของ UET
 ถัดไป: แยกสามคำอธิบาย (ช่องเผาเพิ่มใน HB, แบบจำลองดาวคลาด, ประชากร HB ไม่คงตัว) ต้องการข้อมูลแยกศูนย์กลาง/รอบนอกกระจุก
 commit: this commit
+
+## 2026-11-16 — SI-1: ชั้นหน่วย SI ของสมการแกนกับ Bose fluid
+ทำ: แปลงภาค χ ของ action เป็น SI (ไม่มี E_ref อิสระ ใช้แค่ ħ, c) ได้ GP ด้วย λ = 8πam และหาว่า ψ เลื่อน scattering length เท่าไร
+ผล: δa = −αGM³/m_ψ² ที่ขอบ T005 คือ 5e-18 ของค่า Rb-87; He II มี n a³ ≥ 0.38 จึงอยู่นอกขอบเขต GP แบบ tree level
+ความหมาย: lane Φ ของ topic 13 (Φ = superfluid fraction, e0 จาก convention) ไม่ได้มาจาก action; ช่อง "action origin" ตอบได้แต่ไม่ปลดล็อก
+ระดับ: R_SI1_PARENT_ACTION_SI → L1; ร่าง Test Card S1–S3 รอผู้เขียน (docs/meta/SI1_PARENT_ACTION_SI_DRAFT_2026-11-16.md)
+commit: this commit

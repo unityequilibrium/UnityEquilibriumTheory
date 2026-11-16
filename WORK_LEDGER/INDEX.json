@@ -5,11 +5,11 @@
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
     "sources": 79,
-    "entries": 853,
+    "entries": 854,
     "by_stream": {
       "book-history": 94,
       "operations": 131,
-      "research": 627,
+      "research": 628,
       "review": 1
     },
     "exact_duplicates": 0,
@@ -410,8 +410,8 @@
     },
     {
       "path": "2026/2026-11-16.md",
-      "sha256": "9fe39a28d9241681075f0f9acd843d4860ea716e8e548e26439535db8918a349",
-      "entries": 12
+      "sha256": "8aa400c1155cf208c4d2d1926c2c42abfa18ee6a01ff24900bb676c326c7f7f5",
+      "entries": 13
     },
     {
       "path": "2026-08-14.md",
@@ -17429,9 +17429,29 @@
       "source": "2026/2026-11-16.md",
       "anchor": "topic-screen-for-uet-distinct-candidates",
       "start_line": 122,
-      "end_line": 130,
+      "end_line": 131,
       "title": "Topic screen for UET-distinct candidates",
-      "entry_sha256": "7d410f0dc5384559a0e0de00e418131d2823516544203477f2762d113351b5cf",
+      "entry_sha256": "22ec4f8584c4a7dccbebab2806a576ec19e56749ec6956f1ec143ef5fe2d5011",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-16",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-16.md#si-1-parent-action-in-si-units-for-a-bose-fluid",
+      "source": "2026/2026-11-16.md",
+      "anchor": "si-1-parent-action-in-si-units-for-a-bose-fluid",
+      "start_line": 132,
+      "end_line": 140,
+      "title": "SI-1: parent action in SI units for a Bose fluid",
+      "entry_sha256": "be82df33c09c1e8d3666380dd1a92931bcb683d4e14f39ea820fb356765d4d7a",
       "stream": "research",
       "areas": [
         "research-core"

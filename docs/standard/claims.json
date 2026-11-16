@@ -280,6 +280,15 @@
         "R_B8_PSI_MATTER_BURN"
       ],
       "note": "Classical, collisionless, non-relativistic medium; collisional absorption is second order and not included. Standard kinetic theory, not UET-distinct."
+    },
+    {
+      "claim_id": "C_SI1_PARENT_ACTION_SI",
+      "statement": "The parent action needs no free energy reference to give SI numbers: its parameters carry mass dimension, so with chi identified as a particle the conversion uses only hbar and c. Its chi sector is the relativistic O(2) Bose fluid whose non-relativistic limit is Gross-Pitaevskii with lam = 8 pi a m, and the psi portal adds a scattering-length shift delta_a = -alpha G M^3 / m_psi^2, which at the T005 bound is 5e-18 of the Rb-87 value.",
+      "level": "L1_CONSISTENT",
+      "evidence": [
+        "R_SI1_PARENT_ACTION_SI"
+      ],
+      "note": "Tree level, uniform fluid, chi = nucleon lane as in T005. Liquid He II is outside the tree-level GP class (n a^3 >= 0.38), so the legacy Topic 13 identification of Phi with the superfluid fraction is not obtained from the action. Standard physics, not UET-distinct."
     }
   ]
 }
