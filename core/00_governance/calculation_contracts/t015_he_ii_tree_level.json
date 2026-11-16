@@ -1,0 +1,241 @@
+{
+  "schema_version": "uet-calculation-contract-v1",
+  "contract_id": "CORE_T015_HE_II_TREE_LEVEL_V1",
+  "profile": "PHYSICAL_COMPARISON",
+  "review": {
+    "status": "INCOMPLETE",
+    "reviewer": "agent:claude-t015",
+    "rationale": "Methodological contract for Test Card T015. The evidence decision lives in docs/standard. Sound-speed and scattering-length measurements are inherited from the published analyses.",
+    "coverage_evidence": [
+      "docs/data/external/condensed_matter/helium4/he_ii_tree_level_inputs.csv"
+    ]
+  },
+  "question": "Does the parent action's O(2) sector at tree level, with chi = the He-4 atom and lam fixed by the measured He-He scattering length, give the first sound of He II?",
+  "output": {
+    "quantity": "tree-level sound speed and its fractional distance D from the measured first sound",
+    "unit": "m/s",
+    "domain": "liquid He-4 at T90 = 1.70 K, saturated vapour pressure",
+    "accuracy": "Prediction interval from the published scattering-length interval; no model error defined for a dense fluid.",
+    "claim_intent": "DIAGNOSTIC"
+  },
+  "model": {
+    "formula_ids": [
+      "UET_SI1_BOSE_FLUID_SI",
+      "UET_T015_HE_II_TREE_LEVEL"
+    ],
+    "assumptions": "chi = He-4 atom; He II = condensed phase of the O(2) sector; tree level; uniform fluid.",
+    "approximation": "Bogoliubov (Gross-Pitaevskii) sound speed c = hbar sqrt(4 pi a n)/m; no beyond-mean-field correction.",
+    "initial_boundary": "Uniform bulk liquid at equilibrium.",
+    "drive_environment": "None beyond the published measurement.",
+    "parameters": "No fitting; a from He-dimer diffraction, n from the published density."
+  },
+  "data_policy": {
+    "uses_observations": true,
+    "calibration_ids": [],
+    "comparison_ids": [
+      "HE_II_TREE_LEVEL_INPUTS"
+    ],
+    "independent_validation": false,
+    "holdout_policy": "No holdout. Outcome computed before drafting (exposure SEEN_FULL), declared in Test Card T015."
+  },
+  "observation": {
+    "system_partition": {
+      "role_mode": "RELATIONAL",
+      "accounting_component_id": "system_state",
+      "boundary": "Bulk He II sample and the published sound measurement; the comparison uses published values only.",
+      "systems": [
+        {
+          "id": "he_ii",
+          "state": "Liquid He-4 at 1.70 K SVP",
+          "state_accounting": {
+            "kind": "INDEPENDENT",
+            "state_ids": [
+              "he_ii.state"
+            ],
+            "owner_ids": [],
+            "rule": "Published density and sound speed."
+          }
+        },
+        {
+          "id": "transducer",
+          "state": "Acoustic measurement record of the published experiments",
+          "state_accounting": {
+            "kind": "INDEPENDENT",
+            "state_ids": [
+              "transducer.record"
+            ],
+            "owner_ids": [],
+            "rule": "Observer record only."
+          }
+        }
+      ],
+      "couplings": [
+        {
+          "id": "sound_propagation",
+          "source": "he_ii",
+          "target": "transducer",
+          "kind": "SIGNAL",
+          "component_id": "propagation",
+          "map": "First-sound pulse or resonance, handled upstream"
+        },
+        {
+          "id": "sound_detection",
+          "source": "he_ii",
+          "target": "transducer",
+          "kind": "DETECTION",
+          "component_id": "detector",
+          "map": "Time of flight or resonance frequency, upstream"
+        },
+        {
+          "id": "transducer_to_he_ii",
+          "source": "transducer",
+          "target": "he_ii",
+          "kind": "BACKACTION",
+          "component_id": "detector",
+          "map": "Small-amplitude sound; no admitted backaction"
+        }
+      ],
+      "observables": [
+        {
+          "id": "first_sound",
+          "detector_id": "transducer",
+          "target_systems": [
+            "he_ii"
+          ],
+          "backaction_targets": [
+            "he_ii"
+          ],
+          "backaction_scope_reason": "Single assessed owner.",
+          "quantity": "first sound u1 at 1.70 K",
+          "readout_map": "Tabulated u1 from Donnelly and Barenghi 1998; transcribed only",
+          "component_id": "detector"
+        }
+      ]
+    },
+    "source_state": "He II as measured in the published experiments.",
+    "generated_trace": "Acoustic signal; not a UET trace variable.",
+    "carrier": "Pressure wave; not identified with any UET field.",
+    "observer_state": "Published tables.",
+    "readout": "Tabulated u1, density, scattering length.",
+    "backaction": "None admitted.",
+    "frame": "Laboratory rest frame of the fluid",
+    "time_convention": "Not relevant (equilibrium property)",
+    "product_level": "published derived quantities (not raw data)",
+    "corrections": [
+      {
+        "id": "acoustic_reduction_upstream",
+        "state": "APPLIED_UPSTREAM",
+        "evidence": "docs/data/external/condensed_matter/helium4/he_ii_tree_level_inputs.csv"
+      }
+    ]
+  },
+  "components": [
+    {
+      "id": "system_state",
+      "group": "system_state",
+      "disposition": "MODELED",
+      "reason": "Bulk He II state as registered from published values.",
+      "evidence": [
+        "docs/data/external/condensed_matter/helium4/he_ii_tree_level_inputs.csv"
+      ]
+    },
+    {
+      "id": "drive_environment",
+      "group": "drive_environment",
+      "disposition": "NOT_APPLICABLE",
+      "reason": "No external drive in the comparison.",
+      "evidence": []
+    },
+    {
+      "id": "propagation",
+      "group": "propagation",
+      "disposition": "UPSTREAM_CORRECTED",
+      "reason": "Applied upstream in the published measurements (Donnelly and Barenghi 1998; Grisenti et al. 2000); not recomputed here.",
+      "evidence": [
+        "docs/data/external/condensed_matter/helium4/he_ii_tree_level_inputs.csv"
+      ]
+    },
+    {
+      "id": "frame_time",
+      "group": "frame_time",
+      "disposition": "UPSTREAM_CORRECTED",
+      "reason": "Applied upstream in the published measurements (Donnelly and Barenghi 1998; Grisenti et al. 2000); not recomputed here.",
+      "evidence": [
+        "docs/data/external/condensed_matter/helium4/he_ii_tree_level_inputs.csv"
+      ]
+    },
+    {
+      "id": "detector",
+      "group": "detector",
+      "disposition": "UPSTREAM_CORRECTED",
+      "reason": "Applied upstream in the published measurements (Donnelly and Barenghi 1998; Grisenti et al. 2000); not recomputed here.",
+      "evidence": [
+        "docs/data/external/condensed_matter/helium4/he_ii_tree_level_inputs.csv"
+      ]
+    },
+    {
+      "id": "processing",
+      "group": "processing",
+      "disposition": "MODELED",
+      "reason": "Tree-level sound speed from lam = 8 pi a m; fractional distance D with thresholds fixed in T015.",
+      "evidence": [
+        "core/03_lanes/open_system/t015_he_ii_tree_level.py",
+        "core/03_lanes/open_system/uet_si_bose_fluid.py"
+      ]
+    },
+    {
+      "id": "numerics",
+      "group": "numerics",
+      "disposition": "MODELED",
+      "reason": "Closed-form arithmetic; non-relativistic limit checked in test_si_bose_fluid.py.",
+      "evidence": [
+        "core/03_lanes/open_system/t015_he_ii_tree_level.py"
+      ]
+    }
+  ],
+  "error_budget": {
+    "unit": "m/s",
+    "numerical": "Floating point only.",
+    "approximation": "Tree level; corrections scale as sqrt(n a^3), unbounded for He II.",
+    "measurement": "Scattering-length interval +8/-18 angstrom propagated as a prediction interval.",
+    "systematic": "Density reused from the Topic 13 record; not cross-checked against the printed table.",
+    "omissions": "Beyond-mean-field and two-fluid effects not modelled (the point of the test).",
+    "dependence": "u1 and rho share one compilation; a is independent.",
+    "acceptance": "Outcome categories fixed in Test Card T015 (D <= 0.10 PASS, 0.10 < D <= 0.30 INCONCLUSIVE, D > 0.30 FAIL).",
+    "omission_limit": null
+  },
+  "identities": [
+    {
+      "path": "docs/data/external/condensed_matter/helium4/he_ii_tree_level_inputs.csv",
+      "kind": "working_file",
+      "role": "input",
+      "sha256": "5223b13e54e1c6448501c2f219b08fa6641b8acbe42a32410e37ca6de96cc6bf",
+      "availability": "REQUIRED"
+    },
+    {
+      "path": "core/03_lanes/open_system/uet_si_bose_fluid.py",
+      "kind": "working_file",
+      "role": "code",
+      "sha256": "62c37cd8661ee7ce3b1f357ca76dfa5ea28c47f1b178476a092e60a584ec3fc0",
+      "availability": "REQUIRED"
+    },
+    {
+      "path": "core/03_lanes/open_system/t015_he_ii_tree_level.py",
+      "kind": "working_file",
+      "role": "code",
+      "sha256": "7e4d48a3f75eab202ea98d60a155ca09c19d697bfe61d793a975f14ffef42c17",
+      "availability": "REQUIRED"
+    }
+  ],
+  "entrypoints": [
+    "core/03_lanes/open_system/t015_he_ii_tree_level.py",
+    "core/03_lanes/open_system/uet_si_bose_fluid.py"
+  ],
+  "evidence": [
+    "core/03_lanes/open_system/t015_he_ii_tree_level.py",
+    "core/03_lanes/open_system/uet_si_bose_fluid.py",
+    "docs/data/external/condensed_matter/helium4/he_ii_tree_level_inputs.csv"
+  ],
+  "claim_boundary": "Methodological coverage of the T015 comparison only. The evidence level is set in docs/standard. A failure removes only the chi = He-4 atom tree-level lane.",
+  "next_action": "Record Topic 13's He-4 Phi lane as a phenomenological closure outside the action, or add an author-approved layer-2 term."
+}

@@ -55,3 +55,5 @@
 ## 5. ผู้เขียนเลือก S2 (2026-11-16)
 
 ร่าง Test Card อยู่ที่ `docs/standard/tests/T015.json` (DRAFT ยังไม่ได้รัน) ข้อมูลอยู่ที่ `docs/data/external/condensed_matter/helium4/he_ii_tree_level_inputs.csv`
+
+ผลการรัน (2026-11-16): ทำนาย 848 m/s เทียบ 233.1 m/s, D = 2.31 → **FAILED** (`R_T015_HE_II_TREE_LEVEL`) ตัดเฉพาะ lane χ = อะตอม He-4 ที่ tree level

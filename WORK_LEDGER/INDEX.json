@@ -5,11 +5,11 @@
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
     "sources": 79,
-    "entries": 855,
+    "entries": 856,
     "by_stream": {
       "book-history": 94,
       "operations": 131,
-      "research": 629,
+      "research": 630,
       "review": 1
     },
     "exact_duplicates": 0,
@@ -410,8 +410,8 @@
     },
     {
       "path": "2026/2026-11-16.md",
-      "sha256": "f2e3cd9b3491f78c52747841435a52d6bc94d93d38a3539f96c8b0d8d80a8cb5",
-      "entries": 14
+      "sha256": "692cf0ccd9a8a9087082b571a0f7217ae1b2953f8270cc8b77d0bd432a6b15dc",
+      "entries": 15
     },
     {
       "path": "2026-08-14.md",
@@ -17469,9 +17469,29 @@
       "source": "2026/2026-11-16.md",
       "anchor": "t015-draft-he-ii-at-tree-level-from-the-parent-action",
       "start_line": 142,
-      "end_line": 150,
+      "end_line": 151,
       "title": "T015 draft: He II at tree level from the parent action",
-      "entry_sha256": "51bda17f959c25b82a7fb4357b18a3cd34d0525ebc1ec518df9c41a05793d478",
+      "entry_sha256": "d8987590808948b699c94690e0ed55a008faaefc16540f34506c1538fd437982",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-16",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-16.md#t015-run-he-ii-at-tree-level-failed",
+      "source": "2026/2026-11-16.md",
+      "anchor": "t015-run-he-ii-at-tree-level-failed",
+      "start_line": 152,
+      "end_line": 160,
+      "title": "T015 run: He II at tree level, FAILED",
+      "entry_sha256": "542bf460195de52f936794859dd52e4ef03a2144d167d045dd6b0f1ab75acd28",
       "stream": "research",
       "areas": [
         "research-core"

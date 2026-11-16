@@ -1,0 +1,47 @@
+{
+  "schema": "uet-result-v2",
+  "result_id": "R_T015_HE_II_TREE_LEVEL",
+  "claim_id": "C_T015_HE_II_TREE_LEVEL_LANE",
+  "level": "FAILED",
+  "test_card_id": "T015",
+  "outcome": "FAIL",
+  "numbers": [
+    {
+      "name": "c_pred_tree_level_a_104A",
+      "value": 848.0,
+      "uncertainty": null,
+      "unit": "m/s"
+    },
+    {
+      "name": "c_pred_range_a_86_to_112A",
+      "value": "771 to 880",
+      "uncertainty": null,
+      "unit": "m/s"
+    },
+    {
+      "name": "u1_obs_1p70K_Donnelly_Barenghi1998",
+      "value": 233.1,
+      "uncertainty": null,
+      "unit": "m/s"
+    },
+    {
+      "name": "D",
+      "value": 2.31,
+      "uncertainty": null,
+      "unit": "1"
+    },
+    {
+      "name": "n_a3",
+      "value": 25000.0,
+      "uncertainty": null,
+      "unit": "1"
+    }
+  ],
+  "producer": {
+    "script": "core/03_lanes/open_system/t015_he_ii_tree_level.py",
+    "commit": "c9ba72418"
+  },
+  "artifacts": [],
+  "date": "2026-11-16",
+  "note": "FAILED by the preregistered rule (D > 0.30): with chi = the He-4 atom and lam = 8 pi a m from the measured He-He scattering length, the tree-level O(2) sound speed is 848 m/s (771-880 m/s over the a interval), 3.6 times the measured first sound 233.1 m/s at 1.70 K. The fluid is far from dilute (n a^3 = 2.5e4). Scope: this removes only the lane chi = He-4 atom at tree level, which Topic 13 used to identify Phi with the He II superfluid fraction; it says nothing about the chi = nucleon lane of T005 or about a phenomenological two-fluid closure, which stays outside the action. Not blind (outcome known before drafting). Not UET-distinct: dilute-gas theory fails He II in the same way."
+}

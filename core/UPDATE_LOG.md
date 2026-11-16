@@ -379,3 +379,10 @@ commit: this commit
 แก้: ค่า first sound ใน SI-1 ที่เขียนจากความจำ (238) เป็น 233.1 m/s ตามตาราง
 ถัดไป: ผู้เขียนตรวจเกณฑ์และค่า ρ แล้วอนุมัติหรือแก้การ์ด; ยังไม่รัน
 commit: this commit
+
+## 2026-11-16 — T015: He II ไม่ได้มาจากภาค O(2) ของ action ที่ tree level → FAILED
+ทำ: รัน Test Card T015 (อนุมัติ c9ba72418) ความเร็วเสียง tree level ด้วย χ = อะตอม He-4 และ λ = 8πam จาก a = 104 Å
+ผล: ทำนาย 848 m/s (771–880) เทียบ first sound 233.1 m/s ที่ 1.70 K → D = 2.31 > 0.30 → FAILED; n a³ = 2.5e4
+ความหมาย: lane Φ = superfluid fraction ของ topic 13 ไม่ได้มาจาก action เป็น closure แบบ phenomenological; lane χ = nucleon ของ T005 ไม่กระทบ
+ถัดไป: ผู้เขียนเลือกทาง (ก) บันทึก Φ ของ topic 13 เป็น phenomenological หรือ (ข) เพิ่มเทอมชั้น 2 ใน action
+commit: this commit
