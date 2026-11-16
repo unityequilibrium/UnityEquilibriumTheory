@@ -1,0 +1,453 @@
+{
+  "version": 1,
+  "reviewed_by": "Codex (AI software-admission review; not author approval or scientific validation)",
+  "review_date": "2026-11-15",
+  "baseline_commit": "8ea95f49494ef587fe4298a74fb2f5392e44a76b",
+  "scope": "Software test admission configuration only; not a research-status or physics-acceptance registry.",
+  "source_identity": "SHA-256 of source bytes with CRLF converted to LF; raw scientific data is never normalized here.",
+  "reviews": {
+    "0.10_Fluid_Dynamics_Chaos/Code/03_Research/Research_Legacy_Accuracy.py": {
+      "source_sha256_lf": "7eafd6c6498ae7d6e9dc8d64dffa99cc61641e07e090d6dcad4b0fd7a04da241",
+      "role": "legacy fluid numerical producer and standard comparator",
+      "decision": "NOT_ADMITTED",
+      "evidence_symbols": [
+        "test_ns_accuracy",
+        "test_uet_accuracy"
+      ],
+      "reason": "Runs solver trajectories and returns error/correlation dictionaries; main writes an accuracy artifact. These are not automatically enforced pytest outcomes.",
+      "reopen_when": "Review both solver versions/readout conventions and safe runtime, isolate outputs, and define an adapter to existing criteria; the Navier-Stokes comparator need not call UET Core."
+    },
+    "0.10_Fluid_Dynamics_Chaos/Code/03_Research/Research_Legacy_Comparison.py": {
+      "source_sha256_lf": "4659508b97f3c5e92895c4def5fb16f2f683080e5deebfe2b55fa19972dbd463",
+      "role": "legacy fluid comparison producer",
+      "decision": "NOT_ADMITTED",
+      "evidence_symbols": [
+        "test_analytical_comparison"
+      ],
+      "reason": "Runs the fluid solver, computes correlation and writes analytical_vs_uet.json inside the test-named function before returning a result dictionary.",
+      "reopen_when": "Establish readout/solver correspondence and isolate the artifact before any rerun; returning a dictionary is not a pass criterion."
+    },
+    "0.10_Fluid_Dynamics_Chaos/Code/03_Research/Research_TurbulenceStress_Test.py": {
+      "source_sha256_lf": "cba8307cb749eaf5f000a63f2c4cb92869488d371cca178998f96afc874fc266",
+      "role": "genuine unittest stress test; execution deferred",
+      "decision": "NOT_ADMITTED",
+      "evidence_symbols": [
+        "TestMatrixTurbulence.setUp",
+        "TestMatrixTurbulence.test_high_reynolds_chaos"
+      ],
+      "reason": "Has self.assertTrue/self.fail, not merely printed success. Native setup uses a 50^3 grid, 1000 steps, unseeded perturbations, and stable logger/plot outputs under the topic.",
+      "reopen_when": "Verify the exact UETFluid3D owner, isolate all logger/plot writes and declare runtime/randomness prerequisites; do not shrink the grid, steps or original assertion after seeing a result."
+    },
+    "0.10_Fluid_Dynamics_Chaos/Code/03_Research/Research_VortexWake_Test.py": {
+      "source_sha256_lf": "010200c7292b55b42320bbc2afa2f228bb972cf026cd6b9b74bec549cfbd1162",
+      "role": "genuine unittest numerical test; execution deferred",
+      "decision": "NOT_ADMITTED",
+      "evidence_symbols": [
+        "TestMatrixVortex.setUp",
+        "TestMatrixVortex.test_wake_formation"
+      ],
+      "reason": "Has self.assertLess(wake_ratio,0.9) after 40 MatrixEvolution steps. Native comments distinguish hardcoded engine viscosity from the displayed fluid constants; import fallback and denominator/readout ownership need review.",
+      "reopen_when": "Resolve the engine path/parameter correspondence and declare safe execution without altering the native assertion or substituting fluid parameters to rescue its result."
+    },
+    "0.10_Fluid_Dynamics_Chaos/Code/04_Competitor/Competitor_NS_2D_Improved.py": {
+      "source_sha256_lf": "c9518ba744b82d5f358e177676e63a62efd514bc74a741c946113085a2401153",
+      "role": "standard Navier-Stokes comparator diagnostic",
+      "decision": "NOT_ADMITTED",
+      "evidence_symbols": [
+        "test_poiseuille_accuracy",
+        "test_lid_driven"
+      ],
+      "reason": "Runs standard-solver trajectories; accuracy thresholds are printed and returned as metrics, while the cavity entry reports runtime. No framework result is enforced.",
+      "reopen_when": "Preserve its baseline role and existing criteria, establish safe runtime/readouts, and adapt accuracy outcomes without claiming UET validation."
+    },
+    "0.10_Fluid_Dynamics_Chaos/Code/04_Competitor/Competitor_NS_2D.py": {
+      "source_sha256_lf": "589dd240a3108c8280234716c1baed88dcdb5269a24a1b2bbc2fa24bea89b48f",
+      "role": "standard Navier-Stokes comparator demonstration",
+      "decision": "NOT_ADMITTED",
+      "evidence_symbols": [
+        "test_lid_driven_cavity",
+        "test_poiseuille_flow"
+      ],
+      "reason": "The entries run a standard solver and return the solver object; a returned object is not an accuracy assertion. The module also contains a JSON result writer.",
+      "reopen_when": "Keep the standard-comparator role separate from UET, review bounded runtime/input conventions, and use a safe adapter for an existing accuracy criterion."
+    },
+    "0.12_Vacuum_Energy_Casimir/Data/03_Research/download_superconductor_data.py": {
+      "source_sha256_lf": "c3a3e98c009100a4ff2106df62b653c30f1ab24f89e31a003f719314964a17e3",
+      "role": "local data-working-copy generator",
+      "decision": "NOT_ADMITTED",
+      "evidence_symbols": [
+        "test_mcmillan",
+        "save_data"
+      ],
+      "reason": "Despite its filename, the inspected workflow writes a JSON working copy from in-script superconductivity rows and returns a McMillan average error; it is not a framework test.",
+      "reopen_when": "Treat this as data preparation, preserve source identities and isolate output; any separate benchmark needs a reviewed result adapter. Its directory does not establish a Casimir or superconductivity validation."
+    },
+    "0.13_Thermodynamic_Bridge/Code/03_Research/Research_Landauer.py": {
+      "source_sha256_lf": "3b6303c407c6f1a8fde11cc4b9ccee6925c1a185e84fd7af3614b7eb311e87db",
+      "role": "thermodynamic formula diagnostic and artifact producer",
+      "decision": "NOT_ADMITTED",
+      "evidence_symbols": [
+        "test_landauer_limit",
+        "test_bekenstein_bound",
+        "test_jacobson_temperature"
+      ],
+      "reason": "The three test-named entries calculate/print formula checks and return True unconditionally; separate module paths write a verification artifact.",
+      "reopen_when": "Use the native audit result rather than constant True returns, review source/quantity mapping, and isolate output; standard identities are not independent UET validation."
+    },
+    "0.13_Thermodynamic_Bridge/Code/03_Research/Research_Real_Data_Validation.py": {
+      "source_sha256_lf": "63cc898331c4330c573e4784a88c28ac2944fc5e6585739f6526edfb5e386196",
+      "role": "mixed external-comparison/formula diagnostic",
+      "decision": "NOT_ADMITTED",
+      "evidence_symbols": [
+        "test_landauer_real_data",
+        "test_area_theorem_ligo",
+        "test_bekenstein_entropy",
+        "test_josephson_quantum"
+      ],
+      "reason": "Some entries return conditional booleans for local experimental/formula comparisons; the Josephson entry returns True. Returned booleans are not enforced by pytest.",
+      "reopen_when": "Separate formula controls from empirical comparisons, locate admitted inputs/approved protocol as needed, and enforce native failures without new fitting or an implicit empirical rerun."
+    },
+    "0.14_Complex_Systems/Code/03_Research/Research_Complex_Systems.py": {
+      "source_sha256_lf": "8462bc475100cdab60c89a7bfbd987181333d0e96d5c9e8f43405e2130a6887d",
+      "role": "qualitative explanatory demonstration",
+      "decision": "NOT_ADMITTED",
+      "evidence_symbols": [
+        "test_stock_volatility",
+        "test_climate_feedback",
+        "test_heart_rate_variability",
+        "test_gini_coefficient"
+      ],
+      "reason": "All four test-named functions print qualitative interpretations and return True; they perform no numerical test call in their bodies.",
+      "reopen_when": "Specify a calculated quantity, source-backed model/readout and a real failure criterion before creating a numeric test; do not manufacture an expected answer from the prose."
+    },
+    "0.15_Cluster_Dynamics/Code/03_Research/Research_Stability_Experiment.py": {
+      "source_sha256_lf": "a707beec84f2da713864b862e29c7252ad9860169f3861bb9c7af3d07bb5acf1",
+      "role": "fixed-input virial illustration",
+      "decision": "NOT_ADMITTED",
+      "evidence_symbols": [
+        "test_stability"
+      ],
+      "reason": "Uses in-function K=1, U=-0.1, Theta=-1.9 and prints a branch for abs(2K+U+Theta)<0.1, but returns no status or assertion and does not execute UET Core.",
+      "reopen_when": "Keep it an illustrative parameter choice unless provenance and a non-self-confirming target are established; any reporting test must be labeled software-only, not cluster persistence validation."
+    },
+    "0.19_Gravity_GR/Code/03_Research/Research_G_Constant.py": {
+      "source_sha256_lf": "360026130818867fafb87a182d90ff1182b0114e4252e22f0f2b890cab0b5398",
+      "role": "source-constant checkpoint producer",
+      "decision": "NOT_ADMITTED",
+      "evidence_symbols": [
+        "test_gravitational_constant",
+        "write_artifact"
+      ],
+      "reason": "The real entry compares engine constants to a topic-local CODATA copy and writes an artifact. Existing admitted fixtures test failure/reporting only, not this real comparison or derivation of G.",
+      "reopen_when": "Keep its limited fixture scope separate; real execution requires reviewed engine/input correspondence, output isolation and an explicitly authorized constant-checkpoint protocol."
+    },
+    "0.23_Unity_Scale_Link/Code/03_Research/Research_Cross_Domain.py": {
+      "source_sha256_lf": "ee8a138d2928fdc02b92488cd5515a2edffe1e48aa5598b3700c94afa2a5b1ff",
+      "role": "research producer",
+      "decision": "NOT_ADMITTED",
+      "evidence_symbols": [
+        "test_galaxy_neural_transfer",
+        "test_economy_neural_correlation",
+        "test_fixed_parameter_diagnostic"
+      ],
+      "reason": "Generates random neural fields; economy analysis can return None for missing inputs or True for either ordering. Returned booleans/None are not enforced pytest outcomes.",
+      "reopen_when": "A declared data/seed protocol, explicit skip/failure contract, and isolated producer outputs; no external comparison is authorized by this review."
+    },
+    "0.23_Unity_Scale_Link/Code/04_Implementation/KappaCalculator.py": {
+      "source_sha256_lf": "4f9b5384d0f3c309f43819afe5486f483e52a2de76a5aed061babb72061d50ab",
+      "role": "parameter demonstration",
+      "decision": "NOT_ADMITTED",
+      "evidence_symbols": [
+        "test_kappa_calculator",
+        "KappaCalculator.calculate_nuclear_binding_kappa",
+        "KappaCalculator.validate_domain_prediction"
+      ],
+      "reason": "The test entry returns a calculator rather than enforcing its validation booleans. Nuclear binding returns a fixed 0.57; domain comparison uses in-file expected_kappa values.",
+      "reopen_when": "Trace parameter origins and distinguish calibration from independent comparison; assert the existing intended software contract before admission."
+    },
+    "0.23_Unity_Scale_Link/Code/04_Implementation/PaperGenerator.py": {
+      "source_sha256_lf": "7e328ab0c2f3e206cd63f06ec5e5306f51e914691c8df1735773d5a010b2c209",
+      "role": "document producer",
+      "decision": "NOT_ADMITTED",
+      "evidence_symbols": [
+        "test_paper_generator",
+        "PaperGenerator.generate_all_papers"
+      ],
+      "reason": "The entry generates paper dictionaries and writes JSON papers under Code/04_Implementation/Results/Papers; document generation is not a numerical regression.",
+      "reopen_when": "Separate document generation from safe fixture tests and use temporary output; generated prose cannot count as physics evidence."
+    },
+    "0.23_Unity_Scale_Link/Code/04_Implementation/ScaleBridge.py": {
+      "source_sha256_lf": "525e45a1a62eaa0608feb3039a0253261a940896ad3c66d811d7d7a0741209ca",
+      "role": "scaling demonstration and report producer",
+      "decision": "NOT_ADMITTED",
+      "evidence_symbols": [
+        "test_scale_bridge",
+        "ScaleBridge.plot_scaling_laws",
+        "ScaleBridge.generate_scaling_report"
+      ],
+      "reason": "The entry calls plotting/report writers and returns a bridge instance without enforcing validation results.",
+      "reopen_when": "A reviewed scaling-law provenance, explicit result contract, and output isolation are required; do not infer acceptance from object return or plots."
+    },
+    "0.23_Unity_Scale_Link/Code/04_Implementation/SubmissionManager.py": {
+      "source_sha256_lf": "56d5bec649deac9a4fbcf888b0161cc57fe2828e47882e9d1c15bb729baf7d65",
+      "role": "publication-workflow simulation",
+      "decision": "NOT_ADMITTED",
+      "evidence_symbols": [
+        "test_submission_manager",
+        "SubmissionManager.submit_to_nature_physics",
+        "SubmissionManager.simulate_peer_review"
+      ],
+      "reason": "Submission records are constructed locally and peer-review outcomes sampled randomly; the entry generates a report. These are not actual submissions or independent replication.",
+      "reopen_when": "Only a separately scoped simulated-workflow fixture test could be admitted; no journal contact, actual submission, or publication claim is authorized."
+    },
+    "0.23_Unity_Scale_Link/Code/04_Implementation/TopicValidator.py": {
+      "source_sha256_lf": "f6d124e05ad93983bcaa0771f31cc3e34c1fd970f9ffea5728dd5d1b045142fb",
+      "role": "parameter comparison and report producer",
+      "decision": "NOT_ADMITTED",
+      "evidence_symbols": [
+        "test_topic_validator",
+        "TopicValidator.validate_all_topics",
+        "TopicValidator.generate_validation_report"
+      ],
+      "reason": "The entry compares configured expected kappas through local helpers, writes reports beside source, and returns objects/results without a framework assertion.",
+      "reopen_when": "Review parameter/data independence, enforce native failure results, and isolate outputs before any numerical-test admission."
+    },
+    "0.23_Unity_Scale_Link/Code/05_Enhancement/CommunityAcceptance.py": {
+      "source_sha256_lf": "29213bc9da3b55d598b881985ebfcae074d0ec66cd8149beb4d003e1b7f77bb6",
+      "role": "packaging utility",
+      "decision": "NOT_ADMITTED",
+      "evidence_symbols": [
+        "test_community_acceptance",
+        "CommunityAcceptance.generate_community_metrics",
+        "CommunityAcceptance.save_community_package"
+      ],
+      "reason": "The entry writes repository/submission packages. Readiness metrics are constructed dictionaries, not observations of community acceptance.",
+      "reopen_when": "Fixture-only packaging tests need temporary output and explicit checks; no fabricated readiness value may be treated as external acceptance."
+    },
+    "0.23_Unity_Scale_Link/Code/05_Enhancement/Enhancement_Noether_Currents.py": {
+      "source_sha256_lf": "10851b1e693bdd46b5bcf1724efb89e87386da6492029146993ddabfa1d5aaba",
+      "role": "unreviewed numerical candidate",
+      "decision": "NOT_ADMITTED",
+      "evidence_symbols": [
+        "test_noether_currents",
+        "NoetherCurrents.comprehensive_conservation_check"
+      ],
+      "reason": "The entry generates an unseeded random I field, prints completion statements and returns diagnostic results without enforcing all conservation outcomes.",
+      "reopen_when": "Derivation/source-owner review, bounded deterministic inputs and an explicit physical-identity criterion are needed before numerical admission."
+    },
+    "0.23_Unity_Scale_Link/Code/05_Enhancement/Enhancement_Noether_Scale_Invariance.py": {
+      "source_sha256_lf": "81985e472afd1aa342bda2757390cebf41f051b920b658ef8d7a6f0cd0f2a03e",
+      "role": "unreviewed model extension and plot producer",
+      "decision": "NOT_ADMITTED",
+      "evidence_symbols": [
+        "test_scale_invariance",
+        "ScaleInvarianceEnhancement.plot_rg_flow"
+      ],
+      "reason": "The entry demonstrates its own scaling construction, creates plots and returns True independently of diagnostic outcomes.",
+      "reopen_when": "Review extension provenance/parent correspondence, define enforced criteria, and isolate plots; import of Core alone does not establish equivalence."
+    },
+    "0.23_Unity_Scale_Link/Code/05_Enhancement/Enhancement_Noether_U1_Gauge.py": {
+      "source_sha256_lf": "9f74fa680baacc20539ca2bf92f5375f49dbdba34410251836e2f922d58c4b98",
+      "role": "unreviewed model extension",
+      "decision": "NOT_ADMITTED",
+      "evidence_symbols": [
+        "test_U1_gauge_symmetry",
+        "U1GaugeEnhancement.enhanced_omega_with_U1"
+      ],
+      "reason": "The entry uses random fields, prints invariance/conservation diagnostics and unconditionally returns True; it compares an enhanced functional with its own alternative coupling.",
+      "reopen_when": "Review the added coupling's provenance and enforce independent invariance/conservation criteria on declared fixtures; do not modify Core to accept it."
+    },
+    "0.23_Unity_Scale_Link/Code/05_Enhancement/ExperimentalValidation.py": {
+      "source_sha256_lf": "5719d5af6c59f6876572bd57821600ecce359412709b7f51a1cc9d2837d91bc3",
+      "role": "synthetic-data demonstration and report producer",
+      "decision": "NOT_ADMITTED",
+      "evidence_symbols": [
+        "test_experimental_validation",
+        "ExperimentalValidation.benchmark_against_existing_theories",
+        "ExperimentalValidation.validate_cross_laboratory_reproducibility"
+      ],
+      "reason": "Accuracy-improvement strings are literals; named laboratories label synthetic data with simulated bias. The entry writes validation reports, not independent laboratory evidence.",
+      "reopen_when": "Keep synthetic controls separate from measured comparisons; any physical comparison requires admitted data and an approved Test Card, plus isolated output."
+    },
+    "0.23_Unity_Scale_Link/Code/05_Enhancement/MathematicalRigor.py": {
+      "source_sha256_lf": "8eb9ed5fd80edd0c4f021435bfda2a88679d99c8257a331415b8e4c870d72524",
+      "role": "proof-prose generator",
+      "decision": "NOT_ADMITTED",
+      "evidence_symbols": [
+        "test_mathematical_rigor",
+        "MathematicalRigor.prove_scale_invariance",
+        "MathematicalRigor.save_foundation_document"
+      ],
+      "reason": "The prove_* methods return dictionaries with literal PROVEN labels and prose steps; the test entry is defined twice and writes foundation documents. Labels do not establish a proof.",
+      "reopen_when": "Identify the controlling definitions, derive/check the claimed relations and enforce proof obligations; isolate document output and resolve duplicate entry definitions."
+    },
+    "0.23_Unity_Scale_Link/Code/05_Enhancement/PaperRevision.py": {
+      "source_sha256_lf": "cf43d929092aec0015633d3c231d6085d6e3e824778d5321dc18aad27db5e0da",
+      "role": "document revision producer",
+      "decision": "NOT_ADMITTED",
+      "evidence_symbols": [
+        "test_paper_revision",
+        "PaperRevision.generate_revised_papers",
+        "PaperRevision.save_revised_papers"
+      ],
+      "reason": "The entry constructs reviewer comments, revises prose and saves papers; successful document generation is not an external review or research test.",
+      "reopen_when": "Separate synthetic editorial workflow from evidence, with temporary output and a reviewed fixture contract before any utility-test execution."
+    },
+    "0.3_Cosmology_Hubble_Tension/Code/03_Research/Research_CMB_Analysis.py": {
+      "source_sha256_lf": "89da7527f0287f32c4669229cce6840ab43a301ffda8b97d48eb1a4beffb5243",
+      "role": "mixed descriptive/data-reading diagnostic",
+      "decision": "NOT_ADMITTED",
+      "evidence_symbols": [
+        "test_planck_parameters",
+        "test_cmb_peaks",
+        "test_bao"
+      ],
+      "reason": "Most entries return constant (True,0); the peak entry reads a legacy Planck path and can return False for missing data, without a framework assertion.",
+      "reopen_when": "Separate descriptive output from numeric checks, establish input/readout provenance, and adapt the existing missing-data/result contract without rerunning a physical comparison implicitly."
+    },
+    "0.3_Cosmology_Hubble_Tension/Code/03_Research/Research_Dark_Energy.py": {
+      "source_sha256_lf": "f2554399e7947a004aab3df26a50595fd1a20b89650244468047516fe94f60d3",
+      "role": "cosmology comparison and plot producer",
+      "decision": "NOT_ADMITTED",
+      "evidence_symbols": [
+        "test_hubble_tension",
+        "test_dark_energy_eqn",
+        "test_lambda_problem"
+      ],
+      "reason": "Returns boolean/error tuples, has an explicit False lambda-problem branch, and the dark-energy check creates plot outputs. Pytest would not enforce tuple contents.",
+      "reopen_when": "Keep native negative results, review the comparison protocol/parameter provenance, and isolate plots before adding an assertion adapter."
+    },
+    "0.4_Superconductivity_Superfluids/Code/03_Research/Experiment_Superconductor_Data.py": {
+      "source_sha256_lf": "86700fa0cb9862586d8196146cb8c801d1a40637bd96a46d315ef5dd8309f3f0",
+      "role": "McMillan benchmark and data/artifact producer",
+      "decision": "NOT_ADMITTED",
+      "evidence_symbols": [
+        "test_mcmillan",
+        "save_data",
+        "write_artifact"
+      ],
+      "reason": "The benchmark returns average error and rows; main also writes the in-script data working copy and artifact. Existing admitted tests cover only its decision helper/reporting, not this benchmark.",
+      "reopen_when": "Use admitted source inputs and a declared benchmark protocol with isolated data/artifact output; do not promote the limited helper tests into physical admission."
+    },
+    "0.4_Superconductivity_Superfluids/Code/03_Research/Research_Plasma.py": {
+      "source_sha256_lf": "1fbdf6331773e2ed1581901905ef865a435aba12c0e12a3cbf0ca08b16412126",
+      "role": "descriptive illustration",
+      "decision": "NOT_ADMITTED",
+      "evidence_symbols": [
+        "test_jet_record",
+        "test_parker_solar_probe"
+      ],
+      "reason": "Both entries print interpretations and return True without a numerical decision or failure signal.",
+      "reopen_when": "A source-backed observable, calculation path and enforced criterion are needed; printed examples alone are not a regression or physical comparison."
+    },
+    "0.4_Superconductivity_Superfluids/Code/03_Research/Research_Quantum_Phenomena.py": {
+      "source_sha256_lf": "9998b20f1eef313f23a9d23d6249aa8bcdf677cc3beb13c867c314f070acc4d8",
+      "role": "mixed descriptive/model demonstration",
+      "decision": "NOT_ADMITTED",
+      "evidence_symbols": [
+        "test_superconductivity",
+        "test_bec",
+        "test_uet_predictions"
+      ],
+      "reason": "Entries return constant success tuples; the BEC branch dynamically loads an engine and prints its computed value without enforcing a result condition.",
+      "reopen_when": "Declare which model/observable is being tested, separate narrative examples, and enforce a sourced criterion before numeric admission."
+    },
+    "0.4_Superconductivity_Superfluids/Data/03_Research/download_superconductor_data.py": {
+      "source_sha256_lf": "c3a3e98c009100a4ff2106df62b653c30f1ab24f89e31a003f719314964a17e3",
+      "role": "local data-working-copy generator",
+      "decision": "NOT_ADMITTED",
+      "evidence_symbols": [
+        "test_mcmillan",
+        "save_data"
+      ],
+      "reason": "Despite its filename, the inspected workflow writes a JSON working copy from in-script superconductivity rows and returns a McMillan average error; it is not a framework test.",
+      "reopen_when": "Treat this as data preparation, preserve source identities and isolate output; any separate benchmark needs a reviewed result adapter. Its directory does not establish a Casimir or superconductivity validation."
+    },
+    "0.5_Nuclear_Binding_Hadrons/Code/03_Research/Research_Strong_Force.py": {
+      "source_sha256_lf": "aa212effb694dcec0cf69d4ace95b645605467d86b0eee9eeaa8ec9ae8d42082",
+      "role": "hadron/strong-force comparison diagnostic",
+      "decision": "NOT_ADMITTED",
+      "evidence_symbols": [
+        "test_alpha_s_running",
+        "test_hadron_spectrum",
+        "test_confinement",
+        "test_cornell_potential"
+      ],
+      "reason": "Returns pass-rate/error tuples or a boolean/error pair; these numerical outcomes would not be asserted by pytest. The entries call topic-local model/comparator functions.",
+      "reopen_when": "Trace those laws and parameter/data origins, preserve original thresholds, and add an explicit outcome adapter under an admitted comparison or bounded regression protocol."
+    },
+    "0.6_Electroweak_Physics/Code/03_Research/Research_Beta_Minus.py": {
+      "source_sha256_lf": "34532ed069a41107fa9bef97b2812eac039cdf034dd02930430fae684657a094",
+      "role": "mixed decay comparison/descriptive diagnostic",
+      "decision": "NOT_ADMITTED",
+      "evidence_symbols": [
+        "test_isotope_lifetimes",
+        "test_beta_minus_mechanism",
+        "test_katrin_neutrino_mass"
+      ],
+      "reason": "The lifetime routine returns a conditional boolean/log-difference tuple, including a failure branch; other entries return constant success tuples for descriptive material.",
+      "reopen_when": "Separate numeric lifetime checks from descriptive entries, review source/model mapping, and enforce original outcomes without treating descriptions as tests."
+    },
+    "0.6_Electroweak_Physics/Code/03_Research/Research_Beta_Plus.py": {
+      "source_sha256_lf": "5f1628c9c771ffe47e529ebb714dcd5c2c825cafeba2637b8d5e5eec0a6bec91",
+      "role": "mixed electroweak comparison/descriptive diagnostic",
+      "decision": "NOT_ADMITTED",
+      "evidence_symbols": [
+        "test_ft_value_constancy",
+        "test_ckm_unitarity",
+        "test_pet_isotopes"
+      ],
+      "reason": "Numerical entries return boolean/metric tuples; mechanism and isotope-description entries return constant success tuples rather than framework assertions.",
+      "reopen_when": "Review the parent/parameter and source-data map, retain native conditions, and admit only an explicitly enforced numeric or software contract."
+    },
+    "0.6_Electroweak_Physics/Code/03_Research/Research_Neutron_Decay.py": {
+      "source_sha256_lf": "29ca2236bdba08681bab9721df95fcef62f17fbcd0aa598367dd40447b8cf163",
+      "role": "neutron/CKM comparison diagnostic",
+      "decision": "NOT_ADMITTED",
+      "evidence_symbols": [
+        "test_neutron_lifetime",
+        "test_ckm_vud",
+        "test_axial_coupling"
+      ],
+      "reason": "Computes and returns boolean/error pairs from topic-local relations and constants; a pytest call would ignore a returned False tuple unless adapted.",
+      "reopen_when": "Identify comparison provenance and the intended scope of each relation, then enforce the existing failure criteria without changing parameters or conducting an unapproved external comparison."
+    },
+    "0.6_Electroweak_Physics/Code/03_Research/Research_W_Mass_Anomaly_Exp.py": {
+      "source_sha256_lf": "4e960e20d33132d2151669fef4848706b5ec281871ca3c4c3daa125efa55d67a",
+      "role": "mixed measurement summary/model comparison",
+      "decision": "NOT_ADMITTED",
+      "evidence_symbols": [
+        "test_measurement_comparison",
+        "test_cdf_anomaly",
+        "test_lhc_consistency",
+        "test_uet_prediction"
+      ],
+      "reason": "Mixes a constant-success measurement summary with returned anomaly/consistency/prediction booleans and metrics; none are framework assertions.",
+      "reopen_when": "Separate measurement summaries from model tests and locate the existing source/parameter/protocol evidence before adapting its native decisions."
+    },
+    "0.7_Neutrino_Physics/Code/03_Research/Research_Neutrino_Extended.py": {
+      "source_sha256_lf": "0adcad7136d0ce8be6e490085f6cac7d2d94dcaf0cc66ba95639c12a30ced657",
+      "role": "mixed neutrino interpretation/diagnostic",
+      "decision": "NOT_ADMITTED",
+      "evidence_symbols": [
+        "test_katrin_limit",
+        "test_solar_flux_cno"
+      ],
+      "reason": "The KATRIN entry returns a boolean from a local mechanism; the solar entry returns True unconditionally. Pytest does not assert either returned value.",
+      "reopen_when": "Define the mechanism's source-backed test quantity and enforce its criterion separately from the descriptive solar example."
+    },
+    "0.7_Neutrino_Physics/Code/03_Research/Research_PMNS_Mixing.py": {
+      "source_sha256_lf": "2fd9b3f9349545b3f2595b421010d9b3ae8b82b3d6accab9b2c64770e36f1e67",
+      "role": "mixed mixing-angle comparison/descriptive diagnostic",
+      "decision": "NOT_ADMITTED",
+      "evidence_symbols": [
+        "test_pmns_angles",
+        "test_cp_violation",
+        "test_mass_hierarchy",
+        "test_ckm_pmns_comparison"
+      ],
+      "reason": "Angle/CP entries return boolean/metric pairs, while hierarchy/comparison illustrations return constant success tuples.",
+      "reopen_when": "Separate numerical comparison from illustration, trace the prediction/source dictionary, and enforce native outcomes only within a declared protocol."
+    }
+  }
+}

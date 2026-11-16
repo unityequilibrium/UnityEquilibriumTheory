@@ -17,10 +17,9 @@ from docs.core.thermal_energy_response_bridge import (
 
 
 ROOT = repo_root()
-AUDIT = ROOT / "docs/core/07_artifacts/topic13/t13_energy_response_bridge_audit.json"
+AUDIT = ROOT / 'core/07_artifacts/topic13/t13_energy_response_bridge_audit.json'
 PACKAGE = ROOT / (
-    "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/"
-    "graphite_heat_capacity_source_package.json"
+    'topics/0.13_Thermodynamic_Bridge/Data/03_Research/graphite_heat_capacity_source_package.json'
 )
 
 

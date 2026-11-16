@@ -17,8 +17,8 @@ import numpy as np
 from PIL import Image
 
 
-ROOT = Path(__file__).resolve().parents[5]
-TOPIC = ROOT / "docs/topics/0.13_Thermodynamic_Bridge"
+ROOT = Path(__file__).resolve().parents[4]
+TOPIC = ROOT / "topics/0.13_Thermodynamic_Bridge"
 RAW = TOPIC / "Data/03_Research/raw/ding_2022_fig1.png"
 CSV_PATH = TOPIC / "Data/03_Research/ding_2022_fig1d_digitized.csv"
 MANIFEST_PATH = TOPIC / "Data/03_Research/ding_2022_fig1d_digitized_manifest.json"

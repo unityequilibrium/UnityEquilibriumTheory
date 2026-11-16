@@ -1,4 +1,5 @@
 """Finite-external-momentum loop checks, including independent frequency sums."""
+from core.core_paths import canonical_existing_path
 
 import hashlib
 import json
@@ -102,7 +103,7 @@ def test_artifact_hashes_preserve_prior_failures_and_no_physical_unlock():
         "STATUS", "WHAT_CHANGED", "EQUATION_OR_MAPPING", "VERIFICATION", "CONTROLLING_BLOCKER",
         "NEXT_ACTION", "CLAIM_BOUNDARY"}
     for item in record["evidence_artifacts"]+record["protected_evidence_hashes"]:
-        assert hashlib.sha256((M["ROOT"]/item["path"]).read_bytes()).hexdigest() == item["sha256"]
+        assert hashlib.sha256((canonical_existing_path(M["ROOT"]/item["path"])).read_bytes()).hexdigest() == item["sha256"]
 
 
 def test_order_matched_inverse_uses_prior_tadpole_shift_not_a_new_counterterm():

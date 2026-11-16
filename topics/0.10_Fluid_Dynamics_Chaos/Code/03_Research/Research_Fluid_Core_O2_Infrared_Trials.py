@@ -10,11 +10,25 @@ from pathlib import Path
 import numpy as np
 
 ROOT=next(p for p in Path(__file__).resolve().parents if (p/"docs/core").is_dir())
-TOPIC=ROOT/"docs/topics/0.10_Fluid_Dynamics_Chaos"
+
+import sys as _sys
+if str(ROOT) not in _sys.path:
+    _sys.path.insert(0, str(ROOT))
+from core.core_paths import canonical_existing_path, canonical_path_for
+TOPIC=ROOT/"topics/0.10_Fluid_Dynamics_Chaos"
 CONTRACT=TOPIC/"Data/03_Research/fluid_core_o2_infrared_trials_contract.json"
 OUTPUT=TOPIC/"Result/artifacts/fluid_core_o2_infrared_trials_audit.json"
-REGISTRY=ROOT/"docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry_topic10_o2_infrared_trials_addendum.json"
+REGISTRY=canonical_existing_path(ROOT/"docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry_topic10_o2_infrared_trials_addendum.json")
 PRIOR_SCRIPT=TOPIC/"Code/03_Research/Research_Fluid_Core_O2_Vector_Refinement.py"
+
+def _archived_source_hash(input_hashes):
+    """Translate the recorded locator only; never rewrite or waive its digest."""
+    current = Path(__file__).resolve().relative_to(ROOT).as_posix()
+    matches = [key for key in input_hashes if canonical_path_for(key) == current]
+    if len(matches) != 1:
+        raise ValueError("archive must identify exactly one source locator")
+    return input_hashes[matches[0]]
+
 
 def load(path,name):
     spec=importlib.util.spec_from_file_location(name,path)
@@ -163,7 +177,7 @@ def audit(p,path):
        "physical_J04_executed","physical_J05_executed","physical_J06_executed","claim_promotion","dependency_unlock"}
     flag("admission_fields",set(p["admission"])==required)
     for key in sorted(required):flag("boundary/"+key,p["admission"].get(key) is False)
-    old=json.loads((ROOT/p["vector_artifact"]).read_text(encoding="utf-8"))
+    old=json.loads((canonical_existing_path(ROOT/p["vector_artifact"])).read_text(encoding="utf-8"))
     flag("historical_failed_targets_retained",old["status"]=="PASS_STABLE_VECTOR_DIAGNOSTIC_ONLY" and old["refinement_gate"]["target_pass"] is False)
     old_kernel_hash=kernel_ast(PRIOR_SCRIPT.read_text(encoding="utf-8"))
     new_kernel_hash=kernel_ast(Path(__file__).read_text(encoding="utf-8"))
@@ -173,17 +187,17 @@ def audit(p,path):
     first_path=TOPIC/"Result/previews/fluid_core_o2_infrared_trials_first_execution.json"
     first_source=TOPIC/"Result/previews/core_o2_infrared_trials_first_execution_verifier.py.txt"
     first=json.loads(first_path.read_text(encoding="utf-8"))
-    flag("first_failure_source_identity",hashlib.sha256(first_source.read_bytes()).hexdigest()==first["input_hashes"][Path(__file__).resolve().relative_to(ROOT).as_posix()])
+    flag("first_failure_source_identity",hashlib.sha256(first_source.read_bytes()).hexdigest()==_archived_source_hash(first["input_hashes"]))
     flag("first_failure_targets_preserved",first["locked_verification"]==rules)
     flag("first_failure_not_relabelled",first["status"]=="ENRICHED_SMOOTH_TRIAL_DIAGNOSTIC_FAIL" and bool(first["execution_errors"]))
-    source=json.loads((ROOT/p["vector_contract"]).read_text(encoding="utf-8"))
+    source=json.loads((canonical_existing_path(ROOT/p["vector_contract"])).read_text(encoding="utf-8"))
     flag("same_scientific_controls",p["mu"]==source["mu"] and p["lambda_exploratory"]==source["lambda_exploratory"] and p["temperatures"]==source["temperatures"])
     header_pass=all(q["pass"] for q in checks.values())
     def finish():
-        paths=[path,ROOT/p["card"],REGISTRY,Path(__file__).resolve(),ROOT/p["vector_contract"],ROOT/p["vector_verifier"],ROOT/p["vector_artifact"]]
-        paths += [ROOT/f for f in old["input_hashes"]]
+        paths=[path,canonical_existing_path(ROOT/p["card"]),REGISTRY,Path(__file__).resolve(),canonical_existing_path(ROOT/p["vector_contract"]),canonical_existing_path(ROOT/p["vector_verifier"]),canonical_existing_path(ROOT/p["vector_artifact"])]
+        paths += [canonical_existing_path(ROOT/f) for f in old["input_hashes"]]
         paths += [first_path,first_source,TOPIC/"CORE_O2_GOLDSTONE_INFRARED_GEOMETRY_REPAIR.md",
-                  ROOT/"docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry_topic10_o2_infrared_geometry_addendum.json"]
+                  canonical_existing_path(ROOT/"docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry_topic10_o2_infrared_geometry_addendum.json")]
         hashes={f.relative_to(ROOT).as_posix() if f.is_relative_to(ROOT) else f.name:hashlib.sha256(f.read_bytes()).hexdigest() for f in paths}
         passed=bool(rows) and all(q["pass"] for q in checks.values()) and not errors
         target_pass=bool(gates) and all(q["pass"] for q in gates)
@@ -198,7 +212,7 @@ def audit(p,path):
              "status":first["status"],"passing_check_count":first["passing_check_count"],
              "check_count":first["check_count"],"execution_errors":first["execution_errors"]},
          "basis_banks":banks,"state_results":rows,"execution_errors":errors,
-         "previous_failed_package":{"artifact":p["vector_artifact"],"sha256":hashes[p["vector_artifact"]],
+         "previous_failed_package":{"artifact":p["vector_artifact"],"sha256":hashes[canonical_path_for(p["vector_artifact"])],
              "status":old["status"],"refinement_gate":old["refinement_gate"]},
          "refinement_gate":{"status":"PASS_DECLARED_ENRICHED_SMOOTH_TARGETS_ONLY" if target_pass else "MEASURED_ENRICHED_SMOOTH_TARGETS_OPEN",
              "target_pass":target_pass,"state_targets":gates,"physical_admission":False,
@@ -221,10 +235,10 @@ def audit(p,path):
                   "Prior EVEN and cross-family failures are retained; no retroactive status promotion.",
                   "Scalar block reused, not rerun; no material heat-current or interacting admission."]}
     if not header_pass:return finish()
-    gal=json.loads((ROOT/source["galerkin_contract"]).read_text(encoding="utf-8"))
-    core=json.loads((ROOT/gal["core_source_contract"]).read_text(encoding="utf-8"))
+    gal=json.loads((canonical_existing_path(ROOT/source["galerkin_contract"])).read_text(encoding="utf-8"))
+    core=json.loads((canonical_existing_path(ROOT/gal["core_source_contract"])).read_text(encoding="utf-8"))
     cfg=core["configuration"];mu=p["mu"];m2=cfg["mass_squared"]/cfg["Z"];lam=p["lambda_exploratory"]/cfg["Z"]**2
-    g=load(ROOT/source["galerkin_verifier"],"infrared_prior_galerkin")
+    g=load(canonical_existing_path(ROOT/source["galerkin_verifier"]),"infrared_prior_galerkin")
     c=np.sqrt((mu*mu-m2)/(3*mu*mu-m2));tol=rules["algebra_relative_tolerance"]
     def bank(T,order,factor,family,delta=0.):
         key=(T,order,factor,family,delta)

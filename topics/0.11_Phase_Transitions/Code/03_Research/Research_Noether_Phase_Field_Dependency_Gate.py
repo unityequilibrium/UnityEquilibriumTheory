@@ -19,7 +19,7 @@ from typing import Any
 def _bootstrap() -> Path:
     current = Path(__file__).resolve()
     for parent in [current] + list(current.parents):
-        if (parent / "docs").exists() and (parent / "docs" / "core").exists():
+        if (parent / "docs").exists() and (parent / "core").exists():
             if str(parent) not in sys.path:
                 sys.path.insert(0, str(parent))
             return parent
@@ -28,14 +28,14 @@ def _bootstrap() -> Path:
 
 ROOT = _bootstrap()
 TOPIC = "0.11_Phase_Transitions"
-TOPIC_DIR = ROOT / "docs" / "topics" / TOPIC
+TOPIC_DIR = ROOT / "topics" / TOPIC
 DATA_DIR = TOPIC_DIR / "Data" / "03_Research"
 ARTIFACT_DIR = TOPIC_DIR / "Result" / "artifacts"
 
-CORE_VERIFICATION_DIR = ROOT / "docs" / "core" / "07_artifacts" / "verification"
-CORE_GATE_DIR = ROOT / "docs" / "core" / "07_artifacts" / "gates"
+CORE_VERIFICATION_DIR = ROOT / "core" / "07_artifacts" / "verification"
+CORE_GATE_DIR = ROOT / "core" / "07_artifacts" / "gates"
 CORE_STATE_MAP = CORE_VERIFICATION_DIR / "noether_phase_field_state_map_verification.json"
-CORE_FORMULA_AUDIT = ROOT / "docs" / "core" / "07_artifacts" / "correspondence" / "noether_phase_field_map_formula_audit.json"
+CORE_FORMULA_AUDIT = ROOT / "core" / "07_artifacts" / "correspondence" / "noether_phase_field_map_formula_audit.json"
 CORE_DEPENDENCY_GATE = CORE_GATE_DIR / "noether_phase_field_dependency_gate.json"
 CORE_PROGRAM_GATE = CORE_GATE_DIR / "uet_gr_research_program_gate.json"
 WAVE55_GATE = ARTIFACT_DIR / "0_11_structure_factor_ch_finite_k_next_path_decision_gate.json"

@@ -1,6 +1,7 @@
 """Focused contract tests for the UET Wave 1 research-room checkpoint."""
 
 from __future__ import annotations
+from core.core_paths import canonical_existing_path
 from docs.core.core_paths import canonical_artifact_path, repo_root
 
 import json
@@ -17,7 +18,7 @@ def read_json(relative: str) -> dict:
                 encoding="utf-8-sig"
             )
         )
-    return json.loads((ROOT / relative).read_text(encoding="utf-8-sig"))
+    return json.loads((canonical_existing_path(ROOT / relative)).read_text(encoding="utf-8-sig"))
 
 
 def test_wave1_contract_has_explicit_mapping_fields_and_rooms() -> None:

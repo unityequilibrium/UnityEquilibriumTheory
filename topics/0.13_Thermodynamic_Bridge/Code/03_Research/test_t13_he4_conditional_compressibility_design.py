@@ -1,4 +1,5 @@
 """Focused checks for the conditional He-4 response independence design."""
+from core.core_paths import canonical_existing_path
 
 import hashlib
 import importlib.util
@@ -39,6 +40,6 @@ def test_saved_inputs_are_current_and_no_holdout_is_used():
     paths = [entry["path"] for entry in AUDIT["evidence_artifacts"]]
     assert not any("xie" in path.lower() for path in paths)
     for entry in AUDIT["evidence_artifacts"]:
-        path = MODULE.ROOT / entry["path"]
+        path = canonical_existing_path(MODULE.ROOT / entry["path"])
         assert path.is_file()
         assert hashlib.sha256(path.read_bytes()).hexdigest() == entry["sha256"]

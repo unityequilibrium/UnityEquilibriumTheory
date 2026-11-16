@@ -34,12 +34,12 @@ CORE_REGRESSION_TIMEOUT_SECONDS = 300
 
 
 def load(path: Path) -> Any:
-    with path.open("r", encoding="utf-8-sig") as handle:
+    with canonical_existing_path(path).open("r", encoding="utf-8-sig") as handle:
         return json.load(handle)
 
 
 def sha256(path: Path) -> str:
-    return hashlib.sha256(path.read_bytes()).hexdigest()
+    return hashlib.sha256(canonical_existing_path(path).read_bytes()).hexdigest()
 
 
 def status_strings(value: Any) -> list[str]:
@@ -63,7 +63,7 @@ def evidence_audit(waves: list[dict[str, Any]]) -> tuple[list[dict[str, Any]], b
         for entry in wave.get("evidence", []):
             rel = entry.get("path")
             path = ROOT / rel if rel else ROOT / "__missing__"
-            exists = bool(rel and path.exists())
+            exists = bool(rel and canonical_existing_path(path).exists())
             current_hash = sha256(path) if exists else None
             current = bool(exists and entry.get("sha256") == current_hash)
             parse_ok = True
@@ -156,12 +156,12 @@ def build(*, run_tests: bool = False) -> dict[str, Any]:
     evidence_rows, evidence_present, hashes_current, failed_paths = evidence_audit(waves)
     wave_numbers = [wave.get("wave") for wave in waves]
     expected_numbers = list(range(12))
-    log_text = CLOSURE_LOG.read_text(encoding="utf-8") if CLOSURE_LOG.exists() else ""
+    log_text = canonical_existing_path(CLOSURE_LOG).read_text(encoding="utf-8") if canonical_existing_path(CLOSURE_LOG).exists() else ""
     required_docs = {
-        "closure_log": CLOSURE_LOG.exists(),
-        "foundation_report": REPORT.exists(),
-        "wave_update_log": WAVE_LOG.exists(),
-        "work_ledger": WORK_LEDGER.exists(),
+        "closure_log": canonical_existing_path(CLOSURE_LOG).exists(),
+        "foundation_report": canonical_existing_path(REPORT).exists(),
+        "wave_update_log": canonical_existing_path(WAVE_LOG).exists(),
+        "work_ledger": canonical_existing_path(WORK_LEDGER).exists(),
     }
     log_wave_coverage = {str(number): f"| {number} |" in log_text for number in expected_numbers}
     foundation_snapshot = foundation.get("source_and_calibration_snapshot", {})

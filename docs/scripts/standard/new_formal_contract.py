@@ -13,14 +13,14 @@ Example:
     --contract-id CORE_DEF_MAPPING_FORMAL_V1 \
     --question "Does the DEF map follow from the Jordan-frame action?" \
     --quantity "DEF alpha and beta" --formula-id UET_DEF_MAP \
-    --code docs/core/02_equations/covariant/uet_scalar_tensor_mapping.py \
-    --test docs/core/05_tests/physics/test_def_mapping.py \
-    --out docs/core/00_governance/calculation_contracts/def_mapping_formal.json
+    --code core/02_equations/covariant/uet_scalar_tensor_mapping.py \
+    --test core/05_tests/physics/test_def_mapping.py \
+    --out core/00_governance/calculation_contracts/def_mapping_formal.json
 
 Then run: python docs/scripts/audit/audit_calculation_completeness.py --changed origin/main --check
 
 Comparisons with observations (Test Cards) still need a PHYSICAL_COMPARISON
-contract; see docs/core/00_governance/calculation_contracts/t001_binary_pulsar_def_constraint.json
+contract; see core/00_governance/calculation_contracts/t001_binary_pulsar_def_constraint.json
 as the reference template.
 """
 
@@ -38,10 +38,30 @@ NOT_FORMAL = "not applicable to this formal derivation"
 
 
 def identity_sha256(root: Path, rel: str) -> str:
-    data = (root / rel).read_bytes()
+    source = resolve_repo_path(root, rel)
+    data = source.read_bytes()
     if Path(rel).suffix.lower() in TEXT_SUFFIXES:
         data = data.replace(b"\r\n", b"\n").replace(b"\r", b"\n")
     return hashlib.sha256(data).hexdigest()
+
+
+def resolve_repo_path(root: Path, rel: str) -> Path:
+    """Resolve explicit legacy Core/Topic locators without guessing by basename."""
+    if "\\" in rel or Path(rel).is_absolute() or Path(rel).drive:
+        raise ValueError(f"expected repository-relative POSIX path: {rel}")
+    base = root.resolve()
+    target = (base / rel).resolve()
+    if not target.is_relative_to(base):
+        raise ValueError(f"path escapes repository: {rel}")
+    if target.exists():
+        return target
+    if rel.startswith("docs/core/"):
+        moved = base / "core" / rel[len("docs/core/") :]
+    elif rel.startswith("docs/topics/"):
+        moved = base / "topics" / rel[len("docs/topics/") :]
+    else:
+        return target
+    return moved.resolve() if moved.exists() else target
 
 
 def build_contract(root: Path, contract_id: str, question: str, quantity: str,
@@ -103,7 +123,7 @@ def main(argv: list[str] | None = None) -> int:
     args = parser.parse_args(argv)
     contract = build_contract(args.root, args.contract_id, args.question, args.quantity,
                               args.formula_id, args.code, args.test, args.unit)
-    out = args.root / args.out
+    out = resolve_repo_path(args.root, args.out)
     out.parent.mkdir(parents=True, exist_ok=True)
     with open(out, "w", encoding="utf-8", newline="\n") as fh:
         fh.write(json.dumps(contract, indent=2, ensure_ascii=False) + "\n")

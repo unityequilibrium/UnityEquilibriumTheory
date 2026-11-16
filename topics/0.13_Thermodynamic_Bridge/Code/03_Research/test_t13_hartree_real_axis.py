@@ -1,4 +1,5 @@
 """PV/phase-space independence, contacts, scaling, domain and evidence tests."""
+from core.core_paths import canonical_existing_path
 
 import hashlib
 import json
@@ -162,7 +163,7 @@ def test_artifact_claims_only_scoped_real_axis_not_global_or_physical_closure():
                  "R_gen_added_as_state", "causal_leakage_threshold_changed"):
         assert record[flag] is False
     for item in record["evidence_artifacts"]+record["protected_evidence_hashes"]:
-        assert hashlib.sha256((M["ROOT"]/item["path"]).read_bytes()).hexdigest() == item["sha256"]
+        assert hashlib.sha256((canonical_existing_path(M["ROOT"]/item["path"])).read_bytes()).hexdigest() == item["sha256"]
 
 
 def test_changed_predecessor_hash_cannot_be_silently_renewed():

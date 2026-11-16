@@ -9,9 +9,14 @@ import runpy
 import numpy as np
 import pytest
 
-ROOT = Path(__file__).resolve().parents[5]
-PREFIX = "docs/topics/0.13_Thermodynamic_Bridge/"
-M = runpy.run_path(str(ROOT/(PREFIX+"Code/03_Research/Research_T13_Vacuum_Cut_Log.py")))
+ROOT = Path(__file__).resolve().parents[4]
+
+import sys as _sys
+if str(ROOT) not in _sys.path:
+    _sys.path.insert(0, str(ROOT))
+from core.core_paths import canonical_existing_path
+PREFIX = "topics/0.13_Thermodynamic_Bridge/"
+M = runpy.run_path(str(canonical_existing_path(ROOT/(PREFIX+"Code/03_Research/Research_T13_Vacuum_Cut_Log.py"))))
 
 
 @pytest.fixture(params=[1.05, 1.2])
@@ -176,7 +181,7 @@ def test_invalid_or_unclosed_prescriptions_are_rejected(case):
 
 
 def test_artifact_hashes_and_no_physical_or_holdout_unlock():
-    r = json.loads((ROOT/(PREFIX+"Result/artifacts/t13_vacuum_cut_log.json")).read_text())
+    r = json.loads((canonical_existing_path(ROOT/(PREFIX+"Result/artifacts/t13_vacuum_cut_log.json"))).read_text())
     assert r["verification_status"] == "PASS_SCOPED_VACUUM_CUT_LOG"
     assert all(r["checks"].values()) and len(r["report"]) == 11
     assert r["closure_level"] == "CLOSED_FOR_LANE"
@@ -186,7 +191,7 @@ def test_artifact_hashes_and_no_physical_or_holdout_unlock():
     assert r["thresholds"]["original_causal_leakage"] == 1e-6
     assert "R_gen" in r["ontology"]["excluded_state_variables"]
     for item in r["evidence_artifacts"]+r["protected_evidence_hashes"]:
-        assert hashlib.sha256((ROOT/item["path"]).read_bytes()).hexdigest() == item["sha256"]
+        assert hashlib.sha256((canonical_existing_path(ROOT/item["path"])).read_bytes()).hexdigest() == item["sha256"]
 
 
 def test_runtime_file_allowlist_excludes_holdout(monkeypatch):
@@ -201,7 +206,7 @@ def test_runtime_file_allowlist_excludes_holdout(monkeypatch):
     monkeypatch.setattr(Path, "read_bytes", read_bytes)
     monkeypatch.setattr(Path, "read_text", read_text)
     record = M["audit"]()
-    allowed = {(ROOT/item["path"]).resolve() for item in record["evidence_artifacts"]+record["protected_evidence_hashes"]}
+    allowed = {(canonical_existing_path(ROOT/item["path"])).resolve() for item in record["evidence_artifacts"]+record["protected_evidence_hashes"]}
     assert accessed and set(accessed) <= allowed
     assert all("xie" not in path.name.lower() for path in accessed)
     assert all(record["checks"].values())

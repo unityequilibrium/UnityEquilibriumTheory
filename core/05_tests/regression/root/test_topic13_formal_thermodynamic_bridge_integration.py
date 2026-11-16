@@ -12,9 +12,9 @@ from docs.core.t13_formal_thermodynamic_bridge_integration import (
 
 
 ROOT = repo_root()
-ARTIFACT = ROOT / "docs/core/07_artifacts/topic13/t13_formal_thermodynamic_bridge_integration_audit.json"
-DEPENDENCY = ROOT / "docs/core/07_artifacts/gates/uet_major_result_dependency_unlock_gate.json"
-FULL_GATE = ROOT / "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json"
+ARTIFACT = ROOT / 'core/07_artifacts/topic13/t13_formal_thermodynamic_bridge_integration_audit.json'
+DEPENDENCY = ROOT / 'core/07_artifacts/gates/uet_major_result_dependency_unlock_gate.json'
+FULL_GATE = ROOT / 'topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json'
 
 
 def test_formal_bridge_composes_all_declared_interfaces() -> None:

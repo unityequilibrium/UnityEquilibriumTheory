@@ -37,6 +37,7 @@ from _common import (  # noqa: E402
     SCHEMA_PATH,
     TESTS_DIR,
     THEORY_CARD_PATH,
+    current_record_path,
     load_json,
     record_files,
 )
@@ -159,7 +160,7 @@ class SchemaChecker:
         for entry in manifest["entries"]:
             if entry["visibility"] != "PUBLIC":
                 continue
-            path = root / entry["path"]
+            path = current_record_path(root, entry["path"])
             if not path.is_file():
                 self.errors.append(f"data {entry['data_id']}: file {entry['path']} missing")
                 continue
@@ -182,15 +183,17 @@ class SchemaChecker:
         which pass every local check but are absent from the repository.
         Skipped when the root is not a git work tree (unit-test fixtures).
         """
-        if not (self.root / rel).is_file():
+        resolved = current_record_path(self.root, rel)
+        if not resolved.is_file():
             self.errors.append(f"{label}: file {rel} missing")
             return
         if not self.in_git:
             return
-        proc = subprocess.run(["git", "-C", str(self.root), "ls-files", "--error-unmatch", "--", rel],
+        tracked_path = resolved.relative_to(self.root).as_posix()
+        proc = subprocess.run(["git", "-C", str(self.root), "ls-files", "--error-unmatch", "--", tracked_path],
                               capture_output=True, text=True)
         if proc.returncode != 0:
-            self.errors.append(f"{label}: {rel} is not tracked by git (ignored or never added; use git add -f if it is public)")
+            self.errors.append(f"{label}: {rel} (resolved to {tracked_path}) is not tracked by git (ignored or never added; use git add -f if it is public)")
 
     @property
     def in_git(self) -> bool:

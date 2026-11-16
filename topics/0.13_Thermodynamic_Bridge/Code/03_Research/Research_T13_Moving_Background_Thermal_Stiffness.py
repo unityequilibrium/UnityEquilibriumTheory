@@ -16,8 +16,14 @@ import runpy
 import sys
 
 import numpy as np
+from core.core_paths import canonical_existing_path
 
-ROOT = Path(__file__).resolve().parents[5]
+ROOT = Path(__file__).resolve().parents[4]
+
+import sys as _sys
+if str(ROOT) not in _sys.path:
+    _sys.path.insert(0, str(ROOT))
+from core.core_paths import canonical_existing_path
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
@@ -30,9 +36,9 @@ from docs.core.uet_o2_gaussian_thermal_stationarity_no_go import (
     mode_omega_sq_x_derivatives, thermal_gaussian_stationarity_no_go,
 )
 
-OPERATOR_PATH = "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/Research_T13_Conditional_TwoFluid_Operator.py"
-OPERATOR = runpy.run_path(str(ROOT / OPERATOR_PATH))
-OUTPUT = ROOT / "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/t13_moving_background_thermal_stiffness.json"
+OPERATOR_PATH = "topics/0.13_Thermodynamic_Bridge/Code/03_Research/Research_T13_Conditional_TwoFluid_Operator.py"
+OPERATOR = runpy.run_path(str(canonical_existing_path(canonical_existing_path(ROOT / OPERATOR_PATH))))
+OUTPUT = ROOT / "topics/0.13_Thermodynamic_Bridge/Result/artifacts/t13_moving_background_thermal_stiffness.json"
 SOURCE_PATHS = (*OPERATOR["INPUT_PATHS"], OPERATOR_PATH,
                 "docs/core/02_equations/o2/uet_o2_gaussian_thermal_stationarity_no_go.py",
                 "docs/core/02_equations/o2/uet_o2_gaussian_offshell_background.py",
@@ -162,7 +168,7 @@ def moving_pressure(t: float, mu: float, phi: float, xi: float, config,
 
 
 def audit() -> dict:
-    old = json.loads((ROOT / SOURCE_PATHS[-1]).read_text(encoding="utf-8"))
+    old = json.loads(canonical_existing_path(canonical_existing_path(ROOT / SOURCE_PATHS[-1])).read_text(encoding="utf-8"))
     config = natural_bridge_config()
     examples = []
     for anchor in old["examples"]:
@@ -221,7 +227,7 @@ def audit() -> dict:
         "amplitude_path_chain_rule": all(e["reference"]["path_chain_rule_absolute_residual"] < 1e-12 for e in examples),
     }
     paths = (*SOURCE_PATHS, Path(__file__).relative_to(ROOT).as_posix())
-    evidence = [{"path": p, "sha256": hashlib.sha256((ROOT/p).read_bytes()).hexdigest()} for p in paths]
+    evidence = [{"path": p, "sha256": hashlib.sha256(canonical_existing_path(canonical_existing_path(ROOT/p)).read_bytes()).hexdigest()} for p in paths]
     return {
         "major_result_id": "T13_TREE_RELAXED_THERMAL_PHASE_GRADIENT_CURVATURE",
         "topic": "0.13", "closure_level": "CLOSED_FOR_LANE" if all(checks.values()) else "PARTIAL",

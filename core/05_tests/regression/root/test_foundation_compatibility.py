@@ -4,6 +4,8 @@ from __future__ import annotations
 from docs.core.core_paths import repo_root
 
 import importlib.util
+import subprocess
+import sys
 from pathlib import Path
 
 
@@ -45,3 +47,23 @@ def test_audit_distinguishes_canonical_closure_from_legacy_comparators():
     assert findings["legacy_energy_conservation_claim"]["status"] == "NOT_ESTABLISHED"
     assert findings["covariant_gr_closed_limit"]["status"] == "COMPATIBLE_CONDITIONAL"
     assert findings["o2_to_legacy_double_well"]["status"] == "REJECTED_REDUCTION"
+
+
+def test_missing_compatibility_input_is_not_treated_as_empty_or_success(tmp_path):
+    module = load_audit_module()
+    module.ROOT = tmp_path
+    module.REGISTRY_PATH = tmp_path / "missing.json"
+    report = module.build_report()
+    assert report["audit_status"] == "FAIL"
+    assert report["compatibility_status"] == "BLOCKED"
+    assert "missing input: missing.json" in report["errors"]
+
+
+def test_no_write_compatibility_cli_preserves_historical_artifact(tmp_path):
+    module = load_audit_module()
+    before = module.ARTIFACT_PATH.read_bytes()
+    completed = subprocess.run([sys.executable, str(SCRIPT), "--no-write"], cwd=tmp_path,
+                               capture_output=True, text=True)
+    assert completed.returncode == 0, completed.stdout + completed.stderr
+    assert "compatibility_status=BLOCKED" in completed.stdout
+    assert module.ARTIFACT_PATH.read_bytes() == before

@@ -84,7 +84,7 @@ def repo(tmp_path: Path) -> Path:
 
 
 def full_set(root: Path) -> None:
-    write(root, "docs/core/theory_card.json", THEORY)
+    write(root, "core/theory_card.json", THEORY)
     write(root, "docs/standard/data_manifest.json", manifest())
     write(root, "data/cassini.csv", DATA_BYTES)
     write(root, "docs/standard/claims.json", CLAIMS)
@@ -125,6 +125,12 @@ def test_claim_level_must_be_backed_by_result(repo: Path) -> None:
 def test_raw_data_hash_lock(repo: Path) -> None:
     full_set(repo)
     write(repo, "data/cassini.csv", DATA_BYTES + b"tampered\n")
+    assert any("sha256 mismatch" in e for e in schema_errors(repo))
+
+
+def test_raw_data_line_endings_are_not_silently_normalized(repo: Path) -> None:
+    full_set(repo)
+    write(repo, "data/cassini.csv", DATA_BYTES.replace(b"\n", b"\r\n"))
     assert any("sha256 mismatch" in e for e in schema_errors(repo))
 
 

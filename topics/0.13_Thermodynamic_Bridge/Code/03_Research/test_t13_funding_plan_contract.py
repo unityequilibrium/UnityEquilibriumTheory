@@ -5,10 +5,21 @@ import hashlib
 import json
 from pathlib import Path
 
+from core.core_paths import canonical_existing_path
+
 
 TOPIC = Path(__file__).resolve().parents[2]
-ROOT = Path(__file__).resolve().parents[5]
+ROOT = Path(__file__).resolve().parents[4]
+
+import sys as _sys
+if str(ROOT) not in _sys.path:
+    _sys.path.insert(0, str(ROOT))
+from core.core_paths import canonical_existing_path
 PLAN = json.loads((TOPIC / "Data/03_Research/funding_portfolio_14d_plan.json").read_text(encoding="utf-8"))
+
+
+def current_path(locator):
+    return canonical_existing_path(canonical_existing_path(ROOT / locator))
 
 
 def test_model_recommendations_are_not_configuration_changes():
@@ -58,7 +69,7 @@ def test_planning_revision_cannot_complete_research_or_overwrite_core_scope():
 
 def test_plan_documents_and_latest_evidence_are_linked_without_holdout_reads():
     for field in ("plan_document", "goal_brief", "long_term_plan_document"):
-        assert (ROOT / PLAN[field]).is_file()
+        assert current_path(PLAN[field]).is_file()
     for field in ("conditional_operator_evidence_2026_10_01", "thermal_gradient_evidence_2026_10_01",
                   "thermal_oneloop_ward_current_evidence_2026_10_01", "finite_momentum_thermal_1pi_evidence_2026_10_01",
                   "polar_static_ir_observable_evidence_2026_10_01", "polar_dynamic_composite_evidence_2026_10_01",
@@ -66,7 +77,7 @@ def test_plan_documents_and_latest_evidence_are_linked_without_holdout_reads():
                   "hartree_external_response_evidence_2026_10_01", "hartree_gauge_current_evidence_2026_10_01",
                   "hartree_real_axis_evidence_2026_10_01"):
         evidence = PLAN[field]
-        path = ROOT / evidence["path"]
+        path = canonical_existing_path(canonical_existing_path(ROOT / evidence["path"]))
         assert hashlib.sha256(path.read_bytes()).hexdigest() == evidence["sha256"]
         record = json.loads(path.read_text(encoding="utf-8"))
         assert record["verification_status"] == evidence["verification_status"]
@@ -185,7 +196,7 @@ def test_portfolio_strategy_preserves_scientific_acceptance_and_existing_dates()
     for field in strategy["accepted_preliminary_evidence_fields"]:
         evidence = PLAN[field]
         assert evidence["closure_level"] == "CLOSED_FOR_LANE"
-        assert hashlib.sha256((ROOT / evidence["path"]).read_bytes()).hexdigest() == evidence["sha256"]
+        assert hashlib.sha256(current_path(evidence["path"]).read_bytes()).hexdigest() == evidence["sha256"]
 
 
 def test_follow_on_aims_are_result_linked_not_promises_of_inputs_or_funding():
@@ -221,7 +232,7 @@ def test_local_pole_successor_changes_next_question_not_full_acceptance():
     assert predecessor["inherited_soft_poles_evidence_field"] == field
     assert field in PLAN["portfolio_strategy_2026_10_01"]["accepted_preliminary_evidence_fields"]
     evidence = PLAN[field]
-    result = json.loads((ROOT/evidence["path"]).read_text(encoding="utf-8"))
+    result = json.loads(current_path(evidence["path"]).read_text(encoding="utf-8"))
     assert evidence["conditional_collisionless_soft_pole_computed"] is True
     assert result["conditional_collisionless_soft_pole_computed"] is True
     assert evidence["controlling_blocker"] == result["controlling_blocker"]
@@ -239,7 +250,7 @@ def test_finite_q_discontinuity_is_not_finite_q_pole_or_funding_acceptance():
     assert predecessor["inherited_finite_q_density_evidence_field"] == field
     assert field in PLAN["portfolio_strategy_2026_10_01"]["accepted_preliminary_evidence_fields"]
     evidence = PLAN[field]
-    path = ROOT/evidence["path"]
+    path = current_path(evidence["path"])
     result = json.loads(path.read_text(encoding="utf-8"))
     assert hashlib.sha256(path.read_bytes()).hexdigest() == evidence["sha256"]
     assert evidence["verification_status"] == result["verification_status"]
@@ -259,7 +270,7 @@ def test_actual_finite_q_pole_successor_preserves_physical_and_prior_boundaries(
     assert successor["inherited_fixed_Phi_finite_q_poles_evidence_field"] == field
     assert field in PLAN["portfolio_strategy_2026_10_01"]["accepted_preliminary_evidence_fields"]
     evidence = PLAN[field]
-    path = ROOT/evidence["path"]
+    path = current_path(evidence["path"])
     result = json.loads(path.read_text(encoding="utf-8"))
     assert hashlib.sha256(path.read_bytes()).hexdigest() == evidence["sha256"]
     assert evidence["verification_status"] == result["verification_status"] == "PASS_SCOPED_FINITE_Q_POLES"
@@ -299,7 +310,7 @@ def test_joint_Phi_static_successor_cannot_inherit_fixed_Phi_dynamic_or_full_acc
     assert current["inherited_joint_Phi_static_evidence_field"] == field
     assert field in PLAN["portfolio_strategy_2026_10_01"]["accepted_preliminary_evidence_fields"]
     evidence = PLAN[field]
-    path = ROOT/evidence["path"]
+    path = current_path(evidence["path"])
     result = json.loads(path.read_text(encoding="utf-8"))
     assert hashlib.sha256(path.read_bytes()).hexdigest() == evidence["sha256"]
     assert evidence["verification_status"] == result["verification_status"] == "PASS_SCOPED_JOINT_PHI_STATIC"
@@ -321,7 +332,7 @@ def test_joint_classical_Phi_response_is_computed_not_full_material_acceptance()
     assert latest["inherited_joint_Phi_response_evidence_field"] == field
     assert field in PLAN["portfolio_strategy_2026_10_01"]["accepted_preliminary_evidence_fields"]
     evidence = PLAN[field]
-    path = ROOT/evidence["path"]
+    path = current_path(evidence["path"])
     result = json.loads(path.read_text(encoding="utf-8"))
     assert hashlib.sha256(path.read_bytes()).hexdigest() == evidence["sha256"]
     assert evidence["verification_status"] == result["verification_status"] == "PASS_SCOPED_JOINT_PHI_RESPONSE"
@@ -344,7 +355,7 @@ def test_low_T_boundary_blocks_admission_without_retracting_response_or_acceptin
     assert successor["predecessor_validity_evidence_field"] == field
     assert field in PLAN["portfolio_strategy_2026_10_01"]["accepted_preliminary_evidence_fields"]
     evidence = PLAN[field]
-    path = ROOT/evidence["path"]
+    path = current_path(evidence["path"])
     result = json.loads(path.read_text(encoding="utf-8"))
     assert hashlib.sha256(path.read_bytes()).hexdigest() == evidence["sha256"]
     assert evidence["verification_status"] == result["verification_status"] == "PASS_SCOPED_LOW_T_EXCLUSION"
@@ -365,14 +376,14 @@ def test_new_phase_eft_thermal_lane_is_not_Hartree_repair_or_full_acceptance():
     successor = PLAN[PLAN["execution_review_2026_10_01"]["current_scientific_evidence_field"]]
     assert successor["phase_eft_predecessor_evidence_field"] == field
     evidence = PLAN[field]
-    path = ROOT/evidence["path"]
+    path = current_path(evidence["path"])
     result = json.loads(path.read_text(encoding="utf-8"))
     assert hashlib.sha256(path.read_bytes()).hexdigest() == evidence["sha256"]
     assert evidence["verification_status"] == result["verification_status"] == "PASS_SCOPED_TREE_MATCHED_LOW_T_EFT"
     assert evidence["branch_id"] == result["branch_id"] != PLAN[evidence["predecessor_validity_evidence_field"]]["branch_id"]
     assert evidence["controlling_blocker"] == result["controlling_blocker"]
     assert all(result["checks"].values())
-    assert (ROOT/evidence["measurement_card"]).is_file()
+    assert current_path(evidence["measurement_card"]).is_file()
     assert not result["measurement_design"]["physical_precision_or_lab_feasibility_established"]
     for key in ("old_Hartree_branch_repaired", "controlled_full_action_truncation_error_established",
                 "independent_alpha_Phi_K_admitted", "physical_Kubo_emitted", "g1_physical_unlock",
@@ -386,7 +397,7 @@ def test_interaction_successor_narrows_controller_without_full_thermal_acceptanc
     latest = PLAN[PLAN["execution_review_2026_10_01"]["current_scientific_evidence_field"]]
     assert latest["interaction_predecessor_evidence_field"] == field
     evidence = PLAN[field]
-    path = ROOT/evidence["path"]
+    path = current_path(evidence["path"])
     r = json.loads(path.read_text())
     assert hashlib.sha256(path.read_bytes()).hexdigest() == evidence["sha256"]
     assert evidence["verification_status"] == r["verification_status"] == "PASS_SCOPED_INTERACTION_KERNEL"
@@ -398,7 +409,7 @@ def test_interaction_successor_narrows_controller_without_full_thermal_acceptanc
                 "independent_alpha_Phi_K_admitted", "physical_Kubo_emitted", "g1_physical_unlock", "g2_science_unlock",
                 "full_core_unlock", "core_composition_gate_overwritten"):
         assert evidence[key] is r[key] is False
-    note = ROOT/"docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/T13_LOW_T_INTERACTIONS_2026-10-02.md"
+    note = ROOT/"topics/0.13_Thermodynamic_Bridge/Result/artifacts/T13_LOW_T_INTERACTIONS_2026-10-02.md"
     content = note.read_text()
     assert evidence["sha256"] in content
     assert all(k+":" in content for k in r["report"])
@@ -410,7 +421,7 @@ def test_vacuum_cut_log_successor_is_not_full_matching_or_physical_acceptance():
     field = latest["vacuum_predecessor_evidence_field"]
     assert field == "vacuum_cut_log_evidence_2026_10_03"
     evidence = PLAN[field]
-    path = ROOT/evidence["path"]
+    path = current_path(evidence["path"])
     r = json.loads(path.read_text())
     assert hashlib.sha256(path.read_bytes()).hexdigest() == evidence["sha256"]
     assert r["verification_status"] == evidence["verification_status"] == "PASS_SCOPED_VACUUM_CUT_LOG"
@@ -419,7 +430,7 @@ def test_vacuum_cut_log_successor_is_not_full_matching_or_physical_acceptance():
     assert r["real_nonlocal_linear_loop_computed"] and r["four_subtracted_reconstruction_checked"]
     assert r["local_matching_information"]["leading_on_shell_rank"] == 1
     assert not r["local_matching_information"]["four_lab_measurements_required_claimed"]
-    note = ROOT/"docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/T13_VACUUM_CUT_LOG_2026-10-03.md"
+    note = ROOT/"topics/0.13_Thermodynamic_Bridge/Result/artifacts/T13_VACUUM_CUT_LOG_2026-10-03.md"
     content = note.read_text()
     assert evidence["sha256"] in content
     assert all(name+":" in content for name in r["report"])
@@ -437,7 +448,7 @@ def test_thermal_cut_successor_does_not_accept_full_collision_matching_or_goal()
     field = latest["thermal_predecessor_evidence_field"]
     assert field == "thermal_cut_stiffness_evidence_2026_10_03"
     evidence = PLAN[field]
-    path = ROOT/evidence["path"]
+    path = current_path(evidence["path"])
     r = json.loads(path.read_text())
     assert hashlib.sha256(path.read_bytes()).hexdigest() == evidence["sha256"]
     assert evidence["verification_status"] == r["verification_status"] == "PASS_SCOPED_THERMAL_CUT_STIFFNESS"
@@ -448,7 +459,7 @@ def test_thermal_cut_successor_does_not_accept_full_collision_matching_or_goal()
     assert evidence["static_LO_thermal_coherence_checked"] is r["static_LO_thermal_coherence_checked"] is True
     for key in ("full_finite_T_collision_operator_computed", "higher_derivative_vertices_and_residues_matched", "full_real_self_energy_matched", "full_two_loop_pressure_computed", "full_SK_KMS_matching_closed", "controlled_full_action_truncation_error_established", "independent_alpha_Phi_K_admitted", "physical_Kubo_emitted", "g1_physical_unlock", "g2_science_unlock", "full_core_unlock", "core_composition_gate_overwritten"):
         assert evidence[key] is r[key] is False
-    content = (ROOT/"docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/T13_THERMAL_CUT_STIFFNESS_2026-10-03.md").read_text()
+    content = (ROOT/"topics/0.13_Thermodynamic_Bridge/Result/artifacts/T13_THERMAL_CUT_STIFFNESS_2026-10-03.md").read_text()
     assert evidence["sha256"] in content
     assert all(name+":" in content for name in r["report"])
     assert all(card["status"] == "PLANNED_NOT_ACCEPTED" for card in PLAN["result_level_execution_2026_10_01"]["result_cards"])
@@ -460,7 +471,7 @@ def test_acoustic_modal_matching_is_three_legs_not_full_response_or_goal():
     assert field == "acoustic_modal_cut_evidence_2026_10_03"
     assert field in PLAN["portfolio_strategy_2026_10_01"]["accepted_preliminary_evidence_fields"]
     evidence = PLAN[field]
-    path = ROOT/evidence["path"]
+    path = current_path(evidence["path"])
     result = json.loads(path.read_text())
     assert hashlib.sha256(path.read_bytes()).hexdigest() == evidence["sha256"]
     assert result["verification_status"] == evidence["verification_status"] == "PASS_SCOPED_ACOUSTIC_MODAL_CUT"
@@ -474,7 +485,7 @@ def test_acoustic_modal_matching_is_three_legs_not_full_response_or_goal():
                 "independent_alpha_Phi_K_admitted", "physical_Kubo_emitted", "g1_physical_unlock",
                 "g2_science_unlock", "full_core_unlock", "core_composition_gate_overwritten"):
         assert result[key] is evidence[key] is False
-    content = (ROOT/"docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/T13_ACOUSTIC_MODAL_CUTS_2026-10-03.md").read_text()
+    content = (ROOT/"topics/0.13_Thermodynamic_Bridge/Result/artifacts/T13_ACOUSTIC_MODAL_CUTS_2026-10-03.md").read_text()
     assert evidence["sha256"] in content and all(name+":" in content for name in result["report"])
     assert all(card["status"] == "PLANNED_NOT_ACCEPTED" for card in PLAN["result_level_execution_2026_10_01"]["result_cards"])
 
@@ -485,7 +496,7 @@ def test_pair_source_interface_is_not_complete_retarded_or_physical_response():
     assert field == "acoustic_source_pair_evidence_2026_10_03"
     assert field in PLAN["portfolio_strategy_2026_10_01"]["accepted_preliminary_evidence_fields"]
     evidence = PLAN[field]
-    path = ROOT/evidence["path"]
+    path = current_path(evidence["path"])
     result = json.loads(path.read_text())
     assert hashlib.sha256(path.read_bytes()).hexdigest() == evidence["sha256"]
     assert evidence["verification_status"] == result["verification_status"] == "PASS_SCOPED_PAIR_SOURCE_INTERFACE"
@@ -495,7 +506,7 @@ def test_pair_source_interface_is_not_complete_retarded_or_physical_response():
                 "all_parent_modes_and_quantum_Phi_loops_included", "full_SK_KMS_matching_closed", "physical_Kubo_emitted",
                 "independent_alpha_Phi_K_admitted", "full_core_unlock", "core_composition_gate_overwritten"):
         assert result[key] is evidence[key] is False
-    content = (ROOT/"docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/T13_ACOUSTIC_SOURCE_PAIR_2026-10-03.md").read_text()
+    content = (ROOT/"topics/0.13_Thermodynamic_Bridge/Result/artifacts/T13_ACOUSTIC_SOURCE_PAIR_2026-10-03.md").read_text()
     assert evidence["sha256"] in content and all(name+":" in content for name in result["report"])
     assert all(card["status"] == "PLANNED_NOT_ACCEPTED" for card in PLAN["result_level_execution_2026_10_01"]["result_cards"])
 
@@ -506,7 +517,7 @@ def test_Landau_source_and_support_bounds_are_not_complete_physical_response():
     assert field == "acoustic_source_Landau_evidence_2026_10_03"
     assert field in PLAN["portfolio_strategy_2026_10_01"]["accepted_preliminary_evidence_fields"]
     evidence = PLAN[field]
-    path = ROOT/evidence["path"]
+    path = current_path(evidence["path"])
     result = json.loads(path.read_text())
     assert hashlib.sha256(path.read_bytes()).hexdigest() == evidence["sha256"]
     assert evidence["verification_status"] == result["verification_status"] == "PASS_SCOPED_LANDAU_SOURCE_INTERFACE"
@@ -516,7 +527,7 @@ def test_Landau_source_and_support_bounds_are_not_complete_physical_response():
                 "all_parent_modes_and_quantum_Phi_loops_included", "full_SK_KMS_matching_closed", "physical_Kubo_emitted",
                 "independent_alpha_Phi_K_admitted", "controlled_full_action_truncation_error_established", "full_core_unlock", "core_composition_gate_overwritten"):
         assert result[key] is evidence[key] is False
-    content = (ROOT/"docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/T13_ACOUSTIC_SOURCE_LANDAU_2026-10-03.md").read_text()
+    content = (ROOT/"topics/0.13_Thermodynamic_Bridge/Result/artifacts/T13_ACOUSTIC_SOURCE_LANDAU_2026-10-03.md").read_text()
     assert evidence["sha256"] in content and all(name+":" in content for name in result["report"])
     assert result["prior_Xie_context_exposure_review"] == "REVIEW_REQUIRED"
     assert not result["xie_2026_accessed"] and not result["claim_promotion"]
@@ -529,7 +540,7 @@ def test_thermal_source_curvature_is_not_assigned_dynamic_contact_or_physics():
     assert field == "thermal_source_curvature_evidence_2026_10_03"
     assert field in PLAN["portfolio_strategy_2026_10_01"]["accepted_preliminary_evidence_fields"]
     evidence = PLAN[field]
-    path = ROOT/evidence["path"]
+    path = current_path(evidence["path"])
     result = json.loads(path.read_text())
     assert hashlib.sha256(path.read_bytes()).hexdigest() == evidence["sha256"]
     assert evidence["verification_status"] == result["verification_status"] == "PASS_SCOPED_THERMAL_SOURCE_CURVATURE"
@@ -540,7 +551,7 @@ def test_thermal_source_curvature_is_not_assigned_dynamic_contact_or_physics():
                 "physical_Kubo_emitted", "independent_alpha_Phi_K_admitted", "controlled_full_action_truncation_error_established",
                 "full_core_unlock", "core_composition_gate_overwritten"):
         assert result[key] is evidence[key] is False
-    content = (ROOT/"docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/T13_THERMAL_SOURCE_CURVATURE_2026-10-03.md").read_text()
+    content = (ROOT/"topics/0.13_Thermodynamic_Bridge/Result/artifacts/T13_THERMAL_SOURCE_CURVATURE_2026-10-03.md").read_text()
     assert evidence["sha256"] in content and all(name+":" in content for name in result["report"])
     assert result["prior_Xie_context_exposure_review"] == "REVIEW_REQUIRED" and not result["xie_2026_accessed"]
     assert not result["claim_promotion"]
@@ -553,7 +564,7 @@ def test_virtual_completion_is_named_and_does_not_unlock_physical_or_full_goal()
     assert field == "thermal_virtual_response_evidence_2026_10_03"
     assert field in PLAN["portfolio_strategy_2026_10_01"]["accepted_preliminary_evidence_fields"]
     evidence = PLAN[field]
-    path = ROOT/evidence["path"]
+    path = current_path(evidence["path"])
     result = json.loads(path.read_text())
     assert hashlib.sha256(path.read_bytes()).hexdigest() == evidence["sha256"]
     assert evidence["verification_status"] == result["verification_status"] == "PASS_SCOPED_THERMAL_VIRTUAL_RESPONSE"
@@ -567,7 +578,7 @@ def test_virtual_completion_is_named_and_does_not_unlock_physical_or_full_goal()
                 "physical_Kubo_emitted", "independent_alpha_Phi_K_admitted", "controlled_full_action_truncation_error_established",
                 "full_core_unlock", "core_composition_gate_overwritten"):
         assert evidence[key] is result[key] is False
-    content = (ROOT/"docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/T13_THERMAL_VIRTUAL_RESPONSE_2026-10-03.md").read_text()
+    content = (ROOT/"topics/0.13_Thermodynamic_Bridge/Result/artifacts/T13_THERMAL_VIRTUAL_RESPONSE_2026-10-03.md").read_text()
     assert evidence["sha256"] in content and all(name+":" in content for name in result["report"])
     assert not result["xie_2026_accessed"] and result["prior_Xie_context_exposure_review"] == "REVIEW_REQUIRED"
     assert all(card["status"] == "PLANNED_NOT_ACCEPTED" for card in PLAN["result_level_execution_2026_10_01"]["result_cards"])
@@ -579,7 +590,7 @@ def test_finite_q_static_population_is_not_assigned_collision_or_physical_transp
     assert field == "finite_q_thermal_source_evidence_2026_10_03"
     assert field in PLAN["portfolio_strategy_2026_10_01"]["accepted_preliminary_evidence_fields"]
     evidence = PLAN[field]
-    path = ROOT/evidence["path"]
+    path = current_path(evidence["path"])
     result = json.loads(path.read_text())
     assert hashlib.sha256(path.read_bytes()).hexdigest() == evidence["sha256"]
     assert evidence["verification_status"] == result["verification_status"] == "PASS_SCOPED_FINITE_Q_THERMAL_SOURCE"
@@ -593,7 +604,7 @@ def test_finite_q_static_population_is_not_assigned_collision_or_physical_transp
                 "full_two_loop_pressure_computed", "full_SK_KMS_matching_closed", "physical_Kubo_emitted", "independent_alpha_Phi_K_admitted",
                 "controlled_full_action_truncation_error_established", "full_core_unlock", "core_composition_gate_overwritten"):
         assert evidence[key] is result[key] is False
-    content = (ROOT/"docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/T13_FINITE_Q_THERMAL_SOURCE_2026-10-03.md").read_text()
+    content = (ROOT/"topics/0.13_Thermodynamic_Bridge/Result/artifacts/T13_FINITE_Q_THERMAL_SOURCE_2026-10-03.md").read_text()
     assert evidence["sha256"] in content and all(name+":" in content for name in result["report"])
     assert not result["xie_2026_accessed"] and result["prior_Xie_context_exposure_review"] == "REVIEW_REQUIRED"
     assert all(card["status"] == "PLANNED_NOT_ACCEPTED" for card in PLAN["result_level_execution_2026_10_01"]["result_cards"])
@@ -605,7 +616,7 @@ def test_noether_source_balance_is_first_order_gaussian_not_full_dissipation():
     assert field == "thermal_noether_response_evidence_2026_10_03"
     assert field in PLAN["portfolio_strategy_2026_10_01"]["accepted_preliminary_evidence_fields"]
     evidence = PLAN[field]
-    path = ROOT/evidence["path"]
+    path = current_path(evidence["path"])
     result = json.loads(path.read_text())
     assert hashlib.sha256(path.read_bytes()).hexdigest() == evidence["sha256"]
     assert result["verification_status"] == evidence["verification_status"] == "PASS_SCOPED_GAUSSIAN_NOETHER_RESPONSE"
@@ -620,7 +631,7 @@ def test_noether_source_balance_is_first_order_gaussian_not_full_dissipation():
                 "full_two_loop_pressure_computed", "full_SK_KMS_matching_closed", "physical_Kubo_emitted", "independent_alpha_Phi_K_admitted",
                 "controlled_full_action_truncation_error_established", "full_core_unlock", "core_composition_gate_overwritten"):
         assert evidence[key] is result[key] is False
-    content = (ROOT/"docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/T13_THERMAL_NOETHER_RESPONSE_2026-10-03.md").read_text()
+    content = (ROOT/"topics/0.13_Thermodynamic_Bridge/Result/artifacts/T13_THERMAL_NOETHER_RESPONSE_2026-10-03.md").read_text()
     assert evidence["sha256"] in content and all(name+":" in content for name in result["report"])
     assert not result["xie_2026_accessed"] and result["prior_Xie_context_exposure_review"] == "REVIEW_REQUIRED"
     assert all(card["status"] == "PLANNED_NOT_ACCEPTED" for card in PLAN["result_level_execution_2026_10_01"]["result_cards"])
@@ -632,7 +643,7 @@ def test_collisionless_soft_ray_does_not_accept_physical_transport_or_full_goal(
     assert field == "collisionless_soft_source_evidence_2026_10_03"
     assert field in PLAN["portfolio_strategy_2026_10_01"]["accepted_preliminary_evidence_fields"]
     evidence = PLAN[field]
-    path = ROOT/evidence["path"]
+    path = current_path(evidence["path"])
     result = json.loads(path.read_text())
     assert hashlib.sha256(path.read_bytes()).hexdigest() == evidence["sha256"]
     assert result["verification_status"] == evidence["verification_status"] == "PASS_SCOPED_COLLISIONLESS_SOFT_SOURCE"
@@ -646,7 +657,7 @@ def test_collisionless_soft_ray_does_not_accept_physical_transport_or_full_goal(
                 "full_two_loop_pressure_computed", "full_SK_KMS_matching_closed", "physical_Kubo_emitted", "independent_alpha_Phi_K_admitted",
                 "controlled_full_action_truncation_error_established", "full_core_unlock", "core_composition_gate_overwritten"):
         assert evidence[key] is result[key] is False
-    content = (ROOT/"docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/T13_COLLISIONLESS_SOFT_SOURCE_2026-10-03.md").read_text()
+    content = (ROOT/"topics/0.13_Thermodynamic_Bridge/Result/artifacts/T13_COLLISIONLESS_SOFT_SOURCE_2026-10-03.md").read_text()
     assert evidence["sha256"] in content and all(name+":" in content for name in result["report"])
     assert result["numerical_repair"]["first_failure_preserved"] and result["numerical_repair"]["finite_truncated_tail_gate_still_fails"]
     assert not result["xie_2026_accessed"] and result["prior_Xie_context_exposure_review"] == "REVIEW_REQUIRED"
@@ -660,7 +671,7 @@ def test_gaussian_work_identity_does_not_relabel_failed_grid_or_unlock_full_goal
     assert field in PLAN["portfolio_strategy_2026_10_01"]["observed_partial_evidence_fields"]
     assert field not in PLAN["portfolio_strategy_2026_10_01"]["accepted_preliminary_evidence_fields"]
     evidence = PLAN[field]
-    path = ROOT/evidence["path"]
+    path = current_path(evidence["path"])
     result = json.loads(path.read_text(encoding="utf-8"))
     assert hashlib.sha256(path.read_bytes()).hexdigest() == evidence["sha256"]
     assert evidence["verification_status"] == result["verification_status"] == "FAIL_SCOPED_GAUSSIAN_SOURCE_WORK"
@@ -673,7 +684,7 @@ def test_gaussian_work_identity_does_not_relabel_failed_grid_or_unlock_full_goal
     for key in ("leading_finite_pair_source_work_closed", "primary_covariance_entropy_defined", "full_energy_exchange_ledger_closed", "full_collision_operator_computed", "full_SK_KMS_matching_closed", "physical_Kubo_emitted", "independent_alpha_Phi_K_admitted", "full_core_unlock", "core_composition_gate_overwritten"):
         assert evidence[key] is result[key] is False
     assert all(x["closure_level"] == "CLOSED_FOR_LANE" for x in result["subresults"])
-    content = (ROOT/"docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/T13_GAUSSIAN_SOURCE_WORK_2026-10-03.md").read_text()
+    content = (ROOT/"topics/0.13_Thermodynamic_Bridge/Result/artifacts/T13_GAUSSIAN_SOURCE_WORK_2026-10-03.md").read_text()
     assert evidence["sha256"] in content and all(name+":" in content for name in result["report"])
     assert all(card["status"] == "PLANNED_NOT_ACCEPTED" for card in PLAN["result_level_execution_2026_10_01"]["result_cards"])
 
@@ -684,7 +695,7 @@ def test_even_work_remainder_does_not_accept_parent_error_or_physical_input():
     assert field == "gaussian_work_remainder_evidence_2026_10_03"
     assert field in PLAN["portfolio_strategy_2026_10_01"]["accepted_preliminary_evidence_fields"]
     evidence = PLAN[field]
-    path = ROOT/evidence["path"]
+    path = current_path(evidence["path"])
     result = json.loads(path.read_text())
     assert hashlib.sha256(path.read_bytes()).hexdigest() == evidence["sha256"]
     assert result["closure_level"] == evidence["closure_level"] == "CLOSED_FOR_LANE"
@@ -699,7 +710,7 @@ def test_even_work_remainder_does_not_accept_parent_error_or_physical_input():
                 "full_SK_KMS_matching_closed", "physical_Kubo_emitted", "independent_alpha_Phi_K_admitted",
                 "controlled_full_action_truncation_error_established", "full_core_unlock", "core_composition_gate_overwritten"):
         assert evidence[key] is result[key] is False
-    content = (ROOT/"docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/T13_GAUSSIAN_WORK_REMAINDER_2026-10-03.md").read_text()
+    content = (ROOT/"topics/0.13_Thermodynamic_Bridge/Result/artifacts/T13_GAUSSIAN_WORK_REMAINDER_2026-10-03.md").read_text()
     assert evidence["sha256"] in content and all(name+":" in content for name in result["report"])
     assert all(card["status"] == "PLANNED_NOT_ACCEPTED" for card in PLAN["result_level_execution_2026_10_01"]["result_cards"])
 
@@ -710,7 +721,7 @@ def test_density_readout_closure_does_not_admit_physical_measurement_or_full_goa
     assert field == "noether_density_readout_evidence_2026_10_03"
     assert field in PLAN["portfolio_strategy_2026_10_01"]["accepted_preliminary_evidence_fields"]
     evidence = PLAN[field]
-    path = ROOT/evidence["path"]
+    path = current_path(evidence["path"])
     result = json.loads(path.read_text())
     assert hashlib.sha256(path.read_bytes()).hexdigest() == evidence["sha256"]
     assert result["closure_level"] == evidence["closure_level"] == "CLOSED_FOR_LANE"
@@ -727,7 +738,7 @@ def test_density_readout_closure_does_not_admit_physical_measurement_or_full_goa
                 "old_source_work_audit_promoted", "full_core_unlock", "core_composition_gate_overwritten"):
         assert evidence[key] is result[key] is False
     for note in ("T13_NOETHER_DENSITY_READOUT_2026-10-03.md", "T13_DENSITY_SPECTROSCOPY_MEASUREMENT_CARD_2026-10-03.md"):
-        content = (ROOT/"docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts"/note).read_text()
+        content = (ROOT/"topics/0.13_Thermodynamic_Bridge/Result/artifacts"/note).read_text()
         assert evidence["sha256"] in content and all(name+":" in content for name in result["report"])
     assert result["external_numeric_rows_admitted"] == 0
     assert not result["xie_2026_accessed"] and result["prior_Xie_context_exposure_review"] == "REVIEW_REQUIRED"
@@ -741,7 +752,7 @@ def test_q5_information_does_not_admit_physical_precision_or_full_goal():
     assert field == "q5_dispersion_information_evidence_2026_10_03"
     assert field in PLAN["portfolio_strategy_2026_10_01"]["accepted_preliminary_evidence_fields"]
     evidence = PLAN[field]
-    path = ROOT/evidence["path"]
+    path = current_path(evidence["path"])
     result = json.loads(path.read_text())
     assert hashlib.sha256(path.read_bytes()).hexdigest() == evidence["sha256"]
     for key in ("closure_level", "verification_status", "controlling_blocker", "branch_id"):
@@ -756,7 +767,7 @@ def test_q5_information_does_not_admit_physical_precision_or_full_goal():
                 "full_core_unlock", "core_composition_gate_overwritten", "old_source_work_audit_promoted"):
         assert evidence[key] is result[key] is False
     for note in ("T13_Q5_DISPERSION_INFORMATION_2026-10-03.md", "T13_Q5_MEASUREMENT_INFORMATION_CARD_2026-10-03.md"):
-        text = (ROOT/"docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts"/note).read_text()
+        text = (ROOT/"topics/0.13_Thermodynamic_Bridge/Result/artifacts"/note).read_text()
         assert evidence["sha256"] in text and all(name+":" in text for name in result["report"])
     assert not result["xie_2026_accessed"] and result["prior_Xie_context_exposure_review"] == "REVIEW_REQUIRED"
     assert result["external_numeric_rows_admitted"] == 0 and not result["claim_promotion"]
@@ -769,7 +780,7 @@ def test_multi_q_budget_does_not_admit_noise_measurement_or_full_goal():
     assert field == "multi_q_estimator_evidence_2026_10_03"
     assert field in PLAN["portfolio_strategy_2026_10_01"]["accepted_preliminary_evidence_fields"]
     evidence = PLAN[field]
-    path = ROOT/evidence["path"]
+    path = current_path(evidence["path"])
     result = json.loads(path.read_text())
     assert hashlib.sha256(path.read_bytes()).hexdigest() == evidence["sha256"]
     for key in ("closure_level", "verification_status", "controlling_blocker", "branch_id", "major_result_id"):
@@ -784,7 +795,7 @@ def test_multi_q_budget_does_not_admit_noise_measurement_or_full_goal():
                 "core_composition_gate_overwritten", "old_source_work_audit_promoted"):
         assert evidence[key] is result[key] is False
     for note in ("T13_MULTI_Q_ESTIMATOR_2026-10-03.md", "T13_MULTI_Q_MEASUREMENT_WINDOW_CARD_2026-10-03.md"):
-        content = (ROOT/"docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts"/note).read_text()
+        content = (ROOT/"topics/0.13_Thermodynamic_Bridge/Result/artifacts"/note).read_text()
         assert evidence["sha256"] in content and all(name+":" in content for name in result["report"])
     assert result["external_numeric_rows_admitted"] == 0 and not result["external_parameter_fitting"]
     assert not result["xie_2026_accessed"] and result["prior_Xie_context_exposure_review"] == "REVIEW_REQUIRED"
@@ -797,7 +808,7 @@ def test_low_q_source_archive_does_not_promote_partial_or_physical_result():
     assert field in PLAN["portfolio_strategy_2026_10_01"]["observed_partial_evidence_fields"]
     assert field not in PLAN["portfolio_strategy_2026_10_01"]["accepted_preliminary_evidence_fields"]
     evidence = PLAN[field]
-    path = ROOT/evidence["path"]
+    path = current_path(evidence["path"])
     result = json.loads(path.read_text())
     assert hashlib.sha256(path.read_bytes()).hexdigest() == evidence["sha256"]
     for key in ("closure_level", "verification_status", "controlling_blocker", "branch_id", "major_result_id", "subresults"):
@@ -812,7 +823,7 @@ def test_low_q_source_archive_does_not_promote_partial_or_physical_result():
                 "controlled_full_action_truncation_error_established", "full_core_unlock", "core_composition_gate_overwritten", "old_source_work_audit_promoted"):
         assert evidence[key] is result[key] is False
     for note in ("T13_LOW_Q_SOURCE_BOUNDARY_2026-10-03.md", "T13_LOW_Q_ROUTE_DECISION_CARD_2026-10-03.md"):
-        content = (ROOT/"docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts"/note).read_text()
+        content = (ROOT/"topics/0.13_Thermodynamic_Bridge/Result/artifacts"/note).read_text()
         assert evidence["sha256"] in content and all(name+":" in content for name in result["report"])
     assert result["external_numeric_rows_admitted_to_UET_comparison"] == 0 and not result["external_UET_parameter_fitting"]
     assert not result["xie_2026_accessed"] and result["prior_Xie_context_exposure_review"] == "REVIEW_REQUIRED"

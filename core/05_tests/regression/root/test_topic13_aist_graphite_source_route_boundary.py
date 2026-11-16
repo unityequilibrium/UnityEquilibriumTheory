@@ -6,8 +6,8 @@ from pathlib import Path
 
 
 ROOT = repo_root()
-ARTIFACT = ROOT / "docs/core/07_artifacts/topic13/t13_aist_graphite_source_route_boundary_audit.json"
-FULL_GATE = ROOT / "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json"
+ARTIFACT = ROOT / 'core/07_artifacts/topic13/t13_aist_graphite_source_route_boundary_audit.json'
+FULL_GATE = ROOT / 'topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json'
 
 
 def test_aist_route_is_closed_at_public_reproducibility_boundary() -> None:

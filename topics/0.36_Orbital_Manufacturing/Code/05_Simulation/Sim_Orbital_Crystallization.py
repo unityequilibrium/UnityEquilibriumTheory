@@ -1,61 +1,20 @@
-import json, sys
+"""Legacy profile-threshold wrapper; not a physical simulation."""
+
 from pathlib import Path
-from datetime import datetime
+import sys
 
-def _bootstrap():
-    curr = Path(__file__).resolve()
-    for parent in [curr] + list(curr.parents):
-        if (parent / "docs").exists() and (parent / "docs" / "core").exists():
-            if str(parent) not in sys.path:
-                sys.path.insert(0, str(parent))
-            return parent
-    return None
+ROOT = Path(__file__).resolve().parents[4]
+if str(ROOT) not in sys.path:
+    sys.path.insert(0, str(ROOT))
 
-ROOT = _bootstrap()
+from topics._profile_thresholds import profile_cli, run_profile_check
+
 topic_path = Path(__file__).resolve().parents[2]
 
-def run_simulation():
-    data_file = topic_path / "Data" / "05_Simulation" / "empirical_orbital_profile.json"
-    if not data_file.exists():
-        print(f"CRITICAL: Empirical data missing at {data_file}")
-        sys.exit(1)
 
-    with open(data_file, "r", encoding="utf-8") as f:
-        data = json.load(f)
+def run_simulation(*, output_dir=None):
+    return run_profile_check(topic_path, "empirical_orbital_profile.json", output_dir=output_dir)
 
-    params = data["parameters"]
-    targets = data["targets"]
-
-    passed = True
-    for key, target_val in targets.items():
-        if key.startswith("min_"):
-            param_key = key[4:]
-            if params.get(param_key, 0) < target_val:
-                passed = False
-        elif key.startswith("max_"):
-            param_key = key[4:]
-            if params.get(param_key, 999999) > target_val:
-                passed = False
-
-    result = {
-        "metadata": {
-            "timestamp": datetime.now().isoformat(),
-            "topic": "0.36_Orbital_Manufacturing",
-            "status": "PASS" if passed else "FAIL"
-        },
-        "parameters": params,
-        "targets": targets
-    }
-
-    artifact_dir = topic_path / "Result" / "artifacts"
-    artifact_dir.mkdir(parents=True, exist_ok=True)
-    artifact_file = artifact_dir / "rd_sim_artifact.json"
-
-    with open(artifact_file, "w", encoding="utf-8") as f:
-        json.dump(result, f, indent=4)
-
-    print(f"Topic 0.36_Orbital_Manufacturing Sim Status: {result['metadata']['status']}")
-    return result
 
 if __name__ == "__main__":
-    run_simulation()
+    raise SystemExit(profile_cli(run_simulation))

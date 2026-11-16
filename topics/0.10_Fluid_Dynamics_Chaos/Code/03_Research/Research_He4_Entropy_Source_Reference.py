@@ -9,10 +9,15 @@ from pathlib import Path
 import numpy as np
 
 ROOT = next(p for p in Path(__file__).resolve().parents if (p / "docs/core").is_dir())
-TOPIC = ROOT / "docs/topics/0.10_Fluid_Dynamics_Chaos"
+
+import sys as _sys
+if str(ROOT) not in _sys.path:
+    _sys.path.insert(0, str(ROOT))
+from core.core_paths import canonical_existing_path
+TOPIC = ROOT / "topics/0.10_Fluid_Dynamics_Chaos"
 CONTRACT = TOPIC / "Data/03_Research/he4_entropy_source_and_reference_contract.json"
 CARD = TOPIC / "HE4_ENTROPY_SOURCE_AND_REFERENCE_CONTRACT.md"
-REGISTRY = ROOT / "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry_topic10_entropy_reference_addendum.json"
+REGISTRY = canonical_existing_path(ROOT / "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry_topic10_entropy_reference_addendum.json")
 OUTPUT = TOPIC / "Result/artifacts/he4_entropy_source_reference_audit.json"
 REFERENCE_PATH = TOPIC / "Code/03_Research/Research_Fluid_Two_Fluid_EOS_Reference.py"
 spec = importlib.util.spec_from_file_location("standard_two_fluid_entropy_reference", REFERENCE_PATH)
@@ -95,7 +100,7 @@ def audit(package, contract_path):
                 "claim_promotion", "dependency_unlock"):
         boolean("boundary_" + key, package[key] is False)
 
-    prior = json.loads((ROOT / comp["prior_source"]).read_text(encoding="utf-8"))
+    prior = json.loads((canonical_existing_path(ROOT / comp["prior_source"])).read_text(encoding="utf-8"))
     old_rows = {Decimal(row["raw_tokens"]["temperature_K"]): row for row in prior["rows"]}
     boolean("source_rows_three_by_two", len(package["rows"]) == 3)
     source_rows = []
@@ -211,7 +216,7 @@ def audit(package, contract_path):
     requirements = json.loads((TOPIC / "Data/03_Research/he4_two_fluid_thermodynamic_input_requirements.json").read_text(encoding="utf-8"))
     boolean("original_material_requirements_stay_null", all(i["value"] is None and i["uncertainty"] is None
             for i in requirements["required_inputs"]))
-    paths = [contract_path, CARD, REGISTRY, Path(__file__).resolve()] + [ROOT / name for name in package["reused_inputs"]]
+    paths = [contract_path, CARD, REGISTRY, Path(__file__).resolve()] + [canonical_existing_path(ROOT / name) for name in package["reused_inputs"]]
     hashes = {p.relative_to(ROOT).as_posix() if p.is_relative_to(ROOT) else p.name:
               hashlib.sha256(p.read_bytes()).hexdigest() for p in paths}
     passed = all(c["pass"] for c in checks.values())

@@ -2,8 +2,8 @@ import json
 from pathlib import Path
 
 
-ROOT = Path(__file__).resolve().parents[5]
-EVENT_PATH = ROOT / "docs/core/99_review/unresolved_assets/T13_HOLDOUT_EXPOSURE_2026_09_26.json"
+ROOT = Path(__file__).resolve().parents[4]
+EVENT_PATH = ROOT / 'core/99_review/unresolved_assets/T13_HOLDOUT_EXPOSURE_2026_09_26.json'
 
 
 def test_holdout_article_exposure_is_separated_from_numeric_payload_use() -> None:

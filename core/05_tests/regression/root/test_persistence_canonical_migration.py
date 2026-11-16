@@ -11,9 +11,9 @@ from docs.core import resource_selection_thermal_bridge as legacy_thermal
 
 def test_persistence_root_modules_forward_to_canonical_sources() -> None:
     names = {
-        "persistence": "docs.core.03_lanes.persistence.persistence_energy_diagnostic",
-        "cost_map": "docs.core.03_lanes.persistence.resource_selection_physical_cost_map",
-        "thermal": "docs.core.03_lanes.persistence.resource_selection_thermal_bridge",
+        "persistence": "core.03_lanes.persistence.persistence_energy_diagnostic",
+        "cost_map": "core.03_lanes.persistence.resource_selection_physical_cost_map",
+        "thermal": "core.03_lanes.persistence.resource_selection_thermal_bridge",
     }
     canonical = {key: importlib.import_module(name) for key, name in names.items()}
 
@@ -26,7 +26,7 @@ def test_persistence_root_modules_forward_to_canonical_sources() -> None:
 
 
 def test_persistence_package_exports_declared_surface() -> None:
-    package = importlib.import_module("docs.core.03_lanes.persistence")
+    package = importlib.import_module("core.03_lanes.persistence")
 
     for name in (
         "PersistenceEnergyConfig",

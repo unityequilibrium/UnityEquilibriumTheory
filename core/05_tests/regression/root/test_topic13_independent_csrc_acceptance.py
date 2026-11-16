@@ -1,4 +1,5 @@
 from __future__ import annotations
+from core.core_paths import canonical_existing_path
 from docs.core.core_paths import repo_root
 
 import json
@@ -9,7 +10,7 @@ ROOT = repo_root()
 
 
 def load(relative: str) -> dict:
-    return json.loads((ROOT / relative).read_text(encoding="utf-8-sig"))
+    return json.loads((canonical_existing_path(ROOT / relative)).read_text(encoding="utf-8-sig"))
 
 
 def test_independent_csrc_contract_keeps_current_routes_blocked() -> None:

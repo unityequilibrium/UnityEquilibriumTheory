@@ -17,17 +17,22 @@ import numpy as np
 from scipy.integrate import quad
 from scipy.optimize import brentq
 
-ROOT = Path(__file__).resolve().parents[5]
-PREFIX = "docs/topics/0.13_Thermodynamic_Bridge/"
+ROOT = Path(__file__).resolve().parents[4]
+
+import sys as _sys
+if str(ROOT) not in _sys.path:
+    _sys.path.insert(0, str(ROOT))
+from core.core_paths import canonical_existing_path
+PREFIX = "topics/0.13_Thermodynamic_Bridge/"
 CURRENT_CODE = PREFIX+"Code/03_Research/Research_T13_Hartree_Gauge_Current.py"
 CURRENT_ARTIFACT = PREFIX+"Result/artifacts/t13_hartree_gauge_current.json"
-G = runpy.run_path(str(ROOT/CURRENT_CODE))
+G = runpy.run_path(str(canonical_existing_path(ROOT/CURRENT_CODE)))
 F = G["F"]
 H = G["H"]
 BASIS = G["BASIS"]
 ROTATION = G["ROTATION"]
 SOURCE_METRIC = np.diag([1., 1., 1., -1., 1.])
-OUTPUT = ROOT/(PREFIX+"Result/artifacts/t13_hartree_real_axis.json")
+OUTPUT = canonical_existing_path(ROOT/(PREFIX+"Result/artifacts/t13_hartree_real_axis.json"))
 ORDERS = ((48, 48), (64, 64), (80, 80))
 POINT_TOLERANCE = G["POINT_TOLERANCE"]
 QUADRATURE_TOLERANCE = G["QUADRATURE_TOLERANCE"]
@@ -412,12 +417,12 @@ def integrated_delta_cut(q, omega, t, mu, a, b, order=48):
 
 def predecessor_hashes_match(record):
     """Do not silently accept a changed upstream calculation by renewing its hash."""
-    return all(hashlib.sha256((ROOT/item["path"]).read_bytes()).hexdigest() == item["sha256"]
+    return all(hashlib.sha256((canonical_existing_path(ROOT/item["path"])).read_bytes()).hexdigest() == item["sha256"]
                for item in record["evidence_artifacts"]+record["protected_evidence_hashes"])
 
 
 def audit():
-    predecessor = json.loads((ROOT/CURRENT_ARTIFACT).read_text(encoding="utf-8"))
+    predecessor = json.loads((canonical_existing_path(ROOT/CURRENT_ARTIFACT)).read_text(encoding="utf-8"))
     lineage_matches = predecessor_hashes_match(predecessor)
     protected_before = {item["path"]: item["sha256"]
                         for item in predecessor["protected_evidence_hashes"]}
@@ -524,7 +529,7 @@ def audit():
         "negative_frequency_current_reality": all(e["retarded_current_reality_residual"] < QUADRATURE_TOLERANCE for e in examples),
         "natural_energy_scaling_not_SI_mapping": all(e["unit_scaling_disagreement"] < QUADRATURE_TOLERANCE for e in examples),
         "verification_eta_approaches_exact_PV_not_output_width": all(all(y["angular_distance_to_exact_limit"] < x["angular_distance_to_exact_limit"] for x, y in zip(e["upper_half_plane_to_exact_angular_limit"], e["upper_half_plane_to_exact_angular_limit"][1:])) for e in examples),
-        "protected_predecessor_and_core_hashes_unchanged": all(hashlib.sha256((ROOT/p).read_bytes()).hexdigest() == h for p, h in protected_before.items()),
+        "protected_predecessor_and_core_hashes_unchanged": all(hashlib.sha256((canonical_existing_path(ROOT/p)).read_bytes()).hexdigest() == h for p, h in protected_before.items()),
     }
     passed = all(checks.values())
     evidence = (CURRENT_ARTIFACT, CURRENT_CODE, G["FIELD_ARTIFACT"], G["FIELD_CODE"],
@@ -550,7 +555,7 @@ def audit():
         "thresholds": {"point_and_vacuum_absolute": POINT_TOLERANCE, "radial_quadrature_absolute": QUADRATURE_TOLERANCE, "Ward_absolute": WARD_TOLERANCE, "on_shell_slope_relative": 1e-6},
         "config": {"orders": ORDERS, "vacuum_order": 96, "endpoint_scans": [512, 1024], "output_imaginary_width": 0., "radial_domain": "0<=k<infinity", "UV_mapping": "x=lo+(1-lo)*(1-sqrt(1-u^2))", "eta_is_only_a_verification_sequence": True},
         "numerical_arithmetic": {"longdouble_mantissa_bits": int(np.finfo(np.longdouble).nmant), "cancellation_safe_log1p_and_on_shell_residue_identity": True, "numerical_errors_are_not_physical_uncertainties": True, "certified_numerical_error_bound": False},
-        "evidence_artifacts": [{"path": p, "sha256": hashlib.sha256((ROOT/p).read_bytes()).hexdigest()} for p in evidence],
+        "evidence_artifacts": [{"path": p, "sha256": hashlib.sha256((canonical_existing_path(ROOT/p)).read_bytes()).hexdigest()} for p in evidence],
         "protected_evidence_hashes": [{"path": p, "sha256": h} for p, h in protected_before.items()],
         "source_contact_convention": predecessor["source_contact_convention"],
         "method_references": [{"url": "https://arxiv.org/pdf/hep-ph/0203008", "locator": "external action/source Ward construction", "role": "established_method_not_UET_novelty"}, {"url": "https://arxiv.org/pdf/hep-ph/9802370", "locator": "IV pair/scattering spectral delta functions and branch-cut dynamics", "role": "method_context_different_scalar_QED_model_not_UET_validation"}],

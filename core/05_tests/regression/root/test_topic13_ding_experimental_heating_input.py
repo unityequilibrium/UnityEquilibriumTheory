@@ -9,17 +9,15 @@ import pytest
 
 ROOT = repo_root()
 PACKAGE = ROOT / (
-    "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/"
-    "ding_2022_experimental_heating_input_source_package.json"
+    'topics/0.13_Thermodynamic_Bridge/Data/03_Research/ding_2022_experimental_heating_input_source_package.json'
 )
-AUDIT = ROOT / "docs/core/07_artifacts/topic13/t13_ding_experimental_heating_input_boundary_audit.json"
+AUDIT = ROOT / 'core/07_artifacts/topic13/t13_ding_experimental_heating_input_boundary_audit.json'
 GATE = ROOT / (
-    "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/"
-    "topic13_full_thermodynamic_bridge_core_ready_gate.json"
+    'topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json'
 )
 
 
-DEPENDENCY = ROOT / "docs/core/07_artifacts/gates/uet_major_result_dependency_unlock_gate.json"
+DEPENDENCY = ROOT / 'core/07_artifacts/gates/uet_major_result_dependency_unlock_gate.json'
 
 def load(path: Path) -> dict:
     return json.loads(path.read_text(encoding="utf-8-sig"))

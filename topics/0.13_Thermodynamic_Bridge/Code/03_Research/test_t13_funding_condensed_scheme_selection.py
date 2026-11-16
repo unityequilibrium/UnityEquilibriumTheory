@@ -5,9 +5,14 @@ import json
 from pathlib import Path
 
 
-ROOT = Path(__file__).resolve().parents[5]
+ROOT = Path(__file__).resolve().parents[4]
+
+import sys as _sys
+if str(ROOT) not in _sys.path:
+    _sys.path.insert(0, str(ROOT))
+from core.core_paths import canonical_existing_path
 DECISION = ROOT / (
-    "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/"
+    "topics/0.13_Thermodynamic_Bridge/Result/artifacts/"
     "t13_funding_condensed_scheme_selection_2026-09-28.json"
 )
 
@@ -17,7 +22,7 @@ def test_scheme_selection_sources_are_current():
     assert decision["closure_level"] == "CLOSED_FOR_LANE"
     assert decision["status"] == "PASS_ROUTE_SELECTION_ONLY"
     for path, expected_hash in decision["source_hashes"].items():
-        actual_hash = hashlib.sha256((ROOT / path).read_bytes()).hexdigest()
+        actual_hash = hashlib.sha256((canonical_existing_path(ROOT / path)).read_bytes()).hexdigest()
         assert actual_hash == expected_hash, path
     assert len(decision["primary_sources"]) >= 4
     assert len({item["id"] for item in decision["primary_sources"]}) == len(

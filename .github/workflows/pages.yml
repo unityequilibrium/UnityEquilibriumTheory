@@ -27,7 +27,25 @@ jobs:
       - uses: actions/configure-pages@v5
       - name: Prepare a disposable Pages source
         run: |
-          cp -a docs _pages_source
+          mkdir -p _pages_source
+          rsync -a \
+            --exclude='**/raw/**' --exclude='**/Raw/**' --exclude='**/1_raw/**' \
+            --exclude='**/private/**' --exclude='**/.env*' \
+            --exclude='*.sqlite' --exclude='*.sqlite3' --exclude='*.db' \
+            --exclude='*.pem' --exclude='*.key' \
+            docs/ _pages_source/
+          rsync -a \
+            --exclude='**/raw/**' --exclude='**/Raw/**' --exclude='**/1_raw/**' \
+            --exclude='**/private/**' --exclude='**/.env*' \
+            --exclude='*.sqlite' --exclude='*.sqlite3' --exclude='*.db' \
+            --exclude='*.pem' --exclude='*.key' \
+            core/ _pages_source/core/
+          rsync -a \
+            --exclude='**/raw/**' --exclude='**/Raw/**' --exclude='**/1_raw/**' \
+            --exclude='**/private/**' --exclude='**/.env*' \
+            --exclude='*.sqlite' --exclude='*.sqlite3' --exclude='*.db' \
+            --exclude='*.pem' --exclude='*.key' \
+            topics/ _pages_source/topics/
           python3 docs/scripts/recovery/prepare_pages_math.py _pages_source
       - name: Build with Jekyll
         uses: actions/jekyll-build-pages@v1

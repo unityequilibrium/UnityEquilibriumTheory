@@ -1,6 +1,6 @@
 # Core Equation Research Instructions
 
-These instructions apply under `docs/core/`. They add to the root [`AGENTS.md`](../../AGENTS.md) and [`docs/STANDARD.md`](../STANDARD.md), which control.
+These instructions apply under `core/`. They add to the root [`AGENTS.md`](../AGENTS.md) and [`docs/STANDARD.md`](../docs/STANDARD.md), which control.
 
 ## Before changing an equation or operator
 
@@ -36,7 +36,7 @@ These instructions apply under `docs/core/`. They add to the root [`AGENTS.md`](
 - `08_history`: logs and notes.
 - `99_review`: quarantine.
 
-Use `docs/core/core_paths.py` as the path authority. Keep `__init__.py`, `AGENTS.md`, `README.md` and `CORE_FILE_INDEX.md` at the root.
+Use `core/core_paths.py` as the path authority. Keep `__init__.py`, `AGENTS.md`, `README.md` and `CORE_FILE_INDEX.md` at the root.
 
 ## Legacy and diagnostics
 
@@ -47,5 +47,5 @@ Use `docs/core/core_paths.py` as the path authority. Keep `__init__.py`, `AGENTS
 
 ## Wave close
 
-Run `pytest -m physics docs/core/05_tests/physics` and the three `docs/scripts/standard/` checks.
-Then add a log entry of 6 lines or fewer to `docs/core/UPDATE_LOG.md` (template in §9 of the standard) and a ledger entry, and make one scoped commit.
+Run `pytest -m physics core/05_tests/physics` and the three `docs/scripts/standard/` checks.
+Then add a log entry of 6 lines or fewer to `core/UPDATE_LOG.md` (template in §9 of the standard) and a ledger entry, and make one scoped commit.

@@ -1,3 +1,4 @@
+from core.core_paths import canonical_existing_path
 from docs.core.core_paths import repo_root
 import hashlib
 import json
@@ -11,13 +12,13 @@ RAW_REL = "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/lowitzer_2
 
 
 def load(relative: str) -> dict:
-    return json.loads((ROOT / relative).read_text(encoding="utf-8"))
+    return json.loads((canonical_existing_path(ROOT / relative)).read_text(encoding="utf-8"))
 
 
 def test_lowitzer_full_pair_is_source_locked_and_scoped() -> None:
     package = load(PACKAGE_REL)
     audit = load(AUDIT_REL)
-    raw = ROOT / RAW_REL
+    raw = canonical_existing_path(ROOT / RAW_REL)
 
     assert package["status"] == "SOURCE_LOCKED_THERMODYNAMIC_PAIR_COMPARATOR_MATERIAL_MAPPING_OPEN"
     assert package["source"]["payload_state"] == "FULL_TEXT_ARCHIVED"

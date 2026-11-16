@@ -1,4 +1,5 @@
 from __future__ import annotations
+from core.core_paths import canonical_existing_path
 from docs.core.core_paths import repo_root
 
 import json
@@ -9,7 +10,7 @@ from docs.core.topic13_closure_record_contract import validate_physical_transpor
 
 
 ROOT = repo_root()
-AUDIT = ROOT / "docs/core/07_artifacts/topic13/t13_he4_normal_viscosity_kubo_audit.json"
+AUDIT = ROOT / 'core/07_artifacts/topic13/t13_he4_normal_viscosity_kubo_audit.json'
 
 
 def test_physical_viscosity_record_passes_fail_closed_contract() -> None:
@@ -23,7 +24,7 @@ def test_physical_viscosity_record_passes_fail_closed_contract() -> None:
 
 
 def test_physical_viscosity_audit_closes_only_the_shear_transport_lane() -> None:
-    audit = json.loads(AUDIT.read_text(encoding="utf-8-sig"))
+    audit = json.loads(canonical_existing_path(AUDIT).read_text(encoding="utf-8-sig"))
     assert audit["status"] == "PASS_HE4_PHYSICAL_SHEAR_KUBO_TRANSPORT"
     assert all(audit["checks"].values())
     assert audit["major_result"]["closure_level"] == "CLOSED_FOR_LANE"

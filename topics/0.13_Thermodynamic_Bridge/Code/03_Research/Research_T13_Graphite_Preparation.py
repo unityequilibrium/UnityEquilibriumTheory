@@ -7,12 +7,17 @@ from pathlib import Path
 import shutil
 import sys
 
-ROOT=Path(__file__).resolve().parents[5]
+ROOT=Path(__file__).resolve().parents[4]
+
+import sys as _sys
+if str(ROOT) not in _sys.path:
+    _sys.path.insert(0, str(ROOT))
+from core.core_paths import canonical_existing_path
 sys.path.insert(0,str(ROOT))
 from docs.scripts.audit.audit_calculation_completeness import artifact_metadata,load_json
-BASE='docs/topics/0.13_Thermodynamic_Bridge/'
+BASE='topics/0.13_Thermodynamic_Bridge/'
 CONTRACT=BASE+'calculation_contracts/graphite_preparation_prediction.json'
-OUTPUT='docs/core/07_artifacts/topic13/t13_graphite_preparation_prediction.json'
+OUTPUT='core/07_artifacts/topic13/t13_graphite_preparation_prediction.json'
 
 
 def observe(x,z):
@@ -218,10 +223,10 @@ def main():
     g=p.add_mutually_exclusive_group(required=True)
     g.add_argument('--emit',action='store_true');g.add_argument('--check',action='store_true')
     a=p.parse_args()
-    r={**calculate(),**artifact_metadata(load_json(ROOT/CONTRACT),ROOT),
+    r={**calculate(),**artifact_metadata(load_json(canonical_existing_path(ROOT/CONTRACT)),ROOT),
        'generator_path':Path(__file__).relative_to(ROOT).as_posix()}
     text=json.dumps(r,ensure_ascii=False,indent=2,allow_nan=False)+'\n'
-    path=ROOT/OUTPUT
+    path=canonical_existing_path(ROOT/OUTPUT)
     if a.emit:
         if shutil.disk_usage(ROOT).free<100*1024*1024: raise SystemExit('Insufficient free space')
         path.write_text(text,encoding='utf-8',newline='\n')

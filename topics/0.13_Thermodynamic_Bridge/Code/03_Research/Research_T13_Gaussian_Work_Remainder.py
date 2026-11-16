@@ -17,7 +17,12 @@ import numpy as np
 from scipy.integrate import solve_ivp
 from scipy.linalg import block_diag
 
-ROOT = Path(__file__).resolve().parents[5]
+ROOT = Path(__file__).resolve().parents[4]
+
+import sys as _sys
+if str(ROOT) not in _sys.path:
+    _sys.path.insert(0, str(ROOT))
+from core.core_paths import canonical_existing_path
 LOCAL = Path(__file__).resolve().parent
 if str(LOCAL) not in sys.path:
     sys.path.insert(0, str(LOCAL))
@@ -27,8 +32,8 @@ FQ, VIRT, EFT, TH, MOD, PREFIX = WORK.FQ, WORK.VIRT, WORK.EFT, WORK.TH, WORK.MOD
 PREDECESSOR = PREFIX+"Result/artifacts/t13_gaussian_source_work.json"
 PREDECESSOR_SHA = "959441d2940f0aa209d72b8f8671d440807dd14ae9a80aff4357606f3bce4c62"
 REGISTRY = PREFIX+"Data/03_Research/t13_gaussian_work_remainder_registry.json"
-OUTPUT = ROOT/(PREFIX+"Result/artifacts/t13_gaussian_work_remainder.json")
-FIRST_FAILURE = ROOT/(PREFIX+"Result/artifacts/t13_gaussian_work_remainder_first_failure.json")
+OUTPUT = canonical_existing_path(ROOT/(PREFIX+"Result/artifacts/t13_gaussian_work_remainder.json"))
+FIRST_FAILURE = canonical_existing_path(ROOT/(PREFIX+"Result/artifacts/t13_gaussian_work_remainder_first_failure.json"))
 # Locked before the first audit; the old pulse/amplitudes/gates are untouched.
 COEFFICIENT_ORDERS = (2, 4, 6)
 SOLVERS = (dict(WORK.SOLVERS[1]), {"rtol": 2.5e-12, "atol": 2.5e-15, "max_step": .125})
@@ -39,7 +44,7 @@ GATES = {"coefficient_resolution_scaled": 1e-6, "coefficient_ledger_scaled": 1e-
 
 
 def load_predecessor():
-    raw = (ROOT/PREDECESSOR).read_bytes()
+    raw = (canonical_existing_path(ROOT/PREDECESSOR)).read_bytes()
     if hashlib.sha256(raw).hexdigest() != PREDECESSOR_SHA:
         raise ValueError("predecessor identity changed; revalidate instead of reusing")
     result = json.loads(raw)
@@ -269,7 +274,7 @@ def audit():
               "action_controls": action, "thresholds": GATES, "checks": checks, "examples": rows, "sign_reversal_error": sign_error,
               "known_control": {"role": "DIAGNOSTIC_ONLY_NOT_DATA_OR_CALIBRATION", "system": "A0=0,A1=sigma_x,C0=I; W=cosh(2epsilon*eta)-1", "remainder": toy_tail, "exact_remainder": toy_actual_tail},
               "evidence_artifacts": TH.identities(paths), "protected_evidence_hashes": TH.identities(protected),
-              "equation_registry_ids": [x["id"] for x in json.loads((ROOT/REGISTRY).read_text())["entries"]],
+              "equation_registry_ids": [x["id"] for x in json.loads((canonical_existing_path(ROOT/REGISTRY)).read_text())["entries"]],
               "controlling_blocker": "physical_source_readout_scale_and_parent_interaction_remainder_open" if passed else "finite_pair_work_hierarchy_verification_open",
               "open_blockers": ["conservative_bound_not_a_useful_original_grid_certificate", "numeric_bound_not_interval_certified", "nonlinear_parent_action_not_completed_by_quadratic_control", "actual_material_heat_readout_independent_scale_and_transport"],
               "dependency_unlocked": ["source_readout_identifiability_and_controlled_parent_remainder_research_only"] if passed else [],

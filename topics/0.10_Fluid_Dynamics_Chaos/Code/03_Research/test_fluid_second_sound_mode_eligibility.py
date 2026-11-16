@@ -8,7 +8,12 @@ import tempfile
 import unittest
 
 ROOT=next(p for p in Path(__file__).resolve().parents if (p/"docs/core").is_dir())
-TOPIC=ROOT/"docs/topics/0.10_Fluid_Dynamics_Chaos"
+
+import sys as _sys
+if str(ROOT) not in _sys.path:
+    _sys.path.insert(0, str(ROOT))
+from core.core_paths import canonical_existing_path
+TOPIC=ROOT/"topics/0.10_Fluid_Dynamics_Chaos"
 SCRIPT=TOPIC/"Code/03_Research/Research_Fluid_Second_Sound_Mode_Eligibility.py"
 RESULT=TOPIC/"Result/artifacts/fluid_second_sound_mode_eligibility_audit.json"
 
@@ -27,7 +32,7 @@ class SecondSoundModeEvidenceTests(unittest.TestCase):
 
     def test_source_fresh_bounded_exclusion_and_invalid_preview_retention(self):
         for path,expected in self.published["input_hashes"].items():
-            self.assertEqual(hashlib.sha256((ROOT/path).read_bytes()).hexdigest(),expected,path)
+            self.assertEqual(hashlib.sha256((canonical_existing_path(ROOT/path)).read_bytes()).hexdigest(),expected,path)
         # Byte determinism is checked within one runtime. Cross-platform LAPACK
         # rounding may differ; acceptance uses the declared scientific gates.
         self.assertEqual(self.fresh["input_hashes"],self.published["input_hashes"])
@@ -44,7 +49,7 @@ class SecondSoundModeEvidenceTests(unittest.TestCase):
         revision=self.fresh["harness_revision"]
         self.assertIs(revision["thresholds_relaxed"],False)
         self.assertIs(revision["initial_nominal_pass_accepted"],False)
-        preview=json.loads((ROOT/revision["retained_diagnostic"]).read_text())
+        preview=json.loads((canonical_existing_path(ROOT/revision["retained_diagnostic"])).read_text())
         self.assertEqual(preview["status"],"INVALID_COMPLEX_METRIC_PREVIEW_NOT_ACCEPTED")
         self.assertEqual(preview["original_payload"]["reference_check_count"],123)
 

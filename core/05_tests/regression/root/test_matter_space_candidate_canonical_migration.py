@@ -38,7 +38,7 @@ def test_candidate_root_module_forwards_to_canonical_family(
     module_name: str, public_names: tuple[str, ...]
 ) -> None:
     legacy = importlib.import_module(f"docs.core.{module_name}")
-    canonical_name = f"docs.core.02_equations.matter_space.{module_name}"
+    canonical_name = f"core.02_equations.matter_space.{module_name}"
     canonical = importlib.import_module(canonical_name)
 
     assert legacy.__canonical_module__ == canonical_name
@@ -50,5 +50,5 @@ def test_candidate_modules_are_classified_as_matter_space_equations() -> None:
 
     for module_name in CASES:
         assert canonical_path_for(f"docs/core/{module_name}.py") == (
-            f"docs/core/02_equations/matter_space/{module_name}.py"
+            f"core/02_equations/matter_space/{module_name}.py"
         )

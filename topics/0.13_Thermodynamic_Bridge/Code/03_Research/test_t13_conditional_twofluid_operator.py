@@ -1,4 +1,5 @@
 """Independent EFT/action and linear algebra checks of the conditional map."""
+from core.core_paths import canonical_existing_path
 
 import hashlib
 import json
@@ -105,9 +106,9 @@ def test_recorded_domain_rejection_and_physical_boundaries_are_preserved():
                 "data_role", "evidence_artifacts", "verification_status",
                 "open_blockers", "dependency_unlocked", "claim_boundary"}
     assert required <= record.keys()
-    plan = json.loads((ROOT / "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/funding_portfolio_14d_plan.json").read_text(encoding="utf-8"))
+    plan = json.loads((ROOT / "topics/0.13_Thermodynamic_Bridge/Data/03_Research/funding_portfolio_14d_plan.json").read_text(encoding="utf-8"))
     linked = plan["conditional_operator_evidence_2026_10_01"]
-    assert hashlib.sha256((ROOT / linked["path"]).read_bytes()).hexdigest() == linked["sha256"]
+    assert hashlib.sha256((canonical_existing_path(ROOT / linked["path"])).read_bytes()).hexdigest() == linked["sha256"]
     assert linked["verification_status"] == record["verification_status"]
     assert record["verification_status"] == "FAIL_CONDITIONAL_OPERATOR_SCREEN"
     first, second = record["examples"]
@@ -123,7 +124,7 @@ def test_recorded_domain_rejection_and_physical_boundaries_are_preserved():
         assert record[key] is False
     assert record["finite_T_stiffness_numeric_value_emitted"] is False
     for evidence in record["evidence_hashes"]:
-        assert hashlib.sha256((ROOT / evidence["path"]).read_bytes()).hexdigest() == evidence["sha256"]
+        assert hashlib.sha256((canonical_existing_path(ROOT / evidence["path"])).read_bytes()).hexdigest() == evidence["sha256"]
 
 
 def test_nonpositive_thermal_curvature_is_rejected():

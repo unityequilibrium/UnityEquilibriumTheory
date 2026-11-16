@@ -11,7 +11,12 @@ import tempfile
 import unittest
 
 ROOT = next(p for p in Path(__file__).resolve().parents if (p / "docs/core").is_dir())
-TOPIC = ROOT / "docs/topics/0.10_Fluid_Dynamics_Chaos"
+
+import sys as _sys
+if str(ROOT) not in _sys.path:
+    _sys.path.insert(0, str(ROOT))
+from core.core_paths import canonical_existing_path
+TOPIC = ROOT / "topics/0.10_Fluid_Dynamics_Chaos"
 SCRIPT = TOPIC / "Code/03_Research/Research_Fluid_Core_O2_Current_Ward.py"
 CONTRACT = TOPIC / "Data/03_Research/fluid_core_o2_current_ward_contract.json"
 ARTIFACT = TOPIC / "Result/artifacts/fluid_core_o2_current_ward_audit.json"
@@ -47,7 +52,7 @@ class CurrentWardTests(unittest.TestCase):
             self.assertEqual(a[name], self.published[name])
         self.assertEqual(list(a["checks"]), list(self.published["checks"]))
         for name, sha in a["input_hashes"].items():
-            self.assertEqual(hashlib.sha256((ROOT / name).read_bytes()).hexdigest(), sha)
+            self.assertEqual(hashlib.sha256((canonical_existing_path(ROOT / name)).read_bytes()).hexdigest(), sha)
         self.assertTrue(a["selected_tree_grandcanonical_flux_correspondence_supported"])
         self.assertTrue(a["selected_tree_spatial_Noether_Ward_supported"])
         for name in ("physical_heat_current_matched", "physical_material_frame_admitted", "charge_density_backreaction_completed",
@@ -57,7 +62,7 @@ class CurrentWardTests(unittest.TestCase):
                      "physical_J04_executed", "physical_J05_executed", "physical_J06_executed", "claim_promotion",
                      "dependency_unlock", "thresholds_relaxed", "parameters_fitted"):
             self.assertIs(a[name], False, name)
-        prior = json.loads((ROOT / self.p["current_bound_artifact"]).read_text(encoding="utf-8"))
+        prior = json.loads((canonical_existing_path(ROOT / self.p["current_bound_artifact"])).read_text(encoding="utf-8"))
         self.assertEqual(prior["passing_check_count"], 289)
         self.assertFalse(prior["physical_heat_current_matched"])
 
@@ -122,7 +127,7 @@ class CurrentWardTests(unittest.TestCase):
         p["verification"]["algebra_relative_tolerance"] = 1e-6
         mutations.append(p)
         with tempfile.TemporaryDirectory(dir=ROOT, prefix=".current-ward-test-") as folder:
-            stale = json.loads((ROOT / self.p["current_bound_artifact"]).read_text(encoding="utf-8"))
+            stale = json.loads((canonical_existing_path(ROOT / self.p["current_bound_artifact"])).read_text(encoding="utf-8"))
             stale["input_hashes"][next(iter(stale["input_hashes"]))] = "0" * 64
             source = Path(folder) / "stale.json"
             source.write_text(json.dumps(stale), encoding="utf-8")

@@ -4,15 +4,16 @@
   "generator_sha256": "b32005e4bdbf59da6681ae630fa1d9d4415c361f7523be18c8b52a86dc8c93e9",
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
-    "sources": 76,
-    "entries": 813,
+    "sources": 78,
+    "entries": 831,
     "by_stream": {
       "book-history": 94,
-      "operations": 113,
-      "research": 606
+      "operations": 130,
+      "research": 606,
+      "review": 1
     },
     "exact_duplicates": 0,
-    "review_entries": 2
+    "review_entries": 3
   },
   "duplicate_dates": {
     "2026-08-14": [
@@ -396,6 +397,16 @@
       "path": "2026/2026-11-14.md",
       "sha256": "12c5cef3aa05605b9c3bd8a180c695b7dcaa8738d3bcfc2ccbe677a3eb58a810",
       "entries": 1
+    },
+    {
+      "path": "2026/2026-11-15.md",
+      "sha256": "ff585cab5b98a7a82ab306e32682588def5fe6de5ad731552c19ee5cfbe101ba",
+      "entries": 12
+    },
+    {
+      "path": "2026/2026-11-16.md",
+      "sha256": "c2b1fb2f1c0a6ae077174e93df02c4fe55f8b83cdd606663c158e6256b5c2ef6",
+      "entries": 6
     },
     {
       "path": "2026-08-14.md",
@@ -16627,6 +16638,365 @@
       "basis": "explicit_stream_and_area",
       "flags": [],
       "date": "2026-11-14",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-15.md#root-coretopics-post-move-repair",
+      "source": "2026/2026-11-15.md",
+      "anchor": "root-coretopics-post-move-repair",
+      "start_line": 3,
+      "end_line": 16,
+      "title": "Root Core–Topics post-move repair",
+      "entry_sha256": "d8ccececcea3151bd8c5e1c9966b20fce80896fbe36f68c26ca73f94e8c29b00",
+      "stream": "operations",
+      "areas": [
+        "repo-ops"
+      ],
+      "related_streams": [
+        "operations"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-15",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-15.md#addendum--full-run-result-and-output-isolation-follow-up",
+      "source": "2026/2026-11-15.md",
+      "anchor": "addendum--full-run-result-and-output-isolation-follow-up",
+      "start_line": 17,
+      "end_line": 24,
+      "title": "Addendum — full-run result and output-isolation follow-up",
+      "entry_sha256": "3be7b7a227f2eab861883c3001d4558dfbfbc7a919232759df4e163432b4c907",
+      "stream": "review",
+      "areas": [],
+      "related_streams": [],
+      "basis": "invalid_stream_declaration",
+      "flags": [
+        "missing_or_unknown_primary_area",
+        "invalid_stream"
+      ],
+      "date": "2026-11-15",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-15.md#nested-import-identity-and-deferred-test-discovery",
+      "source": "2026/2026-11-15.md",
+      "anchor": "nested-import-identity-and-deferred-test-discovery",
+      "start_line": 25,
+      "end_line": 37,
+      "title": "Nested import identity and deferred-test discovery",
+      "entry_sha256": "a3ad3a6eb0be73120eb7a3e570a5cc63eab62003756146dd1b521240fc4124e7",
+      "stream": "operations",
+      "areas": [
+        "repo-ops"
+      ],
+      "related_streams": [
+        "operations"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-15",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-15.md#restore-byte-locked-public-csv-checkout-fidelity",
+      "source": "2026/2026-11-15.md",
+      "anchor": "restore-byte-locked-public-csv-checkout-fidelity",
+      "start_line": 38,
+      "end_line": 45,
+      "title": "Restore byte-locked public CSV checkout fidelity",
+      "entry_sha256": "c06455087ba2057c964961bc8d2bd233ceb3e30e7bb599abde344e7f09559c31",
+      "stream": "operations",
+      "areas": [
+        "repo-ops"
+      ],
+      "related_streams": [
+        "operations"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-15",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-15.md#topic-04-negative-result-reporting-integration",
+      "source": "2026/2026-11-15.md",
+      "anchor": "topic-04-negative-result-reporting-integration",
+      "start_line": 46,
+      "end_line": 55,
+      "title": "Topic 0.4 negative-result reporting integration",
+      "entry_sha256": "996fce22e4798f16e27076631f6f538c371cf9c7c1e27a9a2688fc1731991360",
+      "stream": "operations",
+      "areas": [
+        "repo-ops"
+      ],
+      "related_streams": [
+        "operations"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-15",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-15.md#gravity-failure-reporting-and-exact-stale-identity-triage",
+      "source": "2026/2026-11-15.md",
+      "anchor": "gravity-failure-reporting-and-exact-stale-identity-triage",
+      "start_line": 56,
+      "end_line": 65,
+      "title": "Gravity failure reporting and exact stale-identity triage",
+      "entry_sha256": "479c2c7831fb13d7286a6b8dd1e6471d3ed8a018b422fc68eb6a2ef8db3eb6de",
+      "stream": "operations",
+      "areas": [
+        "repo-ops"
+      ],
+      "related_streams": [
+        "operations"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-15",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-15.md#complete-the-38-candidate-admission-review",
+      "source": "2026/2026-11-15.md",
+      "anchor": "complete-the-38-candidate-admission-review",
+      "start_line": 66,
+      "end_line": 75,
+      "title": "Complete the 38-candidate admission review",
+      "entry_sha256": "6cf08a17ee69196ccc88cd2d89d8d038b583c6bc49033cd0924c0a66979611b3",
+      "stream": "operations",
+      "areas": [
+        "repo-ops"
+      ],
+      "related_streams": [
+        "operations"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-15",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-15.md#repair-foundation-inventory-and-compatibility-readers",
+      "source": "2026/2026-11-15.md",
+      "anchor": "repair-foundation-inventory-and-compatibility-readers",
+      "start_line": 76,
+      "end_line": 85,
+      "title": "Repair foundation inventory and compatibility readers",
+      "entry_sha256": "421b7219c5bfcd41ef76bf3bd942f5467ce8e9e07e6ffc06e219a3e80fb587f7",
+      "stream": "operations",
+      "areas": [
+        "repo-ops"
+      ],
+      "related_streams": [
+        "operations"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-15",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-15.md#moved-raw-source-metadata-checkout-protection-and-ci-selection",
+      "source": "2026/2026-11-15.md",
+      "anchor": "moved-raw-source-metadata-checkout-protection-and-ci-selection",
+      "start_line": 86,
+      "end_line": 96,
+      "title": "Moved raw-source metadata, checkout protection and CI selection",
+      "entry_sha256": "5ec4fc7ead23b5a072845faf2709d898de53e9b2ce517d7656bdedafc497a49f",
+      "stream": "operations",
+      "areas": [
+        "repo-ops"
+      ],
+      "related_streams": [
+        "operations"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-15",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-15.md#full-post-repair-verification-checkpoint",
+      "source": "2026/2026-11-15.md",
+      "anchor": "full-post-repair-verification-checkpoint",
+      "start_line": 97,
+      "end_line": 108,
+      "title": "Full post-repair verification checkpoint",
+      "entry_sha256": "f9f3bfaa877abb82a67ba9c1b13280d020cf31505495897a5b42dc1d8740c162",
+      "stream": "operations",
+      "areas": [
+        "repo-ops"
+      ],
+      "related_streams": [
+        "operations"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-15",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-15.md#profile-comparison-coverage-topics-028033",
+      "source": "2026/2026-11-15.md",
+      "anchor": "profile-comparison-coverage-topics-028033",
+      "start_line": 109,
+      "end_line": 119,
+      "title": "Profile-comparison coverage, Topics 0.28–0.33",
+      "entry_sha256": "f351bb5a17bf423c859903091042fbe762c51c22ac1d031df51c67898139e740",
+      "stream": "operations",
+      "areas": [
+        "repo-ops"
+      ],
+      "related_streams": [
+        "operations"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-15",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-15.md#profile-comparison-coverage-topics-034039",
+      "source": "2026/2026-11-15.md",
+      "anchor": "profile-comparison-coverage-topics-034039",
+      "start_line": 120,
+      "end_line": 129,
+      "title": "Profile-comparison coverage, Topics 0.34–0.39",
+      "entry_sha256": "45f2e5e7067c415130d083a7b052525c289003656cdb33af295f6e6e85abb4fa",
+      "stream": "operations",
+      "areas": [
+        "repo-ops"
+      ],
+      "related_streams": [
+        "operations"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-15",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-16.md#independent-full-verification-in-the-actual-desktop-checkout",
+      "source": "2026/2026-11-16.md",
+      "anchor": "independent-full-verification-in-the-actual-desktop-checkout",
+      "start_line": 3,
+      "end_line": 14,
+      "title": "Independent full verification in the actual Desktop checkout",
+      "entry_sha256": "652004e054b02d4aa92e14802796638e6218f4952dbd0b7c210d9a34735b29c2",
+      "stream": "operations",
+      "areas": [
+        "repo-ops"
+      ],
+      "related_streams": [
+        "operations"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-16",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-16.md#desktop-delivery-from-the-frozen-root-layout-repair-revision",
+      "source": "2026/2026-11-16.md",
+      "anchor": "desktop-delivery-from-the-frozen-root-layout-repair-revision",
+      "start_line": 15,
+      "end_line": 26,
+      "title": "Desktop delivery from the frozen root-layout repair revision",
+      "entry_sha256": "c8ef5b8c2d55e053fd02ce706622242791dfc08c30c3b13905e6d7d3b3d31d2a",
+      "stream": "operations",
+      "areas": [
+        "repo-ops"
+      ],
+      "related_streams": [
+        "operations"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-16",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-16.md#post-move-byte-fidelity-payload-ownership-and-ai-audit-repair",
+      "source": "2026/2026-11-16.md",
+      "anchor": "post-move-byte-fidelity-payload-ownership-and-ai-audit-repair",
+      "start_line": 27,
+      "end_line": 38,
+      "title": "Post-move byte fidelity, payload ownership and AI audit repair",
+      "entry_sha256": "0e1c35006aa1e0e9f9f407158a1ae0b22299cb9cb107ebea3ae457e8920b1e9b",
+      "stream": "operations",
+      "areas": [
+        "repo-ops"
+      ],
+      "related_streams": [
+        "operations"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-16",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-16.md#full-desktop-regression-checkpoint-and-declared-predecessor-guard-repair",
+      "source": "2026/2026-11-16.md",
+      "anchor": "full-desktop-regression-checkpoint-and-declared-predecessor-guard-repair",
+      "start_line": 39,
+      "end_line": 50,
+      "title": "Full Desktop regression checkpoint and declared-predecessor guard repair",
+      "entry_sha256": "dc054c61822714638584dbe14fc9662b977892944a9b8fe6d82cb49ffebccda2",
+      "stream": "operations",
+      "areas": [
+        "repo-ops"
+      ],
+      "related_streams": [
+        "operations"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-16",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-16.md#topic-10-archived-source-locator-recovery",
+      "source": "2026/2026-11-16.md",
+      "anchor": "topic-10-archived-source-locator-recovery",
+      "start_line": 51,
+      "end_line": 62,
+      "title": "Topic 10 archived-source locator recovery",
+      "entry_sha256": "11587401bb502bd36ae99e443259c09810a02caf032513e818b539947ff11662",
+      "stream": "operations",
+      "areas": [
+        "repo-ops"
+      ],
+      "related_streams": [
+        "operations"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-16",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-16.md#owner-requested-publication-of-the-root-layout-repair-branch",
+      "source": "2026/2026-11-16.md",
+      "anchor": "owner-requested-publication-of-the-root-layout-repair-branch",
+      "start_line": 63,
+      "end_line": 70,
+      "title": "Owner-requested publication of the root-layout repair branch",
+      "entry_sha256": "b9472edd8452a4ad90f77433a1b928605e3cec70e75eb82dff5c9139e2df4304",
+      "stream": "operations",
+      "areas": [
+        "repo-ops"
+      ],
+      "related_streams": [
+        "operations"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-16",
       "legacy_root_path": false
     },
     {

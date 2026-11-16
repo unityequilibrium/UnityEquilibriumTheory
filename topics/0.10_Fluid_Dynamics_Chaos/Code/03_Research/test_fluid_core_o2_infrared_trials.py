@@ -10,7 +10,12 @@ import unittest
 import numpy as np
 
 ROOT=next(p for p in Path(__file__).resolve().parents if (p/"docs/core").is_dir())
-TOPIC=ROOT/"docs/topics/0.10_Fluid_Dynamics_Chaos"
+
+import sys as _sys
+if str(ROOT) not in _sys.path:
+    _sys.path.insert(0, str(ROOT))
+from core.core_paths import canonical_existing_path
+TOPIC=ROOT/"topics/0.10_Fluid_Dynamics_Chaos"
 SCRIPT=TOPIC/"Code/03_Research/Research_Fluid_Core_O2_Infrared_Trials.py"
 CONTRACT=TOPIC/"Data/03_Research/fluid_core_o2_infrared_trials_contract.json"
 ARTIFACT=TOPIC/"Result/artifacts/fluid_core_o2_infrared_trials_audit.json"
@@ -31,7 +36,7 @@ class InfraredTrialTests(unittest.TestCase):
     def test_fresh_sources_geometry_archive_and_unchanged_physical_collision_tail(self):
         a=self.fresh
         for f,h in self.published["input_hashes"].items():
-            self.assertEqual(hashlib.sha256((ROOT/f).read_bytes()).hexdigest(),h,f)
+            self.assertEqual(hashlib.sha256((canonical_existing_path(ROOT/f)).read_bytes()).hexdigest(),h,f)
         self.assertEqual(a["input_hashes"],self.published["input_hashes"])
         self.assertEqual(list(a["checks"]),list(self.published["checks"]))
         self.assertEqual(a["locked_verification"],self.published["locked_verification"])
@@ -39,9 +44,9 @@ class InfraredTrialTests(unittest.TestCase):
         self.assertTrue(all(q["pass"] for q in a["checks"].values()))
         self.assertFalse(a["kernel_AST_hashes"]["full_function_unchanged"])
         self.assertEqual(a["kernel_AST_hashes"]["prior_collision_tail"],a["kernel_AST_hashes"]["current_collision_tail"])
-        record=a["first_execution_record"];first=json.loads((ROOT/record["artifact"]).read_text(encoding="utf-8"))
-        archived=ROOT/record["verifier_source_archive"]
-        self.assertEqual(hashlib.sha256(archived.read_bytes()).hexdigest(),first["input_hashes"][SCRIPT.relative_to(ROOT).as_posix()])
+        record=a["first_execution_record"];first=json.loads((canonical_existing_path(ROOT/record["artifact"])).read_text(encoding="utf-8"))
+        archived=canonical_existing_path(ROOT/record["verifier_source_archive"])
+        self.assertEqual(hashlib.sha256(archived.read_bytes()).hexdigest(),self.driver._archived_source_hash(first["input_hashes"]))
         self.assertEqual(first["locked_verification"],a["locked_verification"])
         self.assertEqual(first["status"],"ENRICHED_SMOOTH_TRIAL_DIAGNOSTIC_FAIL")
         self.assertTrue(first["execution_errors"])

@@ -9,7 +9,12 @@ import numpy as np
 import pytest
 
 LOCAL = Path(__file__).resolve().parent
-ROOT = LOCAL.parents[4]
+ROOT = LOCAL.parents[3]
+
+import sys as _sys
+if str(ROOT) not in _sys.path:
+    _sys.path.insert(0, str(ROOT))
+from core.core_paths import canonical_existing_path
 M = runpy.run_path(str(LOCAL/"Research_T13_Acoustic_Modal_Cuts.py"))
 TH, EFT, INT = M["TH"], M["EFT"], M["INT"]
 PREFIX = M["PREFIX"]
@@ -102,7 +107,7 @@ def test_invalid_inputs_and_nonconserved_vertex_rejected(example, case):
 
 
 def test_artifact_hashes_and_scope_not_all_mode_quantum_closure():
-    record = json.loads((ROOT/(PREFIX+"Result/artifacts/t13_acoustic_modal_cuts.json")).read_text())
+    record = json.loads((canonical_existing_path(ROOT/(PREFIX+"Result/artifacts/t13_acoustic_modal_cuts.json"))).read_text())
     assert record["verification_status"] == "PASS_SCOPED_ACOUSTIC_MODAL_CUT"
     assert record["closure_level"] == "CLOSED_FOR_LANE" and all(record["checks"].values())
     assert len(record["report"]) == 11
@@ -111,7 +116,7 @@ def test_artifact_hashes_and_scope_not_all_mode_quantum_closure():
     assert record["prior_Xie_context_exposure_review"] == "REVIEW_REQUIRED"
     assert record["thresholds"]["original_causal_leakage"] == 1e-6
     for item in record["evidence_artifacts"]+record["protected_evidence_hashes"]:
-        assert hashlib.sha256((ROOT/item["path"]).read_bytes()).hexdigest() == item["sha256"]
+        assert hashlib.sha256(TH.canonical_existing_path(canonical_existing_path(ROOT/item["path"])).read_bytes()).hexdigest() == item["sha256"]
 
 
 def test_runtime_read_allowlist_excludes_holdout(monkeypatch):
@@ -126,7 +131,7 @@ def test_runtime_read_allowlist_excludes_holdout(monkeypatch):
     monkeypatch.setattr(Path, "read_bytes", read_bytes)
     monkeypatch.setattr(Path, "read_text", read_text)
     record = M["audit"]()
-    allowed = {(ROOT/item["path"]).resolve() for item in record["evidence_artifacts"]+record["protected_evidence_hashes"]}
+    allowed = {TH.canonical_existing_path(canonical_existing_path(ROOT/item["path"])).resolve() for item in record["evidence_artifacts"]+record["protected_evidence_hashes"]}
     assert accessed and set(accessed) <= allowed
     assert all("xie" not in path.name.lower() for path in accessed)
     assert all(record["checks"].values())

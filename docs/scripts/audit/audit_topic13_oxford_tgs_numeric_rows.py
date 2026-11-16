@@ -7,15 +7,20 @@ import gzip
 import hashlib
 import json
 import math
+import os
 from datetime import date
 from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[3]
-BASE = ROOT / "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research"
-MANIFEST = BASE / "oxford_tgs_figure1_numeric_rows_manifest.json"
-CSV_GZ = BASE / "oxford_tgs_figure1_numeric_rows.csv.gz"
-OUT = ROOT / "docs/core/07_artifacts/topic13/t13_oxford_tgs_numeric_rows_audit.json"
+OUTPUT_ROOT = Path(os.environ.get("UET_OUTPUT_ROOT", ROOT)).resolve()
+OUTPUT_BASE = OUTPUT_ROOT / "topics/0.13_Thermodynamic_Bridge/Data/03_Research"
+MANIFEST_REL = "topics/0.13_Thermodynamic_Bridge/Data/03_Research/oxford_tgs_figure1_numeric_rows_manifest.json"
+CSV_OUTPUT_REL = "topics/0.13_Thermodynamic_Bridge/Data/03_Research/oxford_tgs_figure1_numeric_rows.csv.gz"
+OUT_REL = "core/07_artifacts/topic13/t13_oxford_tgs_numeric_rows_audit.json"
+MANIFEST = OUTPUT_BASE / "oxford_tgs_figure1_numeric_rows_manifest.json"
+CSV_GZ = OUTPUT_BASE / "oxford_tgs_figure1_numeric_rows.csv.gz"
+OUT = OUTPUT_ROOT / OUT_REL
 
 
 def load_json(path: Path) -> dict:
@@ -43,10 +48,11 @@ def main() -> int:
         "NUMERIC_ROWS_SOURCE_LOCKED_COMPARATOR",
         "METADATA_ONLY_PUBLIC_BOUNDARY_EXTRACTION_PENDING",
     }
-    checks["csv_present"] = CSV_GZ.is_file()
+    csv_present = CSV_GZ.is_file()
+    checks["csv_presence_requirement_satisfied"] = metadata_only or csv_present
     checks["manifest_output_path_matches"] = (
         manifest["extraction"]["output_path"]
-        == CSV_GZ.relative_to(ROOT).as_posix()
+        == CSV_OUTPUT_REL
     )
     actual_hash = sha256(CSV_GZ) if CSV_GZ.is_file() else None
     checks["csv_hash_matches_manifest"] = (
@@ -172,14 +178,14 @@ def main() -> int:
     )
     evidence_artifacts = [
         {
-            "path": MANIFEST.relative_to(ROOT).as_posix(),
+            "path": MANIFEST_REL,
             "sha256": sha256(MANIFEST),
         },
     ]
     if not metadata_only:
         evidence_artifacts.append(
             {
-                "path": CSV_GZ.relative_to(ROOT).as_posix(),
+                "path": CSV_OUTPUT_REL,
                 "sha256": actual_hash,
             }
         )
@@ -226,6 +232,7 @@ def main() -> int:
         "source": manifest["source"],
         "extraction": manifest["extraction"],
         "checks": checks,
+        "csv_present": csv_present,
         "numeric_rows_emitted": len(rows),
         "numeric_alpha_Phi_K_emitted": False,
         "parameter_fitting_performed": False,

@@ -6,9 +6,9 @@ from pathlib import Path
 
 
 ROOT = repo_root()
-AUDIT = ROOT / "docs/core/07_artifacts/topic13/t13_csrc_source_route_priority_audit.json"
-MATRIX = ROOT / "docs/core/07_artifacts/topic13/t13_topic13_closure_matrix.json"
-REGISTER = ROOT / "docs/core/07_artifacts/gates/uet_major_result_closure_register.json"
+AUDIT = ROOT / 'core/07_artifacts/topic13/t13_csrc_source_route_priority_audit.json'
+MATRIX = ROOT / 'core/07_artifacts/topic13/t13_topic13_closure_matrix.json'
+REGISTER = ROOT / 'core/07_artifacts/gates/uet_major_result_closure_register.json'
 
 
 def load(path: Path) -> dict:

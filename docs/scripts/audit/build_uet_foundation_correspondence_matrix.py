@@ -19,6 +19,11 @@ from typing import Any
 
 
 ROOT = Path(__file__).resolve().parents[3]
+if str(ROOT) not in sys.path:
+    sys.path.insert(0, str(ROOT))
+
+from core.core_paths import canonical_existing_path  # noqa: E402
+
 INVENTORY_PATH = ROOT / "docs/core/07_artifacts/gates/uet_foundation_equation_inventory.json"
 COMPATIBILITY_PATH = ROOT / "docs/core/07_artifacts/gates/uet_foundation_compatibility_gate.json"
 OUTPUT = ROOT / "docs/core/07_artifacts/gates/uet_foundation_correspondence_matrix.json"
@@ -181,7 +186,7 @@ SELECTED_ROWS: dict[str, dict[str, Any]] = {
 
 
 def load(path: Path) -> dict[str, Any]:
-    with path.open("r", encoding="utf-8-sig") as handle:
+    with canonical_existing_path(path).open("r", encoding="utf-8-sig") as handle:
         value = json.load(handle)
     if not isinstance(value, dict):
         raise ValueError(f"not an object: {path}")

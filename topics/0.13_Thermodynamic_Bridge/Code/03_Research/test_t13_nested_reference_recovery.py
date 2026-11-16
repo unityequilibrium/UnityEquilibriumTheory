@@ -1,4 +1,5 @@
 """Tests for the bounded composition-reference recovery snapshot."""
+from core.core_paths import canonical_existing_path
 
 import importlib.util
 import json
@@ -12,8 +13,8 @@ SPEC.loader.exec_module(MODULE)
 
 
 def test_saved_nested_references_and_claim_boundary():
-    saved = json.loads(MODULE.RECORD.read_text(encoding="utf-8"))
-    lineage = json.loads(MODULE.LINEAGE.read_text(encoding="utf-8"))
+    saved = json.loads(canonical_existing_path(MODULE.RECORD).read_text(encoding="utf-8"))
+    lineage = json.loads(canonical_existing_path(MODULE.LINEAGE).read_text(encoding="utf-8"))
     by_recorded = {row["recorded_path"]: row for row in saved["records"]}
     assert len(by_recorded) == len(saved["records"]) == len(lineage["records"]) == 12
     assert saved["evidence_artifacts"][0]["sha256"] == MODULE.sha256(MODULE.LINEAGE)
@@ -29,7 +30,7 @@ def test_saved_nested_references_and_claim_boundary():
 
 
 def test_nested_summary_closure_delta_is_visible():
-    saved = json.loads(MODULE.RECORD.read_text(encoding="utf-8"))
+    saved = json.loads(canonical_existing_path(MODULE.RECORD).read_text(encoding="utf-8"))
     changed = [row for row in saved["records"] if row["source_vs_clean_state"] == "FIELD_DELTA"]
     assert len(changed) == 3
     causal = next(row for row in changed if row["relocated_path"].endswith("t13_causal_named_branch_core_compatibility.json"))

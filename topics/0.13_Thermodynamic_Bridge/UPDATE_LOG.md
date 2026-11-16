@@ -7440,3 +7440,24 @@ EVIDENCE_PATHS:
 - `docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/test_ding2022_fig1d_pixel_quality_audit.py`
 - `docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/ding_2022_fig1d_pixel_quality_audit.json`
 - `docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/DING_FIG1D_PIXEL_QUALITY_AUDIT.md`
+
+## 2026-11-15 — Post-move routing and output isolation (software-only)
+- Broad shared run on the pre-follow-up tree: Topic 13 collected 1,406 tests (1,314 passed, 66 failed, 26 errors); see `.uet-run-reports/20261114T191254764386Z-1153050a9d/report.md`.
+- Updated legacy-path resolution and isolated three audit-test outputs under temporary roots; metadata-only Oxford extraction now reports absent CSV explicitly rather than requiring a file it does not emit.
+- Focused post-fix tests: 3 passed; changed Python sources compile. No equation, scientific artifact, hash, or research status was changed.
+- This is a software-path correction only, not a new scientific result or validation; old identity mismatches remain visible.
+- Next: classify the remaining Topic 13 failures by stale identity versus implementation issue from the saved run; do not rerun producers or refresh hashes by default.
+
+## 2026-11-15 — Raw-source locator and byte-preservation rules
+- Corrected Farooqui's metadata-only legacy/current path comparison without rewriting its source package, declared size or hashes; actual PDF identity checks are unchanged.
+- Farooqui PDF and QH-15 raw directory are absent in this checkout. No raw source identity or measurement was freshly verified, downloaded or fabricated.
+- Current-root QH-15 paths now inherit the original no-text-conversion policy; this does not unignore or publish raw files, and protected historical-source rules remain unchanged.
+- Affected regression/runner/standard checks passed 69/69. The QH-15 regression reads its historical artifact only; it is not a new raw-data replay or physical validation.
+- Source-version STALE blockers remain a separate prerequisite; no Core law, parameter, source package or scientific artifact changed.
+
+## 2026-11-16 — Declared-predecessor read guards after root migration
+- Software-only repair: five Hartree test guards now require exactly `canonical_existing_path(ROOT / <declared predecessor>)`; read count, predecessor identity and empirical/holdout exclusions remain unchanged. No scientific producer or saved artifact changed.
+- Full Desktop checkpoint before this follow-up: Topic 13 had 1314 passed / 66 failed / 26 errors at `3f9270ab0`; the whole run reports 4394 passed / 90 failed / 56 errors / 2 skipped, with 34 coverage gaps.
+- Affected-module run after the repair: 91 passed / 5 source-identity failures; 20/20 unsafe source mutations rejected. Saved log: local `tmp/delivery-recovery/hartree-path-guards-20261116.log`. No all-suite rerun or whole-Topic closure is claimed from this selected set.
+- Completeness remains 43 STALE errors in both full and changed-path checks; no recorded hashes, Core law, parameters, scientific thresholds or evidence levels were changed.
+- Next: inspect archived locator-key/version prerequisites in the next bounded repair; do not relabel stale evidence or missing physical inputs as a pass.

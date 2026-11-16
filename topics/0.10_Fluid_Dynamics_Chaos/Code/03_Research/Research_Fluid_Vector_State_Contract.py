@@ -15,10 +15,15 @@ from types import SimpleNamespace
 import numpy as np
 
 ROOT = next(p for p in Path(__file__).resolve().parents if (p / "docs/core").is_dir())
-TOPIC = ROOT / "docs/topics/0.10_Fluid_Dynamics_Chaos"
+
+import sys as _sys
+if str(ROOT) not in _sys.path:
+    _sys.path.insert(0, str(ROOT))
+from core.core_paths import canonical_existing_path
+TOPIC = ROOT / "topics/0.10_Fluid_Dynamics_Chaos"
 CONTRACT = TOPIC / "Data/03_Research/fluid_vector_state_research_contract.json"
-REGISTRY = ROOT / "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry_topic10_vector_state_addendum.json"
-CORE = ROOT / "docs/core/02_equations/matter_space/uet_matter_space.py"
+REGISTRY = canonical_existing_path(ROOT / "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry_topic10_vector_state_addendum.json")
+CORE = canonical_existing_path(ROOT / "docs/core/02_equations/matter_space/uet_matter_space.py")
 OUTPUT = TOPIC / "Result/artifacts/fluid_vector_state_contract_audit.json"
 
 
@@ -337,7 +342,7 @@ def main():
         rejections["nonzero_mean_closed_source"] = False
     except ValueError:
         rejections["nonzero_mean_closed_source"] = True
-    foundation = ROOT / contract["foundation_gate"]
+    foundation = canonical_existing_path(ROOT / contract["foundation_gate"])
     foundation_data = json.loads(foundation.read_text(encoding="utf-8"))
     parent_tree = ast.parse(CORE.read_text(encoding="utf-8"))
     parent_config = next(n for n in parent_tree.body if isinstance(n, ast.ClassDef) and n.name == "MatterSpaceConfig")
@@ -356,8 +361,8 @@ def main():
     }
     ok = all(g["pass"] for g in grids) and all(rejections.values()) and all(boundary_checks.values())
     inputs = [Path(__file__), CONTRACT, REGISTRY, CORE, TOPIC/"VECTOR_STATE_RESEARCH_CONTRACT.md",
-              ROOT/contract["parent_contract"], foundation,
-              ROOT/"docs/core/07_artifacts/correspondence/matter_space_ontology_contract.json",
+              canonical_existing_path(ROOT/contract["parent_contract"]), foundation,
+              canonical_existing_path(ROOT/"docs/core/07_artifacts/correspondence/matter_space_ontology_contract.json"),
               TOPIC/"Result/artifacts/fluid_state_velocity_representability_audit.json"]
     hashes = {p.relative_to(ROOT).as_posix(): hashlib.sha256(p.read_bytes()).hexdigest() for p in inputs}
     artifact = {
@@ -380,7 +385,7 @@ def main():
         "next_action": contract["next_action"],
     }
     output = args.output if args.output is not None else (
-        ROOT/contract["control_design_history"]["initial_failure_artifact"] if args.initial_control_diagnostic else OUTPUT)
+        canonical_existing_path(ROOT/contract["control_design_history"]["initial_failure_artifact"]) if args.initial_control_diagnostic else OUTPUT)
     output.parent.mkdir(parents=True, exist_ok=True)
     with output.open("w", encoding="utf-8", newline="\n") as stream:
         stream.write(json.dumps(artifact, indent=2, allow_nan=False)+"\n")

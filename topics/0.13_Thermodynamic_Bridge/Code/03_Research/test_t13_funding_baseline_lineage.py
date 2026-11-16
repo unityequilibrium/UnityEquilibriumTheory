@@ -5,6 +5,7 @@ import importlib.util
 import json
 from pathlib import Path
 
+from core.core_paths import canonical_existing_path
 
 SOURCE = Path(__file__).with_name("Research_T13_Funding_Baseline_Lineage.py")
 SPEC = importlib.util.spec_from_file_location("t13_funding_baseline_lineage", SOURCE)
@@ -41,7 +42,7 @@ def test_g0_remains_open_until_full_baseline_and_protocol_are_revalidated():
 def test_source_hashes_match_and_no_holdout_source_is_opened():
     assert AUDIT == json.loads(MODULE.OUTPUT.read_text(encoding="utf-8"))
     for item in AUDIT["evidence_artifacts"] + AUDIT["j02_dependency_review"]["evidence_artifacts"]:
-        source = MODULE.ROOT / item["path"]
+        source = canonical_existing_path(MODULE.ROOT / item["path"])
         assert source.is_file()
         assert hashlib.sha256(source.read_bytes()).hexdigest() == item["sha256"]
     assert all("xie" not in item["path"].lower() for item in AUDIT["evidence_artifacts"])
@@ -50,7 +51,7 @@ def test_source_hashes_match_and_no_holdout_source_is_opened():
 def test_j02_is_not_misclassified_as_independent_heii_validation():
     package = json.loads(MODULE.J02_SOURCE.read_text(encoding="utf-8"))
     policy = package["independence_and_holdout_policy"]
-    ancestry_path = MODULE.ROOT / policy["source_ancestry_audit"]
+    ancestry_path = canonical_existing_path(MODULE.ROOT / policy["source_ancestry_audit"])
     ancestry = json.loads(ancestry_path.read_text(encoding="utf-8"))
     assert package["data_role"] == ancestry["data_role"]
     assert not policy["direct_table_4_3_rows_used_to_construct_alpha_Z_theta_or_e0"]
@@ -60,5 +61,5 @@ def test_j02_is_not_misclassified_as_independent_heii_validation():
     assert ancestry["dependency_unlocked"] == []
     assert AUDIT["j02_dependency_review"]["checks"]["j02_source_ancestry_overlap_disclosed"]
     for item in ancestry["evidence_artifacts"]:
-        source = MODULE.ROOT / item["path"]
+        source = canonical_existing_path(MODULE.ROOT / item["path"])
         assert hashlib.sha256(source.read_bytes()).hexdigest() == item["sha256"]

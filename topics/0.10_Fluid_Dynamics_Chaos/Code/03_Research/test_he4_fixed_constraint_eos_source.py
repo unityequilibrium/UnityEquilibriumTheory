@@ -8,7 +8,12 @@ import tempfile
 import unittest
 
 ROOT = next(p for p in Path(__file__).resolve().parents if (p / "docs/core").is_dir())
-TOPIC = ROOT / "docs/topics/0.10_Fluid_Dynamics_Chaos"
+
+import sys as _sys
+if str(ROOT) not in _sys.path:
+    _sys.path.insert(0, str(ROOT))
+from core.core_paths import canonical_existing_path
+TOPIC = ROOT / "topics/0.10_Fluid_Dynamics_Chaos"
 SCRIPT = TOPIC / "Code/03_Research/Research_He4_Fixed_Constraint_EOS_Source.py"
 SOURCE = TOPIC / "Data/03_Research/he4_tn1334_fixed_constraint_eos_source_candidate.json"
 RESULT = TOPIC / "Result/artifacts/he4_tn1334_fixed_constraint_eos_source_audit.json"
@@ -29,7 +34,7 @@ class He4FixedConstraintSourceTests(unittest.TestCase):
     def test_source_fresh_candidate_does_not_admit_physics(self):
         a = self.fresh
         for path, digest in self.published["input_hashes"].items():
-            self.assertEqual(hashlib.sha256((ROOT / path).read_bytes()).hexdigest(), digest, path)
+            self.assertEqual(hashlib.sha256((canonical_existing_path(ROOT / path)).read_bytes()).hexdigest(), digest, path)
         self.assertEqual(a["input_hashes"], self.published["input_hashes"])
         self.assertEqual(a["printing_rule"], self.published["printing_rule"])
         self.assertEqual(set(a["checks"]), set(self.published["checks"]))

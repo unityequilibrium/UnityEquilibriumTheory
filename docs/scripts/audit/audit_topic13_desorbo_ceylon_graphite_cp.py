@@ -4,19 +4,29 @@ from __future__ import annotations
 
 import hashlib
 import json
+import os
 from datetime import date
 from pathlib import Path
+import sys
 
 
 ROOT = Path(__file__).resolve().parents[3]
+if str(ROOT) not in sys.path:
+    sys.path.insert(0, str(ROOT))
+
+from core.core_paths import canonical_existing_path  # noqa: E402
+from core.core_paths import canonical_path_for  # noqa: E402
+
 BASE = ROOT / "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research"
 PACKAGE = BASE / "desorbo_1955_ceylon_graphite_cp_source_package.json"
 RAW = BASE / "raw/nist_srd69_graphite_desorbo_1955.html"
-OUT = ROOT / "docs/core/07_artifacts/topic13/t13_desorbo_ceylon_graphite_cp_audit.json"
+OUTPUT_ROOT = Path(os.environ.get("UET_OUTPUT_ROOT", ROOT)).resolve()
+OUT_REL = "core/07_artifacts/topic13/t13_desorbo_ceylon_graphite_cp_audit.json"
+OUT = OUTPUT_ROOT / OUT_REL
 
 
 def load_json(path: Path) -> dict:
-    value = json.loads(path.read_text(encoding="utf-8-sig"))
+    value = json.loads(canonical_existing_path(path).read_text(encoding="utf-8-sig"))
     if not isinstance(value, dict):
         raise ValueError(f"expected JSON object: {path}")
     return value
@@ -24,7 +34,7 @@ def load_json(path: Path) -> dict:
 
 def sha256(path: Path) -> str:
     digest = hashlib.sha256()
-    with path.open("rb") as handle:
+    with canonical_existing_path(path).open("rb") as handle:
         for chunk in iter(lambda: handle.read(1024 * 1024), b""):
             digest.update(chunk)
     return digest.hexdigest()
@@ -32,15 +42,15 @@ def sha256(path: Path) -> str:
 
 def main() -> int:
     package = load_json(PACKAGE)
-    raw_text = RAW.read_text(encoding="utf-8", errors="replace") if RAW.is_file() else ""
+    raw_text = canonical_existing_path(RAW).read_text(encoding="utf-8", errors="replace") if canonical_existing_path(RAW).is_file() else ""
     row = package["source_row"]
     source = package["source"]
     uncertainty = package["uncertainty_boundary"]
-    raw_present = RAW.is_file()
-    raw_text = RAW.read_text(encoding="utf-8", errors="replace") if raw_present else ""
+    raw_present = canonical_existing_path(RAW).is_file()
+    raw_text = canonical_existing_path(RAW).read_text(encoding="utf-8", errors="replace") if raw_present else ""
     declared_raw_path = Path(source["local_raw_path"]).as_posix()
     metadata_identity_locked = (
-        declared_raw_path == RAW.relative_to(ROOT).as_posix()
+        canonical_path_for(declared_raw_path) == canonical_path_for(RAW.relative_to(ROOT).as_posix())
         and isinstance(source.get("local_raw_sha256"), str)
         and len(source["local_raw_sha256"]) == 64
     )
@@ -144,15 +154,15 @@ def main() -> int:
             "data_role": "COMPARISON_ONLY_NOT_CALIBRATION",
             "evidence_artifacts": [
                 {
-                    "path": PACKAGE.relative_to(ROOT).as_posix(),
+                    "path": canonical_path_for(PACKAGE.relative_to(ROOT).as_posix()),
                     "sha256": sha256(PACKAGE),
                 },
                 {
-                    "path": RAW.relative_to(ROOT).as_posix(),
+                    "path": canonical_path_for(RAW.relative_to(ROOT).as_posix()),
                     "sha256": source["local_raw_sha256"],
                     "availability": "PRESENT_AND_HASH_VERIFIED" if raw_present else "DECLARED_NOT_IN_PUBLIC_CHECKOUT",
                 },
-                {"path": OUT.relative_to(ROOT).as_posix()},
+                {"path": OUT_REL},
             ],
             "verification_status": status,
             "open_blockers": [

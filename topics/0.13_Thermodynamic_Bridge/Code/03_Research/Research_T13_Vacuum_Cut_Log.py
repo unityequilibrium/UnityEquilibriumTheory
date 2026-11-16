@@ -18,7 +18,12 @@ import sys
 import numpy as np
 from scipy.integrate import quad
 
-ROOT = Path(__file__).resolve().parents[5]
+ROOT = Path(__file__).resolve().parents[4]
+
+import sys as _sys
+if str(ROOT) not in _sys.path:
+    _sys.path.insert(0, str(ROOT))
+from core.core_paths import canonical_existing_path
 LOCAL = Path(__file__).resolve().parent
 if str(LOCAL) not in sys.path:
     sys.path.insert(0, str(LOCAL))
@@ -26,7 +31,7 @@ import Research_T13_Low_T_Interactions as INT
 EFT = INT.EFT
 PREFIX = EFT.PREFIX
 REGISTRY = PREFIX+"Data/03_Research/t13_vacuum_cut_log_registry.json"
-OUTPUT = ROOT/(PREFIX+"Result/artifacts/t13_vacuum_cut_log.json")
+OUTPUT = canonical_existing_path(ROOT/(PREFIX+"Result/artifacts/t13_vacuum_cut_log.json"))
 MU_GRID = (1.05, 1.2)
 Q_GRID = (.02, .01, .005)
 FREQUENCY_RATIOS = (1.05, 1.2, 1.5)
@@ -280,7 +285,7 @@ def audit():
         "local_ambiguity_inside_declared_low_q_margin": all(x["low_q_correction_fraction"] < GATES["local_low_q_margin"] and x["order_reduced_frequency_squared"] > 0 for r in rows for x in r["local_matching_ambiguity"]),
         "fixed_convention_matching_rank_and_on_shell_null_boundary": matching["matrix_rank"] == 4 and matching["leading_on_shell_rank"] == 1 and matching["synthetic_algebra_witness_reconstruction_error"] < GATES["scale_relative"] and matching["null_direction_off_shell_value_at_z_over_K2_half"] != 0}
     def identities(paths):
-        return [{"path": p, "sha256": hashlib.sha256((ROOT/p).read_bytes()).hexdigest()} for p in paths]
+        return [{"path": p, "sha256": hashlib.sha256((canonical_existing_path(ROOT/p)).read_bytes()).hexdigest()} for p in paths]
     record = {"major_result_id": "T13_VACUUM_PHASE_CUT_LOG_AND_LOCAL_MATCHING_BOUNDARY",
               "topic": "0.13_Thermodynamic_Bridge", "branch_id": EFT.BRANCH,
               "closure_level": "CLOSED_FOR_LANE" if all(checks.values()) else "PARTIAL",
@@ -288,7 +293,7 @@ def audit():
               "created_at": datetime.now(timezone.utc).isoformat(), "action_controls": action,
               "what_is_closed": "LO linear-phase vacuum spectral continuum and real logarithmic equivalence class, independent four-subtracted dispersion reconstruction, optical-theorem connection and constructive local matching ambiguity",
               "equation_or_mapping": "Sigma_nonlocal=F(z,K2) log((K2-z)/mu_R2)/(32pi2 c3); local ell6 q6 leaves Im unchanged",
-              "equation_registry_ids": [x["id"] for x in json.loads((ROOT/REGISTRY).read_text())["entries"]],
+              "equation_registry_ids": [x["id"] for x in json.loads((canonical_existing_path(ROOT/REGISTRY)).read_text())["entries"]],
               "units": {"Sigma": "E^2", "z_K2": "E^2", "mu_R_omega_q": "E", "g_t_g_s": "E^-2", "ell6_real_log_q5_coefficient": "E^-4"},
               "derivation_class": "LO_LINEAR_PHASE_CUT_AND_SUBTRACTED_DISPERSION_MODULO_LOCAL_MATCHING",
               "observable": "Formal phase vacuum self-energy, not a detector/material prediction",

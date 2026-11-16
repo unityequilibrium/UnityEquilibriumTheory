@@ -9,7 +9,12 @@ import json
 from pathlib import Path
 
 ROOT = next(p for p in Path(__file__).resolve().parents if (p / "docs/core").is_dir())
-TOPIC = ROOT / "docs/topics/0.10_Fluid_Dynamics_Chaos"
+
+import sys as _sys
+if str(ROOT) not in _sys.path:
+    _sys.path.insert(0, str(ROOT))
+from core.core_paths import canonical_existing_path
+TOPIC = ROOT / "topics/0.10_Fluid_Dynamics_Chaos"
 DEFAULT_SOURCE = TOPIC / "Data/03_Research/he4_tn1334_fixed_constraint_eos_source_candidate.json"
 CARD = TOPIC / "HE4_FIXED_CONSTRAINT_EOS_SOURCE_CARD.md"
 OUTPUT = TOPIC / "Result/artifacts/he4_tn1334_fixed_constraint_eos_source_audit.json"
@@ -204,13 +209,13 @@ def audit(package, source_path):
     negative["blank_transport_as_zero"] = {"detected": detected, "corrupted_values": transport_corruption}
     check("blank_transport_as_zero_detected", detected)
 
-    requirements_path = ROOT / package["reused_inputs"][0]
+    requirements_path = canonical_existing_path(ROOT / package["reused_inputs"][0])
     requirements = json.loads(requirements_path.read_text(encoding="utf-8"))
     check("original_admitted_inputs_remain_unassigned",
           all(row["value"] is None and row["uncertainty"] is None
               for row in requirements["required_inputs"]))
     identities = [source_path, CARD, Path(__file__).resolve()]
-    identities.extend(ROOT / name for name in package["reused_inputs"])
+    identities.extend(canonical_existing_path(ROOT / name) for name in package["reused_inputs"])
     hashes = {}
     for path in identities:
         key = path.relative_to(ROOT).as_posix() if path.is_relative_to(ROOT) else path.name

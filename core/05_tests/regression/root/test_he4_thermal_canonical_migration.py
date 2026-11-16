@@ -10,10 +10,10 @@ from docs.core import he4_svp_reference as legacy_reference
 
 def test_he4_thermal_root_modules_forward_to_one_canonical_package() -> None:
     canonical_names = {
-        "viscosity": "docs.core.03_lanes.thermal.he4_normal_viscosity_kubo",
-        "calibration": "docs.core.03_lanes.thermal.he4_o2_response_calibration",
-        "beta": "docs.core.03_lanes.thermal.he4_o2_si_beta_mapping",
-        "reference": "docs.core.03_lanes.thermal.he4_svp_reference",
+        "viscosity": "core.03_lanes.thermal.he4_normal_viscosity_kubo",
+        "calibration": "core.03_lanes.thermal.he4_o2_response_calibration",
+        "beta": "core.03_lanes.thermal.he4_o2_si_beta_mapping",
+        "reference": "core.03_lanes.thermal.he4_svp_reference",
     }
     canonical = {key: importlib.import_module(name) for key, name in canonical_names.items()}
 
@@ -28,7 +28,7 @@ def test_he4_thermal_root_modules_forward_to_one_canonical_package() -> None:
 
 
 def test_he4_thermal_package_exports_the_declared_lane_surface() -> None:
-    package = importlib.import_module("docs.core.03_lanes.thermal")
+    package = importlib.import_module("core.03_lanes.thermal")
 
     assert "physical_transport_record" in package.__all__
     assert "calibration_record" in package.__all__

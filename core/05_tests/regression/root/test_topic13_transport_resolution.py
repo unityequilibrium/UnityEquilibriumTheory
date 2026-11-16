@@ -36,7 +36,7 @@ def test_frozen_scalar_artifact_not_rewritten_after_tensor_repair():
     # Keep the current canonical artifact frozen after the tensor repair.
     # The previous literal was the hash of an older pre-migration copy and no
     # longer identifies the canonical artifact committed in this branch.
-    baseline=ROOT/"docs/core/07_artifacts/topic13/t13_transport_resolution_audit.json"
+    baseline=ROOT/'core/07_artifacts/topic13/t13_transport_resolution_audit.json'
     assert sha256(baseline.read_bytes()).hexdigest()=="f1488dec31f2aac30f6373dc56e32eaf67b40f647abf3ebb59d3a652b6d5078d"
     artifact=read("t13_transport_resolution_audit.json")
     plan=artifact["evidence_artifacts"][0]

@@ -11,12 +11,13 @@ from pathlib import Path
 from types import SimpleNamespace
 import numpy as np
 from Research_Fluid_Vector_State_Contract import (
-    ROOT, TOPIC, CORE, PeriodicOperators, source_expression, evaluate, rms, relative
+    ROOT, TOPIC, CORE, PeriodicOperators, source_expression, evaluate, rms, relative,
+    canonical_existing_path,
 )
 
 CONTRACT = TOPIC / "Data/03_Research/fluid_vector_variational_origin_contract.json"
 PARENT = TOPIC / "Data/03_Research/fluid_vector_state_research_contract.json"
-REGISTRY = ROOT / "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry_topic10_variational_addendum.json"
+REGISTRY = canonical_existing_path(ROOT / "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry_topic10_variational_addendum.json")
 CARD = TOPIC / "VECTOR_VARIATIONAL_ORIGIN.md"
 OUTPUT = TOPIC / "Result/artifacts/fluid_vector_variational_origin_audit.json"
 

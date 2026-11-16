@@ -20,6 +20,7 @@ sys.path.insert(0, str(ROOT))
 from docs.scripts.audit.audit_calculation_completeness import (
     artifact_metadata, contract_hash, identity_hash, load_json, TEXT,
 )
+from core.core_paths import canonical_path_for
 
 T = "docs/topics/0.13_Thermodynamic_Bridge"
 MANIFEST = f"{T}/Data/03_Research/batio3_publication_manifest.json"
@@ -68,9 +69,13 @@ def git(root, *args):
 
 
 def target(root, relative):
+    relative = str(relative).replace("\\", "/")
     p = (root / relative).resolve()
     if not p.is_relative_to(root.resolve()) or Path(relative).is_absolute():
         raise ValueError("publication path escapes review workspace")
+    canonical = (root / canonical_path_for(relative)).resolve()
+    if canonical.is_relative_to(root.resolve()) and canonical.exists():
+        return canonical
     return p
 
 

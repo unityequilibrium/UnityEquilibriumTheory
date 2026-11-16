@@ -5,18 +5,15 @@ from pathlib import Path
 
 
 ROOT = repo_root()
-ARTIFACT = ROOT / "docs/core/07_artifacts/topic13/t13_nims_mp990448_phonon_source_boundary_audit.json"
+ARTIFACT = ROOT / 'core/07_artifacts/topic13/t13_nims_mp990448_phonon_source_boundary_audit.json'
 PACKAGE = ROOT / (
-    "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/"
-    "nims_mdr_mp990448_phonon_source_package.json"
+    'topics/0.13_Thermodynamic_Bridge/Data/03_Research/nims_mdr_mp990448_phonon_source_package.json'
 )
 ARCHIVE = ROOT / (
-    "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/"
-    "nims_mdr_mp990448_graphite_phonon_dataset.zip"
+    'topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/nims_mdr_mp990448_graphite_phonon_dataset.zip'
 )
 LEGACY_ARCHIVE = ROOT / (
-    "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/"
-    "nims_mdr_wd3761563_legacy.zip"
+    'topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/nims_mdr_wd3761563_legacy.zip'
 )
 
 

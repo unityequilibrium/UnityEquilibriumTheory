@@ -9,7 +9,12 @@ import unittest
 import numpy as np
 
 ROOT=next(p for p in Path(__file__).resolve().parents if (p/"docs/core").is_dir())
-TOPIC=ROOT/"docs/topics/0.10_Fluid_Dynamics_Chaos"
+
+import sys as _sys
+if str(ROOT) not in _sys.path:
+    _sys.path.insert(0, str(ROOT))
+from core.core_paths import canonical_existing_path, canonical_path_for
+TOPIC=ROOT/"topics/0.10_Fluid_Dynamics_Chaos"
 SCRIPT=TOPIC/"Code/03_Research/Research_Fluid_Core_O2_Goldstone_Galerkin.py"
 CONTRACT=TOPIC/"Data/03_Research/fluid_core_o2_goldstone_galerkin_contract.json"
 ARTIFACT=TOPIC/"Result/artifacts/fluid_core_o2_goldstone_galerkin_audit.json"
@@ -29,7 +34,7 @@ class GoldstoneGalerkinTests(unittest.TestCase):
     def test_source_fresh_selected_kernel_does_not_admit_transport_or_thermalization(self):
         a=self.fresh
         for f,h in self.published["input_hashes"].items():
-            self.assertEqual(hashlib.sha256((ROOT/f).read_bytes()).hexdigest(),h,f)
+            self.assertEqual(hashlib.sha256((canonical_existing_path(ROOT/f)).read_bytes()).hexdigest(),h,f)
         self.assertEqual(a["input_hashes"],self.published["input_hashes"])
         self.assertEqual(a["source_AST_definition_hashes"],self.published["source_AST_definition_hashes"])
         self.assertEqual(a["locked_verification"],self.published["locked_verification"])
@@ -88,9 +93,11 @@ class GoldstoneGalerkinTests(unittest.TestCase):
 
     def test_archived_first_results_and_false_admission_empty_or_relaxed_targets_fail_closed(self):
         a=self.fresh;record=a["first_execution_record"]
-        old=json.loads((ROOT/record["artifact"]).read_text(encoding="utf-8"))
-        archive=ROOT/record["verifier_source_archive"]
-        self.assertEqual(hashlib.sha256(archive.read_bytes()).hexdigest(),old["input_hashes"][SCRIPT.relative_to(ROOT).as_posix()])
+        old=json.loads((canonical_existing_path(ROOT/record["artifact"])).read_text(encoding="utf-8"))
+        archive=canonical_existing_path(ROOT/record["verifier_source_archive"])
+        script_key=SCRIPT.relative_to(ROOT).as_posix()
+        recorded_key=next(key for key in old["input_hashes"] if canonical_path_for(key)==script_key)
+        self.assertEqual(hashlib.sha256(archive.read_bytes()).hexdigest(),old["input_hashes"][recorded_key])
         self.assertEqual(old["locked_verification"],a["locked_verification"])
         self.assertEqual(old["refinement_gate"],self.published["refinement_gate"])
         for prev,new in zip(old["state_results"],self.published["state_results"]):

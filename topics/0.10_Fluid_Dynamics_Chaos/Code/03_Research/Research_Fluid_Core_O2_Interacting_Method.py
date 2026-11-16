@@ -12,9 +12,14 @@ from pathlib import Path
 from types import SimpleNamespace
 
 ROOT = next(p for p in Path(__file__).resolve().parents if (p / "docs/core").is_dir())
-TOPIC = ROOT / "docs/topics/0.10_Fluid_Dynamics_Chaos"
+
+import sys as _sys
+if str(ROOT) not in _sys.path:
+    _sys.path.insert(0, str(ROOT))
+from core.core_paths import canonical_existing_path
+TOPIC = ROOT / "topics/0.10_Fluid_Dynamics_Chaos"
 CONTRACT = TOPIC / "Data/03_Research/fluid_core_o2_interacting_method_contract.json"
-REGISTRY = ROOT / "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry_topic10_o2_interacting_method_addendum.json"
+REGISTRY = canonical_existing_path(ROOT / "docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry_topic10_o2_interacting_method_addendum.json")
 OUTPUT = TOPIC / "Result/artifacts/fluid_core_o2_interacting_method_audit.json"
 PASS = "PASS_SOURCE_BRANCH_CONDITIONAL_ALGEBRA_ONLY"
 FAIL = "INTERACTING_METHOD_ADMISSION_DIAGNOSTIC_FAIL"
@@ -57,7 +62,7 @@ def witness(mu, mass, coupling, plus, minus, gapless=False):
 
 
 def source_functions(p):
-    adapter=load(ROOT/p["source_adapter"])
+    adapter=load(canonical_existing_path(ROOT/p["source_adapter"]))
     ns,ids={},{}
     for name,path in p["core_sources"].items():
         extra={}
@@ -72,7 +77,7 @@ def source_functions(p):
                          _thermal_one_loop_state=ns["thermo"]["_thermal_one_loop_state"],
                          _thermal_tadpole_and_derivative=ns["self_energy"]["_thermal_tadpole_and_derivative"],
                          _vacuum_terms=ns["vacuum"]["_vacuum_terms"])
-        ns[name],ids[name]=adapter.selected_namespace(ROOT/path,p["AST_selected_definitions"][name],extra)
+        ns[name],ids[name]=adapter.selected_namespace(canonical_existing_path(ROOT/path),p["AST_selected_definitions"][name],extra)
         # Value-preserving cache of the original pure coordinate/weight generator;
         # no new quadrature, np monkeypatch or source definition substitution.
         if "_quadrature" in ns[name]:
@@ -90,20 +95,20 @@ def audit(p, path):
     flag("contract_identity",sha(CONTRACT)=="cfb4897d65ca0935eeffcecf710c29ca3c70ac60e591b85e8b7c95bf5ddca446")
     locked=json.loads(CONTRACT.read_text(encoding="utf-8"))
     flag("all_prelocked_values_unchanged",p==locked)
-    flag("card_identity",sha(ROOT/p["card"])=="54df71448731c4d7d395a8b0845ef48f6096e8a5d292edb59dceb964e66dfa8d")
+    flag("card_identity",sha(canonical_existing_path(ROOT/p["card"]))=="54df71448731c4d7d395a8b0845ef48f6096e8a5d292edb59dceb964e66dfa8d")
     flag("registry_identity",sha(REGISTRY)=="7849faf7a3d4ed570f31b089c0c804312c1533f204023cf4e69b3b9e2b971301")
-    prior=json.loads((ROOT/p["prior_density_artifact"]).read_text(encoding="utf-8"))
+    prior=json.loads((canonical_existing_path(ROOT/p["prior_density_artifact"])).read_text(encoding="utf-8"))
     flag("prior_scope",prior["status"]=="PASS_LEADING_MEAN_DENSITY_GAUSSIAN_SUBSET_ONLY"
          and not prior["full_interacting_density_backreaction_completed"])
-    flag("prior_sources_fresh",all((ROOT/f).is_file() and sha(ROOT/f)==h for f,h in prior["input_hashes"].items()))
+    flag("prior_sources_fresh",all((canonical_existing_path(ROOT/f)).is_file() and sha(canonical_existing_path(ROOT/f))==h for f,h in prior["input_hashes"].items()))
     flag("no_method_gate_admitted",len(p["method_gate"])==10 and all(s=="NOT_STARTED" for s in p["method_gate"].values()))
     flag("no_physical_admission",len(p["admission"])==14 and all(v is False for v in p["admission"].values()))
     rules=p["verification"]
     def finish():
-        paths=[path,Path(__file__).resolve(),REGISTRY,ROOT/p["card"],
-               ROOT/p["prior_density_artifact"],ROOT/p["source_adapter"]]
-        paths += [ROOT/f for f in p["core_sources"].values()]
-        paths += [ROOT/f for f in prior["input_hashes"]]
+        paths=[path,Path(__file__).resolve(),REGISTRY,canonical_existing_path(ROOT/p["card"]),
+               canonical_existing_path(ROOT/p["prior_density_artifact"]),canonical_existing_path(ROOT/p["source_adapter"])]
+        paths += [canonical_existing_path(ROOT/f) for f in p["core_sources"].values()]
+        paths += [canonical_existing_path(ROOT/f) for f in prior["input_hashes"]]
         hashes={f.relative_to(ROOT).as_posix() if f.is_relative_to(ROOT) else f.name:sha(f) for f in paths}
         passed=all(c["pass"] for c in checks.values()) and len(probes)==12 and len(controls)==6 and len(algebra)==3 and not errors
         return dict(schema_version="t010-interacting-method-audit-v1",date=p["date"],

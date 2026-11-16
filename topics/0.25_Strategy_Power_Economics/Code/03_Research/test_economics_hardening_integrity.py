@@ -4,10 +4,11 @@ import importlib.util
 import json
 import unittest
 from pathlib import Path
+from core.core_paths import canonical_existing_path
 
 HERE = Path(__file__).resolve()
 TOPIC = HERE.parents[2]
-REPO = HERE.parents[5]
+REPO = HERE.parents[4]
 COMMON_PATH = HERE.parent / "economic_hardening_common.py"
 
 spec = importlib.util.spec_from_file_location("economic_hardening_common", COMMON_PATH)
@@ -51,7 +52,7 @@ class EconomicsHardeningIntegrityTests(unittest.TestCase):
         self.assertEqual(gate["complete_case_rows"], 0)
         self.assertEqual(gate["controller"], "GLOBAL_COMPLETE_CASE_PANEL_UNAVAILABLE")
         for item in gate["invalidated_downstream_artifacts"]:
-            artifact = load_json(REPO / item["path"])
+            artifact = load_json(canonical_existing_path(REPO / item["path"]))
             self.assertEqual(artifact["status"], "INVALID_SUPERSEDED")
 
     def test_alignment_gate_preserves_claim_boundary(self) -> None:

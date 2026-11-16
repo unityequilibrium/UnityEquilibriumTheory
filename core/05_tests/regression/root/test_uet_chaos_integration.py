@@ -1,4 +1,5 @@
 from __future__ import annotations
+from core.core_paths import canonical_existing_path
 from docs.core.core_paths import repo_root
 
 import json
@@ -9,7 +10,7 @@ ROOT = repo_root()
 
 
 def load(relative_path: str) -> dict:
-    return json.loads((ROOT / relative_path).read_text(encoding="utf-8-sig"))
+    return json.loads((canonical_existing_path(ROOT / relative_path)).read_text(encoding="utf-8-sig"))
 
 
 def test_core_and_topic_method_results_are_registered_without_claim_promotion() -> None:

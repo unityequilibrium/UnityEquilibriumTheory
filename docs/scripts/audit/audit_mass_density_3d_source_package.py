@@ -11,10 +11,16 @@ from __future__ import annotations
 import hashlib
 import json
 from pathlib import Path
+import sys
 from typing import Any
 
 
 ROOT = Path(__file__).resolve().parents[3]
+if str(ROOT) not in sys.path:
+    sys.path.insert(0, str(ROOT))
+
+from core.core_paths import canonical_existing_path  # noqa: E402
+
 MANIFEST_PATH = ROOT / "docs/data/external/astronomy/gaia_edr3_gcns/2026-08-08/source_manifest.json"
 OPERATOR_PATH = ROOT / "docs/core/07_artifacts/verification/mass_density_3d_contract_verification.json"
 QUERY_MANIFEST_PATH = ROOT / "docs/data/external/astronomy/gaia_edr3_gcns/2026-08-08/query_and_holdout_manifest.json"
@@ -22,7 +28,7 @@ OUTPUT_PATH = ROOT / "docs/core/07_artifacts/provenance/mass_density_3d_external
 
 
 def _load(path: Path) -> dict[str, Any]:
-    with path.open("r", encoding="utf-8-sig") as handle:
+    with canonical_existing_path(path).open("r", encoding="utf-8-sig") as handle:
         value = json.load(handle)
     if not isinstance(value, dict):
         raise ValueError(f"expected JSON object: {path}")
@@ -30,7 +36,7 @@ def _load(path: Path) -> dict[str, Any]:
 
 
 def _sha256(path: Path) -> str:
-    return hashlib.sha256(path.read_bytes()).hexdigest()
+    return hashlib.sha256(canonical_existing_path(path).read_bytes()).hexdigest()
 
 
 def _relative(path: Path) -> str:

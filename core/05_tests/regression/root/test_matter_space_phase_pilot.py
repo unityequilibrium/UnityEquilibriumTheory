@@ -1,7 +1,7 @@
 """Artifact, provenance, and claim-boundary checks for the Topic 0.11 pilot."""
 
 from __future__ import annotations
-from docs.core.core_paths import repo_root
+from docs.core.core_paths import canonical_existing_path, repo_root
 
 import hashlib
 import json
@@ -9,7 +9,7 @@ from pathlib import Path
 
 
 ROOT = repo_root()
-TOPIC = ROOT / "docs" / "topics" / "0.11_Phase_Transitions"
+TOPIC = ROOT / "topics" / "0.11_Phase_Transitions"
 DATA = TOPIC / "Data" / "03_Research"
 ARTIFACT = TOPIC / "Result" / "artifacts" / "0_11_matter_space_coupled_diagnostic.json"
 
@@ -108,15 +108,15 @@ def test_effect_resolution_and_adiabatic_controls_are_nontrivial() -> None:
 def test_hashes_and_diagnostic_claim_boundary_match_local_files() -> None:
     artifact = _read(ARTIFACT)
     for block in ("preregistration", "numerical_amendment"):
-        path = ROOT / artifact[block]["path"]
+        path = canonical_existing_path(ROOT / artifact[block]["path"])
         assert artifact[block]["sha256"] == _sha256_text(path)
     for dependency in artifact["dependencies"].values():
-        path = ROOT / dependency["path"]
+        path = canonical_existing_path(ROOT / dependency["path"])
         assert dependency["sha256"] == _sha256(path)
     csv_record = artifact["outputs"]["profiles_csv"]
-    assert csv_record["sha256"] == _sha256(ROOT / csv_record["path"])
+    assert csv_record["sha256"] == _sha256(canonical_existing_path(ROOT / csv_record["path"]))
     for figure in artifact["outputs"]["figures"]:
-        assert figure["sha256"] == _sha256(ROOT / figure["path"])
+        assert figure["sha256"] == _sha256(canonical_existing_path(ROOT / figure["path"]))
     assert artifact["run_integrity"]["morphology_metrics_claim_bearing"] is False
     boundary = " ".join(artifact["claim_boundary"])
     assert "not accepted estimators" in boundary

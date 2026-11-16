@@ -6,8 +6,8 @@ from pathlib import Path
 
 
 ROOT = repo_root()
-ASSESSMENT = ROOT / "docs/core/07_artifacts/archive/conserved_c_finite_cone_no_go_assessment.json"
-GATE = ROOT / "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json"
+ASSESSMENT = ROOT / 'core/07_artifacts/archive/conserved_c_finite_cone_no_go_assessment.json'
+GATE = ROOT / 'topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json'
 
 
 def load(path: Path) -> dict:

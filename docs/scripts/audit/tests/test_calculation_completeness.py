@@ -24,7 +24,7 @@ class ContractTests(unittest.TestCase):
         schema = self.root / audit.SCHEMA
         schema.parent.mkdir(parents=True)
         schema.write_bytes((audit.ROOT / audit.SCHEMA).read_bytes())
-        self.path = "docs/core/02_equations/example.py"
+        self.path = "core/02_equations/example.py"
         file = self.root / self.path
         file.parent.mkdir(parents=True)
         file.write_text("# controlled model\n")
@@ -59,7 +59,7 @@ class ContractTests(unittest.TestCase):
         self.assertTrue(any("scope/model/config" in e for e in r["errors"]))
 
     def save_contract(self):
-        p = self.root / "docs/core/calculation_contracts/formal.json"
+        p = self.root / "core/calculation_contracts/formal.json"
         p.parent.mkdir(parents=True, exist_ok=True)
         p.write_text(json.dumps(self.c))
 
@@ -217,7 +217,7 @@ class ContractTests(unittest.TestCase):
         self.c["profile"] = "SYNTHETIC"
         self.c["review"]["status"] = "INCOMPLETE"
         self.save_contract()
-        path = "docs/core/calculation_contracts/formal.json"
+        path = "core/calculation_contracts/formal.json"
         report = audit.build_report(self.root, [path])
         self.assertTrue(any("requires observation.system_partition" in e for e in report["errors"]))
         self.partition()
@@ -381,7 +381,7 @@ class ContractTests(unittest.TestCase):
         self.assertTrue(any("complete observable" in e for e in self.errors()))
 
     def test_changed_scientific_path_classification(self):
-        (self.root / "docs/core/new.py").write_text("x=1")
+        (self.root / "core/new.py").write_text("x=1")
         r = audit.build_report(self.root, ["docs/core/new.py", "docs/core/test_new.py"])
         self.assertEqual(len(r["errors"]), 1)
 
@@ -417,16 +417,36 @@ class ContractTests(unittest.TestCase):
             (self.root/path).write_bytes(b"x\n")
             self.assertEqual(before == audit.identity_hash(self.root, item), equal)
 
+    def test_legacy_path_translation_does_not_refresh_pinned_hash(self):
+        legacy = "docs/core/02_equations/example.py"
+        current = {"path": self.path, "kind": "working_file"}
+        relocated = {"path": legacy, "kind": "working_file"}
+        pinned = audit.identity_hash(self.root, current)
+        relocated["sha256"] = pinned
+        self.assertEqual(audit.repo_path(self.root, legacy), self.root / self.path)
+        self.assertEqual(audit.identity_hash(self.root, relocated), pinned)
+        (self.root / self.path).write_text("# changed after relocation\n")
+        self.assertNotEqual(audit.identity_hash(self.root, relocated), relocated["sha256"])
+
+    def test_json_reader_uses_relocated_topic_file_without_rewriting_identity(self):
+        legacy = audit.ROOT / "docs/topics/0.13_Thermodynamic_Bridge/calculation_contracts/physical_route_admission.json"
+        current = audit.ROOT / "topics/0.13_Thermodynamic_Bridge/calculation_contracts/physical_route_admission.json"
+        self.assertFalse(legacy.exists())
+        self.assertTrue(current.is_file())
+        self.assertEqual(audit.load_json(legacy), audit.load_json(current))
+
     def test_ci_contract_checks_are_fail_visible_and_history_complete(self):
         pr = (audit.ROOT / ".github/workflows/pr-validation.yml").read_text(encoding="utf-8-sig")
         nightly = (audit.ROOT / ".github/workflows/nightly-research-audit.yml").read_text(encoding="utf-8-sig")
+        main = (audit.ROOT / ".github/workflows/main-validation.yml").read_text(encoding="utf-8-sig")
         self.assertIn("scripts|data/external", pr)
         self.assertIn("pr-validation|nightly-research-audit", pr)
-        self.assertIn('audit_calculation_completeness.py --changed "$BASE_SHA" --check', pr)
+        self.assertIn("^(core/|topics/", pr)
+        self.assertIn('topics/run_all_tests.py --changed "$BASE_SHA"', pr)
         self.assertIn("fetch-depth: 0", nightly)
-        for text in (pr, nightly):
-            step = text.split("python docs/scripts/audit/audit_calculation_completeness.py", 1)[0].rsplit("run: |", 1)[1]
-            self.assertIn("set -euo pipefail", step)
+        self.assertIn("topics/run_all_tests.py --all", nightly)
+        self.assertIn("topics/run_all_tests.py --all", main)
+        self.assertNotIn("continue-on-error", pr + nightly + main)
 
     def test_inventory_read_only_deterministic(self):
         self.save_contract()
@@ -444,14 +464,14 @@ class ContractTests(unittest.TestCase):
 
     def test_inventory_partial_contract_never_certifies_entire_route(self):
         self.save_contract()
-        self.write_inventory_baseline([self.path, "docs/core/unreviewed.py"])
-        (self.root / "docs/core/unreviewed.py").write_text("# another unreviewed implementation")
+        self.write_inventory_baseline([self.path, "core/unreviewed.py"])
+        (self.root / "core/unreviewed.py").write_text("# another unreviewed implementation")
         result = audit.build_report(self.root)
         family = next(r for r in result["routes"] if r["route_id"] == "family")
         scoped = next(r for r in result["routes"] if r["route_id"] == "contract:TEST")
         self.assertEqual(family["contract_ids"], ["TEST"])
         self.assertEqual(family["review_status"], "UNREVIEWED")
-        self.assertIn("docs/core/unreviewed.py", family["uncovered_paths"])
+        self.assertIn("core/unreviewed.py", family["uncovered_paths"])
         self.assertEqual(family["adoption"]["action"], "REVIEW_MODEL_OR_CODE")
         self.assertEqual(scoped["adoption"]["action"], "REUSE_SCOPED_EVIDENCE")
 
@@ -482,15 +502,15 @@ class ContractTests(unittest.TestCase):
         self.assertEqual(family["contract_ids"], [])
 
     def test_inventory_discovers_topic_without_verification_spec_and_loose_sources(self):
-        folder = self.root / "docs/topics/0.99_New_Topic"
+        folder = self.root / "topics/0.99_New_Topic"
         folder.mkdir(parents=True)
         (folder / "README.md").write_text("# provisional idea")
-        formal = self.root / "docs/core/01_contracts/new_proposition.md"
+        formal = self.root / "core/01_contracts/new_proposition.md"
         formal.parent.mkdir(parents=True)
         formal.write_text("# a mathematical proposition")
         report = audit.build_report(self.root)
         topic = next(r for r in report["routes"] if r["route_id"] == folder.name)
-        self.assertIn("docs/topics/0.99_New_Topic/VERIFICATION_SPEC.md", topic["missing_paths"])
+        self.assertIn("topics/0.99_New_Topic/VERIFICATION_SPEC.md", topic["missing_paths"])
         group = next(r for r in report["routes"] if r["route_id"] == "unassigned:CORE")
         self.assertIn(formal.relative_to(self.root).as_posix(), group["resolved_paths"])
         self.assertEqual(group["adoption"]["action"], "REVIEW_MODEL_OR_CODE")
@@ -523,7 +543,7 @@ class ContractTests(unittest.TestCase):
 
     def test_new_result_exact_contract_metadata(self):
         self.save_contract()
-        path = self.root / "docs/core/07_artifacts/verification/new.json"
+        path = self.root / "core/07_artifacts/verification/new.json"
         path.parent.mkdir(parents=True)
         path.write_text('{"contract_id":"TEST"}')
         rel = path.relative_to(self.root).as_posix()
@@ -547,7 +567,7 @@ class ContractTests(unittest.TestCase):
 class ObserverControls(unittest.TestCase):
     def test_admission_products_keep_physical_unknowns_after_relational_adoption(self):
         for name in ("physical_route_admission", "readout_admission"):
-            path = audit.ROOT / f"docs/topics/0.13_Thermodynamic_Bridge/calculation_contracts/{name}.json"
+            path = audit.ROOT / f"topics/0.13_Thermodynamic_Bridge/calculation_contracts/{name}.json"
             contract = audit.load_json(path)
             self.assertEqual(contract["review"]["status"], "INCOMPLETE")
             self.assertNotEqual(contract["output"]["claim_intent"], "PHYSICAL_ACCEPTANCE")
@@ -555,7 +575,14 @@ class ObserverControls(unittest.TestCase):
             self.assertEqual(partition["role_mode"], "RELATIONAL")
             self.assertTrue(any(c["group"] == "detector" and c["disposition"] == "UNKNOWN"
                                 for c in contract["components"]))
-            self.assertEqual(audit.validate_contract(contract)["errors"], [])
+            errors = audit.validate_contract(contract)["errors"]
+            if name in {"physical_route_admission", "readout_admission"}:
+                stem = "Research_T13_Physical_Route_Admission.py" if name == "physical_route_admission" else "Research_T13_Readout_Admission.py"
+                self.assertEqual(errors, [
+                    f"STALE identity: docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/{stem}"
+                ])
+            else:
+                self.assertEqual(errors, [])
 
     def test_pilot_builder_and_saved_partition_agree(self):
         builder = audit.ROOT / "docs/scripts/audit/build_calculation_contract_pilots.py"
@@ -568,7 +595,7 @@ class ObserverControls(unittest.TestCase):
                           and target.value.value.id == "c"
                           and isinstance(target.slice, ast.Constant)
                           and target.slice.value == "system_partition" for target in node.targets)]
-        saved = audit.load_json(audit.ROOT / "docs/core/00_governance/calculation_contracts/matter_space_observer.json")
+        saved = audit.load_json(audit.ROOT / "core/00_governance/calculation_contracts/matter_space_observer.json")
         self.assertEqual(values, [saved["observation"]["system_partition"]])
         baselines = [ast.literal_eval(node.args[1]) for node in ast.walk(tree)
                      if isinstance(node, ast.Call) and isinstance(node.func, ast.Attribute)
@@ -577,7 +604,7 @@ class ObserverControls(unittest.TestCase):
         self.assertIn(saved["identities"][0], baselines)
 
     def test_core_relational_pilot_keeps_source_state_and_physical_gap(self):
-        saved = audit.load_json(audit.ROOT / "docs/core/00_governance/calculation_contracts/matter_space_observer.json")
+        saved = audit.load_json(audit.ROOT / "core/00_governance/calculation_contracts/matter_space_observer.json")
         graph = saved["observation"]["system_partition"]
         self.assertEqual(graph["role_mode"], "RELATIONAL")
         independent = {sid for s in graph["systems"] for sid in s["state_accounting"]["state_ids"]}
@@ -594,7 +621,7 @@ class ObserverControls(unittest.TestCase):
         builder = importlib.util.module_from_spec(spec)
         spec.loader.exec_module(builder)
         for name in ("he4_observation", "nonlinear_physical"):
-            saved = audit.load_json(audit.ROOT / f"docs/topics/0.13_Thermodynamic_Bridge/calculation_contracts/{name}.json")
+            saved = audit.load_json(audit.ROOT / f"topics/0.13_Thermodynamic_Bridge/calculation_contracts/{name}.json")
             graph = saved["observation"]["system_partition"]
             expected = builder.unadmitted_measurement_partition(graph["systems"][0]["state"], graph["observables"][0]["quantity"])
             self.assertEqual(graph, expected)
@@ -607,11 +634,18 @@ class ObserverControls(unittest.TestCase):
 
     def test_formal_invariant_and_graphite_design_do_not_invent_apparatus(self):
         for name in ("nonlinear_formal", "graphite_preparation_prediction"):
-            saved = audit.load_json(audit.ROOT / f"docs/topics/0.13_Thermodynamic_Bridge/calculation_contracts/{name}.json")
+            saved = audit.load_json(audit.ROOT / f"topics/0.13_Thermodynamic_Bridge/calculation_contracts/{name}.json")
             self.assertEqual(saved["profile"], "FORMAL")
             self.assertFalse(saved["data_policy"]["uses_observations"])
             result = audit.validate_contract(saved)
-            self.assertEqual(result["errors"], [])
+            expected_stale = (
+                [
+                    "STALE identity: docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/Research_T13_Graphite_Preparation.py"
+                ]
+                if name == "graphite_preparation_prediction"
+                else []
+            )
+            self.assertEqual(result["errors"], expected_stale)
             self.assertNotIn("system_partition:legacy_unreviewed", result["gaps"])
 
     def test_astronomy_contracts_are_offline_products_not_raw_instrument_reductions(self):
@@ -620,7 +654,7 @@ class ObserverControls(unittest.TestCase):
         builder = importlib.util.module_from_spec(spec)
         spec.loader.exec_module(builder)
         for topic in builder.ASTRONOMY_INPUTS:
-            saved = audit.load_json(audit.ROOT / f"docs/topics/{topic}/calculation_contracts/observation_coverage.json")
+            saved = audit.load_json(audit.ROOT / f"topics/{topic}/calculation_contracts/observation_coverage.json")
             self.assertEqual(builder.adopt_offline_product(copy.deepcopy(saved), topic), saved)
             graph = saved["observation"]["system_partition"]
             self.assertEqual({s["id"] for s in graph["systems"]}, {"data_product", "analysis"})

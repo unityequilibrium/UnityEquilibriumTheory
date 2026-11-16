@@ -822,3 +822,10 @@ CLAIM_BOUNDARY: Internal numerical-method validation only; not evidence that UET
   Python files. No scientific behavior/control changed;156/156 diagnostic and
   four focused regressions pass again(3.112s). Current artifact/source hashes
   were refreshed without changing any prior snapshot/history entry.
+
+## 2026-11-16 — Archived-source locator recovery (software only)
+- Fixed Flow Hessian/Infrared historical source-key lookup after the root move: legacy/current locators must identify exactly one source; recorded hashes are returned unchanged. Infrared's generated predecessor hash lookup now uses the current key.
+- Restored two verifier archive working copies to unchanged committed bytes only after EOL-only and original-hash checks; before-copies remain in local `tmp/delivery-recovery/topic10-locator-archive-bytes-20261116/`. Added archive byte-preservation coverage, not a scientific acceptance rule.
+- Verification: 20 locator cases passed; affected regression modules moved from 8 setup errors to 6 passed / 2 current-source identity failures. Combined affected/checkout run: 43 passed / 2 failed; runner/standard tools 87 passed. No frozen hash was refreshed.
+- Source review: 12 Flow/8 Infrared pre-existing non-audit functions and all top-level assignments are AST-identical to HEAD; only metadata locators changed inside audit bodies. No equation, coefficient, numerical threshold, saved artifact or evidence level changed.
+- Full/changed completeness each retain 43 STALE errors; schema/preregistration 0 errors. No whole-Topic closure or physical validation is claimed. Next: classify remaining setup/version prerequisites from the saved full run rather than relabeling stale evidence.

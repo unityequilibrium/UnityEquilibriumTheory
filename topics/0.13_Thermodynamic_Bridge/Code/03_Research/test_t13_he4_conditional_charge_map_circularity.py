@@ -1,4 +1,5 @@
 """Focused checks for the hypothetical charge-map circularity boundary."""
+from core.core_paths import canonical_existing_path
 
 import hashlib
 import importlib.util
@@ -35,6 +36,6 @@ def test_reusing_density_in_e0_makes_the_match_an_identity():
 
 def test_evidence_hashes_match_current_inputs():
     for entry in AUDIT["evidence_artifacts"]:
-        path = MODULE.ROOT / entry["path"]
+        path = canonical_existing_path(MODULE.ROOT / entry["path"])
         assert path.is_file()
         assert hashlib.sha256(path.read_bytes()).hexdigest() == entry["sha256"]

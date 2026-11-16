@@ -9,7 +9,7 @@ from pathlib import Path
 
 
 ROOT = repo_root()
-TOPIC = ROOT / "docs" / "topics" / "0.22_Biophysics_Origin_of_Life"
+TOPIC = ROOT / "topics" / "0.22_Biophysics_Origin_of_Life"
 SCRIPT = TOPIC / "Code" / "03_Research" / "Research_Protein_Folding_Dynamics_Gate.py"
 
 

@@ -11,9 +11,9 @@ from docs.core import topic13_closure_record_contract as legacy_contract
 
 def test_topic13_support_root_modules_forward_to_canonical_sources() -> None:
     names = {
-        "formal": "docs.core.03_lanes.topic13_support.t13_formal_thermodynamic_bridge_integration",
-        "scale": "docs.core.03_lanes.topic13_support.t13_thermal_bridge_scale_dependency",
-        "contract": "docs.core.03_lanes.topic13_support.topic13_closure_record_contract",
+        "formal": "core.03_lanes.topic13_support.t13_formal_thermodynamic_bridge_integration",
+        "scale": "core.03_lanes.topic13_support.t13_thermal_bridge_scale_dependency",
+        "contract": "core.03_lanes.topic13_support.topic13_closure_record_contract",
     }
     canonical = {key: importlib.import_module(name) for key, name in names.items()}
 
@@ -26,7 +26,7 @@ def test_topic13_support_root_modules_forward_to_canonical_sources() -> None:
 
 
 def test_topic13_support_package_exports_declared_surface() -> None:
-    package = importlib.import_module("docs.core.03_lanes.topic13_support")
+    package = importlib.import_module("core.03_lanes.topic13_support")
 
     for name in (
         "formal_thermodynamic_bridge_witness",

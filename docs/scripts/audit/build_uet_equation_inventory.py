@@ -18,7 +18,7 @@ from typing import Any
 
 
 ROOT = Path(__file__).resolve().parents[3]
-OUTPUT = ROOT / "docs/core/07_artifacts/gates/uet_foundation_equation_inventory.json"
+OUTPUT = ROOT / "core/07_artifacts/gates/uet_foundation_equation_inventory.json"
 
 
 ROLE_BY_TOPIC = {
@@ -34,12 +34,23 @@ ROLE_BY_TOPIC = {
 }
 
 
-def rel(path: Path) -> str:
-    return str(path.relative_to(ROOT)).replace("\\", "/")
+def rel(path: Path, root: Path = ROOT) -> str:
+    return path.relative_to(root).as_posix()
 
 
 def normalize_header(value: str) -> str:
     return re.sub(r"[^a-z0-9]+", " ", value.lower()).strip()
+
+
+# Column aliases for the existing Topic 0.22 ontology table. The combined
+# status/failure column is deliberately NOT treated as a proof-status column.
+ONTOLOGY_HEADERS = {
+    "id": "formula id", "ontology and relation": "relation",
+    "variables units": "variables and units",
+    "parameter origin derivation": "constant origin",
+    "observable and code artifact link": "code surface",
+    "status and failure mode": "failure mode", "next hardening": "next hardening step",
+}
 
 
 def parse_table_row(line: str, header_count: int) -> list[str] | None:
@@ -117,22 +128,26 @@ def classify_row(row: dict[str, str], topic_id: str) -> dict[str, Any]:
     }
 
 
-def parse_formula_audit(path: Path) -> list[dict[str, Any]]:
-    topic_match = re.search(r"docs[\\/]topics[\\/]([^\\/]+)", rel(path))
+def parse_formula_audit(path: Path, root: Path = ROOT) -> list[dict[str, Any]]:
+    topic_match = re.search(r"(?:^|/)(?:docs/)?topics/([^/]+)", rel(path, root))
     topic_folder = topic_match.group(1) if topic_match else path.parent.name
     topic_id_match = re.match(r"(0\.\d+)", topic_folder)
     topic_id = topic_id_match.group(1) if topic_id_match else topic_folder
     lines = path.read_text(encoding="utf-8", errors="replace").splitlines()
     records: list[dict[str, Any]] = []
     headers: list[str] | None = None
+    source_headers: list[str] | None = None
 
     for line_number, line in enumerate(lines, start=1):
         if not line.lstrip().startswith("|"):
             headers = None
+            source_headers = None
             continue
         raw_headers = [normalize_header(part) for part in line.strip().strip("|").split("|")]
-        if "formula id" in raw_headers or "formula id" in raw_headers or "formula_id" in line.lower():
-            headers = raw_headers
+        ontology_table = "id" in raw_headers and "ontology and relation" in raw_headers
+        if "formula id" in raw_headers or ontology_table:
+            source_headers = raw_headers
+            headers = [ONTOLOGY_HEADERS.get(header, header) for header in raw_headers] if ontology_table else raw_headers
             continue
         if headers is None:
             continue
@@ -158,22 +173,31 @@ def parse_formula_audit(path: Path) -> list[dict[str, Any]]:
                 "verification_role": row.get("verification role", ""),
                 "failure_mode": row.get("failure mode", row.get("limitation", "")),
                 "next_hardening_step": row.get("next hardening step", ""),
-                "source": {"path": rel(path), "line": line_number},
+                "source": {"path": rel(path, root), "line": line_number},
+                "source_fields": dict(zip(source_headers or headers, values)),
                 **metadata,
             }
         )
     return records
 
 
-def build_inventory() -> dict[str, Any]:
-    audit_paths = sorted((ROOT / "docs/topics").glob("*/FORMULA_AUDIT.md"))
+def build_inventory(root: Path = ROOT) -> dict[str, Any]:
+    topic_root = root / "topics"
+    topic_paths = sorted(path for path in topic_root.glob("0.*_*")
+                         if path.is_dir() and re.match(r"^0\.\d+_", path.name))
+    audit_paths = [path / "FORMULA_AUDIT.md" for path in topic_paths
+                   if (path / "FORMULA_AUDIT.md").is_file()]
     records: list[dict[str, Any]] = []
     parse_errors: list[str] = []
+    empty_audits: list[str] = []
     for path in audit_paths:
         try:
-            records.extend(parse_formula_audit(path))
+            parsed = parse_formula_audit(path, root)
+            records.extend(parsed)
+            if not parsed:
+                empty_audits.append(rel(path, root))
         except OSError as exc:
-            parse_errors.append(f"{rel(path)}: {exc}")
+            parse_errors.append(f"{rel(path, root)}: {exc}")
 
     by_formula: dict[str, list[dict[str, Any]]] = defaultdict(list)
     for record in records:
@@ -196,6 +220,11 @@ def build_inventory() -> dict[str, Any]:
     ]
     if scaffold_topics:
         missing_scope.append("explicit formula replacement for scaffold topics: " + ", ".join(scaffold_topics))
+    missing_audits = [path.name for path in topic_paths if not (path / "FORMULA_AUDIT.md").is_file()]
+    if missing_audits:
+        missing_scope.append("Topics without FORMULA_AUDIT.md: " + ", ".join(missing_audits))
+    if empty_audits:
+        missing_scope.append("Audit files with no supported formula rows (not complete coverage): " + ", ".join(empty_audits))
 
     status = "PASS_WITH_DISCLOSED_GAPS" if records and not parse_errors else "FAIL"
     return {
@@ -206,7 +235,11 @@ def build_inventory() -> dict[str, Any]:
         "inventory_gate_status": "BLOCKED" if missing_scope or duplicate_ids or parse_errors else "PASS",
         "controlling_blocker": "topic_formula_audits_not_code_complete_or_correspondence_incomplete" if missing_scope or duplicate_ids or parse_errors else None,
         "coverage": {
+            "numbered_topic_count": len(topic_paths),
+            "topics_without_formula_audit": missing_audits,
             "formula_audit_file_count": len(audit_paths),
+            "formula_audit_files_with_rows": len(audit_paths) - len(empty_audits) - len(parse_errors),
+            "formula_audits_without_parsed_rows": empty_audits,
             "parsed_formula_row_count": len(records),
             "coverage_status": "TOPIC_FORMULA_AUDITS_INVENTORIED_NOT_CODE_COMPLETE",
             "missing_scope": missing_scope,
@@ -243,7 +276,12 @@ def main() -> int:
         print(json.dumps(inventory, indent=2, ensure_ascii=False))
     else:
         print(f"audit_status={inventory['audit_status']}")
+        print(f"inventory_gate_status={inventory['inventory_gate_status']}")
+        print(f"numbered_topic_count={inventory['coverage']['numbered_topic_count']}")
         print(f"formula_audit_file_count={inventory['coverage']['formula_audit_file_count']}")
+        print(f"formula_audit_files_with_rows={inventory['coverage']['formula_audit_files_with_rows']}")
+        print(f"topics_without_formula_audit={','.join(inventory['coverage']['topics_without_formula_audit'])}")
+        print(f"formula_audits_without_parsed_rows_count={len(inventory['coverage']['formula_audits_without_parsed_rows'])}")
         print(f"parsed_formula_row_count={inventory['coverage']['parsed_formula_row_count']}")
         print(f"scaffold_topics={','.join(inventory['coverage']['scaffold_topics'])}")
         print(f"duplicate_formula_id_count={len(inventory['summary']['duplicate_formula_ids'])}")

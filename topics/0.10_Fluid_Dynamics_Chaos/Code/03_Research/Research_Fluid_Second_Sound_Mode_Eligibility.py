@@ -8,13 +8,14 @@ from pathlib import Path
 from types import SimpleNamespace
 import numpy as np
 from Research_Fluid_Vector_State_Contract import (
-    ROOT, TOPIC, CORE, PeriodicOperators, source_expression, evaluate
+    ROOT, TOPIC, CORE, PeriodicOperators, source_expression, evaluate,
+    canonical_existing_path,
 )
 
 CONTRACT=TOPIC/"Data/03_Research/fluid_second_sound_mode_eligibility_contract.json"
 PARENT=TOPIC/"Data/03_Research/fluid_vector_state_research_contract.json"
 CARD=TOPIC/"SECOND_SOUND_MODE_ELIGIBILITY.md"
-REGISTRY=ROOT/"docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry_topic10_second_sound_mode_addendum.json"
+REGISTRY=canonical_existing_path(ROOT/"docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry_topic10_second_sound_mode_addendum.json")
 OUTPUT=TOPIC/"Result/artifacts/fluid_second_sound_mode_eligibility_audit.json"
 
 
@@ -228,8 +229,8 @@ def main():
     result=audit(contract,parent)
     paths=[Path(__file__),Path(__file__).with_name("Research_Fluid_Vector_State_Contract.py"),
            CONTRACT,PARENT,CARD,REGISTRY,CORE,
-           ROOT/"docs/topics/0.13_Thermodynamic_Bridge/HE4_SECOND_SOUND_PROTOCOL_CARD.md",
-           ROOT/"docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry_topic13_continuum_relative_flow_addendum.json"]
+           canonical_existing_path(ROOT/"docs/topics/0.13_Thermodynamic_Bridge/HE4_SECOND_SOUND_PROTOCOL_CARD.md"),
+           canonical_existing_path(ROOT/"docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry_topic13_continuum_relative_flow_addendum.json")]
     result.update(schema_version="t10-second-sound-mode-eligibility-audit-v2",
                   status="PASS_CURRENT_CANDIDATE_HYDRODYNAMIC_MODE_EXCLUSION_ONLY" if result["pass"] else "FAIL_MODE_ELIGIBILITY_AUDIT",
                   controlling_blocker=contract["controlling_blocker"],

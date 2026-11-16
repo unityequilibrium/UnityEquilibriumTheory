@@ -15,11 +15,17 @@ import sys
 
 import sympy as s
 
-ROOT = Path(__file__).resolve().parents[5]
+ROOT = Path(__file__).resolve().parents[4]
+
+import sys as _sys
+if str(ROOT) not in _sys.path:
+    _sys.path.insert(0, str(ROOT))
+from core.core_paths import canonical_existing_path
 sys.path.insert(0, str(ROOT))
 from docs.scripts.audit.audit_calculation_completeness import artifact_metadata, load_json
+from core.core_paths import canonical_existing_path
 
-TOPIC = "docs/topics/0.13_Thermodynamic_Bridge"
+TOPIC = "topics/0.13_Thermodynamic_Bridge"
 STEM = "retained_response_requirement_audit"
 CONTRACT = f"{TOPIC}/calculation_contracts/{STEM}.json"
 OUTPUT = f"{TOPIC}/Result/artifacts/t13_{STEM}.json"
@@ -79,7 +85,7 @@ def expression(node, env):
 
 
 def source_drift(text=None):
-    f = functions(text if text is not None else (ROOT/CORE).read_text(encoding="utf-8"))
+    f = functions(text if text is not None else canonical_existing_path(canonical_existing_path(ROOT/CORE)).read_text(encoding="utf-8"))
     env = {"C": C, "Phi": Phi, "lap_C": 0, "lap_Phi": 0,
            "state.space_rate": Pi, "matter_drive": JC, "space_drive": JP}
     env.update({"config."+k: s.Integer(v) for k, v in FIXTURE.items()})
@@ -97,7 +103,7 @@ def source_drift(text=None):
 
 
 def resource_source_audit(text=None):
-    text = text if text is not None else (ROOT/RESOURCE).read_text(encoding="utf-8")
+    text = text if text is not None else canonical_existing_path(canonical_existing_path(ROOT/RESOURCE)).read_text(encoding="utf-8")
     tree, f = ast.parse(text), functions(text)
     config = next(n for n in tree.body if isinstance(n, ast.ClassDef) and n.name == "ResourceSelectionConfig")
     frozen = any(isinstance(d, ast.Call) and isinstance(d.func, ast.Name) and d.func.id == "dataclass"
@@ -236,7 +242,7 @@ def calculate():
     source = resource_source_audit()
     if not all(checks.values()) or not all(controls.values()):
         raise ValueError("exact response/source audit failed")
-    old = load_json(ROOT/CONTROLS)
+    old = load_json(canonical_existing_path(ROOT/CONTROLS))
     needed = ["costless_interaction_keeps_C_invariant", "costless_resource_changes_with_declared_cost",
               "same_cost_interaction_changes_C", "same_cost_interaction_does_not_change_ledger"]
     if not all(old["gates"][k] is True for k in needed):
@@ -264,7 +270,7 @@ def calculate():
 
 
 def record():
-    return {**artifact_metadata(load_json(ROOT/CONTRACT),ROOT),**calculate()}
+    return {**artifact_metadata(load_json(canonical_existing_path(ROOT/CONTRACT)),ROOT),**calculate()}
 
 
 def main(argv=None):
@@ -275,8 +281,8 @@ def main(argv=None):
     args=parser.parse_args(argv)
     result=record();payload=json.dumps(result,ensure_ascii=False,sort_keys=True,indent=2)+"\n"
     if args.emit_report:
-        (ROOT/OUTPUT).write_text(payload,encoding="utf-8",newline="\n")
-    elif not (ROOT/OUTPUT).is_file() or (ROOT/OUTPUT).read_bytes()!=payload.encode("utf-8"):
+        (canonical_existing_path(ROOT/OUTPUT)).write_text(payload,encoding="utf-8",newline="\n")
+    elif not (canonical_existing_path(ROOT/OUTPUT)).is_file() or (canonical_existing_path(ROOT/OUTPUT)).read_bytes()!=payload.encode("utf-8"):
         raise ValueError("artifact missing/stale; inspect before explicit --emit-report")
     print(json.dumps({"checks":len(result["checks"]),"negative_controls":len(result["negative_controls"]),
                       "physical_acceptance":False,"review":result["contract_review_status"]}))

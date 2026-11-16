@@ -16,13 +16,18 @@ import runpy
 import numpy as np
 from scipy.optimize import root
 
-ROOT = Path(__file__).resolve().parents[5]
-PREFIX = "docs/topics/0.13_Thermodynamic_Bridge/"
+ROOT = Path(__file__).resolve().parents[4]
+
+import sys as _sys
+if str(ROOT) not in _sys.path:
+    _sys.path.insert(0, str(ROOT))
+from core.core_paths import canonical_existing_path
+PREFIX = "topics/0.13_Thermodynamic_Bridge/"
 PREVIOUS_CODE = PREFIX+"Code/03_Research/Research_T13_Hartree_Soft_Collective.py"
 PREVIOUS_ARTIFACT = PREFIX+"Result/artifacts/t13_hartree_soft_collective.json"
-M = runpy.run_path(str(ROOT/PREVIOUS_CODE))
+M = runpy.run_path(str(canonical_existing_path(ROOT/PREVIOUS_CODE)))
 R, G, F = M["R"], M["G"], M["F"]
-OUTPUT = ROOT/(PREFIX+"Result/artifacts/t13_hartree_soft_poles.json")
+OUTPUT = canonical_existing_path(ROOT/(PREFIX+"Result/artifacts/t13_hartree_soft_poles.json"))
 POWERS = np.array([0, 0, 0, 0, 1])
 MATRIX_POWERS = POWERS[:, None]+POWERS[None, :]
 SPLIT_VELOCITIES = (.1, .2, .3, .4, .5, .6, .8)
@@ -315,7 +320,7 @@ def independent_upper_reference(kernel):
 
 
 def audit(progress=None):
-    predecessor = json.loads((ROOT/PREVIOUS_ARTIFACT).read_text(encoding="utf-8"))
+    predecessor = json.loads((canonical_existing_path(ROOT/PREVIOUS_ARTIFACT)).read_text(encoding="utf-8"))
     examples = []
     for e in predecessor["examples"]:
         kernels = [SoftKernel(e, n) for n in ORDERS]
@@ -371,7 +376,7 @@ def audit(progress=None):
         "elimination_denominator_windings_are_zero": all(abs(row[key]["sampled_winding"]) < 1e-6 and row[key]["minimum_boundary_modulus"] > .01 for e in examples for family in ("upper_contour", "local_lower_contour") for row in e[family] for key in ("covariance", "radial")),
         "finest_contour_phase_steps_resolved_not_certified": all(e[family][-1][key]["maximum_phase_increment"] < pi/2 for e in examples for family in ("upper_contour", "local_lower_contour") for key in ("phase", "uneliminated", "covariance", "radial")),
         "zero_order_phase_Ward_without_projection": all(r["zero_order_phase_Ward_residual"] < REFINEMENT_TOLERANCE for e in examples for r in e["pole_runs"]),
-        "protected_evidence_hashes_unchanged": all(hashlib.sha256((ROOT/item["path"]).read_bytes()).hexdigest() == item["sha256"] for item in predecessor["protected_evidence_hashes"])}
+        "protected_evidence_hashes_unchanged": all(hashlib.sha256((canonical_existing_path(ROOT/item["path"])).read_bytes()).hexdigest() == item["sha256"] for item in predecessor["protected_evidence_hashes"])}
     passed = all(checks.values())
     record = {"schema_version": "t13-hartree-local-soft-poles-v1", "generated_at": datetime.now(timezone.utc).isoformat(),
               "major_result_id": "T13_FIXED_PHI_HARTREE_LOCAL_LANDAU_POLE", "topic": "0.13", "branch_id": predecessor["branch_id"],
@@ -390,7 +395,7 @@ def audit(progress=None):
                          "tail_contours": ["horizontal", "return_to_real"], "radial_domain": "0<=k<infinity", "assigned_output_width": None},
               "thresholds": {"root_absolute": ROOT_TOLERANCE, "numerical_refinement_absolute": REFINEMENT_TOLERANCE, "original_cut_absolute": 1e-10,
                              "sampled_winding_integer_distance": 1e-6, "finest_phase_increment": pi/2, "causal_leakage_unchanged": 1e-6},
-              "evidence_artifacts": [{"path": path, "sha256": hashlib.sha256((ROOT/path).read_bytes()).hexdigest()} for path in (PREVIOUS_ARTIFACT, PREVIOUS_CODE, Path(__file__).relative_to(ROOT).as_posix())],
+              "evidence_artifacts": [{"path": path, "sha256": hashlib.sha256((canonical_existing_path(ROOT/path)).read_bytes()).hexdigest()} for path in (PREVIOUS_ARTIFACT, PREVIOUS_CODE, Path(__file__).relative_to(ROOT).as_posix())],
               "protected_evidence_hashes": predecessor["protected_evidence_hashes"],
               "open_blockers": ["certified_global_complex_domain_and_finite_q_pole_control", "Hartree_truncation_and_regulator_RG_full_action", "joint_Phi_stationarity_and_material_source_detector", "physical_normal_heat_collision_KMS_entropy_transport", "independent_measurement_input"],
               "controlling_blocker": "global_domain_truncation_joint_Phi_material_transport_not_closed",

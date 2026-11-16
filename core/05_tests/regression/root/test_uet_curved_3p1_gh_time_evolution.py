@@ -1,5 +1,5 @@
 from __future__ import annotations
-from docs.core.core_paths import repo_root
+from docs.core.core_paths import canonical_existing_path, repo_root
 
 import hashlib
 import json
@@ -21,9 +21,9 @@ from docs.core.uet_curved_3p1_gh_evolution import (
 
 
 ROOT = repo_root()
-VERIFY = ROOT / "docs/core/07_artifacts/verification/curved_3p1_gh_time_evolution_verification.json"
-FORMULA = ROOT / "docs/core/07_artifacts/correspondence/curved_3p1_gh_time_evolution_formula_audit.json"
-GATE = ROOT / "docs/core/07_artifacts/gates/curved_3p1_gh_time_evolution_gate.json"
+VERIFY = ROOT / 'core/07_artifacts/verification/curved_3p1_gh_time_evolution_verification.json'
+FORMULA = ROOT / 'core/07_artifacts/correspondence/curved_3p1_gh_time_evolution_formula_audit.json'
+GATE = ROOT / 'core/07_artifacts/gates/curved_3p1_gh_time_evolution_gate.json'
 
 
 def test_cfl_domain_is_fail_closed() -> None:
@@ -91,6 +91,6 @@ def test_generated_time_evolution_artifacts_are_hash_linked() -> None:
     assert gate["requirements"]["constraint_propagation_convergence"] == "PASS"
     assert gate["requirements"]["constraint_preserving_boundaries"] == "OPEN"
     for relative_path, expected_hash in verification["source_hashes"].items():
-        assert hashlib.sha256((ROOT / relative_path).read_bytes()).hexdigest() == expected_hash
+        assert hashlib.sha256(canonical_existing_path(ROOT / relative_path).read_bytes()).hexdigest() == expected_hash
     for evidence in gate["evidence_artifacts"]:
-        assert hashlib.sha256((ROOT / evidence["path"]).read_bytes()).hexdigest() == evidence["sha256"]
+        assert hashlib.sha256(canonical_existing_path(ROOT / evidence["path"]).read_bytes()).hexdigest() == evidence["sha256"]

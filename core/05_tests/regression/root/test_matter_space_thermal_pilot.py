@@ -1,7 +1,7 @@
 """Artifact and claim-boundary checks for the 0.13 matter-space thermal pilot."""
 
 from __future__ import annotations
-from docs.core.core_paths import repo_root
+from docs.core.core_paths import canonical_existing_path, repo_root
 
 import hashlib
 import json
@@ -9,7 +9,7 @@ from pathlib import Path
 
 
 ROOT = repo_root()
-TOPIC = ROOT / "docs" / "topics" / "0.13_Thermodynamic_Bridge"
+TOPIC = ROOT / "topics" / "0.13_Thermodynamic_Bridge"
 DATA = TOPIC / "Data" / "03_Research"
 ARTIFACT = TOPIC / "Result" / "artifacts" / "matter_space_thermal_control.json"
 
@@ -87,13 +87,13 @@ def test_control_and_refined_ledger_gates_are_machine_readable() -> None:
 def test_artifact_input_and_output_hashes_match_local_files() -> None:
     artifact = _read(ARTIFACT)
     for block in ("preregistration", "numerical_amendment", "source_package", "core_dependency"):
-        path = ROOT / artifact[block]["path"]
+        path = canonical_existing_path(ROOT / artifact[block]["path"])
         assert path.is_file()
         assert artifact[block]["sha256"] == _sha256(path)
     timeseries = artifact["outputs"]["timeseries_csv"]
-    assert timeseries["sha256"] == _sha256(ROOT / timeseries["path"])
+    assert timeseries["sha256"] == _sha256(canonical_existing_path(ROOT / timeseries["path"]))
     for figure in artifact["outputs"]["figures"]:
-        assert figure["sha256"] == _sha256(ROOT / figure["path"])
+        assert figure["sha256"] == _sha256(canonical_existing_path(ROOT / figure["path"]))
 
 
 def test_landauer_and_phi_claim_boundaries_are_explicit() -> None:

@@ -2,6 +2,13 @@
 
 Format: docs/STANDARD.md section 9. Earlier Core history stays in `08_history/update_logs/`.
 
+## 2026-11-16 — Do migrated checkouts preserve byte and payload-tree identity?
+ทำ: กติกา LF สำหรับโค้ด/records พร้อมเก็บ input/ref bytes; ซ่อม Calorine ให้ payload และ sibling scan ใช้ physical tree เดียวกัน
+ผล: 83/83 กรณีที่ล้มเพิ่มบน Desktop ผ่าน; 132 focused software tests ผ่าน; physics 193 ผ่าน / 1 skipped
+ระดับ: ไม่เปลี่ยน claim; software/identity checks ไม่ใช่ physical validation และเก็บ STALE เดิม
+ถัดไป: ตรวจรวม revision ที่ซ่อมแล้ว และแยก legacy source-version blockers จากข้อผิดจริงต่อ
+commit: this commit
+
 ## 2026-11-08 — What is the parent action, and what known theory is it?
 ทำ: เขียน Theory Card v1 (THEORY_CARD.md + theory_card.json) จากโค้ดเดิม พร้อม map ไปเป็นตัวแปร canonical
 ผล: เป็น DEF-class scalar-tensor (ξ_c ψ² R) + O(2) portal; ε ซ้ำซ้อน; ε→0⁺ คือ strong coupling (λ_ψ→∞) โดย ξ_c และ m_ψ ไม่เปลี่ยน, ε=0 เป็นจุดเสื่อม ไม่ใช่ GR limit; sympy ยืนยัน map ได้ residual 0 (scratch, จะเข้า test ใน W4)
@@ -197,3 +204,24 @@ commit: this commit
 ระดับ: ไม่เปลี่ยน claim
 ถัดไป: merge PR #57
 commit: this commit
+
+## 2026-11-15 — Root-layout import identity repair
+- Repaired nested `docs.core.*` aliases to share canonical `core.*` objects; no equation or scientific threshold changed.
+- Updated migration locators and the diagnostic planner scan root; old registry bytes remain unchanged.
+- Verification: canonical migration 50/50, planner 3/3, runner/layout 24/24; physics directory and standard physics checker each recorded 193 passed / 1 skipped. The runner now preserves that skip as INCOMPLETE; targeted results do not replace the full-run report.
+- Remaining: legacy identity mismatches and deferred Topic test admission; no physics claim or evidence level promoted.
+- Commit: this scoped local repair; no publication.
+
+## 2026-11-15 — Restore post-move foundation inventory readers
+- Fixed canonical Topic discovery and the nine relocated compatibility inputs; existing classification/compatibility criteria are unchanged.
+- Read the existing Topic 0.22 ontology-table headers without inventing formula IDs or treating its combined status/failure column as proof; retain original source fields.
+- Inventory now discloses 40 Topics, 39 audit files, 27 files with rows / 412 rows, 12 unsupported/prose-only audit files and one missing audit; foundation remains BLOCKED.
+- Focused checks passed 73/73; physics checker recorded 193 passed / 1 skipped (not complete coverage). No-write CLI checks preserve historical artifacts and work outside the repository.
+- No equation, threshold, formula audit or old artifact/hash changed; remaining stale lineage is not refreshed. Local commit only.
+
+## 2026-11-15 — Preserve moved raw-source locators and checkout rules
+- Fixed the Farooqui metadata-only branch to compare its historical locator through the central logical path map; present-file size/MD5/SHA-256 checks are unchanged.
+- Mirrored QH-15 byte-preservation and Core LF checkout attributes at their current root locations; protected historical rules remain in place. No raw data was fetched, normalized or checked as present.
+- Connected attribute/ignore-only changes to existing shared-runner and PR research checks; no new physics criterion or gate introduced.
+- Verification: 69 affected software tests passed; workflow YAML parses. Prior physics evidence is reused, not rerun: equation/physics-test tree identities remain unchanged, with prior 193 passed / 1 skipped.
+- No physical acceptance, equation/parameter change or old artifact/hash refresh; local commit only.

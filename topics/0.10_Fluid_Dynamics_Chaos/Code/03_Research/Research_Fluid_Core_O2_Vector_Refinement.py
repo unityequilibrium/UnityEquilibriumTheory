@@ -8,10 +8,15 @@ from pathlib import Path
 import numpy as np
 
 ROOT=next(p for p in Path(__file__).resolve().parents if (p/"docs/core").is_dir())
-TOPIC=ROOT/"docs/topics/0.10_Fluid_Dynamics_Chaos"
+
+import sys as _sys
+if str(ROOT) not in _sys.path:
+    _sys.path.insert(0, str(ROOT))
+from core.core_paths import canonical_existing_path
+TOPIC=ROOT/"topics/0.10_Fluid_Dynamics_Chaos"
 CONTRACT=TOPIC/"Data/03_Research/fluid_core_o2_vector_refinement_contract.json"
 OUTPUT=TOPIC/"Result/artifacts/fluid_core_o2_vector_refinement_audit.json"
-REGISTRY=ROOT/"docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry_topic10_o2_vector_refinement_addendum.json"
+REGISTRY=canonical_existing_path(ROOT/"docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry_topic10_o2_vector_refinement_addendum.json")
 
 
 def load(path,name):
@@ -149,12 +154,12 @@ def audit(p,path):
          rules["cutoff_factors"]==[40,50,60] and rules["even_feature_orders"]==[5,9,13,17] and
          rules["soft_feature_orders"]==[5,9,17,25,35] and rules["refinement_relative_tolerance"]==.01)
     for k,v in p["admission"].items():flag("boundary/"+k,v is False)
-    prior=json.loads((ROOT/p["galerkin_contract"]).read_text(encoding="utf-8"))
-    old=json.loads((ROOT/p["galerkin_artifact"]).read_text(encoding="utf-8"))
+    prior=json.loads((canonical_existing_path(ROOT/p["galerkin_contract"])).read_text(encoding="utf-8"))
+    old=json.loads((canonical_existing_path(ROOT/p["galerkin_artifact"])).read_text(encoding="utf-8"))
     flag("prior_failure_retained",old["status"]=="PASS_FINITE_GALERKIN_DIAGNOSTIC_ONLY" and old["refinement_gate"]["target_pass"] is False)
     flag("same_scientific_controls",p["temperatures"]==prior["temperatures"] and p["mu"]==prior["mu"] and p["lambda_exploratory"]==prior["lambda_exploratory"])
-    g=load(ROOT/p["galerkin_verifier"],"stable_prior_galerkin")
-    core=json.loads((ROOT/prior["core_source_contract"]).read_text(encoding="utf-8"))
+    g=load(canonical_existing_path(ROOT/p["galerkin_verifier"]),"stable_prior_galerkin")
+    core=json.loads((canonical_existing_path(ROOT/prior["core_source_contract"])).read_text(encoding="utf-8"))
     config=core["configuration"];mu=p["mu"];m2=config["mass_squared"]/config["Z"];lam=p["lambda_exploratory"]/config["Z"]**2
     cache={};banks=[];rows=[];tol=rules["algebra_relative_tolerance"];etol=rules["event_relative_tolerance"]
     def bank(T,order,factor,family):
@@ -224,8 +229,8 @@ def audit(p,path):
             close("scale/"+key,relative(scaled_r[key],original_r[key]*scale**power),tol)
         scale_record={"factor":scale,"R":scaled_r["R"],"tau_basis":scaled_r["tau_basis"]}
     else:scale_record=None;flag("nonempty_banks",False)
-    paths=[path,ROOT/p["card"],REGISTRY,Path(__file__).resolve(),ROOT/p["galerkin_contract"],ROOT/p["galerkin_verifier"],ROOT/p["galerkin_artifact"]]
-    paths += [ROOT/f for f in old["input_hashes"]]
+    paths=[path,canonical_existing_path(ROOT/p["card"]),REGISTRY,Path(__file__).resolve(),canonical_existing_path(ROOT/p["galerkin_contract"]),canonical_existing_path(ROOT/p["galerkin_verifier"]),canonical_existing_path(ROOT/p["galerkin_artifact"])]
+    paths += [canonical_existing_path(ROOT/f) for f in old["input_hashes"]]
     hashes={f.relative_to(ROOT).as_posix() if f.is_relative_to(ROOT) else f.name:hashlib.sha256(f.read_bytes()).hexdigest() for f in paths}
     passed=all(q["pass"] for q in checks.values());converged=bool(gates) and all(q["pass"] for q in gates)
     failures=[{"T":q["T"],"target":k} for q in gates for k,v in q["targets"].items() if not v["pass"]]

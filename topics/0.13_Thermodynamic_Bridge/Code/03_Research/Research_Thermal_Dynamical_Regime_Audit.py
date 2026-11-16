@@ -10,17 +10,22 @@ from pathlib import Path
 import numpy as np
 
 
-ROOT = Path(__file__).resolve().parents[5]
+ROOT = Path(__file__).resolve().parents[4]
+
+import sys as _sys
+if str(ROOT) not in _sys.path:
+    _sys.path.insert(0, str(ROOT))
+from core.core_paths import canonical_existing_path
 OUT = (
-    ROOT
-    / "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/t13_thermal_dynamical_regime_audit.json"
+    canonical_existing_path(ROOT
+    / "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/t13_thermal_dynamical_regime_audit.json")
 )
 METHOD_ARTIFACT = (
-    ROOT
-    / "docs/topics/0.10_Fluid_Dynamics_Chaos/Result/artifacts/chaos_method_validation.json"
+    canonical_existing_path(ROOT
+    / "docs/topics/0.10_Fluid_Dynamics_Chaos/Result/artifacts/chaos_method_validation.json")
 )
-CORE_MODULE = ROOT / "docs/core/uet_dynamical_stability.py"
-HOLDOUT_AUDIT = ROOT / "docs/core/07_artifacts/topic13/t13_xie_2026_holdout_access_audit.json"
+CORE_MODULE = ROOT / "core/02_equations/matter_space/uet_dynamical_stability.py"
+HOLDOUT_AUDIT = ROOT / "core/07_artifacts/topic13/t13_xie_2026_holdout_access_audit.json"
 
 if str(ROOT) not in __import__("sys").path:
     __import__("sys").path.insert(0, str(ROOT))

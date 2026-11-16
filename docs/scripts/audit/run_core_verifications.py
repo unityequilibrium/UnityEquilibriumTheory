@@ -23,11 +23,15 @@ from pathlib import Path
 
 DOCS_ROOT = Path(__file__).resolve().parents[2]
 REPO_ROOT = DOCS_ROOT.parent
-TOPICS_ROOT = DOCS_ROOT / "topics"
+TOPICS_ROOT = REPO_ROOT / "topics"
 READINESS_FILE = DOCS_ROOT / "meta" / "topic_readiness.json"
 SPEC_FILE = "VERIFICATION_SPEC.md"
 OUTPUT_LIMIT = 20000
 RUNNER_ARTIFACT_ROOT = DOCS_ROOT / "meta" / "core_verification_artifacts"
+
+if str(REPO_ROOT) not in sys.path:
+    sys.path.insert(0, str(REPO_ROOT))
+from core.core_paths import canonical_existing_path
 
 
 def load_core_topics() -> list[str]:
@@ -143,7 +147,7 @@ def resolve_input_path(
     existing: list[tuple[Path, str]] = []
     seen: set[Path] = set()
     for candidate, base in candidates:
-        resolved = candidate.resolve()
+        resolved = canonical_existing_path(candidate).resolve()
         if resolved.is_file() and resolved not in seen:
             existing.append((resolved, base))
             seen.add(resolved)

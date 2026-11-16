@@ -25,7 +25,7 @@ from docs.core.uet_curved_3p1_constraints import (
 from docs.core.core_paths import canonical_artifact_path
 
 
-ARTIFACTS = ROOT / "docs/core/07_artifacts"
+ARTIFACTS = ROOT / "core/07_artifacts"
 SOURCE = ROOT / "docs/data/external/gr_3p1/gourgoulhon_2007/source_record.json"
 VERIFY = canonical_artifact_path("curved_3p1_adm_constraint_interface_audit.json", "verification")
 FORMULA = canonical_artifact_path("curved_3p1_adm_constraint_formula_audit.json", "correspondence")

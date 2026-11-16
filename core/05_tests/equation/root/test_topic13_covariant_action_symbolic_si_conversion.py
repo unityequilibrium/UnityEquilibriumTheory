@@ -1,4 +1,5 @@
 from __future__ import annotations
+from core.core_paths import canonical_existing_path
 from docs.core.core_paths import repo_root
 
 import json
@@ -19,7 +20,7 @@ AUDIT_REL = "docs/core/07_artifacts/topic13/t13_covariant_action_symbolic_si_con
 
 
 def constants() -> ExactSIConstants:
-    payload = json.loads((ROOT / CONSTANTS_REL).read_text(encoding="utf-8-sig"))
+    payload = json.loads((canonical_existing_path(ROOT / CONSTANTS_REL)).read_text(encoding="utf-8-sig"))
     values = payload["constants"]
     return ExactSIConstants(
         h_J_s=values["h"]["value"],
@@ -66,7 +67,7 @@ def test_field_normalization_is_explicit_not_base_phi_identity() -> None:
 
 
 def test_symbolic_conversion_audit_is_passed_but_not_physical_closure() -> None:
-    artifact = json.loads((ROOT / AUDIT_REL).read_text(encoding="utf-8-sig"))
+    artifact = json.loads((canonical_existing_path(ROOT / AUDIT_REL)).read_text(encoding="utf-8-sig"))
     assert artifact["status"] == "PASS_SCOPED_SYMBOLIC_ACTION_SI_CONVERSION_CONTRACT"
     assert artifact["major_result"]["closure_level"] == "CLOSED_FOR_LANE"
     assert all(artifact["checks"].values())

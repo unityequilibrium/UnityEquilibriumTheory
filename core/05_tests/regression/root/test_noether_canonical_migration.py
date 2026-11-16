@@ -8,9 +8,9 @@ import docs.core.uet_noether as legacy_noether
 import docs.core.uet_noether_phase_field_map as legacy_map
 
 
-NOETHER_CANONICAL = "docs.core.02_equations.lorentz_noether.uet_noether"
+NOETHER_CANONICAL = "core.02_equations.lorentz_noether.uet_noether"
 MAP_CANONICAL = (
-    "docs.core.02_equations.lorentz_noether.uet_noether_phase_field_map"
+    "core.02_equations.lorentz_noether.uet_noether_phase_field_map"
 )
 
 

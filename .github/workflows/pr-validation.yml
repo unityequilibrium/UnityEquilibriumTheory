@@ -46,7 +46,7 @@ jobs:
               echo "$key=false" >> "$GITHUB_OUTPUT"
             fi
           }
-          set_output research '^(docs/(core|topics|meta|scripts|data/external|standard)/|docs/STANDARD\.md$|docs/UET_Documentation_Details/|(\.github/)?requirements-research\.txt$|pytest\.ini$|\.github/workflows/(pr-validation|nightly-research-audit)\.yml$)'
+          set_output research '^(core/|topics/|docs/(core|topics|meta|scripts|data/external|standard)/|docs/STANDARD\.md$|docs/UET_Documentation_Details/|(\.github/)?requirements-research\.txt$|pytest\.ini$|\.git(attributes|ignore)$|\.github/workflows/(pr-validation|nightly-research-audit|main-validation)\.yml$)'
           set_output books '^(uet_history/BOOK_WORKFLOW\.md|uet_history/3_publish/books/)'
           set_output services '^services_and_experiments/'
           set_output policy '^thailand_proposals/'
@@ -73,7 +73,7 @@ jobs:
   python-validation:
     name: Python changed-area validation
     needs: detect
-    if: needs.detect.outputs.python == 'true'
+    if: needs.detect.outputs.python == 'true' && needs.detect.outputs.research != 'true'
     runs-on: ubuntu-latest
     timeout-minutes: 20
     steps:
@@ -84,7 +84,7 @@ jobs:
         with:
           python-version: '3.12'
       - run: python -m pip install -r .github/requirements-research.txt
-      - run: python -m compileall -q docs services_and_experiments
+      - run: python -m compileall -q core topics docs services_and_experiments
       - name: Run changed Python tests
         env:
           BASE_SHA: ${{ github.event.pull_request.base.sha }}
@@ -112,23 +112,13 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - run: python -m compileall -q docs
-      - name: Check scoped calculation and observation contracts
-        env:
-          BASE_SHA: ${{ github.event.pull_request.base.sha }}
-        run: |
-          set -euo pipefail
-          python docs/scripts/audit/audit_calculation_completeness.py --changed "$BASE_SHA" --check
-          python -m unittest discover -s docs/scripts/audit/tests -p test_calculation_completeness.py -v
+      - run: python -m compileall -q core topics docs
       - name: Install research requirements
         run: python -m pip install -r .github/requirements-research.txt
-      - name: Research Standard v2 checks (docs/STANDARD.md)
-        run: |
-          set -euo pipefail
-          python -m pytest -q docs/scripts/standard/tests
-          python docs/scripts/standard/check_schema.py
-          python docs/scripts/standard/check_preregistration.py
-          python docs/scripts/standard/check_physics_tests.py
+      - name: Run the shared affected-suite runner
+        env:
+          BASE_SHA: ${{ github.event.pull_request.base.sha }}
+        run: python topics/run_all_tests.py --changed "$BASE_SHA"
       - name: Parse changed research JSON artifacts
         env:
           BASE_SHA: ${{ github.event.pull_request.base.sha }}

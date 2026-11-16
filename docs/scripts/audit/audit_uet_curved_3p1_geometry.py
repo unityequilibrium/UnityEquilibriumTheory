@@ -31,9 +31,9 @@ from docs.core.uet_curved_3p1_geometry import (
 from docs.core.core_paths import canonical_artifact_path
 
 
-ARTIFACTS = ROOT / "docs/core/07_artifacts"
+ARTIFACTS = ROOT / "core/07_artifacts"
 SOURCE = ROOT / "docs/data/external/gr_3p1/gourgoulhon_2007/source_record.json"
-MODULE = ROOT / "docs/core/02_equations/covariant/uet_curved_3p1_geometry.py"
+MODULE = ROOT / "core/02_equations/covariant/uet_curved_3p1_geometry.py"
 AUDIT_SCRIPT = Path(__file__).resolve()
 VERIFY = canonical_artifact_path("curved_3p1_geometry_operator_verification.json", "verification")
 FORMULA = canonical_artifact_path("curved_3p1_geometry_operator_formula_audit.json", "correspondence")

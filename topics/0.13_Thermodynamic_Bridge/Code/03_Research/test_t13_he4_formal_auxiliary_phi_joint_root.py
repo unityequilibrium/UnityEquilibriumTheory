@@ -1,4 +1,5 @@
 """Tests for the fixed-prescription formal auxiliary joint root."""
+from core.core_paths import canonical_existing_path
 
 import importlib.util
 import json
@@ -29,7 +30,7 @@ def _assert_same_with_fp_tolerance(actual, saved):
 
 def test_saved_formal_root_is_reproducible_and_scoped():
     result = AUDIT.audit()
-    _assert_same_with_fp_tolerance(result, json.loads(AUDIT.OUTPUT.read_text(encoding="utf-8")))
+    _assert_same_with_fp_tolerance(result, json.loads(canonical_existing_path(AUDIT.OUTPUT).read_text(encoding="utf-8")))
     assert result["verification_status"] == "PASS_FORMAL_AUXILIARY_PHI_JOINT_ROOT"
     assert result["closure_level"] == "CLOSED_FOR_LANE"
     assert result["full_core_unlock"] is False
@@ -38,12 +39,12 @@ def test_saved_formal_root_is_reproducible_and_scoped():
 
 
 def test_formal_route_cannot_be_transplanted_to_normalized_root():
-    result = json.loads(AUDIT.OUTPUT.read_text(encoding="utf-8"))
+    result = json.loads(canonical_existing_path(AUDIT.OUTPUT).read_text(encoding="utf-8"))
     config = result["reference_config"]
     assert config["Z_prior_normalized"] == 1.0
     assert config["Z_auxiliary"] > 1.0
     assert config["normalized_domain_rejection"] == "auxiliary-field condensed lane requires Z > 1"
-    assert "not a microscopic" in json.loads(AUDIT.AUXILIARY_AUDIT.read_text(encoding="utf-8"))["major_result"]["claim_boundary"]
+    assert "not a microscopic" in json.loads(canonical_existing_path(AUDIT.AUXILIARY_AUDIT).read_text(encoding="utf-8"))["major_result"]["claim_boundary"]
     assert len(result["temperature_and_resolution_records"]) == 6
     assert len(result["off_root_envelope_witnesses"]) == 6
     assert all(abs(row["analytic_Phi_residual"] - row["profiled_Phi_derivative_fd"]) < 1e-7

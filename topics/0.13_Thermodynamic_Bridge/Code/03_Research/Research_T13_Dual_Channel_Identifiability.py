@@ -7,12 +7,17 @@ from pathlib import Path
 import shutil
 import sys
 
-ROOT = Path(__file__).resolve().parents[5]
+ROOT = Path(__file__).resolve().parents[4]
+
+import sys as _sys
+if str(ROOT) not in _sys.path:
+    _sys.path.insert(0, str(ROOT))
+from core.core_paths import canonical_existing_path
 sys.path.insert(0, str(ROOT))
 from docs.scripts.audit.audit_calculation_completeness import artifact_metadata, load_json
 
-CONTRACT = "docs/topics/0.13_Thermodynamic_Bridge/calculation_contracts/dual_channel_identifiability.json"
-OUTPUT = "docs/core/07_artifacts/topic13/t13_dual_channel_identifiability.json"
+CONTRACT = "topics/0.13_Thermodynamic_Bridge/calculation_contracts/dual_channel_identifiability.json"
+OUTPUT = "core/07_artifacts/topic13/t13_dual_channel_identifiability.json"
 
 
 def observed_coefficients(kappa, mq, mr, gq, gr, lam):
@@ -95,7 +100,7 @@ def calculation():
 
 
 def record():
-    metadata = artifact_metadata(load_json(ROOT/CONTRACT), ROOT)
+    metadata = artifact_metadata(load_json(canonical_existing_path(ROOT/CONTRACT)), ROOT)
     return {**calculation(), **metadata,
             "generator_path":Path(__file__).relative_to(ROOT).as_posix(),
             "evidence_class":"FORMAL_CONDITIONAL_NOT_PHYSICAL_VALIDATION"}
@@ -108,7 +113,7 @@ def main():
     mode.add_argument("--check",action="store_true")
     args=p.parse_args()
     content=json.dumps(record(),indent=2,ensure_ascii=False,allow_nan=False)+"\n"
-    path=ROOT/OUTPUT
+    path=canonical_existing_path(ROOT/OUTPUT)
     if args.emit:
         if shutil.disk_usage(ROOT).free < 100*1024*1024:
             raise SystemExit("Insufficient disk space")

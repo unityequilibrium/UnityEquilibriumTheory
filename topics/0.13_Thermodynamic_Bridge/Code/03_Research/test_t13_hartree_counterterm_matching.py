@@ -1,4 +1,5 @@
 """Coefficient, exact-rational, witness and no-promotion Hartree checks."""
+from core.core_paths import canonical_existing_path
 
 from fractions import Fraction as Q
 import hashlib
@@ -173,7 +174,7 @@ def test_artifact_hashes_and_nonpromotion_contract():
     for flag in ("same_coupling_counterterm_sufficient", "finite_probe_is_physical_UV_limit", "full_covariant_counterterm_match", "RG_invariance_established", "external_finite_frequency_response_derived", "joint_Phi_stationarity_derived", "internal_gap_used_as_physical_Goldstone_mass", "physical_Kubo_emitted", "g1_physical_unlock", "g2_science_unlock", "full_core_unlock", "core_composition_gate_overwritten", "claim_promotion", "parameter_fitting", "xie_2026_accessed", "C_relabelled_as_charge_or_mass", "R_gen_added_as_state"):
         assert record[flag] is False
     for item in record["evidence_artifacts"]+record["protected_evidence_hashes"]:
-        assert hashlib.sha256((M["ROOT"]/item["path"]).read_bytes()).hexdigest() == item["sha256"]
+        assert hashlib.sha256((canonical_existing_path(M["ROOT"]/item["path"])).read_bytes()).hexdigest() == item["sha256"]
     assert len(record["report"]) == 11
 
 

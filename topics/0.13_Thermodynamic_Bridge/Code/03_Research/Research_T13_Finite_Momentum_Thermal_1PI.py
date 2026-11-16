@@ -17,13 +17,18 @@ import numpy as np
 from scipy.integrate import quad
 from scipy.special import zeta
 
-ROOT = Path(__file__).resolve().parents[5]
-PREFIX = "docs/topics/0.13_Thermodynamic_Bridge/"
+ROOT = Path(__file__).resolve().parents[4]
+
+import sys as _sys
+if str(ROOT) not in _sys.path:
+    _sys.path.insert(0, str(ROOT))
+from core.core_paths import canonical_existing_path
+PREFIX = "topics/0.13_Thermodynamic_Bridge/"
 WARD_PATH = PREFIX + "Code/03_Research/Research_T13_Thermal_OneLoop_Ward_Current.py"
 WARD_ARTIFACT = PREFIX + "Result/artifacts/t13_thermal_oneloop_ward_current.json"
 CURVATURE_ARTIFACT = PREFIX + "Result/artifacts/t13_moving_background_thermal_stiffness.json"
-WARD = runpy.run_path(str(ROOT / WARD_PATH))
-OUTPUT = ROOT / (PREFIX + "Result/artifacts/t13_finite_momentum_thermal_1pi.json")
+WARD = runpy.run_path(str(canonical_existing_path(ROOT / WARD_PATH)))
+OUTPUT = canonical_existing_path(ROOT / (PREFIX + "Result/artifacts/t13_finite_momentum_thermal_1pi.json"))
 
 # Fixed before integration; these are natural-unit diagnostics, not TTG fits.
 Q_GRID = (.02, .04, .08, .16)
@@ -211,8 +216,8 @@ def formal_inverse_from_bubble(q, frequency, mu, r, Z, thermal_zero, bubble):
 
 
 def audit():
-    old = json.loads((ROOT/WARD_ARTIFACT).read_text(encoding="utf-8"))
-    curvature = json.loads((ROOT/CURVATURE_ARTIFACT).read_text(encoding="utf-8"))
+    old = json.loads((canonical_existing_path(ROOT/WARD_ARTIFACT)).read_text(encoding="utf-8"))
+    curvature = json.loads((canonical_existing_path(ROOT/CURVATURE_ARTIFACT)).read_text(encoding="utf-8"))
     examples, frequency_checks = [], []
     for anchor, held in zip(old["examples"], curvature["examples"]):
         t, mu, r, Z, lam = (anchor[key] for key in ("T", "mu", "r", "Z", "lambda"))
@@ -304,8 +309,8 @@ def audit():
                                         "IR_limit_refinement": IR_Q_REFINEMENT,
                                         "IR_refinement_role": "numerical_test_of_analytic_1_over_q_not_parameter_selection"},
         "examples": examples, "matrix_frequency_checks": frequency_checks,
-        "evidence_artifacts": [{"path": p, "sha256": hashlib.sha256((ROOT/p).read_bytes()).hexdigest()} for p in paths],
-        "protected_evidence_hashes": [{"path": p, "sha256": hashlib.sha256((ROOT/p).read_bytes()).hexdigest()} for p in protected],
+        "evidence_artifacts": [{"path": p, "sha256": hashlib.sha256((canonical_existing_path(ROOT/p)).read_bytes()).hexdigest()} for p in paths],
+        "protected_evidence_hashes": [{"path": p, "sha256": hashlib.sha256((canonical_existing_path(ROOT/p)).read_bytes()).hexdigest()} for p in protected],
         "open_blockers": ["IR_resummation_and_controlled_error", "real_axis_limit_and_matched_vertices", "joint_Phi_background_and_material_map", "independent_source_detector_normal_component_admission"],
         "controlling_blocker": "nonuniform_IR_loop_expansion_and_real_axis_response_not_closed",
         "dependency_unlocked": ["finite_q_thermal_1PI_resummation_design_only"],

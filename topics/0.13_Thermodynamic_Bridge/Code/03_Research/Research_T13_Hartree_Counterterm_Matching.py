@@ -15,10 +15,15 @@ from pathlib import Path
 import numpy as np
 
 
-ROOT = Path(__file__).resolve().parents[5]
-PREFIX = "docs/topics/0.13_Thermodynamic_Bridge/"
+ROOT = Path(__file__).resolve().parents[4]
+
+import sys as _sys
+if str(ROOT) not in _sys.path:
+    _sys.path.insert(0, str(ROOT))
+from core.core_paths import canonical_existing_path
+PREFIX = "topics/0.13_Thermodynamic_Bridge/"
 PREVIOUS = PREFIX+"Result/artifacts/t13_renormalized_hartree_background.json"
-OUTPUT = ROOT/(PREFIX+"Result/artifacts/t13_hartree_counterterm_matching.json")
+OUTPUT = canonical_existing_path(ROOT/(PREFIX+"Result/artifacts/t13_hartree_counterterm_matching.json"))
 HARTREE_MATRIX = np.array([[3., 1.], [1., 3.]])
 IDENTITY_TOLERANCE = 1e-10
 D_PROBES = (-.08, .03, .2)
@@ -148,7 +153,7 @@ def conditional_vertex_subtraction(coupling, D, finite_bubble):
 
 
 def audit():
-    previous = json.loads((ROOT/PREVIOUS).read_text(encoding="utf-8"))
+    previous = json.loads((canonical_existing_path(ROOT/PREVIOUS)).read_text(encoding="utf-8"))
     formal = []
     for u in COUPLING_PROBES:
         for D in D_PROBES:
@@ -217,8 +222,8 @@ def audit():
         "symmetric_tensor_and_conditional_vertex_checks": tensor_rows, "checks": checks,
         "maximum_formal_residual": formal_error, "maximum_previous_witness_residual": actual_error,
         "thresholds": {"algebraic_identity": IDENTITY_TOLERANCE},
-        "evidence_artifacts": [{"path": p, "sha256": hashlib.sha256((ROOT/p).read_bytes()).hexdigest()} for p in paths],
-        "protected_evidence_hashes": [{"path": p, "sha256": hashlib.sha256((ROOT/p).read_bytes()).hexdigest()} for p in protected],
+        "evidence_artifacts": [{"path": p, "sha256": hashlib.sha256((canonical_existing_path(ROOT/p)).read_bytes()).hexdigest()} for p in paths],
+        "protected_evidence_hashes": [{"path": p, "sha256": hashlib.sha256((canonical_existing_path(ROOT/p)).read_bytes()).hexdigest()} for p in protected],
         "probe_policy": "D and D2 are independent formal vacuum-divergence values. No finite probe is claimed to implement a regulator or continuum UV limit. Counterterms contain no T,mu,Phi or finite-tadpole input; mass_sq is a fixed-Phi action input, not a new calibration. Bare quartic sign at these probes is not a global-stability claim.",
         "open_blockers": ["vacuum_regulator_tensor_and_translation_shift_match", "source_dependent_external_finite_q_frequency_vertex_renormalization", "RG_and_action_material_coefficient_identity", "joint_Phi_and_global_phase_state", "microscopic_IR_remainder_normal_component_SK_KMS_and_transport"],
         "controlling_blocker": "external_vertex_and_regulator_RG_material_matching_not_closed",

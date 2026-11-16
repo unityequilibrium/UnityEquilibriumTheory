@@ -7,9 +7,9 @@ from pathlib import Path
 
 
 ROOT = repo_root()
-CONTRACT = ROOT / "docs/core/07_artifacts/topic13/t13_full_closure_minimal_input_contract.json"
-PROGRESS = ROOT / "docs/core/07_artifacts/topic13/t13_full_closure_progress.json"
-INPUT_AUDIT = ROOT / "docs/core/07_artifacts/topic13/t13_closure_input_package_audit.json"
+CONTRACT = ROOT / 'core/07_artifacts/topic13/t13_full_closure_minimal_input_contract.json'
+PROGRESS = ROOT / 'core/07_artifacts/topic13/t13_full_closure_progress.json'
+INPUT_AUDIT = ROOT / 'core/07_artifacts/topic13/t13_closure_input_package_audit.json'
 
 
 def load(path: Path) -> dict:

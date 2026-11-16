@@ -8,7 +8,12 @@ import tempfile
 import unittest
 
 ROOT=next(p for p in Path(__file__).resolve().parents if (p/"docs/core").is_dir())
-TOPIC=ROOT/"docs/topics/0.10_Fluid_Dynamics_Chaos"
+
+import sys as _sys
+if str(ROOT) not in _sys.path:
+    _sys.path.insert(0, str(ROOT))
+from core.core_paths import canonical_existing_path
+TOPIC=ROOT/"topics/0.10_Fluid_Dynamics_Chaos"
 SCRIPT=TOPIC/"Code/03_Research/Research_Fluid_Core_O2_Common_Flow.py"
 CONTRACT=TOPIC/"Data/03_Research/fluid_core_o2_common_flow_contract.json"
 ARTIFACT=TOPIC/"Result/artifacts/fluid_core_o2_common_flow_composition_audit.json"
@@ -28,7 +33,7 @@ class CoreO2CommonFlowTests(unittest.TestCase):
 
     def test_source_fresh_execution_pass_keeps_composition_failure_and_admission_boundary(self):
         for p,h in self.published["input_hashes"].items():
-            self.assertEqual(hashlib.sha256((ROOT/p).read_bytes()).hexdigest(),h,p)
+            self.assertEqual(hashlib.sha256((canonical_existing_path(ROOT/p)).read_bytes()).hexdigest(),h,p)
         a=self.fresh
         self.assertEqual(a["input_hashes"],self.published["input_hashes"])
         self.assertEqual(a["AST_definition_hashes"],self.published["AST_definition_hashes"])

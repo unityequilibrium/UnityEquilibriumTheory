@@ -4,10 +4,9 @@ from pathlib import Path
 
 
 ROOT = repo_root()
-ARTIFACT = ROOT / "docs/core/07_artifacts/topic13/t13_huang_2023_nims_mdr_payload_boundary_audit.json"
+ARTIFACT = ROOT / 'core/07_artifacts/topic13/t13_huang_2023_nims_mdr_payload_boundary_audit.json'
 PACKAGE = ROOT / (
-    "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/"
-    "huang_2023_nims_mdr_payload_source_package.json"
+    'topics/0.13_Thermodynamic_Bridge/Data/03_Research/huang_2023_nims_mdr_payload_source_package.json'
 )
 
 

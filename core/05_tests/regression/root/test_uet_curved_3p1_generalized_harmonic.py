@@ -1,5 +1,5 @@
 from __future__ import annotations
-from docs.core.core_paths import repo_root
+from docs.core.core_paths import canonical_existing_path, repo_root
 
 import hashlib
 import json
@@ -23,9 +23,9 @@ from docs.core.uet_curved_3p1_geometry import periodic_central_derivative
 
 
 ROOT = repo_root()
-VERIFY = ROOT / "docs/core/07_artifacts/verification/curved_3p1_gh_principal_system_verification.json"
-FORMULA = ROOT / "docs/core/07_artifacts/correspondence/curved_3p1_gh_principal_system_formula_audit.json"
-GATE = ROOT / "docs/core/07_artifacts/gates/curved_3p1_gh_branch_gate.json"
+VERIFY = ROOT / 'core/07_artifacts/verification/curved_3p1_gh_principal_system_verification.json'
+FORMULA = ROOT / 'core/07_artifacts/correspondence/curved_3p1_gh_principal_system_formula_audit.json'
+GATE = ROOT / 'core/07_artifacts/gates/curved_3p1_gh_branch_gate.json'
 
 
 def test_preregistered_parameter_domain_is_enforced() -> None:
@@ -139,9 +139,9 @@ def test_contract_preserves_uet_ontology_and_open_evolution_boundary() -> None:
 
 
 def test_generated_artifacts_are_hash_linked_and_keep_parent_work_partial() -> None:
-    verification = json.loads(VERIFY.read_text(encoding="utf-8"))
-    formula = json.loads(FORMULA.read_text(encoding="utf-8"))
-    gate = json.loads(GATE.read_text(encoding="utf-8"))
+    verification = json.loads(canonical_existing_path(VERIFY).read_text(encoding="utf-8"))
+    formula = json.loads(canonical_existing_path(FORMULA).read_text(encoding="utf-8"))
+    gate = json.loads(canonical_existing_path(GATE).read_text(encoding="utf-8"))
     assert verification["status"] == "PASS_GH_PRINCIPAL_CHARACTERISTIC_SYSTEM"
     assert verification["major_result"]["closure_level"] == "CLOSED_FOR_LANE"
     assert formula["status"] == "PASS_SOURCE_LOCKED_GH_PRINCIPAL_FORMULAS"
@@ -149,6 +149,6 @@ def test_generated_artifacts_are_hash_linked_and_keep_parent_work_partial() -> N
     assert gate["requirements"]["complete_nonlinear_gh_rhs"] == "OPEN"
     assert gate["requirements"]["time_integration_and_cfl"] == "OPEN"
     for relative_path, expected_hash in verification["source_hashes"].items():
-        assert hashlib.sha256((ROOT / relative_path).read_bytes()).hexdigest() == expected_hash
+        assert hashlib.sha256(canonical_existing_path(ROOT / relative_path).read_bytes()).hexdigest() == expected_hash
     for evidence in gate["evidence_artifacts"]:
-        assert hashlib.sha256((ROOT / evidence["path"]).read_bytes()).hexdigest() == evidence["sha256"]
+        assert hashlib.sha256(canonical_existing_path(ROOT / evidence["path"]).read_bytes()).hexdigest() == evidence["sha256"]

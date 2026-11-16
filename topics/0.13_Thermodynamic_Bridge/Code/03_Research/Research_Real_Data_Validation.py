@@ -59,7 +59,7 @@ h_bar = HBAR
 engine = None
 eng_path = (
     root_path
-    / "docs/topics/0.13_Thermodynamic_Bridge/Code/01_Engine/Engine_Thermodynamics.py"
+    / "topics/0.13_Thermodynamic_Bridge/Code/01_Engine/Engine_Thermodynamics.py"
 )
 if eng_path.exists():
     spec = importlib.util.spec_from_file_location("Engine_Thermodynamics", eng_path)

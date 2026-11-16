@@ -8,8 +8,8 @@ from math import isclose
 from pathlib import Path
 
 
-ROOT = Path(__file__).resolve().parents[5]
-TOPIC = ROOT / "docs/topics/0.13_Thermodynamic_Bridge"
+ROOT = Path(__file__).resolve().parents[4]
+TOPIC = ROOT / "topics/0.13_Thermodynamic_Bridge"
 INPUTS = {
     "frozen_branch": TOPIC / "Result/artifacts/t13_he4_frozen_branch_compatibility.json",
     "condensed_selection": TOPIC / "Result/artifacts/t13_he4_condensed_state_identifiability.json",

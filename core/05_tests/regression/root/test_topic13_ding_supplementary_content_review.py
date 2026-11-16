@@ -6,8 +6,8 @@ from pathlib import Path
 
 
 ROOT = repo_root()
-ARTIFACT = ROOT / "docs/core/07_artifacts/topic13/t13_ding_supplementary_content_review_audit.json"
-PACKAGE = ROOT / "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/ding_2022_supplementary_content_review_package.json"
+ARTIFACT = ROOT / 'core/07_artifacts/topic13/t13_ding_supplementary_content_review_audit.json'
+PACKAGE = ROOT / 'topics/0.13_Thermodynamic_Bridge/Data/03_Research/ding_2022_supplementary_content_review_package.json'
 
 
 def load(path: Path) -> dict:

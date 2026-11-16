@@ -9,10 +9,15 @@ from pathlib import Path
 import numpy as np
 
 ROOT=next(p for p in Path(__file__).resolve().parents if (p/"docs/core").is_dir())
-TOPIC=ROOT/"docs/topics/0.10_Fluid_Dynamics_Chaos"
+
+import sys as _sys
+if str(ROOT) not in _sys.path:
+    _sys.path.insert(0, str(ROOT))
+from core.core_paths import canonical_existing_path
+TOPIC=ROOT/"topics/0.10_Fluid_Dynamics_Chaos"
 CONTRACT=TOPIC/"Data/03_Research/fluid_core_o2_ideal_modes_contract.json"
 OUTPUT=TOPIC/"Result/artifacts/fluid_core_o2_ideal_modes_audit.json"
-REGISTRY=ROOT/"docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry_topic10_o2_ideal_modes_addendum.json"
+REGISTRY=canonical_existing_path(ROOT/"docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry_topic10_o2_ideal_modes_addendum.json")
 ETA=np.diag([1.,-1.,-1.,-1.])
 
 
@@ -186,10 +191,10 @@ def local_work(ref,state,gradient):
 
 
 def audit(p,path):
-    base=load_module(ROOT/p["source_adapter"],"ideal_source_adapter")
-    flow=load_module(ROOT/p["phase_verifier"],"ideal_phase_adapter")
-    original=json.loads((ROOT/p["source_contract"]).read_text(encoding="utf-8"))
-    phase_contract=json.loads((ROOT/p["phase_contract"]).read_text(encoding="utf-8"))
+    base=load_module(canonical_existing_path(ROOT/p["source_adapter"]),"ideal_source_adapter")
+    flow=load_module(canonical_existing_path(ROOT/p["phase_verifier"]),"ideal_phase_adapter")
+    original=json.loads((canonical_existing_path(ROOT/p["source_contract"])).read_text(encoding="utf-8"))
+    phase_contract=json.loads((canonical_existing_path(ROOT/p["phase_contract"])).read_text(encoding="utf-8"))
     ns,AST=base.source_functions(original);rules=p["verification"];checks={}
     def flag(n,v):checks[n]={"pass":bool(v)}
     def close(n,v,t):checks[n]={"metric":float(v),"threshold":t,"pass":bool(np.isfinite(v) and v<=t)}
@@ -292,11 +297,11 @@ def audit(p,path):
               "omit_Ts_inertia_relative_defect":omit_heat},
            "mode_role":"conditional ideal local-equilibrium acoustic eligibility; no physical He-II speed"})
     passed=all(q["pass"] for q in checks.values())
-    phase_result=json.loads((ROOT/p["phase_artifact"]).read_text(encoding="utf-8"))
+    phase_result=json.loads((canonical_existing_path(ROOT/p["phase_artifact"])).read_text(encoding="utf-8"))
     flag("prior_phase_scalar_gate_passed",phase_result["scalar_correspondence_gate"]["target_pass"] is True)
     passed=all(q["pass"] for q in checks.values())
-    paths=[path,ROOT/p["card"],REGISTRY,Path(__file__).resolve(),ROOT/p["source_adapter"],ROOT/p["source_contract"],
-      ROOT/p["phase_verifier"],ROOT/p["phase_contract"],ROOT/p["phase_artifact"]]+[ROOT/f for f in original["core_sources"].values()]+[ROOT/f for f in p["reused_inputs"]]
+    paths=[path,canonical_existing_path(ROOT/p["card"]),REGISTRY,Path(__file__).resolve(),canonical_existing_path(ROOT/p["source_adapter"]),canonical_existing_path(ROOT/p["source_contract"]),
+      canonical_existing_path(ROOT/p["phase_verifier"]),canonical_existing_path(ROOT/p["phase_contract"]),canonical_existing_path(ROOT/p["phase_artifact"])]+[canonical_existing_path(ROOT/f) for f in original["core_sources"].values()]+[canonical_existing_path(ROOT/f) for f in p["reused_inputs"]]
     hashes={f.relative_to(ROOT).as_posix() if f.is_relative_to(ROOT) else f.name:hashlib.sha256(f.read_bytes()).hexdigest() for f in paths}
     return {"schema_version":"t010-core-o2-ideal-modes-audit-v1","date":p["date"],
        "status":"PASS_LOCAL_IDEAL_REFERENCE_ONLY" if passed else "LOCAL_IDEAL_REFERENCE_FAIL",

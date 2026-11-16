@@ -19,7 +19,7 @@ from typing import Any
 def _bootstrap() -> Path:
     current = Path(__file__).resolve()
     for parent in [current] + list(current.parents):
-        if (parent / "docs").exists() and (parent / "docs" / "core").exists():
+        if (parent / "docs").exists() and (parent / "core").exists():
             if str(parent) not in sys.path:
                 sys.path.insert(0, str(parent))
             return parent
@@ -28,15 +28,15 @@ def _bootstrap() -> Path:
 
 ROOT = _bootstrap()
 TOPIC = "0.19_Gravity_GR"
-TOPIC_DIR = ROOT / "docs" / "topics" / TOPIC
+TOPIC_DIR = ROOT / "topics" / TOPIC
 ARTIFACT_DIR = TOPIC_DIR / "Result" / "artifacts"
 
-CORE_PROGRAM = ROOT / "docs/core/07_artifacts/gates/uet_gr_research_program_gate.json"
-CORE_CLOSED_LIMIT = ROOT / "docs/core/07_artifacts/verification/gr_closed_limit_verification.json"
-CORE_BALANCE = ROOT / "docs/core/07_artifacts/verification/covariant_bianchi_exchange_verification.json"
-CORE_CAUSAL = ROOT / "docs/core/07_artifacts/verification/causal_nonclosed_kernel_verification.json"
-CORE_REDUCTION = ROOT / "docs/core/07_artifacts/verification/covariant_matter_space_reduction_verification.json"
-CORE_STATE_MAP = ROOT / "docs/core/07_artifacts/gates/noether_phase_field_dependency_gate.json"
+CORE_PROGRAM = ROOT / "core/07_artifacts/gates/uet_gr_research_program_gate.json"
+CORE_CLOSED_LIMIT = ROOT / "core/07_artifacts/verification/gr_closed_limit_verification.json"
+CORE_BALANCE = ROOT / "core/07_artifacts/verification/covariant_bianchi_exchange_verification.json"
+CORE_CAUSAL = ROOT / "core/07_artifacts/verification/causal_nonclosed_kernel_verification.json"
+CORE_REDUCTION = ROOT / "core/07_artifacts/verification/covariant_matter_space_reduction_verification.json"
+CORE_STATE_MAP = ROOT / "core/07_artifacts/gates/noether_phase_field_dependency_gate.json"
 TOPIC_PRIMARY = ARTIFACT_DIR / "0_19_gravity_gr_verification.json"
 TOPIC_BRANCH_GATE = TOPIC_DIR / "Data/03_Research/branch_claim_gate.json"
 READINESS_METADATA = ROOT / "docs/meta/topic_readiness.json"
