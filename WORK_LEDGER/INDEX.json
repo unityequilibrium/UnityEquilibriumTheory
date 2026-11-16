@@ -4,12 +4,12 @@
   "generator_sha256": "b32005e4bdbf59da6681ae630fa1d9d4415c361f7523be18c8b52a86dc8c93e9",
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
-    "sources": 77,
-    "entries": 829,
+    "sources": 78,
+    "entries": 830,
     "by_stream": {
       "book-history": 94,
       "operations": 114,
-      "research": 621
+      "research": 622
     },
     "exact_duplicates": 0,
     "review_entries": 2
@@ -401,6 +401,11 @@
       "path": "2026/2026-11-14.md",
       "sha256": "a7d9c5d30419f6b772ac37f9f82069b9ae4d52be8c1da878f40a7c01fabc8574",
       "entries": 2
+    },
+    {
+      "path": "2026/2026-11-16.md",
+      "sha256": "342ea38db0e6933cb3f92b81a2eefaf9330c564fa889037b1bcfef11e3d92ee5",
+      "entries": 1
     },
     {
       "path": "2026-08-14.md",
@@ -16952,6 +16957,26 @@
       "basis": "explicit_stream_and_area",
       "flags": [],
       "date": "2026-11-14",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-16.md#b6-psi-friction-derived-from-the-parent-action",
+      "source": "2026/2026-11-16.md",
+      "anchor": "b6-psi-friction-derived-from-the-parent-action",
+      "start_line": 3,
+      "end_line": 11,
+      "title": "B6: psi friction derived from the parent action",
+      "entry_sha256": "a14c17bfcd872746bc214bcfa9ba8ed38e137e8d957a15a316d0b3452b614ff2",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-16",
       "legacy_root_path": false
     },
     {

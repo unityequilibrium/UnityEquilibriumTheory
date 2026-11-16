@@ -252,6 +252,15 @@
         "R_B5_PORTAL_DRAG_BOUND"
       ],
       "note": "A derived bound, not a prediction. Assumes the Sun's rest frame as the environment frame; a different environment frame (for example the CMB frame) needs its own analysis."
+    },
+    {
+      "claim_id": "C_B6_PSI_FRICTION_DERIVED",
+      "statement": "Under the parent action with chi = ordinary matter, the response-scalar friction is not a free parameter: it is the linear-response dissipation of the ambient matter, zero in vacuum, and the resulting portal drag equals alpha^2 times gravitational dynamical friction, so it is not a UET-distinct effect.",
+      "level": "L1_CONSISTENT",
+      "evidence": [
+        "R_B6_PSI_FRICTION_DERIVED"
+      ],
+      "note": "Supersedes the free-Gamma assumption of B4 and B5 (those records stay unchanged). Classical ideal-gas medium, linear response, non-relativistic matter. A different bath for psi would need new fields in the action."
     }
   ]
 }

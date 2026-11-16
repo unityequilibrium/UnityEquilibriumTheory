@@ -302,3 +302,10 @@ commit: this commit
 ระดับ: C_B5_PORTAL_DRAG_BOUND → L1_CONSISTENT (ขอบเขตที่ derive ได้ ไม่ใช่ข้อทำนาย ไม่ใช้ Test Card); แก้ SYNTHESIS_AUDIT ที่อ้างเลข T013/T014 ซึ่งถูกใช้ไปแล้ว
 ถัดไป: กรอบสิ่งแวดล้อมแบบ CMB (แรงลากสม่ำเสมอ/ละเมิด EP) ยังไม่วิเคราะห์; ต้องให้ผู้เขียนตัดสินว่าจะผูกค่า Γ กับอะไร
 commit: this commit
+
+## 2026-11-16 — B6: derive Γ ของ ψ จาก parent action แทนการเลือกค่า
+ทำ: integrate out สสารธรรมดา (portal ½ g_c ψ|χ|²) แบบ linear response แบบเดียวกับ A3 (uet_portal_drag_derived.py, physics test 8 ข้อ รวมการเทียบกับ dynamical friction ของ Chandrasekhar ทุกความเร็ว)
+ผล: Γ(k) = α_c² n √(π/2)/(T k σ) เป็นศูนย์ในสุญญากาศ ไม่มีพารามิเตอร์อิสระ; แรงลาก portal = α² × dynamical friction ของแรงโน้มถ่วง; ดาวพฤหัสบดีในลมสุริยะ ≤ 2.7e-31 ของขีดจำกัด B5
+ระดับ: C_B6_PSI_FRICTION_DERIVED → L1_CONSISTENT; ผู้สมัครข้ามชั้นของ B4 ไม่ใช่ผลเฉพาะของ UET แต่เป็นการแลกโมเมนตัมผ่านแรงที่ห้าธรรมดา (ค่าอินพุตลมสุริยะ AI เลือก)
+ถัดไป: ข้อทำนายเฉพาะต้องมาจากที่อื่น (bath ใหม่ของ ψ ต้องเพิ่ม field ใน action); test รันแยกนอก repo จนกว่าจะซ่อม import
+commit: this commit
