@@ -7,7 +7,7 @@
     "reviewer": "agent:claude-standard-v2-w6",
     "rationale": "Methodological contract for Test Card T001. The evidence decision (L2 CONSTRAINT, author-approved) lives in docs/standard; this contract records inputs, model, observation chain and gaps. Timing, propagation and detector modelling are inherited from the published analysis, not reproduced.",
     "coverage_evidence": [
-      "docs/core/01_contracts/BINARY_PULSAR_PILOT_SOURCES.md"
+      "core/01_contracts/BINARY_PULSAR_PILOT_SOURCES.md"
     ]
   },
   "question": "Which interval of the UET non-minimal coupling xi_c is excluded by published binary-pulsar DEF bounds, and in which scalar-mass domain does that exclusion apply?",
@@ -198,7 +198,7 @@
       "reason": "Binary systems, masses and DEF coupling as registered from the published tables and bound.",
       "evidence": [
         "docs/data/external/gravity/binary_pulsar_def/zfksw22_def_bounds.csv",
-        "docs/core/01_contracts/BINARY_PULSAR_PILOT_SOURCES.md"
+        "core/01_contracts/BINARY_PULSAR_PILOT_SOURCES.md"
       ]
     },
     {
@@ -233,7 +233,7 @@
       "reason": "Timing fit and Bayesian DEF bound. Applied upstream in the published timing analysis (ZFKSW22); not recomputed here.",
       "evidence": [
         "docs/data/external/gravity/binary_pulsar_def/zfksw22_def_bounds.csv",
-        "docs/core/01_contracts/BINARY_PULSAR_PILOT_SOURCES.md"
+        "core/01_contracts/BINARY_PULSAR_PILOT_SOURCES.md"
       ]
     },
     {
@@ -242,8 +242,8 @@
       "disposition": "MODELED",
       "reason": "Map of the published beta0 range through beta0 = -2 xi_c and Kepler separation for the domain bound.",
       "evidence": [
-        "docs/core/03_lanes/scalar_tensor/t001_binary_pulsar_constraint.py",
-        "docs/core/02_equations/covariant/uet_scalar_tensor_mapping.py"
+        "core/03_lanes/scalar_tensor/t001_binary_pulsar_constraint.py",
+        "core/02_equations/covariant/uet_scalar_tensor_mapping.py"
       ]
     },
     {
@@ -252,8 +252,8 @@
       "disposition": "MODELED",
       "reason": "Closed-form arithmetic; Kepler and mapping functions covered by physics tests.",
       "evidence": [
-        "docs/core/05_tests/physics/test_t001_method.py",
-        "docs/core/05_tests/physics/test_def_mapping.py"
+        "core/05_tests/physics/test_t001_method.py",
+        "core/05_tests/physics/test_def_mapping.py"
       ]
     }
   ],
@@ -277,35 +277,35 @@
       "availability": "REQUIRED"
     },
     {
-      "path": "docs/core/01_contracts/BINARY_PULSAR_PILOT_SOURCES.md",
+      "path": "core/01_contracts/BINARY_PULSAR_PILOT_SOURCES.md",
       "kind": "working_file",
       "role": "evidence",
       "sha256": "ef54f9113cafbc6d2cafcdbd385bd9ae8007d84746212fccdd19e8197fa0e0ea",
       "availability": "REQUIRED"
     },
     {
-      "path": "docs/core/02_equations/covariant/uet_scalar_tensor_mapping.py",
+      "path": "core/02_equations/covariant/uet_scalar_tensor_mapping.py",
       "kind": "working_file",
       "role": "code",
       "sha256": "7a3044d7eb303628a1b4b0d08b5b3c6d53c466ba26b7b6192b0fc432c99d282f",
       "availability": "REQUIRED"
     },
     {
-      "path": "docs/core/03_lanes/scalar_tensor/t001_binary_pulsar_constraint.py",
+      "path": "core/03_lanes/scalar_tensor/t001_binary_pulsar_constraint.py",
       "kind": "working_file",
       "role": "code",
-      "sha256": "4ea7953f10d55beb2bb066a0203f3768a93b2b0dbea8e9492439d08e4ad4e856",
+      "sha256": "f96868c09fadcc25a60f6e82450e849de5dbd2c30458b528fc525c76d830009d",
       "availability": "REQUIRED"
     },
     {
-      "path": "docs/core/05_tests/physics/test_t001_method.py",
+      "path": "core/05_tests/physics/test_t001_method.py",
       "kind": "working_file",
       "role": "code",
       "sha256": "2872476dec146a290d4f72f66bcd6c976b9c5dd0b0627af385d28812ae3602de",
       "availability": "REQUIRED"
     },
     {
-      "path": "docs/core/05_tests/physics/test_def_mapping.py",
+      "path": "core/05_tests/physics/test_def_mapping.py",
       "kind": "working_file",
       "role": "code",
       "sha256": "3af518667ccb444dda5e96471c83bf0107c8d5f5621bc17af986e7acd096b9ea",
@@ -313,14 +313,14 @@
     }
   ],
   "entrypoints": [
-    "docs/core/03_lanes/scalar_tensor/t001_binary_pulsar_constraint.py",
-    "docs/core/02_equations/covariant/uet_scalar_tensor_mapping.py"
+    "core/03_lanes/scalar_tensor/t001_binary_pulsar_constraint.py",
+    "core/02_equations/covariant/uet_scalar_tensor_mapping.py"
   ],
   "evidence": [
-    "docs/core/03_lanes/scalar_tensor/t001_binary_pulsar_constraint.py",
-    "docs/core/02_equations/covariant/uet_scalar_tensor_mapping.py",
+    "core/03_lanes/scalar_tensor/t001_binary_pulsar_constraint.py",
+    "core/02_equations/covariant/uet_scalar_tensor_mapping.py",
     "docs/data/external/gravity/binary_pulsar_def/zfksw22_def_bounds.csv",
-    "docs/core/01_contracts/BINARY_PULSAR_PILOT_SOURCES.md"
+    "core/01_contracts/BINARY_PULSAR_PILOT_SOURCES.md"
   ],
   "claim_boundary": "Methodological coverage of the T001 constraint calculation only. Evidence level is set in docs/standard (L2 CONSTRAINT). Not a prediction and not a falsification test while xi_c is free.",
   "next_action": "Cross-check transcribed values against the journal version; extend to beta0 < -4.8 only with an additional registered source."

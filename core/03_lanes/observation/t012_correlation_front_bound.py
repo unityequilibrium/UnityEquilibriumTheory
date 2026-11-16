@@ -11,7 +11,7 @@
 5. Diagnostic (not part of the outcome): the direct-contact-only reading of P4 gives v_bound_direct =
    max single-quasiparticle speed; excess_direct is reported for the valid systems.
 
-Usage: python -m docs.core.03_lanes.observation.t012_correlation_front_bound
+Usage: python core/03_lanes/observation/t012_correlation_front_bound.py
 Prints the numbers only. A Result record needs an APPROVED Test Card (docs/STANDARD.md section 4).
 """
 
@@ -23,13 +23,26 @@ import importlib
 import json
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parents[4]
+ROOT = Path(__file__).resolve().parents[3]
+
+
+def _core_module(relative: str):
+    """Load core/<relative> by file path (folders start with digits; repaired after the root relocation)."""
+    import importlib.util
+    import sys
+    path = ROOT / "core" / relative
+    name = "uet_producer_dep_" + path.stem
+    if name not in sys.modules:
+        spec = importlib.util.spec_from_file_location(name, path)
+        sys.modules[name] = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(sys.modules[name])
+    return sys.modules[name]
 DATA = ROOT / "docs/data/external/quantum_many_body/correlation_front/cheneau2012_front_velocity.csv"
 MANIFEST = ROOT / "docs/standard/data_manifest.json"
 DATA_ID = "CHENEAU2012_FRONT_VELOCITY"
 VALID_FROM_U_OVER_J = 6.0
 
-two = importlib.import_module("docs.core.03_lanes.observation.uet_two_signal_contact")
+two = _core_module("03_lanes/observation/uet_two_signal_contact.py")
 
 
 def verified_rows() -> list[dict]:

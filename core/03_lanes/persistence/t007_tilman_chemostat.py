@@ -17,7 +17,7 @@ physiology of Table 1 (measured separately from the competition runs):
 4. Compare the predicted boundaries with the observed ones (~80 and ~6) and the predicted
    outcome of each reported ratio group with the observed outcome.
 
-Usage: python -m docs.core.03_lanes.persistence.t007_tilman_chemostat
+Usage: python core/03_lanes/persistence/t007_tilman_chemostat.py
 Prints the numbers only. A Result record needs an APPROVED Test Card (docs/STANDARD.md section 4).
 """
 
@@ -29,7 +29,20 @@ import json
 import math
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parents[4]
+ROOT = Path(__file__).resolve().parents[3]
+
+
+def _core_module(relative: str):
+    """Load core/<relative> by file path (folders start with digits; repaired after the root relocation)."""
+    import importlib.util
+    import sys
+    path = ROOT / "core" / relative
+    name = "uet_producer_dep_" + path.stem
+    if name not in sys.modules:
+        spec = importlib.util.spec_from_file_location(name, path)
+        sys.modules[name] = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(sys.modules[name])
+    return sys.modules[name]
 DATA = ROOT / "docs/data/external/ecology/tilman1977_chemostat/tilman1977_chemostat.csv"
 MANIFEST = ROOT / "docs/standard/data_manifest.json"
 DATA_ID = "TILMAN1977_CHEMOSTAT"

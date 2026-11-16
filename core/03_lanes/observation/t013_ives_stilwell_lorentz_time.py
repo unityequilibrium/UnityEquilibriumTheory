@@ -13,7 +13,7 @@
 5. Diagnostic (not part of the outcome): the absolute-time alternative gives epsilon = gamma - 1 at the
    registered beta; its z is reported.
 
-Usage: python -m docs.core.03_lanes.observation.t013_ives_stilwell_lorentz_time
+Usage: python core/03_lanes/observation/t013_ives_stilwell_lorentz_time.py
 Prints the numbers only. A Result record needs an APPROVED Test Card (docs/STANDARD.md section 4).
 """
 
@@ -26,7 +26,20 @@ import json
 from math import sqrt
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parents[4]
+ROOT = Path(__file__).resolve().parents[3]
+
+
+def _core_module(relative: str):
+    """Load core/<relative> by file path (folders start with digits; repaired after the root relocation)."""
+    import importlib.util
+    import sys
+    path = ROOT / "core" / relative
+    name = "uet_producer_dep_" + path.stem
+    if name not in sys.modules:
+        spec = importlib.util.spec_from_file_location(name, path)
+        sys.modules[name] = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(sys.modules[name])
+    return sys.modules[name]
 DATA = ROOT / "docs/data/external/atomic/ives_stilwell/botermann2014_li_doppler_frequencies.csv"
 MANIFEST = ROOT / "docs/standard/data_manifest.json"
 DATA_ID = "BOTERMANN2014_LI_DOPPLER_FREQUENCIES"
@@ -34,7 +47,7 @@ PUBLISHED_EPSILON = 1.5e-9
 PUBLISHED_SIGMA = 2.3e-9
 PUBLISHED_TOLERANCE = 0.1e-9
 
-lor = importlib.import_module("docs.core.03_lanes.observation.uet_lorentz_time")
+lor = _core_module("03_lanes/observation/uet_lorentz_time.py")
 
 
 def verified_values() -> dict[str, tuple[float, float]]:

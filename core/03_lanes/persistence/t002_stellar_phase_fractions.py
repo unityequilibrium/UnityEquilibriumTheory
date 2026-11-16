@@ -24,7 +24,7 @@ The primary Y is Y_HII_Aver. Y_SBBN_as_used is reported as a sensitivity
 input and does not decide the outcome.
 
 Usage (from the repository root):
-    python -m docs.core.03_lanes.persistence.t002_stellar_phase_fractions
+    python core/03_lanes/persistence/t002_stellar_phase_fractions.py
 This prints numbers only. A Result record requires an APPROVED Test Card.
 """
 
@@ -37,7 +37,20 @@ import json
 import math
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parents[4]
+ROOT = Path(__file__).resolve().parents[3]
+
+
+def _core_module(relative: str):
+    """Load core/<relative> by file path (folders start with digits; repaired after the root relocation)."""
+    import importlib.util
+    import sys
+    path = ROOT / "core" / relative
+    name = "uet_producer_dep_" + path.stem
+    if name not in sys.modules:
+        spec = importlib.util.spec_from_file_location(name, path)
+        sys.modules[name] = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(sys.modules[name])
+    return sys.modules[name]
 DATA = ROOT / "docs/data/external/astronomy/globular_cluster_r_parameter/ayala2014_r_parameter.csv"
 MANIFEST = ROOT / "docs/standard/data_manifest.json"
 DATA_ID = "AYALA14_GC_R_PARAMETER"
@@ -65,7 +78,7 @@ def outcome(z: float) -> str:
 
 
 def compare(rows: dict, helium_key: str) -> dict:
-    sel = importlib.import_module("docs.core.03_lanes.persistence.uet_persistence_selection")
+    sel = _core_module("03_lanes/persistence/uet_persistence_selection.py")
     slope = rows["R_th_slope_Y"][0]
     intercept = rows["R_th_intercept"][0]
     Y, sY = rows[helium_key]

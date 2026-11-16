@@ -7,7 +7,7 @@
 3. Prediction: (v_GW - v_EM)/v_EM = 0 exactly. PASS if 0 lies inside the published interval;
    FAILED if outside.
 
-Usage: python -m docs.core.03_lanes.observation.t010_gw170817_carrier_speed
+Usage: python core/03_lanes/observation/t010_gw170817_carrier_speed.py
 Prints the numbers only. A Result record needs an APPROVED Test Card (docs/STANDARD.md section 4).
 """
 
@@ -18,7 +18,20 @@ import hashlib
 import json
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parents[4]
+ROOT = Path(__file__).resolve().parents[3]
+
+
+def _core_module(relative: str):
+    """Load core/<relative> by file path (folders start with digits; repaired after the root relocation)."""
+    import importlib.util
+    import sys
+    path = ROOT / "core" / relative
+    name = "uet_producer_dep_" + path.stem
+    if name not in sys.modules:
+        spec = importlib.util.spec_from_file_location(name, path)
+        sys.modules[name] = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(sys.modules[name])
+    return sys.modules[name]
 DATA = ROOT / "docs/data/external/gravity/gw170817/abbott2017_gw170817_grb.csv"
 MANIFEST = ROOT / "docs/standard/data_manifest.json"
 DATA_ID = "ABBOTT2017_GW170817_GRB"

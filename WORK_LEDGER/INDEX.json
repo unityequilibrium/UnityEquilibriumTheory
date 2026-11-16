@@ -5,11 +5,11 @@
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
     "sources": 79,
-    "entries": 860,
+    "entries": 861,
     "by_stream": {
       "book-history": 94,
       "operations": 131,
-      "research": 634,
+      "research": 635,
       "review": 1
     },
     "exact_duplicates": 0,
@@ -410,8 +410,8 @@
     },
     {
       "path": "2026/2026-11-16.md",
-      "sha256": "bd28ad2f5e233fb5c75bc12d8093f2531e3520b5ec57035a2f10d1395aad8027",
-      "entries": 19
+      "sha256": "fe38389f8e56dc6f6d51da713da7aaa27264b04532c4f2b69408dde58dbe15a7",
+      "entries": 20
     },
     {
       "path": "2026-08-14.md",
@@ -17569,9 +17569,29 @@
       "source": "2026/2026-11-16.md",
       "anchor": "interim-research-report-2026-11-09-to-2026-11-16",
       "start_line": 192,
-      "end_line": 200,
+      "end_line": 201,
       "title": "Interim research report 2026-11-09 to 2026-11-16",
-      "entry_sha256": "ffd85c26a02aa2a9257f4633ee4d4a2f969f5bc6243a88d9c86d29ce7ddb3e68",
+      "entry_sha256": "99f65c45c20a82f215c4489699d18ca213cecc2e2eb5c08205d4716c4f3f683f",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-16",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-16.md#repair-test-card-producers-t001-t013-after-root-relocation",
+      "source": "2026/2026-11-16.md",
+      "anchor": "repair-test-card-producers-t001-t013-after-root-relocation",
+      "start_line": 202,
+      "end_line": 210,
+      "title": "Repair Test Card producers T001-T013 after root relocation",
+      "entry_sha256": "cb87bc157ef37259dc1c8a30eeb2e95ef6e3f99bda0cb3500b5a88cf3ef6d76e",
       "stream": "research",
       "areas": [
         "research-core"

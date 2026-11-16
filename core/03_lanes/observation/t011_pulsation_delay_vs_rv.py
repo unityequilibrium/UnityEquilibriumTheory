@@ -8,7 +8,7 @@
 3. z = |PM - RV| / sqrt(sigma_PM^2 + sigma_RV^2), each sigma taken on the side facing the other value.
    PASS if z <= 2 for every system; FAILED if z > 3 for any system; otherwise INCONCLUSIVE.
 
-Usage: python -m docs.core.03_lanes.observation.t011_pulsation_delay_vs_rv
+Usage: python core/03_lanes/observation/t011_pulsation_delay_vs_rv.py
 Prints the numbers only. A Result record needs an APPROVED Test Card (docs/STANDARD.md section 4).
 """
 
@@ -20,7 +20,20 @@ import json
 from math import sqrt
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parents[4]
+ROOT = Path(__file__).resolve().parents[3]
+
+
+def _core_module(relative: str):
+    """Load core/<relative> by file path (folders start with digits; repaired after the root relocation)."""
+    import importlib.util
+    import sys
+    path = ROOT / "core" / relative
+    name = "uet_producer_dep_" + path.stem
+    if name not in sys.modules:
+        spec = importlib.util.spec_from_file_location(name, path)
+        sys.modules[name] = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(sys.modules[name])
+    return sys.modules[name]
 DATA = ROOT / "docs/data/external/stellar/phase_modulation/murphy2016_pm_vs_rv.csv"
 MANIFEST = ROOT / "docs/standard/data_manifest.json"
 DATA_ID = "MURPHY2016_PM_VS_RV"
