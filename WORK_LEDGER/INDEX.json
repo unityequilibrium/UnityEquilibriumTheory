@@ -5,11 +5,11 @@
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
     "sources": 79,
-    "entries": 861,
+    "entries": 862,
     "by_stream": {
       "book-history": 94,
       "operations": 131,
-      "research": 635,
+      "research": 636,
       "review": 1
     },
     "exact_duplicates": 0,
@@ -410,8 +410,8 @@
     },
     {
       "path": "2026/2026-11-16.md",
-      "sha256": "fe38389f8e56dc6f6d51da713da7aaa27264b04532c4f2b69408dde58dbe15a7",
-      "entries": 20
+      "sha256": "d84d9efd5b29005b64e1146113759c54ce06cf6690783e46a7d449e2c0416ffc",
+      "entries": 21
     },
     {
       "path": "2026-08-14.md",
@@ -17589,9 +17589,29 @@
       "source": "2026/2026-11-16.md",
       "anchor": "repair-test-card-producers-t001-t013-after-root-relocation",
       "start_line": 202,
-      "end_line": 210,
+      "end_line": 211,
       "title": "Repair Test Card producers T001-T013 after root relocation",
-      "entry_sha256": "cb87bc157ef37259dc1c8a30eeb2e95ef6e3f99bda0cb3500b5a88cf3ef6d76e",
+      "entry_sha256": "ad476c0cedbdac8f5fc6b851d5766650dfa1c4cd7b9758c676fbb4822d2c7bc8",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-16",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-16.md#topic-019-through-the-engine-draft-t016-microscope",
+      "source": "2026/2026-11-16.md",
+      "anchor": "topic-019-through-the-engine-draft-t016-microscope",
+      "start_line": 212,
+      "end_line": 220,
+      "title": "Topic 0.19 through the engine; draft T016 (MICROSCOPE)",
+      "entry_sha256": "4181396c65895bab80124b9bcb8c08bb9987606e06da3d2be8119be40826c146",
       "stream": "research",
       "areas": [
         "research-core"

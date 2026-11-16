@@ -298,6 +298,22 @@
         "R_T015_HE_II_TREE_LEVEL"
       ],
       "note": "FAILED in T015 (2026-11-16): tree-level sound speed 848 m/s against 233.1 m/s, D = 2.31. A failure removes only this lane (chi = atom, tree level), not the parent action; the chi = nucleon lane of T005 is unaffected."
+    },
+    {
+      "claim_id": "C_PORTAL_COMPOSITION_EP",
+      "statement": "If the portal source is the nucleon rest-energy density (chi = nucleon) while gravity couples to total mass-energy, the portal force is composition dependent at the level of the nucleon-number-to-mass ratio: for a uniform source sphere, eta = alpha eps_S (eps_1 - eps_2) F(R/lambda) e^{-r/lambda}(1 + r/lambda), and eta = 0 when the portal source is total mass.",
+      "level": "L1_CONSISTENT",
+      "evidence": [
+        "R_PORTAL_COMPOSITION_EP"
+      ],
+      "note": "AI interpretation: the action has no nuclear forces, so whether binding energy sources the portal is a lane choice, not derived. Standard composition-dependent fifth-force physics, not UET-distinct."
+    },
+    {
+      "claim_id": "C_T016_MICROSCOPE_G_C",
+      "statement": "With the nucleon-number portal lane, MICROSCOPE's eta(Ti, Pt) limits the portal coupling to about g_c < 1.1e-15 eV for m_psi below about 3e-14 eV (lambda above about 7000 km), roughly ten times tighter in alpha than lunar laser ranging (T005).",
+      "level": "L0_SPECULATIVE",
+      "evidence": [],
+      "note": "Under draft Test Card T016; numbers are the AI estimate made while drafting, not a Result."
     }
   ]
 }

@@ -156,6 +156,18 @@
       "license": "numerical facts transcribed from published papers; no figures or text redistributed",
       "visibility": "PUBLIC",
       "note": "u1 read from the NIST SRD reprint table (T90 = 1.7000 K, 233.1 m/s); a from the PRL abstract (104 +8/-18 angstrom); rho reused from the Topic 13 record evaluated with the same source's density formula. Re-check rho against the printed table before T015 is approved."
+    },
+    {
+      "data_id": "MICROSCOPE22_ETA_COMPOSITION",
+      "description": "MICROSCOPE Eotvos parameter of the Ti-Pt pair, orbit geometry and nominal test-mass composition",
+      "source": "Touboul et al., Phys. Rev. Lett. 129, 121102 (2022), arXiv:2209.15487 abstract; IUPAC/CIAAW abundances and atomic weights",
+      "doi_or_url": "https://arxiv.org/abs/2209.15487",
+      "retrieved": "2026-11-16",
+      "path": "docs/data/external/gravity/microscope/microscope2022_eta_and_composition.csv",
+      "sha256": "ddad69b8ce3f46c1f01d0cf51a0e53a6be87dd1db6351810947315a660ebd749",
+      "license": "numerical facts transcribed from published sources; no figures or text redistributed",
+      "visibility": "PUBLIC",
+      "note": "eta values checked against the arXiv abstract on 2026-11-16. Composition rows (alloy fractions, isotopic abundances, atomic weights) were transcribed from memory and must be re-checked against CIAAW and the MICROSCOPE instrument papers before T016 is approved."
     }
   ]
 }

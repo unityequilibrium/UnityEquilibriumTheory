@@ -1,0 +1,27 @@
+# Sources:
+#   eta, orbit: P. Touboul et al. (MICROSCOPE), "Final results of the test of the Equivalence Principle", Phys. Rev. Lett. 129, 121102 (2022),
+#               arXiv:2209.15487 (abstract). Test masses: titanium alloy TA6V and platinum alloy PtRh10. Orbit altitude about 710 km.
+#   composition: nominal alloy mass fractions (TA6V = Ti 90 / Al 6 / V 4; PtRh10 = Pt 90 / Rh 10); natural isotopic abundances and
+#               standard atomic weights from IUPAC/CIAAW values. Transcribed from memory by the AI on 2026-11-16: re-check every
+#               composition row against CIAAW tables and the MICROSCOPE instrument papers before Test Card T016 is approved.
+record,quantity,value,uncertainty_plus,uncertainty_minus,unit,note
+observed,eta_Ti_Pt,-1.5e-15,,,1,"Eotvos parameter of the Ti-Pt pair"
+observed,eta_stat,2.3e-15,,,1,"1 sigma statistical"
+observed,eta_syst,1.5e-15,,,1,"1 sigma systematic"
+geometry,orbit_altitude,7.10e5,,,m,"nominal; AI-chosen round value"
+geometry,earth_radius,6.371e6,,,m,"mean radius; Earth treated as a uniform sphere (AI choice)"
+composition,TA6V_mass_fraction_Ti,0.90,,,1,"nominal"
+composition,TA6V_mass_fraction_Al,0.06,,,1,"nominal"
+composition,TA6V_mass_fraction_V,0.04,,,1,"nominal"
+composition,PtRh10_mass_fraction_Pt,0.90,,,1,"nominal"
+composition,PtRh10_mass_fraction_Rh,0.10,,,1,"nominal"
+element,Ti_mean_A,47.9177,,,1,"46:8.25% 47:7.44% 48:73.72% 49:5.41% 50:5.18%"
+element,Ti_atomic_weight,47.867,,,1,""
+element,Al_mean_A,27.0,,,1,"monoisotopic"
+element,Al_atomic_weight,26.9815385,,,1,""
+element,V_mean_A,50.9975,,,1,"50:0.25% 51:99.75%"
+element,V_atomic_weight,50.9415,,,1,""
+element,Pt_mean_A,195.1207,,,1,"190:0.012% 192:0.782% 194:32.86% 195:33.78% 196:25.21% 198:7.356%"
+element,Pt_atomic_weight,195.084,,,1,""
+element,Rh_mean_A,103.0,,,1,"monoisotopic"
+element,Rh_atomic_weight,102.90549,,,1,""

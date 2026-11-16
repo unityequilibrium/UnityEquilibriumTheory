@@ -1,0 +1,34 @@
+{
+  "schema": "uet-result-v2",
+  "result_id": "R_PORTAL_COMPOSITION_EP",
+  "claim_id": "C_PORTAL_COMPOSITION_EP",
+  "level": "L1_CONSISTENT",
+  "outcome": "PASS",
+  "numbers": [
+    {
+      "name": "uniform_sphere_closed_form_vs_volume_integral",
+      "value": "1e-6",
+      "uncertainty": null,
+      "unit": "relative"
+    },
+    {
+      "name": "eta_for_equal_charge_per_mass",
+      "value": 0.0,
+      "uncertainty": null,
+      "unit": "1"
+    },
+    {
+      "name": "d_eps_TA6V_minus_PtRh10_nominal",
+      "value": "8.0e-4",
+      "uncertainty": null,
+      "unit": "1"
+    }
+  ],
+  "producer": {
+    "script": "core/05_tests/physics/test_portal_composition.py",
+    "commit": "e3cafadb8"
+  },
+  "artifacts": [],
+  "date": "2026-11-16",
+  "note": "Derivation for topic 0.19 through the engine. d_eps uses nominal alloy fractions and isotopic data transcribed from memory (to be re-checked under T016). Not UET-distinct."
+}

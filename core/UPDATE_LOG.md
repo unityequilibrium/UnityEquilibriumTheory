@@ -412,3 +412,9 @@ commit: this commit
 ผล: รันได้ทั้ง 11 และได้ outcome ตรงกับที่บันทึกไว้ทุกใบ (เช่น T001 ช่วง 2.0–2.4, T002 z = 2.05, T008 log dev 0.049, T013 ตรงกับที่ตีพิมพ์)
 contract: เปลี่ยน path ใน contract ของ T001–T009 จาก docs/core/ เป็น core/ และ refresh hash เฉพาะไฟล์ที่แก้; audit เหลือ 43 error เดิมของ topic 13
 commit: this commit
+
+## 2026-11-16 — topic 0.19 เข้า engine และร่าง T016 (MICROSCOPE)
+ทำ: lane card ของ 0.19 (ชั้น 1) จับคู่ผลเก่า: CODATA/Planck เป็น bookkeeping, short-range อยู่ใน T005, PPN จาก W5; ข้อค้างคือ EP ที่ assert η = 0 โดยไม่เทียบ MICROSCOPE
+derive: ถ้า portal ต้นทางคือจำนวน nucleon (AI ตีความ) แรงจะขึ้นกับชนิดสสาร η = α ε_S Δε Φ; Δε(TA6V−PtRh10) ≈ 8e-4; สูตรทรงกลมตรงกับ integral 1e-6 (L1)
+ร่าง: T016 (DRAFT) คาดว่า α < 5.0e-12, g_c < 1.15e-15 eV เมื่อ λ ≥ 1e8 m แน่นกว่า LLR ใน T005 ราว 12 เท่าใน α; ข้อมูลองค์ประกอบโลหะต้องตรวจก่อนอนุมัติ
+commit: this commit
