@@ -51,7 +51,7 @@
       "disposition": "MODELED",
       "reason": "Declared formal expressions in the code under contract.",
       "evidence": [
-        "docs/core/03_lanes/observation/uet_two_signal_contact.py"
+        "core/03_lanes/observation/uet_two_signal_contact.py"
       ]
     },
     {
@@ -88,7 +88,7 @@
       "disposition": "MODELED",
       "reason": "Declared formal expressions in the code under contract.",
       "evidence": [
-        "docs/core/03_lanes/observation/uet_two_signal_contact.py"
+        "core/03_lanes/observation/uet_two_signal_contact.py"
       ]
     },
     {
@@ -97,7 +97,7 @@
       "disposition": "MODELED",
       "reason": "Checked by the listed physics tests (docs/STANDARD.md section 6).",
       "evidence": [
-        "docs/core/05_tests/physics/test_two_signal_contact.py"
+        "core/05_tests/physics/test_two_signal_contact.py"
       ]
     }
   ],
@@ -114,14 +114,14 @@
   },
   "identities": [
     {
-      "path": "docs/core/03_lanes/observation/uet_two_signal_contact.py",
+      "path": "core/03_lanes/observation/uet_two_signal_contact.py",
       "kind": "working_file",
       "role": "code",
       "sha256": "f9dbf6dbb69701a4ff4a0251128957baec4529c3c60653272668ff95fa2fcd39",
       "availability": "REQUIRED"
     },
     {
-      "path": "docs/core/05_tests/physics/test_two_signal_contact.py",
+      "path": "core/05_tests/physics/test_two_signal_contact.py",
       "kind": "working_file",
       "role": "code",
       "sha256": "98d4cf7b58056d7bd57f5a32a4a83b34786c1fb29343c779227c988a4b2aabf2",
@@ -129,11 +129,11 @@
     }
   ],
   "entrypoints": [
-    "docs/core/03_lanes/observation/uet_two_signal_contact.py"
+    "core/03_lanes/observation/uet_two_signal_contact.py"
   ],
   "evidence": [
-    "docs/core/03_lanes/observation/uet_two_signal_contact.py",
-    "docs/core/05_tests/physics/test_two_signal_contact.py"
+    "core/03_lanes/observation/uet_two_signal_contact.py",
+    "core/05_tests/physics/test_two_signal_contact.py"
   ],
   "claim_boundary": "Formal coverage only; no physical acceptance or status change.",
   "next_action": "Refresh identities with this tool when the code or tests change."

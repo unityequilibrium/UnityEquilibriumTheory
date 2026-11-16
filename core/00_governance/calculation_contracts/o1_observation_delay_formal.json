@@ -51,7 +51,7 @@
       "disposition": "MODELED",
       "reason": "Declared formal expressions in the code under contract.",
       "evidence": [
-        "docs/core/03_lanes/observation/uet_observation_layer.py"
+        "core/03_lanes/observation/uet_observation_layer.py"
       ]
     },
     {
@@ -88,7 +88,7 @@
       "disposition": "MODELED",
       "reason": "Declared formal expressions in the code under contract.",
       "evidence": [
-        "docs/core/03_lanes/observation/uet_observation_layer.py"
+        "core/03_lanes/observation/uet_observation_layer.py"
       ]
     },
     {
@@ -97,7 +97,7 @@
       "disposition": "MODELED",
       "reason": "Checked by the listed physics tests (docs/STANDARD.md section 6).",
       "evidence": [
-        "docs/core/05_tests/physics/test_observation_delay.py"
+        "core/05_tests/physics/test_observation_delay.py"
       ]
     }
   ],
@@ -114,14 +114,14 @@
   },
   "identities": [
     {
-      "path": "docs/core/03_lanes/observation/uet_observation_layer.py",
+      "path": "core/03_lanes/observation/uet_observation_layer.py",
       "kind": "working_file",
       "role": "code",
       "sha256": "ee5cb9de3f1e2daa032512554cf85e5ec9deb03e90ae47036b1f43745d7873b4",
       "availability": "REQUIRED"
     },
     {
-      "path": "docs/core/05_tests/physics/test_observation_delay.py",
+      "path": "core/05_tests/physics/test_observation_delay.py",
       "kind": "working_file",
       "role": "code",
       "sha256": "fdf301dcd0561c079cd799c3640261397ba3be6f2805e2a7e2177ab622105146",
@@ -129,11 +129,11 @@
     }
   ],
   "entrypoints": [
-    "docs/core/03_lanes/observation/uet_observation_layer.py"
+    "core/03_lanes/observation/uet_observation_layer.py"
   ],
   "evidence": [
-    "docs/core/03_lanes/observation/uet_observation_layer.py",
-    "docs/core/05_tests/physics/test_observation_delay.py"
+    "core/03_lanes/observation/uet_observation_layer.py",
+    "core/05_tests/physics/test_observation_delay.py"
   ],
   "claim_boundary": "Formal coverage only; no physical acceptance or status change.",
   "next_action": "Refresh identities with this tool when the code or tests change."

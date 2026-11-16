@@ -51,7 +51,7 @@
       "disposition": "MODELED",
       "reason": "Declared formal expressions in the code under contract.",
       "evidence": [
-        "docs/core/03_lanes/observation/uet_field_causality.py"
+        "core/03_lanes/observation/uet_field_causality.py"
       ]
     },
     {
@@ -88,7 +88,7 @@
       "disposition": "MODELED",
       "reason": "Declared formal expressions in the code under contract.",
       "evidence": [
-        "docs/core/03_lanes/observation/uet_field_causality.py"
+        "core/03_lanes/observation/uet_field_causality.py"
       ]
     },
     {
@@ -97,7 +97,7 @@
       "disposition": "MODELED",
       "reason": "Checked by the listed physics tests (docs/STANDARD.md section 6).",
       "evidence": [
-        "docs/core/05_tests/physics/test_field_causality.py"
+        "core/05_tests/physics/test_field_causality.py"
       ]
     }
   ],
@@ -114,14 +114,14 @@
   },
   "identities": [
     {
-      "path": "docs/core/03_lanes/observation/uet_field_causality.py",
+      "path": "core/03_lanes/observation/uet_field_causality.py",
       "kind": "working_file",
       "role": "code",
       "sha256": "8f83be01c899c8993ca43ffdb313df7640affcd9db0f4df622d38fbb79b89e0c",
       "availability": "REQUIRED"
     },
     {
-      "path": "docs/core/05_tests/physics/test_field_causality.py",
+      "path": "core/05_tests/physics/test_field_causality.py",
       "kind": "working_file",
       "role": "code",
       "sha256": "79f979adf9195db7578bc022d7e4bba0c280bd5350b19e1f7af39daf58a74eae",
@@ -129,11 +129,11 @@
     }
   ],
   "entrypoints": [
-    "docs/core/03_lanes/observation/uet_field_causality.py"
+    "core/03_lanes/observation/uet_field_causality.py"
   ],
   "evidence": [
-    "docs/core/03_lanes/observation/uet_field_causality.py",
-    "docs/core/05_tests/physics/test_field_causality.py"
+    "core/03_lanes/observation/uet_field_causality.py",
+    "core/05_tests/physics/test_field_causality.py"
   ],
   "claim_boundary": "Formal coverage only; no physical acceptance or status change.",
   "next_action": "Refresh identities with this tool when the code or tests change."

@@ -51,7 +51,7 @@
       "disposition": "MODELED",
       "reason": "Declared formal expressions in the code under contract.",
       "evidence": [
-        "docs/core/03_lanes/observation/uet_shared_record.py"
+        "core/03_lanes/observation/uet_shared_record.py"
       ]
     },
     {
@@ -88,7 +88,7 @@
       "disposition": "MODELED",
       "reason": "Declared formal expressions in the code under contract.",
       "evidence": [
-        "docs/core/03_lanes/observation/uet_shared_record.py"
+        "core/03_lanes/observation/uet_shared_record.py"
       ]
     },
     {
@@ -97,7 +97,7 @@
       "disposition": "MODELED",
       "reason": "Checked by the listed physics tests (docs/STANDARD.md section 6).",
       "evidence": [
-        "docs/core/05_tests/physics/test_shared_record_cone.py"
+        "core/05_tests/physics/test_shared_record_cone.py"
       ]
     }
   ],
@@ -114,14 +114,14 @@
   },
   "identities": [
     {
-      "path": "docs/core/03_lanes/observation/uet_shared_record.py",
+      "path": "core/03_lanes/observation/uet_shared_record.py",
       "kind": "working_file",
       "role": "code",
       "sha256": "27b1a6de32e9f077da3d7fd7aa3a99f031dd49e5586ee4ffe8b2d1b7fef3d04e",
       "availability": "REQUIRED"
     },
     {
-      "path": "docs/core/05_tests/physics/test_shared_record_cone.py",
+      "path": "core/05_tests/physics/test_shared_record_cone.py",
       "kind": "working_file",
       "role": "code",
       "sha256": "0fa7deb8a50c6417ba103f9a76112c1abb9baa5b2d5b5d526375073db6802e39",
@@ -129,11 +129,11 @@
     }
   ],
   "entrypoints": [
-    "docs/core/03_lanes/observation/uet_shared_record.py"
+    "core/03_lanes/observation/uet_shared_record.py"
   ],
   "evidence": [
-    "docs/core/03_lanes/observation/uet_shared_record.py",
-    "docs/core/05_tests/physics/test_shared_record_cone.py"
+    "core/03_lanes/observation/uet_shared_record.py",
+    "core/05_tests/physics/test_shared_record_cone.py"
   ],
   "claim_boundary": "Formal coverage only; no physical acceptance or status change.",
   "next_action": "Refresh identities with this tool when the code or tests change."

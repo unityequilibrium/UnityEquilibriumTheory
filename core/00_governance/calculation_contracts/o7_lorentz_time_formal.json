@@ -51,7 +51,7 @@
       "disposition": "MODELED",
       "reason": "Declared formal expressions in the code under contract.",
       "evidence": [
-        "docs/core/03_lanes/observation/uet_lorentz_time.py"
+        "core/03_lanes/observation/uet_lorentz_time.py"
       ]
     },
     {
@@ -88,7 +88,7 @@
       "disposition": "MODELED",
       "reason": "Declared formal expressions in the code under contract.",
       "evidence": [
-        "docs/core/03_lanes/observation/uet_lorentz_time.py"
+        "core/03_lanes/observation/uet_lorentz_time.py"
       ]
     },
     {
@@ -97,7 +97,7 @@
       "disposition": "MODELED",
       "reason": "Checked by the listed physics tests (docs/STANDARD.md section 6).",
       "evidence": [
-        "docs/core/05_tests/physics/test_lorentz_time.py"
+        "core/05_tests/physics/test_lorentz_time.py"
       ]
     }
   ],
@@ -114,14 +114,14 @@
   },
   "identities": [
     {
-      "path": "docs/core/03_lanes/observation/uet_lorentz_time.py",
+      "path": "core/03_lanes/observation/uet_lorentz_time.py",
       "kind": "working_file",
       "role": "code",
       "sha256": "054180647c7230192ce4945b4a329a4afb7acc22cce8b08676e38199984f70dc",
       "availability": "REQUIRED"
     },
     {
-      "path": "docs/core/05_tests/physics/test_lorentz_time.py",
+      "path": "core/05_tests/physics/test_lorentz_time.py",
       "kind": "working_file",
       "role": "code",
       "sha256": "689b661eb5dcf0f3b79966627e3e207c3b0a168d8a2b5b354827b139f02119dd",
@@ -129,11 +129,11 @@
     }
   ],
   "entrypoints": [
-    "docs/core/03_lanes/observation/uet_lorentz_time.py"
+    "core/03_lanes/observation/uet_lorentz_time.py"
   ],
   "evidence": [
-    "docs/core/03_lanes/observation/uet_lorentz_time.py",
-    "docs/core/05_tests/physics/test_lorentz_time.py"
+    "core/03_lanes/observation/uet_lorentz_time.py",
+    "core/05_tests/physics/test_lorentz_time.py"
   ],
   "claim_boundary": "Formal coverage only; no physical acceptance or status change.",
   "next_action": "Refresh identities with this tool when the code or tests change."

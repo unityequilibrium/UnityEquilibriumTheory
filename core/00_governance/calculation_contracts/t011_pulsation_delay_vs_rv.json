@@ -7,7 +7,7 @@
     "reviewer": "agent:claude-t011",
     "rationale": "Methodological contract for Test Card T011. The evidence decision lives in docs/standard. Pulsation phases, time delays and RV extraction are inherited from the published analysis.",
     "coverage_evidence": [
-      "docs/core/05_tests/physics/test_pulsation_timing.py"
+      "core/05_tests/physics/test_pulsation_timing.py"
     ]
   },
   "question": "Does the light-travel delay amplitude measured from pulsation timing equal the one predicted from an independent RV orbit, as P2 (gap = rate x record age) requires?",
@@ -142,7 +142,7 @@
       "reason": "One orbit, two observables linked by d tau/dt = -v_r/c.",
       "evidence": [
         "docs/data/external/stellar/phase_modulation/murphy2016_pm_vs_rv.csv",
-        "docs/core/05_tests/physics/test_pulsation_timing.py"
+        "core/05_tests/physics/test_pulsation_timing.py"
       ]
     },
     {
@@ -185,8 +185,8 @@
       "disposition": "MODELED",
       "reason": "z comparison defined in the Test Card.",
       "evidence": [
-        "docs/core/03_lanes/observation/t011_pulsation_delay_vs_rv.py",
-        "docs/core/03_lanes/observation/uet_pulsation_timing.py"
+        "core/03_lanes/observation/t011_pulsation_delay_vs_rv.py",
+        "core/03_lanes/observation/uet_pulsation_timing.py"
       ]
     },
     {
@@ -195,7 +195,7 @@
       "disposition": "MODELED",
       "reason": "Closed-form arithmetic; the selection model is covered by physics tests.",
       "evidence": [
-        "docs/core/05_tests/physics/test_pulsation_timing.py"
+        "core/05_tests/physics/test_pulsation_timing.py"
       ]
     }
   ],
@@ -219,21 +219,21 @@
       "availability": "REQUIRED"
     },
     {
-      "path": "docs/core/03_lanes/observation/t011_pulsation_delay_vs_rv.py",
+      "path": "core/03_lanes/observation/t011_pulsation_delay_vs_rv.py",
       "kind": "working_file",
       "role": "code",
       "sha256": "58ddd993db3c24f2738ffd9aa47167e5f01ca9686646ae20df515f4c0eea9c9a",
       "availability": "REQUIRED"
     },
     {
-      "path": "docs/core/05_tests/physics/test_pulsation_timing.py",
+      "path": "core/05_tests/physics/test_pulsation_timing.py",
       "kind": "working_file",
       "role": "code",
       "sha256": "677f380cf7bfd78ec5c64ccc9d5b6a9d383518aa50dfa0da3c4ab8be1aa270ab",
       "availability": "REQUIRED"
     },
     {
-      "path": "docs/core/03_lanes/observation/uet_pulsation_timing.py",
+      "path": "core/03_lanes/observation/uet_pulsation_timing.py",
       "kind": "working_file",
       "role": "code",
       "sha256": "cc5c7767ffde1cec1638aa97c5a72b01eef15325c18e48ac3ba81cddd95b58f3",
@@ -241,12 +241,12 @@
     }
   ],
   "entrypoints": [
-    "docs/core/03_lanes/observation/t011_pulsation_delay_vs_rv.py",
-    "docs/core/03_lanes/observation/uet_pulsation_timing.py"
+    "core/03_lanes/observation/t011_pulsation_delay_vs_rv.py",
+    "core/03_lanes/observation/uet_pulsation_timing.py"
   ],
   "evidence": [
-    "docs/core/03_lanes/observation/t011_pulsation_delay_vs_rv.py",
-    "docs/core/03_lanes/observation/uet_pulsation_timing.py",
+    "core/03_lanes/observation/t011_pulsation_delay_vs_rv.py",
+    "core/03_lanes/observation/uet_pulsation_timing.py",
     "docs/data/external/stellar/phase_modulation/murphy2016_pm_vs_rv.csv"
   ],
   "claim_boundary": "Methodological coverage of the T011 comparison only. The evidence level is set in docs/standard.",

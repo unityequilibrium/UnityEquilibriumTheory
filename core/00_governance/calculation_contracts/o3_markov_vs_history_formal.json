@@ -51,7 +51,7 @@
       "disposition": "MODELED",
       "reason": "Declared formal expressions in the code under contract.",
       "evidence": [
-        "docs/core/03_lanes/observation/uet_estimators.py"
+        "core/03_lanes/observation/uet_estimators.py"
       ]
     },
     {
@@ -88,7 +88,7 @@
       "disposition": "MODELED",
       "reason": "Declared formal expressions in the code under contract.",
       "evidence": [
-        "docs/core/03_lanes/observation/uet_estimators.py"
+        "core/03_lanes/observation/uet_estimators.py"
       ]
     },
     {
@@ -97,7 +97,7 @@
       "disposition": "MODELED",
       "reason": "Checked by the listed physics tests (docs/STANDARD.md section 6).",
       "evidence": [
-        "docs/core/05_tests/physics/test_markov_vs_history.py"
+        "core/05_tests/physics/test_markov_vs_history.py"
       ]
     }
   ],
@@ -114,14 +114,14 @@
   },
   "identities": [
     {
-      "path": "docs/core/03_lanes/observation/uet_estimators.py",
+      "path": "core/03_lanes/observation/uet_estimators.py",
       "kind": "working_file",
       "role": "code",
       "sha256": "4826e4f8b2371023463c49e18caa9a54677f58dfbc631c4cc26121dd87877596",
       "availability": "REQUIRED"
     },
     {
-      "path": "docs/core/05_tests/physics/test_markov_vs_history.py",
+      "path": "core/05_tests/physics/test_markov_vs_history.py",
       "kind": "working_file",
       "role": "code",
       "sha256": "a82de08142758962d0a3648e99cd3d1177026fb159ade58692c6cc79eb5e935d",
@@ -129,11 +129,11 @@
     }
   ],
   "entrypoints": [
-    "docs/core/03_lanes/observation/uet_estimators.py"
+    "core/03_lanes/observation/uet_estimators.py"
   ],
   "evidence": [
-    "docs/core/03_lanes/observation/uet_estimators.py",
-    "docs/core/05_tests/physics/test_markov_vs_history.py"
+    "core/03_lanes/observation/uet_estimators.py",
+    "core/05_tests/physics/test_markov_vs_history.py"
   ],
   "claim_boundary": "Formal coverage only; no physical acceptance or status change.",
   "next_action": "Refresh identities with this tool when the code or tests change."

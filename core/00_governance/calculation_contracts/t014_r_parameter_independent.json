@@ -40,8 +40,8 @@
     "comparison_ids": [
       "GONTCHAROV26_GC_R_PARAMETER"
     ],
-    "independent_validation": true,
-    "holdout_policy": "No holdout. Published R seen in the source abstract before drafting (exposure SEEN_FULL), declared in Test Card T014."
+    "independent_validation": false,
+    "holdout_policy": "No holdout. Published R seen in the source abstract before drafting (exposure SEEN_FULL), declared in Test Card T014. The star counts are independent of the T002 counts (different telescopes, membership and ZAHB cut), but no formal ancestry record is attached, so independent_validation is not claimed."
   },
   "observation": {
     "system_partition": {

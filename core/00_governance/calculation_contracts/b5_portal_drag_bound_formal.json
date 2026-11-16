@@ -51,7 +51,7 @@
       "disposition": "MODELED",
       "reason": "Declared formal expressions in the code under contract.",
       "evidence": [
-        "docs/core/03_lanes/open_system/uet_portal_drag_bound.py"
+        "core/03_lanes/open_system/uet_portal_drag_bound.py"
       ]
     },
     {
@@ -88,7 +88,7 @@
       "disposition": "MODELED",
       "reason": "Declared formal expressions in the code under contract.",
       "evidence": [
-        "docs/core/03_lanes/open_system/uet_portal_drag_bound.py"
+        "core/03_lanes/open_system/uet_portal_drag_bound.py"
       ]
     },
     {
@@ -97,7 +97,7 @@
       "disposition": "MODELED",
       "reason": "Checked by the listed physics tests (docs/STANDARD.md section 6).",
       "evidence": [
-        "docs/core/05_tests/physics/test_portal_drag_bound.py"
+        "core/05_tests/physics/test_portal_drag_bound.py"
       ]
     }
   ],
@@ -114,14 +114,14 @@
   },
   "identities": [
     {
-      "path": "docs/core/03_lanes/open_system/uet_portal_drag_bound.py",
+      "path": "core/03_lanes/open_system/uet_portal_drag_bound.py",
       "kind": "working_file",
       "role": "code",
       "sha256": "704d1bdaa8e3d56c6837e29ff004b49e8177aef1be63face0c54ccfc99f30511",
       "availability": "REQUIRED"
     },
     {
-      "path": "docs/core/05_tests/physics/test_portal_drag_bound.py",
+      "path": "core/05_tests/physics/test_portal_drag_bound.py",
       "kind": "working_file",
       "role": "code",
       "sha256": "62b312662d8c0c68cda8599bacec1d9bf8c147a184ecb99e71bfda2dcbe2507a",
@@ -129,11 +129,11 @@
     }
   ],
   "entrypoints": [
-    "docs/core/03_lanes/open_system/uet_portal_drag_bound.py"
+    "core/03_lanes/open_system/uet_portal_drag_bound.py"
   ],
   "evidence": [
-    "docs/core/03_lanes/open_system/uet_portal_drag_bound.py",
-    "docs/core/05_tests/physics/test_portal_drag_bound.py"
+    "core/03_lanes/open_system/uet_portal_drag_bound.py",
+    "core/05_tests/physics/test_portal_drag_bound.py"
   ],
   "claim_boundary": "Formal coverage only; no physical acceptance or status change.",
   "next_action": "Refresh identities with this tool when the code or tests change."

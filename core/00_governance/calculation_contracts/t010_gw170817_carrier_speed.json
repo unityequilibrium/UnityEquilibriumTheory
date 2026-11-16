@@ -7,7 +7,7 @@
     "reviewer": "agent:claude-t010",
     "rationale": "Methodological contract for Test Card T010. The evidence decision lives in docs/standard. Detection, timing and distance are inherited from the published analysis.",
     "coverage_evidence": [
-      "docs/core/05_tests/physics/test_tensor_speed.py"
+      "core/05_tests/physics/test_tensor_speed.py"
     ]
   },
   "question": "Do the two records of GW170817 (gravitational waves and gamma rays) travel at the same speed, as c_T = 1 of the parent action requires?",
@@ -141,7 +141,7 @@
       "reason": "Two carriers from one event with c_T = 1.",
       "evidence": [
         "docs/data/external/gravity/gw170817/abbott2017_gw170817_grb.csv",
-        "docs/core/05_tests/physics/test_tensor_speed.py"
+        "core/05_tests/physics/test_tensor_speed.py"
       ]
     },
     {
@@ -184,8 +184,8 @@
       "disposition": "MODELED",
       "reason": "Interval check defined in the Test Card.",
       "evidence": [
-        "docs/core/03_lanes/observation/t010_gw170817_carrier_speed.py",
-        "docs/core/03_lanes/observation/uet_observation_layer.py"
+        "core/03_lanes/observation/t010_gw170817_carrier_speed.py",
+        "core/03_lanes/observation/uet_observation_layer.py"
       ]
     },
     {
@@ -194,7 +194,7 @@
       "disposition": "MODELED",
       "reason": "Closed-form arithmetic; the selection model is covered by physics tests.",
       "evidence": [
-        "docs/core/05_tests/physics/test_tensor_speed.py"
+        "core/05_tests/physics/test_tensor_speed.py"
       ]
     }
   ],
@@ -218,21 +218,21 @@
       "availability": "REQUIRED"
     },
     {
-      "path": "docs/core/03_lanes/observation/t010_gw170817_carrier_speed.py",
+      "path": "core/03_lanes/observation/t010_gw170817_carrier_speed.py",
       "kind": "working_file",
       "role": "code",
       "sha256": "79468428876e10483c831e0e53cb922800d81761f59cf22aea92e2a0778e9c2e",
       "availability": "REQUIRED"
     },
     {
-      "path": "docs/core/05_tests/physics/test_tensor_speed.py",
+      "path": "core/05_tests/physics/test_tensor_speed.py",
       "kind": "working_file",
       "role": "code",
       "sha256": "ffb53972b95999991431b236c260cdf88bbb989c2fea612b532fb9dfd9c4f474",
       "availability": "REQUIRED"
     },
     {
-      "path": "docs/core/03_lanes/observation/uet_observation_layer.py",
+      "path": "core/03_lanes/observation/uet_observation_layer.py",
       "kind": "working_file",
       "role": "code",
       "sha256": "ee5cb9de3f1e2daa032512554cf85e5ec9deb03e90ae47036b1f43745d7873b4",
@@ -240,12 +240,12 @@
     }
   ],
   "entrypoints": [
-    "docs/core/03_lanes/observation/t010_gw170817_carrier_speed.py",
-    "docs/core/03_lanes/observation/uet_observation_layer.py"
+    "core/03_lanes/observation/t010_gw170817_carrier_speed.py",
+    "core/03_lanes/observation/uet_observation_layer.py"
   ],
   "evidence": [
-    "docs/core/03_lanes/observation/t010_gw170817_carrier_speed.py",
-    "docs/core/03_lanes/observation/uet_observation_layer.py",
+    "core/03_lanes/observation/t010_gw170817_carrier_speed.py",
+    "core/03_lanes/observation/uet_observation_layer.py",
     "docs/data/external/gravity/gw170817/abbott2017_gw170817_grb.csv"
   ],
   "claim_boundary": "Methodological coverage of the T010 comparison only. The evidence level is set in docs/standard.",
