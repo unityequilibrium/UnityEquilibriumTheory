@@ -5,11 +5,11 @@
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
     "sources": 78,
-    "entries": 834,
+    "entries": 835,
     "by_stream": {
       "book-history": 94,
       "operations": 114,
-      "research": 626
+      "research": 627
     },
     "exact_duplicates": 0,
     "review_entries": 2
@@ -404,8 +404,8 @@
     },
     {
       "path": "2026/2026-11-16.md",
-      "sha256": "b8c5bef39e40fb7be4a4f207384725c827cc4365d3648ea470db74b216169482",
-      "entries": 5
+      "sha256": "e50be9c5843992bdbe29a0e79ecdc634812c1e6e3f11f11a4b95236d159312d4",
+      "entries": 6
     },
     {
       "path": "2026-08-14.md",
@@ -17044,12 +17044,32 @@
       "source": "2026/2026-11-16.md",
       "anchor": "t014-run-and-l2-record",
       "start_line": 43,
-      "end_line": 51,
+      "end_line": 52,
       "title": "T014 run and L2 record",
-      "entry_sha256": "d50a75776be4fb63172f6a077a4f318b24c0aaa5e846acd327bec97b3012ebd1",
+      "entry_sha256": "e12b6bf06ba4b3df0cacff9b333d01d0b01b89faf9f63226d1f02f953aabf7cc",
       "stream": "research",
       "areas": [
         "research-standards"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-16",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-16.md#topic-screen-for-uet-distinct-candidates",
+      "source": "2026/2026-11-16.md",
+      "anchor": "topic-screen-for-uet-distinct-candidates",
+      "start_line": 53,
+      "end_line": 61,
+      "title": "Topic screen for UET-distinct candidates",
+      "entry_sha256": "7d410f0dc5384559a0e0de00e418131d2823516544203477f2762d113351b5cf",
+      "stream": "research",
+      "areas": [
+        "research-core"
       ],
       "related_streams": [
         "research"

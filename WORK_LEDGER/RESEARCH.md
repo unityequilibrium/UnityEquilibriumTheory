@@ -6,10 +6,11 @@
 
 These are source-linked historical records, not proof of completed research, successful publication, or current scientific readiness.
 
-Indexed entries: 626. Counts describe records, not accomplishments.
+Indexed entries: 627. Counts describe records, not accomplishments.
 
 | Date | Record | Area | Notes |
 | --- | --- | --- | --- |
+| 2026-11-16 | [Topic screen for UET-distinct candidates](2026/2026-11-16.md#topic-screen-for-uet-distinct-candidates) (L53) | research-core | explicit_stream_and_area |
 | 2026-11-16 | [T014 run and L2 record](2026/2026-11-16.md#t014-run-and-l2-record) (L43) | research-standards | explicit_stream_and_area |
 | 2026-11-16 | [T002 stellar-model systematic and draft T014](2026/2026-11-16.md#t002-stellar-model-systematic-and-draft-t014) (L33) | research-core | explicit_stream_and_area |
 | 2026-11-16 | [B8: layers 2-3 for psi with matter as its bath](2026/2026-11-16.md#b8-layers-2-3-for-psi-with-matter-as-its-bath) (L23) | research-core | explicit_stream_and_area |
