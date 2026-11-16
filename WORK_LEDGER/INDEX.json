@@ -5,11 +5,11 @@
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
     "sources": 78,
-    "entries": 831,
+    "entries": 832,
     "by_stream": {
       "book-history": 94,
       "operations": 114,
-      "research": 623
+      "research": 624
     },
     "exact_duplicates": 0,
     "review_entries": 2
@@ -404,8 +404,8 @@
     },
     {
       "path": "2026/2026-11-16.md",
-      "sha256": "60343e1da8f9bd2b26d545d04f4e3bbfe0686802c5536c9704aa368bba6a1da9",
-      "entries": 2
+      "sha256": "03a56d74b907888d0bd03c397bdc46195b96d5ad86553b0bd3af64cf90b66f3e",
+      "entries": 3
     },
     {
       "path": "2026-08-14.md",
@@ -16984,9 +16984,29 @@
       "source": "2026/2026-11-16.md",
       "anchor": "b7-layer-3-burn-power-from-the-closed-system",
       "start_line": 13,
-      "end_line": 21,
+      "end_line": 22,
       "title": "B7: layer-3 burn power from the closed system",
-      "entry_sha256": "9f095efaeaf096fdef47353da330ac47c057170776606e7cd2aca739f925fca3",
+      "entry_sha256": "ed60919ee1ffa05072832a0aeea3ef04ed4f8f191bd303345cd32e3da54552e9",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-16",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-16.md#b8-layers-2-3-for-psi-with-matter-as-its-bath",
+      "source": "2026/2026-11-16.md",
+      "anchor": "b8-layers-2-3-for-psi-with-matter-as-its-bath",
+      "start_line": 23,
+      "end_line": 31,
+      "title": "B8: layers 2-3 for psi with matter as its bath",
+      "entry_sha256": "51bd1909963ac952aa9af6a1ab1edaa564bf65dc2853b69ba72f98bff9ee15d9",
       "stream": "research",
       "areas": [
         "research-core"

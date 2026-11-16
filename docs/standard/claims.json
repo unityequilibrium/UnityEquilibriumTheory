@@ -270,6 +270,15 @@
         "R_B7_FREE_ENERGY_BURN"
       ],
       "note": "Linear Caldeira-Leggett mode with an ohmic classical bath; not yet derived for the psi field of the parent action itself. Standard stochastic thermodynamics, not UET-distinct."
+    },
+    {
+      "claim_id": "C_B8_PSI_MATTER_BURN",
+      "statement": "With ordinary matter as the only bath of the response scalar, free psi waves are not absorbed at linear order (Cherenkov condition), and the free energy that psi burns is that of sourced fields moving relative to matter, at the rate P = F_drag v given by linear response, which exact classical orbits confirm.",
+      "level": "L1_CONSISTENT",
+      "evidence": [
+        "R_B8_PSI_MATTER_BURN"
+      ],
+      "note": "Classical, collisionless, non-relativistic medium; collisional absorption is second order and not included. Standard kinetic theory, not UET-distinct."
     }
   ]
 }

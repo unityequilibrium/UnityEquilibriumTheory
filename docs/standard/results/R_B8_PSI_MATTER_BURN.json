@@ -1,0 +1,64 @@
+{
+  "schema": "uet-result-v2",
+  "result_id": "R_B8_PSI_MATTER_BURN",
+  "claim_id": "C_B8_PSI_MATTER_BURN",
+  "level": "L1_CONSISTENT",
+  "outcome": "PASS",
+  "numbers": [
+    {
+      "name": "exact_over_born_cross_section_minus_1_at_coupling_1e-1_1e-2_1e-3",
+      "value": "9.1e-2, 8.4e-3, 8.4e-4",
+      "uncertainty": null,
+      "unit": "relative"
+    },
+    {
+      "name": "kinetic_born_vs_b6_linear_response",
+      "value": "1e-13",
+      "uncertainty": null,
+      "unit": "relative"
+    },
+    {
+      "name": "exact_orbit_drag_vs_linear_response_at_coupling_0.1",
+      "value": "-1.4e-2",
+      "uncertainty": null,
+      "unit": "relative"
+    },
+    {
+      "name": "exact_orbit_drag_vs_linear_response_at_coupling_0.03",
+      "value": "-9.4e-4",
+      "uncertainty": null,
+      "unit": "relative"
+    },
+    {
+      "name": "free_psi_wave_log_absorption_solar_wind",
+      "value": "-2.0e8",
+      "uncertainty": null,
+      "unit": "dimensionless"
+    },
+    {
+      "name": "jupiter_portal_burn_power_lunar_bound",
+      "value": "9.3e-12",
+      "uncertainty": null,
+      "unit": "W"
+    },
+    {
+      "name": "jupiter_portal_bits_written",
+      "value": "3.6e7",
+      "uncertainty": null,
+      "unit": "bit/s"
+    },
+    {
+      "name": "jupiter_portal_coupling_over_kT",
+      "value": "4.7e-10",
+      "uncertainty": null,
+      "unit": "dimensionless"
+    }
+  ],
+  "producer": {
+    "script": "core/05_tests/physics/test_psi_matter_burn.py",
+    "commit": "2a146caa0"
+  },
+  "artifacts": [],
+  "date": "2026-11-16",
+  "note": "Wave B8 (derivation, no Test Card). B7's F, P = T sigma and tau = integral dF/P applied to psi with ordinary matter as its only bath (B6). Free psi waves are not absorbed at linear order: omega/k >= c while matter is non-relativistic, so the Landau factor is exp(-2e8) in the solar wind and psi radiation keeps its free energy. Sourced psi burns through drag: F = M v^2/2 relative to the medium, P = F_drag v. The B6 drag, a linear-response result, is confirmed by exact classical orbits (closed dynamics, no expansion) with a gap that shrinks with the coupling; for the portal the coupling is 4.7e-10 of kT, so linear response holds. Jupiter at the lunar g_c bound writes about 3.6e7 bits/s into the solar wind (P = 9.3e-12 W). The Gaussian test potential and solar-wind inputs are AI-chosen. Not UET-distinct. Test run standalone until the PR #60 import repair."
+}
