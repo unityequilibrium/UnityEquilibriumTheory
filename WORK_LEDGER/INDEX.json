@@ -5,11 +5,11 @@
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
     "sources": 79,
-    "entries": 857,
+    "entries": 858,
     "by_stream": {
       "book-history": 94,
       "operations": 131,
-      "research": 631,
+      "research": 632,
       "review": 1
     },
     "exact_duplicates": 0,
@@ -410,8 +410,8 @@
     },
     {
       "path": "2026/2026-11-16.md",
-      "sha256": "31885dcf99e55bbe2ba2d11769a64581b648085bfdb1cf81463763b1b93fd29a",
-      "entries": 16
+      "sha256": "960856e17150bd40189f312ef3448f1b57e30e3351e37c80614fa23644ac0f79",
+      "entries": 17
     },
     {
       "path": "2026-08-14.md",
@@ -17509,9 +17509,29 @@
       "source": "2026/2026-11-16.md",
       "anchor": "decision-topic-13-he-4-phi-is-a-phenomenological-closure",
       "start_line": 162,
-      "end_line": 170,
+      "end_line": 171,
       "title": "Decision: Topic 13 He-4 Phi is a phenomenological closure",
-      "entry_sha256": "ff3e31dd1c8a13539a905344d8ff9616caa8d652913b14789705e2e9d61b1329",
+      "entry_sha256": "8aae34fde7e9afd98ac982339cc04dc38bf125f6ba2e10f615b4d36e1e5d638b",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-16",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-16.md#uet-engine-draft-coreengine",
+      "source": "2026/2026-11-16.md",
+      "anchor": "uet-engine-draft-coreengine",
+      "start_line": 172,
+      "end_line": 180,
+      "title": "UET engine draft (core/engine)",
+      "entry_sha256": "8c6186fa67f1607ef9d36a9f27e227818d02ac24523bb5acb0ddef7b50fe7ede",
       "stream": "research",
       "areas": [
         "research-core"

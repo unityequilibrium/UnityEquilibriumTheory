@@ -1,0 +1,40 @@
+{
+  "schema": "uet-lane-card-v1",
+  "topic": "0.X_Topic_Name",
+  "reach": "LAYER23",
+  "system": "What physical system the topic studies, in one sentence.",
+  "mapping": {
+    "chi": "Layer 1 only: what chi is (per nucleon for ordinary matter, Theory Card section 7).",
+    "psi": "Layer 1 only: what psi does here, or 'none'.",
+    "F": "Layers 2-3: the free energy the structure holds relative to its environment, with its standard-physics formula.",
+    "P": "Layers 2-3: the burn power and its exponent n in P = P0 (F/F0)^n, with its standard-physics source.",
+    "b": "Layers 2-3: the formation rate, or 'common, cancels in ratios'."
+  },
+  "engine_functions": [
+    "layer23.lifetime",
+    "layer23.abundance_ratio"
+  ],
+  "parameters": [
+    {
+      "name": "example_P0",
+      "value": 1.0,
+      "unit": "W",
+      "origin": "MEASURED_INDEPENDENT",
+      "source": "citation or data_manifest id",
+      "data_id": "OPTIONAL_DATA_ID"
+    }
+  ],
+  "observable": {
+    "quantity": "What is compared with data.",
+    "unit": "SI unit",
+    "comparison_data_ids": ["DATA_ID_IN_docs/standard/data_manifest.json"],
+    "test_card": "T0xx once approved, else null"
+  },
+  "legacy": {
+    "engine": "topics/<topic>/Code/... legacy engine path, kept unchanged",
+    "status": "LEGACY_UNREVIEWED"
+  },
+  "outside_reason": "Only for reach OUTSIDE_ACTION: what the action lacks (for example fermions or gauge fields).",
+  "drafted_by": "agent or author",
+  "approval": null
+}

@@ -392,3 +392,10 @@ commit: this commit
 ผล: ชั้น SI ของ action ตอบแล้วที่ L1 โดยไม่ต้องใช้ E_ref; หยุดไล่ data package ของ graphite เพื่อปิด SI anchor ของ topic 13
 ค้าง: แก้สถานะในไฟล์ของ topic 13 หลังงานซ่อม path ของ Codex merge
 commit: this commit
+
+## 2026-11-16 — ร่าง UET engine: ทางเข้าเดียวจาก topic ไปยังสมการแกน
+ทำ: สร้าง core/engine (layer1: parent action, แรงที่ห้า, DEF, Bose fluid, drag; layer23: burn law, lifetime, abundance, selection, bits) และ lane card พร้อมตัวตรวจ
+พบ: topic ใช้ core เพื่อหา path เท่านั้น (166 ครั้ง) ไม่มี topic ใดเรียก parent action; core/__init__ v0.9 ยังส่งออก κ, β แยกตาม topic
+ตรวจ: 8 physics test ผ่าน (สองเส้นทางโค้ดตรงกัน, known limits, abundance law เทียบ ODE ของ decay chain); 4 test ของ lane card
+ถัดไป: ผู้เขียนตรวจ API แล้วเลือก topic นำร่อง; การบังคับ lane card เป็น gate ใหม่ ต้องอนุมัติก่อน
+commit: this commit
