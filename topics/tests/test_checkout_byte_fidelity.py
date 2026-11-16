@@ -26,6 +26,7 @@ RAW_PATHS = (
     "topics/0.99_Example/Data/raw/example.csv",
     "topics/0.99_Example/Data/03_Research/example.json",
     "topics/0.99_Example/Ref/PDF_Downloads/ascii.pdf",
+    "topics/0.99_Example/Result/previews/first_execution_verifier.py.txt",
 )
 
 

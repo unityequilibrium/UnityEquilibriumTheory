@@ -5,10 +5,10 @@
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
     "sources": 78,
-    "entries": 829,
+    "entries": 830,
     "by_stream": {
       "book-history": 94,
-      "operations": 128,
+      "operations": 129,
       "research": 606,
       "review": 1
     },
@@ -405,8 +405,8 @@
     },
     {
       "path": "2026/2026-11-16.md",
-      "sha256": "302eb13c1f379257d5113edb1807adcf22c25475e71df344171e450e4f0c4a11",
-      "entries": 4
+      "sha256": "c6ddf273df570e3a32a139bd43f5ffce5525023d16f444120e9c4dcdffaae96b",
+      "entries": 5
     },
     {
       "path": "2026-08-14.md",
@@ -16944,9 +16944,29 @@
       "source": "2026/2026-11-16.md",
       "anchor": "full-desktop-regression-checkpoint-and-declared-predecessor-guard-repair",
       "start_line": 39,
-      "end_line": 49,
+      "end_line": 50,
       "title": "Full Desktop regression checkpoint and declared-predecessor guard repair",
-      "entry_sha256": "24e5ef91a6d55c6e0734ceb9217b22b10446d6489119cb3f4891aab65b07c9b2",
+      "entry_sha256": "dc054c61822714638584dbe14fc9662b977892944a9b8fe6d82cb49ffebccda2",
+      "stream": "operations",
+      "areas": [
+        "repo-ops"
+      ],
+      "related_streams": [
+        "operations"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-16",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-16.md#topic-10-archived-source-locator-recovery",
+      "source": "2026/2026-11-16.md",
+      "anchor": "topic-10-archived-source-locator-recovery",
+      "start_line": 51,
+      "end_line": 61,
+      "title": "Topic 10 archived-source locator recovery",
+      "entry_sha256": "f2f97cb3cfc4bf540d7bf7aaf95585882102dd410f985e8d16e96cabe1de52b2",
       "stream": "operations",
       "areas": [
         "repo-ops"

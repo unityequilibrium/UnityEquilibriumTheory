@@ -64,3 +64,6 @@ core/UPDATE_LOG.md text eol=lf
 core/05_tests/physics/** text eol=lf
 .github/** text eol=lf
 pytest.ini text eol=lf
+
+# Frozen verifier source archives retain their committed bytes, not checkout EOLs.
+/topics/**/Result/previews/*.py.txt -text

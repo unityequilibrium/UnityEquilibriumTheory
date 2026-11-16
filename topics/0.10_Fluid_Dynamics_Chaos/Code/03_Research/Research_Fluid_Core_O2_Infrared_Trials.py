@@ -14,12 +14,21 @@ ROOT=next(p for p in Path(__file__).resolve().parents if (p/"docs/core").is_dir(
 import sys as _sys
 if str(ROOT) not in _sys.path:
     _sys.path.insert(0, str(ROOT))
-from core.core_paths import canonical_existing_path
+from core.core_paths import canonical_existing_path, canonical_path_for
 TOPIC=ROOT/"topics/0.10_Fluid_Dynamics_Chaos"
 CONTRACT=TOPIC/"Data/03_Research/fluid_core_o2_infrared_trials_contract.json"
 OUTPUT=TOPIC/"Result/artifacts/fluid_core_o2_infrared_trials_audit.json"
 REGISTRY=canonical_existing_path(ROOT/"docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry_topic10_o2_infrared_trials_addendum.json")
 PRIOR_SCRIPT=TOPIC/"Code/03_Research/Research_Fluid_Core_O2_Vector_Refinement.py"
+
+def _archived_source_hash(input_hashes):
+    """Translate the recorded locator only; never rewrite or waive its digest."""
+    current = Path(__file__).resolve().relative_to(ROOT).as_posix()
+    matches = [key for key in input_hashes if canonical_path_for(key) == current]
+    if len(matches) != 1:
+        raise ValueError("archive must identify exactly one source locator")
+    return input_hashes[matches[0]]
+
 
 def load(path,name):
     spec=importlib.util.spec_from_file_location(name,path)
@@ -178,7 +187,7 @@ def audit(p,path):
     first_path=TOPIC/"Result/previews/fluid_core_o2_infrared_trials_first_execution.json"
     first_source=TOPIC/"Result/previews/core_o2_infrared_trials_first_execution_verifier.py.txt"
     first=json.loads(first_path.read_text(encoding="utf-8"))
-    flag("first_failure_source_identity",hashlib.sha256(first_source.read_bytes()).hexdigest()==first["input_hashes"][Path(__file__).resolve().relative_to(ROOT).as_posix()])
+    flag("first_failure_source_identity",hashlib.sha256(first_source.read_bytes()).hexdigest()==_archived_source_hash(first["input_hashes"]))
     flag("first_failure_targets_preserved",first["locked_verification"]==rules)
     flag("first_failure_not_relabelled",first["status"]=="ENRICHED_SMOOTH_TRIAL_DIAGNOSTIC_FAIL" and bool(first["execution_errors"]))
     source=json.loads((canonical_existing_path(ROOT/p["vector_contract"])).read_text(encoding="utf-8"))
@@ -203,7 +212,7 @@ def audit(p,path):
              "status":first["status"],"passing_check_count":first["passing_check_count"],
              "check_count":first["check_count"],"execution_errors":first["execution_errors"]},
          "basis_banks":banks,"state_results":rows,"execution_errors":errors,
-         "previous_failed_package":{"artifact":p["vector_artifact"],"sha256":hashes[p["vector_artifact"]],
+         "previous_failed_package":{"artifact":p["vector_artifact"],"sha256":hashes[canonical_path_for(p["vector_artifact"])],
              "status":old["status"],"refinement_gate":old["refinement_gate"]},
          "refinement_gate":{"status":"PASS_DECLARED_ENRICHED_SMOOTH_TARGETS_ONLY" if target_pass else "MEASURED_ENRICHED_SMOOTH_TARGETS_OPEN",
              "target_pass":target_pass,"state_targets":gates,"physical_admission":False,

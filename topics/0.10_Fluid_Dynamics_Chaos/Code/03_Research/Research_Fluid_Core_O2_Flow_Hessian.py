@@ -13,11 +13,20 @@ ROOT=next(p for p in Path(__file__).resolve().parents if (p/"docs/core").is_dir(
 import sys as _sys
 if str(ROOT) not in _sys.path:
     _sys.path.insert(0, str(ROOT))
-from core.core_paths import canonical_existing_path
+from core.core_paths import canonical_existing_path, canonical_path_for
 TOPIC=ROOT/"topics/0.10_Fluid_Dynamics_Chaos"
 CONTRACT=TOPIC/"Data/03_Research/fluid_core_o2_flow_hessian_contract.json"
 OUTPUT=TOPIC/"Result/artifacts/fluid_core_o2_flow_hessian_audit.json"
 REGISTRY=canonical_existing_path(ROOT/"docs/core/07_artifacts/correspondence/uet_equation_correspondence_registry_topic10_o2_flow_hessian_addendum.json")
+
+
+def _archived_source_hash(input_hashes):
+    """Translate the recorded locator only; never rewrite or waive its digest."""
+    current = Path(__file__).resolve().relative_to(ROOT).as_posix()
+    matches = [key for key in input_hashes if canonical_path_for(key) == current]
+    if len(matches) != 1:
+        raise ValueError("archive must identify exactly one source locator")
+    return input_hashes[matches[0]]
 
 
 def load_adapter(path):
@@ -238,7 +247,7 @@ def audit(p,path):
     preview_source=TOPIC/"Result/previews/core_o2_flow_hessian_first_execution_verifier.py.txt"
     initial=json.loads(preview.read_text(encoding="utf-8"))
     initial_source_hash=hashlib.sha256(preview_source.read_bytes()).hexdigest()
-    flag("first_execution_source_archive_matches",initial_source_hash==initial["input_hashes"][Path(__file__).relative_to(ROOT).as_posix()])
+    flag("first_execution_source_archive_matches",initial_source_hash==_archived_source_hash(initial["input_hashes"]))
     # Archive integrity is a diagnostic control; never let it silently bypass a failure.
     control_pass=all(q["pass"] for q in checks.values())
     hashes_paths=[path,canonical_existing_path(ROOT/p["card"]),REGISTRY,Path(__file__).resolve(),preview,preview_source,canonical_existing_path(ROOT/p["source_adapter"]),

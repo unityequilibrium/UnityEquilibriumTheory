@@ -46,7 +46,7 @@ class InfraredTrialTests(unittest.TestCase):
         self.assertEqual(a["kernel_AST_hashes"]["prior_collision_tail"],a["kernel_AST_hashes"]["current_collision_tail"])
         record=a["first_execution_record"];first=json.loads((canonical_existing_path(ROOT/record["artifact"])).read_text(encoding="utf-8"))
         archived=canonical_existing_path(ROOT/record["verifier_source_archive"])
-        self.assertEqual(hashlib.sha256(archived.read_bytes()).hexdigest(),first["input_hashes"][SCRIPT.relative_to(ROOT).as_posix()])
+        self.assertEqual(hashlib.sha256(archived.read_bytes()).hexdigest(),self.driver._archived_source_hash(first["input_hashes"]))
         self.assertEqual(first["locked_verification"],a["locked_verification"])
         self.assertEqual(first["status"],"ENRICHED_SMOOTH_TRIAL_DIAGNOSTIC_FAIL")
         self.assertTrue(first["execution_errors"])

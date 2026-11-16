@@ -6,10 +6,11 @@
 
 These are source-linked historical records, not proof of completed research, successful publication, or current scientific readiness.
 
-Indexed entries: 128. Counts describe records, not accomplishments.
+Indexed entries: 129. Counts describe records, not accomplishments.
 
 | Date | Record | Area | Notes |
 | --- | --- | --- | --- |
+| 2026-11-16 | [Topic 10 archived-source locator recovery](2026/2026-11-16.md#topic-10-archived-source-locator-recovery) (L51) | repo-ops | explicit_stream_and_area |
 | 2026-11-16 | [Full Desktop regression checkpoint and declared-predecessor guard repair](2026/2026-11-16.md#full-desktop-regression-checkpoint-and-declared-predecessor-guard-repair) (L39) | repo-ops | explicit_stream_and_area |
 | 2026-11-16 | [Post-move byte fidelity, payload ownership and AI audit repair](2026/2026-11-16.md#post-move-byte-fidelity-payload-ownership-and-ai-audit-repair) (L27) | repo-ops | explicit_stream_and_area |
 | 2026-11-16 | [Desktop delivery from the frozen root-layout repair revision](2026/2026-11-16.md#desktop-delivery-from-the-frozen-root-layout-repair-revision) (L15) | repo-ops | explicit_stream_and_area |
