@@ -1,7 +1,7 @@
 {
   "schema": "uet-test-card-v2",
   "test_id": "T015",
-  "status": "DRAFT",
+  "status": "APPROVED",
   "claim_id": "C_T015_HE_II_TREE_LEVEL_LANE",
   "theory_card": {
     "card_id": "UET_PARENT",
@@ -36,5 +36,10 @@
   "pass_criterion": "D <= 0.10",
   "fail_criterion": "D > 0.30 -> FAILED for this lane; 0.10 < D <= 0.30 -> INCONCLUSIVE",
   "drafted_by": "claude",
-  "note": "Disclosure: not blind. The outcome was computed before drafting (wave SI-1 and the draft discussion): c is about 850 m/s against u1 = 233.1 m/s and n a^3 is about 2.5e4, so FAILED is expected. The value of the card is to record that failure under a rule fixed in advance, which settles whether Topic 13's He-4 Phi lane can come from the parent action. The 10 percent and 30 percent thresholds are AI-chosen; tree-level corrections scale as sqrt(n a^3), so no model error is defined for a dense fluid and the author should judge the thresholds. A failure applies only to this lane (chi = atom, tree level); it says nothing about the chi = nucleon lane of T005 or about a phenomenological two-fluid closure. Not UET-distinct: standard dilute-gas theory fails He II in the same way. The comparison script has not been run."
+  "note": "Disclosure: not blind. The outcome was computed before drafting (wave SI-1 and the draft discussion): c is about 850 m/s against u1 = 233.1 m/s and n a^3 is about 2.5e4, so FAILED is expected. The value of the card is to record that failure under a rule fixed in advance, which settles whether Topic 13's He-4 Phi lane can come from the parent action. The 10 percent and 30 percent thresholds are AI-chosen; tree-level corrections scale as sqrt(n a^3), so no model error is defined for a dense fluid and the author should judge the thresholds. A failure applies only to this lane (chi = atom, tree level); it says nothing about the chi = nucleon lane of T005 or about a phenomenological two-fluid closure. Not UET-distinct: standard dilute-gas theory fails He II in the same way. The comparison script has not been run. Approved by the author on 2026-11-16 as drafted (thresholds and rho cross-check accepted as is).",
+  "approval": {
+    "approved_by": "santxkoz",
+    "date": "2026-11-16",
+    "role": "AUTHOR"
+  }
 }
