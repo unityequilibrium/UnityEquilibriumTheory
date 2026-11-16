@@ -6,10 +6,11 @@
 
 These are source-linked historical records, not proof of completed research, successful publication, or current scientific readiness.
 
-Indexed entries: 622. Counts describe records, not accomplishments.
+Indexed entries: 623. Counts describe records, not accomplishments.
 
 | Date | Record | Area | Notes |
 | --- | --- | --- | --- |
+| 2026-11-16 | [B7: layer-3 burn power from the closed system](2026/2026-11-16.md#b7-layer-3-burn-power-from-the-closed-system) (L13) | research-core | explicit_stream_and_area |
 | 2026-11-16 | [B6: psi friction derived from the parent action](2026/2026-11-16.md#b6-psi-friction-derived-from-the-parent-action) (L3) | research-core | explicit_stream_and_area |
 | 2026-11-11 | [B5: search for a UET-distinct prediction and the bound on portal drag](2026/2026-11-11.md#b5-search-for-a-uet-distinct-prediction-and-the-bound-on-portal-drag) (L200) | research-core | explicit_stream_and_area |
 | 2026-11-11 | [T013 result at L2: P3 through the Ives-Stilwell observable](2026/2026-11-11.md#t013-result-at-l2-p3-through-the-ives-stilwell-observable) (L186) | research-standards | explicit_stream_and_area |

@@ -5,11 +5,11 @@
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
     "sources": 78,
-    "entries": 830,
+    "entries": 831,
     "by_stream": {
       "book-history": 94,
       "operations": 114,
-      "research": 622
+      "research": 623
     },
     "exact_duplicates": 0,
     "review_entries": 2
@@ -404,8 +404,8 @@
     },
     {
       "path": "2026/2026-11-16.md",
-      "sha256": "342ea38db0e6933cb3f92b81a2eefaf9330c564fa889037b1bcfef11e3d92ee5",
-      "entries": 1
+      "sha256": "60343e1da8f9bd2b26d545d04f4e3bbfe0686802c5536c9704aa368bba6a1da9",
+      "entries": 2
     },
     {
       "path": "2026-08-14.md",
@@ -16964,9 +16964,29 @@
       "source": "2026/2026-11-16.md",
       "anchor": "b6-psi-friction-derived-from-the-parent-action",
       "start_line": 3,
-      "end_line": 11,
+      "end_line": 12,
       "title": "B6: psi friction derived from the parent action",
-      "entry_sha256": "a14c17bfcd872746bc214bcfa9ba8ed38e137e8d957a15a316d0b3452b614ff2",
+      "entry_sha256": "3d6425701eba8bee7ff3501ad62538a97511c099bc1d556ff29ab135a786c3e8",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-16",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-16.md#b7-layer-3-burn-power-from-the-closed-system",
+      "source": "2026/2026-11-16.md",
+      "anchor": "b7-layer-3-burn-power-from-the-closed-system",
+      "start_line": 13,
+      "end_line": 21,
+      "title": "B7: layer-3 burn power from the closed system",
+      "entry_sha256": "9f095efaeaf096fdef47353da330ac47c057170776606e7cd2aca739f925fca3",
       "stream": "research",
       "areas": [
         "research-core"

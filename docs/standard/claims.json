@@ -261,6 +261,15 @@
         "R_B6_PSI_FRICTION_DERIVED"
       ],
       "note": "Supersedes the free-Gamma assumption of B4 and B5 (those records stay unchanged). Classical ideal-gas medium, linear response, non-relativistic matter. A different bath for psi would need new fields in the action."
+    },
+    {
+      "claim_id": "C_B7_FREE_ENERGY_BURN",
+      "statement": "In the closed matter-plus-environment model of layer 2, the subsystem's free energy relative to the environment obeys dF/dt = -P with P = T sigma >= 0 (Markov limit), so the layer-3 lifetime tau = integral dF/P follows from the dynamics; tau = F/P is the special case of constant P.",
+      "level": "L1_CONSISTENT",
+      "evidence": [
+        "R_B7_FREE_ENERGY_BURN"
+      ],
+      "note": "Linear Caldeira-Leggett mode with an ohmic classical bath; not yet derived for the psi field of the parent action itself. Standard stochastic thermodynamics, not UET-distinct."
     }
   ]
 }

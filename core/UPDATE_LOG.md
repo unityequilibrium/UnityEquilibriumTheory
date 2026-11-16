@@ -309,3 +309,10 @@ commit: this commit
 ระดับ: C_B6_PSI_FRICTION_DERIVED → L1_CONSISTENT; ผู้สมัครข้ามชั้นของ B4 ไม่ใช่ผลเฉพาะของ UET แต่เป็นการแลกโมเมนตัมผ่านแรงที่ห้าธรรมดา (ค่าอินพุตลมสุริยะ AI เลือก)
 ถัดไป: ข้อทำนายเฉพาะต้องมาจากที่อื่น (bath ใหม่ของ ψ ต้องเพิ่ม field ใน action); test รันแยกนอก repo จนกว่าจะซ่อม import
 commit: this commit
+
+## 2026-11-16 — B7: คำนวณ P ของชั้น 3 จากระบบปิด แทนการสมมติ
+ทำ: นิยาม F = T·KL(ρ‖Gibbs) และ P = γ⟨(p + T∂ₚ ln ρ)²⟩ = Tσ แล้วเทียบกับวิวัฒนาการแบบปิดที่แม่นตรงของ A3 (uet_free_energy_burn.py, physics test 5 ข้อ)
+ผล: F ที่หายไปเท่ากับ ∫P dt คลาด 0.19% และลดลงตาม 1/ω_max; เวลาถึง 1% ของ F₀ = 22.84 (ระบบปิด) เทียบ ∫dF/P = 22.89 ขณะที่ F₀/P₀ ให้ 54.8
+ระดับ: C_B7_FREE_ENERGY_BURN → L1_CONSISTENT; FIDELITY_MATRIX ข้อ 4 (P ไม่ได้คำนวณจาก action) ปิดได้ในระดับแบบจำลอง Caldeira–Leggett ไม่ใช่ข้อทำนายเฉพาะของ UET
+ถัดไป: ทำซ้ำกับสนาม ψ ของ parent action โดยตรง (bath = สสาร ตาม B6); test รันแยกนอก repo จนกว่าจะซ่อม import
+commit: this commit
