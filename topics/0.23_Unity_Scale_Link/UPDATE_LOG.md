@@ -89,3 +89,8 @@
 - Question: which species should persist longer under layer 3, and what do fossil data already show? Note: `Doc/STRESS_09_SPECIES_SURVIVAL_DESIGN.md`.
 - Known results disagree on P: high whole-animal metabolism goes with extinction in molluscs and mammals, but small marine genera go extinct more often across the Phanerozoic (Monarrez, Heim and Payne 2023), where geographic range is the strongest predictor.
 - No single choice of P fits all three; range-as-F is a post-hoc reading. Proposed a pre-declared composite F/P test; waits for the author's choice of P and F.
+
+## 2026-11-17 — Author fixes P for species survival
+- The author chose P = whole-animal resource use (not per kilogram). Recorded in core/AUTHOR_PROPOSITION.md.
+- Monarrez, Heim and Payne 2023 already fitted size and range jointly: smaller genera go extinct more often (significant in bivalves and gastropods), opposite to layer 3 if size stands for P; Neogene bivalve BMR (Rojas-Ariza et al. 2026) agrees with layer 3.
+- Body size is a poor proxy for P; a test needs BMR from size and temperature, declared before seeing new data.

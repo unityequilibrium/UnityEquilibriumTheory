@@ -5,11 +5,11 @@
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
     "sources": 80,
-    "entries": 891,
+    "entries": 892,
     "by_stream": {
       "book-history": 94,
       "operations": 131,
-      "research": 665,
+      "research": 666,
       "review": 1
     },
     "exact_duplicates": 0,
@@ -415,8 +415,8 @@
     },
     {
       "path": "2026/2026-11-17.md",
-      "sha256": "b4403219e48e1841a9322453d1e705e51dea9896492062cddf53b3406fcf0704",
-      "entries": 29
+      "sha256": "947f44908daa8f0c46594ce16a93aecc27a20fa23f6c97568d403b8fbb50f284",
+      "entries": 30
     },
     {
       "path": "2026-08-14.md",
@@ -18194,9 +18194,29 @@
       "source": "2026/2026-11-17.md",
       "anchor": "023-stress-test-09-species-survival-design",
       "start_line": 283,
-      "end_line": 291,
+      "end_line": 292,
       "title": "0.23 stress test 09: species-survival design",
-      "entry_sha256": "4882de06bd66fe37cda52cf22f3d560300b80124fb708a90fe5a1f14b1f3fdcd",
+      "entry_sha256": "978ca4cf851eb74c26c60816e5465da4f87345f48625d240543bd2efd801e81b",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-17",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-17.md#author-choice-p--whole-animal-use",
+      "source": "2026/2026-11-17.md",
+      "anchor": "author-choice-p--whole-animal-use",
+      "start_line": 293,
+      "end_line": 301,
+      "title": "Author choice: P = whole-animal use",
+      "entry_sha256": "e9afcc93d1c1a8ac9ed40b5a409a5d489fb1073f3c79d5916fa6aced6f0f2928",
       "stream": "research",
       "areas": [
         "research-core"

@@ -6,10 +6,11 @@
 
 These are source-linked historical records, not proof of completed research, successful publication, or current scientific readiness.
 
-Indexed entries: 665. Counts describe records, not accomplishments.
+Indexed entries: 666. Counts describe records, not accomplishments.
 
 | Date | Record | Area | Notes |
 | --- | --- | --- | --- |
+| 2026-11-17 | [Author choice: P = whole-animal use](2026/2026-11-17.md#author-choice-p--whole-animal-use) (L293) | research-core | explicit_stream_and_area |
 | 2026-11-17 | [0.23 stress test 09: species-survival design](2026/2026-11-17.md#023-stress-test-09-species-survival-design) (L283) | research-core | explicit_stream_and_area |
 | 2026-11-17 | [0.23 stress test 08: four distinct candidates](2026/2026-11-17.md#023-stress-test-08-four-distinct-candidates) (L273) | research-core | explicit_stream_and_area |
 | 2026-11-17 | [0.23 stress test 07: psi and the quantum vacuum](2026/2026-11-17.md#023-stress-test-07-psi-and-the-quantum-vacuum) (L263) | research-core | explicit_stream_and_area |
