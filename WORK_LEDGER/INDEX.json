@@ -5,11 +5,11 @@
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
     "sources": 81,
-    "entries": 900,
+    "entries": 901,
     "by_stream": {
       "book-history": 94,
       "operations": 131,
-      "research": 674,
+      "research": 675,
       "review": 1
     },
     "exact_duplicates": 0,
@@ -420,8 +420,8 @@
     },
     {
       "path": "2026/2026-11-18.md",
-      "sha256": "c90b03fb2e6ec01e64449e9ee67f5a0ce79e593112da25b09b8e084b13fdac07",
-      "entries": 1
+      "sha256": "0d767f9720f5d77b4917a7766fca6464dcf24b234f3d883c1832e339cef457d6",
+      "entries": 2
     },
     {
       "path": "2026-08-14.md",
@@ -18379,9 +18379,29 @@
       "source": "2026/2026-11-18.md",
       "anchor": "t021-result-at-l2",
       "start_line": 3,
-      "end_line": 11,
+      "end_line": 12,
       "title": "T021 result at L2",
-      "entry_sha256": "86ed63113a39d8a9d1d56f1f6eeb39d3d8153da5dcf66543281fd8b98f791a6e",
+      "entry_sha256": "a045ab045ce13d2b6a25ff801fcc604a479cdf8558dca0665a685ce1055c2da0",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-18",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-18.md#stage-2-of-test-d-transport-w_t-design-check",
+      "source": "2026/2026-11-18.md",
+      "anchor": "stage-2-of-test-d-transport-w_t-design-check",
+      "start_line": 13,
+      "end_line": 21,
+      "title": "Stage 2 of test D: transport w_T design check",
+      "entry_sha256": "38d9a987c7fc08671fc0e3ea865c6f5b558d2368f9cfceabd6c610ec5015da88",
       "stream": "research",
       "areas": [
         "research-core"

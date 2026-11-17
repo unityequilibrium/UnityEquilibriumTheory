@@ -6,10 +6,11 @@
 
 These are source-linked historical records, not proof of completed research, successful publication, or current scientific readiness.
 
-Indexed entries: 674. Counts describe records, not accomplishments.
+Indexed entries: 675. Counts describe records, not accomplishments.
 
 | Date | Record | Area | Notes |
 | --- | --- | --- | --- |
+| 2026-11-18 | [Stage 2 of test D: transport w_T design check](2026/2026-11-18.md#stage-2-of-test-d-transport-w_t-design-check) (L13) | research-core | explicit_stream_and_area |
 | 2026-11-18 | [T021 result at L2](2026/2026-11-18.md#t021-result-at-l2) (L3) | research-core | explicit_stream_and_area |
 | 2026-11-17 | [T021 run: lighting succession PASS](2026/2026-11-17.md#t021-run-lighting-succession-pass) (L363) | research-core | explicit_stream_and_area |
 | 2026-11-17 | [T021 draft: lighting succession](2026/2026-11-17.md#t021-draft-lighting-succession) (L353) | research-core | explicit_stream_and_area |

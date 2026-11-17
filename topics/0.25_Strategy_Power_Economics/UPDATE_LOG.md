@@ -336,3 +336,9 @@
 - Kerosene (Silliman 1855) entered with 1.57 times the device energy of the sperm-oil lamp but 1/70 of the work hours: an energy-only rule picks the loser; counting time picks the winner.
 - Edison 1883 cost 3.3 times the work hours of kerosene; electric dominated by 1900. Primary energy is undecided (eta* 0.061 and 0.095).
 - Result record waits for the author's L2 decision. Not UET-distinct.
+
+### 2026-11-18 - Stage 2: aggregate transport data cannot measure w_T
+
+- Read Schafer 2000 Table A-2 (mode speeds, 7 countries) and TEDB Ed. 41 Table 2.14 (US energy per passenger-mile).
+- Car-versus-transit indifference rate in the US fell from 17 kW (1977) to 0.9 kW (1990) and turned negative by 1995: it tracks bus load factor and captive riders, not a common w_T.
+- Next: choice-level value-of-travel-time studies; w_T = VTTS / energy price across countries. See `Doc/ANALYSIS_TRANSPORT_TIME_ENERGY_RATE_2026-11-18.md`.
