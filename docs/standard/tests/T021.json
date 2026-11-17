@@ -1,0 +1,39 @@
+{
+  "schema": "uet-test-card-v2",
+  "test_id": "T021",
+  "status": "DRAFT",
+  "claim_id": "C_T021_LIGHTING_SUCCESSION",
+  "theory_card": {
+    "card_id": "UET_PARENT",
+    "version": 1
+  },
+  "hypothesis": "Layer 3 with several resources: a lighting technology that replaced an incumbent and survived was not worse than the incumbent in both energy per lumen-hour and hours of work per lumen-hour when it entered (stage 1 of test D; time counted as a resource, as the author stated on 2026-11-17).",
+  "observable": {
+    "quantity": "class of each fixed incumbent -> successor pair: DOMINATES, TRADE_OFF, WORSE_BOTH or TIE",
+    "unit": "energy in watt-hours per lumen-hour at the device; time in hours of work per 1,000 lumen-hours",
+    "domain": "household lighting technologies, mainly United States, Babylonian lamp to compact fluorescent bulb 1992 (Nordhaus 1997)"
+  },
+  "test_kind": "CONSTRAINT",
+  "data_sources": [
+    {
+      "data_id": "NORDHAUS1997_LIGHTING",
+      "role": "COMPARISON",
+      "exposure": "SEEN_FULL"
+    }
+  ],
+  "prediction_method": {
+    "script": "core/03_lanes/persistence/t021_lighting_succession.py",
+    "description": "Energy E = 1/(lumens per watt); time T = labor price of light. Seven pairs fixed in the script (sesame lamp -> tallow candle; tallow candle -> whale-oil lamp; tallow candle -> town gas; sperm-oil lamp -> kerosene at Silliman 1855; kerosene -> Edison 1883; town gas -> Edison 1883; incandescent 1990 -> compact fluorescent 1992), successor at its first row, incumbent at the closest row at or before that date. Classes with 5 percent relative tolerance on each resource. Reported, not deciding: class counts; break-even power-plant efficiency eta* for electric successors; first later successor-family row that dominates in each trade-off."
+  },
+  "free_parameters": [],
+  "fixed_parameters": [
+    "tolerance 5 percent on each resource (above the transcription checks, which agree within 2-3 percent)",
+    "energy measured at the device as Nordhaus tabulates it, not primary energy",
+    "pairing rule and the seven pairs as listed in the script (AI choice from Nordhaus Table 1.1 and text)",
+    "within-family improvements are not pairs"
+  ],
+  "pass_criterion": "PASS if no pair is WORSE_BOTH. The Result reports the class of every pair, the counts, eta* for the two electric pairs and the first dominating successor row for each trade-off.",
+  "fail_criterion": "FAILED if one or more pairs are WORSE_BOTH. INCONCLUSIVE if a deciding pair depends on a value that the transcription marks as not legible.",
+  "drafted_by": "claude",
+  "note": "Disclosure: not blind. The drafter transcribed the whole table and, reading it, expects no WORSE_BOTH pair at the device basis, about two DOMINATES pairs and about five TRADE_OFF pairs; the outcome is effectively known. The open risk is the energy boundary: UET's P counts all free energy destroyed, so primary energy at the power plant is the UET-consistent basis. If the 1883 plant efficiency was below eta* (about 6 percent against kerosene, about 9 percent against gas), Edison's lamp entered worse in both energy and time. Plant efficiency is not in this dataset; the card reports eta* and does not decide on it. The author may ask for a primary-energy version with a separately registered plant-efficiency source before approval."
+}

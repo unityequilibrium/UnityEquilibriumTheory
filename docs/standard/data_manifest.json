@@ -216,6 +216,18 @@
       "license": "numerical facts transcribed from published abstracts",
       "visibility": "PUBLIC",
       "note": "Abstract values only; whether the stated uncertainty is formal or realistic was not checked in the full text. A 2026 residual analysis (Ke et al., arXiv:2609.15303) gives consistent values and is not used."
+    },
+    {
+      "data_id": "NORDHAUS1997_LIGHTING",
+      "description": "History of lighting: efficiency (lumens per watt, lumen-hours per 1,000 Btu), wage, labor price (hours of work per 1,000 lumen-hours) and price for 30 lighting technologies from the open fire to the compact fluorescent bulb",
+      "source": "W. D. Nordhaus (1997), Do Real-Output and Real-Wage Measures Capture Reality? The History of Lighting Suggests Not, in T. F. Bresnahan and R. J. Gordon (eds.), The Economics of New Goods, NBER Studies in Income and Wealth 58, University of Chicago Press, pp. 29-70, Tables 1.3, 1.5 and 1.6",
+      "doi_or_url": "https://www.nber.org/system/files/chapters/c6064/c6064.pdf",
+      "retrieved": "2026-11-17",
+      "path": "docs/data/external/economics/lighting/nordhaus1997_lighting.csv",
+      "sha256": "d3c38ec1cb088a3c215dc40de1383c6c75f214cd45b2fd26214dafa8ba24764e",
+      "license": "numerical facts transcribed from a published chapter; no figures or text redistributed",
+      "visibility": "PUBLIC",
+      "note": "Transcribed by Claude from the NBER PDF (585,415 bytes, sha256 e2b674e704950ee0b7609d8256e378a475567ca92d74945d4d4f948b9ec21ac8, kept local and not committed). The PDF text layer scrambles columns; every row was rebuilt and checked against two identities (labor hours = price / wage; lm/W x 293.07 = lm-h per 1,000 Btu), both tested in core/05_tests/physics/test_lighting_succession.py. Open-fire and Neolithic labor values and the 1885-95 gas wage were not legible and are left blank."
     }
   ]
 }

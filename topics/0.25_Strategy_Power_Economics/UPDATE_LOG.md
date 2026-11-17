@@ -323,3 +323,9 @@
 - Following the author (look at interactions that cause change, e.g. Newton and Einstein), added `Doc/ANALYSIS_KNOWLEDGE_FROM_INTERACTION_2026-11-17.md`. Quality of time is defined as leverage L = later resource savings / resource cost of producing the knowledge.
 - Verified numbers: keeping Moore's law needs more than 18 times the researchers of the early 1970s; research productivity falls about 5-7% per year (Bloom et al. 2020). Small teams that recombine older ideas disrupt (Wu et al. 2019, 65 million works).
 - Test D is now in three stages: Pareto succession (no weight needed), the time-energy rate measured from data, then knowledge leverage. The author no longer has to pick w_T.
+
+### 2026-11-17 - T021 drafted: lighting succession (stage 1 of test D)
+
+- With the author's download permission, transcribed Nordhaus (1997) Tables 1.3 and 1.6 (30 technologies). Every row passes two identities (labor = price / wage within 2%; lm/W x 293.07 = lm-h per 1,000 Btu within 3%). The data is registered as `NORDHAUS1997_LIGHTING`.
+- Draft card `docs/standard/tests/T021.json`, claim `C_T021_LIGHTING_SUCCESSION` (L0). The script refuses to run until the author approves.
+- Disclosure: not blind. The open risk is the energy boundary (device versus primary energy for early electric light).

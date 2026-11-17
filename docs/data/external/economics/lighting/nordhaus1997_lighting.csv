@@ -1,0 +1,31 @@
+row_id,family,stage,date_label,year,lumens_per_watt,lmh_per_1000btu,wage_cents_per_hour,labor_hours_per_1000lmh,price_cents_per_1000lmh,note
+open_fire,open fire,wood,from earliest time,,0.00235,0.69,,,,labor value not legible in the text layer; not used
+neolithic_lamp,neolithic lamp,animal or vegetable fat,38000-9000 BC,,0.0151,4.4,,,,labor value not legible in the text layer; not used
+babylonian_lamp,oil lamp,sesame oil (Babylonian),1750 BC,-1750,0.0597,17.5,1 shekel per month,41.50,,labor from Table 1.6 and text (about 42 hours)
+candle_tallow_1800,candle,tallow,1800,1800,0.0757,22.2,7.5,5.37,40.293,
+candle_sperm_1800,candle,sperm,1800,1800,0.1009,29.6,7.5,12.21,91.575,
+candle_tallow_1830,candle,tallow,1830,1830,0.0757,22.2,6.1,3.00,18.315,
+candle_sperm_1830,candle,sperm,1830,1830,0.1009,29.6,6.1,6.91,42.125,
+lamp_whale_oil,oil lamp,whale oil,1815-45,1830,0.1346,39.4,6.1,4.90,29.886,
+lamp_sperm_oil_1855,oil lamp,sperm oil (Silliman's experiment),1855,1855,0.0784,23.0,10,16.03,160.256,
+lamp_other_oils_1855,oil lamp,other oils (Silliman's experiment; camphene),1855,1855,0.0575,16.9,10,5.94,59.441,
+gas_early_1827,town gas,early lamp,1827,1827,0.1303,38.2,7.1,7.398,52.524,
+gas_silliman_1855,town gas,Silliman's experiment,1855,1855,0.0833,24.4,10,2.978,29.777,
+gas_early_1880,town gas,early lamp,1875-85,1880,0.2464,72.2,15.4,0.326,5.0345,
+gas_welsbach_1890,town gas,Welsbach mantle,1885-95,1890,0.5914,173.3,,0.083,1.513,wage not legible in the text layer
+gas_welsbach_1916,town gas,Welsbach mantle,1916,1916,0.8685,254.5,28.3,0.012,0.346,
+kerosene_silliman_1855,kerosene lamp,Silliman's experiment,1855,1855,0.0498,14.6,17.5,0.2306,4.036,
+kerosene_1880,kerosene lamp,19th century,1875-85,1880,0.1590,46.6,15.4,0.2253,3.479,
+kerosene_coleman_1993,kerosene lamp,Coleman lantern,1993,1993,0.3651,107.0,1058.0,0.0098,10.323,
+electric_edison_1883,electric lamp,Edison carbon lamp,1883,1883,2.6000,762.0,12.3,0.750239,9.228,
+electric_1900,electric lamp,carbon filament,1900,1900,3.7143,1088.6,12.2,0.220431,2.692,
+electric_1910,electric lamp,filament lamp,1910,1910,6.5000,1905.0,15.0,0.092096,1.384,
+electric_1920,electric lamp,filament lamp,1920,1920,11.8182,3463.7,46.6,0.013538,0.630,
+electric_1930,electric lamp,filament lamp,1930,1930,11.8432,3471.0,49.0,0.010396,0.509,
+electric_1940,electric lamp,filament lamp,1940,1940,11.9000,3487.7,58.8,0.005490,0.323,
+electric_1950,electric lamp,filament lamp,1950,1950,11.9250,3495.0,128.2,0.001883,0.241,
+electric_1960,electric lamp,filament lamp,1960,1960,11.9500,3502.3,203.3,0.001016,0.207,
+electric_1970,electric lamp,filament lamp,1970,1970,11.9750,3509.7,318.4,0.000551,0.175,
+electric_1980,electric lamp,filament lamp,1980,1980,12.0000,3517.0,658.6,0.000678,0.447,
+electric_1990,electric lamp,filament lamp,1990,1990,14.1667,4152.0,992.2,0.000605,0.600,
+electric_cfl_1992,compact fluorescent,first generation bulb,1992,1992,68.2778,20011.1,1049.6,0.000119,0.124,

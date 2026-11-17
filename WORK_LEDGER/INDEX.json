@@ -5,11 +5,11 @@
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
     "sources": 80,
-    "entries": 897,
+    "entries": 898,
     "by_stream": {
       "book-history": 94,
       "operations": 131,
-      "research": 671,
+      "research": 672,
       "review": 1
     },
     "exact_duplicates": 0,
@@ -415,8 +415,8 @@
     },
     {
       "path": "2026/2026-11-17.md",
-      "sha256": "abf76cc620bf08886f54c1a479087d1736e690aa2dc3042fd099071dcc91deb5",
-      "entries": 35
+      "sha256": "a1c8898857ba22640684c95ce78d69f2f22d0f1816fec0078507abf38d7edb76",
+      "entries": 36
     },
     {
       "path": "2026-08-14.md",
@@ -18314,9 +18314,29 @@
       "source": "2026/2026-11-17.md",
       "anchor": "topic-025-knowledge-from-interaction-newton-einstein",
       "start_line": 343,
-      "end_line": 351,
+      "end_line": 352,
       "title": "Topic 0.25: knowledge from interaction (Newton, Einstein)",
-      "entry_sha256": "d493d7f91f193cdf7e9e89c33c13dc4309d9d1220831be21c7b945d9f51cb500",
+      "entry_sha256": "472c013ba366ce622316e93b3bda305c777372c9ebd00c224b8d3fbc35601835",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-17",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-17.md#t021-draft-lighting-succession",
+      "source": "2026/2026-11-17.md",
+      "anchor": "t021-draft-lighting-succession",
+      "start_line": 353,
+      "end_line": 361,
+      "title": "T021 draft: lighting succession",
+      "entry_sha256": "2fc35a561a22aa048d574cd3fe438d4ae516c5ca1d3bafc1ac89e30a90ad1102",
       "stream": "research",
       "areas": [
         "research-core"
