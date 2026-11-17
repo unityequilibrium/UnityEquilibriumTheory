@@ -1,0 +1,95 @@
+{
+  "schema": "uet-result-v2",
+  "result_id": "R_T018_LIFESPAN_RATE_OF_LIVING",
+  "claim_id": "C_L3_LIFESPAN_RESERVE_SCOPE",
+  "level": "FAILED",
+  "test_card_id": "T018",
+  "outcome": "FAIL",
+  "numbers": [
+    {
+      "name": "n_Aves",
+      "value": 128,
+      "uncertainty": null,
+      "unit": "1"
+    },
+    {
+      "name": "n_Mammalia",
+      "value": 170,
+      "uncertainty": null,
+      "unit": "1"
+    },
+    {
+      "name": "s",
+      "value": -0.114,
+      "uncertainty": null,
+      "unit": "1"
+    },
+    {
+      "name": "s_ci95",
+      "value": "-0.140 to -0.088",
+      "uncertainty": null,
+      "unit": "1"
+    },
+    {
+      "name": "d",
+      "value": 0.392,
+      "uncertainty": null,
+      "unit": "1"
+    },
+    {
+      "name": "d_ci95",
+      "value": "0.330 to 0.455",
+      "uncertainty": null,
+      "unit": "1"
+    },
+    {
+      "name": "bird_factor_10^d",
+      "value": 2.47,
+      "uncertainty": null,
+      "unit": "1"
+    },
+    {
+      "name": "median_LEP_Aves",
+      "value": 5130,
+      "uncertainty": null,
+      "unit": "kJ/g"
+    },
+    {
+      "name": "median_LEP_Mammalia",
+      "value": 1407,
+      "uncertainty": null,
+      "unit": "kJ/g"
+    },
+    {
+      "name": "mammals_only_slope",
+      "value": -0.108,
+      "uncertainty": null,
+      "unit": "1"
+    },
+    {
+      "name": "captivity_only_s",
+      "value": -0.102,
+      "uncertainty": null,
+      "unit": "1"
+    },
+    {
+      "name": "captivity_only_d",
+      "value": 0.416,
+      "uncertainty": null,
+      "unit": "1"
+    },
+    {
+      "name": "n_captivity",
+      "value": 167,
+      "uncertainty": null,
+      "unit": "1"
+    }
+  ],
+  "producer": {
+    "script": "core/03_lanes/persistence/t018_lifespan_rate_of_living.py",
+    "commit": "8187d8f40"
+  },
+  "artifacts": [],
+  "date": "2026-11-17",
+  "note": "FAILED by the preregistered rule: the 95 percent interval of the bird offset d (0.330 to 0.455) lies wholly above 0.30, so birds use about 2.5 times more energy per gram over their lifespan than mammals of the same mass. The mass slope s = -0.114 (interval -0.140 to -0.088) also misses the PASS band but does not by itself meet the FAIL rule. Reported checks agree (mammals only -0.108; captivity records only d = 0.416). Scope: this removes the author-declared scope 'individual lifespan = one reserve per gram / metabolic rate' (rate-of-living); it does not touch tau = F/P for closed reserves (starvation, hibernation) or the layer-3 abundance law N = b tau. UET-distinct failure: current biology already rejects rate-of-living, so the null does not fail. Not blind (literature known). Intervals are too narrow because there is no phylogenetic correction; d is about 0.09 above the threshold, about 1.5 times the half-width of its interval."
+}

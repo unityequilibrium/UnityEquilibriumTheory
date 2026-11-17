@@ -24,3 +24,9 @@
 - Finding: only the cross-species lifespan scope (rate-of-living: lifetime energy per gram constant) is UET-distinct; biology already rejects it, so the expected outcome is FAILED (disclosed prior knowledge).
 - Draft T018 written in the note (AnAge, fit log LEP = a + s log M + d bird; fail if CI of |s| > 0.10 or d > 0.30); not registered, no data downloaded.
 - Next: author decides whether UET claims individual lifespan as reserve-limited.
+
+## 2026-11-17 — T018: cross-species lifespan scope of layer 3
+- Question: is lifetime energy per gram (metabolic rate / mass x max longevity) the same across birds and mammals, as the author-declared lifespan scope requires?
+- Result: FAILED. AnAge Build 15 (128 birds, 170 mammals): bird offset d = 0.392 (95% 0.330-0.455, fail line 0.30), birds 2.47 times mammals; mass slope s = -0.114.
+- First UET-distinct failure: current biology does not claim rate-of-living, so the null does not fail. Removes only the individual-lifespan scope; tau = F/P for closed reserves and N = b tau stand.
+- Caveat: no phylogenetic correction (intervals too narrow). Next: record in the register; pick the next candidate breaker.

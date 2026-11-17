@@ -6,10 +6,11 @@
 
 These are source-linked historical records, not proof of completed research, successful publication, or current scientific readiness.
 
-Indexed entries: 648. Counts describe records, not accomplishments.
+Indexed entries: 649. Counts describe records, not accomplishments.
 
 | Date | Record | Area | Notes |
 | --- | --- | --- | --- |
+| 2026-11-17 | [T018 cross-species lifespan: FAILED](2026/2026-11-17.md#t018-cross-species-lifespan-failed) (L123) | research-core | explicit_stream_and_area |
 | 2026-11-17 | [0.23 stress test 02: layer 3 scope](2026/2026-11-17.md#023-stress-test-02-layer-3-scope) (L113) | research-core | explicit_stream_and_area |
 | 2026-11-17 | [0.23 stress test 01: cross-scale layer 3](2026/2026-11-17.md#023-stress-test-01-cross-scale-layer-3) (L103) | research-core | explicit_stream_and_area |
 | 2026-11-17 | [Topic 0.23 rebuilt as the theory stress test](2026/2026-11-17.md#topic-023-rebuilt-as-the-theory-stress-test) (L93) | research-core | explicit_stream_and_area |

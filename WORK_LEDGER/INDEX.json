@@ -5,11 +5,11 @@
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
     "sources": 80,
-    "entries": 874,
+    "entries": 875,
     "by_stream": {
       "book-history": 94,
       "operations": 131,
-      "research": 648,
+      "research": 649,
       "review": 1
     },
     "exact_duplicates": 0,
@@ -415,8 +415,8 @@
     },
     {
       "path": "2026/2026-11-17.md",
-      "sha256": "fa937889e7642ae108ead2a85e259b413816b6b26a6da1ea84a602a90504a9a0",
-      "entries": 12
+      "sha256": "58ba4c75f33a4ee93e4eeadc65827b8447b212efa2ea1b941206795f95dfc0f0",
+      "entries": 13
     },
     {
       "path": "2026-08-14.md",
@@ -17854,9 +17854,29 @@
       "source": "2026/2026-11-17.md",
       "anchor": "023-stress-test-02-layer-3-scope",
       "start_line": 113,
-      "end_line": 121,
+      "end_line": 122,
       "title": "0.23 stress test 02: layer 3 scope",
-      "entry_sha256": "0dffce5a97180ce03d154baa6a9a55c0f52fb97b67751219ace3a93066ab4c61",
+      "entry_sha256": "06d755396938977e82b156ab23451919f0d5ed8f1f7a4f5a5dfefedf4afeaef4",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-17",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-17.md#t018-cross-species-lifespan-failed",
+      "source": "2026/2026-11-17.md",
+      "anchor": "t018-cross-species-lifespan-failed",
+      "start_line": 123,
+      "end_line": 131,
+      "title": "T018 cross-species lifespan: FAILED",
+      "entry_sha256": "4d8509e8acec0a90403328752097b746b9a430f5abb2d3e2a7c193261a746e9d",
       "stream": "research",
       "areas": [
         "research-core"

@@ -347,9 +347,11 @@
     {
       "claim_id": "C_L3_LIFESPAN_RESERVE_SCOPE",
       "statement": "Layer-3 scope declared by the author (2026-11-17): the lifespan of an animal is its lifetime reserve divided by its metabolic rate, with the same reserve per gram in every species, so the lifetime energy potential (metabolic rate per gram times maximum longevity) is independent of body mass and the same in birds and mammals.",
-      "level": "L0_SPECULATIVE",
-      "evidence": [],
-      "note": "UET-distinct: this is the rate-of-living theory, which current biology does not hold, so a failure here breaks UET and not the null. Prior literature (Austad and Fischer 1991; Speakman 2005) suggests FAILED. Test Card T018; design in topics/0.23_Unity_Scale_Link/Doc/STRESS_02_LAYER3_SCOPE.md."
+      "level": "FAILED",
+      "evidence": [
+        "R_T018_LIFESPAN_RATE_OF_LIVING"
+      ],
+      "note": "FAILED in T018 (2026-11-17): birds have 2.47 times the lifetime energy per gram of mammals (d = 0.392, 95 percent interval 0.330 to 0.455, fail threshold 0.30) and LEP falls with mass (s = -0.114). Removes only this lifespan scope of layer 3; tau = F/P for closed reserves and N = b tau are unaffected. UET-distinct: the null (current biology) does not fail. Design: topics/0.23_Unity_Scale_Link/Doc/STRESS_02_LAYER3_SCOPE.md."
     }
   ]
 }

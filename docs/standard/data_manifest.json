@@ -191,7 +191,7 @@
       "sha256": "98867969fbd4d0bed6bab415c2715bb19079dbd7f92bdc26e5961856aa1c1519",
       "license": "CC BY 3.0 (HAGR legal page); attribution as in source",
       "visibility": "PUBLIC",
-      "note": "Raw file unchanged from the zip (CRLF bytes kept). Before approval only the column names and the selection counts were read (169 Mammalia and 128 Aves pass the T018 filter); no LEP value was computed."
+      "note": "Raw file unchanged from the zip (CRLF bytes kept). Before approval only the column names and the selection counts were read (169 Mammalia and 128 Aves pass the T018 filter); no LEP value was computed. Correction 2026-11-17: the pre-approval count of 169 mammals left out sample size 'huge'; with the filter as written (medium, large or huge) it is 170."
     }
   ]
 }
