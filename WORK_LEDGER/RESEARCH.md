@@ -6,10 +6,11 @@
 
 These are source-linked historical records, not proof of completed research, successful publication, or current scientific readiness.
 
-Indexed entries: 668. Counts describe records, not accomplishments.
+Indexed entries: 669. Counts describe records, not accomplishments.
 
 | Date | Record | Area | Notes |
 | --- | --- | --- | --- |
+| 2026-11-17 | [Topic 0.25: external energy as a two-level system](2026/2026-11-17.md#topic-025-external-energy-as-a-two-level-system) (L323) | research-core | explicit_stream_and_area |
 | 2026-11-17 | [Stress test 10: is psi needed](2026/2026-11-17.md#stress-test-10-is-psi-needed) (L313) | research-core | explicit_stream_and_area |
 | 2026-11-17 | [Core summary shows all tests T001-T020](2026/2026-11-17.md#core-summary-shows-all-tests-t001-t020) (L303) | research-core | explicit_stream_and_area |
 | 2026-11-17 | [Author choice: P = whole-animal use](2026/2026-11-17.md#author-choice-p--whole-animal-use) (L293) | research-core | explicit_stream_and_area |

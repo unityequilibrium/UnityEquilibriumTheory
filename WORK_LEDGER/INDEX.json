@@ -5,11 +5,11 @@
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
     "sources": 80,
-    "entries": 894,
+    "entries": 895,
     "by_stream": {
       "book-history": 94,
       "operations": 131,
-      "research": 668,
+      "research": 669,
       "review": 1
     },
     "exact_duplicates": 0,
@@ -415,8 +415,8 @@
     },
     {
       "path": "2026/2026-11-17.md",
-      "sha256": "a3164199a57abf192891b13851d15df6622675e3ba1d3e02dcdc9e9ea2d87490",
-      "entries": 32
+      "sha256": "2c6686e28a45fff4cf0fe02aa418a295a145399127f142e7ea37015f76f39860",
+      "entries": 33
     },
     {
       "path": "2026-08-14.md",
@@ -18254,9 +18254,29 @@
       "source": "2026/2026-11-17.md",
       "anchor": "stress-test-10-is-psi-needed",
       "start_line": 313,
-      "end_line": 321,
+      "end_line": 322,
       "title": "Stress test 10: is psi needed",
-      "entry_sha256": "325314247696a448ce7356d498520cece669b7f3c910a24d13f092f27c750c6a",
+      "entry_sha256": "d4d3298eea615c4b0bdfd7e86d24b859ac359ca9be3905c045ff05e8314386df",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-17",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-17.md#topic-025-external-energy-as-a-two-level-system",
+      "source": "2026/2026-11-17.md",
+      "anchor": "topic-025-external-energy-as-a-two-level-system",
+      "start_line": 323,
+      "end_line": 331,
+      "title": "Topic 0.25: external energy as a two-level system",
+      "entry_sha256": "0963e524a896531d9fefbf0c7d15b718e5f9138bc795fb183d5f5074776250b4",
       "stream": "research",
       "areas": [
         "research-core"

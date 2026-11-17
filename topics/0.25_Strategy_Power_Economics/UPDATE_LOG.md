@@ -305,3 +305,10 @@
 - Added FRED/BEA Personal Current Transfer Receipts (`PCTR`) to the frozen funding-source proxy panel.
 - Same-year transfer-receipt/investment-growth association was `-0.358`; one-year lag was `0.184`; two-year lag was `0.257`.
 - These are descriptive co-movements, not evidence that transfers cause or fund investment; transaction-level provenance remains blocked.
+
+### 2026-11-17 - External energy as a two-level UET system
+
+- Question: can the author's claim (humans win by using outside resources instead of their own metabolism) be written in UET equations? Note: `Doc/ANALYSIS_EXTERNAL_ENERGY_UET_2026-11-17.md`.
+- Verified numbers: forager ~120 W, industrial median ~1,580 W, top > 10,000 W (13-83 times metabolism); cities flux 1e5-1e8 W/km2 versus land NPP ~1e5 W/km2 (Burger et al. 2011, 2017).
+- Translation: inner level (body) keeps P_in near constant; the outer level carries the burn, with tau_out = F_out/(P_out - J). The book's R = f(N,K,I) stays an explanatory model; no identity is restored.
+- Next: author picks a real-data test (biomass ceiling, or replication of Burger 2011 exponents on 2015-2023 data).
