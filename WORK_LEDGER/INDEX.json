@@ -5,11 +5,11 @@
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
     "sources": 80,
-    "entries": 875,
+    "entries": 876,
     "by_stream": {
       "book-history": 94,
       "operations": 131,
-      "research": 649,
+      "research": 650,
       "review": 1
     },
     "exact_duplicates": 0,
@@ -415,8 +415,8 @@
     },
     {
       "path": "2026/2026-11-17.md",
-      "sha256": "58ba4c75f33a4ee93e4eeadc65827b8447b212efa2ea1b941206795f95dfc0f0",
-      "entries": 13
+      "sha256": "640c815496af9e396e70add94d1915c91d04f221e332976ec2289a3695fa1d14",
+      "entries": 14
     },
     {
       "path": "2026-08-14.md",
@@ -17874,9 +17874,29 @@
       "source": "2026/2026-11-17.md",
       "anchor": "t018-cross-species-lifespan-failed",
       "start_line": 123,
-      "end_line": 131,
+      "end_line": 132,
       "title": "T018 cross-species lifespan: FAILED",
-      "entry_sha256": "4d8509e8acec0a90403328752097b746b9a430f5abb2d3e2a7c193261a746e9d",
+      "entry_sha256": "8d7b2664cda854e3e894c288da0cc3aec9f058df4d4e00cf2d32c8bfe884c8c2",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-17",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-17.md#023-candidates-yukawa-gap-t002t014-data-route-b",
+      "source": "2026/2026-11-17.md",
+      "anchor": "023-candidates-yukawa-gap-t002t014-data-route-b",
+      "start_line": 133,
+      "end_line": 141,
+      "title": "0.23 candidates: Yukawa gap, T002/T014 data, route B",
+      "entry_sha256": "bf6dc53506eba31a56e9a2178251fec3468817096e922cbdd04e1991ae9252a3",
       "stream": "research",
       "areas": [
         "research-core"

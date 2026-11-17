@@ -30,3 +30,9 @@
 - Result: FAILED. AnAge Build 15 (128 birds, 170 mammals): bird offset d = 0.392 (95% 0.330-0.455, fail line 0.30), birds 2.47 times mammals; mass slope s = -0.114.
 - First UET-distinct failure: current biology does not claim rate-of-living, so the null does not fail. Removes only the individual-lifespan scope; tau = F/P for closed reserves and N = b tau stand.
 - Caveat: no phylogenetic correction (intervals too narrow). Next: record in the register; pick the next candidate breaker.
+
+## 2026-11-17 — Yukawa gap, globular-cluster data, route B
+- Yukawa gap: registered Smith et al. 2000 (Rot-Wash, baryon charge) and drafted T019 for 1 cm - 1e5 m (estimate alpha <= 6.5e-6 at lambda >= 1 m); awaits author approval, not run.
+- T002/T014: no independent new HB/RGB count set exists (Zoccali 2000 overlaps T002's WFPC2 base; Sandquist 2000 has known Y = 0.20 systematics); no card drafted.
+- Route B (`Doc/STRESS_03_ROUTE_B_DISSIPATION_COUPLING.md`): if dissipation sources psi, one shared constant tau_beta (a time) sets an extra force proportional to power per mass; LLR estimate tau_beta < 9e15 s; tau_beta = 1/H0 would exceed LLR by thousands.
+- Next: author approves T019; decides whether to adopt the route-B term and a minimum tau_beta.
