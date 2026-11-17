@@ -79,3 +79,8 @@
 - The quantum vacuum (fluctuations, Higgs and QCD condensates, vacuum energy) is well evidenced and made of known fields; psi fits as one more field but is not required by it.
 - New number: matter loops through the portal lift the psi mass by ~g_c/(4 pi); the EMG branch (m_eff ~2.8e-28 eV) stays natural only if g_c <~1.1e-27 eV, about 1e15 below the T019 limit.
 - Muon g-2 shift from the portal ~1e-46 (irrelevant); vacuum-energy mismatch 1e31-1e120 remains unsolved by UET.
+
+## 2026-11-17 — Stress test 08: four candidates where UET could differ
+- Question: do species survival, history-dependent Casimir, readable records and black-hole information offer UET-distinct tests? Note: `Doc/STRESS_08_FOUR_DISTINCT_CANDIDATES.md`.
+- Species survival: fossil molluscs show higher metabolic rate goes with extinction (Strotz et al. 2018; Rojas-Ariza et al. 2026: survival odds -11 percent per mW, bivalves only); direction matches layer 3 but known and not UET-distinct; best next Test Card with new data and a predicted slope.
+- Readable records: CMB readable fraction ~1e-82 of its entropy; black-hole area law confirmed by GW250114 (equals "stored bits never decrease"); Casimir history dependence lacks a UET equation and conflicts with the author's no-feedback reading.

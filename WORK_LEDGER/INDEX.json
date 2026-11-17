@@ -5,11 +5,11 @@
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
     "sources": 80,
-    "entries": 889,
+    "entries": 890,
     "by_stream": {
       "book-history": 94,
       "operations": 131,
-      "research": 663,
+      "research": 664,
       "review": 1
     },
     "exact_duplicates": 0,
@@ -415,8 +415,8 @@
     },
     {
       "path": "2026/2026-11-17.md",
-      "sha256": "4d71d5e21c4ae4d202a937414f22810dad95e1b0bfb255c3139d78b31886930f",
-      "entries": 27
+      "sha256": "1d395c2b79135c2084e55ef4173ff50d4f8d2382e0b639664876c87358b4982c",
+      "entries": 28
     },
     {
       "path": "2026-08-14.md",
@@ -18154,9 +18154,29 @@
       "source": "2026/2026-11-17.md",
       "anchor": "023-stress-test-07-psi-and-the-quantum-vacuum",
       "start_line": 263,
-      "end_line": 271,
+      "end_line": 272,
       "title": "0.23 stress test 07: psi and the quantum vacuum",
-      "entry_sha256": "10aa32f343e71bc4440cc6f661e22b721992f48ebf35b63e45f38dcda291ec10",
+      "entry_sha256": "09b3128e390f44486b89c44c10f76551baa044827338468d7c757d878363d16c",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-17",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-17.md#023-stress-test-08-four-distinct-candidates",
+      "source": "2026/2026-11-17.md",
+      "anchor": "023-stress-test-08-four-distinct-candidates",
+      "start_line": 273,
+      "end_line": 281,
+      "title": "0.23 stress test 08: four distinct candidates",
+      "entry_sha256": "df08fcc7f2c790a104524479a0063bd949c9bf6d492e23fdd973036ae14c6a13",
       "stream": "research",
       "areas": [
         "research-core"
