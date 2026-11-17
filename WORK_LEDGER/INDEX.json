@@ -5,11 +5,11 @@
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
     "sources": 80,
-    "entries": 867,
+    "entries": 868,
     "by_stream": {
       "book-history": 94,
       "operations": 131,
-      "research": 641,
+      "research": 642,
       "review": 1
     },
     "exact_duplicates": 0,
@@ -415,8 +415,8 @@
     },
     {
       "path": "2026/2026-11-17.md",
-      "sha256": "e117c23a00c74604215935665bcfc94f71d01d878450716bb894e4e5c67a1d30",
-      "entries": 5
+      "sha256": "4b9187628cf82d9f042af22784ba6bba67dd5641a2eec524b4b020296bc0560f",
+      "entries": 6
     },
     {
       "path": "2026-08-14.md",
@@ -17714,9 +17714,29 @@
       "source": "2026/2026-11-17.md",
       "anchor": "t017-data-search-round-2",
       "start_line": 43,
-      "end_line": 51,
+      "end_line": 52,
       "title": "T017 data search, round 2",
-      "entry_sha256": "e167b45846a8111409576f4951ebe54e0783d55702a032e4f72b6b04687bcb21",
+      "entry_sha256": "263280d3b83410a10fed420e7cf7d35425fbdf89917cb5eb42764894aef9000c",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-17",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-17.md#t017-data-search-round-3-yeast",
+      "source": "2026/2026-11-17.md",
+      "anchor": "t017-data-search-round-3-yeast",
+      "start_line": 53,
+      "end_line": 61,
+      "title": "T017 data search, round 3 (yeast)",
+      "entry_sha256": "62ab446c5517b7df5197059c70f6a199d4e07a2e12bca2e0fb603cabd9e06ba2",
       "stream": "research",
       "areas": [
         "research-core"
