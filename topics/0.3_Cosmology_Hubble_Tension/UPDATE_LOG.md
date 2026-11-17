@@ -1,5 +1,12 @@
 # Topic 0.3 update log
 
+## 2026-11-17 - Starlight trace versus expansion (H0)
+
+- Question: can the trace written into existing light and heat (author items 7-8) change H0 or explain the Hubble tension? Note: `Doc/ANALYSIS_TRACE_AND_EXPANSION_2026-11-17.md`.
+- New numbers: all starlight ever (COB 24.45 nW/m2/sr, Tompkins et al. 2025, plus CIB ~27 assumed) is 5.2 percent of CMB energy, Omega 2.8e-6, and 0.26 percent of CMB entropy; its effect on H0 is ~1.4e-6 against a tension of 8.4 percent.
+- Result: the radiation trace cannot explain the Hubble tension (about 6e4 times too small). Not a UET failure; removes one candidate route.
+- Next: bound how much the parent action (psi, xi_c) can change G at recombination.
+
 ## 2026-10-19 - W8 published-product scope adoption
 
 - Changed: existing coverage contract now describes offline scalar-product analysis,

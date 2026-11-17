@@ -5,11 +5,11 @@
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
     "sources": 80,
-    "entries": 884,
+    "entries": 885,
     "by_stream": {
       "book-history": 94,
       "operations": 131,
-      "research": 658,
+      "research": 659,
       "review": 1
     },
     "exact_duplicates": 0,
@@ -415,8 +415,8 @@
     },
     {
       "path": "2026/2026-11-17.md",
-      "sha256": "e3d28452bb4eacf5fc934fa1813f3268ddf6978e112790a2b459e3eb5d2e444d",
-      "entries": 22
+      "sha256": "48b6049b10e38613165fd2f70ccb604bf60c2a0654aa887d64cc40bc589499a6",
+      "entries": 23
     },
     {
       "path": "2026-08-14.md",
@@ -18054,9 +18054,29 @@
       "source": "2026/2026-11-17.md",
       "anchor": "023-stress-test-05-information-budget",
       "start_line": 213,
-      "end_line": 221,
+      "end_line": 222,
       "title": "0.23 stress test 05: information budget",
-      "entry_sha256": "0ef64e8eba3d08a3b9fafe765dc6f29b64806d41833815e1ee497f8b02502fd4",
+      "entry_sha256": "9102b0647a6f300ac13e790f5534b35913daf11c15dca7407b25b2d812b93387",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-17",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-17.md#03-starlight-trace-versus-h0",
+      "source": "2026/2026-11-17.md",
+      "anchor": "03-starlight-trace-versus-h0",
+      "start_line": 223,
+      "end_line": 231,
+      "title": "0.3 starlight trace versus H0",
+      "entry_sha256": "96051941b3350a8edb459925e3121e7971af247538b0867b49011c9e7ce14c1b",
       "stream": "research",
       "areas": [
         "research-core"
