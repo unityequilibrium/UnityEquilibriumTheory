@@ -57,3 +57,7 @@
 - Correction: the T020 model (psi sourced by the current rate P) is not a persistent record, so item 7 does not force tau_beta > 0.
 - New numbers: if a fraction g of written bits must be carried by a massless one-dof psi, the Sun must emit P_psi >= 1.26 g^(4/3) L_sun; g = 1 needs 126 percent of L_sun (excluded by solar energy-loss limits of about 3-10 percent, recalled, not yet checked), so g <~ 0.06-0.15.
 - A thermal psi background T_psi would forbid dissipation below T_psi; nanokelvin experiments force T_psi < ~1 nK.
+
+## 2026-11-17 — Author reading of item 7
+- The author answered, tentatively, that "written onto space" means things that already exist (light, heat, spacetime curvature), reasoning from massless photons: a body reaches light speed only by turning all its mass into light.
+- Consequence: item 7 needs no new field; route B stays a constraint (T020), not a UET-only breaker. Recorded in core/AUTHOR_PROPOSITION.md open issues.

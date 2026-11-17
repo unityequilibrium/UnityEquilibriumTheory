@@ -5,11 +5,11 @@
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
     "sources": 80,
-    "entries": 882,
+    "entries": 883,
     "by_stream": {
       "book-history": 94,
       "operations": 131,
-      "research": 656,
+      "research": 657,
       "review": 1
     },
     "exact_duplicates": 0,
@@ -415,8 +415,8 @@
     },
     {
       "path": "2026/2026-11-17.md",
-      "sha256": "c3e6223d471725b780a6f5b23b5bb43c1b96a5c5188a65b63f8ee887bda37be0",
-      "entries": 20
+      "sha256": "72092784aef05662cdcff818766c763aa0c21a5951741887578fc4becc6dd68a",
+      "entries": 21
     },
     {
       "path": "2026-08-14.md",
@@ -18014,9 +18014,29 @@
       "source": "2026/2026-11-17.md",
       "anchor": "023-stress-test-04-route-b-minimum",
       "start_line": 193,
-      "end_line": 201,
+      "end_line": 202,
       "title": "0.23 stress test 04: route-B minimum",
-      "entry_sha256": "40e1d5c1875bb02b6ec0f3724196d56062331c523a0a9d57fd60c6c807dfa9ba",
+      "entry_sha256": "de06f8706f15c2350eb3f0321481846b05fb808845511841702e1c7f217e26b9",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-17",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-17.md#author-reading-of-item-7-recorded",
+      "source": "2026/2026-11-17.md",
+      "anchor": "author-reading-of-item-7-recorded",
+      "start_line": 203,
+      "end_line": 211,
+      "title": "Author reading of item 7 recorded",
+      "entry_sha256": "9f37c9ced80b537c9bf792737dbfaa7dd16e00fb2c9a52486b2122232a9eff47",
       "stream": "research",
       "areas": [
         "research-core"
