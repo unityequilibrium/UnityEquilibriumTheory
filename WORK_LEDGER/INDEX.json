@@ -5,11 +5,11 @@
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
     "sources": 80,
-    "entries": 883,
+    "entries": 884,
     "by_stream": {
       "book-history": 94,
       "operations": 131,
-      "research": 657,
+      "research": 658,
       "review": 1
     },
     "exact_duplicates": 0,
@@ -415,8 +415,8 @@
     },
     {
       "path": "2026/2026-11-17.md",
-      "sha256": "72092784aef05662cdcff818766c763aa0c21a5951741887578fc4becc6dd68a",
-      "entries": 21
+      "sha256": "e3d28452bb4eacf5fc934fa1813f3268ddf6978e112790a2b459e3eb5d2e444d",
+      "entries": 22
     },
     {
       "path": "2026-08-14.md",
@@ -18034,9 +18034,29 @@
       "source": "2026/2026-11-17.md",
       "anchor": "author-reading-of-item-7-recorded",
       "start_line": 203,
-      "end_line": 211,
+      "end_line": 212,
       "title": "Author reading of item 7 recorded",
-      "entry_sha256": "9f37c9ced80b537c9bf792737dbfaa7dd16e00fb2c9a52486b2122232a9eff47",
+      "entry_sha256": "a48a8a5c1021b4a3ebf7eb879e0f224acb48f558578d3221d99d78e07334528c",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-17",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-17.md#023-stress-test-05-information-budget",
+      "source": "2026/2026-11-17.md",
+      "anchor": "023-stress-test-05-information-budget",
+      "start_line": 213,
+      "end_line": 221,
+      "title": "0.23 stress test 05: information budget",
+      "entry_sha256": "0ef64e8eba3d08a3b9fafe765dc6f29b64806d41833815e1ee497f8b02502fd4",
       "stream": "research",
       "areas": [
         "research-core"

@@ -61,3 +61,9 @@
 ## 2026-11-17 — Author reading of item 7
 - The author answered, tentatively, that "written onto space" means things that already exist (light, heat, spacetime curvature), reasoning from massless photons: a body reaches light speed only by turning all its mass into light.
 - Consequence: item 7 needs no new field; route B stays a constraint (T020), not a UET-only breaker. Recorded in core/AUTHOR_PROPOSITION.md open issues.
+
+## 2026-11-17 — Stress test 05: information budget and black holes
+- Question: how many bits can a body write by burning, and what does the rule give for a black hole? Note: `Doc/STRESS_05_INFORMATION_BUDGET.md`.
+- New numbers: human lifetime ~1e32 bits; Sun main sequence 2.9e63 bits (0.068 percent of Mc^2); same mass evaporating as a black hole 1.5e77 bits, about 1e10 times more.
+- Applied to Hawking evaporation the rule gives exactly S_BH/(k ln 2) (radiation entropy 4/3 S_BH, as Zurek 1982), an identity of black-hole thermodynamics, not a UET-only test.
+- Future topic: whether information leaves a black hole (Page curve); not measurable now.
