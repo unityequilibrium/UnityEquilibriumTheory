@@ -41,3 +41,8 @@
 - Author approved T019 before the run (commit 321d5e7ad); outcome PASS (constraint; g_c = 0 admissible).
 - alpha_max = 0.50 at 1 cm, 2.5e-5 at 10 cm, 6.6e-6 at 1 m, 6.4e-6 from 2 m to 1e5 m; g_c_max = 1.30e-12 eV there. Signal Delta a is 0.36 sigma from zero.
 - Not UET-distinct. Result record waits for the author's L2 decision.
+
+## 2026-11-17 — T020 drafted: LLR bound on route B
+- Question: how large can the shared route-B time constant tau_beta be, given lunar laser ranging?
+- Registered LLR equivalence-principle values (Biskupek et al. 2021 primary, Williams et al. 2012 sensitivity); route-B claim at L0; T020 DRAFT (constraint).
+- Drafting estimate: tau_beta <= 4.6e15 s (about 1.5e8 yr); tau_beta = 1/H0 would exceed the allowed Delta about 1e4 times. Not run.
