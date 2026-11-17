@@ -1,7 +1,7 @@
 {
   "schema": "uet-test-card-v2",
   "test_id": "T020",
-  "status": "DRAFT",
+  "status": "APPROVED",
   "claim_id": "C_ROUTE_B_DISSIPATION_COUPLING",
   "theory_card": {
     "card_id": "UET_PARENT",
@@ -36,5 +36,10 @@
   "pass_criterion": "PASS if tau_beta = 0 is admissible (Delta_obs + 2 sigma >= 0) and tau_beta_max is finite; the Result reports tau_beta_max in s and yr and the not-deciding numbers.",
   "fail_criterion": "FAILED only if the data required Delta < 0 beyond 2 sigma while the claim allows tau_beta = 0; with Delta = (-2.1 +- 2.4) x 1e-14 this does not apply. INCONCLUSIVE if the abstract value disagrees with the full text by more than 20 percent in sigma.",
   "drafted_by": "claude",
-  "note": "Disclosure: not blind and the outcome is fixed. While drafting, the drafter computed tau_beta_max of about 4.6e15 s (about 1.5e8 yr) from the primary record; the benchmark tau_beta = 1/H0 would give |Delta| about 1e4 times the allowed value. The benchmark is an AI choice, not an author requirement, so it does not decide the outcome; the author has not fixed any minimum for tau_beta (the author does not know its value; it is a research question). The model is an AI proposal (route B) that is not in the approved Theory Card. Measured Delta is negative, the same sign the model predicts, which loosens the bound on the predicted side."
+  "note": "Disclosure: not blind and the outcome is fixed. While drafting, the drafter computed tau_beta_max of about 4.6e15 s (about 1.5e8 yr) from the primary record; the benchmark tau_beta = 1/H0 would give |Delta| about 1e4 times the allowed value. The benchmark is an AI choice, not an author requirement, so it does not decide the outcome; the author has not fixed any minimum for tau_beta (the author does not know its value; it is a research question). The model is an AI proposal (route B) that is not in the approved Theory Card. Measured Delta is negative, the same sign the model predicts, which loosens the bound on the predicted side. Approved by the author on 2026-11-17 as drafted (\"Approve T020\"), without a full-text check of the LLR uncertainty.",
+  "approval": {
+    "approved_by": "santxkoz",
+    "date": "2026-11-17",
+    "role": "AUTHOR"
+  }
 }
