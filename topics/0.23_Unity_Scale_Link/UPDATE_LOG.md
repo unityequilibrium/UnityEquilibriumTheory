@@ -94,3 +94,9 @@
 - The author chose P = whole-animal resource use (not per kilogram). Recorded in core/AUTHOR_PROPOSITION.md.
 - Monarrez, Heim and Payne 2023 already fitted size and range jointly: smaller genera go extinct more often (significant in bivalves and gastropods), opposite to layer 3 if size stands for P; Neogene bivalve BMR (Rojas-Ariza et al. 2026) agrees with layer 3.
 - Body size is a poor proxy for P; a test needs BMR from size and temperature, declared before seeing new data.
+
+## 2026-11-17 — Stress test 10: is psi needed
+- Question: does the author's picture (space forces behaviour, matter collects into black holes, shared behaviour around them) need psi? Note: `Doc/STRESS_10_IS_PSI_NEEDED.md`.
+- Finding: no. Every element maps to GR + Lambda + thermodynamics; with psi = 0 all passed cards stand and only the EMG Hubble-tension mechanism is lost.
+- New numbers: accretion turns 6-42% of rest mass into light versus about 0.7% for fusion; black holes hold most cosmic entropy (~1e104 k, recalled, unverified).
+- Next: author chooses psi in the core (drop) or as an optional extension; a black-hole persistence test needs a declared meaning of survival first.

@@ -5,11 +5,11 @@
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
     "sources": 80,
-    "entries": 893,
+    "entries": 894,
     "by_stream": {
       "book-history": 94,
       "operations": 131,
-      "research": 667,
+      "research": 668,
       "review": 1
     },
     "exact_duplicates": 0,
@@ -415,8 +415,8 @@
     },
     {
       "path": "2026/2026-11-17.md",
-      "sha256": "13706bc8be8a6278a5019217d0e4a8e10b51ab88efd0d6d3fbe43829d253a219",
-      "entries": 31
+      "sha256": "a3164199a57abf192891b13851d15df6622675e3ba1d3e02dcdc9e9ea2d87490",
+      "entries": 32
     },
     {
       "path": "2026-08-14.md",
@@ -18234,9 +18234,29 @@
       "source": "2026/2026-11-17.md",
       "anchor": "core-summary-shows-all-tests-t001-t020",
       "start_line": 303,
-      "end_line": 311,
+      "end_line": 312,
       "title": "Core summary shows all tests T001-T020",
-      "entry_sha256": "aca572c27569ef748ee66c254a3e060d6f3b5fb2a94c3192d19c310e0530b404",
+      "entry_sha256": "f702876762f5d3d2c168773b74cd2ab3a3d420c79f62806e78c91143dc0bbac6",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-17",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-17.md#stress-test-10-is-psi-needed",
+      "source": "2026/2026-11-17.md",
+      "anchor": "stress-test-10-is-psi-needed",
+      "start_line": 313,
+      "end_line": 321,
+      "title": "Stress test 10: is psi needed",
+      "entry_sha256": "325314247696a448ce7356d498520cece669b7f3c910a24d13f092f27c750c6a",
       "stream": "research",
       "areas": [
         "research-core"
