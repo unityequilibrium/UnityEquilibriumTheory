@@ -73,3 +73,9 @@
 - Antimatter cannot be psi (spin 1/2, charged, nearly absent today; ALPHA-g: antihydrogen falls at 0.75 +- 0.21 g, recalled). UET's complex chi makes antimatter couple to psi like matter.
 - Neutrinos are fermions but a psi-neutrino lane would escape the nucleon bounds (T005/T016/T019); the Higgs fits mathematically (xi h^2 R) but its 1.6e-18 m range removes late-time effects; a single scalar cannot be a vortical fluid (topic 0.10 no-go).
 - No known field matches all properties; next: author decision on a neutrino lane.
+
+## 2026-11-17 — Stress test 07: psi and the quantum vacuum
+- Question: must psi match the quantum statement that empty space is not empty, and what does that force on psi? Note: `Doc/STRESS_07_PSI_AND_QUANTUM_VACUUM.md`.
+- The quantum vacuum (fluctuations, Higgs and QCD condensates, vacuum energy) is well evidenced and made of known fields; psi fits as one more field but is not required by it.
+- New number: matter loops through the portal lift the psi mass by ~g_c/(4 pi); the EMG branch (m_eff ~2.8e-28 eV) stays natural only if g_c <~1.1e-27 eV, about 1e15 below the T019 limit.
+- Muon g-2 shift from the portal ~1e-46 (irrelevant); vacuum-energy mismatch 1e31-1e120 remains unsolved by UET.

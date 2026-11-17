@@ -5,11 +5,11 @@
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
     "sources": 80,
-    "entries": 888,
+    "entries": 889,
     "by_stream": {
       "book-history": 94,
       "operations": 131,
-      "research": 662,
+      "research": 663,
       "review": 1
     },
     "exact_duplicates": 0,
@@ -415,8 +415,8 @@
     },
     {
       "path": "2026/2026-11-17.md",
-      "sha256": "9a386915f24fb8cc8901c6876feea4a0aa409fd71600deff536a7bb4f5ccfa95",
-      "entries": 26
+      "sha256": "4d71d5e21c4ae4d202a937414f22810dad95e1b0bfb255c3139d78b31886930f",
+      "entries": 27
     },
     {
       "path": "2026-08-14.md",
@@ -18134,9 +18134,29 @@
       "source": "2026/2026-11-17.md",
       "anchor": "023-stress-test-06-what-psi-could-be",
       "start_line": 253,
-      "end_line": 261,
+      "end_line": 262,
       "title": "0.23 stress test 06: what psi could be",
-      "entry_sha256": "7f6109b7eb9e6016b5a39faf085ceb00a8fe65b8fcf801b7f6b9d1293adf2594",
+      "entry_sha256": "1bc2e3a847655014e3ad8b7e55fc8cf28f07c7263cd5283bc361930206529df4",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-17",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-17.md#023-stress-test-07-psi-and-the-quantum-vacuum",
+      "source": "2026/2026-11-17.md",
+      "anchor": "023-stress-test-07-psi-and-the-quantum-vacuum",
+      "start_line": 263,
+      "end_line": 271,
+      "title": "0.23 stress test 07: psi and the quantum vacuum",
+      "entry_sha256": "10aa32f343e71bc4440cc6f661e22b721992f48ebf35b63e45f38dcda291ec10",
       "stream": "research",
       "areas": [
         "research-core"
