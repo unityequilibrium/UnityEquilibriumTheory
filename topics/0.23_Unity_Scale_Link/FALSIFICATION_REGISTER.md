@@ -117,6 +117,7 @@
    - ถ้าทุกบิตต้องไปเก็บใน field ใหม่ ψ (g = 1) ดวงอาทิตย์ต้องเสียพลังงานให้ ψ อย่างน้อย 126% ของ L☉ ซึ่งขัดกับข้อมูล (ประมาณ ยังไม่มี Test Card) ข้อมูลยอมให้ g ≲ 0.06–0.15
    - **ผู้เขียนตอบ 2026-11-17 (ยังไม่แน่ใจ):** "น่าจะคือสิ่งที่มีอยู่แล้ว" ดังนั้นข้อ 7 ไม่ต้องใช้ field ใหม่ เส้นทาง ข จึงเหลือเป็นแค่ constraint (T020) ไม่ใช่จุดที่ UET พังได้คนเดียว
 3d. **ร่องรอยแสงกับ Hubble tension ([`topics/0.3_Cosmology_Hubble_Tension/Doc/ANALYSIS_TRACE_AND_EXPANSION_2026-11-17.md`](../0.3_Cosmology_Hubble_Tension/Doc/ANALYSIS_TRACE_AND_EXPANSION_2026-11-17.md)):** แสงดาวทั้งหมดของจักรวาลมี Ω ≈ 2.8e-6 เล็กกว่าที่ต้องใช้อธิบาย tension (8.4%) ราว 6e4 เท่า ไม่ใช่การพังของ UET แต่ตัดเส้นทางนี้ออก ขั้นต่อไปคือดูว่า ψ, ξ_c ของ parent action เปลี่ยน G ช่วง recombination ได้แค่ไหน
+3e. **parent action กับ Hubble tension ([`ANALYSIS_PARENT_ACTION_EMG_2026-11-17.md`](../0.3_Cosmology_Hubble_Tension/Doc/ANALYSIS_PARENT_ACTION_EMG_2026-11-17.md)):** เมื่อ m_ψ ≈ 0 และ g_c ≈ 0 parent action คือแบบจำลอง EMG ที่ตีพิมพ์แล้ว (ลด tension จาก 6σ เหลือราว 3σ, ξ ~ 0.1–0.25 ไม่ขัด T001) ไม่ใช่การทำนายและไม่ใช่ของเฉพาะ UET
 4. **ψ₀ ≠ 0 กับ Cassini:**
    - มีฟังก์ชัน `cassini_max_psi0` ใน `core/03_lanes/scalar_tensor/uet_vacuum_structure.py` แล้ว แต่ยังไม่มี Test Card
    - **AI inference:** ใน lane χ = สสารปกติ สุญญากาศไม่มี condensate ของ nucleon ดังนั้น ψ₀ = 0 และเส้นทางนี้ปิด ยกเว้น ψ₀ จะมาจากจักรวาลวิทยา (Λ_eff) ซึ่งยังไม่มี background FRW

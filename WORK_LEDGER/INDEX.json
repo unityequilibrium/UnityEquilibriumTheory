@@ -5,11 +5,11 @@
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
     "sources": 80,
-    "entries": 885,
+    "entries": 886,
     "by_stream": {
       "book-history": 94,
       "operations": 131,
-      "research": 659,
+      "research": 660,
       "review": 1
     },
     "exact_duplicates": 0,
@@ -415,8 +415,8 @@
     },
     {
       "path": "2026/2026-11-17.md",
-      "sha256": "48b6049b10e38613165fd2f70ccb604bf60c2a0654aa887d64cc40bc589499a6",
-      "entries": 23
+      "sha256": "25abcf8740a1aa70b35780bfa000bf05a95d3f1e68deb99c864e9ea6eed25bbb",
+      "entries": 24
     },
     {
       "path": "2026-08-14.md",
@@ -18074,9 +18074,29 @@
       "source": "2026/2026-11-17.md",
       "anchor": "03-starlight-trace-versus-h0",
       "start_line": 223,
-      "end_line": 231,
+      "end_line": 232,
       "title": "0.3 starlight trace versus H0",
-      "entry_sha256": "96051941b3350a8edb459925e3121e7971af247538b0867b49011c9e7ce14c1b",
+      "entry_sha256": "43c3ee9483f81880d7bfb86a083c7e2cad94ed3c1d6c8e7e08645911dca0e480",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-17",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-17.md#03-parent-action-and-early-modified-gravity",
+      "source": "2026/2026-11-17.md",
+      "anchor": "03-parent-action-and-early-modified-gravity",
+      "start_line": 233,
+      "end_line": 241,
+      "title": "0.3 parent action and Early Modified Gravity",
+      "entry_sha256": "94c573305b612ae2270e8af958fbf94b2dab9f39279fcbc5a648bb9e4bd9e2d0",
       "stream": "research",
       "areas": [
         "research-core"

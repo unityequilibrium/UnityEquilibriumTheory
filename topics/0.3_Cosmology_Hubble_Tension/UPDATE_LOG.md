@@ -1,5 +1,12 @@
 # Topic 0.3 update log
 
+## 2026-11-17 - Parent action contains Early Modified Gravity
+
+- Question: can the parent action change gravity before recombination enough to matter for the Hubble tension? Note: `Doc/ANALYSIS_PARENT_ACTION_EMG_2026-11-17.md`.
+- Finding (AI mapping, not yet checked in code): with m_psi ~ 0 and g_c ~ 0 the canonical action is the published EMG model (F = M_pl^2 + xi sigma^2, V = lambda sigma^4/4) with xi = xi_c.
+- Numbers from Franco Abellan et al. 2023: xi sigma_i^2 = 0.033 +- 0.014, H0 = 68.9 (71.55 with SH0ES), tension 6 sigma to about 3 sigma; implied xi ~0.1-0.25, outside the T001-excluded 2.0-2.4.
+- Not a UET prediction (fit values) and not UET-distinct. Next: sympy check of the mapping; constraint card for compatibility with T001 and Cassini.
+
 ## 2026-11-17 - Starlight trace versus expansion (H0)
 
 - Question: can the trace written into existing light and heat (author items 7-8) change H0 or explain the Hubble tension? Note: `Doc/ANALYSIS_TRACE_AND_EXPANSION_2026-11-17.md`.
