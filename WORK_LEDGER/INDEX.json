@@ -5,11 +5,11 @@
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
     "sources": 80,
-    "entries": 887,
+    "entries": 888,
     "by_stream": {
       "book-history": 94,
       "operations": 131,
-      "research": 661,
+      "research": 662,
       "review": 1
     },
     "exact_duplicates": 0,
@@ -415,8 +415,8 @@
     },
     {
       "path": "2026/2026-11-17.md",
-      "sha256": "3fa3a898189adb269f101542dfc54ec95ce6a5217c6159f292ad816b6b17072e",
-      "entries": 25
+      "sha256": "9a386915f24fb8cc8901c6876feea4a0aa409fd71600deff536a7bb4f5ccfa95",
+      "entries": 26
     },
     {
       "path": "2026-08-14.md",
@@ -18114,9 +18114,29 @@
       "source": "2026/2026-11-17.md",
       "anchor": "03-late-time-g-variation-emg-branch",
       "start_line": 243,
-      "end_line": 251,
+      "end_line": 252,
       "title": "0.3 late-time G variation (EMG branch)",
-      "entry_sha256": "05a4b6fc27560dad8885f1fd9c9ff92ea373f8196283967c9feb0e1c97e9b88a",
+      "entry_sha256": "686d80458d7053d4f906f94094a4f183b2cc87e89adf72382c2b6c1ea54ec558",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-17",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-17.md#023-stress-test-06-what-psi-could-be",
+      "source": "2026/2026-11-17.md",
+      "anchor": "023-stress-test-06-what-psi-could-be",
+      "start_line": 253,
+      "end_line": 261,
+      "title": "0.23 stress test 06: what psi could be",
+      "entry_sha256": "7f6109b7eb9e6016b5a39faf085ceb00a8fe65b8fcf801b7f6b9d1293adf2594",
       "stream": "research",
       "areas": [
         "research-core"

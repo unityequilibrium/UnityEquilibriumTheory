@@ -6,10 +6,11 @@
 
 These are source-linked historical records, not proof of completed research, successful publication, or current scientific readiness.
 
-Indexed entries: 661. Counts describe records, not accomplishments.
+Indexed entries: 662. Counts describe records, not accomplishments.
 
 | Date | Record | Area | Notes |
 | --- | --- | --- | --- |
+| 2026-11-17 | [0.23 stress test 06: what psi could be](2026/2026-11-17.md#023-stress-test-06-what-psi-could-be) (L253) | research-core | explicit_stream_and_area |
 | 2026-11-17 | [0.3 late-time G variation (EMG branch)](2026/2026-11-17.md#03-late-time-g-variation-emg-branch) (L243) | research-core | explicit_stream_and_area |
 | 2026-11-17 | [0.3 parent action and Early Modified Gravity](2026/2026-11-17.md#03-parent-action-and-early-modified-gravity) (L233) | research-core | explicit_stream_and_area |
 | 2026-11-17 | [0.3 starlight trace versus H0](2026/2026-11-17.md#03-starlight-trace-versus-h0) (L223) | research-core | explicit_stream_and_area |

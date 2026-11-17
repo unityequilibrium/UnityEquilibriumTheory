@@ -67,3 +67,9 @@
 - New numbers: human lifetime ~1e32 bits; Sun main sequence 2.9e63 bits (0.068 percent of Mc^2); same mass evaporating as a black hole 1.5e77 bits, about 1e10 times more.
 - Applied to Hawking evaporation the rule gives exactly S_BH/(k ln 2) (radiation entropy 4/3 S_BH, as Zurek 1982), an identity of black-hole thermodynamics, not a UET-only test.
 - Future topic: whether information leaves a black hole (Page curve); not measurable now.
+
+## 2026-11-17 — Stress test 06: which known thing could psi be?
+- Question: is psi something physics already knows (antimatter, neutrinos, Higgs, vacuum energy, a fluid)? Note: `Doc/STRESS_06_WHAT_IS_PSI.md`.
+- Antimatter cannot be psi (spin 1/2, charged, nearly absent today; ALPHA-g: antihydrogen falls at 0.75 +- 0.21 g, recalled). UET's complex chi makes antimatter couple to psi like matter.
+- Neutrinos are fermions but a psi-neutrino lane would escape the nucleon bounds (T005/T016/T019); the Higgs fits mathematically (xi h^2 R) but its 1.6e-18 m range removes late-time effects; a single scalar cannot be a vortical fluid (topic 0.10 no-go).
+- No known field matches all properties; next: author decision on a neutrino lane.
