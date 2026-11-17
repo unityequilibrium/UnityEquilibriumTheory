@@ -5,11 +5,11 @@
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
     "sources": 80,
-    "entries": 877,
+    "entries": 878,
     "by_stream": {
       "book-history": 94,
       "operations": 131,
-      "research": 651,
+      "research": 652,
       "review": 1
     },
     "exact_duplicates": 0,
@@ -415,8 +415,8 @@
     },
     {
       "path": "2026/2026-11-17.md",
-      "sha256": "2779cf3d04cb0f9704a0dbd53de6b0063eaf14a5ecc002a3dfe9414d3926b184",
-      "entries": 15
+      "sha256": "fbd408c21f7d9c675265a8241414674839884011f90c9a2b4114de6195470691",
+      "entries": 16
     },
     {
       "path": "2026-08-14.md",
@@ -17914,9 +17914,29 @@
       "source": "2026/2026-11-17.md",
       "anchor": "t019-portal-gap-run",
       "start_line": 143,
-      "end_line": 151,
+      "end_line": 152,
       "title": "T019 portal gap: run",
-      "entry_sha256": "3d7897d6656f1ad9c057296c46f748a8350c33689707fdfc2e58fa05f2152696",
+      "entry_sha256": "c67bff99c400a9b4fac2b4f819e80f4db6a43e6f35f00138ab2511a417e2785a",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-17",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-17.md#t019-result-at-l2",
+      "source": "2026/2026-11-17.md",
+      "anchor": "t019-result-at-l2",
+      "start_line": 153,
+      "end_line": 161,
+      "title": "T019 result at L2",
+      "entry_sha256": "7cab5680aacecf4afa5cb1b2e7f85f6864fc15cb32f5be349959228f69200065",
       "stream": "research",
       "areas": [
         "research-core"

@@ -6,10 +6,11 @@
 
 These are source-linked historical records, not proof of completed research, successful publication, or current scientific readiness.
 
-Indexed entries: 651. Counts describe records, not accomplishments.
+Indexed entries: 652. Counts describe records, not accomplishments.
 
 | Date | Record | Area | Notes |
 | --- | --- | --- | --- |
+| 2026-11-17 | [T019 result at L2](2026/2026-11-17.md#t019-result-at-l2) (L153) | research-core | explicit_stream_and_area |
 | 2026-11-17 | [T019 portal gap: run](2026/2026-11-17.md#t019-portal-gap-run) (L143) | research-core | explicit_stream_and_area |
 | 2026-11-17 | [0.23 candidates: Yukawa gap, T002/T014 data, route B](2026/2026-11-17.md#023-candidates-yukawa-gap-t002t014-data-route-b) (L133) | research-core | explicit_stream_and_area |
 | 2026-11-17 | [T018 cross-species lifespan: FAILED](2026/2026-11-17.md#t018-cross-species-lifespan-failed) (L123) | research-core | explicit_stream_and_area |

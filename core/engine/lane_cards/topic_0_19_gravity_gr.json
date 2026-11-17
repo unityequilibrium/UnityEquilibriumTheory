@@ -47,7 +47,7 @@
       "T005_YUKAWA_BOUNDS",
       "MICROSCOPE22_ETA_COMPOSITION"
     ],
-    "test_card": "T001, T005 closed; T016 draft"
+    "test_card": "T001, T005, T016, T019 closed"
   },
   "legacy": {
     "engine": "topics/0.19_Gravity_GR/Code/01_Engine/Engine_Gravity_GR.py and Code/02_Proof/Proof_Equivalence_Principle.py",
