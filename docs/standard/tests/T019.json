@@ -1,7 +1,7 @@
 {
   "schema": "uet-test-card-v2",
   "test_id": "T019",
-  "status": "DRAFT",
+  "status": "APPROVED",
   "claim_id": "C_T019_PORTAL_G_C_GAP",
   "theory_card": {
     "card_id": "UET_PARENT",
@@ -35,5 +35,10 @@
   "pass_criterion": "PASS if alpha_max is positive and finite at every listed lambda (g_c = 0 admissible); the Result reports alpha_max, g_c_max and m_psi at each lambda.",
   "fail_criterion": "FAILED only if the data required Delta a != 0 beyond 2 sigma while the lane fixes the portal non-zero; with Delta a = (1.0 +- 2.8) x 1e-13 cm/s^2 this does not apply. INCONCLUSIVE if the transcribed table disagrees with the journal version by more than 20 percent in S.",
   "drafted_by": "claude",
-  "note": "Disclosure: not blind and the outcome is fixed: alpha_max is about 6.5e-6 (g_c_max about 1.3e-12 eV) for lambda >= 1 m, rising to about 0.5 at 1 cm; estimated while drafting, script not run. Fills the registered gap from 1 cm to 1e5 m; the stretch 3.9e-5 m to 1 cm stays covered only by alpha < 1 (Lee et al. 2020) because published inverse-square-law curves there are figures, not tables. Better bounds for 1 km - 1e5 m exist from Earth-sourced equivalence-principle tests (Schlamminger et al. 2008, Wagner et al. 2012) but need an Earth topography model; not used. Not UET-distinct: any baryon-coupled scalar gets the same bound."
+  "note": "Disclosure: not blind and the outcome is fixed: alpha_max is about 6.5e-6 (g_c_max about 1.3e-12 eV) for lambda >= 1 m, rising to about 0.5 at 1 cm; estimated while drafting, script not run. Fills the registered gap from 1 cm to 1e5 m; the stretch 3.9e-5 m to 1 cm stays covered only by alpha < 1 (Lee et al. 2020) because published inverse-square-law curves there are figures, not tables. Better bounds for 1 km - 1e5 m exist from Earth-sourced equivalence-principle tests (Schlamminger et al. 2008, Wagner et al. 2012) but need an Earth topography model; not used. Not UET-distinct: any baryon-coupled scalar gets the same bound. Approved by the author on 2026-11-17 as drafted (\"Approve T019\"), without a check against the printed journal page.",
+  "approval": {
+    "approved_by": "santxkoz",
+    "date": "2026-11-17",
+    "role": "AUTHOR"
+  }
 }
