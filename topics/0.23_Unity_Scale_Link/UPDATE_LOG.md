@@ -46,3 +46,8 @@
 - Question: how large can the shared route-B time constant tau_beta be, given lunar laser ranging?
 - Registered LLR equivalence-principle values (Biskupek et al. 2021 primary, Williams et al. 2012 sensitivity); route-B claim at L0; T020 DRAFT (constraint).
 - Drafting estimate: tau_beta <= 4.6e15 s (about 1.5e8 yr); tau_beta = 1/H0 would exceed the allowed Delta about 1e4 times. Not run.
+
+## 2026-11-17 — T020 run: LLR bound on route B
+- Author approved T020 before the run (commit 75ef4b0df); outcome PASS (constraint; tau_beta = 0 admissible).
+- tau_beta <= 4.61e15 s (1.46e8 yr); 1.02e16 s with Williams 2012; 5.2e15 s with the worst-case mass-portal cross term.
+- Benchmark tau_beta = 1/H0 (AI choice, not deciding) predicts Delta = -6.8e-10, about 9,900 times the allowed value. Result record waits for the author's L2 decision.

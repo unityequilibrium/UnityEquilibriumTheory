@@ -5,11 +5,11 @@
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
     "sources": 80,
-    "entries": 879,
+    "entries": 880,
     "by_stream": {
       "book-history": 94,
       "operations": 131,
-      "research": 653,
+      "research": 654,
       "review": 1
     },
     "exact_duplicates": 0,
@@ -415,8 +415,8 @@
     },
     {
       "path": "2026/2026-11-17.md",
-      "sha256": "6a19fe6c4d4590da4c6f35d20711e1280351e05aace8a83016556b2b4dccff7d",
-      "entries": 17
+      "sha256": "ad68817ab6fc51c6c9678f18a33ed434f6f2f83fa0f32e517c7723865f216d31",
+      "entries": 18
     },
     {
       "path": "2026-08-14.md",
@@ -17954,9 +17954,29 @@
       "source": "2026/2026-11-17.md",
       "anchor": "t020-draft-route-b-with-lunar-laser-ranging",
       "start_line": 163,
-      "end_line": 171,
+      "end_line": 172,
       "title": "T020 draft: route B with lunar laser ranging",
-      "entry_sha256": "1b8fe5b6ad8a68d928bc6c2fa31fbab1bcfd1f3a0b3f6d9a15247ef660eeb701",
+      "entry_sha256": "6077298f48b80a82c12bc61ade486ca8ddde96e35f3843b00c310cf1a0ba26ea",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-17",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-17.md#t020-route-b-run",
+      "source": "2026/2026-11-17.md",
+      "anchor": "t020-route-b-run",
+      "start_line": 173,
+      "end_line": 181,
+      "title": "T020 route B: run",
+      "entry_sha256": "9d9cc39edb611371b910aa098bb23998e2524eeac30867ea1e3a0f70527fc875",
       "stream": "research",
       "areas": [
         "research-core"
