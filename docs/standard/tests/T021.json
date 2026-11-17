@@ -1,7 +1,7 @@
 {
   "schema": "uet-test-card-v2",
   "test_id": "T021",
-  "status": "DRAFT",
+  "status": "APPROVED",
   "claim_id": "C_T021_LIGHTING_SUCCESSION",
   "theory_card": {
     "card_id": "UET_PARENT",
@@ -35,5 +35,10 @@
   "pass_criterion": "PASS if no pair is WORSE_BOTH. The Result reports the class of every pair, the counts, eta* for the two electric pairs and the first dominating successor row for each trade-off.",
   "fail_criterion": "FAILED if one or more pairs are WORSE_BOTH. INCONCLUSIVE if a deciding pair depends on a value that the transcription marks as not legible.",
   "drafted_by": "claude",
-  "note": "Disclosure: not blind. The drafter transcribed the whole table and, reading it, expects no WORSE_BOTH pair at the device basis, about two DOMINATES pairs and about five TRADE_OFF pairs; the outcome is effectively known. The open risk is the energy boundary: UET's P counts all free energy destroyed, so primary energy at the power plant is the UET-consistent basis. If the 1883 plant efficiency was below eta* (about 6 percent against kerosene, about 9 percent against gas), Edison's lamp entered worse in both energy and time. Plant efficiency is not in this dataset; the card reports eta* and does not decide on it. The author may ask for a primary-energy version with a separately registered plant-efficiency source before approval."
+  "note": "Disclosure: not blind. The drafter transcribed the whole table and, reading it, expects no WORSE_BOTH pair at the device basis, about two DOMINATES pairs and about five TRADE_OFF pairs; the outcome is effectively known. The open risk is the energy boundary: UET's P counts all free energy destroyed, so primary energy at the power plant is the UET-consistent basis. If the 1883 plant efficiency was below eta* (about 6 percent against kerosene, about 9 percent against gas), Edison's lamp entered worse in both energy and time. Plant efficiency is not in this dataset; the card reports eta* and does not decide on it. The author may ask for a primary-energy version with a separately registered plant-efficiency source before approval. Approved by the author on 2026-11-17 as drafted (\"Approve T021\"), at the device energy basis; the primary-energy version was not requested before the run.",
+  "approval": {
+    "approved_by": "santxkoz",
+    "date": "2026-11-17",
+    "role": "AUTHOR"
+  }
 }
