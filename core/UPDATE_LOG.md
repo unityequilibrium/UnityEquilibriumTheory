@@ -429,3 +429,9 @@ commit: this commit
 ผู้เขียนอนุมัติ L2: R_T016_MICROSCOPE_PORTAL (PASS, constraint) α < 5.1e-12, g_c < 1.16e-15 eV ที่ λ ≥ 1e8 m; C_T016_MICROSCOPE_G_C → L2; T016 → CLOSED
 ขอบเขต: เฉพาะ lane ที่ portal ดึงตามจำนวน nucleon; ไม่ใช่ UET-distinct
 commit: this commit
+
+## 2026-11-17 — topic 0.22 เข้า engine (ชั้น 2–3): abundance เมื่อประชากรโต
+ทำ: lane card ของ 0.22 จัดกลุ่ม lane เก่า (biomarker/EEG/TCGA/clinical ใช้ข้อมูลสังเคราะห์ และอยู่นอก action; HP folding อยู่นอก action; homeostasis ขึ้นกับ topic 13) และ derive N = bτ เมื่อ b โตแบบ e^{λt}
+ผล: λ → 0 ได้ bτ; สัดส่วนเซลล์ในแต่ละ phase = 2(2^{-a1/T} − 2^{-a2/T}) ตรงกับ agent model (cv 0.1) ถึง 0.005; รอบคงที่ไม่ผสมเข้าสู่การกระจายเสถียร
+ระดับ: R_L3_GROWING_ABUNDANCE → L1; ถัดไป: Test Card T017 เทียบ mitotic index กับเวลาของ phase ที่วัดแยก (ยังไม่ร่าง)
+commit: this commit

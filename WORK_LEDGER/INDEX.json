@@ -5,11 +5,11 @@
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
     "sources": 80,
-    "entries": 864,
+    "entries": 865,
     "by_stream": {
       "book-history": 94,
       "operations": 131,
-      "research": 638,
+      "research": 639,
       "review": 1
     },
     "exact_duplicates": 0,
@@ -415,8 +415,8 @@
     },
     {
       "path": "2026/2026-11-17.md",
-      "sha256": "f0a703f6500da152bde7393d353d3def6741d893d3da962bc71019fcad3ef23e",
-      "entries": 2
+      "sha256": "46dae22805cd8acae8cfec84ed3c61236ab5e9181844efea0c3c8c26707760db",
+      "entries": 3
     },
     {
       "path": "2026-08-14.md",
@@ -17654,9 +17654,29 @@
       "source": "2026/2026-11-17.md",
       "anchor": "t016-result-at-l2",
       "start_line": 13,
-      "end_line": 21,
+      "end_line": 22,
       "title": "T016 result at L2",
-      "entry_sha256": "bf26ba093be13d2a68a230c621a17689fb4f456fd348463bee9982d2d192dfb2",
+      "entry_sha256": "247a4281291dbb50b28e868279d9358b2f2a03dbe59388672c7fec2b291ff12d",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-17",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-17.md#topic-022-through-the-engine-layers-2-3-abundance-in-growing-populations",
+      "source": "2026/2026-11-17.md",
+      "anchor": "topic-022-through-the-engine-layers-2-3-abundance-in-growing-populations",
+      "start_line": 23,
+      "end_line": 31,
+      "title": "Topic 0.22 through the engine (layers 2-3): abundance in growing populations",
+      "entry_sha256": "3b0c859ef73f4a5ccec7b1a3e397179fdb8709bafef58a4cdedd3ff0512ee5ab",
       "stream": "research",
       "areas": [
         "research-core"

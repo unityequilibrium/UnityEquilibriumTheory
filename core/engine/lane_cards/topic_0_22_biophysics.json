@@ -1,0 +1,42 @@
+{
+  "schema": "uet-lane-card-v1",
+  "topic": "0.22_Biophysics_Origin_of_Life",
+  "reach": "LAYER23",
+  "system": "Living cells and populations: phase abundances in dividing cell populations and resource competition; other topic lanes are classified below.",
+  "mapping": {
+    "chi": "none (layer 2-3 only)",
+    "psi": "none",
+    "F": "free energy stored by a cell (nutrient and ATP reserves) relative to its medium; not needed for phase abundances, where phase durations are measured directly",
+    "P": "metabolic burn power of the cell; in the resource lane, consumption fixed by monoculture physiology (as in T007)",
+    "b": "rate of entry into a phase; grows as e^{lambda t} in an exponentially growing culture (layer23.abundance_growing), constant in a steady tissue"
+  },
+  "engine_functions": [
+    "layer23.abundance_growing",
+    "layer23.phase_fraction_dividing",
+    "layer23.mitotic_index",
+    "layer23.abundance",
+    "layer23.r_star",
+    "layer23.coexistence_resources"
+  ],
+  "parameters": [
+    {
+      "name": "phase_durations_and_cycle_time",
+      "value": "to be source-locked (time-lapse measurements)",
+      "unit": "h",
+      "origin": "MEASURED_INDEPENDENT",
+      "source": "candidate Test Card T017 (not drafted)"
+    }
+  ],
+  "observable": {
+    "quantity": "fraction of cells in a cell-cycle phase (snapshot) against the fraction implied by independently timed phase durations",
+    "unit": "1",
+    "comparison_data_ids": [],
+    "test_card": null
+  },
+  "legacy": {
+    "engine": "topics/0.22_Biophysics_Origin_of_Life/Code/03_Research (biomarker, HP folding, folding-dynamics gate) and Code/Legacy",
+    "status": "LEGACY_UNREVIEWED. Legacy lanes classified: synthetic biomarker, EEG/neural, TCGA/omics and immune/clinical use synthetic or mock data and do not use the action (outside); 2-D HP protein folding is a standard lattice model, outside the action; homeostasis entropy ledger depends on Topic 13, whose Phi is now a phenomenological closure; origin-of-life protocell scripts impose patterns (L0 sandbox). Layer 2-3 reaches cell-population abundance (new, this card) and resource competition (T007, algae, already L2)."
+  },
+  "drafted_by": "claude",
+  "approval": null
+}

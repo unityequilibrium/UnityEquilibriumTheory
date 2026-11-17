@@ -20,6 +20,7 @@ from ._load import load
 
 _l23 = load("03_lanes/persistence/uet_layer2_to_3.py")
 _path_a = load("03_lanes/persistence/uet_path_a_models.py")
+_growing = load("03_lanes/persistence/uet_growing_abundance.py")
 
 K_B_J_PER_K = 1.380649e-23
 
@@ -55,6 +56,20 @@ def abundance(formation_rate: float, tau: float) -> float:
 def abundance_ratio(tau_a: float, tau_b: float) -> float:
     """N_a / N_b = tau_a / tau_b when both phases share one formation rate."""
     return tau_a / tau_b
+
+
+def abundance_growing(b_now: float, growth_rate: float, entry_age: float, duration: float) -> float:
+    """N for a formation rate growing as e^{lambda t}; tends to b tau as lambda -> 0."""
+    return _growing.abundance_growing(b_now, growth_rate, entry_age, duration)
+
+
+def phase_fraction_dividing(a1: float, a2: float, cycle: float) -> float:
+    """Fraction of an asynchronously dividing population in the phase [a1, a2] of a fixed cycle."""
+    return _growing.phase_fraction_dividing(a1, a2, cycle)
+
+
+def mitotic_index(t_mitosis: float, cycle: float) -> float:
+    return _growing.mitotic_index(t_mitosis, cycle)
 
 
 def luminosity_function_slope_per_mag(n: float) -> float:

@@ -316,6 +316,15 @@
         "R_T016_MICROSCOPE_PORTAL"
       ],
       "note": "Constraint, not a prediction. Valid only if binding energy does not source the portal (AI lane choice, C_PORTAL_COMPOSITION_EP). L2 approved by the author 2026-11-17."
+    },
+    {
+      "claim_id": "C_L3_GROWING_ABUNDANCE",
+      "statement": "With a formation rate growing as e^{lambda t}, the layer-3 abundance of a phase entered at age a1 and lasting tau is N = b_now (e^{-lambda a1} - e^{-lambda (a1+tau)})/lambda, which reduces to N = b tau as lambda -> 0; for asynchronously dividing cells with cycle T the phase fraction is 2 (2^{-a1/T} - 2^{-a2/T}), confirmed by an agent model with 10 percent cycle-time spread to 0.005.",
+      "level": "L1_CONSISTENT",
+      "evidence": [
+        "R_L3_GROWING_ABUNDANCE"
+      ],
+      "note": "Standard age-distribution result of cell kinetics; extends the engine to growing populations (topic 0.22 lane card). A fixed cycle never relaxes to the stable distribution; variability is needed for mixing. Not UET-distinct."
     }
   ]
 }
