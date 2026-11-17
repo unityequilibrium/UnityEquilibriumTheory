@@ -5,11 +5,11 @@
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
     "sources": 80,
-    "entries": 865,
+    "entries": 866,
     "by_stream": {
       "book-history": 94,
       "operations": 131,
-      "research": 639,
+      "research": 640,
       "review": 1
     },
     "exact_duplicates": 0,
@@ -415,8 +415,8 @@
     },
     {
       "path": "2026/2026-11-17.md",
-      "sha256": "46dae22805cd8acae8cfec84ed3c61236ab5e9181844efea0c3c8c26707760db",
-      "entries": 3
+      "sha256": "6be143a563f4b7737dd48d69a5fcabe68a926bd65c4b9e8f9493064862834a64",
+      "entries": 4
     },
     {
       "path": "2026-08-14.md",
@@ -17674,9 +17674,29 @@
       "source": "2026/2026-11-17.md",
       "anchor": "topic-022-through-the-engine-layers-2-3-abundance-in-growing-populations",
       "start_line": 23,
-      "end_line": 31,
+      "end_line": 32,
       "title": "Topic 0.22 through the engine (layers 2-3): abundance in growing populations",
-      "entry_sha256": "3b0c859ef73f4a5ccec7b1a3e397179fdb8709bafef58a4cdedd3ff0512ee5ab",
+      "entry_sha256": "212da24c7dff232077fc3e52616fc79c5101e631f8ab3691944b7ad264e542da",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-17",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-17.md#t017-design-draft-cell-cycle-abundance-topic-022",
+      "source": "2026/2026-11-17.md",
+      "anchor": "t017-design-draft-cell-cycle-abundance-topic-022",
+      "start_line": 33,
+      "end_line": 41,
+      "title": "T017 design draft: cell-cycle abundance (topic 0.22)",
+      "entry_sha256": "4297c802fed59951ae832ae44d637ba6823c6b3921d53f0ac5ecc5482ef728d4",
       "stream": "research",
       "areas": [
         "research-core"

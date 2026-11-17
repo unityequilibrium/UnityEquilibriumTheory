@@ -6,10 +6,11 @@
 
 These are source-linked historical records, not proof of completed research, successful publication, or current scientific readiness.
 
-Indexed entries: 639. Counts describe records, not accomplishments.
+Indexed entries: 640. Counts describe records, not accomplishments.
 
 | Date | Record | Area | Notes |
 | --- | --- | --- | --- |
+| 2026-11-17 | [T017 design draft: cell-cycle abundance (topic 0.22)](2026/2026-11-17.md#t017-design-draft-cell-cycle-abundance-topic-022) (L33) | research-core | explicit_stream_and_area |
 | 2026-11-17 | [Topic 0.22 through the engine (layers 2-3): abundance in growing populations](2026/2026-11-17.md#topic-022-through-the-engine-layers-2-3-abundance-in-growing-populations) (L23) | research-core | explicit_stream_and_area |
 | 2026-11-17 | [T016 result at L2](2026/2026-11-17.md#t016-result-at-l2) (L13) | research-core | explicit_stream_and_area |
 | 2026-11-17 | [T016 run: MICROSCOPE bound on the portal](2026/2026-11-17.md#t016-run-microscope-bound-on-the-portal) (L3) | research-core | explicit_stream_and_area |
