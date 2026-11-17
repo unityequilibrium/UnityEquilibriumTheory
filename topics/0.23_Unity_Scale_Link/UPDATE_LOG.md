@@ -17,3 +17,10 @@
 - Finding: not in its current form. N = b tau is Little's law (identity at steady state); tau = F/P is each field's standard energetics; layer 3 carries no shared constant to transfer across fields.
 - New number: pygmy-possum starvation data reproduce 307/189/124 vs 310/195/127 days, but only because P was inferred from mass loss (identity, not a test).
 - Next: author chooses a pre-declared scope (exhaustion vs hazard lifetime shape) or a theory step (shared constant, or route B layer-2 term).
+
+## 2026-11-17 — Stress test 02: pre-declared scope for layer 3
+- Question: which pre-declared scope lets tau = F/P fail where the field's own theory does not? Note: `Doc/STRESS_02_LAYER3_SCOPE.md`.
+- Correction to STRESS_01 item 4.3: with income, reserve is a random walk and lifetime is a first-passage time (Levinthal 1991); firm lifetimes cannot separate UET from the null.
+- Finding: only the cross-species lifespan scope (rate-of-living: lifetime energy per gram constant) is UET-distinct; biology already rejects it, so the expected outcome is FAILED (disclosed prior knowledge).
+- Draft T018 written in the note (AnAge, fit log LEP = a + s log M + d bird; fail if CI of |s| > 0.10 or d > 0.30); not registered, no data downloaded.
+- Next: author decides whether UET claims individual lifespan as reserve-limited.
