@@ -5,11 +5,11 @@
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
     "sources": 80,
-    "entries": 876,
+    "entries": 877,
     "by_stream": {
       "book-history": 94,
       "operations": 131,
-      "research": 650,
+      "research": 651,
       "review": 1
     },
     "exact_duplicates": 0,
@@ -415,8 +415,8 @@
     },
     {
       "path": "2026/2026-11-17.md",
-      "sha256": "640c815496af9e396e70add94d1915c91d04f221e332976ec2289a3695fa1d14",
-      "entries": 14
+      "sha256": "2779cf3d04cb0f9704a0dbd53de6b0063eaf14a5ecc002a3dfe9414d3926b184",
+      "entries": 15
     },
     {
       "path": "2026-08-14.md",
@@ -17894,9 +17894,29 @@
       "source": "2026/2026-11-17.md",
       "anchor": "023-candidates-yukawa-gap-t002t014-data-route-b",
       "start_line": 133,
-      "end_line": 141,
+      "end_line": 142,
       "title": "0.23 candidates: Yukawa gap, T002/T014 data, route B",
-      "entry_sha256": "bf6dc53506eba31a56e9a2178251fec3468817096e922cbdd04e1991ae9252a3",
+      "entry_sha256": "b712ba498bb722f911154b6784f6eeab6853f04fe7bdeda94847c4583f92a9ee",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-17",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-17.md#t019-portal-gap-run",
+      "source": "2026/2026-11-17.md",
+      "anchor": "t019-portal-gap-run",
+      "start_line": 143,
+      "end_line": 151,
+      "title": "T019 portal gap: run",
+      "entry_sha256": "3d7897d6656f1ad9c057296c46f748a8350c33689707fdfc2e58fa05f2152696",
       "stream": "research",
       "areas": [
         "research-core"

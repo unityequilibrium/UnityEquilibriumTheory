@@ -36,3 +36,8 @@
 - T002/T014: no independent new HB/RGB count set exists (Zoccali 2000 overlaps T002's WFPC2 base; Sandquist 2000 has known Y = 0.20 systematics); no card drafted.
 - Route B (`Doc/STRESS_03_ROUTE_B_DISSIPATION_COUPLING.md`): if dissipation sources psi, one shared constant tau_beta (a time) sets an extra force proportional to power per mass; LLR estimate tau_beta < 9e15 s; tau_beta = 1/H0 would exceed LLR by thousands.
 - Next: author approves T019; decides whether to adopt the route-B term and a minimum tau_beta.
+
+## 2026-11-17 — T019 run: portal bound in the 1 cm - 1e5 m gap
+- Author approved T019 before the run (commit 321d5e7ad); outcome PASS (constraint; g_c = 0 admissible).
+- alpha_max = 0.50 at 1 cm, 2.5e-5 at 10 cm, 6.6e-6 at 1 m, 6.4e-6 from 2 m to 1e5 m; g_c_max = 1.30e-12 eV there. Signal Delta a is 0.36 sigma from zero.
+- Not UET-distinct. Result record waits for the author's L2 decision.
