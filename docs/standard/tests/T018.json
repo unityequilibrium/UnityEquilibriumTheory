@@ -1,7 +1,7 @@
 {
   "schema": "uet-test-card-v2",
   "test_id": "T018",
-  "status": "DRAFT",
+  "status": "APPROVED",
   "claim_id": "C_L3_LIFESPAN_RESERVE_SCOPE",
   "theory_card": {
     "card_id": "UET_PARENT",
@@ -36,5 +36,10 @@
   "pass_criterion": "the 95 percent interval of s lies inside [-0.05, 0.05] and the 95 percent interval of d lies inside [-0.18, 0.18]",
   "fail_criterion": "FAILED if the 95 percent interval of s lies wholly outside [-0.10, 0.10] or the 95 percent interval of d lies wholly above 0.30 (birds more than 2 times mammals); otherwise INCONCLUSIVE",
   "drafted_by": "claude",
-  "note": "Disclosure: not blind. Prior literature known to the drafter (Austad and Fischer 1991; Speakman 2005, J. Exp. Biol. 208:1717) reports higher LEP in birds and bats, so FAILED is expected. Before approval the drafter read only the AnAge column names and the selection counts (169 mammals, 128 birds). Resting metabolic rate is not lifetime expenditure; if the field/resting ratio differs between birds and mammals, d is biased. Maximum longevity mixes wild and captive records. Thresholds are AI choices taken from STRESS_02 section 4."
+  "note": "Disclosure: not blind. Prior literature known to the drafter (Austad and Fischer 1991; Speakman 2005, J. Exp. Biol. 208:1717) reports higher LEP in birds and bats, so FAILED is expected. Before approval the drafter read only the AnAge column names and the selection counts (169 mammals, 128 birds). Resting metabolic rate is not lifetime expenditure; if the field/resting ratio differs between birds and mammals, d is biased. Maximum longevity mixes wild and captive records. Thresholds are AI choices taken from STRESS_02 section 4. Approved by the author on 2026-11-17 in chat (\"ใช่ ทดสอบ T018\"), answering whether UET claims the lifespan scope, with the criteria of STRESS_02 section 4 as drafted.",
+  "approval": {
+    "approved_by": "santxkoz",
+    "date": "2026-11-17",
+    "role": "AUTHOR"
+  }
 }
