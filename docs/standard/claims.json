@@ -352,6 +352,13 @@
         "R_T018_LIFESPAN_RATE_OF_LIVING"
       ],
       "note": "FAILED in T018 (2026-11-17): birds have 2.47 times the lifetime energy per gram of mammals (d = 0.392, 95 percent interval 0.330 to 0.455, fail threshold 0.30) and LEP falls with mass (s = -0.114). Removes only this lifespan scope of layer 3; tau = F/P for closed reserves and N = b tau are unaffected. UET-distinct: the null (current biology) does not fail. Design: topics/0.23_Unity_Scale_Link/Doc/STRESS_02_LAYER3_SCOPE.md."
+    },
+    {
+      "claim_id": "C_T019_PORTAL_G_C_GAP",
+      "statement": "With chi = nucleon and the portal charge equal to nucleon number (lane of T016), short-range equivalence-principle data limit the portal coupling g_c in the range gap 1 cm <= lambda <= 1e5 m that T005 and T016 left open.",
+      "level": "L0_SPECULATIVE",
+      "evidence": [],
+      "note": "Constraint only: g_c = 0 is admissible, so FAILED is not reachable. Not UET-distinct: any scalar coupled to baryon number gets the same bound. Test Card T019; design in topics/0.23_Unity_Scale_Link/FALSIFICATION_REGISTER.md section 4."
     }
   ]
 }

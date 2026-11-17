@@ -1,0 +1,39 @@
+{
+  "schema": "uet-test-card-v2",
+  "test_id": "T019",
+  "status": "DRAFT",
+  "claim_id": "C_T019_PORTAL_G_C_GAP",
+  "theory_card": {
+    "card_id": "UET_PARENT",
+    "version": 1
+  },
+  "hypothesis": "With chi = nucleon and portal charge per mass eps = (B/mu)(m_N/u) (lane of T016), the UET portal adds a composition-dependent Yukawa force alpha eps_i eps_A exp(-r/lambda) to gravity. The Rot-Wash differential acceleration of Cu and Pb toward a 238U attractor then limits alpha, hence g_c, for 1 cm <= lambda <= 1e5 m.",
+  "observable": {
+    "quantity": "upper bound alpha_max and g_c_max on the portal at the 15 tabulated ranges 0.01-50 m and at 1e2, 1e3, 1e4, 1e5 m",
+    "unit": "alpha dimensionless, g_c and m_psi in eV",
+    "domain": "Eot-Wash Rot-Wash apparatus (Seattle, 3-ton 238U attractor, Cu and Pb test bodies)"
+  },
+  "test_kind": "CONSTRAINT",
+  "data_sources": [
+    {
+      "data_id": "SMITH2000_ROTWASH_BARYON",
+      "role": "COMPARISON",
+      "exposure": "SEEN_SUMMARY"
+    }
+  ],
+  "prediction_method": {
+    "script": "core/03_lanes/scalar_tensor/t019_portal_gap_rotwash.py",
+    "description": "alpha_max = |Delta a|_95 / (g' k^2 S_B(lambda)) with |Delta a|_95 = 5.7e-13 cm/s^2, g' = 9.2e-5 cm/s^2, k = m_N/u, S_B from Table X; S held at its 50 m value for 1e2-1e5 m; g_c_max = 5.1198e-10 eV sqrt(alpha_max); m_psi = hbar c / lambda."
+  },
+  "free_parameters": [],
+  "fixed_parameters": [
+    "portal charge = nucleon number (T016 lane, AI interpretation approved for T016)",
+    "m_N = 0.9389e9 eV (T005)",
+    "symmetric 95 percent limit on |Delta a| as published",
+    "Earth term and centrifugal term omitted (at most 1.4 and 0.16 percent of S)"
+  ],
+  "pass_criterion": "PASS if alpha_max is positive and finite at every listed lambda (g_c = 0 admissible); the Result reports alpha_max, g_c_max and m_psi at each lambda.",
+  "fail_criterion": "FAILED only if the data required Delta a != 0 beyond 2 sigma while the lane fixes the portal non-zero; with Delta a = (1.0 +- 2.8) x 1e-13 cm/s^2 this does not apply. INCONCLUSIVE if the transcribed table disagrees with the journal version by more than 20 percent in S.",
+  "drafted_by": "claude",
+  "note": "Disclosure: not blind and the outcome is fixed: alpha_max is about 6.5e-6 (g_c_max about 1.3e-12 eV) for lambda >= 1 m, rising to about 0.5 at 1 cm; estimated while drafting, script not run. Fills the registered gap from 1 cm to 1e5 m; the stretch 3.9e-5 m to 1 cm stays covered only by alpha < 1 (Lee et al. 2020) because published inverse-square-law curves there are figures, not tables. Better bounds for 1 km - 1e5 m exist from Earth-sourced equivalence-principle tests (Schlamminger et al. 2008, Wagner et al. 2012) but need an Earth topography model; not used. Not UET-distinct: any baryon-coupled scalar gets the same bound."
+}

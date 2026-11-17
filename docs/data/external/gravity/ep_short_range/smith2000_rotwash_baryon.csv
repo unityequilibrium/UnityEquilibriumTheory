@@ -1,0 +1,43 @@
+# Eot-Wash "Rot-Wash" short-range equivalence-principle test: 3-ton 238U attractor rotating around Cu and Pb test bodies.
+# Source: G. L. Smith, C. D. Hoyle, J. H. Gundlach, E. G. Adelberger, B. R. Heckel, H. E. Swanson, Phys. Rev. D 61, 022001 (2000); arXiv:2405.10982.
+# Transcribed 2026-11-17 for UET Test Card T019 from the article text (numerical facts only).
+#   Eq. (22): Delta a = a_Cu - a_Pb = (1.0 +- 2.6 +- 0.9) x 1e-13 cm/s^2; 95% limit |Delta a| < 5.7e-13 cm/s^2 (stat and syst in quadrature).
+#   Abstract: gravitational acceleration toward the attractor g' = 9.2e-5 cm/s^2.
+#   Eq. (2) and (26): Delta a / g' = alpha Delta(q/mu) [ <(q/mu)_A I_A(lambda)> - I_E(lambda) (q/mu)_E + (a_c cos Theta / g) <(q/mu)_A I_A> ].
+#   Table X: intrinsic sensitivity S(lambda) = Delta(q/mu) <(q/mu)_A I_A(lambda)> for q = B = N + Z.
+#   Table IX: Earth integral I_E(lambda), 13-shell Earth model, apparatus 1 m above ground.
+#   Table XI: B/mu of the test bodies and attractor (mu in atomic mass units).
+#   Fig. 21 caption: the constraints of this work are valid for 1.0 m < lambda < 1e6 m.
+quantity,lambda_m,value,unit
+delta_a_central,,1.0e-13,cm/s^2
+delta_a_stat,,2.6e-13,cm/s^2
+delta_a_syst,,0.9e-13,cm/s^2
+delta_a_95,,5.7e-13,cm/s^2
+g_attractor,,9.2e-5,cm/s^2
+S_B,0.010,1.23e-8,1
+S_B,0.014,1.75e-7,1
+S_B,0.020,1.53e-6,1
+S_B,0.028,7.46e-6,1
+S_B,0.05,5.45e-5,1
+S_B,0.07,1.25e-4,1
+S_B,0.10,2.47e-4,1
+S_B,0.20,5.61e-4,1
+S_B,0.50,8.44e-4,1
+S_B,1.0,9.19e-4,1
+S_B,2.0,9.41e-4,1
+S_B,5.0,9.48e-4,1
+S_B,10.0,9.48e-4,1
+S_B,20.0,9.49e-4,1
+S_B,50.0,9.49e-4,1
+I_E,10,3.94e-7,1
+I_E,1e2,4.31e-6,1
+I_E,1e3,4.69e-5,1
+I_E,1e4,9.81e-4,1
+I_E,1e5,1.36e-2,1
+I_E,1e6,1.72e-1,1
+I_E,1e7,8.77e-1,1
+I_E,1e8,9.98e-1,1
+B_per_mu_Cu,,1.0011166,1
+B_per_mu_Pb_alloy,,1.0001694,1
+B_per_mu_U238,,0.9962151,1
+lab_latitude_deg,,47.66,deg
