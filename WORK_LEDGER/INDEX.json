@@ -5,11 +5,11 @@
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
     "sources": 80,
-    "entries": 869,
+    "entries": 870,
     "by_stream": {
       "book-history": 94,
       "operations": 131,
-      "research": 643,
+      "research": 644,
       "review": 1
     },
     "exact_duplicates": 0,
@@ -415,8 +415,8 @@
     },
     {
       "path": "2026/2026-11-17.md",
-      "sha256": "8cfa59df67d308dfbb9fe26be4c83d0d2bc31179fc443c3771f7cd5af59e1365",
-      "entries": 7
+      "sha256": "2b908f35d8cef7028626b5d7146f5b8e57fe44ad879497183e5e75ad9720e076",
+      "entries": 8
     },
     {
       "path": "2026-08-14.md",
@@ -17754,9 +17754,29 @@
       "source": "2026/2026-11-17.md",
       "anchor": "unequal-division-layer-3-and-draft-t017-yeast",
       "start_line": 63,
-      "end_line": 71,
+      "end_line": 72,
       "title": "Unequal-division layer 3 and draft T017 (yeast)",
-      "entry_sha256": "0f0bba05a5ed5b1efa7129ff4f57d80b8ff34f76c2dca8996959e34ddd224d70",
+      "entry_sha256": "c9060c1d3e28ebae060974b105633dd120a3778382b4480fa5234171e5860055",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-17",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-17.md#run-t017-yeast-doubling-time-from-cycle-times",
+      "source": "2026/2026-11-17.md",
+      "anchor": "run-t017-yeast-doubling-time-from-cycle-times",
+      "start_line": 73,
+      "end_line": 81,
+      "title": "Run T017 (yeast doubling time from cycle times)",
+      "entry_sha256": "9a505ca0420554144c0342ba83fcb094b21863fc13febd668a30843cbd8d144a",
       "stream": "research",
       "areas": [
         "research-core"
