@@ -5,11 +5,11 @@
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
     "sources": 80,
-    "entries": 881,
+    "entries": 882,
     "by_stream": {
       "book-history": 94,
       "operations": 131,
-      "research": 655,
+      "research": 656,
       "review": 1
     },
     "exact_duplicates": 0,
@@ -415,8 +415,8 @@
     },
     {
       "path": "2026/2026-11-17.md",
-      "sha256": "395821ebf2b21273f46cbb39631aca1bc4f209ad1b63db4fbcd6dfc937c8d4c4",
-      "entries": 19
+      "sha256": "c3e6223d471725b780a6f5b23b5bb43c1b96a5c5188a65b63f8ee887bda37be0",
+      "entries": 20
     },
     {
       "path": "2026-08-14.md",
@@ -17994,9 +17994,29 @@
       "source": "2026/2026-11-17.md",
       "anchor": "t020-result-at-l2",
       "start_line": 183,
-      "end_line": 191,
+      "end_line": 192,
       "title": "T020 result at L2",
-      "entry_sha256": "1ca294a3371dbea0a11833d155ed5170d7d821fb5ddcdfea81a3efe08dae2a89",
+      "entry_sha256": "3795867ec46eb989da7aa3037fa90be1d1d21d71294aaa37f8266a2124f4ff6e",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-17",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-17.md#023-stress-test-04-route-b-minimum",
+      "source": "2026/2026-11-17.md",
+      "anchor": "023-stress-test-04-route-b-minimum",
+      "start_line": 193,
+      "end_line": 201,
+      "title": "0.23 stress test 04: route-B minimum",
+      "entry_sha256": "40e1d5c1875bb02b6ec0f3724196d56062331c523a0a9d57fd60c6c807dfa9ba",
       "stream": "research",
       "areas": [
         "research-core"

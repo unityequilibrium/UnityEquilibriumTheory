@@ -51,3 +51,9 @@
 - Author approved T020 before the run (commit 75ef4b0df); outcome PASS (constraint; tau_beta = 0 admissible).
 - tau_beta <= 4.61e15 s (1.46e8 yr); 1.02e16 s with Williams 2012; 5.2e15 s with the worst-case mass-portal cross term.
 - Benchmark tau_beta = 1/H0 (AI choice, not deciding) predicts Delta = -6.8e-10, about 9,900 times the allowed value. Result record waits for the author's L2 decision.
+
+## 2026-11-17 — Stress test 04: does the proposition force a route-B minimum?
+- Question: do the author's items 7-8 force a minimum coupling for route B? Note: `Doc/STRESS_04_ROUTE_B_MINIMUM.md`.
+- Correction: the T020 model (psi sourced by the current rate P) is not a persistent record, so item 7 does not force tau_beta > 0.
+- New numbers: if a fraction g of written bits must be carried by a massless one-dof psi, the Sun must emit P_psi >= 1.26 g^(4/3) L_sun; g = 1 needs 126 percent of L_sun (excluded by solar energy-loss limits of about 3-10 percent, recalled, not yet checked), so g <~ 0.06-0.15.
+- A thermal psi background T_psi would forbid dissipation below T_psi; nanokelvin experiments force T_psi < ~1 nK.
