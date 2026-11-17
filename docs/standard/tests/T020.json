@@ -1,7 +1,7 @@
 {
   "schema": "uet-test-card-v2",
   "test_id": "T020",
-  "status": "APPROVED",
+  "status": "CLOSED",
   "claim_id": "C_ROUTE_B_DISSIPATION_COUPLING",
   "theory_card": {
     "card_id": "UET_PARENT",

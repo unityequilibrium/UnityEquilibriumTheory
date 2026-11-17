@@ -364,10 +364,12 @@
     },
     {
       "claim_id": "C_ROUTE_B_DISSIPATION_COUPLING",
-      "statement": "AI proposal for route B (layer 2 feeding back into dynamics): the rate of free-energy destruction sources psi, so every body carries psi-charge Q = a M + beta P and feels an extra force set by one shared constant tau_beta = beta/sqrt(4 pi G), a time, times its power per mass (P/M)/c^2.",
-      "level": "L0_SPECULATIVE",
-      "evidence": [],
-      "note": "Not in the approved Theory Card; reciprocity (an action-like coupling) is assumed. UET-distinct: no standard theory couples gravity-like forces to dissipation. tau_beta = 0 recovers the current action. Design: topics/0.23_Unity_Scale_Link/Doc/STRESS_03_ROUTE_B_DISSIPATION_COUPLING.md; Test Card T020."
+      "statement": "AI proposal for route B: if the rate of free-energy destruction sources psi with a reciprocal coupling (charge Q = a M + beta P), lunar laser ranging limits the shared time constant tau_beta = beta/sqrt(4 pi G) to at most 4.61e15 s (1.46e8 yr) for psi ranges much longer than 1 AU.",
+      "level": "L2_CONFRONTED",
+      "evidence": [
+        "R_T020_ROUTE_B_LLR"
+      ],
+      "note": "Constraint, not a prediction; tau_beta = 0 admissible. The coupling is not in the approved Theory Card. tau_beta = 1/H0 would exceed the LLR limit about 9,900 times. L2 approved by the author 2026-11-17."
     }
   ]
 }

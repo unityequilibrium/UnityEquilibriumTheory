@@ -6,10 +6,11 @@
 
 These are source-linked historical records, not proof of completed research, successful publication, or current scientific readiness.
 
-Indexed entries: 654. Counts describe records, not accomplishments.
+Indexed entries: 655. Counts describe records, not accomplishments.
 
 | Date | Record | Area | Notes |
 | --- | --- | --- | --- |
+| 2026-11-17 | [T020 result at L2](2026/2026-11-17.md#t020-result-at-l2) (L183) | research-core | explicit_stream_and_area |
 | 2026-11-17 | [T020 route B: run](2026/2026-11-17.md#t020-route-b-run) (L173) | research-core | explicit_stream_and_area |
 | 2026-11-17 | [T020 draft: route B with lunar laser ranging](2026/2026-11-17.md#t020-draft-route-b-with-lunar-laser-ranging) (L163) | research-core | explicit_stream_and_area |
 | 2026-11-17 | [T019 result at L2](2026/2026-11-17.md#t019-result-at-l2) (L153) | research-core | explicit_stream_and_area |
