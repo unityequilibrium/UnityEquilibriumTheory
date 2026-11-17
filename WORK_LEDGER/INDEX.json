@@ -5,11 +5,11 @@
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
     "sources": 80,
-    "entries": 892,
+    "entries": 893,
     "by_stream": {
       "book-history": 94,
       "operations": 131,
-      "research": 666,
+      "research": 667,
       "review": 1
     },
     "exact_duplicates": 0,
@@ -415,8 +415,8 @@
     },
     {
       "path": "2026/2026-11-17.md",
-      "sha256": "947f44908daa8f0c46594ce16a93aecc27a20fa23f6c97568d403b8fbb50f284",
-      "entries": 30
+      "sha256": "13706bc8be8a6278a5019217d0e4a8e10b51ab88efd0d6d3fbe43829d253a219",
+      "entries": 31
     },
     {
       "path": "2026-08-14.md",
@@ -18214,9 +18214,29 @@
       "source": "2026/2026-11-17.md",
       "anchor": "author-choice-p--whole-animal-use",
       "start_line": 293,
-      "end_line": 301,
+      "end_line": 302,
       "title": "Author choice: P = whole-animal use",
-      "entry_sha256": "e9afcc93d1c1a8ac9ed40b5a409a5d489fb1073f3c79d5916fa6aced6f0f2928",
+      "entry_sha256": "8d9a7dc60059bf44cecd5bbb8afe4207f89fcbb8f06585ba7ef627e68ac22580",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-17",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-17.md#core-summary-shows-all-tests-t001-t020",
+      "source": "2026/2026-11-17.md",
+      "anchor": "core-summary-shows-all-tests-t001-t020",
+      "start_line": 303,
+      "end_line": 311,
+      "title": "Core summary shows all tests T001-T020",
+      "entry_sha256": "aca572c27569ef748ee66c254a3e060d6f3b5fb2a94c3192d19c310e0530b404",
       "stream": "research",
       "areas": [
         "research-core"
