@@ -84,3 +84,8 @@
 - Question: do species survival, history-dependent Casimir, readable records and black-hole information offer UET-distinct tests? Note: `Doc/STRESS_08_FOUR_DISTINCT_CANDIDATES.md`.
 - Species survival: fossil molluscs show higher metabolic rate goes with extinction (Strotz et al. 2018; Rojas-Ariza et al. 2026: survival odds -11 percent per mW, bivalves only); direction matches layer 3 but known and not UET-distinct; best next Test Card with new data and a predicted slope.
 - Readable records: CMB readable fraction ~1e-82 of its entropy; black-hole area law confirmed by GW250114 (equals "stored bits never decrease"); Casimir history dependence lacks a UET equation and conflicts with the author's no-feedback reading.
+
+## 2026-11-17 — Stress test 09: species-survival test design
+- Question: which species should persist longer under layer 3, and what do fossil data already show? Note: `Doc/STRESS_09_SPECIES_SURVIVAL_DESIGN.md`.
+- Known results disagree on P: high whole-animal metabolism goes with extinction in molluscs and mammals, but small marine genera go extinct more often across the Phanerozoic (Monarrez, Heim and Payne 2023), where geographic range is the strongest predictor.
+- No single choice of P fits all three; range-as-F is a post-hoc reading. Proposed a pre-declared composite F/P test; waits for the author's choice of P and F.

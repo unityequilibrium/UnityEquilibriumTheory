@@ -5,11 +5,11 @@
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
     "sources": 80,
-    "entries": 890,
+    "entries": 891,
     "by_stream": {
       "book-history": 94,
       "operations": 131,
-      "research": 664,
+      "research": 665,
       "review": 1
     },
     "exact_duplicates": 0,
@@ -415,8 +415,8 @@
     },
     {
       "path": "2026/2026-11-17.md",
-      "sha256": "1d395c2b79135c2084e55ef4173ff50d4f8d2382e0b639664876c87358b4982c",
-      "entries": 28
+      "sha256": "b4403219e48e1841a9322453d1e705e51dea9896492062cddf53b3406fcf0704",
+      "entries": 29
     },
     {
       "path": "2026-08-14.md",
@@ -18174,9 +18174,29 @@
       "source": "2026/2026-11-17.md",
       "anchor": "023-stress-test-08-four-distinct-candidates",
       "start_line": 273,
-      "end_line": 281,
+      "end_line": 282,
       "title": "0.23 stress test 08: four distinct candidates",
-      "entry_sha256": "df08fcc7f2c790a104524479a0063bd949c9bf6d492e23fdd973036ae14c6a13",
+      "entry_sha256": "58179b6b0bbe25fef40003debe537905263d216f333bddeb53becf96d0f3586e",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-17",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-17.md#023-stress-test-09-species-survival-design",
+      "source": "2026/2026-11-17.md",
+      "anchor": "023-stress-test-09-species-survival-design",
+      "start_line": 283,
+      "end_line": 291,
+      "title": "0.23 stress test 09: species-survival design",
+      "entry_sha256": "4882de06bd66fe37cda52cf22f3d560300b80124fb708a90fe5a1f14b1f3fdcd",
       "stream": "research",
       "areas": [
         "research-core"
