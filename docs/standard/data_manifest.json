@@ -180,6 +180,18 @@
       "license": "numerical facts transcribed from a published article (PMC open archive); no figures or text redistributed",
       "visibility": "PUBLIC",
       "note": "Transcribed from text that a scraping tool extracted from the PMC scan; the PDF itself could not be downloaded (bot protection). 2026-11-17 check: every Table I and Table II value in the CSV equals the extracted table, and the authors' own Calculated column (153, 165, 226, 241, 305 min) equals T_pred of the card. The extraction is still OCR of a scan, so a check against the printed page remains open. Cells per condition not reported in the extracted text."
+    },
+    {
+      "data_id": "ANAGE_BUILD15_LONGEVITY_METABOLISM",
+      "description": "AnAge Build 15 (4,645 animal species): maximum longevity, metabolic rate (W), body mass of the metabolic measurement, data quality, sample size, specimen origin",
+      "source": "Human Ageing Genomic Resources, AnAge Build 15 (release 2023-07-03), dataset.zip -> anage_data.txt; cite de Magalhaes et al., Nucleic Acids Res. 52(D1):D900-D908 (2024)",
+      "doi_or_url": "https://genomics.senescence.info/species/dataset.zip",
+      "retrieved": "2026-11-17",
+      "path": "docs/data/external/biology/anage/anage_build15_data.txt",
+      "sha256": "98867969fbd4d0bed6bab415c2715bb19079dbd7f92bdc26e5961856aa1c1519",
+      "license": "CC BY 3.0 (HAGR legal page); attribution as in source",
+      "visibility": "PUBLIC",
+      "note": "Raw file unchanged from the zip (CRLF bytes kept). Before approval only the column names and the selection counts were read (169 Mammalia and 128 Aves pass the T018 filter); no LEP value was computed."
     }
   ]
 }
