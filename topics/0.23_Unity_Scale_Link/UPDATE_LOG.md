@@ -6,3 +6,8 @@
 - All 13 remain visible as NOT_ADMITTED; source changes, disappearance or relabeling invalidate the review and withhold Topic execution. Original code and artifacts are preserved.
 - The real outside-repository `--topic 0.23` call ran no candidate, reported its coverage gap and returned 2; this is not a Topic pass or a decision against UET principles.
 - Remaining: satisfy the per-source execution/result/provenance prerequisites before selecting a bounded adapter; do not run generators merely to produce a positive status.
+
+## 2026-11-17 — Rebuilt as the UET falsification register
+- The author designated this Topic for testing what breaks UET. New entry point: `FALSIFICATION_REGISTER.md` (kill condition, test status and null comparison for every claim of the current parent action and engine).
+- The legacy kappa/beta falsification uses assumed scalings and always exits PASS; it stays preserved as LEGACY_UNREVIEWED. README keeps its content with a notice on top.
+- New numbers: the standard-physics null passes all 13 L2 claims; portal alpha <= 5.1e-12 for lambda >= 7e6 m; no registered bound between 3.9e-5 m and 1e5 m.
