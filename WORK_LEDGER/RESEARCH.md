@@ -6,10 +6,11 @@
 
 These are source-linked historical records, not proof of completed research, successful publication, or current scientific readiness.
 
-Indexed entries: 672. Counts describe records, not accomplishments.
+Indexed entries: 673. Counts describe records, not accomplishments.
 
 | Date | Record | Area | Notes |
 | --- | --- | --- | --- |
+| 2026-11-17 | [T021 run: lighting succession PASS](2026/2026-11-17.md#t021-run-lighting-succession-pass) (L363) | research-core | explicit_stream_and_area |
 | 2026-11-17 | [T021 draft: lighting succession](2026/2026-11-17.md#t021-draft-lighting-succession) (L353) | research-core | explicit_stream_and_area |
 | 2026-11-17 | [Topic 0.25: knowledge from interaction (Newton, Einstein)](2026/2026-11-17.md#topic-025-knowledge-from-interaction-newton-einstein) (L343) | research-core | explicit_stream_and_area |
 | 2026-11-17 | [Topic 0.25: innovation as lower resource cost per service](2026/2026-11-17.md#topic-025-innovation-as-lower-resource-cost-per-service) (L333) | research-core | explicit_stream_and_area |

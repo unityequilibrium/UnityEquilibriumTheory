@@ -329,3 +329,10 @@
 - With the author's download permission, transcribed Nordhaus (1997) Tables 1.3 and 1.6 (30 technologies). Every row passes two identities (labor = price / wage within 2%; lm/W x 293.07 = lm-h per 1,000 Btu within 3%). The data is registered as `NORDHAUS1997_LIGHTING`.
 - Draft card `docs/standard/tests/T021.json`, claim `C_T021_LIGHTING_SUCCESSION` (L0). The script refuses to run until the author approves.
 - Disclosure: not blind. The open risk is the energy boundary (device versus primary energy for early electric light).
+
+### 2026-11-17 - T021 run: PASS, no successor worse in both
+
+- Author approved T021 as drafted (e29941f7c). Run: 2 DOMINATES, 5 TRADE_OFF, 0 WORSE_BOTH at the device energy basis.
+- Kerosene (Silliman 1855) entered with 1.57 times the device energy of the sperm-oil lamp but 1/70 of the work hours: an energy-only rule picks the loser; counting time picks the winner.
+- Edison 1883 cost 3.3 times the work hours of kerosene; electric dominated by 1900. Primary energy is undecided (eta* 0.061 and 0.095).
+- Result record waits for the author's L2 decision. Not UET-distinct.

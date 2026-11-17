@@ -5,11 +5,11 @@
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
     "sources": 80,
-    "entries": 898,
+    "entries": 899,
     "by_stream": {
       "book-history": 94,
       "operations": 131,
-      "research": 672,
+      "research": 673,
       "review": 1
     },
     "exact_duplicates": 0,
@@ -415,8 +415,8 @@
     },
     {
       "path": "2026/2026-11-17.md",
-      "sha256": "a1c8898857ba22640684c95ce78d69f2f22d0f1816fec0078507abf38d7edb76",
-      "entries": 36
+      "sha256": "dd7c5d32f8bec4d284f871c6401de2ea0ccf54680c8464bd9b16dd82fc6f485e",
+      "entries": 37
     },
     {
       "path": "2026-08-14.md",
@@ -18334,9 +18334,29 @@
       "source": "2026/2026-11-17.md",
       "anchor": "t021-draft-lighting-succession",
       "start_line": 353,
-      "end_line": 361,
+      "end_line": 362,
       "title": "T021 draft: lighting succession",
-      "entry_sha256": "2fc35a561a22aa048d574cd3fe438d4ae516c5ca1d3bafc1ac89e30a90ad1102",
+      "entry_sha256": "cc1cb212b67f9e33081389351ddfbb1fe35da0cbdf6e1b378d45d1042bf98b32",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-17",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-17.md#t021-run-lighting-succession-pass",
+      "source": "2026/2026-11-17.md",
+      "anchor": "t021-run-lighting-succession-pass",
+      "start_line": 363,
+      "end_line": 371,
+      "title": "T021 run: lighting succession PASS",
+      "entry_sha256": "0a27a0b98f4257006293f622d5af7c9f1503a07160b9bbdf7831b24e6758799d",
       "stream": "research",
       "areas": [
         "research-core"
