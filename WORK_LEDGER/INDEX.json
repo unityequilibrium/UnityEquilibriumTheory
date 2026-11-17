@@ -5,11 +5,11 @@
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
     "sources": 80,
-    "entries": 886,
+    "entries": 887,
     "by_stream": {
       "book-history": 94,
       "operations": 131,
-      "research": 660,
+      "research": 661,
       "review": 1
     },
     "exact_duplicates": 0,
@@ -415,8 +415,8 @@
     },
     {
       "path": "2026/2026-11-17.md",
-      "sha256": "25abcf8740a1aa70b35780bfa000bf05a95d3f1e68deb99c864e9ea6eed25bbb",
-      "entries": 24
+      "sha256": "3fa3a898189adb269f101542dfc54ec95ce6a5217c6159f292ad816b6b17072e",
+      "entries": 25
     },
     {
       "path": "2026-08-14.md",
@@ -18094,9 +18094,29 @@
       "source": "2026/2026-11-17.md",
       "anchor": "03-parent-action-and-early-modified-gravity",
       "start_line": 233,
-      "end_line": 241,
+      "end_line": 242,
       "title": "0.3 parent action and Early Modified Gravity",
-      "entry_sha256": "94c573305b612ae2270e8af958fbf94b2dab9f39279fcbc5a648bb9e4bd9e2d0",
+      "entry_sha256": "7bbe5a80217843e83b6d6208226b0e8663706b60b4c16113df9a8fa94fcc0f2e",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-17",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-17.md#03-late-time-g-variation-emg-branch",
+      "source": "2026/2026-11-17.md",
+      "anchor": "03-late-time-g-variation-emg-branch",
+      "start_line": 243,
+      "end_line": 251,
+      "title": "0.3 late-time G variation (EMG branch)",
+      "entry_sha256": "05a4b6fc27560dad8885f1fd9c9ff92ea373f8196283967c9feb0e1c97e9b88a",
       "stream": "research",
       "areas": [
         "research-core"
