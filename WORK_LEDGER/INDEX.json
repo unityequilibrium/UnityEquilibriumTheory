@@ -5,11 +5,11 @@
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
     "sources": 80,
-    "entries": 870,
+    "entries": 871,
     "by_stream": {
       "book-history": 94,
       "operations": 131,
-      "research": 644,
+      "research": 645,
       "review": 1
     },
     "exact_duplicates": 0,
@@ -415,8 +415,8 @@
     },
     {
       "path": "2026/2026-11-17.md",
-      "sha256": "2b908f35d8cef7028626b5d7146f5b8e57fe44ad879497183e5e75ad9720e076",
-      "entries": 8
+      "sha256": "714913aabe83cf852c771624cace22bbcfe12ceb87d35977641d066a829c791e",
+      "entries": 9
     },
     {
       "path": "2026-08-14.md",
@@ -17774,12 +17774,32 @@
       "source": "2026/2026-11-17.md",
       "anchor": "run-t017-yeast-doubling-time-from-cycle-times",
       "start_line": 73,
-      "end_line": 81,
+      "end_line": 82,
       "title": "Run T017 (yeast doubling time from cycle times)",
-      "entry_sha256": "9a505ca0420554144c0342ba83fcb094b21863fc13febd668a30843cbd8d144a",
+      "entry_sha256": "cf6190c4bbb7fa4ac75986226f2d02aee2212d2832eee19cd56b45cd87456d34",
       "stream": "research",
       "areas": [
         "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-17",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-17.md#t017-result-at-l2",
+      "source": "2026/2026-11-17.md",
+      "anchor": "t017-result-at-l2",
+      "start_line": 83,
+      "end_line": 91,
+      "title": "T017 result at L2",
+      "entry_sha256": "10c7e0b62148a455834c779e35fe6707fc43ae628d6bbc1cf557df26deb55562",
+      "stream": "research",
+      "areas": [
+        "research-standards"
       ],
       "related_streams": [
         "research"

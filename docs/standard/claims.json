@@ -337,10 +337,12 @@
     },
     {
       "claim_id": "C_T017_YEAST_GROWTH_FROM_CYCLES",
-      "statement": "The layer-3 abundance law for unequal division connects single-cell yeast cycle times to population growth: the doubling time computed from parent and daughter generation times agrees with the counted doubling time in all five Hartwell-Unger conditions.",
-      "level": "L0_SPECULATIVE",
-      "evidence": [],
-      "note": "Under draft Test Card T017."
+      "statement": "The layer-3 abundance law for unequal division connects single-cell yeast cycle times to population growth: the doubling time computed from parent and daughter generation times agrees with the counted doubling time in all five Hartwell-Unger conditions (max z = 1.81).",
+      "level": "L2_CONFRONTED",
+      "evidence": [
+        "R_T017_YEAST_ASYMMETRIC"
+      ],
+      "note": "Constraint, not a prediction; not blind; not UET-distinct. L2 approved by the author 2026-11-17."
     }
   ]
 }

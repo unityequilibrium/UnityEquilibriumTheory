@@ -448,3 +448,9 @@ commit: this commit
 รองที่ไม่ตัดสิน: สัดส่วน daughter ที่ไม่มีตา z = 1.6/4.7/2.1/1.2 (plate 220 ตึง)
 ระดับ: C_T017 ยังเป็น L0 รอผู้แต่งอนุมัติผลเป็น L2; ไม่ blind, ไม่ใช่ผลเฉพาะของ UET
 commit: this commit
+
+## 2026-11-17 — T017 ขึ้น L2
+ทำ: ผู้แต่งอนุมัติผล T017; เขียน R_T017_YEAST_ASYMMETRIC, ปิดการ์ด T017 (CLOSED)
+ผล: C_T017_YEAST_GROWTH_FROM_CYCLES → L2 (z สูงสุด 1.81)
+ระดับ: L2 แบบ constraint ไม่ใช่การทำนาย; ไม่ blind; ไม่ใช่ผลเฉพาะของ UET
+commit: this commit

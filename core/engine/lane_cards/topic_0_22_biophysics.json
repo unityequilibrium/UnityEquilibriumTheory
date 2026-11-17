@@ -37,7 +37,7 @@
     "comparison_data_ids": [
       "HARTWELL_UNGER1977_YEAST_CYCLES"
     ],
-    "test_card": "T017 (draft)"
+    "test_card": "T017 (CLOSED, PASS, L2)"
   },
   "legacy": {
     "engine": "topics/0.22_Biophysics_Origin_of_Life/Code/03_Research (biomarker, HP folding, folding-dynamics gate) and Code/Legacy",

@@ -6,10 +6,11 @@
 
 These are source-linked historical records, not proof of completed research, successful publication, or current scientific readiness.
 
-Indexed entries: 644. Counts describe records, not accomplishments.
+Indexed entries: 645. Counts describe records, not accomplishments.
 
 | Date | Record | Area | Notes |
 | --- | --- | --- | --- |
+| 2026-11-17 | [T017 result at L2](2026/2026-11-17.md#t017-result-at-l2) (L83) | research-standards | explicit_stream_and_area |
 | 2026-11-17 | [Run T017 (yeast doubling time from cycle times)](2026/2026-11-17.md#run-t017-yeast-doubling-time-from-cycle-times) (L73) | research-core | explicit_stream_and_area |
 | 2026-11-17 | [Unequal-division layer 3 and draft T017 (yeast)](2026/2026-11-17.md#unequal-division-layer-3-and-draft-t017-yeast) (L63) | research-core | explicit_stream_and_area |
 | 2026-11-17 | [T017 data search, round 3 (yeast)](2026/2026-11-17.md#t017-data-search-round-3-yeast) (L53) | research-core | explicit_stream_and_area |
