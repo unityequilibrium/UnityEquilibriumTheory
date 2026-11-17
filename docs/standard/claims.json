@@ -374,9 +374,11 @@
     {
       "claim_id": "C_T021_LIGHTING_SUCCESSION",
       "statement": "AI translation of the author's statement (2026-11-17) that innovation saves resources, time included: in the historical succession of lighting technologies no successor that replaced an incumbent used more energy per lumen-hour and more hours of work per lumen-hour than the incumbent at the time it entered.",
-      "level": "L0_SPECULATIVE",
-      "evidence": [],
-      "note": "Stage 1 of test D (topics/0.25_Strategy_Power_Economics/Doc/ANALYSIS_EXTERNAL_ENERGY_UET_2026-11-17.md section 6). Needs no exchange rate between time and energy. Not UET-distinct: standard economics expects the same."
+      "level": "L2_CONFRONTED",
+      "evidence": [
+        "R_T021_LIGHTING_SUCCESSION"
+      ],
+      "note": "Stage 1 of test D (topics/0.25_Strategy_Power_Economics/Doc/ANALYSIS_EXTERNAL_ENERGY_UET_2026-11-17.md section 6). Needs no exchange rate between time and energy. Not UET-distinct: standard economics expects the same. Run 2026-11-17: PASS, 2 DOMINATES, 5 TRADE_OFF, 0 WORSE_BOTH at the device energy basis. L2 approved by the author 2026-11-18; device energy basis only."
     }
   ]
 }

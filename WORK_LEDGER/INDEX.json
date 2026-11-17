@@ -4,12 +4,12 @@
   "generator_sha256": "b32005e4bdbf59da6681ae630fa1d9d4415c361f7523be18c8b52a86dc8c93e9",
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
-    "sources": 80,
-    "entries": 899,
+    "sources": 81,
+    "entries": 900,
     "by_stream": {
       "book-history": 94,
       "operations": 131,
-      "research": 673,
+      "research": 674,
       "review": 1
     },
     "exact_duplicates": 0,
@@ -417,6 +417,11 @@
       "path": "2026/2026-11-17.md",
       "sha256": "dd7c5d32f8bec4d284f871c6401de2ea0ccf54680c8464bd9b16dd82fc6f485e",
       "entries": 37
+    },
+    {
+      "path": "2026/2026-11-18.md",
+      "sha256": "c90b03fb2e6ec01e64449e9ee67f5a0ce79e593112da25b09b8e084b13fdac07",
+      "entries": 1
     },
     {
       "path": "2026-08-14.md",
@@ -18367,6 +18372,26 @@
       "basis": "explicit_stream_and_area",
       "flags": [],
       "date": "2026-11-17",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-18.md#t021-result-at-l2",
+      "source": "2026/2026-11-18.md",
+      "anchor": "t021-result-at-l2",
+      "start_line": 3,
+      "end_line": 11,
+      "title": "T021 result at L2",
+      "entry_sha256": "86ed63113a39d8a9d1d56f1f6eeb39d3d8153da5dcf66543281fd8b98f791a6e",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-18",
       "legacy_root_path": false
     },
     {
