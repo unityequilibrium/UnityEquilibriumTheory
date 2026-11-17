@@ -57,3 +57,8 @@
 - ข้อควรระวัง: ช่วง budded B ใน Fig. 5 อาจคำนวณจาก budded fraction (Eq. 3) ไม่ได้วัดตรง ต้องอ่านจากต้นฉบับก่อนใช้ ข้อความที่ดึงจาก PDF สแกนปนกันระหว่างตาราง
 - สูตรที่จะใช้: ยีสต์แบ่งตัวไม่เท่ากัน สูตรเซลล์แบ่งเท่ากันใช้ไม่ได้ ต้อง derive กฎ abundance แบบ asymmetric (parent/daughter) ก่อน ข้อดีคือสัดส่วนเซลล์ที่มีตา = 2^{B/T_d} − 1 ไม่ขึ้นกับความไม่สมมาตร
 - ถัดไป: อ่านตารางจากต้นฉบับ (ต้องดาวน์โหลด PDF ผู้เขียนต้องอนุญาต), derive สูตร asymmetric + physics test, แล้วร่าง Test Card
+
+## ร่าง Test Card แล้ว (2026-11-17)
+
+อ่านต้นฉบับแล้ว: ช่วง budded B ของ Fig. 5 คำนวณจาก budded fraction (Eq. 3) จึงไม่อิสระ เปลี่ยนตัวตัดสินเป็น **doubling time ของประชากร** ที่นับจาก field เดียวกัน เทียบกับค่าที่คำนวณจาก P และ D ของเซลล์เดี่ยว (2^{-P/T} + 2^{-D/T} = 1)
+ไฟล์: `docs/standard/tests/T017.json` (DRAFT), `core/03_lanes/persistence/t017_yeast_asymmetric.py`, ข้อมูล `docs/data/external/biology/yeast_cell_cycle/hartwell_unger1977_cycle_times.csv`

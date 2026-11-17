@@ -6,10 +6,11 @@
 
 These are source-linked historical records, not proof of completed research, successful publication, or current scientific readiness.
 
-Indexed entries: 642. Counts describe records, not accomplishments.
+Indexed entries: 643. Counts describe records, not accomplishments.
 
 | Date | Record | Area | Notes |
 | --- | --- | --- | --- |
+| 2026-11-17 | [Unequal-division layer 3 and draft T017 (yeast)](2026/2026-11-17.md#unequal-division-layer-3-and-draft-t017-yeast) (L63) | research-core | explicit_stream_and_area |
 | 2026-11-17 | [T017 data search, round 3 (yeast)](2026/2026-11-17.md#t017-data-search-round-3-yeast) (L53) | research-core | explicit_stream_and_area |
 | 2026-11-17 | [T017 data search, round 2](2026/2026-11-17.md#t017-data-search-round-2) (L43) | research-core | explicit_stream_and_area |
 | 2026-11-17 | [T017 design draft: cell-cycle abundance (topic 0.22)](2026/2026-11-17.md#t017-design-draft-cell-cycle-abundance-topic-022) (L33) | research-core | explicit_stream_and_area |

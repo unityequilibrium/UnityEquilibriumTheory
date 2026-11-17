@@ -16,22 +16,28 @@
     "layer23.mitotic_index",
     "layer23.abundance",
     "layer23.r_star",
-    "layer23.coexistence_resources"
+    "layer23.coexistence_resources",
+    "layer23.doubling_time_asymmetric",
+    "layer23.unbudded_daughter_fraction",
+    "layer23.budded_fraction"
   ],
   "parameters": [
     {
-      "name": "phase_durations_and_cycle_time",
-      "value": "to be source-locked (time-lapse measurements)",
-      "unit": "h",
+      "name": "yeast_parent_and_daughter_generation_times",
+      "value": "Hartwell and Unger 1977 Table I",
+      "unit": "min",
       "origin": "MEASURED_INDEPENDENT",
-      "source": "candidate Test Card T017 (not drafted)"
+      "source": "single-cell time-lapse",
+      "data_id": "HARTWELL_UNGER1977_YEAST_CYCLES"
     }
   ],
   "observable": {
-    "quantity": "fraction of cells in a cell-cycle phase (snapshot) against the fraction implied by independently timed phase durations",
-    "unit": "1",
-    "comparison_data_ids": [],
-    "test_card": null
+    "quantity": "population doubling time of budding yeast from single-cell cycle times (T017); phase fractions of dividing cells",
+    "unit": "min and 1",
+    "comparison_data_ids": [
+      "HARTWELL_UNGER1977_YEAST_CYCLES"
+    ],
+    "test_card": "T017 (draft)"
   },
   "legacy": {
     "engine": "topics/0.22_Biophysics_Origin_of_Life/Code/03_Research (biomarker, HP folding, folding-dynamics gate) and Code/Legacy",

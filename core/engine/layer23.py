@@ -21,6 +21,7 @@ from ._load import load
 _l23 = load("03_lanes/persistence/uet_layer2_to_3.py")
 _path_a = load("03_lanes/persistence/uet_path_a_models.py")
 _growing = load("03_lanes/persistence/uet_growing_abundance.py")
+_asym = load("03_lanes/persistence/uet_asymmetric_division.py")
 
 K_B_J_PER_K = 1.380649e-23
 
@@ -70,6 +71,20 @@ def phase_fraction_dividing(a1: float, a2: float, cycle: float) -> float:
 
 def mitotic_index(t_mitosis: float, cycle: float) -> float:
     return _growing.mitotic_index(t_mitosis, cycle)
+
+
+def doubling_time_asymmetric(parent_cycle: float, daughter_cycle: float) -> float:
+    """Unequal division: T from 2^{-P/T} + 2^{-D/T} = 1."""
+    return _asym.doubling_time(parent_cycle, daughter_cycle)
+
+
+def unbudded_daughter_fraction(parent_cycle: float, daughter_cycle: float, budded: float, doubling: float) -> float:
+    return _asym.unbudded_daughter_fraction(parent_cycle, daughter_cycle, budded, doubling)
+
+
+def budded_fraction(budded: float, doubling: float) -> float:
+    """Fraction of cells in the final period B of their cycle: 2^{B/T} - 1."""
+    return _asym.budded_fraction(budded, doubling)
 
 
 def luminosity_function_slope_per_mag(n: float) -> float:

@@ -5,11 +5,11 @@
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
     "sources": 80,
-    "entries": 868,
+    "entries": 869,
     "by_stream": {
       "book-history": 94,
       "operations": 131,
-      "research": 642,
+      "research": 643,
       "review": 1
     },
     "exact_duplicates": 0,
@@ -415,8 +415,8 @@
     },
     {
       "path": "2026/2026-11-17.md",
-      "sha256": "4b9187628cf82d9f042af22784ba6bba67dd5641a2eec524b4b020296bc0560f",
-      "entries": 6
+      "sha256": "8cfa59df67d308dfbb9fe26be4c83d0d2bc31179fc443c3771f7cd5af59e1365",
+      "entries": 7
     },
     {
       "path": "2026-08-14.md",
@@ -17734,9 +17734,29 @@
       "source": "2026/2026-11-17.md",
       "anchor": "t017-data-search-round-3-yeast",
       "start_line": 53,
-      "end_line": 61,
+      "end_line": 62,
       "title": "T017 data search, round 3 (yeast)",
-      "entry_sha256": "62ab446c5517b7df5197059c70f6a199d4e07a2e12bca2e0fb603cabd9e06ba2",
+      "entry_sha256": "41c5b48c8fcce3419447a31a7bbc66b13dec911490e96a755f5255ce16688eb7",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-17",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-17.md#unequal-division-layer-3-and-draft-t017-yeast",
+      "source": "2026/2026-11-17.md",
+      "anchor": "unequal-division-layer-3-and-draft-t017-yeast",
+      "start_line": 63,
+      "end_line": 71,
+      "title": "Unequal-division layer 3 and draft T017 (yeast)",
+      "entry_sha256": "0f0bba05a5ed5b1efa7129ff4f57d80b8ff34f76c2dca8996959e34ddd224d70",
       "stream": "research",
       "areas": [
         "research-core"

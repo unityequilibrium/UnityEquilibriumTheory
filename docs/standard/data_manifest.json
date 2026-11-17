@@ -168,6 +168,18 @@
       "license": "numerical facts transcribed from published sources; no figures or text redistributed",
       "visibility": "PUBLIC",
       "note": "eta values checked against the arXiv abstract on 2026-11-16. Composition rows (alloy fractions, isotopic abundances, atomic weights) were transcribed from memory and must be re-checked against CIAAW and the MICROSCOPE instrument papers before T016 is approved."
+    },
+    {
+      "data_id": "HARTWELL_UNGER1977_YEAST_CYCLES",
+      "description": "Budding yeast C276: single-cell parent and daughter generation times and population doubling times (Table I), percent of unbudded cells with no bud scar (Table II), budded-interval regression",
+      "source": "Hartwell and Unger, J. Cell Biol. 75, 422-435 (1977), Tables I and II and text",
+      "doi_or_url": "https://doi.org/10.1083/jcb.75.2.422",
+      "retrieved": "2026-11-17",
+      "path": "docs/data/external/biology/yeast_cell_cycle/hartwell_unger1977_cycle_times.csv",
+      "sha256": "941b7aac3e2d7ef80b8a76f7b600fbfcf2923a15ff18546aacda5656176f385e",
+      "license": "numerical facts transcribed from a published article (PMC open archive); no figures or text redistributed",
+      "visibility": "PUBLIC",
+      "note": "Transcribed from text that a scraping tool extracted from the PMC scan; the PDF itself could not be downloaded (bot protection). Re-check against the printed tables before T017 is approved. Cells per condition not reported in the extracted text."
     }
   ]
 }

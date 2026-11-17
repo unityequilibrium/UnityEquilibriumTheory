@@ -435,3 +435,9 @@ commit: this commit
 ผล: λ → 0 ได้ bτ; สัดส่วนเซลล์ในแต่ละ phase = 2(2^{-a1/T} − 2^{-a2/T}) ตรงกับ agent model (cv 0.1) ถึง 0.005; รอบคงที่ไม่ผสมเข้าสู่การกระจายเสถียร
 ระดับ: R_L3_GROWING_ABUNDANCE → L1; ถัดไป: Test Card T017 เทียบ mitotic index กับเวลาของ phase ที่วัดแยก (ยังไม่ร่าง)
 commit: this commit
+
+## 2026-11-17 — ยีสต์แบ่งตัวไม่เท่ากัน: derive และร่าง T017
+ทำ: derive กฎชั้น 3 สำหรับ parent/daughter (2^{-P/T}+2^{-D/T}=1, สัดส่วน daughter ที่ไม่มีตา, budded = 2^{B/T}−1) และร่าง T017 กับ Hartwell & Unger 1977
+ผล: agent model ตรงสูตร; ทำซ้ำค่าที่ผู้แต่งคำนวณได้ (T 165 นาที, 82%); ระหว่างร่างเห็น T ที่คำนวณต่างจากที่นับไม่เกิน 5% (z สูงสุดราว 1.8)
+ระดับ: R_L3_ASYMMETRIC_DIVISION → L1; T017 DRAFT ไม่ blind; ตัวเลขถอดจาก PDF สแกนต้องตรวจก่อนอนุมัติ
+commit: this commit

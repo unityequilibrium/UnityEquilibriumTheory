@@ -325,6 +325,22 @@
         "R_L3_GROWING_ABUNDANCE"
       ],
       "note": "Standard age-distribution result of cell kinetics; extends the engine to growing populations (topic 0.22 lane card). A fixed cycle never relaxes to the stable distribution; variability is needed for mixing. Not UET-distinct."
+    },
+    {
+      "claim_id": "C_L3_ASYMMETRIC_DIVISION",
+      "statement": "For unequal division with parent cycle P and daughter cycle D sharing a budded period B, the layer-3 law with a growing formation rate gives the doubling time from 2^{-P/T} + 2^{-D/T} = 1, the unbudded-daughter fraction (1 - e^{-a U_d}) / [(1 - e^{-a U_d}) + (1 - e^{-a U_p})] with a = ln 2 / T, and the budded fraction 2^{B/T} - 1; an agent model with 10 percent spread agrees, and P = D recovers equal division.",
+      "level": "L1_CONSISTENT",
+      "evidence": [
+        "R_L3_ASYMMETRIC_DIVISION"
+      ],
+      "note": "Reproduces the age-distribution analysis of Hartwell and Unger (1977); standard cell kinetics, not UET-distinct."
+    },
+    {
+      "claim_id": "C_T017_YEAST_GROWTH_FROM_CYCLES",
+      "statement": "The layer-3 abundance law for unequal division connects single-cell yeast cycle times to population growth: the doubling time computed from parent and daughter generation times agrees with the counted doubling time in all five Hartwell-Unger conditions.",
+      "level": "L0_SPECULATIVE",
+      "evidence": [],
+      "note": "Under draft Test Card T017."
     }
   ]
 }
