@@ -5,11 +5,11 @@
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
     "sources": 80,
-    "entries": 895,
+    "entries": 896,
     "by_stream": {
       "book-history": 94,
       "operations": 131,
-      "research": 669,
+      "research": 670,
       "review": 1
     },
     "exact_duplicates": 0,
@@ -415,8 +415,8 @@
     },
     {
       "path": "2026/2026-11-17.md",
-      "sha256": "2c6686e28a45fff4cf0fe02aa418a295a145399127f142e7ea37015f76f39860",
-      "entries": 33
+      "sha256": "956dccfafda7bf980166806117739a9999e506430ebf8c1596662604c1012cad",
+      "entries": 34
     },
     {
       "path": "2026-08-14.md",
@@ -18274,9 +18274,29 @@
       "source": "2026/2026-11-17.md",
       "anchor": "topic-025-external-energy-as-a-two-level-system",
       "start_line": 323,
-      "end_line": 331,
+      "end_line": 332,
       "title": "Topic 0.25: external energy as a two-level system",
-      "entry_sha256": "0963e524a896531d9fefbf0c7d15b718e5f9138bc795fb183d5f5074776250b4",
+      "entry_sha256": "5c90997b3fe6a863a64a56088cffe1df7761aaa25dd5e4a2a3648d2e2ba506c6",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-17",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-17.md#topic-025-innovation-as-lower-resource-cost-per-service",
+      "source": "2026/2026-11-17.md",
+      "anchor": "topic-025-innovation-as-lower-resource-cost-per-service",
+      "start_line": 333,
+      "end_line": 341,
+      "title": "Topic 0.25: innovation as lower resource cost per service",
+      "entry_sha256": "5ae1504a0d0ce0d51a653760e8c4c824be1a319c61305ee0543392776789c64a",
       "stream": "research",
       "areas": [
         "research-core"

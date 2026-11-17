@@ -312,3 +312,8 @@
 - Verified numbers: forager ~120 W, industrial median ~1,580 W, top > 10,000 W (13-83 times metabolism); cities flux 1e5-1e8 W/km2 versus land NPP ~1e5 W/km2 (Burger et al. 2011, 2017).
 - Translation: inner level (body) keeps P_in near constant; the outer level carries the burn, with tau_out = F_out/(P_out - J). The book's R = f(N,K,I) stays an explanatory model; no identity is restored.
 - Next: author picks a real-data test (biomass ceiling, or replication of Burger 2011 exponents on 2015-2023 data).
+
+### 2026-11-17 - Author redirects the test to innovation
+
+- The author noted that J is already in the core equations, and that total human energy is the wrong test: humanity is still developing, and innovation should cut resources per unit of service, with time counted as a resource.
+- Added section 6 to the analysis note: resource vector per service, cost C = E + w_T T, and test D (technology succession). The weight w_T must be locked before data; the AI proposal is w_T = power per person.
