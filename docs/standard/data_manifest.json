@@ -179,7 +179,7 @@
       "sha256": "941b7aac3e2d7ef80b8a76f7b600fbfcf2923a15ff18546aacda5656176f385e",
       "license": "numerical facts transcribed from a published article (PMC open archive); no figures or text redistributed",
       "visibility": "PUBLIC",
-      "note": "Transcribed from text that a scraping tool extracted from the PMC scan; the PDF itself could not be downloaded (bot protection). Re-check against the printed tables before T017 is approved. Cells per condition not reported in the extracted text."
+      "note": "Transcribed from text that a scraping tool extracted from the PMC scan; the PDF itself could not be downloaded (bot protection). 2026-11-17 check: every Table I and Table II value in the CSV equals the extracted table, and the authors' own Calculated column (153, 165, 226, 241, 305 min) equals T_pred of the card. The extraction is still OCR of a scan, so a check against the printed page remains open. Cells per condition not reported in the extracted text."
     }
   ]
 }
