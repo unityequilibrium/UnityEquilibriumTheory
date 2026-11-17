@@ -11,3 +11,9 @@
 - The author designated this Topic for testing what breaks UET. New entry point: `FALSIFICATION_REGISTER.md` (kill condition, test status and null comparison for every claim of the current parent action and engine).
 - The legacy kappa/beta falsification uses assumed scalings and always exits PASS; it stays preserved as LEGACY_UNREVIEWED. README keeps its content with a notice on top.
 - New numbers: the standard-physics null passes all 13 L2 claims; portal alpha <= 5.1e-12 for lambda >= 7e6 m; no registered bound between 3.9e-5 m and 1e5 m.
+
+## 2026-11-17 — Stress test 01: cross-scale layer 3
+- Question: can N = b tau with tau = F/P fail outside physics where the field's own theory does not fail? Note: `Doc/STRESS_01_LAYER3_CROSS_SCALE.md`.
+- Finding: not in its current form. N = b tau is Little's law (identity at steady state); tau = F/P is each field's standard energetics; layer 3 carries no shared constant to transfer across fields.
+- New number: pygmy-possum starvation data reproduce 307/189/124 vs 310/195/127 days, but only because P was inferred from mass loss (identity, not a test).
+- Next: author chooses a pre-declared scope (exhaustion vs hazard lifetime shape) or a theory step (shared constant, or route B layer-2 term).

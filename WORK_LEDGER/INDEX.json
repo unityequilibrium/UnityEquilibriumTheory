@@ -5,11 +5,11 @@
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
     "sources": 80,
-    "entries": 872,
+    "entries": 873,
     "by_stream": {
       "book-history": 94,
       "operations": 131,
-      "research": 646,
+      "research": 647,
       "review": 1
     },
     "exact_duplicates": 0,
@@ -415,8 +415,8 @@
     },
     {
       "path": "2026/2026-11-17.md",
-      "sha256": "a4ec705911a396bb6f4cecce4b6865fd705389cee91f43919d94a7e66208200d",
-      "entries": 10
+      "sha256": "4f89cad8c0ea44f4e949cb3654b69f6df2743e55897b870f330fc6efb7ac9b18",
+      "entries": 11
     },
     {
       "path": "2026-08-14.md",
@@ -17814,9 +17814,29 @@
       "source": "2026/2026-11-17.md",
       "anchor": "topic-023-rebuilt-as-the-theory-stress-test",
       "start_line": 93,
-      "end_line": 101,
+      "end_line": 102,
       "title": "Topic 0.23 rebuilt as the theory stress test",
-      "entry_sha256": "41e0d92d0aecb373c7ad78651464bed1d5b3d3f35c0a715abebbbee8ad4e639b",
+      "entry_sha256": "7567f11feea75b6a8fdab0d7867ed827b87ab1af148b8406868d50c71b538ccc",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-17",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-17.md#023-stress-test-01-cross-scale-layer-3",
+      "source": "2026/2026-11-17.md",
+      "anchor": "023-stress-test-01-cross-scale-layer-3",
+      "start_line": 103,
+      "end_line": 111,
+      "title": "0.23 stress test 01: cross-scale layer 3",
+      "entry_sha256": "1e1c130a7decec65e918ab597c363a9bdb54661d1a89d18fd14568b9d183cceb",
       "stream": "research",
       "areas": [
         "research-core"
