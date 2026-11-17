@@ -317,3 +317,9 @@
 
 - The author noted that J is already in the core equations, and that total human energy is the wrong test: humanity is still developing, and innovation should cut resources per unit of service, with time counted as a resource.
 - Added section 6 to the analysis note: resource vector per service, cost C = E + w_T T, and test D (technology succession). The weight w_T must be locked before data; the AI proposal is w_T = power per person.
+
+### 2026-11-17 - Quality of time as leverage of knowledge
+
+- Following the author (look at interactions that cause change, e.g. Newton and Einstein), added `Doc/ANALYSIS_KNOWLEDGE_FROM_INTERACTION_2026-11-17.md`. Quality of time is defined as leverage L = later resource savings / resource cost of producing the knowledge.
+- Verified numbers: keeping Moore's law needs more than 18 times the researchers of the early 1970s; research productivity falls about 5-7% per year (Bloom et al. 2020). Small teams that recombine older ideas disrupt (Wu et al. 2019, 65 million works).
+- Test D is now in three stages: Pareto succession (no weight needed), the time-energy rate measured from data, then knowledge leverage. The author no longer has to pick w_T.

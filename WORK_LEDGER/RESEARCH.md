@@ -6,10 +6,11 @@
 
 These are source-linked historical records, not proof of completed research, successful publication, or current scientific readiness.
 
-Indexed entries: 670. Counts describe records, not accomplishments.
+Indexed entries: 671. Counts describe records, not accomplishments.
 
 | Date | Record | Area | Notes |
 | --- | --- | --- | --- |
+| 2026-11-17 | [Topic 0.25: knowledge from interaction (Newton, Einstein)](2026/2026-11-17.md#topic-025-knowledge-from-interaction-newton-einstein) (L343) | research-core | explicit_stream_and_area |
 | 2026-11-17 | [Topic 0.25: innovation as lower resource cost per service](2026/2026-11-17.md#topic-025-innovation-as-lower-resource-cost-per-service) (L333) | research-core | explicit_stream_and_area |
 | 2026-11-17 | [Topic 0.25: external energy as a two-level system](2026/2026-11-17.md#topic-025-external-energy-as-a-two-level-system) (L323) | research-core | explicit_stream_and_area |
 | 2026-11-17 | [Stress test 10: is psi needed](2026/2026-11-17.md#stress-test-10-is-psi-needed) (L313) | research-core | explicit_stream_and_area |

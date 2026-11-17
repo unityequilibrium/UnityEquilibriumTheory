@@ -5,11 +5,11 @@
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
     "sources": 80,
-    "entries": 896,
+    "entries": 897,
     "by_stream": {
       "book-history": 94,
       "operations": 131,
-      "research": 670,
+      "research": 671,
       "review": 1
     },
     "exact_duplicates": 0,
@@ -415,8 +415,8 @@
     },
     {
       "path": "2026/2026-11-17.md",
-      "sha256": "956dccfafda7bf980166806117739a9999e506430ebf8c1596662604c1012cad",
-      "entries": 34
+      "sha256": "abf76cc620bf08886f54c1a479087d1736e690aa2dc3042fd099071dcc91deb5",
+      "entries": 35
     },
     {
       "path": "2026-08-14.md",
@@ -18294,9 +18294,29 @@
       "source": "2026/2026-11-17.md",
       "anchor": "topic-025-innovation-as-lower-resource-cost-per-service",
       "start_line": 333,
-      "end_line": 341,
+      "end_line": 342,
       "title": "Topic 0.25: innovation as lower resource cost per service",
-      "entry_sha256": "5ae1504a0d0ce0d51a653760e8c4c824be1a319c61305ee0543392776789c64a",
+      "entry_sha256": "f7260a32d48db83bfae58e6ca598ce1c8eae3424a7781d4cab703c977ee1d7b1",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-17",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-17.md#topic-025-knowledge-from-interaction-newton-einstein",
+      "source": "2026/2026-11-17.md",
+      "anchor": "topic-025-knowledge-from-interaction-newton-einstein",
+      "start_line": 343,
+      "end_line": 351,
+      "title": "Topic 0.25: knowledge from interaction (Newton, Einstein)",
+      "entry_sha256": "d493d7f91f193cdf7e9e89c33c13dc4309d9d1220831be21c7b945d9f51cb500",
       "stream": "research",
       "areas": [
         "research-core"
