@@ -5,11 +5,11 @@
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
     "sources": 80,
-    "entries": 871,
+    "entries": 872,
     "by_stream": {
       "book-history": 94,
       "operations": 131,
-      "research": 645,
+      "research": 646,
       "review": 1
     },
     "exact_duplicates": 0,
@@ -415,8 +415,8 @@
     },
     {
       "path": "2026/2026-11-17.md",
-      "sha256": "714913aabe83cf852c771624cace22bbcfe12ceb87d35977641d066a829c791e",
-      "entries": 9
+      "sha256": "a4ec705911a396bb6f4cecce4b6865fd705389cee91f43919d94a7e66208200d",
+      "entries": 10
     },
     {
       "path": "2026-08-14.md",
@@ -17794,12 +17794,32 @@
       "source": "2026/2026-11-17.md",
       "anchor": "t017-result-at-l2",
       "start_line": 83,
-      "end_line": 91,
+      "end_line": 92,
       "title": "T017 result at L2",
-      "entry_sha256": "10c7e0b62148a455834c779e35fe6707fc43ae628d6bbc1cf557df26deb55562",
+      "entry_sha256": "b7d8b4fc8920c3fbbfe530cdc5b0f963722f569901e7211322969d31f2457aad",
       "stream": "research",
       "areas": [
         "research-standards"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-17",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-17.md#topic-023-rebuilt-as-the-theory-stress-test",
+      "source": "2026/2026-11-17.md",
+      "anchor": "topic-023-rebuilt-as-the-theory-stress-test",
+      "start_line": 93,
+      "end_line": 101,
+      "title": "Topic 0.23 rebuilt as the theory stress test",
+      "entry_sha256": "41e0d92d0aecb373c7ad78651464bed1d5b3d3f35c0a715abebbbee8ad4e639b",
+      "stream": "research",
+      "areas": [
+        "research-core"
       ],
       "related_streams": [
         "research"

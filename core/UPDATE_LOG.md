@@ -454,3 +454,9 @@ commit: this commit
 ผล: C_T017_YEAST_GROWTH_FROM_CYCLES → L2 (z สูงสุด 1.81)
 ระดับ: L2 แบบ constraint ไม่ใช่การทำนาย; ไม่ blind; ไม่ใช่ผลเฉพาะของ UET
 commit: this commit
+
+## 2026-11-17 — Topic 0.23 เป็นหัวข้อทดสอบว่าอะไรทำให้ UET พัง
+ทำ: ผู้แต่งกำหนดให้ 0.23 เป็น theory stress test; ตรวจงานเก่า (Ω[C] κ/β, ตัวเลข "พัง" เป็นสูตรสมมติ, PASS เสมอ) → LEGACY_UNREVIEWED; เขียน FALSIFICATION_REGISTER
+ผล: null (ฟิสิกส์มาตรฐาน) ผ่านเหมือน UET ทั้ง 13/13 claim ที่ L2; α ของ portal ≤ 5.1e-12 ที่ λ ≥ 7e6 m; ช่วง 3.9e-5 ถึง 1e5 m ยังไม่มีข้อมูลในทะเบียน
+ระดับ: ไม่เปลี่ยน claim; จุดที่พังได้จริงที่สุดคือกฎชั้น 3 ข้ามสเกล (AI interpretation)
+commit: this commit
