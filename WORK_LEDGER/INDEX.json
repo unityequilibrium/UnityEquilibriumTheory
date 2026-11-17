@@ -5,11 +5,11 @@
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
     "sources": 80,
-    "entries": 866,
+    "entries": 867,
     "by_stream": {
       "book-history": 94,
       "operations": 131,
-      "research": 640,
+      "research": 641,
       "review": 1
     },
     "exact_duplicates": 0,
@@ -415,8 +415,8 @@
     },
     {
       "path": "2026/2026-11-17.md",
-      "sha256": "6be143a563f4b7737dd48d69a5fcabe68a926bd65c4b9e8f9493064862834a64",
-      "entries": 4
+      "sha256": "e117c23a00c74604215935665bcfc94f71d01d878450716bb894e4e5c67a1d30",
+      "entries": 5
     },
     {
       "path": "2026-08-14.md",
@@ -17694,9 +17694,29 @@
       "source": "2026/2026-11-17.md",
       "anchor": "t017-design-draft-cell-cycle-abundance-topic-022",
       "start_line": 33,
-      "end_line": 41,
+      "end_line": 42,
       "title": "T017 design draft: cell-cycle abundance (topic 0.22)",
-      "entry_sha256": "4297c802fed59951ae832ae44d637ba6823c6b3921d53f0ac5ecc5482ef728d4",
+      "entry_sha256": "58c4a62d2d53a60ce9cc6d507b82cb6fcb5d2c04da18a20f6c64d8ceaa65edd2",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-17",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-17.md#t017-data-search-round-2",
+      "source": "2026/2026-11-17.md",
+      "anchor": "t017-data-search-round-2",
+      "start_line": 43,
+      "end_line": 51,
+      "title": "T017 data search, round 2",
+      "entry_sha256": "e167b45846a8111409576f4951ebe54e0783d55702a032e4f72b6b04687bcb21",
       "stream": "research",
       "areas": [
         "research-core"

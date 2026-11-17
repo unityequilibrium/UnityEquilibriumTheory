@@ -37,3 +37,14 @@
 - (ค) ถามผู้เขียนว่ามีแหล่งข้อมูลที่รู้จัก
 
 ข้อสังเกต: ไม่ใช่ UET-distinct เพราะเป็นสูตรมาตรฐานของ cell kinetics และไม่ blind ถ้าผู้ร่างเห็นตัวเลขทั้งสองชุดก่อน
+
+## ค้นต่อ (2026-11-17, รอบ 2)
+
+| ที่ตรวจเพิ่ม | ผล |
+|---|---|
+| Zerjatke et al. 2017, Cell Rep (PMC5464964), RPE-1 PCNA | ข้อความไม่มีตัวเลขเวลาของ phase หรือ snapshot fraction |
+| Wheeler 2015, MBoC (PMC4710220), ergodic rate analysis | ดึงข้อความไม่ได้ |
+| เอกสาร INIS-IAEA (HeLa cell kinetics) และ LBNL eScholarship | server error / timeout |
+
+ข้อสังเกต: สูตร mitotic index = ln2 · t_M/T (อันดับแรกของสูตรนี้) เป็นสูตรในตำรา cell kinetics อยู่แล้ว การทดสอบนี้จึงเป็นการเทียบสูตรมาตรฐานกับข้อมูล
+ทางที่ยังเหลือ: (1) ไฟล์ supplementary/source data ของงาน time-lapse (เช่น Chao 2019) คู่กับ flow cytometry จากงานอื่น (2) ยีสต์ budding index กับ time-lapse ในงานเดียว (3) แหล่งที่ผู้เขียนรู้จัก
