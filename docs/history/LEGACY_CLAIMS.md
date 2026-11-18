@@ -6,7 +6,7 @@
 > Words such as "Solved", "proved", "exact match" and "Validated" are the original wording, kept for the record. They are not current evidence.
 > Links point to the old `docs/topics/` and `docs/core/` locations; the same files now live under `topics/` and `core/`.
 > The "Uet-Cash Mining System" section was removed rather than archived, because it belongs to a separate project.
-> Source: `README.md` at commit `cc1bfc578` (lines 1–623 and 709–758, unchanged).
+> Source: `README.md` at commit `cc1bfc578` (lines 1–623 and 709–758; only trailing spaces removed).
 
 ---
 
@@ -425,18 +425,18 @@ $$\Omega[C,I] = \int \left[ \underbrace{V(C)}_{\text{Cost of Becoming}} + \under
 
 ```mermaid
 graph TD
-    Root["🌳 UET Core<br/>Ω = C · I"] 
-    
+    Root["🌳 UET Core<br/>Ω = C · I"]
+
     Root -->|"Gradient of I"| Newton["⚙️ Classical<br/>F = ma"]
     Root -->|"Shuffling of I"| Thermo["🔥 Thermodynamics<br/>S = k log W"]
     Root -->|"Capacity of I"| Einstein["🌀 General Relativity<br/>G_μν = 8πT_μν"]
     Root -->|"Addressing of I"| Quantum["⚛️ Quantum<br/>ψ, ℏ"]
-    
+
     Newton --> Motion["Motion"]
     Thermo --> Heat["Heat & Entropy"]
     Einstein --> Gravity["Gravity & Time"]
     Quantum --> Particles["Particles & Fields"]
-    
+
     style Root fill:#ff69b4,stroke:#333,stroke-width:4px
 ```
 
@@ -518,7 +518,7 @@ import docs as uet
 fluid = uet.fluid.Engine2D(nx=128, ny=128, dt=0.01)
 
 # Run Simulation (Terminal Demo)
-fluid.solve_2d() 
+fluid.solve_2d()
 ```
 
 **B. Mathnicry (Riemann Zeta)**
@@ -610,7 +610,7 @@ python docs/topics/run_all_tests.py
 
 ### Transparency
 
-> **Invitation to Falsify:**  
+> **Invitation to Falsify:**
 > We invite the physics community to test, break, and falsify this framework.
 
 **Challenge:**
