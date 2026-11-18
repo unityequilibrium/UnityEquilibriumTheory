@@ -277,12 +277,12 @@ core/02_equations/__init__.py	02_equations	.py	D	0	0	0	6	0	0	0	0	-	-	-
 core/02_equations/covariant/README.md	02_equations/covariant	.md	REVIEW	0	0	0	6	0	0	0	0	A	W1	Folder guide; rewrite in W10 to name the parent-action files first
 core/02_equations/covariant/__init__.py	02_equations/covariant	.py	D	0	0	0	6	0	0	0	0	D	W1	Package marker
 core/02_equations/covariant/uet_covariant_balance.py	02_equations/covariant	.py	A_DEP	0	0	1	24	1	0	0	5	A	W1	Exchange identity Q_m + Q_response = 0 of the parent action (claim C_EXCHANGE_DERIVED)
-core/02_equations/covariant/uet_covariant_diffusion.py	02_equations/covariant	.py	REVIEW	0	0	0	29	3	0	0	8	C?	W1	Bridge from chi Noether current to the normalized C (Model-B) prototype; final call depends on W3 (matter_space)
+core/02_equations/covariant/uet_covariant_diffusion.py	02_equations/covariant	.py	REVIEW	0	0	0	29	3	0	0	8	C	W3	Bridge from the chi Noether current to the C prototype, which W3 labels C
 core/02_equations/covariant/uet_covariant_matter.py	02_equations/covariant	.py	A	5	1	6	60	21	59	5	70	A	W1	Parent action: O(2) matter, portal, matter EOM (Theory Card code paths); physics tests pass
 core/02_equations/covariant/uet_covariant_nonclosed.py	02_equations/covariant	.py	REVIEW	0	0	0	21	1	0	0	4	B	W1	Retarded causal kernel; candidate memory kernel for layer 2 and the observation lane; not yet derived from the action
 core/02_equations/covariant/uet_covariant_open_system.py	02_equations/covariant	.py	REVIEW	1	0	0	19	1	3	1	5	C	W1	Legacy linear KMS control; its kms_residual is zero by definition (CORE_MAP, FIDELITY_MATRIX), so it checks nothing; layer 2 now lives in 03_lanes/open_system
 core/02_equations/covariant/uet_covariant_parent.py	02_equations/covariant	.py	REVIEW	2	0	0	20	2	1	2	5	A	W1	Composes response, matter and balance into the parent evaluator; no new physics
-core/02_equations/covariant/uet_covariant_reduction.py	02_equations/covariant	.py	REVIEW	1	0	0	17	1	1	1	4	C?	W1	Reduction to the 1D Phi, Pi prototype of matter_space; final call depends on W3
+core/02_equations/covariant/uet_covariant_reduction.py	02_equations/covariant	.py	REVIEW	1	0	0	17	1	1	1	4	C	W3	Reduction to the Phi, Pi equation of the C prototype, which W3 labels C
 core/02_equations/covariant/uet_covariant_response.py	02_equations/covariant	.py	A	2	1	4	61	25	70	2	74	A	W1	Parent action: response field, metric and scalar EOM (Theory Card code paths); physics tests pass
 core/02_equations/covariant/uet_covariant_superfluid_transport.py	02_equations/covariant	.py	REVIEW	0	0	0	24	1	2	0	11	C	W1	Superfluid hydrodynamics for the chi = He-4 lane, which T015 FAILED at tree level; kept for the record
 core/02_equations/covariant/uet_covariant_theory_spine.py	02_equations/covariant	.py	REVIEW	0	0	0	17	1	0	0	3	C	W1	1+1 Minkowski numerical control for a curved 3+1 solver; no claim uses it
@@ -297,22 +297,22 @@ core/02_equations/lorentz_noether/README.md	02_equations/lorentz_noether	.md	REV
 core/02_equations/lorentz_noether/__init__.py	02_equations/lorentz_noether	.py	D	0	0	0	6	0	0	0	0	D	W1	Package marker
 core/02_equations/lorentz_noether/uet_lorentz.py	02_equations/lorentz_noether	.py	A_DEP	0	0	0	21	3	0	0	5	C	W1	Legacy Lorentz and Schwarzschild diagnostics for the old matter_space family; replaced by 03_lanes/observation/uet_lorentz_time.py (T013)
 core/02_equations/lorentz_noether/uet_noether.py	02_equations/lorentz_noether	.py	A_DEP	0	0	0	24	4	0	0	6	C	W1	Legacy spatial Noether diagnostics for the old matter_space family; the parent action's Noether identity is in uet_covariant_balance.py
-core/02_equations/lorentz_noether/uet_noether_phase_field_map.py	02_equations/lorentz_noether	.py	REVIEW	1	0	0	26	5	3	1	7	C?	W1	Maps O(2) Noether charge to normalized C, J; final call depends on W3; one contract pins it
-core/02_equations/matter_space/README.md	02_equations/matter_space	.md	REVIEW	0	0	0	6	0	0	0	0	-	-	-
-core/02_equations/matter_space/__init__.py	02_equations/matter_space	.py	D	0	0	0	6	0	0	0	0	-	-	-
-core/02_equations/matter_space/uet_dynamical_stability.py	02_equations/matter_space	.py	A_DEP	0	0	0	17	1	3	0	3	-	-	-
-core/02_equations/matter_space/uet_hyperbolic_phase_field.py	02_equations/matter_space	.py	A_DEP	0	0	0	28	4	1	0	7	-	-	-
-core/02_equations/matter_space/uet_hyperbolic_phase_field_bridge.py	02_equations/matter_space	.py	REVIEW	0	0	0	22	3	0	0	5	-	-	-
-core/02_equations/matter_space/uet_master_equation.py	02_equations/matter_space	.py	A_DEP	1	0	0	37	11	147	1	22	-	-	-
-core/02_equations/matter_space/uet_matter_space.py	02_equations/matter_space	.py	A_DEP	9	0	0	38	6	27	9	22	-	-	-
-core/02_equations/matter_space/uet_matter_space_causal.py	02_equations/matter_space	.py	A_DEP	0	0	0	21	2	0	0	4	-	-	-
-core/02_equations/matter_space/uet_matter_space_characteristic.py	02_equations/matter_space	.py	A_DEP	0	0	0	22	3	0	0	6	-	-	-
-core/02_equations/matter_space/uet_matter_space_finite_cone.py	02_equations/matter_space	.py	A_DEP	0	0	0	21	4	0	0	8	-	-	-
-core/02_equations/matter_space/uet_matter_space_flux_phi.py	02_equations/matter_space	.py	REVIEW	0	0	0	18	3	1	0	5	-	-	-
-core/02_equations/matter_space/uet_matter_space_flux_telegraph.py	02_equations/matter_space	.py	REVIEW	0	0	0	19	4	1	0	5	-	-	-
-core/02_equations/matter_space/uet_matter_space_split.py	02_equations/matter_space	.py	A_DEP	0	0	0	20	2	0	0	5	-	-	-
-core/02_equations/matter_space/uet_spatial.py	02_equations/matter_space	.py	A_DEP	2	0	0	30	5	4	2	7	-	-	-
-core/02_equations/matter_space/uet_trace.py	02_equations/matter_space	.py	A_DEP	3	0	0	33	6	7	3	13	-	-	-
+core/02_equations/lorentz_noether/uet_noether_phase_field_map.py	02_equations/lorentz_noether	.py	REVIEW	1	0	0	26	5	3	1	7	C	W3	Maps O(2) charge to the C, J coordinates of the prototype, which W3 labels C; one contract pins it
+core/02_equations/matter_space/README.md	02_equations/matter_space	.md	REVIEW	0	0	0	6	0	0	0	0	C	W3	Guide for the legacy matter_space family
+core/02_equations/matter_space/__init__.py	02_equations/matter_space	.py	D	0	0	0	6	0	0	0	0	D	W3	Package marker
+core/02_equations/matter_space/uet_dynamical_stability.py	02_equations/matter_space	.py	A_DEP	0	0	0	17	1	3	0	3	C	W3	Stability diagnostics for the C, Phi, Pi prototype; no claim uses it
+core/02_equations/matter_space/uet_hyperbolic_phase_field.py	02_equations/matter_space	.py	A_DEP	0	0	0	28	4	1	0	7	C	W3	External Cahn-Hilliard comparator (Dhaouadi et al. 2025) for the C prototype; not a UET derivation
+core/02_equations/matter_space/uet_hyperbolic_phase_field_bridge.py	02_equations/matter_space	.py	REVIEW	0	0	0	22	3	0	0	5	C	W3	Causal feasibility audit of that comparator; no claim uses it
+core/02_equations/matter_space/uet_master_equation.py	02_equations/matter_space	.py	A_DEP	1	0	0	37	11	147	1	22	C	W3	Legacy Omega = C I engine (C/I family, 7-term master equation); not the parent action; 147 topic files still import it, so it stays in place
+core/02_equations/matter_space/uet_matter_space.py	02_equations/matter_space	.py	A_DEP	9	0	0	38	6	27	9	22	C	W3	Normalized 1D C, Phi, Pi prototype (matter_space_coupled_v1); the parent action does not use C; 9 contracts pin it
+core/02_equations/matter_space/uet_matter_space_causal.py	02_equations/matter_space	.py	A_DEP	0	0	0	21	2	0	0	4	C	W3	Opt-in causal variant of the C, Phi, Pi prototype; no claim uses it
+core/02_equations/matter_space/uet_matter_space_characteristic.py	02_equations/matter_space	.py	A_DEP	0	0	0	22	3	0	0	6	C	W3	Finite-cone variant of the C, Phi prototype; no claim uses it
+core/02_equations/matter_space/uet_matter_space_finite_cone.py	02_equations/matter_space	.py	A_DEP	0	0	0	21	4	0	0	8	C	W3	Non-conserved C variant of the prototype; no claim uses it
+core/02_equations/matter_space/uet_matter_space_flux_phi.py	02_equations/matter_space	.py	REVIEW	0	0	0	18	3	1	0	5	C	W3	Flux branch of the C prototype coupled to Phi; no claim uses it
+core/02_equations/matter_space/uet_matter_space_flux_telegraph.py	02_equations/matter_space	.py	REVIEW	0	0	0	19	4	1	0	5	C	W3	Conserved C flux branch of the prototype; no claim uses it
+core/02_equations/matter_space/uet_matter_space_split.py	02_equations/matter_space	.py	A_DEP	0	0	0	20	2	0	0	5	C	W3	Split-step bridge for the C prototype; no claim uses it
+core/02_equations/matter_space/uet_spatial.py	02_equations/matter_space	.py	A_DEP	2	0	0	30	5	4	2	7	C	W3	1D finite-volume operators for the C prototype; 2 contracts pin it
+core/02_equations/matter_space/uet_trace.py	02_equations/matter_space	.py	A_DEP	3	0	0	33	6	7	3	13	C	W3	History trace of the prototype; the new layer-2 trace is 03_lanes/open_system/uet_r3_trace_decomposition.py
 core/02_equations/o2/README.md	02_equations/o2	.md	REVIEW	0	0	0	6	0	0	0	0	-	-	-
 core/02_equations/o2/__init__.py	02_equations/o2	.py	D	0	0	0	6	0	0	0	0	-	-	-
 core/02_equations/o2/standard_o2_finite_temperature_comparator.py	02_equations/o2	.py	REVIEW	0	0	0	20	1	3	0	10	-	-	-

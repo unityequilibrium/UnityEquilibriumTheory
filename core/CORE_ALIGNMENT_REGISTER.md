@@ -54,7 +54,7 @@
 |---|---|---|
 | W1 | `02_equations/covariant`, `lorentz_noether` | เสร็จ 2026-11-18 (ดูด้านล่าง) |
 | W2 | `03_lanes` ที่ใช้อยู่, `engine` | เสร็จ 2026-11-18 (ดูด้านล่าง) |
-| W3 | `02_equations/matter_space` | ยังไม่เริ่ม |
+| W3 | `02_equations/matter_space` | เสร็จ 2026-11-18 (ดูด้านล่าง) |
 | W4 | `02_equations/o2` | ยังไม่เริ่ม |
 | W5 | `03_lanes/thermal`, `topic13_support` | ยังไม่เริ่ม |
 | W6 | `01_contracts`, `04_proofs`, `99_review` | ยังไม่เริ่ม |
@@ -93,3 +93,14 @@
 - physics test ทั้งชุดผ่าน 358 ข้อ ข้าม 1 ข้อ
 - `persistence/uet_resource_selection.py` ป้าย C แต่ topic ยัง import อยู่ 3 ที่ ต้องแก้ topic ก่อนย้าย
 - lane card ของ topic 0.19 และ 0.22 ใน `engine/lane_cards` จะตรวจซ้ำในแผน topics
+
+### W3: `02_equations/matter_space` (15 ไฟล์) และสามไฟล์ C? จาก W1
+
+- **C ทั้งโฟลเดอร์ (14 ไฟล์ + README):** ทั้งหมดคือชุดสมการรุ่นก่อนที่ใช้ตัวแปร C แบบ normalized ได้แก่ engine Ω = C·I (`uet_master_equation.py`), prototype C, Φ, Π (`uet_matter_space*.py`) และเครื่องมือประกอบ
+  action แม่และ lane ที่ใช้อยู่ไม่ได้เรียกไฟล์ใดในโฟลเดอร์นี้เลย ร่องรอยของชั้น 2 ตอนนี้อยู่ที่ `03_lanes/open_system/uet_r3_trace_decomposition.py`
+- **ไฟล์ C? จาก W1 เป็น C ทั้งสาม:** `uet_covariant_diffusion.py`, `uet_covariant_reduction.py`, `uet_noether_phase_field_map.py` เป็นสะพานไปหา prototype นี้
+
+สิ่งที่พบเพิ่ม (สำคัญต่อแผน topics):
+- ไฟล์ Python ใน topics 112 ไฟล์ จาก 28 topic ยัง import engine เก่า `uet_master_equation.py` (มากสุดคือ 0.11, 0.14, 0.23, 0.10)
+  แปลว่าผลของ topic เหล่านี้คำนวณด้วยสมการเก่า ไม่ใช่ action แม่ จึงต้องตรวจทีละ topic ในแผน topics ว่าจะย้ายมาใช้ `core/engine` หรือเก็บ
+- `uet_matter_space.py` ถูก contract ล็อก hash 9 ฉบับ จึงคงไว้ที่เดิม

@@ -5,11 +5,11 @@
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
     "sources": 81,
-    "entries": 907,
+    "entries": 908,
     "by_stream": {
       "book-history": 94,
       "operations": 134,
-      "research": 678,
+      "research": 679,
       "review": 1
     },
     "exact_duplicates": 0,
@@ -420,8 +420,8 @@
     },
     {
       "path": "2026/2026-11-18.md",
-      "sha256": "49dec359d0528dc73a445b149ca5100a1e3d3046ad22069e106c67d0e04cd071",
-      "entries": 8
+      "sha256": "d74a063c7c34ca91cc35c533381cf52fea0a6dc4a44b479637a4c4aed7750d51",
+      "entries": 9
     },
     {
       "path": "2026-08-14.md",
@@ -18521,9 +18521,29 @@
       "source": "2026/2026-11-18.md",
       "anchor": "core-alignment-w2-active-lanes-and-engine",
       "start_line": 73,
-      "end_line": 81,
+      "end_line": 82,
       "title": "Core alignment W2: active lanes and engine",
-      "entry_sha256": "d6cef0142ead5e01944e8c9a894113e13f2d0cb8d3e1e0546bbe753c805a50ff",
+      "entry_sha256": "2166dd0e47d86366dd214caabe86373804ff245ab9361e32fd9e4b4418692bf1",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-18",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-18.md#core-alignment-w3-matter_space",
+      "source": "2026/2026-11-18.md",
+      "anchor": "core-alignment-w3-matter_space",
+      "start_line": 83,
+      "end_line": 91,
+      "title": "Core alignment W3: matter_space",
+      "entry_sha256": "0b8b802c28ae32374b3ab01042934ed0410e6d16da0e3aa4b9f1b7fb4b4e11a6",
       "stream": "research",
       "areas": [
         "research-core"

@@ -490,3 +490,10 @@ commit: this commit
 - ตรวจ: physics test ทั้งชุด 358 ผ่าน ข้าม 1; ไม่ย้ายไฟล์
 - ระดับ: ไม่เปลี่ยน claim ใด
 - ถัดไป: W3 02_equations/matter_space และตัดสิน C? สามไฟล์จาก W1
+
+## 2026-11-18 — Core alignment W3: matter_space
+- ทำ: ตรวจ 15 ไฟล์ใน 02_equations/matter_space และตัดสินสามไฟล์ C? จาก W1
+- ผล: C ทั้งโฟลเดอร์ (ชุดสมการ C แบบ normalized และ engine Ω = C·I) และสามไฟล์สะพานจาก W1; ไม่มีไฟล์ใดที่ action แม่ใช้
+- พบ: ไฟล์ใน topics 112 ไฟล์ (28 topic) ยังคำนวณด้วย uet_master_equation.py เก่า
+- ระดับ: ไม่เปลี่ยน claim ใด; ไม่ย้ายไฟล์
+- ถัดไป: รอบวิจัยแทรก แล้ว W4 02_equations/o2
