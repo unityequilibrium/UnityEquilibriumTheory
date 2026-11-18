@@ -5,11 +5,11 @@
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
     "sources": 81,
-    "entries": 917,
+    "entries": 918,
     "by_stream": {
       "book-history": 94,
       "operations": 134,
-      "research": 688,
+      "research": 689,
       "review": 1
     },
     "exact_duplicates": 0,
@@ -420,8 +420,8 @@
     },
     {
       "path": "2026/2026-11-18.md",
-      "sha256": "bf6a340593bb22101d3de1e6dfe59d5b1bd7d8c0ac41460ec21e7e059acbe330",
-      "entries": 18
+      "sha256": "279670a47f7a2686da87dc52c77f8ed3d848a2f1c3493ccb602dfec7badcf4fc",
+      "entries": 19
     },
     {
       "path": "2026-08-14.md",
@@ -18721,9 +18721,29 @@
       "source": "2026/2026-11-18.md",
       "anchor": "species-level-reserve-and-test-card-t023-draft-bats",
       "start_line": 173,
-      "end_line": 181,
+      "end_line": 182,
       "title": "Species-level reserve and Test Card T023 draft (bats)",
-      "entry_sha256": "c21ab51f5dad82185bae91c39c6ffd8e7f0bda8661505de7186b30d2927510f8",
+      "entry_sha256": "409a8f454d1e89469fae4866b626c705dc97ce1c901b52be7325d6cba09a3371",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-18",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-18.md#t023-run-inconclusive-bats-between-other-mammals-and-birds",
+      "source": "2026/2026-11-18.md",
+      "anchor": "t023-run-inconclusive-bats-between-other-mammals-and-birds",
+      "start_line": 183,
+      "end_line": 191,
+      "title": "T023 run: INCONCLUSIVE, bats between other mammals and birds",
+      "entry_sha256": "3893dd5434e7511c6b987f7ee575fa82421976ebaa05397cab514637f7bbbec3",
       "stream": "research",
       "areas": [
         "research-core"
