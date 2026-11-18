@@ -4,7 +4,7 @@
 >
 > The Thai and English files have the same content. Edit both together.
 
-![Evidence](https://img.shields.io/badge/claims-24_L1_·_16_L2_·_2_FAILED-blue)
+![Evidence](https://img.shields.io/badge/claims-24_L1_·_17_L2_·_2_FAILED-blue)
 ![Topics](https://img.shields.io/badge/research_topics-40-blue)
 ![License](https://img.shields.io/badge/License-MIT-green)
 
@@ -137,7 +137,7 @@ What UET can add is a tested map of where one set of rules holds across fields, 
 ## 4. Evidence so far
 
 Levels follow [`docs/STANDARD.md`](docs/STANDARD.md): `L1` internally consistent, `L2` confronted with external data, `L3` externally replicated.
-The registry is [`docs/standard/claims.json`](docs/standard/claims.json) (42 claims: 24 at L1, 16 at L2, 2 FAILED; none at L3).
+The registry is [`docs/standard/claims.json`](docs/standard/claims.json) (43 claims: 24 at L1, 17 at L2, 2 FAILED; none at L3).
 Test criteria were committed and approved before each comparison. None of these comparisons was blind.
 
 **Failed** (kept as results, not hidden):
@@ -162,6 +162,7 @@ Test criteria were committed and approved before each comparison. None of these 
 | T011 | Pulsating stars in binaries (astronomy) | L2 PASS: timing delay equals light-travel age from the orbit, ratio 1.006 and 1.021 |
 | T012 | Quenched quantum many-body chain (quantum) | L2 PASS: correlations need contact through a common past, not direct contact only |
 | T013 | Ives–Stilwell test with ⁷Li⁺ ions at 0.338c (relativity) | L2 PASS: ε = (1.47 ± 2.30)×10⁻⁹, consistent with the Lorentz time transformation |
+| T022 | Michelson–Morley and Kennedy–Thorndike tests (relativity) | L2 PASS: two-way light speed independent of orientation (z = 0.50) and of lab velocity (z = 1.30); with T013 the whole Lorentz transformation is tested |
 | T016 | MICROSCOPE equivalence-principle test (gravity) | L2 PASS: bounds the portal to g_c < 1.16×10⁻¹⁵ eV, 11.6 times tighter than T005 |
 | T017 | Yeast cell cycles (biology) | L2 PASS: doubling time from single-cell cycle times matches the counted one in all five conditions |
 | T019 | Eöt-Wash equivalence-principle data (gravity) | L2 PASS: bounds the portal to g_c ≤ 1.30×10⁻¹² eV for ranges 2 m to 10⁵ m |
