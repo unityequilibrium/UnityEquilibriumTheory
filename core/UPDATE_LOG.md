@@ -575,3 +575,9 @@ commit: this commit
 - ตรวจ: ส่วนที่เปลี่ยนใน artifact มีแค่ hash, เวลาที่สร้าง และ path ที่ producer เขียนเอง ไม่มีตัวเลขผลใดเปลี่ยน
 - ผล: completeness audit 0 error (เดิม 43), audit tests 80 ข้อผ่าน, producer ของ Topic 0.13 ผ่าน --check ทั้ง 11 ตัว; test ของ core ล้มจาก 16 เหลือ 11 ไฟล์
 - ยังค้าง: test ป้าย C ใน core ยังล้ม 11 ไฟล์ (สคริปต์ Topic 13 7 ตัวยัง import docs.core จึงรันไม่ได้, test 3 ข้อต้องใช้ข้อมูล raw ส่วนตัว, test Noether ขัดกับ pin ของ BaTiO3) และ test ใน topics/0.13 ล้ม 53 ข้อเพราะยังคาดหวังข้อความ path แบบ docs/core
+
+## 2026-11-18 — Core alignment W8: 07_artifacts labels and archived failing tests
+- ทำ: ติดป้าย 617 ไฟล์ใน 07_artifacts: A 7 (artifact ที่ regression ของ action แม่อ่าน), C 610 (Topic 13, gate และ migration เก่า); ไม่มี record วิจัยปัจจุบันอ้าง 07_artifacts
+- ทำ: ตามที่เจ้าของตัดสิน ย้าย test ป้าย C ที่ยังล้ม 56 ไฟล์เข้าคลัง (core 12 ไฟล์ไป core/08_history/archived_tests, Topic 0.13 44 ไฟล์ไป topics/0.13_Thermodynamic_Bridge/Archive/tests) โดยเติม archived_ หน้าชื่อและไม่แก้เนื้อหา
+- ผล: test ของ core ผ่านทั้งหมด (เดิมล้ม 16 ไฟล์), Topic 0.13 562 ผ่าน 0 ล้ม, completeness audit 0 error, audit tests 80 ผ่าน, runner tests 69 ผ่าน
+- หมายเหตุ: ไฟล์ Topic 0.13 ที่เก็บมี test ผ่านอยู่ 791 ข้อซึ่งถูกเก็บไปด้วย

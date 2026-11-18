@@ -58,8 +58,8 @@
 | W4 | `02_equations/o2` | เสร็จ 2026-11-18 (ดูด้านล่าง) |
 | W5 | `03_lanes/thermal`, `topic13_support` | เสร็จ 2026-11-18 (ดูด้านล่าง) |
 | W6 | `01_contracts`, `04_proofs`, `99_review` | เสร็จ 2026-11-18 (ดูด้านล่าง) |
-| W7 | `05_tests` | ติดป้ายแล้ว 2026-11-18; ซ่อม CI รออนุมัติ (ดูด้านล่าง) |
-| W8 | `07_artifacts` | ยังไม่เริ่ม |
+| W7 | `05_tests` | เสร็จ 2026-11-18; ซ่อม hash แล้ว (ดูด้านล่าง) |
+| W8 | `07_artifacts` และเก็บ test ที่พัง | เสร็จ 2026-11-18 (ดูด้านล่าง) |
 | W9 | `00_governance`, `06_data`, `08_history` | ยังไม่เริ่ม |
 | W10 | เอกสารหน้า core | ยังไม่เริ่ม |
 
@@ -163,3 +163,19 @@ contract 20 ฉบับ (19 ฉบับใน Topic 0.13 และ `audit_matt
 ผลคำนวณที่เทียบกับ artifact ที่ commit ไว้ได้ 8 ตัวเหมือนเดิมทุกค่า (ต่างแค่ข้อความ path ใน 1 key) ที่เหลือเทียบไม่ได้ เพราะ artifact ไม่ได้ commit ไว้ หรือติด STALE ต่อกันเป็นสาย
 manifest ของ BaTiO3 publication ก็ล็อก hash ของสคริปต์เดียวกันไว้ จึงทำให้ `calculation-audit-tests` ล้มด้วย
 การซ่อมคือคำนวณ hash ใหม่ใน contract (และใน manifest) โดยไม่แก้ path และ physics ซึ่งตาม AGENTS §6.3 ต้องให้เจ้าของอนุมัติก่อน
+
+**ผลการซ่อม (เจ้าของอนุมัติ 2026-11-18):** คำนวณ hash ใหม่ใน contract 20 ฉบับและ manifest ของ BaTiO3 และสร้าง artifact ใหม่ 29 ไฟล์ ที่เปลี่ยนมีแค่ hash, เวลาที่สร้าง และ path ที่ producer เขียนเอง
+completeness audit จึงเหลือ 0 error (เดิม 43) ส่วน test ที่ยังล้มหลังซ่อมนั้นเก็บเข้าคลังใน W8
+
+### W8: `07_artifacts` (617 ไฟล์) และเก็บ test ที่พัง
+
+- **ป้าย A 7 ไฟล์:** artifact ที่ regression test ป้าย A ของ action แม่อ่าน (covariant parent, GR closed limit, registry สมการ) และ README
+- **ป้าย C 610 ไฟล์:** ผลลัพธ์ของ Topic 13 (350), gate และ correspondence ของ lane C และ foundation เก่า, archive และ provenance ของ migration
+- **ไม่มี record วิจัยปัจจุบันไหนอ้าง `07_artifacts` เลย:** ผลของ T001–T023 อยู่ใน `docs/standard/results/`
+
+**เก็บ test ที่พัง (เจ้าของตัดสินใจ 2026-11-18):** test ป้าย C 56 ไฟล์ที่ยังล้มหลังซ่อม hash (รวม test ที่เช็กว่าไฟล์ test Noether มีอยู่) ถูกย้ายเข้าคลังแบบไม่แก้เนื้อหา
+- core 12 ไฟล์ไปที่ `core/08_history/archived_tests/`
+- Topic 0.13 44 ไฟล์ไปที่ `topics/0.13_Thermodynamic_Bridge/Archive/tests/`
+- ชื่อไฟล์ขึ้นต้นด้วย `archived_` เพื่อไม่ให้ pytest และขั้นตรวจ test ที่เปลี่ยนใน CI เก็บไปรัน
+- สาเหตุที่ล้มเขียนไว้ใน README ของแต่ละคลัง: สคริปต์ยัง import `docs.core` หรือคาดหวัง path และ hash จากก่อนย้ายโฟลเดอร์, ต้องใช้ข้อมูล raw ส่วนตัว, หรือขัดกับ pin ของ BaTiO3
+- ไฟล์ Topic 0.13 ทั้ง 44 ไฟล์มี test รวม 844 ข้อ ล้มอยู่ 53 ข้อ ข้อที่ผ่านอีก 791 ข้อจึงถูกเก็บไปด้วย เพราะเก็บทั้งไฟล์โดยไม่แก้เนื้อหา

@@ -5,11 +5,11 @@
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
     "sources": 81,
-    "entries": 922,
+    "entries": 923,
     "by_stream": {
       "book-history": 94,
       "operations": 134,
-      "research": 693,
+      "research": 694,
       "review": 1
     },
     "exact_duplicates": 0,
@@ -420,8 +420,8 @@
     },
     {
       "path": "2026/2026-11-18.md",
-      "sha256": "9de1277a3167cdb41c73de64c333a31bec8e70917bf412b33a85a877f1d05d3f",
-      "entries": 23
+      "sha256": "d8f172412c3a5bc80cc0f17642a7c9f67c271d8880075bfc48a55897b8e5c115",
+      "entries": 24
     },
     {
       "path": "2026-08-14.md",
@@ -18821,9 +18821,29 @@
       "source": "2026/2026-11-18.md",
       "anchor": "w7-repair-stale-hashes-after-the-root-move",
       "start_line": 223,
-      "end_line": 232,
+      "end_line": 233,
       "title": "W7 repair: stale hashes after the root move",
-      "entry_sha256": "4b2eec4e612b8a1542ecb6630f634bd7665b1186719334eecca0ee5769d0119d",
+      "entry_sha256": "3b88d463e6a0b6b64a1b5584fcdaf3182546b00c5d7f7151fa8bb7e3b98be7fb",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-18",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-18.md#core-alignment-w8-artifacts-labelled-failing-legacy-tests-archived",
+      "source": "2026/2026-11-18.md",
+      "anchor": "core-alignment-w8-artifacts-labelled-failing-legacy-tests-archived",
+      "start_line": 234,
+      "end_line": 242,
+      "title": "Core alignment W8: artifacts labelled, failing legacy tests archived",
+      "entry_sha256": "cd4a3a333a23262877f7c9f1bd31fc70761c26af8577b2933ad8ce9c65ec8e03",
       "stream": "research",
       "areas": [
         "research-core"
