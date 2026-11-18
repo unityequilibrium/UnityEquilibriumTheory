@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "artifact": "curved_3p1_gh_principal_system_formula_audit",
-  "generated_at": "2026-09-17T21:28:58.887368+00:00",
+  "generated_at": "2026-11-18T12:34:29.965233+00:00",
   "status": "PASS_SOURCE_LOCKED_GH_PRINCIPAL_FORMULAS",
   "relations": [
     {
@@ -26,7 +26,7 @@
       "verification_role": "gauge-constraint interface gate",
       "failure_mode": "gauge source is mistaken for a fitted physical field",
       "next_hardening_step": "implement complete nonlinear gamma0 damping RHS",
-      "code_path": "docs/core/02_equations/covariant/uet_curved_3p1_generalized_harmonic.py"
+      "code_path": "core/02_equations/covariant/uet_curved_3p1_generalized_harmonic.py"
     },
     {
       "formula_id": "UET-CURVED3P1-GH-PRINCIPAL-010",
@@ -51,7 +51,7 @@
       "verification_role": "formulation gate",
       "failure_mode": "non-principal implementation is silently implied",
       "next_hardening_step": "transcribe and verify complete nonlinear algebraic terms",
-      "code_path": "docs/core/02_equations/covariant/uet_curved_3p1_generalized_harmonic.py"
+      "code_path": "core/02_equations/covariant/uet_curved_3p1_generalized_harmonic.py"
     },
     {
       "formula_id": "UET-CURVED3P1-GH-SYMMETRIZER-011",
@@ -70,7 +70,7 @@
       "verification_role": "symmetric-hyperbolicity gate",
       "failure_mode": "diagonalizability is asserted without a positive symmetrizer",
       "next_hardening_step": "carry the symmetrizer through variable-coefficient energy estimates",
-      "code_path": "docs/core/02_equations/covariant/uet_curved_3p1_generalized_harmonic.py"
+      "code_path": "core/02_equations/covariant/uet_curved_3p1_generalized_harmonic.py"
     },
     {
       "formula_id": "UET-CURVED3P1-GH-CHARACTERISTICS-012",
@@ -89,7 +89,7 @@
       "verification_role": "strong-hyperbolicity and causal-speed gate",
       "failure_mode": "incomplete eigenvectors reproduce the rejected ADM branch",
       "next_hardening_step": "use characteristic families in constraint-preserving boundary conditions",
-      "code_path": "docs/core/02_equations/covariant/uet_curved_3p1_generalized_harmonic.py"
+      "code_path": "core/02_equations/covariant/uet_curved_3p1_generalized_harmonic.py"
     },
     {
       "formula_id": "UET-CURVED3P1-GH-REDUCTION-DAMPING-013",
@@ -111,7 +111,7 @@
       "verification_role": "reduction-constraint gate only",
       "failure_mode": "reduction damping is overread as full gauge-constraint damping",
       "next_hardening_step": "implement gamma0 gauge-constraint damping and propagation",
-      "code_path": "docs/core/02_equations/covariant/uet_curved_3p1_generalized_harmonic.py"
+      "code_path": "core/02_equations/covariant/uet_curved_3p1_generalized_harmonic.py"
     }
   ],
   "source": {
@@ -158,8 +158,8 @@
     "accessed_on": "2026-08-28"
   },
   "source_hashes": {
-    "docs/core/02_equations/covariant/uet_curved_3p1_generalized_harmonic.py": "4f0c8ed0e5afe52e43cedefeb9c061e10dbd440fd20e8bc57a8aacfa43e76f92",
-    "docs/scripts/audit/audit_uet_curved_3p1_generalized_harmonic.py": "95ed43dabccdeef982a3d1f5e28b9f2d865bd4876c8dcaadbfbf8c441eeed3b6",
+    "core/02_equations/covariant/uet_curved_3p1_generalized_harmonic.py": "4f0c8ed0e5afe52e43cedefeb9c061e10dbd440fd20e8bc57a8aacfa43e76f92",
+    "docs/scripts/audit/audit_uet_curved_3p1_generalized_harmonic.py": "588ffc0abcef9e5886da140ca9e8742f52f020806071308e9f4761f0151ccd8c",
     "docs/data/external/gr_3p1/lindblom_et_al_2006_gh/source_record.json": "c3812246cabdc3e4de2cb266945a0355bc0d64b7ae1d041507e764fe0199d08a"
   },
   "open_items": [

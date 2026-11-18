@@ -6,10 +6,11 @@
 
 These are source-linked historical records, not proof of completed research, successful publication, or current scientific readiness.
 
-Indexed entries: 692. Counts describe records, not accomplishments.
+Indexed entries: 693. Counts describe records, not accomplishments.
 
 | Date | Record | Area | Notes |
 | --- | --- | --- | --- |
+| 2026-11-18 | [W7 repair: stale hashes after the root move](2026/2026-11-18.md#w7-repair-stale-hashes-after-the-root-move) (L223) | research-core | explicit_stream_and_area |
 | 2026-11-18 | [Core alignment W7: test labels and the CI cause](2026/2026-11-18.md#core-alignment-w7-test-labels-and-the-ci-cause) (L213) | research-core | explicit_stream_and_area |
 | 2026-11-18 | [Core alignment W6: contracts, proofs and review](2026/2026-11-18.md#core-alignment-w6-contracts-proofs-and-review) (L203) | research-core | explicit_stream_and_area |
 | 2026-11-18 | [T023 result at L2 (INCONCLUSIVE)](2026/2026-11-18.md#t023-result-at-l2-inconclusive) (L193) | research-core | explicit_stream_and_area |

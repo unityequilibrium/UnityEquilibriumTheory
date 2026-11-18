@@ -569,3 +569,9 @@ commit: this commit
 - ผล: A 46 (physics test 36 ไฟล์ และ regression ของ action แม่), B 32 (O(2) SK/KMS และ no-go), C 491 (Topic 13, lane C, gate และ migration เก่า), D 3
 - พบ: CI แดงเพราะ contract 20 ฉบับล็อก hash ของสคริปต์ 26 ไฟล์ที่ถูกแก้ path ตอนย้ายไป root (14–15 พ.ย.); ผลคำนวณที่เทียบได้ 8 ตัวเหมือนเดิม
 - ระดับ: ไม่เปลี่ยน claim ใด; ยังไม่ซ่อม hash รอเจ้าของอนุมัติตาม AGENTS §6.3
+
+## 2026-11-18 — W7 repair: refreshed stale hashes after the root move (owner approved)
+- ทำ: คำนวณ sha256 ใหม่ใน contract 20 ฉบับของ Topic 0.13 (identity 55 ค่า และ baseline 1 ค่า) โดยไม่แก้ path, manifest ของ BaTiO3 (ไฟล์ immutable 15, input 2, payload 2) และสร้าง artifact ใหม่ 11 ไฟล์ใน Topic 0.13 และ 18 ไฟล์ใน core/07_artifacts (curved 3+1 และ phase field)
+- ตรวจ: ส่วนที่เปลี่ยนใน artifact มีแค่ hash, เวลาที่สร้าง และ path ที่ producer เขียนเอง ไม่มีตัวเลขผลใดเปลี่ยน
+- ผล: completeness audit 0 error (เดิม 43), audit tests 80 ข้อผ่าน, producer ของ Topic 0.13 ผ่าน --check ทั้ง 11 ตัว; test ของ core ล้มจาก 16 เหลือ 11 ไฟล์
+- ยังค้าง: test ป้าย C ใน core ยังล้ม 11 ไฟล์ (สคริปต์ Topic 13 7 ตัวยัง import docs.core จึงรันไม่ได้, test 3 ข้อต้องใช้ข้อมูล raw ส่วนตัว, test Noether ขัดกับ pin ของ BaTiO3) และ test ใน topics/0.13 ล้ม 53 ข้อเพราะยังคาดหวังข้อความ path แบบ docs/core

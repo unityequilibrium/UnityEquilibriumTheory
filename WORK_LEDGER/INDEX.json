@@ -5,11 +5,11 @@
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
     "sources": 81,
-    "entries": 921,
+    "entries": 922,
     "by_stream": {
       "book-history": 94,
       "operations": 134,
-      "research": 692,
+      "research": 693,
       "review": 1
     },
     "exact_duplicates": 0,
@@ -420,8 +420,8 @@
     },
     {
       "path": "2026/2026-11-18.md",
-      "sha256": "22108573b8202efe5ec748ff0ca2112cec1102a014c56a6a4f7ed068de82b717",
-      "entries": 22
+      "sha256": "9de1277a3167cdb41c73de64c333a31bec8e70917bf412b33a85a877f1d05d3f",
+      "entries": 23
     },
     {
       "path": "2026-08-14.md",
@@ -18801,9 +18801,29 @@
       "source": "2026/2026-11-18.md",
       "anchor": "core-alignment-w7-test-labels-and-the-ci-cause",
       "start_line": 213,
-      "end_line": 221,
+      "end_line": 222,
       "title": "Core alignment W7: test labels and the CI cause",
-      "entry_sha256": "4245f3c42da3178ea7ba4ea1d02ef65353eca7407ec3de540de41fb22067fd8a",
+      "entry_sha256": "384975c00fa338e653b2d955fda9fb0a7f8dceb3e1663185cf8b20df3de9acf2",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-18",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-18.md#w7-repair-stale-hashes-after-the-root-move",
+      "source": "2026/2026-11-18.md",
+      "anchor": "w7-repair-stale-hashes-after-the-root-move",
+      "start_line": 223,
+      "end_line": 232,
+      "title": "W7 repair: stale hashes after the root move",
+      "entry_sha256": "4b2eec4e612b8a1542ecb6630f634bd7665b1186719334eecca0ee5769d0119d",
       "stream": "research",
       "areas": [
         "research-core"

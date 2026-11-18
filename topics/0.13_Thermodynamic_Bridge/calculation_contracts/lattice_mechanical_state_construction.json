@@ -129,7 +129,7 @@
       "kind": "working_file",
       "path": "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/Research_T13_Lattice_Mechanical_State_Construction.py",
       "role": "code",
-      "sha256": "6489e909fcfb6cdbf13f40093d2bb44c5c3b31c2f506945f2e6837041b3a87a3"
+      "sha256": "e5aad160ff7940369e07d74ca5c405e2d58b798a5a3c2828fb5706cbfad4e6a2"
     },
     {
       "availability": "REQUIRED",
@@ -150,14 +150,14 @@
       "kind": "working_file",
       "path": "docs/topics/0.13_Thermodynamic_Bridge/calculation_contracts/spin_strain_correspondence.json",
       "role": "evidence",
-      "sha256": "751360256f05754013d5f17369b8769f9e095a54882645e2887174c1bff24c7b"
+      "sha256": "a076e043410ef644019766ff566869a9b9756e99135626183730b35672c3d274"
     },
     {
       "availability": "REQUIRED",
       "kind": "working_file",
       "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/t13_spin_strain_correspondence.json",
       "role": "evidence",
-      "sha256": "8c76f1c00ca9d4a96385049d784749bd175e6d87f1c3711a3897ac96249dfae2"
+      "sha256": "1d23f405b10e285ae0813c9d2313f83c4568182643b195c13dc67f7f946ef898"
     },
     {
       "availability": "REQUIRED",
@@ -171,14 +171,14 @@
       "kind": "working_file",
       "path": "docs/topics/0.13_Thermodynamic_Bridge/calculation_contracts/joint_state_measure_construction.json",
       "role": "evidence",
-      "sha256": "966683ce539ee9e090a72300c0a3e7f42bbfa01a795bfbe444de621579ac5eb3"
+      "sha256": "a934a65db07dbbb7f1564038f81e00d29a9b655a7fa0eecb88b25a562a63c452"
     },
     {
       "availability": "REQUIRED",
       "kind": "working_file",
       "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/t13_joint_state_measure_construction.json",
       "role": "evidence",
-      "sha256": "2a31fb6f9d32abf94942b52bd9b43e5a68decb7a3ebb45d2f062722906e2cdff"
+      "sha256": "7b95c405419fe446aafebddade31f52ccb1bf4706fd7a1aab9e5c8ec0e1692dc"
     },
     {
       "availability": "REQUIRED",
@@ -213,7 +213,7 @@
       "kind": "working_file",
       "path": "docs/scripts/audit/audit_calculation_completeness.py",
       "role": "code",
-      "sha256": "b406d31add9834d2cd1d9f3bb8d42724d26c390413710419313dd85cba7121ca"
+      "sha256": "f3d8cbb1dcc0f1550fea283ab9b2409f50c7ea16c1c836c4a3cdb722573d9e31"
     }
   ],
   "model": {
