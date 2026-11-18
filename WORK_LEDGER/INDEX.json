@@ -5,11 +5,11 @@
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
     "sources": 81,
-    "entries": 908,
+    "entries": 909,
     "by_stream": {
       "book-history": 94,
       "operations": 134,
-      "research": 679,
+      "research": 680,
       "review": 1
     },
     "exact_duplicates": 0,
@@ -420,8 +420,8 @@
     },
     {
       "path": "2026/2026-11-18.md",
-      "sha256": "d74a063c7c34ca91cc35c533381cf52fea0a6dc4a44b479637a4c4aed7750d51",
-      "entries": 9
+      "sha256": "6286d69da79d916dd91388330827b329c89f533da4b8aae2e548f08744e31f36",
+      "entries": 10
     },
     {
       "path": "2026-08-14.md",
@@ -18541,9 +18541,29 @@
       "source": "2026/2026-11-18.md",
       "anchor": "core-alignment-w3-matter_space",
       "start_line": 83,
-      "end_line": 91,
+      "end_line": 92,
       "title": "Core alignment W3: matter_space",
-      "entry_sha256": "0b8b802c28ae32374b3ab01042934ed0410e6d16da0e3aa4b9f1b7fb4b4e11a6",
+      "entry_sha256": "5cfdaa97a90d3d2e5a44dc25e50a4ec6b72f7a361254c4dedce28360f4a50ce9",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-18",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-18.md#o8-and-t022-draft-michelson-morley-and-kennedy-thorndike",
+      "source": "2026/2026-11-18.md",
+      "anchor": "o8-and-t022-draft-michelson-morley-and-kennedy-thorndike",
+      "start_line": 93,
+      "end_line": 101,
+      "title": "O8 and T022 draft: Michelson-Morley and Kennedy-Thorndike",
+      "entry_sha256": "ea9b080c4b4d6125750707f451e560646148bce86bd97d637eaa1c658f3b6ed4",
       "stream": "research",
       "areas": [
         "research-core"

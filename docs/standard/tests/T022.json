@@ -1,0 +1,38 @@
+{
+  "schema": "uet-test-card-v2",
+  "test_id": "T022",
+  "status": "DRAFT",
+  "claim_id": "C_T022_LORENTZ_LENGTH_AND_VELOCITY",
+  "theory_card": {
+    "card_id": "UET_PARENT",
+    "version": 1
+  },
+  "hypothesis": "The parent action's local frame is Lorentzian, so the boost of wave O7 fixes the Robertson-Mansouri-Sexl parameters alpha = -1/2, beta = 1/2, delta = 0 (wave O8, uet_rms_light_speed.py, derived from exact light-travel times, with Galilean and contraction-only controls). Then the two-way speed of light depends neither on orientation (P_MM = beta - delta - 1/2 = 0, Michelson-Morley) nor on the laboratory velocity (P_KT = alpha - beta + 1 = 0, Kennedy-Thorndike). With T013 (time dilation, Ives-Stilwell) this covers all three parameters of the Lorentz transformation.",
+  "observable": {
+    "quantity": "P_MM and P_KT (each zero for the Lorentz transformation in every sign convention)",
+    "unit": "dimensionless",
+    "domain": "laboratory moving at about 370 km/s relative to the CMB frame (v/c ~ 1.2e-3); rotating optical cavities (Herrmann et al. 2009) and a cryogenic sapphire oscillator against hydrogen masers over six years (Tobar et al. 2010)"
+  },
+  "test_kind": "CONSTRAINT",
+  "data_sources": [
+    {
+      "data_id": "RMS_MM_KT_2009_2010",
+      "role": "COMPARISON",
+      "exposure": "SEEN_FULL"
+    }
+  ],
+  "prediction_method": {
+    "script": "core/03_lanes/observation/t022_michelson_morley_kennedy_thorndike.py",
+    "description": "Model P_MM and P_KT from the boost (computed, both zero); measured P_MM = (4 +- 8)e-12 and P_KT = (-4.8 +- 3.7)e-8 (weighted mean of the sidereal and annual terms) from the registered file; z = |measured - model| / sigma for each."
+  },
+  "free_parameters": [],
+  "fixed_parameters": [
+    "registered values and 1-sigma uncertainties exactly as in RMS_MM_KT_2009_2010",
+    "P_KT is the published weighted mean, not the sidereal or annual term alone",
+    "sign conventions of the papers are not converted; only |measured - 0| enters z"
+  ],
+  "pass_criterion": "PASS if z_MM <= 2 and z_KT <= 2.",
+  "fail_criterion": "FAILED if z_MM > 3 or z_KT > 3; INCONCLUSIVE otherwise.",
+  "drafted_by": "claude",
+  "note": "Disclosure: drafted after reading both published values, so the outcome is effectively known (|P_MM|/sigma = 0.5, |P_KT|/sigma = 1.3); the producer was not run before approval. Choice of experiments is the AI's: Herrmann et al. 2009 is the most precise rotating-cavity P_MM found; Tobar et al. 2010 the most precise P_KT found; neither was checked against the printed journal page. Scope: tests the Lorentz transformation of the parent action's local frame for light in electromagnetic resonators; any Lorentz-invariant theory passes, so this is not UET-distinct. The contraction-only control (Lorentz-FitzGerald without time dilation) passes Michelson-Morley and fails Kennedy-Thorndike, which is why both are required. Physics tests: core/05_tests/physics/test_rms_light_speed.py."
+}

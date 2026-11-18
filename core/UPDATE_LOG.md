@@ -497,3 +497,9 @@ commit: this commit
 - พบ: ไฟล์ใน topics 112 ไฟล์ (28 topic) ยังคำนวณด้วย uet_master_equation.py เก่า
 - ระดับ: ไม่เปลี่ยน claim ใด; ไม่ย้ายไฟล์
 - ถัดไป: รอบวิจัยแทรก แล้ว W4 02_equations/o2
+
+## 2026-11-18 — O8 and T022 draft: Michelson–Morley and Kennedy–Thorndike
+- ทำ: โมเดล uet_rms_light_speed.py หาความเร็วแสงไป-กลับจากเวลาเดินทางของแสงแบบตรง แล้วอ่านพารามิเตอร์ RMS จาก boost ของ O7 ได้ α = −1/2, β = 1/2, δ = 0; physics test 51 ข้อ มีตัวควบคุมแบบกาลิเลโอและแบบหดตัวอย่างเดียว
+- ร่าง T022 เทียบกับ Herrmann et al. 2009 (P_MM) และ Tobar et al. 2010 (P_KT); เห็นค่าที่ตีพิมพ์แล้วก่อนร่าง; ยังไม่ได้รันสคริปต์
+- ระดับ: C_T022_LORENTZ_LENGTH_AND_VELOCITY → L0_SPECULATIVE รอผู้เขียนอนุมัติการ์ด
+- ถัดไป: ผู้เขียนอนุมัติ T022 แล้วรัน; จากนั้น W4 02_equations/o2

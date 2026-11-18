@@ -228,6 +228,18 @@
       "license": "numerical facts transcribed from a published chapter; no figures or text redistributed",
       "visibility": "PUBLIC",
       "note": "Transcribed by Claude from the NBER PDF (585,415 bytes, sha256 e2b674e704950ee0b7609d8256e378a475567ca92d74945d4d4f948b9ec21ac8, kept local and not committed). The PDF text layer scrambles columns; every row was rebuilt and checked against two identities (labor hours = price / wage; lm/W x 293.07 = lm-h per 1,000 Btu), both tested in core/05_tests/physics/test_lighting_succession.py. Open-fire and Neolithic labor values and the 1885-95 gas wage were not legible and are left blank."
+    },
+    {
+      "data_id": "RMS_MM_KT_2009_2010",
+      "description": "Robertson-Mansouri-Sexl combinations from a rotating optical-cavity Michelson-Morley test and a cryogenic sapphire oscillator versus hydrogen maser Kennedy-Thorndike test",
+      "source": "S. Herrmann et al., Rotating optical cavity experiment testing Lorentz invariance at the 1e-17 level, Phys. Rev. D 80, 105011 (2009), Sec. II.2; M. E. Tobar et al., Testing local Lorentz and position invariance ..., Phys. Rev. D 81, 022003 (2010), abstract",
+      "doi_or_url": "https://arxiv.org/abs/1002.1284 ; https://arxiv.org/abs/0912.2803",
+      "retrieved": "2026-11-18",
+      "path": "docs/data/external/relativity/rms_lorentz/rms_mm_kt.csv",
+      "sha256": "240aa10ac368ec242278fec7196ed3fba5be27d41ca7b56c07c8b82674d2b9b7",
+      "license": "numerical facts transcribed from arXiv text and abstract; no figures or text redistributed",
+      "visibility": "PUBLIC",
+      "note": "Values read on 2026-11-18 through a paper-search tool: P_MM from the full text of arXiv:1002.1284 (Sec. II.2), P_KT from the abstract of arXiv:0912.2803. The journal references (PRD 80, 105011 and PRD 81, 022003) were not checked against the printed pages. Sign conventions differ between the papers; both combinations are zero for the Lorentz transformation."
     }
   ]
 }
