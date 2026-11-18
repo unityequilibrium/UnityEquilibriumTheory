@@ -5,11 +5,11 @@
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
     "sources": 81,
-    "entries": 901,
+    "entries": 904,
     "by_stream": {
       "book-history": 94,
-      "operations": 131,
-      "research": 675,
+      "operations": 133,
+      "research": 676,
       "review": 1
     },
     "exact_duplicates": 0,
@@ -420,8 +420,8 @@
     },
     {
       "path": "2026/2026-11-18.md",
-      "sha256": "0d767f9720f5d77b4917a7766fca6464dcf24b234f3d883c1832e339cef457d6",
-      "entries": 2
+      "sha256": "ca71488595c427decb2e1a4a83907005af0877ae20c310c6c2d069794a8aa260",
+      "entries": 5
     },
     {
       "path": "2026-08-14.md",
@@ -18399,12 +18399,72 @@
       "source": "2026/2026-11-18.md",
       "anchor": "stage-2-of-test-d-transport-w_t-design-check",
       "start_line": 13,
-      "end_line": 21,
+      "end_line": 22,
       "title": "Stage 2 of test D: transport w_T design check",
-      "entry_sha256": "38d9a987c7fc08671fc0e3ea865c6f5b558d2368f9cfceabd6c610ec5015da88",
+      "entry_sha256": "be48f66f9ccef2f3c6e23b1489bc77b4057b0e0f93f67cbd4287f8b456fddb87",
       "stream": "research",
       "areas": [
         "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-18",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-18.md#pr-59-admin-merge-past-a-known-legacy-ci-failure",
+      "source": "2026/2026-11-18.md",
+      "anchor": "pr-59-admin-merge-past-a-known-legacy-ci-failure",
+      "start_line": 23,
+      "end_line": 32,
+      "title": "PR #59 admin merge past a known legacy CI failure",
+      "entry_sha256": "c3e4676c8ab35326d87aa2ae7131130a7d01b62e4c5e19baecb2a548a23a41f5",
+      "stream": "operations",
+      "areas": [
+        "repo-ops"
+      ],
+      "related_streams": [
+        "operations"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-18",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-18.md#readme-v091-in-english-and-thai",
+      "source": "2026/2026-11-18.md",
+      "anchor": "readme-v091-in-english-and-thai",
+      "start_line": 33,
+      "end_line": 42,
+      "title": "README v0.9.1 in English and Thai",
+      "entry_sha256": "535ebbf84538f748fbb5f5a9202b828f2838d877ec0aa9829061c395384a46db",
+      "stream": "operations",
+      "areas": [
+        "documentation-system"
+      ],
+      "related_streams": [
+        "operations"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-18",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-18.md#agent-guide-no-lead-agent-one-folder-verify-other-agents-claims",
+      "source": "2026/2026-11-18.md",
+      "anchor": "agent-guide-no-lead-agent-one-folder-verify-other-agents-claims",
+      "start_line": 43,
+      "end_line": 51,
+      "title": "Agent guide: no lead agent, one folder, verify other agents' claims",
+      "entry_sha256": "f298ac94d32274bb997a791a87f3f4a50885a135478b3d6d818ba0941824776b",
+      "stream": "research",
+      "areas": [
+        "research-standards"
       ],
       "related_streams": [
         "research"
