@@ -4,11 +4,11 @@
   "generator_sha256": "b32005e4bdbf59da6681ae630fa1d9d4415c361f7523be18c8b52a86dc8c93e9",
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
-    "sources": 81,
-    "entries": 932,
+    "sources": 82,
+    "entries": 933,
     "by_stream": {
       "book-history": 94,
-      "operations": 135,
+      "operations": 136,
       "research": 702,
       "review": 1
     },
@@ -422,6 +422,11 @@
       "path": "2026/2026-11-18.md",
       "sha256": "bc2879bbdd3fcebc22a76b2d4bba2276adc6bbcc4975b3e1141287a5c9550470",
       "entries": 33
+    },
+    {
+      "path": "2026/2026-11-19.md",
+      "sha256": "b9db83bce41eb9b3882eb78362501b1578550bb787cc2a5c0e7c6942d64de34e",
+      "entries": 1
     },
     {
       "path": "2026-08-14.md",
@@ -19034,6 +19039,26 @@
       "basis": "explicit_stream_and_area",
       "flags": [],
       "date": "2026-11-18",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-19.md#pr-62-brought-up-to-date-and-pr-65-completeness-fix",
+      "source": "2026/2026-11-19.md",
+      "anchor": "pr-62-brought-up-to-date-and-pr-65-completeness-fix",
+      "start_line": 3,
+      "end_line": 11,
+      "title": "PR #62 brought up to date and PR #65 completeness fix",
+      "entry_sha256": "8dd59d042526924f0cb864fcdadda4dc0141cb56f2b5c4259e20ff280319e3e7",
+      "stream": "operations",
+      "areas": [
+        "repo-ops"
+      ],
+      "related_streams": [
+        "operations"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-19",
       "legacy_root_path": false
     },
     {

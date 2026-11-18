@@ -224,8 +224,10 @@
     "core/03_lanes/persistence/t024_innovation_interval.py"
   ],
   "evidence": [
-    "docs/standard/tests/T024.json"
+    "core/03_lanes/persistence/t024_innovation_interval.py",
+    "docs/data/external/economics/lighting/nordhaus1997_table1_1_milestones.csv",
+    "docs/data/external/economics/population/owid_population_world.csv"
   ],
   "claim_boundary": "Model selection between two borrowed scaling principles on one technology line and world population; not a UET-distinct prediction and not a test of urban scaling within cities.",
-  "next_action": "Run only after the author approves Test Card T024."
+  "next_action": "Run done and recorded as FAILED for beta = 1.27; a later card may test Kremer slope -1 on another technology line."
 }
