@@ -5,11 +5,11 @@
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
     "sources": 81,
-    "entries": 909,
+    "entries": 910,
     "by_stream": {
       "book-history": 94,
       "operations": 134,
-      "research": 680,
+      "research": 681,
       "review": 1
     },
     "exact_duplicates": 0,
@@ -420,8 +420,8 @@
     },
     {
       "path": "2026/2026-11-18.md",
-      "sha256": "6286d69da79d916dd91388330827b329c89f533da4b8aae2e548f08744e31f36",
-      "entries": 10
+      "sha256": "512659c81c5bb64962fd90613477084ff6d9165009dcf72d8ae5a45f9d871548",
+      "entries": 11
     },
     {
       "path": "2026-08-14.md",
@@ -18561,9 +18561,29 @@
       "source": "2026/2026-11-18.md",
       "anchor": "o8-and-t022-draft-michelson-morley-and-kennedy-thorndike",
       "start_line": 93,
-      "end_line": 101,
+      "end_line": 102,
       "title": "O8 and T022 draft: Michelson-Morley and Kennedy-Thorndike",
-      "entry_sha256": "ea9b080c4b4d6125750707f451e560646148bce86bd97d637eaa1c658f3b6ed4",
+      "entry_sha256": "5bc6cdd7bb6461f949b1e9a21f492d38876e979ee74783dc6381727cdc8e8544",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-18",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-18.md#t022-run-failed-by-a-numerical-defect-in-the-approved-script",
+      "source": "2026/2026-11-18.md",
+      "anchor": "t022-run-failed-by-a-numerical-defect-in-the-approved-script",
+      "start_line": 103,
+      "end_line": 111,
+      "title": "T022 run: FAILED by a numerical defect in the approved script",
+      "entry_sha256": "dc0795c35b851b76a34df3759e44b09b7dd31630d71f7d9cf7b5b6a35dc7c862",
       "stream": "research",
       "areas": [
         "research-core"
