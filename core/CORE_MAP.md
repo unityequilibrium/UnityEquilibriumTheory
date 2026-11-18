@@ -39,6 +39,7 @@
 | อะไร | ไฟล์ |
 |---|---|
 | derive จาก action (2026-11-18) | `03_lanes/open_system/uet_layer2_from_action.py`: ถ้าให้ χ เป็นแหล่งความร้อน φ จะได้แรงเสียดทานและสัญญาณรบกวนที่เป็นไปตาม KMS เอง แรงเสียดทาน γ(q,T) = Nσ²n(√(q²/4+M_χ²))/(16πq) โดย σ = h√ε/(Z√k) จึงไม่ใช่พารามิเตอร์อิสระอีกต่อไป (`C_L2_FROM_ACTION`, L1; ตัวตรวจ `05_tests/physics/test_layer2_from_action.py`) |
+| กฎข้อ 2 จาก action (2026-11-18) | `03_lanes/open_system/uet_layer2_second_law.py`: spectral function เป็นบวก ความร้อนไหลจากร้อนไปเย็น การผลิต entropy ≥ 0 และโหมดที่สั่นแบบ coherent เผา F ด้วย P = ΓE เขียน P/(T ln2) บิต (`C_L2_SECOND_LAW`, L1) |
 | สมการและโมเดล | `03_lanes/open_system/uet_layer2_dissipation.py` (ระบบปิดให้ระบบเปิดเอง), `uet_r3_trace_decomposition.py` (ร่องรอย = บันทึก + ความต่างศักย์), `uet_r1_writing_channels.py`, `uet_portal_drag.py`, `uet_portal_drag_bound.py` (ขอบเขตของแรงลาก portal จากการที่วงโคจรอยู่รอด) |
 | ตัวตรวจ | `05_tests/physics/test_layer2_dissipation.py`, `test_r3_trace_decomposition.py`, `test_r1_writing_channels.py`, `test_distinctness.py` |
 | เทียบข้อมูลจริง | T006 ดวงอาทิตย์ (`t006_solar_mass_loss.py`) |
@@ -63,7 +64,7 @@
 
 ## 3. ผลการทดสอบกับข้อมูลจริงทั้งหมด (`docs/standard/`)
 
-**นับรวม (2026-11-18):** 21 การ์ด (ไม่มีเลข T003, T004) · ผ่าน 16 · ไม่ชี้ขาด 3 (T002, T014, T023) · **พัง 2 (T015, T018)** · ข้ออ้างใน claims.json 46 ข้อ: L1 26, L2 18, FAILED 2 · ทุกตัวที่ผ่าน ฟิสิกส์มาตรฐานหรือ null ก็ผ่านด้วย จึง**ยังไม่มีการทดสอบไหนที่แยก UET ออกจากฟิสิกส์เดิมได้**
+**นับรวม (2026-11-18):** 21 การ์ด (ไม่มีเลข T003, T004) · ผ่าน 16 · ไม่ชี้ขาด 3 (T002, T014, T023) · **พัง 2 (T015, T018)** · ข้ออ้างใน claims.json 47 ข้อ: L1 27, L2 18, FAILED 2 · ทุกตัวที่ผ่าน ฟิสิกส์มาตรฐานหรือ null ก็ผ่านด้วย จึง**ยังไม่มีการทดสอบไหนที่แยก UET ออกจากฟิสิกส์เดิมได้**
 
 | Card | ชั้น | สรุป | ผล |
 |---|---|---|---|

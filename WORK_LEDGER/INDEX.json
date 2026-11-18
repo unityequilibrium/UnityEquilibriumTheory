@@ -5,11 +5,11 @@
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
     "sources": 81,
-    "entries": 929,
+    "entries": 930,
     "by_stream": {
       "book-history": 94,
       "operations": 135,
-      "research": 699,
+      "research": 700,
       "review": 1
     },
     "exact_duplicates": 0,
@@ -420,8 +420,8 @@
     },
     {
       "path": "2026/2026-11-18.md",
-      "sha256": "8723b490c1ecae86bea4659f2e553fce3dd9264e7e4b097970eaf5d61f0455b6",
-      "entries": 30
+      "sha256": "262db63556b41424633fb33b855b0b2ccfde1823d3036ab8c3376b44e993a69e",
+      "entries": 31
     },
     {
       "path": "2026-08-14.md",
@@ -18961,15 +18961,35 @@
       "source": "2026/2026-11-18.md",
       "anchor": "archive-move-of-c-files-checked-not-done",
       "start_line": 295,
-      "end_line": 303,
+      "end_line": 304,
       "title": "Archive move of C files: checked, not done",
-      "entry_sha256": "2c45901b99b21c0e9598375f25d929da73706661e44369533efe425bb9a60c5f",
+      "entry_sha256": "fcc6fcaab5fde51cfd6ed4c2dc1093ad8558350b9b2d6122d063607285660f6c",
       "stream": "operations",
       "areas": [
         "repo-ops"
       ],
       "related_streams": [
         "operations"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-18",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-18.md#stage-3-wave-l2-2-layer-2-second-law-from-the-action",
+      "source": "2026/2026-11-18.md",
+      "anchor": "stage-3-wave-l2-2-layer-2-second-law-from-the-action",
+      "start_line": 305,
+      "end_line": 313,
+      "title": "Stage 3 wave L2-2: layer 2 second law from the action",
+      "entry_sha256": "290c17f72ea86cb17accc8327bd726c20c1b779a8997ee6550a49f35a0fcdc78",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
       ],
       "basis": "explicit_stream_and_area",
       "flags": [],

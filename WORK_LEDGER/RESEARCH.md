@@ -6,10 +6,11 @@
 
 These are source-linked historical records, not proof of completed research, successful publication, or current scientific readiness.
 
-Indexed entries: 699. Counts describe records, not accomplishments.
+Indexed entries: 700. Counts describe records, not accomplishments.
 
 | Date | Record | Area | Notes |
 | --- | --- | --- | --- |
+| 2026-11-18 | [Stage 3 wave L2-2: layer 2 second law from the action](2026/2026-11-18.md#stage-3-wave-l2-2-layer-2-second-law-from-the-action) (L305) | research-core | explicit_stream_and_area |
 | 2026-11-18 | [Stage 3 wave L2-1: layer 2 from the parent action](2026/2026-11-18.md#stage-3-wave-l2-1-layer-2-from-the-parent-action) (L285) | research-core | explicit_stream_and_area |
 | 2026-11-18 | [Core alignment W10: core docs and complete register](2026/2026-11-18.md#core-alignment-w10-core-docs-and-complete-register) (L275) | research-core | explicit_stream_and_area |
 | 2026-11-18 | [Runner rule: topics without a suite are advisory](2026/2026-11-18.md#runner-rule-topics-without-a-suite-are-advisory) (L265) | research-standards | explicit_stream_and_area |
