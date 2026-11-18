@@ -320,6 +320,7 @@ def code_file_inventory(topic: Path, root: Path = REPO_ROOT) -> list[dict[str, A
         imports: set[str] = set()
         reads: set[str] = set()
         writes: set[str] = set()
+        io_sites = []
         main_guard = False
         if tree is not None:
             for node in ast.walk(tree):
@@ -329,6 +330,9 @@ def code_file_inventory(topic: Path, root: Path = REPO_ROOT) -> list[dict[str, A
                     imports.add(node.module.split(".", 1)[0])
                 elif isinstance(node, ast.Call):
                     name = _call_name(node)
+                    if name in READ_CALLS | WRITE_CALLS | {"get_result_dir", "UETMetricLogger"}:
+                        io_sites.append({"line": node.lineno, "call": ast.unparse(node.func),
+                                         "argument": ast.unparse(node.args[0])[:200] if node.args else None})
                     if name in READ_CALLS:
                         reads.add(name)
                     if name in WRITE_CALLS:
@@ -387,6 +391,7 @@ def code_file_inventory(topic: Path, root: Path = REPO_ROOT) -> list[dict[str, A
             "input_requirements": "UNKNOWN; possible static read calls: " + (", ".join(sorted(reads)) or "none detected"),
             "output_location": "UNKNOWN; static source scan is not an exhaustive path audit",
             "static_write_calls": sorted(writes),
+            "static_io_sites": io_sites,
             "overwrite_risk": "POTENTIAL_WRITE" if writes else "UNKNOWN_NOT_PROVEN_READ_ONLY",
             "source_parse_error": parse_error,
         })
@@ -867,6 +872,8 @@ def _print_inventory(inventory: list[dict[str, Any]], verbose: bool = False) -> 
                 f"input-read-hints={reads} | output=UNKNOWN | writes={writes} | "
                 f"overwrite-risk={source['overwrite_risk']}"
             )
+            for site in source["static_io_sites"]:
+                print(f"      L{site['line']} {site['call']}({site['argument'] or ''})")
 
 
 def registered_research_results(root: Path = REPO_ROOT) -> dict[str, Any]:

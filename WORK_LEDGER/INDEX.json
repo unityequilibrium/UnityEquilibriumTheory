@@ -4,11 +4,11 @@
   "generator_sha256": "b32005e4bdbf59da6681ae630fa1d9d4415c361f7523be18c8b52a86dc8c93e9",
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
-    "sources": 78,
-    "entries": 831,
+    "sources": 79,
+    "entries": 832,
     "by_stream": {
       "book-history": 94,
-      "operations": 130,
+      "operations": 131,
       "research": 606,
       "review": 1
     },
@@ -407,6 +407,11 @@
       "path": "2026/2026-11-16.md",
       "sha256": "c2b1fb2f1c0a6ae077174e93df02c4fe55f8b83cdd606663c158e6256b5c2ef6",
       "entries": 6
+    },
+    {
+      "path": "2026/2026-11-18.md",
+      "sha256": "088d58685aa994e87085c5a532932ee08de679e6c2643ecd5dc9219d28ed02d2",
+      "entries": 1
     },
     {
       "path": "2026-08-14.md",
@@ -16997,6 +17002,26 @@
       "basis": "explicit_stream_and_area",
       "flags": [],
       "date": "2026-11-16",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-18.md#route-research-output-to-the-current-topic-tree",
+      "source": "2026/2026-11-18.md",
+      "anchor": "route-research-output-to-the-current-topic-tree",
+      "start_line": 3,
+      "end_line": 8,
+      "title": "Route research output to the current Topic tree",
+      "entry_sha256": "08a5527890995b2f8ae5f96e4a0f52244695b215a0d2fa409d96c52d4be840fc",
+      "stream": "operations",
+      "areas": [
+        "repo-ops"
+      ],
+      "related_streams": [
+        "operations"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-18",
       "legacy_root_path": false
     },
     {

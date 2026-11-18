@@ -1,3 +1,5 @@
+from pathlib import Path
+
 import numpy as np
 import matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d import Axes3D
@@ -72,7 +74,8 @@ def simulate_high_vertical_slingshot():
     
     plt.tight_layout()
     # Savefig for the user
-    save_path = "docs/topics/0.31_SpaceTime_Propulsion/Result/Fig_Interstellar_Slingshot.png"
+    save_path = Path(__file__).resolve().parents[1] / "Result/02_Figures/Fig_Interstellar_Slingshot.png"
+    save_path.parent.mkdir(parents=True, exist_ok=True)
     plt.savefig(save_path)
     print(f"🟢 SIMULATION COMPLETE: Plot saved to {save_path}")
     print("🚀 VELOCITY KICK DETECTED: Escape Velocity reached +500% vs standard Gravity Assist.")

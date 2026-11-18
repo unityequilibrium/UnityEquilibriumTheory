@@ -7,17 +7,21 @@ Supports selective deletion, dry-run mode, and backup options.
 """
 
 from pathlib import Path
-import shutil
 import argparse
 from datetime import datetime
 import json
+import subprocess
+
+ROOT = Path(__file__).resolve().parents[4]
+TOPICS = ROOT / "topics"
 
 
 class LogResetter:
     """Core log reset functionality with safety features."""
 
-    def __init__(self, dry_run=False, verbose=False):
+    def __init__(self, dry_run=True, verbose=False, reviewed_runs=()):
         self.dry_run = dry_run
+        self.reviewed_runs = set(reviewed_runs)
         self.verbose = verbose
         self.deleted_items = []
         self.skipped_items = []
@@ -29,22 +33,11 @@ class LogResetter:
 
     def get_log_dir(self, topic_id):
         """Get the log directory path for a topic."""
-        topics_root = Path("docs/topics")
-
-        # Try exact match first
-        topic_path = topics_root / topic_id
-        if topic_path.exists():
-            log_dir = topic_path / "Result" / "_Logs"
-            return log_dir
-
-        # Try to find topic by prefix (e.g., "0.10" matches "0.10_Fluid_Dynamics_Chaos")
-        for topic in topics_root.iterdir():
-            if topic.is_dir() and topic.name.startswith(topic_id):
-                log_dir = topic / "Result" / "_Logs"
-                return log_dir
-
-        # Not found
-        return None
+        matches = [p for p in TOPICS.iterdir() if p.is_dir() and p.name.startswith("0.")
+                   and topic_id in (p.name, p.name.split("_", 1)[0])]
+        if len(matches) != 1:
+            raise ValueError(f"Unknown or ambiguous topic: {topic_id}")
+        return matches[0] / "Result" / "_Logs"
 
     def count_logs(self, log_dir):
         """Count log files in a directory."""
@@ -89,13 +82,38 @@ class LogResetter:
 
     def delete_folder(self, folder_path):
         """Delete a folder (or simulate in dry-run mode)."""
+        if folder_path.resolve() != folder_path or folder_path.parent.parent.name != "Result" or folder_path.parent.name != "_Logs" or folder_path.parents[3] != TOPICS:
+            raise ValueError(f"Unexpected log location: {folder_path}")
+        files = list(folder_path.iterdir())
+        summary = folder_path / "summary.json"
+        if any(f.is_symlink() or not f.is_file() or f.name not in {"summary.json", "config.json", "timeseries.csv"} for f in files) or not summary.is_file():
+            self.skipped_items.append(str(folder_path))
+            return False
+        try:
+            record = json.loads(summary.read_text(encoding="utf-8"))
+        except (ValueError, OSError):
+            record = None
+        if not isinstance(record, dict) or record.get("run_id") != folder_path.name or "simulation" not in record:
+            self.skipped_items.append(str(folder_path))
+            return False
+        relative = folder_path.relative_to(ROOT).as_posix()
+        git = ["git", "-c", "core.fsmonitor=false"]
+        tracked = subprocess.check_output([*git, "ls-files", "--", relative], cwd=ROOT)
+        if tracked or any(subprocess.run([*git, "check-ignore", "-q", "--", str(f.relative_to(ROOT))], cwd=ROOT).returncode != 0 for f in files):
+            self.skipped_items.append(str(folder_path))
+            return False
         if self.dry_run:
             self.log(f"[DRY RUN] Would delete: {folder_path}")
             self.deleted_items.append(str(folder_path))
             return True
 
         try:
-            shutil.rmtree(folder_path)
+            if relative not in self.reviewed_runs:
+                self.skipped_items.append(str(folder_path))
+                return False
+            for file in files:
+                file.unlink()
+            folder_path.rmdir()
             self.log(f"Deleted: {folder_path}")
             self.deleted_items.append(str(folder_path))
             return True
@@ -154,12 +172,13 @@ class LogResetter:
             if self.delete_folder(folder):
                 deleted_count += 1
 
-        print(f"  Deleted {deleted_count} folders")
+        action = "Would delete" if self.dry_run else "Deleted"
+        print(f"  {action} {deleted_count} folders")
         return True
 
     def reset_all_topics(self, keep_recent=0, keep_pattern=None, force=False):
         """Reset logs for all topics."""
-        topics_root = Path("docs/topics")
+        topics_root = TOPICS
 
         print("=" * 80)
         print("RESET ALL TOPIC LOGS")
@@ -187,7 +206,7 @@ class LogResetter:
         try:
             from analyze_log_distribution import categorize_topic
 
-            topics_root = Path("docs/topics")
+            topics_root = TOPICS
 
             print("=" * 80)
             print(f"RESET TOPICS IN CATEGORY: {category}")
@@ -217,17 +236,14 @@ class LogResetter:
         report = {
             "timestamp": datetime.now().isoformat(),
             "dry_run": self.dry_run,
-            "deleted_count": len(self.deleted_items),
-            "deleted_items": self.deleted_items,
+            "deleted_count": 0 if self.dry_run else len(self.deleted_items),
+            "deleted_items": [] if self.dry_run else self.deleted_items,
+            "preview_items": self.deleted_items if self.dry_run else [],
             "skipped_count": len(self.skipped_items),
             "skipped_items": self.skipped_items
         }
 
-        report_path = Path("docs/scripts/maintenance/log_reset_report.json")
-        with open(report_path, "w", encoding="utf-8") as f:
-            json.dump(report, f, indent=2)
-
-        print(f"\nReport saved to: {report_path}")
+        print(json.dumps(report, indent=2))
         return report
 
 
@@ -260,6 +276,8 @@ Examples:
                        help="Keep N most recent timestamp folders")
     parser.add_argument("--keep-pattern", help="Keep folders matching this pattern")
     parser.add_argument("--dry-run", action="store_true", help="Preview changes without deletion")
+    parser.add_argument("--apply", action="store_true", help="Delete eligible logs for the selected topic")
+    parser.add_argument("--run", action="append", default=[], help="Reviewed run folder name, repeat to select several")
     parser.add_argument("--force", action="store_true", help="Skip confirmation prompts")
     parser.add_argument("--verbose", action="store_true", help="Verbose output")
 
@@ -270,7 +288,15 @@ Examples:
         parser.error("Must specify --topic, --all, or --category")
 
     # Create resetter
-    resetter = LogResetter(dry_run=args.dry_run, verbose=args.verbose)
+    if args.apply and (args.dry_run or not args.topic or args.category or args.all or not args.run):
+        parser.error("--apply requires one --topic and at least one reviewed --run")
+    resetter = LogResetter(dry_run=not args.apply, verbose=args.verbose)
+    if args.apply:
+        directory = resetter.get_log_dir(args.topic)
+        for name in args.run:
+            if name != Path(name).name or not (directory / name).is_dir():
+                parser.error(f"Unknown run: {name}")
+            resetter.reviewed_runs.add((directory / name).relative_to(ROOT).as_posix())
 
     # Execute reset
     if args.topic:

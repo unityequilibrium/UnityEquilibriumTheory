@@ -63,8 +63,8 @@ def main() -> int:
 
     raw_payload_available = True
     for record in package["raw_files"]:
-        path = ROOT / record["local_path"]
-        exists = canonical_existing_path(path).is_file()
+        path = canonical_existing_path(ROOT / record["local_path"])
+        exists = path.is_file()
         declared_identity = bool(
             record.get("local_path")
             and isinstance(record.get("bytes"), int)

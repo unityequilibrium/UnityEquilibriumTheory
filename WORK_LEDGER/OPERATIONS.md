@@ -6,10 +6,11 @@
 
 These are source-linked historical records, not proof of completed research, successful publication, or current scientific readiness.
 
-Indexed entries: 130. Counts describe records, not accomplishments.
+Indexed entries: 131. Counts describe records, not accomplishments.
 
 | Date | Record | Area | Notes |
 | --- | --- | --- | --- |
+| 2026-11-18 | [Route research output to the current Topic tree](2026/2026-11-18.md#route-research-output-to-the-current-topic-tree) (L3) | repo-ops | explicit_stream_and_area |
 | 2026-11-16 | [Owner-requested publication of the root-layout repair branch](2026/2026-11-16.md#owner-requested-publication-of-the-root-layout-repair-branch) (L63) | repo-ops | explicit_stream_and_area |
 | 2026-11-16 | [Topic 10 archived-source locator recovery](2026/2026-11-16.md#topic-10-archived-source-locator-recovery) (L51) | repo-ops | explicit_stream_and_area |
 | 2026-11-16 | [Full Desktop regression checkpoint and declared-predecessor guard repair](2026/2026-11-16.md#full-desktop-regression-checkpoint-and-declared-predecessor-guard-repair) (L39) | repo-ops | explicit_stream_and_area |

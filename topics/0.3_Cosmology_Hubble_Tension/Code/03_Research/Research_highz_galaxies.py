@@ -43,10 +43,10 @@ root_path = ROOT_PATH
 
 
 # Setup local imports for Topic 0.3 and Topic 0.1
-topic_path = root_path / "docs" / "topics" / "0.3_Cosmology_Hubble_Tension"
+topic_path = ROOT / "topics" / "0.3_Cosmology_Hubble_Tension"
 engine_path = topic_path / "Code" / "01_Engine"
 galaxy_engine_path = (
-    root_path / "docs" / "topics" / "0.1_Galaxy_Rotation_Problem" / "Code" / "01_Engine"
+    ROOT / "topics" / "0.1_Galaxy_Rotation_Problem" / "Code" / "01_Engine"
 )
 
 if str(engine_path) not in sys.path:
@@ -115,12 +115,12 @@ def simulate_highz_prediction(z_target=5.0):
             topic_id="0.3_Cosmology_Hubble_Tension",
             experiment_name="Research_highz_galaxies",
             pillar="03_Research",
-            category="log",
+            category="figures",
         )
     except ImportError:
         # Fallback if running standalone without core
-        output_dir = Path("Result")
-        output_dir.mkdir(exist_ok=True)
+        output_dir = Path(__file__).resolve().parents[2] / "Result/02_Figures"
+        output_dir.mkdir(parents=True, exist_ok=True)
 
     output_png = output_dir / "highz_evolution_prediction.png"
     plt.savefig(output_png)

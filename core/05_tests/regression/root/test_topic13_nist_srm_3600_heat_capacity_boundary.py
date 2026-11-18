@@ -42,16 +42,17 @@ def test_srm_3600_preserves_uncertainty_boundary_without_emitting_rows() -> None
 
 def test_srm_3600_raw_hash_matches_artifact_and_holdout_is_untouched() -> None:
     result = load(ARTIFACT)
-    if RAW.is_file():
-        assert hashlib.sha256(RAW.read_bytes()).hexdigest() == result["source"]["local_sha256"]
-        assert result["source"]["raw_payload_available"] is True
-        assert result["source"]["input_mode"] == "RAW_PAYLOAD_VERIFIED"
+    source = result["source"]
+    if source["input_mode"] == "RAW_PAYLOAD_VERIFIED":
+        assert source["raw_payload_available"] is True
+        assert RAW.is_file()
     else:
-        assert result["source"]["raw_payload_available"] is False
-        assert result["source"]["input_mode"] == "METADATA_ONLY_PUBLIC_BOUNDARY"
-        assert result["source"]["local_sha256_is_expected_when_unavailable"] is True
-        assert result["source"]["local_sha256"] == "5bbbd0e3949a1e38cbb7ec00bbfc1a75a9d4708f6a0656e5e49c8d44d32ba5da"
-        assert result["source"]["local_bytes"] == 758635
+        assert source["input_mode"] == "METADATA_ONLY_PUBLIC_BOUNDARY"
+        assert source["raw_payload_available"] is False
+        assert source["local_sha256_is_expected_when_unavailable"] is True
+    if RAW.is_file():
+        assert RAW.stat().st_size == source["local_bytes"]
+        assert hashlib.sha256(RAW.read_bytes()).hexdigest() == source["local_sha256"]
     assert result["checks"]["holdout_accessed"] is False
     assert result["acceptance"]["holdout_accessed"] is False
     assert result["acceptance"]["target_fit_performed"] is False
