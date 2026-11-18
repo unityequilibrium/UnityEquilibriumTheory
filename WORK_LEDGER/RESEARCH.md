@@ -6,10 +6,11 @@
 
 These are source-linked historical records, not proof of completed research, successful publication, or current scientific readiness.
 
-Indexed entries: 689. Counts describe records, not accomplishments.
+Indexed entries: 690. Counts describe records, not accomplishments.
 
 | Date | Record | Area | Notes |
 | --- | --- | --- | --- |
+| 2026-11-18 | [T023 result at L2 (INCONCLUSIVE)](2026/2026-11-18.md#t023-result-at-l2-inconclusive) (L193) | research-core | explicit_stream_and_area |
 | 2026-11-18 | [T023 run: INCONCLUSIVE, bats between other mammals and birds](2026/2026-11-18.md#t023-run-inconclusive-bats-between-other-mammals-and-birds) (L183) | research-core | explicit_stream_and_area |
 | 2026-11-18 | [Species-level reserve and Test Card T023 draft (bats)](2026/2026-11-18.md#species-level-reserve-and-test-card-t023-draft-bats) (L173) | research-core | explicit_stream_and_area |
 | 2026-11-18 | [Layer 3 mapped onto Saavedra et al. 2025 (SFI metabolic coexistence)](2026/2026-11-18.md#layer-3-mapped-onto-saavedra-et-al-2025-sfi-metabolic-coexistence) (L163) | research-core | explicit_stream_and_area |
