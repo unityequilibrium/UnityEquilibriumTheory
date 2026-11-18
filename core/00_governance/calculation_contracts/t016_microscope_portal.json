@@ -1,0 +1,253 @@
+{
+  "schema_version": "uet-calculation-contract-v1",
+  "contract_id": "CORE_T016_MICROSCOPE_PORTAL_V1",
+  "profile": "PHYSICAL_COMPARISON",
+  "review": {
+    "status": "INCOMPLETE",
+    "reviewer": "agent:claude-t016",
+    "rationale": "Methodological contract for Test Card T016. The evidence decision lives in docs/standard. The Eotvos measurement is inherited from the MICROSCOPE analysis.",
+    "coverage_evidence": [
+      "docs/data/external/gravity/microscope/microscope2022_eta_and_composition.csv"
+    ]
+  },
+  "question": "With the portal sourced by nucleon number, how strongly does MICROSCOPE's eta(Ti, Pt) limit the portal coupling as a function of range?",
+  "output": {
+    "quantity": "alpha_max and g_c_max at lambda = 1e5, 1e6, 7e6, 1.922e8, 1e12 m",
+    "unit": "alpha dimensionless; g_c, m_psi in eV",
+    "domain": "MICROSCOPE orbit (710 km), Earth as uniform sphere, TA6V and PtRh10 test masses",
+    "accuracy": "One-sided 2 sigma on eta (stat and syst in quadrature); nominal composition.",
+    "claim_intent": "DIAGNOSTIC"
+  },
+  "model": {
+    "formula_ids": [
+      "UET_PORTAL_COMPOSITION_EP",
+      "UET_T016_MICROSCOPE_PORTAL"
+    ],
+    "assumptions": "chi = nucleon; portal source = nucleon rest energy; gravity couples to total mass-energy.",
+    "approximation": "Uniform-sphere Earth, eps_E = 1, nominal alloy fractions.",
+    "initial_boundary": "Static Yukawa field of the Earth at the satellite orbit.",
+    "drive_environment": "None beyond the published measurement.",
+    "parameters": "No fitting; alpha and lambda free, bounded by the data."
+  },
+  "data_policy": {
+    "uses_observations": true,
+    "calibration_ids": [],
+    "comparison_ids": [
+      "MICROSCOPE22_ETA_COMPOSITION"
+    ],
+    "independent_validation": false,
+    "holdout_policy": "No holdout. Published eta seen in the abstract before drafting (SEEN_SUMMARY), declared in Test Card T016."
+  },
+  "observation": {
+    "system_partition": {
+      "role_mode": "RELATIONAL",
+      "accounting_component_id": "system_state",
+      "boundary": "Earth as source and two test masses in a drag-free satellite; published eta used only.",
+      "systems": [
+        {
+          "id": "earth",
+          "state": "Uniform sphere source of gravity and portal field",
+          "state_accounting": {
+            "kind": "INDEPENDENT",
+            "state_ids": [
+              "earth.mass"
+            ],
+            "owner_ids": [],
+            "rule": "Mass and radius as registered."
+          }
+        },
+        {
+          "id": "test_masses",
+          "state": "TA6V and PtRh10 cylinders in free fall",
+          "state_accounting": {
+            "kind": "INDEPENDENT",
+            "state_ids": [
+              "test_masses.composition"
+            ],
+            "owner_ids": [],
+            "rule": "Nominal composition as registered."
+          }
+        },
+        {
+          "id": "accelerometer",
+          "state": "Differential electrostatic accelerometer record",
+          "state_accounting": {
+            "kind": "INDEPENDENT",
+            "state_ids": [
+              "accelerometer.record"
+            ],
+            "owner_ids": [],
+            "rule": "Observer record only."
+          }
+        }
+      ],
+      "couplings": [
+        {
+          "id": "field_to_masses",
+          "source": "earth",
+          "target": "test_masses",
+          "kind": "SIGNAL",
+          "component_id": "propagation",
+          "map": "Static gravity plus portal Yukawa field"
+        },
+        {
+          "id": "acceleration_detection",
+          "source": "test_masses",
+          "target": "accelerometer",
+          "kind": "DETECTION",
+          "component_id": "detector",
+          "map": "Electrostatic servo forces, upstream"
+        },
+        {
+          "id": "servo_backaction",
+          "source": "accelerometer",
+          "target": "test_masses",
+          "kind": "BACKACTION",
+          "component_id": "detector",
+          "map": "Servo forces handled upstream in the published analysis"
+        }
+      ],
+      "observables": [
+        {
+          "id": "eotvos",
+          "detector_id": "accelerometer",
+          "target_systems": [
+            "test_masses"
+          ],
+          "backaction_targets": [
+            "test_masses"
+          ],
+          "backaction_scope_reason": "Single assessed owner.",
+          "quantity": "eta(Ti, Pt)",
+          "readout_map": "Published eta and uncertainties; transcribed only",
+          "component_id": "detector"
+        }
+      ]
+    },
+    "source_state": "Earth and the satellite test masses as in the published analysis.",
+    "generated_trace": "Differential acceleration record; not a UET trace variable.",
+    "carrier": "Static fields; psi treated classically.",
+    "observer_state": "Published eta.",
+    "readout": "eta(Ti, Pt) with statistical and systematic errors.",
+    "backaction": "Handled upstream.",
+    "frame": "Earth-centred inertial frame of the published analysis",
+    "time_convention": "Not relevant (static field)",
+    "product_level": "published derived quantities (not raw data)",
+    "corrections": [
+      {
+        "id": "instrument_systematics_upstream",
+        "state": "APPLIED_UPSTREAM",
+        "evidence": "docs/data/external/gravity/microscope/microscope2022_eta_and_composition.csv"
+      }
+    ]
+  },
+  "components": [
+    {
+      "id": "system_state",
+      "group": "system_state",
+      "disposition": "MODELED",
+      "reason": "Earth and test masses as registered.",
+      "evidence": [
+        "docs/data/external/gravity/microscope/microscope2022_eta_and_composition.csv"
+      ]
+    },
+    {
+      "id": "drive_environment",
+      "group": "drive_environment",
+      "disposition": "NOT_APPLICABLE",
+      "reason": "No external drive in the comparison.",
+      "evidence": []
+    },
+    {
+      "id": "propagation",
+      "group": "propagation",
+      "disposition": "UPSTREAM_CORRECTED",
+      "reason": "Applied upstream in the MICROSCOPE analysis (Touboul et al. 2022); not recomputed here.",
+      "evidence": [
+        "docs/data/external/gravity/microscope/microscope2022_eta_and_composition.csv"
+      ]
+    },
+    {
+      "id": "frame_time",
+      "group": "frame_time",
+      "disposition": "UPSTREAM_CORRECTED",
+      "reason": "Applied upstream in the MICROSCOPE analysis (Touboul et al. 2022); not recomputed here.",
+      "evidence": [
+        "docs/data/external/gravity/microscope/microscope2022_eta_and_composition.csv"
+      ]
+    },
+    {
+      "id": "detector",
+      "group": "detector",
+      "disposition": "UPSTREAM_CORRECTED",
+      "reason": "Applied upstream in the MICROSCOPE analysis (Touboul et al. 2022); not recomputed here.",
+      "evidence": [
+        "docs/data/external/gravity/microscope/microscope2022_eta_and_composition.csv"
+      ]
+    },
+    {
+      "id": "processing",
+      "group": "processing",
+      "disposition": "MODELED",
+      "reason": "eps from composition, uniform-sphere Yukawa geometry, one-sided 2 sigma bound fixed in T016.",
+      "evidence": [
+        "core/03_lanes/scalar_tensor/t016_microscope_portal.py",
+        "core/03_lanes/scalar_tensor/uet_portal_composition.py"
+      ]
+    },
+    {
+      "id": "numerics",
+      "group": "numerics",
+      "disposition": "MODELED",
+      "reason": "Closed-form; sphere field checked against a volume integral in test_portal_composition.py.",
+      "evidence": [
+        "core/03_lanes/scalar_tensor/t016_microscope_portal.py"
+      ]
+    }
+  ],
+  "error_budget": {
+    "unit": "alpha dimensionless; g_c, m_psi in eV",
+    "numerical": "Floating point only.",
+    "approximation": "Uniform-sphere Earth; Earth's density profile ignored.",
+    "measurement": "eta stat and syst in quadrature, one-sided 2 sigma.",
+    "systematic": "Composition rows transcribed from memory, not cross-checked against CIAAW (accepted by the author at approval).",
+    "omissions": "Binding-energy reading of the portal source is a lane choice; the total-mass reading gives eta = 0.",
+    "dependence": "Independent of the T005 data (different experiment).",
+    "acceptance": "Outcome categories fixed in Test Card T016.",
+    "omission_limit": null
+  },
+  "identities": [
+    {
+      "path": "docs/data/external/gravity/microscope/microscope2022_eta_and_composition.csv",
+      "kind": "working_file",
+      "role": "input",
+      "sha256": "ddad69b8ce3f46c1f01d0cf51a0e53a6be87dd1db6351810947315a660ebd749",
+      "availability": "REQUIRED"
+    },
+    {
+      "path": "core/03_lanes/scalar_tensor/uet_portal_composition.py",
+      "kind": "working_file",
+      "role": "code",
+      "sha256": "ac6c7412f8d6f3baa52612ca807e815da674393ef1c5545b75c4681adbff96c6",
+      "availability": "REQUIRED"
+    },
+    {
+      "path": "core/03_lanes/scalar_tensor/t016_microscope_portal.py",
+      "kind": "working_file",
+      "role": "code",
+      "sha256": "2ab55e1c324ce284338cfe3c7c4332f2f94190956cc484e8ba7140f9dd6aefb2",
+      "availability": "REQUIRED"
+    }
+  ],
+  "entrypoints": [
+    "core/03_lanes/scalar_tensor/t016_microscope_portal.py",
+    "core/03_lanes/scalar_tensor/uet_portal_composition.py"
+  ],
+  "evidence": [
+    "core/03_lanes/scalar_tensor/t016_microscope_portal.py",
+    "core/03_lanes/scalar_tensor/uet_portal_composition.py",
+    "docs/data/external/gravity/microscope/microscope2022_eta_and_composition.csv"
+  ],
+  "claim_boundary": "Methodological coverage of the T016 comparison only; the evidence level is set in docs/standard. Valid only for the nucleon-number portal lane.",
+  "next_action": "Cross-check composition against CIAAW; include Earth's density profile if a tighter number is needed."
+}

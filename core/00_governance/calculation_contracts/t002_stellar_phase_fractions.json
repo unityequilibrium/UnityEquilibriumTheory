@@ -238,8 +238,8 @@
       "disposition": "MODELED",
       "reason": "Little's law ratio with a common formation rate; R_pred from the model fit; z-score against the observed mean.",
       "evidence": [
-        "docs/core/03_lanes/persistence/t002_stellar_phase_fractions.py",
-        "docs/core/03_lanes/persistence/uet_persistence_selection.py"
+        "core/03_lanes/persistence/t002_stellar_phase_fractions.py",
+        "core/03_lanes/persistence/uet_persistence_selection.py"
       ]
     },
     {
@@ -248,7 +248,7 @@
       "disposition": "MODELED",
       "reason": "Closed-form arithmetic; Little's law covered by physics tests.",
       "evidence": [
-        "docs/core/05_tests/physics/test_persistence_selection.py"
+        "core/05_tests/physics/test_persistence_selection.py"
       ]
     }
   ],
@@ -272,21 +272,21 @@
       "availability": "REQUIRED"
     },
     {
-      "path": "docs/core/03_lanes/persistence/uet_persistence_selection.py",
+      "path": "core/03_lanes/persistence/uet_persistence_selection.py",
       "kind": "working_file",
       "role": "code",
       "sha256": "d838cf1a441d3753f8eac09b916b0a005e6867f08261a83b96412dbe0f1e2246",
       "availability": "REQUIRED"
     },
     {
-      "path": "docs/core/03_lanes/persistence/t002_stellar_phase_fractions.py",
+      "path": "core/03_lanes/persistence/t002_stellar_phase_fractions.py",
       "kind": "working_file",
       "role": "code",
-      "sha256": "8db700e4aa1d1d59844f73bce64738d34349625895547341c13af44bd82a80c1",
+      "sha256": "4a6d2f9a61fd329449857d35d2230a74c893929fde42203a4f8ddd42f605ae84",
       "availability": "REQUIRED"
     },
     {
-      "path": "docs/core/05_tests/physics/test_persistence_selection.py",
+      "path": "core/05_tests/physics/test_persistence_selection.py",
       "kind": "working_file",
       "role": "code",
       "sha256": "bbe4b287d6929a165eafe288cf0fa63ecaa446eaae4403d6193a47b5103e3a68",
@@ -294,12 +294,12 @@
     }
   ],
   "entrypoints": [
-    "docs/core/03_lanes/persistence/t002_stellar_phase_fractions.py",
-    "docs/core/03_lanes/persistence/uet_persistence_selection.py"
+    "core/03_lanes/persistence/t002_stellar_phase_fractions.py",
+    "core/03_lanes/persistence/uet_persistence_selection.py"
   ],
   "evidence": [
-    "docs/core/03_lanes/persistence/t002_stellar_phase_fractions.py",
-    "docs/core/03_lanes/persistence/uet_persistence_selection.py",
+    "core/03_lanes/persistence/t002_stellar_phase_fractions.py",
+    "core/03_lanes/persistence/uet_persistence_selection.py",
     "docs/data/external/astronomy/globular_cluster_r_parameter/ayala2014_r_parameter.csv"
   ],
   "claim_boundary": "Methodological coverage of the T002 comparison only. The evidence level is set in docs/standard. The comparison cannot distinguish UET layer 3 from the standard fuel-consumption reasoning it reproduces.",

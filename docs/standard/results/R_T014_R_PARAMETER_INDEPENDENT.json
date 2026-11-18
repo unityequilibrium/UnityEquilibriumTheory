@@ -1,0 +1,46 @@
+{
+  "schema": "uet-result-v2",
+  "result_id": "R_T014_R_PARAMETER_INDEPENDENT",
+  "claim_id": "C_T002_STELLAR_PHASE_ABUNDANCE",
+  "level": "L2_CONFRONTED",
+  "test_card_id": "T014",
+  "outcome": "INCONCLUSIVE",
+  "numbers": [
+    {
+      "name": "R_pred_Y_HII",
+      "value": 1.4669,
+      "uncertainty": 0.0225,
+      "unit": "1"
+    },
+    {
+      "name": "sigma_model_fixed_in_card",
+      "value": 0.0294,
+      "uncertainty": null,
+      "unit": "1"
+    },
+    {
+      "name": "R_obs_in_situ_Gontcharov2026",
+      "value": 1.31,
+      "uncertainty": 0.06,
+      "unit": "1"
+    },
+    {
+      "name": "z",
+      "value": 2.22,
+      "uncertainty": null,
+      "unit": "1"
+    }
+  ],
+  "producer": {
+    "script": "core/03_lanes/persistence/t014_r_parameter_independent.py",
+    "commit": "f754b48a4"
+  },
+  "artifacts": [],
+  "date": "2026-11-16",
+  "approval": {
+    "approved_by": "santxkoz",
+    "date": "2026-11-16",
+    "role": "AUTHOR"
+  },
+  "note": "INCONCLUSIVE by the preregistered rule (2 < z <= 3): with independent HST ACS + Gaia counts for 8 in-situ clusters (R = 1.31 +0.06/-0.05, upper error used because R_pred > R_obs) and a stellar-model error fixed in advance, the layer-3 prediction exceeds the observed R at 2.22 sigma. Same direction as T002 (z = 2.05) with independent counts; the two cards were not combined because no combination rule was fixed. Layer-3 readings that this test cannot separate: an extra HB burn channel, larger stellar-model error than published, or a non-steady HB population (the source reports HB depletion after disk crossings), which would break Little's law. Not blind (R seen in the abstract). Not UET-distinct. Journal cross-check not done. L2 approved by the author on 2026-11-16."
+}

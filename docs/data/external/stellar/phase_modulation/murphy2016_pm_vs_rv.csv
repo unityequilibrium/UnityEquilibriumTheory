@@ -1,0 +1,14 @@
+# Murphy, Shibahashi & Bedding, MNRAS (2016), doi:10.1093/mnras/stw1622, arXiv:1607.07879, Table 2.
+# Orbits solved separately from Kepler pulsation time delays (PM only) and ground-based radial velocities (RV only).
+# KIC 5705575: the RV-only solution fixed P = 537.5 d and e = 0.0 from the PM solution (stated in the table caption).
+system,method,quantity,value,err_plus,err_minus,unit
+KIC5705575,PM,a1sini_over_c,165.4,1.4,1.3,s
+KIC5705575,RV,a1sini_over_c,162,20,20,s
+KIC5705575,PM,K1,6.71,0.04,0.04,km/s
+KIC5705575,RV,K1,6.55,0.83,0.83,km/s
+KIC6780873,PM,a1sini_over_c,16.6,2.0,2.6,s
+KIC6780873,RV,a1sini_over_c,16.5,0.5,0.5,s
+KIC6780873,PM,period,9.131,0.025,0.013,d
+KIC6780873,RV,period,9.161,0.001,0.001,d
+KIC6780873,PM,K1,39.6,5.6,5.6,km/s
+KIC6780873,RV,K1,38.7,0.9,0.9,km/s

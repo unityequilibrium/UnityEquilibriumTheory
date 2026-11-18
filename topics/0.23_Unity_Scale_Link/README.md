@@ -4,6 +4,11 @@ title: "UET Topic 0.23: Unity Scale Link"
 description: "Research module for scale-link structure within the Unity Equilibrium Theory framework."
 ---
 
+> [!IMPORTANT]
+> **บทบาทใหม่ (ผู้เขียนกำหนด 2026-11-17):** topic นี้คือหัวข้อทดสอบว่าอะไรทำให้ UET พัง
+> เริ่มอ่านที่ [`FALSIFICATION_REGISTER.md`](FALSIFICATION_REGISTER.md) ซึ่งทดสอบ parent action ปัจจุบัน ([`core/THEORY_CARD.md`](../../core/THEORY_CARD.md)) ตาม [Research Standard v2](../../docs/STANDARD.md)
+> เนื้อหาด้านล่างเป็นงานเก่าที่ใช้ Ω[C] (κ, β) และเป็น `LEGACY_UNREVIEWED` ตัวเลข "falsification" ในนั้นมาจากสูตรที่สมมติขึ้น จึงไม่นับเป็นหลักฐาน (ดูหัวข้อ 6 ของทะเบียน)
+
 # 0.23 Unity Scale Link
 
 > [!NOTE]

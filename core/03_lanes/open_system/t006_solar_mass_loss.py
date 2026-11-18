@@ -8,7 +8,7 @@ Method (fixed before the comparison is run; docs/standard/tests/T006.json):
 4. Also reported (not the decision): z of the null hypothesis "energy use leaves no
    gravitational trace" (prediction 0) and of the radiation-only prediction.
 
-Usage: python -m docs.core.03_lanes.open_system.t006_solar_mass_loss
+Usage: python core/03_lanes/open_system/t006_solar_mass_loss.py
 Prints the numbers only. A Result record needs an APPROVED Test Card (docs/STANDARD.md section 4).
 """
 
@@ -21,7 +21,20 @@ import json
 import math
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parents[4]
+ROOT = Path(__file__).resolve().parents[3]
+
+
+def _core_module(relative: str):
+    """Load core/<relative> by file path (folders start with digits; repaired after the root relocation)."""
+    import importlib.util
+    import sys
+    path = ROOT / "core" / relative
+    name = "uet_producer_dep_" + path.stem
+    if name not in sys.modules:
+        spec = importlib.util.spec_from_file_location(name, path)
+        sys.modules[name] = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(sys.modules[name])
+    return sys.modules[name]
 DATA = ROOT / "docs/data/external/gravity/solar_mass_loss/t006_solar_mass_loss.csv"
 MANIFEST = ROOT / "docs/standard/data_manifest.json"
 DATA_ID = "T006_SOLAR_MASS_LOSS"
@@ -37,7 +50,7 @@ def verified_rows() -> dict[str, dict[str, float]]:
 
 
 def compute() -> dict:
-    r1 = importlib.import_module("docs.core.03_lanes.open_system.uet_r1_writing_channels")
+    r1 = _core_module("03_lanes/open_system/uet_r1_writing_channels.py")
     rows = verified_rows()
     mass = rows["gm_sun"]["value"] / r1.G_NEWTON
     radiative = r1.radiative_mass_loss_fraction_per_year(rows["luminosity"]["value"], mass)

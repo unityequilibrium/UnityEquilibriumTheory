@@ -29,7 +29,20 @@ import json
 import math
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parents[4]
+ROOT = Path(__file__).resolve().parents[3]
+
+
+def _core_module(relative: str):
+    """Load core/<relative> by file path (folders start with digits; repaired after the root relocation)."""
+    import importlib.util
+    import sys
+    path = ROOT / "core" / relative
+    name = "uet_producer_dep_" + path.stem
+    if name not in sys.modules:
+        spec = importlib.util.spec_from_file_location(name, path)
+        sys.modules[name] = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(sys.modules[name])
+    return sys.modules[name]
 DATA = ROOT / "docs/data/external/gravity/binary_pulsar_def/zfksw22_def_bounds.csv"
 MANIFEST = ROOT / "docs/standard/data_manifest.json"
 DATA_ID = "ZFKSW22_DEF_BOUNDS"
@@ -67,7 +80,7 @@ def compute() -> dict:
     widest = max(separations, key=separations.get)
     a_max = separations[widest]
 
-    mapping = importlib.import_module("docs.core.02_equations.covariant.uet_scalar_tensor_mapping")
+    mapping = _core_module("02_equations/covariant/uet_scalar_tensor_mapping.py")
     beta_per_xi = mapping.uet_def_parameters(1.0, kappa=1.0)["beta0"]  # = -2
     xi_low = bound["beta0_prior_max"] / beta_per_xi
     xi_high = bound["beta0_prior_min"] / beta_per_xi

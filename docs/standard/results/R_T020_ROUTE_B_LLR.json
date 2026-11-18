@@ -1,0 +1,76 @@
+{
+  "schema": "uet-result-v2",
+  "result_id": "R_T020_ROUTE_B_LLR",
+  "claim_id": "C_ROUTE_B_DISSIPATION_COUPLING",
+  "level": "L2_CONFRONTED",
+  "test_card_id": "T020",
+  "outcome": "PASS",
+  "numbers": [
+    {
+      "name": "tau_beta_max",
+      "value": 4610000000000000.0,
+      "uncertainty": null,
+      "unit": "s"
+    },
+    {
+      "name": "tau_beta_max_yr",
+      "value": 146000000.0,
+      "uncertainty": null,
+      "unit": "yr"
+    },
+    {
+      "name": "x_Sun",
+      "value": 2.142e-21,
+      "uncertainty": null,
+      "unit": "1/s"
+    },
+    {
+      "name": "x_Earth",
+      "value": 2.245e-25,
+      "uncertainty": null,
+      "unit": "1/s"
+    },
+    {
+      "name": "x_Moon",
+      "value": 1.74e-24,
+      "uncertainty": null,
+      "unit": "1/s"
+    },
+    {
+      "name": "tau_beta_max_williams2012",
+      "value": 1.02e+16,
+      "uncertainty": null,
+      "unit": "s"
+    },
+    {
+      "name": "tau_beta_max_with_cross_term",
+      "value": 5170000000000000.0,
+      "uncertainty": null,
+      "unit": "s"
+    },
+    {
+      "name": "benchmark_delta_pred_tau_1_over_H0",
+      "value": -6.8e-10,
+      "uncertainty": null,
+      "unit": "1"
+    },
+    {
+      "name": "benchmark_ratio_to_allowed",
+      "value": 9860.0,
+      "uncertainty": null,
+      "unit": "1"
+    }
+  ],
+  "producer": {
+    "script": "core/03_lanes/scalar_tensor/t020_route_b_llr.py",
+    "commit": "75ef4b0df"
+  },
+  "artifacts": [],
+  "date": "2026-11-17",
+  "approval": {
+    "approved_by": "santxkoz",
+    "date": "2026-11-17",
+    "role": "AUTHOR"
+  },
+  "note": "PASS by the preregistered rule: tau_beta = 0 is admissible and the lunar-laser-ranging result Delta = (-2.1 +- 2.4) x 1e-14 limits the route-B time constant to tau_beta <= 4.61e15 s (1.46e8 yr) for psi ranges much longer than 1 AU. The benchmark tau_beta = 1/H0 (AI choice, not deciding) would give Delta = -6.8e-10, about 9,900 times the allowed value, so a route-B effect set by the age of the universe is excluded at this level of modelling. Constraint only; the route-B coupling itself is an AI proposal outside the approved Theory Card; P definitions (absorbed sunlight) are AI choices. Not blind. L2 approved by the author on 2026-11-17."
+}

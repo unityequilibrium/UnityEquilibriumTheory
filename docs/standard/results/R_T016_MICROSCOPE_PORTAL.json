@@ -1,0 +1,82 @@
+{
+  "schema": "uet-result-v2",
+  "result_id": "R_T016_MICROSCOPE_PORTAL",
+  "claim_id": "C_T016_MICROSCOPE_G_C",
+  "level": "L2_CONFRONTED",
+  "test_card_id": "T016",
+  "outcome": "PASS",
+  "numbers": [
+    {
+      "name": "d_eps_TA6V_minus_PtRh10",
+      "value": 0.000783,
+      "uncertainty": null,
+      "unit": "1"
+    },
+    {
+      "name": "eta_allowed_max_one_sided_2sigma",
+      "value": 3.99e-15,
+      "uncertainty": null,
+      "unit": "1"
+    },
+    {
+      "name": "alpha_max_lambda_1e5_m",
+      "value": 2.36e-07,
+      "uncertainty": null,
+      "unit": "1"
+    },
+    {
+      "name": "alpha_max_lambda_1e6_m",
+      "value": 4.12e-11,
+      "uncertainty": null,
+      "unit": "1"
+    },
+    {
+      "name": "alpha_max_lambda_7e6_m",
+      "value": 6.42e-12,
+      "uncertainty": null,
+      "unit": "1"
+    },
+    {
+      "name": "alpha_max_lambda_1.922e8_m",
+      "value": 5.1e-12,
+      "uncertainty": null,
+      "unit": "1"
+    },
+    {
+      "name": "alpha_max_lambda_1e12_m",
+      "value": 5.1e-12,
+      "uncertainty": null,
+      "unit": "1"
+    },
+    {
+      "name": "g_c_max_lambda_1.922e8_m",
+      "value": 1.16e-15,
+      "uncertainty": null,
+      "unit": "eV"
+    },
+    {
+      "name": "g_c_max_lambda_1e6_m",
+      "value": 3.29e-15,
+      "uncertainty": null,
+      "unit": "eV"
+    },
+    {
+      "name": "alpha_gain_over_T005_lunar_bound",
+      "value": 11.6,
+      "uncertainty": null,
+      "unit": "1"
+    }
+  ],
+  "producer": {
+    "script": "core/03_lanes/scalar_tensor/t016_microscope_portal.py",
+    "commit": "efa09c6f4"
+  },
+  "artifacts": [],
+  "date": "2026-11-17",
+  "approval": {
+    "approved_by": "santxkoz",
+    "date": "2026-11-17",
+    "role": "AUTHOR"
+  },
+  "note": "PASS as a constraint by the preregistered rule: alpha_max is positive and finite at every listed range. With the portal sourced by nucleon number, MICROSCOPE limits alpha < 5.1e-12 (g_c < 1.16e-15 eV) for lambda >= 1e8 m, 11.6 times tighter in alpha than the lunar bound used in T005. Valid only for the nucleon-number lane; the total-mass reading gives eta = 0. Uniform-sphere Earth; composition rows not cross-checked against CIAAW. Not blind. Not UET-distinct. L2 approved by the author on 2026-11-17."
+}

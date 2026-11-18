@@ -1,0 +1,45 @@
+{
+  "schema": "uet-test-card-v2",
+  "test_id": "T018",
+  "status": "CLOSED",
+  "claim_id": "C_L3_LIFESPAN_RESERVE_SCOPE",
+  "theory_card": {
+    "card_id": "UET_PARENT",
+    "version": 1
+  },
+  "hypothesis": "Layer 3, tau = F/P, in the scope declared by the author: maximum longevity of a bird or mammal species equals a lifetime reserve per gram that is the same for all species divided by the mass-specific metabolic rate. Equivalently LEP = (metabolic rate / body mass) x maximum longevity does not depend on body mass or class.",
+  "observable": {
+    "quantity": "slope s and bird offset d of log10 LEP = a + s log10 M + d [bird]",
+    "unit": "dimensionless (log10 of kJ/g per log10 of g; log10 ratio)",
+    "domain": "AnAge Build 15 Aves and Mammalia with longevity, metabolic rate and body mass present, data quality acceptable or high, sample size medium, large or huge"
+  },
+  "test_kind": "CONSTRAINT",
+  "data_sources": [
+    {
+      "data_id": "ANAGE_BUILD15_LONGEVITY_METABOLISM",
+      "role": "COMPARISON",
+      "exposure": "SEEN_SUMMARY"
+    }
+  ],
+  "prediction_method": {
+    "script": "core/03_lanes/persistence/t018_lifespan_rate_of_living.py",
+    "description": "Ordinary least squares of log10 LEP on log10 M and a bird indicator, M = body mass of the metabolic measurement; 95 percent percentile intervals from 10,000 species-level bootstrap resamples, seed 20261117. Reported, not deciding: mammals-only slope, median LEP per class, captivity-only fit."
+  },
+  "free_parameters": [],
+  "fixed_parameters": [
+    "UET prediction s = 0 and d = 0 (one reserve per gram for all species)",
+    "metabolic rate as given by AnAge (resting or basal), not lifetime-average expenditure",
+    "year = 365.25 days",
+    "no phylogenetic correction (AI choice; makes intervals too narrow)",
+    "no species removed after the outcome is seen"
+  ],
+  "pass_criterion": "the 95 percent interval of s lies inside [-0.05, 0.05] and the 95 percent interval of d lies inside [-0.18, 0.18]",
+  "fail_criterion": "FAILED if the 95 percent interval of s lies wholly outside [-0.10, 0.10] or the 95 percent interval of d lies wholly above 0.30 (birds more than 2 times mammals); otherwise INCONCLUSIVE",
+  "drafted_by": "claude",
+  "note": "Disclosure: not blind. Prior literature known to the drafter (Austad and Fischer 1991; Speakman 2005, J. Exp. Biol. 208:1717) reports higher LEP in birds and bats, so FAILED is expected. Before approval the drafter read only the AnAge column names and the selection counts (169 mammals, 128 birds). Resting metabolic rate is not lifetime expenditure; if the field/resting ratio differs between birds and mammals, d is biased. Maximum longevity mixes wild and captive records. Thresholds are AI choices taken from STRESS_02 section 4. Approved by the author on 2026-11-17 in chat (\"ใช่ ทดสอบ T018\"), answering whether UET claims the lifespan scope, with the criteria of STRESS_02 section 4 as drafted. Correction 2026-11-17: the pre-approval count of 169 mammals left out sample size 'huge'; with the filter as written (medium, large or huge) it is 170.",
+  "approval": {
+    "approved_by": "santxkoz",
+    "date": "2026-11-17",
+    "role": "AUTHOR"
+  }
+}

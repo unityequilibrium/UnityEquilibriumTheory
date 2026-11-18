@@ -1,0 +1,52 @@
+{
+  "schema": "uet-result-v2",
+  "result_id": "R_B6_PSI_FRICTION_DERIVED",
+  "claim_id": "C_B6_PSI_FRICTION_DERIVED",
+  "level": "L1_CONSISTENT",
+  "outcome": "PASS",
+  "numbers": [
+    {
+      "name": "vacuum_psi_friction",
+      "value": "0",
+      "uncertainty": null,
+      "unit": "eV"
+    },
+    {
+      "name": "linear_response_vs_chandrasekhar_max_rel_diff",
+      "value": "1e-6",
+      "uncertainty": null,
+      "unit": "relative"
+    },
+    {
+      "name": "portal_drag_over_gravitational_dynamical_friction",
+      "value": "alpha^2",
+      "uncertainty": null,
+      "unit": "dimensionless"
+    },
+    {
+      "name": "jupiter_solar_wind_gravitational_DF_decay_over_survival_limit",
+      "value": "7.8e-11",
+      "uncertainty": null,
+      "unit": "dimensionless"
+    },
+    {
+      "name": "jupiter_portal_drag_decay_over_survival_limit_lunar_bound_massless",
+      "value": "2.7e-31",
+      "uncertainty": null,
+      "unit": "dimensionless"
+    },
+    {
+      "name": "jupiter_portal_drag_decay_over_survival_limit_torsion_bound",
+      "value": "1.4e-61",
+      "uncertainty": null,
+      "unit": "dimensionless"
+    }
+  ],
+  "producer": {
+    "script": "core/05_tests/physics/test_portal_drag_derived.py",
+    "commit": "6f76f04b1"
+  },
+  "artifacts": [],
+  "date": "2026-11-16",
+  "note": "Wave B6 (derivation, no Test Card). The psi friction that waves B4-B5 put in by hand follows from the parent action: integrating out ordinary matter (coupling (1/2) g_c psi |chi|^2) gives Gamma(k) = alpha_c^2 n sqrt(pi/2)/(T k sigma), zero in vacuum and zero for a uniform field, with the ambient-matter rest frame as the only preferred frame. The drag formula reproduces Chandrasekhar dynamical friction at all speeds; the portal drag is alpha^2 times the gravitational one. For Jupiter in the solar wind (n = 2.6e5 m^-3, T = 2.7e4 K, v = 400 km/s, AI-chosen inputs) the orbital decay is at most 2.7e-31 of the B5 survival limit. Consequence: the only cross-layer candidate is ordinary fifth-force momentum exchange, not UET-distinct, and far below detection. The test ran standalone because repository imports await the path repair of PR #60."
+}

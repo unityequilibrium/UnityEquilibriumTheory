@@ -7,7 +7,7 @@
     "reviewer": "agent:claude-t005",
     "rationale": "Methodological contract for Test Card T005. The evidence decision lives in docs/standard. Torsion-balance metrology and lunar-orbit modelling are inherited from the published analyses.",
     "coverage_evidence": [
-      "docs/core/03_lanes/scalar_tensor/uet_portal_fifth_force.py"
+      "core/03_lanes/scalar_tensor/uet_portal_fifth_force.py"
     ]
   },
   "question": "How strongly do published inverse-square-law bounds limit the UET portal coupling g_c when chi is ordinary matter?",
@@ -140,7 +140,7 @@
       "disposition": "MODELED",
       "reason": "Point-mass Yukawa force from the portal with chi as ordinary matter.",
       "evidence": [
-        "docs/core/03_lanes/scalar_tensor/uet_portal_fifth_force.py",
+        "core/03_lanes/scalar_tensor/uet_portal_fifth_force.py",
         "docs/data/external/gravity/yukawa_fifth_force/t005_yukawa_bounds.csv"
       ]
     },
@@ -184,8 +184,8 @@
       "disposition": "MODELED",
       "reason": "g_c_max = m_chi^2 sqrt(2 kappa alpha_max); m_psi = hbar c / lambda.",
       "evidence": [
-        "docs/core/03_lanes/scalar_tensor/t005_fifth_force_constraint.py",
-        "docs/core/03_lanes/scalar_tensor/uet_portal_fifth_force.py"
+        "core/03_lanes/scalar_tensor/t005_fifth_force_constraint.py",
+        "core/03_lanes/scalar_tensor/uet_portal_fifth_force.py"
       ]
     },
     {
@@ -194,7 +194,7 @@
       "disposition": "MODELED",
       "reason": "Closed-form arithmetic; the Yukawa strength formula is covered by physics tests.",
       "evidence": [
-        "docs/core/05_tests/physics/test_portal_fifth_force.py"
+        "core/05_tests/physics/test_portal_fifth_force.py"
       ]
     }
   ],
@@ -218,21 +218,21 @@
       "availability": "REQUIRED"
     },
     {
-      "path": "docs/core/03_lanes/scalar_tensor/uet_portal_fifth_force.py",
+      "path": "core/03_lanes/scalar_tensor/uet_portal_fifth_force.py",
       "kind": "working_file",
       "role": "code",
       "sha256": "1b148b606a9a38be40661d1a9f2584ca9a72c3632f2a5fb004437c28ba44390b",
       "availability": "REQUIRED"
     },
     {
-      "path": "docs/core/03_lanes/scalar_tensor/t005_fifth_force_constraint.py",
+      "path": "core/03_lanes/scalar_tensor/t005_fifth_force_constraint.py",
       "kind": "working_file",
       "role": "code",
-      "sha256": "e9f9c8b682500cb564a6f7ce058907b9554cdbd31d432d74e4ef8465070f17fa",
+      "sha256": "ebc9fc1c5c35fc0a8388c75d615b8455d364f7fdf5c5cf1db286e4b18faf254d",
       "availability": "REQUIRED"
     },
     {
-      "path": "docs/core/05_tests/physics/test_portal_fifth_force.py",
+      "path": "core/05_tests/physics/test_portal_fifth_force.py",
       "kind": "working_file",
       "role": "code",
       "sha256": "dcd037d77e3cbafd7c20fc529add27ccbc06576244500c03707857d14f161947",
@@ -240,12 +240,12 @@
     }
   ],
   "entrypoints": [
-    "docs/core/03_lanes/scalar_tensor/t005_fifth_force_constraint.py",
-    "docs/core/03_lanes/scalar_tensor/uet_portal_fifth_force.py"
+    "core/03_lanes/scalar_tensor/t005_fifth_force_constraint.py",
+    "core/03_lanes/scalar_tensor/uet_portal_fifth_force.py"
   ],
   "evidence": [
-    "docs/core/03_lanes/scalar_tensor/t005_fifth_force_constraint.py",
-    "docs/core/03_lanes/scalar_tensor/uet_portal_fifth_force.py",
+    "core/03_lanes/scalar_tensor/t005_fifth_force_constraint.py",
+    "core/03_lanes/scalar_tensor/uet_portal_fifth_force.py",
     "docs/data/external/gravity/yukawa_fifth_force/t005_yukawa_bounds.csv"
   ],
   "claim_boundary": "Methodological coverage of the T005 comparison only. The evidence level is set in docs/standard.",

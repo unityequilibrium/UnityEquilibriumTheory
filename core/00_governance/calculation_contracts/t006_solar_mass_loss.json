@@ -7,7 +7,7 @@
     "reviewer": "agent:claude-t006",
     "rationale": "Methodological contract for Test Card T006. The evidence decision lives in docs/standard. Orbit determination and solar-wind measurement are inherited from the published analyses.",
     "coverage_evidence": [
-      "docs/core/03_lanes/open_system/uet_r1_writing_channels.py"
+      "core/03_lanes/open_system/uet_r1_writing_channels.py"
     ]
   },
   "question": "Does the Sun's energy use (luminosity plus wind) predict the measured rate of change of its gravitational parameter?",
@@ -140,7 +140,7 @@
       "disposition": "MODELED",
       "reason": "Mass loss from nominal luminosity and the published wind estimate.",
       "evidence": [
-        "docs/core/03_lanes/open_system/uet_r1_writing_channels.py",
+        "core/03_lanes/open_system/uet_r1_writing_channels.py",
         "docs/data/external/gravity/solar_mass_loss/t006_solar_mass_loss.csv"
       ]
     },
@@ -184,8 +184,8 @@
       "disposition": "MODELED",
       "reason": "Prediction -(L/(c^2 M) + wind); z against the measured value.",
       "evidence": [
-        "docs/core/03_lanes/open_system/t006_solar_mass_loss.py",
-        "docs/core/03_lanes/open_system/uet_r1_writing_channels.py"
+        "core/03_lanes/open_system/t006_solar_mass_loss.py",
+        "core/03_lanes/open_system/uet_r1_writing_channels.py"
       ]
     },
     {
@@ -194,7 +194,7 @@
       "disposition": "MODELED",
       "reason": "Closed-form arithmetic; orbit response and radiation entropy covered by physics tests.",
       "evidence": [
-        "docs/core/05_tests/physics/test_r1_writing_channels.py"
+        "core/05_tests/physics/test_r1_writing_channels.py"
       ]
     }
   ],
@@ -218,21 +218,21 @@
       "availability": "REQUIRED"
     },
     {
-      "path": "docs/core/03_lanes/open_system/uet_r1_writing_channels.py",
+      "path": "core/03_lanes/open_system/uet_r1_writing_channels.py",
       "kind": "working_file",
       "role": "code",
       "sha256": "484a5a1e6321ef4f9d90f5c5574b4e576623b7ecd0bc62664dddb0caa3b5bc25",
       "availability": "REQUIRED"
     },
     {
-      "path": "docs/core/03_lanes/open_system/t006_solar_mass_loss.py",
+      "path": "core/03_lanes/open_system/t006_solar_mass_loss.py",
       "kind": "working_file",
       "role": "code",
-      "sha256": "07a5a014f1dbd788bdf9404fc89c02ae9989ddbfb1ac9ba70e018f98b1cd170d",
+      "sha256": "18cb47274e369f323bfa77a6f86653e47ccd7df5889f035c2d8c2b312c97d403",
       "availability": "REQUIRED"
     },
     {
-      "path": "docs/core/05_tests/physics/test_r1_writing_channels.py",
+      "path": "core/05_tests/physics/test_r1_writing_channels.py",
       "kind": "working_file",
       "role": "code",
       "sha256": "1d5fa74e0777587c6bf8faaa57acfa0bbe580a3b6b7d5053a01603e668c5d2dd",
@@ -240,12 +240,12 @@
     }
   ],
   "entrypoints": [
-    "docs/core/03_lanes/open_system/t006_solar_mass_loss.py",
-    "docs/core/03_lanes/open_system/uet_r1_writing_channels.py"
+    "core/03_lanes/open_system/t006_solar_mass_loss.py",
+    "core/03_lanes/open_system/uet_r1_writing_channels.py"
   ],
   "evidence": [
-    "docs/core/03_lanes/open_system/t006_solar_mass_loss.py",
-    "docs/core/03_lanes/open_system/uet_r1_writing_channels.py",
+    "core/03_lanes/open_system/t006_solar_mass_loss.py",
+    "core/03_lanes/open_system/uet_r1_writing_channels.py",
     "docs/data/external/gravity/solar_mass_loss/t006_solar_mass_loss.csv"
   ],
   "claim_boundary": "Methodological coverage of the T006 comparison only. The evidence level is set in docs/standard. The test cannot distinguish UET from general relativity.",

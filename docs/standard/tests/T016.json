@@ -1,0 +1,47 @@
+{
+  "schema": "uet-test-card-v2",
+  "test_id": "T016",
+  "status": "CLOSED",
+  "claim_id": "C_T016_MICROSCOPE_G_C",
+  "theory_card": {
+    "card_id": "UET_PARENT",
+    "version": 1
+  },
+  "hypothesis": "With chi = nucleon and the portal sourced by nucleon rest energy (claim C_PORTAL_COMPOSITION_EP), the UET portal violates the weak equivalence principle at the level alpha eps_E (eps_Ti - eps_Pt) Phi. MICROSCOPE's measured eta(Ti, Pt) then limits alpha, hence g_c, as a function of lambda = 1/m_psi.",
+  "observable": {
+    "quantity": "upper bound alpha_max and g_c_max on the portal at lambda = 1e5, 1e6, 7e6, 1.922e8 and 1e12 m",
+    "unit": "alpha dimensionless, g_c and m_psi in eV",
+    "domain": "MICROSCOPE orbit (altitude 710 km), Earth as a uniform sphere, test masses TA6V and PtRh10"
+  },
+  "test_kind": "CONSTRAINT",
+  "data_sources": [
+    {
+      "data_id": "MICROSCOPE22_ETA_COMPOSITION",
+      "role": "COMPARISON",
+      "exposure": "SEEN_SUMMARY"
+    }
+  ],
+  "prediction_method": {
+    "script": "core/03_lanes/scalar_tensor/t016_microscope_portal.py",
+    "description": "eps = (A/A_r)(m_N/u) per element, mass-fraction weighted per alloy, eps_E = 1; eta_allowed_max = eta_obs + 2 sqrt(stat^2 + syst^2); alpha_max = eta_allowed_max / (d_eps Phi(r, R_E, lambda)); g_c_max = 5.1198e-10 eV sqrt(alpha_max)."
+  },
+  "free_parameters": [
+    "g_c",
+    "m_psi"
+  ],
+  "fixed_parameters": [
+    "portal charge = nucleon number (lane choice, claim C_PORTAL_COMPOSITION_EP)",
+    "alpha = g_c^2/(2 kappa m_N^4) with m_N = mean nucleon mass, as in T005",
+    "Earth: uniform sphere, R = 6.371e6 m, eps_E = 1",
+    "MICROSCOPE eta(Ti,Pt) = (-1.5 +- 2.3 stat +- 1.5 syst)e-15, combined in quadrature, one-sided 2 sigma because alpha >= 0"
+  ],
+  "pass_criterion": "PASS if alpha_max is positive and finite at every listed lambda (g_c = 0 admissible); the Result reports alpha_max, g_c_max and m_psi at each lambda.",
+  "fail_criterion": "FAILED only if the data required eta > 0 at more than 2 sigma while the lane fixes eta = 0, or eta < 0 at more than 2 sigma (the portal cannot give negative eta for TA6V-PtRh10); with eta_obs = -1.5e-15 and sigma 2.75e-15 neither applies. INCONCLUSIVE if the composition rows disagree with CIAAW or the instrument papers by more than 20 percent in d_eps.",
+  "drafted_by": "claude",
+  "note": "Disclosure: not blind. The bound was estimated while drafting: alpha_max about 5.0e-12 and g_c_max about 1.15e-15 eV for lambda >= 1e8 m, about 12 times tighter in alpha than the lunar bound used in T005. The lane choice (portal charge = nucleon number, binding energy not a source) is an AI interpretation, because the action has no nuclear forces; with the other reading eta = 0 and MICROSCOPE says nothing about the portal. Composition rows were transcribed from memory and need checking before approval. Earth's density profile is ignored (uniform sphere). Not UET-distinct: any scalar coupled to baryon number gives the same bound. Closes the open topic 0.19 item 'equivalence-principle script asserts eta = 0 without comparing MICROSCOPE'. Approved by the author on 2026-11-17 as drafted, including the nucleon-number lane choice, without a CIAAW cross-check of the composition rows.",
+  "approval": {
+    "approved_by": "santxkoz",
+    "date": "2026-11-17",
+    "role": "AUTHOR"
+  }
+}

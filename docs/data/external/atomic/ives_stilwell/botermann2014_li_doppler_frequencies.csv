@@ -1,0 +1,10 @@
+# Botermann et al., Phys. Rev. Lett. 113, 120405 (2014), doi:10.1103/PhysRevLett.113.120405, arXiv:1409.7951, Table 1.
+# 7Li+ ions stored at beta = v/c = 0.338 in the ESR. Frequencies in MHz with the 1-sigma total uncertainty of the table.
+# nu_1 and nu_2 are rest-frame frequencies of two legs of a Lambda system (measured earlier, independently);
+# nu_a and nu_p are the Doppler-shifted laser frequencies for antiparallel and parallel excitation at resonance.
+quantity,value_mhz,uncertainty_mhz
+nu_1_rest,546455143.0,0.43
+nu_2_rest,546474960.7,0.43
+nu_a_antiparallel,384225534.98,1.6
+nu_p_parallel,777210326.98,1.25
+beta,0.338,0

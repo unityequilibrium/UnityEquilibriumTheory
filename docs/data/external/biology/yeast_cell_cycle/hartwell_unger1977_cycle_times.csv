@@ -1,0 +1,36 @@
+# Source: L. H. Hartwell and M. W. Unger, "Unequal division in Saccharomyces cerevisiae and its implications for the control
+#         of cell division", J. Cell Biol. 75, 422-435 (1977), doi 10.1083/jcb.75.2.422, PMC2109951.
+# Table I: strain C276 on YNB agar, 22-24 C, cycloheximide in ug/ml. Parent (1st generation) and daughter generation times are
+#          mean +- standard deviation over individual cells from time-lapse photography (frames every 10-20 min); the observed
+#          population doubling time was obtained by counting all cell units in the same fields (Fig. 1).
+# Table II: percent of unbudded cells with no bud scar (snapshot, cells washed off separate plates), with that plate's doubling time.
+# Numerical facts transcribed 2026-11-17 from the PMC scan (text extracted by a scraping tool) for draft UET Test Card T017;
+# re-check against the printed tables before approval. The number of cells per condition is not transcribed.
+record,cycloheximide_ug_ml,quantity,value,sd,unit
+table1,0.000a,parent_gen_1st,127,24,min
+table1,0.000a,daughter_gen,182,23,min
+table1,0.000a,population_doubling_obs,155,,min
+table1,0.000b,parent_gen_1st,132,26,min
+table1,0.000b,parent_gen_2nd,138,25,min
+table1,0.000b,daughter_gen,203,38,min
+table1,0.000b,population_doubling_obs,167,,min
+table1,0.020,parent_gen_1st,165,26,min
+table1,0.020,parent_gen_2nd,145,21,min
+table1,0.020,daughter_gen,300,41,min
+table1,0.020,population_doubling_obs,220,,min
+table1,0.030,parent_gen_1st,171,27,min
+table1,0.030,parent_gen_2nd,155,29,min
+table1,0.030,daughter_gen,328,45,min
+table1,0.030,population_doubling_obs,245,,min
+table1,0.060,parent_gen_1st,215,50,min
+table1,0.060,parent_gen_2nd,193,40,min
+table1,0.060,daughter_gen,418,67,min
+table1,0.060,population_doubling_obs,321,,min
+table2,plate_165,unbudded_no_scar_percent,78.8,2.0,percent
+table2,plate_190,unbudded_no_scar_percent,78.5,2.1,percent
+table2,plate_220,unbudded_no_scar_percent,86.4,1.7,percent
+table2,plate_250,unbudded_no_scar_percent,83.0,1.9,percent
+table2,plate_300,unbudded_no_scar_percent,77.7,2.4,percent
+table2,plate_460,unbudded_no_scar_percent,84.3,1.8,percent
+regression,all,budded_interval_slope,0.17,,1
+regression,all,budded_interval_intercept,87.4,,min

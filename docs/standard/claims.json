@@ -51,7 +51,8 @@
       "statement": "The layer-3 abundance law N = b F/P, with stellar-model lifetimes and independently measured helium, predicts the horizontal-to-red-giant-branch star ratio in old globular clusters to within about 5 percent (R_pred = 1.467 +/- 0.023 vs R_obs = 1.39 +/- 0.03), a 2.05 sigma tension.",
       "level": "L2_CONFRONTED",
       "evidence": [
-        "R_T002_STELLAR_PHASES"
+        "R_T002_STELLAR_PHASES",
+        "R_T014_R_PARAMETER_INDEPENDENT"
       ],
       "note": "CONSTRAINT, outcome INCONCLUSIVE by the preregistered rule (2 < z <= 3). Not a falsification and not a pass. L2 recording approved by the author 2026-11-09."
     },
@@ -171,6 +172,213 @@
         "R_T009_U234_SECULAR_EQUILIBRIUM"
       ],
       "note": "Path-A test in nuclear physics. L2 approved by the author on 2026-11-10."
+    },
+    {
+      "claim_id": "C_OBS_DELAY_GAP",
+      "statement": "A source observed through a finite-speed signal is recorded at its retarded time, and the error of treating the record as the present equals the rate of change times the record age at first order.",
+      "level": "L1_CONSISTENT",
+      "evidence": [
+        "R_O1_OBSERVATION_DELAY"
+      ],
+      "note": "Principle P2 of the thought experiment v3. Standard physics; model-level check."
+    },
+    {
+      "claim_id": "C_OBS_SHARED_RECORD_CONTACT",
+      "statement": "Two systems share a record (mutual information) only after causal contact by overlapping past cones, t >= d/(2c), earlier than the direct signal d/c; before contact the shared record is super-exponentially small.",
+      "level": "L1_CONSISTENT",
+      "evidence": [
+        "R_O2_SHARED_RECORD_CONE"
+      ],
+      "note": "Principle P4 of the thought experiment v3, corrected by this test (common past). Classical Gaussian toy model."
+    },
+    {
+      "claim_id": "C_OBS_MEMORY_VS_MARKOV",
+      "statement": "An observer that keeps a history of records estimates the present with a bias one order lower than one that treats the newest record as the present, but amplifies measurement noise, so memory helps only below a crossover noise level.",
+      "level": "L1_CONSISTENT",
+      "evidence": [
+        "R_O3_MARKOV_VS_HISTORY"
+      ],
+      "note": "Research item 5 of the thought experiment: Markov versus history-dependent model, in a linear-Gaussian toy."
+    },
+    {
+      "claim_id": "C_OBS_FIELD_CAUSAL",
+      "statement": "The canonical response scalar of the parent action propagates only inside the light cone: the PDE solution converges at second order to the exact retarded solution and the field vanishes outside the cone.",
+      "level": "L1_CONSISTENT",
+      "evidence": [
+        "R_O4_FIELD_CAUSALITY"
+      ],
+      "note": "Links the observation layer to the core equation at linear order, flat background, 1+1D only; the full nonlinear curved-space statement is open."
+    },
+    {
+      "claim_id": "C_T010_TWO_CARRIER_RECORDS",
+      "statement": "Records of one event carried by gravitational waves and by light travel at the same speed: c_T = 1 of the parent action lies inside the GW170817 bound (v_GW - v_EM)/v_EM in [-3e-15, +7e-16].",
+      "level": "L2_CONFRONTED",
+      "evidence": [
+        "R_T010_GW170817_CARRIER_SPEED"
+      ],
+      "note": "First real-data test of the observation layer (principle P1) together with layer 1. Not UET-distinct: any c_T = 1 theory passes. L2 approved by the author on 2026-11-11."
+    },
+    {
+      "claim_id": "C_T011_PULSATION_RECORD_AGE",
+      "statement": "Principle P2 holds for pulsating stars in binaries: the pulsation-timing delay amplitude equals the light-travel record age predicted from an independent RV orbit (PM/RV = 1.006, z = 0.04 for KIC 6780873; 1.021, z = 0.17 for KIC 5705575).",
+      "level": "L2_CONFRONTED",
+      "evidence": [
+        "R_T011_PULSATION_DELAY_VS_RV"
+      ],
+      "note": "First non-circular real-data test of P2 (about 10% precision). Not UET-distinct: standard light-travel time passes. L2 approved by the author on 2026-11-11."
+    },
+    {
+      "claim_id": "C_T012_COMMON_PAST_CONTACT",
+      "statement": "Principle P4 as corrected by O2 holds in a quenched quantum many-body chain: the correlation front stays below the common-past bound c_a + c_b (excess -0.36 and -4.35 sigma at U/J = 7 and 9) and exceeds the direct-contact-only bound by 3.9 and 6.0 sigma, so contact through a common past is required.",
+      "level": "L2_CONFRONTED",
+      "evidence": [
+        "R_T012_CORRELATION_FRONT_BOUND"
+      ],
+      "note": "First real-data test of P4. The one-sided bound is weak by itself; the direct-contact diagnostic carries the content. Not UET-distinct: standard quasiparticle picture passes. L2 approved by the author on 2026-11-11."
+    },
+    {
+      "claim_id": "C_T013_LORENTZ_TIME_STRUCTURE",
+      "statement": "Principle P3 holds as part of the Lorentz time transformation: the Ives-Stilwell observable of 7Li+ ions at beta = 0.338 is (1.47 +- 2.30)e-9, consistent with the zero the boost of the parent action's local frame requires (z = 0.64); absolute time is excluded.",
+      "level": "L2_CONFRONTED",
+      "evidence": [
+        "R_T013_IVES_STILWELL_LORENTZ_TIME"
+      ],
+      "note": "Tests P3 only as part of the Lorentz time transformation, not relative simultaneity in isolation. Not UET-distinct: special relativity passes. L2 approved by the author on 2026-11-11."
+    },
+    {
+      "claim_id": "C_B5_PORTAL_DRAG_BOUND",
+      "statement": "The portal drag, the only cross-layer UET effect found, must satisfy Gamma g_c^2 <= 9.1e-44 eV^3 for the planets to have survived 4.5672 Gyr in the Sun's rest frame; at the T005 bound on g_c the friction time of the response scalar exceeds about 60 years.",
+      "level": "L1_CONSISTENT",
+      "evidence": [
+        "R_B5_PORTAL_DRAG_BOUND"
+      ],
+      "note": "A derived bound, not a prediction. Assumes the Sun's rest frame as the environment frame; a different environment frame (for example the CMB frame) needs its own analysis."
+    },
+    {
+      "claim_id": "C_B6_PSI_FRICTION_DERIVED",
+      "statement": "Under the parent action with chi = ordinary matter, the response-scalar friction is not a free parameter: it is the linear-response dissipation of the ambient matter, zero in vacuum, and the resulting portal drag equals alpha^2 times gravitational dynamical friction, so it is not a UET-distinct effect.",
+      "level": "L1_CONSISTENT",
+      "evidence": [
+        "R_B6_PSI_FRICTION_DERIVED"
+      ],
+      "note": "Supersedes the free-Gamma assumption of B4 and B5 (those records stay unchanged). Classical ideal-gas medium, linear response, non-relativistic matter. A different bath for psi would need new fields in the action."
+    },
+    {
+      "claim_id": "C_B7_FREE_ENERGY_BURN",
+      "statement": "In the closed matter-plus-environment model of layer 2, the subsystem's free energy relative to the environment obeys dF/dt = -P with P = T sigma >= 0 (Markov limit), so the layer-3 lifetime tau = integral dF/P follows from the dynamics; tau = F/P is the special case of constant P.",
+      "level": "L1_CONSISTENT",
+      "evidence": [
+        "R_B7_FREE_ENERGY_BURN"
+      ],
+      "note": "Linear Caldeira-Leggett mode with an ohmic classical bath; not yet derived for the psi field of the parent action itself. Standard stochastic thermodynamics, not UET-distinct."
+    },
+    {
+      "claim_id": "C_B8_PSI_MATTER_BURN",
+      "statement": "With ordinary matter as the only bath of the response scalar, free psi waves are not absorbed at linear order (Cherenkov condition), and the free energy that psi burns is that of sourced fields moving relative to matter, at the rate P = F_drag v given by linear response, which exact classical orbits confirm.",
+      "level": "L1_CONSISTENT",
+      "evidence": [
+        "R_B8_PSI_MATTER_BURN"
+      ],
+      "note": "Classical, collisionless, non-relativistic medium; collisional absorption is second order and not included. Standard kinetic theory, not UET-distinct."
+    },
+    {
+      "claim_id": "C_SI1_PARENT_ACTION_SI",
+      "statement": "The parent action needs no free energy reference to give SI numbers: its parameters carry mass dimension, so with chi identified as a particle the conversion uses only hbar and c. Its chi sector is the relativistic O(2) Bose fluid whose non-relativistic limit is Gross-Pitaevskii with lam = 8 pi a m, and the psi portal adds a scattering-length shift delta_a = -alpha G M^3 / m_psi^2, which at the T005 bound is 5e-18 of the Rb-87 value.",
+      "level": "L1_CONSISTENT",
+      "evidence": [
+        "R_SI1_PARENT_ACTION_SI"
+      ],
+      "note": "Tree level, uniform fluid, chi = nucleon lane as in T005. Liquid He II is outside the tree-level GP class (n a^3 >= 0.38), so the legacy Topic 13 identification of Phi with the superfluid fraction is not obtained from the action. Standard physics, not UET-distinct."
+    },
+    {
+      "claim_id": "C_T015_HE_II_TREE_LEVEL_LANE",
+      "statement": "Lane hypothesis assumed by Topic 13: with chi as the He-4 atom, superfluid He II is the condensed phase of the parent action's O(2) sector, so at tree level with lam = 8 pi a m from the measured He-He scattering length its first sound equals the Bogoliubov speed.",
+      "level": "FAILED",
+      "evidence": [
+        "R_T015_HE_II_TREE_LEVEL"
+      ],
+      "note": "FAILED in T015 (2026-11-16): tree-level sound speed 848 m/s against 233.1 m/s, D = 2.31. A failure removes only this lane (chi = atom, tree level), not the parent action; the chi = nucleon lane of T005 is unaffected."
+    },
+    {
+      "claim_id": "C_PORTAL_COMPOSITION_EP",
+      "statement": "If the portal source is the nucleon rest-energy density (chi = nucleon) while gravity couples to total mass-energy, the portal force is composition dependent at the level of the nucleon-number-to-mass ratio: for a uniform source sphere, eta = alpha eps_S (eps_1 - eps_2) F(R/lambda) e^{-r/lambda}(1 + r/lambda), and eta = 0 when the portal source is total mass.",
+      "level": "L1_CONSISTENT",
+      "evidence": [
+        "R_PORTAL_COMPOSITION_EP"
+      ],
+      "note": "AI interpretation: the action has no nuclear forces, so whether binding energy sources the portal is a lane choice, not derived. Standard composition-dependent fifth-force physics, not UET-distinct."
+    },
+    {
+      "claim_id": "C_T016_MICROSCOPE_G_C",
+      "statement": "With the nucleon-number portal lane, MICROSCOPE's eta(Ti, Pt) limits the portal to alpha < 5.1e-12 and g_c < 1.16e-15 eV for lambda >= 1e8 m (m_psi <= 2e-15 eV), 11.6 times tighter in alpha than lunar laser ranging (T005).",
+      "level": "L2_CONFRONTED",
+      "evidence": [
+        "R_T016_MICROSCOPE_PORTAL"
+      ],
+      "note": "Constraint, not a prediction. Valid only if binding energy does not source the portal (AI lane choice, C_PORTAL_COMPOSITION_EP). L2 approved by the author 2026-11-17."
+    },
+    {
+      "claim_id": "C_L3_GROWING_ABUNDANCE",
+      "statement": "With a formation rate growing as e^{lambda t}, the layer-3 abundance of a phase entered at age a1 and lasting tau is N = b_now (e^{-lambda a1} - e^{-lambda (a1+tau)})/lambda, which reduces to N = b tau as lambda -> 0; for asynchronously dividing cells with cycle T the phase fraction is 2 (2^{-a1/T} - 2^{-a2/T}), confirmed by an agent model with 10 percent cycle-time spread to 0.005.",
+      "level": "L1_CONSISTENT",
+      "evidence": [
+        "R_L3_GROWING_ABUNDANCE"
+      ],
+      "note": "Standard age-distribution result of cell kinetics; extends the engine to growing populations (topic 0.22 lane card). A fixed cycle never relaxes to the stable distribution; variability is needed for mixing. Not UET-distinct."
+    },
+    {
+      "claim_id": "C_L3_ASYMMETRIC_DIVISION",
+      "statement": "For unequal division with parent cycle P and daughter cycle D sharing a budded period B, the layer-3 law with a growing formation rate gives the doubling time from 2^{-P/T} + 2^{-D/T} = 1, the unbudded-daughter fraction (1 - e^{-a U_d}) / [(1 - e^{-a U_d}) + (1 - e^{-a U_p})] with a = ln 2 / T, and the budded fraction 2^{B/T} - 1; an agent model with 10 percent spread agrees, and P = D recovers equal division.",
+      "level": "L1_CONSISTENT",
+      "evidence": [
+        "R_L3_ASYMMETRIC_DIVISION"
+      ],
+      "note": "Reproduces the age-distribution analysis of Hartwell and Unger (1977); standard cell kinetics, not UET-distinct."
+    },
+    {
+      "claim_id": "C_T017_YEAST_GROWTH_FROM_CYCLES",
+      "statement": "The layer-3 abundance law for unequal division connects single-cell yeast cycle times to population growth: the doubling time computed from parent and daughter generation times agrees with the counted doubling time in all five Hartwell-Unger conditions (max z = 1.81).",
+      "level": "L2_CONFRONTED",
+      "evidence": [
+        "R_T017_YEAST_ASYMMETRIC"
+      ],
+      "note": "Constraint, not a prediction; not blind; not UET-distinct. L2 approved by the author 2026-11-17."
+    },
+    {
+      "claim_id": "C_L3_LIFESPAN_RESERVE_SCOPE",
+      "statement": "Layer-3 scope declared by the author (2026-11-17): the lifespan of an animal is its lifetime reserve divided by its metabolic rate, with the same reserve per gram in every species, so the lifetime energy potential (metabolic rate per gram times maximum longevity) is independent of body mass and the same in birds and mammals.",
+      "level": "FAILED",
+      "evidence": [
+        "R_T018_LIFESPAN_RATE_OF_LIVING"
+      ],
+      "note": "FAILED in T018 (2026-11-17): birds have 2.47 times the lifetime energy per gram of mammals (d = 0.392, 95 percent interval 0.330 to 0.455, fail threshold 0.30) and LEP falls with mass (s = -0.114). Removes only this lifespan scope of layer 3; tau = F/P for closed reserves and N = b tau are unaffected. UET-distinct: the null (current biology) does not fail. Design: topics/0.23_Unity_Scale_Link/Doc/STRESS_02_LAYER3_SCOPE.md."
+    },
+    {
+      "claim_id": "C_T019_PORTAL_G_C_GAP",
+      "statement": "With the nucleon-number portal lane, the Eot-Wash Rot-Wash equivalence-principle data limit the portal to alpha <= 6.4e-6 and g_c <= 1.30e-12 eV for 2 m <= lambda <= 1e5 m, weakening to alpha <= 0.50 at 1 cm.",
+      "level": "L2_CONFRONTED",
+      "evidence": [
+        "R_T019_PORTAL_GAP_ROTWASH"
+      ],
+      "note": "Constraint, not a prediction; g_c = 0 admissible. Not UET-distinct. Valid only if binding energy does not source the portal (AI lane choice, C_PORTAL_COMPOSITION_EP). L2 approved by the author 2026-11-17."
+    },
+    {
+      "claim_id": "C_ROUTE_B_DISSIPATION_COUPLING",
+      "statement": "AI proposal for route B: if the rate of free-energy destruction sources psi with a reciprocal coupling (charge Q = a M + beta P), lunar laser ranging limits the shared time constant tau_beta = beta/sqrt(4 pi G) to at most 4.61e15 s (1.46e8 yr) for psi ranges much longer than 1 AU.",
+      "level": "L2_CONFRONTED",
+      "evidence": [
+        "R_T020_ROUTE_B_LLR"
+      ],
+      "note": "Constraint, not a prediction; tau_beta = 0 admissible. The coupling is not in the approved Theory Card. tau_beta = 1/H0 would exceed the LLR limit about 9,900 times. L2 approved by the author 2026-11-17."
+    },
+    {
+      "claim_id": "C_T021_LIGHTING_SUCCESSION",
+      "statement": "AI translation of the author's statement (2026-11-17) that innovation saves resources, time included: in the historical succession of lighting technologies no successor that replaced an incumbent used more energy per lumen-hour and more hours of work per lumen-hour than the incumbent at the time it entered.",
+      "level": "L2_CONFRONTED",
+      "evidence": [
+        "R_T021_LIGHTING_SUCCESSION"
+      ],
+      "note": "Stage 1 of test D (topics/0.25_Strategy_Power_Economics/Doc/ANALYSIS_EXTERNAL_ENERGY_UET_2026-11-17.md section 6). Needs no exchange rate between time and energy. Not UET-distinct: standard economics expects the same. Run 2026-11-17: PASS, 2 DOMINATES, 5 TRADE_OFF, 0 WORSE_BOTH at the device energy basis. L2 approved by the author 2026-11-18; device energy basis only."
     }
   ]
 }

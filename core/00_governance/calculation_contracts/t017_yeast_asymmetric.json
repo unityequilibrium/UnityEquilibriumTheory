@@ -1,0 +1,233 @@
+{
+  "schema_version": "uet-calculation-contract-v1",
+  "contract_id": "CORE_T017_YEAST_ASYMMETRIC_V1",
+  "profile": "PHYSICAL_COMPARISON",
+  "review": {
+    "status": "INCOMPLETE",
+    "reviewer": "agent:claude-t017",
+    "rationale": "Methodological contract for Test Card T017. The evidence decision lives in docs/standard. Cycle times and doubling times are inherited from the published analysis.",
+    "coverage_evidence": [
+      "docs/data/external/biology/yeast_cell_cycle/hartwell_unger1977_cycle_times.csv"
+    ]
+  },
+  "question": "Does the layer-3 law for unequal division give the counted population doubling time of budding yeast from its single-cell parent and daughter cycle times?",
+  "output": {
+    "quantity": "population doubling time T for five cycloheximide conditions",
+    "unit": "min",
+    "domain": "S. cerevisiae C276 on YNB agar, 22-24 C, cycloheximide 0 to 0.060 ug/ml",
+    "accuracy": "Standard error from sd/sqrt(22) of P and D, propagated; z per condition.",
+    "claim_intent": "DIAGNOSTIC"
+  },
+  "model": {
+    "formula_ids": [
+      "UET_L3_ASYMMETRIC_DIVISION",
+      "UET_T017_YEAST_ASYMMETRIC"
+    ],
+    "assumptions": "Steady exponential growth; one parent cycle and one daughter cycle per division (model of Fig. 4).",
+    "approximation": "No dispersion of cycle times; n = 22 cells per mean.",
+    "initial_boundary": "Stable age distribution of an asynchronous population.",
+    "drive_environment": "Growth limited by cycloheximide as published.",
+    "parameters": "No fitting; P and D measured independently of the counted doubling time."
+  },
+  "data_policy": {
+    "uses_observations": true,
+    "calibration_ids": [],
+    "comparison_ids": [
+      "HARTWELL_UNGER1977_YEAST_CYCLES"
+    ],
+    "independent_validation": false,
+    "holdout_policy": "No holdout. Full tables seen before drafting (SEEN_FULL), declared in Test Card T017."
+  },
+  "observation": {
+    "system_partition": {
+      "role_mode": "RELATIONAL",
+      "accounting_component_id": "system_state",
+      "boundary": "Yeast microcolonies on agar under time-lapse; published values used only.",
+      "systems": [
+        {
+          "id": "population",
+          "state": "Asynchronously budding yeast cells",
+          "state_accounting": {
+            "kind": "INDEPENDENT",
+            "state_ids": [
+              "population.cells"
+            ],
+            "owner_ids": [],
+            "rule": "Cells as counted in the published fields."
+          }
+        },
+        {
+          "id": "camera",
+          "state": "Time-lapse photomicrographs",
+          "state_accounting": {
+            "kind": "INDEPENDENT",
+            "state_ids": [
+              "camera.record"
+            ],
+            "owner_ids": [],
+            "rule": "Observer record only."
+          }
+        }
+      ],
+      "couplings": [
+        {
+          "id": "imaging",
+          "source": "population",
+          "target": "camera",
+          "kind": "DETECTION",
+          "component_id": "detector",
+          "map": "Bud emergence timed on frames every 10-20 min"
+        },
+        {
+          "id": "illumination_backaction",
+          "source": "camera",
+          "target": "population",
+          "kind": "BACKACTION",
+          "component_id": "detector",
+          "map": "Illumination effects handled upstream"
+        }
+      ],
+      "observables": [
+        {
+          "id": "cycle_times",
+          "detector_id": "camera",
+          "target_systems": [
+            "population"
+          ],
+          "backaction_targets": [
+            "population"
+          ],
+          "backaction_scope_reason": "Single assessed owner.",
+          "quantity": "parent and daughter generation times; population doubling time",
+          "readout_map": "Published means and sd; transcribed only",
+          "component_id": "detector"
+        }
+      ]
+    },
+    "source_state": "Exponentially growing population as in the published experiment.",
+    "generated_trace": "Bud emergence times; not a UET trace variable.",
+    "carrier": "Not applicable (direct imaging).",
+    "observer_state": "Published Table I values.",
+    "readout": "Generation times mean +- sd and counted doubling time.",
+    "backaction": "Handled upstream.",
+    "frame": "Laboratory frame",
+    "time_convention": "Minutes from the published frames",
+    "product_level": "published derived quantities (not raw data)",
+    "corrections": [
+      {
+        "id": "published_analysis_upstream",
+        "state": "APPLIED_UPSTREAM",
+        "evidence": "docs/data/external/biology/yeast_cell_cycle/hartwell_unger1977_cycle_times.csv"
+      }
+    ]
+  },
+  "components": [
+    {
+      "id": "system_state",
+      "group": "system_state",
+      "disposition": "MODELED",
+      "reason": "Population and conditions as registered.",
+      "evidence": [
+        "docs/data/external/biology/yeast_cell_cycle/hartwell_unger1977_cycle_times.csv"
+      ]
+    },
+    {
+      "id": "drive_environment",
+      "group": "drive_environment",
+      "disposition": "UPSTREAM_CORRECTED",
+      "reason": "Applied upstream in the published time-lapse analysis (Hartwell and Unger 1977); not recomputed here.",
+      "evidence": [
+        "docs/data/external/biology/yeast_cell_cycle/hartwell_unger1977_cycle_times.csv"
+      ]
+    },
+    {
+      "id": "propagation",
+      "group": "propagation",
+      "disposition": "NOT_APPLICABLE",
+      "reason": "No signal propagation in direct imaging.",
+      "evidence": []
+    },
+    {
+      "id": "frame_time",
+      "group": "frame_time",
+      "disposition": "UPSTREAM_CORRECTED",
+      "reason": "Applied upstream in the published time-lapse analysis (Hartwell and Unger 1977); not recomputed here.",
+      "evidence": [
+        "docs/data/external/biology/yeast_cell_cycle/hartwell_unger1977_cycle_times.csv"
+      ]
+    },
+    {
+      "id": "detector",
+      "group": "detector",
+      "disposition": "UPSTREAM_CORRECTED",
+      "reason": "Applied upstream in the published time-lapse analysis (Hartwell and Unger 1977); not recomputed here.",
+      "evidence": [
+        "docs/data/external/biology/yeast_cell_cycle/hartwell_unger1977_cycle_times.csv"
+      ]
+    },
+    {
+      "id": "processing",
+      "group": "processing",
+      "disposition": "MODELED",
+      "reason": "T from 2^{-P/T}+2^{-D/T}=1, sd/sqrt(22) propagation, outcome rule fixed in T017.",
+      "evidence": [
+        "core/03_lanes/persistence/t017_yeast_asymmetric.py",
+        "core/03_lanes/persistence/uet_asymmetric_division.py"
+      ]
+    },
+    {
+      "id": "numerics",
+      "group": "numerics",
+      "disposition": "MODELED",
+      "reason": "Root solve (brentq); agent model check in test_asymmetric_division.py.",
+      "evidence": [
+        "core/03_lanes/persistence/t017_yeast_asymmetric.py"
+      ]
+    }
+  ],
+  "error_budget": {
+    "unit": "min",
+    "numerical": "Root solve to floating point.",
+    "approximation": "No dispersion of cycle times; one parent cycle for all parents.",
+    "measurement": "sd/sqrt(22) of P and D; the counted doubling time carries no stated error.",
+    "systematic": "n per condition is an AI choice (accepted by the author at approval); transcription checked against extracted text, not the printed page.",
+    "omissions": "Second-parent generation times not used; dispersion ignored.",
+    "dependence": "P, D and T_obs come from the same fields, so not fully independent samples.",
+    "acceptance": "Outcome categories fixed in Test Card T017.",
+    "omission_limit": null
+  },
+  "identities": [
+    {
+      "path": "docs/data/external/biology/yeast_cell_cycle/hartwell_unger1977_cycle_times.csv",
+      "kind": "working_file",
+      "role": "input",
+      "sha256": "941b7aac3e2d7ef80b8a76f7b600fbfcf2923a15ff18546aacda5656176f385e",
+      "availability": "REQUIRED"
+    },
+    {
+      "path": "core/03_lanes/persistence/uet_asymmetric_division.py",
+      "kind": "working_file",
+      "role": "code",
+      "sha256": "baef18ee17721f96797d0245fec22e3682af58a702e74006c67e8481e323e98c",
+      "availability": "REQUIRED"
+    },
+    {
+      "path": "core/03_lanes/persistence/t017_yeast_asymmetric.py",
+      "kind": "working_file",
+      "role": "code",
+      "sha256": "49f42fab7539557cfc1dbaddabfd5001f0c4a8ca26284d01d3650b583834957c",
+      "availability": "REQUIRED"
+    }
+  ],
+  "entrypoints": [
+    "core/03_lanes/persistence/t017_yeast_asymmetric.py",
+    "core/03_lanes/persistence/uet_asymmetric_division.py"
+  ],
+  "evidence": [
+    "core/03_lanes/persistence/t017_yeast_asymmetric.py",
+    "core/03_lanes/persistence/uet_asymmetric_division.py",
+    "docs/data/external/biology/yeast_cell_cycle/hartwell_unger1977_cycle_times.csv"
+  ],
+  "claim_boundary": "Methodological coverage of the T017 comparison only; the evidence level is set in docs/standard. Not UET-distinct (standard age-structured population dynamics).",
+  "next_action": "Check the transcription against the printed page; add cycle-time dispersion if a tighter comparison is needed."
+}

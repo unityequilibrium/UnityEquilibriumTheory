@@ -1,0 +1,142 @@
+{
+  "schema": "uet-result-v2",
+  "result_id": "R_T017_YEAST_ASYMMETRIC",
+  "claim_id": "C_T017_YEAST_GROWTH_FROM_CYCLES",
+  "level": "L2_CONFRONTED",
+  "test_card_id": "T017",
+  "outcome": "PASS",
+  "numbers": [
+    {
+      "name": "T_pred_0p000a",
+      "value": 152.8,
+      "uncertainty": 3.6,
+      "unit": "min"
+    },
+    {
+      "name": "T_obs_0p000a",
+      "value": 155.0,
+      "uncertainty": null,
+      "unit": "min"
+    },
+    {
+      "name": "z_0p000a",
+      "value": 0.61,
+      "uncertainty": null,
+      "unit": "1"
+    },
+    {
+      "name": "T_pred_0p000b",
+      "value": 164.9,
+      "uncertainty": 4.8,
+      "unit": "min"
+    },
+    {
+      "name": "T_obs_0p000b",
+      "value": 167.0,
+      "uncertainty": null,
+      "unit": "min"
+    },
+    {
+      "name": "z_0p000b",
+      "value": 0.45,
+      "uncertainty": null,
+      "unit": "1"
+    },
+    {
+      "name": "T_pred_0p020",
+      "value": 225.5,
+      "uncertainty": 5.0,
+      "unit": "min"
+    },
+    {
+      "name": "T_obs_0p020",
+      "value": 220.0,
+      "uncertainty": null,
+      "unit": "min"
+    },
+    {
+      "name": "z_0p020",
+      "value": 1.12,
+      "uncertainty": null,
+      "unit": "1"
+    },
+    {
+      "name": "T_pred_0p030",
+      "value": 240.7,
+      "uncertainty": 5.3,
+      "unit": "min"
+    },
+    {
+      "name": "T_obs_0p030",
+      "value": 245.0,
+      "uncertainty": null,
+      "unit": "min"
+    },
+    {
+      "name": "z_0p030",
+      "value": 0.81,
+      "uncertainty": null,
+      "unit": "1"
+    },
+    {
+      "name": "T_pred_0p060",
+      "value": 304.9,
+      "uncertainty": 8.9,
+      "unit": "min"
+    },
+    {
+      "name": "T_obs_0p060",
+      "value": 321.0,
+      "uncertainty": null,
+      "unit": "min"
+    },
+    {
+      "name": "z_0p060",
+      "value": 1.81,
+      "uncertainty": null,
+      "unit": "1"
+    },
+    {
+      "name": "max_z",
+      "value": 1.81,
+      "uncertainty": null,
+      "unit": "1"
+    },
+    {
+      "name": "secondary_unbudded_daughter_z_plate_165",
+      "value": 1.63,
+      "uncertainty": null,
+      "unit": "1"
+    },
+    {
+      "name": "secondary_unbudded_daughter_z_plate_220",
+      "value": 4.65,
+      "uncertainty": null,
+      "unit": "1"
+    },
+    {
+      "name": "secondary_unbudded_daughter_z_plate_250",
+      "value": 2.06,
+      "uncertainty": null,
+      "unit": "1"
+    },
+    {
+      "name": "secondary_unbudded_daughter_z_plate_300",
+      "value": 1.21,
+      "uncertainty": null,
+      "unit": "1"
+    }
+  ],
+  "producer": {
+    "script": "core/03_lanes/persistence/t017_yeast_asymmetric.py",
+    "commit": "f04f846e6"
+  },
+  "artifacts": [],
+  "date": "2026-11-17",
+  "approval": {
+    "approved_by": "santxkoz",
+    "date": "2026-11-17",
+    "role": "AUTHOR"
+  },
+  "note": "PASS by the preregistered rule: max z = 1.81 <= 2 over five cycloheximide conditions (largest gap 5 percent at 0.060 ug/ml), n = 22 cells per mean. Secondary unbudded-daughter comparison, not deciding: z = 1.6, 4.7, 2.1, 1.2 (tension at the 220 min plate; uses the authors' budded interval from cell counts). Not blind; transcription checked against extracted text, not the printed page. Not UET-distinct: standard age-structured population dynamics. L2 approved by the author on 2026-11-17."
+}

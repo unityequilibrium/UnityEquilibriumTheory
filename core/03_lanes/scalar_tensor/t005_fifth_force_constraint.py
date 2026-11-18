@@ -15,7 +15,7 @@ Method (fixed before the comparison is run; docs/standard/tests/T005.json):
 Constants: M_red = 2.435e27 eV, m_N = 0.9389e9 eV, hbar c = 1.973269804e-7 eV m,
 Earth-Moon mean distance a = 3.844e8 m.
 
-Usage: python -m docs.core.03_lanes.scalar_tensor.t005_fifth_force_constraint
+Usage: python core/03_lanes/scalar_tensor/t005_fifth_force_constraint.py
 Prints the numbers only. A Result record needs an APPROVED Test Card (docs/STANDARD.md section 4).
 """
 
@@ -27,7 +27,20 @@ import importlib
 import json
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parents[4]
+ROOT = Path(__file__).resolve().parents[3]
+
+
+def _core_module(relative: str):
+    """Load core/<relative> by file path (folders start with digits; repaired after the root relocation)."""
+    import importlib.util
+    import sys
+    path = ROOT / "core" / relative
+    name = "uet_producer_dep_" + path.stem
+    if name not in sys.modules:
+        spec = importlib.util.spec_from_file_location(name, path)
+        sys.modules[name] = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(sys.modules[name])
+    return sys.modules[name]
 DATA = ROOT / "docs/data/external/gravity/yukawa_fifth_force/t005_yukawa_bounds.csv"
 MANIFEST = ROOT / "docs/standard/data_manifest.json"
 DATA_ID = "T005_YUKAWA_BOUNDS"
@@ -45,7 +58,7 @@ def verified_rows() -> list[dict[str, str]]:
 
 
 def compute() -> dict:
-    ff = importlib.import_module("docs.core.03_lanes.scalar_tensor.uet_portal_fifth_force")
+    ff = _core_module("03_lanes/scalar_tensor/uet_portal_fifth_force.py")
     kappa = 1.0 / ff.REDUCED_PLANCK_MASS_EV**2
     m_chi = ff.NUCLEON_MASS_EV
     out = {"m_chi_eV": m_chi, "kappa_eV^-2": kappa,

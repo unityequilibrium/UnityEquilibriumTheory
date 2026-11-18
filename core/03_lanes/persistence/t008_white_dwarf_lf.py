@@ -6,7 +6,7 @@
 3. Compare with the observed SDSS DA slope (Hu, Wu & Wu 2007) over M_bol 6.0-13.5 using the
    path-A ratio rule: |log10(predicted/observed)| <= 0.1 PASS, <= 0.3 INCONCLUSIVE, else FAILED.
 
-Usage: python -m docs.core.03_lanes.persistence.t008_white_dwarf_lf
+Usage: python core/03_lanes/persistence/t008_white_dwarf_lf.py
 Prints the numbers only. A Result record needs an APPROVED Test Card (docs/STANDARD.md section 4).
 """
 
@@ -19,7 +19,20 @@ import json
 import math
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parents[4]
+ROOT = Path(__file__).resolve().parents[3]
+
+
+def _core_module(relative: str):
+    """Load core/<relative> by file path (folders start with digits; repaired after the root relocation)."""
+    import importlib.util
+    import sys
+    path = ROOT / "core" / relative
+    name = "uet_producer_dep_" + path.stem
+    if name not in sys.modules:
+        spec = importlib.util.spec_from_file_location(name, path)
+        sys.modules[name] = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(sys.modules[name])
+    return sys.modules[name]
 DATA = ROOT / "docs/data/external/astronomy/white_dwarf_lf/hu2007_sdss_da_wd_lf.csv"
 MANIFEST = ROOT / "docs/standard/data_manifest.json"
 DATA_ID = "HU2007_SDSS_DA_WD_LF"
@@ -35,7 +48,7 @@ def verified_values() -> dict[str, float]:
 
 
 def compute() -> dict:
-    pa = importlib.import_module("docs.core.03_lanes.persistence.uet_path_a_models")
+    pa = _core_module("03_lanes/persistence/uet_path_a_models.py")
     v = verified_values()
     n = pa.burn_exponent_from_luminosity_law(v["luminosity_power_of_core_temperature"])
     pred = pa.luminosity_function_slope_per_mag(n)

@@ -1,0 +1,34 @@
+{
+  "schema": "uet-result-v2",
+  "result_id": "R_L3_GROWING_ABUNDANCE",
+  "claim_id": "C_L3_GROWING_ABUNDANCE",
+  "level": "L1_CONSISTENT",
+  "outcome": "PASS",
+  "numbers": [
+    {
+      "name": "zero_growth_limit_relative_error_at_lambda_1e-7",
+      "value": "< 2e-7",
+      "uncertainty": null,
+      "unit": "relative"
+    },
+    {
+      "name": "agent_vs_analytic_fraction_cv_0.1_25_generations",
+      "value": "<= 0.005",
+      "uncertainty": null,
+      "unit": "absolute"
+    },
+    {
+      "name": "mitotic_index_correction_vs_steady_at_tM_over_T_0.05",
+      "value": "0.0353 vs 0.05",
+      "uncertainty": null,
+      "unit": "1"
+    }
+  ],
+  "producer": {
+    "script": "core/05_tests/physics/test_growing_abundance.py",
+    "commit": "7c8937553"
+  },
+  "artifacts": [],
+  "date": "2026-11-17",
+  "note": "Wave for topic 0.22 via the engine (derivation, no Test Card). With cycle-time spread 0.05 the agent model had not mixed after 25 generations; with 0.2 it shifts from the fixed-cycle formula by about 0.008. Not UET-distinct."
+}

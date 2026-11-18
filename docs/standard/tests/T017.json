@@ -1,0 +1,43 @@
+{
+  "schema": "uet-test-card-v2",
+  "test_id": "T017",
+  "status": "CLOSED",
+  "claim_id": "C_T017_YEAST_GROWTH_FROM_CYCLES",
+  "theory_card": {
+    "card_id": "UET_PARENT",
+    "version": 1
+  },
+  "hypothesis": "Layer 3 with a growing formation rate (claim C_L3_ASYMMETRIC_DIVISION): in an exponentially growing budding-yeast population, the population doubling time follows from the single-cell parent and daughter generation times through 2^{-P/T} + 2^{-D/T} = 1.",
+  "observable": {
+    "quantity": "population doubling time T for five cycloheximide conditions",
+    "unit": "min",
+    "domain": "S. cerevisiae C276 on YNB agar at 22-24 C, cycloheximide 0 to 0.060 ug/ml (Hartwell and Unger 1977, Table I)"
+  },
+  "test_kind": "CONSTRAINT",
+  "data_sources": [
+    {
+      "data_id": "HARTWELL_UNGER1977_YEAST_CYCLES",
+      "role": "COMPARISON",
+      "exposure": "SEEN_FULL"
+    }
+  ],
+  "prediction_method": {
+    "script": "core/03_lanes/persistence/t017_yeast_asymmetric.py",
+    "description": "T_pred solves 2^{-P/T} + 2^{-D/T} = 1 with P = 1st parent and D = daughter mean generation times; sigma_T propagates sd/sqrt(22) of P and D; z = |T_pred - T_obs| / sigma_T per condition. Secondary, not deciding: percent of unbudded cells that are daughters with the authors' budded-interval regression, against Table II."
+  },
+  "free_parameters": [],
+  "fixed_parameters": [
+    "one parent cycle and one daughter cycle per division, no dispersion (model of Fig. 4)",
+    "P = first parent generation time, D = daughter generation time, as tabulated",
+    "n = 22 cells per mean for the standard error (AI choice; not reported per condition)"
+  ],
+  "pass_criterion": "max z <= 2 over the five conditions",
+  "fail_criterion": "max z > 3 -> FAILED; 2 < max z <= 3 -> INCONCLUSIVE",
+  "drafted_by": "claude",
+  "note": "Disclosure: not blind. The drafting run computed T_pred = 152.8, 164.9, 225.5, 240.7, 304.9 min against 155, 167, 220, 245, 321 (largest deviation 5.0 percent at 0.060 ug/ml), max z about 1.8 with n = 22 and 1.5 with n = 15; the authors made the same comparison in Table I. The secondary comparison shows tension at the 220 min plate (86.4 +- 1.7 percent observed vs 78.5 predicted, z about 4.7) but uses a budded interval derived from budded-cell counts, so it is reported, not deciding. The n per condition is an AI choice: a smaller n makes PASS easier. Values were transcribed from scraped text of a scanned PDF; on 2026-11-17 they were re-checked against that extracted text (all match, and the authors' Calculated column equals T_pred), but not against the printed page. The model ignores dispersion of cycle times (10-20 min frames). Not UET-distinct: this is standard age-structured population dynamics. Approved by the author on 2026-11-17 as drafted, including n = 22 and the transcription checked against the extracted tables (not the printed page).",
+  "approval": {
+    "approved_by": "santxkoz",
+    "date": "2026-11-17",
+    "role": "AUTHOR"
+  }
+}

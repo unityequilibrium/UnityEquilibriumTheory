@@ -1,0 +1,42 @@
+{
+  "schema": "uet-test-card-v2",
+  "test_id": "T010",
+  "status": "CLOSED",
+  "claim_id": "C_T010_TWO_CARRIER_RECORDS",
+  "theory_card": {
+    "card_id": "UET_PARENT",
+    "version": 1
+  },
+  "hypothesis": "Two records of the same past event, carried by gravitational waves and by light, travel at the same speed. Layer 1: the parent action propagates tensor waves at c (c_T = 1, derived in test_tensor_speed.py). Observation layer, principle P1: each carrier delivers the source state at its own retarded time, so the arrival delay of the two records equals their emission delay only. Predicted (v_GW - v_EM)/v_EM = 0 exactly.",
+  "observable": {
+    "quantity": "(v_GW - v_EM)/v_EM",
+    "unit": "fraction of c",
+    "domain": "binary neutron star merger GW170817 and GRB 170817A, about 40 Mpc"
+  },
+  "test_kind": "CONSTRAINT",
+  "data_sources": [
+    {
+      "data_id": "ABBOTT2017_GW170817_GRB",
+      "role": "COMPARISON",
+      "exposure": "SEEN_SUMMARY"
+    }
+  ],
+  "prediction_method": {
+    "script": "docs/core/03_lanes/observation/t010_gw170817_carrier_speed.py",
+    "description": "prediction 0 from c_T = 1 of the parent action; PASS if 0 lies inside the published interval [-3e-15, +7e-16]"
+  },
+  "free_parameters": [],
+  "fixed_parameters": [
+    "c_T = 1 from the parent action (no X-dependent coupling)",
+    "published interval exactly as registered"
+  ],
+  "pass_criterion": "PASS if 0 lies inside the published interval of (v_GW - v_EM)/v_EM.",
+  "fail_criterion": "FAILED if 0 lies outside the interval; INCONCLUSIVE if the registered values disagree with the source text.",
+  "drafted_by": "claude",
+  "note": "Disclosure: drafted after reading the published bound, and any theory with c_T = 1 passes, so the outcome is effectively known. The parent action has no term that could change c_T, so this test checks the structure rather than a free parameter; it would fail only if the action were changed to couple R to derivatives of the scalar. It confronts principle P1 (records of one event via two carriers) and layer 1 together. Approved by the author on 2026-11-11 as drafted.",
+  "approval": {
+    "approved_by": "santxkoz",
+    "date": "2026-11-11",
+    "role": "AUTHOR"
+  }
+}

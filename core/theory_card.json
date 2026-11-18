@@ -249,7 +249,7 @@
     {
       "lane": "He-4 (Topic 13)",
       "symbol": "O(2) sector",
-      "standard_quantity": "superfluid order parameter, not admitted (charge-to-atom identity open)"
+      "standard_quantity": "not from the action: chi = He-4 atom at tree level FAILED in T015 (2026-11-16); author decision 2026-11-16: Topic 13 Phi (He II superfluid fraction, e0 and Z_Phi by calibration) is a phenomenological closure outside the action"
     }
   ],
   "note": "Drafted by Claude in W3 from the existing code; pending author approval. All core equations stay L0 until the W4 sympy derivation check passes. Author decision 2026-11-08: the W5-W6 pilot is binary-pulsar scalarization bounds; Cassini is a sanity check only."

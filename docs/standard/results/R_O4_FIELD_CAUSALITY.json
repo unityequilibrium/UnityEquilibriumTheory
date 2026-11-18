@@ -1,0 +1,40 @@
+{
+  "schema": "uet-result-v2",
+  "result_id": "R_O4_FIELD_CAUSALITY",
+  "claim_id": "C_OBS_FIELD_CAUSAL",
+  "level": "L1_CONSISTENT",
+  "outcome": "PASS",
+  "numbers": [
+    {
+      "name": "pde_vs_exact_retarded_relative_error_dx_0.1_0.05_0.025",
+      "value": "6.8e-3, 1.7e-3, 4.3e-4 (second order)",
+      "uncertainty": null,
+      "unit": "dimensionless"
+    },
+    {
+      "name": "massless_vs_dalembert_relative_error",
+      "value": "4.0e-3, 1.0e-3, 2.5e-4 (second order)",
+      "uncertainty": null,
+      "unit": "dimensionless"
+    },
+    {
+      "name": "field_outside_cone_over_peak",
+      "value": "< 1e-10 beyond |x| > t + 8 sigma",
+      "uncertainty": null,
+      "unit": "dimensionless"
+    },
+    {
+      "name": "negative_control_quasistatic_vs_retarded_at_x6_t1",
+      "value": "1.4e-3 versus 3.7e-24",
+      "uncertainty": null,
+      "unit": "dimensionless"
+    }
+  ],
+  "producer": {
+    "script": "docs/core/05_tests/physics/test_field_causality.py",
+    "commit": "aa5f28c46"
+  },
+  "artifacts": [],
+  "date": "2026-11-11",
+  "note": "1+1D, flat background, linear order of the canonical psi equation of Theory Card UET_PARENT v1; leapfrog PDE solution against the exact retarded solution through J0 and the independent d'Alembert closed form."
+}

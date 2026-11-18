@@ -107,9 +107,13 @@ m_χ² = m²/Z    λ_χ̃ = λ_χ/Z²  Λ_eff = Λ + κ ε ρ*
 | charge | C | Noether charge density N⁰ ของ global O(2) | conditional |
 | response | Φ | φ (หรือ ψ canonical) | candidate |
 | response | Π | ∂_t φ | นิยาม |
-| He-4 (Topic 13) | O(2) sector | superfluid order parameter | **ยังไม่ได้รับการยอมรับ** (charge-to-atom identity ยังเปิดอยู่) |
+| He-4 (Topic 13) | O(2) sector | superfluid order parameter | **ไม่ได้มาจาก action**: lane χ = อะตอม He-4 ที่ tree level `FAILED` ใน T015 (2026-11-16) |
 
 C ไม่ใช่มวลโดยทั่วไป และ Φ ไม่ใช่ metric
+
+**ผู้เขียนตัดสินใจ (2026-11-16):** Φ ของ topic 13 (superfluid fraction ของ He II ที่ได้ e0 และ Z_Φ จากการ calibrate) เป็น **phenomenological closure นอก action** ไม่ใช่ตัวแปรของ action
+ชั้น SI ของ action ตอบได้แล้วโดยไม่ต้องใช้ E_ref (`R_SI1_PARENT_ACTION_SI`) และหยุดไล่ data package ของ graphite เพื่อปิด SI anchor ของ topic 13
+รายละเอียด: [`docs/meta/SI1_PARENT_ACTION_SI_DRAFT_2026-11-16.md`](../docs/meta/SI1_PARENT_ACTION_SI_DRAFT_2026-11-16.md)
 
 ## 8. อนุมัติ
 
