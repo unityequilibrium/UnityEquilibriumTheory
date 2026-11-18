@@ -397,6 +397,13 @@
         "R_L3_LV_MAP"
       ],
       "note": "Nearest known theory: MacArthur consumer-resource reduction and metabolic coexistence theory. UET adds mortality from the burn law (1/tau = P/F); one pool gives one winner, so coexistence needs more than one resource."
+    },
+    {
+      "claim_id": "C_T023_FLIGHT_LIFETIME_ENERGY",
+      "statement": "If the lifetime reserve per gram is set at species level by extrinsic mortality (author, 2026-11-18), bats spend about as much energy per gram over a lifetime as birds and clearly more than other mammals; to be confronted with AnAge Build 15 under Test Card T023.",
+      "level": "L0_SPECULATIVE",
+      "evidence": [],
+      "note": "Test Card T023 is DRAFT and awaits the author's approval. Not blind; torpor biases toward PASS."
     }
   ]
 }

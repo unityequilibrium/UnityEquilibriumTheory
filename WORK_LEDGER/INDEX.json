@@ -5,11 +5,11 @@
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
     "sources": 81,
-    "entries": 916,
+    "entries": 917,
     "by_stream": {
       "book-history": 94,
       "operations": 134,
-      "research": 687,
+      "research": 688,
       "review": 1
     },
     "exact_duplicates": 0,
@@ -420,8 +420,8 @@
     },
     {
       "path": "2026/2026-11-18.md",
-      "sha256": "473cfe92014d3af890e90203f6478c37be3f4c2ed038a918bb7bf586c133eaeb",
-      "entries": 17
+      "sha256": "bf6a340593bb22101d3de1e6dfe59d5b1bd7d8c0ac41460ec21e7e059acbe330",
+      "entries": 18
     },
     {
       "path": "2026-08-14.md",
@@ -18701,9 +18701,29 @@
       "source": "2026/2026-11-18.md",
       "anchor": "layer-3-mapped-onto-saavedra-et-al-2025-sfi-metabolic-coexistence",
       "start_line": 163,
-      "end_line": 171,
+      "end_line": 172,
       "title": "Layer 3 mapped onto Saavedra et al. 2025 (SFI metabolic coexistence)",
-      "entry_sha256": "c9e3d95d5f522a35504e5224844ab061b3b23146cae9e2ad6d949bda1f99e48c",
+      "entry_sha256": "67a96853ef7b6c858e81058e583e4171fd65c3d21b0bd6090a30ca9eb696a8d9",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-18",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-18.md#species-level-reserve-and-test-card-t023-draft-bats",
+      "source": "2026/2026-11-18.md",
+      "anchor": "species-level-reserve-and-test-card-t023-draft-bats",
+      "start_line": 173,
+      "end_line": 181,
+      "title": "Species-level reserve and Test Card T023 draft (bats)",
+      "entry_sha256": "c21ab51f5dad82185bae91c39c6ffd8e7f0bda8661505de7186b30d2927510f8",
       "stream": "research",
       "areas": [
         "research-core"
