@@ -67,6 +67,8 @@ $$dS_{\text{sys}} = d_eS + d_iS,\quad d_iS \ge 0 \qquad P = T\,\dot S_{\text{pro
 A system inside an environment loses free energy F at burn power P. The entropy it produces, Σ, splits into a readable record I
 and a potential difference D (claim `C_R3_TRACE_RECORD_PLUS_POTENTIAL`, L1).
 Friction, noise and the second law come out of a closed system without being added by hand (claim `C_LAYER2_OPEN_FROM_CLOSED`, L1).
+Taking the matter field χ of layer 1 as a thermal bath, the layer 1 action itself gives the response field φ friction and noise that obey
+the fluctuation-dissipation (KMS) relation, so the friction is fixed by the portal coupling rather than chosen (claim `C_L2_FROM_ACTION`, L1).
 
 ### Layer 3: selection by how resources are managed
 
@@ -77,7 +79,7 @@ The number observed, N, is the birth rate b times the lifetime. Among systems th
 the one that can live on the lowest resource level R\* wins; with two resources a stable mixed equilibrium appears
 (claims `C_L3_SELECTION_FORMAL` and `C_L3_BURN_LAW_SELECTION`, L1).
 
-**What the equations do not yet do:** layer 1 is not yet derived together with layers 2 and 3 into one action,
+**What the equations do not yet do:** layer 2 is derived from the layer 1 action for one channel only, and layer 3 not yet, so the three layers are not yet one action,
 and the layers do not yet give a number that the established theories do not (section 3).
 
 ## 2. The author's reasoning
@@ -137,7 +139,7 @@ What UET can add is a tested map of where one set of rules holds across fields, 
 ## 4. Evidence so far
 
 Levels follow [`docs/STANDARD.md`](docs/STANDARD.md): `L1` internally consistent, `L2` confronted with external data, `L3` externally replicated.
-The registry is [`docs/standard/claims.json`](docs/standard/claims.json) (45 claims: 25 at L1, 18 at L2, 2 FAILED; none at L3).
+The registry is [`docs/standard/claims.json`](docs/standard/claims.json) (46 claims: 26 at L1, 18 at L2, 2 FAILED; none at L3).
 Test criteria were committed and approved before each comparison. None of these comparisons was blind.
 
 **Failed** (kept as results, not hidden):

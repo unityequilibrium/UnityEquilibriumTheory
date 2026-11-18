@@ -5,11 +5,11 @@
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
     "sources": 81,
-    "entries": 927,
+    "entries": 928,
     "by_stream": {
       "book-history": 94,
       "operations": 134,
-      "research": 698,
+      "research": 699,
       "review": 1
     },
     "exact_duplicates": 0,
@@ -420,8 +420,8 @@
     },
     {
       "path": "2026/2026-11-18.md",
-      "sha256": "fc29031919fedc7b0a945d276a71b4e14264d612c8972044aa38a057648bccb3",
-      "entries": 28
+      "sha256": "b4e5684d418484ca55dc240efc7dd85aee2bb5ca9e0ff5ac5d7e9d293b02f9a7",
+      "entries": 29
     },
     {
       "path": "2026-08-14.md",
@@ -18921,9 +18921,29 @@
       "source": "2026/2026-11-18.md",
       "anchor": "core-alignment-w10-core-docs-and-complete-register",
       "start_line": 275,
-      "end_line": 283,
+      "end_line": 284,
       "title": "Core alignment W10: core docs and complete register",
-      "entry_sha256": "f2e430e693cb65840ae76b76a573584965ab5190c83c4bfa6dc7b2af901db017",
+      "entry_sha256": "4bd9361dc704562ce9b51c28b25af239bb881b05218856190f67c2da48ceb2b9",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-18",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-18.md#stage-3-wave-l2-1-layer-2-from-the-parent-action",
+      "source": "2026/2026-11-18.md",
+      "anchor": "stage-3-wave-l2-1-layer-2-from-the-parent-action",
+      "start_line": 285,
+      "end_line": 293,
+      "title": "Stage 3 wave L2-1: layer 2 from the parent action",
+      "entry_sha256": "6a69abb67770f8c6a0104977d35c914043d9e44f6d32fe987c24e4813fd9898b",
       "stream": "research",
       "areas": [
         "research-core"

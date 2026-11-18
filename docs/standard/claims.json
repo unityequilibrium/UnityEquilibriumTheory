@@ -406,6 +406,15 @@
         "R_T023_FLIGHT_LIFETIME_ENERGY"
       ],
       "note": "Not blind; bat torpor biases the bat value upward; no phylogenetic correction. Nearest theory: disposable soma and extrinsic-mortality theory of ageing; not UET-distinct. L2 approved by the author on 2026-11-18."
+    },
+    {
+      "claim_id": "C_L2_FROM_ACTION",
+      "statement": "With the O(2) matter field chi as a free thermal bath, the parent action gives the response field phi a one-loop Schwinger-Keldysh self-energy whose Wightman functions obey KMS (Pi> = exp(w/T) Pi<); the damping rate is rho/(2w), the pair-decay width at T = 0 is the textbook one, and long-wavelength modes get ohmic friction gamma(q,T) = N sigma^2 n(sqrt(q^2/4 + M_chi^2))/(16 pi q) with sigma = h sqrt(eps)/(Z sqrt(k)).",
+      "level": "L1_CONSISTENT",
+      "evidence": [
+        "R_L2_FROM_ACTION"
+      ],
+      "note": "Derives the layer 2 friction that uet_layer2_dissipation.py assumed. Nearest known theory: Feynman-Vernon and Caldeira-Leggett with a field-theory bath; warm-inflation dissipation. Not UET-distinct."
     }
   ]
 }
