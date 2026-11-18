@@ -403,80 +403,80 @@ core/02_equations/o2/uet_o2_tree_level_bs_sk_match.py	02_equations/o2	.py	REVIEW
 core/02_equations/o2/uet_o2_tree_level_charged_ward_vertex.py	02_equations/o2	.py	REVIEW	0	0	0	17	1	0	0	4	-	-	-
 core/02_equations/o2/uet_o2_two_loop_sunset_cut.py	02_equations/o2	.py	REVIEW	0	0	0	15	1	1	0	3	-	-	-
 core/02_equations/o2/uet_o2_ward_constrained_condensed.py	02_equations/o2	.py	REVIEW	0	0	0	15	0	2	0	4	-	-	-
-core/03_lanes/README.md	03_lanes	.md	REVIEW	0	0	0	6	0	0	0	1	-	-	-
-core/03_lanes/__init__.py	03_lanes	.py	D	0	0	0	6	0	0	0	0	-	-	-
-core/03_lanes/carrier_observer/README.md	03_lanes/carrier_observer	.md	REVIEW	0	0	0	6	0	0	0	1	-	-	-
-core/03_lanes/carrier_observer/__init__.py	03_lanes/carrier_observer	.py	D	0	0	0	6	0	0	0	0	-	-	-
-core/03_lanes/carrier_observer/photon_observer_baseline.py	03_lanes/carrier_observer	.py	REVIEW	0	0	0	22	2	1	0	4	-	-	-
-core/03_lanes/carrier_observer/relational_two_body_baseline.py	03_lanes/carrier_observer	.py	A_DEP	0	0	0	23	6	0	0	9	-	-	-
-core/03_lanes/carrier_observer/uet_impact_effect.py	03_lanes/carrier_observer	.py	A_DEP	1	0	0	20	2	1	1	6	-	-	-
-core/03_lanes/carrier_observer/uet_quantum_interpretations.py	03_lanes/carrier_observer	.py	REVIEW	0	0	0	18	2	0	0	3	-	-	-
-core/03_lanes/carrier_observer/uet_quantum_measurement.py	03_lanes/carrier_observer	.py	REVIEW	0	0	0	19	3	0	0	4	-	-	-
-core/03_lanes/mass_density/README.md	03_lanes/mass_density	.md	REVIEW	0	0	0	6	0	0	0	1	-	-	-
-core/03_lanes/mass_density/__init__.py	03_lanes/mass_density	.py	D	0	0	0	6	0	0	0	0	-	-	-
-core/03_lanes/mass_density/mass_density_3d.py	03_lanes/mass_density	.py	REVIEW	0	0	0	21	2	0	0	4	-	-	-
-core/03_lanes/mass_density/mass_density_amplitude.py	03_lanes/mass_density	.py	REVIEW	0	0	0	23	2	0	0	4	-	-	-
-core/03_lanes/mass_density/mass_density_correspondence.py	03_lanes/mass_density	.py	A_DEP	0	0	0	22	4	0	0	6	-	-	-
-core/03_lanes/mass_density/mass_density_dimensional.py	03_lanes/mass_density	.py	REVIEW	0	0	0	20	2	0	0	4	-	-	-
-core/03_lanes/mass_density/matter_interaction_forward.py	03_lanes/mass_density	.py	A_DEP	0	0	0	20	2	0	0	6	-	-	-
-core/03_lanes/observation/__init__.py	03_lanes/observation	.py	D	0	0	0	0	0	0	0	0	-	-	-
-core/03_lanes/observation/t010_gw170817_carrier_speed.py	03_lanes/observation	.py	A	1	2	0	1	0	0	1	0	-	-	-
-core/03_lanes/observation/t011_pulsation_delay_vs_rv.py	03_lanes/observation	.py	A	1	2	0	1	0	0	1	1	-	-	-
-core/03_lanes/observation/t012_correlation_front_bound.py	03_lanes/observation	.py	A	1	2	0	1	0	0	1	1	-	-	-
-core/03_lanes/observation/t013_ives_stilwell_lorentz_time.py	03_lanes/observation	.py	A	1	2	0	1	0	0	1	1	-	-	-
-core/03_lanes/observation/uet_estimators.py	03_lanes/observation	.py	A_DEP	1	0	1	1	0	0	1	1	-	-	-
-core/03_lanes/observation/uet_field_causality.py	03_lanes/observation	.py	A_DEP	1	0	2	1	0	0	1	1	-	-	-
-core/03_lanes/observation/uet_lorentz_time.py	03_lanes/observation	.py	A_DEP	2	0	1	3	0	0	2	1	-	-	-
-core/03_lanes/observation/uet_observation_layer.py	03_lanes/observation	.py	A_DEP	2	0	2	1	0	0	2	1	-	-	-
-core/03_lanes/observation/uet_pulsation_timing.py	03_lanes/observation	.py	A_DEP	2	0	1	3	0	0	2	1	-	-	-
-core/03_lanes/observation/uet_shared_record.py	03_lanes/observation	.py	A_DEP	1	0	2	1	0	0	1	1	-	-	-
-core/03_lanes/observation/uet_two_signal_contact.py	03_lanes/observation	.py	A_DEP	2	0	1	3	0	0	2	1	-	-	-
-core/03_lanes/open_system/__init__.py	03_lanes/open_system	.py	D	0	0	0	0	0	0	0	0	-	-	-
-core/03_lanes/open_system/t006_solar_mass_loss.py	03_lanes/open_system	.py	A	1	3	0	1	0	0	1	1	-	-	-
-core/03_lanes/open_system/t015_he_ii_tree_level.py	03_lanes/open_system	.py	A	1	2	0	1	0	0	1	1	-	-	-
-core/03_lanes/open_system/uet_free_energy_burn.py	03_lanes/open_system	.py	A_DEP	1	0	1	2	0	0	1	1	-	-	-
-core/03_lanes/open_system/uet_layer2_dissipation.py	03_lanes/open_system	.py	A_DEP	1	0	1	4	0	0	1	0	-	-	-
-core/03_lanes/open_system/uet_portal_drag.py	03_lanes/open_system	.py	A_DEP	1	0	2	3	0	0	1	1	-	-	-
-core/03_lanes/open_system/uet_portal_drag_bound.py	03_lanes/open_system	.py	A_DEP	1	0	1	2	0	0	1	1	-	-	-
-core/03_lanes/open_system/uet_portal_drag_derived.py	03_lanes/open_system	.py	A_DEP	1	0	1	3	0	0	1	1	-	-	-
-core/03_lanes/open_system/uet_psi_matter_burn.py	03_lanes/open_system	.py	A_DEP	1	0	2	1	0	0	1	1	-	-	-
-core/03_lanes/open_system/uet_r1_writing_channels.py	03_lanes/open_system	.py	A_DEP	1	0	1	3	0	0	1	1	-	-	-
-core/03_lanes/open_system/uet_r3_trace_decomposition.py	03_lanes/open_system	.py	A_DEP	1	0	1	3	0	0	1	1	-	-	-
-core/03_lanes/open_system/uet_si_bose_fluid.py	03_lanes/open_system	.py	A_DEP	2	0	2	2	0	0	2	2	-	-	-
-core/03_lanes/persistence/README.md	03_lanes/persistence	.md	REVIEW	0	0	0	6	0	0	0	1	-	-	-
-core/03_lanes/persistence/__init__.py	03_lanes/persistence	.py	D	0	0	0	6	0	0	0	0	-	-	-
-core/03_lanes/persistence/engine_pilot_stars.py	03_lanes/persistence	.py	A_DEP	1	0	1	3	0	0	1	2	-	-	-
-core/03_lanes/persistence/persistence_energy_diagnostic.py	03_lanes/persistence	.py	REVIEW	0	0	0	21	2	0	0	5	-	-	-
-core/03_lanes/persistence/resource_selection_physical_cost_map.py	03_lanes/persistence	.py	REVIEW	0	0	0	21	2	0	0	6	-	-	-
-core/03_lanes/persistence/resource_selection_thermal_bridge.py	03_lanes/persistence	.py	REVIEW	0	0	0	23	2	0	0	6	-	-	-
-core/03_lanes/persistence/t002_model_systematics.py	03_lanes/persistence	.py	A	2	1	0	4	0	0	2	1	-	-	-
-core/03_lanes/persistence/t002_stellar_phase_fractions.py	03_lanes/persistence	.py	A	1	2	0	1	0	0	1	1	-	-	-
-core/03_lanes/persistence/t007_tilman_chemostat.py	03_lanes/persistence	.py	A	1	2	0	0	0	0	1	1	-	-	-
-core/03_lanes/persistence/t008_white_dwarf_lf.py	03_lanes/persistence	.py	A	1	2	0	1	0	0	1	1	-	-	-
-core/03_lanes/persistence/t009_u234_secular_equilibrium.py	03_lanes/persistence	.py	A	1	2	0	0	0	0	1	1	-	-	-
-core/03_lanes/persistence/t014_r_parameter_independent.py	03_lanes/persistence	.py	A	1	2	0	1	0	0	1	1	-	-	-
-core/03_lanes/persistence/t017_yeast_asymmetric.py	03_lanes/persistence	.py	A	1	2	0	0	0	0	1	2	-	-	-
-core/03_lanes/persistence/t018_lifespan_rate_of_living.py	03_lanes/persistence	.py	A	1	2	0	0	0	0	1	1	-	-	-
-core/03_lanes/persistence/t021_lighting_succession.py	03_lanes/persistence	.py	A	1	2	1	0	0	0	1	1	-	-	-
-core/03_lanes/persistence/uet_asymmetric_division.py	03_lanes/persistence	.py	A_DEP	2	0	1	2	0	0	2	1	-	-	-
-core/03_lanes/persistence/uet_growing_abundance.py	03_lanes/persistence	.py	A_DEP	1	0	1	1	0	0	1	1	-	-	-
-core/03_lanes/persistence/uet_layer2_to_3.py	03_lanes/persistence	.py	A_DEP	2	0	3	4	0	0	2	1	-	-	-
-core/03_lanes/persistence/uet_path_a_models.py	03_lanes/persistence	.py	A_DEP	3	0	1	4	0	0	3	1	-	-	-
-core/03_lanes/persistence/uet_persistence_selection.py	03_lanes/persistence	.py	A	2	1	4	5	0	1	2	2	-	-	-
-core/03_lanes/persistence/uet_resource_selection.py	03_lanes/persistence	.py	A_DEP	1	0	0	22	3	3	1	9	-	-	-
-core/03_lanes/review/README.md	03_lanes/review	.md	REVIEW	0	0	0	6	0	0	0	1	-	-	-
-core/03_lanes/review/__init__.py	03_lanes/review	.py	D	0	0	0	6	0	0	0	0	-	-	-
-core/03_lanes/review/uet_matter_space_observable.py	03_lanes/review	.py	A_DEP	0	0	0	17	2	0	0	5	-	-	-
-core/03_lanes/review/uet_observables.py	03_lanes/review	.py	A_DEP	0	0	0	18	1	3	0	3	-	-	-
-core/03_lanes/scalar_tensor/__init__.py	03_lanes/scalar_tensor	.py	D	0	0	0	0	0	0	0	0	-	-	-
-core/03_lanes/scalar_tensor/t001_binary_pulsar_constraint.py	03_lanes/scalar_tensor	.py	A	1	2	1	1	0	0	1	0	-	-	-
-core/03_lanes/scalar_tensor/t005_fifth_force_constraint.py	03_lanes/scalar_tensor	.py	A	1	2	0	1	0	0	1	1	-	-	-
-core/03_lanes/scalar_tensor/t016_microscope_portal.py	03_lanes/scalar_tensor	.py	A	1	2	0	1	0	0	1	2	-	-	-
-core/03_lanes/scalar_tensor/t019_portal_gap_rotwash.py	03_lanes/scalar_tensor	.py	A	1	2	0	1	0	0	1	1	-	-	-
-core/03_lanes/scalar_tensor/t020_route_b_llr.py	03_lanes/scalar_tensor	.py	A	1	2	0	1	0	0	1	1	-	-	-
-core/03_lanes/scalar_tensor/uet_portal_composition.py	03_lanes/scalar_tensor	.py	A_DEP	2	0	1	1	0	0	2	1	-	-	-
-core/03_lanes/scalar_tensor/uet_portal_fifth_force.py	03_lanes/scalar_tensor	.py	A_DEP	2	0	1	4	0	0	2	1	-	-	-
-core/03_lanes/scalar_tensor/uet_vacuum_structure.py	03_lanes/scalar_tensor	.py	A_DEP	1	0	1	2	0	1	1	1	-	-	-
+core/03_lanes/README.md	03_lanes	.md	REVIEW	0	0	0	6	0	0	0	1	A	W2	Lane guide; update in W10
+core/03_lanes/__init__.py	03_lanes	.py	D	0	0	0	6	0	0	0	0	D	W2	Package marker
+core/03_lanes/carrier_observer/README.md	03_lanes/carrier_observer	.md	REVIEW	0	0	0	6	0	0	0	1	C	W2	Standard-physics comparators of the old foundation lane; the observation lane (T010-T013) replaced them; no claim uses them
+core/03_lanes/carrier_observer/__init__.py	03_lanes/carrier_observer	.py	D	0	0	0	6	0	0	0	0	D	W2	Package marker
+core/03_lanes/carrier_observer/photon_observer_baseline.py	03_lanes/carrier_observer	.py	REVIEW	0	0	0	22	2	1	0	4	C	W2	Standard-physics comparators of the old foundation lane; the observation lane (T010-T013) replaced them; no claim uses them
+core/03_lanes/carrier_observer/relational_two_body_baseline.py	03_lanes/carrier_observer	.py	A_DEP	0	0	0	23	6	0	0	9	C	W2	Standard-physics comparators of the old foundation lane; the observation lane (T010-T013) replaced them; no claim uses them
+core/03_lanes/carrier_observer/uet_impact_effect.py	03_lanes/carrier_observer	.py	A_DEP	1	0	0	20	2	1	1	6	C	W2	Standard-physics comparators of the old foundation lane; the observation lane (T010-T013) replaced them; no claim uses them
+core/03_lanes/carrier_observer/uet_quantum_interpretations.py	03_lanes/carrier_observer	.py	REVIEW	0	0	0	18	2	0	0	3	C	W2	Standard-physics comparators of the old foundation lane; the observation lane (T010-T013) replaced them; no claim uses them
+core/03_lanes/carrier_observer/uet_quantum_measurement.py	03_lanes/carrier_observer	.py	REVIEW	0	0	0	19	3	0	0	4	C	W2	Standard-physics comparators of the old foundation lane; the observation lane (T010-T013) replaced them; no claim uses them
+core/03_lanes/mass_density/README.md	03_lanes/mass_density	.md	REVIEW	0	0	0	6	0	0	0	1	C	W2	Maps the old normalized C coordinate to mass density; the new equations do not use C; no claim uses it
+core/03_lanes/mass_density/__init__.py	03_lanes/mass_density	.py	D	0	0	0	6	0	0	0	0	D	W2	Package marker
+core/03_lanes/mass_density/mass_density_3d.py	03_lanes/mass_density	.py	REVIEW	0	0	0	21	2	0	0	4	C	W2	Maps the old normalized C coordinate to mass density; the new equations do not use C; no claim uses it
+core/03_lanes/mass_density/mass_density_amplitude.py	03_lanes/mass_density	.py	REVIEW	0	0	0	23	2	0	0	4	C	W2	Maps the old normalized C coordinate to mass density; the new equations do not use C; no claim uses it
+core/03_lanes/mass_density/mass_density_correspondence.py	03_lanes/mass_density	.py	A_DEP	0	0	0	22	4	0	0	6	C	W2	Maps the old normalized C coordinate to mass density; the new equations do not use C; no claim uses it
+core/03_lanes/mass_density/mass_density_dimensional.py	03_lanes/mass_density	.py	REVIEW	0	0	0	20	2	0	0	4	C	W2	Maps the old normalized C coordinate to mass density; the new equations do not use C; no claim uses it
+core/03_lanes/mass_density/matter_interaction_forward.py	03_lanes/mass_density	.py	A_DEP	0	0	0	20	2	0	0	6	C	W2	Maps the old normalized C coordinate to mass density; the new equations do not use C; no claim uses it
+core/03_lanes/observation/__init__.py	03_lanes/observation	.py	D	0	0	0	0	0	0	0	0	D	W2	Package marker
+core/03_lanes/observation/t010_gw170817_carrier_speed.py	03_lanes/observation	.py	A	1	2	0	1	0	0	1	0	A	W2	Producer of a registered Test Card result
+core/03_lanes/observation/t011_pulsation_delay_vs_rv.py	03_lanes/observation	.py	A	1	2	0	1	0	0	1	1	A	W2	Producer of a registered Test Card result
+core/03_lanes/observation/t012_correlation_front_bound.py	03_lanes/observation	.py	A	1	2	0	1	0	0	1	1	A	W2	Producer of a registered Test Card result
+core/03_lanes/observation/t013_ives_stilwell_lorentz_time.py	03_lanes/observation	.py	A	1	2	0	1	0	0	1	1	A	W2	Producer of a registered Test Card result
+core/03_lanes/observation/uet_estimators.py	03_lanes/observation	.py	A_DEP	1	0	1	1	0	0	1	1	A	W2	Model code of the new equations, used by producers or physics tests
+core/03_lanes/observation/uet_field_causality.py	03_lanes/observation	.py	A_DEP	1	0	2	1	0	0	1	1	A	W2	Model code of the new equations, used by producers or physics tests
+core/03_lanes/observation/uet_lorentz_time.py	03_lanes/observation	.py	A_DEP	2	0	1	3	0	0	2	1	A	W2	Model code of the new equations, used by producers or physics tests
+core/03_lanes/observation/uet_observation_layer.py	03_lanes/observation	.py	A_DEP	2	0	2	1	0	0	2	1	A	W2	Model code of the new equations, used by producers or physics tests
+core/03_lanes/observation/uet_pulsation_timing.py	03_lanes/observation	.py	A_DEP	2	0	1	3	0	0	2	1	A	W2	Model code of the new equations, used by producers or physics tests
+core/03_lanes/observation/uet_shared_record.py	03_lanes/observation	.py	A_DEP	1	0	2	1	0	0	1	1	A	W2	Model code of the new equations, used by producers or physics tests
+core/03_lanes/observation/uet_two_signal_contact.py	03_lanes/observation	.py	A_DEP	2	0	1	3	0	0	2	1	A	W2	Model code of the new equations, used by producers or physics tests
+core/03_lanes/open_system/__init__.py	03_lanes/open_system	.py	D	0	0	0	0	0	0	0	0	D	W2	Package marker
+core/03_lanes/open_system/t006_solar_mass_loss.py	03_lanes/open_system	.py	A	1	3	0	1	0	0	1	1	A	W2	Producer of a registered Test Card result
+core/03_lanes/open_system/t015_he_ii_tree_level.py	03_lanes/open_system	.py	A	1	2	0	1	0	0	1	1	A	W2	Producer of a registered Test Card result
+core/03_lanes/open_system/uet_free_energy_burn.py	03_lanes/open_system	.py	A_DEP	1	0	1	2	0	0	1	1	A	W2	Model code of the new equations, used by producers or physics tests
+core/03_lanes/open_system/uet_layer2_dissipation.py	03_lanes/open_system	.py	A_DEP	1	0	1	4	0	0	1	0	A	W2	Model code of the new equations, used by producers or physics tests
+core/03_lanes/open_system/uet_portal_drag.py	03_lanes/open_system	.py	A_DEP	1	0	2	3	0	0	1	1	A	W2	Model code of the new equations, used by producers or physics tests
+core/03_lanes/open_system/uet_portal_drag_bound.py	03_lanes/open_system	.py	A_DEP	1	0	1	2	0	0	1	1	A	W2	Model code of the new equations, used by producers or physics tests
+core/03_lanes/open_system/uet_portal_drag_derived.py	03_lanes/open_system	.py	A_DEP	1	0	1	3	0	0	1	1	A	W2	Model code of the new equations, used by producers or physics tests
+core/03_lanes/open_system/uet_psi_matter_burn.py	03_lanes/open_system	.py	A_DEP	1	0	2	1	0	0	1	1	A	W2	Model code of the new equations, used by producers or physics tests
+core/03_lanes/open_system/uet_r1_writing_channels.py	03_lanes/open_system	.py	A_DEP	1	0	1	3	0	0	1	1	A	W2	Model code of the new equations, used by producers or physics tests
+core/03_lanes/open_system/uet_r3_trace_decomposition.py	03_lanes/open_system	.py	A_DEP	1	0	1	3	0	0	1	1	A	W2	Model code of the new equations, used by producers or physics tests
+core/03_lanes/open_system/uet_si_bose_fluid.py	03_lanes/open_system	.py	A_DEP	2	0	2	2	0	0	2	2	A	W2	Model code of the new equations, used by producers or physics tests
+core/03_lanes/persistence/README.md	03_lanes/persistence	.md	REVIEW	0	0	0	6	0	0	0	1	A	W2	Lane guide; update in W10
+core/03_lanes/persistence/__init__.py	03_lanes/persistence	.py	D	0	0	0	6	0	0	0	0	D	W2	Package marker
+core/03_lanes/persistence/engine_pilot_stars.py	03_lanes/persistence	.py	A_DEP	1	0	1	3	0	0	1	2	A	W2	Model code of the new equations, used by producers or physics tests
+core/03_lanes/persistence/persistence_energy_diagnostic.py	03_lanes/persistence	.py	REVIEW	0	0	0	21	2	0	0	5	C	W2	Rayleigh path cost on the normalized C coordinate; not derived from the action; no claim uses it
+core/03_lanes/persistence/resource_selection_physical_cost_map.py	03_lanes/persistence	.py	REVIEW	0	0	0	21	2	0	0	6	C	W2	Dimensional wrapper for the earlier resource-selection comparator; no claim uses it
+core/03_lanes/persistence/resource_selection_thermal_bridge.py	03_lanes/persistence	.py	REVIEW	0	0	0	23	2	0	0	6	C	W2	Thermal proxy for the earlier resource-selection comparator; no claim uses it
+core/03_lanes/persistence/t002_model_systematics.py	03_lanes/persistence	.py	A	2	1	0	4	0	0	2	1	A	W2	Producer of a registered Test Card result
+core/03_lanes/persistence/t002_stellar_phase_fractions.py	03_lanes/persistence	.py	A	1	2	0	1	0	0	1	1	A	W2	Producer of a registered Test Card result
+core/03_lanes/persistence/t007_tilman_chemostat.py	03_lanes/persistence	.py	A	1	2	0	0	0	0	1	1	A	W2	Producer of a registered Test Card result
+core/03_lanes/persistence/t008_white_dwarf_lf.py	03_lanes/persistence	.py	A	1	2	0	1	0	0	1	1	A	W2	Producer of a registered Test Card result
+core/03_lanes/persistence/t009_u234_secular_equilibrium.py	03_lanes/persistence	.py	A	1	2	0	0	0	0	1	1	A	W2	Producer of a registered Test Card result
+core/03_lanes/persistence/t014_r_parameter_independent.py	03_lanes/persistence	.py	A	1	2	0	1	0	0	1	1	A	W2	Producer of a registered Test Card result
+core/03_lanes/persistence/t017_yeast_asymmetric.py	03_lanes/persistence	.py	A	1	2	0	0	0	0	1	2	A	W2	Producer of a registered Test Card result
+core/03_lanes/persistence/t018_lifespan_rate_of_living.py	03_lanes/persistence	.py	A	1	2	0	0	0	0	1	1	A	W2	Producer of a registered Test Card result
+core/03_lanes/persistence/t021_lighting_succession.py	03_lanes/persistence	.py	A	1	2	1	0	0	0	1	1	A	W2	Producer of a registered Test Card result
+core/03_lanes/persistence/uet_asymmetric_division.py	03_lanes/persistence	.py	A_DEP	2	0	1	2	0	0	2	1	A	W2	Model code of the new equations, used by producers or physics tests
+core/03_lanes/persistence/uet_growing_abundance.py	03_lanes/persistence	.py	A_DEP	1	0	1	1	0	0	1	1	A	W2	Model code of the new equations, used by producers or physics tests
+core/03_lanes/persistence/uet_layer2_to_3.py	03_lanes/persistence	.py	A_DEP	2	0	3	4	0	0	2	1	A	W2	Model code of the new equations, used by producers or physics tests
+core/03_lanes/persistence/uet_path_a_models.py	03_lanes/persistence	.py	A_DEP	3	0	1	4	0	0	3	1	A	W2	Model code of the new equations, used by producers or physics tests
+core/03_lanes/persistence/uet_persistence_selection.py	03_lanes/persistence	.py	A	2	1	4	5	0	1	2	2	A	W2	Model code of the new equations, used by producers or physics tests
+core/03_lanes/persistence/uet_resource_selection.py	03_lanes/persistence	.py	A_DEP	1	0	0	22	3	3	1	9	C	W2	Earlier normalized replicator comparator; layer 3 now lives in uet_persistence_selection.py and engine/layer23.py; topics still import it
+core/03_lanes/review/README.md	03_lanes/review	.md	REVIEW	0	0	0	6	0	0	0	1	C	W2	Guide for the legacy review lane
+core/03_lanes/review/__init__.py	03_lanes/review	.py	D	0	0	0	6	0	0	0	0	D	W2	Package marker
+core/03_lanes/review/uet_matter_space_observable.py	03_lanes/review	.py	A_DEP	0	0	0	17	2	0	0	5	C	W2	Measurement operator for the old matter_space lane; no claim uses it
+core/03_lanes/review/uet_observables.py	03_lanes/review	.py	A_DEP	0	0	0	18	1	3	0	3	C	W2	Legacy observable sketch (a0, H(z), MOND contrast) with no derivation from the action; no claim uses it
+core/03_lanes/scalar_tensor/__init__.py	03_lanes/scalar_tensor	.py	D	0	0	0	0	0	0	0	0	D	W2	Package marker
+core/03_lanes/scalar_tensor/t001_binary_pulsar_constraint.py	03_lanes/scalar_tensor	.py	A	1	2	1	1	0	0	1	0	A	W2	Producer of a registered Test Card result
+core/03_lanes/scalar_tensor/t005_fifth_force_constraint.py	03_lanes/scalar_tensor	.py	A	1	2	0	1	0	0	1	1	A	W2	Producer of a registered Test Card result
+core/03_lanes/scalar_tensor/t016_microscope_portal.py	03_lanes/scalar_tensor	.py	A	1	2	0	1	0	0	1	2	A	W2	Producer of a registered Test Card result
+core/03_lanes/scalar_tensor/t019_portal_gap_rotwash.py	03_lanes/scalar_tensor	.py	A	1	2	0	1	0	0	1	1	A	W2	Producer of a registered Test Card result
+core/03_lanes/scalar_tensor/t020_route_b_llr.py	03_lanes/scalar_tensor	.py	A	1	2	0	1	0	0	1	1	A	W2	Producer of a registered Test Card result
+core/03_lanes/scalar_tensor/uet_portal_composition.py	03_lanes/scalar_tensor	.py	A_DEP	2	0	1	1	0	0	2	1	A	W2	Model code of the new equations, used by producers or physics tests
+core/03_lanes/scalar_tensor/uet_portal_fifth_force.py	03_lanes/scalar_tensor	.py	A_DEP	2	0	1	4	0	0	2	1	A	W2	Model code of the new equations, used by producers or physics tests
+core/03_lanes/scalar_tensor/uet_vacuum_structure.py	03_lanes/scalar_tensor	.py	A_DEP	1	0	1	2	0	1	1	1	A	W2	Model code of the new equations, used by producers or physics tests
 core/03_lanes/thermal/README.md	03_lanes/thermal	.md	REVIEW	0	0	0	6	0	0	0	1	-	-	-
 core/03_lanes/thermal/__init__.py	03_lanes/thermal	.py	D	0	0	0	6	0	0	0	0	-	-	-
 core/03_lanes/thermal/he4_normal_viscosity_kubo.py	03_lanes/thermal	.py	REVIEW	0	0	0	17	2	0	0	4	-	-	-
@@ -2130,14 +2130,14 @@ core/UPDATE_LOG.md	UPDATE_LOG.md	.md	REVIEW	0	0	0	1	0	1	0	4	-	-	-
 core/__init__.py	__init__.py	.py	D	0	0	0	13	0	2	0	7	-	-	-
 core/core_compat.py	core_compat.py	.py	A_DEP	0	0	0	189	0	2	0	8	-	-	-
 core/core_paths.py	core_paths.py	.py	A_DEP	0	0	0	19	299	161	0	170	-	-	-
-core/engine/LANE_CARD_TEMPLATE.json	engine	.json	A_DEP	0	0	0	2	1	0	0	0	-	-	-
-core/engine/README.md	engine	.md	REVIEW	0	0	0	1	0	0	0	2	-	-	-
-core/engine/__init__.py	engine	.py	D	1	0	0	0	0	0	1	0	-	-	-
-core/engine/_load.py	engine	.py	A_DEP	1	0	1	5	7	0	1	7	-	-	-
-core/engine/lane_cards/stars_layer23.json	engine/lane_cards	.json	A_DEP	0	0	0	2	0	0	0	1	-	-	-
-core/engine/lane_cards/topic_0_19_gravity_gr.json	engine/lane_cards	.json	REVIEW	0	0	0	0	0	0	0	2	-	-	-
-core/engine/lane_cards/topic_0_22_biophysics.json	engine/lane_cards	.json	REVIEW	0	0	0	0	0	0	0	1	-	-	-
-core/engine/lanes.py	engine	.py	A	1	1	0	77	4	88	3	80	-	-	-
-core/engine/layer1.py	engine	.py	A_DEP	1	0	1	5	0	0	1	1	-	-	-
-core/engine/layer23.py	engine	.py	A_DEP	1	0	1	8	1	0	1	3	-	-	-
+core/engine/LANE_CARD_TEMPLATE.json	engine	.json	A_DEP	0	0	0	2	1	0	0	0	A	W2	Model code of the new equations, used by producers or physics tests
+core/engine/README.md	engine	.md	REVIEW	0	0	0	1	0	0	0	2	A	W2	Engine guide
+core/engine/__init__.py	engine	.py	D	1	0	0	0	0	0	1	0	D	W2	Package marker
+core/engine/_load.py	engine	.py	A_DEP	1	0	1	5	7	0	1	7	A	W2	Model code of the new equations, used by producers or physics tests
+core/engine/lane_cards/stars_layer23.json	engine/lane_cards	.json	A_DEP	0	0	0	2	0	0	0	1	A	W2	Model code of the new equations, used by producers or physics tests
+core/engine/lane_cards/topic_0_19_gravity_gr.json	engine/lane_cards	.json	REVIEW	0	0	0	0	0	0	0	2	A	W2	Engine lane card for topic 0.19; checked again in the topics plan
+core/engine/lane_cards/topic_0_22_biophysics.json	engine/lane_cards	.json	REVIEW	0	0	0	0	0	0	0	1	A	W2	Engine lane card for topic 0.22; checked again in the topics plan
+core/engine/lanes.py	engine	.py	A	1	1	0	77	4	88	3	80	A	W2	Model code of the new equations, used by producers or physics tests
+core/engine/layer1.py	engine	.py	A_DEP	1	0	1	5	0	0	1	1	A	W2	Model code of the new equations, used by producers or physics tests
+core/engine/layer23.py	engine	.py	A_DEP	1	0	1	8	1	0	1	3	A	W2	Model code of the new equations, used by producers or physics tests
 core/theory_card.json	theory_card.json	.json	A	0	20	0	2	0	1	0	9	-	-	-

@@ -483,3 +483,10 @@ commit: this commit
 - ตรวจ: physics test ที่ครอบไฟล์ป้าย A ผ่าน 85 ข้อ; ยังไม่ย้ายไฟล์ เพราะ regression test และ audit script ยังเรียกใช้
 - ระดับ: ไม่เปลี่ยน claim ใด
 - ถัดไป: W2 03_lanes ที่ใช้อยู่และ engine
+
+## 2026-11-18 — Core alignment W2: active lanes and engine
+- ทำ: ตัดสินป้าย 84 ไฟล์ใน 03_lanes (observation, open_system, scalar_tensor, persistence, carrier_observer, mass_density, review) และ core/engine
+- ผล: A 56 (โมเดลสมการใหม่และ producer ของ Test Card), C 19 (comparator รุ่นเก่า, สาย C→ความหนาแน่น, observable เก่า), D 9
+- ตรวจ: physics test ทั้งชุด 358 ผ่าน ข้าม 1; ไม่ย้ายไฟล์
+- ระดับ: ไม่เปลี่ยน claim ใด
+- ถัดไป: W3 02_equations/matter_space และตัดสิน C? สามไฟล์จาก W1

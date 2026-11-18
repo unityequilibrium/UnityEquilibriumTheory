@@ -6,10 +6,11 @@
 
 These are source-linked historical records, not proof of completed research, successful publication, or current scientific readiness.
 
-Indexed entries: 677. Counts describe records, not accomplishments.
+Indexed entries: 678. Counts describe records, not accomplishments.
 
 | Date | Record | Area | Notes |
 | --- | --- | --- | --- |
+| 2026-11-18 | [Core alignment W2: active lanes and engine](2026/2026-11-18.md#core-alignment-w2-active-lanes-and-engine) (L73) | research-core | explicit_stream_and_area |
 | 2026-11-18 | [Core alignment W1: covariant and lorentz_noether](2026/2026-11-18.md#core-alignment-w1-covariant-and-lorentz_noether) (L63) | research-core | explicit_stream_and_area |
 | 2026-11-18 | [Agent guide: no lead agent, one folder, verify other agents' claims](2026/2026-11-18.md#agent-guide-no-lead-agent-one-folder-verify-other-agents-claims) (L43) | research-standards | explicit_stream_and_area |
 | 2026-11-18 | [Stage 2 of test D: transport w_T design check](2026/2026-11-18.md#stage-2-of-test-d-transport-w_t-design-check) (L13) | research-core | explicit_stream_and_area |

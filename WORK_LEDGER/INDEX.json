@@ -5,11 +5,11 @@
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
     "sources": 81,
-    "entries": 906,
+    "entries": 907,
     "by_stream": {
       "book-history": 94,
       "operations": 134,
-      "research": 677,
+      "research": 678,
       "review": 1
     },
     "exact_duplicates": 0,
@@ -420,8 +420,8 @@
     },
     {
       "path": "2026/2026-11-18.md",
-      "sha256": "fea9184441c215302d7ea86c0e21fcd2666ab7a77abeda4c1452582a34dd1a0b",
-      "entries": 7
+      "sha256": "49dec359d0528dc73a445b149ca5100a1e3d3046ad22069e106c67d0e04cd071",
+      "entries": 8
     },
     {
       "path": "2026-08-14.md",
@@ -18501,9 +18501,29 @@
       "source": "2026/2026-11-18.md",
       "anchor": "core-alignment-w1-covariant-and-lorentz_noether",
       "start_line": 63,
-      "end_line": 71,
+      "end_line": 72,
       "title": "Core alignment W1: covariant and lorentz_noether",
-      "entry_sha256": "2ea233ac99a0e2dfeab24b922208a889ebda638a3f8ce6277f302dca8bb73ae8",
+      "entry_sha256": "e384795ebbaf8cb5c08b9d985e8f4f3c8715221988405e92d530bfb347f59af6",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-18",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-18.md#core-alignment-w2-active-lanes-and-engine",
+      "source": "2026/2026-11-18.md",
+      "anchor": "core-alignment-w2-active-lanes-and-engine",
+      "start_line": 73,
+      "end_line": 81,
+      "title": "Core alignment W2: active lanes and engine",
+      "entry_sha256": "d6cef0142ead5e01944e8c9a894113e13f2d0cb8d3e1e0546bbe753c805a50ff",
       "stream": "research",
       "areas": [
         "research-core"

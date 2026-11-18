@@ -53,7 +53,7 @@
 | รอบ | โฟลเดอร์ | สถานะ |
 |---|---|---|
 | W1 | `02_equations/covariant`, `lorentz_noether` | เสร็จ 2026-11-18 (ดูด้านล่าง) |
-| W2 | `03_lanes` ที่ใช้อยู่, `engine` | ยังไม่เริ่ม |
+| W2 | `03_lanes` ที่ใช้อยู่, `engine` | เสร็จ 2026-11-18 (ดูด้านล่าง) |
 | W3 | `02_equations/matter_space` | ยังไม่เริ่ม |
 | W4 | `02_equations/o2` | ยังไม่เริ่ม |
 | W5 | `03_lanes/thermal`, `topic13_support` | ยังไม่เริ่ม |
@@ -80,3 +80,16 @@
   แต่ `uet_covariant_matter.py` ถูกล็อก hash โดย contract 5 ฉบับ และ `uet_covariant_response.py` 2 ฉบับ
   แก้บรรทัด import จะทำให้ contract STALE จึงต้องรอรอบที่ผู้เขียนอนุมัติแยก
 - ไฟล์ป้าย C ทุกตัวยังถูก regression test, `core/__init__.py` หรือ audit script เรียกใช้ จึงยังไม่ย้ายในรอบนี้ ติดป้ายไว้ก่อน แล้วย้ายพร้อม test ใน W7
+
+### W2: `03_lanes` ที่ใช้อยู่ และ `engine` (84 ไฟล์)
+
+| ป้าย | กลุ่ม | เหตุผล |
+|---|---|---|
+| A (56) | `observation`, `open_system`, `scalar_tensor`, `persistence` (โมเดลชั้น 3 และ producer ของ T001–T021), `engine` ทั้งหมดรวม lane card | เป็นโมเดลของสมการใหม่ หรือสคริปต์ที่สร้างผลใน `docs/standard/results/` |
+| C (19) | `carrier_observer` (comparator ฟิสิกส์มาตรฐานของ foundation lane เก่า), `mass_density` (แปลง C แบบ normalized เป็นความหนาแน่น), `review` (observable เก่าที่ไม่ได้ derive จาก action), และ 4 ไฟล์ใน `persistence` ที่เป็น comparator รุ่นก่อน `uet_persistence_selection.py` | ไม่มี claim ใดใช้ สมการใหม่ไม่ใช้ตัวแปร C |
+| D (9) | `__init__.py` | |
+
+สิ่งที่พบเพิ่ม:
+- physics test ทั้งชุดผ่าน 358 ข้อ ข้าม 1 ข้อ
+- `persistence/uet_resource_selection.py` ป้าย C แต่ topic ยัง import อยู่ 3 ที่ ต้องแก้ topic ก่อนย้าย
+- lane card ของ topic 0.19 และ 0.22 ใน `engine/lane_cards` จะตรวจซ้ำในแผน topics
