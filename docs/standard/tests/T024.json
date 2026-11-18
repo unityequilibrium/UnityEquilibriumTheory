@@ -1,0 +1,45 @@
+{
+  "schema": "uet-test-card-v2",
+  "test_id": "T024",
+  "status": "DRAFT",
+  "claim_id": "C_T024_INNOVATION_INTERVAL",
+  "theory_card": {
+    "card_id": "UET_PARENT",
+    "version": 1
+  },
+  "hypothesis": "UET is a synthesis theory and must choose which standard principle to borrow for how fast a larger system innovates. Bettencourt et al. (2007, PNAS 104, 7301; SFI): innovation output scales as N^beta with beta = 1.27 (new patents), so growth reaches a finite-time singularity that a new innovation resets, giving intervals Delta t ~ N^-(beta-1) (slope -0.27). Kremer (1993, QJE 108, 681): invention rate proportional to population, Delta t ~ N^-1 (slope -1). The card asks which slope the history of lighting technologies supports. It is not a UET-distinct prediction; it decides which borrowed principle the synthesis should use.",
+  "observable": {
+    "quantity": "slope b of log10 Delta t on log10 N (Delta t: years between successive lighting introductions; N: world population at the start of each interval)",
+    "unit": "dimensionless",
+    "domain": "11 introductions from Nordhaus (1997) Table 1.1, 3000 BC to the 1980s; 10 intervals"
+  },
+  "test_kind": "CONSTRAINT",
+  "data_sources": [
+    {
+      "data_id": "NORDHAUS1997_LIGHTING_MILESTONES",
+      "role": "COMPARISON",
+      "exposure": "SEEN_SUMMARY"
+    },
+    {
+      "data_id": "OWID_POPULATION_WORLD_2026",
+      "role": "COMPARISON",
+      "exposure": "SEEN_SUMMARY"
+    }
+  ],
+  "prediction_method": {
+    "script": "core/03_lanes/persistence/t024_innovation_interval.py",
+    "description": "Ordinary least squares of log10 Delta t on log10 N with a Student t 95 percent interval (n - 2 dof); population interpolated log-linearly between listed years."
+  },
+  "free_parameters": [],
+  "fixed_parameters": [
+    "primary list of 11 introductions and the reasons for each excluded row, fixed in the script before the run",
+    "decade labels coded as decade + 5",
+    "world population, not the population of the inventing country (AI choice)",
+    "lighting as a proxy for innovation in general (AI choice)",
+    "beta = 1.27 from Bettencourt et al. 2007 (new patents); Kremer slope -1"
+  ],
+  "pass_criterion": "PASS (for beta = 1.27) if the 95 percent interval of b contains -0.27 and does not contain -1.",
+  "fail_criterion": "FAILED (for beta = 1.27) if the 95 percent interval of b does not contain -0.27; INCONCLUSIVE otherwise.",
+  "drafted_by": "claude",
+  "note": "Disclosure: not blind. The AI read both tables while transcribing and registering them and knows from memory roughly when these technologies arrived and how world population grew (intervals shrink from about a thousand years to a few decades while population grows about a hundredfold), so it expects a slope much steeper than -0.27; this expectation favours FAILED for beta = 1.27. No slope was computed before drafting. Bettencourt et al. model cities, not the world; a FAILED result applies to this card's scope (world population, lighting), not to urban scaling as such. The family-first variant is reported only. Proposal with the reasoning: topics/0.25_Strategy_Power_Economics/Doc/PROPOSAL_T024_INNOVATION_INTERVAL_2026-11-18.md."
+}
