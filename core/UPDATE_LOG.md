@@ -581,3 +581,9 @@ commit: this commit
 - ทำ: ตามที่เจ้าของตัดสิน ย้าย test ป้าย C ที่ยังล้ม 56 ไฟล์เข้าคลัง (core 12 ไฟล์ไป core/08_history/archived_tests, Topic 0.13 44 ไฟล์ไป topics/0.13_Thermodynamic_Bridge/Archive/tests) โดยเติม archived_ หน้าชื่อและไม่แก้เนื้อหา
 - ผล: test ของ core ผ่านทั้งหมด (เดิมล้ม 16 ไฟล์), Topic 0.13 562 ผ่าน 0 ล้ม, completeness audit 0 error, audit tests 80 ผ่าน, runner tests 69 ผ่าน
 - หมายเหตุ: ไฟล์ Topic 0.13 ที่เก็บมี test ผ่านอยู่ 791 ข้อซึ่งถูกเก็บไปด้วย
+
+## 2026-11-18 — Core alignment W9: governance, data and history
+- ทำ: ติดป้าย 564 ไฟล์ใน 00_governance, 06_data และ 08_history
+- ผล: A 47 (contract 44 ฉบับของ Test Card และ formal check ปัจจุบัน), C 362 (สำเนา shim, บันทึก migration, log เก่า, source package เก่า), D 155 (redirect stub และ alias registry ที่ import ยังต้องใช้)
+- ระดับ: ไม่เปลี่ยน claim ใด; ไม่ย้ายไฟล์ (contract ต้องอยู่ที่เดิมเพราะ CI audit อ่าน)
+- ถัดไป: W10 เอกสารหน้า core และเพิ่มไฟล์ใหม่ที่ inventory ไม่ได้นับ

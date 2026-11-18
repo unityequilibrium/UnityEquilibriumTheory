@@ -6,10 +6,11 @@
 
 These are source-linked historical records, not proof of completed research, successful publication, or current scientific readiness.
 
-Indexed entries: 694. Counts describe records, not accomplishments.
+Indexed entries: 695. Counts describe records, not accomplishments.
 
 | Date | Record | Area | Notes |
 | --- | --- | --- | --- |
+| 2026-11-18 | [Core alignment W9: governance, data and history](2026/2026-11-18.md#core-alignment-w9-governance-data-and-history) (L244) | research-core | explicit_stream_and_area |
 | 2026-11-18 | [Core alignment W8: artifacts labelled, failing legacy tests archived](2026/2026-11-18.md#core-alignment-w8-artifacts-labelled-failing-legacy-tests-archived) (L234) | research-core | explicit_stream_and_area |
 | 2026-11-18 | [W7 repair: stale hashes after the root move](2026/2026-11-18.md#w7-repair-stale-hashes-after-the-root-move) (L223) | research-core | explicit_stream_and_area |
 | 2026-11-18 | [Core alignment W7: test labels and the CI cause](2026/2026-11-18.md#core-alignment-w7-test-labels-and-the-ci-cause) (L213) | research-core | explicit_stream_and_area |

@@ -60,7 +60,7 @@
 | W6 | `01_contracts`, `04_proofs`, `99_review` | เสร็จ 2026-11-18 (ดูด้านล่าง) |
 | W7 | `05_tests` | เสร็จ 2026-11-18; ซ่อม hash แล้ว (ดูด้านล่าง) |
 | W8 | `07_artifacts` และเก็บ test ที่พัง | เสร็จ 2026-11-18 (ดูด้านล่าง) |
-| W9 | `00_governance`, `06_data`, `08_history` | ยังไม่เริ่ม |
+| W9 | `00_governance`, `06_data`, `08_history` | เสร็จ 2026-11-18 (ดูด้านล่าง) |
 | W10 | เอกสารหน้า core | ยังไม่เริ่ม |
 
 ป้ายสุดท้ายอยู่ในคอลัมน์ `decision` ของ TSV: `A` ใช้ต่อ, `B` พัฒนาต่อ, `C` เก็บ, `C?` น่าจะเก็บแต่รอรอบอื่น, `D` โครงสร้าง
@@ -179,3 +179,15 @@ completeness audit จึงเหลือ 0 error (เดิม 43) ส่ว�
 - ชื่อไฟล์ขึ้นต้นด้วย `archived_` เพื่อไม่ให้ pytest และขั้นตรวจ test ที่เปลี่ยนใน CI เก็บไปรัน
 - สาเหตุที่ล้มเขียนไว้ใน README ของแต่ละคลัง: สคริปต์ยัง import `docs.core` หรือคาดหวัง path และ hash จากก่อนย้ายโฟลเดอร์, ต้องใช้ข้อมูล raw ส่วนตัว, หรือขัดกับ pin ของ BaTiO3
 - ไฟล์ Topic 0.13 ทั้ง 44 ไฟล์มี test รวม 844 ข้อ ล้มอยู่ 53 ข้อ ข้อที่ผ่านอีก 791 ข้อจึงถูกเก็บไปด้วย เพราะเก็บทั้งไฟล์โดยไม่แก้เนื้อหา
+
+### W9: `00_governance`, `06_data`, `08_history` (564 ไฟล์)
+
+| ป้าย | จำนวน | อะไรบ้าง |
+|---|---|---|
+| A | 47 | calculation contract 44 ฉบับของ Test Card ปัจจุบัน (T001–T021) และ formal check ของ action แม่, ชั้น 2, ชั้น 3 และ engine, README ของ `06_data`, `08_history` และไฟล์อธิบาย source package |
+| C | 362 | สำเนา shim ของ import รุ่นเก่า 273 ไฟล์ (ตัวที่ใช้จริงคือ alias registry), บันทึก migration และ audit path เก่า, update log และ research note เก่า, source package ของ lane เก่า, contract ของ `matter_space_observer` |
+| D | 155 | redirect stub ของ path `docs/core` เก่า 153 ไฟล์, alias registry ที่ `core_compat.py` โหลดเพื่อให้ `docs.core` import ได้ และ package marker ของ test |
+
+- **contract ทุกฉบับคงไว้ที่เดิม** เพราะ completeness audit ของ CI อ่านทั้งหมด
+- **ไฟล์ที่สร้างหลังทำ inventory ไม่มีในทะเบียน:** contract ของ T022, T023, O8 และ l3_lv_map รวมทั้งโค้ดและ test ของมัน จะเพิ่มใน W10
+- **ข้อมูลภายนอกปัจจุบันอยู่ที่ `docs/data/external`** และล็อก hash ใน data manifest ส่วน `06_data` เป็นของ lane เก่า
