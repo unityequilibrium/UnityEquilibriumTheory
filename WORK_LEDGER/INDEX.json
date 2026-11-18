@@ -5,11 +5,11 @@
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
     "sources": 82,
-    "entries": 933,
+    "entries": 934,
     "by_stream": {
       "book-history": 94,
       "operations": 136,
-      "research": 702,
+      "research": 703,
       "review": 1
     },
     "exact_duplicates": 0,
@@ -425,8 +425,8 @@
     },
     {
       "path": "2026/2026-11-19.md",
-      "sha256": "b9db83bce41eb9b3882eb78362501b1578550bb787cc2a5c0e7c6942d64de34e",
-      "entries": 1
+      "sha256": "f89bc20e51593ce00d8a64b2becaa9de0f0db55da014083f8c558d41a6c89291",
+      "entries": 2
     },
     {
       "path": "2026-08-14.md",
@@ -19046,15 +19046,35 @@
       "source": "2026/2026-11-19.md",
       "anchor": "pr-62-brought-up-to-date-and-pr-65-completeness-fix",
       "start_line": 3,
-      "end_line": 11,
+      "end_line": 12,
       "title": "PR #62 brought up to date and PR #65 completeness fix",
-      "entry_sha256": "8dd59d042526924f0cb864fcdadda4dc0141cb56f2b5c4259e20ff280319e3e7",
+      "entry_sha256": "32233a6e79f9f0f3086724e146aed3b6587fab65ca7ff2ddea97d452de503dc6",
       "stream": "operations",
       "areas": [
         "repo-ops"
       ],
       "related_streams": [
         "operations"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-19",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-19.md#layer-3-capture-and-death-rates-from-the-action",
+      "source": "2026/2026-11-19.md",
+      "anchor": "layer-3-capture-and-death-rates-from-the-action",
+      "start_line": 13,
+      "end_line": 21,
+      "title": "Layer 3 capture and death rates from the action",
+      "entry_sha256": "34a312125912d6beffb0ccb2fe9519da54cd42c7c075fd563f2f71ffbddf13a8",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
       ],
       "basis": "explicit_stream_and_area",
       "flags": [],

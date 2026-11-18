@@ -426,6 +426,15 @@
       "note": "Layer 2 second law and burn chain for the portal channel follow from the action. Nearest known theory: Kubo linear response, detailed balance, Landauer. Not UET-distinct."
     },
     {
+      "claim_id": "C_L3_FROM_ACTION",
+      "statement": "With the one-loop spectral function of the parent action, a phi mode in a chi medium grows at a_i R - 1/tau_i, where the death rate 1/tau_i is the layer 2 damping rate rho_sink/(2w) and the capture a_i = -rho_stream/(2w) is exact and linear in the stream strength R; isotropic pools of any distribution only damp phi, a chi stream moving at v feeds exactly the modes with w < v q, and with these rates layer 3 selection keeps only the lowest R* = 1/(a_i tau_i).",
+      "level": "L1_CONSISTENT",
+      "evidence": [
+        "R_L3_FROM_ACTION"
+      ],
+      "note": "Layer 3 capture and death rates follow from the action for the portal channel; supply, loss and the set of modes do not. Nearest known theory: laser rate equations and mode competition, beam-plasma Cherenkov instability, consumer-resource ecology. Not UET-distinct."
+    },
+    {
       "claim_id": "C_T024_INNOVATION_INTERVAL",
       "statement": "Intervals between successive lighting introductions (Nordhaus 1997, Table 1.1) shrink with world population as Delta t ~ N^-(beta-1) with beta = 1.27 (Bettencourt et al. 2007), not as N^-1 (Kremer 1993).",
       "level": "FAILED",

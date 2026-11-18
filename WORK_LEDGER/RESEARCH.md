@@ -6,10 +6,11 @@
 
 These are source-linked historical records, not proof of completed research, successful publication, or current scientific readiness.
 
-Indexed entries: 702. Counts describe records, not accomplishments.
+Indexed entries: 703. Counts describe records, not accomplishments.
 
 | Date | Record | Area | Notes |
 | --- | --- | --- | --- |
+| 2026-11-19 | [Layer 3 capture and death rates from the action](2026/2026-11-19.md#layer-3-capture-and-death-rates-from-the-action) (L13) | research-core | explicit_stream_and_area |
 | 2026-11-18 | [T024 result recorded (FAILED)](2026/2026-11-18.md#t024-result-recorded-failed) (L325) | research-core | explicit_stream_and_area |
 | 2026-11-18 | [T024 run: innovation intervals (FAILED for beta = 1.27)](2026/2026-11-18.md#t024-run-innovation-intervals-failed-for-beta--127) (L315) | research-core | explicit_stream_and_area |
 | 2026-11-18 | [Stage 3 wave L2-2: layer 2 second law from the action](2026/2026-11-18.md#stage-3-wave-l2-2-layer-2-second-law-from-the-action) (L305) | research-core | explicit_stream_and_area |
