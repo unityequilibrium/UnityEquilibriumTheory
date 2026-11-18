@@ -4,6 +4,8 @@
    parameters alpha = -1/2, beta = 1/2, delta = 0 (wave O8, uet_rms_light_speed.py), so both
    combinations vanish: P_MM = 0 (no orientation dependence of the two-way speed of light) and
    P_KT = 0 (no dependence on the laboratory velocity). The model value is computed, not typed in.
+   Amendment 1 (2026-11-18): the model value is computed in 60-digit arithmetic (DPS in
+   uet_rms_light_speed.py); the first run used 64-bit floats and its rounding (-1.3e-10) failed the rule.
 2. Data: P_MM from Herrmann et al. 2009 and P_KT (weighted mean) from Tobar et al. 2010, registered as
    RMS_MM_KT_2009_2010. z = |P_measured - P_model| / sigma for each.
 3. PASS if both z <= 2. FAILED if either z > 3. Otherwise INCONCLUSIVE.
@@ -54,7 +56,7 @@ def verified_values() -> dict[str, tuple[float, float]]:
 
 def compute() -> dict:
     v = verified_values()
-    model = rms.rms_combinations(rms.lorentz_from_boost, v=1e-3)
+    model = rms.rms_combinations(rms.lorentz_from_boost)
     out: dict = {"model_P_MM": model["P_MM"], "model_P_KT": model["P_KT"]}
     zs = []
     for key in ("P_MM", "P_KT"):
@@ -66,7 +68,7 @@ def compute() -> dict:
         zs.append(z)
     out["outcome"] = "PASS" if max(zs) <= 2 else ("FAILED" if max(zs) > 3 else "INCONCLUSIVE")
     for name, kin in (("galilean", rms.galilean), ("contraction_only", rms.contraction_only)):
-        c = rms.rms_combinations(kin, v=1e-3)
+        c = rms.rms_combinations(kin)
         out[f"diagnostic_{name}_z_MM"] = abs(v["P_MM"][0] - c["P_MM"]) / v["P_MM"][1]
         out[f"diagnostic_{name}_z_KT"] = abs(v["P_KT"][0] - c["P_KT"]) / v["P_KT"][1]
     return out

@@ -32,68 +32,82 @@ but P_KT = 1/2, so it passes Michelson-Morley and fails Kennedy-Thorndike.
 
 from __future__ import annotations
 
-from math import cos, sin, sqrt
 from typing import Callable
 
-import numpy as np
+import mpmath as mp
 
-Kinematics = Callable[[float], tuple[float, float, float]]
+Kinematics = Callable[[object], tuple[object, object, object]]
+
+# All arithmetic runs in mpmath at this precision. The combinations are differences of order v^2 from 1;
+# in 64-bit floats the rounding of c_S (about 1e-16) divided by v^2 swamped the 1e-12 precision of the
+# Michelson-Morley data (T022 first run, 2026-11-18). 60 digits keep the model error far below the data.
+DPS = 60
 
 
-def _one_way_time(lx: float, ly: float, v: float, sign: int) -> float:
+def _one_way_time(lx, ly, v, sign: int):
     """Sigma time for light to cross a rod vector (lx, ly) whose far end moves at v along x.
 
     Outbound (sign = +1): |(lx + v t, ly)| = t.  Return (sign = -1): |(lx - v t, ly)| = t.
     Solved exactly: (1 - v^2) t^2 - 2 sign v lx t - (lx^2 + ly^2) = 0, positive root.
     """
-    a = 1.0 - v * v
-    b = -2.0 * sign * v * lx
+    a = 1 - v * v
+    b = -2 * sign * v * lx
     c = -(lx * lx + ly * ly)
-    return (-b + sqrt(b * b - 4.0 * a * c)) / (2.0 * a)
+    return (-b + mp.sqrt(b * b - 4 * a * c)) / (2 * a)
 
 
-def two_way_light_speed(v: float, theta: float, kinematics: Kinematics, length: float = 1.0) -> float:
+def two_way_light_speed(v, theta, kinematics: Kinematics, length=1):
     """Two-way speed of light in the laboratory for a rod of proper length `length` at angle theta."""
-    a, b, d = kinematics(v)
-    lx = length * cos(theta) / b
-    ly = length * sin(theta) / d
-    t_sigma = _one_way_time(lx, ly, v, +1) + _one_way_time(lx, ly, v, -1)
-    t_lab = a * t_sigma
-    return 2.0 * length / t_lab
+    with mp.workdps(DPS):
+        v, theta, length = mp.mpf(v), mp.mpf(theta), mp.mpf(length)
+        a, b, d = kinematics(v)
+        lx = length * mp.cos(theta) / b
+        ly = length * mp.sin(theta) / d
+        t_sigma = _one_way_time(lx, ly, v, +1) + _one_way_time(lx, ly, v, -1)
+        return 2 * length / (a * t_sigma)
 
 
-def lorentz_from_boost(v: float) -> tuple[float, float, float]:
-    """a, b, d read off the boost matrix of the parent action's local frame (uet_lorentz_time.boost_matrix).
+def boost_matrix(v):
+    """Boost of the parent action's local frame, the same matrix as uet_lorentz_time.boost_matrix (c = 1)."""
+    g = 1 / mp.sqrt(1 - v * v)
+    return mp.matrix([[g, -g * v], [-g * v, g]])
 
-    Clock at rest in S at x' = 0, i.e. x = v t:  t' = gamma (t - v x) = t / gamma, so a = 1/gamma.
-    Rod at rest in S: x' = gamma (x - v t), so a Sigma length dx at fixed t is gamma dx in S: b = gamma.
-    A boost along x does not act on y: d = 1.
+
+def lorentz_from_boost(v):
+    """a, b, d read off the boost matrix.
+
+    Clock at rest in S, worldline (t, x) = (1, v) per unit Sigma time: its S time is the first row of the
+    boost applied to (1, v), which is 1/gamma. Rod at rest in S: a Sigma separation (0, dx) at fixed Sigma
+    time has S length boost[1, 1] dx = gamma dx. A boost along x does not act on y: d = 1.
     """
-    g = 1.0 / sqrt(1.0 - v * v)
-    boost = np.array([[g, -g * v], [-g * v, g]])
-    # Clock worldline (t, x) = (1, v): its S time per unit Sigma time is the first row of the boost.
-    a = float(boost[0] @ np.array([1.0, v]))
-    # Rod: Sigma separation (0, dx) at fixed Sigma time has S length boost[1, 1] * dx.
-    b = float(boost[1] @ np.array([0.0, 1.0]))
-    return a, b, 1.0
+    m = boost_matrix(v)
+    a = m[0, 0] * 1 + m[0, 1] * v
+    b = m[1, 0] * 0 + m[1, 1] * 1
+    return a, b, mp.mpf(1)
 
 
-def galilean(v: float) -> tuple[float, float, float]:
+def galilean(v):
     """Absolute time and rigid rods."""
-    return 1.0, 1.0, 1.0
+    return mp.mpf(1), mp.mpf(1), mp.mpf(1)
 
 
-def contraction_only(v: float) -> tuple[float, float, float]:
+def contraction_only(v):
     """Lorentz-FitzGerald contraction without time dilation."""
-    return 1.0, 1.0 / sqrt(1.0 - v * v), 1.0
+    return mp.mpf(1), 1 / mp.sqrt(1 - v * v), mp.mpf(1)
 
 
-def rms_combinations(kinematics: Kinematics, v: float = 1e-3) -> dict[str, float]:
-    """Fit 1 - c_S(theta) = v^2 [P_MM sin^2 theta + P_KT] at small v from the exact light-travel times."""
-    thetas = np.linspace(0.0, np.pi, 13)
-    y = np.array([1.0 - two_way_light_speed(v, th, kinematics) for th in thetas]) / (v * v)
-    design = np.column_stack([np.sin(thetas) ** 2, np.ones_like(thetas)])
-    (p_mm, p_kt), *_ = np.linalg.lstsq(design, y, rcond=None)
-    a, b, d = kinematics(v)
-    return {"P_MM": float(p_mm), "P_KT": float(p_kt),
-            "alpha": (a - 1.0) / v**2, "beta": (b - 1.0) / v**2, "delta": (d - 1.0) / v**2}
+def rms_combinations(kinematics: Kinematics, v="1e-6") -> dict[str, float]:
+    """1 - c_S(theta) = v^2 [P_MM sin^2 theta + P_KT] at small v, from the exact light-travel times.
+
+    P_KT from theta = 0, P_MM + P_KT from theta = pi/2; theta = pi/4 is reported as a check of the
+    sin^2 form (residual_quarter). Higher orders enter at relative size v^2.
+    """
+    with mp.workdps(DPS):
+        v = mp.mpf(v)
+        y = {th: (1 - two_way_light_speed(v, th, kinematics)) / (v * v) for th in (0, mp.pi / 4, mp.pi / 2)}
+        p_kt = y[0]
+        p_mm = y[mp.pi / 2] - p_kt
+        resid = y[mp.pi / 4] - (p_mm / 2 + p_kt)
+        a, b, d = kinematics(v)
+        return {"P_MM": float(p_mm), "P_KT": float(p_kt), "residual_quarter": float(resid),
+                "alpha": float((a - 1) / v**2), "beta": float((b - 1) / v**2), "delta": float((d - 1) / v**2)}
