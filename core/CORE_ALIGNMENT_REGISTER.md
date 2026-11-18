@@ -52,7 +52,7 @@
 
 | รอบ | โฟลเดอร์ | สถานะ |
 |---|---|---|
-| W1 | `02_equations/covariant`, `lorentz_noether` | ยังไม่เริ่ม |
+| W1 | `02_equations/covariant`, `lorentz_noether` | เสร็จ 2026-11-18 (ดูด้านล่าง) |
 | W2 | `03_lanes` ที่ใช้อยู่, `engine` | ยังไม่เริ่ม |
 | W3 | `02_equations/matter_space` | ยังไม่เริ่ม |
 | W4 | `02_equations/o2` | ยังไม่เริ่ม |
@@ -62,3 +62,21 @@
 | W8 | `07_artifacts` | ยังไม่เริ่ม |
 | W9 | `00_governance`, `06_data`, `08_history` | ยังไม่เริ่ม |
 | W10 | เอกสารหน้า core | ยังไม่เริ่ม |
+
+ป้ายสุดท้ายอยู่ในคอลัมน์ `decision` ของ TSV: `A` ใช้ต่อ, `B` พัฒนาต่อ, `C` เก็บ, `C?` น่าจะเก็บแต่รอรอบอื่น, `D` โครงสร้าง
+
+### W1: `02_equations/covariant` และ `lorentz_noether` (24 ไฟล์)
+
+| ป้าย | ไฟล์ | เหตุผล |
+|---|---|---|
+| A (6) | `uet_covariant_response.py`, `uet_covariant_matter.py`, `uet_covariant_balance.py`, `uet_covariant_parent.py`, `uet_scalar_tensor_mapping.py`, `covariant/README.md` | คือ action แม่, บัญชีแลกเปลี่ยน และการแปลงเป็น DEF; physics test 85 ข้อที่ครอบไฟล์เหล่านี้ผ่าน |
+| B (1) | `uet_covariant_nonclosed.py` | kernel แบบ retarded อาจใช้เป็น memory kernel ของชั้น 2 ถ้าต้องการ ยังไม่ได้ derive จาก action |
+| C (12) | `uet_covariant_open_system.py`, `uet_covariant_superfluid_transport.py`, `uet_covariant_theory_spine.py`, `uet_curved_3p1_*.py` (6 ไฟล์), `uet_lorentz.py`, `uet_noether.py`, `lorentz_noether/README.md` | ไม่มี claim ไหนใช้: ระบบเปิดเชิงเส้นที่ตัวตรวจเป็นศูนย์โดยนิยาม, สายฮีเลียมที่ T015 ตก, เครื่องมือ GR เชิงตัวเลขมาตรฐาน, และ diagnostics ลอเรนซ์/Noether ของชุดสมการเก่าซึ่ง `03_lanes/observation/uet_lorentz_time.py` แทนแล้ว |
+| C? (3) | `uet_covariant_diffusion.py`, `uet_covariant_reduction.py`, `uet_noether_phase_field_map.py` | เป็นสะพานไปหา prototype C, Φ, Π ของ `matter_space` ตัดสินพร้อม W3 |
+| D (2) | `__init__.py` ทั้งสองโฟลเดอร์ | |
+
+สิ่งที่พบเพิ่ม:
+- ไฟล์ป้าย A ยัง import ผ่านชื่อเก่า `docs.core.*` ซึ่งยังทำงานได้ผ่าน `docs/core/__init__.py`
+  แต่ `uet_covariant_matter.py` ถูกล็อก hash โดย contract 5 ฉบับ และ `uet_covariant_response.py` 2 ฉบับ
+  แก้บรรทัด import จะทำให้ contract STALE จึงต้องรอรอบที่ผู้เขียนอนุมัติแยก
+- ไฟล์ป้าย C ทุกตัวยังถูก regression test, `core/__init__.py` หรือ audit script เรียกใช้ จึงยังไม่ย้ายในรอบนี้ ติดป้ายไว้ก่อน แล้วย้ายพร้อม test ใน W7

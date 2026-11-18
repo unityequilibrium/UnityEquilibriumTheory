@@ -5,11 +5,11 @@
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
     "sources": 81,
-    "entries": 905,
+    "entries": 906,
     "by_stream": {
       "book-history": 94,
       "operations": 134,
-      "research": 676,
+      "research": 677,
       "review": 1
     },
     "exact_duplicates": 0,
@@ -420,8 +420,8 @@
     },
     {
       "path": "2026/2026-11-18.md",
-      "sha256": "5fc11c7218e93a56c14b8f176815d64fee649c037311970a8af9fc5475305c79",
-      "entries": 6
+      "sha256": "fea9184441c215302d7ea86c0e21fcd2666ab7a77abeda4c1452582a34dd1a0b",
+      "entries": 7
     },
     {
       "path": "2026-08-14.md",
@@ -18479,9 +18479,9 @@
       "source": "2026/2026-11-18.md",
       "anchor": "core-alignment-step-1-inventory-of-every-core-file",
       "start_line": 53,
-      "end_line": 61,
+      "end_line": 62,
       "title": "Core alignment step 1: inventory of every core file",
-      "entry_sha256": "2f3cb63f2e92c1c1b7c02db067951008ae638878a9fcaa9de97aacf371f7bf4d",
+      "entry_sha256": "ec168235a5d14b4f1e3f0b99e8a1dc1b62c7294f87c3b944278c3c6cea9c7b3a",
       "stream": "operations",
       "areas": [
         "repo-ops",
@@ -18489,6 +18489,26 @@
       ],
       "related_streams": [
         "operations",
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-18",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-18.md#core-alignment-w1-covariant-and-lorentz_noether",
+      "source": "2026/2026-11-18.md",
+      "anchor": "core-alignment-w1-covariant-and-lorentz_noether",
+      "start_line": 63,
+      "end_line": 71,
+      "title": "Core alignment W1: covariant and lorentz_noether",
+      "entry_sha256": "2ea233ac99a0e2dfeab24b922208a889ebda638a3f8ce6277f302dca8bb73ae8",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
         "research"
       ],
       "basis": "explicit_stream_and_area",

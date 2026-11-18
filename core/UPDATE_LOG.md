@@ -476,3 +476,10 @@ commit: this commit
 - ร่าง T019 (Eöt-Wash Rot-Wash, 1 ซม. ถึง 1e5 ม.) รอผู้เขียนอนุมัติ ยังไม่ได้รัน
 - T002/T014: ยังไม่มีข้อมูลนับดาวชุดใหม่ที่อิสระจริง จึงไม่ร่างการ์ด
 - เส้นทาง ข (AI proposal, L0): ถ้าการเผาพลังงานเป็น source ของ ψ จะได้ค่าคงที่ร่วม τ_β (หน่วยเวลา) LLR จำกัดไว้ราว ≲ 9e15 s
+
+## 2026-11-18 — Core alignment W1: covariant and lorentz_noether
+- ทำ: อ่านโค้ด 22 ไฟล์ใน 02_equations/covariant และ lorentz_noether แล้วตัดสินป้ายรายไฟล์ใน core/CORE_ALIGNMENT_REGISTER.tsv
+- ผล: A 6 (action แม่, บัญชีแลกเปลี่ยน, DEF), B 1, C 12 (3+1 GR numerics, สายฮีเลียมที่ T015 ตก, diagnostics เก่า), C? 3 รอ W3, D 2
+- ตรวจ: physics test ที่ครอบไฟล์ป้าย A ผ่าน 85 ข้อ; ยังไม่ย้ายไฟล์ เพราะ regression test และ audit script ยังเรียกใช้
+- ระดับ: ไม่เปลี่ยน claim ใด
+- ถัดไป: W2 03_lanes ที่ใช้อยู่และ engine
