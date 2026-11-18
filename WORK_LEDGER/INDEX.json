@@ -5,11 +5,11 @@
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
     "sources": 81,
-    "entries": 904,
+    "entries": 927,
     "by_stream": {
       "book-history": 94,
-      "operations": 133,
-      "research": 676,
+      "operations": 134,
+      "research": 698,
       "review": 1
     },
     "exact_duplicates": 0,
@@ -420,8 +420,8 @@
     },
     {
       "path": "2026/2026-11-18.md",
-      "sha256": "ca71488595c427decb2e1a4a83907005af0877ae20c310c6c2d069794a8aa260",
-      "entries": 5
+      "sha256": "fc29031919fedc7b0a945d276a71b4e14264d612c8972044aa38a057648bccb3",
+      "entries": 28
     },
     {
       "path": "2026-08-14.md",
@@ -18459,12 +18459,474 @@
       "source": "2026/2026-11-18.md",
       "anchor": "agent-guide-no-lead-agent-one-folder-verify-other-agents-claims",
       "start_line": 43,
-      "end_line": 51,
+      "end_line": 52,
       "title": "Agent guide: no lead agent, one folder, verify other agents' claims",
-      "entry_sha256": "f298ac94d32274bb997a791a87f3f4a50885a135478b3d6d818ba0941824776b",
+      "entry_sha256": "179304b72c396fece8e7321e4d664a6deccaf0549a55043db677c5345a051eef",
       "stream": "research",
       "areas": [
         "research-standards"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-18",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-18.md#core-alignment-step-1-inventory-of-every-core-file",
+      "source": "2026/2026-11-18.md",
+      "anchor": "core-alignment-step-1-inventory-of-every-core-file",
+      "start_line": 53,
+      "end_line": 62,
+      "title": "Core alignment step 1: inventory of every core file",
+      "entry_sha256": "ec168235a5d14b4f1e3f0b99e8a1dc1b62c7294f87c3b944278c3c6cea9c7b3a",
+      "stream": "operations",
+      "areas": [
+        "repo-ops",
+        "research-core"
+      ],
+      "related_streams": [
+        "operations",
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-18",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-18.md#core-alignment-w1-covariant-and-lorentz_noether",
+      "source": "2026/2026-11-18.md",
+      "anchor": "core-alignment-w1-covariant-and-lorentz_noether",
+      "start_line": 63,
+      "end_line": 72,
+      "title": "Core alignment W1: covariant and lorentz_noether",
+      "entry_sha256": "e384795ebbaf8cb5c08b9d985e8f4f3c8715221988405e92d530bfb347f59af6",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-18",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-18.md#core-alignment-w2-active-lanes-and-engine",
+      "source": "2026/2026-11-18.md",
+      "anchor": "core-alignment-w2-active-lanes-and-engine",
+      "start_line": 73,
+      "end_line": 82,
+      "title": "Core alignment W2: active lanes and engine",
+      "entry_sha256": "2166dd0e47d86366dd214caabe86373804ff245ab9361e32fd9e4b4418692bf1",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-18",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-18.md#core-alignment-w3-matter_space",
+      "source": "2026/2026-11-18.md",
+      "anchor": "core-alignment-w3-matter_space",
+      "start_line": 83,
+      "end_line": 92,
+      "title": "Core alignment W3: matter_space",
+      "entry_sha256": "5cfdaa97a90d3d2e5a44dc25e50a4ec6b72f7a361254c4dedce28360f4a50ce9",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-18",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-18.md#o8-and-t022-draft-michelson-morley-and-kennedy-thorndike",
+      "source": "2026/2026-11-18.md",
+      "anchor": "o8-and-t022-draft-michelson-morley-and-kennedy-thorndike",
+      "start_line": 93,
+      "end_line": 102,
+      "title": "O8 and T022 draft: Michelson-Morley and Kennedy-Thorndike",
+      "entry_sha256": "5bc6cdd7bb6461f949b1e9a21f492d38876e979ee74783dc6381727cdc8e8544",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-18",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-18.md#t022-run-failed-by-a-numerical-defect-in-the-approved-script",
+      "source": "2026/2026-11-18.md",
+      "anchor": "t022-run-failed-by-a-numerical-defect-in-the-approved-script",
+      "start_line": 103,
+      "end_line": 112,
+      "title": "T022 run: FAILED by a numerical defect in the approved script",
+      "entry_sha256": "ae760995197c42456571c0829935d7aa1f0e37c75f5aaafd542a90c6be433634",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-18",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-18.md#t022-rerun-under-amendment-1-pass",
+      "source": "2026/2026-11-18.md",
+      "anchor": "t022-rerun-under-amendment-1-pass",
+      "start_line": 113,
+      "end_line": 122,
+      "title": "T022 rerun under amendment 1: PASS",
+      "entry_sha256": "2888bb019f833cbaa2d29faa5ffb4d02bce4cddd8281618b01b54a8ec3fe5ff8",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-18",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-18.md#t022-result-at-l2",
+      "source": "2026/2026-11-18.md",
+      "anchor": "t022-result-at-l2",
+      "start_line": 123,
+      "end_line": 132,
+      "title": "T022 result at L2",
+      "entry_sha256": "b7f75f63a62b9846412c1f11cbae68f9f4f21640b27f60105009fcd4298c08ad",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-18",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-18.md#core-alignment-w4-o2",
+      "source": "2026/2026-11-18.md",
+      "anchor": "core-alignment-w4-o2",
+      "start_line": 133,
+      "end_line": 142,
+      "title": "Core alignment W4: o2",
+      "entry_sha256": "3f61e82e345ba45de3cab16f40e42642fab2150036c2193bbd9ff5a9034cbdfb",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-18",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-18.md#core-alignment-w5-thermal-and-topic13_support",
+      "source": "2026/2026-11-18.md",
+      "anchor": "core-alignment-w5-thermal-and-topic13_support",
+      "start_line": 143,
+      "end_line": 152,
+      "title": "Core alignment W5: thermal and topic13_support",
+      "entry_sha256": "9f2c422a22892d9a1db8394c6b26fdfda611a7b3d22ab430067900e6a8b8ec75",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-18",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-18.md#sfi-scaling-theory-against-uet-layer-3",
+      "source": "2026/2026-11-18.md",
+      "anchor": "sfi-scaling-theory-against-uet-layer-3",
+      "start_line": 153,
+      "end_line": 162,
+      "title": "SFI scaling theory against UET layer 3",
+      "entry_sha256": "6525dc01c126ffb17aea06dd3cea237d36470af1abcf61f2ddda206ea512ad4b",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-18",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-18.md#layer-3-mapped-onto-saavedra-et-al-2025-sfi-metabolic-coexistence",
+      "source": "2026/2026-11-18.md",
+      "anchor": "layer-3-mapped-onto-saavedra-et-al-2025-sfi-metabolic-coexistence",
+      "start_line": 163,
+      "end_line": 172,
+      "title": "Layer 3 mapped onto Saavedra et al. 2025 (SFI metabolic coexistence)",
+      "entry_sha256": "67a96853ef7b6c858e81058e583e4171fd65c3d21b0bd6090a30ca9eb696a8d9",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-18",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-18.md#species-level-reserve-and-test-card-t023-draft-bats",
+      "source": "2026/2026-11-18.md",
+      "anchor": "species-level-reserve-and-test-card-t023-draft-bats",
+      "start_line": 173,
+      "end_line": 182,
+      "title": "Species-level reserve and Test Card T023 draft (bats)",
+      "entry_sha256": "409a8f454d1e89469fae4866b626c705dc97ce1c901b52be7325d6cba09a3371",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-18",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-18.md#t023-run-inconclusive-bats-between-other-mammals-and-birds",
+      "source": "2026/2026-11-18.md",
+      "anchor": "t023-run-inconclusive-bats-between-other-mammals-and-birds",
+      "start_line": 183,
+      "end_line": 192,
+      "title": "T023 run: INCONCLUSIVE, bats between other mammals and birds",
+      "entry_sha256": "d5c07363a85f88e686db78dbd98e7c4301dba77d2fc7b6f2e520a903f6fbae10",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-18",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-18.md#t023-result-at-l2-inconclusive",
+      "source": "2026/2026-11-18.md",
+      "anchor": "t023-result-at-l2-inconclusive",
+      "start_line": 193,
+      "end_line": 202,
+      "title": "T023 result at L2 (INCONCLUSIVE)",
+      "entry_sha256": "869fa86ab913a2fab81b460b0fe6ea233e817ae934fdc93963ef9a633c8676f4",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-18",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-18.md#core-alignment-w6-contracts-proofs-and-review",
+      "source": "2026/2026-11-18.md",
+      "anchor": "core-alignment-w6-contracts-proofs-and-review",
+      "start_line": 203,
+      "end_line": 212,
+      "title": "Core alignment W6: contracts, proofs and review",
+      "entry_sha256": "f6ae01334f822a839293643cb9759838ca840e449dea75a4a7bb8716942e7074",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-18",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-18.md#core-alignment-w7-test-labels-and-the-ci-cause",
+      "source": "2026/2026-11-18.md",
+      "anchor": "core-alignment-w7-test-labels-and-the-ci-cause",
+      "start_line": 213,
+      "end_line": 222,
+      "title": "Core alignment W7: test labels and the CI cause",
+      "entry_sha256": "384975c00fa338e653b2d955fda9fb0a7f8dceb3e1663185cf8b20df3de9acf2",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-18",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-18.md#w7-repair-stale-hashes-after-the-root-move",
+      "source": "2026/2026-11-18.md",
+      "anchor": "w7-repair-stale-hashes-after-the-root-move",
+      "start_line": 223,
+      "end_line": 233,
+      "title": "W7 repair: stale hashes after the root move",
+      "entry_sha256": "3b88d463e6a0b6b64a1b5584fcdaf3182546b00c5d7f7151fa8bb7e3b98be7fb",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-18",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-18.md#core-alignment-w8-artifacts-labelled-failing-legacy-tests-archived",
+      "source": "2026/2026-11-18.md",
+      "anchor": "core-alignment-w8-artifacts-labelled-failing-legacy-tests-archived",
+      "start_line": 234,
+      "end_line": 243,
+      "title": "Core alignment W8: artifacts labelled, failing legacy tests archived",
+      "entry_sha256": "525117acdb84ac31683b82105f2c6e97e92c20cbe700e0708867c8d18f0e60d3",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-18",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-18.md#core-alignment-w9-governance-data-and-history",
+      "source": "2026/2026-11-18.md",
+      "anchor": "core-alignment-w9-governance-data-and-history",
+      "start_line": 244,
+      "end_line": 253,
+      "title": "Core alignment W9: governance, data and history",
+      "entry_sha256": "6e8b55b5a64dc72b90c9717b27110cae9f8c00980c7fc2993152aa90b845c354",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-18",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-18.md#ci-follow-up-on-pr-64",
+      "source": "2026/2026-11-18.md",
+      "anchor": "ci-follow-up-on-pr-64",
+      "start_line": 254,
+      "end_line": 264,
+      "title": "CI follow-up on PR #64",
+      "entry_sha256": "c0bba0e22160ab13aa232b92cf2b0f6d0e23074a9877446f5645ef4a98dd37d0",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-18",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-18.md#runner-rule-topics-without-a-suite-are-advisory",
+      "source": "2026/2026-11-18.md",
+      "anchor": "runner-rule-topics-without-a-suite-are-advisory",
+      "start_line": 265,
+      "end_line": 274,
+      "title": "Runner rule: topics without a suite are advisory",
+      "entry_sha256": "732faab07ccae93f65433f000ba2e22847ebd518a20e06a3f4dddee8d4423ff6",
+      "stream": "research",
+      "areas": [
+        "research-standards"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-18",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-18.md#core-alignment-w10-core-docs-and-complete-register",
+      "source": "2026/2026-11-18.md",
+      "anchor": "core-alignment-w10-core-docs-and-complete-register",
+      "start_line": 275,
+      "end_line": 283,
+      "title": "Core alignment W10: core docs and complete register",
+      "entry_sha256": "f2e430e693cb65840ae76b76a573584965ab5190c83c4bfa6dc7b2af901db017",
+      "stream": "research",
+      "areas": [
+        "research-core"
       ],
       "related_streams": [
         "research"

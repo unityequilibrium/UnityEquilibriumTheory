@@ -476,3 +476,129 @@ commit: this commit
 - ร่าง T019 (Eöt-Wash Rot-Wash, 1 ซม. ถึง 1e5 ม.) รอผู้เขียนอนุมัติ ยังไม่ได้รัน
 - T002/T014: ยังไม่มีข้อมูลนับดาวชุดใหม่ที่อิสระจริง จึงไม่ร่างการ์ด
 - เส้นทาง ข (AI proposal, L0): ถ้าการเผาพลังงานเป็น source ของ ψ จะได้ค่าคงที่ร่วม τ_β (หน่วยเวลา) LLR จำกัดไว้ราว ≲ 9e15 s
+
+## 2026-11-18 — Core alignment W1: covariant and lorentz_noether
+- ทำ: อ่านโค้ด 22 ไฟล์ใน 02_equations/covariant และ lorentz_noether แล้วตัดสินป้ายรายไฟล์ใน core/CORE_ALIGNMENT_REGISTER.tsv
+- ผล: A 6 (action แม่, บัญชีแลกเปลี่ยน, DEF), B 1, C 12 (3+1 GR numerics, สายฮีเลียมที่ T015 ตก, diagnostics เก่า), C? 3 รอ W3, D 2
+- ตรวจ: physics test ที่ครอบไฟล์ป้าย A ผ่าน 85 ข้อ; ยังไม่ย้ายไฟล์ เพราะ regression test และ audit script ยังเรียกใช้
+- ระดับ: ไม่เปลี่ยน claim ใด
+- ถัดไป: W2 03_lanes ที่ใช้อยู่และ engine
+
+## 2026-11-18 — Core alignment W2: active lanes and engine
+- ทำ: ตัดสินป้าย 84 ไฟล์ใน 03_lanes (observation, open_system, scalar_tensor, persistence, carrier_observer, mass_density, review) และ core/engine
+- ผล: A 56 (โมเดลสมการใหม่และ producer ของ Test Card), C 19 (comparator รุ่นเก่า, สาย C→ความหนาแน่น, observable เก่า), D 9
+- ตรวจ: physics test ทั้งชุด 358 ผ่าน ข้าม 1; ไม่ย้ายไฟล์
+- ระดับ: ไม่เปลี่ยน claim ใด
+- ถัดไป: W3 02_equations/matter_space และตัดสิน C? สามไฟล์จาก W1
+
+## 2026-11-18 — Core alignment W3: matter_space
+- ทำ: ตรวจ 15 ไฟล์ใน 02_equations/matter_space และตัดสินสามไฟล์ C? จาก W1
+- ผล: C ทั้งโฟลเดอร์ (ชุดสมการ C แบบ normalized และ engine Ω = C·I) และสามไฟล์สะพานจาก W1; ไม่มีไฟล์ใดที่ action แม่ใช้
+- พบ: ไฟล์ใน topics 112 ไฟล์ (28 topic) ยังคำนวณด้วย uet_master_equation.py เก่า
+- ระดับ: ไม่เปลี่ยน claim ใด; ไม่ย้ายไฟล์
+- ถัดไป: รอบวิจัยแทรก แล้ว W4 02_equations/o2
+
+## 2026-11-18 — O8 and T022 draft: Michelson–Morley and Kennedy–Thorndike
+- ทำ: โมเดล uet_rms_light_speed.py หาความเร็วแสงไป-กลับจากเวลาเดินทางของแสงแบบตรง แล้วอ่านพารามิเตอร์ RMS จาก boost ของ O7 ได้ α = −1/2, β = 1/2, δ = 0; physics test 51 ข้อ มีตัวควบคุมแบบกาลิเลโอและแบบหดตัวอย่างเดียว
+- ร่าง T022 เทียบกับ Herrmann et al. 2009 (P_MM) และ Tobar et al. 2010 (P_KT); เห็นค่าที่ตีพิมพ์แล้วก่อนร่าง; ยังไม่ได้รันสคริปต์
+- ระดับ: C_T022_LORENTZ_LENGTH_AND_VELOCITY → L0_SPECULATIVE รอผู้เขียนอนุมัติการ์ด
+- ถัดไป: ผู้เขียนอนุมัติ T022 แล้วรัน; จากนั้น W4 02_equations/o2
+
+## 2026-11-18 — T022 run: FAILED by a numerical defect in the approved script
+- ทำ: รันสคริปต์ T022 ตามการ์ดที่อนุมัติ (commit 7e541a5cc)
+- ผล: ตามกฎในการ์ด ผลคือ FAILED: z_MM = 16.5, z_KT = 1.30
+- สาเหตุ: สคริปต์คำนวณค่าโมเดลด้วยทศนิยม 64 บิตที่ v = 1e-3 ได้ P_MM = −1.3e-10 แทนที่จะเป็น 0 (ความคลาดจากการปัดเศษหารด้วย v²) ซึ่งใหญ่กว่าความไม่แน่นอนของข้อมูล 8e-12; คำนวณซ้ำด้วยความละเอียด 60 หลักได้ 0 พอดีทุกมุม; ข้อมูลไม่ใช่ต้นเหตุ
+- ระดับ: ยังไม่เขียน Result; C_T022 คงที่ L0; รอผู้เขียนตัดสินว่าจะบันทึก FAILED ตามนี้ หรือแก้วิธีคำนวณเป็นการ์ดฉบับใหม่แล้วรันใหม่
+
+## 2026-11-18 — T022 rerun under amendment 1: PASS
+- ทำ: รัน T022 ใหม่หลังผู้เขียนอนุมัติการแก้ครั้งที่ 1 (commit 8122948aa: ค่าโมเดลคำนวณด้วย 60 หลัก)
+- ผล: PASS: ค่าโมเดล P_MM = P_KT = 0; Michelson–Morley z = 0.50, Kennedy–Thorndike z = 1.30; แบบกาลิเลโอและแบบหดตัวอย่างเดียวถูกตัดทิ้งด้วย Kennedy–Thorndike (z ราว 1e7)
+- ระดับ: C_T022 ยังเป็น L0 รอผู้เขียนอนุมัติ L2; ผลรันแรกที่ตกยังอยู่ในบันทึกข้างบน
+- ถัดไป: ผู้เขียนอนุมัติ L2 แล้วบันทึก Result; จากนั้น W4
+- 2026-11-18: ผู้เขียนอนุมัติ L2; บันทึก R_T022_MICHELSON_MORLEY_KENNEDY_THORNDIKE และ C_T022 → L2_CONFRONTED
+
+## 2026-11-18 — Core alignment W4: o2
+- ทำ: ตรวจ 90 ไฟล์ใน 02_equations/o2 (QFT อุณหภูมิจำกัดของสนาม χ ที่ทำไว้สำหรับสายฮีเลียมของ Topic 13)
+- ผล: B 15 (SK/KMS, entropy production และ no-go ที่ derive จาก action ของ χ), C 74 (เครื่องมือเฉพาะสายฮีเลียมที่ T015 ตก), D 1
+- พบ: ไฟล์ป้าย B เป็นวัตถุดิบของ derivation ชั้น 2 ที่ยังขาด; ไม่มี claim ใดใช้โฟลเดอร์นี้
+- ระดับ: ไม่เปลี่ยน claim ใด; ไม่ย้ายไฟล์
+- ถัดไป: W5 03_lanes/thermal และ topic13_support
+
+## 2026-11-18 — Core alignment W5: thermal and topic13_support
+- ทำ: ตรวจ 119 ไฟล์ใน 03_lanes/thermal และ topic13_support
+- ผล: C 117 (สะพานความร้อนและบันทึกงานของ Topic 13 ที่ไม่ได้ derive จาก action แม่), D 2; ไม่มี claim ใดใช้
+- ระดับ: ไม่เปลี่ยน claim ใด; ไม่ย้ายไฟล์ (topic อ้างถึง 90 ไฟล์)
+- ถัดไป: รอบวิจัย SFI (scaling laws) แล้ว W6
+
+## 2026-11-18 — SFI scaling theory against UET layer 3
+- ทำ: อ่าน West–Brown–Enquist 1997 (ผ่านบทความทบทวน), Savage et al. 2008, Saavedra et al. 2025 และ Bettencourt et al. 2007 แล้วเพิ่ม P10–P12 ใน SYNTHESIS_AUDIT ส่วนที่ 6
+- ผล [อนุมาน]: ต่อ metabolic scaling กับ N = b·τ ได้อัตราการเกิดต่อพื้นที่ ∝ M^−1 (Damuth) หรือ M^−5/4 (ระดับชุมชน); ทั้งสองไม่ใช่ข้อทำนายเฉพาะของ UET
+- พบ: metabolic theory แบบง่ายก็ทำนาย LEP คงที่ ความต่างนก/สัตว์เลี้ยงลูกด้วยนมที่ทำให้ T018 ตกจึงขัดกับทฤษฎีนั้นด้วย
+- ระดับ: ไม่เปลี่ยน claim ใด
+- ถัดไป: ผู้เขียนเลือกหนึ่งในสามขั้นที่เสนอ; จากนั้น W6
+
+## 2026-11-18 — Layer 3 against Saavedra et al. 2025 (SFI), term by term
+- ทำ: uet_layer3_lv_map.py ลดรูปโมเดลชั้น 3 (ทรัพยากรร่วมหนึ่งชนิด) เป็น Lotka–Volterra เมื่อทรัพยากรปรับตัวเร็วและถูกดึงน้อย; physics test 27 ข้อ
+- ผล: a_ij = (a_j F_j)/(a_i F_i), r_i = a_i S/δ − 1/τ_i; ถ้า F ∝ M, P ∝ M^{3/4}, a ∝ M^{−1/4} จะได้ Eq. (14) ของ Saavedra et al. พอดี; ช่องว่างกับโมเดลเต็ม 4–5e-4 ที่ ε = 0.04 และลดเป็นเส้นตรงตาม ε
+- ต่างกัน: ทรัพยากรชนิดเดียวให้ผู้ชนะคนเดียว (เมทริกซ์อันดับ 1) และ UET ได้อัตราตายจาก P/F
+- ระดับ: C_L3_LV_MAP → L1_CONSISTENT (derivation ไม่ใช้ข้อมูล)
+- ถัดไป: W6
+
+## 2026-11-18 — Species-level reserve and T023 draft (bats)
+- ทำ: บันทึกคำผู้เขียนใน AUTHOR_PROPOSITION (ระบบอาจบริหารทรัพยากรเพื่อสายพันธุ์ ไม่ใช่ตัวเอง; พฤติกรรมอาจมาจากวัตถุอื่น); ตรวจแหล่ง: Austad & Fischer 1991, Brunet-Rossinni & Austad 2004, Wilkinson & South 2002, Matsuda & Makino 2024, Ikemoto et al. 2020
+- ร่าง T023: ถ้าการบินลดการตายจากสิ่งแวดล้อมแล้วกำหนดทุนต่อกรัม ค้างคาวต้องอยู่กับนก (d_bat > 0.18 และ |d_bat − d_bird| ≤ 0.25); ข้อมูลเดียวกับ T018 (ค้างคาว 24 ชนิด); ยังไม่ได้คำนวณ LEP ของค้างคาว
+- เปิดเผย: ไม่ blind; ค้างคาวจำศีลทำให้ LEP จากอัตราพักสูงเกินจริง เอียงไปทาง PASS
+- ระดับ: C_T023_FLIGHT_LIFETIME_ENERGY → L0_SPECULATIVE รอผู้เขียนอนุมัติ
+
+## 2026-11-18 — T023 run: INCONCLUSIVE (bats between mammals and birds)
+- ทำ: รัน T023 ตามการ์ดที่อนุมัติ (commit c2c4e9413)
+- ผล: ค้างคาวสูงกว่าสัตว์เลี้ยงลูกด้วยนมอื่น d_bat = 0.29 (1.96 เท่า, ช่วง 0.19–0.40) ผ่านเงื่อนไขแรก; แต่ต่ำกว่านก Δ = −0.17 (ช่วง −0.28 ถึง −0.07) ซึ่งไม่อยู่ใน ±0.25 ทั้งช่วงและไม่หลุดทั้งช่วง จึงเป็น INCONCLUSIVE ตามกฎ
+- ไม่ใช้ตัดสิน: ข้อมูลในที่เลี้ยง d_bat = 0.32 (12 ชนิด); นกที่บินไม่ได้ 2 ชนิดอยู่ต่ำกว่านกที่บินได้ 0.27 และ 0.38
+- ความหมาย: การบินอธิบายได้ราว 60% ของส่วนเกินของนก (0.29 จาก 0.46); ช่วงของ Δ ไม่รวม 0 จึงมีส่วนที่การบินอธิบายไม่ได้ ทั้งที่การจำศีลของค้างคาวเอียงไปทาง PASS
+- ระดับ: C_T023 ยังเป็น L0 รอผู้เขียนตัดสินเรื่อง L2
+- 2026-11-18: ผู้เขียนอนุมัติ L2; บันทึก R_T023_FLIGHT_LIFETIME_ENERGY (INCONCLUSIVE) และ C_T023 → L2_CONFRONTED
+
+## 2026-11-18 — Core alignment W6: 01_contracts, 04_proofs, 99_review
+- ทำ: ตรวจ 41 ไฟล์ใน 01_contracts, 04_proofs และ 99_review
+- ผล: A 4 (แหล่งตัวเลขของ T001 และการตรวจกับวารสาร), B 3 (spec ของสนาม response, EOS ของ χ และหลักการชั้น 3), C 32 (spec ของ lane C, สรุป gate เก่า, uet_parameters, Proof_00), D 2
+- ระดับ: ไม่เปลี่ยน claim ใด; ไม่ย้ายไฟล์ (contract ล็อก 4 ฉบับ, topic import uet_parameters 93 ไฟล์)
+- ถัดไป: W7 05_tests รวมการซ่อม CI ของ contract เก่า
+
+## 2026-11-18 — Core alignment W7: 05_tests labels and the CI cause
+- ทำ: ติดป้าย 572 ไฟล์ใน 05_tests ตามโมดูลที่ test import หรือสิ่งที่มันอ่าน
+- ผล: A 46 (physics test 36 ไฟล์ และ regression ของ action แม่), B 32 (O(2) SK/KMS และ no-go), C 491 (Topic 13, lane C, gate และ migration เก่า), D 3
+- พบ: CI แดงเพราะ contract 20 ฉบับล็อก hash ของสคริปต์ 26 ไฟล์ที่ถูกแก้ path ตอนย้ายไป root (14–15 พ.ย.); ผลคำนวณที่เทียบได้ 8 ตัวเหมือนเดิม
+- ระดับ: ไม่เปลี่ยน claim ใด; ยังไม่ซ่อม hash รอเจ้าของอนุมัติตาม AGENTS §6.3
+
+## 2026-11-18 — W7 repair: refreshed stale hashes after the root move (owner approved)
+- ทำ: คำนวณ sha256 ใหม่ใน contract 20 ฉบับของ Topic 0.13 (identity 55 ค่า และ baseline 1 ค่า) โดยไม่แก้ path, manifest ของ BaTiO3 (ไฟล์ immutable 15, input 2, payload 2) และสร้าง artifact ใหม่ 11 ไฟล์ใน Topic 0.13 และ 18 ไฟล์ใน core/07_artifacts (curved 3+1 และ phase field)
+- ตรวจ: ส่วนที่เปลี่ยนใน artifact มีแค่ hash, เวลาที่สร้าง และ path ที่ producer เขียนเอง ไม่มีตัวเลขผลใดเปลี่ยน
+- ผล: completeness audit 0 error (เดิม 43), audit tests 80 ข้อผ่าน, producer ของ Topic 0.13 ผ่าน --check ทั้ง 11 ตัว; test ของ core ล้มจาก 16 เหลือ 11 ไฟล์
+- ยังค้าง: test ป้าย C ใน core ยังล้ม 11 ไฟล์ (สคริปต์ Topic 13 7 ตัวยัง import docs.core จึงรันไม่ได้, test 3 ข้อต้องใช้ข้อมูล raw ส่วนตัว, test Noether ขัดกับ pin ของ BaTiO3) และ test ใน topics/0.13 ล้ม 53 ข้อเพราะยังคาดหวังข้อความ path แบบ docs/core
+
+## 2026-11-18 — Core alignment W8: 07_artifacts labels and archived failing tests
+- ทำ: ติดป้าย 617 ไฟล์ใน 07_artifacts: A 7 (artifact ที่ regression ของ action แม่อ่าน), C 610 (Topic 13, gate และ migration เก่า); ไม่มี record วิจัยปัจจุบันอ้าง 07_artifacts
+- ทำ: ตามที่เจ้าของตัดสิน ย้าย test ป้าย C ที่ยังล้ม 56 ไฟล์เข้าคลัง (core 12 ไฟล์ไป core/08_history/archived_tests, Topic 0.13 44 ไฟล์ไป topics/0.13_Thermodynamic_Bridge/Archive/tests) โดยเติม archived_ หน้าชื่อและไม่แก้เนื้อหา
+- ผล: test ของ core ผ่านทั้งหมด (เดิมล้ม 16 ไฟล์), Topic 0.13 562 ผ่าน 0 ล้ม, completeness audit 0 error, audit tests 80 ผ่าน, runner tests 69 ผ่าน
+- หมายเหตุ: ไฟล์ Topic 0.13 ที่เก็บมี test ผ่านอยู่ 791 ข้อซึ่งถูกเก็บไปด้วย
+
+## 2026-11-18 — Core alignment W9: governance, data and history
+- ทำ: ติดป้าย 564 ไฟล์ใน 00_governance, 06_data และ 08_history
+- ผล: A 47 (contract 44 ฉบับของ Test Card และ formal check ปัจจุบัน), C 362 (สำเนา shim, บันทึก migration, log เก่า, source package เก่า), D 155 (redirect stub และ alias registry ที่ import ยังต้องใช้)
+- ระดับ: ไม่เปลี่ยน claim ใด; ไม่ย้ายไฟล์ (contract ต้องอยู่ที่เดิมเพราะ CI audit อ่าน)
+- ถัดไป: W10 เอกสารหน้า core และเพิ่มไฟล์ใหม่ที่ inventory ไม่ได้นับ
+
+## 2026-11-18 — CI follow-up on PR #64
+- ผล CI รอบแรก: Topic 0.13, calculation-audit-tests และ runner ผ่าน; topic 0.10 ล้ม; core-tests, physics-tests และ calculation-completeness ขึ้น INCOMPLETE
+- แก้: physics test ของชั้น 3 ที่เคยข้าม 1 กรณี ตอนนี้สุ่มใหม่แบบกำหนดได้แทนการข้าม (อัปเดต hash ใน contract l3 และ t002); pattern ของ calculation-completeness ใน runner ไม่เคยตรงกับ output จริงที่มีช่องว่าง จึงแก้ให้รับช่องว่าง
+- เก็บเข้าคลัง: test ของ topic 0.10 ที่ล้ม 18 ไฟล์ (สาย O(2) ฮีเลียม ป้าย C, hash ต้นทางเก่าจากก่อนย้ายโฟลเดอร์) ไปที่ topics/0.10_Fluid_Dynamics_Chaos/Archive/tests
+- ค้าง (โครงสร้าง): ถ้า PR แก้ core runner จะรันทุก topic และนับ 34 topic ที่ไม่มี test เป็น coverage gap ทำให้ exit 2 เสมอ ต้องให้เจ้าของตัดสินกติกา
+
+## 2026-11-18 — Runner rule: topics without a suite are advisory (owner decision)
+- ทำ: แก้ topics/run_all_tests.py ให้ topic ที่ไม่มีชุด test หรือมีแค่ชุดจำกัดถูกรายงานเป็น ADVISORY และไม่ทำให้ exit code เป็น 2 ส่วน gap อื่น (checker หาย, collect ไม่ได้, change ที่จับคู่ไม่ได้) ยังทำให้ล้มเหมือนเดิม และถ้าไม่มีชุดไหนได้รันเลยก็ยังขึ้น incomplete
+- ตรวจ: runner tests 70 ผ่าน (เพิ่ม test ที่แยก advisory กับ blocking)
+
+## 2026-11-18 — Core alignment W10: core docs and register complete
+- ทำ: เขียน core/README.md และ core/AGENTS.md ใหม่ (README เดิมเก็บไว้ที่ 08_history/README_LEGACY_2026-11-14.md), อัปเดต CORE_MAP เพิ่ม T021–T023 และชั้น 3 = Lotka–Volterra, เพิ่มไฟล์ใหม่ 14 แถวในทะเบียน
+- ผล: ทะเบียนครบทุกไฟล์ใน core 2,156 ไฟล์: A 189, B 51, C 1,737, D 179; ไม่มีแถวที่ยังไม่ตัดสิน
+- ถัดไป: ย้ายไฟล์ป้าย C ที่ไม่มี contract ล็อกและไม่มีใคร import เข้าคลัง; ขั้น 3 derive ชั้น 2 จาก action

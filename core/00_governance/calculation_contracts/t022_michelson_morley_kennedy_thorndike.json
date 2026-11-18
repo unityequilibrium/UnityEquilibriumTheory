@@ -1,0 +1,253 @@
+{
+  "schema_version": "uet-calculation-contract-v1",
+  "contract_id": "CORE_T022_MICHELSON_MORLEY_KENNEDY_THORNDIKE_V1",
+  "profile": "PHYSICAL_COMPARISON",
+  "review": {
+    "status": "INCOMPLETE",
+    "reviewer": "agent:claude-t022",
+    "rationale": "Methodological contract for Test Card T022. The evidence decision lives in docs/standard. Both combinations and their uncertainties are inherited from the published analyses.",
+    "coverage_evidence": [
+      "core/05_tests/physics/test_rms_light_speed.py"
+    ]
+  },
+  "question": "Are the Michelson-Morley (orientation) and Kennedy-Thorndike (velocity) combinations of the two-way speed of light consistent with zero, as the Lorentz boost of the parent action's local frame requires (wave O8)?",
+  "output": {
+    "quantity": "P_MM and P_KT with their uncertainties",
+    "unit": "dimensionless",
+    "domain": "laboratory at about 370 km/s relative to the CMB frame",
+    "accuracy": "Published uncertainties inherited (8e-12 and 3.7e-8).",
+    "claim_intent": "DIAGNOSTIC"
+  },
+  "model": {
+    "formula_ids": [
+      "UET_O8_RMS_LIGHT_SPEED"
+    ],
+    "assumptions": "Lorentzian local frame of the parent action; light and resonator matter couple to the same metric.",
+    "approximation": "Robertson-Mansouri-Sexl kinematics to order v^2; resonator response handled upstream.",
+    "initial_boundary": "Laboratory velocity relative to the CMB frame as used in the published analyses.",
+    "drive_environment": "None.",
+    "parameters": "No fitting."
+  },
+  "data_policy": {
+    "uses_observations": true,
+    "calibration_ids": [],
+    "comparison_ids": [
+      "RMS_MM_KT_2009_2010"
+    ],
+    "independent_validation": false,
+    "holdout_policy": "No holdout. Results seen before drafting (exposure SEEN_FULL), declared in Test Card T022."
+  },
+  "observation": {
+    "system_partition": {
+      "role_mode": "RELATIONAL",
+      "accounting_component_id": "system_state",
+      "boundary": "Published RMS combinations and their uncertainties only.",
+      "systems": [
+        {
+          "id": "populations",
+          "state": "Optical and microwave resonators moving with the Earth relative to the CMB frame",
+          "state_accounting": {
+            "kind": "INDEPENDENT",
+            "state_ids": [
+              "populations.state"
+            ],
+            "owner_ids": [],
+            "rule": "Resonance frequency of a cavity as a function of orientation and velocity."
+          }
+        },
+        {
+          "id": "counts",
+          "state": "Frequency comparisons in the laboratory",
+          "state_accounting": {
+            "kind": "INDEPENDENT",
+            "state_ids": [
+              "counts.record"
+            ],
+            "owner_ids": [],
+            "rule": "Observer record only."
+          }
+        }
+      ],
+      "couplings": [
+        {
+          "id": "population_signal",
+          "source": "populations",
+          "target": "counts",
+          "kind": "SIGNAL",
+          "component_id": "propagation",
+          "map": "Measurement chain handled upstream"
+        },
+        {
+          "id": "population_detection",
+          "source": "populations",
+          "target": "counts",
+          "kind": "DETECTION",
+          "component_id": "detector",
+          "map": "Published values"
+        },
+        {
+          "id": "counts_backaction",
+          "source": "counts",
+          "target": "populations",
+          "kind": "BACKACTION",
+          "component_id": "detector",
+          "map": "No admitted backaction"
+        }
+      ],
+      "observables": [
+        {
+          "id": "outcome",
+          "detector_id": "counts",
+          "target_systems": [
+            "populations"
+          ],
+          "backaction_targets": [
+            "populations"
+          ],
+          "backaction_scope_reason": "The populations are the only assessed owner.",
+          "quantity": "P_MM and P_KT with their uncertainties",
+          "readout_map": "Published values transcribed only",
+          "component_id": "detector"
+        }
+      ]
+    },
+    "source_state": "As described by the published analyses.",
+    "generated_trace": "Resonance frequencies of cavities and oscillators.",
+    "carrier": "Photons in resonators.",
+    "observer_state": "Published values",
+    "readout": "Beat frequencies between orthogonal or rotating cavities, and between a sapphire oscillator and hydrogen masers.",
+    "backaction": "None admitted.",
+    "frame": "Laboratory frame and the CMB frame",
+    "time_convention": "Fractional frequency",
+    "product_level": "published derived quantities (not raw data)",
+    "corrections": [
+      {
+        "id": "selection_upstream",
+        "state": "APPLIED_UPSTREAM",
+        "evidence": "docs/data/external/relativity/rms_lorentz/rms_mm_kt.csv"
+      },
+      {
+        "id": "measurement_upstream",
+        "state": "APPLIED_UPSTREAM",
+        "evidence": "docs/data/external/relativity/rms_lorentz/rms_mm_kt.csv"
+      }
+    ]
+  },
+  "components": [
+    {
+      "id": "system_state",
+      "group": "system_state",
+      "disposition": "MODELED",
+      "reason": "Two-way light speed in resonators versus orientation and velocity.",
+      "evidence": [
+        "docs/data/external/relativity/rms_lorentz/rms_mm_kt.csv",
+        "core/05_tests/physics/test_rms_light_speed.py"
+      ]
+    },
+    {
+      "id": "drive_environment",
+      "group": "drive_environment",
+      "disposition": "NOT_APPLICABLE",
+      "reason": "No external drive.",
+      "evidence": []
+    },
+    {
+      "id": "propagation",
+      "group": "propagation",
+      "disposition": "UPSTREAM_CORRECTED",
+      "reason": "Applied upstream in the published analyses (Herrmann et al. 2009; Tobar et al. 2010); not recomputed here.",
+      "evidence": [
+        "docs/data/external/relativity/rms_lorentz/rms_mm_kt.csv"
+      ]
+    },
+    {
+      "id": "frame_time",
+      "group": "frame_time",
+      "disposition": "UPSTREAM_CORRECTED",
+      "reason": "Applied upstream in the published analyses (Herrmann et al. 2009; Tobar et al. 2010); not recomputed here.",
+      "evidence": [
+        "docs/data/external/relativity/rms_lorentz/rms_mm_kt.csv"
+      ]
+    },
+    {
+      "id": "detector",
+      "group": "detector",
+      "disposition": "UPSTREAM_CORRECTED",
+      "reason": "Applied upstream in the published analyses (Herrmann et al. 2009; Tobar et al. 2010); not recomputed here.",
+      "evidence": [
+        "docs/data/external/relativity/rms_lorentz/rms_mm_kt.csv"
+      ]
+    },
+    {
+      "id": "processing",
+      "group": "processing",
+      "disposition": "MODELED",
+      "reason": "z per combination defined in the Test Card.",
+      "evidence": [
+        "core/03_lanes/observation/t022_michelson_morley_kennedy_thorndike.py",
+        "core/03_lanes/observation/uet_rms_light_speed.py"
+      ]
+    },
+    {
+      "id": "numerics",
+      "group": "numerics",
+      "disposition": "MODELED",
+      "reason": "60-digit arithmetic for the model value; covered by physics tests (model error below 1e-20).",
+      "evidence": [
+        "core/05_tests/physics/test_rms_light_speed.py"
+      ]
+    }
+  ],
+  "error_budget": {
+    "unit": "dimensionless",
+    "numerical": "Model in 60-digit arithmetic; the first run in 64-bit floats failed on rounding (Test Card T022, amendment 1).",
+    "approximation": "Combinations to order v^2, as in the source analyses.",
+    "measurement": "Published uncertainty budget as registered.",
+    "systematic": "Rotation, tilt, temperature and maser systematics are in the published budgets.",
+    "omissions": "Sign conventions of the papers are not converted; only the distance from zero enters.",
+    "dependence": "Two independent published experiments.",
+    "acceptance": "Outcome categories fixed in Test Card T022.",
+    "omission_limit": null
+  },
+  "identities": [
+    {
+      "path": "docs/data/external/relativity/rms_lorentz/rms_mm_kt.csv",
+      "kind": "working_file",
+      "role": "input",
+      "sha256": "240aa10ac368ec242278fec7196ed3fba5be27d41ca7b56c07c8b82674d2b9b7",
+      "availability": "REQUIRED"
+    },
+    {
+      "path": "core/03_lanes/observation/t022_michelson_morley_kennedy_thorndike.py",
+      "kind": "working_file",
+      "role": "code",
+      "sha256": "f03f68571f341f78c2491ac0c5095a6b91d2223372e601ea590dc2f3f04dafbf",
+      "availability": "REQUIRED"
+    },
+    {
+      "path": "core/05_tests/physics/test_rms_light_speed.py",
+      "kind": "working_file",
+      "role": "code",
+      "sha256": "74d76818edb0843c5d04498c85453febf9deddb75d7eb2dcb4839648ef975034",
+      "availability": "REQUIRED"
+    },
+    {
+      "path": "core/03_lanes/observation/uet_rms_light_speed.py",
+      "kind": "working_file",
+      "role": "code",
+      "sha256": "b1cee27553cd1faf7581eb771948c876877e3c66f545c7e5739ef5af79ca14bd",
+      "availability": "REQUIRED"
+    }
+  ],
+  "entrypoints": [
+    "core/03_lanes/observation/t022_michelson_morley_kennedy_thorndike.py",
+    "core/03_lanes/observation/uet_rms_light_speed.py"
+  ],
+  "evidence": [
+    "core/03_lanes/observation/t022_michelson_morley_kennedy_thorndike.py",
+    "core/03_lanes/observation/uet_rms_light_speed.py",
+    "docs/data/external/relativity/rms_lorentz/rms_mm_kt.csv"
+  ],
+  "claim_boundary": "Methodological coverage of the T022 comparison only. The evidence level is set in docs/standard.",
+  "next_action": "Cross-check the transcribed combinations against the journal versions."
+}

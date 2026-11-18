@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "artifact": "curved_3p1_gh_principal_system_verification",
-  "generated_at": "2026-09-17T21:28:58.887368+00:00",
+  "generated_at": "2026-11-18T12:34:29.965233+00:00",
   "topic": "docs/core curved 3+1 parent",
   "status": "PASS_GH_PRINCIPAL_CHARACTERISTIC_SYSTEM",
   "major_result": {
@@ -81,8 +81,8 @@
     "accessed_on": "2026-08-28"
   },
   "source_hashes": {
-    "docs/core/02_equations/covariant/uet_curved_3p1_generalized_harmonic.py": "4f0c8ed0e5afe52e43cedefeb9c061e10dbd440fd20e8bc57a8aacfa43e76f92",
-    "docs/scripts/audit/audit_uet_curved_3p1_generalized_harmonic.py": "95ed43dabccdeef982a3d1f5e28b9f2d865bd4876c8dcaadbfbf8c441eeed3b6",
+    "core/02_equations/covariant/uet_curved_3p1_generalized_harmonic.py": "4f0c8ed0e5afe52e43cedefeb9c061e10dbd440fd20e8bc57a8aacfa43e76f92",
+    "docs/scripts/audit/audit_uet_curved_3p1_generalized_harmonic.py": "588ffc0abcef9e5886da140ca9e8742f52f020806071308e9f4761f0151ccd8c",
     "docs/data/external/gr_3p1/lindblom_et_al_2006_gh/source_record.json": "c3812246cabdc3e4de2cb266945a0355bc0d64b7ae1d041507e764fe0199d08a"
   },
   "parameters": [

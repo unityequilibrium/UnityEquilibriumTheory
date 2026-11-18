@@ -129,7 +129,7 @@
       "kind": "working_file",
       "path": "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/Research_T13_Spin_Strain_Correspondence.py",
       "role": "code",
-      "sha256": "8d249e67e124c99b10dec41e3fd4da36ab4ef31d3c68802b1af2f2052412d9aa"
+      "sha256": "0476200796145331a4463ff8ae0ea8c135e5f1c17ec316531eaf3f4ffac95fcf"
     },
     {
       "availability": "REQUIRED",
@@ -150,21 +150,21 @@
       "kind": "working_file",
       "path": "docs/topics/0.13_Thermodynamic_Bridge/calculation_contracts/joint_state_measure_construction.json",
       "role": "evidence",
-      "sha256": "966683ce539ee9e090a72300c0a3e7f42bbfa01a795bfbe444de621579ac5eb3"
+      "sha256": "a934a65db07dbbb7f1564038f81e00d29a9b655a7fa0eecb88b25a562a63c452"
     },
     {
       "availability": "REQUIRED",
       "kind": "working_file",
       "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/t13_joint_state_measure_construction.json",
       "role": "evidence",
-      "sha256": "2a31fb6f9d32abf94942b52bd9b43e5a68decb7a3ebb45d2f062722906e2cdff"
+      "sha256": "7b95c405419fe446aafebddade31f52ccb1bf4706fd7a1aab9e5c8ec0e1692dc"
     },
     {
       "availability": "REQUIRED",
       "kind": "working_file",
       "path": "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/Research_T13_Joint_State_Measure_Construction.py",
       "role": "evidence",
-      "sha256": "67f3895fa13aa1847f04c736012369addb225d3d6ec7405ef38e49079065f50d"
+      "sha256": "abd3037c77bcd04049f9d274dd38579fe4d66024ea0c39e12ad3e6a7d09d4524"
     },
     {
       "availability": "REQUIRED",
@@ -199,14 +199,14 @@
       "kind": "working_file",
       "path": "docs/scripts/audit/audit_calculation_completeness.py",
       "role": "code",
-      "sha256": "b406d31add9834d2cd1d9f3bb8d42724d26c390413710419313dd85cba7121ca"
+      "sha256": "f3d8cbb1dcc0f1550fea283ab9b2409f50c7ea16c1c836c4a3cdb722573d9e31"
     },
     {
       "availability": "REQUIRED",
       "kind": "working_file",
       "path": "docs/topics/0.13_Thermodynamic_Bridge/calculation_contracts/joint_thermodynamic_completion.json",
       "role": "evidence",
-      "sha256": "0a60129b9a303ad4fc1b3fbb6a06b6deec05ae45d78029cc0fce180fc60e7171"
+      "sha256": "b834945638e19aede2a256d06540852dddba1997e3c1f1c56028a2c74eb80c62"
     }
   ],
   "model": {

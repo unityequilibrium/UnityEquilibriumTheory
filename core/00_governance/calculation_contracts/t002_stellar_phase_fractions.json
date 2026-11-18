@@ -289,7 +289,7 @@
       "path": "core/05_tests/physics/test_persistence_selection.py",
       "kind": "working_file",
       "role": "code",
-      "sha256": "bbe4b287d6929a165eafe288cf0fa63ecaa446eaae4403d6193a47b5103e3a68",
+      "sha256": "b3f5d23233b4bb278942a906ad846258986cee0bf02bc3ae10c098f9ee6a25ca",
       "availability": "REQUIRED"
     }
   ],

@@ -379,6 +379,33 @@
         "R_T021_LIGHTING_SUCCESSION"
       ],
       "note": "Stage 1 of test D (topics/0.25_Strategy_Power_Economics/Doc/ANALYSIS_EXTERNAL_ENERGY_UET_2026-11-17.md section 6). Needs no exchange rate between time and energy. Not UET-distinct: standard economics expects the same. Run 2026-11-17: PASS, 2 DOMINATES, 5 TRADE_OFF, 0 WORSE_BOTH at the device energy basis. L2 approved by the author 2026-11-18; device energy basis only."
+    },
+    {
+      "claim_id": "C_T022_LORENTZ_LENGTH_AND_VELOCITY",
+      "statement": "The two-way speed of light depends neither on orientation nor on laboratory velocity, as the Lorentz boost of the parent action's local frame requires: Michelson-Morley P_MM = (4 +- 8)e-12 (z = 0.50, Herrmann et al. 2009) and Kennedy-Thorndike P_KT = (-4.8 +- 3.7)e-8 (z = 1.30, Tobar et al. 2010); contraction without time dilation is excluded.",
+      "level": "L2_CONFRONTED",
+      "evidence": [
+        "R_T022_MICHELSON_MORLEY_KENNEDY_THORNDIKE"
+      ],
+      "note": "With T013 all three Robertson-Mansouri-Sexl parameters are tested. Not UET-distinct: special relativity passes. First run failed on a 64-bit rounding defect; amendment 1 approved before the rerun. L2 approved by the author on 2026-11-18."
+    },
+    {
+      "claim_id": "C_L3_LV_MAP",
+      "statement": "In the fast, weak-draw limit of the shared pool, UET layer 3 reduces term by term to the Lotka-Volterra competition model of Saavedra et al. (2025): r_i = a_i S/delta - 1/tau_i, a_ij = (a_j F_j)/(a_i F_i), K_i = r_i delta^2/(a_i^2 F_i S); with F ~ M, P ~ M^(3/4), a ~ M^(-1/4) the biomass interaction matrix is their Eq. (14).",
+      "level": "L1_CONSISTENT",
+      "evidence": [
+        "R_L3_LV_MAP"
+      ],
+      "note": "Nearest known theory: MacArthur consumer-resource reduction and metabolic coexistence theory. UET adds mortality from the burn law (1/tau = P/F); one pool gives one winner, so coexistence needs more than one resource."
+    },
+    {
+      "claim_id": "C_T023_FLIGHT_LIFETIME_ENERGY",
+      "statement": "A species-level lifetime reserve set by extrinsic mortality (author, 2026-11-18) is partly supported: bats spend 1.96 times the lifetime energy per gram of other mammals (d_bat = 0.29, CI 0.19-0.40) but less than birds (d_bat - d_bird = -0.17, CI -0.28 to -0.07); flight accounts for about 60 percent of the bird offset. INCONCLUSIVE under T023.",
+      "level": "L2_CONFRONTED",
+      "evidence": [
+        "R_T023_FLIGHT_LIFETIME_ENERGY"
+      ],
+      "note": "Not blind; bat torpor biases the bat value upward; no phylogenetic correction. Nearest theory: disposable soma and extrinsic-mortality theory of ageing; not UET-distinct. L2 approved by the author on 2026-11-18."
     }
   ]
 }

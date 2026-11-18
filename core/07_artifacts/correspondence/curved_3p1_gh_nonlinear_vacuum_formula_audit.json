@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "artifact": "curved_3p1_gh_nonlinear_vacuum_formula_audit",
-  "generated_at": "2026-09-17T21:28:59.703011+00:00",
+  "generated_at": "2026-11-18T12:34:31.466233+00:00",
   "status": "PASS_SOURCE_LOCKED_GH_NONLINEAR_VACUUM_FORMULAS",
   "relations": [
     {
@@ -22,7 +22,7 @@
       "verification_role": "nonlinear vacuum RHS gate",
       "failure_mode": "metric kinematics and first-order variables drift",
       "next_hardening_step": "time integration and gauge-wave convergence",
-      "code_path": "docs/core/02_equations/covariant/uet_curved_3p1_generalized_harmonic.py"
+      "code_path": "core/02_equations/covariant/uet_curved_3p1_generalized_harmonic.py"
     },
     {
       "formula_id": "UET-CURVED3P1-GH-PI-RHS-015",
@@ -42,7 +42,7 @@
       "verification_role": "nonlinear vacuum and gauge-damping gate",
       "failure_mode": "gauge derivative is hidden or gamma0 damping sign drifts",
       "next_hardening_step": "constraint-propagation evolution test",
-      "code_path": "docs/core/02_equations/covariant/uet_curved_3p1_generalized_harmonic.py"
+      "code_path": "core/02_equations/covariant/uet_curved_3p1_generalized_harmonic.py"
     },
     {
       "formula_id": "UET-CURVED3P1-GH-PHI-RHS-016",
@@ -60,7 +60,7 @@
       "verification_role": "nonlinear vacuum RHS gate",
       "failure_mode": "reduction damping is overread as full constraint propagation",
       "next_hardening_step": "temporal reduction-constraint decay convergence",
-      "code_path": "docs/core/02_equations/covariant/uet_curved_3p1_generalized_harmonic.py"
+      "code_path": "core/02_equations/covariant/uet_curved_3p1_generalized_harmonic.py"
     },
     {
       "formula_id": "UET-CURVED3P1-GH-STATE-RECONSTRUCTION-017",
@@ -80,7 +80,7 @@
       "verification_role": "state reconstruction gate",
       "failure_mode": "lapse/shift are duplicated as inconsistent inputs",
       "next_hardening_step": "couple declared matter stress projection",
-      "code_path": "docs/core/02_equations/covariant/uet_curved_3p1_generalized_harmonic.py"
+      "code_path": "core/02_equations/covariant/uet_curved_3p1_generalized_harmonic.py"
     }
   ],
   "source": {
@@ -127,10 +127,10 @@
     "accessed_on": "2026-08-28"
   },
   "source_hashes": {
-    "docs/core/02_equations/covariant/uet_curved_3p1_generalized_harmonic.py": "4f0c8ed0e5afe52e43cedefeb9c061e10dbd440fd20e8bc57a8aacfa43e76f92",
-    "docs/scripts/audit/audit_uet_curved_3p1_gh_nonlinear_vacuum.py": "f79d0dca5ee910ee34fcc57c061e688feaca592098383429e81bd975a7881e7c",
+    "core/02_equations/covariant/uet_curved_3p1_generalized_harmonic.py": "4f0c8ed0e5afe52e43cedefeb9c061e10dbd440fd20e8bc57a8aacfa43e76f92",
+    "docs/scripts/audit/audit_uet_curved_3p1_gh_nonlinear_vacuum.py": "94c609063e1205dc63c1e497840bb75fbc4e8fbd4952d1a032c935346a8b2c3c",
     "docs/data/external/gr_3p1/lindblom_et_al_2006_gh/source_record.json": "c3812246cabdc3e4de2cb266945a0355bc0d64b7ae1d041507e764fe0199d08a",
-    "docs/core/07_artifacts/verification/curved_3p1_gh_principal_system_verification.json": "c6e5b0501d20129410d6a97d771466fc9b848d9d03b213b2a88b9dbe1df14cea"
+    "core/07_artifacts/verification/curved_3p1_gh_principal_system_verification.json": "71f07843a8430d76120bd176a43218bc7c929e9bafc632badc746bd65011b694"
   },
   "open_items": [
     "time integration and CFL policy",

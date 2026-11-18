@@ -60,13 +60,14 @@ def test_single_type_converges_to_analytic_equilibrium() -> None:
 def test_lowest_r_star_excludes_competitors(seed: int) -> None:
     import random
     rng = random.Random(7000 + seed)
-    types = [sel.SystemType(rng.uniform(0.5, 3.0), rng.uniform(0.2, 2.0), rng.uniform(0.1, 1.0)) for _ in range(3)]
-    stars = sorted(t.r_star() for t in types)
-    if stars[1] - stars[0] < 0.05 * stars[0]:
-        pytest.skip("near-tie in R*; exclusion too slow to resolve in the horizon")
     S, delta = 2.0, 0.1
-    if S <= delta * stars[0]:
-        pytest.skip("no type can persist")
+    # Redraw (deterministically) until the lowest R* is separated by at least 5 percent, so exclusion
+    # resolves within the horizon, and some type can persist. Every seed then runs; none is skipped.
+    while True:
+        types = [sel.SystemType(rng.uniform(0.5, 3.0), rng.uniform(0.2, 2.0), rng.uniform(0.1, 1.0)) for _ in range(3)]
+        stars = sorted(t.r_star() for t in types)
+        if stars[1] - stars[0] >= 0.05 * stars[0] and S > delta * stars[0]:
+            break
     N, R = sel.simulate_competition([0.2, 0.2, 0.2], 1.0, types, S, delta, horizon=3000.0, dt=0.02)
     winner = sel.predicted_winner(types)
     N_star, R_star = sel.single_type_equilibrium(types[winner], S, delta)

@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "artifact": "curved_3p1_geometry_operator_verification",
-  "generated_at": "2026-09-20T04:19:58.230484+00:00",
+  "generated_at": "2026-11-18T12:34:22.340224+00:00",
   "topic": "docs/core curved 3+1 parent",
   "version": "periodic-geometry-operator-v1",
   "benchmark_role": "internal analytic and convergence gate",
@@ -81,8 +81,8 @@
     }
   },
   "source_hashes": {
-    "docs/core/02_equations/covariant/uet_curved_3p1_geometry.py": "02f643a7d6efc3fb24508546477d647e12015ebdc7f1a70b4adeaeb1952266d3",
-    "docs/scripts/audit/audit_uet_curved_3p1_geometry.py": "3fa9f34e04265e870906ea2c5ca566228234080d6ced76ec70cd90b784c456e5",
+    "core/02_equations/covariant/uet_curved_3p1_geometry.py": "02f643a7d6efc3fb24508546477d647e12015ebdc7f1a70b4adeaeb1952266d3",
+    "docs/scripts/audit/audit_uet_curved_3p1_geometry.py": "899b3ddf20094154f37b22fa21d48be98c175424b2c7ea036c7e32f37616984f",
     "docs/data/external/gr_3p1/gourgoulhon_2007/source_record.json": "d989b9dd637828dd64f975eaf1f744163ac71e362bde71e46e86e599eced1754"
   },
   "input_identity": {

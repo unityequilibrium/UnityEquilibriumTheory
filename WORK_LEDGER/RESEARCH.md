@@ -6,10 +6,32 @@
 
 These are source-linked historical records, not proof of completed research, successful publication, or current scientific readiness.
 
-Indexed entries: 676. Counts describe records, not accomplishments.
+Indexed entries: 698. Counts describe records, not accomplishments.
 
 | Date | Record | Area | Notes |
 | --- | --- | --- | --- |
+| 2026-11-18 | [Core alignment W10: core docs and complete register](2026/2026-11-18.md#core-alignment-w10-core-docs-and-complete-register) (L275) | research-core | explicit_stream_and_area |
+| 2026-11-18 | [Runner rule: topics without a suite are advisory](2026/2026-11-18.md#runner-rule-topics-without-a-suite-are-advisory) (L265) | research-standards | explicit_stream_and_area |
+| 2026-11-18 | [CI follow-up on PR #64](2026/2026-11-18.md#ci-follow-up-on-pr-64) (L254) | research-core | explicit_stream_and_area |
+| 2026-11-18 | [Core alignment W9: governance, data and history](2026/2026-11-18.md#core-alignment-w9-governance-data-and-history) (L244) | research-core | explicit_stream_and_area |
+| 2026-11-18 | [Core alignment W8: artifacts labelled, failing legacy tests archived](2026/2026-11-18.md#core-alignment-w8-artifacts-labelled-failing-legacy-tests-archived) (L234) | research-core | explicit_stream_and_area |
+| 2026-11-18 | [W7 repair: stale hashes after the root move](2026/2026-11-18.md#w7-repair-stale-hashes-after-the-root-move) (L223) | research-core | explicit_stream_and_area |
+| 2026-11-18 | [Core alignment W7: test labels and the CI cause](2026/2026-11-18.md#core-alignment-w7-test-labels-and-the-ci-cause) (L213) | research-core | explicit_stream_and_area |
+| 2026-11-18 | [Core alignment W6: contracts, proofs and review](2026/2026-11-18.md#core-alignment-w6-contracts-proofs-and-review) (L203) | research-core | explicit_stream_and_area |
+| 2026-11-18 | [T023 result at L2 (INCONCLUSIVE)](2026/2026-11-18.md#t023-result-at-l2-inconclusive) (L193) | research-core | explicit_stream_and_area |
+| 2026-11-18 | [T023 run: INCONCLUSIVE, bats between other mammals and birds](2026/2026-11-18.md#t023-run-inconclusive-bats-between-other-mammals-and-birds) (L183) | research-core | explicit_stream_and_area |
+| 2026-11-18 | [Species-level reserve and Test Card T023 draft (bats)](2026/2026-11-18.md#species-level-reserve-and-test-card-t023-draft-bats) (L173) | research-core | explicit_stream_and_area |
+| 2026-11-18 | [Layer 3 mapped onto Saavedra et al. 2025 (SFI metabolic coexistence)](2026/2026-11-18.md#layer-3-mapped-onto-saavedra-et-al-2025-sfi-metabolic-coexistence) (L163) | research-core | explicit_stream_and_area |
+| 2026-11-18 | [SFI scaling theory against UET layer 3](2026/2026-11-18.md#sfi-scaling-theory-against-uet-layer-3) (L153) | research-core | explicit_stream_and_area |
+| 2026-11-18 | [Core alignment W5: thermal and topic13_support](2026/2026-11-18.md#core-alignment-w5-thermal-and-topic13_support) (L143) | research-core | explicit_stream_and_area |
+| 2026-11-18 | [Core alignment W4: o2](2026/2026-11-18.md#core-alignment-w4-o2) (L133) | research-core | explicit_stream_and_area |
+| 2026-11-18 | [T022 result at L2](2026/2026-11-18.md#t022-result-at-l2) (L123) | research-core | explicit_stream_and_area |
+| 2026-11-18 | [T022 rerun under amendment 1: PASS](2026/2026-11-18.md#t022-rerun-under-amendment-1-pass) (L113) | research-core | explicit_stream_and_area |
+| 2026-11-18 | [T022 run: FAILED by a numerical defect in the approved script](2026/2026-11-18.md#t022-run-failed-by-a-numerical-defect-in-the-approved-script) (L103) | research-core | explicit_stream_and_area |
+| 2026-11-18 | [O8 and T022 draft: Michelson-Morley and Kennedy-Thorndike](2026/2026-11-18.md#o8-and-t022-draft-michelson-morley-and-kennedy-thorndike) (L93) | research-core | explicit_stream_and_area |
+| 2026-11-18 | [Core alignment W3: matter_space](2026/2026-11-18.md#core-alignment-w3-matter_space) (L83) | research-core | explicit_stream_and_area |
+| 2026-11-18 | [Core alignment W2: active lanes and engine](2026/2026-11-18.md#core-alignment-w2-active-lanes-and-engine) (L73) | research-core | explicit_stream_and_area |
+| 2026-11-18 | [Core alignment W1: covariant and lorentz_noether](2026/2026-11-18.md#core-alignment-w1-covariant-and-lorentz_noether) (L63) | research-core | explicit_stream_and_area |
 | 2026-11-18 | [Agent guide: no lead agent, one folder, verify other agents' claims](2026/2026-11-18.md#agent-guide-no-lead-agent-one-folder-verify-other-agents-claims) (L43) | research-standards | explicit_stream_and_area |
 | 2026-11-18 | [Stage 2 of test D: transport w_T design check](2026/2026-11-18.md#stage-2-of-test-d-transport-w_t-design-check) (L13) | research-core | explicit_stream_and_area |
 | 2026-11-18 | [T021 result at L2](2026/2026-11-18.md#t021-result-at-l2) (L3) | research-core | explicit_stream_and_area |

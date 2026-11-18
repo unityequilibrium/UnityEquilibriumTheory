@@ -18,6 +18,15 @@ def test_topic_without_tests_is_incomplete_not_pass(tmp_path: Path) -> None:
     assert missing == ["0.40_Example: no pytest regression suite discovered"]
 
 
+def test_topic_gaps_are_advisory_but_other_gaps_block() -> None:
+    missing = ["0.40_Example: no pytest regression suite discovered",
+               "0.24_Example: limited suite: synthetic only",
+               "docs/scripts/standard/check_schema.py: required checker missing",
+               "changed files do not map to a Core/shared test suite or numbered Topic"]
+    assert runner.blocking_gaps(missing) == missing[2:]
+    assert all(runner.is_advisory_topic_gap(entry) for entry in missing[:2])
+
+
 def test_incomplete_coverage_exit_code_takes_precedence_over_failures() -> None:
     assert runner._program_exit_code(failed=0, incomplete=False) == 0
     assert runner._program_exit_code(failed=1, incomplete=False) == 1
@@ -33,7 +42,9 @@ def test_profile_software_tests_do_not_close_topic_coverage(tmp_path: Path) -> N
     assert len(suites) == 1
     assert any("limited suite" in message and "engine/research" in message for message in missing)
     assert any("thermal-stability" in message for message in missing)
-    assert runner._program_exit_code(failed=0, incomplete=bool(missing)) == 2
+    # limited-suite gaps are reported but advisory (owner decision 2026-11-18)
+    assert runner.blocking_gaps(missing) == []
+    assert runner._program_exit_code(failed=0, incomplete=bool(runner.blocking_gaps(missing))) == 0
 
 
 def test_nested_profile_outcome_is_read_without_becoming_physical_validation(tmp_path: Path) -> None:
@@ -59,7 +70,7 @@ def test_ai_synthetic_suite_does_not_close_live_benchmark_or_engine_coverage(tmp
     assert len(missing) == 1
     assert "synthetic scaling/sparsity" in missing[0]
     assert "AI engine paths" in missing[0]
-    assert runner._program_exit_code(failed=0, incomplete=bool(missing)) == 2
+    assert runner.blocking_gaps(missing) == []
 
 
 def test_profile_only_scope_reopens_if_code_is_added_or_missing(tmp_path: Path) -> None:
@@ -386,5 +397,5 @@ def test_human_report_separates_software_and_research_outcomes() -> None:
     assert "software test/check failed" in rendered
     assert "no producer was rerun" in rendered
     assert "Program exit code: `2`" in rendered
-    assert "INCOMPLETE: 0.2_Example" in rendered
+    assert "ADVISORY (does not change the exit code): 0.2_Example" in rendered
     assert "| FAIL | 1 |" in rendered

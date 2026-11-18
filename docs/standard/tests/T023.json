@@ -1,0 +1,45 @@
+{
+  "schema": "uet-test-card-v2",
+  "test_id": "T023",
+  "status": "APPROVED",
+  "claim_id": "C_T023_FLIGHT_LIFETIME_ENERGY",
+  "theory_card": {
+    "card_id": "UET_PARENT",
+    "version": 1
+  },
+  "hypothesis": "Author (2026-11-18): an organism may manage its resources for its species rather than for itself. AI translation in layer 3: the lifetime reserve per gram is set at species level by extrinsic mortality; flight lowers extrinsic mortality, so flying lineages spend more energy per gram over a lifetime. T018 found birds about 2.5 times above mammals (d_bird = 0.39 in log10). If flight, not class, sets the reserve, bats sit with the birds: d_bat > 0 and d_bat close to d_bird. Rate of living (no species-level allocation) gives d_bat = 0.",
+  "observable": {
+    "quantity": "bat offset d_bat and Delta = d_bat - d_bird in log10 LEP = a + s log10 M + d_bird [bird] + d_bat [Chiroptera]",
+    "unit": "log10 ratio",
+    "domain": "AnAge Build 15 Aves and Mammalia selected exactly as in T018 (298 species: 128 birds, 24 bats, 146 other mammals)"
+  },
+  "test_kind": "CONSTRAINT",
+  "data_sources": [
+    {
+      "data_id": "ANAGE_BUILD15_LONGEVITY_METABOLISM",
+      "role": "COMPARISON",
+      "exposure": "SEEN_SUMMARY"
+    }
+  ],
+  "prediction_method": {
+    "script": "core/03_lanes/persistence/t023_flight_lifetime_energy.py",
+    "description": "Ordinary least squares of log10 LEP on log10 M, a bird indicator and a bat indicator; 95 percent percentile intervals from 10,000 species-level bootstrap resamples (seed 20261118), each resample required to contain at least one bat and one bird."
+  },
+  "free_parameters": [],
+  "fixed_parameters": [
+    "selection identical to T018; no species removed after the outcome is seen",
+    "metabolic rate as given by AnAge (resting or basal)",
+    "year = 365.25 days",
+    "no phylogenetic correction (AI choice; makes intervals too narrow)",
+    "thresholds 0.18 (about 1.5 times) and 0.25 (about 1.8 times) fixed before the run"
+  ],
+  "pass_criterion": "PASS if the 95 percent interval of d_bat lies wholly above 0.18 and the 95 percent interval of Delta lies inside [-0.25, 0.25].",
+  "fail_criterion": "FAILED if the upper end of the 95 percent interval of d_bat is below 0.18, or the 95 percent interval of Delta lies wholly outside [-0.25, 0.25]; INCONCLUSIVE otherwise.",
+  "drafted_by": "claude",
+  "note": "Disclosure: not blind. Biology already reports that bats live long for their size (Austad and Fischer 1991, J. Gerontol. 46, B47; Brunet-Rossinni and Austad 2004; Wilkinson and South 2002) and that flight is linked to longevity in birds and bats (Matsuda and Makino 2024; Ikemoto et al. 2020). The 24 bats were inside the mammal group of T018, so they shaped that pooled fit, but no bat LEP was computed separately before drafting; only the counts (24 bats, 2 flightless birds) were read. Known bias in favour of PASS: many bats hibernate or use daily torpor, so a resting metabolic rate times maximum longevity overstates their lifetime energy; AnAge has no hibernation field to correct this, so a PASS cannot separate species-level allocation from torpor. Nearest theory: disposable soma (Kirkwood 1977) and extrinsic-mortality theory of ageing; a PASS would show layer 3 can carry a species-level reserve, not a UET-distinct result. The two flightless birds are reported only. Approved by the author on 2026-11-18 as drafted.",
+  "approval": {
+    "approved_by": "santxkoz",
+    "date": "2026-11-18",
+    "role": "AUTHOR"
+  }
+}
