@@ -435,6 +435,15 @@
       "note": "Layer 3 capture and death rates follow from the action for the portal channel; supply, loss and the set of modes do not. Nearest known theory: laser rate equations and mode competition, beam-plasma Cherenkov instability, consumer-resource ecology. Not UET-distinct."
     },
     {
+      "claim_id": "C_L3_SUPPLY",
+      "statement": "With the parent action's chi self-coupling lam = lambda/Z^2, the layer 3 stream pool loses particles at delta = n_sink <sigma_tot v> with sigma_tot = 3 lam^2/(2 pi s); the supply S is not fixed by the action (S = 0 in a region holding only its fields), and a phi mode persists in steady state only if the boundary supply exceeds S* = delta R*_min.",
+      "level": "L1_CONSISTENT",
+      "evidence": [
+        "R_L3_SUPPLY"
+      ],
+      "note": "The pool loss follows from the action; the supply is a boundary flux set by an enclosing system. Nearest known theory: beam attenuation, chemostat dilution, laser pump threshold. Not UET-distinct."
+    },
+    {
       "claim_id": "C_T024_INNOVATION_INTERVAL",
       "statement": "Intervals between successive lighting introductions (Nordhaus 1997, Table 1.1) shrink with world population as Delta t ~ N^-(beta-1) with beta = 1.27 (Bettencourt et al. 2007), not as N^-1 (Kremer 1993).",
       "level": "FAILED",

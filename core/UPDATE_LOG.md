@@ -634,3 +634,9 @@ commit: this commit
 - ผล: อัตราการตาย 1/τ = อัตราหน่วงชั้น 2; อัตราการจับ a = −ρ_stream/(2w) เป็นเชิงเส้นใน R แบบตรง; แหล่งที่เท่ากันทุกทิศหน่วงได้อย่างเดียว; กระแสที่ไหลด้วย v ป้อนเฉพาะ w < vq; R* ต่ำสุดชนะ
 - ตรวจ: 36 physics tests (ลิมิตชั้น 2, Lorentz boost ทางอิสระ, bump กลับด้าน, Cherenkov, ความเป็นเชิงเส้น, การคัดเลือก)
 - ยังไม่ได้: S, δ และชุดโหมด; กลไกกระแสไหลเป็นช่องที่ AI เลือก ใกล้ laser rate equations / beam-plasma; ไม่ใช่สิ่งเฉพาะของ UET
+
+## 2026-11-19 — Layer 3 pool loss and supply threshold (C_L3_SUPPLY, L1)
+- ทำ: `03_lanes/persistence/uet_layer3_supply.py` อ่าน λ/Z² จาก action แล้วคำนวณอัตราที่กระแส χ ถูกชนออก δ = n_sink⟨σv⟩
+- ผล: δ มาจาก action; S ไม่ได้มา (ถ้ามีแต่สนามของ action, S = 0 และทุกโหมดตาย); อยู่รอดได้เมื่อขอบเขตเติม S > S* = δR*ₘᵢₙ
+- ตรวจ: 13 physics tests (ค่า λ จาก action, ตาราง amplitude, ลิมิตไม่สัมพัทธ์ order T/M, ความหนาแน่น Bose → Boltzmann, เกณฑ์ S*)
+- ข้อจำกัด: tree level, ใช้โมเมนตัมแบบ Boltzmann, การชนหนึ่งครั้ง = ออกจากกระแส; ใกล้ beam attenuation / chemostat / pump threshold ของเลเซอร์

@@ -4,7 +4,7 @@
 >
 > The Thai and English files have the same content. Edit both together.
 
-![Evidence](https://img.shields.io/badge/claims-28_L1_·_18_L2_·_3_FAILED-blue)
+![Evidence](https://img.shields.io/badge/claims-29_L1_·_18_L2_·_3_FAILED-blue)
 ![Topics](https://img.shields.io/badge/research_topics-40-blue)
 ![License](https://img.shields.io/badge/License-MIT-green)
 
@@ -80,7 +80,9 @@ the one that can live on the lowest resource level R\* wins; with two resources 
 (claims `C_L3_SELECTION_FORMAL` and `C_L3_BURN_LAW_SELECTION`, L1).
 From the layer 1 action, the death rate 1/τ is the layer 2 damping rate and the capture rate comes from the same one-loop spectral function:
 an isotropic pool of any distribution can only damp a mode, while a flowing stream feeds exactly the modes slower than the flow (the Cherenkov condition),
-and the lowest R\* wins as before (claim `C_L3_FROM_ACTION`, L1; supply, loss and the set of modes are not fixed by the action).
+and the lowest R\* wins as before (claim `C_L3_FROM_ACTION`, L1).
+The pool's loss rate also follows from the action (χ self-coupling), but its supply does not: with only the action's fields nothing persists,
+and a structure stays alive only if its boundary supplies more than S\* = δR\*ₘᵢₙ (claim `C_L3_SUPPLY`, L1).
 
 **What the equations do not yet do:** layer 2 is derived from the layer 1 action for one channel only, and layer 3 only for its capture and death rates, so the three layers are not yet one action,
 and the layers do not yet give a number that the established theories do not (section 3).
@@ -142,7 +144,7 @@ What UET can add is a tested map of where one set of rules holds across fields, 
 ## 4. Evidence so far
 
 Levels follow [`docs/STANDARD.md`](docs/STANDARD.md): `L1` internally consistent, `L2` confronted with external data, `L3` externally replicated.
-The registry is [`docs/standard/claims.json`](docs/standard/claims.json) (49 claims: 28 at L1, 18 at L2, 3 FAILED; none at L3).
+The registry is [`docs/standard/claims.json`](docs/standard/claims.json) (50 claims: 29 at L1, 18 at L2, 3 FAILED; none at L3).
 Test criteria were committed and approved before each comparison. None of these comparisons was blind.
 
 **Failed** (kept as results, not hidden):
