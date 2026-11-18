@@ -6,10 +6,12 @@
 
 These are source-linked historical records, not proof of completed research, successful publication, or current scientific readiness.
 
-Indexed entries: 131. Counts describe records, not accomplishments.
+Indexed entries: 133. Counts describe records, not accomplishments.
 
 | Date | Record | Area | Notes |
 | --- | --- | --- | --- |
+| 2026-11-18 | [README v0.9.1 in English and Thai](2026/2026-11-18.md#readme-v091-in-english-and-thai) (L33) | documentation-system | explicit_stream_and_area |
+| 2026-11-18 | [PR #59 admin merge past a known legacy CI failure](2026/2026-11-18.md#pr-59-admin-merge-past-a-known-legacy-ci-failure) (L23) | repo-ops | explicit_stream_and_area |
 | 2026-11-16 | [Owner-requested publication of the root-layout repair branch](2026/2026-11-16.md#owner-requested-publication-of-the-root-layout-repair-branch) (L63) | repo-ops | explicit_stream_and_area |
 | 2026-11-16 | [Topic 10 archived-source locator recovery](2026/2026-11-16.md#topic-10-archived-source-locator-recovery) (L51) | repo-ops | explicit_stream_and_area |
 | 2026-11-16 | [Full Desktop regression checkpoint and declared-predecessor guard repair](2026/2026-11-16.md#full-desktop-regression-checkpoint-and-declared-predecessor-guard-repair) (L39) | repo-ops | explicit_stream_and_area |
