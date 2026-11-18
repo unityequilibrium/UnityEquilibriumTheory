@@ -177,13 +177,13 @@ This directory contains the **computational core** of the Unity Equilibrium Theo
 The following seven-term functional is retained as a legacy candidate implementation; it is not a closed physical derivation:
 
 $$
-\Omega[C,I,J] = \int d^3x \left[ 
-\underbrace{V(C)}_{\text{A1: Energy}} + 
-\underbrace{\frac{\kappa}{2}|\nabla C|^2}_{\text{A3: Space/Memory}} + 
-\underbrace{\beta C \cdot I}_{\text{A2: Info Coupling}} + 
-\underbrace{\gamma_J (J_{in} - J_{out}) \cdot C}_{\text{A4: Semi-Open Exchange}} + 
-\underbrace{W_N |\nabla \Omega|}_{\text{A5: Natural Will}} + 
-\underbrace{\beta_U V_{game}}_{\text{A8: Dynamic Game}} + 
+\Omega[C,I,J] = \int d^3x \left[
+\underbrace{V(C)}_{\text{A1: Energy}} +
+\underbrace{\frac{\kappa}{2}|\nabla C|^2}_{\text{A3: Space/Memory}} +
+\underbrace{\beta C \cdot I}_{\text{A2: Info Coupling}} +
+\underbrace{\gamma_J (J_{in} - J_{out}) \cdot C}_{\text{A4: Semi-Open Exchange}} +
+\underbrace{W_N |\nabla \Omega|}_{\text{A5: Natural Will}} +
+\underbrace{\beta_U V_{game}}_{\text{A8: Dynamic Game}} +
 \underbrace{\lambda \Sigma (C_i - C_j)^2}_{\text{A10: Coherence}}
 \right]
 $$
