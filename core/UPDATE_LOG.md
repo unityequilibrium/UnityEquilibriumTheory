@@ -593,3 +593,7 @@ commit: this commit
 - แก้: physics test ของชั้น 3 ที่เคยข้าม 1 กรณี ตอนนี้สุ่มใหม่แบบกำหนดได้แทนการข้าม (อัปเดต hash ใน contract l3 และ t002); pattern ของ calculation-completeness ใน runner ไม่เคยตรงกับ output จริงที่มีช่องว่าง จึงแก้ให้รับช่องว่าง
 - เก็บเข้าคลัง: test ของ topic 0.10 ที่ล้ม 18 ไฟล์ (สาย O(2) ฮีเลียม ป้าย C, hash ต้นทางเก่าจากก่อนย้ายโฟลเดอร์) ไปที่ topics/0.10_Fluid_Dynamics_Chaos/Archive/tests
 - ค้าง (โครงสร้าง): ถ้า PR แก้ core runner จะรันทุก topic และนับ 34 topic ที่ไม่มี test เป็น coverage gap ทำให้ exit 2 เสมอ ต้องให้เจ้าของตัดสินกติกา
+
+## 2026-11-18 — Runner rule: topics without a suite are advisory (owner decision)
+- ทำ: แก้ topics/run_all_tests.py ให้ topic ที่ไม่มีชุด test หรือมีแค่ชุดจำกัดถูกรายงานเป็น ADVISORY และไม่ทำให้ exit code เป็น 2 ส่วน gap อื่น (checker หาย, collect ไม่ได้, change ที่จับคู่ไม่ได้) ยังทำให้ล้มเหมือนเดิม และถ้าไม่มีชุดไหนได้รันเลยก็ยังขึ้น incomplete
+- ตรวจ: runner tests 70 ผ่าน (เพิ่ม test ที่แยก advisory กับ blocking)

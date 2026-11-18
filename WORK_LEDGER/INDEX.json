@@ -5,11 +5,11 @@
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
     "sources": 81,
-    "entries": 925,
+    "entries": 926,
     "by_stream": {
       "book-history": 94,
       "operations": 134,
-      "research": 696,
+      "research": 697,
       "review": 1
     },
     "exact_duplicates": 0,
@@ -420,8 +420,8 @@
     },
     {
       "path": "2026/2026-11-18.md",
-      "sha256": "b57261144247fb676997177d56c9c4e58d8d63761bdba5f2e3c3d84c2e454b9a",
-      "entries": 26
+      "sha256": "14de6539a814f4d304276960ce8468c0eca3c45afe3b10d0cf4b8a62df108640",
+      "entries": 27
     },
     {
       "path": "2026-08-14.md",
@@ -18881,12 +18881,32 @@
       "source": "2026/2026-11-18.md",
       "anchor": "ci-follow-up-on-pr-64",
       "start_line": 254,
-      "end_line": 263,
+      "end_line": 264,
       "title": "CI follow-up on PR #64",
-      "entry_sha256": "ee68e6dd70ef9c8d611ca85abedfc174bc42fbe04cbd3fbe1db93336c8bd921a",
+      "entry_sha256": "c0bba0e22160ab13aa232b92cf2b0f6d0e23074a9877446f5645ef4a98dd37d0",
       "stream": "research",
       "areas": [
         "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-18",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-18.md#runner-rule-topics-without-a-suite-are-advisory",
+      "source": "2026/2026-11-18.md",
+      "anchor": "runner-rule-topics-without-a-suite-are-advisory",
+      "start_line": 265,
+      "end_line": 273,
+      "title": "Runner rule: topics without a suite are advisory",
+      "entry_sha256": "a1f5d903781dbee1e78278d7b922011d447ad369c0fe81f5e7b4fd1ff79eb2d5",
+      "stream": "research",
+      "areas": [
+        "research-standards"
       ],
       "related_streams": [
         "research"
