@@ -587,3 +587,9 @@ commit: this commit
 - ผล: A 47 (contract 44 ฉบับของ Test Card และ formal check ปัจจุบัน), C 362 (สำเนา shim, บันทึก migration, log เก่า, source package เก่า), D 155 (redirect stub และ alias registry ที่ import ยังต้องใช้)
 - ระดับ: ไม่เปลี่ยน claim ใด; ไม่ย้ายไฟล์ (contract ต้องอยู่ที่เดิมเพราะ CI audit อ่าน)
 - ถัดไป: W10 เอกสารหน้า core และเพิ่มไฟล์ใหม่ที่ inventory ไม่ได้นับ
+
+## 2026-11-18 — CI follow-up on PR #64
+- ผล CI รอบแรก: Topic 0.13, calculation-audit-tests และ runner ผ่าน; topic 0.10 ล้ม; core-tests, physics-tests และ calculation-completeness ขึ้น INCOMPLETE
+- แก้: physics test ของชั้น 3 ที่เคยข้าม 1 กรณี ตอนนี้สุ่มใหม่แบบกำหนดได้แทนการข้าม (อัปเดต hash ใน contract l3 และ t002); pattern ของ calculation-completeness ใน runner ไม่เคยตรงกับ output จริงที่มีช่องว่าง จึงแก้ให้รับช่องว่าง
+- เก็บเข้าคลัง: test ของ topic 0.10 ที่ล้ม 18 ไฟล์ (สาย O(2) ฮีเลียม ป้าย C, hash ต้นทางเก่าจากก่อนย้ายโฟลเดอร์) ไปที่ topics/0.10_Fluid_Dynamics_Chaos/Archive/tests
+- ค้าง (โครงสร้าง): ถ้า PR แก้ core runner จะรันทุก topic และนับ 34 topic ที่ไม่มี test เป็น coverage gap ทำให้ exit 2 เสมอ ต้องให้เจ้าของตัดสินกติกา

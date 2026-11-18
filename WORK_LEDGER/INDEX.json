@@ -5,11 +5,11 @@
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
     "sources": 81,
-    "entries": 924,
+    "entries": 925,
     "by_stream": {
       "book-history": 94,
       "operations": 134,
-      "research": 695,
+      "research": 696,
       "review": 1
     },
     "exact_duplicates": 0,
@@ -420,8 +420,8 @@
     },
     {
       "path": "2026/2026-11-18.md",
-      "sha256": "c7e668760cc7c6ae7db9615dae5e59bdb10f11164bf229f363dec0fc61cd35b1",
-      "entries": 25
+      "sha256": "b57261144247fb676997177d56c9c4e58d8d63761bdba5f2e3c3d84c2e454b9a",
+      "entries": 26
     },
     {
       "path": "2026-08-14.md",
@@ -18861,9 +18861,29 @@
       "source": "2026/2026-11-18.md",
       "anchor": "core-alignment-w9-governance-data-and-history",
       "start_line": 244,
-      "end_line": 252,
+      "end_line": 253,
       "title": "Core alignment W9: governance, data and history",
-      "entry_sha256": "c93f6326f75344fff55181bd8a32c3f6c87c23254d2cf68c2b92bfb656d94d62",
+      "entry_sha256": "6e8b55b5a64dc72b90c9717b27110cae9f8c00980c7fc2993152aa90b845c354",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-18",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-18.md#ci-follow-up-on-pr-64",
+      "source": "2026/2026-11-18.md",
+      "anchor": "ci-follow-up-on-pr-64",
+      "start_line": 254,
+      "end_line": 263,
+      "title": "CI follow-up on PR #64",
+      "entry_sha256": "ee68e6dd70ef9c8d611ca85abedfc174bc42fbe04cbd3fbe1db93336c8bd921a",
       "stream": "research",
       "areas": [
         "research-core"

@@ -492,7 +492,7 @@ def all_suites(root: Path = REPO_ROOT) -> tuple[list[Suite], list[dict[str, Any]
     for suite_id, script, args, success_pattern in (
         ("research-schema", "docs/scripts/standard/check_schema.py", [], r"^check_schema: 0 error\(s\)$"),
         ("test-preregistration", "docs/scripts/standard/check_preregistration.py", [], r"^check_preregistration: 0 error\(s\)$"),
-        ("calculation-completeness", "docs/scripts/audit/audit_calculation_completeness.py", ["--check"], r'^\{"contracts":\d+,"discovered_routes":\d+,"errors":0,'),
+        ("calculation-completeness", "docs/scripts/audit/audit_calculation_completeness.py", ["--check"], r'^\{"contracts":\s*\d+,\s*"discovered_routes":\s*\d+,\s*"errors":\s*0,'),
         ("physics-tests", "docs/scripts/standard/check_physics_tests.py", ["core/05_tests/physics", "--min-physics", "1"], r"^check_physics_tests: physics=[1-9]\d* "),
     ):
         if (root / script).is_file():
