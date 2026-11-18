@@ -428,9 +428,11 @@
     {
       "claim_id": "C_T024_INNOVATION_INTERVAL",
       "statement": "Intervals between successive lighting introductions (Nordhaus 1997, Table 1.1) shrink with world population as Delta t ~ N^-(beta-1) with beta = 1.27 (Bettencourt et al. 2007), not as N^-1 (Kremer 1993).",
-      "level": "L0_SPECULATIVE",
-      "evidence": [],
-      "note": "Draft Test Card T024 awaits the author's approval. Decides which borrowed principle the synthesis uses; not UET-distinct."
+      "level": "FAILED",
+      "evidence": [
+        "R_T024_INNOVATION_INTERVAL"
+      ],
+      "note": "T024 FAILED for beta = 1.27 (slope -1.43, 95% -2.14 to -0.72; contains Kremer's -1). For innovation rate against world population the synthesis borrows Kremer (1993), not the urban-scaling exponent. Scope: lighting, world population; urban scaling within cities is not tested. Approved by the author 2026-11-18."
     }
   ]
 }

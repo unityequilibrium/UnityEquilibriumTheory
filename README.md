@@ -4,7 +4,7 @@
 >
 > The Thai and English files have the same content. Edit both together.
 
-![Evidence](https://img.shields.io/badge/claims-25_L1_·_18_L2_·_2_FAILED-blue)
+![Evidence](https://img.shields.io/badge/claims-27_L1_·_18_L2_·_3_FAILED-blue)
 ![Topics](https://img.shields.io/badge/research_topics-40-blue)
 ![License](https://img.shields.io/badge/License-MIT-green)
 
@@ -139,7 +139,7 @@ What UET can add is a tested map of where one set of rules holds across fields, 
 ## 4. Evidence so far
 
 Levels follow [`docs/STANDARD.md`](docs/STANDARD.md): `L1` internally consistent, `L2` confronted with external data, `L3` externally replicated.
-The registry is [`docs/standard/claims.json`](docs/standard/claims.json) (47 claims: 27 at L1, 18 at L2, 2 FAILED; none at L3).
+The registry is [`docs/standard/claims.json`](docs/standard/claims.json) (48 claims: 27 at L1, 18 at L2, 3 FAILED; none at L3).
 Test criteria were committed and approved before each comparison. None of these comparisons was blind.
 
 **Failed** (kept as results, not hidden):
@@ -148,6 +148,7 @@ Test criteria were committed and approved before each comparison. None of these 
 |---|---|---|
 | T015 | Superfluid He II as the condensed phase of the parent action's matter field, at tree level (the lane Topic 13 assumed) | FAILED: sound speed 848 m/s calculated vs 233.1 m/s measured, 3.6 times too high |
 | T018 | Animal lifespan = one reserve per gram ÷ metabolic rate, the same in every species (author's scope, 2026-11-17) | FAILED: birds use about 2.5 times more energy per gram over their lifespan than mammals of the same mass |
+| T024 | Intervals between lighting innovations shrink with world population as N^-0.27 (urban scaling, Bettencourt et al. 2007) | FAILED: slope -1.43 (95%: -2.14 to -0.72), consistent with Kremer's (1993) -1; the synthesis borrows Kremer for innovation against world population |
 
 **Confronted with data (L2):**
 
