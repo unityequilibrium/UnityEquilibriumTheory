@@ -5,11 +5,11 @@
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
     "sources": 81,
-    "entries": 930,
+    "entries": 931,
     "by_stream": {
       "book-history": 94,
       "operations": 135,
-      "research": 700,
+      "research": 701,
       "review": 1
     },
     "exact_duplicates": 0,
@@ -420,8 +420,8 @@
     },
     {
       "path": "2026/2026-11-18.md",
-      "sha256": "262db63556b41424633fb33b855b0b2ccfde1823d3036ab8c3376b44e993a69e",
-      "entries": 31
+      "sha256": "26a5bd6e349a8b0c5568ae84ed5f7586306abaff902c7bf8b3ac8c4a936bd2a4",
+      "entries": 32
     },
     {
       "path": "2026-08-14.md",
@@ -18981,9 +18981,29 @@
       "source": "2026/2026-11-18.md",
       "anchor": "stage-3-wave-l2-2-layer-2-second-law-from-the-action",
       "start_line": 305,
-      "end_line": 313,
+      "end_line": 314,
       "title": "Stage 3 wave L2-2: layer 2 second law from the action",
-      "entry_sha256": "290c17f72ea86cb17accc8327bd726c20c1b779a8997ee6550a49f35a0fcdc78",
+      "entry_sha256": "0df1558fb149237ac97c07e7eefbc6e8ed73a32c97f6ca0a9d65548b5acb20ea",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-18",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-18.md#t024-run-innovation-intervals-failed-for-beta--127",
+      "source": "2026/2026-11-18.md",
+      "anchor": "t024-run-innovation-intervals-failed-for-beta--127",
+      "start_line": 315,
+      "end_line": 323,
+      "title": "T024 run: innovation intervals (FAILED for beta = 1.27)",
+      "entry_sha256": "17df6195be149308a672a0e966471f7ca93b2a81ab05e86fb774b1b52387f804",
       "stream": "research",
       "areas": [
         "research-core"
