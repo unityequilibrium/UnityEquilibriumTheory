@@ -238,40 +238,40 @@ core/00_governance/uet_core_test_migration_manifest.json	00_governance	.json	D	0
 core/00_governance/uet_core_test_path_repair_v3.json	00_governance	.json	D	0	0	0	5	0	0	0	1	-	-	-
 core/00_governance/uet_core_tool_asset_migration_manifest.json	00_governance	.json	D	0	0	0	5	0	0	0	1	-	-	-
 core/00_governance/uet_research_organization_policy.json	00_governance	.json	D	0	0	0	10	1	0	0	6	-	-	-
-core/01_contracts/BINARY_PULSAR_PILOT_SOURCES.md	01_contracts	.md	REVIEW	1	0	0	1	0	0	1	0	-	-	-
-core/01_contracts/CARRIER_NEUTRAL_COMPARATOR_SPEC.md	01_contracts	.md	REVIEW	0	0	0	12	0	0	0	2	-	-	-
-core/01_contracts/CORE_CURVED_3P1_EVOLUTION_BRANCH_SPEC.md	01_contracts	.md	REVIEW	0	0	0	10	0	0	0	2	-	-	-
-core/01_contracts/COSMOLOGICAL_OPEN_SYSTEM_AND_CAUSAL_TRACE_SPEC.md	01_contracts	.md	REVIEW	0	0	0	13	0	0	0	4	-	-	-
-core/01_contracts/IMPACT_EFFECT_AND_INFORMATION_FLOW_SPEC.md	01_contracts	.md	REVIEW	0	0	0	13	0	0	0	4	-	-	-
-core/01_contracts/JOURNAL_CROSSCHECK_2026-11-10.md	01_contracts	.md	REVIEW	0	0	0	1	0	0	0	1	-	-	-
-core/01_contracts/MASS_DENSITY_CORRESPONDENCE_SPEC.md	01_contracts	.md	REVIEW	0	0	0	13	0	0	0	2	-	-	-
-core/01_contracts/MATTER_INTERACTION_FORWARD_SPEC.md	01_contracts	.md	REVIEW	0	0	0	10	0	0	0	2	-	-	-
-core/01_contracts/MATTER_SPACE_FINITE_CONE_C_SPEC.md	01_contracts	.md	REVIEW	0	0	0	10	0	0	0	1	-	-	-
-core/01_contracts/MATTER_SPACE_RESEARCH_SPEC.md	01_contracts	.md	REVIEW	10	0	0	13	0	16	10	13	-	-	-
-core/01_contracts/O2_SUPERFLUID_EOS_TRANSPORT_SPEC.md	01_contracts	.md	REVIEW	1	0	0	12	0	6	1	5	-	-	-
-core/01_contracts/PERSISTENCE_ENERGY_DIAGNOSTIC_SPEC.md	01_contracts	.md	REVIEW	0	0	0	11	0	0	0	3	-	-	-
-core/01_contracts/README.md	01_contracts	.md	REVIEW	0	0	0	6	0	0	0	1	-	-	-
-core/01_contracts/RELATIONAL_TWO_BODY_BASELINE_SPEC.md	01_contracts	.md	REVIEW	0	0	0	11	0	0	0	4	-	-	-
-core/01_contracts/RESOURCE_PERSISTENCE_PRINCIPLE_SPEC.md	01_contracts	.md	REVIEW	0	0	0	16	0	0	0	3	-	-	-
-core/01_contracts/RESOURCE_SELECTION_DYNAMIC_GAME_SPEC.md	01_contracts	.md	REVIEW	1	0	0	12	0	2	1	5	-	-	-
-core/01_contracts/THERMAL_OBSERVABLE_BRIDGE_SPEC.md	01_contracts	.md	REVIEW	0	0	0	10	0	0	0	2	-	-	-
-core/01_contracts/TRACE_RESEARCH_SPEC.md	01_contracts	.md	REVIEW	0	0	0	9	0	3	0	4	-	-	-
-core/01_contracts/UET_CODE_SURFACE_INVENTORY.md	01_contracts	.md	REVIEW	0	0	0	11	0	0	0	2	-	-	-
-core/01_contracts/UET_CORE_EQUATION_FAMILY_CONTRACT.md	01_contracts	.md	REVIEW	1	0	0	11	0	1	1	3	-	-	-
-core/01_contracts/UET_FOUNDATION_COMPATIBILITY_DECISION.md	01_contracts	.md	REVIEW	0	0	0	12	0	0	0	4	-	-	-
-core/01_contracts/UET_FOUNDATION_CORRESPONDENCE_MATRIX.md	01_contracts	.md	REVIEW	0	0	0	12	0	0	0	2	-	-	-
-core/01_contracts/UET_FOUNDATION_EQUATION_INVENTORY.md	01_contracts	.md	REVIEW	0	0	0	12	0	0	0	2	-	-	-
-core/01_contracts/UET_FOUNDATION_STATUS_AGGREGATE.md	01_contracts	.md	REVIEW	0	0	0	12	0	0	0	2	-	-	-
-core/01_contracts/UET_FUNDAMENTAL_UNIFICATION_HYPOTHESIS_SPEC.md	01_contracts	.md	REVIEW	0	0	0	9	0	0	0	1	-	-	-
-core/01_contracts/UET_GR_NONCLOSED_RESEARCH_SPEC.md	01_contracts	.md	A_DEP	1	0	0	38	0	2	1	24	-	-	-
-core/01_contracts/UET_MAIN_THEORY_AXIOMS_SPEC.md	01_contracts	.md	REVIEW	1	0	0	11	0	2	1	4	-	-	-
-core/01_contracts/correspondence/README.md	01_contracts/correspondence	.md	REVIEW	0	0	0	6	0	0	0	1	-	-	-
-core/01_contracts/correspondence/__init__.py	01_contracts/correspondence	.py	D	0	0	0	6	0	0	0	0	-	-	-
-core/01_contracts/correspondence/uet_gr_correspondence.py	01_contracts/correspondence	.py	A_DEP	0	0	0	20	2	0	0	3	-	-	-
-core/01_contracts/ontology/README.md	01_contracts/ontology	.md	REVIEW	0	0	0	6	0	0	0	1	-	-	-
-core/01_contracts/ontology/__init__.py	01_contracts/ontology	.py	D	0	0	0	6	0	0	0	0	-	-	-
-core/01_contracts/ontology/uet_coarse_graining.py	01_contracts/ontology	.py	A_DEP	0	0	0	20	2	0	0	4	-	-	-
-core/01_contracts/units/uet_parameters.py	01_contracts/units	.py	A_DEP	1	0	0	32	5	111	1	21	-	-	-
+core/01_contracts/BINARY_PULSAR_PILOT_SOURCES.md	01_contracts	.md	REVIEW	1	0	0	1	0	0	1	0	A	W6	Source packet for T001 (parent action to DEF mapping); one contract pins it
+core/01_contracts/CARRIER_NEUTRAL_COMPARATOR_SPEC.md	01_contracts	.md	REVIEW	0	0	0	12	0	0	0	2	C	W6	Contract-only carrier lanes (I_trace, R_gen) of the old C/I ontology; no claim uses it
+core/01_contracts/CORE_CURVED_3P1_EVOLUTION_BRANCH_SPEC.md	01_contracts	.md	REVIEW	0	0	0	10	0	0	0	2	C	W6	Spec of the curved 3+1 tools that W1 labels C
+core/01_contracts/COSMOLOGICAL_OPEN_SYSTEM_AND_CAUSAL_TRACE_SPEC.md	01_contracts	.md	REVIEW	0	0	0	13	0	0	0	4	C	W6	AI reconstruction of an open universe; AUTHOR_PROPOSITION replaces it (open = matter exchanges with structure)
+core/01_contracts/IMPACT_EFFECT_AND_INFORMATION_FLOW_SPEC.md	01_contracts	.md	REVIEW	0	0	0	13	0	0	0	4	C	W6	Impact versus effect ontology of the old C/I chain; no claim uses it
+core/01_contracts/JOURNAL_CROSSCHECK_2026-11-10.md	01_contracts	.md	REVIEW	0	0	0	1	0	0	0	1	A	W6	Journal check of the external numbers used by T001, T002, T005, T006
+core/01_contracts/MASS_DENSITY_CORRESPONDENCE_SPEC.md	01_contracts	.md	REVIEW	0	0	0	13	0	0	0	2	C	W6	Spec of the C to mass-density gate whose code W2 labels C
+core/01_contracts/MATTER_INTERACTION_FORWARD_SPEC.md	01_contracts	.md	REVIEW	0	0	0	10	0	0	0	2	C	W6	Normalized C mapping of matter to interaction; the new equations do not use C
+core/01_contracts/MATTER_SPACE_FINITE_CONE_C_SPEC.md	01_contracts	.md	REVIEW	0	0	0	10	0	0	0	1	C	W6	Spec of a matter_space C candidate (W3 labels the folder C)
+core/01_contracts/MATTER_SPACE_RESEARCH_SPEC.md	01_contracts	.md	REVIEW	10	0	0	13	0	16	10	13	C	W6	Spec of the matter_space C, Phi, Pi prototype (W3 labels C); ten contracts and 16 topic files cite it, so it stays in place
+core/01_contracts/O2_SUPERFLUID_EOS_TRANSPORT_SPEC.md	01_contracts	.md	REVIEW	1	0	0	12	0	6	1	5	B	W6	Spec of the tree-level O(2) EOS and SK interface that W4 labels B (raw material for deriving layer 2 from the action); two contracts pin it
+core/01_contracts/PERSISTENCE_ENERGY_DIAGNOSTIC_SPEC.md	01_contracts	.md	REVIEW	0	0	0	11	0	0	0	3	C	W6	Rayleigh cost on a prescribed C path; not derived from the action and superseded by layer 3
+core/01_contracts/README.md	01_contracts	.md	REVIEW	0	0	0	6	0	0	0	1	A	W6	Folder guide; rewrite in W10 once the C files leave
+core/01_contracts/RELATIONAL_TWO_BODY_BASELINE_SPEC.md	01_contracts	.md	REVIEW	0	0	0	11	0	0	0	4	C	W6	Newtonian comparator for the old relational C coordinate
+core/01_contracts/RESOURCE_PERSISTENCE_PRINCIPLE_SPEC.md	01_contracts	.md	REVIEW	0	0	0	16	0	0	0	3	B	W6	Principle statement (persistence selects resource allocation, no intent) is the author's layer 3; its operational form on a C path is superseded by uet_persistence_selection.py and must be rewritten on layer 3 variables
+core/01_contracts/RESOURCE_SELECTION_DYNAMIC_GAME_SPEC.md	01_contracts	.md	REVIEW	1	0	0	12	0	2	1	5	C	W6	Replicator comparator that preceded the layer 3 consumer-resource model (W2 labels its code C); one contract pins it
+core/01_contracts/THERMAL_OBSERVABLE_BRIDGE_SPEC.md	01_contracts	.md	REVIEW	0	0	0	10	0	0	0	2	C	W6	Synthetic C to temperature map for Topic 13 (W5 labels the thermal lane C)
+core/01_contracts/TRACE_RESEARCH_SPEC.md	01_contracts	.md	REVIEW	0	0	0	9	0	3	0	4	C	W6	Trace lane on the legacy Omega_0[C] functional; layer 2 now lives in 03_lanes/open_system
+core/01_contracts/UET_CODE_SURFACE_INVENTORY.md	01_contracts	.md	REVIEW	0	0	0	11	0	0	0	2	C	W6	Old F0 gate summary of a static code scan; replaced by this register
+core/01_contracts/UET_CORE_EQUATION_FAMILY_CONTRACT.md	01_contracts	.md	REVIEW	1	0	0	11	0	1	1	3	C	W6	Old gate summary grouping code into equation families; one contract pins it
+core/01_contracts/UET_FOUNDATION_COMPATIBILITY_DECISION.md	01_contracts	.md	REVIEW	0	0	0	12	0	0	0	4	C	W6	Generated old-gate status synthesis; v2 levels replace gate statuses
+core/01_contracts/UET_FOUNDATION_CORRESPONDENCE_MATRIX.md	01_contracts	.md	REVIEW	0	0	0	12	0	0	0	2	C	W6	Generated old-gate correspondence matrix; SYNTHESIS_AUDIT replaces it
+core/01_contracts/UET_FOUNDATION_EQUATION_INVENTORY.md	01_contracts	.md	REVIEW	0	0	0	12	0	0	0	2	C	W6	Old F0 equation inventory; replaced by this register and the Theory Card
+core/01_contracts/UET_FOUNDATION_STATUS_AGGREGATE.md	01_contracts	.md	REVIEW	0	0	0	12	0	0	0	2	C	W6	Generated old-gate aggregate; v2 levels replace gate statuses
+core/01_contracts/UET_FUNDAMENTAL_UNIFICATION_HYPOTHESIS_SPEC.md	01_contracts	.md	REVIEW	0	0	0	9	0	0	0	1	C	W6	Blocked QFT-embedding track of the C-lane response scalar; no claim uses it
+core/01_contracts/UET_GR_NONCLOSED_RESEARCH_SPEC.md	01_contracts	.md	A_DEP	1	0	0	38	0	2	1	24	B	W6	Spec of the covariant response field used by the parent action (uet_covariant_response.py cites it); pre-v2 status words and curved 3+1 history need a rewrite to the v2 vocabulary
+core/01_contracts/UET_MAIN_THEORY_AXIOMS_SPEC.md	01_contracts	.md	REVIEW	1	0	0	11	0	2	1	4	C	W6	Axioms of the C-lane chain (C_l, Phi, Pi to R_obs); replaced by the Theory Card and AUTHOR_PROPOSITION; one contract pins it
+core/01_contracts/correspondence/README.md	01_contracts/correspondence	.md	REVIEW	0	0	0	6	0	0	0	1	C	W6	Guide to uet_gr_correspondence.py, labelled C
+core/01_contracts/correspondence/__init__.py	01_contracts/correspondence	.py	D	0	0	0	6	0	0	0	0	D	W6	Package marker
+core/01_contracts/correspondence/uet_gr_correspondence.py	01_contracts/correspondence	.py	A_DEP	0	0	0	20	2	0	0	3	C	W6	Analytic GR tensor inputs for the old parent contract; only regression tests use it; T001 uses the DEF mapping instead
+core/01_contracts/ontology/README.md	01_contracts/ontology	.md	REVIEW	0	0	0	6	0	0	0	1	C	W6	Guide to uet_coarse_graining.py, labelled C
+core/01_contracts/ontology/__init__.py	01_contracts/ontology	.py	D	0	0	0	6	0	0	0	0	D	W6	Package marker
+core/01_contracts/ontology/uet_coarse_graining.py	01_contracts/ontology	.py	A_DEP	0	0	0	20	2	0	0	4	C	W6	Coarse-graining to the four C lanes (phase, charge, density, telegraph); the new equations do not use C lanes
+core/01_contracts/units/uet_parameters.py	01_contracts/units	.py	A_DEP	1	0	0	32	5	111	1	21	C	W6	Legacy kappa/beta parameter table for the Omega = C I engine; 93 topic files and uet_master_equation import it, so it stays in place
 core/02_equations/README.md	02_equations	.md	REVIEW	0	0	0	6	0	0	0	0	-	-	-
 core/02_equations/__init__.py	02_equations	.py	D	0	0	0	6	0	0	0	0	-	-	-
 core/02_equations/covariant/README.md	02_equations/covariant	.md	REVIEW	0	0	0	6	0	0	0	0	A	W1	Folder guide; rewrite in W10 to name the parent-action files first
@@ -596,8 +596,8 @@ core/03_lanes/topic13_support/__init__.py	03_lanes/topic13_support	.py	D	0	0	0	6
 core/03_lanes/topic13_support/t13_formal_thermodynamic_bridge_integration.py	03_lanes/topic13_support	.py	REVIEW	0	0	0	17	2	1	0	3	C	W5	Topic 13 working note or helper for the graphite/He-4 bridge program; no claim uses it
 core/03_lanes/topic13_support/t13_thermal_bridge_scale_dependency.py	03_lanes/topic13_support	.py	REVIEW	0	0	0	16	2	2	0	3	C	W5	Topic 13 working note or helper for the graphite/He-4 bridge program; no claim uses it
 core/03_lanes/topic13_support/topic13_closure_record_contract.py	03_lanes/topic13_support	.py	A_DEP	0	0	0	16	3	1	0	5	C	W5	Topic 13 working note or helper for the graphite/He-4 bridge program; no claim uses it
-core/04_proofs/Proof_00_Master_Balance.py	04_proofs	.py	REVIEW	0	0	0	12	0	0	0	4	-	-	-
-core/04_proofs/README.md	04_proofs	.md	A_DEP	0	0	0	10	0	0	0	2	-	-	-
+core/04_proofs/Proof_00_Master_Balance.py	04_proofs	.py	REVIEW	0	0	0	12	0	0	0	4	C	W6	Claims to resolve the Millennium problems with Omega -> 0; restricted wording, no derivation, imports the legacy parameters
+core/04_proofs/README.md	04_proofs	.md	A_DEP	0	0	0	10	0	0	0	2	C	W6	Folder holds only Proof_00 (C); derivations now live in 05_tests/physics
 core/05_tests/README.md	05_tests	.md	REVIEW	0	0	0	5	0	0	0	0	-	-	-
 core/05_tests/artifact/README.md	05_tests/artifact	.md	REVIEW	0	0	0	5	0	0	0	0	-	-	-
 core/05_tests/artifact/root/test_gaia_3d_query_manifest.py	05_tests/artifact	.py	REVIEW	0	0	0	7	0	0	0	0	-	-	-
@@ -2112,11 +2112,11 @@ core/08_history/update_logs/UET_GR_NONCLOSED_UPDATE_LOG.md	08_history/update_log
 core/08_history/update_logs/UET_MAIN_THEORY_UPDATE_LOG.md	08_history/update_logs	.md	REVIEW	0	0	0	7	0	0	0	1	-	-	-
 core/08_history/update_logs/UET_RESEARCH_ROOM_WAVE1_UPDATE_LOG.md	08_history/update_logs	.md	REVIEW	0	0	0	7	0	0	0	1	-	-	-
 core/08_history/update_logs/UET_WAVE3_WAVE10_UPDATE_LOG.md	08_history/update_logs	.md	REVIEW	0	0	0	11	0	0	0	1	-	-	-
-core/99_review/README.md	99_review	.md	REVIEW	0	0	0	6	0	0	0	0	-	-	-
-core/99_review/unresolved_assets/T13_HOLDOUT_EXPOSURE_2026_09_10.json	99_review/unresolved_assets	.json	REVIEW	0	0	0	10	0	2	0	2	-	-	-
-core/99_review/unresolved_assets/T13_HOLDOUT_EXPOSURE_2026_09_26.json	99_review/unresolved_assets	.json	REVIEW	0	0	0	1	1	0	0	0	-	-	-
-core/99_review/unresolved_assets/sandbox_emergent.py	99_review/unresolved_assets	.py	A_DEP	0	0	0	8	0	0	0	7	-	-	-
-core/99_review/unresolved_assets/t13_energy_response_audit_generator_drift.json	99_review/unresolved_assets	.json	REVIEW	0	0	0	8	0	0	0	0	-	-	-
+core/99_review/README.md	99_review	.md	REVIEW	0	0	0	6	0	0	0	0	A	W6	Quarantine rule (quarantined files are not evidence) stays valid
+core/99_review/unresolved_assets/T13_HOLDOUT_EXPOSURE_2026_09_10.json	99_review/unresolved_assets	.json	REVIEW	0	0	0	10	0	2	0	2	C	W6	Topic 13 holdout exposure record (Topic 13 lane labelled C in W5); keep as provenance
+core/99_review/unresolved_assets/T13_HOLDOUT_EXPOSURE_2026_09_26.json	99_review/unresolved_assets	.json	REVIEW	0	0	0	1	1	0	0	0	C	W6	Topic 13 holdout exposure record; a regression test reads it; keep as provenance
+core/99_review/unresolved_assets/sandbox_emergent.py	99_review/unresolved_assets	.py	A_DEP	0	0	0	8	0	0	0	7	C	W6	Toy C and I game-landscape simulation; not the parent action
+core/99_review/unresolved_assets/t13_energy_response_audit_generator_drift.json	99_review/unresolved_assets	.json	REVIEW	0	0	0	8	0	0	0	0	C	W6	Drift record of an old Topic 13 audit generator
 core/AGENTS.md	AGENTS.md	.md	REVIEW	0	0	0	15	0	1	0	12	-	-	-
 core/AUTHOR_PROPOSITION.md	AUTHOR_PROPOSITION.md	.md	A_DEP	0	0	0	8	0	4	0	9	-	-	-
 core/CORE_FILE_INDEX.md	CORE_FILE_INDEX.md	.md	A_DEP	0	0	0	15	0	0	0	9	-	-	-

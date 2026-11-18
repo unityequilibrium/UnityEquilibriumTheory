@@ -5,11 +5,11 @@
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
     "sources": 81,
-    "entries": 919,
+    "entries": 920,
     "by_stream": {
       "book-history": 94,
       "operations": 134,
-      "research": 690,
+      "research": 691,
       "review": 1
     },
     "exact_duplicates": 0,
@@ -420,8 +420,8 @@
     },
     {
       "path": "2026/2026-11-18.md",
-      "sha256": "706272d4a9ceedeaa6a212f580a62702818a70f70792824e6ff1a257874609b7",
-      "entries": 20
+      "sha256": "c69963652c62e48085e4048e6970b3a041f3ff7a56aa29d9545c77e78e5ed085",
+      "entries": 21
     },
     {
       "path": "2026-08-14.md",
@@ -18761,9 +18761,29 @@
       "source": "2026/2026-11-18.md",
       "anchor": "t023-result-at-l2-inconclusive",
       "start_line": 193,
-      "end_line": 201,
+      "end_line": 202,
       "title": "T023 result at L2 (INCONCLUSIVE)",
-      "entry_sha256": "08a1c67212ade8eda07652b69f0a592666874cad78f1bbebc3d43ac32b4f2d47",
+      "entry_sha256": "869fa86ab913a2fab81b460b0fe6ea233e817ae934fdc93963ef9a633c8676f4",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-18",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-18.md#core-alignment-w6-contracts-proofs-and-review",
+      "source": "2026/2026-11-18.md",
+      "anchor": "core-alignment-w6-contracts-proofs-and-review",
+      "start_line": 203,
+      "end_line": 211,
+      "title": "Core alignment W6: contracts, proofs and review",
+      "entry_sha256": "7920c71e8e85e3aba5904bc609c6870f35d521ae78548620313dc172e3c1708d",
       "stream": "research",
       "areas": [
         "research-core"

@@ -57,7 +57,7 @@
 | W3 | `02_equations/matter_space` | เสร็จ 2026-11-18 (ดูด้านล่าง) |
 | W4 | `02_equations/o2` | เสร็จ 2026-11-18 (ดูด้านล่าง) |
 | W5 | `03_lanes/thermal`, `topic13_support` | เสร็จ 2026-11-18 (ดูด้านล่าง) |
-| W6 | `01_contracts`, `04_proofs`, `99_review` | ยังไม่เริ่ม |
+| W6 | `01_contracts`, `04_proofs`, `99_review` | เสร็จ 2026-11-18 (ดูด้านล่าง) |
 | W7 | `05_tests` | ยังไม่เริ่ม |
 | W8 | `07_artifacts` | ยังไม่เริ่ม |
 | W9 | `00_governance`, `06_data`, `08_history` | ยังไม่เริ่ม |
@@ -126,3 +126,17 @@
 - **D 2 ไฟล์:** `__init__.py`
 - ไฟล์ 3 ไฟล์ถูก contract ล็อก hash และ 90 ไฟล์ถูก topic อ้างถึง (ส่วนใหญ่คือ Topic 13) จึงคงไว้ที่เดิม
 - ตัวตรวจ entropy และ SK/KMS ที่นี่ (`thermal_sk_kms_entropy_contract.py`) เป็น interface แบบประกาศเอา ไม่ใช่ derivation ส่วนที่ derive จริงอยู่ในไฟล์ป้าย B ของ W4
+
+### W6: `01_contracts`, `04_proofs`, `99_review` (41 ไฟล์)
+
+| ป้าย | จำนวน | ไฟล์และเหตุผล |
+|---|---|---|
+| A | 4 | `BINARY_PULSAR_PILOT_SOURCES.md` และ `JOURNAL_CROSSCHECK_2026-11-10.md` (แหล่งตัวเลขของ T001, T002, T005, T006), README ของ `01_contracts` (เขียนใหม่ใน W10) และ README ของ `99_review` (กติกาว่าไฟล์ที่กักไว้ใช้เป็นหลักฐานไม่ได้ยังใช้ได้) |
+| B | 3 | `UET_GR_NONCLOSED_RESEARCH_SPEC.md` (spec ของสนาม response ใน action แม่ แต่ยังใช้คำสถานะแบบเก่า), `O2_SUPERFLUID_EOS_TRANSPORT_SPEC.md` (spec ของ EOS และ SK ของ χ ที่ W4 ให้ B) และ `RESOURCE_PERSISTENCE_PRINCIPLE_SPEC.md` (หลักการว่าการดำรงอยู่คัดเลือกวิธีจัดสรรทรัพยากรโดยไม่มีเจตนา ตรงกับชั้น 3 ของผู้เขียน แต่รูปคำนวณยังเขียนบนเส้นทาง C ต้องเขียนใหม่ด้วยตัวแปรของชั้น 3) |
+| C | 32 | spec ของ lane C และ comparator รุ่นก่อน 14 ฉบับ, สรุป gate เก่า 6 ฉบับ (F0 inventory, correspondence matrix, compatibility decision, status aggregate, code surface, equation family) ซึ่งทะเบียนนี้และ SYNTHESIS_AUDIT แทนแล้ว, spec จักรวาลเปิดที่ AUTHOR_PROPOSITION แทน, `uet_parameters.py` (ตาราง κ/β ของ engine Ω = C·I), `uet_gr_correspondence.py`, `uet_coarse_graining.py`, `Proof_00_Master_Balance.py`, README ของสามโฟลเดอร์ที่ถือแต่ไฟล์ C และของใน `99_review/unresolved_assets` 4 ไฟล์ |
+| D | 2 | `__init__.py` |
+
+- **`Proof_00_Master_Balance.py`** อ้างว่าแก้ปัญหา Millennium ทั้ง 7 ข้อได้ด้วย Ω → 0 ซึ่งไม่มี derivation และใช้คำที่ห้ามใช้ จึงเก็บพร้อมป้าย LEGACY_UNREVIEWED และห้ามอ้างเป็นหลักฐาน
+- **`uet_parameters.py`** ถูก topic import 93 ไฟล์ และ `uet_master_equation.py` ก็ใช้ จึงคงไว้ที่เดิมจนถึงแผน topics
+- **ไฟล์ที่ contract ล็อก hash คงไว้ที่เดิม:** `MATTER_SPACE_RESEARCH_SPEC.md` (10 ฉบับ), `RESOURCE_SELECTION_DYNAMIC_GAME_SPEC.md`, `UET_MAIN_THEORY_AXIOMS_SPEC.md` และ `UET_CORE_EQUATION_FAMILY_CONTRACT.md`
+- **สิ่งที่ต้องทำต่อจากรอบนี้:** เขียน spec ป้าย B ใหม่ด้วยคำศัพท์ v2 ในขั้น 3 โดยเฉพาะหลักการของชั้น 3 ที่ควรอ้างถึงโมเดล consumer-resource และผล T018, T023

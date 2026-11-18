@@ -557,3 +557,9 @@ commit: this commit
 - ความหมาย: การบินอธิบายได้ราว 60% ของส่วนเกินของนก (0.29 จาก 0.46); ช่วงของ Δ ไม่รวม 0 จึงมีส่วนที่การบินอธิบายไม่ได้ ทั้งที่การจำศีลของค้างคาวเอียงไปทาง PASS
 - ระดับ: C_T023 ยังเป็น L0 รอผู้เขียนตัดสินเรื่อง L2
 - 2026-11-18: ผู้เขียนอนุมัติ L2; บันทึก R_T023_FLIGHT_LIFETIME_ENERGY (INCONCLUSIVE) และ C_T023 → L2_CONFRONTED
+
+## 2026-11-18 — Core alignment W6: 01_contracts, 04_proofs, 99_review
+- ทำ: ตรวจ 41 ไฟล์ใน 01_contracts, 04_proofs และ 99_review
+- ผล: A 4 (แหล่งตัวเลขของ T001 และการตรวจกับวารสาร), B 3 (spec ของสนาม response, EOS ของ χ และหลักการชั้น 3), C 32 (spec ของ lane C, สรุป gate เก่า, uet_parameters, Proof_00), D 2
+- ระดับ: ไม่เปลี่ยน claim ใด; ไม่ย้ายไฟล์ (contract ล็อก 4 ฉบับ, topic import uet_parameters 93 ไฟล์)
+- ถัดไป: W7 05_tests รวมการซ่อม CI ของ contract เก่า
