@@ -6,10 +6,11 @@
 
 These are source-linked historical records, not proof of completed research, successful publication, or current scientific readiness.
 
-Indexed entries: 134. Counts describe records, not accomplishments.
+Indexed entries: 135. Counts describe records, not accomplishments.
 
 | Date | Record | Area | Notes |
 | --- | --- | --- | --- |
+| 2026-11-18 | [Archive move of C files: checked, not done](2026/2026-11-18.md#archive-move-of-c-files-checked-not-done) (L295) | repo-ops | explicit_stream_and_area |
 | 2026-11-18 | [Core alignment step 1: inventory of every core file](2026/2026-11-18.md#core-alignment-step-1-inventory-of-every-core-file) (L53) | repo-ops, research-core | explicit_stream_and_area |
 | 2026-11-18 | [README v0.9.1 in English and Thai](2026/2026-11-18.md#readme-v091-in-english-and-thai) (L33) | documentation-system | explicit_stream_and_area |
 | 2026-11-18 | [PR #59 admin merge past a known legacy CI failure](2026/2026-11-18.md#pr-59-admin-merge-past-a-known-legacy-ci-failure) (L23) | repo-ops | explicit_stream_and_area |

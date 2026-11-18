@@ -5,10 +5,10 @@
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
     "sources": 81,
-    "entries": 928,
+    "entries": 929,
     "by_stream": {
       "book-history": 94,
-      "operations": 134,
+      "operations": 135,
       "research": 699,
       "review": 1
     },
@@ -420,8 +420,8 @@
     },
     {
       "path": "2026/2026-11-18.md",
-      "sha256": "b4e5684d418484ca55dc240efc7dd85aee2bb5ca9e0ff5ac5d7e9d293b02f9a7",
-      "entries": 29
+      "sha256": "8723b490c1ecae86bea4659f2e553fce3dd9264e7e4b097970eaf5d61f0455b6",
+      "entries": 30
     },
     {
       "path": "2026-08-14.md",
@@ -18941,15 +18941,35 @@
       "source": "2026/2026-11-18.md",
       "anchor": "stage-3-wave-l2-1-layer-2-from-the-parent-action",
       "start_line": 285,
-      "end_line": 293,
+      "end_line": 294,
       "title": "Stage 3 wave L2-1: layer 2 from the parent action",
-      "entry_sha256": "6a69abb67770f8c6a0104977d35c914043d9e44f6d32fe987c24e4813fd9898b",
+      "entry_sha256": "74d5acb63b911f65a8875fd8fa77663ad20a54c388d2672772f4b530b5566592",
       "stream": "research",
       "areas": [
         "research-core"
       ],
       "related_streams": [
         "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-18",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-18.md#archive-move-of-c-files-checked-not-done",
+      "source": "2026/2026-11-18.md",
+      "anchor": "archive-move-of-c-files-checked-not-done",
+      "start_line": 295,
+      "end_line": 303,
+      "title": "Archive move of C files: checked, not done",
+      "entry_sha256": "2c45901b99b21c0e9598375f25d929da73706661e44369533efe425bb9a60c5f",
+      "stream": "operations",
+      "areas": [
+        "repo-ops"
+      ],
+      "related_streams": [
+        "operations"
       ],
       "basis": "explicit_stream_and_area",
       "flags": [],
