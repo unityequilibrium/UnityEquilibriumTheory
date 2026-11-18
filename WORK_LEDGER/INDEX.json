@@ -5,11 +5,11 @@
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
     "sources": 81,
-    "entries": 920,
+    "entries": 921,
     "by_stream": {
       "book-history": 94,
       "operations": 134,
-      "research": 691,
+      "research": 692,
       "review": 1
     },
     "exact_duplicates": 0,
@@ -420,8 +420,8 @@
     },
     {
       "path": "2026/2026-11-18.md",
-      "sha256": "c69963652c62e48085e4048e6970b3a041f3ff7a56aa29d9545c77e78e5ed085",
-      "entries": 21
+      "sha256": "22108573b8202efe5ec748ff0ca2112cec1102a014c56a6a4f7ed068de82b717",
+      "entries": 22
     },
     {
       "path": "2026-08-14.md",
@@ -18781,9 +18781,29 @@
       "source": "2026/2026-11-18.md",
       "anchor": "core-alignment-w6-contracts-proofs-and-review",
       "start_line": 203,
-      "end_line": 211,
+      "end_line": 212,
       "title": "Core alignment W6: contracts, proofs and review",
-      "entry_sha256": "7920c71e8e85e3aba5904bc609c6870f35d521ae78548620313dc172e3c1708d",
+      "entry_sha256": "f6ae01334f822a839293643cb9759838ca840e449dea75a4a7bb8716942e7074",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-18",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-18.md#core-alignment-w7-test-labels-and-the-ci-cause",
+      "source": "2026/2026-11-18.md",
+      "anchor": "core-alignment-w7-test-labels-and-the-ci-cause",
+      "start_line": 213,
+      "end_line": 221,
+      "title": "Core alignment W7: test labels and the CI cause",
+      "entry_sha256": "4245f3c42da3178ea7ba4ea1d02ef65353eca7407ec3de540de41fb22067fd8a",
       "stream": "research",
       "areas": [
         "research-core"

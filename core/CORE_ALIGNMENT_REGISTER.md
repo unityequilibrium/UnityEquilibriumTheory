@@ -58,7 +58,7 @@
 | W4 | `02_equations/o2` | เสร็จ 2026-11-18 (ดูด้านล่าง) |
 | W5 | `03_lanes/thermal`, `topic13_support` | เสร็จ 2026-11-18 (ดูด้านล่าง) |
 | W6 | `01_contracts`, `04_proofs`, `99_review` | เสร็จ 2026-11-18 (ดูด้านล่าง) |
-| W7 | `05_tests` | ยังไม่เริ่ม |
+| W7 | `05_tests` | ติดป้ายแล้ว 2026-11-18; ซ่อม CI รออนุมัติ (ดูด้านล่าง) |
 | W8 | `07_artifacts` | ยังไม่เริ่ม |
 | W9 | `00_governance`, `06_data`, `08_history` | ยังไม่เริ่ม |
 | W10 | เอกสารหน้า core | ยังไม่เริ่ม |
@@ -140,3 +140,26 @@
 - **`uet_parameters.py`** ถูก topic import 93 ไฟล์ และ `uet_master_equation.py` ก็ใช้ จึงคงไว้ที่เดิมจนถึงแผน topics
 - **ไฟล์ที่ contract ล็อก hash คงไว้ที่เดิม:** `MATTER_SPACE_RESEARCH_SPEC.md` (10 ฉบับ), `RESOURCE_SELECTION_DYNAMIC_GAME_SPEC.md`, `UET_MAIN_THEORY_AXIOMS_SPEC.md` และ `UET_CORE_EQUATION_FAMILY_CONTRACT.md`
 - **สิ่งที่ต้องทำต่อจากรอบนี้:** เขียน spec ป้าย B ใหม่ด้วยคำศัพท์ v2 ในขั้น 3 โดยเฉพาะหลักการของชั้น 3 ที่ควรอ้างถึงโมเดล consumer-resource และผล T018, T023
+
+### W7: `05_tests` (572 ไฟล์)
+
+ตัดสินจากโมดูลที่ test import: ถ้า import โมดูลป้าย B ให้ B, ถ้า import โมดูลป้าย C ให้ C (โมดูล A ที่ import ด้วยเป็นแค่ input), ถ้า import แต่โมดูล A ให้ A
+test ที่ไม่ import โมดูลใน core เลยตัดสินจากสิ่งที่มันอ่าน (artifact, audit script, ไฟล์ migration)
+
+| ป้าย | จำนวน | อะไรบ้าง |
+|---|---|---|
+| A | 46 | physics test ทั้ง 36 ไฟล์ (ที่ `check_physics_tests` นับ), mutation run ของ action แม่, ตัวตรวจ lane card ของ engine, regression ของ response, matter, balance, parent และ closed limit และ README ของโฟลเดอร์ที่ยังมี A |
+| B | 32 | regression ของโมดูล O(2) ป้าย B (SK/KMS, sunset cut, entropy balance, no-go สองข้อ) และ `uet_covariant_nonclosed` เก็บไว้คู่กับโมดูลสำหรับขั้น 3 |
+| C | 491 | test ของ Topic 13 ที่อ่าน artifact หรือ audit script 256 ไฟล์, test ของโมดูลป้าย C 148 ไฟล์, test ของ gate, migration และ artifact เก่า 83 ไฟล์ และ fixture 4 ไฟล์ |
+| D | 3 | `__init__.py` และ test การหา path แบบ canonical |
+
+- **test ที่เป็นหลักฐานจริงมีแค่ 36 ไฟล์ใน `physics/`:** อีก 536 ไฟล์เป็น bookkeeping หรือ regression ของ lane เก่า
+- **ยังไม่ได้ย้ายไฟล์:** test ป้าย C จะย้ายไปพร้อมโมดูลของมันในขั้นย้ายไฟล์
+
+**สาเหตุที่ CI แดง (Research contract validation):**
+contract 20 ฉบับ (19 ฉบับใน Topic 0.13 และ `audit_matter_space_core`) ล็อก sha256 ของสคริปต์ 26 ไฟล์ไว้ STALE ทั้งหมด 43 จุด
+สคริปต์ทั้ง 26 ไฟล์ถูกแก้ตอนย้าย core และ topics ไปไว้ที่ root (commit 4aaffa11a, 1153050a9, bd02cb921 วันที่ 14–15 พ.ย.)
+สิ่งที่แก้คือ `parents[5]` เป็น `parents[4]`, ข้อความ path จาก `docs/core` และ `docs/topics` และการครอบด้วย `canonical_existing_path` ไม่ได้แตะสูตร
+ผลคำนวณที่เทียบกับ artifact ที่ commit ไว้ได้ 8 ตัวเหมือนเดิมทุกค่า (ต่างแค่ข้อความ path ใน 1 key) ที่เหลือเทียบไม่ได้ เพราะ artifact ไม่ได้ commit ไว้ หรือติด STALE ต่อกันเป็นสาย
+manifest ของ BaTiO3 publication ก็ล็อก hash ของสคริปต์เดียวกันไว้ จึงทำให้ `calculation-audit-tests` ล้มด้วย
+การซ่อมคือคำนวณ hash ใหม่ใน contract (และใน manifest) โดยไม่แก้ path และ physics ซึ่งตาม AGENTS §6.3 ต้องให้เจ้าของอนุมัติก่อน

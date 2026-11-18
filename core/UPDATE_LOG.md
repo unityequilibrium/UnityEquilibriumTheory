@@ -563,3 +563,9 @@ commit: this commit
 - ผล: A 4 (แหล่งตัวเลขของ T001 และการตรวจกับวารสาร), B 3 (spec ของสนาม response, EOS ของ χ และหลักการชั้น 3), C 32 (spec ของ lane C, สรุป gate เก่า, uet_parameters, Proof_00), D 2
 - ระดับ: ไม่เปลี่ยน claim ใด; ไม่ย้ายไฟล์ (contract ล็อก 4 ฉบับ, topic import uet_parameters 93 ไฟล์)
 - ถัดไป: W7 05_tests รวมการซ่อม CI ของ contract เก่า
+
+## 2026-11-18 — Core alignment W7: 05_tests labels and the CI cause
+- ทำ: ติดป้าย 572 ไฟล์ใน 05_tests ตามโมดูลที่ test import หรือสิ่งที่มันอ่าน
+- ผล: A 46 (physics test 36 ไฟล์ และ regression ของ action แม่), B 32 (O(2) SK/KMS และ no-go), C 491 (Topic 13, lane C, gate และ migration เก่า), D 3
+- พบ: CI แดงเพราะ contract 20 ฉบับล็อก hash ของสคริปต์ 26 ไฟล์ที่ถูกแก้ path ตอนย้ายไป root (14–15 พ.ย.); ผลคำนวณที่เทียบได้ 8 ตัวเหมือนเดิม
+- ระดับ: ไม่เปลี่ยน claim ใด; ยังไม่ซ่อม hash รอเจ้าของอนุมัติตาม AGENTS §6.3

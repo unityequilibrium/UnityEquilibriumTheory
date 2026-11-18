@@ -598,578 +598,578 @@ core/03_lanes/topic13_support/t13_thermal_bridge_scale_dependency.py	03_lanes/to
 core/03_lanes/topic13_support/topic13_closure_record_contract.py	03_lanes/topic13_support	.py	A_DEP	0	0	0	16	3	1	0	5	C	W5	Topic 13 working note or helper for the graphite/He-4 bridge program; no claim uses it
 core/04_proofs/Proof_00_Master_Balance.py	04_proofs	.py	REVIEW	0	0	0	12	0	0	0	4	C	W6	Claims to resolve the Millennium problems with Omega -> 0; restricted wording, no derivation, imports the legacy parameters
 core/04_proofs/README.md	04_proofs	.md	A_DEP	0	0	0	10	0	0	0	2	C	W6	Folder holds only Proof_00 (C); derivations now live in 05_tests/physics
-core/05_tests/README.md	05_tests	.md	REVIEW	0	0	0	5	0	0	0	0	-	-	-
-core/05_tests/artifact/README.md	05_tests/artifact	.md	REVIEW	0	0	0	5	0	0	0	0	-	-	-
-core/05_tests/artifact/root/test_gaia_3d_query_manifest.py	05_tests/artifact	.py	REVIEW	0	0	0	7	0	0	0	0	-	-	-
-core/05_tests/artifact/root/test_matter_space_split_artifact.py	05_tests/artifact	.py	REVIEW	0	0	0	10	0	0	0	0	-	-	-
-core/05_tests/artifact/root/test_uet_core_organization_wave1.py	05_tests/artifact	.py	REVIEW	0	0	0	10	0	0	0	0	-	-	-
-core/05_tests/artifact/root/test_uet_research_organization_registry.py	05_tests/artifact	.py	REVIEW	0	0	0	11	0	0	0	0	-	-	-
-core/05_tests/artifact/root/test_uet_wave3_wave10_artifact_coverage.py	05_tests/artifact	.py	REVIEW	0	0	0	10	0	1	0	0	-	-	-
-core/05_tests/artifact/test_topic13_energy_response_audit_preservation.py	05_tests/artifact	.py	REVIEW	0	0	0	6	0	0	0	0	-	-	-
-core/05_tests/artifact/test_uet_core_artifact_generator_review_queue.py	05_tests/artifact	.py	REVIEW	0	0	0	5	0	0	0	0	-	-	-
-core/05_tests/artifact/test_uet_core_artifact_migration_history.py	05_tests/artifact	.py	REVIEW	0	0	0	5	0	0	0	0	-	-	-
-core/05_tests/artifact/test_uet_core_migration_enforcement.py	05_tests/artifact	.py	REVIEW	0	0	0	5	0	0	0	0	-	-	-
-core/05_tests/equation/README.md	05_tests/equation	.md	REVIEW	0	0	0	5	0	0	0	0	-	-	-
-core/05_tests/equation/root/test_gr_noether_phase_field_map_alignment.py	05_tests/equation	.py	REVIEW	0	0	0	13	0	0	0	4	-	-	-
-core/05_tests/equation/root/test_lorentz_noether_comprehensive.py	05_tests/equation	.py	REVIEW	0	0	0	11	0	0	0	2	-	-	-
-core/05_tests/equation/root/test_matter_interaction_forward.py	05_tests/equation	.py	REVIEW	0	0	0	7	0	1	0	2	-	-	-
-core/05_tests/equation/root/test_noether_phase_field_map.py	05_tests/equation	.py	REVIEW	0	0	0	9	0	0	0	4	-	-	-
-core/05_tests/equation/root/test_noether_phase_field_topic_0_11_dependency.py	05_tests/equation	.py	REVIEW	0	0	0	14	0	2	0	4	-	-	-
-core/05_tests/equation/root/test_o2_finite_density_eos.py	05_tests/equation	.py	REVIEW	0	0	0	6	0	0	0	0	-	-	-
-core/05_tests/equation/root/test_topic13_action_normalized_elastic_scattering.py	05_tests/equation	.py	REVIEW	0	0	0	10	0	2	0	2	-	-	-
-core/05_tests/equation/root/test_topic13_collective_response_eos.py	05_tests/equation	.py	REVIEW	0	0	0	10	0	0	0	0	-	-	-
-core/05_tests/equation/root/test_topic13_collective_response_eos_integration.py	05_tests/equation	.py	REVIEW	0	0	0	10	0	0	0	0	-	-	-
-core/05_tests/equation/root/test_topic13_continuum_action_umklapp_no_go.py	05_tests/equation	.py	REVIEW	0	0	0	12	0	2	0	1	-	-	-
-core/05_tests/equation/root/test_topic13_covariant_action_si_anchor_integration.py	05_tests/equation	.py	REVIEW	0	0	0	10	0	1	0	0	-	-	-
-core/05_tests/equation/root/test_topic13_covariant_action_si_anchor_route.py	05_tests/equation	.py	REVIEW	0	0	0	10	0	0	0	0	-	-	-
-core/05_tests/equation/root/test_topic13_covariant_action_symbolic_si_conversion.py	05_tests/equation	.py	REVIEW	0	0	0	10	0	0	0	0	-	-	-
-core/05_tests/equation/root/test_topic13_eos_revision_impact.py	05_tests/equation	.py	REVIEW	0	0	0	7	0	0	0	1	-	-	-
-core/05_tests/equation/root/test_topic13_finite_temperature_quasiparticle_eos.py	05_tests/equation	.py	REVIEW	0	0	0	6	0	2	0	0	-	-	-
-core/05_tests/equation/root/test_topic13_finite_temperature_quasiparticle_eos_v2.py	05_tests/equation	.py	REVIEW	0	0	0	6	0	1	0	0	-	-	-
-core/05_tests/equation/root/test_topic13_same_action_composition.py	05_tests/equation	.py	REVIEW	0	0	0	7	0	0	0	1	-	-	-
-core/05_tests/equation/root/test_topic13_uet_o2_action_1pi_sunset_euclidean.py	05_tests/equation	.py	REVIEW	0	0	0	7	0	1	0	0	-	-	-
-core/05_tests/equation/root/test_topic13_uet_o2_action_1pi_sunset_retarded.py	05_tests/equation	.py	REVIEW	0	0	0	7	0	1	0	0	-	-	-
-core/05_tests/equation/root/test_topic13_uet_o2_action_1pi_sunset_tensor.py	05_tests/equation	.py	REVIEW	0	0	0	7	0	1	0	0	-	-	-
-core/05_tests/equation/root/test_topic13_uet_o2_action_derived_transition_kernel.py	05_tests/equation	.py	REVIEW	0	0	0	6	0	0	0	0	-	-	-
-core/05_tests/equation/root/test_topic13_uet_o2_action_sunset_1pi_spectral.py	05_tests/equation	.py	REVIEW	0	0	0	7	0	1	0	0	-	-	-
-core/05_tests/equation/root/test_topic13_uet_o2_action_sunset_zero_eta.py	05_tests/equation	.py	REVIEW	0	0	0	7	0	1	0	0	-	-	-
-core/05_tests/equation/root/test_topic13_uet_o2_action_thermal_observable_bridge.py	05_tests/equation	.py	REVIEW	0	0	0	6	0	0	0	0	-	-	-
-core/05_tests/equation/root/test_topic13_uet_o2_action_thermal_stiffness_beta.py	05_tests/equation	.py	REVIEW	0	0	0	7	0	1	0	0	-	-	-
-core/05_tests/equation/root/test_topic13_uet_o2_gaussian_thermal_stationarity_no_go.py	05_tests/equation	.py	REVIEW	0	0	0	10	0	0	0	0	-	-	-
-core/05_tests/equation/root/test_topic13_uet_o2_interacting_sk_kms_action.py	05_tests/equation	.py	REVIEW	0	0	0	6	0	0	0	0	-	-	-
-core/05_tests/equation/root/test_topic13_uet_o2_stationarity_scheme_dependence.py	05_tests/equation	.py	REVIEW	0	0	0	10	0	0	0	0	-	-	-
-core/05_tests/equation/root/test_uet_noether_mapping_links.py	05_tests/equation	.py	REVIEW	0	0	0	10	0	0	0	0	-	-	-
-core/05_tests/equation/root/test_uet_topic_formula_correspondence_manifest.py	05_tests/equation	.py	REVIEW	0	0	0	10	0	0	0	0	-	-	-
-core/05_tests/mutation/run_parent_mutations.py	05_tests/mutation	.py	A	0	1	0	1	0	0	0	0	-	-	-
-core/05_tests/numerical/README.md	05_tests/numerical	.md	REVIEW	0	0	0	5	0	0	0	0	-	-	-
-core/05_tests/numerical/root/test_gr_causal_nonclosed_alignment.py	05_tests/numerical	.py	REVIEW	0	0	0	10	0	0	0	0	-	-	-
-core/05_tests/numerical/root/test_matter_space_causal_cone_compatibility.py	05_tests/numerical	.py	REVIEW	0	0	0	10	0	0	0	0	-	-	-
-core/05_tests/numerical/root/test_matter_space_causal_discrete_gradient.py	05_tests/numerical	.py	REVIEW	0	0	0	6	0	0	0	0	-	-	-
-core/05_tests/numerical/root/test_matter_space_causal_discrete_gradient_artifact.py	05_tests/numerical	.py	REVIEW	0	0	0	10	0	0	0	0	-	-	-
-core/05_tests/numerical/root/test_matter_space_causal_discretization.py	05_tests/numerical	.py	REVIEW	0	0	0	10	0	0	0	0	-	-	-
-core/05_tests/numerical/root/test_matter_space_causal_reference.py	05_tests/numerical	.py	REVIEW	0	0	0	10	0	0	0	1	-	-	-
-core/05_tests/numerical/root/test_matter_space_causal_reference_energy.py	05_tests/numerical	.py	REVIEW	0	0	0	10	0	0	0	0	-	-	-
-core/05_tests/numerical/root/test_matter_space_causal_repair.py	05_tests/numerical	.py	REVIEW	0	0	0	10	0	0	0	0	-	-	-
-core/05_tests/numerical/root/test_matter_space_energy_ledger_artifact.py	05_tests/numerical	.py	REVIEW	0	0	0	10	0	0	0	0	-	-	-
-core/05_tests/numerical/root/test_persistence_energy_diagnostic.py	05_tests/numerical	.py	REVIEW	0	0	0	8	0	1	0	2	-	-	-
-core/05_tests/numerical/root/test_topic13_calorine_full_lbte_stability.py	05_tests/numerical	.py	REVIEW	0	0	0	10	0	1	0	1	-	-	-
-core/05_tests/numerical/root/test_topic13_causal_branch_holdout_contract.py	05_tests/numerical	.py	REVIEW	0	0	0	10	0	0	0	0	-	-	-
-core/05_tests/numerical/root/test_topic13_causal_branch_selection.py	05_tests/numerical	.py	REVIEW	0	0	0	10	0	1	0	0	-	-	-
-core/05_tests/numerical/root/test_topic13_causal_branch_selection_integration.py	05_tests/numerical	.py	REVIEW	0	0	0	10	0	1	0	0	-	-	-
-core/05_tests/numerical/root/test_topic13_causal_core_compatibility.py	05_tests/numerical	.py	REVIEW	0	0	0	10	0	0	0	0	-	-	-
-core/05_tests/numerical/root/test_topic13_ding_pbte_energy_temperature_mapping.py	05_tests/numerical	.py	REVIEW	0	0	0	10	0	0	0	0	-	-	-
-core/05_tests/numerical/root/test_topic13_energy_estimator_noise.py	05_tests/numerical	.py	REVIEW	0	0	0	7	0	0	0	1	-	-	-
-core/05_tests/numerical/root/test_topic13_energy_identifiability.py	05_tests/numerical	.py	REVIEW	0	0	0	7	0	0	0	1	-	-	-
-core/05_tests/numerical/root/test_topic13_energy_response_bridge.py	05_tests/numerical	.py	REVIEW	0	0	0	10	0	0	0	0	-	-	-
-core/05_tests/numerical/root/test_topic13_mp48_force_constant_csrc_mesh_convergence.py	05_tests/numerical	.py	REVIEW	0	0	0	10	0	0	0	5	-	-	-
-core/05_tests/numerical/root/test_topic13_phi_energy_anchor_gate_integration.py	05_tests/numerical	.py	REVIEW	0	0	0	10	0	0	0	0	-	-	-
-core/05_tests/numerical/root/test_topic13_phi_energy_anchor_identifiability.py	05_tests/numerical	.py	REVIEW	0	0	0	10	0	0	0	0	-	-	-
-core/05_tests/numerical/root/test_topic13_uet_o2_energy_momentum_conserving_bethe_salpeter.py	05_tests/numerical	.py	REVIEW	0	0	0	6	0	0	0	0	-	-	-
-core/05_tests/numerical/root/test_topic13_uet_o2_finite_temperature_self_energy.py	05_tests/numerical	.py	REVIEW	0	0	0	10	0	0	0	0	-	-	-
-core/05_tests/numerical/root/test_topic13_uet_o2_hartree_normal_stability.py	05_tests/numerical	.py	REVIEW	0	0	0	10	0	0	0	0	-	-	-
-core/05_tests/numerical/root/test_topic13_uet_o2_one_loop_convergence.py	05_tests/numerical	.py	REVIEW	0	0	0	10	0	0	0	0	-	-	-
-core/05_tests/numerical/root/test_topic13_uet_o2_one_loop_convergence_integration.py	05_tests/numerical	.py	REVIEW	0	0	0	10	0	0	0	0	-	-	-
-core/05_tests/numerical/root/test_topic13_uet_o2_one_loop_retarded_self_energy_no_go.py	05_tests/numerical	.py	REVIEW	0	0	0	6	0	0	0	0	-	-	-
-core/05_tests/numerical/root/test_topic13_uet_o2_thermal_stability_boundary.py	05_tests/numerical	.py	REVIEW	0	0	0	10	0	0	0	0	-	-	-
-core/05_tests/numerical/root/test_uet_dynamical_stability.py	05_tests/numerical	.py	REVIEW	0	0	0	8	0	0	0	2	-	-	-
-core/05_tests/physics/__init__.py	05_tests/physics	.py	A	0	0	0	0	0	0	0	0	-	-	-
-core/05_tests/physics/_symbolic_geometry.py	05_tests/physics	.py	A	0	0	5	0	0	0	0	0	-	-	-
-core/05_tests/physics/test_asymmetric_division.py	05_tests/physics	.py	A	1	1	0	0	0	0	2	1	-	-	-
-core/05_tests/physics/test_def_mapping.py	05_tests/physics	.py	A	1	1	1	2	0	0	1	1	-	-	-
-core/05_tests/physics/test_distinctness.py	05_tests/physics	.py	A	1	1	0	2	0	0	1	1	-	-	-
-core/05_tests/physics/test_engine.py	05_tests/physics	.py	A	1	0	0	0	1	0	1	1	-	-	-
-core/05_tests/physics/test_exchange_identity.py	05_tests/physics	.py	A	0	1	0	2	1	0	0	1	-	-	-
-core/05_tests/physics/test_fidelity_static_vacuum.py	05_tests/physics	.py	A	0	0	0	3	1	0	0	1	-	-	-
-core/05_tests/physics/test_field_causality.py	05_tests/physics	.py	A	1	1	0	2	0	0	1	1	-	-	-
-core/05_tests/physics/test_free_energy_burn.py	05_tests/physics	.py	A	1	1	0	1	0	0	1	1	-	-	-
-core/05_tests/physics/test_growing_abundance.py	05_tests/physics	.py	A	1	1	0	0	0	0	1	1	-	-	-
-core/05_tests/physics/test_layer2_dissipation.py	05_tests/physics	.py	A	1	1	1	3	0	0	1	1	-	-	-
-core/05_tests/physics/test_layer2_to_3.py	05_tests/physics	.py	A	2	1	0	2	0	0	2	1	-	-	-
-core/05_tests/physics/test_lighting_succession.py	05_tests/physics	.py	A	0	1	0	0	0	0	0	1	-	-	-
-core/05_tests/physics/test_lorentz_time.py	05_tests/physics	.py	A	2	1	0	1	0	0	2	1	-	-	-
-core/05_tests/physics/test_markov_vs_history.py	05_tests/physics	.py	A	1	1	0	2	0	0	1	1	-	-	-
-core/05_tests/physics/test_observation_delay.py	05_tests/physics	.py	A	1	1	0	2	0	0	1	1	-	-	-
-core/05_tests/physics/test_parent_derivation.py	05_tests/physics	.py	A	0	2	3	2	1	0	0	0	-	-	-
-core/05_tests/physics/test_parent_offdiagonal.py	05_tests/physics	.py	A	0	1	0	2	1	0	0	1	-	-	-
-core/05_tests/physics/test_path_a_models.py	05_tests/physics	.py	A	3	0	0	2	0	0	3	1	-	-	-
-core/05_tests/physics/test_persistence_selection.py	05_tests/physics	.py	A	2	1	0	2	0	0	2	1	-	-	-
-core/05_tests/physics/test_portal_composition.py	05_tests/physics	.py	A	1	1	0	0	0	0	2	1	-	-	-
-core/05_tests/physics/test_portal_drag_bound.py	05_tests/physics	.py	A	1	1	0	0	0	0	1	1	-	-	-
-core/05_tests/physics/test_portal_drag_derived.py	05_tests/physics	.py	A	1	1	0	0	0	0	1	1	-	-	-
-core/05_tests/physics/test_portal_fifth_force.py	05_tests/physics	.py	A	2	1	0	2	0	0	2	1	-	-	-
-core/05_tests/physics/test_psi_matter_burn.py	05_tests/physics	.py	A	1	1	0	0	0	0	1	1	-	-	-
-core/05_tests/physics/test_pulsation_timing.py	05_tests/physics	.py	A	2	1	0	1	0	0	2	1	-	-	-
-core/05_tests/physics/test_r1_writing_channels.py	05_tests/physics	.py	A	1	0	0	2	0	0	1	1	-	-	-
-core/05_tests/physics/test_r2_laser_selection.py	05_tests/physics	.py	A	0	1	0	2	0	0	0	1	-	-	-
-core/05_tests/physics/test_r3_trace_decomposition.py	05_tests/physics	.py	A	1	1	0	2	0	0	1	1	-	-	-
-core/05_tests/physics/test_shared_record_cone.py	05_tests/physics	.py	A	1	1	0	2	0	0	1	1	-	-	-
-core/05_tests/physics/test_si_bose_fluid.py	05_tests/physics	.py	A	1	1	0	0	0	0	2	2	-	-	-
-core/05_tests/physics/test_stability_attacks.py	05_tests/physics	.py	A	1	1	0	2	0	0	1	1	-	-	-
-core/05_tests/physics/test_t001_method.py	05_tests/physics	.py	A	1	0	0	0	0	0	1	0	-	-	-
-core/05_tests/physics/test_tensor_speed.py	05_tests/physics	.py	A	1	1	0	3	0	0	1	1	-	-	-
-core/05_tests/physics/test_two_signal_contact.py	05_tests/physics	.py	A	2	1	0	1	0	0	2	1	-	-	-
-core/05_tests/regression/03_Research/UET_V3_Parameter_Matrix.csv	05_tests/regression	.csv	REVIEW	0	0	0	6	1	0	0	1	-	-	-
-core/05_tests/regression/README.md	05_tests/regression	.md	REVIEW	0	0	0	5	0	0	0	0	-	-	-
-core/05_tests/regression/examples/matrix_config_demo.json	05_tests/regression	.json	REVIEW	0	0	0	6	0	0	0	1	-	-	-
-core/05_tests/regression/parameter_engine/connector.py	05_tests/regression	.py	REVIEW	0	0	0	6	0	0	0	7	-	-	-
-core/05_tests/regression/parameter_engine/engine.py	05_tests/regression	.py	A	0	3	1	41	12	376	2	80	-	-	-
-core/05_tests/regression/root/README.md	05_tests/regression	.md	REVIEW	0	0	0	8	0	0	0	1	-	-	-
-core/05_tests/regression/root/Research_Parameter_Sweep.py	05_tests/regression	.py	REVIEW	0	0	0	7	0	0	0	0	-	-	-
-core/05_tests/regression/root/test_all_waves_closure.py	05_tests/regression	.py	REVIEW	0	0	0	7	0	0	0	0	-	-	-
-core/05_tests/regression/root/test_all_waves_completion_audit.py	05_tests/regression	.py	REVIEW	0	0	0	7	0	0	0	0	-	-	-
-core/05_tests/regression/root/test_carrier_neutral_comparator.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	-	-	-
-core/05_tests/regression/root/test_carrier_observer_canonical_migration.py	05_tests/regression	.py	REVIEW	0	0	0	5	0	0	0	0	-	-	-
-core/05_tests/regression/root/test_carrier_observer_thought_experiment.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	-	-	-
-core/05_tests/regression/root/test_coarse_graining_canonical_migration.py	05_tests/regression	.py	REVIEW	0	0	0	5	0	0	0	0	-	-	-
-core/05_tests/regression/root/test_conserved_c_no_go_assessment.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	1	-	-	-
-core/05_tests/regression/root/test_core_gr_topic_0_19_dependency.py	05_tests/regression	.py	REVIEW	0	0	0	7	0	2	0	0	-	-	-
-core/05_tests/regression/root/test_core_paths_canonical_resolution.py	05_tests/regression	.py	REVIEW	0	0	0	5	0	0	0	0	-	-	-
-core/05_tests/regression/root/test_core_thermodynamic_topic_0_13_constraint.py	05_tests/regression	.py	REVIEW	0	0	0	7	0	1	0	0	-	-	-
-core/05_tests/regression/root/test_core_upgrade_comprehensive.py	05_tests/regression	.py	REVIEW	0	0	0	6	0	0	0	0	-	-	-
-core/05_tests/regression/root/test_covariant_balance.py	05_tests/regression	.py	REVIEW	0	0	0	6	0	0	0	0	-	-	-
-core/05_tests/regression/root/test_covariant_diffusion.py	05_tests/regression	.py	REVIEW	0	0	0	9	0	0	0	4	-	-	-
-core/05_tests/regression/root/test_covariant_matter.py	05_tests/regression	.py	REVIEW	0	0	0	6	0	0	0	0	-	-	-
-core/05_tests/regression/root/test_covariant_nonclosed.py	05_tests/regression	.py	REVIEW	0	0	0	6	0	0	0	0	-	-	-
-core/05_tests/regression/root/test_covariant_reduction.py	05_tests/regression	.py	REVIEW	0	0	0	6	0	0	0	0	-	-	-
-core/05_tests/regression/root/test_covariant_response.py	05_tests/regression	.py	REVIEW	0	0	0	6	0	0	0	0	-	-	-
-core/05_tests/regression/root/test_covariant_superfluid_transport.py	05_tests/regression	.py	REVIEW	0	0	0	7	0	1	0	1	-	-	-
-core/05_tests/regression/root/test_ding_2022_source_mapping.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	-	-	-
-core/05_tests/regression/root/test_foundation_compatibility.py	05_tests/regression	.py	REVIEW	0	0	0	7	0	0	0	1	-	-	-
-core/05_tests/regression/root/test_foundation_correspondence_matrix.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	-	-	-
-core/05_tests/regression/root/test_foundation_status_aggregate.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	1	-	-	-
-core/05_tests/regression/root/test_gr_bianchi_exchange_alignment.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	-	-	-
-core/05_tests/regression/root/test_gr_closed_limit_alignment.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	-	-	-
-core/05_tests/regression/root/test_gr_correspondence_canonical_migration.py	05_tests/regression	.py	REVIEW	0	0	0	5	0	0	0	0	-	-	-
-core/05_tests/regression/root/test_gr_covariant_diffusion_alignment.py	05_tests/regression	.py	REVIEW	0	0	0	13	0	0	0	4	-	-	-
-core/05_tests/regression/root/test_gr_covariant_matter_alignment.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	-	-	-
-core/05_tests/regression/root/test_gr_hyperbolic_phase_field_alignment.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	-	-	-
-core/05_tests/regression/root/test_gr_hyperbolic_phase_field_bridge_alignment.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	-	-	-
-core/05_tests/regression/root/test_gr_legacy_alignment.py	05_tests/regression	.py	REVIEW	0	0	0	11	0	0	0	0	-	-	-
-core/05_tests/regression/root/test_gr_o2_superfluid_alignment.py	05_tests/regression	.py	REVIEW	0	0	0	11	0	0	0	0	-	-	-
-core/05_tests/regression/root/test_gr_weak_field_reduction_alignment.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	-	-	-
-core/05_tests/regression/root/test_he4_thermal_canonical_migration.py	05_tests/regression	.py	REVIEW	0	0	0	5	0	0	0	0	-	-	-
-core/05_tests/regression/root/test_hyperbolic_phase_canonical_migration.py	05_tests/regression	.py	REVIEW	0	0	0	5	0	0	0	0	-	-	-
-core/05_tests/regression/root/test_hyperbolic_phase_field.py	05_tests/regression	.py	REVIEW	0	0	0	6	0	0	0	0	-	-	-
-core/05_tests/regression/root/test_hyperbolic_phase_field_bridge.py	05_tests/regression	.py	REVIEW	0	0	0	6	0	0	0	0	-	-	-
-core/05_tests/regression/root/test_impact_effect_canonical_migration.py	05_tests/regression	.py	REVIEW	0	0	0	5	0	0	0	0	-	-	-
-core/05_tests/regression/root/test_legacy_variational_closure.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	1	-	-	-
-core/05_tests/regression/root/test_legacy_variational_operator.py	05_tests/regression	.py	REVIEW	0	0	0	6	0	0	0	0	-	-	-
-core/05_tests/regression/root/test_lorentz_canonical_migration.py	05_tests/regression	.py	REVIEW	0	0	0	5	0	0	0	0	-	-	-
-core/05_tests/regression/root/test_major_result_closure.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	3	0	0	-	-	-
-core/05_tests/regression/root/test_major_result_dependency_unlock.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	1	-	-	-
-core/05_tests/regression/root/test_mass_density_3d.py	05_tests/regression	.py	REVIEW	0	0	0	8	0	0	0	2	-	-	-
-core/05_tests/regression/root/test_mass_density_3d_audit.py	05_tests/regression	.py	REVIEW	0	0	0	12	0	0	0	2	-	-	-
-core/05_tests/regression/root/test_mass_density_3d_source_package.py	05_tests/regression	.py	REVIEW	0	0	0	7	0	0	0	0	-	-	-
-core/05_tests/regression/root/test_mass_density_amplitude.py	05_tests/regression	.py	REVIEW	0	0	0	8	0	0	0	2	-	-	-
-core/05_tests/regression/root/test_mass_density_amplitude_audit.py	05_tests/regression	.py	REVIEW	0	0	0	12	0	0	0	2	-	-	-
-core/05_tests/regression/root/test_mass_density_canonical_migration.py	05_tests/regression	.py	REVIEW	0	0	0	5	0	0	0	0	-	-	-
-core/05_tests/regression/root/test_mass_density_correspondence.py	05_tests/regression	.py	REVIEW	0	0	0	7	0	0	0	2	-	-	-
-core/05_tests/regression/root/test_mass_density_dimensional.py	05_tests/regression	.py	REVIEW	0	0	0	8	0	0	0	2	-	-	-
-core/05_tests/regression/root/test_mass_density_dimensional_audit.py	05_tests/regression	.py	REVIEW	0	0	0	12	0	0	0	2	-	-	-
-core/05_tests/regression/root/test_matrix_proof.py	05_tests/regression	.py	REVIEW	0	0	0	8	0	0	0	0	-	-	-
-core/05_tests/regression/root/test_matrix_real_galaxy.py	05_tests/regression	.py	REVIEW	0	0	0	7	0	0	0	0	-	-	-
-core/05_tests/regression/root/test_matter_interaction_canonical_migration.py	05_tests/regression	.py	REVIEW	0	0	0	5	0	0	0	0	-	-	-
-core/05_tests/regression/root/test_matter_space_alignment.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	-	-	-
-core/05_tests/regression/root/test_matter_space_candidate_canonical_migration.py	05_tests/regression	.py	REVIEW	0	0	0	5	0	0	0	0	-	-	-
-core/05_tests/regression/root/test_matter_space_canonical_migration.py	05_tests/regression	.py	REVIEW	0	0	0	5	0	0	0	0	-	-	-
-core/05_tests/regression/root/test_matter_space_characteristic.py	05_tests/regression	.py	REVIEW	0	0	0	8	0	0	0	2	-	-	-
-core/05_tests/regression/root/test_matter_space_conserved_flux_telegraph.py	05_tests/regression	.py	REVIEW	0	0	0	13	0	0	0	3	-	-	-
-core/05_tests/regression/root/test_matter_space_core.py	05_tests/regression	.py	REVIEW	1	0	0	7	0	0	1	2	-	-	-
-core/05_tests/regression/root/test_matter_space_finite_cone.py	05_tests/regression	.py	REVIEW	0	0	0	7	0	0	0	2	-	-	-
-core/05_tests/regression/root/test_matter_space_finite_cone_integration.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	-	-	-
-core/05_tests/regression/root/test_matter_space_flux_canonical_migration.py	05_tests/regression	.py	REVIEW	0	0	0	5	0	0	0	0	-	-	-
-core/05_tests/regression/root/test_matter_space_flux_phi_coupled.py	05_tests/regression	.py	REVIEW	0	0	0	13	0	0	0	3	-	-	-
-core/05_tests/regression/root/test_matter_space_observable.py	05_tests/regression	.py	REVIEW	0	0	0	6	0	0	0	0	-	-	-
-core/05_tests/regression/root/test_matter_space_observable_canonical_migration.py	05_tests/regression	.py	REVIEW	0	0	0	5	0	0	0	0	-	-	-
-core/05_tests/regression/root/test_matter_space_phase_pilot.py	05_tests/regression	.py	REVIEW	0	0	0	7	0	1	0	0	-	-	-
-core/05_tests/regression/root/test_matter_space_phase_pilot_summary.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	-	-	-
-core/05_tests/regression/root/test_matter_space_report_alignment.py	05_tests/regression	.py	REVIEW	0	0	0	8	0	0	0	0	-	-	-
-core/05_tests/regression/root/test_matter_space_research_program.py	05_tests/regression	.py	REVIEW	0	0	0	9	0	0	0	0	-	-	-
-core/05_tests/regression/root/test_matter_space_split.py	05_tests/regression	.py	REVIEW	0	0	0	6	0	0	0	0	-	-	-
-core/05_tests/regression/root/test_matter_space_thermal_pilot.py	05_tests/regression	.py	REVIEW	0	0	0	7	0	1	0	1	-	-	-
-core/05_tests/regression/root/test_noether_canonical_migration.py	05_tests/regression	.py	REVIEW	0	0	0	5	0	0	0	0	-	-	-
-core/05_tests/regression/root/test_o2_canonical_migration.py	05_tests/regression	.py	REVIEW	0	0	0	5	0	0	0	0	-	-	-
-core/05_tests/regression/root/test_observables_canonical_migration.py	05_tests/regression	.py	REVIEW	0	0	0	5	0	0	0	0	-	-	-
-core/05_tests/regression/root/test_orbit_cosmology_correspondence.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	-	-	-
-core/05_tests/regression/root/test_parameter_engine.py	05_tests/regression	.py	REVIEW	0	0	0	6	0	0	0	0	-	-	-
-core/05_tests/regression/root/test_particle_dirac_program_gate.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	1	0	0	-	-	-
-core/05_tests/regression/root/test_persistence_canonical_migration.py	05_tests/regression	.py	REVIEW	0	0	0	5	0	0	0	0	-	-	-
-core/05_tests/regression/root/test_photon_observer_baseline.py	05_tests/regression	.py	REVIEW	0	0	0	6	0	0	0	0	-	-	-
-core/05_tests/regression/root/test_protein_folding_dynamics_gate.py	05_tests/regression	.py	REVIEW	0	0	0	7	0	1	0	0	-	-	-
-core/05_tests/regression/root/test_protein_folding_hp_benchmark.py	05_tests/regression	.py	REVIEW	0	0	0	7	0	1	0	0	-	-	-
-core/05_tests/regression/root/test_quantum_lane_canonical_migration.py	05_tests/regression	.py	REVIEW	0	0	0	5	0	0	0	0	-	-	-
-core/05_tests/regression/root/test_relational_two_body_baseline.py	05_tests/regression	.py	REVIEW	0	0	0	7	0	0	0	2	-	-	-
-core/05_tests/regression/root/test_resource_selection.py	05_tests/regression	.py	REVIEW	0	0	0	8	0	0	0	3	-	-	-
-core/05_tests/regression/root/test_resource_selection_physical_cost_map.py	05_tests/regression	.py	REVIEW	0	0	0	8	0	0	0	2	-	-	-
-core/05_tests/regression/root/test_resource_selection_thermal_bridge.py	05_tests/regression	.py	REVIEW	0	0	0	8	0	0	0	4	-	-	-
-core/05_tests/regression/root/test_run_core_verifications_input_resolution.py	05_tests/regression	.py	REVIEW	0	0	0	7	0	1	0	0	-	-	-
-core/05_tests/regression/root/test_spacetime_trace.py	05_tests/regression	.py	REVIEW	0	0	0	8	0	0	0	3	-	-	-
-core/05_tests/regression/root/test_spatial_coupling.py	05_tests/regression	.py	REVIEW	0	0	0	7	0	5	0	1	-	-	-
-core/05_tests/regression/root/test_tensor_parity.py	05_tests/regression	.py	REVIEW	0	0	0	7	0	0	0	0	-	-	-
-core/05_tests/regression/root/test_thermal_dimensional_calibration.py	05_tests/regression	.py	REVIEW	0	0	0	7	0	0	0	0	-	-	-
-core/05_tests/regression/root/test_thermal_dimensional_canonical_migration.py	05_tests/regression	.py	REVIEW	0	0	0	5	0	0	0	0	-	-	-
-core/05_tests/regression/root/test_thermal_observable_bridge.py	05_tests/regression	.py	REVIEW	0	0	0	7	0	1	0	2	-	-	-
-core/05_tests/regression/root/test_thermal_observable_canonical_migration.py	05_tests/regression	.py	REVIEW	0	0	0	5	0	0	0	0	-	-	-
-core/05_tests/regression/root/test_thermal_response_contract_canonical_migration.py	05_tests/regression	.py	REVIEW	0	0	0	5	0	0	0	0	-	-	-
-core/05_tests/regression/root/test_thermal_source_observable_mapping.py	05_tests/regression	.py	REVIEW	0	0	0	6	0	1	0	1	-	-	-
-core/05_tests/regression/root/test_thermodynamics.py	05_tests/regression	.py	REVIEW	0	0	0	7	0	0	0	0	-	-	-
-core/05_tests/regression/root/test_topic13_actuation_readout_identifiability.py	05_tests/regression	.py	REVIEW	0	0	0	7	0	0	0	1	-	-	-
-core/05_tests/regression/root/test_topic13_aist_graphite_source_route_boundary.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	2	0	0	-	-	-
-core/05_tests/regression/root/test_topic13_alpha_identifiability.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	-	-	-
-core/05_tests/regression/root/test_topic13_alpha_phi_k_calibration_candidates.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	2	0	0	-	-	-
-core/05_tests/regression/root/test_topic13_alpha_phi_k_identifiability.py	05_tests/regression	.py	REVIEW	0	0	0	6	0	1	0	0	-	-	-
-core/05_tests/regression/root/test_topic13_anisotropic_thermoelastic_response_bridge.py	05_tests/regression	.py	REVIEW	0	0	0	12	0	2	0	1	-	-	-
-core/05_tests/regression/root/test_topic13_base_phi_independent_calibration_requirement.py	05_tests/regression	.py	REVIEW	0	0	0	6	0	0	0	0	-	-	-
-core/05_tests/regression/root/test_topic13_base_phi_independent_calibration_requirement_integration.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	-	-	-
-core/05_tests/regression/root/test_topic13_base_phi_reconciliation.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	-	-	-
-core/05_tests/regression/root/test_topic13_base_phi_reconciliation_integration.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	-	-	-
-core/05_tests/regression/root/test_topic13_baseline_registration_models.py	05_tests/regression	.py	REVIEW	0	0	0	7	0	0	0	1	-	-	-
-core/05_tests/regression/root/test_topic13_berut_figure3_binary_identity.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	1	-	-	-
-core/05_tests/regression/root/test_topic13_berut_figure3_binary_identity_integration.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	-	-	-
-core/05_tests/regression/root/test_topic13_berut_figure3_digitization.py	05_tests/regression	.py	REVIEW	0	0	0	7	0	0	0	0	-	-	-
-core/05_tests/regression/root/test_topic13_berut_source_package_availability.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	2	-	-	-
-core/05_tests/regression/root/test_topic13_berut_source_package_availability_integration.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	1	-	-	-
-core/05_tests/regression/root/test_topic13_beta_correspondence.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	-	-	-
-core/05_tests/regression/root/test_topic13_beta_symbol_separation.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	-	-	-
-core/05_tests/regression/root/test_topic13_beta_symbol_separation_integration.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	-	-	-
-core/05_tests/regression/root/test_topic13_bipm_specific_heat_source.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	1	0	0	-	-	-
-core/05_tests/regression/root/test_topic13_calorine_csrc_equilibrium_crosscheck.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	1	0	0	-	-	-
-core/05_tests/regression/root/test_topic13_calorine_lattice_interface_inputs.py	05_tests/regression	.py	REVIEW	0	0	0	12	0	2	0	1	-	-	-
-core/05_tests/regression/root/test_topic13_calorine_legacy_nep2_backend_probe.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	-	-	-
-core/05_tests/regression/root/test_topic13_calorine_legacy_nep2_pbte_reproduction.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	2	0	0	-	-	-
-core/05_tests/regression/root/test_topic13_calorine_model_form_state_spread.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	-	-	-
-core/05_tests/regression/root/test_topic13_calorine_nep1_backend_compatibility.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	1	0	0	-	-	-
-core/05_tests/regression/root/test_topic13_calorine_public_model_variant_boundary.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	1	0	0	-	-	-
-core/05_tests/regression/root/test_topic13_calorine_zenodo_nep_bte_candidate_boundary.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	-	-	-
-core/05_tests/regression/root/test_topic13_calorine_zenodo_nep_bte_reproduction.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	-	-	-
-core/05_tests/regression/root/test_topic13_candidate_core_compatibility.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	2	0	0	-	-	-
-core/05_tests/regression/root/test_topic13_channel_error_attribution.py	05_tests/regression	.py	REVIEW	0	0	0	7	0	0	0	1	-	-	-
-core/05_tests/regression/root/test_topic13_charged_one_loop_current_vertex.py	05_tests/regression	.py	REVIEW	0	0	0	8	0	1	0	1	-	-	-
-core/05_tests/regression/root/test_topic13_charged_one_loop_match.py	05_tests/regression	.py	REVIEW	0	0	0	8	0	1	0	1	-	-	-
-core/05_tests/regression/root/test_topic13_charged_static_confluent_vertex.py	05_tests/regression	.py	REVIEW	0	0	0	8	0	1	0	1	-	-	-
-core/05_tests/regression/root/test_topic13_closure_critical_path.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	1	0	0	-	-	-
-core/05_tests/regression/root/test_topic13_closure_input_packages.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	1	0	0	-	-	-
-core/05_tests/regression/root/test_topic13_closure_matrix.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	1	0	1	-	-	-
-core/05_tests/regression/root/test_topic13_closure_record_contract.py	05_tests/regression	.py	REVIEW	0	0	0	6	0	1	0	0	-	-	-
-core/05_tests/regression/root/test_topic13_closure_tracks.py	05_tests/regression	.py	REVIEW	0	0	0	7	0	0	0	1	-	-	-
-core/05_tests/regression/root/test_topic13_complementary_geometry.py	05_tests/regression	.py	REVIEW	0	0	0	7	0	0	0	1	-	-	-
-core/05_tests/regression/root/test_topic13_composite_alpha_design.py	05_tests/regression	.py	REVIEW	0	0	0	7	0	0	0	1	-	-	-
-core/05_tests/regression/root/test_topic13_constrained_precision.py	05_tests/regression	.py	REVIEW	0	0	0	7	0	0	0	1	-	-	-
-core/05_tests/regression/root/test_topic13_constrained_tensor.py	05_tests/regression	.py	REVIEW	0	0	0	7	0	0	0	1	-	-	-
-core/05_tests/regression/root/test_topic13_coupled_gain_loss_operator.py	05_tests/regression	.py	REVIEW	0	0	0	9	0	1	0	1	-	-	-
-core/05_tests/regression/root/test_topic13_coupled_response_heat_carrier_no_go.py	05_tests/regression	.py	REVIEW	0	0	0	8	0	1	0	1	-	-	-
-core/05_tests/regression/root/test_topic13_covariant_field_normalization_identifiability.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	1	0	0	-	-	-
-core/05_tests/regression/root/test_topic13_covariant_field_normalization_integration.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	1	0	0	-	-	-
-core/05_tests/regression/root/test_topic13_covariant_matter_coupling_normalization.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	-	-	-
-core/05_tests/regression/root/test_topic13_covariant_matter_coupling_normalization_integration.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	-	-	-
-core/05_tests/regression/root/test_topic13_covariant_transport_implementation_boundary.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	-	-	-
-core/05_tests/regression/root/test_topic13_covariant_transport_implementation_boundary_integration.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	-	-	-
-core/05_tests/regression/root/test_topic13_cp_cv_correction.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	-	-	-
-core/05_tests/regression/root/test_topic13_csrc_equilibrium_component_acceptance.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	-	-	-
-core/05_tests/regression/root/test_topic13_csrc_fixed_volume_identity.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	-	-	-
-core/05_tests/regression/root/test_topic13_csrc_reconciliation.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	-	-	-
-core/05_tests/regression/root/test_topic13_csrc_reconciliation_integration.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	1	0	0	-	-	-
-core/05_tests/regression/root/test_topic13_csrc_source_route_priority.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	1	0	0	-	-	-
-core/05_tests/regression/root/test_topic13_csrc_thermodynamic_transport_regime.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	-	-	-
-core/05_tests/regression/root/test_topic13_current_metric_surface.py	05_tests/regression	.py	REVIEW	0	0	0	7	0	0	0	1	-	-	-
-core/05_tests/regression/root/test_topic13_cv_source_reconciliation.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	-	-	-
-core/05_tests/regression/root/test_topic13_cv_source_reconciliation_integration.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	-	-	-
-core/05_tests/regression/root/test_topic13_day2012_preferred_thermodynamic_table.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	-	-	-
-core/05_tests/regression/root/test_topic13_desorbo_ceylon_graphite_cp.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	-	-	-
-core/05_tests/regression/root/test_topic13_dimensional_bridge_contract.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	-	-	-
-core/05_tests/regression/root/test_topic13_ding_2017_acs_supplementary_boundary.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	-	-	-
-core/05_tests/regression/root/test_topic13_ding_alternate_public_dataset_discovery.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	-	-	-
-core/05_tests/regression/root/test_topic13_ding_csrc_heating_backcalculation_identifiability.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	1	0	0	-	-	-
-core/05_tests/regression/root/test_topic13_ding_experimental_heating_input.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	-	-	-
-core/05_tests/regression/root/test_topic13_ding_fig1d_normalized_source_lane_integration.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	-	-	-
-core/05_tests/regression/root/test_topic13_ding_material_regime_boundary.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	-	-	-
-core/05_tests/regression/root/test_topic13_ding_pbte_author_request.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	-	-	-
-core/05_tests/regression/root/test_topic13_ding_pbte_author_request_integration.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	1	-	-	-
-core/05_tests/regression/root/test_topic13_ding_pbte_numeric_input_availability.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	-	-	-
-core/05_tests/regression/root/test_topic13_ding_pbte_payload_acceptance.py	05_tests/regression	.py	REVIEW	0	0	0	6	0	1	0	0	-	-	-
-core/05_tests/regression/root/test_topic13_ding_pbte_payload_acceptance_integration.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	1	0	0	-	-	-
-core/05_tests/regression/root/test_topic13_ding_public_supplementary_boundary.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	-	-	-
-core/05_tests/regression/root/test_topic13_ding_row_metadata_alignment.py	05_tests/regression	.py	REVIEW	0	0	0	7	0	0	0	0	-	-	-
-core/05_tests/regression/root/test_topic13_ding_supplementary_content_review.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	-	-	-
-core/05_tests/regression/root/test_topic13_direction_moments.py	05_tests/regression	.py	REVIEW	0	0	0	7	0	0	0	1	-	-	-
-core/05_tests/regression/root/test_topic13_displacement_phase.py	05_tests/regression	.py	REVIEW	0	0	0	7	0	0	0	1	-	-	-
-core/05_tests/regression/root/test_topic13_dressed_ra_charge_current_ladder.py	05_tests/regression	.py	REVIEW	0	0	0	8	0	1	0	1	-	-	-
-core/05_tests/regression/root/test_topic13_dressed_ra_pair_microscopic_rung_boundary.py	05_tests/regression	.py	REVIEW	0	0	0	8	0	0	0	1	-	-	-
-core/05_tests/regression/root/test_topic13_dynamic_thermoelastic_response.py	05_tests/regression	.py	REVIEW	0	0	0	8	0	0	0	1	-	-	-
-core/05_tests/regression/root/test_topic13_e2g_nonlinear_symmetry.py	05_tests/regression	.py	REVIEW	0	0	0	7	0	0	0	1	-	-	-
-core/05_tests/regression/root/test_topic13_entropy_force_convention.py	05_tests/regression	.py	REVIEW	0	0	0	8	0	0	0	2	-	-	-
-core/05_tests/regression/root/test_topic13_entropy_metric_repair.py	05_tests/regression	.py	REVIEW	0	0	0	11	0	0	0	1	-	-	-
-core/05_tests/regression/root/test_topic13_equilibrium_kms.py	05_tests/regression	.py	REVIEW	0	0	0	6	0	0	0	0	-	-	-
-core/05_tests/regression/root/test_topic13_farooqui_ig210_thermophysical_source.py	05_tests/regression	.py	REVIEW	0	0	0	7	0	0	0	0	-	-	-
-core/05_tests/regression/root/test_topic13_farooqui_ig210_volumetric_cp_uncertainty.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	1	0	0	-	-	-
-core/05_tests/regression/root/test_topic13_figshare_dft_force_data_boundary.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	1	0	0	-	-	-
-core/05_tests/regression/root/test_topic13_finiteq_scattering_geometry.py	05_tests/regression	.py	REVIEW	0	0	0	7	0	0	0	1	-	-	-
-core/05_tests/regression/root/test_topic13_fixed_charge_response.py	05_tests/regression	.py	REVIEW	0	0	0	7	0	0	0	1	-	-	-
-core/05_tests/regression/root/test_topic13_fixed_phi_spectrum_regression.py	05_tests/regression	.py	REVIEW	0	0	0	7	0	2	0	1	-	-	-
-core/05_tests/regression/root/test_topic13_flat_thermodynamic_bridge_components.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	-	-	-
-core/05_tests/regression/root/test_topic13_formal_bridge_boundary.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	-	-	-
-core/05_tests/regression/root/test_topic13_formal_thermodynamic_bridge_integration.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	-	-	-
-core/05_tests/regression/root/test_topic13_formal_transverse_response.py	05_tests/regression	.py	REVIEW	0	0	0	6	0	0	0	0	-	-	-
-core/05_tests/regression/root/test_topic13_formal_two_sector_thermodynamics.py	05_tests/regression	.py	REVIEW	0	0	0	6	0	0	0	0	-	-	-
-core/05_tests/regression/root/test_topic13_fourier_shear_anisotropy.py	05_tests/regression	.py	REVIEW	0	0	0	7	0	0	0	1	-	-	-
-core/05_tests/regression/root/test_topic13_frame_output.py	05_tests/regression	.py	REVIEW	0	0	0	7	0	0	0	1	-	-	-
-core/05_tests/regression/root/test_topic13_full_core_ready_acceptance.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	-	-	-
-core/05_tests/regression/root/test_topic13_gamma_scattering_geometry.py	05_tests/regression	.py	REVIEW	0	0	0	7	0	0	0	1	-	-	-
-core/05_tests/regression/root/test_topic13_gatech_graphite_source.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	-	-	-
-core/05_tests/regression/root/test_topic13_gatech_standard_transport_comparator.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	1	-	-	-
-core/05_tests/regression/root/test_topic13_gatech_standard_transport_comparator_integration.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	-	-	-
-core/05_tests/regression/root/test_topic13_gatech_volumetric_cp_independence.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	3	0	1	-	-	-
-core/05_tests/regression/root/test_topic13_generic_q_image_support.py	05_tests/regression	.py	REVIEW	0	0	0	7	0	0	0	1	-	-	-
-core/05_tests/regression/root/test_topic13_goldstone_projected_current.py	05_tests/regression	.py	REVIEW	0	0	0	6	0	1	0	0	-	-	-
-core/05_tests/regression/root/test_topic13_graphite_alpha_v_kt_matched_source_boundary.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	1	0	0	-	-	-
-core/05_tests/regression/root/test_topic13_graphite_elastic_bulk_gate_integration.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	-	-	-
-core/05_tests/regression/root/test_topic13_graphite_elastic_bulk_modulus_source.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	-	-	-
-core/05_tests/regression/root/test_topic13_graphite_green_kubo_source_boundary.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	-	-	-
-core/05_tests/regression/root/test_topic13_graphite_isothermal_kt_gate_integration.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	1	-	-	-
-core/05_tests/regression/root/test_topic13_graphite_isothermal_kt_source.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	-	-	-
-core/05_tests/regression/root/test_topic13_he4_alpha_gate_integration.py	05_tests/regression	.py	REVIEW	0	0	0	7	0	0	0	0	-	-	-
-core/05_tests/regression/root/test_topic13_he4_core_composition.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	-	-	-
-core/05_tests/regression/root/test_topic13_he4_matching_independence.py	05_tests/regression	.py	REVIEW	0	0	0	7	0	2	0	1	-	-	-
-core/05_tests/regression/root/test_topic13_he4_normal_viscosity_kubo.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	-	-	-
-core/05_tests/regression/root/test_topic13_he4_o2_response_calibration.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	-	-	-
-core/05_tests/regression/root/test_topic13_he4_o2_si_beta_mapping.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	-	-	-
-core/05_tests/regression/root/test_topic13_he4_svp_physical_anchor.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	-	-	-
-core/05_tests/regression/root/test_topic13_heat_charge_frame_map.py	05_tests/regression	.py	REVIEW	0	0	0	7	0	0	0	1	-	-	-
-core/05_tests/regression/root/test_topic13_heat_current_kubo_continuum_boundary.py	05_tests/regression	.py	REVIEW	0	0	0	6	0	0	0	0	-	-	-
-core/05_tests/regression/root/test_topic13_heat_current_kubo_match.py	05_tests/regression	.py	REVIEW	0	0	0	6	0	0	0	0	-	-	-
-core/05_tests/regression/root/test_topic13_holdout_exposure_record.py	05_tests/regression	.py	REVIEW	0	0	0	0	0	0	0	0	-	-	-
-core/05_tests/regression/root/test_topic13_hong_source_package_boundary.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	-	-	-
-core/05_tests/regression/root/test_topic13_huang_2022_utokyo_graphite_ribbons_boundary.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	-	-	-
-core/05_tests/regression/root/test_topic13_huang_2023_nims_mdr_payload_boundary.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	1	0	0	-	-	-
-core/05_tests/regression/root/test_topic13_huang_2023_supplementary_payload_boundary.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	1	-	-	-
-core/05_tests/regression/root/test_topic13_huberman_2019_public_pbte_boundary.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	1	0	0	-	-	-
-core/05_tests/regression/root/test_topic13_iaea_cv_uncertainty_boundary.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	1	0	1	-	-	-
-core/05_tests/regression/root/test_topic13_iaea_gr280_same_state_cp_source.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	1	0	0	-	-	-
-core/05_tests/regression/root/test_topic13_iaea_graphite_constant_volume_source.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	1	0	0	-	-	-
-core/05_tests/regression/root/test_topic13_independent_csrc_acceptance.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	1	-	-	-
-core/05_tests/regression/root/test_topic13_integrated_elastic_events.py	05_tests/regression	.py	REVIEW	0	0	0	6	0	0	0	0	-	-	-
-core/05_tests/regression/root/test_topic13_interlayer_mode_residue.py	05_tests/regression	.py	REVIEW	0	0	0	6	0	0	0	0	-	-	-
-core/05_tests/regression/root/test_topic13_interlayer_strain_transfer.py	05_tests/regression	.py	REVIEW	0	0	0	6	0	0	0	0	-	-	-
-core/05_tests/regression/root/test_topic13_interlayer_thermal_variance.py	05_tests/regression	.py	REVIEW	0	0	0	7	0	0	0	1	-	-	-
-core/05_tests/regression/root/test_topic13_interpolation_refinement.py	05_tests/regression	.py	REVIEW	0	0	0	7	0	0	0	1	-	-	-
-core/05_tests/regression/root/test_topic13_interpolation_support.py	05_tests/regression	.py	REVIEW	0	0	0	7	0	0	0	1	-	-	-
-core/05_tests/regression/root/test_topic13_invariant_galerkin_collision_operator.py	05_tests/regression	.py	REVIEW	0	0	0	9	0	1	0	1	-	-	-
-core/05_tests/regression/root/test_topic13_invariant_rate_collision_repair.py	05_tests/regression	.py	REVIEW	0	0	0	8	0	1	0	1	-	-	-
-core/05_tests/regression/root/test_topic13_invariant_vector_current_galerkin.py	05_tests/regression	.py	REVIEW	0	0	0	8	0	1	0	1	-	-	-
-core/05_tests/regression/root/test_topic13_isentropic_source_work.py	05_tests/regression	.py	REVIEW	0	0	0	7	0	0	0	1	-	-	-
-core/05_tests/regression/root/test_topic13_joint_resolution.py	05_tests/regression	.py	REVIEW	0	0	0	7	0	0	0	1	-	-	-
-core/05_tests/regression/root/test_topic13_jun_source_package_boundary.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	-	-	-
-core/05_tests/regression/root/test_topic13_kim_2018_graphite_green_kubo_external_input.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	-	-	-
-core/05_tests/regression/root/test_topic13_kinetic_canonical_normalization.py	05_tests/regression	.py	REVIEW	0	0	0	7	0	2	0	1	-	-	-
-core/05_tests/regression/root/test_topic13_landauer_core_disposition.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	-	-	-
-core/05_tests/regression/root/test_topic13_lattice_momentum_relaxing_heat_parent.py	05_tests/regression	.py	REVIEW	0	0	0	12	0	2	0	1	-	-	-
-core/05_tests/regression/root/test_topic13_local_quadratic_bounds.py	05_tests/regression	.py	REVIEW	0	0	0	7	0	0	0	1	-	-	-
-core/05_tests/regression/root/test_topic13_local_variance_identifiability.py	05_tests/regression	.py	REVIEW	0	0	0	7	0	0	0	1	-	-	-
-core/05_tests/regression/root/test_topic13_lowitzer_full_source_pair.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	-	-	-
-core/05_tests/regression/root/test_topic13_major_result_register_sync.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	3	-	-	-
-core/05_tests/regression/root/test_topic13_material_interface_factor_resolution.py	05_tests/regression	.py	REVIEW	0	0	0	12	0	2	0	1	-	-	-
-core/05_tests/regression/root/test_topic13_material_lattice_interface_contract.py	05_tests/regression	.py	REVIEW	0	0	0	12	0	2	0	1	-	-	-
-core/05_tests/regression/root/test_topic13_matter_actuation_harmonics.py	05_tests/regression	.py	REVIEW	0	0	0	7	0	0	0	1	-	-	-
-core/05_tests/regression/root/test_topic13_matter_strain_susceptibility.py	05_tests/regression	.py	REVIEW	0	0	0	8	0	0	0	1	-	-	-
-core/05_tests/regression/root/test_topic13_microscopic_current_ladder_matching_boundary.py	05_tests/regression	.py	REVIEW	0	0	0	8	0	1	0	1	-	-	-
-core/05_tests/regression/root/test_topic13_microscopic_finite_cutoff_kubo_match.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	-	-	-
-core/05_tests/regression/root/test_topic13_minimal_input_contract.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	-	-	-
-core/05_tests/regression/root/test_topic13_mode_work_heat.py	05_tests/regression	.py	REVIEW	0	0	0	7	0	0	0	1	-	-	-
-core/05_tests/regression/root/test_topic13_moment_interpolation.py	05_tests/regression	.py	REVIEW	0	0	0	7	0	0	0	1	-	-	-
-core/05_tests/regression/root/test_topic13_mp48_ding_csrc_response_mapping.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	-	-	-
-core/05_tests/regression/root/test_topic13_mp48_e2g_multiplicity.py	05_tests/regression	.py	REVIEW	0	0	0	7	0	0	0	1	-	-	-
-core/05_tests/regression/root/test_topic13_mp48_force_constant_harmonic_reconstruction.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	-	-	-
-core/05_tests/regression/root/test_topic13_mp48_independent_graphite_cv.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	-	-	-
-core/05_tests/regression/root/test_topic13_mp48_mode_resolved_csrc_diagnostic.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	-	-	-
-core/05_tests/regression/root/test_topic13_mp48_phi_e_dimensional_comparator.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	-	-	-
-core/05_tests/regression/root/test_topic13_mp48_shear_irrep.py	05_tests/regression	.py	REVIEW	0	0	0	6	0	0	0	0	-	-	-
-core/05_tests/regression/root/test_topic13_mp48_spectral_csrc_reproduction.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	-	-	-
-core/05_tests/regression/root/test_topic13_mp48_temperature_volume_uncertainty_boundary.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	1	0	0	-	-	-
-core/05_tests/regression/root/test_topic13_multibragg_positions.py	05_tests/regression	.py	REVIEW	0	0	0	8	0	0	0	1	-	-	-
-core/05_tests/regression/root/test_topic13_natural_graphite_nelson_riley_alpha_v_gate_integration.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	-	-	-
-core/05_tests/regression/root/test_topic13_natural_graphite_nelson_riley_alpha_v_source.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	-	-	-
-core/05_tests/regression/root/test_topic13_nims_graphite_ltc_route_no_go.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	-	-	-
-core/05_tests/regression/root/test_topic13_nims_mp990448_phonon_source_boundary.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	3	0	0	-	-	-
-core/05_tests/regression/root/test_topic13_nist_alpha_v_gate_integration.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	-	-	-
-core/05_tests/regression/root/test_topic13_nist_axm5q1_density_source_boundary.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	-	-	-
-core/05_tests/regression/root/test_topic13_nist_graphite_alpha_v_source_boundary.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	-	-	-
-core/05_tests/regression/root/test_topic13_nist_srm_3600_heat_capacity_boundary.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	2	0	0	-	-	-
-core/05_tests/regression/root/test_topic13_normal_response_curvature.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	-	-	-
-core/05_tests/regression/root/test_topic13_normal_thermal_background.py	05_tests/regression	.py	REVIEW	0	0	0	7	0	1	0	1	-	-	-
-core/05_tests/regression/root/test_topic13_npl_rsa40_graphite_specific_heat.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	-	-	-
-core/05_tests/regression/root/test_topic13_open_system_sk_kms_entropy.py	05_tests/regression	.py	REVIEW	0	0	0	6	0	0	0	0	-	-	-
-core/05_tests/regression/root/test_topic13_oxford_tgs_comparator_provenance.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	-	-	-
-core/05_tests/regression/root/test_topic13_oxford_tgs_numeric_rows.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	-	-	-
-core/05_tests/regression/root/test_topic13_patch_position_sensitivity.py	05_tests/regression	.py	REVIEW	0	0	0	7	0	0	0	1	-	-	-
-core/05_tests/regression/root/test_topic13_perez_castaneda_hopg_boundary.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	3	0	0	-	-	-
-core/05_tests/regression/root/test_topic13_peterson_source_identity_no_go.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	-	-	-
-core/05_tests/regression/root/test_topic13_phase_space_measure.py	05_tests/regression	.py	REVIEW	0	0	0	7	0	0	0	1	-	-	-
-core/05_tests/regression/root/test_topic13_phi_e_reference_normalization.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	-	-	-
-core/05_tests/regression/root/test_topic13_phi_e_reference_normalization_integration.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	-	-	-
-core/05_tests/regression/root/test_topic13_phi_si_anchor_public_source_boundary.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	1	0	0	-	-	-
-core/05_tests/regression/root/test_topic13_phonix_mp47_graphite_comparator.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	-	-	-
-core/05_tests/regression/root/test_topic13_physical_kubo_coefficient_provenance.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	1	-	-	-
-core/05_tests/regression/root/test_topic13_physical_kubo_coefficient_provenance_integration.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	-	-	-
-core/05_tests/regression/root/test_topic13_physical_transport_reconciliation.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	-	-	-
-core/05_tests/regression/root/test_topic13_physical_transport_reconciliation_integration.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	-	-	-
-core/05_tests/regression/root/test_topic13_positive_interpolation_bounds.py	05_tests/regression	.py	REVIEW	0	0	0	7	0	0	0	1	-	-	-
-core/05_tests/regression/root/test_topic13_profile_residual_baseline_scatter.py	05_tests/regression	.py	REVIEW	0	0	0	7	0	0	0	1	-	-	-
-core/05_tests/regression/root/test_topic13_progress_track_scope.py	05_tests/regression	.py	REVIEW	0	0	0	6	0	0	0	0	-	-	-
-core/05_tests/regression/root/test_topic13_qh15_graphite_transport_boundary.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	2	0	0	-	-	-
-core/05_tests/regression/root/test_topic13_quadratic_source_averaging.py	05_tests/regression	.py	REVIEW	0	0	0	7	0	0	0	1	-	-	-
-core/05_tests/regression/root/test_topic13_raman_deformation_constraint.py	05_tests/regression	.py	REVIEW	0	0	0	8	0	0	0	1	-	-	-
-core/05_tests/regression/root/test_topic13_reciprocal_thermal_dynamics.py	05_tests/regression	.py	REVIEW	0	0	0	8	0	0	0	1	-	-	-
-core/05_tests/regression/root/test_topic13_registration_shell_transfer.py	05_tests/regression	.py	REVIEW	0	0	0	7	0	0	0	1	-	-	-
-core/05_tests/regression/root/test_topic13_regularized_continuum_heat_current.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	-	-	-
-core/05_tests/regression/root/test_topic13_regularized_continuum_heat_current_integration.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	-	-	-
-core/05_tests/regression/root/test_topic13_response_one_loop_match.py	05_tests/regression	.py	REVIEW	0	0	0	8	0	1	0	1	-	-	-
-core/05_tests/regression/root/test_topic13_retarded_ra_mixed_current_vertex.py	05_tests/regression	.py	REVIEW	0	0	0	8	0	0	0	1	-	-	-
-core/05_tests/regression/root/test_topic13_same_kernel_tagged_width.py	05_tests/regression	.py	REVIEW	0	0	0	8	0	1	0	1	-	-	-
-core/05_tests/regression/root/test_topic13_scalar_thermoelastic_response_bridge.py	05_tests/regression	.py	REVIEW	0	0	0	12	0	2	0	1	-	-	-
-core/05_tests/regression/root/test_topic13_shear_symmetry.py	05_tests/regression	.py	REVIEW	0	0	0	7	0	0	0	1	-	-	-
-core/05_tests/regression/root/test_topic13_sk_kms_entropy_contract.py	05_tests/regression	.py	REVIEW	0	0	0	6	0	0	0	0	-	-	-
-core/05_tests/regression/root/test_topic13_sk_kms_entropy_contract_integration.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	-	-	-
-core/05_tests/regression/root/test_topic13_standard_o2_finite_temperature_comparator.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	-	-	-
-core/05_tests/regression/root/test_topic13_standard_o2_finite_temperature_comparator_integration.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	-	-	-
-core/05_tests/regression/root/test_topic13_support_canonical_migration.py	05_tests/regression	.py	REVIEW	0	0	0	5	0	0	0	0	-	-	-
-core/05_tests/regression/root/test_topic13_tensor_heat_lift.py	05_tests/regression	.py	REVIEW	0	0	0	7	0	0	0	1	-	-	-
-core/05_tests/regression/root/test_topic13_thermal_bridge_scale_dependency.py	05_tests/regression	.py	REVIEW	0	0	0	7	0	1	0	0	-	-	-
-core/05_tests/regression/root/test_topic13_thermal_mass_actuation.py	05_tests/regression	.py	REVIEW	0	0	0	7	0	0	0	1	-	-	-
-core/05_tests/regression/root/test_topic13_thermal_response_beta_contract.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	-	-	-
-core/05_tests/regression/root/test_topic13_thermal_response_beta_contract_integration.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	1	-	-	-
-core/05_tests/regression/root/test_topic13_thermal_variance_spectrum.py	05_tests/regression	.py	REVIEW	0	0	0	7	0	0	0	1	-	-	-
-core/05_tests/regression/root/test_topic13_thermoelastic_spatial_compatibility.py	05_tests/regression	.py	REVIEW	0	0	0	8	0	1	0	1	-	-	-
-core/05_tests/regression/root/test_topic13_thermometry_window.py	05_tests/regression	.py	REVIEW	0	0	0	7	0	0	0	1	-	-	-
-core/05_tests/regression/root/test_topic13_tpg_anisotropic_alpha_v_gate_integration.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	-	-	-
-core/05_tests/regression/root/test_topic13_tpg_anisotropic_alpha_v_source.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	-	-	-
-core/05_tests/regression/root/test_topic13_transition_coordinate_map.py	05_tests/regression	.py	REVIEW	0	0	0	7	0	0	0	1	-	-	-
-core/05_tests/regression/root/test_topic13_transition_kernel_rate_dimension_no_go.py	05_tests/regression	.py	REVIEW	0	0	0	8	0	0	0	1	-	-	-
-core/05_tests/regression/root/test_topic13_transition_pullback.py	05_tests/regression	.py	REVIEW	0	0	0	11	0	0	0	1	-	-	-
-core/05_tests/regression/root/test_topic13_transport_coefficient_identifiability.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	-	-	-
-core/05_tests/regression/root/test_topic13_transport_kms_entropy_status_boundary.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	-	-	-
-core/05_tests/regression/root/test_topic13_transport_resolution.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	-	-	-
-core/05_tests/regression/root/test_topic13_ued_beam_position.py	05_tests/regression	.py	REVIEW	0	0	0	7	0	0	0	1	-	-	-
-core/05_tests/regression/root/test_topic13_ued_cut_pooling.py	05_tests/regression	.py	REVIEW	0	0	0	7	0	0	0	1	-	-	-
-core/05_tests/regression/root/test_topic13_ued_cut_signal.py	05_tests/regression	.py	REVIEW	0	0	0	7	0	0	0	1	-	-	-
-core/05_tests/regression/root/test_topic13_ued_cut_tiles.py	05_tests/regression	.py	REVIEW	0	0	0	7	0	0	0	1	-	-	-
-core/05_tests/regression/root/test_topic13_ued_mask_support.py	05_tests/regression	.py	REVIEW	0	0	0	7	0	0	0	1	-	-	-
-core/05_tests/regression/root/test_topic13_ued_numeric_inventory.py	05_tests/regression	.py	REVIEW	0	0	0	7	0	0	0	1	-	-	-
-core/05_tests/regression/root/test_topic13_ued_pickle_static.py	05_tests/regression	.py	REVIEW	0	0	0	7	0	0	0	1	-	-	-
-core/05_tests/regression/root/test_topic13_ued_raw_archive.py	05_tests/regression	.py	REVIEW	0	0	0	7	0	0	0	1	-	-	-
-core/05_tests/regression/root/test_topic13_ued_raw_structure.py	05_tests/regression	.py	REVIEW	0	0	0	7	0	0	0	1	-	-	-
-core/05_tests/regression/root/test_topic13_ued_region_support.py	05_tests/regression	.py	REVIEW	0	0	0	7	0	0	0	1	-	-	-
-core/05_tests/regression/root/test_topic13_ued_rotated_position.py	05_tests/regression	.py	REVIEW	0	0	0	8	0	0	0	2	-	-	-
-core/05_tests/regression/root/test_topic13_ued_source_acquisition.py	05_tests/regression	.py	REVIEW	0	0	0	6	0	0	0	0	-	-	-
-core/05_tests/regression/root/test_topic13_ued_voigt_position.py	05_tests/regression	.py	REVIEW	0	0	0	8	0	0	0	2	-	-	-
-core/05_tests/regression/root/test_topic13_uet_o2_auxiliary_field_condensed.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	-	-	-
-core/05_tests/regression/root/test_topic13_uet_o2_charge_conserving_ladder_response.py	05_tests/regression	.py	REVIEW	0	0	0	6	0	0	0	0	-	-	-
-core/05_tests/regression/root/test_topic13_uet_o2_charged_current_correlator.py	05_tests/regression	.py	REVIEW	0	0	0	8	0	0	0	2	-	-	-
-core/05_tests/regression/root/test_topic13_uet_o2_collisionless_kubo.py	05_tests/regression	.py	REVIEW	0	0	0	6	0	0	0	0	-	-	-
-core/05_tests/regression/root/test_topic13_uet_o2_condensate_fluctuation_spectrum.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	-	-	-
-core/05_tests/regression/root/test_topic13_uet_o2_condensate_fluctuation_spectrum_integration.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	-	-	-
-core/05_tests/regression/root/test_topic13_uet_o2_condensate_gaussian_thermal.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	-	-	-
-core/05_tests/regression/root/test_topic13_uet_o2_condensate_gaussian_thermal_integration.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	1	-	-	-
-core/05_tests/regression/root/test_topic13_uet_o2_condensate_goldstone_ideal_lane.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	-	-	-
-core/05_tests/regression/root/test_topic13_uet_o2_condensate_goldstone_ideal_lane_integration.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	-	-	-
-core/05_tests/regression/root/test_topic13_uet_o2_condensed_dissipative_transport.py	05_tests/regression	.py	REVIEW	0	0	0	6	0	0	0	0	-	-	-
-core/05_tests/regression/root/test_topic13_uet_o2_condensed_goldstone_ward.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	-	-	-
-core/05_tests/regression/root/test_topic13_uet_o2_condensed_loop_renormalized_vertex.py	05_tests/regression	.py	REVIEW	0	0	0	9	0	1	0	2	-	-	-
-core/05_tests/regression/root/test_topic13_uet_o2_condensed_relative_flow_collision.py	05_tests/regression	.py	REVIEW	0	0	0	9	0	0	0	3	-	-	-
-core/05_tests/regression/root/test_topic13_uet_o2_condensed_relative_flow_kubo_admission.py	05_tests/regression	.py	REVIEW	0	0	0	6	0	0	0	0	-	-	-
-core/05_tests/regression/root/test_topic13_uet_o2_condensed_retarded_dissipation_no_go.py	05_tests/regression	.py	REVIEW	0	0	0	6	0	0	0	0	-	-	-
-core/05_tests/regression/root/test_topic13_uet_o2_condensed_sk_kms_kubo_match.py	05_tests/regression	.py	REVIEW	0	0	0	6	0	0	0	0	-	-	-
-core/05_tests/regression/root/test_topic13_uet_o2_contact_sk_transition_vertex_match.py	05_tests/regression	.py	REVIEW	0	0	0	8	0	0	0	2	-	-	-
-core/05_tests/regression/root/test_topic13_uet_o2_continuum_collision_operator.py	05_tests/regression	.py	REVIEW	0	0	0	6	0	0	0	0	-	-	-
-core/05_tests/regression/root/test_topic13_uet_o2_continuum_limit_boundary.py	05_tests/regression	.py	REVIEW	0	0	0	6	0	0	0	0	-	-	-
-core/05_tests/regression/root/test_topic13_uet_o2_continuum_relative_flow_kubo.py	05_tests/regression	.py	REVIEW	0	0	0	8	0	1	0	2	-	-	-
-core/05_tests/regression/root/test_topic13_uet_o2_continuum_sunset_cut.py	05_tests/regression	.py	REVIEW	0	0	0	6	0	0	0	0	-	-	-
-core/05_tests/regression/root/test_topic13_uet_o2_covariant_entropy_heat_flux_balance.py	05_tests/regression	.py	REVIEW	0	0	0	7	0	1	0	0	-	-	-
-core/05_tests/regression/root/test_topic13_uet_o2_finite_channel_entropy_balance.py	05_tests/regression	.py	REVIEW	0	0	0	6	0	0	0	0	-	-	-
-core/05_tests/regression/root/test_topic13_uet_o2_finite_density_charged_vertex.py	05_tests/regression	.py	REVIEW	0	0	0	6	0	0	0	0	-	-	-
-core/05_tests/regression/root/test_topic13_uet_o2_finite_temperature_all_22_permutation_identity.py	05_tests/regression	.py	REVIEW	0	0	0	6	0	1	0	0	-	-	-
-core/05_tests/regression/root/test_topic13_uet_o2_finite_temperature_all_onshell_cut_response.py	05_tests/regression	.py	REVIEW	0	0	0	6	0	0	0	0	-	-	-
-core/05_tests/regression/root/test_topic13_uet_o2_finite_temperature_declared_channel_retarded_advanced_keldysh_1pi.py	05_tests/regression	.py	REVIEW	0	0	0	6	0	2	0	0	-	-	-
-core/05_tests/regression/root/test_topic13_uet_o2_finite_temperature_declared_retarded_1pi_grid.py	05_tests/regression	.py	REVIEW	0	0	0	6	0	0	0	0	-	-	-
-core/05_tests/regression/root/test_topic13_uet_o2_finite_temperature_full_sunset_sk_kms.py	05_tests/regression	.py	REVIEW	0	0	0	6	0	0	0	0	-	-	-
-core/05_tests/regression/root/test_topic13_uet_o2_finite_temperature_offshell_1pi.py	05_tests/regression	.py	REVIEW	0	0	0	6	0	0	0	0	-	-	-
-core/05_tests/regression/root/test_topic13_uet_o2_finite_temperature_offshell_threshold_crossing_1pi.py	05_tests/regression	.py	REVIEW	0	0	0	6	0	1	0	0	-	-	-
-core/05_tests/regression/root/test_topic13_uet_o2_finite_temperature_renormalized_hartree.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	-	-	-
-core/05_tests/regression/root/test_topic13_uet_o2_finite_temperature_scheme_identifiability.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	-	-	-
-core/05_tests/regression/root/test_topic13_uet_o2_finite_temperature_signed_cut_coverage.py	05_tests/regression	.py	REVIEW	0	0	0	6	0	0	0	0	-	-	-
-core/05_tests/regression/root/test_topic13_uet_o2_finite_temperature_sunset_cut_multiplicity.py	05_tests/regression	.py	REVIEW	0	0	0	6	0	0	0	0	-	-	-
-core/05_tests/regression/root/test_topic13_uet_o2_finite_temperature_sunset_renormalization_identifiability_no_go.py	05_tests/regression	.py	REVIEW	0	0	0	6	0	0	0	0	-	-	-
-core/05_tests/regression/root/test_topic13_uet_o2_finite_temperature_sunset_scattering_sk_kms.py	05_tests/regression	.py	REVIEW	0	0	0	6	0	0	0	0	-	-	-
-core/05_tests/regression/root/test_topic13_uet_o2_finite_temperature_sunset_sk_kms.py	05_tests/regression	.py	REVIEW	0	0	0	6	0	0	0	0	-	-	-
-core/05_tests/regression/root/test_topic13_uet_o2_finite_temperature_sunset_vacuum_match.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	-	-	-
-core/05_tests/regression/root/test_topic13_uet_o2_finite_temperature_two_fluid_response.py	05_tests/regression	.py	REVIEW	0	0	0	6	0	0	0	0	-	-	-
-core/05_tests/regression/root/test_topic13_uet_o2_gaussian_offshell_background.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	-	-	-
-core/05_tests/regression/root/test_topic13_uet_o2_hartree_thermodynamic_consistency.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	-	-	-
-core/05_tests/regression/root/test_topic13_uet_o2_kinetic_collision_kubo.py	05_tests/regression	.py	REVIEW	0	0	0	6	0	0	0	0	-	-	-
-core/05_tests/regression/root/test_topic13_uet_o2_momentum_ladder_sk_kms.py	05_tests/regression	.py	REVIEW	0	0	0	6	0	0	0	0	-	-	-
-core/05_tests/regression/root/test_topic13_uet_o2_nonlocal_sk_kms_memory_kernel.py	05_tests/regression	.py	REVIEW	0	0	0	6	0	0	0	0	-	-	-
-core/05_tests/regression/root/test_topic13_uet_o2_normal_thermodynamic_consistency.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	-	-	-
-core/05_tests/regression/root/test_topic13_uet_o2_normal_thermodynamic_consistency_integration.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	-	-	-
-core/05_tests/regression/root/test_topic13_uet_o2_on_shell_sunset_width.py	05_tests/regression	.py	REVIEW	0	0	0	8	0	0	0	2	-	-	-
-core/05_tests/regression/root/test_topic13_uet_o2_one_loop_normal_branch.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	-	-	-
-core/05_tests/regression/root/test_topic13_uet_o2_one_loop_normal_branch_integration.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	-	-	-
-core/05_tests/regression/root/test_topic13_uet_o2_one_loop_uv_boundary.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	-	-	-
-core/05_tests/regression/root/test_topic13_uet_o2_one_loop_uv_boundary_integration.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	-	-	-
-core/05_tests/regression/root/test_topic13_uet_o2_one_loop_vertex_uv_boundary.py	05_tests/regression	.py	REVIEW	0	0	0	6	0	0	0	0	-	-	-
-core/05_tests/regression/root/test_topic13_uet_o2_physical_renormalization_condition_contract.py	05_tests/regression	.py	REVIEW	0	0	0	6	0	0	0	0	-	-	-
-core/05_tests/regression/root/test_topic13_uet_o2_quantum_collision_enhancement.py	05_tests/regression	.py	REVIEW	0	0	0	6	0	0	0	0	-	-	-
-core/05_tests/regression/root/test_topic13_uet_o2_quantum_kinetic_collision_kubo.py	05_tests/regression	.py	REVIEW	0	0	0	6	0	1	0	0	-	-	-
-core/05_tests/regression/root/test_topic13_uet_o2_renormalized_normal_branch.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	-	-	-
-core/05_tests/regression/root/test_topic13_uet_o2_renormalized_vertex_scheme.py	05_tests/regression	.py	REVIEW	0	0	0	6	0	0	0	0	-	-	-
-core/05_tests/regression/root/test_topic13_uet_o2_sunset_dispersion_interface.py	05_tests/regression	.py	REVIEW	0	0	0	6	0	0	0	0	-	-	-
-core/05_tests/regression/root/test_topic13_uet_o2_thermodynamic_normal_component.py	05_tests/regression	.py	REVIEW	0	0	0	8	0	1	0	2	-	-	-
-core/05_tests/regression/root/test_topic13_uet_o2_tree_level_bs_sk_match.py	05_tests/regression	.py	REVIEW	0	0	0	6	0	0	0	0	-	-	-
-core/05_tests/regression/root/test_topic13_uet_o2_tree_level_charged_ward_vertex.py	05_tests/regression	.py	REVIEW	0	0	0	8	0	0	0	2	-	-	-
-core/05_tests/regression/root/test_topic13_uet_o2_two_loop_sunset_cut.py	05_tests/regression	.py	REVIEW	0	0	0	6	0	0	0	0	-	-	-
-core/05_tests/regression/root/test_topic13_uet_o2_ward_coefficient_state_dependence.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	-	-	-
-core/05_tests/regression/root/test_topic13_uet_o2_ward_constrained_condensed.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	-	-	-
-core/05_tests/regression/root/test_topic13_variance_directional_grid.py	05_tests/regression	.py	REVIEW	0	0	0	7	0	0	0	1	-	-	-
-core/05_tests/regression/root/test_topic13_variance_mesh_shift.py	05_tests/regression	.py	REVIEW	0	0	0	7	0	0	0	1	-	-	-
-core/05_tests/regression/root/test_topic13_weighted_directions.py	05_tests/regression	.py	REVIEW	0	0	0	11	0	0	0	1	-	-	-
-core/05_tests/regression/root/test_topic13_xie_2026_holdout_access_audit.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	1	-	-	-
-core/05_tests/regression/root/test_topic13_zenodo_hitrace_isotropic_graphite_cp_source.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	-	-	-
-core/05_tests/regression/root/test_topic13_zenodo_ig210_alpha_l_source.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	-	-	-
-core/05_tests/regression/root/test_uet_chaos_integration.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	-	-	-
-core/05_tests/regression/root/test_uet_coarse_graining.py	05_tests/regression	.py	REVIEW	0	0	0	8	0	0	0	4	-	-	-
-core/05_tests/regression/root/test_uet_code_surface_inventory.py	05_tests/regression	.py	REVIEW	0	0	0	7	0	0	0	1	-	-	-
-core/05_tests/regression/root/test_uet_core_equation_family_contract.py	05_tests/regression	.py	REVIEW	0	0	0	7	0	0	0	0	-	-	-
-core/05_tests/regression/root/test_uet_core_scientific_links.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	-	-	-
-core/05_tests/regression/root/test_uet_covariant_diffusion_links.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	-	-	-
-core/05_tests/regression/root/test_uet_covariant_open_system.py	05_tests/regression	.py	REVIEW	0	0	0	8	0	1	0	4	-	-	-
-core/05_tests/regression/root/test_uet_covariant_parent.py	05_tests/regression	.py	REVIEW	0	0	0	13	0	0	0	4	-	-	-
-core/05_tests/regression/root/test_uet_covariant_parent_links.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	-	-	-
-core/05_tests/regression/root/test_uet_covariant_theory_spine.py	05_tests/regression	.py	REVIEW	0	0	0	8	0	0	0	3	-	-	-
-core/05_tests/regression/root/test_uet_curved_3p1_adm_evolution.py	05_tests/regression	.py	REVIEW	0	0	0	11	0	0	0	1	-	-	-
-core/05_tests/regression/root/test_uet_curved_3p1_constraints.py	05_tests/regression	.py	REVIEW	0	0	0	11	0	0	0	2	-	-	-
-core/05_tests/regression/root/test_uet_curved_3p1_generalized_harmonic.py	05_tests/regression	.py	REVIEW	0	0	0	11	0	0	0	1	-	-	-
-core/05_tests/regression/root/test_uet_curved_3p1_geometry.py	05_tests/regression	.py	REVIEW	0	0	0	11	0	0	0	1	-	-	-
-core/05_tests/regression/root/test_uet_curved_3p1_gh_nonlinear_vacuum.py	05_tests/regression	.py	REVIEW	0	0	0	11	0	0	0	1	-	-	-
-core/05_tests/regression/root/test_uet_curved_3p1_gh_time_evolution.py	05_tests/regression	.py	REVIEW	0	0	0	11	0	0	0	1	-	-	-
-core/05_tests/regression/root/test_uet_curved_3p1_matter_wiring.py	05_tests/regression	.py	REVIEW	0	0	0	7	0	0	0	1	-	-	-
-core/05_tests/regression/root/test_uet_derivation_origin_audit.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	-	-	-
-core/05_tests/regression/root/test_uet_downstream_unlock.py	05_tests/regression	.py	REVIEW	0	0	0	6	0	0	0	0	-	-	-
-core/05_tests/regression/root/test_uet_equation_inventory.py	05_tests/regression	.py	REVIEW	0	0	0	7	0	0	0	0	-	-	-
-core/05_tests/regression/root/test_uet_foundation_compatibility_decision.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	-	-	-
-core/05_tests/regression/root/test_uet_fundamental_track.py	05_tests/regression	.py	REVIEW	0	0	0	6	0	0	0	0	-	-	-
-core/05_tests/regression/root/test_uet_gr_correspondence.py	05_tests/regression	.py	REVIEW	0	0	0	8	0	0	0	3	-	-	-
-core/05_tests/regression/root/test_uet_impact_effect.py	05_tests/regression	.py	REVIEW	0	0	0	6	0	0	0	0	-	-	-
-core/05_tests/regression/root/test_uet_main_theory_axioms.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	-	-	-
-core/05_tests/regression/root/test_uet_main_theory_closure.py	05_tests/regression	.py	REVIEW	0	0	0	6	0	0	0	0	-	-	-
-core/05_tests/regression/root/test_uet_main_theory_dimensional_observable.py	05_tests/regression	.py	REVIEW	0	0	0	6	0	0	0	0	-	-	-
-core/05_tests/regression/root/test_uet_main_theory_wave0.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	-	-	-
-core/05_tests/regression/root/test_uet_matter_space_flux_links.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	-	-	-
-core/05_tests/regression/root/test_uet_quantum_interpretations.py	05_tests/regression	.py	REVIEW	0	0	0	8	0	0	0	3	-	-	-
-core/05_tests/regression/root/test_uet_quantum_measurement.py	05_tests/regression	.py	REVIEW	0	0	0	8	0	0	0	3	-	-	-
-core/05_tests/regression/root/test_uet_research_room_wave1.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	1	-	-	-
-core/05_tests/regression/root/test_uet_trace_links.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	-	-	-
-core/05_tests/regression/root/test_uet_wave3_wave10_program.py	05_tests/regression	.py	REVIEW	0	0	0	11	0	1	0	0	-	-	-
-core/05_tests/regression/test_engine_lane_cards.py	05_tests/regression	.py	REVIEW	1	0	0	0	0	0	1	1	-	-	-
-core/05_tests/regression/validation/test_matrix_proof.py	05_tests/regression	.py	REVIEW	0	0	0	8	0	0	0	0	-	-	-
-core/05_tests/regression/validation/test_unity_gtua.py	05_tests/regression	.py	REVIEW	0	0	0	6	0	0	0	0	-	-	-
+core/05_tests/README.md	05_tests	.md	REVIEW	0	0	0	5	0	0	0	0	A	W7	Folder guide; folder still holds A tests; rewrite in W10
+core/05_tests/artifact/README.md	05_tests/artifact	.md	REVIEW	0	0	0	5	0	0	0	0	C	W7	Fixture or guide of legacy tests labelled C
+core/05_tests/artifact/root/test_gaia_3d_query_manifest.py	05_tests/artifact	.py	REVIEW	0	0	0	7	0	0	0	0	C	W7	Legacy gate, migration or artifact check (old C lanes, foundation gates, migration waves); not a physics test
+core/05_tests/artifact/root/test_matter_space_split_artifact.py	05_tests/artifact	.py	REVIEW	0	0	0	10	0	0	0	0	C	W7	Legacy gate, migration or artifact check (old C lanes, foundation gates, migration waves); not a physics test
+core/05_tests/artifact/root/test_uet_core_organization_wave1.py	05_tests/artifact	.py	REVIEW	0	0	0	10	0	0	0	0	C	W7	Legacy gate, migration or artifact check (old C lanes, foundation gates, migration waves); not a physics test
+core/05_tests/artifact/root/test_uet_research_organization_registry.py	05_tests/artifact	.py	REVIEW	0	0	0	11	0	0	0	0	C	W7	Legacy gate, migration or artifact check (old C lanes, foundation gates, migration waves); not a physics test
+core/05_tests/artifact/root/test_uet_wave3_wave10_artifact_coverage.py	05_tests/artifact	.py	REVIEW	0	0	0	10	0	1	0	0	C	W7	Legacy gate, migration or artifact check (old C lanes, foundation gates, migration waves); not a physics test
+core/05_tests/artifact/test_topic13_energy_response_audit_preservation.py	05_tests/artifact	.py	REVIEW	0	0	0	6	0	0	0	0	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
+core/05_tests/artifact/test_uet_core_artifact_generator_review_queue.py	05_tests/artifact	.py	REVIEW	0	0	0	5	0	0	0	0	C	W7	Legacy gate, migration or artifact check (old C lanes, foundation gates, migration waves); not a physics test
+core/05_tests/artifact/test_uet_core_artifact_migration_history.py	05_tests/artifact	.py	REVIEW	0	0	0	5	0	0	0	0	C	W7	Legacy gate, migration or artifact check (old C lanes, foundation gates, migration waves); not a physics test
+core/05_tests/artifact/test_uet_core_migration_enforcement.py	05_tests/artifact	.py	REVIEW	0	0	0	5	0	0	0	0	C	W7	Legacy gate, migration or artifact check (old C lanes, foundation gates, migration waves); not a physics test
+core/05_tests/equation/README.md	05_tests/equation	.md	REVIEW	0	0	0	5	0	0	0	0	A	W7	Folder guide; folder still holds A tests; rewrite in W10
+core/05_tests/equation/root/test_gr_noether_phase_field_map_alignment.py	05_tests/equation	.py	REVIEW	0	0	0	13	0	0	0	4	C	W7	Tests a module labelled C (A modules only as dependencies); moves with it
+core/05_tests/equation/root/test_lorentz_noether_comprehensive.py	05_tests/equation	.py	REVIEW	0	0	0	11	0	0	0	2	C	W7	Tests a module labelled C (A modules only as dependencies); moves with it
+core/05_tests/equation/root/test_matter_interaction_forward.py	05_tests/equation	.py	REVIEW	0	0	0	7	0	1	0	2	C	W7	Tests a module labelled C (A modules only as dependencies); moves with it
+core/05_tests/equation/root/test_noether_phase_field_map.py	05_tests/equation	.py	REVIEW	0	0	0	9	0	0	0	4	C	W7	Tests a module labelled C (A modules only as dependencies); moves with it
+core/05_tests/equation/root/test_noether_phase_field_topic_0_11_dependency.py	05_tests/equation	.py	REVIEW	0	0	0	14	0	2	0	4	C	W7	Legacy gate, migration or artifact check (old C lanes, foundation gates, migration waves); not a physics test
+core/05_tests/equation/root/test_o2_finite_density_eos.py	05_tests/equation	.py	REVIEW	0	0	0	6	0	0	0	0	B	W7	Regression test of a module labelled B (uet_o2_finite_density_eos); keep with the module for stage 3
+core/05_tests/equation/root/test_topic13_action_normalized_elastic_scattering.py	05_tests/equation	.py	REVIEW	0	0	0	10	0	2	0	2	B	W7	Regression test of a module labelled B (uet_o2_kinetic_collision_kubo); keep with the module for stage 3
+core/05_tests/equation/root/test_topic13_collective_response_eos.py	05_tests/equation	.py	REVIEW	0	0	0	10	0	0	0	0	C	W7	Tests a module labelled C (A modules only as dependencies); moves with it
+core/05_tests/equation/root/test_topic13_collective_response_eos_integration.py	05_tests/equation	.py	REVIEW	0	0	0	10	0	0	0	0	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
+core/05_tests/equation/root/test_topic13_continuum_action_umklapp_no_go.py	05_tests/equation	.py	REVIEW	0	0	0	12	0	2	0	1	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
+core/05_tests/equation/root/test_topic13_covariant_action_si_anchor_integration.py	05_tests/equation	.py	REVIEW	0	0	0	10	0	1	0	0	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
+core/05_tests/equation/root/test_topic13_covariant_action_si_anchor_route.py	05_tests/equation	.py	REVIEW	0	0	0	10	0	0	0	0	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
+core/05_tests/equation/root/test_topic13_covariant_action_symbolic_si_conversion.py	05_tests/equation	.py	REVIEW	0	0	0	10	0	0	0	0	C	W7	Tests a module labelled C (A modules only as dependencies); moves with it
+core/05_tests/equation/root/test_topic13_eos_revision_impact.py	05_tests/equation	.py	REVIEW	0	0	0	7	0	0	0	1	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
+core/05_tests/equation/root/test_topic13_finite_temperature_quasiparticle_eos.py	05_tests/equation	.py	REVIEW	0	0	0	6	0	2	0	0	C	W7	Tests a module labelled C (A modules only as dependencies); moves with it
+core/05_tests/equation/root/test_topic13_finite_temperature_quasiparticle_eos_v2.py	05_tests/equation	.py	REVIEW	0	0	0	6	0	1	0	0	C	W7	Tests a module labelled C (A modules only as dependencies); moves with it
+core/05_tests/equation/root/test_topic13_same_action_composition.py	05_tests/equation	.py	REVIEW	0	0	0	7	0	0	0	1	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
+core/05_tests/equation/root/test_topic13_uet_o2_action_1pi_sunset_euclidean.py	05_tests/equation	.py	REVIEW	0	0	0	7	0	1	0	0	C	W7	Tests a module labelled C (A modules only as dependencies); moves with it
+core/05_tests/equation/root/test_topic13_uet_o2_action_1pi_sunset_retarded.py	05_tests/equation	.py	REVIEW	0	0	0	7	0	1	0	0	C	W7	Tests a module labelled C (A modules only as dependencies); moves with it
+core/05_tests/equation/root/test_topic13_uet_o2_action_1pi_sunset_tensor.py	05_tests/equation	.py	REVIEW	0	0	0	7	0	1	0	0	C	W7	Tests a module labelled C (A modules only as dependencies); moves with it
+core/05_tests/equation/root/test_topic13_uet_o2_action_derived_transition_kernel.py	05_tests/equation	.py	REVIEW	0	0	0	6	0	0	0	0	C	W7	Tests a module labelled C (A modules only as dependencies); moves with it
+core/05_tests/equation/root/test_topic13_uet_o2_action_sunset_1pi_spectral.py	05_tests/equation	.py	REVIEW	0	0	0	7	0	1	0	0	C	W7	Tests a module labelled C (A modules only as dependencies); moves with it
+core/05_tests/equation/root/test_topic13_uet_o2_action_sunset_zero_eta.py	05_tests/equation	.py	REVIEW	0	0	0	7	0	1	0	0	B	W7	Regression test of a module labelled B (uet_o2_finite_density_eos); keep with the module for stage 3
+core/05_tests/equation/root/test_topic13_uet_o2_action_thermal_observable_bridge.py	05_tests/equation	.py	REVIEW	0	0	0	6	0	0	0	0	C	W7	Tests a module labelled C (A modules only as dependencies); moves with it
+core/05_tests/equation/root/test_topic13_uet_o2_action_thermal_stiffness_beta.py	05_tests/equation	.py	REVIEW	0	0	0	7	0	1	0	0	C	W7	Tests a module labelled C (A modules only as dependencies); moves with it
+core/05_tests/equation/root/test_topic13_uet_o2_gaussian_thermal_stationarity_no_go.py	05_tests/equation	.py	REVIEW	0	0	0	10	0	0	0	0	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
+core/05_tests/equation/root/test_topic13_uet_o2_interacting_sk_kms_action.py	05_tests/equation	.py	REVIEW	0	0	0	6	0	0	0	0	B	W7	Regression test of a module labelled B (uet_o2_finite_density_eos, uet_o2_interacting_sk_kms_action); keep with the module for stage 3
+core/05_tests/equation/root/test_topic13_uet_o2_stationarity_scheme_dependence.py	05_tests/equation	.py	REVIEW	0	0	0	10	0	0	0	0	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
+core/05_tests/equation/root/test_uet_noether_mapping_links.py	05_tests/equation	.py	REVIEW	0	0	0	10	0	0	0	0	C	W7	Legacy gate, migration or artifact check (old C lanes, foundation gates, migration waves); not a physics test
+core/05_tests/equation/root/test_uet_topic_formula_correspondence_manifest.py	05_tests/equation	.py	REVIEW	0	0	0	10	0	0	0	0	C	W7	Legacy gate, migration or artifact check (old C lanes, foundation gates, migration waves); not a physics test
+core/05_tests/mutation/run_parent_mutations.py	05_tests/mutation	.py	A	0	1	0	1	0	0	0	0	A	W7	Mutation run that shows the parent physics tests catch sign and coefficient changes
+core/05_tests/numerical/README.md	05_tests/numerical	.md	REVIEW	0	0	0	5	0	0	0	0	A	W7	Folder guide; folder still holds A tests; rewrite in W10
+core/05_tests/numerical/root/test_gr_causal_nonclosed_alignment.py	05_tests/numerical	.py	REVIEW	0	0	0	10	0	0	0	0	C	W7	Legacy gate, migration or artifact check (old C lanes, foundation gates, migration waves); not a physics test
+core/05_tests/numerical/root/test_matter_space_causal_cone_compatibility.py	05_tests/numerical	.py	REVIEW	0	0	0	10	0	0	0	0	C	W7	Legacy gate, migration or artifact check (old C lanes, foundation gates, migration waves); not a physics test
+core/05_tests/numerical/root/test_matter_space_causal_discrete_gradient.py	05_tests/numerical	.py	REVIEW	0	0	0	6	0	0	0	0	C	W7	Tests a module labelled C (A modules only as dependencies); moves with it
+core/05_tests/numerical/root/test_matter_space_causal_discrete_gradient_artifact.py	05_tests/numerical	.py	REVIEW	0	0	0	10	0	0	0	0	C	W7	Legacy gate, migration or artifact check (old C lanes, foundation gates, migration waves); not a physics test
+core/05_tests/numerical/root/test_matter_space_causal_discretization.py	05_tests/numerical	.py	REVIEW	0	0	0	10	0	0	0	0	C	W7	Legacy gate, migration or artifact check (old C lanes, foundation gates, migration waves); not a physics test
+core/05_tests/numerical/root/test_matter_space_causal_reference.py	05_tests/numerical	.py	REVIEW	0	0	0	10	0	0	0	1	C	W7	Legacy gate, migration or artifact check (old C lanes, foundation gates, migration waves); not a physics test
+core/05_tests/numerical/root/test_matter_space_causal_reference_energy.py	05_tests/numerical	.py	REVIEW	0	0	0	10	0	0	0	0	C	W7	Legacy gate, migration or artifact check (old C lanes, foundation gates, migration waves); not a physics test
+core/05_tests/numerical/root/test_matter_space_causal_repair.py	05_tests/numerical	.py	REVIEW	0	0	0	10	0	0	0	0	C	W7	Legacy gate, migration or artifact check (old C lanes, foundation gates, migration waves); not a physics test
+core/05_tests/numerical/root/test_matter_space_energy_ledger_artifact.py	05_tests/numerical	.py	REVIEW	0	0	0	10	0	0	0	0	C	W7	Legacy gate, migration or artifact check (old C lanes, foundation gates, migration waves); not a physics test
+core/05_tests/numerical/root/test_persistence_energy_diagnostic.py	05_tests/numerical	.py	REVIEW	0	0	0	8	0	1	0	2	C	W7	Tests a module labelled C (A modules only as dependencies); moves with it
+core/05_tests/numerical/root/test_topic13_calorine_full_lbte_stability.py	05_tests/numerical	.py	REVIEW	0	0	0	10	0	1	0	1	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
+core/05_tests/numerical/root/test_topic13_causal_branch_holdout_contract.py	05_tests/numerical	.py	REVIEW	0	0	0	10	0	0	0	0	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
+core/05_tests/numerical/root/test_topic13_causal_branch_selection.py	05_tests/numerical	.py	REVIEW	0	0	0	10	0	1	0	0	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
+core/05_tests/numerical/root/test_topic13_causal_branch_selection_integration.py	05_tests/numerical	.py	REVIEW	0	0	0	10	0	1	0	0	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
+core/05_tests/numerical/root/test_topic13_causal_core_compatibility.py	05_tests/numerical	.py	REVIEW	0	0	0	10	0	0	0	0	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
+core/05_tests/numerical/root/test_topic13_ding_pbte_energy_temperature_mapping.py	05_tests/numerical	.py	REVIEW	0	0	0	10	0	0	0	0	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
+core/05_tests/numerical/root/test_topic13_energy_estimator_noise.py	05_tests/numerical	.py	REVIEW	0	0	0	7	0	0	0	1	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
+core/05_tests/numerical/root/test_topic13_energy_identifiability.py	05_tests/numerical	.py	REVIEW	0	0	0	7	0	0	0	1	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
+core/05_tests/numerical/root/test_topic13_energy_response_bridge.py	05_tests/numerical	.py	REVIEW	0	0	0	10	0	0	0	0	C	W7	Tests a module labelled C (A modules only as dependencies); moves with it
+core/05_tests/numerical/root/test_topic13_mp48_force_constant_csrc_mesh_convergence.py	05_tests/numerical	.py	REVIEW	0	0	0	10	0	0	0	5	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
+core/05_tests/numerical/root/test_topic13_phi_energy_anchor_gate_integration.py	05_tests/numerical	.py	REVIEW	0	0	0	10	0	0	0	0	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
+core/05_tests/numerical/root/test_topic13_phi_energy_anchor_identifiability.py	05_tests/numerical	.py	REVIEW	0	0	0	10	0	0	0	0	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
+core/05_tests/numerical/root/test_topic13_uet_o2_energy_momentum_conserving_bethe_salpeter.py	05_tests/numerical	.py	REVIEW	0	0	0	6	0	0	0	0	C	W7	Tests a module labelled C (A modules only as dependencies); moves with it
+core/05_tests/numerical/root/test_topic13_uet_o2_finite_temperature_self_energy.py	05_tests/numerical	.py	REVIEW	0	0	0	10	0	0	0	0	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
+core/05_tests/numerical/root/test_topic13_uet_o2_hartree_normal_stability.py	05_tests/numerical	.py	REVIEW	0	0	0	10	0	0	0	0	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
+core/05_tests/numerical/root/test_topic13_uet_o2_one_loop_convergence.py	05_tests/numerical	.py	REVIEW	0	0	0	10	0	0	0	0	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
+core/05_tests/numerical/root/test_topic13_uet_o2_one_loop_convergence_integration.py	05_tests/numerical	.py	REVIEW	0	0	0	10	0	0	0	0	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
+core/05_tests/numerical/root/test_topic13_uet_o2_one_loop_retarded_self_energy_no_go.py	05_tests/numerical	.py	REVIEW	0	0	0	6	0	0	0	0	B	W7	Regression test of a module labelled B (uet_o2_finite_density_eos, uet_o2_one_loop_retarded_self_energy_no_go); keep with the module for stage 3
+core/05_tests/numerical/root/test_topic13_uet_o2_thermal_stability_boundary.py	05_tests/numerical	.py	REVIEW	0	0	0	10	0	0	0	0	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
+core/05_tests/numerical/root/test_uet_dynamical_stability.py	05_tests/numerical	.py	REVIEW	0	0	0	8	0	0	0	2	C	W7	Tests a module labelled C (A modules only as dependencies); moves with it
+core/05_tests/physics/__init__.py	05_tests/physics	.py	A	0	0	0	0	0	0	0	0	D	W7	Test plumbing (package marker, fixtures or canonical path resolution)
+core/05_tests/physics/_symbolic_geometry.py	05_tests/physics	.py	A	0	0	5	0	0	0	0	0	A	W7	Physics test (STANDARD section 6) of the new equations; counted by check_physics_tests
+core/05_tests/physics/test_asymmetric_division.py	05_tests/physics	.py	A	1	1	0	0	0	0	2	1	A	W7	Physics test (STANDARD section 6) of the new equations; counted by check_physics_tests
+core/05_tests/physics/test_def_mapping.py	05_tests/physics	.py	A	1	1	1	2	0	0	1	1	A	W7	Physics test (STANDARD section 6) of the new equations; counted by check_physics_tests
+core/05_tests/physics/test_distinctness.py	05_tests/physics	.py	A	1	1	0	2	0	0	1	1	A	W7	Physics test (STANDARD section 6) of the new equations; counted by check_physics_tests
+core/05_tests/physics/test_engine.py	05_tests/physics	.py	A	1	0	0	0	1	0	1	1	A	W7	Physics test (STANDARD section 6) of the new equations; counted by check_physics_tests
+core/05_tests/physics/test_exchange_identity.py	05_tests/physics	.py	A	0	1	0	2	1	0	0	1	A	W7	Physics test (STANDARD section 6) of the new equations; counted by check_physics_tests
+core/05_tests/physics/test_fidelity_static_vacuum.py	05_tests/physics	.py	A	0	0	0	3	1	0	0	1	A	W7	Physics test (STANDARD section 6) of the new equations; counted by check_physics_tests
+core/05_tests/physics/test_field_causality.py	05_tests/physics	.py	A	1	1	0	2	0	0	1	1	A	W7	Physics test (STANDARD section 6) of the new equations; counted by check_physics_tests
+core/05_tests/physics/test_free_energy_burn.py	05_tests/physics	.py	A	1	1	0	1	0	0	1	1	A	W7	Physics test (STANDARD section 6) of the new equations; counted by check_physics_tests
+core/05_tests/physics/test_growing_abundance.py	05_tests/physics	.py	A	1	1	0	0	0	0	1	1	A	W7	Physics test (STANDARD section 6) of the new equations; counted by check_physics_tests
+core/05_tests/physics/test_layer2_dissipation.py	05_tests/physics	.py	A	1	1	1	3	0	0	1	1	A	W7	Physics test (STANDARD section 6) of the new equations; counted by check_physics_tests
+core/05_tests/physics/test_layer2_to_3.py	05_tests/physics	.py	A	2	1	0	2	0	0	2	1	A	W7	Physics test (STANDARD section 6) of the new equations; counted by check_physics_tests
+core/05_tests/physics/test_lighting_succession.py	05_tests/physics	.py	A	0	1	0	0	0	0	0	1	A	W7	Physics test (STANDARD section 6) of the new equations; counted by check_physics_tests
+core/05_tests/physics/test_lorentz_time.py	05_tests/physics	.py	A	2	1	0	1	0	0	2	1	A	W7	Physics test (STANDARD section 6) of the new equations; counted by check_physics_tests
+core/05_tests/physics/test_markov_vs_history.py	05_tests/physics	.py	A	1	1	0	2	0	0	1	1	A	W7	Physics test (STANDARD section 6) of the new equations; counted by check_physics_tests
+core/05_tests/physics/test_observation_delay.py	05_tests/physics	.py	A	1	1	0	2	0	0	1	1	A	W7	Physics test (STANDARD section 6) of the new equations; counted by check_physics_tests
+core/05_tests/physics/test_parent_derivation.py	05_tests/physics	.py	A	0	2	3	2	1	0	0	0	A	W7	Physics test (STANDARD section 6) of the new equations; counted by check_physics_tests
+core/05_tests/physics/test_parent_offdiagonal.py	05_tests/physics	.py	A	0	1	0	2	1	0	0	1	A	W7	Physics test (STANDARD section 6) of the new equations; counted by check_physics_tests
+core/05_tests/physics/test_path_a_models.py	05_tests/physics	.py	A	3	0	0	2	0	0	3	1	A	W7	Physics test (STANDARD section 6) of the new equations; counted by check_physics_tests
+core/05_tests/physics/test_persistence_selection.py	05_tests/physics	.py	A	2	1	0	2	0	0	2	1	A	W7	Physics test (STANDARD section 6) of the new equations; counted by check_physics_tests
+core/05_tests/physics/test_portal_composition.py	05_tests/physics	.py	A	1	1	0	0	0	0	2	1	A	W7	Physics test (STANDARD section 6) of the new equations; counted by check_physics_tests
+core/05_tests/physics/test_portal_drag_bound.py	05_tests/physics	.py	A	1	1	0	0	0	0	1	1	A	W7	Physics test (STANDARD section 6) of the new equations; counted by check_physics_tests
+core/05_tests/physics/test_portal_drag_derived.py	05_tests/physics	.py	A	1	1	0	0	0	0	1	1	A	W7	Physics test (STANDARD section 6) of the new equations; counted by check_physics_tests
+core/05_tests/physics/test_portal_fifth_force.py	05_tests/physics	.py	A	2	1	0	2	0	0	2	1	A	W7	Physics test (STANDARD section 6) of the new equations; counted by check_physics_tests
+core/05_tests/physics/test_psi_matter_burn.py	05_tests/physics	.py	A	1	1	0	0	0	0	1	1	A	W7	Physics test (STANDARD section 6) of the new equations; counted by check_physics_tests
+core/05_tests/physics/test_pulsation_timing.py	05_tests/physics	.py	A	2	1	0	1	0	0	2	1	A	W7	Physics test (STANDARD section 6) of the new equations; counted by check_physics_tests
+core/05_tests/physics/test_r1_writing_channels.py	05_tests/physics	.py	A	1	0	0	2	0	0	1	1	A	W7	Physics test (STANDARD section 6) of the new equations; counted by check_physics_tests
+core/05_tests/physics/test_r2_laser_selection.py	05_tests/physics	.py	A	0	1	0	2	0	0	0	1	A	W7	Physics test (STANDARD section 6) of the new equations; counted by check_physics_tests
+core/05_tests/physics/test_r3_trace_decomposition.py	05_tests/physics	.py	A	1	1	0	2	0	0	1	1	A	W7	Physics test (STANDARD section 6) of the new equations; counted by check_physics_tests
+core/05_tests/physics/test_shared_record_cone.py	05_tests/physics	.py	A	1	1	0	2	0	0	1	1	A	W7	Physics test (STANDARD section 6) of the new equations; counted by check_physics_tests
+core/05_tests/physics/test_si_bose_fluid.py	05_tests/physics	.py	A	1	1	0	0	0	0	2	2	A	W7	Physics test (STANDARD section 6) of the new equations; counted by check_physics_tests
+core/05_tests/physics/test_stability_attacks.py	05_tests/physics	.py	A	1	1	0	2	0	0	1	1	A	W7	Physics test (STANDARD section 6) of the new equations; counted by check_physics_tests
+core/05_tests/physics/test_t001_method.py	05_tests/physics	.py	A	1	0	0	0	0	0	1	0	A	W7	Physics test (STANDARD section 6) of the new equations; counted by check_physics_tests
+core/05_tests/physics/test_tensor_speed.py	05_tests/physics	.py	A	1	1	0	3	0	0	1	1	A	W7	Physics test (STANDARD section 6) of the new equations; counted by check_physics_tests
+core/05_tests/physics/test_two_signal_contact.py	05_tests/physics	.py	A	2	1	0	1	0	0	2	1	A	W7	Physics test (STANDARD section 6) of the new equations; counted by check_physics_tests
+core/05_tests/regression/03_Research/UET_V3_Parameter_Matrix.csv	05_tests/regression	.csv	REVIEW	0	0	0	6	1	0	0	1	C	W7	Fixture or guide of legacy tests labelled C
+core/05_tests/regression/README.md	05_tests/regression	.md	REVIEW	0	0	0	5	0	0	0	0	A	W7	Folder guide; folder still holds A tests; rewrite in W10
+core/05_tests/regression/examples/matrix_config_demo.json	05_tests/regression	.json	REVIEW	0	0	0	6	0	0	0	1	C	W7	Fixture or guide of legacy tests labelled C
+core/05_tests/regression/parameter_engine/connector.py	05_tests/regression	.py	REVIEW	0	0	0	6	0	0	0	7	C	W7	Legacy gate, migration or artifact check (old C lanes, foundation gates, migration waves); not a physics test
+core/05_tests/regression/parameter_engine/engine.py	05_tests/regression	.py	A	0	3	1	41	12	376	2	80	C	W7	Legacy gate, migration or artifact check (old C lanes, foundation gates, migration waves); not a physics test
+core/05_tests/regression/root/README.md	05_tests/regression	.md	REVIEW	0	0	0	8	0	0	0	1	C	W7	Fixture or guide of legacy tests labelled C
+core/05_tests/regression/root/Research_Parameter_Sweep.py	05_tests/regression	.py	REVIEW	0	0	0	7	0	0	0	0	C	W7	Tests a module labelled C (A modules only as dependencies); moves with it
+core/05_tests/regression/root/test_all_waves_closure.py	05_tests/regression	.py	REVIEW	0	0	0	7	0	0	0	0	C	W7	Legacy gate, migration or artifact check (old C lanes, foundation gates, migration waves); not a physics test
+core/05_tests/regression/root/test_all_waves_completion_audit.py	05_tests/regression	.py	REVIEW	0	0	0	7	0	0	0	0	C	W7	Legacy gate, migration or artifact check (old C lanes, foundation gates, migration waves); not a physics test
+core/05_tests/regression/root/test_carrier_neutral_comparator.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	C	W7	Legacy gate, migration or artifact check (old C lanes, foundation gates, migration waves); not a physics test
+core/05_tests/regression/root/test_carrier_observer_canonical_migration.py	05_tests/regression	.py	REVIEW	0	0	0	5	0	0	0	0	C	W7	Tests a module labelled C (A modules only as dependencies); moves with it
+core/05_tests/regression/root/test_carrier_observer_thought_experiment.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	C	W7	Legacy gate, migration or artifact check (old C lanes, foundation gates, migration waves); not a physics test
+core/05_tests/regression/root/test_coarse_graining_canonical_migration.py	05_tests/regression	.py	REVIEW	0	0	0	5	0	0	0	0	C	W7	Tests a module labelled C (A modules only as dependencies); moves with it
+core/05_tests/regression/root/test_conserved_c_no_go_assessment.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	1	C	W7	Legacy gate, migration or artifact check (old C lanes, foundation gates, migration waves); not a physics test
+core/05_tests/regression/root/test_core_gr_topic_0_19_dependency.py	05_tests/regression	.py	REVIEW	0	0	0	7	0	2	0	0	C	W7	Legacy gate, migration or artifact check (old C lanes, foundation gates, migration waves); not a physics test
+core/05_tests/regression/root/test_core_paths_canonical_resolution.py	05_tests/regression	.py	REVIEW	0	0	0	5	0	0	0	0	D	W7	Test plumbing (package marker, fixtures or canonical path resolution)
+core/05_tests/regression/root/test_core_thermodynamic_topic_0_13_constraint.py	05_tests/regression	.py	REVIEW	0	0	0	7	0	1	0	0	C	W7	Legacy gate, migration or artifact check (old C lanes, foundation gates, migration waves); not a physics test
+core/05_tests/regression/root/test_core_upgrade_comprehensive.py	05_tests/regression	.py	REVIEW	0	0	0	6	0	0	0	0	C	W7	Tests a module labelled C (A modules only as dependencies); moves with it
+core/05_tests/regression/root/test_covariant_balance.py	05_tests/regression	.py	REVIEW	0	0	0	6	0	0	0	0	A	W7	Regression test of a module labelled A (uet_covariant_balance, uet_covariant_response); bookkeeping, not a physics test
+core/05_tests/regression/root/test_covariant_diffusion.py	05_tests/regression	.py	REVIEW	0	0	0	9	0	0	0	4	C	W7	Tests a module labelled C (A modules only as dependencies); moves with it
+core/05_tests/regression/root/test_covariant_matter.py	05_tests/regression	.py	REVIEW	0	0	0	6	0	0	0	0	A	W7	Regression test of a module labelled A (uet_covariant_matter, uet_covariant_response); bookkeeping, not a physics test
+core/05_tests/regression/root/test_covariant_nonclosed.py	05_tests/regression	.py	REVIEW	0	0	0	6	0	0	0	0	B	W7	Regression test of a module labelled B (uet_covariant_nonclosed); keep with the module for stage 3
+core/05_tests/regression/root/test_covariant_reduction.py	05_tests/regression	.py	REVIEW	0	0	0	6	0	0	0	0	C	W7	Tests a module labelled C (A modules only as dependencies); moves with it
+core/05_tests/regression/root/test_covariant_response.py	05_tests/regression	.py	REVIEW	0	0	0	6	0	0	0	0	A	W7	Regression test of a module labelled A (uet_covariant_response); bookkeeping, not a physics test
+core/05_tests/regression/root/test_covariant_superfluid_transport.py	05_tests/regression	.py	REVIEW	0	0	0	7	0	1	0	1	B	W7	Regression test of a module labelled B (uet_o2_finite_density_eos); keep with the module for stage 3
+core/05_tests/regression/root/test_ding_2022_source_mapping.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	C	W7	Legacy gate, migration or artifact check (old C lanes, foundation gates, migration waves); not a physics test
+core/05_tests/regression/root/test_foundation_compatibility.py	05_tests/regression	.py	REVIEW	0	0	0	7	0	0	0	1	C	W7	Legacy gate, migration or artifact check (old C lanes, foundation gates, migration waves); not a physics test
+core/05_tests/regression/root/test_foundation_correspondence_matrix.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	C	W7	Legacy gate, migration or artifact check (old C lanes, foundation gates, migration waves); not a physics test
+core/05_tests/regression/root/test_foundation_status_aggregate.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	1	C	W7	Legacy gate, migration or artifact check (old C lanes, foundation gates, migration waves); not a physics test
+core/05_tests/regression/root/test_gr_bianchi_exchange_alignment.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	C	W7	Legacy gate, migration or artifact check (old C lanes, foundation gates, migration waves); not a physics test
+core/05_tests/regression/root/test_gr_closed_limit_alignment.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	A	W7	Regression test of a module labelled A (uet_covariant_response); bookkeeping, not a physics test
+core/05_tests/regression/root/test_gr_correspondence_canonical_migration.py	05_tests/regression	.py	REVIEW	0	0	0	5	0	0	0	0	C	W7	Tests a module labelled C (A modules only as dependencies); moves with it
+core/05_tests/regression/root/test_gr_covariant_diffusion_alignment.py	05_tests/regression	.py	REVIEW	0	0	0	13	0	0	0	4	C	W7	Legacy gate, migration or artifact check (old C lanes, foundation gates, migration waves); not a physics test
+core/05_tests/regression/root/test_gr_covariant_matter_alignment.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	C	W7	Legacy gate, migration or artifact check (old C lanes, foundation gates, migration waves); not a physics test
+core/05_tests/regression/root/test_gr_hyperbolic_phase_field_alignment.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	C	W7	Tests a module labelled C (A modules only as dependencies); moves with it
+core/05_tests/regression/root/test_gr_hyperbolic_phase_field_bridge_alignment.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	C	W7	Tests a module labelled C (A modules only as dependencies); moves with it
+core/05_tests/regression/root/test_gr_legacy_alignment.py	05_tests/regression	.py	REVIEW	0	0	0	11	0	0	0	0	C	W7	Tests a module labelled C (A modules only as dependencies); moves with it
+core/05_tests/regression/root/test_gr_o2_superfluid_alignment.py	05_tests/regression	.py	REVIEW	0	0	0	11	0	0	0	0	C	W7	Legacy gate, migration or artifact check (old C lanes, foundation gates, migration waves); not a physics test
+core/05_tests/regression/root/test_gr_weak_field_reduction_alignment.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	C	W7	Legacy gate, migration or artifact check (old C lanes, foundation gates, migration waves); not a physics test
+core/05_tests/regression/root/test_he4_thermal_canonical_migration.py	05_tests/regression	.py	REVIEW	0	0	0	5	0	0	0	0	C	W7	Legacy gate, migration or artifact check (old C lanes, foundation gates, migration waves); not a physics test
+core/05_tests/regression/root/test_hyperbolic_phase_canonical_migration.py	05_tests/regression	.py	REVIEW	0	0	0	5	0	0	0	0	C	W7	Tests a module labelled C (A modules only as dependencies); moves with it
+core/05_tests/regression/root/test_hyperbolic_phase_field.py	05_tests/regression	.py	REVIEW	0	0	0	6	0	0	0	0	C	W7	Tests a module labelled C (A modules only as dependencies); moves with it
+core/05_tests/regression/root/test_hyperbolic_phase_field_bridge.py	05_tests/regression	.py	REVIEW	0	0	0	6	0	0	0	0	C	W7	Tests a module labelled C (A modules only as dependencies); moves with it
+core/05_tests/regression/root/test_impact_effect_canonical_migration.py	05_tests/regression	.py	REVIEW	0	0	0	5	0	0	0	0	C	W7	Tests a module labelled C (A modules only as dependencies); moves with it
+core/05_tests/regression/root/test_legacy_variational_closure.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	1	C	W7	Legacy gate, migration or artifact check (old C lanes, foundation gates, migration waves); not a physics test
+core/05_tests/regression/root/test_legacy_variational_operator.py	05_tests/regression	.py	REVIEW	0	0	0	6	0	0	0	0	C	W7	Tests a module labelled C (A modules only as dependencies); moves with it
+core/05_tests/regression/root/test_lorentz_canonical_migration.py	05_tests/regression	.py	REVIEW	0	0	0	5	0	0	0	0	C	W7	Tests a module labelled C (A modules only as dependencies); moves with it
+core/05_tests/regression/root/test_major_result_closure.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	3	0	0	C	W7	Legacy gate, migration or artifact check (old C lanes, foundation gates, migration waves); not a physics test
+core/05_tests/regression/root/test_major_result_dependency_unlock.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	1	C	W7	Legacy gate, migration or artifact check (old C lanes, foundation gates, migration waves); not a physics test
+core/05_tests/regression/root/test_mass_density_3d.py	05_tests/regression	.py	REVIEW	0	0	0	8	0	0	0	2	C	W7	Tests a module labelled C (A modules only as dependencies); moves with it
+core/05_tests/regression/root/test_mass_density_3d_audit.py	05_tests/regression	.py	REVIEW	0	0	0	12	0	0	0	2	C	W7	Legacy gate, migration or artifact check (old C lanes, foundation gates, migration waves); not a physics test
+core/05_tests/regression/root/test_mass_density_3d_source_package.py	05_tests/regression	.py	REVIEW	0	0	0	7	0	0	0	0	C	W7	Legacy gate, migration or artifact check (old C lanes, foundation gates, migration waves); not a physics test
+core/05_tests/regression/root/test_mass_density_amplitude.py	05_tests/regression	.py	REVIEW	0	0	0	8	0	0	0	2	C	W7	Tests a module labelled C (A modules only as dependencies); moves with it
+core/05_tests/regression/root/test_mass_density_amplitude_audit.py	05_tests/regression	.py	REVIEW	0	0	0	12	0	0	0	2	C	W7	Legacy gate, migration or artifact check (old C lanes, foundation gates, migration waves); not a physics test
+core/05_tests/regression/root/test_mass_density_canonical_migration.py	05_tests/regression	.py	REVIEW	0	0	0	5	0	0	0	0	C	W7	Legacy gate, migration or artifact check (old C lanes, foundation gates, migration waves); not a physics test
+core/05_tests/regression/root/test_mass_density_correspondence.py	05_tests/regression	.py	REVIEW	0	0	0	7	0	0	0	2	C	W7	Tests a module labelled C (A modules only as dependencies); moves with it
+core/05_tests/regression/root/test_mass_density_dimensional.py	05_tests/regression	.py	REVIEW	0	0	0	8	0	0	0	2	C	W7	Tests a module labelled C (A modules only as dependencies); moves with it
+core/05_tests/regression/root/test_mass_density_dimensional_audit.py	05_tests/regression	.py	REVIEW	0	0	0	12	0	0	0	2	C	W7	Legacy gate, migration or artifact check (old C lanes, foundation gates, migration waves); not a physics test
+core/05_tests/regression/root/test_matrix_proof.py	05_tests/regression	.py	REVIEW	0	0	0	8	0	0	0	0	C	W7	Legacy gate, migration or artifact check (old C lanes, foundation gates, migration waves); not a physics test
+core/05_tests/regression/root/test_matrix_real_galaxy.py	05_tests/regression	.py	REVIEW	0	0	0	7	0	0	0	0	C	W7	Legacy gate, migration or artifact check (old C lanes, foundation gates, migration waves); not a physics test
+core/05_tests/regression/root/test_matter_interaction_canonical_migration.py	05_tests/regression	.py	REVIEW	0	0	0	5	0	0	0	0	C	W7	Tests a module labelled C (A modules only as dependencies); moves with it
+core/05_tests/regression/root/test_matter_space_alignment.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	C	W7	Tests a module labelled C (A modules only as dependencies); moves with it
+core/05_tests/regression/root/test_matter_space_candidate_canonical_migration.py	05_tests/regression	.py	REVIEW	0	0	0	5	0	0	0	0	C	W7	Legacy gate, migration or artifact check (old C lanes, foundation gates, migration waves); not a physics test
+core/05_tests/regression/root/test_matter_space_canonical_migration.py	05_tests/regression	.py	REVIEW	0	0	0	5	0	0	0	0	C	W7	Legacy gate, migration or artifact check (old C lanes, foundation gates, migration waves); not a physics test
+core/05_tests/regression/root/test_matter_space_characteristic.py	05_tests/regression	.py	REVIEW	0	0	0	8	0	0	0	2	C	W7	Tests a module labelled C (A modules only as dependencies); moves with it
+core/05_tests/regression/root/test_matter_space_conserved_flux_telegraph.py	05_tests/regression	.py	REVIEW	0	0	0	13	0	0	0	3	C	W7	Tests a module labelled C (A modules only as dependencies); moves with it
+core/05_tests/regression/root/test_matter_space_core.py	05_tests/regression	.py	REVIEW	1	0	0	7	0	0	1	2	C	W7	Tests a module labelled C (A modules only as dependencies); moves with it
+core/05_tests/regression/root/test_matter_space_finite_cone.py	05_tests/regression	.py	REVIEW	0	0	0	7	0	0	0	2	C	W7	Tests a module labelled C (A modules only as dependencies); moves with it
+core/05_tests/regression/root/test_matter_space_finite_cone_integration.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	C	W7	Legacy gate, migration or artifact check (old C lanes, foundation gates, migration waves); not a physics test
+core/05_tests/regression/root/test_matter_space_flux_canonical_migration.py	05_tests/regression	.py	REVIEW	0	0	0	5	0	0	0	0	C	W7	Legacy gate, migration or artifact check (old C lanes, foundation gates, migration waves); not a physics test
+core/05_tests/regression/root/test_matter_space_flux_phi_coupled.py	05_tests/regression	.py	REVIEW	0	0	0	13	0	0	0	3	C	W7	Tests a module labelled C (A modules only as dependencies); moves with it
+core/05_tests/regression/root/test_matter_space_observable.py	05_tests/regression	.py	REVIEW	0	0	0	6	0	0	0	0	C	W7	Tests a module labelled C (A modules only as dependencies); moves with it
+core/05_tests/regression/root/test_matter_space_observable_canonical_migration.py	05_tests/regression	.py	REVIEW	0	0	0	5	0	0	0	0	C	W7	Tests a module labelled C (A modules only as dependencies); moves with it
+core/05_tests/regression/root/test_matter_space_phase_pilot.py	05_tests/regression	.py	REVIEW	0	0	0	7	0	1	0	0	C	W7	Legacy gate, migration or artifact check (old C lanes, foundation gates, migration waves); not a physics test
+core/05_tests/regression/root/test_matter_space_phase_pilot_summary.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	C	W7	Legacy gate, migration or artifact check (old C lanes, foundation gates, migration waves); not a physics test
+core/05_tests/regression/root/test_matter_space_report_alignment.py	05_tests/regression	.py	REVIEW	0	0	0	8	0	0	0	0	C	W7	Legacy gate, migration or artifact check (old C lanes, foundation gates, migration waves); not a physics test
+core/05_tests/regression/root/test_matter_space_research_program.py	05_tests/regression	.py	REVIEW	0	0	0	9	0	0	0	0	C	W7	Legacy gate, migration or artifact check (old C lanes, foundation gates, migration waves); not a physics test
+core/05_tests/regression/root/test_matter_space_split.py	05_tests/regression	.py	REVIEW	0	0	0	6	0	0	0	0	C	W7	Tests a module labelled C (A modules only as dependencies); moves with it
+core/05_tests/regression/root/test_matter_space_thermal_pilot.py	05_tests/regression	.py	REVIEW	0	0	0	7	0	1	0	1	C	W7	Legacy gate, migration or artifact check (old C lanes, foundation gates, migration waves); not a physics test
+core/05_tests/regression/root/test_noether_canonical_migration.py	05_tests/regression	.py	REVIEW	0	0	0	5	0	0	0	0	C	W7	Tests a module labelled C (A modules only as dependencies); moves with it
+core/05_tests/regression/root/test_o2_canonical_migration.py	05_tests/regression	.py	REVIEW	0	0	0	5	0	0	0	0	B	W7	Regression test of a module labelled B (uet_o2_finite_density_eos); keep with the module for stage 3
+core/05_tests/regression/root/test_observables_canonical_migration.py	05_tests/regression	.py	REVIEW	0	0	0	5	0	0	0	0	C	W7	Tests a module labelled C (A modules only as dependencies); moves with it
+core/05_tests/regression/root/test_orbit_cosmology_correspondence.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	C	W7	Legacy gate, migration or artifact check (old C lanes, foundation gates, migration waves); not a physics test
+core/05_tests/regression/root/test_parameter_engine.py	05_tests/regression	.py	REVIEW	0	0	0	6	0	0	0	0	C	W7	Legacy gate, migration or artifact check (old C lanes, foundation gates, migration waves); not a physics test
+core/05_tests/regression/root/test_particle_dirac_program_gate.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	1	0	0	C	W7	Legacy gate, migration or artifact check (old C lanes, foundation gates, migration waves); not a physics test
+core/05_tests/regression/root/test_persistence_canonical_migration.py	05_tests/regression	.py	REVIEW	0	0	0	5	0	0	0	0	C	W7	Legacy gate, migration or artifact check (old C lanes, foundation gates, migration waves); not a physics test
+core/05_tests/regression/root/test_photon_observer_baseline.py	05_tests/regression	.py	REVIEW	0	0	0	6	0	0	0	0	C	W7	Tests a module labelled C (A modules only as dependencies); moves with it
+core/05_tests/regression/root/test_protein_folding_dynamics_gate.py	05_tests/regression	.py	REVIEW	0	0	0	7	0	1	0	0	C	W7	Legacy gate, migration or artifact check (old C lanes, foundation gates, migration waves); not a physics test
+core/05_tests/regression/root/test_protein_folding_hp_benchmark.py	05_tests/regression	.py	REVIEW	0	0	0	7	0	1	0	0	C	W7	Legacy gate, migration or artifact check (old C lanes, foundation gates, migration waves); not a physics test
+core/05_tests/regression/root/test_quantum_lane_canonical_migration.py	05_tests/regression	.py	REVIEW	0	0	0	5	0	0	0	0	C	W7	Tests a module labelled C (A modules only as dependencies); moves with it
+core/05_tests/regression/root/test_relational_two_body_baseline.py	05_tests/regression	.py	REVIEW	0	0	0	7	0	0	0	2	C	W7	Tests a module labelled C (A modules only as dependencies); moves with it
+core/05_tests/regression/root/test_resource_selection.py	05_tests/regression	.py	REVIEW	0	0	0	8	0	0	0	3	C	W7	Tests a module labelled C (A modules only as dependencies); moves with it
+core/05_tests/regression/root/test_resource_selection_physical_cost_map.py	05_tests/regression	.py	REVIEW	0	0	0	8	0	0	0	2	C	W7	Tests a module labelled C (A modules only as dependencies); moves with it
+core/05_tests/regression/root/test_resource_selection_thermal_bridge.py	05_tests/regression	.py	REVIEW	0	0	0	8	0	0	0	4	C	W7	Tests a module labelled C (A modules only as dependencies); moves with it
+core/05_tests/regression/root/test_run_core_verifications_input_resolution.py	05_tests/regression	.py	REVIEW	0	0	0	7	0	1	0	0	D	W7	Test plumbing (package marker, fixtures or canonical path resolution)
+core/05_tests/regression/root/test_spacetime_trace.py	05_tests/regression	.py	REVIEW	0	0	0	8	0	0	0	3	C	W7	Tests a module labelled C (A modules only as dependencies); moves with it
+core/05_tests/regression/root/test_spatial_coupling.py	05_tests/regression	.py	REVIEW	0	0	0	7	0	5	0	1	C	W7	Tests a module labelled C (A modules only as dependencies); moves with it
+core/05_tests/regression/root/test_tensor_parity.py	05_tests/regression	.py	REVIEW	0	0	0	7	0	0	0	0	C	W7	Tests a module labelled C (A modules only as dependencies); moves with it
+core/05_tests/regression/root/test_thermal_dimensional_calibration.py	05_tests/regression	.py	REVIEW	0	0	0	7	0	0	0	0	C	W7	Tests a module labelled C (A modules only as dependencies); moves with it
+core/05_tests/regression/root/test_thermal_dimensional_canonical_migration.py	05_tests/regression	.py	REVIEW	0	0	0	5	0	0	0	0	C	W7	Tests a module labelled C (A modules only as dependencies); moves with it
+core/05_tests/regression/root/test_thermal_observable_bridge.py	05_tests/regression	.py	REVIEW	0	0	0	7	0	1	0	2	C	W7	Tests a module labelled C (A modules only as dependencies); moves with it
+core/05_tests/regression/root/test_thermal_observable_canonical_migration.py	05_tests/regression	.py	REVIEW	0	0	0	5	0	0	0	0	C	W7	Tests a module labelled C (A modules only as dependencies); moves with it
+core/05_tests/regression/root/test_thermal_response_contract_canonical_migration.py	05_tests/regression	.py	REVIEW	0	0	0	5	0	0	0	0	C	W7	Tests a module labelled C (A modules only as dependencies); moves with it
+core/05_tests/regression/root/test_thermal_source_observable_mapping.py	05_tests/regression	.py	REVIEW	0	0	0	6	0	1	0	1	C	W7	Tests a module labelled C (A modules only as dependencies); moves with it
+core/05_tests/regression/root/test_thermodynamics.py	05_tests/regression	.py	REVIEW	0	0	0	7	0	0	0	0	C	W7	Tests a module labelled C (A modules only as dependencies); moves with it
+core/05_tests/regression/root/test_topic13_actuation_readout_identifiability.py	05_tests/regression	.py	REVIEW	0	0	0	7	0	0	0	1	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
+core/05_tests/regression/root/test_topic13_aist_graphite_source_route_boundary.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	2	0	0	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
+core/05_tests/regression/root/test_topic13_alpha_identifiability.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
+core/05_tests/regression/root/test_topic13_alpha_phi_k_calibration_candidates.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	2	0	0	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
+core/05_tests/regression/root/test_topic13_alpha_phi_k_identifiability.py	05_tests/regression	.py	REVIEW	0	0	0	6	0	1	0	0	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
+core/05_tests/regression/root/test_topic13_anisotropic_thermoelastic_response_bridge.py	05_tests/regression	.py	REVIEW	0	0	0	12	0	2	0	1	C	W7	Tests a module labelled C (A modules only as dependencies); moves with it
+core/05_tests/regression/root/test_topic13_base_phi_independent_calibration_requirement.py	05_tests/regression	.py	REVIEW	0	0	0	6	0	0	0	0	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
+core/05_tests/regression/root/test_topic13_base_phi_independent_calibration_requirement_integration.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
+core/05_tests/regression/root/test_topic13_base_phi_reconciliation.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
+core/05_tests/regression/root/test_topic13_base_phi_reconciliation_integration.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
+core/05_tests/regression/root/test_topic13_baseline_registration_models.py	05_tests/regression	.py	REVIEW	0	0	0	7	0	0	0	1	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
+core/05_tests/regression/root/test_topic13_berut_figure3_binary_identity.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	1	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
+core/05_tests/regression/root/test_topic13_berut_figure3_binary_identity_integration.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
+core/05_tests/regression/root/test_topic13_berut_figure3_digitization.py	05_tests/regression	.py	REVIEW	0	0	0	7	0	0	0	0	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
+core/05_tests/regression/root/test_topic13_berut_source_package_availability.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	2	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
+core/05_tests/regression/root/test_topic13_berut_source_package_availability_integration.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	1	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
+core/05_tests/regression/root/test_topic13_beta_correspondence.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
+core/05_tests/regression/root/test_topic13_beta_symbol_separation.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
+core/05_tests/regression/root/test_topic13_beta_symbol_separation_integration.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
+core/05_tests/regression/root/test_topic13_bipm_specific_heat_source.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	1	0	0	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
+core/05_tests/regression/root/test_topic13_calorine_csrc_equilibrium_crosscheck.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	1	0	0	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
+core/05_tests/regression/root/test_topic13_calorine_lattice_interface_inputs.py	05_tests/regression	.py	REVIEW	0	0	0	12	0	2	0	1	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
+core/05_tests/regression/root/test_topic13_calorine_legacy_nep2_backend_probe.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
+core/05_tests/regression/root/test_topic13_calorine_legacy_nep2_pbte_reproduction.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	2	0	0	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
+core/05_tests/regression/root/test_topic13_calorine_model_form_state_spread.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
+core/05_tests/regression/root/test_topic13_calorine_nep1_backend_compatibility.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	1	0	0	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
+core/05_tests/regression/root/test_topic13_calorine_public_model_variant_boundary.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	1	0	0	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
+core/05_tests/regression/root/test_topic13_calorine_zenodo_nep_bte_candidate_boundary.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
+core/05_tests/regression/root/test_topic13_calorine_zenodo_nep_bte_reproduction.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
+core/05_tests/regression/root/test_topic13_candidate_core_compatibility.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	2	0	0	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
+core/05_tests/regression/root/test_topic13_channel_error_attribution.py	05_tests/regression	.py	REVIEW	0	0	0	7	0	0	0	1	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
+core/05_tests/regression/root/test_topic13_charged_one_loop_current_vertex.py	05_tests/regression	.py	REVIEW	0	0	0	8	0	1	0	1	C	W7	Tests a module labelled C (A modules only as dependencies); moves with it
+core/05_tests/regression/root/test_topic13_charged_one_loop_match.py	05_tests/regression	.py	REVIEW	0	0	0	8	0	1	0	1	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
+core/05_tests/regression/root/test_topic13_charged_static_confluent_vertex.py	05_tests/regression	.py	REVIEW	0	0	0	8	0	1	0	1	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
+core/05_tests/regression/root/test_topic13_closure_critical_path.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	1	0	0	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
+core/05_tests/regression/root/test_topic13_closure_input_packages.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	1	0	0	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
+core/05_tests/regression/root/test_topic13_closure_matrix.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	1	0	1	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
+core/05_tests/regression/root/test_topic13_closure_record_contract.py	05_tests/regression	.py	REVIEW	0	0	0	6	0	1	0	0	C	W7	Tests a module labelled C (A modules only as dependencies); moves with it
+core/05_tests/regression/root/test_topic13_closure_tracks.py	05_tests/regression	.py	REVIEW	0	0	0	7	0	0	0	1	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
+core/05_tests/regression/root/test_topic13_complementary_geometry.py	05_tests/regression	.py	REVIEW	0	0	0	7	0	0	0	1	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
+core/05_tests/regression/root/test_topic13_composite_alpha_design.py	05_tests/regression	.py	REVIEW	0	0	0	7	0	0	0	1	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
+core/05_tests/regression/root/test_topic13_constrained_precision.py	05_tests/regression	.py	REVIEW	0	0	0	7	0	0	0	1	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
+core/05_tests/regression/root/test_topic13_constrained_tensor.py	05_tests/regression	.py	REVIEW	0	0	0	7	0	0	0	1	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
+core/05_tests/regression/root/test_topic13_coupled_gain_loss_operator.py	05_tests/regression	.py	REVIEW	0	0	0	9	0	1	0	1	C	W7	Topic 13 lane check that only uses A modules (uet_covariant_response) as inputs; the lane is labelled C
+core/05_tests/regression/root/test_topic13_coupled_response_heat_carrier_no_go.py	05_tests/regression	.py	REVIEW	0	0	0	8	0	1	0	1	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
+core/05_tests/regression/root/test_topic13_covariant_field_normalization_identifiability.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	1	0	0	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
+core/05_tests/regression/root/test_topic13_covariant_field_normalization_integration.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	1	0	0	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
+core/05_tests/regression/root/test_topic13_covariant_matter_coupling_normalization.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
+core/05_tests/regression/root/test_topic13_covariant_matter_coupling_normalization_integration.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
+core/05_tests/regression/root/test_topic13_covariant_transport_implementation_boundary.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
+core/05_tests/regression/root/test_topic13_covariant_transport_implementation_boundary_integration.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
+core/05_tests/regression/root/test_topic13_cp_cv_correction.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	C	W7	Tests a module labelled C (A modules only as dependencies); moves with it
+core/05_tests/regression/root/test_topic13_csrc_equilibrium_component_acceptance.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
+core/05_tests/regression/root/test_topic13_csrc_fixed_volume_identity.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
+core/05_tests/regression/root/test_topic13_csrc_reconciliation.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
+core/05_tests/regression/root/test_topic13_csrc_reconciliation_integration.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	1	0	0	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
+core/05_tests/regression/root/test_topic13_csrc_source_route_priority.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	1	0	0	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
+core/05_tests/regression/root/test_topic13_csrc_thermodynamic_transport_regime.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
+core/05_tests/regression/root/test_topic13_current_metric_surface.py	05_tests/regression	.py	REVIEW	0	0	0	7	0	0	0	1	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
+core/05_tests/regression/root/test_topic13_cv_source_reconciliation.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
+core/05_tests/regression/root/test_topic13_cv_source_reconciliation_integration.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
+core/05_tests/regression/root/test_topic13_day2012_preferred_thermodynamic_table.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
+core/05_tests/regression/root/test_topic13_desorbo_ceylon_graphite_cp.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
+core/05_tests/regression/root/test_topic13_dimensional_bridge_contract.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	C	W7	Tests a module labelled C (A modules only as dependencies); moves with it
+core/05_tests/regression/root/test_topic13_ding_2017_acs_supplementary_boundary.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
+core/05_tests/regression/root/test_topic13_ding_alternate_public_dataset_discovery.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
+core/05_tests/regression/root/test_topic13_ding_csrc_heating_backcalculation_identifiability.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	1	0	0	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
+core/05_tests/regression/root/test_topic13_ding_experimental_heating_input.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
+core/05_tests/regression/root/test_topic13_ding_fig1d_normalized_source_lane_integration.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
+core/05_tests/regression/root/test_topic13_ding_material_regime_boundary.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
+core/05_tests/regression/root/test_topic13_ding_pbte_author_request.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
+core/05_tests/regression/root/test_topic13_ding_pbte_author_request_integration.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	1	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
+core/05_tests/regression/root/test_topic13_ding_pbte_numeric_input_availability.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
+core/05_tests/regression/root/test_topic13_ding_pbte_payload_acceptance.py	05_tests/regression	.py	REVIEW	0	0	0	6	0	1	0	0	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
+core/05_tests/regression/root/test_topic13_ding_pbte_payload_acceptance_integration.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	1	0	0	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
+core/05_tests/regression/root/test_topic13_ding_public_supplementary_boundary.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
+core/05_tests/regression/root/test_topic13_ding_row_metadata_alignment.py	05_tests/regression	.py	REVIEW	0	0	0	7	0	0	0	0	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
+core/05_tests/regression/root/test_topic13_ding_supplementary_content_review.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
+core/05_tests/regression/root/test_topic13_direction_moments.py	05_tests/regression	.py	REVIEW	0	0	0	7	0	0	0	1	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
+core/05_tests/regression/root/test_topic13_displacement_phase.py	05_tests/regression	.py	REVIEW	0	0	0	7	0	0	0	1	C	W7	Tests a module labelled C (A modules only as dependencies); moves with it
+core/05_tests/regression/root/test_topic13_dressed_ra_charge_current_ladder.py	05_tests/regression	.py	REVIEW	0	0	0	8	0	1	0	1	C	W7	Tests a module labelled C (A modules only as dependencies); moves with it
+core/05_tests/regression/root/test_topic13_dressed_ra_pair_microscopic_rung_boundary.py	05_tests/regression	.py	REVIEW	0	0	0	8	0	0	0	1	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
+core/05_tests/regression/root/test_topic13_dynamic_thermoelastic_response.py	05_tests/regression	.py	REVIEW	0	0	0	8	0	0	0	1	C	W7	Tests a module labelled C (A modules only as dependencies); moves with it
+core/05_tests/regression/root/test_topic13_e2g_nonlinear_symmetry.py	05_tests/regression	.py	REVIEW	0	0	0	7	0	0	0	1	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
+core/05_tests/regression/root/test_topic13_entropy_force_convention.py	05_tests/regression	.py	REVIEW	0	0	0	8	0	0	0	2	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
+core/05_tests/regression/root/test_topic13_entropy_metric_repair.py	05_tests/regression	.py	REVIEW	0	0	0	11	0	0	0	1	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
+core/05_tests/regression/root/test_topic13_equilibrium_kms.py	05_tests/regression	.py	REVIEW	0	0	0	6	0	0	0	0	B	W7	Regression test of a module labelled B (uet_o2_equilibrium_kms); keep with the module for stage 3
+core/05_tests/regression/root/test_topic13_farooqui_ig210_thermophysical_source.py	05_tests/regression	.py	REVIEW	0	0	0	7	0	0	0	0	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
+core/05_tests/regression/root/test_topic13_farooqui_ig210_volumetric_cp_uncertainty.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	1	0	0	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
+core/05_tests/regression/root/test_topic13_figshare_dft_force_data_boundary.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	1	0	0	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
+core/05_tests/regression/root/test_topic13_finiteq_scattering_geometry.py	05_tests/regression	.py	REVIEW	0	0	0	7	0	0	0	1	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
+core/05_tests/regression/root/test_topic13_fixed_charge_response.py	05_tests/regression	.py	REVIEW	0	0	0	7	0	0	0	1	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
+core/05_tests/regression/root/test_topic13_fixed_phi_spectrum_regression.py	05_tests/regression	.py	REVIEW	0	0	0	7	0	2	0	1	B	W7	Regression test of a module labelled B (uet_o2_finite_density_eos); keep with the module for stage 3
+core/05_tests/regression/root/test_topic13_flat_thermodynamic_bridge_components.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
+core/05_tests/regression/root/test_topic13_formal_bridge_boundary.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
+core/05_tests/regression/root/test_topic13_formal_thermodynamic_bridge_integration.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	C	W7	Tests a module labelled C (A modules only as dependencies); moves with it
+core/05_tests/regression/root/test_topic13_formal_transverse_response.py	05_tests/regression	.py	REVIEW	0	0	0	6	0	0	0	0	C	W7	Tests a module labelled C (A modules only as dependencies); moves with it
+core/05_tests/regression/root/test_topic13_formal_two_sector_thermodynamics.py	05_tests/regression	.py	REVIEW	0	0	0	6	0	0	0	0	C	W7	Tests a module labelled C (A modules only as dependencies); moves with it
+core/05_tests/regression/root/test_topic13_fourier_shear_anisotropy.py	05_tests/regression	.py	REVIEW	0	0	0	7	0	0	0	1	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
+core/05_tests/regression/root/test_topic13_frame_output.py	05_tests/regression	.py	REVIEW	0	0	0	7	0	0	0	1	B	W7	Regression test of a module labelled B (uet_o2_covariant_entropy_heat_flux_balance); keep with the module for stage 3
+core/05_tests/regression/root/test_topic13_full_core_ready_acceptance.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
+core/05_tests/regression/root/test_topic13_gamma_scattering_geometry.py	05_tests/regression	.py	REVIEW	0	0	0	7	0	0	0	1	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
+core/05_tests/regression/root/test_topic13_gatech_graphite_source.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
+core/05_tests/regression/root/test_topic13_gatech_standard_transport_comparator.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	1	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
+core/05_tests/regression/root/test_topic13_gatech_standard_transport_comparator_integration.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
+core/05_tests/regression/root/test_topic13_gatech_volumetric_cp_independence.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	3	0	1	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
+core/05_tests/regression/root/test_topic13_generic_q_image_support.py	05_tests/regression	.py	REVIEW	0	0	0	7	0	0	0	1	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
+core/05_tests/regression/root/test_topic13_goldstone_projected_current.py	05_tests/regression	.py	REVIEW	0	0	0	6	0	1	0	0	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
+core/05_tests/regression/root/test_topic13_graphite_alpha_v_kt_matched_source_boundary.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	1	0	0	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
+core/05_tests/regression/root/test_topic13_graphite_elastic_bulk_gate_integration.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
+core/05_tests/regression/root/test_topic13_graphite_elastic_bulk_modulus_source.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
+core/05_tests/regression/root/test_topic13_graphite_green_kubo_source_boundary.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
+core/05_tests/regression/root/test_topic13_graphite_isothermal_kt_gate_integration.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	1	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
+core/05_tests/regression/root/test_topic13_graphite_isothermal_kt_source.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
+core/05_tests/regression/root/test_topic13_he4_alpha_gate_integration.py	05_tests/regression	.py	REVIEW	0	0	0	7	0	0	0	0	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
+core/05_tests/regression/root/test_topic13_he4_core_composition.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
+core/05_tests/regression/root/test_topic13_he4_matching_independence.py	05_tests/regression	.py	REVIEW	0	0	0	7	0	2	0	1	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
+core/05_tests/regression/root/test_topic13_he4_normal_viscosity_kubo.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	C	W7	Tests a module labelled C (A modules only as dependencies); moves with it
+core/05_tests/regression/root/test_topic13_he4_o2_response_calibration.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	C	W7	Tests a module labelled C (A modules only as dependencies); moves with it
+core/05_tests/regression/root/test_topic13_he4_o2_si_beta_mapping.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	C	W7	Tests a module labelled C (A modules only as dependencies); moves with it
+core/05_tests/regression/root/test_topic13_he4_svp_physical_anchor.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	C	W7	Tests a module labelled C (A modules only as dependencies); moves with it
+core/05_tests/regression/root/test_topic13_heat_charge_frame_map.py	05_tests/regression	.py	REVIEW	0	0	0	7	0	0	0	1	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
+core/05_tests/regression/root/test_topic13_heat_current_kubo_continuum_boundary.py	05_tests/regression	.py	REVIEW	0	0	0	6	0	0	0	0	C	W7	Tests a module labelled C (A modules only as dependencies); moves with it
+core/05_tests/regression/root/test_topic13_heat_current_kubo_match.py	05_tests/regression	.py	REVIEW	0	0	0	6	0	0	0	0	C	W7	Tests a module labelled C (A modules only as dependencies); moves with it
+core/05_tests/regression/root/test_topic13_holdout_exposure_record.py	05_tests/regression	.py	REVIEW	0	0	0	0	0	0	0	0	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
+core/05_tests/regression/root/test_topic13_hong_source_package_boundary.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
+core/05_tests/regression/root/test_topic13_huang_2022_utokyo_graphite_ribbons_boundary.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
+core/05_tests/regression/root/test_topic13_huang_2023_nims_mdr_payload_boundary.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	1	0	0	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
+core/05_tests/regression/root/test_topic13_huang_2023_supplementary_payload_boundary.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	1	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
+core/05_tests/regression/root/test_topic13_huberman_2019_public_pbte_boundary.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	1	0	0	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
+core/05_tests/regression/root/test_topic13_iaea_cv_uncertainty_boundary.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	1	0	1	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
+core/05_tests/regression/root/test_topic13_iaea_gr280_same_state_cp_source.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	1	0	0	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
+core/05_tests/regression/root/test_topic13_iaea_graphite_constant_volume_source.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	1	0	0	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
+core/05_tests/regression/root/test_topic13_independent_csrc_acceptance.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	1	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
+core/05_tests/regression/root/test_topic13_integrated_elastic_events.py	05_tests/regression	.py	REVIEW	0	0	0	6	0	0	0	0	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
+core/05_tests/regression/root/test_topic13_interlayer_mode_residue.py	05_tests/regression	.py	REVIEW	0	0	0	6	0	0	0	0	C	W7	Tests a module labelled C (A modules only as dependencies); moves with it
+core/05_tests/regression/root/test_topic13_interlayer_strain_transfer.py	05_tests/regression	.py	REVIEW	0	0	0	6	0	0	0	0	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
+core/05_tests/regression/root/test_topic13_interlayer_thermal_variance.py	05_tests/regression	.py	REVIEW	0	0	0	7	0	0	0	1	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
+core/05_tests/regression/root/test_topic13_interpolation_refinement.py	05_tests/regression	.py	REVIEW	0	0	0	7	0	0	0	1	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
+core/05_tests/regression/root/test_topic13_interpolation_support.py	05_tests/regression	.py	REVIEW	0	0	0	7	0	0	0	1	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
+core/05_tests/regression/root/test_topic13_invariant_galerkin_collision_operator.py	05_tests/regression	.py	REVIEW	0	0	0	9	0	1	0	1	C	W7	Tests a module labelled C (A modules only as dependencies); moves with it
+core/05_tests/regression/root/test_topic13_invariant_rate_collision_repair.py	05_tests/regression	.py	REVIEW	0	0	0	8	0	1	0	1	C	W7	Tests a module labelled C (A modules only as dependencies); moves with it
+core/05_tests/regression/root/test_topic13_invariant_vector_current_galerkin.py	05_tests/regression	.py	REVIEW	0	0	0	8	0	1	0	1	C	W7	Tests a module labelled C (A modules only as dependencies); moves with it
+core/05_tests/regression/root/test_topic13_isentropic_source_work.py	05_tests/regression	.py	REVIEW	0	0	0	7	0	0	0	1	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
+core/05_tests/regression/root/test_topic13_joint_resolution.py	05_tests/regression	.py	REVIEW	0	0	0	7	0	0	0	1	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
+core/05_tests/regression/root/test_topic13_jun_source_package_boundary.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
+core/05_tests/regression/root/test_topic13_kim_2018_graphite_green_kubo_external_input.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
+core/05_tests/regression/root/test_topic13_kinetic_canonical_normalization.py	05_tests/regression	.py	REVIEW	0	0	0	7	0	2	0	1	B	W7	Regression test of a module labelled B (uet_o2_finite_density_eos, uet_o2_kinetic_collision_kubo); keep with the module for stage 3
+core/05_tests/regression/root/test_topic13_landauer_core_disposition.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
+core/05_tests/regression/root/test_topic13_lattice_momentum_relaxing_heat_parent.py	05_tests/regression	.py	REVIEW	0	0	0	12	0	2	0	1	C	W7	Tests a module labelled C (A modules only as dependencies); moves with it
+core/05_tests/regression/root/test_topic13_local_quadratic_bounds.py	05_tests/regression	.py	REVIEW	0	0	0	7	0	0	0	1	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
+core/05_tests/regression/root/test_topic13_local_variance_identifiability.py	05_tests/regression	.py	REVIEW	0	0	0	7	0	0	0	1	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
+core/05_tests/regression/root/test_topic13_lowitzer_full_source_pair.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
+core/05_tests/regression/root/test_topic13_major_result_register_sync.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	3	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
+core/05_tests/regression/root/test_topic13_material_interface_factor_resolution.py	05_tests/regression	.py	REVIEW	0	0	0	12	0	2	0	1	C	W7	Tests a module labelled C (A modules only as dependencies); moves with it
+core/05_tests/regression/root/test_topic13_material_lattice_interface_contract.py	05_tests/regression	.py	REVIEW	0	0	0	12	0	2	0	1	C	W7	Tests a module labelled C (A modules only as dependencies); moves with it
+core/05_tests/regression/root/test_topic13_matter_actuation_harmonics.py	05_tests/regression	.py	REVIEW	0	0	0	7	0	0	0	1	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
+core/05_tests/regression/root/test_topic13_matter_strain_susceptibility.py	05_tests/regression	.py	REVIEW	0	0	0	8	0	0	0	1	C	W7	Tests a module labelled C (A modules only as dependencies); moves with it
+core/05_tests/regression/root/test_topic13_microscopic_current_ladder_matching_boundary.py	05_tests/regression	.py	REVIEW	0	0	0	8	0	1	0	1	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
+core/05_tests/regression/root/test_topic13_microscopic_finite_cutoff_kubo_match.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
+core/05_tests/regression/root/test_topic13_minimal_input_contract.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
+core/05_tests/regression/root/test_topic13_mode_work_heat.py	05_tests/regression	.py	REVIEW	0	0	0	7	0	0	0	1	C	W7	Tests a module labelled C (A modules only as dependencies); moves with it
+core/05_tests/regression/root/test_topic13_moment_interpolation.py	05_tests/regression	.py	REVIEW	0	0	0	7	0	0	0	1	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
+core/05_tests/regression/root/test_topic13_mp48_ding_csrc_response_mapping.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
+core/05_tests/regression/root/test_topic13_mp48_e2g_multiplicity.py	05_tests/regression	.py	REVIEW	0	0	0	7	0	0	0	1	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
+core/05_tests/regression/root/test_topic13_mp48_force_constant_harmonic_reconstruction.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
+core/05_tests/regression/root/test_topic13_mp48_independent_graphite_cv.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
+core/05_tests/regression/root/test_topic13_mp48_mode_resolved_csrc_diagnostic.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
+core/05_tests/regression/root/test_topic13_mp48_phi_e_dimensional_comparator.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
+core/05_tests/regression/root/test_topic13_mp48_shear_irrep.py	05_tests/regression	.py	REVIEW	0	0	0	6	0	0	0	0	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
+core/05_tests/regression/root/test_topic13_mp48_spectral_csrc_reproduction.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
+core/05_tests/regression/root/test_topic13_mp48_temperature_volume_uncertainty_boundary.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	1	0	0	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
+core/05_tests/regression/root/test_topic13_multibragg_positions.py	05_tests/regression	.py	REVIEW	0	0	0	8	0	0	0	1	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
+core/05_tests/regression/root/test_topic13_natural_graphite_nelson_riley_alpha_v_gate_integration.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
+core/05_tests/regression/root/test_topic13_natural_graphite_nelson_riley_alpha_v_source.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
+core/05_tests/regression/root/test_topic13_nims_graphite_ltc_route_no_go.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
+core/05_tests/regression/root/test_topic13_nims_mp990448_phonon_source_boundary.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	3	0	0	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
+core/05_tests/regression/root/test_topic13_nist_alpha_v_gate_integration.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
+core/05_tests/regression/root/test_topic13_nist_axm5q1_density_source_boundary.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
+core/05_tests/regression/root/test_topic13_nist_graphite_alpha_v_source_boundary.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
+core/05_tests/regression/root/test_topic13_nist_srm_3600_heat_capacity_boundary.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	2	0	0	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
+core/05_tests/regression/root/test_topic13_normal_response_curvature.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
+core/05_tests/regression/root/test_topic13_normal_thermal_background.py	05_tests/regression	.py	REVIEW	0	0	0	7	0	1	0	1	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
+core/05_tests/regression/root/test_topic13_npl_rsa40_graphite_specific_heat.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
+core/05_tests/regression/root/test_topic13_open_system_sk_kms_entropy.py	05_tests/regression	.py	REVIEW	0	0	0	6	0	0	0	0	C	W7	Tests a module labelled C (A modules only as dependencies); moves with it
+core/05_tests/regression/root/test_topic13_oxford_tgs_comparator_provenance.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
+core/05_tests/regression/root/test_topic13_oxford_tgs_numeric_rows.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
+core/05_tests/regression/root/test_topic13_patch_position_sensitivity.py	05_tests/regression	.py	REVIEW	0	0	0	7	0	0	0	1	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
+core/05_tests/regression/root/test_topic13_perez_castaneda_hopg_boundary.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	3	0	0	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
+core/05_tests/regression/root/test_topic13_peterson_source_identity_no_go.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
+core/05_tests/regression/root/test_topic13_phase_space_measure.py	05_tests/regression	.py	REVIEW	0	0	0	7	0	0	0	1	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
+core/05_tests/regression/root/test_topic13_phi_e_reference_normalization.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
+core/05_tests/regression/root/test_topic13_phi_e_reference_normalization_integration.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
+core/05_tests/regression/root/test_topic13_phi_si_anchor_public_source_boundary.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	1	0	0	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
+core/05_tests/regression/root/test_topic13_phonix_mp47_graphite_comparator.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
+core/05_tests/regression/root/test_topic13_physical_kubo_coefficient_provenance.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	1	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
+core/05_tests/regression/root/test_topic13_physical_kubo_coefficient_provenance_integration.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
+core/05_tests/regression/root/test_topic13_physical_transport_reconciliation.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
+core/05_tests/regression/root/test_topic13_physical_transport_reconciliation_integration.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
+core/05_tests/regression/root/test_topic13_positive_interpolation_bounds.py	05_tests/regression	.py	REVIEW	0	0	0	7	0	0	0	1	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
+core/05_tests/regression/root/test_topic13_profile_residual_baseline_scatter.py	05_tests/regression	.py	REVIEW	0	0	0	7	0	0	0	1	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
+core/05_tests/regression/root/test_topic13_progress_track_scope.py	05_tests/regression	.py	REVIEW	0	0	0	6	0	0	0	0	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
+core/05_tests/regression/root/test_topic13_qh15_graphite_transport_boundary.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	2	0	0	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
+core/05_tests/regression/root/test_topic13_quadratic_source_averaging.py	05_tests/regression	.py	REVIEW	0	0	0	7	0	0	0	1	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
+core/05_tests/regression/root/test_topic13_raman_deformation_constraint.py	05_tests/regression	.py	REVIEW	0	0	0	8	0	0	0	1	C	W7	Tests a module labelled C (A modules only as dependencies); moves with it
+core/05_tests/regression/root/test_topic13_reciprocal_thermal_dynamics.py	05_tests/regression	.py	REVIEW	0	0	0	8	0	0	0	1	C	W7	Tests a module labelled C (A modules only as dependencies); moves with it
+core/05_tests/regression/root/test_topic13_registration_shell_transfer.py	05_tests/regression	.py	REVIEW	0	0	0	7	0	0	0	1	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
+core/05_tests/regression/root/test_topic13_regularized_continuum_heat_current.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	C	W7	Tests a module labelled C (A modules only as dependencies); moves with it
+core/05_tests/regression/root/test_topic13_regularized_continuum_heat_current_integration.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
+core/05_tests/regression/root/test_topic13_response_one_loop_match.py	05_tests/regression	.py	REVIEW	0	0	0	8	0	1	0	1	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
+core/05_tests/regression/root/test_topic13_retarded_ra_mixed_current_vertex.py	05_tests/regression	.py	REVIEW	0	0	0	8	0	0	0	1	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
+core/05_tests/regression/root/test_topic13_same_kernel_tagged_width.py	05_tests/regression	.py	REVIEW	0	0	0	8	0	1	0	1	C	W7	Tests a module labelled C (A modules only as dependencies); moves with it
+core/05_tests/regression/root/test_topic13_scalar_thermoelastic_response_bridge.py	05_tests/regression	.py	REVIEW	0	0	0	12	0	2	0	1	C	W7	Tests a module labelled C (A modules only as dependencies); moves with it
+core/05_tests/regression/root/test_topic13_shear_symmetry.py	05_tests/regression	.py	REVIEW	0	0	0	7	0	0	0	1	C	W7	Tests a module labelled C (A modules only as dependencies); moves with it
+core/05_tests/regression/root/test_topic13_sk_kms_entropy_contract.py	05_tests/regression	.py	REVIEW	0	0	0	6	0	0	0	0	C	W7	Tests a module labelled C (A modules only as dependencies); moves with it
+core/05_tests/regression/root/test_topic13_sk_kms_entropy_contract_integration.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
+core/05_tests/regression/root/test_topic13_standard_o2_finite_temperature_comparator.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
+core/05_tests/regression/root/test_topic13_standard_o2_finite_temperature_comparator_integration.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
+core/05_tests/regression/root/test_topic13_support_canonical_migration.py	05_tests/regression	.py	REVIEW	0	0	0	5	0	0	0	0	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
+core/05_tests/regression/root/test_topic13_tensor_heat_lift.py	05_tests/regression	.py	REVIEW	0	0	0	7	0	0	0	1	B	W7	Regression test of a module labelled B (uet_o2_covariant_entropy_heat_flux_balance); keep with the module for stage 3
+core/05_tests/regression/root/test_topic13_thermal_bridge_scale_dependency.py	05_tests/regression	.py	REVIEW	0	0	0	7	0	1	0	0	C	W7	Tests a module labelled C (A modules only as dependencies); moves with it
+core/05_tests/regression/root/test_topic13_thermal_mass_actuation.py	05_tests/regression	.py	REVIEW	0	0	0	7	0	0	0	1	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
+core/05_tests/regression/root/test_topic13_thermal_response_beta_contract.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	C	W7	Tests a module labelled C (A modules only as dependencies); moves with it
+core/05_tests/regression/root/test_topic13_thermal_response_beta_contract_integration.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	1	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
+core/05_tests/regression/root/test_topic13_thermal_variance_spectrum.py	05_tests/regression	.py	REVIEW	0	0	0	7	0	0	0	1	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
+core/05_tests/regression/root/test_topic13_thermoelastic_spatial_compatibility.py	05_tests/regression	.py	REVIEW	0	0	0	8	0	1	0	1	C	W7	Tests a module labelled C (A modules only as dependencies); moves with it
+core/05_tests/regression/root/test_topic13_thermometry_window.py	05_tests/regression	.py	REVIEW	0	0	0	7	0	0	0	1	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
+core/05_tests/regression/root/test_topic13_tpg_anisotropic_alpha_v_gate_integration.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
+core/05_tests/regression/root/test_topic13_tpg_anisotropic_alpha_v_source.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
+core/05_tests/regression/root/test_topic13_transition_coordinate_map.py	05_tests/regression	.py	REVIEW	0	0	0	7	0	0	0	1	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
+core/05_tests/regression/root/test_topic13_transition_kernel_rate_dimension_no_go.py	05_tests/regression	.py	REVIEW	0	0	0	8	0	0	0	1	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
+core/05_tests/regression/root/test_topic13_transition_pullback.py	05_tests/regression	.py	REVIEW	0	0	0	11	0	0	0	1	C	W7	Tests a module labelled C (A modules only as dependencies); moves with it
+core/05_tests/regression/root/test_topic13_transport_coefficient_identifiability.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
+core/05_tests/regression/root/test_topic13_transport_kms_entropy_status_boundary.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
+core/05_tests/regression/root/test_topic13_transport_resolution.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
+core/05_tests/regression/root/test_topic13_ued_beam_position.py	05_tests/regression	.py	REVIEW	0	0	0	7	0	0	0	1	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
+core/05_tests/regression/root/test_topic13_ued_cut_pooling.py	05_tests/regression	.py	REVIEW	0	0	0	7	0	0	0	1	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
+core/05_tests/regression/root/test_topic13_ued_cut_signal.py	05_tests/regression	.py	REVIEW	0	0	0	7	0	0	0	1	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
+core/05_tests/regression/root/test_topic13_ued_cut_tiles.py	05_tests/regression	.py	REVIEW	0	0	0	7	0	0	0	1	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
+core/05_tests/regression/root/test_topic13_ued_mask_support.py	05_tests/regression	.py	REVIEW	0	0	0	7	0	0	0	1	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
+core/05_tests/regression/root/test_topic13_ued_numeric_inventory.py	05_tests/regression	.py	REVIEW	0	0	0	7	0	0	0	1	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
+core/05_tests/regression/root/test_topic13_ued_pickle_static.py	05_tests/regression	.py	REVIEW	0	0	0	7	0	0	0	1	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
+core/05_tests/regression/root/test_topic13_ued_raw_archive.py	05_tests/regression	.py	REVIEW	0	0	0	7	0	0	0	1	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
+core/05_tests/regression/root/test_topic13_ued_raw_structure.py	05_tests/regression	.py	REVIEW	0	0	0	7	0	0	0	1	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
+core/05_tests/regression/root/test_topic13_ued_region_support.py	05_tests/regression	.py	REVIEW	0	0	0	7	0	0	0	1	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
+core/05_tests/regression/root/test_topic13_ued_rotated_position.py	05_tests/regression	.py	REVIEW	0	0	0	8	0	0	0	2	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
+core/05_tests/regression/root/test_topic13_ued_source_acquisition.py	05_tests/regression	.py	REVIEW	0	0	0	6	0	0	0	0	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
+core/05_tests/regression/root/test_topic13_ued_voigt_position.py	05_tests/regression	.py	REVIEW	0	0	0	8	0	0	0	2	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
+core/05_tests/regression/root/test_topic13_uet_o2_auxiliary_field_condensed.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
+core/05_tests/regression/root/test_topic13_uet_o2_charge_conserving_ladder_response.py	05_tests/regression	.py	REVIEW	0	0	0	6	0	0	0	0	C	W7	Tests a module labelled C (A modules only as dependencies); moves with it
+core/05_tests/regression/root/test_topic13_uet_o2_charged_current_correlator.py	05_tests/regression	.py	REVIEW	0	0	0	8	0	0	0	2	C	W7	Tests a module labelled C (A modules only as dependencies); moves with it
+core/05_tests/regression/root/test_topic13_uet_o2_collisionless_kubo.py	05_tests/regression	.py	REVIEW	0	0	0	6	0	0	0	0	C	W7	Tests a module labelled C (A modules only as dependencies); moves with it
+core/05_tests/regression/root/test_topic13_uet_o2_condensate_fluctuation_spectrum.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
+core/05_tests/regression/root/test_topic13_uet_o2_condensate_fluctuation_spectrum_integration.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
+core/05_tests/regression/root/test_topic13_uet_o2_condensate_gaussian_thermal.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
+core/05_tests/regression/root/test_topic13_uet_o2_condensate_gaussian_thermal_integration.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	1	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
+core/05_tests/regression/root/test_topic13_uet_o2_condensate_goldstone_ideal_lane.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
+core/05_tests/regression/root/test_topic13_uet_o2_condensate_goldstone_ideal_lane_integration.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
+core/05_tests/regression/root/test_topic13_uet_o2_condensed_dissipative_transport.py	05_tests/regression	.py	REVIEW	0	0	0	6	0	0	0	0	C	W7	Tests a module labelled C (A modules only as dependencies); moves with it
+core/05_tests/regression/root/test_topic13_uet_o2_condensed_goldstone_ward.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
+core/05_tests/regression/root/test_topic13_uet_o2_condensed_loop_renormalized_vertex.py	05_tests/regression	.py	REVIEW	0	0	0	9	0	1	0	2	B	W7	Regression test of a module labelled B (uet_o2_finite_density_eos); keep with the module for stage 3
+core/05_tests/regression/root/test_topic13_uet_o2_condensed_relative_flow_collision.py	05_tests/regression	.py	REVIEW	0	0	0	9	0	0	0	3	C	W7	Tests a module labelled C (A modules only as dependencies); moves with it
+core/05_tests/regression/root/test_topic13_uet_o2_condensed_relative_flow_kubo_admission.py	05_tests/regression	.py	REVIEW	0	0	0	6	0	0	0	0	B	W7	Regression test of a module labelled B (uet_o2_finite_density_eos); keep with the module for stage 3
+core/05_tests/regression/root/test_topic13_uet_o2_condensed_retarded_dissipation_no_go.py	05_tests/regression	.py	REVIEW	0	0	0	6	0	0	0	0	B	W7	Regression test of a module labelled B (uet_o2_condensed_retarded_dissipation_no_go, uet_o2_finite_density_eos); keep with the module for stage 3
+core/05_tests/regression/root/test_topic13_uet_o2_condensed_sk_kms_kubo_match.py	05_tests/regression	.py	REVIEW	0	0	0	6	0	0	0	0	B	W7	Regression test of a module labelled B (uet_o2_finite_density_eos); keep with the module for stage 3
+core/05_tests/regression/root/test_topic13_uet_o2_contact_sk_transition_vertex_match.py	05_tests/regression	.py	REVIEW	0	0	0	8	0	0	0	2	C	W7	Tests a module labelled C (A modules only as dependencies); moves with it
+core/05_tests/regression/root/test_topic13_uet_o2_continuum_collision_operator.py	05_tests/regression	.py	REVIEW	0	0	0	6	0	0	0	0	C	W7	Tests a module labelled C (A modules only as dependencies); moves with it
+core/05_tests/regression/root/test_topic13_uet_o2_continuum_limit_boundary.py	05_tests/regression	.py	REVIEW	0	0	0	6	0	0	0	0	C	W7	Tests a module labelled C (A modules only as dependencies); moves with it
+core/05_tests/regression/root/test_topic13_uet_o2_continuum_relative_flow_kubo.py	05_tests/regression	.py	REVIEW	0	0	0	8	0	1	0	2	C	W7	Tests a module labelled C (A modules only as dependencies); moves with it
+core/05_tests/regression/root/test_topic13_uet_o2_continuum_sunset_cut.py	05_tests/regression	.py	REVIEW	0	0	0	6	0	0	0	0	B	W7	Regression test of a module labelled B (uet_o2_finite_density_eos); keep with the module for stage 3
+core/05_tests/regression/root/test_topic13_uet_o2_covariant_entropy_heat_flux_balance.py	05_tests/regression	.py	REVIEW	0	0	0	7	0	1	0	0	B	W7	Regression test of a module labelled B (uet_o2_covariant_entropy_heat_flux_balance); keep with the module for stage 3
+core/05_tests/regression/root/test_topic13_uet_o2_finite_channel_entropy_balance.py	05_tests/regression	.py	REVIEW	0	0	0	6	0	0	0	0	B	W7	Regression test of a module labelled B (uet_o2_finite_channel_entropy_balance); keep with the module for stage 3
+core/05_tests/regression/root/test_topic13_uet_o2_finite_density_charged_vertex.py	05_tests/regression	.py	REVIEW	0	0	0	6	0	0	0	0	B	W7	Regression test of a module labelled B (uet_o2_finite_density_eos); keep with the module for stage 3
+core/05_tests/regression/root/test_topic13_uet_o2_finite_temperature_all_22_permutation_identity.py	05_tests/regression	.py	REVIEW	0	0	0	6	0	1	0	0	C	W7	Tests a module labelled C (A modules only as dependencies); moves with it
+core/05_tests/regression/root/test_topic13_uet_o2_finite_temperature_all_onshell_cut_response.py	05_tests/regression	.py	REVIEW	0	0	0	6	0	0	0	0	C	W7	Tests a module labelled C (A modules only as dependencies); moves with it
+core/05_tests/regression/root/test_topic13_uet_o2_finite_temperature_declared_channel_retarded_advanced_keldysh_1pi.py	05_tests/regression	.py	REVIEW	0	0	0	6	0	2	0	0	C	W7	Tests a module labelled C (A modules only as dependencies); moves with it
+core/05_tests/regression/root/test_topic13_uet_o2_finite_temperature_declared_retarded_1pi_grid.py	05_tests/regression	.py	REVIEW	0	0	0	6	0	0	0	0	C	W7	Tests a module labelled C (A modules only as dependencies); moves with it
+core/05_tests/regression/root/test_topic13_uet_o2_finite_temperature_full_sunset_sk_kms.py	05_tests/regression	.py	REVIEW	0	0	0	6	0	0	0	0	B	W7	Regression test of a module labelled B (uet_o2_finite_temperature_full_sunset_sk_kms); keep with the module for stage 3
+core/05_tests/regression/root/test_topic13_uet_o2_finite_temperature_offshell_1pi.py	05_tests/regression	.py	REVIEW	0	0	0	6	0	0	0	0	B	W7	Regression test of a module labelled B (uet_o2_finite_temperature_offshell_1pi); keep with the module for stage 3
+core/05_tests/regression/root/test_topic13_uet_o2_finite_temperature_offshell_threshold_crossing_1pi.py	05_tests/regression	.py	REVIEW	0	0	0	6	0	1	0	0	C	W7	Tests a module labelled C (A modules only as dependencies); moves with it
+core/05_tests/regression/root/test_topic13_uet_o2_finite_temperature_renormalized_hartree.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
+core/05_tests/regression/root/test_topic13_uet_o2_finite_temperature_scheme_identifiability.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
+core/05_tests/regression/root/test_topic13_uet_o2_finite_temperature_signed_cut_coverage.py	05_tests/regression	.py	REVIEW	0	0	0	6	0	0	0	0	C	W7	Tests a module labelled C (A modules only as dependencies); moves with it
+core/05_tests/regression/root/test_topic13_uet_o2_finite_temperature_sunset_cut_multiplicity.py	05_tests/regression	.py	REVIEW	0	0	0	6	0	0	0	0	C	W7	Tests a module labelled C (A modules only as dependencies); moves with it
+core/05_tests/regression/root/test_topic13_uet_o2_finite_temperature_sunset_renormalization_identifiability_no_go.py	05_tests/regression	.py	REVIEW	0	0	0	6	0	0	0	0	C	W7	Tests a module labelled C (A modules only as dependencies); moves with it
+core/05_tests/regression/root/test_topic13_uet_o2_finite_temperature_sunset_scattering_sk_kms.py	05_tests/regression	.py	REVIEW	0	0	0	6	0	0	0	0	B	W7	Regression test of a module labelled B (uet_o2_finite_temperature_sunset_scattering_sk_kms); keep with the module for stage 3
+core/05_tests/regression/root/test_topic13_uet_o2_finite_temperature_sunset_sk_kms.py	05_tests/regression	.py	REVIEW	0	0	0	6	0	0	0	0	B	W7	Regression test of a module labelled B (uet_o2_finite_temperature_sunset_sk_kms); keep with the module for stage 3
+core/05_tests/regression/root/test_topic13_uet_o2_finite_temperature_sunset_vacuum_match.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	C	W7	Tests a module labelled C (A modules only as dependencies); moves with it
+core/05_tests/regression/root/test_topic13_uet_o2_finite_temperature_two_fluid_response.py	05_tests/regression	.py	REVIEW	0	0	0	6	0	0	0	0	C	W7	Tests a module labelled C (A modules only as dependencies); moves with it
+core/05_tests/regression/root/test_topic13_uet_o2_gaussian_offshell_background.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
+core/05_tests/regression/root/test_topic13_uet_o2_hartree_thermodynamic_consistency.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
+core/05_tests/regression/root/test_topic13_uet_o2_kinetic_collision_kubo.py	05_tests/regression	.py	REVIEW	0	0	0	6	0	0	0	0	B	W7	Regression test of a module labelled B (uet_o2_kinetic_collision_kubo); keep with the module for stage 3
+core/05_tests/regression/root/test_topic13_uet_o2_momentum_ladder_sk_kms.py	05_tests/regression	.py	REVIEW	0	0	0	6	0	0	0	0	C	W7	Tests a module labelled C (A modules only as dependencies); moves with it
+core/05_tests/regression/root/test_topic13_uet_o2_nonlocal_sk_kms_memory_kernel.py	05_tests/regression	.py	REVIEW	0	0	0	6	0	0	0	0	B	W7	Regression test of a module labelled B (uet_o2_finite_density_eos); keep with the module for stage 3
+core/05_tests/regression/root/test_topic13_uet_o2_normal_thermodynamic_consistency.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
+core/05_tests/regression/root/test_topic13_uet_o2_normal_thermodynamic_consistency_integration.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
+core/05_tests/regression/root/test_topic13_uet_o2_on_shell_sunset_width.py	05_tests/regression	.py	REVIEW	0	0	0	8	0	0	0	2	C	W7	Tests a module labelled C (A modules only as dependencies); moves with it
+core/05_tests/regression/root/test_topic13_uet_o2_one_loop_normal_branch.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
+core/05_tests/regression/root/test_topic13_uet_o2_one_loop_normal_branch_integration.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
+core/05_tests/regression/root/test_topic13_uet_o2_one_loop_uv_boundary.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
+core/05_tests/regression/root/test_topic13_uet_o2_one_loop_uv_boundary_integration.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
+core/05_tests/regression/root/test_topic13_uet_o2_one_loop_vertex_uv_boundary.py	05_tests/regression	.py	REVIEW	0	0	0	6	0	0	0	0	C	W7	Tests a module labelled C (A modules only as dependencies); moves with it
+core/05_tests/regression/root/test_topic13_uet_o2_physical_renormalization_condition_contract.py	05_tests/regression	.py	REVIEW	0	0	0	6	0	0	0	0	C	W7	Tests a module labelled C (A modules only as dependencies); moves with it
+core/05_tests/regression/root/test_topic13_uet_o2_quantum_collision_enhancement.py	05_tests/regression	.py	REVIEW	0	0	0	6	0	0	0	0	B	W7	Regression test of a module labelled B (uet_o2_kinetic_collision_kubo); keep with the module for stage 3
+core/05_tests/regression/root/test_topic13_uet_o2_quantum_kinetic_collision_kubo.py	05_tests/regression	.py	REVIEW	0	0	0	6	0	1	0	0	B	W7	Regression test of a module labelled B (uet_o2_kinetic_collision_kubo); keep with the module for stage 3
+core/05_tests/regression/root/test_topic13_uet_o2_renormalized_normal_branch.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
+core/05_tests/regression/root/test_topic13_uet_o2_renormalized_vertex_scheme.py	05_tests/regression	.py	REVIEW	0	0	0	6	0	0	0	0	B	W7	Regression test of a module labelled B (uet_o2_finite_density_eos); keep with the module for stage 3
+core/05_tests/regression/root/test_topic13_uet_o2_sunset_dispersion_interface.py	05_tests/regression	.py	REVIEW	0	0	0	6	0	0	0	0	B	W7	Regression test of a module labelled B (uet_o2_finite_density_eos); keep with the module for stage 3
+core/05_tests/regression/root/test_topic13_uet_o2_thermodynamic_normal_component.py	05_tests/regression	.py	REVIEW	0	0	0	8	0	1	0	2	C	W7	Tests a module labelled C (A modules only as dependencies); moves with it
+core/05_tests/regression/root/test_topic13_uet_o2_tree_level_bs_sk_match.py	05_tests/regression	.py	REVIEW	0	0	0	6	0	0	0	0	C	W7	Tests a module labelled C (A modules only as dependencies); moves with it
+core/05_tests/regression/root/test_topic13_uet_o2_tree_level_charged_ward_vertex.py	05_tests/regression	.py	REVIEW	0	0	0	8	0	0	0	2	C	W7	Tests a module labelled C (A modules only as dependencies); moves with it
+core/05_tests/regression/root/test_topic13_uet_o2_two_loop_sunset_cut.py	05_tests/regression	.py	REVIEW	0	0	0	6	0	0	0	0	B	W7	Regression test of a module labelled B (uet_o2_two_loop_sunset_cut); keep with the module for stage 3
+core/05_tests/regression/root/test_topic13_uet_o2_ward_coefficient_state_dependence.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
+core/05_tests/regression/root/test_topic13_uet_o2_ward_constrained_condensed.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
+core/05_tests/regression/root/test_topic13_variance_directional_grid.py	05_tests/regression	.py	REVIEW	0	0	0	7	0	0	0	1	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
+core/05_tests/regression/root/test_topic13_variance_mesh_shift.py	05_tests/regression	.py	REVIEW	0	0	0	7	0	0	0	1	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
+core/05_tests/regression/root/test_topic13_weighted_directions.py	05_tests/regression	.py	REVIEW	0	0	0	11	0	0	0	1	C	W7	Tests a module labelled C (A modules only as dependencies); moves with it
+core/05_tests/regression/root/test_topic13_xie_2026_holdout_access_audit.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	1	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
+core/05_tests/regression/root/test_topic13_zenodo_hitrace_isotropic_graphite_cp_source.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
+core/05_tests/regression/root/test_topic13_zenodo_ig210_alpha_l_source.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
+core/05_tests/regression/root/test_uet_chaos_integration.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	C	W7	Legacy gate, migration or artifact check (old C lanes, foundation gates, migration waves); not a physics test
+core/05_tests/regression/root/test_uet_coarse_graining.py	05_tests/regression	.py	REVIEW	0	0	0	8	0	0	0	4	C	W7	Tests a module labelled C (A modules only as dependencies); moves with it
+core/05_tests/regression/root/test_uet_code_surface_inventory.py	05_tests/regression	.py	REVIEW	0	0	0	7	0	0	0	1	C	W7	Legacy gate, migration or artifact check (old C lanes, foundation gates, migration waves); not a physics test
+core/05_tests/regression/root/test_uet_core_equation_family_contract.py	05_tests/regression	.py	REVIEW	0	0	0	7	0	0	0	0	C	W7	Legacy gate, migration or artifact check (old C lanes, foundation gates, migration waves); not a physics test
+core/05_tests/regression/root/test_uet_core_scientific_links.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	C	W7	Legacy gate, migration or artifact check (old C lanes, foundation gates, migration waves); not a physics test
+core/05_tests/regression/root/test_uet_covariant_diffusion_links.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	C	W7	Legacy gate, migration or artifact check (old C lanes, foundation gates, migration waves); not a physics test
+core/05_tests/regression/root/test_uet_covariant_open_system.py	05_tests/regression	.py	REVIEW	0	0	0	8	0	1	0	4	C	W7	Tests a module labelled C (A modules only as dependencies); moves with it
+core/05_tests/regression/root/test_uet_covariant_parent.py	05_tests/regression	.py	REVIEW	0	0	0	13	0	0	0	4	A	W7	Regression test of a module labelled A (uet_covariant_matter, uet_covariant_parent, uet_covariant_response); bookkeeping, not a physics test
+core/05_tests/regression/root/test_uet_covariant_parent_links.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	C	W7	Legacy gate, migration or artifact check (old C lanes, foundation gates, migration waves); not a physics test
+core/05_tests/regression/root/test_uet_covariant_theory_spine.py	05_tests/regression	.py	REVIEW	0	0	0	8	0	0	0	3	C	W7	Tests a module labelled C (A modules only as dependencies); moves with it
+core/05_tests/regression/root/test_uet_curved_3p1_adm_evolution.py	05_tests/regression	.py	REVIEW	0	0	0	11	0	0	0	1	C	W7	Tests a module labelled C (A modules only as dependencies); moves with it
+core/05_tests/regression/root/test_uet_curved_3p1_constraints.py	05_tests/regression	.py	REVIEW	0	0	0	11	0	0	0	2	C	W7	Tests a module labelled C (A modules only as dependencies); moves with it
+core/05_tests/regression/root/test_uet_curved_3p1_generalized_harmonic.py	05_tests/regression	.py	REVIEW	0	0	0	11	0	0	0	1	C	W7	Tests a module labelled C (A modules only as dependencies); moves with it
+core/05_tests/regression/root/test_uet_curved_3p1_geometry.py	05_tests/regression	.py	REVIEW	0	0	0	11	0	0	0	1	C	W7	Tests a module labelled C (A modules only as dependencies); moves with it
+core/05_tests/regression/root/test_uet_curved_3p1_gh_nonlinear_vacuum.py	05_tests/regression	.py	REVIEW	0	0	0	11	0	0	0	1	C	W7	Tests a module labelled C (A modules only as dependencies); moves with it
+core/05_tests/regression/root/test_uet_curved_3p1_gh_time_evolution.py	05_tests/regression	.py	REVIEW	0	0	0	11	0	0	0	1	C	W7	Tests a module labelled C (A modules only as dependencies); moves with it
+core/05_tests/regression/root/test_uet_curved_3p1_matter_wiring.py	05_tests/regression	.py	REVIEW	0	0	0	7	0	0	0	1	C	W7	Tests a module labelled C (A modules only as dependencies); moves with it
+core/05_tests/regression/root/test_uet_derivation_origin_audit.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	C	W7	Legacy gate, migration or artifact check (old C lanes, foundation gates, migration waves); not a physics test
+core/05_tests/regression/root/test_uet_downstream_unlock.py	05_tests/regression	.py	REVIEW	0	0	0	6	0	0	0	0	C	W7	Legacy gate, migration or artifact check (old C lanes, foundation gates, migration waves); not a physics test
+core/05_tests/regression/root/test_uet_equation_inventory.py	05_tests/regression	.py	REVIEW	0	0	0	7	0	0	0	0	C	W7	Legacy gate, migration or artifact check (old C lanes, foundation gates, migration waves); not a physics test
+core/05_tests/regression/root/test_uet_foundation_compatibility_decision.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	C	W7	Legacy gate, migration or artifact check (old C lanes, foundation gates, migration waves); not a physics test
+core/05_tests/regression/root/test_uet_fundamental_track.py	05_tests/regression	.py	REVIEW	0	0	0	6	0	0	0	0	C	W7	Legacy gate, migration or artifact check (old C lanes, foundation gates, migration waves); not a physics test
+core/05_tests/regression/root/test_uet_gr_correspondence.py	05_tests/regression	.py	REVIEW	0	0	0	8	0	0	0	3	C	W7	Tests a module labelled C (A modules only as dependencies); moves with it
+core/05_tests/regression/root/test_uet_impact_effect.py	05_tests/regression	.py	REVIEW	0	0	0	6	0	0	0	0	C	W7	Tests a module labelled C (A modules only as dependencies); moves with it
+core/05_tests/regression/root/test_uet_main_theory_axioms.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	C	W7	Legacy gate, migration or artifact check (old C lanes, foundation gates, migration waves); not a physics test
+core/05_tests/regression/root/test_uet_main_theory_closure.py	05_tests/regression	.py	REVIEW	0	0	0	6	0	0	0	0	C	W7	Legacy gate, migration or artifact check (old C lanes, foundation gates, migration waves); not a physics test
+core/05_tests/regression/root/test_uet_main_theory_dimensional_observable.py	05_tests/regression	.py	REVIEW	0	0	0	6	0	0	0	0	C	W7	Legacy gate, migration or artifact check (old C lanes, foundation gates, migration waves); not a physics test
+core/05_tests/regression/root/test_uet_main_theory_wave0.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	C	W7	Legacy gate, migration or artifact check (old C lanes, foundation gates, migration waves); not a physics test
+core/05_tests/regression/root/test_uet_matter_space_flux_links.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	C	W7	Legacy gate, migration or artifact check (old C lanes, foundation gates, migration waves); not a physics test
+core/05_tests/regression/root/test_uet_quantum_interpretations.py	05_tests/regression	.py	REVIEW	0	0	0	8	0	0	0	3	C	W7	Tests a module labelled C (A modules only as dependencies); moves with it
+core/05_tests/regression/root/test_uet_quantum_measurement.py	05_tests/regression	.py	REVIEW	0	0	0	8	0	0	0	3	C	W7	Tests a module labelled C (A modules only as dependencies); moves with it
+core/05_tests/regression/root/test_uet_research_room_wave1.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	1	C	W7	Legacy gate, migration or artifact check (old C lanes, foundation gates, migration waves); not a physics test
+core/05_tests/regression/root/test_uet_trace_links.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	C	W7	Legacy gate, migration or artifact check (old C lanes, foundation gates, migration waves); not a physics test
+core/05_tests/regression/root/test_uet_wave3_wave10_program.py	05_tests/regression	.py	REVIEW	0	0	0	11	0	1	0	0	C	W7	Legacy gate, migration or artifact check (old C lanes, foundation gates, migration waves); not a physics test
+core/05_tests/regression/test_engine_lane_cards.py	05_tests/regression	.py	REVIEW	1	0	0	0	0	0	1	1	A	W7	Bookkeeping check of the engine lane-card validator
+core/05_tests/regression/validation/test_matrix_proof.py	05_tests/regression	.py	REVIEW	0	0	0	8	0	0	0	0	C	W7	Legacy gate, migration or artifact check (old C lanes, foundation gates, migration waves); not a physics test
+core/05_tests/regression/validation/test_unity_gtua.py	05_tests/regression	.py	REVIEW	0	0	0	6	0	0	0	0	C	W7	Tests a module labelled C (A modules only as dependencies); moves with it
 core/06_data/README.md	06_data	.md	A_DEP	0	0	0	9	0	0	0	1	-	-	-
 core/06_data/source_packages/README.md	06_data/source_packages	.md	REVIEW	0	0	0	7	0	0	0	1	-	-	-
 core/06_data/source_packages/particle_physics/ame2020/mass_1.mas20	06_data/source_packages	.mas20	REVIEW	0	0	0	9	0	9	0	9	-	-	-
