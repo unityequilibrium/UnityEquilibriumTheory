@@ -6,10 +6,11 @@
 
 These are source-linked historical records, not proof of completed research, successful publication, or current scientific readiness.
 
-Indexed entries: 682. Counts describe records, not accomplishments.
+Indexed entries: 683. Counts describe records, not accomplishments.
 
 | Date | Record | Area | Notes |
 | --- | --- | --- | --- |
+| 2026-11-18 | [T022 result at L2](2026/2026-11-18.md#t022-result-at-l2) (L123) | research-core | explicit_stream_and_area |
 | 2026-11-18 | [T022 rerun under amendment 1: PASS](2026/2026-11-18.md#t022-rerun-under-amendment-1-pass) (L113) | research-core | explicit_stream_and_area |
 | 2026-11-18 | [T022 run: FAILED by a numerical defect in the approved script](2026/2026-11-18.md#t022-run-failed-by-a-numerical-defect-in-the-approved-script) (L103) | research-core | explicit_stream_and_area |
 | 2026-11-18 | [O8 and T022 draft: Michelson-Morley and Kennedy-Thorndike](2026/2026-11-18.md#o8-and-t022-draft-michelson-morley-and-kennedy-thorndike) (L93) | research-core | explicit_stream_and_area |

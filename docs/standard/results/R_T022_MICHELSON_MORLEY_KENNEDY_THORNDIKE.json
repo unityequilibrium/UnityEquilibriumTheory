@@ -1,0 +1,64 @@
+{
+  "schema": "uet-result-v2",
+  "result_id": "R_T022_MICHELSON_MORLEY_KENNEDY_THORNDIKE",
+  "claim_id": "C_T022_LORENTZ_LENGTH_AND_VELOCITY",
+  "test_card_id": "T022",
+  "level": "L2_CONFRONTED",
+  "outcome": "PASS",
+  "numbers": [
+    {
+      "name": "model_P_MM_and_P_KT",
+      "value": "0 (below 1e-20 in 60-digit arithmetic)",
+      "uncertainty": null,
+      "unit": "dimensionless"
+    },
+    {
+      "name": "P_MM_Herrmann2009",
+      "value": "4e-12",
+      "uncertainty": "8e-12",
+      "unit": "dimensionless"
+    },
+    {
+      "name": "z_MM",
+      "value": "0.50",
+      "uncertainty": null,
+      "unit": "dimensionless"
+    },
+    {
+      "name": "P_KT_Tobar2010",
+      "value": "-4.8e-8",
+      "uncertainty": "3.7e-8",
+      "unit": "dimensionless"
+    },
+    {
+      "name": "z_KT",
+      "value": "1.30",
+      "uncertainty": null,
+      "unit": "dimensionless"
+    },
+    {
+      "name": "contraction_only_control_z_KT",
+      "value": "1.4e7",
+      "uncertainty": null,
+      "unit": "dimensionless"
+    },
+    {
+      "name": "galilean_control_z_MM",
+      "value": "6.3e10",
+      "uncertainty": null,
+      "unit": "dimensionless"
+    }
+  ],
+  "producer": {
+    "script": "core/03_lanes/observation/t022_michelson_morley_kennedy_thorndike.py",
+    "commit": "8122948aa"
+  },
+  "artifacts": [],
+  "date": "2026-11-18",
+  "approval": {
+    "approved_by": "santxkoz",
+    "date": "2026-11-18",
+    "role": "AUTHOR"
+  },
+  "note": "PASS under Test Card T022 amendment 1 (approved 8122948aa). The two-way speed of light depends neither on orientation (Michelson-Morley, Herrmann et al. 2009) nor on laboratory velocity (Kennedy-Thorndike, Tobar et al. 2010), as the Lorentz boost of the parent action's local frame requires; with T013 all three Robertson-Mansouri-Sexl parameters are tested. The contraction-only and Galilean controls are excluded (diagnostic). A first run under the original card (commit 932f999cb) gave FAILED because the model value was computed in 64-bit floats (rounding -1.3e-10 against sigma 8e-12); the author approved the arithmetic amendment before the rerun; data and rules were unchanged. Not blind: the published values were seen before drafting. Standard special relativity passes equally; not UET-distinct. L2 approved by the author on 2026-11-18."
+}

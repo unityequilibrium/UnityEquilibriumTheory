@@ -515,3 +515,4 @@ commit: this commit
 - ผล: PASS: ค่าโมเดล P_MM = P_KT = 0; Michelson–Morley z = 0.50, Kennedy–Thorndike z = 1.30; แบบกาลิเลโอและแบบหดตัวอย่างเดียวถูกตัดทิ้งด้วย Kennedy–Thorndike (z ราว 1e7)
 - ระดับ: C_T022 ยังเป็น L0 รอผู้เขียนอนุมัติ L2; ผลรันแรกที่ตกยังอยู่ในบันทึกข้างบน
 - ถัดไป: ผู้เขียนอนุมัติ L2 แล้วบันทึก Result; จากนั้น W4
+- 2026-11-18: ผู้เขียนอนุมัติ L2; บันทึก R_T022_MICHELSON_MORLEY_KENNEDY_THORNDIKE และ C_T022 → L2_CONFRONTED

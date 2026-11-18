@@ -382,10 +382,12 @@
     },
     {
       "claim_id": "C_T022_LORENTZ_LENGTH_AND_VELOCITY",
-      "statement": "The Lorentz boost of the parent action's local frame gives a two-way speed of light that depends neither on orientation nor on laboratory velocity (P_MM = P_KT = 0); to be confronted with Herrmann et al. 2009 and Tobar et al. 2010 under Test Card T022.",
-      "level": "L0_SPECULATIVE",
-      "evidence": [],
-      "note": "Test Card T022 is DRAFT and awaits the author's approval. Not UET-distinct: special relativity passes."
+      "statement": "The two-way speed of light depends neither on orientation nor on laboratory velocity, as the Lorentz boost of the parent action's local frame requires: Michelson-Morley P_MM = (4 +- 8)e-12 (z = 0.50, Herrmann et al. 2009) and Kennedy-Thorndike P_KT = (-4.8 +- 3.7)e-8 (z = 1.30, Tobar et al. 2010); contraction without time dilation is excluded.",
+      "level": "L2_CONFRONTED",
+      "evidence": [
+        "R_T022_MICHELSON_MORLEY_KENNEDY_THORNDIKE"
+      ],
+      "note": "With T013 all three Robertson-Mansouri-Sexl parameters are tested. Not UET-distinct: special relativity passes. First run failed on a 64-bit rounding defect; amendment 1 approved before the rerun. L2 approved by the author on 2026-11-18."
     }
   ]
 }

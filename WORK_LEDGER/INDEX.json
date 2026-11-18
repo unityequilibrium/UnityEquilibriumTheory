@@ -5,11 +5,11 @@
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
     "sources": 81,
-    "entries": 911,
+    "entries": 912,
     "by_stream": {
       "book-history": 94,
       "operations": 134,
-      "research": 682,
+      "research": 683,
       "review": 1
     },
     "exact_duplicates": 0,
@@ -420,8 +420,8 @@
     },
     {
       "path": "2026/2026-11-18.md",
-      "sha256": "d0d43956dcd1d429870a37d7260e554f1fe435c991fd9ffaab77926c2180aa6d",
-      "entries": 12
+      "sha256": "199b0e9a44862980d580be8ef0a9a61afe8b25932f06c9cf96adad3c0ab26296",
+      "entries": 13
     },
     {
       "path": "2026-08-14.md",
@@ -18601,9 +18601,29 @@
       "source": "2026/2026-11-18.md",
       "anchor": "t022-rerun-under-amendment-1-pass",
       "start_line": 113,
-      "end_line": 121,
+      "end_line": 122,
       "title": "T022 rerun under amendment 1: PASS",
-      "entry_sha256": "4467478ea60666497c387810e533592f83bbd70a12df6cd4299ef02c2e986927",
+      "entry_sha256": "2888bb019f833cbaa2d29faa5ffb4d02bce4cddd8281618b01b54a8ec3fe5ff8",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-18",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-18.md#t022-result-at-l2",
+      "source": "2026/2026-11-18.md",
+      "anchor": "t022-result-at-l2",
+      "start_line": 123,
+      "end_line": 131,
+      "title": "T022 result at L2",
+      "entry_sha256": "95338fdc38b3300dd6b56c5f68f19d9a078fc6fbb9807d7e0abcceb47e717620",
       "stream": "research",
       "areas": [
         "research-core"
