@@ -1,7 +1,7 @@
 {
   "schema": "uet-test-card-v2",
   "test_id": "T023",
-  "status": "DRAFT",
+  "status": "APPROVED",
   "claim_id": "C_T023_FLIGHT_LIFETIME_ENERGY",
   "theory_card": {
     "card_id": "UET_PARENT",
@@ -36,5 +36,10 @@
   "pass_criterion": "PASS if the 95 percent interval of d_bat lies wholly above 0.18 and the 95 percent interval of Delta lies inside [-0.25, 0.25].",
   "fail_criterion": "FAILED if the upper end of the 95 percent interval of d_bat is below 0.18, or the 95 percent interval of Delta lies wholly outside [-0.25, 0.25]; INCONCLUSIVE otherwise.",
   "drafted_by": "claude",
-  "note": "Disclosure: not blind. Biology already reports that bats live long for their size (Austad and Fischer 1991, J. Gerontol. 46, B47; Brunet-Rossinni and Austad 2004; Wilkinson and South 2002) and that flight is linked to longevity in birds and bats (Matsuda and Makino 2024; Ikemoto et al. 2020). The 24 bats were inside the mammal group of T018, so they shaped that pooled fit, but no bat LEP was computed separately before drafting; only the counts (24 bats, 2 flightless birds) were read. Known bias in favour of PASS: many bats hibernate or use daily torpor, so a resting metabolic rate times maximum longevity overstates their lifetime energy; AnAge has no hibernation field to correct this, so a PASS cannot separate species-level allocation from torpor. Nearest theory: disposable soma (Kirkwood 1977) and extrinsic-mortality theory of ageing; a PASS would show layer 3 can carry a species-level reserve, not a UET-distinct result. The two flightless birds are reported only."
+  "note": "Disclosure: not blind. Biology already reports that bats live long for their size (Austad and Fischer 1991, J. Gerontol. 46, B47; Brunet-Rossinni and Austad 2004; Wilkinson and South 2002) and that flight is linked to longevity in birds and bats (Matsuda and Makino 2024; Ikemoto et al. 2020). The 24 bats were inside the mammal group of T018, so they shaped that pooled fit, but no bat LEP was computed separately before drafting; only the counts (24 bats, 2 flightless birds) were read. Known bias in favour of PASS: many bats hibernate or use daily torpor, so a resting metabolic rate times maximum longevity overstates their lifetime energy; AnAge has no hibernation field to correct this, so a PASS cannot separate species-level allocation from torpor. Nearest theory: disposable soma (Kirkwood 1977) and extrinsic-mortality theory of ageing; a PASS would show layer 3 can carry a species-level reserve, not a UET-distinct result. The two flightless birds are reported only. Approved by the author on 2026-11-18 as drafted.",
+  "approval": {
+    "approved_by": "santxkoz",
+    "date": "2026-11-18",
+    "role": "AUTHOR"
+  }
 }
