@@ -5,11 +5,11 @@
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
     "sources": 81,
-    "entries": 915,
+    "entries": 916,
     "by_stream": {
       "book-history": 94,
       "operations": 134,
-      "research": 686,
+      "research": 687,
       "review": 1
     },
     "exact_duplicates": 0,
@@ -420,8 +420,8 @@
     },
     {
       "path": "2026/2026-11-18.md",
-      "sha256": "5329ac5ac6bf74ca644aaace427e817cf2930775091f80b776b5ecb85dd64a97",
-      "entries": 16
+      "sha256": "473cfe92014d3af890e90203f6478c37be3f4c2ed038a918bb7bf586c133eaeb",
+      "entries": 17
     },
     {
       "path": "2026-08-14.md",
@@ -18681,9 +18681,29 @@
       "source": "2026/2026-11-18.md",
       "anchor": "sfi-scaling-theory-against-uet-layer-3",
       "start_line": 153,
-      "end_line": 161,
+      "end_line": 162,
       "title": "SFI scaling theory against UET layer 3",
-      "entry_sha256": "ceac2fe49fb036e5f0ddd771a3ee7f4e1f7d84b429b259bb2faf69a18a23e185",
+      "entry_sha256": "6525dc01c126ffb17aea06dd3cea237d36470af1abcf61f2ddda206ea512ad4b",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-18",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-18.md#layer-3-mapped-onto-saavedra-et-al-2025-sfi-metabolic-coexistence",
+      "source": "2026/2026-11-18.md",
+      "anchor": "layer-3-mapped-onto-saavedra-et-al-2025-sfi-metabolic-coexistence",
+      "start_line": 163,
+      "end_line": 171,
+      "title": "Layer 3 mapped onto Saavedra et al. 2025 (SFI metabolic coexistence)",
+      "entry_sha256": "c9e3d95d5f522a35504e5224844ab061b3b23146cae9e2ad6d949bda1f99e48c",
       "stream": "research",
       "areas": [
         "research-core"

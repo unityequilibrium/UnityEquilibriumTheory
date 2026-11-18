@@ -1,0 +1,40 @@
+{
+  "schema": "uet-result-v2",
+  "result_id": "R_L3_LV_MAP",
+  "claim_id": "C_L3_LV_MAP",
+  "level": "L1_CONSISTENT",
+  "outcome": "PASS",
+  "numbers": [
+    {
+      "name": "full_vs_reduced_relative_gap",
+      "value": "4-5e-4 at eps = 0.04, 2e-4 at 0.02, 1e-4 at 0.01 (first order in eps)",
+      "uncertainty": null,
+      "unit": "dimensionless"
+    },
+    {
+      "name": "interaction_matrix",
+      "value": "a_ij = (a_j F_j)/(a_i F_i), rank 1 for one pool",
+      "uncertainty": null,
+      "unit": "dimensionless"
+    },
+    {
+      "name": "biomass_interaction_under_metabolic_scaling",
+      "value": "(M_j/M_i)^(-1/4), equal to Saavedra et al. 2025 Eq. 14 to 1e-12",
+      "uncertainty": null,
+      "unit": "dimensionless"
+    },
+    {
+      "name": "lifetime_scaling",
+      "value": "tau ~ M^(1/4) from F ~ M and P ~ M^(3/4)",
+      "uncertainty": null,
+      "unit": "dimensionless"
+    }
+  ],
+  "producer": {
+    "script": "core/05_tests/physics/test_layer3_lv_map.py",
+    "commit": "d6a4b84d9"
+  },
+  "artifacts": [],
+  "date": "2026-11-18",
+  "note": "Derivation and numerical check only; no external data. In the fast, weak-draw limit of the shared pool, UET layer 3 is the Lotka-Volterra competition model used by Saavedra et al. (2025, SFI co-author Kempes), with the per-capita draw a_i F_i in the role of their consumption C_i and a0' = 1. What differs: one pool gives a rank-1 interaction matrix and a single winner, while Saavedra et al. assume an effective off-diagonal a0 < 1 (niche difference); UET derives mortality as 1/tau = P/F from the free-energy store. Negative control: a store not proportional to mass does not reproduce Eq. 14. Not UET-distinct for biology; it places layer 3 inside metabolic ecology."
+}

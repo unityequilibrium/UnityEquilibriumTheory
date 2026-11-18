@@ -6,10 +6,11 @@
 
 These are source-linked historical records, not proof of completed research, successful publication, or current scientific readiness.
 
-Indexed entries: 686. Counts describe records, not accomplishments.
+Indexed entries: 687. Counts describe records, not accomplishments.
 
 | Date | Record | Area | Notes |
 | --- | --- | --- | --- |
+| 2026-11-18 | [Layer 3 mapped onto Saavedra et al. 2025 (SFI metabolic coexistence)](2026/2026-11-18.md#layer-3-mapped-onto-saavedra-et-al-2025-sfi-metabolic-coexistence) (L163) | research-core | explicit_stream_and_area |
 | 2026-11-18 | [SFI scaling theory against UET layer 3](2026/2026-11-18.md#sfi-scaling-theory-against-uet-layer-3) (L153) | research-core | explicit_stream_and_area |
 | 2026-11-18 | [Core alignment W5: thermal and topic13_support](2026/2026-11-18.md#core-alignment-w5-thermal-and-topic13_support) (L143) | research-core | explicit_stream_and_area |
 | 2026-11-18 | [Core alignment W4: o2](2026/2026-11-18.md#core-alignment-w4-o2) (L133) | research-core | explicit_stream_and_area |
