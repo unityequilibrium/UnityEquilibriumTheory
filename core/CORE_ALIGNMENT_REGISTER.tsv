@@ -313,96 +313,96 @@ core/02_equations/matter_space/uet_matter_space_flux_telegraph.py	02_equations/m
 core/02_equations/matter_space/uet_matter_space_split.py	02_equations/matter_space	.py	A_DEP	0	0	0	20	2	0	0	5	C	W3	Split-step bridge for the C prototype; no claim uses it
 core/02_equations/matter_space/uet_spatial.py	02_equations/matter_space	.py	A_DEP	2	0	0	30	5	4	2	7	C	W3	1D finite-volume operators for the C prototype; 2 contracts pin it
 core/02_equations/matter_space/uet_trace.py	02_equations/matter_space	.py	A_DEP	3	0	0	33	6	7	3	13	C	W3	History trace of the prototype; the new layer-2 trace is 03_lanes/open_system/uet_r3_trace_decomposition.py
-core/02_equations/o2/README.md	02_equations/o2	.md	REVIEW	0	0	0	6	0	0	0	0	-	-	-
-core/02_equations/o2/__init__.py	02_equations/o2	.py	D	0	0	0	6	0	0	0	0	-	-	-
-core/02_equations/o2/standard_o2_finite_temperature_comparator.py	02_equations/o2	.py	REVIEW	0	0	0	20	1	3	0	10	-	-	-
-core/02_equations/o2/uet_o2_action_1pi_sunset_euclidean.py	02_equations/o2	.py	REVIEW	0	0	0	17	2	1	0	5	-	-	-
-core/02_equations/o2/uet_o2_action_1pi_sunset_retarded.py	02_equations/o2	.py	REVIEW	0	0	0	19	1	1	0	5	-	-	-
-core/02_equations/o2/uet_o2_action_1pi_sunset_tensor.py	02_equations/o2	.py	REVIEW	0	0	0	28	1	1	0	10	-	-	-
-core/02_equations/o2/uet_o2_action_derived_transition_kernel.py	02_equations/o2	.py	REVIEW	0	0	0	46	3	1	0	23	-	-	-
-core/02_equations/o2/uet_o2_action_sunset_1pi_spectral.py	02_equations/o2	.py	REVIEW	0	0	0	21	1	1	0	6	-	-	-
-core/02_equations/o2/uet_o2_action_sunset_zero_eta.py	02_equations/o2	.py	REVIEW	0	0	0	18	1	1	0	6	-	-	-
-core/02_equations/o2/uet_o2_action_thermal_observable_bridge.py	02_equations/o2	.py	REVIEW	0	0	0	34	2	46	0	23	-	-	-
-core/02_equations/o2/uet_o2_action_thermal_stiffness_beta.py	02_equations/o2	.py	REVIEW	0	0	0	36	1	39	0	21	-	-	-
-core/02_equations/o2/uet_o2_auxiliary_field_condensed.py	02_equations/o2	.py	REVIEW	0	0	0	15	0	5	0	3	-	-	-
-core/02_equations/o2/uet_o2_beta_correspondence.py	02_equations/o2	.py	REVIEW	0	0	0	15	0	4	0	4	-	-	-
-core/02_equations/o2/uet_o2_charge_conserving_ladder_response.py	02_equations/o2	.py	REVIEW	0	0	0	15	1	1	0	3	-	-	-
-core/02_equations/o2/uet_o2_charged_current_correlator.py	02_equations/o2	.py	REVIEW	0	0	0	19	1	1	0	6	-	-	-
-core/02_equations/o2/uet_o2_collisionless_kubo.py	02_equations/o2	.py	REVIEW	0	0	0	14	1	1	0	3	-	-	-
-core/02_equations/o2/uet_o2_condensate_fluctuations.py	02_equations/o2	.py	REVIEW	0	0	0	20	0	4	0	10	-	-	-
-core/02_equations/o2/uet_o2_condensate_gaussian_thermal.py	02_equations/o2	.py	REVIEW	0	0	0	15	0	3	0	6	-	-	-
-core/02_equations/o2/uet_o2_condensed_dissipative_transport_identifiability_no_go.py	02_equations/o2	.py	REVIEW	0	0	0	14	1	0	0	3	-	-	-
-core/02_equations/o2/uet_o2_condensed_loop_renormalized_vertex.py	02_equations/o2	.py	REVIEW	0	0	0	22	2	4	0	6	-	-	-
-core/02_equations/o2/uet_o2_condensed_relative_flow_collision.py	02_equations/o2	.py	REVIEW	0	0	0	18	1	9	0	4	-	-	-
-core/02_equations/o2/uet_o2_condensed_relative_flow_kubo_admission.py	02_equations/o2	.py	REVIEW	0	0	0	15	1	5	0	4	-	-	-
-core/02_equations/o2/uet_o2_condensed_retarded_dissipation_no_go.py	02_equations/o2	.py	REVIEW	0	0	0	15	1	1	0	5	-	-	-
-core/02_equations/o2/uet_o2_condensed_sk_kms_kubo_match.py	02_equations/o2	.py	REVIEW	0	0	0	15	1	5	0	4	-	-	-
-core/02_equations/o2/uet_o2_contact_sk_transition_vertex_match.py	02_equations/o2	.py	REVIEW	0	0	0	23	1	0	0	7	-	-	-
-core/02_equations/o2/uet_o2_continuum_collision_operator.py	02_equations/o2	.py	REVIEW	0	0	0	54	2	1	0	30	-	-	-
-core/02_equations/o2/uet_o2_continuum_limit_boundary.py	02_equations/o2	.py	REVIEW	0	0	0	13	1	0	0	3	-	-	-
-core/02_equations/o2/uet_o2_continuum_relative_flow_kubo.py	02_equations/o2	.py	REVIEW	0	0	0	18	1	2	0	4	-	-	-
-core/02_equations/o2/uet_o2_continuum_sunset_cut.py	02_equations/o2	.py	REVIEW	0	0	0	15	1	1	0	3	-	-	-
-core/02_equations/o2/uet_o2_covariant_entropy_heat_flux_balance.py	02_equations/o2	.py	REVIEW	0	0	0	34	3	2	0	16	-	-	-
-core/02_equations/o2/uet_o2_dressed_ra_charge_current_ladder.py	02_equations/o2	.py	REVIEW	0	0	0	15	1	1	0	3	-	-	-
-core/02_equations/o2/uet_o2_energy_momentum_conserving_bethe_salpeter.py	02_equations/o2	.py	REVIEW	0	0	0	37	2	1	0	23	-	-	-
-core/02_equations/o2/uet_o2_equilibrium_kms.py	02_equations/o2	.py	REVIEW	0	0	0	22	1	0	0	8	-	-	-
-core/02_equations/o2/uet_o2_finite_channel_entropy_balance.py	02_equations/o2	.py	REVIEW	0	0	0	15	1	1	0	3	-	-	-
-core/02_equations/o2/uet_o2_finite_density_charged_vertex.py	02_equations/o2	.py	REVIEW	0	0	0	23	2	1	0	7	-	-	-
-core/02_equations/o2/uet_o2_finite_density_eos.py	02_equations/o2	.py	REVIEW	2	0	0	73	18	43	2	61	-	-	-
-core/02_equations/o2/uet_o2_finite_temperature_all_22_permutation_identity.py	02_equations/o2	.py	REVIEW	0	0	0	14	1	2	0	3	-	-	-
-core/02_equations/o2/uet_o2_finite_temperature_all_onshell_cut_response.py	02_equations/o2	.py	REVIEW	0	0	0	14	1	2	0	3	-	-	-
-core/02_equations/o2/uet_o2_finite_temperature_declared_channel_retarded_advanced_keldysh_1pi.py	02_equations/o2	.py	REVIEW	0	0	0	14	1	2	0	3	-	-	-
-core/02_equations/o2/uet_o2_finite_temperature_declared_retarded_1pi_grid.py	02_equations/o2	.py	REVIEW	0	0	0	18	1	1	0	5	-	-	-
-core/02_equations/o2/uet_o2_finite_temperature_full_sunset_sk_kms.py	02_equations/o2	.py	REVIEW	0	0	0	20	1	1	0	6	-	-	-
-core/02_equations/o2/uet_o2_finite_temperature_hartree_thermodynamics.py	02_equations/o2	.py	REVIEW	0	0	0	18	0	8	0	4	-	-	-
-core/02_equations/o2/uet_o2_finite_temperature_normal_component.py	02_equations/o2	.py	REVIEW	0	0	0	19	1	2	0	4	-	-	-
-core/02_equations/o2/uet_o2_finite_temperature_normal_stability.py	02_equations/o2	.py	REVIEW	0	0	0	15	0	2	0	3	-	-	-
-core/02_equations/o2/uet_o2_finite_temperature_offshell_1pi.py	02_equations/o2	.py	REVIEW	0	0	0	13	1	0	0	3	-	-	-
-core/02_equations/o2/uet_o2_finite_temperature_offshell_threshold_crossing_1pi.py	02_equations/o2	.py	REVIEW	0	0	0	14	1	1	0	3	-	-	-
-core/02_equations/o2/uet_o2_finite_temperature_quasiparticle_eos.py	02_equations/o2	.py	REVIEW	0	0	0	94	20	34	0	60	-	-	-
-core/02_equations/o2/uet_o2_finite_temperature_renormalized_hartree.py	02_equations/o2	.py	REVIEW	0	0	0	15	0	5	0	3	-	-	-
-core/02_equations/o2/uet_o2_finite_temperature_scheme_identifiability.py	02_equations/o2	.py	REVIEW	0	0	0	17	0	3	0	4	-	-	-
-core/02_equations/o2/uet_o2_finite_temperature_self_energy.py	02_equations/o2	.py	REVIEW	0	0	0	22	0	8	0	7	-	-	-
-core/02_equations/o2/uet_o2_finite_temperature_signed_cut_coverage.py	02_equations/o2	.py	REVIEW	0	0	0	18	1	2	0	5	-	-	-
-core/02_equations/o2/uet_o2_finite_temperature_stationarity_scheme.py	02_equations/o2	.py	REVIEW	0	0	0	18	0	3	0	6	-	-	-
-core/02_equations/o2/uet_o2_finite_temperature_sunset_cut_multiplicity.py	02_equations/o2	.py	REVIEW	0	0	0	17	1	2	0	4	-	-	-
-core/02_equations/o2/uet_o2_finite_temperature_sunset_renormalization_identifiability_no_go.py	02_equations/o2	.py	REVIEW	0	0	0	14	1	0	0	3	-	-	-
-core/02_equations/o2/uet_o2_finite_temperature_sunset_scattering_sk_kms.py	02_equations/o2	.py	REVIEW	0	0	0	28	1	1	0	10	-	-	-
-core/02_equations/o2/uet_o2_finite_temperature_sunset_sk_kms.py	02_equations/o2	.py	REVIEW	0	0	0	24	1	0	0	8	-	-	-
-core/02_equations/o2/uet_o2_finite_temperature_sunset_vacuum_match.py	02_equations/o2	.py	REVIEW	0	0	0	14	1	0	0	3	-	-	-
-core/02_equations/o2/uet_o2_finite_temperature_two_fluid_response.py	02_equations/o2	.py	REVIEW	0	0	0	23	1	15	0	6	-	-	-
-core/02_equations/o2/uet_o2_formal_transverse_response.py	02_equations/o2	.py	REVIEW	0	0	0	21	2	22	0	7	-	-	-
-core/02_equations/o2/uet_o2_formal_two_sector_thermodynamics.py	02_equations/o2	.py	REVIEW	0	0	0	18	1	3	0	4	-	-	-
-core/02_equations/o2/uet_o2_gaussian_offshell_background.py	02_equations/o2	.py	REVIEW	0	0	0	21	0	10	0	9	-	-	-
-core/02_equations/o2/uet_o2_gaussian_thermal_stationarity_no_go.py	02_equations/o2	.py	REVIEW	0	0	0	15	1	10	0	7	-	-	-
-core/02_equations/o2/uet_o2_heat_current_kubo_continuum_boundary.py	02_equations/o2	.py	REVIEW	0	0	0	14	1	0	0	5	-	-	-
-core/02_equations/o2/uet_o2_heat_current_kubo_match.py	02_equations/o2	.py	REVIEW	0	0	0	15	1	0	0	6	-	-	-
-core/02_equations/o2/uet_o2_interacting_sk_kms_action.py	02_equations/o2	.py	REVIEW	0	0	0	19	1	1	0	4	-	-	-
-core/02_equations/o2/uet_o2_invariant_galerkin_collision_operator.py	02_equations/o2	.py	REVIEW	0	0	0	23	1	13	0	6	-	-	-
-core/02_equations/o2/uet_o2_invariant_rate_collision_operator.py	02_equations/o2	.py	REVIEW	0	0	0	17	1	0	0	3	-	-	-
-core/02_equations/o2/uet_o2_invariant_vector_current_galerkin.py	02_equations/o2	.py	REVIEW	0	0	0	18	1	1	0	4	-	-	-
-core/02_equations/o2/uet_o2_kinetic_collision_kubo.py	02_equations/o2	.py	REVIEW	0	0	0	36	5	3	0	12	-	-	-
-core/02_equations/o2/uet_o2_microscopic_kubo_match.py	02_equations/o2	.py	REVIEW	0	0	0	14	0	0	0	3	-	-	-
-core/02_equations/o2/uet_o2_momentum_ladder_sk_kms.py	02_equations/o2	.py	REVIEW	0	0	0	16	1	1	0	4	-	-	-
-core/02_equations/o2/uet_o2_nonlocal_sk_kms_memory_kernel.py	02_equations/o2	.py	REVIEW	0	0	0	15	1	1	0	3	-	-	-
-core/02_equations/o2/uet_o2_normal_response_curvature.py	02_equations/o2	.py	REVIEW	0	0	0	17	0	4	0	6	-	-	-
-core/02_equations/o2/uet_o2_on_shell_sunset_width.py	02_equations/o2	.py	REVIEW	0	0	0	16	1	0	0	3	-	-	-
-core/02_equations/o2/uet_o2_one_loop_normal_branch.py	02_equations/o2	.py	REVIEW	0	0	0	22	1	3	0	19	-	-	-
-core/02_equations/o2/uet_o2_one_loop_retarded_self_energy_no_go.py	02_equations/o2	.py	REVIEW	0	0	0	16	1	2	0	5	-	-	-
-core/02_equations/o2/uet_o2_one_loop_vertex_uv_boundary.py	02_equations/o2	.py	REVIEW	0	0	0	21	1	2	0	8	-	-	-
-core/02_equations/o2/uet_o2_open_system_sk_kms.py	02_equations/o2	.py	REVIEW	1	0	0	14	1	2	1	4	-	-	-
-core/02_equations/o2/uet_o2_physical_renormalization_condition_contract.py	02_equations/o2	.py	REVIEW	0	0	0	14	1	2	0	4	-	-	-
-core/02_equations/o2/uet_o2_regularized_continuum_heat_current.py	02_equations/o2	.py	REVIEW	0	0	0	14	1	0	0	3	-	-	-
-core/02_equations/o2/uet_o2_renormalized_normal_branch.py	02_equations/o2	.py	REVIEW	0	0	0	21	0	7	0	8	-	-	-
-core/02_equations/o2/uet_o2_renormalized_vertex_scheme.py	02_equations/o2	.py	REVIEW	0	0	0	16	2	2	0	6	-	-	-
-core/02_equations/o2/uet_o2_same_kernel_tagged_width.py	02_equations/o2	.py	REVIEW	0	0	0	19	1	1	0	5	-	-	-
-core/02_equations/o2/uet_o2_sunset_dispersion_interface.py	02_equations/o2	.py	REVIEW	0	0	0	17	1	1	0	4	-	-	-
-core/02_equations/o2/uet_o2_sunset_dispersion_interface_verified.py	02_equations/o2	.py	REVIEW	0	0	0	15	1	1	0	3	-	-	-
-core/02_equations/o2/uet_o2_thermal_stability_boundary.py	02_equations/o2	.py	REVIEW	0	0	0	15	1	4	0	7	-	-	-
-core/02_equations/o2/uet_o2_tree_level_bs_sk_match.py	02_equations/o2	.py	REVIEW	0	0	0	18	1	1	0	6	-	-	-
-core/02_equations/o2/uet_o2_tree_level_charged_ward_vertex.py	02_equations/o2	.py	REVIEW	0	0	0	17	1	0	0	4	-	-	-
-core/02_equations/o2/uet_o2_two_loop_sunset_cut.py	02_equations/o2	.py	REVIEW	0	0	0	15	1	1	0	3	-	-	-
-core/02_equations/o2/uet_o2_ward_constrained_condensed.py	02_equations/o2	.py	REVIEW	0	0	0	15	0	2	0	4	-	-	-
+core/02_equations/o2/README.md	02_equations/o2	.md	REVIEW	0	0	0	6	0	0	0	0	C	W4	Topic 13 He-4 lane machinery (bridges, beta map, two-fluid, transport matching, numerical boundaries); that lane failed at tree level in T015 and no claim uses it
+core/02_equations/o2/__init__.py	02_equations/o2	.py	D	0	0	0	6	0	0	0	0	D	W4	Package marker
+core/02_equations/o2/standard_o2_finite_temperature_comparator.py	02_equations/o2	.py	REVIEW	0	0	0	20	1	3	0	10	C	W4	Topic 13 He-4 lane machinery (bridges, beta map, two-fluid, transport matching, numerical boundaries); that lane failed at tree level in T015 and no claim uses it
+core/02_equations/o2/uet_o2_action_1pi_sunset_euclidean.py	02_equations/o2	.py	REVIEW	0	0	0	17	2	1	0	5	C	W4	Topic 13 He-4 lane machinery (bridges, beta map, two-fluid, transport matching, numerical boundaries); that lane failed at tree level in T015 and no claim uses it
+core/02_equations/o2/uet_o2_action_1pi_sunset_retarded.py	02_equations/o2	.py	REVIEW	0	0	0	19	1	1	0	5	C	W4	Topic 13 He-4 lane machinery (bridges, beta map, two-fluid, transport matching, numerical boundaries); that lane failed at tree level in T015 and no claim uses it
+core/02_equations/o2/uet_o2_action_1pi_sunset_tensor.py	02_equations/o2	.py	REVIEW	0	0	0	28	1	1	0	10	C	W4	Topic 13 He-4 lane machinery (bridges, beta map, two-fluid, transport matching, numerical boundaries); that lane failed at tree level in T015 and no claim uses it
+core/02_equations/o2/uet_o2_action_derived_transition_kernel.py	02_equations/o2	.py	REVIEW	0	0	0	46	3	1	0	23	C	W4	Topic 13 He-4 lane machinery (bridges, beta map, two-fluid, transport matching, numerical boundaries); that lane failed at tree level in T015 and no claim uses it
+core/02_equations/o2/uet_o2_action_sunset_1pi_spectral.py	02_equations/o2	.py	REVIEW	0	0	0	21	1	1	0	6	C	W4	Topic 13 He-4 lane machinery (bridges, beta map, two-fluid, transport matching, numerical boundaries); that lane failed at tree level in T015 and no claim uses it
+core/02_equations/o2/uet_o2_action_sunset_zero_eta.py	02_equations/o2	.py	REVIEW	0	0	0	18	1	1	0	6	C	W4	Topic 13 He-4 lane machinery (bridges, beta map, two-fluid, transport matching, numerical boundaries); that lane failed at tree level in T015 and no claim uses it
+core/02_equations/o2/uet_o2_action_thermal_observable_bridge.py	02_equations/o2	.py	REVIEW	0	0	0	34	2	46	0	23	C	W4	Topic 13 He-4 lane machinery (bridges, beta map, two-fluid, transport matching, numerical boundaries); that lane failed at tree level in T015 and no claim uses it
+core/02_equations/o2/uet_o2_action_thermal_stiffness_beta.py	02_equations/o2	.py	REVIEW	0	0	0	36	1	39	0	21	C	W4	Topic 13 He-4 lane machinery (bridges, beta map, two-fluid, transport matching, numerical boundaries); that lane failed at tree level in T015 and no claim uses it
+core/02_equations/o2/uet_o2_auxiliary_field_condensed.py	02_equations/o2	.py	REVIEW	0	0	0	15	0	5	0	3	C	W4	Topic 13 He-4 lane machinery (bridges, beta map, two-fluid, transport matching, numerical boundaries); that lane failed at tree level in T015 and no claim uses it
+core/02_equations/o2/uet_o2_beta_correspondence.py	02_equations/o2	.py	REVIEW	0	0	0	15	0	4	0	4	C	W4	Topic 13 He-4 lane machinery (bridges, beta map, two-fluid, transport matching, numerical boundaries); that lane failed at tree level in T015 and no claim uses it
+core/02_equations/o2/uet_o2_charge_conserving_ladder_response.py	02_equations/o2	.py	REVIEW	0	0	0	15	1	1	0	3	C	W4	Topic 13 He-4 lane machinery (bridges, beta map, two-fluid, transport matching, numerical boundaries); that lane failed at tree level in T015 and no claim uses it
+core/02_equations/o2/uet_o2_charged_current_correlator.py	02_equations/o2	.py	REVIEW	0	0	0	19	1	1	0	6	C	W4	Topic 13 He-4 lane machinery (bridges, beta map, two-fluid, transport matching, numerical boundaries); that lane failed at tree level in T015 and no claim uses it
+core/02_equations/o2/uet_o2_collisionless_kubo.py	02_equations/o2	.py	REVIEW	0	0	0	14	1	1	0	3	C	W4	Topic 13 He-4 lane machinery (bridges, beta map, two-fluid, transport matching, numerical boundaries); that lane failed at tree level in T015 and no claim uses it
+core/02_equations/o2/uet_o2_condensate_fluctuations.py	02_equations/o2	.py	REVIEW	0	0	0	20	0	4	0	10	C	W4	Topic 13 He-4 lane machinery (bridges, beta map, two-fluid, transport matching, numerical boundaries); that lane failed at tree level in T015 and no claim uses it
+core/02_equations/o2/uet_o2_condensate_gaussian_thermal.py	02_equations/o2	.py	REVIEW	0	0	0	15	0	3	0	6	C	W4	Topic 13 He-4 lane machinery (bridges, beta map, two-fluid, transport matching, numerical boundaries); that lane failed at tree level in T015 and no claim uses it
+core/02_equations/o2/uet_o2_condensed_dissipative_transport_identifiability_no_go.py	02_equations/o2	.py	REVIEW	0	0	0	14	1	0	0	3	C	W4	Topic 13 He-4 lane machinery (bridges, beta map, two-fluid, transport matching, numerical boundaries); that lane failed at tree level in T015 and no claim uses it
+core/02_equations/o2/uet_o2_condensed_loop_renormalized_vertex.py	02_equations/o2	.py	REVIEW	0	0	0	22	2	4	0	6	C	W4	Topic 13 He-4 lane machinery (bridges, beta map, two-fluid, transport matching, numerical boundaries); that lane failed at tree level in T015 and no claim uses it
+core/02_equations/o2/uet_o2_condensed_relative_flow_collision.py	02_equations/o2	.py	REVIEW	0	0	0	18	1	9	0	4	C	W4	Topic 13 He-4 lane machinery (bridges, beta map, two-fluid, transport matching, numerical boundaries); that lane failed at tree level in T015 and no claim uses it
+core/02_equations/o2/uet_o2_condensed_relative_flow_kubo_admission.py	02_equations/o2	.py	REVIEW	0	0	0	15	1	5	0	4	C	W4	Topic 13 He-4 lane machinery (bridges, beta map, two-fluid, transport matching, numerical boundaries); that lane failed at tree level in T015 and no claim uses it
+core/02_equations/o2/uet_o2_condensed_retarded_dissipation_no_go.py	02_equations/o2	.py	REVIEW	0	0	0	15	1	1	0	5	B	W4	Negative result: the conservative action alone gives no condensed dissipation; candidate input to the missing SK/KMS derivation of layer 2 (stage 3)
+core/02_equations/o2/uet_o2_condensed_sk_kms_kubo_match.py	02_equations/o2	.py	REVIEW	0	0	0	15	1	5	0	4	C	W4	Topic 13 He-4 lane machinery (bridges, beta map, two-fluid, transport matching, numerical boundaries); that lane failed at tree level in T015 and no claim uses it
+core/02_equations/o2/uet_o2_contact_sk_transition_vertex_match.py	02_equations/o2	.py	REVIEW	0	0	0	23	1	0	0	7	C	W4	Topic 13 He-4 lane machinery (bridges, beta map, two-fluid, transport matching, numerical boundaries); that lane failed at tree level in T015 and no claim uses it
+core/02_equations/o2/uet_o2_continuum_collision_operator.py	02_equations/o2	.py	REVIEW	0	0	0	54	2	1	0	30	C	W4	Topic 13 He-4 lane machinery (bridges, beta map, two-fluid, transport matching, numerical boundaries); that lane failed at tree level in T015 and no claim uses it
+core/02_equations/o2/uet_o2_continuum_limit_boundary.py	02_equations/o2	.py	REVIEW	0	0	0	13	1	0	0	3	C	W4	Topic 13 He-4 lane machinery (bridges, beta map, two-fluid, transport matching, numerical boundaries); that lane failed at tree level in T015 and no claim uses it
+core/02_equations/o2/uet_o2_continuum_relative_flow_kubo.py	02_equations/o2	.py	REVIEW	0	0	0	18	1	2	0	4	C	W4	Topic 13 He-4 lane machinery (bridges, beta map, two-fluid, transport matching, numerical boundaries); that lane failed at tree level in T015 and no claim uses it
+core/02_equations/o2/uet_o2_continuum_sunset_cut.py	02_equations/o2	.py	REVIEW	0	0	0	15	1	1	0	3	C	W4	Topic 13 He-4 lane machinery (bridges, beta map, two-fluid, transport matching, numerical boundaries); that lane failed at tree level in T015 and no claim uses it
+core/02_equations/o2/uet_o2_covariant_entropy_heat_flux_balance.py	02_equations/o2	.py	REVIEW	0	0	0	34	3	2	0	16	B	W4	Entropy production and heat flux from the O(2) collision operator; closest to layer 2 Sigma; candidate input to the missing SK/KMS derivation of layer 2 (stage 3)
+core/02_equations/o2/uet_o2_dressed_ra_charge_current_ladder.py	02_equations/o2	.py	REVIEW	0	0	0	15	1	1	0	3	C	W4	Topic 13 He-4 lane machinery (bridges, beta map, two-fluid, transport matching, numerical boundaries); that lane failed at tree level in T015 and no claim uses it
+core/02_equations/o2/uet_o2_energy_momentum_conserving_bethe_salpeter.py	02_equations/o2	.py	REVIEW	0	0	0	37	2	1	0	23	C	W4	Topic 13 He-4 lane machinery (bridges, beta map, two-fluid, transport matching, numerical boundaries); that lane failed at tree level in T015 and no claim uses it
+core/02_equations/o2/uet_o2_equilibrium_kms.py	02_equations/o2	.py	REVIEW	0	0	0	22	1	0	0	8	B	W4	Equilibrium KMS/FDT identities of the O(2) sector; needed for any layer-2 derivation; candidate input to the missing SK/KMS derivation of layer 2 (stage 3)
+core/02_equations/o2/uet_o2_finite_channel_entropy_balance.py	02_equations/o2	.py	REVIEW	0	0	0	15	1	1	0	3	B	W4	H-theorem / entropy production identity from action-derived channels; candidate input to the missing SK/KMS derivation of layer 2 (stage 3)
+core/02_equations/o2/uet_o2_finite_density_charged_vertex.py	02_equations/o2	.py	REVIEW	0	0	0	23	2	1	0	7	C	W4	Topic 13 He-4 lane machinery (bridges, beta map, two-fluid, transport matching, numerical boundaries); that lane failed at tree level in T015 and no claim uses it
+core/02_equations/o2/uet_o2_finite_density_eos.py	02_equations/o2	.py	REVIEW	2	0	0	73	18	43	2	61	B	W4	Tree-level finite-density EOS of the O(2) matter sector of the parent action; candidate input to the missing SK/KMS derivation of layer 2 (stage 3)
+core/02_equations/o2/uet_o2_finite_temperature_all_22_permutation_identity.py	02_equations/o2	.py	REVIEW	0	0	0	14	1	2	0	3	C	W4	Topic 13 He-4 lane machinery (bridges, beta map, two-fluid, transport matching, numerical boundaries); that lane failed at tree level in T015 and no claim uses it
+core/02_equations/o2/uet_o2_finite_temperature_all_onshell_cut_response.py	02_equations/o2	.py	REVIEW	0	0	0	14	1	2	0	3	C	W4	Topic 13 He-4 lane machinery (bridges, beta map, two-fluid, transport matching, numerical boundaries); that lane failed at tree level in T015 and no claim uses it
+core/02_equations/o2/uet_o2_finite_temperature_declared_channel_retarded_advanced_keldysh_1pi.py	02_equations/o2	.py	REVIEW	0	0	0	14	1	2	0	3	C	W4	Topic 13 He-4 lane machinery (bridges, beta map, two-fluid, transport matching, numerical boundaries); that lane failed at tree level in T015 and no claim uses it
+core/02_equations/o2/uet_o2_finite_temperature_declared_retarded_1pi_grid.py	02_equations/o2	.py	REVIEW	0	0	0	18	1	1	0	5	C	W4	Topic 13 He-4 lane machinery (bridges, beta map, two-fluid, transport matching, numerical boundaries); that lane failed at tree level in T015 and no claim uses it
+core/02_equations/o2/uet_o2_finite_temperature_full_sunset_sk_kms.py	02_equations/o2	.py	REVIEW	0	0	0	20	1	1	0	6	B	W4	Full thermal sunset SK/KMS composition of the O(2) action; candidate input to the missing SK/KMS derivation of layer 2 (stage 3)
+core/02_equations/o2/uet_o2_finite_temperature_hartree_thermodynamics.py	02_equations/o2	.py	REVIEW	0	0	0	18	0	8	0	4	C	W4	Topic 13 He-4 lane machinery (bridges, beta map, two-fluid, transport matching, numerical boundaries); that lane failed at tree level in T015 and no claim uses it
+core/02_equations/o2/uet_o2_finite_temperature_normal_component.py	02_equations/o2	.py	REVIEW	0	0	0	19	1	2	0	4	C	W4	Topic 13 He-4 lane machinery (bridges, beta map, two-fluid, transport matching, numerical boundaries); that lane failed at tree level in T015 and no claim uses it
+core/02_equations/o2/uet_o2_finite_temperature_normal_stability.py	02_equations/o2	.py	REVIEW	0	0	0	15	0	2	0	3	C	W4	Topic 13 He-4 lane machinery (bridges, beta map, two-fluid, transport matching, numerical boundaries); that lane failed at tree level in T015 and no claim uses it
+core/02_equations/o2/uet_o2_finite_temperature_offshell_1pi.py	02_equations/o2	.py	REVIEW	0	0	0	13	1	0	0	3	B	W4	Formal finite-temperature 1PI two-point function of the O(2) action to order lambda^2; candidate input to the missing SK/KMS derivation of layer 2 (stage 3)
+core/02_equations/o2/uet_o2_finite_temperature_offshell_threshold_crossing_1pi.py	02_equations/o2	.py	REVIEW	0	0	0	14	1	1	0	3	C	W4	Topic 13 He-4 lane machinery (bridges, beta map, two-fluid, transport matching, numerical boundaries); that lane failed at tree level in T015 and no claim uses it
+core/02_equations/o2/uet_o2_finite_temperature_quasiparticle_eos.py	02_equations/o2	.py	REVIEW	0	0	0	94	20	34	0	60	C	W4	Topic 13 He-4 lane machinery (bridges, beta map, two-fluid, transport matching, numerical boundaries); that lane failed at tree level in T015 and no claim uses it
+core/02_equations/o2/uet_o2_finite_temperature_renormalized_hartree.py	02_equations/o2	.py	REVIEW	0	0	0	15	0	5	0	3	C	W4	Topic 13 He-4 lane machinery (bridges, beta map, two-fluid, transport matching, numerical boundaries); that lane failed at tree level in T015 and no claim uses it
+core/02_equations/o2/uet_o2_finite_temperature_scheme_identifiability.py	02_equations/o2	.py	REVIEW	0	0	0	17	0	3	0	4	C	W4	Topic 13 He-4 lane machinery (bridges, beta map, two-fluid, transport matching, numerical boundaries); that lane failed at tree level in T015 and no claim uses it
+core/02_equations/o2/uet_o2_finite_temperature_self_energy.py	02_equations/o2	.py	REVIEW	0	0	0	22	0	8	0	7	B	W4	Thermal Hartree self-energy of the O(2) action; candidate input to the missing SK/KMS derivation of layer 2 (stage 3)
+core/02_equations/o2/uet_o2_finite_temperature_signed_cut_coverage.py	02_equations/o2	.py	REVIEW	0	0	0	18	1	2	0	5	C	W4	Topic 13 He-4 lane machinery (bridges, beta map, two-fluid, transport matching, numerical boundaries); that lane failed at tree level in T015 and no claim uses it
+core/02_equations/o2/uet_o2_finite_temperature_stationarity_scheme.py	02_equations/o2	.py	REVIEW	0	0	0	18	0	3	0	6	C	W4	Topic 13 He-4 lane machinery (bridges, beta map, two-fluid, transport matching, numerical boundaries); that lane failed at tree level in T015 and no claim uses it
+core/02_equations/o2/uet_o2_finite_temperature_sunset_cut_multiplicity.py	02_equations/o2	.py	REVIEW	0	0	0	17	1	2	0	4	C	W4	Topic 13 He-4 lane machinery (bridges, beta map, two-fluid, transport matching, numerical boundaries); that lane failed at tree level in T015 and no claim uses it
+core/02_equations/o2/uet_o2_finite_temperature_sunset_renormalization_identifiability_no_go.py	02_equations/o2	.py	REVIEW	0	0	0	14	1	0	0	3	C	W4	Topic 13 He-4 lane machinery (bridges, beta map, two-fluid, transport matching, numerical boundaries); that lane failed at tree level in T015 and no claim uses it
+core/02_equations/o2/uet_o2_finite_temperature_sunset_scattering_sk_kms.py	02_equations/o2	.py	REVIEW	0	0	0	28	1	1	0	10	B	W4	Thermal 2<->2 scattering channel of the O(2) action; candidate input to the missing SK/KMS derivation of layer 2 (stage 3)
+core/02_equations/o2/uet_o2_finite_temperature_sunset_sk_kms.py	02_equations/o2	.py	REVIEW	0	0	0	24	1	0	0	8	B	W4	Thermal 1<->3 SK/KMS channel of the O(2) action; candidate input to the missing SK/KMS derivation of layer 2 (stage 3)
+core/02_equations/o2/uet_o2_finite_temperature_sunset_vacuum_match.py	02_equations/o2	.py	REVIEW	0	0	0	14	1	0	0	3	C	W4	Topic 13 He-4 lane machinery (bridges, beta map, two-fluid, transport matching, numerical boundaries); that lane failed at tree level in T015 and no claim uses it
+core/02_equations/o2/uet_o2_finite_temperature_two_fluid_response.py	02_equations/o2	.py	REVIEW	0	0	0	23	1	15	0	6	C	W4	Topic 13 He-4 lane machinery (bridges, beta map, two-fluid, transport matching, numerical boundaries); that lane failed at tree level in T015 and no claim uses it
+core/02_equations/o2/uet_o2_formal_transverse_response.py	02_equations/o2	.py	REVIEW	0	0	0	21	2	22	0	7	C	W4	Topic 13 He-4 lane machinery (bridges, beta map, two-fluid, transport matching, numerical boundaries); that lane failed at tree level in T015 and no claim uses it
+core/02_equations/o2/uet_o2_formal_two_sector_thermodynamics.py	02_equations/o2	.py	REVIEW	0	0	0	18	1	3	0	4	C	W4	Topic 13 He-4 lane machinery (bridges, beta map, two-fluid, transport matching, numerical boundaries); that lane failed at tree level in T015 and no claim uses it
+core/02_equations/o2/uet_o2_gaussian_offshell_background.py	02_equations/o2	.py	REVIEW	0	0	0	21	0	10	0	9	C	W4	Topic 13 He-4 lane machinery (bridges, beta map, two-fluid, transport matching, numerical boundaries); that lane failed at tree level in T015 and no claim uses it
+core/02_equations/o2/uet_o2_gaussian_thermal_stationarity_no_go.py	02_equations/o2	.py	REVIEW	0	0	0	15	1	10	0	7	C	W4	Topic 13 He-4 lane machinery (bridges, beta map, two-fluid, transport matching, numerical boundaries); that lane failed at tree level in T015 and no claim uses it
+core/02_equations/o2/uet_o2_heat_current_kubo_continuum_boundary.py	02_equations/o2	.py	REVIEW	0	0	0	14	1	0	0	5	C	W4	Topic 13 He-4 lane machinery (bridges, beta map, two-fluid, transport matching, numerical boundaries); that lane failed at tree level in T015 and no claim uses it
+core/02_equations/o2/uet_o2_heat_current_kubo_match.py	02_equations/o2	.py	REVIEW	0	0	0	15	1	0	0	6	C	W4	Topic 13 He-4 lane machinery (bridges, beta map, two-fluid, transport matching, numerical boundaries); that lane failed at tree level in T015 and no claim uses it
+core/02_equations/o2/uet_o2_interacting_sk_kms_action.py	02_equations/o2	.py	REVIEW	0	0	0	19	1	1	0	4	B	W4	Closed-time-path (SK) contour and KMS identity of the interacting O(2) action itself; candidate input to the missing SK/KMS derivation of layer 2 (stage 3)
+core/02_equations/o2/uet_o2_invariant_galerkin_collision_operator.py	02_equations/o2	.py	REVIEW	0	0	0	23	1	13	0	6	C	W4	Topic 13 He-4 lane machinery (bridges, beta map, two-fluid, transport matching, numerical boundaries); that lane failed at tree level in T015 and no claim uses it
+core/02_equations/o2/uet_o2_invariant_rate_collision_operator.py	02_equations/o2	.py	REVIEW	0	0	0	17	1	0	0	3	C	W4	Topic 13 He-4 lane machinery (bridges, beta map, two-fluid, transport matching, numerical boundaries); that lane failed at tree level in T015 and no claim uses it
+core/02_equations/o2/uet_o2_invariant_vector_current_galerkin.py	02_equations/o2	.py	REVIEW	0	0	0	18	1	1	0	4	C	W4	Topic 13 He-4 lane machinery (bridges, beta map, two-fluid, transport matching, numerical boundaries); that lane failed at tree level in T015 and no claim uses it
+core/02_equations/o2/uet_o2_kinetic_collision_kubo.py	02_equations/o2	.py	REVIEW	0	0	0	36	5	3	0	12	B	W4	Relaxation rate from the O(2) action in the dilute normal branch; candidate input to the missing SK/KMS derivation of layer 2 (stage 3)
+core/02_equations/o2/uet_o2_microscopic_kubo_match.py	02_equations/o2	.py	REVIEW	0	0	0	14	0	0	0	3	C	W4	Topic 13 He-4 lane machinery (bridges, beta map, two-fluid, transport matching, numerical boundaries); that lane failed at tree level in T015 and no claim uses it
+core/02_equations/o2/uet_o2_momentum_ladder_sk_kms.py	02_equations/o2	.py	REVIEW	0	0	0	16	1	1	0	4	C	W4	Topic 13 He-4 lane machinery (bridges, beta map, two-fluid, transport matching, numerical boundaries); that lane failed at tree level in T015 and no claim uses it
+core/02_equations/o2/uet_o2_nonlocal_sk_kms_memory_kernel.py	02_equations/o2	.py	REVIEW	0	0	0	15	1	1	0	3	C	W4	Topic 13 He-4 lane machinery (bridges, beta map, two-fluid, transport matching, numerical boundaries); that lane failed at tree level in T015 and no claim uses it
+core/02_equations/o2/uet_o2_normal_response_curvature.py	02_equations/o2	.py	REVIEW	0	0	0	17	0	4	0	6	C	W4	Topic 13 He-4 lane machinery (bridges, beta map, two-fluid, transport matching, numerical boundaries); that lane failed at tree level in T015 and no claim uses it
+core/02_equations/o2/uet_o2_on_shell_sunset_width.py	02_equations/o2	.py	REVIEW	0	0	0	16	1	0	0	3	C	W4	Topic 13 He-4 lane machinery (bridges, beta map, two-fluid, transport matching, numerical boundaries); that lane failed at tree level in T015 and no claim uses it
+core/02_equations/o2/uet_o2_one_loop_normal_branch.py	02_equations/o2	.py	REVIEW	0	0	0	22	1	3	0	19	B	W4	One-loop thermal normal branch of the O(2) action; candidate input to the missing SK/KMS derivation of layer 2 (stage 3)
+core/02_equations/o2/uet_o2_one_loop_retarded_self_energy_no_go.py	02_equations/o2	.py	REVIEW	0	0	0	16	1	2	0	5	B	W4	Negative result: one loop gives no dissipation; keep as a boundary of the layer-2 derivation; candidate input to the missing SK/KMS derivation of layer 2 (stage 3)
+core/02_equations/o2/uet_o2_one_loop_vertex_uv_boundary.py	02_equations/o2	.py	REVIEW	0	0	0	21	1	2	0	8	C	W4	Topic 13 He-4 lane machinery (bridges, beta map, two-fluid, transport matching, numerical boundaries); that lane failed at tree level in T015 and no claim uses it
+core/02_equations/o2/uet_o2_open_system_sk_kms.py	02_equations/o2	.py	REVIEW	1	0	0	14	1	2	1	4	C	W4	Topic 13 He-4 lane machinery (bridges, beta map, two-fluid, transport matching, numerical boundaries); that lane failed at tree level in T015 and no claim uses it
+core/02_equations/o2/uet_o2_physical_renormalization_condition_contract.py	02_equations/o2	.py	REVIEW	0	0	0	14	1	2	0	4	C	W4	Topic 13 He-4 lane machinery (bridges, beta map, two-fluid, transport matching, numerical boundaries); that lane failed at tree level in T015 and no claim uses it
+core/02_equations/o2/uet_o2_regularized_continuum_heat_current.py	02_equations/o2	.py	REVIEW	0	0	0	14	1	0	0	3	C	W4	Topic 13 He-4 lane machinery (bridges, beta map, two-fluid, transport matching, numerical boundaries); that lane failed at tree level in T015 and no claim uses it
+core/02_equations/o2/uet_o2_renormalized_normal_branch.py	02_equations/o2	.py	REVIEW	0	0	0	21	0	7	0	8	C	W4	Topic 13 He-4 lane machinery (bridges, beta map, two-fluid, transport matching, numerical boundaries); that lane failed at tree level in T015 and no claim uses it
+core/02_equations/o2/uet_o2_renormalized_vertex_scheme.py	02_equations/o2	.py	REVIEW	0	0	0	16	2	2	0	6	C	W4	Topic 13 He-4 lane machinery (bridges, beta map, two-fluid, transport matching, numerical boundaries); that lane failed at tree level in T015 and no claim uses it
+core/02_equations/o2/uet_o2_same_kernel_tagged_width.py	02_equations/o2	.py	REVIEW	0	0	0	19	1	1	0	5	C	W4	Topic 13 He-4 lane machinery (bridges, beta map, two-fluid, transport matching, numerical boundaries); that lane failed at tree level in T015 and no claim uses it
+core/02_equations/o2/uet_o2_sunset_dispersion_interface.py	02_equations/o2	.py	REVIEW	0	0	0	17	1	1	0	4	C	W4	Topic 13 He-4 lane machinery (bridges, beta map, two-fluid, transport matching, numerical boundaries); that lane failed at tree level in T015 and no claim uses it
+core/02_equations/o2/uet_o2_sunset_dispersion_interface_verified.py	02_equations/o2	.py	REVIEW	0	0	0	15	1	1	0	3	C	W4	Topic 13 He-4 lane machinery (bridges, beta map, two-fluid, transport matching, numerical boundaries); that lane failed at tree level in T015 and no claim uses it
+core/02_equations/o2/uet_o2_thermal_stability_boundary.py	02_equations/o2	.py	REVIEW	0	0	0	15	1	4	0	7	C	W4	Topic 13 He-4 lane machinery (bridges, beta map, two-fluid, transport matching, numerical boundaries); that lane failed at tree level in T015 and no claim uses it
+core/02_equations/o2/uet_o2_tree_level_bs_sk_match.py	02_equations/o2	.py	REVIEW	0	0	0	18	1	1	0	6	C	W4	Topic 13 He-4 lane machinery (bridges, beta map, two-fluid, transport matching, numerical boundaries); that lane failed at tree level in T015 and no claim uses it
+core/02_equations/o2/uet_o2_tree_level_charged_ward_vertex.py	02_equations/o2	.py	REVIEW	0	0	0	17	1	0	0	4	C	W4	Topic 13 He-4 lane machinery (bridges, beta map, two-fluid, transport matching, numerical boundaries); that lane failed at tree level in T015 and no claim uses it
+core/02_equations/o2/uet_o2_two_loop_sunset_cut.py	02_equations/o2	.py	REVIEW	0	0	0	15	1	1	0	3	B	W4	First dissipative contribution of the O(2) action (order lambda^2 cut); candidate input to the missing SK/KMS derivation of layer 2 (stage 3)
+core/02_equations/o2/uet_o2_ward_constrained_condensed.py	02_equations/o2	.py	REVIEW	0	0	0	15	0	2	0	4	C	W4	Topic 13 He-4 lane machinery (bridges, beta map, two-fluid, transport matching, numerical boundaries); that lane failed at tree level in T015 and no claim uses it
 core/03_lanes/README.md	03_lanes	.md	REVIEW	0	0	0	6	0	0	0	1	A	W2	Lane guide; update in W10
 core/03_lanes/__init__.py	03_lanes	.py	D	0	0	0	6	0	0	0	0	D	W2	Package marker
 core/03_lanes/carrier_observer/README.md	03_lanes/carrier_observer	.md	REVIEW	0	0	0	6	0	0	0	1	C	W2	Standard-physics comparators of the old foundation lane; the observation lane (T010-T013) replaced them; no claim uses them

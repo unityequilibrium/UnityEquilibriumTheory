@@ -55,7 +55,7 @@
 | W1 | `02_equations/covariant`, `lorentz_noether` | เสร็จ 2026-11-18 (ดูด้านล่าง) |
 | W2 | `03_lanes` ที่ใช้อยู่, `engine` | เสร็จ 2026-11-18 (ดูด้านล่าง) |
 | W3 | `02_equations/matter_space` | เสร็จ 2026-11-18 (ดูด้านล่าง) |
-| W4 | `02_equations/o2` | ยังไม่เริ่ม |
+| W4 | `02_equations/o2` | เสร็จ 2026-11-18 (ดูด้านล่าง) |
 | W5 | `03_lanes/thermal`, `topic13_support` | ยังไม่เริ่ม |
 | W6 | `01_contracts`, `04_proofs`, `99_review` | ยังไม่เริ่ม |
 | W7 | `05_tests` | ยังไม่เริ่ม |
@@ -104,3 +104,17 @@
 - ไฟล์ Python ใน topics 112 ไฟล์ จาก 28 topic ยัง import engine เก่า `uet_master_equation.py` (มากสุดคือ 0.11, 0.14, 0.23, 0.10)
   แปลว่าผลของ topic เหล่านี้คำนวณด้วยสมการเก่า ไม่ใช่ action แม่ จึงต้องตรวจทีละ topic ในแผน topics ว่าจะย้ายมาใช้ `core/engine` หรือเก็บ
 - `uet_matter_space.py` ถูก contract ล็อก hash 9 ฉบับ จึงคงไว้ที่เดิม
+
+### W4: `02_equations/o2` (90 ไฟล์)
+
+โฟลเดอร์นี้คือ QFT ที่อุณหภูมิจำกัดของสนามสสาร O(2) (χ ใน action แม่) ที่สร้างไว้สำหรับสายฮีเลียมของ Topic 13
+ไม่มีไฟล์ใดที่ lane ปัจจุบัน, engine หรือ claim ใช้ แต่ topic อ้างถึงหลายไฟล์ (มากสุด 46 ไฟล์ที่อ้าง `action_thermal_observable_bridge`)
+
+| ป้าย | จำนวน | เหตุผล |
+|---|---|---|
+| B | 15 | derive จาก action ของ χ โดยตรงและเกี่ยวกับการสลายพลังงาน: SK contour, KMS, sunset cut, entropy production, no-go สองข้อ (one loop ไม่ให้ dissipation; action แบบอนุรักษ์อย่างเดียวไม่ให้ dissipation ในสถานะควบแน่น), EOS ที่ระดับ tree |
+| C | 74 | เครื่องมือเฉพาะสายฮีเลียมของ Topic 13: สะพานไป β, two-fluid, การจับคู่ transport และขอบเขตเชิงตัวเลข; สายนี้ตกที่ระดับ tree ใน T015 |
+| D | 1 | `__init__.py` |
+
+ไฟล์ป้าย B คือวัตถุดิบของงานที่ AUTHOR_PROPOSITION ระบุว่ายังขาด: derive ชั้น 2 (ระบบเปิดและ entropy production) จาก action ผ่าน SK/KMS
+จะทำในขั้น 3 เป็นรอบวิจัย โดยใช้ no-go สองข้อเป็นขอบเขตตั้งต้น
