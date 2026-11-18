@@ -597,3 +597,8 @@ commit: this commit
 ## 2026-11-18 — Runner rule: topics without a suite are advisory (owner decision)
 - ทำ: แก้ topics/run_all_tests.py ให้ topic ที่ไม่มีชุด test หรือมีแค่ชุดจำกัดถูกรายงานเป็น ADVISORY และไม่ทำให้ exit code เป็น 2 ส่วน gap อื่น (checker หาย, collect ไม่ได้, change ที่จับคู่ไม่ได้) ยังทำให้ล้มเหมือนเดิม และถ้าไม่มีชุดไหนได้รันเลยก็ยังขึ้น incomplete
 - ตรวจ: runner tests 70 ผ่าน (เพิ่ม test ที่แยก advisory กับ blocking)
+
+## 2026-11-18 — Core alignment W10: core docs and register complete
+- ทำ: เขียน core/README.md และ core/AGENTS.md ใหม่ (README เดิมเก็บไว้ที่ 08_history/README_LEGACY_2026-11-14.md), อัปเดต CORE_MAP เพิ่ม T021–T023 และชั้น 3 = Lotka–Volterra, เพิ่มไฟล์ใหม่ 14 แถวในทะเบียน
+- ผล: ทะเบียนครบทุกไฟล์ใน core 2,156 ไฟล์: A 189, B 51, C 1,737, D 179; ไม่มีแถวที่ยังไม่ตัดสิน
+- ถัดไป: ย้ายไฟล์ป้าย C ที่ไม่มี contract ล็อกและไม่มีใคร import เข้าคลัง; ขั้น 3 derive ชั้น 2 จาก action

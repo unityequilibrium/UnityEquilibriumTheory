@@ -24,6 +24,7 @@ core/00_governance/calculation_contracts/b7_free_energy_burn_formal.json	00_gove
 core/00_governance/calculation_contracts/b8_psi_matter_burn_formal.json	00_governance/calculation_contracts	.json	D	0	0	0	0	0	0	0	1	A	W9	Calculation contract of a current Test Card or formal check (uet_psi_matter_burn.py); CI audit reads it
 core/00_governance/calculation_contracts/core_engine_formal.json	00_governance/calculation_contracts	.json	D	0	0	0	0	0	0	0	2	A	W9	Calculation contract of a current Test Card or formal check (layer1.py, layer23.py, _load.py, engine_pilot_stars.py); CI audit reads it
 core/00_governance/calculation_contracts/growing_abundance_formal.json	00_governance/calculation_contracts	.json	D	0	0	0	0	0	0	0	1	A	W9	Calculation contract of a current Test Card or formal check (uet_growing_abundance.py); CI audit reads it
+core/00_governance/calculation_contracts/l3_lv_map_formal.json	00_governance/calculation_contracts	.json	NEW	-	-	-	-	-	-	-	-	A	W10	Formal contract of the layer-3 to Lotka-Volterra map (claim C_L3_LV_MAP)
 core/00_governance/calculation_contracts/l3_persistence_selection_formal.json	00_governance/calculation_contracts	.json	D	0	0	0	0	0	0	0	1	A	W9	Calculation contract of a current Test Card or formal check (uet_persistence_selection.py); CI audit reads it
 core/00_governance/calculation_contracts/matter_space_observer.json	00_governance/calculation_contracts	.json	D	0	0	0	0	0	1	0	3	C	W9	Calculation contract of a legacy C lane; stays in place because the CI completeness audit reads it
 core/00_governance/calculation_contracts/o1_observation_delay_formal.json	00_governance/calculation_contracts	.json	D	0	0	0	0	0	0	0	1	A	W9	Calculation contract of a current Test Card or formal check (uet_observation_layer.py); CI audit reads it
@@ -33,6 +34,7 @@ core/00_governance/calculation_contracts/o4_field_causality_formal.json	00_gover
 core/00_governance/calculation_contracts/o5_pulsation_time_delay_formal.json	00_governance/calculation_contracts	.json	D	0	0	0	0	0	0	0	0	A	W9	Calculation contract of a current Test Card or formal check (uet_pulsation_timing.py); CI audit reads it
 core/00_governance/calculation_contracts/o6_two_signal_contact_formal.json	00_governance/calculation_contracts	.json	D	0	0	0	0	0	0	0	0	A	W9	Calculation contract of a current Test Card or formal check (uet_two_signal_contact.py); CI audit reads it
 core/00_governance/calculation_contracts/o7_lorentz_time_formal.json	00_governance/calculation_contracts	.json	D	0	0	0	0	0	0	0	0	A	W9	Calculation contract of a current Test Card or formal check (uet_lorentz_time.py); CI audit reads it
+core/00_governance/calculation_contracts/o8_rms_light_speed_formal.json	00_governance/calculation_contracts	.json	NEW	-	-	-	-	-	-	-	-	A	W10	Formal contract of the RMS light-speed model used by T022
 core/00_governance/calculation_contracts/path_a_models_formal.json	00_governance/calculation_contracts	.json	D	0	0	0	0	0	0	0	1	A	W9	Calculation contract of a current Test Card or formal check (uet_path_a_models.py); CI audit reads it
 core/00_governance/calculation_contracts/portal_composition_formal.json	00_governance/calculation_contracts	.json	D	0	0	0	0	0	0	0	1	A	W9	Calculation contract of a current Test Card or formal check (uet_portal_composition.py); CI audit reads it
 core/00_governance/calculation_contracts/r3_trace_decomposition_formal.json	00_governance/calculation_contracts	.json	D	0	0	0	0	0	0	0	1	A	W9	Calculation contract of a current Test Card or formal check (uet_r3_trace_decomposition.py); CI audit reads it
@@ -57,6 +59,8 @@ core/00_governance/calculation_contracts/t018_lifespan_rate_of_living.json	00_go
 core/00_governance/calculation_contracts/t019_portal_gap_rotwash.json	00_governance/calculation_contracts	.json	A	0	2	0	1	0	0	0	1	A	W9	Calculation contract of a current Test Card or formal check (t019_portal_gap_rotwash.py); CI audit reads it
 core/00_governance/calculation_contracts/t020_route_b_llr.json	00_governance/calculation_contracts	.json	A	0	2	0	1	0	0	0	1	A	W9	Calculation contract of a current Test Card or formal check (t020_route_b_llr.py); CI audit reads it
 core/00_governance/calculation_contracts/t021_lighting_succession.json	00_governance/calculation_contracts	.json	A	0	2	1	0	0	0	0	1	A	W9	Calculation contract of a current Test Card or formal check (t021_lighting_succession.py); CI audit reads it
+core/00_governance/calculation_contracts/t022_michelson_morley_kennedy_thorndike.json	00_governance/calculation_contracts	.json	NEW	-	-	-	-	-	-	-	-	A	W10	Calculation contract of Test Card T022
+core/00_governance/calculation_contracts/t023_flight_lifetime_energy.json	00_governance/calculation_contracts	.json	NEW	-	-	-	-	-	-	-	-	A	W10	Calculation contract of Test Card T023
 core/00_governance/redirects/legacy/02_Proof/README.md	00_governance/redirects	.md	D	0	0	0	6	0	0	0	0	D	W9	Compatibility redirect stub for an old docs/core path (core_paths.is_markdown_redirect)
 core/00_governance/redirects/legacy/artifacts/README.md	00_governance/redirects	.md	D	0	0	0	6	0	0	0	0	D	W9	Compatibility redirect stub for an old docs/core path (core_paths.is_markdown_redirect)
 core/00_governance/redirects/legacy/data/README.md	00_governance/redirects	.md	D	0	0	0	6	0	0	0	0	D	W9	Compatibility redirect stub for an old docs/core path (core_paths.is_markdown_redirect)
@@ -272,8 +276,8 @@ core/01_contracts/ontology/README.md	01_contracts/ontology	.md	REVIEW	0	0	0	6	0	
 core/01_contracts/ontology/__init__.py	01_contracts/ontology	.py	D	0	0	0	6	0	0	0	0	D	W6	Package marker
 core/01_contracts/ontology/uet_coarse_graining.py	01_contracts/ontology	.py	A_DEP	0	0	0	20	2	0	0	4	C	W6	Coarse-graining to the four C lanes (phase, charge, density, telegraph); the new equations do not use C lanes
 core/01_contracts/units/uet_parameters.py	01_contracts/units	.py	A_DEP	1	0	0	32	5	111	1	21	C	W6	Legacy kappa/beta parameter table for the Omega = C I engine; 93 topic files and uet_master_equation import it, so it stays in place
-core/02_equations/README.md	02_equations	.md	REVIEW	0	0	0	6	0	0	0	0	-	-	-
-core/02_equations/__init__.py	02_equations	.py	D	0	0	0	6	0	0	0	0	-	-	-
+core/02_equations/README.md	02_equations	.md	REVIEW	0	0	0	6	0	0	0	0	A	W10	Short folder guide that is still accurate
+core/02_equations/__init__.py	02_equations	.py	D	0	0	0	6	0	0	0	0	D	W10	Package marker
 core/02_equations/covariant/README.md	02_equations/covariant	.md	REVIEW	0	0	0	6	0	0	0	0	A	W1	Folder guide; rewrite in W10 to name the parent-action files first
 core/02_equations/covariant/__init__.py	02_equations/covariant	.py	D	0	0	0	6	0	0	0	0	D	W1	Package marker
 core/02_equations/covariant/uet_covariant_balance.py	02_equations/covariant	.py	A_DEP	0	0	1	24	1	0	0	5	A	W1	Exchange identity Q_m + Q_response = 0 of the parent action (claim C_EXCHANGE_DERIVED)
@@ -424,11 +428,13 @@ core/03_lanes/observation/t010_gw170817_carrier_speed.py	03_lanes/observation	.p
 core/03_lanes/observation/t011_pulsation_delay_vs_rv.py	03_lanes/observation	.py	A	1	2	0	1	0	0	1	1	A	W2	Producer of a registered Test Card result
 core/03_lanes/observation/t012_correlation_front_bound.py	03_lanes/observation	.py	A	1	2	0	1	0	0	1	1	A	W2	Producer of a registered Test Card result
 core/03_lanes/observation/t013_ives_stilwell_lorentz_time.py	03_lanes/observation	.py	A	1	2	0	1	0	0	1	1	A	W2	Producer of a registered Test Card result
+core/03_lanes/observation/t022_michelson_morley_kennedy_thorndike.py	03_lanes/observation	.py	NEW	-	-	-	-	-	-	-	-	A	W10	Producer of Result T022 (Michelson-Morley and Kennedy-Thorndike)
 core/03_lanes/observation/uet_estimators.py	03_lanes/observation	.py	A_DEP	1	0	1	1	0	0	1	1	A	W2	Model code of the new equations, used by producers or physics tests
 core/03_lanes/observation/uet_field_causality.py	03_lanes/observation	.py	A_DEP	1	0	2	1	0	0	1	1	A	W2	Model code of the new equations, used by producers or physics tests
 core/03_lanes/observation/uet_lorentz_time.py	03_lanes/observation	.py	A_DEP	2	0	1	3	0	0	2	1	A	W2	Model code of the new equations, used by producers or physics tests
 core/03_lanes/observation/uet_observation_layer.py	03_lanes/observation	.py	A_DEP	2	0	2	1	0	0	2	1	A	W2	Model code of the new equations, used by producers or physics tests
 core/03_lanes/observation/uet_pulsation_timing.py	03_lanes/observation	.py	A_DEP	2	0	1	3	0	0	2	1	A	W2	Model code of the new equations, used by producers or physics tests
+core/03_lanes/observation/uet_rms_light_speed.py	03_lanes/observation	.py	NEW	-	-	-	-	-	-	-	-	A	W10	Robertson-Mansouri-Sexl two-way light speed under Lorentz, Galilean and contraction-only kinematics
 core/03_lanes/observation/uet_shared_record.py	03_lanes/observation	.py	A_DEP	1	0	2	1	0	0	1	1	A	W2	Model code of the new equations, used by producers or physics tests
 core/03_lanes/observation/uet_two_signal_contact.py	03_lanes/observation	.py	A_DEP	2	0	1	3	0	0	2	1	A	W2	Model code of the new equations, used by producers or physics tests
 core/03_lanes/open_system/__init__.py	03_lanes/open_system	.py	D	0	0	0	0	0	0	0	0	D	W2	Package marker
@@ -458,9 +464,11 @@ core/03_lanes/persistence/t014_r_parameter_independent.py	03_lanes/persistence	.
 core/03_lanes/persistence/t017_yeast_asymmetric.py	03_lanes/persistence	.py	A	1	2	0	0	0	0	1	2	A	W2	Producer of a registered Test Card result
 core/03_lanes/persistence/t018_lifespan_rate_of_living.py	03_lanes/persistence	.py	A	1	2	0	0	0	0	1	1	A	W2	Producer of a registered Test Card result
 core/03_lanes/persistence/t021_lighting_succession.py	03_lanes/persistence	.py	A	1	2	1	0	0	0	1	1	A	W2	Producer of a registered Test Card result
+core/03_lanes/persistence/t023_flight_lifetime_energy.py	03_lanes/persistence	.py	NEW	-	-	-	-	-	-	-	-	A	W10	Producer of Result T023 (bats against birds)
 core/03_lanes/persistence/uet_asymmetric_division.py	03_lanes/persistence	.py	A_DEP	2	0	1	2	0	0	2	1	A	W2	Model code of the new equations, used by producers or physics tests
 core/03_lanes/persistence/uet_growing_abundance.py	03_lanes/persistence	.py	A_DEP	1	0	1	1	0	0	1	1	A	W2	Model code of the new equations, used by producers or physics tests
 core/03_lanes/persistence/uet_layer2_to_3.py	03_lanes/persistence	.py	A_DEP	2	0	3	4	0	0	2	1	A	W2	Model code of the new equations, used by producers or physics tests
+core/03_lanes/persistence/uet_layer3_lv_map.py	03_lanes/persistence	.py	NEW	-	-	-	-	-	-	-	-	A	W10	Layer 3 reduced term by term to Saavedra et al. (2025) Lotka-Volterra
 core/03_lanes/persistence/uet_path_a_models.py	03_lanes/persistence	.py	A_DEP	3	0	1	4	0	0	3	1	A	W2	Model code of the new equations, used by producers or physics tests
 core/03_lanes/persistence/uet_persistence_selection.py	03_lanes/persistence	.py	A	2	1	4	5	0	1	2	2	A	W2	Model code of the new equations, used by producers or physics tests
 core/03_lanes/persistence/uet_resource_selection.py	03_lanes/persistence	.py	A_DEP	1	0	0	22	3	3	1	9	C	W2	Earlier normalized replicator comparator; layer 3 now lives in uet_persistence_selection.py and engine/layer23.py; topics still import it
@@ -610,7 +618,6 @@ core/05_tests/artifact/test_uet_core_artifact_generator_review_queue.py	05_tests
 core/05_tests/artifact/test_uet_core_artifact_migration_history.py	05_tests/artifact	.py	REVIEW	0	0	0	5	0	0	0	0	C	W7	Legacy gate, migration or artifact check (old C lanes, foundation gates, migration waves); not a physics test
 core/05_tests/artifact/test_uet_core_migration_enforcement.py	05_tests/artifact	.py	REVIEW	0	0	0	5	0	0	0	0	C	W7	Legacy gate, migration or artifact check (old C lanes, foundation gates, migration waves); not a physics test
 core/05_tests/equation/README.md	05_tests/equation	.md	REVIEW	0	0	0	5	0	0	0	0	A	W7	Folder guide; folder still holds A tests; rewrite in W10
-core/08_history/archived_tests/05_tests/equation/root/archived_test_gr_noether_phase_field_map_alignment.py	08_history/archived_tests	.py	REVIEW	0	0	0	13	0	0	0	4	C	W8	Archived 2026-11-18 (owner decision): failing legacy test of a C lane; see core/08_history/archived_tests/README.md
 core/05_tests/equation/root/test_lorentz_noether_comprehensive.py	05_tests/equation	.py	REVIEW	0	0	0	11	0	0	0	2	C	W7	Tests a module labelled C (A modules only as dependencies); moves with it
 core/05_tests/equation/root/test_matter_interaction_forward.py	05_tests/equation	.py	REVIEW	0	0	0	7	0	1	0	2	C	W7	Tests a module labelled C (A modules only as dependencies); moves with it
 core/05_tests/equation/root/test_noether_phase_field_map.py	05_tests/equation	.py	REVIEW	0	0	0	9	0	0	0	4	C	W7	Tests a module labelled C (A modules only as dependencies); moves with it
@@ -619,7 +626,6 @@ core/05_tests/equation/root/test_o2_finite_density_eos.py	05_tests/equation	.py	
 core/05_tests/equation/root/test_topic13_action_normalized_elastic_scattering.py	05_tests/equation	.py	REVIEW	0	0	0	10	0	2	0	2	B	W7	Regression test of a module labelled B (uet_o2_kinetic_collision_kubo); keep with the module for stage 3
 core/05_tests/equation/root/test_topic13_collective_response_eos.py	05_tests/equation	.py	REVIEW	0	0	0	10	0	0	0	0	C	W7	Tests a module labelled C (A modules only as dependencies); moves with it
 core/05_tests/equation/root/test_topic13_collective_response_eos_integration.py	05_tests/equation	.py	REVIEW	0	0	0	10	0	0	0	0	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
-core/08_history/archived_tests/05_tests/equation/root/archived_test_topic13_continuum_action_umklapp_no_go.py	08_history/archived_tests	.py	REVIEW	0	0	0	12	0	2	0	1	C	W8	Archived 2026-11-18 (owner decision): failing legacy test of a C lane; see core/08_history/archived_tests/README.md
 core/05_tests/equation/root/test_topic13_covariant_action_si_anchor_integration.py	05_tests/equation	.py	REVIEW	0	0	0	10	0	1	0	0	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
 core/05_tests/equation/root/test_topic13_covariant_action_si_anchor_route.py	05_tests/equation	.py	REVIEW	0	0	0	10	0	0	0	0	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
 core/05_tests/equation/root/test_topic13_covariant_action_symbolic_si_conversion.py	05_tests/equation	.py	REVIEW	0	0	0	10	0	0	0	0	C	W7	Tests a module labelled C (A modules only as dependencies); moves with it
@@ -638,7 +644,6 @@ core/05_tests/equation/root/test_topic13_uet_o2_action_thermal_stiffness_beta.py
 core/05_tests/equation/root/test_topic13_uet_o2_gaussian_thermal_stationarity_no_go.py	05_tests/equation	.py	REVIEW	0	0	0	10	0	0	0	0	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
 core/05_tests/equation/root/test_topic13_uet_o2_interacting_sk_kms_action.py	05_tests/equation	.py	REVIEW	0	0	0	6	0	0	0	0	B	W7	Regression test of a module labelled B (uet_o2_finite_density_eos, uet_o2_interacting_sk_kms_action); keep with the module for stage 3
 core/05_tests/equation/root/test_topic13_uet_o2_stationarity_scheme_dependence.py	05_tests/equation	.py	REVIEW	0	0	0	10	0	0	0	0	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
-core/08_history/archived_tests/05_tests/equation/root/archived_test_uet_noether_mapping_links.py	08_history/archived_tests	.py	REVIEW	0	0	0	10	0	0	0	0	C	W8	Archived 2026-11-18 (owner decision): failing legacy test of a C lane; see core/08_history/archived_tests/README.md
 core/05_tests/equation/root/test_uet_topic_formula_correspondence_manifest.py	05_tests/equation	.py	REVIEW	0	0	0	10	0	0	0	0	C	W7	Legacy gate, migration or artifact check (old C lanes, foundation gates, migration waves); not a physics test
 core/05_tests/mutation/run_parent_mutations.py	05_tests/mutation	.py	A	0	1	0	1	0	0	0	0	A	W7	Mutation run that shows the parent physics tests catch sign and coefficient changes
 core/05_tests/numerical/README.md	05_tests/numerical	.md	REVIEW	0	0	0	5	0	0	0	0	A	W7	Folder guide; folder still holds A tests; rewrite in W10
@@ -685,6 +690,7 @@ core/05_tests/physics/test_free_energy_burn.py	05_tests/physics	.py	A	1	1	0	1	0	
 core/05_tests/physics/test_growing_abundance.py	05_tests/physics	.py	A	1	1	0	0	0	0	1	1	A	W7	Physics test (STANDARD section 6) of the new equations; counted by check_physics_tests
 core/05_tests/physics/test_layer2_dissipation.py	05_tests/physics	.py	A	1	1	1	3	0	0	1	1	A	W7	Physics test (STANDARD section 6) of the new equations; counted by check_physics_tests
 core/05_tests/physics/test_layer2_to_3.py	05_tests/physics	.py	A	2	1	0	2	0	0	2	1	A	W7	Physics test (STANDARD section 6) of the new equations; counted by check_physics_tests
+core/05_tests/physics/test_layer3_lv_map.py	05_tests/physics	.py	NEW	-	-	-	-	-	-	-	-	A	W10	Physics test of the layer-3 to Lotka-Volterra map
 core/05_tests/physics/test_lighting_succession.py	05_tests/physics	.py	A	0	1	0	0	0	0	0	1	A	W7	Physics test (STANDARD section 6) of the new equations; counted by check_physics_tests
 core/05_tests/physics/test_lorentz_time.py	05_tests/physics	.py	A	2	1	0	1	0	0	2	1	A	W7	Physics test (STANDARD section 6) of the new equations; counted by check_physics_tests
 core/05_tests/physics/test_markov_vs_history.py	05_tests/physics	.py	A	1	1	0	2	0	0	1	1	A	W7	Physics test (STANDARD section 6) of the new equations; counted by check_physics_tests
@@ -702,6 +708,7 @@ core/05_tests/physics/test_pulsation_timing.py	05_tests/physics	.py	A	2	1	0	1	0	
 core/05_tests/physics/test_r1_writing_channels.py	05_tests/physics	.py	A	1	0	0	2	0	0	1	1	A	W7	Physics test (STANDARD section 6) of the new equations; counted by check_physics_tests
 core/05_tests/physics/test_r2_laser_selection.py	05_tests/physics	.py	A	0	1	0	2	0	0	0	1	A	W7	Physics test (STANDARD section 6) of the new equations; counted by check_physics_tests
 core/05_tests/physics/test_r3_trace_decomposition.py	05_tests/physics	.py	A	1	1	0	2	0	0	1	1	A	W7	Physics test (STANDARD section 6) of the new equations; counted by check_physics_tests
+core/05_tests/physics/test_rms_light_speed.py	05_tests/physics	.py	NEW	-	-	-	-	-	-	-	-	A	W10	Physics test of the RMS light-speed model
 core/05_tests/physics/test_shared_record_cone.py	05_tests/physics	.py	A	1	1	0	2	0	0	1	1	A	W7	Physics test (STANDARD section 6) of the new equations; counted by check_physics_tests
 core/05_tests/physics/test_si_bose_fluid.py	05_tests/physics	.py	A	1	1	0	0	0	0	2	2	A	W7	Physics test (STANDARD section 6) of the new equations; counted by check_physics_tests
 core/05_tests/physics/test_stability_attacks.py	05_tests/physics	.py	A	1	1	0	2	0	0	1	1	A	W7	Physics test (STANDARD section 6) of the new equations; counted by check_physics_tests
@@ -818,7 +825,6 @@ core/05_tests/regression/root/test_topic13_aist_graphite_source_route_boundary.p
 core/05_tests/regression/root/test_topic13_alpha_identifiability.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
 core/05_tests/regression/root/test_topic13_alpha_phi_k_calibration_candidates.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	2	0	0	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
 core/05_tests/regression/root/test_topic13_alpha_phi_k_identifiability.py	05_tests/regression	.py	REVIEW	0	0	0	6	0	1	0	0	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
-core/08_history/archived_tests/05_tests/regression/root/archived_test_topic13_anisotropic_thermoelastic_response_bridge.py	08_history/archived_tests	.py	REVIEW	0	0	0	12	0	2	0	1	C	W8	Archived 2026-11-18 (owner decision): failing legacy test of a C lane; see core/08_history/archived_tests/README.md
 core/05_tests/regression/root/test_topic13_base_phi_independent_calibration_requirement.py	05_tests/regression	.py	REVIEW	0	0	0	6	0	0	0	0	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
 core/05_tests/regression/root/test_topic13_base_phi_independent_calibration_requirement_integration.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
 core/05_tests/regression/root/test_topic13_base_phi_reconciliation.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
@@ -834,7 +840,6 @@ core/05_tests/regression/root/test_topic13_beta_symbol_separation.py	05_tests/re
 core/05_tests/regression/root/test_topic13_beta_symbol_separation_integration.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
 core/05_tests/regression/root/test_topic13_bipm_specific_heat_source.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	1	0	0	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
 core/05_tests/regression/root/test_topic13_calorine_csrc_equilibrium_crosscheck.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	1	0	0	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
-core/08_history/archived_tests/05_tests/regression/root/archived_test_topic13_calorine_lattice_interface_inputs.py	08_history/archived_tests	.py	REVIEW	0	0	0	12	0	2	0	1	C	W8	Archived 2026-11-18 (owner decision): failing legacy test of a C lane; see core/08_history/archived_tests/README.md
 core/05_tests/regression/root/test_topic13_calorine_legacy_nep2_backend_probe.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
 core/05_tests/regression/root/test_topic13_calorine_legacy_nep2_pbte_reproduction.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	2	0	0	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
 core/05_tests/regression/root/test_topic13_calorine_model_form_state_spread.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
@@ -962,13 +967,10 @@ core/05_tests/regression/root/test_topic13_jun_source_package_boundary.py	05_tes
 core/05_tests/regression/root/test_topic13_kim_2018_graphite_green_kubo_external_input.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
 core/05_tests/regression/root/test_topic13_kinetic_canonical_normalization.py	05_tests/regression	.py	REVIEW	0	0	0	7	0	2	0	1	B	W7	Regression test of a module labelled B (uet_o2_finite_density_eos, uet_o2_kinetic_collision_kubo); keep with the module for stage 3
 core/05_tests/regression/root/test_topic13_landauer_core_disposition.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
-core/08_history/archived_tests/05_tests/regression/root/archived_test_topic13_lattice_momentum_relaxing_heat_parent.py	08_history/archived_tests	.py	REVIEW	0	0	0	12	0	2	0	1	C	W8	Archived 2026-11-18 (owner decision): failing legacy test of a C lane; see core/08_history/archived_tests/README.md
 core/05_tests/regression/root/test_topic13_local_quadratic_bounds.py	05_tests/regression	.py	REVIEW	0	0	0	7	0	0	0	1	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
 core/05_tests/regression/root/test_topic13_local_variance_identifiability.py	05_tests/regression	.py	REVIEW	0	0	0	7	0	0	0	1	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
 core/05_tests/regression/root/test_topic13_lowitzer_full_source_pair.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
 core/05_tests/regression/root/test_topic13_major_result_register_sync.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	3	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
-core/08_history/archived_tests/05_tests/regression/root/archived_test_topic13_material_interface_factor_resolution.py	08_history/archived_tests	.py	REVIEW	0	0	0	12	0	2	0	1	C	W8	Archived 2026-11-18 (owner decision): failing legacy test of a C lane; see core/08_history/archived_tests/README.md
-core/08_history/archived_tests/05_tests/regression/root/archived_test_topic13_material_lattice_interface_contract.py	08_history/archived_tests	.py	REVIEW	0	0	0	12	0	2	0	1	C	W8	Archived 2026-11-18 (owner decision): failing legacy test of a C lane; see core/08_history/archived_tests/README.md
 core/05_tests/regression/root/test_topic13_matter_actuation_harmonics.py	05_tests/regression	.py	REVIEW	0	0	0	7	0	0	0	1	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
 core/05_tests/regression/root/test_topic13_matter_strain_susceptibility.py	05_tests/regression	.py	REVIEW	0	0	0	8	0	0	0	1	C	W7	Tests a module labelled C (A modules only as dependencies); moves with it
 core/05_tests/regression/root/test_topic13_microscopic_current_ladder_matching_boundary.py	05_tests/regression	.py	REVIEW	0	0	0	8	0	1	0	1	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
@@ -980,7 +982,6 @@ core/05_tests/regression/root/test_topic13_mp48_ding_csrc_response_mapping.py	05
 core/05_tests/regression/root/test_topic13_mp48_e2g_multiplicity.py	05_tests/regression	.py	REVIEW	0	0	0	7	0	0	0	1	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
 core/05_tests/regression/root/test_topic13_mp48_force_constant_harmonic_reconstruction.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
 core/05_tests/regression/root/test_topic13_mp48_independent_graphite_cv.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
-core/08_history/archived_tests/05_tests/regression/root/archived_test_topic13_mp48_mode_resolved_csrc_diagnostic.py	08_history/archived_tests	.py	REVIEW	0	0	0	10	0	0	0	0	C	W8	Archived 2026-11-18 (owner decision): failing legacy test of a C lane; see core/08_history/archived_tests/README.md
 core/05_tests/regression/root/test_topic13_mp48_phi_e_dimensional_comparator.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
 core/05_tests/regression/root/test_topic13_mp48_shear_irrep.py	05_tests/regression	.py	REVIEW	0	0	0	6	0	0	0	0	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
 core/05_tests/regression/root/test_topic13_mp48_spectral_csrc_reproduction.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
@@ -993,12 +994,10 @@ core/05_tests/regression/root/test_topic13_nims_mp990448_phonon_source_boundary.
 core/05_tests/regression/root/test_topic13_nist_alpha_v_gate_integration.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
 core/05_tests/regression/root/test_topic13_nist_axm5q1_density_source_boundary.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
 core/05_tests/regression/root/test_topic13_nist_graphite_alpha_v_source_boundary.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
-core/08_history/archived_tests/05_tests/regression/root/archived_test_topic13_nist_srm_3600_heat_capacity_boundary.py	08_history/archived_tests	.py	REVIEW	0	0	0	10	0	2	0	0	C	W8	Archived 2026-11-18 (owner decision): failing legacy test of a C lane; see core/08_history/archived_tests/README.md
 core/05_tests/regression/root/test_topic13_normal_response_curvature.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
 core/05_tests/regression/root/test_topic13_normal_thermal_background.py	05_tests/regression	.py	REVIEW	0	0	0	7	0	1	0	1	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
 core/05_tests/regression/root/test_topic13_npl_rsa40_graphite_specific_heat.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
 core/05_tests/regression/root/test_topic13_open_system_sk_kms_entropy.py	05_tests/regression	.py	REVIEW	0	0	0	6	0	0	0	0	C	W7	Tests a module labelled C (A modules only as dependencies); moves with it
-core/08_history/archived_tests/05_tests/regression/root/archived_test_topic13_oxford_tgs_comparator_provenance.py	08_history/archived_tests	.py	REVIEW	0	0	0	10	0	0	0	0	C	W8	Archived 2026-11-18 (owner decision): failing legacy test of a C lane; see core/08_history/archived_tests/README.md
 core/05_tests/regression/root/test_topic13_oxford_tgs_numeric_rows.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
 core/05_tests/regression/root/test_topic13_patch_position_sensitivity.py	05_tests/regression	.py	REVIEW	0	0	0	7	0	0	0	1	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
 core/05_tests/regression/root/test_topic13_perez_castaneda_hopg_boundary.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	3	0	0	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
@@ -1025,7 +1024,6 @@ core/05_tests/regression/root/test_topic13_regularized_continuum_heat_current_in
 core/05_tests/regression/root/test_topic13_response_one_loop_match.py	05_tests/regression	.py	REVIEW	0	0	0	8	0	1	0	1	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
 core/05_tests/regression/root/test_topic13_retarded_ra_mixed_current_vertex.py	05_tests/regression	.py	REVIEW	0	0	0	8	0	0	0	1	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
 core/05_tests/regression/root/test_topic13_same_kernel_tagged_width.py	05_tests/regression	.py	REVIEW	0	0	0	8	0	1	0	1	C	W7	Tests a module labelled C (A modules only as dependencies); moves with it
-core/08_history/archived_tests/05_tests/regression/root/archived_test_topic13_scalar_thermoelastic_response_bridge.py	08_history/archived_tests	.py	REVIEW	0	0	0	12	0	2	0	1	C	W8	Archived 2026-11-18 (owner decision): failing legacy test of a C lane; see core/08_history/archived_tests/README.md
 core/05_tests/regression/root/test_topic13_shear_symmetry.py	05_tests/regression	.py	REVIEW	0	0	0	7	0	0	0	1	C	W7	Tests a module labelled C (A modules only as dependencies); moves with it
 core/05_tests/regression/root/test_topic13_sk_kms_entropy_contract.py	05_tests/regression	.py	REVIEW	0	0	0	6	0	0	0	0	C	W7	Tests a module labelled C (A modules only as dependencies); moves with it
 core/05_tests/regression/root/test_topic13_sk_kms_entropy_contract_integration.py	05_tests/regression	.py	REVIEW	0	0	0	10	0	0	0	0	C	W7	Topic 13 lane check (artifact or audit script); the lane is labelled C
@@ -1808,6 +1806,20 @@ core/07_artifacts/verification/uet_core_registry_reconciliation_audit.json	07_ar
 core/07_artifacts/verification/uet_core_scientific_link_audit.json	07_artifacts/verification	.json	REVIEW	0	0	0	10	1	0	0	4	C	W8	Generated output of an old C lane or foundation gate; not read by any A or B file
 core/07_artifacts/verification/uet_derivation_origin_audit.json	07_artifacts/verification	.json	REVIEW	0	0	0	13	1	0	0	5	C	W8	Generated output of an old C lane or foundation gate; not read by any A or B file
 core/08_history/README.md	08_history	.md	REVIEW	0	0	0	5	0	0	0	0	A	W9	Folder guide
+core/08_history/README_LEGACY_2026-11-14.md	08_history	.md	NEW	-	-	-	-	-	-	-	-	C	W10	The core README as it stood before the 2026-11-18 rewrite; history, LEGACY_UNREVIEWED
+core/08_history/archived_tests/05_tests/equation/root/archived_test_gr_noether_phase_field_map_alignment.py	08_history/archived_tests	.py	REVIEW	0	0	0	13	0	0	0	4	C	W8	Archived 2026-11-18 (owner decision): failing legacy test of a C lane; see core/08_history/archived_tests/README.md
+core/08_history/archived_tests/05_tests/equation/root/archived_test_topic13_continuum_action_umklapp_no_go.py	08_history/archived_tests	.py	REVIEW	0	0	0	12	0	2	0	1	C	W8	Archived 2026-11-18 (owner decision): failing legacy test of a C lane; see core/08_history/archived_tests/README.md
+core/08_history/archived_tests/05_tests/equation/root/archived_test_uet_noether_mapping_links.py	08_history/archived_tests	.py	REVIEW	0	0	0	10	0	0	0	0	C	W8	Archived 2026-11-18 (owner decision): failing legacy test of a C lane; see core/08_history/archived_tests/README.md
+core/08_history/archived_tests/05_tests/regression/root/archived_test_topic13_anisotropic_thermoelastic_response_bridge.py	08_history/archived_tests	.py	REVIEW	0	0	0	12	0	2	0	1	C	W8	Archived 2026-11-18 (owner decision): failing legacy test of a C lane; see core/08_history/archived_tests/README.md
+core/08_history/archived_tests/05_tests/regression/root/archived_test_topic13_calorine_lattice_interface_inputs.py	08_history/archived_tests	.py	REVIEW	0	0	0	12	0	2	0	1	C	W8	Archived 2026-11-18 (owner decision): failing legacy test of a C lane; see core/08_history/archived_tests/README.md
+core/08_history/archived_tests/05_tests/regression/root/archived_test_topic13_lattice_momentum_relaxing_heat_parent.py	08_history/archived_tests	.py	REVIEW	0	0	0	12	0	2	0	1	C	W8	Archived 2026-11-18 (owner decision): failing legacy test of a C lane; see core/08_history/archived_tests/README.md
+core/08_history/archived_tests/05_tests/regression/root/archived_test_topic13_material_interface_factor_resolution.py	08_history/archived_tests	.py	REVIEW	0	0	0	12	0	2	0	1	C	W8	Archived 2026-11-18 (owner decision): failing legacy test of a C lane; see core/08_history/archived_tests/README.md
+core/08_history/archived_tests/05_tests/regression/root/archived_test_topic13_material_lattice_interface_contract.py	08_history/archived_tests	.py	REVIEW	0	0	0	12	0	2	0	1	C	W8	Archived 2026-11-18 (owner decision): failing legacy test of a C lane; see core/08_history/archived_tests/README.md
+core/08_history/archived_tests/05_tests/regression/root/archived_test_topic13_mp48_mode_resolved_csrc_diagnostic.py	08_history/archived_tests	.py	REVIEW	0	0	0	10	0	0	0	0	C	W8	Archived 2026-11-18 (owner decision): failing legacy test of a C lane; see core/08_history/archived_tests/README.md
+core/08_history/archived_tests/05_tests/regression/root/archived_test_topic13_nist_srm_3600_heat_capacity_boundary.py	08_history/archived_tests	.py	REVIEW	0	0	0	10	0	2	0	0	C	W8	Archived 2026-11-18 (owner decision): failing legacy test of a C lane; see core/08_history/archived_tests/README.md
+core/08_history/archived_tests/05_tests/regression/root/archived_test_topic13_oxford_tgs_comparator_provenance.py	08_history/archived_tests	.py	REVIEW	0	0	0	10	0	0	0	0	C	W8	Archived 2026-11-18 (owner decision): failing legacy test of a C lane; see core/08_history/archived_tests/README.md
+core/08_history/archived_tests/05_tests/regression/root/archived_test_topic13_scalar_thermoelastic_response_bridge.py	08_history/archived_tests	.py	REVIEW	0	0	0	12	0	2	0	1	C	W8	Archived 2026-11-18 (owner decision): failing legacy test of a C lane; see core/08_history/archived_tests/README.md
+core/08_history/archived_tests/README.md	08_history/archived_tests	.md	NEW	-	-	-	-	-	-	-	-	C	W10	Guide to the archived failing legacy tests (W8)
 core/08_history/legacy/compatibility_shims/data_scripts/Data/archive_data.py	08_history/legacy	.py	D	0	0	0	8	0	0	0	2	C	W9	Archived copy of a root-level import shim; the alias registry forwards imports to the canonical module
 core/08_history/legacy/compatibility_shims/data_scripts/Data/audit_electroweak_pdg_mapping.py	08_history/legacy	.py	D	0	0	0	8	0	0	0	2	C	W9	Archived copy of a root-level import shim; the alias registry forwards imports to the canonical module
 core/08_history/legacy/compatibility_shims/data_scripts/Data/build_electroweak_benchmark_package.py	08_history/legacy	.py	D	0	0	0	8	0	0	0	2	C	W9	Archived copy of a root-level import shim; the alias registry forwards imports to the canonical module
@@ -2117,19 +2129,21 @@ core/99_review/unresolved_assets/T13_HOLDOUT_EXPOSURE_2026_09_10.json	99_review/
 core/99_review/unresolved_assets/T13_HOLDOUT_EXPOSURE_2026_09_26.json	99_review/unresolved_assets	.json	REVIEW	0	0	0	1	1	0	0	0	C	W6	Topic 13 holdout exposure record; a regression test reads it; keep as provenance
 core/99_review/unresolved_assets/sandbox_emergent.py	99_review/unresolved_assets	.py	A_DEP	0	0	0	8	0	0	0	7	C	W6	Toy C and I game-landscape simulation; not the parent action
 core/99_review/unresolved_assets/t13_energy_response_audit_generator_drift.json	99_review/unresolved_assets	.json	REVIEW	0	0	0	8	0	0	0	0	C	W6	Drift record of an old Topic 13 audit generator
-core/AGENTS.md	AGENTS.md	.md	REVIEW	0	0	0	15	0	1	0	12	-	-	-
-core/AUTHOR_PROPOSITION.md	AUTHOR_PROPOSITION.md	.md	A_DEP	0	0	0	8	0	4	0	9	-	-	-
-core/CORE_FILE_INDEX.md	CORE_FILE_INDEX.md	.md	A_DEP	0	0	0	15	0	0	0	9	-	-	-
-core/CORE_MAP.md	CORE_MAP.md	.md	REVIEW	0	0	0	3	0	0	0	7	-	-	-
-core/FIDELITY_MATRIX.md	FIDELITY_MATRIX.md	.md	A_DEP	0	0	2	5	0	2	0	3	-	-	-
-core/README.md	README.md	.md	REVIEW	0	0	0	14	0	0	0	13	-	-	-
-core/SYNTHESIS_AUDIT.md	SYNTHESIS_AUDIT.md	.md	REVIEW	0	0	0	3	0	0	0	5	-	-	-
-core/THEORY_CARD.md	THEORY_CARD.md	.md	A_DEP	0	0	0	8	0	6	0	9	-	-	-
-core/THOUGHT_EXPERIMENT.md	THOUGHT_EXPERIMENT.md	.md	A	0	1	0	6	0	0	0	1	-	-	-
-core/UPDATE_LOG.md	UPDATE_LOG.md	.md	REVIEW	0	0	0	1	0	1	0	4	-	-	-
-core/__init__.py	__init__.py	.py	D	0	0	0	13	0	2	0	7	-	-	-
-core/core_compat.py	core_compat.py	.py	A_DEP	0	0	0	189	0	2	0	8	-	-	-
-core/core_paths.py	core_paths.py	.py	A_DEP	0	0	0	19	299	161	0	170	-	-	-
+core/AGENTS.md	AGENTS.md	.md	REVIEW	0	0	0	15	0	1	0	12	A	W10	Core instructions, rewritten 2026-11-18 for the alignment labels
+core/AUTHOR_PROPOSITION.md	AUTHOR_PROPOSITION.md	.md	A_DEP	0	0	0	8	0	4	0	9	A	W10	The author's intent; the only source of intent
+core/CORE_ALIGNMENT_REGISTER.md	core	.md	NEW	-	-	-	-	-	-	-	-	A	W10	This alignment register (summary); the core file index from W10 on
+core/CORE_ALIGNMENT_REGISTER.tsv	core	.tsv	NEW	-	-	-	-	-	-	-	-	A	W10	This alignment register (one row per file); the core file index from W10 on
+core/CORE_FILE_INDEX.md	CORE_FILE_INDEX.md	.md	A_DEP	0	0	0	15	0	0	0	9	C	W10	Generated index from the old reconcile script (2026-09-17); kept in place because AGENTS lists it at the root; CORE_ALIGNMENT_REGISTER.tsv is the file index now
+core/CORE_MAP.md	CORE_MAP.md	.md	REVIEW	0	0	0	3	0	0	0	7	A	W10	Map of the live equations, tests and Test Card results per layer
+core/FIDELITY_MATRIX.md	FIDELITY_MATRIX.md	.md	A_DEP	0	0	2	5	0	2	0	3	A	W10	Author logic against equations
+core/README.md	README.md	.md	REVIEW	0	0	0	14	0	0	0	13	A	W10	Folder guide, rewritten 2026-11-18; the old text is in 08_history/README_LEGACY_2026-11-14.md
+core/SYNTHESIS_AUDIT.md	SYNTHESIS_AUDIT.md	.md	REVIEW	0	0	0	3	0	0	0	5	A	W10	Whether borrowed principles are used within their conditions
+core/THEORY_CARD.md	THEORY_CARD.md	.md	A_DEP	0	0	0	8	0	6	0	9	A	W10	Layer 1 Theory Card (author approved)
+core/THOUGHT_EXPERIMENT.md	THOUGHT_EXPERIMENT.md	.md	A	0	1	0	6	0	0	0	1	A	W10	Observation-layer thought experiment v3
+core/UPDATE_LOG.md	UPDATE_LOG.md	.md	REVIEW	0	0	0	1	0	1	0	4	A	W10	Core research-wave log
+core/__init__.py	__init__.py	.py	D	0	0	0	13	0	2	0	7	D	W10	Package entry; installs the legacy import aliases
+core/core_compat.py	core_compat.py	.py	A_DEP	0	0	0	189	0	2	0	8	D	W10	Legacy import alias finder
+core/core_paths.py	core_paths.py	.py	A_DEP	0	0	0	19	299	161	0	170	D	W10	Path authority
 core/engine/LANE_CARD_TEMPLATE.json	engine	.json	A_DEP	0	0	0	2	1	0	0	0	A	W2	Model code of the new equations, used by producers or physics tests
 core/engine/README.md	engine	.md	REVIEW	0	0	0	1	0	0	0	2	A	W2	Engine guide
 core/engine/__init__.py	engine	.py	D	1	0	0	0	0	0	1	0	D	W2	Package marker
@@ -2140,4 +2154,4 @@ core/engine/lane_cards/topic_0_22_biophysics.json	engine/lane_cards	.json	REVIEW
 core/engine/lanes.py	engine	.py	A	1	1	0	77	4	88	3	80	A	W2	Model code of the new equations, used by producers or physics tests
 core/engine/layer1.py	engine	.py	A_DEP	1	0	1	5	0	0	1	1	A	W2	Model code of the new equations, used by producers or physics tests
 core/engine/layer23.py	engine	.py	A_DEP	1	0	1	8	1	0	1	3	A	W2	Model code of the new equations, used by producers or physics tests
-core/theory_card.json	theory_card.json	.json	A	0	20	0	2	0	1	0	9	-	-	-
+core/theory_card.json	theory_card.json	.json	A	0	20	0	2	0	1	0	9	A	W10	Machine-readable Theory Card

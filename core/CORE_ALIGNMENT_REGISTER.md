@@ -61,7 +61,7 @@
 | W7 | `05_tests` | เสร็จ 2026-11-18; ซ่อม hash แล้ว (ดูด้านล่าง) |
 | W8 | `07_artifacts` และเก็บ test ที่พัง | เสร็จ 2026-11-18 (ดูด้านล่าง) |
 | W9 | `00_governance`, `06_data`, `08_history` | เสร็จ 2026-11-18 (ดูด้านล่าง) |
-| W10 | เอกสารหน้า core | ยังไม่เริ่ม |
+| W10 | เอกสารหน้า core | เสร็จ 2026-11-18 (ดูด้านล่าง) |
 
 ป้ายสุดท้ายอยู่ในคอลัมน์ `decision` ของ TSV: `A` ใช้ต่อ, `B` พัฒนาต่อ, `C` เก็บ, `C?` น่าจะเก็บแต่รอรอบอื่น, `D` โครงสร้าง
 
@@ -191,3 +191,24 @@ completeness audit จึงเหลือ 0 error (เดิม 43) ส่ว�
 - **contract ทุกฉบับคงไว้ที่เดิม** เพราะ completeness audit ของ CI อ่านทั้งหมด
 - **ไฟล์ที่สร้างหลังทำ inventory ไม่มีในทะเบียน:** contract ของ T022, T023, O8 และ l3_lv_map รวมทั้งโค้ดและ test ของมัน จะเพิ่มใน W10
 - **ข้อมูลภายนอกปัจจุบันอยู่ที่ `docs/data/external`** และล็อก hash ใน data manifest ส่วน `06_data` เป็นของ lane เก่า
+
+### W10: เอกสารหน้า core และไฟล์ที่เพิ่มหลังทำ inventory
+
+- **เขียนใหม่:** `core/README.md` (README เดิมของ engine Ω = C·I เก็บไว้ไม่แก้ที่ `08_history/README_LEGACY_2026-11-14.md`) และ `core/AGENTS.md` (ให้ดูป้ายในทะเบียนนี้ก่อนแก้ไฟล์, ห้าม skip ใน physics test, ไฟล์ใหม่ต้องลงทะเบียน)
+- **อัปเดต:** `CORE_MAP.md` เพิ่ม T021–T023, ชั้น 3 = Lotka–Volterra, test ที่เก็บเข้าคลัง และนับผลใหม่ (21 การ์ด: ผ่าน 16, ไม่ชี้ขาด 3, พัง 2)
+- **`CORE_FILE_INDEX.md` คงไว้ที่เดิม (ป้าย C):** เป็นไฟล์ที่ script เก่าสร้าง ห้ามแก้ด้วยมือ ทะเบียนนี้ (`CORE_ALIGNMENT_REGISTER.tsv`) เป็นดัชนีไฟล์ของ core แทน
+- **เพิ่มไฟล์ที่สร้างหลัง inventory 14 แถว:** contract, producer, โมเดล และ physics test ของ T022, T023, O8 และ l3_lv_map (A), ไฟล์ทะเบียนเอง (A), README ของคลัง test และ README เดิม (C)
+
+### ผลรวมหลังจบ W1–W10 (2,156 ไฟล์)
+
+| ป้าย | จำนวน | ความหมาย |
+|---|---|---|
+| A | 189 | ใช้ต่อ: โค้ดและ test ของสมการใหม่, producer ของ Test Card, contract ปัจจุบัน, เอกสารหน้า core |
+| B | 51 | พัฒนาต่อ: วัตถุดิบสำหรับ derive ชั้น 2 จาก action (O(2) SK/KMS, no-go สองข้อ, `uet_covariant_nonclosed`) และ spec ที่ต้องเขียนใหม่ |
+| C | 1,737 | เก็บเป็นประวัติ: lane C เก่า, Topic 13, gate และ migration เก่า, artifact ที่สร้างแล้ว |
+| D | 179 | โครงสร้าง: package marker, path authority, alias registry และ redirect stub |
+
+**ขั้นถัดไป:**
+- ย้ายไฟล์ป้าย C ที่ไม่มี contract ล็อกและไม่มีใคร import เข้าคลัง (ทางเลือก 1 ของแผน) ยังไม่ได้ย้าย ยกเว้น test ที่พัง 74 ไฟล์ซึ่งย้ายแล้ว (core 12, topic 0.13 44, topic 0.10 18)
+- ขั้น 3: derive ชั้น 2 จาก action ผ่าน SK/KMS โดยใช้ไฟล์ป้าย B
+- ขั้น 4: แผน topics (112 ไฟล์ใน 28 topic ยัง import engine เก่า)

@@ -1,6 +1,6 @@
 # CORE_MAP: สมการหลักของ UET อยู่ไหน อะไรคือของจริง อะไรคือของเก่า
 
-> เขียนเมื่อ 2026-11-10 ตามที่ผู้เขียนสั่ง ทุกพาธในไฟล์นี้ตรวจแล้วว่ามีอยู่จริงในรีโพ ณ วันที่เขียน · อัปเดตตารางผลทดสอบให้ครบ T001–T020 เมื่อ 2026-11-17
+> เขียนเมื่อ 2026-11-10 ตามที่ผู้เขียนสั่ง ทุกพาธในไฟล์นี้ตรวจแล้วว่ามีอยู่จริงในรีโพ ณ วันที่เขียน · อัปเดตตารางผลทดสอบให้ครบ T001–T020 เมื่อ 2026-11-17 · เพิ่ม T021–T023, ชั้น 3 = Lotka–Volterra และผลการจัด core เมื่อ 2026-11-18
 > ไฟล์นี้เป็น**แผนที่** ไม่ใช่หลักฐาน ระดับหลักฐานของแต่ละข้ออ้างดูที่ [`docs/standard/claims.json`](../docs/standard/claims.json) เท่านั้น
 > **โค้ดและเทสต์ของสมการหลักอยู่ใน `core/` ทั้งหมด** ส่วน `docs/standard/` เป็นสมุดบันทึกกลาง (Test Card ที่ล็อกเกณฑ์ไว้ก่อนรัน, ผลลัพธ์, ระดับหลักฐาน) ตามที่ Standard v2 กำหนด สรุปผลทุกตัวอยู่ในหัวข้อ 3 ของไฟล์นี้
 > ถ้าไฟล์นี้ขัดกับ `docs/STANDARD.md` ให้ถือ `docs/STANDARD.md`
@@ -15,6 +15,7 @@
 | 3 | [`FIDELITY_MATRIX.md`](FIDELITY_MATRIX.md) | ตรรกะแต่ละข้อของผู้เขียนตรงกับสมการไหม (ตรง 8 ข้อ) |
 | 4 | [`SYNTHESIS_AUDIT.md`](SYNTHESIS_AUDIT.md) | หลักการที่ยืมจากทฤษฎีอื่นใช้ถูกเงื่อนไขไหม และขอบเขตของกฎรวม |
 | 5 | [`../docs/STANDARD.md`](../docs/STANDARD.md) | มาตรฐานวิจัย (ระดับหลักฐาน, Test Card) |
+| 6 | [`CORE_ALIGNMENT_REGISTER.md`](CORE_ALIGNMENT_REGISTER.md) | ป้ายของทุกไฟล์ใน core: A ใช้ต่อ, B พัฒนาต่อ, C เก็บเป็นประวัติ, D โครงสร้าง |
 
 ## 2. สมการหลักอยู่ที่ไหน (แยกตามชั้น)
 
@@ -46,22 +47,22 @@
 
 | อะไร | ไฟล์ |
 |---|---|
-| สมการและโมเดล | `03_lanes/persistence/uet_persistence_selection.py`, `uet_layer2_to_3.py` (อายุจากกฎการเผา), `uet_path_a_models.py` |
-| ตัวตรวจ | `05_tests/physics/test_persistence_selection.py`, `test_layer2_to_3.py`, `test_r2_laser_selection.py`, `test_path_a_models.py` |
-| เทียบข้อมูลจริง | T002 และ T014 กระจุกดาว, T007 สาหร่าย, T008 ดาวแคระขาว, T009 ยูเรเนียม-234, T017 ยีสต์, T018 อายุนกและสัตว์เลี้ยงลูกด้วยนม **FAILED** (`t002_*`, `t007_*`, `t008_*`, `t009_*`, `t014_*`, `t017_*`, `t018_*` ใน `03_lanes/persistence/`) |
+| สมการและโมเดล | `03_lanes/persistence/uet_persistence_selection.py`, `uet_layer2_to_3.py` (อายุจากกฎการเผา), `uet_path_a_models.py`, `uet_layer3_lv_map.py` (ลดรูปเป็น Lotka–Volterra ของ Saavedra et al. 2025 ทีละเทอม) |
+| ตัวตรวจ | `05_tests/physics/test_persistence_selection.py`, `test_layer2_to_3.py`, `test_r2_laser_selection.py`, `test_path_a_models.py`, `test_layer3_lv_map.py` |
+| เทียบข้อมูลจริง | T002 และ T014 กระจุกดาว, T007 สาหร่าย, T008 ดาวแคระขาว, T009 ยูเรเนียม-234, T017 ยีสต์, T018 อายุนกและสัตว์เลี้ยงลูกด้วยนม **FAILED**, T021 การเปลี่ยนเทคโนโลยีแสงสว่าง, T023 ค้างคาวเทียบนก (`t002_*`, `t007_*`, `t008_*`, `t009_*`, `t014_*`, `t017_*`, `t018_*`, `t021_*`, `t023_*` ใน `03_lanes/persistence/`) |
 
 ### ชั้นสังเกต (thought experiment v3)
 
 | อะไร | ไฟล์ |
 |---|---|
 | คำอธิบายและหลักการ P1–P4 | [`THOUGHT_EXPERIMENT.md`](THOUGHT_EXPERIMENT.md) |
-| โมเดล | `03_lanes/observation/uet_observation_layer.py` (เวลาหน่วง, ช่องว่าง), `uet_shared_record.py` (บันทึกร่วมต้องมีการสัมผัสเชิงเหตุผล), `uet_estimators.py` (Markov กับ history), `uet_field_causality.py` (สนาม ψ แพร่ใน light cone), `uet_pulsation_timing.py` (P2 กับดาวเต้นในระบบดาวคู่), `uet_two_signal_contact.py` (P4 เมื่อสัญญาณสองตัวมีความเร็วต่างกัน: t = d/(c_a + c_b)), `uet_lorentz_time.py` (P3: boost, ความพร้อมกันสัมพัทธ์ dt' = −γβdx, ค่า Ives–Stilwell) |
-| ตัวตรวจ | `05_tests/physics/test_observation_delay.py`, `test_shared_record_cone.py`, `test_markov_vs_history.py`, `test_field_causality.py`, `test_pulsation_timing.py`, `test_two_signal_contact.py`, `test_lorentz_time.py` |
-| เทียบข้อมูลจริง | T010 GW170817 (`t010_gw170817_carrier_speed.py`): คลื่นความโน้มถ่วงกับแสงวิ่งเร็วเท่ากัน ตามที่ c_T = 1 กำหนด (derive ใน `05_tests/physics/test_tensor_speed.py`); T011 ดาวเต้นในระบบดาวคู่ (`t011_pulsation_delay_vs_rv.py`): ช่องว่างเฟส = อัตรา × อายุบันทึก (P2); T012 หน้าคลื่นสหสัมพันธ์ใน Bose–Hubbard quench (`t012_correlation_front_bound.py`): บันทึกร่วมต้องผ่านอดีตร่วม (P4); T013 Ives–Stilwell (`t013_ives_stilwell_lorentz_time.py`): การแปลงเวลาเป็นแบบลอเรนซ์ (P3 ในฐานะส่วนหนึ่งของการแปลงลอเรนซ์) |
+| โมเดล | `03_lanes/observation/uet_observation_layer.py` (เวลาหน่วง, ช่องว่าง), `uet_shared_record.py` (บันทึกร่วมต้องมีการสัมผัสเชิงเหตุผล), `uet_estimators.py` (Markov กับ history), `uet_field_causality.py` (สนาม ψ แพร่ใน light cone), `uet_pulsation_timing.py` (P2 กับดาวเต้นในระบบดาวคู่), `uet_two_signal_contact.py` (P4 เมื่อสัญญาณสองตัวมีความเร็วต่างกัน: t = d/(c_a + c_b)), `uet_lorentz_time.py` (P3: boost, ความพร้อมกันสัมพัทธ์ dt' = −γβdx, ค่า Ives–Stilwell), `uet_rms_light_speed.py` (ความเร็วแสงสองทางในกรอบ Robertson–Mansouri–Sexl) |
+| ตัวตรวจ | `05_tests/physics/test_observation_delay.py`, `test_shared_record_cone.py`, `test_markov_vs_history.py`, `test_field_causality.py`, `test_pulsation_timing.py`, `test_two_signal_contact.py`, `test_lorentz_time.py`, `test_rms_light_speed.py` |
+| เทียบข้อมูลจริง | T010 GW170817 (`t010_gw170817_carrier_speed.py`): คลื่นความโน้มถ่วงกับแสงวิ่งเร็วเท่ากัน ตามที่ c_T = 1 กำหนด (derive ใน `05_tests/physics/test_tensor_speed.py`); T011 ดาวเต้นในระบบดาวคู่ (`t011_pulsation_delay_vs_rv.py`): ช่องว่างเฟส = อัตรา × อายุบันทึก (P2); T012 หน้าคลื่นสหสัมพันธ์ใน Bose–Hubbard quench (`t012_correlation_front_bound.py`): บันทึกร่วมต้องผ่านอดีตร่วม (P4); T013 Ives–Stilwell (`t013_ives_stilwell_lorentz_time.py`): การแปลงเวลาเป็นแบบลอเรนซ์ (P3 ในฐานะส่วนหนึ่งของการแปลงลอเรนซ์); T022 Michelson–Morley และ Kennedy–Thorndike (`t022_michelson_morley_kennedy_thorndike.py`): ความยาวและความเร็วก็เป็นแบบลอเรนซ์ ทำให้การแปลงลอเรนซ์ครบเมื่อรวมกับ T013 |
 
 ## 3. ผลการทดสอบกับข้อมูลจริงทั้งหมด (`docs/standard/`)
 
-**นับรวม (2026-11-17):** 18 การ์ด (ไม่มีเลข T003, T004) · ผ่าน 14 · ไม่ชี้ขาด 2 (T002, T014) · **พัง 2 (T015, T018)** · ทุกตัวที่ผ่าน ฟิสิกส์มาตรฐานหรือ null ก็ผ่านด้วย จึง**ยังไม่มีการทดสอบไหนที่แยก UET ออกจากฟิสิกส์เดิมได้**
+**นับรวม (2026-11-18):** 21 การ์ด (ไม่มีเลข T003, T004) · ผ่าน 16 · ไม่ชี้ขาด 3 (T002, T014, T023) · **พัง 2 (T015, T018)** · ข้ออ้างใน claims.json 45 ข้อ: L1 25, L2 18, FAILED 2 · ทุกตัวที่ผ่าน ฟิสิกส์มาตรฐานหรือ null ก็ผ่านด้วย จึง**ยังไม่มีการทดสอบไหนที่แยก UET ออกจากฟิสิกส์เดิมได้**
 
 | Card | ชั้น | สรุป | ผล |
 |---|---|---|---|
@@ -83,6 +84,9 @@
 | T018 | 3 | อายุยืนสูงสุดของนก 128 ชนิดและสัตว์เลี้ยงลูกด้วยนม 170 ชนิด เทียบกับ τ = F/P: พลังงานตลอดชีวิตต่อกรัมไม่คงที่ ความชัน −0.114 (95%: −0.140 ถึง −0.088) และนกใช้มากกว่า 2.47 เท่า | **FAILED** (กฎชั้น 3 ใช้กับอายุของสัตว์แต่ละตัวไม่ได้ในขอบเขตที่ผู้เขียนประกาศ) |
 | T019 | 1 | การทดลอง Rot-Wash ปิดช่องว่างของ g_c ที่ระยะ 1 ซม.–100 กม.: g_c ≤ 1.3e-12 eV (ที่ 1 m ขึ้นไป) | L2 constraint |
 | T020 | 1 (เส้นทาง ข) | ถ้าการเผาพลังงานเป็นประจุของ ψ โลกกับดวงจันทร์จะตกต่างกัน: LLR ให้ τ_β ≤ 4.61e15 s (1.46e8 ปี) | L2 constraint |
+| T021 | 3 | เทคโนโลยีแสงสว่างที่เข้ามาแทนและอยู่รอด ไม่มีตัวไหนแย่กว่าตัวเดิมทั้งพลังงานและชั่วโมงทำงานต่อ lumen-hour (เวลานับเป็นทรัพยากร) | L2 PASS |
+| T022 | สังเกต | Michelson–Morley และ Kennedy–Thorndike ในกรอบ RMS: z_MM 0.50, z_KT 1.30 (แก้การ์ดครั้งหนึ่งเรื่องความแม่นยำของตัวเลข ก่อนรันใหม่) | L2 PASS (สัมพัทธภาพพิเศษมาตรฐานก็ผ่าน) |
+| T023 | 3 | ค้างคาวเทียบนก (ทุนพลังงานระดับสายพันธุ์): ค้างคาวสูงกว่าสัตว์เลี้ยงลูกด้วยนมอื่น 1.96 เท่า แต่ต่ำกว่านก (Δ −0.17) การบินอธิบายได้ราว 60% ของส่วนเกินของนก | L2 INCONCLUSIVE |
 
 การ์ดอยู่ที่ `docs/standard/tests/` ผลอยู่ที่ `docs/standard/results/` ระดับของทุกข้ออ้างอยู่ที่ `docs/standard/claims.json` · การ์ด T001–T013 บันทึกพาธสคริปต์เดิมเป็น `docs/core/...` ซึ่งตอนนี้คือ `core/...` (ย้ายโฟลเดอร์ 2026-11-14)
 
@@ -94,13 +98,14 @@
 |---|---|---|
 | `02_equations/matter_space/uet_master_equation.py` (Master Equation 7 เทอม) | **ไม่ใช่สมการหลักปัจจุบัน** AUTHOR_PROPOSITION §5 ระบุว่าเทอม Natural Will / Game ไม่ได้ implement ตรรกะของผู้เขียน | contract และ test เก่าอ้างถึง |
 | `docs/topics/For Work/` (30 ไฟล์) | แทนที่แล้วบางส่วนโดย `docs/STANDARD.md` ดู `SUPERSEDED_BY_STANDARD_V2.md` ในโฟลเดอร์นั้น: ไฟล์โครงสร้าง topic, README โค้ด, ข้อมูล, template **ยังใช้** (§15 ของ STANDARD); คำสถานะและลำดับขั้นงานเดิม**ถูกแทนที่** | contract 6 ฉบับล็อก hash ของไฟล์เหล่านี้ ถ้าย้ายหรือแก้จะพัง |
-| `docs/core/00_governance/`, `07_artifacts/`, audit script จำนวนมาก | ผลิตภัณฑ์ของระบบ gate เดิม (`LEGACY_UNREVIEWED`) | ใช้เป็นเครื่องมือวินิจฉัยได้ ไม่ควบคุมสถานะ |
+| `00_governance/` (ยกเว้น calculation contract), `07_artifacts/`, audit script จำนวนมาก | ผลิตภัณฑ์ของระบบ gate เดิม (`LEGACY_UNREVIEWED`) | ใช้เป็นเครื่องมือวินิจฉัยได้ ไม่ควบคุมสถานะ |
+| `08_history/archived_tests/`, `topics/0.10_*/Archive/tests/`, `topics/0.13_*/Archive/tests/` | test ป้าย C ที่พังหลังย้ายโฟลเดอร์ 2026-11-14 เก็บเข้าคลังตามที่ผู้เขียนตัดสิน (2026-11-18) ไม่ถูกรัน | README ของแต่ละคลังบอกว่าแต่ละไฟล์พังเพราะอะไร |
 | `08_history/research_notes/THOUGHT_EXPERIMENT_OBSERVATION_PAST_BEHAVIOR.md` | v2 ของ thought experiment ใช้คำว่า being ซึ่งผู้เขียนถอนแล้ว ใช้ [`THOUGHT_EXPERIMENT.md`](THOUGHT_EXPERIMENT.md) แทน | manifest และ inventory หลายไฟล์ล็อก hash ไว้ |
-| `docs/core/README.md` | มีถ้อยคำเก่า ไม่ใช่แหล่งควบคุมข้ออ้าง | ประวัติ |
+| `08_history/README_LEGACY_2026-11-14.md` | README เดิมของ core (engine Ω = C·I) มีถ้อยคำเก่า ไม่ใช่แหล่งควบคุมข้ออ้าง | ประวัติ (README ปัจจุบันเขียนใหม่ 2026-11-18) |
 
 ## 5. กฎการแก้ไฟล์
 
-- **ห้ามแก้** `docs/topics/For Work/` และ `docs/scripts/audit/audit_calculation_completeness.py` (มี contract ล็อก hash ไว้ ถ้าแก้ contract เหล่านั้นจะกลายเป็น STALE) ดู AGENTS.md §6.2
+- **ห้ามแก้** `docs/topics/For Work/` และ `docs/scripts/audit/audit_calculation_completeness.py` (มี contract ล็อก hash ไว้ ถ้าแก้ contract เหล่านั้นจะกลายเป็น STALE) ดู AGENTS.md §6.3
 - ข้ออ้างใหม่ต้องมี Test Card ที่ผู้เขียนอนุมัติก่อนรัน และ agent เลื่อนระดับเป็น L2 ขึ้นไปเองไม่ได้ (`docs/STANDARD.md` §4)
 - สมการใหม่ต้องมี physics test ที่ derive จริง (`@pytest.mark.physics`)
 
@@ -112,4 +117,5 @@
 4. **ชั้นสังเกตเชื่อมกับสมการหลักแค่เชิงเส้น** (สนาม ψ แบน 1+1D, O4) P1–P4 ทดสอบกับข้อมูลจริงครบแล้ว (T010–T013) โดย P3 ผ่านในฐานะส่วนหนึ่งของการแปลงเวลาลอเรนซ์ ไม่ใช่ความพร้อมกันเดี่ยวๆ
 5. ยังขาดการทดสอบกับข้อมูลจริงในเรื่อง "ทรัพยากรถูกตรึงที่ R*" (เลเซอร์, chemostat) และ negative control ที่คมพอ
 6. **(2026-11-17) ψ ยังไม่มีหลักฐานว่ามีอยู่จริง** การ์ด T005, T016, T019, T020 ให้แค่ขอบเขตบน ทุกข้อมูลเข้ากับ g_c = 0 ซึ่งตรงกับที่ผู้เขียนอธิบายว่าโครงสร้างของ space เป็นบันทึกของสิ่งที่เกิดขึ้นแล้ว ไม่ใช่แรง
-7. **(2026-11-17) กฎชั้น 3 มีขอบเขตที่พังแล้ว** T018 แสดงว่า τ = F/P ใช้กับอายุของสัตว์แต่ละตัวไม่ได้ ส่วนระดับสายพันธุ์ยังไม่ได้ทดสอบ (topic 0.23 `STRESS_09`)
+7. **(2026-11-17) กฎชั้น 3 มีขอบเขตที่พังแล้ว** T018 แสดงว่า τ = F/P ใช้กับอายุของสัตว์แต่ละตัวไม่ได้ ระดับสายพันธุ์ทดสอบแล้วใน T023 (ค้างคาวเทียบนก): การบินอธิบายได้ราว 60% ของส่วนเกินของนก ผลไม่ชี้ขาด
+8. **(2026-11-18) ชั้น 3 ลดรูปเป็น Lotka–Volterra ของ Saavedra et al. (2025) ทีละเทอม** (`C_L3_LV_MAP`, L1) ต่างกันสองจุด: แหล่งทรัพยากรเดียวทำให้เหลือผู้ชนะคนเดียว และอัตราการตายมาจาก P/F

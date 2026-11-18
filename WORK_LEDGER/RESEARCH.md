@@ -6,10 +6,11 @@
 
 These are source-linked historical records, not proof of completed research, successful publication, or current scientific readiness.
 
-Indexed entries: 697. Counts describe records, not accomplishments.
+Indexed entries: 698. Counts describe records, not accomplishments.
 
 | Date | Record | Area | Notes |
 | --- | --- | --- | --- |
+| 2026-11-18 | [Core alignment W10: core docs and complete register](2026/2026-11-18.md#core-alignment-w10-core-docs-and-complete-register) (L275) | research-core | explicit_stream_and_area |
 | 2026-11-18 | [Runner rule: topics without a suite are advisory](2026/2026-11-18.md#runner-rule-topics-without-a-suite-are-advisory) (L265) | research-standards | explicit_stream_and_area |
 | 2026-11-18 | [CI follow-up on PR #64](2026/2026-11-18.md#ci-follow-up-on-pr-64) (L254) | research-core | explicit_stream_and_area |
 | 2026-11-18 | [Core alignment W9: governance, data and history](2026/2026-11-18.md#core-alignment-w9-governance-data-and-history) (L244) | research-core | explicit_stream_and_area |

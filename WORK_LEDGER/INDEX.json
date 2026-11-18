@@ -5,11 +5,11 @@
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
     "sources": 81,
-    "entries": 926,
+    "entries": 927,
     "by_stream": {
       "book-history": 94,
       "operations": 134,
-      "research": 697,
+      "research": 698,
       "review": 1
     },
     "exact_duplicates": 0,
@@ -420,8 +420,8 @@
     },
     {
       "path": "2026/2026-11-18.md",
-      "sha256": "14de6539a814f4d304276960ce8468c0eca3c45afe3b10d0cf4b8a62df108640",
-      "entries": 27
+      "sha256": "fc29031919fedc7b0a945d276a71b4e14264d612c8972044aa38a057648bccb3",
+      "entries": 28
     },
     {
       "path": "2026-08-14.md",
@@ -18901,12 +18901,32 @@
       "source": "2026/2026-11-18.md",
       "anchor": "runner-rule-topics-without-a-suite-are-advisory",
       "start_line": 265,
-      "end_line": 273,
+      "end_line": 274,
       "title": "Runner rule: topics without a suite are advisory",
-      "entry_sha256": "a1f5d903781dbee1e78278d7b922011d447ad369c0fe81f5e7b4fd1ff79eb2d5",
+      "entry_sha256": "732faab07ccae93f65433f000ba2e22847ebd518a20e06a3f4dddee8d4423ff6",
       "stream": "research",
       "areas": [
         "research-standards"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-18",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-18.md#core-alignment-w10-core-docs-and-complete-register",
+      "source": "2026/2026-11-18.md",
+      "anchor": "core-alignment-w10-core-docs-and-complete-register",
+      "start_line": 275,
+      "end_line": 283,
+      "title": "Core alignment W10: core docs and complete register",
+      "entry_sha256": "f2e430e693cb65840ae76b76a573584965ab5190c83c4bfa6dc7b2af901db017",
+      "stream": "research",
+      "areas": [
+        "research-core"
       ],
       "related_streams": [
         "research"
