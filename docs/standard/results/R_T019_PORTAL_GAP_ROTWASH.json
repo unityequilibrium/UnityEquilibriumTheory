@@ -1,0 +1,76 @@
+{
+  "schema": "uet-result-v2",
+  "result_id": "R_T019_PORTAL_GAP_ROTWASH",
+  "claim_id": "C_T019_PORTAL_G_C_GAP",
+  "level": "L2_CONFRONTED",
+  "test_card_id": "T019",
+  "outcome": "PASS",
+  "numbers": [
+    {
+      "name": "alpha_max_lambda_0p01m",
+      "value": 0.496,
+      "uncertainty": null,
+      "unit": "1"
+    },
+    {
+      "name": "alpha_max_lambda_0p1m",
+      "value": 2.47e-05,
+      "uncertainty": null,
+      "unit": "1"
+    },
+    {
+      "name": "alpha_max_lambda_1m",
+      "value": 6.64e-06,
+      "uncertainty": null,
+      "unit": "1"
+    },
+    {
+      "name": "alpha_max_lambda_2m_to_1e5m",
+      "value": 6.43e-06,
+      "uncertainty": null,
+      "unit": "1"
+    },
+    {
+      "name": "g_c_max_lambda_0p01m",
+      "value": 3.61e-10,
+      "uncertainty": null,
+      "unit": "eV"
+    },
+    {
+      "name": "g_c_max_lambda_1m",
+      "value": 1.32e-12,
+      "uncertainty": null,
+      "unit": "eV"
+    },
+    {
+      "name": "g_c_max_lambda_2m_to_1e5m",
+      "value": 1.3e-12,
+      "uncertainty": null,
+      "unit": "eV"
+    },
+    {
+      "name": "m_psi_range_covered",
+      "value": "1.97e-12 to 1.97e-5",
+      "uncertainty": null,
+      "unit": "eV"
+    },
+    {
+      "name": "signal_z",
+      "value": 0.36,
+      "uncertainty": null,
+      "unit": "1"
+    }
+  ],
+  "producer": {
+    "script": "core/03_lanes/scalar_tensor/t019_portal_gap_rotwash.py",
+    "commit": "321d5e7ad"
+  },
+  "artifacts": [],
+  "date": "2026-11-17",
+  "approval": {
+    "approved_by": "santxkoz",
+    "date": "2026-11-17",
+    "role": "AUTHOR"
+  },
+  "note": "PASS by the preregistered rule: alpha_max is positive and finite at all 19 ranges and the Rot-Wash signal is 0.36 sigma from zero. With the nucleon-number portal lane the coupling is limited to alpha <= 6.4e-6 (g_c <= 1.30e-12 eV) for 2 m <= lambda <= 1e5 m, closing the registered gap between the T005 torsion-balance anchor and the T016 MICROSCOPE range down to 1 cm. Beyond 50 m the sensitivity is held at its 50 m value (Earth term <= 1.4 percent). Not blind; constraint only; not UET-distinct (any baryon-coupled scalar). Transcription from search-tool full text, not the printed page. L2 approved by the author on 2026-11-17."
+}

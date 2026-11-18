@@ -1,0 +1,45 @@
+{
+  "schema": "uet-test-card-v2",
+  "test_id": "T020",
+  "status": "CLOSED",
+  "claim_id": "C_ROUTE_B_DISSIPATION_COUPLING",
+  "theory_card": {
+    "card_id": "UET_PARENT",
+    "version": 1
+  },
+  "hypothesis": "Route B: if the rate of free-energy destruction sources psi with a reciprocal coupling, the Earth and the Moon, whose absorbed sunlight per unit mass differs, fall toward the Sun at different rates: Delta = (m_G/m_I)_E - (m_G/m_I)_M = -tau_beta^2 x_Sun (x_Moon - x_Earth), x = (P/M)/c^2. Lunar laser ranging then limits tau_beta.",
+  "observable": {
+    "quantity": "upper bound tau_beta_max on the shared route-B time constant",
+    "unit": "s",
+    "domain": "Earth-Moon system falling toward the Sun; psi range much longer than 1 AU (m_psi below about 1e-18 eV)"
+  },
+  "test_kind": "CONSTRAINT",
+  "data_sources": [
+    {
+      "data_id": "LLR_EP_EARTH_MOON",
+      "role": "COMPARISON",
+      "exposure": "SEEN_SUMMARY"
+    }
+  ],
+  "prediction_method": {
+    "script": "core/03_lanes/scalar_tensor/t020_route_b_llr.py",
+    "description": "x_Sun = L/(M c^2); x_Earth, x_Moon = ((1 - Bond albedo) S pi R^2 + internal heat)/(M c^2); mass-portal term set to zero (a = 0); tau_beta_max = sqrt((2 sigma - Delta_obs)/(x_Sun (x_Moon - x_Earth))) with the Biskupek et al. 2021 record. Reported, not deciding: Williams et al. 2012 record, worst-case mass-portal cross term (|sqrt(alpha)| <= 2.26e-6 from T016), Delta predicted for tau_beta = 1/H0."
+  },
+  "free_parameters": [],
+  "fixed_parameters": [
+    "P = rate of free-energy destruction: luminosity for the Sun, absorbed sunlight plus internal heat for Earth and Moon (AI choice)",
+    "Bond albedo 0.306 (Earth), 0.11 (Moon); internal heat 47 TW (Earth), 0 (Moon); S = 1361 W/m^2",
+    "a = 0 in the primary bound (pure route B)",
+    "psi range much longer than 1 AU",
+    "two-sided Gaussian 2 sigma on the published value, used on the side the model predicts (Delta <= 0)"
+  ],
+  "pass_criterion": "PASS if tau_beta = 0 is admissible (Delta_obs + 2 sigma >= 0) and tau_beta_max is finite; the Result reports tau_beta_max in s and yr and the not-deciding numbers.",
+  "fail_criterion": "FAILED only if the data required Delta < 0 beyond 2 sigma while the claim allows tau_beta = 0; with Delta = (-2.1 +- 2.4) x 1e-14 this does not apply. INCONCLUSIVE if the abstract value disagrees with the full text by more than 20 percent in sigma.",
+  "drafted_by": "claude",
+  "note": "Disclosure: not blind and the outcome is fixed. While drafting, the drafter computed tau_beta_max of about 4.6e15 s (about 1.5e8 yr) from the primary record; the benchmark tau_beta = 1/H0 would give |Delta| about 1e4 times the allowed value. The benchmark is an AI choice, not an author requirement, so it does not decide the outcome; the author has not fixed any minimum for tau_beta (the author does not know its value; it is a research question). The model is an AI proposal (route B) that is not in the approved Theory Card. Measured Delta is negative, the same sign the model predicts, which loosens the bound on the predicted side. Approved by the author on 2026-11-17 as drafted (\"Approve T020\"), without a full-text check of the LLR uncertainty.",
+  "approval": {
+    "approved_by": "santxkoz",
+    "date": "2026-11-17",
+    "role": "AUTHOR"
+  }
+}

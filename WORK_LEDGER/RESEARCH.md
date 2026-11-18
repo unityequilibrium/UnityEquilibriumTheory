@@ -6,10 +6,102 @@
 
 These are source-linked historical records, not proof of completed research, successful publication, or current scientific readiness.
 
-Indexed entries: 606. Counts describe records, not accomplishments.
+Indexed entries: 698. Counts describe records, not accomplishments.
 
 | Date | Record | Area | Notes |
 | --- | --- | --- | --- |
+| 2026-11-18 | [Core alignment W10: core docs and complete register](2026/2026-11-18.md#core-alignment-w10-core-docs-and-complete-register) (L275) | research-core | explicit_stream_and_area |
+| 2026-11-18 | [Runner rule: topics without a suite are advisory](2026/2026-11-18.md#runner-rule-topics-without-a-suite-are-advisory) (L265) | research-standards | explicit_stream_and_area |
+| 2026-11-18 | [CI follow-up on PR #64](2026/2026-11-18.md#ci-follow-up-on-pr-64) (L254) | research-core | explicit_stream_and_area |
+| 2026-11-18 | [Core alignment W9: governance, data and history](2026/2026-11-18.md#core-alignment-w9-governance-data-and-history) (L244) | research-core | explicit_stream_and_area |
+| 2026-11-18 | [Core alignment W8: artifacts labelled, failing legacy tests archived](2026/2026-11-18.md#core-alignment-w8-artifacts-labelled-failing-legacy-tests-archived) (L234) | research-core | explicit_stream_and_area |
+| 2026-11-18 | [W7 repair: stale hashes after the root move](2026/2026-11-18.md#w7-repair-stale-hashes-after-the-root-move) (L223) | research-core | explicit_stream_and_area |
+| 2026-11-18 | [Core alignment W7: test labels and the CI cause](2026/2026-11-18.md#core-alignment-w7-test-labels-and-the-ci-cause) (L213) | research-core | explicit_stream_and_area |
+| 2026-11-18 | [Core alignment W6: contracts, proofs and review](2026/2026-11-18.md#core-alignment-w6-contracts-proofs-and-review) (L203) | research-core | explicit_stream_and_area |
+| 2026-11-18 | [T023 result at L2 (INCONCLUSIVE)](2026/2026-11-18.md#t023-result-at-l2-inconclusive) (L193) | research-core | explicit_stream_and_area |
+| 2026-11-18 | [T023 run: INCONCLUSIVE, bats between other mammals and birds](2026/2026-11-18.md#t023-run-inconclusive-bats-between-other-mammals-and-birds) (L183) | research-core | explicit_stream_and_area |
+| 2026-11-18 | [Species-level reserve and Test Card T023 draft (bats)](2026/2026-11-18.md#species-level-reserve-and-test-card-t023-draft-bats) (L173) | research-core | explicit_stream_and_area |
+| 2026-11-18 | [Layer 3 mapped onto Saavedra et al. 2025 (SFI metabolic coexistence)](2026/2026-11-18.md#layer-3-mapped-onto-saavedra-et-al-2025-sfi-metabolic-coexistence) (L163) | research-core | explicit_stream_and_area |
+| 2026-11-18 | [SFI scaling theory against UET layer 3](2026/2026-11-18.md#sfi-scaling-theory-against-uet-layer-3) (L153) | research-core | explicit_stream_and_area |
+| 2026-11-18 | [Core alignment W5: thermal and topic13_support](2026/2026-11-18.md#core-alignment-w5-thermal-and-topic13_support) (L143) | research-core | explicit_stream_and_area |
+| 2026-11-18 | [Core alignment W4: o2](2026/2026-11-18.md#core-alignment-w4-o2) (L133) | research-core | explicit_stream_and_area |
+| 2026-11-18 | [T022 result at L2](2026/2026-11-18.md#t022-result-at-l2) (L123) | research-core | explicit_stream_and_area |
+| 2026-11-18 | [T022 rerun under amendment 1: PASS](2026/2026-11-18.md#t022-rerun-under-amendment-1-pass) (L113) | research-core | explicit_stream_and_area |
+| 2026-11-18 | [T022 run: FAILED by a numerical defect in the approved script](2026/2026-11-18.md#t022-run-failed-by-a-numerical-defect-in-the-approved-script) (L103) | research-core | explicit_stream_and_area |
+| 2026-11-18 | [O8 and T022 draft: Michelson-Morley and Kennedy-Thorndike](2026/2026-11-18.md#o8-and-t022-draft-michelson-morley-and-kennedy-thorndike) (L93) | research-core | explicit_stream_and_area |
+| 2026-11-18 | [Core alignment W3: matter_space](2026/2026-11-18.md#core-alignment-w3-matter_space) (L83) | research-core | explicit_stream_and_area |
+| 2026-11-18 | [Core alignment W2: active lanes and engine](2026/2026-11-18.md#core-alignment-w2-active-lanes-and-engine) (L73) | research-core | explicit_stream_and_area |
+| 2026-11-18 | [Core alignment W1: covariant and lorentz_noether](2026/2026-11-18.md#core-alignment-w1-covariant-and-lorentz_noether) (L63) | research-core | explicit_stream_and_area |
+| 2026-11-18 | [Agent guide: no lead agent, one folder, verify other agents' claims](2026/2026-11-18.md#agent-guide-no-lead-agent-one-folder-verify-other-agents-claims) (L43) | research-standards | explicit_stream_and_area |
+| 2026-11-18 | [Stage 2 of test D: transport w_T design check](2026/2026-11-18.md#stage-2-of-test-d-transport-w_t-design-check) (L13) | research-core | explicit_stream_and_area |
+| 2026-11-18 | [T021 result at L2](2026/2026-11-18.md#t021-result-at-l2) (L3) | research-core | explicit_stream_and_area |
+| 2026-11-17 | [T021 run: lighting succession PASS](2026/2026-11-17.md#t021-run-lighting-succession-pass) (L363) | research-core | explicit_stream_and_area |
+| 2026-11-17 | [T021 draft: lighting succession](2026/2026-11-17.md#t021-draft-lighting-succession) (L353) | research-core | explicit_stream_and_area |
+| 2026-11-17 | [Topic 0.25: knowledge from interaction (Newton, Einstein)](2026/2026-11-17.md#topic-025-knowledge-from-interaction-newton-einstein) (L343) | research-core | explicit_stream_and_area |
+| 2026-11-17 | [Topic 0.25: innovation as lower resource cost per service](2026/2026-11-17.md#topic-025-innovation-as-lower-resource-cost-per-service) (L333) | research-core | explicit_stream_and_area |
+| 2026-11-17 | [Topic 0.25: external energy as a two-level system](2026/2026-11-17.md#topic-025-external-energy-as-a-two-level-system) (L323) | research-core | explicit_stream_and_area |
+| 2026-11-17 | [Stress test 10: is psi needed](2026/2026-11-17.md#stress-test-10-is-psi-needed) (L313) | research-core | explicit_stream_and_area |
+| 2026-11-17 | [Core summary shows all tests T001-T020](2026/2026-11-17.md#core-summary-shows-all-tests-t001-t020) (L303) | research-core | explicit_stream_and_area |
+| 2026-11-17 | [Author choice: P = whole-animal use](2026/2026-11-17.md#author-choice-p--whole-animal-use) (L293) | research-core | explicit_stream_and_area |
+| 2026-11-17 | [0.23 stress test 09: species-survival design](2026/2026-11-17.md#023-stress-test-09-species-survival-design) (L283) | research-core | explicit_stream_and_area |
+| 2026-11-17 | [0.23 stress test 08: four distinct candidates](2026/2026-11-17.md#023-stress-test-08-four-distinct-candidates) (L273) | research-core | explicit_stream_and_area |
+| 2026-11-17 | [0.23 stress test 07: psi and the quantum vacuum](2026/2026-11-17.md#023-stress-test-07-psi-and-the-quantum-vacuum) (L263) | research-core | explicit_stream_and_area |
+| 2026-11-17 | [0.23 stress test 06: what psi could be](2026/2026-11-17.md#023-stress-test-06-what-psi-could-be) (L253) | research-core | explicit_stream_and_area |
+| 2026-11-17 | [0.3 late-time G variation (EMG branch)](2026/2026-11-17.md#03-late-time-g-variation-emg-branch) (L243) | research-core | explicit_stream_and_area |
+| 2026-11-17 | [0.3 parent action and Early Modified Gravity](2026/2026-11-17.md#03-parent-action-and-early-modified-gravity) (L233) | research-core | explicit_stream_and_area |
+| 2026-11-17 | [0.3 starlight trace versus H0](2026/2026-11-17.md#03-starlight-trace-versus-h0) (L223) | research-core | explicit_stream_and_area |
+| 2026-11-17 | [0.23 stress test 05: information budget](2026/2026-11-17.md#023-stress-test-05-information-budget) (L213) | research-core | explicit_stream_and_area |
+| 2026-11-17 | [Author reading of item 7 recorded](2026/2026-11-17.md#author-reading-of-item-7-recorded) (L203) | research-core | explicit_stream_and_area |
+| 2026-11-17 | [0.23 stress test 04: route-B minimum](2026/2026-11-17.md#023-stress-test-04-route-b-minimum) (L193) | research-core | explicit_stream_and_area |
+| 2026-11-17 | [T020 result at L2](2026/2026-11-17.md#t020-result-at-l2) (L183) | research-core | explicit_stream_and_area |
+| 2026-11-17 | [T020 route B: run](2026/2026-11-17.md#t020-route-b-run) (L173) | research-core | explicit_stream_and_area |
+| 2026-11-17 | [T020 draft: route B with lunar laser ranging](2026/2026-11-17.md#t020-draft-route-b-with-lunar-laser-ranging) (L163) | research-core | explicit_stream_and_area |
+| 2026-11-17 | [T019 result at L2](2026/2026-11-17.md#t019-result-at-l2) (L153) | research-core | explicit_stream_and_area |
+| 2026-11-17 | [T019 portal gap: run](2026/2026-11-17.md#t019-portal-gap-run) (L143) | research-core | explicit_stream_and_area |
+| 2026-11-17 | [0.23 candidates: Yukawa gap, T002/T014 data, route B](2026/2026-11-17.md#023-candidates-yukawa-gap-t002t014-data-route-b) (L133) | research-core | explicit_stream_and_area |
+| 2026-11-17 | [T018 cross-species lifespan: FAILED](2026/2026-11-17.md#t018-cross-species-lifespan-failed) (L123) | research-core | explicit_stream_and_area |
+| 2026-11-17 | [0.23 stress test 02: layer 3 scope](2026/2026-11-17.md#023-stress-test-02-layer-3-scope) (L113) | research-core | explicit_stream_and_area |
+| 2026-11-17 | [0.23 stress test 01: cross-scale layer 3](2026/2026-11-17.md#023-stress-test-01-cross-scale-layer-3) (L103) | research-core | explicit_stream_and_area |
+| 2026-11-17 | [Topic 0.23 rebuilt as the theory stress test](2026/2026-11-17.md#topic-023-rebuilt-as-the-theory-stress-test) (L93) | research-core | explicit_stream_and_area |
+| 2026-11-17 | [T017 result at L2](2026/2026-11-17.md#t017-result-at-l2) (L83) | research-standards | explicit_stream_and_area |
+| 2026-11-17 | [Run T017 (yeast doubling time from cycle times)](2026/2026-11-17.md#run-t017-yeast-doubling-time-from-cycle-times) (L73) | research-core | explicit_stream_and_area |
+| 2026-11-17 | [Unequal-division layer 3 and draft T017 (yeast)](2026/2026-11-17.md#unequal-division-layer-3-and-draft-t017-yeast) (L63) | research-core | explicit_stream_and_area |
+| 2026-11-17 | [T017 data search, round 3 (yeast)](2026/2026-11-17.md#t017-data-search-round-3-yeast) (L53) | research-core | explicit_stream_and_area |
+| 2026-11-17 | [T017 data search, round 2](2026/2026-11-17.md#t017-data-search-round-2) (L43) | research-core | explicit_stream_and_area |
+| 2026-11-17 | [T017 design draft: cell-cycle abundance (topic 0.22)](2026/2026-11-17.md#t017-design-draft-cell-cycle-abundance-topic-022) (L33) | research-core | explicit_stream_and_area |
+| 2026-11-17 | [Topic 0.22 through the engine (layers 2-3): abundance in growing populations](2026/2026-11-17.md#topic-022-through-the-engine-layers-2-3-abundance-in-growing-populations) (L23) | research-core | explicit_stream_and_area |
+| 2026-11-17 | [T016 result at L2](2026/2026-11-17.md#t016-result-at-l2) (L13) | research-core | explicit_stream_and_area |
+| 2026-11-17 | [T016 run: MICROSCOPE bound on the portal](2026/2026-11-17.md#t016-run-microscope-bound-on-the-portal) (L3) | research-core | explicit_stream_and_area |
+| 2026-11-16 | [Topic 0.19 through the engine; draft T016 (MICROSCOPE)](2026/2026-11-16.md#topic-019-through-the-engine-draft-t016-microscope) (L212) | research-core | explicit_stream_and_area |
+| 2026-11-16 | [Repair Test Card producers T001-T013 after root relocation](2026/2026-11-16.md#repair-test-card-producers-t001-t013-after-root-relocation) (L202) | research-core | explicit_stream_and_area |
+| 2026-11-16 | [Interim research report 2026-11-09 to 2026-11-16](2026/2026-11-16.md#interim-research-report-2026-11-09-to-2026-11-16) (L192) | research-core | explicit_stream_and_area |
+| 2026-11-16 | [Engine pilot: stars (layers 2-3)](2026/2026-11-16.md#engine-pilot-stars-layers-2-3) (L182) | research-core | explicit_stream_and_area |
+| 2026-11-16 | [UET engine draft (core/engine)](2026/2026-11-16.md#uet-engine-draft-coreengine) (L172) | research-core | explicit_stream_and_area |
+| 2026-11-16 | [Decision: Topic 13 He-4 Phi is a phenomenological closure](2026/2026-11-16.md#decision-topic-13-he-4-phi-is-a-phenomenological-closure) (L162) | research-core | explicit_stream_and_area |
+| 2026-11-16 | [T015 run: He II at tree level, FAILED](2026/2026-11-16.md#t015-run-he-ii-at-tree-level-failed) (L152) | research-core | explicit_stream_and_area |
+| 2026-11-16 | [T015 draft: He II at tree level from the parent action](2026/2026-11-16.md#t015-draft-he-ii-at-tree-level-from-the-parent-action) (L142) | research-core | explicit_stream_and_area |
+| 2026-11-16 | [SI-1: parent action in SI units for a Bose fluid](2026/2026-11-16.md#si-1-parent-action-in-si-units-for-a-bose-fluid) (L132) | research-core | explicit_stream_and_area |
+| 2026-11-16 | [Topic screen for UET-distinct candidates](2026/2026-11-16.md#topic-screen-for-uet-distinct-candidates) (L122) | research-core | explicit_stream_and_area |
+| 2026-11-16 | [T014 run and L2 record](2026/2026-11-16.md#t014-run-and-l2-record) (L112) | research-standards | explicit_stream_and_area |
+| 2026-11-16 | [T002 stellar-model systematic and draft T014](2026/2026-11-16.md#t002-stellar-model-systematic-and-draft-t014) (L102) | research-core | explicit_stream_and_area |
+| 2026-11-16 | [B8: layers 2-3 for psi with matter as its bath](2026/2026-11-16.md#b8-layers-2-3-for-psi-with-matter-as-its-bath) (L92) | research-core | explicit_stream_and_area |
+| 2026-11-16 | [B7: layer-3 burn power from the closed system](2026/2026-11-16.md#b7-layer-3-burn-power-from-the-closed-system) (L82) | research-core | explicit_stream_and_area |
+| 2026-11-16 | [B6: psi friction derived from the parent action](2026/2026-11-16.md#b6-psi-friction-derived-from-the-parent-action) (L72) | research-core | explicit_stream_and_area |
+| 2026-11-11 | [B5: search for a UET-distinct prediction and the bound on portal drag](2026/2026-11-11.md#b5-search-for-a-uet-distinct-prediction-and-the-bound-on-portal-drag) (L200) | research-core | explicit_stream_and_area |
+| 2026-11-11 | [T013 result at L2: P3 through the Ives-Stilwell observable](2026/2026-11-11.md#t013-result-at-l2-p3-through-the-ives-stilwell-observable) (L186) | research-standards | explicit_stream_and_area |
+| 2026-11-11 | [O7 model and T013 draft: P3 through the Ives-Stilwell observable](2026/2026-11-11.md#o7-model-and-t013-draft-p3-through-the-ives-stilwell-observable) (L171) | research-standards | explicit_stream_and_area |
+| 2026-11-11 | [T012 result at L2: P4 with a Bose-Hubbard quench](2026/2026-11-11.md#t012-result-at-l2-p4-with-a-bose-hubbard-quench) (L157) | research-standards | explicit_stream_and_area |
+| 2026-11-11 | [O6 model and T012 draft: P4 with a quenched quantum chain](2026/2026-11-11.md#o6-model-and-t012-draft-p4-with-a-quenched-quantum-chain) (L143) | research-standards | explicit_stream_and_area |
+| 2026-11-11 | [T011 result at L2: P2 with pulsating binaries](2026/2026-11-11.md#t011-result-at-l2-p2-with-pulsating-binaries) (L130) | research-standards | explicit_stream_and_area |
+| 2026-11-11 | [O5 model and T011 draft: P2 with pulsating binaries](2026/2026-11-11.md#o5-model-and-t011-draft-p2-with-pulsating-binaries) (L116) | research-standards | explicit_stream_and_area |
+| 2026-11-11 | [T010 result at L2: GW170817 carrier speed](2026/2026-11-11.md#t010-result-at-l2-gw170817-carrier-speed) (L103) | research-standards | explicit_stream_and_area |
+| 2026-11-11 | [T010 draft: GW170817 carrier speed](2026/2026-11-11.md#t010-draft-gw170817-carrier-speed) (L90) | research-standards | explicit_stream_and_area |
+| 2026-11-11 | [Records and corrections for the observation layer](2026/2026-11-11.md#records-and-corrections-for-the-observation-layer) (L76) | research-standards | explicit_stream_and_area |
+| 2026-11-11 | [O4: the parent-action scalar field propagates inside the light cone](2026/2026-11-11.md#o4-the-parent-action-scalar-field-propagates-inside-the-light-cone) (L61) | research-core | explicit_stream_and_area |
+| 2026-11-11 | [O3: Markov versus history-dependent estimators](2026/2026-11-11.md#o3-markov-versus-history-dependent-estimators) (L47) | research-core | explicit_stream_and_area |
+| 2026-11-11 | [O2: a shared record exists only after causal contact](2026/2026-11-11.md#o2-a-shared-record-exists-only-after-causal-contact) (L32) | research-core | explicit_stream_and_area |
+| 2026-11-11 | [O1: delayed observation and gap = rate x record age](2026/2026-11-11.md#o1-delayed-observation-and-gap--rate-x-record-age) (L18) | research-core | explicit_stream_and_area |
+| 2026-11-11 | [Thought experiment v3: remove the being and eternity claims](2026/2026-11-11.md#thought-experiment-v3-remove-the-being-and-eternity-claims) (L3) | research-core | explicit_stream_and_area |
 | 2026-11-10 | [CORE_MAP: single map of the core equation files](2026/2026-11-10.md#core_map-single-map-of-the-core-equation-files) (L259) | research-standards | explicit_stream_and_area |
 | 2026-11-10 | [T008 and T009 results at L2; path-A summary table](2026/2026-11-10.md#t008-and-t009-results-at-l2-path-a-summary-table) (L245) | research-core | explicit_stream_and_area |
 | 2026-11-10 | [Path-A batch: feasibility, new models, T008 and T009 drafts](2026/2026-11-10.md#path-a-batch-feasibility-new-models-t008-and-t009-drafts) (L229) | research-core | explicit_stream_and_area |

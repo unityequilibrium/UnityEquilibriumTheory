@@ -1,0 +1,46 @@
+{
+  "schema": "uet-result-v2",
+  "result_id": "R_L3_ASYMMETRIC_DIVISION",
+  "claim_id": "C_L3_ASYMMETRIC_DIVISION",
+  "level": "L1_CONSISTENT",
+  "outcome": "PASS",
+  "numbers": [
+    {
+      "name": "equal_division_limit_T_over_P",
+      "value": 1.0,
+      "uncertainty": null,
+      "unit": "1"
+    },
+    {
+      "name": "agent_vs_formula_doubling_time",
+      "value": "<= 1 percent",
+      "uncertainty": null,
+      "unit": "relative"
+    },
+    {
+      "name": "agent_vs_formula_unbudded_daughter_fraction",
+      "value": "<= 0.015",
+      "uncertainty": null,
+      "unit": "absolute"
+    },
+    {
+      "name": "reproduced_published_T_calc_P132_D203",
+      "value": 164.9,
+      "uncertainty": null,
+      "unit": "min"
+    },
+    {
+      "name": "reproduced_published_u_d_P132_D203",
+      "value": 0.821,
+      "uncertainty": null,
+      "unit": "1"
+    }
+  ],
+  "producer": {
+    "script": "core/05_tests/physics/test_asymmetric_division.py",
+    "commit": "4c9de91eb"
+  },
+  "artifacts": [],
+  "date": "2026-11-17",
+  "note": "Derivation for topic 0.22 (yeast). Not UET-distinct."
+}

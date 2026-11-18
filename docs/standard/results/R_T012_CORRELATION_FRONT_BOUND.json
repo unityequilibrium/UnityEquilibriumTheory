@@ -1,0 +1,76 @@
+{
+  "schema": "uet-result-v2",
+  "result_id": "R_T012_CORRELATION_FRONT_BOUND",
+  "claim_id": "C_T012_COMMON_PAST_CONTACT",
+  "test_card_id": "T012",
+  "level": "L2_CONFRONTED",
+  "outcome": "PASS",
+  "numbers": [
+    {
+      "name": "UJ7_v_front",
+      "value": "5.6",
+      "uncertainty": "0.5",
+      "unit": "J a_lat/hbar"
+    },
+    {
+      "name": "UJ7_v_bound_common_past",
+      "value": "5.78",
+      "uncertainty": null,
+      "unit": "J a_lat/hbar"
+    },
+    {
+      "name": "UJ7_excess",
+      "value": "-0.36",
+      "uncertainty": null,
+      "unit": "sigma"
+    },
+    {
+      "name": "UJ7_excess_direct_only",
+      "value": "3.9",
+      "uncertainty": null,
+      "unit": "sigma"
+    },
+    {
+      "name": "UJ9_v_front",
+      "value": "5.0",
+      "uncertainty": "0.2",
+      "unit": "J a_lat/hbar"
+    },
+    {
+      "name": "UJ9_v_bound_common_past",
+      "value": "5.87",
+      "uncertainty": null,
+      "unit": "J a_lat/hbar"
+    },
+    {
+      "name": "UJ9_excess",
+      "value": "-4.35",
+      "uncertainty": null,
+      "unit": "sigma"
+    },
+    {
+      "name": "UJ9_excess_direct_only",
+      "value": "6.0",
+      "uncertainty": null,
+      "unit": "sigma"
+    },
+    {
+      "name": "UJ5_excess_not_deciding",
+      "value": "0.41",
+      "uncertainty": null,
+      "unit": "sigma"
+    }
+  ],
+  "producer": {
+    "script": "docs/core/03_lanes/observation/t012_correlation_front_bound.py",
+    "commit": "43bab6cdf"
+  },
+  "artifacts": [],
+  "date": "2026-11-11",
+  "approval": {
+    "approved_by": "santxkoz",
+    "date": "2026-11-11",
+    "role": "AUTHOR"
+  },
+  "note": "PASS under Test Card T012 (approved 43bab6cdf). For the systems inside the source model's validity (U/J = 7 and 9) the correlation front stays below the common-past bound c_a + c_b. The measured front exceeds the direct-contact-only bound by 3.9 and 6.0 sigma (diagnostic, not part of the outcome), so correlations form faster than any single signal could reach the other site; contact through a common past is needed, as O2 found. U/J = 5 is outside the model validity and does not decide (excess +0.41 sigma). Registered velocities and the validity statement re-checked against the source before the run. Standard quasiparticle/Lieb-Robinson physics passes equally; not UET-distinct. L2 approved by the author on 2026-11-11."
+}

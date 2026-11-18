@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "artifact": "curved_3p1_gh_time_evolution_verification",
-  "generated_at": "2026-09-17T21:29:00.902075+00:00",
+  "generated_at": "2026-11-18T12:34:33.526198+00:00",
   "status": "PASS_GH_PERIODIC_VACUUM_TIME_EVOLUTION",
   "thresholds": {
     "maximum_cfl": 0.2,
@@ -266,10 +266,10 @@
   },
   "source_hashes": {
     "docs/data/external/gr_3p1/lindblom_et_al_2006_gh/source_record.json": "c3812246cabdc3e4de2cb266945a0355bc0d64b7ae1d041507e764fe0199d08a",
-    "docs/core/07_artifacts/verification/curved_3p1_gh_nonlinear_vacuum_rhs_verification.json": "4e6cfc7a95b583cacf9cf2281518b926beaf14b82be0db6b914ecc668d04ec26",
-    "docs/core/07_artifacts/correspondence/curved_3p1_gh_nonlinear_vacuum_formula_audit.json": "7be3f6932da6aa746db966737de1d3b738006a99a274cbd4466e53c7fc6a521d",
-    "docs/core/07_artifacts/gates/curved_3p1_gh_nonlinear_vacuum_gate.json": "9fdc47c11f667acf505bba214310df3f358b6e0cfef63127539d9d0ae3635d42",
-    "docs/core/02_equations/covariant/uet_curved_3p1_gh_evolution.py": "c18f231375609cebb76d342ba7ad94471eb280089458ace85882ed2450f3581e"
+    "core/07_artifacts/verification/curved_3p1_gh_nonlinear_vacuum_rhs_verification.json": "edab5ce3659fcd6c97f64a55018e10d4fe4911c5ee7267cd37d2ddc2dbec7518",
+    "core/07_artifacts/correspondence/curved_3p1_gh_nonlinear_vacuum_formula_audit.json": "06ef65380e2444cc8c12a6252e5892e7697bbfbb8b6de55707bb5d6e02ca583f",
+    "core/07_artifacts/gates/curved_3p1_gh_nonlinear_vacuum_gate.json": "6ec7f844f003853ff56cf4a1934b05a754db56ef75c924213e04e9fdce41718e",
+    "core/02_equations/covariant/uet_curved_3p1_gh_evolution.py": "c18f231375609cebb76d342ba7ad94471eb280089458ace85882ed2450f3581e"
   },
   "major_result": {
     "major_result_id": "CORE_CURVED_3P1_GH_PERIODIC_VACUUM_EVOLUTION_READY",

@@ -1,0 +1,64 @@
+{
+  "schema": "uet-result-v2",
+  "result_id": "R_T023_FLIGHT_LIFETIME_ENERGY",
+  "claim_id": "C_T023_FLIGHT_LIFETIME_ENERGY",
+  "test_card_id": "T023",
+  "level": "L2_CONFRONTED",
+  "outcome": "INCONCLUSIVE",
+  "numbers": [
+    {
+      "name": "d_bat",
+      "value": "0.292",
+      "uncertainty": "95% CI 0.185 to 0.402",
+      "unit": "log10 ratio"
+    },
+    {
+      "name": "bat_factor_vs_other_mammals",
+      "value": "1.96",
+      "uncertainty": null,
+      "unit": "ratio"
+    },
+    {
+      "name": "d_bird",
+      "value": "0.465",
+      "uncertainty": null,
+      "unit": "log10 ratio"
+    },
+    {
+      "name": "delta_bat_minus_bird",
+      "value": "-0.172",
+      "uncertainty": "95% CI -0.275 to -0.072",
+      "unit": "log10 ratio"
+    },
+    {
+      "name": "mass_slope_s",
+      "value": "-0.087",
+      "uncertainty": null,
+      "unit": "dimensionless"
+    },
+    {
+      "name": "captive_only_d_bat",
+      "value": "0.32 (12 bats, not deciding)",
+      "uncertainty": null,
+      "unit": "log10 ratio"
+    },
+    {
+      "name": "flightless_bird_residuals",
+      "value": "-0.27 and -0.38 (2 species, not deciding)",
+      "uncertainty": null,
+      "unit": "log10 ratio"
+    }
+  ],
+  "producer": {
+    "script": "core/03_lanes/persistence/t023_flight_lifetime_energy.py",
+    "commit": "c2c4e9413"
+  },
+  "artifacts": [],
+  "date": "2026-11-18",
+  "approval": {
+    "approved_by": "santxkoz",
+    "date": "2026-11-18",
+    "role": "AUTHOR"
+  },
+  "note": "INCONCLUSIVE under Test Card T023 (approved c2c4e9413). Bats spend clearly more energy per gram over a lifetime than other mammals (the first condition is met), but less than birds: Delta's interval reaches -0.275, just outside the +-0.25 band, and excludes zero. Flight accounts for about 60 percent of the bird offset; the remainder is not explained by flight, even though bat torpor biases the bat value upward. Not blind (bat longevity known in biology); no phylogenetic correction. Nearest theory: disposable soma and the extrinsic-mortality theory of ageing; not UET-distinct. L2 approved by the author on 2026-11-18."
+}

@@ -1,0 +1,46 @@
+{
+  "schema": "uet-result-v2",
+  "result_id": "R_T010_GW170817_CARRIER_SPEED",
+  "claim_id": "C_T010_TWO_CARRIER_RECORDS",
+  "test_card_id": "T010",
+  "level": "L2_CONFRONTED",
+  "outcome": "PASS",
+  "numbers": [
+    {
+      "name": "predicted_speed_difference",
+      "value": "0",
+      "uncertainty": null,
+      "unit": "fraction of c"
+    },
+    {
+      "name": "allowed_lower",
+      "value": "-3e-15",
+      "uncertainty": null,
+      "unit": "fraction of c"
+    },
+    {
+      "name": "allowed_upper",
+      "value": "+7e-16",
+      "uncertainty": null,
+      "unit": "fraction of c"
+    },
+    {
+      "name": "arrival_delay_grb_after_gw",
+      "value": "1.74",
+      "uncertainty": "0.05",
+      "unit": "s"
+    }
+  ],
+  "producer": {
+    "script": "docs/core/03_lanes/observation/t010_gw170817_carrier_speed.py",
+    "commit": "d2dc61506"
+  },
+  "artifacts": [],
+  "date": "2026-11-11",
+  "approval": {
+    "approved_by": "santxkoz",
+    "date": "2026-11-11",
+    "role": "AUTHOR"
+  },
+  "note": "PASS under Test Card T010 (approved d2dc61506). c_T = 1 of the parent action lies inside the GW170817 bound. Registered values re-checked against the arXiv:1710.05834 abstract before reporting. Any c_T = 1 theory, including general relativity, passes; this confirms consistency, not a UET-distinct prediction. L2 approved by the author on 2026-11-11."
+}

@@ -8,7 +8,7 @@ equal one measured without secular equilibrium (Varga et al. 2016).
     z = |T_eq - T_direct| / sqrt(sigma_eq^2 + sigma_direct^2)
     z <= 2 PASS, 2 < z <= 3 INCONCLUSIVE, z > 3 FAILED
 
-Usage: python -m docs.core.03_lanes.persistence.t009_u234_secular_equilibrium
+Usage: python core/03_lanes/persistence/t009_u234_secular_equilibrium.py
 Prints the numbers only. A Result record needs an APPROVED Test Card (docs/STANDARD.md section 4).
 """
 
@@ -20,7 +20,20 @@ import json
 import math
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parents[4]
+ROOT = Path(__file__).resolve().parents[3]
+
+
+def _core_module(relative: str):
+    """Load core/<relative> by file path (folders start with digits; repaired after the root relocation)."""
+    import importlib.util
+    import sys
+    path = ROOT / "core" / relative
+    name = "uet_producer_dep_" + path.stem
+    if name not in sys.modules:
+        spec = importlib.util.spec_from_file_location(name, path)
+        sys.modules[name] = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(sys.modules[name])
+    return sys.modules[name]
 DATA = ROOT / "docs/data/external/nuclear/u234_half_life/u234_half_life.csv"
 MANIFEST = ROOT / "docs/standard/data_manifest.json"
 DATA_ID = "U234_HALF_LIFE_EQ_VS_DIRECT"

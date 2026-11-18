@@ -1,0 +1,52 @@
+{
+  "schema": "uet-result-v2",
+  "result_id": "R_B7_FREE_ENERGY_BURN",
+  "claim_id": "C_B7_FREE_ENERGY_BURN",
+  "level": "L1_CONSISTENT",
+  "outcome": "PASS",
+  "numbers": [
+    {
+      "name": "free_energy_loss_vs_integrated_burn_rel_err_cutoff_5",
+      "value": "9.2e-3",
+      "uncertainty": null,
+      "unit": "relative"
+    },
+    {
+      "name": "free_energy_loss_vs_integrated_burn_rel_err_cutoff_10",
+      "value": "4.0e-3",
+      "uncertainty": null,
+      "unit": "relative"
+    },
+    {
+      "name": "free_energy_loss_vs_integrated_burn_rel_err_cutoff_20",
+      "value": "1.9e-3",
+      "uncertainty": null,
+      "unit": "relative"
+    },
+    {
+      "name": "time_to_one_percent_closed",
+      "value": "22.84",
+      "uncertainty": null,
+      "unit": "1/w0"
+    },
+    {
+      "name": "tau_integral_dF_over_P",
+      "value": "22.89",
+      "uncertainty": null,
+      "unit": "1/w0"
+    },
+    {
+      "name": "naive_F0_over_P0",
+      "value": "54.8",
+      "uncertainty": null,
+      "unit": "1/w0"
+    }
+  ],
+  "producer": {
+    "script": "core/05_tests/physics/test_free_energy_burn.py",
+    "commit": "73217f435"
+  },
+  "artifacts": [],
+  "date": "2026-11-16",
+  "note": "Wave B7 (derivation, no Test Card). The burn power of layer 3 is computed from the closed matter-plus-environment system of wave A3 instead of assumed: F = T KL(rho || Gibbs) and P = gamma <(p + T d_p ln rho)^2> = T sigma >= 0. The exact closed evolution loses free energy at this rate, with the error falling as 1/omega_max (Markov limit). The time to fall to 1% of F0 is 22.84 (closed) against 22.89 from integral dF/P, while F0/P0 with the initial burn would give 54.8: tau = F/P holds only for a constant P, as A4 found. Example values (w0 = 1, gamma = 0.2, T = 0.5, initial state) are AI-chosen. Not UET-distinct: this is standard stochastic thermodynamics. Test run standalone until the PR #60 import repair."
+}

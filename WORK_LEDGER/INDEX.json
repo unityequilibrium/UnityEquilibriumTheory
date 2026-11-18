@@ -4,12 +4,12 @@
   "generator_sha256": "b32005e4bdbf59da6681ae630fa1d9d4415c361f7523be18c8b52a86dc8c93e9",
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
-    "sources": 79,
-    "entries": 832,
+    "sources": 81,
+    "entries": 928,
     "by_stream": {
       "book-history": 94,
-      "operations": 131,
-      "research": 606,
+      "operations": 135,
+      "research": 698,
       "review": 1
     },
     "exact_duplicates": 0,
@@ -394,9 +394,14 @@
       "entries": 19
     },
     {
+      "path": "2026/2026-11-11.md",
+      "sha256": "ba92497387807004a6a82611031abee5b7bebaca235db32b06e3f5ebc8e2cbe5",
+      "entries": 15
+    },
+    {
       "path": "2026/2026-11-14.md",
-      "sha256": "12c5cef3aa05605b9c3bd8a180c695b7dcaa8738d3bcfc2ccbe677a3eb58a810",
-      "entries": 1
+      "sha256": "a7d9c5d30419f6b772ac37f9f82069b9ae4d52be8c1da878f40a7c01fabc8574",
+      "entries": 2
     },
     {
       "path": "2026/2026-11-15.md",
@@ -405,13 +410,18 @@
     },
     {
       "path": "2026/2026-11-16.md",
-      "sha256": "c2b1fb2f1c0a6ae077174e93df02c4fe55f8b83cdd606663c158e6256b5c2ef6",
-      "entries": 6
+      "sha256": "d84d9efd5b29005b64e1146113759c54ce06cf6690783e46a7d449e2c0416ffc",
+      "entries": 21
+    },
+    {
+      "path": "2026/2026-11-17.md",
+      "sha256": "dd7c5d32f8bec4d284f871c6401de2ea0ccf54680c8464bd9b16dd82fc6f485e",
+      "entries": 37
     },
     {
       "path": "2026/2026-11-18.md",
-      "sha256": "088d58685aa994e87085c5a532932ee08de679e6c2643ecd5dc9219d28ed02d2",
-      "entries": 1
+      "sha256": "77a36582afc5722a45eead3920bda64ca69a38fee0995b8cc0c7710f586e61fb",
+      "entries": 29
     },
     {
       "path": "2026-08-14.md",
@@ -16626,13 +16636,333 @@
       "legacy_root_path": false
     },
     {
+      "id": "2026/2026-11-11.md#thought-experiment-v3-remove-the-being-and-eternity-claims",
+      "source": "2026/2026-11-11.md",
+      "anchor": "thought-experiment-v3-remove-the-being-and-eternity-claims",
+      "start_line": 3,
+      "end_line": 17,
+      "title": "Thought experiment v3: remove the being and eternity claims",
+      "entry_sha256": "da2b458a983cf4c3d24a7a6724ae069f13368bed9fb993556fc2391098c9b816",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-11",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-11.md#o1-delayed-observation-and-gap--rate-x-record-age",
+      "source": "2026/2026-11-11.md",
+      "anchor": "o1-delayed-observation-and-gap--rate-x-record-age",
+      "start_line": 18,
+      "end_line": 31,
+      "title": "O1: delayed observation and gap = rate x record age",
+      "entry_sha256": "b5e44852a0d06871e1653264f0826e4d9d2c6d32bb87c46d4529ca86dd566c1d",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-11",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-11.md#o2-a-shared-record-exists-only-after-causal-contact",
+      "source": "2026/2026-11-11.md",
+      "anchor": "o2-a-shared-record-exists-only-after-causal-contact",
+      "start_line": 32,
+      "end_line": 46,
+      "title": "O2: a shared record exists only after causal contact",
+      "entry_sha256": "1b3bada324d58df8861544c5dd0fe59a25a2d5f56f6ab86b362211836c306193",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-11",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-11.md#o3-markov-versus-history-dependent-estimators",
+      "source": "2026/2026-11-11.md",
+      "anchor": "o3-markov-versus-history-dependent-estimators",
+      "start_line": 47,
+      "end_line": 60,
+      "title": "O3: Markov versus history-dependent estimators",
+      "entry_sha256": "3ca91b5d80467d0e12dac129e97bbcdfd777c35e769ec6e986c006bc2a3e0d80",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-11",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-11.md#o4-the-parent-action-scalar-field-propagates-inside-the-light-cone",
+      "source": "2026/2026-11-11.md",
+      "anchor": "o4-the-parent-action-scalar-field-propagates-inside-the-light-cone",
+      "start_line": 61,
+      "end_line": 75,
+      "title": "O4: the parent-action scalar field propagates inside the light cone",
+      "entry_sha256": "a625a866cd6aa2270801f9e0d6779c12d47d4eab09ace38c3c0d82abd95adae6",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-11",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-11.md#records-and-corrections-for-the-observation-layer",
+      "source": "2026/2026-11-11.md",
+      "anchor": "records-and-corrections-for-the-observation-layer",
+      "start_line": 76,
+      "end_line": 89,
+      "title": "Records and corrections for the observation layer",
+      "entry_sha256": "5917c1acc2c1972486e055495bf2bb25525f0b3f4352e8d05c7c82d21d652f34",
+      "stream": "research",
+      "areas": [
+        "research-standards"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-11",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-11.md#t010-draft-gw170817-carrier-speed",
+      "source": "2026/2026-11-11.md",
+      "anchor": "t010-draft-gw170817-carrier-speed",
+      "start_line": 90,
+      "end_line": 102,
+      "title": "T010 draft: GW170817 carrier speed",
+      "entry_sha256": "2ee2496a78defaef9fdc700674835c064ca9f8e365f223480808b90db0d72578",
+      "stream": "research",
+      "areas": [
+        "research-standards"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-11",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-11.md#t010-result-at-l2-gw170817-carrier-speed",
+      "source": "2026/2026-11-11.md",
+      "anchor": "t010-result-at-l2-gw170817-carrier-speed",
+      "start_line": 103,
+      "end_line": 115,
+      "title": "T010 result at L2: GW170817 carrier speed",
+      "entry_sha256": "9e4f71bbd2fd06dedb860321cf9f289116990702c41a6607a3d68feb4307addb",
+      "stream": "research",
+      "areas": [
+        "research-standards"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-11",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-11.md#o5-model-and-t011-draft-p2-with-pulsating-binaries",
+      "source": "2026/2026-11-11.md",
+      "anchor": "o5-model-and-t011-draft-p2-with-pulsating-binaries",
+      "start_line": 116,
+      "end_line": 129,
+      "title": "O5 model and T011 draft: P2 with pulsating binaries",
+      "entry_sha256": "0cb90df509e50bea6523807d99ad1aae896ece8e3144a65b3124a07690dc5fe3",
+      "stream": "research",
+      "areas": [
+        "research-standards"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-11",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-11.md#t011-result-at-l2-p2-with-pulsating-binaries",
+      "source": "2026/2026-11-11.md",
+      "anchor": "t011-result-at-l2-p2-with-pulsating-binaries",
+      "start_line": 130,
+      "end_line": 142,
+      "title": "T011 result at L2: P2 with pulsating binaries",
+      "entry_sha256": "bfbc75af8e165ee234ad85b5f256d3c4e7c531bd3e78aeac3eaff6e1dde1f0b1",
+      "stream": "research",
+      "areas": [
+        "research-standards"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-11",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-11.md#o6-model-and-t012-draft-p4-with-a-quenched-quantum-chain",
+      "source": "2026/2026-11-11.md",
+      "anchor": "o6-model-and-t012-draft-p4-with-a-quenched-quantum-chain",
+      "start_line": 143,
+      "end_line": 156,
+      "title": "O6 model and T012 draft: P4 with a quenched quantum chain",
+      "entry_sha256": "95aa1fe79f217e5081118bbf2641a61e9db2f220e9223b155c2f0489624c2e39",
+      "stream": "research",
+      "areas": [
+        "research-standards"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-11",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-11.md#t012-result-at-l2-p4-with-a-bose-hubbard-quench",
+      "source": "2026/2026-11-11.md",
+      "anchor": "t012-result-at-l2-p4-with-a-bose-hubbard-quench",
+      "start_line": 157,
+      "end_line": 170,
+      "title": "T012 result at L2: P4 with a Bose-Hubbard quench",
+      "entry_sha256": "5b64212a4cfcee7557af4d3e63942d2f45d4fcfb454d32b456c8b178c89affd8",
+      "stream": "research",
+      "areas": [
+        "research-standards"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-11",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-11.md#o7-model-and-t013-draft-p3-through-the-ives-stilwell-observable",
+      "source": "2026/2026-11-11.md",
+      "anchor": "o7-model-and-t013-draft-p3-through-the-ives-stilwell-observable",
+      "start_line": 171,
+      "end_line": 185,
+      "title": "O7 model and T013 draft: P3 through the Ives-Stilwell observable",
+      "entry_sha256": "1fe777e715945fa7b2a2f81509c03809f728ccd8356475d232bad8512389b7c6",
+      "stream": "research",
+      "areas": [
+        "research-standards"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-11",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-11.md#t013-result-at-l2-p3-through-the-ives-stilwell-observable",
+      "source": "2026/2026-11-11.md",
+      "anchor": "t013-result-at-l2-p3-through-the-ives-stilwell-observable",
+      "start_line": 186,
+      "end_line": 199,
+      "title": "T013 result at L2: P3 through the Ives-Stilwell observable",
+      "entry_sha256": "bbf300e09d191c0e4af7e50a575dbd2c7f94a3e41bb18830257f4064290099a4",
+      "stream": "research",
+      "areas": [
+        "research-standards"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-11",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-11.md#b5-search-for-a-uet-distinct-prediction-and-the-bound-on-portal-drag",
+      "source": "2026/2026-11-11.md",
+      "anchor": "b5-search-for-a-uet-distinct-prediction-and-the-bound-on-portal-drag",
+      "start_line": 200,
+      "end_line": 213,
+      "title": "B5: search for a UET-distinct prediction and the bound on portal drag",
+      "entry_sha256": "494b0accdef26d798f098402e1854643ad2f2a0a54cf3dd31293af020ed6d5ff",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-11",
+      "legacy_root_path": false
+    },
+    {
       "id": "2026/2026-11-14.md#root-core-and-topics-move-first-repair-separately",
       "source": "2026/2026-11-14.md",
       "anchor": "root-core-and-topics-move-first-repair-separately",
       "start_line": 3,
-      "end_line": 14,
+      "end_line": 15,
       "title": "Root Core and topics: move first, repair separately",
-      "entry_sha256": "4e450e229fe2d3557c509a86d743da8b8aa5f863eeab349f89bc9d3df8c5080d",
+      "entry_sha256": "3ec636fafe9e33e16c8123d50817ca75e2dbc567388bd5e311dda147ce5376b6",
+      "stream": "operations",
+      "areas": [
+        "repo-ops"
+      ],
+      "related_streams": [
+        "operations"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-14",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-14.md#pr-59-merged-with-main-after-the-root-core-and-topics-move",
+      "source": "2026/2026-11-14.md",
+      "anchor": "pr-59-merged-with-main-after-the-root-core-and-topics-move",
+      "start_line": 16,
+      "end_line": 24,
+      "title": "PR 59 merged with main after the root Core and topics move",
+      "entry_sha256": "219653745785a7de213c7c97408a553fcf7150ccff11e7a4a720a1db90e56f1e",
       "stream": "operations",
       "areas": [
         "repo-ops"
@@ -16989,9 +17319,9 @@
       "source": "2026/2026-11-16.md",
       "anchor": "owner-requested-publication-of-the-root-layout-repair-branch",
       "start_line": 63,
-      "end_line": 70,
+      "end_line": 71,
       "title": "Owner-requested publication of the root-layout repair branch",
-      "entry_sha256": "b9472edd8452a4ad90f77433a1b928605e3cec70e75eb82dff5c9139e2df4304",
+      "entry_sha256": "96a2bc00c41ac6ff1b57059707deefdbc60e91ea9af891425fc8b5a0ce008bbc",
       "stream": "operations",
       "areas": [
         "repo-ops"
@@ -17005,11 +17335,1613 @@
       "legacy_root_path": false
     },
     {
+      "id": "2026/2026-11-16.md#b6-psi-friction-derived-from-the-parent-action",
+      "source": "2026/2026-11-16.md",
+      "anchor": "b6-psi-friction-derived-from-the-parent-action",
+      "start_line": 72,
+      "end_line": 81,
+      "title": "B6: psi friction derived from the parent action",
+      "entry_sha256": "3d6425701eba8bee7ff3501ad62538a97511c099bc1d556ff29ab135a786c3e8",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-16",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-16.md#b7-layer-3-burn-power-from-the-closed-system",
+      "source": "2026/2026-11-16.md",
+      "anchor": "b7-layer-3-burn-power-from-the-closed-system",
+      "start_line": 82,
+      "end_line": 91,
+      "title": "B7: layer-3 burn power from the closed system",
+      "entry_sha256": "ed60919ee1ffa05072832a0aeea3ef04ed4f8f191bd303345cd32e3da54552e9",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-16",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-16.md#b8-layers-2-3-for-psi-with-matter-as-its-bath",
+      "source": "2026/2026-11-16.md",
+      "anchor": "b8-layers-2-3-for-psi-with-matter-as-its-bath",
+      "start_line": 92,
+      "end_line": 101,
+      "title": "B8: layers 2-3 for psi with matter as its bath",
+      "entry_sha256": "70b1cb7839c4df760cfe77747e6fbff05bf4c7f1d6271d76a07ac965bfe6b7cd",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-16",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-16.md#t002-stellar-model-systematic-and-draft-t014",
+      "source": "2026/2026-11-16.md",
+      "anchor": "t002-stellar-model-systematic-and-draft-t014",
+      "start_line": 102,
+      "end_line": 111,
+      "title": "T002 stellar-model systematic and draft T014",
+      "entry_sha256": "05ec37d613b91a7d34c0382c651a432a0ff5b4114d5bcc00eda835497db1196d",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-16",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-16.md#t014-run-and-l2-record",
+      "source": "2026/2026-11-16.md",
+      "anchor": "t014-run-and-l2-record",
+      "start_line": 112,
+      "end_line": 121,
+      "title": "T014 run and L2 record",
+      "entry_sha256": "e12b6bf06ba4b3df0cacff9b333d01d0b01b89faf9f63226d1f02f953aabf7cc",
+      "stream": "research",
+      "areas": [
+        "research-standards"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-16",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-16.md#topic-screen-for-uet-distinct-candidates",
+      "source": "2026/2026-11-16.md",
+      "anchor": "topic-screen-for-uet-distinct-candidates",
+      "start_line": 122,
+      "end_line": 131,
+      "title": "Topic screen for UET-distinct candidates",
+      "entry_sha256": "22ec4f8584c4a7dccbebab2806a576ec19e56749ec6956f1ec143ef5fe2d5011",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-16",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-16.md#si-1-parent-action-in-si-units-for-a-bose-fluid",
+      "source": "2026/2026-11-16.md",
+      "anchor": "si-1-parent-action-in-si-units-for-a-bose-fluid",
+      "start_line": 132,
+      "end_line": 141,
+      "title": "SI-1: parent action in SI units for a Bose fluid",
+      "entry_sha256": "a2e7fd2ce1b90bfa2136dc94aa6e9716a481e1c5838af75fff6f90f76988c3f2",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-16",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-16.md#t015-draft-he-ii-at-tree-level-from-the-parent-action",
+      "source": "2026/2026-11-16.md",
+      "anchor": "t015-draft-he-ii-at-tree-level-from-the-parent-action",
+      "start_line": 142,
+      "end_line": 151,
+      "title": "T015 draft: He II at tree level from the parent action",
+      "entry_sha256": "d8987590808948b699c94690e0ed55a008faaefc16540f34506c1538fd437982",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-16",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-16.md#t015-run-he-ii-at-tree-level-failed",
+      "source": "2026/2026-11-16.md",
+      "anchor": "t015-run-he-ii-at-tree-level-failed",
+      "start_line": 152,
+      "end_line": 161,
+      "title": "T015 run: He II at tree level, FAILED",
+      "entry_sha256": "a823b1346f32ffe0f334e7bb09b49a810b9aa1bbc7b78b1f70d05a7e2c1b482f",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-16",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-16.md#decision-topic-13-he-4-phi-is-a-phenomenological-closure",
+      "source": "2026/2026-11-16.md",
+      "anchor": "decision-topic-13-he-4-phi-is-a-phenomenological-closure",
+      "start_line": 162,
+      "end_line": 171,
+      "title": "Decision: Topic 13 He-4 Phi is a phenomenological closure",
+      "entry_sha256": "8aae34fde7e9afd98ac982339cc04dc38bf125f6ba2e10f615b4d36e1e5d638b",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-16",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-16.md#uet-engine-draft-coreengine",
+      "source": "2026/2026-11-16.md",
+      "anchor": "uet-engine-draft-coreengine",
+      "start_line": 172,
+      "end_line": 181,
+      "title": "UET engine draft (core/engine)",
+      "entry_sha256": "7650e29379cb83079f11b89ce7288149681941b2ba46fe8377b2fc4f07a55412",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-16",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-16.md#engine-pilot-stars-layers-2-3",
+      "source": "2026/2026-11-16.md",
+      "anchor": "engine-pilot-stars-layers-2-3",
+      "start_line": 182,
+      "end_line": 191,
+      "title": "Engine pilot: stars (layers 2-3)",
+      "entry_sha256": "d0375343f0834ae60ba3c4f48faba4d15a00369335568168e8ce9cb6ecf33724",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-16",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-16.md#interim-research-report-2026-11-09-to-2026-11-16",
+      "source": "2026/2026-11-16.md",
+      "anchor": "interim-research-report-2026-11-09-to-2026-11-16",
+      "start_line": 192,
+      "end_line": 201,
+      "title": "Interim research report 2026-11-09 to 2026-11-16",
+      "entry_sha256": "99f65c45c20a82f215c4489699d18ca213cecc2e2eb5c08205d4716c4f3f683f",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-16",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-16.md#repair-test-card-producers-t001-t013-after-root-relocation",
+      "source": "2026/2026-11-16.md",
+      "anchor": "repair-test-card-producers-t001-t013-after-root-relocation",
+      "start_line": 202,
+      "end_line": 211,
+      "title": "Repair Test Card producers T001-T013 after root relocation",
+      "entry_sha256": "ad476c0cedbdac8f5fc6b851d5766650dfa1c4cd7b9758c676fbb4822d2c7bc8",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-16",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-16.md#topic-019-through-the-engine-draft-t016-microscope",
+      "source": "2026/2026-11-16.md",
+      "anchor": "topic-019-through-the-engine-draft-t016-microscope",
+      "start_line": 212,
+      "end_line": 220,
+      "title": "Topic 0.19 through the engine; draft T016 (MICROSCOPE)",
+      "entry_sha256": "4181396c65895bab80124b9bcb8c08bb9987606e06da3d2be8119be40826c146",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-16",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-17.md#t016-run-microscope-bound-on-the-portal",
+      "source": "2026/2026-11-17.md",
+      "anchor": "t016-run-microscope-bound-on-the-portal",
+      "start_line": 3,
+      "end_line": 12,
+      "title": "T016 run: MICROSCOPE bound on the portal",
+      "entry_sha256": "7739d242b3636d5a21caf32cad7fc28cf13cca484008e191259bed1af0d26201",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-17",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-17.md#t016-result-at-l2",
+      "source": "2026/2026-11-17.md",
+      "anchor": "t016-result-at-l2",
+      "start_line": 13,
+      "end_line": 22,
+      "title": "T016 result at L2",
+      "entry_sha256": "247a4281291dbb50b28e868279d9358b2f2a03dbe59388672c7fec2b291ff12d",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-17",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-17.md#topic-022-through-the-engine-layers-2-3-abundance-in-growing-populations",
+      "source": "2026/2026-11-17.md",
+      "anchor": "topic-022-through-the-engine-layers-2-3-abundance-in-growing-populations",
+      "start_line": 23,
+      "end_line": 32,
+      "title": "Topic 0.22 through the engine (layers 2-3): abundance in growing populations",
+      "entry_sha256": "212da24c7dff232077fc3e52616fc79c5101e631f8ab3691944b7ad264e542da",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-17",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-17.md#t017-design-draft-cell-cycle-abundance-topic-022",
+      "source": "2026/2026-11-17.md",
+      "anchor": "t017-design-draft-cell-cycle-abundance-topic-022",
+      "start_line": 33,
+      "end_line": 42,
+      "title": "T017 design draft: cell-cycle abundance (topic 0.22)",
+      "entry_sha256": "58c4a62d2d53a60ce9cc6d507b82cb6fcb5d2c04da18a20f6c64d8ceaa65edd2",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-17",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-17.md#t017-data-search-round-2",
+      "source": "2026/2026-11-17.md",
+      "anchor": "t017-data-search-round-2",
+      "start_line": 43,
+      "end_line": 52,
+      "title": "T017 data search, round 2",
+      "entry_sha256": "263280d3b83410a10fed420e7cf7d35425fbdf89917cb5eb42764894aef9000c",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-17",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-17.md#t017-data-search-round-3-yeast",
+      "source": "2026/2026-11-17.md",
+      "anchor": "t017-data-search-round-3-yeast",
+      "start_line": 53,
+      "end_line": 62,
+      "title": "T017 data search, round 3 (yeast)",
+      "entry_sha256": "41c5b48c8fcce3419447a31a7bbc66b13dec911490e96a755f5255ce16688eb7",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-17",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-17.md#unequal-division-layer-3-and-draft-t017-yeast",
+      "source": "2026/2026-11-17.md",
+      "anchor": "unequal-division-layer-3-and-draft-t017-yeast",
+      "start_line": 63,
+      "end_line": 72,
+      "title": "Unequal-division layer 3 and draft T017 (yeast)",
+      "entry_sha256": "c9060c1d3e28ebae060974b105633dd120a3778382b4480fa5234171e5860055",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-17",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-17.md#run-t017-yeast-doubling-time-from-cycle-times",
+      "source": "2026/2026-11-17.md",
+      "anchor": "run-t017-yeast-doubling-time-from-cycle-times",
+      "start_line": 73,
+      "end_line": 82,
+      "title": "Run T017 (yeast doubling time from cycle times)",
+      "entry_sha256": "cf6190c4bbb7fa4ac75986226f2d02aee2212d2832eee19cd56b45cd87456d34",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-17",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-17.md#t017-result-at-l2",
+      "source": "2026/2026-11-17.md",
+      "anchor": "t017-result-at-l2",
+      "start_line": 83,
+      "end_line": 92,
+      "title": "T017 result at L2",
+      "entry_sha256": "b7d8b4fc8920c3fbbfe530cdc5b0f963722f569901e7211322969d31f2457aad",
+      "stream": "research",
+      "areas": [
+        "research-standards"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-17",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-17.md#topic-023-rebuilt-as-the-theory-stress-test",
+      "source": "2026/2026-11-17.md",
+      "anchor": "topic-023-rebuilt-as-the-theory-stress-test",
+      "start_line": 93,
+      "end_line": 102,
+      "title": "Topic 0.23 rebuilt as the theory stress test",
+      "entry_sha256": "7567f11feea75b6a8fdab0d7867ed827b87ab1af148b8406868d50c71b538ccc",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-17",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-17.md#023-stress-test-01-cross-scale-layer-3",
+      "source": "2026/2026-11-17.md",
+      "anchor": "023-stress-test-01-cross-scale-layer-3",
+      "start_line": 103,
+      "end_line": 112,
+      "title": "0.23 stress test 01: cross-scale layer 3",
+      "entry_sha256": "4c5dd85d9f698b5bd8cb0aa8e24bd637be4d8e60300090866c851565f0bddd66",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-17",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-17.md#023-stress-test-02-layer-3-scope",
+      "source": "2026/2026-11-17.md",
+      "anchor": "023-stress-test-02-layer-3-scope",
+      "start_line": 113,
+      "end_line": 122,
+      "title": "0.23 stress test 02: layer 3 scope",
+      "entry_sha256": "06d755396938977e82b156ab23451919f0d5ed8f1f7a4f5a5dfefedf4afeaef4",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-17",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-17.md#t018-cross-species-lifespan-failed",
+      "source": "2026/2026-11-17.md",
+      "anchor": "t018-cross-species-lifespan-failed",
+      "start_line": 123,
+      "end_line": 132,
+      "title": "T018 cross-species lifespan: FAILED",
+      "entry_sha256": "8d7b2664cda854e3e894c288da0cc3aec9f058df4d4e00cf2d32c8bfe884c8c2",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-17",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-17.md#023-candidates-yukawa-gap-t002t014-data-route-b",
+      "source": "2026/2026-11-17.md",
+      "anchor": "023-candidates-yukawa-gap-t002t014-data-route-b",
+      "start_line": 133,
+      "end_line": 142,
+      "title": "0.23 candidates: Yukawa gap, T002/T014 data, route B",
+      "entry_sha256": "b712ba498bb722f911154b6784f6eeab6853f04fe7bdeda94847c4583f92a9ee",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-17",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-17.md#t019-portal-gap-run",
+      "source": "2026/2026-11-17.md",
+      "anchor": "t019-portal-gap-run",
+      "start_line": 143,
+      "end_line": 152,
+      "title": "T019 portal gap: run",
+      "entry_sha256": "c67bff99c400a9b4fac2b4f819e80f4db6a43e6f35f00138ab2511a417e2785a",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-17",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-17.md#t019-result-at-l2",
+      "source": "2026/2026-11-17.md",
+      "anchor": "t019-result-at-l2",
+      "start_line": 153,
+      "end_line": 162,
+      "title": "T019 result at L2",
+      "entry_sha256": "b64f5d94f34a55bfa3cba0e34e5387598c8f2562c940be9c9e4bcd6e3711dc6d",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-17",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-17.md#t020-draft-route-b-with-lunar-laser-ranging",
+      "source": "2026/2026-11-17.md",
+      "anchor": "t020-draft-route-b-with-lunar-laser-ranging",
+      "start_line": 163,
+      "end_line": 172,
+      "title": "T020 draft: route B with lunar laser ranging",
+      "entry_sha256": "6077298f48b80a82c12bc61ade486ca8ddde96e35f3843b00c310cf1a0ba26ea",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-17",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-17.md#t020-route-b-run",
+      "source": "2026/2026-11-17.md",
+      "anchor": "t020-route-b-run",
+      "start_line": 173,
+      "end_line": 182,
+      "title": "T020 route B: run",
+      "entry_sha256": "9f14a77b30a1236f22f72b9a96666802b2b86703ec49f6a8844bcab8770bd6f9",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-17",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-17.md#t020-result-at-l2",
+      "source": "2026/2026-11-17.md",
+      "anchor": "t020-result-at-l2",
+      "start_line": 183,
+      "end_line": 192,
+      "title": "T020 result at L2",
+      "entry_sha256": "3795867ec46eb989da7aa3037fa90be1d1d21d71294aaa37f8266a2124f4ff6e",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-17",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-17.md#023-stress-test-04-route-b-minimum",
+      "source": "2026/2026-11-17.md",
+      "anchor": "023-stress-test-04-route-b-minimum",
+      "start_line": 193,
+      "end_line": 202,
+      "title": "0.23 stress test 04: route-B minimum",
+      "entry_sha256": "de06f8706f15c2350eb3f0321481846b05fb808845511841702e1c7f217e26b9",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-17",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-17.md#author-reading-of-item-7-recorded",
+      "source": "2026/2026-11-17.md",
+      "anchor": "author-reading-of-item-7-recorded",
+      "start_line": 203,
+      "end_line": 212,
+      "title": "Author reading of item 7 recorded",
+      "entry_sha256": "a48a8a5c1021b4a3ebf7eb879e0f224acb48f558578d3221d99d78e07334528c",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-17",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-17.md#023-stress-test-05-information-budget",
+      "source": "2026/2026-11-17.md",
+      "anchor": "023-stress-test-05-information-budget",
+      "start_line": 213,
+      "end_line": 222,
+      "title": "0.23 stress test 05: information budget",
+      "entry_sha256": "9102b0647a6f300ac13e790f5534b35913daf11c15dca7407b25b2d812b93387",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-17",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-17.md#03-starlight-trace-versus-h0",
+      "source": "2026/2026-11-17.md",
+      "anchor": "03-starlight-trace-versus-h0",
+      "start_line": 223,
+      "end_line": 232,
+      "title": "0.3 starlight trace versus H0",
+      "entry_sha256": "43c3ee9483f81880d7bfb86a083c7e2cad94ed3c1d6c8e7e08645911dca0e480",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-17",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-17.md#03-parent-action-and-early-modified-gravity",
+      "source": "2026/2026-11-17.md",
+      "anchor": "03-parent-action-and-early-modified-gravity",
+      "start_line": 233,
+      "end_line": 242,
+      "title": "0.3 parent action and Early Modified Gravity",
+      "entry_sha256": "7bbe5a80217843e83b6d6208226b0e8663706b60b4c16113df9a8fa94fcc0f2e",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-17",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-17.md#03-late-time-g-variation-emg-branch",
+      "source": "2026/2026-11-17.md",
+      "anchor": "03-late-time-g-variation-emg-branch",
+      "start_line": 243,
+      "end_line": 252,
+      "title": "0.3 late-time G variation (EMG branch)",
+      "entry_sha256": "686d80458d7053d4f906f94094a4f183b2cc87e89adf72382c2b6c1ea54ec558",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-17",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-17.md#023-stress-test-06-what-psi-could-be",
+      "source": "2026/2026-11-17.md",
+      "anchor": "023-stress-test-06-what-psi-could-be",
+      "start_line": 253,
+      "end_line": 262,
+      "title": "0.23 stress test 06: what psi could be",
+      "entry_sha256": "1bc2e3a847655014e3ad8b7e55fc8cf28f07c7263cd5283bc361930206529df4",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-17",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-17.md#023-stress-test-07-psi-and-the-quantum-vacuum",
+      "source": "2026/2026-11-17.md",
+      "anchor": "023-stress-test-07-psi-and-the-quantum-vacuum",
+      "start_line": 263,
+      "end_line": 272,
+      "title": "0.23 stress test 07: psi and the quantum vacuum",
+      "entry_sha256": "09b3128e390f44486b89c44c10f76551baa044827338468d7c757d878363d16c",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-17",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-17.md#023-stress-test-08-four-distinct-candidates",
+      "source": "2026/2026-11-17.md",
+      "anchor": "023-stress-test-08-four-distinct-candidates",
+      "start_line": 273,
+      "end_line": 282,
+      "title": "0.23 stress test 08: four distinct candidates",
+      "entry_sha256": "58179b6b0bbe25fef40003debe537905263d216f333bddeb53becf96d0f3586e",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-17",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-17.md#023-stress-test-09-species-survival-design",
+      "source": "2026/2026-11-17.md",
+      "anchor": "023-stress-test-09-species-survival-design",
+      "start_line": 283,
+      "end_line": 292,
+      "title": "0.23 stress test 09: species-survival design",
+      "entry_sha256": "978ca4cf851eb74c26c60816e5465da4f87345f48625d240543bd2efd801e81b",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-17",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-17.md#author-choice-p--whole-animal-use",
+      "source": "2026/2026-11-17.md",
+      "anchor": "author-choice-p--whole-animal-use",
+      "start_line": 293,
+      "end_line": 302,
+      "title": "Author choice: P = whole-animal use",
+      "entry_sha256": "8d9a7dc60059bf44cecd5bbb8afe4207f89fcbb8f06585ba7ef627e68ac22580",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-17",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-17.md#core-summary-shows-all-tests-t001-t020",
+      "source": "2026/2026-11-17.md",
+      "anchor": "core-summary-shows-all-tests-t001-t020",
+      "start_line": 303,
+      "end_line": 312,
+      "title": "Core summary shows all tests T001-T020",
+      "entry_sha256": "f702876762f5d3d2c168773b74cd2ab3a3d420c79f62806e78c91143dc0bbac6",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-17",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-17.md#stress-test-10-is-psi-needed",
+      "source": "2026/2026-11-17.md",
+      "anchor": "stress-test-10-is-psi-needed",
+      "start_line": 313,
+      "end_line": 322,
+      "title": "Stress test 10: is psi needed",
+      "entry_sha256": "d4d3298eea615c4b0bdfd7e86d24b859ac359ca9be3905c045ff05e8314386df",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-17",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-17.md#topic-025-external-energy-as-a-two-level-system",
+      "source": "2026/2026-11-17.md",
+      "anchor": "topic-025-external-energy-as-a-two-level-system",
+      "start_line": 323,
+      "end_line": 332,
+      "title": "Topic 0.25: external energy as a two-level system",
+      "entry_sha256": "5c90997b3fe6a863a64a56088cffe1df7761aaa25dd5e4a2a3648d2e2ba506c6",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-17",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-17.md#topic-025-innovation-as-lower-resource-cost-per-service",
+      "source": "2026/2026-11-17.md",
+      "anchor": "topic-025-innovation-as-lower-resource-cost-per-service",
+      "start_line": 333,
+      "end_line": 342,
+      "title": "Topic 0.25: innovation as lower resource cost per service",
+      "entry_sha256": "f7260a32d48db83bfae58e6ca598ce1c8eae3424a7781d4cab703c977ee1d7b1",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-17",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-17.md#topic-025-knowledge-from-interaction-newton-einstein",
+      "source": "2026/2026-11-17.md",
+      "anchor": "topic-025-knowledge-from-interaction-newton-einstein",
+      "start_line": 343,
+      "end_line": 352,
+      "title": "Topic 0.25: knowledge from interaction (Newton, Einstein)",
+      "entry_sha256": "472c013ba366ce622316e93b3bda305c777372c9ebd00c224b8d3fbc35601835",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-17",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-17.md#t021-draft-lighting-succession",
+      "source": "2026/2026-11-17.md",
+      "anchor": "t021-draft-lighting-succession",
+      "start_line": 353,
+      "end_line": 362,
+      "title": "T021 draft: lighting succession",
+      "entry_sha256": "cc1cb212b67f9e33081389351ddfbb1fe35da0cbdf6e1b378d45d1042bf98b32",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-17",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-17.md#t021-run-lighting-succession-pass",
+      "source": "2026/2026-11-17.md",
+      "anchor": "t021-run-lighting-succession-pass",
+      "start_line": 363,
+      "end_line": 371,
+      "title": "T021 run: lighting succession PASS",
+      "entry_sha256": "0a27a0b98f4257006293f622d5af7c9f1503a07160b9bbdf7831b24e6758799d",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-17",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-18.md#t021-result-at-l2",
+      "source": "2026/2026-11-18.md",
+      "anchor": "t021-result-at-l2",
+      "start_line": 3,
+      "end_line": 12,
+      "title": "T021 result at L2",
+      "entry_sha256": "a045ab045ce13d2b6a25ff801fcc604a479cdf8558dca0665a685ce1055c2da0",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-18",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-18.md#stage-2-of-test-d-transport-w_t-design-check",
+      "source": "2026/2026-11-18.md",
+      "anchor": "stage-2-of-test-d-transport-w_t-design-check",
+      "start_line": 13,
+      "end_line": 22,
+      "title": "Stage 2 of test D: transport w_T design check",
+      "entry_sha256": "be48f66f9ccef2f3c6e23b1489bc77b4057b0e0f93f67cbd4287f8b456fddb87",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-18",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-18.md#pr-59-admin-merge-past-a-known-legacy-ci-failure",
+      "source": "2026/2026-11-18.md",
+      "anchor": "pr-59-admin-merge-past-a-known-legacy-ci-failure",
+      "start_line": 23,
+      "end_line": 32,
+      "title": "PR #59 admin merge past a known legacy CI failure",
+      "entry_sha256": "c3e4676c8ab35326d87aa2ae7131130a7d01b62e4c5e19baecb2a548a23a41f5",
+      "stream": "operations",
+      "areas": [
+        "repo-ops"
+      ],
+      "related_streams": [
+        "operations"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-18",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-18.md#readme-v091-in-english-and-thai",
+      "source": "2026/2026-11-18.md",
+      "anchor": "readme-v091-in-english-and-thai",
+      "start_line": 33,
+      "end_line": 42,
+      "title": "README v0.9.1 in English and Thai",
+      "entry_sha256": "535ebbf84538f748fbb5f5a9202b828f2838d877ec0aa9829061c395384a46db",
+      "stream": "operations",
+      "areas": [
+        "documentation-system"
+      ],
+      "related_streams": [
+        "operations"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-18",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-18.md#agent-guide-no-lead-agent-one-folder-verify-other-agents-claims",
+      "source": "2026/2026-11-18.md",
+      "anchor": "agent-guide-no-lead-agent-one-folder-verify-other-agents-claims",
+      "start_line": 43,
+      "end_line": 52,
+      "title": "Agent guide: no lead agent, one folder, verify other agents' claims",
+      "entry_sha256": "179304b72c396fece8e7321e4d664a6deccaf0549a55043db677c5345a051eef",
+      "stream": "research",
+      "areas": [
+        "research-standards"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-18",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-18.md#core-alignment-step-1-inventory-of-every-core-file",
+      "source": "2026/2026-11-18.md",
+      "anchor": "core-alignment-step-1-inventory-of-every-core-file",
+      "start_line": 53,
+      "end_line": 62,
+      "title": "Core alignment step 1: inventory of every core file",
+      "entry_sha256": "ec168235a5d14b4f1e3f0b99e8a1dc1b62c7294f87c3b944278c3c6cea9c7b3a",
+      "stream": "operations",
+      "areas": [
+        "repo-ops",
+        "research-core"
+      ],
+      "related_streams": [
+        "operations",
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-18",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-18.md#core-alignment-w1-covariant-and-lorentz_noether",
+      "source": "2026/2026-11-18.md",
+      "anchor": "core-alignment-w1-covariant-and-lorentz_noether",
+      "start_line": 63,
+      "end_line": 72,
+      "title": "Core alignment W1: covariant and lorentz_noether",
+      "entry_sha256": "e384795ebbaf8cb5c08b9d985e8f4f3c8715221988405e92d530bfb347f59af6",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-18",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-18.md#core-alignment-w2-active-lanes-and-engine",
+      "source": "2026/2026-11-18.md",
+      "anchor": "core-alignment-w2-active-lanes-and-engine",
+      "start_line": 73,
+      "end_line": 82,
+      "title": "Core alignment W2: active lanes and engine",
+      "entry_sha256": "2166dd0e47d86366dd214caabe86373804ff245ab9361e32fd9e4b4418692bf1",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-18",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-18.md#core-alignment-w3-matter_space",
+      "source": "2026/2026-11-18.md",
+      "anchor": "core-alignment-w3-matter_space",
+      "start_line": 83,
+      "end_line": 92,
+      "title": "Core alignment W3: matter_space",
+      "entry_sha256": "5cfdaa97a90d3d2e5a44dc25e50a4ec6b72f7a361254c4dedce28360f4a50ce9",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-18",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-18.md#o8-and-t022-draft-michelson-morley-and-kennedy-thorndike",
+      "source": "2026/2026-11-18.md",
+      "anchor": "o8-and-t022-draft-michelson-morley-and-kennedy-thorndike",
+      "start_line": 93,
+      "end_line": 102,
+      "title": "O8 and T022 draft: Michelson-Morley and Kennedy-Thorndike",
+      "entry_sha256": "5bc6cdd7bb6461f949b1e9a21f492d38876e979ee74783dc6381727cdc8e8544",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-18",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-18.md#t022-run-failed-by-a-numerical-defect-in-the-approved-script",
+      "source": "2026/2026-11-18.md",
+      "anchor": "t022-run-failed-by-a-numerical-defect-in-the-approved-script",
+      "start_line": 103,
+      "end_line": 112,
+      "title": "T022 run: FAILED by a numerical defect in the approved script",
+      "entry_sha256": "ae760995197c42456571c0829935d7aa1f0e37c75f5aaafd542a90c6be433634",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-18",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-18.md#t022-rerun-under-amendment-1-pass",
+      "source": "2026/2026-11-18.md",
+      "anchor": "t022-rerun-under-amendment-1-pass",
+      "start_line": 113,
+      "end_line": 122,
+      "title": "T022 rerun under amendment 1: PASS",
+      "entry_sha256": "2888bb019f833cbaa2d29faa5ffb4d02bce4cddd8281618b01b54a8ec3fe5ff8",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-18",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-18.md#t022-result-at-l2",
+      "source": "2026/2026-11-18.md",
+      "anchor": "t022-result-at-l2",
+      "start_line": 123,
+      "end_line": 132,
+      "title": "T022 result at L2",
+      "entry_sha256": "b7f75f63a62b9846412c1f11cbae68f9f4f21640b27f60105009fcd4298c08ad",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-18",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-18.md#core-alignment-w4-o2",
+      "source": "2026/2026-11-18.md",
+      "anchor": "core-alignment-w4-o2",
+      "start_line": 133,
+      "end_line": 142,
+      "title": "Core alignment W4: o2",
+      "entry_sha256": "3f61e82e345ba45de3cab16f40e42642fab2150036c2193bbd9ff5a9034cbdfb",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-18",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-18.md#core-alignment-w5-thermal-and-topic13_support",
+      "source": "2026/2026-11-18.md",
+      "anchor": "core-alignment-w5-thermal-and-topic13_support",
+      "start_line": 143,
+      "end_line": 152,
+      "title": "Core alignment W5: thermal and topic13_support",
+      "entry_sha256": "9f2c422a22892d9a1db8394c6b26fdfda611a7b3d22ab430067900e6a8b8ec75",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-18",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-18.md#sfi-scaling-theory-against-uet-layer-3",
+      "source": "2026/2026-11-18.md",
+      "anchor": "sfi-scaling-theory-against-uet-layer-3",
+      "start_line": 153,
+      "end_line": 162,
+      "title": "SFI scaling theory against UET layer 3",
+      "entry_sha256": "6525dc01c126ffb17aea06dd3cea237d36470af1abcf61f2ddda206ea512ad4b",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-18",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-18.md#layer-3-mapped-onto-saavedra-et-al-2025-sfi-metabolic-coexistence",
+      "source": "2026/2026-11-18.md",
+      "anchor": "layer-3-mapped-onto-saavedra-et-al-2025-sfi-metabolic-coexistence",
+      "start_line": 163,
+      "end_line": 172,
+      "title": "Layer 3 mapped onto Saavedra et al. 2025 (SFI metabolic coexistence)",
+      "entry_sha256": "67a96853ef7b6c858e81058e583e4171fd65c3d21b0bd6090a30ca9eb696a8d9",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-18",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-18.md#species-level-reserve-and-test-card-t023-draft-bats",
+      "source": "2026/2026-11-18.md",
+      "anchor": "species-level-reserve-and-test-card-t023-draft-bats",
+      "start_line": 173,
+      "end_line": 182,
+      "title": "Species-level reserve and Test Card T023 draft (bats)",
+      "entry_sha256": "409a8f454d1e89469fae4866b626c705dc97ce1c901b52be7325d6cba09a3371",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-18",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-18.md#t023-run-inconclusive-bats-between-other-mammals-and-birds",
+      "source": "2026/2026-11-18.md",
+      "anchor": "t023-run-inconclusive-bats-between-other-mammals-and-birds",
+      "start_line": 183,
+      "end_line": 192,
+      "title": "T023 run: INCONCLUSIVE, bats between other mammals and birds",
+      "entry_sha256": "d5c07363a85f88e686db78dbd98e7c4301dba77d2fc7b6f2e520a903f6fbae10",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-18",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-18.md#t023-result-at-l2-inconclusive",
+      "source": "2026/2026-11-18.md",
+      "anchor": "t023-result-at-l2-inconclusive",
+      "start_line": 193,
+      "end_line": 202,
+      "title": "T023 result at L2 (INCONCLUSIVE)",
+      "entry_sha256": "869fa86ab913a2fab81b460b0fe6ea233e817ae934fdc93963ef9a633c8676f4",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-18",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-18.md#core-alignment-w6-contracts-proofs-and-review",
+      "source": "2026/2026-11-18.md",
+      "anchor": "core-alignment-w6-contracts-proofs-and-review",
+      "start_line": 203,
+      "end_line": 212,
+      "title": "Core alignment W6: contracts, proofs and review",
+      "entry_sha256": "f6ae01334f822a839293643cb9759838ca840e449dea75a4a7bb8716942e7074",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-18",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-18.md#core-alignment-w7-test-labels-and-the-ci-cause",
+      "source": "2026/2026-11-18.md",
+      "anchor": "core-alignment-w7-test-labels-and-the-ci-cause",
+      "start_line": 213,
+      "end_line": 222,
+      "title": "Core alignment W7: test labels and the CI cause",
+      "entry_sha256": "384975c00fa338e653b2d955fda9fb0a7f8dceb3e1663185cf8b20df3de9acf2",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-18",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-18.md#w7-repair-stale-hashes-after-the-root-move",
+      "source": "2026/2026-11-18.md",
+      "anchor": "w7-repair-stale-hashes-after-the-root-move",
+      "start_line": 223,
+      "end_line": 233,
+      "title": "W7 repair: stale hashes after the root move",
+      "entry_sha256": "3b88d463e6a0b6b64a1b5584fcdaf3182546b00c5d7f7151fa8bb7e3b98be7fb",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-18",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-18.md#core-alignment-w8-artifacts-labelled-failing-legacy-tests-archived",
+      "source": "2026/2026-11-18.md",
+      "anchor": "core-alignment-w8-artifacts-labelled-failing-legacy-tests-archived",
+      "start_line": 234,
+      "end_line": 243,
+      "title": "Core alignment W8: artifacts labelled, failing legacy tests archived",
+      "entry_sha256": "525117acdb84ac31683b82105f2c6e97e92c20cbe700e0708867c8d18f0e60d3",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-18",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-18.md#core-alignment-w9-governance-data-and-history",
+      "source": "2026/2026-11-18.md",
+      "anchor": "core-alignment-w9-governance-data-and-history",
+      "start_line": 244,
+      "end_line": 253,
+      "title": "Core alignment W9: governance, data and history",
+      "entry_sha256": "6e8b55b5a64dc72b90c9717b27110cae9f8c00980c7fc2993152aa90b845c354",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-18",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-18.md#ci-follow-up-on-pr-64",
+      "source": "2026/2026-11-18.md",
+      "anchor": "ci-follow-up-on-pr-64",
+      "start_line": 254,
+      "end_line": 264,
+      "title": "CI follow-up on PR #64",
+      "entry_sha256": "c0bba0e22160ab13aa232b92cf2b0f6d0e23074a9877446f5645ef4a98dd37d0",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-18",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-18.md#runner-rule-topics-without-a-suite-are-advisory",
+      "source": "2026/2026-11-18.md",
+      "anchor": "runner-rule-topics-without-a-suite-are-advisory",
+      "start_line": 265,
+      "end_line": 274,
+      "title": "Runner rule: topics without a suite are advisory",
+      "entry_sha256": "732faab07ccae93f65433f000ba2e22847ebd518a20e06a3f4dddee8d4423ff6",
+      "stream": "research",
+      "areas": [
+        "research-standards"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-18",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-18.md#core-alignment-w10-core-docs-and-complete-register",
+      "source": "2026/2026-11-18.md",
+      "anchor": "core-alignment-w10-core-docs-and-complete-register",
+      "start_line": 275,
+      "end_line": 284,
+      "title": "Core alignment W10: core docs and complete register",
+      "entry_sha256": "4bd9361dc704562ce9b51c28b25af239bb881b05218856190f67c2da48ceb2b9",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-18",
+      "legacy_root_path": false
+    },
+    {
       "id": "2026/2026-11-18.md#route-research-output-to-the-current-topic-tree",
       "source": "2026/2026-11-18.md",
       "anchor": "route-research-output-to-the-current-topic-tree",
-      "start_line": 3,
-      "end_line": 8,
+      "start_line": 285,
+      "end_line": 290,
       "title": "Route research output to the current Topic tree",
       "entry_sha256": "08a5527890995b2f8ae5f96e4a0f52244695b215a0d2fa409d96c52d4be840fc",
       "stream": "operations",

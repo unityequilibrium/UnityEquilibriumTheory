@@ -1,0 +1,45 @@
+{
+  "schema": "uet-test-card-v2",
+  "test_id": "T015",
+  "status": "CLOSED",
+  "claim_id": "C_T015_HE_II_TREE_LEVEL_LANE",
+  "theory_card": {
+    "card_id": "UET_PARENT",
+    "version": 1
+  },
+  "hypothesis": "The O(2) matter sector of the parent action, with chi = the He-4 atom and the quartic fixed by the measured He-He scattering length (lam = 8 pi a m, wave SI-1), describes He II at tree level: its sound speed c = hbar sqrt(4 pi a n)/m equals the measured first sound. This is the lane Topic 13 used when it identified Phi with the He II superfluid fraction.",
+  "observable": {
+    "quantity": "first sound speed u1 of He II",
+    "unit": "m/s",
+    "domain": "liquid He-4, T90 = 1.70 K, saturated vapour pressure"
+  },
+  "test_kind": "CONSTRAINT",
+  "data_sources": [
+    {
+      "data_id": "HE_II_TREE_LEVEL_INPUTS",
+      "role": "COMPARISON",
+      "exposure": "SEEN_FULL"
+    }
+  ],
+  "prediction_method": {
+    "script": "core/03_lanes/open_system/t015_he_ii_tree_level.py",
+    "description": "n = rho/m_He4; c(a) = hbar sqrt(4 pi a n)/m_He4 evaluated at a - sigma_minus and a + sigma_plus; D = 0 if u1 lies between them, else the smaller fractional distance of the two ends from u1. n a^3 is reported but is not a criterion."
+  },
+  "free_parameters": [],
+  "fixed_parameters": [
+    "lam = 8 pi a m (tree level, no loop or beyond-mean-field correction)",
+    "a = 104 +8/-18 angstrom (Grisenti et al. 2000)",
+    "rho = 145.2686 kg/m^3 at 1.70 K SVP",
+    "m = He-4 atomic mass",
+    "u1 = 233.1 m/s at 1.70 K (Donnelly and Barenghi 1998)"
+  ],
+  "pass_criterion": "D <= 0.10",
+  "fail_criterion": "D > 0.30 -> FAILED for this lane; 0.10 < D <= 0.30 -> INCONCLUSIVE",
+  "drafted_by": "claude",
+  "note": "Disclosure: not blind. The outcome was computed before drafting (wave SI-1 and the draft discussion): c is about 850 m/s against u1 = 233.1 m/s and n a^3 is about 2.5e4, so FAILED is expected. The value of the card is to record that failure under a rule fixed in advance, which settles whether Topic 13's He-4 Phi lane can come from the parent action. The 10 percent and 30 percent thresholds are AI-chosen; tree-level corrections scale as sqrt(n a^3), so no model error is defined for a dense fluid and the author should judge the thresholds. A failure applies only to this lane (chi = atom, tree level); it says nothing about the chi = nucleon lane of T005 or about a phenomenological two-fluid closure. Not UET-distinct: standard dilute-gas theory fails He II in the same way. The comparison script has not been run. Approved by the author on 2026-11-16 as drafted (thresholds and rho cross-check accepted as is).",
+  "approval": {
+    "approved_by": "santxkoz",
+    "date": "2026-11-16",
+    "role": "AUTHOR"
+  }
+}

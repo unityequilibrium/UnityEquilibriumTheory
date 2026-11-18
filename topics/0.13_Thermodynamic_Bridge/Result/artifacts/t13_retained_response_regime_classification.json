@@ -1,6 +1,6 @@
 {
   "U_reuse": {
-    "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/t13_retained_response_requirement_audit.json",
+    "path": "topics/0.13_Thermodynamic_Bridge/Result/artifacts/t13_retained_response_requirement_audit.json",
     "rerun": false,
     "response_recovered": true,
     "scope": "same-Phi signed pair, separate readout and one port at a time; no mixed-protocol extension"
@@ -93,7 +93,7 @@
   "comparator": "EQUIVALENT: same quartic generator, mixed gradient/inertial dynamics, sources and readouts as standard nonlinear multistable comparator; no UET-specific constraint added",
   "contract_id": "T13_RETAINED_RESPONSE_REGIME_CLASSIFICATION_FORMAL_V1",
   "contract_review_status": "INCOMPLETE",
-  "contract_sha256": "e4b3db5517af703c2ad862be9040e1926db0d3a69a5d9a5159e9cf97374517ea",
+  "contract_sha256": "dbd3ce5dec4a5d490aaec19d7d8fc6682bb0988dfaf536d592303a3b52898e0f",
   "exact_controls": {
     "branches": [
       {
@@ -185,14 +185,14 @@
       "kind": "working_file",
       "path": "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/Research_T13_Retained_Response_Regime_Classification.py",
       "role": "code",
-      "sha256": "7de89f680bace17e4fd6534b255f2f4fb047984774f714ef1c9e414c9f21b4f0"
+      "sha256": "5385084d30dd8234605335b0f55b055831d07e6403509b21e73a31500f359451"
     },
     {
       "availability": "REQUIRED",
       "kind": "working_file",
       "path": "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/test_t13_retained_response_regime_classification.py",
       "role": "code",
-      "sha256": "403a45d8fea218d8d9647bae3d85a756605dc997d0cb63d2f95b0b68d0943449"
+      "sha256": "5c8d13e49a511155fcb0dc329fc1b58ef0159bb613222e15a0dad7fa46c68aa2"
     },
     {
       "availability": "REQUIRED",
@@ -227,21 +227,21 @@
       "kind": "working_file",
       "path": "docs/topics/0.13_Thermodynamic_Bridge/calculation_contracts/retained_response_requirement_audit.json",
       "role": "evidence",
-      "sha256": "c1bb5e1c10219619da3bfbac6555358dcaee3bfe2ee278f0200257ae5627c45b"
+      "sha256": "532e590476b144e0e4da77ccb0c0d9a3630df69cbda75b72deaf69feb26cf5ea"
     },
     {
       "availability": "REQUIRED",
       "kind": "working_file",
       "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/t13_retained_response_requirement_audit.json",
       "role": "evidence",
-      "sha256": "86488490c553e98c52169b42c839459afa18c300dd3bad27e7f479bee266f68f"
+      "sha256": "1c7ad22b8c16c9b3741ded52b30a06da139d4703bfe72729ec8288a266fdabc6"
     },
     {
       "availability": "REQUIRED",
       "kind": "working_file",
       "path": "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/Research_T13_Retained_Response_Requirement_Audit.py",
       "role": "code",
-      "sha256": "ece85e04207ea8dda8da7e57d63ecfd2e61554792dc2eeb11fc64824531a3014"
+      "sha256": "01e23acee1cfebf4769440b168902861847e68e5233011fccc94a36efafc1c67"
     },
     {
       "availability": "REQUIRED",
@@ -255,7 +255,7 @@
       "kind": "working_file",
       "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/t13_physical_platform_correspondence_screen.json",
       "role": "evidence",
-      "sha256": "56eed42bfa4d792b8eb4d495856ba9008178e116a909d97d0859d7559480a4c2"
+      "sha256": "69946e1b4cbac743cee2c5660e1b086953080662afbf818c2a0210297d5636ee"
     },
     {
       "availability": "REQUIRED",
@@ -297,7 +297,7 @@
       "kind": "working_file",
       "path": "docs/scripts/audit/audit_calculation_completeness.py",
       "role": "code",
-      "sha256": "b406d31add9834d2cd1d9f3bb8d42724d26c390413710419313dd85cba7121ca"
+      "sha256": "f3d8cbb1dcc0f1550fea283ab9b2409f50c7ea16c1c836c4a3cdb722573d9e31"
     }
   ],
   "negative_controls": {

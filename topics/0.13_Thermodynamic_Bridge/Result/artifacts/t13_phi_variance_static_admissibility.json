@@ -121,7 +121,7 @@
   ],
   "contract_id": "T13_PHI_VARIANCE_STATIC_ADMISSIBILITY_FORMAL_V1",
   "contract_review_status": "INCOMPLETE",
-  "contract_sha256": "f92ea6b9dbee089fb27dbd068fbf3d92dad84213989c1377dd65f7ced340b40e",
+  "contract_sha256": "0453b4ac9890c069039ecbcca6790dffe825f080a789087ca3b723b7a249e72b",
   "error_ledger": {
     "classical_parent": "min of usable A and B for same pair; includes mean and boundary",
     "harmonic_quantum": "separate isolated comparator only, not a parent correction",
@@ -200,7 +200,7 @@
       "kind": "working_file",
       "path": "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/Research_T13_Phi_Variance_Static_Admissibility.py",
       "role": "code",
-      "sha256": "0f773223db1bdca2cd54f396fbd1ebc090c6f9b4a80eeeef558a914ebb573afa"
+      "sha256": "c21abd80286b135ea772fc735d5e5760771c81df92568ee29d2c273a86db5c32"
     },
     {
       "availability": "REQUIRED",
@@ -221,21 +221,21 @@
       "kind": "working_file",
       "path": "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/Research_T13_Parent_Static_Reference_Audit.py",
       "role": "code",
-      "sha256": "4deb7fbc6188996c480b14cebdc84cbfbda51ddce56328a6133b322602c86154"
+      "sha256": "711ac232f919c0a36aabafa14efe916ec76be1db64f035083e018768fe4a1eb1"
     },
     {
       "availability": "REQUIRED",
       "kind": "working_file",
       "path": "docs/topics/0.13_Thermodynamic_Bridge/calculation_contracts/parent_static_reference_audit.json",
       "role": "evidence",
-      "sha256": "20385f0f068e36d1fe5e61ce3c8ccb59d25e2926f53db04d1adb44ca18bb8799"
+      "sha256": "4eb31debdfb12e4d484472ef8f395e5b3272bbd02e589dbd0d2652cc0b447e9f"
     },
     {
       "availability": "REQUIRED",
       "kind": "working_file",
       "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/t13_parent_static_reference_audit.json",
       "role": "evidence",
-      "sha256": "df172ab9ec3dc602bd87a43b9751fdc5598764d342f5f80a9fc8601ccc880b28"
+      "sha256": "98ac18548c8b712159da88cbc3cb79353460c92ffe243a01801b966fbd6090b9"
     },
     {
       "availability": "REQUIRED",
@@ -263,7 +263,7 @@
       "kind": "working_file",
       "path": "docs/scripts/audit/audit_calculation_completeness.py",
       "role": "code",
-      "sha256": "b406d31add9834d2cd1d9f3bb8d42724d26c390413710419313dd85cba7121ca"
+      "sha256": "f3d8cbb1dcc0f1550fea283ab9b2409f50c7ea16c1c836c4a3cdb722573d9e31"
     }
   ],
   "inherited_radii": [
@@ -370,8 +370,8 @@
   "parent_global_equilibrium": "UNCHANGED_NOT_ADMITTED",
   "physical_acceptance": false,
   "quantum_parent_validated": false,
-  "source_Q_artifact": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/t13_parent_static_reference_audit.json",
-  "source_Q_contract": "docs/topics/0.13_Thermodynamic_Bridge/calculation_contracts/parent_static_reference_audit.json",
+  "source_Q_artifact": "topics/0.13_Thermodynamic_Bridge/Result/artifacts/t13_parent_static_reference_audit.json",
+  "source_Q_contract": "topics/0.13_Thermodynamic_Bridge/calculation_contracts/parent_static_reference_audit.json",
   "source_baseline_commit": "62f8efe0558e2c7f40aac1785c2b7cc780727953",
   "source_lambda_max_upper": "4118700242233881203132529805650737192267443739866358606293728124967347684121771691389410955756901468250234361694639074133162553055643103721960867172289755845916967235799167/50000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
   "source_root_uncertainty_upper": "12008121616974364872677615646767831479216281410157551671476326745197890428697725840639151749851657858456159378084180232982868943145013598479635691/400000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",

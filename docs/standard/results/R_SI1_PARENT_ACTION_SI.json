@@ -1,0 +1,64 @@
+{
+  "schema": "uet-result-v2",
+  "result_id": "R_SI1_PARENT_ACTION_SI",
+  "claim_id": "C_SI1_PARENT_ACTION_SI",
+  "level": "L1_CONSISTENT",
+  "outcome": "PASS",
+  "numbers": [
+    {
+      "name": "relativistic_over_bogoliubov_sound_speed_minus_1_at_gn_over_m_1e-4",
+      "value": "first order in g n / m, below 1e-3",
+      "uncertainty": null,
+      "unit": "relative"
+    },
+    {
+      "name": "natural_vs_si_route_bogoliubov_speed",
+      "value": "1e-9",
+      "uncertainty": null,
+      "unit": "relative"
+    },
+    {
+      "name": "portal_alpha_at_T005_torsion_bound",
+      "value": "0.99",
+      "uncertainty": null,
+      "unit": "dimensionless"
+    },
+    {
+      "name": "portal_delta_a_Rb87",
+      "value": "-2.7e-26",
+      "uncertainty": null,
+      "unit": "m"
+    },
+    {
+      "name": "portal_delta_a_over_a_Rb87",
+      "value": "-5.0e-18",
+      "uncertainty": null,
+      "unit": "relative"
+    },
+    {
+      "name": "portal_delta_a_He4",
+      "value": "-2.6e-30",
+      "uncertainty": null,
+      "unit": "m"
+    },
+    {
+      "name": "He_II_n_a3_with_hard_core_2.6e-10_m",
+      "value": "0.38",
+      "uncertainty": null,
+      "unit": "dimensionless"
+    },
+    {
+      "name": "He_II_tree_level_GP_sound_speed_hard_core",
+      "value": "134",
+      "uncertainty": null,
+      "unit": "m/s"
+    }
+  ],
+  "producer": {
+    "script": "core/05_tests/physics/test_si_bose_fluid.py",
+    "commit": "ae4518e36"
+  },
+  "artifacts": [],
+  "date": "2026-11-16",
+  "note": "Wave SI-1 (derivation, no Test Card). The legacy Topic 13 SI blocker came from a normalized Phi that needs an energy reference e0; the canonical parent action has dimensionful parameters, so no reference is free once chi is a particle. Inputs AI-chosen for scale: Rb-87 a = 100.4 a0, He-He hard core 2.6e-10 m, He II density at 1.7 K from the Topic 13 record. With the real He-He scattering length (about 1e-8 m) n a^3 is about 1e4, so tree-level GP does not describe He II; its measured first sound at 1.70 K is 233.1 m/s (Donnelly and Barenghi 1998), not the 134 m/s above. Data comparison needs an approved Test Card (see docs/meta/SI1_PARENT_ACTION_SI_DRAFT_2026-11-16.md)."
+}

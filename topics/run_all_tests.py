@@ -497,7 +497,7 @@ def all_suites(root: Path = REPO_ROOT) -> tuple[list[Suite], list[dict[str, Any]
     for suite_id, script, args, success_pattern in (
         ("research-schema", "docs/scripts/standard/check_schema.py", [], r"^check_schema: 0 error\(s\)$"),
         ("test-preregistration", "docs/scripts/standard/check_preregistration.py", [], r"^check_preregistration: 0 error\(s\)$"),
-        ("calculation-completeness", "docs/scripts/audit/audit_calculation_completeness.py", ["--check"], r'^\{"contracts":\d+,"discovered_routes":\d+,"errors":0,'),
+        ("calculation-completeness", "docs/scripts/audit/audit_calculation_completeness.py", ["--check"], r'^\{"contracts":\s*\d+,\s*"discovered_routes":\s*\d+,\s*"errors":\s*0,'),
         ("physics-tests", "docs/scripts/standard/check_physics_tests.py", ["core/05_tests/physics", "--min-physics", "1"], r"^check_physics_tests: physics=[1-9]\d* "),
     ):
         if (root / script).is_file():
@@ -795,7 +795,7 @@ def _render_markdown_report(report: dict[str, Any]) -> str:
     lines.extend(["", "## Topics without an automatic regression suite", ""])
     gaps = [entry for entry in report["uncovered_or_missing"] if "no pytest regression suite" in entry]
     if gaps:
-        lines.extend(f"- INCOMPLETE: {entry}" for entry in gaps)
+        lines.extend(f"- ADVISORY (does not change the exit code): {entry}" for entry in gaps)
     else:
         lines.append("None in the requested scope.")
     lines.extend(["", "## Deferred test candidates (not executed)", ""])
@@ -807,7 +807,7 @@ def _render_markdown_report(report: dict[str, Any]) -> str:
     other_gaps = [entry for entry in report["uncovered_or_missing"] if entry not in gaps]
     if other_gaps:
         lines.extend(["", "## Other coverage gaps", ""])
-        lines.extend(f"- INCOMPLETE: {entry}" for entry in other_gaps)
+        lines.extend(f"- {'ADVISORY' if is_advisory_topic_gap(entry) else 'INCOMPLETE'}: {entry}" for entry in other_gaps)
     lines.extend([
         "",
         "## Registered research outcomes (read only)",
@@ -902,6 +902,23 @@ def registered_research_results(root: Path = REPO_ROOT) -> dict[str, Any]:
             "counts": counts, "items": items}
 
 
+ADVISORY_TOPIC_GAP_MARKERS = (": no pytest regression suite discovered", ": limited suite: ")
+
+
+def is_advisory_topic_gap(entry: str) -> bool:
+    """A Topic that has no suite (or only a limited one) has nothing more to run.
+
+    Owner decision 2026-11-18: such gaps are reported in full but do not fail the run.
+    Every other gap (missing checker, collection error, admission repair, unmapped change)
+    still makes the run incomplete.
+    """
+    return any(marker in entry for marker in ADVISORY_TOPIC_GAP_MARKERS)
+
+
+def blocking_gaps(missing: list[str]) -> list[str]:
+    return [entry for entry in missing if not is_advisory_topic_gap(entry)]
+
+
 def _program_exit_code(failed: int, incomplete: bool) -> int:
     """Coverage gaps take precedence so a partial failing run is never coded as 1."""
     if incomplete:
@@ -994,7 +1011,9 @@ def main(argv: list[str] | None = None) -> int:
     legacy_readouts = legacy_topic_results(inventory)
     missing.extend(legacy_readouts["errors"])
     failed = sum(result.status == "FAIL" for result in results)
-    incomplete = bool(missing) or any(result.status == "INCOMPLETE" for result in results)
+    blocking = blocking_gaps(missing)
+    advisory = [entry for entry in missing if entry not in blocking]
+    incomplete = bool(blocking) or not results or any(result.status == "INCOMPLETE" for result in results)
     program_exit_code = _program_exit_code(failed, incomplete)
     report = {
         "schema_version": 1,
@@ -1008,12 +1027,15 @@ def main(argv: list[str] | None = None) -> int:
         "topic_inventory": inventory,
         "results": [asdict(result) for result in results],
         "uncovered_or_missing": missing,
+        "advisory_topic_gaps": advisory,
+        "blocking_gaps": blocking,
         "registered_research_results": registered_research_results(),
         "legacy_topic_results": legacy_readouts,
         "scientific_claim_outcomes": "registered outcomes are copied verbatim above and were not rerun or inferred from software tests",
         "exit_semantics": {"0": "all requested suites completed with no software failures or omissions",
                            "1": "one or more tests/checks failed, with no incomplete suite",
-                           "2": "coverage incomplete, collection/runtime prerequisite missing, timeout, or any combination including failure"},
+                           "2": "coverage incomplete, collection/runtime prerequisite missing, timeout, or any combination including failure",
+                           "advisory": "Topics without a suite (or with a limited suite) are listed but do not change the exit code"},
     }
     report_path = report_dir / "report.json"
     report_path.write_text(json.dumps(report, ensure_ascii=False, indent=2) + "\n", encoding="utf-8", newline="\n")
@@ -1023,7 +1045,7 @@ def main(argv: list[str] | None = None) -> int:
     print("\nSummary")
     print(f"  revision: {_revision(REPO_ROOT)}{' (dirty)' if report['working_tree_dirty'] else ''}")
     print(f"  suites: {len(results)}; passed: {sum(r.status == 'PASS' for r in results)}; failed: {failed}; incomplete: {sum(r.status == 'INCOMPLETE' for r in results)}")
-    print(f"  coverage gaps: {len(missing)}; program exit code: {program_exit_code}")
+    print(f"  coverage gaps: {len(missing)} (blocking {len(blocking)}, advisory {len(advisory)}); program exit code: {program_exit_code}")
     print("  test outcomes: " + ", ".join(
         f"{key}={sum(getattr(result, key) or 0 for result in results)}"
         for key in ("passed", "failed", "errors", "skipped", "xfailed", "xpassed")
@@ -1031,7 +1053,7 @@ def main(argv: list[str] | None = None) -> int:
     if missing:
         print(f"  uncovered items: {len(missing)}")
         for item in missing:
-            print(f"    INCOMPLETE: {item}")
+            print(f"    {'ADVISORY' if item in advisory else 'INCOMPLETE'}: {item}")
     print(f"  readable report: {readable_report_path}")
     print(f"  machine-readable report and logs: {report_path}")
     research_counts = report["registered_research_results"]["counts"]

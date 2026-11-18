@@ -1,0 +1,10 @@
+# Robertson-Mansouri-Sexl combinations from two laboratory tests of Lorentz invariance (1-sigma).
+# P_MM: orientation dependence of the two-way speed of light (Michelson-Morley type).
+# P_KT: velocity dependence of the two-way speed of light (Kennedy-Thorndike type).
+# Each paper writes its combination in its own sign convention; every convention is zero for the Lorentz transformation.
+quantity,value,uncertainty,as_written_in_source,source
+P_MM,4e-12,8e-12,beta + delta - 1/2,Herrmann et al. 2009 arXiv:1002.1284 Sec. II.2
+P_KT,-4.8e-8,3.7e-8,beta - alpha - 1 (weighted mean of sidereal and annual),Tobar et al. 2010 arXiv:0912.2803 abstract
+P_KT_sidereal,-1.7e-8,4.0e-8,beta - alpha - 1,Tobar et al. 2010 arXiv:0912.2803 abstract
+P_KT_annual,-23e-8,10e-8,beta - alpha - 1,Tobar et al. 2010 arXiv:0912.2803 abstract
+v_lab_over_c,1.234e-3,0,370 km/s solar-system speed relative to the CMB,Herrmann et al. 2009 Sec. II.2

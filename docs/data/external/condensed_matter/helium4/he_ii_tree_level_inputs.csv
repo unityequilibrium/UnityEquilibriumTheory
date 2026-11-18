@@ -1,0 +1,11 @@
+# Sources:
+#   u1, rho: R. J. Donnelly and C. F. Barenghi, "The Observed Properties of Liquid Helium at the Saturated Vapor Pressure",
+#            J. Phys. Chem. Ref. Data 27, 1217 (1998), doi 10.1063/1.556028 (NIST SRD reprint). u1 from the first-sound table (T90).
+#            rho as evaluated from the same source's published density formula in Topic 13 record T13_HE4_O2_SI_SCALE_AND_NORMALIZED_BETA.
+#   a_HeHe:  R. E. Grisenti et al., "Determination of the Bond Length and Binding Energy of the Helium Dimer by Diffraction
+#            from a Transmission Grating", Phys. Rev. Lett. 85, 2284 (2000), doi 10.1103/PhysRevLett.85.2284.
+# Numerical facts transcribed 2026-11-16 for draft UET Test Card T015; no figures or text redistributed.
+record,quantity,value,uncertainty_plus,uncertainty_minus,unit,note
+observed,u1_first_sound_1p70K,233.1,,,m/s,"He II first sound at T90 = 1.7000 K, saturated vapour pressure; table gives 4 significant figures"
+observed,rho_total_1p70K,145.26863945323475,,,kg/m^3,"total density at 1.70 K SVP"
+observed,a_He_He_s_wave,1.04e-8,0.08e-8,0.18e-8,m,"He-4 dimer s-wave scattering length 104 +8/-18 angstrom"

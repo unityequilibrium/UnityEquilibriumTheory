@@ -1,0 +1,7 @@
+# Source: G. A. Gontcharov, O. S. Ryutina, C. J. Bonatto, S. S. Savchenko, S. V. Troitsky, "Isochrone Fitting of Galactic Globular Clusters - VIII. Homogeneous estimates of parameters for 27 clusters", arXiv:2605.28505v1 (2026), Sect. 5 and Conclusions; journal doi 10.1088/1674-4527/ae74b5.
+# Counts from HST ACS and Gaia DR3, RGB cut at the luminosity of the best-fitting BaSTI ZAHB, each giant counted once over the entire field.
+# Numerical facts transcribed 2026-11-16 for draft UET Test Card T014; verify against the journal version before approval.
+record,quantity,value,uncertainty_plus,uncertainty_minus,unit,note
+observed,R_in_situ_constant,1.31,0.06,0.05,1,"constant R = N_HB/N_RGB(above ZAHB) accepted for all 8 in-situ clusters (entire fields)"
+observed,R_all_consistent_constant,1.32,0.09,0.09,1,"constant value with which all in-situ and 12 of 19 accreted clusters agree within 1 sigma; context only"
+observed,n_in_situ_clusters,8,,,1,"in-situ clusters in the sample of 27"

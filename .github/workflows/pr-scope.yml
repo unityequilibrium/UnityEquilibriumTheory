@@ -28,8 +28,8 @@ jobs:
           HEAD_BRANCH: ${{ github.head_ref }}
         run: |
           set -euo pipefail
-          [[ "$HEAD_BRANCH" =~ ^codex/(research|book|history|policy|services|repo)/[^/[:space:]]+$ ]] || {
-            echo "Use codex/<area>/<task>."
+          [[ "$HEAD_BRANCH" =~ ^[a-z0-9][a-z0-9-]*/(research|book|history|policy|services|repo)/[^/[:space:]]+$ ]] || {
+            echo "Use <agent>/<area>/<task>."
             exit 1
           }
       - name: Collect changed files

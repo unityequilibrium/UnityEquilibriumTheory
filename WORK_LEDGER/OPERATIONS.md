@@ -6,11 +6,14 @@
 
 These are source-linked historical records, not proof of completed research, successful publication, or current scientific readiness.
 
-Indexed entries: 131. Counts describe records, not accomplishments.
+Indexed entries: 135. Counts describe records, not accomplishments.
 
 | Date | Record | Area | Notes |
 | --- | --- | --- | --- |
-| 2026-11-18 | [Route research output to the current Topic tree](2026/2026-11-18.md#route-research-output-to-the-current-topic-tree) (L3) | repo-ops | explicit_stream_and_area |
+| 2026-11-18 | [Route research output to the current Topic tree](2026/2026-11-18.md#route-research-output-to-the-current-topic-tree) (L285) | repo-ops | explicit_stream_and_area |
+| 2026-11-18 | [Core alignment step 1: inventory of every core file](2026/2026-11-18.md#core-alignment-step-1-inventory-of-every-core-file) (L53) | repo-ops, research-core | explicit_stream_and_area |
+| 2026-11-18 | [README v0.9.1 in English and Thai](2026/2026-11-18.md#readme-v091-in-english-and-thai) (L33) | documentation-system | explicit_stream_and_area |
+| 2026-11-18 | [PR #59 admin merge past a known legacy CI failure](2026/2026-11-18.md#pr-59-admin-merge-past-a-known-legacy-ci-failure) (L23) | repo-ops | explicit_stream_and_area |
 | 2026-11-16 | [Owner-requested publication of the root-layout repair branch](2026/2026-11-16.md#owner-requested-publication-of-the-root-layout-repair-branch) (L63) | repo-ops | explicit_stream_and_area |
 | 2026-11-16 | [Topic 10 archived-source locator recovery](2026/2026-11-16.md#topic-10-archived-source-locator-recovery) (L51) | repo-ops | explicit_stream_and_area |
 | 2026-11-16 | [Full Desktop regression checkpoint and declared-predecessor guard repair](2026/2026-11-16.md#full-desktop-regression-checkpoint-and-declared-predecessor-guard-repair) (L39) | repo-ops | explicit_stream_and_area |
@@ -28,6 +31,7 @@ Indexed entries: 131. Counts describe records, not accomplishments.
 | 2026-11-15 | [Restore byte-locked public CSV checkout fidelity](2026/2026-11-15.md#restore-byte-locked-public-csv-checkout-fidelity) (L38) | repo-ops | explicit_stream_and_area |
 | 2026-11-15 | [Nested import identity and deferred-test discovery](2026/2026-11-15.md#nested-import-identity-and-deferred-test-discovery) (L25) | repo-ops | explicit_stream_and_area |
 | 2026-11-15 | [Root Core–Topics post-move repair](2026/2026-11-15.md#root-coretopics-post-move-repair) (L3) | repo-ops | explicit_stream_and_area |
+| 2026-11-14 | [PR 59 merged with main after the root Core and topics move](2026/2026-11-14.md#pr-59-merged-with-main-after-the-root-core-and-topics-move) (L16) | repo-ops | explicit_stream_and_area |
 | 2026-11-14 | [Root Core and topics: move first, repair separately](2026/2026-11-14.md#root-core-and-topics-move-first-repair-separately) (L3) | repo-ops | explicit_stream_and_area |
 | 2026-11-03 | [Ledger research and book-history separation](2026/2026-11-03.md#ledger-research-and-book-history-separation) (L17) | repo-ops | explicit_stream_and_area |
 | 2026-11-02 | [2026-11-03 owner-directed history relocation](2026/2026-11-02.md#2026-11-03-owner-directed-history-relocation) (L29) | repo-ops, theory-history, book-writing | explicit_primary_area |

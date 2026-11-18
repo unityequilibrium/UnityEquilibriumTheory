@@ -1,0 +1,143 @@
+{
+  "schema": "uet-result-v2",
+  "result_id": "R_T021_LIGHTING_SUCCESSION",
+  "claim_id": "C_T021_LIGHTING_SUCCESSION",
+  "level": "L2_CONFRONTED",
+  "test_card_id": "T021",
+  "calculation_contract_id": "CORE_T021_LIGHTING_SUCCESSION_V1",
+  "outcome": "PASS",
+  "numbers": [
+    {
+      "name": "sesame_to_candle_energy_ratio",
+      "value": 0.7886,
+      "uncertainty": null,
+      "unit": "1"
+    },
+    {
+      "name": "sesame_to_candle_labor_ratio",
+      "value": 0.1294,
+      "uncertainty": null,
+      "unit": "1"
+    },
+    {
+      "name": "candle_to_whale_oil_energy_ratio",
+      "value": 0.5624,
+      "uncertainty": null,
+      "unit": "1"
+    },
+    {
+      "name": "candle_to_whale_oil_labor_ratio",
+      "value": 1.6333,
+      "uncertainty": null,
+      "unit": "1"
+    },
+    {
+      "name": "candle_to_gas_energy_ratio",
+      "value": 0.581,
+      "uncertainty": null,
+      "unit": "1"
+    },
+    {
+      "name": "candle_to_gas_labor_ratio",
+      "value": 1.3777,
+      "uncertainty": null,
+      "unit": "1"
+    },
+    {
+      "name": "sperm_oil_to_kerosene_energy_ratio",
+      "value": 1.5743,
+      "uncertainty": null,
+      "unit": "1"
+    },
+    {
+      "name": "sperm_oil_to_kerosene_labor_ratio",
+      "value": 0.0144,
+      "uncertainty": null,
+      "unit": "1"
+    },
+    {
+      "name": "kerosene_to_edison_energy_ratio",
+      "value": 0.0612,
+      "uncertainty": null,
+      "unit": "1"
+    },
+    {
+      "name": "kerosene_to_edison_labor_ratio",
+      "value": 3.33,
+      "uncertainty": null,
+      "unit": "1"
+    },
+    {
+      "name": "kerosene_to_edison_eta_star",
+      "value": 0.0612,
+      "uncertainty": null,
+      "unit": "1"
+    },
+    {
+      "name": "gas_to_edison_energy_ratio",
+      "value": 0.0948,
+      "uncertainty": null,
+      "unit": "1"
+    },
+    {
+      "name": "gas_to_edison_labor_ratio",
+      "value": 2.3013,
+      "uncertainty": null,
+      "unit": "1"
+    },
+    {
+      "name": "gas_to_edison_eta_star",
+      "value": 0.0948,
+      "uncertainty": null,
+      "unit": "1"
+    },
+    {
+      "name": "incandescent_to_cfl_energy_ratio",
+      "value": 0.2075,
+      "uncertainty": null,
+      "unit": "1"
+    },
+    {
+      "name": "incandescent_to_cfl_labor_ratio",
+      "value": 0.1967,
+      "uncertainty": null,
+      "unit": "1"
+    },
+    {
+      "name": "count_dominates",
+      "value": 2,
+      "uncertainty": null,
+      "unit": "pairs"
+    },
+    {
+      "name": "count_trade_off",
+      "value": 5,
+      "uncertainty": null,
+      "unit": "pairs"
+    },
+    {
+      "name": "count_worse_both",
+      "value": 0,
+      "uncertainty": null,
+      "unit": "pairs"
+    },
+    {
+      "name": "count_tie",
+      "value": 0,
+      "uncertainty": null,
+      "unit": "pairs"
+    }
+  ],
+  "producer": {
+    "script": "core/03_lanes/persistence/t021_lighting_succession.py",
+    "commit": "e29941f7c"
+  },
+  "artifacts": [],
+  "date": "2026-11-17",
+  "approval": {
+    "approved_by": "santxkoz",
+    "date": "2026-11-18",
+    "role": "AUTHOR"
+  },
+  "note": "PASS by the preregistered rule: none of the 7 fixed pairs is WORSE_BOTH (2 DOMINATES: sesame lamp -> tallow candle, incandescent -> CFL; 5 TRADE_OFF). Four of the five trade-offs entered with less energy but more hours of work per lumen-hour (whale oil, town gas, Edison vs kerosene x3.33 labor, Edison vs gas x2.30); the fifth, kerosene at Silliman 1855, entered with 1.57 times MORE device energy than the sperm-oil lamp but 0.014 times the labor, so an energy-only rule would have picked the loser. Successor families later dominated the incumbent's row: gas by 1855, kerosene by 1880, electric by 1900; whale oil never dominated the 1830 tallow candle in this table. Device energy basis only: Edison 1883 is better in both only if the plant efficiency exceeds eta* = 0.061 (vs kerosene) and 0.095 (vs gas); plant efficiency is not in the dataset, so this is not decided. Not blind (SEEN_FULL); not UET-distinct (standard economics expects the same). L2 approved by the author on 2026-11-18."
+}

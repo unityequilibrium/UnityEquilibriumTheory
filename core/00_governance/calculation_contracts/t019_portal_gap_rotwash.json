@@ -1,0 +1,223 @@
+{
+  "schema_version": "uet-calculation-contract-v1",
+  "contract_id": "CORE_T019_PORTAL_GAP_ROTWASH_V1",
+  "profile": "PHYSICAL_COMPARISON",
+  "review": {
+    "status": "INCOMPLETE",
+    "reviewer": "agent:claude-t019",
+    "rationale": "Methodological contract for Test Card T019. The evidence decision lives in docs/standard. Differential acceleration and sensitivity table are taken from the published analysis.",
+    "coverage_evidence": [
+      "docs/data/external/gravity/ep_short_range/smith2000_rotwash_baryon.csv"
+    ]
+  },
+  "question": "How strongly can the UET portal (charge = nucleon number) couple at ranges 1 cm to 1e5 m, given the Rot-Wash equivalence-principle data?",
+  "output": {
+    "quantity": "alpha_max and g_c_max at 19 ranges from 0.01 m to 1e5 m",
+    "unit": "1",
+    "domain": "Eot-Wash Rot-Wash apparatus, Cu and Pb test bodies, 238U attractor",
+    "accuracy": "95 percent symmetric limit on |Delta a| as published; S held at its 50 m value beyond 50 m (Earth term <= 1.4 percent).",
+    "claim_intent": "DIAGNOSTIC"
+  },
+  "model": {
+    "formula_ids": [
+      "UET_PORTAL_COMPOSITION_EP",
+      "UET_T019_ROTWASH_GAP"
+    ],
+    "assumptions": "Portal charge per mass eps = (B/mu)(m_N/u) (T016 lane).",
+    "approximation": "Earth and centrifugal terms of Eq. (26) omitted.",
+    "initial_boundary": "Static attractor field.",
+    "drive_environment": "Laboratory, as published.",
+    "parameters": "No fitting; alpha_max from published |Delta a| and S."
+  },
+  "data_policy": {
+    "uses_observations": true,
+    "calibration_ids": [],
+    "comparison_ids": [
+      "SMITH2000_ROTWASH_BARYON"
+    ],
+    "independent_validation": false,
+    "holdout_policy": "No holdout. Published summary seen before drafting (SEEN_SUMMARY), declared in Test Card T019."
+  },
+  "observation": {
+    "system_partition": {
+      "role_mode": "RELATIONAL",
+      "accounting_component_id": "system_state",
+      "boundary": "Torsion balance and rotating attractor; published values used only.",
+      "systems": [
+        {
+          "id": "population",
+          "state": "Cu and Pb test bodies and 238U attractor",
+          "state_accounting": {
+            "kind": "INDEPENDENT",
+            "state_ids": [
+              "population.bodies"
+            ],
+            "owner_ids": [],
+            "rule": "Bodies as published."
+          }
+        },
+        {
+          "id": "camera",
+          "state": "Torsion-fiber twist record",
+          "state_accounting": {
+            "kind": "INDEPENDENT",
+            "state_ids": [
+              "camera.record"
+            ],
+            "owner_ids": [],
+            "rule": "Observer record only."
+          }
+        }
+      ],
+      "couplings": [
+        {
+          "id": "imaging",
+          "source": "population",
+          "target": "camera",
+          "kind": "DETECTION",
+          "component_id": "detector",
+          "map": "Twist angle read by autocollimator"
+        },
+        {
+          "id": "illumination_backaction",
+          "source": "camera",
+          "target": "population",
+          "kind": "BACKACTION",
+          "component_id": "detector",
+          "map": "Gravity gradients and tilt handled upstream"
+        }
+      ],
+      "observables": [
+        {
+          "id": "life_history",
+          "detector_id": "camera",
+          "target_systems": [
+            "population"
+          ],
+          "backaction_targets": [
+            "population"
+          ],
+          "backaction_scope_reason": "Single assessed owner.",
+          "quantity": "differential acceleration Cu - Pb toward the attractor",
+          "readout_map": "Published Delta a and S table; read only",
+          "component_id": "detector"
+        }
+      ]
+    },
+    "source_state": "238U attractor rotating around the balance.",
+    "generated_trace": "Not a UET trace variable.",
+    "carrier": "Not applicable.",
+    "observer_state": "Published Eq. (22) and Tables IX-XI.",
+    "readout": "Delta a (cm/s^2), S(lambda).",
+    "backaction": "Handled upstream.",
+    "frame": "Laboratory frame",
+    "time_convention": "Not applicable",
+    "product_level": "published derived quantities (not raw data)",
+    "corrections": [
+      {
+        "id": "published_analysis_upstream",
+        "state": "APPLIED_UPSTREAM",
+        "evidence": "docs/data/external/gravity/ep_short_range/smith2000_rotwash_baryon.csv"
+      }
+    ]
+  },
+  "components": [
+    {
+      "id": "system_state",
+      "group": "system_state",
+      "disposition": "MODELED",
+      "reason": "Bodies and charges as registered.",
+      "evidence": [
+        "docs/data/external/gravity/ep_short_range/smith2000_rotwash_baryon.csv"
+      ]
+    },
+    {
+      "id": "drive_environment",
+      "group": "drive_environment",
+      "disposition": "UPSTREAM_CORRECTED",
+      "reason": "Applied upstream in the published analysis (Smith et al. 2000); not recomputed here.",
+      "evidence": [
+        "docs/data/external/gravity/ep_short_range/smith2000_rotwash_baryon.csv"
+      ]
+    },
+    {
+      "id": "propagation",
+      "group": "propagation",
+      "disposition": "NOT_APPLICABLE",
+      "reason": "No signal propagation.",
+      "evidence": []
+    },
+    {
+      "id": "frame_time",
+      "group": "frame_time",
+      "disposition": "UPSTREAM_CORRECTED",
+      "reason": "Applied upstream in the published analysis (Smith et al. 2000); not recomputed here.",
+      "evidence": [
+        "docs/data/external/gravity/ep_short_range/smith2000_rotwash_baryon.csv"
+      ]
+    },
+    {
+      "id": "detector",
+      "group": "detector",
+      "disposition": "UPSTREAM_CORRECTED",
+      "reason": "Applied upstream in the published analysis (Smith et al. 2000); not recomputed here.",
+      "evidence": [
+        "docs/data/external/gravity/ep_short_range/smith2000_rotwash_baryon.csv"
+      ]
+    },
+    {
+      "id": "processing",
+      "group": "processing",
+      "disposition": "MODELED",
+      "reason": "alpha_max = |Delta a|_95/(g' k^2 S); outcome rule fixed in T019.",
+      "evidence": [
+        "core/03_lanes/scalar_tensor/t019_portal_gap_rotwash.py"
+      ]
+    },
+    {
+      "id": "numerics",
+      "group": "numerics",
+      "disposition": "MODELED",
+      "reason": "Closed-form arithmetic.",
+      "evidence": [
+        "core/03_lanes/scalar_tensor/t019_portal_gap_rotwash.py"
+      ]
+    }
+  ],
+  "error_budget": {
+    "unit": "1",
+    "numerical": "Floating point only.",
+    "approximation": "S held at 50 m value up to 1e5 m; Earth term <= 1.4 percent, centrifugal 0.16 percent.",
+    "measurement": "|Delta a| 95 percent limit 5.7e-13 cm/s^2 as published.",
+    "systematic": "Transcription checked against search-tool full text, not the printed page; lane choice (nucleon-number charge) is an AI interpretation.",
+    "omissions": "Earth-sourced EP tests (better at 1 km - 1e5 m) not used.",
+    "dependence": "Single experiment.",
+    "acceptance": "Outcome categories fixed in Test Card T019.",
+    "omission_limit": null
+  },
+  "identities": [
+    {
+      "path": "docs/data/external/gravity/ep_short_range/smith2000_rotwash_baryon.csv",
+      "kind": "working_file",
+      "role": "input",
+      "sha256": "31a2dd5039bba8a22e482baf308037a9fa4b0049b61bdffdcc96355dc83f2bf4",
+      "availability": "REQUIRED"
+    },
+    {
+      "path": "core/03_lanes/scalar_tensor/t019_portal_gap_rotwash.py",
+      "kind": "working_file",
+      "role": "code",
+      "sha256": "7f732ed3f5ec3d0770cca9739fb5b38429d4e792e16b221ecc6e4daa22be30db",
+      "availability": "REQUIRED"
+    }
+  ],
+  "entrypoints": [
+    "core/03_lanes/scalar_tensor/t019_portal_gap_rotwash.py"
+  ],
+  "evidence": [
+    "core/03_lanes/scalar_tensor/t019_portal_gap_rotwash.py",
+    "docs/data/external/gravity/ep_short_range/smith2000_rotwash_baryon.csv"
+  ],
+  "claim_boundary": "Methodological coverage of the T019 comparison only; the evidence level is set in docs/standard. Not UET-distinct (any baryon-coupled scalar).",
+  "next_action": "Add Earth-sourced EP bounds for 1 km - 1e5 m with an Earth model if a tighter bound is needed."
+}

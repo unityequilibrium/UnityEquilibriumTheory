@@ -576,13 +576,7 @@ class ObserverControls(unittest.TestCase):
             self.assertTrue(any(c["group"] == "detector" and c["disposition"] == "UNKNOWN"
                                 for c in contract["components"]))
             errors = audit.validate_contract(contract)["errors"]
-            if name in {"physical_route_admission", "readout_admission"}:
-                stem = "Research_T13_Physical_Route_Admission.py" if name == "physical_route_admission" else "Research_T13_Readout_Admission.py"
-                self.assertEqual(errors, [
-                    f"STALE identity: docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/{stem}"
-                ])
-            else:
-                self.assertEqual(errors, [])
+            self.assertEqual(errors, [])
 
     def test_pilot_builder_and_saved_partition_agree(self):
         builder = audit.ROOT / "docs/scripts/audit/build_calculation_contract_pilots.py"
@@ -638,14 +632,7 @@ class ObserverControls(unittest.TestCase):
             self.assertEqual(saved["profile"], "FORMAL")
             self.assertFalse(saved["data_policy"]["uses_observations"])
             result = audit.validate_contract(saved)
-            expected_stale = (
-                [
-                    "STALE identity: docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/Research_T13_Graphite_Preparation.py"
-                ]
-                if name == "graphite_preparation_prediction"
-                else []
-            )
-            self.assertEqual(result["errors"], expected_stale)
+            self.assertEqual(result["errors"], [])
             self.assertNotIn("system_partition:legacy_unreviewed", result["gaps"])
 
     def test_astronomy_contracts_are_offline_products_not_raw_instrument_reductions(self):

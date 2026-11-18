@@ -107,103 +107,103 @@
       "main_status": "MISSING",
       "path": "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/Research_Energy_Memory_Retention.py",
       "source_origin": "LOCAL_WORKING_DEPENDENCY",
-      "source_sha256": "14db515ddb6889198d0f06505e3f4efe35b7cc50ded69c333cce44bd38ab2fc5"
+      "source_sha256": "c6e5abfdd0dcdd7da40bbd6b8e3234920cc1c7bb4a0888a1b12c611bf57937f5"
     },
     {
-      "bytes": 15921,
+      "bytes": 16179,
       "kind": "immutable",
       "main_status": "MISSING",
       "path": "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/Research_T13_BaTiO3_Static_Correspondence_Audit.py",
       "source_origin": "COMMITTED_SOURCE",
-      "source_sha256": "bb18ab0db899237889b8567de0ad3ae215a42925d808983d025cdc56b644f3d7"
+      "source_sha256": "1b614968a0a21c6c0a03c308dedaab676f3b7a679f16cc4bbc0bef433e67591a"
     },
     {
-      "bytes": 16230,
+      "bytes": 16463,
       "kind": "immutable",
       "main_status": "MISSING",
       "path": "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/Research_T13_Joint_State_Measure_Construction.py",
       "source_origin": "COMMITTED_SOURCE",
-      "source_sha256": "67f3895fa13aa1847f04c736012369addb225d3d6ec7405ef38e49079065f50d"
+      "source_sha256": "abd3037c77bcd04049f9d274dd38579fe4d66024ea0c39e12ad3e6a7d09d4524"
     },
     {
-      "bytes": 23137,
+      "bytes": 23390,
       "kind": "immutable",
       "main_status": "MISSING",
       "path": "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/Research_T13_Joint_Thermodynamic_Completion.py",
       "source_origin": "COMMITTED_SOURCE",
-      "source_sha256": "c701195cf6da2376701d8543b883c5342d3a3186bf21d326180db25d10bcc18c"
+      "source_sha256": "c5b3143eda10c9b7d97a459f6640c48f0c40ded97c776a470c9446abf6bdb721"
     },
     {
-      "bytes": 23938,
+      "bytes": 24171,
       "kind": "immutable",
       "main_status": "MISSING",
       "path": "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/Research_T13_Lattice_Bath_Reduction_Audit.py",
       "source_origin": "COMMITTED_SOURCE",
-      "source_sha256": "5e69191a17c14322d0886a64b7be97154a774cec9e55f0eafec387ef41a0ce99"
+      "source_sha256": "7a30ef260ea09a6fe26111bde549258453f46efd07aa73efcb301b5a035fda0b"
     },
     {
-      "bytes": 21083,
+      "bytes": 21316,
       "kind": "immutable",
       "main_status": "MISSING",
       "path": "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/Research_T13_Lattice_Mechanical_State_Construction.py",
       "source_origin": "COMMITTED_SOURCE",
-      "source_sha256": "6489e909fcfb6cdbf13f40093d2bb44c5c3b31c2f506945f2e6837041b3a87a3"
+      "source_sha256": "e5aad160ff7940369e07d74ca5c405e2d58b798a5a3c2828fb5706cbfad4e6a2"
     },
     {
-      "bytes": 27289,
+      "bytes": 27522,
       "kind": "immutable",
       "main_status": "MISSING",
       "path": "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/Research_T13_Parent_Static_Reference_Audit.py",
       "source_origin": "COMMITTED_SOURCE",
-      "source_sha256": "4deb7fbc6188996c480b14cebdc84cbfbda51ddce56328a6133b322602c86154"
+      "source_sha256": "711ac232f919c0a36aabafa14efe916ec76be1db64f035083e018768fe4a1eb1"
     },
     {
-      "bytes": 17028,
+      "bytes": 17261,
       "kind": "immutable",
       "main_status": "MISSING",
       "path": "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/Research_T13_PhiE_Lane_Composition_Boundary.py",
       "source_origin": "LOCAL_WORKING_DEPENDENCY",
-      "source_sha256": "55ab362fc725b6940d6015389e7354461f892b6e436bcff4b49ee11972a13f68"
+      "source_sha256": "53e24c41c9a5cd38337fe95b9eec5a16ec37ac5d02ab67402f3e235996171aa2"
     },
     {
-      "bytes": 20262,
+      "bytes": 20545,
       "kind": "immutable",
       "main_status": "MISSING",
       "path": "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/Research_T13_Phi_Variance_Static_Admissibility.py",
       "source_origin": "COMMITTED_SOURCE",
-      "source_sha256": "0f773223db1bdca2cd54f396fbd1ebc090c6f9b4a80eeeef558a914ebb573afa"
+      "source_sha256": "c21abd80286b135ea772fc735d5e5760771c81df92568ee29d2c273a86db5c32"
     },
     {
-      "bytes": 18141,
+      "bytes": 18449,
       "kind": "immutable",
       "main_status": "MISSING",
       "path": "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/Research_T13_Physical_Platform_Correspondence_Screen.py",
       "source_origin": "COMMITTED_SOURCE",
-      "source_sha256": "a113537afa15dd527640558e18926a40d57f05478f574e064f65fa991db72c02"
+      "source_sha256": "bb01293baaf5ef99c8e53c8e6dbd9b8ab7f7981b6e780b96beefa27060081f84"
     },
     {
-      "bytes": 27002,
+      "bytes": 27408,
       "kind": "immutable",
       "main_status": "MISSING",
       "path": "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/Research_T13_Retained_Response_Regime_Classification.py",
       "source_origin": "COMMITTED_SOURCE",
-      "source_sha256": "7de89f680bace17e4fd6534b255f2f4fb047984774f714ef1c9e414c9f21b4f0"
+      "source_sha256": "5385084d30dd8234605335b0f55b055831d07e6403509b21e73a31500f359451"
     },
     {
-      "bytes": 17095,
+      "bytes": 17501,
       "kind": "immutable",
       "main_status": "MISSING",
       "path": "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/Research_T13_Retained_Response_Requirement_Audit.py",
       "source_origin": "COMMITTED_SOURCE",
-      "source_sha256": "ece85e04207ea8dda8da7e57d63ecfd2e61554792dc2eeb11fc64824531a3014"
+      "source_sha256": "01e23acee1cfebf4769440b168902861847e68e5233011fccc94a36efafc1c67"
     },
     {
-      "bytes": 18399,
+      "bytes": 18632,
       "kind": "immutable",
       "main_status": "MISSING",
       "path": "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/Research_T13_Spin_Strain_Correspondence.py",
       "source_origin": "COMMITTED_SOURCE",
-      "source_sha256": "8d249e67e124c99b10dec41e3fd4da36ab4ef31d3c68802b1af2f2052412d9aa"
+      "source_sha256": "0476200796145331a4463ff8ae0ea8c135e5f1c17ec316531eaf3f4ffac95fcf"
     },
     {
       "bytes": 2824,
@@ -278,20 +278,20 @@
       "source_sha256": "443c1a57677fadaf50d35e2dd42f2c3b898a1217201e863783fd327d1fd59123"
     },
     {
-      "bytes": 10883,
+      "bytes": 11010,
       "kind": "immutable",
       "main_status": "MISSING",
       "path": "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/test_t13_retained_response_regime_classification.py",
       "source_origin": "COMMITTED_SOURCE",
-      "source_sha256": "403a45d8fea218d8d9647bae3d85a756605dc997d0cb63d2f95b0b68d0943449"
+      "source_sha256": "5c8d13e49a511155fcb0dc329fc1b58ef0159bb613222e15a0dad7fa46c68aa2"
     },
     {
-      "bytes": 7151,
+      "bytes": 7278,
       "kind": "immutable",
       "main_status": "MISSING",
       "path": "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/test_t13_retained_response_requirement_audit.py",
       "source_origin": "COMMITTED_SOURCE",
-      "source_sha256": "f8a198b1b9c9440f0b0697832f3093c732bf0e126667c168a3e18f41cfa5b8db"
+      "source_sha256": "e94be1936e7814cee5e8c3eee1c94c4abfc02aefb8623cbc9756a512bbfcf3de"
     },
     {
       "bytes": 9148,
@@ -382,7 +382,7 @@
       "kind": "artifact",
       "main_status": "MISSING",
       "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/t13_phi_variance_static_admissibility.json",
-      "payload_sha256": "c32da4b7bb3615de88e663533be4b833b21b86e746e7ab31214b1727e26094a8",
+      "payload_sha256": "795e93d37377770a0fa6c736f5b026369255aec5b9ffb75b04efade9288708eb",
       "review_status": "INCOMPLETE",
       "source_origin": "COMMITTED_SOURCE",
       "source_sha256": "3d28fe9daa5595219830f41ee9f6fc8ee8db23a51f1b77d01df6e328fcd70b7f"
@@ -411,7 +411,7 @@
       "kind": "artifact",
       "main_status": "MISSING",
       "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/t13_retained_response_regime_classification.json",
-      "payload_sha256": "345ce1b1c66c95e6f3daa521e9055cd1ed3781c7a7cca1358630796b95d23d94",
+      "payload_sha256": "cf6535229b097a306f268fd61ec15b176c2bcc1b38ee8ad778d1442598cbddb9",
       "review_status": "INCOMPLETE",
       "source_origin": "COMMITTED_SOURCE",
       "source_sha256": "0158aa3dc9d139b1934045a8006280055519c0428e941f140e46fe1a9cad0505"
@@ -742,7 +742,7 @@
     },
     {
       "path": "docs/scripts/audit/audit_calculation_completeness.py",
-      "sha256": "b406d31add9834d2cd1d9f3bb8d42724d26c390413710419313dd85cba7121ca"
+      "sha256": "f3d8cbb1dcc0f1550fea283ab9b2409f50c7ea16c1c836c4a3cdb722573d9e31"
     },
     {
       "path": "docs/scripts/audit/audit_matter_space_causal_cone_compatibility.py",
@@ -750,7 +750,7 @@
     },
     {
       "path": "docs/scripts/audit/audit_matter_space_core.py",
-      "sha256": "1f1af236be8cd2d9bf8002affb2f782a3d4ead0442f657f491f9be9d9f39b06a"
+      "sha256": "ccfadbb9c6b6f89e46f3107588a6bc00a3e989f0b6027f6799af5daf321c2f7a"
     },
     {
       "path": "docs/topics/0.11_Phase_Transitions/Code/03_Research/Research_Matter_Space_Phase_Coupling.py",

@@ -305,3 +305,40 @@
 - Added FRED/BEA Personal Current Transfer Receipts (`PCTR`) to the frozen funding-source proxy panel.
 - Same-year transfer-receipt/investment-growth association was `-0.358`; one-year lag was `0.184`; two-year lag was `0.257`.
 - These are descriptive co-movements, not evidence that transfers cause or fund investment; transaction-level provenance remains blocked.
+
+### 2026-11-17 - External energy as a two-level UET system
+
+- Question: can the author's claim (humans win by using outside resources instead of their own metabolism) be written in UET equations? Note: `Doc/ANALYSIS_EXTERNAL_ENERGY_UET_2026-11-17.md`.
+- Verified numbers: forager ~120 W, industrial median ~1,580 W, top > 10,000 W (13-83 times metabolism); cities flux 1e5-1e8 W/km2 versus land NPP ~1e5 W/km2 (Burger et al. 2011, 2017).
+- Translation: inner level (body) keeps P_in near constant; the outer level carries the burn, with tau_out = F_out/(P_out - J). The book's R = f(N,K,I) stays an explanatory model; no identity is restored.
+- Next: author picks a real-data test (biomass ceiling, or replication of Burger 2011 exponents on 2015-2023 data).
+
+### 2026-11-17 - Author redirects the test to innovation
+
+- The author noted that J is already in the core equations, and that total human energy is the wrong test: humanity is still developing, and innovation should cut resources per unit of service, with time counted as a resource.
+- Added section 6 to the analysis note: resource vector per service, cost C = E + w_T T, and test D (technology succession). The weight w_T must be locked before data; the AI proposal is w_T = power per person.
+
+### 2026-11-17 - Quality of time as leverage of knowledge
+
+- Following the author (look at interactions that cause change, e.g. Newton and Einstein), added `Doc/ANALYSIS_KNOWLEDGE_FROM_INTERACTION_2026-11-17.md`. Quality of time is defined as leverage L = later resource savings / resource cost of producing the knowledge.
+- Verified numbers: keeping Moore's law needs more than 18 times the researchers of the early 1970s; research productivity falls about 5-7% per year (Bloom et al. 2020). Small teams that recombine older ideas disrupt (Wu et al. 2019, 65 million works).
+- Test D is now in three stages: Pareto succession (no weight needed), the time-energy rate measured from data, then knowledge leverage. The author no longer has to pick w_T.
+
+### 2026-11-17 - T021 drafted: lighting succession (stage 1 of test D)
+
+- With the author's download permission, transcribed Nordhaus (1997) Tables 1.3 and 1.6 (30 technologies). Every row passes two identities (labor = price / wage within 2%; lm/W x 293.07 = lm-h per 1,000 Btu within 3%). The data is registered as `NORDHAUS1997_LIGHTING`.
+- Draft card `docs/standard/tests/T021.json`, claim `C_T021_LIGHTING_SUCCESSION` (L0). The script refuses to run until the author approves.
+- Disclosure: not blind. The open risk is the energy boundary (device versus primary energy for early electric light).
+
+### 2026-11-17 - T021 run: PASS, no successor worse in both
+
+- Author approved T021 as drafted (e29941f7c). Run: 2 DOMINATES, 5 TRADE_OFF, 0 WORSE_BOTH at the device energy basis.
+- Kerosene (Silliman 1855) entered with 1.57 times the device energy of the sperm-oil lamp but 1/70 of the work hours: an energy-only rule picks the loser; counting time picks the winner.
+- Edison 1883 cost 3.3 times the work hours of kerosene; electric dominated by 1900. Primary energy is undecided (eta* 0.061 and 0.095).
+- Result record waits for the author's L2 decision. Not UET-distinct.
+
+### 2026-11-18 - Stage 2: aggregate transport data cannot measure w_T
+
+- Read Schafer 2000 Table A-2 (mode speeds, 7 countries) and TEDB Ed. 41 Table 2.14 (US energy per passenger-mile).
+- Car-versus-transit indifference rate in the US fell from 17 kW (1977) to 0.9 kW (1990) and turned negative by 1995: it tracks bus load factor and captive riders, not a common w_T.
+- Next: choice-level value-of-travel-time studies; w_T = VTTS / energy price across countries. See `Doc/ANALYSIS_TRANSPORT_TIME_ENERGY_RATE_2026-11-18.md`.

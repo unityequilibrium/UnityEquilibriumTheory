@@ -61,7 +61,7 @@
   ],
   "contract_id": "T13_JOINT_STATE_MEASURE_FORMAL_V1",
   "contract_review_status": "INCOMPLETE",
-  "contract_sha256": "01b74b6ee77a7bc6731a40df02a6c11d309697e7cac73e111975cb26376e1e69",
+  "contract_sha256": "899ff53a2616a6d2f61a92c647d20f74514ef6a5551ba9c9ca0f7a1c7b8ea0ad",
   "decisions": {
     "Omega_correspondence": "Finite-grid exact coarse free energy; old quartic is a controlled large-N/small-m approximation only, not an exact all-R law.",
     "comparator": "Chosen binary mean-field energy plus retained Phi/P is a standard equilibrium construction; no unique UET discriminator.",
@@ -113,7 +113,7 @@
       "kind": "working_file",
       "path": "docs/topics/0.13_Thermodynamic_Bridge/Code/03_Research/Research_T13_Joint_State_Measure_Construction.py",
       "role": "code",
-      "sha256": "67f3895fa13aa1847f04c736012369addb225d3d6ec7405ef38e49079065f50d"
+      "sha256": "abd3037c77bcd04049f9d274dd38579fe4d66024ea0c39e12ad3e6a7d09d4524"
     },
     {
       "availability": "REQUIRED",
@@ -155,14 +155,14 @@
       "kind": "working_file",
       "path": "docs/topics/0.13_Thermodynamic_Bridge/calculation_contracts/joint_thermodynamic_completion.json",
       "role": "evidence",
-      "sha256": "0a60129b9a303ad4fc1b3fbb6a06b6deec05ae45d78029cc0fce180fc60e7171"
+      "sha256": "b834945638e19aede2a256d06540852dddba1997e3c1f1c56028a2c74eb80c62"
     },
     {
       "availability": "REQUIRED",
       "kind": "working_file",
       "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/t13_joint_thermodynamic_completion.json",
       "role": "evidence",
-      "sha256": "e45cc255aee495a0b4a8ba63ba2e02cd083ed820a00da72377c3f0efe5ad58f3"
+      "sha256": "7a9bab1bc8b1f96dd51dce157431dafda945a00ff90f6c92069b0f67896e672a"
     },
     {
       "availability": "REQUIRED",
@@ -176,7 +176,7 @@
       "kind": "working_file",
       "path": "docs/scripts/audit/audit_calculation_completeness.py",
       "role": "code",
-      "sha256": "b406d31add9834d2cd1d9f3bb8d42724d26c390413710419313dd85cba7121ca"
+      "sha256": "f3d8cbb1dcc0f1550fea283ab9b2409f50c7ea16c1c836c4a3cdb722573d9e31"
     }
   ],
   "kinetic_law_added": false,

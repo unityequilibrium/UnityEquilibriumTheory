@@ -1,0 +1,58 @@
+{
+  "schema": "uet-lane-card-v1",
+  "topic": "0.19_Gravity_GR",
+  "reach": "LAYER1",
+  "system": "Weak-field gravity tests: equivalence principle (MICROSCOPE), short-range and lunar fifth-force bounds, PPN parameters, binary pulsars.",
+  "mapping": {
+    "chi": "ordinary matter counted per nucleon (Theory Card section 7, T005); portal source = nucleon rest energy (AI lane choice, claim C_PORTAL_COMPOSITION_EP)",
+    "psi": "canonical response scalar; static Yukawa field around masses, non-minimal coupling xi_c in strong fields",
+    "F": "not used (layer 1 only)",
+    "P": "not used (layer 1 only)",
+    "b": "not used"
+  },
+  "engine_functions": [
+    "layer1.portal_alpha",
+    "layer1.yukawa_range_m",
+    "layer1.two_body_potential_si",
+    "layer1.def_parameters"
+  ],
+  "parameters": [
+    {
+      "name": "g_c_bound_torsion",
+      "value": "5.1e-10 eV for m_psi <= 5.1e-3 eV",
+      "unit": "eV",
+      "origin": "REGISTERED_LIMIT",
+      "source": "C_T005_PORTAL_G_C"
+    },
+    {
+      "name": "xi_c_excluded",
+      "value": "[2.0, 2.4] for m_psi <= 2.5e-18 eV",
+      "unit": "1",
+      "origin": "REGISTERED_LIMIT",
+      "source": "C_T001_BINARY_PULSAR_XI_C"
+    },
+    {
+      "name": "eta_Ti_Pt",
+      "value": "(-1.5 +- 2.3 +- 1.5)e-15",
+      "unit": "1",
+      "origin": "MEASURED_INDEPENDENT",
+      "source": "MICROSCOPE 2022",
+      "data_id": "MICROSCOPE22_ETA_COMPOSITION"
+    }
+  ],
+  "observable": {
+    "quantity": "fifth-force and equivalence-principle bounds on g_c; PPN gamma and beta",
+    "unit": "eV and dimensionless",
+    "comparison_data_ids": [
+      "T005_YUKAWA_BOUNDS",
+      "MICROSCOPE22_ETA_COMPOSITION"
+    ],
+    "test_card": "T001, T005, T016, T019 closed"
+  },
+  "legacy": {
+    "engine": "topics/0.19_Gravity_GR/Code/01_Engine/Engine_Gravity_GR.py and Code/02_Proof/Proof_Equivalence_Principle.py",
+    "status": "LEGACY_UNREVIEWED. Legacy items mapped: CODATA G check and Planck units are bookkeeping, not UET evidence; 'eta = 0' assertion replaced by C_PORTAL_COMPOSITION_EP and draft T016; short-range Eot-Wash bound covered by T005 (Lee 2020); PPN gamma = beta = 1 at psi0 = 0 from W5 (layer1.def_parameters); light bending and perihelion follow from PPN at first order; Einstein equations, singularities and quantum gravity are not tested."
+  },
+  "drafted_by": "claude",
+  "approval": null
+}
