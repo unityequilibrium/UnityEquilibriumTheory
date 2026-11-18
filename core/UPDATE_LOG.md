@@ -523,3 +523,9 @@ commit: this commit
 - พบ: ไฟล์ป้าย B เป็นวัตถุดิบของ derivation ชั้น 2 ที่ยังขาด; ไม่มี claim ใดใช้โฟลเดอร์นี้
 - ระดับ: ไม่เปลี่ยน claim ใด; ไม่ย้ายไฟล์
 - ถัดไป: W5 03_lanes/thermal และ topic13_support
+
+## 2026-11-18 — Core alignment W5: thermal and topic13_support
+- ทำ: ตรวจ 119 ไฟล์ใน 03_lanes/thermal และ topic13_support
+- ผล: C 117 (สะพานความร้อนและบันทึกงานของ Topic 13 ที่ไม่ได้ derive จาก action แม่), D 2; ไม่มี claim ใดใช้
+- ระดับ: ไม่เปลี่ยน claim ใด; ไม่ย้ายไฟล์ (topic อ้างถึง 90 ไฟล์)
+- ถัดไป: รอบวิจัย SFI (scaling laws) แล้ว W6

@@ -477,125 +477,125 @@ core/03_lanes/scalar_tensor/t020_route_b_llr.py	03_lanes/scalar_tensor	.py	A	1	2
 core/03_lanes/scalar_tensor/uet_portal_composition.py	03_lanes/scalar_tensor	.py	A_DEP	2	0	1	1	0	0	2	1	A	W2	Model code of the new equations, used by producers or physics tests
 core/03_lanes/scalar_tensor/uet_portal_fifth_force.py	03_lanes/scalar_tensor	.py	A_DEP	2	0	1	4	0	0	2	1	A	W2	Model code of the new equations, used by producers or physics tests
 core/03_lanes/scalar_tensor/uet_vacuum_structure.py	03_lanes/scalar_tensor	.py	A_DEP	1	0	1	2	0	1	1	1	A	W2	Model code of the new equations, used by producers or physics tests
-core/03_lanes/thermal/README.md	03_lanes/thermal	.md	REVIEW	0	0	0	6	0	0	0	1	-	-	-
-core/03_lanes/thermal/__init__.py	03_lanes/thermal	.py	D	0	0	0	6	0	0	0	0	-	-	-
-core/03_lanes/thermal/he4_normal_viscosity_kubo.py	03_lanes/thermal	.py	REVIEW	0	0	0	17	2	0	0	4	-	-	-
-core/03_lanes/thermal/he4_o2_response_calibration.py	03_lanes/thermal	.py	REVIEW	0	0	0	20	2	0	0	5	-	-	-
-core/03_lanes/thermal/he4_o2_si_beta_mapping.py	03_lanes/thermal	.py	REVIEW	0	0	0	17	2	0	0	4	-	-	-
-core/03_lanes/thermal/he4_svp_reference.py	03_lanes/thermal	.py	REVIEW	0	0	0	19	2	0	0	4	-	-	-
-core/03_lanes/thermal/thermal_collective_response_eos.py	03_lanes/thermal	.py	REVIEW	0	0	0	20	1	2	0	7	-	-	-
-core/03_lanes/thermal/thermal_covariant_action_si_conversion.py	03_lanes/thermal	.py	REVIEW	0	0	0	16	1	2	0	4	-	-	-
-core/03_lanes/thermal/thermal_cp_cv_correction.py	03_lanes/thermal	.py	REVIEW	0	0	0	15	1	1	0	3	-	-	-
-core/03_lanes/thermal/thermal_dimensional_bridge.py	03_lanes/thermal	.py	REVIEW	0	0	0	15	2	1	0	5	-	-	-
-core/03_lanes/thermal/thermal_energy_response_bridge.py	03_lanes/thermal	.py	REVIEW	0	0	0	17	2	2	0	7	-	-	-
-core/03_lanes/thermal/thermal_observable_bridge.py	03_lanes/thermal	.py	REVIEW	0	0	0	19	2	0	0	6	-	-	-
-core/03_lanes/thermal/thermal_phi_e_reference_normalization.py	03_lanes/thermal	.py	REVIEW	0	0	0	13	1	0	0	4	-	-	-
-core/03_lanes/thermal/thermal_response_beta_contract.py	03_lanes/thermal	.py	REVIEW	0	0	0	20	4	3	0	14	-	-	-
-core/03_lanes/thermal/thermal_sk_kms_entropy_contract.py	03_lanes/thermal	.py	REVIEW	0	0	0	19	1	4	0	7	-	-	-
-core/03_lanes/thermal/thermal_source_observable_map.py	03_lanes/thermal	.py	REVIEW	0	0	0	21	3	2	0	6	-	-	-
-core/03_lanes/thermal/uet_anisotropic_thermoelastic_response_bridge.py	03_lanes/thermal	.py	REVIEW	0	0	0	16	1	2	0	3	-	-	-
-core/03_lanes/thermal/uet_dynamic_thermoelastic_response.py	03_lanes/thermal	.py	REVIEW	0	0	0	17	2	3	0	4	-	-	-
-core/03_lanes/thermal/uet_interlayer_mode_residue.py	03_lanes/thermal	.py	REVIEW	0	0	0	24	2	0	0	13	-	-	-
-core/03_lanes/thermal/uet_lattice_momentum_relaxing_heat_parent.py	03_lanes/thermal	.py	REVIEW	0	0	0	16	1	2	0	3	-	-	-
-core/03_lanes/thermal/uet_material_interface_factor_resolution.py	03_lanes/thermal	.py	REVIEW	1	0	0	17	1	3	1	5	-	-	-
-core/03_lanes/thermal/uet_material_lattice_interface_contract.py	03_lanes/thermal	.py	REVIEW	0	0	0	18	1	3	0	4	-	-	-
-core/03_lanes/thermal/uet_matter_strain_susceptibility.py	03_lanes/thermal	.py	REVIEW	0	0	0	19	2	0	0	6	-	-	-
-core/03_lanes/thermal/uet_mode_work_heat.py	03_lanes/thermal	.py	A_DEP	0	0	0	15	1	0	0	3	-	-	-
-core/03_lanes/thermal/uet_raman_deformation_constraint.py	03_lanes/thermal	.py	REVIEW	0	0	0	17	1	0	0	4	-	-	-
-core/03_lanes/thermal/uet_reciprocal_thermal_dynamics.py	03_lanes/thermal	.py	REVIEW	0	0	0	16	1	0	0	3	-	-	-
-core/03_lanes/thermal/uet_scalar_thermoelastic_response_bridge.py	03_lanes/thermal	.py	REVIEW	0	0	0	16	2	3	0	4	-	-	-
-core/03_lanes/thermal/uet_shear_symmetry.py	03_lanes/thermal	.py	A_DEP	0	0	0	16	1	0	0	4	-	-	-
-core/03_lanes/thermal/uet_thermoelastic_spatial_compatibility.py	03_lanes/thermal	.py	REVIEW	0	0	0	21	4	1	0	6	-	-	-
-core/03_lanes/thermal/uet_transport_coefficient_identifiability.py	03_lanes/thermal	.py	REVIEW	0	0	0	16	0	5	0	4	-	-	-
-core/03_lanes/topic13_support/CORE_HE4_SAME_STATE_HANDOFF_2026-10-04.md	03_lanes/topic13_support	.md	REVIEW	0	0	0	0	0	0	0	1	-	-	-
-core/03_lanes/topic13_support/README.md	03_lanes/topic13_support	.md	REVIEW	0	0	0	6	0	0	0	1	-	-	-
-core/03_lanes/topic13_support/T13_BASAL_COVERAGE_EXTENSION.md	03_lanes/topic13_support	.md	REVIEW	0	0	0	13	0	0	0	2	-	-	-
-core/03_lanes/topic13_support/T13_BASELINE_REGISTRATION_MODELS.md	03_lanes/topic13_support	.md	REVIEW	0	0	0	11	0	1	0	1	-	-	-
-core/03_lanes/topic13_support/T13_CHANNEL_SAMPLING_BOUNDARY.md	03_lanes/topic13_support	.md	REVIEW	0	0	0	11	0	1	0	1	-	-	-
-core/03_lanes/topic13_support/T13_CLOSURE_TRACK_REPORTING_REPAIR.md	03_lanes/topic13_support	.md	REVIEW	0	0	0	8	0	1	0	1	-	-	-
-core/03_lanes/topic13_support/T13_COLLISION_EVIDENCE_RECONCILIATION.md	03_lanes/topic13_support	.md	REVIEW	0	0	0	12	0	1	0	2	-	-	-
-core/03_lanes/topic13_support/T13_COMPLEMENTARY_GEOMETRY.md	03_lanes/topic13_support	.md	REVIEW	0	0	0	11	0	1	0	1	-	-	-
-core/03_lanes/topic13_support/T13_COMPLEMENTARY_SOURCE_ROUTES.md	03_lanes/topic13_support	.md	REVIEW	0	0	0	11	0	1	0	1	-	-	-
-core/03_lanes/topic13_support/T13_COMPOSITE_ALPHA_DESIGN.md	03_lanes/topic13_support	.md	REVIEW	0	0	0	12	0	1	0	1	-	-	-
-core/03_lanes/topic13_support/T13_CONSTRAINED_PRECISION_RESPONSE.md	03_lanes/topic13_support	.md	REVIEW	0	0	0	12	0	1	0	2	-	-	-
-core/03_lanes/topic13_support/T13_CONSTRAINED_TENSOR_REFERENCE.md	03_lanes/topic13_support	.md	REVIEW	0	0	0	11	0	1	0	1	-	-	-
-core/03_lanes/topic13_support/T13_CONTROLLED_ROTATION_PROFILE_COMPARISON.md	03_lanes/topic13_support	.md	REVIEW	0	0	0	12	0	1	0	2	-	-	-
-core/03_lanes/topic13_support/T13_CORE_INTEGRATION_NOTE.md	03_lanes/topic13_support	.md	REVIEW	0	0	0	12	0	0	0	1	-	-	-
-core/03_lanes/topic13_support/T13_CURRENT_METRIC_SURFACE.md	03_lanes/topic13_support	.md	REVIEW	0	0	0	11	0	1	0	1	-	-	-
-core/03_lanes/topic13_support/T13_CUT_POOLING_PROVENANCE.md	03_lanes/topic13_support	.md	REVIEW	0	0	0	11	0	1	0	1	-	-	-
-core/03_lanes/topic13_support/T13_DIRECTION_MOMENT_BOUNDARY.md	03_lanes/topic13_support	.md	REVIEW	0	0	0	8	0	1	0	1	-	-	-
-core/03_lanes/topic13_support/T13_DISPLACEMENT_PHASE.md	03_lanes/topic13_support	.md	REVIEW	0	0	0	11	0	0	0	1	-	-	-
-core/03_lanes/topic13_support/T13_DYNAMIC_THERMOELASTIC_RESPONSE.md	03_lanes/topic13_support	.md	REVIEW	0	0	0	9	0	0	0	2	-	-	-
-core/03_lanes/topic13_support/T13_E2G_NONLINEAR_SYMMETRY.md	03_lanes/topic13_support	.md	REVIEW	0	0	0	11	0	1	0	1	-	-	-
-core/03_lanes/topic13_support/T13_ENERGY_ESTIMATOR_NOISE.md	03_lanes/topic13_support	.md	REVIEW	0	0	0	11	0	1	0	1	-	-	-
-core/03_lanes/topic13_support/T13_ENERGY_IDENTIFIABILITY.md	03_lanes/topic13_support	.md	REVIEW	0	0	0	11	0	1	0	1	-	-	-
-core/03_lanes/topic13_support/T13_ENTROPY_FORCE_CONVENTION.md	03_lanes/topic13_support	.md	REVIEW	0	0	0	11	0	1	0	1	-	-	-
-core/03_lanes/topic13_support/T13_ENTROPY_METRIC_REPAIR.md	03_lanes/topic13_support	.md	REVIEW	0	0	0	8	0	0	0	1	-	-	-
-core/03_lanes/topic13_support/T13_EOS_REVISION_IMPACT.md	03_lanes/topic13_support	.md	REVIEW	0	0	0	11	0	1	0	1	-	-	-
-core/03_lanes/topic13_support/T13_FINITEQ_SCATTERING_GEOMETRY.md	03_lanes/topic13_support	.md	REVIEW	0	0	0	12	0	1	0	2	-	-	-
-core/03_lanes/topic13_support/T13_FOURIER_SHEAR_ANISOTROPY.md	03_lanes/topic13_support	.md	REVIEW	0	0	0	11	0	1	0	1	-	-	-
-core/03_lanes/topic13_support/T13_FRAME_OUTPUT_INTEGRATION.md	03_lanes/topic13_support	.md	REVIEW	0	0	0	8	0	1	0	1	-	-	-
-core/03_lanes/topic13_support/T13_GAMMA_SCATTERING_GEOMETRY.md	03_lanes/topic13_support	.md	REVIEW	0	0	0	12	0	1	0	2	-	-	-
-core/03_lanes/topic13_support/T13_GENERIC_Q_IMAGE_SUPPORT.md	03_lanes/topic13_support	.md	REVIEW	0	0	0	12	0	1	0	2	-	-	-
-core/03_lanes/topic13_support/T13_HE4_MATCHING_INDEPENDENCE.md	03_lanes/topic13_support	.md	REVIEW	0	0	0	11	0	3	0	1	-	-	-
-core/03_lanes/topic13_support/T13_HEAT_CHARGE_FRAME_MAP.md	03_lanes/topic13_support	.md	REVIEW	0	0	0	8	0	0	0	1	-	-	-
-core/03_lanes/topic13_support/T13_HYDROSTATIC_ACTUATION_ROUTE.md	03_lanes/topic13_support	.md	REVIEW	0	0	0	11	0	1	0	1	-	-	-
-core/03_lanes/topic13_support/T13_INTEGRATED_ELASTIC_EVENTS.md	03_lanes/topic13_support	.md	REVIEW	0	0	0	12	0	1	0	1	-	-	-
-core/03_lanes/topic13_support/T13_INTERLAYER_STRAIN_TRANSFER.md	03_lanes/topic13_support	.md	REVIEW	0	0	0	11	0	1	0	1	-	-	-
-core/03_lanes/topic13_support/T13_INTERLAYER_THERMAL_VARIANCE.md	03_lanes/topic13_support	.md	REVIEW	0	0	0	11	0	1	0	1	-	-	-
-core/03_lanes/topic13_support/T13_INTERPOLATION_REFINEMENT_REVIEW.md	03_lanes/topic13_support	.md	REVIEW	0	0	0	11	0	1	0	1	-	-	-
-core/03_lanes/topic13_support/T13_INTERPOLATION_SUPPORT_BOUNDARY.md	03_lanes/topic13_support	.md	REVIEW	0	0	0	11	0	1	0	1	-	-	-
-core/03_lanes/topic13_support/T13_ISENTROPIC_SOURCE_WORK.md	03_lanes/topic13_support	.md	REVIEW	0	0	0	8	0	1	0	1	-	-	-
-core/03_lanes/topic13_support/T13_JOINT_RESOLUTION.md	03_lanes/topic13_support	.md	REVIEW	0	0	0	8	0	1	0	1	-	-	-
-core/03_lanes/topic13_support/T13_LOCAL_QUADRATIC_BOUNDS.md	03_lanes/topic13_support	.md	REVIEW	0	0	0	11	0	1	0	1	-	-	-
-core/03_lanes/topic13_support/T13_LOCAL_VARIANCE_IDENTIFIABILITY.md	03_lanes/topic13_support	.md	REVIEW	0	0	0	11	0	0	0	1	-	-	-
-core/03_lanes/topic13_support/T13_MATTER_ACTUATION_HARMONICS.md	03_lanes/topic13_support	.md	REVIEW	0	0	0	11	0	2	0	1	-	-	-
-core/03_lanes/topic13_support/T13_MATTER_STRAIN_SUSCEPTIBILITY_MATCH.md	03_lanes/topic13_support	.md	REVIEW	0	0	0	11	0	0	0	4	-	-	-
-core/03_lanes/topic13_support/T13_MODE_WORK_HEAT_PROTOCOL.md	03_lanes/topic13_support	.md	REVIEW	0	0	0	11	0	1	0	1	-	-	-
-core/03_lanes/topic13_support/T13_MP48_E2G_MULTIPLICITY.md	03_lanes/topic13_support	.md	REVIEW	0	0	0	11	0	1	0	1	-	-	-
-core/03_lanes/topic13_support/T13_MP48_INTERLAYER_MODE_PROGRESS.md	03_lanes/topic13_support	.md	REVIEW	0	0	0	11	0	1	0	1	-	-	-
-core/03_lanes/topic13_support/T13_MP48_INTERLAYER_MODE_RESIDUE.md	03_lanes/topic13_support	.md	REVIEW	1	0	0	8	0	1	1	1	-	-	-
-core/03_lanes/topic13_support/T13_MP48_SHEAR_IRREP.md	03_lanes/topic13_support	.md	REVIEW	1	0	0	11	0	2	1	1	-	-	-
-core/03_lanes/topic13_support/T13_MULTIBRAGG_POSITIONS.md	03_lanes/topic13_support	.md	REVIEW	0	0	0	11	0	1	0	1	-	-	-
-core/03_lanes/topic13_support/T13_NATURAL_FIXED_CHARGE_RESPONSE.md	03_lanes/topic13_support	.md	REVIEW	0	0	0	12	0	1	0	2	-	-	-
-core/03_lanes/topic13_support/T13_OPERATIONAL_CALIBRATION_ROUTE.md	03_lanes/topic13_support	.md	REVIEW	0	0	0	8	0	1	0	1	-	-	-
-core/03_lanes/topic13_support/T13_OUTER_BRAGG_PROFILES.md	03_lanes/topic13_support	.md	REVIEW	0	0	0	11	0	1	0	1	-	-	-
-core/03_lanes/topic13_support/T13_PATCH_POSITION_SENSITIVITY.md	03_lanes/topic13_support	.md	REVIEW	0	0	0	12	0	1	0	2	-	-	-
-core/03_lanes/topic13_support/T13_PHASE_SPACE_MEASURE_PILOT.md	03_lanes/topic13_support	.md	REVIEW	0	0	0	11	0	1	0	1	-	-	-
-core/03_lanes/topic13_support/T13_POISEUILLE_SOURCE_QUALIFICATION.md	03_lanes/topic13_support	.md	REVIEW	0	0	0	11	0	1	0	1	-	-	-
-core/03_lanes/topic13_support/T13_POSITIVE_INTERPOLATION_BOUNDS.md	03_lanes/topic13_support	.md	REVIEW	0	0	0	11	0	1	0	1	-	-	-
-core/03_lanes/topic13_support/T13_PROFILE_RESIDUAL_BASELINE_SCATTER.md	03_lanes/topic13_support	.md	REVIEW	0	0	0	12	0	1	0	2	-	-	-
-core/03_lanes/topic13_support/T13_QUADRATIC_SOURCE_AVERAGING.md	03_lanes/topic13_support	.md	REVIEW	0	0	0	11	0	1	0	1	-	-	-
-core/03_lanes/topic13_support/T13_RAMAN_DEFORMATION_CONSTRAINT.md	03_lanes/topic13_support	.md	REVIEW	0	0	0	9	0	0	0	2	-	-	-
-core/03_lanes/topic13_support/T13_RAW_ACQUISITION_STRUCTURE.md	03_lanes/topic13_support	.md	REVIEW	0	0	0	11	0	1	0	1	-	-	-
-core/03_lanes/topic13_support/T13_RAW_CUT_SIGNAL_SENSITIVITY.md	03_lanes/topic13_support	.md	REVIEW	0	0	0	12	0	1	0	2	-	-	-
-core/03_lanes/topic13_support/T13_RAW_SPATIAL_CUT_SENSITIVITY.md	03_lanes/topic13_support	.md	REVIEW	0	0	0	12	0	1	0	2	-	-	-
-core/03_lanes/topic13_support/T13_RECIPROCAL_THERMAL_DYNAMICS.md	03_lanes/topic13_support	.md	REVIEW	0	0	0	9	0	0	0	3	-	-	-
-core/03_lanes/topic13_support/T13_REGISTRATION_SHELL_TRANSFER.md	03_lanes/topic13_support	.md	REVIEW	0	0	0	11	0	1	0	1	-	-	-
-core/03_lanes/topic13_support/T13_SAME_ACTION_COMPOSITION.md	03_lanes/topic13_support	.md	REVIEW	0	0	0	11	0	1	0	1	-	-	-
-core/03_lanes/topic13_support/T13_SHEAR_SYMMETRY_CHANNELS.md	03_lanes/topic13_support	.md	REVIEW	0	0	0	11	0	2	0	1	-	-	-
-core/03_lanes/topic13_support/T13_SIGNED_MOMENT_INTERPOLATION.md	03_lanes/topic13_support	.md	REVIEW	0	0	0	11	0	1	0	1	-	-	-
-core/03_lanes/topic13_support/T13_SOURCE_CENTERED_POSITION_SENSITIVITY.md	03_lanes/topic13_support	.md	REVIEW	0	0	0	12	0	1	0	2	-	-	-
-core/03_lanes/topic13_support/T13_TENSOR_LIFT_REPAIR.md	03_lanes/topic13_support	.md	REVIEW	0	0	0	11	0	0	0	1	-	-	-
-core/03_lanes/topic13_support/T13_THERMAL_MASS_ACTUATION.md	03_lanes/topic13_support	.md	REVIEW	0	0	0	11	0	1	0	1	-	-	-
-core/03_lanes/topic13_support/T13_THERMAL_VARIANCE_SPECTRUM.md	03_lanes/topic13_support	.md	REVIEW	0	0	0	11	0	0	0	1	-	-	-
-core/03_lanes/topic13_support/T13_THERMOELASTIC_SPATIAL_COMPATIBILITY.md	03_lanes/topic13_support	.md	REVIEW	0	0	0	10	0	4	0	2	-	-	-
-core/03_lanes/topic13_support/T13_THERMOMETRY_WINDOW.md	03_lanes/topic13_support	.md	REVIEW	0	0	0	11	0	1	0	1	-	-	-
-core/03_lanes/topic13_support/T13_TRANSITION_COORDINATE_MAP.md	03_lanes/topic13_support	.md	REVIEW	0	0	0	11	0	1	0	1	-	-	-
-core/03_lanes/topic13_support/T13_TRANSITION_PULLBACK_PILOT.md	03_lanes/topic13_support	.md	REVIEW	0	0	0	11	0	1	0	1	-	-	-
-core/03_lanes/topic13_support/T13_TRANSPORT_RESOLUTION.md	03_lanes/topic13_support	.md	REVIEW	0	0	0	8	0	1	0	1	-	-	-
-core/03_lanes/topic13_support/T13_UED_MASK_SUPPORT.md	03_lanes/topic13_support	.md	REVIEW	0	0	0	11	0	1	0	1	-	-	-
-core/03_lanes/topic13_support/T13_UED_NUMERIC_ROWS.md	03_lanes/topic13_support	.md	REVIEW	0	0	0	11	0	1	0	1	-	-	-
-core/03_lanes/topic13_support/T13_UED_POPULATION_SOURCE_ROUTE.md	03_lanes/topic13_support	.md	REVIEW	0	0	0	11	0	1	0	1	-	-	-
-core/03_lanes/topic13_support/T13_UED_REGION_SUPPORT.md	03_lanes/topic13_support	.md	REVIEW	0	0	0	11	0	1	0	1	-	-	-
-core/03_lanes/topic13_support/T13_VARIANCE_DIRECTIONAL_GRID.md	03_lanes/topic13_support	.md	REVIEW	0	0	0	11	0	1	0	1	-	-	-
-core/03_lanes/topic13_support/T13_VARIANCE_MESH_SHIFT.md	03_lanes/topic13_support	.md	REVIEW	0	0	0	11	0	1	0	1	-	-	-
-core/03_lanes/topic13_support/T13_VOIGT_POSITION_METHOD_COMPARISON.md	03_lanes/topic13_support	.md	REVIEW	0	0	0	12	0	1	0	2	-	-	-
-core/03_lanes/topic13_support/T13_WEIGHTED_DIRECTION_PILOT.md	03_lanes/topic13_support	.md	REVIEW	0	0	0	11	0	1	0	1	-	-	-
-core/03_lanes/topic13_support/__init__.py	03_lanes/topic13_support	.py	D	0	0	0	6	0	0	0	0	-	-	-
-core/03_lanes/topic13_support/t13_formal_thermodynamic_bridge_integration.py	03_lanes/topic13_support	.py	REVIEW	0	0	0	17	2	1	0	3	-	-	-
-core/03_lanes/topic13_support/t13_thermal_bridge_scale_dependency.py	03_lanes/topic13_support	.py	REVIEW	0	0	0	16	2	2	0	3	-	-	-
-core/03_lanes/topic13_support/topic13_closure_record_contract.py	03_lanes/topic13_support	.py	A_DEP	0	0	0	16	3	1	0	5	-	-	-
+core/03_lanes/thermal/README.md	03_lanes/thermal	.md	REVIEW	0	0	0	6	0	0	0	1	C	W5	Topic 13 thermal bridge for the normalized C, Phi lanes or the He-4/graphite material lanes; not derived from the parent action; no claim uses it
+core/03_lanes/thermal/__init__.py	03_lanes/thermal	.py	D	0	0	0	6	0	0	0	0	D	W5	Package marker
+core/03_lanes/thermal/he4_normal_viscosity_kubo.py	03_lanes/thermal	.py	REVIEW	0	0	0	17	2	0	0	4	C	W5	Topic 13 thermal bridge for the normalized C, Phi lanes or the He-4/graphite material lanes; not derived from the parent action; no claim uses it
+core/03_lanes/thermal/he4_o2_response_calibration.py	03_lanes/thermal	.py	REVIEW	0	0	0	20	2	0	0	5	C	W5	Topic 13 thermal bridge for the normalized C, Phi lanes or the He-4/graphite material lanes; not derived from the parent action; no claim uses it
+core/03_lanes/thermal/he4_o2_si_beta_mapping.py	03_lanes/thermal	.py	REVIEW	0	0	0	17	2	0	0	4	C	W5	Topic 13 thermal bridge for the normalized C, Phi lanes or the He-4/graphite material lanes; not derived from the parent action; no claim uses it
+core/03_lanes/thermal/he4_svp_reference.py	03_lanes/thermal	.py	REVIEW	0	0	0	19	2	0	0	4	C	W5	Topic 13 thermal bridge for the normalized C, Phi lanes or the He-4/graphite material lanes; not derived from the parent action; no claim uses it
+core/03_lanes/thermal/thermal_collective_response_eos.py	03_lanes/thermal	.py	REVIEW	0	0	0	20	1	2	0	7	C	W5	Topic 13 thermal bridge for the normalized C, Phi lanes or the He-4/graphite material lanes; not derived from the parent action; no claim uses it
+core/03_lanes/thermal/thermal_covariant_action_si_conversion.py	03_lanes/thermal	.py	REVIEW	0	0	0	16	1	2	0	4	C	W5	Topic 13 thermal bridge for the normalized C, Phi lanes or the He-4/graphite material lanes; not derived from the parent action; no claim uses it
+core/03_lanes/thermal/thermal_cp_cv_correction.py	03_lanes/thermal	.py	REVIEW	0	0	0	15	1	1	0	3	C	W5	Topic 13 thermal bridge for the normalized C, Phi lanes or the He-4/graphite material lanes; not derived from the parent action; no claim uses it
+core/03_lanes/thermal/thermal_dimensional_bridge.py	03_lanes/thermal	.py	REVIEW	0	0	0	15	2	1	0	5	C	W5	Topic 13 thermal bridge for the normalized C, Phi lanes or the He-4/graphite material lanes; not derived from the parent action; no claim uses it
+core/03_lanes/thermal/thermal_energy_response_bridge.py	03_lanes/thermal	.py	REVIEW	0	0	0	17	2	2	0	7	C	W5	Topic 13 thermal bridge for the normalized C, Phi lanes or the He-4/graphite material lanes; not derived from the parent action; no claim uses it
+core/03_lanes/thermal/thermal_observable_bridge.py	03_lanes/thermal	.py	REVIEW	0	0	0	19	2	0	0	6	C	W5	Topic 13 thermal bridge for the normalized C, Phi lanes or the He-4/graphite material lanes; not derived from the parent action; no claim uses it
+core/03_lanes/thermal/thermal_phi_e_reference_normalization.py	03_lanes/thermal	.py	REVIEW	0	0	0	13	1	0	0	4	C	W5	Topic 13 thermal bridge for the normalized C, Phi lanes or the He-4/graphite material lanes; not derived from the parent action; no claim uses it
+core/03_lanes/thermal/thermal_response_beta_contract.py	03_lanes/thermal	.py	REVIEW	0	0	0	20	4	3	0	14	C	W5	Topic 13 thermal bridge for the normalized C, Phi lanes or the He-4/graphite material lanes; not derived from the parent action; no claim uses it
+core/03_lanes/thermal/thermal_sk_kms_entropy_contract.py	03_lanes/thermal	.py	REVIEW	0	0	0	19	1	4	0	7	C	W5	Topic 13 thermal bridge for the normalized C, Phi lanes or the He-4/graphite material lanes; not derived from the parent action; no claim uses it
+core/03_lanes/thermal/thermal_source_observable_map.py	03_lanes/thermal	.py	REVIEW	0	0	0	21	3	2	0	6	C	W5	Topic 13 thermal bridge for the normalized C, Phi lanes or the He-4/graphite material lanes; not derived from the parent action; no claim uses it
+core/03_lanes/thermal/uet_anisotropic_thermoelastic_response_bridge.py	03_lanes/thermal	.py	REVIEW	0	0	0	16	1	2	0	3	C	W5	Topic 13 thermal bridge for the normalized C, Phi lanes or the He-4/graphite material lanes; not derived from the parent action; no claim uses it
+core/03_lanes/thermal/uet_dynamic_thermoelastic_response.py	03_lanes/thermal	.py	REVIEW	0	0	0	17	2	3	0	4	C	W5	Topic 13 thermal bridge for the normalized C, Phi lanes or the He-4/graphite material lanes; not derived from the parent action; no claim uses it
+core/03_lanes/thermal/uet_interlayer_mode_residue.py	03_lanes/thermal	.py	REVIEW	0	0	0	24	2	0	0	13	C	W5	Topic 13 thermal bridge for the normalized C, Phi lanes or the He-4/graphite material lanes; not derived from the parent action; no claim uses it
+core/03_lanes/thermal/uet_lattice_momentum_relaxing_heat_parent.py	03_lanes/thermal	.py	REVIEW	0	0	0	16	1	2	0	3	C	W5	Topic 13 thermal bridge for the normalized C, Phi lanes or the He-4/graphite material lanes; not derived from the parent action; no claim uses it
+core/03_lanes/thermal/uet_material_interface_factor_resolution.py	03_lanes/thermal	.py	REVIEW	1	0	0	17	1	3	1	5	C	W5	Topic 13 thermal bridge for the normalized C, Phi lanes or the He-4/graphite material lanes; not derived from the parent action; no claim uses it
+core/03_lanes/thermal/uet_material_lattice_interface_contract.py	03_lanes/thermal	.py	REVIEW	0	0	0	18	1	3	0	4	C	W5	Topic 13 thermal bridge for the normalized C, Phi lanes or the He-4/graphite material lanes; not derived from the parent action; no claim uses it
+core/03_lanes/thermal/uet_matter_strain_susceptibility.py	03_lanes/thermal	.py	REVIEW	0	0	0	19	2	0	0	6	C	W5	Topic 13 thermal bridge for the normalized C, Phi lanes or the He-4/graphite material lanes; not derived from the parent action; no claim uses it
+core/03_lanes/thermal/uet_mode_work_heat.py	03_lanes/thermal	.py	A_DEP	0	0	0	15	1	0	0	3	C	W5	Topic 13 thermal bridge for the normalized C, Phi lanes or the He-4/graphite material lanes; not derived from the parent action; no claim uses it
+core/03_lanes/thermal/uet_raman_deformation_constraint.py	03_lanes/thermal	.py	REVIEW	0	0	0	17	1	0	0	4	C	W5	Topic 13 thermal bridge for the normalized C, Phi lanes or the He-4/graphite material lanes; not derived from the parent action; no claim uses it
+core/03_lanes/thermal/uet_reciprocal_thermal_dynamics.py	03_lanes/thermal	.py	REVIEW	0	0	0	16	1	0	0	3	C	W5	Topic 13 thermal bridge for the normalized C, Phi lanes or the He-4/graphite material lanes; not derived from the parent action; no claim uses it
+core/03_lanes/thermal/uet_scalar_thermoelastic_response_bridge.py	03_lanes/thermal	.py	REVIEW	0	0	0	16	2	3	0	4	C	W5	Topic 13 thermal bridge for the normalized C, Phi lanes or the He-4/graphite material lanes; not derived from the parent action; no claim uses it
+core/03_lanes/thermal/uet_shear_symmetry.py	03_lanes/thermal	.py	A_DEP	0	0	0	16	1	0	0	4	C	W5	Topic 13 thermal bridge for the normalized C, Phi lanes or the He-4/graphite material lanes; not derived from the parent action; no claim uses it
+core/03_lanes/thermal/uet_thermoelastic_spatial_compatibility.py	03_lanes/thermal	.py	REVIEW	0	0	0	21	4	1	0	6	C	W5	Topic 13 thermal bridge for the normalized C, Phi lanes or the He-4/graphite material lanes; not derived from the parent action; no claim uses it
+core/03_lanes/thermal/uet_transport_coefficient_identifiability.py	03_lanes/thermal	.py	REVIEW	0	0	0	16	0	5	0	4	C	W5	Topic 13 thermal bridge for the normalized C, Phi lanes or the He-4/graphite material lanes; not derived from the parent action; no claim uses it
+core/03_lanes/topic13_support/CORE_HE4_SAME_STATE_HANDOFF_2026-10-04.md	03_lanes/topic13_support	.md	REVIEW	0	0	0	0	0	0	0	1	C	W5	Topic 13 working note or helper for the graphite/He-4 bridge program; no claim uses it
+core/03_lanes/topic13_support/README.md	03_lanes/topic13_support	.md	REVIEW	0	0	0	6	0	0	0	1	C	W5	Topic 13 working note or helper for the graphite/He-4 bridge program; no claim uses it
+core/03_lanes/topic13_support/T13_BASAL_COVERAGE_EXTENSION.md	03_lanes/topic13_support	.md	REVIEW	0	0	0	13	0	0	0	2	C	W5	Topic 13 working note or helper for the graphite/He-4 bridge program; no claim uses it
+core/03_lanes/topic13_support/T13_BASELINE_REGISTRATION_MODELS.md	03_lanes/topic13_support	.md	REVIEW	0	0	0	11	0	1	0	1	C	W5	Topic 13 working note or helper for the graphite/He-4 bridge program; no claim uses it
+core/03_lanes/topic13_support/T13_CHANNEL_SAMPLING_BOUNDARY.md	03_lanes/topic13_support	.md	REVIEW	0	0	0	11	0	1	0	1	C	W5	Topic 13 working note or helper for the graphite/He-4 bridge program; no claim uses it
+core/03_lanes/topic13_support/T13_CLOSURE_TRACK_REPORTING_REPAIR.md	03_lanes/topic13_support	.md	REVIEW	0	0	0	8	0	1	0	1	C	W5	Topic 13 working note or helper for the graphite/He-4 bridge program; no claim uses it
+core/03_lanes/topic13_support/T13_COLLISION_EVIDENCE_RECONCILIATION.md	03_lanes/topic13_support	.md	REVIEW	0	0	0	12	0	1	0	2	C	W5	Topic 13 working note or helper for the graphite/He-4 bridge program; no claim uses it
+core/03_lanes/topic13_support/T13_COMPLEMENTARY_GEOMETRY.md	03_lanes/topic13_support	.md	REVIEW	0	0	0	11	0	1	0	1	C	W5	Topic 13 working note or helper for the graphite/He-4 bridge program; no claim uses it
+core/03_lanes/topic13_support/T13_COMPLEMENTARY_SOURCE_ROUTES.md	03_lanes/topic13_support	.md	REVIEW	0	0	0	11	0	1	0	1	C	W5	Topic 13 working note or helper for the graphite/He-4 bridge program; no claim uses it
+core/03_lanes/topic13_support/T13_COMPOSITE_ALPHA_DESIGN.md	03_lanes/topic13_support	.md	REVIEW	0	0	0	12	0	1	0	1	C	W5	Topic 13 working note or helper for the graphite/He-4 bridge program; no claim uses it
+core/03_lanes/topic13_support/T13_CONSTRAINED_PRECISION_RESPONSE.md	03_lanes/topic13_support	.md	REVIEW	0	0	0	12	0	1	0	2	C	W5	Topic 13 working note or helper for the graphite/He-4 bridge program; no claim uses it
+core/03_lanes/topic13_support/T13_CONSTRAINED_TENSOR_REFERENCE.md	03_lanes/topic13_support	.md	REVIEW	0	0	0	11	0	1	0	1	C	W5	Topic 13 working note or helper for the graphite/He-4 bridge program; no claim uses it
+core/03_lanes/topic13_support/T13_CONTROLLED_ROTATION_PROFILE_COMPARISON.md	03_lanes/topic13_support	.md	REVIEW	0	0	0	12	0	1	0	2	C	W5	Topic 13 working note or helper for the graphite/He-4 bridge program; no claim uses it
+core/03_lanes/topic13_support/T13_CORE_INTEGRATION_NOTE.md	03_lanes/topic13_support	.md	REVIEW	0	0	0	12	0	0	0	1	C	W5	Topic 13 working note or helper for the graphite/He-4 bridge program; no claim uses it
+core/03_lanes/topic13_support/T13_CURRENT_METRIC_SURFACE.md	03_lanes/topic13_support	.md	REVIEW	0	0	0	11	0	1	0	1	C	W5	Topic 13 working note or helper for the graphite/He-4 bridge program; no claim uses it
+core/03_lanes/topic13_support/T13_CUT_POOLING_PROVENANCE.md	03_lanes/topic13_support	.md	REVIEW	0	0	0	11	0	1	0	1	C	W5	Topic 13 working note or helper for the graphite/He-4 bridge program; no claim uses it
+core/03_lanes/topic13_support/T13_DIRECTION_MOMENT_BOUNDARY.md	03_lanes/topic13_support	.md	REVIEW	0	0	0	8	0	1	0	1	C	W5	Topic 13 working note or helper for the graphite/He-4 bridge program; no claim uses it
+core/03_lanes/topic13_support/T13_DISPLACEMENT_PHASE.md	03_lanes/topic13_support	.md	REVIEW	0	0	0	11	0	0	0	1	C	W5	Topic 13 working note or helper for the graphite/He-4 bridge program; no claim uses it
+core/03_lanes/topic13_support/T13_DYNAMIC_THERMOELASTIC_RESPONSE.md	03_lanes/topic13_support	.md	REVIEW	0	0	0	9	0	0	0	2	C	W5	Topic 13 working note or helper for the graphite/He-4 bridge program; no claim uses it
+core/03_lanes/topic13_support/T13_E2G_NONLINEAR_SYMMETRY.md	03_lanes/topic13_support	.md	REVIEW	0	0	0	11	0	1	0	1	C	W5	Topic 13 working note or helper for the graphite/He-4 bridge program; no claim uses it
+core/03_lanes/topic13_support/T13_ENERGY_ESTIMATOR_NOISE.md	03_lanes/topic13_support	.md	REVIEW	0	0	0	11	0	1	0	1	C	W5	Topic 13 working note or helper for the graphite/He-4 bridge program; no claim uses it
+core/03_lanes/topic13_support/T13_ENERGY_IDENTIFIABILITY.md	03_lanes/topic13_support	.md	REVIEW	0	0	0	11	0	1	0	1	C	W5	Topic 13 working note or helper for the graphite/He-4 bridge program; no claim uses it
+core/03_lanes/topic13_support/T13_ENTROPY_FORCE_CONVENTION.md	03_lanes/topic13_support	.md	REVIEW	0	0	0	11	0	1	0	1	C	W5	Topic 13 working note or helper for the graphite/He-4 bridge program; no claim uses it
+core/03_lanes/topic13_support/T13_ENTROPY_METRIC_REPAIR.md	03_lanes/topic13_support	.md	REVIEW	0	0	0	8	0	0	0	1	C	W5	Topic 13 working note or helper for the graphite/He-4 bridge program; no claim uses it
+core/03_lanes/topic13_support/T13_EOS_REVISION_IMPACT.md	03_lanes/topic13_support	.md	REVIEW	0	0	0	11	0	1	0	1	C	W5	Topic 13 working note or helper for the graphite/He-4 bridge program; no claim uses it
+core/03_lanes/topic13_support/T13_FINITEQ_SCATTERING_GEOMETRY.md	03_lanes/topic13_support	.md	REVIEW	0	0	0	12	0	1	0	2	C	W5	Topic 13 working note or helper for the graphite/He-4 bridge program; no claim uses it
+core/03_lanes/topic13_support/T13_FOURIER_SHEAR_ANISOTROPY.md	03_lanes/topic13_support	.md	REVIEW	0	0	0	11	0	1	0	1	C	W5	Topic 13 working note or helper for the graphite/He-4 bridge program; no claim uses it
+core/03_lanes/topic13_support/T13_FRAME_OUTPUT_INTEGRATION.md	03_lanes/topic13_support	.md	REVIEW	0	0	0	8	0	1	0	1	C	W5	Topic 13 working note or helper for the graphite/He-4 bridge program; no claim uses it
+core/03_lanes/topic13_support/T13_GAMMA_SCATTERING_GEOMETRY.md	03_lanes/topic13_support	.md	REVIEW	0	0	0	12	0	1	0	2	C	W5	Topic 13 working note or helper for the graphite/He-4 bridge program; no claim uses it
+core/03_lanes/topic13_support/T13_GENERIC_Q_IMAGE_SUPPORT.md	03_lanes/topic13_support	.md	REVIEW	0	0	0	12	0	1	0	2	C	W5	Topic 13 working note or helper for the graphite/He-4 bridge program; no claim uses it
+core/03_lanes/topic13_support/T13_HE4_MATCHING_INDEPENDENCE.md	03_lanes/topic13_support	.md	REVIEW	0	0	0	11	0	3	0	1	C	W5	Topic 13 working note or helper for the graphite/He-4 bridge program; no claim uses it
+core/03_lanes/topic13_support/T13_HEAT_CHARGE_FRAME_MAP.md	03_lanes/topic13_support	.md	REVIEW	0	0	0	8	0	0	0	1	C	W5	Topic 13 working note or helper for the graphite/He-4 bridge program; no claim uses it
+core/03_lanes/topic13_support/T13_HYDROSTATIC_ACTUATION_ROUTE.md	03_lanes/topic13_support	.md	REVIEW	0	0	0	11	0	1	0	1	C	W5	Topic 13 working note or helper for the graphite/He-4 bridge program; no claim uses it
+core/03_lanes/topic13_support/T13_INTEGRATED_ELASTIC_EVENTS.md	03_lanes/topic13_support	.md	REVIEW	0	0	0	12	0	1	0	1	C	W5	Topic 13 working note or helper for the graphite/He-4 bridge program; no claim uses it
+core/03_lanes/topic13_support/T13_INTERLAYER_STRAIN_TRANSFER.md	03_lanes/topic13_support	.md	REVIEW	0	0	0	11	0	1	0	1	C	W5	Topic 13 working note or helper for the graphite/He-4 bridge program; no claim uses it
+core/03_lanes/topic13_support/T13_INTERLAYER_THERMAL_VARIANCE.md	03_lanes/topic13_support	.md	REVIEW	0	0	0	11	0	1	0	1	C	W5	Topic 13 working note or helper for the graphite/He-4 bridge program; no claim uses it
+core/03_lanes/topic13_support/T13_INTERPOLATION_REFINEMENT_REVIEW.md	03_lanes/topic13_support	.md	REVIEW	0	0	0	11	0	1	0	1	C	W5	Topic 13 working note or helper for the graphite/He-4 bridge program; no claim uses it
+core/03_lanes/topic13_support/T13_INTERPOLATION_SUPPORT_BOUNDARY.md	03_lanes/topic13_support	.md	REVIEW	0	0	0	11	0	1	0	1	C	W5	Topic 13 working note or helper for the graphite/He-4 bridge program; no claim uses it
+core/03_lanes/topic13_support/T13_ISENTROPIC_SOURCE_WORK.md	03_lanes/topic13_support	.md	REVIEW	0	0	0	8	0	1	0	1	C	W5	Topic 13 working note or helper for the graphite/He-4 bridge program; no claim uses it
+core/03_lanes/topic13_support/T13_JOINT_RESOLUTION.md	03_lanes/topic13_support	.md	REVIEW	0	0	0	8	0	1	0	1	C	W5	Topic 13 working note or helper for the graphite/He-4 bridge program; no claim uses it
+core/03_lanes/topic13_support/T13_LOCAL_QUADRATIC_BOUNDS.md	03_lanes/topic13_support	.md	REVIEW	0	0	0	11	0	1	0	1	C	W5	Topic 13 working note or helper for the graphite/He-4 bridge program; no claim uses it
+core/03_lanes/topic13_support/T13_LOCAL_VARIANCE_IDENTIFIABILITY.md	03_lanes/topic13_support	.md	REVIEW	0	0	0	11	0	0	0	1	C	W5	Topic 13 working note or helper for the graphite/He-4 bridge program; no claim uses it
+core/03_lanes/topic13_support/T13_MATTER_ACTUATION_HARMONICS.md	03_lanes/topic13_support	.md	REVIEW	0	0	0	11	0	2	0	1	C	W5	Topic 13 working note or helper for the graphite/He-4 bridge program; no claim uses it
+core/03_lanes/topic13_support/T13_MATTER_STRAIN_SUSCEPTIBILITY_MATCH.md	03_lanes/topic13_support	.md	REVIEW	0	0	0	11	0	0	0	4	C	W5	Topic 13 working note or helper for the graphite/He-4 bridge program; no claim uses it
+core/03_lanes/topic13_support/T13_MODE_WORK_HEAT_PROTOCOL.md	03_lanes/topic13_support	.md	REVIEW	0	0	0	11	0	1	0	1	C	W5	Topic 13 working note or helper for the graphite/He-4 bridge program; no claim uses it
+core/03_lanes/topic13_support/T13_MP48_E2G_MULTIPLICITY.md	03_lanes/topic13_support	.md	REVIEW	0	0	0	11	0	1	0	1	C	W5	Topic 13 working note or helper for the graphite/He-4 bridge program; no claim uses it
+core/03_lanes/topic13_support/T13_MP48_INTERLAYER_MODE_PROGRESS.md	03_lanes/topic13_support	.md	REVIEW	0	0	0	11	0	1	0	1	C	W5	Topic 13 working note or helper for the graphite/He-4 bridge program; no claim uses it
+core/03_lanes/topic13_support/T13_MP48_INTERLAYER_MODE_RESIDUE.md	03_lanes/topic13_support	.md	REVIEW	1	0	0	8	0	1	1	1	C	W5	Topic 13 working note or helper for the graphite/He-4 bridge program; no claim uses it
+core/03_lanes/topic13_support/T13_MP48_SHEAR_IRREP.md	03_lanes/topic13_support	.md	REVIEW	1	0	0	11	0	2	1	1	C	W5	Topic 13 working note or helper for the graphite/He-4 bridge program; no claim uses it
+core/03_lanes/topic13_support/T13_MULTIBRAGG_POSITIONS.md	03_lanes/topic13_support	.md	REVIEW	0	0	0	11	0	1	0	1	C	W5	Topic 13 working note or helper for the graphite/He-4 bridge program; no claim uses it
+core/03_lanes/topic13_support/T13_NATURAL_FIXED_CHARGE_RESPONSE.md	03_lanes/topic13_support	.md	REVIEW	0	0	0	12	0	1	0	2	C	W5	Topic 13 working note or helper for the graphite/He-4 bridge program; no claim uses it
+core/03_lanes/topic13_support/T13_OPERATIONAL_CALIBRATION_ROUTE.md	03_lanes/topic13_support	.md	REVIEW	0	0	0	8	0	1	0	1	C	W5	Topic 13 working note or helper for the graphite/He-4 bridge program; no claim uses it
+core/03_lanes/topic13_support/T13_OUTER_BRAGG_PROFILES.md	03_lanes/topic13_support	.md	REVIEW	0	0	0	11	0	1	0	1	C	W5	Topic 13 working note or helper for the graphite/He-4 bridge program; no claim uses it
+core/03_lanes/topic13_support/T13_PATCH_POSITION_SENSITIVITY.md	03_lanes/topic13_support	.md	REVIEW	0	0	0	12	0	1	0	2	C	W5	Topic 13 working note or helper for the graphite/He-4 bridge program; no claim uses it
+core/03_lanes/topic13_support/T13_PHASE_SPACE_MEASURE_PILOT.md	03_lanes/topic13_support	.md	REVIEW	0	0	0	11	0	1	0	1	C	W5	Topic 13 working note or helper for the graphite/He-4 bridge program; no claim uses it
+core/03_lanes/topic13_support/T13_POISEUILLE_SOURCE_QUALIFICATION.md	03_lanes/topic13_support	.md	REVIEW	0	0	0	11	0	1	0	1	C	W5	Topic 13 working note or helper for the graphite/He-4 bridge program; no claim uses it
+core/03_lanes/topic13_support/T13_POSITIVE_INTERPOLATION_BOUNDS.md	03_lanes/topic13_support	.md	REVIEW	0	0	0	11	0	1	0	1	C	W5	Topic 13 working note or helper for the graphite/He-4 bridge program; no claim uses it
+core/03_lanes/topic13_support/T13_PROFILE_RESIDUAL_BASELINE_SCATTER.md	03_lanes/topic13_support	.md	REVIEW	0	0	0	12	0	1	0	2	C	W5	Topic 13 working note or helper for the graphite/He-4 bridge program; no claim uses it
+core/03_lanes/topic13_support/T13_QUADRATIC_SOURCE_AVERAGING.md	03_lanes/topic13_support	.md	REVIEW	0	0	0	11	0	1	0	1	C	W5	Topic 13 working note or helper for the graphite/He-4 bridge program; no claim uses it
+core/03_lanes/topic13_support/T13_RAMAN_DEFORMATION_CONSTRAINT.md	03_lanes/topic13_support	.md	REVIEW	0	0	0	9	0	0	0	2	C	W5	Topic 13 working note or helper for the graphite/He-4 bridge program; no claim uses it
+core/03_lanes/topic13_support/T13_RAW_ACQUISITION_STRUCTURE.md	03_lanes/topic13_support	.md	REVIEW	0	0	0	11	0	1	0	1	C	W5	Topic 13 working note or helper for the graphite/He-4 bridge program; no claim uses it
+core/03_lanes/topic13_support/T13_RAW_CUT_SIGNAL_SENSITIVITY.md	03_lanes/topic13_support	.md	REVIEW	0	0	0	12	0	1	0	2	C	W5	Topic 13 working note or helper for the graphite/He-4 bridge program; no claim uses it
+core/03_lanes/topic13_support/T13_RAW_SPATIAL_CUT_SENSITIVITY.md	03_lanes/topic13_support	.md	REVIEW	0	0	0	12	0	1	0	2	C	W5	Topic 13 working note or helper for the graphite/He-4 bridge program; no claim uses it
+core/03_lanes/topic13_support/T13_RECIPROCAL_THERMAL_DYNAMICS.md	03_lanes/topic13_support	.md	REVIEW	0	0	0	9	0	0	0	3	C	W5	Topic 13 working note or helper for the graphite/He-4 bridge program; no claim uses it
+core/03_lanes/topic13_support/T13_REGISTRATION_SHELL_TRANSFER.md	03_lanes/topic13_support	.md	REVIEW	0	0	0	11	0	1	0	1	C	W5	Topic 13 working note or helper for the graphite/He-4 bridge program; no claim uses it
+core/03_lanes/topic13_support/T13_SAME_ACTION_COMPOSITION.md	03_lanes/topic13_support	.md	REVIEW	0	0	0	11	0	1	0	1	C	W5	Topic 13 working note or helper for the graphite/He-4 bridge program; no claim uses it
+core/03_lanes/topic13_support/T13_SHEAR_SYMMETRY_CHANNELS.md	03_lanes/topic13_support	.md	REVIEW	0	0	0	11	0	2	0	1	C	W5	Topic 13 working note or helper for the graphite/He-4 bridge program; no claim uses it
+core/03_lanes/topic13_support/T13_SIGNED_MOMENT_INTERPOLATION.md	03_lanes/topic13_support	.md	REVIEW	0	0	0	11	0	1	0	1	C	W5	Topic 13 working note or helper for the graphite/He-4 bridge program; no claim uses it
+core/03_lanes/topic13_support/T13_SOURCE_CENTERED_POSITION_SENSITIVITY.md	03_lanes/topic13_support	.md	REVIEW	0	0	0	12	0	1	0	2	C	W5	Topic 13 working note or helper for the graphite/He-4 bridge program; no claim uses it
+core/03_lanes/topic13_support/T13_TENSOR_LIFT_REPAIR.md	03_lanes/topic13_support	.md	REVIEW	0	0	0	11	0	0	0	1	C	W5	Topic 13 working note or helper for the graphite/He-4 bridge program; no claim uses it
+core/03_lanes/topic13_support/T13_THERMAL_MASS_ACTUATION.md	03_lanes/topic13_support	.md	REVIEW	0	0	0	11	0	1	0	1	C	W5	Topic 13 working note or helper for the graphite/He-4 bridge program; no claim uses it
+core/03_lanes/topic13_support/T13_THERMAL_VARIANCE_SPECTRUM.md	03_lanes/topic13_support	.md	REVIEW	0	0	0	11	0	0	0	1	C	W5	Topic 13 working note or helper for the graphite/He-4 bridge program; no claim uses it
+core/03_lanes/topic13_support/T13_THERMOELASTIC_SPATIAL_COMPATIBILITY.md	03_lanes/topic13_support	.md	REVIEW	0	0	0	10	0	4	0	2	C	W5	Topic 13 working note or helper for the graphite/He-4 bridge program; no claim uses it
+core/03_lanes/topic13_support/T13_THERMOMETRY_WINDOW.md	03_lanes/topic13_support	.md	REVIEW	0	0	0	11	0	1	0	1	C	W5	Topic 13 working note or helper for the graphite/He-4 bridge program; no claim uses it
+core/03_lanes/topic13_support/T13_TRANSITION_COORDINATE_MAP.md	03_lanes/topic13_support	.md	REVIEW	0	0	0	11	0	1	0	1	C	W5	Topic 13 working note or helper for the graphite/He-4 bridge program; no claim uses it
+core/03_lanes/topic13_support/T13_TRANSITION_PULLBACK_PILOT.md	03_lanes/topic13_support	.md	REVIEW	0	0	0	11	0	1	0	1	C	W5	Topic 13 working note or helper for the graphite/He-4 bridge program; no claim uses it
+core/03_lanes/topic13_support/T13_TRANSPORT_RESOLUTION.md	03_lanes/topic13_support	.md	REVIEW	0	0	0	8	0	1	0	1	C	W5	Topic 13 working note or helper for the graphite/He-4 bridge program; no claim uses it
+core/03_lanes/topic13_support/T13_UED_MASK_SUPPORT.md	03_lanes/topic13_support	.md	REVIEW	0	0	0	11	0	1	0	1	C	W5	Topic 13 working note or helper for the graphite/He-4 bridge program; no claim uses it
+core/03_lanes/topic13_support/T13_UED_NUMERIC_ROWS.md	03_lanes/topic13_support	.md	REVIEW	0	0	0	11	0	1	0	1	C	W5	Topic 13 working note or helper for the graphite/He-4 bridge program; no claim uses it
+core/03_lanes/topic13_support/T13_UED_POPULATION_SOURCE_ROUTE.md	03_lanes/topic13_support	.md	REVIEW	0	0	0	11	0	1	0	1	C	W5	Topic 13 working note or helper for the graphite/He-4 bridge program; no claim uses it
+core/03_lanes/topic13_support/T13_UED_REGION_SUPPORT.md	03_lanes/topic13_support	.md	REVIEW	0	0	0	11	0	1	0	1	C	W5	Topic 13 working note or helper for the graphite/He-4 bridge program; no claim uses it
+core/03_lanes/topic13_support/T13_VARIANCE_DIRECTIONAL_GRID.md	03_lanes/topic13_support	.md	REVIEW	0	0	0	11	0	1	0	1	C	W5	Topic 13 working note or helper for the graphite/He-4 bridge program; no claim uses it
+core/03_lanes/topic13_support/T13_VARIANCE_MESH_SHIFT.md	03_lanes/topic13_support	.md	REVIEW	0	0	0	11	0	1	0	1	C	W5	Topic 13 working note or helper for the graphite/He-4 bridge program; no claim uses it
+core/03_lanes/topic13_support/T13_VOIGT_POSITION_METHOD_COMPARISON.md	03_lanes/topic13_support	.md	REVIEW	0	0	0	12	0	1	0	2	C	W5	Topic 13 working note or helper for the graphite/He-4 bridge program; no claim uses it
+core/03_lanes/topic13_support/T13_WEIGHTED_DIRECTION_PILOT.md	03_lanes/topic13_support	.md	REVIEW	0	0	0	11	0	1	0	1	C	W5	Topic 13 working note or helper for the graphite/He-4 bridge program; no claim uses it
+core/03_lanes/topic13_support/__init__.py	03_lanes/topic13_support	.py	D	0	0	0	6	0	0	0	0	D	W5	Package marker
+core/03_lanes/topic13_support/t13_formal_thermodynamic_bridge_integration.py	03_lanes/topic13_support	.py	REVIEW	0	0	0	17	2	1	0	3	C	W5	Topic 13 working note or helper for the graphite/He-4 bridge program; no claim uses it
+core/03_lanes/topic13_support/t13_thermal_bridge_scale_dependency.py	03_lanes/topic13_support	.py	REVIEW	0	0	0	16	2	2	0	3	C	W5	Topic 13 working note or helper for the graphite/He-4 bridge program; no claim uses it
+core/03_lanes/topic13_support/topic13_closure_record_contract.py	03_lanes/topic13_support	.py	A_DEP	0	0	0	16	3	1	0	5	C	W5	Topic 13 working note or helper for the graphite/He-4 bridge program; no claim uses it
 core/04_proofs/Proof_00_Master_Balance.py	04_proofs	.py	REVIEW	0	0	0	12	0	0	0	4	-	-	-
 core/04_proofs/README.md	04_proofs	.md	A_DEP	0	0	0	10	0	0	0	2	-	-	-
 core/05_tests/README.md	05_tests	.md	REVIEW	0	0	0	5	0	0	0	0	-	-	-

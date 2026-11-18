@@ -56,7 +56,7 @@
 | W2 | `03_lanes` ที่ใช้อยู่, `engine` | เสร็จ 2026-11-18 (ดูด้านล่าง) |
 | W3 | `02_equations/matter_space` | เสร็จ 2026-11-18 (ดูด้านล่าง) |
 | W4 | `02_equations/o2` | เสร็จ 2026-11-18 (ดูด้านล่าง) |
-| W5 | `03_lanes/thermal`, `topic13_support` | ยังไม่เริ่ม |
+| W5 | `03_lanes/thermal`, `topic13_support` | เสร็จ 2026-11-18 (ดูด้านล่าง) |
 | W6 | `01_contracts`, `04_proofs`, `99_review` | ยังไม่เริ่ม |
 | W7 | `05_tests` | ยังไม่เริ่ม |
 | W8 | `07_artifacts` | ยังไม่เริ่ม |
@@ -118,3 +118,11 @@
 
 ไฟล์ป้าย B คือวัตถุดิบของงานที่ AUTHOR_PROPOSITION ระบุว่ายังขาด: derive ชั้น 2 (ระบบเปิดและ entropy production) จาก action ผ่าน SK/KMS
 จะทำในขั้น 3 เป็นรอบวิจัย โดยใช้ no-go สองข้อเป็นขอบเขตตั้งต้น
+
+### W5: `03_lanes/thermal` และ `topic13_support` (119 ไฟล์)
+
+- **C 117 ไฟล์:** `thermal` (29 ไฟล์ Python) คือสะพานความร้อนของ Topic 13 ไปหา lane C, Φ แบบ normalized และ lane วัสดุฮีเลียม/graphite
+  `topic13_support` (85 บันทึกงานและ helper 4 ไฟล์) คือบันทึกการทำงานของโปรแกรมสะพานเดียวกัน ไม่มีไฟล์ใดที่ derive จาก action แม่ หรือที่ claim ใช้
+- **D 2 ไฟล์:** `__init__.py`
+- ไฟล์ 3 ไฟล์ถูก contract ล็อก hash และ 90 ไฟล์ถูก topic อ้างถึง (ส่วนใหญ่คือ Topic 13) จึงคงไว้ที่เดิม
+- ตัวตรวจ entropy และ SK/KMS ที่นี่ (`thermal_sk_kms_entropy_contract.py`) เป็น interface แบบประกาศเอา ไม่ใช่ derivation ส่วนที่ derive จริงอยู่ในไฟล์ป้าย B ของ W4
