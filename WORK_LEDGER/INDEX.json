@@ -5,11 +5,11 @@
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
     "sources": 81,
-    "entries": 914,
+    "entries": 915,
     "by_stream": {
       "book-history": 94,
       "operations": 134,
-      "research": 685,
+      "research": 686,
       "review": 1
     },
     "exact_duplicates": 0,
@@ -420,8 +420,8 @@
     },
     {
       "path": "2026/2026-11-18.md",
-      "sha256": "2914b5afbb7b0f991dab10d34e6a220d94b71aead64930cbc04abfa42795442a",
-      "entries": 15
+      "sha256": "5329ac5ac6bf74ca644aaace427e817cf2930775091f80b776b5ecb85dd64a97",
+      "entries": 16
     },
     {
       "path": "2026-08-14.md",
@@ -18661,9 +18661,29 @@
       "source": "2026/2026-11-18.md",
       "anchor": "core-alignment-w5-thermal-and-topic13_support",
       "start_line": 143,
-      "end_line": 151,
+      "end_line": 152,
       "title": "Core alignment W5: thermal and topic13_support",
-      "entry_sha256": "e1a076dfbc3e512597ec7a790e0d0c3f5e0e11979e484090298d96e523e48160",
+      "entry_sha256": "9f2c422a22892d9a1db8394c6b26fdfda611a7b3d22ab430067900e6a8b8ec75",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-18",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-18.md#sfi-scaling-theory-against-uet-layer-3",
+      "source": "2026/2026-11-18.md",
+      "anchor": "sfi-scaling-theory-against-uet-layer-3",
+      "start_line": 153,
+      "end_line": 161,
+      "title": "SFI scaling theory against UET layer 3",
+      "entry_sha256": "ceac2fe49fb036e5f0ddd771a3ee7f4e1f7d84b429b259bb2faf69a18a23e185",
       "stream": "research",
       "areas": [
         "research-core"
