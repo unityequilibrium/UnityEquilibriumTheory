@@ -72,7 +72,7 @@
       "evidence": [
         "R_NOETHER_COVERAGE"
       ],
-      "note": "Covers O(2), diffeomorphisms (Bianchi I and an inhomogeneous non-diagonal metric in t and x), translations and boosts (1+1 lattice) and rotations (2+1 lattice). Nearest known theory: Noether 1918, ADM constraint, Poincare charges. Not UET-distinct."
+      "note": "Covers O(2), diffeomorphisms (Bianchi I; inhomogeneous non-diagonal metrics in t, x and in t, x, y, z with g_tx), translations and boosts (1+1 lattice) and rotations (2+1 lattice). Nearest known theory: Noether 1918, ADM constraint, Poincare charges. Not UET-distinct."
     },
     {
       "claim_id": "C_VACUUM_SHIFT_ROUTE",
