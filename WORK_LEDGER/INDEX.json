@@ -4,12 +4,12 @@
   "generator_sha256": "b32005e4bdbf59da6681ae630fa1d9d4415c361f7523be18c8b52a86dc8c93e9",
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
-    "sources": 81,
-    "entries": 928,
+    "sources": 82,
+    "entries": 934,
     "by_stream": {
       "book-history": 94,
-      "operations": 135,
-      "research": 698,
+      "operations": 137,
+      "research": 702,
       "review": 1
     },
     "exact_duplicates": 0,
@@ -420,8 +420,13 @@
     },
     {
       "path": "2026/2026-11-18.md",
-      "sha256": "77a36582afc5722a45eead3920bda64ca69a38fee0995b8cc0c7710f586e61fb",
-      "entries": 29
+      "sha256": "ce645ea04016afab8956e9f60df260fa6b99a33965186648f480c7d5da3ce4df",
+      "entries": 34
+    },
+    {
+      "path": "2026/2026-11-19.md",
+      "sha256": "b9db83bce41eb9b3882eb78362501b1578550bb787cc2a5c0e7c6942d64de34e",
+      "entries": 1
     },
     {
       "path": "2026-08-14.md",
@@ -18937,11 +18942,111 @@
       "legacy_root_path": false
     },
     {
+      "id": "2026/2026-11-18.md#stage-3-wave-l2-1-layer-2-from-the-parent-action",
+      "source": "2026/2026-11-18.md",
+      "anchor": "stage-3-wave-l2-1-layer-2-from-the-parent-action",
+      "start_line": 285,
+      "end_line": 294,
+      "title": "Stage 3 wave L2-1: layer 2 from the parent action",
+      "entry_sha256": "74d5acb63b911f65a8875fd8fa77663ad20a54c388d2672772f4b530b5566592",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-18",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-18.md#archive-move-of-c-files-checked-not-done",
+      "source": "2026/2026-11-18.md",
+      "anchor": "archive-move-of-c-files-checked-not-done",
+      "start_line": 295,
+      "end_line": 304,
+      "title": "Archive move of C files: checked, not done",
+      "entry_sha256": "fcc6fcaab5fde51cfd6ed4c2dc1093ad8558350b9b2d6122d063607285660f6c",
+      "stream": "operations",
+      "areas": [
+        "repo-ops"
+      ],
+      "related_streams": [
+        "operations"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-18",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-18.md#stage-3-wave-l2-2-layer-2-second-law-from-the-action",
+      "source": "2026/2026-11-18.md",
+      "anchor": "stage-3-wave-l2-2-layer-2-second-law-from-the-action",
+      "start_line": 305,
+      "end_line": 314,
+      "title": "Stage 3 wave L2-2: layer 2 second law from the action",
+      "entry_sha256": "0df1558fb149237ac97c07e7eefbc6e8ed73a32c97f6ca0a9d65548b5acb20ea",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-18",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-18.md#t024-run-innovation-intervals-failed-for-beta--127",
+      "source": "2026/2026-11-18.md",
+      "anchor": "t024-run-innovation-intervals-failed-for-beta--127",
+      "start_line": 315,
+      "end_line": 324,
+      "title": "T024 run: innovation intervals (FAILED for beta = 1.27)",
+      "entry_sha256": "55e78594e647fa0ab7ad9ec957efb22d398bf8d9202b4e9517ee42a59bb4e2e9",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-18",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-18.md#t024-result-recorded-failed",
+      "source": "2026/2026-11-18.md",
+      "anchor": "t024-result-recorded-failed",
+      "start_line": 325,
+      "end_line": 334,
+      "title": "T024 result recorded (FAILED)",
+      "entry_sha256": "77dcaab8d92243e1d6de5d9b51718c33a7c6cc684c90dd03169e13f527429104",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-18",
+      "legacy_root_path": false
+    },
+    {
       "id": "2026/2026-11-18.md#route-research-output-to-the-current-topic-tree",
       "source": "2026/2026-11-18.md",
       "anchor": "route-research-output-to-the-current-topic-tree",
-      "start_line": 285,
-      "end_line": 290,
+      "start_line": 335,
+      "end_line": 340,
       "title": "Route research output to the current Topic tree",
       "entry_sha256": "08a5527890995b2f8ae5f96e4a0f52244695b215a0d2fa409d96c52d4be840fc",
       "stream": "operations",
@@ -18954,6 +19059,26 @@
       "basis": "explicit_stream_and_area",
       "flags": [],
       "date": "2026-11-18",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-19.md#pr-62-brought-up-to-date-and-pr-65-completeness-fix",
+      "source": "2026/2026-11-19.md",
+      "anchor": "pr-62-brought-up-to-date-and-pr-65-completeness-fix",
+      "start_line": 3,
+      "end_line": 11,
+      "title": "PR #62 brought up to date and PR #65 completeness fix",
+      "entry_sha256": "8dd59d042526924f0cb864fcdadda4dc0141cb56f2b5c4259e20ff280319e3e7",
+      "stream": "operations",
+      "areas": [
+        "repo-ops"
+      ],
+      "related_streams": [
+        "operations"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-19",
       "legacy_root_path": false
     },
     {

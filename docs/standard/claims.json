@@ -406,6 +406,33 @@
         "R_T023_FLIGHT_LIFETIME_ENERGY"
       ],
       "note": "Not blind; bat torpor biases the bat value upward; no phylogenetic correction. Nearest theory: disposable soma and extrinsic-mortality theory of ageing; not UET-distinct. L2 approved by the author on 2026-11-18."
+    },
+    {
+      "claim_id": "C_L2_FROM_ACTION",
+      "statement": "With the O(2) matter field chi as a free thermal bath, the parent action gives the response field phi a one-loop Schwinger-Keldysh self-energy whose Wightman functions obey KMS (Pi> = exp(w/T) Pi<); the damping rate is rho/(2w), the pair-decay width at T = 0 is the textbook one, and long-wavelength modes get ohmic friction gamma(q,T) = N sigma^2 n(sqrt(q^2/4 + M_chi^2))/(16 pi q) with sigma = h sqrt(eps)/(Z sqrt(k)).",
+      "level": "L1_CONSISTENT",
+      "evidence": [
+        "R_L2_FROM_ACTION"
+      ],
+      "note": "Derives the layer 2 friction that uet_layer2_dissipation.py assumed. Nearest known theory: Feynman-Vernon and Caldeira-Leggett with a field-theory bath; warm-inflation dissipation. Not UET-distinct."
+    },
+    {
+      "claim_id": "C_L2_SECOND_LAW",
+      "statement": "With the action-derived spectral function of phi (C_L2_FROM_ACTION), rho(w,q) > 0 for w > 0, heat between a phi mode at T_phi and the chi bath at T flows from hot to cold, the entropy production J (1/T - 1/T_phi) is nonnegative and zero only at equilibrium, and a coherent mode burns free energy at P = Gamma E, writing P/T of entropy and P/(T ln 2) bits per unit time.",
+      "level": "L1_CONSISTENT",
+      "evidence": [
+        "R_L2_SECOND_LAW"
+      ],
+      "note": "Layer 2 second law and burn chain for the portal channel follow from the action. Nearest known theory: Kubo linear response, detailed balance, Landauer. Not UET-distinct."
+    },
+    {
+      "claim_id": "C_T024_INNOVATION_INTERVAL",
+      "statement": "Intervals between successive lighting introductions (Nordhaus 1997, Table 1.1) shrink with world population as Delta t ~ N^-(beta-1) with beta = 1.27 (Bettencourt et al. 2007), not as N^-1 (Kremer 1993).",
+      "level": "FAILED",
+      "evidence": [
+        "R_T024_INNOVATION_INTERVAL"
+      ],
+      "note": "T024 FAILED for beta = 1.27 (slope -1.43, 95% -2.14 to -0.72; contains Kremer's -1). For innovation rate against world population the synthesis borrows Kremer (1993), not the urban-scaling exponent. Scope: lighting, world population; urban scaling within cities is not tested. Approved by the author 2026-11-18."
     }
   ]
 }

@@ -240,6 +240,30 @@
       "license": "numerical facts transcribed from arXiv text and abstract; no figures or text redistributed",
       "visibility": "PUBLIC",
       "note": "Values read on 2026-11-18 through a paper-search tool: P_MM from the full text of arXiv:1002.1284 (Sec. II.2), P_KT from the abstract of arXiv:0912.2803. The journal references (PRD 80, 105011 and PRD 81, 022003) were not checked against the printed pages. Sign conventions differ between the papers; both combinations are zero for the Lorentz transformation."
+    },
+    {
+      "data_id": "OWID_POPULATION_WORLD_2026",
+      "description": "World population by year, 10,000 BC to 2023, one value per listed year",
+      "source": "Our World in Data, Population (long-run), built from HYDE 3.3 (PBL, 2023), Gapminder Population v7 (2022) and UN World Population Prospects (2024); citation as given in the downloaded metadata file",
+      "doi_or_url": "https://ourworldindata.org/grapher/population.csv?v=1&csvType=filtered&useColumnShortNames=true&country=~OWID_WRL",
+      "retrieved": "2026-11-18",
+      "path": "docs/data/external/economics/population/owid_population_world.csv",
+      "sha256": "ec302779f7ee1b184bece735d53939069780f0f13f2f392503b6a22482094957",
+      "license": "CC BY 4.0 (Our World in Data)",
+      "visibility": "PUBLIC",
+      "note": "Downloaded as is with the owner's permission (chat, 2026-11-18); metadata file owid_population_world.metadata.json kept beside it. Not modified."
+    },
+    {
+      "data_id": "NORDHAUS1997_LIGHTING_MILESTONES",
+      "description": "Milestones in the history of lighting (date label, year, event), 23 rows from the open fire to the compact fluorescent bulb",
+      "source": "W. D. Nordhaus (1997), Do Real-Output and Real-Wage Measures Capture Reality? The History of Lighting Suggests Not, in T. F. Bresnahan and R. J. Gordon (eds.), The Economics of New Goods, NBER Studies in Income and Wealth 58, University of Chicago Press, Table 1.1 (sources there: Stotz 1938, de Beaune and White 1993, Doblin 1982, Encyclopaedia Britannica)",
+      "doi_or_url": "https://www.nber.org/system/files/chapters/c6064/c6064.pdf",
+      "retrieved": "2026-11-18",
+      "path": "docs/data/external/economics/lighting/nordhaus1997_table1_1_milestones.csv",
+      "sha256": "cde8f83de07f6d09698942448a21dbcee29b807d7b34cbd14139334a4202f545",
+      "license": "dates and event names transcribed from a published table; no text or figures redistributed",
+      "visibility": "PUBLIC",
+      "note": "Transcribed by Claude from the same local NBER PDF as NORDHAUS1997_LIGHTING (sha256 e2b674e7...). The PDF text layer shifts the dates of the rows from 1820 on against their events; the rows were realigned by order (12 dates, 12 events) and checked against the chapter text where it gives a year (1879, 1882, 1930s, mid-1980s). Decade labels are coded as decade + 5; ranges and periods have no year."
     }
   ]
 }

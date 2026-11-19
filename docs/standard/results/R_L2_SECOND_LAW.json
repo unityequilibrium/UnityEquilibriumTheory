@@ -1,0 +1,40 @@
+{
+  "schema": "uet-result-v2",
+  "result_id": "R_L2_SECOND_LAW",
+  "claim_id": "C_L2_SECOND_LAW",
+  "level": "L1_CONSISTENT",
+  "outcome": "PASS",
+  "numbers": [
+    {
+      "name": "spectral_positivity",
+      "value": "rho(w, q) > 0 at 12 random decay and scattering points with w > 0",
+      "uncertainty": null,
+      "unit": "natural"
+    },
+    {
+      "name": "heat_direction",
+      "value": "J = w rho [n(w,T_phi) - n(w,T)] has the sign of T_phi - T at 32 checks; zero at T_phi = T",
+      "uncertainty": null,
+      "unit": "natural"
+    },
+    {
+      "name": "entropy_production",
+      "value": "J (1/T - 1/T_phi) > 0 off equilibrium, zero at equilibrium, quadratic in dT (ratio 4.0 for dT doubled)",
+      "uncertainty": null,
+      "unit": "natural"
+    },
+    {
+      "name": "burn_chain",
+      "value": "coherent mode burns P = Gamma E (closed Caldeira-Leggett bath reproduces the rate within 8 percent); entropy rate P/T, bits rate P/(T ln 2)",
+      "uncertainty": null,
+      "unit": "natural"
+    }
+  ],
+  "producer": {
+    "script": "core/05_tests/physics/test_layer2_second_law.py",
+    "commit": "b5410193b"
+  },
+  "artifacts": [],
+  "date": "2026-11-18",
+  "note": "Derivation and numerical check only; no external data. With the spectral function of phi derived from the parent action (C_L2_FROM_ACTION), the layer 2 statements d_iS >= 0, P = T dS/dt and bits = P/(T ln 2) follow for this channel: rho is positive for w > 0, heat flows from hot to cold, entropy production is nonnegative and second order near equilibrium. Nearest known theory: Kubo linear response, detailed balance, Landauer 1961. Not UET-distinct. The closed-bath check uses a friction scaled up five times from the action value to keep the run short; the law P = Gamma E does not depend on the size of Gamma."
+}

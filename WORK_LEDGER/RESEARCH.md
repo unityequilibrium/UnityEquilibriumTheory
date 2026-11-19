@@ -6,10 +6,14 @@
 
 These are source-linked historical records, not proof of completed research, successful publication, or current scientific readiness.
 
-Indexed entries: 698. Counts describe records, not accomplishments.
+Indexed entries: 702. Counts describe records, not accomplishments.
 
 | Date | Record | Area | Notes |
 | --- | --- | --- | --- |
+| 2026-11-18 | [T024 result recorded (FAILED)](2026/2026-11-18.md#t024-result-recorded-failed) (L325) | research-core | explicit_stream_and_area |
+| 2026-11-18 | [T024 run: innovation intervals (FAILED for beta = 1.27)](2026/2026-11-18.md#t024-run-innovation-intervals-failed-for-beta--127) (L315) | research-core | explicit_stream_and_area |
+| 2026-11-18 | [Stage 3 wave L2-2: layer 2 second law from the action](2026/2026-11-18.md#stage-3-wave-l2-2-layer-2-second-law-from-the-action) (L305) | research-core | explicit_stream_and_area |
+| 2026-11-18 | [Stage 3 wave L2-1: layer 2 from the parent action](2026/2026-11-18.md#stage-3-wave-l2-1-layer-2-from-the-parent-action) (L285) | research-core | explicit_stream_and_area |
 | 2026-11-18 | [Core alignment W10: core docs and complete register](2026/2026-11-18.md#core-alignment-w10-core-docs-and-complete-register) (L275) | research-core | explicit_stream_and_area |
 | 2026-11-18 | [Runner rule: topics without a suite are advisory](2026/2026-11-18.md#runner-rule-topics-without-a-suite-are-advisory) (L265) | research-standards | explicit_stream_and_area |
 | 2026-11-18 | [CI follow-up on PR #64](2026/2026-11-18.md#ci-follow-up-on-pr-64) (L254) | research-core | explicit_stream_and_area |
