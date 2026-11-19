@@ -5,10 +5,10 @@
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
     "sources": 82,
-    "entries": 941,
+    "entries": 942,
     "by_stream": {
       "book-history": 94,
-      "operations": 139,
+      "operations": 140,
       "research": 707,
       "review": 1
     },
@@ -425,8 +425,8 @@
     },
     {
       "path": "2026/2026-11-19.md",
-      "sha256": "45a61b92f57f9ab3f8a507fa7b14b575a0339c8643a2fbb0bae871cdb0a7eac1",
-      "entries": 8
+      "sha256": "bf6e5d4c8aadcace7c0ff0361d2b870a7c17f26e08050105d91cdc96aaa85ebf",
+      "entries": 9
     },
     {
       "path": "2026-08-14.md",
@@ -19206,15 +19206,35 @@
       "source": "2026/2026-11-19.md",
       "anchor": "noether-identity-on-a-full-metric-and-the-four-coordinate-commits-pr-70-missed",
       "start_line": 73,
-      "end_line": 81,
+      "end_line": 82,
       "title": "Noether identity on a full metric, and the four-coordinate commits PR #70 missed",
-      "entry_sha256": "4983bc98b4f4aaffc93f6a95932d15b0b8f5f6e7be693c96687c8ef42b767732",
+      "entry_sha256": "edd715daeb78447f8fe523d7a342119aa98ed115c927f87f0d66fc9aa24d762a",
       "stream": "research",
       "areas": [
         "research-core"
       ],
       "related_streams": [
         "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-19",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-19.md#main-validation-red-because-its-audit-job-checked-out-one-commit",
+      "source": "2026/2026-11-19.md",
+      "anchor": "main-validation-red-because-its-audit-job-checked-out-one-commit",
+      "start_line": 83,
+      "end_line": 91,
+      "title": "Main Validation red because its audit job checked out one commit",
+      "entry_sha256": "0d0b500a1a15a1665336dc8bedfb13697ffdf99a54f78a5df92792e2be9028b9",
+      "stream": "operations",
+      "areas": [
+        "repo-ops"
+      ],
+      "related_streams": [
+        "operations"
       ],
       "basis": "explicit_stream_and_area",
       "flags": [],
