@@ -5,10 +5,10 @@
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
     "sources": 82,
-    "entries": 935,
+    "entries": 936,
     "by_stream": {
       "book-history": 94,
-      "operations": 136,
+      "operations": 137,
       "research": 704,
       "review": 1
     },
@@ -420,8 +420,8 @@
     },
     {
       "path": "2026/2026-11-18.md",
-      "sha256": "bc2879bbdd3fcebc22a76b2d4bba2276adc6bbcc4975b3e1141287a5c9550470",
-      "entries": 33
+      "sha256": "ce645ea04016afab8956e9f60df260fa6b99a33965186648f480c7d5da3ce4df",
+      "entries": 34
     },
     {
       "path": "2026/2026-11-19.md",
@@ -19026,15 +19026,35 @@
       "source": "2026/2026-11-18.md",
       "anchor": "t024-result-recorded-failed",
       "start_line": 325,
-      "end_line": 333,
+      "end_line": 334,
       "title": "T024 result recorded (FAILED)",
-      "entry_sha256": "cdb6cce9e33fec06f5149ce8a84db3e3f004940c0a5986e918e91f1a8733d9bd",
+      "entry_sha256": "77dcaab8d92243e1d6de5d9b51718c33a7c6cc684c90dd03169e13f527429104",
       "stream": "research",
       "areas": [
         "research-core"
       ],
       "related_streams": [
         "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-18",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-18.md#route-research-output-to-the-current-topic-tree",
+      "source": "2026/2026-11-18.md",
+      "anchor": "route-research-output-to-the-current-topic-tree",
+      "start_line": 335,
+      "end_line": 340,
+      "title": "Route research output to the current Topic tree",
+      "entry_sha256": "08a5527890995b2f8ae5f96e4a0f52244695b215a0d2fa409d96c52d4be840fc",
+      "stream": "operations",
+      "areas": [
+        "repo-ops"
+      ],
+      "related_streams": [
+        "operations"
       ],
       "basis": "explicit_stream_and_area",
       "flags": [],

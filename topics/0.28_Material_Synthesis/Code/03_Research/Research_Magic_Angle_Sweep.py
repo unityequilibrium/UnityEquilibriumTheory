@@ -33,8 +33,7 @@ try:
     import importlib.util
 
     engine_file = (
-        root_path
-        / "docs"
+        ROOT
         / "topics"
         / "0.28_Material_Synthesis"
         / "Code"
@@ -104,10 +103,10 @@ def run_sweep():
         from docs.core.uet_glass_box import UETPathManager
 
         output_dir = UETPathManager.get_result_dir(
-            topic_id="0.28", experiment_name="Magic_Angle_Sweep", category="Research"
+            topic_id="0.28", experiment_name="Magic_Angle_Sweep", category="figures"
         )
     except ImportError:
-        output_dir = Path("docs/topics/0.28_Material_Synthesis/Figures")
+        output_dir = Path(__file__).resolve().parents[2] / "Result/02_Figures"
         output_dir.mkdir(parents=True, exist_ok=True)
 
     output_path = output_dir / "magic_angle_plot.png"

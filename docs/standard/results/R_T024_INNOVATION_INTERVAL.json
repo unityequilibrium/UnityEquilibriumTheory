@@ -2,6 +2,7 @@
   "schema": "uet-result-v2",
   "result_id": "R_T024_INNOVATION_INTERVAL",
   "claim_id": "C_T024_INNOVATION_INTERVAL",
+  "test_card_id": "T024",
   "level": "FAILED",
   "outcome": "FAIL",
   "numbers": [

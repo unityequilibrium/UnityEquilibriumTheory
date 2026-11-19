@@ -106,7 +106,9 @@ class BioEcosystemSim:
             print("- Pyinkado validated as superior structural material.")
             
         # Save results
-        output_dir = "docs/topics/0.30_Mega_Flora_Biotech/Result/02_Figures"
+        from pathlib import Path
+
+        output_dir = Path(__file__).resolve().parents[2] / "Result" / "artifacts"
         os.makedirs(output_dir, exist_ok=True)
         with open(os.path.join(output_dir, "bio_ecosystem_sim.json"), "w") as f:
             json.dump(results, f, indent=4)

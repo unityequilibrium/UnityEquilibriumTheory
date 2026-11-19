@@ -7,6 +7,8 @@ The complete Nervous System of UET.
 import numpy as np
 import json
 import time
+import re
+from tempfile import mkdtemp
 import pandas as pd
 from dataclasses import dataclass, asdict
 from typing import List, Dict, Optional, Any, Tuple
@@ -71,18 +73,20 @@ class UETPathManager:
 
     @staticmethod
     def get_canonical_topic(topic_id: str) -> str:
-        if "_" in topic_id and topic_id in UETPathManager.TOPIC_MAP.values():
-            return topic_id
-        clean_id = topic_id.split("_")[0]
-        mapped = UETPathManager.TOPIC_MAP.get(clean_id)
-        if mapped:
-            return mapped
-        matches = sorted(
-            path.name
-            for path in (UETPathManager.get_root() / "topics").glob(f"{clean_id}_*")
-            if path.is_dir()
-        )
-        return matches[0] if len(matches) == 1 else topic_id
+        topics = UETPathManager.get_root() / "topics"
+        matches = [path.name for path in topics.iterdir()
+                   if path.is_dir() and re.fullmatch(r"0\.\d+_.+", path.name)
+                   and topic_id in (path.name, path.name.split("_", 1)[0])]
+        if len(matches) != 1:
+            raise ValueError(f"Unknown or ambiguous topic: {topic_id!r}")
+        return matches[0]
+
+    @staticmethod
+    def new_run(directory: Path, name: str) -> Path:
+        if not name or Path(name).name != name or name in {".", ".."} or any(c in name for c in "/\\:"):
+            raise ValueError(f"Invalid run name: {name!r}")
+        directory.mkdir(parents=True, exist_ok=True)
+        return Path(mkdtemp(prefix=f"{int(time.time())}_{name}_", dir=directory))
 
     @staticmethod
     def get_result_dir(
@@ -109,15 +113,7 @@ class UETPathManager:
         else:
             # Default "log": Timestamped run folders in _Logs
             # Note: We move logs to _Logs subfolder to reduce clutter
-            timestamp = f"{int(time.time())}"
-            run_id = f"{timestamp}_{experiment_name}"
-
-            # If use_archive is explicitly requested (old logic), honor it, but mapped to _Archive
-            if use_archive:
-                target_path = topic_dir / "_Archive" / run_id
-            else:
-                # Standard Logs go to Result/_Logs/RunID
-                target_path = result_base / "_Logs" / run_id
+            return UETPathManager.new_run(topic_dir / "_Archive" if use_archive else result_base / "_Logs", experiment_name)
 
         target_path.mkdir(parents=True, exist_ok=True)
         return target_path
@@ -240,6 +236,9 @@ class UETMetricLogger:
             base_path = Path(output_dir)
             if not base_path.is_absolute():
                 base_path = root / output_dir
+            for old, current in ((root / 'docs' / 'topics', root / 'topics'), (root / 'docs' / 'core', root / 'core')):
+                if base_path.is_relative_to(old):
+                    base_path = current / base_path.relative_to(old)
             self.run_dir = base_path
             # Explicit output_dir given, defaulting run_id to dir name
             self.run_id = self.run_dir.name
@@ -253,12 +252,10 @@ class UETMetricLogger:
             self.run_id = self.run_dir.name
         else:
             # Legacy Fallback
-            base_path = root / "data_logs"
+            base_path = root / ".uet-run-reports" / "logs"
             self.timestamp_str = f"{int(time.time())}"
-            self.run_id = (
-                simulation_name if self.flat_mode else f"{self.timestamp_str}_{simulation_name}"
-            )
-            self.run_dir = base_path if self.flat_mode else base_path / self.run_id
+            self.run_dir = base_path if self.flat_mode else UETPathManager.new_run(base_path, simulation_name)
+            self.run_id = self.simulation_name if self.flat_mode else self.run_dir.name
 
         self.run_dir.mkdir(parents=True, exist_ok=True)
         self._init_state()
@@ -364,8 +361,8 @@ class UETMetricLogger:
 
 
 class UETLedger:
-    def __init__(self, log_dir: str = "data_logs"):
-        self.log_dir = Path(log_dir)
+    def __init__(self, log_dir: Optional[str] = None):
+        self.log_dir = Path(log_dir) if log_dir is not None else UETPathManager.get_root() / ".uet-run-reports" / "logs"
         self.ledger_file = self.log_dir / "ledger.csv"
 
     def rebuild(self) -> pd.DataFrame:
