@@ -465,11 +465,12 @@
     {
       "claim_id": "C_L3_TRACE_YEAST",
       "statement": "Under the trace-feedback model, the shared glucose released by yeast invertase is the trace; with measured invertase kinetics (Koschwanez et al. 2011) the fitted cooperative-growth switch density of yeast in 2 percent sucrose (Dai et al. 2012) corresponds to a shared glucose level G* of about 1.6 mM, an upper estimate, which an independent growth-versus-glucose measurement can confirm or refute.",
-      "level": "L1_CONSISTENT",
+      "level": "L2_CONFRONTED",
       "evidence": [
-        "R_L3_TRACE_YEAST"
+        "R_L3_TRACE_YEAST",
+        "R_T026_YEAST_SWITCH_GLUCOSE"
       ],
-      "note": "Derivation with registered literature values; no outcome compared yet. Nearest known theory: public-goods models of yeast cooperation (Gore et al. 2009) and Allee effects. Not UET-distinct."
+      "note": "Confronted with Gore et al. (2009) under Test Card T026: INCONCLUSIVE (the designated figure reports a 23 h mean growth rate that never reaches the threshold; exponential rates at two glucose levels lean against 1.6 mM but do not decide). L2 approved by the author on 2026-11-19. Nearest known theory: public-goods models of yeast cooperation (Gore et al. 2009) and Allee effects. Not UET-distinct."
     },
     {
       "claim_id": "C_T024_INNOVATION_INTERVAL",

@@ -5,11 +5,11 @@
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
     "sources": 82,
-    "entries": 946,
+    "entries": 947,
     "by_stream": {
       "book-history": 94,
       "operations": 140,
-      "research": 711,
+      "research": 712,
       "review": 1
     },
     "exact_duplicates": 0,
@@ -425,8 +425,8 @@
     },
     {
       "path": "2026/2026-11-19.md",
-      "sha256": "1de32b3f5aa03fa6969af0f8c24858d6fb1a2148879ef6bd636c102937e9be4b",
-      "entries": 13
+      "sha256": "ac2643e7f82e65e7ae00ff026ca4580d0592903d3444c36861b5fccdb3b31738",
+      "entries": 14
     },
     {
       "path": "2026-08-14.md",
@@ -19306,12 +19306,32 @@
       "source": "2026/2026-11-19.md",
       "anchor": "trace-feedback-in-yeast-on-sucrose-switch-glucose-level",
       "start_line": 123,
-      "end_line": 131,
+      "end_line": 132,
       "title": "Trace feedback in yeast on sucrose: switch glucose level",
-      "entry_sha256": "a663f6963be4c39f4719073130d0b29b774b46f0f9d108506dcc502194c5cba1",
+      "entry_sha256": "b2acdcae42a1d3f559e4f07260a862afd17f4afbcc730e115898e8da624f7cf3",
       "stream": "research",
       "areas": [
         "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-19",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-19.md#test-card-t026-yeast-switch-glucose-inconclusive",
+      "source": "2026/2026-11-19.md",
+      "anchor": "test-card-t026-yeast-switch-glucose-inconclusive",
+      "start_line": 133,
+      "end_line": 141,
+      "title": "Test Card T026: yeast switch glucose (INCONCLUSIVE)",
+      "entry_sha256": "8edbd680843ec8e4ce8908e666eaa26a22345ec7cd43c6abd9c13f223cd8e670",
+      "stream": "research",
+      "areas": [
+        "research-standards"
       ],
       "related_streams": [
         "research"
