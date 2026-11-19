@@ -5,11 +5,11 @@
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
     "sources": 82,
-    "entries": 945,
+    "entries": 946,
     "by_stream": {
       "book-history": 94,
       "operations": 140,
-      "research": 710,
+      "research": 711,
       "review": 1
     },
     "exact_duplicates": 0,
@@ -425,8 +425,8 @@
     },
     {
       "path": "2026/2026-11-19.md",
-      "sha256": "a32fd2fd54d04bf4fded2bf013c70cb7b07951005c6efd6b1cb7e50ee591e59b",
-      "entries": 12
+      "sha256": "1de32b3f5aa03fa6969af0f8c24858d6fb1a2148879ef6bd636c102937e9be4b",
+      "entries": 13
     },
     {
       "path": "2026-08-14.md",
@@ -19286,9 +19286,29 @@
       "source": "2026/2026-11-19.md",
       "anchor": "layer-3-with-trace-feedback-author-decision-2026-11-19",
       "start_line": 113,
-      "end_line": 121,
+      "end_line": 122,
       "title": "Layer 3 with trace feedback (author decision 2026-11-19)",
-      "entry_sha256": "4d79a910d8222e6a3bd0468598976b893d2292d4e4c75533124e43f97dca3896",
+      "entry_sha256": "9fe2ce038c9fc9025d0f136fded471c02dd66495d4a0680bc9f120e3f817e536",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-19",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-19.md#trace-feedback-in-yeast-on-sucrose-switch-glucose-level",
+      "source": "2026/2026-11-19.md",
+      "anchor": "trace-feedback-in-yeast-on-sucrose-switch-glucose-level",
+      "start_line": 123,
+      "end_line": 131,
+      "title": "Trace feedback in yeast on sucrose: switch glucose level",
+      "entry_sha256": "a663f6963be4c39f4719073130d0b29b774b46f0f9d108506dcc502194c5cba1",
       "stream": "research",
       "areas": [
         "research-core"

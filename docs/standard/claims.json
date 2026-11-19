@@ -463,6 +463,15 @@
       "note": "Derivation and numerical check; the functional form is an AI choice, the channel is the author's. Nearest known theory: niche construction, facilitation in succession, plant-soil feedback and alternative stable states. UET-specific only if w is tied to energy use (bits per joule), which is not yet tested."
     },
     {
+      "claim_id": "C_L3_TRACE_YEAST",
+      "statement": "Under the trace-feedback model, the shared glucose released by yeast invertase is the trace; with measured invertase kinetics (Koschwanez et al. 2011) the fitted cooperative-growth switch density of yeast in 2 percent sucrose (Dai et al. 2012) corresponds to a shared glucose level G* of about 1.6 mM, an upper estimate, which an independent growth-versus-glucose measurement can confirm or refute.",
+      "level": "L1_CONSISTENT",
+      "evidence": [
+        "R_L3_TRACE_YEAST"
+      ],
+      "note": "Derivation with registered literature values; no outcome compared yet. Nearest known theory: public-goods models of yeast cooperation (Gore et al. 2009) and Allee effects. Not UET-distinct."
+    },
+    {
       "claim_id": "C_T024_INNOVATION_INTERVAL",
       "statement": "Intervals between successive lighting introductions (Nordhaus 1997, Table 1.1) shrink with world population as Delta t ~ N^-(beta-1) with beta = 1.27 (Bettencourt et al. 2007), not as N^-1 (Kremer 1993).",
       "level": "FAILED",
