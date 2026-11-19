@@ -1,0 +1,46 @@
+{
+  "schema": "uet-result-v2",
+  "result_id": "R_L3_SUPPLY",
+  "claim_id": "C_L3_SUPPLY",
+  "level": "L1_CONSISTENT",
+  "outcome": "PASS",
+  "numbers": [
+    {
+      "name": "coupling_from_action",
+      "value": "lam = lambda/Z^2 read from matter_potential at 5 random configurations (rel 1e-10)",
+      "uncertainty": null,
+      "unit": "natural"
+    },
+    {
+      "name": "cross_section",
+      "value": "O(2) amplitudes 36, 4, 4 lam^2 give sigma_tot = 3 lam^2/(2 pi s)",
+      "uncertainty": null,
+      "unit": "natural"
+    },
+    {
+      "name": "nonrelativistic_limit",
+      "value": "relativistic Monte Carlo <sigma v_Moller> minus the closed form: -3.4, -0.42, -0.045 percent at T/M = 0.01, 0.001, 0.0001 (order T/M); with drift v = 0.08 within v^2",
+      "uncertainty": null,
+      "unit": "natural"
+    },
+    {
+      "name": "sink_density",
+      "value": "Bose sink density equals relativistic Boltzmann M^2 T K2(M/T)/(2 pi^2) at M/T = 30, 100 (rel 1e-6)",
+      "uncertainty": null,
+      "unit": "natural"
+    },
+    {
+      "name": "supply_threshold",
+      "value": "with action-derived a_i, tau_i and delta: S = 1.05 S* keeps the lowest-R* mode at R = R* and n = (S - delta R*)/(a F R*) (rel 1e-3); S = 0.95 S* and S = 0 leave no mode",
+      "uncertainty": null,
+      "unit": "natural"
+    }
+  ],
+  "producer": {
+    "script": "core/05_tests/physics/test_layer3_supply.py",
+    "commit": "2dcdd6d26"
+  },
+  "artifacts": [],
+  "date": "2026-11-19",
+  "note": "Derivation and numerical check only; no external data. The pool loss delta of the layer 3 chi stream follows from the action's quartic self-coupling (tree level, beam attenuation, Boltzmann momenta). The supply S does not follow: in a region holding only the action's fields S = 0 and every phi mode dies; a steady structure needs a boundary flux S > S* = delta R*_min, so S is set by an enclosing system. Nearest known theory: beam attenuation, chemostat dilution, laser pump threshold. Not UET-distinct."
+}

@@ -5,11 +5,11 @@
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
     "sources": 82,
-    "entries": 934,
+    "entries": 936,
     "by_stream": {
       "book-history": 94,
       "operations": 137,
-      "research": 702,
+      "research": 704,
       "review": 1
     },
     "exact_duplicates": 0,
@@ -425,8 +425,8 @@
     },
     {
       "path": "2026/2026-11-19.md",
-      "sha256": "b9db83bce41eb9b3882eb78362501b1578550bb787cc2a5c0e7c6942d64de34e",
-      "entries": 1
+      "sha256": "f03e0eb3dbccdf6d14cc540cf4d22c5c6047823c77787c5e4f91fcce186aa47d",
+      "entries": 3
     },
     {
       "path": "2026-08-14.md",
@@ -19066,15 +19066,55 @@
       "source": "2026/2026-11-19.md",
       "anchor": "pr-62-brought-up-to-date-and-pr-65-completeness-fix",
       "start_line": 3,
-      "end_line": 11,
+      "end_line": 12,
       "title": "PR #62 brought up to date and PR #65 completeness fix",
-      "entry_sha256": "8dd59d042526924f0cb864fcdadda4dc0141cb56f2b5c4259e20ff280319e3e7",
+      "entry_sha256": "32233a6e79f9f0f3086724e146aed3b6587fab65ca7ff2ddea97d452de503dc6",
       "stream": "operations",
       "areas": [
         "repo-ops"
       ],
       "related_streams": [
         "operations"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-19",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-19.md#layer-3-capture-and-death-rates-from-the-action",
+      "source": "2026/2026-11-19.md",
+      "anchor": "layer-3-capture-and-death-rates-from-the-action",
+      "start_line": 13,
+      "end_line": 22,
+      "title": "Layer 3 capture and death rates from the action",
+      "entry_sha256": "a574f4a40a4d855086bd30a027e9d942d7f994efc6c04a1becf0ede899db1ff5",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-19",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-19.md#layer-3-pool-loss-delta-and-supply-threshold",
+      "source": "2026/2026-11-19.md",
+      "anchor": "layer-3-pool-loss-delta-and-supply-threshold",
+      "start_line": 23,
+      "end_line": 31,
+      "title": "Layer 3 pool loss delta and supply threshold",
+      "entry_sha256": "c932a6eb9026c685eb246de4a0c7766f6be9f8fc478d727148507f8bd0d5bdb5",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
       ],
       "basis": "explicit_stream_and_area",
       "flags": [],
