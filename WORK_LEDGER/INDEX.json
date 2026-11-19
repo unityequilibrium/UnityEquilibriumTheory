@@ -5,10 +5,10 @@
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
     "sources": 82,
-    "entries": 939,
+    "entries": 940,
     "by_stream": {
       "book-history": 94,
-      "operations": 138,
+      "operations": 139,
       "research": 706,
       "review": 1
     },
@@ -425,8 +425,8 @@
     },
     {
       "path": "2026/2026-11-19.md",
-      "sha256": "119fd368e03cbf350aec5760ecde2571d0fcb2b0d6e6c87fbfa1a161293ff082",
-      "entries": 6
+      "sha256": "9469b1fb49a2531b6aaa4df7341f64a869536e304ba7461adcab89a31dd34616",
+      "entries": 7
     },
     {
       "path": "2026-08-14.md",
@@ -19162,11 +19162,31 @@
       "legacy_root_path": false
     },
     {
+      "id": "2026/2026-11-19.md#claude-research-skills-under-standard-v2",
+      "source": "2026/2026-11-19.md",
+      "anchor": "claude-research-skills-under-standard-v2",
+      "start_line": 53,
+      "end_line": 62,
+      "title": "Claude research skills under Standard v2",
+      "entry_sha256": "c608d9017100f9db9bf441794c7032279cf56cc8374e9a13e906676ae7e18d36",
+      "stream": "operations",
+      "areas": [
+        "repo-ops"
+      ],
+      "related_streams": [
+        "operations"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-19",
+      "legacy_root_path": false
+    },
+    {
       "id": "2026/2026-11-19.md#noether-coverage-of-the-parent-action",
       "source": "2026/2026-11-19.md",
       "anchor": "noether-coverage-of-the-parent-action",
-      "start_line": 53,
-      "end_line": 61,
+      "start_line": 63,
+      "end_line": 71,
       "title": "Noether coverage of the parent action",
       "entry_sha256": "d7247845fdd61224f308c4ac80b86977ec14055f83891b2bb4082162fcff3d0f",
       "stream": "research",
