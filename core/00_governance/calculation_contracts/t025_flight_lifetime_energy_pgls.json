@@ -1,0 +1,231 @@
+{
+  "schema_version": "uet-calculation-contract-v1",
+  "contract_id": "CORE_T025_FLIGHT_LIFETIME_ENERGY_PGLS_V1",
+  "profile": "PHYSICAL_COMPARISON",
+  "review": {
+    "status": "INCOMPLETE",
+    "reviewer": "agent:claude-t025",
+    "rationale": "Methodological contract for Test Card T025 (T023 repeated with a phylogenetic correction). The evidence decision lives in docs/standard. Longevity, metabolic rate and body mass as compiled in AnAge; the TimeTree tree is local-only because TimeTree does not allow redistribution.",
+    "coverage_evidence": [
+      "docs/data/external/biology/anage/anage_build15_data.txt"
+    ]
+  },
+  "question": "With species related by a phylogeny (PGLS, Brownian motion), do bats spend about as much energy per gram over a lifetime as birds?",
+  "output": {
+    "quantity": "bat offset d_bat and Delta = d_bat - d_bird in log10 LEP",
+    "unit": "1",
+    "domain": "AnAge Build 15 Aves and Mammalia as in T018/T023, placed on a TimeTree 5 tree (285 of 298 species)",
+    "accuracy": "95 percent t-intervals from generalized least squares with the Brownian-motion covariance of the TimeTree tree.",
+    "claim_intent": "DIAGNOSTIC"
+  },
+  "model": {
+    "formula_ids": [
+      "UET_L3_LIFETIME_RESERVE",
+      "UET_T023_SPECIES_LEVEL_RESERVE"
+    ],
+    "assumptions": "tau = F/P with the reserve per gram set at species level by extrinsic mortality; flight lowers extrinsic mortality (author statement 2026-11-18, AI translation).",
+    "approximation": "Resting metabolic rate stands for lifetime expenditure; maximum longevity stands for tau.",
+    "initial_boundary": "Not applicable (cross-species comparison).",
+    "drive_environment": "Captive and wild records as compiled in AnAge.",
+    "parameters": "No fitting decides the outcome; the prediction is s = 0 and d = 0."
+  },
+  "data_policy": {
+    "uses_observations": true,
+    "calibration_ids": [],
+    "comparison_ids": [
+      "ANAGE_BUILD15_LONGEVITY_METABOLISM",
+      "TIMETREE_T023_SPECIES"
+    ],
+    "independent_validation": false,
+    "holdout_policy": "No holdout. AnAge values seen in T023 (SEEN_FULL); tree leaf names, count and root age read before approval (SEEN_SUMMARY); declared in Test Card T025."
+  },
+  "observation": {
+    "system_partition": {
+      "role_mode": "RELATIONAL",
+      "accounting_component_id": "system_state",
+      "boundary": "Species-level records compiled in AnAge; published values used only.",
+      "systems": [
+        {
+          "id": "population",
+          "state": "Bird and mammal species",
+          "state_accounting": {
+            "kind": "INDEPENDENT",
+            "state_ids": [
+              "population.species"
+            ],
+            "owner_ids": [],
+            "rule": "One record per species as compiled."
+          }
+        },
+        {
+          "id": "camera",
+          "state": "Compiled literature records",
+          "state_accounting": {
+            "kind": "INDEPENDENT",
+            "state_ids": [
+              "camera.record"
+            ],
+            "owner_ids": [],
+            "rule": "Observer record only."
+          }
+        }
+      ],
+      "couplings": [
+        {
+          "id": "imaging",
+          "source": "population",
+          "target": "camera",
+          "kind": "DETECTION",
+          "component_id": "detector",
+          "map": "Longevity records and respirometry compiled from the literature"
+        },
+        {
+          "id": "illumination_backaction",
+          "source": "camera",
+          "target": "population",
+          "kind": "BACKACTION",
+          "component_id": "detector",
+          "map": "Captivity effects handled upstream"
+        }
+      ],
+      "observables": [
+        {
+          "id": "life_history",
+          "detector_id": "camera",
+          "target_systems": [
+            "population"
+          ],
+          "backaction_targets": [
+            "population"
+          ],
+          "backaction_scope_reason": "Single assessed owner.",
+          "quantity": "maximum longevity; metabolic rate; body mass",
+          "readout_map": "AnAge columns; read only",
+          "component_id": "detector"
+        }
+      ]
+    },
+    "source_state": "Adult animals as recorded in the cited studies.",
+    "generated_trace": "Not a UET trace variable.",
+    "carrier": "Not applicable.",
+    "observer_state": "AnAge Build 15 records.",
+    "readout": "Maximum longevity (yr), metabolic rate (W), body mass (g).",
+    "backaction": "Handled upstream.",
+    "frame": "Not applicable",
+    "time_convention": "Years of 365.25 days",
+    "product_level": "compiled published values (not raw data)",
+    "corrections": [
+      {
+        "id": "published_analysis_upstream",
+        "state": "APPLIED_UPSTREAM",
+        "evidence": "docs/data/external/biology/anage/anage_build15_data.txt"
+      }
+    ]
+  },
+  "components": [
+    {
+      "id": "system_state",
+      "group": "system_state",
+      "disposition": "MODELED",
+      "reason": "Species and filters as registered.",
+      "evidence": [
+        "docs/data/external/biology/anage/anage_build15_data.txt"
+      ]
+    },
+    {
+      "id": "drive_environment",
+      "group": "drive_environment",
+      "disposition": "UPSTREAM_CORRECTED",
+      "reason": "Applied upstream in the studies compiled by AnAge; not recomputed here.",
+      "evidence": [
+        "docs/data/external/biology/anage/anage_build15_data.txt"
+      ]
+    },
+    {
+      "id": "propagation",
+      "group": "propagation",
+      "disposition": "NOT_APPLICABLE",
+      "reason": "No signal propagation.",
+      "evidence": []
+    },
+    {
+      "id": "frame_time",
+      "group": "frame_time",
+      "disposition": "UPSTREAM_CORRECTED",
+      "reason": "Applied upstream in the studies compiled by AnAge; not recomputed here.",
+      "evidence": [
+        "docs/data/external/biology/anage/anage_build15_data.txt"
+      ]
+    },
+    {
+      "id": "detector",
+      "group": "detector",
+      "disposition": "UPSTREAM_CORRECTED",
+      "reason": "Applied upstream in the studies compiled by AnAge; not recomputed here.",
+      "evidence": [
+        "docs/data/external/biology/anage/anage_build15_data.txt"
+      ]
+    },
+    {
+      "id": "processing",
+      "group": "processing",
+      "disposition": "MODELED",
+      "reason": "LEP, species placement on the tree, PGLS fit and t-intervals; outcome rule fixed in T025.",
+      "evidence": [
+        "core/03_lanes/persistence/t025_flight_lifetime_energy_pgls.py"
+      ]
+    },
+    {
+      "id": "numerics",
+      "group": "numerics",
+      "disposition": "MODELED",
+      "reason": "Cholesky-whitened least squares (numpy), Student t quantiles and bounded likelihood maximisation for Pagel's lambda (scipy).",
+      "evidence": [
+        "core/03_lanes/persistence/t025_flight_lifetime_energy_pgls.py"
+      ]
+    }
+  ],
+  "error_budget": {
+    "unit": "1",
+    "numerical": "Direct linear algebra; no Monte Carlo error.",
+    "approximation": "Resting rate instead of lifetime expenditure; maximum longevity instead of typical lifespan.",
+    "measurement": "Species records carry no stated errors; residual variance estimated from the PGLS fit.",
+    "systematic": "Field/resting metabolic ratio may differ between classes; captive and wild longevity mixed; bat torpor inflates resting-rate LEP; tree is a TimeTree summary without branch-length uncertainty.",
+    "omissions": "Reptiles, fish and other classes not used.",
+    "dependence": "Handled by the Brownian-motion covariance; Pagel's lambda reported, not deciding.",
+    "acceptance": "Outcome categories fixed in Test Card T025.",
+    "omission_limit": null
+  },
+  "identities": [
+    {
+      "path": "docs/data/external/biology/anage/anage_build15_data.txt",
+      "kind": "working_file",
+      "role": "input",
+      "sha256": "05196983344c71120563bbe3a637fb1c96c1bfffd592175f39d7bb80c55f00db",
+      "availability": "REQUIRED"
+    },
+    {
+      "path": "docs/data/external/biology/timetree/private/tree_raw.nwk",
+      "kind": "working_file",
+      "role": "input",
+      "sha256": "086b72089f42ee65fbcc5406b49063b2dc044663d745b728eca1d66a21a137a1",
+      "availability": "LOCAL_ONLY"
+    },
+    {
+      "path": "core/03_lanes/persistence/t025_flight_lifetime_energy_pgls.py",
+      "kind": "working_file",
+      "role": "code",
+      "sha256": "e201b5f16ffc6aec3231fba348ff914d2c062209562032a9c22abda459017d62",
+      "availability": "REQUIRED"
+    }
+  ],
+  "entrypoints": [
+    "core/03_lanes/persistence/t025_flight_lifetime_energy_pgls.py"
+  ],
+  "evidence": [
+    "core/03_lanes/persistence/t025_flight_lifetime_energy_pgls.py",
+    "docs/data/external/biology/anage/anage_build15_data.txt"
+  ],
+  "claim_boundary": "Methodological coverage of the T025 comparison only; the evidence level is set in docs/standard. Not UET-distinct: the nearest theory is disposable soma and the extrinsic-mortality theory of ageing.",
+  "next_action": "Field metabolic rates or a torpor-aware bat subset would need their own Test Card; they cannot change the T025 outcome."
+}

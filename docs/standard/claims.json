@@ -409,12 +409,13 @@
     },
     {
       "claim_id": "C_T023_FLIGHT_LIFETIME_ENERGY",
-      "statement": "A species-level lifetime reserve set by extrinsic mortality (author, 2026-11-18) is partly supported: bats spend 1.96 times the lifetime energy per gram of other mammals (d_bat = 0.29, CI 0.19-0.40) but less than birds (d_bat - d_bird = -0.17, CI -0.28 to -0.07); flight accounts for about 60 percent of the bird offset. INCONCLUSIVE under T023.",
+      "statement": "A species-level lifetime reserve set by extrinsic mortality (author, 2026-11-18) is partly supported: bats spend 1.96 times the lifetime energy per gram of other mammals (d_bat = 0.29, CI 0.19-0.40) but less than birds (d_bat - d_bird = -0.17, CI -0.28 to -0.07); flight accounts for about 60 percent of the bird offset. INCONCLUSIVE under T023. With a phylogenetic correction (T025, PGLS on a TimeTree tree) the central values stay close (d_bat = 0.235, Delta = -0.198) but the intervals widen about tenfold (d_bat -0.31 to 0.78), so the data cannot decide: INCONCLUSIVE under T025.",
       "level": "L2_CONFRONTED",
       "evidence": [
-        "R_T023_FLIGHT_LIFETIME_ENERGY"
+        "R_T023_FLIGHT_LIFETIME_ENERGY",
+        "R_T025_FLIGHT_LIFETIME_ENERGY_PGLS"
       ],
-      "note": "Not blind; bat torpor biases the bat value upward; no phylogenetic correction. Nearest theory: disposable soma and extrinsic-mortality theory of ageing; not UET-distinct. L2 approved by the author on 2026-11-18."
+      "note": "Not blind; bat torpor biases the bat value upward; T023 has no phylogenetic correction; T025 adds it (tree kept local, TimeTree forbids redistribution). Nearest theory: disposable soma and extrinsic-mortality theory of ageing; not UET-distinct. L2 approved by the author on 2026-11-18."
     },
     {
       "claim_id": "C_L2_FROM_ACTION",

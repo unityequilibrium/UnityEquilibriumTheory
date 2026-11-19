@@ -6,10 +6,12 @@
 
 These are source-linked historical records, not proof of completed research, successful publication, or current scientific readiness.
 
-Indexed entries: 707. Counts describe records, not accomplishments.
+Indexed entries: 709. Counts describe records, not accomplishments.
 
 | Date | Record | Area | Notes |
 | --- | --- | --- | --- |
+| 2026-11-19 | [T025 run: T023 with a phylogenetic correction is INCONCLUSIVE](2026/2026-11-19.md#t025-run-t023-with-a-phylogenetic-correction-is-inconclusive) (L103) | research-standards | explicit_stream_and_area |
+| 2026-11-19 | [Test Card T025 drafted: T023 repeated with a phylogenetic correction](2026/2026-11-19.md#test-card-t025-drafted-t023-repeated-with-a-phylogenetic-correction) (L93) | research-standards | explicit_stream_and_area |
 | 2026-11-19 | [Noether identity on a full metric, and the four-coordinate commits PR #70 missed](2026/2026-11-19.md#noether-identity-on-a-full-metric-and-the-four-coordinate-commits-pr-70-missed) (L73) | research-core | explicit_stream_and_area |
 | 2026-11-19 | [Noether coverage of the parent action](2026/2026-11-19.md#noether-coverage-of-the-parent-action) (L63) | research-core | explicit_stream_and_area |
 | 2026-11-19 | [Topic 0.13 Ding figure locator (option 1)](2026/2026-11-19.md#topic-013-ding-figure-locator-option-1) (L43) | research-core | explicit_stream_and_area |
