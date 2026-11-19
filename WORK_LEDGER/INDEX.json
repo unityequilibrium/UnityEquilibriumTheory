@@ -5,10 +5,10 @@
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
     "sources": 82,
-    "entries": 940,
+    "entries": 941,
     "by_stream": {
       "book-history": 94,
-      "operations": 139,
+      "operations": 140,
       "research": 706,
       "review": 1
     },
@@ -425,8 +425,8 @@
     },
     {
       "path": "2026/2026-11-19.md",
-      "sha256": "9469b1fb49a2531b6aaa4df7341f64a869536e304ba7461adcab89a31dd34616",
-      "entries": 7
+      "sha256": "de91c7009e38f85f5781b139e5582c483c357365deb6e0618c0f149c470462c0",
+      "entries": 8
     },
     {
       "path": "2026-08-14.md",
@@ -19186,15 +19186,35 @@
       "source": "2026/2026-11-19.md",
       "anchor": "noether-coverage-of-the-parent-action",
       "start_line": 63,
-      "end_line": 71,
+      "end_line": 72,
       "title": "Noether coverage of the parent action",
-      "entry_sha256": "d7247845fdd61224f308c4ac80b86977ec14055f83891b2bb4082162fcff3d0f",
+      "entry_sha256": "683bcb2bdf591baa46f0cab8da0a50d83908e68526b30735a24fb2af96c340e4",
       "stream": "research",
       "areas": [
         "research-core"
       ],
       "related_streams": [
         "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-19",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-19.md#main-validation-red-because-its-audit-job-checked-out-one-commit",
+      "source": "2026/2026-11-19.md",
+      "anchor": "main-validation-red-because-its-audit-job-checked-out-one-commit",
+      "start_line": 73,
+      "end_line": 81,
+      "title": "Main Validation red because its audit job checked out one commit",
+      "entry_sha256": "0d0b500a1a15a1665336dc8bedfb13697ffdf99a54f78a5df92792e2be9028b9",
+      "stream": "operations",
+      "areas": [
+        "repo-ops"
+      ],
+      "related_streams": [
+        "operations"
       ],
       "basis": "explicit_stream_and_area",
       "flags": [],

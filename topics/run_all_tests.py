@@ -553,6 +553,10 @@ def changed_suites(base: str, root: Path = REPO_ROOT) -> tuple[list[Suite], list
             "docs/scripts/audit/", "docs/meta/", "docs/standard/", "docs/repo_paths.py",
         ))
         or path in {".gitattributes", ".gitignore", "docs/STANDARD.md", "topics/run_all_tests.py", "topics/run_full_verification.py", "topics/test_suite_config.json"}
+        # The workflows that run this runner are shared configuration: a change to one of them
+        # must exercise every suite it can affect, not stop with "does not map".
+        or path in {".github/workflows/pr-validation.yml", ".github/workflows/nightly-research-audit.yml",
+                    ".github/workflows/main-validation.yml"}
         for path in changed
     )
 

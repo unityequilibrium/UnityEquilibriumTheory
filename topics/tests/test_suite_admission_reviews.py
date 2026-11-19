@@ -120,7 +120,10 @@ def test_duplicate_configuration_keys_are_rejected(tmp_path):
     assert runner.load_suite_reviews(tmp_path)[1]
 
 
-@pytest.mark.parametrize("changed_path", ["topics/test_suite_config.json", ".gitattributes", ".gitignore"])
+@pytest.mark.parametrize("changed_path", ["topics/test_suite_config.json", ".gitattributes", ".gitignore",
+                                          ".github/workflows/pr-validation.yml",
+                                          ".github/workflows/nightly-research-audit.yml",
+                                          ".github/workflows/main-validation.yml"])
 def test_configuration_change_selects_shared_consumers(tmp_path, monkeypatch, changed_path):
     from types import SimpleNamespace
     monkeypatch.setattr(runner.subprocess, "run", lambda *args, **kwargs:
