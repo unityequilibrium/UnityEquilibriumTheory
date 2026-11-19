@@ -646,4 +646,5 @@ commit: this commit
 - ผล: ประจุ O(2) อนุรักษ์แม้มี portal; identity ของ diffeomorphism (Bianchi I) รักษา constraint ของพลังงานรวม; บน lattice ประจุ O(2) คงที่ถึง 2e-15 ส่วน E, P และประจุ boost K ลู่เข้าอันดับ 2.00
 - ตัวควบคุมเชิงลบ: ทำลาย reparametrization แล้ว identity พัง; ให้ φ มี light cone ต่างไป K ไม่อนุรักษ์ (drift 0.57)
 - เพิ่ม: โมเมนตัมเชิงมุมบน lattice 2+1 ลู่เข้าอันดับ 1.99
-- ยังไม่ได้: diffeomorphism ใน metric ทั่วไป (ตรวจแค่ Bianchi I); ไม่ใช่สิ่งเฉพาะของ UET
+- เพิ่ม: generalized Bianchi identity ∇^μE_μν = −κ(E_φ∂_νφ + ΣE_A∂_νχ_A) ถือใน metric ที่ขึ้นกับ t, x และมี g_tx ที่ 20 จุด (rel < 1e-10)
+- ยังไม่ได้: metric ที่ขึ้นกับทั้ง 4 พิกัด; ไม่ใช่สิ่งเฉพาะของ UET

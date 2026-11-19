@@ -18,6 +18,12 @@
       "unit": "natural"
     },
     {
+      "name": "generalized_bianchi_general_metric",
+      "value": "inhomogeneous non-diagonal metric (N, g_tx, a, b, c, phi, chi functions of t and x): implemented metric residual equals the Theory Card form, and nabla^mu E_mu_nu = -kappa (E_phi d_nu phi + sum_A E_A d_nu chi_A) with the implemented residuals at 20 random off-shell points (rel < 1e-10); fails when the portal is left out of the stress",
+      "uncertainty": null,
+      "unit": "natural"
+    },
+    {
       "name": "o2_charge_lattice",
       "value": "O(2) charge Q = 2.689 conserved to 2e-15 over t = 8 on the 1+1 lattice",
       "uncertainty": null,
@@ -44,9 +50,9 @@
   ],
   "producer": {
     "script": "core/05_tests/physics/test_noether.py",
-    "commit": "3d14610f5"
+    "commit": "9d394e216"
   },
   "artifacts": [],
   "date": "2026-11-19",
-  "note": "Derivation and numerical check only; no external data. Noether's first theorem: the internal O(2) charge (chi number) is conserved although matter trades energy with the response field through the portal, because the portal depends only on |chi|^2. Second theorem: diffeomorphism invariance of the full action with gravity keeps the Hamiltonian constraint, so total energy of matter, phi and geometry is conserved while matter energy alone is not (C_EXCHANGE_DERIVED). Translations and boosts in flat space: energy, momentum and the boost charge are conserved, the last only because phi and chi share one light cone. Rotations: angular momentum is conserved on a 2+1 lattice. The diffeomorphism check uses the Theory Card action in a Bianchi I universe, not a general metric. Nearest known theory: Noether 1918, ADM constraint, Poincare charges of scalar fields. Not UET-distinct."
+  "note": "Derivation and numerical check only; no external data. Noether's first theorem: the internal O(2) charge (chi number) is conserved although matter trades energy with the response field through the portal, because the portal depends only on |chi|^2. Second theorem: diffeomorphism invariance of the full action with gravity keeps the Hamiltonian constraint, so total energy of matter, phi and geometry is conserved while matter energy alone is not (C_EXCHANGE_DERIVED). Translations and boosts in flat space: energy, momentum and the boost charge are conserved, the last only because phi and chi share one light cone. Rotations: angular momentum is conserved on a 2+1 lattice. The diffeomorphism identity is checked in Bianchi I with gravity and, as the full generalized Bianchi identity, on an inhomogeneous non-diagonal metric depending on t and x; metrics depending on all four coordinates were not sampled. Nearest known theory: Noether 1918, ADM constraint, Poincare charges of scalar fields. Not UET-distinct."
 }
