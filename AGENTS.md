@@ -22,6 +22,7 @@ Its old status vocabularies and workflow ladders are replaced.
 - `docs/standard/` holds the machine-checked records: claims, Test Cards, results and the data manifest.
 - `WORK_LEDGER/` is the repository-wide daily work history. Topic `UPDATE_LOG.md` files record research waves.
 - Generated JSON under `07_artifacts/`, `Result/` and `_Logs/` is output. It is not where narrative decisions get made.
+- Claude's research skills live in `.claude/skills/` (index: `.claude/skills/README.md`). They follow `docs/STANDARD.md` and replace the older Codex `uet-*` skills.
 - The local interpreter is `.venv/Scripts/python.exe`. Dependencies are pinned in `.github/requirements-research.txt`.
 
 ## 2. Harness and Superapp boundary (always in force)

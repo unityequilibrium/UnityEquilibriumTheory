@@ -5,10 +5,10 @@
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
     "sources": 82,
-    "entries": 938,
+    "entries": 939,
     "by_stream": {
       "book-history": 94,
-      "operations": 138,
+      "operations": 139,
       "research": 705,
       "review": 1
     },
@@ -425,8 +425,8 @@
     },
     {
       "path": "2026/2026-11-19.md",
-      "sha256": "39ef30a54b10378044cec86aeb1096b3a1317becf7b6d9c0a6ec6f8dd305bf58",
-      "entries": 5
+      "sha256": "874c74f2bc39438f6e021740c3376f5cb8012fc1f5f2b12b16fe66ef5258bce6",
+      "entries": 6
     },
     {
       "path": "2026-08-14.md",
@@ -19146,15 +19146,35 @@
       "source": "2026/2026-11-19.md",
       "anchor": "topic-013-ding-figure-locator-option-1",
       "start_line": 43,
-      "end_line": 51,
+      "end_line": 52,
       "title": "Topic 0.13 Ding figure locator (option 1)",
-      "entry_sha256": "e3d7517de0dcb30b729459b438ff2ff98256d56000708fc06d879a9cbc2cf93c",
+      "entry_sha256": "85fd4cb601a84425e2871dceabe6885a8dc40478555886156de0ea4509021fa6",
       "stream": "research",
       "areas": [
         "research-core"
       ],
       "related_streams": [
         "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-19",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-19.md#claude-research-skills-under-standard-v2",
+      "source": "2026/2026-11-19.md",
+      "anchor": "claude-research-skills-under-standard-v2",
+      "start_line": 53,
+      "end_line": 61,
+      "title": "Claude research skills under Standard v2",
+      "entry_sha256": "3674fa5414818d87aaaaca63a8a2199fc44af999b1bb92b29f32b6a24d5eb726",
+      "stream": "operations",
+      "areas": [
+        "repo-ops"
+      ],
+      "related_streams": [
+        "operations"
       ],
       "basis": "explicit_stream_and_area",
       "flags": [],
