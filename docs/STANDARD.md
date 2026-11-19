@@ -2,10 +2,10 @@
 
 > **สถานะเอกสาร: APPROVED — อนุมัติโดยผู้เขียน 2026-11-08 (W2); แก้ไข §15 อนุมัติ 2026-11-09**
 > เอกสารนี้เป็นมาตรฐานควบคุม**ฉบับเดียว**ด้านการยืนยันหลักฐานและสถานะ claim ของงานวิจัยใน Harness
-> มาตรฐานด้าน**ปฏิบัติงาน**ใน `docs/topics/For Work/` (โครงสร้าง topic, README โค้ด, data, reference,
+> มาตรฐานด้าน**ปฏิบัติงาน**ใน `topics/For Work/` (โครงสร้าง topic, README โค้ด, data, reference,
 > result, formula audit, paper, visualization, template และ calculation contract) **ยังมีผลบังคับ** ตาม §15
 > ส่วนชุดคำศัพท์สถานะและบันไดขั้นตอนเดิมถูกแทนด้วยเอกสารนี้
-> ไฟล์ใน `For Work/` อยู่ที่เดิมและห้ามแก้ (calculation contract เดิม 6 ฉบับล็อก hash ไว้เป็น REQUIRED)
+> ไฟล์ใน `For Work/` ห้ามแก้ (calculation contract เดิม 6 ฉบับล็อก hash ไว้เป็น REQUIRED) ผู้เขียนสั่งย้ายจาก `docs/topics/For Work/` มาที่ `topics/For Work/` เมื่อ 2026-11-19 เนื้อหาไฟล์ไม่เปลี่ยน
 > ยกเว้นประกาศ superseded
 > Schema ที่เครื่องตรวจ: [`docs/standard/schema.json`](standard/schema.json)
 
@@ -219,7 +219,7 @@ Gate และ audit script เดิม (inventory, compatibility, aggregate, r
 
 ## 15. มาตรฐานด้านปฏิบัติงานที่ยังมีผลบังคับ
 
-เอกสารนี้ไม่ได้เขียนกฎด้านการจัดไฟล์และการทำงานประจำวันซ้ำ ไฟล์ใน `docs/topics/For Work/` ต่อไปนี้**ยังเป็นมาตรฐานที่ต้องทำตาม** (ไฟล์อยู่ที่เดิมและห้ามแก้):
+เอกสารนี้ไม่ได้เขียนกฎด้านการจัดไฟล์และการทำงานประจำวันซ้ำ ไฟล์ใน `topics/For Work/` ต่อไปนี้**ยังเป็นมาตรฐานที่ต้องทำตาม** (ห้ามแก้เนื้อหา):
 
 | เรื่อง | ไฟล์ที่ยังใช้ |
 |---|---|

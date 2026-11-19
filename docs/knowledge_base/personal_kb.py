@@ -14,7 +14,7 @@ from typing import Iterable
 
 REPO_ROOT = Path(__file__).resolve().parents[2]
 DEFAULT_DB = REPO_ROOT / 'docs/knowledge_base/personal_index.sqlite3'
-DEFAULT_PATHS = ('docs/UET_Documentation_Details', 'docs/topics/For Work',
+DEFAULT_PATHS = ('docs/UET_Documentation_Details', 'topics/For Work',
                  'docs/topics/README.md', 'docs/meta', 'docs/core')
 TEXT_EXTENSIONS = {'.md', '.txt', '.py', '.json', '.toml', '.yaml', '.yml'}
 SKIP_PARTS = {'.git', '.venv', '__pycache__', 'node_modules', 'vectors', 'media',
