@@ -5,11 +5,11 @@
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
     "sources": 82,
-    "entries": 940,
+    "entries": 941,
     "by_stream": {
       "book-history": 94,
       "operations": 139,
-      "research": 706,
+      "research": 707,
       "review": 1
     },
     "exact_duplicates": 0,
@@ -425,8 +425,8 @@
     },
     {
       "path": "2026/2026-11-19.md",
-      "sha256": "9469b1fb49a2531b6aaa4df7341f64a869536e304ba7461adcab89a31dd34616",
-      "entries": 7
+      "sha256": "4d22c200eb3429c616f8c6e299bb368c942865c17cf130c81306f45a0b68a63b",
+      "entries": 8
     },
     {
       "path": "2026-08-14.md",
@@ -19186,12 +19186,32 @@
       "source": "2026/2026-11-19.md",
       "anchor": "noether-coverage-of-the-parent-action",
       "start_line": 63,
-      "end_line": 71,
+      "end_line": 72,
       "title": "Noether coverage of the parent action",
-      "entry_sha256": "d7247845fdd61224f308c4ac80b86977ec14055f83891b2bb4082162fcff3d0f",
+      "entry_sha256": "683bcb2bdf591baa46f0cab8da0a50d83908e68526b30735a24fb2af96c340e4",
       "stream": "research",
       "areas": [
         "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-19",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-19.md#test-card-t025-drafted-t023-repeated-with-a-phylogenetic-correction",
+      "source": "2026/2026-11-19.md",
+      "anchor": "test-card-t025-drafted-t023-repeated-with-a-phylogenetic-correction",
+      "start_line": 73,
+      "end_line": 81,
+      "title": "Test Card T025 drafted: T023 repeated with a phylogenetic correction",
+      "entry_sha256": "0c75adafcedccff3c28d9c165755972ac8bf98685fca388091db20a67680a00d",
+      "stream": "research",
+      "areas": [
+        "research-standards"
       ],
       "related_streams": [
         "research"
