@@ -2166,14 +2166,17 @@ core/engine/layer23.py	engine	.py	A_DEP	1	0	1	8	1	0	1	3	A	W2	Model code of the n
 core/theory_card.json	theory_card.json	.json	A	0	20	0	2	0	1	0	9	A	W10	Machine-readable Theory Card
 core/03_lanes/persistence/uet_layer3_from_action.py	03_lanes/persistence	.py	NEW	-	-	-	-	-	-	-	-	A	S3	Layer 3 capture and death rates from the action (claim C_L3_FROM_ACTION)
 core/03_lanes/persistence/uet_layer3_supply.py	03_lanes/persistence	.py	NEW	-	-	-	-	-	-	-	-	A	S3	Layer 3 pool loss and supply threshold (claim C_L3_SUPPLY)
+core/03_lanes/persistence/uet_layer3_supply_chemostat.py	03_lanes/persistence	.py	NEW	-	-	-	-	-	-	-	-	A	S3	Layer 3 supply in a chemostat (claim C_L3_SUPPLY_CHEMOSTAT)
 core/03_lanes/persistence/uet_layer3_trace_feedback.py	03_lanes/persistence	.py	NEW	-	-	-	-	-	-	-	-	A	S3	Layer 3 with trace feedback (claim C_L3_TRACE_FEEDBACK)
 core/03_lanes/symmetry/__init__.py	03_lanes/symmetry	.py	NEW	-	-	-	-	-	-	-	-	A	N1	Package marker for the symmetry lane
 core/03_lanes/symmetry/uet_noether.py	03_lanes/symmetry	.py	NEW	-	-	-	-	-	-	-	-	A	N1	Noether charges of the parent action: O(2), diffeomorphism identity, lattice Poincare charges (claim C_NOETHER_COVERAGE)
 core/05_tests/physics/test_layer3_from_action.py	05_tests	.py	NEW	-	-	-	-	-	-	-	-	A	S3	Physics tests for C_L3_FROM_ACTION
 core/05_tests/physics/test_layer3_supply.py	05_tests	.py	NEW	-	-	-	-	-	-	-	-	A	S3	Physics tests for C_L3_SUPPLY
-core/05_tests/physics/test_layer3_trace_feedback.py	05_tests	.py	NEW	-	-	-	-	-	-	-	-	A	S3	Physics tests for C_L3_TRACE_FEEDBACK
+core/05_tests/physics/test_layer3_supply_chemostat.py	05_tests	.py	NEW	-	-	-	-	-	-	-	-	A	S3	Physics tests for C_L3_SUPPLY_CHEMOSTAT
 core/05_tests/physics/test_noether.py	05_tests	.py	NEW	-	-	-	-	-	-	-	-	A	N1	Physics tests for C_NOETHER_COVERAGE
 core/00_governance/calculation_contracts/l3_from_action_formal.json	00_governance	.json	NEW	-	-	-	-	-	-	-	-	A	S3	FORMAL contract for C_L3_FROM_ACTION
 core/00_governance/calculation_contracts/l3_supply_formal.json	00_governance	.json	NEW	-	-	-	-	-	-	-	-	A	S3	FORMAL contract for C_L3_SUPPLY
+core/00_governance/calculation_contracts/l3_supply_chemostat_formal.json	00_governance	.json	NEW	-	-	-	-	-	-	-	-	A	S3	FORMAL contract for C_L3_SUPPLY_CHEMOSTAT
+core/05_tests/physics/test_layer3_trace_feedback.py	05_tests	.py	NEW	-	-	-	-	-	-	-	-	A	S3	Physics tests for C_L3_TRACE_FEEDBACK
 core/00_governance/calculation_contracts/l3_trace_feedback_formal.json	00_governance	.json	NEW	-	-	-	-	-	-	-	-	A	S3	FORMAL contract for C_L3_TRACE_FEEDBACK
 core/00_governance/calculation_contracts/noether_coverage_formal.json	00_governance	.json	NEW	-	-	-	-	-	-	-	-	A	N1	FORMAL contract for C_NOETHER_COVERAGE

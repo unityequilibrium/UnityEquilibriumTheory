@@ -1,0 +1,70 @@
+{
+ "schema": "uet-result-v2",
+ "result_id": "R_L3_SUPPLY_CHEMOSTAT",
+ "claim_id": "C_L3_SUPPLY_CHEMOSTAT",
+ "level": "L1_CONSISTENT",
+ "outcome": "PASS",
+ "numbers": [
+  {
+   "name": "term_map",
+   "value": "chemostat dR/dt = D S0 - D R - sum mu_i(R) n_i/Y_i maps term by term to layer 3: S = D S0, delta = D, 1/tau_i = D, a_i R -> mu_i(R), F_i -> 1/Y_i",
+   "uncertainty": null,
+   "unit": "natural"
+  },
+  {
+   "name": "threshold_saturating_uptake",
+   "value": "Monod uptake at 20 random parameter sets: S = 1.3 S* persists, S = 0.7 S* washes out (full integration), so S* = delta R*_min does not need linear uptake",
+   "uncertainty": null,
+   "unit": "natural"
+  },
+  {
+   "name": "steady_abundance",
+   "value": "n* = Y (S0 - R*) and R = R* at 20 random sets (rel < 1e-6)",
+   "uncertainty": null,
+   "unit": "natural"
+  },
+  {
+   "name": "linear_limit",
+   "value": "mu = a R: chemostat integrator equals the action-derived layer 3 integrator and n* = (S - delta R*)/(a F R*) at 20 random sets (rel < 1e-6)",
+   "uncertainty": null,
+   "unit": "natural"
+  },
+  {
+   "name": "exclusion",
+   "value": "two consumers at 20 random sets: the lower-R* consumer remains, the other falls below 1e-6 of it, R -> R*_min (rel < 1e-4)",
+   "uncertainty": null,
+   "unit": "natural"
+  },
+  {
+   "name": "S_star_asterionella_P",
+   "value": 0.00334,
+   "uncertainty": null,
+   "unit": "umol L^-1 day^-1 at D = 0.25 per day"
+  },
+  {
+   "name": "S_star_asterionella_Si",
+   "value": 0.481,
+   "uncertainty": null,
+   "unit": "umol L^-1 day^-1 at D = 0.25 per day"
+  },
+  {
+   "name": "S_star_cyclotella_P",
+   "value": 0.0513,
+   "uncertainty": null,
+   "unit": "umol L^-1 day^-1 at D = 0.25 per day"
+  },
+  {
+   "name": "S_star_cyclotella_Si",
+   "value": 0.138,
+   "uncertainty": null,
+   "unit": "umol L^-1 day^-1 at D = 0.25 per day"
+  }
+ ],
+ "producer": {
+  "script": "core/05_tests/physics/test_layer3_supply_chemostat.py",
+  "commit": "7cb0770c2"
+ },
+ "artifacts": [],
+ "date": "2026-11-19",
+ "note": "Derivation and numerical check; the four S* values are R* from Tilman (1977) Table 1 (registered data of Test Card T007) times D = 0.25 per day, not a comparison with an outcome. In a chemostat the supply that the parent action leaves open (C_L3_SUPPLY) is the product of two quantities the experimenter sets, the dilution rate and the reservoir concentration, and the threshold S* = delta R*_min holds for any increasing uptake with mu(0) = 0. With two essential resources a diatom persists only if both supply fluxes exceed its thresholds. Nearest known theory: chemostat theory (Monod 1950; Novick and Szilard 1950) and Tilman's R* rule. Not UET-distinct."
+}

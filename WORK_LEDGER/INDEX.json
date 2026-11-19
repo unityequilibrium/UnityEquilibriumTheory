@@ -5,11 +5,11 @@
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
     "sources": 82,
-    "entries": 945,
+    "entries": 946,
     "by_stream": {
       "book-history": 94,
       "operations": 140,
-      "research": 710,
+      "research": 711,
       "review": 1
     },
     "exact_duplicates": 0,
@@ -425,8 +425,8 @@
     },
     {
       "path": "2026/2026-11-19.md",
-      "sha256": "a32fd2fd54d04bf4fded2bf013c70cb7b07951005c6efd6b1cb7e50ee591e59b",
-      "entries": 12
+      "sha256": "20c8c08b3aa92a7669c7eb03ff1c15f001e7ec2f970b343840398915d9411d76",
+      "entries": 13
     },
     {
       "path": "2026-08-14.md",
@@ -19282,11 +19282,31 @@
       "legacy_root_path": false
     },
     {
+      "id": "2026/2026-11-19.md#layer-3-supply-in-a-real-system-the-chemostat",
+      "source": "2026/2026-11-19.md",
+      "anchor": "layer-3-supply-in-a-real-system-the-chemostat",
+      "start_line": 113,
+      "end_line": 122,
+      "title": "Layer 3 supply in a real system: the chemostat",
+      "entry_sha256": "7e2ed5c541a53b56efe19f70eddf4cca9573d802307248bf67c47a73f7755f29",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-19",
+      "legacy_root_path": false
+    },
+    {
       "id": "2026/2026-11-19.md#layer-3-with-trace-feedback-author-decision-2026-11-19",
       "source": "2026/2026-11-19.md",
       "anchor": "layer-3-with-trace-feedback-author-decision-2026-11-19",
-      "start_line": 113,
-      "end_line": 121,
+      "start_line": 123,
+      "end_line": 131,
       "title": "Layer 3 with trace feedback (author decision 2026-11-19)",
       "entry_sha256": "4d79a910d8222e6a3bd0468598976b893d2292d4e4c75533124e43f97dca3896",
       "stream": "research",
