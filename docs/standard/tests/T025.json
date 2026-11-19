@@ -1,0 +1,52 @@
+{
+  "schema": "uet-test-card-v2",
+  "test_id": "T025",
+  "status": "APPROVED",
+  "claim_id": "C_T023_FLIGHT_LIFETIME_ENERGY",
+  "theory_card": {
+    "card_id": "UET_PARENT",
+    "version": 1
+  },
+  "hypothesis": "Same hypothesis as T023 (author, 2026-11-18): the lifetime reserve per gram is set at species level by extrinsic mortality, so flying lineages spend more energy per gram over a lifetime and bats sit with the birds. T023 tested it with species treated as independent points (ordinary least squares) and recorded INCONCLUSIVE; its card and result state that the missing phylogenetic correction makes the intervals too narrow. This card repeats the same test with that correction, as a separate preregistered card. T023 and its result stay as recorded.",
+  "observable": {
+    "quantity": "bat offset d_bat and Delta = d_bat - d_bird in log10 LEP = a + s log10 M + d_bird [bird] + d_bat [Chiroptera], fitted by phylogenetic generalized least squares",
+    "unit": "log10 ratio",
+    "domain": "the T018 / T023 selection of AnAge Build 15 (298 species: 128 birds, 24 bats, 146 other mammals), restricted to the species that can be placed on the registered phylogeny"
+  },
+  "test_kind": "CONSTRAINT",
+  "data_sources": [
+    {
+      "data_id": "ANAGE_BUILD15_LONGEVITY_METABOLISM",
+      "role": "COMPARISON",
+      "exposure": "SEEN_FULL"
+    },
+    {
+      "data_id": "TIMETREE_T023_SPECIES",
+      "role": "COMPARISON",
+      "exposure": "SEEN_SUMMARY"
+    }
+  ],
+  "prediction_method": {
+    "script": "core/03_lanes/persistence/t025_flight_lifetime_energy_pgls.py",
+    "description": "Time-calibrated tree for the AnAge species list from TimeTree 5 (Kumar et al. 2022, Mol. Biol. Evol. 39, msac174), kept local because TimeTree does not allow redistribution and registered with its sha256 (PRIVATE_LOCAL). Brownian-motion covariance V_ij = time from the root to the most recent common ancestor of i and j. Generalized least squares beta = (X' V^-1 X)^-1 X' V^-1 y with X = [1, log10 M, bird, bat]; sigma^2 = r' V^-1 r / (n - 4); 95 percent intervals beta +- t(0.975, n - 4) SE; Delta from the contrast (0, 0, -1, 1). Reported, not deciding: Pagel's lambda fitted by maximum likelihood on [0, 1], with d_bat and Delta at that lambda; the T023 ordinary least squares numbers on the same matched species, for comparison; the dropped and substituted species lists."
+  },
+  "free_parameters": [],
+  "fixed_parameters": [
+    "species selection identical to T018 and T023; no species removed after the outcome is seen",
+    "species are placed on the tree by these rules, in order: (1) the AnAge binomial 'Genus species' as a leaf; (2) if the tree holds only subspecies of it, the alphabetically first subspecies leaf (every subspecies gives the same covariances with all other species); (3) the current name from a fixed synonym table of 10 entries (Anas penelope -> Mareca penelope, Cryptomys damarensis -> Fukomys damarensis, Cryptotis parva -> Cryptotis parvus, Macropus eugenii -> Notamacropus eugenii, Macropus robustus -> Osphranter robustus, Macropus rufus -> Osphranter rufus, Pecari tajacu -> Dicotyles tajacu, Picoides pubescens -> Dryobates pubescens, Sylvia curruca -> Curruca curruca, Taurotragus oryx -> Tragelaphus oryx); (4) otherwise the species is dropped and listed, including taxa TimeTree replaced with a genus or another species",
+    "with these rules 285 species are placed (120 birds, 23 bats, 142 other mammals) and 13 are dropped (8 birds, 1 bat, 4 other mammals); counted from names only, before any fit",
+    "if more than 30 of the 298 species (about 10 percent) are dropped, or fewer than 20 bats remain, the outcome is INCONCLUSIVE whatever the intervals",
+    "polytomies are kept as given; no branch lengths are changed or transformed in the deciding fit",
+    "metabolic rate as given by AnAge (resting or basal); year = 365.25 days",
+    "thresholds 0.18 and 0.25 are the T023 thresholds, unchanged"
+  ],
+  "pass_criterion": "PASS if the 95 percent interval of d_bat lies wholly above 0.18 and the 95 percent interval of Delta lies inside [-0.25, 0.25].",
+  "fail_criterion": "FAILED if the upper end of the 95 percent interval of d_bat is below 0.18, or the 95 percent interval of Delta lies wholly outside [-0.25, 0.25]; INCONCLUSIVE otherwise, or under the coverage rule in fixed_parameters.",
+  "drafted_by": "claude",
+  "note": "Disclosure: not blind, and the AnAge side is SEEN_FULL. The T023 result is known: d_bat = 0.292 (95% 0.185 to 0.402), Delta = -0.172 (95% -0.275 to -0.072), from ordinary least squares with bootstrap intervals. The tree was downloaded on 2026-11-19 with the owner's permission; only its leaf names, leaf count (414, including subspecies) and root age (318.82 Mya, ultrametric) were read, to fix the placement rules above. No trait value has been joined to the tree and no fit has been run. AI expectation, written before any tree is seen: birds and bats are each one clade, so under Brownian motion each indicator rests on very few independent evolutionary contrasts and the intervals are expected to widen a lot; INCONCLUSIVE is the most likely outcome, and PASS needs the Delta interval to be narrower than 0.5, which a wide interval cannot meet. This card is run because T023 and the portfolio name the missing correction as an open gap, not because it is expected to pass. Known bias kept from T023: bat torpor and hibernation inflate resting-rate LEP. Nearest theory: disposable soma (Kirkwood 1977) and the extrinsic-mortality theory of ageing; not UET-distinct. Method choices (TimeTree 5, Brownian motion, GLS t-intervals, the placement and coverage rules) are AI choices for the author to accept or change before approval. Approved by the author in chat on 2026-11-19 as drafted (\"Approve and run\"); approval committed before the run. Reproducibility limit: TimeTree's terms forbid redistribution, so the tree is not in the public repository; an outside checker must upload the same 298 names (species_298.txt, hash in the manifest) to timetree.org and compare the sha256.",
+  "approval": {
+    "approved_by": "santxkoz",
+    "date": "2026-11-19",
+    "role": "AUTHOR"
+  }
+}

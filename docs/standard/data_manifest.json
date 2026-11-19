@@ -264,6 +264,18 @@
       "license": "dates and event names transcribed from a published table; no text or figures redistributed",
       "visibility": "PUBLIC",
       "note": "Transcribed by Claude from the same local NBER PDF as NORDHAUS1997_LIGHTING (sha256 e2b674e7...). The PDF text layer shifts the dates of the rows from 1820 on against their events; the rows were realigned by order (12 dates, 12 events) and checked against the chapter text where it gives a year (1879, 1882, 1930s, mid-1980s). Decade labels are coded as decade + 5; ranges and periods have no year."
+    },
+    {
+      "data_id": "TIMETREE_T023_SPECIES",
+      "description": "Time-calibrated tree (Newick, divergence times in million years) for the 298 AnAge species of T018/T023, pruned by TimeTree from the uploaded name list: 414 leaves (TimeTree adds subspecies leaves), ultrametric, root age 318.82 Mya. TimeTree could not place 15 names (2 not in NCBI taxonomy, 9 with insufficient data, 4 replaced by a genus or another species).",
+      "source": "TimeTree 5 prune-tree service (timetree.org, 'Load a List of Species'); cite Kumar S, Suleski M, Craig JM, et al. (2022) TimeTree 5: An Expanded Resource for Species Divergence Times. Mol. Biol. Evol. 39, msac174",
+      "doi_or_url": "https://timetree.org/ (prune tree upload of the 298 names; DOI 10.1093/molbev/msac174)",
+      "retrieved": "2026-11-19",
+      "path": "docs/data/external/biology/timetree/private/tree_raw.nwk",
+      "sha256": "086b72089f42ee65fbcc5406b49063b2dc044663d745b728eca1d66a21a137a1",
+      "license": "TimeTree terms (timetree.org FAQ, read 2026-11-19): open for personal research and teaching; redistribution of TimeTree data and its transformations not permitted. Kept local, not committed.",
+      "visibility": "PRIVATE_LOCAL",
+      "note": "Downloaded with the owner's permission on 2026-11-19. Before any fit only the leaf names, the leaf count and the root age were read, to fix the placement rules of Test Card T025; no trait value was joined to the tree. The uploaded list (species_298.txt, sha256 30c8e2f2e6cb7ad5d328d2533fc55b51e0eacfd917342f660af79dc621bbac13) and the service's HTML answer (load_names_response.html, listing the unplaced names) are kept in the same local folder."
     }
   ]
 }
