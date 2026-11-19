@@ -19,7 +19,13 @@ from PIL import Image
 
 ROOT = Path(__file__).resolve().parents[4]
 TOPIC = ROOT / "topics/0.13_Thermodynamic_Bridge"
-RAW = TOPIC / "Data/03_Research/raw/ding_2022_fig1.png"
+RAW_RELATIVE = "Data/03_Research/raw/ding_2022_fig1.png"
+# The tracked figure stayed at its pre-move location because the PR scope
+# guard blocks changes under raw/ (docs/meta/TOPIC13_LEFTOVER_RAW_FIGURE_2026-11-19.md).
+# Prefer a copy at the current Topic path; otherwise read the tracked legacy copy.
+# The recorded input path and its sha256 are unchanged.
+LEGACY_RAW = ROOT / "docs/topics/0.13_Thermodynamic_Bridge" / RAW_RELATIVE
+RAW = TOPIC / RAW_RELATIVE if (TOPIC / RAW_RELATIVE).is_file() else LEGACY_RAW
 CSV_PATH = TOPIC / "Data/03_Research/ding_2022_fig1d_digitized.csv"
 MANIFEST_PATH = TOPIC / "Data/03_Research/ding_2022_fig1d_digitized_manifest.json"
 PACKAGE_PATH = TOPIC / "Data/03_Research/matter_space_second_sound_source_package.json"
