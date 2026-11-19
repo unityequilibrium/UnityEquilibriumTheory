@@ -173,6 +173,7 @@ Test criteria were committed and approved before each comparison. None of these 
 | T012 | Quenched quantum many-body chain (quantum) | L2 PASS: correlations need contact through a common past, not direct contact only |
 | T013 | Ives–Stilwell test with ⁷Li⁺ ions at 0.338c (relativity) | L2 PASS: ε = (1.47 ± 2.30)×10⁻⁹, consistent with the Lorentz time transformation |
 | T023 | Lifetime energy of bats against birds (biology) | L2 INCONCLUSIVE: bats 1.96 times other mammals but below birds; flight explains about 60% of the bird offset |
+| T025 | T023 repeated with a phylogenetic correction (PGLS on a TimeTree tree; biology) | L2 INCONCLUSIVE: central values unchanged (d_bat = 0.24) but intervals about 10 times wider (d_bat −0.31 to 0.78); with phylogeny counted the data cannot decide |
 | T022 | Michelson–Morley and Kennedy–Thorndike tests (relativity) | L2 PASS: two-way light speed independent of orientation (z = 0.50) and of lab velocity (z = 1.30); with T013 the whole Lorentz transformation is tested |
 | T016 | MICROSCOPE equivalence-principle test (gravity) | L2 PASS: bounds the portal to g_c < 1.16×10⁻¹⁵ eV, 11.6 times tighter than T005 |
 | T017 | Yeast cell cycles (biology) | L2 PASS: doubling time from single-cell cycle times matches the counted one in all five conditions |

@@ -5,11 +5,11 @@
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
     "sources": 82,
-    "entries": 941,
+    "entries": 942,
     "by_stream": {
       "book-history": 94,
       "operations": 139,
-      "research": 707,
+      "research": 708,
       "review": 1
     },
     "exact_duplicates": 0,
@@ -425,8 +425,8 @@
     },
     {
       "path": "2026/2026-11-19.md",
-      "sha256": "4d22c200eb3429c616f8c6e299bb368c942865c17cf130c81306f45a0b68a63b",
-      "entries": 8
+      "sha256": "23e35b0de73d4172076ca53cfada01fc66df2428c05de217fab81f3e83fc692d",
+      "entries": 9
     },
     {
       "path": "2026-08-14.md",
@@ -19206,9 +19206,29 @@
       "source": "2026/2026-11-19.md",
       "anchor": "test-card-t025-drafted-t023-repeated-with-a-phylogenetic-correction",
       "start_line": 73,
-      "end_line": 81,
+      "end_line": 82,
       "title": "Test Card T025 drafted: T023 repeated with a phylogenetic correction",
-      "entry_sha256": "0c75adafcedccff3c28d9c165755972ac8bf98685fca388091db20a67680a00d",
+      "entry_sha256": "30c1e45e9986e6c62c8dd0e301058f114537f8d667f3bc9be360c058dae3cd07",
+      "stream": "research",
+      "areas": [
+        "research-standards"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-19",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-19.md#t025-run-t023-with-a-phylogenetic-correction-is-inconclusive",
+      "source": "2026/2026-11-19.md",
+      "anchor": "t025-run-t023-with-a-phylogenetic-correction-is-inconclusive",
+      "start_line": 83,
+      "end_line": 91,
+      "title": "T025 run: T023 with a phylogenetic correction is INCONCLUSIVE",
+      "entry_sha256": "fe86d0dd43e91ff2c72b054a0468e7f936b3f06ad867430d3cd260d24488ddf4",
       "stream": "research",
       "areas": [
         "research-standards"

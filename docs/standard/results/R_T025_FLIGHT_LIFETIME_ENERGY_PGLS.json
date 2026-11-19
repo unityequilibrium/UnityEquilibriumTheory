@@ -1,0 +1,82 @@
+{
+ "schema": "uet-result-v2",
+ "result_id": "R_T025_FLIGHT_LIFETIME_ENERGY_PGLS",
+ "claim_id": "C_T023_FLIGHT_LIFETIME_ENERGY",
+ "test_card_id": "T025",
+ "level": "L2_CONFRONTED",
+ "outcome": "INCONCLUSIVE",
+ "numbers": [
+  {
+   "name": "d_bat",
+   "value": "0.235",
+   "uncertainty": "95% CI -0.315 to 0.784",
+   "unit": "log10 ratio"
+  },
+  {
+   "name": "d_bird",
+   "value": "0.433",
+   "uncertainty": null,
+   "unit": "log10 ratio"
+  },
+  {
+   "name": "delta_bat_minus_bird",
+   "value": "-0.198",
+   "uncertainty": "95% CI -2.07 to 1.67",
+   "unit": "log10 ratio"
+  },
+  {
+   "name": "mass_slope_s",
+   "value": "-0.102",
+   "uncertainty": null,
+   "unit": "dimensionless"
+  },
+  {
+   "name": "species_placed",
+   "value": "285 (120 birds, 23 bats, 142 other mammals); 13 dropped",
+   "uncertainty": null,
+   "unit": "count"
+  },
+  {
+   "name": "pagel_lambda",
+   "value": "0.80 (not deciding)",
+   "uncertainty": null,
+   "unit": "dimensionless"
+  },
+  {
+   "name": "d_bat_at_pagel_lambda",
+   "value": "0.237 (95% 0.004 to 0.470; not deciding)",
+   "uncertainty": null,
+   "unit": "log10 ratio"
+  },
+  {
+   "name": "delta_at_pagel_lambda",
+   "value": "-0.209 (95% -0.94 to 0.52; not deciding)",
+   "uncertainty": null,
+   "unit": "log10 ratio"
+  },
+  {
+   "name": "ols_same_species_d_bat",
+   "value": "0.290 (95% 0.187 to 0.394; not deciding)",
+   "uncertainty": null,
+   "unit": "log10 ratio"
+  },
+  {
+   "name": "ols_same_species_delta",
+   "value": "-0.184 (95% -0.281 to -0.088; not deciding)",
+   "uncertainty": null,
+   "unit": "log10 ratio"
+  }
+ ],
+ "producer": {
+  "script": "core/03_lanes/persistence/t025_flight_lifetime_energy_pgls.py",
+  "commit": "6bb4c66f1"
+ },
+ "artifacts": [],
+ "date": "2026-11-19",
+ "approval": {
+  "approved_by": "santxkoz",
+  "date": "2026-11-19",
+  "role": "AUTHOR"
+ },
+ "note": "INCONCLUSIVE under Test Card T025 (approved 6bb4c66f1). With the TimeTree phylogeny (Brownian motion) the central values stay close to T023 (d_bat 0.235 against 0.292, Delta -0.198 against -0.172), but the 95 percent intervals widen about tenfold: birds and bats are each one clade, so each offset rests on very few independent evolutionary contrasts. The data cannot tell flight-set reserves from other explanations once phylogeny is counted; the card stated this as the most likely outcome before the run. At the ML Pagel's lambda (0.80, not deciding) d_bat stays just above zero. Not blind (AnAge seen in T023). The tree is local-only (TimeTree forbids redistribution); its sha256 is registered as TIMETREE_T023_SPECIES. Nearest theory: disposable soma and the extrinsic-mortality theory of ageing; not UET-distinct. L2 result approved by the author in chat on 2026-11-19."
+}
