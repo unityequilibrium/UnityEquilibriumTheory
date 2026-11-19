@@ -207,6 +207,102 @@ def divergence_evaluator(E, ginv, gamma, coords, active):
     return at
 
 
+class FullMetricPoint:
+    """Theory Card metric residual on a metric with all ten components, every one a function of t, x, y, z.
+
+    Geometry is evaluated numerically in mpmath at a point: the metric and field functions are compiled once,
+    their first and second partial derivatives are taken symbolically (they are polynomials, so this is cheap),
+    and inverse, Christoffel symbols, Ricci tensor, Hessians and boxes are built from those numbers. No symbolic
+    inverse of a full 4x4 metric is formed. `divergence(point)` differentiates the residual numerically with
+    mpmath at high precision."""
+
+    def __init__(self, g, phi, chi, p: dict, coords, dps: int = 40):
+        import mpmath
+        import sympy as sp
+        self.mp, self.p, self.n, self.dps = mpmath, p, len(coords), dps
+        n = self.n
+        lam = lambda e: sp.lambdify(coords, e, "mpmath")  # noqa: E731
+        self.g = [[lam(g[i, j]) for j in range(n)] for i in range(n)]
+        self.dg = [[[lam(sp.diff(g[i, j], coords[a])) for a in range(n)] for j in range(n)] for i in range(n)]
+        self.ddg = [[[[lam(sp.diff(g[i, j], coords[a], coords[b])) for b in range(n)] for a in range(n)]
+                     for j in range(n)] for i in range(n)]
+        self.fields = {}
+        for name, u in (("phi", phi), ("chi1", chi[0]), ("chi2", chi[1])):
+            self.fields[name] = (lam(u), [lam(sp.diff(u, c)) for c in coords],
+                                 [[lam(sp.diff(u, a, b)) for b in coords] for a in coords])
+
+    def geometry(self, x):
+        mp, n = self.mp, self.n
+        g = mp.matrix([[self.g[i][j](*x) for j in range(n)] for i in range(n)])
+        gi = g ** -1
+        dg = [[[self.dg[i][j][a](*x) for a in range(n)] for j in range(n)] for i in range(n)]
+        ddg = [[[[self.ddg[i][j][a][b](*x) for b in range(n)] for a in range(n)] for j in range(n)] for i in range(n)]
+        # Gamma_{e b c} (first kind) and its derivative
+        G1 = [[[(dg[e][c][b] + dg[e][b][c] - dg[b][c][e]) / 2 for c in range(n)] for b in range(n)] for e in range(n)]
+        dG1 = [[[[(ddg[e][c][b][d] + ddg[e][b][c][d] - ddg[b][c][e][d]) / 2 for d in range(n)] for c in range(n)]
+                for b in range(n)] for e in range(n)]
+        dgi = [[[-sum(gi[a, p] * dg[p][q][d] * gi[q, e] for p in range(n) for q in range(n)) for d in range(n)]
+                for e in range(n)] for a in range(n)]
+        Gam = [[[sum(gi[a, e] * G1[e][b][c] for e in range(n)) for c in range(n)] for b in range(n)] for a in range(n)]
+        dGam = [[[[sum(dgi[a][e][d] * G1[e][b][c] + gi[a, e] * dG1[e][b][c][d] for e in range(n)) for d in range(n)]
+                  for c in range(n)] for b in range(n)] for a in range(n)]
+        # R_{bd} = d_a G^a_{db} - d_d G^a_{ab} + G^a_{ae} G^e_{db} - G^a_{de} G^e_{ab}
+        Ric = [[sum(dGam[a][d][b][a] - dGam[a][a][b][d]
+                    + sum(Gam[a][a][e] * Gam[e][d][b] - Gam[a][d][e] * Gam[e][a][b] for e in range(n))
+                    for a in range(n)) for d in range(n)] for b in range(n)]
+        R = sum(gi[i, j] * Ric[i][j] for i in range(n) for j in range(n))
+        return g, gi, Gam, Ric, R
+
+    def pieces(self, x):
+        """Numbers the implementation needs at x, and the Theory Card residual E built from them."""
+        mp, n, p = self.mp, self.n, self.p
+        g, gi, Gam, Ric, R = self.geometry(x)
+        val = {k: (f(*x), [d(*x) for d in df], [[h(*x) for h in row] for row in ddf])
+               for k, (f, df, ddf) in self.fields.items()}
+        hess = lambda k: [[val[k][2][a][b] - sum(Gam[c][a][b] * val[k][1][c] for c in range(n))  # noqa: E731
+                           for b in range(n)] for a in range(n)]
+        box = lambda H: sum(gi[a, b] * H[a][b] for a in range(n) for b in range(n))  # noqa: E731
+        kin = lambda du: sum(gi[a, b] * du[a] * du[b] for a in range(n) for b in range(n))  # noqa: E731
+        phi, dphi = val["phi"][0], val["phi"][1]
+        d = phi - p["phi_star"]
+        # f = xi d^2: Hessian from the chain rule
+        Hphi = hess("phi")
+        Hf = [[2 * p["xi"] * (dphi[a] * dphi[b] + d * Hphi[a][b]) for b in range(n)] for a in range(n)]
+        F = 1 + p["epsilon"] * p["xi"] * d**2
+        c1, c2v = val["chi1"], val["chi2"]
+        csq = c1[0] ** 2 + c2v[0] ** 2
+        V = p["m2"] * csq / 2 + p["lambda_chi"] * csq**2 / 4 - p["epsilon"] * p["h"] * d * csq / 2
+        U = p["rho_star"] + p["mu2"] * d**2 / 2 + p["lambda_phi"] * d**4 / 4
+        Gt = [[Ric[a][b] - g[a, b] * R / 2 for b in range(n)] for a in range(n)]
+        boxf = box(Hf)
+        E = [[F * (Gt[a][b] + p["Lambda"] * g[a, b]) + p["epsilon"] * (g[a, b] * boxf - Hf[a][b])
+              - p["kappa"] * (p["Z"] * (c1[1][a] * c1[1][b] + c2v[1][a] * c2v[1][b])
+                              - g[a, b] * (p["Z"] * (kin(c1[1]) + kin(c2v[1])) / 2 + V)
+                              + p["epsilon"] * (p["k"] * dphi[a] * dphi[b] - g[a, b] * (p["k"] * kin(dphi) / 2 + U)))
+              for b in range(n)] for a in range(n)]
+        return {"g": g, "G": Gt, "R": R, "hess_f": [[Hf[a][b] / 1 for b in range(n)] for a in range(n)],
+                "phi": phi, "dphi": dphi, "chi": [c1[0], c2v[0]], "dchi": [c1[1], c2v[1]],
+                "box_phi": box(Hphi), "box_chi": [box(hess("chi1")), box(hess("chi2"))], "E": E}
+
+    def divergence(self, point):
+        """nabla^mu E_mu_nu at the point, with partial derivatives of E taken by mpmath.diff."""
+        mp, n = self.mp, self.n
+        mp.mp.dps = self.dps
+        x = [mp.mpf(v) for v in point]
+        g, gi, Gam, _, _ = self.geometry(x)
+        E = self.pieces(x)["E"]
+        dE = [[[None] * n for _ in range(n)] for _ in range(n)]
+        for i in range(n):
+            for j in range(i, n):
+                for a in range(n):
+                    order = [1 if q == a else 0 for q in range(n)]
+                    v = mp.diff(lambda *y, i=i, j=j: self.pieces(list(y))["E"][i][j], x, order)
+                    dE[i][j][a] = dE[j][i][a] = v
+        return [float(sum(gi[m, a] * (dE[m][nu][a] - sum(Gam[l][a][m] * E[l][nu] + Gam[l][a][nu] * E[m][l]
+                                                         for l in range(n)))
+                          for m in range(n) for a in range(n))) for nu in range(n)]
+
+
 def _lap2(f, dx):
     return (np.roll(f, -1, 0) + np.roll(f, 1, 0) + np.roll(f, -1, 1) + np.roll(f, 1, 1) - 4.0 * f) / (dx * dx)
 
