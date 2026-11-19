@@ -318,7 +318,7 @@
       "reopen_when": "Keep native negative results, review the comparison protocol/parameter provenance, and isolate plots before adding an assertion adapter."
     },
     "0.4_Superconductivity_Superfluids/Code/03_Research/Experiment_Superconductor_Data.py": {
-      "source_sha256_lf": "86700fa0cb9862586d8196146cb8c801d1a40637bd96a46d315ef5dd8309f3f0",
+      "source_sha256_lf": "f8aa4f7a9f53134747c7fb1c04bc584a0fa242ce7f8ef648cb1738bb4c8e6bac",
       "role": "McMillan benchmark and data/artifact producer",
       "decision": "NOT_ADMITTED",
       "evidence_symbols": [
@@ -326,7 +326,7 @@
         "save_data",
         "write_artifact"
       ],
-      "reason": "The benchmark returns average error and rows; main also writes the in-script data working copy and artifact. Existing admitted tests cover only its decision helper/reporting, not this benchmark.",
+      "reason": "The benchmark returns average error and rows; main also writes the in-script data working copy and artifact. Re-reviewed the canonical path change and isolated artifact writer on 2026-11-18. The benchmark remains outside automated tests.",
       "reopen_when": "Use admitted source inputs and a declared benchmark protocol with isolated data/artifact output; do not promote the limited helper tests into physical admission."
     },
     "0.4_Superconductivity_Superfluids/Code/03_Research/Research_Plasma.py": {

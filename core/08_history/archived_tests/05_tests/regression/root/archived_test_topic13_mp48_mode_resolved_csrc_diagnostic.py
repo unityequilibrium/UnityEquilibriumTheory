@@ -27,14 +27,16 @@ def test_mp48_mode_resolved_diagnostic_is_row_addressable_and_not_core_acceptanc
     assert artifact["derived_payload"]["uncertainty_status"] == "NOT_SOURCE_GRADE"
     assert artifact["derived_payload"]["material_mapping_status"] == "OPEN"
     assert artifact["holdout_policy"]["xie_2026_accessed"] is False
-    if PAYLOAD.is_file():
-        assert artifact["derived_payload"]["sha256"] == digest(PAYLOAD)
-    else:
+    if artifact["input_mode"] == "PACKAGE_DECLARATION_METADATA_ONLY":
         assert artifact["raw_payload_available"] is False
         assert artifact["input_mode"] == "PACKAGE_DECLARATION_METADATA_ONLY"
         assert artifact["derived_payload_available"] is False
         assert artifact["derived_payload"]["sha256"] is None
         assert artifact["derived_payload"]["arrays"] == []
+    else:
+        assert artifact["input_mode"] == "RAW_PAYLOAD_VERIFIED"
+        assert artifact["derived_payload_available"] is True
+        assert artifact["derived_payload"]["sha256"] == digest(PAYLOAD)
     assert all(artifact["checks"].values())
 
 
