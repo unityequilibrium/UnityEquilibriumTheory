@@ -34,13 +34,19 @@
       "value": "phi with a different light cone (c^2 = 0.5): K drifts 0.571 and 0.569 at n = 800, 1600, so it is not conserved",
       "uncertainty": null,
       "unit": "natural"
+    },
+    {
+      "name": "angular_momentum_lattice",
+      "value": "2+1 lattice: drifts of L = int (x P_y - y P_x) over t = 4 are 5.1e-3, 1.3e-3, 3.3e-4 at n = 128, 256, 512 (orders 1.96, 1.99), with E, P_x, P_y also at order 1.95-1.99 and the O(2) charge conserved to 2e-15",
+      "uncertainty": null,
+      "unit": "natural"
     }
   ],
   "producer": {
     "script": "core/05_tests/physics/test_noether.py",
-    "commit": "14b5cbd1c"
+    "commit": "3d14610f5"
   },
   "artifacts": [],
   "date": "2026-11-19",
-  "note": "Derivation and numerical check only; no external data. Noether's first theorem: the internal O(2) charge (chi number) is conserved although matter trades energy with the response field through the portal, because the portal depends only on |chi|^2. Second theorem: diffeomorphism invariance of the full action with gravity keeps the Hamiltonian constraint, so total energy of matter, phi and geometry is conserved while matter energy alone is not (C_EXCHANGE_DERIVED). Translations and boosts in flat space: energy, momentum and the boost charge are conserved, the last only because phi and chi share one light cone. Rotation charges need two space dimensions and are not simulated; they follow from the same symmetric conserved stress tensor. The diffeomorphism check uses the Theory Card action in a Bianchi I universe, not a general metric. Nearest known theory: Noether 1918, ADM constraint, Poincare charges of scalar fields. Not UET-distinct."
+  "note": "Derivation and numerical check only; no external data. Noether's first theorem: the internal O(2) charge (chi number) is conserved although matter trades energy with the response field through the portal, because the portal depends only on |chi|^2. Second theorem: diffeomorphism invariance of the full action with gravity keeps the Hamiltonian constraint, so total energy of matter, phi and geometry is conserved while matter energy alone is not (C_EXCHANGE_DERIVED). Translations and boosts in flat space: energy, momentum and the boost charge are conserved, the last only because phi and chi share one light cone. Rotations: angular momentum is conserved on a 2+1 lattice. The diffeomorphism check uses the Theory Card action in a Bianchi I universe, not a general metric. Nearest known theory: Noether 1918, ADM constraint, Poincare charges of scalar fields. Not UET-distinct."
 }

@@ -645,4 +645,5 @@ commit: this commit
 - ทำ: `03_lanes/symmetry/uet_noether.py` ตรวจปริมาณอนุรักษ์ของ symmetry ทุกตัวใน action: O(2), diffeomorphism, การเลื่อน และ boost
 - ผล: ประจุ O(2) อนุรักษ์แม้มี portal; identity ของ diffeomorphism (Bianchi I) รักษา constraint ของพลังงานรวม; บน lattice ประจุ O(2) คงที่ถึง 2e-15 ส่วน E, P และประจุ boost K ลู่เข้าอันดับ 2.00
 - ตัวควบคุมเชิงลบ: ทำลาย reparametrization แล้ว identity พัง; ให้ φ มี light cone ต่างไป K ไม่อนุรักษ์ (drift 0.57)
-- ยังไม่ได้: ประจุของการหมุน (ต้องใช้ 2 มิติอวกาศ), diffeomorphism ใน metric ทั่วไป; ไม่ใช่สิ่งเฉพาะของ UET
+- เพิ่ม: โมเมนตัมเชิงมุมบน lattice 2+1 ลู่เข้าอันดับ 1.99
+- ยังไม่ได้: diffeomorphism ใน metric ทั่วไป (ตรวจแค่ Bianchi I); ไม่ใช่สิ่งเฉพาะของ UET

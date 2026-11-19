@@ -29,7 +29,7 @@
 | โค้ดสมการ | `02_equations/covariant/uet_covariant_matter.py`, `uet_covariant_response.py`, `uet_covariant_parent.py`, `uet_covariant_balance.py` |
 | แปลงเป็นทฤษฎี scalar-tensor (DEF) | `02_equations/covariant/uet_scalar_tensor_mapping.py` |
 | ตัวตรวจว่าสมการถูก (sympy) | `05_tests/physics/test_parent_derivation.py`, `test_parent_offdiagonal.py`, `test_exchange_identity.py`, `test_def_mapping.py` |
-| symmetry และกฎอนุรักษ์ (Noether, 2026-11-19) | `03_lanes/symmetry/uet_noether.py`: ประจุ O(2) อนุรักษ์แม้มี portal, identity ของ diffeomorphism รักษา constraint ของพลังงานรวม (Bianchi I), E, P และประจุ boost บน lattice 1+1 ลู่เข้าอันดับ 2 (`C_NOETHER_COVERAGE`, L1; ตัวตรวจ `05_tests/physics/test_noether.py`) |
+| symmetry และกฎอนุรักษ์ (Noether, 2026-11-19) | `03_lanes/symmetry/uet_noether.py`: ประจุ O(2) อนุรักษ์แม้มี portal, identity ของ diffeomorphism รักษา constraint ของพลังงานรวม (Bianchi I), E, P และประจุ boost บน lattice 1+1 และโมเมนตัมเชิงมุมบน lattice 2+1 ลู่เข้าอันดับ 2 (`C_NOETHER_COVERAGE`, L1; ตัวตรวจ `05_tests/physics/test_noether.py`) |
 | ตัวพยายามทำให้พัง | `05_tests/physics/test_stability_attacks.py`, `test_portal_fifth_force.py`, `test_fidelity_static_vacuum.py` |
 | โมดูลเสริม (vacuum, fifth force) | `03_lanes/scalar_tensor/uet_vacuum_structure.py`, `uet_portal_fifth_force.py` |
 | เทียบข้อมูลจริง | ทุกไฟล์อยู่ใน `03_lanes/scalar_tensor/`: T001 pulsar คู่ (`t001_binary_pulsar_constraint.py`), T005 fifth force (`t005_fifth_force_constraint.py`), T016 ดาวเทียม MICROSCOPE (`t016_microscope_portal.py`), T019 ช่วงระยะ 1 ซม.–100 กม. (`t019_portal_gap_rotwash.py`), T020 เส้นทาง ข กับ LLR (`t020_route_b_llr.py`) |

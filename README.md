@@ -59,7 +59,7 @@ $$F(\varphi) = 1 + \varepsilon\xi\delta^2,\qquad U = \rho_* + \tfrac{1}{2}\mu^2\
 
 The metric, response and matter equations follow from this action by derivation (checked symbolically, claim `C_PARENT_EOM_DERIVED`, L1).
 Its symmetries give the conserved quantities Noether's theorems require: the matter charge (O(2)) survives the exchange with space,
-total energy of matter, response field and geometry is conserved while matter energy alone is not, and the boost charge holds because both fields share one light cone (claim `C_NOETHER_COVERAGE`, L1).
+total energy of matter, response field and geometry is conserved while matter energy alone is not, momentum, angular momentum and the boost charge are conserved, the boost charge because both fields share one light cone (claim `C_NOETHER_COVERAGE`, L1).
 Matter alone does not conserve energy; matter plus the response field does.
 
 ### Layer 2: an open system burns free energy and leaves a trace
