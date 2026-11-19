@@ -5,11 +5,11 @@
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
     "sources": 82,
-    "entries": 937,
+    "entries": 938,
     "by_stream": {
       "book-history": 94,
       "operations": 138,
-      "research": 704,
+      "research": 705,
       "review": 1
     },
     "exact_duplicates": 0,
@@ -425,8 +425,8 @@
     },
     {
       "path": "2026/2026-11-19.md",
-      "sha256": "c5ce1b4c7a8a23f4e20b4d5fdf8017f2251a5d0dec893c35d18bd76f29351105",
-      "entries": 4
+      "sha256": "39ef30a54b10378044cec86aeb1096b3a1317becf7b6d9c0a6ec6f8dd305bf58",
+      "entries": 5
     },
     {
       "path": "2026-08-14.md",
@@ -19126,15 +19126,35 @@
       "source": "2026/2026-11-19.md",
       "anchor": "move-for-work-to-topics-and-diagnose-the-topic-013-leftover",
       "start_line": 33,
-      "end_line": 41,
+      "end_line": 42,
       "title": "Move For Work to topics/ and diagnose the Topic 0.13 leftover",
-      "entry_sha256": "502b6d7af26b3e628e02ba6789d9c4e40ffe7082ca90ec62e76eb6f7a92985bd",
+      "entry_sha256": "566fcda627c5de9ecd61ae83ddfb18e3db25236aabed6f0d9175212cdc006d50",
       "stream": "operations",
       "areas": [
         "repo-ops"
       ],
       "related_streams": [
         "operations"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-19",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-19.md#topic-013-ding-figure-locator-option-1",
+      "source": "2026/2026-11-19.md",
+      "anchor": "topic-013-ding-figure-locator-option-1",
+      "start_line": 43,
+      "end_line": 51,
+      "title": "Topic 0.13 Ding figure locator (option 1)",
+      "entry_sha256": "e3d7517de0dcb30b729459b438ff2ff98256d56000708fc06d879a9cbc2cf93c",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
       ],
       "basis": "explicit_stream_and_area",
       "flags": [],

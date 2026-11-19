@@ -1,6 +1,6 @@
 # Topic 0.13 leftover under `docs/topics/` (diagnosis, 2026-11-19)
 
-Status: diagnosis only. Nothing in Topic 0.13 was changed or moved.
+Status: resolved with option 1 on 2026-11-19 at the owner's request (see "Resolution" at the end). The figure was not moved.
 
 ## What is left
 
@@ -38,3 +38,12 @@ The `raw/` ignore rules were not copied to the new root. `/topics/**/raw/` is no
 3. Untrack the file (keep it local and record its hash), as the raw/private rule in AGENTS.md §2 suggests. This changes what is published.
 
 In every option, add `/topics/**/Data/**/raw/` and `/topics/**/raw/` to `.gitignore`.
+
+## Resolution (2026-11-19, owner chose option 1)
+
+- `Research_Ding2022_Figure_Digitization.py` now reads `topics/.../raw/ding_2022_fig1.png` if a copy is present and otherwise reads the tracked file at `docs/topics/.../raw/`.
+  The recorded input path and hash in the manifest are unchanged.
+- Check: the figure's sha256 is `d88faf2f…`, matching the manifest. A re-run gives 432 rows and CSV sha256 `c4117bb4…`, which equals the `pre_repair_sha256` recorded before the later series-mapping repair, so the first digitization step is reproduced byte for byte.
+  The saved, repaired outputs were left as they are.
+- `test_ding2022_figure_locator.py` (3 software tests) is now in the Topic 0.13 suite.
+- `.gitignore` now also ignores `/topics/**/Data/**/raw/` and `/topics/**/raw/`.

@@ -411,6 +411,8 @@ docs/topics/**/Result/_Logs/
 # Research source dumps and extraction scratch remain local-only.
 /docs/topics/**/Data/**/raw/
 /docs/topics/**/raw/
+/topics/**/Data/**/raw/
+/topics/**/raw/
 /tmp/
 **/output.txt
 .playwright-cli/
