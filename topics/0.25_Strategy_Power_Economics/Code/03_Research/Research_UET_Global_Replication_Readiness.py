@@ -21,8 +21,8 @@ REQUIRED = {
 }
 
 def main() -> int:
-    wdi_manifest = Path("docs/data/external/economics/global/wdi/2026-07-16/source_manifest.json")
-    wdi_panel = Path("docs/topics/0.25_Strategy_Power_Economics/Result/artifacts/0_25_global_wdi_panel.json")
+    wdi_manifest = ROOT.parents[1] / "docs/data/external/economics/global/wdi/2026-07-16/source_manifest.json"
+    wdi_panel = ROOT / "Result/artifacts/0_25_global_wdi_panel.json"
     wdi_ready = wdi_manifest.exists() and wdi_panel.exists() and json.loads(wdi_panel.read_text()).get("status") == "PASS"
     blockers = [
         "OECD, ILOSTAT, IMF, BIS, and WID source manifests with release/vintage/hash records are absent.",

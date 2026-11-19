@@ -36,8 +36,7 @@ try:
 
     # Topic 0.4 Engine
     engine_path = (
-        root_path
-        / "docs"
+        ROOT
         / "topics"
         / "0.4_Superconductivity_Superfluids"
         / "Code"
@@ -51,8 +50,7 @@ try:
 
     # Topic 0.4 Data
     data_path = (
-        root_path
-        / "docs"
+        ROOT
         / "topics"
         / "0.4_Superconductivity_Superfluids"
         / "Data"
@@ -147,12 +145,8 @@ def run_test():
         with open(report_path, "w") as f:
             f.write(f"UET Superfluids Test Results\nPassed: {passed_count}/{total}\n")
         print(f"Report saved to {report_path}")
-    except Exception as e:
-        # Fallback to local Result dir
-        local_res = Path("Result")
-        local_res.mkdir(exist_ok=True)
-        with open(local_res / "superfluids_report.txt", "w") as f:
-            f.write(f"UET Superfluids Test Results\nPassed: {passed_count}/{total}\n")
+    except OSError as error:
+        raise RuntimeError("Unable to save the Topic 0.4 report") from error
 
     return passed_count >= 1
 

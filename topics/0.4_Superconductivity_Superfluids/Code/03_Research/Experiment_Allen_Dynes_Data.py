@@ -20,7 +20,8 @@ if hasattr(sys.stderr, "reconfigure"):
     sys.stderr.reconfigure(encoding="utf-8", errors="replace")
 
 
-TOPIC_DIR = Path("docs/topics/0.4_Superconductivity_Superfluids")
+TOPIC_DIR = Path(__file__).resolve().parents[2]
+REPO = TOPIC_DIR.parents[1]
 DATA_DIR = TOPIC_DIR / "Data" / "03_Research"
 INPUT_PATH = DATA_DIR / "allen_dynes_source_labeled_inputs.json"
 ARTIFACT_PATH = (
@@ -47,14 +48,14 @@ PER_ROW_ERROR_GATE_PERCENT = 20.0
 
 
 def hash_file(path):
-    path = Path(path)
+    path = REPO / path
     if not path.exists():
         return None
     return sha256(path.read_bytes()).hexdigest()
 
 
 def load_json(path):
-    return json.loads(Path(path).read_text(encoding="utf-8"))
+    return json.loads((REPO / path).read_text(encoding="utf-8"))
 
 
 def dotted_get(mapping, dotted_path):
@@ -269,7 +270,7 @@ def write_artifact():
         },
         "inputs": {
             "input_table": {
-                "path": str(INPUT_PATH),
+                "path": INPUT_PATH.relative_to(REPO).as_posix(),
                 "sha256": hash_file(INPUT_PATH),
             },
             "design_packet": {

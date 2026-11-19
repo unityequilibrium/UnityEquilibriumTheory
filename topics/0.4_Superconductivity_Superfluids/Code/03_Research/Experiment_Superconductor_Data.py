@@ -23,7 +23,8 @@ from datetime import datetime, timezone
 from hashlib import sha256
 
 
-TOPIC_DIR = Path("docs/topics/0.4_Superconductivity_Superfluids")
+TOPIC_DIR = Path(__file__).resolve().parents[2]
+REPO = TOPIC_DIR.parents[1]
 DATA_DIR = TOPIC_DIR / "Data" / "03_Research"
 ARTIFACT_PATH = TOPIC_DIR / "Result" / "artifacts" / "0_4_superconductivity_superfluids_verification.json"
 SOURCE_LOCK_PATH = DATA_DIR / "source_lock_manifest.json"
@@ -177,7 +178,7 @@ SUPERCONDUCTOR_DATA = {
 
 
 def save_data(
-    output_dir="docs/topics/0.4_Superconductivity_Superfluids/Data/03_Research",
+    output_dir=DATA_DIR,
 ):
     """Save real superconductor data to JSON."""
     Path(output_dir).mkdir(parents=True, exist_ok=True)
@@ -296,7 +297,7 @@ def load_source_lock() -> dict:
     if not SOURCE_LOCK_PATH.exists():
         return {
             "status": "MISSING",
-            "path": str(SOURCE_LOCK_PATH),
+            "path": SOURCE_LOCK_PATH.relative_to(REPO).as_posix(),
             "external_source_records": [],
             "derived_inputs": [],
         }
@@ -306,7 +307,7 @@ def load_source_lock() -> dict:
 def source_record_hashes(source_lock: dict) -> list[dict]:
     hashes = []
     for record_path in source_lock.get("external_source_records", []):
-        path = Path(record_path)
+        path = REPO / record_path
         hashes.append(
             {
                 "path": record_path,
@@ -392,7 +393,7 @@ def write_artifact(output_path: Path, avg_err: float, rows: list[dict]) -> None:
         "schema_version": "1.2",
         "topic": "0.4_Superconductivity_Superfluids",
         "timestamp_utc": datetime.now(timezone.utc).isoformat(),
-        "command": "python docs/topics/0.4_Superconductivity_Superfluids/Code/03_Research/Experiment_Superconductor_Data.py",
+        "command": "python topics/0.4_Superconductivity_Superfluids/Code/03_Research/Experiment_Superconductor_Data.py",
         "status": status,
         "run_status": "PASS",
         "model_gate_status": status,
@@ -400,14 +401,14 @@ def write_artifact(output_path: Path, avg_err: float, rows: list[dict]) -> None:
         "claim_class": "C internal baseline diagnostic" if status == "PASS" else "model-baseline blocker",
         "inputs": [
             {
-                "path": str(data_path),
+                "path": data_path.relative_to(REPO).as_posix(),
                 "sha256": hash_file(data_path),
                 "role": "raw McMillan superconductivity benchmark working copy",
                 "data_class": "topic-local working copy generated from in-script rows",
             }
         ],
         "source_lock": {
-            "path": str(SOURCE_LOCK_PATH),
+            "path": SOURCE_LOCK_PATH.relative_to(REPO).as_posix(),
             "sha256": hash_file(SOURCE_LOCK_PATH),
             "external_source_records": source_record_hashes(source_lock),
             "derived_inputs": source_lock.get("derived_inputs", []),
