@@ -5,11 +5,11 @@
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
     "sources": 82,
-    "entries": 938,
+    "entries": 939,
     "by_stream": {
       "book-history": 94,
       "operations": 138,
-      "research": 705,
+      "research": 706,
       "review": 1
     },
     "exact_duplicates": 0,
@@ -425,8 +425,8 @@
     },
     {
       "path": "2026/2026-11-19.md",
-      "sha256": "52d65dc17880f7c31d1000d5e660faf87c9bd0a39111c4b2ba8fbb99d2df2dc8",
-      "entries": 5
+      "sha256": "119fd368e03cbf350aec5760ecde2571d0fcb2b0d6e6c87fbfa1a161293ff082",
+      "entries": 6
     },
     {
       "path": "2026-08-14.md",
@@ -19142,11 +19142,31 @@
       "legacy_root_path": false
     },
     {
+      "id": "2026/2026-11-19.md#topic-013-ding-figure-locator-option-1",
+      "source": "2026/2026-11-19.md",
+      "anchor": "topic-013-ding-figure-locator-option-1",
+      "start_line": 43,
+      "end_line": 52,
+      "title": "Topic 0.13 Ding figure locator (option 1)",
+      "entry_sha256": "85fd4cb601a84425e2871dceabe6885a8dc40478555886156de0ea4509021fa6",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-19",
+      "legacy_root_path": false
+    },
+    {
       "id": "2026/2026-11-19.md#noether-coverage-of-the-parent-action",
       "source": "2026/2026-11-19.md",
       "anchor": "noether-coverage-of-the-parent-action",
-      "start_line": 43,
-      "end_line": 51,
+      "start_line": 53,
+      "end_line": 61,
       "title": "Noether coverage of the parent action",
       "entry_sha256": "d7247845fdd61224f308c4ac80b86977ec14055f83891b2bb4082162fcff3d0f",
       "stream": "research",
