@@ -1,0 +1,49 @@
+{
+  "schema": "uet-test-card-v2",
+  "test_id": "T026",
+  "status": "APPROVED",
+  "claim_id": "C_L3_TRACE_YEAST",
+  "theory_card": {
+    "card_id": "UET_PARENT",
+    "version": 1
+  },
+  "hypothesis": "Author (2026-11-19): the trace left by resource use changes the environment of later systems. AI translation for yeast on sucrose (C_L3_TRACE_YEAST): the shared glucose released by invertase is the trace, and the switch from slow to fast cooperative growth that Dai et al. (2012) fitted at N_c = 276 cells/ul happens when this shared glucose reaches G* = (1 - eps) h N_c / gamma_low = 1.56 mM (an upper estimate, since uptake before the switch is neglected). If so, yeast grown directly on glucose must reach Dai's fast rate gamma_high at a glucose concentration at or below about 1.6 mM.",
+  "observable": {
+    "quantity": "G_high: the lowest glucose concentration at which the measured per-capita growth rate reaches gamma_high - 1 sigma = 0.457 per hour, by linear interpolation in log10(glucose) between measured points",
+    "unit": "mM glucose",
+    "domain": "Gore, Youk and van Oudenaarden (2009) Nature 459, 253 (author manuscript PMC2888597): growth rate of S. cerevisiae against glucose concentration, the figure that reports it, digitised once after approval"
+  },
+  "test_kind": "BLIND_PREDICTION",
+  "data_sources": [
+    {
+      "data_id": "YEAST_SUCROSE_PARAMETERS",
+      "role": "CALIBRATION",
+      "exposure": "SEEN_FULL"
+    },
+    {
+      "data_id": "GORE2009_GROWTH_VS_GLUCOSE",
+      "role": "HOLDOUT",
+      "exposure": "UNSEEN"
+    }
+  ],
+  "prediction_method": {
+    "script": "core/03_lanes/persistence/t026_yeast_switch_glucose.py",
+    "description": "G* from core/03_lanes/persistence/uet_layer3_trace_yeast.py (registered values only: Koschwanez et al. 2011 invertase kinetics; Dai et al. 2012 gamma_low and fitted N_c). G_high from the digitised Gore et al. (2009) growth-rate points: the first crossing of 0.457 per hour, linear in log10(glucose); digitisation uncertainty taken as half the axis tick spacing, propagated to an interval for G_high. Glucose in percent w/v converted with 180.16 g/mol. The capture efficiency eps is read from Gore et al. (2009) in the same session and replaces 0.01 if different."
+  },
+  "free_parameters": [],
+  "fixed_parameters": [
+    "G* = 1.56 mM computed before the comparison data are opened; recomputed only if Gore et al.'s printed eps differs from 0.01 (at most a few percent)",
+    "threshold growth rate 0.457 per hour (Dai et al. measured gamma_high 0.472 minus its 0.015 uncertainty)",
+    "lower plausibility bound G*/30 = 0.052 mM (AI choice: uptake can lower free glucose below the closed form, but a switch 30 times lower would mean the accumulated shared trace is not what triggers it)",
+    "no strain, medium or temperature correction between the two papers (both from the Gore lab, S. cerevisiae SUC2 background); stated as a limitation"
+  ],
+  "pass_criterion": "PASS if the whole digitisation interval of G_high lies within [G*/30, G*] = [0.052, 1.56] mM.",
+  "fail_criterion": "FAILED if the whole interval of G_high lies above 3 G* = 4.7 mM or below G*/30 = 0.052 mM. INCONCLUSIVE otherwise, including when the measured growth rate never reaches 0.457 per hour in the reported range or the interval straddles a boundary.",
+  "drafted_by": "claude",
+  "note": "Disclosure: Dai et al. (2012) is SEEN (its fitted N_c is an input, not the outcome). The Gore et al. (2009) growth-rate figure has not been opened; the drafter recalls from general reading that Gore et al. fitted a concave power law to growth against glucose but does not recall the values. Strain, medium and temperature may differ between the two papers. The criteria (threshold 0.457 per hour, factor 3 above, factor 30 below) are AI choices for the author to accept or change before approval. Nearest theory: public-goods models of yeast cooperation (Gore et al. 2009) and Allee effects; a PASS shows the trace-feedback mapping is quantitatively consistent across two experiments, not a UET-distinct result. Approved by the author in chat on 2026-11-19 as drafted (\"Approve and run\"); this approval is committed before the comparison figure is opened. Label fix before the data were opened (same day, unpushed): the unseen Gore et al. data are a HOLDOUT, as the schema requires for a blind prediction; no criterion changed.",
+  "approval": {
+    "approved_by": "santxkoz",
+    "date": "2026-11-19",
+    "role": "AUTHOR"
+  }
+}
