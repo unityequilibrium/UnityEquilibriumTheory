@@ -6,7 +6,7 @@ without trusting what another agent says about it. It is deliberately short.
 
 **The controlling research standard is [`docs/STANDARD.md`](docs/STANDARD.md)** (Research Standard v2, approved by the author on 2026-11-08).
 When this guide and the standard disagree, the standard wins. The exceptions are the boundary, privacy and publication rules below, which stay in force.
-`docs/topics/For Work/` must not be edited or moved. Its operational standards (topic structure, code READMEs, data, references,
+`topics/For Work/` must not be edited (the owner moved it there from `docs/topics/For Work/` on 2026-11-19; file contents are unchanged). Its operational standards (topic structure, code READMEs, data, references,
 results, formula audit, papers, visualization, templates and calculation contracts) are still in force under §15 of the standard.
 Its old status vocabularies and workflow ladders are replaced.
 
@@ -15,7 +15,8 @@ Its old status vocabularies and workflow ladders are replaced.
 - `core/` holds the UET core equations, tests and artifacts.
   Core-specific rules are in [`core/AGENTS.md`](core/AGENTS.md).
 - `topics/` holds the numbered research topics.
-- `docs/topics/For Work/` (operational standards) and `docs/topics/0.13_Thermodynamic_Bridge/` remain at their old location.
+- `topics/For Work/` holds the operational standards. Only one tracked file remains under `docs/topics/`:
+  `docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/ding_2022_fig1.png` (see `docs/meta/TOPIC13_LEFTOVER_RAW_FIGURE_2026-11-19.md`).
 - In frozen records, `docs/core/<path>` means `core/<path>` and `docs/topics/<topic>/` means `topics/<topic>/`.
   Do not rewrite old paths, hashes or contracts just to update the path text.
 - `docs/standard/` holds the machine-checked records: claims, Test Cards, results and the data manifest.

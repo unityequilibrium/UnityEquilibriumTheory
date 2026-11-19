@@ -22,7 +22,7 @@ verifier artifacts, or topic standards that define the actual project state.
 | :-- | :-- | :-- |
 | `docs/` | Main documentation and research codebase | Canonical for written project content |
 | `docs/topics/` | Topic workspaces and research packages | Canonical for topic-local evidence |
-| `docs/topics/For Work/` | Research workflow standard | Canonical for research operating rules |
+| `topics/For Work/` | Research workflow standard | Canonical for research operating rules |
 | `docs/meta/` | Machine-readable project status and release metadata | Canonical for repo-wide status summaries |
 | `docs/knowledge_base/` | Legacy and utility layer for local indexing/search experiments | Not canonical; should not be treated as current truth without service alignment |
 | `services_and_experiments/uet_kb/` | Knowledge-base service and MCP-oriented access layer | Service implementation layer |
@@ -56,7 +56,7 @@ Use the repository documents and metadata for truth:
 
 - topic status comes from `docs/topics/README.md`, `docs/meta/`, local topic
   documents, verifier artifacts, gates, manifests, and update logs
-- research workflow rules come from `docs/topics/For Work/`
+- research workflow rules come from `topics/For Work/`
 - formula, data, claim, and result readiness must be reconstructed from the
   relevant topic package and artifacts
 

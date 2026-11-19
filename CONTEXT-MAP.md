@@ -8,7 +8,7 @@ It is a routing map, not a second project standard.
 | Area | Canonical workspace | Use it for | Do not use it for |
 | :-- | :-- | :-- | :-- |
 | `research-core` | `docs/core/`, `docs/topics/` | equations, experiments, evidence, topic status | service runtime state |
-| `research-standards` | `docs/topics/For Work/`, `AGENTS.md` | shared research workflow and claim rules | topic-specific results |
+| `research-standards` | `topics/For Work/`, `AGENTS.md` | shared research workflow and claim rules | topic-specific results |
 | `theory-history` | Removed from Harness on 2026-11-03 | earlier versions remain in Git history | recreating the moved workspace or accessing its destination |
 | `book-writing` | Removed from Harness on 2026-11-03 | maintained separately by the owner | operating on the separate Superapp project from Harness |
 | `thai-policy` | `thailand_proposals/` | policy and project proposals | research evidence status |
@@ -31,7 +31,7 @@ flowchart LR
 
 - Change a claim, formula, source, result, or topic status in the relevant
   canonical workspace first.
-- Change shared research behavior in `AGENTS.md` or `docs/topics/For Work/`.
+- Change shared research behavior in `AGENTS.md` or `topics/For Work/`.
 - History/book work was moved out by the owner. Do not use its removed registry
   or workflow as a Harness controller, recreate its paths, or access Superapp.
 - Change service behavior only inside `services_and_experiments/`, with a

@@ -4,11 +4,11 @@
   "generator_sha256": "b32005e4bdbf59da6681ae630fa1d9d4415c361f7523be18c8b52a86dc8c93e9",
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
-    "sources": 81,
-    "entries": 927,
+    "sources": 82,
+    "entries": 928,
     "by_stream": {
       "book-history": 94,
-      "operations": 134,
+      "operations": 135,
       "research": 698,
       "review": 1
     },
@@ -422,6 +422,11 @@
       "path": "2026/2026-11-18.md",
       "sha256": "fc29031919fedc7b0a945d276a71b4e14264d612c8972044aa38a057648bccb3",
       "entries": 28
+    },
+    {
+      "path": "2026/2026-11-19.md",
+      "sha256": "ccb346a34c7056f9402a10c7b4aa85f2e63485f65d13ec28d0eb38027641452b",
+      "entries": 1
     },
     {
       "path": "2026-08-14.md",
@@ -18934,6 +18939,26 @@
       "basis": "explicit_stream_and_area",
       "flags": [],
       "date": "2026-11-18",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-19.md#move-for-work-to-topics-and-diagnose-the-topic-013-leftover",
+      "source": "2026/2026-11-19.md",
+      "anchor": "move-for-work-to-topics-and-diagnose-the-topic-013-leftover",
+      "start_line": 3,
+      "end_line": 11,
+      "title": "Move For Work to topics/ and diagnose the Topic 0.13 leftover",
+      "entry_sha256": "502b6d7af26b3e628e02ba6789d9c4e40ffe7082ca90ec62e76eb6f7a92985bd",
+      "stream": "operations",
+      "areas": [
+        "repo-ops"
+      ],
+      "related_streams": [
+        "operations"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-19",
       "legacy_root_path": false
     },
     {

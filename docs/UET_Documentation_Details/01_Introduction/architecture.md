@@ -22,7 +22,7 @@ knowledge service is active.
 | Layer | Canonical location | Responsibility | Dependency rule |
 | :-- | :-- | :-- | :-- |
 | Research | `docs/core/`, `docs/topics/` | equations, experiments, evidence, topic packages | independent of services |
-| Standards | `AGENTS.md`, `docs/topics/For Work/` | workflow, claim, data, formula, result, and publication rules | governs all research work |
+| Standards | `AGENTS.md`, `topics/For Work/` | workflow, claim, data, formula, result, and publication rules | governs all research work |
 | History and books | `uet_history/` | theory history, book registry, blueprints, reviewed publish tree | uses its own book workflow |
 | Policy | `thailand_proposals/` | policy and project narratives | claims must link to evidence or be labeled proposal |
 | Repository operations | `WORK_LEDGER/`, `.github/`, manifests | checkpoints, CI, publishing, hygiene | records changes, not scientific truth |

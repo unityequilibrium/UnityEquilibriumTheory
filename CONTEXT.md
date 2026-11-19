@@ -1,7 +1,7 @@
 # UET Repository Context
 
 This glossary is the compact shared vocabulary for repository architecture work.
-It does not replace `AGENTS.md`, `docs/topics/For Work/`, or topic standards.
+It does not replace `AGENTS.md`, `topics/For Work/`, or topic standards.
 
 ## Canonical terms
 
