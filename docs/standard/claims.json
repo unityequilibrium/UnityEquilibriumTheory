@@ -454,6 +454,15 @@
       "note": "The pool loss follows from the action; the supply is a boundary flux set by an enclosing system. Nearest known theory: beam attenuation, chemostat dilution, laser pump threshold. Not UET-distinct."
     },
     {
+      "claim_id": "C_L3_SUPPLY_CHEMOSTAT",
+      "statement": "In a chemostat the layer 3 pool quantities are set by the experimenter: supply S = D S0 (dilution rate times reservoir concentration), loss delta = D and washout 1/tau = D; the persistence threshold S* = delta R*_min holds for any increasing uptake mu(R) with mu(0) = 0, the steady abundance is n* = Y (S0 - R*), and the linear (action-derived) uptake is the special case mu = a R.",
+      "level": "L1_CONSISTENT",
+      "evidence": [
+        "R_L3_SUPPLY_CHEMOSTAT"
+      ],
+      "note": "Derivation and numerical check; S* values for Tilman's diatoms at D = 0.25 per day use the registered T007 physiology and are not a comparison with an outcome. Nearest known theory: chemostat theory (Monod 1950; Novick and Szilard 1950) and Tilman's R* rule. Not UET-distinct."
+    },
+    {
       "claim_id": "C_L3_TRACE_FEEDBACK",
       "statement": "When the trace left by resource use changes the environment of later systems (author, 2026-11-19), modelled as a shared trace E written at w per unit resource, fading at kappa and changing capture as a_i0 (1 + beta_i E), layer 3 selection is no longer the supply- and history-independent lowest-R* rule: a trace-helped type takes over above S_c = delta R*_1 + kappa (R*_2(0)/R*_1 - 1)/(w beta_2), the outcome shows hysteresis in the supply between S_b and S_c, and a type that cannot start in an empty environment can replace a pioneer.",
       "level": "L1_CONSISTENT",

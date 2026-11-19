@@ -5,11 +5,11 @@
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
     "sources": 82,
-    "entries": 947,
+    "entries": 948,
     "by_stream": {
       "book-history": 94,
       "operations": 140,
-      "research": 712,
+      "research": 713,
       "review": 1
     },
     "exact_duplicates": 0,
@@ -425,8 +425,8 @@
     },
     {
       "path": "2026/2026-11-19.md",
-      "sha256": "ac2643e7f82e65e7ae00ff026ca4580d0592903d3444c36861b5fccdb3b31738",
-      "entries": 14
+      "sha256": "87e0e23636025fff88b5de8506efdfc9f1db8f31c6a12ab6a163ad53be0f7c51",
+      "entries": 15
     },
     {
       "path": "2026-08-14.md",
@@ -19282,11 +19282,31 @@
       "legacy_root_path": false
     },
     {
+      "id": "2026/2026-11-19.md#layer-3-supply-in-a-real-system-the-chemostat",
+      "source": "2026/2026-11-19.md",
+      "anchor": "layer-3-supply-in-a-real-system-the-chemostat",
+      "start_line": 113,
+      "end_line": 122,
+      "title": "Layer 3 supply in a real system: the chemostat",
+      "entry_sha256": "7e2ed5c541a53b56efe19f70eddf4cca9573d802307248bf67c47a73f7755f29",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-19",
+      "legacy_root_path": false
+    },
+    {
       "id": "2026/2026-11-19.md#layer-3-with-trace-feedback-author-decision-2026-11-19",
       "source": "2026/2026-11-19.md",
       "anchor": "layer-3-with-trace-feedback-author-decision-2026-11-19",
-      "start_line": 113,
-      "end_line": 122,
+      "start_line": 123,
+      "end_line": 132,
       "title": "Layer 3 with trace feedback (author decision 2026-11-19)",
       "entry_sha256": "9fe2ce038c9fc9025d0f136fded471c02dd66495d4a0680bc9f120e3f817e536",
       "stream": "research",
@@ -19305,8 +19325,8 @@
       "id": "2026/2026-11-19.md#trace-feedback-in-yeast-on-sucrose-switch-glucose-level",
       "source": "2026/2026-11-19.md",
       "anchor": "trace-feedback-in-yeast-on-sucrose-switch-glucose-level",
-      "start_line": 123,
-      "end_line": 132,
+      "start_line": 133,
+      "end_line": 142,
       "title": "Trace feedback in yeast on sucrose: switch glucose level",
       "entry_sha256": "b2acdcae42a1d3f559e4f07260a862afd17f4afbcc730e115898e8da624f7cf3",
       "stream": "research",
@@ -19325,8 +19345,8 @@
       "id": "2026/2026-11-19.md#test-card-t026-yeast-switch-glucose-inconclusive",
       "source": "2026/2026-11-19.md",
       "anchor": "test-card-t026-yeast-switch-glucose-inconclusive",
-      "start_line": 133,
-      "end_line": 141,
+      "start_line": 143,
+      "end_line": 151,
       "title": "Test Card T026: yeast switch glucose (INCONCLUSIVE)",
       "entry_sha256": "8edbd680843ec8e4ce8908e666eaa26a22345ec7cd43c6abd9c13f223cd8e670",
       "stream": "research",
