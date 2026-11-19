@@ -1,7 +1,7 @@
 {
   "schema": "uet-test-card-v2",
   "test_id": "T025",
-  "status": "DRAFT",
+  "status": "APPROVED",
   "claim_id": "C_T023_FLIGHT_LIFETIME_ENERGY",
   "theory_card": {
     "card_id": "UET_PARENT",
@@ -43,5 +43,10 @@
   "pass_criterion": "PASS if the 95 percent interval of d_bat lies wholly above 0.18 and the 95 percent interval of Delta lies inside [-0.25, 0.25].",
   "fail_criterion": "FAILED if the upper end of the 95 percent interval of d_bat is below 0.18, or the 95 percent interval of Delta lies wholly outside [-0.25, 0.25]; INCONCLUSIVE otherwise, or under the coverage rule in fixed_parameters.",
   "drafted_by": "claude",
-  "note": "Disclosure: not blind, and the AnAge side is SEEN_FULL. The T023 result is known: d_bat = 0.292 (95% 0.185 to 0.402), Delta = -0.172 (95% -0.275 to -0.072), from ordinary least squares with bootstrap intervals. The tree was downloaded on 2026-11-19 with the owner's permission; only its leaf names, leaf count (414, including subspecies) and root age (318.82 Mya, ultrametric) were read, to fix the placement rules above. No trait value has been joined to the tree and no fit has been run. AI expectation, written before any tree is seen: birds and bats are each one clade, so under Brownian motion each indicator rests on very few independent evolutionary contrasts and the intervals are expected to widen a lot; INCONCLUSIVE is the most likely outcome, and PASS needs the Delta interval to be narrower than 0.5, which a wide interval cannot meet. This card is run because T023 and the portfolio name the missing correction as an open gap, not because it is expected to pass. Known bias kept from T023: bat torpor and hibernation inflate resting-rate LEP. Nearest theory: disposable soma (Kirkwood 1977) and the extrinsic-mortality theory of ageing; not UET-distinct. Method choices (TimeTree 5, Brownian motion, GLS t-intervals, the placement and coverage rules) are AI choices for the author to accept or change before approval. Not approved; do not run against the data before an author approval block is committed. Reproducibility limit: TimeTree's terms forbid redistribution, so the tree is not in the public repository; an outside checker must upload the same 298 names (species_298.txt, hash in the manifest) to timetree.org and compare the sha256."
+  "note": "Disclosure: not blind, and the AnAge side is SEEN_FULL. The T023 result is known: d_bat = 0.292 (95% 0.185 to 0.402), Delta = -0.172 (95% -0.275 to -0.072), from ordinary least squares with bootstrap intervals. The tree was downloaded on 2026-11-19 with the owner's permission; only its leaf names, leaf count (414, including subspecies) and root age (318.82 Mya, ultrametric) were read, to fix the placement rules above. No trait value has been joined to the tree and no fit has been run. AI expectation, written before any tree is seen: birds and bats are each one clade, so under Brownian motion each indicator rests on very few independent evolutionary contrasts and the intervals are expected to widen a lot; INCONCLUSIVE is the most likely outcome, and PASS needs the Delta interval to be narrower than 0.5, which a wide interval cannot meet. This card is run because T023 and the portfolio name the missing correction as an open gap, not because it is expected to pass. Known bias kept from T023: bat torpor and hibernation inflate resting-rate LEP. Nearest theory: disposable soma (Kirkwood 1977) and the extrinsic-mortality theory of ageing; not UET-distinct. Method choices (TimeTree 5, Brownian motion, GLS t-intervals, the placement and coverage rules) are AI choices for the author to accept or change before approval. Approved by the author in chat on 2026-11-19 as drafted (\"Approve and run\"); approval committed before the run. Reproducibility limit: TimeTree's terms forbid redistribution, so the tree is not in the public repository; an outside checker must upload the same 298 names (species_298.txt, hash in the manifest) to timetree.org and compare the sha256.",
+  "approval": {
+    "approved_by": "santxkoz",
+    "date": "2026-11-19",
+    "role": "AUTHOR"
+  }
 }
