@@ -11,8 +11,9 @@
    cone for phi, K is not conserved (negative control).
 5. Second theorem on a general metric: on an inhomogeneous, non-diagonal metric the implemented metric residual
    equals the Theory Card form and nabla^mu E_mu_nu = -kappa (E_phi d_nu phi + sum_A E_A d_nu chi_A) with the
-   implemented residuals at 20 random off-shell points (4 draws x 5 points, rel < 1e-10); leaving the portal out
-   of the stress breaks it (negative control).
+   implemented residuals at 20 random off-shell points (4 draws x 5 points, rel < 1e-10), and again on a full
+   metric with all ten components nonzero functions of t, x, y, z (4 draws x 5 points; its numeric geometry is
+   first checked against the sympy route); leaving the portal out of the stress breaks it (negative control).
 4. Rotations, first theorem: on a 2+1 lattice angular momentum, energy and both momenta converge with order 2 in dx
    and the O(2) charge is conserved to rounding.
 """
@@ -168,18 +169,22 @@ def test_angular_momentum_on_a_2d_lattice() -> None:
 # Second theorem on an inhomogeneous, non-diagonal metric (beyond Bianchi I)
 # ---------------------------------------------------------------------------
 
-def _general_draw(seed: int, p_override: dict | None = None):
-    rng = random.Random(7000 + seed)
+def _general_draw(seed: int, p_override: dict | None = None, all_coords: bool = False):
+    rng = random.Random((8000 if all_coords else 7000) + seed)
     p = random_params(rng)
     p["h"] = rng.uniform(0.3, 1.5)
-    poly = lambda c0, s: (c0 + rng.uniform(-s, s) * T + rng.uniform(-s, s) * X + rng.uniform(-s, s) * T * X  # noqa: E731
-                          + rng.uniform(-s, s) * X**2 + rng.uniform(-s, s) * T**2)
+    if all_coords:
+        poly = lambda c0, s: (c0 + sum(rng.uniform(-s, s) * v for v in COORDS)  # noqa: E731
+                              + rng.uniform(-s, s) * T * X + rng.uniform(-s, s) * Y * ZC)
+    else:
+        poly = lambda c0, s: (c0 + rng.uniform(-s, s) * T + rng.uniform(-s, s) * X + rng.uniform(-s, s) * T * X  # noqa: E731
+                              + rng.uniform(-s, s) * X**2 + rng.uniform(-s, s) * T**2)
     N, s, a, b, c = poly(1.0, 0.15), poly(0.0, 0.15), poly(1.0, 0.15), poly(1.1, 0.15), poly(0.9, 0.15)
     g = sp.Matrix([[-N**2, s, 0, 0], [s, a**2, 0, 0], [0, 0, b**2, 0], [0, 0, 0, c**2]])
     G, R, gamma, ginv = einstein_and_scalar(g)
     phi, chi = poly(p["phi_star"], 0.4), [poly(0.3, 0.4), poly(-0.2, 0.4)]
     E, hess = m.metric_residual_symbolic(g, ginv, G, gamma, phi, chi, dict(p, **(p_override or {})), COORDS)
-    div = m.divergence_evaluator(E, ginv, gamma, COORDS, (0, 1))
+    div = m.divergence_evaluator(E, ginv, gamma, COORDS, (0, 1, 2, 3) if all_coords else (0, 1))
     return rng, p, g, G, R, ginv, phi, chi, E, hess, div
 
 
@@ -220,4 +225,90 @@ def test_general_identity_fails_without_the_portal_in_the_stress() -> None:
     point = {T: sp.Float(0.1, 40), X: sp.Float(-0.2, 40), Y: 0, ZC: 0}
     _, rhs, _ = _code_side(p, g, G, R, ginv, phi, chi, hess, point)
     lhs = div([0.1, -0.2])
+    assert max(abs(a - b) for a, b in zip(lhs, rhs)) > 1e-3
+
+
+# ---------------------------------------------------------------------------
+# Second theorem on a full metric: all ten components, all four coordinates
+# ---------------------------------------------------------------------------
+
+def _full_draw(seed: int, block: bool = False):
+    rng = random.Random(9000 + seed)
+    p = random_params(rng)
+    p["h"] = rng.uniform(0.3, 1.5)
+    poly = lambda c0, s: (c0 + sum(rng.uniform(-s, s) * v for v in COORDS)  # noqa: E731
+                          + rng.uniform(-s, s) * T * X + rng.uniform(-s, s) * Y * ZC)
+    diag = [-1.0, 1.0, 1.1, 0.9]
+    g = sp.zeros(4, 4)
+    for i in range(4):
+        for j in range(i, 4):
+            if i != j and block and (i, j) != (0, 1):
+                continue
+            g[i, j] = g[j, i] = poly(diag[i] if i == j else 0.0, 0.1 if i == j else 0.08)
+    phi, chi = poly(p["phi_star"], 0.4), [poly(0.3, 0.4), poly(-0.2, 0.4)]
+    return rng, p, g, phi, chi
+
+
+def test_numeric_geometry_matches_the_symbolic_route() -> None:
+    import mpmath
+    from ._symbolic_geometry import box
+    rng, p, g, phi, chi = _full_draw(0, block=True)  # the symbolic helpers handle only g_tx off the diagonal
+    G, R, _, ginv = einstein_and_scalar(g)
+    full = m.FullMetricPoint(g, phi, chi, p, COORDS)
+    mpmath.mp.dps = 40
+    for _ in range(5):
+        pt = [rng.uniform(-0.3, 0.3) for _ in range(4)]
+        point = {v: sp.Float(c, 40) for v, c in zip(COORDS, pt)}
+        ev = lambda e: float(sp.N(sp.sympify(e).subs(point), 40))  # noqa: E731
+        num = full.pieces([mpmath.mpf(c) for c in pt])
+        assert rel_diff(float(num["R"]), ev(R)) < 1e-10
+        for i in range(4):
+            for j in range(4):
+                assert rel_diff(float(num["G"][i][j]), ev(G[i, j])) < 1e-10
+        assert rel_diff(float(num["box_phi"]), ev(box(phi, g, ginv))) < 1e-10
+
+
+def _full_code_side(p, piece):
+    response, matter = configs(p)
+    f = lambda a: np.array([[float(v) for v in row] for row in a])  # noqa: E731
+    v = lambda a: np.array([float(x) for x in a])  # noqa: E731
+    gm = np.array(piece["g"].tolist(), dtype=float)
+    residual = cov.coupled_metric_residual(gm, f(piece["G"]), float(piece["phi"]), v(piece["dphi"]), f(piece["hess_f"]),
+                                           v(piece["chi"]), f(piece["dchi"]), response, matter)
+    E_phi = cov.coupled_response_scalar_equation_residual(float(piece["R"]), float(piece["box_phi"]), float(piece["phi"]),
+                                                          v(piece["chi"]), response, matter)
+    E_chi = cov.matter_eom_residual(v(piece["box_chi"]), v(piece["chi"]), float(piece["phi"]), response, matter)
+    dphi, dchi = v(piece["dphi"]), f(piece["dchi"])
+    rhs = [-p["kappa"] * (E_phi * dphi[nu] + E_chi[0] * dchi[0][nu] + E_chi[1] * dchi[1][nu]) for nu in range(4)]
+    return gm, residual, rhs
+
+
+@pytest.mark.parametrize("seed", range(4))
+def test_diffeomorphism_identity_on_a_full_metric(seed: int) -> None:
+    import mpmath
+    rng, p, g, phi, chi = _full_draw(seed)
+    full = m.FullMetricPoint(g, phi, chi, p, COORDS)
+    for _ in range(5):  # 4 draws x 5 points = 20 random off-shell points
+        pt = [rng.uniform(-0.3, 0.3) for _ in range(4)]
+        mpmath.mp.dps = 40
+        piece = full.pieces([mpmath.mpf(c) for c in pt])
+        gm, residual, rhs = _full_code_side(p, piece)
+        assert min(abs(gm[i, j]) for i in range(4) for j in range(4) if i != j) > 1e-4  # every off-diagonal entry is on
+        E = np.array([[float(x) for x in row] for row in piece["E"]])
+        assert np.max(np.abs(residual - E)) < 1e-10 * max(1.0, np.max(np.abs(E)))
+        lhs = full.divergence(pt)
+        scale = max(abs(x) for x in rhs)
+        assert scale > 1e-3 and min(abs(x) for x in rhs) > 1e-8
+        for nu in range(4):
+            assert abs(lhs[nu] - rhs[nu]) < 1e-10 * max(1.0, scale)
+
+
+def test_full_metric_identity_fails_without_the_portal_in_the_stress() -> None:
+    import mpmath
+    rng, p, g, phi, chi = _full_draw(0)
+    full = m.FullMetricPoint(g, phi, chi, dict(p, h=0.0), COORDS)
+    pt = [0.1, -0.2, 0.15, 0.05]
+    mpmath.mp.dps = 40
+    _, _, rhs = _full_code_side(p, full.pieces([mpmath.mpf(c) for c in pt]))
+    lhs = full.divergence(pt)
     assert max(abs(a - b) for a, b in zip(lhs, rhs)) > 1e-3
