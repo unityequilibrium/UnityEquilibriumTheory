@@ -18,8 +18,8 @@ Results [AI derivation; checked in core/05_tests/physics/test_noether.py]:
        K = int x H dx - t P
    are conserved, the lattice-broken ones (P, K) with second-order convergence in dx. K is conserved only if
    every field has the same light cone (energy flux = momentum density, a symmetric stress tensor).
-   Rotations need two space dimensions; their charges follow from the same symmetric, conserved stress
-   tensor but are not simulated here.
+4. Rotations (first theorem, 2+1 lattice): angular momentum L = int (x P_y - y P_x) is conserved with
+   second-order convergence in dx, together with E, P_x, P_y and the O(2) charge.
 
 Nearest known theory: Noether (1918) first and second theorems; ADM Hamiltonian constraint; Poincare charges of
 scalar field theory. Not UET-distinct. Natural units, signature (-,+,+,+).
@@ -145,6 +145,56 @@ def wave_packets(p: FlatParams, n: int, half_width: float = 40.0) -> Lattice:
     p1, p2 = p.Z * wc * 0.6 * g1 * np.sin(kc * x), -p.Z * wc * 0.6 * g1 * np.cos(kc * x)
     pphi = p.epsilon * p.k * 0.8 * 0.5 * g2 * np.sin(kp * x)
     return Lattice(x, phi, chi1, chi2, pphi, p1, p2)
+
+
+def _lap2(f, dx):
+    return (np.roll(f, -1, 0) + np.roll(f, 1, 0) + np.roll(f, -1, 1) + np.roll(f, 1, 1) - 4.0 * f) / (dx * dx)
+
+
+def run_2d(p: FlatParams, n: int, t_end: float, half_width: float = 16.0, courant: float = 0.2) -> tuple[dict, dict]:
+    """2+1 lattice: energy, both momenta, O(2) charge and angular momentum L = int (x P_y - y P_x) at 0 and t_end."""
+    xs = np.linspace(-half_width, half_width, n, endpoint=False)
+    dx = float(xs[1] - xs[0])
+    x, y = np.meshgrid(xs, xs, indexing="ij")
+    g1 = np.exp(-(((x + 3.0) / 2.0) ** 2 + ((y - 1.0) / 2.0) ** 2))
+    g2 = np.exp(-(((x - 2.0) / 2.2) ** 2 + ((y + 2.5) / 2.2) ** 2))
+    kc, wc = 1.1, 1.5
+    f = {"phi": p.phi_star + 0.5 * g2 * np.cos(0.8 * x),
+         "chi1": 0.6 * g1 * np.cos(kc * y), "chi2": 0.6 * g1 * np.sin(kc * y)}
+    mphi, mchi = p.epsilon * p.k, p.Z
+    pi = {"phi": mphi * 0.4 * g2 * np.sin(0.8 * x),
+          "chi1": mchi * wc * 0.6 * g1 * np.sin(kc * y), "chi2": -mchi * wc * 0.6 * g1 * np.cos(kc * y)}
+    mass = {"phi": mphi, "chi1": mchi, "chi2": mchi}
+    stiff = {"phi": mphi * p.phi_speed_sq, "chi1": mchi, "chi2": mchi}
+
+    def kick(h):
+        fp, f1, f2 = _forces(p, f["phi"], f["chi1"], f["chi2"])
+        for key, force in (("phi", fp), ("chi1", f1), ("chi2", f2)):
+            pi[key] += h * (stiff[key] * _lap2(f[key], dx) + force)
+
+    def measure(t):
+        H = potential_density(p, f["phi"], f["chi1"], f["chi2"]).copy()
+        Px, Py = np.zeros_like(x), np.zeros_like(x)
+        for key in f:
+            fwd_x, bwd_x = (np.roll(f[key], -1, 0) - f[key]) / dx, (f[key] - np.roll(f[key], 1, 0)) / dx
+            fwd_y, bwd_y = (np.roll(f[key], -1, 1) - f[key]) / dx, (f[key] - np.roll(f[key], 1, 1)) / dx
+            H += pi[key] ** 2 / (2 * mass[key]) + 0.25 * stiff[key] * (fwd_x**2 + bwd_x**2 + fwd_y**2 + bwd_y**2)
+            Px -= pi[key] * 0.5 * (fwd_x + bwd_x)
+            Py -= pi[key] * 0.5 * (fwd_y + bwd_y)
+        a = dx * dx
+        Q = float(-(f["chi1"] * pi["chi2"] - f["chi2"] * pi["chi1"]).sum() * a)
+        return {"E": float(H.sum() * a), "Px": float(Px.sum() * a), "Py": float(Py.sum() * a), "Q": Q,
+                "L": float((x * Py - y * Px).sum() * a)}
+
+    steps = int(round(t_end / (courant * dx)))
+    dt = t_end / steps
+    start = measure(0.0)
+    for _ in range(steps):
+        kick(0.5 * dt)
+        for key in f:
+            f[key] += dt * pi[key] / mass[key]
+        kick(0.5 * dt)
+    return start, measure(t_end)
 
 
 def run(p: FlatParams, n: int, t_end: float, courant: float = 0.2) -> tuple[dict, dict]:

@@ -9,6 +9,8 @@
 3. Translations and boosts, first theorem: on a 1+1 lattice the O(2) charge is conserved to rounding, and the
    drifts of E, P and the boost charge K converge to zero with order 2 in dx (3 grids); with a different light
    cone for phi, K is not conserved (negative control).
+4. Rotations, first theorem: on a 2+1 lattice angular momentum, energy and both momenta converge with order 2 in dx
+   and the O(2) charge is conserved to rounding.
 """
 
 from __future__ import annotations
@@ -143,3 +145,16 @@ def test_boost_charge_fails_without_a_common_light_cone() -> None:
         a, b = m.run(p, n, 8.0)
         k_drift.append(abs(b["K"] - a["K"]))
     assert k_drift[1] > 0.5 * k_drift[0] and k_drift[1] > 1e-2  # does not converge to zero
+
+
+def test_angular_momentum_on_a_2d_lattice() -> None:
+    p = _flat(1)
+    drifts = []
+    for n in (128, 256, 512):
+        a, b = m.run_2d(p, n, 4.0)
+        assert abs(b["Q"] - a["Q"]) < 1e-12 * max(1.0, abs(a["Q"]))
+        drifts.append({k: abs(b[k] - a[k]) for k in ("E", "Px", "Py", "L")})
+    for key in ("E", "Px", "Py", "L"):
+        for coarse, fine in zip(drifts, drifts[1:]):
+            assert math.log2(coarse[key] / fine[key]) == pytest.approx(2.0, abs=0.2)
+    assert drifts[-1]["L"] < 1e-3 * max(1.0, abs(a["L"]))

@@ -7,9 +7,9 @@
     "reviewer": "tool:new_formal_contract",
     "rationale": "Formal coverage generated from Standard v2 records; evidence level is set in docs/standard, not here."
   },
-  "question": "Do the conserved quantities that Noether's theorems attach to the parent action's symmetries (O(2), diffeomorphisms, translations, boosts) hold for the implemented equations with the portal on?",
+  "question": "Do the conserved quantities that Noether's theorems attach to the parent action's symmetries (O(2), diffeomorphisms, translations, boosts, rotations) hold for the implemented equations with the portal on?",
   "output": {
-    "quantity": "O(2) charge, Hamiltonian constraint, energy, momentum and boost charge",
+    "quantity": "O(2) charge, Hamiltonian constraint, energy, momentum, boost charge and angular momentum",
     "unit": "natural",
     "domain": "declared formal domain of the code",
     "accuracy": "exact or as asserted by the listed physics tests",
@@ -117,14 +117,14 @@
       "path": "core/03_lanes/symmetry/uet_noether.py",
       "kind": "working_file",
       "role": "code",
-      "sha256": "e6ba418b36c7e00e7ccda3e7d913cb4e48ac34047b30d4155320f83df7774423",
+      "sha256": "ec7c19ec59808d6ede2fed4905bb04ddd6201133546d2cbe19ec62b066910718",
       "availability": "REQUIRED"
     },
     {
       "path": "core/05_tests/physics/test_noether.py",
       "kind": "working_file",
       "role": "code",
-      "sha256": "2f208b9f3abc208ba4af78c56a907d43e723acf1d1883be34a518dd32904a94a",
+      "sha256": "6b80cfa0c5381533713208079a3a733aeb601c1bb107c0c320d7c28380718251",
       "availability": "REQUIRED"
     }
   ],
