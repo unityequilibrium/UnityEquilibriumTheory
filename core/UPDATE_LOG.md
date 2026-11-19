@@ -648,3 +648,10 @@ commit: this commit
 - เพิ่ม: โมเมนตัมเชิงมุมบน lattice 2+1 ลู่เข้าอันดับ 1.99
 - เพิ่ม: generalized Bianchi identity ∇^μE_μν = −κ(E_φ∂_νφ + ΣE_A∂_νχ_A) ถือใน metric ที่ขึ้นกับ t, x และมี g_tx ที่ 20 จุด (rel < 1e-10)
 - ยังไม่ได้: metric ที่ขึ้นกับทั้ง 4 พิกัด; ไม่ใช่สิ่งเฉพาะของ UET
+
+## 2026-11-19 — แหล่งเติม S ในระบบจริง: chemostat (C_L3_SUPPLY_CHEMOSTAT, L1)
+- ทำ: `03_lanes/persistence/uet_layer3_supply_chemostat.py` จับคู่สมการ chemostat กับสมการ pool ของชั้น 3 ทีละพจน์
+- ผล: S = D·S0, δ = D, 1/τ = D, a_iR → μ_i(R), F_i → 1/Y_i; ผู้ทดลองเป็นคนตั้ง S จึงไม่ใช่ค่าที่ไม่รู้อีกต่อไป
+- ผล: เกณฑ์ S* = δR*ₘᵢₙ ถือกับการดูดซึมแบบ Monod (20 ชุดสุ่ม ทั้งสองฝั่งเกณฑ์) และ n* = Y(S0 − R*) (rel < 1e-6); กรณีเส้นตรงตรงกับ integrator ของชั้น 3 จาก action
+- ตัวเลข: ไดอะตอมของ Tilman ที่ D = 0.25/วัน: S* = 0.0033 (Asterionella, P), 0.48 (Asterionella, Si), 0.051 (Cyclotella, P), 0.14 (Cyclotella, Si) µM/วัน
+- ไม่ใช่สิ่งเฉพาะของ UET (ทฤษฎี chemostat ของ Monod และกฎ R* ของ Tilman)
