@@ -5,11 +5,11 @@
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
     "sources": 82,
-    "entries": 935,
+    "entries": 937,
     "by_stream": {
       "book-history": 94,
       "operations": 138,
-      "research": 702,
+      "research": 704,
       "review": 1
     },
     "exact_duplicates": 0,
@@ -425,8 +425,8 @@
     },
     {
       "path": "2026/2026-11-19.md",
-      "sha256": "a309f2f4114e38a5c5d613f28e1af6a22b3e7600882494e045dd557db194b698",
-      "entries": 2
+      "sha256": "86a698c6928c2dfdb63cc04f8ecb68a858168f1de062b9e130ede6dde355c183",
+      "entries": 4
     },
     {
       "path": "2026-08-14.md",
@@ -19082,11 +19082,51 @@
       "legacy_root_path": false
     },
     {
+      "id": "2026/2026-11-19.md#layer-3-capture-and-death-rates-from-the-action",
+      "source": "2026/2026-11-19.md",
+      "anchor": "layer-3-capture-and-death-rates-from-the-action",
+      "start_line": 13,
+      "end_line": 22,
+      "title": "Layer 3 capture and death rates from the action",
+      "entry_sha256": "a574f4a40a4d855086bd30a027e9d942d7f994efc6c04a1becf0ede899db1ff5",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-19",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-19.md#layer-3-pool-loss-delta-and-supply-threshold",
+      "source": "2026/2026-11-19.md",
+      "anchor": "layer-3-pool-loss-delta-and-supply-threshold",
+      "start_line": 23,
+      "end_line": 32,
+      "title": "Layer 3 pool loss delta and supply threshold",
+      "entry_sha256": "c3cd4da1c7f33ebdd838b630346652b49257c68a3446d4d22e147f6b8d68f578",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-19",
+      "legacy_root_path": false
+    },
+    {
       "id": "2026/2026-11-19.md#claude-research-skills-under-standard-v2",
       "source": "2026/2026-11-19.md",
       "anchor": "claude-research-skills-under-standard-v2",
-      "start_line": 13,
-      "end_line": 21,
+      "start_line": 33,
+      "end_line": 41,
       "title": "Claude research skills under Standard v2",
       "entry_sha256": "3674fa5414818d87aaaaca63a8a2199fc44af999b1bb92b29f32b6a24d5eb726",
       "stream": "operations",

@@ -10,7 +10,7 @@ Indexed entries: 138. Counts describe records, not accomplishments.
 
 | Date | Record | Area | Notes |
 | --- | --- | --- | --- |
-| 2026-11-19 | [Claude research skills under Standard v2](2026/2026-11-19.md#claude-research-skills-under-standard-v2) (L13) | repo-ops | explicit_stream_and_area |
+| 2026-11-19 | [Claude research skills under Standard v2](2026/2026-11-19.md#claude-research-skills-under-standard-v2) (L33) | repo-ops | explicit_stream_and_area |
 | 2026-11-19 | [PR #62 brought up to date and PR #65 completeness fix](2026/2026-11-19.md#pr-62-brought-up-to-date-and-pr-65-completeness-fix) (L3) | repo-ops | explicit_stream_and_area |
 | 2026-11-18 | [Route research output to the current Topic tree](2026/2026-11-18.md#route-research-output-to-the-current-topic-tree) (L335) | repo-ops | explicit_stream_and_area |
 | 2026-11-18 | [Archive move of C files: checked, not done](2026/2026-11-18.md#archive-move-of-c-files-checked-not-done) (L295) | repo-ops | explicit_stream_and_area |

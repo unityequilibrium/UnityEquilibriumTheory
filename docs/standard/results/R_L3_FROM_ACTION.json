@@ -1,0 +1,52 @@
+{
+  "schema": "uet-result-v2",
+  "result_id": "R_L3_FROM_ACTION",
+  "claim_id": "C_L3_FROM_ACTION",
+  "level": "L1_CONSISTENT",
+  "outcome": "PASS",
+  "numbers": [
+    {
+      "name": "layer2_limit",
+      "value": "resting thermal pool through the general occupation integral equals the layer 2 Landau-damping closed form at 6 random points (rel 1e-8)",
+      "uncertainty": null,
+      "unit": "natural"
+    },
+    {
+      "name": "lorentz_covariance",
+      "value": "moving thermal stream (v 0.1 to 0.7) equals the boosted rest-frame value at 8 random points (rel 1e-7)",
+      "uncertainty": null,
+      "unit": "natural"
+    },
+    {
+      "name": "isotropic_pools_damp",
+      "value": "rho > 0 and equal to the telescoped integral over [a, a + w] for 10 random isotropic occupations with inverted bumps",
+      "uncertainty": null,
+      "unit": "natural"
+    },
+    {
+      "name": "cherenkov_capture",
+      "value": "rho < 0 (capture) exactly when w < v q at 10 random points; a resting pool never captures",
+      "uncertainty": null,
+      "unit": "natural"
+    },
+    {
+      "name": "linearity",
+      "value": "rho of a stream of strength R equals R times the reference stream (rel 1e-12), so a_i R - 1/tau_i is exact at one loop",
+      "uncertainty": null,
+      "unit": "natural"
+    },
+    {
+      "name": "selection",
+      "value": "four modes with action-derived a_i and tau_i (R* = 0.485, 0.644, 0.899, 0.701): only the lowest R* survives and R settles at 0.485",
+      "uncertainty": null,
+      "unit": "natural"
+    }
+  ],
+  "producer": {
+    "script": "core/05_tests/physics/test_layer3_from_action.py",
+    "commit": "a2b6a9efe"
+  },
+  "artifacts": [],
+  "date": "2026-11-19",
+  "note": "Derivation and numerical check only; no external data. From the same one-loop spectral function that gave layer 2, a phi mode in a chi medium has per-capita growth a_i R - 1/tau_i with capture a_i = -rho_stream/(2w) and death 1/tau_i = rho_sink/(2w) (the layer 2 damping rate); the quantum F_i = w_i/e_s follows from energy conservation. An isotropic pool, thermal or not, can only damp phi; capture needs a directed flow and occurs only below the Cherenkov line w < v q. Supply S, loss delta and the set of modes are not fixed by the action. Nearest known theory: laser rate equations and mode competition (Lamb 1964), beam-plasma Cherenkov instability, consumer-resource ecology. Not UET-distinct. The capture mechanism shown is one channel the AI chose (a moving thermal chi stream); it is not the only possible resource."
+}
