@@ -6,10 +6,11 @@
 
 These are source-linked historical records, not proof of completed research, successful publication, or current scientific readiness.
 
-Indexed entries: 135. Counts describe records, not accomplishments.
+Indexed entries: 136. Counts describe records, not accomplishments.
 
 | Date | Record | Area | Notes |
 | --- | --- | --- | --- |
+| 2026-11-19 | [Claude research skills under Standard v2](2026/2026-11-19.md#claude-research-skills-under-standard-v2) (L3) | repo-ops | explicit_stream_and_area |
 | 2026-11-18 | [Route research output to the current Topic tree](2026/2026-11-18.md#route-research-output-to-the-current-topic-tree) (L285) | repo-ops | explicit_stream_and_area |
 | 2026-11-18 | [Core alignment step 1: inventory of every core file](2026/2026-11-18.md#core-alignment-step-1-inventory-of-every-core-file) (L53) | repo-ops, research-core | explicit_stream_and_area |
 | 2026-11-18 | [README v0.9.1 in English and Thai](2026/2026-11-18.md#readme-v091-in-english-and-thai) (L33) | documentation-system | explicit_stream_and_area |

@@ -4,11 +4,11 @@
   "generator_sha256": "b32005e4bdbf59da6681ae630fa1d9d4415c361f7523be18c8b52a86dc8c93e9",
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
-    "sources": 81,
-    "entries": 928,
+    "sources": 82,
+    "entries": 929,
     "by_stream": {
       "book-history": 94,
-      "operations": 135,
+      "operations": 136,
       "research": 698,
       "review": 1
     },
@@ -422,6 +422,11 @@
       "path": "2026/2026-11-18.md",
       "sha256": "77a36582afc5722a45eead3920bda64ca69a38fee0995b8cc0c7710f586e61fb",
       "entries": 29
+    },
+    {
+      "path": "2026/2026-11-19.md",
+      "sha256": "3228a9de065ae22f1baced23e41c73dfaa38745b9bbf79aec30404ae72f967b4",
+      "entries": 1
     },
     {
       "path": "2026-08-14.md",
@@ -18954,6 +18959,26 @@
       "basis": "explicit_stream_and_area",
       "flags": [],
       "date": "2026-11-18",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-19.md#claude-research-skills-under-standard-v2",
+      "source": "2026/2026-11-19.md",
+      "anchor": "claude-research-skills-under-standard-v2",
+      "start_line": 3,
+      "end_line": 11,
+      "title": "Claude research skills under Standard v2",
+      "entry_sha256": "3674fa5414818d87aaaaca63a8a2199fc44af999b1bb92b29f32b6a24d5eb726",
+      "stream": "operations",
+      "areas": [
+        "repo-ops"
+      ],
+      "related_streams": [
+        "operations"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-19",
       "legacy_root_path": false
     },
     {
