@@ -640,3 +640,11 @@ commit: this commit
 - ผล: δ มาจาก action; S ไม่ได้มา (ถ้ามีแต่สนามของ action, S = 0 และทุกโหมดตาย); อยู่รอดได้เมื่อขอบเขตเติม S > S* = δR*ₘᵢₙ
 - ตรวจ: 13 physics tests (ค่า λ จาก action, ตาราง amplitude, ลิมิตไม่สัมพัทธ์ order T/M, ความหนาแน่น Bose → Boltzmann, เกณฑ์ S*)
 - ข้อจำกัด: tree level, ใช้โมเมนตัมแบบ Boltzmann, การชนหนึ่งครั้ง = ออกจากกระแส; ใกล้ beam attenuation / chemostat / pump threshold ของเลเซอร์
+
+## 2026-11-19 — Noether coverage of the parent action (C_NOETHER_COVERAGE, L1)
+- ทำ: `03_lanes/symmetry/uet_noether.py` ตรวจปริมาณอนุรักษ์ของ symmetry ทุกตัวใน action: O(2), diffeomorphism, การเลื่อน และ boost
+- ผล: ประจุ O(2) อนุรักษ์แม้มี portal; identity ของ diffeomorphism (Bianchi I) รักษา constraint ของพลังงานรวม; บน lattice ประจุ O(2) คงที่ถึง 2e-15 ส่วน E, P และประจุ boost K ลู่เข้าอันดับ 2.00
+- ตัวควบคุมเชิงลบ: ทำลาย reparametrization แล้ว identity พัง; ให้ φ มี light cone ต่างไป K ไม่อนุรักษ์ (drift 0.57)
+- เพิ่ม: โมเมนตัมเชิงมุมบน lattice 2+1 ลู่เข้าอันดับ 1.99
+- เพิ่ม: generalized Bianchi identity ∇^μE_μν = −κ(E_φ∂_νφ + ΣE_A∂_νχ_A) ถือใน metric ที่ขึ้นกับ t, x และมี g_tx ที่ 20 จุด (rel < 1e-10)
+- ยังไม่ได้: metric ที่ขึ้นกับทั้ง 4 พิกัด; ไม่ใช่สิ่งเฉพาะของ UET

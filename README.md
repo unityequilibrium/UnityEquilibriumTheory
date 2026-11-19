@@ -4,7 +4,7 @@
 >
 > The Thai and English files have the same content. Edit both together.
 
-![Evidence](https://img.shields.io/badge/claims-29_L1_·_18_L2_·_3_FAILED-blue)
+![Evidence](https://img.shields.io/badge/claims-30_L1_·_18_L2_·_3_FAILED-blue)
 ![Topics](https://img.shields.io/badge/research_topics-40-blue)
 ![License](https://img.shields.io/badge/License-MIT-green)
 
@@ -58,6 +58,8 @@ $$F(\varphi) = 1 + \varepsilon\xi\delta^2,\qquad U = \rho_* + \tfrac{1}{2}\mu^2\
 | ξ, μ, λ | Shape of the response field's coupling and potential |
 
 The metric, response and matter equations follow from this action by derivation (checked symbolically, claim `C_PARENT_EOM_DERIVED`, L1).
+Its symmetries give the conserved quantities Noether's theorems require: the matter charge (O(2)) survives the exchange with space,
+total energy of matter, response field and geometry is conserved while matter energy alone is not, momentum, angular momentum and the boost charge are conserved, the boost charge because both fields share one light cone (claim `C_NOETHER_COVERAGE`, L1).
 Matter alone does not conserve energy; matter plus the response field does.
 
 ### Layer 2: an open system burns free energy and leaves a trace
@@ -144,7 +146,7 @@ What UET can add is a tested map of where one set of rules holds across fields, 
 ## 4. Evidence so far
 
 Levels follow [`docs/STANDARD.md`](docs/STANDARD.md): `L1` internally consistent, `L2` confronted with external data, `L3` externally replicated.
-The registry is [`docs/standard/claims.json`](docs/standard/claims.json) (50 claims: 29 at L1, 18 at L2, 3 FAILED; none at L3).
+The registry is [`docs/standard/claims.json`](docs/standard/claims.json) (51 claims: 30 at L1, 18 at L2, 3 FAILED; none at L3).
 Test criteria were committed and approved before each comparison. None of these comparisons was blind.
 
 **Failed** (kept as results, not hidden):

@@ -66,6 +66,15 @@
       "note": "Supports author point 2 mathematically. Calling the response field 'structure of space' is an interpretation."
     },
     {
+      "claim_id": "C_NOETHER_COVERAGE",
+      "statement": "The parent action's symmetries give the conserved quantities Noether's theorems require for the implemented equations: the O(2) charge (chi number) is conserved with the portal on; diffeomorphism invariance gives the generalized Bianchi identity nabla^mu E_mu_nu = -kappa (E_phi d_nu phi + sum_A E_A d_nu chi_A) for the implemented residuals, so the total energy-momentum of matter, response field and geometry is conserved while matter energy alone is not; in flat space energy, momentum, angular momentum and the boost charge are conserved, the boost charge only because phi and chi share one light cone.",
+      "level": "L1_CONSISTENT",
+      "evidence": [
+        "R_NOETHER_COVERAGE"
+      ],
+      "note": "Covers O(2), diffeomorphisms (Bianchi I and an inhomogeneous non-diagonal metric in t and x), translations and boosts (1+1 lattice) and rotations (2+1 lattice). Nearest known theory: Noether 1918, ADM constraint, Poincare charges. Not UET-distinct."
+    },
+    {
       "claim_id": "C_VACUUM_SHIFT_ROUTE",
       "statement": "The canonical UET potential has a true vacuum with psi0 != 0 when chi condenses (m2_chi < 0), and can have one with all masses positive when lam_chi is small (explicit example); then alpha0 != 0 and gamma_PPN != 1. A sufficient condition for psi0 = 0 is m2_chi > 0 and g_c^2 <= 2 lam_chi m2_psi.",
       "level": "L1_CONSISTENT",

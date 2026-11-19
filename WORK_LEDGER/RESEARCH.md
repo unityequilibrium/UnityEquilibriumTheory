@@ -6,10 +6,11 @@
 
 These are source-linked historical records, not proof of completed research, successful publication, or current scientific readiness.
 
-Indexed entries: 705. Counts describe records, not accomplishments.
+Indexed entries: 706. Counts describe records, not accomplishments.
 
 | Date | Record | Area | Notes |
 | --- | --- | --- | --- |
+| 2026-11-19 | [Noether coverage of the parent action](2026/2026-11-19.md#noether-coverage-of-the-parent-action) (L63) | research-core | explicit_stream_and_area |
 | 2026-11-19 | [Topic 0.13 Ding figure locator (option 1)](2026/2026-11-19.md#topic-013-ding-figure-locator-option-1) (L43) | research-core | explicit_stream_and_area |
 | 2026-11-19 | [Layer 3 pool loss delta and supply threshold](2026/2026-11-19.md#layer-3-pool-loss-delta-and-supply-threshold) (L23) | research-core | explicit_stream_and_area |
 | 2026-11-19 | [Layer 3 capture and death rates from the action](2026/2026-11-19.md#layer-3-capture-and-death-rates-from-the-action) (L13) | research-core | explicit_stream_and_area |
