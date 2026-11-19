@@ -1,0 +1,233 @@
+{
+  "schema_version": "uet-calculation-contract-v1",
+  "contract_id": "T024_INNOVATION_INTERVAL",
+  "profile": "PHYSICAL_COMPARISON",
+  "review": {
+    "status": "INCOMPLETE",
+    "reviewer": "agent:claude-t024",
+    "rationale": "Methodological contract for draft Test Card T024. The evidence decision lives in docs/standard. Introduction years transcribed from Nordhaus 1997 Table 1.1 (rows realigned against the chapter text); world population downloaded unchanged from Our World in Data.",
+    "coverage_evidence": [
+      "docs/data/external/economics/lighting/nordhaus1997_table1_1_milestones.csv",
+      "docs/data/external/economics/population/owid_population_world.csv"
+    ]
+  },
+  "question": "Do intervals between lighting introductions shrink with world population with slope -0.27 (Bettencourt et al. 2007) or -1 (Kremer 1993)?",
+  "output": {
+    "quantity": "slope b of log10 interval on log10 world population and its 95 percent interval",
+    "unit": "1",
+    "domain": "lighting introductions 3000 BC to the 1980s (11 entries, 10 intervals); world population",
+    "accuracy": "Student t 95 percent interval on the slope; decade labels coded as decade + 5.",
+    "claim_intent": "DIAGNOSTIC"
+  },
+  "model": {
+    "formula_ids": [
+      "KREMER1993_INVENTION_RATE",
+      "BETTENCOURT2007_INNOVATION_CYCLE"
+    ],
+    "assumptions": "Lighting introductions stand for innovation in general; world population stands for the innovating population.",
+    "approximation": "Decade labels at decade + 5; log-linear population interpolation between listed years.",
+    "initial_boundary": "Primary list and exclusions fixed in the script before the run.",
+    "drive_environment": "Historical world population as compiled by HYDE 3.3, Gapminder and UN WPP.",
+    "parameters": "No fitting of beta; beta = 1.27 from Bettencourt et al. 2007; Kremer slope -1."
+  },
+  "data_policy": {
+    "uses_observations": true,
+    "calibration_ids": [],
+    "comparison_ids": [
+      "NORDHAUS1997_LIGHTING_MILESTONES",
+      "OWID_POPULATION_WORLD_2026"
+    ],
+    "independent_validation": false,
+    "holdout_policy": "No holdout. Both tables seen while transcribing and registering (SEEN_SUMMARY); no slope computed before the card; declared in Test Card T024."
+  },
+  "observation": {
+    "system_partition": {
+      "role_mode": "RELATIONAL",
+      "accounting_component_id": "system_state",
+      "boundary": "Dated lighting introductions and world population; published tables only.",
+      "systems": [
+        {
+          "id": "population",
+          "state": "Lighting technologies and the world population that introduced them",
+          "state_accounting": {
+            "kind": "INDEPENDENT",
+            "state_ids": [
+              "population.technologies"
+            ],
+            "owner_ids": [],
+            "rule": "Rows as published."
+          }
+        },
+        {
+          "id": "camera",
+          "state": "Published historical measurements",
+          "state_accounting": {
+            "kind": "INDEPENDENT",
+            "state_ids": [
+              "camera.record"
+            ],
+            "owner_ids": [],
+            "rule": "Observer record only."
+          }
+        }
+      ],
+      "couplings": [
+        {
+          "id": "imaging",
+          "source": "population",
+          "target": "camera",
+          "kind": "DETECTION",
+          "component_id": "detector",
+          "map": "Historical dating of lighting introductions and population estimates"
+        },
+        {
+          "id": "illumination_backaction",
+          "source": "camera",
+          "target": "population",
+          "kind": "BACKACTION",
+          "component_id": "detector",
+          "map": "None; historical record"
+        }
+      ],
+      "observables": [
+        {
+          "id": "life_history",
+          "detector_id": "camera",
+          "target_systems": [
+            "population"
+          ],
+          "backaction_targets": [
+            "population"
+          ],
+          "backaction_scope_reason": "Single assessed owner.",
+          "quantity": "introduction year of each lighting technology and world population in that year",
+          "readout_map": "Published table values; read only",
+          "component_id": "detector"
+        }
+      ]
+    },
+    "source_state": "Lighting technologies and the population that introduced them.",
+    "generated_trace": "Not a UET trace variable.",
+    "carrier": "Not applicable.",
+    "observer_state": "Nordhaus 1997 Table 1.1 and Our World in Data compilations.",
+    "readout": "Efficiency and labor price of light.",
+    "backaction": "None.",
+    "frame": "Not applicable",
+    "time_convention": "Not applicable",
+    "product_level": "published derived quantities (not raw data)",
+    "corrections": [
+      {
+        "id": "published_compilation_upstream",
+        "state": "APPLIED_UPSTREAM",
+        "evidence": "docs/data/external/economics/lighting/nordhaus1997_table1_1_milestones.csv"
+      }
+    ]
+  },
+  "components": [
+    {
+      "id": "system_state",
+      "group": "system_state",
+      "disposition": "MODELED",
+      "reason": "Introduction years and population as fixed in the card.",
+      "evidence": [
+        "docs/data/external/economics/lighting/nordhaus1997_table1_1_milestones.csv"
+      ]
+    },
+    {
+      "id": "drive_environment",
+      "group": "drive_environment",
+      "disposition": "UPSTREAM_CORRECTED",
+      "reason": "Dating and population estimation done upstream by the compilers; not recomputed here.",
+      "evidence": [
+        "docs/data/external/economics/lighting/nordhaus1997_table1_1_milestones.csv"
+      ]
+    },
+    {
+      "id": "propagation",
+      "group": "propagation",
+      "disposition": "NOT_APPLICABLE",
+      "reason": "No signal propagation.",
+      "evidence": []
+    },
+    {
+      "id": "frame_time",
+      "group": "frame_time",
+      "disposition": "UPSTREAM_CORRECTED",
+      "reason": "Dating and population estimation done upstream by the compilers; not recomputed here.",
+      "evidence": [
+        "docs/data/external/economics/lighting/nordhaus1997_table1_1_milestones.csv"
+      ]
+    },
+    {
+      "id": "detector",
+      "group": "detector",
+      "disposition": "UPSTREAM_CORRECTED",
+      "reason": "Dating and population estimation done upstream by the compilers; not recomputed here.",
+      "evidence": [
+        "docs/data/external/economics/lighting/nordhaus1997_table1_1_milestones.csv"
+      ]
+    },
+    {
+      "id": "processing",
+      "group": "processing",
+      "disposition": "MODELED",
+      "reason": "Least-squares slope with a Student t interval; outcome rule fixed in Test Card T024.",
+      "evidence": [
+        "docs/data/external/economics/lighting/nordhaus1997_table1_1_milestones.csv"
+      ]
+    },
+    {
+      "id": "numerics",
+      "group": "numerics",
+      "disposition": "MODELED",
+      "reason": "Ratios only.",
+      "evidence": [
+        "docs/data/external/economics/lighting/nordhaus1997_table1_1_milestones.csv"
+      ]
+    }
+  ],
+  "error_budget": {
+    "unit": "1",
+    "numerical": "Floating point only.",
+    "approximation": "Decade labels at decade + 5 shift intervals by up to 5 years; world population instead of the inventing country's.",
+    "measurement": "Historical dates and population estimates without error bars; population before 1800 uncertain by tens of percent.",
+    "systematic": "Table 1.1 rows realigned from a scrambled PDF text layer and checked against the chapter text; the choice of which rows count as new technologies is fixed in the script.",
+    "omissions": "Rows before 10,000 BC and undated rows not used.",
+    "dependence": "Single compilation for dates; single compilation for population.",
+    "acceptance": "Outcome categories fixed in Test Card T024.",
+    "omission_limit": null
+  },
+  "identities": [
+    {
+      "path": "docs/data/external/economics/lighting/nordhaus1997_table1_1_milestones.csv",
+      "kind": "working_file",
+      "role": "input",
+      "sha256": "cde8f83de07f6d09698942448a21dbcee29b807d7b34cbd14139334a4202f545",
+      "availability": "REQUIRED"
+    },
+    {
+      "path": "docs/data/external/economics/population/owid_population_world.csv",
+      "kind": "working_file",
+      "role": "input",
+      "sha256": "ec302779f7ee1b184bece735d53939069780f0f13f2f392503b6a22482094957",
+      "availability": "REQUIRED"
+    },
+    {
+      "path": "core/03_lanes/persistence/t024_innovation_interval.py",
+      "kind": "working_file",
+      "role": "code",
+      "sha256": "0a9df7327efc5845980eca90f6ded747cb9e06d12e94233d82b5d5183c932e8f",
+      "availability": "REQUIRED"
+    }
+  ],
+  "entrypoints": [
+    "core/03_lanes/persistence/t024_innovation_interval.py"
+  ],
+  "evidence": [
+    "core/03_lanes/persistence/t024_innovation_interval.py",
+    "docs/data/external/economics/lighting/nordhaus1997_table1_1_milestones.csv",
+    "docs/data/external/economics/population/owid_population_world.csv"
+  ],
+  "claim_boundary": "Model selection between two borrowed scaling principles on one technology line and world population; not a UET-distinct prediction and not a test of urban scaling within cities.",
+  "next_action": "Run done and recorded as FAILED for beta = 1.27; a later card may test Kremer slope -1 on another technology line."
+}

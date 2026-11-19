@@ -6,11 +6,14 @@
 
 These are source-linked historical records, not proof of completed research, successful publication, or current scientific readiness.
 
-Indexed entries: 135. Counts describe records, not accomplishments.
+Indexed entries: 138. Counts describe records, not accomplishments.
 
 | Date | Record | Area | Notes |
 | --- | --- | --- | --- |
-| 2026-11-19 | [Move For Work to topics/ and diagnose the Topic 0.13 leftover](2026/2026-11-19.md#move-for-work-to-topics-and-diagnose-the-topic-013-leftover) (L3) | repo-ops | explicit_stream_and_area |
+| 2026-11-19 | [Move For Work to topics/ and diagnose the Topic 0.13 leftover](2026/2026-11-19.md#move-for-work-to-topics-and-diagnose-the-topic-013-leftover) (L33) | repo-ops | explicit_stream_and_area |
+| 2026-11-19 | [PR #62 brought up to date and PR #65 completeness fix](2026/2026-11-19.md#pr-62-brought-up-to-date-and-pr-65-completeness-fix) (L3) | repo-ops | explicit_stream_and_area |
+| 2026-11-18 | [Route research output to the current Topic tree](2026/2026-11-18.md#route-research-output-to-the-current-topic-tree) (L335) | repo-ops | explicit_stream_and_area |
+| 2026-11-18 | [Archive move of C files: checked, not done](2026/2026-11-18.md#archive-move-of-c-files-checked-not-done) (L295) | repo-ops | explicit_stream_and_area |
 | 2026-11-18 | [Core alignment step 1: inventory of every core file](2026/2026-11-18.md#core-alignment-step-1-inventory-of-every-core-file) (L53) | repo-ops, research-core | explicit_stream_and_area |
 | 2026-11-18 | [README v0.9.1 in English and Thai](2026/2026-11-18.md#readme-v091-in-english-and-thai) (L33) | documentation-system | explicit_stream_and_area |
 | 2026-11-18 | [PR #59 admin merge past a known legacy CI failure](2026/2026-11-18.md#pr-59-admin-merge-past-a-known-legacy-ci-failure) (L23) | repo-ops | explicit_stream_and_area |

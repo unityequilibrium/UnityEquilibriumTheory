@@ -24,6 +24,8 @@ core/00_governance/calculation_contracts/b7_free_energy_burn_formal.json	00_gove
 core/00_governance/calculation_contracts/b8_psi_matter_burn_formal.json	00_governance/calculation_contracts	.json	D	0	0	0	0	0	0	0	1	A	W9	Calculation contract of a current Test Card or formal check (uet_psi_matter_burn.py); CI audit reads it
 core/00_governance/calculation_contracts/core_engine_formal.json	00_governance/calculation_contracts	.json	D	0	0	0	0	0	0	0	2	A	W9	Calculation contract of a current Test Card or formal check (layer1.py, layer23.py, _load.py, engine_pilot_stars.py); CI audit reads it
 core/00_governance/calculation_contracts/growing_abundance_formal.json	00_governance/calculation_contracts	.json	D	0	0	0	0	0	0	0	1	A	W9	Calculation contract of a current Test Card or formal check (uet_growing_abundance.py); CI audit reads it
+core/00_governance/calculation_contracts/l2_from_action_formal.json	00_governance/calculation_contracts	.json	NEW	-	-	-	-	-	-	-	-	A	S3	Formal contract of the layer 2 derivation
+core/00_governance/calculation_contracts/l2_second_law_formal.json	00_governance/calculation_contracts	.json	NEW	-	-	-	-	-	-	-	-	A	S3	Formal contract of the layer 2 second law
 core/00_governance/calculation_contracts/l3_lv_map_formal.json	00_governance/calculation_contracts	.json	NEW	-	-	-	-	-	-	-	-	A	W10	Formal contract of the layer-3 to Lotka-Volterra map (claim C_L3_LV_MAP)
 core/00_governance/calculation_contracts/l3_persistence_selection_formal.json	00_governance/calculation_contracts	.json	D	0	0	0	0	0	0	0	1	A	W9	Calculation contract of a current Test Card or formal check (uet_persistence_selection.py); CI audit reads it
 core/00_governance/calculation_contracts/matter_space_observer.json	00_governance/calculation_contracts	.json	D	0	0	0	0	0	1	0	3	C	W9	Calculation contract of a legacy C lane; stays in place because the CI completeness audit reads it
@@ -442,6 +444,8 @@ core/03_lanes/open_system/t006_solar_mass_loss.py	03_lanes/open_system	.py	A	1	3
 core/03_lanes/open_system/t015_he_ii_tree_level.py	03_lanes/open_system	.py	A	1	2	0	1	0	0	1	1	A	W2	Producer of a registered Test Card result
 core/03_lanes/open_system/uet_free_energy_burn.py	03_lanes/open_system	.py	A_DEP	1	0	1	2	0	0	1	1	A	W2	Model code of the new equations, used by producers or physics tests
 core/03_lanes/open_system/uet_layer2_dissipation.py	03_lanes/open_system	.py	A_DEP	1	0	1	4	0	0	1	0	A	W2	Model code of the new equations, used by producers or physics tests
+core/03_lanes/open_system/uet_layer2_from_action.py	03_lanes/open_system	.py	NEW	-	-	-	-	-	-	-	-	A	S3	Layer 2 derived from the parent action: chi as a thermal bath for phi (claim C_L2_FROM_ACTION)
+core/03_lanes/open_system/uet_layer2_second_law.py	03_lanes/open_system	.py	NEW	-	-	-	-	-	-	-	-	A	S3	Layer 2 second law and burn chain from the action-derived spectral function (claim C_L2_SECOND_LAW)
 core/03_lanes/open_system/uet_portal_drag.py	03_lanes/open_system	.py	A_DEP	1	0	2	3	0	0	1	1	A	W2	Model code of the new equations, used by producers or physics tests
 core/03_lanes/open_system/uet_portal_drag_bound.py	03_lanes/open_system	.py	A_DEP	1	0	1	2	0	0	1	1	A	W2	Model code of the new equations, used by producers or physics tests
 core/03_lanes/open_system/uet_portal_drag_derived.py	03_lanes/open_system	.py	A_DEP	1	0	1	3	0	0	1	1	A	W2	Model code of the new equations, used by producers or physics tests
@@ -689,6 +693,8 @@ core/05_tests/physics/test_field_causality.py	05_tests/physics	.py	A	1	1	0	2	0	0
 core/05_tests/physics/test_free_energy_burn.py	05_tests/physics	.py	A	1	1	0	1	0	0	1	1	A	W7	Physics test (STANDARD section 6) of the new equations; counted by check_physics_tests
 core/05_tests/physics/test_growing_abundance.py	05_tests/physics	.py	A	1	1	0	0	0	0	1	1	A	W7	Physics test (STANDARD section 6) of the new equations; counted by check_physics_tests
 core/05_tests/physics/test_layer2_dissipation.py	05_tests/physics	.py	A	1	1	1	3	0	0	1	1	A	W7	Physics test (STANDARD section 6) of the new equations; counted by check_physics_tests
+core/05_tests/physics/test_layer2_from_action.py	05_tests/physics	.py	NEW	-	-	-	-	-	-	-	-	A	S3	Physics test of the layer 2 derivation
+core/05_tests/physics/test_layer2_second_law.py	05_tests/physics	.py	NEW	-	-	-	-	-	-	-	-	A	S3	Physics test of the layer 2 second law
 core/05_tests/physics/test_layer2_to_3.py	05_tests/physics	.py	A	2	1	0	2	0	0	2	1	A	W7	Physics test (STANDARD section 6) of the new equations; counted by check_physics_tests
 core/05_tests/physics/test_layer3_lv_map.py	05_tests/physics	.py	NEW	-	-	-	-	-	-	-	-	A	W10	Physics test of the layer-3 to Lotka-Volterra map
 core/05_tests/physics/test_lighting_succession.py	05_tests/physics	.py	A	0	1	0	0	0	0	0	1	A	W7	Physics test (STANDARD section 6) of the new equations; counted by check_physics_tests

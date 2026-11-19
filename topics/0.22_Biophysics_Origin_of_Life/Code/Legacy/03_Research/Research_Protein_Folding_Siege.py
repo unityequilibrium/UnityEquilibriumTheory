@@ -16,12 +16,8 @@ We use "Grover-like" Search to find the lowest energy configuration instantly.
 Sequence: H H P P H H P H H P P H H (Classic Benchmark)
 """
 
-from docs import ROOT_PATH
 from pathlib import Path
 current_path = Path(__file__).resolve()
-root_path = ROOT_PATH
-from docs import ROOT_PATH
-root_path = ROOT_PATH
 import numpy as np
 import random
 import time
@@ -147,38 +143,40 @@ def run_protein_siege():
     else:
         print("\n⚠️ PARTIAL: Folded but maybe not optimal.")
 
-    # Visualize
-    try:
-        # Go up to Topic Root (Code -> Topic) -> Result
-        fig_path = current_path.parent.parent.parent / "Result"
-        fig_path.mkdir(parents=True, exist_ok=True)
+    save_fold_figure(sequence, best_coords, best_energy)
 
-        plt.figure(figsize=(6, 6))
-        x = [c[0] for c in best_coords]
-        y = [c[1] for c in best_coords]
 
-        for i in range(n):
-            color = "red" if sequence[i] == "H" else "blue"
-            plt.plot(x[i], y[i], "o", color=color, markersize=15, zorder=2)
-            plt.text(
-                x[i],
-                y[i],
-                sequence[i],
-                color="white",
-                ha="center",
-                va="center",
-                fontweight="bold",
-                zorder=3,
-            )
+def save_fold_figure(sequence, best_coords, best_energy, destination=None):
+    n = len(sequence)
+    fig_path = Path(destination) if destination is not None else current_path.parents[3] / "Result" / "02_Figures"
+    fig_path.mkdir(parents=True, exist_ok=True)
 
-        plt.plot(x, y, "-", color="black", alpha=0.5, zorder=1)
-        plt.title(f"UET Protein Fold (Energy {best_energy})")
-        plt.grid(True)
+    plt.figure(figsize=(6, 6))
+    x = [c[0] for c in best_coords]
+    y = [c[1] for c in best_coords]
 
-        plt.savefig(fig_path / "Protein_Folding_Siege.png")
-        print(f"   🧬 Structure Plot saved to: {fig_path / 'Protein_Folding_Siege.png'}")
-    except Exception as e:
-        print(e)
+    for i in range(n):
+        color = "red" if sequence[i] == "H" else "blue"
+        plt.plot(x[i], y[i], "o", color=color, markersize=15, zorder=2)
+        plt.text(
+            x[i],
+            y[i],
+            sequence[i],
+            color="white",
+            ha="center",
+            va="center",
+            fontweight="bold",
+            zorder=3,
+        )
+
+    plt.plot(x, y, "-", color="black", alpha=0.5, zorder=1)
+    plt.title(f"UET Protein Fold (Energy {best_energy})")
+    plt.grid(True)
+
+    plt.savefig(fig_path / "Protein_Folding_Siege.png")
+    print(f"   🧬 Structure Plot saved to: {fig_path / 'Protein_Folding_Siege.png'}")
+    plt.close()
+    return fig_path / "Protein_Folding_Siege.png"
 
 
 if __name__ == "__main__":

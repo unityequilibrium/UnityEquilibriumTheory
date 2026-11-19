@@ -1,0 +1,46 @@
+{
+  "schema": "uet-result-v2",
+  "result_id": "R_T024_INNOVATION_INTERVAL",
+  "claim_id": "C_T024_INNOVATION_INTERVAL",
+  "test_card_id": "T024",
+  "level": "FAILED",
+  "outcome": "FAIL",
+  "numbers": [
+    {
+      "name": "slope_primary",
+      "value": -1.431,
+      "uncertainty": "95% interval -2.14 to -0.72 (n = 10 intervals)",
+      "unit": "1"
+    },
+    {
+      "name": "contains_bettencourt_minus_0.27",
+      "value": "no",
+      "uncertainty": null,
+      "unit": "1"
+    },
+    {
+      "name": "contains_kremer_minus_1",
+      "value": "yes",
+      "uncertainty": null,
+      "unit": "1"
+    },
+    {
+      "name": "slope_family_first_not_deciding",
+      "value": -1.296,
+      "uncertainty": "95% interval -2.31 to -0.28 (n = 5)",
+      "unit": "1"
+    }
+  ],
+  "producer": {
+    "script": "core/03_lanes/persistence/t024_innovation_interval.py",
+    "commit": "7b4f98580"
+  },
+  "artifacts": [],
+  "date": "2026-11-18",
+  "note": "FAILED for beta = 1.27 under the approved card: the 95 percent interval of the slope excludes -0.27 and contains the Kremer (1993) value -1. The two ancient intervals (1,000 and 3,784 years at 45 and 73 million people) have strong leverage; the modern intervals scatter between 3 and 73 years. The family-first variant (not deciding) gives -1.30 with an interval ending at -0.28, just short of -0.27. Scope: lighting as a proxy for innovation, world population; this does not test urban scaling within cities. Consequence for the synthesis: for innovation rate against world population, borrow Kremer's linear-in-population rate, not the urban-scaling exponent. The author approved recording this confrontation with data on 2026-11-18; a failed confrontation is recorded at level FAILED, as for T015 and T018.",
+  "approval": {
+    "approved_by": "santxkoz",
+    "date": "2026-11-18",
+    "role": "AUTHOR"
+  }
+}

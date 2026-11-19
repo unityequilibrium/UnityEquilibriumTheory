@@ -4,7 +4,7 @@
 >
 > The Thai and English files have the same content. Edit both together.
 
-![Evidence](https://img.shields.io/badge/claims-25_L1_·_18_L2_·_2_FAILED-blue)
+![Evidence](https://img.shields.io/badge/claims-29_L1_·_18_L2_·_3_FAILED-blue)
 ![Topics](https://img.shields.io/badge/research_topics-40-blue)
 ![License](https://img.shields.io/badge/License-MIT-green)
 
@@ -67,6 +67,8 @@ $$dS_{\text{sys}} = d_eS + d_iS,\quad d_iS \ge 0 \qquad P = T\,\dot S_{\text{pro
 A system inside an environment loses free energy F at burn power P. The entropy it produces, Σ, splits into a readable record I
 and a potential difference D (claim `C_R3_TRACE_RECORD_PLUS_POTENTIAL`, L1).
 Friction, noise and the second law come out of a closed system without being added by hand (claim `C_LAYER2_OPEN_FROM_CLOSED`, L1).
+Taking the matter field χ of layer 1 as a thermal bath, the layer 1 action itself gives the response field φ friction and noise that obey
+the fluctuation-dissipation (KMS) relation, so the friction is fixed by the portal coupling rather than chosen (claim `C_L2_FROM_ACTION`, L1).
 
 ### Layer 3: selection by how resources are managed
 
@@ -76,8 +78,13 @@ A system's lifetime τ comes from its stock F and how its burn power P depends o
 The number observed, N, is the birth rate b times the lifetime. Among systems that reproduce and share resources,
 the one that can live on the lowest resource level R\* wins; with two resources a stable mixed equilibrium appears
 (claims `C_L3_SELECTION_FORMAL` and `C_L3_BURN_LAW_SELECTION`, L1).
+From the layer 1 action, the death rate 1/τ is the layer 2 damping rate and the capture rate comes from the same one-loop spectral function:
+an isotropic pool of any distribution can only damp a mode, while a flowing stream feeds exactly the modes slower than the flow (the Cherenkov condition),
+and the lowest R\* wins as before (claim `C_L3_FROM_ACTION`, L1).
+The pool's loss rate also follows from the action (χ self-coupling), but its supply does not: with only the action's fields nothing persists,
+and a structure stays alive only if its boundary supplies more than S\* = δR\*ₘᵢₙ (claim `C_L3_SUPPLY`, L1).
 
-**What the equations do not yet do:** layer 1 is not yet derived together with layers 2 and 3 into one action,
+**What the equations do not yet do:** layer 2 is derived from the layer 1 action for one channel only, and layer 3 only for its capture and death rates, so the three layers are not yet one action,
 and the layers do not yet give a number that the established theories do not (section 3).
 
 ## 2. The author's reasoning
@@ -137,7 +144,7 @@ What UET can add is a tested map of where one set of rules holds across fields, 
 ## 4. Evidence so far
 
 Levels follow [`docs/STANDARD.md`](docs/STANDARD.md): `L1` internally consistent, `L2` confronted with external data, `L3` externally replicated.
-The registry is [`docs/standard/claims.json`](docs/standard/claims.json) (45 claims: 25 at L1, 18 at L2, 2 FAILED; none at L3).
+The registry is [`docs/standard/claims.json`](docs/standard/claims.json) (50 claims: 29 at L1, 18 at L2, 3 FAILED; none at L3).
 Test criteria were committed and approved before each comparison. None of these comparisons was blind.
 
 **Failed** (kept as results, not hidden):
@@ -146,6 +153,7 @@ Test criteria were committed and approved before each comparison. None of these 
 |---|---|---|
 | T015 | Superfluid He II as the condensed phase of the parent action's matter field, at tree level (the lane Topic 13 assumed) | FAILED: sound speed 848 m/s calculated vs 233.1 m/s measured, 3.6 times too high |
 | T018 | Animal lifespan = one reserve per gram ÷ metabolic rate, the same in every species (author's scope, 2026-11-17) | FAILED: birds use about 2.5 times more energy per gram over their lifespan than mammals of the same mass |
+| T024 | Intervals between lighting innovations shrink with world population as N^-0.27 (urban scaling, Bettencourt et al. 2007) | FAILED: slope -1.43 (95%: -2.14 to -0.72), consistent with Kremer's (1993) -1; the synthesis borrows Kremer for innovation against world population |
 
 **Confronted with data (L2):**
 

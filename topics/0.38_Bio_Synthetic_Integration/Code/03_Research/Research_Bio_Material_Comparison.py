@@ -99,7 +99,9 @@ class BioMaterialComparisonSim:
              print("- Reinforced Bone validated for primary structural load.")
 
         # Save results
-        output_dir = "docs/topics/0.38_Bio_Synthetic_Integration/Result"
+        from pathlib import Path
+
+        output_dir = Path(__file__).resolve().parents[2] / "Result" / "artifacts"
         os.makedirs(output_dir, exist_ok=True)
         with open(os.path.join(output_dir, "bio_material_comparison.json"), "w") as f:
             json.dump(results, f, indent=4)
