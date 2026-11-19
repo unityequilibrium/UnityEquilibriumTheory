@@ -9,7 +9,7 @@
   },
   "question": "Do the conserved quantities that Noether's theorems attach to the parent action's symmetries (O(2), diffeomorphisms, translations, boosts, rotations) hold for the implemented equations with the portal on?",
   "output": {
-    "quantity": "O(2) charge, Hamiltonian constraint, energy, momentum, boost charge and angular momentum",
+    "quantity": "O(2) charge, generalized Bianchi identity, energy, momentum, boost charge and angular momentum",
     "unit": "natural",
     "domain": "declared formal domain of the code",
     "accuracy": "exact or as asserted by the listed physics tests",
@@ -117,14 +117,14 @@
       "path": "core/03_lanes/symmetry/uet_noether.py",
       "kind": "working_file",
       "role": "code",
-      "sha256": "ec7c19ec59808d6ede2fed4905bb04ddd6201133546d2cbe19ec62b066910718",
+      "sha256": "4e63ea54957d036a4aac69f3b21054c544a317654f03bc2eede0d2b7ba2057c5",
       "availability": "REQUIRED"
     },
     {
       "path": "core/05_tests/physics/test_noether.py",
       "kind": "working_file",
       "role": "code",
-      "sha256": "6b80cfa0c5381533713208079a3a733aeb601c1bb107c0c320d7c28380718251",
+      "sha256": "a01e4a0a1b2cf6af3d31d5f7967ed7724760a95417b7cd976059d791dd26257a",
       "availability": "REQUIRED"
     }
   ],

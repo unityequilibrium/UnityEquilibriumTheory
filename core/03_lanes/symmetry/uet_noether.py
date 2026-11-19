@@ -13,6 +13,11 @@ Results [AI derivation; checked in core/05_tests/physics/test_noether.py]:
        N d/dt (dL/dN) = sum_q E_q dq/dt       (q = a, b, c, phi, chi_1, chi_2)
    so the Hamiltonian constraint (total energy of matter + phi + geometry = 0) is preserved once the other
    equations hold. Total energy is conserved; matter energy alone is not.
+   On an inhomogeneous, non-diagonal metric (all functions of t and x, g_tx != 0) the full generalized Bianchi
+   identity holds for the implemented residuals:
+       nabla^mu E_mu_nu = -kappa (E_phi d_nu phi + sum_A E_A d_nu chi_A)
+   (E_mu_nu: metric residual, E_phi: response residual, E_A: matter residuals), so every component of the total
+   stress is conserved on shell, not only the energy.
 3. Translations and boosts (first theorem, flat space, no gravity), on a 1+1 lattice of phi, chi_1, chi_2 with the
    action's potentials and portal: energy E, momentum P, charge Q and the boost charge
        K = int x H dx - t P
@@ -145,6 +150,61 @@ def wave_packets(p: FlatParams, n: int, half_width: float = 40.0) -> Lattice:
     p1, p2 = p.Z * wc * 0.6 * g1 * np.sin(kc * x), -p.Z * wc * 0.6 * g1 * np.cos(kc * x)
     pphi = p.epsilon * p.k * 0.8 * 0.5 * g2 * np.sin(kp * x)
     return Lattice(x, phi, chi1, chi2, pphi, p1, p2)
+
+
+def metric_residual_symbolic(g, ginv, einstein, gamma, phi, chi, p: dict, coords):
+    """Theory Card metric equation E_mu_nu as a sympy matrix (the form the code implements numerically):
+    E = F (G + Lambda g) + eps (g box f - nabla nabla f) - kappa (T_m + eps T_phi), f = xi (phi - phi_*)^2."""
+    import sympy as sp
+    n = len(coords)
+    d = phi - p["phi_star"]
+    f = p["xi"] * d**2
+    F = 1 + p["epsilon"] * f
+    hess = sp.Matrix(n, n, lambda a, b: sp.diff(f, coords[a], coords[b])
+                     - sum(gamma[c][a][b] * sp.diff(f, coords[c]) for c in range(n)))
+    box_f = sum(ginv[i, j] * hess[i, j] for i in range(n) for j in range(n))
+    grad = lambda u: [sp.diff(u, v) for v in coords]  # noqa: E731
+    kin = lambda du: sum(ginv[i, j] * du[i] * du[j] for i in range(n) for j in range(n))  # noqa: E731
+    dphi, dch = grad(phi), [grad(u) for u in chi]
+    c2 = chi[0] ** 2 + chi[1] ** 2
+    V = p["m2"] * c2 / 2 + p["lambda_chi"] * c2**2 / 4 - p["epsilon"] * p["h"] * d * c2 / 2
+    U = p["rho_star"] + p["mu2"] * d**2 / 2 + p["lambda_phi"] * d**4 / 4
+    Tm = sp.Matrix(n, n, lambda i, j: p["Z"] * (dch[0][i] * dch[0][j] + dch[1][i] * dch[1][j])
+                   - g[i, j] * (p["Z"] * (kin(dch[0]) + kin(dch[1])) / 2 + V))
+    Tp = sp.Matrix(n, n, lambda i, j: p["k"] * dphi[i] * dphi[j] - g[i, j] * (p["k"] * kin(dphi) / 2 + U))
+    E = sp.Matrix(n, n, lambda i, j: F * (einstein[i, j] + p["Lambda"] * g[i, j]) + p["epsilon"] * (g[i, j] * box_f - hess[i, j])
+                  - p["kappa"] * (Tm[i, j] + p["epsilon"] * Tp[i, j]))
+    return E, hess
+
+
+def divergence_evaluator(E, ginv, gamma, coords, active):
+    """Compile E, g^-1 and Gamma once; return a function point -> nabla^mu E_mu_nu (mpmath derivatives along
+    the coordinates in `active`; the others must not appear in the fields or the metric)."""
+    import mpmath
+    import sympy as sp
+    n = len(coords)
+    args = [coords[a] for a in active]
+    comp = lambda e: sp.lambdify(args, e, "mpmath")  # noqa: E731
+    fE = [[comp(E[i, j]) for j in range(n)] for i in range(n)]
+    fgi = [[comp(ginv[i, j]) for j in range(n)] for i in range(n)]
+    fgm = [[[comp(gamma[l][a][m]) for m in range(n)] for a in range(n)] for l in range(n)]
+
+    def at(point: list[float], dps: int = 40) -> list[float]:
+        mpmath.mp.dps = dps
+        x = [mpmath.mpf(v) for v in point]
+        Ev = [[fE[i][j](*x) for j in range(n)] for i in range(n)]
+        dE = [[[mpmath.mpf(0)] * n for _ in range(n)] for _ in range(n)]
+        for i in range(n):
+            for j in range(i, n):
+                for k, a in enumerate(active):
+                    order = [1 if q == k else 0 for q in range(len(args))]
+                    dE[i][j][a] = dE[j][i][a] = mpmath.diff(fE[i][j], x, order)
+        gi = [[fgi[i][j](*x) for j in range(n)] for i in range(n)]
+        gm = [[[fgm[l][a][m](*x) for m in range(n)] for a in range(n)] for l in range(n)]
+        return [float(sum(gi[m][a] * (dE[m][nu][a] - sum(gm[l][a][m] * Ev[l][nu] + gm[l][a][nu] * Ev[m][l]
+                                                           for l in range(n)))
+                          for m in range(n) for a in range(n))) for nu in range(n)]
+    return at
 
 
 def _lap2(f, dx):

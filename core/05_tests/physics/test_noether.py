@@ -9,6 +9,10 @@
 3. Translations and boosts, first theorem: on a 1+1 lattice the O(2) charge is conserved to rounding, and the
    drifts of E, P and the boost charge K converge to zero with order 2 in dx (3 grids); with a different light
    cone for phi, K is not conserved (negative control).
+5. Second theorem on a general metric: on an inhomogeneous, non-diagonal metric the implemented metric residual
+   equals the Theory Card form and nabla^mu E_mu_nu = -kappa (E_phi d_nu phi + sum_A E_A d_nu chi_A) with the
+   implemented residuals at 20 random off-shell points (4 draws x 5 points, rel < 1e-10); leaving the portal out
+   of the stress breaks it (negative control).
 4. Rotations, first theorem: on a 2+1 lattice angular momentum, energy and both momenta converge with order 2 in dx
    and the O(2) charge is conserved to rounding.
 """
@@ -158,3 +162,62 @@ def test_angular_momentum_on_a_2d_lattice() -> None:
         for coarse, fine in zip(drifts, drifts[1:]):
             assert math.log2(coarse[key] / fine[key]) == pytest.approx(2.0, abs=0.2)
     assert drifts[-1]["L"] < 1e-3 * max(1.0, abs(a["L"]))
+
+
+# ---------------------------------------------------------------------------
+# Second theorem on an inhomogeneous, non-diagonal metric (beyond Bianchi I)
+# ---------------------------------------------------------------------------
+
+def _general_draw(seed: int, p_override: dict | None = None):
+    rng = random.Random(7000 + seed)
+    p = random_params(rng)
+    p["h"] = rng.uniform(0.3, 1.5)
+    poly = lambda c0, s: (c0 + rng.uniform(-s, s) * T + rng.uniform(-s, s) * X + rng.uniform(-s, s) * T * X  # noqa: E731
+                          + rng.uniform(-s, s) * X**2 + rng.uniform(-s, s) * T**2)
+    N, s, a, b, c = poly(1.0, 0.15), poly(0.0, 0.15), poly(1.0, 0.15), poly(1.1, 0.15), poly(0.9, 0.15)
+    g = sp.Matrix([[-N**2, s, 0, 0], [s, a**2, 0, 0], [0, 0, b**2, 0], [0, 0, 0, c**2]])
+    G, R, gamma, ginv = einstein_and_scalar(g)
+    phi, chi = poly(p["phi_star"], 0.4), [poly(0.3, 0.4), poly(-0.2, 0.4)]
+    E, hess = m.metric_residual_symbolic(g, ginv, G, gamma, phi, chi, dict(p, **(p_override or {})), COORDS)
+    div = m.divergence_evaluator(E, ginv, gamma, COORDS, (0, 1))
+    return rng, p, g, G, R, ginv, phi, chi, E, hess, div
+
+
+def _code_side(p, g, G, R, ginv, phi, chi, hess, point):
+    response, matter = configs(p)
+    ev = lambda e: float(sp.N(sp.sympify(e).subs(point), 40))  # noqa: E731
+    mat = lambda M: np.array([[ev(M[i, j]) for j in range(4)] for i in range(4)])  # noqa: E731
+    dphi = np.array([ev(sp.diff(phi, v)) for v in COORDS])
+    fields = np.array([ev(u) for u in chi])
+    grads = np.array([[ev(sp.diff(u, v)) for v in COORDS] for u in chi])
+    from ._symbolic_geometry import box
+    residual = cov.coupled_metric_residual(mat(g), mat(G), ev(phi), dphi, mat(hess), fields, grads, response, matter)
+    E_phi = cov.coupled_response_scalar_equation_residual(ev(R), ev(box(phi, g, ginv)), ev(phi), fields, response, matter)
+    E_chi = cov.matter_eom_residual(np.array([ev(box(u, g, ginv)) for u in chi]), fields, ev(phi), response, matter)
+    rhs = [-p["kappa"] * (E_phi * dphi[nu] + E_chi[0] * grads[0][nu] + E_chi[1] * grads[1][nu]) for nu in range(4)]
+    return residual, rhs, ev
+
+
+@pytest.mark.parametrize("seed", range(4))
+def test_diffeomorphism_identity_on_a_general_metric(seed: int) -> None:
+    rng, p, g, G, R, ginv, phi, chi, E, hess, div = _general_draw(seed)
+    for _ in range(5):  # 4 draws x 5 points = 20 random off-shell points
+        t0, x0 = rng.uniform(-0.3, 0.3), rng.uniform(-0.3, 0.3)
+        point = {T: sp.Float(t0, 40), X: sp.Float(x0, 40), Y: 0, ZC: 0}
+        residual, rhs, ev = _code_side(p, g, G, R, ginv, phi, chi, hess, point)
+        for i in range(4):
+            for j in range(4):
+                assert abs(residual[i, j] - ev(E[i, j])) < 1e-10 * max(1.0, abs(residual[i, j]))
+        lhs = div([t0, x0])
+        scale = max(abs(v) for v in rhs)
+        assert scale > 1e-3  # off shell
+        for nu in range(4):
+            assert abs(lhs[nu] - rhs[nu]) < 1e-10 * max(1.0, scale)
+
+
+def test_general_identity_fails_without_the_portal_in_the_stress() -> None:
+    rng, p, g, G, R, ginv, phi, chi, E, hess, div = _general_draw(0, {"h": 0.0})
+    point = {T: sp.Float(0.1, 40), X: sp.Float(-0.2, 40), Y: 0, ZC: 0}
+    _, rhs, _ = _code_side(p, g, G, R, ginv, phi, chi, hess, point)
+    lhs = div([0.1, -0.2])
+    assert max(abs(a - b) for a, b in zip(lhs, rhs)) > 1e-3
