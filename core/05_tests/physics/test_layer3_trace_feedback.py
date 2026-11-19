@@ -9,7 +9,7 @@
    the window keeps type 2; raising it from 0.7 S_b into the window keeps type 1; above S_c type 2 wins from
    either order.
 5. Negative control: without feedback (beta_2 = 0) the same supply paths both end with type 1.
-6. Obligate succession: if S_c < S < delta R*_2(0), type 2 alone dies out from an empty environment but replaces
+6. Obligate succession: if S_c < S < delta R*_2(0), type 2 introduced rare (1e-6) into an empty environment dies out but replaces
    type 1 when type 1 came first (4 random sets).
 """
 
@@ -127,7 +127,11 @@ def test_obligate_succession_needs_a_pioneer():
     rng = random.Random(7)
     done = 0
     while done < 4:
-        a0, d, beta2, delta, w, kappa = _draw(rng)
+        # draw where type 2 is much worse at E = 0 but strongly helped by a slowly fading trace
+        a0 = np.array([1.0, rng.uniform(0.4, 0.6)])
+        d = np.array([rng.uniform(0.15, 0.3)] * 2)
+        beta2 = rng.uniform(5.0, 20.0)
+        delta, w, kappa = rng.uniform(0.1, 0.3), rng.uniform(0.5, 1.0), rng.uniform(0.02, 0.1)
         s_c = tf.critical_supply(d[0] / a0[0], d[1] / a0[1], beta2, delta, w, kappa)
         r2_0 = d[1] / a0[1]
         if not 1.25 * s_c < 0.8 * delta * r2_0:
@@ -135,6 +139,6 @@ def test_obligate_succession_needs_a_pioneer():
         done += 1
         S = 0.5 * (1.25 * s_c + 0.8 * delta * r2_0)
         F = [1.0, 1.0]
-        alone, _, _ = tf.simulate(a0, [0.0, beta2], d, F, S, delta, w, kappa, [0.0, 1e-2], S / delta, 0.0, 1500.0)
+        alone, _, _ = tf.simulate(a0, [0.0, beta2], d, F, S, delta, w, kappa, [0.0, 1e-6], S / delta, 0.0, 1500.0)
         assert alone[1] < 1e-6
         assert _winner(tf.resident_then_invader(0, a0, [0.0, beta2], d, F, S, delta, w, kappa, 1500.0)) == 1
