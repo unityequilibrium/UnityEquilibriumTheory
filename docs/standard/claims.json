@@ -454,6 +454,15 @@
       "note": "The pool loss follows from the action; the supply is a boundary flux set by an enclosing system. Nearest known theory: beam attenuation, chemostat dilution, laser pump threshold. Not UET-distinct."
     },
     {
+      "claim_id": "C_L3_SUPPLY_CHEMOSTAT",
+      "statement": "In a chemostat the layer 3 pool quantities are set by the experimenter: supply S = D S0 (dilution rate times reservoir concentration), loss delta = D and washout 1/tau = D; the persistence threshold S* = delta R*_min holds for any increasing uptake mu(R) with mu(0) = 0, the steady abundance is n* = Y (S0 - R*), and the linear (action-derived) uptake is the special case mu = a R.",
+      "level": "L1_CONSISTENT",
+      "evidence": [
+        "R_L3_SUPPLY_CHEMOSTAT"
+      ],
+      "note": "Derivation and numerical check; S* values for Tilman's diatoms at D = 0.25 per day use the registered T007 physiology and are not a comparison with an outcome. Nearest known theory: chemostat theory (Monod 1950; Novick and Szilard 1950) and Tilman's R* rule. Not UET-distinct."
+    },
+    {
       "claim_id": "C_T024_INNOVATION_INTERVAL",
       "statement": "Intervals between successive lighting introductions (Nordhaus 1997, Table 1.1) shrink with world population as Delta t ~ N^-(beta-1) with beta = 1.27 (Bettencourt et al. 2007), not as N^-1 (Kremer 1993).",
       "level": "FAILED",

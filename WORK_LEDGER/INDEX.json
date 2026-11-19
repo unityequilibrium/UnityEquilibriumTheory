@@ -5,11 +5,11 @@
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
     "sources": 82,
-    "entries": 944,
+    "entries": 945,
     "by_stream": {
       "book-history": 94,
       "operations": 140,
-      "research": 709,
+      "research": 710,
       "review": 1
     },
     "exact_duplicates": 0,
@@ -425,8 +425,8 @@
     },
     {
       "path": "2026/2026-11-19.md",
-      "sha256": "a817770b3c14a40f989237b0eeab81ce65a0125d019c7bc46b0ed661280273b9",
-      "entries": 11
+      "sha256": "d4b3f11bd1c7ae220f642d7a786c6a58c5e88c363d4f7194e7948d18f0949be9",
+      "entries": 12
     },
     {
       "path": "2026-08-14.md",
@@ -19266,12 +19266,32 @@
       "source": "2026/2026-11-19.md",
       "anchor": "t025-run-t023-with-a-phylogenetic-correction-is-inconclusive",
       "start_line": 103,
-      "end_line": 111,
+      "end_line": 112,
       "title": "T025 run: T023 with a phylogenetic correction is INCONCLUSIVE",
-      "entry_sha256": "fe86d0dd43e91ff2c72b054a0468e7f936b3f06ad867430d3cd260d24488ddf4",
+      "entry_sha256": "017551b85125b60ac72c9f3737cbd47bd1b5ad9e02b055db85436272fdfcef47",
       "stream": "research",
       "areas": [
         "research-standards"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-19",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-19.md#layer-3-supply-in-a-real-system-the-chemostat",
+      "source": "2026/2026-11-19.md",
+      "anchor": "layer-3-supply-in-a-real-system-the-chemostat",
+      "start_line": 113,
+      "end_line": 121,
+      "title": "Layer 3 supply in a real system: the chemostat",
+      "entry_sha256": "c8d4d5668cf887c32e18c887f2da717071798519935dde7b88dd5a6d6cda5624",
+      "stream": "research",
+      "areas": [
+        "research-core"
       ],
       "related_streams": [
         "research"
