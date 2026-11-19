@@ -5,11 +5,11 @@
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
     "sources": 82,
-    "entries": 940,
+    "entries": 941,
     "by_stream": {
       "book-history": 94,
       "operations": 139,
-      "research": 706,
+      "research": 707,
       "review": 1
     },
     "exact_duplicates": 0,
@@ -425,8 +425,8 @@
     },
     {
       "path": "2026/2026-11-19.md",
-      "sha256": "009f3da2f42f084bef9ae08ab810103516758ce0c801387ab1c17b5537d55b72",
-      "entries": 7
+      "sha256": "45a61b92f57f9ab3f8a507fa7b14b575a0339c8643a2fbb0bae871cdb0a7eac1",
+      "entries": 8
     },
     {
       "path": "2026-08-14.md",
@@ -19186,9 +19186,29 @@
       "source": "2026/2026-11-19.md",
       "anchor": "noether-coverage-of-the-parent-action",
       "start_line": 63,
-      "end_line": 71,
+      "end_line": 72,
       "title": "Noether coverage of the parent action",
-      "entry_sha256": "4a2eb9165615b2a62d09d884c1af3724267d29d2d19640c1dfa2c6a9877bb279",
+      "entry_sha256": "e09ff8fb78d72c73618dfb09621edd60abeef37a1eb5649903cad6cff5977476",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-19",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-19.md#noether-identity-on-a-full-metric-and-the-four-coordinate-commits-pr-70-missed",
+      "source": "2026/2026-11-19.md",
+      "anchor": "noether-identity-on-a-full-metric-and-the-four-coordinate-commits-pr-70-missed",
+      "start_line": 73,
+      "end_line": 81,
+      "title": "Noether identity on a full metric, and the four-coordinate commits PR #70 missed",
+      "entry_sha256": "4983bc98b4f4aaffc93f6a95932d15b0b8f5f6e7be693c96687c8ef42b767732",
       "stream": "research",
       "areas": [
         "research-core"
