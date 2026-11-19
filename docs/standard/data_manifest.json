@@ -288,6 +288,18 @@
       "license": "numerical facts transcribed from journal articles; no figures or text redistributed",
       "visibility": "PUBLIC",
       "note": "Read from the published pages on 2026-11-19. Dai et al.'s switch density N_c is a fitted value (their Table S1 marks it not measured); it is used here as an input to convert a density into a glucose level, not as a test outcome."
+    },
+    {
+      "data_id": "GORE2009_GROWTH_VS_GLUCOSE",
+      "description": "Mean growth rate (23 h) of S. cerevisiae (BY4741-derived cheater strain) in 5% sucrose plus 0.002 to 0.03% glucose, digitised from Gore et al. (2009) Supplementary Figure 10",
+      "source": "J. Gore, H. Youk, A. van Oudenaarden, Nature 459, 253-256 (2009), Supplementary Information, Figure 10 (author manuscript PMC2888597)",
+      "doi_or_url": "https://doi.org/10.1038/nature07921 ; https://pmc.ncbi.nlm.nih.gov/articles/instance/2888597/bin/NIHMS208792-supplement-supp_info.pdf",
+      "retrieved": "2026-11-19",
+      "path": "docs/data/external/biology/yeast_sucrose/gore2009_growth_vs_glucose.csv",
+      "sha256": "a4fac664ec2806edd319f4c8779332e22588ec5d52cfc5fbf5227d8e0e843aca",
+      "license": "numerical values digitised from a published figure; no figure or text redistributed",
+      "visibility": "PUBLIC",
+      "note": "Digitised after Test Card T026 was approved and committed (22f6d95c3). Read from the figure as rendered in a browser; the figure reports a mean growth rate over 23 h, not the exponential per-capita rate. The same supplement states eps of about 0.01 (Supplementary Figure 3) and, in Supplementary Figure 2a, exponential growth rates in 0.005% and 2% glucose; those are reported in the result, not used to decide."
     }
   ]
 }

@@ -1,0 +1,10 @@
+# Gore, Youk and van Oudenaarden (2009) Nature 459, 253; Supplementary Information (PMC2888597, NIHMS208792-supplement-supp_info.pdf), Supplementary Figure 10:
+# mean growth rate over 23 h of the cheater strain in 5% sucrose plus glucose (sucrose not hydrolysed), initial OD 0.0025; power-law fit alpha = 0.15 +- 0.01.
+# Digitised on 2026-11-19 by reading pixel positions on the rendered figure (axis ticks: 0.005% glucose per 35 px, 0.05 h^-1 per 28 px); half-widths are about 2 px.
+# Digitised after Test Card T026 was approved (commit 22f6d95c3).
+glucose_percent,growth_per_h,glucose_halfwidth_log10,growth_halfwidth
+0.0021,0.173,0.06,0.005
+0.0030,0.186,0.05,0.005
+0.0050,0.200,0.03,0.005
+0.0100,0.218,0.02,0.005
+0.0300,0.259,0.01,0.005
