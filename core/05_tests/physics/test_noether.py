@@ -11,8 +11,9 @@
    cone for phi, K is not conserved (negative control).
 5. Second theorem on a general metric: on an inhomogeneous, non-diagonal metric the implemented metric residual
    equals the Theory Card form and nabla^mu E_mu_nu = -kappa (E_phi d_nu phi + sum_A E_A d_nu chi_A) with the
-   implemented residuals at 20 random off-shell points (4 draws x 5 points, rel < 1e-10); leaving the portal out
-   of the stress breaks it (negative control).
+   implemented residuals at 20 random off-shell points (4 draws x 5 points, rel < 1e-10), and again on a metric
+   whose every entry depends on t, x, y and z (2 draws x 10 points); leaving the portal out of the stress breaks
+   it (negative control).
 4. Rotations, first theorem: on a 2+1 lattice angular momentum, energy and both momenta converge with order 2 in dx
    and the O(2) charge is conserved to rounding.
 """
@@ -168,18 +169,22 @@ def test_angular_momentum_on_a_2d_lattice() -> None:
 # Second theorem on an inhomogeneous, non-diagonal metric (beyond Bianchi I)
 # ---------------------------------------------------------------------------
 
-def _general_draw(seed: int, p_override: dict | None = None):
-    rng = random.Random(7000 + seed)
+def _general_draw(seed: int, p_override: dict | None = None, all_coords: bool = False):
+    rng = random.Random((8000 if all_coords else 7000) + seed)
     p = random_params(rng)
     p["h"] = rng.uniform(0.3, 1.5)
-    poly = lambda c0, s: (c0 + rng.uniform(-s, s) * T + rng.uniform(-s, s) * X + rng.uniform(-s, s) * T * X  # noqa: E731
-                          + rng.uniform(-s, s) * X**2 + rng.uniform(-s, s) * T**2)
+    if all_coords:
+        poly = lambda c0, s: (c0 + sum(rng.uniform(-s, s) * v for v in COORDS)  # noqa: E731
+                              + rng.uniform(-s, s) * T * X + rng.uniform(-s, s) * Y * ZC)
+    else:
+        poly = lambda c0, s: (c0 + rng.uniform(-s, s) * T + rng.uniform(-s, s) * X + rng.uniform(-s, s) * T * X  # noqa: E731
+                              + rng.uniform(-s, s) * X**2 + rng.uniform(-s, s) * T**2)
     N, s, a, b, c = poly(1.0, 0.15), poly(0.0, 0.15), poly(1.0, 0.15), poly(1.1, 0.15), poly(0.9, 0.15)
     g = sp.Matrix([[-N**2, s, 0, 0], [s, a**2, 0, 0], [0, 0, b**2, 0], [0, 0, 0, c**2]])
     G, R, gamma, ginv = einstein_and_scalar(g)
     phi, chi = poly(p["phi_star"], 0.4), [poly(0.3, 0.4), poly(-0.2, 0.4)]
     E, hess = m.metric_residual_symbolic(g, ginv, G, gamma, phi, chi, dict(p, **(p_override or {})), COORDS)
-    div = m.divergence_evaluator(E, ginv, gamma, COORDS, (0, 1))
+    div = m.divergence_evaluator(E, ginv, gamma, COORDS, (0, 1, 2, 3) if all_coords else (0, 1))
     return rng, p, g, G, R, ginv, phi, chi, E, hess, div
 
 
@@ -211,6 +216,23 @@ def test_diffeomorphism_identity_on_a_general_metric(seed: int) -> None:
         lhs = div([t0, x0])
         scale = max(abs(v) for v in rhs)
         assert scale > 1e-3  # off shell
+        for nu in range(4):
+            assert abs(lhs[nu] - rhs[nu]) < 1e-10 * max(1.0, scale)
+
+
+@pytest.mark.parametrize("seed", range(2))
+def test_diffeomorphism_identity_on_a_metric_depending_on_all_four_coordinates(seed: int) -> None:
+    rng, p, g, G, R, ginv, phi, chi, E, hess, div = _general_draw(seed, all_coords=True)
+    for _ in range(10):  # 2 draws x 10 points = 20 random off-shell points
+        pt = [rng.uniform(-0.3, 0.3) for _ in range(4)]
+        point = {v: sp.Float(c, 40) for v, c in zip(COORDS, pt)}
+        residual, rhs, ev = _code_side(p, g, G, R, ginv, phi, chi, hess, point)
+        for i in range(4):
+            for j in range(4):
+                assert abs(residual[i, j] - ev(E[i, j])) < 1e-10 * max(1.0, abs(residual[i, j]))
+        lhs = div(pt)
+        scale = max(abs(v) for v in rhs)
+        assert scale > 1e-3 and min(abs(v) for v in rhs) > 1e-8  # every component is off shell, y and z included
         for nu in range(4):
             assert abs(lhs[nu] - rhs[nu]) < 1e-10 * max(1.0, scale)
 

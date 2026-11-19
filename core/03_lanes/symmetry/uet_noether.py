@@ -13,7 +13,8 @@ Results [AI derivation; checked in core/05_tests/physics/test_noether.py]:
        N d/dt (dL/dN) = sum_q E_q dq/dt       (q = a, b, c, phi, chi_1, chi_2)
    so the Hamiltonian constraint (total energy of matter + phi + geometry = 0) is preserved once the other
    equations hold. Total energy is conserved; matter energy alone is not.
-   On an inhomogeneous, non-diagonal metric (all functions of t and x, g_tx != 0) the full generalized Bianchi
+   On an inhomogeneous, non-diagonal metric (functions of t and x, and separately of all of t, x, y, z; g_tx != 0)
+   the full generalized Bianchi
    identity holds for the implemented residuals:
        nabla^mu E_mu_nu = -kappa (E_phi d_nu phi + sum_A E_A d_nu chi_A)
    (E_mu_nu: metric residual, E_phi: response residual, E_A: matter residuals), so every component of the total

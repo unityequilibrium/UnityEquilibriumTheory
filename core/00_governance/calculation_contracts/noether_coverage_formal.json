@@ -117,14 +117,14 @@
       "path": "core/03_lanes/symmetry/uet_noether.py",
       "kind": "working_file",
       "role": "code",
-      "sha256": "4e63ea54957d036a4aac69f3b21054c544a317654f03bc2eede0d2b7ba2057c5",
+      "sha256": "a9aabdfe9c2b2870bc70699de1e67edc120698b33cc8d57d06e3a1348e5c4944",
       "availability": "REQUIRED"
     },
     {
       "path": "core/05_tests/physics/test_noether.py",
       "kind": "working_file",
       "role": "code",
-      "sha256": "a01e4a0a1b2cf6af3d31d5f7967ed7724760a95417b7cd976059d791dd26257a",
+      "sha256": "cc42cd31db21809f258fd9242ad7dcae30873f42a73ea752bd480a16a2c91c60",
       "availability": "REQUIRED"
     }
   ],
