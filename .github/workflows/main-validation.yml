@@ -127,6 +127,10 @@ jobs:
     timeout-minutes: 45
     steps:
       - uses: actions/checkout@v4
+        with:
+          # run_all_tests.py --all runs check_preregistration and the calculation
+          # completeness audit, which read old commits (git_blob pins, approval order).
+          fetch-depth: 0
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
