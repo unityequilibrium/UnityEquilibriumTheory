@@ -7461,3 +7461,8 @@ EVIDENCE_PATHS:
 - Affected-module run after the repair: 91 passed / 5 source-identity failures; 20/20 unsafe source mutations rejected. Saved log: local `tmp/delivery-recovery/hartree-path-guards-20261116.log`. No all-suite rerun or whole-Topic closure is claimed from this selected set.
 - Completeness remains 43 STALE errors in both full and changed-path checks; no recorded hashes, Core law, parameters, scientific thresholds or evidence levels were changed.
 - Next: inspect archived locator-key/version prerequisites in the next bounded repair; do not relabel stale evidence or missing physical inputs as a pass.
+
+## 2026-11-19 — Ding 2022 figure locator after the root move (software only)
+- The tracked figure stays at `docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/ding_2022_fig1.png` (pr-scope blocks raw/ changes). The digitization producer now falls back to it when no current-path copy exists; it no longer stops with FileNotFoundError.
+- Check: figure sha256 equals the recorded input hash; re-run gives 432 rows and CSV sha256 equal to the recorded pre-repair hash. Saved outputs were not rewritten.
+- Added `test_ding2022_figure_locator.py` (3 passed). No equation, threshold, saved artifact or evidence level changed.
