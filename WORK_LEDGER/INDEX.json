@@ -5,11 +5,11 @@
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
     "sources": 82,
-    "entries": 944,
+    "entries": 945,
     "by_stream": {
       "book-history": 94,
       "operations": 140,
-      "research": 709,
+      "research": 710,
       "review": 1
     },
     "exact_duplicates": 0,
@@ -425,8 +425,8 @@
     },
     {
       "path": "2026/2026-11-19.md",
-      "sha256": "a817770b3c14a40f989237b0eeab81ce65a0125d019c7bc46b0ed661280273b9",
-      "entries": 11
+      "sha256": "a32fd2fd54d04bf4fded2bf013c70cb7b07951005c6efd6b1cb7e50ee591e59b",
+      "entries": 12
     },
     {
       "path": "2026-08-14.md",
@@ -19266,12 +19266,32 @@
       "source": "2026/2026-11-19.md",
       "anchor": "t025-run-t023-with-a-phylogenetic-correction-is-inconclusive",
       "start_line": 103,
-      "end_line": 111,
+      "end_line": 112,
       "title": "T025 run: T023 with a phylogenetic correction is INCONCLUSIVE",
-      "entry_sha256": "fe86d0dd43e91ff2c72b054a0468e7f936b3f06ad867430d3cd260d24488ddf4",
+      "entry_sha256": "017551b85125b60ac72c9f3737cbd47bd1b5ad9e02b055db85436272fdfcef47",
       "stream": "research",
       "areas": [
         "research-standards"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-19",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-19.md#layer-3-with-trace-feedback-author-decision-2026-11-19",
+      "source": "2026/2026-11-19.md",
+      "anchor": "layer-3-with-trace-feedback-author-decision-2026-11-19",
+      "start_line": 113,
+      "end_line": 121,
+      "title": "Layer 3 with trace feedback (author decision 2026-11-19)",
+      "entry_sha256": "4d79a910d8222e6a3bd0468598976b893d2292d4e4c75533124e43f97dca3896",
+      "stream": "research",
+      "areas": [
+        "research-core"
       ],
       "related_streams": [
         "research"
