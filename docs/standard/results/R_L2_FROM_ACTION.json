@@ -1,0 +1,46 @@
+{
+  "schema": "uet-result-v2",
+  "result_id": "R_L2_FROM_ACTION",
+  "claim_id": "C_L2_FROM_ACTION",
+  "level": "L1_CONSISTENT",
+  "outcome": "PASS",
+  "numbers": [
+    {
+      "name": "portal_coupling",
+      "value": "sigma = h sqrt(eps)/(Z sqrt(k)), M_phi^2 = mu^2/k, M_chi^2 = m^2/Z (read from the action code to 1e-6)",
+      "uncertainty": null,
+      "unit": "natural"
+    },
+    {
+      "name": "kms_ratio",
+      "value": "Pi>/Pi< = exp(w/T) to 1e-9 at random points; temperature read back equals the bath temperature",
+      "uncertainty": null,
+      "unit": "dimensionless"
+    },
+    {
+      "name": "zero_temperature_width",
+      "value": "equals the textbook phi -> chi chi width N sigma^2/(32 pi M_phi) sqrt(1 - 4 M_chi^2/M_phi^2) to 1e-6",
+      "uncertainty": null,
+      "unit": "natural"
+    },
+    {
+      "name": "ohmic_friction",
+      "value": "gamma(q,T) = N sigma^2 n(sqrt(q^2/4 + M_chi^2))/(16 pi q), N = 2; general integral converges to it with error of order w^2",
+      "uncertainty": null,
+      "unit": "natural"
+    },
+    {
+      "name": "threshold",
+      "value": "no dissipation for a timelike mode below the pair threshold w^2 - q^2 < 4 M_chi^2 at this order",
+      "uncertainty": null,
+      "unit": "dimensionless"
+    }
+  ],
+  "producer": {
+    "script": "core/05_tests/physics/test_layer2_from_action.py",
+    "commit": "043ecb799"
+  },
+  "artifacts": [],
+  "date": "2026-11-18",
+  "note": "Derivation and numerical check only; no external data. Integrating out the O(2) matter field chi (thermal, free, one loop in the portal coupling) gives the response field phi a Schwinger-Keldysh influence functional whose friction and noise obey KMS without it being imposed, so layer 2 (open system, burn and trace) follows from the layer 1 action for this channel. The Caldeira-Leggett friction that layer 2 previously assumed is now fixed by the action: gamma ~ eps h^2/(Z^2 k), it vanishes as T -> 0 for long-wavelength modes, and a homogeneous mode below 2 M_chi does not dissipate at this order. Nearest known theory: Feynman-Vernon influence functional, Caldeira-Leggett, thermal field theory (Weldon 1983); the same phi |chi|^2 structure gives the dissipation coefficient of warm inflation and reheating. Not UET-distinct. Limits: chi quartic and two-loop terms dropped; flat space; parameters are natural-unit controls, not SI."
+}

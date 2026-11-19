@@ -1,0 +1,24 @@
+date_label,year,event,transcription_note
+"1,420,000 B.C.",-1420000,Fire used by Australopithecus,
+"500,000 B.C.",-500000,Fire used in caves by Peking man,
+"38,000-9000 B.C.",,Stone fat-burning lamps with wicks used in southern Europe,date is a range; no single year
+3000 B.C.,-3000,Candlesticks recovered from Egypt and Crete,
+2000 B.C.,-2000,Babylonian market for lighting fuel (sesame oil),
+1292,1292,Paris tax rolls list 72 chandlers (candle makers),
+Middle Ages,,Tallow candles in wide use in western Europe,date is a period; no single year
+1784,1784,Discovery of Argand oil lamp,
+1792,1792,William Murdock uses coal-gas illumination in his Cornwall home,
+1798,1798,William Murdock uses coal-gas illumination in Birmingham offices,
+1800s,1805,"Candle technology improved by the use of stearic acid, spermaceti, and paraffin wax",decade label; year = decade + 5
+1820,1820,"Gas street lighting installed in Pall Mall, London",row realigned: the PDF text layer prints this date beside 'paraffin wax'
+1855,1855,"Benjamin Silliman, Jr., experiments with ""rock oil""",row realigned
+1860,1860,Demonstration of electric-discharge lamp by the Royal Society of London,row realigned
+1860s,1865,Development of kerosene lamps,row realigned; decade label; year = decade + 5
+1876,1876,"William Wallace's 500-candlepower arc lights, displayed at the Centennial Exposition in Philadelphia",row realigned
+1879,1879,Swan and Edison invent carbon-filament incandescent lamp,row realigned; the chapter text (section 1.2.7) gives 1879
+1880s,1885,Welsbach gas mantle,row realigned; decade label; year = decade + 5
+1882,1882,Pearl Street station (New York) opens with first electrical service,row realigned; the chapter text gives 1882
+1920s,1925,High-pressure mercury-vapor-discharge and sodium-discharge lamps,row realigned; decade label; year = decade + 5
+1930s,1935,Development of mercury-vapor-filled fluorescent tube,row realigned; decade label; the chapter text gives the 1930s
+1931,1931,Development of sodium-vapor lamp,row realigned
+1980s,1985,Marketing of compact fluorescent bulb,row realigned; decade label; the chapter text gives the mid-1980s Compax bulb
