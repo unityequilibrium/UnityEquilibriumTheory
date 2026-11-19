@@ -10,8 +10,8 @@ Indexed entries: 708. Counts describe records, not accomplishments.
 
 | Date | Record | Area | Notes |
 | --- | --- | --- | --- |
-| 2026-11-19 | [T025 run: T023 with a phylogenetic correction is INCONCLUSIVE](2026/2026-11-19.md#t025-run-t023-with-a-phylogenetic-correction-is-inconclusive) (L83) | research-standards | explicit_stream_and_area |
-| 2026-11-19 | [Test Card T025 drafted: T023 repeated with a phylogenetic correction](2026/2026-11-19.md#test-card-t025-drafted-t023-repeated-with-a-phylogenetic-correction) (L73) | research-standards | explicit_stream_and_area |
+| 2026-11-19 | [T025 run: T023 with a phylogenetic correction is INCONCLUSIVE](2026/2026-11-19.md#t025-run-t023-with-a-phylogenetic-correction-is-inconclusive) (L93) | research-standards | explicit_stream_and_area |
+| 2026-11-19 | [Test Card T025 drafted: T023 repeated with a phylogenetic correction](2026/2026-11-19.md#test-card-t025-drafted-t023-repeated-with-a-phylogenetic-correction) (L83) | research-standards | explicit_stream_and_area |
 | 2026-11-19 | [Noether coverage of the parent action](2026/2026-11-19.md#noether-coverage-of-the-parent-action) (L63) | research-core | explicit_stream_and_area |
 | 2026-11-19 | [Topic 0.13 Ding figure locator (option 1)](2026/2026-11-19.md#topic-013-ding-figure-locator-option-1) (L43) | research-core | explicit_stream_and_area |
 | 2026-11-19 | [Layer 3 pool loss delta and supply threshold](2026/2026-11-19.md#layer-3-pool-loss-delta-and-supply-threshold) (L23) | research-core | explicit_stream_and_area |

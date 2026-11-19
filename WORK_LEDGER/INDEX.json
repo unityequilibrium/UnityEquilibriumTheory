@@ -5,10 +5,10 @@
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
     "sources": 82,
-    "entries": 942,
+    "entries": 943,
     "by_stream": {
       "book-history": 94,
-      "operations": 139,
+      "operations": 140,
       "research": 708,
       "review": 1
     },
@@ -425,8 +425,8 @@
     },
     {
       "path": "2026/2026-11-19.md",
-      "sha256": "23e35b0de73d4172076ca53cfada01fc66df2428c05de217fab81f3e83fc692d",
-      "entries": 9
+      "sha256": "e701e394dc1fdd8e44d8034d7446e934c80eddbd8131a5b79693a90a2ebb7f74",
+      "entries": 10
     },
     {
       "path": "2026-08-14.md",
@@ -19202,11 +19202,31 @@
       "legacy_root_path": false
     },
     {
+      "id": "2026/2026-11-19.md#main-validation-red-because-its-audit-job-checked-out-one-commit",
+      "source": "2026/2026-11-19.md",
+      "anchor": "main-validation-red-because-its-audit-job-checked-out-one-commit",
+      "start_line": 73,
+      "end_line": 82,
+      "title": "Main Validation red because its audit job checked out one commit",
+      "entry_sha256": "e37438cad5fc078d82fb38114cc90cf66593cf127f9099486afcd67092b4dc09",
+      "stream": "operations",
+      "areas": [
+        "repo-ops"
+      ],
+      "related_streams": [
+        "operations"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-19",
+      "legacy_root_path": false
+    },
+    {
       "id": "2026/2026-11-19.md#test-card-t025-drafted-t023-repeated-with-a-phylogenetic-correction",
       "source": "2026/2026-11-19.md",
       "anchor": "test-card-t025-drafted-t023-repeated-with-a-phylogenetic-correction",
-      "start_line": 73,
-      "end_line": 82,
+      "start_line": 83,
+      "end_line": 92,
       "title": "Test Card T025 drafted: T023 repeated with a phylogenetic correction",
       "entry_sha256": "30c1e45e9986e6c62c8dd0e301058f114537f8d667f3bc9be360c058dae3cd07",
       "stream": "research",
@@ -19225,8 +19245,8 @@
       "id": "2026/2026-11-19.md#t025-run-t023-with-a-phylogenetic-correction-is-inconclusive",
       "source": "2026/2026-11-19.md",
       "anchor": "t025-run-t023-with-a-phylogenetic-correction-is-inconclusive",
-      "start_line": 83,
-      "end_line": 91,
+      "start_line": 93,
+      "end_line": 101,
       "title": "T025 run: T023 with a phylogenetic correction is INCONCLUSIVE",
       "entry_sha256": "fe86d0dd43e91ff2c72b054a0468e7f936b3f06ad867430d3cd260d24488ddf4",
       "stream": "research",
