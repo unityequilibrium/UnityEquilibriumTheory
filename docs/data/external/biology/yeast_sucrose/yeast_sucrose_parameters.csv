@@ -1,0 +1,14 @@
+# Transcribed numerical facts (no figures or text) for the yeast sucrose trace-threshold wave.
+# Koschwanez, Foster and Murray (2011) PLoS Biol 9, e1001122, doi 10.1371/journal.pbio.1001122, Figure S1C (invertase kinetics).
+# Dai, Vorselen, Korolev and Gore (2012) Science 336, 1175, Supporting Online Material Table S1 (gorelab.org/Dai_Science_2012.SOM.pdf).
+# Retrieved 2026-11-19 by reading the published pages; values copied as printed.
+source,quantity,value,uncertainty,unit,status
+koschwanez2011,invertase_vmax_per_cell,3.6e8,,glucose molecules s^-1 cell^-1,measured
+koschwanez2011,invertase_km_sucrose,11,,mM,measured
+dai2012,sucrose_concentration,2,,percent w/v,protocol
+dai2012,cycle_length,23,,h,protocol
+dai2012,gamma_low,0.318,0.008,h^-1,measured
+dai2012,gamma_high,0.472,0.015,h^-1,measured
+dai2012,lag_time,2.58,,h,measured
+dai2012,carrying_capacity,1.95e5,0.13e5,cells ul^-1,measured
+dai2012,switch_density_Nc,2.76e2,,cells ul^-1,fitted (not measured)
