@@ -647,7 +647,8 @@ commit: this commit
 - ตัวควบคุมเชิงลบ: ทำลาย reparametrization แล้ว identity พัง; ให้ φ มี light cone ต่างไป K ไม่อนุรักษ์ (drift 0.57)
 - เพิ่ม: โมเมนตัมเชิงมุมบน lattice 2+1 ลู่เข้าอันดับ 1.99
 - เพิ่ม: generalized Bianchi identity ∇^μE_μν = −κ(E_φ∂_νφ + ΣE_A∂_νχ_A) ถือใน metric ที่ขึ้นกับ t, x และมี g_tx ที่ 20 จุด (rel < 1e-10)
-- ยังไม่ได้: metric ที่ขึ้นกับทั้ง 4 พิกัด; ไม่ใช่สิ่งเฉพาะของ UET
+- เพิ่ม: identity เดียวกันถือใน metric เต็มรูปที่ทั้ง 10 พจน์ไม่เป็นศูนย์และขึ้นกับครบ 4 พิกัด ที่ 20 จุด (geometry คำนวณด้วย mpmath และตรวจเทียบ sympy แล้ว)
+- ขอบเขต: metric แบบพหุนามดีกรีต่ำรอบจุดสุ่ม; ไม่ใช่สิ่งเฉพาะของ UET
 
 ## 2026-11-19 — T025: T023 with a phylogenetic correction (INCONCLUSIVE)
 - ทำ: PGLS แบบ Brownian motion บนต้นไม้ TimeTree 5 (เก็บในเครื่อง) วางได้ 285 จาก 298 ชนิด (ค้างคาว 23)
