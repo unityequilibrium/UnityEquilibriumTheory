@@ -313,6 +313,7 @@ thailand_proposals/**/*.webp
 /uet_history/**/Raw/
 # Local-only path drift and generated outputs.
 /docs/topics/For_Work/
+/topics/For_Work/
 docs/topics/**/Result/_Logs/
 # Section 3 parent and book-control metadata. Raw, digest, and draft material remains local-only.
 !/uet_history/3_publish/books/SECTION_REGISTRY.json

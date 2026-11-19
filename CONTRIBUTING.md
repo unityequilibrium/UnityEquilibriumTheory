@@ -11,7 +11,7 @@ each area understandable, traceable, and safe to publish.
 
 This file is the contribution entrypoint. It does not replace the detailed
 standards. The canonical research manual is
-[\`docs/topics/For Work/\`](docs/topics/For%20Work/). The root
+[\`topics/For Work/\`](topics/For%20Work/). The root
 [\`AGENTS.md\`](AGENTS.md) defines the day-to-day agent workflow.
 
 ## Source of truth and workspace routing
@@ -19,7 +19,7 @@ standards. The canonical research manual is
 | Area | Canonical workspace | Use it for |
 | --- | --- | --- |
 | Research core | \`docs/core/\`, \`docs/topics/\` | equations, methods, experiments, evidence, topic status |
-| Research standards | \`docs/topics/For Work/\`, \`AGENTS.md\` | shared workflow and claim/data/formula/result rules |
+| Research standards | \`topics/For Work/\`, \`AGENTS.md\` | shared workflow and claim/data/formula/result rules |
 | Theory history | \`uet_history/\` | historical theory notes and archive structure |
 | Book writing | \`uet_history/3_publish/books/\` | canonical book identity, blueprints, reviewed public files |
 | Thailand policy | \`thailand_proposals/\` | policy and project proposals |
@@ -39,7 +39,7 @@ Start with:
 1. [\`README.md\`](README.md)
 2. [\`AGENTS.md\`](AGENTS.md)
 3. [\`docs/topics/README.md\`](docs/topics/README.md)
-4. [\`docs/topics/For Work/00_README.md\`](docs/topics/For%20Work/00_README.md)
+4. [\`topics/For Work/00_README.md\`](topics/For%20Work/00_README.md)
 
 Then read the narrowest relevant standard:
 
@@ -55,8 +55,8 @@ Then read the narrowest relevant standard:
   [\`BOOK_REGISTRY.json\`](uet_history/3_publish/books/BOOK_REGISTRY.json)
 
 For AI work, use
-[\`26_AI_AGENT_SKILL_MAP.md\`](docs/topics/For%20Work/26_AI_AGENT_SKILL_MAP.md)
-and [\`27_AI_AGENT_ROUTING_MATRIX.md\`](docs/topics/For%20Work/27_AI_AGENT_ROUTING_MATRIX.md).
+[\`26_AI_AGENT_SKILL_MAP.md\`](topics/For%20Work/26_AI_AGENT_SKILL_MAP.md)
+and [\`27_AI_AGENT_ROUTING_MATRIX.md\`](topics/For%20Work/27_AI_AGENT_ROUTING_MATRIX.md).
 Skills are adapters, not sources of truth.
 
 ## Evidence and claim discipline
@@ -81,7 +81,7 @@ internal benchmark, and externally supported research.
   of a stronger readiness level.
 
 See
-[\`04_Claim_and_Evidence_Rubric.md\`](docs/topics/For%20Work/04_Claim_and_Evidence_Rubric.md)
+[\`04_Claim_and_Evidence_Rubric.md\`](topics/For%20Work/04_Claim_and_Evidence_Rubric.md)
 and the [documentation style guide](docs/UET_Documentation_Details/STANDARDS/documentation_style_guide.md).
 
 ## Standard work packages
@@ -260,7 +260,7 @@ AI-assisted work must:
 - leave a human-reviewable diff and name checks that actually ran
 - use the narrowest skill instead of creating a mega-skill
 
-See [\`03_AI_Usage_and_Governance.md\`](docs/topics/For%20Work/03_AI_Usage_and_Governance.md).
+See [\`03_AI_Usage_and_Governance.md\`](topics/For%20Work/03_AI_Usage_and_Governance.md).
 
 ## Validation checklist
 
@@ -306,14 +306,14 @@ reproducible, link that change to the pilot in the relevant update log.
 
 ## Useful entrypoints
 
-- Research standards: [\`docs/topics/For Work/00_README.md\`](docs/topics/For%20Work/00_README.md)
+- Research standards: [\`topics/For Work/00_README.md\`](topics/For%20Work/00_README.md)
 - Topic index and status: [\`docs/topics/README.md\`](docs/topics/README.md)
 - Repository routing: [\`CONTEXT-MAP.md\`](CONTEXT-MAP.md)
 - Agent rules: [\`AGENTS.md\`](AGENTS.md)
 - Book workflow: [\`uet_history/BOOK_WORKFLOW.md\`](uet_history/BOOK_WORKFLOW.md)
 - Book identity and public boundary: [\`BOOK_REGISTRY.json\`](uet_history/3_publish/books/BOOK_REGISTRY.json)
 - Work history: [\`WORK_LEDGER/\`](WORK_LEDGER/)
-- AI skill routing: [\`27_AI_AGENT_ROUTING_MATRIX.md\`](docs/topics/For%20Work/27_AI_AGENT_ROUTING_MATRIX.md)
+- AI skill routing: [\`27_AI_AGENT_ROUTING_MATRIX.md\`](topics/For%20Work/27_AI_AGENT_ROUTING_MATRIX.md)
 
 The goal is not to make the repository look busy. It is to make each
 meaningful change understandable, reproducible within its stated boundary, and

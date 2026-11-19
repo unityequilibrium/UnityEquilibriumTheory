@@ -65,10 +65,12 @@ jobs:
       - run: git diff --check
       - name: Check canonical path guardrails
         run: |
-          test ! -d docs/topics/For_Work || {
-            echo "docs/topics/For_Work is a drifted path; use docs/topics/For Work/."
-            exit 1
-          }
+          for drifted in docs/topics/For_Work topics/For_Work; do
+            test ! -d "$drifted" || {
+              echo "$drifted is a drifted path; use topics/For Work/."
+              exit 1
+            }
+          done
 
   python-validation:
     name: Python changed-area validation

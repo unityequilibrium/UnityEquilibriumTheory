@@ -102,7 +102,7 @@
 | ของ | สถานะ | เหตุผลที่ยังเก็บ |
 |---|---|---|
 | `02_equations/matter_space/uet_master_equation.py` (Master Equation 7 เทอม) | **ไม่ใช่สมการหลักปัจจุบัน** AUTHOR_PROPOSITION §5 ระบุว่าเทอม Natural Will / Game ไม่ได้ implement ตรรกะของผู้เขียน | contract และ test เก่าอ้างถึง |
-| `docs/topics/For Work/` (30 ไฟล์) | แทนที่แล้วบางส่วนโดย `docs/STANDARD.md` ดู `SUPERSEDED_BY_STANDARD_V2.md` ในโฟลเดอร์นั้น: ไฟล์โครงสร้าง topic, README โค้ด, ข้อมูล, template **ยังใช้** (§15 ของ STANDARD); คำสถานะและลำดับขั้นงานเดิม**ถูกแทนที่** | contract 6 ฉบับล็อก hash ของไฟล์เหล่านี้ ถ้าย้ายหรือแก้จะพัง |
+| `topics/For Work/` (30 ไฟล์ ย้ายจาก `docs/topics/For Work/` 2026-11-19) | แทนที่แล้วบางส่วนโดย `docs/STANDARD.md` ดู `SUPERSEDED_BY_STANDARD_V2.md` ในโฟลเดอร์นั้น: ไฟล์โครงสร้าง topic, README โค้ด, ข้อมูล, template **ยังใช้** (§15 ของ STANDARD); คำสถานะและลำดับขั้นงานเดิม**ถูกแทนที่** | contract 6 ฉบับล็อก hash ของไฟล์เหล่านี้ ถ้าแก้เนื้อหาจะพัง (การย้ายไม่กระทบ เพราะ hash คิดจากเนื้อหาและ audit แปล path เดิมให้) |
 | `00_governance/` (ยกเว้น calculation contract), `07_artifacts/`, audit script จำนวนมาก | ผลิตภัณฑ์ของระบบ gate เดิม (`LEGACY_UNREVIEWED`) | ใช้เป็นเครื่องมือวินิจฉัยได้ ไม่ควบคุมสถานะ |
 | `08_history/archived_tests/`, `topics/0.10_*/Archive/tests/`, `topics/0.13_*/Archive/tests/` | test ป้าย C ที่พังหลังย้ายโฟลเดอร์ 2026-11-14 เก็บเข้าคลังตามที่ผู้เขียนตัดสิน (2026-11-18) ไม่ถูกรัน | README ของแต่ละคลังบอกว่าแต่ละไฟล์พังเพราะอะไร |
 | `08_history/research_notes/THOUGHT_EXPERIMENT_OBSERVATION_PAST_BEHAVIOR.md` | v2 ของ thought experiment ใช้คำว่า being ซึ่งผู้เขียนถอนแล้ว ใช้ [`THOUGHT_EXPERIMENT.md`](THOUGHT_EXPERIMENT.md) แทน | manifest และ inventory หลายไฟล์ล็อก hash ไว้ |
@@ -110,7 +110,7 @@
 
 ## 5. กฎการแก้ไฟล์
 
-- **ห้ามแก้** `docs/topics/For Work/` และ `docs/scripts/audit/audit_calculation_completeness.py` (มี contract ล็อก hash ไว้ ถ้าแก้ contract เหล่านั้นจะกลายเป็น STALE) ดู AGENTS.md §6.3
+- **ห้ามแก้** `topics/For Work/` และ `docs/scripts/audit/audit_calculation_completeness.py` (มี contract ล็อก hash ไว้ ถ้าแก้ contract เหล่านั้นจะกลายเป็น STALE) ดู AGENTS.md §6.3
 - ข้ออ้างใหม่ต้องมี Test Card ที่ผู้เขียนอนุมัติก่อนรัน และ agent เลื่อนระดับเป็น L2 ขึ้นไปเองไม่ได้ (`docs/STANDARD.md` §4)
 - สมการใหม่ต้องมี physics test ที่ derive จริง (`@pytest.mark.physics`)
 
